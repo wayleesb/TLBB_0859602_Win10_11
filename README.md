@@ -19,7 +19,8 @@ cd TLBB_0859602_Win10_11
 Download both large files from the
 [initial release](https://github.com/wayleesb/TLBB_0859602_Win10_11/releases/tag/initial-import):
 
-- Place the `.exe` asset in the repository root.
+- Place `TLBB_Launcher.exe` in the repository root and rename it to
+  `雪舞天龙启动工具.exe`.
 - Place `mariadb-10.11.18-winx64.zip` in `TLBB_Env/`.
 
 With GitHub CLI installed, download them directly to those locations:
@@ -27,6 +28,7 @@ With GitHub CLI installed, download them directly to those locations:
 ```powershell
 gh release download initial-import --repo wayleesb/TLBB_0859602_Win10_11 --pattern "*.exe" --dir .
 gh release download initial-import --repo wayleesb/TLBB_0859602_Win10_11 --pattern "*.zip" --dir TLBB_Env
+Rename-Item -LiteralPath TLBB_Launcher.exe -NewName '雪舞天龙启动工具.exe'
 ```
 
 Git LFS is not required. The source archive does not include release assets.

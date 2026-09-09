@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame1" Name="AcceptBox_Frame">
+        <Property Name="UnifiedXPosition" Value="{0.5,-153}" />
+        <Property Name="UnifiedYPosition" Value="{0.2,0}" />
+        <Property Name="AbsoluteSize" Value="w:307 h:115" />
+        <Event Name="Hidden" Function="AcceptBox_OnHide();" />
+        <Window Type="TLBB_SimpleText" Name="AcceptBox_Text">
+            <Property Name="AbsolutePosition" Value="x:6.000000 y:37.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-12.000000},{1.000000,-78.000000}" />
+            <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+            <Property Name="VertFormatting" Value="TopAligned" />
+        </Window>
+        <Window Type="TLBB_Frame_Lace5" Name="AcceptBox_Blank">
+            <Property Name="UnifiedPosition" Value="{{0.000000,7.000000},{1.000000,-39.000000}" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-94.000000},{0.000000,20.000000}" />
+        </Window>
+        <Window Type="TLBB_ButtonCommon" Name="AcceptBox_OK_Button">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-87.000000},{1.000000,-39.000000}" />
+            <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_557}" />
+            <Event Name="Clicked" Function="AcceptBox_OK_Clicked();" />
+        </Window>
+        <Window Type="TLBB_ButtonCommon" Name="AcceptBox_Cancel_Button">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-47.000000},{1.000000,-39.000000}" />
+            <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_542}" />
+            <Event Name="Clicked" Function="AcceptBox_Cancel_Clicked(1);" />
+        </Window>
+        <Window Type="TLBB_DragTitle" Name="AcceptBox_PageHeader_Name">
+            <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+            <Property Name="Font" Value="YouYuan11.25" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="DragTarget" Value="AcceptBox_Frame" />
+        </Window>
+        <Window Type="TLBB_ButtonHelp" Name="AcceptBox_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*AcceptBox&quot;);' />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="AcceptBox_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function="AcceptBox_Cancel_Clicked(1);" />
+        </Window>
+    </Window>
+</GUILayout>

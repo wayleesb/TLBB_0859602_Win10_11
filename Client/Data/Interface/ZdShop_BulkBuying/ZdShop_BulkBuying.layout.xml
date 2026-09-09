@@ -1,0 +1,142 @@
+<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame2" Name="ZdShop_BulkBuying_Frame">
+        <Property Name="Position" Value="x:0.42 y:0.15" />
+        <Property Name="AbsoluteSize" Value="w:220 h:166" />
+        <Window Type="TLBB_DragTitle" Name="ZdShop_BulkBuying_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:26.000000 y:2.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-52.000000},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="ZdShop_BulkBuying_Frame" />
+            <Window Type="TLBB_SimpleText" Name="ZdShop_BulkBuying_PageHeader">
+                <Property Name="Position" Value="x:0.000000 y:0.000000" />
+                <Property Name="Size" Value="w:1.000000 h:1.000000" />
+                <Property Name="Font" Value="YouYuan11.25" />
+                <Property Name="Text" Value="#{INTERFACE_XML_489}" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+        </Window>
+        <Window Type="TLBB_ButtonHelp" Name="ZdShop_BulkBuying_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,5.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*ZdShop_BulkBuying&quot;);' />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="ZdShop_BulkBuying_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,5.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function="this:Hide();" />
+        </Window>
+        <Window Type="DefaultWindow" Name="ZdShop_BulkBuying_Function_Frame">
+            <Property Name="AbsolutePosition" Value="x:10.000000 y:26.000000" />
+            <Property Name="AbsoluteSize" Value="w:202.000000 h:136.000000" />
+            <Window Type="TLBB_SimpleText" Name="ZdShop_BulkBuying_Text2">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.05,0.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.35,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_591}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZdShop_BulkBuying_Money1_Bk">
+                <Property Name="AbsolutePosition" Value="x:71.000000 y:8.000000" />
+                <Property Name="AbsoluteSize" Value="w:131.000000 h:22.000000" />
+                <Window Type="TLBB_SimpleText" Name="ZdShop_BulkBuying_Money1">
+                    <Property Name="AbsolutePosition" Value="x:0.000000 y:1.000000" />
+                    <Property Name="AbsoluteSize" Value="w:94.000000 h:20.000000" />
+                    <Property Name="HorzFormatting" Value="RightAligned" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="ZdShop_BulkBuying_TextZd1">
+                    <Property Name="AbsolutePosition" Value="x:91.000000 y:1.000000" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:20.000000" />
+                    <Property Name="HorzFormatting" Value="RightAligned" />
+                    <Property Name="Text" Value="#{ZDSD_90518_2}" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="ZdShop_BulkBuying_Text1">
+                <Property Name="AbsolutePosition" Value="x:0.000000 y:35.000000" />
+                <Property Name="AbsoluteSize" Value="w:121.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_523}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_EditBoxNormal" Name="ZdShop_BulkBuying_IME">
+                <Property Name="AbsolutePosition" Value="x:121.000000 y:35.000000" />
+                <Property Name="AbsoluteSize" Value="w:71.000000 h:20.000000" />
+                <Property Name="MaxTextLength" Value="2" />
+                <Property Name="ValidationString" Value="[0-9]*" />
+                <Event Name="TextChanged" Function="ZdShop_BulkBuying_TextChanged();" />
+                <Property Name="Text" Value="99" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="ZdShop_BulkBuying_Text3">
+                <Property Name="AbsolutePosition" Value="x:0.000000 y:63.000000" />
+                <Property Name="AbsoluteSize" Value="w:71.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_789}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZdShop_BulkBuying_Money2_Bk">
+                <Property Name="AbsolutePosition" Value="x:71.000000 y:63.000000" />
+                <Property Name="AbsoluteSize" Value="w:131.000000 h:22.000000" />
+                <Window Type="TLBB_SimpleText" Name="ZdShop_BulkBuying_Money2">
+                    <Property Name="AbsolutePosition" Value="x:0.000000 y:1.000000" />
+                    <Property Name="AbsoluteSize" Value="w:94.000000 h:20.000000" />
+                    <Property Name="HorzFormatting" Value="RightAligned" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="ZdShop_BulkBuying_TextZd2">
+                    <Property Name="AbsolutePosition" Value="x:91.000000 y:1.000000" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:20.000000" />
+                    <Property Name="HorzFormatting" Value="RightAligned" />
+                    <Property Name="Text" Value="#{ZDSD_90518_2}" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="ZdShop_BulkBuying_Text4">
+                <Property Name="AbsolutePosition" Value="x:0.000000 y:87.000000" />
+                <Property Name="AbsoluteSize" Value="w:71.000000 h:20.000000" />
+                <Property Name="Text" Value="#{ZDSD_90518_1}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZdShop_BulkBuying_Money3_Bk">
+                <Property Name="AbsolutePosition" Value="x:71.000000 y:87.000000" />
+                <Property Name="AbsoluteSize" Value="w:131.000000 h:22.000000" />
+                <Window Type="TLBB_SimpleText" Name="ZdShop_BulkBuying_Money3">
+                    <Property Name="AbsolutePosition" Value="x:0.000000 y:1.000000" />
+                    <Property Name="AbsoluteSize" Value="w:94.000000 h:20.000000" />
+                    <Property Name="HorzFormatting" Value="RightAligned" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="ZdShop_BulkBuying_TextZd3">
+                    <Property Name="AbsolutePosition" Value="x:91.000000 y:1.000000" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:20.000000" />
+                    <Property Name="HorzFormatting" Value="RightAligned" />
+                    <Property Name="Text" Value="#{ZDSD_90518_2}" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="ZdShop_BulkBuying_Accept">
+                <Property Name="AbsolutePosition" Value="x:122.000000 y:116.000000" />
+                <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_557}" />
+                <Event Name="Clicked" Function="ZdShop_BulkBuying_Accept_Clicked();" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="ZdShop_BulkBuying_Cancel">
+                <Property Name="AbsolutePosition" Value="x:162.000000 y:116.000000" />
+                <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_542}" />
+                <Event Name="Clicked" Function="this:Hide();" />
+            </Window>
+        </Window>
+        <Window Type="TLBB_Frame_Lace5" Name="ZdShop_BulkBuying_Blank">
+            <Property Name="AbsolutePosition" Value="x:5.000000 y:142.000000" />
+            <Property Name="AbsoluteSize" Value="w:125.000000 h:20.000000" />
+            <Property Name="RiseOnClick" Value="False" />
+        </Window>
+        <Window Type="TLBB_HLine" Name="ZdShop_BulkBuying_Line1">
+            <Property Name="AbsolutePosition" Value="x:5.000000 y:138.000000" />
+            <Property Name="AbsoluteSize" Value="w:211.000000 h:4.000000" />
+            <Property Name="RiseOnClick" Value="False" />
+        </Window>
+    </Window>
+</GUILayout>

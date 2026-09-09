@@ -1,0 +1,60 @@
+<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame1" Name="MessageBoxCommon_Frame">
+        <Property Name="UnifiedPosition" Value="{{0.500000,-128.000000},{0.500000,-118.000000}" />
+        <Property Name="UnifiedSize" Value="{{0.000000,256.000000},{0.000000,192.000000}" />
+        <Property Name="AlwaysOnTop" Value="True" />
+        <Window Type="TLBB_DragTitle" Name="MessageBoxCommon_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="MessageBoxCommon_Frame" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1015}" />
+            <Property Name="Font" Value="YouYuan11.25" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+        </Window>
+        <Window Type="TLBB_ButtonHelp" Name="MessageBoxCommon_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*MessageBox_Friend&quot;);' />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="MessageBoxCommon_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function="MessageBoxCommon_Cancel_Clicked();" />
+        </Window>
+        <Window Type="DefaultWindow" Name="MessageBoxCommon_Frame_Client">
+            <Property Name="AbsolutePosition" Value="x:7.000000 y:36.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-13.000000},{1.000000,-55.000000}" />
+            <Window Type="TLBB_SelfWindow" Name="MessageBoxCommon_Text">
+                <Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+                <Property Name="AbsoluteSize" Value="w:0.000000 h:0.000000" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Property Name="MaxWidth" Value="250" />
+                <Property Name="MinHeight" Value="25" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_681}" />
+            </Window>
+          <Window Type="TLBB_ButtonCommon" Name="MessageBoxCommon_Info_Button">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-243.000000},{1.000000,-20.000000}" />
+            <Property Name="AbsoluteSize" Value="w:80.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_164}" />
+            <Event Name="Clicked" Function="MessageBoxCommon_Info_Clicked();" />
+          </Window>
+            <Window Type="TLBB_ButtonCommon" Name="MessageBoxCommon_OK_Button">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-80.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_557}" />
+                <Event Name="Clicked" Function="MessageBoxCommon_Ok_Clicked();" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="MessageBoxCommon_Cancel_Button">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-40.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_542}" />
+                <Event Name="Clicked" Function="MessageBoxCommon_Cancel_Clicked();" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

@@ -1,0 +1,568 @@
+<?xml version="1.0" ?>
+<Falagard>
+
+  <!--
+    ***************************************************
+        WoWLook/SimpleText
+    ***************************************************
+    -->
+  <WidgetLook name="TLBB_Look_SimpleText">
+    <StateImagery name="Enabled">
+    </StateImagery>
+    <StateImagery name="Disabled">
+    </StateImagery>
+  </WidgetLook>
+  <!--
+    ***************************************************
+        TLBB_Look_DragTitle
+    ***************************************************
+    -->
+  <WidgetLook name="TLBB_Look_DragTitle">
+    <Property name="HorzFormatting" value="HorzCentred" />
+    <StateImagery name="Enabled">
+    </StateImagery>
+      <StateImagery name="Disabled">
+      </StateImagery>
+    </WidgetLook>
+  <!--
+    ***************************************************
+        自适应窗口
+    ***************************************************
+    -->
+  <WidgetLook name="TLBB_Look_SelfWindow">
+    <NamedArea name="TextArea">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="3" />
+        </Dim>
+        <Dim type="TopEdge">
+          <AbsoluteDim value="3" />
+        </Dim>
+        <Dim type="RightEdge">
+          <UnifiedDim scale="1" type="RightEdge">
+            <DimOperator op="Subtract">
+              <AbsoluteDim value="3" />
+            </DimOperator>
+          </UnifiedDim>
+        </Dim>
+        <Dim type="BottomEdge">
+          <UnifiedDim scale="1" type="BottomEdge">
+            <DimOperator op="Subtract">
+              <AbsoluteDim value="3" />
+            </DimOperator>
+          </UnifiedDim>
+        </Dim>
+      </Area>
+    </NamedArea>
+    <Property name="RiseOnClick" value="False" />
+    <Property name="MouseHollow" value="True" />
+    <Property name="ClippedByParent" value="False" />
+    <StateImagery name="Enabled">
+    </StateImagery>
+    <StateImagery name="Disabled">
+    </StateImagery>
+  </WidgetLook>
+  <!--
+    ***************************************************
+        TLBB_Look_SimpleTextFrame
+    ***************************************************
+    -->
+  <WidgetLook name="TLBB_Look_MuliteTextFrame">
+    <NamedArea name="TextArea">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="7" />
+        </Dim>
+        <Dim type="TopEdge">
+          <AbsoluteDim value="3" />
+        </Dim>
+        <Dim type="RightEdge">
+          <UnifiedDim scale="1" offset="-7" type="RightEdge">
+          </UnifiedDim>
+        </Dim>
+        <Dim type="BottomEdge">
+          <UnifiedDim scale="1" offset="-3" type="BottomEdge">
+          </UnifiedDim>
+        </Dim>
+      </Area>
+    </NamedArea>
+    <StateImagery name="Enabled">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Background_Common1" />
+        <Section look="TLBB_Look_Common" section="Frame_Type_Lace3" />
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+  <!--
+    ***************************************************
+        TLBB_Look_SimpleTextFrame
+    ***************************************************
+    -->
+  <WidgetLook name="TLBB_Look_ResizeTextFrame">
+    <NamedArea name="TextArea">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="7" />
+        </Dim>
+        <Dim type="TopEdge">
+          <AbsoluteDim value="13" />
+        </Dim>
+        <Dim type="RightEdge">
+          <UnifiedDim scale="1" offset="-7" type="RightEdge">
+          </UnifiedDim>
+        </Dim>
+        <Dim type="BottomEdge">
+          <UnifiedDim scale="1" offset="-13" type="BottomEdge">
+          </UnifiedDim>
+        </Dim>
+      </Area>
+    </NamedArea>
+    <StateImagery name="Enabled">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Background_Common1" />
+        <Section look="TLBB_Look_Common" section="Frame_Type_Lace3" />
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+
+  <!--
+    ***************************************************
+        TLBB_Look_SimpleTextInfo
+    ***************************************************
+    -->
+  <WidgetLook name="TLBB_Look_SimpleTextInfo">
+    <Property name="HorzFormatting" value="HorzCentred" />
+    <ImagerySection name="normal">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image imageset="Button5" image="SimpleText_Info_Bk" />
+      </FrameComponent>
+    </ImagerySection>
+    <NamedArea name="TextArea">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="3" />
+        </Dim>
+        <Dim type="TopEdge">
+          <AbsoluteDim value="2" />
+        </Dim>
+        <Dim type="RightEdge">
+          <UnifiedDim scale="1" offset="-3" type="RightEdge"/>
+        </Dim>
+        <Dim type="BottomEdge">
+          <UnifiedDim scale="1" offset="-3" type="BottomEdge"/>
+        </Dim>
+      </Area>
+    </NamedArea>
+    <StateImagery name="Enabled">
+      <Layer>
+        <Section section="normal" />
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+
+  <!--
+    ***************************************************
+        TLBB_Look_Money
+    ***************************************************
+    -->
+    <WidgetLook name="TLBB_Look_Money">
+    <Property name="GoldIcon" value="set:Button2 image:Icon_GoldCoin" />
+    <Property name="SilverIcon" value="set:Button2 image:Icon_SilverCoin" />
+    <Property name="CopperIcon" value="set:Button2 image:Icon_CopperCoin" />
+  </WidgetLook>
+
+  <!--
+    ***************************************************
+        WoWLook/CreatureBoard
+    ***************************************************
+    -->
+  <WidgetLook name="TLBB_Look_PaoPao">
+    <Property name="RiseOnClick" value="False" />
+    <Property name="MouseHollow" value="True" />
+    <Property name="ClippedByParent" value="False" />
+    <Property name="HorzFormatting" value="WordWrapLeftAligned" />
+    <NamedArea name="TextArea">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="6" />
+        </Dim>
+        <Dim type="TopEdge">
+          <AbsoluteDim value="6" />
+        </Dim>
+        <Dim type="RightEdge">
+          <UnifiedDim scale="1" offset="-6" type="RightEdge">
+          </UnifiedDim>
+        </Dim>
+        <Dim type="BottomEdge">
+          <UnifiedDim scale="1" offset="-20" type="BottomEdge">
+          </UnifiedDim>
+        </Dim>
+      </Area>
+    </NamedArea>
+    <ImagerySection name="main">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="RightEdge">
+            <UnifiedDim scale="1" type="RightEdge">
+            </UnifiedDim>
+          </Dim>
+          <Dim type="BottomEdge">
+            <UnifiedDim scale="1" offset="0" type="BottomEdge">
+            </UnifiedDim>
+          </Dim>
+        </Area>
+        <Image type="Background" imageset="CommonFrame" image="PaoPao_BK" />
+        <Image type="TopLeftCorner" imageset="CommonFrame" image="PaoPao_LT" />
+        <Image type="TopRightCorner" imageset="CommonFrame" image="PaoPao_RT" />
+        <Image type="BottomLeftCorner" imageset="CommonFrame" image="PaoPao_LB" />
+        <Image type="BottomRightCorner" imageset="CommonFrame" image="PaoPao_RB" />
+        <Image type="LeftEdge" imageset="CommonFrame" image="PaoPao_L" />
+        <Image type="RightEdge" imageset="CommonFrame" image="PaoPao_R" />
+        <Image type="TopEdge" imageset="CommonFrame" image="PaoPao_T" />
+        <Image type="BottomEdge" imageset="CommonFrame" image="PaoPao_B" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="label">
+      <TextComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="10" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="6" />
+          </Dim>
+          <Dim type="RightEdge">
+            <UnifiedDim scale="1" offset="-6" type="RightEdge">
+            </UnifiedDim>
+          </Dim>
+          <Dim type="BottomEdge">
+            <UnifiedDim scale="1" offset="-20" type="BottomEdge">
+            </UnifiedDim>
+          </Dim>
+        </Area>
+        <Colours topLeft="FFFFFFFF" topRight="FFFFFFFF" bottomLeft="FFFFFFFF" bottomRight="FFFFFFFF" />
+        <HorzFormat type="WordWrapLeftAligned" />
+        <VertFormat type="TopAligned" />
+      </TextComponent>
+    </ImagerySection>
+    <ImagerySection name="cornu">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <UnifiedDim scale="0.5" offset="-9" type="LeftEdge">
+            </UnifiedDim>
+          </Dim>
+          <Dim type="TopEdge">
+            <UnifiedDim scale="1" offset="-18" type="TopEdge">
+            </UnifiedDim>
+          </Dim>
+          <Dim type="Width">
+            <AbsoluteDim value="18" />
+          </Dim>
+          <Dim type="Height">
+            <AbsoluteDim value="18" />
+          </Dim>
+        </Area>
+        <Image imageset="CommonFrame" image="PaoPao_Cornu" />
+        <VertFormat type="Stretched" />
+        <HorzFormat type="Stretched" />
+      </ImageryComponent>
+    </ImagerySection>
+    <StateImagery name="Enabled">
+      <Layer>
+        <Section section="main" />
+        
+        <Section section="cornu" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="main" />
+        
+        <Section section="cornu" />
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+
+  <!--
+    ***************************************************
+        WoWLook/BeHitBoard
+    ***************************************************
+    -->
+  <WidgetLook name="TLBB_Look_BeHitBoard">
+    <Property name="Font" value="YouYuanMono" />
+    <Property name="VertFormatting" value="TopAligned" />
+  </WidgetLook>
+
+  <!--
+    ***************************************************
+        TLBB_Look_StaticText
+    ***************************************************
+    -->
+  <WidgetLook name="TLBB_Look_StaticText">
+    <Property name="BackgroundEnabled" value="True" />
+    <Property name="FrameEnabled" value="True" />
+    <NamedArea name="TextRenderArea">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="4" />
+        </Dim>
+        <Dim type="TopEdge">
+          <AbsoluteDim value="4" />
+        </Dim>
+        <Dim type="RightEdge">
+          <UnifiedDim scale="1" offset ="-4" type="RightEdge" />
+        </Dim>
+        <Dim type="BottomEdge">
+          <UnifiedDim scale="1" offset ="-4" type="BottomEdge" />
+        </Dim>
+      </Area>
+    </NamedArea>
+    <NamedArea name="TextRenderAreaHScroll">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="4" />
+        </Dim>
+        <Dim type="TopEdge">
+          <AbsoluteDim value="4" />
+        </Dim>
+        <Dim type="RightEdge">
+          <UnifiedDim scale="1" offset ="-4" type="RightEdge" />
+        </Dim>
+        <Dim type="BottomEdge">
+          <UnifiedDim scale="1" offset ="-4" type="BottomEdge" />
+        </Dim>
+      </Area>
+    </NamedArea>
+    <NamedArea name="TextRenderAreaVScroll">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="4" />
+        </Dim>
+        <Dim type="TopEdge">
+          <AbsoluteDim value="4" />
+        </Dim>
+        <Dim type="RightEdge">
+          <UnifiedDim scale="1" offset="-16" type="RightEdge">
+          </UnifiedDim>
+        </Dim>
+        <Dim type="BottomEdge">
+          <UnifiedDim scale="1" offset ="-4" type="BottomEdge" />
+        </Dim>
+      </Area>
+    </NamedArea>
+   
+    <Child type="TLBB_Scrollbar_Common" nameSuffix="__auto_vscrollbar__">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="0" />
+        </Dim>
+        <Dim type="TopEdge">
+          <AbsoluteDim value="1" />
+        </Dim>
+        <Dim type="Width">
+          <AbsoluteDim value="16" />
+        </Dim>
+        <Dim type="Height">
+          <UnifiedDim scale="1" offset="0" type="Height" />
+        </Dim>
+      </Area>
+      <HorzAlignment type="RightAligned" />
+    </Child>
+    <StateImagery name="Enabled" />
+    <StateImagery name="Disabled" />
+    <StateImagery name="EnabledFrame">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Frame_Type2" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="DisabledFrame">
+      <Layer></Layer>
+    </StateImagery>
+    <StateImagery name="EnabledBackground">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Background_Frame_Type2" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="DisabledBackground">
+      <Layer></Layer>
+    </StateImagery>
+  </WidgetLook>
+  <WidgetLook name="TLBB_Look_SimpleTextFrame">
+    <Property name="HorzFormatting" value="HorzCentred" />
+    <ImagerySection name="normal">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="CommonFrame" image="CommonEditBoxL" />
+        <Image type="Background" imageset="CommonFrame" image="CommonEditBoxM" />
+        <Image type="RightEdge" imageset="CommonFrame" image="CommonEditBoxR" />
+      </FrameComponent>
+    </ImagerySection>
+    <NamedArea name="TextArea">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="3" />
+        </Dim>
+        <Dim type="TopEdge">
+          <AbsoluteDim value="2" />
+        </Dim>
+        <Dim type="RightEdge">
+          <UnifiedDim scale="1" offset="-3" type="RightEdge">
+          </UnifiedDim>
+        </Dim>
+        <Dim type="BottomEdge">
+          <UnifiedDim scale="1" offset="-3" type="BottomEdge">
+          </UnifiedDim>
+        </Dim>
+      </Area>
+    </NamedArea>
+    <StateImagery name="Enabled">
+      <Layer>
+        <Section section="normal" />
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+  <WidgetLook name="TLBB_Look_SimpleTextLeft">
+    <Property name="HorzFormatting" value="HorzCentred" />
+    <ImagerySection name="normal">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="CommonFrame" image="CommonEditBoxL" />
+        <Image type="Background" imageset="CommonFrame" image="CommonEditBoxM" />
+      </FrameComponent>
+    </ImagerySection>
+    <NamedArea name="TextArea">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="3" />
+        </Dim>
+        <Dim type="TopEdge">
+          <AbsoluteDim value="2" />
+        </Dim>
+        <Dim type="RightEdge">
+          <UnifiedDim scale="1" type="RightEdge">
+            <DimOperator op="Subtract">
+              <AbsoluteDim value="3" />
+            </DimOperator>
+          </UnifiedDim>
+        </Dim>
+        <Dim type="BottomEdge">
+          <UnifiedDim scale="1" type="BottomEdge">
+            <DimOperator op="Subtract">
+              <AbsoluteDim value="3" />
+            </DimOperator>
+          </UnifiedDim>
+        </Dim>
+      </Area>
+    </NamedArea>
+    <StateImagery name="Enabled">
+      <Layer>
+        <Section section="normal" />
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+  <WidgetLook name="TLBB_Look_SimpleTextRight">
+    <Property name="HorzFormatting" value="HorzCentred" />
+    <ImagerySection name="normal">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="RightEdge" imageset="CommonFrame" image="CommonEditBoxR" />
+        <Image type="Background" imageset="CommonFrame" image="CommonEditBoxM" />
+      </FrameComponent>
+    </ImagerySection>
+    <NamedArea name="TextArea">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="3" />
+        </Dim>
+        <Dim type="TopEdge">
+          <AbsoluteDim value="2" />
+        </Dim>
+        <Dim type="RightEdge">
+          <UnifiedDim scale="1" type="RightEdge">
+            <DimOperator op="Subtract">
+              <AbsoluteDim value="3" />
+            </DimOperator>
+          </UnifiedDim>
+        </Dim>
+        <Dim type="BottomEdge">
+          <UnifiedDim scale="1" type="BottomEdge">
+            <DimOperator op="Subtract">
+              <AbsoluteDim value="3" />
+            </DimOperator>
+          </UnifiedDim>
+        </Dim>
+      </Area>
+    </NamedArea>
+    <StateImagery name="Enabled">
+      <Layer>
+        <Section section="normal" />
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+  
+  <WidgetLook name="TLBB_Look_JiaoZi">
+    <Property name="GoldIcon" value="set:Button6 image:Lace_JiaoziJin" />
+    <Property name="SilverIcon" value="set:Button6 image:Lace_JiaoziYin" />
+    <Property name="CopperIcon" value="set:Button6 image:Lace_JiaoziTong" />  
+    </WidgetLook>
+</Falagard>

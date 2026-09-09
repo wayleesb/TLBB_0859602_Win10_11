@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame1" Name="SetCommerceNet_Frame">
+        <Property Name="UnifiedSize" Value="{{0,256},{0.0,256}}" />
+        <Property Name="UnifiedXPosition" Value="{0.5,-247}" />
+        <Property Name="UnifiedYPosition" Value="{0.0,92}" />
+        <Window Type="TLBB_DragTitle" Name="SetCommerceNet_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="SetCommerceNet_Frame" />
+            <Window Type="TLBB_SimpleText" Name="SetCommerceNet_PageHeader">
+                <Property Name="Position" Value="x:0.0 y:0.0" />
+                <Property Name="Size" Value="w:1.0 h:1.0" />
+                <Property Name="Font" Value="YouYuan11.25" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Property Name="Text" Value="#{INTERFACE_XML_54}" />
+            </Window>
+        </Window>
+        <Window Type="TLBB_ButtonHelp" Name="SetCommerceNet_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*SetCommerceNet&quot;);' />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="SetCommerceNet_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Property Name="Text" Value="TLBB_ButtonClose" />
+            <Event Name="Clicked" Function="this:Hide();" />
+        </Window>
+        <Window Type="DefaultWindow" Name="SetCommerceNet_Function_Frame">
+            <Property Name="AbsolutePosition" Value="x:7.000000 y:36.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-13.000000},{1.000000,-55.000000}" />
+            <Window Type="TLBB_SimpleText" Name="SetCommerceNet_Text6">
+                <Property Name="Position" Value="x:0.0 y:0.0" />
+                <Property Name="UnifiedSize" Value="{{0.5,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_224}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_MultiColumnList" Name="SetCommerceNet_Text1">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,20.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.0,0.000000},{1.000000,-44.000000}" />
+                <Property Name="ForceHorzScrollbar" Value="False" />
+                <Property Name="ForceVertScrollbar" Value="True" />
+                <Property Name="SortSettingEnabled" Value="False" />
+                <Property Name="SelectionMode" Value="RowSingle" />
+                <Property Name="ColumnHeader" Value="text:#{INTERFACE_XML_1024} width:0.41869918 id:0" />
+                <Property Name="ColumnHeader" Value="text:ID width:0.1219512195 id:1" />
+                <Property Name="ColumnHeader" Value="text:#{INTERFACE_XML_1034} width:0.45934959 id:2" />
+                <Property Name="ColumnsSizable" Value="False" />
+                <Property Name="ColumnsAdjust" Value="True" />
+                <Property Name="ColumnsMovable" Value="False" />
+                <Event Name="SelectionChanged" Function="City_Road_SelectChanged();" />
+            </Window>
+            <Window Type="TLBB_Frame_Lace5" Name="SetCommerceNet_Blank">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-160.000000},{0.000000,20.000000}" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="SetCommerceNet_Accept">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-160.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:80.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_361}" />
+                <Event Name="Clicked" Function="City_Road_Clicked(1);" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="SetCommerceNet_Cancel">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-80.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:80.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_545}" />
+                <Event Name="Clicked" Function="City_Road_Clicked(2);" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

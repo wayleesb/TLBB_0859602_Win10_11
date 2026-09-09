@@ -1,0 +1,120 @@
+<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame1" Name="Stiletto_Frame">
+        <Property Name="UnifiedPosition" Value="{{0.0,368},{0.12,0}}" />
+        <Property Name="AbsoluteSize" Value="w:256 h:280" />
+        <Event Name="Shown" Function="Stiletto_OnShown();" />
+        <Event Name="Hidden" Function="Stiletto_Close();" />
+        <Window Type="TLBB_ButtonHelp" Name="Stiletto_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*Stiletto&quot;);' />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="Stiletto_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function="Stiletto_Close();" />
+        </Window>
+        <Window Type="TLBB_DragTitle" Name="Stiletto_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="Stiletto_Frame" />
+            <Property Name="Font" Value="YouYuan11.25" />
+            <Property Name="Text" Value="#{INTERFACE_XML_994}" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+        </Window>
+        <Window Type="DefaultWindow" Name="Stiletto_Function_Frame">
+            <Property Name="AbsolutePosition" Value="x:7.000000 y:36.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-13.000000},{1.000000,-55.000000}" />
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="Stiletto_Explain1">
+                <Property Name="UnifiedPosition" Value="{{0.0100000,0.000000},{0.000000,0.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.98000000,.000000},{0.000000,70.000000}" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="Text" Value="#{INTERFACE_XML_995}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+	    <Window Type="TLBB_SimpleText" Name="Stiletto_Explain2" >
+		<Property Name="UnifiedPosition" Value="{{0.010000,10.570000},{0.000000,77.000000}" />
+		<Property Name="UnifiedSize" Value="{{0.980000,-0.140005},{0.000000,18.000000}" />
+		<Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+		<Property Name="RiseOnClick" Value="False" />
+		<Property Name="Text" Value="#{INTERFACE_XML_996}" />
+		<Property Name="TextColor" Value="FFFFF263" />
+		<Property Name="VertFormatting" Value="VertCentred" />
+	    </Window>
+            <Window Type="TLBB_ActionButton" Name="Stiletto_Item">
+                <Property Name="UnifiedPosition" Value="{{0.000000,40.000000},{0.000000,95.000000}" />
+                <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                <Property Name="DraggingEnabled" Value="True" />
+                <Property Name="Empty" Value="false" />
+                <Property Name="DragAcceptName" Value="G3" />
+                <Event Name="RBClicked" Function="Resume_Equip_Stiletto(1);" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="Stiletto_State">
+                <Property Name="UnifiedPosition" Value="{{0.000000,80.000000},{0.000000,95.000000}" />
+                <Property Name="AbsoluteSize" Value="w:140.000000 h:36.000000" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Property Name="Text" Value="" />
+                <Property Name="TextColor" Value="FFFFF263" />
+            </Window>
+	    <Window Type="TLBB_SimpleText" Name="Stiletto_Explain3" >
+		<Property Name="UnifiedPosition" Value="{{0.000000,18.000000},{0.000000,150.000000}" />
+		<Property Name="AbsoluteSize" Value="w:110.000000 h:18.000000" />
+		<Property Name="HorzFormatting" Value="LeftAligned" />
+		<Property Name="RiseOnClick" Value="False" />
+		<Property Name="Text" Value="#{INTERFACE_XML_997}" />
+		<Property Name="TextColor" Value="FFFFF263" />
+		<Property Name="VertFormatting" Value="VertCentred" />
+	    </Window>
+            <Window Type="TLBB_ActionButton" Name="Stiletto_Material">
+                <Property Name="UnifiedPosition" Value="{{0.000000,135.000000},{0.000000,140.000000}" />
+                <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                <Property Name="Empty" Value="false" />
+                <Property Name="DragAcceptName" Value="G35" />
+                <Property Name="DraggingEnabled" Value="True" />
+                <Event Name="RBClicked" Function="Resume_Equip_Stiletto(2);" />
+                <!--				<Window Type="TLBB_StaticImageNULL" Name="Stiletto_Material_Bak">
+					<Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,0.000000}" />
+					<Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+				</Window>
+-->
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="Stiletto_Money_Text">
+                <Property Name="UnifiedPosition" Value="{{0.05,0.000000},{1.000000,-45.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.9,0.000000},{0.000000,22.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_792}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Window Type="TLBB_Money" Name="Stiletto_Money">
+                    <Property Name="UnifiedPosition" Value="{{0.0,0.000000},{0.000000,0.000000}" />
+                    <Property Name="UnifiedSize" Value="{{1.0,0.000000},{0.000000,20.000000}" />
+                    <Property Name="MoneyNumber" Value="0" />
+                    <Property Name="HorzFormatting" Value="RightAligned" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_Frame_Lace5" Name="Stiletto_Blank">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-100.000000},{0.000000,20.000000}" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="Stiletto_Accept">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-100.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:60.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_848}" />
+                <Event Name="Clicked" Function="Stiletto_Buttons_Clicked();" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="Stiletto_Cancel">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-40.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_542}" />
+                <Event Name="Clicked" Function="Stiletto_Close();" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

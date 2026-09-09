@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame0" Name="Operation_Frame">
+        <Property Name="UnifiedPosition" Value="{{0.5,-90},{0.5,-160}}" />
+		<Property Name="AbsoluteSize" Value="w:180 h:290" />
+        <Window Type="TLBB_DragTitle" Name="Operation_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+            <Property Name="Font" Value="YouYuan11.25" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="Text" Value="#{INTERFACE_XML_69}" />
+            <Property Name="DragTarget" Value="Operation_Frame" />
+        </Window>
+        <Window Type="TLBB_ButtonHelp" Name="Operation_Frame_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*Operation&quot;);' />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="Operation_Frame_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Property Name="Text" Value="TLBB_ButtonClose" />
+            <Event Name="Clicked" Function="this:Hide();" />
+        </Window>
+        <Window Type="DefaultWindow" Name="Operation_Frame_Client">
+            <Property Name="AbsolutePosition" Value="x:7.000000 y:36.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-13.000000},{1.000000,-55.000000}" />
+			<Window Type="TLBB_ButtonCommon" Name="Operation_Help">
+				<Property Name="UnifiedPosition" Value="{{0.15,0.000000},{0.000000,5.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.7000000,0.000000},{0.000000,20.000000}" />
+				<Property Name="Text" Value="#{INTERFACE_XML_135}" />
+				<Event Name="Clicked" Function='Helper:GotoHelper(&quot;*Operation&quot;);' />
+			</Window>
+            <Window Type="TLBB_ButtonCommon" Name="Operation_View">
+				        <Property Name="UnifiedPosition" Value="{{0.15,0.000000},{0.000000,30.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.7000000,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_744}" />
+                <Event Name="Clicked" Function="Operation_View_Clicked();" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="Operation_Sound">
+				        <Property Name="UnifiedPosition" Value="{{0.15,0.000000},{0.000000,55.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.7000000,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_637}" />
+                <Event Name="Clicked" Function="Operation_Sound_Clicked();" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="Operation_Geme">
+				        <Property Name="UnifiedPosition" Value="{{0.15,0.000000},{0.000000,80.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.7000000,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_837}" />
+                <Event Name="Clicked" Function="Operation_Game_Clicked();" />
+            </Window>
+          <Window Type="TLBB_ButtonCommon" Name="Operation_Acce_Custom">
+            <Property Name="UnifiedPosition" Value="{{0.15,0.000000},{0.000000,105.000000}" />
+            <Property Name="UnifiedSize" Value="{{0.7000000,0.000000},{0.000000,20.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1053}" />
+            <Event Name="Clicked" Function="Operation_Input_Clicked();" />
+          </Window>
+			      <Window Type="TLBB_ButtonCommon" Name="Operation_2Menu">
+				        <Property Name="UnifiedPosition" Value="{{0.15,0.000000},{0.000000,130.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.7000000,0.000000},{0.000000,20.000000}" />
+				        <Event Name="Clicked" Function="Operation_Ret2SelServer_Clicked();" />
+				        <Property Name="Text" Value="#{INTERFACE_XML_929}" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="Operation_QuitGame">
+				        <Property Name="UnifiedPosition" Value="{{0.15,0.000000},{0.000000,155.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.7000000,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_705}" />
+                <Event Name="Clicked" Function="Operation_QuitGame_Clicked();" />
+            </Window>
+            <Window Type="TLBB_ButtonExp2" Name="Operation_BackGame">
+				<Property Name="UnifiedPosition" Value="{{0.1,0.000000},{0.000000,185.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.8,0.000000},{0.000000,40.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_266}" />
+                <Event Name="Clicked" Function="this:Hide();" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

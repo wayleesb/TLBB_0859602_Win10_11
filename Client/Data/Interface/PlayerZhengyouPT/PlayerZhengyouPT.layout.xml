@@ -1,0 +1,541 @@
+<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame1" Name="PlayerZhengyouPT_Frame">
+        <Property Name="UnifiedPosition" Value="{{0.0176,0},{0.12,0}}" />
+        <Property Name="AbsoluteSize" Value="w:771 h:393" />
+        <Window Type="TLBB_DragTitle" Name="PlayerZhengyouPT_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="PlayerZhengyouPT_Frame" />
+            <Window Type="TLBB_SimpleText" Name="PlayerZhengyouPT_PageHeader">
+                <Property Name="Position" Value="x:0.0 y:0.0" />
+                <Property Name="Size" Value="w:1.0 h:1.0" />
+                <Property Name="Font" Value="YouYuan11.25" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Property Name="Text" Value="#{ZYPT_081103_006}" />
+            </Window>
+        </Window>
+        <Window Type="TLBB_ButtonHelp" Name="PlayerZhengyouPT_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Property Name="Text" Value="TLBB_ButtonHelp" />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="PlayerZhengyouPT_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Property Name="Text" Value="TLBB_ButtonClose" />
+            <Event Name="Clicked" Function="OnPlayerZhengyouPT_CloseClicked();" />
+        </Window>
+        <Window Type="DefaultWindow" Name="PlayerZhengyouPT_Function_Frame">
+            <Property Name="AbsolutePosition" Value="x:6.000000 y:36.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-12.000000},{1.000000,-55.000000}" />
+          	<Window Type="TLBB_ButtonPageUp" Name="PlayerZhengyouPT_Tab7" >
+            		<Property Name="UnifiedPosition" Value="{{0.0000,0.0000},{0.000000,0.000000}" />
+            		<Property Name="UnifiedSize" Value="{{0.0900000,0000},{0.000000,24.000000}" />
+            		<Property Name="CheckMode" Value="1" />
+            		<Property Name="Text" Value="#{ZYPT_081103_108}" />
+                <Event Name="Clicked" Function="PlayerZhengyouPT_ChannalChange( 6 );" />
+                <Property Name="Tooltip" Value="#{ZYPT_081125_7}" />
+          	</Window>
+            <Window Type="TLBB_ButtonPageUp" Name="PlayerZhengyouPT_Tab1" >
+                <Property Name="UnifiedPosition" Value="{{0.08300,0.0000},{0.000000,0.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0900000,0000},{0.000000,24.000000}" />
+                <Property Name="CheckMode" Value="1" />
+                <Property Name="Text" Value="#{ZYPT_081103_007}" />
+                <Event Name="Clicked" Function="PlayerZhengyouPT_ChannalChange( 0 );" />
+                <Property Name="Tooltip" Value="#{ZYPT_081125_2}" />
+            </Window>
+            <Window Type="TLBB_ButtonPageUp" Name="PlayerZhengyouPT_Tab2" >
+                <Property Name="UnifiedPosition" Value="{{0.16600,0.0000},{0.000000,0.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0900000,0000},{0.000000,24.000000}" />
+                <Property Name="CheckMode" Value="1" />
+                <Property Name="Text" Value="#{ZYPT_081103_008}" />
+                <Event Name="Clicked" Function="PlayerZhengyouPT_ChannalChange( 1 );" />
+                <Property Name="Tooltip" Value="#{ZYPT_081125_3}" />
+            </Window>
+            <Window Type="TLBB_ButtonPageUp" Name="PlayerZhengyouPT_Tab3" >
+                <Property Name="UnifiedPosition" Value="{{0.249000,0.0000},{0.000000,0.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0900000,0000},{0.000000,24.000000}" />
+                <Property Name="CheckMode" Value="1" />
+                <Property Name="Text" Value="#{ZYPT_081103_009}" />
+                <Event Name="Clicked" Function="PlayerZhengyouPT_ChannalChange( 2 );" />
+                <Property Name="Tooltip" Value="#{ZYPT_081125_4}" />
+            </Window>
+            <Window Type="TLBB_ButtonPageUp" Name="PlayerZhengyouPT_Tab4" >
+                <Property Name="UnifiedPosition" Value="{{0.33200,0.0000},{0.000000,0.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0900000,0000},{0.000000,24.000000}" />
+                <Property Name="CheckMode" Value="1" />
+                <Property Name="Text" Value="#{ZYPT_081103_010}" />
+                <Event Name="Clicked" Function="PlayerZhengyouPT_ChannalChange( 3 );" />
+                <Property Name="Tooltip" Value="#{ZYPT_081125_5}" />
+            </Window>
+            <Window Type="TLBB_ButtonPageUp" Name="PlayerZhengyouPT_Tab5" >
+                <Property Name="UnifiedPosition" Value="{{0.415000,0.0000},{0.000000,0.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.090000,0000},{0.000000,24.000000}" />
+                <Property Name="CheckMode" Value="1" />
+                <Property Name="Text" Value="#{ZYPT_081103_011}" />
+                <Event Name="Clicked" Function="PlayerZhengyouPT_ChannalChange( 4 );" />
+                <Property Name="Tooltip" Value="#{ZYPT_081125_6}" />
+            </Window>
+            <Window Type="TLBB_ButtonPageUp" Name="PlayerZhengyouPT_Tab6" >
+                <Property Name="UnifiedPosition" Value="{{0.498000,0.0000},{0.000000,0.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0900000,0000},{0.000000,24.000000}" />
+                <Property Name="CheckMode" Value="1" />
+                <Property Name="Text" Value="#{ZYPT_081103_012}" />
+                <Event Name="Clicked" Function="PlayerZhengyouPT_ChannalChange( 5 );" />
+            </Window>
+            <Window Type="TLBB_Frame_Lace1" Name="PlayerZhengyouPT_Result">
+                <Property Name="UnifiedPosition" Value="{{0.010000,-6.00000},{0.020000,14.580000}" />
+                <Property Name="UnifiedSize" Value="{{0.578,0.000000},{0.08000000,0.000000}" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Window Type="TLBB_SimpleText" Name="PlayerZhengyouPT_ResultInfo">
+                    <Property Name="UnifiedPosition" Value="{{0.0100000,0.00000},{0.000000,0.000000}" />
+                    <Property Name="UnifiedSize" Value="{{0.99,0.000000},{1.000000,0.000000}" />
+                    <Property Name="HorzFormatting" Value="HorzCentred" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="Text" Value="" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_MultiColumnList" Name="PlayerZhengyouPT_List">
+                <Property Name="UnifiedPosition" Value="{{0.000000,1.000000},{0.000000,23.000000}" />
+                <Property Name="AbsoluteSize" Value="w:442 h:272" />
+                <Property Name="ForceHorzScrollbar" Value="False" />
+                <Property Name="ForceVertScrollbar" Value="True" />
+                <Property Name="SortSettingEnabled" Value="False" />
+                <Property Name="SelectionMode" Value="RowSingle" />
+                <Property Name="ColumnHeader" Value="text:#{ZYPT_081103_013} width:0.37 id:0" />
+                <Property Name="ColumnHeader" Value="text:#{ZYPT_081103_014} width:0.23 id:1" />
+                <Property Name="ColumnHeader" Value="text:#{ZYPT_081103_015} width:0.2 id:2" />
+                <Property Name="ColumnHeader" Value="text:#{ZYPT_081103_016} width:0.2 id:3" />
+                <Property Name="ColumnsSizable" Value="False" />
+                <Property Name="ColumnsAdjust" Value="True" />
+                <Property Name="ColumnsMovable" Value="False" />
+                <Event Name="SelectionChanged" Function="PlayerZhengyouPT_List_OnSelectionChanged();" />
+            </Window>
+            <Window Type="TLBB_Frame_Lace1" Name="PlayerZhengyouPT_Bk">
+              <Property Name="UnifiedPosition" Value="{{0.530,41.00000},{0.000000,0.000000}" />
+              <Property Name="AbsoluteSize" Value="w:245 h:127" />
+              <Property Name="RiseOnClick" Value="False" />
+              <Window Type="TLBB_SimpleText" Name="PlayerZhengyouPT_Info1">
+                <Property Name="UnifiedPosition" Value="{{0.0200000,0.000000},{0.01000,0.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.9700000,0.000000},{0.1420000,0.000000}" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{ZYPT_081103_023}" />
+              </Window>
+              <Window Type="TLBB_SimpleText" Name="PlayerZhengyouPT_Info2">
+                <Property Name="UnifiedPosition" Value="{{0.0200000,0.000000},{0.15000,0.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.9700000,0.000000},{0.14200000,0.000000}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="TextColor" Value="FFFFF263" />
+              <Property Name="Text" Value="#{ZYPT_081103_024}" />
+              </Window>
+              <Window Type="TLBB_SimpleText" Name="PlayerZhengyouPT_Info3">
+                <Property Name="UnifiedPosition" Value="{{0.5700000,0.000000},{0.296000,0.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.4100000,0.000000},{0.14200000,0.000000}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{ZYPT_081103_035}" />
+              </Window>
+              <Window Type="TLBB_SimpleText" Name="PlayerZhengyouPT_Info4">
+                <Property Name="UnifiedPosition" Value="{{0.0200000,0.000000},{0.296000,0.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.4800000,0.000000},{0.14200000,0.000000}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{ZYPT_081103_036}" />
+              </Window>
+              <Window Type="TLBB_SimpleText" Name="PlayerZhengyouPT_Info5">
+                <Property Name="UnifiedPosition" Value="{{0.020000,0.000000},{0.438000,0.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.4800000,0.000000},{0.14200000,0.000000}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{ZYPT_081103_026}" />
+              </Window>
+              <Window Type="TLBB_SimpleText" Name="PlayerZhengyouPT_Info6">
+                <Property Name="UnifiedPosition" Value="{{0.020000,0.000000},{0.58000,0.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.9700000,0.000000},{0.14200000,0.000000}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{ZYPT_081103_028}" />
+              </Window>
+              <Window Type="TLBB_SimpleText" Name="PlayerZhengyouPT_Info7">
+                <Property Name="UnifiedPosition" Value="{{0.570000,0.000000},{0.438000,0.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.4100000,0.000000},{0.14200000,0.000000}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="" />
+              </Window>
+              <Window Type="TLBB_SimpleText" Name="PlayerZhengyouPT_Info8">
+                <Property Name="UnifiedPosition" Value="{{0.020000,0.000000},{0.722000,0.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.9700000,0.000000},{0.14200000,0.000000}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{ZYPT_081103_029}" />
+              </Window>
+              <Window Type="TLBB_SimpleText" Name="PlayerZhengyouPT_Info9">
+                <Property Name="UnifiedPosition" Value="{{0.020000,0.000000},{0.864000,0.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.9700000,0.000000},{0.14200000,0.000000}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{ZYPT_081103_030}" />
+              </Window>
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="PlayerZhengyouPT_View" >
+              <Property Name="UnifiedPosition" Value="{{0.530000,287.500000},{1.000000,-337.000000}" />
+              <Property Name="UnifiedSize" Value="{{0.0,65.000000},{0.000000,20.000000}" />
+              <Property Name="Text" Value="#{ZYPT_081103_031}" />
+              <Event Name="Clicked" Function="PlayerZhengyouPT_View_OnClick();" />
+              <Property Name="Tooltip" Value="#{ZYPT_081103_096}" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="PlayerZhengyouPT_Jieshi" >
+              <Property Name="UnifiedPosition" Value="{{0.530000,287.500000},{1.000000,-307.000000}" />
+              <Property Name="UnifiedSize" Value="{{0.0,65.000000},{0.000000,20.000000}" />
+              <Property Name="Text" Value="#{ZYPT_081103_032}" />
+              <Event Name="Clicked" Function="PlayerZhengyouPT_Jieshi_OnClick();" />
+              <Property Name="Tooltip" Value="#{ZYPT_081103_097}" />
+            </Window>
+            <Window Type="TLBB_Frame_Lace1" Name="PlayerZhengyouPT_Bk1">
+                <Property Name="UnifiedPosition" Value="{{0.530000,41.000000},{0.000000,150.000000}" />
+                <Property Name="AbsoluteSize" Value="w:317 h:49" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Window Type="TLBB_SimpleText" Name="PlayerZhengyouPT_Text1">
+                  <Property Name="UnifiedPosition" Value="{{0.020000,0.000000},{0.02000,0.000000}" />
+                  <Property Name="UnifiedSize" Value="{{0.300000,0.000000},{0.400000,0.000000}" />
+                  <Property Name="TextColor" Value="FFFFF263" />
+                  <Property Name="Text" Value="#{ZYPT_081103_035}" />
+                  <Property Name="HorzFormatting" Value="LeftAligned" />
+                  <Property Name="VertFormatting" Value="VertCentred" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="PlayerZhengyouPT_Text2">
+                  <Property Name="UnifiedPosition" Value="{{0.320000,0.000000},{0.02000,0.000000}" />
+                  <Property Name="UnifiedSize" Value="{{0.30000000,0.000000},{0.400000,0.000000}" />
+                  <Property Name="TextColor" Value="FFFFF263" />
+                  <Property Name="Text" Value="#{ZYPT_081103_036}" />
+                  <Property Name="HorzFormatting" Value="LeftAligned" />
+                  <Property Name="VertFormatting" Value="VertCentred" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="PlayerZhengyouPT_Text3">
+                  <Property Name="UnifiedPosition" Value="{{0.640000,0.000000},{0.02000,0.000000}" />
+                  <Property Name="UnifiedSize" Value="{{0.3600000,0.000000},{0.400000,0.000000}" />
+                  <Property Name="TextColor" Value="FFFFF263" />
+                  <Property Name="Text" Value="#{ZYPT_081103_037}" />
+                  <Property Name="HorzFormatting" Value="LeftAligned" />
+                  <Property Name="VertFormatting" Value="VertCentred" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="PlayerZhengyouPT_Text4">
+                  <Property Name="UnifiedPosition" Value="{{0.020000,0.000000},{0.48000,0.000000}" />
+                  <Property Name="UnifiedSize" Value="{{0.300000,0.000000},{0.400000,0.000000}" />
+                  <Property Name="TextColor" Value="FFFFF263" />
+                  <Property Name="Text" Value="#{ZYPT_081128_1}" />
+                  <Property Name="HorzFormatting" Value="LeftAligned" />
+                  <Property Name="VertFormatting" Value="VertCentred" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="PlayerZhengyouPT_Tenet_Text">
+                <Property Name="UnifiedPosition" Value="{{0.5200000,135.000000},{0.000000,131.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.5000000,-250.000000},{0.000000,18.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{ZYPT_081103_034}" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_Frame_Lace1" Name="PlayerZhengyouPT_Bk7">
+                  <Property Name="UnifiedPosition" Value="{{0.530000,41.000000},{0.000000,126.000000}" />
+                  <Property Name="AbsoluteSize" Value="w:317 h:75" />
+                  <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="PlayerZhengyouPT_Change" >
+                <Property Name="UnifiedPosition" Value="{{0.530000,263.500000},{1.000000,-209.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,65.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{ZYPT_081103_033}" />
+                <Event Name="Clicked" Function="PlayerZhengyouPT_Change_OnClick();" />
+                <Property Name="Tooltip" Value="#{ZYPT_081103_098}" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="PlayerZhengyouPT_Tenet_Text1">
+                <Property Name="UnifiedPosition" Value="{{0.5200000,135.500000},{0.000000,200.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.5000000,-250.000000},{0.000000,18.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{ZYPT_081103_038}" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_Frame_Lace1" Name="PlayerZhengyouPT_Bk2">
+                <Property Name="UnifiedPosition" Value="{{0.530,41.00000},{0.000000,217.000000}" />
+                <Property Name="AbsoluteSize" Value="w:317 h:123" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Window Type="TLBB_Frame_Lace1" Name="PlayerZhengyouPT_Bk3">
+                  <Property Name="UnifiedPosition" Value="{{0.010000,0.00000},{0.020000,31.580000}" />
+                  <Property Name="UnifiedSize" Value="{{0.6,0.000000},{0.18000000,0.000000}" />
+                  <Property Name="RiseOnClick" Value="False" />
+                  <Window Type="TLBB_SimpleText" Name="PlayerZhengyouPT_Info13">
+                    <Property Name="UnifiedPosition" Value="{{0.0200000,0.00000},{0.000000,0.000000}" />
+                    <Property Name="UnifiedSize" Value="{{1,0.000000},{1.000000,0.000000}" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="Text" Value="#{ZYPT_081103_040}" />
+                  </Window>
+                </Window>
+                <Window Type="TLBB_Frame_Lace1" Name="PlayerZhengyouPT_Bk4">
+                  <Property Name="UnifiedPosition" Value="{{0.010000,0.00000},{0.80000,-41.800003}" />
+                  <Property Name="UnifiedSize" Value="{{0.6,0.000000},{0.18000000,0.000000}" />
+                  <Property Name="RiseOnClick" Value="False" />
+                  <Window Type="TLBB_SimpleText" Name="PlayerZhengyouPT_Info14">
+                    <Property Name="UnifiedPosition" Value="{{0.0200000,0.00000},{0.000000,0.000000}" />
+                    <Property Name="UnifiedSize" Value="{{1,0.000000},{1.000000,0.000000}" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="Text" Value="#{ZYPT_081103_041}" />
+                  </Window>
+                </Window>
+                <Window Type="TLBB_Frame_Lace1" Name="PlayerZhengyouPT_Bk5">
+                  <Property Name="UnifiedPosition" Value="{{0.010000,0.00000},{0.80000,-19.800003}" />
+                  <Property Name="UnifiedSize" Value="{{0.6,0.000000},{0.18000000,0.000000}" />
+                  <Property Name="RiseOnClick" Value="False" />
+                  <Window Type="TLBB_SimpleText" Name="PlayerZhengyouPT_Info15">
+                    <Property Name="UnifiedPosition" Value="{{0.0200000,0.00000},{0.000000,0.000000}" />
+                    <Property Name="UnifiedSize" Value="{{1,0.000000},{1.000000,0.000000}" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="Text" Value="#{ZYPT_081103_042}" />
+                  </Window>
+                </Window>
+                <Window Type="TLBB_Frame_Lace1" Name="PlayerZhengyouPT_Bk6">
+                  <Property Name="UnifiedPosition" Value="{{0.010000,0.00000},{0.8000,2.199997}" />
+                  <Property Name="UnifiedSize" Value="{{0.6,0.000000},{0.18000000,0.00003}" />
+                  <Property Name="RiseOnClick" Value="False" />
+                  <Window Type="TLBB_SimpleText" Name="PlayerZhengyouPT_Info16">
+                    <Property Name="UnifiedPosition" Value="{{0.0200000,0.00000},{0.000000,0.000000}" />
+                    <Property Name="UnifiedSize" Value="{{1,0.000000},{1.000000,0.000000}" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="Text" Value="#{ZYPT_081103_043}" />
+                  </Window>
+                </Window>
+                <Window Type="TLBB_SimpleMulitiTextFrame" Name="PlayerZhengyouPT_Info_1">
+                  <Property Name="UnifiedPosition" Value="{{0.010000,190.839996},{0.020000,31.580000}" />
+                  <Property Name="UnifiedSize" Value="{{0.125,0.000000},{0.18000000,0.00003}" />
+                  <Property Name="Text" Value="" />
+                  <Property Name="TextColor" Value="FFFDF7A7" />
+                  <Property Name="HorzFormatting" Value="RightAligned" />
+                  <Property Name="VertFormatting" Value="VertCentred" />
+                  <Property Name="RiseOnClick" Value="False" />
+                </Window>
+                <Window Type="TLBB_ButtonCommon" Name="PlayerZhengyouPT_Toupiao1" >
+                  <Property Name="UnifiedPosition" Value="{{0.010000,231.839996},{0.020000,31.580000}" />
+                  <Property Name="UnifiedSize" Value="{{0.100000,5.840000},{0.180000,0.0000}" />
+                  <Property Name="Text" Value="#{ZYPT_081103_044}" />
+                  <Event Name="Clicked" Function="PlayerZhengyouPT_Toupiao(0);" />
+                  <Property Name="Tooltip" Value="#{ZYPT_081103_094}" />
+                </Window>
+                <Window Type="TLBB_ButtonCommon" Name="PlayerZhengyouPT_Chakan1" >
+                  <Property Name="UnifiedPosition" Value="{{0.010000,270.839996},{0.020000,31.580000}" />
+                  <Property Name="UnifiedSize" Value="{{0.100000,5.840000},{0.180000,0.0000}" />
+                  <Property Name="Text" Value="#{ZYPT_081103_045}" />
+                  <Event Name="Clicked" Function="OnPlayerZhengyouPT_Chakan1Clicked(0);" />
+                  <Property Name="Tooltip" Value="#{ZYPT_081103_095}" />
+                </Window>
+                <Window Type="TLBB_SimpleMulitiTextFrame" Name="PlayerZhengyouPT_Info_2">
+                  <Property Name="UnifiedPosition" Value="{{0.010000,190.839996},{0.80000,-41.800003}" />
+                  <Property Name="UnifiedSize" Value="{{0.125,0.000000},{0.18000000,0.00003}" />
+                  <Property Name="Text" Value="" />
+                  <Property Name="TextColor" Value="FFFDF7A7" />
+                  <Property Name="HorzFormatting" Value="RightAligned" />
+                  <Property Name="VertFormatting" Value="VertCentred" />
+                  <Property Name="RiseOnClick" Value="False" />
+                </Window>
+                <Window Type="TLBB_ButtonCommon" Name="PlayerZhengyouPT_Toupiao2" >
+                  <Property Name="UnifiedPosition" Value="{{0.010000,231.839996},{0.80000,-41.800003}" />
+                  <Property Name="UnifiedSize" Value="{{0.100000,5.840000},{0.180000,0.0000}" />
+                  <Property Name="Text" Value="#{ZYPT_081103_044}" />
+                  <Event Name="Clicked" Function="PlayerZhengyouPT_Toupiao(1);" />
+                  <Property Name="Tooltip" Value="#{ZYPT_081103_094}" />
+                </Window>
+                <Window Type="TLBB_ButtonCommon" Name="PlayerZhengyouPT_Chakan2" >
+                  <Property Name="UnifiedPosition" Value="{{0.010000,270.839996},{0.80000,-41.800003}" />
+                  <Property Name="UnifiedSize" Value="{{0.100000,5.840000},{0.180000,0.0000}" />
+                  <Property Name="Text" Value="#{ZYPT_081103_045}" />
+                  <Event Name="Clicked" Function="OnPlayerZhengyouPT_Chakan1Clicked(1);" />
+                  <Property Name="Tooltip" Value="#{ZYPT_081103_095}" />
+                </Window>
+                <Window Type="TLBB_SimpleMulitiTextFrame" Name="PlayerZhengyouPT_Info_3">
+                  <Property Name="UnifiedPosition" Value="{{0.010000,190.839996},{0.80000,-19.800003}" />
+                  <Property Name="UnifiedSize" Value="{{0.125,0.000000},{0.18000000,0.00003}" />
+                  <Property Name="Text" Value="" />
+                  <Property Name="TextColor" Value="FFFDF7A7" />
+                  <Property Name="HorzFormatting" Value="RightAligned" />
+                  <Property Name="VertFormatting" Value="VertCentred" />
+                  <Property Name="RiseOnClick" Value="False" />
+                </Window>
+                <Window Type="TLBB_ButtonCommon" Name="PlayerZhengyouPT_Toupiao3" >
+                  <Property Name="UnifiedPosition" Value="{{0.010000,231.839996},{0.80000,-19.800003}" />
+                  <Property Name="UnifiedSize" Value="{{0.100000,5.840000},{0.180000,0.0000}" />
+                  <Property Name="Text" Value="#{ZYPT_081103_044}" />
+                  <Event Name="Clicked" Function="PlayerZhengyouPT_Toupiao(2);" />
+                  <Property Name="Tooltip" Value="#{ZYPT_081103_094}" />
+                </Window>
+                <Window Type="TLBB_ButtonCommon" Name="PlayerZhengyouPT_Chakan3" >
+                  <Property Name="UnifiedPosition" Value="{{0.010000,270.839996},{0.80000,-19.800003}" />
+                  <Property Name="UnifiedSize" Value="{{0.100000,5.840000},{0.180000,0.0000}" />
+                  <Property Name="Text" Value="#{ZYPT_081103_045}" />
+                  <Event Name="Clicked" Function="OnPlayerZhengyouPT_Chakan1Clicked(2);" />
+                  <Property Name="Tooltip" Value="#{ZYPT_081103_095}" />
+                </Window>
+                <Window Type="TLBB_SimpleMulitiTextFrame" Name="PlayerZhengyouPT_Info_4">
+                  <Property Name="UnifiedPosition" Value="{{0.010000,190.839996},{0.8000,2.199997}" />
+                  <Property Name="UnifiedSize" Value="{{0.125,0.000000},{0.18000000,0.00003}" />
+                  <Property Name="Text" Value="" />
+                  <Property Name="TextColor" Value="FFFDF7A7" />
+                  <Property Name="HorzFormatting" Value="RightAligned" />
+                  <Property Name="VertFormatting" Value="VertCentred" />
+                  <Property Name="RiseOnClick" Value="False" />
+                </Window>
+                <Window Type="TLBB_ButtonCommon" Name="PlayerZhengyouPT_Toupiao4" >
+                  <Property Name="UnifiedPosition" Value="{{0.010000,231.839996},{0.8000,2.199997}" />
+                  <Property Name="UnifiedSize" Value="{{0.100000,5.840000},{0.180000,0.0000}" />
+                  <Property Name="Text" Value="#{ZYPT_081103_044}" />
+                  <Event Name="Clicked" Function="PlayerZhengyouPT_Toupiao(3);" />
+                  <Property Name="Tooltip" Value="#{ZYPT_081103_094}" />
+                </Window>
+                <Window Type="TLBB_ButtonCommon" Name="PlayerZhengyouPT_Chakan4" >
+                  <Property Name="UnifiedPosition" Value="{{0.010000,270.839996},{0.8000,2.199997}" />
+                  <Property Name="UnifiedSize" Value="{{0.100000,5.840000},{0.180000,0.0000}" />
+                  <Property Name="Text" Value="#{ZYPT_081103_045}" />
+                  <Event Name="Clicked" Function="OnPlayerZhengyouPT_Chakan1Clicked(3);" />
+                  <Property Name="Tooltip" Value="#{ZYPT_081103_095}" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="PlayerZhengyouPT_Info11">
+                  <Property Name="UnifiedPosition" Value="{{0.0200000,0.000000},{0.020000,0.000000}" />
+                  <Property Name="UnifiedSize" Value="{{0.99,.000000},{0.1300000,.000000}" />
+                  <Property Name="HorzFormatting" Value="LeftAligned" />
+                  <Property Name="VertFormatting" Value="VertCentred" />
+                  <Property Name="TextColor" Value="FFFFF263" />
+                  <Property Name="Text" Value="#{ZYPT_081103_039}" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="PlayerZhengyouPT_Info12">
+                  <Property Name="UnifiedPosition" Value="{{0.0200000,0.000000},{0.150000,0.000000}" />
+                  <Property Name="UnifiedSize" Value="{{0.99,.000000},{0.1300000,.000000}" />
+                  <Property Name="HorzFormatting" Value="LeftAligned" />
+                  <Property Name="VertFormatting" Value="VertCentred" />
+                  <Property Name="TextColor" Value="FFFFF263" />
+                  <Property Name="Text" Value="" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_Frame_Lace5" Name="PlayerZhengyouPT_Blank">
+              <Property Name="UnifiedPosition" Value="{{0.370000,-20.459991},{1.000000,-20.000000}" />
+              <Property Name="UnifiedSize" Value="{{0.551000,-301.459991},{0.000000,20.000000}" />
+              <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="PlayerZhengyouPT_FirstPage">
+                <Property Name="UnifiedPosition" Value="{{0.289000,23.500000},{1.000000,-43.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,45.000000},{0.000000,20.000000}" />
+                <Event Name="Clicked" Function="OnPlayerZhengyouPT_FirstPageClicked();" />
+                <Property Name="Text" Value="#{ZYPT_081128_5}" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="PlayerZhengyouPT_PageUp">
+                <Property Name="UnifiedPosition" Value="{{0.2910000,67.500000},{1.000000,-43.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,55.000000},{0.000000,20.000000}" />
+                <Event Name="Clicked" Function="OnPlayerZhengyouPT_PageUpClicked();" />
+                <Property Name="Text" Value="#{ZYPT_081103_017}" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="PlayerZhengyouPT_PageDown">
+                <Property Name="UnifiedPosition" Value="{{0.293000,121.500000},{1.000000,-43.00000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,55.000000},{0.000000,20.000000}" />
+                <Event Name="Clicked" Function="OnPlayerZhengyouPT_PageDownClicked();" />
+                <Property Name="Text" Value="#{ZYPT_081103_018}" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="PlayerZhengyouPT_LastPage">
+                <Property Name="UnifiedPosition" Value="{{0.295000,175.500000},{1.000000,-43.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,45.000000},{0.000000,20.000000}" />
+                <Event Name="Clicked" Function="OnPlayerZhengyouPT_LastPageClicked();" />
+                <Property Name="Text" Value="#{ZYPT_081128_6}" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="PlayerZhengyouPT_Goto">
+                <Property Name="UnifiedPosition" Value="{{0.245000,-109.500000},{1.000000,-43.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0400000,0.000000},{0.00000,20.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{ZYPT_081128_2}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_EditBoxNormal" Name="PlayerZhengyouPT_GotoEditBox">
+              <Property Name="UnifiedPosition" Value="{{0.250000,-81.500000},{1.000000,-43.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.035,0.000000},{0.000000,20.000000}" />
+                <Property Name="MaxTextLength" Value="3" />
+                <Property Name="ValidationString" Value="[0-9]*" />
+                <Property Name="Text" value="" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="PlayerZhengyouPT_GotoyText">
+                <Property Name="UnifiedPosition" Value="{{0.250000,-52.500000},{1.000000,-43.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0200000,0.000000},{0.00000,20.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{ZYPT_081128_3}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="PlayerZhengyouPT_Go">
+                <Property Name="UnifiedPosition" Value="{{0.250000,-35.500000},{1.000000,-43.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,45.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{ZYPT_081128_4}" />
+                <Event Name="Clicked" Function="OnPlayerZhengyouPT_GotoClicked();" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="PlayerZhengyouPT_Amount">
+                <Property Name="UnifiedPosition" Value="{{0.941000,-713.000000},{0.000000,294.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.000000,66.000000},{0.000000,22.000000}" />
+                <Property Name="Text" Value="" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="PlayerZhengyouPT_Fabu" >
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.286011},{1.000000,-21.00000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,66.000000},{0.000000,21.000000}" />
+                <Property Name="Text" Value="#{ZYPT_081103_019}" />
+                <Event Name="Clicked" Function="OnPlayerZhengyouPT_FabuClicked();" />
+                <Property Name="Tooltip" Value="#{ZYPT_081103_090}" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="PlayerZhengyouPT_Chexiao" >
+                <Property Name="UnifiedPosition" Value="{{0.47000,-291.000000},{1.000000,-21.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,65.000000},{0.000000,21.000000}" />
+                <Property Name="Text" Value="#{ZYPT_081103_020}" />
+                <Event Name="Clicked" Function="OnPlayerZhengyouPT_ChexiaoClicked();" />
+                <Property Name="Tooltip" Value="#{ZYPT_081103_091}" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="PlayerZhengyouPT_Guanli" >
+                <Property Name="UnifiedPosition" Value="{{0.472000,-227.000000},{1.000000,-21.0000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,65.000000},{0.000000,21.000000}" />
+                <Property Name="Text" Value="#{ZYPT_081103_021}" />
+                <Event Name="Clicked" Function="OnPlayerZhengyouPT_GuanliClicked();" />
+                <Property Name="Tooltip" Value="#{ZYPT_081103_092}" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="PlayerZhengyouPT_Chazhao" >
+                <Property Name="UnifiedPosition" Value="{{0.473000,-163.000000},{1.000000,-21.00000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,65.000000},{0.000000,21.000000}" />
+                <Property Name="Text" Value="#{ZYPT_081103_022}" />
+                <Event Name="Clicked" Function="OnPlayerZhengyouPT_ChazhaoClicked();" />
+                <Property Name="Tooltip" Value="#{ZYPT_081103_093}" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="PlayerZhengyouPT_Shuaxin" >
+                <Property Name="UnifiedPosition" Value="{{0.528000,-23.000000},{1.000000,-21.00000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,65.000000},{0.000000,21.000000}" />
+                <Property Name="Text" Value="#{ZYPT_081128_7}" />
+                <Event Name="Clicked" Function="OnPlayerZhengyouPT_RefreshClicked();" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

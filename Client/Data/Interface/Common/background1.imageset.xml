@@ -1,0 +1,4 @@
+<?xml version="1.0" ?>
+<Imageset Name="Background1" Imagefile="Common/tga_Background1.dds" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">	
+	<Image Name="View" XPos="0" YPos="0" Width="256" Height="256" />
+</Imageset>

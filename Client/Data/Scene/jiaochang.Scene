@@ -1,0 +1,764 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Scene formatVersion="0.1.1" name="jiaochang">
+
+  <Terrain filename="jiaochang.Terrain"/>
+
+  <Object name="#FairyEnviroment" type="Enviroment">
+    <Property name="ambient" value="0.2 0.12549 0"/>
+    <Property name="fog.mode" value="linear"/>
+    <Property name="fog.colour" value="0.576471 0.568627 0.968628"/>
+    <Property name="fog.linear start" value="3000"/>
+    <Property name="fog.linear end" value="5000"/>
+  </Object>
+
+  <Object name="#FairyMainLightOne" type="Light">
+    <Property name="type" value="directional"/>
+    <Property name="diffuse" value="0.937255 0.513726 0.227451"/>
+    <Property name="specular" value="0.101961 0.219608 0.415686"/>
+    <Property name="direction" value="0.516204 -0.373079 -0.304668"/>
+    <Property name="cast shadows" value="true"/>
+  </Object>
+
+  <Object name="#FairyMainLightTwo" type="Light">
+    <Property name="type" value="directional"/>
+    <Property name="diffuse" value="0.176471 0.2 0.690196"/>
+    <Property name="direction" value="-0.5625 -0.132762 0.628993"/>
+  </Object>
+
+  <Object name="#FairySkyDome" type="SkyDome">
+    <Property name="material" value="CloudySky"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="公用小建筑/台阶边2.mesh"/>
+    <Property name="position" value="-1002 -27 -1296.9"/>
+    <Property name="orientation" value="-7.63635e-008 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="公用小建筑/台阶边2.mesh"/>
+    <Property name="position" value="-1001 7 -2012.9"/>
+    <Property name="orientation" value="-7.63635e-008 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="公用小建筑/台阶边2.mesh"/>
+    <Property name="position" value="1007 -18.9999 -1198.26"/>
+    <Property name="orientation" value="-1 0 0 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="公用小建筑/台阶边2.mesh"/>
+    <Property name="position" value="1000 8 -1904.39"/>
+    <Property name="orientation" value="-1 0 0 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="公用小建筑/栏杆2.mesh"/>
+    <Property name="position" value="900 400 -2300"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="公用小建筑/栏杆2接.mesh"/>
+    <Property name="position" value="900 400 -2500"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="草原/蒙古大鼓.mesh"/>
+    <Property name="position" value="0 400 -1100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="草原/蒙古长枪.mesh"/>
+    <Property name="position" value="-700 400 -2500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="草原/蒙古长枪.mesh"/>
+    <Property name="position" value="800 400 -2500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="草原/蒙古箭靶.mesh"/>
+    <Property name="position" value="-1000 0 2600"/>
+    <Property name="orientation" value="-7.30533e-008 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="草原/蒙古箭靶.mesh"/>
+    <Property name="position" value="1100 0 2600"/>
+    <Property name="orientation" value="-7.30533e-008 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="草原/蒙古箭靶.mesh"/>
+    <Property name="position" value="1900 0 2600"/>
+    <Property name="orientation" value="-7.30533e-008 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="丐帮/丐帮兵器架.mesh"/>
+    <Property name="position" value="-800 400 -2300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="丐帮/丐帮兵器架2.mesh"/>
+    <Property name="position" value="2600 0 900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="丐帮/丐帮兵器架.mesh"/>
+    <Property name="position" value="2600 0 1600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="丐帮/丐帮兵器架.mesh"/>
+    <Property name="position" value="2600 0 -200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="丐帮/丐帮忠旗.mesh"/>
+    <Property name="position" value="2600 0 -2300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="丐帮/丐帮忠旗.mesh"/>
+    <Property name="position" value="-2600 0 -2300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="丐帮/丐帮石锁01.mesh"/>
+    <Property name="position" value="-2600 0 1100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="丐帮/丐帮石锁02.mesh"/>
+    <Property name="position" value="-2500 0 1000"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="丐帮/丐帮石锁03.mesh"/>
+    <Property name="position" value="-2600 0 1400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="丐帮/丐帮石锁04.mesh"/>
+    <Property name="position" value="-2600 0 1500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="丐帮/丐帮石锁04.mesh"/>
+    <Property name="position" value="-2500 0 800"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="丐帮/丐帮石锁04.mesh"/>
+    <Property name="position" value="-2500 0 1600"/>
+    <Property name="orientation" value="0.88519 0 -0.46523 0"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="太湖/太湖水师大龙旗.model"/>
+    <Property name="position" value="-500 400 -2400"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="太湖/太湖水师大龙旗.model"/>
+    <Property name="position" value="600 400 -2500"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="太湖/太湖水师帅旗.model"/>
+    <Property name="position" value="100 400 -2490.31"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="草原/蒙古铜锣.mesh"/>
+    <Property name="position" value="2200 0 -2200"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="太湖/太湖箭楼灯.model"/>
+    <Property name="position" value="-1213.45 0.713478 -2200"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="太湖/太湖箭楼灯.model"/>
+    <Property name="position" value="3311.16 1.54163 -2300"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="太湖/太湖箭楼.model"/>
+    <Property name="position" value="1262.97 0 -2249.56"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="太湖/太湖箭楼.model"/>
+    <Property name="position" value="-1242.9 0.202666 -2224.88"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="太湖/太湖箭楼.model"/>
+    <Property name="position" value="-2498.24 0 -886.601"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="太湖/太湖箭楼灯.model"/>
+    <Property name="position" value="-2412.18 0 -2930.4"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="太湖/太湖箭楼.model"/>
+    <Property name="position" value="-2505.4 800 -2900"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="太湖/太湖箭楼.model"/>
+    <Property name="position" value="2543 0 -813"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="太湖/太湖箭楼灯.model"/>
+    <Property name="position" value="2496 0 -2875.5"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="太湖/太湖箭楼.model"/>
+    <Property name="position" value="2475.46 800 -2900"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="太湖/太湖箭楼.model"/>
+    <Property name="position" value="1275.58 0 -826.799"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="太湖/太湖箭楼灯.model"/>
+    <Property name="position" value="3241 0 -834"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="太湖/太湖箭楼灯.model"/>
+    <Property name="position" value="-1223.8 0 -917.448"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="太湖/太湖箭楼.model"/>
+    <Property name="position" value="-1278.41 0 -915.916"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="草原/蒙古立火柱.mesh"/>
+    <Property name="position" value="-800 0 -500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/太湖水师战车.mesh"/>
+    <Property name="position" value="-400 0 -600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/太湖水师战车.mesh"/>
+    <Property name="position" value="500 0 -600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/太湖水师战车.mesh"/>
+    <Property name="position" value="1700 0 -2300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/太湖水师战车.mesh"/>
+    <Property name="position" value="-1600 0 -2300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/太湖水师战车.mesh"/>
+    <Property name="position" value="-2400 0 -2305.74"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雁门关/雁门关囚车.mesh"/>
+    <Property name="position" value="2443.55 0 2068.29"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="草原/蒙古箭楼.mesh"/>
+    <Property name="position" value="-1500 0 2500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雁门关/雁门关火炮.mesh"/>
+    <Property name="position" value="-800 400 -1100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雁门关/雁门关火炮.mesh"/>
+    <Property name="position" value="800 400 -1100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雁门关/雁门关火炮.mesh"/>
+    <Property name="position" value="-2200 800 -2800"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雁门关/雁门关火炮.mesh"/>
+    <Property name="position" value="-2800 800 -2800"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雁门关/雁门关火炮.mesh"/>
+    <Property name="position" value="2800 800 -2800"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雁门关/雁门关火炮.mesh"/>
+    <Property name="position" value="2200 800 -2800"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雁门关/雁门关营帐2.mesh"/>
+    <Property name="position" value="-2400 0 300"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雁门关/雁门关战车2.mesh"/>
+    <Property name="position" value="100 0 2300"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雁门关/雁门关战车1.mesh"/>
+    <Property name="position" value="-2400 -48 2171.97"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="草原/蒙古箭楼.mesh"/>
+    <Property name="position" value="1400 0 2600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="草原/蒙古立火柱.mesh"/>
+    <Property name="position" value="2560.31 2 2592"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="2559.31 454 2592"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="2559.31 454 2592"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="草原/蒙古立火柱.mesh"/>
+    <Property name="position" value="-2496.73 0 2600"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="-2497.73 452 2600"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="-2497.73 452 2600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="草原/蒙古立火柱.mesh"/>
+    <Property name="position" value="-2600 0 800"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="-2601 452 800"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="-2601 452 800"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="-801 452 -500"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="-801 452 -500"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="799 452 -600"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="799 452 -600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="草原/蒙古立火柱.mesh"/>
+    <Property name="position" value="800 0 -600"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="2554 456 1201"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="2554 456 1201"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="草原/蒙古立火柱.mesh"/>
+    <Property name="position" value="2555 4 1201"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="810 454 2610"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="810 454 2610"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="草原/蒙古立火柱.mesh"/>
+    <Property name="position" value="811 2 2610"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="草原/蒙古立火柱.mesh"/>
+    <Property name="position" value="-799 -52 2600"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="-800 400 2600"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="-800 400 2600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="草原/蒙古箭靶.mesh"/>
+    <Property name="position" value="-500 0 2600"/>
+    <Property name="orientation" value="-7.30533e-008 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="草原/蒙古箭靶.mesh"/>
+    <Property name="position" value="-2000 0 2600"/>
+    <Property name="orientation" value="-7.30533e-008 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雁门关/雁门关营帐2.mesh"/>
+    <Property name="position" value="2380.2 0 300"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.976471 0.113725 0.066667"/>
+    <Property name="position" value="800 700 2400"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="0.0001"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.976471 0.113725 0.066667"/>
+    <Property name="position" value="-2599 599 2600"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="0.0001"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.976471 0.113725 0.066667"/>
+    <Property name="position" value="-2500 500 -1600"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="0.0001"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.835294 0.207843 0.788235"/>
+    <Property name="position" value="2200 400 2500"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="0.0001"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.976471 0.113725 0.066667"/>
+    <Property name="position" value="-2700 468.289 801"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="0.0001"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.976471 0.113725 0.066667"/>
+    <Property name="position" value="0 700 -1701"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.976471 0.113725 0.066667"/>
+    <Property name="position" value="-700 600 2400"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="0.0001"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="草原/蒙古长枪1.mesh"/>
+    <Property name="position" value="-1258.16 0 2584.22"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="草原/蒙古长枪1.mesh"/>
+    <Property name="position" value="-1787.31 0 2596.86"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="草原/蒙古长枪1.mesh"/>
+    <Property name="position" value="2189.35 0 2607.87"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="草原/蒙古长枪1.mesh"/>
+    <Property name="position" value="1649.87 0 2604.79"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="草原/路角.mesh"/>
+    <Property name="position" value="1195.26 0 -615.605"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="草原/路角.mesh"/>
+    <Property name="position" value="1539.12 0 -911.831"/>
+    <Property name="orientation" value="0.738592 0 0.674153 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="草原/路角.mesh"/>
+    <Property name="position" value="-1512.49 0 -1000.81"/>
+    <Property name="orientation" value="0.738592 0 0.674153 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="草原/路角.mesh"/>
+    <Property name="position" value="-1370.11 0 -717.186"/>
+    <Property name="orientation" value="0.0490676 0 0.998796 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="草原/路角.mesh"/>
+    <Property name="position" value="-2440.94 0 -632.368"/>
+    <Property name="orientation" value="0.0490676 0 0.998796 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="草原/路角.mesh"/>
+    <Property name="position" value="-2287.02 0 -900"/>
+    <Property name="orientation" value="-0.697121 0 0.716954 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="草原/路角.mesh"/>
+    <Property name="position" value="2500 0 -600"/>
+    <Property name="orientation" value="0.0490676 0 0.998796 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="草原/路角.mesh"/>
+    <Property name="position" value="2308.84 0 -867.411"/>
+    <Property name="orientation" value="0.671559 0 0.740951 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="草原/蒙古长枪1.mesh"/>
+    <Property name="position" value="2600 0 700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="草原/蒙古立火柱.mesh"/>
+    <Property name="position" value="83 -12 -489"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="82 440 -489"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="82 440 -489"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="公用小建筑/栏杆2.mesh"/>
+    <Property name="position" value="-700 400 -900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="公用小建筑/栏杆2接.mesh"/>
+    <Property name="position" value="-900 400 -1100"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="公用小建筑/栏杆2接.mesh"/>
+    <Property name="position" value="-500 400 -900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="公用小建筑/栏杆2接.mesh"/>
+    <Property name="position" value="-300 400 -900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="公用小建筑/栏杆2接.mesh"/>
+    <Property name="position" value="-100 400 -900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="公用小建筑/栏杆2接.mesh"/>
+    <Property name="position" value="100 400 -900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="公用小建筑/栏杆2接.mesh"/>
+    <Property name="position" value="300 400 -900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="公用小建筑/栏杆2接.mesh"/>
+    <Property name="position" value="500 400 -900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="公用小建筑/栏杆2接.mesh"/>
+    <Property name="position" value="700 400 -900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="公用小建筑/栏杆2接.mesh"/>
+    <Property name="position" value="900 400 -900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="公用小建筑/栏杆2接.mesh"/>
+    <Property name="position" value="900 400 -1100"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="公用小建筑/栏杆2接.mesh"/>
+    <Property name="position" value="-900 400 -2100"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="公用小建筑/栏杆2.mesh"/>
+    <Property name="position" value="-900 400 -2500"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/太湖水师战车.mesh"/>
+    <Property name="position" value="-2600 0 -1600"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/太湖水师战车.mesh"/>
+    <Property name="position" value="2600 0 -1600"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/太湖草人标把.mesh"/>
+    <Property name="position" value="-2600 0 1800"/>
+    <Property name="orientation" value="0.68574 0 -0.727847 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="苏州/哑铃.mesh"/>
+    <Property name="position" value="-2100 0 -2300"/>
+    <Property name="orientation" value="0.672076 0 -0.740482 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="苏州/木把子.mesh"/>
+    <Property name="position" value="-1800 0 -2300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="苏州/木桩1.mesh"/>
+    <Property name="position" value="-1900 0 -2300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="苏州/木桩1.mesh"/>
+    <Property name="position" value="-2240.98 0 -2331.55"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="苏州/木桩1.mesh"/>
+    <Property name="position" value="-2600 0 -1392.65"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="苏州/木把子.mesh"/>
+    <Property name="position" value="-2600 0 -1900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="苏州/木把子.mesh"/>
+    <Property name="position" value="-2600 0 -2100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="苏州/木把子.mesh"/>
+    <Property name="position" value="-2600 0 -1200"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="chuansongdian"/>
+    <Property name="position" value="1947.54 4 2434.15"/>
+  </Object>
+
+</Scene>

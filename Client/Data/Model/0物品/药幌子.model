@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="药幌子.frame" />
+    <entity mesh="药幌子.mesh" node="药幌子" />
+    <entity mesh="药幌子2.mesh" />
+</model>

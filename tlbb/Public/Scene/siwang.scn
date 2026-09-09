@@ -1,0 +1,6 @@
+[System]
+navmapname=siwang.nav
+monsterfile=siwang_monster.ini
+patrolpoint=siwang_patrolpoint.ini
+eventfile=siwang_area.ini
+petfile=siwang_pet.ini

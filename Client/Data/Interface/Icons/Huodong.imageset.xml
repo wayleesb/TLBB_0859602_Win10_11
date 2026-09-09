@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<Imageset Name="Huodong" Imagefile="Icons/Huodong.jpg" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+	<Image Name="Huodong_1" XPos="0" YPos="0" Width="64" Height="64" />
+	<Image Name="Huodong_2" XPos="64" YPos="0" Width="64" Height="64" />
+	<Image Name="Huodong_3" XPos="128" YPos="0" Width="64" Height="64" />
+	<Image Name="Huodong_4" XPos="192" YPos="0" Width="64" Height="64" />
+	<Image Name="Huodong_5" XPos="0" YPos="64" Width="64" Height="64" />
+	<Image Name="Huodong_6" XPos="64" YPos="64" Width="64" Height="64" />
+	<Image Name="Huodong_7" XPos="128" YPos="64" Width="64" Height="64" /> 
+  <Image Name="Huodong_8" XPos="192" YPos="64" Width="64" Height="64" /> 
+  <Image Name="Huodong_9" XPos="0" YPos="128" Width="64" Height="64" /> 
+  <Image Name="Huodong_10" XPos="64" YPos="128" Width="64" Height="64" /> 
+  <Image Name="Huodong_11" XPos="128" YPos="128" Width="64" Height="64" /> 
+  <Image Name="Huodong_12" XPos="192" YPos="128" Width="64" Height="64" /> 
+  <Image Name="Huodong_13" XPos="0" YPos="192" Width="64" Height="64" /> 
+  <Image Name="Huodong_14" XPos="64" YPos="192" Width="64" Height="64" /> 
+  <Image Name="Huodong_15" XPos="128" YPos="192" Width="64" Height="64" /> 
+  <Image Name="Huodong_16" XPos="192" YPos="192" Width="64" Height="64" />
+</Imageset>

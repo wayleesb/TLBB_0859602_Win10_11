@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="四级王宫.frame" />
+    <entity mesh="四级王宫铃铛.mesh" />
+    <entity mesh="四级王宫.mesh" node="四级王宫" />
+</model>

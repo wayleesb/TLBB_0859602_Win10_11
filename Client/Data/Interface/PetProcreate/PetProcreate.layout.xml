@@ -1,0 +1,173 @@
+<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame1" Name="PetProcreate_Frame">
+        <Property Name="UnifiedPosition" Value="{{0.35,0},{0.12,0}}" />
+        <Property Name="AbsoluteSize" Value="w:300 h:325" />
+		<Event Name="Hidden" Function="PetProcreate_Frame_OnHide();" />
+        <Window Type="TLBB_ButtonHelp" Name="PetProcreate_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*PetProcreate&quot;);' />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="PetProcreate_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function="PetProcreate_Close2(1);" />
+        </Window>
+        <Window Type="TLBB_DragTitle" Name="PetProcreate_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="PetProcreate_Frame" />
+            <Property Name="Font" Value="YouYuan11.25" />
+            <Property Name="Text" Value="#{INTERFACE_XML_86}" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+        </Window>
+        <Window Type="TLBB_HLine" Name="PetProcreate_Line1">
+            <Property Name="UnifiedPosition" Value="{{0.0,5.000000},{0.000000,55.000000}" />
+            <Property Name="UnifiedSize" Value="{{1.0,-9.000000},{0.000000,4.000000}" />
+            <Property Name="RiseOnClick" Value="False" />
+        </Window>
+        <Window Type="DefaultWindow" Name="PetProcreate_Function_Frame">
+            <Property Name="AbsolutePosition" Value="x:6.000000 y:36.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-12.000000},{1.000000,-55.000000}" />
+            <Window Type="TLBB_ButtonCommon" Name="PetProcreate_View_Other">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,0.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.400000,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_156}" />
+                <Event Name="Clicked" Function="PetProcreate_Other_PetList_RClick();" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="PetProcreate_Consume_Text">
+                <Property Name="UnifiedPosition" Value="{{0.05,0.000000},{1.000000,-109.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.9,0.000000},{0.000000,22.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_792}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Window Type="TLBB_Money" Name="PetProcreate_Consume">
+                    <Property Name="UnifiedPosition" Value="{{0.0,65.000000},{0.000000,1.000000}" />
+                    <Property Name="UnifiedSize" Value="{{1.0,-70.000000},{0.000000,18.000000}" />
+                    <Property Name="MoneyNumber" Value="0" />
+                    <Property Name="HorzFormatting" Value="RightAligned" />
+                    <Property Name="AlignFix" Value="True" />
+                    <Property Name="GoldIcon" Value = "set:Button6 image:Lace_JiaoziJin" />
+                    <Property Name="SilverIcon" Value = "set:Button6 image:Lace_JiaoziYin" />
+                    <Property Name="CopperIcon" Value = "set:Button6 image:Lace_JiaoziTong" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_SimpleTextFrame" Name="PetProcreate_Other_Pet">
+                <Property Name="UnifiedPosition" Value="{{0.0,0.000000},{0.000000,20.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.5,0.000000},{0.000000,19.000000}" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="TextColor" Value="FFFFF263" />
+            </Window>
+            <Window Type="TLBB_SimpleTextFrame" Name="PetProcreate_Self_Pet">
+                <Property Name="UnifiedPosition" Value="{{0.5,0.000000},{0.000000,20.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.5,0.000000},{0.000000,19.000000}" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="TextColor" Value="FFFFF263" />
+            </Window>
+            <Window Type="TLBB_FramePet" Name="PetProcreate_Other_Frame">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,40.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.5,0.000000},{0.000000,120.000000}" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Window Type="TLBB_MeshWindow" Name="PetProcreate_Other_PetModel">
+                    <Property Name="Position" Value="x:0.1 y:0.1" />
+                    <Property Name="Size" Value="w:0.8 h:0.85" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="ShowControl" Value="PetProcreate_Frame" />
+                </Window>
+                <Window Type="TLBB_ButtonTurnLeft" Name="PetProcreate_OtherModel_TurnLeft">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,4.000000},{1.000000,-23.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:20.000000 h:20.000000" />
+                    <Event Name="MouseButtonDown" Function="PetProcreate_Other_TurnLeft(1);" />
+                    <Event Name="MouseButtonUp" Function="PetProcreate_Other_TurnLeft(0);" />
+                </Window>
+                <Window Type="TLBB_ButtonTurnRight" Name="PetProcreate_OtherModel_TurnRight">
+                    <Property Name="UnifiedPosition" Value="{{1.000000,-24.000000},{1.000000,-23.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:20.000000 h:20.000000" />
+                    <Event Name="MouseButtonDown" Function="PetProcreate_Other_TurnRight(1);" />
+                    <Event Name="MouseButtonUp" Function="PetProcreate_Other_TurnRight(0);" />
+                </Window>
+                <Window Type="TLBB_ButtonCheck" Name="PetProcreate_Other_Lock">
+                    <Property Name="UnifiedPosition" Value="{{0.32,0.000000},{1.000000,-17.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:12.000000 h:12.000000" />
+                    <!--<Property Name="CheckMode" Value="0" />-->
+                </Window>
+                <Window Type="TLBB_ButtonCommon" Name="PetProcreate_ViewDesc_Other">
+                    <Property Name="UnifiedPosition" Value="{{0.42,0.000000},{1.000000,-20.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:40.000000 h:18.000000" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_675}" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_FramePet" Name="PetProcreate_Self_Frame">
+                <Property Name="UnifiedPosition" Value="{{0.5,0.000000},{0.000000,40.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.5,0.000000},{0.000000,120.000000}" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Window Type="TLBB_MeshWindow" Name="PetProcreate_Self_PetModel">
+                    <Property Name="Position" Value="x:0.1 y:0.1" />
+                    <Property Name="Size" Value="w:0.8 h:0.85" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="ShowControl" Value="PetProcreate_Frame" />
+                </Window>
+                <Window Type="TLBB_ButtonTurnLeft" Name="RaiseUpSeed_SelfModel_TurnLeft">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,4.000000},{1.000000,-23.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:20.000000 h:20.000000" />
+                    <Event Name="MouseButtonDown" Function="PetProcreate_Self_TurnLeft(1);" />
+                    <Event Name="MouseButtonUp" Function="PetProcreate_Self_TurnLeft(0);" />
+                </Window>
+                <Window Type="TLBB_ButtonTurnRight" Name="RaiseUpSeed_SelfModel_TurnRight">
+                    <Property Name="UnifiedPosition" Value="{{1.000000,-24.000000},{1.000000,-23.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:20.000000 h:20.000000" />
+                    <Event Name="MouseButtonDown" Function="PetProcreate_Self_TurnRight(1);" />
+                    <Event Name="MouseButtonUp" Function="PetProcreate_Self_TurnRight(0);" />
+                </Window>
+                <Window Type="TLBB_ButtonCheck" Name="PetProcreate_Self_Lock">
+                    <Property Name="UnifiedPosition" Value="{{0.32,0.000000},{1.000000,-17.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:12.000000 h:12.000000" />
+                    <!--<Property Name="CheckMode" Value="0" />-->
+                    <Event Name="Clicked" Function="PetProcreate_Lock_Clicked();" />
+                </Window>
+                <Window Type="TLBB_ButtonCommon" Name="PetProcreate_ViewDesc_Self">
+                    <Property Name="UnifiedPosition" Value="{{0.42,0.000000},{1.000000,-20.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:40.000000 h:18.000000" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_675}" />
+                    <Event Name="Clicked" Function="PetProcreate_Lock_Clicked();" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_Frame_Lace5" Name="PetProcreate_Blank">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-120.000000},{0.000000,20.000000}" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_Frame_Lace5" Name="PetProcreate_Blank2">
+                <Property Name="UnifiedPosition" Value="{{0.4,0.000000},{0.000000,0.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.6,0.000000},{0.000000,20.000000}" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="PetProcreate_Accept">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-120.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:60.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_556}" />
+                <Event Name="Clicked" Function="PetProcreate_OK_Clicked(1);" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="PetProcreate_Cancel">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-60.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:60.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_539}" />
+                <Event Name="Clicked" Function="PetProcreate_Close2(1);" />
+            </Window>
+          <Window Type="TLBB_StaticText" Name="PetProcreate_WarningText" >
+            <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,184.000000}" />
+            <Property Name="UnifiedSize" Value="{{1.000000,0.000000},{0.000000,62.000000}" />
+            <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1135}" />
+            <Property Name="VertFormatting" Value="TopAligned" />
+            <Property Name="VertScrollbar" Value="true" />
+          </Window>
+        </Window>
+    </Window>
+</GUILayout>

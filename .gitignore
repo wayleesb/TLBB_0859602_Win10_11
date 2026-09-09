@@ -1,0 +1,27 @@
+# Runtime output and local backups.
+*.log
+*.dmp
+*.tmp
+*.bak
+/tlbb/Server/Log/*
+!/tlbb/Server/Log/.gitkeep
+
+# Local IDA databases and working files.
+*.i64
+*.idb
+*.id0
+*.id1
+*.id2
+*.nam
+*.til
+
+# Local secrets and Windows metadata.
+.env
+.env.*
+!.env.example
+Thumbs.db
+Desktop.ini
+
+# Distributed as GitHub Release assets.
+/*.exe
+/TLBB_Env/*.zip

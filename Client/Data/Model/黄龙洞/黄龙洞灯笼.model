@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="黄龙洞灯笼.frame" />
+    <entity mesh="黄龙洞灯笼.mesh" node="黄龙洞灯笼" />
+    <entity mesh="黄龙洞灯笼铃铛1.mesh" node="黄龙洞灯笼铃铛1">
+        <offset>
+            <translate x="-57.1223" y="-275.159" z="-0.042077" />
+        </offset>
+    </entity>
+    <entity mesh="黄龙洞灯笼铃铛2.mesh" node="黄龙洞灯笼铃铛2">
+        <offset>
+            <translate x="-57.1223" y="-275.159" z="-0.0420729" />
+        </offset>
+    </entity>
+    <entity mesh="黄龙洞灯笼铃铛3.mesh" node="黄龙洞灯笼铃铛3">
+        <offset>
+            <translate x="-57.1223" y="-275.159" z="-0.0420776" />
+        </offset>
+    </entity>
+</model>

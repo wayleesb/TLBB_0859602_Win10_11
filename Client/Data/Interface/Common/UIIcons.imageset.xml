@@ -1,0 +1,108 @@
+<?xml version="1.0" ?>
+<Imageset Name="UIIcons" Imagefile="Common/UIIcons.tga" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">	
+	<Image Name="Map_Trip" XPos="0" YPos="17" Width="10" Height="10" />
+	<Image Name="Map_Animy" XPos="33" YPos="17" Width="10" Height="10" />
+	<Image Name="Map_OtherPlayer" XPos="22" YPos="17" Width="10" Height="10" />
+	<Image Name="Map_Resource" XPos="97" YPos="0" Width="10" Height="10" />
+	<Image Name="Map_NPC" XPos="0" YPos="28" Width="10" Height="10" />
+	<Image Name="Map_Teammate" XPos="11" YPos="28" Width="10" Height="10" />
+	<Image Name="Map_Pet" XPos="22" YPos="28" Width="10" Height="10" />
+	<Image Name="Map_Gurid" XPos="45" YPos="28" Width="10" Height="10" />
+	<Image Name="Map_Leaguer" XPos="45" YPos="28" Width="10" Height="10" />
+
+  <Image Name="Equip_Cap" XPos="0" YPos="145" Width="36" Height="36" />
+  <Image Name="Equip_Weapon" XPos="37" YPos="145" Width="36" Height="36" />
+  <Image Name="Equip_Armo" XPos="74" YPos="145" Width="36" Height="36" /> 
+  <Image Name="Equip_Rade" XPos="111" YPos="145" Width="36" Height="36" />
+  <Image Name="Equip_Nacket" XPos="0" YPos="182" Width="36" Height="36" />
+  <Image Name="Equip_Cloth" XPos="37" YPos="182" Width="36" Height="36" />
+  <Image Name="Equip_Shoulder" XPos="74" YPos="182" Width="36" Height="36" />
+  <Image Name="Equip_Hand" XPos="111" YPos="182" Width="36" Height="36" />
+  <Image Name="Equip_Wrist" XPos="0" YPos="219" Width="36" Height="36" />
+  <Image Name="Equip_Sash" XPos="37" YPos="219" Width="36" Height="36" />
+  <Image Name="Equip_Pifeng" XPos="74" YPos="219" Width="36" Height="36" />
+  <Image Name="Equip_Ring" XPos="111" YPos="219" Width="36" Height="36" />
+  <Image Name="Equip_Shot" XPos="148" YPos="219" Width="36" Height="36" />
+  <Image Name="Equip_Anqi" XPos="148" YPos="182" Width="36" Height="36" />
+  
+
+  <!--
+  <Image Name="QuestIcon_0_1" XPos="0" YPos="50" Width="25" Height="25" />
+  <Image Name="QuestIcon_1_1" XPos="25" YPos="50" Width="25" Height="25" />-->
+  <Image Name="QuestIcon_2" XPos="50" YPos="50" Width="25" Height="25" />
+  <Image Name="QuestIcon_3" XPos="75" YPos="50" Width="25" Height="25" />
+  <Image Name="QuestIcon_4" XPos="100" YPos="50" Width="25" Height="25" />
+  <Image Name="QuestIcon_5" XPos="125" YPos="50" Width="25" Height="25" />
+  <!--
+  <Image Name="QuestIcon_6_1" XPos="0" YPos="75" Width="25" Height="25" />
+  <Image Name="QuestIcon_7_1" XPos="25" YPos="75" Width="25" Height="25" />-->
+  <Image Name="QuestIcon_8" XPos="50" YPos="75" Width="25" Height="25" />
+  <Image Name="QuestIcon_9" XPos="75" YPos="75" Width="25" Height="25" />
+  <Image Name="QuestIcon_10" XPos="100" YPos="75" Width="25" Height="25" />
+  <Image Name="QuestIcon_11" XPos="125" YPos="75" Width="25" Height="25" />
+  <Image Name="QuestIcon_12" XPos="0" YPos="100" Width="25" Height="25" />
+  <Image Name="QuestIcon_13" XPos="25" YPos="100" Width="25" Height="25" />
+  <Image Name="QuestIcon_14" XPos="50" YPos="100" Width="25" Height="25" />
+  <Image Name="QuestIcon_15" XPos="75" YPos="100" Width="25" Height="25" />
+  <Image Name="QuestIcon_16" XPos="100" YPos="100" Width="25" Height="25" />
+  <Image Name="QuestIcon_17" XPos="125" YPos="100" Width="25" Height="25" />
+
+  <Image Name="LeaderOpening" XPos="218" YPos="5" Width="13" Height="13" />
+  <Image Name="LeaderFull" XPos="218" YPos="20" Width="13" Height="13" />
+  <Image Name="MemberOpening" XPos="233" YPos="5" Width="13" Height="13" />
+  <Image Name="MemberFull" XPos="233" YPos="20" Width="13" Height="13" />
+
+  <Image Name="Space" XPos="0" YPos="0" Width="4" Height="4" />
+
+	<Image Name="Icon_Death" XPos="223" YPos="189" Width="32" Height="32" />
+	<Image Name="Icon_OutLine" XPos="223" YPos="156" Width="32" Height="32" />
+	<Image Name="Icon_DownLine" XPos="223" YPos="156" Width="32" Height="32" />
+	<Image Name="Icon_Captain_1" XPos="218" YPos="5" Width="13" Height="13" />
+	<Image Name="Icon_Captain_2" XPos="222" YPos="88" Width="32" Height="32" />
+	<Image Name="Icon_ItemBackground" XPos="223" YPos="0" Width="32" Height="32" />
+	<Image Name="Icon_Closed" XPos="223" YPos="223" Width="32" Height="32" />
+  <Image Name="Icon_Pet_Normal" XPos="29" YPos="0" Width="14" Height="14" />
+
+	<Image Name="Ice_Repellency_Normal" XPos="188" YPos="222" Width="16" Height="16" />
+	<Image Name="Fire_Repellency_Normal" XPos="205" YPos="222" Width="16" Height="16" />
+	<Image Name="Thunder_Repellency_Normal" XPos="188" YPos="239" Width="16" Height="16" />
+	<Image Name="Poison_Repellency_Normal" XPos="205" YPos="239" Width="16" Height="16" /> 
+
+	<Image Name="Icon_Lock" XPos="203" YPos="190" Width="18" Height="14" />	
+	<Image Name="PetFood_Type" XPos="204" YPos="206" Width="16" Height="15" />
+
+	<Image Name="Confraternity_Class1" XPos="205" YPos="176" Width="15" Height="12" />
+	<Image Name="Confraternity_Class2" XPos="205" YPos="164" Width="15" Height="12" />
+	<Image Name="Confraternity_Class3" XPos="205" YPos="152" Width="15" Height="12" />
+
+	<Image Name="DoubleHit_Dot" XPos="33" YPos="29" Width="8" Height="8" />
+	<Image Name="DoubleHit_Dot1" XPos="45" YPos="17" Width="10" Height="10" />
+	<Image Name="DoubleHit_Dot2" XPos="57" YPos="17" Width="10" Height="10" />
+	<Image Name="DoubleHit_Dot3" XPos="70" YPos="17" Width="10" Height="10" />
+
+	<Image Name="Map_Self" XPos="111" YPos="1" Width="7" Height="7" />
+	<Image Name="Map_Play2" XPos="111" YPos="9" Width="7" Height="21" />
+	<Image Name="Map_Play3" XPos="120" YPos="9" Width="15" Height="21" />
+	<Image Name="Map_Play4" XPos="137" YPos="9" Width="21" Height="21" />
+	<Image Name="Map_Play5" XPos="161" YPos="9" Width="21" Height="21" />
+	<Image Name="Map_Play6" XPos="184" YPos="9" Width="21" Height="21" />
+	<Image Name="World_Map_Self" XPos="57" YPos="29" Width="10" Height="10" />
+
+	<Image Name="newPK_Flag_1" XPos="236" YPos="42" Width="20" Height="20" />
+	<Image Name="newPK_Flag_2" XPos="216" YPos="42" Width="20" Height="20" />
+	<Image Name="newPK_Flag_3" XPos="196" YPos="42" Width="20" Height="20" />
+	<Image Name="newPK_Flag_4" XPos="196" YPos="62" Width="20" Height="20" />
+	<Image Name="newPK_Flag_5" XPos="216" YPos="62" Width="20" Height="20" />
+	<Image Name="newPK_Flag_6" XPos="236" YPos="62" Width="20" Height="20" />
+	<Image Name="newPK_Flag_7" XPos="196" YPos="82" Width="20" Height="20" />
+
+  <Image Name="ChannelCorporative_Normal" XPos="164" YPos="110" Width="17" Height="17" />
+  <Image Name="ChannelCorporative_Hover" XPos="164" YPos="93" Width="17" Height="17" />
+  <Image Name="ChannelCorporative_Pushed" XPos="164" YPos="76" Width="17" Height="17" />
+  <Image Name="ChannelCorporative_Disable" XPos="164" YPos="59" Width="17" Height="17" />
+  
+  <Image Name="Resource_Mine" XPos="88" YPos="21" Width="10" Height="10" />
+  <Image Name="Resource_Herbal" XPos="102" YPos="21" Width="10" Height="10" />
+  <Image Name="Resource_Fish" XPos="116" YPos="21" Width="10" Height="10" />
+
+</Imageset>

@@ -1,0 +1,74 @@
+<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame1" Name="PS_Search_Frame">
+        <Property Name="UnifiedPosition" Value="{{0.14,0},{0.22,0}}" />
+        <Property Name="AbsoluteSize" Value="w:200 h:332" />
+        <Window Type="TLBB_ButtonHelp" Name="PS_Search_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*PS_Search&quot;);' />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="PS_Search_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function="PS_Search_Close_Clicked();" />
+        </Window>
+        <Window Type="TLBB_DragTitle" Name="PS_Search_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="PS_Search_Frame" />
+            <Property Name="Text" Value="#{INTERFACE_XML_34}" />
+            <Property Name="Font" Value="YouYuan11.25" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+        </Window>
+        <Window Type="DefaultWindow" Name="PS_Search_Client">
+            <Property Name="AbsolutePosition" Value="x:7.000000 y:36.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-13.000000},{1.000000,-55.000000}" />
+            <Window Type="TLBB_ListBoxCommon" Name="PS_Search_List">
+                <Property Name="UnifiedPosition" Value="{{0.000000,4.000000},{0.000000,54.000000}" />
+                <Property Name="AbsoluteSize" Value="w:179.000000 h:197.000000" />
+                <Event Name="ItemSelectionChanged" Function="PS_Search_List_Selected();" />
+            </Window>
+            <Window Type="TLBB_Frame_Lace5" Name="PS_Search_Blank">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.5000000,-60.000000},{0.000000,20.000000}" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="PS_Search_All">
+                <Property Name="UnifiedPosition" Value="{{0.5000,-60.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:120.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_549}" />
+                <Event Name="Clicked" Function="PS_Search_All_Clicked();" />
+            </Window>
+            <Window Type="TLBB_Frame_Lace5" Name="PS_Search_Blank2">
+                <Property Name="UnifiedPosition" Value="{{0.5000000,60.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.5000000,-60.000000},{0.000000,20.000000}" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="PS_Search_Text">
+                <Property Name="AbsolutePosition" Value="x:4.000000 y:2.000000" />
+                <Property Name="AbsoluteSize" Value="w:120.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_590}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="DefaultWindow" Name="PS_Search_Checkbox_Frame">
+                <Property Name="AbsolutePosition" Value="x:4.000000 y:30.000000" />
+                <Property Name="AbsoluteSize" Value="w:169.000000 h:24.000000" />
+                <Window Type="TLBB_ButtonPageUp" Name="PS_Search_Check_Item">
+                    <Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+                    <Property Name="AbsoluteSize" Value="w:42.000000 h:24.000000" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_724}" />
+                    <Property Name="CheckMode" Value="1" />
+                    <Event Name="MouseLButtonDown" Function="PS_Search_ChangeTabIndex(0);" />
+                </Window>
+                <Window Type="TLBB_ButtonPageUp" Name="PS_Search_Check_Pet">
+                    <Property Name="AbsolutePosition" Value="x:44.000000 y:0.000000" />
+                    <Property Name="AbsoluteSize" Value="w:42.000000 h:24.000000" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_854}" />
+                    <Property Name="CheckMode" Value="1" />
+                    <Event Name="MouseLButtonDown" Function="PS_Search_ChangeTabIndex(1);" />
+                </Window>
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

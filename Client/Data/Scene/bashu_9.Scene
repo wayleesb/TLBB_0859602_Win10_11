@@ -1,0 +1,654 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Scene formatVersion="0.1.1" name="bashu_9">
+
+  <Terrain filename="bashu_9.Terrain"/>
+
+  <Object name="#FairyEnviroment" type="Enviroment">
+    <Property name="ambient" value="0.419608 0.121569 0.003922"/>
+    <Property name="fog.mode" value="linear"/>
+    <Property name="fog.colour" value="0.666667 0.2 0"/>
+    <Property name="fog.linear start" value="3500"/>
+    <Property name="fog.linear end" value="6000"/>
+    <Property name="weather.particle system name" value="huahuo"/>
+  </Object>
+
+  <Object name="#FairyMainLightOne" type="Light">
+    <Property name="type" value="directional"/>
+    <Property name="diffuse" value="0.792157 0.180392 0"/>
+    <Property name="specular" value="0.3 0.3 0.3"/>
+    <Property name="direction" value="-1 1 -1"/>
+  </Object>
+
+  <Object name="#FairyMainLightTwo" type="Light">
+    <Property name="type" value="directional"/>
+    <Property name="diffuse" value="0.039216 0.227451 0.019608"/>
+    <Property name="specular" value="0.282353 0.105882 0.058824"/>
+    <Property name="direction" value="1 -1 -1"/>
+  </Object>
+
+  <Object name="#FairySkyDome" type="SkyDome">
+    <Property name="material" value="CloudySky"/>
+  </Object>
+
+  <Object type="TerrainLiquid">
+    <Property name="material" value="岩浆1"/>
+    <Property name="position" value="2221.77 1600 2071.71"/>
+    <Property name="texture scale" value="0.3"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/赤帝浮空岛.mesh"/>
+    <Property name="position" value="-200 1400 600"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="岩浆/岩浆.mesh"/>
+    <Property name="position" value="-200 3300 500"/>
+    <Property name="orientation" value="0.707107 0.707107 0 0"/>
+    <Property name="scale" value="4.5 3 5"/>
+  </Object>
+
+  <Object type="TerrainLiquid">
+    <Property name="material" value="岩浆1"/>
+    <Property name="position" value="500 100 3600"/>
+    <Property name="texture scale" value="0.3"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.94902 0.070588 0"/>
+    <Property name="position" value="-200 2600 600"/>
+    <Property name="range" value="600"/>
+    <Property name="attenuation.linear" value="0.0005"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="岩浆/岩浆.mesh"/>
+    <Property name="position" value="-1300 800 100"/>
+    <Property name="orientation" value="-0.161273 -0.161273 -0.688471 0.688471"/>
+    <Property name="scale" value="1 3 2.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="岩浆/岩浆.mesh"/>
+    <Property name="position" value="-1400 700 300"/>
+    <Property name="orientation" value="0.329495 0.329495 -0.625647 0.625647"/>
+    <Property name="scale" value="2 3 3.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/岩石柱01.mesh"/>
+    <Property name="position" value="-2300 100 400"/>
+    <Property name="orientation" value="0.865513 0 0.500885 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/岩石柱02.mesh"/>
+    <Property name="position" value="-1300 100 -700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/岩石柱02.mesh"/>
+    <Property name="position" value="1000 0 -800"/>
+    <Property name="orientation" value="0.880471 0 0.4741 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huahuo"/>
+    <Property name="position" value="-3000 3500 -4200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="岩浆/岩浆.mesh"/>
+    <Property name="position" value="-1000 700 1600"/>
+    <Property name="orientation" value="0.688962 0.688962 -0.15916 0.15916"/>
+    <Property name="scale" value="2 3 3.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="岩浆/岩浆.mesh"/>
+    <Property name="position" value="100 400 -500"/>
+    <Property name="orientation" value="-0.188596 -0.188596 -0.681493 0.681493"/>
+    <Property name="scale" value="2 3 3.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="岩浆/岩浆.mesh"/>
+    <Property name="position" value="695.101 600 1080.73"/>
+    <Property name="orientation" value="0.556108 0.556108 0.436742 -0.436742"/>
+    <Property name="scale" value="2 3 3.5"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_01"/>
+    <Property name="position" value="-600 1278 -1600"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_01"/>
+    <Property name="position" value="-600 1278 -1600"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_01"/>
+    <Property name="position" value="-1500 579.687 3300"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_01"/>
+    <Property name="position" value="-1500 579.687 3300"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="penhuo"/>
+    <Property name="position" value="-1500 618.154 3300"/>
+    <Property name="orientation" value="0.567953 -0.567954 -0.421223 -0.421223"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="岩浆/岩浆.mesh"/>
+    <Property name="position" value="1100 800 -100"/>
+    <Property name="orientation" value="-0.43161 -0.43161 -0.560102 0.560102"/>
+    <Property name="scale" value="2 3 3.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="岩浆/岩浆.mesh"/>
+    <Property name="position" value="-800 600 1600"/>
+    <Property name="orientation" value="0.683754 0.683754 -0.180223 0.180223"/>
+    <Property name="scale" value="3 3 3.5"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="penhuo"/>
+    <Property name="position" value="-600 1223.3 -1600"/>
+    <Property name="orientation" value="0.567953 -0.567954 -0.421223 -0.421223"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_01"/>
+    <Property name="position" value="4400 819.44 3700"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="penhuo"/>
+    <Property name="position" value="4400 857.907 3700"/>
+    <Property name="orientation" value="0.567953 -0.567954 -0.421223 -0.421223"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_01"/>
+    <Property name="position" value="4400 819.44 3700"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_01"/>
+    <Property name="position" value="900 689.017 -1500"/>
+    <Property name="orientation" value="0.905297 0 -0.42478 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="penhuo"/>
+    <Property name="position" value="900 727.484 -1500"/>
+    <Property name="orientation" value="0.335239 -0.33524 -0.622587 -0.622587"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_01"/>
+    <Property name="position" value="900 689.017 -1500"/>
+    <Property name="orientation" value="0.905297 0 -0.42478 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="penhuo"/>
+    <Property name="position" value="2700 3794.97 -5100"/>
+    <Property name="orientation" value="-0.0973125 0.0973121 -0.700378 -0.700379"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_01"/>
+    <Property name="position" value="2700 3849.67 -5100"/>
+    <Property name="orientation" value="0.479493 0 -0.877545 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_01"/>
+    <Property name="position" value="2700 3849.67 -5100"/>
+    <Property name="orientation" value="0.479493 0 -0.877545 0"/>
+  </Object>
+
+  <Object type="TerrainLiquid">
+    <Property name="material" value="岩浆1"/>
+    <Property name="position" value="-5500 1100 -2100"/>
+    <Property name="texture scale" value="0.3"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="penhuo"/>
+    <Property name="position" value="-300 2699.68 -5400"/>
+    <Property name="orientation" value="0.705496 -0.705497 0.0476898 0.0476904"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_01"/>
+    <Property name="position" value="-300 2661.21 -5400"/>
+    <Property name="orientation" value="0.761202 0 0.648514 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_01"/>
+    <Property name="position" value="-300 2661.21 -5400"/>
+    <Property name="orientation" value="0.761202 0 0.648514 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yanjiangwuqi"/>
+    <Property name="position" value="2300 1746.79 2100"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="penhuo"/>
+    <Property name="position" value="-3000 3483.21 4400"/>
+    <Property name="orientation" value="0.706837 -0.706838 0.0195216 0.0195222"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_01"/>
+    <Property name="position" value="-3000 3444.75 4400"/>
+    <Property name="orientation" value="0.786455 0 0.617647 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_01"/>
+    <Property name="position" value="-3000 3444.75 4400"/>
+    <Property name="orientation" value="0.786455 0 0.617647 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yanjiangwuqi"/>
+    <Property name="position" value="-900 200 1700"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yanjiangwuqi"/>
+    <Property name="position" value="700 200 1100"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yanjiangwuqi"/>
+    <Property name="position" value="-1400 200 100"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yanjiangwuqi"/>
+    <Property name="position" value="1200 200 -200"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yanjiangwuqi"/>
+    <Property name="position" value="100 150 -500"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01_big"/>
+    <Property name="position" value="1175 100 -117"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01_big"/>
+    <Property name="position" value="-1470 100 280"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01_big"/>
+    <Property name="position" value="2100 1610.77 2100"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01_big"/>
+    <Property name="position" value="1900 1595.6 1800"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01_big"/>
+    <Property name="position" value="2600 1596.3 2400"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01_big"/>
+    <Property name="position" value="2200 1602.06 1600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="公用小建筑/燕南北山洞.mesh"/>
+    <Property name="position" value="-5100 3500 -5200"/>
+    <Property name="orientation" value="0.900016 0 0.435857 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_01"/>
+    <Property name="position" value="-2800 1692.51 1700"/>
+    <Property name="orientation" value="0.952375 0 -0.304929 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="penhuo"/>
+    <Property name="position" value="-2800 1730.98 1700"/>
+    <Property name="orientation" value="0.412461 -0.412462 -0.574348 -0.574348"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_01"/>
+    <Property name="position" value="-2800 1692.51 1700"/>
+    <Property name="orientation" value="0.952375 0 -0.304929 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_01"/>
+    <Property name="position" value="-5700 3875.73 -400"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_01"/>
+    <Property name="position" value="-5700 3875.73 -400"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="penhuo"/>
+    <Property name="position" value="-5700 3914.2 -400"/>
+    <Property name="orientation" value="0.567953 -0.567954 -0.421223 -0.421223"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yanjiangwuqi"/>
+    <Property name="position" value="-5600 1100 -2100"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yanjiangwuqi"/>
+    <Property name="position" value="3000 269.261 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yanjiangwuqi"/>
+    <Property name="position" value="-200 200 500"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yanjiangwuqi"/>
+    <Property name="position" value="-200 2400 500"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_01"/>
+    <Property name="position" value="4600 3653.94 -2600"/>
+    <Property name="orientation" value="0.560662 0 -0.828046 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_01"/>
+    <Property name="position" value="4600 3653.94 -2600"/>
+    <Property name="orientation" value="0.560662 0 -0.828046 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="penhuo"/>
+    <Property name="position" value="4600 3692.41 -2600"/>
+    <Property name="orientation" value="-0.0303624 0.0303616 -0.706455 -0.706455"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_01"/>
+    <Property name="position" value="-4500 3712.16 -3600"/>
+    <Property name="orientation" value="0.143695 0 0.989622 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="penhuo"/>
+    <Property name="position" value="-4500 3750.62 -3600"/>
+    <Property name="orientation" value="0.498464 -0.498463 0.501531 0.501532"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_01"/>
+    <Property name="position" value="-4500 3712.16 -3600"/>
+    <Property name="orientation" value="0.143695 0 0.989622 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/岩石柱.mesh"/>
+    <Property name="position" value="-200 100 2700"/>
+    <Property name="orientation" value="0.33689 0 -0.941544 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01_big"/>
+    <Property name="position" value="775 100 1100"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01_big"/>
+    <Property name="position" value="-1313 100 24"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/岩石柱.mesh"/>
+    <Property name="position" value="-2500 3360.87 -4000"/>
+    <Property name="orientation" value="0.573296 0 -0.819347 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/岩石柱01.mesh"/>
+    <Property name="position" value="5341 3325.62 -3374"/>
+    <Property name="orientation" value="-0.284407 0 0.958702 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/岩石柱02.mesh"/>
+    <Property name="position" value="4500 3279.73 -5600"/>
+    <Property name="orientation" value="-0.104122 0 -0.994564 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/岩石柱02.mesh"/>
+    <Property name="position" value="-5100 2175 5400"/>
+    <Property name="orientation" value="0.956045 0 -0.293219 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/岩石柱a.mesh"/>
+    <Property name="position" value="-4600 3495 -5300"/>
+    <Property name="orientation" value="0.990058 0 0.140658 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/岩石柱a.mesh"/>
+    <Property name="position" value="-5100 3436.7 -4400"/>
+    <Property name="orientation" value="0.545325 0 0.838224 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/岩石柱02.mesh"/>
+    <Property name="position" value="-5300 3447.48 -4600"/>
+    <Property name="orientation" value="0.632018 0 0.774953 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/岩石柱02.mesh"/>
+    <Property name="position" value="-4319.35 0 2393.5"/>
+    <Property name="orientation" value="0.575807 0 0.817584 0"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.184314 0.007843"/>
+    <Property name="position" value="-4900 3646.36 -5100"/>
+    <Property name="range" value="600"/>
+    <Property name="attenuation.linear" value="0.0008"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.184314 0.007843"/>
+    <Property name="position" value="4100 3463.57 -4100"/>
+    <Property name="range" value="1200"/>
+    <Property name="attenuation.linear" value="0.0008"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.184314 0.007843"/>
+    <Property name="position" value="5000 3451.98 500"/>
+    <Property name="range" value="1200"/>
+    <Property name="attenuation.linear" value="0.0008"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.184314 0.007843"/>
+    <Property name="position" value="-3400 3645.47 -3900"/>
+    <Property name="range" value="1200"/>
+    <Property name="attenuation.linear" value="0.0008"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.184314 0.007843"/>
+    <Property name="position" value="-5200 3638.88 500"/>
+    <Property name="range" value="1200"/>
+    <Property name="attenuation.linear" value="0.0008"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.184314 0.007843"/>
+    <Property name="position" value="-1900 3197.77 4900"/>
+    <Property name="range" value="1200"/>
+    <Property name="attenuation.linear" value="0.0008"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.184314 0.007843"/>
+    <Property name="position" value="2300 3593.1 4900"/>
+    <Property name="range" value="1200"/>
+    <Property name="attenuation.linear" value="0.0008"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="岩浆/岩浆.mesh"/>
+    <Property name="position" value="-5800 2712.01 -2300"/>
+    <Property name="orientation" value="0.41773 0.41773 0.570527 -0.570527"/>
+    <Property name="scale" value="4 2 6.5"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01_big"/>
+    <Property name="position" value="146 101.104 -579"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01_big"/>
+    <Property name="position" value="-839 100 1677"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01_big"/>
+    <Property name="position" value="-1049 100 1674"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01_big"/>
+    <Property name="position" value="-200 2100 600"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yanjiangwuqi"/>
+    <Property name="position" value="-260.781 159.588 -4524.68"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yanjiangwuqi"/>
+    <Property name="position" value="-2900 200 400"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yanjiangwuqi"/>
+    <Property name="position" value="-3700 200 2900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/人骨.mesh"/>
+    <Property name="position" value="5100 3300 -4300"/>
+    <Property name="orientation" value="0.846491 0 0.532403 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/人骨.mesh"/>
+    <Property name="position" value="400 2500 -3300"/>
+    <Property name="orientation" value="0.950486 0 -0.310767 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/人骨.mesh"/>
+    <Property name="position" value="5600 3458 500"/>
+    <Property name="orientation" value="0.932993 0 0.359895 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/人骨.mesh"/>
+    <Property name="position" value="5500 3437.52 600"/>
+    <Property name="orientation" value="0.446869 0 0.894599 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/人骨.mesh"/>
+    <Property name="position" value="4900 3362.08 -100"/>
+    <Property name="orientation" value="0.893224 0 -0.449611 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/人骨.mesh"/>
+    <Property name="position" value="2300 3477.46 5400"/>
+    <Property name="orientation" value="0.961281 0 0.275572 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/人骨.mesh"/>
+    <Property name="position" value="-5300 3437.48 500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/人骨.mesh"/>
+    <Property name="position" value="-5400 3466.77 400"/>
+    <Property name="orientation" value="0.382683 0 -0.923879 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/人骨.mesh"/>
+    <Property name="position" value="-4800 3465.97 -5100"/>
+    <Property name="orientation" value="0.734739 0 -0.67835 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/人骨.mesh"/>
+    <Property name="position" value="-4200 3495.91 -3900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/人骨.mesh"/>
+    <Property name="position" value="-3200 3500 -5100"/>
+    <Property name="orientation" value="0.354163 0 0.935183 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/人骨.mesh"/>
+    <Property name="position" value="-4600 3489.79 -5100"/>
+    <Property name="orientation" value="0.991311 0 0.13154 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01_big"/>
+    <Property name="position" value="-5716.67 1100 -2302.14"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="chuansongmen"/>
+    <Property name="position" value="-5000 3636.96 -5057"/>
+  </Object>
+
+</Scene>

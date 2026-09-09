@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<Imageset Name="TaskTools5" Imagefile="Icons/TaskTools5.jpg" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+	<Image Name="TaskTools5_1" XPos="0" YPos="0" Width="64" Height="64" />
+	<Image Name="TaskTools5_2" XPos="64" YPos="0" Width="64" Height="64" />
+	<Image Name="TaskTools5_3" XPos="128" YPos="0" Width="64" Height="64" />
+	<Image Name="TaskTools5_4" XPos="192" YPos="0" Width="64" Height="64" />
+	<Image Name="TaskTools5_5" XPos="0" YPos="64" Width="64" Height="64" />
+	<Image Name="TaskTools5_6" XPos="64" YPos="64" Width="64" Height="64" />
+	<Image Name="TaskTools5_7" XPos="128" YPos="64" Width="64" Height="64" />
+	<Image Name="TaskTools5_8" XPos="192" YPos="64" Width="64" Height="64" />
+	<Image Name="TaskTools5_9" XPos="0" YPos="128" Width="64" Height="64" />
+	<Image Name="TaskTools5_10" XPos="64" YPos="128" Width="64" Height="64" />
+	<Image Name="TaskTools5_11" XPos="128" YPos="128" Width="64" Height="64" />
+	<Image Name="TaskTools5_12" XPos="192" YPos="128" Width="64" Height="64" />
+	<Image Name="TaskTools5_13" XPos="0" YPos="192" Width="64" Height="64" />
+	<Image Name="TaskTools5_14" XPos="64" YPos="192" Width="64" Height="64" />
+	<Image Name="TaskTools5_15" XPos="128" YPos="192" Width="64" Height="64" />
+	<Image Name="TaskTools5_16" XPos="192" YPos="192" Width="64" Height="64" />
+</Imageset>

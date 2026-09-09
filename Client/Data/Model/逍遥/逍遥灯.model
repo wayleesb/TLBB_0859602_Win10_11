@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="逍遥灯.frame" />
+    <entity mesh="逍遥灯.mesh" node="逍遥灯" />
+    <entity mesh="逍遥灯灯.mesh" node="逍遥灯灯">
+        <offset>
+            <translate x="-157.686" y="-650.234" z="5.60958" />
+        </offset>
+    </entity>
+</model>

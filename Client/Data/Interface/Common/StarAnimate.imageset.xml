@@ -1,0 +1,11 @@
+<Imageset Name="StarAnimate" Imagefile="Common/tga_StarAnimate.dds" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+	<Image Name="Step1" XPos="0" YPos="58" Width="182" Height="51" />
+  <Image Name="Step2" XPos="0" YPos="109" Width="182" Height="51" />
+  <Image Name="Step3" XPos="0" YPos="160" Width="182" Height="51" />
+  <Image Name="Step4" XPos="0" YPos="211" Width="182" Height="51" />
+  <Image Name="Step5" XPos="0" YPos="252" Width="182" Height="51" />
+ 
+
+  <Image Name="star" XPos="195" YPos="217" Width="27" Height="27" />
+
+</Imageset>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="西湖渔船.frame" />
+    <entity mesh="西湖渔船.mesh" node="西湖渔船" />
+    <entity mesh="西湖渔船灯.mesh" node="西湖渔船灯">
+        <offset>
+            <translate x="91.504" y="-242.142" z="-83.4153" />
+        </offset>
+    </entity>
+</model>

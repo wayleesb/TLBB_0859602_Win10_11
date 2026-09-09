@@ -1,0 +1,153 @@
+<?xml version="1.0" ?>
+	<Imageset Name="Button1" Imagefile="Common/Button01.tga" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="false">
+    <Image Name="BtnCommon_Left_Normal" XPos="1" YPos="44" Width="10" Height="21" />
+    <Image Name="BtnCommon_Mid_Normal" XPos="11" YPos="44" Width="19" Height="21" />
+    <Image Name="BtnCommon_Right_Normal" XPos="30" YPos="44" Width="10" Height="21" />
+    <Image Name="BtnCommon_Left_Pushed" XPos="1" YPos="66" Width="10" Height="21" />
+    <Image Name="BtnCommon_Mid_Pushed" XPos="11" YPos="66" Width="19" Height="21" />
+    <Image Name="BtnCommon_Right_Pushed" XPos="30" YPos="66" Width="10" Height="21" />
+    <Image Name="BtnCommon_Left_Hover" XPos="1" YPos="88" Width="10" Height="21" />
+    <Image Name="BtnCommon_Mid_Hover" XPos="11" YPos="88" Width="19" Height="21" />
+    <Image Name="BtnCommon_Right_Hover" XPos="30" YPos="88" Width="10" Height="21" />
+    <Image Name="BtnCommon_Left_Disable" XPos="1" YPos="110" Width="10" Height="21" />
+    <Image Name="BtnCommon_Mid_Disable" XPos="11" YPos="110" Width="19" Height="21" />
+    <Image Name="BtnCommon_Right_Disable" XPos="30" YPos="110" Width="10" Height="21" />
+
+    <Image Name="BtnCommon2_Left_Normal" XPos="48" YPos="32" Width="7" Height="15" />
+    <Image Name="BtnCommon2_Mid_Normal" XPos="55" YPos="32" Width="17" Height="15" />
+    <Image Name="BtnCommon2_Right_Normal" XPos="72" YPos="32" Width="7" Height="15" />
+    <Image Name="BtnCommon2_Left_Pushed" XPos="48" YPos="48" Width="7" Height="15" />
+    <Image Name="BtnCommon2_Mid_Pushed" XPos="55" YPos="48" Width="17" Height="15" />
+    <Image Name="BtnCommon2_Right_Pushed" XPos="72" YPos="48" Width="7" Height="15" />
+    <Image Name="BtnCommon2_Left_Hover" XPos="48" YPos="64" Width="7" Height="15" />
+    <Image Name="BtnCommon2_Mid_Hover" XPos="55" YPos="64" Width="17" Height="15" />
+    <Image Name="BtnCommon2_Right_Hover" XPos="72" YPos="64" Width="7" Height="15" />
+    <Image Name="BtnCommon2_Left_Disable" XPos="48" YPos="80" Width="7" Height="15" />
+    <Image Name="BtnCommon2_Mid_Disable" XPos="55" YPos="80" Width="17" Height="15" />
+    <Image Name="BtnCommon2_Right_Disable" XPos="72" YPos="80" Width="7" Height="15" />
+
+    <Image Name="BtnClose_Disable" XPos="95" YPos="26" Width="14" Height="14" />
+    <Image Name="BtnClose_Hover" XPos="95" YPos="41" Width="14" Height="14" />
+    <Image Name="BtnClose_Pushed" XPos="95" YPos="56" Width="14" Height="14" />
+    <Image Name="BtnClose_Normal" XPos="95" YPos="71" Width="14" Height="14" />
+
+    <Image Name="BtnHelp_Disable" XPos="80" YPos="26" Width="14" Height="14" />
+    <Image Name="BtnHelp_Hover" XPos="80" YPos="41" Width="14" Height="14" />
+    <Image Name="BtnHelp_Pushed" XPos="80" YPos="56" Width="14" Height="14" />
+    <Image Name="BtnHelp_Normal" XPos="80" YPos="71" Width="14" Height="14" />
+
+    <Image Name="BtnRedio_Pushed" XPos="48" YPos="100" Width="12" Height="12" />
+    <Image Name="BtnRedio_Normal" XPos="62" YPos="100" Width="12" Height="12" />
+
+    <Image Name="BtnAdd_Disable" XPos="110" YPos="26" Width="14" Height="14" />
+    <Image Name="BtnAdd_Hover" XPos="110" YPos="41" Width="14" Height="14" />
+    <Image Name="BtnAdd_Pushed" XPos="110" YPos="56" Width="14" Height="14" />
+    <Image Name="BtnAdd_Normal" XPos="110" YPos="71" Width="14" Height="14" />
+
+    <Image Name="BtnSub_Disable" XPos="125" YPos="26" Width="14" Height="14" />
+    <Image Name="BtnSub_Hover" XPos="125" YPos="41" Width="14" Height="14" />
+    <Image Name="BtnSub_Pushed" XPos="125" YPos="56" Width="14" Height="14" />
+    <Image Name="BtnSub_Normal" XPos="125" YPos="71" Width="14" Height="14" />
+
+    <Image Name="BtnCommon3_Left_Normal" XPos="144" YPos="0" Width="7" Height="25" />
+    <Image Name="BtnCommon3_Mid_Normal" XPos="151" YPos="0" Width="59" Height="25" />
+    <Image Name="BtnCommon3_Right_Normal" XPos="210" YPos="0" Width="7" Height="25" />
+    <Image Name="BtnCommon3_Left_Hover" XPos="144" YPos="26" Width="7" Height="25" />
+    <Image Name="BtnCommon3_Mid_Hover" XPos="151" YPos="26" Width="59" Height="25" />
+    <Image Name="BtnCommon3_Right_Hover" XPos="210" YPos="26" Width="7" Height="25" />
+    <Image Name="BtnCommon3_Left_Pushed" XPos="144" YPos="52" Width="7" Height="25" />
+    <Image Name="BtnCommon3_Mid_Pushed" XPos="151" YPos="52" Width="59" Height="25" />
+    <Image Name="BtnCommon3_Right_Pushed" XPos="210" YPos="52" Width="7" Height="25" />
+    <Image Name="BtnCommon3_Left_Disable" XPos="144" YPos="78" Width="7" Height="25" />
+    <Image Name="BtnCommon3_Mid_Disable" XPos="151" YPos="78" Width="59" Height="25" />
+    <Image Name="BtnCommon3_Right_Disable" XPos="210" YPos="78" Width="7" Height="25" />
+
+    <Image Name="BtnCommon4_Left_Normal" XPos="125" YPos="112" Width="17" Height="46" />
+    <Image Name="BtnCommon4_Mid_Normal" XPos="142" YPos="112" Width="72" Height="46" />
+    <Image Name="BtnCommon4_Right_Normal" XPos="214" YPos="112" Width="17" Height="46" />
+    <Image Name="BtnCommon4_Left_Hover" XPos="125" YPos="159" Width="17" Height="46" />
+    <Image Name="BtnCommon4_Mid_Hover" XPos="142" YPos="159" Width="72" Height="46" />
+    <Image Name="BtnCommon4_Right_Hover" XPos="214" YPos="159" Width="17" Height="46" />
+    <Image Name="BtnCommon4_Left_Disable" XPos="125" YPos="206" Width="17" Height="46" />
+    <Image Name="BtnCommon4_Mid_Disable" XPos="142" YPos="206" Width="72" Height="46" />
+    <Image Name="BtnCommon4_Right_Disable" XPos="214" YPos="206" Width="17" Height="46" />
+    <Image Name="BtnCommon4_Left_Pushed" XPos="18" YPos="206" Width="17" Height="46" />
+    <Image Name="BtnCommon4_Mid_Pushed" XPos="35" YPos="206" Width="72" Height="46" />
+    <Image Name="BtnCommon4_Right_Pushed" XPos="107" YPos="206" Width="17" Height="46" />
+
+
+    <Image Name="BtnTrunLeft_Normal" XPos="221" YPos="52" Width="26" Height="25"  />
+    <Image Name="BtnTrunLeft_Hover" XPos="221" YPos="78" Width="26" Height="25" />
+    <Image Name="BtnTrunLeft_Pushed" XPos="221" YPos="26" Width="26" Height="25" />
+    <Image Name="BtnTrunLeft_Disable" XPos="221" YPos="0" Width="26" Height="25" />
+    
+    <Image Name="BtnTrunRight_Normal" XPos="17" YPos="176" Width="26" Height="25"  />
+    <Image Name="BtnTrunRight_Hover" XPos="71" YPos="176" Width="26" Height="25" />
+    <Image Name="BtnTrunRight_Pushed" XPos="99" YPos="176" Width="26" Height="25" />
+    <Image Name="BtnTrunRight_Disable" XPos="45" YPos="176" Width="26" Height="25" />
+
+    <Image Name="BtnKey_Normal" XPos="92" YPos="115" Width="29" Height="29"  />
+    <Image Name="BtnKey_Hover" XPos="92" YPos="144" Width="29" Height="29" />
+    <Image Name="BtnKey_Pushed" XPos="63" YPos="115" Width="29" Height="29" />
+    <Image Name="BtnKey_Disable" XPos="63" YPos="144" Width="29" Height="29" />
+    
+    <Image Name="BtnInpute_Normal" XPos="0" YPos="0" Width="23" Height="21" />
+		<Image Name="BtnInpute_Hover" XPos="24" YPos="0" Width="23" Height="21" />
+		<Image Name="BtnInpute_Pushed" XPos="0" YPos="22" Width="23" Height="21" />
+		<Image Name="BtnInpute_Disable" XPos="24" YPos="22" Width="23" Height="21" />
+    
+		<Image Name="BtnUp_Normal" XPos="48" YPos="0" Width="15" Height="15" />
+		<Image Name="BtnUp_Pushed" XPos="64" YPos="0" Width="15" Height="15" />
+		<Image Name="BtnUp_Hover" XPos="48" YPos="16" Width="15" Height="15" />
+		<Image Name="BtnUp_Disable" XPos="64" YPos="16" Width="15" Height="15" />
+		
+		<Image Name="BtnDown_Normal" XPos="33" YPos="149" Width="15" Height="15" />
+		<Image Name="BtnDown_Pushed" XPos="48" YPos="149" Width="15" Height="15" />
+		<Image Name="BtnDown_Hover" XPos="33" YPos="134" Width="15" Height="15" />
+		<Image Name="BtnDown_Disable" XPos="48" YPos="134" Width="15" Height="15" />
+		
+		<Image Name="BtnUp2_Normal" XPos="80" YPos="0" Width="15" Height="12" />
+		<Image Name="BtnUp2_Pushed" XPos="96" YPos="0" Width="15" Height="12" />
+		<Image Name="BtnUp2_Hover" XPos="112" YPos="0" Width="15" Height="12" />
+		<Image Name="BtnUp2_Disable" XPos="128" YPos="0" Width="15" Height="12" />
+		
+		<Image Name="BtnDown2_Normal" XPos="80" YPos="12" Width="15" Height="12" />
+		<Image Name="BtnDown2_Pushed" XPos="96" YPos="12" Width="15" Height="12" />
+		<Image Name="BtnDown2_Hover" XPos="112" YPos="12" Width="15" Height="12" />
+		<Image Name="BtnDown2_Disable" XPos="128" YPos="12" Width="15" Height="12" />
+
+    <Image Name="ScrollBar_Up_Normal" XPos="240" YPos="154" Width="16" Height="18" />
+    <Image Name="ScrollBar_Up_Hover" XPos="240" YPos="173" Width="16" Height="18" />
+    <Image Name="ScrollBar_Up_Pushed" XPos="240" YPos="135" Width="16" Height="18" />
+    <Image Name="ScrollBar_Up_Disalbed" XPos="240" YPos="192" Width="16" Height="18" />
+    
+    <Image Name="ScrollBar_Down_Normal" XPos="0" YPos="208" Width="16" Height="18" />
+    <Image Name="ScrollBar_Down_Hover" XPos="0" YPos="189" Width="16" Height="18" />
+    <Image Name="ScrollBar_Down_Pushed" XPos="0" YPos="227" Width="16" Height="18" />
+    <Image Name="ScrollBar_Down_Disalbed" XPos="0" YPos="170" Width="16" Height="18" />
+
+    <Image Name="ScrollBar_Thumb_Normal" XPos="0" YPos="149" Width="14" Height="14" />
+    <Image Name="ScrollBar_Thumb_Pushed" XPos="0" YPos="149" Width="14" Height="14" />
+    <Image Name="ScrollBar_Thumb_Hover" XPos="0" YPos="149" Width="14" Height="14" />
+    <Image Name="ScrollBar_Thumb_Disabled" XPos="0" YPos="149" Width="14" Height="14" />
+
+    <Image Name="ScrollBar_Bar" XPos="16" YPos="134" Width="16" Height="30" />
+
+    <Image Name="ComobBtn_Normal" XPos="79" YPos="86" Width="13" Height="12" />
+    <Image Name="ComobBtn_Pushed" XPos="94" YPos="86" Width="13" Height="12" />
+    <Image Name="ComobBtn_Hover" XPos="108" YPos="86" Width="13" Height="12" />
+    <Image Name="ComobBtn_Disable" XPos="121" YPos="86" Width="13" Height="12" />
+
+    <Image Name="Slider_BarL" XPos="43" YPos="150" Width="6" Height="2" />
+    <Image Name="Slider_BarM" XPos="47" YPos="150" Width="6" Height="2" />
+    <Image Name="Slider_BarR" XPos="52" YPos="150" Width="6" Height="2" />
+
+    <Image Name="Slider_Thumb_Normal" XPos="239" YPos="212" Width="10" Height="14" />
+    <Image Name="Slider_Thumb_Pushed" XPos="239" YPos="226" Width="10" Height="14" />
+
+    <Image Name="Popup_Menu_Left" XPos="44" YPos="117" Width="8" Height="11" />
+    <Image Name="Popup_Menu_Right" XPos="54" YPos="117" Width="8" Height="11" />
+
+  </Imageset>		
+
+	

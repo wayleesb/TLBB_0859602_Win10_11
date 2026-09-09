@@ -1,0 +1,30 @@
+<Imageset Name="CSystem_00" Imagefile="Common/CSystem_00.tga" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+	<Image Name="CSystem_00.gif_00" XPos="0" YPos="4" Width="37" Height="14" />
+	<Image Name="CSystem_00.gif_01" XPos="37" YPos="4" Width="37" Height="14" />
+	<Image Name="CSystem_00.gif_02" XPos="74" YPos="4" Width="37" Height="14" />
+	<Image Name="CSystem_00.gif_03" XPos="111" YPos="4" Width="37" Height="14" />
+	<Image Name="CSystem_00.gif_04" XPos="148" YPos="4" Width="37" Height="14" />
+	<Image Name="CSystem_00.gif_05" XPos="185" YPos="4" Width="37" Height="14" />
+	<Image Name="CSystem_00.gif_06" XPos="0" YPos="18" Width="37" Height="14" />
+	<Image Name="CSystem_00.gif_07" XPos="37" YPos="18" Width="37" Height="14" />
+	<Image Name="CSystem_00.gif_08" XPos="74" YPos="18" Width="37" Height="14" />
+	<Image Name="CSystem_00.gif_09" XPos="111" YPos="18" Width="37" Height="14" />
+	<Image Name="CSystem_00.gif_10" XPos="148" YPos="18" Width="37" Height="14" />
+	<Image Name="CSystem_00.gif_11" XPos="185" YPos="18" Width="37" Height="14" />
+	<Image Name="CSystem_00.gif_12" XPos="0" YPos="32" Width="37" Height="14" />
+	<Image Name="CSystem_00.gif_13" XPos="37" YPos="32" Width="37" Height="14" />
+	<Image Name="CSystem_00.gif_14" XPos="74" YPos="32" Width="37" Height="14" />
+	<Image Name="CSystem_00.gif_15" XPos="111" YPos="32" Width="37" Height="14" />
+	<Image Name="CSystem_00.gif_16" XPos="148" YPos="32" Width="37" Height="14" />
+	<Image Name="CSystem_00.gif_17" XPos="185" YPos="32" Width="37" Height="14" />
+	<Image Name="CSystem_00.gif_18" XPos="0" YPos="46" Width="37" Height="14" />
+	<Image Name="CSystem_00.gif_19" XPos="37" YPos="46" Width="37" Height="14" />
+	<Image Name="CSystem_00.gif_20" XPos="74" YPos="46" Width="37" Height="14" />
+	<Image Name="CSystem_00.gif_21" XPos="111" YPos="46" Width="37" Height="14" />
+	<Image Name="CSystem_00.gif_22" XPos="148" YPos="46" Width="37" Height="14" />
+	<Image Name="CSystem_00.gif_23" XPos="185" YPos="46" Width="37" Height="14" />
+	<Image Name="CSystem_00.gif_24" XPos="0" YPos="60" Width="37" Height="14" />
+	
+	<Image Name="Ride_Head" XPos="52" YPos="141" Width="204" Height="115" />
+	
+</Imageset>

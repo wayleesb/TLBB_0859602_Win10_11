@@ -1,0 +1,63 @@
+INT	STRING	INT	INT	FLOAT	FLOAT	INT	INT	FLOAT	FLOAT	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING
+INT	STRING	INT	INT	FLOAT	FLOAT	INT	INT	FLOAT	FLOAT	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING
+0	测试用	10	20	0.05	20	2	10	0.05	20	男衣服06c披风	clotho1	clotho2	Material #18	clotho1	clotho2	clotho3	clotho4	女主角04b飘带.mesh	Material #18		
+1	1	10	20	0.05	20	2	10	0.05	20	男主角布甲披风01	clotho1	clotho2	女主角b01001飘带	clotho1-03b01	clotho1-03b02	clotho1-03b03	clotho1-03b04	女主角b03001飘带.mesh	女主角b01001飘带	男主角布甲披风01a.mesh	男主角布甲披风01a
+2	2	10	20	0.05	20	2	10	0.05	20	男主角布甲披风02	clotho1	clotho2	女主角b02001飘带	clotho1-03b01	clotho1-03b02	clotho1-03b03	clotho1-03b04	女主角b03001飘带.mesh	女主角b02001飘带	男主角布甲披风02a.mesh	男主角布甲披风02a
+3	3	10	20	0.05	20	2	10	0.05	20	男主角布甲披风03	clotho1	clotho2	女主角b03001飘带	clotho1-03b01	clotho1-03b02	clotho1-03b03	clotho1-03b04	女主角b03001飘带.mesh	女主角b03001飘带	男主角布甲披风02a.mesh	男主角布甲披风02a
+4	4	10	20	0.05	20	2	10	0.05	20	男主角布甲披风04	clotho1	clotho2	女主角b04001飘带	clotho1-06p01	clotho1-06p02	clotho1-06p03	clotho1-06p04	女主角p06001飘带.mesh	女主角b04001飘带	男主角布甲披风04a.mesh	男主角布甲披风04a
+5	5	10	20	0.05	20	2	10	0.05	20	男主角布甲披风05	clotho1	clotho2	女主角b05001飘带	clotho1-06p01	clotho1-06p02	clotho1-06p03	clotho1-06p04	女主角p06001飘带.mesh	女主角b05001飘带	男主角布甲披风05a.mesh	男主角布甲披风05a
+6	6	10	20	0.05	20	2	10	0.05	20	男主角布甲披风06	clotho1	clotho2	女主角b06001飘带	clotho1-03b01	clotho1-03b02	clotho1-03b03	clotho1-03b04	女主角b03001飘带.mesh	女主角b06001飘带	男主角布甲披风06a.mesh	男主角布甲披风06a
+7	7	10	20	0.05	20	2	10	0.05	20	男主角布甲披风07	clotho1	clotho2	女主角b07001飘带	clotho1-03b01	clotho1-03b02	clotho1-03b03	clotho1-03b04	女主角b03001飘带.mesh	女主角b07001飘带		
+8	8	10	20	0.05	20	2	10	0.05	20	男主角布甲披风08	clotho1	clotho2	女主角b08001飘带	clotho1-03b01	clotho1-03b02	clotho1-03b03	clotho1-03b04	女主角b03001飘带.mesh	女主角b08001飘带		
+9	9	10	20	0.05	20	2	10	0.05	20	男主角布甲披风09	clotho1	clotho2	女主角b09001飘带	clotho1-03b01	clotho1-03b02	clotho1-03b03	clotho1-03b04	女主角b03001飘带.mesh	女主角b09001飘带		
+10	10	10	20	0.05	20	2	10	0.05	20	男主角布甲披风10	clotho1	clotho2	女主角b10001飘带	clotho1-03b01	clotho1-03b02	clotho1-03b03	clotho1-03b04	女主角b03001飘带.mesh	女主角b10001飘带		
+11	11	10	20	0.05	20	2	10	0.05	20	男主角皮甲披风01	clotho1	clotho2	女主角p01001飘带	clotho1-03b01	clotho1-03b02	clotho1-03b03	clotho1-03b04	女主角b03001飘带.mesh	女主角p01001飘带	男主角皮甲披风01a.mesh	男主角皮甲披风01a
+12	12	10	20	0.05	20	2	10	0.05	20	男主角皮甲披风02	clotho1	clotho2	女主角p02001飘带	clotho1-03b01	clotho1-03b02	clotho1-03b03	clotho1-03b04	女主角b03001飘带.mesh	女主角p02001飘带	男主角皮甲披风01a.mesh	男主角皮甲披风01a
+13	13	10	20	0.05	20	2	10	0.05	20	男主角皮甲披风03	clotho1	clotho2	女主角p03001飘带	clotho1-06p01	clotho1-06p02	clotho1-06p03	clotho1-06p04	女主角p06001飘带.mesh	女主角p03001飘带	男主角皮甲披风03a.mesh	男主角皮甲披风03a
+14	14	10	20	0.05	20	2	10	0.05	20	男主角皮甲披风04	clotho1	clotho2	女主角p04001飘带	clotho1-06p01	clotho1-06p02	clotho1-06p03	clotho1-06p04	女主角p06001飘带.mesh	女主角p04001飘带	男主角皮甲披风04a.mesh	男主角皮甲披风04a
+15	15	10	20	0.05	20	2	10	0.05	20	男主角皮甲披风05	clotho1	clotho2	女主角p05001飘带	clotho1-06p01	clotho1-06p02	clotho1-06p03	clotho1-06p04	女主角p06001飘带.mesh	女主角p05001飘带	男主角皮甲披风05a.mesh	男主角皮甲披风05a
+16	16	10	20	0.05	20	2	10	0.05	20	男主角皮甲披风06	clotho1	clotho2	女主角p06001飘带	clotho1-06p01	clotho1-06p02	clotho1-06p03	clotho1-06p04	女主角p06001飘带.mesh	女主角p06001飘带		
+17	17	10	20	0.05	20	2	10	0.05	20	男主角皮甲披风07	clotho1	clotho2	女主角p07001飘带	clotho1-06p01	clotho1-06p02	clotho1-06p03	clotho1-06p04	女主角p06001飘带.mesh	女主角p07001飘带		
+18	18	10	20	0.05	20	2	10	0.05	20	男主角皮甲披风08	clotho1	clotho2	女主角p08001飘带	clotho1-06p01	clotho1-06p02	clotho1-06p03	clotho1-06p04	女主角p06001飘带.mesh	女主角p08001飘带		
+19	19	10	20	0.05	20	2	10	0.05	20	男主角皮甲披风09	clotho1	clotho2	女主角p09001飘带	clotho1-06p01	clotho1-06p02	clotho1-06p03	clotho1-06p04	女主角p06001飘带.mesh	女主角p09001飘带		
+20	20	10	20	0.05	20	2	10	0.05	20	男主角皮甲披风10	clotho1	clotho2	女主角p10001飘带	clotho1-06p01	clotho1-06p02	clotho1-06p03	clotho1-06p04	女主角p06001飘带.mesh	女主角p10001飘带		
+21	21	10	20	0.05	20	2	10	0.05	20	男主角铁甲披风01	clotho1	clotho2	女主角t01001飘带	clotho1-05t01	clotho1-05t02	clotho1-05t03	clotho1-05t04	女主角t05001飘带.mesh	女主角t01001飘带	男主角铁甲披风01a.mesh	男主角铁甲披风01a
+22	22	10	20	0.05	20	2	10	0.05	20	男主角铁甲披风02	clotho1	clotho2	女主角t02001飘带	clotho1-05t01	clotho1-05t02	clotho1-05t03	clotho1-05t04	女主角t05001飘带.mesh	女主角t02001飘带	男主角铁甲披风01a.mesh	男主角铁甲披风01a
+23	23	10	20	0.05	20	2	10	0.05	20	男主角铁甲披风03	clotho1	clotho2	女主角t03001飘带	clotho1-05t01	clotho1-05t02	clotho1-05t03	clotho1-05t04	女主角t05001飘带.mesh	女主角t03001飘带	男主角铁甲披风03a.mesh	男主角铁甲披风03a
+24	24	10	20	0.05	20	2	10	0.05	20	男主角铁甲披风04	clotho1	clotho2	女主角t04001飘带	clotho1-06p01	clotho1-06p02	clotho1-06p03	clotho1-06p04	女主角p06001飘带.mesh	女主角t04001飘带		
+25	25	10	20	0.05	20	2	10	0.05	20	男主角铁甲披风05	clotho1	clotho2	女主角t05001飘带	clotho1-05t01	clotho1-05t02	clotho1-05t03	clotho1-05t04	女主角t05001飘带.mesh	女主角t05001飘带		
+26	26	10	20	0.05	20	2	10	0.05	20	男主角铁甲披风06	clotho1	clotho2	女主角t06001飘带	clotho1-05t01	clotho1-05t02	clotho1-05t03	clotho1-05t04	女主角t05001飘带.mesh	女主角t06001飘带		
+27	27	10	20	0.05	20	2	10	0.05	20	男主角铁甲披风07	clotho1	clotho2	女主角t07001飘带	clotho1-05t01	clotho1-05t02	clotho1-05t03	clotho1-05t04	女主角t05001飘带.mesh	女主角t07001飘带		
+28	28	10	20	0.05	20	2	10	0.05	20	男主角铁甲披风08	clotho1	clotho2	女主角t08001飘带	clotho1-05t01	clotho1-05t02	clotho1-05t03	clotho1-05t04	女主角t05001飘带.mesh	女主角t08001飘带		
+29	29	10	20	0.05	20	2	10	0.05	20	男主角铁甲披风09	clotho1	clotho2	女主角t09001飘带	clotho1-05t01	clotho1-05t02	clotho1-05t03	clotho1-05t04	女主角t05001飘带.mesh	女主角t09001飘带		
+30	30	10	20	0.05	20	2	10	0.05	20	男主角铁甲披风10	clotho1	clotho2	女主角t10001飘带	clotho1-05t01	clotho1-05t02	clotho1-05t03	clotho1-05t04	女主角t05001飘带.mesh	女主角t10001飘带		
+31	31	10	20	0.05	20	2	10	0.05	20	男主角布甲披风01改色	clotho1	clotho2	女主角b01001飘带改色	clotho1-03b01	clotho1-03b02	clotho1-03b03	clotho1-03b04	女主角b03001飘带.mesh	女主角b01001飘带改色	男主角布甲披风01a.mesh	男主角布甲披风01a改色
+32	32	10	20	0.05	20	2	10	0.05	20	男主角布甲披风02改色	clotho1	clotho2	女主角b02001飘带改色	clotho1-03b01	clotho1-03b02	clotho1-03b03	clotho1-03b04	女主角b03001飘带.mesh	女主角b02001飘带改色	男主角布甲披风02a.mesh	男主角布甲披风02a改色
+33	33	10	20	0.05	20	2	10	0.05	20	男主角布甲披风03改色	clotho1	clotho2	女主角b03001飘带改色	clotho1-03b01	clotho1-03b02	clotho1-03b03	clotho1-03b04	女主角b03001飘带.mesh	女主角b03001飘带改色	男主角布甲披风02a.mesh	男主角布甲披风02a改色
+34	34	10	20	0.05	20	2	10	0.05	20	男主角布甲披风04改色	clotho1	clotho2	女主角b04001飘带改色	clotho1-06p01	clotho1-06p02	clotho1-06p03	clotho1-06p04	女主角p06001飘带.mesh	女主角b04001飘带改色	男主角布甲披风04a.mesh	男主角布甲披风04a改色
+35	35	10	20	0.05	20	2	10	0.05	20	男主角布甲披风05改色	clotho1	clotho2	女主角b05001飘带改色	clotho1-06p01	clotho1-06p02	clotho1-06p03	clotho1-06p04	女主角p06001飘带.mesh	女主角b05001飘带改色	男主角布甲披风05a.mesh	男主角布甲披风05a改色
+36	36	10	20	0.05	20	2	10	0.05	20	男主角布甲披风06改色	clotho1	clotho2	女主角b06001飘带改色	clotho1-03b01	clotho1-03b02	clotho1-03b03	clotho1-03b04	女主角b03001飘带.mesh	女主角b06001飘带改色	男主角布甲披风06a.mesh	男主角布甲披风06a改色
+37	37	10	20	0.05	20	2	10	0.05	20	男主角布甲披风07改色	clotho1	clotho2	女主角b07001飘带改色	clotho1-03b01	clotho1-03b02	clotho1-03b03	clotho1-03b04	女主角b03001飘带.mesh	女主角b07001飘带改色		
+38	38	10	20	0.05	20	2	10	0.05	20	男主角布甲披风08改色	clotho1	clotho2	女主角b08001飘带改色	clotho1-03b01	clotho1-03b02	clotho1-03b03	clotho1-03b04	女主角b03001飘带.mesh	女主角b08001飘带改色		
+39	39	10	20	0.05	20	2	10	0.05	20	男主角布甲披风09改色	clotho1	clotho2	女主角b09001飘带改色	clotho1-03b01	clotho1-03b02	clotho1-03b03	clotho1-03b04	女主角b03001飘带.mesh	女主角b09001飘带改色		
+40	40	10	20	0.05	20	2	10	0.05	20	男主角布甲披风10改色	clotho1	clotho2	女主角b10001飘带改色	clotho1-03b01	clotho1-03b02	clotho1-03b03	clotho1-03b04	女主角b03001飘带.mesh	女主角b10001飘带改色		
+41	41	10	20	0.05	20	2	10	0.05	20	男主角皮甲披风01改色	clotho1	clotho2	女主角p01001飘带改色	clotho1-03b01	clotho1-03b02	clotho1-03b03	clotho1-03b04	女主角b03001飘带.mesh	女主角p01001飘带改色	男主角皮甲披风01a.mesh	男主角皮甲披风01a改色
+42	42	10	20	0.05	20	2	10	0.05	20	男主角皮甲披风02改色	clotho1	clotho2	女主角p02001飘带改色	clotho1-03b01	clotho1-03b02	clotho1-03b03	clotho1-03b04	女主角b03001飘带.mesh	女主角p02001飘带改色	男主角皮甲披风01a.mesh	男主角皮甲披风01a改色
+43	43	10	20	0.05	20	2	10	0.05	20	男主角皮甲披风03改色	clotho1	clotho2	女主角p03001飘带改色	clotho1-06p01	clotho1-06p02	clotho1-06p03	clotho1-06p04	女主角p06001飘带.mesh	女主角p03001飘带改色	男主角皮甲披风03a.mesh	男主角皮甲披风03a改色
+44	44	10	20	0.05	20	2	10	0.05	20	男主角皮甲披风04改色	clotho1	clotho2	女主角p04001飘带改色	clotho1-06p01	clotho1-06p02	clotho1-06p03	clotho1-06p04	女主角p06001飘带.mesh	女主角p04001飘带改色	男主角皮甲披风04a.mesh	男主角皮甲披风04a改色
+45	45	10	20	0.05	20	2	10	0.05	20	男主角皮甲披风05改色	clotho1	clotho2	女主角p05001飘带改色	clotho1-06p01	clotho1-06p02	clotho1-06p03	clotho1-06p04	女主角p06001飘带.mesh	女主角p05001飘带改色	男主角皮甲披风05a.mesh	男主角皮甲披风05a改色
+46	46	10	20	0.05	20	2	10	0.05	20	男主角皮甲披风06改色	clotho1	clotho2	女主角p06001飘带改色	clotho1-06p01	clotho1-06p02	clotho1-06p03	clotho1-06p04	女主角p06001飘带.mesh	女主角p06001飘带改色		
+47	47	10	20	0.05	20	2	10	0.05	20	男主角皮甲披风07改色	clotho1	clotho2	女主角p07001飘带改色	clotho1-06p01	clotho1-06p02	clotho1-06p03	clotho1-06p04	女主角p06001飘带.mesh	女主角p07001飘带改色		
+48	48	10	20	0.05	20	2	10	0.05	20	男主角皮甲披风08改色	clotho1	clotho2	女主角p08001飘带改色	clotho1-06p01	clotho1-06p02	clotho1-06p03	clotho1-06p04	女主角p06001飘带.mesh	女主角p08001飘带改色		
+49	49	10	20	0.05	20	2	10	0.05	20	男主角皮甲披风09改色	clotho1	clotho2	女主角p09001飘带改色	clotho1-06p01	clotho1-06p02	clotho1-06p03	clotho1-06p04	女主角p06001飘带.mesh	女主角p09001飘带改色		
+50	50	10	20	0.05	20	2	10	0.05	20	男主角皮甲披风10改色	clotho1	clotho2	女主角p10001飘带改色	clotho1-06p01	clotho1-06p02	clotho1-06p03	clotho1-06p04	女主角p06001飘带.mesh	女主角p10001飘带改色		
+51	51	10	20	0.05	20	2	10	0.05	20	男主角铁甲披风01改色	clotho1	clotho2	女主角t01001飘带改色	clotho1-05t01	clotho1-05t02	clotho1-05t03	clotho1-05t04	女主角t05001飘带.mesh	女主角t01001飘带改色	男主角铁甲披风01a.mesh	男主角铁甲披风01a改色
+52	52	10	20	0.05	20	2	10	0.05	20	男主角铁甲披风02改色	clotho1	clotho2	女主角t02001飘带改色	clotho1-05t01	clotho1-05t02	clotho1-05t03	clotho1-05t04	女主角t05001飘带.mesh	女主角t02001飘带改色	男主角铁甲披风01a.mesh	男主角铁甲披风01a改色
+53	53	10	20	0.05	20	2	10	0.05	20	男主角铁甲披风03改色	clotho1	clotho2	女主角t03001飘带改色	clotho1-05t01	clotho1-05t02	clotho1-05t03	clotho1-05t04	女主角t05001飘带.mesh	女主角t03001飘带改色	男主角铁甲披风03a.mesh	男主角铁甲披风03a改色
+54	54	10	20	0.05	20	2	10	0.05	20	男主角铁甲披风04改色	clotho1	clotho2	女主角t04001飘带改色	clotho1-06p01	clotho1-06p02	clotho1-06p03	clotho1-06p04	女主角p06001飘带.mesh	女主角t04001飘带改色		
+55	55	10	20	0.05	20	2	10	0.05	20	男主角铁甲披风05改色	clotho1	clotho2	女主角t05001飘带改色	clotho1-05t01	clotho1-05t02	clotho1-05t03	clotho1-05t04	女主角t05001飘带.mesh	女主角t05001飘带改色		
+56	56	10	20	0.05	20	2	10	0.05	20	男主角铁甲披风06改色	clotho1	clotho2	女主角t06001飘带改色	clotho1-05t01	clotho1-05t02	clotho1-05t03	clotho1-05t04	女主角t05001飘带.mesh	女主角t06001飘带改色		
+57	57	10	20	0.05	20	2	10	0.05	20	男主角铁甲披风07改色	clotho1	clotho2	女主角t07001飘带改色	clotho1-05t01	clotho1-05t02	clotho1-05t03	clotho1-05t04	女主角t05001飘带.mesh	女主角t07001飘带改色		
+58	58	10	20	0.05	20	2	10	0.05	20	男主角铁甲披风08改色	clotho1	clotho2	女主角t08001飘带改色	clotho1-05t01	clotho1-05t02	clotho1-05t03	clotho1-05t04	女主角t05001飘带.mesh	女主角t08001飘带改色		
+59	59	10	20	0.05	20	2	10	0.05	20	男主角铁甲披风09改色	clotho1	clotho2	女主角t09001飘带改色	clotho1-05t01	clotho1-05t02	clotho1-05t03	clotho1-05t04	女主角t05001飘带.mesh	女主角t09001飘带改色		
+60	60	10	20	0.05	20	2	10	0.05	20	男主角铁甲披风10改色	clotho1	clotho2	女主角t10001飘带改色	clotho1-05t01	clotho1-05t02	clotho1-05t03	clotho1-05t04	女主角t05001飘带.mesh	女主角t10001飘带改色		

@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<GUILayout>
+  <Window Type="TLBB_MainFrame2" Name="AutoSearch_Frame">
+    <Property Name="UnifiedPosition" Value="{{1.000000,-149.000000},{0.000000,226.000000}" />
+    <Property Name="UnifiedSize" Value="{{0.000000,150.000000},{0.000000,256.000000}" />
+    <Window Type="TLBB_DragTitle" Name="AutoSearch_DragTitle">
+      <Property Name="AbsolutePosition" Value="x:26.000000 y:2.000000" />
+      <Property Name="UnifiedSize" Value="{{1.000000,-52.000000},{0.000000,20.000000}" />
+      <Property Name="DragTarget" Value="AutoSearch_Frame" />
+      <Property Name="Font" Value="YouYuan11.25" />
+      <Property Name="HorzFormatting" Value="HorzCentred" />
+      <Property Name="VertFormatting" Value="VertCentred" />
+      <Property Name="Text" Value="#{INTERFACE_XML_94}" />
+    </Window>
+    <Window Type="TLBB_ButtonHelp" Name="AutoSearch_Help">
+      <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,5.000000}" />
+      <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+      <Property Name="Text" Value="TLBB_ButtonHelp" />
+      <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*AutoSearch&quot;);' />
+    </Window>
+    <Window Type="TLBB_ButtonClose" Name="AutoSearch_Close">
+      <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,5.000000}" />
+      <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+      <Property Name="Text" Value="TLBB_ButtonClose" />
+      <Event Name="Clicked" Function="this:Hide();" />
+    </Window>
+    <Window Type="DefaultWindow" Name="AutoSearch_Function_Frame">
+      <Property Name="AbsolutePosition" Value="x:5.000000 y:24.000000" />
+      <Property Name="UnifiedSize" Value="{{1.000000,-10.000000},{1.000000,-28.000000}" />
+      <Window Type="DefaultWindow" Name="AutoSearch_Check_Frame">
+        <Property Name="Position" Value="x:0.0 y:0.0" />
+        <Property Name="UnifiedSize" Value="{{1.0,0.000000},{0.000000,24.000000}" />
+        <Window Type="TLBB_ButtonPageUp" Name="AutoSearch_Tab1">
+          <Property Name="UnifiedPosition" Value="{{0.0,0.000000},{0.000000,0.000000}" />
+          <Property Name="UnifiedSize" Value="{{0.2,0.000000},{0.000000,24.000000}" />
+          <Property Name="Text" Value="tab1" />
+          <Property Name="CheckMode" Value="1" />
+          <Event Name="MouseLButtonDown" Function="AutoSearch_UpdateFrame(1);" />
+        </Window>
+        <Window Type="TLBB_ButtonPageUp" Name="AutoSearch_Tab2">
+          <Property Name="UnifiedPosition" Value="{{0.2,0.000000},{0.000000,0.000000}" />
+          <Property Name="UnifiedSize" Value="{{0.2,0.000000},{0.000000,24.000000}" />
+          <Property Name="Text" Value="tab2" />
+          <Property Name="CheckMode" Value="1" />
+          <Event Name="MouseLButtonDown" Function="AutoSearch_UpdateFrame(2);" />
+        </Window>
+        <Window Type="TLBB_ButtonPageUp" Name="AutoSearch_Tab3">
+          <Property Name="UnifiedPosition" Value="{{0.4,0.000000},{0.000000,0.000000}" />
+          <Property Name="UnifiedSize" Value="{{0.2,0.000000},{0.000000,24.000000}" />
+          <Property Name="Text" Value="tab3" />
+          <Property Name="CheckMode" Value="1" />
+          <Event Name="MouseLButtonDown" Function="AutoSearch_UpdateFrame(3);" />
+        </Window>
+        <Window Type="TLBB_ButtonPageUp" Name="AutoSearch_Tab4">
+          <Property Name="UnifiedPosition" Value="{{0.6,0.000000},{0.000000,0.000000}" />
+          <Property Name="UnifiedSize" Value="{{0.2,0.000000},{0.000000,24.000000}" />
+          <Property Name="Text" Value="tab4" />
+          <Property Name="CheckMode" Value="1" />
+          <Event Name="MouseLButtonDown" Function="AutoSearch_UpdateFrame(4);" />
+        </Window>
+        <Window Type="TLBB_ButtonPageUp" Name="AutoSearch_Tab5">
+          <Property Name="UnifiedPosition" Value="{{0.8,0.000000},{0.000000,0.000000}" />
+          <Property Name="UnifiedSize" Value="{{0.2,0.000000},{0.000000,24.000000}" />
+          <Property Name="Text" Value="tab5" />
+          <Property Name="CheckMode" Value="1" />
+          <Event Name="MouseLButtonDown" Function="AutoSearch_UpdateFrame(5);" />
+        </Window>
+      </Window>
+      <Window Type="TLBB_MultiColumnList" Name="AutoSearch_List">
+        <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,23.000000}" />
+        <Property Name="UnifiedSize" Value="{{1.0,0.000000},{1.000000,-45.000000}" />
+        <Property Name="ForceHorzScrollbar" Value="False" />
+        <Property Name="ForceVertScrollbar" Value="True" />
+        <Property Name="SortSettingEnabled" Value="False" />
+        <Property Name="SelectionMode" Value="RowSingle" />
+        <Event Name="MouseDoubleClick" Function="AutoMoveTo();" />
+      </Window>
+      <Window Type="TLBB_Frame_Lace5" Name="AutoSearch_Blank">
+        <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-20.000000}" />
+        <Property Name="UnifiedSize" Value="{{0.5,-20.000000},{0.000000,20.000000}" />
+        <Property Name="RiseOnClick" Value="False" />
+      </Window>
+      <Window Type="TLBB_ButtonCommon" Name="AutoSearch_Move">
+        <Property Name="UnifiedPosition" Value="{{0.5,-20.000000},{1.000000,-20.000000}" />
+        <Property Name="UnifiedSize" Value="{{0.0,40.000000},{0.000000,20.000000}" />
+        <Property Name="Text" Value="#{INTERFACE_XML_822}" />
+        <Event Name="Clicked" Function="AutoMoveTo();" />
+      </Window>
+      <Window Type="TLBB_Frame_Lace5" Name="AutoSearch_Blank2">
+        <Property Name="UnifiedPosition" Value="{{0.5,20.000000},{1.000000,-20.000000}" />
+        <Property Name="UnifiedSize" Value="{{0.5,-20.000000},{0.000000,20.000000}" />
+        <Property Name="RiseOnClick" Value="False" />
+      </Window>
+    </Window>
+  </Window>
+</GUILayout>

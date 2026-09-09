@@ -1,0 +1,235 @@
+<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame3" Name="CommonSkill_Frame">
+        <Property Name="UnifiedPosition" Value="{{0.0,0},{0.12,0}}" />
+        <Property Name="AbsoluteSize" Value="w:256 h:360" />
+        <Property Name="MouseHollow" Value="True" />
+        <Window Type="TLBB_DragTitle" Name="CommonSkill_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:108.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-133.000000},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="CommonSkill_Frame" />
+            <Property Name="Font" Value="YouYuan11.25" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="Text" Value="#{INTERFACE_XML_49}" />
+        </Window>
+        <Window Type="TLBB_ButtonHelp" Name="CommonSkill_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,88.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Property Name="Text" Value="TLBB_ButtonHelp" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*CommonSkill&quot;);' />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="CommonSkill_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Property Name="Text" Value="TLBB_ButtonClose" />
+            <Event Name="Clicked" Function="CommonSkill_OnClose();" />
+        </Window>
+        <!--client start-->
+        <Window Type="DefaultWindow" Name="CommonSkill_Frame_Client">
+            <Property Name="AbsolutePosition" Value="x:10.000000 y:37.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-15.000000},{1.000000,-66.000000}" />
+            <Window Type="TLBB_Frame_Lace2" Name="CommonSkill_Bk">
+                <Property Name="UnifiedPosition" Value="{{0.000000,7.000000},{0.000000,1.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,207.000000},{0.000000,159.000000}" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <!--skills-->
+            <Window Type="TLBB_ActionButton" Name="CommonSkill_Skill1">
+                <Property Name="Position" Value="x:0.05 y:0.02" />
+                <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                <Property Name="DraggingEnabled" Value="True" />
+                <Event Name="Clicked" Function="CommonSkill_Buttons_Clicked(1);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="CommonSkill_Skill2">
+                <Property Name="Position" Value="x:0.22 y:0.02" />
+                <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                <Property Name="DraggingEnabled" Value="True" />
+                <Event Name="Clicked" Function="CommonSkill_Buttons_Clicked(2);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="CommonSkill_Skill3">
+                <Property Name="Position" Value="x:0.39 y:0.02" />
+                <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                <Property Name="DraggingEnabled" Value="True" />
+                <Event Name="Clicked" Function="CommonSkill_Buttons_Clicked(3);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="CommonSkill_Skill4">
+                <Property Name="Position" Value="x:0.56 y:0.02" />
+                <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                <Property Name="DraggingEnabled" Value="True" />
+                <Event Name="Clicked" Function="CommonSkill_Buttons_Clicked(4);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="CommonSkill_Skill5">
+                <Property Name="Position" Value="x:0.73 y:0.02" />
+                <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                <Property Name="DraggingEnabled" Value="True" />
+                <Event Name="Clicked" Function="CommonSkill_Buttons_Clicked(5);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="CommonSkill_Skill6">
+                <Property Name="Position" Value="x:0.05 y:0.15" />
+                <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                <Property Name="DraggingEnabled" Value="True" />
+                <Event Name="Clicked" Function="CommonSkill_Buttons_Clicked(6);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="CommonSkill_Skill7">
+                <Property Name="Position" Value="x:0.22 y:0.15" />
+                <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                <Property Name="DraggingEnabled" Value="True" />
+                <Event Name="Clicked" Function="CommonSkill_Buttons_Clicked(7);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="CommonSkill_Skill8">
+                <Property Name="Position" Value="x:0.39 y:0.15" />
+                <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                <Property Name="DraggingEnabled" Value="True" />
+                <Event Name="Clicked" Function="CommonSkill_Buttons_Clicked(8);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="CommonSkill_Skill9">
+                <Property Name="Position" Value="x:0.56 y:0.15" />
+                <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                <Property Name="DraggingEnabled" Value="True" />
+                <Event Name="Clicked" Function="CommonSkill_Buttons_Clicked(9);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="CommonSkill_Skill10">
+                <Property Name="Position" Value="x:0.73 y:0.15" />
+                <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                <Property Name="DraggingEnabled" Value="True" />
+                <Event Name="Clicked" Function="CommonSkill_Buttons_Clicked(10);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="CommonSkill_Skill11">
+                <Property Name="Position" Value="x:0.05 y:0.28" />
+                <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                <Property Name="DraggingEnabled" Value="True" />
+                <Event Name="Clicked" Function="CommonSkill_Buttons_Clicked(11);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="CommonSkill_Skill12">
+                <Property Name="Position" Value="x:0.22 y:0.28" />
+                <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                <Property Name="DraggingEnabled" Value="True" />
+                <Event Name="Clicked" Function="CommonSkill_Buttons_Clicked(12);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="CommonSkill_Skill13">
+                <Property Name="Position" Value="x:0.39 y:0.28" />
+                <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                <Property Name="DraggingEnabled" Value="True" />
+                <Event Name="Clicked" Function="CommonSkill_Buttons_Clicked(13);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="CommonSkill_Skill14">
+                <Property Name="Position" Value="x:0.56 y:0.28" />
+                <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                <Property Name="DraggingEnabled" Value="True" />
+                <Event Name="Clicked" Function="CommonSkill_Buttons_Clicked(14);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="CommonSkill_Skill15">
+                <Property Name="Position" Value="x:0.73 y:0.28" />
+                <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                <Property Name="DraggingEnabled" Value="True" />
+                <Event Name="Clicked" Function="CommonSkill_Buttons_Clicked(15);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="CommonSkill_Skill16">
+                <Property Name="Position" Value="x:0.05 y:0.41" />
+                <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                <Property Name="DraggingEnabled" Value="True" />
+                <Event Name="Clicked" Function="CommonSkill_Buttons_Clicked(16);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="CommonSkill_Skill17">
+                <Property Name="Position" Value="x:0.22 y:0.41" />
+                <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                <Property Name="DraggingEnabled" Value="True" />
+                <Event Name="Clicked" Function="CommonSkill_Buttons_Clicked(17);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="CommonSkill_Skill18">
+                <Property Name="Position" Value="x:0.39 y:0.41" />
+                <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                <Property Name="DraggingEnabled" Value="True" />
+                <Event Name="Clicked" Function="CommonSkill_Buttons_Clicked(18);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="CommonSkill_Skill19">
+                <Property Name="Position" Value="x:0.56 y:0.41" />
+                <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                <Property Name="DraggingEnabled" Value="True" />
+                <Event Name="Clicked" Function="CommonSkill_Buttons_Clicked(19);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="CommonSkill_Skill20">
+                <Property Name="Position" Value="x:0.73 y:0.41" />
+                <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                <Property Name="DraggingEnabled" Value="True" />
+                <Event Name="Clicked" Function="CommonSkill_Buttons_Clicked(20);" />
+            </Window>
+            <Window Type="TLBB_ButtonNULL" Name="CommonSkill_PageUp">
+                <Property Name="Position" Value="x:0.91 y:0.088" />
+                <Property Name="AbsoluteSize" Value="w:20.0 h:26.0" />
+                <Event Name="Clicked" Function="CommonSkill_Page(-1);" />
+                <Property Name="NormalImage" Value="set:Button6 image:PageUp_Btn_Normal" />
+                <Property Name="HoverImage" Value="set:Button6 image:PageUp_Btn_Hover" />
+                <Property Name="PushedImage" Value="set:Button6 image:PageUp_Btn_Pushed" />
+                <Property Name="DisabledImage" Value="set:Button6 image:PageUp_Btn_Disabled" />
+            </Window>
+            <Window Type="TLBB_ButtonNULL" Name="CommonSkill_PageDown">
+                <Property Name="Position" Value="x:0.91 y:0.38" />
+                <Property Name="AbsoluteSize" Value="w:20.0 h:26.0" />
+                <Event Name="Clicked" Function="CommonSkill_Page(1);" />
+                <Property Name="NormalImage" Value="set:Button6 image:PageDown_Btn_Normal" />
+                <Property Name="HoverImage" Value="set:Button6 image:PageDown_Btn_Hover" />
+                <Property Name="PushedImage" Value="set:Button6 image:PageDown_Btn_Pushed" />
+                <Property Name="DisabledImage" Value="set:Button6 image:PageDown_Btn_Disabled" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="CommonSkill_Target_Skill">
+                <Property Name="Position" Value="x:0.1 y:0.57" />
+                <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                <Event Name="Clicked" Function="CommonSkill_Button_Clicked();" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="CommonSkill_Target_Skill_Name">
+                <Property Name="Position" Value="x:0.3 y:0.57" />
+                <Property Name="UnifiedSize" Value="{{0.4,0.000000},{0.000000,36.000000}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_115}" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="CommonSkill_Use">
+                <Property Name="Position" Value="x:0.72 y:0.6" />
+                <Property Name="UnifiedSize" Value="{{0.2,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_643}" />
+                <Event Name="Clicked" Function="CommonSkill_Button_Clicked();" />
+            </Window>
+            <Window Type="TLBB_Frame_Lace4" Name="CommonSkill_Target_Skill_Explain_Bk">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-80.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.000000,0.000000},{0.000000,80.000000}" />
+                <Window Type="TLBB_StaticText" Name="CommonSkill_Target_Skill_Explain">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,7.000000},{0.000000,6.000000}" />
+                    <Property Name="UnifiedSize" Value="{{1.000000,-14.000000},{1.000000,-12.000000}" />
+                    <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="VertFormatting" Value="TopAligned" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_116}" />
+                    <Property Name="VertScrollbar" Value="true" />
+                </Window>
+            </Window>
+        </Window>
+        <Window Type="DefaultWindow" Name="CommonSkill_Checkbox_Frame">
+            <Property Name="UnifiedPosition" Value="{{0.0,8.000000},{1.000000,-25.000000}" />
+            <Property Name="UnifiedSize" Value="{{0.9,0.000000},{0.000000,24.000000}" />
+            <Property Name="RiseOnClick" Value="False" />
+            <Window Type="TLBB_ButtonPageDown" Name="CommonSkill_CommonlySkill">
+                <Property Name="AbsolutePosition" Value="x:0.0 y:0.0" />
+                <Property Name="AbsoluteSize" Value="w:42.000000 h:24.000000" />
+                <Property Name="CheckMode" Value="1" />
+                <Property Name="Text" Value="#{INTERFACE_XML_494}" />
+            </Window>
+            <Window Type="TLBB_ButtonPageDown" Name="CommonSkill_ActionSkill">
+                <Property Name="AbsolutePosition" Value="x:44.0 y:0.0" />
+                <Property Name="AbsoluteSize" Value="w:42.000000 h:24.000000" />
+                <Property Name="CheckMode" Value="1" />
+                <Property Name="Text" Value="#{INTERFACE_XML_448}" />
+                <Event Name="Clicked" Function="Common_Action_Page_Switch();" />
+            </Window>
+            <Window Type="TLBB_ButtonPageDown" Name="CommonSkill_LifeSkill">
+                <Property Name="AbsolutePosition" Value="x:88.0 y:0.0" />
+                <Property Name="AbsoluteSize" Value="w:42.000000 h:24.000000" />
+                <Property Name="CheckMode" Value="1" />
+                <Property Name="Text" Value="#{INTERFACE_XML_635}" />
+                <Event Name="Clicked" Function="Common_Life_Page_Switch();" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

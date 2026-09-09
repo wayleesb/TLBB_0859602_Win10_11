@@ -1,0 +1,235 @@
+INT	STRING	STRING	STRING	INT	STRING	INT	INT	STRING
+INT	STRING	STRING	STRING	INT	STRING	INT	INT	STRING
+0	ActionSkill	ActionSkill/ActionSkill.layout.xml	ActionSkill/ActionSkill.lua	2	wgjn	32	33	战斗技能界面
+1	ActionSkillsStudy	ActionSkillsStudy/ActionSkillsStudy.layout.xml	ActionSkillsStudy/ActionSkillsStudy.lua	3	44	19	20	师门技能学习
+2	Agname	Agname/Agname.layout.xml	Agname/Agname.lua	1	27	19	20	称号选择界面
+3	ChangeMinorPassword	ChangeMinorPassword/ChangeMinorPassword.layout.xml	ChangeMinorPassword/ChangeMinorPassword.lua	0	53	19	20	修改密码界面
+4	ChatFrame	ChatFrame/ChatFrame.layout.xml	ChatFrame/ChatFrame.lua	0	33	0	0	聊天界面
+5	ChatInfo	ChatInfo/ChatInfo.layout.xml	ChatInfo/ChatInfo.lua	1	27	19	20	玩家信息
+6	CommonSkill	CommonSkill/CommonSkill.layout.xml	CommonSkill/CommonSkill.lua	2	42	32	33	通用技能界面
+7	LoginCreateRole	CreateRole/CreateRole.layout.xml	CreateRole/CreateRole.lua	1	#N/A	0	0	#N/A
+8	Exchange	Exchange/Exchange.layout.xml	Exchange/Exchange.lua	1	30	19	20	交易物品界面
+9	FriendInfo	FriendInfo/FriendInfo.layout.xml	FriendInfo/FriendInfo.lua	1	25	19	20	历史信息查询
+10	GameSetup	GameSetup/GameSetup.layout.xml	GameSetup/GameSetup.lua	1	54	19	20	游戏配置
+11	HistoryCorrespondence	HistoryCorrespondence/HistoryCorrespondence.layout.xml	HistoryCorrespondence/HistoryCorrespondence.lua	1	25	19	20	好友信息查询
+12	InfoBrowser	InfoBrowser/InfoBrowser.layout.xml	InfoBrowser/InfoBrowser.lua	1	25	0	20	好友消息接受
+13	InfoEdit	InfoEdit/InfoEdit.layout.xml	InfoEdit/InfoEdit.lua	1	25	0	20	好友消息发送
+14	InputMoney	InputMoney/InputMoney.layout.xml	InputMoney/InputMoney.lua	1	52	0	0	存钱、取钱
+15	InputMood	InputMood/InputMood.layout.xml	InputMood/InputMood.lua	1	27	0	0	心情寄语
+16	LoginLogOn	LogOn/LogOn.layout.xml	LogOn/LogOn.lua	1	yxzcdl	0	0	#N/A
+17	MainMenuBar	MainMenuBar/MainMenuBar.layout.xml	MainMenuBar/MainMenuBar.lua	0	31	0	0	快捷栏
+18	MessageBox_Other	MessageBox_Other/MessageBox_Other.layout.xml	MessageBox_Other/MessageBox_Other.lua	1	#N/A	19	20	
+19	MessageBox_Self	MessageBox_Self/MessageBox_Self.layout.xml	MessageBox_Self/MessageBox_Self.lua	1	24	19	20	宠物放生界面
+20	MissionReply	MissionReply/MissionReply.layout.xml	MissionReply/MissionReply.lua	3	37	19	20	交任务界面
+21	Operation	Operation/Operation.layout.xml	Operation/Operation.lua	1	51	25	26	系统界面
+22	OtherInfo	OtherInfo/OtherInfo.layout.xml	OtherInfo/OtherInfo.lua	2	35	19	20	其他信息
+23	Pet	Pet/Pet.layout.xml	Pet/Pet.lua	2	17	19	20	宠物属性界面
+24	PetList	PetList/PetList.layout.xml	PetList/PetList.lua	1	16	0	0	宠物列表
+25	QuitRelative	QuitRelative\QuitRelative.layout.xml	QuitRelative\QuitRelative.lua	1	#N/A	0	0	
+26	Relive	Relive/Relive.layout.xml	Relive/Relive.lua	6	45	0	0	死亡后询问
+27	Ride	Ride/Ride.layout.xml	Ride/Ride.lua	2	60	19	20	骑乘
+28	LoginSelectRole	SelectRole/SelectRole.layout.xml	SelectRole/SelectRole.lua	1	#N/A	0	0	#N/A
+29	LoginSelectServer	SelectServer/SelectServer.layout.xml	SelectServer/SelectServer.lua	1	#N/A	0	0	#N/A
+30	LoginSelectServerQuest	SelectServerQuest/SelectServerQuest.layout.xml	SelectServerQuest/SelectServerQuest.lua	0	61	0	0	#N/A
+31	SelfData	SelfData/SelfData.layout.xml	SelfData/SelfData.lua	2	27	19	20	玩家资料
+32	SelfEquip	SelfEquip/SelfEquip.layout.xml	SelfEquip/SelfEquip.lua	2	46	34	20	玩家属性
+33	SetMinorPassword	SetMinorPassword/SetMinorPassword.layout.xml	SetMinorPassword/SetMinorPassword.lua	0	53	19	20	密码设置
+34	SplitItem	SplitItem/SplitItem.layout.xml	SplitItem/SplitItem.lua	1	11	0	0	物品拆分界面
+35	UnlockMinorPassword	UnlockMinorPassword/UnlockMinorPassword.layout.xml	UnlockMinorPassword/UnlockMinorPassword.lua	0	53	19	20	解除密码界面
+36	MiniMap	MiniMap/MiniMap.layout.xml	MiniMap/MiniMap.lua	0	48	0	0	小地图
+37	SceneMap	SceneMap/SceneMap.layout.xml	SceneMap/SceneMap.lua	1	#N/A	30	31	#N/A
+38	Quest	Quest/Quest.layout.xml	Quest/Quest.lua	2	24	30	31	对话
+39	LifeSkill	LifeSkill/LifeSkill.layout.xml	LifeSkill/LifeSkill.lua	2	39	32	33	生活技能界面
+40	LootPacket	LootPacket/LootPacket.layout.xml	LootPacket/LootPacket.lua	1	40	28	29	拾取包
+41	PetFrame	PetFrame/PetFrame.layout.xml	PetFrame/PetFrame.lua	0	17	19	20	宠物头像、属性
+42	PlayerFrame	PlayerFrame/PlayerFrame.layout.xml	PlayerFrame/PlayerFrame.lua	0	29	0	0	主角色头像、属性
+43	TargetFrame	TargetFrame/TargetFrame.layout.xml	TargetFrame/TargetFrame.lua	0	27	0	0	选中角色头像、属性
+44	CityShop	CityShop/CityShop.layout.xml	CityShop/CityShop.lua	1	14	19	20	城市商店
+45	Bank	Bank/Bank.layout.xml	Bank/Bank.lua	2	52	19	20	银行界面
+46	Carriage	Carriage/Carriage.layout.xml	Carriage/Carriage.lua	2	21	19	20	漕运交易界面
+47	CityTrendGraph	CityTrendGraph/CityTrendGraph.layout.xml	CityTrendGraph/CityTrendGraph.lua	1	4	19	20	城市发展方向
+48	ConfraternityAddress	ConfraternityAddress/ConfraternityAddress.layout.xml	ConfraternityAddress/ConfraternityAddress.lua	1	6	19	20	帮会领地申请列表
+49	ConfraternityApplyManor	ConfraternityApplyManor/ConfraternityApplyManor.layout.xml	ConfraternityApplyManor/ConfraternityApplyManor.lua	1	4	19	20	领地命名
+50	ConfraternityInfo	ConfraternityInfo/ConfraternityInfo.layout.xml	ConfraternityInfo/ConfraternityInfo.lua	1	4	19	20	帮会详细信息
+51	ConfraternityList	ConfraternityList/ConfraternityList.layout.xml	ConfraternityList/ConfraternityList.lua	1	4	19	20	帮会列表
+52	ConfraternityManage	ConfraternityManage/ConfraternityManage.layout.xml	ConfraternityManage/ConfraternityManage.lua	1	5	19	20	帮会管理
+53	ConfraternityPosition	ConfraternityPosition/ConfraternityPosition.layout.xml	ConfraternityPosition/ConfraternityPosition.lua	1	5	19	20	职位列表
+54	ConfraternitySkillsStudy	ConfraternitySkillsStudy/ConfraternitySkillsStudy.layout.xml	ConfraternitySkillsStudy/ConfraternitySkillsStudy.lua	1	3	19	20	帮会生活技能
+55	CreateCommerceNet	CreateCommerceNet/CreateCommerceNet.layout.xml	CreateCommerceNet/CreateCommerceNet.lua	1	2	19	20	帮会建立商业路线
+56	CreateConfraternity	CreateConfraternity/CreateConfraternity.layout.xml	CreateConfraternity/CreateConfraternity.lua	1	4	19	20	帮会创建
+57	EquipBind	EquipBind/EquipBind.layout.xml	EquipBind/EquipBind.lua	3	#N/A	0	0	
+58	EquipEnchange	EquipEnchange/EquipEnchange.layout.xml	EquipEnchange/EquipEnchange.lua	3	70	19	20	
+59	Examination	Examination/Examination.layout.xml	Examination/Examination.lua	2	#N/A	19	20	
+60	Friend	Friend/friend.layout.xml	Friend/friend.lua	1	25	19	20	好友界面
+61	FunctionBarRight	FunctionBarRight/FunctionBarRight.layout.xml	FunctionBarRight/FunctionBarRight.lua	0	#N/A	0	0	#N/A
+62	Identify	Identify/Identify.layout.xml	Identify/Identify.lua	3	#N/A	19	20	
+63	Interior	Interior/Interior.layout.xml	Interior/Interior.lua	1	4	19	20	帮会内政
+64	LifeSkillsStudy	LifeSkillsStudy/LifeSkillsStudy.layout.xml	LifeSkillsStudy/LifeSkillsStudy.lua	3	39	19	20	生活技能学习
+65	MainMenuBar_2	MainMenuBar_2/MainMenuBar_2.layout.xml	MainMenuBar_2/MainMenuBar_2.lua	0	#N/A	0	0	#N/A
+66	MaterialCompound	Materalcompose/Materalcompose.layout.xml	Materalcompose/MaterialCompound.lua	3	9	19	20	合成界面
+67	PartyFrame	PartyFrame/PartyFrame.layout.xml	PartyFrame/PartyFrame.lua	0	57	0	0	队友头像
+68	PetInviteFriend	PetInviteFriend/PetInviteFriend.layout.xml	PetInviteFriend/PetInviteFriend.lua	3	19	19	20	宠物征友公告栏的界面
+69	PetProcreate	PetProcreate/PetProcreate.layout.xml	PetProcreate/PetProcreate.lua	2	15	19	20	宠物提交繁殖界面
+70	PetSavvy	PetSavvy\PetSavvy.layout.xml	PetSavvy\PetSavvy.lua	3	18	19	20	珍兽悟性提升
+71	PetSkillStudy	PetSkillStudy/PetSkillStudy.layout.xml	PetSkillStudy/PetSkillStudy.lua	3	20	19	20	宠物普通技能学习界面
+72	PlayerImpactFrame	PlayerImpactFrame/PlayerImpactFrame.layout.xml	PlayerImpactFrame/PlayerImpactFrame.lua	0	29	0	0	BUFF格子
+73	PS_CreateShop	PS_CreateShop/PS_CreateShop.layout.xml	PS_CreateShop/PS_CreateShop.lua	3	59	19	20	玩家商店申请界面
+74	PS_Message	PS_Message/PS_Message.layout.xml	PS_Message/PS_Message.lua	1	59	19	20	玩家商店信息
+75	PS_Shop	PS_Shop/PS_Shop.layout.xml	PS_Shop/PS_Shop.lua	1	59	19	20	玩家商店物品购物界面
+76	PS_ShopMag	PS_ShopMag/PS_ShopMag.layout.xml	PS_ShopMag/PS_ShopMag.lua	1	59	19	20	商店管理界面
+77	Quiz	Quiz/Quiz.layout.xml	Quiz/Quiz.lua	2	49	19	20	智力问答
+78	Research	Research/Research.layout.xml	Research/Research.lua	1	2	19	20	城市研究
+79	Revenge	Revenge/Revenge.layout.xml	Revenge/Revenge.lua	1	34	19	20	仇杀申请
+80	SceneTrans	SceneTrans/SceneTrans.layout.xml	SceneTrans/SceneTrans.lua	0	#N/A	0	0	#N/A
+81	ScreenList	ScreenList/ScreenList.layout.xml	ScreenList/ScreenList.lua	7	33	19	20	聊天屏蔽界面
+82	ScrollInfo	ScrollInfo/ScrollInfo.layout.xml	ScrollInfo/ScrollInfo.lua	0	#N/A	0	0	
+83	SetCommerceNet	SetCommerceNet/SetCommerceNet.layout.xml	SetCommerceNet/SetCommerceNet.lua	1	2	19	20	帮会设定商业路线
+84	Shop_BulkBuying	Shop_BulkBuying/Shop_BulkBuying.layout.xml	Shop_BulkBuying/Shop_BulkBuying.lua	1	14	0	0	批量购买
+85	SplitGem	SplitGem/SplitGem.layout.xml	SplitGem/SplitGem.lua	3	8	19	20	宝石分离
+86	StallBuy	StallBuy/StallBuy.layout.xml	StallBuy/StallBuy.lua	1	10	19	20	购买摆摊界面
+87	StallMessage	StallMessage/StallMessage.layout.xml	StallMessage/StallMessage.lua	1	10	19	20	摆位留言板卖方
+88	StallSale	StallSale/StallSale.layout.xml	StallSale/StallSale.lua	2	10	19	20	摆摊界面
+89	Stiletto	Stiletto/Stiletto.layout.xml	Stiletto/Stiletto.lua	3	55	19	20	装备打孔
+90	TargetBuff	TargetBuff/TargetBuff.layout.xml	TargetBuff/TargetBuff.lua	0	#N/A	0	0	#N/A
+91	TargetData	TargetData/TargetData.layout.xml	TargetData/TargetData.lua	3	12	19	20	选中目标资料
+92	TargetEquip	TargetEquip/TargetEquip.layout.xml	TargetEquip/TargetEquip.lua	3	47	19	20	查看装备界面
+93	Team_Frame	TeamFrame/TeamFrame.layout.xml	TeamFrame/TeamFrame.lua	1	22	19	20	队伍界面（队长）
+94	TeamMessageBox1	TeamMessageBox1/TeamMessageBox1.layout.xml	TeamMessageBox1/TeamMessageBox1.lua	1	57	0	0	队伍信息对话框
+95	WorldReference	WorldReference\WorldReference.layout.xml	WorldReference\WorldReference.lua	1	28	19	20	江湖指南
+96	LogonList	LogOnList/LogonList.layout.xml	LogOnList/LogonList.lua	1	24	0	0	登陆服务器选择列表
+97	QuestLog	QuestLog/QuestLog.layout.xml	QuestLog/QuestLog.lua	2	37	30	31	任务记录界面
+98	SuperTooltip	SuperTooltip/SuperTooltip.layout.xml	SuperTooltip/SuperTooltip.lua	1	24	0	0	物品悬停界
+99	Action	Action/Action.layout.xml	Action/Action.lua	7	33	0	0	休闲动作
+100	Byname	Byname/Byname.layout.xml	Byname/Byname.lua	1	26	0	0	输入结拜名称
+101	Challenge	Challenge/Challenge.layout.xml	Challenge/Challenge.lua	1	43	0	0	挑战询问界面
+102	ChannelCustomization	ChannelCustomization/ChannelCustomization.layout.xml	ChannelCustomization/ChannelCustomization.lua	1	33	19	20	频道自定义
+103	Enchase	Enchase/Enchase.layout.xml	Enchase/Enchase.lua	3	#N/A	19	20	
+104	ExpAssign	ExpAssign/ExpAssign.layout.xml	ExpAssign/ExpAssign.lua	1	#N/A	19	20	
+105	FriendSearch	FriendSearch/FriendSearch.layout.xml	FriendSearch/FriendSearch.lua	1	25	19	20	好友搜索
+106	ItemCoffer	ItemCoffer/ItemCoffer.layout.xml	ItemCoffer/ItemCoffer.lua	1	53	19	20	物品加锁界面
+107	MissionObjDel	MissionObjDel/MissionObjDel.layout.xml	MissionObjDel/MissionObjDel.lua	2	36	0	0	任务物品销毁界面
+108	PetSynthesize	PetSynthesize/PetSynthesize.layout.xml	PetSynthesize/PetSynthesize.lua	3	24	19	20	宠物合成界面
+109	PK_message	PK_message/PK_message.layout.xml	PK_message/PK_message.lua	1	34	19	20	输入决斗人物名称界面
+110	PS_Input	PS_Input/PS_Input.layout.xml	PS_Input/PS_Input.lua	3	13	19	20	充入本金
+111	PS_Search	PS_Search/PS_Search.layout.xml	PS_Search/PS_Search.lua	1	38	0	0	玩家商店搜索
+112	PS_ShopList	PS_ShopList/PS_ShopList.layout.xml	PS_ShopList/PS_ShopList.lua	3	59	19	20	玩家商店列表界面
+113	PS_Transfer	PS_Transfer/PS_Transfer.layout.xml	PS_Transfer/PS_Transfer.lua	3	59	19	20	玩家店铺盘出
+114	Reputation	Reputation\Reputation.layout.xml	Reputation\Reputation.lua	3	#N/A	19	20	
+115	SelectHairColor	SelectHairColor/SelectHairColor.layout.xml	SelectHairColor/SelectHairColor.lua	3	23	19	20	发色选择界面
+116	SelectHairstyle	SelectHairstyle/SelectHairstyle.layout.xml	SelectHairstyle/SelectHairstyle.lua	3	23	19	20	发型选择界面
+117	Service	Service/Service.layout.xml	Service/Service.lua	2	56	19	20	装备修理
+118	Shop	Shop/Shop.layout.xml	Shop/Shop.lua	3	14	19	20	NPC商店界面
+119	SuperTooltip2	SuperTooltip2/SuperTooltip2.layout.xml	SuperTooltip2/SuperTooltip2.lua	1	24	0	0	物品传输道具界面
+120	Synthesize	Synthesize/Synthesize.layout.xml	Synthesize/Synthesize.lua	3	24	19	20	物品合成界面
+121	ContexMenu	ContexMenu/ContexMenu.layout.xml	ContexMenu/ContexMenu.lua	1	#N/A	19	20	#N/A
+122	Packet	Packet/Packet.layout.xml	Packet/Packet.lua	1	1	28	29	包裹界面
+123	ProgressBar	ProgressBar/ProgressBar.layout.xml	ProgressBar/ProgressBar.lua	0	#N/A	19	20	#N/A
+124	AcceptBox	AcceptBox\AcceptBox.layout.xml	AcceptBox\AcceptBox.lua	1	24	0	0	类似msgbox
+125	ChatFaceFrame	ChatFaceFrame/ChatFaceFrame.layout.xml	ChatFaceFrame/ChatFaceFrame.lua	7	7	0	0	表情界面
+126	ChatTextColorFrame	ChatTextColorFrame/ChatTextColorFrame.layout.xml	ChatTextColorFrame/ChatTextColorFrame.lua	7	32	0	0	颜色界面
+127	LargeMap	LargeMap/LargeMap.layout.xml	LargeMap/LargeMap.lua	4	#N/A	30	31	#N/A
+128	TargetPet	TargetPet/TargetPet.layout.xml	TargetPet/TargetPet.lua	1	17	19	20	查看宠物界面
+129	Blog	Blog\Blog.layout.xml	Blog\Blog.lua	2	#N/A	19	20	
+130	TargetBlog	TargetBlog\TargetBlog.layout.xml	TargetBlog\TargetBlog.lua	3	#N/A	0	0	
+131	bg_info	bg_info\bg_info.layout.xml	bg_info\bg_info.lua	1	24	0	0	背景图片
+132	SystemNotice	SystemNotice\SystemNotice.layout.xml	SystemNotice\SystemNotice.lua	1	#N/A	0	0	
+133	ViewSetup	ViewSetup/ViewSetup.layout.xml	ViewSetup/ViewSetup.lua	1	50	19	20	视频配置
+134	SoundSetup	SoundSetup/SoundSetup.layout.xml	SoundSetup/SoundSetup.lua	1	41	19	20	声音配置
+135	DebugListBox	DebugListBox/DebugListBox.layout.xml	DebugListBox/DebugListBox.lua	0	#N/A	0	0	#N/A
+136	EquipChange	EquipChange/EquipChange.layout.xml	EquipChange/EquipChange.lua	3		19	20	
+137	EquipRepair	EquipRepair\EquipRepair.layout.xml	EquipRepair\EquipRepair.lua	3		19	20	
+138	YuanbaoExchange	YuanbaoExchange\YuanbaoExchange.layout.xml	YuanbaoExchange\YuanbaoExchange.lua	3		19	20	
+139	ConfraternityMessage	ConfraternityMessage\ConfraternityMessage.layout.xml	ConfraternityMessage\ConfraternityMessage.lua	1		19	20	
+140	OtherPet	OtherPet\OtherPet.layout.xml	OtherPet\OtherPet.lua	3		19	20	
+141	YuanbaopiaoExchange	YuanbaopiaoExchange\YuanbaopiaoExchange.layout.xml	YuanbaopiaoExchange\YuanbaopiaoExchange.lua	3		19	20	
+142	NewbieCardActivation	NewbieCardActivation\NewbieCardActivation.layout.xml	NewbieCardActivation\NewbieCardActivation.lua	3		19	20	
+143	Relation	Relation\Relation.layout.xml	Relation\Relation.lua	3	72	19	20	
+144	AntiRobot	AntiRobot\AntiRobot.layout.xml	AntiRobot\AntiRobot.lua	0	#N/A	0	0	
+145	Evaluate	Evaluate/Evaluate.layout.xml	Evaluate/Evaluate.lua	1	63	19	20	#N/A
+146	Shop_Fitting	Shop_Fitting\Shop_Fitting.layout.xml	Shop_Fitting\Shop_Fitting.lua	1	#N/A	19	20	
+147	OtherRide	OtherRide/OtherRide.layout.xml	OtherRide/OtherRide.lua	3	60	19	20	#N/A
+148	PetSavvyGGD	PetSavvyGGD\PetSavvyGGD.layout.xml	PetSavvyGGD\PetSavvyGGD.lua	3	18	19	20	使用根骨丹提升悟性
+149	Pswprotect	Pswprotect\Pswprotect.layout.xml	Pswprotect\Pswprotect.lua	1	24	0	0	
+150	SoftKeyBoard	SoftKeyBoard\SoftKeyBoard.layout.xml	SoftKeyBoard\SoftKeyBoard.lua	0		0	0	
+151	SafeTime	SafeTime\SafeTime.layout.xml	SafeTime\SafeTime.lua	1	yxaq	0	0	安全时间
+152	SelectFacestyle	SelectFacestyle\SelectFacestyle.layout.xml	SelectFacestyle\SelectFacestyle.lua	3	23	19	20	脸型选择界面
+153	PKWarning	PKWarning\PKWarning.layout.xml	PKWarning\PKWarning.lua	1		0	0	
+154	PetXingGe	PetXingGe\PetXingGe.layout.xml	PetXingGe\PetXingGe.lua	3		0	0	改变珍兽性格
+155	YuanBao_G	YuanBao_G\YuanBao_G.layout.xml	YuanBao_G\YuanBao_G.lua	3	65	0	0	
+156	G_YuanBao	G_YuanBao\G_YuanBao.layout.xml	G_YuanBao\G_YuanBao.lua	3	65	0	0	
+157	CommisionStall	CommisionStall\CommisionStall.layout.xml	CommisionStall\CommisionStall.lua	3		0	0	
+158	AutoSearch	AutoSearch\AutoSearch.layout.xml	AutoSearch\AutoSearch.lua	1	66	0	0	
+159	ConfraternityPK	ConfraternityPK\ConfraternityPK.layout.xml	ConfraternityPK\ConfraternityPK.lua	1	67	0	0	
+160	ConfraternityPKStart	ConfraternityPKStart\ConfraternityPKStart.layout.xml	ConfraternityPKStart\ConfraternityPKStart.lua	1	67	0	0	
+161	Item_TuDunZhu	Item_TuDunZhu\Item_TuDunZhu.layout.xml	Item_TuDunZhu\Item_TuDunZhu.lua	0	#N/A	19	20	
+162	ChatSpeaker	ChatSpeaker\ChatSpeaker.layout.xml	ChatSpeaker\ChatSpeaker.lua	1		19	20	小喇叭编辑狂
+163	TextValidate	TextValidate\TextValidate.layout.xml	TextValidate\TextValidate.lua	0		0	0	
+164	MessageBall	MessageBall\MessageBall.layout.xml	MessageBall\MessageBall.lua	0		19	20	消息球
+165	SelRecycleItem	SelectRecycleItem\SelectRecycleItem.layout.xml	SelectRecycleItem\SelectRecycleItem.lua	1	68	19	20	玩家商店收购及其出售材料
+166	RecycleShop	RecycleShop\RecycleShop.layout.xml	RecycleShop\RecycleShop.lua	1	68	19	20	玩家商店收购及其出售材料
+167	Recycle_InputBox	Recycle_InputBox\Recycle_InputBox.layout.xml	Recycle_InputBox\Recycle_InputBox.lua	1	68	19	20	玩家商店收购及其出售材料
+168	GemCarve	GemCarve/GemCarve.layout.xml	GemCarve/GemCarve.lua	3	69	19	20	宝石雕琢
+169	CoupleQuestion	CoupleQuestion\CoupleQuestion.layout.xml	CoupleQuestion\CoupleQuestion.lua	0		19	20	夫妻问答
+170	PetAgname	PetAgname/PetAgname.layout.xml	PetAgname/PetAgname.lua	1	27	19	20	珍兽称号选择界面
+171	EquipStrengthen	EquipStrengthen/EquipStrengthen.layout.xml	EquipStrengthen/EquipStrengthen.lua	3	#N/A	19	20	
+172	HuoDongRiCheng	Huodongricheng/Huodongricheng.layout.xml	Huodongricheng/Huodongricheng.lua	1	#N/A	0	0	#N/A
+173	TodayCampaignList	TodayCampaignList/TodayCampaignList.layout.xml	TodayCampaignList/TodayCampaignList.lua	1	#N/A	0	0	
+174	MainMenuBar_3	MainMenuBar_3/MainMenuBar_3.layout.xml	MainMenuBar_3/MainMenuBar_3.lua	0	#N/A	0	0	#N/A
+175	MessageBox_Friend	MessageBox_Friend/MessageBox_Friend.layout.xml	MessageBox_Friend/MessageBox_Friend.lua	1	57	0	0	查看详细信息
+176	Agreement	Agreement/Agreement.layout.xml	Agreement/Agreement.lua	1		0	0	
+177	PetJian	PetJian/PetJian.layout.xml	PetJian/PetJian.lua	1		0	0	
+178	BankLockFast	BankLockFast/BankLockFast.layout.xml	BankLockFast/BankLockFast.lua	2	wjsd	0	0	
+179	XunZong	XunZong/XunZong.layout.xml	XunZong/XunZong.lua	1	#N/A	0	0	
+180	ShiMingRenZheng	ShiMingRenZheng/ShiMingRenZheng.layout.xml	ShiMingRenZheng/ShiMingRenZheng.lua	1		0	0	
+181	FangChenMi	FangChenMi/FangChenMi.layout.xml	FangChenMi/FangChenMi.lua	1		0	0	
+182	SelectHeadstyle	SelectHeadstyle\SelectHeadstyle.layout.xml	SelectHeadstyle\SelectHeadstyle.lua	3	gbfx	19	20	头型选择界面
+183	XingYun	XingYun/XingYun.layout.xml	XingYun/XingYun.lua	0		0	0	
+184	AcceSetup	AcceSetup/AcceSetup.layout.xml	AcceSetup/AcceSetup.lua	1		0	0	
+185	ConfraternityInfo2	ConfraternityInfo2/ConfraternityInfo2.layout.xml	ConfraternityInfo2/ConfraternityInfo2.lua	1	4	19	20	帮会详细信息
+186	PetZhengYou	PetZhengYou/PetZhengYou.layout.xml	PetZhengYou/PetZhengYou.lua	1		0	0	
+187	PetFriendSearch	PetFriendSearch/PetFriendSearch.layout.xml	PetFriendSearch/PetFriendSearch.lua	1		0	0	
+188	Confraternity_OfficialPositionList	Confraternity_OfficialPositionList/Confraternity_OfficialPositionList.layout.xml	Confraternity_OfficialPositionList/Confraternity_OfficialPositionList.lua	1	4	19	20	帮会官员信息
+189	Denaturalization	Denaturalization/Denaturalization.layout.xml	Denaturalization/Denaturalization.lua	1		0	0	
+190	ConfraternityCustomPosition	ConfraternityCustomPosition/ConfraternityCustomPosition.layout.xml	ConfraternityCustomPosition/ConfraternityCustomPosition.lua	1	4	19	20	帮会自定义职位信息
+191	GuildLeagueInfo	GuildLeague/GuildLeagueInfo.layout.xml	GuildLeague/GuildLeagueInfo.lua	1		0	0	帮会同盟信息
+192	GuildLeagueList	GuildLeague/GuildLeagueList.layout.xml	GuildLeague/GuildLeagueList.lua	1		0	0	帮会同盟列表
+193	GuildLeagueCreate	GuildLeague/GuildLeagueCreate.layout.xml	GuildLeague/GuildLeagueCreate.lua	1		0	0	帮会同盟创建
+194	GuildLeagueApply	GuildLeague/GuildLeagueApply.layout.xml	GuildLeague/GuildLeagueApply.lua	1		0	0	帮会同盟申请入盟
+195	EquipUnBind	EquipUnBind/EquipUnBind.layout.xml	EquipUnBind/EquipUnBind.lua	3	#N/A	0	0	
+196	CheckCustomPosition	CheckCustomPosition/CheckCustomPosition.layout.xml	CheckCustomPosition/CheckCustomPosition.lua	1	4	19	20	查看帮会自定义职位信息
+197	Stiletto_Four	Stiletto_Four/Stiletto_Four.layout.xml	Stiletto_Four/Stiletto_Four.lua	3	55	19	20	装备打第四个孔
+198	Enchase_Four	Enchase_Four/Enchase_Four.layout.xml	Enchase_Four/Enchase_Four.lua	3	#N/A	19	20	装备镶嵌第四个宝石
+199	SplitGem_Four	SplitGem_Four/SplitGem_Four.layout.xml	SplitGem_Four/SplitGem_Four.lua	3	8	19	20	第四个宝石分离
+200	FangDaohao	FangDaohao/FangDaohao.layout.xml	FangDaohao/FangDaohao.lua	0	8	19	20	第四个宝石分离
+201	BanggongExchange	BanggongExchange/BanggongExchange.layout.xml	BanggongExchange/BanggongExchange.lua	1		0	0	将帮贡兑换成帮贡牌
+202	MessageBoxCommon	MessageBoxCommon/MessageBoxCommon.layout.xml	MessageBoxCommon/MessageBoxCommon.lua	1	8	19	20	第四个宝石分离
+203	ConfraternityJuanxian	ConfraternityJuanxian/ConfraternityJuanxian.layout.xml	ConfraternityJuanxian/ConfraternityJuanxian.lua	1		0	0	帮会资金捐助
+204	GemMelting	GemMelting/GemMelting.layout.xml	GemMelting/GemMelting.lua	3	#N/A	19	20	宝石熔炼
+205	InputYuanbao	InputYuanbao/InputYuanbao.layout.xml	InputYuanbao/InputYuanbao.lua	1		0	0	元宝输入框
+206	PetLevelup	PetLevelup/PetLevelup.layout.xml	PetLevelup/PetLevelup.lua	3		0	0	宠物技能升级
+207	PlayerZhengyouPT	PlayerZhengyouPT/PlayerZhengyouPT.layout.xml	PlayerZhengyouPT/PlayerZhengyouPT.lua	1		0	0	
+208	ZhengyouInfoFabu	ZhengyouInfoFabu/ZhengyouInfoFabu.layout.xml	ZhengyouInfoFabu/ZhengyouInfoFabu.lua	1		0	0	
+209	VotedPlayer	VotedPlayer/VotedPlayer.layout.xml	VotedPlayer/VotedPlayer.lua	1		0	0	
+210	ZhengyouSearch	ZhengyouSearch/ZhengyouSearch.layout.xml	ZhengyouSearch/ZhengyouSearch.lua	1		0	0	
+211	PlayerZhengyou	PlayerZhengyou/PlayerZhengyou.layout.xml	PlayerZhengyou/PlayerZhengyou.lua	1		0	0	
+212	ZhengyouYaoqiu	ZhengyouYaoqiu/ZhengyouYaoqiu.layout.xml	ZhengyouYaoqiu/ZhengyouYaoqiu.lua	1		0	0	
+213	PetMedicineHC	PetMedicineHC/PetMedicineHC.layout.xml	PetMedicineHC/PetMedicineHC.lua	3		0	0	灵兽丹合成界面
+214	PetShelizi	PetShelizi/PetShelizi.layout.xml	PetShelizi/PetShelizi.lua	3	#N/A	19	20	炼制珍兽舍利子
+215	PlayerList	PlayerList/PlayerList.layout.xml	PlayerList/PlayerList.lua	1	74	0	0	附近玩家列表
+216	ConfraternityZTStart	ConfraternityZTStart\ConfraternityZTStart.layout.xml	ConfraternityZTStart\ConfraternityZTStart.lua	1	67	0	0	帮会征讨
+217	ConfraternityZT	ConfraternityZT\ConfraternityZT.layout.xml	ConfraternityZT\ConfraternityZT.lua	1	67	0	0	帮会征讨
+218	ConfraternityTiaozhan	ConfraternityTiaozhan\ConfraternityTiaozhan.layout.xml	ConfraternityTiaozhan\ConfraternityTiaozhan.lua	1		0	0	帮派挑战
+219	ConfraternityWar	ConfraternityWar\ConfraternityWar.layout.xml	ConfraternityWar\ConfraternityWar.lua	1		0	0	帮派战争
+220	ConfraternityCount	ConfraternityCount\ConfraternityCount.layout.xml	ConfraternityCount\ConfraternityCount.lua	1		0	0	帮战积分
+221	AnqiShuxing	AnqiShuxing\AnqiShuxing.layout.xml	AnqiShuxing\AnqiShuxing.lua	1	aqjs	19	20	暗器属性调整
+222	YuanbaoShop	YuanbaoShop\YuanbaoShop.layout.xml	YuanbaoShop\YuanbaoShop.lua	3	14	19	20	元宝商店界面
+223	YBShopReference	YBShopReference\YBShopReference.layout.xml	YBShopReference\YBShopReference.lua	1	19	20	0	
+224	ErjimimaShezhi	ErjimimaShezhi\ErjimimaShezhi.layout.xml	ErjimimaShezhi\ErjimimaShezhi.lua	1	yxaq	0	0	
+225	ErjimimaXiugai	ErjimimaXiugai\ErjimimaXiugai.layout.xml	ErjimimaXiugai\ErjimimaXiugai.lua	1	yxaq	0	0	
+226	Fangdao	Fangdao\Fangdao.layout.xml	Fangdao\Fangdao.lua	1	yxaq	0	0	
+227	ExchangeSafe	ExchangeSafe\ExchangeSafe.layout.xml	ExchangeSafe\ExchangeSafe.lua	1	19	20	0	
+228	ErjimimaJiesuo	ErjimimaJiesuo\ErjimimaJiesuo.layout.xml	ErjimimaJiesuo\ErjimimaJiesuo.lua	1	yxaq	0	0	
+229	PetStudyNewSkill	PetStudyNewSkill\PetStudyNewSkill.layout.xml	PetStudyNewSkill\PetStudyNewSkill.lua	3	20	19	20	新版宠物普通技能学习界面
+230	JinBiJiaoZi	JinBiJiaoZi\JinBiJiaoZi.layout.xml	JinBiJiaoZi\JinBiJiaoZi.lua	2	jz	19	20	金币兑换交子
+231	FangChenMiRefuse	FangChenMiRefuse\FangChenMiRefuse.layout.xml	FangChenMiRefuse\FangChenMiRefuse.lua	0		0	0	未填实名拒绝登陆界面
+232	ZdShop_BulkBuying	ZdShop_BulkBuying\ZdShop_BulkBuying.layout.xml	ZdShop_BulkBuying\ZdShop_BulkBuying.lua	0		0	0	未填实名拒绝登陆界面

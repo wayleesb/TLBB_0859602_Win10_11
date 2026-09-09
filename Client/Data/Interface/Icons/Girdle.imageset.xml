@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<Imageset Name="Girdle" Imagefile="Icons/Girdle.jpg" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+	<Image Name="Girdle_1" XPos="0" YPos="0" Width="64" Height="64" />
+	<Image Name="Girdle_2" XPos="64" YPos="0" Width="64" Height="64" />
+	<Image Name="Girdle_3" XPos="128" YPos="0" Width="64" Height="64" />
+	<Image Name="Girdle_4" XPos="192" YPos="0" Width="64" Height="64" />
+	<Image Name="Girdle_5" XPos="0" YPos="64" Width="64" Height="64" />
+	<Image Name="Girdle_6" XPos="64" YPos="64" Width="64" Height="64" />
+	<Image Name="Girdle_7" XPos="128" YPos="64" Width="64" Height="64" />
+	<Image Name="Girdle_8" XPos="192" YPos="64" Width="64" Height="64" />
+	<Image Name="Girdle_9" XPos="0" YPos="128" Width="64" Height="64" />
+	<Image Name="Girdle_10" XPos="64" YPos="128" Width="64" Height="64" />
+	<Image Name="Girdle_11" XPos="128" YPos="128" Width="64" Height="64" />
+	<Image Name="Girdle_12" XPos="192" YPos="128" Width="64" Height="64" />
+	<Image Name="Girdle_13" XPos="0" YPos="192" Width="64" Height="64" />
+	<Image Name="Girdle_14" XPos="64" YPos="192" Width="64" Height="64" />
+	<Image Name="Girdle_15" XPos="128" YPos="192" Width="64" Height="64" />
+	<Image Name="Girdle_16" XPos="192" YPos="192" Width="64" Height="64" />
+</Imageset>

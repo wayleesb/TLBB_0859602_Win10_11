@@ -1,0 +1,122 @@
+<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame1" Name="SplitGem_Frame">
+        <Property Name="UnifiedPosition" Value="{{0.4,0},{0.15,0}}" />
+        <Property Name="AbsoluteSize" Value="w:310 h:256" />
+        <Event Name="Shown" Function="SplitGem_OnShown();" />
+        <Event Name="Hidden" Function="SplitGem_OnHiden();" />
+        <Window Type="TLBB_ButtonClose" Name="SplitGem_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function="this:Hide();" />
+        </Window>
+        <Window Type="TLBB_ButtonHelp" Name="SplitGem_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*SplitGem&quot;);' />
+        </Window>
+        <Window Type="TLBB_DragTitle" Name="SplitGem_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="SplitGem_Frame" />
+            <Property Name="Font" Value="YouYuan11.25" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="Text" Value="#{INTERFACE_XML_20}" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+        </Window>
+        <Window Type="DefaultWindow" Name="SplitGem_Client">
+            <Property Name="AbsolutePosition" Value="x:7.000000 y:36.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-13.000000},{1.000000,-55.000000}" />
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="SplitGem_Explain3">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,2.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.000000,0.000000},{0.000000,40.000000}" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="TopAligned" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Property Name="Text" Value="#{INTERFACE_XML_138}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="SplitGem_Explain2">
+                <Property Name="UnifiedPosition" Value="{{0.000000,7.000000},{0.000000,55.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-138.000000},{0.000000,18.000000}" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="TopAligned" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Property Name="Text" Value="#{INTERFACE_XML_516}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="SplitGem_Explain4">
+                <Property Name="UnifiedPosition" Value="{{0.000000,7.000000},{0.000000,97.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-138.000000},{0.000000,18.000000}" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="TopAligned" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Property Name="Text" Value="#{INTERFACE_XML_533}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="SplitGem_Explain5">
+                <Property Name="UnifiedPosition" Value="{{0.000000,7.000000},{0.000000,139.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-138.000000},{0.000000,18.000000}" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="TopAligned" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Property Name="Text" Value="#{INTERFACE_XML_992}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+            </Window>
+            <Window Type="DefaultWindow" Name="SplitGem_Item_Set">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-129.000000},{0.000000,45.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.000000,122.000000},{0.000000,122.000000}" />
+                <Window Type="TLBB_ActionButton" Name="SplitGem_Item">
+                    <Property Name="AbsolutePosition" Value="x:42.000000 y:0.000000" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Property Name="DraggingEnabled" Value="True" />
+                    <Property Name="DragAcceptName" Value="G29" />
+                    <Event Name="RBClicked" Function="Resume_Equip_Gem(1);" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="SplitGem_Gem1">
+                    <Property Name="AbsolutePosition" Value="x:0.000000 y:42.000000" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="SplitGem_Selected(1);" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="SplitGem_Gem2">
+                    <Property Name="AbsolutePosition" Value="x:42.000000 y:42.000000" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="SplitGem_Selected(2);" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="SplitGem_Gem3">
+                    <Property Name="AbsolutePosition" Value="x:84.000000 y:42.000000" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="SplitGem_Selected(3);" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="SplitGem_Gem4">
+                    <Property Name="AbsolutePosition" Value="x:42.000000 y:84.000000" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Property Name="DraggingEnabled" Value="True" />
+                    <Property Name="DragAcceptName" Value="G30" />
+                    <Event Name="RBClicked" Function="Resume_Equip_Gem(2);" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_Frame_Lace5" Name="SplitGem_Blank">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-80.000000},{0.000000,20.000000}" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="SplitGem_OK">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-80.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_557}" />
+                <Event Name="Clicked" Function="SplitGem_Buttons_Clicked();" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="SplitGem_Cancel">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-40.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_542}" />
+                <Event Name="Clicked" Function="this:Hide();" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

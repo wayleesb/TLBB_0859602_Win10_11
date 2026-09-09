@@ -1,0 +1,332 @@
+<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="DefaultWindow" Name="CreateRole_Frame">
+        <Property Name="Position" Value="x:0.000000 y:0.000000" />
+        <Property Name="Size" Value="w:1.000000 h:1.000000" />
+        <Window Type="DefaultWindow" Name="CreateRole_Function_Frame">
+            <Property Name="Position" Value="x:0.000000 y:0.000000" />
+            <Property Name="Size" Value="w:1.000000 h:1.000000" />
+            <Window Type="TLBB_SimpleTextInfo" Name="CreateRole_Info">
+                <Property Name="UnifiedPosition" Value="{{0.500000,-226.000000},{1.000000,-54.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.000000,411.000000},{0.000000,21.000000}" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_StaticImageNULL" Name="CreateRole_PageHeader_Bak">
+                <Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+                <Property Name="AbsoluteSize" Value="w:165.000000 h:189.000000" />
+                <Property Name="Image" Value="set:CommonStaticImage2 image:CreateReleHead" />
+            </Window>
+            <Window Type="DefaultWindow" Name="CreateRole_Info_Frame">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-223.000000},{0.500000,-299.000000}" />
+                <Property Name="AbsoluteSize" Value="w:191.000000 h:590.000000" />
+                <Window Type="DefaultWindow" Name="CreateRole_Info_Frame_Bak">
+                    <Property Name="Position" Value="x:0 y:0" />
+                    <Property Name="Size" Value="w:1 h:1" />
+                    <Window Type="TLBB_StaticImageNULL" Name="CreateRole_Info_Frame_Back1">
+                        <Property Name="AbsolutePosition" Value="x:0.00000 y:0.000000" />
+                        <Property Name="AbsoluteSize" Value="w:191.000000 h:300.000000" />
+                        <Property Name="FrameEnabled" Value="true" />
+                        <Property Name="BackgroundEnabled" Value="true" />
+                        <Property Name="TopFrameImage" Value="set:CommonStaticImage3 image:CreateRoleBarT" />
+                        <Property Name="BottomFrameImage" Value="set:CommonStaticImage3 image:CreateRoleBarB" />
+                        <Property Name="BackgroundImage" Value="set:CommonStaticImage3 image:CreateRoleBarM" />
+                    </Window>
+                    <Window Type="TLBB_StaticImageNULL" Name="CreateRole_Info_Frame_Back2">
+                        <Property Name="AbsolutePosition" Value="x:0.00000 y:300.000000" />
+                        <Property Name="AbsoluteSize" Value="w:191.000000 h:197.000000" />
+                        <Property Name="Image" Value="set:CommonStaticImage4 image:CreateRoleBarBottom" />
+                    </Window>
+                    <Window Type="TLBB_StaticImageNULL" Name="CreateRole_Info_Frame_Back3">
+                        <Property Name="AbsolutePosition" Value="x:26.000000 y:497.000000" />
+                        <Property Name="AbsoluteSize" Value="w:140.000000 h:94.000000" />
+                        <Property Name="Image" Value="set:CommonStaticImage3 image:CreateRoleBarBottom" />
+                    </Window>
+                </Window>
+                <Window Type="DefaultWindow" Name="CreateRole_Info_FrameInfo_Client">
+                    <Property Name="Position" Value="x:0 y:0" />
+                    <Property Name="Size" Value="w:1 h:1" />
+                    <Window Type="TLBB_SimpleText" Name="CreateRole_PlayerName_Text">
+                        <Property Name="AbsolutePosition" Value="x:29.000000 y:63.000000" />
+                        <Property Name="AbsoluteSize" Value="w:56.000000 h:16.000000" />
+                        <Property Name="HorzFormatting" Value="LeftAligned" />
+                        <Property Name="RiseOnClick" Value="False" />
+                        <Property Name="Text" Value="#{INTERFACE_XML_369}" />
+                        <Property Name="VertFormatting" Value="VertCentred" />
+                    </Window>
+                    <Window Type="TLBB_EditBoxNormal" Name="CreateRole_Name">
+                        <Property Name="AbsolutePosition" Value="x:29.000000 y:79.000000" />
+                        <Property Name="AbsoluteSize" Value="w:133.000000 h:20.000000" />
+                        <Property Name="MaxTextLength" Value="12" />
+                        <Event Name="MouseEnter" Function="CreateRole_Name_MouseEnter();" />
+                        <Event Name="MouseLeave" Function="CreateRole_MouseLeave();" />
+                    </Window>
+                    <Window Type="TLBB_SimpleText" Name="CreateRole_SelectSex_Text">
+                        <Property Name="AbsolutePosition" Value="x:31.000000 y:103.000000" />
+                        <Property Name="AbsoluteSize" Value="w:56.000000 h:16.000000" />
+                        <Property Name="HorzFormatting" Value="LeftAligned" />
+                        <Property Name="RiseOnClick" Value="False" />
+                        <Property Name="Text" Value="#{INTERFACE_XML_801}" />
+                        <Property Name="VertFormatting" Value="VertCentred" />
+                    </Window>
+                    <Window Type="DefaultWindow" Name="CreateRole_SelectSex_Frame">
+                        <Property Name="AbsolutePosition" Value="x:33.000000 y:119.000000" />
+                        <Property Name="AbsoluteSize" Value="w:61.000000 h:19.000000" />
+                        <Window Type="TLBB_ButtonCheckForPage" Name="CreateRole_SelectSex_Girl">
+                            <Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+                            <Property Name="AbsoluteSize" Value="w:30.000000 h:19.000000" />
+                            <Event Name="Clicked" Function="CreateRole_SelectGirl();" />
+                            <Event Name="MouseEnter" Function="CreateRole_SelectRace_MouseEnter();" />
+                            <Event Name="MouseLeave" Function="CreateRole_MouseLeave();" />
+                        </Window>
+                        <Window Type="TLBB_ButtonCheckForPage" Name="CreateRole_SelectSex_Boy">
+                            <Property Name="AbsolutePosition" Value="x:31.000000 y:0.000000" />
+                            <Property Name="AbsoluteSize" Value="w:30.000000 h:19.000000" />
+                            <Event Name="Clicked" Function="CreateRole_SelectBoy();" />
+                            <Event Name="MouseEnter" Function="CreateRole_SelectRace_MouseEnter();" />
+                            <Event Name="MouseLeave" Function="CreateRole_MouseLeave();" />
+                        </Window>
+                    </Window>
+                    <Window Type="TLBB_SimpleText" Name="CreateRole_SelectHair_Text">
+                        <Property Name="AbsolutePosition" Value="x:29.000000 y:143.000000" />
+                        <Property Name="AbsoluteSize" Value="w:56.000000 h:16.000000" />
+                        <Property Name="HorzFormatting" Value="LeftAligned" />
+                        <Property Name="RiseOnClick" Value="False" />
+                        <Property Name="Text" Value="#{INTERFACE_XML_798}" />
+                        <Property Name="VertFormatting" Value="VertCentred" />
+                    </Window>
+                    <Window Type="TLBB_ComboList" Name="CreateRole_SelectHair">
+                        <Property Name="Position" Value="x:0.172775 y:0.271186" />
+                        <Property Name="Size" Value="w:0.675393 h:0.033898" />
+                        <Event Name="ListSelectionAccepted" Function="CreateRole_ComboListSelectHairChanged();" />
+                        <Event Name="MouseEnter" Function="CreateRole_SelectHair_MouseEnter();" />
+                        <Event Name="MouseLeave" Function="CreateRole_MouseLeave();" />
+                        <Property Name="ReadOnly" Value="True" />
+                    </Window>
+                    <Window Type="TLBB_SimpleText" Name="CreateRole_SelectFace_Text">
+                        <Property Name="AbsolutePosition" Value="x:29.000000 y:183.000000" />
+                        <Property Name="AbsoluteSize" Value="w:56.000000 h:16.000000" />
+                        <Property Name="HorzFormatting" Value="LeftAligned" />
+                        <Property Name="RiseOnClick" Value="False" />
+                        <Property Name="Text" Value="#{INTERFACE_XML_799}" />
+                        <Property Name="VertFormatting" Value="VertCentred" />
+                    </Window>
+                    <Window Type="TLBB_ComboList" Name="CreateRole_SelectFace">
+                        <Property Name="Position" Value="x:0.178010 y:0.342373" />
+                        <Property Name="Size" Value="w:0.670157 h:0.033898" />
+                        <Event Name="ListSelectionAccepted" Function="CreateRole_ComboListSelectFaceChanged();" />
+                        <Event Name="MouseEnter" Function="CreateRole_SelectFace_MouseEnter();" />
+                        <Event Name="MouseLeave" Function="CreateRole_MouseLeave();" />
+                        <Property Name="ReadOnly" Value="True" />
+                    </Window>
+                    <Window Type="TLBB_SimpleText" Name="CreateRole_SelectClothing_Text">
+                        <Property Name="AbsolutePosition" Value="x:29.000000 y:223.000000" />
+                        <Property Name="AbsoluteSize" Value="w:56.000000 h:16.000000" />
+                        <Property Name="HorzFormatting" Value="LeftAligned" />
+                        <Property Name="RiseOnClick" Value="False" />
+                        <Property Name="Text" Value="#{INTERFACE_XML_802}" />
+                        <Property Name="VertFormatting" Value="VertCentred" />
+                    </Window>
+                    <Window Type="TLBB_ComboList" Name="CreateRole_SelectClothin">
+                        <Property Name="AbsolutePosition" Value="x:34.000000 y:242.000000" />
+                        <Property Name="AbsoluteSize" Value="w:128.000000 h:20.000000" />
+                        <Event Name="ListSelectionAccepted" Function="CreateRole_ComboListSelectClothin();" />
+                        <Property Name="ReadOnly" Value="True" />
+                    </Window>
+                    <Window Type="TLBB_SimpleText" Name="CreateRole_SelectHead_Text">
+                        <Property Name="AbsolutePosition" Value="x:69.000000 y:280.000000" />
+                        <Property Name="AbsoluteSize" Value="w:56.000000 h:16.000000" />
+                        <Property Name="HorzFormatting" Value="LeftAligned" />
+                        <Property Name="RiseOnClick" Value="False" />
+                        <Property Name="Text" Value="#{INTERFACE_XML_800}" />
+                        <Property Name="VertFormatting" Value="VertCentred" />
+                    </Window>
+                    <Window Type="DefaultWindow" Name="CreateRole_SelectHead_Frame">
+                        <Property Name="AbsolutePosition" Value="x:19.000000 y:312.000000" />
+                        <Property Name="AbsoluteSize" Value="w:150.000000 h:149.000000" />
+                        <Window Type="DefaultWindow" Name="CreateRole_SelectHead_ImageBack">
+                            <Property Name="Position" Value="x:0 y:0" />
+                            <Property Name="Size" Value="w:1 h:1" />
+                            <Property Name="RiseOnClick" Value="false" />
+                            <Window Type="TLBB_StaticImageNULL" Name="CreateRole_Select_HeadImage1">
+                                <Property Name="AbsolutePosition" Value="x:1.000000 y:0.000000" />
+                                <Property Name="AbsoluteSize" Value="w:47.000000 h:46.000000" />
+                            </Window>
+                            <Window Type="TLBB_StaticImageNULL" Name="CreateRole_Select_HeadImage2">
+                                <Property Name="AbsolutePosition" Value="x:53.000000 y:0.000000" />
+                                <Property Name="AbsoluteSize" Value="w:47.000000 h:46.000000" />
+                            </Window>
+                            <Window Type="TLBB_StaticImageNULL" Name="CreateRole_Select_HeadImage3">
+                                <Property Name="AbsolutePosition" Value="x:104.000000 y:0.000000" />
+                                <Property Name="AbsoluteSize" Value="w:47.000000 h:46.000000" />
+                            </Window>
+                            <Window Type="TLBB_StaticImageNULL" Name="CreateRole_Select_HeadImage4">
+                                <Property Name="AbsolutePosition" Value="x:1.000000 y:51.000000" />
+                                <Property Name="AbsoluteSize" Value="w:47.000000 h:46.000000" />
+                            </Window>
+                            <Window Type="TLBB_StaticImageNULL" Name="CreateRole_Select_HeadImage5">
+                                <Property Name="AbsolutePosition" Value="x:53.000000 y:51.000000" />
+                                <Property Name="AbsoluteSize" Value="w:47.000000 h:46.000000" />
+                            </Window>
+                            <Window Type="TLBB_StaticImageNULL" Name="CreateRole_Select_HeadImage6">
+                                <Property Name="AbsolutePosition" Value="x:104.000000 y:51.000000" />
+                                <Property Name="AbsoluteSize" Value="w:47.000000 h:46.000000" />
+                            </Window>
+                            <Window Type="TLBB_StaticImageNULL" Name="CreateRole_Select_HeadImage7">
+                                <Property Name="AbsolutePosition" Value="x:1.000000 y:102.000000" />
+                                <Property Name="AbsoluteSize" Value="w:47.000000 h:46.000000" />
+                            </Window>
+                            <Window Type="TLBB_StaticImageNULL" Name="CreateRole_Select_HeadImage8">
+                                <Property Name="AbsolutePosition" Value="x:53.000000 y:102.000000" />
+                                <Property Name="AbsoluteSize" Value="w:47.000000 h:46.000000" />
+                            </Window>
+                            <Window Type="TLBB_StaticImageNULL" Name="CreateRole_Select_HeadImage9">
+                                <Property Name="AbsolutePosition" Value="x:104.000000 y:102.000000" />
+                                <Property Name="AbsoluteSize" Value="w:47.000000 h:46.000000" />
+                            </Window>
+                        </Window>
+                        <Window Type="DefaultWindow" Name="CreateRole_SelectHead_ButtonBack">
+                            <Property Name="Position" Value="x:0 y:0" />
+                            <Property Name="Size" Value="w:1 h:1" />
+                            <Window Type="TLBB_ButtonCheckHead" Name="CreateRole_Select_Head1">
+                                <Property Name="AbsolutePosition" Value="x:1.000000 y:0.000000" />
+                                <Property Name="AbsoluteSize" Value="w:47.000000 h:46.000000" />
+                                <Event Name="Clicked" Function="CreateRole_BnSelFace1();" />
+                                <Event Name="MouseEnter" Function="CreateRole_SelectHead_MouseEnter();" />
+                                <Event Name="MouseLeave" Function="CreateRole_MouseLeave();" />
+                            </Window>
+                            <Window Type="TLBB_ButtonCheckHead" Name="CreateRole_Select_Head2">
+                                <Property Name="AbsolutePosition" Value="x:53.000000 y:0.000000" />
+                                <Property Name="AbsoluteSize" Value="w:47.000000 h:46.000000" />
+                                <Event Name="Clicked" Function="CreateRole_BnSelFace2();" />
+                                <Event Name="MouseEnter" Function="CreateRole_SelectHead_MouseEnter();" />
+                                <Event Name="MouseLeave" Function="CreateRole_MouseLeave();" />
+                            </Window>
+                            <Window Type="TLBB_ButtonCheckHead" Name="CreateRole_Select_Head3">
+                                <Property Name="AbsolutePosition" Value="x:104.000000 y:0.000000" />
+                                <Property Name="AbsoluteSize" Value="w:47.000000 h:46.000000" />
+                                <Event Name="Clicked" Function="CreateRole_BnSelFace3();" />
+                                <Event Name="MouseEnter" Function="CreateRole_SelectHead_MouseEnter();" />
+                                <Event Name="MouseLeave" Function="CreateRole_MouseLeave();" />
+                            </Window>
+                            <Window Type="TLBB_ButtonCheckHead" Name="CreateRole_Select_Head4">
+                                <Property Name="AbsolutePosition" Value="x:1.000000 y:51.000000" />
+                                <Property Name="AbsoluteSize" Value="w:47.000000 h:46.000000" />
+                                <Event Name="Clicked" Function="CreateRole_BnSelFace4();" />
+                                <Event Name="MouseEnter" Function="CreateRole_SelectHead_MouseEnter();" />
+                                <Event Name="MouseLeave" Function="CreateRole_MouseLeave();" />
+                            </Window>
+                            <Window Type="TLBB_ButtonCheckHead" Name="CreateRole_Select_Head5">
+                                <Property Name="AbsolutePosition" Value="x:53.000000 y:51.000000" />
+                                <Property Name="AbsoluteSize" Value="w:47.000000 h:46.000000" />
+                                <Event Name="Clicked" Function="CreateRole_BnSelFace5();" />
+                                <Event Name="MouseEnter" Function="CreateRole_SelectHead_MouseEnter();" />
+                                <Event Name="MouseLeave" Function="CreateRole_MouseLeave();" />
+                            </Window>
+                            <Window Type="TLBB_ButtonCheckHead" Name="CreateRole_Select_Head6">
+                                <Property Name="AbsolutePosition" Value="x:104.000000 y:51.000000" />
+                                <Property Name="AbsoluteSize" Value="w:47.000000 h:46.000000" />
+                                <Event Name="Clicked" Function="CreateRole_BnSelFace6();" />
+                                <Event Name="MouseEnter" Function="CreateRole_SelectHead_MouseEnter();" />
+                                <Event Name="MouseLeave" Function="CreateRole_MouseLeave();" />
+                            </Window>
+                            <Window Type="TLBB_ButtonCheckHead" Name="CreateRole_Select_Head7">
+                                <Property Name="AbsolutePosition" Value="x:1.000000 y:102.000000" />
+                                <Property Name="AbsoluteSize" Value="w:47.000000 h:46.000000" />
+                                <Event Name="Clicked" Function="CreateRole_BnSelFace7();" />
+                                <Event Name="MouseEnter" Function="CreateRole_SelectHead_MouseEnter();" />
+                                <Event Name="MouseLeave" Function="CreateRole_MouseLeave();" />
+                            </Window>
+                            <Window Type="TLBB_ButtonCheckHead" Name="CreateRole_Select_Head8">
+                                <Property Name="AbsolutePosition" Value="x:53.000000 y:102.000000" />
+                                <Property Name="AbsoluteSize" Value="w:47.000000 h:46.000000" />
+                                <Event Name="Clicked" Function="CreateRole_BnSelFace8();" />
+                                <Event Name="MouseEnter" Function="CreateRole_SelectHead_MouseEnter();" />
+                                <Event Name="MouseLeave" Function="CreateRole_MouseLeave();" />
+                            </Window>
+                            <Window Type="TLBB_ButtonCheckHead" Name="CreateRole_Select_Head9">
+                                <Property Name="AbsolutePosition" Value="x:104.000000 y:102.000000" />
+                                <Property Name="AbsoluteSize" Value="w:47.000000 h:46.000000" />
+                                <Event Name="Clicked" Function="CreateRole_BnSelFace9();" />
+                                <Event Name="MouseEnter" Function="CreateRole_SelectHead_MouseEnter();" />
+                                <Event Name="MouseLeave" Function="CreateRole_MouseLeave();" />
+                            </Window>
+                        </Window>
+                    </Window>
+                    <Window Type="TLBB_ButtonCommon" Name="CreateRole_PageUp">
+                        <Property Name="AbsolutePosition" Value="x:33.000000 y:472.000000" />
+                        <Property Name="AbsoluteSize" Value="w:54.000000 h:16.000000" />
+                        <Event Name="Clicked" Function="CreateRole_BnClickFacePageUp();" />
+                        <Property Name="Text" Value="#{INTERFACE_XML_602}" />
+                    </Window>
+                    <Window Type="TLBB_ButtonCommon" Name="CreateRole_PageDown">
+                        <Property Name="AbsolutePosition" Value="x:103.000000 y:472.000000" />
+                        <Property Name="AbsoluteSize" Value="w:54.000000 h:16.000000" />
+                        <Event Name="Clicked" Function="CreateRole_BnClickFacePageDown();" />
+                        <Property Name="Text" Value="#{INTERFACE_XML_741}" />
+                    </Window>
+                    <Window Type="TLBB_ButtonCommon" Name="CreateRole_Author">
+                        <Property Name="AbsolutePosition" Value="x:51.000000 y:509.000000" />
+                        <Property Name="AbsoluteSize" Value="w:90.000000 h:22.000000" />
+                        <Event Name="Clicked" Function="CreateRole_BnClickCreateRole();" />
+                        <Event Name="MouseEnter" Function="CreateRole_CreateRole_MouseEnter();" />
+                        <Event Name="MouseLeave" Function="CreateRole_MouseLeave();" />
+                        <Property Name="Text" Value="#{INTERFACE_XML_189}" />
+                    </Window>
+                    <Window Type="TLBB_ButtonCommon" Name="CreateRole_Last">
+                        <Property Name="AbsolutePosition" Value="x:51.000000 y:538.000000" />
+                        <Property Name="AbsoluteSize" Value="w:90.000000 h:22.000000" />
+                        <Event Name="Clicked" Function="CreateRole_BnClickReturnSelectRole();" />
+                        <Event Name="MouseEnter" Function="CreateRole_Last_MouseEnter();" />
+                        <Event Name="MouseLeave" Function="CreateRole_MouseLeave();" />
+                        <Property Name="Text" Value="#{INTERFACE_XML_600}" />
+                    </Window>
+                </Window>
+            </Window>
+            <Window Type="TLBB_MeshWindow" Name="CreateRole_Model">
+                <Property Name="UnifiedPosition" Value="{{0.500000,-164.000000},{0.500000,-155.000000}" />
+                <Property Name="Size" Value="w:0.345000 h:0.518333" />
+                <Property Name="ShowControl" Value="CreateRole_Frame" />
+            </Window>
+            <Window Type="DefaultWindow" Name="CreateRole_Model_Frame">
+                <Property Name="UnifiedPosition" Value="{{0.500000,-66.000000},{1.000000,-147.000000}" />
+                <Property Name="AbsoluteSize" Value="w:132.000000 h:80.000000" />
+                <Window Type="TLBB_ButtonNULL" Name="CreateRole_Role2_Model_TurnLeft">
+                    <Property Name="AbsolutePosition" Value="x:7.000000 y:22.000000" />
+                    <Property Name="AbsoluteSize" Value="w:41.000000 h:25.000000" />
+                    <Property Name="HoverImage" Value="set:Button3 image:BtnLeft_Hover" />
+                    <Property Name="NormalImage" Value="set:Button3 image:BtnLeft_Normal" />
+                    <Property Name="PushedImage" Value="set:Button3 image:BtnLeft_Pushed" />
+                    <Event Name="MouseLButtonDown" Function="CreateRole_Modle_TurnLeft(1);" />
+                    <Event Name="MouseButtonUp" Function="CreateRole_Modle_TurnLeft(0);" />
+                </Window>
+                <Window Type="TLBB_ButtonNULL" Name="CreateRole_Role2_Model_TurnRight">
+                    <Property Name="AbsolutePosition" Value="x:82.000000 y:23.000000" />
+                    <Property Name="AbsoluteSize" Value="w:41.000000 h:25.000000" />
+                    <Property Name="HoverImage" Value="set:Button3 image:BtnRight_Hover" />
+                    <Property Name="NormalImage" Value="set:Button3 image:BtnRight_Normal" />
+                    <Property Name="PushedImage" Value="set:Button3 image:BtnRight_Pushed" />
+                    <Event Name="MouseLButtonDown" Function="CreateRole_Modle_TurnRight(1);" />
+                    <Event Name="MouseButtonUp" Function="CreateRole_Modle_TurnRight(0);" />
+                </Window>
+                <Window Type="TLBB_ButtonNULL" Name="CreateRole_ModelZoomIn">
+                    <Property Name="AbsolutePosition" Value="x:52.000000 y:6.000000" />
+                    <Property Name="AbsoluteSize" Value="w:27.000000 h:17.000000" />
+                    <Property Name="HoverImage" Value="set:Button3 image:BtnUp_Hover" />
+                    <Property Name="NormalImage" Value="set:Button3 image:BtnUp_Normal" />
+                    <Property Name="PushedImage" Value="set:Button3 image:BtnUp_Pushed" />
+                    <Event Name="MouseLButtonDown" Function="CreateRole_Modle_ZoomIn(1);" />
+                    <Event Name="MouseButtonUp" Function="CreateRole_Modle_ZoomIn(0);" />
+                </Window>
+                <Window Type="TLBB_ButtonNULL" Name="CreateRole_ModelZoomOut">
+                    <Property Name="AbsolutePosition" Value="x:45.000000 y:47.000000" />
+                    <Property Name="AbsoluteSize" Value="w:41.000000 h:25.000000" />
+                    <Property Name="HoverImage" Value="set:Button3 image:BtnDown_Hover" />
+                    <Property Name="NormalImage" Value="set:Button3 image:BtnDown_Normal" />
+                    <Property Name="PushedImage" Value="set:Button3 image:BtnDown_Pushed" />
+                    <Event Name="MouseLButtonDown" Function="CreateRole_Modle_ZoomOut(1);" />
+                    <Event Name="MouseButtonUp" Function="CreateRole_Modle_ZoomOut(0);" />
+                </Window>
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

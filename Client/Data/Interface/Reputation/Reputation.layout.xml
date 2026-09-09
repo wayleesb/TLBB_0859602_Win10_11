@@ -1,0 +1,584 @@
+<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame3" Name="Reputation_Frame">
+        <Property Name="UnifiedPosition" Value="{{0.000000,375.000000},{0.120000,26.520001}" />
+        <Property Name="AbsoluteSize" Value="w:310 h:408" />
+        <Window Type="TLBB_DragTitle" Name="Reputation_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:108.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-133.000000},{0.000000,20.000000}" />
+            <Property Name="Font" Value="YouYuan11.25" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="Text" Value="#{INTERFACE_XML_59}" />
+            <Property Name="DragTarget" Value="Reputation_Frame" />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="Reputation_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function="this:Hide();" />
+        </Window>
+        <Window Type="TLBB_ButtonHelp" Name="Reputation_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,88.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*Reputation&quot;);' />
+        </Window>
+        <Window Type="DefaultWindow" Name="Reputation_Background_Frame">
+            <Property Name="AbsolutePosition" Value="x:14.000000 y:47.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-20.000000},{1.000000,-65.000000}" />
+            <Window Type="DefaultWindow" Name="Reputation_Value_Back">
+                <Property Name="Position" Value="x:0 y:0" />
+                <Property Name="Size" Value="w:1 h:1" />
+                <Window Type="TLBB_Frame_Lace1" Name="Reputation_Value_Menpai1_Back">
+                    <Property Name="UnifiedPosition" Value="{{0,6},{0,0}}" />
+                    <Property Name="UnifiedSize" Value="{{1.0,-12.000000},{0.000000,36.000000}" />
+                    <Window Type="TLBB_MapImage" Name="Reputation_Value_Menpai1_Relation">
+                        <Property Name="UnifiedPosition" Value="{{0,2},{0,0}}" />
+                        <Property Name="UnifiedSize" Value="{{0.0000,20.000000},{0.000000,20.000000}" />
+                        <Property Name="ChildImage" Value="name:Enemy set:UIIcons image:QuestIcon_8" />
+                        <Property Name="ChildImage" Value="name:Normal set:UIIcons image:QuestIcon_2" />
+                        <Property Name="ChildImage" Value="name:Friend set:UIIcons image:QuestIcon_11" />
+                    </Window>
+                    <Window Type="TLBB_SimpleText" Name="Reputation_Value_Menpai1_Name">
+                        <Property Name="UnifiedPosition" Value="{{0.000000,23.000000},{0.000000,4.000000}" />
+                        <Property Name="UnifiedSize" Value="{{1.000000,-187.000000},{0.000000,14.000000}" />
+                        <Property Name="Text" Value="#{INTERFACE_XML_605}" />
+                        <Property Name="TextColor" Value="FFFFF263" />
+                        <Property Name="HorzFormatting" Value="LeftAligned" />
+                        <Property Name="VertFormatting" Value="BottomAligned" />
+                        <Property Name="RiseOnClick" Value="False" />
+                    </Window>
+                    <Window Type="TLBB_SimpleText" Name="Reputation_Value_Menpai1_CurrentLevel">
+                        <Property Name="UnifiedPosition" Value="{{0.5,-5},{0,0}}" />
+                        <Property Name="UnifiedSize" Value="{{0.5,0.0},{0.0,20.0}" />
+                        <Property Name="Text" Value="#{INTERFACE_XML_221}" />
+                        <Property Name="TextColor" Value="FFFFF263" />
+                        <Property Name="HorzFormatting" Value="RightAligned" />
+                        <Property Name="VertFormatting" Value="BottomAligned" />
+                    </Window>
+                    <Window Type="TLBB_SimpleMulitiTextFrame" Name="Reputation_Value_Menpai1_Value_PicBack">
+                        <Property Name="UnifiedPosition" Value="{{0,0},{0,20}}" />
+                        <Property Name="UnifiedSize" Value="{{0.600000,0.000000},{0.000000,16.000000}" />
+                        <Window Type="TLBB_ProgressPropertyRed" Name="Reputation_Value_Menpai1_Value_Pic1">
+                            <Property Name="UnifiedPosition" Value="{{0,4},{0,5}}" />
+                            <Property Name="UnifiedSize" Value="{{1.000000,-8.000000},{0.000000,6.000000}" />
+                            <Property Name="EffectColorLevel" Value="index:0 tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+                            <Property Name="CurrentProgress" Value="1.0" />
+                        </Window>
+                        <Window Type="TLBB_ProgressPropertyYellow" Name="Reputation_Value_Menpai1_Value_Pic2">
+                            <Property Name="UnifiedPosition" Value="{{0,4},{0,5}}" />
+                            <Property Name="UnifiedSize" Value="{{1.000000,-8.000000},{0.000000,6.000000}" />
+                            <Property Name="EffectColorLevel" Value="index:0 tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+                            <Property Name="CurrentProgress" Value="1.0" />
+                        </Window>
+                        <Window Type="TLBB_ProgressPropertyGreen" Name="Reputation_Value_Menpai1_Value_Pic3">
+                            <Property Name="UnifiedPosition" Value="{{0,4},{0,5}}" />
+                            <Property Name="UnifiedSize" Value="{{1.000000,-8.000000},{0.000000,6.000000}" />
+                            <Property Name="EffectColorLevel" Value="index:0 tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+                            <Property Name="CurrentProgress" Value="1.0" />
+                        </Window>
+                    </Window>
+                    <Window Type="TLBB_SimpleMulitiTextFrame" Name="Reputation_Value_Menpai1_Value_Number">
+                        <Property Name="UnifiedPosition" Value="{{0.6,0},{0,20}}" />
+                        <Property Name="UnifiedSize" Value="{{0.400000,0.000000},{0.000000,16.000000}" />
+                        <Property Name="Text" Value="1000000/10000000" />
+                        <Property Name="TextColor" Value="FFFFF263" />
+                        <Property Name="HorzFormatting" Value="HorzCentred" />
+                        <Property Name="VertFormatting" Value="VertCentred" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_Frame_Lace1" Name="Reputation_Value_Menpai2_Back">
+                    <Property Name="UnifiedPosition" Value="{{0,6},{0,36}}" />
+                    <Property Name="UnifiedSize" Value="{{1.0,-12.000000},{0.000000,36.000000}" />
+                    <Window Type="TLBB_MapImage" Name="Reputation_Value_Menpai2_Relation">
+                        <Property Name="UnifiedPosition" Value="{{0,2},{0,0}}" />
+                        <Property Name="UnifiedSize" Value="{{0.0000,20.000000},{0.000000,20.000000}" />
+                        <Property Name="ChildImage" Value="name:Enemy set:UIIcons image:QuestIcon_8" />
+                        <Property Name="ChildImage" Value="name:Normal set:UIIcons image:QuestIcon_2" />
+                        <Property Name="ChildImage" Value="name:Friend set:UIIcons image:QuestIcon_11" />
+                    </Window>
+                    <Window Type="TLBB_SimpleText" Name="Reputation_Value_Menpai2_Name">
+                        <Property Name="UnifiedPosition" Value="{{0.000000,23.000000},{0.000000,4.000000}" />
+                        <Property Name="UnifiedSize" Value="{{1.000000,-187.000000},{0.000000,14.000000}" />
+                        <Property Name="Text" Value="#{INTERFACE_XML_467}" />
+                        <Property Name="TextColor" Value="FFFFF263" />
+                        <Property Name="HorzFormatting" Value="LeftAligned" />
+                        <Property Name="VertFormatting" Value="BottomAligned" />
+                        <Property Name="RiseOnClick" Value="False" />
+                    </Window>
+                    <Window Type="TLBB_SimpleText" Name="Reputation_Value_Menpai2_CurrentLevel">
+                        <Property Name="UnifiedPosition" Value="{{0.5,-5},{0,0}}" />
+                        <Property Name="UnifiedSize" Value="{{0.5,0.0},{0.0,20.0}" />
+                        <Property Name="Text" Value="#{INTERFACE_XML_221}" />
+                        <Property Name="TextColor" Value="FFFFF263" />
+                        <Property Name="HorzFormatting" Value="RightAligned" />
+                        <Property Name="VertFormatting" Value="BottomAligned" />
+                    </Window>
+                    <Window Type="TLBB_SimpleMulitiTextFrame" Name="Reputation_Value_Menpai2_Value_PicBack">
+                        <Property Name="UnifiedPosition" Value="{{0,0},{0,20}}" />
+                        <Property Name="UnifiedSize" Value="{{0.600000,0.000000},{0.000000,16.000000}" />
+                        <Window Type="TLBB_ProgressPropertyRed" Name="Reputation_Value_Menpai2_Value_Pic1">
+                            <Property Name="UnifiedPosition" Value="{{0,4},{0,5}}" />
+                            <Property Name="UnifiedSize" Value="{{1.000000,-8.000000},{0.000000,6.000000}" />
+                            <Property Name="EffectColorLevel" Value="index:0 tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+                            <Property Name="CurrentProgress" Value="1.0" />
+                        </Window>
+                        <Window Type="TLBB_ProgressPropertyYellow" Name="Reputation_Value_Menpai2_Value_Pic2">
+                            <Property Name="UnifiedPosition" Value="{{0,4},{0,5}}" />
+                            <Property Name="UnifiedSize" Value="{{1.000000,-8.000000},{0.000000,6.000000}" />
+                            <Property Name="EffectColorLevel" Value="index:0 tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+                            <Property Name="CurrentProgress" Value="1.0" />
+                        </Window>
+                        <Window Type="TLBB_ProgressPropertyGreen" Name="Reputation_Value_Menpai2_Value_Pic3">
+                            <Property Name="UnifiedPosition" Value="{{0,4},{0,5}}" />
+                            <Property Name="UnifiedSize" Value="{{1.000000,-8.000000},{0.000000,6.000000}" />
+                            <Property Name="EffectColorLevel" Value="index:0 tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+                            <Property Name="CurrentProgress" Value="1.0" />
+                        </Window>
+                    </Window>
+                    <Window Type="TLBB_SimpleMulitiTextFrame" Name="Reputation_Value_Menpai2_Value_Number">
+                        <Property Name="UnifiedPosition" Value="{{0.6,0},{0,20}}" />
+                        <Property Name="UnifiedSize" Value="{{0.400000,0.000000},{0.000000,16.000000}" />
+                        <Property Name="Text" Value="1000000/10000000" />
+                        <Property Name="TextColor" Value="FFFFF263" />
+                        <Property Name="HorzFormatting" Value="HorzCentred" />
+                        <Property Name="VertFormatting" Value="VertCentred" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_Frame_Lace1" Name="Reputation_Value_Menpai3_Back">
+                    <Property Name="UnifiedPosition" Value="{{0,6},{0,72}}" />
+                    <Property Name="UnifiedSize" Value="{{1.0,-12.000000},{0.000000,36.000000}" />
+                    <Window Type="TLBB_MapImage" Name="Reputation_Value_Menpai3_Relation">
+                        <Property Name="UnifiedPosition" Value="{{0,2},{0,0}}" />
+                        <Property Name="UnifiedSize" Value="{{0.0000,20.000000},{0.000000,20.000000}" />
+                        <Property Name="ChildImage" Value="name:Enemy set:UIIcons image:QuestIcon_8" />
+                        <Property Name="ChildImage" Value="name:Normal set:UIIcons image:QuestIcon_2" />
+                        <Property Name="ChildImage" Value="name:Friend set:UIIcons image:QuestIcon_11" />
+                    </Window>
+                    <Window Type="TLBB_SimpleText" Name="Reputation_Value_Menpai3_Name">
+                        <Property Name="UnifiedPosition" Value="{{0.000000,23.000000},{0.000000,4.000000}" />
+                        <Property Name="UnifiedSize" Value="{{1.000000,-187.000000},{0.000000,14.000000}" />
+                        <Property Name="Text" Value="#{INTERFACE_XML_275}" />
+                        <Property Name="TextColor" Value="FFFFF263" />
+                        <Property Name="HorzFormatting" Value="LeftAligned" />
+                        <Property Name="VertFormatting" Value="BottomAligned" />
+                        <Property Name="RiseOnClick" Value="False" />
+                    </Window>
+                    <Window Type="TLBB_SimpleText" Name="Reputation_Value_Menpai3_CurrentLevel">
+                        <Property Name="UnifiedPosition" Value="{{0.5,-5},{0,0}}" />
+                        <Property Name="UnifiedSize" Value="{{0.5,0.0},{0.0,20.0}" />
+                        <Property Name="Text" Value="#{INTERFACE_XML_221}" />
+                        <Property Name="TextColor" Value="FFFFF263" />
+                        <Property Name="HorzFormatting" Value="RightAligned" />
+                        <Property Name="VertFormatting" Value="BottomAligned" />
+                    </Window>
+                    <Window Type="TLBB_SimpleMulitiTextFrame" Name="Reputation_Value_Menpai3_Value_PicBack">
+                        <Property Name="UnifiedPosition" Value="{{0,0},{0,20}}" />
+                        <Property Name="UnifiedSize" Value="{{0.600000,0.000000},{0.000000,16.000000}" />
+                        <Window Type="TLBB_ProgressPropertyRed" Name="Reputation_Value_Menpai3_Value_Pic1">
+                            <Property Name="UnifiedPosition" Value="{{0,4},{0,5}}" />
+                            <Property Name="UnifiedSize" Value="{{1.000000,-8.000000},{0.000000,6.000000}" />
+                            <Property Name="EffectColorLevel" Value="index:0 tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+                            <Property Name="CurrentProgress" Value="1.0" />
+                        </Window>
+                        <Window Type="TLBB_ProgressPropertyYellow" Name="Reputation_Value_Menpai3_Value_Pic2">
+                            <Property Name="UnifiedPosition" Value="{{0,4},{0,5}}" />
+                            <Property Name="UnifiedSize" Value="{{1.000000,-8.000000},{0.000000,6.000000}" />
+                            <Property Name="EffectColorLevel" Value="index:0 tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+                            <Property Name="CurrentProgress" Value="1.0" />
+                        </Window>
+                        <Window Type="TLBB_ProgressPropertyGreen" Name="Reputation_Value_Menpai3_Value_Pic3">
+                            <Property Name="UnifiedPosition" Value="{{0,4},{0,5}}" />
+                            <Property Name="UnifiedSize" Value="{{1.000000,-8.000000},{0.000000,6.000000}" />
+                            <Property Name="EffectColorLevel" Value="index:0 tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+                            <Property Name="CurrentProgress" Value="1.0" />
+                        </Window>
+                    </Window>
+                    <Window Type="TLBB_SimpleMulitiTextFrame" Name="Reputation_Value_Menpai3_Value_Number">
+                        <Property Name="UnifiedPosition" Value="{{0.6,0},{0,20}}" />
+                        <Property Name="UnifiedSize" Value="{{0.400000,0.000000},{0.000000,16.000000}" />
+                        <Property Name="Text" Value="1000000/10000000" />
+                        <Property Name="TextColor" Value="FFFFF263" />
+                        <Property Name="HorzFormatting" Value="HorzCentred" />
+                        <Property Name="VertFormatting" Value="VertCentred" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_Frame_Lace1" Name="Reputation_Value_Menpai4_Back">
+                    <Property Name="UnifiedPosition" Value="{{0,6},{0,108}}" />
+                    <Property Name="UnifiedSize" Value="{{1.0,-12.000000},{0.000000,36.000000}" />
+                    <Window Type="TLBB_MapImage" Name="Reputation_Value_Menpai4_Relation">
+                        <Property Name="UnifiedPosition" Value="{{0,2},{0,0}}" />
+                        <Property Name="UnifiedSize" Value="{{0.0000,20.000000},{0.000000,20.000000}" />
+                        <Property Name="ChildImage" Value="name:Enemy set:UIIcons image:QuestIcon_8" />
+                        <Property Name="ChildImage" Value="name:Normal set:UIIcons image:QuestIcon_2" />
+                        <Property Name="ChildImage" Value="name:Friend set:UIIcons image:QuestIcon_11" />
+                    </Window>
+                    <Window Type="TLBB_SimpleText" Name="Reputation_Value_Menpai4_Name">
+                        <Property Name="UnifiedPosition" Value="{{0.000000,23.000000},{0.000000,4.000000}" />
+                        <Property Name="UnifiedSize" Value="{{1.000000,-187.000000},{0.000000,14.000000}" />
+                        <Property Name="Text" Value="#{INTERFACE_XML_721}" />
+                        <Property Name="TextColor" Value="FFFFF263" />
+                        <Property Name="HorzFormatting" Value="LeftAligned" />
+                        <Property Name="VertFormatting" Value="BottomAligned" />
+                        <Property Name="RiseOnClick" Value="False" />
+                    </Window>
+                    <Window Type="TLBB_SimpleText" Name="Reputation_Value_Menpai4_CurrentLevel">
+                        <Property Name="UnifiedPosition" Value="{{0.5,-5},{0,0}}" />
+                        <Property Name="UnifiedSize" Value="{{0.5,0.0},{0.0,20.0}" />
+                        <Property Name="Text" Value="#{INTERFACE_XML_221}" />
+                        <Property Name="TextColor" Value="FFFFF263" />
+                        <Property Name="HorzFormatting" Value="RightAligned" />
+                        <Property Name="VertFormatting" Value="BottomAligned" />
+                    </Window>
+                    <Window Type="TLBB_SimpleMulitiTextFrame" Name="Reputation_Value_Menpai4_Value_PicBack">
+                        <Property Name="UnifiedPosition" Value="{{0,0},{0,20}}" />
+                        <Property Name="UnifiedSize" Value="{{0.600000,0.000000},{0.000000,16.000000}" />
+                        <Window Type="TLBB_ProgressPropertyRed" Name="Reputation_Value_Menpai4_Value_Pic1">
+                            <Property Name="UnifiedPosition" Value="{{0,4},{0,5}}" />
+                            <Property Name="UnifiedSize" Value="{{1.000000,-8.000000},{0.000000,6.000000}" />
+                            <Property Name="EffectColorLevel" Value="index:0 tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+                            <Property Name="CurrentProgress" Value="1.0" />
+                        </Window>
+                        <Window Type="TLBB_ProgressPropertyYellow" Name="Reputation_Value_Menpai4_Value_Pic2">
+                            <Property Name="UnifiedPosition" Value="{{0,4},{0,5}}" />
+                            <Property Name="UnifiedSize" Value="{{1.000000,-8.000000},{0.000000,6.000000}" />
+                            <Property Name="EffectColorLevel" Value="index:0 tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+                            <Property Name="CurrentProgress" Value="1.0" />
+                        </Window>
+                        <Window Type="TLBB_ProgressPropertyGreen" Name="Reputation_Value_Menpai4_Value_Pic3">
+                            <Property Name="UnifiedPosition" Value="{{0,4},{0,5}}" />
+                            <Property Name="UnifiedSize" Value="{{1.000000,-8.000000},{0.000000,6.000000}" />
+                            <Property Name="EffectColorLevel" Value="index:0 tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+                            <Property Name="CurrentProgress" Value="1.0" />
+                        </Window>
+                    </Window>
+                    <Window Type="TLBB_SimpleMulitiTextFrame" Name="Reputation_Value_Menpai4_Value_Number">
+                        <Property Name="UnifiedPosition" Value="{{0.6,0},{0,20}}" />
+                        <Property Name="UnifiedSize" Value="{{0.400000,0.000000},{0.000000,16.000000}" />
+                        <Property Name="Text" Value="1000000/10000000" />
+                        <Property Name="TextColor" Value="FFFFF263" />
+                        <Property Name="HorzFormatting" Value="HorzCentred" />
+                        <Property Name="VertFormatting" Value="VertCentred" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_Frame_Lace1" Name="Reputation_Value_Menpai5_Back">
+                    <Property Name="UnifiedPosition" Value="{{0,6},{0,144}}" />
+                    <Property Name="UnifiedSize" Value="{{1.0,-12.000000},{0.000000,36.000000}" />
+                    <Window Type="TLBB_MapImage" Name="Reputation_Value_Menpai5_Relation">
+                        <Property Name="UnifiedPosition" Value="{{0,2},{0,0}}" />
+                        <Property Name="UnifiedSize" Value="{{0.0000,20.000000},{0.000000,20.000000}" />
+                        <Property Name="ChildImage" Value="name:Enemy set:UIIcons image:QuestIcon_8" />
+                        <Property Name="ChildImage" Value="name:Normal set:UIIcons image:QuestIcon_2" />
+                        <Property Name="ChildImage" Value="name:Friend set:UIIcons image:QuestIcon_11" />
+                    </Window>
+                    <Window Type="TLBB_SimpleText" Name="Reputation_Value_Menpai5_Name">
+                        <Property Name="UnifiedPosition" Value="{{0.000000,23.000000},{0.000000,4.000000}" />
+                        <Property Name="UnifiedSize" Value="{{1.000000,-187.000000},{0.000000,14.000000}" />
+                        <Property Name="Text" Value="#{INTERFACE_XML_689}" />
+                        <Property Name="TextColor" Value="FFFFF263" />
+                        <Property Name="HorzFormatting" Value="LeftAligned" />
+                        <Property Name="VertFormatting" Value="BottomAligned" />
+                        <Property Name="RiseOnClick" Value="False" />
+                    </Window>
+                    <Window Type="TLBB_SimpleText" Name="Reputation_Value_Menpai5_CurrentLevel">
+                        <Property Name="UnifiedPosition" Value="{{0.5,-5},{0,0}}" />
+                        <Property Name="UnifiedSize" Value="{{0.5,0.0},{0.0,20.0}" />
+                        <Property Name="Text" Value="#{INTERFACE_XML_221}" />
+                        <Property Name="TextColor" Value="FFFFF263" />
+                        <Property Name="HorzFormatting" Value="RightAligned" />
+                        <Property Name="VertFormatting" Value="BottomAligned" />
+                    </Window>
+                    <Window Type="TLBB_SimpleMulitiTextFrame" Name="Reputation_Value_Menpai5_Value_PicBack">
+                        <Property Name="UnifiedPosition" Value="{{0,0},{0,20}}" />
+                        <Property Name="UnifiedSize" Value="{{0.600000,0.000000},{0.000000,16.000000}" />
+                        <Window Type="TLBB_ProgressPropertyRed" Name="Reputation_Value_Menpai5_Value_Pic1">
+                            <Property Name="UnifiedPosition" Value="{{0,4},{0,5}}" />
+                            <Property Name="UnifiedSize" Value="{{1.000000,-8.000000},{0.000000,6.000000}" />
+                            <Property Name="EffectColorLevel" Value="index:0 tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+                            <Property Name="CurrentProgress" Value="1.0" />
+                        </Window>
+                        <Window Type="TLBB_ProgressPropertyYellow" Name="Reputation_Value_Menpai5_Value_Pic2">
+                            <Property Name="UnifiedPosition" Value="{{0,4},{0,5}}" />
+                            <Property Name="UnifiedSize" Value="{{1.000000,-8.000000},{0.000000,6.000000}" />
+                            <Property Name="EffectColorLevel" Value="index:0 tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+                            <Property Name="CurrentProgress" Value="1.0" />
+                        </Window>
+                        <Window Type="TLBB_ProgressPropertyGreen" Name="Reputation_Value_Menpai5_Value_Pic3">
+                            <Property Name="UnifiedPosition" Value="{{0,4},{0,5}}" />
+                            <Property Name="UnifiedSize" Value="{{1.000000,-8.000000},{0.000000,6.000000}" />
+                            <Property Name="EffectColorLevel" Value="index:0 tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+                            <Property Name="CurrentProgress" Value="1.0" />
+                        </Window>
+                    </Window>
+                    <Window Type="TLBB_SimpleMulitiTextFrame" Name="Reputation_Value_Menpai5_Value_Number">
+                        <Property Name="UnifiedPosition" Value="{{0.6,0},{0,20}}" />
+                        <Property Name="UnifiedSize" Value="{{0.400000,0.000000},{0.000000,16.000000}" />
+                        <Property Name="Text" Value="1000000/10000000" />
+                        <Property Name="TextColor" Value="FFFFF263" />
+                        <Property Name="HorzFormatting" Value="HorzCentred" />
+                        <Property Name="VertFormatting" Value="VertCentred" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_Frame_Lace1" Name="Reputation_Value_Menpai6_Back">
+                    <Property Name="UnifiedPosition" Value="{{0,6},{0,180}}" />
+                    <Property Name="UnifiedSize" Value="{{1.0,-12.000000},{0.000000,36.000000}" />
+                    <Window Type="TLBB_MapImage" Name="Reputation_Value_Menpai6_Relation">
+                        <Property Name="UnifiedPosition" Value="{{0,2},{0,0}}" />
+                        <Property Name="UnifiedSize" Value="{{0.0000,20.000000},{0.000000,20.000000}" />
+                        <Property Name="ChildImage" Value="name:Enemy set:UIIcons image:QuestIcon_8" />
+                        <Property Name="ChildImage" Value="name:Normal set:UIIcons image:QuestIcon_2" />
+                        <Property Name="ChildImage" Value="name:Friend set:UIIcons image:QuestIcon_11" />
+                    </Window>
+                    <Window Type="TLBB_SimpleText" Name="Reputation_Value_Menpai6_Name">
+                        <Property Name="UnifiedPosition" Value="{{0.000000,23.000000},{0.000000,4.000000}" />
+                        <Property Name="UnifiedSize" Value="{{1.000000,-187.000000},{0.000000,14.000000}" />
+                        <Property Name="Text" Value="#{INTERFACE_XML_770}" />
+                        <Property Name="TextColor" Value="FFFFF263" />
+                        <Property Name="HorzFormatting" Value="LeftAligned" />
+                        <Property Name="VertFormatting" Value="BottomAligned" />
+                        <Property Name="RiseOnClick" Value="False" />
+                    </Window>
+                    <Window Type="TLBB_SimpleText" Name="Reputation_Value_Menpai6_CurrentLevel">
+                        <Property Name="UnifiedPosition" Value="{{0.5,-5},{0,0}}" />
+                        <Property Name="UnifiedSize" Value="{{0.5,0.0},{0.0,20.0}" />
+                        <Property Name="Text" Value="#{INTERFACE_XML_221}" />
+                        <Property Name="TextColor" Value="FFFFF263" />
+                        <Property Name="HorzFormatting" Value="RightAligned" />
+                        <Property Name="VertFormatting" Value="BottomAligned" />
+                    </Window>
+                    <Window Type="TLBB_SimpleMulitiTextFrame" Name="Reputation_Value_Menpai6_Value_PicBack">
+                        <Property Name="UnifiedPosition" Value="{{0,0},{0,20}}" />
+                        <Property Name="UnifiedSize" Value="{{0.600000,0.000000},{0.000000,16.000000}" />
+                        <Window Type="TLBB_ProgressPropertyRed" Name="Reputation_Value_Menpai6_Value_Pic1">
+                            <Property Name="UnifiedPosition" Value="{{0,4},{0,5}}" />
+                            <Property Name="UnifiedSize" Value="{{1.000000,-8.000000},{0.000000,6.000000}" />
+                            <Property Name="EffectColorLevel" Value="index:0 tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+                            <Property Name="CurrentProgress" Value="1.0" />
+                        </Window>
+                        <Window Type="TLBB_ProgressPropertyYellow" Name="Reputation_Value_Menpai6_Value_Pic2">
+                            <Property Name="UnifiedPosition" Value="{{0,4},{0,5}}" />
+                            <Property Name="UnifiedSize" Value="{{1.000000,-8.000000},{0.000000,6.000000}" />
+                            <Property Name="EffectColorLevel" Value="index:0 tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+                            <Property Name="CurrentProgress" Value="1.0" />
+                        </Window>
+                        <Window Type="TLBB_ProgressPropertyGreen" Name="Reputation_Value_Menpai6_Value_Pic3">
+                            <Property Name="UnifiedPosition" Value="{{0,4},{0,5}}" />
+                            <Property Name="UnifiedSize" Value="{{1.000000,-8.000000},{0.000000,6.000000}" />
+                            <Property Name="EffectColorLevel" Value="index:0 tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+                            <Property Name="CurrentProgress" Value="1.0" />
+                        </Window>
+                    </Window>
+                    <Window Type="TLBB_SimpleMulitiTextFrame" Name="Reputation_Value_Menpai6_Value_Number">
+                        <Property Name="UnifiedPosition" Value="{{0.6,0},{0,20}}" />
+                        <Property Name="UnifiedSize" Value="{{0.400000,0.000000},{0.000000,16.000000}" />
+                        <Property Name="Text" Value="1000000/10000000" />
+                        <Property Name="TextColor" Value="FFFFF263" />
+                        <Property Name="HorzFormatting" Value="HorzCentred" />
+                        <Property Name="VertFormatting" Value="VertCentred" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_Frame_Lace1" Name="Reputation_Value_Menpai7_Back">
+                    <Property Name="UnifiedPosition" Value="{{0,6},{0,216}}" />
+                    <Property Name="UnifiedSize" Value="{{1.0,-12.000000},{0.000000,36.000000}" />
+                    <Window Type="TLBB_MapImage" Name="Reputation_Value_Menpai7_Relation">
+                        <Property Name="UnifiedPosition" Value="{{0,2},{0,0}}" />
+                        <Property Name="UnifiedSize" Value="{{0.0000,20.000000},{0.000000,20.000000}" />
+                        <Property Name="ChildImage" Value="name:Enemy set:UIIcons image:QuestIcon_8" />
+                        <Property Name="ChildImage" Value="name:Normal set:UIIcons image:QuestIcon_2" />
+                        <Property Name="ChildImage" Value="name:Friend set:UIIcons image:QuestIcon_11" />
+                    </Window>
+                    <Window Type="TLBB_SimpleText" Name="Reputation_Value_Menpai7_Name">
+                        <Property Name="UnifiedPosition" Value="{{0.000000,23.000000},{0.000000,4.000000}" />
+                        <Property Name="UnifiedSize" Value="{{1.000000,-187.000000},{0.000000,14.000000}" />
+                        <Property Name="Text" Value="#{INTERFACE_XML_262}" />
+                        <Property Name="TextColor" Value="FFFFF263" />
+                        <Property Name="HorzFormatting" Value="LeftAligned" />
+                        <Property Name="VertFormatting" Value="BottomAligned" />
+                        <Property Name="RiseOnClick" Value="False" />
+                    </Window>
+                    <Window Type="TLBB_SimpleText" Name="Reputation_Value_Menpai7_CurrentLevel">
+                        <Property Name="UnifiedPosition" Value="{{0.5,-5},{0,0}}" />
+                        <Property Name="UnifiedSize" Value="{{0.5,0.0},{0.0,20.0}" />
+                        <Property Name="Text" Value="#{INTERFACE_XML_221}" />
+                        <Property Name="TextColor" Value="FFFFF263" />
+                        <Property Name="HorzFormatting" Value="RightAligned" />
+                        <Property Name="VertFormatting" Value="BottomAligned" />
+                    </Window>
+                    <Window Type="TLBB_SimpleMulitiTextFrame" Name="Reputation_Value_Menpai7_Value_PicBack">
+                        <Property Name="UnifiedPosition" Value="{{0,0},{0,20}}" />
+                        <Property Name="UnifiedSize" Value="{{0.600000,0.000000},{0.000000,16.000000}" />
+                        <Window Type="TLBB_ProgressPropertyRed" Name="Reputation_Value_Menpai7_Value_Pic1">
+                            <Property Name="UnifiedPosition" Value="{{0,4},{0,5}}" />
+                            <Property Name="UnifiedSize" Value="{{1.000000,-8.000000},{0.000000,6.000000}" />
+                            <Property Name="EffectColorLevel" Value="index:0 tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+                            <Property Name="CurrentProgress" Value="1.0" />
+                        </Window>
+                        <Window Type="TLBB_ProgressPropertyYellow" Name="Reputation_Value_Menpai7_Value_Pic2">
+                            <Property Name="UnifiedPosition" Value="{{0,4},{0,5}}" />
+                            <Property Name="UnifiedSize" Value="{{1.000000,-8.000000},{0.000000,6.000000}" />
+                            <Property Name="EffectColorLevel" Value="index:0 tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+                            <Property Name="CurrentProgress" Value="1.0" />
+                        </Window>
+                        <Window Type="TLBB_ProgressPropertyGreen" Name="Reputation_Value_Menpai7_Value_Pic3">
+                            <Property Name="UnifiedPosition" Value="{{0,4},{0,5}}" />
+                            <Property Name="UnifiedSize" Value="{{1.000000,-8.000000},{0.000000,6.000000}" />
+                            <Property Name="EffectColorLevel" Value="index:0 tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+                            <Property Name="CurrentProgress" Value="1.0" />
+                        </Window>
+                    </Window>
+                    <Window Type="TLBB_SimpleMulitiTextFrame" Name="Reputation_Value_Menpai7_Value_Number">
+                        <Property Name="UnifiedPosition" Value="{{0.6,0},{0,20}}" />
+                        <Property Name="UnifiedSize" Value="{{0.400000,0.000000},{0.000000,16.000000}" />
+                        <Property Name="Text" Value="1000000/10000000" />
+                        <Property Name="TextColor" Value="FFFFF263" />
+                        <Property Name="HorzFormatting" Value="HorzCentred" />
+                        <Property Name="VertFormatting" Value="VertCentred" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_Frame_Lace1" Name="Reputation_Value_Menpai8_Back">
+                    <Property Name="UnifiedPosition" Value="{{0,6},{0,252}}" />
+                    <Property Name="UnifiedSize" Value="{{1.0,-12.000000},{0.000000,36.000000}" />
+                    <Window Type="TLBB_MapImage" Name="Reputation_Value_Menpai8_Relation">
+                        <Property Name="UnifiedPosition" Value="{{0,2},{0,0}}" />
+                        <Property Name="UnifiedSize" Value="{{0.0000,20.000000},{0.000000,20.000000}" />
+                        <Property Name="ChildImage" Value="name:Enemy set:UIIcons image:QuestIcon_8" />
+                        <Property Name="ChildImage" Value="name:Normal set:UIIcons image:QuestIcon_2" />
+                        <Property Name="ChildImage" Value="name:Friend set:UIIcons image:QuestIcon_11" />
+                    </Window>
+                    <Window Type="TLBB_SimpleText" Name="Reputation_Value_Menpai8_Name">
+                        <Property Name="UnifiedPosition" Value="{{0.000000,23.000000},{0.000000,4.000000}" />
+                        <Property Name="UnifiedSize" Value="{{1.000000,-187.000000},{0.000000,14.000000}" />
+                        <Property Name="Text" Value="#{INTERFACE_XML_690}" />
+                        <Property Name="TextColor" Value="FFFFF263" />
+                        <Property Name="HorzFormatting" Value="LeftAligned" />
+                        <Property Name="VertFormatting" Value="BottomAligned" />
+                        <Property Name="RiseOnClick" Value="False" />
+                    </Window>
+                    <Window Type="TLBB_SimpleText" Name="Reputation_Value_Menpai8_CurrentLevel">
+                        <Property Name="UnifiedPosition" Value="{{0.5,-5},{0,0}}" />
+                        <Property Name="UnifiedSize" Value="{{0.5,0.0},{0.0,20.0}" />
+                        <Property Name="Text" Value="#{INTERFACE_XML_221}" />
+                        <Property Name="TextColor" Value="FFFFF263" />
+                        <Property Name="HorzFormatting" Value="RightAligned" />
+                        <Property Name="VertFormatting" Value="BottomAligned" />
+                    </Window>
+                    <Window Type="TLBB_SimpleMulitiTextFrame" Name="Reputation_Value_Menpai8_Value_PicBack">
+                        <Property Name="UnifiedPosition" Value="{{0,0},{0,20}}" />
+                        <Property Name="UnifiedSize" Value="{{0.600000,0.000000},{0.000000,16.000000}" />
+                        <Window Type="TLBB_ProgressPropertyRed" Name="Reputation_Value_Menpai8_Value_Pic1">
+                            <Property Name="UnifiedPosition" Value="{{0,4},{0,5}}" />
+                            <Property Name="UnifiedSize" Value="{{1.000000,-8.000000},{0.000000,6.000000}" />
+                            <Property Name="EffectColor" Value="tl:FF40015E tr:FF40015E bl:FF40015E br:FF40015E" />
+                            <Property Name="EffectColorLevel" Value="index:0 tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+                            <Property Name="CurrentProgress" Value="1.0" />
+                        </Window>
+                        <Window Type="TLBB_ProgressPropertyYellow" Name="Reputation_Value_Menpai8_Value_Pic2">
+                            <Property Name="UnifiedPosition" Value="{{0,4},{0,5}}" />
+                            <Property Name="UnifiedSize" Value="{{1.000000,-8.000000},{0.000000,6.000000}" />
+                            <Property Name="EffectColorLevel" Value="index:0 tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+                            <Property Name="CurrentProgress" Value="1.0" />
+                        </Window>
+                        <Window Type="TLBB_ProgressPropertyGreen" Name="Reputation_Value_Menpai8_Value_Pic3">
+                            <Property Name="UnifiedPosition" Value="{{0,4},{0,5}}" />
+                            <Property Name="UnifiedSize" Value="{{1.000000,-8.000000},{0.000000,6.000000}" />
+                            <Property Name="EffectColorLevel" Value="index:0 tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+                            <Property Name="CurrentProgress" Value="1.0" />
+                        </Window>
+                    </Window>
+                    <Window Type="TLBB_SimpleMulitiTextFrame" Name="Reputation_Value_Menpai8_Value_Number">
+                        <Property Name="UnifiedPosition" Value="{{0.6,0},{0,20}}" />
+                        <Property Name="UnifiedSize" Value="{{0.400000,0.000000},{0.000000,16.000000}" />
+                        <Property Name="Text" Value="1000000/10000000" />
+                        <Property Name="TextColor" Value="FFFFF263" />
+                        <Property Name="HorzFormatting" Value="HorzCentred" />
+                        <Property Name="VertFormatting" Value="VertCentred" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_Frame_Lace1" Name="Reputation_Value_Menpai9_Back">
+                    <Property Name="UnifiedPosition" Value="{{0,6},{0,288}}" />
+                    <Property Name="UnifiedSize" Value="{{1.0,-12.000000},{0.000000,36.000000}" />
+                    <Window Type="TLBB_MapImage" Name="Reputation_Value_Menpai9_Relation">
+                        <Property Name="UnifiedPosition" Value="{{0,2},{0,0}}" />
+                        <Property Name="UnifiedSize" Value="{{0.0000,20.000000},{0.000000,20.000000}" />
+                        <Property Name="ChildImage" Value="name:Enemy set:UIIcons image:QuestIcon_8" />
+                        <Property Name="ChildImage" Value="name:Normal set:UIIcons image:QuestIcon_2" />
+                        <Property Name="ChildImage" Value="name:Friend set:UIIcons image:QuestIcon_11" />
+                    </Window>
+                    <Window Type="TLBB_SimpleText" Name="Reputation_Value_Menpai9_Name">
+                        <Property Name="UnifiedPosition" Value="{{0.000000,23.000000},{0.000000,4.000000}" />
+                        <Property Name="UnifiedSize" Value="{{1.000000,-187.000000},{0.000000,14.000000}" />
+                        <Property Name="Text" Value="#{INTERFACE_XML_757}" />
+                        <Property Name="TextColor" Value="FFFFF263" />
+                        <Property Name="HorzFormatting" Value="LeftAligned" />
+                        <Property Name="VertFormatting" Value="BottomAligned" />
+                        <Property Name="RiseOnClick" Value="False" />
+                    </Window>
+                    <Window Type="TLBB_SimpleText" Name="Reputation_Value_Menpai9_CurrentLevel">
+                        <Property Name="UnifiedPosition" Value="{{0.5,-5},{0,0}}" />
+                        <Property Name="UnifiedSize" Value="{{0.5,0.0},{0.0,20.0}" />
+                        <Property Name="Text" Value="#{INTERFACE_XML_221}" />
+                        <Property Name="TextColor" Value="FFFFF263" />
+                        <Property Name="HorzFormatting" Value="RightAligned" />
+                        <Property Name="VertFormatting" Value="BottomAligned" />
+                    </Window>
+                    <Window Type="TLBB_SimpleMulitiTextFrame" Name="Reputation_Value_Menpai9_Value_PicBack">
+                        <Property Name="UnifiedPosition" Value="{{0,0},{0,20}}" />
+                        <Property Name="UnifiedSize" Value="{{0.600000,0.000000},{0.000000,16.000000}" />
+                        <Window Type="TLBB_ProgressPropertyRed" Name="Reputation_Value_Menpai9_Value_Pic1">
+                            <Property Name="UnifiedPosition" Value="{{0,4},{0,5}}" />
+                            <Property Name="UnifiedSize" Value="{{1.000000,-8.000000},{0.000000,6.000000}" />
+                            <Property Name="EffectColorLevel" Value="index:0 tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+                            <Property Name="CurrentProgress" Value="1.0" />
+                        </Window>
+                        <Window Type="TLBB_ProgressPropertyYellow" Name="Reputation_Value_Menpai9_Value_Pic2">
+                            <Property Name="UnifiedPosition" Value="{{0,4},{0,5}}" />
+                            <Property Name="UnifiedSize" Value="{{1.000000,-8.000000},{0.000000,6.000000}" />
+                            <Property Name="EffectColorLevel" Value="index:0 tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+                            <Property Name="CurrentProgress" Value="1.0" />
+                        </Window>
+                        <Window Type="TLBB_ProgressPropertyGreen" Name="Reputation_Value_Menpai9_Value_Pic3">
+                            <Property Name="UnifiedPosition" Value="{{0,4},{0,5}}" />
+                            <Property Name="UnifiedSize" Value="{{1.000000,-8.000000},{0.000000,6.000000}" />
+                            <Property Name="EffectColorLevel" Value="index:0 tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+                            <Property Name="CurrentProgress" Value="1.0" />
+                        </Window>
+                    </Window>
+                    <Window Type="TLBB_SimpleMulitiTextFrame" Name="Reputation_Value_Menpai9_Value_Number">
+                        <Property Name="UnifiedPosition" Value="{{0.6,0},{0,20}}" />
+                        <Property Name="UnifiedSize" Value="{{0.400000,0.000000},{0.000000,16.000000}" />
+                        <Property Name="Text" Value="1000000/10000000" />
+                        <Property Name="TextColor" Value="FFFFF263" />
+                        <Property Name="HorzFormatting" Value="HorzCentred" />
+                        <Property Name="VertFormatting" Value="VertCentred" />
+                    </Window>
+                </Window>
+            </Window>
+        </Window>
+        <Window Type="DefaultWindow" Name="Reputation_Checkbox_Frame">
+            <Property Name="UnifiedPosition" Value="{{0.0,8.000000},{1.000000,-25.000000}" />
+            <Property Name="UnifiedSize" Value="{{0.9,0.000000},{0.000000,24.000000}" />
+            <Window Type="TLBB_ButtonPageDown" Name="Reputation_ShengWang">
+                <Property Name="AbsolutePosition" Value="x:0.0 y:0.0" />
+                <Property Name="AbsoluteSize" Value="w:42.000000 h:24.000000" />
+                <Property Name="CheckMode" Value="1" />
+                <Property Name="Text" Value="#{INTERFACE_XML_448}" />
+                <Property Name="HorzLabelFormatting" Value="WordWrapCentreAligned" />
+                <Event Name="Clicked" Function="Reputation_OnPageClick( 0 );" />
+            </Window>
+            <Window Type="TLBB_ButtonPageDown" Name="Reputation_GuoJia">
+                <Property Name="AbsolutePosition" Value="x:45.0 y:0.0" />
+                <Property Name="AbsoluteSize" Value="w:42.000000 h:24.000000" />
+                <Property Name="HorzLabelFormatting" Value="WordWrapCentreAligned" />
+                <Property Name="Text" Value="#{INTERFACE_XML_312}" />
+                <Property Name="CheckMode" Value="1" />
+                <Event Name="Clicked" Function="Reputation_OnPageClick( 1 );" />
+            </Window>
+            <Window Type="TLBB_ButtonPageDown" Name="Reputation_ShiLi">
+                <Property Name="AbsolutePosition" Value="x:90.0 y:0.0" />
+                <Property Name="AbsoluteSize" Value="w:42.000000 h:24.000000" />
+                <Property Name="HorzLabelFormatting" Value="WordWrapCentreAligned" />
+                <Property Name="Text" Value="#{INTERFACE_XML_649}" />
+                <Property Name="CheckMode" Value="1" />
+                <Event Name="Clicked" Function="Reputation_OnPageClick( 2 );" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

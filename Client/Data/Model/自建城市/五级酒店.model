@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="五级酒店.frame" />
+    <entity mesh="五级酒店.mesh" node="五级酒店" />
+    <entity mesh="五级酒店灯笼发.mesh" />
+</model>

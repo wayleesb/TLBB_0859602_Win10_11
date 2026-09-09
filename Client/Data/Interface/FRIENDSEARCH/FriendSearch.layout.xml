@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame1" Name="FriendSearch_Frame">
+      <Property Name="AbsolutePosition" Value="x:101.000000 y:104.000000" />
+      <Property Name="AbsoluteSize" Value="w:600.000000 h:354.000000" />
+      <Window Type="DefaultWindow" Name="FriendSearch_Function_Frame">
+            <Property Name="AbsolutePosition" Value="x:7.000000 y:36.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-13.000000},{1.000000,-55.000000}" />
+            <Window Type="TLBB_ButtonCommon" Name="FriendSearch_BaseSearch">
+                <Property Name="AbsolutePosition" Value="x:4.000000 y:3.000000" />
+                <Property Name="AbsoluteSize" Value="w:66.000000 h:21.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_343}" />
+                <Event Name="Clicked" Function="FriendSearch_BaseSearch();" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="FriendSearch_High-levelSearch">
+                <Property Name="AbsolutePosition" Value="x:72.000000 y:3.000000" />
+                <Property Name="AbsoluteSize" Value="w:66.000000 h:21.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_277}" />
+                <Event Name="Clicked" Function="FriendSearch_HighSearch();" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="FriendSearch_Text1">
+              <Property Name="AbsolutePosition" Value="x:83.000000 y:47.000000" />
+			<Property Name="AbsoluteSize" Value="w:33.000000 h:17.000000" />
+              <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_696}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="DefaultWindow" Name="FriendSearch_Module1">
+              <Property Name="AbsolutePosition" Value="x:76.000000 y:34.000000" />
+              <Property Name="AbsoluteSize" Value="w:394.000000 h:41.000000" />
+              <Window Type="TLBB_SimpleText" Name="FriendSearch_Text2">
+                    <Property Name="Position" Value="x:0.160471 y:0.076923" />
+                    <Property Name="Size" Value="w:0.07591623 h:0.36538461" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_448}" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="FriendSearch_Text3">
+                    <Property Name="Position" Value="x:0.544666 y:0.076923" />
+                    <Property Name="Size" Value="w:0.07591623 h:0.36538461" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_124}" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="FriendSearch_Text4">
+                    <Property Name="Position" Value="x:0.160471 y:0.5961538" />
+                    <Property Name="Size" Value="w:0.07591623 h:0.36538461" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_774}" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="FriendSearch_Text5">
+                    <Property Name="Position" Value="x:0.544666 y:0.5961538" />
+                    <Property Name="Size" Value="w:0.07591623 h:0.36538461" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_227}" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                </Window>
+                <Window Type="TLBB_ComboList" Name="FriendSearch_MenPai">
+                    <Property Name="Position" Value="x:0.241387 y:0.076923" />
+                    <Property Name="Size" Value="w:0.22513089 h:0.403846153" />
+                </Window>
+                <Window Type="TLBB_ComboList" Name="FriendSearch_Confraternity">
+                    <Property Name="Position" Value="x:0.62695 y:0.076923" />
+                    <Property Name="Size" Value="w:0.32460732 h:0.403846153" />
+                </Window>
+                <Window Type="TLBB_ComboList" Name="FriendSearch_Sexy">
+                    <Property Name="Position" Value="x:0.241387 y:0.5961538" />
+                    <Property Name="Size" Value="w:0.22513089 h:0.403846153" />
+                </Window>
+                <Window Type="TLBB_ComboList" Name="FriendSearch_Level">
+                    <Property Name="Position" Value="x:0.62695 y:0.5961538" />
+                    <Property Name="Size" Value="w:0.32460732 h:0.403846153" />
+                </Window>
+            </Window>
+            <Window Type="DefaultWindow" Name="FriendSearch_Module2">
+              <Property Name="AbsolutePosition" Value="x:134.000000 y:43.000000" />
+              <Property Name="AbsoluteSize" Value="w:308.000000 h:24.000000" />
+              <Window Type="TLBB_ComboList" Name="FriendSearch_SearchMode">
+                    <Property Name="AbsolutePosition" Value="x:1.000000 y:2.000000" />
+                    <Property Name="AbsoluteSize" Value="w:62.000000 h:20.000000" />
+                </Window>
+                <Window Type="TLBB_EditBoxNormal" Name="FriendSearch_Condition_Name">
+                    <Property Name="AbsolutePosition" Value="x:64.000000 y:2.000000" />
+                    <Property Name="AbsoluteSize" Value="w:72.000000 h:20.000000" />
+                    <Property Name="MaxTextLength" Value="12" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="FriendSearch_Module2_Text1">
+                    <Property Name="AbsolutePosition" Value="x:162.000000 y:3.000000" />
+                    <Property Name="AbsoluteSize" Value="w:66.000000 h:18.000000" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_385}" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="FriendSearch_Module2_Text2">
+                    <Property Name="AbsolutePosition" Value="x:250.000000 y:3.000000" />
+                    <Property Name="AbsoluteSize" Value="w:66.000000 h:18.000000" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_865}" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                </Window>
+                <Window Type="TLBB_ButtonCheck" Name="FriendSearch_Module2_CheckBox1">
+                    <Property Name="AbsolutePosition" Value="x:143.000000 y:6.000000" />
+                    <Property Name="AbsoluteSize" Value="w:13.000000 h:13.000000" />
+                    <Property Name="CheckMode" Value="0" />
+                </Window>
+                <Window Type="TLBB_ButtonCheck" Name="FriendSearch_Module2_CheckBox2">
+                    <Property Name="AbsolutePosition" Value="x:229.000000 y:6.000000" />
+                    <Property Name="AbsoluteSize" Value="w:13.000000 h:13.000000" />
+                    <Property Name="CheckMode" Value="0" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_MultiColumnList" Name="FriendSearch_Info">
+                <Property Name="AbsolutePosition" Value="x:5.000000 y:79.000000" />
+                 <Property Name="AbsoluteSize" Value="w:577.000000 h:195.000000" />
+                <Property Name="ForceHorzScrollbar" Value="False" />
+                <Property Name="ForceVertScrollbar" Value="True" />
+                <Property Name="SortSettingEnabled" Value="False" />
+                <Property Name="SelectionMode" Value="RowSingle" />
+                <Property Name="ColumnHeader" Value="text:#{INTERFACE_XML_1026} width:0.22 id:0" />
+                <Property Name="ColumnHeader" Value="text:ID width:0.1 id:1" />
+                <Property Name="ColumnHeader" Value="text:#{INTERFACE_XML_1027} width:0.0733333333 id:2" />
+                <Property Name="ColumnHeader" Value="text:#{INTERFACE_XML_227} width:0.0733333333 id:3" />
+                <Property Name="ColumnHeader" Value="text:#{INTERFACE_XML_774} width:0.0733333333 id:4" />
+                <Property Name="ColumnHeader" Value="text:#{INTERFACE_XML_448} width:0.1 id:5" />
+                <Property Name="ColumnHeader" Value="text:#{INTERFACE_XML_1028} width:0.25 id:6" />
+                <Property Name="ColumnsSizable" Value="False" />
+                <Property Name="ColumnsAdjust" Value="True" />
+                <Property Name="ColumnsMovable" Value="False" />
+                <Event Name="SelectionChanged" Function="FriendSearch_UpdateButton();" />
+                <Event Name="MouseDoubleClick" Function="FriendSearch_ViewInfo();" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="FriendSearch_UpPage">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:75.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_602}" />
+                <Event Name="Clicked" Function="FriendSearch_LastPage();" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="FriendSearch_DownPage">
+                <Property Name="UnifiedPosition" Value="{{0.000000,75.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:75.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_741}" />
+                <Event Name="Clicked" Function="FriendSearch_NextPage();" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="FriendSearch_examine">
+                <Property Name="UnifiedPosition" Value="{{0.000000,150.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:60.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_151}" />
+                <Event Name="Clicked" Function="FriendSearch_ViewInfo();" />
+            </Window>
+            <Window Type="TLBB_Frame_Lace5" Name="FriendSearch_Blank">
+                <Property Name="UnifiedPosition" Value="{{0.000000,210.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-325.000000},{0.000000,20.000000}" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="FriendSearch_Begin">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-115.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:75.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_398}" />
+                <Event Name="Clicked" Function="FriendSearch_BeginSearch();" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="FriendSearch_Cancel">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-40.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_702}" />
+                <Event Name="Clicked" Function="FriendSearch_Close();" />
+            </Window>
+        </Window>
+        <Window Type="TLBB_ButtonHelp" Name="FriendSearch_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*FriendSearch&quot;);' />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="FriendSearch_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function="FriendSearch_Close();" />
+        </Window>
+        <Window Type="TLBB_DragTitle" Name="FriendSearch_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+            <Property Name="Font" Value="YouYuan11.25" />
+            <Property Name="Text" Value="#{INTERFACE_XML_24}" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="DragTarget" Value="FriendSearch_Frame" />
+        </Window>
+    </Window>
+</GUILayout>

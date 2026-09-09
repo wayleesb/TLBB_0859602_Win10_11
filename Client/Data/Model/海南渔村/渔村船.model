@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="渔村船.frame" />
+    <entity mesh="渔村船.mesh" node="渔村船" />
+    <entity mesh="渔村船桅杆1.mesh" node="渔村船桅杆1">
+        <offset>
+            <translate x="333.205" y="0" z="-3.97664e-007" />
+        </offset>
+    </entity>
+    <entity mesh="渔村船桅杆2.mesh" node="渔村船桅杆2">
+        <offset>
+            <translate x="-508.382" y="0" z="2.36765e-007" />
+        </offset>
+    </entity>
+    <entity mesh="渔村船灯笼1.mesh" node="渔村船桅杆1" />
+    <entity mesh="渔村船灯笼2.mesh" node="渔村船桅杆1" />
+    <entity mesh="渔村船灯笼3.mesh" node="渔村船桅杆2" />
+    <entity mesh="渔村船灯笼4.mesh" node="渔村船桅杆2" />
+</model>

@@ -1,0 +1,77 @@
+<?xml version="1.0" ?>
+<Falagard>
+  <!--横线-->
+  <WidgetLook name="TLBB_Look_HLine">
+    <Property name="FrameEnabled" value="false" />
+    <Property name="BackgroundEnabled" value="false" />
+    <ImagerySection name="Line">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="CommonStaticImage4" image="Line_L" />
+        <Image type="RightEdge" imageset="CommonStaticImage4" image="Line_R" />
+        <Image type="Background" imageset="CommonStaticImage4" image="Line_M" />
+      </FrameComponent>
+    </ImagerySection>
+
+    <StateImagery name="Enabled" >
+      <Layer>
+        <Section section="Line" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled" />
+    <StateImagery name="EnabledFrame" />
+    <StateImagery name="DisabledFrame" />
+    <StateImagery name="EnabledBackground" />
+    <StateImagery name="DisabledBackground" />
+  </WidgetLook>
+  <!--竖线-->
+  <WidgetLook name="TLBB_Look_VLine">
+    <Property name="FrameEnabled" value="false" />
+    <Property name="BackgroundEnabled" value="false" />
+    <ImagerySection name="Line">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <!-- <Image imageset="Common" image="ButtonLeftNormal_1" />-->
+        <VertFormat type="Tiled" />
+        <HorzFormat type="Stretched" />
+      </ImageryComponent>
+    </ImagerySection>
+
+    <StateImagery name="Enabled" >
+      <Layer>
+        <Section section="Line" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled" />
+    <StateImagery name="EnabledFrame" />
+    <StateImagery name="DisabledFrame" />
+    <StateImagery name="EnabledBackground" />
+    <StateImagery name="DisabledBackground" />
+  </WidgetLook>
+</Falagard>

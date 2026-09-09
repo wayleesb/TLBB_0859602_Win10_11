@@ -1,0 +1,149 @@
+<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame1" Name="EquipChange_Frame">
+        <Property Name="UnifiedPosition" Value="{{0.5,-200},{0.5,-178}}" />
+        <Property Name="AbsoluteSize" Value="w:400 h:302" />
+        <Event Name="Hidden" Function="EquipChange_OnHidden();" />
+        <Event Name="Shown" Function="EquipChange_OnShown();" />
+        <Window Type="TLBB_ButtonClose" Name="EquipChange_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function="this:Hide();" />
+        </Window>
+        <Window Type="TLBB_ButtonHelp" Name="EquipChange_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*EquipChange&quot;);' />
+        </Window>
+        <Window Type="TLBB_DragTitle" Name="EquipChange_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="EquipChange_Frame" />
+            <Property Name="Font" Value="YouYuan11.25" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="Text" Value="#{INTERFACE_XML_35}" />
+        </Window>
+        <Window Type="DefaultWindow" Name="EquipChange_Frame_Client">
+            <Property Name="AbsolutePosition" Value="x:7.000000 y:36.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-13.000000},{1.000000,-55.000000}" />
+            <Window Type="TLBB_StaticImageNULL" Name="EquipChange_Frame1">
+                <Property Name="Position" Value="x:0.0 y:0.0" />
+                <Property Name="Size" Value="w:0.24 h:0.761" />
+                <Property Name="BackgroundEnabled" Value="false" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Window Type="TLBB_SimpleMulitiTextFrame" Name="EquipChange_StaticText1">
+                    <Property Name="Position" Value="x:0.0 y:0.02" />
+                    <Property Name="Size" Value="w:1.0 h:0.26" />
+                    <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_517}" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_StaticImageNULL" Name="EquipChange_CurrentEquip_Frame">
+                    <Property Name="Position" Value="x:0.28 y:0.29" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                    <Window Type="TLBB_ActionButton" Name="EquipChange_CurrentEquip">
+                        <Property Name="Position" Value="x:0 y:0" />
+                        <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                        
+                        <Property Name="DragAcceptName" Value="G23" />
+                        <Property Name="DraggingEnabled" Value="True" />
+                        <Event Name="RBClicked" Function="EquipChange_Resume_Gem(23);" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_SimpleMulitiTextFrame" Name="EquipChange_StaticText2">
+                    <Property Name="Position" Value="x:0.0 y:0.505" />
+                    <Property Name="Size" Value="w:1.0 h:0.26" />
+                    <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_794}" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_StaticImageNULL" Name="EquipChange_NeedObject_Frame">
+                    <Property Name="Position" Value="x:0.28 y:0.78" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                    <Window Type="TLBB_ActionButton" Name="EquipChange_NeedObject">
+                        <Property Name="Position" Value="x:0 y:0" />
+                        <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                        
+                        <Property Name="DragAcceptName" Value="G24" />
+                        <Property Name="DraggingEnabled" Value="True" />
+                        <Event Name="RBClicked" Function="EquipChange_Resume_Gem(24);" />
+                    </Window>
+                </Window>
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="EquipChange_Frame2">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.000000,200.000000},{0.000000,20.000000}" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Window Type="TLBB_SimpleText" Name="EquipChange_Money_Text">
+                    <Property Name="Position" Value="x:0.03 y:0" />
+                    <Property Name="AbsoluteSize" Value="w:65.000000 h:20.000000" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_792}" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_Money" Name="EquipChange_NeedMoney">
+                    <Property Name="UnifiedPosition" Value="{{1.000000,-125.000000},{0.000000,0.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:120.000000 h:18.000000" />
+                    <Property Name="HorzFormatting" Value="RightAligned" />
+                    <Property Name="MoneyNumber" Value="0" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_SimpleTextFrame" Name="EquipChange_StaticText4">
+                <Property Name="UnifiedPosition" Value="{{0.65,0.000000},{0.000000,0.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.3500,0.000000},{0.000000,20.000000}" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="Text" Value="#{INTERFACE_XML_843}" />
+            </Window>
+            <Window Type="TLBB_StaticImageNULL" Name="EquipChange_Frame3">
+                <Property Name="UnifiedPosition" Value="{{0.65,0.000000},{0.000000,20.000000}" />
+                <Property Name="Size" Value="w:0.35 h:0.83" />
+                <Property Name="BackgroundEnabled" Value="false" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Window Type="TLBB_FramePlayerOther" Name="EquipChange_FakeObject_Back">
+                    <Property Name="Position" Value="x:0.02 y:0.02" />
+                    <Property Name="Size" Value="w:0.96 h:0.96" />
+                    <Window Type="TLBB_MeshWindow" Name="EquipChange_FakeObject">
+                        <Property Name="Position" Value="x:0.1 y:0.05" />
+                        <Property Name="Size" Value="w:0.8 h:0.9" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="ShowControl" Value="EquipChange_Frame" />
+                        <Property Name="BackgroundName" Value="SelfEquip/jpg_SelfEquipBackground.dds" />
+                    </Window>
+                </Window>
+            </Window>
+            <Window Type="TLBB_SimpleTextFrame" Name="EquipChange_StaticText3">
+                <Property Name="Position" Value="x:0.25 y:0" />
+                <Property Name="UnifiedSize" Value="{{0.4,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_406}" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="EquipChange_Frame5">
+                <Property Name="UnifiedPosition" Value="{{0.25,0.000000},{0.000000,20.000000}" />
+                <Property Name="Size" Value="w:0.4 h:0.83" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Window Type="TLBB_ListBoxCommon" Name="EquipChange_EquiptShapeList">
+                    <Property Name="Position" Value="x:0.02 y:0.02" />
+                    <Property Name="Size" Value="w:0.96 h:0.96" />
+                    <Event Name="ItemSelectionChanged" Function="EquipChange_ListBox_Selected();" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_Frame_Lace5" Name="EquipChange_Blank">
+                <Property Name="UnifiedPosition" Value="{{0.000000,200.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-280.000000},{0.000000,20.000000}" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="EquipChange_OK">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-80.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.000000,40.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_557}" />
+                <Event Name="Clicked" Function="EquipChange_Buttons_Clicked();" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="EquipChange_Cancel">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-40.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.000000,40.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_542}" />
+                <Event Name="Clicked" Function="this:Hide();" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

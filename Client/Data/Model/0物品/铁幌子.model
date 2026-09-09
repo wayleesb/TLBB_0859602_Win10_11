@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="铁幌子.frame" />
+    <entity mesh="铁幌子.mesh" node="铁幌子" />
+    <entity mesh="铁幌子铁.mesh" />
+</model>

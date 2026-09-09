@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<Imageset Name="Corn" Imagefile="Icons/Corn.jpg" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+	<Image Name="Corn_1" XPos="0" YPos="0" Width="64" Height="64" />
+	<Image Name="Corn_2" XPos="64" YPos="0" Width="64" Height="64" />
+	<Image Name="Corn_3" XPos="128" YPos="0" Width="64" Height="64" />
+	<Image Name="Corn_4" XPos="192" YPos="0" Width="64" Height="64" />
+	<Image Name="Corn_5" XPos="0" YPos="64" Width="64" Height="64" />
+	<Image Name="Corn_6" XPos="64" YPos="64" Width="64" Height="64" />
+	<Image Name="Corn_7" XPos="128" YPos="64" Width="64" Height="64" />
+	<Image Name="Corn_8" XPos="192" YPos="64" Width="64" Height="64" />
+	<Image Name="Corn_9" XPos="0" YPos="128" Width="64" Height="64" />
+	<Image Name="Corn_10" XPos="64" YPos="128" Width="64" Height="64" />
+	<Image Name="Corn_11" XPos="128" YPos="128" Width="64" Height="64" />
+	<Image Name="Corn_12" XPos="192" YPos="128" Width="64" Height="64" />
+</Imageset>

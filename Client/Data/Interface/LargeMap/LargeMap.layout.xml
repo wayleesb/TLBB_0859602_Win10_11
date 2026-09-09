@@ -1,0 +1,112 @@
+<GUILayout>
+    <Window Type="DefaultWindow" Name="LargeMapFrame">
+        <Property Name="Position" Value="x:0.0 y:0.0" />
+        <Property Name="Size" Value="w:1.0 h:1.0" />
+        <Property Name="AlwaysOnTop" Value="true" />
+            <Window Type="TLBB_FramePlayerOther" Name="LargeMap_Frondground_Frame">
+            <Property Name="Position" Value="x:0.0 y:0.0" />
+            <Property Name="Size" Value="w:1.0 h:1.0" />
+            <Property Name="RiseOnClick" Value="False" />
+            <Window Type="TLBB_SimpleText" Name="LargeMap_Frondground_Text">
+                <Property Name="UnifiedPosition" Value="{{0.3,0.000000},{1.000000,-25.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.4,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_119}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+        </Window>
+      <Window Type="TLBB_ButtonCommon" Name="LargeMap_Qiehuan">
+        <Property Name="UnifiedPosition" Value="{{1.000000,-180.000000},{1.000000,-25.000000}" />
+        <Property Name="AbsoluteSize" Value="w:102.000000 h:19.000000" />
+        <Property Name="Text" Value="#{DTQH_090305_1}" />
+        <Property Name="Tooltip" Value="#{DTQH_090305_3}" />
+        <Event Name="Clicked" Function="LargeMap_Qiehuan_Clicked();" />
+      </Window>
+        <Window Type="TLBB_WorldMap" Name="LargeMap_Frondground">
+            <Property Name="UnifiedPosition" Value="{{0.0,10.000000},{0.000000,10.000000}" />
+            <Property Name="UnifiedSize" Value="{{1.0,-20},{1.0,-38}}" />
+            <Property Name="CityImageNormal" Value="type:Sign1 set:MiniMap_Icon image:Sign1_Hover" />
+            <Property Name="CityImageHover" Value="type:Sign1 set:MiniMap_Icon image:Sign1_Normal" />
+            <Property Name="CityImageNormal" Value="type:Sign2 set:MiniMap_Icon image:Sign2_Hover" />
+            <Property Name="CityImageHover" Value="type:Sign2 set:MiniMap_Icon image:Sign2_Normal" />
+            <Property Name="CityImageNormal" Value="type:Sign3 set:MiniMap_Icon image:Sign3_Hover" />
+            <Property Name="CityImageHover" Value="type:Sign3 set:MiniMap_Icon image:Sign3_Normal" />
+            <Property Name="CityImageNormal" Value="type:Sign4 set:MiniMap_Icon image:Sign4_Hover" />
+            <Property Name="CityImageHover" Value="type:Sign4 set:MiniMap_Icon image:Sign4_Normal" />
+            <Property Name="CityImageNormal" Value="type:Sign5 set:MiniMap_Icon image:Sign5_Hover" />
+            <Property Name="CityImageHover" Value="type:Sign5 set:MiniMap_Icon image:Sign5_Normal" />
+            <Property Name="CityImageNormal" Value="type:Sign6 set:MiniMap_Icon image:Sign6_Hover" />
+            <Property Name="CityImageHover" Value="type:Sign6 set:MiniMap_Icon image:Sign6_Normal" />
+            <Property Name="CityImageNormal" Value="type:Sign7 set:MiniMap_Icon image:Sign7_Hover" />
+            <Property Name="CityImageHover" Value="type:Sign7 set:MiniMap_Icon image:Sign7_Normal" />
+            <Property Name="CityImageNormal" Value="type:Sign8 set:MiniMap_Icon image:Sign8_Hover" />
+            <Property Name="CityImageHover" Value="type:Sign8 set:MiniMap_Icon image:Sign8_Normal" />
+            <Property Name="CityImageNormal" Value="type:Sign9 set:MiniMap_Icon image:Sign9_Hover" />
+            <Property Name="CityImageHover" Value="type:Sign9 set:MiniMap_Icon image:Sign9_Normal" />
+            <Property Name="CityImageNormal" Value="type:Sign10 set:MiniMap_Icon image:Sign10_Hover" />
+            <Property Name="CityImageHover" Value="type:Sign10 set:MiniMap_Icon image:Sign10_Normal" />
+            <Property Name="CityImageNormal" Value="type:Sign11 set:MiniMap_Icon2 image:SignBattleground_Hover" />
+            <Property Name="CityImageHover" Value="type:Sign11 set:MiniMap_Icon2 image:SignBattleground_Normal" />
+            <Property Name="CityImageNormal" Value="type:Sign12 set:MiniMap_Icon2 image:SignDoubt_Hover" />
+            <Property Name="CityImageHover" Value="type:Sign12 set:MiniMap_Icon2 image:SignDoubt_Normal" />
+            <Property Name="CityImageNormal" Value="type:Sign13 set:MiniMap_Icon2 image:NewSign1_Normal" />
+            <Property Name="CityImageHover" Value="type:Sign13 set:MiniMap_Icon2 image:NewSign1_Hover" />
+            <Property Name="CityImageNormal" Value="type:Sign14 set:MiniMap_Icon2 image:NewSign2_Normal" />
+            <Property Name="CityImageHover" Value="type:Sign14 set:MiniMap_Icon2 image:NewSign2_Hover" />
+            <Property Name="CityImageNormal" Value="type:Sign15 set:MiniMap_Icon2 image:NewSign3_Normal" />
+            <Property Name="CityImageHover" Value="type:Sign15 set:MiniMap_Icon2 image:NewSign3_Hover" />
+            <Property Name="CityImageNormal" Value="type:Sign16 set:MiniMap_Icon2 image:NewSign4_Normal" />
+            <Property Name="CityImageHover" Value="type:Sign16 set:MiniMap_Icon2 image:NewSign4_Hover" />
+            <Property Name="CityImageNormal" Value="type:Sign17 set:MiniMap_Icon2 image:NewSign5_Normal" />
+            <Property Name="CityImageHover" Value="type:Sign17 set:MiniMap_Icon2 image:NewSign5_Hover" />
+            <Property Name="CityImageNormal" Value="type:Sign18 set:MiniMap_Icon2 image:NewSign6_Normal" />
+            <Property Name="CityImageHover" Value="type:Sign18 set:MiniMap_Icon2 image:NewSign6_Hover" />
+            <Property Name="CityImageNormal" Value="type:Sign19 set:MiniMap_Icon2 image:NewSign7_Normal" />
+            <Property Name="CityImageHover" Value="type:Sign19 set:MiniMap_Icon2 image:NewSign7_Hover" />
+            <Property Name="CityImageNormal" Value="type:Sign20 set:MiniMap_Icon2 image:NewSign8_Normal" />
+            <Property Name="CityImageHover" Value="type:Sign20 set:MiniMap_Icon2 image:NewSign8_Hover" />
+            <Property Name="CityImageNormal" Value="type:Sign25 set:MiniMap_Icon3 image:Sign25_Normal" />
+            <Property Name="CityImageHover" Value="type:Sign25 set:MiniMap_Icon3 image:Sign25_Hover" />
+            <Property Name="CityImageNormal" Value="type:Sign26 set:MiniMap_Icon3 image:Sign26_Normal" />
+            <Property Name="CityImageHover" Value="type:Sign26 set:MiniMap_Icon3 image:Sign26_Hover" />
+            <Property Name="CityImageNormal" Value="type:Sign47 set:MiniMap_Icon4 image:Sign47_Normal" />
+            <Property Name="CityImageHover" Value="type:Sign47 set:MiniMap_Icon4 image:Sign47_Hover" />
+            <Property Name="CityImageNormal" Value="type:Sign48 set:MiniMap_Icon4 image:Sign48_Normal" />
+            <Property Name="CityImageHover" Value="type:Sign48 set:MiniMap_Icon4 image:Sign48_Hover" />
+            <Property Name="CityImageNormal" Value="type:Sign49 set:MiniMap_Icon4 image:Sign49_Normal" />
+            <Property Name="CityImageHover" Value="type:Sign49 set:MiniMap_Icon4 image:Sign49_Hover" />
+            <Property Name="CityImageNormal" Value="type:Sign50 set:MiniMap_Icon4 image:Sign50_Normal" />
+            <Property Name="CityImageHover" Value="type:Sign50 set:MiniMap_Icon4 image:Sign50_Hover" />
+            <Property Name="CityImageNormal" Value="type:Sign51 set:MiniMap_Icon4 image:Sign51_Normal" />
+            <Property Name="CityImageHover" Value="type:Sign51 set:MiniMap_Icon4 image:Sign51_Hover" />
+            <Property Name="CityImageNormal" Value="type:Sign52 set:MiniMap_Icon image:Sign52_Normal" />
+            <Property Name="CityImageHover" Value="type:Sign52 set:MiniMap_Icon image:Sign52_Hover" />
+            <Property Name="CityImageNormal" Value="type:Sign53 set:MiniMap_Icon2 image:Sign53_Normal" />
+            <Property Name="CityImageHover" Value="type:Sign53 set:MiniMap_Icon2 image:Sign53_Hover" />
+        		<Property Name="CityImageNormal" Value="type:Sign54 set:MiniMap_Icon5 image:Sign54_Normal" />
+            <Property Name="CityImageHover" Value="type:Sign54 set:MiniMap_Icon5 image:Sign54_Hover" />
+         		<Property Name="CityImageNormal" Value="type:Sign55 set:MiniMap_Icon5 image:Sign55_Normal" />
+            <Property Name="CityImageHover" Value="type:Sign55 set:MiniMap_Icon5 image:Sign55_Hover" />
+                  
+            <Property Name="FriendImage1" Value="set:UIIcons image:Map_Play2" />
+            <Property Name="FriendImage2" Value="set:UIIcons image:Map_Play3" />
+            <Property Name="FriendImage3" Value="set:UIIcons image:Map_Play4" />
+            <Property Name="FriendImage4" Value="set:UIIcons image:Map_Play5" />
+            <Property Name="FriendImage5" Value="set:UIIcons image:Map_Play6" />
+            <Property Name="MySelfImage" Value="set:UIIcons image:World_Map_Self" />
+            <Property Name="BackgroundSize" Value="w:5 h:4" />
+            <Property Name="BackgroundName" Value="WorldMap" />
+        </Window>
+        <Window Type="TLBB_Frame_Lace1" Name="LargeMap_Bk">
+            <Property Name="UnifiedPosition" Value="{{1.0,-37},{0.0,17}}" />
+            <Property Name="AbsoluteSize" Value="w:20 h:20" />
+            <Property Name="AlwaysOnTop" Value="true" />
+            <Window Type="TLBB_ButtonClose" Name="LargeMap_CloseButtons">
+                <Property Name="UnifiedPosition" Value="{{0.0,3},{0.0,3}}" />
+                <Property Name="AbsoluteSize" Value="w:14 h:14" />
+                <Event Name="Clicked" Function="LargeMap_Close();" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

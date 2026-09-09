@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="渔村码头.frame" />
+    <entity mesh="渔村码头.mesh" node="渔村码头" />
+    <entity mesh="渔村码头灯笼3.mesh" />
+    <entity mesh="渔村码头灯笼04.mesh" />
+</model>

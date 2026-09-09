@@ -1,0 +1,1072 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Scene formatVersion="0.1.1" name="cangjing">
+
+  <Terrain filename="cangjing.Terrain"/>
+
+  <Object name="#FairyEnviroment" type="Enviroment">
+    <Property name="ambient" value="0.552941 0.113725 0.521569"/>
+    <Property name="fog.mode" value="linear"/>
+    <Property name="fog.colour" value="0.784314 0.34902 0.909804"/>
+    <Property name="fog.linear start" value="3000"/>
+    <Property name="fog.linear end" value="5000"/>
+  </Object>
+
+  <Object name="#FairyMainLightOne" type="Light">
+    <Property name="type" value="directional"/>
+    <Property name="diffuse" value="0.968628 0.419608 0.156863"/>
+    <Property name="specular" value="0.419608 0.168627 0.435294"/>
+    <Property name="direction" value="-1 -2 -1"/>
+    <Property name="cast shadows" value="true"/>
+  </Object>
+
+  <Object name="#FairyMainLightTwo" type="Light">
+    <Property name="type" value="directional"/>
+    <Property name="diffuse" value="0.137255 0.278431 0.513726"/>
+    <Property name="direction" value="1 1 -1"/>
+  </Object>
+
+  <Object name="#FairySkyDome" type="SkyDome">
+    <Property name="material" value="CloudySky"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁门.mesh"/>
+    <Property name="position" value="200 0 3000"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁柱子.mesh"/>
+    <Property name="position" value="-265.89 0 3000"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁柱子.mesh"/>
+    <Property name="position" value="667.885 0 3000"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁柱子.mesh"/>
+    <Property name="position" value="-300 0 2300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁墙2.mesh"/>
+    <Property name="position" value="-300 0 2300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁墙2.mesh"/>
+    <Property name="position" value="700 0 2300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁柱子.mesh"/>
+    <Property name="position" value="700 0 2300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁墙2.mesh"/>
+    <Property name="position" value="700 0 2300"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁柱子.mesh"/>
+    <Property name="position" value="1400 0 2700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁书柜2.mesh"/>
+    <Property name="position" value="1800 0 2700"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁柱子.mesh"/>
+    <Property name="position" value="2800 0.000244141 2700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁书柜1.mesh"/>
+    <Property name="position" value="2500 0 2700"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁柱子.mesh"/>
+    <Property name="position" value="2100 0.00012207 2700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁墙2.mesh"/>
+    <Property name="position" value="-1000 0 2300"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁柱子.mesh"/>
+    <Property name="position" value="-1000 0 2300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁柱子.mesh"/>
+    <Property name="position" value="-1000 0 2700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁柱子.mesh"/>
+    <Property name="position" value="-2400 0 2700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁柱子.mesh"/>
+    <Property name="position" value="-1700 -0.00012207 2700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁墙2.mesh"/>
+    <Property name="position" value="-2400 0 2700"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁柱子.mesh"/>
+    <Property name="position" value="-2800 0 2700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁书柜2.mesh"/>
+    <Property name="position" value="-2400 0 2700"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁书柜1.mesh"/>
+    <Property name="position" value="-1000 0 2700"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁柱子.mesh"/>
+    <Property name="position" value="1400 0 2300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁墙1.mesh"/>
+    <Property name="position" value="1400 0 2300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁书柜2.mesh"/>
+    <Property name="position" value="2100 0 2700"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁书柜1.mesh"/>
+    <Property name="position" value="2800 0 2700"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁墙1.mesh"/>
+    <Property name="position" value="-1000 0 2300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁墙1.mesh"/>
+    <Property name="position" value="-2800 0 2300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁墙2.mesh"/>
+    <Property name="position" value="-2800 0 1700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁柱子.mesh"/>
+    <Property name="position" value="-2800 0 1700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁书柜1.mesh"/>
+    <Property name="position" value="-2800 0 1100"/>
+    <Property name="orientation" value="-1.0123e-007 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁书柜2.mesh"/>
+    <Property name="position" value="-2800 0 1400"/>
+    <Property name="orientation" value="-2.91423e-008 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁书柜2.mesh"/>
+    <Property name="position" value="-2800 0 800"/>
+    <Property name="orientation" value="-2.91423e-008 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁柱子.mesh"/>
+    <Property name="position" value="-2800 0 400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁墙1.mesh"/>
+    <Property name="position" value="-2800 0 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁墙2.mesh"/>
+    <Property name="position" value="-2800 0 -600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁柱子.mesh"/>
+    <Property name="position" value="-2800 0 -600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁书柜1.mesh"/>
+    <Property name="position" value="-2800 0 -600"/>
+    <Property name="orientation" value="-1.0123e-007 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁书柜1.mesh"/>
+    <Property name="position" value="-2800 0 -1200"/>
+    <Property name="orientation" value="-1.0123e-007 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁书柜2.mesh"/>
+    <Property name="position" value="-2800 0 -900"/>
+    <Property name="orientation" value="-2.91423e-008 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁柱子.mesh"/>
+    <Property name="position" value="-2800 0 -1600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁柱子.mesh"/>
+    <Property name="position" value="-2800 0 -2600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁墙2.mesh"/>
+    <Property name="position" value="-2800 0 -2300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁柱子.mesh"/>
+    <Property name="position" value="-1700 700 3000"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁书柜2.mesh"/>
+    <Property name="position" value="-1300 700 3000"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁墙2.mesh"/>
+    <Property name="position" value="-2400 700 3000"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁书柜1.mesh"/>
+    <Property name="position" value="-1000 700 3000"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁柱子.mesh"/>
+    <Property name="position" value="-1000 700 3000"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁柱子.mesh"/>
+    <Property name="position" value="-2400 700 3000"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁墙1.mesh"/>
+    <Property name="position" value="-2800 0 -2600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁墙2.mesh"/>
+    <Property name="position" value="-1400 0 -2600"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁柱子.mesh"/>
+    <Property name="position" value="-2100 0 -2600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁墙2.mesh"/>
+    <Property name="position" value="-800 0 -2600"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁书柜1.mesh"/>
+    <Property name="position" value="100 0 -2600"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁柱子.mesh"/>
+    <Property name="position" value="-800 0 -2600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁中心柱子.mesh"/>
+    <Property name="position" value="-1429.95 0 -2844.91"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁中心柱子.mesh"/>
+    <Property name="position" value="1400 0 -2821.54"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁墙2.mesh"/>
+    <Property name="position" value="2800 0 2700"/>
+    <Property name="orientation" value="-1.32779e-007 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁墙1.mesh"/>
+    <Property name="position" value="2800 0 2100"/>
+    <Property name="orientation" value="7.37991e-008 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁柱子.mesh"/>
+    <Property name="position" value="2800 0 1700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁书柜2.mesh"/>
+    <Property name="position" value="2800 0 400"/>
+    <Property name="orientation" value="-1 0 3.72481e-009 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁书柜1.mesh"/>
+    <Property name="position" value="2800 0 700"/>
+    <Property name="orientation" value="-1 0 3.72481e-009 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁墙1.mesh"/>
+    <Property name="position" value="2800 0 400"/>
+    <Property name="orientation" value="8.38083e-008 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁柱子.mesh"/>
+    <Property name="position" value="2800 0 400"/>
+    <Property name="orientation" value="8.38083e-008 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁书柜1.mesh"/>
+    <Property name="position" value="2800 0 1300"/>
+    <Property name="orientation" value="-1 0 3.72481e-009 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁书柜2.mesh"/>
+    <Property name="position" value="2800 0 1000"/>
+    <Property name="orientation" value="-1 0 3.72481e-009 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁墙2.mesh"/>
+    <Property name="position" value="2800 0 -600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁柱子.mesh"/>
+    <Property name="position" value="2800 0 -600"/>
+    <Property name="orientation" value="8.38083e-008 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁书柜1.mesh"/>
+    <Property name="position" value="2800 0 -1600"/>
+    <Property name="orientation" value="-1 0 -7.42667e-009 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁书柜1.mesh"/>
+    <Property name="position" value="2800 0 -1000"/>
+    <Property name="orientation" value="-1 0 -1.45169e-008 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁书柜2.mesh"/>
+    <Property name="position" value="2800 0 -1300"/>
+    <Property name="orientation" value="-1 0 0 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁柱子.mesh"/>
+    <Property name="position" value="2800 0 -1600"/>
+    <Property name="orientation" value="8.38083e-008 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁柱子.mesh"/>
+    <Property name="position" value="2800 0 -2600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁墙2.mesh"/>
+    <Property name="position" value="2800 0 -2300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁墙1.mesh"/>
+    <Property name="position" value="2800 0 -2600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁柱子.mesh"/>
+    <Property name="position" value="2100 0 -2600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁墙2.mesh"/>
+    <Property name="position" value="2100 0 -2600"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁墙2.mesh"/>
+    <Property name="position" value="1500 0 -2600"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁柱子.mesh"/>
+    <Property name="position" value="800 0 -2600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁书柜2.mesh"/>
+    <Property name="position" value="-800 0 -2600"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁书柜2.mesh"/>
+    <Property name="position" value="-200 0 -2600"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁书柜2.mesh"/>
+    <Property name="position" value="400 0 -2600"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁书柜1.mesh"/>
+    <Property name="position" value="-500 0 -2600"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁书柜1.mesh"/>
+    <Property name="position" value="-2500 0 -2600"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁书柜1.mesh"/>
+    <Property name="position" value="2400 0 -2600"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁书柜2.mesh"/>
+    <Property name="position" value="2100 0 -2600"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁书柜2.mesh"/>
+    <Property name="position" value="-2800 0 -500"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁墙2.mesh"/>
+    <Property name="position" value="-2100 0 -600"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁书柜2.mesh"/>
+    <Property name="position" value="-2300 0 -700"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁柱子.mesh"/>
+    <Property name="position" value="-2100 0 -600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁书柜1.mesh"/>
+    <Property name="position" value="-2000 0 -700"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁书柜2.mesh"/>
+    <Property name="position" value="-2400 0 -500"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁书柜1.mesh"/>
+    <Property name="position" value="-2800 0 1700"/>
+    <Property name="orientation" value="-1.0123e-007 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁墙2.mesh"/>
+    <Property name="position" value="2800 0 -600"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁柱子.mesh"/>
+    <Property name="position" value="2100 0 -600"/>
+    <Property name="orientation" value="8.38083e-008 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁书柜2.mesh"/>
+    <Property name="position" value="2400 0 -500"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁书柜2.mesh"/>
+    <Property name="position" value="2100 0 -500"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁书柜2.mesh"/>
+    <Property name="position" value="2600 0 -700"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁中心柱子.mesh"/>
+    <Property name="position" value="1142.11 0 2542.59"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁中心柱子.mesh"/>
+    <Property name="position" value="-770.44 0 2526.38"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁书柜2.mesh"/>
+    <Property name="position" value="-1300 0 2700"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁书柜2.mesh"/>
+    <Property name="position" value="-500 0 2200"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁书柜2.mesh"/>
+    <Property name="position" value="1300 0 2200"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁中心柱子.mesh"/>
+    <Property name="position" value="-1400 -25.6185 -600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁中心柱子.mesh"/>
+    <Property name="position" value="1400 0 -600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁书柜1.mesh"/>
+    <Property name="position" value="600 0 2600"/>
+    <Property name="orientation" value="1 0 2.12058e-007 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁书柜1.mesh"/>
+    <Property name="position" value="-200 0 3000"/>
+    <Property name="orientation" value="-1.29279e-007 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁烛台.mesh"/>
+    <Property name="position" value="-2497 -1 2408"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.992157 0.192157 0.192157"/>
+    <Property name="position" value="-2597 199 2408"/>
+    <Property name="range" value="500"/>
+    <Property name="attenuation.linear" value="0.002"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="shidenglong01"/>
+    <Property name="position" value="-2500 220 2400"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.992157 0.192157 0.192157"/>
+    <Property name="position" value="2503 200 2408"/>
+    <Property name="range" value="500"/>
+    <Property name="attenuation.linear" value="0.002"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="shidenglong01"/>
+    <Property name="position" value="2600 221 2400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁烛台.mesh"/>
+    <Property name="position" value="2603 0 2408"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="shidenglong01"/>
+    <Property name="position" value="2657 221 -213"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.992157 0.192157 0.192157"/>
+    <Property name="position" value="2560 200 -205"/>
+    <Property name="range" value="500"/>
+    <Property name="attenuation.linear" value="0.002"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁烛台.mesh"/>
+    <Property name="position" value="2660 0 -205"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="shidenglong01"/>
+    <Property name="position" value="2651.62 222 -2406.72"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁烛台.mesh"/>
+    <Property name="position" value="2654.62 1 -2398.72"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.992157 0.192157 0.192157"/>
+    <Property name="position" value="2554.62 201 -2398.72"/>
+    <Property name="range" value="500"/>
+    <Property name="attenuation.linear" value="0.002"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="shidenglong01"/>
+    <Property name="position" value="-2600 223 -2400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁烛台.mesh"/>
+    <Property name="position" value="-2597 2 -2392"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.992157 0.192157 0.192157"/>
+    <Property name="position" value="-2697 -21 -2392"/>
+    <Property name="range" value="500"/>
+    <Property name="attenuation.linear" value="0.002"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁书柜2.mesh"/>
+    <Property name="position" value="-2800 0 -2600"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="shidenglong01"/>
+    <Property name="position" value="-2600 224 -900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁烛台.mesh"/>
+    <Property name="position" value="-2597 3 -892"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.992157 0.192157 0.192157"/>
+    <Property name="position" value="-2697 203 -892"/>
+    <Property name="range" value="500"/>
+    <Property name="attenuation.linear" value="0.002"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="shidenglong01"/>
+    <Property name="position" value="-2603 221 -308"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.992157 0.192157 0.192157"/>
+    <Property name="position" value="-2700 200 -300"/>
+    <Property name="range" value="500"/>
+    <Property name="attenuation.linear" value="0.002"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁烛台.mesh"/>
+    <Property name="position" value="-2600 0 -300"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.992157 0.192157 0.192157"/>
+    <Property name="position" value="303 203 -2292"/>
+    <Property name="range" value="500"/>
+    <Property name="attenuation.linear" value="0.002"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="shidenglong01"/>
+    <Property name="position" value="400 224 -2300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁烛台.mesh"/>
+    <Property name="position" value="403 3 -2292"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/小香炉.mesh"/>
+    <Property name="position" value="1360.3 0 -2194.14"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/小香炉.mesh"/>
+    <Property name="position" value="-1400 0 -2300"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yun001"/>
+    <Property name="position" value="1360.3 200 -2194.14"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yun001"/>
+    <Property name="position" value="-1400 200 -2200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁画1.mesh"/>
+    <Property name="position" value="2800 0 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁画2.mesh"/>
+    <Property name="position" value="2800 0 2200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁画3.mesh"/>
+    <Property name="position" value="-2800 0 2074.02"/>
+    <Property name="orientation" value="-7.34967e-008 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁画2.mesh"/>
+    <Property name="position" value="-1400 0 -2600"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/室内/书桌/青云书桌.mesh"/>
+    <Property name="position" value="200 0 -2200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/室内/其他/琴台.mesh"/>
+    <Property name="position" value="2610.74 0 225.121"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁书柜2.mesh"/>
+    <Property name="position" value="1200 0 -2500"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/室内/其他/书架.mesh"/>
+    <Property name="position" value="500 0 -2300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/室内/地毯/麻制地毯.mesh"/>
+    <Property name="position" value="200 0 -2300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/室内/大花瓶/官窑紫口颈瓶.mesh"/>
+    <Property name="position" value="0 0 -2300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/室内/画卷/雪景寒林图.mesh"/>
+    <Property name="position" value="-2754.95 188.418 -1860.99"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+    <Property name="scale" value="1.76 1.76 1.76"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁书柜2.mesh"/>
+    <Property name="position" value="-2731.62 0 -2050.01"/>
+    <Property name="orientation" value="-2.91423e-008 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/室内/画卷/寒林平野图.mesh"/>
+    <Property name="position" value="1761.36 145.86 -2541.34"/>
+    <Property name="scale" value="1.9 1.9 1.9"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/室内/画卷/多宝塔碑.mesh"/>
+    <Property name="position" value="1054.52 163.555 -2558.54"/>
+    <Property name="scale" value="1.8 1.8 1.8"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/室内/画卷/早春图.mesh"/>
+    <Property name="position" value="2749.61 118.509 -2120.87"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/室内/地毯/麻制地毯方.mesh"/>
+    <Property name="position" value="2600 0 -100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/室内/地毯/麻制地毯方.mesh"/>
+    <Property name="position" value="2600 0 100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/室内/地毯/麻制地毯方.mesh"/>
+    <Property name="position" value="2600 0 300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/室内/画卷/关山密雪图.mesh"/>
+    <Property name="position" value="-2755.97 185.271 -2"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+    <Property name="scale" value="1.9 1.9 1.9"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/室内/其他/书架.mesh"/>
+    <Property name="position" value="-141.096 0 -2396.83"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/室内/其他/书架.mesh"/>
+    <Property name="position" value="1549.72 0 2411.97"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/室内/其他/书架.mesh"/>
+    <Property name="position" value="524.432 0 2452.57"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁烛台.mesh"/>
+    <Property name="position" value="-1200 0 2500"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.992157 0.192157 0.192157"/>
+    <Property name="position" value="-1300 200 2500"/>
+    <Property name="range" value="500"/>
+    <Property name="attenuation.linear" value="0.002"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="shidenglong01"/>
+    <Property name="position" value="-1203 221 2492"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/室内/其他/书架.mesh"/>
+    <Property name="position" value="-2004.06 0 2369.32"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/室内/其他/书架.mesh"/>
+    <Property name="position" value="-2142.69 0 2378.93"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/室内/书桌/松木书桌.mesh"/>
+    <Property name="position" value="-2298.91 0 2550.82"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/室内/其他/书架.mesh"/>
+    <Property name="position" value="-2705.62 0 2443.54"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/室内/其他/佛龛.mesh"/>
+    <Property name="position" value="-2694.72 0 2322.34"/>
+    <Property name="orientation" value="0.705947 0 0.708266 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/室内/地毯/麻制地毯.mesh"/>
+    <Property name="position" value="-2295.82 0 2430.36"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁书柜2.mesh"/>
+    <Property name="position" value="-1800 0 2600"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/室内/花台/君子兰.mesh"/>
+    <Property name="position" value="-2700 0 2200"/>
+    <Property name="orientation" value="0.715176 0 0.698945 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/室内/花台/文竹.mesh"/>
+    <Property name="position" value="-2700 0 1900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/室内/花台/灯笼花.mesh"/>
+    <Property name="position" value="-2700 0 200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/室内/花台/灯笼花.mesh"/>
+    <Property name="position" value="-2700 0 -200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/室内/花台/君子兰.mesh"/>
+    <Property name="position" value="-2700 0 -1733.3"/>
+    <Property name="orientation" value="0.717464 0 0.696596 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/室内/花台/君子兰.mesh"/>
+    <Property name="position" value="-2700 0 -2000"/>
+    <Property name="orientation" value="0.717464 0 0.696596 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/室内/花台/文竹.mesh"/>
+    <Property name="position" value="2700 0 -1900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/室内/花台/文竹.mesh"/>
+    <Property name="position" value="2700 0 -2300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/室内/花台/灯笼花.mesh"/>
+    <Property name="position" value="2700 0 -300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/室内/花台/灯笼花.mesh"/>
+    <Property name="position" value="2700 0 1900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/室内/花台/灯笼花.mesh"/>
+    <Property name="position" value="2700 0 2500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/酒罐.mesh"/>
+    <Property name="position" value="-2444.84 0 2546.04"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/酒罐.mesh"/>
+    <Property name="position" value="-2177.22 0 2611.56"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/酒罐.mesh"/>
+    <Property name="position" value="-2242.35 0 2609.78"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="公用小建筑/南方野外水缸.mesh"/>
+    <Property name="position" value="-154.689 0 2532.31"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁烛台.mesh"/>
+    <Property name="position" value="-128.006 0 2374.44"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="shidenglong01"/>
+    <Property name="position" value="-131.006 221 2366.44"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.992157 0.192157 0.192157"/>
+    <Property name="position" value="-100 200 2400"/>
+    <Property name="range" value="500"/>
+    <Property name="attenuation.linear" value="0.002"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+</Scene>

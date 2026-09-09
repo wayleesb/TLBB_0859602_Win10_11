@@ -1,0 +1,164 @@
+<?xml version="1.0" ?>
+<GUILayout>
+	<Window Type="TLBB_MainFrame1" Name="SafeTime_Frame">
+		<Property Name="UnifiedPosition" Value="{{0.5,-200},{0.12,0}}" />
+		<Property Name="AbsoluteSize" Value="w:479.000000 h:358.000000" />
+		<Event Name="Hidden" Function="SafeTime_OnHide();" />
+		<Window Type="TLBB_DragTitle" Name="SafeTime_DragTitle">
+			<Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+			<Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+			<Property Name="DragTarget" Value="SafeTime_Frame" />
+			<Property Name="Font" Value="YouYuan11.25" />
+			<Property Name="HorzFormatting" Value="HorzCentred" />
+			<Property Name="VertFormatting" Value="VertCentred" />
+			<Property Name="Text" Value="#{INTERFACE_XML_SAFETIME_06}" />
+		</Window>
+		<Window Type="TLBB_ButtonHelp" Name="SafeTime_Help">
+			<Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+			<Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+			<Property Name="Text" Value="TLBB_ButtonHelp" />
+			<Event Name="Clicked" Function='Helper:GotoHelper(&quot;*SafeTime&quot;);' />
+		</Window>
+		<Window Type="TLBB_ButtonClose" Name="SafeTime_Close">
+			<Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+			<Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+			<Property Name="Text" Value="TLBB_ButtonClose" />
+			<Event Name="Clicked" Function="this:Hide();" />
+		</Window>
+		<Window Type="DefaultWindow" Name="SafeTime_Frame_Client">
+			<Property Name="AbsolutePosition" Value="x:6.000000 y:36.000000" />
+			<Property Name="UnifiedSize" Value="{{1.000000,-12.000000},{1.000000,-55.000000}" />
+			<Window Type="TLBB_SimpleMulitiTextFrame" Name="SafeTime_Text">
+				<Property Name="UnifiedPosition" Value="{{0.0,0.000000},{0.000000,22.000000}" />
+				<Property Name="UnifiedSize" Value="{{1.0,0.000000},{0.000000,153.000000}" />
+				<Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+				<Property Name="VertFormatting" Value="TopAligned" />
+				<Property Name="Text" Value="#{INTERFACE_XML_946}" />
+			</Window>
+			<Window Type="TLBB_Frame_Lace1" Name="SafeTime_Time_Frame">
+				<Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,175.000000}" />
+				<Property Name="UnifiedSize" Value="{{1.000000,0.000000},{0.000000,48.000000}" />
+				<Window Type="TLBB_SimpleText" Name="SafeTime_CurrentTime">
+					<Property Name="UnifiedPosition" Value="{{0.0,5.000000},{0.000000,5.000000}" />
+					<Property Name="UnifiedSize" Value="{{1.0,-10.000000},{0.000000,18.000000}" />
+					<Property Name="HorzFormatting" Value="HorzLeft" />
+					<Property Name="VertFormatting" Value="VertCentred" />
+					<Property Name="TextColor" Value="FFFFF263" />
+				</Window>
+				<Window Type="TLBB_SimpleText" Name="SafeTime_StopWatch_Text">
+					<Property Name="UnifiedPosition" Value="{{0.0,5.000000},{0.000000,25.000000}" />
+					<Property Name="UnifiedSize" Value="{{1.0,-10.000000},{0.000000,18.000000}" />
+					<Property Name="HorzFormatting" Value="HorzLeft" />
+					<Property Name="VertFormatting" Value="VertCentred" />
+					<Property Name="TextColor" Value="FFFFF263" />
+				</Window>
+				<Window Type="TLBB_StopWatch" Name="SafeTime_StopWatch">
+					<Property Name="UnifiedPosition" Value="{{0.0,161.000000},{0.000000,25.000000}" />
+					<Property Name="UnifiedSize" Value="{{0.0,40.000000},{0.000000,18.000000}" />
+					<Property Name="HorzFormatting" Value="HorzLeft" />
+					<Property Name="VertFormatting" Value="VertCentred" />
+					<Property Name="MouseHollow" Value="True" />
+					<Property Name="Text" Value="06:15" />
+				</Window>
+			</Window>
+      <Window Type="TLBB_Frame_Lace1" Name="SafeTime_Anniu">
+        <Property Name="UnifiedPosition" Value="{{0.0,0.000000},{0.000000,0.000000}" />
+        <Property Name="UnifiedSize" Value="{{1.0,0.000000},{0.000000,23.000000}" />
+        <Property Name="AlwaysOnTop" Value="true" />
+        <Window Type="TLBB_ButtonCheckForRMBShop" Name="SafeTime_AQtime">
+          <Property Name="UnifiedPosition" Value="{{1.000000,-375.000000},{0.000000,2.000000}" />
+          <Property Name="AbsoluteSize" Value="w:62.000000 h:19.000000" />
+          <Property Name="Text" Value="#{FDH_090112_02}" />
+		  <Property Name="CheckMode" Value="2" />
+        </Window>
+        <Window Type="TLBB_ButtonCheckForRMBShop" Name="SafeTime_Erjimima">
+          <Property Name="UnifiedPosition" Value="{{1.000000,-156.000000},{0.000000,2.000000}" />
+          <Property Name="AbsoluteSize" Value="w:62.000000 h:19.000000" />
+          <Property Name="Text" Value="#{FDH_090112_04}" />
+		  <Property Name="CheckMode" Value="2" />
+          <Event Name="MouseLButtonDown" Function="SafeTime_Erjimima_Clicked();" />
+        </Window>
+      </Window>
+			<Window Type="TLBB_SimpleText" Name="SafeTime_SetTime_Text">
+				<Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,222.000000}" />
+				<Property Name="UnifiedSize" Value="{{1.0,-10.000000},{0.000000,18.000000}" />
+				<Property Name="HorzFormatting" Value="HorzLeft" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="Text" Value="#{INTERFACE_XML_SAFETIME_04}" />
+			</Window>
+      <Window Type="TLBB_SimpleText" Name="SafeTime_SetTime_Text2">
+        <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,241.000000}" />
+        <Property Name="UnifiedSize" Value="{{1.0,-10.000000},{0.000000,18.000000}" />
+        <Property Name="HorzFormatting" Value="HorzLeft" />
+        <Property Name="VertFormatting" Value="VertCentred" />
+        <Property Name="TextColor" Value="FFFFF263" />
+        <Property Name="Text" Value="#{INTERFACE_XML_SAFETIME_10}" />
+      </Window>
+			<Window Type="DefaultWindow" Name="SafeTime_SetTime_Frame">
+				<Property Name="UnifiedPosition" Value="{{0.0,5.000000},{0.000000,262.000000}" />
+				<Property Name="UnifiedSize" Value="{{1.0,-10.000000},{0.000000,18.000000}" />
+				<Window Type="TLBB_SimpleText" Name="SafeTime_SetTime_InputText">
+					<Property Name="UnifiedPosition" Value="{{0.0,0.000000},{0.000000,0.000000}" />
+					<Property Name="UnifiedSize" Value="{{0.0,170.000000},{0.000000,18.000000}" />
+					<Property Name="HorzFormatting" Value="HorzLeft" />
+					<Property Name="VertFormatting" Value="VertCentred" />
+					<Property Name="TextColor" Value="FFFFF263" />
+					<Property Name="Text" Value="#{INTERFACE_XML_SAFETIME_03}" />
+				</Window>
+				<!--
+				<Window Type="TLBB_EditBoxNormal" Name="SafeTime_SetHour">
+					<Property Name="UnifiedPosition" Value="{{0.0,170.000000},{0.000000,0.000000}" />
+					<Property Name="UnifiedSize" Value="{{0.0,30.000000},{0.000000,18.000000}" />
+					<Property Name="MaxTextLength" Value="1" />
+					<Property Name="ValidationString" Value="[0-6]*" />
+					<Event   Name="MouseLClick" Function="SafeTime_ResetSelect(0);"  />		
+				</Window>
+				
+				<Window Type="TLBB_SimpleText" Name="SafeTime_SetTime_Hour">
+					<Property Name="UnifiedPosition" Value="{{0.0,205.000000},{0.000000,0.000000}" />
+					<Property Name="UnifiedSize" Value="{{0.0,30.000000},{0.000000,18.000000}" />
+					<Property Name="HorzFormatting" Value="LeftAligned" />
+					<Property Name="VertFormatting" Value="VertCentred" />
+					<Property Name="TextColor" Value="FFFFF263" />
+					<Property Name="Text" Value="#{INTERFACE_XML_SAFETIME_02}" />
+				</Window>
+				-->
+				<Window Type="TLBB_EditBoxNormal" Name="SafeTime_SetMin">
+					<Property Name="UnifiedPosition" Value="{{0.0,240.000000},{0.000000,0.000000}" />
+					<Property Name="UnifiedSize" Value="{{0.0,30.000000},{0.000000,18.000000}" />
+					<Property Name="MaxTextLength" Value="2" />
+					<Event   Name="TextChanged" Function="CheckIfOK();"  />		
+					<Event   Name="MouseLClick" Function="SafeTime_ResetSelect(1);"  />		
+					<Property Name="ValidationString" Value="[0-9]*" />
+				</Window>
+				<Window Type="TLBB_SimpleText" Name="SafeTime_SetTime_Min">
+					<Property Name="UnifiedPosition" Value="{{0.0,275.000000},{0.000000,0.000000}" />
+					<Property Name="UnifiedSize" Value="{{0.0,30.000000},{0.000000,18.000000}" />
+					<Property Name="HorzFormatting" Value="LeftAligned" />
+					<Property Name="VertFormatting" Value="VertCentred" />
+					<Property Name="TextColor" Value="FFFFF263" />
+					<Property Name="Text" Value="#{INTERFACE_XML_SAFETIME_01}" />
+				</Window>
+			</Window>
+			<Window Type="TLBB_ButtonCommon" Name="SafeTime_OK">
+				<Property Name="UnifiedPosition" Value="{{1.000000,-80.000000},{1.000000,-20.000000}" />
+				<Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+				<Event Name="Clicked" Function="SafeTime_OK_Click();" />
+				<Property Name="Text" Value="#{INTERFACE_XML_557}" />
+			</Window>
+      <Window Type="TLBB_ButtonCommon" Name="SafeTime_web">
+        <Property Name="UnifiedPosition" Value="{{1.000000,-465.000000},{1.000000,-20.000000}" />
+        <Property Name="AbsoluteSize" Value="w:62.000000 h:20.000000" />
+        <Property Name="Text" Value="#{GFFD_20080422}" />
+        <Event Name="Clicked" Function="SafeTime_gotoWeb();" />	
+      </Window>
+			<Window Type="TLBB_ButtonCommon" Name="SafeTime_Cancel">
+				<Property Name="UnifiedPosition" Value="{{1.000000,-40.000000},{1.000000,-20.000000}" />
+				<Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+				<Event Name="Clicked" Function="SafeTime_Close();" />		
+				<Property Name="Text" Value="#{INTERFACE_XML_542}" />
+			</Window>
+		</Window>
+	</Window>
+</GUILayout>

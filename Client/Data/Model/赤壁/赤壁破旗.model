@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="赤壁破旗.frame" />
+    <entity mesh="赤壁破旗干.mesh" node="赤壁破旗干">
+        <offset>
+            <translate x="236.279" y="-348.227" z="-56.8264" />
+        </offset>
+    </entity>
+    <entity mesh="赤壁破旗旗.mesh" />
+</model>

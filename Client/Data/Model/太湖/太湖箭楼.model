@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="太湖箭楼.frame" />
+    <entity mesh="太湖箭楼.mesh" node="太湖箭楼" />
+    <entity mesh="太湖箭楼灯笼02.mesh" />
+    <entity mesh="太湖箭楼灯笼01.mesh" />
+</model>

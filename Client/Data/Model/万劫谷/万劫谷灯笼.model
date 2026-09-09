@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="万劫谷灯笼.frame" />
+    <entity mesh="万劫谷灯笼灯.mesh" node="万劫谷灯笼灯">
+        <offset>
+            <translate x="52.3736" y="-343.46" z="1.3122" />
+        </offset>
+    </entity>
+    <entity mesh="万劫谷灯笼杆子.mesh" node="万劫谷灯笼杆子" />
+</model>

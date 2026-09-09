@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<Imageset Name="Icons01" Imagefile="Icons/Icons01.jpg" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+	<Image Name="Icons01_1" XPos="0" YPos="0" Width="64" Height="64" />
+	<Image Name="Icons01_2" XPos="64" YPos="0" Width="64" Height="64" />
+	<Image Name="Icons01_3" XPos="128" YPos="0" Width="64" Height="64" />
+	<Image Name="Icons01_4" XPos="192" YPos="0" Width="64" Height="64" />
+	<Image Name="Icons01_5" XPos="0" YPos="64" Width="64" Height="64" />
+	<Image Name="Icons01_6" XPos="64" YPos="64" Width="64" Height="64" />
+	<Image Name="Icons01_7" XPos="128" YPos="64" Width="64" Height="64" />
+	<Image Name="Icons01_8" XPos="192" YPos="64" Width="64" Height="64" />
+	<Image Name="Icons01_9" XPos="0" YPos="128" Width="64" Height="64" />
+	<Image Name="Icons01_10" XPos="64" YPos="128" Width="64" Height="64" />
+	<Image Name="Icons01_11" XPos="128" YPos="128" Width="64" Height="64" />
+	<Image Name="Icons01_12" XPos="192" YPos="128" Width="64" Height="64" />
+	<Image Name="Icons01_13" XPos="0" YPos="192" Width="64" Height="64" />
+	<Image Name="Icons01_14" XPos="64" YPos="192" Width="64" Height="64" />
+	<Image Name="Icons01_15" XPos="128" YPos="192" Width="64" Height="64" />
+	<Image Name="Icons01_16" XPos="192" YPos="192" Width="64" Height="64" />
+</Imageset>

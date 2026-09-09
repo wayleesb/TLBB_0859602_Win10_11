@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="丐帮旗帜.frame" />
+    <entity mesh="丐帮旗竿.mesh" node="丐帮旗竿" />
+    <entity mesh="丐帮旗.mesh" />
+</model>

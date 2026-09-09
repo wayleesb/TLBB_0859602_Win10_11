@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="DefaultWindow" Name="SelectServerQuest_Frame">
+        <Property Name="AlwaysOnTop" Value="True" />
+        <Property Name="Position" Value="x:0.0 y:0.0" />
+        <Property Name="Size" Value="w:1.0 h:1.0" />
+		<Event Name="Hidden" Function="SelectServerQuest_Frame_OnHiden();" />
+        <Window Type="TLBB_Frame2" Name="SelectServerQuest_Frame_sub">
+            <Property Name="UnifiedPosition" Value="{{0.500000,-173.000000},{0.500000,-118.000000}" />
+            <Property Name="UnifiedSize" Value="{{0.000000,346.000000},{0.000000,128.000000}" />
+            <Window Type="TLBB_SelfWindow" Name="SelectServerQuest_InfoWindow">
+                <Property Name="AbsolutePosition" Value="x:15.000000 y:22.000000" />
+                <Property Name="AbsoluteSize" Value="w:0.000000 h:0.000000" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Property Name="MaxWidth" Value="326" />
+                <Property Name="MinHeight" Value="25" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="SelectServerQuest_Button1">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-85.000000},{1.000000,-25.000000}" />
+                <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_557}" />
+                <Event Name="Clicked" Function="SelectServerQuest_Bn1Click();" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="SelectServerQuest_Button2">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-45.000000},{1.000000,-25.000000}" />
+                <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_542}" />
+                <Event Name="Clicked" Function="SelectServerQuest_Bn2Click();" />
+            </Window>
+            <Window Type="TLBB_StopWatch" Name="SelectServerQuest_Time_Text">
+                <Property Name="UnifiedPosition" Value="{{0.000000,110.000000},{1.000000,-25.000000}" />
+                <Property Name="AbsoluteSize" Value="w:60.000000 h:20.000000" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Event Name="ReachedZero" Function="SelectServerQuest_TimeOut();" />
+                <Property Name="Text" Value="00:00" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

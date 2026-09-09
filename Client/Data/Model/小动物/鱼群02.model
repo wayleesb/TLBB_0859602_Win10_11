@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="鱼群02.frame" />
+    <entity mesh="鱼群02.mesh" />
+    <entity mesh="鱼群02点击框.mesh" node="鱼群02点击框" />
+</model>

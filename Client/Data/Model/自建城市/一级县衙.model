@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="一级县衙.frame" />
+    <entity mesh="一级县衙灯笼2.mesh" />
+    <entity mesh="一级县衙灯笼1.mesh" />
+    <entity mesh="一级县衙.mesh" node="一级县衙" />
+</model>

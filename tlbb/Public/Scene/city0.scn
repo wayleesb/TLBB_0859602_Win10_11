@@ -1,0 +1,6 @@
+[System]
+navmapname=city0.nav
+monsterfile=city0_monster.ini
+patrolpoint=city0_patrolpoint.ini
+eventfile=city0_area.ini
+petfile=city0_pet.ini

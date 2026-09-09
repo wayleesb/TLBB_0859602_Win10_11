@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<Imageset Name="CommonFrame6" Imagefile="Common/tga_CommonFrame6.dds" NativeHorzRes="1024" NativeVertRes="768"	AutoScaled="false">
+  <Image Name="TuiJian_Left_Normal" XPos="11" YPos="8" Width="32" Height="25" />
+  <Image Name="TuiJian_Mid_Normal" XPos="43" YPos="8" Width="17" Height="25" />
+  <Image Name="TuiJian_Right_Normal" XPos="155" YPos="8" Width="34" Height="25" />
+  <Image Name="TuiJian_Left_Hover" XPos="11" YPos="37" Width="32" Height="25" />
+  <Image Name="TuiJian_Mid_Hover" XPos="43" YPos="37" Width="17" Height="25" />
+  <Image Name="TuiJian_Right_Hover" XPos="155" YPos="37" Width="34" Height="25" />
+  <Image Name="TuiJianFuWuQi" XPos="199" YPos="8" Width="22" Height="85" />
+  <Image Name="DaQvLieBiao" XPos="224" YPos="8" Width="22" Height="69" />
+
+  <Image Name="NewLock" XPos="226" YPos="89" Width="18" Height="14" />
+
+  <Image Name="Mi" XPos="226" YPos="111" Width="24" Height="23" />
+  <Image Name="MiWhite" XPos="226" YPos="141" Width="24" Height="23" />
+  <Image Name="MiRed" XPos="226" YPos="170" Width="24" Height="23" />
+
+  <Image Name="Xiaolaba_Normal" XPos="199" YPos="99" Width="18" Height="17" />
+  <Image Name="Xiaolaba_Hover" XPos="199" YPos="118" Width="18" Height="17" />
+  <Image Name="Xiaolaba_Pushed" XPos="199" YPos="136" Width="18" Height="17" />
+
+  <Image Name="JingTanHao_Pushed" XPos="226" YPos="200" Width="24" Height="23" />
+
+  <Image Name="Anquan_Normal" XPos="121" YPos="74" Width="17" Height="16" />
+  <Image Name="Anquan_Hover" XPos="144" YPos="70" Width="24" Height="23" />
+  <Image Name="Anquan_Pushed" XPos="170" YPos="70" Width="24" Height="23" />
+
+  <Image Name="TuJian_Normal" XPos="26" YPos="70" Width="25" Height="25" />
+  <Image Name="TuJian_Hover" XPos="53" YPos="70" Width="25" Height="25" />
+  <Image Name="TuJian_Pushed" XPos="80" YPos="70" Width="25" Height="25" />
+
+  <Image Name="PetJian_Normal" XPos="108" YPos="105" Width="26" Height="25" />
+  <Image Name="PetJian_Hover" XPos="135" YPos="105" Width="26" Height="25" />
+  <Image Name="PetJian_Pushed" XPos="162" YPos="105" Width="26" Height="25" />
+
+  <Image Name="ChannelTongMeng_Normal" XPos="6" YPos="230" Width="17" Height="17" />
+  <Image Name="ChannelTongMeng_Hover" XPos="6" YPos="213" Width="17" Height="17" />
+  <Image Name="ChannelTongMeng_Pushed" XPos="6" YPos="197" Width="17" Height="17" />
+  <Image Name="ChannelTongMeng_Disable" XPos="6" YPos="179" Width="17" Height="17" />
+
+  <Image Name="Green" XPos = "97" YPos= "226" Width="150" Height="20" />
+  <Image Name="Red" XPos = "70" YPos= "198" Width="150" Height="20" />
+  
+  <Image Name="ZhengIcon_A1" XPos="96" YPos="167" Width="30" Height="30" />
+  <Image Name="ZhengIcon_A2" XPos="129" YPos="167" Width="30" Height="30" />
+  <Image Name="ZhengIcon_A3" XPos="162" YPos="167" Width="30" Height="30" />
+  <Image Name="ZhengIcon_A4" XPos="194" YPos="167" Width="30" Height="30" />
+  
+ 	<Image Name="ZhengIcon_B1" XPos="103" YPos="140" Width="20" Height="20" />
+  <Image Name="ZhengIcon_B2" XPos="127" YPos="140" Width="20" Height="20" />
+  <Image Name="ZhengIcon_B3" XPos="151" YPos="140" Width="20" Height="20" />
+  <Image Name="ZhengIcon_B4" XPos="175" YPos="140" Width="20" Height="20" />
+  
+</Imageset>

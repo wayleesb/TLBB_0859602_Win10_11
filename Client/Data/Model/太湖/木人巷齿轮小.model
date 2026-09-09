@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="木人巷齿轮小.frame" />
+    <entity mesh="木人巷齿轮小.mesh" node="木人巷齿轮小">
+        <offset>
+            <translate x="-1.09278e-006" y="497.388" z="7.11645e-014" />
+        </offset>
+    </entity>
+    <entity mesh="木人巷齿轮小转.mesh" node="木人巷齿轮小转">
+        <offset>
+            <translate x="3.8147e-005" y="-25" z="7.11645e-014" />
+        </offset>
+    </entity>
+</model>

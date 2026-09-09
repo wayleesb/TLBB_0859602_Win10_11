@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame1" Name="GuildLeagueCreate">
+        <Property Name="UnifiedPosition" Value="{{0.5,-128},{0.4,-128}}" />
+        <Property Name="AbsoluteSize" Value="w:256 h:256" />
+        <Window Type="TLBB_DragTitle" Name="GuildLeagueCreate_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="GuildLeagueCreate" />
+            <Window Type="TLBB_SimpleText" Name="GuildLeagueCreate_PageHeader">
+                <Property Name="Position" Value="x:0.0 y:0.0" />
+                <Property Name="Size" Value="w:1.0 h:1.0" />
+                <Property Name="Font" Value="YouYuan11.25" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="Text" Value="#{TM_20080318_18}" />
+            </Window>
+        </Window>
+        <Window Type="TLBB_ButtonHelp" Name="GuildLeagueCreate_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Property Name="Text" Value="TLBB_ButtonHelp" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*GuildLeagueCreate&quot;);' />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="GuildLeagueCreate_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Property Name="Text" Value="TLBB_ButtonClose" />
+            <Event Name="Clicked" Function="this:Hide();" />
+        </Window>
+        <Window Type="DefaultWindow" Name="GuildLeagueCreate_Function_Frame">
+            <Property Name="AbsolutePosition" Value="x:7.000000 y:36.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-13.000000},{1.000000,-55.000000}" />
+            <Window Type="TLBB_SimpleText" Name="GuildLeagueCreate_Text1">
+                <Property Name="Position" Value="x:0.02 y:0.05" />
+                <Property Name="Size" Value="w:0.96 h:0.12" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{TM_20080318_19}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="GuildLeagueCreate_Text2">
+                <Property Name="Position" Value="x:0.016 y:0.2" />
+                <Property Name="UnifiedSize" Value="{{0.32,0.000000},{0.000000,20.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{TM_20080318_20}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_EditBoxNormal" Name="GuildLeagueCreate_InputName">
+                <Property Name="Position" Value="x:0.44 y:0.2" />
+                <Property Name="UnifiedSize" Value="{{0.45,2.000000},{0.000000,20.000000}" />
+                <Property Name="MaxTextLength" Value="12" />
+                <Property Name="Text" Value="#{INTERFACE_XML_898}" />
+               	<Event Name="MouseClick" Function="GuildLeagueCreate_InputName_OnMouseClick()" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="GuildLeagueCreate_Text3">
+                <Property Name="Position" Value="x:0.02 y:0.35" />
+                <Property Name="UnifiedSize" Value="{{0.4,0.000000},{0.000000,20.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{TM_20080318_21}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_MultiIMEEditBox" Name="GuildLeagueCreate_InputDesc">
+                <Property Name="Position" Value="x:0.02 y:0.45" />
+                <Property Name="UnifiedSize" Value="{{0.96,0.000000},{0.000000,85.000000}" />
+                <Property Name="MaxTextLength" Value="60" />
+            </Window>
+            <Window Type="TLBB_Frame_Lace5" Name="GuildLeagueCreate_Blank">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-100.000000},{0.000000,20.000000}" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="GuildLeagueCreate_Accept">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-100.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:60.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_189}" />
+                <Event Name="Clicked" Function="GuildLeagueCreate_DoCreate();" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="GuildLeagueCreate_Cancel">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-40.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_542}" />
+                <Event Name="Clicked" Function="this:Hide();" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

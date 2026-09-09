@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="DefaultWindow" Name="LogOnlist_Frame_Background">
+        <Property Name="Position" Value="x:0.0 y:0.0" />
+        <Property Name="Size" Value="w:1.0 h:1.0" />
+        <Window Type="TLBB_MainFrame1" Name="LogOnlist_Frame">
+            <Property Name="AbsolutePosition" Value="x:640.000000 y:120.000000" />
+            <Property Name="UnifiedSize" Value="{{0.000000,128.000000},{0.000000,292.000000}" />
+            <Window Type="TLBB_ButtonHelp" Name="LogOnlist_Help">
+                <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+                <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+                <Property Name="Text" Value="TLBB_ButtonHelp" />
+                <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*LogonList&quot;);' />
+            </Window>
+            <Window Type="TLBB_ButtonClose" Name="LogOnlist_Close">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+                <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+                <Property Name="Text" Value="TLBB_ButtonClose" />
+                <Event Name="Clicked" Function="this:Hide();" />
+            </Window>
+            <Window Type="TLBB_DragTitle" Name="LogOnlist_PageHeader_Name">
+                <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#gFF0FA0" />
+                <Property Name="Font" Value="YouYuan11.25" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="DragTarget" Value="LogOnlist_Frame" />
+            </Window>
+            <Window Type="DefaultWindow" Name="LogOnlist_Frame_Client">
+                <Property Name="AbsolutePosition" Value="x:7.000000 y:36.000000" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-13.000000},{1.000000,-55.000000}" />
+                <Window Type="TLBB_ListBoxCommon" Name="LogOnlist_List">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,0.000000}" />
+                    <Property Name="UnifiedSize" Value="{{1.000000,0.000000},{0.000000,155.000000}" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="LogOnlist_TargetInfo">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,155.000000}" />
+                    <Property Name="UnifiedSize" Value="{{1.000000,0.000000},{0.000000,60.000000}" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                    <Property Name="VertFormatting" Value="TopAligned" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_ButtonCommon" Name="LogOnlist_Choose_Button">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-20.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_797}" />
+                    <Event Name="Clicked" Function="LogOnlist_Choose_Click();" />
+                </Window>
+                <Window Type="TLBB_Frame_Lace5" Name="LogOnlist_Blank">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,40.000000},{1.000000,-20.000000}" />
+                    <Property Name="UnifiedSize" Value="{{1.000000,-80.000000},{0.000000,20.000000}" />
+                </Window>
+                <Window Type="TLBB_ButtonCommon" Name="LogOnlist_Refuse_Button">
+                    <Property Name="UnifiedPosition" Value="{{1.000000,-40.000000},{1.000000,-20.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_267}" />
+                    <Event Name="Clicked" Function="LogOnlist_Refuse_Click();" />
+                </Window>
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

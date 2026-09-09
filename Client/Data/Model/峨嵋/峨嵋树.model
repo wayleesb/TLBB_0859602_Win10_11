@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="峨嵋树.frame" />
+    <entity mesh="峨嵋树铃01.mesh" node="峨嵋树铃01">
+        <offset>
+            <translate x="124.313" y="-337.33" z="-52.2753" />
+        </offset>
+    </entity>
+    <entity mesh="峨嵋树绳.mesh" node="峨嵋树绳" />
+    <entity mesh="峨嵋树铃04.mesh" node="峨嵋树铃04">
+        <offset>
+            <translate x="95.0641" y="-405.13" z="124.543" />
+        </offset>
+    </entity>
+    <entity mesh="峨嵋树铃03.mesh" node="峨嵋树铃03">
+        <offset>
+            <translate x="95.0641" y="-318.188" z="124.543" />
+        </offset>
+    </entity>
+    <entity mesh="峨嵋树铃02.mesh" node="峨嵋树铃02">
+        <offset>
+            <translate x="95.0641" y="-224.608" z="124.543" />
+        </offset>
+    </entity>
+    <entity mesh="峨嵋树铃05.mesh" node="峨嵋树铃05">
+        <offset>
+            <translate x="174.43" y="-431.341" z="13.5549" />
+        </offset>
+    </entity>
+    <entity mesh="峨嵋树铃08.mesh" node="峨嵋树铃08">
+        <offset>
+            <translate x="55.3142" y="-404.85" z="-158.92" />
+        </offset>
+    </entity>
+    <entity mesh="峨嵋树铃07.mesh" node="峨嵋树铃07">
+        <offset>
+            <translate x="55.3142" y="-308.579" z="-158.92" />
+        </offset>
+    </entity>
+    <entity mesh="峨嵋树铃06.mesh" node="峨嵋树铃06">
+        <offset>
+            <translate x="55.3142" y="-207.105" z="-158.92" />
+        </offset>
+    </entity>
+    <entity mesh="峨嵋树铃10.mesh" node="峨嵋树铃10">
+        <offset>
+            <translate x="-116.551" y="-330.25" z="-98.2093" />
+        </offset>
+    </entity>
+    <entity mesh="峨嵋树铃09.mesh" node="峨嵋树铃09">
+        <offset>
+            <translate x="-116.551" y="-227.368" z="-98.2093" />
+        </offset>
+    </entity>
+    <entity mesh="峨嵋树铃12.mesh" node="峨嵋树铃12">
+        <offset>
+            <translate x="-116.551" y="-407.349" z="63.8838" />
+        </offset>
+    </entity>
+    <entity mesh="峨嵋树铃13.mesh" node="峨嵋树铃13">
+        <offset>
+            <translate x="-116.551" y="-449.343" z="-38.0511" />
+        </offset>
+    </entity>
+    <entity mesh="峨嵋树铃14.mesh" node="峨嵋树铃14">
+        <offset>
+            <translate x="-59.4436" y="-434.655" z="-158.92" />
+        </offset>
+    </entity>
+    <entity mesh="峨嵋树铃11.mesh" node="峨嵋树铃11">
+        <offset>
+            <translate x="-59.4437" y="-335.497" z="-158.92" />
+        </offset>
+    </entity>
+</model>

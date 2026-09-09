@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame1" Name="Research_Frame">
+        <Property Name="UnifiedPosition" Value="{{0.0,256},{0.12,0}}" />
+        <Property Name="AbsoluteSize" Value="w:360 h:300" />
+        <Window Type="TLBB_DragTitle" Name="Research_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="Research_Frame" />
+            <Window Type="TLBB_SimpleText" Name="Research_PageHeader">
+                <Property Name="Position" Value="x:0.0 y:0.0" />
+                <Property Name="Size" Value="w:1.0 h:1.0" />
+                <Property Name="Font" Value="YouYuan11.25" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Property Name="Text" Value="#{INTERFACE_XML_29}" />
+            </Window>
+        </Window>
+        <Window Type="TLBB_ButtonHelp" Name="Research_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Property Name="Text" Value="TLBB_ButtonHelp" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*Research&quot;);' />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="Research_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Property Name="Text" Value="TLBB_ButtonClose" />
+            <Event Name="Clicked" Function="this:Hide();" />
+        </Window>
+        <Window Type="DefaultWindow" Name="Research_Function_Frame">
+            <Property Name="AbsolutePosition" Value="x:7.000000 y:36.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-13.000000},{1.000000,-55.000000}" />
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="Research_Text1">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,0.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.5,0.000000},{0.000000,20.000000}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Property Name="Text" Value="" />
+                <Property Name="TextColor" Value="FFFFF263" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="Research_Text2">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,20.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.5,0.000000},{0.000000,20.000000}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Property Name="Text" Value="#{INTERFACE_XML_228}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="Research_Text3">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,40.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.5,0.000000},{0.000000,20.000000}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Property Name="Text" Value="#{INTERFACE_XML_131}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+            </Window>
+            <Window Type="TLBB_Frame_Lace1" Name="Research_Bk">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,60.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.5,0.000000},{0.000000,120.000000}" />
+                <Window Type="TLBB_SimpleText" Name="Research_Text4">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,4.000000}" />
+                    <Property Name="UnifiedSize" Value="{{0.95,0.000000},{0.000000,18.000000}" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_296}" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="Research_Text5">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,23.000000}" />
+                    <Property Name="UnifiedSize" Value="{{0.95,0.000000},{0.000000,18.000000}" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_480}" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="Research_Text6">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,42.000000}" />
+                    <Property Name="UnifiedSize" Value="{{0.95,0.000000},{0.000000,18.000000}" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_596}" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="Research_Text7">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,61.000000}" />
+                    <Property Name="UnifiedSize" Value="{{0.95,0.000000},{0.000000,18.000000}" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_311}" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="Research_Text8">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,80.000000}" />
+                    <Property Name="UnifiedSize" Value="{{0.95,0.000000},{0.000000,18.000000}" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_404}" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="Research_Text9">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,99.000000}" />
+                    <Property Name="UnifiedSize" Value="{{0.95,0.000000},{0.000000,18.000000}" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_421}" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_Frame_Lace1" Name="Research_Bk2">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,180.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.5,0.000000},{0.000000,42.000000}" />
+                <Window Type="TLBB_SimpleText" Name="Research_Text10">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,4.000000}" />
+                    <Property Name="UnifiedSize" Value="{{0.95,0.000000},{0.000000,18.000000}" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_484}" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="Research_Text11">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,22.000000}" />
+                    <Property Name="UnifiedSize" Value="{{0.95,0.000000},{0.000000,18.000000}" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_809}" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_ListBoxCommon" Name="Research_List">
+                <Property Name="Position" Value="x:0.5 y:0.0" />
+                <Property Name="UnifiedSize" Value="{{0.5,0.000000},{0.000000,100.000000}" />
+                <Event Name="ItemSelectionChanged" Function="City_Research_List_Selected();" />
+            </Window>
+            <Window Type="DefaultWindow" Name="Research_Bk3">
+                <Property Name="UnifiedPosition" Value="{{0.5,0.000000},{0.000000,100.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.5,0.000000},{0.000000,62.000000}" />
+                <Window Type="TLBB_ActionButton" Name="Research_Item1">
+                    <Property Name="UnifiedPosition" Value="{{0.5,-77.000000},{0.000000,4.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                    <Property Name="DraggingEnabled" Value="False" />
+                    <Event Name="Clicked" Function="City_Research_Act_Clicked(1);" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="Research_Item2">
+                    <Property Name="UnifiedPosition" Value="{{0.5,-37.000000},{0.000000,4.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                    <Property Name="DraggingEnabled" Value="False" />
+                    <Event Name="Clicked" Function="City_Research_Act_Clicked(2);" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="Research_Item3">
+                    <Property Name="UnifiedPosition" Value="{{0.5,3.000000},{0.000000,4.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                    <Property Name="DraggingEnabled" Value="False" />
+                    <Event Name="Clicked" Function="City_Research_Act_Clicked(3);" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="Research_Item4">
+                    <Property Name="UnifiedPosition" Value="{{0.5,43.000000},{0.000000,4.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                    <Property Name="DraggingEnabled" Value="False" />
+                    <Event Name="Clicked" Function="City_Research_Act_Clicked(4);" />
+                </Window>
+                <Window Type="TLBB_ButtonCommon" Name="Research_UpPage">
+                    <Property Name="UnifiedPosition" Value="{{0.5,-65.000000},{0.000000,39.000000}" />
+                    <Property Name="UnifiedSize" Value="{{0.0,60.000000},{0.000000,20.000000}" />
+                    <Event Name="Clicked" Function="City_Research_UpPage();" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_499}" />
+                </Window>
+                <Window Type="TLBB_ButtonCommon" Name="Research_DownPage">
+                    <Property Name="UnifiedPosition" Value="{{0.5,5.000000},{0.000000,39.000000}" />
+                    <Property Name="UnifiedSize" Value="{{0.0,60.000000},{0.000000,20.000000}" />
+                    <Event Name="Clicked" Function="City_Research_DownPage();" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_325}" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_Frame_Lace1" Name="Research_Bk4">
+                <Property Name="UnifiedPosition" Value="{{0.5,0.000000},{0.000000,160.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.5,0.000000},{0.000000,62.000000}" />
+                <Window Type="TLBB_SimpleText" Name="Research_Text12">
+                    <Property Name="UnifiedPosition" Value="{{0.0,5.000000},{0.000000,4.000000}" />
+                    <Property Name="UnifiedSize" Value="{{0.95,0.000000},{0.000000,18.000000}" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_484}" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="Research_Text13">
+                    <Property Name="UnifiedPosition" Value="{{0.0,5.000000},{0.000000,22.000000}" />
+                    <Property Name="UnifiedSize" Value="{{0.95,0.000000},{0.000000,18.000000}" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_881}" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="Research_Text15">
+                    <Property Name="UnifiedPosition" Value="{{0.0,5.000000},{0.000000,40.000000}" />
+                    <Property Name="UnifiedSize" Value="{{0.95,0.000000},{0.000000,18.000000}" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_573}" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="Research_Text14">
+                <Property Name="UnifiedPosition" Value="{{0.7,0.000000},{0.000000,200.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.3,0.000000},{0.000000,20.000000}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Property Name="Text" Value="" />
+                <Property Name="TextColor" Value="FFFFF263" />
+            </Window>
+            <Window Type="TLBB_Frame_Lace5" Name="Research_Blank">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-120.000000},{0.000000,20.000000}" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="Research_Degrade">
+                <Property Name="UnifiedPosition" Value="{{1.0,-120.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,60.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_808}" />
+                <Event Name="Clicked" Function="City_Research_Do();" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="Research_Destory">
+                <Property Name="UnifiedPosition" Value="{{1.0,-60.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,60.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_873}" />
+                <Event Name="Clicked" Function="City_Research_Stop();" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

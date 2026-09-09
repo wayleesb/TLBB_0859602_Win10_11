@@ -1,0 +1,206 @@
+<?xml version="1.0" ?>
+<GUILayout>
+	<Window Type="DefaultWindow" Name="MainMenuBar_2_Frame">
+    <Property Name="UnifiedPosition" Value="{{0.500000,-178.000000},{1.000000,-102.000000}" />
+    <Property Name="AbsoluteSize" Value="w:356.000000 h:32.000000" />
+		<Window Type="TLBB_Animate" Name="MainMenuBar_2_Button_Action1_Mask">
+			<Property Name="Position" Value="x:0.0 y:0.0" />
+			<Property Name="Size" Value="w:0.089887640449 h:1.0" />
+			<Property Name="Animate" Value="CoolDownEnd2" />
+			<Property Name="MouseHollow" Value="true" />
+			<Property Name="MouseMoveHollow" Value="true" />
+			<Property Name="MouseLButtonHollow" Value="true" />
+			<Property Name="MouseRButtonHollow" Value="true" />
+			<Property Name="AlwaysOnTop" Value="True" />
+		</Window>
+		<Window Type="TLBB_ActionButtonNULL" Name="MainMenuBar_2_Button_Action1">
+			<Property Name="Position" Value="x:0.0 y:0.0" />
+			<Property Name="Size" Value="w:0.089887640449 h:1.0" />
+			<Property Name="Empty" Value="True" />
+			<Property Name="DraggingEnabled" Value="True" />
+			<Property Name="DragAcceptName" Value="M30" />
+			<Event Name="Clicked" Function="MainMenuBar_2_Clicked(31);" />
+			<Event Name="RBClicked" Function="MainMenuBar_2_Clicked(31);" />
+		</Window>
+
+		<Window Type="TLBB_Animate" Name="MainMenuBar_2_Button_Action2_Mask">
+			<Property Name="Position" Value="x:0.101123595 y:0.0" />
+			<Property Name="Size" Value="w:0.089887640449 h:1.0" />
+			<Property Name="Animate" Value="CoolDownEnd2" />
+			<Property Name="MouseHollow" Value="true" />
+			<Property Name="MouseMoveHollow" Value="true" />
+			<Property Name="MouseLButtonHollow" Value="true" />
+			<Property Name="MouseRButtonHollow" Value="true" />
+			<Property Name="AlwaysOnTop" Value="True" />
+		</Window>
+		<Window Type="TLBB_ActionButtonNULL" Name="MainMenuBar_2_Button_Action2">
+			<Property Name="Position" Value="x:0.101123595 y:0.0" />
+			<Property Name="Size" Value="w:0.089887640449 h:1.0" />
+			<Property Name="Empty" Value="True" />
+			<Property Name="DraggingEnabled" Value="True" />
+			<Property Name="DragAcceptName" Value="M31" />
+			<Event Name="Clicked" Function="MainMenuBar_2_Clicked(32);" />
+			<Event Name="RBClicked" Function="MainMenuBar_2_Clicked(32);" />
+		</Window>
+
+		<Window Type="TLBB_Animate" Name="MainMenuBar_2_Button_Action3_Mask">
+			<Property Name="Position" Value="x:0.20224719 y:0.0" />
+			<Property Name="Size" Value="w:0.089887640449 h:1.0" />
+			<Property Name="Animate" Value="CoolDownEnd2" />
+			<Property Name="MouseHollow" Value="true" />
+			<Property Name="MouseMoveHollow" Value="true" />
+			<Property Name="MouseLButtonHollow" Value="true" />
+			<Property Name="MouseRButtonHollow" Value="true" />
+			<Property Name="AlwaysOnTop" Value="True" />
+		</Window>
+		<Window Type="TLBB_ActionButtonNULL" Name="MainMenuBar_2_Button_Action3">
+			<Property Name="Position" Value="x:0.20224719 y:0.0" />
+			<Property Name="Size" Value="w:0.089887640449 h:1.0" />
+			<Property Name="Empty" Value="True" />
+			<Property Name="DraggingEnabled" Value="True" />
+			<Property Name="DragAcceptName" Value="M32" />
+			<Event Name="Clicked" Function="MainMenuBar_2_Clicked(33);" />
+			<Event Name="RBClicked" Function="MainMenuBar_2_Clicked(33);" />
+		</Window>
+
+		<Window Type="TLBB_Animate" Name="MainMenuBar_2_Button_Action4_Mask">
+			<Property Name="Position" Value="x:0.303370786 y:0.0" />
+			<Property Name="Size" Value="w:0.089887640449 h:1.0" />
+			<Property Name="Animate" Value="CoolDownEnd2" />
+			<Property Name="MouseHollow" Value="true" />
+			<Property Name="MouseMoveHollow" Value="true" />
+			<Property Name="MouseLButtonHollow" Value="true" />
+			<Property Name="MouseRButtonHollow" Value="true" />
+			<Property Name="AlwaysOnTop" Value="True" />
+		</Window>
+		<Window Type="TLBB_ActionButtonNULL" Name="MainMenuBar_2_Button_Action4">
+			<Property Name="Position" Value="x:0.303370786 y:0.0" />
+			<Property Name="Size" Value="w:0.089887640449 h:1.0" />
+			<Property Name="Empty" Value="True" />
+			<Property Name="DraggingEnabled" Value="True" />
+			<Property Name="DragAcceptName" Value="M33" />
+			<Event Name="Clicked" Function="MainMenuBar_2_Clicked(34);" />
+			<Event Name="RBClicked" Function="MainMenuBar_2_Clicked(34);" />
+		</Window>
+
+		<Window Type="TLBB_Animate" Name="MainMenuBar_2_Button_Action5_Mask">
+			<Property Name="Position" Value="x:0.404494382 y:0.0" />
+			<Property Name="Size" Value="w:0.089887640449 h:1.0" />
+			<Property Name="Animate" Value="CoolDownEnd2" />
+			<Property Name="MouseHollow" Value="true" />
+			<Property Name="MouseMoveHollow" Value="true" />
+			<Property Name="MouseLButtonHollow" Value="true" />
+			<Property Name="MouseRButtonHollow" Value="true" />
+			<Property Name="AlwaysOnTop" Value="True" />
+		</Window>
+		<Window Type="TLBB_ActionButtonNULL" Name="MainMenuBar_2_Button_Action5">
+			<Property Name="Position" Value="x:0.404494382 y:0.0" />
+			<Property Name="Size" Value="w:0.089887640449 h:1.0" />
+			<Property Name="Empty" Value="True" />
+			<Property Name="DraggingEnabled" Value="True" />
+			<Property Name="DragAcceptName" Value="M34" />
+			<Event Name="Clicked" Function="MainMenuBar_2_Clicked(35);" />
+			<Event Name="RBClicked" Function="MainMenuBar_2_Clicked(35);" />
+		</Window>
+
+		<Window Type="TLBB_Animate" Name="MainMenuBar_2_Button_Action6_Mask">
+			<Property Name="Position" Value="x:0.5056179775 y:0.0" />
+			<Property Name="Size" Value="w:0.089887640449 h:1.0" />
+			<Property Name="Animate" Value="CoolDownEnd2" />
+			<Property Name="MouseHollow" Value="true" />
+			<Property Name="MouseMoveHollow" Value="true" />
+			<Property Name="MouseLButtonHollow" Value="true" />
+			<Property Name="MouseRButtonHollow" Value="true" />
+			<Property Name="AlwaysOnTop" Value="True" />
+		</Window>
+		<Window Type="TLBB_ActionButtonNULL" Name="MainMenuBar_2_Button_Action6">
+			<Property Name="Position" Value="x:0.5056179775 y:0.0" />
+			<Property Name="Size" Value="w:0.089887640449 h:1.0" />
+			<Property Name="Empty" Value="True" />
+			<Property Name="DraggingEnabled" Value="True" />
+			<Property Name="DragAcceptName" Value="M35" />
+			<Event Name="Clicked" Function="MainMenuBar_2_Clicked(36);" />
+			<Event Name="RBClicked" Function="MainMenuBar_2_Clicked(36);" />
+		</Window>
+
+		<Window Type="TLBB_Animate" Name="MainMenuBar_2_Button_Action7_Mask">
+			<Property Name="Position" Value="x:0.606741573 y:0.0" />
+			<Property Name="Size" Value="w:0.089887640449 h:1.0" />
+			<Property Name="Animate" Value="CoolDownEnd2" />
+			<Property Name="MouseHollow" Value="true" />
+			<Property Name="MouseMoveHollow" Value="true" />
+			<Property Name="MouseLButtonHollow" Value="true" />
+			<Property Name="MouseRButtonHollow" Value="true" />
+			<Property Name="AlwaysOnTop" Value="True" />
+		</Window>
+		<Window Type="TLBB_ActionButtonNULL" Name="MainMenuBar_2_Button_Action7">
+			<Property Name="Position" Value="x:0.606741573 y:0.0" />
+			<Property Name="Size" Value="w:0.089887640449 h:1.0" />
+			<Property Name="Empty" Value="True" />
+			<Property Name="DraggingEnabled" Value="True" />
+			<Property Name="DragAcceptName" Value="M36" />
+			<Event Name="Clicked" Function="MainMenuBar_2_Clicked(37);" />
+			<Event Name="RBClicked" Function="MainMenuBar_2_Clicked(37);" />
+		</Window>
+
+		<Window Type="TLBB_Animate" Name="MainMenuBar_2_Button_Action8_Mask">
+			<Property Name="Position" Value="x:0.70786516853 y:0.0" />
+			<Property Name="Size" Value="w:0.089887640449 h:1.0" />
+			<Property Name="Animate" Value="CoolDownEnd2" />
+			<Property Name="MouseHollow" Value="true" />
+			<Property Name="MouseMoveHollow" Value="true" />
+			<Property Name="MouseLButtonHollow" Value="true" />
+			<Property Name="MouseRButtonHollow" Value="true" />
+			<Property Name="AlwaysOnTop" Value="True" />
+		</Window>
+		<Window Type="TLBB_ActionButtonNULL" Name="MainMenuBar_2_Button_Action8">
+			<Property Name="Position" Value="x:0.70786516853 y:0.0" />
+			<Property Name="Size" Value="w:0.089887640449 h:1.0" />
+			<Property Name="Empty" Value="True" />
+			<Property Name="DraggingEnabled" Value="True" />
+			<Property Name="DragAcceptName" Value="M37" />
+			<Event Name="Clicked" Function="MainMenuBar_2_Clicked(38);" />
+			<Event Name="RBClicked" Function="MainMenuBar_2_Clicked(38);" />
+		</Window>
+
+		<Window Type="TLBB_Animate" Name="MainMenuBar_2_Button_Action9_Mask">
+			<Property Name="Position" Value="x:0.80898876 y:0.0" />
+			<Property Name="Size" Value="w:0.089887640449 h:1.0" />
+			<Property Name="Animate" Value="CoolDownEnd2" />
+			<Property Name="MouseHollow" Value="true" />
+			<Property Name="MouseMoveHollow" Value="true" />
+			<Property Name="MouseLButtonHollow" Value="true" />
+			<Property Name="MouseRButtonHollow" Value="true" />
+			<Property Name="AlwaysOnTop" Value="True" />
+		</Window>
+		<Window Type="TLBB_ActionButtonNULL" Name="MainMenuBar_2_Button_Action9">
+			<Property Name="Position" Value="x:0.80898876 y:0.0" />
+			<Property Name="Size" Value="w:0.089887640449 h:1.0" />
+			<Property Name="Empty" Value="True" />
+			<Property Name="DraggingEnabled" Value="True" />
+			<Property Name="DragAcceptName" Value="M38" />
+			<Event Name="Clicked" Function="MainMenuBar_2_Clicked(39);" />
+			<Event Name="RBClicked" Function="MainMenuBar_2_Clicked(39);" />
+		</Window>
+		
+		<Window Type="TLBB_Animate" Name="MainMenuBar_2_Button_Action10_Mask">
+			<Property Name="Position" Value="x:0.910112359 y:0.0" />
+			<Property Name="Size" Value="w:0.089887640449 h:1.0" />
+			<Property Name="Animate" Value="CoolDownEnd2" />
+			<Property Name="MouseHollow" Value="true" />
+			<Property Name="MouseMoveHollow" Value="true" />
+			<Property Name="MouseLButtonHollow" Value="true" />
+			<Property Name="MouseRButtonHollow" Value="true" />
+			<Property Name="AlwaysOnTop" Value="True" />
+		</Window>
+		<Window Type="TLBB_ActionButtonNULL" Name="MainMenuBar_2_Button_Action10">
+			<Property Name="Position" Value="x:0.910112359 y:0.0" />
+			<Property Name="Size" Value="w:0.089887640449 h:1.0" />
+			<Property Name="Empty" Value="True" />
+			<Property Name="DraggingEnabled" Value="True" />
+			<Property Name="DragAcceptName" Value="M39" />
+			<Event Name="Clicked" Function="MainMenuBar_2_Clicked(40);" />
+			<Event Name="RBClicked" Function="MainMenuBar_2_Clicked(40);" />
+		</Window>
+	</Window>
+</GUILayout>

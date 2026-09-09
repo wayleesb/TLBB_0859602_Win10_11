@@ -1,0 +1,6 @@
+[System]
+navmapname=zhenshoulan.nav
+monsterfile=zhenshoulan_monster.ini
+patrolpoint=zhenshoulan_patrolpoint.ini
+eventfile=zhenshoulan_area.ini
+petfile=zhenshoulan_pet.ini

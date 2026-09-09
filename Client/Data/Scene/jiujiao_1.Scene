@@ -1,0 +1,1166 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Scene formatVersion="0.1.1" name="jiujiao_1">
+
+  <Terrain filename="jiujiao_1.Terrain"/>
+
+  <Object name="#FairyEnviroment" type="Enviroment">
+    <Property name="ambient" value="0.4 0.384314 0.317647"/>
+    <Property name="fog.mode" value="linear"/>
+    <Property name="fog.colour" value="0.313726 0.662745 0.639216"/>
+    <Property name="fog.linear start" value="3000"/>
+    <Property name="fog.linear end" value="5000"/>
+  </Object>
+
+  <Object name="#FairyMainLightOne" type="Light">
+    <Property name="type" value="directional"/>
+    <Property name="diffuse" value="0.466667 0.231373 0.019608"/>
+    <Property name="specular" value="0.243137 0.180392 0.156863"/>
+    <Property name="direction" value="2 -3 -1"/>
+    <Property name="cast shadows" value="true"/>
+  </Object>
+
+  <Object name="#FairyMainLightTwo" type="Light">
+    <Property name="type" value="directional"/>
+    <Property name="diffuse" value="0.368627 0.188235 0.023529"/>
+    <Property name="direction" value="-5 -1 -1"/>
+  </Object>
+
+  <Object name="#FairySkyDome" type="SkyDome">
+    <Property name="material" value="CloudySky"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒桶大.mesh"/>
+    <Property name="position" value="200 -400 1300"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒桶.mesh"/>
+    <Property name="position" value="-400 -405.751 1300"/>
+    <Property name="orientation" value="1 0 -6.20343e-008 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖车.mesh"/>
+    <Property name="position" value="1243.44 -400 -541.931"/>
+    <Property name="orientation" value="0.966299 0 -0.257424 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒桶1.mesh"/>
+    <Property name="position" value="1200 -400 -900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒桶1.mesh"/>
+    <Property name="position" value="1013.29 -400 -880.629"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒桶1.mesh"/>
+    <Property name="position" value="-197.633 -400 -798.299"/>
+    <Property name="scale" value="1.6 1.6 1.6"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒桶1.mesh"/>
+    <Property name="position" value="235.313 -400 -880.441"/>
+    <Property name="scale" value="1.5 1.5 1.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒桶1.mesh"/>
+    <Property name="position" value="0 -400 -900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒桶.mesh"/>
+    <Property name="position" value="-200 -397.816 1700"/>
+    <Property name="orientation" value="0.92388 0 0.382683 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒桶.mesh"/>
+    <Property name="position" value="800 -400 1300"/>
+    <Property name="orientation" value="-1.03042e-007 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒桶.mesh"/>
+    <Property name="position" value="600 -399.357 1700"/>
+    <Property name="orientation" value="-0.382683 0 -0.92388 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒桶.mesh"/>
+    <Property name="position" value="600 -400 900"/>
+    <Property name="orientation" value="0.382683 0 -0.92388 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒桶.mesh"/>
+    <Property name="position" value="200 -400 700"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒桶.mesh"/>
+    <Property name="position" value="-200 -399.943 900"/>
+    <Property name="orientation" value="0.92388 0 -0.382683 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸.mesh"/>
+    <Property name="position" value="-900 -400 1500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸.mesh"/>
+    <Property name="position" value="-900 -400 700"/>
+    <Property name="orientation" value="0.923879 0 0.382683 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸.mesh"/>
+    <Property name="position" value="-800 -400 1400"/>
+    <Property name="orientation" value="0.994267 0 0.106931 0"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.615686 0.101961"/>
+    <Property name="position" value="-200 -221.898 1100"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="1e-005"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.372549 0.101961"/>
+    <Property name="position" value="400 -346 800"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="1e-006"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.415686 0.101961"/>
+    <Property name="position" value="600 -341.29 1500"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="1e-005"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.615686 0.101961"/>
+    <Property name="position" value="0 -241.332 1700"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="1e-005"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="pubushuihua_02"/>
+    <Property name="position" value="700 -100 1300"/>
+    <Property name="orientation" value="0.223896 -0.130438 0.447071 -0.85615"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="pubushuihua_02"/>
+    <Property name="position" value="500 -100 1000"/>
+    <Property name="orientation" value="-4.83868e-007 -0.500006 0.500002 -0.707107"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸1.mesh"/>
+    <Property name="position" value="-900 -400 500"/>
+    <Property name="orientation" value="0.810181 0 -0.58618 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸1.mesh"/>
+    <Property name="position" value="-900 -400 206.121"/>
+    <Property name="orientation" value="0.147994 0 -0.988989 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸1.mesh"/>
+    <Property name="position" value="-900 -400 73.43"/>
+    <Property name="orientation" value="0.972275 0 -0.233843 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸1.mesh"/>
+    <Property name="position" value="-800 -400 400"/>
+    <Property name="orientation" value="0.555191 0 -0.831723 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="pubushuihua_02"/>
+    <Property name="position" value="-100 -100 1000"/>
+    <Property name="orientation" value="0.428481 0.348267 0.257694 -0.792917"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="pubushuihua_02"/>
+    <Property name="position" value="-200 -97.6483 1300"/>
+    <Property name="orientation" value="0.230144 -0.118419 0.443887 -0.857895"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="pubushuihua_02"/>
+    <Property name="position" value="500 -104.076 1600"/>
+    <Property name="orientation" value="0.260104 0.200622 0.326239 -0.886385"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸.mesh"/>
+    <Property name="position" value="1500 -400 300"/>
+    <Property name="orientation" value="0.993925 0 0.110063 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸.mesh"/>
+    <Property name="position" value="1400 -400 0"/>
+    <Property name="orientation" value="0.923879 0 0.382683 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸.mesh"/>
+    <Property name="position" value="1500 -400 -100"/>
+    <Property name="orientation" value="0.988584 0 0.150674 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖梯.mesh"/>
+    <Property name="position" value="1011.58 -400 -674.458"/>
+    <Property name="orientation" value="-0.241066 0 -0.970509 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒桶.mesh"/>
+    <Property name="position" value="-500 -400 2000"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒桶.mesh"/>
+    <Property name="position" value="-200 -400 2000"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒桶.mesh"/>
+    <Property name="position" value="100 -400 2000"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒桶.mesh"/>
+    <Property name="position" value="400 -400 2000"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="TerrainLiquid">
+    <Property name="material" value="haihuwater"/>
+    <Property name="position" value="-500 -396.533 1200"/>
+    <Property name="texture scale" value="0.2"/>
+    <Property name="depth texture layer.enable" value="true"/>
+    <Property name="depth texture layer.height scale" value="0.02"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.458824 1 0.101961"/>
+    <Property name="position" value="-900.65 -253.474 1414.34"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="1e-006"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="公用小建筑/铁灯笼.model"/>
+    <Property name="position" value="-1000 -286.785 1401.13"/>
+    <Property name="orientation" value="-5.18577e-008 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="万劫谷/万劫谷灯笼杆子.mesh"/>
+    <Property name="position" value="-1057.13 -448.171 1398.42"/>
+    <Property name="orientation" value="-5.18577e-008 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒桶.mesh"/>
+    <Property name="position" value="-800 -405.32 2000"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="万劫谷/万劫谷灯笼杆子.mesh"/>
+    <Property name="position" value="-1060.55 -450.568 595.82"/>
+    <Property name="orientation" value="-5.18577e-008 0 -1 0"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.458824 1 0.101961"/>
+    <Property name="position" value="-904.071 -255.871 611.74"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="1e-006"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="公用小建筑/铁灯笼.model"/>
+    <Property name="position" value="-1003.42 -289.182 598.531"/>
+    <Property name="orientation" value="-5.18577e-008 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="万劫谷/万劫谷灯笼杆子.mesh"/>
+    <Property name="position" value="-1057.13 -451.009 -204.18"/>
+    <Property name="orientation" value="-5.18577e-008 0 -1 0"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="公用小建筑/铁灯笼.model"/>
+    <Property name="position" value="-1000 -289.622 -201.469"/>
+    <Property name="orientation" value="-5.18577e-008 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="万劫谷/万劫谷灯笼杆子.mesh"/>
+    <Property name="position" value="1657.61 -449.44 399.74"/>
+    <Property name="orientation" value="-1 0 6.5117e-010 0"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.090196 0.890196 0.023529"/>
+    <Property name="position" value="1507.85 -254.743 415.66"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="1e-006"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="公用小建筑/铁灯笼.model"/>
+    <Property name="position" value="1608.5 -287.381 398.379"/>
+    <Property name="orientation" value="-1 0 6.5117e-010 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="万劫谷/万劫谷灯笼杆子.mesh"/>
+    <Property name="position" value="1660.56 -449.267 800"/>
+    <Property name="orientation" value="-1 0 6.5117e-010 0"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="公用小建筑/铁灯笼.model"/>
+    <Property name="position" value="1611.45 -287.208 798.639"/>
+    <Property name="orientation" value="-1 0 6.5117e-010 0"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.458824 1 0.101961"/>
+    <Property name="position" value="1510.8 -254.57 815.92"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="1e-006"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="万劫谷/万劫谷灯笼杆子.mesh"/>
+    <Property name="position" value="1659.76 -451.088 0"/>
+    <Property name="orientation" value="-1 0 6.5117e-010 0"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="公用小建筑/铁灯笼.model"/>
+    <Property name="position" value="1610.65 -289.029 -1.36099"/>
+    <Property name="orientation" value="-1 0 6.5117e-010 0"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.458824 1 0.101961"/>
+    <Property name="position" value="1510.89 -257.22 -384.08"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="1e-005"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="万劫谷/万劫谷灯笼杆子.mesh"/>
+    <Property name="position" value="1660.65 -451.917 -400"/>
+    <Property name="orientation" value="-1 0 6.5117e-010 0"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="公用小建筑/铁灯笼.model"/>
+    <Property name="position" value="1611.54 -289.858 -401.361"/>
+    <Property name="orientation" value="-1 0 6.5117e-010 0"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.458824 1 0.101961"/>
+    <Property name="position" value="1608.42 -254.825 -783.08"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="1e-006"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="万劫谷/万劫谷灯笼杆子.mesh"/>
+    <Property name="position" value="1658.18 -449.522 -799"/>
+    <Property name="orientation" value="-1 0 6.5117e-010 0"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="公用小建筑/铁灯笼.model"/>
+    <Property name="position" value="1609.07 -287.463 -800.361"/>
+    <Property name="orientation" value="-1 0 6.5117e-010 0"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="万劫谷/万劫谷灯笼.model"/>
+    <Property name="position" value="1506.29 26.9609 -2056.98"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.996078 0.192157 0.105882"/>
+    <Property name="position" value="1500 157.601 -1900"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.constant" value="0.5"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="0.0001"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.996078 0.192157 0.105882"/>
+    <Property name="position" value="697.407 156.495 -1902.9"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.constant" value="0.5"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="1e-006"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="万劫谷/万劫谷灯笼.model"/>
+    <Property name="position" value="703.697 25.855 -2059.88"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="万劫谷/万劫谷灯笼.model"/>
+    <Property name="position" value="-100 26.2452 -2058.99"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.996078 0.192157 0.105882"/>
+    <Property name="position" value="-903.646 157.605 -1900.7"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.constant" value="0.5"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="1e-005"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="万劫谷/万劫谷灯笼.model"/>
+    <Property name="position" value="-897.356 26.9651 -2057.68"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="万劫谷/万劫谷灯笼.model"/>
+    <Property name="position" value="-1692.65 29.2446 -2055.66"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="万劫谷/万劫谷灯笼.model"/>
+    <Property name="position" value="-2065.93 26.0441 1097.27"/>
+    <Property name="orientation" value="1.68524e-007 0 -1 0"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="万劫谷/万劫谷灯笼.model"/>
+    <Property name="position" value="-2062.33 24.9883 294.805"/>
+    <Property name="orientation" value="1.68524e-007 0 -1 0"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.996078 0.192157 0.105882"/>
+    <Property name="position" value="-1798.66 146.79 292.645"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.constant" value="0.5"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="1e-006"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.996078 0.192157 0.105882"/>
+    <Property name="position" value="-1799.67 148.863 -506.259"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.constant" value="0.5"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="1e-006"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="万劫谷/万劫谷灯笼.model"/>
+    <Property name="position" value="-2063.34 27.0617 -504.099"/>
+    <Property name="orientation" value="1.68524e-007 0 -1 0"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.996078 0.192157 0.105882"/>
+    <Property name="position" value="-1798.3 147.286 -1303.92"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.constant" value="0.5"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="1e-006"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="万劫谷/万劫谷灯笼.model"/>
+    <Property name="position" value="-2061.97 25.4838 -1301.76"/>
+    <Property name="orientation" value="1.68524e-007 0 -1 0"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="万劫谷/万劫谷灯笼.model"/>
+    <Property name="position" value="-2063.23 25.8472 1895.9"/>
+    <Property name="orientation" value="1.68524e-007 0 -1 0"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.996078 0.192157 0.105882"/>
+    <Property name="position" value="-1799.56 147.649 1893.74"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="0.0001"/>
+    <Property name="attenuation.quadric" value="1e-006"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="公用小建筑/铁灯笼.model"/>
+    <Property name="position" value="200.65 -293.892 -1017.28"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.14902 0.94902 0.270588"/>
+    <Property name="position" value="200 -261.254 -900"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="1e-005"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="万劫谷/万劫谷灯笼杆子.mesh"/>
+    <Property name="position" value="202.972 -455.951 -1058.01"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.458824 1 0.101961"/>
+    <Property name="position" value="1001.66 -255.341 -899.786"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="1e-005"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="万劫谷/万劫谷灯笼杆子.mesh"/>
+    <Property name="position" value="1004.63 -450.038 -1057.8"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="公用小建筑/铁灯笼.model"/>
+    <Property name="position" value="1002.31 -287.979 -1017.07"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸1.mesh"/>
+    <Property name="position" value="-2456.92 0 1567.52"/>
+    <Property name="orientation" value="0.963595 0 0.267368 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸1.mesh"/>
+    <Property name="position" value="-2330.74 0 1587.18"/>
+    <Property name="orientation" value="0.937842 0 -0.347062 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸1.mesh"/>
+    <Property name="position" value="-2356.58 0 1472.05"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸1.mesh"/>
+    <Property name="position" value="-2237.11 0 1465.97"/>
+    <Property name="orientation" value="0.573356 0 -0.819306 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸1.mesh"/>
+    <Property name="position" value="-2199.49 0 1610.16"/>
+    <Property name="orientation" value="0.983181 0 0.182632 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸1.mesh"/>
+    <Property name="position" value="-2121.43 0 1390.82"/>
+    <Property name="orientation" value="0.945431 0 0.325822 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸1.mesh"/>
+    <Property name="position" value="-2854.23 0 1367.28"/>
+    <Property name="orientation" value="0.994352 0 0.106131 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸1.mesh"/>
+    <Property name="position" value="-2862.46 0 1633.66"/>
+    <Property name="orientation" value="0.972464 0 -0.233054 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸1.mesh"/>
+    <Property name="position" value="-2766.7 0 1503.07"/>
+    <Property name="orientation" value="0.728969 0 -0.684547 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖梯.mesh"/>
+    <Property name="position" value="-1418.23 0 1856.13"/>
+    <Property name="orientation" value="0.92388 0 0.382683 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸.mesh"/>
+    <Property name="position" value="-2321.52 0 828.41"/>
+    <Property name="orientation" value="0.913546 0 -0.406737 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸.mesh"/>
+    <Property name="position" value="-2262.53 0 568.726"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸.mesh"/>
+    <Property name="position" value="-2258.88 0 702.885"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒桶.mesh"/>
+    <Property name="position" value="1700 0 -1700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒桶.mesh"/>
+    <Property name="position" value="1700 0 -1400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒桶1.mesh"/>
+    <Property name="position" value="1400 0 -1900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒桶1.mesh"/>
+    <Property name="position" value="1100 0 -1900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒桶1.mesh"/>
+    <Property name="position" value="800 0 -1900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒桶1.mesh"/>
+    <Property name="position" value="1400 0 -1200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒桶1.mesh"/>
+    <Property name="position" value="1100 0 -1200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒桶1.mesh"/>
+    <Property name="position" value="800 0 -1200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸1.mesh"/>
+    <Property name="position" value="-2117.9 0 -105.477"/>
+    <Property name="orientation" value="0.822068 0 -0.56939 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸1.mesh"/>
+    <Property name="position" value="-2308.93 0 -9.10405"/>
+    <Property name="orientation" value="0.905512 0 -0.424321 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸1.mesh"/>
+    <Property name="position" value="-2295.46 0 -154.989"/>
+    <Property name="orientation" value="0.958246 0 0.285946 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸1.mesh"/>
+    <Property name="position" value="-2453.44 0 -41.6535"/>
+    <Property name="orientation" value="0.902759 0 0.430148 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸1.mesh"/>
+    <Property name="position" value="-2462.77 0 -161.206"/>
+    <Property name="orientation" value="0.868432 0 0.495809 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸1.mesh"/>
+    <Property name="position" value="-2131.06 0 28.0475"/>
+    <Property name="orientation" value="0.873184 0 -0.487391 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸1.mesh"/>
+    <Property name="position" value="-2112 0 -228.152"/>
+    <Property name="orientation" value="0.98705 0 -0.160411 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸1.mesh"/>
+    <Property name="position" value="-2574.23 0 -63.8124"/>
+    <Property name="orientation" value="0.963595 0 0.267368 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸1.mesh"/>
+    <Property name="position" value="-2637.8 0 -198.139"/>
+    <Property name="orientation" value="0.284402 0 -0.958706 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/酒罐.mesh"/>
+    <Property name="position" value="-2471.56 0 1392.04"/>
+    <Property name="orientation" value="0.876307 0 0.481754 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/酒罐.mesh"/>
+    <Property name="position" value="-2530.29 0 1472.15"/>
+    <Property name="orientation" value="0.945431 0 0.325822 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/酒罐.mesh"/>
+    <Property name="position" value="-2596.19 0 1487.92"/>
+    <Property name="orientation" value="0.958246 0 -0.285946 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/酒罐.mesh"/>
+    <Property name="position" value="-2658.47 0 1493.4"/>
+    <Property name="orientation" value="0.726759 0 -0.686893 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/酒罐.mesh"/>
+    <Property name="position" value="-2614.77 0 1415.21"/>
+    <Property name="orientation" value="0.752769 0 0.658286 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/酒罐.mesh"/>
+    <Property name="position" value="-2551.83 0 1406.36"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/酒罐.mesh"/>
+    <Property name="position" value="-2509.47 1.4814 1398.65"/>
+    <Property name="orientation" value="0.180627 0.244304 -0.832056 0.464077"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/酒罐.mesh"/>
+    <Property name="position" value="-2689.01 0 1588.79"/>
+    <Property name="orientation" value="0.970942 0 0.239316 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="秦地宫/地宫台阶边.mesh"/>
+    <Property name="position" value="-500 -401.479 -1100"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="秦地宫/地宫台阶边.mesh"/>
+    <Property name="position" value="-1000 -412.132 -1100"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="秦地宫/地宫台阶边.mesh"/>
+    <Property name="position" value="1100 -419.536 2000"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="秦地宫/地宫台阶边.mesh"/>
+    <Property name="position" value="1600 -417.209 2000"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖车.mesh"/>
+    <Property name="position" value="-2442.23 0 -888.647"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸.mesh"/>
+    <Property name="position" value="-2454.22 0 695.75"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸.mesh"/>
+    <Property name="position" value="-2534.24 0 793.014"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸.mesh"/>
+    <Property name="position" value="-2701.31 0 810.205"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸.mesh"/>
+    <Property name="position" value="-2714.63 0 689.874"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸.mesh"/>
+    <Property name="position" value="-2814.03 0 603.294"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸.mesh"/>
+    <Property name="position" value="-2974.89 0 735.49"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸.mesh"/>
+    <Property name="position" value="-2590.9 0 578.454"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖车.mesh"/>
+    <Property name="position" value="-2445.19 0 -1700"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="TerrainLiquid">
+    <Property name="material" value="haihuwater"/>
+    <Property name="position" value="1900 -13.4795 -1700"/>
+    <Property name="texture scale" value="0.2"/>
+    <Property name="depth texture layer.enable" value="true"/>
+    <Property name="depth texture layer.height scale" value="0.02"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸.mesh"/>
+    <Property name="position" value="-1900 0 400"/>
+    <Property name="orientation" value="0.884866 0 -0.465846 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸.mesh"/>
+    <Property name="position" value="-1980.04 24.5333 289.837"/>
+    <Property name="orientation" value="0.690223 -0.380995 -0.538569 -0.297284"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸.mesh"/>
+    <Property name="position" value="-1233.03 0 -700"/>
+    <Property name="orientation" value="0.81045 0 -0.585808 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸.mesh"/>
+    <Property name="position" value="-1158.14 0 -900"/>
+    <Property name="orientation" value="0.988584 0 0.150674 0"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.458824 1 0.101961"/>
+    <Property name="position" value="1510.22 -254.983 1217.36"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="1e-006"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="公用小建筑/铁灯笼.model"/>
+    <Property name="position" value="1610.87 -287.621 1200.08"/>
+    <Property name="orientation" value="-1 0 6.5117e-010 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="万劫谷/万劫谷灯笼杆子.mesh"/>
+    <Property name="position" value="1659.98 -449.68 1201.44"/>
+    <Property name="orientation" value="-1 0 6.5117e-010 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="pubushuihua_02"/>
+    <Property name="position" value="100 -300 2000"/>
+    <Property name="orientation" value="0.459525 0.846941 -0.197074 -0.180826"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="pubushuihua_02"/>
+    <Property name="position" value="-200 -100 2000"/>
+    <Property name="orientation" value="0.445102 0.40168 0.227784 -0.767241"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸1.mesh"/>
+    <Property name="position" value="-1240.47 0 -2130.3"/>
+    <Property name="orientation" value="0.00192054 0 -0.999998 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸1.mesh"/>
+    <Property name="position" value="-1443.57 0 -2433.4"/>
+    <Property name="orientation" value="0.967254 0 -0.253813 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸1.mesh"/>
+    <Property name="position" value="-1370.48 0 -2167.45"/>
+    <Property name="orientation" value="0.905512 0 -0.424321 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸1.mesh"/>
+    <Property name="position" value="-1357.01 0 -2313.33"/>
+    <Property name="orientation" value="0.958246 0 0.285946 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸1.mesh"/>
+    <Property name="position" value="-1179.45 0 -2263.82"/>
+    <Property name="orientation" value="0.822068 0 -0.56939 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸1.mesh"/>
+    <Property name="position" value="-1231.46 0 -2416.57"/>
+    <Property name="orientation" value="-0.357896 0 -0.933761 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸1.mesh"/>
+    <Property name="position" value="-1358.83 0 -2537.15"/>
+    <Property name="orientation" value="0.692285 0 -0.721625 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸1.mesh"/>
+    <Property name="position" value="-1230.31 0 -2876.61"/>
+    <Property name="orientation" value="-0.95278 0 -0.30366 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸1.mesh"/>
+    <Property name="position" value="-1178.3 0 -2723.86"/>
+    <Property name="orientation" value="0.0687285 0 -0.997636 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸1.mesh"/>
+    <Property name="position" value="-1427.37 0 -3020.58"/>
+    <Property name="orientation" value="0.692285 0 -0.721625 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸1.mesh"/>
+    <Property name="position" value="-1425.55 0 -2796.76"/>
+    <Property name="orientation" value="0.958246 0 0.285946 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸1.mesh"/>
+    <Property name="position" value="-1439.02 0 -2650.88"/>
+    <Property name="orientation" value="0.905512 0 -0.424321 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸1.mesh"/>
+    <Property name="position" value="-553.391 0 -2286.96"/>
+    <Property name="orientation" value="0.958246 0 0.285946 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸1.mesh"/>
+    <Property name="position" value="-390.37 0 -2390.2"/>
+    <Property name="orientation" value="-0.357896 0 -0.933761 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸1.mesh"/>
+    <Property name="position" value="-374.681 0 -2697.49"/>
+    <Property name="orientation" value="0.0687285 0 -0.997636 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸1.mesh"/>
+    <Property name="position" value="-500 0 -2400"/>
+    <Property name="orientation" value="0.00192054 0 -0.999998 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸1.mesh"/>
+    <Property name="position" value="-639.951 0 -2407.03"/>
+    <Property name="orientation" value="0.967254 0 -0.253813 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸1.mesh"/>
+    <Property name="position" value="-515.069 0 -2141.08"/>
+    <Property name="orientation" value="0.999986 0 0.00519614 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸1.mesh"/>
+    <Property name="position" value="-635.401 0 -2624.51"/>
+    <Property name="orientation" value="0.905512 0 -0.424321 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸1.mesh"/>
+    <Property name="position" value="-555.211 0 -2510.78"/>
+    <Property name="orientation" value="0.692285 0 -0.721625 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸1.mesh"/>
+    <Property name="position" value="-426.691 0 -2850.24"/>
+    <Property name="orientation" value="-0.95278 0 -0.30366 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸1.mesh"/>
+    <Property name="position" value="-375.831 0 -2237.45"/>
+    <Property name="orientation" value="0.822068 0 -0.56939 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸1.mesh"/>
+    <Property name="position" value="-623.751 0 -2994.21"/>
+    <Property name="orientation" value="0.692285 0 -0.721625 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸.mesh"/>
+    <Property name="position" value="378.744 0 -2094.42"/>
+    <Property name="orientation" value="0.913546 0 -0.406737 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸.mesh"/>
+    <Property name="position" value="441.384 0 -2219.94"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸.mesh"/>
+    <Property name="position" value="166.024 0 -2129.82"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸.mesh"/>
+    <Property name="position" value="276.961 0 -2267.25"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸.mesh"/>
+    <Property name="position" value="400 0 -2428.94"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸.mesh"/>
+    <Property name="position" value="446.648 0 -2530.44"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸.mesh"/>
+    <Property name="position" value="432.239 0 -2673.82"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸.mesh"/>
+    <Property name="position" value="441.292 88.4497 -2500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸.mesh"/>
+    <Property name="position" value="200 0 -2800"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="酒窖/酒窖酒缸.mesh"/>
+    <Property name="position" value="163.566 0 -2600"/>
+    <Property name="orientation" value="0.933072 0 -0.359689 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="jiujiaozhengqi"/>
+    <Property name="position" value="209.739 -24.5027 1046.89"/>
+    <Property name="orientation" value="0.156116 0 0.987736 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="jiujiaozhengqi_01"/>
+    <Property name="position" value="-213.931 -225 890.522"/>
+    <Property name="orientation" value="0.542751 0 -0.839894 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="jiujiaozhengqi_01"/>
+    <Property name="position" value="-500.348 -227 1987.07"/>
+    <Property name="orientation" value="-0.374164 0 -0.927362 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="jiujiaozhengqi_01"/>
+    <Property name="position" value="811.183 -235 1300.18"/>
+    <Property name="orientation" value="0.81225 0 0.583309 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="jiujiaozhengqi_01"/>
+    <Property name="position" value="-500 -221 2000"/>
+    <Property name="orientation" value="-0.0276082 0 -0.999618 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yanjiangzhengqi"/>
+    <Property name="position" value="-73.4992 0 -1124.86"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="chuansongdian"/>
+    <Property name="position" value="1300.94 20 2096.71"/>
+  </Object>
+
+</Scene>

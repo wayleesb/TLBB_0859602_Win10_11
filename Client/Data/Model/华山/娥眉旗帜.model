@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="娥眉旗帜.frame" />
+    <entity mesh="娥眉旗竿.mesh" node="娥眉旗竿" />
+    <entity mesh="娥眉旗.mesh" />
+</model>

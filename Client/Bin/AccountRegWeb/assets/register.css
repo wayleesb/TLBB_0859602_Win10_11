@@ -1,0 +1,281 @@
+@charset "utf-8";
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+    color: #292724;
+    background: #e7e2d4;
+    font: 12px/1.4 "Microsoft YaHei", "SimSun", sans-serif;
+}
+
+#register-page {
+    width: 100%;
+    min-height: 100%;
+    margin: 0 auto;
+    background: #f4f1e7;
+    border-top: 2px solid #7e1f1d;
+    box-sizing: border-box;
+}
+
+.page-heading {
+    position: relative;
+    height: 57px;
+    border-bottom: 1px solid #b9a77e;
+    background: #e4ddca;
+}
+
+.heading-copy {
+    position: absolute;
+    top: 7px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.heading-copy h1 {
+    margin: 0;
+    color: #6e1718;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 26px;
+}
+
+.heading-copy p {
+    margin: 0;
+    color: #49635c;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.status {
+    height: 31px;
+    color: #6f6656;
+    font-size: 13px;
+    line-height: 31px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.status-error {
+    color: #a01f1f;
+}
+
+.status-success {
+    color: #315f4b;
+}
+
+#register-form {
+    width: 310px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.form-row {
+    position: relative;
+    height: 47px;
+}
+
+.account-row {
+    height: 64px;
+}
+
+.account-suffix {
+    position: absolute;
+    top: 34px;
+    right: 0;
+    width: 214px;
+    color: #49635c;
+    font: 12px/18px Arial, sans-serif;
+    text-align: left;
+}
+
+.form-row label {
+    float: left;
+    width: 86px;
+    height: 33px;
+    color: #4d463c;
+    font-size: 14px;
+    line-height: 33px;
+    text-align: right;
+}
+
+.form-row input {
+    float: right;
+    width: 202px;
+    height: 27px;
+    margin: 0;
+    padding: 2px 5px;
+    color: #222;
+    background: #fffdf7;
+    border: 1px solid #9b8d70;
+    border-radius: 2px;
+    font: 14px/27px Arial, "SimSun", sans-serif;
+}
+
+.form-row input:focus {
+    background: #fff;
+    border-color: #49635c;
+    outline: 1px solid #b5c5bd;
+}
+
+.agreement-row {
+    height: 36px;
+    color: #6f6656;
+    font-size: 13px;
+    line-height: 26px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.agreement-row input {
+    width: 13px;
+    height: 13px;
+    margin: 3px 3px 0 0;
+    padding: 0;
+    vertical-align: top;
+}
+
+.agreement-row label {
+    vertical-align: top;
+}
+
+.agreement-row a {
+    color: #7e1f1d;
+    vertical-align: top;
+}
+
+#submit-button {
+    display: block;
+    width: 146px;
+    height: 38px;
+    margin: 0 auto;
+    padding: 0;
+    color: #fff9e8;
+    background: #7e1f1d;
+    border: 1px solid #4e1112;
+    border-radius: 3px;
+    box-shadow: inset 0 0 0 1px #b85a49;
+    cursor: pointer;
+    font: bold 15px/36px "Microsoft YaHei", "SimSun", sans-serif;
+}
+
+#submit-button:hover,
+#submit-button:focus {
+    background: #315f4b;
+    border-color: #214235;
+    box-shadow: inset 0 0 0 1px #6e9281;
+    outline: 0;
+}
+
+#submit-button[disabled] {
+    color: #d5cec0;
+    background: #817a6d;
+    border-color: #686156;
+    box-shadow: none;
+    cursor: default;
+}
+
+@media screen and (max-width: 260px) {
+    .page-heading {
+        height: 43px;
+    }
+
+    .heading-copy {
+        top: 5px;
+    }
+
+    .heading-copy h1 {
+        font-size: 16px;
+        line-height: 21px;
+    }
+
+    .heading-copy p {
+        font-size: 11px;
+        line-height: 16px;
+    }
+
+    .status {
+        height: 21px;
+        font-size: 12px;
+        line-height: 21px;
+    }
+
+    #register-form {
+        width: auto;
+        margin: 0;
+        padding: 0 12px;
+    }
+
+    .form-row {
+        height: 31px;
+    }
+
+    .account-row {
+        height: 47px;
+    }
+
+    .account-suffix {
+        top: 24px;
+        right: 2px;
+        width: 131px;
+        font-size: 11px;
+        line-height: 16px;
+    }
+
+    .form-row label {
+        width: 59px;
+        height: 25px;
+        font-size: 12px;
+        line-height: 25px;
+    }
+
+    .form-row input {
+        width: 121px;
+        height: 21px;
+        padding: 1px 5px;
+        font-size: 12px;
+        line-height: 21px;
+    }
+
+    .agreement-row {
+        height: 24px;
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    #submit-button {
+        width: 116px;
+        height: 30px;
+        font-size: 13px;
+        line-height: 28px;
+    }
+}
+
+.agreement-page {
+    overflow: auto;
+    background: #f4f1e7;
+}
+
+.agreement-content {
+    padding: 16px;
+}
+
+.agreement-content h1 {
+    margin: 0 0 12px;
+    color: #6e1718;
+    font-size: 18px;
+    text-align: center;
+}
+
+.agreement-content p {
+    margin: 0 0 10px;
+    color: #39352f;
+    line-height: 1.7;
+}

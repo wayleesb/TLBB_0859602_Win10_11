@@ -1,0 +1,13 @@
+<Imageset Name="stall03" Imagefile="Common/tga_stall03.dds" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+	<Image Name="wuqi.gif_00" XPos="1" YPos="1" Width="74" Height="78" />
+	<Image Name="wuqi.gif_01" XPos="76" YPos="1" Width="74" Height="78" />
+	<Image Name="wuqi.gif_02" XPos="1" YPos="80" Width="74" Height="78" />
+	<Image Name="wuqi.gif_03" XPos="76" YPos="80" Width="74" Height="78" />
+	<Image Name="wuqi.gif_04" XPos="1" YPos="159" Width="74" Height="78" />
+	<Image Name="wuqi.gif_05" XPos="76" YPos="159" Width="74" Height="78" />
+	<Image Name="wuqi.gif_06" XPos="151" YPos="1" Width="74" Height="78" />
+	<Image Name="wuqi.gif_07" XPos="151" YPos="80" Width="74" Height="78" />
+	<Image Name="xing.gif_00" XPos="152" YPos="160" Width="69" Height="38" />	
+	<Image Name="xing.gif_01" XPos="152" YPos="201" Width="59" Height="52" />
+	<Image Name="xing.gif_02" XPos="212" YPos="207" Width="44" Height="47" />	
+</Imageset>

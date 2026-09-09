@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="乐府幌子.frame" />
+    <entity mesh="乐府幌子柱.mesh" node="乐府幌子柱" />
+    <entity mesh="乐府幌子招牌.mesh" />
+    <entity mesh="乐幌子灯5.mesh" node="乐幌子灯5">
+        <offset>
+            <translate x="45.8825" y="-189.117" z="6.05566" />
+        </offset>
+    </entity>
+    <entity mesh="乐幌子灯4.mesh" node="乐幌子灯4">
+        <offset>
+            <translate x="48.5278" y="-256.697" z="6.16113" />
+        </offset>
+    </entity>
+    <entity mesh="乐幌子灯3.mesh" node="乐幌子灯3">
+        <offset>
+            <translate x="48.5278" y="-316.648" z="6.16113" />
+        </offset>
+    </entity>
+    <entity mesh="乐幌子灯2.mesh" node="乐幌子灯2">
+        <offset>
+            <translate x="48.5278" y="-375.669" z="6.16113" />
+        </offset>
+    </entity>
+    <entity mesh="乐幌子灯1.mesh" node="乐幌子灯1">
+        <offset>
+            <translate x="48.5278" y="-438.686" z="6.16113" />
+        </offset>
+    </entity>
+</model>

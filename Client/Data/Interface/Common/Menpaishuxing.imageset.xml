@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<Imageset Name="Menpaishuxing" Imagefile="Common/tga_Menpaishuxing.dds" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+	
+	<Image Name="Shuxing_Ice" XPos="10" YPos="8" Width="62" Height="16" />
+  <Image Name="Shuxing_Dark" XPos="10" YPos="24" Width="62" Height="18" />
+  <Image Name="Shuxing_Fire" XPos="10" YPos="42" Width="62" Height="16" />
+	<Image Name="Shuxing_Poison" XPos="10" YPos="59" Width="62" Height="16" />
+  <Image Name="Shuxing_IceFire" XPos="10" YPos="80" Width="62" Height="16" />
+  <Image Name="Shuxing_DarkFire" XPos="10" YPos="96" Width="62" Height="16" />
+  <Image Name="Shuxing_PoisonFire" XPos="10" YPos="114" Width="62" Height="16" />
+  <Image Name="Shuxing_DarkPoison" XPos="10" YPos="131" Width="62" Height="16" />
+  <Image Name="Shuxing_IceDark" XPos="10" YPos="147" Width="62" Height="18" />
+  <Image Name="Shuxing_IcePoison" XPos="10" YPos="165" Width="62" Height="16" />
+  <Image Name="Shuxing_DarkIce" XPos="10" YPos="182" Width="62" Height="16" />
+  <Image Name="Shuxing_FirePoison" XPos="10" YPos="198" Width="62" Height="18" />
+  <Image Name="Shuxing_FIPD" XPos="10" YPos="216" Width="62" Height="16" />
+  
+  <Image Name="TongXiang" XPos="81" YPos="6" Width="44" Height="19" />
+  
+  <Image Name="PetIcon_A1" XPos="84" YPos="39" Width="30" Height="30" />
+  <Image Name="PetIcon_A2" XPos="115" YPos="39" Width="30" Height="30" />
+  <Image Name="PetIcon_A3" XPos="146" YPos="39" Width="30" Height="30" />
+  <Image Name="PetIcon_A4" XPos="177" YPos="39" Width="30" Height="30" />
+  
+  <Image Name="PetIcon_B1" XPos="88" YPos="76" Width="20" Height="20" />
+  <Image Name="PetIcon_B2" XPos="119" YPos="76" Width="20" Height="20" />
+  <Image Name="PetIcon_B3" XPos="150" YPos="76" Width="20" Height="20" />
+  <Image Name="PetIcon_B4" XPos="181" YPos="76" Width="20" Height="20" />
+
+  <Image Name="QuestIcon_0" XPos="88" YPos="110" Width="25" Height="25" />
+  <Image Name="QuestIcon_1" XPos="114" YPos="110" Width="22" Height="22" />
+  <Image Name="QuestIcon_6" XPos="88" YPos="135" Width="25" Height="24" />
+  <Image Name="QuestIcon_7" XPos="114" YPos="135" Width="22" Height="23" />
+  
+  <Image Name="HuoIcon_A1" XPos="75" YPos="159" Width="30" Height="30" />
+  <Image Name="HuoIcon_A2" XPos="106" YPos="159" Width="30" Height="30" />
+  <Image Name="HuoIcon_A3" XPos="137" YPos="159" Width="30" Height="30" />
+  <Image Name="HuoIcon_A4" XPos="168" YPos="159" Width="30" Height="30" />
+  
+  <Image Name="HuoIcon_B1" XPos="80" YPos="194" Width="20" Height="20" />
+  <Image Name="HuoIcon_B2" XPos="111" YPos="194" Width="20" Height="20" />
+  <Image Name="HuoIcon_B3" XPos="142" YPos="194" Width="20" Height="20" />
+  <Image Name="HuoIcon_B4" XPos="173" YPos="194" Width="20" Height="20" />
+</Imageset>

@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame1" Name="Revenge_Frame">
+        <Property Name="UnifiedPosition" Value="{{0.0,338},{0.12,0}}" />
+        <Property Name="AbsoluteSize" Value="w:256 h:160" />
+        <Window Type="TLBB_DragTitle" Name="Revenge_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="Revenge_Frame" />
+            <Window Type="TLBB_SimpleText" Name="Revenge_PageHeader">
+                <Property Name="Position" Value="x:0.0  y:0.0" />
+                <Property Name="Size" Value="w:1.0 h:1.0" />
+                <Property Name="Font" Value="YouYuan11.25" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Property Name="Text" Value="#{INTERFACE_XML_30}" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+        </Window>
+        <Window Type="TLBB_ButtonHelp" Name="Revenge_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Property Name="Text" Value="TLBB_ButtonHelp" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*Revenge&quot;);' />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="Revenge_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Property Name="Text" Value="TLBB_ButtonClose" />
+            <Event Name="Clicked" Function="Revenge_OnClose();" />
+        </Window>
+        <Window Type="DefaultWindow" Name="Revenge_Frame_Client">
+            <Property Name="AbsolutePosition" Value="x:7.000000 y:36.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-13.000000},{1.000000,-55.000000}" />
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="Revenge_Text1">
+                <Property Name="Position" Value="x:0.05 y:0.0" />
+                <Property Name="UnifiedSize" Value="{{0.90,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_526}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="Revenge_Text2">
+                <Property Name="UnifiedPosition" Value="{{0.05,0.000000},{0.000000,25.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.18,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="ID:" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_EditBoxNormal" Name="Revenge_ID">
+                <Property Name="UnifiedPosition" Value="{{0.23,0.000000},{0.000000,25.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.45,0.000000},{0.000000,20.000000}" />
+                <Property Name="MaxTextLength" Value="12" />
+                <Property Name="Text" Value="#{INTERFACE_XML_907}" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon2" Name="Revenge_Accept">
+                <Property Name="UnifiedPosition" Value="{{0.72,0.000000},{0.000000,25.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.2,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_557}" />
+                <Event Name="Clicked" Function="Revenge_OnAcceptByName();" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="Revenge_Text3">
+                <Property Name="UnifiedPosition" Value="{{0.05,0.000000},{0.000000,52.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.18,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_463}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_EditBoxNormal" Name="Revenge_Name">
+                <Property Name="UnifiedPosition" Value="{{0.23,0.000000},{0.000000,52.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.45,0.000000},{0.000000,20.000000}" />
+                <Property Name="MaxTextLength" Value="12" />
+                <Property Name="Text" Value="#{INTERFACE_XML_908}" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon2" Name="Revenge_Accept2">
+                <Property Name="UnifiedPosition" Value="{{0.72,0.000000},{0.000000,52.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.2,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_557}" />
+                <Event Name="Clicked" Function="Revenge_OnAcceptByID();" />
+            </Window>
+            <Window Type="TLBB_Frame_Lace5" Name="Revenge_Blank">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-80.000000},{0.000000,20.000000}" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="Revenge_Cancel">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-80.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:80.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_546}" />
+                <Event Name="Clicked" Function="Revenge_OnClose();" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

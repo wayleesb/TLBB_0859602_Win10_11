@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="李宁旗3.frame" />
+    <entity mesh="李宁旗竿3.mesh" node="李宁旗竿3" />
+    <entity mesh="李宁旗旗帜3.mesh" />
+</model>

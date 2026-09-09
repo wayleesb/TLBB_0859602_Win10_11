@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Terrain name="city0" tileSize="32" xsize="64" zsize="64">
+
+  <scale x="100" y="100" z="100"/>
+
+  <heightmap filename="city0.Heightmap" type="standard"/>
+
+  <gridInfo filename="city0.GridInfo" type="standard"/>
+
+  <textures>
+    <texture filename="01苗疆/苗疆浅草底层.jpg" type="image"/>
+  </textures>
+
+  <pixmaps>
+    <pixmap textureId="0"/>
+  </pixmaps>
+
+  <materials>
+    <template material="Terrain/OneLayer" name="OneLayer"/>
+    <template material="Terrain/OneLayerLightmap" name="OneLayerLightmap"/>
+    <template material="Terrain/TwoLayer" name="TwoLayer"/>
+    <template material="Terrain/TwoLayerLightmap" name="TwoLayerLightmap"/>
+    <fog_replacement exp="Terrain/OneLayer_ps%fog_exp" exp2="Terrain/OneLayer_ps%fog_exp2" linear="Terrain/OneLayer_ps%fog_linear" none="Terrain/OneLayer_ps"/>
+    <fog_replacement exp="Terrain/TwoLayer_ps%fog_exp" exp2="Terrain/TwoLayer_ps%fog_exp2" linear="Terrain/TwoLayer_ps%fog_linear" none="Terrain/TwoLayer_ps"/>
+    <fog_replacement exp="Terrain/OneLayerLightmap_ps%fog_exp" exp2="Terrain/OneLayerLightmap_ps%fog_exp2" linear="Terrain/OneLayerLightmap_ps%fog_linear" none="Terrain/OneLayerLightmap_ps"/>
+    <fog_replacement exp="Terrain/TwoLayerLightmap_ps%fog_exp" exp2="Terrain/TwoLayerLightmap_ps%fog_exp2" linear="Terrain/TwoLayerLightmap_ps%fog_linear" none="Terrain/TwoLayerLightmap_ps"/>
+  </materials>
+
+</Terrain>

@@ -1,0 +1,103 @@
+<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame1" Name="StallMessage_Frame">
+        <Property Name="UnifiedPosition" Value="{{0.5,0},{0.22,0}}" />
+        <Property Name="AbsoluteSize" Value="w:240 h:360" />
+        <Event Name="Hidden" Function="StallMessage_Frame_OnHiden();" />
+        <Window Type="TLBB_ButtonHelp" Name="StallMessage_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*StallMessage&quot;);' />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="StallMessage_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function="this:Hide();" />
+        </Window>
+        <Window Type="TLBB_DragTitle" Name="StallMessage_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="StallMessage_Frame" />
+            <Property Name="Font" Value="YouYuan11.25" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="Text" Value="#{INTERFACE_XML_62}" />
+        </Window>
+        <Window Type="DefaultWindow" Name="StallMessage_Frame_Client">
+            <Property Name="AbsolutePosition" Value="x:7.000000 y:36.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-13.000000},{1.000000,-55.000000}" />
+            <Window Type="TLBB_MultiIMEEditBox" Name="StallMessage_EditText">
+                <Property Name="AbsolutePosition" Value="x:5.000000 y:4.000000" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-10.000000},{0.000000,80.000000}" />
+                <Property Name="MaxTextLength" Value="39" />
+                <Property Name="ActiveSelectionColour" Value="FF00FF00" />
+								<Property Name="SelectedTextColour" Value="FFFFFFFF" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="StallMessage_StaticText">
+                <Property Name="AbsolutePosition" Value="x:5.000000 y:4.000000" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-10.000000},{0.000000,80.000000}" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="TopAligned" />
+                <Property Name="TextColor" Value="FFFFF263" />
+            </Window>
+            <Window Type="TLBB_Frame_Lace2" Name="StallMessage_Bk1">
+                <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,84.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-11.000000},{0.000000,24.000000}" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Window Type="TLBB_Frame_Lace5" Name="StallMessage_Blank1">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,2.000000},{0.000000,2.000000}" />
+                    <Property Name="UnifiedSize" Value="{{1.000000,-4.000000},{0.000000,20.000000}" />
+                    <Property Name="RiseOnClick" Value="False" />
+                </Window>
+                <Window Type="TLBB_ButtonCommon" Name="StallMessage_Ad">
+                    <Property Name="UnifiedPosition" Value="{{0.5,-20.000000},{0.000000,2.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                    <Property Name="Text" Value="" />
+                    <Event Name="Clicked" Function="StallMessage_Ad_Clicked();" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_Frame_Lace3" Name="StallMessage_Bk">
+                <Property Name="AbsolutePosition" Value="x:5.000000 y:110.000000" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-10.000000},{0.000000,150.000000}" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Window Type="TLBB_ComplexWindow" Name="StallMessage_Desc">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,5.000000}" />
+                    <Property Name="UnifiedSize" Value="{{1.000000,-10.000000},{1.000000,-10.000000}" />
+                    <Event Name="OptionClicked" Function="StallMessageOption_Clicked();" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_ButtonCheck" Name="StallMessage_Checkbox_Locked">
+                <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{1.000000,-38.000000}" />
+                <Property Name="AbsoluteSize" Value="w:12.000000 h:12.000000" />
+                <Event Name="Clicked" Function="StallMessage_ReplyCheck_Clicked();" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="StallMessage_Checkbox_Text">
+                <Property Name="UnifiedPosition" Value="{{0.000000,20.000000},{1.000000,-42.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-65.000000},{0.000000,18.000000}" />
+                <Property Name="Text" Value="" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="StallMessage_ClearMessage">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-60.000000},{1.000000,-40.000000}" />
+                <Property Name="AbsoluteSize" Value="w:60.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_1155}" />
+                <Event Name="Clicked" Function="StallMessage_ClearMessage_Clicked();" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="StallMessage_SendMessage">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-40.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_264}" />
+                <Event Name="Clicked" Function="StallMessage_SendMessage_Clicked();" />
+            </Window>
+            <Window Type="TLBB_EditBoxNormal" Name="StallMessage_EditInfoText">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-40.000000},{0.000000,20.000000}" />
+                <Property Name="MaxTextLength" Value="70" />
+                <Property Name="DisableCopyPaste" Value="True" />
+                <Event Name="TextAccepted" Function="StallMessage_SendMessage_Clicked();" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

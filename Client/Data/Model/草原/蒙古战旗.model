@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="蒙古战旗.frame" />
+    <entity mesh="蒙古战旗杆子.mesh" />
+    <entity mesh="蒙古战旗中.mesh" />
+    <entity mesh="蒙古战旗边2.mesh" />
+    <entity mesh="蒙古战旗边1.mesh" />
+</model>

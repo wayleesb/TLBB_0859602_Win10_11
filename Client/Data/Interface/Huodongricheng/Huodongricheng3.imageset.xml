@@ -1,0 +1,5 @@
+<?xml version="1.0" ?>
+<Imageset Name="Huodongricheng3" Imagefile="Huodongricheng/jpg_Huodongricheng3.dds" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+	<Image Name="Huodongricheng3_1" XPos="0" YPos="212" Width="512" Height="297" />
+  <Image Name="Huodongricheng3_2" XPos="191" YPos="321" Width="287" Height="241" />
+</Imageset>

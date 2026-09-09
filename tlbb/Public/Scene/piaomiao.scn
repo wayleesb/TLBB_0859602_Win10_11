@@ -1,0 +1,6 @@
+[System]
+navmapname=piaomiao.nav
+monsterfile=piaomiao_monster.ini
+patrolpoint=piaomiao_patrolpoint.ini
+eventfile=piaomiao_area.ini
+petfile=piaomiao_pet.ini

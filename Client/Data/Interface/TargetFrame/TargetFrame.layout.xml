@@ -1,0 +1,190 @@
+<?xml version="1.0" ?>
+<GUILayout>
+	<Window Type="DefaultWindow" Name="TargetFrame">
+		<Property Name="UnifiedPosition" Value="{{0.0,220.0},{0.0,0.0}}" />
+		<Property Name="UnifiedSize" Value="{{0.000000,252.000000},{0.000000,90.000000}" />
+		<Property Name="MouseHollow" Value="True" />
+		<Property Name="MouseLButtonHollow" Value="True" />
+		<Property Name="MouseMoveHollow" Value="True" />
+		<Property Name="MouseRButtonHollow" Value="True" />
+		
+		<Window Type="TLBB_StaticImageNULL" Name="TargetFrame_CampFrame1">
+			<Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+			<Property Name="AbsoluteSize" Value="w:25.000000 h:87.000000" />
+			<Property Name="RiseOnClick" Value="False" />
+			<Property Name="Image" Value="set:CommonFrame3 image:TragetCamp" />
+      <Window Type="TLBB_MapImage" Name="TargetFrame_CampFrame">
+        <Property Name="AbsolutePosition" Value="x:4.000000 y:13.000000" />
+        <Property Name="AbsoluteSize" Value="w:16.000000 h:40.000000" />
+        <Property Name="AlwaysOnTop" Value="True" />
+        <Property Name="ChildImage" Value="name:Reputation0 set:CommonFrame4 image:TragetCamp_ShaoLin" />
+        <Property Name="ChildImage" Value="name:Reputation1 set:CommonFrame4 image:TragetCamp_MingJiao" />
+        <Property Name="ChildImage" Value="name:Reputation2 set:CommonFrame4 image:TragetCamp_GaiBang" />
+        <Property Name="ChildImage" Value="name:Reputation3 set:CommonFrame4 image:TragetCamp_WuDang" />
+        <Property Name="ChildImage" Value="name:Reputation4 set:CommonFrame4 image:TragetCamp_EMei" />
+        <Property Name="ChildImage" Value="name:Reputation5 set:CommonFrame4 image:TragetCamp_XingXiu" />
+        <Property Name="ChildImage" Value="name:Reputation6 set:CommonFrame4 image:TragetCamp_TianLong" />
+        <Property Name="ChildImage" Value="name:Reputation7 set:CommonFrame4 image:TragetCamp_TianShan" />
+        <Property Name="ChildImage" Value="name:Reputation8 set:CommonFrame4 image:TragetCamp_XiaoYao" />
+        <Property Name="ChildImage" Value="name:Reputation9 set:CommonFrame4 image:TragetCamp_XinShou" />
+        <Property Name="ChildImage" Value="name:Reputation10 set:CommonFrame4 image:TragetCamp_DaSong" />
+        <Property Name="ChildImage" Value="name:Reputation11 set:CommonFrame4 image:TragetCamp_DaSong" />
+        <Property Name="ChildImage" Value="name:Reputation12 set:CommonFrame4 image:TragetCamp_DaSong" />
+        <Property Name="ChildImage" Value="name:Reputation13 set:CommonFrame4 image:TragetCamp_DaLiao" />
+        <Property Name="ChildImage" Value="name:Reputation14 set:CommonFrame4 image:TragetCamp_DaLiao" />
+        <Property Name="ChildImage" Value="name:Reputation15 set:CommonFrame4 image:TragetCamp_DaLi" />
+        <Property Name="ChildImage" Value="name:Reputation16 set:CommonFrame4 image:TragetCamp_XiXia" />
+        <Property Name="ChildImage" Value="name:Reputation17 set:CommonFrame4 image:TragetCamp_FanBang" />
+        <Property Name="ChildImage" Value="name:Reputation18 set:CommonFrame4 image:TragetCamp_MangGai" />
+        <Property Name="ChildImage" Value="name:Reputation19 set:CommonFrame4 image:TragetCamp_YiMin" />
+        <Property Name="ChildImage" Value="name:Reputation20 set:CommonFrame4 image:TragetCamp_LangRen" />
+        <Property Name="ChildImage" Value="name:Reputation21 set:CommonFrame4 image:TragetCamp_BaiMiao" />
+        <Property Name="ChildImage" Value="name:Reputation22 set:CommonFrame4 image:TragetCamp_HeiMiao" />
+        <Property Name="ChildImage" Value="name:Reputation23 set:CommonFrame4 image:TragetCamp_XiuLuo" />
+        <Property Name="ChildImage" Value="name:Reputation24 set:CommonFrame4 image:TragetCamp_YueNv" />
+        <Property Name="ChildImage" Value="name:Reputation25 set:CommonFrame4 image:TragetCamp_YueNan" />
+        <Property Name="ChildImage" Value="name:Reputation26 set:CommonFrame4 image:TragetCamp_EShen" />
+        <Property Name="ChildImage" Value="name:Reputation27 set:CommonFrame4 image:TragetCamp_YeShou" />
+        <Property Name="ChildImage" Value="name:Reputation28 set:CommonFrame4 image:TragetCamp_LvLin" />
+        <Property Name="ChildImage" Value="name:Reputation29 set:CommonFrame4 image:TragetCamp_YaoMo" />
+        
+      </Window>
+		</Window>
+		<Window Type="TLBB_StaticImageNULL" Name="TargetFrame2">
+			<Property Name="AbsolutePosition" Value="x:25.000000 y:0.000000" />
+			<Property Name="AbsoluteSize" Value="w:182.000000 h:73.000000" />
+			<Property Name="RiseOnClick" Value="False" />
+			<Property Name="Image" Value="set:CommonFrame3 image:TragetFrame" />
+			<Window Type="TLBB_SimpleText" Name="TargetFrame_LevelText">
+				<Property Name="AbsolutePosition" Value="x:69.000000 y:48.000000" />
+				<Property Name="AbsoluteSize" Value="w:30.000000 h:14.000000" />
+				<Property Name="HorzFormatting" Value="HorzCentred" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Property Name="Text" Value="1" />
+			</Window>
+			<Window Type="TLBB_MapImage" Name="TargetFrame_TypeIcon">
+				<Property Name="AbsolutePosition" Value="x:102.000000 y:49.000000" />
+				<Property Name="AbsoluteSize" Value="w:23.000000 h:21.000000" />
+				<Property Name="ChildImage" Value="name:TypeName1 set:CommonFrame3 image:TragetProperty2" />
+				<Property Name="ChildImage" Value="name:TypeName2 set:CommonFrame3 image:TragetProperty5" />
+				<Property Name="ChildImage" Value="name:TypeName3 set:CommonFrame3 image:TragetProperty4" />
+				<Property Name="ChildImage" Value="name:TypeName4 set:CommonFrame3 image:TragetProperty0" />
+				<Property Name="ChildImage" Value="name:TypeName5 set:CommonFrame3 image:TragetProperty3" />
+				<Property Name="ChildImage" Value="name:TypeName6 set:CommonFrame3 image:TragetProperty6" />
+				<Property Name="ChildImage" Value="name:TypeName7 set:CommonFrame3 image:TragetProperty1" />
+				<!--“宠”“人”“傀”“兽”“莽”“修”“妖”-->
+			</Window>
+			<Window Type="DefaultWindow" Name="TargetFrame_DataBack">
+				<Property Name="AbsolutePosition" Value="x:2.000000 y:29.000000" />
+				<Property Name="AbsoluteSize" Value="w:123.000000 h:18.000000" />
+				<Window Type="TLBB_ProgressPropertyRed" Name="TargetFrame_HP">
+					<Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+					<Property Name="UnifiedSize" Value="{{1.000000,.000000},{0.000000,5.000000}" />
+					<Property Name="CurrentProgress" Value="1.0" />
+					<Property Name="EffectColor" Value="tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+					<Property Name="EffectColorLevel" Value="index:0 tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+					<Property Name="MoveSpeed" Value="5000" />
+				</Window>
+				<Window Type="TLBB_ProgressPropertyBlue" Name="TargetFrame_MP">
+					<Property Name="AbsolutePosition" Value="x:0.000000 y:6.000000" />
+					<Property Name="UnifiedSize" Value="{{1.000000,.000000},{0.000000,5.000000}" />
+					<Property Name="CurrentProgress" Value="1.0" />
+					<Property Name="ProgressImage" Value="set:PlayerFrame image:10PX_Bar_Blue" />
+					<Property Name="EffectColor" Value="tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+					<Property Name="EffectColorLevel" Value="index:0 tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+					<Property Name="MoveSpeed" Value="5000" />
+				</Window>
+				<Window Type="TLBB_ProgressPropertyYellow" Name="TargetFrame_SP">
+					<Property Name="AbsolutePosition" Value="x:0.000000 y:12.000000" />
+					<Property Name="UnifiedSize" Value="{{1.000000,.000000},{0.000000,5.000000}" />
+					<Property Name="CurrentProgress" Value="1.0" />
+					<Property Name="ProgressImage" Value="set:PlayerFrame image:10PX_Bar_Yellow" />
+					<Property Name="EffectColor" Value="tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+					<Property Name="EffectColorLevel" Value="index:0 tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+					<Property Name="MoveSpeed" Value="5000" />
+				</Window>
+			</Window>
+			<Window Type="DefaultWindow" Name="TargetFrame_DataBack2">
+				<Property Name="AbsolutePosition" Value="x:2.000000 y:29.000000" />
+				<Property Name="AbsoluteSize" Value="w:123.000000 h:18.000000" />
+				<Window Type="TLBB_ProgressPropertyRed" Name="TargetFrame_HP_Boss1">
+					<Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+					<Property Name="UnifiedSize" Value="{{1.000000,.000000},{0.000000,5.000000}" />
+					<Property Name="CurrentProgress" Value="1.0" />
+					<Property Name="EffectColor" Value="tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+					<Property Name="EffectColorLevel" Value="index:0 tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+					<Property Name="MoveSpeed" Value="5000" />
+				</Window>
+				<Window Type="TLBB_ProgressPropertyRed" Name="TargetFrame_HP_Boss2">
+					<Property Name="AbsolutePosition" Value="x:0.000000 y:6.000000" />
+					<Property Name="UnifiedSize" Value="{{1.000000,.000000},{0.000000,5.000000}" />
+					<Property Name="CurrentProgress" Value="1.0" />
+					<Property Name="ProgressImage" Value="set:PlayerFrame image:10PX_Bar_Blue" />
+					<Property Name="EffectColor" Value="tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+					<Property Name="EffectColorLevel" Value="index:0 tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+					<Property Name="MoveSpeed" Value="5000" />
+				</Window>
+				<Window Type="TLBB_ProgressPropertyRed" Name="TargetFrame_HP_Boss3">
+					<Property Name="AbsolutePosition" Value="x:0.000000 y:12.000000" />
+					<Property Name="UnifiedSize" Value="{{1.000000,.000000},{0.000000,5.000000}" />
+					<Property Name="CurrentProgress" Value="1.0" />
+					<Property Name="ProgressImage" Value="set:PlayerFrame image:10PX_Bar_Yellow" />
+					<Property Name="EffectColor" Value="tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+					<Property Name="EffectColorLevel" Value="index:0 tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+					<Property Name="MoveSpeed" Value="5000" />
+				</Window>
+			</Window>
+			<Window Type="TLBB_StaticImageNULL" Name="TargetFrame_NameBar">
+				<Property Name="AbsolutePosition" Value="x:2.000000 y:11.000000" />
+				<Property Name="AbsoluteSize" Value="w:122.000000 h:16.000000" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Property Name="Image" Value="set:CommonStaticImage3 image:Targetname_Bak" />
+				<Window Type="TLBB_SimpleText" Name="TargetFrame_Name">
+					<Property Name="Position" Value="x:0 y:0" />
+					<Property Name="Size" Value="w:1 h:1" />
+					<Property Name="HorzFormatting" Value="HorzCentred" />
+					<Property Name="VertFormatting" Value="VertCentred" />
+				</Window>
+			</Window>
+			<Window Type="TLBB_StaticImageNULL" Name="TargetFrame_Icon">
+				<Property Name="AbsolutePosition" Value="x:128.000000 y:11.000000" />
+				<Property Name="AbsoluteSize" Value="w:48.000000 h:48.000000" />
+				<Property Name="Image" Value="set:ManProtagonist image:ManProtagonist_1" />
+				<Event Name="MouseRClick" Function="TargetFrame_Show_Menu_Func();" />
+			</Window>
+		</Window>
+		
+		<Window Type="TLBB_MapImage" Name="TargetFrame_TypeFrame">
+			<Property Name="AbsolutePosition" Value="x:167.000000 y:0.000000" />
+			<Property Name="AbsoluteSize" Value="w:77.000000 h:90.000000" />
+			<Property Name="AlwaysOnTop" Value="True" />
+			<Property Name="MouseHollow" Value="True" />
+			<Property Name="MouseLButtonHollow" Value="True" />
+			<Property Name="MouseMoveHollow" Value="True" />
+			<Property Name="MouseRButtonHollow" Value="True" />
+			<Property Name="ChildImage" Value="name:TypeFrame1 set:CommonFrame3 image:TragetType4" />
+			<Property Name="ChildImage" Value="name:TypeFrame2 set:CommonFrame3 image:TragetType5" />
+			<Property Name="ChildImage" Value="name:TypeFrame3 set:CommonFrame3 image:TragetType2" />
+			<Property Name="ChildImage" Value="name:TypeFrame4 set:CommonFrame3 image:TragetType1" />
+			<Property Name="ChildImage" Value="name:TypeFrame5 set:CommonFrame3 image:TragetType3" />
+			<Property Name="ChildImage" Value="name:TypeFrame6 set:CommonFrame3 image:TragetType0" />
+			<!--
+      1.友好
+      2.中立
+      3.宠物
+      4.普通敌人
+      5.精英敌人
+      6.敌方boss
+      -->
+		</Window>
+		<!--		<Window Type="WoWLook/ActionButton" Name="TargetFrame_Icon_Action">
+			<Property Name="Position" Value="x:0.68944099 y:0.2957746478" />
+			<Property Name="Size" Value="w:0.298136 h:0.676056" />
+			<Property Name="Empty" Value="True" />
+			<Property Name="DragAcceptName" Value="Y" />
+			<Event Name="MouseRClick" Function="TargetFrame_Show_Menu_Func();" />
+		</Window>
+-->
+	</Window>
+</GUILayout>

@@ -1,0 +1,95 @@
+<Imageset Name="Face_04" Imagefile="Common/tga_04.dds" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+	<Image Name="52.gif_05" XPos="0" YPos="6" Width="25" Height="25" />
+	<Image Name="53.gif_00" XPos="25" YPos="6" Width="25" Height="25" />
+	<Image Name="53.gif_01" XPos="50" YPos="6" Width="25" Height="25" />
+	<Image Name="53.gif_02" XPos="75" YPos="6" Width="25" Height="25" />
+	<Image Name="53.gif_03" XPos="100" YPos="6" Width="25" Height="25" />
+	<Image Name="53.gif_04" XPos="125" YPos="6" Width="25" Height="25" />
+	<Image Name="54.gif_00" XPos="150" YPos="6" Width="25" Height="25" />
+	<Image Name="54.gif_01" XPos="175" YPos="6" Width="25" Height="25" />
+	<Image Name="54.gif_02" XPos="200" YPos="6" Width="25" Height="25" />
+	<Image Name="54.gif_03" XPos="225" YPos="6" Width="25" Height="25" />
+	<Image Name="54.gif_04" XPos="0" YPos="31" Width="25" Height="25" />
+	<Image Name="54.gif_05" XPos="25" YPos="31" Width="25" Height="25" />
+	<Image Name="54.gif_06" XPos="50" YPos="31" Width="25" Height="25" />
+	<Image Name="54.gif_07" XPos="75" YPos="31" Width="25" Height="25" />
+	<Image Name="54.gif_08" XPos="100" YPos="31" Width="25" Height="25" />
+	<Image Name="54.gif_09" XPos="125" YPos="31" Width="25" Height="25" />
+	<Image Name="54.gif_10" XPos="150" YPos="31" Width="25" Height="25" />
+	<Image Name="54.gif_11" XPos="175" YPos="31" Width="25" Height="25" />
+	<Image Name="54.gif_12" XPos="200" YPos="31" Width="25" Height="25" />
+	<Image Name="55.gif_00" XPos="225" YPos="31" Width="25" Height="25" />
+	<Image Name="55.gif_01" XPos="0" YPos="56" Width="25" Height="25" />
+	<Image Name="55.gif_02" XPos="25" YPos="56" Width="25" Height="25" />
+	<Image Name="55.gif_03" XPos="50" YPos="56" Width="25" Height="25" />
+	<Image Name="56.gif_00" XPos="75" YPos="56" Width="25" Height="25" />
+	<Image Name="56.gif_01" XPos="100" YPos="56" Width="25" Height="25" />
+	<Image Name="56.gif_02" XPos="125" YPos="56" Width="25" Height="25" />
+	<Image Name="56.gif_03" XPos="150" YPos="56" Width="25" Height="25" />
+	<Image Name="57.gif_00" XPos="175" YPos="56" Width="25" Height="25" />
+	<Image Name="57.gif_01" XPos="200" YPos="56" Width="25" Height="25" />
+	<Image Name="57.gif_02" XPos="225" YPos="56" Width="25" Height="25" />
+	<Image Name="57.gif_03" XPos="0" YPos="81" Width="25" Height="25" />
+	<Image Name="57.gif_04" XPos="25" YPos="81" Width="25" Height="25" />
+	<Image Name="57.gif_05" XPos="50" YPos="81" Width="25" Height="25" />
+	<Image Name="57.gif_06" XPos="75" YPos="81" Width="25" Height="25" />
+	<Image Name="57.gif_07" XPos="100" YPos="81" Width="25" Height="25" />
+	<Image Name="57.gif_08" XPos="125" YPos="81" Width="25" Height="25" />
+	<Image Name="57.gif_09" XPos="150" YPos="81" Width="25" Height="25" />
+	<Image Name="57.gif_10" XPos="175" YPos="81" Width="25" Height="25" />
+	<Image Name="57.gif_11" XPos="200" YPos="81" Width="25" Height="25" />
+	<Image Name="57.gif_12" XPos="225" YPos="81" Width="25" Height="25" />
+	<Image Name="57.gif_13" XPos="0" YPos="106" Width="25" Height="25" />
+	<Image Name="57.gif_14" XPos="25" YPos="106" Width="25" Height="25" />
+	<Image Name="57.gif_15" XPos="50" YPos="106" Width="25" Height="25" />
+	<Image Name="57.gif_16" XPos="75" YPos="106" Width="25" Height="25" />
+	<Image Name="57.gif_17" XPos="100" YPos="106" Width="25" Height="25" />
+	<Image Name="57.gif_18" XPos="125" YPos="106" Width="25" Height="25" />
+	<Image Name="58.gif_00" XPos="150" YPos="106" Width="25" Height="25" />
+	<Image Name="58.gif_01" XPos="175" YPos="106" Width="25" Height="25" />
+	<Image Name="58.gif_02" XPos="200" YPos="106" Width="25" Height="25" />
+	<Image Name="58.gif_03" XPos="225" YPos="106" Width="25" Height="25" />
+	<Image Name="58.gif_04" XPos="0" YPos="131" Width="25" Height="25" />
+	<Image Name="58.gif_05" XPos="25" YPos="131" Width="25" Height="25" />
+	<Image Name="58.gif_06" XPos="50" YPos="131" Width="25" Height="25" />
+	<Image Name="58.gif_07" XPos="75" YPos="131" Width="25" Height="25" />
+	<Image Name="59.gif_00" XPos="100" YPos="131" Width="25" Height="25" />
+	<Image Name="59.gif_01" XPos="125" YPos="131" Width="25" Height="25" />
+	<Image Name="59.gif_02" XPos="150" YPos="131" Width="25" Height="25" />
+	<Image Name="59.gif_03" XPos="175" YPos="131" Width="25" Height="25" />
+	<Image Name="59.gif_04" XPos="200" YPos="131" Width="25" Height="25" />
+	<Image Name="59.gif_05" XPos="225" YPos="131" Width="25" Height="25" />
+	<Image Name="59.gif_06" XPos="0" YPos="156" Width="25" Height="25" />
+	<Image Name="59.gif_07" XPos="25" YPos="156" Width="25" Height="25" />
+	<Image Name="59.gif_08" XPos="50" YPos="156" Width="25" Height="25" />
+	<Image Name="59.gif_09" XPos="75" YPos="156" Width="25" Height="25" />
+	<Image Name="59.gif_10" XPos="100" YPos="156" Width="25" Height="25" />
+	<Image Name="59.gif_11" XPos="125" YPos="156" Width="25" Height="25" />
+	<Image Name="59.gif_12" XPos="150" YPos="156" Width="25" Height="25" />
+
+	<Image Name="FlashFrame1" XPos="0" YPos="224" Width="6" Height="6" />
+	<Image Name="FlashFrame2" XPos="7" YPos="224" Width="16" Height="16" />
+	<Image Name="FlashFrame3" XPos="24" YPos="224" Width="26" Height="26" />
+	<Image Name="FlashFrame4" XPos="51" YPos="224" Width="31" Height="31" />
+
+	<Image Name="PK_Flag_1" XPos="190" YPos="157" Width="32" Height="32" />
+	<Image Name="PK_Flag_2" XPos="190" YPos="190" Width="32" Height="32" />
+	<Image Name="PK_Flag_3" XPos="190" YPos="223" Width="32" Height="32" />
+	<Image Name="PK_Flag_4" XPos="223" YPos="157" Width="32" Height="32" />
+	<Image Name="PK_Flag_5" XPos="223" YPos="190" Width="32" Height="32" />
+	<Image Name="PK_Flag_6" XPos="223" YPos="223" Width="32" Height="32" />
+	<Image Name="PK_Flag_7" XPos="156" YPos="223" Width="32" Height="32" />
+
+	<Image Name="Remind_Bak" XPos="0" YPos="186" Width="32" Height="32" />
+	<Image Name="Remind2_Bak" XPos="33" YPos="186" Width="32" Height="32" />
+	<Image Name="Remind3_Bak" XPos="66" YPos="186" Width="32" Height="32" />
+	
+	<Image Name="ConfraternityPK1" XPos="231" YPos="181" Width="25" Height="25" />
+	<Image Name="ConfraternityPK2" XPos="231" YPos="206" Width="25" Height="25" />
+	<Image Name="ConfraternityPK3" XPos="231" YPos="231" Width="25" Height="25" />
+
+  <Image Name="Olympic_JinPai" XPos="108" YPos="190" Width="20" Height="20" />
+  <Image Name="Olympic_YinPai" XPos="135" YPos="190" Width="20" Height="20" />
+  <Image Name="Olympic_TongPai" XPos="108" YPos="213" Width="20" Height="20" />
+
+</Imageset>

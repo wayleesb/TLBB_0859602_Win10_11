@@ -1,0 +1,71 @@
+<?xml version="1.0" ?>
+<Imageset Name="CoolDownIcon" Imagefile="Icons/CoolDown.tga" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+	<Image Name="CoolDown00" XPos="0" YPos="0" Width="32" Height="32" />
+	<Image Name="CoolDown01" XPos="0" YPos="0" Width="32" Height="32" />
+	<Image Name="CoolDown02" XPos="32" YPos="0" Width="32" Height="32" />
+	<Image Name="CoolDown03" XPos="32" YPos="0" Width="32" Height="32" />
+	<Image Name="CoolDown04" XPos="64" YPos="0" Width="32" Height="32" />
+	<Image Name="CoolDown05" XPos="64" YPos="0" Width="32" Height="32" />
+	<Image Name="CoolDown06" XPos="96" YPos="0" Width="32" Height="32" />
+	<Image Name="CoolDown07" XPos="96" YPos="0" Width="32" Height="32" />
+	<Image Name="CoolDown08" XPos="128" YPos="0" Width="32" Height="32" />
+	<Image Name="CoolDown09" XPos="128" YPos="0" Width="32" Height="32" />
+	<Image Name="CoolDown10" XPos="160" YPos="0" Width="32" Height="32" />
+	<Image Name="CoolDown11" XPos="160" YPos="0" Width="32" Height="32" />
+	<Image Name="CoolDown12" XPos="192" YPos="0" Width="32" Height="32" />
+	<Image Name="CoolDown13" XPos="192" YPos="0" Width="32" Height="32" />
+	<Image Name="CoolDown14" XPos="224" YPos="0" Width="32" Height="32" />
+	<Image Name="CoolDown15" XPos="224" YPos="0" Width="32" Height="32" />
+	
+	<Image Name="CoolDown16" XPos="0" YPos="32" Width="32" Height="32" />
+	<Image Name="CoolDown17" XPos="0" YPos="32" Width="32" Height="32" />
+	<Image Name="CoolDown18" XPos="32" YPos="32" Width="32" Height="32" />
+	<Image Name="CoolDown19" XPos="32" YPos="32" Width="32" Height="32" />
+	<Image Name="CoolDown20" XPos="64" YPos="32" Width="32" Height="32" />
+	<Image Name="CoolDown21" XPos="64" YPos="32" Width="32" Height="32" />
+	<Image Name="CoolDown22" XPos="96" YPos="32" Width="32" Height="32" />
+	<Image Name="CoolDown23" XPos="96" YPos="32" Width="32" Height="32" />
+	<Image Name="CoolDown24" XPos="128" YPos="32" Width="32" Height="32" />
+	<Image Name="CoolDown25" XPos="128" YPos="32" Width="32" Height="32" />
+	<Image Name="CoolDown26" XPos="160" YPos="32" Width="32" Height="32" />
+	<Image Name="CoolDown27" XPos="160" YPos="32" Width="32" Height="32" />
+	<Image Name="CoolDown28" XPos="192" YPos="32" Width="32" Height="32" />
+	<Image Name="CoolDown29" XPos="192" YPos="32" Width="32" Height="32" />
+	<Image Name="CoolDown30" XPos="224" YPos="32" Width="32" Height="32" />
+	<Image Name="CoolDown31" XPos="224" YPos="32" Width="32" Height="32" />
+	
+	<Image Name="CoolDown32" XPos="0" YPos="64" Width="32" Height="32" />
+	<Image Name="CoolDown33" XPos="0" YPos="64" Width="32" Height="32" />
+	<Image Name="CoolDown34" XPos="32" YPos="64" Width="32" Height="32" />
+	<Image Name="CoolDown35" XPos="32" YPos="64" Width="32" Height="32" />
+	<Image Name="CoolDown36" XPos="64" YPos="64" Width="32" Height="32" />
+	<Image Name="CoolDown37" XPos="64" YPos="64" Width="32" Height="32" />
+	<Image Name="CoolDown38" XPos="96" YPos="64" Width="32" Height="32" />
+	<Image Name="CoolDown39" XPos="96" YPos="64" Width="32" Height="32" />
+	<Image Name="CoolDown40" XPos="128" YPos="64" Width="32" Height="32" />
+	<Image Name="CoolDown41" XPos="128" YPos="64" Width="32" Height="32" />
+	<Image Name="CoolDown42" XPos="160" YPos="64" Width="32" Height="32" />
+	<Image Name="CoolDown43" XPos="160" YPos="64" Width="32" Height="32" />
+	<Image Name="CoolDown44" XPos="192" YPos="64" Width="32" Height="32" />
+	<Image Name="CoolDown45" XPos="192" YPos="64" Width="32" Height="32" />
+	<Image Name="CoolDown46" XPos="224" YPos="64" Width="32" Height="32" />
+	<Image Name="CoolDown47" XPos="224" YPos="64" Width="32" Height="32" />
+
+	<Image Name="CoolDown48" XPos="0" YPos="96" Width="32" Height="32" />
+	<Image Name="CoolDown49" XPos="0" YPos="96" Width="32" Height="32" />
+	<Image Name="CoolDown50" XPos="32" YPos="96" Width="32" Height="32" />
+	<Image Name="CoolDown51" XPos="32" YPos="96" Width="32" Height="32" />
+	<Image Name="CoolDown52" XPos="64" YPos="96" Width="32" Height="32" />
+	<Image Name="CoolDown53" XPos="64" YPos="96" Width="32" Height="32" />
+	<Image Name="CoolDown54" XPos="96" YPos="96" Width="32" Height="32" />
+	<Image Name="CoolDown55" XPos="96" YPos="96" Width="32" Height="32" />
+	<Image Name="CoolDown56" XPos="128" YPos="96" Width="32" Height="32" />
+	<Image Name="CoolDown57" XPos="128" YPos="96" Width="32" Height="32" />
+	<Image Name="CoolDown58" XPos="160" YPos="96" Width="32" Height="32" />
+	<Image Name="CoolDown59" XPos="160" YPos="96" Width="32" Height="32" />
+	<Image Name="CoolDown60" XPos="192" YPos="96" Width="32" Height="32" />
+	<Image Name="CoolDown61" XPos="192" YPos="96" Width="32" Height="32" />
+	<Image Name="CoolDown62" XPos="224" YPos="96" Width="32" Height="32" />
+	<Image Name="CoolDown63" XPos="224" YPos="96" Width="32" Height="32" />
+	
+</Imageset>

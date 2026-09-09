@@ -1,0 +1,285 @@
+<?xml version="1.0" ?>
+<GUILayout>
+	<Window Type="TLBB_MainFrame3" Name="Relation_Frame">
+		<Property Name="UnifiedPosition" Value="{{0.000000,375.000000},{0.120000,26.520001}" />
+		<Property Name="AbsoluteSize" Value="w:240 h:330" />
+		<Window Type="TLBB_DragTitle" Name="Relation_DragTitle">
+			<Property Name="AbsolutePosition" Value="x:109.000000 y:12.000000" />
+			<Property Name="UnifiedSize" Value="{{1.000000,-135.000000},{0.000000,20.000000}" />
+			<Property Name="Font" Value="YouYuan11.25" />
+			<Property Name="HorzFormatting" Value="HorzCentred" />
+			<Property Name="VertFormatting" Value="VertCentred" />
+			<Property Name="Text" Value="#{INTERFACE_XML_931}" />
+			<Property Name="DragTarget" Value="Relation_Frame" />
+		</Window>
+		<Window Type="TLBB_ButtonClose" Name="Relation_Close">
+			<Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+			<Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+			<Event Name="Clicked" Function="this:Hide();" />
+		</Window>
+		<Window Type="TLBB_ButtonHelp" Name="Relation_Help">
+			<Property Name="UnifiedPosition" Value="{{0.000000,88.000000},{0.000000,14.000000}" />
+			<Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+      <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*Relation&quot;);' />
+		</Window>
+		<Window Type="DefaultWindow" Name="Relation_Background_Frame">
+			<Property Name="AbsolutePosition" Value="x:12.000000 y:45.000000" />
+			<Property Name="UnifiedSize" Value="{{1.000000,-20.000000},{1.000000,-75.000000}" />
+			<Window Type="TLBB_ButtonNULL" Name="Relation_UPdata1">
+				<Property Name="UnifiedPosition" Value="{{1.000000,-25.000000},{0.000000,5.000000}" />
+				<Property Name="AbsoluteSize" Value="w:20.0 h:26.0" />
+				<Property Name="NormalImage" Value="set:Button6 image:PageUp_Btn_Normal" />
+				<Property Name="HoverImage" Value="set:Button6 image:PageUp_Btn_Hover" />
+				<Property Name="PushedImage" Value="set:Button6 image:PageUp_Btn_Pushed" />
+				<Property Name="DisabledImage" Value="set:Button6 image:PageUp_Btn_Disabled" />
+        <Event Name="Clicked" Function="Relation_PageUp()"/>
+			</Window>
+			<Window Type="TLBB_ButtonNULL" Name="Relation_UPdata2">
+				<Property Name="UnifiedPosition" Value="{{1.000000,-25.000000},{1.000000,-31.000000}" />
+				<Property Name="AbsoluteSize" Value="w:20.0 h:26.0" />
+				<Property Name="NormalImage" Value="set:Button6 image:PageDown_Btn_Normal" />
+				<Property Name="HoverImage" Value="set:Button6 image:PageDown_Btn_Hover" />
+				<Property Name="PushedImage" Value="set:Button6 image:PageDown_Btn_Pushed" />
+				<Property Name="DisabledImage" Value="set:Button6 image:PageDown_Btn_Disabled" />
+        <Event Name="Clicked" Function="Relation_PageDown()"/>
+			</Window>
+			<Window Type="DefaultWindow" Name="Relation_NPC1_Back">
+				<Property Name="UnifiedPosition" Value="{{0,6},{0,0}}" />
+				<Property Name="UnifiedSize" Value="{{1.0,-40.000000},{0.000000,54.000000}" />
+				<Window Type="TLBB_Frame_Lace1" Name="Relation_Head1_Back">
+					<Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+					<Property Name="AbsoluteSize" Value="w:54.000000 h:54.000000" />
+					<Window Type="TLBB_StaticImageNULL" Name="Relation_Head1">
+						<Property Name="AbsolutePosition" Value="x:3.000000 y:3.000000" />
+						<Property Name="AbsoluteSize" Value="w:48.000000 h:48.000000" />
+						<Property Name="Image" Value="set:CommonNPCHeader1 image:CommonNPCHeader1_13" />
+					</Window>
+				</Window>
+				<Window Type="TLBB_SimpleText" Name="Relation_NPC1_Name">
+					<Property Name="UnifiedPosition" Value="{{0.000000,58.000000},{0.000000,2.000000}" />
+					<Property Name="UnifiedSize" Value="{{0.000000,120.000000},{0.000000,14.000000}" />
+					<Property Name="Text" Value="" />
+					<Property Name="TextColor" Value="FFFFF263" />
+					<Property Name="HorzFormatting" Value="LeftAligned" />
+					<Property Name="VertFormatting" Value="VertCentred" />
+					<Property Name="RiseOnClick" Value="False" />
+				</Window>
+				<Window Type="TLBB_SimpleText" Name="Relation_NPC1_Current">
+					<Property Name="UnifiedPosition" Value="{{0.000000,58.000000},{0.000000,20.000000}" />
+					<Property Name="UnifiedSize" Value="{{0.000000,120.000000},{0.000000,14.000000}" />
+					<Property Name="Text" Value="" />
+					<Property Name="TextColor" Value="FFFFF263" />
+					<Property Name="HorzFormatting" Value="LeftAligned" />
+					<Property Name="VertFormatting" Value="VertCentred" />
+				</Window>
+				<Window Type="TLBB_SimpleMulitiTextFrame" Name="Relation_NPC1_PicBack">
+					<Property Name="UnifiedPosition" Value="{{0,56},{1,-18}}" />
+					<Property Name="UnifiedSize" Value="{{0.0,120.000000},{0.000000,16.000000}" />
+					<Window Type="TLBB_ProgressPropertyRed" Name="Relation_NPC1_Pic1">
+						<Property Name="UnifiedPosition" Value="{{0,4},{0,5}}" />
+						<Property Name="UnifiedSize" Value="{{1.000000,-8.000000},{0.000000,6.000000}" />
+						<Property Name="EffectColorLevel" Value="index:0 tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+						<Property Name="CurrentProgress" Value="1.0" />
+					</Window>
+					<Window Type="TLBB_ProgressPropertyYellow" Name="Relation_NPC1_Pic2">
+						<Property Name="UnifiedPosition" Value="{{0,4},{0,5}}" />
+						<Property Name="UnifiedSize" Value="{{1.000000,-8.000000},{0.000000,6.000000}" />
+						<Property Name="EffectColorLevel" Value="index:0 tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+						<Property Name="CurrentProgress" Value="1.0" />
+					</Window>
+					<Window Type="TLBB_ProgressPropertyGreen" Name="Relation_NPC1_Pic3">
+						<Property Name="UnifiedPosition" Value="{{0,4},{0,5}}" />
+						<Property Name="UnifiedSize" Value="{{1.000000,-8.000000},{0.000000,6.000000}" />
+						<Property Name="EffectColorLevel" Value="index:0 tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+						<Property Name="CurrentProgress" Value="1.0" />
+					</Window>
+				</Window>
+			</Window>
+			<Window Type="DefaultWindow" Name="Relation_NPC2_Back">
+				<Property Name="UnifiedPosition" Value="{{0,6},{0,65}}" />
+				<Property Name="UnifiedSize" Value="{{1.0,-40.000000},{0.000000,54.000000}" />
+				<Window Type="TLBB_Frame_Lace1" Name="Relation_Head2_Back">
+					<Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+					<Property Name="AbsoluteSize" Value="w:54.000000 h:54.000000" />
+					<Window Type="TLBB_StaticImageNULL" Name="Relation_Head2">
+						<Property Name="AbsolutePosition" Value="x:3.000000 y:3.000000" />
+						<Property Name="AbsoluteSize" Value="w:48.000000 h:48.000000" />
+						<Property Name="Image" Value="set:CommonNPCHeader1 image:CommonNPCHeader1_13" />
+					</Window>
+				</Window>
+				<Window Type="TLBB_SimpleText" Name="Relation_NPC2_Name">
+					<Property Name="UnifiedPosition" Value="{{0.000000,58.000000},{0.000000,2.000000}" />
+					<Property Name="UnifiedSize" Value="{{0.000000,120.000000},{0.000000,14.000000}" />
+					<Property Name="Text" Value="" />
+					<Property Name="TextColor" Value="FFFFF263" />
+					<Property Name="HorzFormatting" Value="LeftAligned" />
+					<Property Name="VertFormatting" Value="VertCentred" />
+					<Property Name="RiseOnClick" Value="False" />
+				</Window>
+				<Window Type="TLBB_SimpleText" Name="Relation_NPC2_Current">
+					<Property Name="UnifiedPosition" Value="{{0.000000,58.000000},{0.000000,20.000000}" />
+					<Property Name="UnifiedSize" Value="{{0.000000,120.000000},{0.000000,14.000000}" />
+					<Property Name="Text" Value="" />
+					<Property Name="TextColor" Value="FFFFF263" />
+					<Property Name="HorzFormatting" Value="LeftAligned" />
+					<Property Name="VertFormatting" Value="VertCentred" />
+				</Window>
+				<Window Type="TLBB_SimpleMulitiTextFrame" Name="Relation_NPC2_PicBack">
+					<Property Name="UnifiedPosition" Value="{{0,56},{1,-18}}" />
+					<Property Name="UnifiedSize" Value="{{0.0,120.000000},{0.000000,16.000000}" />
+					<Window Type="TLBB_ProgressPropertyRed" Name="Relation_NPC2_Pic1">
+						<Property Name="UnifiedPosition" Value="{{0,4},{0,5}}" />
+						<Property Name="UnifiedSize" Value="{{1.000000,-8.000000},{0.000000,6.000000}" />
+						<Property Name="EffectColorLevel" Value="index:0 tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+						<Property Name="CurrentProgress" Value="1.0" />
+					</Window>
+					<Window Type="TLBB_ProgressPropertyYellow" Name="Relation_NPC2_Pic2">
+						<Property Name="UnifiedPosition" Value="{{0,4},{0,5}}" />
+						<Property Name="UnifiedSize" Value="{{1.000000,-8.000000},{0.000000,6.000000}" />
+						<Property Name="EffectColorLevel" Value="index:0 tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+						<Property Name="CurrentProgress" Value="1.0" />
+					</Window>
+					<Window Type="TLBB_ProgressPropertyGreen" Name="Relation_NPC2_Pic3">
+						<Property Name="UnifiedPosition" Value="{{0,4},{0,5}}" />
+						<Property Name="UnifiedSize" Value="{{1.000000,-8.000000},{0.000000,6.000000}" />
+						<Property Name="EffectColorLevel" Value="index:0 tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+						<Property Name="CurrentProgress" Value="1.0" />
+					</Window>
+				</Window>
+			</Window>
+			<Window Type="DefaultWindow" Name="Relation_NPC3_Back">
+				<Property Name="UnifiedPosition" Value="{{0,6},{0,130}}" />
+				<Property Name="UnifiedSize" Value="{{1.0,-40.000000},{0.000000,54.000000}" />
+				<Window Type="TLBB_Frame_Lace1" Name="Relation_Head3_Back">
+					<Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+					<Property Name="AbsoluteSize" Value="w:54.000000 h:54.000000" />
+					<Window Type="TLBB_StaticImageNULL" Name="Relation_Head3">
+						<Property Name="AbsolutePosition" Value="x:3.000000 y:3.000000" />
+						<Property Name="AbsoluteSize" Value="w:48.000000 h:48.000000" />
+						<Property Name="Image" Value="set:CommonNPCHeader1 image:CommonNPCHeader1_13" />
+					</Window>
+				</Window>
+				<Window Type="TLBB_SimpleText" Name="Relation_NPC3_Name">
+					<Property Name="UnifiedPosition" Value="{{0.000000,58.000000},{0.000000,2.000000}" />
+					<Property Name="UnifiedSize" Value="{{0.000000,120.000000},{0.000000,14.000000}" />
+					<Property Name="Text" Value="" />
+					<Property Name="TextColor" Value="FFFFF263" />
+					<Property Name="HorzFormatting" Value="LeftAligned" />
+					<Property Name="VertFormatting" Value="VertCentred" />
+					<Property Name="RiseOnClick" Value="False" />
+				</Window>
+				<Window Type="TLBB_SimpleText" Name="Relation_NPC3_Current">
+					<Property Name="UnifiedPosition" Value="{{0.000000,58.000000},{0.000000,20.000000}" />
+					<Property Name="UnifiedSize" Value="{{0.000000,120.000000},{0.000000,14.000000}" />
+					<Property Name="Text" Value="" />
+					<Property Name="TextColor" Value="FFFFF263" />
+					<Property Name="HorzFormatting" Value="LeftAligned" />
+					<Property Name="VertFormatting" Value="VertCentred" />
+				</Window>
+				<Window Type="TLBB_SimpleMulitiTextFrame" Name="Relation_NPC3_PicBack">
+					<Property Name="UnifiedPosition" Value="{{0,56},{1,-18}}" />
+					<Property Name="UnifiedSize" Value="{{0.0,120.000000},{0.000000,16.000000}" />
+					<Window Type="TLBB_ProgressPropertyRed" Name="Relation_NPC3_Pic1">
+						<Property Name="UnifiedPosition" Value="{{0,4},{0,5}}" />
+						<Property Name="UnifiedSize" Value="{{1.000000,-8.000000},{0.000000,6.000000}" />
+						<Property Name="EffectColorLevel" Value="index:0 tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+						<Property Name="CurrentProgress" Value="1.0" />
+					</Window>
+					<Window Type="TLBB_ProgressPropertyYellow" Name="Relation_NPC3_Pic2">
+						<Property Name="UnifiedPosition" Value="{{0,4},{0,5}}" />
+						<Property Name="UnifiedSize" Value="{{1.000000,-8.000000},{0.000000,6.000000}" />
+						<Property Name="EffectColorLevel" Value="index:0 tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+						<Property Name="CurrentProgress" Value="1.0" />
+					</Window>
+					<Window Type="TLBB_ProgressPropertyGreen" Name="Relation_NPC3_Pic3">
+						<Property Name="UnifiedPosition" Value="{{0,4},{0,5}}" />
+						<Property Name="UnifiedSize" Value="{{1.000000,-8.000000},{0.000000,6.000000}" />
+						<Property Name="EffectColorLevel" Value="index:0 tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+						<Property Name="CurrentProgress" Value="1.0" />
+					</Window>
+				</Window>
+			</Window>
+			<Window Type="DefaultWindow" Name="Relation_NPC4_Back">
+				<Property Name="UnifiedPosition" Value="{{0,6},{0,195}}" />
+				<Property Name="UnifiedSize" Value="{{1.0,-40.000000},{0.000000,54.000000}" />
+				<Window Type="TLBB_Frame_Lace1" Name="Relation_Head4_Back">
+					<Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+					<Property Name="AbsoluteSize" Value="w:54.000000 h:54.000000" />
+					<Window Type="TLBB_StaticImageNULL" Name="Relation_Head4">
+						<Property Name="AbsolutePosition" Value="x:3.000000 y:3.000000" />
+						<Property Name="AbsoluteSize" Value="w:48.000000 h:48.000000" />
+						<Property Name="Image" Value="set:CommonNPCHeader1 image:CommonNPCHeader1_13" />
+					</Window>
+				</Window>
+				<Window Type="TLBB_SimpleText" Name="Relation_NPC4_Name">
+					<Property Name="UnifiedPosition" Value="{{0.000000,58.000000},{0.000000,2.000000}" />
+					<Property Name="UnifiedSize" Value="{{0.000000,120.000000},{0.000000,14.000000}" />
+					<Property Name="Text" Value="" />
+					<Property Name="TextColor" Value="FFFFF263" />
+					<Property Name="HorzFormatting" Value="LeftAligned" />
+					<Property Name="VertFormatting" Value="VertCentred" />
+					<Property Name="RiseOnClick" Value="False" />
+				</Window>
+				<Window Type="TLBB_SimpleText" Name="Relation_NPC4_Current">
+					<Property Name="UnifiedPosition" Value="{{0.000000,58.000000},{0.000000,20.000000}" />
+					<Property Name="UnifiedSize" Value="{{0.000000,120.000000},{0.000000,14.000000}" />
+					<Property Name="Text" Value="" />
+					<Property Name="TextColor" Value="FFFFF263" />
+					<Property Name="HorzFormatting" Value="LeftAligned" />
+					<Property Name="VertFormatting" Value="VertCentred" />
+				</Window>
+				<Window Type="TLBB_SimpleMulitiTextFrame" Name="Relation_NPC4_PicBack">
+					<Property Name="UnifiedPosition" Value="{{0,56},{1,-18}}" />
+					<Property Name="UnifiedSize" Value="{{0.0,120.000000},{0.000000,16.000000}" />
+					<Window Type="TLBB_ProgressPropertyRed" Name="Relation_NPC4_Pic1">
+						<Property Name="UnifiedPosition" Value="{{0,4},{0,5}}" />
+						<Property Name="UnifiedSize" Value="{{1.000000,-8.000000},{0.000000,6.000000}" />
+						<Property Name="EffectColorLevel" Value="index:0 tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+						<Property Name="CurrentProgress" Value="1.0" />
+					</Window>
+					<Window Type="TLBB_ProgressPropertyYellow" Name="Relation_NPC4_Pic2">
+						<Property Name="UnifiedPosition" Value="{{0,4},{0,5}}" />
+						<Property Name="UnifiedSize" Value="{{1.000000,-8.000000},{0.000000,6.000000}" />
+						<Property Name="EffectColorLevel" Value="index:0 tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+						<Property Name="CurrentProgress" Value="1.0" />
+					</Window>
+					<Window Type="TLBB_ProgressPropertyGreen" Name="Relation_NPC4_Pic3">
+						<Property Name="UnifiedPosition" Value="{{0,4},{0,5}}" />
+						<Property Name="UnifiedSize" Value="{{1.000000,-8.000000},{0.000000,6.000000}" />
+						<Property Name="EffectColorLevel" Value="index:0 tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+						<Property Name="CurrentProgress" Value="1.0" />
+					</Window>
+				</Window>
+			</Window>
+		</Window>
+		<Window Type="DefaultWindow" Name="Relation_Checkbox_Frame">
+			<Property Name="UnifiedPosition" Value="{{0.0,8.000000},{1.000000,-25.000000}" />
+			<Property Name="UnifiedSize" Value="{{0.9,0.000000},{0.000000,24.000000}" />
+			<Window Type="TLBB_ButtonPageDown" Name="Relation_ZhuJue">
+				<Property Name="AbsolutePosition" Value="x:0.0 y:0.0" />
+				<Property Name="AbsoluteSize" Value="w:42.000000 h:24.000000" />
+				<Property Name="CheckMode" Value="1" />
+        <Property Name="Selected" Value ="True" />
+				<Property Name="Text" Value="#{INTERFACE_XML_932}" />
+        <Event Name="Clicked" Function="Relation_OnPageClick( 0 );" />
+				<Property Name="HorzLabelFormatting" Value="WordWrapCentreAligned" />
+			</Window>
+			<Window Type="TLBB_ButtonPageDown" Name="Relation_Meinv">
+				<Property Name="AbsolutePosition" Value="x:45.0 y:0.0" />
+				<Property Name="AbsoluteSize" Value="w:42.000000 h:24.000000" />
+				<Property Name="HorzLabelFormatting" Value="WordWrapCentreAligned" />
+				<Property Name="Text" Value="#{INTERFACE_XML_933}" />
+        <Event Name="Clicked" Function="Relation_OnPageClick( 1 );" />
+				<Property Name="CheckMode" Value="1" />
+			</Window>
+			<Window Type="TLBB_ButtonPageDown" Name="Relation_XiaoXiong">
+				<Property Name="AbsolutePosition" Value="x:90.0 y:0.0" />
+				<Property Name="AbsoluteSize" Value="w:42.000000 h:24.000000" />
+				<Property Name="HorzLabelFormatting" Value="WordWrapCentreAligned" />
+				<Property Name="Text" Value="#{INTERFACE_XML_934}" />
+        <Event Name="Clicked" Function="Relation_OnPageClick( 2 );" />
+				<Property Name="CheckMode" Value="1" />
+			</Window>
+		</Window>
+	</Window>
+</GUILayout>

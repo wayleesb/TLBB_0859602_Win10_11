@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Scene formatVersion="0.1.1" name="homexiao_1">
+
+  <Terrain filename="homexiao_1.Terrain"/>
+
+  <Object name="#FairyEnviroment" type="Enviroment">
+    <Property name="ambient" value="0.384314 0.384314 0.384314"/>
+    <Property name="fog.mode" value="linear"/>
+    <Property name="fog.colour" value="0 0 0"/>
+    <Property name="fog.linear start" value="3500"/>
+    <Property name="fog.linear end" value="4000"/>
+  </Object>
+
+  <Object name="#FairyMainLightOne" type="Light">
+    <Property name="type" value="directional"/>
+    <Property name="diffuse" value="0.6 0.6 0.6"/>
+    <Property name="specular" value="0.3 0.3 0.3"/>
+    <Property name="direction" value="-1 -1 -1"/>
+  </Object>
+
+  <Object name="#FairyMainLightTwo" type="Light">
+    <Property name="type" value="directional"/>
+    <Property name="diffuse" value="0.1 0.1 0.1"/>
+    <Property name="direction" value="1 -1 -1"/>
+  </Object>
+
+  <Object name="#FairySkyDome" type="SkyDome">
+    <Property name="material" value="CloudySky"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/墙/一级墙/一级院墙.mesh"/>
+    <Property name="position" value="-700 0 -1000"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/墙/一级墙/一级院墙.mesh"/>
+    <Property name="position" value="-500 0 -1000"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/墙/一级墙/一级院墙.mesh"/>
+    <Property name="position" value="500 0 -1000"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/墙/一级墙/一级院墙.mesh"/>
+    <Property name="position" value="700 0 -1000"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/墙/一级墙/一级院墙.mesh"/>
+    <Property name="position" value="-1000 0 -700"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/墙/一级墙/一级院墙.mesh"/>
+    <Property name="position" value="-1000 0 -500"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/墙/一级墙/一级院墙.mesh"/>
+    <Property name="position" value="-1000 0 -300"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/墙/一级墙/一级院墙.mesh"/>
+    <Property name="position" value="-1000 0 -100"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/墙/一级墙/一级院墙.mesh"/>
+    <Property name="position" value="-1000 0 100"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/墙/一级墙/一级院墙.mesh"/>
+    <Property name="position" value="-1000 0 300"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/墙/一级墙/一级院墙.mesh"/>
+    <Property name="position" value="-1000 0 500"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/墙/一级墙/一级院墙.mesh"/>
+    <Property name="position" value="-1000 0 700"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/墙/一级墙/一级院墙.mesh"/>
+    <Property name="position" value="1000 0 -700"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/墙/一级墙/一级院墙.mesh"/>
+    <Property name="position" value="1000 0 -500"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/墙/一级墙/一级院墙.mesh"/>
+    <Property name="position" value="-700 0 1000"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/墙/一级墙/一级院墙.mesh"/>
+    <Property name="position" value="-500 0 1000"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/墙/一级墙/一级直角院墙.mesh"/>
+    <Property name="position" value="1000 0 -1000"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/墙/一级墙/一级直角院墙.mesh"/>
+    <Property name="position" value="-1000 0 -1000"/>
+    <Property name="orientation" value="1.08033e-007 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/墙/一级墙/一级直角院墙.mesh"/>
+    <Property name="position" value="-1000 0 1000"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/墙/一级墙/一级院墙堵.mesh"/>
+    <Property name="position" value="1000 0 -300"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/墙/一级墙/一级院墙堵.mesh"/>
+    <Property name="position" value="300 0 1000"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/墙/一级墙/一级院墙门.mesh"/>
+    <Property name="position" value="0 0 1000"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/墙/一级墙/一级院墙.mesh"/>
+    <Property name="position" value="-300 0 1000"/>
+  </Object>
+
+  <Object type="TerrainLiquid">
+    <Property name="material" value="haihuwater"/>
+    <Property name="position" value="585.304 -52.0684 210.4"/>
+    <Property name="texture scale" value="0.3"/>
+    <Property name="depth texture layer.enable" value="true"/>
+    <Property name="depth texture layer.height scale" value="0.009"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/墙/一级墙/一级院墙.mesh"/>
+    <Property name="position" value="-300 0 -1000"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/墙/一级墙/一级院墙.mesh"/>
+    <Property name="position" value="300 0 -1000"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/墙/一级墙/一级厢房.mesh"/>
+    <Property name="position" value="0 0 -1000"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/花圃/石砌花圃直角.mesh"/>
+    <Property name="position" value="-500 0 -700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/花圃/石砌花圃直.mesh"/>
+    <Property name="position" value="-600 0 -700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/花圃/石砌花圃直.mesh"/>
+    <Property name="position" value="-700 0 -700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/花圃/石砌花圃直.mesh"/>
+    <Property name="position" value="-800 0 -700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/花圃/石砌花圃直角.mesh"/>
+    <Property name="position" value="-1000 0 -700"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/花圃/石砌花圃直.mesh"/>
+    <Property name="position" value="-900 0 -1000"/>
+    <Property name="orientation" value="-1.2666e-007 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/花圃/石砌花圃直.mesh"/>
+    <Property name="position" value="-700 0 -1000"/>
+    <Property name="orientation" value="-1.2666e-007 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/花圃/石砌花圃直角.mesh"/>
+    <Property name="position" value="-1000 0 -1000"/>
+    <Property name="orientation" value="-1.2666e-007 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/花圃/石砌花圃直角.mesh"/>
+    <Property name="position" value="-500 0 -1000"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/花圃/石砌花圃直.mesh"/>
+    <Property name="position" value="-800 0 -1000"/>
+    <Property name="orientation" value="-1.2666e-007 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/花圃/石砌花圃直.mesh"/>
+    <Property name="position" value="-500 0 -900"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/花圃/石砌花圃直.mesh"/>
+    <Property name="position" value="-1000 0 -800"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/花圃/石砌花圃直.mesh"/>
+    <Property name="position" value="1000 0 -900"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/花圃/石砌花圃直.mesh"/>
+    <Property name="position" value="500 0 -800"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/花圃/石砌花圃直.mesh"/>
+    <Property name="position" value="800 0 -700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/花圃/石砌花圃直角.mesh"/>
+    <Property name="position" value="500 0 -1000"/>
+    <Property name="orientation" value="-1.2666e-007 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/花圃/石砌花圃直.mesh"/>
+    <Property name="position" value="700 0 -700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/花圃/石砌花圃直.mesh"/>
+    <Property name="position" value="700 0 -1000"/>
+    <Property name="orientation" value="-1.2666e-007 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/花圃/石砌花圃直角.mesh"/>
+    <Property name="position" value="1000 0 -1000"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/花圃/石砌花圃直.mesh"/>
+    <Property name="position" value="600 0 -1000"/>
+    <Property name="orientation" value="-1.2666e-007 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/花圃/石砌花圃直角.mesh"/>
+    <Property name="position" value="1000 0 -700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/花圃/石砌花圃直角.mesh"/>
+    <Property name="position" value="500 0 -700"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/松树4.mesh"/>
+    <Property name="position" value="-901.856 -43 -373.159"/>
+    <Property name="orientation" value="0.962191 0 -0.272378 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/松树3.mesh"/>
+    <Property name="position" value="-935.902 0 -102.292"/>
+    <Property name="orientation" value="0.9928 0 -0.119793 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/铁杉01.mesh"/>
+    <Property name="position" value="530.593 -16.8712 943.328"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌1.mesh"/>
+    <Property name="position" value="444.64 0 922.299"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌1b.mesh"/>
+    <Property name="position" value="459.092 0 912.39"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/草4.mesh"/>
+    <Property name="position" value="485.921 0 903.387"/>
+    <Property name="orientation" value="0.930956 -0.115398 0.343791 -0.042615"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/草4.mesh"/>
+    <Property name="position" value="913.931 0 -203.584"/>
+    <Property name="orientation" value="0.703737 0.0388664 -0.708321 -0.0391196"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/草5b.mesh"/>
+    <Property name="position" value="-829.97 0 -247.374"/>
+    <Property name="orientation" value="0.978509 0 0.206219 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/草4.mesh"/>
+    <Property name="position" value="-907.63 0 -235.637"/>
+    <Property name="orientation" value="0.796636 0 -0.604462 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌1.mesh"/>
+    <Property name="position" value="851.133 -29.3981 -53.871"/>
+    <Property name="orientation" value="-0.278618 0 -0.960404 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/铁杉03.mesh"/>
+    <Property name="position" value="934.937 -3 -353.635"/>
+    <Property name="orientation" value="0.886848 0 -0.462072 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="公用小建筑/江南小石头02.mesh"/>
+    <Property name="position" value="929.203 0 -424.613"/>
+    <Property name="orientation" value="0.831359 0 -0.555737 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="公用小建筑/江南小石头03.mesh"/>
+    <Property name="position" value="913.65 -31.7814 -541.076"/>
+    <Property name="orientation" value="0.423344 0 -0.90597 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌13.mesh"/>
+    <Property name="position" value="-808.28 0 -298.064"/>
+    <Property name="orientation" value="0.947441 0 0.319927 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/小灌1.mesh"/>
+    <Property name="position" value="506.135 -12.8297 886.623"/>
+    <Property name="orientation" value="0.857932 0 -0.513759 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/花圃/石砌花圃直.mesh"/>
+    <Property name="position" value="900 0 -700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/花圃/石砌花圃直.mesh"/>
+    <Property name="position" value="800 0 -1000"/>
+    <Property name="orientation" value="-1.2666e-007 0 -1 0"/>
+  </Object>
+
+</Scene>

@@ -1,0 +1,95 @@
+<?xml version="1.0" ?>
+	<Imageset Name="Button6" Imagefile="Common/button06.tga" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="false">
+
+
+    <Image Name="SelectFrame_LT" XPos="206" YPos="0" Width="20" Height="20" />
+    <Image Name="SelectFrame_RT" XPos="236" YPos="0" Width="20" Height="20" />
+    <Image Name="SelectFrame_LB" XPos="206" YPos="30" Width="20" Height="20" />
+    <Image Name="SelectFrame_RB" XPos="236" YPos="30" Width="20" Height="20" />
+    <Image Name="SelectFrame_L" XPos="206" YPos="20" Width="3" Height="10" />
+    <Image Name="SelectFrame_R" XPos="253" YPos="20" Width="3" Height="10" />
+    <Image Name="SelectFrame_T" XPos="223" YPos="0" Width="10" Height="2" />
+    <Image Name="SelectFrame_B" XPos="223" YPos="48" Width="10" Height="2" />
+    
+    <Image Name="SelectFrame2_LT" XPos="206" YPos="161" Width="20" Height="20" />
+    <Image Name="SelectFrame2_RT" XPos="236" YPos="161" Width="20" Height="20" />
+    <Image Name="SelectFrame2_LB" XPos="206" YPos="191" Width="20" Height="20" />
+    <Image Name="SelectFrame2_RB" XPos="236" YPos="191" Width="20" Height="20" />
+    <Image Name="SelectFrame2_L" XPos="206" YPos="181" Width="3" Height="10" />
+    <Image Name="SelectFrame2_R" XPos="253" YPos="181" Width="3" Height="10" />
+    <Image Name="SelectFrame2_T" XPos="223" YPos="161" Width="10" Height="2" />
+    <Image Name="SelectFrame2_B" XPos="223" YPos="209" Width="10" Height="2" />
+    
+
+    <Image Name="PaoShang_Btn_Normal" XPos="0" YPos="1" Width="174" Height="38" />
+    <Image Name="PaoShang_Btn_Hover" XPos="0" YPos="41" Width="174" Height="38" />
+    <Image Name="PaoShang_Btn_Pushed" XPos="0" YPos="83" Width="174" Height="38" />
+    <Image Name="PaoShang_Btn_Disabled" XPos="0" YPos="123" Width="174" Height="38" />
+
+    <Image Name="PetAttack_Type1" XPos="25" YPos="193" Width="24" Height="23" />
+    <Image Name="PetAttack_Type2" XPos="50" YPos="193" Width="24" Height="23" />
+    <Image Name="PetAttack_Type3" XPos="75" YPos="193" Width="24" Height="23" />
+
+    <Image Name="SupperTooltipIcon" XPos="106" YPos="171" Width="66" Height="66" />
+    <Image Name="SupperTooltipGem" XPos="0" YPos="193" Width="20" Height="20" />
+    <Image Name="SupperTooltipStar" XPos="87" YPos="220" Width="10" Height="10" />
+
+    <Image Name="Lace_Frame1_LT" XPos="178" YPos="0" Width="5" Height="5" />
+    <Image Name="Lace_Frame1_RT" XPos="195" YPos="0" Width="5" Height="5" />
+    <Image Name="Lace_Frame1_LB" XPos="178" YPos="18" Width="5" Height="5" />
+    <Image Name="Lace_Frame1_RB" XPos="195" YPos="18" Width="5" Height="5" />
+    <Image Name="Lace_Frame1_L" XPos="178" YPos="5" Width="5" Height="10" />
+    <Image Name="Lace_Frame1_R" XPos="195" YPos="5" Width="5" Height="10" />
+    <Image Name="Lace_Frame1_T" XPos="184" YPos="0" Width="10" Height="5" />
+    <Image Name="Lace_Frame1_B" XPos="184" YPos="18" Width="10" Height="5" />
+
+    <Image Name="Lace_Frame2_LT" XPos="178" YPos="26" Width="2" Height="2" />
+    <Image Name="Lace_Frame2_RT" XPos="201" YPos="26" Width="2" Height="2" />
+    <Image Name="Lace_Frame2_LB" XPos="178" YPos="48" Width="2" Height="2" />
+    <Image Name="Lace_Frame2_RB" XPos="201" YPos="48" Width="2" Height="2" />
+    <Image Name="Lace_Frame2_L" XPos="178" YPos="30" Width="2" Height="10" />
+    <Image Name="Lace_Frame2_R" XPos="201" YPos="30" Width="2" Height="10" />
+    <Image Name="Lace_Frame2_T" XPos="182" YPos="26" Width="10" Height="2" />
+    <Image Name="Lace_Frame2_B" XPos="182" YPos="48" Width="10" Height="2" />
+
+    <Image Name="Lace_Frame3_LT" XPos="178" YPos="55" Width="7" Height="7" />
+    <Image Name="Lace_Frame3_RT" XPos="197" YPos="55" Width="7" Height="7" />
+    <Image Name="Lace_Frame3_LB" XPos="178" YPos="74" Width="7" Height="7" />
+    <Image Name="Lace_Frame3_RB" XPos="197" YPos="74" Width="7" Height="7" />
+    <Image Name="Lace_Frame3_L" XPos="178" YPos="63" Width="6" Height="10" />
+    <Image Name="Lace_Frame3_R" XPos="198" YPos="63" Width="6" Height="10" />
+    <Image Name="Lace_Frame3_T" XPos="186" YPos="55" Width="10" Height="6" />
+    <Image Name="Lace_Frame3_B" XPos="186" YPos="75" Width="10" Height="6" />
+
+    <Image Name="Lace_Frame4_LT" XPos="217" YPos="56" Width="11" Height="11" />
+    <Image Name="Lace_Frame4_RT" XPos="241" YPos="56" Width="11" Height="11" />
+    <Image Name="Lace_Frame4_LB" XPos="217" YPos="78" Width="11" Height="11" />
+    <Image Name="Lace_Frame4_RB" XPos="241" YPos="78" Width="11" Height="11" />
+    <Image Name="Lace_Frame4_L" XPos="217" YPos="68" Width="11" Height="11" />
+    <Image Name="Lace_Frame4_R" XPos="241" YPos="68" Width="11" Height="11" />
+    <Image Name="Lace_Frame4_T" XPos="230" YPos="56" Width="11" Height="11" />
+    <Image Name="Lace_Frame4_B" XPos="230" YPos="78" Width="11" Height="11" />
+
+    <Image Name="Lace_Frame5_L" XPos="177" YPos="83" Width="10" Height="20" />
+    <Image Name="Lace_Frame5_R" XPos="198" YPos="83" Width="10" Height="20" />
+    <Image Name="Lace_Frame5_M" XPos="188" YPos="83" Width="10" Height="20" />
+
+    <Image Name="Packet_Head" XPos="178" YPos="112" Width="48" Height="44" />
+
+    <Image Name="PageUp_Btn_Normal" XPos="0" YPos="219" Width="20" Height="26" />
+    <Image Name="PageUp_Btn_Hover" XPos="21" YPos="219" Width="20" Height="26" />
+    <Image Name="PageUp_Btn_Pushed" XPos="42" YPos="219" Width="20" Height="26" />
+    <Image Name="PageUp_Btn_Disabled" XPos="63" YPos="219" Width="20" Height="26" />
+
+    <Image Name="PageDown_Btn_Normal" XPos="173" YPos="228" Width="20" Height="26" />
+    <Image Name="PageDown_Btn_Hover" XPos="194" YPos="228" Width="20" Height="26" />
+    <Image Name="PageDown_Btn_Pushed" XPos="215" YPos="228" Width="20" Height="26" />
+    <Image Name="PageDown_Btn_Disabled" XPos="236" YPos="228" Width="20" Height="26" />
+
+    <Image Name="DarkStar" XPos="87" YPos="232" Width="10" Height="10" />
+
+    <Image Name="Lace_JiaoziJin" XPos="98" YPos="238" Width="16" Height="16" />
+    <Image Name="Lace_JiaoziYin" XPos="116" YPos="238" Width="16" Height="16" />
+    <Image Name="Lace_JiaoziTong" XPos="134" YPos="238" Width="16" Height="16" />
+    
+	</Imageset>

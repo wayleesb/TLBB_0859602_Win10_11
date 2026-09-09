@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<Imageset Name="MenpaiLiveSkill" Imagefile="Icons/MenpaiLiveSkill.jpg" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+	<Image Name="MenpaiLiveSkill_1" XPos="0" YPos="0" Width="64" Height="64" />
+	<Image Name="MenpaiLiveSkill_2" XPos="64" YPos="0" Width="64" Height="64" />
+	<Image Name="MenpaiLiveSkill_3" XPos="128" YPos="0" Width="64" Height="64" />
+	<Image Name="MenpaiLiveSkill_4" XPos="192" YPos="0" Width="64" Height="64" />
+	<Image Name="MenpaiLiveSkill_5" XPos="0" YPos="64" Width="64" Height="64" />
+	<Image Name="MenpaiLiveSkill_6" XPos="64" YPos="64" Width="64" Height="64" />
+	<Image Name="MenpaiLiveSkill_7" XPos="128" YPos="64" Width="64" Height="64" />
+	<Image Name="MenpaiLiveSkill_8" XPos="192" YPos="64" Width="64" Height="64" />
+	<Image Name="MenpaiLiveSkill_9" XPos="0" YPos="128" Width="64" Height="64" />
+	<Image Name="MenpaiLiveSkill_10" XPos="64" YPos="128" Width="64" Height="64" />
+	<Image Name="MenpaiLiveSkill_11" XPos="128" YPos="128" Width="64" Height="64" />
+	<Image Name="MenpaiLiveSkill_12" XPos="192" YPos="128" Width="64" Height="64" />
+	<Image Name="MenpaiLiveSkill_13" XPos="0" YPos="192" Width="64" Height="64" />
+	<Image Name="MenpaiLiveSkill_14" XPos="64" YPos="192" Width="64" Height="64" />
+	<Image Name="MenpaiLiveSkill_15" XPos="128" YPos="192" Width="64" Height="64" />
+	<Image Name="MenpaiLiveSkill_16" XPos="192" YPos="192" Width="64" Height="64" />
+</Imageset>

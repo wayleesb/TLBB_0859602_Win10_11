@@ -1,0 +1,6 @@
+fragment_program Character_HardwareSkinning_PS_2_0_hlsl hlsl
+{
+	source CharacterHardwareSkinningPS20.hlsl
+	entry_point fp_main
+	target ps_2_0
+}

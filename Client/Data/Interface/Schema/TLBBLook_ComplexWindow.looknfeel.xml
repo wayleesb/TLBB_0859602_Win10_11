@@ -1,0 +1,118 @@
+<?xml version="1.0" ?>
+<Falagard>
+
+  <!--
+    ***************************************************
+        WoWLook/ComplexWindow
+    ***************************************************
+    -->
+  <!--
+    ***************************************************
+        WoWLook/RewardItem
+    ***************************************************
+    -->
+  <WidgetLook name="TLBB_Look_RewardItem">
+    <PropertyDefinition name="VertLabelFormatting" initialValue="CentreAligned" />
+    <PropertyDefinition name="HorzLabelFormatting" initialValue="CentreAligned" />
+    <ImagerySection name="pushed">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image imageset="CommonFrame" image="ActionButtonHover" />
+        <VertFormat type="Stretched" />
+        <HorzFormat type="Stretched" />
+      </ImageryComponent>
+    </ImagerySection>
+    <StateImagery name="Normal">
+      <Layer />
+    </StateImagery>
+    <StateImagery name="Hover">
+      <Layer />
+    </StateImagery>
+    <StateImagery name="Pushed">
+      <Layer>
+        <Section section="pushed" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer />
+    </StateImagery>
+  </WidgetLook>
+  <WidgetLook name="TLBB_Look_ComplexWindow_ParentWindow"></WidgetLook>
+  <WidgetLook name="TLBB_Look_ComplexWindow">
+    <Property name="ActionButtonSize" value="w:35 h:35" />
+    <Property name="ActionButtonDistance" value="w:10 h:10" />
+    <Property name="ChildItem" value="key:Option name:TLBB_QuestButton" />
+    <Property name="ChildItem" value="key:RewardItem name:TLBB_RewardItem" />
+    <Property name="ChildItem" value="key:ActionButton name:TLBB_ActionButton" />
+    <Property name="ChildItem" value="key:Button name:TLBB_ButtonNULL" />
+    <Property name="ChildItem" value="key:Money name:TLBB_Money" />
+    <Property name="ChildItem" value="key:JiaoZi name:TLBB_JiaoZi" />
+    <Property name="ChildItem" value="key:ChatBoard name:TLBB_ChatBoard" />
+    <Property name="ChildItem" value="key:Image name:TLBB_StaticImageNULL" />
+    <Property name="QuestButtonImage" value="index:0 set:UIIcons image:QuestIcon_2" />
+    <Property name="QuestButtonImage" value="index:1 set:Menpaishuxing image:QuestIcon_0" />
+    <Property name="QuestButtonImage" value="index:2 set:Menpaishuxing image:QuestIcon_1" />
+    <Property name="QuestButtonImage" value="index:3 set:Menpaishuxing image:QuestIcon_6" />
+    <Property name="QuestButtonImage" value="index:4 set:Menpaishuxing image:QuestIcon_7" />
+    <Property name="QuestButtonImage" value="index:5 set:UIIcons image:QuestIcon_14" />
+    <Property name="QuestButtonImage" value="index:6 set:UIIcons image:QuestIcon_15" />
+    <Property name="QuestButtonImage" value="index:7 set:UIIcons image:QuestIcon_12" />
+    <Property name="QuestButtonImage" value="index:8 set:UIIcons image:QuestIcon_13" />
+    <Property name="QuestButtonImage" value="index:9 set:UIIcons image:QuestIcon_3" />
+    <Property name="QuestButtonImage" value="index:10 set:UIIcons image:QuestIcon_8" />
+    <Property name="QuestButtonImage" value="index:11 set:UIIcons image:QuestIcon_5" />
+    <Property name="QuestButtonImage" value="index:12 set:UIIcons image:QuestIcon_9" />
+    <Property name="QuestButtonImage" value="index:13 set:UIIcons image:QuestIcon_3" />
+    <Property name="QuestButtonImage" value="index:14 set:UIIcons image:QuestIcon_14" />
+    <Property name="QuestButtonImage" value="index:15 set:UIIcons image:QuestIcon_15" />
+    <Property name="QuestButtonImage" value="index:16 set:UIIcons image:QuestIcon_16" />
+    <Property name="QuestButtonImage" value="index:17 set:UIIcons image:QuestIcon_17" />
+
+    <Child type="TLBB_ComplexWindow_ParentWindow" nameSuffix="__auto_parent__">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="5" />
+        </Dim>
+        <Dim type="TopEdge">
+          <AbsoluteDim value="5" />
+        </Dim>
+        <Dim type="RightEdge">
+          <UnifiedDim scale="1.0" offset="-17" type="RightEdge" />
+        </Dim>
+        <Dim type="BottomEdge">
+          <UnifiedDim scale="1.0" offset="-5" type="BottomEdge" />
+        </Dim>
+      </Area>
+    </Child>
+    <Child type="TLBB_Scrollbar_Common" nameSuffix="__auto_vscrollbar__">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="0" />
+        </Dim>
+        <Dim type="TopEdge">
+          <AbsoluteDim value="0" />
+        </Dim>
+        <Dim type="Width">
+          <AbsoluteDim value="16" />
+        </Dim>
+        <Dim type="Height">
+          <UnifiedDim scale="1" type="Height" />
+        </Dim>
+      </Area>
+      <HorzAlignment type="RightAligned" />
+    </Child>
+  </WidgetLook>
+</Falagard>

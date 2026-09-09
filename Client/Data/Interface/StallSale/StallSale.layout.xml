@@ -1,0 +1,331 @@
+<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame1" Name="StallSale_Frame">
+        <Property Name="UnifiedPosition" Value="{{0.5,-217},{0.22,0}}" />
+        <Property Name="AbsoluteSize" Value="w:217 h:360" />
+        <Event Name="Hidden" Function="StallSale_Close_Clicked();" />
+        <Window Type="TLBB_ButtonHelp" Name="StallSale_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*StallSale&quot;);' />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="StallSale_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function="StallSale_Close_Clicked();" />
+        </Window>
+        <Window Type="TLBB_DragTitle" Name="StallSale_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="StallSale_Frame" />
+            <Property Name="Text" Value="#{INTERFACE_XML_15}" />
+            <Property Name="Font" Value="YouYuan11.25" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+        </Window>
+        <Window Type="DefaultWindow" Name="StallSale_Client">
+            <Property Name="AbsolutePosition" Value="x:6.000000 y:36.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-12.000000},{1.000000,-55.000000}" />
+            <Window Type="TLBB_SimpleText" Name="StallSale_Name_Text">
+                <Property Name="UnifiedPosition" Value="{{0.000000,7.000000},{0.000000,2.000000}" />
+                <Property Name="AbsoluteSize" Value="w:50.000000 h:18.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_679}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_EditBoxNormal" Name="StallSale_Name">
+                <Property Name="UnifiedPosition" Value="{{0.000000,55.000000},{0.000000,2.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-100.000000},{0.000000,19.000000}" />
+                <Property Name="MaxTextLength" Value="12" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="StallSale_Rename">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-43.000000},{0.000000,2.000000}" />
+                <Property Name="AbsoluteSize" Value="w:40.000000 h:18.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_290}" />
+                <Event Name="Clicked" Function="StallSaleRename_Clicked();" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="StallSale_Master_Text">
+                <Property Name="UnifiedPosition" Value="{{0.000000,7.000000},{0.000000,20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:120.000000 h:18.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_682}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="StallSale_ID_Text">
+                <Property Name="UnifiedPosition" Value="{{0.000000,127.000000},{0.000000,20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:70.000000 h:18.000000" />
+                <Property Name="Text" Value="ID:" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="DefaultWindow" Name="StallSale_Checkbox_Frame">
+                <Property Name="UnifiedPosition" Value="{{0.000000,7.000000},{0.000000,38.000000}" />
+                <Property Name="AbsoluteSize" Value="w:190.000000 h:24.000000" />
+                <Window Type="TLBB_ButtonPageUp" Name="StallSale_Check_Item">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,0.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:42.000000 h:24.000000" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_724}" />
+                    <Property Name="CheckMode" Value="1" />
+                    <Event Name="MouseLButtonDown" Function="StallSale_ChangeTabIndex(0);" />
+                </Window>
+                <Window Type="TLBB_ButtonPageUp" Name="StallSale_Check_Pet">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,44.000000},{0.000000,0.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:42.000000 h:24.000000" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_854}" />
+                    <Property Name="CheckMode" Value="1" />
+                    <Event Name="MouseLButtonDown" Function="StallSale_ChangeTabIndex(1);" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="StallSale_Tax_Text1">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,112.000000},{0.000000,3.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:30.000000 h:18.000000" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_678}" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                    <Property Name="RiseOnClick" Value="False" />
+                </Window>
+                <Window Type="TLBB_SimpleMulitiTextFrame" Name="StallSale_Tax_Text">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,142.000000},{0.000000,3.000000}" />
+                    <Property Name="UnifiedSize" Value="{{1.000000,-142.000000},{0.000000,18.000000}" />
+                    <Property Name="Text" Value="10%" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="HorzFormatting" Value="HorzCentred" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                    <Property Name="RiseOnClick" Value="False" />
+                </Window>
+            </Window>
+            <Window Type="DefaultWindow" Name="StallSale_Item_Set">
+                <Property Name="UnifiedPosition" Value="{{0.000000,7.000000},{0.000000,62.000000}" />
+                <Property Name="AbsoluteSize" Value="w:190.000000 h:150.000000" />
+                <Window Type="TLBB_ActionButton" Name="StallSale_Item1">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,0.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="DraggingEnabled" Value="True" />
+                    <Property Name="DragAcceptName" Value="S00" />
+                    <Event Name="Clicked" Function="StallSale_Item1:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="StallSale_Item2">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,38.000000},{0.000000,0.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="DraggingEnabled" Value="True" />
+                    <Property Name="DragAcceptName" Value="S01" />
+                    <Event Name="Clicked" Function="StallSale_Item2:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="StallSale_Item3">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,76.000000},{0.000000,0.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="DraggingEnabled" Value="True" />
+                    <Property Name="DragAcceptName" Value="S02" />
+                    <Event Name="Clicked" Function="StallSale_Item3:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="StallSale_Item4">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,114.000000},{0.000000,0.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="DraggingEnabled" Value="True" />
+                    <Property Name="DragAcceptName" Value="S03" />
+                    <Event Name="Clicked" Function="StallSale_Item4:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="StallSale_Item5">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,152.000000},{0.000000,0.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="DraggingEnabled" Value="True" />
+                    <Property Name="DragAcceptName" Value="S04" />
+                    <Event Name="Clicked" Function="StallSale_Item5:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="StallSale_Item6">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,38.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="DraggingEnabled" Value="True" />
+                    <Property Name="DragAcceptName" Value="S05" />
+                    <Event Name="Clicked" Function="StallSale_Item6:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="StallSale_Item7">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,38.000000},{0.000000,38.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="DraggingEnabled" Value="True" />
+                    <Property Name="DragAcceptName" Value="S06" />
+                    <Event Name="Clicked" Function="StallSale_Item7:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="StallSale_Item8">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,76.000000},{0.000000,38.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="DraggingEnabled" Value="True" />
+                    <Property Name="DragAcceptName" Value="S07" />
+                    <Event Name="Clicked" Function="StallSale_Item8:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="StallSale_Item9">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,114.000000},{0.000000,38.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="DraggingEnabled" Value="True" />
+                    <Property Name="DragAcceptName" Value="S08" />
+                    <Event Name="Clicked" Function="StallSale_Item9:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="StallSale_Item10">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,152.000000},{0.000000,38.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="DraggingEnabled" Value="True" />
+                    <Property Name="DragAcceptName" Value="S09" />
+                    <Event Name="Clicked" Function="StallSale_Item10:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="StallSale_Item11">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,76.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="DraggingEnabled" Value="True" />
+                    <Property Name="DragAcceptName" Value="S10" />
+                    <Event Name="Clicked" Function="StallSale_Item11:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="StallSale_Item12">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,38.000000},{0.000000,76.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="DraggingEnabled" Value="True" />
+                    <Property Name="DragAcceptName" Value="S11" />
+                    <Event Name="Clicked" Function="StallSale_Item12:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="StallSale_Item13">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,76.000000},{0.000000,76.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="DraggingEnabled" Value="True" />
+                    <Property Name="DragAcceptName" Value="S12" />
+                    <Event Name="Clicked" Function="StallSale_Item13:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="StallSale_Item14">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,114.000000},{0.000000,76.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="DraggingEnabled" Value="True" />
+                    <Property Name="DragAcceptName" Value="S13" />
+                    <Event Name="Clicked" Function="StallSale_Item14:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="StallSale_Item15">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,152.000000},{0.000000,76.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="DraggingEnabled" Value="True" />
+                    <Property Name="DragAcceptName" Value="S14" />
+                    <Event Name="Clicked" Function="StallSale_Item15:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="StallSale_Item16">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,114.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="DraggingEnabled" Value="True" />
+                    <Property Name="DragAcceptName" Value="S15" />
+                    <Event Name="Clicked" Function="StallSale_Item16:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="StallSale_Item17">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,38.000000},{0.000000,114.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="DraggingEnabled" Value="True" />
+                    <Property Name="DragAcceptName" Value="S16" />
+                    <Event Name="Clicked" Function="StallSale_Item17:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="StallSale_Item18">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,76.000000},{0.000000,114.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="DraggingEnabled" Value="True" />
+                    <Property Name="DragAcceptName" Value="S17" />
+                    <Event Name="Clicked" Function="StallSale_Item18:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="StallSale_Item19">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,114.000000},{0.000000,114.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="DraggingEnabled" Value="True" />
+                    <Property Name="DragAcceptName" Value="S18" />
+                    <Event Name="Clicked" Function="StallSale_Item19:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="StallSale_Item20">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,152.000000},{0.000000,114.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="DraggingEnabled" Value="True" />
+                    <Property Name="DragAcceptName" Value="S19" />
+                    <Event Name="Clicked" Function="StallSale_Item20:DoAction();" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_ListBoxCommon" Name="StallSale_PetList">
+                <Property Name="UnifiedPosition" Value="{{0.000000,7.000000},{0.000000,62.000000}" />
+                <Property Name="AbsoluteSize" Value="w:190.000000 h:150.000000" />
+                <Event Name="ItemSelectionChanged" Function="StallSale_PetList_Selected();" />
+                <Event Name="MouseRClick" Function="StallSale_PetList_RClick();" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="StallSale_TargetInfo">
+                <Property Name="UnifiedPosition" Value="{{0.05,0.000000},{1.000000,-89.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.9,0.000000},{0.000000,22.000000}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Property Name="TextColor" Value="FFFFF263" />
+            </Window>
+             <Window Type="TLBB_ButtonCommon" Name="StallSale_ViewPets">
+                    <Property Name="UnifiedPosition" Value="{{0.75,0.000000},{1.000000,-65.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:40 h:20" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_153}" />
+                    <Event Name="Clicked" Function="StallSale_PetList_RClick();" />
+             </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="StallSale_TargetPrice">
+                <Property Name="UnifiedPosition" Value="{{0.05,0.000000},{1.000000,-45.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.9,0.000000},{0.000000,22.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_894}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Window Type="TLBB_Money" Name="StallSale_TargetPrice_Money">
+                    <Property Name="UnifiedPosition" Value="{{0.0,0.000000},{0.000000,0.000000}" />
+                    <Property Name="UnifiedSize" Value="{{1.0,0.000000},{0.000000,20.000000}" />
+                    <Property Name="MoneyNumber" Value="0" />
+                    <Property Name="HorzFormatting" Value="RightAligned" />
+                </Window>
+            </Window>
+             <Window Type="TLBB_SimpleMulitiTextFrame" Name="StallSale_TargetPrice_Yuanbao">
+                <Property Name="UnifiedPosition" Value="{{0.05,0.000000},{1.000000,-45.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.9,0.000000},{0.000000,22.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_894}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+				<Window Type="TLBB_SimpleText" Name="StallSale2_TargetPrice_Yuanbao" >
+					<Property Name="Position" Value="x:0.086486 y:0.045455" />
+					<Property Name="Size" Value="w:0.900000 h:0.900000" />
+					<Property Name="HorzFormatting" Value="RightAligned" />
+				</Window>
+            </Window>
+            <Window Type="DefaultWindow" Name="StallSale_Buttons_Set">
+                <Property Name="UnifiedPosition" Value="{{0.000000,1.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.0,-2.000000},{0.000000,20.000000}" />
+                <Window Type="TLBB_ButtonCommon" Name="StallSale_Message">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,0.000000}" />
+                    <Property Name="UnifiedSize" Value="{{0.34,0.000000},{0.000000,20.000000}" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_680}" />
+                    <Event Name="Clicked" Function="StallSale_Message_Clicked();" />
+                </Window>
+                <Window Type="TLBB_ButtonCommon" Name="StallSale_Reprice">
+                    <Property Name="UnifiedPosition" Value="{{0.34,0.000000},{0.000000,0.000000}" />
+                    <Property Name="UnifiedSize" Value="{{0.22,0.000000},{0.000000,20.000000}" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_290}" />
+                    <Event Name="Clicked" Function="StallSaleReprice_Clicked();" />
+                </Window>
+                <Window Type="TLBB_ButtonCommon" Name="StallSale_Delete">
+                    <Property Name="UnifiedPosition" Value="{{0.56,0.000000},{0.000000,0.000000}" />
+                    <Property Name="UnifiedSize" Value="{{0.22,0.000000},{0.000000,20.000000}" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_738}" />
+                    <Event Name="Clicked" Function="StallSaleDelete_Clicked();" />
+                </Window>
+                <Window Type="TLBB_ButtonCommon" Name="StallSale_PutUpTheShutters">
+                    <Property Name="UnifiedPosition" Value="{{0.78,0.000000},{0.000000,0.000000}" />
+                    <Property Name="UnifiedSize" Value="{{0.22,0.000000},{0.000000,20.000000}" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_651}" />
+                    <Event Name="Clicked" Function="StallSalePutUpTheShutters_Clicked();" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="StallSale_SetPage_Text">
+                <Property Name="UnifiedPosition" Value="{{0.000000,25.000000},{1.000000,-63.000000}" />
+                <Property Name="AbsoluteSize" Value="w:90.000000 h:18.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_606}" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Property Name="TextColor" Value="FFFFF263" />
+            </Window>
+            <Window Type="TLBB_ButtonCheck" Name="StallSale_Default_Page">
+                <Property Name="UnifiedPosition" Value="{{0.000000,10.000000},{1.000000,-61.000000}" />
+                <Property Name="AbsoluteSize" Value="w:12.000000 h:12.000000" />
+                <Event Name="Clicked" Function="StallSale_Default_Page_Clicked();" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

@@ -1,0 +1,133 @@
+<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame0" Name="SceneMap_Frame">
+        <Property Name="UnifiedPosition" Value="{{0.0,75},{0.0,40}}" />
+        <Property Name="UnifiedSize" Value="{{1.000000,-150.000000},{1.000000,-80.000000}" />
+        <Property Name="AlwaysOnTop" Value="true" />
+        <Window Type="TLBB_ButtonHelp" Name="ScemeMap_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*SceneMap&quot;);' />
+        </Window>
+      <Window Type="TLBB_ButtonCommon" Name="ScemeMap_Qiehuan" >
+            <Property Name="UnifiedPosition" Value="{{1.000000,-125.000000},{1.000,-38.000000}" />
+            <Property Name="AbsoluteSize" Value="w:102.000000 h:19.000000" />
+            <Property Name="Text" Value="#{DTQH_090305_2}" />
+            <Property Name="Tooltip" Value="#{DTQH_090305_4} " />
+            <Event Name="Clicked" Function="ScemeMap_Qiehuan_Clicked();" />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="ScemeMap_CloseButtons">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function="SceneMap_Close();" />
+        </Window>
+        <Window Type="TLBB_DragTitle" Name="SceneMap_SceneName">
+            <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+            <Property Name="Font" Value="YouYuan11.25" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+        </Window>
+        <Window Type="TLBB_SceneMap" Name="SceneMap_Board">
+            <Property Name="UnifiedPosition" Value="{{0.0,15.000000},{0.000000,62.000000}" />
+            <Property Name="UnifiedSize" Value="{{1.0,-30.000000},{1.000000,-100.000000}" />
+            <Property Name="AutoReset" Value="false" />
+						<Property Name="IconImage" Value="type:Icon2 set:UIIcons image:Map_Teammate" />
+						<Property Name="IconImage" Value="type:Icon15 set:UIIcons image:Map_Gurid" />
+						<Property Name="IconImage" Value="type:Icon8 set:UIIcons image:Map_NPC" />
+            <Property Name="AnimateImage" Value="type:Animate8 animate:Minimap_Direction2" />
+            <Property Name="AnimateImage" Value="type:Animate9 animate:Minimap_Direction" />
+            <Property Name="AnimateImage" Value="type:Animate10 animate:Minimap_arrow" />
+            <Property Name="FlashAnimateImage" Value="type:FlashAnimateImage8 animate:ActiveFlash" />
+            <Property Name="MouseHollow" Value="false" />
+            <Event Name="MouseMove" Function="SceneMap_UpdateInfo();" />
+            <Event Name="MouseEnter" Function="SceneMap_UpdateInfo();" />
+            <Event Name="MouseLeave" Function="SceneMap_UpdateInfo();" />
+            <Event Name="MouseRButtonDownCtrl" Function="SceneMap_GM_GotoPos();" />
+            <Event Name="MouseLButtonClick" Function="SceneMap_GotoDirectly();" />
+        </Window>
+        <Window Type="TLBB_SimpleTextFrameLeft" Name="SceneMap_Text1">
+            <Property Name="UnifiedPosition" Value="{{0.0,15.000000},{0.000000,38.000000}" />
+            <Property Name="UnifiedSize" Value="{{0.0,100.000000},{0.000000,18.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_663}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+        </Window>
+        <Window Type="TLBB_SimpleTextFrameRight" Name="SceneMap_Crood">
+            <Property Name="UnifiedPosition" Value="{{0.0,115.000000},{0.000000,38.000000}" />
+            <Property Name="UnifiedSize" Value="{{0.0,80.000000},{0.000000,18.000000}" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+        </Window>
+        <Window Type="TLBB_SimpleText" Name="SceneMap_Text2">
+            <Property Name="UnifiedPosition" Value="{{0.3,0.000000},{0.000000,38.000000}" />
+            <Property Name="UnifiedSize" Value="{{0.4,0.000000},{0.000000,20.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_120}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+        </Window>
+        <Window Type="TLBB_SimpleText" Name="SceneMap_Text3">
+            <Property Name="UnifiedPosition" Value="{{1.0,-150.000000},{0.000000,38.000000}" />
+            <Property Name="UnifiedSize" Value="{{0.0,120.000000},{0.000000,18.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_237}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+        </Window>
+        <Window Type="TLBB_ButtonSub" Name="ScemeMap_ZoomButtons1">
+            <Property Name="UnifiedPosition" Value="{{1.0,-165.000000},{0.000000,39.000000}" />
+            <Property Name="AbsoluteSize" Value="w:15.000000 h:15.000000" />
+            <Event Name="Clicked" Function="SceneMap_ZoomMode( 0 );" />
+        </Window>
+        <Window Type="TLBB_ButtonAdd" Name="ScemeMap_ZoomButtons2">
+            <Property Name="UnifiedPosition" Value="{{1.0,-30.000000},{0.000000,39.000000}" />
+            <Property Name="AbsoluteSize" Value="w:15.000000 h:15.000000" />
+            <Event Name="Clicked" Function="SceneMap_ZoomMode( 1 );" />
+        </Window>
+        <Window Type="DefaultWindow" Name="SceneMap_Move">
+            <Property Name="UnifiedPosition" Value="{{1.0,-125},{1.0,-155}}" />
+            <Property Name="AbsoluteSize" Value="w:100 h:100" />
+            <Property Name="AlwaysOnTop" Value="true" />
+            <Window Type="TLBB_ButtonNULL" Name="SceneMap_MoveUp">
+                <Property Name="AbsolutePosition" Value="x:33.000000 y:0.000000" />
+                <Property Name="AbsoluteSize" Value="w:33.000000 h:33.000000" />
+                <Property Name="NormalImage" Value="set:Buttons image:SceneMap_Up_Normal" />
+                <Property Name="HoverImage" Value="set:Buttons image:SceneMap_Up_Hover" />
+                <Property Name="PushedImage" Value="set:Buttons image:SceneMap_Up_Pushed" />
+                <Event Name="MouseLButtonDown" Function="SceneMap_Board:DoScroll(1);" />
+                <Event Name="MouseButtonUp" Function="SceneMap_Board:DoScroll(0);" />
+                <Property Name="Tooltip" Value="#{INTERFACE_XML_751}" />
+            </Window>
+            <Window Type="TLBB_ButtonNULL" Name="SceneMap_MoveDown">
+                <Property Name="AbsolutePosition" Value="x:33.000000 y:66.000000" />
+                <Property Name="AbsoluteSize" Value="w:33.000000 h:33.000000" />
+                <Property Name="NormalImage" Value="set:Buttons image:SceneMap_Down_Normal" />
+                <Property Name="HoverImage" Value="set:Buttons image:SceneMap_Down_Hover" />
+                <Property Name="PushedImage" Value="set:Buttons image:SceneMap_Down_Pushed" />
+                <Event Name="MouseLButtonDown" Function="SceneMap_Board:DoScroll(2);" />
+                <Event Name="MouseButtonUp" Function="SceneMap_Board:DoScroll(0);" />
+                <Property Name="Tooltip" Value="#{INTERFACE_XML_753}" />
+            </Window>
+            <Window Type="TLBB_ButtonNULL" Name="SceneMap_MoveL">
+                <Property Name="AbsolutePosition" Value="x:0.000000 y:33.000000" />
+                <Property Name="AbsoluteSize" Value="w:33.000000 h:33.000000" />
+                <Property Name="NormalImage" Value="set:Buttons image:SceneMap_Left_Normal" />
+                <Property Name="HoverImage" Value="set:Buttons image:SceneMap_Left_Hover" />
+                <Property Name="PushedImage" Value="set:Buttons image:SceneMap_Left_Pushed" />
+                <Event Name="MouseLButtonDown" Function="SceneMap_Board:DoScroll(3);" />
+                <Event Name="MouseButtonUp" Function="SceneMap_Board:DoScroll(0);" />
+                <Property Name="Tooltip" Value="#{INTERFACE_XML_755}" />
+            </Window>
+            <Window Type="TLBB_ButtonNULL" Name="SceneMap_MoveR">
+                <Property Name="AbsolutePosition" Value="x:66.000000 y:33.000000" />
+                <Property Name="AbsoluteSize" Value="w:33.000000 h:33.000000" />
+                <Property Name="NormalImage" Value="set:Buttons image:SceneMap_Right_Normal" />
+                <Property Name="HoverImage" Value="set:Buttons image:SceneMap_Right_Hover" />
+                <Property Name="PushedImage" Value="set:Buttons image:SceneMap_Right_Pushed" />
+                <Event Name="MouseLButtonDown" Function="SceneMap_Board:DoScroll(4);" />
+                <Event Name="MouseButtonUp" Function="SceneMap_Board:DoScroll(0);" />
+                <Property Name="Tooltip" Value="#{INTERFACE_XML_754}" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

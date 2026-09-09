@@ -1,0 +1,2162 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Scene formatVersion="0.1.1" name="chuangjian">
+
+  <Terrain filename="chuangjian.Terrain"/>
+
+  <Object name="#FairyEnviroment" type="Enviroment">
+    <Property name="ambient" value="0.133333 0.239216 0.47451"/>
+    <Property name="fog.mode" value="linear"/>
+    <Property name="fog.colour" value="0.329412 0.792157 0.886275"/>
+    <Property name="fog.linear start" value="4000"/>
+    <Property name="fog.linear end" value="8000"/>
+  </Object>
+
+  <Object name="#FairyMainLightOne" type="Light">
+    <Property name="type" value="directional"/>
+    <Property name="diffuse" value="0.921569 0.647059 0.364706"/>
+    <Property name="specular" value="0.117647 0.72549 0.835294"/>
+    <Property name="direction" value="-0.5 -1.2 -1"/>
+    <Property name="cast shadows" value="true"/>
+  </Object>
+
+  <Object name="#FairyMainLightTwo" type="Light">
+    <Property name="type" value="directional"/>
+    <Property name="diffuse" value="0.196078 0.301961 0.454902"/>
+    <Property name="direction" value="1 -1 10"/>
+  </Object>
+
+  <Object name="#FairySkyDome" type="SkyDome">
+    <Property name="material" value="CloudySky"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="水瀑布/pubu1.mesh"/>
+    <Property name="position" value="1229 0.0233781 -1181"/>
+    <Property name="orientation" value="0.155907 0 0.987773 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="水瀑布/pubu2.mesh"/>
+    <Property name="position" value="1031 -64.0001 -814"/>
+    <Property name="orientation" value="0.159898 0 0.987134 0"/>
+    <Property name="scale" value="0.6 0.6 0.6"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="水瀑布/pubu2.mesh"/>
+    <Property name="position" value="1200 24 -737"/>
+    <Property name="orientation" value="0.0172229 0.0187893 0.999677 -0.000323711"/>
+    <Property name="scale" value="0.3 0.5 0.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="水瀑布/pubu2.mesh"/>
+    <Property name="position" value="700 496.943 -1400"/>
+    <Property name="orientation" value="-0.206995 0.01824 0.978163 -0.00452154"/>
+    <Property name="scale" value="0.2 0.5 0.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="水瀑布/pubu2.mesh"/>
+    <Property name="position" value="977 491.524 -1349"/>
+    <Property name="orientation" value="0.0783571 0.0187739 0.996749 0.000826538"/>
+    <Property name="scale" value="0.2 0.5 0.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="水瀑布/pubu2.mesh"/>
+    <Property name="position" value="846.346 500 -1366"/>
+    <Property name="orientation" value="-0.0583367 0.0187111 0.99812 -0.00174203"/>
+    <Property name="scale" value="0.3 0.5 0.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="水瀑布/pubu2.mesh"/>
+    <Property name="position" value="1332 18.308 -730"/>
+    <Property name="orientation" value="-0.0406802 0.0187391 0.998998 -0.00141093"/>
+    <Property name="scale" value="0.3 0.5 0.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="水瀑布/pubu2.mesh"/>
+    <Property name="position" value="753 0 -1000"/>
+    <Property name="orientation" value="0.0231073 0.0187909 0.999559 -0.000213105"/>
+    <Property name="scale" value="0.3 0.5 0.5"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="pubushuihua_02"/>
+    <Property name="position" value="786.051 515.054 -1249.94"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="pubushuihua_02"/>
+    <Property name="position" value="803.52 0 -655.72"/>
+    <Property name="orientation" value="0.893223 0 -0.449611 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="pubushuihua_02"/>
+    <Property name="position" value="1123.8 0.788666 -553.998"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="剑阁/剑门崖壁.mesh"/>
+    <Property name="position" value="382.096 9.53674e-007 5.19997"/>
+    <Property name="orientation" value="0.95694 0 -0.290285 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="水瀑布/pubu2.mesh"/>
+    <Property name="position" value="1444 0 -760"/>
+    <Property name="orientation" value="-0.14079 0.0185026 0.989863 -0.00328551"/>
+    <Property name="scale" value="0.4 0.5 0.5"/>
+  </Object>
+
+  <Object type="TerrainLiquid">
+    <Property name="material" value="haihuwater"/>
+    <Property name="position" value="-943.049 53.1351 1421.26"/>
+    <Property name="texture scale" value="0.3"/>
+    <Property name="depth texture layer.enable" value="true"/>
+    <Property name="depth texture layer.height scale" value="0.003"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="师门任务/眼儿媚.mesh"/>
+    <Property name="position" value="-1448.33 83.4242 -1775.99"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="水瀑布/pubu2.mesh"/>
+    <Property name="position" value="-586.167 -443.084 1566.91"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+    <Property name="scale" value="0.3 0.6 0.6"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="pubushuihua_02"/>
+    <Property name="position" value="-820 12.036 1565"/>
+    <Property name="orientation" value="0.707105 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/苗疆树04.mesh"/>
+    <Property name="position" value="-3243.58 83.4242 -1258.03"/>
+    <Property name="orientation" value="-0.553925 0 0.832575 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="pubushuihua_02"/>
+    <Property name="position" value="1510 -31.9042 -648"/>
+    <Property name="orientation" value="0.96619 0 0.257831 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="-2388 292.485 -1982.68"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="-1469.64 280.991 -1788.32"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="-1550.99 203.55 -2398.67"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌15.mesh"/>
+    <Property name="position" value="-1247.61 115.075 -1944.66"/>
+    <Property name="orientation" value="0.47315 -0.0423949 0.879951 0.00111857"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/鸢尾花.mesh"/>
+    <Property name="position" value="-2125.76 67.2866 -1937.78"/>
+    <Property name="orientation" value="0.906538 0.213625 0.363669 -0.0171079"/>
+    <Property name="scale" value="0.909091 0.909091 0.909091"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/草4.mesh"/>
+    <Property name="position" value="-2086.56 68.3106 -2003.32"/>
+    <Property name="orientation" value="0.895665 0 0.444726 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/小红枫树.mesh"/>
+    <Property name="position" value="1410.86 241.017 1397.36"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨2.mesh"/>
+    <Property name="position" value="1792.07 231.036 2419.2"/>
+    <Property name="orientation" value="0.918272 0 0.395949 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨1.mesh"/>
+    <Property name="position" value="1482.09 231.036 1895.28"/>
+    <Property name="orientation" value="-0.166123 0 0.986105 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yezihuyang01"/>
+    <Property name="position" value="1749.84 231.036 2247.95"/>
+    <Property name="orientation" value="0.212407 0 -0.977179 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yezihuyang01"/>
+    <Property name="position" value="2706.4 327.036 1983.49"/>
+    <Property name="orientation" value="0.574866 0 0.818242 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yezihuyang01"/>
+    <Property name="position" value="1353.47 531.036 1796.06"/>
+    <Property name="orientation" value="0.666085 0 0.745875 0"/>
+    <Property name="scale" value="0.1 0.1 0.1"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌17.mesh"/>
+    <Property name="position" value="1588.97 231.036 2135.11"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌6.mesh"/>
+    <Property name="position" value="1639.27 231.036 1928.9"/>
+    <Property name="orientation" value="0.791731 0 0.610868 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌8.mesh"/>
+    <Property name="position" value="1561.98 229.448 1553.27"/>
+    <Property name="orientation" value="-0.325548 0.0599197 0.943318 0.0239906"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌9.mesh"/>
+    <Property name="position" value="2039.38 231.036 2664.84"/>
+    <Property name="orientation" value="0.774995 0.00285134 0.631959 0.00154306"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/热带灌木03.mesh"/>
+    <Property name="position" value="2606.82 231.036 1771.45"/>
+    <Property name="orientation" value="-0.638809 -0.232335 0.733013 0.0247109"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/热带灌木03.mesh"/>
+    <Property name="position" value="1295.9 250.919 1326.33"/>
+    <Property name="orientation" value="-0.139308 0.102441 0.984318 -0.034792"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/草2.mesh"/>
+    <Property name="position" value="2577.3 243.263 1704.87"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/草2.mesh"/>
+    <Property name="position" value="1644.51 231.036 2234.96"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="-2200 583.424 -1459"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="水瀑布/pubu5.mesh"/>
+    <Property name="position" value="995.842 963.432 -1828.77"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/热带灌木01.mesh"/>
+    <Property name="position" value="-351.662 242.506 542.137"/>
+    <Property name="orientation" value="0.193552 0.0409257 -0.980161 -0.0114019"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌15.mesh"/>
+    <Property name="position" value="-359.328 281.172 109.119"/>
+    <Property name="orientation" value="0.670826 -0.0231885 0.701599 0.23922"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/鸢尾花.mesh"/>
+    <Property name="position" value="-811.674 177.561 575.396"/>
+    <Property name="orientation" value="0.952617 -0.0208566 0.289563 0.0907787"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/草8.mesh"/>
+    <Property name="position" value="1982.11 -95.9367 692.911"/>
+    <Property name="orientation" value="0.954747 0 0.297421 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/草8a.mesh"/>
+    <Property name="position" value="2011.23 -68.6097 534.41"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/草8a.mesh"/>
+    <Property name="position" value="1289.46 -40.9655 765.632"/>
+    <Property name="orientation" value="0.992047 0 0.12587 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/草8.mesh"/>
+    <Property name="position" value="1152.68 -61.7508 716.009"/>
+    <Property name="orientation" value="0.48562 0 -0.874171 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/草8a.mesh"/>
+    <Property name="position" value="292.786 -103.272 -438.285"/>
+    <Property name="orientation" value="0.940506 0 0.339777 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/草8.mesh"/>
+    <Property name="position" value="164.146 -83.6373 -308.677"/>
+    <Property name="orientation" value="0.954747 0 0.297421 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/草8.mesh"/>
+    <Property name="position" value="93.2192 -111.411 1322.42"/>
+    <Property name="orientation" value="-0.561762 0 0.827297 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/草8a.mesh"/>
+    <Property name="position" value="300 -69.387 1100"/>
+    <Property name="orientation" value="0.923879 0 0.382683 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/草8.mesh"/>
+    <Property name="position" value="570.88 -125.927 -141.499"/>
+    <Property name="orientation" value="-0.876708 0 0.481017 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/草8a.mesh"/>
+    <Property name="position" value="433.538 -53.2039 -547.949"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/草8.mesh"/>
+    <Property name="position" value="1877.99 -102.854 -607.153"/>
+    <Property name="orientation" value="-0.428757 0 0.903419 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/草8a.mesh"/>
+    <Property name="position" value="1849.65 -70 -445.052"/>
+    <Property name="orientation" value="-0.140658 0 0.990057 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/草8a.mesh"/>
+    <Property name="position" value="87.2908 -85.5857 474.706"/>
+    <Property name="orientation" value="0.702754 0 0.711432 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/草8.mesh"/>
+    <Property name="position" value="58.1708 -171.623 633.207"/>
+    <Property name="orientation" value="0.954747 0 0.297421 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="caihong"/>
+    <Property name="position" value="1702.01 173.614 224.524"/>
+    <Property name="orientation" value="0.997722 0 -0.0674438 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/西湖荷花09.mesh"/>
+    <Property name="position" value="-2361.92 69.4291 696.297"/>
+    <Property name="orientation" value="-0.977138 0 -0.2126 0"/>
+    <Property name="scale" value="0.714286 0.714286 0.714286"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/西湖荷花07.mesh"/>
+    <Property name="position" value="-1796.74 54.7475 -363.812"/>
+    <Property name="orientation" value="0.920809 0 -0.390016 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/西湖荷花05.mesh"/>
+    <Property name="position" value="-1333.35 48.9036 1685.63"/>
+    <Property name="scale" value="0.757576 0.757576 0.757576"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="水瀑布/pubu2.mesh"/>
+    <Property name="position" value="-1508.51 318.054 3091.77"/>
+    <Property name="orientation" value="-0.998745 0 0.0501196 0"/>
+    <Property name="scale" value="0.6 0.6 0.6"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="水瀑布/pubu2.mesh"/>
+    <Property name="position" value="-1906.23 415.62 3101.74"/>
+    <Property name="orientation" value="-0.998745 0 0.0501196 0"/>
+    <Property name="scale" value="0.6 0.6 0.6"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="桃花源/粗桃花1.mesh"/>
+    <Property name="position" value="-300 1026.91 -2400"/>
+    <Property name="orientation" value="0.943445 -0.0578647 -0.325829 0.0199842"/>
+    <Property name="scale" value="0.714286 0.714286 0.714286"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="桃花源/粗桃花1.mesh"/>
+    <Property name="position" value="-3289.78 340.175 1443.94"/>
+    <Property name="scale" value="0.555556 0.555556 0.555556"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="桃花源/粗桃花1.mesh"/>
+    <Property name="position" value="100 262.178 2400"/>
+    <Property name="orientation" value="0.975917 0 -0.218143 0"/>
+    <Property name="scale" value="0.555556 0.555556 0.555556"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨松01.mesh"/>
+    <Property name="position" value="2557.63 1264.63 -1528.56"/>
+    <Property name="orientation" value="0.623489 0 0.781831 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨松02.mesh"/>
+    <Property name="position" value="2734.66 1475.87 -2336.66"/>
+    <Property name="orientation" value="0.218143 0 0.975916 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨松02.mesh"/>
+    <Property name="position" value="2100 24.2303 -800"/>
+    <Property name="orientation" value="0.218143 0 0.975916 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨松02.mesh"/>
+    <Property name="position" value="200 1045.32 -1644.42"/>
+    <Property name="orientation" value="-0.675083 0 0.737738 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨松03.mesh"/>
+    <Property name="position" value="-177.981 917.38 -1965.69"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨松03.mesh"/>
+    <Property name="position" value="0 1232.18 -3442.39"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨松03.mesh"/>
+    <Property name="position" value="3000 1024.31 -565.855"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="桃花源/紫藤.mesh"/>
+    <Property name="position" value="-1454.5 40.8006 -1929.6"/>
+    <Property name="orientation" value="0.918187 0 0.396147 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="桃花源/紫藤.mesh"/>
+    <Property name="position" value="-827.385 233.914 2096.19"/>
+    <Property name="orientation" value="0.684731 0 0.728795 0"/>
+    <Property name="scale" value="0.769231 0.769231 0.769231"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨松03.mesh"/>
+    <Property name="position" value="766.702 383.303 1500.54"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨2.mesh"/>
+    <Property name="position" value="1200 243.292 1400"/>
+    <Property name="orientation" value="0.998057 0 -0.0622917 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="大理派/大理派木桥.mesh"/>
+    <Property name="position" value="-544.462 278.78 1500.63"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+    <Property name="scale" value="0.833333 0.833333 0.833333"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨松03.mesh"/>
+    <Property name="position" value="-900 221.55 -4000"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="桃花源/粗桃花1.mesh"/>
+    <Property name="position" value="-100 1002.49 -4400"/>
+    <Property name="orientation" value="0.943445 -0.0578647 -0.325829 0.0199842"/>
+    <Property name="scale" value="0.714286 0.714286 0.714286"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="桃花源/粗桃花1.mesh"/>
+    <Property name="position" value="-700 533.822 -3396.32"/>
+    <Property name="orientation" value="0.998085 -0.0478347 0.00883637 0.0382038"/>
+    <Property name="scale" value="0.714286 0.714286 0.714286"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="桃花源/粗桃花1.mesh"/>
+    <Property name="position" value="1741.49 908.47 -4500"/>
+    <Property name="orientation" value="0.914542 -0.0592708 -0.399833 0.0153187"/>
+    <Property name="scale" value="0.714286 0.714286 0.714286"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="桃花源/粗桃花1.mesh"/>
+    <Property name="position" value="-1100 347.503 -4700"/>
+    <Property name="orientation" value="0.959574 -0.0359125 0.274718 0.049578"/>
+    <Property name="scale" value="0.714286 0.714286 0.714286"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="桃花源/粗桃花1.mesh"/>
+    <Property name="position" value="3425.28 1613.44 -2120.62"/>
+    <Property name="orientation" value="0.99515 -0.0509425 -0.0770159 0.0339493"/>
+    <Property name="scale" value="0.714286 0.714286 0.714286"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="桃花源/粗桃花1.mesh"/>
+    <Property name="position" value="3500 903.97 -4200"/>
+    <Property name="orientation" value="0.943445 -0.0578647 -0.325829 0.0199842"/>
+    <Property name="scale" value="0.714286 0.714286 0.714286"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/西湖荷花08.mesh"/>
+    <Property name="position" value="-1628.51 75.5565 -3300"/>
+    <Property name="orientation" value="0.528108 0 0.849183 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/西湖荷花08.mesh"/>
+    <Property name="position" value="-2529.08 72.9737 -3639.68"/>
+    <Property name="orientation" value="0.0605485 0 0.99817 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨松01.mesh"/>
+    <Property name="position" value="2536.95 871.598 -4620.52"/>
+    <Property name="orientation" value="0.623489 0 0.781831 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="桃花源/紫藤.mesh"/>
+    <Property name="position" value="-1342.33 41.7411 -1530.71"/>
+    <Property name="orientation" value="0.621017 0 0.783792 0"/>
+    <Property name="scale" value="1.4 1.4 1.4"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="桃花源/粗桃花1.mesh"/>
+    <Property name="position" value="-2925.63 972.481 3100"/>
+    <Property name="scale" value="0.555556 0.555556 0.555556"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/热带灌木01.mesh"/>
+    <Property name="position" value="-609.819 309.837 2252.61"/>
+    <Property name="orientation" value="-0.0901674 -0.0698169 -0.984655 0.132025"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌8.mesh"/>
+    <Property name="position" value="2600 231.036 1800"/>
+    <Property name="orientation" value="0.724295 0.092269 0.682014 0.041694"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌8.mesh"/>
+    <Property name="position" value="1700 242.942 1500"/>
+    <Property name="orientation" value="0.724295 0.092269 0.682014 0.041694"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌8.mesh"/>
+    <Property name="position" value="3500 231.036 3400"/>
+    <Property name="orientation" value="0.381463 0.101252 0.918821 0.000249978"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/灯笼4.mesh"/>
+    <Property name="position" value="1033.67 1499.07 -4221.51"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="桃花源/粗桃花1.mesh"/>
+    <Property name="position" value="4378.7 1047.07 -3000"/>
+    <Property name="orientation" value="0.694375 -0.0606501 -0.717005 -0.0083218"/>
+    <Property name="scale" value="0.714286 0.714286 0.714286"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="苏州/苏州墙弯2.mesh"/>
+    <Property name="position" value="2816.07 1072.68 -3815.98"/>
+    <Property name="orientation" value="-1.60073e-007 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="苏州/苏州墙角楼.mesh"/>
+    <Property name="position" value="3842.4 1232.59 -2573"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="苏州/苏州塔楼1.mesh"/>
+    <Property name="position" value="3862.46 1463.55 -2579.58"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="苏州/苏州墙角楼.mesh"/>
+    <Property name="position" value="3911.76 1624.06 -1753.61"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="苏州/苏州塔楼1.mesh"/>
+    <Property name="position" value="3931.82 1855.02 -1760.19"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/灯笼4.mesh"/>
+    <Property name="position" value="1000 1702.66 -3036.53"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="苏州/苏州塔楼1.mesh"/>
+    <Property name="position" value="2857.77 1448.79 -3850.28"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="苏州/苏州墙角楼.mesh"/>
+    <Property name="position" value="2083.23 1075.43 -3843.7"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌9.mesh"/>
+    <Property name="position" value="2150.14 257.088 3200"/>
+    <Property name="orientation" value="0.774995 0.00285134 0.631959 0.00154306"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="水瀑布/pubu2.mesh"/>
+    <Property name="position" value="-1226.14 69.9469 2856.48"/>
+    <Property name="orientation" value="-0.99956 0 0.0296831 0"/>
+    <Property name="scale" value="0.6 1 0.6"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="水瀑布/pubu2.mesh"/>
+    <Property name="position" value="-2596.91 -49.4638 2900"/>
+    <Property name="orientation" value="-0.99956 0 0.0296831 0"/>
+    <Property name="scale" value="0.6 1.2 0.6"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨松03.mesh"/>
+    <Property name="position" value="100 201.046 2500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨松03.mesh"/>
+    <Property name="position" value="-400 -126.254 2500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="桃花源/紫藤.mesh"/>
+    <Property name="position" value="-1551.81 60.3515 2000"/>
+    <Property name="orientation" value="0.956311 0 -0.292358 0"/>
+    <Property name="scale" value="0.909091 0.909091 0.909091"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="桃花源/紫藤.mesh"/>
+    <Property name="position" value="-400 254.007 100"/>
+    <Property name="orientation" value="0.621017 0 0.783792 0"/>
+    <Property name="scale" value="1.16667 1.16667 1.16667"/>
+  </Object>
+
+  <Object type="TerrainLiquid">
+    <Property name="material" value="haihuwater"/>
+    <Property name="position" value="400 74.341 800"/>
+    <Property name="texture scale" value="0.3"/>
+    <Property name="depth texture layer.enable" value="true"/>
+    <Property name="depth texture layer.height scale" value="0.003"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/香蕉树2.mesh"/>
+    <Property name="position" value="-982.283 110.843 -755.148"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/香蕉树2.mesh"/>
+    <Property name="position" value="-744.246 210.599 690.861"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="水瀑布/pubu2.mesh"/>
+    <Property name="position" value="-1456.02 26.166 2800"/>
+    <Property name="orientation" value="-0.99956 0 0.0296831 0"/>
+    <Property name="scale" value="0.6 1 0.6"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="水瀑布/pubu2.mesh"/>
+    <Property name="position" value="-1637.06 56.7275 2800"/>
+    <Property name="orientation" value="-0.99956 0 0.0296831 0"/>
+    <Property name="scale" value="0.6 1 0.6"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="-2655.03 187.419 -2300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨松02.mesh"/>
+    <Property name="position" value="4800 889.516 -1300"/>
+    <Property name="orientation" value="0.26724 0 0.963629 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="剑阁/剑门崖壁.mesh"/>
+    <Property name="position" value="3206.5 -53.4483 321.716"/>
+    <Property name="orientation" value="0.491599 0 0.870821 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨3.mesh"/>
+    <Property name="position" value="2020 325.507 3300"/>
+    <Property name="orientation" value="-0.0172182 0 0.999844 0"/>
+    <Property name="scale" value="0.6875 0.6875 0.6875"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌8.mesh"/>
+    <Property name="position" value="3100 235.571 2000"/>
+    <Property name="orientation" value="0.724295 0.092269 0.682014 0.041694"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.94902 0.517647 0.309804"/>
+    <Property name="position" value="-1100 510.788 -400"/>
+    <Property name="range" value="600"/>
+    <Property name="attenuation.constant" value="0"/>
+    <Property name="attenuation.linear" value="0.003"/>
+    <Property name="attenuation.quadric" value="1e-005"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="选人台/选人台男.mesh"/>
+    <Property name="position" value="2531.98 231.036 2418.72"/>
+    <Property name="orientation" value="0.978317 0 0.207111 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="选人台/选人台女.mesh"/>
+    <Property name="position" value="-2475.86 83.4242 -1700.76"/>
+    <Property name="orientation" value="-0.11623 0 0.993218 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="2845.14 331.036 2483.72"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="2845.14 331.036 2483.72"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="2356.14 331.036 2696.72"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="2356.14 331.036 2696.72"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="2404.14 331.036 2137.72"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="2404.14 331.036 2137.72"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.941177 0.207843 0.12549"/>
+    <Property name="position" value="2400 631.036 2200"/>
+    <Property name="range" value="600"/>
+    <Property name="attenuation.constant" value="0"/>
+    <Property name="attenuation.linear" value="0.006"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="pubushuihua_02"/>
+    <Property name="position" value="1264.71 519.065 -999.334"/>
+    <Property name="orientation" value="0.99424 0 -0.107172 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="桃花源/紫藤.mesh"/>
+    <Property name="position" value="-300 1476.37 2900"/>
+    <Property name="orientation" value="0.364469 0 0.931211 0"/>
+    <Property name="scale" value="0.686276 0.686276 0.686276"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨松03.mesh"/>
+    <Property name="position" value="0 1005.01 3000"/>
+    <Property name="scale" value="0.588235 0.588235 0.588235"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨松03.mesh"/>
+    <Property name="position" value="500 759.68 2500"/>
+    <Property name="scale" value="0.588235 0.588235 0.588235"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨松03.mesh"/>
+    <Property name="position" value="-700 1.20099 -900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="桃花源/紫藤.mesh"/>
+    <Property name="position" value="-3234.85 146.968 -1928.31"/>
+    <Property name="orientation" value="0.788277 0 -0.615314 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/苗疆树04.mesh"/>
+    <Property name="position" value="-3600 188.345 -2100"/>
+    <Property name="orientation" value="-0.897809 0 0.440399 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yun002"/>
+    <Property name="position" value="-2300 364.424 -800"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yun002"/>
+    <Property name="position" value="-1800 985.154 2196"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="小动物/蝴蝶A.mesh"/>
+    <Property name="position" value="-2208.92 250.677 -2673.85"/>
+    <Property name="orientation" value="0.868418 0 -0.495834 0"/>
+    <Property name="animation level" value="100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="小动物/蝴蝶c.mesh"/>
+    <Property name="position" value="-2960.54 281.414 -2558.42"/>
+    <Property name="animation level" value="100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="选人台/选人场景箭楼主建筑.mesh"/>
+    <Property name="position" value="1045.6 857.903 -3005.55"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="选人界面建筑/选人建筑.mesh"/>
+    <Property name="position" value="-613.119 1326.4 2951.5"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+    <Property name="scale" value="0.5 0.5 0.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="选人界面建筑/选人建筑亭子.mesh"/>
+    <Property name="position" value="-3012.83 306.439 -507.546"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="选人界面建筑/选人建筑亭子.mesh"/>
+    <Property name="position" value="-200 1340.56 -1395.35"/>
+    <Property name="scale" value="0.8 0.8 0.8"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="选人界面建筑/选人建筑塔.mesh"/>
+    <Property name="position" value="903.161 924.446 2333.38"/>
+    <Property name="scale" value="0.6 0.6 0.6"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="桃花源/粗桃花1.mesh"/>
+    <Property name="position" value="-3800 360.279 -1400"/>
+    <Property name="orientation" value="0.930037 0 0.367464 0"/>
+    <Property name="scale" value="0.769231 0.769231 0.769231"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="选人界面建筑/选人建筑民居2.mesh"/>
+    <Property name="position" value="-1223.33 323.534 2501.58"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="桃花源/粗桃花1.mesh"/>
+    <Property name="position" value="-3700 747.766 2100"/>
+    <Property name="scale" value="0.555556 0.555556 0.555556"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="选人界面建筑/选人建筑民居3.mesh"/>
+    <Property name="position" value="-3200 281.788 2400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="选人界面建筑/选人建筑民居3.mesh"/>
+    <Property name="position" value="-517.174 345.822 2318.74"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="选人界面建筑/选人建筑民居2.mesh"/>
+    <Property name="position" value="-1254.33 1070.5 2981"/>
+    <Property name="scale" value="0.7 0.7 0.7"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="选人界面建筑/选人建筑民居2.mesh"/>
+    <Property name="position" value="-1667.6 1072.32 2980.11"/>
+    <Property name="scale" value="0.7 0.7 0.7"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="桃花源/粗桃花1.mesh"/>
+    <Property name="position" value="-4100 -0.182007 -3399"/>
+    <Property name="scale" value="0.769231 0.769231 0.769231"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="水瀑布/pubu2.mesh"/>
+    <Property name="position" value="-1681.66 1246.32 3352.75"/>
+    <Property name="orientation" value="-0.998745 0 0.0501196 0"/>
+    <Property name="scale" value="0.514285 0.514285 0.514285"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="选人界面建筑/选人建筑.mesh"/>
+    <Property name="position" value="-2098 1147.66 3100"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+    <Property name="scale" value="0.5 0.5 0.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="桃花源/紫藤.mesh"/>
+    <Property name="position" value="-1137.07 1334.67 3105.99"/>
+    <Property name="orientation" value="0.364469 0 0.931211 0"/>
+    <Property name="scale" value="0.686276 0.686276 0.686276"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="水瀑布/pubu2.mesh"/>
+    <Property name="position" value="-1441.19 1242.71 3337.66"/>
+    <Property name="orientation" value="-0.998745 0 0.0501196 0"/>
+    <Property name="scale" value="0.514285 0.514285 0.514285"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="水瀑布/pubu2.mesh"/>
+    <Property name="position" value="-2592.71 1209.49 3351.79"/>
+    <Property name="orientation" value="-0.998745 0 0.0501196 0"/>
+    <Property name="scale" value="0.367346 0.367346 0.367346"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="水瀑布/pubu2.mesh"/>
+    <Property name="position" value="-1091.78 520.444 2700"/>
+    <Property name="orientation" value="-0.998745 0 0.0501196 0"/>
+    <Property name="scale" value="0.514285 0.514285 0.514285"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="水瀑布/pubu2.mesh"/>
+    <Property name="position" value="-1016.42 -33.0955 2613.44"/>
+    <Property name="orientation" value="-0.999526 0 -0.0308488 0"/>
+    <Property name="scale" value="0.514285 0.514285 0.514285"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/灯笼4.mesh"/>
+    <Property name="position" value="991.037 1638.46 -3210.72"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/灯笼4.mesh"/>
+    <Property name="position" value="1049.92 1040.51 -2100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/灯笼4.mesh"/>
+    <Property name="position" value="1024.15 1657.47 -2794.57"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/灯笼4.mesh"/>
+    <Property name="position" value="1026.92 1876.43 -2825.41"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/百合花1.mesh"/>
+    <Property name="position" value="-3020.93 62.6932 -1937.25"/>
+    <Property name="orientation" value="0.952562 0 -0.304345 0"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.333333 0.933333 0.858824"/>
+    <Property name="position" value="-2527.97 281.738 -2198"/>
+    <Property name="range" value="420"/>
+    <Property name="attenuation.constant" value="0"/>
+    <Property name="attenuation.linear" value="0.003"/>
+    <Property name="attenuation.quadric" value="1e-005"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.972549 0.733333 0.286275"/>
+    <Property name="position" value="-1494 273.195 -236"/>
+    <Property name="range" value="600"/>
+    <Property name="attenuation.constant" value="0"/>
+    <Property name="attenuation.linear" value="0.003"/>
+    <Property name="attenuation.quadric" value="1e-005"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.333333 0.933333 0.858824"/>
+    <Property name="position" value="-2403.1 483.424 -1730.18"/>
+    <Property name="range" value="420"/>
+    <Property name="attenuation.constant" value="0"/>
+    <Property name="attenuation.linear" value="0.003"/>
+    <Property name="attenuation.quadric" value="1e-005"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yun002"/>
+    <Property name="position" value="-1489 1561.78 2700"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yun002"/>
+    <Property name="position" value="500 1379.84 2500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="1500 225.715 1200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="1700 250.415 1300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="1500 252.064 1300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="2400 259.151 1133.63"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="2124.34 194.348 1129.08"/>
+    <Property name="orientation" value="0.935492 0 0.353348 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="1923.51 218.023 1298.8"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="1900 187.818 1120.43"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="1600 112.761 900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="1600 199.402 1000"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="1500 212.239 1100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="1700 30.7607 800"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="1800 6.27366 800"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="2065.3 30.6062 600"/>
+    <Property name="orientation" value="0.889858 0 0.456238 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="2374.13 165.745 600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/西湖荷花08.mesh"/>
+    <Property name="position" value="2517.64 1115.07 -3116.06"/>
+    <Property name="orientation" value="0.989793 0 0.142544 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/西湖荷花08.mesh"/>
+    <Property name="position" value="2949.2 1124.01 -2964.26"/>
+    <Property name="orientation" value="0.612228 0 0.790687 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌6.mesh"/>
+    <Property name="position" value="1851.82 1237.72 -3339.98"/>
+    <Property name="orientation" value="0.791731 0 0.610868 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌6.mesh"/>
+    <Property name="position" value="1800 1235.84 -2600"/>
+    <Property name="orientation" value="0.791731 0 0.610868 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="3000 -25.4156 700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="3300 -22.3396 800"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="3500 -40.0731 900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="3600 -9.86752 1100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="3200 -48.1516 600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="3900 -53.4483 1200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="3200 -22.2907 700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="2500 10.2662 600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="2300 31.801 700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="选人台/选人建筑荷花08.mesh"/>
+    <Property name="position" value="-2183.31 61.2613 -2428.03"/>
+    <Property name="orientation" value="0.93819 0 0.346117 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="选人台/选人建筑荷花08.mesh"/>
+    <Property name="position" value="-2868.62 8.04449 -2366.56"/>
+    <Property name="orientation" value="0.788342 0 -0.615228 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="选人台/选人建筑荷花08.mesh"/>
+    <Property name="position" value="-2309.34 15.1703 -2987.61"/>
+    <Property name="orientation" value="0.907113 0 0.420887 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="选人台/选人场景胡杨.mesh"/>
+    <Property name="position" value="3152.32 230.285 1616.36"/>
+    <Property name="orientation" value="0.996225 0 0.0867994 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="3500 255.952 1600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="3600 250.216 1600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="3900 249.189 1600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="3800 231.036 1700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="4000 231.036 1800"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="3500 246.991 1700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="2900 323.658 1300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="1800 225.011 1300"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="选人台_01"/>
+    <Property name="position" value="2531.91 321.036 2421.06"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="选人台_02"/>
+    <Property name="position" value="-2478.32 177.48 -1700.43"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="桃花源/粗桃花1.mesh"/>
+    <Property name="position" value="-114.124 1058.79 -748.596"/>
+    <Property name="orientation" value="0.993833 0 -0.110889 0"/>
+    <Property name="scale" value="0.555556 0.555556 0.555556"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="选人台/选人建筑亭子1.mesh"/>
+    <Property name="position" value="-645.147 1578.73 3418"/>
+    <Property name="scale" value="0.625 0.625 0.625"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="选人台/选人建筑亭子1.mesh"/>
+    <Property name="position" value="-100 1652.53 3064.06"/>
+    <Property name="scale" value="0.476191 0.476191 0.476191"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="taohua_big"/>
+    <Property name="position" value="3124.88 1789.44 -2029.74"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="taohua_big"/>
+    <Property name="position" value="-3810.24 222.018 -3402.71"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="taohua_big"/>
+    <Property name="position" value="-3350.54 -171.074 936.788"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="taohua_big"/>
+    <Property name="position" value="-3803.01 509.901 -1046.11"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="taohua_big"/>
+    <Property name="position" value="-645.147 587.274 -3245.19"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="taohua_big"/>
+    <Property name="position" value="-314.828 1149.61 -2352.72"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="taohua_big"/>
+    <Property name="position" value="666.81 -263.071 132.172"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="taohua_big"/>
+    <Property name="position" value="96.3993 259.655 2315.86"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="taohua_big"/>
+    <Property name="position" value="-2956.82 1274.91 3078.93"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="taohua_big"/>
+    <Property name="position" value="-3286.09 451.421 1473.9"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="taohua_big"/>
+    <Property name="position" value="-545.622 843.197 -567.872"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="选人界面建筑/选人场景桥精.mesh"/>
+    <Property name="position" value="-1307.63 86.3284 -903.205"/>
+    <Property name="orientation" value="0.8931 0 -0.449857 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="选人台/选人建筑凉亭01.mesh"/>
+    <Property name="position" value="-1227.75 108.373 -64.1475"/>
+    <Property name="orientation" value="0.519081 0 -0.854724 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="水瀑布/pubu2.mesh"/>
+    <Property name="position" value="639.129 482.997 -1300"/>
+    <Property name="orientation" value="-0.206995 0.01824 0.978163 -0.00452154"/>
+    <Property name="scale" value="0.2 0.5 0.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="水瀑布/pubu2.mesh"/>
+    <Property name="position" value="1460.05 473.684 -1206.77"/>
+    <Property name="orientation" value="0.0559015 0.0187877 0.998261 0.00040375"/>
+    <Property name="scale" value="0.2 0.5 0.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="3400 30.3858 500"/>
+    <Property name="orientation" value="0.923709 0 0.383096 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="3400 -52.5349 300"/>
+    <Property name="orientation" value="0.831097 0 0.556128 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="3300 12.7472 100"/>
+    <Property name="orientation" value="0.985925 0 -0.167192 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="3300 -49.1067 -100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="3600 19.6359 774.588"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="3600 -53.4483 900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="3700 -51.5935 1000"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="3700 -48.7806 1100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="3600 64.3497 1200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="3600 86.9055 1300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="3600 37.3036 1300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="2800 69.1953 700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="2700 -118.246 400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="2800 -118.246 300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌8.mesh"/>
+    <Property name="position" value="3420.77 244.807 1761.91"/>
+    <Property name="orientation" value="-0.307228 0.0771154 0.946234 -0.0656139"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌9.mesh"/>
+    <Property name="position" value="3600 232.641 1700"/>
+    <Property name="orientation" value="0.774995 0.00285134 0.631959 0.00154306"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌9.mesh"/>
+    <Property name="position" value="3383.79 266.061 1356.95"/>
+    <Property name="orientation" value="0.774995 0.00285134 0.631959 0.00154306"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌9.mesh"/>
+    <Property name="position" value="3000 965.03 -400"/>
+    <Property name="orientation" value="0.774995 0.00285134 0.631959 0.00154306"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌9.mesh"/>
+    <Property name="position" value="3200 927.372 -600"/>
+    <Property name="orientation" value="0.774995 0.00285134 0.631959 0.00154306"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌9.mesh"/>
+    <Property name="position" value="3200 1013.91 -700"/>
+    <Property name="orientation" value="0.774995 0.00285134 0.631959 0.00154306"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌9.mesh"/>
+    <Property name="position" value="3100 1130.39 -800"/>
+    <Property name="orientation" value="0.774995 0.00285134 0.631959 0.00154306"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/小红枫树.mesh"/>
+    <Property name="position" value="4000 229.442 1700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/小红枫树.mesh"/>
+    <Property name="position" value="2100 198.258 2933.27"/>
+    <Property name="orientation" value="0.852314 0 0.523032 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/小红枫树.mesh"/>
+    <Property name="position" value="2475.74 150.359 3600"/>
+    <Property name="orientation" value="0.120956 0 -0.992658 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨松02.mesh"/>
+    <Property name="position" value="3619.31 298.899 -1014.88"/>
+    <Property name="orientation" value="-0.390702 0 0.920517 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="4300 52.7475 -800"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="4000 36.4925 -800"/>
+    <Property name="orientation" value="0.981434 0 0.191803 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="3700 27.4035 -600"/>
+    <Property name="orientation" value="0.922333 0 0.386395 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="3600 52.1239 -400"/>
+    <Property name="orientation" value="0.926423 0 0.376484 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="3500 52.9122 -300"/>
+    <Property name="orientation" value="0.816925 0 0.576744 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="1100 950.485 -1600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="1200 940.122 -1600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="1300 959.242 -1600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="1400 957.94 -1700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="900 1028.01 -1600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="800 1012.46 -1600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="1000 996.24 -1500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="700 933.125 -1800"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="1500 1062.23 -1900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="1400 987.457 -1800"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="1500 1026.7 -1800"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="600 938.37 -1900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="716.743 886.938 -2100"/>
+    <Property name="orientation" value="0.812441 0 0.583044 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="1400 967.138 -2200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="2700 299.574 1300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芦苇.mesh"/>
+    <Property name="position" value="2900 299.044 1400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="选人台/选人场景胡杨.mesh"/>
+    <Property name="position" value="4541.81 101.645 -698.153"/>
+    <Property name="orientation" value="0.883645 0 0.468156 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/苗疆树3.mesh"/>
+    <Property name="position" value="-1040.18 1508.23 3522.46"/>
+    <Property name="orientation" value="0.991897 0 -0.127049 0"/>
+    <Property name="scale" value="0.666667 0.666667 0.666667"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/苗疆树3.mesh"/>
+    <Property name="position" value="-3000 1691.02 3400"/>
+    <Property name="orientation" value="0.91241 0 -0.40928 0"/>
+    <Property name="scale" value="0.666667 0.666667 0.666667"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/百合花1.mesh"/>
+    <Property name="position" value="-1956.88 49.4739 -1900"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.333333 0.933333 0.858824"/>
+    <Property name="position" value="-2800 437.728 -1000"/>
+    <Property name="range" value="420"/>
+    <Property name="attenuation.constant" value="0"/>
+    <Property name="attenuation.linear" value="0.003"/>
+    <Property name="attenuation.quadric" value="1e-005"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/苗疆树04.mesh"/>
+    <Property name="position" value="-2232.98 140.152 2500"/>
+    <Property name="orientation" value="-0.953097 0 -0.302694 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/苗疆树04.mesh"/>
+    <Property name="position" value="-871.287 95.5097 2543.34"/>
+    <Property name="orientation" value="-0.772672 0 0.634816 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨松03.mesh"/>
+    <Property name="position" value="100 1120.79 2800"/>
+    <Property name="scale" value="0.588235 0.588235 0.588235"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌12.mesh"/>
+    <Property name="position" value="-1400 85.5604 -1400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌7.mesh"/>
+    <Property name="position" value="-1534.03 59.5082 -2000"/>
+    <Property name="orientation" value="0.997639 0 -0.0686683 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌7.mesh"/>
+    <Property name="position" value="-3500 358.509 -2200"/>
+    <Property name="orientation" value="0.626837 -0.255534 -0.732925 -0.0677807"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌7.mesh"/>
+    <Property name="position" value="-3090.2 200.698 -1824.53"/>
+    <Property name="orientation" value="0.960197 0.0556852 0.216946 -0.166896"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="苏州/苏州城墙.mesh"/>
+    <Property name="position" value="2396.36 1075.26 -3818.42"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="苏州/苏州墙角楼.mesh"/>
+    <Property name="position" value="2866.26 1004.64 -3805.67"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="小动物/飞鸟.model"/>
+    <Property name="position" value="-1988.95 83.4242 -1204.78"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="小动物/飞鸟.model"/>
+    <Property name="position" value="2319.2 298.382 1302.51"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌9.mesh"/>
+    <Property name="position" value="2882.77 231.036 2639.95"/>
+    <Property name="orientation" value="0.196121 0.00318173 0.980574 -0.000622717"/>
+    <Property name="scale" value="0.526316 0.526316 0.526316"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌9.mesh"/>
+    <Property name="position" value="2537.22 231.036 2747.9"/>
+    <Property name="orientation" value="0.383653 0.00324208 0.923471 9.97314e-006"/>
+    <Property name="scale" value="0.526316 0.526316 0.526316"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨松03.mesh"/>
+    <Property name="position" value="1200 774.308 3200"/>
+    <Property name="scale" value="0.588235 0.588235 0.588235"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨松03.mesh"/>
+    <Property name="position" value="-400 1115.03 3400"/>
+    <Property name="scale" value="0.588235 0.588235 0.588235"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="小动物/飞鸟.model"/>
+    <Property name="position" value="652.459 521.479 1199.79"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="小动物/飞鸟.model"/>
+    <Property name="position" value="-2555.32 92.4615 -1860.85"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌7.mesh"/>
+    <Property name="position" value="-3100 277.337 -800"/>
+    <Property name="orientation" value="0.286829 -0.117446 0.941686 -0.131002"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/摊3.mesh"/>
+    <Property name="position" value="-3037.16 303.039 -541.199"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芭蕉2.mesh"/>
+    <Property name="position" value="-3000 303.449 -100.975"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨松02.mesh"/>
+    <Property name="position" value="-222.404 816.273 -1749.97"/>
+    <Property name="orientation" value="0.42768 0 0.903927 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨松03.mesh"/>
+    <Property name="position" value="0 1107.8 -3900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨松03.mesh"/>
+    <Property name="position" value="-436.987 1246.36 -3700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨松03.mesh"/>
+    <Property name="position" value="-286 1036.34 -3000"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/小红枫树.mesh"/>
+    <Property name="position" value="4300 1686.41 -1600"/>
+    <Property name="orientation" value="0.919548 0 0.392978 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/小红枫树.mesh"/>
+    <Property name="position" value="2100 1278.34 -2500"/>
+    <Property name="orientation" value="0.919548 0 0.392978 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨松01.mesh"/>
+    <Property name="position" value="1900 937.12 -3400"/>
+    <Property name="orientation" value="0.623489 0 0.781831 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨松01.mesh"/>
+    <Property name="position" value="2193.45 433.039 -1600"/>
+    <Property name="orientation" value="0.276835 0 0.960917 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yun002"/>
+    <Property name="position" value="711 2331.04 -2600"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yun002"/>
+    <Property name="position" value="800 431.036 601"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yun002"/>
+    <Property name="position" value="-501 1765.22 -1100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/小红枫树.mesh"/>
+    <Property name="position" value="2900 208.687 1700"/>
+    <Property name="orientation" value="0.745875 0 -0.666084 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/小红枫树.mesh"/>
+    <Property name="position" value="3307.28 174.196 3200"/>
+    <Property name="orientation" value="0.979814 0 -0.199902 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/小红枫树.mesh"/>
+    <Property name="position" value="3318.13 231.036 3039.67"/>
+    <Property name="orientation" value="0.800086 0 0.599886 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/小红枫树.mesh"/>
+    <Property name="position" value="500 903.97 -4600"/>
+    <Property name="orientation" value="0.697212 0 -0.716865 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="嵩山/嵩山石像.mesh"/>
+    <Property name="position" value="644.316 903.97 -3835.25"/>
+    <Property name="orientation" value="-4.84288e-008 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="嵩山/嵩山石像.mesh"/>
+    <Property name="position" value="1337.63 903.97 -3900"/>
+    <Property name="orientation" value="-4.84288e-008 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="嵩山/嵩山石马02.mesh"/>
+    <Property name="position" value="428.497 903.97 -4848.9"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="嵩山/嵩山石马01.mesh"/>
+    <Property name="position" value="1520.02 911.092 -4910.92"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="桃花源/粗桃花1.mesh"/>
+    <Property name="position" value="-100 903.97 -5400"/>
+    <Property name="orientation" value="0.70707 -0.0607891 -0.704489 -0.00723724"/>
+    <Property name="scale" value="0.714286 0.714286 0.714286"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="桃花源/粗桃花1.mesh"/>
+    <Property name="position" value="2017.89 929.819 -5400"/>
+    <Property name="orientation" value="0.70707 -0.0607891 -0.704489 -0.00723722"/>
+    <Property name="scale" value="0.714286 0.714286 0.714286"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="选人界面建筑/选人建筑民居3.mesh"/>
+    <Property name="position" value="-1800 330.542 2400"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="0物品/灯笼2.model"/>
+    <Property name="position" value="-2810.95 362.946 -696.901"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="0物品/灯笼2.model"/>
+    <Property name="position" value="-2800 370.462 -293.116"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="0物品/灯笼2.model"/>
+    <Property name="position" value="-774.807 573.229 2067.1"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="0物品/灯笼2.model"/>
+    <Property name="position" value="-200 306.005 2100"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="0物品/灯笼2.model"/>
+    <Property name="position" value="-226.831 570.476 2100"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="0物品/灯笼2.model"/>
+    <Property name="position" value="-1533.21 335.226 2149.73"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="0物品/灯笼2.model"/>
+    <Property name="position" value="-1535.45 560.884 2137.94"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="0物品/灯笼2.model"/>
+    <Property name="position" value="-2066.61 566.049 2163"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/摊3.mesh"/>
+    <Property name="position" value="-1250 132.329 -98.2684"/>
+    <Property name="scale" value="0.769231 0.769231 0.769231"/>
+  </Object>
+
+  <Object type="TerrainLiquid">
+    <Property name="material" value="haihuwater"/>
+    <Property name="position" value="2600 1115.04 -3100"/>
+    <Property name="texture scale" value="0.3"/>
+    <Property name="depth texture layer.enable" value="true"/>
+    <Property name="depth texture layer.height scale" value="0.003"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/苗疆树3.mesh"/>
+    <Property name="position" value="-2300 1974.19 3600"/>
+    <Property name="orientation" value="0.91241 0 -0.40928 0"/>
+    <Property name="scale" value="0.512821 0.512821 0.512821"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/苗疆树3.mesh"/>
+    <Property name="position" value="-1400 2045.24 3800"/>
+    <Property name="orientation" value="0.91241 0 -0.40928 0"/>
+    <Property name="scale" value="0.52381 0.52381 0.52381"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="水瀑布/pubu2.mesh"/>
+    <Property name="position" value="-1697 1580 3727.43"/>
+    <Property name="orientation" value="-0.998745 0 0.0501196 0"/>
+    <Property name="scale" value="0.514285 0.514285 0.514285"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="桃花源/粗桃花1.mesh"/>
+    <Property name="position" value="-2000 1599.26 3200"/>
+    <Property name="orientation" value="0.97625 0 -0.216647 0"/>
+    <Property name="scale" value="0.427351 0.427351 0.427351"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="水瀑布/pubu2.mesh"/>
+    <Property name="position" value="-2633.27 1531.14 3694"/>
+    <Property name="orientation" value="-0.998745 0 0.0501196 0"/>
+    <Property name="scale" value="0.395604 0.6 0.395604"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="选人台/选人建筑亭子1.mesh"/>
+    <Property name="position" value="-2450.4 1614.07 3400"/>
+    <Property name="scale" value="0.625 0.625 0.625"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="桃花源/紫藤.mesh"/>
+    <Property name="position" value="-2300 1425.26 3200"/>
+    <Property name="orientation" value="0.364469 0 0.931211 0"/>
+    <Property name="scale" value="0.686276 0.686276 0.686276"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/苗疆树3.mesh"/>
+    <Property name="position" value="-1900 2054.52 3600"/>
+    <Property name="orientation" value="0.984513 0 -0.175317 0"/>
+    <Property name="scale" value="0.476191 0.476191 0.476191"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="桃花源/紫藤.mesh"/>
+    <Property name="position" value="-1400 1750.39 3500"/>
+    <Property name="orientation" value="0.364469 0 0.931211 0"/>
+    <Property name="scale" value="0.686276 0.686276 0.686276"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="选人界面建筑/选人建筑民居2.mesh"/>
+    <Property name="position" value="-2600 1569.75 3400"/>
+    <Property name="scale" value="0.289256 0.289256 0.289256"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="选人台/选人建筑亭子1.mesh"/>
+    <Property name="position" value="-1299 1673.6 3436"/>
+    <Property name="scale" value="0.625 0.625 0.625"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/鸢尾花.mesh"/>
+    <Property name="position" value="-2914.39 106.325 -1336.99"/>
+    <Property name="orientation" value="0.998102 0 0.0615246 0"/>
+    <Property name="scale" value="0.833333 0.833333 0.833333"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="0物品/灯笼2.model"/>
+    <Property name="position" value="-3203.12 356.015 -718.421"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="0物品/灯笼2.model"/>
+    <Property name="position" value="-1000 305.551 2339.51"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="0物品/灯笼2.model"/>
+    <Property name="position" value="-1207.1 289.272 2424.9"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="0物品/灯笼2.model"/>
+    <Property name="position" value="-1400 305.278 2362.58"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="0物品/灯笼2.model"/>
+    <Property name="position" value="-2764.6 247.028 2312.41"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/鸢尾花.mesh"/>
+    <Property name="position" value="-2953.89 65.2635 -1829.9"/>
+    <Property name="orientation" value="0.588343 0 0.808606 0"/>
+    <Property name="scale" value="0.833333 0.833333 0.833333"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/鸢尾花.mesh"/>
+    <Property name="position" value="-1982.49 68.3533 -1826.58"/>
+    <Property name="orientation" value="-0.818648 0 0.574287 0"/>
+    <Property name="scale" value="0.769231 0.769231 0.769231"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="选人台/选人场景箭楼.mesh"/>
+    <Property name="position" value="1117.93 -21.4688 -992.354"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="选人台/选人场景箭楼.mesh"/>
+    <Property name="position" value="1057.25 426.57 -2163.73"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="选人台/选人场景箭楼.mesh"/>
+    <Property name="position" value="1027.79 903.97 -4144.32"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/西湖荷花05.mesh"/>
+    <Property name="position" value="-2400 53.3945 1900"/>
+    <Property name="scale" value="0.757576 0.757576 0.757576"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="选人界面建筑/选人建筑民居2.mesh"/>
+    <Property name="position" value="-2559.6 258.788 2448"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌12.mesh"/>
+    <Property name="position" value="-2864.42 261.478 -700"/>
+    <Property name="orientation" value="0.992819 -0.102707 -0.00630996 -0.0609952"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="桃花源/紫藤.mesh"/>
+    <Property name="position" value="-2119.46 319.714 2157.16"/>
+    <Property name="orientation" value="0.764983 0 0.644053 0"/>
+    <Property name="scale" value="0.909091 0.909091 0.909091"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="0物品/灯笼2.model"/>
+    <Property name="position" value="-2400 234.92 2325.14"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨松03.mesh"/>
+    <Property name="position" value="1000 870.769 3100"/>
+    <Property name="scale" value="0.588235 0.588235 0.588235"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芭蕉2.mesh"/>
+    <Property name="position" value="-1700 83.4242 -1000"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/草4.mesh"/>
+    <Property name="position" value="-2708.27 61.8099 -1860.23"/>
+    <Property name="orientation" value="0.893699 0 0.448665 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/草4.mesh"/>
+    <Property name="position" value="-2597.69 113.188 -900.65"/>
+    <Property name="orientation" value="-0.184921 0 0.982753 0"/>
+  </Object>
+
+</Scene>

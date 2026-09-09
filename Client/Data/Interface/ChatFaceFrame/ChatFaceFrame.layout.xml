@@ -1,0 +1,640 @@
+﻿<?xml version="1.0" ?>
+<!--
+	^([_"(]^)45^([")]^)
+	^160^2
+	
+	将45修改为60时，在ultraedit中使用的regular express.
+-->
+<GUILayout>
+    <Window Type="TLBB_MainFrame2" Name="Face_Frame">
+        <Property Name="UnifiedPosition" Value="{{0.000000,48.000000},{1.000000,-274.000000}" />
+		<Property Name="UnifiedSize" Value="{{0.000000,236.000000},{0.000000,257.000000}" />
+        <Property Name="AlwaysOnTop" Value="true" />
+        <Window Type="TLBB_DragTitle" Name="Face_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:26.000000 y:2.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-52.000000},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="Face_Frame" />
+            <Property Name="Font" Value="YouYuan11.25" />
+            <Property Name="Text" Value="#{INTERFACE_XML_21}" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+        </Window>
+        <Window Type="TLBB_ButtonHelp" Name="Face_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,5.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="Face_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,5.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function="this:Hide();" />
+        </Window>
+        <Window Type="DefaultWindow" Name="Face_Frame1">
+            <Property Name="UnifiedSize" Value="{{0,232},{0.0,140}}" />
+            <Property Name="UnifiedPosition" Value="{{0.0,2},{0.0,23.0}}" />
+            <Window Type="TLBB_AnimateFace" Name="Face_1">
+                <Property Name="Position" Value="x:0.0086206896 y:0.014285714285" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="1" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(1);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_2">
+                <Property Name="Position" Value="x:0.1077586206 y:0.014285714285" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="2" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(2);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_3">
+                <Property Name="Position" Value="x:0.20689655 y:0.014285714285" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="3" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(3);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_4">
+                <Property Name="Position" Value="x:0.30603448 y:0.014285714285" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="4" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(4);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_5">
+                <Property Name="Position" Value="x:0.405172413 y:0.014285714285" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="5" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(5);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_6">
+                <Property Name="Position" Value="x:0.504310344 y:0.014285714285" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="6" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(6);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_7">
+                <Property Name="Position" Value="x:0.60344827586 y:0.014285714285" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="7" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(7);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_8">
+                <Property Name="Position" Value="x:0.702586206 y:0.014285714285" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="8" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(8);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_9">
+                <Property Name="Position" Value="x:0.8017241379 y:0.014285714285" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="9" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(9);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_10">
+                <Property Name="Position" Value="x:0.900862068 y:0.014285714285" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="10" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(10);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_11">
+                <Property Name="Position" Value="x:0.0086206896 y:0.17857142857" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="11" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(11);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_12">
+                <Property Name="Position" Value="x:0.1077586206 y:0.17857142857" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="12" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(12);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_13">
+                <Property Name="Position" Value="x:0.20689655 y:0.17857142857" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="13" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(13);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_14">
+                <Property Name="Position" Value="x:0.30603448 y:0.17857142857" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="14" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(14);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_15">
+                <Property Name="Position" Value="x:0.405172413 y:0.17857142857" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="15" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(15);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_16">
+                <Property Name="Position" Value="x:0.504310344 y:0.17857142857" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="16" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(16);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_17">
+                <Property Name="Position" Value="x:0.60344827586 y:0.17857142857" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="17" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(17);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_18">
+                <Property Name="Position" Value="x:0.702586206 y:0.17857142857" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="18" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(18);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_19">
+                <Property Name="Position" Value="x:0.8017241379 y:0.17857142857" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="19" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(19);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_20">
+                <Property Name="Position" Value="x:0.900862068 y:0.17857142857" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="20" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(20);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_21">
+                <Property Name="Position" Value="x:0.0086206896 y:0.3428571428" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="21" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(21);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_22">
+                <Property Name="Position" Value="x:0.1077586206 y:0.3428571428" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="22" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(22);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_23">
+                <Property Name="Position" Value="x:0.20689655 y:0.3428571428" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="23" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(23);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_24">
+                <Property Name="Position" Value="x:0.30603448 y:0.3428571428" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="24" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(24);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_25">
+                <Property Name="Position" Value="x:0.405172413 y:0.3428571428" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="25" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(25);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_26">
+                <Property Name="Position" Value="x:0.504310344 y:0.3428571428" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="26" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(26);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_27">
+                <Property Name="Position" Value="x:0.60344827586 y:0.3428571428" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="27" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(27);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_28">
+                <Property Name="Position" Value="x:0.702586206 y:0.3428571428" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="28" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(28);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_29">
+                <Property Name="Position" Value="x:0.8017241379 y:0.3428571428" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="29" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(29);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_30">
+                <Property Name="Position" Value="x:0.900862068 y:0.3428571428" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="30" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(30);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_31">
+                <Property Name="Position" Value="x:0.0086206896 y:0.507142857" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="31" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(31);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_32">
+                <Property Name="Position" Value="x:0.1077586206 y:0.507142857" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="32" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(32);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_33">
+                <Property Name="Position" Value="x:0.20689655 y:0.507142857" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="33" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(33);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_34">
+                <Property Name="Position" Value="x:0.30603448 y:0.507142857" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="34" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(34);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_35">
+                <Property Name="Position" Value="x:0.405172413 y:0.507142857" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="35" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(35);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_36">
+                <Property Name="Position" Value="x:0.504310344 y:0.507142857" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="36" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(36);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_37">
+                <Property Name="Position" Value="x:0.60344827586 y:0.507142857" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="37" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(37);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_38">
+                <Property Name="Position" Value="x:0.702586206 y:0.507142857" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="38" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(38);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_39">
+                <Property Name="Position" Value="x:0.8017241379 y:0.507142857" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="39" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(39);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_40">
+                <Property Name="Position" Value="x:0.900862068 y:0.507142857" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="40" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(40);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_41">
+                <Property Name="Position" Value="x:0.0086206896 y:0.67142857" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="41" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(41);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_42">
+                <Property Name="Position" Value="x:0.1077586206 y:0.67142857" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="42" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(42);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_43">
+                <Property Name="Position" Value="x:0.20689655 y:0.67142857" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="43" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(43);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_44">
+                <Property Name="Position" Value="x:0.30603448 y:0.67142857" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="44" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(44);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_45">
+                <Property Name="Position" Value="x:0.405172413 y:0.67142857" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="45" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(45);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_46">
+                <Property Name="Position" Value="x:0.504310344 y:0.67142857" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="46" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(46);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_47">
+                <Property Name="Position" Value="x:0.60344827586 y:0.67142857" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="47" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(47);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_48">
+                <Property Name="Position" Value="x:0.702586206 y:0.67142857" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="48" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(48);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_49">
+                <Property Name="Position" Value="x:0.8017241379 y:0.67142857" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="49" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(49);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_50">
+                <Property Name="Position" Value="x:0.900862068 y:0.67142857" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="50" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(50);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_51">
+                <Property Name="Position" Value="x:0.0086206896 y:0.8357142857" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="51" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(51);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_52">
+                <Property Name="Position" Value="x:0.1077586206 y:0.8357142857" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="52" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(52);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_53">
+                <Property Name="Position" Value="x:0.20689655 y:0.8357142857" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="53" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(53);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_54">
+                <Property Name="Position" Value="x:0.30603448 y:0.8357142857" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="54" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(54);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_55">
+                <Property Name="Position" Value="x:0.405172413 y:0.8357142857" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="55" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(55);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_56">
+                <Property Name="Position" Value="x:0.504310344 y:0.8357142857" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="56" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(56);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_57">
+                <Property Name="Position" Value="x:0.60344827586 y:0.8357142857" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="57" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(57);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_58">
+                <Property Name="Position" Value="x:0.702586206 y:0.8357142857" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="58" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(58);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_59">
+                <Property Name="Position" Value="x:0.8017241379 y:0.8357142857" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="59" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(59);" />
+            </Window>
+            <Window Type="TLBB_AnimateFace" Name="Face_60">
+                <Property Name="Position" Value="x:0.900862068 y:0.8357142857" />
+                <Property Name="Size" Value="w:0.090517241379 h:0.15" />
+                <Property Name="AnimateId" Value="60" />
+                <Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(60);" />
+            </Window>
+        </Window>
+        <Window Type="DefaultWindow" Name="Face_Frame2">
+			<Property Name="UnifiedSize" Value="{{0,232},{0.0,140}}" />
+			<Property Name="UnifiedPosition" Value="{{0.0,2},{0.0,163.0}}" />
+			<Window Type="TLBB_AnimateFace" Name="Face2_1">
+				<Property Name="Position" Value="x:0.0086206896 y:0.014285714285" />
+				<Property Name="Size" Value="w:0.090517241379 h:0.15" />
+				<Property Name="AnimateId" Value="61" />
+				<Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(61);" />
+			</Window>
+			<Window Type="TLBB_AnimateFace" Name="Face2_2">
+				<Property Name="Position" Value="x:0.1077586206 y:0.014285714285" />
+				<Property Name="Size" Value="w:0.090517241379 h:0.15" />
+				<Property Name="AnimateId" Value="62" />
+				<Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(62);" />
+			</Window>
+			<Window Type="TLBB_AnimateFace" Name="Face2_3">
+				<Property Name="Position" Value="x:0.20689655 y:0.014285714285" />
+				<Property Name="Size" Value="w:0.090517241379 h:0.15" />
+				<Property Name="AnimateId" Value="63" />
+				<Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(63);" />
+			</Window>
+			<Window Type="TLBB_AnimateFace" Name="Face2_4">
+				<Property Name="Position" Value="x:0.30603448 y:0.014285714285" />
+				<Property Name="Size" Value="w:0.090517241379 h:0.15" />
+				<Property Name="AnimateId" Value="64" />
+				<Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(64);" />
+			</Window>
+			<Window Type="TLBB_AnimateFace" Name="Face2_5">
+				<Property Name="Position" Value="x:0.405172413 y:0.014285714285" />
+				<Property Name="Size" Value="w:0.090517241379 h:0.15" />
+				<Property Name="AnimateId" Value="65" />
+				<Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(65);" />
+			</Window>
+			<Window Type="TLBB_AnimateFace" Name="Face2_6">
+				<Property Name="Position" Value="x:0.504310344 y:0.014285714285" />
+				<Property Name="Size" Value="w:0.090517241379 h:0.15" />
+				<Property Name="AnimateId" Value="66" />
+				<Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(66);" />
+			</Window>
+			<Window Type="TLBB_AnimateFace" Name="Face2_7">
+				<Property Name="Position" Value="x:0.60344827586 y:0.014285714285" />
+				<Property Name="Size" Value="w:0.090517241379 h:0.15" />
+				<Property Name="AnimateId" Value="67" />
+				<Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(67);" />
+			</Window>
+			<Window Type="TLBB_AnimateFace" Name="Face2_8">
+				<Property Name="Position" Value="x:0.702586206 y:0.014285714285" />
+				<Property Name="Size" Value="w:0.090517241379 h:0.15" />
+				<Property Name="AnimateId" Value="68" />
+				<Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(68);" />
+			</Window>
+			<Window Type="TLBB_AnimateFace" Name="Face2_9">
+				<Property Name="Position" Value="x:0.8017241379 y:0.014285714285" />
+				<Property Name="Size" Value="w:0.090517241379 h:0.15" />
+				<Property Name="AnimateId" Value="69" />
+				<Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(69);" />
+			</Window>
+			<Window Type="TLBB_AnimateFace" Name="Face2_10">
+				<Property Name="Position" Value="x:0.900862068 y:0.014285714285" />
+				<Property Name="Size" Value="w:0.090517241379 h:0.15" />
+				<Property Name="AnimateId" Value="70" />
+				<Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(70);" />
+			</Window>
+			<Window Type="TLBB_AnimateFace" Name="Face2_11">
+				<Property Name="Position" Value="x:0.0086206896 y:0.17857142857" />
+				<Property Name="Size" Value="w:0.090517241379 h:0.15" />
+				<Property Name="AnimateId" Value="71" />
+				<Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(71);" />
+			</Window>
+			<Window Type="TLBB_AnimateFace" Name="Face2_12">
+				<Property Name="Position" Value="x:0.1077586206 y:0.17857142857" />
+				<Property Name="Size" Value="w:0.090517241379 h:0.15" />
+				<Property Name="AnimateId" Value="72" />
+				<Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(72);" />
+			</Window>
+			<Window Type="TLBB_AnimateFace" Name="Face2_13">
+				<Property Name="Position" Value="x:0.20689655 y:0.17857142857" />
+				<Property Name="Size" Value="w:0.090517241379 h:0.15" />
+				<Property Name="AnimateId" Value="73" />
+				<Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(73);" />
+			</Window>
+			<Window Type="TLBB_AnimateFace" Name="Face2_14">
+				<Property Name="Position" Value="x:0.30603448 y:0.17857142857" />
+				<Property Name="Size" Value="w:0.090517241379 h:0.15" />
+				<Property Name="AnimateId" Value="74" />
+				<Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(74);" />
+			</Window>
+			<Window Type="TLBB_AnimateFace" Name="Face2_15">
+				<Property Name="Position" Value="x:0.405172413 y:0.17857142857" />
+				<Property Name="Size" Value="w:0.090517241379 h:0.15" />
+				<Property Name="AnimateId" Value="75" />
+				<Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(75);" />
+			</Window>
+			<Window Type="TLBB_AnimateFace" Name="Face2_16">
+				<Property Name="Position" Value="x:0.504310344 y:0.17857142857" />
+				<Property Name="Size" Value="w:0.090517241379 h:0.15" />
+				<Property Name="AnimateId" Value="76" />
+				<Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(76);" />
+			</Window>
+			<Window Type="TLBB_AnimateFace" Name="Face2_17">
+				<Property Name="Position" Value="x:0.60344827586 y:0.17857142857" />
+				<Property Name="Size" Value="w:0.090517241379 h:0.15" />
+				<Property Name="AnimateId" Value="77" />
+				<Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(77);" />
+			</Window>
+			<Window Type="TLBB_AnimateFace" Name="Face2_18">
+				<Property Name="Position" Value="x:0.702586206 y:0.17857142857" />
+				<Property Name="Size" Value="w:0.090517241379 h:0.15" />
+				<Property Name="AnimateId" Value="78" />
+				<Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(78);" />
+			</Window>
+			<Window Type="TLBB_AnimateFace" Name="Face2_19">
+				<Property Name="Position" Value="x:0.8017241379 y:0.17857142857" />
+				<Property Name="Size" Value="w:0.090517241379 h:0.15" />
+				<Property Name="AnimateId" Value="79" />
+				<Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(79);" />
+			</Window>
+			<Window Type="TLBB_AnimateFace" Name="Face2_20">
+				<Property Name="Position" Value="x:0.900862068 y:0.17857142857" />
+				<Property Name="Size" Value="w:0.090517241379 h:0.15" />
+				<Property Name="AnimateId" Value="80" />
+				<Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(80);" />
+			</Window>
+			<Window Type="TLBB_AnimateFace" Name="Face2_21">
+				<Property Name="Position" Value="x:0.0086206896 y:0.3428571428" />
+				<Property Name="Size" Value="w:0.090517241379 h:0.15" />
+				<Property Name="AnimateId" Value="81" />
+				<Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(81);" />
+			</Window>
+			<Window Type="TLBB_AnimateFace" Name="Face2_22">
+				<Property Name="Position" Value="x:0.1077586206 y:0.3428571428" />
+				<Property Name="Size" Value="w:0.090517241379 h:0.15" />
+				<Property Name="AnimateId" Value="82" />
+				<Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(82);" />
+			</Window>
+			<Window Type="TLBB_AnimateFace" Name="Face2_23">
+				<Property Name="Position" Value="x:0.20689655 y:0.3428571428" />
+				<Property Name="Size" Value="w:0.090517241379 h:0.15" />
+				<Property Name="AnimateId" Value="83" />
+				<Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(83);" />
+			</Window>
+			<Window Type="TLBB_AnimateFace" Name="Face2_24">
+				<Property Name="Position" Value="x:0.30603448 y:0.3428571428" />
+				<Property Name="Size" Value="w:0.090517241379 h:0.15" />
+				<Property Name="AnimateId" Value="84" />
+				<Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(84);" />
+			</Window>
+			<Window Type="TLBB_AnimateFace" Name="Face2_25">
+				<Property Name="Position" Value="x:0.405172413 y:0.3428571428" />
+				<Property Name="Size" Value="w:0.090517241379 h:0.15" />
+				<Property Name="AnimateId" Value="85" />
+				<Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(85);" />
+			</Window>
+			<Window Type="TLBB_AnimateFace" Name="Face2_26">
+				<Property Name="Position" Value="x:0.504310344 y:0.3428571428" />
+				<Property Name="Size" Value="w:0.090517241379 h:0.15" />
+				<Property Name="AnimateId" Value="86" />
+				<Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(86);" />
+			</Window>
+			<Window Type="TLBB_AnimateFace" Name="Face2_27">
+				<Property Name="Position" Value="x:0.60344827586 y:0.3428571428" />
+				<Property Name="Size" Value="w:0.090517241379 h:0.15" />
+				<Property Name="AnimateId" Value="87" />
+				<Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(87);" />
+			</Window>
+			<Window Type="TLBB_AnimateFace" Name="Face2_28">
+				<Property Name="Position" Value="x:0.702586206 y:0.3428571428" />
+				<Property Name="Size" Value="w:0.090517241379 h:0.15" />
+				<Property Name="AnimateId" Value="88" />
+				<Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(88);" />
+			</Window>
+			<Window Type="TLBB_AnimateFace" Name="Face2_29">
+				<Property Name="Position" Value="x:0.8017241379 y:0.3428571428" />
+				<Property Name="Size" Value="w:0.090517241379 h:0.15" />
+				<Property Name="AnimateId" Value="89" />
+				<Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(89);" />
+			</Window>
+			<Window Type="TLBB_AnimateFace" Name="Face2_30">
+				<Property Name="Position" Value="x:0.900862068 y:0.3428571428" />
+				<Property Name="Size" Value="w:0.090517241379 h:0.15" />
+				<Property Name="AnimateId" Value="90" />
+				<Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(90);" />
+			</Window>
+			<Window Type="TLBB_AnimateFace" Name="Face2_31">
+				<Property Name="Position" Value="x:0.0086206896 y:0.507142857" />
+				<Property Name="Size" Value="w:0.090517241379 h:0.15" />
+				<Property Name="AnimateId" Value="91" />
+				<Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(91);" />
+			</Window>
+			<Window Type="TLBB_AnimateFace" Name="Face2_32">
+				<Property Name="Position" Value="x:0.1077586206 y:0.507142857" />
+				<Property Name="Size" Value="w:0.090517241379 h:0.15" />
+				<Property Name="AnimateId" Value="92" />
+				<Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(92);" />
+			</Window>
+			<Window Type="TLBB_AnimateFace" Name="Face2_33">
+				<Property Name="Position" Value="x:0.20689655 y:0.507142857" />
+				<Property Name="Size" Value="w:0.090517241379 h:0.15" />
+				<Property Name="AnimateId" Value="93" />
+				<Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(93);" />
+			</Window>
+			<Window Type="TLBB_AnimateFace" Name="Face2_34">
+				<Property Name="Position" Value="x:0.30603448 y:0.507142857" />
+				<Property Name="Size" Value="w:0.090517241379 h:0.15" />
+				<Property Name="AnimateId" Value="94" />
+				<Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(94);" />
+			</Window>
+			<Window Type="TLBB_AnimateFace" Name="Face2_35">
+				<Property Name="Position" Value="x:0.405172413 y:0.507142857" />
+				<Property Name="Size" Value="w:0.090517241379 h:0.15" />
+				<Property Name="AnimateId" Value="95" />
+				<Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(95);" />
+			</Window>
+			<Window Type="TLBB_AnimateFace" Name="Face2_36">
+				<Property Name="Position" Value="x:0.504310344 y:0.507142857" />
+				<Property Name="Size" Value="w:0.090517241379 h:0.15" />
+				<Property Name="AnimateId" Value="96" />
+				<Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(96);" />
+			</Window>
+			<Window Type="TLBB_AnimateFace" Name="Face2_37">
+				<Property Name="Position" Value="x:0.60344827586 y:0.507142857" />
+				<Property Name="Size" Value="w:0.090517241379 h:0.15" />
+				<Property Name="AnimateId" Value="97" />
+				<Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(97);" />
+			</Window>
+			<Window Type="TLBB_AnimateFace" Name="Face2_38">
+				<Property Name="Position" Value="x:0.702586206 y:0.507142857" />
+				<Property Name="Size" Value="w:0.090517241379 h:0.15" />
+				<Property Name="AnimateId" Value="98" />
+				<Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(98);" />
+			</Window>
+			<Window Type="TLBB_AnimateFace" Name="Face2_39">
+				<Property Name="Position" Value="x:0.8017241379 y:0.507142857" />
+				<Property Name="Size" Value="w:0.090517241379 h:0.15" />
+				<Property Name="AnimateId" Value="99" />
+				<Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(99);" />
+			</Window>
+			<Window Type="TLBB_AnimateFace" Name="Face2_40">
+				<Property Name="Position" Value="x:0.900862068 y:0.507142857" />
+				<Property Name="Size" Value="w:0.090517241379 h:0.15" />
+				<Property Name="AnimateId" Value="100" />
+				<Event Name="Clicked" Function="Chat_FaceFrame_SelectMotion(100);" />
+			</Window>
+		</Window>
+    </Window>
+</GUILayout>

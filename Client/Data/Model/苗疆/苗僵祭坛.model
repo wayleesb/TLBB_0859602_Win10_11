@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="苗僵祭坛.frame" />
+    <entity mesh="苗僵祭坛.mesh" node="苗僵祭坛" />
+    <entity mesh="苗僵祭坛灯.mesh" />
+</model>

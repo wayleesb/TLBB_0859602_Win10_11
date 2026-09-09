@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+	<Imageset Name="CommonStaticImage4" Imagefile="Common/tga_CommonStaticImage4.dds" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="false">
+
+    <Image Name="CreateRoleBarBottom" XPos="0" YPos="0" Width="191" Height="199" />
+
+    <Image Name="SelectSever" XPos="220" YPos="5" Width="36" Height="238" />
+
+    <Image Name="SelectServer_LT" XPos="0" YPos="208" Width="15" Height="20" />
+    <Image Name="SelectServer_LB" XPos="0" YPos="237" Width="15" Height="12" />
+    <Image Name="SelectServer_RT" XPos="64" YPos="208" Width="15" Height="20" />
+    <Image Name="SelectServer_RB" XPos="64" YPos="237" Width="15" Height="12" />
+    <Image Name="SelectServer_L" XPos="0" YPos="228" Width="15" Height="5" />
+    <Image Name="SelectServer_R" XPos="64" YPos="228" Width="15" Height="5" />
+    <Image Name="SelectServer_T" XPos="17" YPos="208" Width="19" Height="20" />
+    <Image Name="SelectServer_B" XPos="17" YPos="237" Width="19" Height="12" />
+
+    <Image Name="SelectServer2_LT" XPos="103" YPos="208" Width="10" Height="10" />
+    <Image Name="SelectServer2_LB" XPos="103" YPos="230" Width="10" Height="20" />
+    <Image Name="SelectServer2_RT" XPos="136" YPos="208" Width="10" Height="10" />
+    <Image Name="SelectServer2_RB" XPos="136" YPos="230" Width="10" Height="20" />
+
+    <Image Name="SelectServer2_L" XPos="103" YPos="218" Width="10" Height="10" />
+    <Image Name="SelectServer2_R" XPos="136" YPos="218" Width="10" Height="10" />
+    <Image Name="SelectServer2_T" XPos="115" YPos="208" Width="10" Height="10" />
+    <Image Name="SelectServer2_B" XPos="115" YPos="230" Width="10" Height="20" />
+
+    <Image Name="Line_L" XPos="1" YPos="251" Width="4" Height="4" />
+    <Image Name="Line_M" XPos="8" YPos="251" Width="20" Height="4" />
+    <Image Name="Line_R" XPos="28" YPos="251" Width="4" Height="4" />
+
+
+    <Image Name="SelectServer_Corner_Left" XPos="161" YPos="208" Width="9" Height="37" />
+    <Image Name="SelectServer_Corner_Right" XPos="93" YPos="208" Width="9" Height="37" />
+    <Image Name="SelectServer2_Corner_Right" XPos="80" YPos="208" Width="12" Height="23" />
+
+
+  </Imageset>

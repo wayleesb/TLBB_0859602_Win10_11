@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="二级习武场.frame" />
+    <entity mesh="二级习武场.mesh" node="二级习武场" />
+    <entity mesh="二级习武场旗帜.mesh" />
+</model>

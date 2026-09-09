@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<Imageset Name="MiniMap_Icon4" Imagefile="Common/tga_MiniMap_Icon4.dds" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+  <Image Name="Samaerhan_Normal" XPos="0" YPos="8" Width="88" Height="18" />	
+  <Image Name="Samaerhan_Hover" XPos="0" YPos="8" Width="88" Height="18" />		
+  <Image Name="Dawan_Normal" XPos="11" YPos="32" Width="34" Height="18" />	
+  <Image Name="Dawan_Hover" XPos="11" YPos="32" Width="34" Height="18" />
+  <Image Name="Loulan_Normal" XPos="12" YPos="102" Width="34" Height="18" />	
+  <Image Name="Loulan_Hover" XPos="12" YPos="102" Width="34" Height="18" /> 
+  <Image Name="Gaochang_Normal" XPos="11" YPos="126" Width="34" Height="18" />	
+  <Image Name="Gaochang_Hover" XPos="11" YPos="126" Width="34" Height="18" />   
+  <Image Name="Talimu_Normal" XPos="11" YPos="78" Width="54" Height="18" />	
+  <Image Name="Talimu_Hover" XPos="11" YPos="78" Width="54" Height="18" /> 
+  <Image Name="Kunlunshan_Normal" XPos="11" YPos="54" Width="54" Height="18" />	
+  <Image Name="Kunlunshan_Hover" XPos="11" YPos="54" Width="54" Height="18" /> 
+  <Image Name="Huoyanshan_Normal" XPos="11" YPos="149" Width="54" Height="18" />	
+  <Image Name="Huoyanshan_Hover" XPos="11" YPos="149" Width="54" Height="18" /> 
+  <Image Name="Sign47_Normal" XPos="165" YPos="5" Width="77" Height="48" />
+  <Image Name="Sign47_Hover" XPos="88" YPos="5" Width="77" Height="48" />
+  <Image Name="Sign48_Normal" XPos="190" YPos="191" Width="52" Height="28" />
+  <Image Name="Sign48_Hover" XPos="190" YPos="155" Width="52" Height="28" />
+  <Image Name="Sign49_Normal" XPos="115" YPos="56" Width="26" Height="38" />
+  <Image Name="Sign49_Hover" XPos="115" YPos="56" Width="26" Height="38" />
+  <Image Name="Sign50_Normal" XPos="134" YPos="222" Width="44" Height="23" />
+  <Image Name="Sign50_Hover" XPos="82" YPos="222" Width="44" Height="23" />
+  <Image Name="Sign51_Normal" XPos="202" YPos="66" Width="42" Height="23" />
+  <Image Name="Sign51_Hover" XPos="202" YPos="66" Width="42" Height="23" /> 
+  
+</Imageset>

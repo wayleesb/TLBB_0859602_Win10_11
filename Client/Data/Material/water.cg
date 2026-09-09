@@ -1,0 +1,174 @@
+////////////////////////////////////////////////////
+void waterReflectRefractVp
+(
+		float4 pos			: POSITION,
+		float4 normal		: NORMAL,
+		float2 tex			: TEXCOORD0,
+		
+		out float4 oPos				 : POSITION,		
+		out float4 diffuseColor		 : COLOR,		// 散射光和全局光的颜色
+		out float3 specularColor     : COLOR1,
+		
+		// xyz为噪音坐标，w为fresnel系数
+		out float4 noiseCoordAndFresnel	 : TEXCOORD0,
+		out float4 projectionCoord		 : TEXCOORD1,
+
+		uniform float4x4 worldViewProjMatrix,
+		uniform float3 eyePosition, // object space	
+	
+		uniform float3 fresnelBiasScalePower,		
+		uniform float3 scaleScrollNoise,
+		uniform float currentTime,
+		
+		uniform float4 lightDiffuseColor,
+		uniform float4 lightSpecularColor,
+		uniform float3 lightAmbientColor,
+		uniform float4 lightPosition,
+		uniform float4 lightSpecularMat,
+		uniform float4 lightDiffuseMat,
+		uniform float3 lightAmbientMat
+)
+{	
+	// 变换顶点位置
+	oPos = mul(worldViewProjMatrix, pos);
+	
+	// 投影纹理坐标
+	float4x4 scalemat = float4x4(0.5,   0,   0, 0.5, 
+	                               0,-0.5,   0, 0.5,
+								   0,   0, 0.5, 0.5,
+								   0,   0,   0,   1);
+								   
+	projectionCoord = mul(scalemat, oPos);
+	// 计算噪音坐标
+	noiseCoordAndFresnel.xy = (tex + (currentTime * scaleScrollNoise.y)) * scaleScrollNoise.x;
+	noiseCoordAndFresnel.z = scaleScrollNoise.z * currentTime;	
+
+	// 计算fresnel系数
+	float3 eyeDir = normalize(pos.xyz - eyePosition);
+	noiseCoordAndFresnel.w = fresnelBiasScalePower.x
+	 + fresnelBiasScalePower.y * pow(1 + dot(eyeDir, normal.xyz), fresnelBiasScalePower.z);		
+
+	// 计算散射光
+	float3 L = normalize(lightPosition.xyz);
+	float diffuseLight = max(dot(normal.xyz, L), 0);
+	
+	diffuseColor.xyz = lightDiffuseMat.xyz * lightDiffuseColor.xyz * diffuseLight + lightAmbientColor * lightAmbientMat;
+	diffuseColor.w = lightDiffuseMat.w;
+
+	// 计算镜面高光
+	float specularLight = 0.0;
+	
+	if (diffuseLight > 0) 
+	{
+		float3 V = normalize(eyePosition - pos.xyz);
+		float3 H = normalize(L + V);
+		specularLight = pow(max(dot(normal.xyz, H), 0),lightSpecularMat.w);
+	}	
+		
+	specularColor = lightSpecularMat.xyz * lightSpecularColor.xyz * specularLight;	
+}
+
+void waterReflectRefractFp
+(
+		float4 diffuseColor		: COLOR,	
+		float3 specularColor    : COLOR1,
+		
+		float4 noiseCoordAndFresnel		: TEXCOORD0,
+		float4 projectionCoord			: TEXCOORD1,		
+		out float4 col					: COLOR,	
+				
+		uniform float distortionRange,
+		uniform sampler3D noiseMap,			
+		uniform sampler2D reflectMap,
+		uniform sampler2D refractMap
+)
+{
+	// Randomly chosen offset for y noise sample
+	float3 yoffset = float3(0.31, 0.1, 0.23);
+	float2 distort;
+	// Sample the noise texture at 2 places
+	distort.x = tex3D(noiseMap, noiseCoordAndFresnel.xyz).x;
+	distort.y = tex3D(noiseMap, noiseCoordAndFresnel.xyz + yoffset).x;
+	
+	// Scale the distortion from [0,1] to [-range,range]
+	distort = (distort * 2 - 1) * distortionRange;
+
+	// Do the tex projection manually so we can distort _after_
+	float2 final = projectionCoord.xy / projectionCoord.w;
+	final += distort;	
+
+	float4 reflectionColour = tex2D(reflectMap, final);
+	float4 refractionColour = tex2D(refractMap, final);
+	
+	col.xyz = (lerp(refractionColour, reflectionColour, noiseCoordAndFresnel.w).xyz) * diffuseColor.xyz + specularColor;
+	col.w = diffuseColor.w;
+}
+
+void waterNormalVp
+(
+		float4 pos			: POSITION,
+		float4 normal		: NORMAL,
+		float2 tex			: TEXCOORD0,
+		
+		out float4 oPos				 : POSITION,		
+		out float4 diffuseColor		 : COLOR,		// 顶点光照的颜色
+		out float3 specularColor     : COLOR1,
+		
+		out float2 oUv		 : TEXCOORD0,		
+
+		uniform float4x4 worldViewProjMatrix,
+		uniform float3 eyePosition, // object space		
+		
+		uniform float3 lightAmbientColor,
+		uniform float4 lightDiffuseColor,
+		uniform float4 lightSpecularColor,
+		uniform float4 lightPosition,
+		uniform float4 lightDiffuseMat,
+		uniform float4 lightSpecularMat,
+		uniform float3 lightAmbientMat
+		)
+{	
+	// 变换顶点位置
+	oPos = mul(worldViewProjMatrix, pos);	
+
+	// 计算散射光
+	float3 L = normalize(lightPosition.xyz);
+	float diffuseLight = max(dot(normal.xyz, L), 0);
+	
+	diffuseColor.xyz = lightDiffuseMat.xyz * lightDiffuseColor.xyz * diffuseLight + lightAmbientColor * lightAmbientMat;
+	diffuseColor.w = lightDiffuseMat.w;
+
+	// 计算镜面高光
+	float specularLight = 0.0;
+	
+	if (diffuseLight > 0) 
+	{
+		float3 V = normalize(eyePosition - pos.xyz);
+		float3 H = normalize(L + V);
+		specularLight = pow(max(dot(normal.xyz, H), 0),lightSpecularMat.w);
+	}	
+		
+	specularColor = lightSpecularMat.xyz * lightSpecularColor.xyz * specularLight;	
+	
+	oUv = tex;
+}
+
+void waterNormalFp
+(
+		float4 diffuseColor		: COLOR,	
+		float3 specularColor    : COLOR1,
+		
+		float2 uv				: TEXCOORD0,
+		
+		out float4 col			: COLOR,	
+				
+		uniform sampler2D baseTex
+)
+{	
+	float4 baseTexCol = tex2D(baseTex, uv);
+	
+	col.xyz = baseTexCol.xyz + diffuseColor.xyz + specularColor;
+	//col.xyz = diffuseColor.xyz + specularColor;
+	//col.xyz = baseTexCol.xyz;
+	col.w = diffuseColor.w;
+}

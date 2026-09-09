@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" ?>
+<GUILayout>
+	<Window Type="TLBB_MainFrame1" Name="Item_TuDunZhu_Frame">
+		<Property Name="UnifiedPosition" Value="{{0.500000,-128.000000},{0.500000,-118.000000}" />
+		<Property Name="UnifiedSize" Value="{{0.000000,256.000000},{0.000000,200.000000}" />
+		<Property Name="AlwaysOnTop" Value="True" />
+		<Window Type="TLBB_DragTitle" Name="Item_TuDunZhu_DragTitle">
+			<Property Name="AbsolutePosition" Value="x:25.000000 y:12.000000" />
+			<Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+			<Property Name="DragTarget" Value="Item_TuDunZhu_Frame" />
+			<Property Name="Font" Value="YouYuan11.25" />
+			<Property Name="HorzFormatting" Value="HorzCentred" />
+			<Property Name="VertFormatting" Value="VertCentred" />
+			<Property Name="Text" Value="#{INTERFACE_XML_977}" />
+		</Window>
+		<Window Type="TLBB_ButtonHelp" Name="Item_TuDunZhu_Help">
+			<Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+			<Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+      <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*Item_TuDunZhu&quot;);' />
+		</Window>
+		<Window Type="TLBB_ButtonClose" Name="Item_TuDunZhu_Close">
+			<Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+			<Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+			<Event Name="Clicked" Function="this:Hide()" />
+		</Window>
+		<Window Type="DefaultWindow" Name="Item_TuDunZhu_Frame_Client">
+			<Property Name="AbsolutePosition" Value="x:7.000000 y:36.000000" />
+			<Property Name="UnifiedSize" Value="{{1.000000,-13.000000},{1.000000,-55.000000}" />
+			<Window Type="TLBB_SimpleText" Name="Item_TuDunZhu_Text">
+				<Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+				<Property Name="UnifiedSize" Value="{{1.000000,-2.000000},{1.000000,-25.000000}" />
+				<Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="Text" value="#{Item_TuDunZhu_Show_001}" />
+			</Window>
+			<Window Type="TLBB_StopWatch" Name="Item_TuDunZhu_StopWatch">
+				<Property Name="UnifiedPosition" Value="{{0.0,61.000000},{1.000000,-20.000000}" />
+				<Property Name="UnifiedSize" Value="{{1.000000,-123.000000},{0.000000,20.000000}" />
+				<Property Name="HorzFormatting" Value="HorzCentred" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+				<Property Name="MouseHollow" Value="True" />
+        <Event Name="ReachedZero" Function="Item_TuDunZhu_TimeOut();" />
+			</Window>
+			<Window Type="TLBB_Frame_Lace5" Name="Item_TuDunZhu_Blank">
+				<Property Name="UnifiedPosition" Value="{{0.000000,61.000000},{1.000000,-20.000000}" />
+				<Property Name="UnifiedSize" Value="{{1.000000,-123.000000},{0.000000,20.000000}" />
+			</Window>
+			<Window Type="TLBB_ButtonCommon" Name="Item_TuDunZhu_OK_Button">
+				<Property Name="UnifiedPosition" Value="{{0.000000,1.000000},{1.000000,-20.000000}" />
+				<Property Name="AbsoluteSize" Value="w:60.000000 h:20.000000" />
+				<Property Name="Text" Value="#{INTERFACE_XML_975}" />
+				<Event Name="Clicked" Function="Item_TuDunZhu_OK_Clicked();" />
+			</Window>
+			<Window Type="TLBB_ButtonCommon" Name="Item_TuDunZhu_Cancel_Button">
+				<Property Name="UnifiedPosition" Value="{{1.000000,-62.000000},{1.000000,-20.000000}" />
+				<Property Name="AbsoluteSize" Value="w:60.000000 h:20.000000" />
+				<Property Name="Text" Value="#{INTERFACE_XML_976}" />
+				<Event Name="Clicked" Function="Item_TuDunZhu_Cancel_Clicked(1);" />
+			</Window>
+		</Window>
+	</Window>
+</GUILayout>

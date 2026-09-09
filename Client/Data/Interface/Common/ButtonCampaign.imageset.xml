@@ -1,0 +1,23 @@
+<Imageset Name="ButtonCampaign" Imagefile="Common/ButtonCampaign.tga" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+
+  <Image Name="ButtonCampaign_Left_Disable" XPos="7" YPos="15" Width="36" Height="50" />
+  <Image Name="ButtonCampaign_Mid_Disable" XPos="43" YPos="15" Width="48" Height="50" />
+  <Image Name="ButtonCampaign_Right_Disable" XPos="92" YPos="15" Width="37" Height="50" />
+
+  <Image Name="ButtonCampaign_Left_Normal" XPos="130" YPos="15" Width="35" Height="50" />
+  <Image Name="ButtonCampaign_Mid_Normal" XPos="165" YPos="15" Width="50" Height="50" />
+  <Image Name="ButtonCampaign_Right_Normal" XPos="215" YPos="15" Width="36" Height="50" />
+
+
+  <Image Name="ButtonCampaign_Left_Pushed" XPos="7" YPos="66" Width="36" Height="50" />
+  <Image Name="ButtonCampaign_Mid_Pushed" XPos="43" YPos="66" Width="49" Height="50" />
+  <Image Name="ButtonCampaign_Right_Pushed" XPos="92" YPos="66" Width="36" Height="50" />
+
+
+  <Image Name="ButtonCampaign_Left_Hover" XPos="130" YPos="66" Width="36" Height="50" />
+  <Image Name="ButtonCampaign_Mid_Hover" XPos="166" YPos="66" Width="49" Height="50" />
+  <Image Name="ButtonCampaign_Right_Hover" XPos="215" YPos="66" Width="36" Height="50" />
+
+    <Image Name="Campaign_IMG_1" XPos="7" YPos="128" Width="149" Height="48" />
+    <Image Name="Campaign_IMG_2" XPos="7" YPos="185" Width="189" Height="46" />
+</Imageset>

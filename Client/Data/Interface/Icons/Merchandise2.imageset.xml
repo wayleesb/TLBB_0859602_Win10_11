@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<Imageset Name="Merchandise2" Imagefile="Icons/Merchandise2.jpg" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+	<Image Name="Merchandise2_1" XPos="0" YPos="0" Width="64" Height="64" />
+	<Image Name="Merchandise2_2" XPos="64" YPos="0" Width="64" Height="64" />
+	<Image Name="Merchandise2_3" XPos="128" YPos="0" Width="64" Height="64" />
+	<Image Name="Merchandise2_4" XPos="192" YPos="0" Width="64" Height="64" />
+	<Image Name="Merchandise2_5" XPos="0" YPos="64" Width="64" Height="64" />
+	<Image Name="Merchandise2_6" XPos="64" YPos="64" Width="64" Height="64" />
+	<Image Name="Merchandise2_7" XPos="128" YPos="64" Width="64" Height="64" />
+	<Image Name="Merchandise2_8" XPos="192" YPos="64" Width="64" Height="64" />
+	<Image Name="Merchandise2_9" XPos="0" YPos="128" Width="64" Height="64" />
+	<Image Name="Merchandise2_10" XPos="64" YPos="128" Width="64" Height="64" />
+	<Image Name="Merchandise2_11" XPos="128" YPos="128" Width="64" Height="64" />
+	<Image Name="Merchandise2_12" XPos="192" YPos="128" Width="64" Height="64" />
+	<Image Name="Merchandise2_13" XPos="0" YPos="192" Width="64" Height="64" />
+	<Image Name="Merchandise2_14" XPos="64" YPos="192" Width="64" Height="64" />
+	<Image Name="Merchandise2_15" XPos="128" YPos="192" Width="64" Height="64" />
+	<Image Name="Merchandise2_16" XPos="192" YPos="192" Width="64" Height="64" />
+</Imageset>

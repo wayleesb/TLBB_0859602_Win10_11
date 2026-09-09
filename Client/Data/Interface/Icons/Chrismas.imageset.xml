@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<Imageset Name="Chrismas" Imagefile="Icons/Chrismas.jpg" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+	<Image Name="Chrismas_1" XPos="0" YPos="0" Width="64" Height="64" />
+	<Image Name="Chrismas_2" XPos="64" YPos="0" Width="64" Height="64" />
+	<Image Name="Chrismas_3" XPos="128" YPos="0" Width="64" Height="64" />
+	<Image Name="Chrismas_4" XPos="192" YPos="0" Width="64" Height="64" />
+	<Image Name="Chrismas_5" XPos="0" YPos="64" Width="64" Height="64" />
+	<Image Name="Chrismas_6" XPos="64" YPos="64" Width="64" Height="64" />
+	<Image Name="Chrismas_7" XPos="128" YPos="64" Width="64" Height="64" />
+	<Image Name="Chrismas_8" XPos="192" YPos="64" Width="64" Height="64" />
+	<Image Name="Chrismas_9" XPos="0" YPos="128" Width="64" Height="64" />
+	<Image Name="Chrismas_10" XPos="64" YPos="128" Width="64" Height="64" />
+	<Image Name="Chrismas_11" XPos="128" YPos="128" Width="64" Height="64" />
+	<Image Name="Chrismas_12" XPos="192" YPos="128" Width="64" Height="64" />
+	<Image Name="Chrismas_13" XPos="0" YPos="192" Width="64" Height="64" />
+	<Image Name="Chrismas_14" XPos="64" YPos="192" Width="64" Height="64" />
+	<Image Name="Chrismas_15" XPos="128" YPos="192" Width="64" Height="64" />
+	<Image Name="Chrismas_16" XPos="192" YPos="192" Width="64" Height="64" />
+</Imageset>

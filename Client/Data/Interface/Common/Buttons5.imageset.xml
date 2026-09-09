@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+	<Imageset Name="Button5" Imagefile="Common/Button05.tga" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="false">
+		<Image Name="BtnReturn_Normal" XPos="182" YPos="93" Width="58" Height="58" />
+    <Image Name="BtnReturn_Hover" XPos="182" YPos="158" Width="58" Height="58" />
+    <Image Name="BtnReturn_Pushed" XPos="109" YPos="93" Width="58" Height="58" />
+    <Image Name="BtnReturn_Disabled" XPos="109" YPos="158" Width="58" Height="58" />
+
+	  <Image Name="BtnLevelup_Normal" XPos="148" YPos="8" Width="60" Height="71" />
+    <Image Name="BtnLevelup_Hover" XPos="148" YPos="8" Width="60" Height="71" />
+    <Image Name="BtnLevelup_Pushed" XPos="148" YPos="8" Width="60" Height="71" />
+    <Image Name="BtnLevelup_Disabled" XPos="85" YPos="8" Width="60" Height="71" />
+
+	  <Image Name="BtnPage_Up_Normal" XPos="0" YPos="168" Width="42" Height="24" />
+    <Image Name="BtnPage_Up_Hover" XPos="0" YPos="120" Width="42" Height="24" />
+    <Image Name="BtnPage_Up_Pushed" XPos="0" YPos="143" Width="42" Height="24" />
+    <Image Name="BtnPage_Up_Disabled" XPos="0" YPos="96" Width="42" Height="24" />
+
+	  <Image Name="BtnPage_Down_Normal" XPos="0" YPos="0" Width="42" Height="24" />
+    <Image Name="BtnPage_Down_Hover" XPos="0" YPos="48" Width="42" Height="24" />
+    <Image Name="BtnPage_Down_Pushed" XPos="0" YPos="23" Width="42" Height="24" />
+    <Image Name="BtnPage_Down_Disabled" XPos="0" YPos="71" Width="42" Height="24" />
+
+    <Image Name="SimpleText_Info_Bk" XPos="7" YPos="230" Width="216" Height="22" />
+
+	<Image Name="BtnLevelup_Shine1" XPos="57" YPos="52" Width="23" Height="57" />
+	<Image Name="BtnLevelup_Shine2" XPos="57" YPos="109" Width="23" Height="57" />
+	<Image Name="BtnLevelup_Shine3" XPos="57" YPos="166" Width="23" Height="57" />
+	</Imageset>

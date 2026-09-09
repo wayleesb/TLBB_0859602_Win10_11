@@ -1,0 +1,538 @@
+<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame1" Name="Carriage_Frame">
+        <Property Name="UnifiedPosition" Value="{{0.500000,-175.000000},{0.0500000,0.000000}" />
+        <Property Name="UnifiedSize" Value="{{0,350},{0.0,435}}" />
+        <Window Type="TLBB_ButtonHelp" Name="Carriage_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*Carriage&quot;);' />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="Carriage_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function="Close_Carriage_UI();" />
+        </Window>
+        <Window Type="TLBB_DragTitle" Name="Carriage_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="Carriage_Frame" />
+            <Property Name="Font" Value="YouYuan11.25" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="Text" Value="#{INTERFACE_XML_23}" />
+        </Window>
+        <Window Type="DefaultWindow" Name="Carriage_Function_Frame">
+            <Property Name="AbsolutePosition" Value="x:7.000000 y:36.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-13.000000},{1.000000,-55.000000}" />
+            <Window Type="TLBB_StaticImageNULL" Name="Carriage_Background_Facia">
+                <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,3.000000}" />
+                <Property Name="AbsoluteSize" Value="w:100.000000 h:20.000000" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Window Type="TLBB_SimpleText" Name="Carriage_Facia_Text">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,0.000000}" />
+                    <Property Name="Size" Value="w:1.000000 h:1.000000" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="TextColor" Value="FFFFFF00" />
+                    <Property Name="HorzFormatting" Value="HorzCentred" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_9}" />
+                </Window>
+            </Window>
+            <Window Type="DefaultWindow" Name="Carriage_content_Frame">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,23.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.000000,0.000000},{1.000000,-23.000000}" />
+                <Window Type="TLBB_SimpleMulitiTextFrame" Name="Carriage_Counter1">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,0.000000}" />
+                    <Property Name="UnifiedSize" Value="{{0.5,0.000000},{0.000000,20.000000}" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_650}" />
+                </Window>
+                <Window Type="TLBB_SimpleMulitiTextFrame" Name="Carriage_Counter2">
+                    <Property Name="UnifiedPosition" Value="{{0.5000000,0.000000},{0.000000,0.000000}" />
+                    <Property Name="UnifiedSize" Value="{{0.495,0.000000},{0.000000,20.000000}" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_655}" />
+                </Window>
+                <Window Type="DefaultWindow" Name="Carriage_FreightGroup1_Frame">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,20.000000}" />
+                    <Property Name="UnifiedSize" Value="{{0.5,0.000000},{0.000000,120.000000}" />
+                    <Window Type="TLBB_StaticImageNULL" Name="Carriage_Freight_Sell_1_1_bak">
+                        <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,0.000000}" />
+                        <Property Name="AbsoluteSize" Value="w:40.000000 h:40.000000" />
+                        <Property Name="Image" Value="set:Button7 image:Sale_NULL" />
+                        <Property Name="RiseOnClick" Value="False" />
+                    </Window>
+                    <Window Type="TLBB_ButtonNULL" Name="Carriage_Freight_Sell_1_1">
+                        <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,0.000000}" />
+                        <Property Name="AbsoluteSize" Value="w:40.000000 h:40.000000" />
+                        <Event Name="Clicked" Function="Carriage_Action_Clicked(1);" />
+                        <Property Name="HoverImage" Value="set:Button7 image:Sale_Yan_Hover" />
+                        <Property Name="NormalImage" Value="set:Button7 image:Sale_Yan_Normal" />
+                        <Property Name="PushedImage" Value="set:Button7 image:Sale_Yan_Pushed" />
+                        <Property Name="DisabledImage" Value="set:Button7 image:Sale_NULL" />
+                    </Window>
+                    <Window Type="TLBB_ButtonNULL" Name="Carriage_Freight_Sell_1_2">
+                        <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,0.000000}" />
+                        <Property Name="AbsoluteSize" Value="w:40.000000 h:40.000000" />
+                        <Event Name="Clicked" Function="Carriage_Action_Clicked(2);" />
+                        <Property Name="HoverImage" Value="set:Button7 image:Sale_Tie_Hover" />
+                        <Property Name="NormalImage" Value="set:Button7 image:Sale_Tie_Normal" />
+                        <Property Name="PushedImage" Value="set:Button7 image:Sale_Tie_Pushed" />
+                        <Property Name="DisabledImage" Value="set:Button7 image:Sale_NULL" />
+                    </Window>
+                    <Window Type="TLBB_SimpleMulitiTextFrame" Name="Carriage_Freight_Sell_1_Info">
+                        <Property Name="UnifiedPosition" Value="{{0.000000,40.000000},{0.000000,0.000000}" />
+                        <Property Name="UnifiedSize" Value="{{1.0,-40.000000},{0.000000,40.000000}" />
+                        <Property Name="RiseOnClick" Value="False" />
+                        <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                        <Property Name="VertFormatting" Value="TopAligned" />
+                        <Property Name="TextColor" Value="FFFDF7A7" />
+                    </Window>
+                    <Window Type="TLBB_Money" Name="Carriage_Money_Sell_1">
+                        <Property Name="UnifiedPosition" Value="{{0.000000,40.000000},{0.000000,16.000000}" />
+                        <Property Name="UnifiedSize" Value="{{1.0,-45.000000},{0.000000,20.000000}" />
+                        <Property Name="MoneyNumber" Value="0" />
+                        <Property Name="HorzFormatting" Value="RightAligned" />
+                        <Property Name="GoldIcon" Value = "set:Button6 image:Lace_JiaoziJin" />
+                        <Property Name="SilverIcon" Value = "set:Button6 image:Lace_JiaoziYin" />
+                        <Property Name="CopperIcon" Value = "set:Button6 image:Lace_JiaoziTong" />
+                    </Window>
+                    <Window Type="TLBB_StaticImageNULL" Name="Carriage_Freight_Sell_2_2_bak">
+                        <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,40.000000}" />
+                        <Property Name="AbsoluteSize" Value="w:40.000000 h:40.000000" />
+                        <Property Name="Image" Value="set:Button7 image:Sale_NULL" />
+                        <Property Name="RiseOnClick" Value="False" />
+                    </Window>
+                    <Window Type="TLBB_ButtonNULL" Name="Carriage_Freight_Sell_2_2">
+                        <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,40.000000}" />
+                        <Property Name="AbsoluteSize" Value="w:40.000000 h:40.000000" />
+                        <Event Name="Clicked" Function="Carriage_Action_Clicked(2);" />
+                        <Property Name="HoverImage" Value="set:Button7 image:Sale_Tie_Hover" />
+                        <Property Name="NormalImage" Value="set:Button7 image:Sale_Tie_Normal" />
+                        <Property Name="PushedImage" Value="set:Button7 image:Sale_Tie_Pushed" />
+                        <Property Name="DisabledImage" Value="set:Button7 image:Sale_NULL" />
+                    </Window>
+                    <Window Type="TLBB_ButtonNULL" Name="Carriage_Freight_Sell_2_3">
+                        <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,40.000000}" />
+                        <Property Name="AbsoluteSize" Value="w:40.000000 h:40.000000" />
+                        <Event Name="Clicked" Function="Carriage_Action_Clicked(3);" />
+                        <Property Name="HoverImage" Value="set:Button7 image:Sale_Mi_Hover" />
+                        <Property Name="NormalImage" Value="set:Button7 image:Sale_Mi_Normal" />
+                        <Property Name="PushedImage" Value="set:Button7 image:Sale_Mi_Pushed" />
+                        <Property Name="DisabledImage" Value="set:Button7 image:Sale_NULL" />
+                    </Window>
+                    <Window Type="TLBB_SimpleMulitiTextFrame" Name="Carriage_Freight_Sell_2_Info">
+                        <Property Name="UnifiedPosition" Value="{{0.000000,40.000000},{0.000000,40.000000}" />
+                        <Property Name="UnifiedSize" Value="{{1.0,-40.000000},{0.000000,40.000000}" />
+                        <Property Name="RiseOnClick" Value="False" />
+                        <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                        <Property Name="VertFormatting" Value="TopAligned" />
+                        <Property Name="TextColor" Value="FFFDF7A7" />
+                    </Window>
+                    <Window Type="TLBB_Money" Name="Carriage_Money_Sell_2">
+                        <Property Name="UnifiedPosition" Value="{{0.000000,40.000000},{0.000000,56.000000}" />
+                        <Property Name="UnifiedSize" Value="{{1.0,-45.000000},{0.000000,20.000000}" />
+                        <Property Name="MoneyNumber" Value="0" />
+                        <Property Name="HorzFormatting" Value="RightAligned" />
+                        <Property Name="GoldIcon" Value = "set:Button6 image:Lace_JiaoziJin" />
+                        <Property Name="SilverIcon" Value = "set:Button6 image:Lace_JiaoziYin" />
+                        <Property Name="CopperIcon" Value = "set:Button6 image:Lace_JiaoziTong" />
+                    </Window>
+                    <Window Type="TLBB_StaticImageNULL" Name="Carriage_Freight_Sell_3_1_bak">
+                        <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,80.000000}" />
+                        <Property Name="AbsoluteSize" Value="w:40.000000 h:40.000000" />
+                        <Property Name="Image" Value="set:Button7 image:Sale_NULL" />
+                        <Property Name="RiseOnClick" Value="False" />
+                    </Window>
+                    <Window Type="TLBB_ButtonNULL" Name="Carriage_Freight_Sell_3_1">
+                        <Property Name="Visible" Value="False" />
+                        <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,80.000000}" />
+                        <Property Name="AbsoluteSize" Value="w:40.000000 h:40.000000" />
+                        <Event Name="Clicked" Function="Carriage_Action_Clicked(2);" />
+                        <Property Name="HoverImage" Value="set:Button7 image:Sale_Tie_Hover" />
+                        <Property Name="NormalImage" Value="set:Button7 image:Sale_Tie_Normal" />
+                        <Property Name="PushedImage" Value="set:Button7 image:Sale_Tie_Pushed" />
+                        <Property Name="DisabledImage" Value="set:Button7 image:Sale_NULL" />
+                    </Window>
+                    <Window Type="TLBB_ButtonNULL" Name="Carriage_Freight_Sell_3_2">
+                        <Property Name="Visible" Value="False" />
+                        <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,80.000000}" />
+                        <Property Name="AbsoluteSize" Value="w:40.000000 h:40.000000" />
+                        <Event Name="Clicked" Function="Carriage_Action_Clicked(3);" />
+                        <Property Name="HoverImage" Value="set:Button7 image:Sale_Yan_Hover" />
+                        <Property Name="NormalImage" Value="set:Button7 image:Sale_Yan_Normal" />
+                        <Property Name="PushedImage" Value="set:Button7 image:Sale_Yan_Pushed" />
+                        <Property Name="DisabledImage" Value="set:Button7 image:Sale_NULL" />
+                    </Window>
+                    <Window Type="TLBB_SimpleMulitiTextFrame" Name="Carriage_Freight_Sell_3_Info">
+                        <Property Name="UnifiedPosition" Value="{{0.000000,40.000000},{0.000000,80.000000}" />
+                        <Property Name="UnifiedSize" Value="{{1.0,-40.000000},{0.000000,40.000000}" />
+                        <Property Name="RiseOnClick" Value="False" />
+                        <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                        <Property Name="VertFormatting" Value="TopAligned" />
+                        <Property Name="TextColor" Value="FFFDF7A7" />
+                    </Window>
+                    <Window Type="TLBB_Money" Name="Carriage_Money_Sell_3">
+                        <Property Name="Visible" Value="False" />
+                        <Property Name="UnifiedPosition" Value="{{0.000000,40.000000},{0.000000,96.000000}" />
+                        <Property Name="UnifiedSize" Value="{{1.0,-45.000000},{0.000000,20.000000}" />
+                        <Property Name="MoneyNumber" Value="0" />
+                        <Property Name="HorzFormatting" Value="RightAligned" />
+                        <Property Name="GoldIcon" Value = "set:Button6 image:Lace_JiaoziJin" />
+                        <Property Name="SilverIcon" Value = "set:Button6 image:Lace_JiaoziYin" />
+                        <Property Name="CopperIcon" Value = "set:Button6 image:Lace_JiaoziTong" />
+                    </Window>
+                </Window>
+                <Window Type="DefaultWindow" Name="Carriage_FreightGroup2_Frame">
+                    <Property Name="UnifiedPosition" Value="{{0.5,0.000000},{0.000000,20.000000}" />
+                    <Property Name="UnifiedSize" Value="{{0.5,0.000000},{0.000000,120.000000}" />
+                    <Window Type="TLBB_StaticImageNULL" Name="Carriage_Freight_Buy_1_1_bak">
+                        <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,0.000000}" />
+                        <Property Name="AbsoluteSize" Value="w:40.000000 h:40.000000" />
+                        <Property Name="Image" Value="set:Button7 image:Sale_NULL" />
+                        <Property Name="RiseOnClick" Value="False" />
+                    </Window>
+                    <Window Type="TLBB_ButtonNULL" Name="Carriage_Freight_Buy_1_1">
+                        <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,0.000000}" />
+                        <Property Name="AbsoluteSize" Value="w:40.000000 h:40.000000" />
+                        <Event Name="Clicked" Function="Carriage_Action_Clicked(1);" />
+                        <Property Name="HoverImage" Value="set:Button7 image:Sale_Yan_Hover" />
+                        <Property Name="NormalImage" Value="set:Button7 image:Sale_Yan_Normal" />
+                        <Property Name="PushedImage" Value="set:Button7 image:Sale_Yan_Pushed" />
+                        <Property Name="DisabledImage" Value="set:Button7 image:Sale_NULL" />
+                    </Window>
+                    <Window Type="TLBB_ButtonNULL" Name="Carriage_Freight_Buy_1_2">
+                        <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,0.000000}" />
+                        <Property Name="AbsoluteSize" Value="w:40.000000 h:40.000000" />
+                        <Event Name="Clicked" Function="Carriage_Action_Clicked(2);" />
+                        <Property Name="HoverImage" Value="set:Button7 image:Sale_Tie_Hover" />
+                        <Property Name="NormalImage" Value="set:Button7 image:Sale_Tie_Normal" />
+                        <Property Name="PushedImage" Value="set:Button7 image:Sale_Tie_Pushed" />
+                        <Property Name="DisabledImage" Value="set:Button7 image:Sale_NULL" />
+                    </Window>
+                    <Window Type="TLBB_SimpleMulitiTextFrame" Name="Carriage_Freight_Buy_1_Info">
+                        <Property Name="UnifiedPosition" Value="{{0.000000,40.000000},{0.000000,0.000000}" />
+                        <Property Name="UnifiedSize" Value="{{1.000000,-42.000000},{0.000000,40.000000}" />
+                        <Property Name="RiseOnClick" Value="False" />
+                        <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                        <Property Name="VertFormatting" Value="TopAligned" />
+                        <Property Name="TextColor" Value="FFFDF7A7" />
+                    </Window>
+                    <Window Type="TLBB_Money" Name="Carriage_Money_Buy_1">
+                        <Property Name="UnifiedPosition" Value="{{0.0,40.000000},{0.000000,16.000000}" />
+                        <Property Name="UnifiedSize" Value="{{1.0,-47.000000},{0.000000,20.000000}" />
+                        <Property Name="MoneyNumber" Value="0" />
+                        <Property Name="HorzFormatting" Value="RightAligned" />
+                        <Property Name="GoldIcon" Value = "set:Button6 image:Lace_JiaoziJin" />
+                        <Property Name="SilverIcon" Value = "set:Button6 image:Lace_JiaoziYin" />
+                        <Property Name="CopperIcon" Value = "set:Button6 image:Lace_JiaoziTong" />
+                    </Window>
+                    <Window Type="TLBB_StaticImageNULL" Name="Carriage_Freight_Buy_2_2_bak">
+                        <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,40.000000}" />
+                        <Property Name="AbsoluteSize" Value="w:40.000000 h:40.000000" />
+                        <Property Name="Image" Value="set:Button7 image:Sale_NULL" />
+                        <Property Name="RiseOnClick" Value="False" />
+                    </Window>
+                    <Window Type="TLBB_ButtonNULL" Name="Carriage_Freight_Buy_2_2">
+                        <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,40.000000}" />
+                        <Property Name="AbsoluteSize" Value="w:40.000000 h:40.000000" />
+                        <Event Name="Clicked" Function="Carriage_Action_Clicked(2);" />
+                        <Property Name="HoverImage" Value="set:Button7 image:Sale_Tie_Hover" />
+                        <Property Name="NormalImage" Value="set:Button7 image:Sale_Tie_Normal" />
+                        <Property Name="PushedImage" Value="set:Button7 image:Sale_Tie_Pushed" />
+                        <Property Name="DisabledImage" Value="set:Button7 image:Sale_NULL" />
+                    </Window>
+                    <Window Type="TLBB_ButtonNULL" Name="Carriage_Freight_Buy_2_3">
+                        <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,40.000000}" />
+                        <Property Name="AbsoluteSize" Value="w:40.000000 h:40.000000" />
+                        <Event Name="Clicked" Function="Carriage_Action_Clicked(3);" />
+                        <Property Name="HoverImage" Value="set:Button7 image:Sale_Mi_Hover" />
+                        <Property Name="NormalImage" Value="set:Button7 image:Sale_Mi_Normal" />
+                        <Property Name="PushedImage" Value="set:Button7 image:Sale_Mi_Pushed" />
+                        <Property Name="DisabledImage" Value="set:Button7 image:Sale_NULL" />
+                    </Window>
+                    <Window Type="TLBB_SimpleMulitiTextFrame" Name="Carriage_Freight_Buy_2_Info">
+                        <Property Name="UnifiedPosition" Value="{{0.000000,40.000000},{0.000000,40.000000}" />
+                        <Property Name="UnifiedSize" Value="{{1.000000,-42.000000},{0.000000,40.000000}" />
+                        <Property Name="RiseOnClick" Value="False" />
+                        <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                        <Property Name="VertFormatting" Value="TopAligned" />
+                        <Property Name="TextColor" Value="FFFDF7A7" />
+                    </Window>
+                    <Window Type="TLBB_Money" Name="Carriage_Money_Buy_2">
+                        <Property Name="UnifiedPosition" Value="{{0.000000,40.000000},{0.000000,56.000000}" />
+                        <Property Name="UnifiedSize" Value="{{1.000000,-47.000000},{0.000000,20.000000}" />
+                        <Property Name="MoneyNumber" Value="0" />
+                        <Property Name="HorzFormatting" Value="RightAligned" />
+                        <Property Name="GoldIcon" Value = "set:Button6 image:Lace_JiaoziJin" />
+                        <Property Name="SilverIcon" Value = "set:Button6 image:Lace_JiaoziYin" />
+                        <Property Name="CopperIcon" Value = "set:Button6 image:Lace_JiaoziTong" />
+                    </Window>
+                    <Window Type="TLBB_StaticImageNULL" Name="Carriage_Freight_Buy_3_1_bak">
+                        <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,80.000000}" />
+                        <Property Name="AbsoluteSize" Value="w:40.000000 h:40.000000" />
+                        <Property Name="Image" Value="set:Button7 image:Sale_NULL" />
+                        <Property Name="RiseOnClick" Value="False" />
+                    </Window>
+                    <Window Type="TLBB_ButtonNULL" Name="Carriage_Freight_Buy_3_1">
+                        <Property Name="Visible" Value="False" />
+                        <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,80.000000}" />
+                        <Property Name="AbsoluteSize" Value="w:40.000000 h:40.000000" />
+                        <Event Name="Clicked" Function="Carriage_Action_Clicked(2);" />
+                        <Property Name="HoverImage" Value="set:Button7 image:Sale_Tie_Hover" />
+                        <Property Name="NormalImage" Value="set:Button7 image:Sale_Tie_Normal" />
+                        <Property Name="PushedImage" Value="set:Button7 image:Sale_Tie_Pushed" />
+                        <Property Name="DisabledImage" Value="set:Button7 image:Sale_NULL" />
+                    </Window>
+                    <Window Type="TLBB_ButtonNULL" Name="Carriage_Freight_Buy_3_2">
+                        <Property Name="Visible" Value="False" />
+                        <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,80.000000}" />
+                        <Property Name="AbsoluteSize" Value="w:40.000000 h:40.000000" />
+                        <Event Name="Clicked" Function="Carriage_Action_Clicked(3);" />
+                        <Property Name="HoverImage" Value="set:Button7 image:Sale_Yan_Hover" />
+                        <Property Name="NormalImage" Value="set:Button7 image:Sale_Yan_Normal" />
+                        <Property Name="PushedImage" Value="set:Button7 image:Sale_Yan_Pushed" />
+                        <Property Name="DisabledImage" Value="set:Button7 image:Sale_NULL" />
+                    </Window>
+                    <Window Type="TLBB_SimpleMulitiTextFrame" Name="Carriage_Freight_Buy_3_Info">
+                        <Property Name="UnifiedPosition" Value="{{0.000000,40.000000},{0.000000,80.000000}" />
+                        <Property Name="UnifiedSize" Value="{{1.000000,-42.000000},{0.000000,40.000000}" />
+                        <Property Name="RiseOnClick" Value="False" />
+                        <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                        <Property Name="VertFormatting" Value="TopAligned" />
+                        <Property Name="TextColor" Value="FFFDF7A7" />
+                    </Window>
+                    <Window Type="TLBB_Money" Name="Carriage_Money_Buy_3">
+                        <Property Name="Visible" Value="False" />
+                        <Property Name="UnifiedPosition" Value="{{0.000000,40.000000},{0.000000,96.000000}" />
+                        <Property Name="UnifiedSize" Value="{{1.000000,-47.000000},{0.000000,20.000000}" />
+                        <Property Name="MoneyNumber" Value="0" />
+                        <Property Name="HorzFormatting" Value="RightAligned" />
+                        <Property Name="GoldIcon" Value = "set:Button6 image:Lace_JiaoziJin" />
+                        <Property Name="SilverIcon" Value = "set:Button6 image:Lace_JiaoziYin" />
+                        <Property Name="CopperIcon" Value = "set:Button6 image:Lace_JiaoziTong" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_SimpleMulitiTextFrame" Name="Carriage_Enchiridion">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,0.000000}" />
+                    <Property Name="UnifiedSize" Value="{{1.000000,0.000000},{0.000000,140.000000}" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_655}" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                    <Property Name="VertFormatting" Value="TopAligned" />
+                </Window>
+                <Window Type="TLBB_StaticImageNULL" Name="Carriage_Down_image">
+                    <Property Name="UnifiedPosition" Value="{{0.5,-165.000000},{0.000000,145.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:165.000000 h:36.000000" />
+                    <Property Name="Image" Value="set:Button6 image:PaoShang_Btn_Hover" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Window Type="TLBB_ButtonCommon" Name="Carriage_Down">
+                        <Property Name="UnifiedPosition" Value="{{0.0,68.000000},{1.000000,-17.000000}" />
+                        <Property Name="AbsoluteSize" Value="w:66.000000 h:18.000000" />
+                        <Event Name="Clicked" Function="Carriage_Button1_Clicked();" />
+                        <Property Name="Text" Value="#{INTERFACE_XML_204}" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_SimpleMulitiTextFrame" Name="Carriage_Info3">
+                    <Property Name="UnifiedPosition" Value="{{0.5,-165.000000},{0.000000,182.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:165.000000 h:20.000000" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="TextColor" Value="FFFDF7A7" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_205}" />
+                    <Property Name="HorzFormatting" Value="LeftAliagn" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                </Window>
+                <Window Type="TLBB_StaticImageNULL" Name="Carriage_Up_image">
+                    <Property Name="UnifiedPosition" Value="{{0.5,0.000000},{0.000000,145.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:165.000000 h:36.000000" />
+                    <Property Name="Image" Value="set:Button6 image:PaoShang_Btn_Normal" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Window Type="TLBB_ButtonCommon" Name="Carriage_Up">
+                        <Property Name="UnifiedPosition" Value="{{0.0,68.000000},{1.000000,-18.000000}" />
+                        <Property Name="AbsoluteSize" Value="w:66.000000 h:18.000000" />
+                        <Event Name="Clicked" Function="Carriage_Button2_Clicked();" />
+                        <Property Name="Text" Value="#{INTERFACE_XML_321}" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_SimpleMulitiTextFrame" Name="Carriage_Info4">
+                    <Property Name="UnifiedPosition" Value="{{0.5,0.000000},{0.000000,182.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:165.000000 h:20.000000" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="TextColor" Value="FFFDF7A7" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_322}" />
+                    <Property Name="HorzFormatting" Value="LeftAliagn" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                </Window>
+                <Window Type="TLBB_Frame_Lace4" Name="Carriage_Counter_Frame">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,202.000000}" />
+                    <Property Name="UnifiedSize" Value="{{1.000000,0.000000},{0.000000,85.000000}" />
+                    <Window Type="TLBB_SimpleText" Name="Carriage_Counter3">
+                        <Property Name="UnifiedPosition" Value="{{0.000000,12.000000},{0.000000,13.000000}" />
+                        <Property Name="AbsoluteSize" Value="w:60.000000 h:20.000000" />
+                        <Property Name="RiseOnClick" Value="False" />
+                        <Property Name="TextColor" Value="FFFFF263" />
+                        <Property Name="Text" Value="#{INTERFACE_XML_719}" />
+                    </Window>
+                    <Window Type="TLBB_StaticImageNULL" Name="Carriage_ContrabandSalt_Freight_bak">
+                        <Property Name="UnifiedPosition" Value="{{0.0,80.000000},{0.000000,15.000000}" />
+                        <Property Name="AbsoluteSize" Value="w:40.000000 h:40.000000" />
+                        <Property Name="Image" Value="set:Button7 image:Sale_NULL" />
+                        <Property Name="RiseOnClick" Value="False" />
+                    </Window>
+                    <Window Type="TLBB_ButtonNULL" Name="Carriage_ContrabandSalt_Freight">
+                        <Property Name="UnifiedPosition" Value="{{0.0,80.000000},{0.000000,15.000000}" />
+                        <Property Name="AbsoluteSize" Value="w:40.000000 h:40.000000" />
+                        <Event Name="Clicked" Function="Carriage_Action_Clicked(10);" />
+                        <Property Name="HoverImage" Value="set:Button7 image:Sale_Yan_Hover" />
+                        <Property Name="NormalImage" Value="set:Button7 image:Sale_Yan_Normal" />
+                        <Property Name="PushedImage" Value="set:Button7 image:Sale_Yan_Pushed" />
+                        <Property Name="DisabledImage" Value="set:Button7 image:Sale_NULL" />
+                        <Property Name="Visible" Value="False" />
+                    </Window>
+                    <Window Type="TLBB_StaticImageNULL" Name="Carriage_Freight5_bak">
+                        <Property Name="UnifiedPosition" Value="{{0.0,140.000000},{0.000000,15.000000}" />
+                        <Property Name="AbsoluteSize" Value="w:40.000000 h:40.000000" />
+                        <Property Name="Image" Value="set:Button7 image:Sale_NULL" />
+                        <Property Name="RiseOnClick" Value="False" />
+                    </Window>
+                    <Window Type="TLBB_ButtonNULL" Name="Carriage_Freight5">
+                        <Property Name="UnifiedPosition" Value="{{0.0,140.000000},{0.000000,15.000000}" />
+                        <Property Name="AbsoluteSize" Value="w:40.000000 h:40.000000" />
+                        <Event Name="Clicked" Function="Carriage_Action_Clicked(10);" />
+                        <Property Name="HoverImage" Value="set:Button7 image:Sale_Yan_Hover" />
+                        <Property Name="NormalImage" Value="set:Button7 image:Sale_Yan_Normal" />
+                        <Property Name="PushedImage" Value="set:Button7 image:Sale_Yan_Pushed" />
+                        <Property Name="DisabledImage" Value="set:Button7 image:Sale_NULL" />
+                    </Window>
+                    <Window Type="TLBB_StaticImageNULL" Name="Carriage_Freight6_bak">
+                        <Property Name="UnifiedPosition" Value="{{0.0,200.000000},{0.000000,15.000000}" />
+                        <Property Name="AbsoluteSize" Value="w:40.000000 h:40.000000" />
+                        <Property Name="Image" Value="set:Button7 image:Sale_NULL" />
+                        <Property Name="RiseOnClick" Value="False" />
+                    </Window>
+                    <Window Type="TLBB_ButtonNULL" Name="Carriage_Freight6">
+                        <Property Name="UnifiedPosition" Value="{{0.0,200.000000},{0.000000,15.000000}" />
+                        <Property Name="AbsoluteSize" Value="w:40.000000 h:40.000000" />
+                        <Event Name="Clicked" Function="Carriage_Action_Clicked(20);" />
+                        <Property Name="HoverImage" Value="set:Button7 image:Sale_Tie_Hover" />
+                        <Property Name="NormalImage" Value="set:Button7 image:Sale_Tie_Normal" />
+                        <Property Name="PushedImage" Value="set:Button7 image:Sale_Tie_Pushed" />
+                        <Property Name="DisabledImage" Value="set:Button7 image:Sale_NULL" />
+                    </Window>
+                    <Window Type="TLBB_StaticImageNULL" Name="Carriage_Freight7_bak">
+                        <Property Name="UnifiedPosition" Value="{{0.0,260.000000},{0.000000,15.000000}" />
+                        <Property Name="AbsoluteSize" Value="w:40.000000 h:40.000000" />
+                        <Property Name="Image" Value="set:Button7 image:Sale_NULL" />
+                        <Property Name="RiseOnClick" Value="False" />
+                    </Window>
+                    <Window Type="TLBB_ButtonNULL" Name="Carriage_Freight7">
+                        <Property Name="UnifiedPosition" Value="{{0.0,260.000000},{0.000000,15.000000}" />
+                        <Property Name="AbsoluteSize" Value="w:40.000000 h:40.000000" />
+                        <Event Name="Clicked" Function="Carriage_Action_Clicked(30);" />
+                        <Property Name="HoverImage" Value="set:Button7 image:Sale_Mi_Hover" />
+                        <Property Name="NormalImage" Value="set:Button7 image:Sale_Mi_Normal" />
+                        <Property Name="PushedImage" Value="set:Button7 image:Sale_Mi_Pushed" />
+                        <Property Name="DisabledImage" Value="set:Button7 image:Sale_NULL" />
+                    </Window>
+                    <Window Type="TLBB_SimpleText" Name="Carriage_ContrabandSalt_Text">
+                        <Property Name="UnifiedPosition" Value="{{0.0,80.000000},{0.000000,55.000000}" />
+                        <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                        <Property Name="HorzFormatting" Value="HorzCentred" />
+                        <Property Name="VertFormatting" Value="VertCentred" />
+                        <Property Name="TextColor" Value="FFFDF7A7" />
+                        <Property Name="Text" Value="#{INTERFACE_XML_668}" />
+                        <Property Name="RiseOnClick" Value="False" />
+                    </Window>
+                    <Window Type="TLBB_SimpleText" Name="Carriage_Salt_Text">
+                        <Property Name="UnifiedPosition" Value="{{0.0,140.000000},{0.000000,55.000000}" />
+                        <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                        <Property Name="HorzFormatting" Value="HorzCentred" />
+                        <Property Name="VertFormatting" Value="VertCentred" />
+                        <Property Name="TextColor" Value="FFFDF7A7" />
+                        <Property Name="Text" Value="#{INTERFACE_XML_810}" />
+                        <Property Name="RiseOnClick" Value="False" />
+                    </Window>
+                    <Window Type="TLBB_SimpleText" Name="Carriage_Iron_Text">
+                        <Property Name="UnifiedPosition" Value="{{0.0,200.000000},{0.000000,55.000000}" />
+                        <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                        <Property Name="HorzFormatting" Value="HorzCentred" />
+                        <Property Name="VertFormatting" Value="VertCentred" />
+                        <Property Name="TextColor" Value="FFFDF7A7" />
+                        <Property Name="Text" Value="#{INTERFACE_XML_697}" />
+                        <Property Name="RiseOnClick" Value="False" />
+                    </Window>
+                    <Window Type="TLBB_SimpleText" Name="Carriage_Rice_Text">
+                        <Property Name="UnifiedPosition" Value="{{0.0,260.000000},{0.000000,55.000000}" />
+                        <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                        <Property Name="HorzFormatting" Value="HorzCentred" />
+                        <Property Name="VertFormatting" Value="VertCentred" />
+                        <Property Name="TextColor" Value="FFFDF7A7" />
+                        <Property Name="Text" Value="#{INTERFACE_XML_455}" />
+                        <Property Name="RiseOnClick" Value="False" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_SimpleMulitiTextFrame" Name="Carriage_Info1">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-57.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:200.000000 h:22.000000" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_305}" />
+                    <Property Name="HorzFormatting" Value="LeftAliagn" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                </Window>
+                <Window Type="TLBB_Money" Name="Carriage_Balance">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-58.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:200.000000 h:20.000000" />
+                    <Property Name="MoneyNumber" Value="0" />
+                    <Property Name="HorzFormatting" Value="RightAligned" />
+                    <Property Name="GoldIcon" Value = "set:Button6 image:Lace_JiaoziJin" />
+			              <Property Name="SilverIcon" Value = "set:Button6 image:Lace_JiaoziYin" />
+			              <Property Name="CopperIcon" Value = "set:Button6 image:Lace_JiaoziTong" />
+                </Window>
+                <Window Type="TLBB_SimpleMulitiTextFrame" Name="Carriage_Info2">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-43.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:200.000000 h:20.000000" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_148}" />
+                    <Property Name="HorzFormatting" Value="LeftAliagn" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                    <Property Name="Visible" Value="False" />
+                </Window>
+                <Window Type="TLBB_ButtonCommon" Name="Carriage_Redeem">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,230.000000},{1.000000,-59.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:80.000000 h:26.000000" />
+                    <Event Name="Clicked" Function="Convert_Writ();" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_259}" />
+                </Window>
+                <Window Type="TLBB_ButtonCommon" Name="Carriage_Draw">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,230.000000},{1.000000,-59.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:80.000000 h:26.000000" />
+                    <Event Name="Clicked" Function="Get_Writ();" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_443}" />
+                </Window>
+                <Window Type="TLBB_Frame_Lace5" Name="Carriage_Blank">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-20.000000}" />
+                    <Property Name="UnifiedSize" Value="{{1.000000,-40.000000},{0.000000,20.000000}" />
+                </Window>
+<!--
+                <Window Type="TLBB_ButtonCommon" Name="Carriage_Abandon">
+                    <Property Name="UnifiedPosition" Value="{{1.000000,-120.000000},{1.000000,-20.000000}" />
+                    <Property Name="UnifiedSize" Value="{{0.000000,80.000000},{0.000000,20.000000}" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_268}" />
+                    <Event Name="Clicked" Function="Abandon_Carriage();" />
+                </Window>
+-->
+                <Window Type="TLBB_ButtonCommon" Name="Carriage_Cancel">
+                    <Property Name="UnifiedPosition" Value="{{1.000000,-40.000000},{1.000000,-20.000000}" />
+                    <Property Name="UnifiedSize" Value="{{0.000000,40.000000},{0.000000,20.000000}" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_702}" />
+                    <Event Name="Clicked" Function="Close_Carriage_UI();" />
+                </Window>
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

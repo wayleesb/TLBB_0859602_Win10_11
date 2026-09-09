@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="武当旗帜.frame" />
+    <entity mesh="武当旗竿.mesh" node="武当旗竿" />
+    <entity mesh="武当旗.mesh" />
+</model>

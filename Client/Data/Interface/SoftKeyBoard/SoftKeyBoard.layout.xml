@@ -1,0 +1,63 @@
+<?xml version="1.0" ?>
+<GUILayout>
+
+    <Window Type="TLBB_MainFrame2" Name="SoftKeyBoard_Back">
+        <Property Name="UnifiedPosition" Value="{{0.500000,-259.000000},{1.000000,-237.000000}" />
+        <Property Name="AbsoluteSize" Value="w:484.000000 h:186.000000" />
+        <Property Name="AlwaysOnTop" Value="True" />
+        <Window Type="TLBB_DragTitle" Name="SoftKeyBoard_Title">
+            <Property Name="AbsolutePosition" Value="x:26.000000 y:2.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-52.000000},{0.000000,20.000000}" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="Font" Value="YouYuan11.25" />
+		    <Property Name="HorzFormatting" Value="HorzCentred" />
+		    <Property Name="Text" Value="#{INTERFACE_XML_954}" />
+            <Property Name="DragTarget" Value="SoftKeyBoard_Back" />
+        </Window>
+        <Window Type="TLBB_ButtonHelp" Name="SoftKeyBoard_SoftKey_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,5.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Property Name="Text" Value="TLBB_ButtonHelp" />
+        </Window>
+        <Window Type="DefaultWindow" Name="SoftKeyBoard_SoftKey_Client">
+            <Property Name="AbsolutePosition" Value="x:10.000000 y:26.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-18.000000},{1.000000,-31.000000}" />
+            <Window Type="TLBB_SoftKeyWindow" Name="SoftKeyBoard_SoftKey">
+                <Property Name="Position" Value="x:0 y:0" />
+                <Property Name="Size" Value="w:1.0 h:1" />
+                <Property Name="KeySize" Value="w:30 h:30" />
+                <Property Name="NormalImage" Value="type:0 set:Button1 image:BtnKey_Normal" />
+                <Property Name="HoverImage" Value="type:0 set:Button1 image:BtnKey_Hover" />
+                <Property Name="PushedImage" Value="type:0 set:Button1 image:BtnKey_Pushed" />
+                <Property Name="NormalImage" Value="type:1 set:Button4 image:SoftKey_Normal" />
+                <Property Name="HoverImage" Value="type:1 set:Button4 image:SoftKey_Hover" />
+                <Property Name="PushedImage" Value="type:1 set:Button4 image:SoftKey_Pushed" />
+                <Property Name="NormalImage" Value="type:2 set:Button4 image:SoftKey_Normal" />
+                <Property Name="HoverImage" Value="type:2 set:Button4 image:SoftKey_Hover" />
+                <Property Name="PushedImage" Value="type:2 set:Button4 image:SoftKey_Pushed" />
+                <Property Name="NormalImage" Value="type:3 set:Button5 image:BtnReturn_Normal" />
+                <Property Name="HoverImage" Value="type:3 set:Button5 image:BtnReturn_Hover" />
+                <Property Name="PushedImage" Value="type:3 set:Button5 image:BtnReturn_Pushed" />
+                <Window Type="TLBB_SimpleText" Name="SoftKeyBoard_SoftKey_Text" >
+						<Property Name="AbsolutePosition" Value="x:421.000000 y:2.000000" />
+						<Property Name="AbsoluteSize" Value="w:27.000000 h:25.000000" />
+						<Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+						<Property Name="MouseHollow" Value="False" />
+						<Property Name="Text" Value="#{INTERFACE_XML_1010}" />
+						<Property Name="TextColor" Value="FFFFFFFF" />
+						<Property Name="VertFormatting" Value="VertCentred" />
+					</Window>
+					<Window Type="TLBB_SimpleText" Name="SoftKeyBoard_SoftKey_Text1" >
+						<Property Name="AbsolutePosition" Value="x:414.000000 y:33.000000" />
+						<Property Name="AbsoluteSize" Value="w:40.000000 h:25.000000" />
+						<Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+						<Property Name="MouseHollow" Value="False" />
+						<Property Name="Text" Value="#{INTERFACE_XML_1011}" />
+						<Property Name="TextColor" Value="FFFFFFFF" />
+						<Property Name="VertFormatting" Value="VertCentred" />
+					</Window>
+            </Window>
+        </Window>
+    </Window>
+
+</GUILayout>

@@ -1,0 +1,311 @@
+<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="DefaultWindow" Name="TeamMessageBox1BackGround_Frame">
+        <Property Name="Position" Value="x:0 y:0" />
+        <Property Name="Size" Value="w:1 h:1" />
+        <Event Name="Hidden" Function="TeamMessageBox1_Cancel_Clicked();" />
+        <Property Name="MouseHollow" Value="True" />
+        <Property Name="MouseMoveHollow" Value="True" />
+        <Window Type="TLBB_MainFrame1" Name="TeamMessageBox1_Frame">
+            <Property Name="AbsolutePosition" Value="x:281.000000 y:160.000000" />
+            <Property Name="UnifiedSize" Value="{{0.000000,306.000000},{0.000000,125.000000}" />
+           <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+           <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="Visible" Value="False" />
+            <Window Type="TLBB_ButtonHelp" Name="TeamMessageBox1_Help">
+                <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+                <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+                <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*TeamMessageBox1&quot;);' />
+            </Window>
+            <Window Type="TLBB_ButtonClose" Name="TeamMessageBox1_Close">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+                <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+                <Event Name="Clicked" Function="TeamMessageBox1_Cancel_Clicked();" />
+            </Window>
+          <Window Type="TLBB_DragTitle" Name="TeamMessageBox1_DragTitle" >
+            <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="TeamMessageBox1_Frame" />
+	    <Property Name="Font" Value="YouYuan11.25" />
+	    <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="Text" Value="#{INTERFACE_XML_999}" />
+            <Window Type="TLBB_SimpleText" Name="TeamMessageBox1_PageHeader_Name">
+                <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="" />
+                <Property Name="Font" Value="YouYuan11.25" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="TextColor" Value="FFFEE601" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+          </Window>
+            <Window Type="DefaultWindow" Name="TeamMessageBox1_Client">
+                <Property Name="AbsolutePosition" Value="x:7.000000 y:36.000000" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-13.000000},{1.000000,-55.000000}" />
+                <Window Type="TLBB_SimpleMulitiTextFrame" Name="TeamMessageBox1_Text">
+                    <Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+                    <Property Name="UnifiedSize" Value="{{1.000000,0.000000},{1.000000,-24.000000}" />
+                    <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                    <Property Name="VertFormatting" Value="TopAligned" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_Frame_Lace5" Name="TeamMessageBox1_Blank">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-20.000000}" />
+                    <Property Name="UnifiedSize" Value="{{1.000000,-80.000000},{0.000000,20.000000}" />
+                </Window>
+                <Window Type="TLBB_ButtonCommon" Name="TeamMessageBox1_OK_Button">
+                    <Property Name="UnifiedPosition" Value="{{1.000000,-80.000000},{1.000000,-20.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_700}" />
+                    <Event Name="Clicked" Function="TeamMessageBox1_OK_Clicked();" />
+                </Window>
+                <Window Type="TLBB_ButtonCommon" Name="TeamMessageBox1_Cancel_Button">
+                    <Property Name="UnifiedPosition" Value="{{1.000000,-40.000000},{1.000000,-20.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_388}" />
+                    <Event Name="Clicked" Function="TeamMessageBox1_Cancel_Clicked();" />
+                </Window>
+            </Window>
+        </Window>
+        <Window Type="TLBB_MainFrame1" Name="TeamMessageBox2_Frame">
+            <Property Name="UnifiedPosition" Value="{{0.000000,321.000000},{0.000000,190.000000}" />
+            <Property Name="AbsoluteSize" Value="w:306.000000 h:125.000000" />
+            <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="Visible" Value="False" />
+            <Window Type="TLBB_ButtonHelp" Name="TeamMessageBox2_Help">
+                <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+                <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            </Window>
+            <Window Type="TLBB_ButtonClose" Name="TeamMessageBox2_Close">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+                <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+                <Event Name="Clicked" Function="TeamMessageBox2_Cancel_Clicked();" />
+            </Window>
+          <Window Type="TLBB_DragTitle" Name="TeamMessageBox2_DragTitle" >
+            <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="TeamMessageBox2_Frame" />
+	    <Property Name="Font" Value="YouYuan11.25" />
+	    <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="Text" Value="#{INTERFACE_XML_999}" />
+            <Window Type="TLBB_SimpleText" Name="TeamMessageBox2_PageHeader_Name">
+                <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="" />
+                <Property Name="Font" Value="YouYuan11.25" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="TextColor" Value="FFFEE601" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+          </Window>
+            <Window Type="DefaultWindow" Name="TeamMessageBox2_Client">
+                <Property Name="AbsolutePosition" Value="x:7.000000 y:36.000000" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-13.000000},{1.000000,-55.000000}" />
+                <Window Type="TLBB_SimpleMulitiTextFrame" Name="TeamMessageBox2_Text">
+                    <Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+                    <Property Name="UnifiedSize" Value="{{1.000000,0.000000},{1.000000,-24.000000}" />
+                    <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                    <Property Name="VertFormatting" Value="TopAligned" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_Frame_Lace5" Name="TeamMessageBox2_Blank">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-20.000000}" />
+                    <Property Name="UnifiedSize" Value="{{1.000000,-80.000000},{0.000000,20.000000}" />
+                </Window>
+                <Window Type="TLBB_ButtonCommon" Name="TeamMessageBox2_OK_Button">
+                    <Property Name="UnifiedPosition" Value="{{1.000000,-80.000000},{1.000000,-20.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_700}" />
+                    <Event Name="Clicked" Function="TeamMessageBox2_OK_Clicked();" />
+                </Window>
+                <Window Type="TLBB_ButtonCommon" Name="TeamMessageBox2_Cancel_Button">
+                    <Property Name="UnifiedPosition" Value="{{1.000000,-40.000000},{1.000000,-20.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_388}" />
+                    <Event Name="Clicked" Function="TeamMessageBox2_Cancel_Clicked();" />
+                </Window>
+            </Window>
+        </Window>
+        <Window Type="TLBB_MainFrame1" Name="TeamMessageBox3_Frame">
+            <Property Name="UnifiedPosition" Value="{{0.000000,361.000000},{0.000000,220.000000}" />
+            <Property Name="AbsoluteSize" Value="w:306.000000 h:125.000000" />
+            <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="Visible" Value="False" />
+            <Window Type="TLBB_ButtonHelp" Name="TeamMessageBox3_Help">
+                <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+                <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            </Window>
+            <Window Type="TLBB_ButtonClose" Name="TeamMessageBox3_Close">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+                <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+                <Event Name="Clicked" Function="TeamMessageBox3_Cancel_Clicked();" />
+            </Window>
+          <Window Type="TLBB_DragTitle" Name="TeamMessageBox3_DragTitle" >
+            <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="TeamMessageBox3_Frame" />
+	    <Property Name="Font" Value="YouYuan11.25" />
+	    <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="Text" Value="#{INTERFACE_XML_999}" />
+            <Window Type="TLBB_SimpleText" Name="TeamMessageBox3_PageHeader_Name">
+                <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="" />
+                <Property Name="Font" Value="YouYuan11.25" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="TextColor" Value="FFFEE601" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+          </Window>
+            <Window Type="DefaultWindow" Name="TeamMessageBox3_Client">
+                <Property Name="AbsolutePosition" Value="x:7.000000 y:36.000000" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-13.000000},{1.000000,-55.000000}" />
+                <Window Type="TLBB_SimpleMulitiTextFrame" Name="TeamMessageBox3_Text">
+                    <Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+                    <Property Name="UnifiedSize" Value="{{1.000000,0.000000},{1.000000,-24.000000}" />
+                    <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                    <Property Name="VertFormatting" Value="TopAligned" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_Frame_Lace5" Name="TeamMessageBox3_Blank">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-20.000000}" />
+                    <Property Name="UnifiedSize" Value="{{1.000000,-80.000000},{0.000000,20.000000}" />
+                </Window>
+                <Window Type="TLBB_ButtonCommon" Name="TeamMessageBox3_OK_Button">
+                    <Property Name="UnifiedPosition" Value="{{1.000000,-80.000000},{1.000000,-20.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_700}" />
+                    <Event Name="Clicked" Function="TeamMessageBox3_OK_Clicked();" />
+                </Window>
+                <Window Type="TLBB_ButtonCommon" Name="TeamMessageBox3_Cancel_Button">
+                    <Property Name="UnifiedPosition" Value="{{1.000000,-40.000000},{1.000000,-20.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_388}" />
+                    <Event Name="Clicked" Function="TeamMessageBox3_Cancel_Clicked();" />
+                </Window>
+            </Window>
+        </Window>
+        <Window Type="TLBB_MainFrame1" Name="TeamMessageBox4_Frame">
+            <Property Name="AbsolutePosition" Value="x:401.000000 y:250.000000" />
+            <Property Name="UnifiedSize" Value="{{0.000000,306.000000},{0.000000,125.000000}" />
+            <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="Visible" Value="False" />
+            <Window Type="TLBB_ButtonHelp" Name="TeamMessageBox4_Help">
+                <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+                <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            </Window>
+            <Window Type="TLBB_ButtonClose" Name="TeamMessageBox4_Close">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+                <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+                <Event Name="Clicked" Function="TeamMessageBox4_Cancel_Clicked();" />
+            </Window>
+          <Window Type="TLBB_DragTitle" Name="TeamMessageBox4_DragTitle" >
+            <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="TeamMessageBox4_Frame" />
+	    <Property Name="Font" Value="YouYuan11.25" />
+	    <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="Text" Value="#{INTERFACE_XML_999}" />
+            <Window Type="TLBB_SimpleText" Name="TeamMessageBox4_PageHeader_Name">
+                <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="" />
+                <Property Name="Font" Value="YouYuan11.25" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="TextColor" Value="FFFEE601" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+          </Window>
+            <Window Type="DefaultWindow" Name="TeamMessageBox4_Client">
+                <Property Name="AbsolutePosition" Value="x:7.000000 y:36.000000" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-13.000000},{1.000000,-55.000000}" />
+                <Window Type="TLBB_SimpleMulitiTextFrame" Name="TeamMessageBox4_Text">
+                    <Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+                    <Property Name="UnifiedSize" Value="{{1.000000,0.000000},{1.000000,-24.000000}" />
+                    <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                    <Property Name="VertFormatting" Value="TopAligned" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_Frame_Lace5" Name="TeamMessageBox4_Blank">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-20.000000}" />
+                    <Property Name="UnifiedSize" Value="{{1.000000,-80.000000},{0.000000,20.000000}" />
+                </Window>
+                <Window Type="TLBB_ButtonCommon" Name="TeamMessageBox4_OK_Button">
+                    <Property Name="UnifiedPosition" Value="{{1.000000,-80.000000},{1.000000,-20.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_700}" />
+                    <Event Name="Clicked" Function="TeamMessageBox4_OK_Clicked();" />
+                </Window>
+                <Window Type="TLBB_ButtonCommon" Name="TeamMessageBox4_Cancel_Button">
+                    <Property Name="UnifiedPosition" Value="{{1.000000,-40.000000},{1.000000,-20.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_388}" />
+                    <Event Name="Clicked" Function="TeamMessageBox4_Cancel_Clicked();" />
+                </Window>
+            </Window>
+        </Window>
+        <Window Type="TLBB_MainFrame1" Name="TeamMessageBox5_Frame">
+            <Property Name="AbsolutePosition" Value="x:441.000000 y:280.000000" />
+            <Property Name="UnifiedSize" Value="{{0.000000,306.000000},{0.000000,125.000000}" />
+            <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="Visible" Value="False" />
+            <Window Type="TLBB_ButtonHelp" Name="TeamMessageBox5_Help">
+                <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+                <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            </Window>
+            <Window Type="TLBB_ButtonClose" Name="TeamMessageBox5_Close">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+                <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+                <Event Name="Clicked" Function="TeamMessageBox5_Cancel_Clicked();" />
+            </Window>
+          <Window Type="TLBB_DragTitle" Name="TeamMessageBox5_DragTitle" >
+            <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="TeamMessageBox5_Frame" />
+	    <Property Name="Font" Value="YouYuan11.25" />
+	    <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="Text" Value="#{INTERFACE_XML_999}" />
+            <Window Type="TLBB_SimpleText" Name="TeamMessageBox5_PageHeader_Name">
+                <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="" />
+                <Property Name="Font" Value="YouYuan11.25" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="TextColor" Value="FFFEE601" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+          </Window>
+            <Window Type="DefaultWindow" Name="TeamMessageBox5_Client">
+                <Property Name="AbsolutePosition" Value="x:7.000000 y:36.000000" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-13.000000},{1.000000,-55.000000}" />
+                <Window Type="TLBB_SimpleMulitiTextFrame" Name="TeamMessageBox5_Text">
+                    <Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+                    <Property Name="UnifiedSize" Value="{{1.000000,0.000000},{1.000000,-24.000000}" />
+                    <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                    <Property Name="VertFormatting" Value="TopAligned" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_Frame_Lace5" Name="TeamMessageBox5_Blank">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-20.000000}" />
+                    <Property Name="UnifiedSize" Value="{{1.000000,-80.000000},{0.000000,20.000000}" />
+                </Window>
+                <Window Type="TLBB_ButtonCommon" Name="TeamMessageBox5_OK_Button">
+                    <Property Name="UnifiedPosition" Value="{{1.000000,-80.000000},{1.000000,-20.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_700}" />
+                    <Event Name="Clicked" Function="TeamMessageBox5_OK_Clicked();" />
+                </Window>
+                <Window Type="TLBB_ButtonCommon" Name="TeamMessageBox5_Cancel_Button">
+                    <Property Name="UnifiedPosition" Value="{{1.000000,-40.000000},{1.000000,-20.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_388}" />
+                    <Event Name="Clicked" Function="TeamMessageBox5_Cancel_Clicked();" />
+                </Window>
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

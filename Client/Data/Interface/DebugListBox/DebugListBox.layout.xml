@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<GUILayout>
+	<Window Type="DefaultWindow" Name="DebugListBox">
+		<Property Name="Position" Value="x:0.0 y:0.08" />
+		<Property Name="Size" Value="w:1.0 h:0.20" />
+		<Property Name="MouseHollow" Value="True" />
+		<Property Name="MouseMoveHollow" Value="True" />
+		<Property Name="AlwaysOnTop" Value="True" />
+		<Event Name="Shown" Function="DebugListBox_OnShown();" />
+		<Window Type="TLBB_InfoList" Name="DebugListBox_ListBox">
+			<Property Name="Position" Value="x:0.0 y:0.0" />
+			<Property Name="RelativeMaxSize" Value="w:1.0 h:1.0" />
+			<Property Name="Size" Value="w:1.0 h:1.0" />
+			<Property Name="Text" Value="" />
+			<Property Name="MouseHollow" Value="True" />
+			<Property Name="Life" Value="5000" />
+			  <Property Name="FadeSpeed" Value="128" />
+			<Property Name="MouseMoveHollow" Value="True" />
+		</Window>
+
+	</Window>
+
+</GUILayout>

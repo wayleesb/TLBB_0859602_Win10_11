@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="二级医舍.frame" />
+    <entity mesh="二级医舍.mesh" node="二级医舍" />
+    <entity mesh="二级医舍灯.mesh" />
+</model>

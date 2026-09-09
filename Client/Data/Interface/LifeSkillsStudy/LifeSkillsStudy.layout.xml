@@ -1,0 +1,143 @@
+﻿<?xml version="1.0"?>
+<GUILayout>
+	<Window Type="TLBB_MainFrame0" Name="LifeSkillsStudy_Frame">
+		<Property Name="UnifiedPosition" Value="{{0.000000,272.000000},{0.000000,99.000000}}" />
+		<Property Name="AbsoluteSize" Value="w:288.000000 h:301.000000" />
+		<Window Type="TLBB_DragTitle" Name="LifeSkillsStudy_DragTitle">
+			<Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+			<Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}}" />
+			<Property Name="DragTarget" Value="LifeSkillsStudy_Frame" />
+			<Property Name="Font" Value="YouYuan11.25" />
+			<Property Name="HorzFormatting" Value="HorzCentred" />
+			<Property Name="Text" Value="#{INTERFACE_XML_81}" />
+			<Property Name="VertFormatting" Value="VertCentred" />
+		</Window>
+		<Window Type="TLBB_ButtonHelp" Name="LifeSkillsStudy_Help">
+			<Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}}" />
+			<Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+			<Event Name="Clicked" Function="Helper:GotoHelper(&quot;*LifeSkillsStudy&quot;);" />
+		</Window>
+		<Window Type="TLBB_ButtonClose" Name="LifeSkillsStudy_Close">
+			<Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}}" />
+			<Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+			<Event Name="Clicked" Function="this:Hide();" />
+		</Window>
+		<Window Type="DefaultWindow" Name="LifeSkillsStudy_Frame_Client">
+			<Property Name="AbsolutePosition" Value="x:7.000000 y:36.000000" />
+			<Property Name="UnifiedSize" Value="{{1.000000,-13.000000},{1.000000,-55.000000}}" />
+			<Window Type="TLBB_SimpleText" Name="LifeSkillsStudy_SkillName">
+				<Property Name="RelativePosition" Value="x:0.020000 y:0.020000" />
+				<Property Name="UnifiedSize" Value="{{0.350000,-4.000000},{0.000000,18.000000}}" />
+				<Property Name="HorzFormatting" Value="HorzCentred" />
+				<Property Name="Text" Value="#{INTERFACE_XML_503}" />
+				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+			</Window>
+			<Window Type="TLBB_ActionButton" Name="LifeSkillsStudy_Icon">
+				<Property Name="RelativePosition" Value="x:0.120879 y:0.093496" />
+				<Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+			</Window>
+			<Window Type="TLBB_SimpleTextFrame" Name="LifeSkillsStudy_SkillLevel">
+				<Property Name="RelativePosition" Value="x:0.400000 y:0.020000" />
+				<Property Name="UnifiedSize" Value="{{0.570000,0.000000},{0.000000,18.000000}}" />
+				<Property Name="HorzFormatting" Value="LeftAligned" />
+				<Property Name="Text" Value="#{INTERFACE_XML_348}" />
+				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+			</Window>
+			<Window Type="TLBB_SimpleTextFrame" Name="LifeSkillsStudy_skilledDegree">
+				<Property Name="RelativePosition" Value="x:0.399267 y:0.101626" />
+				<Property Name="UnifiedSize" Value="{{0.000000,156.000000},{0.000000,18.000000}}" />
+				<Property Name="HorzFormatting" Value="LeftAligned" />
+				<Property Name="Text" Value="#{INTERFACE_XML_222}" />
+				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+			</Window>
+			<Window Type="TLBB_SimpleTextFrame" Name="LifeSkillsStudy_PlayerLevel">
+				<Property Name="RelativePosition" Value="x:0.399267 y:0.182927" />
+				<Property Name="UnifiedSize" Value="{{0.000000,156.000000},{0.000000,18.000000}}" />
+				<Property Name="HorzFormatting" Value="LeftAligned" />
+				<Property Name="Text" Value="#{INTERFACE_XML_710}" />
+				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+			</Window>
+			<Window Type="TLBB_SimpleMulitiTextFrame" Name="LifeSkillsStudy_Explain_Desc">
+				<Property Name="RelativePosition" Value="x:0.018315 y:0.280488" />
+				<Property Name="RelativeSize" Value="w:0.948718 h:0.243902" />
+				<Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="VertFormatting" Value="TopAligned" />
+			</Window>
+			<Window Type="TLBB_SimpleTextFrame" Name="LifeSkillsStudy_DemandExp_Character_Text">
+				<Property Name="UnifiedPosition" Value="{{0.000000,10.000000},{0.000000,132.000000}}" />
+				<Property Name="UnifiedSize" Value="{{0.000000,259.000000},{0.000000,20.000000}}" />
+				<Property Name="HorzFormatting" Value="LeftAligned" />
+				<Property Name="Text" Value="#{INTERFACE_XML_673}" />
+				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+			</Window>
+			<Window Type="TLBB_SimpleTextFrame" Name="LifeSkillsStudy_CurrentlyExp_Character_Text">
+				<Property Name="UnifiedPosition" Value="{{0.000000,10.000000},{0.000000,153.000000}}" />
+				<Property Name="UnifiedSize" Value="{{0.000000,259.000000},{0.000000,20.000000}}" />
+				<Property Name="HorzFormatting" Value="LeftAligned" />
+				<Property Name="Text" Value="#{INTERFACE_XML_218}" />
+				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+			</Window>
+			<Window Type="TLBB_SimpleMulitiTextFrame" Name="LifeSkillsStudy_Demand_Money_Text">
+				<Property Name="UnifiedPosition" Value="{{0.025000,0.000000},{1.000000,-66.000000}}" />
+				<Property Name="UnifiedSize" Value="{{0.70000,0.000000},{0.000000,22.000000}}" />
+				<Property Name="HorzFormatting" Value="LeftAligned" />
+				<Property Name="Text" Value="#{INTERFACE_XML_789}" />
+				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+				<Window Type="TLBB_Money" Name="LifeSkillsStudy_Demand_Money">
+					<Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,0.000000}}" />
+					<Property Name="UnifiedSize" Value="{{1.000000,0.000000},{0.000000,20.000000}}" />
+					<Property Name="HorzFormatting" Value="RightAligned" />
+					<Property Name="MoneyNumber" Value="0" />
+          <Property Name="GoldIcon" Value = "set:Button6 image:Lace_JiaoziJin" />
+          <Property Name="SilverIcon" Value = "set:Button6 image:Lace_JiaoziYin" />
+          <Property Name="CopperIcon" Value = "set:Button6 image:Lace_JiaoziTong" />
+				</Window>
+			</Window>
+      <Window Type="TLBB_SimpleMulitiTextFrame" Name="LifeSkillsStudy_Currently_Jiaozi_Text">
+        <Property Name="UnifiedPosition" Value="{{0.025000,0.000000},{1.000000,-44.000000}}" />
+        <Property Name="UnifiedSize" Value="{{0.70000,0.000000},{0.000000,22.000000}}" />
+        <Property Name="HorzFormatting" Value="LeftAligned" />
+        <Property Name="Text" Value="#{BDJB_051210_1}" />
+        <Property Name="TextColor" Value="FFFFF263" />
+        <Property Name="VertFormatting" Value="VertCentred" />
+        <Window Type="TLBB_Money" Name="LifeSkillsStudy_Currently_Jiaozi">
+          <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,0.000000}}" />
+          <Property Name="UnifiedSize" Value="{{1.000000,0.000000},{0.000000,20.000000}}" />
+          <Property Name="HorzFormatting" Value="RightAligned" />
+          <Property Name="MoneyNumber" Value="0" />
+          <Property Name="GoldIcon" Value = "set:Button6 image:Lace_JiaoziJin" />
+          <Property Name="SilverIcon" Value = "set:Button6 image:Lace_JiaoziYin" />
+          <Property Name="CopperIcon" Value = "set:Button6 image:Lace_JiaoziTong" />
+        </Window>
+      </Window>
+			<Window Type="TLBB_SimpleMulitiTextFrame" Name="LifeSkillsStudy_Currently_Money_Text">
+				<Property Name="UnifiedPosition" Value="{{0.025000,0.000000},{1.000000,-22.000000}}" />
+				<Property Name="UnifiedSize" Value="{{0.70000,0.000000},{0.000000,22.000000}}" />
+				<Property Name="HorzFormatting" Value="LeftAligned" />
+				<Property Name="Text" Value="#{INTERFACE_XML_834}" />
+				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+				<Window Type="TLBB_Money" Name="LifeSkillsStudy_Currently_Money">
+					<Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,0.000000}}" />
+					<Property Name="UnifiedSize" Value="{{1.000000,0.000000},{0.000000,20.000000}}" />
+					<Property Name="HorzFormatting" Value="RightAligned" />
+					<Property Name="MoneyNumber" Value="0" />
+				</Window>
+			</Window>
+			<Window Type="TLBB_ButtonCommon" Name="LifeSkillsStudy_UpLevel">
+				<Property Name="UnifiedPosition" Value="{{0.750000,-2.000000},{1.000000,-35.000000}}" />
+				<Property Name="UnifiedSize" Value="{{0.220000,0.000000},{0.000000,26.000000}}" />
+				<Property Name="Text" Value="#{INTERFACE_XML_804}" />
+				<Event Name="Clicked" Function="LifeSkillsStudy_UpLevel_Click();" />
+			</Window>
+		</Window>
+	</Window>
+</GUILayout>

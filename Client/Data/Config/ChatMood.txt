@@ -1,0 +1,25 @@
+INT	STRING	STRING	STRING	STRING	INT	STRING	STRING	STRING	STRING	STRING
+INT	STRING	STRING	STRING	STRING	INT	STRING	STRING	STRING	STRING	STRING
+1	坐下	$N坐下了	$N坐下了	$N坐下了	1	5;0	6;0	7;0	Expression_1	坐下#r*坐下
+2	招手	$N招了招手	$N招了招手	$N对$n招了招手	0	96;0			Expression_2	招手#r*招手
+3	鞠躬	$N鞠了一躬	$N鞠了一躬	$N对$n鞠了一躬	0	95;0			Expression_3	鞠躬#r*鞠躬
+4	高兴	$N显得很高兴	$N显得很高兴	$N对$n笑了笑	0	97;0			Expression_4	高兴#r*高兴
+5	悲伤	$N感觉很悲伤	$N感觉很悲伤	$N对$n做了个无奈的表情	0	98;0;98;0;98;0			Expression_5	悲伤#r*悲伤
+6	晕倒	$N晕倒了	$N晕倒了	$N晕倒在了$n的怀中	1	100;0	101;0	102;0	Expression2_1	晕倒#r*晕倒
+7	下跪	$N跪倒在地	$N跪倒在地	$N对$n跪下了	1	103;0	104;0	105;0	Expression_9	下跪#r*下跪
+8	称赞	$N做出称赞的表情	$N对自己做出称赞的表情	$N对$n做出称赞的表情	0	106;0			Expression_11	称赞#r*称赞
+9	吃惊	$N显得很吃惊	$N显得很吃惊	$N吃惊的望着$n	0	107;0			Expression_6	吃惊#r*吃惊
+10	抱拳	$N抱了抱拳	$N抱了抱拳	$N对$n抱了抱拳	0	108;0			Expression_13	抱拳#r*抱拳
+11	愤怒	$N显得很愤怒	$N显得很愤怒	$N愤怒的看着$n	0	109;0			Expression_7	愤怒#r*愤怒
+12	哈欠	$N困的打了个哈欠	$N困的打了个哈欠	$N对$n打了个哈欠	0	110;0			Expression_12	哈欠#r*哈欠
+13	鼓掌	$N鼓掌喝彩	$N鼓掌喝彩	$N对$n鼓掌喝彩	0	111;0			Expression_8	鼓掌#r*鼓掌
+14	摇头	$N摇了摇头	$N摇了摇头	$N对$n摇了摇头	0	112;0			Expression_15	摇头#r*摇头
+15	点头	$N点了点头	$N点了点头	$N对$n点了点头	0	113;0			Expression_14	点头#r*点头
+16	睡觉	$N进入了梦乡ZZZzzzz	$N进入了梦乡ZZZzzzz	$N进入了梦乡ZZZzzzz	1	114;0	115;0	116;0	Expression_16	睡觉#r*睡觉
+17	飞吻	$N对空气做出飞吻的动作	$N对空气做出飞吻的动作	$N给了$n一个飞吻	0	117;0			Expression_10	飞吻#r*飞吻
+18	鄙视	$N做了一个鄙视的手势	$N做了一个鄙视的手势	$N对$n做了一个鄙视的手势	0	451;0			Expression2_5	鄙视#r*鄙视
+19	大笑	$N捧腹大笑	$N笑的要晕倒了	$N对$n捧腹大笑	0	452;0			Expression2_6	大笑#r*大笑
+20	马步	$N使出了一招马步蹲裆式	$N使出了一招马步蹲裆式	$N对$n使出了一招马步蹲裆式	0	453;0			Expression2_3	马步#r*马步
+21	骄傲	$N骄傲的说：“我是江湖第一高手”	$N一边摸着自己的头一边骄傲的说：“我是江湖第一高手”	$N对$n骄傲的说：“我是江湖第一高手”	0	454;0			Expression2_4	骄傲#r*骄傲
+22	咆哮	$N像老虎一样咆哮起来	$N咆哮道：“我是老虎我是老虎”	$N对$n咆哮道：“我是老虎我是老虎”	0	455;0			Expression2_7	咆哮#r*咆哮
+23	招式	$N做了一连串的招式	$N做了一连串的招式	$N对$n做了一连串的招式	0	456;0			Expression2_2	招式#r*招式

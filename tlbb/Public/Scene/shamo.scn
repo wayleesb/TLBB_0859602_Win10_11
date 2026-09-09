@@ -1,0 +1,6 @@
+[System]
+navmapname=shamo.nav
+monsterfile=shamo_monster.ini
+patrolpoint=shamo_patrolpoint.ini
+eventfile=shamo_area.ini
+petfile=shamo_pet.ini

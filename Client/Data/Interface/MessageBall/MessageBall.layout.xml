@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="DefaultWindow" Name="MessageBall_Frame">
+        <Property Name="UnifiedPosition" Value="{{1.0,-350},{0.0,0}}" />
+        <Property Name="AbsoluteSize" Value="w:142 h:23" />
+        <Property Name="MouseHollow" Value="True" />
+        <Window Type="TLBB_Animate" Name="MessageBall_Animate4">
+            <Property Name="AbsolutePosition" Value="x:73.000000 y:2.000000" />
+            <Property Name="AbsoluteSize" Value="w:19.000000 h:19.000000" />
+            <Property Name="MouseHollow" Value="True" />
+            <Event Name="MouseLClick" Function="MessageBall_Image4_Click();" />
+		    </Window>
+        <Window Type="TLBB_Animate" Name="MessageBall_Animate3">
+            <Property Name="AbsolutePosition" Value="x:50.000000 y:2.000000" />
+            <Property Name="AbsoluteSize" Value="w:19.000000 h:19.000000" />
+            <Property Name="MouseHollow" Value="True" />
+            <Event Name="MouseLClick" Function="MessageBall_Image3_Click();" />
+        </Window>
+        <Window Type="TLBB_Animate" Name="MessageBall_Animate2">
+            <Property Name="AbsolutePosition" Value="x:27.000000 y:2.000000" />
+            <Property Name="AbsoluteSize" Value="w:19.000000 h:19.000000" />
+            <Property Name="MouseHollow" Value="True" />
+            <Event Name="MouseLClick" Function="MessageBall_Image2_Click();" />
+        </Window>
+        <Window Type="TLBB_Animate" Name="MessageBall_Animate1">
+            <Property Name="AbsolutePosition" Value="x:4.000000 y:2.000000" />
+            <Property Name="AbsoluteSize" Value="w:19.000000 h:19.000000" />
+            <Property Name="MouseHollow" Value="True" />
+            <Event Name="MouseLClick" Function="MessageBall_Image1_Click();" />
+        </Window>
+        <Window Type="TLBB_Animate" Name="MessageBall_Animate6">
+            <Property Name="AbsolutePosition" Value="x:119.000000 y:2.000000" />
+            <Property Name="AbsoluteSize" Value="w:19.000000 h:19.000000" />
+            <Property Name="MouseHollow" Value="True" />
+            <Event Name="MouseLClick" Function="MessageBall_Image6_Click();" />
+        </Window>
+        <Window Type="TLBB_Animate" Name="MessageBall_Animate5">
+            <Property Name="AbsolutePosition" Value="x:96.000000 y:2.000000" />
+            <Property Name="AbsoluteSize" Value="w:19.000000 h:19.000000" />
+            <Property Name="MouseHollow" Value="True" />
+            <Event Name="MouseLClick" Function="MessageBall_Image6_Click();" />
+        </Window>
+    </Window>
+</GUILayout>

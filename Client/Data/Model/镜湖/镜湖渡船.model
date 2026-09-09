@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="镜湖渡船.frame" />
+    <entity mesh="镜湖渡船.mesh" node="镜湖渡船" />
+</model>

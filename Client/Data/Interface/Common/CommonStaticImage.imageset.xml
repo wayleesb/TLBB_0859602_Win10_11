@@ -1,0 +1,100 @@
+<?xml version="1.0" ?>
+	<Imageset Name="CommonStaticImage" Imagefile="Common/CommonStaticImage.tga" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="false">
+		<Image Name="ProgressBarL" XPos="1" YPos="0" Width="30" Height="33" />
+    <Image Name="ProgressBarM" XPos="30" YPos="0" Width="30" Height="33" />
+    <Image Name="ProgressBarR" XPos="182" YPos="0" Width="30" Height="33" />
+
+
+    <Image Name="ProgressSkillL" XPos="164" YPos="63" Width="4" Height="18" />
+    <Image Name="ProgressSkillM" XPos="172" YPos="63" Width="1" Height="18" />
+    <Image Name="ProgressSkillR" XPos="186" YPos="63" Width="4" Height="18" />
+    <Image Name="ProgressLight" XPos="127" YPos="101" Width="23" Height="28" />
+
+    <Image Name="ProgressRedL" XPos="0" YPos="35" Width="5" Height="5" />
+    <Image Name="ProgressRedM" XPos="4" YPos="35" Width="5" Height="5" />
+    <Image Name="ProgressRedR" XPos="7" YPos="35" Width="5" Height="5" />
+
+    <Image Name="ProgressBuleL" XPos="0" YPos="42" Width="5" Height="5" />
+    <Image Name="ProgressBuleM" XPos="4" YPos="42" Width="5" Height="5" />
+    <Image Name="ProgressBuleR" XPos="7" YPos="42" Width="5" Height="5" />
+
+    <Image Name="ProgressYellowL" XPos="0" YPos="49" Width="5" Height="5" />
+    <Image Name="ProgressYellowM" XPos="4" YPos="49" Width="5" Height="5" />
+    <Image Name="ProgressYellowR" XPos="7" YPos="49" Width="5" Height="5" />
+
+    <Image Name="ProgressPureL" XPos="0" YPos="56" Width="5" Height="5" />
+    <Image Name="ProgressPureM" XPos="4" YPos="56" Width="5" Height="5" />
+    <Image Name="ProgressPureR" XPos="7" YPos="56" Width="5" Height="5" />
+
+    <Image Name="ProgressGreenL" XPos="0" YPos="64" Width="5" Height="5" />
+    <Image Name="ProgressGreenM" XPos="4" YPos="64" Width="5" Height="5" />
+    <Image Name="ProgressGreenR" XPos="7" YPos="64" Width="5" Height="5" />
+
+    <Image Name="ProgressCyanL" XPos="0" YPos="72" Width="5" Height="5" />
+    <Image Name="ProgressCyanM" XPos="4" YPos="72" Width="5" Height="5" />
+    <Image Name="ProgressCyanR" XPos="7" YPos="72" Width="5" Height="5" />
+
+    <Image Name="ProgressWhiteL" XPos="0" YPos="79" Width="5" Height="5" />
+    <Image Name="ProgressWhiteM" XPos="4" YPos="79" Width="5" Height="5" />
+    <Image Name="ProgressWhiteR" XPos="7" YPos="79" Width="5" Height="5" />
+
+    <Image Name="ProgressRed2L" XPos="0" YPos="87" Width="5" Height="5" />
+    <Image Name="ProgressRed2M" XPos="4" YPos="87" Width="5" Height="5" />
+    <Image Name="ProgressRed2R" XPos="7" YPos="87" Width="5" Height="5" />
+
+    <Image Name="MainMenuBar_LeftBlock" XPos="28" YPos="38" Width="27" Height="45" />
+    <Image Name="MainMenuBar_RightBlock" XPos="59" YPos="39" Width="27" Height="45" />
+
+    <Image Name="MainMenuBar_LeftL" XPos="86" YPos="37" Width="14" Height="45" />
+    <Image Name="MainMenuBar_LeftM" XPos="100" YPos="37" Width="10" Height="45" />
+    <Image Name="MainMenuBar_LeftR" XPos="110" YPos="37" Width="12" Height="45" />
+
+    <Image Name="MainMenuBar_RightL" XPos="126" YPos="37" Width="13" Height="45" />
+    <Image Name="MainMenuBar_RightM" XPos="137" YPos="37" Width="10" Height="45" />
+    <Image Name="MainMenuBar_RightR" XPos="148" YPos="37" Width="13" Height="45" />
+
+    <Image Name="MainMenuBar_CenterL" XPos="0" YPos="95" Width="43" Height="71" />
+    <Image Name="MainMenuBar_CenterM" XPos="43" YPos="95" Width="15" Height="71" />
+    <Image Name="MainMenuBar_CenterR" XPos="59" YPos="95" Width="42" Height="71" />
+
+    <Image Name="MainMenuBar_InputL" XPos="164" YPos="38" Width="10" Height="18" />
+    <Image Name="MainMenuBar_InputM" XPos="174" YPos="38" Width="10" Height="18" />
+    <Image Name="MainMenuBar_InputR" XPos="182" YPos="38" Width="10" Height="18" />
+
+
+    <Image Name="Minimap_Time1" XPos="0" YPos="180" Width="20" Height="20" />
+    <Image Name="Minimap_Time2" XPos="20" YPos="180" Width="20" Height="20" />
+    <Image Name="Minimap_Time3" XPos="40" YPos="180" Width="20" Height="20" />
+    <Image Name="Minimap_Time4" XPos="60" YPos="180" Width="20" Height="20" />
+    <Image Name="Minimap_Time5" XPos="80" YPos="180" Width="20" Height="20" />
+    <Image Name="Minimap_Time6" XPos="100" YPos="180" Width="20" Height="20" />
+    <Image Name="Minimap_Time7" XPos="0" YPos="200" Width="20" Height="20" />
+    <Image Name="Minimap_Time8" XPos="20" YPos="200" Width="20" Height="20" />
+    <Image Name="Minimap_Time9" XPos="40" YPos="200" Width="20" Height="20" />
+    <Image Name="Minimap_Time10" XPos="60" YPos="200" Width="20" Height="20" />
+    <Image Name="Minimap_Time11" XPos="80" YPos="200" Width="20" Height="20" />
+    <Image Name="Minimap_Time12" XPos="100" YPos="200" Width="20" Height="20" />
+
+    <Image Name="Minimap_NetState1" XPos="224" YPos="0" Width="31" Height="30" />
+    <Image Name="Minimap_NetState2" XPos="224" YPos="35" Width="31" Height="30" />
+    <Image Name="Minimap_NetState3" XPos="224" YPos="70" Width="31" Height="30" />
+    <Image Name="Minimap_NetState4" XPos="225" YPos="105" Width="31" Height="30" />
+
+    <Image Name="Minimap_TimePointer" XPos="2" YPos="168" Width="9" Height="9" />
+
+    <Image Name="SuperHelp_Normal" XPos="225" YPos="192" Width="32" Height="32" />
+    <Image Name="SuperHelp_Hover" XPos="225" YPos="223" Width="32" Height="32" />
+    <Image Name="SuperHelp_Pushed" XPos="194" YPos="192" Width="32" Height="32" />
+    <Image Name="SuperHelp_Disabled" XPos="194" YPos="223" Width="32" Height="32" />
+
+    <Image Name="MinimapZoomIn_Normal" XPos="0" YPos="224" Width="14" Height="14" />
+    <Image Name="MinimapZoomIn_Pushed" XPos="15" YPos="224" Width="14" Height="14" />
+    <Image Name="MinimapZoomIn_Hover" XPos="30" YPos="224" Width="14" Height="14" />
+    <Image Name="MinimapZoomIn_Disabled" XPos="45" YPos="224" Width="14" Height="14" />
+
+    <Image Name="MinimapZoomOut_Normal" XPos="0" YPos="242" Width="14" Height="14" />
+    <Image Name="MinimapZoomOut_Pushed" XPos="15" YPos="242" Width="14" Height="14" />
+    <Image Name="MinimapZoomOut_Hover" XPos="30" YPos="242" Width="14" Height="14" />
+    <Image Name="MinimapZoomOut_Disabled" XPos="45" YPos="242" Width="14" Height="14" />
+    
+  </Imageset>

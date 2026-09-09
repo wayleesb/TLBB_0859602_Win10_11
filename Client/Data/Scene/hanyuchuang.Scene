@@ -1,0 +1,1164 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Scene formatVersion="0.1.1" name="hanyuchuang">
+
+  <Terrain filename="hanyuchuang.Terrain"/>
+
+  <Object name="#FairyEnviroment" type="Enviroment">
+    <Property name="ambient" value="0.156863 0.227451 0.415686"/>
+    <Property name="fog.mode" value="linear"/>
+    <Property name="fog.colour" value="0.011765 0.384314 0.560784"/>
+    <Property name="fog.linear start" value="2000"/>
+    <Property name="fog.linear end" value="5000"/>
+    <Property name="weather.particle system name" value="snow"/>
+  </Object>
+
+  <Object name="#FairyMainLightOne" type="Light">
+    <Property name="type" value="directional"/>
+    <Property name="diffuse" value="0.415686 0.690196 0.917647"/>
+    <Property name="specular" value="0.078431 0.039216 0.227451"/>
+    <Property name="direction" value="-0.275395 -0.321014 -0.617169"/>
+    <Property name="cast shadows" value="true"/>
+  </Object>
+
+  <Object name="#FairyMainLightTwo" type="Light">
+    <Property name="type" value="directional"/>
+    <Property name="diffuse" value="0.121569 0.105882 0.345098"/>
+    <Property name="direction" value="0.334043 -0.459676 0.399072"/>
+  </Object>
+
+  <Object name="#FairySkyDome" type="SkyDome">
+    <Property name="material" value="CloudySky"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="snow"/>
+    <Property name="position" value="2434.51 2000 1686.49"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱.mesh"/>
+    <Property name="position" value="-2598.51 2000 1932.75"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="-2509.2 2353.59 1477.32"/>
+    <Property name="orientation" value="0.942238 0 -0.334946 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="1100 3900 -800"/>
+    <Property name="orientation" value="5.04493e-007 0.334946 -1.85577e-007 0.942238"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="-1700 3508.35 -2200"/>
+    <Property name="orientation" value="5.04493e-007 0.334946 -1.85577e-007 0.942238"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="2200 3700 -2200"/>
+    <Property name="orientation" value="5.04493e-007 0.334946 -1.85577e-007 0.942238"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="2300 3600 1900"/>
+    <Property name="orientation" value="4.13194e-007 -2.4897e-007 -3.43836e-007 1"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="-1200 3600 2500"/>
+    <Property name="orientation" value="5.35301e-007 0.707107 4.90437e-008 0.707107"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="2605.46 2267.78 2700"/>
+    <Property name="orientation" value="0.707108 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="2830.95 2195.9 -2377.54"/>
+    <Property name="orientation" value="0.998696 0 -0.05107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="-167.697 2400 -2670.38"/>
+    <Property name="orientation" value="0.748852 0 0.662739 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="-2159.32 2400 2748.2"/>
+    <Property name="orientation" value="0.441603 0 -0.897212 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="-2461.88 2304.55 -2568.32"/>
+    <Property name="orientation" value="0.855014 0 -0.518608 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="-2400 2353.36 -300"/>
+    <Property name="orientation" value="0.968784 0 -0.247909 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="2857.63 2351.56 -1100"/>
+    <Property name="orientation" value="0.968784 0 -0.247909 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="-1300 3297.24 -3680.95"/>
+    <Property name="orientation" value="5.04493e-007 0.334946 -1.85577e-007 0.942238"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰洞祭坛.mesh"/>
+    <Property name="position" value="3949.57 1556.82 -4000"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰洞祭坛.mesh"/>
+    <Property name="position" value="-4133.73 1445.11 4049.56"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰洞祭坛.mesh"/>
+    <Property name="position" value="-4000 1543.73 -4100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰洞祭坛.mesh"/>
+    <Property name="position" value="4100 1500 3900"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shedengguangzhu_01"/>
+    <Property name="position" value="4096.42 1500 3889.34"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shedengguangzhu_02"/>
+    <Property name="position" value="3972.2 1500 -4008.76"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shedengguangzhu_03"/>
+    <Property name="position" value="-4014.98 1500 -4103.88"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shedengguangzhu_02"/>
+    <Property name="position" value="-4132.27 1397.21 4024.7"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="-53.5536 2353.41 2724.51"/>
+    <Property name="orientation" value="0.837002 0 0.5472 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="2800 2400 1000"/>
+    <Property name="orientation" value="0.968784 0 -0.247909 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰柱2.mesh"/>
+    <Property name="position" value="2800 2400 2500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰柱2.mesh"/>
+    <Property name="position" value="-300 2400 2600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰灯.mesh"/>
+    <Property name="position" value="-787.434 2400 -2700"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_02"/>
+    <Property name="position" value="-787.434 2576 -2700"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_020"/>
+    <Property name="position" value="-787.434 2576 -2700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰灯.mesh"/>
+    <Property name="position" value="-1613.36 2400 2700"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_020"/>
+    <Property name="position" value="-1613.36 2576 2700"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_02"/>
+    <Property name="position" value="-1613.36 2576 2700"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_020"/>
+    <Property name="position" value="1199.55 2576 2700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰灯.mesh"/>
+    <Property name="position" value="1199.55 2400 2700"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_02"/>
+    <Property name="position" value="1199.55 2576 2700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰灯.mesh"/>
+    <Property name="position" value="2900 2400 1800"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_020"/>
+    <Property name="position" value="2900 2576 1800"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_02"/>
+    <Property name="position" value="2900 2576 1800"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_02"/>
+    <Property name="position" value="2807.29 2576 -1799.86"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_020"/>
+    <Property name="position" value="2807.29 2576 -1799.86"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰灯.mesh"/>
+    <Property name="position" value="2807.29 2400 -1799.86"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_02"/>
+    <Property name="position" value="2206.88 2576 -2700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰灯.mesh"/>
+    <Property name="position" value="2206.88 2400 -2700"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_020"/>
+    <Property name="position" value="2206.88 2576 -2700"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_020"/>
+    <Property name="position" value="-2600 2576 -1800"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰灯.mesh"/>
+    <Property name="position" value="-2600 2400 -1800"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_02"/>
+    <Property name="position" value="-2600 2576 -1800"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_02"/>
+    <Property name="position" value="-2600 2576 200"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_020"/>
+    <Property name="position" value="-2600 2576 200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰灯.mesh"/>
+    <Property name="position" value="-2600 2400 200"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_02"/>
+    <Property name="position" value="-2600 2576 2189.83"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_020"/>
+    <Property name="position" value="-2600 2576 2189.83"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰灯.mesh"/>
+    <Property name="position" value="-2600 2400 2189.83"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰柱2.mesh"/>
+    <Property name="position" value="-2433.3 2383.81 2700"/>
+    <Property name="orientation" value="0.976547 0 0.215308 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="-2545.9 2339.06 2547.31"/>
+    <Property name="orientation" value="0.942238 0 -0.334946 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰柱2.mesh"/>
+    <Property name="position" value="800 2400 -2650.11"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰块1.mesh"/>
+    <Property name="position" value="2379.52 2078.9 -4146.02"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰块1.mesh"/>
+    <Property name="position" value="1644.94 1850.99 -3736.67"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰块1.mesh"/>
+    <Property name="position" value="1100 1914.64 -3916.03"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰块1.mesh"/>
+    <Property name="position" value="551.199 1700.18 -4017.83"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰块1.mesh"/>
+    <Property name="position" value="-700 2077.02 -4091.52"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰块1.mesh"/>
+    <Property name="position" value="4174.74 1766.48 -2700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰块1.mesh"/>
+    <Property name="position" value="4300 1959.16 -2100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰块1.mesh"/>
+    <Property name="position" value="4500 2228.81 -1500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰块1.mesh"/>
+    <Property name="position" value="4200 1829.72 -800"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰块1.mesh"/>
+    <Property name="position" value="4200 1750.48 -200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰块1.mesh"/>
+    <Property name="position" value="4300 1916.04 400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰块1.mesh"/>
+    <Property name="position" value="4182.99 1747.07 913.453"/>
+    <Property name="scale" value="0.454545 0.454545 0.454545"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰块1.mesh"/>
+    <Property name="position" value="4323.83 2069.61 1349.79"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰块1.mesh"/>
+    <Property name="position" value="4200 1775.17 2000"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰块1.mesh"/>
+    <Property name="position" value="4300 1833.42 2700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰块1.mesh"/>
+    <Property name="position" value="3000 1947.41 4100"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰块1.mesh"/>
+    <Property name="position" value="2200 2050.68 4100"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰块1.mesh"/>
+    <Property name="position" value="1500 1694.49 4100"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰块1.mesh"/>
+    <Property name="position" value="1200 2337.11 4300"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰块1.mesh"/>
+    <Property name="position" value="600 1925.04 4200"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰块1.mesh"/>
+    <Property name="position" value="-800 2141.99 4200"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰块1.mesh"/>
+    <Property name="position" value="-1500 1903.2 4100"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰块1.mesh"/>
+    <Property name="position" value="-1900 2368.09 4200"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰块1.mesh"/>
+    <Property name="position" value="-2700 1662.05 4100"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰块1.mesh"/>
+    <Property name="position" value="-3200 2087.27 4300"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰块1.mesh"/>
+    <Property name="position" value="-4300 1876.19 2600"/>
+    <Property name="orientation" value="-1.7183e-008 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰块1.mesh"/>
+    <Property name="position" value="-4200 1641.66 1700"/>
+    <Property name="orientation" value="-8.40471e-008 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰块1.mesh"/>
+    <Property name="position" value="-4300 2160.98 1300"/>
+    <Property name="orientation" value="-1.99333e-008 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰块1.mesh"/>
+    <Property name="position" value="-4130.67 1938.85 700"/>
+    <Property name="orientation" value="-1.99333e-008 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰块1.mesh"/>
+    <Property name="position" value="-4110.29 1612.52 127.299"/>
+    <Property name="orientation" value="-1.99333e-008 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰块1.mesh"/>
+    <Property name="position" value="-4133.02 2278.56 -203.292"/>
+    <Property name="orientation" value="-1.99333e-008 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰块1.mesh"/>
+    <Property name="position" value="-4100 1742.55 -1200"/>
+    <Property name="orientation" value="-1.99333e-008 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰块1.mesh"/>
+    <Property name="position" value="-4141.91 2202.52 -1647.42"/>
+    <Property name="orientation" value="-1.99333e-008 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰块1.mesh"/>
+    <Property name="position" value="-4100 1778.07 -2200"/>
+    <Property name="orientation" value="-1.99333e-008 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰块1.mesh"/>
+    <Property name="position" value="-4100 2027.44 -2900"/>
+    <Property name="orientation" value="-1.99333e-008 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰块1.mesh"/>
+    <Property name="position" value="-1900 2141.21 -4200"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰块1.mesh"/>
+    <Property name="position" value="-1240.04 1879.96 -4100"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰块1.mesh"/>
+    <Property name="position" value="300 2129.63 -4100"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰块1.mesh"/>
+    <Property name="position" value="3000 2259.34 -4200"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰块1.mesh"/>
+    <Property name="position" value="4300 1934.33 -3100"/>
+    <Property name="orientation" value="1.13699e-007 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰雕1.mesh"/>
+    <Property name="position" value="-3600 1475.68 -4200"/>
+    <Property name="orientation" value="0.963658 0 0.26714 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰雕狼1.mesh"/>
+    <Property name="position" value="-3968.31 1750.17 -1234.38"/>
+    <Property name="orientation" value="0.946953 0 0.321374 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰雕狼1.mesh"/>
+    <Property name="position" value="-4164.63 1888.02 2543.43"/>
+    <Property name="orientation" value="0.928446 0 0.371476 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰雕狼1.mesh"/>
+    <Property name="position" value="1270.89 2349.11 4141.97"/>
+    <Property name="orientation" value="0.210414 0 0.977613 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰雕狼1.mesh"/>
+    <Property name="position" value="4179.51 2078.25 1352.4"/>
+    <Property name="orientation" value="0.797485 0 -0.60334 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰雕狼2.mesh"/>
+    <Property name="position" value="4120.95 1924.66 460.693"/>
+    <Property name="orientation" value="0.973585 0 -0.228329 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰雕狼2.mesh"/>
+    <Property name="position" value="4121.63 1957.76 -3123.83"/>
+    <Property name="orientation" value="0.878804 0 -0.477183 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰雕狼2.mesh"/>
+    <Property name="position" value="1182.47 1918.97 -3893.03"/>
+    <Property name="orientation" value="0.997305 0 0.0733829 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰雕狼1.mesh"/>
+    <Property name="position" value="-646.029 2090.22 -3988.23"/>
+    <Property name="orientation" value="0.972817 0 0.231578 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰雕狼2.mesh"/>
+    <Property name="position" value="-3947.51 2039.03 -3000"/>
+    <Property name="orientation" value="0.65898 0 0.752162 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰雕2.mesh"/>
+    <Property name="position" value="-4210.75 2133.2 1240.07"/>
+    <Property name="orientation" value="0.719393 0 0.694607 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰雕2.mesh"/>
+    <Property name="position" value="230.807 2104.83 -3949.38"/>
+    <Property name="orientation" value="0.999888 0 0.0152137 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰雕1.mesh"/>
+    <Property name="position" value="3500 1398 -4100"/>
+    <Property name="orientation" value="0.960935 0 -0.276779 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰雕1.mesh"/>
+    <Property name="position" value="3500 1347.37 3900"/>
+    <Property name="orientation" value="0.538981 0 -0.84232 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰雕狼2.mesh"/>
+    <Property name="position" value="2223.77 2064.74 3856.72"/>
+    <Property name="orientation" value="0.452056 0 -0.89199 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰雕狼2.mesh"/>
+    <Property name="position" value="-1400 1916.34 3866.75"/>
+    <Property name="orientation" value="-0.118242 0 -0.992985 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰雕狼2.mesh"/>
+    <Property name="position" value="-4034.44 1635.64 60.3639"/>
+    <Property name="orientation" value="-0.612617 0 -0.79038 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰柱2.mesh"/>
+    <Property name="position" value="2900 2400 -2600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="2700 2365 -2700"/>
+    <Property name="orientation" value="0.852604 0 0.52256 0"/>
+    <Property name="scale" value="0.666667 0.666667 0.666667"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="4174.36 1837.06 -755.528"/>
+    <Property name="orientation" value="0.145721 0 0.989328 0"/>
+    <Property name="scale" value="0.666667 0.666667 0.666667"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="4227.82 1957.09 -2077.25"/>
+    <Property name="orientation" value="0.211406 0 0.9774 0"/>
+    <Property name="scale" value="0.666667 0.666667 0.666667"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="4031.6 1782.47 2063.64"/>
+    <Property name="orientation" value="0.142417 0 0.989808 0"/>
+    <Property name="scale" value="0.666667 0.666667 0.666667"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="3100 1961.17 3921.62"/>
+    <Property name="orientation" value="0.713111 0 0.701055 0"/>
+    <Property name="scale" value="0.666667 0.666667 0.666667"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="649.475 1920.91 3947.45"/>
+    <Property name="orientation" value="-0.606522 0 0.795071 0"/>
+    <Property name="scale" value="0.666667 0.666667 0.666667"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="-541.315 1637.43 3889.01"/>
+    <Property name="orientation" value="-0.606522 0 0.795071 0"/>
+    <Property name="scale" value="0.666667 0.666667 0.666667"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰块1.mesh"/>
+    <Property name="position" value="-600 1636.15 4070.6"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="-2646.79 1679.29 3849.72"/>
+    <Property name="orientation" value="-0.606522 0 0.795071 0"/>
+    <Property name="scale" value="0.666667 0.666667 0.666667"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰灯.mesh"/>
+    <Property name="position" value="1200 2401 -2695.11"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_02"/>
+    <Property name="position" value="1200 2577 -2695.11"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_020"/>
+    <Property name="position" value="1200 2577 -2695.11"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_02"/>
+    <Property name="position" value="-2600 2578.58 -800"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_020"/>
+    <Property name="position" value="-2600 2578.58 -800"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰灯.mesh"/>
+    <Property name="position" value="-2600 2402.58 -800"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_02"/>
+    <Property name="position" value="-2596.92 2571.94 1200"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_020"/>
+    <Property name="position" value="-2596.92 2571.94 1200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰灯.mesh"/>
+    <Property name="position" value="-2600 2395.94 1200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰灯.mesh"/>
+    <Property name="position" value="-800 2400 2700"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_020"/>
+    <Property name="position" value="-800 2576 2700"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_02"/>
+    <Property name="position" value="-800 2576 2700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰灯.mesh"/>
+    <Property name="position" value="200 2400 2700"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_020"/>
+    <Property name="position" value="200 2576 2700"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_02"/>
+    <Property name="position" value="200 2576 2700"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_02"/>
+    <Property name="position" value="2200 2576 2700"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_020"/>
+    <Property name="position" value="2200 2576 2700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰灯.mesh"/>
+    <Property name="position" value="2200 2400 2700"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_02"/>
+    <Property name="position" value="2800 2576 200"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_020"/>
+    <Property name="position" value="2800 2576 200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰灯.mesh"/>
+    <Property name="position" value="2800 2400 200"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_020"/>
+    <Property name="position" value="2800 2576 -800"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_02"/>
+    <Property name="position" value="2800 2576 -800"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰灯.mesh"/>
+    <Property name="position" value="2800 2400 -800"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰灯.mesh"/>
+    <Property name="position" value="200 2400 -2700"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_02"/>
+    <Property name="position" value="200 2576 -2700"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_020"/>
+    <Property name="position" value="200 2576 -2700"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_02"/>
+    <Property name="position" value="-1800 2576 -2700"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_020"/>
+    <Property name="position" value="-1800 2576 -2700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰灯.mesh"/>
+    <Property name="position" value="-1800 2400 -2700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰柱2.mesh"/>
+    <Property name="position" value="-2100 2400 -2600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="1553.65 1696.53 3865.26"/>
+    <Property name="orientation" value="-0.606522 0 0.795071 0"/>
+    <Property name="scale" value="0.666667 0.666667 0.666667"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="2100 1368.32 3700"/>
+    <Property name="orientation" value="-0.606522 0 0.795071 0"/>
+    <Property name="scale" value="0.666667 0.666667 0.666667"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="-757.614 2145.13 4024.14"/>
+    <Property name="orientation" value="-0.606522 0 0.795071 0"/>
+    <Property name="scale" value="0.666667 0.666667 0.666667"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="-3900 1278.74 3703.28"/>
+    <Property name="orientation" value="-0.199713 0 0.979859 0"/>
+    <Property name="scale" value="0.666667 0.666667 0.666667"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="-3652.88 1353.49 3900"/>
+    <Property name="orientation" value="-0.199713 0 0.979859 0"/>
+    <Property name="scale" value="0.666667 0.666667 0.666667"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="-3023.04 1978.38 2600"/>
+    <Property name="orientation" value="-0.199713 0 0.979859 0"/>
+    <Property name="scale" value="0.666667 0.666667 0.666667"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="-3079.46 1968.81 2000"/>
+    <Property name="orientation" value="0.531641 0 0.846975 0"/>
+    <Property name="scale" value="0.666667 0.666667 0.666667"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="-4034.26 1648.37 1635.21"/>
+    <Property name="orientation" value="0.370601 0 0.928797 0"/>
+    <Property name="scale" value="0.666667 0.666667 0.666667"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="-3964.01 1937.74 623.67"/>
+    <Property name="orientation" value="0.178769 0 0.983896 0"/>
+    <Property name="scale" value="0.666667 0.666667 0.666667"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="-3933.67 1788.08 -2242.9"/>
+    <Property name="orientation" value="0.178769 0 0.983896 0"/>
+    <Property name="scale" value="0.666667 0.666667 0.666667"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="-1275.22 1847.66 -3886.54"/>
+    <Property name="orientation" value="0.855014 0 -0.518608 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="643.845 1695.67 -3885.07"/>
+    <Property name="orientation" value="0.855014 0 -0.518608 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="2475.92 2080.29 -4014.34"/>
+    <Property name="orientation" value="0.855014 0 -0.518608 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="4104.52 1775.37 -2600"/>
+    <Property name="orientation" value="0.855014 0 -0.518608 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="cj_寒玉床01"/>
+    <Property name="position" value="-247.29 2422 -464.914"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="-1500 3900 1900"/>
+    <Property name="orientation" value="5.04493e-007 0.334946 -1.85577e-007 0.942238"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="cj_寒玉床01"/>
+    <Property name="position" value="-1700 2404 1800"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="cj_寒玉床01"/>
+    <Property name="position" value="-1800 2401 -1600"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="cj_寒玉床01"/>
+    <Property name="position" value="1400 2402 -2000"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="cj_寒玉床01"/>
+    <Property name="position" value="2300 2401 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="cj_寒玉床01"/>
+    <Property name="position" value="2100 2401 2000"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="cj_寒玉床01"/>
+    <Property name="position" value="100 2401 1500"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="cj_寒玉床01"/>
+    <Property name="position" value="-1300 1718.98 4000"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="cj_寒玉床01"/>
+    <Property name="position" value="-4000 1253.98 -500"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="cj_寒玉床01"/>
+    <Property name="position" value="-500 1647.85 -3800"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="cj_寒玉床01"/>
+    <Property name="position" value="4100 1736.23 -1400"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="cj_寒玉床01"/>
+    <Property name="position" value="3300 1556.08 -3700"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="cj_寒玉床01"/>
+    <Property name="position" value="1600 1858.89 3700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="-1937.78 2129.93 -4017.37"/>
+    <Property name="orientation" value="0.968784 0 -0.247909 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰块1.mesh"/>
+    <Property name="position" value="-4345.24 2425.76 -800"/>
+    <Property name="orientation" value="-1.99333e-008 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰雕狼1.mesh"/>
+    <Property name="position" value="49.7015 2153.97 4096.78"/>
+    <Property name="orientation" value="-0.244016 0 0.969772 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰块1.mesh"/>
+    <Property name="position" value="-26.465 2149.38 4309.9"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="-3157.49 2087.87 4090.53"/>
+    <Property name="orientation" value="-0.606522 0 0.795071 0"/>
+    <Property name="scale" value="0.666667 0.666667 0.666667"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="1700 1850.93 -3930.12"/>
+    <Property name="orientation" value="-0.300591 0 -0.953754 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="-2900 1946.07 -600"/>
+    <Property name="orientation" value="0.96035 0 -0.278802 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="3800 1051.61 3000"/>
+    <Property name="orientation" value="0.814593 0 -0.580034 0"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.843137 0.329412 0.972549"/>
+    <Property name="position" value="3700 1870.93 3500"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="0.0001"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.356863 0.941176 0.356863"/>
+    <Property name="position" value="-3500 2100 3400"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="0.0001"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.356863 0.941176 0.356863"/>
+    <Property name="position" value="-3800 1833.13 -3800"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="0.0001"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shedengguangzhu_02"/>
+    <Property name="position" value="-4432.27 830.336 -3175.3"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shedengguangzhu_02"/>
+    <Property name="position" value="3167.73 802.717 -3075.3"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.909804 0.384314 0.670588"/>
+    <Property name="position" value="3800 1705.51 -3700"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="0.0001"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰柱2.mesh"/>
+    <Property name="position" value="-2500 2400 -400"/>
+    <Property name="orientation" value="0.91581 0 0.401611 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雪狼湖/雪狼湖冰柱2.mesh"/>
+    <Property name="position" value="2900 2400 300"/>
+    <Property name="orientation" value="0.91581 0 0.401611 0"/>
+  </Object>
+
+</Scene>

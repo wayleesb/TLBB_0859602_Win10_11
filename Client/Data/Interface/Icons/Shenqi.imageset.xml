@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<Imageset Name="Shenqi" Imagefile="Icons/Shenqi.jpg" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+	<Image Name="Shenqi_1" XPos="0" YPos="0" Width="64" Height="64" />
+	<Image Name="Shenqi_2" XPos="64" YPos="0" Width="64" Height="64" />
+	<Image Name="Shenqi_3" XPos="128" YPos="0" Width="64" Height="64" />
+	<Image Name="Shenqi_4" XPos="192" YPos="0" Width="64" Height="64" />
+	<Image Name="Shenqi_5" XPos="0" YPos="64" Width="64" Height="64" />
+	<Image Name="Shenqi_6" XPos="64" YPos="64" Width="64" Height="64" />
+	<Image Name="Shenqi_7" XPos="128" YPos="64" Width="64" Height="64" />
+	<Image Name="Shenqi_8" XPos="192" YPos="64" Width="64" Height="64" />
+	<Image Name="Shenqi_9" XPos="0" YPos="128" Width="64" Height="64" />
+	<Image Name="Shenqi_10" XPos="64" YPos="128" Width="64" Height="64" />
+	<Image Name="Shenqi_11" XPos="128" YPos="128" Width="64" Height="64" />
+	<Image Name="Shenqi_12" XPos="192" YPos="128" Width="64" Height="64" />
+	<Image Name="Shenqi_13" XPos="0" YPos="192" Width="64" Height="64" />
+	<Image Name="Shenqi_14" XPos="64" YPos="192" Width="64" Height="64" />
+	<Image Name="Shenqi_15" XPos="128" YPos="192" Width="64" Height="64" />
+	<Image Name="Shenqi_16" XPos="192" YPos="192" Width="64" Height="64" />
+</Imageset>

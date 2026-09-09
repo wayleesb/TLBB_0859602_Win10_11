@@ -1,0 +1,85 @@
+<?xml version="1.0" ?>
+	<Imageset Name="Button7" Imagefile="Common/button07.tga" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="false">
+    <Image Name="Sale_Mi_Normal" XPos="41" YPos="0" Width="40" Height="40" />
+    <Image Name="Sale_Mi_Hover" XPos="82" YPos="0" Width="40" Height="40" />
+    <Image Name="Sale_Mi_Pushed" XPos="0" YPos="0" Width="40" Height="40" />
+
+    <Image Name="Sale_Yan_Normal" XPos="41" YPos="41" Width="40" Height="40" />
+    <Image Name="Sale_Yan_Hover" XPos="82" YPos="41" Width="40" Height="40" />
+    <Image Name="Sale_Yan_Pushed" XPos="0" YPos="41" Width="40" Height="40" />
+
+    <Image Name="Sale_Tie_Normal" XPos="123" YPos="0" Width="40" Height="40" />
+    <Image Name="Sale_Tie_Hover" XPos="0" YPos="82" Width="40" Height="40" />
+    <Image Name="Sale_Tie_Pushed" XPos="123" YPos="41" Width="40" Height="40" />
+
+    <Image Name="Sale_NULL" XPos="41" YPos="82" Width="40" Height="40" />
+
+	<Image Name="BtnAddWidth_Disable" XPos="0" YPos="124" Width="17" Height="17" />
+	<Image Name="BtnAddWidth_Pushed" XPos="17" YPos="124" Width="17" Height="17" />
+	<Image Name="BtnAddWidth_Hover" XPos="34" YPos="124" Width="17" Height="17" />
+	<Image Name="BtnAddWidth_Normal" XPos="51" YPos="124" Width="17" Height="17" />
+	
+	<Image Name="BtnSubWidth_Disable" XPos="0" YPos="141" Width="17" Height="17" />
+	<Image Name="BtnSubWidth_Pushed" XPos="17" YPos="141" Width="17" Height="17" />
+	<Image Name="BtnSubWidth_Hover" XPos="34" YPos="141" Width="17" Height="17" />
+	<Image Name="BtnSubWidth_Normal" XPos="51" YPos="141" Width="17" Height="17" />
+
+    <Image Name="Minimap_Wenhao_Normal" XPos="149" YPos="118" Width="30" Height="30" />
+    <Image Name="Minimap_Wenhao_Hover" XPos="117" YPos="150" Width="30" Height="30" />
+    <Image Name="Minimap_Wenhao_Pushed" XPos="150" YPos="150" Width="30" Height="30" />
+    <Image Name="Minimap_Wenhao_Disable" XPos="116" YPos="118" Width="30" Height="30" />
+    
+    <Image Name="Minimap_Yuanbao_Normal" XPos="225" YPos="80" Width="31" Height="32" />
+    <Image Name="Minimap_Yuanbao_Hover" XPos="194" YPos="80" Width="31" Height="32" />
+    <Image Name="Minimap_Yuanbao_Pushed" XPos="225" YPos="144" Width="31" Height="32" />
+    <Image Name="Minimap_Yuanbao_Disable" XPos="225" YPos="113" Width="31" Height="32" />
+
+    <Image Name="Friend_ViewMood_Normal" XPos="34" YPos="220" Width="15" Height="15" />
+    <Image Name="Friend_ViewMood_Hover" XPos="34" YPos="188" Width="15" Height="15" />
+    <Image Name="Friend_ViewMood_Pushed" XPos="34" YPos="204" Width="15" Height="15" />
+    <Image Name="Friend_ViewMood_Disable" XPos="34" YPos="172" Width="15" Height="15" />
+
+    <Image Name="Friend_ChangeMood_Normal" XPos="199" YPos="163" Width="15" Height="15" />
+    <Image Name="Friend_ChangeMood_Hover" XPos="199" YPos="131" Width="15" Height="15" />
+    <Image Name="Friend_ChangeMood_Pushed" XPos="199" YPos="147" Width="15" Height="15" />
+    <Image Name="Friend_ChangeMood_Disable" XPos="199" YPos="115" Width="15" Height="15" />
+
+    <Image Name="Friend_SystemInfo_Normal" XPos="18" YPos="220" Width="15" Height="15" />
+    <Image Name="Friend_SystemInfo_Hover" XPos="18" YPos="188" Width="15" Height="15" />
+    <Image Name="Friend_SystemInfo_Pushed" XPos="18" YPos="204" Width="15" Height="15" />
+    <Image Name="Friend_SystemInfo_Disable" XPos="18" YPos="172" Width="15" Height="15" />
+
+    <Image Name="Friend_Serach_Normal" XPos="183" YPos="163" Width="15" Height="15" />
+    <Image Name="Friend_Serach_Hover" XPos="183" YPos="131" Width="15" Height="15" />
+    <Image Name="Friend_Serach_Pushed" XPos="183" YPos="147" Width="15" Height="15" />
+    <Image Name="Friend_Serach_Disable" XPos="183" YPos="115" Width="15" Height="15" />
+
+    <Image Name="Friend_Add_Normal" XPos="2" YPos="220" Width="15" Height="15" />
+    <Image Name="Friend_Add_Hover" XPos="2" YPos="188" Width="15" Height="15" />
+    <Image Name="Friend_Add_Pushed" XPos="2" YPos="204" Width="15" Height="15" />
+    <Image Name="Friend_Add_Disable" XPos="2" YPos="172" Width="15" Height="15" />
+
+    <Image Name="MinimapWenHao_Normal" XPos="148" YPos="117" Width="34" Height="34" />
+    <Image Name="MinimapWenHao_Hover" XPos="148" YPos="151" Width="34" Height="34" />
+    <Image Name="MinimapWenHao_Pushed" XPos="148" YPos="202" Width="34" Height="34" />
+    <Image Name="MinimapWenHao_Disable" XPos="113" YPos="186" Width="34" Height="34" />
+
+    <Image Name="Jian_Normal" XPos="94" YPos="86" Width="25" Height="25" />
+    <Image Name="Jian_Hover" XPos="121" YPos="86" Width="25" Height="25" />
+    <Image Name="Jian_Pushed" XPos="148" YPos="86" Width="25" Height="25" />
+
+    <Image Name="Logon_LT" XPos="77" YPos="184" Width="88" Height="33" />
+    <Image Name="Logon_LB" XPos="77" YPos="236" Width="88" Height="20" />
+    <Image Name="Logon_RT" XPos="168" YPos="184" Width="88" Height="33" />
+    <Image Name="Logon_RB" XPos="168" YPos="236" Width="88" Height="20" />
+    <Image Name="Logon_L" XPos="77" YPos="218" Width="25" Height="15" />
+    <Image Name="Logon_R" XPos="231" YPos="218" Width="25" Height="15" />
+    <Image Name="Logon_T" XPos="164" YPos="184" Width="3" Height="33" />
+    <Image Name="Logon_B" XPos="164" YPos="236" Width="2" Height="20" />
+
+	<Image Name="CoolDownEnd0" XPos="192" YPos="0" Width="32" Height="32" />
+	<Image Name="CoolDownEnd1" XPos="224" YPos="0" Width="32" Height="32" />
+	<Image Name="CoolDownEnd2" XPos="192" YPos="32" Width="32" Height="32" />
+	<Image Name="CoolDownEnd3" XPos="224" YPos="32" Width="32" Height="32" />
+
+  </Imageset>

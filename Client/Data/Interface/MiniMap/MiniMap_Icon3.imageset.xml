@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<Imageset Name="MiniMap_Icon3" Imagefile="Common/tga_MiniMap_Icon3.dds" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+	<Image Name="BaoZangDong_Normal" XPos="8" YPos="6" Width="49" Height="18" />
+	<Image Name="YanWangGuMu_Normal" XPos="8" YPos="28" Width="69" Height="18" />
+	<Image Name="HuaShanZhiDian_Normal" XPos="8" YPos="51" Width="69" Height="18" />
+	<Image Name="ZhenLongQiJu_Normal" XPos="8" YPos="75" Width="69" Height="18" />
+	<Image Name="FengHuangGuZhen_Normal" XPos="8" YPos="98" Width="69" Height="18" />
+	<Image Name="ShuiLao_Normal" XPos="8" YPos="123" Width="33" Height="18" />
+	
+	<Image Name="XueLangHu_Normal" XPos="10" YPos="148" Width="40" Height="14" />
+	<Image Name="XianWangFen_Normal" XPos="10" YPos="169" Width="40" Height="14" />
+	<Image Name="ShuiJingHu_Normal" XPos="10" YPos="191" Width="40" Height="14" />
+	<Image Name="CaoLiaoChang_Normal" XPos="10" YPos="212" Width="40" Height="14" />
+	<Image Name="MoYaDong_Normal" XPos="10" YPos="234" Width="40" Height="14" />
+	
+	<Image Name="XuanWuDao_Normal" XPos="94" YPos="5" Width="49" Height="18" />
+	
+	<Image Name="JianZhong_Normal" XPos="96" YPos="30" Width="28" Height="14" />
+	<Image Name="ShanDongChuanWu_Normal" XPos="97" YPos="52" Width="53" Height="14" />
+	<Image Name="HuangLongDong_Normal" XPos="96" YPos="72" Width="40" Height="14" />
+	<Image Name="MiaoRenDong_Normal" XPos="97" YPos="95" Width="40" Height="14" />
+	<Image Name="HaiZeiDong_Normal" XPos="96" YPos="119" Width="40" Height="14" />
+	<Image Name="WenQuanDong_Normal" XPos="97" YPos="142" Width="40" Height="14" />
+	<Image Name="TaoHuaYuan_Normal" XPos="97" YPos="166" Width="40" Height="14" />
+	<Image Name="YeRenGou_Normal" XPos="97" YPos="189" Width="40" Height="14" />
+	<Image Name="TianKengShuDong_Normal" XPos="96" YPos="210" Width="53" Height="14" />
+  <Image Name="Yinaixueyuan_Normal" XPos="95" YPos="229" Width="63" Height="21" />
+
+  <Image Name="Sign25_Hover" XPos="164" YPos="1" Width="89" Height="28" />
+  <Image Name="Sign25_Normal" XPos="167" YPos="34" Width="89" Height="28" />
+  
+  <Image Name="Sign26_Hover" XPos="198" YPos="184" Width="45" Height="28" />
+  <Image Name="Sign26_Normal" XPos="198" YPos="220" Width="45" Height="28" />
+
+  <Image Name="YanHu_Normal" XPos="200" YPos="74" Width="30" Height="15" />
+  <Image Name="FengShanTai_Normal" XPos="198" YPos="98" Width="49" Height="17" />
+	
+</Imageset>

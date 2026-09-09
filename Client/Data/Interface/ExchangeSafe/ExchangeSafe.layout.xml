@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame1" Name="ExchangeSafe_Frame">
+        <Property Name="UnifiedSize" Value="{{0,200},{0.0,405}}" />
+        <Property Name="UnifiedPosition" Value="{{0.0,320},{0.12,0}}" />
+        <Window Type="TLBB_DragTitle" Name="ExchangeSafe_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="ExchangeSafe_Frame" />
+            <Window Type="TLBB_SimpleText" Name="ExchangeSafe_PageHeader">
+                <Property Name="Position" Value="x:0.0 y:0.0" />
+                <Property Name="Size" Value="w:1.0 h:1.0" />
+                <Property Name="Font" Value="YouYuan11.25" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Property Name="Text" Value="#{JYTX_090302_10}" />
+            </Window>
+        </Window>
+        <Window Type="DefaultWindow" Name="ExchangeSafe_Function_Frame">
+            <Property Name="AbsolutePosition" Value="x:6.000000 y:36.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-12.000000},{1.000000,-55.000000}" />
+            <Window Type="TLBB_ComplexWindow" Name="ExchangeSafe_List">
+                <Property Name="Position" Value="x:0.0 y:0.0" />
+                <Property Name="UnifiedSize" Value="{{1.0,0.000000},{1.000000,-23.000000}" />
+            </Window>
+        </Window>
+        <Window Type="TLBB_SimpleText" Name="ExchangeSafe_Time">
+           <Property Name="UnifiedPosition" Value="{{0.0400000,25.000000},{1.0,-38.000000}" />
+           <Property Name="UnifiedSize" Value="{{0.000000,136.000000},{0.000000,20.000000}" />
+           <Property Name="Text" Value="#{JYTX_090302_9}" />
+           <Property Name="HorzFormatting" Value="LeftAligned" />
+           <Property Name="VertFormatting" Value="VertCentred" />
+           <Property Name="TextColor" Value="FFFFF263" />
+           <Window Type="TLBB_StopWatch" Name="ExchangeSafe_Watch">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-50.000000},{0.000000,0.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.000000,50.000000},{0.000000,20.000000}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="MouseHollow" Value="True" />
+                <Property Name="Text" Value="00:00:00" />
+                <Event Name="ReachedZero" Function="ExchangeSafe_TimeReach1();" />
+        	</Window>
+         </Window>
+    </Window>
+</GUILayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="敦煌灯笼.frame" />
+    <entity mesh="敦煌灯笼杆.mesh" node="敦煌灯笼杆" />
+    <entity mesh="敦煌灯笼灯.mesh" node="敦煌灯笼灯">
+        <offset>
+            <translate x="-88.7339" y="-344.469" z="19.5622" />
+        </offset>
+    </entity>
+</model>

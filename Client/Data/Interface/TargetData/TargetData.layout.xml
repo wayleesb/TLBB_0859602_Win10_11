@@ -1,0 +1,294 @@
+<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame3" Name="TargetData_Frame">
+        <Property Name="UnifiedPosition" Value="{{0.46,0},{0.12,0}}" />
+        <Property Name="AbsoluteSize" Value="w:360 h:402" />
+        <Event Name="Hidden" Function="TargetData_Frame_OnHiden();" />
+        <Window Type="TLBB_DragTitle" Name="TargetData_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:108.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-133.000000},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="TargetData_Frame" />
+            <Window Type="TLBB_SimpleText" Name="TargetData_PageHeader">
+                <Property Name="Position" Value="x:0.0 y:0.0" />
+                <Property Name="Size" Value="w:1.0 h:1.0" />
+                <Property Name="Font" Value="YouYuan11.25" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Property Name="Text" Value="" />
+            </Window>
+        </Window>
+        <Window Type="TLBB_ButtonHelp" Name="TargetData_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,88.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*TargetData&quot;);' />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="TargetData_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function="this:Hide();" />
+        </Window>
+        <Window Type="DefaultWindow" Name="TargetData_Frame_Client">
+            <Property Name="AbsolutePosition" Value="x:14.000000 y:37.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-20.000000},{1.000000,-64.000000}" />
+            <Window Type="TLBB_SimpleText" Name="TargetData_DataShareMode_Text">
+                <Property Name="Position" Value="x:0 y:0.01" />
+                <Property Name="UnifiedSize" Value="{{0.200000,0.000000},{0.000000,20.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_828}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="DefaultWindow" Name="TargetData_DataShareMode">
+                <Property Name="Position" Value="x:0.2 y:0.01" />
+                <Property Name="UnifiedSize" Value="{{0.800000,0.000000},{0.000000,20.000000}" />
+                <Window Type="TLBB_ButtonCheck" Name="TargetData_Mode1">
+                    <Property Name="Position" Value="x:0.0 y:0.20" />
+                    <Property Name="AbsoluteSize" Value="w:12.000000 h:12.000000" />
+                    <Property Name="CheckMode" Value="1" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="TargetData_Mode1_Text">
+                    <Property Name="Position" Value="x:0.05 y:0.0" />
+                    <Property Name="Size" Value="w:0.25 h:1" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_709}" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                </Window>
+                <Window Type="TLBB_ButtonCheck" Name="TargetData_Mode2">
+                    <Property Name="Position" Value="x:0.3 y:0.20" />
+                    <Property Name="AbsoluteSize" Value="w:12.000000 h:12.000000" />
+                    <Property Name="CheckMode" Value="1" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="TargetData_Mode2_Text">
+                    <Property Name="Position" Value="x:0.35 y:0.0" />
+                    <Property Name="Size" Value="w:0.3 h:1" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_380}" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                </Window>
+                <Window Type="TLBB_ButtonCheck" Name="TargetData_Mode3">
+                    <Property Name="Position" Value="x:0.65 y:0.20" />
+                    <Property Name="AbsoluteSize" Value="w:12.000000 h:12.000000" />
+                    <Property Name="CheckMode" Value="1" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="TargetData_Mode3_Text">
+                    <Property Name="Position" Value="x:0.7 y:0.0" />
+                    <Property Name="Size" Value="w:0.25 h:1" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_708}" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="TargetData_ID">
+                <Property Name="Position" Value="x:0.0 y:0.1" />
+                <Property Name="UnifiedSize" Value="{{0.25,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="ID:888EEE99" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="TargetData_Age_Text">
+                <Property Name="Position" Value="x:0.25 y:0.1" />
+                <Property Name="UnifiedSize" Value="{{0.1,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_473}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+            </Window>
+            <Window Type="TLBB_EditBoxNormal" Name="TargetData_Age">
+                <Property Name="Position" Value="x:0.35 y:0.1" />
+                <Property Name="UnifiedSize" Value="{{0.1,0.000000},{0.000000,20.000000}" />
+                <Property Name="ValidationString" Value="[0-9]*" />
+                <Property Name="MaxTextLength" Value="2" />
+                <Property Name="Text" Value="99" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="TargetData_Sex_Text">
+                <Property Name="Position" Value="x:0.47 y:0.1" />
+                <Property Name="UnifiedSize" Value="{{0.1,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_774}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_ComboList" Name="TargetData_Sex">
+                <Property Name="Position" Value="x:0.57 y:0.1" />
+                <Property Name="UnifiedSize" Value="{{0.15,0.000000},{0.000000,20.000000}" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="TargetData_BloodType_Text">
+                <Property Name="Position" Value="x:0.74 y:0.1" />
+                <Property Name="UnifiedSize" Value="{{0.1,0.000000},{0.000000,20.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_806}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_ComboList" Name="TargetData_BloodType">
+                <Property Name="Position" Value="x:0.84 y:0.1" />
+                <Property Name="UnifiedSize" Value="{{0.15,0.000000},{0.000000,20.000000}" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="TargetData_YearAnimal_Text">
+                <Property Name="Position" Value="x:0.0 y:0.2" />
+                <Property Name="UnifiedSize" Value="{{0.1,0.000000},{0.000000,20.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_636}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_ComboList" Name="TargetData_YearAnimal">
+                <Property Name="Position" Value="x:0.1 y:0.2" />
+                <Property Name="UnifiedSize" Value="{{0.15,0.000000},{0.000000,20.000000}" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="TargetData_Constellation_Text">
+                <Property Name="Position" Value="x:0.27 y:0.2" />
+                <Property Name="UnifiedSize" Value="{{0.1,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_771}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_ComboList" Name="TargetData_Constellation">
+                <Property Name="Position" Value="x:0.37 y:0.2" />
+                <Property Name="UnifiedSize" Value="{{0.2,0.000000},{0.000000,20.000000}" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="TargetData_Province_Text">
+                <Property Name="Position" Value="x:0.59 y:0.2" />
+                <Property Name="UnifiedSize" Value="{{0.1,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_638}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_ComboList" Name="TargetData_Province">
+                <Property Name="Position" Value="x:0.69 y:0.2" />
+                <Property Name="UnifiedSize" Value="{{0.3,0.000000},{0.000000,20.000000}" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="TargetData_City_Text">
+                <Property Name="Position" Value="x:0.0 y:0.3" />
+                <Property Name="UnifiedSize" Value="{{0.200000,0.000000},{0.000000,20.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_180}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_EditBoxNormal" Name="TargetData_City">
+                <Property Name="Position" Value="x:0.2 y:0.3" />
+                <Property Name="UnifiedSize" Value="{{0.8,0.000000},{0.000000,20.000000}" />
+                <Property Name="MaxTextLength" Value="14" />
+                <Property Name="ValidationString" Value="[^#,&apos;?]*" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="TargetData_Job_Text">
+                <Property Name="Position" Value="x:0.0 y:0.38" />
+                <Property Name="UnifiedSize" Value="{{0.200000,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_864}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_EditBoxNormal" Name="TargetData_Job">
+                <Property Name="Position" Value="x:0.2 y:0.38" />
+                <Property Name="UnifiedSize" Value="{{0.8,0.000000},{0.000000,20.000000}" />
+                <Property Name="MaxTextLength" Value="40" />
+                <Property Name="ValidationString" Value="[^#,&apos;?]*" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="TargetData_School_Text">
+                <Property Name="Position" Value="x:0.0 y:0.46" />
+                <Property Name="UnifiedSize" Value="{{0.200000,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_143}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_EditBoxNormal" Name="TargetData_School">
+                <Property Name="Position" Value="x:0.2 y:0.46" />
+                <Property Name="UnifiedSize" Value="{{0.8,0.000000},{0.000000,20.000000}" />
+                <Property Name="MaxTextLength" Value="38" />
+                <Property Name="ValidationString" Value="[^#,&apos;?]*" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="TargetData_EMail_Text">
+                <Property Name="Position" Value="x:0.0 y:0.54" />
+                <Property Name="UnifiedSize" Value="{{0.200000,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_238}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_EditBoxNormal" Name="TargetData_EMail">
+                <Property Name="Position" Value="x:0.2 y:0.54" />
+                <Property Name="UnifiedSize" Value="{{0.8,0.000000},{0.000000,20.000000}" />
+                <Property Name="MaxTextLength" Value="38" />
+                <Property Name="ValidationString" Value="[^#,&apos;?]*" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="TargetData_MessageBoard_Text">
+                <Property Name="Position" Value="x:0.0 y:0.63" />
+                <Property Name="UnifiedSize" Value="{{0.25,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_282}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_StaticText" Name="TargetData_MessageBoard">
+                <Property Name="Position" Value="x:0.0 y:0.69" />
+                <Property Name="Size" Value="w:1.0 h:0.25" />
+                <Property Name="VertScrollbar" Value="true" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="TopAligned" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="TargetData_Accept">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-80.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_557}" />
+                <Event Name="Clicked" Function="TargetData_Accept_Clicked();" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="TargetData_Cancel">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-40.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_542}" />
+                <Event Name="Clicked" Function="this:Hide();" />
+            </Window>
+        </Window>
+        <Window Type="DefaultWindow" Name="TargetData_Checkbox_Frame">
+            <Property Name="UnifiedPosition" Value="{{0.0,8.000000},{1.000000,-25.000000}" />
+            <Property Name="UnifiedSize" Value="{{0.96,0.000000},{0.000000,24.000000}" />
+            <Window Type="TLBB_ButtonPageDown" Name="TargetData_SelfEquip">
+                <Property Name="AbsolutePosition" Value="x:0.0 y:0.0" />
+                <Property Name="AbsoluteSize" Value="w:42.000000 h:24.000000" />
+                <Property Name="CheckMode" Value="1" />
+                <Property Name="Text" Value="#{INTERFACE_XML_13}" />
+                <Property Name="HorzLabelFormatting" Value="WordWrapCentreAligned" />
+                <Event Name="Clicked" Function="TargetData_TargetEquip_Down(0);" />
+            </Window>
+            <Window Type="TLBB_ButtonPageDown" Name="TargetData_TargetData">
+                <Property Name="AbsolutePosition" Value="x:42.0 y:0.0" />
+                <Property Name="AbsoluteSize" Value="w:42.000000 h:24.000000" />
+                <Property Name="CheckMode" Value="1" />
+                <Property Name="Text" Value="#{INTERFACE_XML_7}" />
+                <Property Name="Selected" Value="true" />
+            </Window>
+            <Window Type="TLBB_ButtonPageDown" Name="TargetData_Blog">
+                <Property Name="AbsolutePosition" Value="x:84.0 y:0.0" />
+                <Property Name="AbsoluteSize" Value="w:42.000000 h:24.000000" />
+                <Property Name="CheckMode" Value="1" />
+                <Property Name="Text" Value="#{INTERFACE_XML_8}" />
+                <Event Name="Clicked" Function="TargetData_TargetBlog_Down();" />
+            </Window>
+            <Window Type="TLBB_ButtonPageDown" Name="TargetData_Pet">
+                <Property Name="AbsolutePosition" Value="x:126.0 y:0.0" />
+                <Property Name="AbsoluteSize" Value="w:42.000000 h:24.000000" />
+                <Property Name="CheckMode" Value="1" />
+                <Property Name="Text" Value="#{INTERFACE_XML_12}" />
+                <Event Name="Clicked" Function="TargetData_OtherPet_Down();" />
+            </Window>
+			<Window Type="TLBB_ButtonPageDown" Name="TargetData_Ride">
+                <Property Name="AbsolutePosition" Value="x:168.0 y:0.0" />
+                <Property Name="AbsoluteSize" Value="w:42.000000 h:24.000000" />
+                <Property Name="CheckMode" Value="1" />
+                <Property Name="Text" Value="#{INTERFACE_XML_497}" />
+                <Event Name="Clicked" Function="TargetData_OtherRide_Down();" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

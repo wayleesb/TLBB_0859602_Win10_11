@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame0" Name="PetJian_Frame">
+        <Property Name="UnifiedPosition" Value="{{0.000000,207.000000},{0.120000,86.360001}" />
+        <Property Name="AbsoluteSize" Value="w:480 h:325" />
+        <Event Name="Hidden" Function="PetJian_OnHiden();" />
+        <Window Type="TLBB_DragTitle" Name="PetJian_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:26.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{0.000000,430},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="PetJian_Frame" />
+            <Window Type="TLBB_SimpleText" Name="PetJian_PageHeader">
+                <Property Name="Position" Value="x:0.0 y:0.0" />
+                <Property Name="Size" Value="w:1.0 h:1.0" />
+                <Property Name="Font" Value="YouYuan11.25" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Property Name="Text" Value="#{Pet_Jian_Title_Name}" />
+            </Window>
+        </Window>
+        <Window Type="TLBB_ButtonHelp" Name="PetJian_Help"> 
+            <Property Name="UnifiedPosition" Value="{{0.000000,6.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*PetJian&quot;);' />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="PetJian_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function="this:Hide();" />
+        </Window>
+        <Window Type="DefaultWindow" Name="PetJian_Frame_Client">
+            <Property Name="AbsolutePosition" Value="x:10.000000 y:35.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-14.000000},{1.000000,-60.000000}" />
+            <Window Type="TLBB_FramePet" Name="PetJian_FakeObject_Frame" >
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,3.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.000000,341.000000},{0.000000,262.000000}" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Window Type="TLBB_MeshWindow" Name="PetJian_FakeObject" >
+                    <Property Name="Position" Value="x:0.100000 y:0.100000" />
+                    <Property Name="Size" Value="w:0.800000 h:0.850000" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="ShowControl" Value="PetJian_Frame" />
+                </Window>
+                <Window Type="TLBB_StaticImageNULL" Name="PetJian_FakeObject_Frame_PetJianHead" >
+                    <Property Name="AbsolutePosition" Value="x:139.000000 y:0.000000" />
+                    <Property Name="AbsoluteSize" Value="w:68.000000 h:26.000000" />
+                    <Property Name="Image" Value="set:CommonItem image:PetFrame_Head" />
+                    <Property Name="RiseOnClick" Value="False" />
+                </Window>
+              <Window Type="TLBB_StaticImageNULL" Name="PetJianFood_Type" >
+                <Property Name="Position" Value="x:0.046921 y:0.297710" />
+                <Property Name="AbsoluteSize" Value="w:16.000000 h:15.000000" />
+                <Property Name="Image" Value="set:UIIcons image:PetFood_Type" />
+              </Window>
+              <Window Type="TLBB_StaticImageNULL" Name="PetJianAttack_Type" >
+                <Property Name="UnifiedPosition" Value="{{1.000000,-31.000000},{0.000000,36.000000}" />
+                <Property Name="AbsoluteSize" Value="w:24.000000 h:23.000000" />
+                <Property Name="Image" Value="set:Button6 image:PetJianAttack_Type1" />
+                <Property Name="RiseOnClick" Value="False" />
+              </Window>
+              <Window Type="TLBB_SimpleText" Name="PetJian_NeedLevel" >
+                <Property Name="UnifiedPosition" Value="{{0.000000,16.000000},{0.000000,18.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.000000,89.000000},{0.000000,18.000000}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="Text" Value="" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+              </Window>
+              <Window Type="TLBB_ButtonTurnLeft" Name="PetJian_Model_TurnLeft" >
+                    <Property Name="UnifiedPosition" Value="{{0.100000,14.600000},{1.000000,-33.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:25.000000 h:25.000000" />
+                    <Event Name="CaptureLost" Function="PetJian_Modle_TurnLeft(0);" />
+                    <Event Name="MouseButtonDown" Function="PetJian_Modle_TurnLeft(1);" />
+                    <Event Name="MouseButtonUp" Function="PetJian_Modle_TurnLeft(0);" />
+                </Window>
+                <Window Type="TLBB_ButtonTurnRight" Name="PetJian_Model_TurnRight" >
+                    <Property Name="UnifiedPosition" Value="{{0.790000,0.239995},{1.000000,-33.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:25.000000 h:25.000000" />
+                    <Event Name="CaptureLost" Function="PetJian_Modle_TurnRight(0);" />
+                    <Event Name="MouseButtonDown" Function="PetJian_Modle_TurnRight(1);" />
+                    <Event Name="MouseButtonUp" Function="PetJian_Modle_TurnRight(0);" />
+                </Window>
+            </Window>    
+			<Window Type="TLBB_SimpleText" Name="PetJian_List_Text" >
+				<Property Name="UnifiedPosition"  Value="{{0,343},{0,5}" />
+				<Property Name="UnifiedSize" Value="{{0.000000,117.000000},{0.000000,16.000000}" />
+				<Property Name="HorzFormatting" Value="HorzCentred" />
+				<Property Name="Text" Value="#{INTERFACE_XML_1048}" />
+				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+			</Window>
+			<Window Type="TLBB_ListBoxCommon" Name="PetJian_List" >
+				<Property Name="UnifiedPosition"  Value="{{0,343},{0,28}" />
+				<Property Name="UnifiedSize" Value="{{0.000000,118.000000},{0.000000,237.000000}" />
+				<Event Name="ItemSelectionChanged" Function="PetJian_List_Click();" />
+			</Window>
+        </Window>
+
+      </Window>
+    </GUILayout>
+    

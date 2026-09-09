@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="南方野外民居05.frame" />
+    <entity mesh="南方野外民居05.mesh" node="南方野外民居05" />
+    <entity mesh="南方野外民居灯笼01.mesh" node="南方野外民居灯笼01">
+        <offset>
+            <translate x="-122.463" y="-240.901" z="-429.579" />
+        </offset>
+    </entity>
+    <entity mesh="南方野外民居灯笼04.mesh" node="南方野外民居灯笼04">
+        <offset>
+            <translate x="-426.667" y="-310.521" z="-652.803" />
+        </offset>
+    </entity>
+    <entity mesh="南方野外民居灯笼03.mesh" node="南方野外民居灯笼03">
+        <offset>
+            <translate x="-323.843" y="-268.555" z="-576.324" />
+        </offset>
+    </entity>
+    <entity mesh="南方野外民居灯笼02.mesh" node="南方野外民居灯笼02">
+        <offset>
+            <translate x="-235.89" y="-246.118" z="-513.025" />
+        </offset>
+    </entity>
+</model>

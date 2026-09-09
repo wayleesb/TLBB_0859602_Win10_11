@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Scene formatVersion="0.1.1" name="huoyangu">
+
+  <Terrain filename="huoyangu.Terrain"/>
+
+  <Object name="#FairyEnviroment" type="Enviroment">
+    <Property name="ambient" value="0.368627 0.094118 0.082353"/>
+    <Property name="fog.mode" value="linear"/>
+    <Property name="fog.colour" value="0.917647 0.380392 0.090196"/>
+    <Property name="fog.linear start" value="3000"/>
+    <Property name="fog.linear end" value="7000"/>
+  </Object>
+
+  <Object name="#FairyMainLightOne" type="Light">
+    <Property name="type" value="directional"/>
+    <Property name="diffuse" value="0.537255 0.176471 0.356863"/>
+    <Property name="specular" value="0.176471 0.2 0.435294"/>
+    <Property name="direction" value="0.444706 -0.393936 -0.2"/>
+    <Property name="cast shadows" value="true"/>
+  </Object>
+
+  <Object name="#FairyMainLightTwo" type="Light">
+    <Property name="type" value="directional"/>
+    <Property name="diffuse" value="0.066667 0.490196 0.917647"/>
+    <Property name="specular" value="0.156863 0.156863 0.286275"/>
+    <Property name="direction" value="-0.611429 -0.182358 -0.440835"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huangsha"/>
+    <Property name="position" value="-1703 2600.08 -4700"/>
+    <Property name="orientation" value="0.999941 0 0.0108286 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="敦煌/敦煌山洞.mesh"/>
+    <Property name="position" value="-3241 2370.37 -8511.27"/>
+    <Property name="orientation" value="0.971847 0 0.235613 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝藏洞木柱.mesh"/>
+    <Property name="position" value="-1600 1415.6 400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝藏洞木柱.mesh"/>
+    <Property name="position" value="-3700 1415.6 500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝藏洞木柱.mesh"/>
+    <Property name="position" value="-6700 1415.6 700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="明教/自然石柱01.mesh"/>
+    <Property name="position" value="-3588.48 2223 -6518.41"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="明教/自然石柱01.mesh"/>
+    <Property name="position" value="-5700 2144.19 -5900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="明教/自然石柱01.mesh"/>
+    <Property name="position" value="-2200 2374.79 -3900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="明教/自然石柱02.mesh"/>
+    <Property name="position" value="776.141 2419.93 -6449.78"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="明教/自然石柱01.mesh"/>
+    <Property name="position" value="-1911.48 2001.52 -6976.96"/>
+    <Property name="orientation" value="0.58804 0 -0.808832 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝藏洞木柱.mesh"/>
+    <Property name="position" value="500 1415.6 -1157.05"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝藏洞木柱.mesh"/>
+    <Property name="position" value="-1500 1415.6 -2666.25"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝石晶体红.mesh"/>
+    <Property name="position" value="1700 -605.274 -7600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝石晶体红.mesh"/>
+    <Property name="position" value="-8200 -527.009 1700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝石晶体红.mesh"/>
+    <Property name="position" value="-8407.25 899.914 -3900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝石晶体红.mesh"/>
+    <Property name="position" value="-5900 953.632 2300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝石晶体红.mesh"/>
+    <Property name="position" value="-3000 525.831 2200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁吊灯.mesh"/>
+    <Property name="position" value="-5447.51 1906.23 456.06"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba03"/>
+    <Property name="position" value="-5446.35 2201.23 442.612"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba04"/>
+    <Property name="position" value="-5444.24 2211.23 439.152"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁吊灯.mesh"/>
+    <Property name="position" value="-3364.09 2105.03 -1296.5"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba04"/>
+    <Property name="position" value="-3360.82 2410.03 -1313.41"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba03"/>
+    <Property name="position" value="-3362.93 2400.03 -1309.95"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁吊灯.mesh"/>
+    <Property name="position" value="-1800 2090.47 -1400"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba04"/>
+    <Property name="position" value="-1796.73 2395.47 -1416.91"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba03"/>
+    <Property name="position" value="-1798.84 2385.47 -1413.45"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba04"/>
+    <Property name="position" value="-3096.73 2891.81 -3666.36"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba03"/>
+    <Property name="position" value="-3098.84 2881.81 -3662.9"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁吊灯.mesh"/>
+    <Property name="position" value="-3100 2586.81 -3649.45"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba04"/>
+    <Property name="position" value="-4648.49 2442.42 -3016.91"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁吊灯.mesh"/>
+    <Property name="position" value="-4651.76 2137.42 -3000"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba03"/>
+    <Property name="position" value="-4650.6 2432.42 -3013.45"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.937255 0.047059 0.423529"/>
+    <Property name="position" value="-8271.76 1159.41 -3927.28"/>
+    <Property name="range" value="500"/>
+    <Property name="attenuation.linear" value="0.0002"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.937255 0.047059 0.423529"/>
+    <Property name="position" value="-3000 783.406 2200"/>
+    <Property name="range" value="500"/>
+    <Property name="attenuation.linear" value="0.0002"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.937255 0.047059 0.423529"/>
+    <Property name="position" value="-900 1106.52 1900"/>
+    <Property name="range" value="500"/>
+    <Property name="attenuation.linear" value="0.0002"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝石晶体红.mesh"/>
+    <Property name="position" value="-900 822.933 1900"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.937255 0.047059 0.423529"/>
+    <Property name="position" value="-5900 1172.24 2400"/>
+    <Property name="range" value="500"/>
+    <Property name="attenuation.linear" value="0.0002"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝石晶体红.mesh"/>
+    <Property name="position" value="1600 427.639 2100"/>
+    <Property name="orientation" value="0.948595 0 0.316494 0"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.937255 0.047059 0.423529"/>
+    <Property name="position" value="1687 665.223 2141"/>
+    <Property name="range" value="500"/>
+    <Property name="attenuation.linear" value="0.0002"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝石晶体红.mesh"/>
+    <Property name="position" value="-8995.51 1135.52 1745.37"/>
+    <Property name="orientation" value="0.993505 0 0.113815 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝石晶体蓝.mesh"/>
+    <Property name="position" value="-8658.46 648.582 -917.185"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝石晶体蓝.mesh"/>
+    <Property name="position" value="-8589.35 681.453 -1677.65"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="敦煌/佛像1.mesh"/>
+    <Property name="position" value="-8996.65 679.951 -1322.31"/>
+    <Property name="orientation" value="0.778921 0 0.627123 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="foguang"/>
+    <Property name="position" value="-8913.84 1078.11 -1310.92"/>
+    <Property name="scale" value="6 6 6"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.937255 0.047059 0.423529"/>
+    <Property name="position" value="-8405 895.106 -1219"/>
+    <Property name="range" value="500"/>
+    <Property name="attenuation.linear" value="0.0002"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域高昌佛塔.mesh"/>
+    <Property name="position" value="-8916.49 481.056 1687.71"/>
+    <Property name="orientation" value="0.927767 0 0.373169 0"/>
+  </Object>
+
+  <Object type="TerrainLiquid">
+    <Property name="material" value="岩浆1"/>
+    <Property name="position" value="2115.99 526.265 -2845.96"/>
+    <Property name="texture scale" value="0.3"/>
+  </Object>
+
+  <Object type="TerrainLiquid">
+    <Property name="material" value="岩浆1"/>
+    <Property name="position" value="2000 1555.45 -7400"/>
+    <Property name="texture scale" value="0.3"/>
+  </Object>
+
+  <Object type="TerrainLiquid">
+    <Property name="material" value="岩浆1"/>
+    <Property name="position" value="1000 28.273 1413.8"/>
+    <Property name="texture scale" value="0.3"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝石晶体红.mesh"/>
+    <Property name="position" value="-4600 301.746 2000"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝藏洞木柱.mesh"/>
+    <Property name="position" value="-6419.22 1379.18 -3018.38"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝藏洞木柱.mesh"/>
+    <Property name="position" value="-3591.09 1407.29 -2939.35"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域高昌佛塔.mesh"/>
+    <Property name="position" value="-8579.83 549.348 -8266.86"/>
+    <Property name="orientation" value="0.961429 0 0.275064 0"/>
+    <Property name="scale" value="1.4 1.4 1.4"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝石晶体红.mesh"/>
+    <Property name="position" value="-8100 587.782 -8000"/>
+    <Property name="orientation" value="0.99995 0 0.0102961 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域高昌佛塔.mesh"/>
+    <Property name="position" value="2059.01 397.563 2219.81"/>
+    <Property name="orientation" value="0.303304 0 0.952897 0"/>
+    <Property name="scale" value="1.4 1.4 1.4"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="岩浆/岩浆瀑布.mesh"/>
+    <Property name="position" value="1966.43 157.554 -4946.67"/>
+    <Property name="orientation" value="0.9984 0 -0.0565451 0"/>
+    <Property name="scale" value="0.8 1.5 1"/>
+  </Object>
+
+  <Object name="#FairySkyDome" type="SkyDome">
+    <Property name="material" value="CloudySky"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝藏洞木柱.mesh"/>
+    <Property name="position" value="200 1327.95 -2599.95"/>
+    <Property name="orientation" value="0.8442 0.000120701 -0.505894 0.177168"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域魔鬼岩山洞.mesh"/>
+    <Property name="position" value="2348.61 246.832 -6642.43"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域魔鬼岩山洞.mesh"/>
+    <Property name="position" value="2143.15 1476.96 -5653.59"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域高昌佛塔.mesh"/>
+    <Property name="position" value="1976.03 1287.5 -8620.37"/>
+    <Property name="orientation" value="0.933906 0 -0.357526 0"/>
+    <Property name="scale" value="1.96 1.96 1.96"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="岩浆/岩浆瀑布.mesh"/>
+    <Property name="position" value="2351.43 99.2282 -5106.59"/>
+    <Property name="orientation" value="0.998915 0 -0.0465742 0"/>
+    <Property name="scale" value="0.6 1.6 1"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝石晶体红.mesh"/>
+    <Property name="position" value="-800 1722.82 -7200"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.937255 0.047059 0.423529"/>
+    <Property name="position" value="-664.51 1982.31 -7227.28"/>
+    <Property name="range" value="500"/>
+    <Property name="attenuation.linear" value="0.0002"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝藏洞木柱.mesh"/>
+    <Property name="position" value="-6833.07 1004.42 -4761.62"/>
+    <Property name="orientation" value="0.721304 -0.167574 -0.187278 0.645416"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁书柜2.mesh"/>
+    <Property name="position" value="-97.1513 1530.26 -2297.4"/>
+    <Property name="orientation" value="0.788239 -0.207827 0.541915 -0.204471"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁书柜2.mesh"/>
+    <Property name="position" value="676.196 1701.88 -2216.35"/>
+    <Property name="orientation" value="0.534006 -0.268416 0.793617 -0.113813"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁书柜1.mesh"/>
+    <Property name="position" value="-444.54 1477.22 -2287.84"/>
+    <Property name="orientation" value="0.73828 -0.285812 0.532568 -0.299365"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="敦煌/站佛像.mesh"/>
+    <Property name="position" value="-8879.22 690.8 -760.894"/>
+    <Property name="orientation" value="0.622074 0 0.782959 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="敦煌/站佛像.mesh"/>
+    <Property name="position" value="-8800 672.562 -1783.61"/>
+    <Property name="orientation" value="0.89358 0 0.448904 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝藏洞木柱.mesh"/>
+    <Property name="position" value="400 1478.98 670.433"/>
+    <Property name="orientation" value="0.650444 0.665992 -0.0581212 0.360568"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="敦煌/沙漠岩浆石崖1.mesh"/>
+    <Property name="position" value="2631.8 1462.85 -7530.7"/>
+    <Property name="orientation" value="0.701237 0 -0.712929 0"/>
+    <Property name="scale" value="1.5 1.5 1.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="敦煌/沙漠岩浆石崖3.mesh"/>
+    <Property name="position" value="730.456 1460.55 -8545.3"/>
+    <Property name="orientation" value="0.988327 0 0.15235 0"/>
+    <Property name="scale" value="1.5 1.5 1.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="敦煌/沙漠岩浆石崖2.mesh"/>
+    <Property name="position" value="-1019.72 1465.69 -8264.98"/>
+    <Property name="orientation" value="0.981977 0 0.189005 0"/>
+    <Property name="scale" value="1.5 1.5 1.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝藏洞木柱矮.mesh"/>
+    <Property name="position" value="450.99 2466.59 -6000"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝藏洞木柱矮.mesh"/>
+    <Property name="position" value="450.99 2431.06 -3900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝藏洞木柱矮.mesh"/>
+    <Property name="position" value="-1032.42 2416.02 -3935.6"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝藏洞木柱矮.mesh"/>
+    <Property name="position" value="-1019.84 2414.64 -6000"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁书柜1.mesh"/>
+    <Property name="position" value="797.591 1425.03 -293.59"/>
+    <Property name="orientation" value="0.390898 0.592242 -0.596578 -0.374908"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/室内/灯台/铁烛台.mesh"/>
+    <Property name="position" value="-452.24 1468.6 -2246.28"/>
+    <Property name="orientation" value="0.532291 0.660362 -0.340689 0.405611"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="chuansongdian"/>
+    <Property name="position" value="-2915.83 2414.11 -7601.64"/>
+  </Object>
+
+</Scene>

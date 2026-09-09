@@ -1,0 +1,331 @@
+<?xml version="1.0" ?>
+<Falagard>
+  <WidgetLook name="TLBB_Look_StaticImage">
+    <StateImagery name="Enabled" />
+    <StateImagery name="Disabled" />
+    <StateImagery name="EnabledFrame" />
+    <StateImagery name="DisabledFrame" />
+    <StateImagery name="EnabledBackground" />
+    <StateImagery name="DisabledBackground" />
+  </WidgetLook>
+	
+  <WidgetLook name="TLBB_Look_StaticImageScrollInfo">
+    <StateImagery name="Enabled" >
+	 <Layer>
+        <Section look="TLBB_Look_Common" section="Frame_Type_ScrollInfo" />
+     </Layer>	
+	</StateImagery>
+    <StateImagery name="Disabled" />
+    <StateImagery name="EnabledFrame" />
+    <StateImagery name="DisabledFrame" />
+    <StateImagery name="EnabledBackground" />
+    <StateImagery name="DisabledBackground" />
+  </WidgetLook>
+  
+  <WidgetLook name="TLBB_Look_StaticImageScrollInfoFixed">
+    <StateImagery name="Enabled" >
+	 <Layer>
+        <Section look="TLBB_Look_Common" section="Frame_Type_ScrollInfoFixed" />
+     </Layer>	
+	</StateImagery>
+    <StateImagery name="Disabled" />
+    <StateImagery name="EnabledFrame" />
+    <StateImagery name="DisabledFrame" />
+    <StateImagery name="EnabledBackground" />
+    <StateImagery name="DisabledBackground" />
+  </WidgetLook>
+
+  <WidgetLook name="TLBB_Look_ImageWithFrame">
+    <Property name="FrameEnabled" value="True" />
+    <Property name="BackgroundEnabled" value="False" />
+    <NamedArea name="WithFrameImageRenderArea">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="2" />
+        </Dim>
+        <Dim type="TopEdge">
+          <AbsoluteDim value="2" />
+        </Dim>
+        <Dim type="RightEdge">
+          <UnifiedDim scale="1.0" offset="-2" type="RightEdge" />
+        </Dim>
+        <Dim type="BottomEdge">
+          <UnifiedDim scale="1.0" offset="-2" type="BottomEdge" />
+        </Dim>
+      </Area>
+    </NamedArea>
+    <StateImagery name="Enabled" />
+    <StateImagery name="Disabled" />
+    <StateImagery name="EnabledFrame">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Frame_Type2" />
+      </Layer>
+    </StateImagery>
+
+    <StateImagery name="DisabledFrame" >
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Frame_Type2" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="EnabledBackground">
+      <Layer>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="DisabledBackground" >
+      <Layer>
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+  <WidgetLook name="TLBB_Look_ImageWithFrame2">
+    <Property name="FrameEnabled" value="True" />
+    <Property name="BackgroundEnabled" value="False" />
+    <NamedArea name="WithFrameImageRenderArea">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="2" />
+        </Dim>
+        <Dim type="TopEdge">
+          <AbsoluteDim value="2" />
+        </Dim>
+        <Dim type="RightEdge">
+          <UnifiedDim scale="1.0" offset="-2" type="RightEdge" />
+        </Dim>
+        <Dim type="BottomEdge">
+          <UnifiedDim scale="1.0" offset="-2" type="BottomEdge" />
+        </Dim>
+      </Area>
+    </NamedArea>
+    <StateImagery name="Enabled" />
+    <StateImagery name="Disabled" />
+    <StateImagery name="EnabledFrame">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Frame_Type3" />
+      </Layer>
+    </StateImagery>
+
+    <StateImagery name="DisabledFrame" >
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Frame_Type3" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="EnabledBackground">
+      <Layer>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="DisabledBackground" >
+      <Layer>
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+  <WidgetLook name="TLBB_Look_ImageTextColor">
+    <Property name="Image" value="set:UIIcons image:Space"/>
+    <Property name="FrameEnabled" value="true" />
+    <Property name="BackgroundEnabled" value="False" />
+    <NamedArea name="WithFrameImageRenderArea">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="4" />
+        </Dim>
+        <Dim type="TopEdge">
+          <AbsoluteDim value="4" />
+        </Dim>
+        <Dim type="RightEdge">
+          <UnifiedDim scale="1.0" offset="-4" type="RightEdge" />
+        </Dim>
+        <Dim type="BottomEdge">
+          <UnifiedDim scale="1.0" offset="-4" type="BottomEdge" />
+        </Dim>
+      </Area>
+    </NamedArea>
+    <NamedArea name="NoFrameImageRenderArea">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="4" />
+        </Dim>
+        <Dim type="TopEdge">
+          <AbsoluteDim value="4" />
+        </Dim>
+        <Dim type="RightEdge">
+          <UnifiedDim scale="1.0" offset="-4" type="RightEdge" />
+        </Dim>
+        <Dim type="BottomEdge">
+          <UnifiedDim scale="1.0" offset="-4" type="BottomEdge" />
+        </Dim>
+      </Area>
+    </NamedArea>
+    <StateImagery name="Enabled" />
+    <StateImagery name="Disabled" />
+    <StateImagery name="EnabledFrame">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Frame_Type2" />
+      </Layer>
+    </StateImagery>
+
+    <StateImagery name="DisabledFrame" >
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Frame_Type2" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="EnabledBackground">
+      <Layer>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="DisabledBackground" >
+      <Layer>
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+  
+  
+  
+  <WidgetLook name="TLBB_Look_ImageStar">
+    <Property name="Animate" value="Animate_Star"/>
+    <Property name="UseImageSize" value="false"/>
+    <ImagerySection name="normal">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim> 
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <VertFormat type="Stretched" />
+        <HorzFormat type="Stretched" />
+      </ImageryComponent>
+    </ImagerySection>
+    <StateImagery name="Enabled" >
+      <Layer>
+        <Section section="normal" />
+      </Layer>
+    </StateImagery >
+    <StateImagery name="Disabled" >
+    <Layer>
+      <Section section="normal" />
+    </Layer>
+    </StateImagery >
+    <StateImagery name="EnabledFrame" />
+    <StateImagery name="DisabledFrame" />
+    <StateImagery name="EnabledBackground" />
+    <StateImagery name="DisabledBackground" />
+  </WidgetLook>
+
+
+  <WidgetLook name="TLBB_Look_ImageGem">
+    <ImagerySection name="normal">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image imageset="Button6" image="SupperTooltipGem" />
+        <VertFormat type="Stretched" />
+        <HorzFormat type="Stretched" />
+      </ImageryComponent>
+    </ImagerySection>
+    <StateImagery name="Enabled" >
+      <Layer>
+        <Section section="normal" />
+      </Layer>
+    </StateImagery >
+    <StateImagery name="Disabled" >
+      <Layer>
+        <Section section="normal" />
+      </Layer>
+    </StateImagery >
+    <StateImagery name="EnabledFrame" />
+    <StateImagery name="DisabledFrame" />
+    <StateImagery name="EnabledBackground" />
+    <StateImagery name="DisabledBackground" />
+  </WidgetLook>
+  
+  
+  <WidgetLook name="TLBB_Look_ScrollInfo">
+    <Property name="ChildItem" value="key:Child name:TLBB_ChatBoard" />
+    <ImagerySection name="normal">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image imageset="CommonFrame" image="CommonMainFrame1_BK" />
+        <VertFormat type="Stretched" />
+        <HorzFormat type="Stretched" />
+      </ImageryComponent>
+    </ImagerySection>
+  </WidgetLook>
+
+  <WidgetLook name="TLBB_Look_SceneMap">
+    <Property name="ChildItem" value="key:Image name:TLBB_StaticImageNULL" />
+    <Property name="ChildItem" value="key:Animate name:TLBB_AnimateImage" />
+  </WidgetLook>
+
+  <WidgetLook name="TLBB_Look_WorldMap">
+    <Property name="ChildItem" value="key:Image name:TLBB_StaticImageNULL" />
+  </WidgetLook>
+
+  <WidgetLook name="TLBB_Look_ImageLock">
+    <ImagerySection name="normal">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image imageset="UIIcons" image="Icon_Lock" />
+        <VertFormat type="Stretched" />
+        <HorzFormat type="Stretched" />
+      </ImageryComponent>
+    </ImagerySection>
+    <StateImagery name="Enabled" >
+      <Layer>
+        <Section section="normal" />
+      </Layer>
+    </StateImagery >
+    <StateImagery name="Disabled" >
+      <Layer>
+        <Section section="normal" />
+      </Layer>
+    </StateImagery >
+    <StateImagery name="EnabledFrame" />
+    <StateImagery name="DisabledFrame" />
+    <StateImagery name="EnabledBackground" />
+    <StateImagery name="DisabledBackground" />
+  </WidgetLook>
+</Falagard>

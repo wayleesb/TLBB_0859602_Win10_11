@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="娥眉灯笼01.frame" />
+    <entity mesh="娥眉灯笼01.mesh" node="娥眉灯笼01" />
+    <entity mesh="娥眉灯笼01灯1.mesh" node="娥眉灯笼01灯1">
+        <offset>
+            <translate x="0.164164" y="-336.635" z="-0.974063" />
+        </offset>
+    </entity>
+    <entity mesh="娥眉灯笼01灯2.mesh" node="娥眉灯笼01灯2">
+        <offset>
+            <translate x="0.164163" y="-336.635" z="-0.974174" />
+        </offset>
+    </entity>
+    <entity mesh="娥眉灯笼01灯3.mesh" node="娥眉灯笼01灯3">
+        <offset>
+            <translate x="0.164167" y="-336.635" z="-0.974082" />
+        </offset>
+    </entity>
+    <entity mesh="娥眉灯笼01灯4.mesh" node="娥眉灯笼01灯4">
+        <offset>
+            <translate x="0.164164" y="-336.635" z="-0.974107" />
+        </offset>
+    </entity>
+    <entity mesh="娥眉灯笼01灯5.mesh" node="娥眉灯笼01灯5">
+        <offset>
+            <translate x="0.164162" y="-336.635" z="-0.974139" />
+        </offset>
+    </entity>
+    <entity mesh="娥眉灯笼01灯6.mesh" node="娥眉灯笼01灯6">
+        <offset>
+            <translate x="0.164166" y="-336.635" z="-0.974095" />
+        </offset>
+    </entity>
+</model>

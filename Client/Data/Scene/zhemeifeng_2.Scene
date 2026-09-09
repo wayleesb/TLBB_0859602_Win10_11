@@ -1,0 +1,1032 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Scene formatVersion="0.1.1" name="zhemeifeng_2">
+
+  <Terrain filename="zhemeifeng_2.Terrain"/>
+
+  <Object name="#FairyEnviroment" type="Enviroment">
+    <Property name="ambient" value="0.003922 0.160784 0.239216"/>
+    <Property name="fog.mode" value="linear"/>
+    <Property name="fog.colour" value="0.388235 0.639216 0.972549"/>
+    <Property name="fog.linear start" value="2500"/>
+    <Property name="fog.linear end" value="4000"/>
+    <Property name="weather.particle system name" value="snow"/>
+  </Object>
+
+  <Object name="#FairyMainLightOne" type="Light">
+    <Property name="type" value="directional"/>
+    <Property name="diffuse" value="0.901961 0.682353 0.992157"/>
+    <Property name="specular" value="0.188235 0.180392 0.086275"/>
+    <Property name="direction" value="-0.408313 -0.501804 -0.282555"/>
+    <Property name="cast shadows" value="true"/>
+  </Object>
+
+  <Object name="#FairyMainLightTwo" type="Light">
+    <Property name="type" value="directional"/>
+    <Property name="diffuse" value="0.129412 0.211765 0.501961"/>
+    <Property name="direction" value="0.736842 -0.257424 0.0859951"/>
+  </Object>
+
+  <Object name="#FairySkyDome" type="SkyDome">
+    <Property name="material" value="CloudySky"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="snow"/>
+    <Property name="position" value="367.305 1200 -1361.85"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山火堆.mesh"/>
+    <Property name="position" value="-1536.14 1793.55 324.233"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01_big"/>
+    <Property name="position" value="-1529.79 1802.81 319.183"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="-1541.86 1800.44 317.818"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雁门关/雪地盾牌2.mesh"/>
+    <Property name="position" value="861.601 1080.57 -1310.79"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雁门关/雪地盾牌1.mesh"/>
+    <Property name="position" value="1077.97 1047.29 -1181.62"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="雁门关/雪地盾牌3.mesh"/>
+    <Property name="position" value="1115.7 1025.13 -1034.43"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/雪松1.mesh"/>
+    <Property name="position" value="2017.88 1000 640.28"/>
+    <Property name="orientation" value="0.984855 0 0.17338 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/雪松2.mesh"/>
+    <Property name="position" value="1739.94 1000 -218.497"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/雪松3.mesh"/>
+    <Property name="position" value="1857.18 1119.25 -639.248"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨雪松1.mesh"/>
+    <Property name="position" value="2784.28 -452.839 739.122"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨雪松2.mesh"/>
+    <Property name="position" value="1642.15 1095.92 481.786"/>
+    <Property name="orientation" value="0.766523 0 -0.642217 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨雪松1.mesh"/>
+    <Property name="position" value="2333.12 913.891 2166.33"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨雪松1.mesh"/>
+    <Property name="position" value="2697.91 1311.23 2600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨雪松2.mesh"/>
+    <Property name="position" value="1798.11 848.059 -2412"/>
+    <Property name="orientation" value="0.933961 0 0.357377 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/雪松3.mesh"/>
+    <Property name="position" value="-2600 1363.86 -1800"/>
+    <Property name="orientation" value="0.840098 0 0.542434 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨雪松2.mesh"/>
+    <Property name="position" value="-852.684 954.822 -2589.72"/>
+    <Property name="orientation" value="0.982608 0 -0.185692 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨雪松2.mesh"/>
+    <Property name="position" value="600 750.422 -2900"/>
+    <Property name="orientation" value="0.933961 0 0.357377 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="天山/天山灯2.mesh"/>
+    <Property name="position" value="800 2188.01 -600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨雪松2.mesh"/>
+    <Property name="position" value="1088.76 1978.56 700"/>
+    <Property name="orientation" value="0.953652 0 -0.300911 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨雪松2.mesh"/>
+    <Property name="position" value="-1500 2377.08 -2700"/>
+    <Property name="orientation" value="-0.497287 0 0.867586 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨雪松1.mesh"/>
+    <Property name="position" value="-2600 2374.1 -2600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨雪松1.mesh"/>
+    <Property name="position" value="-2900 2431.8 1200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山火堆.mesh"/>
+    <Property name="position" value="-1963.39 2372.29 -2457.04"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01_big"/>
+    <Property name="position" value="-1930.43 2407.71 -2471.05"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山灌木01.mesh"/>
+    <Property name="position" value="1200 2400 2500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山火柱.mesh"/>
+    <Property name="position" value="1200 981.071 -2600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山石头03.mesh"/>
+    <Property name="position" value="-399 2377.66 3000"/>
+    <Property name="orientation" value="0.951915 0.0875957 0.00632605 0.293501"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山石头03.mesh"/>
+    <Property name="position" value="-1081 2440.06 2981"/>
+    <Property name="orientation" value="0.990687 0.0392682 -0.00516316 -0.13026"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山莽盖纹石.mesh"/>
+    <Property name="position" value="0 2400 2400"/>
+    <Property name="orientation" value="0.718912 0 -0.695102 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山莽盖纹石.mesh"/>
+    <Property name="position" value="-1500 2447.19 2500"/>
+    <Property name="orientation" value="0.72166 0 -0.692248 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨雪松1.mesh"/>
+    <Property name="position" value="2600 1119.25 -2600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨雪松1.mesh"/>
+    <Property name="position" value="2800 841.492 -1134.99"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨雪松1.mesh"/>
+    <Property name="position" value="2900 62.1553 -700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山火柱.mesh"/>
+    <Property name="position" value="2300 1061.47 -2200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山火堆.mesh"/>
+    <Property name="position" value="1048.99 2400 2413.05"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山莽盖纹石.mesh"/>
+    <Property name="position" value="2216.47 1494.3 1126.18"/>
+    <Property name="orientation" value="0.993327 0 -0.115334 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨雪松2.mesh"/>
+    <Property name="position" value="2700 602.387 1400"/>
+    <Property name="orientation" value="0.964289 0 -0.264851 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨雪松1.mesh"/>
+    <Property name="position" value="1523.84 2204.46 2700"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="1092 2500 -439"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01_big"/>
+    <Property name="position" value="1158.57 2501.23 -392.05"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山火堆.mesh"/>
+    <Property name="position" value="1105.9 2400 -378.826"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山火柱.mesh"/>
+    <Property name="position" value="2764.27 1042.18 -1529.41"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01_big"/>
+    <Property name="position" value="1258.57 1419.21 -2626.05"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="1192 1417.98 -2673"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨雪松2.mesh"/>
+    <Property name="position" value="638.235 2100 -1219.87"/>
+    <Property name="orientation" value="0.924724 0 -0.38064 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨雪松2.mesh"/>
+    <Property name="position" value="-719.76 1763.3 -1448.06"/>
+    <Property name="orientation" value="0.968155 0 -0.250352 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨雪松2.mesh"/>
+    <Property name="position" value="2900 672.62 0"/>
+    <Property name="orientation" value="0.766523 0 -0.642217 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨雪松2.mesh"/>
+    <Property name="position" value="2900 1270.51 -500"/>
+    <Property name="orientation" value="0.889732 0 -0.456484 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨雪松2.mesh"/>
+    <Property name="position" value="3000 1022.2 600"/>
+    <Property name="orientation" value="0.857906 0 0.513806 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨雪松2.mesh"/>
+    <Property name="position" value="3000 1543.66 1800"/>
+    <Property name="orientation" value="0.161622 0 0.986852 0"/>
+    <Property name="scale" value="0.714286 0.714286 0.714286"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山灌木02.mesh"/>
+    <Property name="position" value="1873.08 1433.5 1137.64"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山灌木02.mesh"/>
+    <Property name="position" value="1100 1969.84 900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山灌木02.mesh"/>
+    <Property name="position" value="450.638 2280.63 -993.275"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨雪松1.mesh"/>
+    <Property name="position" value="-2700 2641.5 2800"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨雪松1.mesh"/>
+    <Property name="position" value="-2900 2710.5 2000"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨雪松1.mesh"/>
+    <Property name="position" value="-2731 2429.74 -1700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨雪松1.mesh"/>
+    <Property name="position" value="900 2137.31 1100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨雪松1.mesh"/>
+    <Property name="position" value="1200 2845.58 3100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨雪松1.mesh"/>
+    <Property name="position" value="3000 2601.27 2600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨雪松1.mesh"/>
+    <Property name="position" value="-1900 2491.16 2600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨雪松1.mesh"/>
+    <Property name="position" value="-1200 2490.76 2600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨雪松1.mesh"/>
+    <Property name="position" value="-300 2460.27 2600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨雪松1.mesh"/>
+    <Property name="position" value="400 2400 2600"/>
+    <Property name="orientation" value="0.838225 0 0.545325 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨雪松1.mesh"/>
+    <Property name="position" value="900 2443.27 2800"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨雪松1.mesh"/>
+    <Property name="position" value="3000 1467.1 1300"/>
+    <Property name="orientation" value="0.689215 0.0224993 0.720484 0.0733363"/>
+    <Property name="scale" value="0.714286 0.714286 0.714286"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="-551 2506.56 2433"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="-551 2521 2433"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="-1026 2534.22 2341"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="-1026 2548.66 2341"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="1133.43 2398.77 2453.05"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01_big"/>
+    <Property name="position" value="1010 2400 2400"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01_big"/>
+    <Property name="position" value="-2500 2549.34 2200"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="-2566.57 2448.11 2153.05"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山火堆.mesh"/>
+    <Property name="position" value="-2469.57 2450.04 2232.19"/>
+    <Property name="orientation" value="0.957351 0 -0.288926 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yun"/>
+    <Property name="position" value="2800 1045.64 1400"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yun"/>
+    <Property name="position" value="2900 998.636 -900"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yun"/>
+    <Property name="position" value="700 1156.89 -2900"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yun"/>
+    <Property name="position" value="2500 1000 -2800"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yun"/>
+    <Property name="position" value="-800 2462.77 2900"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yun"/>
+    <Property name="position" value="2700 1408.21 2400"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="sunny04"/>
+    <Property name="position" value="1200 4046.81 2100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山灌木02.mesh"/>
+    <Property name="position" value="1600 2336.42 2500"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="sunny04"/>
+    <Property name="position" value="2000 1900 1100"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.913726 0.372549 0.113725"/>
+    <Property name="position" value="-2500 2579.76 2200"/>
+    <Property name="range" value="100"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="2e-005"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.984314 0.286275 0.082353"/>
+    <Property name="position" value="1000 2700 2400"/>
+    <Property name="range" value="500"/>
+    <Property name="attenuation.linear" value="0.002"/>
+    <Property name="attenuation.quadric" value="2e-005"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.984314 0.286275 0.082353"/>
+    <Property name="position" value="1200 2599.72 -400"/>
+    <Property name="range" value="500"/>
+    <Property name="attenuation.linear" value="0.002"/>
+    <Property name="attenuation.quadric" value="2e-005"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="-1997 2406.48 -2518"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.984314 0.286275 0.082353"/>
+    <Property name="position" value="-1800 2473.46 -2600"/>
+    <Property name="range" value="500"/>
+    <Property name="attenuation.linear" value="0.0002"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/雪松2.mesh"/>
+    <Property name="position" value="-2500 2400 -600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/雪松3.mesh"/>
+    <Property name="position" value="-2717.57 2488.1 705.801"/>
+    <Property name="orientation" value="0.981261 0 0.192683 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/雪松3.mesh"/>
+    <Property name="position" value="-2900 2702.77 2400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/雪松3.mesh"/>
+    <Property name="position" value="1600 2095.32 2200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/雪松4.mesh"/>
+    <Property name="position" value="2700 1097.24 1900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/雪松3.mesh"/>
+    <Property name="position" value="2000 1482.18 1500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/雪松4.mesh"/>
+    <Property name="position" value="500 1523.43 -1900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/雪松4.mesh"/>
+    <Property name="position" value="-200 979.562 -2802.94"/>
+    <Property name="orientation" value="0.863189 0 0.504881 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/雪松5.mesh"/>
+    <Property name="position" value="-300 2051.45 -1100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/雪松5.mesh"/>
+    <Property name="position" value="3100 1516.26 -1600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/雪松3.mesh"/>
+    <Property name="position" value="2600 959.22 -2200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/雪松5.mesh"/>
+    <Property name="position" value="2400 1000 -2700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/雪松5.mesh"/>
+    <Property name="position" value="3100 1730.54 -200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/雪松5.mesh"/>
+    <Property name="position" value="2800 1104.67 300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/雪松树杆.mesh"/>
+    <Property name="position" value="-2571.72 2385.49 301.813"/>
+    <Property name="orientation" value="0.991304 -0.041693 0.105298 0.0670289"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山灌木01.mesh"/>
+    <Property name="position" value="-2600 2460.82 -1600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山灌木02.mesh"/>
+    <Property name="position" value="-2500 2424.98 -1900"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01_big"/>
+    <Property name="position" value="2341.57 1514.25 -2153.05"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="2275 1513.02 -2200"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="2704.43 1486.15 -1544.95"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01_big"/>
+    <Property name="position" value="2771 1487.38 -1498"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山灌木01.mesh"/>
+    <Property name="position" value="971.93 2219.8 307.996"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山灌木02.mesh"/>
+    <Property name="position" value="625.428 2301.88 974.875"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山灌木02.mesh"/>
+    <Property name="position" value="1409.52 2210.11 1899.94"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山灌木01.mesh"/>
+    <Property name="position" value="1595.02 1808.3 1479.91"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山灌木02.mesh"/>
+    <Property name="position" value="-1200 2101.81 -1500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山灌木02.mesh"/>
+    <Property name="position" value="-1715.36 2346.41 -2710.26"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山灌木01.mesh"/>
+    <Property name="position" value="-2378.58 2293.18 -2693.1"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山石头02.mesh"/>
+    <Property name="position" value="-2550.73 2367.41 -2360.89"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山石头02.mesh"/>
+    <Property name="position" value="-2670.32 2434.28 1181.64"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山草01.mesh"/>
+    <Property name="position" value="47.9533 2279.53 -1107.66"/>
+    <Property name="orientation" value="0.989898 0 -0.141781 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山草02.mesh"/>
+    <Property name="position" value="-2596.77 2378.58 963.95"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山草01.mesh"/>
+    <Property name="position" value="-2536.01 2438.28 1632.63"/>
+    <Property name="orientation" value="0.895008 0 0.44605 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山草01.mesh"/>
+    <Property name="position" value="-2400 2398.16 -500"/>
+    <Property name="orientation" value="0.927431 0 0.373995 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山草01.mesh"/>
+    <Property name="position" value="-1462.63 2365.7 -2471.09"/>
+    <Property name="orientation" value="0.496574 0 0.867994 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山草01.mesh"/>
+    <Property name="position" value="856.744 2265.38 342.658"/>
+    <Property name="orientation" value="0.983524 0 0.180778 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山草01.mesh"/>
+    <Property name="position" value="1463.3 2280.59 2160.4"/>
+    <Property name="orientation" value="0.913545 0 0.406737 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山草01.mesh"/>
+    <Property name="position" value="-443.636 2442.13 2402.11"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山草01.mesh"/>
+    <Property name="position" value="-58.7258 2434.12 2232.19"/>
+    <Property name="orientation" value="0.938788 0 -0.344495 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山草01.mesh"/>
+    <Property name="position" value="-173.491 2457.76 2324.21"/>
+    <Property name="orientation" value="0.995221 -0.0669584 0.0709096 -0.0047708"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山草01.mesh"/>
+    <Property name="position" value="300 2435.64 2400"/>
+    <Property name="orientation" value="0.925338 -0.0580683 -0.373152 -0.0336788"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山草01.mesh"/>
+    <Property name="position" value="711.145 2430.91 2655.19"/>
+    <Property name="orientation" value="0.992482 -0.0651235 -0.102332 -0.0162826"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山草01.mesh"/>
+    <Property name="position" value="1200 2456.74 2700"/>
+    <Property name="orientation" value="0.992482 -0.0651235 -0.102332 -0.0162826"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山草01.mesh"/>
+    <Property name="position" value="1500 2384.67 2500"/>
+    <Property name="orientation" value="0.992482 -0.0651235 -0.102332 -0.0162826"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山草01.mesh"/>
+    <Property name="position" value="539.108 2416.33 2500"/>
+    <Property name="orientation" value="0.562281 -0.029586 -0.824216 -0.0602566"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山草01.mesh"/>
+    <Property name="position" value="-1500 2515.09 2356.29"/>
+    <Property name="orientation" value="0.908143 0 -0.41866 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山草01.mesh"/>
+    <Property name="position" value="-1900 2533.51 2366.68"/>
+    <Property name="orientation" value="0.908143 0 -0.41866 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山草01.mesh"/>
+    <Property name="position" value="-2616.39 2665.78 2600"/>
+    <Property name="orientation" value="0.789851 0.00201012 -0.613293 -0.00140832"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山草01.mesh"/>
+    <Property name="position" value="-2700 2435.32 1000"/>
+    <Property name="orientation" value="0.895008 0 0.44605 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山草01.mesh"/>
+    <Property name="position" value="-2700 2474.71 1368.14"/>
+    <Property name="orientation" value="0.890644 -0.0882761 0.443875 -0.0439946"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山草01.mesh"/>
+    <Property name="position" value="-2400 2412.84 500"/>
+    <Property name="orientation" value="0.890644 -0.0882761 0.443875 -0.0439946"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山草01.mesh"/>
+    <Property name="position" value="-2500 2394.32 -145.799"/>
+    <Property name="orientation" value="0.995124 -0.059384 -6.09998e-007 -0.0787511"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山草01.mesh"/>
+    <Property name="position" value="-2500 2440.66 -1700"/>
+    <Property name="orientation" value="0.939513 -0.0820228 0.328005 -0.0547764"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山草01.mesh"/>
+    <Property name="position" value="-2439.68 2365.34 -2500"/>
+    <Property name="orientation" value="0.939513 -0.0820228 0.328005 -0.0547764"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山灌木01.mesh"/>
+    <Property name="position" value="-1400 2332.41 -2400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山灌木01.mesh"/>
+    <Property name="position" value="-655.507 2148.71 -1000"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山灌木01.mesh"/>
+    <Property name="position" value="200 2271.71 -1100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨雪松2.mesh"/>
+    <Property name="position" value="3000 1570.56 -900"/>
+    <Property name="orientation" value="0.889732 0 -0.456484 0"/>
+    <Property name="scale" value="0.434783 0.434783 0.434783"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨雪松2.mesh"/>
+    <Property name="position" value="3100 1725.87 200"/>
+    <Property name="orientation" value="0.486781 0 0.873524 0"/>
+    <Property name="scale" value="0.434783 0.434783 0.434783"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨雪松2.mesh"/>
+    <Property name="position" value="3100 1798.11 -1100"/>
+    <Property name="orientation" value="0.486781 0 0.873524 0"/>
+    <Property name="scale" value="0.434783 0.434783 0.434783"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨雪松2.mesh"/>
+    <Property name="position" value="3100 1683.23 -800"/>
+    <Property name="orientation" value="-0.587505 0 0.80922 0"/>
+    <Property name="scale" value="0.434783 0.434783 0.434783"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.984314 0.286275 0.082353"/>
+    <Property name="position" value="2600 1151.2 -2500"/>
+    <Property name="range" value="500"/>
+    <Property name="attenuation.linear" value="0.002"/>
+    <Property name="attenuation.quadric" value="2e-005"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.984314 0.286275 0.082353"/>
+    <Property name="position" value="2208 1624.28 -2061"/>
+    <Property name="range" value="500"/>
+    <Property name="attenuation.linear" value="0.002"/>
+    <Property name="attenuation.quadric" value="2e-005"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.984314 0.286275 0.082353"/>
+    <Property name="position" value="2700 1540.36 -1400"/>
+    <Property name="range" value="500"/>
+    <Property name="attenuation.linear" value="0.002"/>
+    <Property name="attenuation.quadric" value="2e-005"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/雪松5.mesh"/>
+    <Property name="position" value="3100 1171.52 -2100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山草01.mesh"/>
+    <Property name="position" value="1300 2243.12 1700"/>
+    <Property name="orientation" value="0.712294 0 0.701881 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山草01.mesh"/>
+    <Property name="position" value="1100 2110.38 1300"/>
+    <Property name="orientation" value="0.712294 0 0.701881 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山草01.mesh"/>
+    <Property name="position" value="700 2310.67 1200"/>
+    <Property name="orientation" value="0.795837 0 0.605511 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山灌木02.mesh"/>
+    <Property name="position" value="146.917 2427.78 2559.2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山灌木01.mesh"/>
+    <Property name="position" value="1200 1971.47 1200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨雪松1.mesh"/>
+    <Property name="position" value="-2600 2341.26 -1100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/雪松3.mesh"/>
+    <Property name="position" value="-3000 2811.96 400"/>
+    <Property name="orientation" value="0.981261 0 0.192683 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/雪松3.mesh"/>
+    <Property name="position" value="-3100 2908.51 -200"/>
+    <Property name="orientation" value="0.995879 0 0.0906874 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/雪松3.mesh"/>
+    <Property name="position" value="-2600 2468.72 1600"/>
+    <Property name="orientation" value="0.87607 0 -0.482183 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/雪松3.mesh"/>
+    <Property name="position" value="-2600 2427.66 -200"/>
+    <Property name="orientation" value="0.994435 0 -0.105341 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山灌木02.mesh"/>
+    <Property name="position" value="-2400 2431.64 -1000"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山灌木02.mesh"/>
+    <Property name="position" value="-3100 2885.73 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山灌木02.mesh"/>
+    <Property name="position" value="-2767.97 2447.08 954.681"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山灌木02.mesh"/>
+    <Property name="position" value="-2100 2564.65 2600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山灌木02.mesh"/>
+    <Property name="position" value="-2400 2609.76 2800"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山灌木02.mesh"/>
+    <Property name="position" value="-2772.26 2627.41 2471.53"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山草01.mesh"/>
+    <Property name="position" value="-2800 2688.35 2300"/>
+    <Property name="orientation" value="0.599632 0.0023109 -0.800271 -0.000826855"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山草01.mesh"/>
+    <Property name="position" value="-2100 2561.2 2513.7"/>
+    <Property name="orientation" value="0.99951 0 0.0312878 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山草01.mesh"/>
+    <Property name="position" value="-1300 2523.72 2400"/>
+    <Property name="orientation" value="0.979701 -0.198001 0.0306677 -0.00619806"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山草01.mesh"/>
+    <Property name="position" value="1400 2438.57 2600"/>
+    <Property name="orientation" value="0.979701 -0.198001 0.0306677 -0.00619806"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山草01.mesh"/>
+    <Property name="position" value="135.109 2425.77 2400"/>
+    <Property name="orientation" value="0.319431 -0.0527181 -0.926671 -0.190954"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨雪松1.mesh"/>
+    <Property name="position" value="-100 2878.6 3100"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="天山/雪地天山秃鹫石像.model"/>
+    <Property name="position" value="2698.83 1050.56 -1880.05"/>
+    <Property name="orientation" value="0.99894 0 0.0460028 0"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="天山/雪地天山秃鹫石像.model"/>
+    <Property name="position" value="91.8451 979.59 -2675.02"/>
+    <Property name="orientation" value="0.99894 0 0.0460028 0"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="天山/雪地天山石门.model"/>
+    <Property name="position" value="-781.971 2401.62 2854.33"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/长白山草01.mesh"/>
+    <Property name="position" value="700 2351.72 -1100"/>
+    <Property name="orientation" value="0.937224 -0.059155 -0.342208 -0.0317313"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="chuansongdian"/>
+    <Property name="position" value="-796.116 2480.34 2285.29"/>
+  </Object>
+
+</Scene>

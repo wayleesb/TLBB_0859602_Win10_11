@@ -1,0 +1,6 @@
+[System]
+navmapname=tadi.nav
+monsterfile=tadi_monster.ini
+patrolpoint=tadi_patrolpoint.ini
+eventfile=tadi_area.ini
+petfile=tadi_pet.ini

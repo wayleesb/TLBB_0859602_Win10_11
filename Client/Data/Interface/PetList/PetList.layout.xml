@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame1" Name="PetList_Frame">
+        <Property Name="Position" Value="x:0.1 y:0.3" />
+        <Property Name="AbsoluteSize" Value="w:144 h:200" />
+        <Window Type="TLBB_DragTitle" Name="PetList_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+            <Property Name="Font" Value="YouYuan11.25" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="Text" Value="#{INTERFACE_XML_89}" />
+            <Property Name="DragTarget" Value="PetList_Frame" />
+        </Window>
+        <Window Type="TLBB_ButtonHelp" Name="PetList_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*PetList&quot;);' />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="PetList_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function="PetList_Refuse_Click();" />
+        </Window>
+        <Window Type="DefaultWindow" Name="PetList_Frame_Client">
+            <Property Name="AbsolutePosition" Value="x:6.000000 y:36.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-12.000000},{1.000000,-55.000000}" />
+            <Window Type="TLBB_ListBoxCommon" Name="PetList_List">
+                <Property Name="Position" Value="x:0.0 y:0.0" />
+                <Property Name="UnifiedSize" Value="{{1.000000,0.000000},{1.000000,-24.000000}" />
+                <Event Name="ItemSelectionChanged" Function="PetList_List_Selected();" />
+                <Event Name="MouseRClick" Function="PetList_ShowTargetPet();" />
+            </Window>
+            <Window Type="TLBB_Frame_Lace5" Name="PetList_Choose_Blank">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-80.000000},{0.000000,20.000000}" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="PetList_Choose_Button">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-80.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_797}" />
+                <Event Name="Clicked" Function="PetList_Choose_Click();" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="PetList_Refuse_Button">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-40.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_542}" />
+                <Event Name="Clicked" Function="PetList_Refuse_Click();" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<GUILayout>
+	<Window Type="TLBB_MainFrame1" Name="AnqiShuxing_Frame">
+		<Property Name="UnifiedPosition" Value="{{0.000000,320.000000},{0.000000,135.000000}}" />
+		<Property Name="AbsoluteSize" Value="w:256.000000 h:300.000000" />
+		<Event Name="Hidden" Function="AnqiShuxing_Clear();" />
+		<Window Type="TLBB_DragTitle" Name="AnqiShuxing_DragTitle">
+			<Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+			<Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}}" />
+			<Property Name="DragTarget" Value="AnqiShuxing_Frame" />
+			<Property Name="Font" Value="YouYuan11.25" />
+			<Property Name="HorzFormatting" Value="HorzCentred" />
+			<Property Name="Text" value="" />
+			<Property Name="VertFormatting" Value="VertCentred" />
+		</Window>
+		<Window Type="TLBB_ButtonClose" Name="AnqiShuxing_Close">
+			<Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}}" />
+			<Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+			<Event Name="Clicked" Function="AnqiShuxing_Cancel_Clicked();" />
+		</Window>
+		<Window Type="TLBB_ButtonHelp" Name="AnqiShuxing_Help">
+			<Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}}" />
+			<Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+			<Event Name="Clicked" Function="Helper:GotoHelper(&quot;*AnqiShuxing&quot;);" />
+		</Window>
+		<Window Type="DefaultWindow" Name="AnqiShuxing_Frame_Client">
+			<Property Name="AbsolutePosition" Value="x:7.000000 y:36.000000" />
+			<Property Name="UnifiedSize" Value="{{1.000000,-13.000000},{1.000000,-55.000000}}" />
+			<Property Name="RiseOnClick" Value="False" />
+			<Window Type="TLBB_SimpleMulitiTextFrame" Name="AnqiShuxing_Info">
+				<Property Name="RelativePosition" Value="x:0.000000 y:0.000000" />
+				<Property Name="UnifiedSize" Value="{{0.000000,243.000000},{0.000000,76.000000}}" />
+				<Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Property Name="Text" value="" />
+				<Property Name="TextColor" Value="FFFFF263" />
+			</Window>
+			<Window Type="TLBB_SimpleMulitiTextFrame" Name="AnqiShuxing_SuccessValue">
+				<Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,77.000000}}" />
+				<Property Name="UnifiedSize" Value="{{0.000000,243.000000},{0.000000,20.000000}}" />
+				<Property Name="HorzFormatting" Value="HorzCentred" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Property Name="Text" value="100%" />
+				<Property Name="TextColor" Value="FFFFF263" />
+        <Property Name="Visible" Value="False" />
+			</Window>
+			<Window Type="DefaultWindow" Name="AnqiShuxing_Special">
+				<Property Name="UnifiedPosition" Value="{{0.000000,30.000000},{0.000000,100.000000}}" />
+				<Property Name="UnifiedSize" Value="{{0.000000,209.000000},{0.000000,38.000000}}" />
+				<Window Type="TLBB_SimpleText" Name="AnqiShuxing_Static2">
+					<Property Name="UnifiedPosition" Value="{{0.000000,12.000000},{0.000000,0.000000}}" />
+					<Property Name="UnifiedSize" Value="{{0.000000,109.000000},{0.000000,35.000000}}" />
+					<Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+					<Property Name="RiseOnClick" Value="False" />
+					<Property Name="Text" Value="" />
+					<Property Name="TextColor" Value="FFFFF263" />
+					<Property Name="VertFormatting" Value="VertCentred" />
+				</Window>
+				<Window Type="TLBB_ActionButton" Name="AnqiShuxing_Special_Button">
+					<Property Name="AbsolutePosition" Value="x:135.000000 y:0.000000" />
+					<Property Name="AbsoluteSize" Value="w:36.000000 h:35.000000" />
+					<Property Name="DragAcceptName" Value="G72" />
+					<Property Name="DraggingEnabled" Value="True" />
+					<Event Name="RBClicked" Function="AnqiShuxing_Resume();" />
+				</Window>
+			</Window>
+      <Window Type="TLBB_SimpleMulitiTextFrame" Name="AnqiShuxing_Static3">
+        <Property Name="UnifiedPosition" Value="{{0.01,0.000000},{1.000000,-89.000000}" />
+        <Property Name="UnifiedSize" Value="{{0.98,0.000000},{0.000000,22.000000}" />
+        <Property Name="Text" Value="#{INTERFACE_XML_789}" />
+        <Property Name="TextColor" Value="FFFFF263" />
+        <Property Name="HorzFormatting" Value="LeftAligned" />
+        <Property Name="VertFormatting" Value="VertCentred" />
+        <Property Name="RiseOnClick" Value="False" />
+        <Window Type="TLBB_Money" Name="AnqiShuxing_NeedMoney">
+          <Property Name="UnifiedPosition" Value="{{0.0,0.000000},{0.000000,0.000000}" />
+          <Property Name="UnifiedSize" Value="{{1.0,0.000000},{0.000000,20.000000}" />
+          <Property Name="HorzFormatting" Value="RightAligned" />
+          <Property Name="MoneyNumber" Value="0" />
+          <Property Name="MoneyMaxColour" Value="FFFF0000" />
+          <Property Name="GoldIcon" Value = "set:Button6 image:Lace_JiaoziJin" />
+          <Property Name="SilverIcon" Value = "set:Button6 image:Lace_JiaoziYin" />
+          <Property Name="CopperIcon" Value = "set:Button6 image:Lace_JiaoziTong" />
+        </Window>
+      </Window>
+      <Window Type="TLBB_SimpleMulitiTextFrame" Name="AnqiShuxing_SelfJiaozi_Text">
+        <Property Name="UnifiedPosition" Value="{{0.01,0.000000},{1.000000,-67.000000}" />
+        <Property Name="UnifiedSize" Value="{{0.98,0.000000},{0.000000,22.000000}" />
+        <Property Name="HorzFormatting" Value="LeftAligned" />
+        <Property Name="VertFormatting" Value="VertCentred" />
+        <Property Name="Text" Value="#{BDJB_051210_1}" />
+        <Property Name="TextColor" Value="FFFFF263" />
+        <Property Name="RiseOnClick" Value="False" />
+        <Window Type="TLBB_Money" Name="AnqiShuxing_SelfJiaozi">
+          <Property Name="UnifiedPosition" Value="{{0.0,0.000000},{0.000000,0.000000}" />
+          <Property Name="UnifiedSize" Value="{{1.0,0.000000},{0.000000,20.000000}" />
+          <Property Name="HorzFormatting" Value="RightAligned" />
+          <Property Name="MoneyNumber" Value="0" />
+          <Property Name="GoldIcon" Value = "set:Button6 image:Lace_JiaoziJin" />
+          <Property Name="SilverIcon" Value = "set:Button6 image:Lace_JiaoziYin" />
+          <Property Name="CopperIcon" Value = "set:Button6 image:Lace_JiaoziTong" />
+        </Window>
+      </Window>
+      <Window Type="TLBB_SimpleMulitiTextFrame" Name="AnqiShuxing_SelfMoney_Text">
+        <Property Name="UnifiedPosition" Value="{{0.01,0.000000},{1.000000,-45.000000}" />
+        <Property Name="UnifiedSize" Value="{{0.98,0.000000},{0.000000,22.000000}" />
+        <Property Name="HorzFormatting" Value="LeftAligned" />
+        <Property Name="VertFormatting" Value="VertCentred" />
+        <Property Name="Text" Value="#{INTERFACE_XML_834}" />
+        <Property Name="TextColor" Value="FFFFF263" />
+        <Property Name="RiseOnClick" Value="False" />
+        <Window Type="TLBB_Money" Name="AnqiShuxing_SelfMoney">
+          <Property Name="UnifiedPosition" Value="{{0.0,0.000000},{0.000000,0.000000}" />
+          <Property Name="UnifiedSize" Value="{{1.0,0.000000},{0.000000,20.000000}" />
+          <Property Name="HorzFormatting" Value="RightAligned" />
+          <Property Name="MoneyNumber" Value="0" />
+        </Window>
+      </Window>
+			<Window Type="TLBB_Frame_Lace5" Name="AnqiShuxing_Blank">
+				<Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-20.000000}}" />
+				<Property Name="UnifiedSize" Value="{{1.000000,-120.000000},{0.000000,20.000000}}" />
+			</Window>
+			<Window Type="TLBB_ButtonCommon" Name="AnqiShuxing_OK">
+				<Property Name="UnifiedPosition" Value="{{1.000000,-120.000000},{1.000000,-20.000000}}" />
+				<Property Name="AbsoluteSize" Value="w:60.000000 h:20.000000" />
+				<Property Name="Text" Value="#{INTERFACE_XML_1058}" />
+				<Event Name="Clicked" Function="AnqiShuxing_OK_Clicked();" />
+			</Window>
+			<Window Type="TLBB_ButtonCommon" Name="AnqiShuxing_Cancel">
+				<Property Name="UnifiedPosition" Value="{{1.000000,-60.000000},{1.000000,-20.000000}}" />
+				<Property Name="AbsoluteSize" Value="w:60.000000 h:20.000000" />
+				<Property Name="Text" Value="#{INTERFACE_XML_1059}" />
+				<Event Name="Clicked" Function="AnqiShuxing_Cancel_Clicked();" />
+			</Window>
+		</Window>
+	</Window>
+</GUILayout>

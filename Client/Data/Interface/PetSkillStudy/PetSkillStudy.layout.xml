@@ -1,0 +1,118 @@
+<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame1" Name="PetSkillStudy_Frame">
+        <Property Name="UnifiedPosition" Value="{{0.35,0},{0.12,0}}" />
+        <Property Name="UnifiedSize" Value="{{0,256},{0.0,280}}" />
+        <Event Name="Hidden" Function="PetSkillStudy_Frame_OnHiden();" />
+        <Window Type="TLBB_DragTitle" Name="PetSkillStudy_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="PetSkillStudy_Frame" />
+            <Window Type="TLBB_SimpleTextFrame" Name="PetSkillStudy_SkillType_Text">
+                <Property Name="Position" Value="x:05 y:0" />
+                <Property Name="Size" Value="w:1 h:1" />
+                <Property Name="Font" Value="YouYuan11.25" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="PetSkillStudy_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function="PetSkillStudy_Hide();" />
+        </Window>
+        <Window Type="TLBB_ButtonHelp" Name="PetSkillStudy_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*PetSkillStudy&quot;);' />
+        </Window>
+        <Window Type="DefaultWindow" Name="PetSkillStudy_Function_Frame">
+            <Property Name="AbsolutePosition" Value="x:6.000000 y:36.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-12.000000},{1.000000,-55.000000}" />
+            <Window Type="TLBB_FramePet" Name="PetSkillStudy_PetModel_Frame">
+                <Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+                <Property Name="UnifiedSize" Value="{{1.000000,00.000000},{1.000000,-98.000000}" />
+                <Window Type="TLBB_MeshWindow" Name="PetSkillStudy_PetModel">
+                    <Property Name="Position" Value="x:0.1 y:0.1" />
+                    <Property Name="Size" Value="w:0.8 h:0.85" />
+                    <Property Name="ShowControl" Value="PetSkillStudy_Frame" />
+                    <Property Name="RiseOnClick" Value="False" />
+                </Window>
+                <Window Type="TLBB_StaticImageNULL" Name="PetSkillStudy_Function_Frame_PetHead">
+                    <Property Name="AbsolutePosition" Value="x:85.0 y:0.000000" />
+                    <Property Name="AbsoluteSize" Value="w:68.000000 h:26.000000" />
+                    <Property Name="Image" Value="set:CommonItem image:PetFrame_Head" />
+                    <Property Name="RiseOnClick" Value="False" />
+                </Window>
+                <Window Type="TLBB_ButtonTurnLeft" Name="PetSkillStudy_Model_TurnLeft">
+                    <Property Name="UnifiedPosition" Value="{{0.1,0.000000},{1.0,-31.0}" />
+                    <Property Name="AbsoluteSize" Value="w:25.000000 h:25.000000" />
+                    <Event Name="MouseButtonDown" Function="PetSkillStudy_Modle_TurnLeft(1);" />
+                    <Event Name="MouseButtonUp" Function="PetSkillStudy_Modle_TurnLeft(0);" />
+                </Window>
+                <Window Type="TLBB_ButtonTurnRight" Name="PetSkillStudy_Model_TurnRight">
+                    <Property Name="UnifiedPosition" Value="{{0.79,0.000000},{1.0,-31.0}" />
+                    <Property Name="AbsoluteSize" Value="w:25.000000 h:25.000000" />
+                    <Event Name="MouseButtonDown" Function="PetSkillStudy_Modle_TurnRight(1);" />
+                    <Event Name="MouseButtonUp" Function="PetSkillStudy_Modle_TurnRight(0);" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="PetSkillStudy_Skill1">
+                <Property Name="UnifiedPosition" Value="{{0.000000,180.000000},{1.000000,-85.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.000000,34.000000},{0.000000,34.000000}" />
+                <Property Name="DragAcceptName" Value="T1" />
+                <Event Name="Clicked" Function="PetSkillStudy_Btn_Click(1);" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="PetSkillStudy_Text1">
+                <Property Name="UnifiedPosition" Value="{{0.000000,30.000000},{1.000000,-85.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.000000,150.000000},{0.000000,34.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_518}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="TopAligned" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_MultiIMEEditBox" Name="PetSkillStudy_MultiIMEEditBox">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-98.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.000000,0.000000},{0.000000,53.000000}" />
+                <Property Name="MaxTextLength" Value="32" />
+                <Property Name="SelectedTextColour" Value="FFFFFF00" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="PetSkillStudy_Static3">
+                <Property Name="UnifiedPosition" Value="{{0.05,0.000000},{1.000000,-45.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.9,0.000000},{0.000000,22.000000}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Property Name="Text" Value="#{INTERFACE_XML_791}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Window Type="TLBB_Money" Name="PetSkillStudy_Money">
+                    <Property Name="UnifiedPosition" Value="{{0.0,0.000000},{0.000000,0.000000}" />
+                    <Property Name="UnifiedSize" Value="{{1.0,0.000000},{0.000000,20.000000}" />
+                    <Property Name="HorzFormatting" Value="RightAligned" />
+                    <Property Name="MoneyNumber" Value="0" />
+                    <Property Name="GoldIcon" Value = "set:Button6 image:Lace_JiaoziJin" />
+                    <Property Name="SilverIcon" Value = "set:Button6 image:Lace_JiaoziYin" />
+                    <Property Name="CopperIcon" Value = "set:Button6 image:Lace_JiaoziTong" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_Frame_Lace5" Name="PetSkillStudy_Blank">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-80.000000},{0.000000,20.000000}" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="PetSkillStudy_Accept">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-80.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.000000,40.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_557}" />
+                <Event Name="Clicked" Function="PetSkillStudy_Do();" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="PetSkillStudy_Cancel">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-40.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.000000,40.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_542}" />
+                <Event Name="Clicked" Function="PetSkillStudy_Hide();" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

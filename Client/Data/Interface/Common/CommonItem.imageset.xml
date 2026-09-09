@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+	<Imageset Name="CommonItem" Imagefile="Common/CommonItem.tga" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="false">
+		<Image Name="ActionBK" XPos="1" YPos="1" Width="34" Height="34" />
+
+    <Image Name="PetFrame_LT" XPos="200" YPos="97" Width="15" Height="17" />
+    <Image Name="PetFrame_RT" XPos="238" YPos="97" Width="15" Height="17" />
+    <Image Name="PetFrame_LB" XPos="200" YPos="147" Width="15" Height="8" />
+    <Image Name="PetFrame_RB" XPos="238" YPos="147" Width="15" Height="8" />
+    <Image Name="PetFrame_L" XPos="200" YPos="115" Width="15" Height="30" />
+    <Image Name="PetFrame_R" XPos="238" YPos="115" Width="15" Height="30" />
+    <Image Name="PetFrame_T" XPos="220" YPos="97" Width="20" Height="14" />
+    <Image Name="PetFrame_B" XPos="220" YPos="147" Width="20" Height="8" />
+
+    <Image Name="PetFrame_Head" XPos="123" YPos="0" Width="68" Height="26" />
+
+    <Image Name="PlayerFrame_LT" XPos="123" YPos="29" Width="20" Height="20" />
+    <Image Name="PlayerFrame_RT" XPos="200" YPos="29" Width="20" Height="20" />
+    <Image Name="PlayerFrame_LB" XPos="123" YPos="73" Width="45" Height="21" />
+    <Image Name="PlayerFrame_RB" XPos="175" YPos="73" Width="45" Height="21" />
+    <Image Name="PlayerFrame_L" XPos="123" YPos="50" Width="3" Height="23" />
+    <Image Name="PlayerFrame_R" XPos="217" YPos="50" Width="3" Height="23" />
+    <Image Name="PlayerFrame_T" XPos="145" YPos="29" Width="50" Height="4" />
+    <Image Name="PlayerFrame_B" XPos="165" YPos="73" Width="15" Height="21" />
+
+    <Image Name="PlayerFrame_LB2" XPos="123" YPos="73" Width="20" Height="21" />
+    <Image Name="PlayerFrame_RB2" XPos="200" YPos="73" Width="20" Height="21" />
+    <Image Name="PlayerFrame_B2" XPos="140" YPos="90" Width="15" Height="4" />
+
+	<Image Name="BtnDuiGuanPiao_Normal" XPos="0" YPos="93" Width="82" Height="82" />
+	<Image Name="BtnDuiGuanPiao_Hover" XPos="82" YPos="93" Width="82" Height="82" />		
+	<Image Name="BtnDuiGuanPiao_Pushed" XPos="0" YPos="175" Width="82" Height="81" />
+	<Image Name="BtnDuiGuanPiao_Disable" XPos="82" YPos="175" Width="82" Height="81" />
+
+
+  </Imageset>

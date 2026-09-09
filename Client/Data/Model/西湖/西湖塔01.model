@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="西湖塔01.frame" />
+    <entity mesh="西湖塔01.mesh" node="西湖塔01" />
+    <entity mesh="西湖塔01铃1.mesh" node="西湖塔01铃1">
+        <offset>
+            <translate x="-276.203" y="-310.357" z="-277.774" />
+        </offset>
+    </entity>
+    <entity mesh="西湖塔01铃4.mesh" node="西湖塔01铃4">
+        <offset>
+            <translate x="-276.203" y="-310.357" z="269.127" />
+        </offset>
+    </entity>
+    <entity mesh="西湖塔01铃3.mesh" node="西湖塔01铃3">
+        <offset>
+            <translate x="267.938" y="-310.357" z="268.757" />
+        </offset>
+    </entity>
+    <entity mesh="西湖塔01铃2.mesh" node="西湖塔01铃2">
+        <offset>
+            <translate x="268.132" y="-310.357" z="-277.774" />
+        </offset>
+    </entity>
+</model>

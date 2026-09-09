@@ -1,0 +1,4 @@
+<?xml version="1.0" ?>
+<Imageset Name="BGLogin_6_0" Imagefile="Bg_Info/Img/Login/jpg_26_0.dds" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+	<Image Name="BGImg" XPos="0" YPos="0" Width="512" Height="512" />
+</Imageset>

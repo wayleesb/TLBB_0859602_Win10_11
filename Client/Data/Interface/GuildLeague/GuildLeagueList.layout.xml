@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame1" Name="GuildLeagueList">
+        <Property Name="UnifiedPosition" Value="{{0.5,-200},{0.12,0}}" />
+        <Property Name="AbsoluteSize" Value="w:490 h:295" />
+        <Window Type="TLBB_DragTitle" Name="GuildLeagueList_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="GuildLeagueList" />
+            <Window Type="TLBB_SimpleText" Name="GuildLeagueList_PageHeader">
+                <Property Name="Position" Value="x:0.0 y:0.0" />
+                <Property Name="Size" Value="w:1.0 h:1.0" />
+                <Property Name="Font" Value="YouYuan11.25" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Property Name="Text" Value="#{TM_20080318_24}" />
+            </Window>
+        </Window>
+        <Window Type="TLBB_ButtonHelp" Name="GuildLeagueList_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Property Name="Text" Value="TLBB_ButtonHelp" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*GuildLeagueList&quot;);' />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="GuildLeagueList_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Property Name="Text" Value="TLBB_ButtonClose" />
+            <Event Name="Clicked" Function="this:Hide();" />
+        </Window>
+        <Window Type="DefaultWindow" Name="GuildLeagueList_Function_Frame">
+            <Property Name="AbsolutePosition" Value="x:6.000000 y:36.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-12.000000},{1.000000,-55.000000}" />
+            <Window Type="TLBB_MultiColumnList" Name="GuildLeagueList_List">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,1.000000}" />
+                <Property Name="AbsoluteSize" Value="w:294 h:216" />
+                <Property Name="ForceHorzScrollbar" Value="False" />
+                <Property Name="ForceVertScrollbar" Value="True" />
+                <Property Name="SortSettingEnabled" Value="False" />
+                <Property Name="SelectionMode" Value="RowSingle" />
+                <Property Name="ColumnHeader" Value="text:ID width:0.3 id:0" />
+                <Property Name="ColumnHeader" Value="text:#{INTERFACE_XML_1022} width:0.7 id:1" />
+                <Property Name="ColumnsSizable" Value="False" />
+                <Property Name="ColumnsAdjust" Value="True" />
+                <Property Name="ColumnsMovable" Value="False" />
+                <Event Name="SelectionChanged" Function="GuildLeagueList_DoSelected();" />
+            </Window>
+            <Window Type="TLBB_Frame_Lace1" Name="GuildLeagueList_Bk">
+                <Property Name="UnifiedPosition" Value="{{0.5,55.000000},{0.000000,0.000000}" />
+                 <Property Name="AbsoluteSize" Value="w:184 h:110" />
+              <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="GuildLeagueList_Name">
+                <Property Name="UnifiedPosition" Value="{{0.5000000,59.000000},{0.000000,5.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.5000000,-88.000000},{0.000000,18.000000}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{TM_20080318_25}" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="GuildLeagueList_Time">
+                <Property Name="UnifiedPosition" Value="{{0.5000000,59.000000},{0.000000,25.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.5000000,-88.000000},{0.000000,18.000000}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{TM_20080318_28}" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="GuildLeagueList_Chieftain">
+                <Property Name="UnifiedPosition" Value="{{0.5000000,59.000000},{0.000000,45.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.5000000,-88.000000},{0.000000,18.000000}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{TM_20080318_27}" />
+            </Window>
+          <Window Type="TLBB_SimpleText" Name="GuildLeagueList_Member">
+            <Property Name="UnifiedPosition" Value="{{0.5000000,59.000000},{0.000000,65.000000}" />
+            <Property Name="UnifiedSize" Value="{{0.5000000,-88.000000},{0.000000,18.000000}" />
+            <Property Name="HorzFormatting" Value="LeftAligned" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="Text" Value="#{TM_20080318_26}" />
+          </Window>
+            <Window Type="TLBB_SimpleText" Name="GuildLeagueList_Info7">
+                <Property Name="UnifiedPosition" Value="{{0.5000000,56.000000},{0.000000,110.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.5,-56.000000},{0.000000,18.000000}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="TextColor" Value="FFFFF263" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="GuildLeagueList_Tenet_Text">
+                <Property Name="UnifiedPosition" Value="{{0.5000000,56.000000},{0.000000,110.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.5000000,-56.000000},{0.000000,18.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{TM_20080318_05}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_StaticText" Name="GuildLeagueList_Tenet">
+                <Property Name="UnifiedPosition" Value="{{0.5000000,55.000000},{0.000000,125.000000}" />
+              <Property Name="AbsoluteSize" Value="w:185 h:92" />
+              <Property Name="VertScrollbar" Value="true" />
+              <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="TextColor" Value="FFFFF263" />
+            </Window>
+            <Window Type="TLBB_Frame_Lace5" Name="GuildLeagueList_Blank">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.5000000,0.000000},{0.000000,20.000000}" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="GuildLeagueList_PageUp">
+                <Property Name="UnifiedPosition" Value="{{0.25,-60.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,60.000000},{0.000000,20.000000}" />
+                <Event Name="Clicked" Function="GuildLeagueList_DoPageUp();" />
+                <Property Name="Text" Value="#{INTERFACE_XML_499}" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="GuildLeagueList_PageDown">
+                <Property Name="UnifiedPosition" Value="{{0.25,0.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,60.000000},{0.000000,20.000000}" />
+                <Event Name="Clicked" Function="GuildLeagueList_DoPageDown();" />
+                <Property Name="Text" Value="#{INTERFACE_XML_325}" />
+            </Window>
+          <Window Type="TLBB_ButtonCommon" Name="GuildLeagueList_Agree">
+            <Property Name="UnifiedPosition" Value="{{0.85000000,-60.000000},{1.000000,-20.000000}" />
+            <Property Name="UnifiedSize" Value="{{0.0,90.000000},{0.000000,20.000000}" />
+            <Property Name="Text" Value="#{TM_20080318_29}" />
+            <Event Name="Clicked" Function="GuildLeagueList_DoApply();" />
+          </Window>
+            <Window Type="TLBB_ButtonCommon" Name="GuildLeagueList_Cancel">
+                <Property Name="UnifiedPosition" Value="{{0.85000000,30.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,45.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_542}" />
+                <Event Name="Clicked" Function="this:Hide();" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

@@ -1,0 +1,1139 @@
+<?xml version="1.0" ?>
+<GUILayout>
+	<Window Type="DefaultWindow" Name="SelectServer_Frame">
+		<Property Name="Position" Value="x:0.0 y:0.0" />
+		<Property Name="Size" Value="w:1.0 h:1.0" />
+		<Window Type="DefaultWindow" Name="SelectServer_Background1_Frame">
+			<Property Name="Position" Value="x:0.0 y:0.0" />
+			<Property Name="Size" Value="w:1.0 h:1.0" />
+			<Property Name="RiseOnClick" Value="False" />
+			<Window Type="TLBB_StaticImageNULL" Name="SelectServer_Bak1">
+				<Property Name="Position" Value="x:0.0 y:0.0" />
+				<Property Name="Size" Value="w:0.64 h:0.8533333" />
+				<Property Name="Image" Value="set:AccountLogin1 image:AccountLogin1_1" />
+				<Property Name="MouseHollow" Value="False" />
+				<Property Name="RiseOnClick" Value="False" />
+			</Window>
+			<Window Type="TLBB_StaticImageNULL" Name="SelectServer_Bak2">
+				<Property Name="Position" Value="x:0.64 y:0.0" />
+				<Property Name="Size" Value="w:0.32 h:0.8533333" />
+				<Property Name="Image" Value="set:AccountLogin2 image:AccountLogin1_2" />
+				<Property Name="MouseHollow" Value="False" />
+				<Property Name="RiseOnClick" Value="False" />
+			</Window>
+			<Window Type="TLBB_StaticImageNULL" Name="SelectServer_Bak3">
+				<Property Name="Position" Value="x:0.0 y:0.8533333" />
+				<Property Name="Size" Value="w:0.32 h:0.146666666" />
+				<Property Name="Image" Value="set:AccountLogin3 image:AccountLogin1_3" />
+				<Property Name="MouseHollow" Value="False" />
+				<Property Name="RiseOnClick" Value="False" />
+			</Window>
+			<Window Type="TLBB_StaticImageNULL" Name="SelectServer_Bak4">
+				<Property Name="Position" Value="x:0.32 y:0.8533333" />
+				<Property Name="Size" Value="w:0.32 h:0.146666666" />
+				<Property Name="Image" Value="set:AccountLogin3 image:AccountLogin1_4" />
+				<Property Name="MouseHollow" Value="False" />
+				<Property Name="RiseOnClick" Value="False" />
+			</Window>
+			<Window Type="TLBB_StaticImageNULL" Name="SelectServer_Bak5">
+				<Property Name="Position" Value="x:0.64 y:0.8533333" />
+				<Property Name="Size" Value="w:0.32 h:0.146666666" />
+				<Property Name="Image" Value="set:AccountLogin4 image:AccountLogin1_5" />
+				<Property Name="MouseHollow" Value="False" />
+				<Property Name="RiseOnClick" Value="False" />
+			</Window>
+			<Window Type="TLBB_StaticImageNULL" Name="SelectServer_Bak6">
+				<Property Name="Position" Value="x:0.96 y:0.0" />
+				<Property Name="Size" Value="w:0.04 h:0.42666666666" />
+				<Property Name="Image" Value="set:AccountLogin5 image:AccountLogin1_6" />
+				<Property Name="MouseHollow" Value="False" />
+				<Property Name="RiseOnClick" Value="False" />
+			</Window>
+			<Window Type="TLBB_StaticImageNULL" Name="SelectServer_Bak7">
+				<Property Name="Position" Value="x:0.960000 y:0.427379" />
+				<Property Name="Size" Value="w:0.040000 h:0.427379" />
+				<Property Name="Image" Value="set:AccountLogin5 image:AccountLogin1_7" />
+				<Property Name="MouseHollow" Value="False" />
+				<Property Name="RiseOnClick" Value="False" />
+			</Window>
+			<Window Type="TLBB_StaticImageNULL" Name="SelectServer_Bak8">
+				<Property Name="Position" Value="x:0.958750 y:0.853088" />
+				<Property Name="Size" Value="w:0.04 h:0.1466666666" />
+				<Property Name="Image" Value="set:AccountLogin5 image:AccountLogin1_8" />
+				<Property Name="MouseHollow" Value="False" />
+				<Property Name="RiseOnClick" Value="False" />
+			</Window>
+		</Window>
+		<Window Type="DefaultWindow" Name="SelectServer_InfoBackground_Frame">
+			<Property Name="UnifiedPosition" Value="{{0.5, -367},{1.0, -37}}" />
+			<Property Name="AbsoluteSize" Value="w:600.000000 h:22.000000" />
+			<Property Name="RiseOnClick" Value="False" />
+			<Window Type="TLBB_StaticImageNULL" Name="SelectServer_InfoBackground_Left">
+				<Property Name="Position" Value="x:0.0 y:0.0" />
+				<Property Name="Size" Value="w:0.304878 h:1.0" />
+			</Window>
+			<Window Type="TLBB_StaticImageNULL" Name="SelectServer_InfoBackground_Middle">
+				<Property Name="Position" Value="x:0.304878 y:0.0" />
+				<Property Name="Size" Value="w:0.3902439 h:1.0" />
+			</Window>
+			<Window Type="TLBB_StaticImageNULL" Name="SelectServer_InfoBackground_Right">
+				<Property Name="Position" Value="x:0.693168 y:0.0" />
+				<Property Name="Size" Value="w:0.304878 h:1.0" />
+			</Window>
+			<Window Type="TLBB_SimpleTextInfo" Name="SelectServer_Info">
+				<Property Name="UnifiedPosition" Value="{{0.0, 0.0},{0.0, 0.0}}" />
+				<Property Name="UnifiedSize" Value="{{1.0, 0.0},{1.0, 0.0}}" />
+				<Property Name="HorzFormatting" Value="HorzCentred" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="Text" Value="" />
+			</Window>
+		</Window>
+		<Window Type="DefaultWindow" Name="SelectServer_Frame2">
+			<Property Name="UnifiedPosition" Value="{{0.5, -400},{0.5, -300}}" />
+			<Property Name="AbsoluteSize" Value="w:800.0 h:600.0" />
+			<Window Type="TLBB_MainFrame_SelectServer" Name="SelectServer_Background_Frame1">
+				<Property Name="AbsolutePosition" Value="x:31.000000 y:40.000000" />
+				<Property Name="AbsoluteSize" Value="w:580.000000 h:520.000000" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Window Type="TLBB_HLine" Name="SelectServer_Background_Frame1_Line1">
+					<Property Name="UnifiedPosition" Value="{{0.0,9.000000},{0.000000,98.000000}" />
+					<Property Name="UnifiedSize" Value="{{1.0,-16.000000},{0.000000,4.000000}" />
+					<Property Name="RiseOnClick" Value="False" />
+				</Window>
+				<Window Type="TLBB_HLine" Name="SelectServer_Background_Frame1_Line2">
+					<Property Name="UnifiedPosition" Value="{{0.0,9.000000},{0.000000,201.000000}" />
+					<Property Name="UnifiedSize" Value="{{1.0,-16.000000},{0.000000,4.000000}" />
+					<Property Name="RiseOnClick" Value="False" />
+				</Window>
+				<Window Type="TLBB_HLine" Name="SelectServer_Background_Frame1_Line3">
+					<Property Name="UnifiedPosition" Value="{{0.0,9.000000},{0.000000,173.000000}" />
+					<Property Name="UnifiedSize" Value="{{1.0,-16.000000},{0.000000,4.000000}" />
+					<Property Name="RiseOnClick" Value="False" />
+          <Property Name="Visible" Value="False" />
+				</Window>
+			</Window>
+			<Window Type="TLBB_StaticImageNULL" Name="SelectServer_Background_DragonHead">
+				<Property Name="AbsolutePosition" Value="x:259.000000 y:2.000000" />
+				<Property Name="AbsoluteSize" Value="w:114.000000 h:62.000000" />
+				<Property Name="Image" Value="set:Button4 image:Dragon_Head" />
+				<Property Name="RiseOnClick" Value="False" />
+			</Window>
+			<Window Type="TLBB_StaticImageNULL" Name="SelectServer_Background_LeftCorner">
+				<Property Name="AbsolutePosition" Value="x:22.000000 y:40.000000" />
+				<Property Name="AbsoluteSize" Value="w:9.000000 h:37.000000" />
+				<Property Name="Image" Value="set:CommonStaticImage4 image:SelectServer_Corner_Left" />
+				<Property Name="RiseOnClick" Value="False" />
+			</Window>
+			<Window Type="TLBB_StaticImageNULL" Name="SelectServer_Background_RightCorner">
+				<Property Name="AbsolutePosition" Value="x:610.000000 y:40.000000" />
+				<Property Name="AbsoluteSize" Value="w:12.000000 h:23.000000" />
+				<Property Name="Image" Value="set:CommonStaticImage4 image:SelectServer2_Corner_Right" />
+				<Property Name="RiseOnClick" Value="False" />
+			</Window>
+			<Window Type="TLBB_StaticImageNULL" Name="SelectServer_Background_LeftImage">
+				<Property Name="AbsolutePosition" Value="x:8.000000 y:55.000000" />
+				<Property Name="AbsoluteSize" Value="w:36.000000 h:238.000000" />
+				<Property Name="Image" Value="set:CommonStaticImage4 image:SelectSever" />
+				<Property Name="RiseOnClick" Value="False" />
+			</Window>
+			<Window Type="TLBB_StaticImageNULL" Name="SelectServer_Background_RedLine">
+				<Property Name="AbsolutePosition" Value="x:23.000000 y:290.000000" />
+				<Property Name="AbsoluteSize" Value="w:5.000000 h:83.000000" />
+				<Property Name="Image" Value="set:Button4 image:RedLine" />
+				<Property Name="RiseOnClick" Value="False" />
+			</Window>
+			<Window Type="TLBB_StaticImageNULL" Name="SelectServer2_Background_RightCorner">
+				<Property Name="AbsolutePosition" Value="x:743.000000 y:106.000000" />
+				<Property Name="AbsoluteSize" Value="w:9.000000 h:37.000000" />
+				<Property Name="Image" Value="set:CommonStaticImage4 image:SelectServer_Corner_Right" />
+				<Property Name="RiseOnClick" Value="False" />
+			</Window>
+			<Window Type="TLBB_StaticImageNULL" Name="SelectServer2_Background_RedLine">
+				<Property Name="AbsolutePosition" Value="x:746.000000 y:118.000000" />
+				<Property Name="AbsoluteSize" Value="w:5.000000 h:83.000000" />
+				<Property Name="Image" Value="set:Button4 image:RedLine" />
+				<Property Name="RiseOnClick" Value="False" />
+			</Window>
+			<Window Type="TLBB_StaticImageNULL" Name="SelectServer_Background_Dragon_HClaw_Left">
+				<Property Name="AbsolutePosition" Value="x:242.000000 y:32.000000" />
+				<Property Name="AbsoluteSize" Value="w:19.000000 h:18.000000" />
+				<Property Name="Image" Value="set:Button4 image:Dragon_HClaw_Left" />
+				<Property Name="RiseOnClick" Value="False" />
+			</Window>
+			<Window Type="TLBB_StaticImageNULL" Name="SelectServer_Background_Dragon_HClaw_Right">
+				<Property Name="AbsolutePosition" Value="x:372.000000 y:32.000000" />
+				<Property Name="AbsoluteSize" Value="w:19.000000 h:18.000000" />
+				<Property Name="Image" Value="set:Button4 image:Dragon_HClaw_Rigth" />
+				<Property Name="RiseOnClick" Value="False" />
+			</Window>
+			<Window Type="DefaultWindow" Name="SelectServer_Background_Frame">
+				<Property Name="AbsolutePosition" Value="x:4.000000 y:43.000000" />
+				<Property Name="AbsoluteSize" Value="w:780.000000 h:540.000000" />
+				<Property Name="RiseOnClick" Value="False" />
+        <Window Type="TLBB_StaticImageNULL" Name="SelectServer_TuiJianFuWuQi" >
+          <Property Name="UnifiedPosition" Value="{{1.000000,-741.000000},{0.000000,17.000000}" />
+          <Property Name="AbsoluteSize" Value="w:22.000000 h:81.000000" />
+          <Property Name="Image" Value="set:CommonFrame6 image:TuiJianFuWuQi" />
+        </Window>
+        <Window Type="TLBB_StaticImageNULL" Name="SelectServer_DaQvLieBiao" >
+          <Property Name="UnifiedPosition" Value="{{1.000000,-741.000000},{0.000000,100.000000}" />
+          <Property Name="AbsoluteSize" Value="w:25.000000 h:100.000000" />
+          <Property Name="Image" Value="set:CommonFrame6 image:DaQvLieBiao" />
+        </Window>
+				<Window Type="DefaultWindow" Name="SelectServer_Background_Text_Frame">
+          <Property Name="Position" Value="x:0.071795 y:0.801852" />
+          <Property Name="Size" Value="w:0.671795 h:0.035185" />
+
+          <Window Type="TLBB_SimpleText" Name="SelectServer_Text1">
+						<Property Name="AbsolutePosition" Value="x:0.000000 y:1.000000" />
+						<Property Name="AbsoluteSize" Value="w:300.000000 h:16.000000" />
+						<Property Name="Text" Value="#{INTERFACE_XML_476}" />
+						<Property Name="HorzFormatting" Value="LeftAligned" />
+						<Property Name="VertFormatting" Value="VertCentred" />
+						<Property Name="RiseOnClick" Value="False" />
+						<Property Name="TextColor" Value="FFFFF263" />
+					</Window>
+					<Window Type="TLBB_SimpleText" Name="SelectServer_Text3">
+						<Property Name="AbsolutePosition" Value="x:320.000000 y:0.000000" />
+						<Property Name="AbsoluteSize" Value="w:80.000000 h:16.000000" />
+						<Property Name="Text" Value="#{INTERFACE_XML_880}" />
+						<Property Name="HorzFormatting" Value="LeftAligned" />
+						<Property Name="VertFormatting" Value="VertCentred" />
+						<Property Name="RiseOnClick" Value="False" />
+						<Property Name="TextColor" Value="FFFFF263" />
+					</Window>
+					<Window Type="TLBB_SimpleText" Name="SelectServer_Text2">
+						<Property Name="AbsolutePosition" Value="x:420.000000 y:1.000000" />
+						<Property Name="AbsoluteSize" Value="w:90.000000 h:16.000000" />
+						<Property Name="Text" Value="#{INTERFACE_XML_711}" />
+						<Property Name="HorzFormatting" Value="LeftAligned" />
+						<Property Name="VertFormatting" Value="VertCentred" />
+						<Property Name="RiseOnClick" Value="False" />
+						<Property Name="TextColor" Value="FFFFF263" />
+					</Window>
+				</Window>
+				<!--推荐服务器区-->
+				<Window Type="TLBB_SimpleText" Name="SelectServer_Commendable_Text">
+					<Property Name="AbsolutePosition" Value="x:36.000000 y:45.000000" />
+					<Property Name="AbsoluteSize" Value="w:30.000000 h:60.000000" />
+					<Property Name="HorzFormatting" Value="WordWrapCentred" />
+					<Property Name="VertFormatting" Value="TopAligned" />
+					<Property Name="Text" Value="#{INTERFACE_XML_10}" />
+					<Property Name="TextColor" Value="FFFFFF00" />
+					<Property Name="Font" Value="YouYuan11.25" />
+          <Property Name="Visible" Value="False" />
+				</Window>
+				<Window Type="DefaultWindow" Name="SelectServer_Commendable_Subarea_Frame">
+					<Property Name="AbsolutePosition" Value="x:63.000000 y:11.000000" />
+					<Property Name="AbsoluteSize" Value="w:531.000000 h:88.000000" />
+					<Window Type="TLBB_ButtonCheckForComServer" Name="SelectServer_Commendable_Subarea1">
+						<Property Name="AbsolutePosition" Value="x:0.000000 y:5.000000" />
+						<Property Name="AbsoluteSize" Value="w:175.000000 h:25.000000" />
+						<Property Name="Text" Value="#{INTERFACE_XML_319}" />
+						<Event Name="Clicked" Function="Commendable_SelectLoginServer(1);" />
+						<Event Name="MouseDoubleClick" Function="Commendable_ConfirmSelectLine(1);" />
+						<Event Name="MouseEnter" Function="Commendable_LoginServer_MouseEnter(1);" />
+						<Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(1);" />
+					</Window>
+					<Window Type="TLBB_ButtonCheckForComServer" Name="SelectServer_Commendable_Subarea2">
+						<Property Name="AbsolutePosition" Value="x:178.000000 y:5.000000" />
+						<Property Name="AbsoluteSize" Value="w:175.000000 h:25.000000" />
+						<Event Name="Clicked" Function="Commendable_SelectLoginServer(2);" />
+						<Event Name="MouseDoubleClick" Function="Commendable_ConfirmSelectLine(2);" />
+						<Event Name="MouseEnter" Function="Commendable_LoginServer_MouseEnter(2);" />
+						<Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(2);" />
+					</Window>
+					<Window Type="TLBB_ButtonCheckForComServer" Name="SelectServer_Commendable_Subarea3">
+						<Property Name="AbsolutePosition" Value="x:356.000000 y:5.000000" />
+						<Property Name="AbsoluteSize" Value="w:175.000000 h:25.000000" />
+						<Event Name="Clicked" Function="Commendable_SelectLoginServer(3);" />
+						<Event Name="MouseDoubleClick" Function="Commendable_ConfirmSelectLine(3);" />
+						<Event Name="MouseEnter" Function="Commendable_LoginServer_MouseEnter(3);" />
+						<Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(3);" />
+					</Window>
+					<Window Type="TLBB_ButtonCheckForComServer" Name="SelectServer_Commendable_Subarea4">
+						<Property Name="AbsolutePosition" Value="x:0.000000 y:32.000000" />
+						<Property Name="AbsoluteSize" Value="w:175.000000 h:25.000000" />
+						<Event Name="Clicked" Function="Commendable_SelectLoginServer(4);" />
+						<Event Name="MouseDoubleClick" Function="Commendable_ConfirmSelectLine(4);" />
+						<Event Name="MouseEnter" Function="Commendable_LoginServer_MouseEnter(4);" />
+						<Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(4);" />
+					</Window>
+					<Window Type="TLBB_ButtonCheckForComServer" Name="SelectServer_Commendable_Subarea5">
+						<Property Name="AbsolutePosition" Value="x:178.000000 y:32.000000" />
+						<Property Name="AbsoluteSize" Value="w:175.000000 h:25.000000" />
+						<Event Name="Clicked" Function="Commendable_SelectLoginServer(5);" />
+						<Event Name="MouseDoubleClick" Function="Commendable_ConfirmSelectLine(5);" />
+						<Event Name="MouseEnter" Function="Commendable_LoginServer_MouseEnter(5);" />
+						<Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(5);" />
+					</Window>
+					<Window Type="TLBB_ButtonCheckForComServer" Name="SelectServer_Commendable_Subarea6">
+						<Property Name="AbsolutePosition" Value="x:356.000000 y:32.000000" />
+						<Property Name="AbsoluteSize" Value="w:175.000000 h:25.000000" />
+						<Event Name="Clicked" Function="Commendable_SelectLoginServer(6);" />
+						<Event Name="MouseDoubleClick" Function="Commendable_ConfirmSelectLine(6);" />
+						<Event Name="MouseEnter" Function="Commendable_LoginServer_MouseEnter(6);" />
+						<Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(6);" />
+					</Window>
+					<Window Type="TLBB_ButtonCheckForComServer" Name="SelectServer_Commendable_Subarea7">
+						<Property Name="AbsolutePosition" Value="x:0.000000 y:59.000000" />
+						<Property Name="AbsoluteSize" Value="w:175.000000 h:25.000000" />
+						<Event Name="Clicked" Function="Commendable_SelectLoginServer(7);" />
+						<Event Name="MouseDoubleClick" Function="Commendable_ConfirmSelectLine(7);" />
+						<Event Name="MouseEnter" Function="Commendable_LoginServer_MouseEnter(7);" />
+						<Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(7);" />
+					</Window>
+					<Window Type="TLBB_ButtonCheckForComServer" Name="SelectServer_Commendable_Subarea8">
+						<Property Name="AbsolutePosition" Value="x:178.000000 y:59.000000" />
+						<Property Name="AbsoluteSize" Value="w:175.000000 h:25.000000" />
+						<Event Name="Clicked" Function="Commendable_SelectLoginServer(8);" />
+						<Event Name="MouseDoubleClick" Function="Commendable_ConfirmSelectLine(8);" />
+						<Event Name="MouseEnter" Function="Commendable_LoginServer_MouseEnter(8);" />
+						<Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(8);" />
+					</Window>
+					<Window Type="TLBB_ButtonCheckForComServer" Name="SelectServer_Commendable_Subarea9">
+						<Property Name="AbsolutePosition" Value="x:356.000000 y:59.000000" />
+						<Property Name="AbsoluteSize" Value="w:175.000000 h:25.000000" />
+						<Event Name="Clicked" Function="Commendable_SelectLoginServer(9);" />
+						<Event Name="MouseDoubleClick" Function="Commendable_ConfirmSelectLine(9);" />
+						<Event Name="MouseEnter" Function="Commendable_LoginServer_MouseEnter(9);" />
+						<Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(9);" />
+					</Window>
+				</Window>
+				<!-- 修改过后推荐服务器区域界面
+
+				<Window Type="DefaultWindow" Name="SelectServer_Commendable_Subarea_Frame">
+					<Property Name="AbsolutePosition" Value="x:43.000000 y:61.000000" />
+					<Property Name="AbsoluteSize" Value="w:550.000000 h:96.000000" />
+					<Window Type="TLBB_SimpleText" Name="SelectServer_Commendable_Text">
+						<Property Name="AbsolutePosition" Value="x:6.000000 y:0.000000" />
+						<Property Name="AbsoluteSize" Value="w:120.000000 h:30.000000" />
+						<Property Name="HorzFormatting" Value="LeftAligned" />
+						<Property Name="VertFormatting" Value="VertCentred" />
+						<Property Name="Text" Value="#e010101推荐服务器" />
+						<Property Name="TextColor" Value="FFFFFF00" />
+					</Window>
+					<Window Type="TLBB_SimpleMulitiTextFrame" Name="SelectServer_Commendable_Subarea1">
+						<Property Name="AbsolutePosition" Value="x:1.000000 y:38.000000" />
+						<Property Name="AbsoluteSize" Value="w:262.000000 h:25.000000" />
+						<Property Name="Text" Value="黑龙江二区(新)-扫地老僧(新)-(荐)" />
+						<Event Name="Clicked" Function="Commendable_SelectLoginServer(1);" />
+						<Event Name="MouseDoubleClick" Function="Commendable_ConfirmSelectLine(1);" />
+						<Event Name="MouseEnter" Function="Commendable_LoginServer_MouseEnter(1);" />
+						<Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(1);" />
+						<Window Type="TLBB_ButtonCommon" Name="SelectServer_Commendable_Subarea1_ok">
+							<Property Name="AbsolutePosition" Value="x:219.000000 y:3.000000" />
+							<Property Name="AbsoluteSize" Value="w:40.000000 h:19.000000" />
+							<Property Name="Text" Value="确定" />
+						</Window>
+					</Window>
+					<Window Type="TLBB_SimpleMulitiTextFrame" Name="SelectServer_Commendable_Subarea2">
+						<Property Name="AbsolutePosition" Value="x:268.000000 y:38.000000" />
+						<Property Name="AbsoluteSize" Value="w:262.000000 h:25.000000" />
+						<Event Name="Clicked" Function="Commendable_SelectLoginServer(2);" />
+						<Event Name="MouseDoubleClick" Function="Commendable_ConfirmSelectLine(2);" />
+						<Event Name="MouseEnter" Function="Commendable_LoginServer_MouseEnter(2);" />
+						<Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(2);" />
+						<Window Type="TLBB_ButtonCommon" Name="SelectServer_Commendable_Subarea2_ok">
+							<Property Name="AbsolutePosition" Value="x:219.000000 y:3.000000" />
+							<Property Name="AbsoluteSize" Value="w:40.000000 h:19.000000" />
+							<Property Name="Text" Value="确定" />
+						</Window>
+					</Window>
+					<Window Type="TLBB_SimpleMulitiTextFrame" Name="SelectServer_Commendable_Subarea3">
+						<Property Name="AbsolutePosition" Value="x:1.000000 y:68.000000" />
+						<Property Name="AbsoluteSize" Value="w:262.000000 h:25.000000" />
+						<Event Name="Clicked" Function="Commendable_SelectLoginServer(3);" />
+						<Event Name="MouseDoubleClick" Function="Commendable_ConfirmSelectLine(3);" />
+						<Event Name="MouseEnter" Function="Commendable_LoginServer_MouseEnter(3);" />
+						<Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(3);" />
+						<Window Type="TLBB_ButtonCommon" Name="SelectServer_Commendable_Subarea3_ok">
+							<Property Name="AbsolutePosition" Value="x:219.000000 y:3.000000" />
+							<Property Name="AbsoluteSize" Value="w:40.000000 h:19.000000" />
+							<Property Name="Text" Value="确定" />
+						</Window>
+					</Window>
+					<Window Type="TLBB_SimpleMulitiTextFrame" Name="SelectServer_Commendable_Subarea4">
+						<Property Name="AbsolutePosition" Value="x:268.000000 y:68.000000" />
+						<Property Name="AbsoluteSize" Value="w:262.000000 h:25.000000" />
+						<Event Name="Clicked" Function="Commendable_SelectLoginServer(4);" />
+						<Event Name="MouseDoubleClick" Function="Commendable_ConfirmSelectLine(4);" />
+						<Event Name="MouseEnter" Function="Commendable_LoginServer_MouseEnter(4);" />
+						<Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(4);" />
+						<Window Type="TLBB_ButtonCommon" Name="SelectServer_Commendable_Subarea4_ok">
+							<Property Name="AbsolutePosition" Value="x:219.000000 y:3.000000" />
+							<Property Name="AbsoluteSize" Value="w:40.000000 h:19.000000" />
+							<Property Name="Text" Value="确定" />
+						</Window>
+					</Window>
+				</Window>
+-->
+				<!--公测服务器区-->
+				<Window Type="TLBB_SimpleText" Name="SelectServer2_Commendable_Text">
+					<Property Name="AbsolutePosition" Value="x:36.000000 y:116.000000" />
+					<Property Name="AbsoluteSize" Value="w:30.000000 h:36.000000" />
+					<Property Name="HorzFormatting" Value="WordWrapCentred" />
+					<Property Name="VertFormatting" Value="TopAligned" />
+					<Property Name="Text" Value="#{INTERFACE_XML_935}" />
+					<Property Name="TextColor" Value="FFFF00" />
+					<Property Name="Font" Value="YouYuan11.25" />
+					<Property Name="Visible" Value="False" />
+				</Window>
+				<Window Type="DefaultWindow" Name="SelectServer2_Subarea_Frame">
+					<Property Name="AbsolutePosition" Value="x:64.000000 y:174.000000" />
+					<Property Name="AbsoluteSize" Value="w:531.000000 h:25.000000" />
+					<Window Type="TLBB_ButtonCheckForServer3" Name="SelectServer2_Subarea1">
+						<Property Name="AbsolutePosition" Value="x:2.000000 y:0.000000" />
+						<Property Name="AbsoluteSize" Value="w:120.000000 h:25.000000" />
+						<Property Name="Text" Value="" />
+						<Event Name="Clicked" Function="SelectServer_SelectTestAreaServer(0);" />
+						<Event Name="MouseEnter" Function="SelectServer_TestArea_MouseEnter(0);" />
+						<Event Name="MouseLeave" Function="SelectServer_TestArea_MouseLeave(0);" />
+					</Window>
+					<Window Type="TLBB_ButtonCheckForServer3" Name="SelectServer2_Subarea2">
+						<Property Name="AbsolutePosition" Value="x:133.000000 y:00.000000" />
+						<Property Name="AbsoluteSize" Value="w:120.000000 h:25.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectTestAreaServer(1);" />
+						<Event Name="MouseEnter" Function="SelectServer_TestArea_MouseEnter(1);" />
+						<Event Name="MouseLeave" Function="SelectServer_TestArea_MouseLeave(1);" />
+					</Window>
+					<Window Type="TLBB_ButtonCheckForServer3" Name="SelectServer2_Subarea3">
+						<Property Name="AbsolutePosition" Value="x:264.000000 y:00.000000" />
+						<Property Name="AbsoluteSize" Value="w:120.000000 h:25.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectTestAreaServer(2);" />
+						<Event Name="MouseEnter" Function="SelectServer_TestArea_MouseEnter(2);" />
+						<Event Name="MouseLeave" Function="SelectServer_TestArea_MouseLeave(2);" />
+					</Window>
+					<Window Type="TLBB_ButtonCheckForServer3" Name="SelectServer2_Subarea4">
+						<Property Name="AbsolutePosition" Value="x:395.000000 y:00.000000" />
+						<Property Name="AbsoluteSize" Value="w:120.000000 h:25.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectTestAreaServer(3);" />
+						<Event Name="MouseEnter" Function="SelectServer_TestArea_MouseEnter(3);" />
+						<Event Name="MouseLeave" Function="SelectServer_TestArea_MouseLeave(3);" />
+					</Window>
+					<!-- 这段注释掉
+
+					<Window Type="TLBB_ButtonCheckForServer3" Name="SelectServer2_Subarea5">
+						<Property Name="AbsolutePosition" Value="x:399.000000 y:00.000000" />
+						<Property Name="AbsoluteSize" Value="w:120.000000 h:25.000000" />
+						<Property Name="Visible" Value="False" />
+						<Event Name="Clicked" Function="SelectServer_SelectTestAreaServer(4);" />
+						<Event Name="MouseEnter" Function="SelectServer_TestArea_MouseEnter(4);" />
+						<Event Name="MouseLeave" Function="SelectServer_TestArea_MouseLeave(4);" />
+					</Window>
+					-->
+				</Window>
+				<Window Type="DefaultWindow" Name="SelectServer_Subarea_Frame">
+					<Property Name="AbsolutePosition" Value="x:64.000000 y:99.000000" />
+					<Property Name="AbsoluteSize" Value="w:540.000000 h:74.000000" />
+					<Window Type="TLBB_ButtonCheckForServer" Name="SelectServer_Subarea1">
+						<Property Name="AbsolutePosition" Value="x:2.000000 y:0.000000" />
+						<Property Name="AbsoluteSize" Value="w:120.000000 h:23.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectAreaServer(0);" />
+						<Event Name="MouseEnter" Function="SelectServer_Area_MouseEnter(0);" />
+						<Event Name="MouseLeave" Function="SelectServer_Area_MouseLeave(0);" />
+						<Property Name="Text" Value="#{INTERFACE_XML_318}" />
+					</Window>
+					<Window Type="TLBB_ButtonCheckForServer" Name="SelectServer_Subarea2">
+						<Property Name="AbsolutePosition" Value="x:133.000000 y:0.000000" />
+						<Property Name="AbsoluteSize" Value="w:120.000000 h:23.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectAreaServer(1);" />
+						<Event Name="MouseEnter" Function="SelectServer_Area_MouseEnter(1);" />
+						<Event Name="MouseLeave" Function="SelectServer_Area_MouseLeave(1);" />
+						<Property Name="Text" Value="#{INTERFACE_XML_318}" />
+					</Window>
+					<Window Type="TLBB_ButtonCheckForServer" Name="SelectServer_Subarea3">
+						<Property Name="AbsolutePosition" Value="x:264.000000 y:0.000000" />
+						<Property Name="AbsoluteSize" Value="w:120.000000 h:23.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectAreaServer(2);" />
+						<Event Name="MouseEnter" Function="SelectServer_Area_MouseEnter(2);" />
+						<Event Name="MouseLeave" Function="SelectServer_Area_MouseLeave(2);" />
+						<Property Name="Text" Value="#{INTERFACE_XML_318}" />
+					</Window>
+					<Window Type="TLBB_ButtonCheckForServer" Name="SelectServer_Subarea4">
+						<Property Name="AbsolutePosition" Value="x:395.000000 y:0.000000" />
+						<Property Name="AbsoluteSize" Value="w:120.000000 h:23.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectAreaServer(3);" />
+						<Event Name="MouseEnter" Function="SelectServer_Area_MouseEnter(3);" />
+						<Event Name="MouseLeave" Function="SelectServer_Area_MouseLeave(3);" />
+					</Window>
+					<Window Type="TLBB_ButtonCheckForServer" Name="SelectServer_Subarea5">
+						<Property Name="AbsolutePosition" Value="x:2.000000 y:24.000000" />
+						<Property Name="AbsoluteSize" Value="w:120.000000 h:23.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectAreaServer(4);" />
+						<Event Name="MouseEnter" Function="SelectServer_Area_MouseEnter(4);" />
+						<Event Name="MouseLeave" Function="SelectServer_Area_MouseLeave(4);" />
+					</Window>
+					<Window Type="TLBB_ButtonCheckForServer" Name="SelectServer_Subarea6">
+						<Property Name="AbsolutePosition" Value="x:133.000000 y:24.000000" />
+						<Property Name="AbsoluteSize" Value="w:120.000000 h:23.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectAreaServer(5);" />
+						<Event Name="MouseEnter" Function="SelectServer_Area_MouseEnter(5);" />
+						<Event Name="MouseLeave" Function="SelectServer_Area_MouseLeave(5);" />
+					</Window>
+					<Window Type="TLBB_ButtonCheckForServer" Name="SelectServer_Subarea7">
+						<Property Name="AbsolutePosition" Value="x:264.000000 y:24.000000" />
+						<Property Name="AbsoluteSize" Value="w:120.000000 h:23.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectAreaServer(6);" />
+						<Event Name="MouseEnter" Function="SelectServer_Area_MouseEnter(6);" />
+						<Event Name="MouseLeave" Function="SelectServer_Area_MouseLeave(6);" />
+					</Window>
+					<Window Type="TLBB_ButtonCheckForServer" Name="SelectServer_Subarea8">
+						<Property Name="AbsolutePosition" Value="x:395.000000 y:24.000000" />
+						<Property Name="AbsoluteSize" Value="w:120.000000 h:23.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectAreaServer(7);" />
+						<Event Name="MouseEnter" Function="SelectServer_Area_MouseEnter(7);" />
+						<Event Name="MouseLeave" Function="SelectServer_Area_MouseLeave(7);" />
+					</Window>
+					<Window Type="TLBB_ButtonCheckForServer" Name="SelectServer_Subarea9">
+						<Property Name="AbsolutePosition" Value="x:2.000000 y:48.000000" />
+						<Property Name="AbsoluteSize" Value="w:120.000000 h:25.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectAreaServer(8);" />
+						<Event Name="MouseEnter" Function="SelectServer_Area_MouseEnter(8);" />
+						<Event Name="MouseLeave" Function="SelectServer_Area_MouseLeave(8);" />
+					</Window>
+					<Window Type="TLBB_ButtonCheckForServer" Name="SelectServer_Subarea10">
+						<Property Name="AbsolutePosition" Value="x:133.000000 y:48.000000" />
+						<Property Name="AbsoluteSize" Value="w:120.000000 h:25.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectAreaServer(9);" />
+						<Event Name="MouseEnter" Function="SelectServer_Area_MouseEnter(9);" />
+						<Event Name="MouseLeave" Function="SelectServer_Area_MouseLeave(9);" />
+					</Window>
+					<Window Type="TLBB_ButtonCheckForServer" Name="SelectServer_Subarea11">
+						<Property Name="AbsolutePosition" Value="x:264.000000 y:48.000000" />
+						<Property Name="AbsoluteSize" Value="w:120.000000 h:25.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectAreaServer(10);" />
+						<Event Name="MouseEnter" Function="SelectServer_Area_MouseEnter(10);" />
+						<Event Name="MouseLeave" Function="SelectServer_Area_MouseLeave(10);" />
+					</Window>
+					<Window Type="TLBB_ButtonCheckForServer" Name="SelectServer_Subarea12">
+						<Property Name="AbsolutePosition" Value="x:395.000000 y:48.000000" />
+						<Property Name="AbsoluteSize" Value="w:120.000000 h:25.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectAreaServer(11);" />
+						<Event Name="MouseEnter" Function="SelectServer_Area_MouseEnter(11);" />
+						<Event Name="MouseLeave" Function="SelectServer_Area_MouseLeave(11);" />
+					</Window>
+					<Window Type="TLBB_ButtonCheckForServer" Name="SelectServer_Subarea13">
+						<Property Name="AbsolutePosition" Value="x:2.000000 y:90.000000" />
+						<Property Name="AbsoluteSize" Value="w:120.000000 h:25.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectAreaServer(12);" />
+						<Event Name="MouseEnter" Function="SelectServer_Area_MouseEnter(12);" />
+						<Event Name="MouseLeave" Function="SelectServer_Area_MouseLeave(12);" />
+					</Window>
+					<Window Type="TLBB_ButtonCheckForServer" Name="SelectServer_Subarea14">
+						<Property Name="AbsolutePosition" Value="x:133.000000 y:90.000000" />
+						<Property Name="AbsoluteSize" Value="w:120.000000 h:25.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectAreaServer(13);" />
+						<Event Name="MouseEnter" Function="SelectServer_Area_MouseEnter(13);" />
+						<Event Name="MouseLeave" Function="SelectServer_Area_MouseLeave(13);" />
+					</Window>
+					<Window Type="TLBB_ButtonCheckForServer" Name="SelectServer_Subarea15">
+						<Property Name="AbsolutePosition" Value="x:264.000000 y:90.000000" />
+						<Property Name="AbsoluteSize" Value="w:120.000000 h:25.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectAreaServer(14);" />
+						<Event Name="MouseEnter" Function="SelectServer_Area_MouseEnter(14);" />
+						<Event Name="MouseLeave" Function="SelectServer_Area_MouseLeave(14);" />
+					</Window>
+					<Window Type="TLBB_ButtonCheckForServer" Name="SelectServer_Subarea16">
+						<Property Name="AbsolutePosition" Value="x:395.000000 y:90.000000" />
+						<Property Name="AbsoluteSize" Value="w:120.000000 h:25.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectAreaServer(15);" />
+						<Event Name="MouseEnter" Function="SelectServer_Area_MouseEnter(15);" />
+						<Event Name="MouseLeave" Function="SelectServer_Area_MouseLeave(15);" />
+					</Window>
+					<Window Type="TLBB_ButtonCheckForServer" Name="SelectServer_Subarea17">
+						<Property Name="AbsolutePosition" Value="x:2.000000 y:120.000000" />
+						<Property Name="AbsoluteSize" Value="w:120.000000 h:25.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectAreaServer(16);" />
+						<Event Name="MouseEnter" Function="SelectServer_Area_MouseEnter(16);" />
+						<Event Name="MouseLeave" Function="SelectServer_Area_MouseLeave(16);" />
+					</Window>
+					<Window Type="TLBB_ButtonCheckForServer" Name="SelectServer_Subarea18">
+						<Property Name="AbsolutePosition" Value="x:133.000000 y:120.000000" />
+						<Property Name="AbsoluteSize" Value="w:120.000000 h:25.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectAreaServer(17);" />
+						<Event Name="MouseEnter" Function="SelectServer_Area_MouseEnter(17);" />
+						<Event Name="MouseLeave" Function="SelectServer_Area_MouseLeave(17);" />
+					</Window>
+					<Window Type="TLBB_ButtonCheckForServer" Name="SelectServer_Subarea19">
+						<Property Name="AbsolutePosition" Value="x:264.000000 y:120.000000" />
+						<Property Name="AbsoluteSize" Value="w:120.000000 h:25.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectAreaServer(18);" />
+						<Event Name="MouseEnter" Function="SelectServer_Area_MouseEnter(18);" />
+						<Event Name="MouseLeave" Function="SelectServer_Area_MouseLeave(18);" />
+					</Window>
+					<Window Type="TLBB_ButtonCheckForServer" Name="SelectServer_Subarea20">
+						<Property Name="AbsolutePosition" Value="x:395.000000 y:120.000000" />
+						<Property Name="AbsoluteSize" Value="w:120.000000 h:25.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectAreaServer(19);" />
+						<Event Name="MouseEnter" Function="SelectServer_Area_MouseEnter(19);" />
+						<Event Name="MouseLeave" Function="SelectServer_Area_MouseLeave(19);" />
+					</Window>
+					<Window Type="TLBB_ButtonCheckForServer" Name="SelectServer_Subarea21">
+						<Property Name="AbsolutePosition" Value="x:2.000000 y:150.000000" />
+						<Property Name="AbsoluteSize" Value="w:120.000000 h:25.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectAreaServer(20);" />
+						<Event Name="MouseEnter" Function="SelectServer_Area_MouseEnter(20);" />
+						<Event Name="MouseLeave" Function="SelectServer_Area_MouseLeave(20);" />
+					</Window>
+					<Window Type="TLBB_ButtonCheckForServer" Name="SelectServer_Subarea22">
+						<Property Name="AbsolutePosition" Value="x:133.000000 y:150.000000" />
+						<Property Name="AbsoluteSize" Value="w:120.000000 h:25.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectAreaServer(21);" />
+						<Event Name="MouseEnter" Function="SelectServer_Area_MouseEnter(21);" />
+						<Event Name="MouseLeave" Function="SelectServer_Area_MouseLeave(21);" />
+					</Window>
+					<Window Type="TLBB_ButtonCheckForServer" Name="SelectServer_Subarea23">
+						<Property Name="AbsolutePosition" Value="x:264.000000 y:150.000000" />
+						<Property Name="AbsoluteSize" Value="w:120.000000 h:25.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectAreaServer(22);" />
+						<Event Name="MouseEnter" Function="SelectServer_Area_MouseEnter(22);" />
+						<Event Name="MouseLeave" Function="SelectServer_Area_MouseLeave(22);" />
+					</Window>
+					<Window Type="TLBB_ButtonCheckForServer" Name="SelectServer_Subarea24">
+						<Property Name="AbsolutePosition" Value="x:395.000000 y:150.000000" />
+						<Property Name="AbsoluteSize" Value="w:120.000000 h:25.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectAreaServer(23);" />
+						<Event Name="MouseEnter" Function="SelectServer_Area_MouseEnter(23);" />
+						<Event Name="MouseLeave" Function="SelectServer_Area_MouseLeave(23);" />
+					</Window>
+				</Window>
+				<Window Type="DefaultWindow" Name="SelectServer_Server_Frame">
+					<Property Name="AbsolutePosition" Value="x:45.000000 y:205.000000" />
+					<Property Name="AbsoluteSize" Value="w:545.000000 h:280.000000" />
+					<Window Type="TLBB_NewButtonCheckForPage" Name="SelectServer_Server1">
+						<Property Name="AbsolutePosition" Value="x:6.000000 y:0.000000" />
+						<Property Name="AbsoluteSize" Value="w:100.000000 h:22.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectLoginServer(0,0);" />
+						<Event Name="MouseEnter" Function="SelectServer_LoginServer_MouseEnter(0);" />
+						<Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(0);" />
+						<Event Name="MouseDoubleClick" Function="SelectServer_ConfirmSelectLine(0);" />
+						<Property Name="Text" Value="#{INTERFACE_XML_579}" />
+					</Window>
+					<Window Type="TLBB_NewButtonCheckForPage" Name="SelectServer_Server2">
+						<Property Name="AbsolutePosition" Value="x:114.000000 y:0.000000" />
+						<Property Name="AbsoluteSize" Value="w:100.000000 h:22.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectLoginServer(1,0);" />
+						<Event Name="MouseEnter" Function="SelectServer_LoginServer_MouseEnter(1);" />
+						<Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(1);" />
+						<Event Name="MouseDoubleClick" Function="SelectServer_ConfirmSelectLine(1);" />
+					</Window>
+					<Window Type="TLBB_NewButtonCheckForPage" Name="SelectServer_Server3">
+						<Property Name="AbsolutePosition" Value="x:222.000000 y:0.000000" />
+						<Property Name="AbsoluteSize" Value="w:100.000000 h:22.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectLoginServer(2,0);" />
+						<Event Name="MouseEnter" Function="SelectServer_LoginServer_MouseEnter(2);" />
+						<Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(2);" />
+						<Event Name="MouseDoubleClick" Function="SelectServer_ConfirmSelectLine(2);" />
+					</Window>
+					<Window Type="TLBB_NewButtonCheckForPage" Name="SelectServer_Server4">
+						<Property Name="AbsolutePosition" Value="x:330.000000 y:0.000000" />
+						<Property Name="AbsoluteSize" Value="w:100.000000 h:22.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectLoginServer(3,0);" />
+						<Event Name="MouseEnter" Function="SelectServer_LoginServer_MouseEnter(3);" />
+						<Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(3);" />
+						<Event Name="MouseDoubleClick" Function="SelectServer_ConfirmSelectLine(3);" />
+					</Window>
+					<Window Type="TLBB_NewButtonCheckForPage" Name="SelectServer_Server5">
+						<Property Name="AbsolutePosition" Value="x:438.000000 y:0.000000" />
+						<Property Name="AbsoluteSize" Value="w:100.000000 h:22.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectLoginServer(4,0);" />
+						<Event Name="MouseEnter" Function="SelectServer_LoginServer_MouseEnter(4);" />
+						<Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(4);" />
+						<Event Name="MouseDoubleClick" Function="SelectServer_ConfirmSelectLine(4);" />
+					</Window>
+					<Window Type="TLBB_NewButtonCheckForPage" Name="SelectServer_Server6">
+						<Property Name="AbsolutePosition" Value="x:6.000000 y:25.000000" />
+						<Property Name="AbsoluteSize" Value="w:100.000000 h:22.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectLoginServer(5,0);" />
+						<Event Name="MouseEnter" Function="SelectServer_LoginServer_MouseEnter(5);" />
+						<Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(5);" />
+						<Event Name="MouseDoubleClick" Function="SelectServer_ConfirmSelectLine(5);" />
+					</Window>
+					<Window Type="TLBB_NewButtonCheckForPage" Name="SelectServer_Server7">
+						<Property Name="AbsolutePosition" Value="x:114.000000 y:25.000000" />
+						<Property Name="AbsoluteSize" Value="w:100.000000 h:22.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectLoginServer(6,0);" />
+						<Event Name="MouseEnter" Function="SelectServer_LoginServer_MouseEnter(6);" />
+						<Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(6);" />
+						<Event Name="MouseDoubleClick" Function="SelectServer_ConfirmSelectLine(6);" />
+					</Window>
+					<Window Type="TLBB_NewButtonCheckForPage" Name="SelectServer_Server8">
+						<Property Name="AbsolutePosition" Value="x:222.000000 y:25.000000" />
+						<Property Name="AbsoluteSize" Value="w:100.000000 h:22.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectLoginServer(7,0);" />
+						<Event Name="MouseEnter" Function="SelectServer_LoginServer_MouseEnter(7);" />
+						<Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(7);" />
+						<Event Name="MouseDoubleClick" Function="SelectServer_ConfirmSelectLine(7);" />
+					</Window>
+					<Window Type="TLBB_NewButtonCheckForPage" Name="SelectServer_Server9">
+						<Property Name="AbsolutePosition" Value="x:330.000000 y:25.000000" />
+						<Property Name="AbsoluteSize" Value="w:100.000000 h:22.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectLoginServer(8,0);" />
+						<Event Name="MouseEnter" Function="SelectServer_LoginServer_MouseEnter(8);" />
+						<Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(8);" />
+						<Event Name="MouseDoubleClick" Function="SelectServer_ConfirmSelectLine(8);" />
+					</Window>
+					<Window Type="TLBB_NewButtonCheckForPage" Name="SelectServer_Server10">
+						<Property Name="AbsolutePosition" Value="x:438.000000 y:25.000000" />
+						<Property Name="AbsoluteSize" Value="w:100.000000 h:22.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectLoginServer(9,0);" />
+						<Event Name="MouseEnter" Function="SelectServer_LoginServer_MouseEnter(9);" />
+						<Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(9);" />
+						<Event Name="MouseDoubleClick" Function="SelectServer_ConfirmSelectLine(9);" />
+					</Window>
+					<Window Type="TLBB_NewButtonCheckForPage" Name="SelectServer_Server11">
+						<Property Name="AbsolutePosition" Value="x:6.000000 y:50.000000" />
+						<Property Name="AbsoluteSize" Value="w:100.000000 h:22.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectLoginServer(10,0);" />
+						<Event Name="MouseEnter" Function="SelectServer_LoginServer_MouseEnter(10);" />
+						<Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(10);" />
+						<Event Name="MouseDoubleClick" Function="SelectServer_ConfirmSelectLine(10);" />
+					</Window>
+					<Window Type="TLBB_NewButtonCheckForPage" Name="SelectServer_Server12">
+						<Property Name="AbsolutePosition" Value="x:114.000000 y:50.000000" />
+						<Property Name="AbsoluteSize" Value="w:100.000000 h:22.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectLoginServer(11,0);" />
+						<Event Name="MouseEnter" Function="SelectServer_LoginServer_MouseEnter(11);" />
+						<Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(11);" />
+						<Event Name="MouseDoubleClick" Function="SelectServer_ConfirmSelectLine(11);" />
+					</Window>
+					<Window Type="TLBB_NewButtonCheckForPage" Name="SelectServer_Server13">
+						<Property Name="AbsolutePosition" Value="x:222.000000 y:50.000000" />
+						<Property Name="AbsoluteSize" Value="w:100.000000 h:22.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectLoginServer(12,0);" />
+						<Event Name="MouseEnter" Function="SelectServer_LoginServer_MouseEnter(12);" />
+						<Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(12);" />
+						<Event Name="MouseDoubleClick" Function="SelectServer_ConfirmSelectLine(12);" />
+					</Window>
+					<Window Type="TLBB_NewButtonCheckForPage" Name="SelectServer_Server14">
+						<Property Name="AbsolutePosition" Value="x:330.000000 y:50.000000" />
+						<Property Name="AbsoluteSize" Value="w:100.000000 h:22.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectLoginServer(13,0);" />
+						<Event Name="MouseEnter" Function="SelectServer_LoginServer_MouseEnter(13);" />
+						<Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(13);" />
+						<Event Name="MouseDoubleClick" Function="SelectServer_ConfirmSelectLine(13);" />
+					</Window>
+					<Window Type="TLBB_NewButtonCheckForPage" Name="SelectServer_Server15">
+						<Property Name="AbsolutePosition" Value="x:438.000000 y:50.000000" />
+						<Property Name="AbsoluteSize" Value="w:100.000000 h:22.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectLoginServer(14,0);" />
+						<Event Name="MouseEnter" Function="SelectServer_LoginServer_MouseEnter(14);" />
+						<Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(14);" />
+						<Event Name="MouseDoubleClick" Function="SelectServer_ConfirmSelectLine(14);" />
+					</Window>
+					<Window Type="TLBB_NewButtonCheckForPage" Name="SelectServer_Server16">
+						<Property Name="AbsolutePosition" Value="x:6.000000 y:75.000000" />
+						<Property Name="AbsoluteSize" Value="w:100.000000 h:22.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectLoginServer(15,0);" />
+						<Event Name="MouseEnter" Function="SelectServer_LoginServer_MouseEnter(15);" />
+						<Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(15);" />
+						<Event Name="MouseDoubleClick" Function="SelectServer_ConfirmSelectLine(15);" />
+					</Window>
+					<Window Type="TLBB_NewButtonCheckForPage" Name="SelectServer_Server17">
+						<Property Name="AbsolutePosition" Value="x:114.000000 y:75.000000" />
+						<Property Name="AbsoluteSize" Value="w:100.000000 h:22.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectLoginServer(16,0);" />
+						<Event Name="MouseEnter" Function="SelectServer_LoginServer_MouseEnter(16);" />
+						<Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(16);" />
+						<Event Name="MouseDoubleClick" Function="SelectServer_ConfirmSelectLine(16);" />
+					</Window>
+					<Window Type="TLBB_NewButtonCheckForPage" Name="SelectServer_Server18">
+						<Property Name="AbsolutePosition" Value="x:222.000000 y:75.000000" />
+						<Property Name="AbsoluteSize" Value="w:100.000000 h:22.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectLoginServer(17,0);" />
+						<Event Name="MouseEnter" Function="SelectServer_LoginServer_MouseEnter(17);" />
+						<Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(17);" />
+						<Event Name="MouseDoubleClick" Function="SelectServer_ConfirmSelectLine(17);" />
+					</Window>
+					<Window Type="TLBB_NewButtonCheckForPage" Name="SelectServer_Server19">
+						<Property Name="AbsolutePosition" Value="x:330.000000 y:75.000000" />
+						<Property Name="AbsoluteSize" Value="w:100.000000 h:22.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectLoginServer(18,0);" />
+						<Event Name="MouseEnter" Function="SelectServer_LoginServer_MouseEnter(18);" />
+						<Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(18);" />
+						<Event Name="MouseDoubleClick" Function="SelectServer_ConfirmSelectLine(18);" />
+					</Window>
+					<Window Type="TLBB_NewButtonCheckForPage" Name="SelectServer_Server20">
+						<Property Name="AbsolutePosition" Value="x:438.000000 y:75.000000" />
+						<Property Name="AbsoluteSize" Value="w:100.000000 h:22.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectLoginServer(19,0);" />
+						<Event Name="MouseEnter" Function="SelectServer_LoginServer_MouseEnter(19);" />
+						<Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(19);" />
+						<Event Name="MouseDoubleClick" Function="SelectServer_ConfirmSelectLine(19);" />
+					</Window>
+					<Window Type="TLBB_NewButtonCheckForPage" Name="SelectServer_Server21">
+						<Property Name="AbsolutePosition" Value="x:6.000000 y:100.000000" />
+						<Property Name="AbsoluteSize" Value="w:100.000000 h:22.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectLoginServer(20,0);" />
+						<Event Name="MouseEnter" Function="SelectServer_LoginServer_MouseEnter(20);" />
+						<Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(20);" />
+						<Event Name="MouseDoubleClick" Function="SelectServer_ConfirmSelectLine(20);" />
+					</Window>
+					<Window Type="TLBB_NewButtonCheckForPage" Name="SelectServer_Server22">
+						<Property Name="AbsolutePosition" Value="x:114.000000 y:100.000000" />
+						<Property Name="AbsoluteSize" Value="w:100.000000 h:22.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectLoginServer(21,0);" />
+						<Event Name="MouseEnter" Function="SelectServer_LoginServer_MouseEnter(21);" />
+						<Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(21);" />
+						<Event Name="MouseDoubleClick" Function="SelectServer_ConfirmSelectLine(21);" />
+					</Window>
+					<Window Type="TLBB_NewButtonCheckForPage" Name="SelectServer_Server23">
+						<Property Name="AbsolutePosition" Value="x:222.000000 y:100.000000" />
+						<Property Name="AbsoluteSize" Value="w:100.000000 h:22.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectLoginServer(22,0);" />
+						<Event Name="MouseEnter" Function="SelectServer_LoginServer_MouseEnter(22);" />
+						<Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(22);" />
+						<Event Name="MouseDoubleClick" Function="SelectServer_ConfirmSelectLine(22);" />
+					</Window>
+					<Window Type="TLBB_NewButtonCheckForPage" Name="SelectServer_Server24">
+						<Property Name="AbsolutePosition" Value="x:330.000000 y:100.000000" />
+						<Property Name="AbsoluteSize" Value="w:100.000000 h:22.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectLoginServer(23,0);" />
+						<Event Name="MouseEnter" Function="SelectServer_LoginServer_MouseEnter(23);" />
+						<Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(23);" />
+						<Event Name="MouseDoubleClick" Function="SelectServer_ConfirmSelectLine(23);" />
+					</Window>
+					<Window Type="TLBB_NewButtonCheckForPage" Name="SelectServer_Server25">
+						<Property Name="AbsolutePosition" Value="x:438.000000 y:100.000000" />
+						<Property Name="AbsoluteSize" Value="w:100.000000 h:22.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectLoginServer(24,0);" />
+						<Event Name="MouseEnter" Function="SelectServer_LoginServer_MouseEnter(24);" />
+						<Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(24);" />
+						<Event Name="MouseDoubleClick" Function="SelectServer_ConfirmSelectLine(24);" />
+					</Window>
+					<Window Type="TLBB_NewButtonCheckForPage" Name="SelectServer_Server26">
+						<Property Name="AbsolutePosition" Value="x:6.000000 y:125.000000" />
+						<Property Name="AbsoluteSize" Value="w:100.000000 h:22.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectLoginServer(25,0);" />
+						<Event Name="MouseEnter" Function="SelectServer_LoginServer_MouseEnter(25);" />
+						<Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(25);" />
+						<Event Name="MouseDoubleClick" Function="SelectServer_ConfirmSelectLine(25);" />
+					</Window>
+					<Window Type="TLBB_NewButtonCheckForPage" Name="SelectServer_Server27">
+						<Property Name="AbsolutePosition" Value="x:114.000000 y:125.000000" />
+						<Property Name="AbsoluteSize" Value="w:100.000000 h:22.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectLoginServer(26,0);" />
+						<Event Name="MouseEnter" Function="SelectServer_LoginServer_MouseEnter(26);" />
+						<Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(26);" />
+						<Event Name="MouseDoubleClick" Function="SelectServer_ConfirmSelectLine(26);" />
+					</Window>
+					<Window Type="TLBB_NewButtonCheckForPage" Name="SelectServer_Server28">
+						<Property Name="AbsolutePosition" Value="x:222.000000 y:125.000000" />
+						<Property Name="AbsoluteSize" Value="w:100.000000 h:22.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectLoginServer(27,0);" />
+						<Event Name="MouseEnter" Function="SelectServer_LoginServer_MouseEnter(27);" />
+						<Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(27);" />
+						<Event Name="MouseDoubleClick" Function="SelectServer_ConfirmSelectLine(27);" />
+					</Window>
+					<Window Type="TLBB_NewButtonCheckForPage" Name="SelectServer_Server29">
+						<Property Name="AbsolutePosition" Value="x:330.000000 y:125.000000" />
+						<Property Name="AbsoluteSize" Value="w:100.000000 h:22.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectLoginServer(28,0);" />
+						<Event Name="MouseEnter" Function="SelectServer_LoginServer_MouseEnter(28);" />
+						<Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(28);" />
+						<Event Name="MouseDoubleClick" Function="SelectServer_ConfirmSelectLine(28);" />
+					</Window>
+					<Window Type="TLBB_NewButtonCheckForPage" Name="SelectServer_Server30">
+						<Property Name="AbsolutePosition" Value="x:438.000000 y:125.000000" />
+						<Property Name="AbsoluteSize" Value="w:100.000000 h:22.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectLoginServer(29,0);" />
+						<Event Name="MouseEnter" Function="SelectServer_LoginServer_MouseEnter(29);" />
+						<Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(29);" />
+						<Event Name="MouseDoubleClick" Function="SelectServer_ConfirmSelectLine(29);" />
+					</Window>
+          <Window Type="TLBB_NewButtonCheckForPage" Name="SelectServer_Server31">
+            <Property Name="AbsolutePosition" Value="x:6.000000 y:150.000000" />
+            <Property Name="AbsoluteSize" Value="w:100.000000 h:22.000000" />
+            <Event Name="Clicked" Function="SelectServer_SelectLoginServer(30,0);" />
+            <Event Name="MouseEnter" Function="SelectServer_LoginServer_MouseEnter(30);" />
+            <Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(30);" />
+            <Event Name="MouseDoubleClick" Function="SelectServer_ConfirmSelectLine(30);" />
+          </Window>
+          <Window Type="TLBB_NewButtonCheckForPage" Name="SelectServer_Server32">
+            <Property Name="AbsolutePosition" Value="x:114.000000 y:150.000000" />
+            <Property Name="AbsoluteSize" Value="w:100.000000 h:22.000000" />
+            <Event Name="Clicked" Function="SelectServer_SelectLoginServer(31,0);" />
+            <Event Name="MouseEnter" Function="SelectServer_LoginServer_MouseEnter(31);" />
+            <Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(31);" />
+            <Event Name="MouseDoubleClick" Function="SelectServer_ConfirmSelectLine(31);" />
+          </Window>
+          <Window Type="TLBB_NewButtonCheckForPage" Name="SelectServer_Server33">
+            <Property Name="AbsolutePosition" Value="x:222.000000 y:150.000000" />
+            <Property Name="AbsoluteSize" Value="w:100.000000 h:22.000000" />
+            <Event Name="Clicked" Function="SelectServer_SelectLoginServer(32,0);" />
+            <Event Name="MouseEnter" Function="SelectServer_LoginServer_MouseEnter(32);" />
+            <Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(32);" />
+            <Event Name="MouseDoubleClick" Function="SelectServer_ConfirmSelectLine(32);" />
+          </Window>
+          <Window Type="TLBB_NewButtonCheckForPage" Name="SelectServer_Server34">
+            <Property Name="AbsolutePosition" Value="x:330.000000 y:150.000000" />
+            <Property Name="AbsoluteSize" Value="w:100.000000 h:22.000000" />
+            <Event Name="Clicked" Function="SelectServer_SelectLoginServer(33,0);" />
+            <Event Name="MouseEnter" Function="SelectServer_LoginServer_MouseEnter(33);" />
+            <Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(33);" />
+            <Event Name="MouseDoubleClick" Function="SelectServer_ConfirmSelectLine(33);" />
+          </Window>
+          <Window Type="TLBB_NewButtonCheckForPage" Name="SelectServer_Server35">
+            <Property Name="AbsolutePosition" Value="x:438.000000 y:150.000000" />
+            <Property Name="AbsoluteSize" Value="w:100.000000 h:22.000000" />
+            <Event Name="Clicked" Function="SelectServer_SelectLoginServer(34,0);" />
+            <Event Name="MouseEnter" Function="SelectServer_LoginServer_MouseEnter(34);" />
+            <Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(34);" />
+            <Event Name="MouseDoubleClick" Function="SelectServer_ConfirmSelectLine(34);" />
+          </Window>
+          <Window Type="TLBB_NewButtonCheckForPage" Name="SelectServer_Server36">
+            <Property Name="AbsolutePosition" Value="x:6.000000 y:175.000000" />
+            <Property Name="AbsoluteSize" Value="w:100.000000 h:22.000000" />
+            <Event Name="Clicked" Function="SelectServer_SelectLoginServer(35,0);" />
+            <Event Name="MouseEnter" Function="SelectServer_LoginServer_MouseEnter(35);" />
+            <Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(35);" />
+            <Event Name="MouseDoubleClick" Function="SelectServer_ConfirmSelectLine(35);" />
+          </Window>
+          <Window Type="TLBB_NewButtonCheckForPage" Name="SelectServer_Server37">
+            <Property Name="AbsolutePosition" Value="x:114.000000 y:175.000000" />
+            <Property Name="AbsoluteSize" Value="w:100.000000 h:22.000000" />
+            <Event Name="Clicked" Function="SelectServer_SelectLoginServer(36,0);" />
+            <Event Name="MouseEnter" Function="SelectServer_LoginServer_MouseEnter(36);" />
+            <Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(36);" />
+            <Event Name="MouseDoubleClick" Function="SelectServer_ConfirmSelectLine(36);" />
+          </Window>
+          <Window Type="TLBB_NewButtonCheckForPage" Name="SelectServer_Server38">
+            <Property Name="AbsolutePosition" Value="x:222.000000 y:175.000000" />
+            <Property Name="AbsoluteSize" Value="w:100.000000 h:22.000000" />
+            <Event Name="Clicked" Function="SelectServer_SelectLoginServer(37,0);" />
+            <Event Name="MouseEnter" Function="SelectServer_LoginServer_MouseEnter(37);" />
+            <Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(37);" />
+            <Event Name="MouseDoubleClick" Function="SelectServer_ConfirmSelectLine(37);" />
+          </Window>
+          <Window Type="TLBB_NewButtonCheckForPage" Name="SelectServer_Server39">
+            <Property Name="AbsolutePosition" Value="x:330.000000 y:175.000000" />
+            <Property Name="AbsoluteSize" Value="w:100.000000 h:22.000000" />
+            <Event Name="Clicked" Function="SelectServer_SelectLoginServer(38,0);" />
+            <Event Name="MouseEnter" Function="SelectServer_LoginServer_MouseEnter(38);" />
+            <Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(38);" />
+            <Event Name="MouseDoubleClick" Function="SelectServer_ConfirmSelectLine(38);" />
+          </Window>
+          <Window Type="TLBB_NewButtonCheckForPage" Name="SelectServer_Server40">
+            <Property Name="AbsolutePosition" Value="x:438.000000 y:175.000000" />
+            <Property Name="AbsoluteSize" Value="w:100.000000 h:22.000000" />
+            <Event Name="Clicked" Function="SelectServer_SelectLoginServer(39,0);" />
+            <Event Name="MouseEnter" Function="SelectServer_LoginServer_MouseEnter(39);" />
+            <Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(39);" />
+            <Event Name="MouseDoubleClick" Function="SelectServer_ConfirmSelectLine(39);" />
+          </Window>
+          <Window Type="TLBB_NewButtonCheckForPage" Name="SelectServer_Server41">
+            <Property Name="AbsolutePosition" Value="x:6.000000 y:200.000000" />
+            <Property Name="AbsoluteSize" Value="w:100.000000 h:22.000000" />
+            <Event Name="Clicked" Function="SelectServer_SelectLoginServer(40,0);" />
+            <Event Name="MouseEnter" Function="SelectServer_LoginServer_MouseEnter(40);" />
+            <Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(40);" />
+            <Event Name="MouseDoubleClick" Function="SelectServer_ConfirmSelectLine(40);" />
+          </Window>
+          <Window Type="TLBB_NewButtonCheckForPage" Name="SelectServer_Server42">
+            <Property Name="AbsolutePosition" Value="x:114.000000 y:200.000000" />
+            <Property Name="AbsoluteSize" Value="w:100.000000 h:22.000000" />
+            <Event Name="Clicked" Function="SelectServer_SelectLoginServer(41,0);" />
+            <Event Name="MouseEnter" Function="SelectServer_LoginServer_MouseEnter(41);" />
+            <Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(41);" />
+            <Event Name="MouseDoubleClick" Function="SelectServer_ConfirmSelectLine(41);" />
+          </Window>
+          <Window Type="TLBB_NewButtonCheckForPage" Name="SelectServer_Server43">
+            <Property Name="AbsolutePosition" Value="x:222.000000 y:200.000000" />
+            <Property Name="AbsoluteSize" Value="w:100.000000 h:22.000000" />
+            <Event Name="Clicked" Function="SelectServer_SelectLoginServer(42,0);" />
+            <Event Name="MouseEnter" Function="SelectServer_LoginServer_MouseEnter(42);" />
+            <Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(42);" />
+            <Event Name="MouseDoubleClick" Function="SelectServer_ConfirmSelectLine(42);" />
+          </Window>
+          <Window Type="TLBB_NewButtonCheckForPage" Name="SelectServer_Server44">
+            <Property Name="AbsolutePosition" Value="x:330.000000 y:200.000000" />
+            <Property Name="AbsoluteSize" Value="w:100.000000 h:22.000000" />
+            <Event Name="Clicked" Function="SelectServer_SelectLoginServer(43,0);" />
+            <Event Name="MouseEnter" Function="SelectServer_LoginServer_MouseEnter(43);" />
+            <Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(43);" />
+            <Event Name="MouseDoubleClick" Function="SelectServer_ConfirmSelectLine(43);" />
+          </Window>
+          <Window Type="TLBB_NewButtonCheckForPage" Name="SelectServer_Server45">
+            <Property Name="AbsolutePosition" Value="x:438.000000 y:200.000000" />
+            <Property Name="AbsoluteSize" Value="w:100.000000 h:22.000000" />
+            <Event Name="Clicked" Function="SelectServer_SelectLoginServer(44,0);" />
+            <Event Name="MouseEnter" Function="SelectServer_LoginServer_MouseEnter(44);" />
+            <Event Name="MouseLeave" Function="SelectServer_LoginServer_MouseLeave(44);" />
+            <Event Name="MouseDoubleClick" Function="SelectServer_ConfirmSelectLine(44);" />
+          </Window>
+				</Window>
+				<Window Type="TLBB_MainFrame_SelectServer2" Name="SelectServer_Background_Frame2">
+					<Property Name="AbsolutePosition" Value="x:606.000000 y:63.000000" />
+					<Property Name="AbsoluteSize" Value="w:134.000000 h:190.000000" />
+					<Property Name="RiseOnClick" Value="False" />
+					<Window Type="DefaultWindow" Name="SelectServer_Line_Frame">
+						<Property Name="AbsolutePosition" Value="x:6.000000 y:7.000000" />
+						<Property Name="AbsoluteSize" Value="w:118.000000 h:175.000000" />
+						<Window Type="TLBB_ButtonCheckForPage" Name="SelectServer_Line1">
+							<Property Name="AbsolutePosition" Value="x:14.000000 y:44.000000" />
+							<Property Name="AbsoluteSize" Value="w:88.000000 h:22.000000" />
+							<Event Name="Clicked" Function="SelectServer_SelectLine1();" />
+							<Event Name="MouseEnter" Function="SelectServer_MouseEnter_Line(1);" />
+							<Event Name="MouseLeave" Function="SelectServer_MouseLeave();" />
+						</Window>
+						<Window Type="TLBB_ButtonCheckForPage" Name="SelectServer_Line2">
+							<Property Name="AbsolutePosition" Value="x:14.000000 y:74.000000" />
+							<Property Name="AbsoluteSize" Value="w:88.000000 h:22.000000" />
+							<Event Name="Clicked" Function="SelectServer_SelectLine2();" />
+							<Event Name="MouseEnter" Function="SelectServer_MouseEnter_Line(2);" />
+							<Event Name="MouseLeave" Function="SelectServer_MouseLeave();" />
+						</Window>
+						<Window Type="TLBB_ButtonCheckForPage" Name="SelectServer_Line3">
+							<Property Name="AbsolutePosition" Value="x:14.000000 y:104.000000" />
+							<Property Name="AbsoluteSize" Value="w:88.000000 h:22.000000" />
+							<Event Name="Clicked" Function="SelectServer_SelectLine3();" />
+							<Event Name="MouseEnter" Function="SelectServer_MouseEnter_Line(3);" />
+							<Event Name="MouseLeave" Function="SelectServer_MouseLeave();" />
+						</Window>
+						<Window Type="TLBB_ButtonCheckForPage" Name="SelectServer_Line4">
+							<Property Name="AbsolutePosition" Value="x:14.000000 y:134.000000" />
+							<Property Name="AbsoluteSize" Value="w:88.000000 h:22.000000" />
+							<Event Name="Clicked" Function="SelectServer_SelectLine4();" />
+							<Event Name="MouseEnter" Function="SelectServer_MouseEnter_Line(4);" />
+							<Event Name="MouseLeave" Function="SelectServer_MouseLeave();" />
+						</Window>
+						<Window Type="TLBB_SimpleText" Name="SelectServer_Line_Text">
+							<Property Name="AbsolutePosition" Value="x:4.000000 y:3.000000" />
+							<Property Name="AbsoluteSize" Value="w:113.000000 h:38.000000" />
+							<Property Name="Text" Value="#{INTERFACE_XML_3}" />
+							<Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+							<Property Name="VertFormatting" Value="TopAligned" />
+							<Property Name="RiseOnClick" Value="False" />
+						</Window>
+					</Window>
+				</Window>
+				<Window Type="TLBB_MainFrame_SelectServer2" Name="SelectServer_Background_Frame3">
+					<Property Name="AbsolutePosition" Value="x:606.000000 y:249.000000" />
+					<Property Name="AbsoluteSize" Value="w:134.000000 h:80.000000" />
+					<Window Type="TLBB_SimpleText" Name="SelectServer_Server_Last_Text">
+						<Property Name="AbsolutePosition" Value="x:8.000000 y:14.000000" />
+						<Property Name="AbsoluteSize" Value="w:122.000000 h:18.000000" />
+						<Property Name="Text" Value="#{INTERFACE_XML_971}" />
+						<Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+						<Property Name="VertFormatting" Value="TopAligned" />
+						<Property Name="RiseOnClick" Value="False" />
+					</Window>
+					<Window Type="TLBB_NewButtonCheckForPage" Name="SelectServer_Server_Last">
+						<Property Name="AbsolutePosition" Value="x:16.000000 y:38.000000" />
+						<Property Name="AbsoluteSize" Value="w:100.000000 h:22.000000" />
+						<Event Name="Clicked" Function="SelectServer_SelectLastServer();" />
+						<Event Name="MouseLeave" Function="SelectServer_LastServer_MouseLeave();" />	
+						<Event Name="MouseEnter" Function="SelectServer_LastServer_MouseEnter();" />
+						<Event Name="MouseDoubleClick" Function="SelectServer_LastConfirmSelectLine();" />						
+					</Window>
+				</Window>
+				<Window Type="TLBB_Frame_Lace4" Name="SelectServer_Help_Text_Frame">
+					<Property Name="AbsolutePosition" Value="x:36.000000 y:450.000000" />
+					<Property Name="AbsoluteSize" Value="w:563.000000 h:55.000000" />
+					<Window Type="TLBB_SimpleText" Name="SelectServer_Help_Text0">
+						<Property Name="AbsolutePosition" Value="x:14.000000 y:11.000000" />
+						<Property Name="AbsoluteSize" Value="w:500.000000 h:16.000000" />
+						<Property Name="Text" Value="#{INTERFACE_XML_65}" />
+						<Property Name="HorzFormatting" Value="LeftAligned" />
+						<Property Name="VertFormatting" Value="VertCentred" />
+						<Property Name="RiseOnClick" Value="False" />
+					</Window>
+					<Window Type="TLBB_SimpleText" Name="SelectServer_Help_Text5">
+						<Property Name="AbsolutePosition" Value="x:14.000000 y:30.000000" />
+						<Property Name="AbsoluteSize" Value="w:100.000000 h:16.000000" />
+						<Property Name="Text" Value="#{INTERFACE_XML_446}" />
+						<Property Name="HorzFormatting" Value="LeftAligned" />
+						<Property Name="VertFormatting" Value="VertCentred" />
+						<Property Name="RiseOnClick" Value="False" />
+					</Window>
+					<Window Type="TLBB_SimpleText" Name="SelectServer_Help_Text2">
+						<Property Name="AbsolutePosition" Value="x:124.000000 y:30.000000" />
+						<Property Name="AbsoluteSize" Value="w:100.000000 h:16.000000" />
+						<Property Name="Text" Value="#{INTERFACE_XML_501}" />
+						<Property Name="HorzFormatting" Value="LeftAligned" />
+						<Property Name="VertFormatting" Value="VertCentred" />
+						<Property Name="RiseOnClick" Value="False" />
+					</Window>
+					<Window Type="TLBB_SimpleText" Name="SelectServer_Help_Text4">
+						<Property Name="AbsolutePosition" Value="x:234.000000 y:30.000000" />
+						<Property Name="AbsoluteSize" Value="w:100.000000 h:16.000000" />
+						<Property Name="Text" Value="#{INTERFACE_XML_182}" />
+						<Property Name="HorzFormatting" Value="LeftAligned" />
+						<Property Name="VertFormatting" Value="VertCentred" />
+						<Property Name="RiseOnClick" Value="False" />
+					</Window>
+					<Window Type="TLBB_SimpleText" Name="SelectServer_Help_Text1">
+						<Property Name="AbsolutePosition" Value="x:344.000000 y:30.000000" />
+						<Property Name="AbsoluteSize" Value="w:100.000000 h:16.000000" />
+						<Property Name="Text" Value="#{INTERFACE_XML_324}" />
+						<Property Name="HorzFormatting" Value="LeftAligned" />
+						<Property Name="VertFormatting" Value="VertCentred" />
+						<Property Name="RiseOnClick" Value="False" />
+					</Window>
+					<Window Type="TLBB_SimpleText" Name="SelectServer_Help_Text3">
+						<Property Name="AbsolutePosition" Value="x:454.000000 y:30.000000" />
+						<Property Name="AbsoluteSize" Value="w:100.000000 h:16.000000" />
+						<Property Name="Text" Value="#{INTERFACE_XML_334}" />
+						<Property Name="HorzFormatting" Value="LeftAligned" />
+						<Property Name="VertFormatting" Value="VertCentred" />
+						<Property Name="RiseOnClick" Value="False" />
+					</Window>
+				</Window>
+			</Window>
+      <Window Type="TLBB_ButtonExp1" Name="SelectServer_shangyibu">
+        <Property Name="AbsolutePosition" Value="x:625.000000 y:414.000000" />
+        <Property Name="AbsoluteSize" Value="w:117.000000 h:40.000000" />
+        <Property Name="Text" Value="上一步" />
+		<Event Name="Clicked" Function="SelectServer_shangyibu_click();" />
+      </Window>
+			<Window Type="TLBB_ButtonExp1" Name="SelectServer_Accept">
+				<Property Name="AbsolutePosition" Value="x:625.000000 y:371.000000" />
+				<Property Name="AbsoluteSize" Value="w:117.000000 h:40.000000" />
+				<Event Name="Clicked" Function="SelectServer_SelectOk();" />
+				<Event Name="MouseEnter" Function="SelectServer_Accept_MouseEnter();" />
+				<Event Name="MouseLeave" Function="SelectServer_MouseLeave();" />
+				<Property Name="Text" Value="#{INTERFACE_XML_562}" />
+			</Window>
+			<Window Type="TLBB_ButtonExp1" Name="SelectServer_Automatic">
+				<Property Name="Visible" Value="False" />
+				<Property Name="AbsolutePosition" Value="x:625.000000 y:371.000000" />
+				<Property Name="AbsoluteSize" Value="w:117.000000 h:40.000000" />
+				<Event Name="Clicked" Function="SelectServer_SelectAuto();" />
+				<Event Name="MouseEnter" Function="SelectServer_Automatic_MouseEnter();" />
+				<Event Name="MouseLeave" Function="SelectServer_MouseLeave();" />
+				<Property Name="Text" Value="#{INTERFACE_XML_888}" />
+			</Window>
+			<Window Type="TLBB_ButtonExp1" Name="SelectServer_Regist">
+				<Property Name="AbsolutePosition" Value="x:625.000000 y:457.000000" />
+				<Property Name="AbsoluteSize" Value="w:117.000000 h:40.000000" />
+				<Property Name="Text" Value="#{INTERFACE_XML_852}" />
+				<Event Name="Clicked" Function="SelectServer_AccountReg();" />
+			</Window>
+			<Window Type="TLBB_ButtonExp1" Name="SelectServer_Charge">
+				<Property Name="AbsolutePosition" Value="x:625.000000 y:501.000000" />
+				<Property Name="AbsoluteSize" Value="w:117.000000 h:40.000000" />
+				<Property Name="Text" Value="#{INTERFACE_XML_851}" />
+				<Event Name="Clicked" Function="SelectServer_AccountChongZhi();" />
+			</Window>
+			<Window Type="TLBB_ButtonExp1" Name="SelectServer_Cancel">
+				<Property Name="AbsolutePosition" Value="x:625.000000 y:544.000000" />
+				<Property Name="AbsoluteSize" Value="w:117.000000 h:40.000000" />
+				<Event Name="Clicked" Function="SelectServer_Exit();" />
+				<Event Name="MouseEnter" Function="SelectServer_Cancel_MouseEnter();" />
+				<Event Name="MouseLeave" Function="SelectServer_MouseLeave();" />
+				<Property Name="Text" Value="#{INTERFACE_XML_705}" />
+			</Window>
+		</Window>
+    <Window Type="TLBB_SimpleText" Name="SelectServer_Server_xugou_Text" >
+      <Property Name="AbsolutePosition" Value="x:8.000000 y:21.000000" />
+      <Property Name="AbsoluteSize" Value="w:100.000000 h:18.000000" />
+      <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+      <Property Name="RiseOnClick" Value="False" />
+      <Property Name="Text" Value="#{INTERFACE_XML_1037}" />
+      <Property Name="VertFormatting" Value="TopAligned" />
+    </Window>
+ 
+  </Window>
+</GUILayout>

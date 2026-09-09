@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" ?>
+<GUILayout>
+  <Window Type="TLBB_MainFrame1" Name="ZhengyouYaoqiu_Frame">
+    <Property Name="AbsolutePosition" Value="x:101.000000 y:104.000000" />
+    <Property Name="AbsoluteSize" Value="w:600.000000 h:154.000000" />
+    <Window Type="DefaultWindow" Name="ZhengyouYaoqiu_Function_Frame">
+      <Property Name="AbsolutePosition" Value="x:7.000000 y:36.000000" />
+      <Property Name="UnifiedSize" Value="{{1.000000,-13.000000},{1.000000,-55.000000}" />
+      <Window Type="TLBB_SimpleText" Name="ZhengyouYaoqiu_Text1">
+        <Property Name="AbsolutePosition" Value="x:83.000000 y:47.000000" />
+        <Property Name="AbsoluteSize" Value="w:33.000000 h:17.000000" />
+        <Property Name="TextColor" Value="FFFFF263" />
+        <Property Name="Text" Value="#{INTERFACE_XML_696}" />
+        <Property Name="HorzFormatting" Value="LeftAligned" />
+        <Property Name="VertFormatting" Value="VertCentred" />
+      </Window>
+      <Window Type="DefaultWindow" Name="ZhengyouYaoqiu_Module">
+        <Property Name="AbsolutePosition" Value="x:76.000000 y:34.000000" />
+        <Property Name="AbsoluteSize" Value="w:394.000000 h:41.000000" />
+        <Window Type="TLBB_SimpleText" Name="ZhengyouYaoqiu_Text2">
+          <Property Name="Position" Value="x:0.160471 y:0.076923" />
+          <Property Name="Size" Value="w:0.07591623 h:0.36538461" />
+          <Property Name="TextColor" Value="FFFFF263" />
+          <Property Name="Text" Value="#{INTERFACE_XML_448}" />
+          <Property Name="HorzFormatting" Value="LeftAligned" />
+          <Property Name="VertFormatting" Value="VertCentred" />
+        </Window>
+        <Window Type="TLBB_SimpleText" Name="ZhengyouYaoqiu_Text3">
+          <Property Name="Position" Value="x:0.544666 y:0.076923" />
+          <Property Name="Size" Value="w:0.07591623 h:0.36538461" />
+          <Property Name="TextColor" Value="FFFFF263" />
+          <Property Name="Text" Value="#{INTERFACE_XML_227}" />
+          <Property Name="HorzFormatting" Value="LeftAligned" />
+          <Property Name="VertFormatting" Value="VertCentred" />
+        </Window>
+        <Window Type="TLBB_SimpleText" Name="ZhengyouYaoqiu_Text4">
+          <Property Name="Position" Value="x:0.160471 y:0.5961538" />
+          <Property Name="Size" Value="w:0.07591623 h:0.36538461" />
+          <Property Name="TextColor" Value="FFFFF263" />
+          <Property Name="Text" Value="#{INTERFACE_XML_774}" />
+          <Property Name="HorzFormatting" Value="LeftAligned" />
+          <Property Name="VertFormatting" Value="VertCentred" />
+        </Window>
+        <Window Type="TLBB_SimpleText" Name="ZhengyouYaoqiu_Text6">
+          <Property Name="Position" Value="x:0.544666 y:0.5961538" />
+          <Property Name="Size" Value="w:0.07591623 h:0.36538461" />
+          <Property Name="TextColor" Value="FFFFF263" />
+          <Property Name="Text" Value="#{ZYPT_081128_8}" />
+          <Property Name="HorzFormatting" Value="LeftAligned" />
+          <Property Name="VertFormatting" Value="VertCentred" />
+        </Window>
+        <Window Type="TLBB_ComboList" Name="ZhengyouYaoqiu_MenPai">
+          <Property Name="Position" Value="x:0.241387 y:0.076923" />
+          <Property Name="Size" Value="w:0.22513089 h:0.403846153" />
+        </Window>
+        <Window Type="TLBB_ComboList" Name="ZhengyouYaoqiu_Level">
+          <Property Name="Position" Value="x:0.62695 y:0.076923" />
+          <Property Name="Size" Value="w:0.32460732 h:0.403846153" />
+        </Window>
+        <Window Type="TLBB_ComboList" Name="ZhengyouYaoqiu_Sexy">
+          <Property Name="Position" Value="x:0.241387 y:0.5961538" />
+          <Property Name="Size" Value="w:0.22513089 h:0.403846153" />
+        </Window>
+        <Window Type="TLBB_ComboList" Name="ZhengyouYaoqiu_Mudi">
+          <Property Name="Position" Value="x:0.62695 y:0.5961538" />
+          <Property Name="Size" Value="w:0.32460732 h:0.403846153" />
+        </Window>
+      </Window>
+      <Window Type="TLBB_Frame_Lace5" Name="ZhengyouYaoqiu_Blank">
+        <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-20.000000}" />
+        <Property Name="UnifiedSize" Value="{{1.000000,-115.000000},{0.000000,20.000000}" />
+      </Window>
+      <Window Type="TLBB_ButtonCommon" Name="ZhengyouYaoqiu_Ok">
+        <Property Name="UnifiedPosition" Value="{{1.000000,-115.000000},{1.000000,-20.000000}" />
+        <Property Name="AbsoluteSize" Value="w:75.000000 h:20.000000" />
+        <Property Name="Text" Value="#{ZYPT_081103_066}" />
+        <Event Name="Clicked" Function="OnZhengyouYaoqiu_OkClicked();" />
+      </Window>
+      <Window Type="TLBB_ButtonCommon" Name="ZhengyouYaoqiu_Cancel">
+        <Property Name="UnifiedPosition" Value="{{1.000000,-40.000000},{1.000000,-20.000000}" />
+        <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+        <Property Name="Text" Value="#{INTERFACE_XML_702}" />
+        <Event Name="Clicked" Function="ZhengyouYaoqiu_Close();" />
+      </Window>
+      <Window Type="TLBB_SimpleText" Name="ZhengyouYaoqiu_Text5">
+        <Property Name="Position" Value="x:0.020443 y:0.060606" />
+        <Property Name="Size" Value="w:0.5091623 h:0.20538461" />
+        <Property Name="TextColor" Value="FFFFF263" />
+        <Property Name="Text" Value="#{ZYPT_081103_065}" />
+        <Property Name="HorzFormatting" Value="LeftAligned" />
+        <Property Name="VertFormatting" Value="VertCentred" />
+      </Window>
+    </Window>
+    <Window Type="TLBB_ButtonHelp" Name="ZhengyouYaoqiu_Help">
+      <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+      <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+    </Window>
+    <Window Type="TLBB_ButtonClose" Name="ZhengyouYaoqiu_Close">
+      <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+      <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+      <Event Name="Clicked" Function="ZhengyouYaoqiu_Close();" />
+    </Window>
+    <Window Type="TLBB_DragTitle" Name="ZhengyouYaoqiu_DragTitle">
+      <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+      <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+      <Property Name="Font" Value="YouYuan11.25" />
+      <Property Name="Text" Value="#{ZYPT_081103_034}" />
+      <Property Name="HorzFormatting" Value="HorzCentred" />
+      <Property Name="VertFormatting" Value="VertCentred" />
+      <Property Name="DragTarget" Value="ZhengyouYaoqiu_Frame" />
+    </Window>
+  </Window>
+</GUILayout>

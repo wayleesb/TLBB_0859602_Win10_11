@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" ?>
+<GUILayout>
+	<Window Type="TLBB_MainFrame1" Name="Enchase_Four_Frame">
+		<Property Name="UnifiedPosition" Value="{{0.4,0},{0.15,0}}" />
+		<Property Name="AbsoluteSize" Value="w:256 h:362" />
+		<Event Name="Shown" Function="Enchase_Four_OnShown();" />
+		<Event Name="Hidden" Function="Enchase_Four_OnHidden();" />
+		<Window Type="TLBB_DragTitle" Name="Enchase_Four_DragTitle">
+			<Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+			<Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+			<Property Name="DragTarget" Value="Enchase_Four_Frame" />
+			<Window Type="TLBB_SimpleText" Name="Enchase_Four_Title">
+				<Property Name="Position" Value="x:0.0 y:0.0" />
+				<Property Name="Size" Value="w:1.0 h:1.0" />
+				<Property Name="Font" Value="YouYuan11.25" />
+				<Property Name="HorzFormatting" Value="HorzCentred" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+				<Property Name="Text" Value="#{INTERFACE_XML_JX_02}" />
+			</Window>
+		</Window>
+		<Window Type="TLBB_ButtonHelp" Name="Enchase_Four_Help">
+			<Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+			<Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+			<Property Name="Text" Value="TLBB_ButtonClose" />
+			<Event Name="Clicked" Function='Helper:GotoHelper(&quot;*Enchase_Four&quot;);' />
+		</Window>
+		<Window Type="TLBB_ButtonClose" Name="Enchase_Four_Close">
+			<Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+			<Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+			<Property Name="Text" Value="TLBB_ButtonHelp" />
+			<Event Name="Clicked" Function="this:Hide();" />
+		</Window>
+		<Window Type="DefaultWindow" Name="Enchase_Four_Frame_Client">
+			<Property Name="AbsolutePosition" Value="x:7.000000 y:36.000000" />
+			<Property Name="UnifiedSize" Value="{{1.000000,-13.000000},{1.000000,-55.000000}" />
+			<Window Type="TLBB_SimpleMulitiTextFrame" Name="Enchase_Four_Explain">
+				<Property Name="Position" Value="x:0.05 y:0.0" />
+				<Property Name="UnifiedSize" Value="{{0.9,0.000000},{0.000000,20.000000}" />
+				<Property Name="HorzFormatting" Value="HorzCentred" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="Text" Value="#{INTERFACE_XML_176}" />
+			</Window>
+			<Window Type="TLBB_SimpleText" Name="Enchase_Four_Explain1">
+				<Property Name="AbsolutePosition" Value="x:5.0 y:25.0" />
+				<Property Name="UnifiedSize" Value="{{0.85,0.000000},{0.000000,40.000000}" />
+				<Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="Text" Value="#{INTERFACE_XML_JX_03}" />
+			</Window>
+			<Window Type="TLBB_ActionButton" Name="Enchase_Four_Item">
+				<Property Name="AbsolutePosition" Value="x:175.0 y:30.0" />
+				<Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+				<Property Name="DraggingEnabled" Value="True" />
+				<Property Name="DragAcceptName" Value="G25" />
+				<Event Name="RBClicked" Function="Enchase_Four_Resume_Gem(25);" />
+			</Window>
+			<Window Type="DefaultWindow" Name="Enchase_Four_Effect_Bk">
+				<Property Name="AbsolutePosition" Value="x:159.0 y:67.0" />
+				<Property Name="AbsoluteSize" Value="w:75.000000 h:18.000000" />
+				<Window Type="TLBB_StaticImageNULL" Name="Enchase_Four_Effect1">
+					<Property Name="AbsolutePosition" Value="x:0.0 y:1.0" />
+					<Property Name="AbsoluteSize" Value="w:16.000000 h:16.000000" />
+					<Property Name="RiseOnClick" Value="False" />
+					<Property Name="Image" Value="set:Button6 image:SupperTooltipGem" />
+				</Window>
+				<Window Type="TLBB_StaticImageNULL" Name="Enchase_Four_Effect2">
+					<Property Name="AbsolutePosition" Value="x:17.0 y:1.0" />
+					<Property Name="AbsoluteSize" Value="w:16.000000 h:16.000000" />
+					<Property Name="RiseOnClick" Value="False" />
+					<Property Name="Image" Value="set:Button6 image:SupperTooltipGem" />
+				</Window>
+				<Window Type="TLBB_StaticImageNULL" Name="Enchase_Four_Effect3">
+					<Property Name="AbsolutePosition" Value="x:34.0 y:1.0" />
+					<Property Name="AbsoluteSize" Value="w:16.000000 h:16.000000" />
+					<Property Name="RiseOnClick" Value="False" />
+					<Property Name="Image" Value="set:Button6 image:SupperTooltipGem" />
+				</Window>
+        <Window Type="TLBB_StaticImageNULL" Name="Enchase_Four_Effect4">
+          <Property Name="AbsolutePosition" Value="x:51.0 y:1.0" />
+          <Property Name="AbsoluteSize" Value="w:16.000000 h:16.000000" />
+          <Property Name="RiseOnClick" Value="False" />
+          <Property Name="Image" Value="set:Button6 image:SupperTooltipGem" />
+        </Window>
+			</Window>
+			<Window Type="TLBB_SimpleText" Name="Enchase_Four_Explain2">
+				<Property Name="AbsolutePosition" Value="x:12.0 y:98.0" />
+				<Property Name="UnifiedSize" Value="{{0.65,0.000000},{0.000000,20.000000}" />
+				<Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="Text" Value="#{INTERFACE_XML_509}" />
+			</Window>
+			<Window Type="TLBB_ActionButton" Name="Enchase_Four_Gem1">
+				<Property Name="AbsolutePosition" Value="x:175.0 y:92.0" />
+				<Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+				<Property Name="DraggingEnabled" Value="True" />
+				<Property Name="DragAcceptName" Value="G26" />
+				<Event Name="RBClicked" Function="Enchase_Four_Resume_Gem(26);" />
+			</Window>
+			<Window Type="TLBB_SimpleText" Name="Enchase_Four_Explain4">
+				<Property Name="AbsolutePosition" Value="x:12.0 y:141.0" />
+				<Property Name="UnifiedSize" Value="{{0.5,0.000000},{0.000000,20.000000}" />
+				<Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="Text" Value="#{INTERFACE_XML_941}" />
+			</Window>
+			<Window Type="TLBB_ActionButton" Name="Enchase_Four_Gem2">
+				<Property Name="AbsolutePosition" Value="x:175.0 y:135.0" />
+				<Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+				<Property Name="DraggingEnabled" Value="True" />
+				<Property Name="DragAcceptName" Value="G27" />
+				<Event Name="RBClicked" Function="Enchase_Four_Resume_Gem(27);" />
+			</Window>
+			<Window Type="TLBB_SimpleText" Name="Enchase_Four_Explain3">
+				<Property Name="AbsolutePosition" Value="x:12.0 y:184.0" />
+				<Property Name="UnifiedSize" Value="{{0.5,0.000000},{0.000000,20.000000}" />
+				<Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="Text" Value="#{INTERFACE_XML_990}" />
+			</Window>
+			<Window Type="TLBB_ActionButton" Name="Enchase_Four_Gem3">
+				<Property Name="AbsolutePosition" Value="x:175.0 y:178.0" />
+				<Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+				<Property Name="DraggingEnabled" Value="True" />
+				<Property Name="DragAcceptName" Value="G28" />
+				<Event Name="RBClicked" Function="Enchase_Four_Resume_Gem(28);" />
+			</Window>
+			<Window Type="TLBB_SimpleMulitiTextFrame" Name="Enchase_Four_DemandMoney_Text">
+				<Property Name="UnifiedPosition" Value="{{0.05,0.000000},{1.000000,-89.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.9,0.000000},{0.000000,22.000000}" />
+				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="Text" Value="#{INTERFACE_XML_789}" />
+				<Property Name="HorzFormatting" Value="LeftAligned" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Window Type="TLBB_Money" Name="Enchase_Four_DemandMoney">
+					<Property Name="UnifiedPosition" Value="{{0.0,0.000000},{0.000000,0.000000}" />
+					<Property Name="UnifiedSize" Value="{{1.0,0.000000},{0.000000,20.000000}" />
+					<Property Name="MoneyNumber" Value="0" />
+					<Property Name="HorzFormatting" Value="RightAligned" />
+					<Property Name="AlignFix" Value="True" />
+          <Property Name="GoldIcon" Value = "set:Button6 image:Lace_JiaoziJin" />
+          <Property Name="SilverIcon" Value = "set:Button6 image:Lace_JiaoziYin" />
+          <Property Name="CopperIcon" Value = "set:Button6 image:Lace_JiaoziTong" />
+				</Window>
+			</Window>
+      <Window Type="TLBB_SimpleMulitiTextFrame" Name="Enchase_Four_CurrentlyJiaozi_Text">
+        <Property Name="UnifiedPosition" Value="{{0.05,0.000000},{1.000000,-67.000000}" />
+        <Property Name="UnifiedSize" Value="{{0.9,0.000000},{0.000000,22.000000}" />
+        <Property Name="TextColor" Value="FFFFF263" />
+        <Property Name="Text" Value="#{BDJB_051210_1}" />
+        <Property Name="HorzFormatting" Value="LeftAligned" />
+        <Property Name="VertFormatting" Value="VertCentred" />
+        <Property Name="RiseOnClick" Value="False" />
+        <Window Type="TLBB_Money" Name="Enchase_Four_CurrentlyJiaozi">
+          <Property Name="UnifiedPosition" Value="{{0.0,0.000000},{0.000000,0.000000}" />
+          <Property Name="UnifiedSize" Value="{{1.0,0.000000},{0.000000,20.000000}" />
+          <Property Name="MoneyNumber" Value="0" />
+          <Property Name="HorzFormatting" Value="RightAligned" />
+          <Property Name="AlignFix" Value="True" />
+          <Property Name="GoldIcon" Value = "set:Button6 image:Lace_JiaoziJin" />
+          <Property Name="SilverIcon" Value = "set:Button6 image:Lace_JiaoziYin" />
+          <Property Name="CopperIcon" Value = "set:Button6 image:Lace_JiaoziTong" />
+        </Window>
+      </Window>
+			<Window Type="TLBB_SimpleMulitiTextFrame" Name="Enchase_Four_CurrentlyMoney_Text">
+				<Property Name="UnifiedPosition" Value="{{0.05,0.000000},{1.000000,-45.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.9,0.000000},{0.000000,22.000000}" />
+				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="Text" Value="#{INTERFACE_XML_834}" />
+				<Property Name="HorzFormatting" Value="LeftAligned" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Window Type="TLBB_Money" Name="Enchase_Four_CurrentlyMoney">
+					<Property Name="UnifiedPosition" Value="{{0.0,0.000000},{0.000000,0.000000}" />
+					<Property Name="UnifiedSize" Value="{{1.0,0.000000},{0.000000,20.000000}" />
+					<Property Name="MoneyNumber" Value="0" />
+					<Property Name="HorzFormatting" Value="RightAligned" />
+					<Property Name="AlignFix" Value="True" />
+				</Window>
+			</Window>
+			<Window Type="TLBB_Frame_Lace5" Name="Enchase_Four_Blank">
+				<Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-20.000000}" />
+				<Property Name="UnifiedSize" Value="{{1.000000,-80.000000},{0.000000,20.000000}" />
+			</Window>
+			<Window Type="TLBB_ButtonCommon" Name="Enchase_Four_OK">
+				<Property Name="UnifiedPosition" Value="{{1.000000,-80.000000},{1.000000,-20.000000}" />
+				<Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+				<Property Name="Text" Value="#{INTERFACE_XML_557}" />
+				<Event Name="Clicked" Function="Enchase_Four_Buttons_Clicked();" />
+			</Window>
+			<Window Type="TLBB_ButtonCommon" Name="Enchase_Four_Cancel">
+				<Property Name="UnifiedPosition" Value="{{1.000000,-40.000000},{1.000000,-20.000000}" />
+				<Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+				<Property Name="Text" Value="#{INTERFACE_XML_542}" />
+				<Event Name="Clicked" Function="this:Hide();" />
+			</Window>
+		</Window>
+	</Window>
+</GUILayout>

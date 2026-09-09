@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame1" Name="ZhengyouInfoFabu_Frame">
+        <Property Name="Position" Value="x:0.301250 y:0.300501" />
+        <Property Name="AbsoluteSize" Value="w:257 h:195" />
+        <Window Type="TLBB_DragTitle" Name="ZhengyouInfoFabu_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+            <Property Name="Font" Value="YouYuan11.25" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="Text" Value="#{ZYPT_081103_056}" />
+            <Property Name="DragTarget" Value="ZhengyouInfoFabu_Frame" />
+        </Window>
+        <Window Type="TLBB_ButtonHelp" Name="ZhengyouInfoFabu_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="ZhengyouInfoFabu_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function="ZhengyouInfoFabu_Close_Click();" />
+        </Window>
+        <Window Type="TLBB_SimpleText" Name="ZhengyouInfoFabuTishi">
+            <Property Name="UnifiedPosition" Value="{{0.0100000,4.000000},{0.000000,38.000000}" />
+            <Property Name="UnifiedSize" Value="{{0.98000000,-8.000000},{0.000000,52.000000}" />
+            <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="Text" Value="#{ZYPT_081103_057}" />
+            <Property Name="RiseOnClick" Value="False" />
+        </Window>
+        <Window Type="DefaultWindow" Name="ZhengyouInfoFabu_Frame_Client">
+            <Property Name="AbsolutePosition" Value="x:6.000000 y:36.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-12.000000},{1.000000,-55.000000}" />
+            <Window Type="TLBB_ButtonCheck" Name="ZhengyouInfoFabu_BtnCheck_Type1">
+				        <Property Name="UnifiedPosition" Value="{{0.015,29.000000},{0.000000,65.000000}" />
+				        <Property Name="UnifiedSize" Value="{{0.0,12.000000},{0.000000,12.000000}" />
+				        <Event Name="Clicked" Function="ZhengyouInfoFabu_BtnCheck_OnClicked(1);" />
+			      </Window>
+            <Window Type="TLBB_SimpleText" Name="ZhengyouInfoFabu_Scene_Text1">
+				        <Property Name="UnifiedPosition" Value="{{0.58,-93.000000},{0.000000,61.000000}" />
+				        <Property Name="UnifiedSize" Value="{{0.3,0.000000},{0.000000,20.000000}" />
+				        <Property Name="Text" Value="#{ZYPT_081103_008}" />
+				        <Property Name="TextColor" Value="FFFFF263" />
+				        <Property Name="HorzFormatting" Value="LeftAligned" />
+				        <Property Name="VertFormatting" Value="VertCentred" />
+				        <Property Name="RiseOnClick" Value="False" />
+				        <Property Name="Tooltip" Value="" />
+			      </Window>
+            <Window Type="TLBB_ButtonCheck" Name="ZhengyouInfoFabu_BtnCheck_Type2">
+				        <Property Name="UnifiedPosition" Value="{{0.015,131.000000},{0.000000,65.000000}" />
+				        <Property Name="UnifiedSize" Value="{{0.0,12.000000},{0.000000,12.000000}" />
+				        <Event Name="Clicked" Function="ZhengyouInfoFabu_BtnCheck_OnClicked(2);" />
+			      </Window>
+            <Window Type="TLBB_SimpleText" Name="ZhengyouInfoFabu_Scene_Text2">
+				        <Property Name="UnifiedPosition" Value="{{0.58,10.000000},{0.000000,61.000000}" />
+				        <Property Name="UnifiedSize" Value="{{0.3,0.000000},{0.000000,20.000000}" />
+				        <Property Name="Text" Value="#{ZYPT_081103_009}" />
+				        <Property Name="TextColor" Value="FFFFF263" />
+				        <Property Name="HorzFormatting" Value="LeftAligned" />
+				        <Property Name="VertFormatting" Value="VertCentred" />
+				        <Property Name="RiseOnClick" Value="False" />
+				        <Property Name="Tooltip" Value="" />
+			      </Window>
+            <Window Type="TLBB_ButtonCheck" Name="ZhengyouInfoFabu_BtnCheck_Type3">
+				        <Property Name="UnifiedPosition" Value="{{0.015,29.000000},{0.000000,93.000000}" />
+				        <Property Name="UnifiedSize" Value="{{0.0,12.000000},{0.000000,12.000000}" />
+				        <Event Name="Clicked" Function="ZhengyouInfoFabu_BtnCheck_OnClicked(3);" />
+			      </Window>
+            <Window Type="TLBB_SimpleText" Name="ZhengyouInfoFabu_Scene_Text3">
+				        <Property Name="UnifiedPosition" Value="{{0.58,-93.000000},{0.000000,89.000000}" />
+				        <Property Name="UnifiedSize" Value="{{0.3,0.000000},{0.000000,20.000000}" />
+				        <Property Name="Text" Value="#{ZYPT_081103_010}" />
+				        <Property Name="TextColor" Value="FFFFF263" />
+				        <Property Name="HorzFormatting" Value="LeftAligned" />
+				        <Property Name="VertFormatting" Value="VertCentred" />
+				        <Property Name="RiseOnClick" Value="False" />
+				        <Property Name="Tooltip" Value="" />
+			      </Window>
+            <Window Type="TLBB_ButtonCheck" Name="ZhengyouInfoFabu_BtnCheck_Type4">
+				        <Property Name="UnifiedPosition" Value="{{0.015,131.000000},{0.000000,93.000000}" />
+				        <Property Name="UnifiedSize" Value="{{0.0,12.000000},{0.000000,12.000000}" />
+				        <Event Name="Clicked" Function="ZhengyouInfoFabu_BtnCheck_OnClicked(4);" />
+			      </Window>
+            <Window Type="TLBB_SimpleText" Name="ZhengyouInfoFabu_Scene_Text4">
+				        <Property Name="UnifiedPosition" Value="{{0.58,10.000000},{0.000000,89.000000}" />
+				        <Property Name="UnifiedSize" Value="{{0.3,0.000000},{0.000000,20.000000}" />
+				        <Property Name="Text" Value="#{ZYPT_081103_011}" />
+				        <Property Name="TextColor" Value="FFFFF263" />
+				        <Property Name="HorzFormatting" Value="LeftAligned" />
+				        <Property Name="VertFormatting" Value="VertCentred" />
+				        <Property Name="RiseOnClick" Value="False" />
+				        <Property Name="Tooltip" Value="" />
+			      </Window>
+            <Window Type="TLBB_Frame_Lace5" Name="ZhengyouInfoFabu_Choose_Blank">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-80.000000},{0.000000,20.000000}" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="ZhengyouInfoFabu_Choose_Button">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-80.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_797}" />
+                <Event Name="Clicked" Function="ZhengyouInfoFabu_Choose_Click();" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="ZhengyouInfoFabu_Close_Button">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-40.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_542}" />
+                <Event Name="Clicked" Function="ZhengyouInfoFabu_Close_Click();" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

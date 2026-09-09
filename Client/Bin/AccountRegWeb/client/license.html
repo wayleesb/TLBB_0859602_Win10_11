@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <title>天龙八部账号注册</title>
+    <link rel="stylesheet" type="text/css" href="../assets/register.css" />
+    <script type="text/javascript" src="../assets/register.js"></script>
+</head>
+<body>
+    <div id="register-page">
+        <div class="page-heading">
+            <div class="heading-copy">
+                <h1>账号注册</h1>
+                <p>天龙八部经典服</p>
+            </div>
+        </div>
+
+        <div id="status" class="status" role="alert">请填写注册资料</div>
+
+        <form id="register-form" action="#" method="post" onsubmit="return submitRegistration();">
+            <div class="form-row account-row">
+                <label for="account">账号</label>
+                <input id="account" name="account" type="text" maxlength="16"
+                    autocomplete="off" title="4-16 位字母、数字或下划线" />
+                <span class="account-suffix">@game.sohu.com</span>
+            </div>
+            <div class="form-row">
+                <label for="password">密码</label>
+                <input id="password" name="password" type="password" maxlength="16"
+                    autocomplete="off" title="4-16 位字符" />
+            </div>
+            <div class="form-row">
+                <label for="confirm-password">确认密码</label>
+                <input id="confirm-password" name="confirmPassword" type="password"
+                    maxlength="16" autocomplete="off" />
+            </div>
+            <div class="form-row">
+                <label for="super-password">超级密码</label>
+                <input id="super-password" name="superPassword" type="password"
+                    maxlength="16" autocomplete="off" title="用于账号安全验证" />
+            </div>
+            <div class="form-row">
+                <label for="email">邮箱</label>
+                <input id="email" name="email" type="text" maxlength="64"
+                    autocomplete="off" title="填写常用邮箱" />
+            </div>
+
+            <div class="agreement-row">
+                <input id="agreement" name="agreement" type="checkbox" value="1" />
+                <label for="agreement">我已阅读并同意</label>
+                <a href="agreement.html" target="_blank">用户协议</a>
+            </div>
+
+            <button id="submit-button" type="submit">创建账号</button>
+        </form>
+    </div>
+</body>
+</html>

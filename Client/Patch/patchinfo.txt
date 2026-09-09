@@ -1,0 +1,8 @@
+[Version]
+Latest=0.85.8130
+Launch=0
+NewLaunch=1.0.1.4
+UseAntForce=0
+LatestDownload=0
+EnableCritical=1
+UseCriticalLimit=500

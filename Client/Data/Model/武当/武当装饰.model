@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="武当装饰.frame" />
+    <entity mesh="武当装饰.mesh" node="武当装饰" />
+    <entity mesh="武当装饰旗子.mesh" />
+</model>

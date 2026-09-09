@@ -1,0 +1,6 @@
+[System]
+navmapname=shengsileitai.nav
+monsterfile=shengsileitai_monster.ini
+patrolpoint=shengsileitai_patrolpoint.ini
+eventfile=shengsileitai_area.ini
+petfile=shengsileitai_pet.ini

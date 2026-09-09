@@ -1,0 +1,441 @@
+<?xml version="1.0" ?>
+<GUILayout>
+	<Window Type="DefaultWindow" Name="PartyFrame">
+		<Property Name="UnifiedSize" Value="{{0,150},{0.0,200}}" />
+		<Property Name="UnifiedXPosition" Value="{0.0,0}" />
+		<Property Name="UnifiedYPosition" Value="{0.0,105}" />	
+		<Property Name="MouseLButtonHollow" Value="True" />
+		<Property Name="MouseRButtonHollow" Value="True" />
+		<Window Type="TLBB_StaticImageNULL" Name="PartyFrame1">
+			<Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+			<Property Name="AbsoluteSize" Value="w:150.000000 h:40.000000" />
+			<Property Name="Image" Value="set:CommonFrame2 image:TeamFrame"/>
+			<Property Name="MouseHollow" Value="true" />
+			<Window Type="TLBB_StaticImageNULL" Name="Portrait_Icon1">
+				<Property Name="AbsolutePosition" Value="x:3.000000 y:3.000000" />
+				<Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+				<Event Name="MouseRClick" Function="Show_Team_Func(1);" />
+				<Event Name="MouseLClick" Function="PartyFrame_SelectAsTarget(1);" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Property Name="Image" Value="set:ManProtagonist image:ManProtagonist_1" />
+				<Window Type="TLBB_StaticImageNULL" Name="Portrait_Icon1_Mask">
+					<Property Name="Position" Value="x:0.0 y:0.0" />
+					<Property Name="Size" Value="w:1.0 h:1.0" />  
+					<Property Name="MouseLButtonHollow" Value="True" />
+					<Property Name="MouseRButtonHollow" Value="True" />
+				</Window>
+			</Window>
+
+			<Window Type="TLBB_StaticImageNULL" Name="Team_Leader_Flag">
+				<Property Name="AbsolutePosition" Value="x:40.000000 y:25.000000" />
+				<Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+				<Property Name="Visible" Value="True" />
+				<Property Name="Image" Value="set:UIIcons image:Icon_Captain_1" />
+			</Window>
+			<Window Type="TLBB_StaticImageNULL" Name="Team_Leader_Flag2">
+				<Property Name="AbsolutePosition" Value="x:21.000000 y:21.000000" />
+				<Property Name="AbsoluteSize" Value="w:16.000000 h:16.000000" />
+				<Property Name="Visible" Value="True" />
+				<Property Name="Image" Value="set:UIIcons image:Icon_DownLine" />
+			</Window>
+      
+      <Window Type="TLBB_StaticImageNULL" Name="Team_Pet_Button" >
+        <Property Name="AbsolutePosition" Value="x:41.000000 y:11.000000" />
+        <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+        <Property Name="Visible" Value="True" />        
+        <Property Name="Image" Value="set:UIIcons image:Icon_Pet_Normal" />
+        <Property Name="Tooltip" Value="#{ZSAN_90311_1}" />
+        <Event Name="MouseLClick" Function="PetButton_SetFightPetAsTarget(1);" />
+		<Event Name="MouseRClick" Function="PetButton_ToggleTargetPetPage(1);" />
+      </Window>
+
+      <Window Type="TLBB_ProgressPropertyRed" Name="PartyFrame_HP1">
+				<Property Name="AbsolutePosition" Value="x:40.000000 y:2.000000" />
+				<Property Name="AbsoluteSize" Value="w:101.000000 h:5.000000" />
+				<Property Name="CurrentProgress" Value="1.0" />
+    			<Property Name="EffectColor" Value="tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+				<Property Name="EffectColorLevel" Value="index:0 tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+    			<Property Name="MoveSpeed" Value="1000" />
+    			<Event Name="MouseEnter" Function="PartyFrame_HP_Text_MouseEnter(1);" />
+				<Event Name="MouseLeave" Function="PartyFrame_HP_Text_MouseLeave(1);" />
+			</Window>	
+			<Window Type="DefaultWindow" Name="PartyFrame_1_Buff_Frame">
+				<Property Name="AbsolutePosition" Value="x:53.000000 y:10.000000" />
+				<Property Name="AbsoluteSize" Value="w:96.000000 h:16.000000" />
+				<Window Type="TLBB_StaticImageNULL" Name="PartyFrame_1_Buff1">
+					<Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+					<Property Name="AbsoluteSize" Value="w:16.000000 h:16.000000" />
+					<Property Name="RiseOnClick" Value="False" />
+				</Window>
+				<Window Type="TLBB_StaticImageNULL" Name="PartyFrame_1_Buff2">
+					<Property Name="AbsolutePosition" Value="x:16.000000 y:0.000000" />
+					<Property Name="AbsoluteSize" Value="w:16.000000 h:16.000000" />
+					<Property Name="RiseOnClick" Value="False" />
+				</Window>
+				<Window Type="TLBB_StaticImageNULL" Name="PartyFrame_1_Buff3">
+					<Property Name="AbsolutePosition" Value="x:32.000000 y:0.000000" />
+					<Property Name="AbsoluteSize" Value="w:16.000000 h:16.000000" />
+					<Property Name="RiseOnClick" Value="False" />
+				</Window>
+				<Window Type="TLBB_StaticImageNULL" Name="PartyFrame_1_Buff4">
+					<Property Name="AbsolutePosition" Value="x:48.000000 y:0.000000" />
+					<Property Name="AbsoluteSize" Value="w:16.000000 h:16.000000" />
+					<Property Name="RiseOnClick" Value="False" />
+				</Window>
+				<Window Type="TLBB_StaticImageNULL" Name="PartyFrame_1_Buff5">
+					<Property Name="AbsolutePosition" Value="x:64.000000 y:0.000000" />
+					<Property Name="AbsoluteSize" Value="w:16.000000 h:16.000000" />
+					<Property Name="RiseOnClick" Value="False" />
+				</Window>
+				<Window Type="TLBB_StaticImageNULL" Name="PartyFrame_1_Buff6">
+					<Property Name="AbsolutePosition" Value="x:80.000000 y:0.000000" />
+					<Property Name="AbsoluteSize" Value="w:16.000000 h:16.000000" />
+					<Property Name="RiseOnClick" Value="False" />
+				</Window>
+			</Window>
+		</Window>
+
+		<Window Type="TLBB_StaticImageNULL" Name="PartyFrame2">
+			<Property Name="Visible" Value="True" />
+			<Property Name="AbsolutePosition" Value="x:0.000000 y:40.000000" />
+			<Property Name="AbsoluteSize" Value="w:150.000000 h:40.000000" />
+			<Property Name="Image" Value="set:CommonFrame2 image:TeamFrame"/>
+			<Property Name="MouseHollow" Value="true" />
+			<Window Type="TLBB_StaticImageNULL" Name="Portrait_Icon2">
+				<Property Name="AbsolutePosition" Value="x:3.000000 y:3.000000" />
+				<Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+				<Event Name="MouseRClick" Function="Show_Team_Func(2);" />
+				<Event Name="MouseLClick" Function="PartyFrame_SelectAsTarget(2);" />
+				<Window Type="TLBB_StaticImageNULL" Name="Portrait_Icon2_Mask">
+					<Property Name="Position" Value="x:0.0 y:0.0" />
+					<Property Name="Size" Value="w:1.0 h:1.0" />  
+					<Property Name="MouseLButtonHollow" Value="True" />
+					<Property Name="MouseRButtonHollow" Value="True" />
+				</Window>
+			</Window>
+			<Window Type="TLBB_StaticImageNULL" Name="Team_Leader2_Flag">
+				<Property Name="AbsolutePosition" Value="x:40.000000 y:25.000000" />
+				<Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+				<Property Name="Visible" Value="True" />
+				<Property Name="Image" Value="set:UIIcons image:Icon_Captain_1" />
+			</Window>
+			<Window Type="TLBB_StaticImageNULL" Name="Team_Leader2_Flag2">
+				<Property Name="AbsolutePosition" Value="x:21.000000 y:21.000000" />
+				<Property Name="AbsoluteSize" Value="w:16.000000 h:16.000000" />
+				<Property Name="Visible" Value="True" />
+				<Property Name="Image" Value="set:UIIcons image:Icon_DownLine" />
+			</Window>
+      <Window Type="TLBB_StaticImageNULL" Name="Team_Pet2_Button" >
+        <Property Name="AbsolutePosition" Value="x:41.000000 y:11.000000" />
+        <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+        <Property Name="Visible" Value="True" />       
+        <Property Name="Image" Value="set:UIIcons image:Icon_Pet_Normal" />
+        <Property Name="Tooltip" Value="#{ZSAN_90311_1}" />
+        <Event Name="MouseLClick" Function="PetButton_SetFightPetAsTarget(2);" />
+		<Event Name="MouseRClick" Function="PetButton_ToggleTargetPetPage(2);" />
+      </Window>
+			<Window Type="TLBB_ProgressPropertyRed" Name="PartyFrame_HP2">
+				<Property Name="AbsolutePosition" Value="x:40.000000 y:2.000000" />
+				<Property Name="AbsoluteSize" Value="w:101.000000 h:5.000000" />
+				<Property Name="CurrentProgress" Value="1.0" />
+	    		<Property Name="EffectColor" Value="tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+				<Property Name="EffectColorLevel" Value="index:0 tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+	    		<Property Name="MoveSpeed" Value="1000" />
+	    		<Event Name="MouseEnter" Function="PartyFrame_HP_Text_MouseEnter(2);" />
+				<Event Name="MouseLeave" Function="PartyFrame_HP_Text_MouseLeave(2);" />
+			</Window>
+			<Window Type="DefaultWindow" Name="PartyFrame_2_Buff_Frame">
+				<Property Name="AbsolutePosition" Value="x:53.000000 y:10.000000" />
+				<Property Name="AbsoluteSize" Value="w:96.000000 h:16.000000" />
+				<Window Type="TLBB_StaticImageNULL" Name="PartyFrame_2_Buff1">
+					<Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+					<Property Name="AbsoluteSize" Value="w:16.000000 h:16.000000" />
+					<Property Name="RiseOnClick" Value="False" />
+				</Window>
+				<Window Type="TLBB_StaticImageNULL" Name="PartyFrame_2_Buff2">
+					<Property Name="AbsolutePosition" Value="x:16.000000 y:0.000000" />
+					<Property Name="AbsoluteSize" Value="w:16.000000 h:16.000000" />
+					<Property Name="RiseOnClick" Value="False" />
+				</Window>
+				<Window Type="TLBB_StaticImageNULL" Name="PartyFrame_2_Buff3">
+					<Property Name="AbsolutePosition" Value="x:32.000000 y:0.000000" />
+					<Property Name="AbsoluteSize" Value="w:16.000000 h:16.000000" />
+					<Property Name="RiseOnClick" Value="False" />
+				</Window>
+				<Window Type="TLBB_StaticImageNULL" Name="PartyFrame_2_Buff4">
+					<Property Name="AbsolutePosition" Value="x:48.000000 y:0.000000" />
+					<Property Name="AbsoluteSize" Value="w:16.000000 h:16.000000" />
+					<Property Name="RiseOnClick" Value="False" />
+				</Window>
+				<Window Type="TLBB_StaticImageNULL" Name="PartyFrame_2_Buff5">
+					<Property Name="AbsolutePosition" Value="x:64.000000 y:0.000000" />
+					<Property Name="AbsoluteSize" Value="w:16.000000 h:16.000000" />
+					<Property Name="RiseOnClick" Value="False" />
+				</Window>
+				<Window Type="TLBB_StaticImageNULL" Name="PartyFrame_2_Buff6">
+					<Property Name="AbsolutePosition" Value="x:80.000000 y:0.000000" />
+					<Property Name="AbsoluteSize" Value="w:16.000000 h:16.000000" />
+					<Property Name="RiseOnClick" Value="False" />
+				</Window>
+			</Window>
+		</Window>
+
+
+		<Window Type="TLBB_StaticImageNULL" Name="PartyFrame3">
+			<Property Name="AbsolutePosition" Value="x:0.000000 y:80.000000" />
+			<Property Name="AbsoluteSize" Value="w:150.000000 h:40.000000" />
+			<Property Name="Image" Value="set:CommonFrame2 image:TeamFrame"/>
+			<Property Name="MouseHollow" Value="true" />
+
+			<Window Type="TLBB_StaticImageNULL" Name="Portrait_Icon3">
+				<Property Name="AbsolutePosition" Value="x:3.000000 y:3.000000" />
+				<Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+				<Event Name="MouseRClick" Function="Show_Team_Func(3);" />
+				<Event Name="MouseLClick" Function="PartyFrame_SelectAsTarget(3);" />
+				<Window Type="TLBB_StaticImageNULL" Name="Portrait_Icon3_Mask">
+					<Property Name="Position" Value="x:0.0 y:0.0" />
+					<Property Name="Size" Value="w:1.0 h:1.0" />  
+					<Property Name="MouseLButtonHollow" Value="True" />
+					<Property Name="MouseRButtonHollow" Value="True" />
+				</Window>
+			</Window>
+			<Window Type="TLBB_StaticImageNULL" Name="Team_Leader3_Flag">
+				<Property Name="AbsolutePosition" Value="x:40.000000 y:25.000000" />
+				<Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+				<Property Name="Visible" Value="True" />
+				<Property Name="Image" Value="set:UIIcons image:Icon_Captain_1" />
+			</Window>
+			<Window Type="TLBB_StaticImageNULL" Name="Team_Leader3_Flag2">
+				<Property Name="AbsolutePosition" Value="x:21.000000 y:21.000000" />
+				<Property Name="AbsoluteSize" Value="w:16.000000 h:16.000000" />
+				<Property Name="Visible" Value="True" />
+				<Property Name="Image" Value="set:UIIcons image:Icon_DownLine" />
+			</Window>
+      <Window Type="TLBB_StaticImageNULL" Name="Team_Pet3_Button" >
+        <Property Name="AbsolutePosition" Value="x:41.000000 y:11.000000" />
+        <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+        <Property Name="Visible" Value="True" />        
+        <Property Name="Image" Value="set:UIIcons image:Icon_Pet_Normal" />
+        <Property Name="Tooltip" Value="#{ZSAN_90311_1}" />
+        <Event Name="MouseLClick" Function="PetButton_SetFightPetAsTarget(3);" />
+		<Event Name="MouseRClick" Function="PetButton_ToggleTargetPetPage(3);" />
+      </Window>
+      <Window Type="TLBB_ProgressPropertyRed" Name="PartyFrame_HP3">
+        <Property Name="AbsolutePosition" Value="x:40.000000 y:2.000000" />
+        <Property Name="AbsoluteSize" Value="w:101.000000 h:5.000000" />
+        <Property Name="CurrentProgress" Value="1.0" />
+        <Property Name="EffectColor" Value="tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+        <Property Name="EffectColorLevel" Value="index:0 tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+        <Property Name="MoveSpeed" Value="1000" />
+        <Event Name="MouseEnter" Function="PartyFrame_HP_Text_MouseEnter(3);" />
+        <Event Name="MouseLeave" Function="PartyFrame_HP_Text_MouseLeave(3);" />
+      </Window>
+      <Window Type="DefaultWindow" Name="PartyFrame_3_Buff_Frame">
+        <Property Name="AbsolutePosition" Value="x:53.000000 y:10.000000" />
+        <Property Name="AbsoluteSize" Value="w:96.000000 h:16.000000" />
+        <Window Type="TLBB_StaticImageNULL" Name="PartyFrame_3_Buff1">
+          <Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+          <Property Name="AbsoluteSize" Value="w:16.000000 h:16.000000" />
+          <Property Name="RiseOnClick" Value="False" />
+        </Window>
+        <Window Type="TLBB_StaticImageNULL" Name="PartyFrame_3_Buff2">
+          <Property Name="AbsolutePosition" Value="x:16.000000 y:0.000000" />
+          <Property Name="AbsoluteSize" Value="w:16.000000 h:16.000000" />
+          <Property Name="RiseOnClick" Value="False" />
+        </Window>
+        <Window Type="TLBB_StaticImageNULL" Name="PartyFrame_3_Buff3">
+          <Property Name="AbsolutePosition" Value="x:32.000000 y:0.000000" />
+          <Property Name="AbsoluteSize" Value="w:16.000000 h:16.000000" />
+          <Property Name="RiseOnClick" Value="False" />
+        </Window>
+        <Window Type="TLBB_StaticImageNULL" Name="PartyFrame_3_Buff4">
+          <Property Name="AbsolutePosition" Value="x:48.000000 y:0.000000" />
+          <Property Name="AbsoluteSize" Value="w:16.000000 h:16.000000" />
+          <Property Name="RiseOnClick" Value="False" />
+        </Window>
+        <Window Type="TLBB_StaticImageNULL" Name="PartyFrame_3_Buff5">
+          <Property Name="AbsolutePosition" Value="x:64.000000 y:0.000000" />
+          <Property Name="AbsoluteSize" Value="w:16.000000 h:16.000000" />
+          <Property Name="RiseOnClick" Value="False" />
+        </Window>
+        <Window Type="TLBB_StaticImageNULL" Name="PartyFrame_3_Buff6">
+          <Property Name="AbsolutePosition" Value="x:80.000000 y:0.000000" />
+          <Property Name="AbsoluteSize" Value="w:16.000000 h:16.000000" />
+          <Property Name="RiseOnClick" Value="False" />
+        </Window>
+      </Window>
+    </Window>
+
+
+    <Window Type="TLBB_StaticImageNULL" Name="PartyFrame4">
+      <Property Name="AbsolutePosition" Value="x:0.000000 y:120.000000" />
+      <Property Name="AbsoluteSize" Value="w:150.000000 h:40.000000" />
+      <Property Name="Image" Value="set:CommonFrame2 image:TeamFrame"/>
+      <Property Name="MouseHollow" Value="true" />
+
+      <Window Type="TLBB_StaticImageNULL" Name="Portrait_Icon4">
+        <Property Name="AbsolutePosition" Value="x:3.000000 y:3.000000" />
+        <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+        <Event Name="MouseRClick" Function="Show_Team_Func(4);" />
+        <Event Name="MouseLClick" Function="PartyFrame_SelectAsTarget(4);" />
+        <Window Type="TLBB_StaticImageNULL" Name="Portrait_Icon4_Mask">
+          <Property Name="Position" Value="x:0.0 y:0.0" />
+          <Property Name="Size" Value="w:1.0 h:1.0" />
+          <Property Name="MouseLButtonHollow" Value="True" />
+          <Property Name="MouseRButtonHollow" Value="True" />
+        </Window>
+      </Window>
+      <Window Type="TLBB_StaticImageNULL" Name="Team_Leader4_Flag">
+        <Property Name="AbsolutePosition" Value="x:40.000000 y:25.000000" />
+        <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+        <Property Name="Visible" Value="True" />
+        <Property Name="Image" Value="set:UIIcons image:Icon_Captain_1" />
+      </Window>
+      <Window Type="TLBB_StaticImageNULL" Name="Team_Leader4_Flag2">
+        <Property Name="AbsolutePosition" Value="x:21.000000 y:21.000000" />
+        <Property Name="AbsoluteSize" Value="w:16.000000 h:16.000000" />
+        <Property Name="Visible" Value="True" />
+        <Property Name="Image" Value="set:UIIcons image:Icon_DownLine" />
+      </Window>
+      <Window Type="TLBB_StaticImageNULL" Name="Team_Pet4_Button" >
+        <Property Name="AbsolutePosition" Value="x:41.000000 y:11.000000" />
+        <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+        <Property Name="Visible" Value="True" />       
+        <Property Name="Image" Value="set:UIIcons image:Icon_Pet_Normal" />
+        <Property Name="Tooltip" Value="#{ZSAN_90311_1}" />
+        <Event Name="MouseLClick" Function="PetButton_SetFightPetAsTarget(4);" />
+		<Event Name="MouseRClick" Function="PetButton_ToggleTargetPetPage(4);" />
+      </Window>
+      <Window Type="TLBB_ProgressPropertyRed" Name="PartyFrame_HP4">
+				<Property Name="AbsolutePosition" Value="x:40.000000 y:2.000000" />
+				<Property Name="AbsoluteSize" Value="w:101.000000 h:5.000000" />
+				<Property Name="CurrentProgress" Value="1.0" />
+	    		<Property Name="EffectColor" Value="tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+				<Property Name="EffectColorLevel" Value="index:0 tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+	    		<Property Name="MoveSpeed" Value="1000" />
+	    		<Event Name="MouseEnter" Function="PartyFrame_HP_Text_MouseEnter(4);" />
+				<Event Name="MouseLeave" Function="PartyFrame_HP_Text_MouseLeave(4);" />
+			</Window>
+			<Window Type="DefaultWindow" Name="PartyFrame_4_Buff_Frame">
+				<Property Name="AbsolutePosition" Value="x:53.000000 y:10.000000" />
+				<Property Name="AbsoluteSize" Value="w:96.000000 h:16.000000" />
+				<Window Type="TLBB_StaticImageNULL" Name="PartyFrame_4_Buff1">
+					<Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+					<Property Name="AbsoluteSize" Value="w:16.000000 h:16.000000" />
+					<Property Name="RiseOnClick" Value="False" />
+				</Window>
+				<Window Type="TLBB_StaticImageNULL" Name="PartyFrame_4_Buff2">
+					<Property Name="AbsolutePosition" Value="x:16.000000 y:0.000000" />
+					<Property Name="AbsoluteSize" Value="w:16.000000 h:16.000000" />
+					<Property Name="RiseOnClick" Value="False" />
+				</Window>
+				<Window Type="TLBB_StaticImageNULL" Name="PartyFrame_4_Buff3">
+					<Property Name="AbsolutePosition" Value="x:32.000000 y:0.000000" />
+					<Property Name="AbsoluteSize" Value="w:16.000000 h:16.000000" />
+					<Property Name="RiseOnClick" Value="False" />
+				</Window>
+				<Window Type="TLBB_StaticImageNULL" Name="PartyFrame_4_Buff4">
+					<Property Name="AbsolutePosition" Value="x:48.000000 y:0.000000" />
+					<Property Name="AbsoluteSize" Value="w:16.000000 h:16.000000" />
+					<Property Name="RiseOnClick" Value="False" />
+				</Window>
+				<Window Type="TLBB_StaticImageNULL" Name="PartyFrame_4_Buff5">
+					<Property Name="AbsolutePosition" Value="x:64.000000 y:0.000000" />
+					<Property Name="AbsoluteSize" Value="w:16.000000 h:16.000000" />
+					<Property Name="RiseOnClick" Value="False" />
+				</Window>
+				<Window Type="TLBB_StaticImageNULL" Name="PartyFrame_4_Buff6">
+					<Property Name="AbsolutePosition" Value="x:80.000000 y:0.000000" />
+					<Property Name="AbsoluteSize" Value="w:16.000000 h:16.000000" />
+					<Property Name="RiseOnClick" Value="False" />
+				</Window>
+			</Window>
+		</Window>
+
+
+		<Window Type="TLBB_StaticImageNULL" Name="PartyFrame5">
+			<Property Name="AbsolutePosition" Value="x:0.000000 y:160.000000" />
+			<Property Name="AbsoluteSize" Value="w:150.000000 h:40.000000" />
+			<Property Name="Image" Value="set:CommonFrame2 image:TeamFrame"/>
+			<Property Name="MouseHollow" Value="true" />
+		
+			<Window Type="TLBB_StaticImageNULL" Name="Portrait_Icon5">
+				<Property Name="AbsolutePosition" Value="x:3.000000 y:3.000000" />
+				<Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+				<Event Name="MouseRClick" Function="Show_Team_Func(5);" />
+				<Event Name="MouseLClick" Function="PartyFrame_SelectAsTarget(5);" />
+				<Window Type="TLBB_StaticImageNULL" Name="Portrait_Icon5_Mask">
+					<Property Name="Position" Value="x:0.0 y:0.0" />
+					<Property Name="Size" Value="w:1.0 h:1.0" />  
+					<Property Name="MouseLButtonHollow" Value="True" />
+					<Property Name="MouseRButtonHollow" Value="True" />
+				</Window>
+			</Window>
+			<Window Type="TLBB_StaticImageNULL" Name="Team_Leader5_Flag">
+				<Property Name="AbsolutePosition" Value="x:40.000000 y:25.000000" />
+				<Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+				<Property Name="Visible" Value="True" />
+				<Property Name="Image" Value="set:UIIcons image:Icon_Captain_1" />
+			</Window>
+			<Window Type="TLBB_StaticImageNULL" Name="Team_Leader5_Flag2">
+				<Property Name="AbsolutePosition" Value="x:21.000000 y:21.000000" />
+				<Property Name="AbsoluteSize" Value="w:16.000000 h:16.000000" />
+				<Property Name="Visible" Value="True" />
+				<Property Name="Image" Value="set:UIIcons image:Icon_DownLine" />
+			</Window>
+      <Window Type="TLBB_StaticImageNULL" Name="Team_Pet5_Button" >
+        <Property Name="AbsolutePosition" Value="x:41.000000 y:11.000000" />
+        <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+        <Property Name="Visible" Value="True" />       
+        <Property Name="Image" Value="set:UIIcons image:Icon_Pet_Normal" />
+        <Property Name="Tooltip" Value="#{ZSAN_90311_1}" />
+        <Event Name="MouseLClick" Function="PetButton_SetFightPetAsTarget(5);" />
+		<Event Name="MouseRClick" Function="PetButton_ToggleTargetPetPage(5);" />
+      </Window>
+      <Window Type="TLBB_ProgressPropertyRed" Name="PartyFrame_HP5">
+				<Property Name="AbsolutePosition" Value="x:40.000000 y:2.000000" />
+				<Property Name="AbsoluteSize" Value="w:101.000000 h:5.000000" />
+				<Property Name="CurrentProgress" Value="1.0" />
+	    		<Property Name="EffectColor" Value="tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+				<Property Name="EffectColorLevel" Value="index:0 tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+	    		<Property Name="MoveSpeed" Value="1000" />
+	    		<Event Name="MouseEnter" Function="PartyFrame_HP_Text_MouseEnter(5);" />
+				<Event Name="MouseLeave" Function="PartyFrame_HP_Text_MouseLeave(5);" />
+			</Window>
+			<Window Type="DefaultWindow" Name="PartyFrame_5_Buff_Frame">
+				<Property Name="AbsolutePosition" Value="x:53.000000 y:10.000000" />
+				<Property Name="AbsoluteSize" Value="w:96.000000 h:16.000000" />
+				<Window Type="TLBB_StaticImageNULL" Name="PartyFrame_5_Buff1">
+					<Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+					<Property Name="AbsoluteSize" Value="w:16.000000 h:16.000000" />
+					<Property Name="RiseOnClick" Value="False" />
+				</Window>
+				<Window Type="TLBB_StaticImageNULL" Name="PartyFrame_5_Buff2">
+					<Property Name="AbsolutePosition" Value="x:16.000000 y:0.000000" />
+					<Property Name="AbsoluteSize" Value="w:16.000000 h:16.000000" />
+					<Property Name="RiseOnClick" Value="False" />
+				</Window>
+				<Window Type="TLBB_StaticImageNULL" Name="PartyFrame_5_Buff3">
+					<Property Name="AbsolutePosition" Value="x:32.000000 y:0.000000" />
+					<Property Name="AbsoluteSize" Value="w:16.000000 h:16.000000" />
+					<Property Name="RiseOnClick" Value="False" />
+				</Window>
+				<Window Type="TLBB_StaticImageNULL" Name="PartyFrame_5_Buff4">
+					<Property Name="AbsolutePosition" Value="x:48.000000 y:0.000000" />
+					<Property Name="AbsoluteSize" Value="w:16.000000 h:16.000000" />
+					<Property Name="RiseOnClick" Value="False" />
+				</Window>
+				<Window Type="TLBB_StaticImageNULL" Name="PartyFrame_5_Buff5">
+					<Property Name="AbsolutePosition" Value="x:64.000000 y:0.000000" />
+					<Property Name="AbsoluteSize" Value="w:16.000000 h:16.000000" />
+					<Property Name="RiseOnClick" Value="False" />
+				</Window>
+				<Window Type="TLBB_StaticImageNULL" Name="PartyFrame_5_Buff6">
+					<Property Name="AbsolutePosition" Value="x:80.000000 y:0.000000" />
+					<Property Name="AbsoluteSize" Value="w:16.000000 h:16.000000" />
+					<Property Name="RiseOnClick" Value="False" />
+				</Window>
+			</Window>
+		</Window>
+	</Window>
+</GUILayout>

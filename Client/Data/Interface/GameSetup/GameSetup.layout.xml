@@ -1,0 +1,261 @@
+<?xml version="1.0" ?>
+<GUILayout>
+	<Window Type="TLBB_MainFrame1" Name="GameSetup_Frame">
+		<Property Name="UnifiedPosition" Value="{{0.5,-165},{0.5,-122}}" />
+		<Property Name="AbsoluteSize" Value="w:256 h:309" />
+		<Window Type="TLBB_DragTitle" Name="GameSetup_DragTitle">
+			<Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+			<Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+			<Property Name="DragTarget" Value="GameSetup_Frame" />
+			<Window Type="TLBB_SimpleText" Name="GameSetup_PageHeader">
+				<Property Name="Position" Value="x:0.0 y:0.0" />
+				<Property Name="Size" Value="w:1.0 h:1.0" />
+				<Property Name="Font" Value="YouYuan11.25" />
+				<Property Name="HorzFormatting" Value="HorzCentred" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Property Name="Text" Value="#{INTERFACE_XML_83}" />
+			</Window>
+		</Window>
+		<Window Type="TLBB_ButtonHelp" Name="GameSetup_Help">
+			<Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+			<Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+			<Property Name="Text" Value="TLBB_ButtonHelp" />
+			<Event Name="Clicked" Function='Helper:GotoHelper(&quot;GameSetup&quot;);' />
+		</Window>
+		<Window Type="TLBB_ButtonClose" Name="GameSetup_Close">
+			<Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+			<Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+			<Property Name="Text" Value="TLBB_ButtonClose" />
+			<Event Name="Clicked" Function="this:Hide();" />
+		</Window>
+		<Window Type="DefaultWindow" Name="GameSetup_Frame_Client">
+			<Property Name="AbsolutePosition" Value="x:6.000000 y:36.000000" />
+			<Property Name="UnifiedSize" Value="{{1.000000,-12.000000},{1.000000,-55.000000}" />
+			<Property Name="RiseOnClick" Value="False" />
+			<Window Type="TLBB_ButtonCheck" Name="GameSetup_Item1">
+				<Property Name="UnifiedPosition" Value="{{0.015,0.000000},{0.000000,14.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.0,12.000000},{0.000000,12.000000}" />
+			</Window>
+			<Window Type="TLBB_ButtonCheck" Name="GameSetup_Item2">
+				<Property Name="UnifiedPosition" Value="{{0.015,0.000000},{0.000000,40.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.0,12.000000},{0.000000,12.000000}" />
+			</Window>
+			<Window Type="TLBB_ButtonCheck" Name="GameSetup_Item3">
+				<Property Name="UnifiedPosition" Value="{{0.015,0.000000},{0.000000,66.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.0,12.000000},{0.000000,12.000000}" />
+			</Window>
+			<Window Type="TLBB_ButtonCheck" Name="GameSetup_Item4">
+				<Property Name="UnifiedPosition" Value="{{0.015,0.000000},{0.000000,92.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.0,12.000000},{0.000000,12.000000}" />
+			</Window>
+			<Window Type="TLBB_ButtonCheck" Name="GameSetup_Item5">
+				<Property Name="UnifiedPosition" Value="{{0.52,0.000000},{0.000000,14.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.0,12.000000},{0.000000,12.000000}" />
+			</Window>
+			<Window Type="TLBB_ButtonCheck" Name="GameSetup_Item6">
+				<Property Name="UnifiedPosition" Value="{{0.52,0.000000},{0.000000,40.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.0,12.000000},{0.000000,12.000000}" />
+			</Window>
+			<Window Type="TLBB_ButtonCheck" Name="GameSetup_Item7">
+				<Property Name="UnifiedPosition" Value="{{0.52,0.000000},{0.000000,66.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.0,12.000000},{0.000000,12.000000}" />
+			</Window>
+			<Window Type="TLBB_ButtonCheck" Name="GameSetup_Item8">
+				<Property Name="UnifiedPosition" Value="{{0.52,0.000000},{0.000000,92.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.0,12.000000},{0.000000,12.000000}" />
+			</Window>
+			<Window Type="TLBB_ButtonCheck" Name="GameSetup_Item9">
+				<Property Name="UnifiedPosition" Value="{{0.015,0.000000},{0.000000,118.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.0,12.000000},{0.000000,12.000000}" />
+			</Window>
+      <Window Type="TLBB_ButtonCheck" Name="GameSetup_Item11">
+        <Property Name="UnifiedPosition" Value="{{0.52,0.000000},{0.000000,144.000000}" />
+        <Property Name="UnifiedSize" Value="{{0.0,12.000000},{0.000000,12.000000}" />
+      </Window>
+			<Window Type="TLBB_ButtonCheck" Name="GameSetup_Lock">
+				<Property Name="UnifiedPosition" Value="{{0.015,0.000000},{0.000000,144.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.0,12.000000},{0.000000,12.000000}" />
+			</Window>
+			<Window Type="TLBB_SimpleText" Name="GameSetup_Lock_Text">
+				<Property Name="UnifiedPosition" Value="{{0.08,0.000000},{0.000000,141.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.4,0.000000},{0.000000,20.000000}" />
+				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="Text" Value="#{INTERFACE_XML_677}" />
+				<Property Name="HorzFormatting" Value="LeftAligned" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Property Name="Tooltip" Value="#{INTERFACE_XML_614}" />
+			</Window>
+			<Window Type="TLBB_ButtonCheck" Name="GameSetup_ChatItem">
+				<Property Name="UnifiedPosition" Value="{{0.015,0.000000},{0.000000,170.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.0,12.000000},{0.000000,12.000000}" />
+			</Window>
+			<Window Type="TLBB_SimpleText" Name="GameSetup_ChatItem_Text">
+				<Property Name="UnifiedPosition" Value="{{0.08,0.000000},{0.000000,167.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.4,0.000000},{0.000000,20.000000}" />
+				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="Text" Value="#{INTERFACE_XML_939}" />
+				<Property Name="HorzFormatting" Value="LeftAligned" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Property Name="Tooltip" Value="#{INTERFACE_XML_940}" />
+			</Window>
+			<Window Type="TLBB_ButtonCheck" Name="GameSetup_Scene">
+				<Property Name="UnifiedPosition" Value="{{0.52,0.000000},{0.000000,118.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.0,12.000000},{0.000000,12.000000}" />
+			</Window>
+			<Window Type="TLBB_SimpleText" Name="GameSetup_Scene_Text">
+				<Property Name="UnifiedPosition" Value="{{0.58,0.000000},{0.000000,115.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.4,0.000000},{0.000000,20.000000}" />
+				<Property Name="Text" Value="#{INTERFACE_XML_415}" />
+				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="HorzFormatting" Value="LeftAligned" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Property Name="Tooltip" Value="#{INTERFACE_XML_618}" />
+			</Window>
+			<Window Type="TLBB_SimpleText" Name="GameSetup_Item1_Text">
+				<Property Name="UnifiedPosition" Value="{{0.08,0.000000},{0.000000,11.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.4,0.000000},{0.000000,20.000000}" />
+				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="Text" Value="#{INTERFACE_XML_394}" />
+				<Property Name="HorzFormatting" Value="LeftAligned" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Property Name="Tooltip" Value="#{INTERFACE_XML_616}" />
+			</Window>
+			<Window Type="TLBB_SimpleText" Name="GameSetup_Item2_Text">
+				<Property Name="UnifiedPosition" Value="{{0.08,0.000000},{0.000000,37.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.4,0.000000},{0.000000,20.000000}" />
+				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="Text" Value="#{INTERFACE_XML_391}" />
+				<Property Name="HorzFormatting" Value="LeftAligned" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Property Name="Tooltip" Value="#{INTERFACE_XML_619}" />
+			</Window>
+			<Window Type="TLBB_SimpleText" Name="GameSetup_Item3_Text">
+				<Property Name="UnifiedPosition" Value="{{0.08,0.000000},{0.000000,63.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.4,0.000000},{0.000000,20.000000}" />
+				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="Text" Value="#{INTERFACE_XML_393}" />
+				<Property Name="HorzFormatting" Value="LeftAligned" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Property Name="Tooltip" Value="#{INTERFACE_XML_610}" />
+			</Window>
+			<Window Type="TLBB_SimpleText" Name="GameSetup_Item4_Text">
+				<Property Name="UnifiedPosition" Value="{{0.08,0.000000},{0.000000,89.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.4,0.000000},{0.000000,20.000000}" />
+				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="Text" Value="#{INTERFACE_XML_392}" />
+				<Property Name="HorzFormatting" Value="LeftAligned" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Property Name="Tooltip" Value="#{INTERFACE_XML_613}" />
+			</Window>
+			<Window Type="TLBB_SimpleText" Name="GameSetup_Item5_Text">
+				<Property Name="UnifiedPosition" Value="{{0.58,0.000000},{0.000000,11.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.4,0.000000},{0.000000,20.000000}" />
+				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="Text" Value="#{INTERFACE_XML_390}" />
+				<Property Name="HorzFormatting" Value="LeftAligned" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Property Name="Tooltip" Value="#{INTERFACE_XML_611}" />
+			</Window>
+			<Window Type="TLBB_SimpleText" Name="GameSetup_Item6_Text">
+				<Property Name="UnifiedPosition" Value="{{0.58,0.000000},{0.000000,37.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.4,0.000000},{0.000000,20.000000}" />
+				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="Text" Value="#{INTERFACE_XML_303}" />
+				<Property Name="HorzFormatting" Value="LeftAligned" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Property Name="Tooltip" Value="#{INTERFACE_XML_612}" />
+			</Window>
+			<Window Type="TLBB_SimpleText" Name="GameSetup_Item7_Text">
+				<Property Name="UnifiedPosition" Value="{{0.58,0.000000},{0.000000,63.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.4,0.000000},{0.000000,20.000000}" />
+				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="Text" Value="#{INTERFACE_XML_389}" />
+				<Property Name="HorzFormatting" Value="LeftAligned" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Property Name="Tooltip" Value="#{INTERFACE_XML_617}" />
+			</Window>
+			<Window Type="TLBB_SimpleText" Name="GameSetup_Item9_Text">
+				<Property Name="UnifiedPosition" Value="{{0.58,0.000000},{0.000000,89.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.4,0.000000},{0.000000,20.000000}" />
+				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="Text" Value="#{INTERFACE_XML_371}" />
+				<Property Name="HorzFormatting" Value="LeftAligned" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Property Name="Tooltip" Value="#{INTERFACE_XML_615}" />
+			</Window>
+			<Window Type="TLBB_SimpleText" Name="GameSetup_Item10_Text">
+				<Property Name="UnifiedPosition" Value="{{0.08,0.000000},{0.000000,115.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.4,0.000000},{0.000000,20.000000}" />
+				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="Text" Value="#{INTERFACE_XML_271}" />
+				<Property Name="HorzFormatting" Value="LeftAligned" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Property Name="Tooltip" Value="#{INTERFACE_XML_271}" />
+			</Window>
+      <Window Type="TLBB_SimpleText" Name="GameSetup_Item11_Text">
+        <Property Name="UnifiedPosition" Value="{{0.58,0.000000},{0.000000,141.000000}" />
+        <Property Name="UnifiedSize" Value="{{0.4,0.000000},{0.000000,20.000000}" />
+        <Property Name="TextColor" Value="FFFFF263" />
+        <Property Name="Text" Value="#{KJPB_0913_01}" />
+        <Property Name="HorzFormatting" Value="LeftAligned" />
+        <Property Name="VertFormatting" Value="VertCentred" />
+        <Property Name="RiseOnClick" Value="False" />
+        <Property Name="Tooltip" Value="#{KJPB_0913_02}" />
+      </Window>
+			<Window Type="TLBB_Frame_Lace3" Name="GameSetup_Bk">
+				<Property Name="UnifiedPosition" Value="{{0.5,-60.000000},{1.000000,-64.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.5,0.000000},{0.000000,40.000000}" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Window Type="TLBB_SimpleText" Name="GameSetup_Item8_Text">
+					<Property Name="UnifiedPosition" Value="{{0.0,0.000000},{0.000000,4.000000}" />
+					<Property Name="UnifiedSize" Value="{{1.0,0.000000},{0.000000,20.000000}" />
+					<Property Name="TextColor" Value="FFFFF263" />
+					<Property Name="Text" Value="#{INTERFACE_XML_435}" />
+					<Property Name="HorzFormatting" Value="HorzCentred" />
+					<Property Name="VertFormatting" Value="VertCentred" />
+					<Property Name="RiseOnClick" Value="False" />
+				</Window>
+				<Window Type="TLBB_Slider" Name="GameSetup_ChatBkg_Slider">
+					<Property Name="UnifiedPosition" Value="{{0.1,0.000000},{0.000000,24.000000}" />
+					<Property Name="UnifiedSize" Value="{{0.8,0.000000},{0.000000,14.000000}" />
+					<Event Name="ScrollPosChanged" Function="GameSetup_ChatBkg_Change();" />
+				</Window>
+			</Window>
+			<Window Type="TLBB_ButtonCommon" Name="GameSetup_DefaultSetting">
+				<Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-20.000000}" />
+				<Property Name="AbsoluteSize" Value="w:65.000000 h:20.000000" />
+				<Property Name="Text" Value="#{INTERFACE_XML_335}" />
+				<Event Name="Clicked" Function="GameSetup_Default_Clicked()" />
+			</Window>
+			<Window Type="TLBB_Frame_Lace5" Name="GameSetup_Blank">
+				<Property Name="UnifiedPosition" Value="{{0.000000,65.000000},{1.000000,-20.000000}" />
+				<Property Name="UnifiedSize" Value="{{1.000000,-145.000000},{0.000000,20.000000}" />
+			</Window>
+			<Window Type="TLBB_ButtonCommon" Name="GameSetup_Accept">
+				<Property Name="UnifiedPosition" Value="{{1.000000,-80.000000},{1.000000,-20.000000}" />
+				<Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+				<Property Name="Text" Value="#{INTERFACE_XML_557}" />
+				<Event Name="Clicked" Function="GameSetup_Accept_Clicked()" />
+			</Window>
+			<Window Type="TLBB_ButtonCommon" Name="GameSetup_Cancel">
+				<Property Name="UnifiedPosition" Value="{{1.000000,-40.000000},{1.000000,-20.000000}" />
+				<Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+				<Property Name="Text" Value="#{INTERFACE_XML_542}" />
+				<Event Name="Clicked" Function="GameSetup_Cancel_Clicked();" />
+			</Window>
+		</Window>
+	</Window>
+</GUILayout>

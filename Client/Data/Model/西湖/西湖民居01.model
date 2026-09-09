@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="西湖民居01.frame" />
+    <entity mesh="西湖民居01.mesh" node="西湖民居01" />
+    <entity mesh="西湖民居01灯笼2.mesh" node="西湖民居01灯笼2">
+        <offset>
+            <translate x="239.6" y="-303.375" z="-284.012" />
+        </offset>
+    </entity>
+    <entity mesh="西湖民居01灯笼1.mesh" node="西湖民居01灯笼1">
+        <offset>
+            <translate x="-216.214" y="-303.375" z="-284.012" />
+        </offset>
+    </entity>
+</model>

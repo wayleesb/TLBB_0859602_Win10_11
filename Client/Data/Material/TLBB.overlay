@@ -1,0 +1,65 @@
+// Ogre overlay scripts
+
+// Ogre overlay scripts
+TLBB/DebugOverlay
+{
+	zorder 500
+	// Stats block
+	container BorderPanel(TLBB/StatPanel)
+	{
+		metrics_mode pixels
+		vert_align top
+		horz_align right
+		left -225 
+		top 5
+		width 220
+		height 120
+		material TLBB/StatsBlockCenter
+        	border_size 1 1 1 1
+        	border_material TLBB/StatsBlockBorder
+        	border_topleft_uv     0.0000 1.0000 0.0039 0.9961
+	    	border_top_uv         0.0039 1.0000 0.9961 0.9961
+	    	border_topright_uv    0.9961 1.0000 1.0000 0.9961
+	    	border_left_uv        0.0000 0.9961 0.0039 0.0039
+	    	border_right_uv       0.9961 0.9961 1.0000 0.0039
+	    	border_bottomleft_uv  0.0000 0.0039 0.0039 0.0000
+        	border_bottom_uv      0.0039 0.0039 0.9961 0.0000
+	    	border_bottomright_uv 0.9961 0.0039 1.0000 0.0000
+	}
+	
+	
+	container BorderPanel(TLBB/HitObjPanel)
+	{
+		metrics_mode pixels
+		vert_align top
+		horz_align right
+		left -225 
+		top 130
+		width 220
+		height 260
+		material TLBB/StatsBlockCenter
+        	border_size 1 1 1 1
+        	border_material TLBB/StatsBlockBorder
+        	border_topleft_uv     0.0000 1.0000 0.0039 0.9961
+	    	border_top_uv         0.0039 1.0000 0.9961 0.9961
+	    	border_topright_uv    0.9961 1.0000 1.0000 0.9961
+	    	border_left_uv        0.0000 0.9961 0.0039 0.0039
+	    	border_right_uv       0.9961 0.9961 1.0000 0.0039
+	    	border_bottomleft_uv  0.0000 0.0039 0.0039 0.0000
+        	border_bottom_uv      0.0039 0.0039 0.9961 0.0000
+	    	border_bottomright_uv 0.9961 0.0039 1.0000 0.0000
+
+		element TextArea(TLBB/HitObjText)
+		{
+			metrics_mode pixels
+			left 5
+			top 5
+			width 210
+			height 260
+			font_name TrebuchetMSBold
+			char_height 12
+			colour_top 1 1 0.7
+			colour_bottom 1 1 0.7
+		}
+	}
+}

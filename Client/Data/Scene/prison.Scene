@@ -1,0 +1,3257 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Scene formatVersion="0.1.1" name="prison">
+
+  <Terrain filename="prison.Terrain"/>
+
+  <Object name="#FairyEnviroment" type="Enviroment">
+    <Property name="ambient" value="0.023529 0.137255 0.156863"/>
+    <Property name="fog.colour" value="0.152941 0.286275 0.294118"/>
+    <Property name="fog.linear start" value="2200"/>
+    <Property name="fog.linear end" value="3300"/>
+  </Object>
+
+  <Object name="#FairyMainLightOne" type="Light">
+    <Property name="type" value="directional"/>
+    <Property name="diffuse" value="0.8 0.678431 0.109804"/>
+    <Property name="specular" value="0.3 0.3 0.3"/>
+    <Property name="position" value="0 0 1"/>
+    <Property name="direction" value="-1 0.6 -1"/>
+  </Object>
+
+  <Object name="#FairyMainLightTwo" type="Light">
+    <Property name="type" value="directional"/>
+    <Property name="diffuse" value="0.07451 0.239216 0.184314"/>
+    <Property name="specular" value="0.12549 0.501961 0.133333"/>
+    <Property name="direction" value="-1 -2 -1"/>
+    <Property name="cast shadows" value="true"/>
+  </Object>
+
+  <Object name="#FairySkyDome" type="SkyDome">
+    <Property name="material" value="CloudySky"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="2500 0 -2600"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="500 0.00012207 -2600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="2500 0 -2600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房油灯.mesh"/>
+    <Property name="position" value="1500 0 -2600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网1.mesh"/>
+    <Property name="position" value="601 562 -2699"/>
+    <Property name="orientation" value="-0.412509 0.523053 0.720334 -0.193311"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷木栅盖.mesh"/>
+    <Property name="position" value="2000 0 -3800"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/室内/墙饰/挂刀.mesh"/>
+    <Property name="position" value="2453 200 -1590"/>
+    <Property name="orientation" value="0.529399 0.468762 -0.529398 0.468761"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/室内/灯台/铁烛台.mesh"/>
+    <Property name="position" value="2464 0 -1325"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/陶罐.mesh"/>
+    <Property name="position" value="2600 0 -2600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/陶罐02.mesh"/>
+    <Property name="position" value="2669 0 -2567"/>
+    <Property name="orientation" value="1 0 0 -1.46753e-008"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="海南渔村/海盗柱子.mesh"/>
+    <Property name="position" value="4100 0 -4100"/>
+    <Property name="orientation" value="0.937339 0 -0.348419 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="海南渔村/石板02.mesh"/>
+    <Property name="position" value="3900 0 -4200"/>
+    <Property name="orientation" value="0.140658 0 -0.990058 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/秸秆.mesh"/>
+    <Property name="position" value="3700 0 -4300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/饭桌.mesh"/>
+    <Property name="position" value="2351 0 -1380"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房稻草.mesh"/>
+    <Property name="position" value="4074.23 13.9997 -3626.95"/>
+    <Property name="orientation" value="-0.845924 -0.0200091 0.532835 -0.00967004"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.968627 0.627451 0.066667"/>
+    <Property name="position" value="1500 200 -2500"/>
+    <Property name="range" value="600"/>
+    <Property name="attenuation.constant" value="0.1"/>
+    <Property name="attenuation.linear" value="0.005"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.968627 0.627451 0.066667"/>
+    <Property name="position" value="2441 220 -1448"/>
+    <Property name="range" value="600"/>
+    <Property name="attenuation.constant" value="0.1"/>
+    <Property name="attenuation.linear" value="0.006"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/长板凳.mesh"/>
+    <Property name="position" value="2298 0 -1211"/>
+    <Property name="orientation" value="0.99904 0 -0.0438065 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/长板凳.mesh"/>
+    <Property name="position" value="2331 0 -1571"/>
+    <Property name="orientation" value="-7.45058e-008 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/长板凳.mesh"/>
+    <Property name="position" value="2163 0 -1416"/>
+    <Property name="orientation" value="0.665448 0 0.746444 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="2500 0 -1600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="2500 0 -1600"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="sunny02"/>
+    <Property name="position" value="-4206.09 -100 -3195.23"/>
+    <Property name="orientation" value="0.873095 0 -0.48755 0"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.968627 0.627451 0.066667"/>
+    <Property name="position" value="-4200 100 -3100"/>
+    <Property name="range" value="300"/>
+    <Property name="attenuation.constant" value="0.1"/>
+    <Property name="attenuation.linear" value="0.015"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_010"/>
+    <Property name="position" value="2441.81 219 -1346.85"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_01"/>
+    <Property name="position" value="2444.17 219 -1345.49"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_010"/>
+    <Property name="position" value="1499 475 -2499"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_01"/>
+    <Property name="position" value="1501.36 475 -2497.64"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="1500 -0.00012207 -2600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="600 600 -4600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="公用小建筑/台阶边2.mesh"/>
+    <Property name="position" value="-400 0 -4700"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="公用小建筑/台阶边2.mesh"/>
+    <Property name="position" value="300 0 -4700"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-500 0 -3600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="500 0 -3600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="500 0 -3600"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="-500 0 -3600"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-600 600 -4600"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_01"/>
+    <Property name="position" value="-497.64 500 -2498.64"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.968627 0.627451 0.066667"/>
+    <Property name="position" value="-499 200 -2501"/>
+    <Property name="range" value="600"/>
+    <Property name="attenuation.constant" value="0.1"/>
+    <Property name="attenuation.linear" value="0.005"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_010"/>
+    <Property name="position" value="-500 500 -2500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房油灯.mesh"/>
+    <Property name="position" value="-499 25 -2601"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_010"/>
+    <Property name="position" value="500 500 -2500"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.968627 0.627451 0.066667"/>
+    <Property name="position" value="501 200 -2501"/>
+    <Property name="range" value="600"/>
+    <Property name="attenuation.constant" value="0.1"/>
+    <Property name="attenuation.linear" value="0.005"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房油灯.mesh"/>
+    <Property name="position" value="501 25 -2601"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_01"/>
+    <Property name="position" value="502.36 500 -2498.64"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏门2.mesh"/>
+    <Property name="position" value="1500 0 -2600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/室内/书桌/松木书桌.mesh"/>
+    <Property name="position" value="-200 0 -3400"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/长板凳.mesh"/>
+    <Property name="position" value="-400 0 -3400"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_010"/>
+    <Property name="position" value="-245 222 -3537"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/室内/灯台/铁烛台.mesh"/>
+    <Property name="position" value="-222.81 3 -3515.15"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_01"/>
+    <Property name="position" value="-242.64 222 -3535.64"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="600 600 -4600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="1600 600 -4600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="2600 600 -4600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="3600 600 -4600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="1600 600 -4600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="2600 600 -4600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="3600 600 -4600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="4600 600 -4600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-1600 600 -4600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="-1600 600 -4600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="-2600 600 -4600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="-3600 600 -4600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="-4600 600 -4600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-2600 600 -4600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-3600 600 -4600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-4600 600 -4600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="500 0 -2600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-500 0 -2600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏门2.mesh"/>
+    <Property name="position" value="-500 0 -2600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="丐帮/丐帮兵器架.mesh"/>
+    <Property name="position" value="1900 0 -700"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-500 0 -4600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="500 0 -4600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房稻草.mesh"/>
+    <Property name="position" value="2729 3 -2200"/>
+    <Property name="orientation" value="0.706891 0.0138599 0.706971 -0.0173718"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="2500 0 -600"/>
+    <Property name="orientation" value="8.9407e-008 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="2500 0 -600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="2500 0 400"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="2500 -0.00012207 2400"/>
+    <Property name="orientation" value="4.47035e-008 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="500 0.00012207 2400"/>
+    <Property name="orientation" value="1 0 1.49012e-007 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="2500 0 400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="2500 0 1400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="2500 0 2400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="1500 0 2400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="500 0 2400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-500 0 2400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="-1500 0 -2600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="-2500 0 -1600"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="-2500 0 -600"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="-2500 0 1400"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="-1500 0 2400"/>
+    <Property name="orientation" value="1 0 1.49012e-007 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="-2500 0 2400"/>
+    <Property name="orientation" value="1 0 1.49012e-007 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-1500 0 -2600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-2500 0 -2600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-2500 0 -1600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-2500 0 -600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-2500 0 400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-2500 0 1400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-2500 0 2400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-1500 0 2400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="2500 0 400"/>
+    <Property name="orientation" value="8.9407e-008 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏门2.mesh"/>
+    <Property name="position" value="1500 -0.00012207 -600"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="1500 0 -600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="1500 0 400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="4500 0 -600"/>
+    <Property name="orientation" value="8.9407e-008 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="4500 0 400"/>
+    <Property name="orientation" value="8.9407e-008 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="4500 0 -600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="4500 0 400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="3400 0 400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="3400 0 -600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏门2.mesh"/>
+    <Property name="position" value="2500 0 -600"/>
+    <Property name="orientation" value="1 0 1.49012e-007 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏门2.mesh"/>
+    <Property name="position" value="2500 0 1400"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房油灯.mesh"/>
+    <Property name="position" value="-500 0 2400"/>
+    <Property name="orientation" value="-8.9407e-008 0 1 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_01"/>
+    <Property name="position" value="-497.64 478 2301.36"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.968627 0.627451 0.066667"/>
+    <Property name="position" value="-500 200 2300"/>
+    <Property name="range" value="550"/>
+    <Property name="attenuation.constant" value="0.1"/>
+    <Property name="attenuation.linear" value="0.005"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_010"/>
+    <Property name="position" value="-500 478 2300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房油灯.mesh"/>
+    <Property name="position" value="1500 0 -600"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房油灯.mesh"/>
+    <Property name="position" value="1500 0 400"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏门2.mesh"/>
+    <Property name="position" value="-1500 0 400"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="-1500 0.000244141 400"/>
+    <Property name="orientation" value="8.9407e-008 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="-1500 0 -600"/>
+    <Property name="orientation" value="8.9407e-008 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-1500 0 -600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-1500 0 400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="-2500 0.000244141 400"/>
+    <Property name="orientation" value="8.9407e-008 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="-3500 0 400"/>
+    <Property name="orientation" value="8.9407e-008 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-3500 0 400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-3300 0 -600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-4500 0 -600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-4500 0 400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="苗疆/苗疆火盆木架.mesh"/>
+    <Property name="position" value="4300 0 -100"/>
+    <Property name="orientation" value="-2.98023e-008 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="苗疆/苗疆火盆木架.mesh"/>
+    <Property name="position" value="-4300 0 -100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="4600 600 -4600"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="4600 600 -3600"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="4600 600 -2600"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="4600 600 -1600"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="4600 600 -600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="4600 600 -1600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="4600 600 -2600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="4600 600 -3600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-1600 600 4600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-4600 600 4600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="-1600 600 4600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="-2600 600 4600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-2600 600 4600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-3600 600 4600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="-3600 600 4600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-600 600 4600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="-4600 600 4600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房油灯.mesh"/>
+    <Property name="position" value="2500 0 -1600"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_010"/>
+    <Property name="position" value="2399 477 -1600"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_01"/>
+    <Property name="position" value="2401.36 477 -1598.64"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="1500 0 3400"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="1500 0.000244141 4400"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="-1500 0 3400"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="-1500 0 4400"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏门2.mesh"/>
+    <Property name="position" value="500 0 2400"/>
+    <Property name="orientation" value="0 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="1500 0 3400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="1500 0 4400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-1500 0 3400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-1500 0 4400"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="-4300 200 -100"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="-4300 200 -100"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="4300 200 -100"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="4300 200 -100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="-4600 600 4600"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="-4600 600 3600"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="-4600 600 2600"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="-4600 600 1600"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="-4600 600 -3600"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="-4600 600 -2600"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="-4600 600 -1600"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="-4600 600 -600"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-4600 600 -600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-4600 600 600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-4600 600 1600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-4600 600 2600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-4600 600 3600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-4600 600 -1600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-4600 600 -2600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-4600 600 -3600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="3600 600 4600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="2600 600 4600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="1600 600 4600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="1600 600 4600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="2600 600 4600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="3600 600 4600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="4600 600 4600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="600 600 4600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="600 600 4600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="-500 600 4600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="500 600 4600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-500 600 4600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="-4600 600 500"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-4600 600 -500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-4600 600 500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="4600 600 4600"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="4600 600 3600"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="4600 600 2600"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="4600 600 1600"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="4600 600 3600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="4600 600 2600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="4600 600 1600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="4600 600 600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="4600 600 500"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="4600 600 500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="4600 600 -500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏门2.mesh"/>
+    <Property name="position" value="-2500 0 -2600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏门2.mesh"/>
+    <Property name="position" value="-3500 0 -600"/>
+  </Object>
+
+  <Object type="TerrainLiquid">
+    <Property name="material" value="heliuwater"/>
+    <Property name="position" value="1900 -300 -4200"/>
+    <Property name="texture scale" value="0.3"/>
+    <Property name="depth texture layer.enable" value="true"/>
+    <Property name="depth texture layer.height scale" value="0.002"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房油灯.mesh"/>
+    <Property name="position" value="-1500 0 400"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房油灯.mesh"/>
+    <Property name="position" value="-1500 0 -600"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房油灯.mesh"/>
+    <Property name="position" value="-2500 0 -1600"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房油灯.mesh"/>
+    <Property name="position" value="-2500 0 1400"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_01"/>
+    <Property name="position" value="502.36 500 2301.36"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房油灯.mesh"/>
+    <Property name="position" value="500 22 2400"/>
+    <Property name="orientation" value="-8.9407e-008 0 1 0"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.968627 0.627451 0.066667"/>
+    <Property name="position" value="500 200 2300"/>
+    <Property name="range" value="550"/>
+    <Property name="attenuation.constant" value="0.1"/>
+    <Property name="attenuation.linear" value="0.005"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_010"/>
+    <Property name="position" value="500 500 2300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房油灯.mesh"/>
+    <Property name="position" value="2500 0 1400"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.968627 0.627451 0.066667"/>
+    <Property name="position" value="2400 200 1400"/>
+    <Property name="range" value="550"/>
+    <Property name="attenuation.constant" value="0.1"/>
+    <Property name="attenuation.linear" value="0.005"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_010"/>
+    <Property name="position" value="2397.64 476 1400.64"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房油灯.mesh"/>
+    <Property name="position" value="1497.64 22 2398.64"/>
+    <Property name="orientation" value="-8.9407e-008 0 1 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_01"/>
+    <Property name="position" value="2400 476 1402"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房油灯.mesh"/>
+    <Property name="position" value="-1502.36 22 2398.64"/>
+    <Property name="orientation" value="-8.9407e-008 0 1 0"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.968627 0.627451 0.066667"/>
+    <Property name="position" value="-2399 200 -1601"/>
+    <Property name="range" value="600"/>
+    <Property name="attenuation.constant" value="0.1"/>
+    <Property name="attenuation.linear" value="0.005"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_010"/>
+    <Property name="position" value="-2400 478 -1600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房油灯.mesh"/>
+    <Property name="position" value="-1499 25 -2601"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_01"/>
+    <Property name="position" value="-2397.64 478 -1598.64"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="海南渔村/海盗柱子.mesh"/>
+    <Property name="position" value="1900 -400 -3900"/>
+    <Property name="orientation" value="0.920434 0 0.390897 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房火炉.mesh"/>
+    <Property name="position" value="0 0 4200"/>
+    <Property name="orientation" value="5.96046e-008 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="苏州/铁匠铺剑1.mesh"/>
+    <Property name="position" value="0 47 4200"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="0 100 4200"/>
+    <Property name="orientation" value="1 0 1.49012e-007 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="0 100 4200"/>
+    <Property name="orientation" value="1 0 1.49012e-007 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="海南渔村/海盗柱子.mesh"/>
+    <Property name="position" value="-1000 0 4100"/>
+    <Property name="orientation" value="0.983662 0 -0.180023 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="海南渔村/海盗柱子.mesh"/>
+    <Property name="position" value="-1000 0 2700"/>
+    <Property name="orientation" value="0.893224 0 0.449611 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="海南渔村/海盗柱子.mesh"/>
+    <Property name="position" value="1100 0 4100"/>
+    <Property name="orientation" value="0.957446 0 0.288612 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/木桶.mesh"/>
+    <Property name="position" value="-1100 -0.00012207 4000"/>
+    <Property name="orientation" value="0.985797 0 0.167938 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="800 200 4300"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="800 200 4300"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="-800 200 4300"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="-800 200 4300"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="苗疆/苗疆火盆木架.mesh"/>
+    <Property name="position" value="800 0.000366211 4300"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="苗疆/苗疆火盆木架.mesh"/>
+    <Property name="position" value="-800 -0.000244141 4300"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.968627 0.627451 0.066667"/>
+    <Property name="position" value="800 100 4300"/>
+    <Property name="range" value="700"/>
+    <Property name="attenuation.constant" value="0.1"/>
+    <Property name="attenuation.linear" value="0.002"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷木栅盖.mesh"/>
+    <Property name="position" value="0 0 -100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="-500 0 400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="500 0 -600"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="-500 0 -600"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏门2.mesh"/>
+    <Property name="position" value="500 0 -600"/>
+    <Property name="orientation" value="-1.19209e-007 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="500 0 400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-500 0 400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="500 0 -600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-500 0 -600"/>
+  </Object>
+
+  <Object type="TerrainLiquid">
+    <Property name="material" value="heliuwater"/>
+    <Property name="position" value="100 -350 100"/>
+    <Property name="texture scale" value="0.3"/>
+    <Property name="depth texture layer.enable" value="true"/>
+    <Property name="depth texture layer.height scale" value="0.002"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="公用小建筑/台阶边2.mesh"/>
+    <Property name="position" value="-2700 -400 1500"/>
+    <Property name="orientation" value="-2.98023e-008 0 1 0"/>
+  </Object>
+
+  <Object type="TerrainLiquid">
+    <Property name="material" value="heliuwater"/>
+    <Property name="position" value="-3800 -300 4200"/>
+    <Property name="texture scale" value="0.3"/>
+    <Property name="depth texture layer.enable" value="true"/>
+    <Property name="depth texture layer.height scale" value="0.002"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="公用小建筑/台阶边2.mesh"/>
+    <Property name="position" value="-2700 -400 2100"/>
+    <Property name="orientation" value="-2.98023e-008 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房稻草.mesh"/>
+    <Property name="position" value="2000 10 2600"/>
+    <Property name="orientation" value="0.999823 0.0159477 0.000235442 0.00978656"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房稻草.mesh"/>
+    <Property name="position" value="4100 0 3900"/>
+    <Property name="orientation" value="-0.727047 -0.017764 0.686226 -0.0133536"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房稻草.mesh"/>
+    <Property name="position" value="-3925 0 -4090"/>
+    <Property name="orientation" value="0.99351 0.0222234 -0.111531 -2.84229e-006"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/陶罐.mesh"/>
+    <Property name="position" value="4274 0 3532"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/陶罐.mesh"/>
+    <Property name="position" value="-4300 0 -4000"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/陶罐02.mesh"/>
+    <Property name="position" value="-4336 0 -3962"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/酒罐.mesh"/>
+    <Property name="position" value="2433 0 -1285"/>
+    <Property name="orientation" value="0.970032 0 -0.24298 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="公用小建筑/桌子凳子.mesh"/>
+    <Property name="position" value="3700 0 3600"/>
+    <Property name="orientation" value="0.83522 0 0.549916 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="公用小建筑/桌子凳子.mesh"/>
+    <Property name="position" value="-1300 0 3700"/>
+    <Property name="orientation" value="-0.13154 0 0.99131 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/水槽.mesh"/>
+    <Property name="position" value="1400 0 3600"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/木桶.mesh"/>
+    <Property name="position" value="-1429 0.00012207 3326"/>
+    <Property name="orientation" value="0.427555 0 0.903989 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网1.mesh"/>
+    <Property name="position" value="4530 509 312"/>
+    <Property name="orientation" value="0.900628 -0.306749 -0.0498366 0.303788"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷锁链.mesh"/>
+    <Property name="position" value="212 0 4000"/>
+    <Property name="orientation" value="0.88904 0 -0.457825 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷锁链.mesh"/>
+    <Property name="position" value="3584 -16 1339"/>
+    <Property name="orientation" value="0.444108 0 -0.89597 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="-1500 -400 3400"/>
+    <Property name="orientation" value="-9.96286e-008 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="-3500 -400 3400"/>
+    <Property name="orientation" value="-5.48738e-008 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏门2.mesh"/>
+    <Property name="position" value="-2500 -400 3400"/>
+    <Property name="orientation" value="-1.02427e-007 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-2500 -400 3400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-3500 -400 3400"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="-3600 -200 3300"/>
+    <Property name="orientation" value="0.707106 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="苗疆/苗疆火盆木架.mesh"/>
+    <Property name="position" value="-3600 -400 3300"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="-3600 -200 3300"/>
+    <Property name="orientation" value="0.707106 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="苗疆/苗疆火盆木架.mesh"/>
+    <Property name="position" value="-2400 -400 3300"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="-2400 -200 3300"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="-2400 -200 3300"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-4300 -400 3400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-1700 -400 3400"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_01"/>
+    <Property name="position" value="1400 478 400"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_010"/>
+    <Property name="position" value="1397.64 478 398.64"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.968627 0.627451 0.066667"/>
+    <Property name="position" value="1400 200 400"/>
+    <Property name="range" value="600"/>
+    <Property name="attenuation.constant" value="0.1"/>
+    <Property name="attenuation.linear" value="0.005"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.968627 0.627451 0.066667"/>
+    <Property name="position" value="-2400 -200 3300"/>
+    <Property name="range" value="500"/>
+    <Property name="attenuation.constant" value="0.1"/>
+    <Property name="attenuation.linear" value="0.005"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.968627 0.627451 0.066667"/>
+    <Property name="position" value="-3600 -200 3300"/>
+    <Property name="range" value="600"/>
+    <Property name="attenuation.constant" value="0.1"/>
+    <Property name="attenuation.linear" value="0.005"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷锁链.mesh"/>
+    <Property name="position" value="-3700 -400 3300"/>
+    <Property name="orientation" value="0.361031 0 -0.932556 0"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.968627 0.627451 0.066667"/>
+    <Property name="position" value="-2400 200 1400"/>
+    <Property name="range" value="550"/>
+    <Property name="attenuation.constant" value="0.1"/>
+    <Property name="attenuation.linear" value="0.005"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_01"/>
+    <Property name="position" value="-2397.64 476 1401.36"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_010"/>
+    <Property name="position" value="-2400 476 1400"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.968627 0.627451 0.066667"/>
+    <Property name="position" value="-1299 -275 -801"/>
+    <Property name="range" value="550"/>
+    <Property name="attenuation.constant" value="0.1"/>
+    <Property name="attenuation.linear" value="0.005"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_01"/>
+    <Property name="position" value="-1397.64 477 -598.64"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_010"/>
+    <Property name="position" value="-1400 477 -600"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.968627 0.627451 0.066667"/>
+    <Property name="position" value="-1400 200 -600"/>
+    <Property name="range" value="550"/>
+    <Property name="attenuation.constant" value="0.1"/>
+    <Property name="attenuation.linear" value="0.005"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房油灯.mesh"/>
+    <Property name="position" value="-3500 0 -600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房油灯.mesh"/>
+    <Property name="position" value="-2500 0 -600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房油灯.mesh"/>
+    <Property name="position" value="2500 0 -600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房油灯.mesh"/>
+    <Property name="position" value="3500 0 -600"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="sunny02"/>
+    <Property name="position" value="-4200 -100 -1600"/>
+    <Property name="orientation" value="0.873095 0 -0.48755 0"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.968627 0.627451 0.066667"/>
+    <Property name="position" value="-4193.91 100 -1504.77"/>
+    <Property name="range" value="300"/>
+    <Property name="attenuation.constant" value="0.1"/>
+    <Property name="attenuation.linear" value="0.015"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房稻草.mesh"/>
+    <Property name="position" value="-4100 0 -1600"/>
+    <Property name="orientation" value="0.825825 0.0168434 0.563484 -0.0144975"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房稻草.mesh"/>
+    <Property name="position" value="-1500 0 -3700"/>
+    <Property name="orientation" value="-0.216912 -0.00236862 -0.975937 0.0220968"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="公用小建筑/水牢柱子.mesh"/>
+    <Property name="position" value="800 0 4400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="公用小建筑/水牢柱子.mesh"/>
+    <Property name="position" value="-900 0 4400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="公用小建筑/水牢柱子.mesh"/>
+    <Property name="position" value="-50 0 4400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="海南渔村/海盗柱子.mesh"/>
+    <Property name="position" value="-4100 -400 4100"/>
+    <Property name="orientation" value="0.920541 0 -0.390647 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="海南渔村/海盗柱子.mesh"/>
+    <Property name="position" value="-4300 0 -2200"/>
+    <Property name="orientation" value="0.798307 0 0.602252 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="丐帮/丐帮兵器架.mesh"/>
+    <Property name="position" value="1900 0 500"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="丐帮/丐帮兵器架.mesh"/>
+    <Property name="position" value="-1900 0 500"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="丐帮/丐帮兵器架.mesh"/>
+    <Property name="position" value="-1900 0 -700"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="丐帮/丐帮兵器架2.mesh"/>
+    <Property name="position" value="-200 0 -3700"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="丐帮/丐帮兵器架2.mesh"/>
+    <Property name="position" value="-500 0 2500"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="丐帮/丐帮兵器架2.mesh"/>
+    <Property name="position" value="500 0 2500"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/陶罐.mesh"/>
+    <Property name="position" value="-4336 0 -1785"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网1.mesh"/>
+    <Property name="position" value="4335 84 4343"/>
+    <Property name="orientation" value="0.900628 -0.306749 -0.0498366 0.303788"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房稻草.mesh"/>
+    <Property name="position" value="2800 12 800"/>
+    <Property name="orientation" value="0.933438 0.0220868 0.357679 -0.0163634"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="-4262 0 -4309"/>
+    <Property name="orientation" value="0.87483 0 0.484431 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网1.mesh"/>
+    <Property name="position" value="-4336 -1 3296"/>
+    <Property name="orientation" value="0.583142 -0.431499 -0.688158 -0.013808"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shuidi"/>
+    <Property name="position" value="-3700 -300 3000"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shuidi_01"/>
+    <Property name="position" value="-3700 -300 3000"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/秸秆.mesh"/>
+    <Property name="position" value="-4370 0 -1200"/>
+    <Property name="orientation" value="0.68954 0 0.724247 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房刑架.mesh"/>
+    <Property name="position" value="600 0 3500"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房刑架.mesh"/>
+    <Property name="position" value="-600 0 4000"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/水缸2.mesh"/>
+    <Property name="position" value="-1400 0 3200"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/水缸1.mesh"/>
+    <Property name="position" value="-1331 0 3071"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/长板凳.mesh"/>
+    <Property name="position" value="-500 -0.00012207 3600"/>
+    <Property name="orientation" value="0.941544 0 -0.33689 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="苏州/风箱.mesh"/>
+    <Property name="position" value="156 0.00012207 4200"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房刑架.mesh"/>
+    <Property name="position" value="-4100 -400 2600"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房刑架.mesh"/>
+    <Property name="position" value="-4100 -400 1100"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房刑架.mesh"/>
+    <Property name="position" value="-3200 -400 4100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房刑架.mesh"/>
+    <Property name="position" value="-1000 0 -3400"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房刑架.mesh"/>
+    <Property name="position" value="1000 0 -3400"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="海南渔村/海盗柱子.mesh"/>
+    <Property name="position" value="-1800 -400 4100"/>
+    <Property name="orientation" value="0.948562 0 0.316593 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷锁链.mesh"/>
+    <Property name="position" value="324 0 3639"/>
+    <Property name="orientation" value="0.936268 0 0.351279 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="海南渔村/石板02.mesh"/>
+    <Property name="position" value="-4089.92 -400 1242.4"/>
+    <Property name="orientation" value="0.77301 0 0.634393 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="海南渔村/石板02.mesh"/>
+    <Property name="position" value="4016.38 0 4298.02"/>
+    <Property name="orientation" value="0.971504 0 -0.237024 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/秸秆.mesh"/>
+    <Property name="position" value="2575.67 0 -1764.24"/>
+    <Property name="orientation" value="0.657806 0 0.753187 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/秸秆.mesh"/>
+    <Property name="position" value="4357.57 0.00012207 4096.6"/>
+    <Property name="orientation" value="0.728464 0 -0.685083 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/货箱.mesh"/>
+    <Property name="position" value="1300 -0.00012207 2500"/>
+    <Property name="orientation" value="0.986308 0 0.164913 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/货箱.mesh"/>
+    <Property name="position" value="1400 0 2600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/货箱.mesh"/>
+    <Property name="position" value="1359 86 2539"/>
+    <Property name="orientation" value="0.893224 0 -0.449611 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="海南渔村/石板02.mesh"/>
+    <Property name="position" value="-1900 -400 2800"/>
+    <Property name="orientation" value="0.498228 0 0.867046 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="海南渔村/石板02.mesh"/>
+    <Property name="position" value="-3900 0 -1400"/>
+    <Property name="orientation" value="0.612809 0 0.790229 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网1.mesh"/>
+    <Property name="position" value="-4153 -200 4171"/>
+    <Property name="orientation" value="0.591521 -0.108085 -0.792867 0.0988789"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网1.mesh"/>
+    <Property name="position" value="2580 524 489"/>
+    <Property name="orientation" value="0.0359152 -0.331545 -0.90129 -0.276514"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="585 0 -4330"/>
+    <Property name="orientation" value="0.967139 -0.0710941 -0.239578 -0.0467683"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="-4253 0 -4001"/>
+    <Property name="orientation" value="-0.629638 0 -0.776887 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房刑夹.mesh"/>
+    <Property name="position" value="1000 0 2400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房刑夹.mesh"/>
+    <Property name="position" value="-1000 0 2400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房刑夹.mesh"/>
+    <Property name="position" value="4400 0 2300"/>
+    <Property name="orientation" value="0.704416 -0.0616284 -0.704416 -0.0616284"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房刑夹.mesh"/>
+    <Property name="position" value="2700 0.00012207 -4400"/>
+    <Property name="orientation" value="0.996195 -0.0871557 0 -4.65661e-010"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房刑夹.mesh"/>
+    <Property name="position" value="-2500 7.54707 -4400"/>
+    <Property name="orientation" value="0.996195 -0.0871557 0 -4.65661e-010"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房刑夹.mesh"/>
+    <Property name="position" value="-1700 0 -4400"/>
+    <Property name="orientation" value="0.996195 -0.0871557 0 -4.65661e-010"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房刑夹.mesh"/>
+    <Property name="position" value="-2500 0 -1100"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房刑夹.mesh"/>
+    <Property name="position" value="2500 0 -1100"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房刑夹.mesh"/>
+    <Property name="position" value="0 0 400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房刑架.mesh"/>
+    <Property name="position" value="4300 0 3100"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房刑架.mesh"/>
+    <Property name="position" value="4300 0 1500"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房刑架.mesh"/>
+    <Property name="position" value="3700 0 -1000"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房刑架.mesh"/>
+    <Property name="position" value="-4000 0 -1000"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.968627 0.627451 0.066667"/>
+    <Property name="position" value="-4300 200 -100"/>
+    <Property name="range" value="550"/>
+    <Property name="attenuation.constant" value="0.1"/>
+    <Property name="attenuation.linear" value="0.005"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.968627 0.627451 0.066667"/>
+    <Property name="position" value="4300 200 -100"/>
+    <Property name="range" value="550"/>
+    <Property name="attenuation.constant" value="0.1"/>
+    <Property name="attenuation.linear" value="0.005"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房稻草.mesh"/>
+    <Property name="position" value="4100 -0.00012207 -2900"/>
+    <Property name="orientation" value="0.511055 -0.000338487 -0.859542 -0.00116691"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房稻草.mesh"/>
+    <Property name="position" value="4000 0 600"/>
+    <Property name="orientation" value="-0.0238678 -0.00300858 0.999465 -0.0220187"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/陶罐.mesh"/>
+    <Property name="position" value="-3900 -398 3361"/>
+    <Property name="orientation" value="0.8469 -0.344931 -0.165738 0.369204"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="200 200 -700"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="200 200 -700"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="苗疆/苗疆火盆木架.mesh"/>
+    <Property name="position" value="200 2 -700"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.968627 0.627451 0.066667"/>
+    <Property name="position" value="200 102 -700"/>
+    <Property name="range" value="500"/>
+    <Property name="attenuation.constant" value="0.1"/>
+    <Property name="attenuation.linear" value="0.005"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房刑架.mesh"/>
+    <Property name="position" value="-200 -550 0"/>
+    <Property name="orientation" value="0.990306 0 -0.138905 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/室内/墙饰/挂刀.mesh"/>
+    <Property name="position" value="-248.506 130.437 -3647.63"/>
+    <Property name="orientation" value="0.747465 0.66185 -0.0426922 0.0378021"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏门.mesh"/>
+    <Property name="position" value="3500 0 400"/>
+    <Property name="orientation" value="-1.04308e-007 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/货箱.mesh"/>
+    <Property name="position" value="-359 1.9999 561"/>
+    <Property name="orientation" value="0.986308 0 0.164913 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/货箱.mesh"/>
+    <Property name="position" value="-256 2 505"/>
+    <Property name="orientation" value="0.992479 0 -0.122411 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/货箱.mesh"/>
+    <Property name="position" value="-300 88 523"/>
+    <Property name="orientation" value="0.893224 0 -0.449611 0"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.968627 0.627451 0.066667"/>
+    <Property name="position" value="-243 100 -3536"/>
+    <Property name="range" value="400"/>
+    <Property name="attenuation.constant" value="0.2"/>
+    <Property name="attenuation.linear" value="0.009"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="海南渔村/石板02.mesh"/>
+    <Property name="position" value="-2700 -400 4000"/>
+    <Property name="orientation" value="0.400594 0 0.916255 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷木栅盖.mesh"/>
+    <Property name="position" value="-1000 0 1800"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷锁链.mesh"/>
+    <Property name="position" value="-4100 0 -901"/>
+    <Property name="orientation" value="-0.299079 0 0.954226 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/秸秆.mesh"/>
+    <Property name="position" value="4365 0 900"/>
+    <Property name="orientation" value="0.71787 0 -0.696177 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/秸秆.mesh"/>
+    <Property name="position" value="1565 0 2800"/>
+    <Property name="orientation" value="0.685083 0 0.728465 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/秸秆.mesh"/>
+    <Property name="position" value="-899 0 -2662"/>
+    <Property name="orientation" value="-0.00920388 0 0.999957 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/陶罐02.mesh"/>
+    <Property name="position" value="3900 0 -4300"/>
+    <Property name="orientation" value="1 0 0 -1.46753e-008"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/陶罐02.mesh"/>
+    <Property name="position" value="2578 0 1147"/>
+    <Property name="orientation" value="1 0 0 -1.46753e-008"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/陶罐02.mesh"/>
+    <Property name="position" value="4321 0 3505"/>
+    <Property name="orientation" value="1 0 0 -1.46753e-008"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/陶罐02.mesh"/>
+    <Property name="position" value="-3821 0 -1421"/>
+    <Property name="orientation" value="1 0 0 -1.46753e-008"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/陶罐02.mesh"/>
+    <Property name="position" value="-170 0 469"/>
+    <Property name="orientation" value="1 0 0 -1.46753e-008"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/木桶.mesh"/>
+    <Property name="position" value="1300 0 3500"/>
+    <Property name="orientation" value="0.985797 0 0.167938 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/货箱.mesh"/>
+    <Property name="position" value="-2400 -4.74776 -1500"/>
+    <Property name="orientation" value="0.774953 0 0.632018 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/货箱.mesh"/>
+    <Property name="position" value="-2425 -1 -1397"/>
+    <Property name="orientation" value="1 0 -1.25928e-007 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷锁链.mesh"/>
+    <Property name="position" value="-1538 97 -1666"/>
+    <Property name="orientation" value="-0.94359 0 0.331105 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房稻草.mesh"/>
+    <Property name="position" value="-3300 0 -4100"/>
+    <Property name="orientation" value="0.226705 0.00742528 -0.973706 0.0209462"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/秸秆.mesh"/>
+    <Property name="position" value="-4100 0 -4381"/>
+    <Property name="orientation" value="-0.99998 0 0.00613556 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网1.mesh"/>
+    <Property name="position" value="4333 100 -4367"/>
+    <Property name="orientation" value="0.578658 0.0599633 0.691931 0.427535"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网1.mesh"/>
+    <Property name="position" value="-2404 562 2317"/>
+    <Property name="orientation" value="0.662705 -0.429963 -0.611912 0.0389128"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网1.mesh"/>
+    <Property name="position" value="-1576 100 3484"/>
+    <Property name="orientation" value="0.664646 0.00320417 0.609803 0.431708"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网1.mesh"/>
+    <Property name="position" value="-2832 -25.0483 4204"/>
+    <Property name="orientation" value="0.993053 0.0658153 -0.0860216 0.0459045"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网1.mesh"/>
+    <Property name="position" value="2596 556 -677"/>
+    <Property name="orientation" value="0.677522 -0.428878 -0.595465 0.049453"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网1.mesh"/>
+    <Property name="position" value="2419 460 2307"/>
+    <Property name="orientation" value="0.901661 -0.298245 -0.0249529 0.312141"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网1.mesh"/>
+    <Property name="position" value="417 200 311"/>
+    <Property name="orientation" value="0.900628 -0.306749 -0.0498366 0.303788"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网1.mesh"/>
+    <Property name="position" value="395 575 -3501"/>
+    <Property name="orientation" value="0.689616 -0.00768835 0.663115 0.290938"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shuidi_01"/>
+    <Property name="position" value="-3300 -300 1100"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shuidi"/>
+    <Property name="position" value="-3300 -300 1100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷锁链.mesh"/>
+    <Property name="position" value="3546 -0.000244141 3357"/>
+    <Property name="orientation" value="-0.880466 0 -0.474098 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷锁链.mesh"/>
+    <Property name="position" value="3829 106 -1700"/>
+    <Property name="orientation" value="-0.715728 0 0.698373 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷锁链.mesh"/>
+    <Property name="position" value="-3800 92 -2300"/>
+    <Property name="orientation" value="-0.641478 0 -0.767136 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房刑夹.mesh"/>
+    <Property name="position" value="2100 -0.000244141 4400"/>
+    <Property name="orientation" value="-1.78814e-007 1.49012e-008 -0.996195 -0.0871557"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房刑夹.mesh"/>
+    <Property name="position" value="3100 0 4400"/>
+    <Property name="orientation" value="-7.45058e-008 7.45058e-009 -0.996195 -0.0871557"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房刑夹.mesh"/>
+    <Property name="position" value="500 0 4400"/>
+    <Property name="orientation" value="-1.78814e-007 1.49012e-008 -0.996195 -0.0871557"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房刑夹.mesh"/>
+    <Property name="position" value="-500 0 4400"/>
+    <Property name="orientation" value="-1.78814e-007 1.49012e-008 -0.996195 -0.0871557"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷锁链.mesh"/>
+    <Property name="position" value="-1549 118 1342"/>
+    <Property name="orientation" value="0.945601 0 -0.325308 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷锁链.mesh"/>
+    <Property name="position" value="3457 141 -3689"/>
+    <Property name="orientation" value="-0.281462 0 -0.959565 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷锁链.mesh"/>
+    <Property name="position" value="1440 -59 -1564"/>
+    <Property name="orientation" value="-0.901345 0 -0.433092 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="-2750 0 -1734"/>
+    <Property name="orientation" value="0.573343 -0.0230341 -0.814882 -0.0819211"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="-2755 -66 -1518"/>
+    <Property name="orientation" value="0.849625 -0.0536501 -0.520473 -0.0660553"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房刑架.mesh"/>
+    <Property name="position" value="-1000 -600 2100"/>
+    <Property name="orientation" value="0.941686 0 0.33649 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="公用小建筑/水牢柱子.mesh"/>
+    <Property name="position" value="4400 0 -150"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="公用小建筑/水牢柱子.mesh"/>
+    <Property name="position" value="-4400 0 -150"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网1.mesh"/>
+    <Property name="position" value="-2434 481 -2508"/>
+    <Property name="orientation" value="-0.098661 0.350015 0.896594 0.252728"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网1.mesh"/>
+    <Property name="position" value="-652 -200 2159"/>
+    <Property name="orientation" value="0.974797 -0.17998 -0.0239351 0.129635"/>
+  </Object>
+
+  <Object type="TerrainLiquid">
+    <Property name="material" value="heliuwater"/>
+    <Property name="position" value="-700 -550 1800"/>
+    <Property name="texture scale" value="0.3"/>
+    <Property name="depth texture layer.enable" value="true"/>
+    <Property name="depth texture layer.height scale" value="0.002"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="海南渔村/海盗柱子.mesh"/>
+    <Property name="position" value="-1200 -600 1700"/>
+    <Property name="orientation" value="0.684684 0 -0.728841 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网1.mesh"/>
+    <Property name="position" value="-4498 500 -717"/>
+    <Property name="orientation" value="-0.72369 0.290413 0.625751 -0.019084"/>
+  </Object>
+
+  <Object type="TerrainLiquid">
+    <Property name="material" value="heliuwater"/>
+    <Property name="position" value="-3800 -20.9736 -2800"/>
+    <Property name="texture scale" value="0.3"/>
+    <Property name="depth texture layer.enable" value="true"/>
+    <Property name="depth texture layer.height scale" value="0.005"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shuidi_01"/>
+    <Property name="position" value="-3700 -20 -2800"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shuidi"/>
+    <Property name="position" value="-3700 -20 -2800"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shuidi"/>
+    <Property name="position" value="1000 -20.0264 1400"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shuidi_01"/>
+    <Property name="position" value="1000 -20.0264 1400"/>
+  </Object>
+
+  <Object type="TerrainLiquid">
+    <Property name="material" value="heliuwater"/>
+    <Property name="position" value="900 -21 1400"/>
+    <Property name="texture scale" value="0.3"/>
+    <Property name="depth texture layer.enable" value="true"/>
+    <Property name="depth texture layer.height scale" value="0.005"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="苗疆/苗疆圆木01.mesh"/>
+    <Property name="position" value="4000 0 900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="苗疆/苗疆圆木01.mesh"/>
+    <Property name="position" value="800 0 3700"/>
+    <Property name="orientation" value="0.836547 0 -0.547894 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="苗疆/苗疆圆木01.mesh"/>
+    <Property name="position" value="-1600 0 1500"/>
+    <Property name="orientation" value="0.234042 0 0.972226 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="苗疆/苗疆圆木01.mesh"/>
+    <Property name="position" value="-4200 0 -3300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="苗疆/苗疆圆木01.mesh"/>
+    <Property name="position" value="-1100 0 -3000"/>
+    <Property name="orientation" value="0.799537 0 0.600616 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="苗疆/苗疆圆木01.mesh"/>
+    <Property name="position" value="3900 0 -3200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="苗疆/苗疆圆木01.mesh"/>
+    <Property name="position" value="-1200 0 -2476"/>
+    <Property name="orientation" value="0.578313 0 -0.815815 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yun"/>
+    <Property name="position" value="-3100 -300 3200"/>
+    <Property name="orientation" value="0.959657 0 -0.281174 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yun"/>
+    <Property name="position" value="0 -300 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yun"/>
+    <Property name="position" value="-3600 -300 1200"/>
+    <Property name="orientation" value="0.868418 0 0.495834 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="苗疆/苗疆圆木01.mesh"/>
+    <Property name="position" value="-2710 -301.115 1199"/>
+    <Property name="orientation" value="-0.324076 -0.405384 0.803208 -0.292404"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房刑夹.mesh"/>
+    <Property name="position" value="-3000 0 400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房刑夹.mesh"/>
+    <Property name="position" value="-4000 0 400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房油灯.mesh"/>
+    <Property name="position" value="4323 -459 3526"/>
+    <Property name="orientation" value="-0.290381 0 0.956912 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_01"/>
+    <Property name="position" value="4269 49.1335 3444"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_010"/>
+    <Property name="position" value="4266.64 20.1335 3442.64"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.968627 0.627451 0.066667"/>
+    <Property name="position" value="4269 200 3444"/>
+    <Property name="range" value="500"/>
+    <Property name="attenuation.constant" value="0.1"/>
+    <Property name="attenuation.linear" value="0.004"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网1.mesh"/>
+    <Property name="position" value="2415 435 -699"/>
+    <Property name="orientation" value="0.954838 -0.219566 -0.0597933 0.191036"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/草2.mesh"/>
+    <Property name="position" value="3671.62 0 4283.15"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/草2.mesh"/>
+    <Property name="position" value="3980.24 -9.82061 1810.5"/>
+    <Property name="orientation" value="0.0429379 0 0.999078 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/草2.mesh"/>
+    <Property name="position" value="2610.18 0.739064 1422.09"/>
+    <Property name="orientation" value="0.940506 0 0.339777 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/草2.mesh"/>
+    <Property name="position" value="-2458.9 -4.07691 -4048.33"/>
+    <Property name="orientation" value="0.966976 0 0.254866 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/草2.mesh"/>
+    <Property name="position" value="-1997.24 -10.7459 -3787.58"/>
+    <Property name="orientation" value="0.603067 0 0.797691 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/草2.mesh"/>
+    <Property name="position" value="-2546.71 -11.171 -2686.41"/>
+    <Property name="orientation" value="0.977677 0 0.210112 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/草2.mesh"/>
+    <Property name="position" value="768.733 0 -4071.02"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/草2.mesh"/>
+    <Property name="position" value="2583.02 0 -3498.91"/>
+    <Property name="orientation" value="0.857728 0 0.514103 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/草2.mesh"/>
+    <Property name="position" value="3775.5 0 -2634.7"/>
+    <Property name="orientation" value="0.615232 0 0.788347 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/草2.mesh"/>
+    <Property name="position" value="2769.97 -8.3794 -903.562"/>
+    <Property name="orientation" value="0.992478 0 -0.122411 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/草2.mesh"/>
+    <Property name="position" value="3079.02 -9.20354 2565.01"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/草2.mesh"/>
+    <Property name="position" value="3178.14 0 2899.75"/>
+    <Property name="orientation" value="0.704934 0 -0.709273 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/草2.mesh"/>
+    <Property name="position" value="1917.61 -0.834344 3992.77"/>
+    <Property name="orientation" value="0.763189 0 -0.646176 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网1.mesh"/>
+    <Property name="position" value="4327 298 1803"/>
+    <Property name="orientation" value="0.714497 0.0293283 -0.0132709 0.698894"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网1.mesh"/>
+    <Property name="position" value="538 401 -3733"/>
+    <Property name="orientation" value="-0.707107 -3.72529e-009 -3.72529e-009 -0.707107"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网1.mesh"/>
+    <Property name="position" value="-1572 558 300"/>
+    <Property name="orientation" value="0.952375 0 0 0.304929"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网1.mesh"/>
+    <Property name="position" value="-3086 -100 4110"/>
+    <Property name="orientation" value="0.510429 -0.422751 -0.53348 0.52549"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="4351 0 623"/>
+    <Property name="orientation" value="0.595699 0 -0.803207 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="-4251 0 -2242"/>
+    <Property name="orientation" value="0.734739 0 0.67835 0"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.968627 0.627451 0.066667"/>
+    <Property name="position" value="-800 100 4300"/>
+    <Property name="range" value="700"/>
+    <Property name="attenuation.constant" value="0.1"/>
+    <Property name="attenuation.linear" value="0.002"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="苗疆/苗疆圆木01.mesh"/>
+    <Property name="position" value="-4190.51 -317.951 2776.07"/>
+    <Property name="orientation" value="0.792889 0.279831 0.348561 -0.414163"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房稻草.mesh"/>
+    <Property name="position" value="2520.66 0 3945.07"/>
+    <Property name="orientation" value="0.307571 0.0142208 0.951339 -0.0121604"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="苗疆/苗疆圆木01.mesh"/>
+    <Property name="position" value="1416.57 100.062 -4375.42"/>
+    <Property name="orientation" value="0.772444 0.497675 -0.391787 -0.0464299"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网1.mesh"/>
+    <Property name="position" value="-4472 400 520"/>
+    <Property name="orientation" value="0.0919768 0.183519 0.952277 0.225887"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网1.mesh"/>
+    <Property name="position" value="-2638 333.797 -638"/>
+    <Property name="orientation" value="0.707107 0.707107 0 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="海南渔村/石板02.mesh"/>
+    <Property name="position" value="2200 0 3600"/>
+    <Property name="orientation" value="0.603067 0 0.797691 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="海南渔村/石板02.mesh"/>
+    <Property name="position" value="-900 0 -3400"/>
+    <Property name="orientation" value="0.532403 0 -0.846491 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网1.mesh"/>
+    <Property name="position" value="-4125 -100 1214"/>
+    <Property name="orientation" value="-0.045719 -0.672871 -0.736918 0.0458545"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="2485 0 4248"/>
+    <Property name="orientation" value="-0.0337419 0 -0.999429 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="863 0 -4253"/>
+    <Property name="orientation" value="-0.98872 0 -0.149764 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网1.mesh"/>
+    <Property name="position" value="4580 676 -2473"/>
+    <Property name="orientation" value="0.0355546 0.560144 -0.82728 0.0240736"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="苗疆/苗疆圆木01.mesh"/>
+    <Property name="position" value="4300 0 -800"/>
+    <Property name="orientation" value="-0.00613611 0 0.999981 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="苗疆/苗疆圆木01.mesh"/>
+    <Property name="position" value="-700 0.453349 -3500"/>
+    <Property name="orientation" value="0.999529 0 -0.0306748 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="2500 13.4952 3300"/>
+    <Property name="orientation" value="4.47035e-008 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="3500 0 3300"/>
+    <Property name="orientation" value="4.47035e-008 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="2500 14.3888 3300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="3400 0 4400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="3400 0 3400"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="3400 0 2400"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="3400 -0.00698798 2400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="3400 0 1400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="3400 -0.206528 1400"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="3400 0 400"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="3400 -12.737 -1600"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="3400 -41.3671 -1600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="3400 0 -2600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="3400 0 -2600"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="3500 -5.57305 -3200"/>
+    <Property name="orientation" value="-1.0692e-007 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="3400 -6.32012 -3200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="3400 4.27393 -3600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="2500 -8.97136 -3200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="2500 -8.84018 -3200"/>
+    <Property name="orientation" value="-1.0692e-007 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="1500 0 -3200"/>
+    <Property name="orientation" value="-1.0692e-007 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="1500 0 -3200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="500 0 -3200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏门.mesh"/>
+    <Property name="position" value="-500 0 -3200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-500 0 -3200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="-500 0 -3200"/>
+    <Property name="orientation" value="-1.0692e-007 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-1500 0 -3200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="-1500 0 -3200"/>
+    <Property name="orientation" value="-1.0692e-007 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-2500 0 -3200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏门.mesh"/>
+    <Property name="position" value="-3500 -4.36616 -3200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-3500 -39.6178 -3200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="-3300 -36.1082 -3200"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-3300 -34.7873 -3200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="-3300 0 -2200"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="-3300 0 -1200"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="-3300 8.64924 -600"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-3300 0 400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="-3500 0 -600"/>
+    <Property name="orientation" value="8.9407e-008 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-3500 0 -600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏门.mesh"/>
+    <Property name="position" value="-2500 0 2400"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="3400 0 3300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="3400 0 4400"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="3400 0 3500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="1500 0 3300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="1500 0 3300"/>
+    <Property name="orientation" value="4.47035e-008 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="500 0 3300"/>
+    <Property name="orientation" value="4.47035e-008 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="-500 0 3300"/>
+    <Property name="orientation" value="4.47035e-008 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-1500 0 3300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="2500 -2.03232 -4200"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="2500 0 -4200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="海南渔村/海盗柱子.mesh"/>
+    <Property name="position" value="3000 1.62345 -3800"/>
+    <Property name="orientation" value="0.937339 0 -0.348419 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="海南渔村/海盗柱子.mesh"/>
+    <Property name="position" value="300 0 -3000"/>
+    <Property name="orientation" value="0.937339 0 -0.348419 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-3300 -9.39274 -2200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏门2.mesh"/>
+    <Property name="position" value="-3500 -7.0455 -1600"/>
+    <Property name="orientation" value="-1 0 0 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-3500 -6.38697 -1600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-3300 -18.8461 -1600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-3300 0 -200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房刑架.mesh"/>
+    <Property name="position" value="-3100 0 -200"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="-500 0 3300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="500 0 3300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="4425.58 0 3300"/>
+    <Property name="orientation" value="4.47035e-008 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="4400 0 3300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="3400 0 -600"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏.mesh"/>
+    <Property name="position" value="4426.61 0 -3200"/>
+    <Property name="orientation" value="-1.0692e-007 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="4400 226.987 -3300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房柱.mesh"/>
+    <Property name="position" value="3500 0 -600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="苗疆/苗疆圆木01.mesh"/>
+    <Property name="position" value="-3000 -7.19062 -300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="苗疆/苗疆圆木01.mesh"/>
+    <Property name="position" value="-3200 -400 2600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房刑夹.mesh"/>
+    <Property name="position" value="-3292.99 81.4389 -1200"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房刑夹.mesh"/>
+    <Property name="position" value="1100 39.4262 -3192.49"/>
+    <Property name="orientation" value="1 0 -9.3791e-008 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房刑夹.mesh"/>
+    <Property name="position" value="3341.81 184.898 -1200"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房刑夹.mesh"/>
+    <Property name="position" value="2100 112.139 368.825"/>
+    <Property name="orientation" value="-4.76646e-008 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房刑架.mesh"/>
+    <Property name="position" value="-3000 -400 760.926"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房刑架.mesh"/>
+    <Property name="position" value="-2284.98 -400 2900"/>
+    <Property name="orientation" value="1 0 -1.31893e-007 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房刑架.mesh"/>
+    <Property name="position" value="1766.6 0 3500"/>
+    <Property name="orientation" value="1 0 -8.63237e-008 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房刑架.mesh"/>
+    <Property name="position" value="3600 0 -307.536"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏门2.mesh"/>
+    <Property name="position" value="-500 0 -3600"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房栅栏门2.mesh"/>
+    <Property name="position" value="500 0 -3600"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/陶罐.mesh"/>
+    <Property name="position" value="-1600 0 300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/陶罐.mesh"/>
+    <Property name="position" value="-1600 0 300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/陶罐.mesh"/>
+    <Property name="position" value="-1300 0 3200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/陶罐.mesh"/>
+    <Property name="position" value="1400 0 3200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/陶罐.mesh"/>
+    <Property name="position" value="600 0 -2700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网1.mesh"/>
+    <Property name="position" value="-3209.11 460.982 -3101.08"/>
+    <Property name="orientation" value="-0.098661 0.350015 0.896594 0.252728"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网1.mesh"/>
+    <Property name="position" value="-449.789 330.178 -3139.35"/>
+    <Property name="orientation" value="-0.098661 0.350015 0.896594 0.252728"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网1.mesh"/>
+    <Property name="position" value="2399.93 419.318 -2447.34"/>
+    <Property name="orientation" value="-0.896594 0.252728 -0.0986602 -0.350015"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网1.mesh"/>
+    <Property name="position" value="-2400 426.602 500"/>
+    <Property name="orientation" value="-0.564224 -0.0687927 -0.703752 -0.426204"/>
+  </Object>
+
+</Scene>

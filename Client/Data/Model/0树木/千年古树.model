@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="千年古树.frame" />
+    <entity mesh="千年古树.mesh" node="千年古树" />
+    <entity mesh="千年古树大灯.mesh" />
+</model>

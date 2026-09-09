@@ -1,0 +1,116 @@
+<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame1" Name="Byname_Frame">
+        <Property Name="UnifiedPosition" Value="{{0.5,-142.5},{0.15,0.5}}" />
+        <Property Name="AbsoluteSize" Value="w:259 h:178" />
+        <Window Type="TLBB_DragTitle" Name="Byname_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="Byname_Frame" />
+            <Window Type="TLBB_SimpleText" Name="Byname_PageHeader">
+                <Property Name="Position" Value="x:0.0 y:0.0" />
+                <Property Name="Size" Value="w:1.0 h:1.0" />
+                <Property Name="Font" Value="YouYuan11.25" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="Text" Value="#{INTERFACE_XML_42}" />
+            </Window>
+        </Window>
+        <Window Type="TLBB_ButtonHelp" Name="Byname_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Property Name="Text" Value="TLBB_ButtonHelp" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*Byname&quot;);' />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="Byname_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Property Name="Text" Value="TLBB_ButtonClose" />
+            <Event Name="Clicked" Function="DrawSwearTitle_Cancel()" />
+        </Window>
+        <Window Type="DefaultWindow" Name="Byname_Function_Frame">
+            <Property Name="AbsolutePosition" Value="x:7.000000 y:36.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-13.000000},{1.000000,-55.000000}" />
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="Byname_Text1">
+                <Property Name="Position" Value="x:0.0 y:0.0" />
+                <Property Name="UnifiedSize" Value="{{1.0,0.000000},{0.000000,40.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_876}" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="TopAligned" />
+            </Window>
+            <Window Type="DefaultWindow" Name="Byname_Item1_Frame">
+              <Property Name="Position" Value="x:0.040650 y:0.414634" />
+              <Property Name="AbsoluteSize" Value="w:246.000000 h:42.000000" />
+              <Window Type="TLBB_EditBoxNormal" Name="Byname_Input1">
+                <Property Name="Position" Value="x:0.000000 y:0.000000" />
+                <Property Name="Size" Value="w:0.398340 h:0.974359" />
+                <Property Name="MaxTextLength" Value="4" />
+                    <Property Name="Text" Value="" />
+                </Window>
+                
+                <Window Type="TLBB_SimpleText" Name="Byname_Text2">
+					          <Property Name="Position" Value="x:0.45 y:0.0" />
+                    <Property Name="Size" Value="w:0.1 h:1.0" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_EditBoxNormal" Name="Byname_Input3">
+                  <Property Name="Position" Value="x:0.658537 y:0.000000" />
+                  <Property Name="Size" Value="w:0.186992 h:0.952381" />
+                  <Property Name="MaxTextLength" Value="2" />
+                    <Property Name="Text" Value="" />
+                </Window>
+            </Window>
+            <Window Type="DefaultWindow" Name="Byname_Item2_Frame">
+              <Property Name="Position" Value="x:0.101626 y:0.414634" />
+              <Property Name="AbsoluteSize" Value="w:228.000000 h:40.000000" />
+              <Window Type="TLBB_SimpleTextFrame" Name="Byname_Text3">
+                <Property Name="Position" Value="x:-0.065789 y:-0.025000" />
+                <Property Name="Size" Value="w:0.385965 h:0.900000" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                  <Property Name="HorzFormatting" Value="RightAligned" />
+                  <Property Name="VertFormatting" Value="VertCentred" />
+              </Window>
+              <Window Type="TLBB_SimpleText" Name="Byname_Text4">
+                  <Property Name="Position" Value="x:0.3 y:0.0" />
+                  <Property Name="Size" Value="w:0.1 h:1.0" />
+                  <Property Name="TextColor" Value="FFFFF263" />
+                  <Property Name="Text" Value="" />
+                  <Property Name="HorzFormatting" Value="HorzCentred" />
+                  <Property Name="VertFormatting" Value="VertCentred" />
+              </Window>
+              <Window Type="TLBB_EditBoxNormal" Name="Byname_Input4">
+                  <Property Name="Position" Value="x:0.4 y:0.0" />
+				          <Property Name="Size" Value="w:0.2 h:1.0" />
+				          <Property Name="MaxTextLength" Value="4" />
+                  <Property Name="Text" Value="" />
+              </Window>
+              
+              <Window Type="TLBB_SimpleText" Name="Byname_Text5">
+				          <Property Name="Position" Value="x:0.63 y:0.0" />
+                  <Property Name="Size" Value="w:0.1 h:1.0" />
+                  <Property Name="TextColor" Value="FFFFF263" />
+                  <Property Name="HorzFormatting" Value="LeftAligned" />
+                  <Property Name="VertFormatting" Value="VertCentred" />
+              </Window>
+            </Window>
+            <Window Type="TLBB_Frame_Lace5" Name="Byname_Blank">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-80.000000},{0.000000,20.000000}" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="Byname_Accept">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-80.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_557}" />
+                <Event Name="Clicked" Function="DrawSwearTitle_Accept()" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="Byname_Cancel">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-40.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_542}" />
+                <Event Name="Clicked" Function="DrawSwearTitle_Cancel()" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

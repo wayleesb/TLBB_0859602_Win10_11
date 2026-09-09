@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+	<Imageset Name="CommonFrame5" Imagefile="Common/ButtonCampaign.tga" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="false">
+		<Image Name="CommonFrame5_LT" XPos="204" YPos="141" Width="12" Height="20" />
+		<Image Name="CommonFrame5_RT" XPos="227" YPos="141" Width="12" Height="20" />
+		<Image Name="CommonFrame5_LB" XPos="204" YPos="182" Width="12" Height="14" />
+		<Image Name="CommonFrame5_RB" XPos="227" YPos="182" Width="12" Height="14" />
+		<Image Name="CommonFrame5_L" XPos="204" YPos="161" Width="7" Height="21" />
+		<Image Name="CommonFrame5_R" XPos="231" YPos="161" Width="8" Height="21" />
+		<Image Name="CommonFrame5_T" XPos="216" YPos="141" Width="11" Height="16" />
+		<Image Name="CommonFrame5_B" XPos="216" YPos="189" Width="11" Height="7" />  
+	</Imageset>

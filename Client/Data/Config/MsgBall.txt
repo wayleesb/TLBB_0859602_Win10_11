@@ -1,0 +1,11 @@
+INT	STRING	STRING	STRING	INT	INT	INT	INT
+INT	STRING	STRING	STRING	INT	INT	INT	INT
+0	消息球音效1	测试用的消息球1	MessageBallRed	6	5000	-1	-1
+1	请求加为好友	好友申请	MessageBallRed	2	15000	-1	-1
+2	请求加为好友	好友申请	MessageBallRed	2	15000	-1	-1
+3	请求加为好友	好友申请	MessageBallYellow	2	15000	-1	-1
+4	测试5	测试用的消息球5	MessageBallYellow	5	40000	-1	-1
+5	测试6	测试用的消息球6	MessageBallYellow	6	50000	-1	-1
+6	测试7	测试用的消息球7	MessageBallRed	7	60000	-1	-1
+7	测试8	测试用的消息球8	MessageBallRed	8	70000	-1	-1
+8	测试9	测试用的消息球9	MessageBallRed	9	80000	-1	-1

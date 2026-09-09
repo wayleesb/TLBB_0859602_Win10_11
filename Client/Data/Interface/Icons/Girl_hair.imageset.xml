@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<Imageset Name="Girl_hair" Imagefile="Icons/Girl_hair.jpg" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+	<Image Name="Girl_hair_1" XPos="0" YPos="0" Width="64" Height="64" />
+	<Image Name="Girl_hair_2" XPos="64" YPos="0" Width="64" Height="64" />
+	<Image Name="Girl_hair_3" XPos="128" YPos="0" Width="64" Height="64" />
+	<Image Name="Girl_hair_4" XPos="192" YPos="0" Width="64" Height="64" />
+	<Image Name="Girl_hair_5" XPos="0" YPos="64" Width="64" Height="64" />
+	<Image Name="Girl_hair_6" XPos="64" YPos="64" Width="64" Height="64" />
+	<Image Name="Girl_hair_7" XPos="128" YPos="64" Width="64" Height="64" />
+	<Image Name="Girl_hair_8" XPos="192" YPos="64" Width="64" Height="64" />
+	<Image Name="Girl_hair_9" XPos="0" YPos="128" Width="64" Height="64" />
+	<Image Name="Girl_hair_10" XPos="64" YPos="128" Width="64" Height="64" />
+	<Image Name="Girl_hair_11" XPos="128" YPos="128" Width="64" Height="64" />
+	<Image Name="Girl_hair_12" XPos="192" YPos="128" Width="64" Height="64" />
+</Imageset>

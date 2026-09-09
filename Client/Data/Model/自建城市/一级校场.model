@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="一级校场.frame" />
+    <entity mesh="一级校场.mesh" node="一级校场" />
+    <entity mesh="一级校场旗帜.mesh" />
+</model>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="驿站牌子.frame" />
+    <entity mesh="驿站牌子.mesh" node="驿站牌子" />
+    <entity mesh="牌子.mesh" />
+</model>

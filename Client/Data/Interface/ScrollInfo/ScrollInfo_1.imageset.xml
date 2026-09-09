@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<Imageset Name="ScrollInfo_1" Imagefile="ScrollInfo/tga_ScrollInfo_1.dds" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+	<Image Name="ScrollInfo_left" XPos="11" YPos="9" Width="36" Height="31" />
+	<Image Name="ScrollInfo_middle" XPos="47" YPos="9" Width="23" Height="31" />	
+	<Image Name="ScrollInfo_right" XPos="70" YPos="9" Width="35" Height="31" />
+
+  <Image Name="ScrollInfo_xuzileft" XPos="16" YPos="47" Width="9" Height="32" />
+  <Image Name="ScrollInfo_xuziright" XPos="31" YPos="47" Width="9" Height="32" />
+</Imageset>

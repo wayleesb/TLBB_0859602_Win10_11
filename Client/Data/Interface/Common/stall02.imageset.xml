@@ -1,0 +1,10 @@
+<Imageset Name="stall02" Imagefile="Common/tga_stall02.dds" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+	<Image Name="chongwu.gif_00" XPos="1" YPos="1" Width="74" Height="78" />
+	<Image Name="chongwu.gif_01" XPos="76" YPos="1" Width="74" Height="78" />
+	<Image Name="chongwu.gif_02" XPos="1" YPos="80" Width="74" Height="78" />
+	<Image Name="chongwu.gif_03" XPos="76" YPos="80" Width="74" Height="78" />
+	<Image Name="chongwu.gif_04" XPos="1" YPos="159" Width="74" Height="78" />
+	<Image Name="chongwu.gif_05" XPos="76" YPos="159" Width="74" Height="78" />
+	<Image Name="chongwu.gif_06" XPos="151" YPos="1" Width="74" Height="78" />
+	<Image Name="chongwu.gif_07" XPos="151" YPos="80" Width="74" Height="78" />
+</Imageset>

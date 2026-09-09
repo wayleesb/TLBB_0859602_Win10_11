@@ -1,0 +1,164 @@
+<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame0" Name="ConfraternitySkillsStudy_Frame">
+        <Property Name="UnifiedPosition" Value="{{0.0,338},{0.12,0}}" />
+        <Property Name="AbsoluteSize" Value="w:256 h:285" />
+        <Window Type="TLBB_DragTitle" Name="ConfraternitySkillsStudy_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="ConfraternitySkillsStudy_Frame" />
+            <Window Type="TLBB_SimpleText" Name="ConfraternitySkillsStudy_PageHeader">
+                <Property Name="Position" Value="x:0.0 y:0.0" />
+                <Property Name="Size" Value="w:1.0 h:1.0" />
+                <Property Name="Font" Value="YouYuan11.25" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="Text" Value="#{INTERFACE_XML_17}" />
+            </Window>
+        </Window>
+        <Window Type="TLBB_ButtonHelp" Name="ConfraternitySkillsStudy_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Property Name="Text" Value="TLBB_ButtonHelp" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*ConfraternitySkillsStudy&quot;);' />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="ConfraternitySkillsStudy_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Property Name="Text" Value="TLBB_ButtonClose" />
+            <Event Name="Clicked" Function="this:Hide();" />
+        </Window>
+        <Window Type="DefaultWindow" Name="ConfraternitySkillsStudy_Function_Frame">
+            <Property Name="AbsolutePosition" Value="x:7.000000 y:36.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-13.000000},{1.000000,-55.000000}" />
+            <Window Type="TLBB_SimpleText" Name="ConfraternitySkillsStudy_SkillName">
+                <Property Name="UnifiedPosition" Value="{{0.02,0.000000},{0.000000,2.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.35,0.000000},{0.000000,18.000000}" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_503}" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="ConfraternitySkillsStudy_Icon">
+                <Property Name="UnifiedPosition" Value="{{0.12,2.000000},{0.000000,22.000000}" />
+                <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="ConfraternitySkillsStudy_SkillLevel">
+                <Property Name="UnifiedPosition" Value="{{0.4,0.000000},{0.000000,2.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.57,0.000000},{0.000000,18.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_348}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="ConfraternitySkillsStudy_skilledDegree">
+                <Property Name="UnifiedPosition" Value="{{0.4,0.000000},{0.000000,22.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.57,0.000000},{0.000000,18.000000}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_222}" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="ConfraternitySkillsStudy_PlayerLevel">
+                <Property Name="UnifiedPosition" Value="{{0.4,0.000000},{0.000000,42.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.57,0.000000},{0.000000,18.000000}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_710}" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="ConfraternitySkillsStudy_Explain_Desc">
+                <Property Name="UnifiedPosition" Value="{{0.025,0.000000},{0.000000,62.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.95,0.000000},{0.000000,40.000000}" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="TopAligned" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="ConfraternitySkillsStudy_CurrentlyContribute_Character_Text">
+                <Property Name="UnifiedPosition" Value="{{0.025,3.000000},{0.000000,103.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.475,0.000000},{0.000000,20.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_211}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="ConfraternitySkillsStudy_DemandContribute_Character_Text">
+                <Property Name="UnifiedPosition" Value="{{0.5,3.000000},{0.000000,103.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.475,0.000000},{0.000000,20.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_671}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="ConfraternitySkillsStudy_DemandExp_Character_Text">
+                <Property Name="UnifiedPosition" Value="{{0.025,3.000000},{0.375,36.700000}" />
+                <Property Name="UnifiedSize" Value="{{0.95,0.000000},{0.000000,20.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_673}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="ConfraternitySkillsStudy_CurrentlyExp_Character_Text">
+                <Property Name="UnifiedPosition" Value="{{0.025,3.000000},{0.455,38.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.95,0.000000},{0.000000,20.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_218}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="ConfraternitySkillsStudy_Demand_Jiaozi_Text">
+                <Property Name="UnifiedPosition" Value="{{0.025,0.000000},{1.000000,-66.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.66,0.000000},{0.000000,22.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_330}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Window Type="TLBB_Money" Name="ConfraternitySkillsStudy_Demand_Jiaozi">
+                    <Property Name="UnifiedPosition" Value="{{0.0,0.000000},{0.000000,0.000000}" />
+                    <Property Name="UnifiedSize" Value="{{1.0,-5.000000},{0.000000,20.000000}" />
+                    <Property Name="MoneyNumber" Value="0" />
+                    <Property Name="HorzFormatting" Value="RightAligned" />
+                    <Property Name="GoldIcon" Value = "set:Button6 image:Lace_JiaoziJin" />
+                    <Property Name="SilverIcon" Value = "set:Button6 image:Lace_JiaoziYin" />
+                    <Property Name="CopperIcon" Value = "set:Button6 image:Lace_JiaoziTong" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="ConfraternitySkillsStudy_Currently_Jiaozi_Text">
+                <Property Name="UnifiedPosition" Value="{{0.025,0.000000},{1.000000,-44.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.66,0.000000},{0.000000,22.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_209}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Window Type="TLBB_Money" Name="ConfraternitySkillsStudy_Currently_Jiaozi">
+                    <Property Name="UnifiedPosition" Value="{{0.0,0.000000},{0.000000,0.000000}" />
+                    <Property Name="UnifiedSize" Value="{{1.0,-5.000000},{0.000000,20.000000}" />
+                    <Property Name="MoneyNumber" Value="0" />
+                    <Property Name="HorzFormatting" Value="RightAligned" />
+                    <Property Name="GoldIcon" Value = "set:Button6 image:Lace_JiaoziJin" />
+                    <Property Name="SilverIcon" Value = "set:Button6 image:Lace_JiaoziYin" />
+                    <Property Name="CopperIcon" Value = "set:Button6 image:Lace_JiaoziTong" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="ConfraternitySkillsStudy_Currently_Money_Text">
+                <Property Name="UnifiedPosition" Value="{{0.025,0.000000},{1.000000,-22.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.66,0.000000},{0.000000,22.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_209}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Window Type="TLBB_Money" Name="ConfraternitySkillsStudy_Currently_Money">
+                    <Property Name="UnifiedPosition" Value="{{0.0,0.000000},{0.000000,0.000000}" />
+                    <Property Name="UnifiedSize" Value="{{1.0,-5.000000},{0.000000,20.000000}" />
+                    <Property Name="MoneyNumber" Value="0" />
+                    <Property Name="HorzFormatting" Value="RightAligned" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="ConfraternitySkillsStudy_UpLevel">
+                <Property Name="UnifiedPosition" Value="{{0.75,-3.000000},{1.000000,-47.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.22,0.000000},{0.000000,26.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_633}" />
+                <Event Name="Clicked" Function="Guild_Ability_LevelUp_Click();" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

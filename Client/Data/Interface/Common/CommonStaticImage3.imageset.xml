@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+	<Imageset Name="CommonStaticImage3" Imagefile="Common/tga_CommonStaticImage3.dds" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="false">
+
+    <Image Name="CreateRoleBarT" XPos="0" YPos="0" Width="186" Height="66" />
+    <Image Name="CreateRoleBarM" XPos="0" YPos="60" Width="186" Height="38" />
+    <Image Name="CreateRoleBarB" XPos="0" YPos="96" Width="186" Height="38" />
+    <Image Name="CreateRoleBarBottom" XPos="0" YPos="139" Width="142" Height="92" />
+
+	  <Image Name="CommonMainFrame0_LT" XPos="161" YPos="152" Width="28" Height="37" />
+    <Image Name="CommonMainFrame0_LB" XPos="161" YPos="213" Width="39" Height="42" />
+    <Image Name="CommonMainFrame0_RT" XPos="227" YPos="152" Width="28" Height="37" />
+    <Image Name="CommonMainFrame0_RB" XPos="206" YPos="213" Width="49" Height="42" />
+    <Image Name="CommonMainFrame0_L" XPos="161" YPos="188" Width="7" Height="25" />
+    <Image Name="CommonMainFrame0_R" XPos="248" YPos="188" Width="7" Height="25" />
+    <Image Name="CommonMainFrame0_T" XPos="189" YPos="152" Width="38" Height="38" />
+    <Image Name="CommonMainFrame0_B" XPos="199" YPos="213" Width="18" Height="42" />
+
+	<Image Name="Targetname_Bak" XPos="1" YPos="237" Width="122" Height="16" />
+
+
+  </Imageset>

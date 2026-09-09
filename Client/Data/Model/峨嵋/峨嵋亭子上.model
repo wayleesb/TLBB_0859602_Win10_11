@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="峨嵋亭子上.frame" />
+    <entity mesh="峨嵋亭子绸带.mesh" node="峨嵋亭子上" />
+    <entity mesh="峨嵋亭子上.mesh" node="峨嵋亭子上" />
+    <entity mesh="峨嵋亭子绸带2.mesh" />
+</model>

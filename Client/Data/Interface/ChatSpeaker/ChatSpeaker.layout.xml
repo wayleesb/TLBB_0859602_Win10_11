@@ -1,0 +1,90 @@
+<?xml version="1.0" ?>
+<GUILayout>
+	<Window Type="TLBB_MainFrame1" Name="ChatSpeaker_Frame">
+		<Property Name="UnifiedPosition" Value="{{0.3609375,0},{0.333333333,0}}" />
+		<Property Name="AbsoluteSize" Value="w:270 h:192" />
+		<Window Type="TLBB_DragTitle" Name="ChatSpeaker_Frame_Title">
+			<Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+			<Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+			<Property Name="DragTarget" Value="ChatSpeaker_Frame" />
+			<Property Name="Font" Value="YouYuan11.25" />
+			<Property Name="HorzFormatting" Value="HorzCentred" />
+			<Property Name="VertFormatting" Value="VertCentred" />
+			<Property Name="Text" Value="#{INTERFACE_XML_1021}" />
+		</Window>
+		<Window Type="TLBB_ButtonHelp" Name="ChatSpeaker_Help">
+			<Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+			<Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+			<Property Name="Text" Value="TLBB_ButtonHelp" />
+			<Event Name="Clicked" Function='Helper:GotoHelper(&quot;*ChatSpeaker&quot;);' />
+		</Window>
+		<Window Type="TLBB_ButtonClose" Name="ChatSpeaker_Close">
+			<Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+			<Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+			<Property Name="Text" Value="TLBB_ButtonClose" />
+			<Event Name="Clicked" Function="ChatSpeaker_Hide()" />
+		</Window>
+		<Window Type="DefaultWindow" Name="ChatSpeaker_Frame_Client">
+			<Property Name="AbsolutePosition" Value="x:5.000000 y:36.000000" />
+			<Property Name="UnifiedSize" Value="{{1.000000,-11.000000},{1.000000,-55.000000}" />
+			<Window Type="TLBB_SimpleText" Name="ChatSpeaker_Text">
+				<Property Name="AbsolutePosition" Value="x:3.000000 y:3.000000" />
+				<Property Name="UnifiedSize" Value="{{0.90,255.000000},{0.000000,18.000000}" />
+				<Property Name="HorzFormatting" Value="LeftAligned" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="Text" Value="#{INTERFACE_XML_982}" />
+			</Window>
+			<Window Type="TLBB_MultiIMEEditBox" Name="ChatSpeaker_Edit">
+				<Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,22.000000}" />
+				<Property Name="UnifiedSize" Value="{{1.0,0.000000},{1.0,-45.000000}" />
+				<Property Name="MaxTextLength" Value="64" />
+				<Property Name="OnReturnEnable" Value="False" />
+				<Property Name="ActiveSelectionColour" Value="FF00FF00" />
+				<Property Name="SelectedTextColour" Value="FFFFFFFF" />
+			  <Event Name="TextAccepted" Function="ChatSpeaker_SendMessage();" />
+			</Window>
+			<Window Type="TLBB_Frame_Lace1" Name="ChatSpeaker_ChatButton_Frame">
+				<Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-21.000000}" />
+				<Property Name="AbsoluteSize" Value="w:39.000000 h:22.000000" />
+				<Window Type="TLBB_ButtonNULL" Name="ChatSpeaker_LetterColor">
+					<Property Name="AbsolutePosition" Value="x:3.000000 y:3.000000" />
+					<Property Name="AbsoluteSize" Value="w:16.000000 h:16.000000" />
+					<Property Name="NormalImage" Value="set:Button2 image:BtnA_Normal" />
+					<Property Name="HoverImage" Value="set:Button2 image:BtnA_Hover" />
+					<Property Name="PushedImage" Value="set:Button2 image:BtnA_Pushed" />
+					<Property Name="DisabledImage" Value="set:Button2 image:BtnA_Disable" />
+					<Property Name="Tooltip" Value="#{INTERFACE_XML_714}" />
+          <Event Name="Clicked" Function="ChatSpeaker_SelectTextColor();" />
+				</Window>
+				<Window Type="TLBB_ButtonNULL" Name="ChatSpeaker_Face">
+					<Property Name="AbsolutePosition" Value="x:20.000000 y:3.000000" />
+					<Property Name="AbsoluteSize" Value="w:16.000000 h:16.000000" />
+					<Property Name="NormalImage" Value="set:Button2 image:BtnFace_Normal" />
+					<Property Name="HoverImage" Value="set:Button2 image:BtnFace_Hover" />
+					<Property Name="PushedImage" Value="set:Button2 image:BtnFace_Pushed" />
+					<Property Name="DisabledImage" Value="set:Button2 image:BtnFace_Disable" />
+					<Property Name="Tooltip" Value="#{INTERFACE_XML_644}" />
+          <Event Name="Clicked" Function="ChatSpeaker_SelectFaceMotion();" />
+				</Window>
+			</Window>
+			<Window Type="TLBB_Frame_Lace5" Name="ChatSpeaker_Blank">
+				<Property Name="UnifiedPosition" Value="{{0.000000,38.000000},{1.000000,-20.000000}" />
+				<Property Name="UnifiedSize" Value="{{1.000000,-158.000000},{0.000000,20.000000}" />
+				<Property Name="RiseOnClick" Value="False" />
+			</Window>
+			<Window Type="TLBB_ButtonCommon" Name="ChatSpeaker_OK">
+				<Property Name="UnifiedPosition" Value="{{1.000000,-120.000000},{1.000000,-20.000000}" />
+				<Property Name="AbsoluteSize" Value="w:60.000000 h:20.000000" />
+				<Property Name="Text" Value="#{INTERFACE_XML_556}" />
+        <Event Name="Clicked" Function="ChatSpeaker_SendMessage();" />
+			</Window>
+			<Window Type="TLBB_ButtonCommon" Name="ChatSpeaker_Cancel">
+				<Property Name="UnifiedPosition" Value="{{1.000000,-60.000000},{1.000000,-20.000000}" />
+				<Property Name="AbsoluteSize" Value="w:60.000000 h:20.000000" />
+				<Property Name="Text" Value="#{INTERFACE_XML_539}" />
+        <Event Name="Clicked" Function="ChatSpeaker_Hide();" />
+			</Window>
+		</Window>
+	</Window>
+</GUILayout>

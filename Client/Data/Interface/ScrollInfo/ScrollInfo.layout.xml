@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<GUILayout>
+
+<Window Type="DefaultWindow" Name="ScrollInfo_FrameBak">
+	<Property Name="UnifiedPosition" Value="{{0,170},{0.0,95}}" />
+	<Property Name="UnifiedSize" Value="{{1,-370},{0.0,100}}" />
+	<Property Name="RiseOnClick" Value="False" />
+	<Property Name="MouseHollow" Value="True" />
+    <Property Name="MouseMoveHollow" Value="True" />
+	<Property Name="AlwaysOnTop" Value="true" />
+	<Window Type="TLBB_ScrollInfoFrame" Name="ScrollInfo_FrameBak1">
+		<Property Name="UnifiedPosition" Value="{{0,0},{0.0,0}}" />
+		<Property Name="UnifiedSize" Value="{{1,0},{0.0,31}}" />
+		<Property Name="MouseHollow" Value="True" />
+		<Property Name="MouseMoveHollow" Value="True" />
+		<Window Type="TLBB_ScrollInfo" Name="ScrollInfo_Frame">
+			<Property Name="UnifiedPosition" Value="{{0,26},{0,10}}" />
+			<Property Name="UnifiedSize" Value="{{1,-52},{1,-10}}" />
+			<Property Name="CoolDown" Value="2" />
+			<Property Name="MoveSpeed" Value="32" />
+			<Property Name="ScrollTime" Value="1" />
+			<Property Name="MouseHollow" Value="True" />
+			<Property Name="MouseMoveHollow" Value="True" />
+		</Window>
+	</Window>
+	<Window Type="TLBB_StaticImageNULL" Name="ScrollInfo_Background_RedLine1" >
+				<Property Name="AbsolutePosition" Value="x:3.000000 y:14.000000" />
+				<Property Name="AbsoluteSize" Value="w:7.000000 h:31.000000" />
+				<Property Name="Image" Value="set:ScrollInfo_1 image:ScrollInfo_xuzileft" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Property Name="MouseHollow" Value="True" />
+				<Property Name="MouseMoveHollow" Value="True" />
+	</Window>
+	<Window Type="TLBB_StaticImageNULL" Name="ScrollInfo_Background_RedLine2" >
+				<Property Name="UnifiedPosition" Value="{{1,-9},{0,14}}" />
+				<Property Name="AbsoluteSize" Value="w:7.000000 h:31.000000" />
+				<Property Name="Image" Value="set:ScrollInfo_1 image:ScrollInfo_xuziright" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Property Name="MouseHollow" Value="True" />
+				<Property Name="MouseMoveHollow" Value="True" />
+	</Window>
+</Window>
+</GUILayout>

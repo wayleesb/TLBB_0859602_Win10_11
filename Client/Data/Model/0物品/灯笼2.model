@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="灯笼2.frame" />
+    <entity mesh="灯笼2.mesh" node="灯笼2">
+        <offset>
+            <translate x="1.20616e-010" y="-263.815" z="-1.15317e-005" />
+        </offset>
+    </entity>
+</model>

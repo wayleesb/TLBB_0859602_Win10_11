@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="苗疆白塔.frame" />
+    <entity mesh="苗疆白塔.mesh" node="苗疆白塔" />
+    <entity mesh="苗疆白塔铃1.mesh" node="苗疆白塔铃1">
+        <offset>
+            <translate x="88.6245" y="-321.426" z="-164.061" />
+        </offset>
+    </entity>
+    <entity mesh="苗疆白塔铃2.mesh" node="苗疆白塔铃2">
+        <offset>
+            <translate x="88.6245" y="-331.711" z="-164.061" />
+        </offset>
+    </entity>
+    <entity mesh="苗疆白塔铃3.mesh" node="苗疆白塔铃3">
+        <offset>
+            <translate x="88.6244" y="-328.786" z="-164.061" />
+        </offset>
+    </entity>
+    <entity mesh="苗疆白塔铃4.mesh" node="苗疆白塔铃4">
+        <offset>
+            <translate x="88.6245" y="-331.607" z="-164.061" />
+        </offset>
+    </entity>
+    <entity mesh="苗疆白塔铃5.mesh" node="苗疆白塔铃5">
+        <offset>
+            <translate x="88.6245" y="-319.693" z="-164.061" />
+        </offset>
+    </entity>
+    <entity mesh="苗疆白塔铃6.mesh" node="苗疆白塔铃6">
+        <offset>
+            <translate x="88.6245" y="-320.925" z="-164.061" />
+        </offset>
+    </entity>
+</model>

@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<Imageset Name="FabaoSkill" Imagefile="Icons/FabaoSkill.jpg" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+	<Image Name="FabaoSkill_1" XPos="0" YPos="0" Width="64" Height="64" />
+	<Image Name="FabaoSkill_2" XPos="64" YPos="0" Width="64" Height="64" />
+	<Image Name="FabaoSkill_3" XPos="128" YPos="0" Width="64" Height="64" />
+	<Image Name="FabaoSkill_4" XPos="192" YPos="0" Width="64" Height="64" />
+	<Image Name="FabaoSkill_5" XPos="0" YPos="64" Width="64" Height="64" />
+	<Image Name="FabaoSkill_6" XPos="64" YPos="64" Width="64" Height="64" />
+	<Image Name="FabaoSkill_7" XPos="128" YPos="64" Width="64" Height="64" />
+	<Image Name="FabaoSkill_8" XPos="192" YPos="64" Width="64" Height="64" />
+	<Image Name="FabaoSkill_9" XPos="0" YPos="128" Width="64" Height="64" />
+	<Image Name="FabaoSkill_10" XPos="64" YPos="128" Width="64" Height="64" />
+	<Image Name="FabaoSkill_11" XPos="128" YPos="128" Width="64" Height="64" />
+	<Image Name="FabaoSkill_12" XPos="192" YPos="128" Width="64" Height="64" />
+	<Image Name="FabaoSkill_13" XPos="0" YPos="192" Width="64" Height="64" />
+	<Image Name="FabaoSkill_14" XPos="64" YPos="192" Width="64" Height="64" />
+	<Image Name="FabaoSkill_15" XPos="128" YPos="192" Width="64" Height="64" />
+	<Image Name="FabaoSkill_16" XPos="192" YPos="192" Width="64" Height="64" />
+</Imageset>

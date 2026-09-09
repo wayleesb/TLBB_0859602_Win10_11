@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame1" Name="CheckCustomPosition_Frame">
+      <Property Name="UnifiedPosition" Value="{{0.22500000,188.000000},{0.20000,51.780000}" />
+      <Property Name="AbsoluteSize" Value="w:195.000000 h:266.000000" />
+      <Event Name="Hidden" Function="AcceSetup_Cancel_Clicked()" />
+        <Window Type="TLBB_DragTitle" Name="CheckCustomPosition_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="CheckCustomPosition_Frame" />
+            <Window Type="TLBB_SimpleText" Name="CheckCustomPosition_Title">
+                <Property Name="Position" Value="x:0.0 y:0.0" />
+                <Property Name="Size" Value="w:1.0 h:1.0" />
+                <Property Name="Font" Value="YouYuan11.25" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Property Name="Text" Value="#{INTERFACE_XML_1149}" />
+            </Window>
+        </Window>
+        <Window Type="TLBB_ButtonHelp" Name="CheckCustomPosition_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*AcceSetup&quot;);' />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="CheckCustomPosition_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function="AcceSetup_Cancel_Clicked()" />
+        </Window>
+        <Window Type="DefaultWindow" Name="CheckCustomPosition_Client">
+            <Property Name="AbsolutePosition" Value="x:7.000000 y:36.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-13.000000},{1.000000,-55.000000}" />
+          <Window Type="TLBB_SimpleText" Name="CheckCustomPosition_List_Text1">
+            <Property Name="Position" Value="x:0.000000 y:0.013559" />
+            <Property Name="UnifiedSize" Value="{{0.000000,181.000000},{0.000000,21.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1150}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="CheckCustomPosition_CurPos1">
+            <Property Name="Position" Value="x:0.007109 y:0.115254" />
+            <Property Name="UnifiedSize" Value="{{0.000000,179.000000},{0.000000,20.000000}" />            
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="CheckCustomPosition_CurPos2">
+            <Property Name="Position" Value="x:0.006865 y:0.213270" />
+            <Property Name="UnifiedSize" Value="{{0.000000,179.000000},{0.000000,20.000000}" />            
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="CheckCustomPosition_CurPos3">
+            <Property Name="Position" Value="x:0.006865 y:0.312796" />
+            <Property Name="UnifiedSize" Value="{{0.000000,179.000000},{0.000000,20.000000}" />            
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="CheckCustomPosition_CurPos4">
+            <Property Name="Position" Value="x:0.006865 y:0.407583" />
+            <Property Name="UnifiedSize" Value="{{0.000000,179.000000},{0.000000,20.000000}" />            
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="CheckCustomPosition_CurPos5">
+            <Property Name="Position" Value="x:0.006865 y:0.502370" />
+            <Property Name="UnifiedSize" Value="{{0.000000,179.000000},{0.000000,20.000000}" />            
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="CheckCustomPosition_CurPos6">
+            <Property Name="Position" Value="x:0.006865 y:0.597156" />
+            <Property Name="UnifiedSize" Value="{{0.000000,179.000000},{0.000000,20.000000}" />            
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="CheckCustomPosition_CurPos7">
+            <Property Name="Position" Value="x:0.006865 y:0.691943" />
+            <Property Name="UnifiedSize" Value="{{0.000000,179.000000},{0.000000,20.000000}" />            
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="CheckCustomPosition_CurPos8">
+            <Property Name="Position" Value="x:0.006865 y:0.786730" />
+            <Property Name="UnifiedSize" Value="{{0.000000,179.000000},{0.000000,20.000000}" />            
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>          
+          <Window Type="TLBB_ButtonCommon" Name="CheckCustomPosition_Btn_OK">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-72.000000},{1.000000,-20.000000}" />
+            <Property Name="AbsoluteSize" Value="w:70.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_557}" />
+            <Event Name="Clicked" Function="CheckCustomPosition_Ok()" />
+          </Window>
+        </Window>
+    </Window>
+</GUILayout>

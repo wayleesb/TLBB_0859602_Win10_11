@@ -1,0 +1,465 @@
+<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame1" Name="PetZhengYou_Frame">
+        <Property Name="UnifiedPosition" Value="{{0.35,0},{0.12,0}}" />
+        <Property Name="UnifiedSize" Value="{{0,320},{0.0,390}}" />
+        <Window Type="TLBB_DragTitle" Name="PetZhengYou_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="PetZhengYou_Frame" />
+            <Window Type="TLBB_SimpleText" Name="PetZhengYou_PageHeader">
+                <Property Name="Position" Value="x:0.0 y:0.0" />
+                <Property Name="Size" Value="w:1.0 h:1.0" />
+                <Property Name="Font" Value="YouYuan11.25" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="Text" Value="#{INTERFACE_XML_1140}" />
+            </Window>
+        </Window>
+        <Window Type="TLBB_ButtonHelp" Name="PetZhengYou_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;PetZhengYou&quot;);' />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="PetZhengYou_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function="PetZhengYou_Hide();" />
+        </Window>
+        <Window Type="DefaultWindow" Name="PetZhengYou_Function_Frame">
+            <Property Name="AbsolutePosition" Value="x:7.000000 y:36.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-13.000000},{1.000000,-55.000000}" />
+            <Window Type="TLBB_FramePet" Name="PetZhengYou_Mode1_def">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,3.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.600000,-0.200007},{0.000000,98.000000}" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Window Type="TLBB_MeshWindow" Name="PetZhengYou_PetModel1">
+                    <Property Name="Position" Value="x:0.1 y:0.1" />
+                    <Property Name="Size" Value="w:0.8 h:0.85" />
+                    <Property Name="ShowControl" Value="PetZhengYou_Frame" />
+                    <Property Name="RiseOnClick" Value="False" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="PetZhengYou_Type1">
+                    <Property Name="Position" Value="x:0.3 y:0.80" />
+                    <Property Name="UnifiedSize" Value="{{0.4,0.000000},{0.000000,20.000000}" />
+                    <Property Name="HorzFormatting" Value="HorzCentred" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                    <Property Name="Tooltip" Value="#{INTERFACE_XML_857}" />
+                </Window>
+                 <Window Type="TLBB_SimpleText" Name="PetZhengYou_Flash_Name1" >
+										<Property Name="Position" Value="x:0.097933 y:0.05" />
+										<Property Name="AbsoluteSize" Value="w:150.000000 h:30.000000" />
+										<Property Name="Font" Value="YouYuan11.25" />
+										<Property Name="HorzFormatting" Value="HorzCentred" />
+										<Property Name="Text" Value="" />
+										<Property Name="VertFormatting" Value="VertCentred" />
+								</Window>
+
+                <Window Type="TLBB_ButtonTurnLeft" Name="PetZhengYou_PetModel1_TurnLeft">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,4.000000},{1.000000,-23.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:20.000000 h:20.000000" />
+                    <Event Name="MouseButtonDown" Function="local mouse_button = CEArg:GetValue('MouseButton');if(mouse_button == 'LeftButton') then PetZhengYou_Modle_TurnLeft(3,1) end;" />
+                    <Event Name="MouseButtonUp" Function="local mouse_button = CEArg:GetValue('MouseButton');if(mouse_button == 'LeftButton') then PetZhengYou_Modle_TurnLeft(3,0) end;" />
+                    <Event Name="CaptureLost" Function="PetZhengYou_Modle_TurnLeft(3,0);" />
+                    
+                </Window>
+                <Window Type="TLBB_ButtonTurnRight" Name="PetZhengYou_PetModel1_TurnRight">
+                    <Property Name="UnifiedPosition" Value="{{1.000000,-24.000000},{1.000000,-23.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:20.000000 h:20.000000" />
+                    <Event Name="MouseButtonDown" Function="local mouse_button = CEArg:GetValue('MouseButton');if(mouse_button == 'LeftButton') then PetZhengYou_Modle_TurnRight(3,1) end;" />
+                    <Event Name="MouseButtonUp" Function="local mouse_button = CEArg:GetValue('MouseButton');if(mouse_button == 'LeftButton') then PetZhengYou_Modle_TurnRight(3,0) end;" />
+                    <Event Name="CaptureLost" Function="PetZhengYou_Modle_TurnRight(3,0);" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_FramePet" Name="PetZhengYou_Mode2_def">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,158.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.600000,-0.200007},{0.000000,98.000000}" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Window Type="TLBB_MeshWindow" Name="PetZhengYou_PetModel2">
+                    <Property Name="Position" Value="x:0.1 y:0.1" />
+                    <Property Name="Size" Value="w:0.8 h:0.85" />
+                    <Property Name="ShowControl" Value="PetZhengYou_Frame" />
+                    <Property Name="RiseOnClick" Value="False" />
+                </Window>
+                  <Window Type="TLBB_SimpleText" Name="PetZhengYou_Type2">
+                    <Property Name="Position" Value="x:0.3 y:0.80" />
+                    <Property Name="UnifiedSize" Value="{{0.4,0.000000},{0.000000,20.000000}" />
+                    <Property Name="HorzFormatting" Value="HorzCentred" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                    <Property Name="Tooltip" Value="#{INTERFACE_XML_857}" />
+                </Window>
+                 <Window Type="TLBB_SimpleText" Name="PetZhengYou_Flash_Name2" >
+										<Property Name="Position" Value="x:0.097933 y:0.05" />
+										<Property Name="AbsoluteSize" Value="w:150.000000 h:30.000000" />
+										<Property Name="Font" Value="YouYuan11.25" />
+										<Property Name="HorzFormatting" Value="HorzCentred" />
+										<Property Name="VertFormatting" Value="VertCentred" />
+								</Window>
+                <Window Type="TLBB_ButtonTurnLeft" Name="PetZhengYou_PetModel2_TurnLeft">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,4.000000},{1.000000,-23.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:20.000000 h:20.000000" />
+                    <Event Name="MouseButtonDown" Function="local mouse_button = CEArg:GetValue('MouseButton');if(mouse_button == 'LeftButton') then PetZhengYou_Modle_TurnLeft(4,1) end;" />
+                    <Event Name="MouseButtonUp" Function="local mouse_button = CEArg:GetValue('MouseButton');if(mouse_button == 'LeftButton') then PetZhengYou_Modle_TurnLeft(4,0) end;" />
+                    <Event Name="CaptureLost" Function="PetZhengYou_Modle_TurnLeft(4,0);" />
+                </Window>
+                <Window Type="TLBB_ButtonTurnRight" Name="PetZhengYou_PetModel2_TurnRight">
+                    <Property Name="UnifiedPosition" Value="{{1.000000,-24.000000},{1.000000,-23.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:20.000000 h:20.000000" />
+                    <Event Name="MouseButtonDown" Function="local mouse_button = CEArg:GetValue('MouseButton');if(mouse_button == 'LeftButton') then PetZhengYou_Modle_TurnRight(4,1) end;" />
+                    <Event Name="MouseButtonUp" Function="local mouse_button = CEArg:GetValue('MouseButton');if(mouse_button == 'LeftButton') then PetZhengYou_Modle_TurnRight(4,0) end;" />
+                    <Event Name="CaptureLost" Function="PetZhengYou_Modle_TurnRight(4,0);" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="PetZhengYou_Master1Info">
+                <Property Name="UnifiedPosition" Value="{{0.61,0.000000},{0.000000,0.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.38,0.000000},{0.000000,18.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_1141}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleTextFrame" Name="PetZhengYou_Master1_Name">
+                <Property Name="UnifiedPosition" Value="{{0.61,0.000000},{0.000000,20.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,38.000000},{0.000000,18.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_1142}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleTextFrame" Name="PetZhengYou_Master1_NameInfo">
+                <Property Name="UnifiedPosition" Value="{{0.61,37.5},{0.000000,20.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,80.000000},{0.000000,18.000000}" />
+                <Property Name="Text" Value="" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleTextFrame" Name="PetZhengYou_Master1_Level">
+                <Property Name="UnifiedPosition" Value="{{0.61,0.000000},{0.000000,60.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,38.000000},{0.000000,18.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_1144}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleTextFrame" Name="PetZhengYou_Master1_LevelInfo">
+                <Property Name="UnifiedPosition" Value="{{0.61,37.5},{0.000000,60.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,38.000000},{0.000000,18.000000}" />
+                <Property Name="Text" Value="" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleTextFrame" Name="PetZhengYou_Master1_ManPai">
+                <Property Name="UnifiedPosition" Value="{{0.61,0.000000},{0.000000,40.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,38.000000},{0.000000,18.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_1143}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleTextFrame" Name="PetZhengYou_Master1_ManPaiInfo">
+                <Property Name="UnifiedPosition" Value="{{0.61,37.5},{0.000000,40.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,50.000000},{0.000000,18.000000}" />
+                <Property Name="Text" Value="" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleTextFrame" Name="PetZhengYou_Master1_Gender">
+                <Property Name="UnifiedPosition" Value="{{0.61,0.000000},{0.000000,80.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,38.000000},{0.000000,18.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_1145}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleTextFrame" Name="PetZhengYou_Master1_GenderInfo">
+                <Property Name="UnifiedPosition" Value="{{0.61,37.5},{0.000000,80.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,38.000000},{0.000000,18.000000}" />
+                <Property Name="Text" Value="" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="PetZhengYou_Pet1_Line">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,104.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.000000,0.000000},{0.000000,50.000000}" />
+                <Property Name="RiseOnClick" Value="False" />
+              <Window Type="TLBB_SimpleTextFrame" Name="PetZhengYou_Master1Pet_Name">
+                <Property Name="UnifiedPosition" Value="{{0.61,-179.000000},{0.000000,5.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,60.000000},{0.000000,18.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_1146}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+              </Window>
+              <Window Type="TLBB_SimpleTextFrame" Name="PetZhengYou_Master1Pet_NameInfo">
+                <Property Name="UnifiedPosition" Value="{{0.61,-115.000000},{0.000000,5.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,90.000000},{0.000000,18.000000}" />
+                <Property Name="Text" Value="" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+              </Window>
+              <Window Type="TLBB_SimpleTextFrame" Name="PetZhengYou_Master1Pet_Gender">
+                <Property Name="UnifiedPosition" Value="{{0.61,-32.000000},{0.000000,5.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,38.000000},{0.000000,18.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_1145}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+              </Window>
+              <Window Type="TLBB_SimpleTextFrame" Name="PetZhengYou_Master1Pet_GenderInfo">
+                <Property Name="UnifiedPosition" Value="{{0.61,4.5000000},{0.000000,5.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,20.000000},{0.000000,18.000000}" />
+                <Property Name="Text" Value="" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+              </Window>
+              <Window Type="TLBB_SimpleTextFrame" Name="PetZhengYou_Master1Pet_ChenZhang">
+                <Property Name="UnifiedPosition" Value="{{0.61,-179.000000},{0.000000,27.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,90.000000},{0.000000,18.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_1147}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+              </Window>
+              <Window Type="TLBB_SimpleTextFrame" Name="PetZhengYou_Master1Pet_ChenZhangInfo">
+                <Property Name="UnifiedPosition" Value="{{0.61,-102.000000},{0.000000,27.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,45.000000},{0.000000,18.000000}" />
+                <Property Name="Text" Value="" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+              </Window>
+              <Window Type="TLBB_SimpleTextFrame" Name="PetZhengYou_Master1Pet_Level">
+                <Property Name="UnifiedPosition" Value="{{0.61,-32.000000},{0.000000,27.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,38.000000},{0.000000,18.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_1144}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+              </Window>
+              <Window Type="TLBB_SimpleTextFrame" Name="PetZhengYou_Master1Pet_LevelInfo">
+                <Property Name="UnifiedPosition" Value="{{0.61,4.5000000},{0.000000,27.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,38.000000},{0.000000,18.000000}" />
+                <Property Name="Text" Value="" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+              </Window>
+                <Window Type="TLBB_ButtonCommon" Name="PetZhengYou_Pet1_Investigate">
+                    <Property Name="UnifiedPosition" Value="{{1.000000,-81.000000},{0.000000,4.000000}" />
+                    <Property Name="UnifiedSize" Value="{{0.000000,75.000000},{0.000000,20.000000}" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_153}" />
+                    <Event Name="Clicked" Function="PetZhengYou_ShowTargetFrame(3);" />
+                </Window>
+                <Window Type="TLBB_ButtonCommon" Name="PetZhengYou_Pet1_Acquaintance">
+                    <Property Name="UnifiedPosition" Value="{{1.000000,-81.000000},{0.000000,26.000000}" />
+                    <Property Name="UnifiedSize" Value="{{0.000000,75.000000},{0.000000,20.000000}" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_374}" />
+                    <Event Name="Clicked" Function="PetZhengYou_SendMail(3);" />
+                </Window>
+            </Window>
+          <Window Type="TLBB_SimpleText" Name="PetZhengYou_Master2Info2">
+            <Property Name="UnifiedPosition" Value="{{0.610000,-0.270004},{0.000000,155.000000}" />
+            <Property Name="UnifiedSize" Value="{{0.38,0.000000},{0.000000,18.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1141}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="RiseOnClick" Value="False" />
+          </Window>
+          <Window Type="TLBB_SimpleTextFrame" Name="PetZhengYou_Master2_Name">
+            <Property Name="UnifiedPosition" Value="{{0.610000,-0.270004},{0.000000,173.000000}" />
+            <Property Name="UnifiedSize" Value="{{0.0,38.000000},{0.000000,18.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1142}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="LeftAligned" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="RiseOnClick" Value="False" />
+          </Window>
+          <Window Type="TLBB_SimpleTextFrame" Name="PetZhengYou_Master2_NameInfo">
+            <Property Name="UnifiedPosition" Value="{{0.610000,37.5},{0.000000,173.000000}" />
+            <Property Name="UnifiedSize" Value="{{0.0,80.000000},{0.000000,18.000000}" />
+            <Property Name="Text" Value="" />
+            <Property Name="HorzFormatting" Value="LeftAligned" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="RiseOnClick" Value="False" />
+          </Window>
+          <Window Type="TLBB_SimpleTextFrame" Name="PetZhengYou_Master2_Level">
+            <Property Name="UnifiedPosition" Value="{{0.610000,-0.270004},{0.000000,212.000000}" />
+            <Property Name="UnifiedSize" Value="{{0.0,38.000000},{0.000000,18.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1144}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="LeftAligned" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="RiseOnClick" Value="False" />
+          </Window>
+          <Window Type="TLBB_SimpleTextFrame" Name="PetZhengYou_Master2_LevelInfo">
+            <Property Name="UnifiedPosition" Value="{{0.610000,37.5},{0.000000,212.000000}" />
+            <Property Name="UnifiedSize" Value="{{0.0,50.000000},{0.000000,18.000000}" />
+            <Property Name="Text" Value="" />
+            <Property Name="HorzFormatting" Value="LeftAligned" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="RiseOnClick" Value="False" />
+          </Window>
+          <Window Type="TLBB_SimpleTextFrame" Name="PetZhengYou_Master2_ManPai">
+            <Property Name="UnifiedPosition" Value="{{0.610000,-0.270004},{0.000000,192.000000}" />
+            <Property Name="UnifiedSize" Value="{{0.0,38.000000},{0.000000,18.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1143}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="LeftAligned" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="RiseOnClick" Value="False" />
+          </Window>
+          <Window Type="TLBB_SimpleTextFrame" Name="PetZhengYou_Master2_ManPaiInfo">
+            <Property Name="UnifiedPosition" Value="{{0.610000,37.5},{0.000000,192.000000}" />
+            <Property Name="UnifiedSize" Value="{{0.0,38.000000},{0.000000,18.000000}" />
+            <Property Name="Text" Value="" />
+            <Property Name="HorzFormatting" Value="LeftAligned" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="RiseOnClick" Value="False" />
+          </Window>
+          <Window Type="TLBB_SimpleTextFrame" Name="PetZhengYou_Master2_Gender">
+            <Property Name="UnifiedPosition" Value="{{0.610000,-0.270004},{0.000000,233.000000}" />
+            <Property Name="UnifiedSize" Value="{{0.0,38.000000},{0.000000,18.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1145}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="LeftAligned" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="RiseOnClick" Value="False" />
+          </Window>
+          <Window Type="TLBB_SimpleTextFrame" Name="PetZhengYou_Master2_GenderInfo">
+            <Property Name="UnifiedPosition" Value="{{0.610000,37.5},{0.000000,233.000000}" />
+            <Property Name="UnifiedSize" Value="{{0.0,38.000000},{0.000000,18.000000}" />
+            <Property Name="Text" Value="" />
+            <Property Name="HorzFormatting" Value="LeftAligned" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="RiseOnClick" Value="False" />
+          </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="PetZhengYou_Pet2_Line">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,259.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.000000,0.000000},{0.000000,50.000000}" />
+                <Property Name="RiseOnClick" Value="False" />
+              <Window Type="TLBB_SimpleTextFrame" Name="PetZhengYou_Master2Pet_Name">
+                <Property Name="UnifiedPosition" Value="{{0.61,-179.000000},{0.000000,5.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,60.000000},{0.000000,18.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_1146}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+              </Window>
+              <Window Type="TLBB_SimpleTextFrame" Name="PetZhengYou_Master2Pet_NameInfo">
+                <Property Name="UnifiedPosition" Value="{{0.61,-115.000000},{0.000000,5.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,90.000000},{0.000000,18.000000}" />
+                <Property Name="Text" Value="" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+              </Window>
+              <Window Type="TLBB_SimpleTextFrame" Name="PetZhengYou_Master2Pet_Gender">
+                <Property Name="UnifiedPosition" Value="{{0.61,-32.000000},{0.000000,5.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,38.000000},{0.000000,18.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_1145}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+              </Window>
+              <Window Type="TLBB_SimpleTextFrame" Name="PetZhengYou_Master2Pet_GenderInfo">
+                <Property Name="UnifiedPosition" Value="{{0.61,4.5000000},{0.000000,5.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,20.000000},{0.000000,18.000000}" />
+                <Property Name="Text" Value="" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+              </Window>
+              <Window Type="TLBB_SimpleTextFrame" Name="PetZhengYou_Master2Pet_ChenZhang">
+                <Property Name="UnifiedPosition" Value="{{0.61,-179.000000},{0.000000,27.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,90.000000},{0.000000,18.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_1147}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+              </Window>
+              <Window Type="TLBB_SimpleTextFrame" Name="PetZhengYou_Master2Pet_ChenZhangInfo">
+                <Property Name="UnifiedPosition" Value="{{0.61,-102.000000},{0.000000,27.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,45.000000},{0.000000,18.000000}" />
+                <Property Name="Text" Value="" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+              </Window>
+              <Window Type="TLBB_SimpleTextFrame" Name="PetZhengYou_Master2Pet_Level">
+                <Property Name="UnifiedPosition" Value="{{0.61,-32.000000},{0.000000,27.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,38.000000},{0.000000,18.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_1144}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+              </Window>
+              <Window Type="TLBB_SimpleTextFrame" Name="PetZhengYou_Master2Pet_LevelInfo">
+                <Property Name="UnifiedPosition" Value="{{0.61,4.5000000},{0.000000,27.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,38.000000},{0.000000,18.000000}" />
+                <Property Name="Text" Value="" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+              </Window>
+                <Window Type="TLBB_ButtonCommon" Name="PetZhengYou_Pet2_Investigate">
+                    <Property Name="UnifiedPosition" Value="{{1.000000,-81.000000},{0.000000,4.000000}" />
+                    <Property Name="UnifiedSize" Value="{{0.000000,75.000000},{0.000000,20.000000}" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_153}" />
+                    <Event Name="Clicked" Function="PetZhengYou_ShowTargetFrame(4);" />
+                </Window>
+                <Window Type="TLBB_ButtonCommon" Name="PetZhengYou_Pet2_Acquaintance">
+                    <Property Name="UnifiedPosition" Value="{{1.000000,-81.000000},{0.000000,26.000000}" />
+                    <Property Name="UnifiedSize" Value="{{0.000000,75.000000},{0.000000,20.000000}" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_374}" />
+                    <Event Name="Clicked" Function="PetZhengYou_SendMail(4);" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="PetZhengYou_PageUp">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.000000,70.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_602}" />
+                <Event Name="Clicked" Function="PetZhengYou_PrevPage();" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="PetZhengYou_PageDown">
+                <Property Name="UnifiedPosition" Value="{{0.000000,70.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.000000,70.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_741}" />
+                <Event Name="Clicked" Function="PetZhengYou_NextPage();" />
+            </Window>
+
+            <Window Type="TLBB_ButtonCommon" Name="PetZhengYou_Search">
+                <Property Name="UnifiedPosition" Value="{{0.000000,140.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-200.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_1148}" />
+                <Property Name="Tooltip" Value="#{Search_Pet_Spouse}" />
+                <Event Name="Clicked" Function="PetZhengYou_OnSearch();" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="PetZhengYou_Cancel">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-60.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.000000,60.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_425}" />
+                <Event Name="Clicked" Function="PetZhengYou_Hide();" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

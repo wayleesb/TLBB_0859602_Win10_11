@@ -1,0 +1,2361 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Scene formatVersion="0.1.1" name="wedding_1">
+
+  <Terrain filename="wedding_1.Terrain"/>
+
+  <Object name="#FairyEnviroment" type="Enviroment">
+    <Property name="ambient" value="0.729412 0.678431 0.788235"/>
+  </Object>
+
+  <Object name="#FairyMainLightOne" type="Light">
+    <Property name="type" value="directional"/>
+    <Property name="diffuse" value="0.976471 0.466667 0.047059"/>
+    <Property name="specular" value="0.356863 0.588235 0.078431"/>
+    <Property name="direction" value="0.324138 -0.637603 -0.154098"/>
+    <Property name="cast shadows" value="true"/>
+  </Object>
+
+  <Object name="#FairyMainLightTwo" type="Light">
+    <Property name="type" value="directional"/>
+    <Property name="diffuse" value="0.517647 0.443137 0.87451"/>
+    <Property name="direction" value="-0.89759 0 -0.642623"/>
+  </Object>
+
+  <Object name="#FairySkyDome" type="SkyDome">
+    <Property name="material" value="CloudySky"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="-2300 0 1500"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆开窗墙.mesh"/>
+    <Property name="position" value="-2300 0 1100"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆开窗墙.mesh"/>
+    <Property name="position" value="-1900 0 -1700"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="-3100 0 -1700"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆开窗墙.mesh"/>
+    <Property name="position" value="-2300 0 1900"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆开窗墙.mesh"/>
+    <Property name="position" value="2100 0 2300"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆墙.mesh"/>
+    <Property name="position" value="-3100 0 -2900"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="-3100 0 -3700"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆墙.mesh"/>
+    <Property name="position" value="-2300 0 700"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆开窗墙.mesh"/>
+    <Property name="position" value="-2500 -0.0013226 -3500"/>
+    <Property name="orientation" value="-1.11492e-007 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆直角墙.mesh"/>
+    <Property name="position" value="-1500 -1.49012e-008 3000"/>
+    <Property name="orientation" value="-5.02921e-008 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆直角墙.mesh"/>
+    <Property name="position" value="-1900 0 500"/>
+    <Property name="orientation" value="-1 0 -1.45233e-008 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆直角墙.mesh"/>
+    <Property name="position" value="-3100 0 500"/>
+    <Property name="orientation" value="7.43494e-008 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆墙.mesh"/>
+    <Property name="position" value="-3100 0 1100"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="-3100 0 1900"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="700 -0.1333 4500"/>
+    <Property name="orientation" value="1.2602e-007 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆直角墙.mesh"/>
+    <Property name="position" value="900 -0.0110055 4500"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆直角墙.mesh"/>
+    <Property name="position" value="-700 2.35159e-008 4500"/>
+    <Property name="orientation" value="1 0 1.13852e-007 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="-3100 9.31323e-009 3900"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆直角墙.mesh"/>
+    <Property name="position" value="-3100 9.31323e-009 4500"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="-3100 0 -100"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="-3100 0 -500"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆开窗墙.mesh"/>
+    <Property name="position" value="-2500 0 500"/>
+    <Property name="orientation" value="-1 0 -2.2057e-008 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆开窗墙.mesh"/>
+    <Property name="position" value="2700 0 -3500"/>
+    <Property name="orientation" value="-1 0 -2.2057e-008 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/大竹1.mesh"/>
+    <Property name="position" value="-2681.95 -0.0013226 -2855.69"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/大竹1.mesh"/>
+    <Property name="position" value="-2789.41 0 -2241.14"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/大竹1.mesh"/>
+    <Property name="position" value="-2839.51 0 -1301.02"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/大竹1.mesh"/>
+    <Property name="position" value="-2716.56 0 827.008"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/大竹1.mesh"/>
+    <Property name="position" value="-2791.94 0 2024.69"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/大竹1.mesh"/>
+    <Property name="position" value="-1896.13 2.84286e-007 4115.98"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/大竹1.mesh"/>
+    <Property name="position" value="-1137.85 -1.57879e-008 4181"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/大竹1.mesh"/>
+    <Property name="position" value="1240.13 0 4183.76"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/大竹1.mesh"/>
+    <Property name="position" value="2532.03 0 1915.87"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆供桌蜡烛.mesh"/>
+    <Property name="position" value="8.86247 128.245 -3381.81"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆供桌蜡烛.mesh"/>
+    <Property name="position" value="194.21 128.39 -3381.01"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆开窗墙.mesh"/>
+    <Property name="position" value="2500 0 -2900"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆开窗墙.mesh"/>
+    <Property name="position" value="2100 0 1500"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆直角墙.mesh"/>
+    <Property name="position" value="-2300 -0.0013226 -3500"/>
+    <Property name="orientation" value="7.43494e-008 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="2300 0 -4700"/>
+    <Property name="orientation" value="-1.73094e-007 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="1900 0 4500"/>
+    <Property name="orientation" value="1.2602e-007 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="1500 0.00024415 4500"/>
+    <Property name="orientation" value="1.2602e-007 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="-1300 2.35159e-008 4500"/>
+    <Property name="orientation" value="1.2602e-007 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="-2100 9.31323e-009 4500"/>
+    <Property name="orientation" value="1.2602e-007 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="-3100 0 2300"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="-3100 0 1500"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆开窗墙.mesh"/>
+    <Property name="position" value="-2300 0 -2900"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆墙.mesh"/>
+    <Property name="position" value="-3100 0 300"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="-500 2.35159e-008 4500"/>
+    <Property name="orientation" value="1.2602e-007 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆饰物4.mesh"/>
+    <Property name="position" value="2285.6 0 -3476.9"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆供桌酒杯.mesh"/>
+    <Property name="position" value="67.2795 131.222 -3355.04"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆供桌酒杯.mesh"/>
+    <Property name="position" value="128.278 128.916 -3358.95"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆直角墙.mesh"/>
+    <Property name="position" value="1700 6.89179e-008 3000"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="700 9.31323e-009 3000"/>
+    <Property name="orientation" value="-1 0 -7.6291e-008 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="-500 1.16415e-009 3000"/>
+    <Property name="orientation" value="-1 0 -7.6291e-008 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆直角墙.mesh"/>
+    <Property name="position" value="-1500 1.16415e-009 3700"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆直角墙.mesh"/>
+    <Property name="position" value="-700 1.16415e-009 3700"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆直角墙.mesh"/>
+    <Property name="position" value="900 0 3700"/>
+    <Property name="orientation" value="-4.04388e-008 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆直角墙.mesh"/>
+    <Property name="position" value="1700 0 3700"/>
+    <Property name="orientation" value="-1 0 -1.44688e-008 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/室内/其他/古董架.mesh"/>
+    <Property name="position" value="900 5.01743e-009 4338.64"/>
+    <Property name="orientation" value="1.27151e-007 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/影壁/青砖影壁.mesh"/>
+    <Property name="position" value="100 0.0110056 4700"/>
+    <Property name="scale" value="2 1.5 1"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/室内/其他/古董架.mesh"/>
+    <Property name="position" value="-684.474 0.077776 4100"/>
+    <Property name="orientation" value="1 0 2.81605e-008 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆饰物1.mesh"/>
+    <Property name="position" value="106.011 -0.0887816 2956.41"/>
+    <Property name="orientation" value="1.04541e-007 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆喜字.mesh"/>
+    <Property name="position" value="-1880.38 152.226 -880.203"/>
+    <Property name="orientation" value="-3.21919e-008 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆直角墙.mesh"/>
+    <Property name="position" value="-2300 6.89179e-008 3300"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="-3100 0 2700"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆直角墙.mesh"/>
+    <Property name="position" value="-1900 0 -2300"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="-3100 0 -4100"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆直角墙.mesh"/>
+    <Property name="position" value="-3100 0 -4700"/>
+    <Property name="orientation" value="7.43494e-008 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆墙.mesh"/>
+    <Property name="position" value="-2300 0 -2500"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="-1700 0 -4700"/>
+    <Property name="orientation" value="-1.73094e-007 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="-1300 0 -4700"/>
+    <Property name="orientation" value="-1.73094e-007 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="-500 0 -4700"/>
+    <Property name="orientation" value="-1.73094e-007 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="-100 0 -4700"/>
+    <Property name="orientation" value="-1.73094e-007 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="300 0 -4700"/>
+    <Property name="orientation" value="-1.73094e-007 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="700 0 -4700"/>
+    <Property name="orientation" value="-1.73094e-007 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆墙.mesh"/>
+    <Property name="position" value="2900 0 -900"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="2900 0 -500"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="2900 0 -100"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆墙.mesh"/>
+    <Property name="position" value="2900 0 -1300"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="2900 0 -2100"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="2900 0 -2500"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="2900 0 -2900"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="2900 0 -3300"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="2900 0 -3700"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="2900 0 -4100"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="2900 0 -4500"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="2700 0 -4700"/>
+    <Property name="orientation" value="-1.73094e-007 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="2300 0 4500"/>
+    <Property name="orientation" value="1.2602e-007 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/大竹1.mesh"/>
+    <Property name="position" value="-2800 0 4200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆直角墙.mesh"/>
+    <Property name="position" value="2100 0 500"/>
+    <Property name="orientation" value="1.27029e-007 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆开窗墙.mesh"/>
+    <Property name="position" value="2100 0 1100"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆开窗墙.mesh"/>
+    <Property name="position" value="2100 0 2700"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆喜字.mesh"/>
+    <Property name="position" value="-2100 151.499 3280.82"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="2900 0 2300"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="2900 0 2700"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="2900 0 3100"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="2900 0 3900"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆直角墙.mesh"/>
+    <Property name="position" value="2900 0.181082 4500"/>
+    <Property name="orientation" value="-1 0 -7.74946e-008 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆墙.mesh"/>
+    <Property name="position" value="2900 0 700"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="2900 0 1100"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="2900 0 1500"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="2900 0 1900"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆直角墙.mesh"/>
+    <Property name="position" value="2900 0 500"/>
+    <Property name="orientation" value="-1 0 0 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="2900 0 -1700"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/大竹1.mesh"/>
+    <Property name="position" value="2700 0 2900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/大竹1.mesh"/>
+    <Property name="position" value="2600 0 4300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆墙.mesh"/>
+    <Property name="position" value="2100 0 -1300"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆开窗墙.mesh"/>
+    <Property name="position" value="-2300 0 2700"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆开窗墙.mesh"/>
+    <Property name="position" value="-1900 0 -1300"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="1900 0 -4700"/>
+    <Property name="orientation" value="-1.73094e-007 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="1500 0 -4700"/>
+    <Property name="orientation" value="-1.73094e-007 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="-2100 0 -4700"/>
+    <Property name="orientation" value="-1.73094e-007 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="-2500 0 -4700"/>
+    <Property name="orientation" value="-1.73094e-007 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="-3100 0 -2100"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="-3100 0 -2500"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆直角墙.mesh"/>
+    <Property name="position" value="-3100 0 -3500"/>
+    <Property name="orientation" value="7.43494e-008 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="-1700 0 4500"/>
+    <Property name="orientation" value="1.2602e-007 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/大竹1.mesh"/>
+    <Property name="position" value="2700 0 900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆饰物3.mesh"/>
+    <Property name="position" value="393.175 -12.1602 -3473.89"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="-2500 0 4500"/>
+    <Property name="orientation" value="1.2602e-007 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆开窗墙.mesh"/>
+    <Property name="position" value="-2300 0 2300"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/大竹1.mesh"/>
+    <Property name="position" value="-2700 0 -4300"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="0树木/大竹3.model"/>
+    <Property name="position" value="2800 0 -4500"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="0树木/大竹3.model"/>
+    <Property name="position" value="2800 0 -2800"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="0树木/大竹3.model"/>
+    <Property name="position" value="2800 0 -2000"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="0树木/大竹3.model"/>
+    <Property name="position" value="2500 0 -1200"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="0树木/大竹3.model"/>
+    <Property name="position" value="2700 0 3600"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="0树木/大竹3.model"/>
+    <Property name="position" value="1900 0 3500"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="0树木/大竹3.model"/>
+    <Property name="position" value="-2900 0 -3900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/龟背竹.mesh"/>
+    <Property name="position" value="-2900 0 700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/龟背竹.mesh"/>
+    <Property name="position" value="-2900 0 2300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/龟背竹.mesh"/>
+    <Property name="position" value="-2900 0 4200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/龟背竹.mesh"/>
+    <Property name="position" value="-2100 0 3900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆开窗墙.mesh"/>
+    <Property name="position" value="-900 0 3000"/>
+    <Property name="orientation" value="-1 0 -1.05492e-007 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆开窗墙.mesh"/>
+    <Property name="position" value="1100 0 3000"/>
+    <Property name="orientation" value="-1 0 -1.05492e-007 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/室内/其他/书架.mesh"/>
+    <Property name="position" value="1036.56 0 3600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/室内/花台/灯笼花.mesh"/>
+    <Property name="position" value="1500 0 2900"/>
+    <Property name="scale" value="1.5 1.5 1.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/室内/花台/百合.mesh"/>
+    <Property name="position" value="-1200 0 2900"/>
+    <Property name="scale" value="1.5 1.5 1.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/室内/花台/灯笼花.mesh"/>
+    <Property name="position" value="-1200 0 2900"/>
+    <Property name="scale" value="1.5 1.5 1.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="2100 0 1900"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆饰物4.mesh"/>
+    <Property name="position" value="-1873.75 0 291.19"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="0树木/大竹3.model"/>
+    <Property name="position" value="3100 0 -1800"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="0树木/大竹3.model"/>
+    <Property name="position" value="3100 0 -1200"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="0树木/大竹3.model"/>
+    <Property name="position" value="3100 0 -700"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="0树木/大竹3.model"/>
+    <Property name="position" value="3100 0 200"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="0树木/大竹3.model"/>
+    <Property name="position" value="3100 0 1200"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="0树木/大竹3.model"/>
+    <Property name="position" value="3100 0 2300"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="0树木/大竹3.model"/>
+    <Property name="position" value="3000 0 3300"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="0树木/大竹3.model"/>
+    <Property name="position" value="3100 0 4100"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="0树木/大竹3.model"/>
+    <Property name="position" value="3100 0 4500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/龟背竹.mesh"/>
+    <Property name="position" value="2731.96 0 3133.66"/>
+    <Property name="orientation" value="1 -1.4649e-008 0 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/龟背竹.mesh"/>
+    <Property name="position" value="2826.12 0 630.794"/>
+    <Property name="orientation" value="1 -1.4649e-008 0 0"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="0树木/大竹3.model"/>
+    <Property name="position" value="3100 0 -2600"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="0树木/大竹3.model"/>
+    <Property name="position" value="3100 0 -3500"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="0树木/大竹3.model"/>
+    <Property name="position" value="3100 0 -4300"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="0树木/大竹3.model"/>
+    <Property name="position" value="3000 0 -4700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芭蕉.mesh"/>
+    <Property name="position" value="-2500 0 4300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芭蕉2.mesh"/>
+    <Property name="position" value="-2500 0 3100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芭蕉2.mesh"/>
+    <Property name="position" value="-2600 0 700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芭蕉2.mesh"/>
+    <Property name="position" value="-2100 0 -2100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芭蕉2.mesh"/>
+    <Property name="position" value="-2500 0 -3300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芭蕉2.mesh"/>
+    <Property name="position" value="-2500 0 -4500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芭蕉2.mesh"/>
+    <Property name="position" value="2400 0 700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌7.mesh"/>
+    <Property name="position" value="2500 0 3000"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌7.mesh"/>
+    <Property name="position" value="2700 0 2200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌7.mesh"/>
+    <Property name="position" value="2700 0 1500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌7.mesh"/>
+    <Property name="position" value="-2900 0 1300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌7.mesh"/>
+    <Property name="position" value="-2800 0 2900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌7.mesh"/>
+    <Property name="position" value="-2900 0 3900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌7.mesh"/>
+    <Property name="position" value="-2000 0 4300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌7.mesh"/>
+    <Property name="position" value="-900 0 4300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌7.mesh"/>
+    <Property name="position" value="-1600 0 4000"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌7.mesh"/>
+    <Property name="position" value="-2400 0 -2100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌7.mesh"/>
+    <Property name="position" value="-2300 0 -1600"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yun001"/>
+    <Property name="position" value="100 300 3700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆地毯左.mesh"/>
+    <Property name="position" value="-400 0 -2800"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆地毯中.mesh"/>
+    <Property name="position" value="-200 0 -2800"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆地毯左.mesh"/>
+    <Property name="position" value="600 0 -2800"/>
+    <Property name="orientation" value="1.18224e-007 0 1 0"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆地毯中.mesh"/>
+    <Property name="position" value="0 0 -2800"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆地毯中.mesh"/>
+    <Property name="position" value="200 0 -2800"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆地毯中.mesh"/>
+    <Property name="position" value="400 0 -2800"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆地毯左.mesh"/>
+    <Property name="position" value="100 0 -2200"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆地毯中.mesh"/>
+    <Property name="position" value="100 0 -2000"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆地毯中.mesh"/>
+    <Property name="position" value="100 0 -1800"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆地毯中.mesh"/>
+    <Property name="position" value="100 0 -1600"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆地毯中.mesh"/>
+    <Property name="position" value="100 0 -1400"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆地毯中.mesh"/>
+    <Property name="position" value="100 0 -1200"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆地毯中.mesh"/>
+    <Property name="position" value="100 0 -1000"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆地毯中.mesh"/>
+    <Property name="position" value="100 0 -800"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆地毯中.mesh"/>
+    <Property name="position" value="100 0 -600"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆地毯中.mesh"/>
+    <Property name="position" value="100 0 -200"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆地毯中.mesh"/>
+    <Property name="position" value="100 0 600"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆地毯中.mesh"/>
+    <Property name="position" value="100 0 800"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆地毯中.mesh"/>
+    <Property name="position" value="100 0 1000"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆地毯中.mesh"/>
+    <Property name="position" value="100 0 1200"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆地毯中.mesh"/>
+    <Property name="position" value="100 0 1400"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆地毯中.mesh"/>
+    <Property name="position" value="100 0 1600"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆地毯中.mesh"/>
+    <Property name="position" value="100 0 1800"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+    <Property name="receive shadows" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆地毯中.mesh"/>
+    <Property name="position" value="100 0 2000"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆地毯中.mesh"/>
+    <Property name="position" value="100 0 2200"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆开窗墙.mesh"/>
+    <Property name="position" value="-1900 0 -500"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆开窗墙.mesh"/>
+    <Property name="position" value="-1900 0 -100"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆开窗墙.mesh"/>
+    <Property name="position" value="1500 0 -3500"/>
+    <Property name="orientation" value="-8.66609e-008 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆开窗墙.mesh"/>
+    <Property name="position" value="1900 0 -3500"/>
+    <Property name="orientation" value="-8.66609e-008 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆开窗墙.mesh"/>
+    <Property name="position" value="-1300 0 -3500"/>
+    <Property name="orientation" value="-8.66609e-008 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆开窗墙.mesh"/>
+    <Property name="position" value="-1700 0 -3500"/>
+    <Property name="orientation" value="-8.66609e-008 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/大竹1.mesh"/>
+    <Property name="position" value="-1800 0 -4400"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆供桌1.mesh"/>
+    <Property name="position" value="100 0 -3400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆供桌3.mesh"/>
+    <Property name="position" value="100 -16.0473 -3388.89"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆太师椅1.mesh"/>
+    <Property name="position" value="400 0 -3400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆太师椅1.mesh"/>
+    <Property name="position" value="596.484 0 -3400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆太师椅1.mesh"/>
+    <Property name="position" value="-200 0 -3400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆太师椅1.mesh"/>
+    <Property name="position" value="-400 0 -3400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/宾客座位1.mesh"/>
+    <Property name="position" value="1000 0 -2000"/>
+    <Property name="cast shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/宾客座位1.mesh"/>
+    <Property name="position" value="1000 0 -1400"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/宾客座位1.mesh"/>
+    <Property name="position" value="1000 0 -800"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/宾客座位1.mesh"/>
+    <Property name="position" value="1000 0 1600"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/宾客座位1.mesh"/>
+    <Property name="position" value="1000 0 1000"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/宾客座位1.mesh"/>
+    <Property name="position" value="1000 0 400"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/宾客座位1.mesh"/>
+    <Property name="position" value="1000 0 2200"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/宾客座位1.mesh"/>
+    <Property name="position" value="1000 0 -200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/宾客座位1.mesh"/>
+    <Property name="position" value="-800 0 -200"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/宾客座位1.mesh"/>
+    <Property name="position" value="-800 0 -1400"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/宾客座位1.mesh"/>
+    <Property name="position" value="-800 0 -2000"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/宾客座位1.mesh"/>
+    <Property name="position" value="-800 0 -800"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/宾客座位1.mesh"/>
+    <Property name="position" value="-800 0 400"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/宾客座位1.mesh"/>
+    <Property name="position" value="-800 0 1000"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/宾客座位1.mesh"/>
+    <Property name="position" value="-800 0 2200"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/宾客座位1.mesh"/>
+    <Property name="position" value="-800 0 1600"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/大竹1.mesh"/>
+    <Property name="position" value="-2700 0 100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/大竹1.mesh"/>
+    <Property name="position" value="-2700 0 -700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/大竹1.mesh"/>
+    <Property name="position" value="2600 0 -800"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/大竹1.mesh"/>
+    <Property name="position" value="2600 0 300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/大竹1.mesh"/>
+    <Property name="position" value="1600 0 -4200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/大竹1.mesh"/>
+    <Property name="position" value="2100 0 -4300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/大竹1.mesh"/>
+    <Property name="position" value="-1100 0 -4336.45"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆喜字.mesh"/>
+    <Property name="position" value="101.288 152.529 -3487.11"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/室内/屏风/山水屏风.mesh"/>
+    <Property name="position" value="300 0 3900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/室内/屏风/山水屏风.mesh"/>
+    <Property name="position" value="-100 0 3900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/室内/花台/灯笼花.mesh"/>
+    <Property name="position" value="-900 0 -3400"/>
+    <Property name="scale" value="1.5 1.5 1.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/室内/花台/灯笼花.mesh"/>
+    <Property name="position" value="1065.81 0 -3437.15"/>
+    <Property name="scale" value="1.5 1.5 1.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/小香炉.mesh"/>
+    <Property name="position" value="100 0 3700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆地毯中.mesh"/>
+    <Property name="position" value="100 0 -400"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/室内/花台/灯笼花.mesh"/>
+    <Property name="position" value="-2200.76 0 571.025"/>
+    <Property name="scale" value="1.5 1.5 1.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆墙.mesh"/>
+    <Property name="position" value="300 0 -3500"/>
+    <Property name="orientation" value="1.37511e-007 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆墙.mesh"/>
+    <Property name="position" value="-100 0 -3500"/>
+    <Property name="orientation" value="0 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="-500 0 -3500"/>
+    <Property name="orientation" value="1.31728e-007 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="700 0 -3500"/>
+    <Property name="orientation" value="-1.73094e-007 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆墙.mesh"/>
+    <Property name="position" value="-900 0 -3500"/>
+    <Property name="orientation" value="0 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="-900 0 -4700"/>
+    <Property name="orientation" value="-1.73094e-007 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆墙.mesh"/>
+    <Property name="position" value="1100 0 -3500"/>
+    <Property name="orientation" value="0 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/大竹1.mesh"/>
+    <Property name="position" value="-100 0 -4400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/大竹1.mesh"/>
+    <Property name="position" value="900 0 -4300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆饰物4.mesh"/>
+    <Property name="position" value="-1863.22 0 -2114"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆饰物3.mesh"/>
+    <Property name="position" value="-186.127 0 -3470.27"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆红花.mesh"/>
+    <Property name="position" value="700 0 2985.6"/>
+    <Property name="orientation" value="1 0 -1.05492e-007 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆红花.mesh"/>
+    <Property name="position" value="-500 0 2989.67"/>
+    <Property name="orientation" value="1 0 -1.05492e-007 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="jian01"/>
+    <Property name="position" value="9 201 -3384"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="jian01"/>
+    <Property name="position" value="194 203 -3383"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="公用小建筑/南方野外水缸.mesh"/>
+    <Property name="position" value="-2500 0 -900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="公用小建筑/南方野外水缸.mesh"/>
+    <Property name="position" value="-2500 0 300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/室内/其他/书架.mesh"/>
+    <Property name="position" value="-900 0 3600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆饰物1.mesh"/>
+    <Property name="position" value="100 0 -3481.13"/>
+    <Property name="orientation" value="1 0 1.2652e-007 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆直角墙.mesh"/>
+    <Property name="position" value="2100 9.31323e-009 3300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁书柜2.mesh"/>
+    <Property name="position" value="2100 0 3200"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆墙.mesh"/>
+    <Property name="position" value="-1700 0 3301"/>
+    <Property name="orientation" value="1.71104e-007 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="2100 0 -500"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/龟背竹.mesh"/>
+    <Property name="position" value="-1700 0 -4500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌7.mesh"/>
+    <Property name="position" value="-2800 0 1800"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌7.mesh"/>
+    <Property name="position" value="1500 0 4100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/大竹1.mesh"/>
+    <Property name="position" value="-2812.6 -1.09056e-009 3073.01"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆墙.mesh"/>
+    <Property name="position" value="-3100 9.31323e-009 3500"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="2900 0 3500"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆开窗墙.mesh"/>
+    <Property name="position" value="2300 0 3300"/>
+    <Property name="orientation" value="-1 0 7.04796e-008 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆开窗墙.mesh"/>
+    <Property name="position" value="2700 0 3300"/>
+    <Property name="orientation" value="-1 0 7.04796e-008 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="-3100 0 3100"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆墙.mesh"/>
+    <Property name="position" value="-1900 0 -900"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="-3100 0 -900"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="公用小建筑/南方野外水缸.mesh"/>
+    <Property name="position" value="-2500 0 -1900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="-3100 0 -1300"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/龟背竹.mesh"/>
+    <Property name="position" value="-2900 0 -2000"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆墙.mesh"/>
+    <Property name="position" value="2100 0 -900"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="2100 0 300"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁书柜2.mesh"/>
+    <Property name="position" value="-1848.5 0 3200"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芭蕉2.mesh"/>
+    <Property name="position" value="-2100 0 3500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁书柜1.mesh"/>
+    <Property name="position" value="-1548.5 0 3200"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆喜字.mesh"/>
+    <Property name="position" value="2089.66 133.211 -1100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆饰物3.mesh"/>
+    <Property name="position" value="2075.28 0 707.169"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆饰物3.mesh"/>
+    <Property name="position" value="2081.46 0 -2107.36"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆饰物3.mesh"/>
+    <Property name="position" value="-2255.48 0 698.222"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆开窗墙.mesh"/>
+    <Property name="position" value="2100 0 -100"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆开窗墙.mesh"/>
+    <Property name="position" value="2100 0 -1700"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆直角墙.mesh"/>
+    <Property name="position" value="2100 0 -2300"/>
+    <Property name="orientation" value="-1.15665e-007 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆开窗墙.mesh"/>
+    <Property name="position" value="2500 0 -2500"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芭蕉2.mesh"/>
+    <Property name="position" value="2500 0 4300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芭蕉2.mesh"/>
+    <Property name="position" value="1500 0 4300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆关窗墙.mesh"/>
+    <Property name="position" value="1100 0 -4700"/>
+    <Property name="orientation" value="-1.73094e-007 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆饰物4.mesh"/>
+    <Property name="position" value="-2088.54 0 -3479.38"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆饰物4.mesh"/>
+    <Property name="position" value="-900 0 -3470.23"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆饰物4.mesh"/>
+    <Property name="position" value="1100 0 -3470.83"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆开门墙.mesh"/>
+    <Property name="position" value="100 1.16415e-009 3000"/>
+    <Property name="orientation" value="1 0 -9.07723e-010 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆开门墙.mesh"/>
+    <Property name="position" value="100 0.0887816 4500"/>
+    <Property name="orientation" value="-5.66064e-008 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆地毯左.mesh"/>
+    <Property name="position" value="100 0 2400"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芭蕉2.mesh"/>
+    <Property name="position" value="2700 0 -1700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芭蕉2.mesh"/>
+    <Property name="position" value="2600 0 -300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芭蕉2.mesh"/>
+    <Property name="position" value="2600 0 2500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芭蕉2.mesh"/>
+    <Property name="position" value="2400 0 3900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芭蕉2.mesh"/>
+    <Property name="position" value="1800 0 4400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芭蕉2.mesh"/>
+    <Property name="position" value="-1600 0 4300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芭蕉2.mesh"/>
+    <Property name="position" value="-2800 0 2500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芭蕉2.mesh"/>
+    <Property name="position" value="-2700 0 1400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芭蕉2.mesh"/>
+    <Property name="position" value="-2200 0 200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芭蕉2.mesh"/>
+    <Property name="position" value="-2700 0 -400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌7.mesh"/>
+    <Property name="position" value="-2500 0 -4000"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌7.mesh"/>
+    <Property name="position" value="-1100 0 -4000"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌7.mesh"/>
+    <Property name="position" value="100 0 -4000"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌7.mesh"/>
+    <Property name="position" value="1800 0 -3900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/香蕉树3.mesh"/>
+    <Property name="position" value="-700 0 -4400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/香蕉树1.mesh"/>
+    <Property name="position" value="2600 0 -3900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/香蕉树1.mesh"/>
+    <Property name="position" value="2500 0 -4400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/香蕉树1.mesh"/>
+    <Property name="position" value="400 0 -4400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/香蕉树1.mesh"/>
+    <Property name="position" value="-500 0 -4200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/香蕉树1.mesh"/>
+    <Property name="position" value="-2000 0 -4000"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/香蕉树1.mesh"/>
+    <Property name="position" value="-2900 0 -3300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/香蕉树1.mesh"/>
+    <Property name="position" value="-2900 0 -1800"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/香蕉树1.mesh"/>
+    <Property name="position" value="-2900 0 -300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/香蕉树1.mesh"/>
+    <Property name="position" value="-2900 0 300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/香蕉树1.mesh"/>
+    <Property name="position" value="-2900 0 3400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/香蕉树1.mesh"/>
+    <Property name="position" value="-2300 0 4300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/香蕉树1.mesh"/>
+    <Property name="position" value="-2500 0 3500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/香蕉树1.mesh"/>
+    <Property name="position" value="2100 0 4200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/香蕉树1.mesh"/>
+    <Property name="position" value="2800 0 2400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/香蕉树1.mesh"/>
+    <Property name="position" value="2700 0 1200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/香蕉树1.mesh"/>
+    <Property name="position" value="2700 0 -600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/香蕉树1.mesh"/>
+    <Property name="position" value="2600 0 -2100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/香蕉树2.mesh"/>
+    <Property name="position" value="2400 0 -4000"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/香蕉树2.mesh"/>
+    <Property name="position" value="1300 0 -4300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/香蕉树2.mesh"/>
+    <Property name="position" value="600 0 -4500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/香蕉树2.mesh"/>
+    <Property name="position" value="-700 0 -4100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/香蕉树2.mesh"/>
+    <Property name="position" value="-1400 0 -4000"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/香蕉树2.mesh"/>
+    <Property name="position" value="-2400 0 -4500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌13.mesh"/>
+    <Property name="position" value="-2500 0 -3000"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌13.mesh"/>
+    <Property name="position" value="-2100 0 -1700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌13.mesh"/>
+    <Property name="position" value="-2100 0 -1400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌13.mesh"/>
+    <Property name="position" value="-2100 0 -300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌13.mesh"/>
+    <Property name="position" value="-2500 0 1000"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌13.mesh"/>
+    <Property name="position" value="-2500 0 1800"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌13.mesh"/>
+    <Property name="position" value="-2500 0 2600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌13.mesh"/>
+    <Property name="position" value="-2500 0 2200"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆地毯中.mesh"/>
+    <Property name="position" value="100 0 400"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆地毯中.mesh"/>
+    <Property name="position" value="100 0 200"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆地毯中.mesh"/>
+    <Property name="position" value="100 0 0"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆直角墙.mesh"/>
+    <Property name="position" value="2500 0 -3500"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆饰物4.mesh"/>
+    <Property name="position" value="-2087.61 0 -2334.15"/>
+    <Property name="orientation" value="5.19735e-008 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆饰物4.mesh"/>
+    <Property name="position" value="-2273.59 0 -2500"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆饰物4.mesh"/>
+    <Property name="position" value="-2276.14 0 -3300"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆饰物4.mesh"/>
+    <Property name="position" value="2474.34 0 -3300"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆柱.mesh"/>
+    <Property name="position" value="2490 0 -2300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆柱.mesh"/>
+    <Property name="position" value="2084 0 -1900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆柱.mesh"/>
+    <Property name="position" value="2084 0 -1500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆柱.mesh"/>
+    <Property name="position" value="2084 0 -700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆柱.mesh"/>
+    <Property name="position" value="2084 0 -300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆柱.mesh"/>
+    <Property name="position" value="2084 0 100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆柱.mesh"/>
+    <Property name="position" value="2084 0 500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆柱.mesh"/>
+    <Property name="position" value="2084 0 900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆柱.mesh"/>
+    <Property name="position" value="2084 0 1300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆柱.mesh"/>
+    <Property name="position" value="2084 0 1700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆柱.mesh"/>
+    <Property name="position" value="2084 0 2100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆柱.mesh"/>
+    <Property name="position" value="2084 0 2500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆柱.mesh"/>
+    <Property name="position" value="2084 0 2900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆柱.mesh"/>
+    <Property name="position" value="2490 0 -2700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆柱.mesh"/>
+    <Property name="position" value="2490 0 -3100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆柱.mesh"/>
+    <Property name="position" value="-2289 0 -2700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆柱.mesh"/>
+    <Property name="position" value="-2289 0 -3100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆柱.mesh"/>
+    <Property name="position" value="-2300 0 -2300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆柱.mesh"/>
+    <Property name="position" value="-1889 0 -1900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆柱.mesh"/>
+    <Property name="position" value="-1889 0 -1100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆柱.mesh"/>
+    <Property name="position" value="-1889 0 -1500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆柱.mesh"/>
+    <Property name="position" value="-1889 0 -700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆柱.mesh"/>
+    <Property name="position" value="-1889 0 -300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆柱.mesh"/>
+    <Property name="position" value="-1889 0 100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆柱.mesh"/>
+    <Property name="position" value="-2300 0 500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆柱.mesh"/>
+    <Property name="position" value="-1100 0 2984"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆柱.mesh"/>
+    <Property name="position" value="-300 0 2984"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆柱.mesh"/>
+    <Property name="position" value="500 0 2984"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆柱.mesh"/>
+    <Property name="position" value="900 0 2984"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆柱.mesh"/>
+    <Property name="position" value="1300 0 2984"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆柱.mesh"/>
+    <Property name="position" value="2100.22 0 3269"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆柱.mesh"/>
+    <Property name="position" value="-700 0 2984"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆喜字.mesh"/>
+    <Property name="position" value="-1063.57 141.492 3682.01"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/室内/其他/书架.mesh"/>
+    <Property name="position" value="-1300 0 3600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆喜字.mesh"/>
+    <Property name="position" value="1300 90.4632 3688.78"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/室内/其他/书架.mesh"/>
+    <Property name="position" value="1500 0 3600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/室内/花台/灯笼花.mesh"/>
+    <Property name="position" value="1600 0 3400"/>
+    <Property name="scale" value="1.5 1.5 1.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="玩家之家/室内/花台/灯笼花.mesh"/>
+    <Property name="position" value="-1400 0 3400"/>
+    <Property name="scale" value="1.5 1.5 1.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆饰物3.mesh"/>
+    <Property name="position" value="1677 0 3300"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆饰物3.mesh"/>
+    <Property name="position" value="-1470.03 0 3357.66"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆柱.mesh"/>
+    <Property name="position" value="-1900 0 -3489"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆柱.mesh"/>
+    <Property name="position" value="-1500 0 -3489"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆柱.mesh"/>
+    <Property name="position" value="-1100 0 -3489"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆柱.mesh"/>
+    <Property name="position" value="-700 0 -3489"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆柱.mesh"/>
+    <Property name="position" value="-300 0 -3489"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆柱.mesh"/>
+    <Property name="position" value="500 0 -3489"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆柱.mesh"/>
+    <Property name="position" value="900 0 -3489"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆柱.mesh"/>
+    <Property name="position" value="1300 0 -3489"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆柱.mesh"/>
+    <Property name="position" value="1700 0 -3489"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆柱.mesh"/>
+    <Property name="position" value="2100 0 -3489"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆柱.mesh"/>
+    <Property name="position" value="2900 0 -3500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="婚庆场景/婚庆柱.mesh"/>
+    <Property name="position" value="2475.02 0 -3474.91"/>
+  </Object>
+
+</Scene>

@@ -1,0 +1,79 @@
+<?xml version="1.0" ?>
+<GUILayout>
+       <Window Type="TLBB_MainFrame1" Name="PlayerList_Frame">
+	       <Property Name="UnifiedPosition" Value="{{1.000000,-300.000000},{1.000000,-450.000000}}"/>
+	       <Property Name="UnifiedSize" Value="{{0.000000,185.000000},{0.000000,358.000000}}"/>
+            <Window Type="TLBB_DragTitle" Name="PlayerList_DragTitle">
+	             <Property Name="UnifiedPosition" Value="{{0.000000,25.000000},{0.000000,11.000000}}"/>
+	             <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}}"/>
+	             <Property Name="DragTarget" Value="PlayerList_Frame"/>
+                   <Window Type="TLBB_SimpleText" Name="PlayerList_PageHeader_Name">
+	                  <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,0.000000}}"/>
+	                  <Property Name="UnifiedSize" Value="{{1.000000,0.000000},{1.000000,0.000000}}"/>
+	                  <Property Name="Font" Value="YouYuan11.25"/>
+	                  <Property Name="HorzFormatting" Value="HorzCentred"/>
+	                  <Property Name="Text" Value="#{FJWJ_81006_001}"/>
+                  </Window>
+            </Window>
+            <Window Type="TLBB_ButtonHelp" Name="PlayerList_Help">
+	             <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}}"/>
+	             <Property Name="UnifiedSize" Value="{{0.000000,14.000000},{0.000000,14.000000}}"/>
+	             <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*PlayerList&quot;);'/>
+            </Window>
+            <Window Type="TLBB_ButtonClose" Name="PlayerList_Close">
+	             <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}}"/>
+	             <Property Name="UnifiedSize" Value="{{0.000000,14.000000},{0.000000,14.000000}}"/>
+	             <Event Name="Clicked" Function="PlayerList_Hide();"/>
+            </Window>
+            <Window Type="DefaultWindow" Name="PlayerList_Frame_Client">
+	            <Property Name="UnifiedPosition" Value="{{0.000000,7.000000},{0.000000,36.000000}}"/>
+	            <Property Name="UnifiedSize" Value="{{1.000000,-13.000000},{1.000000,-55.000000}}"/>
+               <Window Type="TLBB_ListBoxCommon" Name="PlayerList_List">
+	                 <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.220000,-65.900000}}"/>
+	                 <Property Name="UnifiedSize" Value="{{1.000000,0.000000},{0.930000,0.000000}}"/>
+	                 <Event Name="ItemSelectionByRButton" Function="PlayerList_OpenMenu();"/>
+					         <Event Name="MouseLClick" Function="PlayerList_PlayerSelect(0);"/>"
+					          <Event Name="MouseDoubleClick" Function="PlayerList_PlayerSelect(1);"/>"
+                </Window>
+              <Window Type="TLBB_ButtonCheck" Name="PlayerList_Item_Check4">
+                <Property Name="UnifiedPosition" Value="{{0.5,-78.000000},{0.0,287.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,12.000000},{0.000000,12.000000}" />
+                <Property Name="Tooltip" Value="#{FJWJ_81017_01}" />
+                <Event Name="Clicked" Function="PlayerList_DBAttack_Clicked();"/>
+              </Window>
+              <Window Type="TLBB_SimpleText" Name="PlayerList_Item11_Text">
+                <Property Name="UnifiedPosition" Value="{{0.5,-64.000000},{0.0,284.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,60.000000},{0.000000,18.000000}" />
+                <Property Name="Text" Value="#{SJGJ_090507_01}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Property Name="Tooltip" Value="#{FJWJ_81017_01}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+              </Window>
+            </Window>
+            <Window Type="DefaultWindow" Name="PlayerList_Frame_Client1">
+              <Property Name="UnifiedPosition" Value="{{0.000000,91.000000},{0.000000,318.000000}}"/>
+              <Property Name="UnifiedSize" Value="{{0.000000,88.000000},{0.000000,21.000000}}"/>
+              <Property Name="AlwaysOnTop" Value="True" />
+              <Window Type="TLBB_ButtonCheckForPage" Name="PlayerList_EnmeyList">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,0.000000}}"/>
+                <Property Name="UnifiedSize" Value="{{0.4800000,0.000000},{1.000000,0.000000}}"/>
+                <Property Name="Text" Value="#{INTERFACE_XML_1171}"/>
+                <Event Name="MouseLButtonDown" Function="PlayerList_ChannalChange( false );"/>
+                <Property Name="Tooltip" Value="#{FJWJ_81017_03}" />
+				<Property Name="CheckMode" Value="1" />
+				<Property Name="AlwaysOnTop" Value="True" />
+              </Window>
+              <Window Type="TLBB_ButtonCheckForPage" Name="PlayerList_PlayerList1">
+                <Property Name="UnifiedPosition" Value="{{0.500000,0.000000},{0.000000,0.000000}}"/>
+                <Property Name="UnifiedSize" Value="{{0.480000,0.000000},{1.000000,0.000000}}"/>
+                <Property Name="Text" Value="#{INTERFACE_XML_1172}"/>
+                <Event Name="MouseLButtonDown" Function="PlayerList_ChannalChange( true );"/>
+                <Property Name="Tooltip" Value="#{FJWJ_81017_02}" />
+				<Property Name="CheckMode" Value="1" />
+				<Property Name="AlwaysOnTop" Value="True" />
+              </Window>
+            </Window>              
+        </Window>
+</GUILayout>

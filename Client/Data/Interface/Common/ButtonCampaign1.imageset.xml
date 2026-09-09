@@ -1,0 +1,20 @@
+<Imageset Name="ButtonCampaign1" Imagefile="Common/tga_ButtonCampaign1.dds" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+
+    <Image Name="Campaign_IMG_mingri" XPos="6" YPos="4" Width="166" Height="48" />
+    <Image Name="Campaign_IMG_jinri" XPos="6" YPos="47" Width="166" Height="48" />
+    <Image Name="Campaign_IMG_dangqian" XPos="6" YPos="96" Width="150" Height="50" />
+    <Image Name="Campaign_IMG_kuang" XPos="188" YPos="5" Width="30" Height="30" />
+
+    <Image Name="Campaign_IMG_jinri_Normal" XPos="130" YPos="137" Width="116" Height="33" />
+    <Image Name="Campaign_IMG_jinri_Hover" XPos="130" YPos="213" Width="116" Height="33" />
+    <Image Name="Campaign_IMG_jinri_Pushed" XPos="130" YPos="175" Width="116" Height="33" />
+    <Image Name="Campaign_IMG_mingri_Normal" XPos="12" YPos="137" Width="116" Height="33" />
+    <Image Name="Campaign_IMG_mingri_Hover" XPos="12" YPos="213" Width="116" Height="33" />
+    <Image Name="Campaign_IMG_mingri_Pushed" XPos="12" YPos="175" Width="116" Height="33" />
+    
+    <Image Name="Campaign_IMG_Liebiao_Normal" XPos="205" YPos="41" Width="31" Height="32" />
+    <Image Name="Campaign_IMG_Liebiao_Hover" XPos="173" YPos="41" Width="31" Height="32" />
+    <Image Name="Campaign_IMG_Liebiao_Pushed" XPos="205" YPos="73" Width="31" Height="32" />
+    <Image Name="Campaign_IMG_Liebiao_Disable" XPos="173" YPos="73" Width="31" Height="32" />
+    
+</Imageset>

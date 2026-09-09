@@ -1,0 +1,100 @@
+<?xml version="1.0" ?>
+<GUILayout>
+	<Window Type="DefaultWindow" Name="PetFrame_Frame">
+		<Property Name="UnifiedSize" Value="{{0,144},{0.0,37}}" />
+		<Property Name="UnifiedXPosition" Value="{0.0,46}" />
+		<Property Name="UnifiedYPosition" Value="{0.0,62}" />
+		<Window Type="TLBB_StaticImageNULL" Name="PetFrame_Function_Frame">
+			<Property Name="Position" Value="x:0.0 y:0.0" />
+			<Property Name="Size" Value="w:1.0 h:1.0" />
+			<Property Name="Image" Value="set:CommonFrame2 image:PetFrame" />
+			<Event Name="MouseRClick" Function="PetFrame_ShowMenu();" />
+			<Event Name="MouseLClick" Function="PetFrame_SetFightPetAsTarget();" />
+			<Event Name="MouseDoubleClick" Function="TogglePetPage();" />
+			<Window Type="TLBB_StaticImageNULL" Name="PetFrame_Header">
+				<Property Name="AbsolutePosition" Value="x:11.000000 y:3.000000" />
+				<Property Name="AbsoluteSize" Value="w:31.000000 h:31.000000" />
+				<Event Name="MouseRClick" Function="PetFrame_ShowMenu();" />
+				<Event Name="MouseLClick" Function="PetFrame_SetFightPetAsTarget();" />
+				<Event Name="MouseDoubleClick" Function="TogglePetPage();" />
+				<Property Name="Image" Value="set:PetHeader2 image:PetHeader2_4" />
+			</Window>
+			<Window Type="TLBB_SimpleText" Name="PetFrame_Level">
+				<Property Name="AbsolutePosition" Value="x:45.000000 y:20.000000" />
+				<Property Name="AbsoluteSize" Value="w:34.000000 h:14.000000" />
+				<Property Name="HorzFormatting" Value="HorzCentred" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Property Name="Text" Value="999" />
+				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+			</Window>
+			<Window Type="DefaultWindow" Name="PetFrame_DataBack">
+				<Property Name="AbsolutePosition" Value="x:45.000000 y:6.000000" />
+				<Property Name="AbsoluteSize" Value="w:96.000000 h:12.000000" />
+				<Window Type="TLBB_ProgressPropertyRed" Name="PetFrame_HP">
+					<Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+					<Property Name="UnifiedSize" Value="{{1.000000,.000000},{0.000000,5.000000}" />
+					<Property Name="CurrentProgress" Value="1.0" />
+					<Property Name="EffectColor" Value="tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+					<Property Name="EffectColorLevel" Value="index:0 tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+					<Property Name="MoveSpeed" Value="5000" />
+					<Event Name="MouseEnter" Function="PetFrame_HP_Text_MouseEnter();" />
+					<Event Name="MouseLeave" Function="PetFrame_HP_Text_MouseLeave();" />
+					<Window Type="TLBB_Animate" Name="PetFrame_HP_Flash">
+						<Property Name="Position" Value="x:0 y:0" />
+						<Property Name="Size" Value="w:1 h:1" />
+						<Property Name="Animate" Value="ProgressFlash" />
+						<Property Name="MouseHollow" Value="true" />
+						<Property Name="MouseMoveHollow" Value="true" />
+						<Property Name="MouseLButtonHollow" Value="true" />
+						<Property Name="MouseRButtonHollow" Value="true" />
+					</Window>
+				</Window>
+				<Window Type="TLBB_ProgressPropertyGreen" Name="PetFrame_Exp">
+					<Property Name="AbsolutePosition" Value="x:0.000000 y:6.000000" />
+					<Property Name="UnifiedSize" Value="{{1.000000,.000000},{0.000000,5.000000}" />
+					<Property Name="CurrentProgress" Value="1.0" />
+					<Property Name="EffectColor" Value="tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+					<Property Name="EffectColorLevel" Value="index:0 tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+					<Property Name="MoveSpeed" Value="1" />
+					<Event Name="MouseEnter" Function="PetFrame_HP_Text_MouseEnter();" />
+					<Event Name="MouseLeave" Function="PetFrame_HP_Text_MouseLeave();" />
+				</Window>
+			</Window>
+			<Window Type="DefaultWindow" Name="PetFrame_BufBack">
+				<Property Name="AbsolutePosition" Value="x:94.000000 y:22.000000" />
+				<Property Name="AbsoluteSize" Value="w:45.000000 h:26.000000" />
+				<Window Type="TLBB_StaticImageNULL" Name="PetFrame_Buff1">
+					<Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+					<Property Name="AbsoluteSize" Value="w:13.000000 h:13.000000" />
+					<Property Name="RiseOnClick" Value="False" />
+				</Window>
+				<Window Type="TLBB_StaticImageNULL" Name="PetFrame_Buff2">
+					<Property Name="AbsolutePosition" Value="x:15.000000 y:0.000000" />
+					<Property Name="AbsoluteSize" Value="w:13.000000 h:13.000000" />
+					<Property Name="RiseOnClick" Value="False" />
+				</Window>
+				<Window Type="TLBB_StaticImageNULL" Name="PetFrame_Buff3">
+					<Property Name="AbsolutePosition" Value="x:30.000000 y:0.000000" />
+					<Property Name="AbsoluteSize" Value="w:13.000000 h:13.000000" />
+					<Property Name="RiseOnClick" Value="False" />
+				</Window>
+				<Window Type="TLBB_StaticImageNULL" Name="PetFrame_Buff4">
+					<Property Name="AbsolutePosition" Value="x:0.000000 y:13.000000" />
+					<Property Name="AbsoluteSize" Value="w:13.000000 h:13.000000" />
+					<Property Name="RiseOnClick" Value="False" />
+				</Window>
+				<Window Type="TLBB_StaticImageNULL" Name="PetFrame_Buff5">
+					<Property Name="AbsolutePosition" Value="x:15.000000 y:13.000000" />
+					<Property Name="AbsoluteSize" Value="w:13.000000 h:13.000000" />
+					<Property Name="RiseOnClick" Value="False" />
+				</Window>
+				<Window Type="TLBB_StaticImageNULL" Name="PetFrame_Buff6">
+					<Property Name="AbsolutePosition" Value="x:30.000000 y:13.000000" />
+					<Property Name="AbsoluteSize" Value="w:13.000000 h:13.000000" />
+					<Property Name="RiseOnClick" Value="False" />
+				</Window>
+			</Window>
+		</Window>
+	</Window>
+</GUILayout>

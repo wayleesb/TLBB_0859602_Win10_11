@@ -1,0 +1,71 @@
+<?xml version="1.0" ?>
+<Imageset Name="PercentageIcon" Imagefile="Icons/Percentage.tga" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+	<Image Name="Percentage00" XPos="0" YPos="0" Width="32" Height="32" />
+	<Image Name="Percentage01" XPos="0" YPos="0" Width="32" Height="32" />
+	<Image Name="Percentage02" XPos="32" YPos="0" Width="32" Height="32" />
+	<Image Name="Percentage03" XPos="32" YPos="0" Width="32" Height="32" />
+	<Image Name="Percentage04" XPos="64" YPos="0" Width="32" Height="32" />
+	<Image Name="Percentage05" XPos="64" YPos="0" Width="32" Height="32" />
+	<Image Name="Percentage06" XPos="96" YPos="0" Width="32" Height="32" />
+	<Image Name="Percentage07" XPos="96" YPos="0" Width="32" Height="32" />
+	<Image Name="Percentage08" XPos="128" YPos="0" Width="32" Height="32" />
+	<Image Name="Percentage09" XPos="128" YPos="0" Width="32" Height="32" />
+	<Image Name="Percentage10" XPos="160" YPos="0" Width="32" Height="32" />
+	<Image Name="Percentage11" XPos="160" YPos="0" Width="32" Height="32" />
+	<Image Name="Percentage12" XPos="192" YPos="0" Width="32" Height="32" />
+	<Image Name="Percentage13" XPos="192" YPos="0" Width="32" Height="32" />
+	<Image Name="Percentage14" XPos="224" YPos="0" Width="32" Height="32" />
+	<Image Name="Percentage15" XPos="224" YPos="0" Width="32" Height="32" />
+	
+	<Image Name="Percentage16" XPos="0" YPos="32" Width="32" Height="32" />
+	<Image Name="Percentage17" XPos="0" YPos="32" Width="32" Height="32" />
+	<Image Name="Percentage18" XPos="32" YPos="32" Width="32" Height="32" />
+	<Image Name="Percentage19" XPos="32" YPos="32" Width="32" Height="32" />
+	<Image Name="Percentage20" XPos="64" YPos="32" Width="32" Height="32" />
+	<Image Name="Percentage21" XPos="64" YPos="32" Width="32" Height="32" />
+	<Image Name="Percentage22" XPos="96" YPos="32" Width="32" Height="32" />
+	<Image Name="Percentage23" XPos="96" YPos="32" Width="32" Height="32" />
+	<Image Name="Percentage24" XPos="128" YPos="32" Width="32" Height="32" />
+	<Image Name="Percentage25" XPos="128" YPos="32" Width="32" Height="32" />
+	<Image Name="Percentage26" XPos="160" YPos="32" Width="32" Height="32" />
+	<Image Name="Percentage27" XPos="160" YPos="32" Width="32" Height="32" />
+	<Image Name="Percentage28" XPos="192" YPos="32" Width="32" Height="32" />
+	<Image Name="Percentage29" XPos="192" YPos="32" Width="32" Height="32" />
+	<Image Name="Percentage30" XPos="224" YPos="32" Width="32" Height="32" />
+	<Image Name="Percentage31" XPos="224" YPos="32" Width="32" Height="32" />
+	
+	<Image Name="Percentage32" XPos="0" YPos="64" Width="32" Height="32" />
+	<Image Name="Percentage33" XPos="0" YPos="64" Width="32" Height="32" />
+	<Image Name="Percentage34" XPos="32" YPos="64" Width="32" Height="32" />
+	<Image Name="Percentage35" XPos="32" YPos="64" Width="32" Height="32" />
+	<Image Name="Percentage36" XPos="64" YPos="64" Width="32" Height="32" />
+	<Image Name="Percentage37" XPos="64" YPos="64" Width="32" Height="32" />
+	<Image Name="Percentage38" XPos="96" YPos="64" Width="32" Height="32" />
+	<Image Name="Percentage39" XPos="96" YPos="64" Width="32" Height="32" />
+	<Image Name="Percentage40" XPos="128" YPos="64" Width="32" Height="32" />
+	<Image Name="Percentage41" XPos="128" YPos="64" Width="32" Height="32" />
+	<Image Name="Percentage42" XPos="160" YPos="64" Width="32" Height="32" />
+	<Image Name="Percentage43" XPos="160" YPos="64" Width="32" Height="32" />
+	<Image Name="Percentage44" XPos="192" YPos="64" Width="32" Height="32" />
+	<Image Name="Percentage45" XPos="192" YPos="64" Width="32" Height="32" />
+	<Image Name="Percentage46" XPos="224" YPos="64" Width="32" Height="32" />
+	<Image Name="Percentage47" XPos="224" YPos="64" Width="32" Height="32" />
+
+	<Image Name="Percentage48" XPos="0" YPos="96" Width="32" Height="32" />
+	<Image Name="Percentage49" XPos="0" YPos="96" Width="32" Height="32" />
+	<Image Name="Percentage50" XPos="32" YPos="96" Width="32" Height="32" />
+	<Image Name="Percentage51" XPos="32" YPos="96" Width="32" Height="32" />
+	<Image Name="Percentage52" XPos="64" YPos="96" Width="32" Height="32" />
+	<Image Name="Percentage53" XPos="64" YPos="96" Width="32" Height="32" />
+	<Image Name="Percentage54" XPos="96" YPos="96" Width="32" Height="32" />
+	<Image Name="Percentage55" XPos="96" YPos="96" Width="32" Height="32" />
+	<Image Name="Percentage56" XPos="128" YPos="96" Width="32" Height="32" />
+	<Image Name="Percentage57" XPos="128" YPos="96" Width="32" Height="32" />
+	<Image Name="Percentage58" XPos="160" YPos="96" Width="32" Height="32" />
+	<Image Name="Percentage59" XPos="160" YPos="96" Width="32" Height="32" />
+	<Image Name="Percentage60" XPos="192" YPos="96" Width="32" Height="32" />
+	<Image Name="Percentage61" XPos="192" YPos="96" Width="32" Height="32" />
+	<Image Name="Percentage62" XPos="224" YPos="96" Width="32" Height="32" />
+	<Image Name="Percentage63" XPos="224" YPos="96" Width="32" Height="32" />
+	
+</Imageset>

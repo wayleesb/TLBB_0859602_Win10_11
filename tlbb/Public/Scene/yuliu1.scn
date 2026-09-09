@@ -1,0 +1,6 @@
+[System]
+navmapname=yuliu1.nav
+monsterfile=yuliu1_monster.ini
+patrolpoint=yuliu1_patrolpoint.ini
+eventfile=yuliu1_area.ini
+petfile=yuliu1_pet.ini

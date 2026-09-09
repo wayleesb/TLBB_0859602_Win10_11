@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="峨嵋秋千.frame" />
+    <entity mesh="峨嵋秋千.mesh" node="峨嵋秋千" />
+    <entity mesh="峨嵋秋千绳.mesh" node="峨嵋秋千绳">
+        <offset>
+            <translate x="1.14284" y="-465.58" z="44.2079" />
+        </offset>
+    </entity>
+</model>

@@ -1,0 +1,192 @@
+<?xml version="1.0" ?>
+<Falagard>
+  <!--
+    ***************************************************
+        WoWLook/PopMenu
+    ***************************************************
+    -->
+  <WidgetLook name="TLBB_Look_PopupMenu">
+    <Property name="AllowMultiplePopups" value="false" />
+    <Property name="ClippedByParent" value="false" />
+    <NamedArea name="ItemRenderArea">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="3" />
+        </Dim>
+        <Dim type="TopEdge">
+          <AbsoluteDim value="3" />
+        </Dim>
+        <Dim type="RightEdge">
+          <UnifiedDim scale="1.0" offset="-3" type="RightEdge" />
+        </Dim>
+        <Dim type="BottomEdge">
+          <UnifiedDim scale="1.0" offset="-3" type="BottomEdge" />
+        </Dim>
+      </Area>
+    </NamedArea>
+    <StateImagery name="Enabled">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Frame_Type2" />
+        <Section look="TLBB_Look_Common" section="Background_Frame_Type2" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Frame_Type2" >
+          <Colours topLeft="FF7F7F7F" topRight="FF7F7F7F" bottomLeft="FF7F7F7F" bottomRight="FF7F7F7F" />
+        </Section>
+        <Section look="TLBB_Look_Common" section="Background_Frame_Type2" />
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+
+  <!--
+    ***************************************************
+        WoWLook/MenuItem
+    ***************************************************
+    -->
+  <WidgetLook name="TLBB_Look_MenuItem">
+    <ImagerySection name="label">
+      <TextComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="3" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="RightEdge">
+            <UnifiedDim scale="1" offset="-3" type="RightEdge" />
+          </Dim>
+          <Dim type="BottomEdge">
+            <UnifiedDim scale="1" offset="-3" type="BottomEdge" />
+          </Dim>
+        </Area>
+        <VertFormat type="CentreAligned" />
+        <HorzFormat type="LeftAligned" />
+      </TextComponent>
+    </ImagerySection>
+    <ImagerySection name="popup_arrow_right">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <UnifiedDim scale="1" offset="-15"  type="RightEdge" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="RightEdge">
+            <UnifiedDim scale="1" offset="-2"  type="RightEdge" />
+          </Dim>
+          <Dim type="BottomEdge">
+            <UnifiedDim scale="1" type="BottomEdge" />
+          </Dim>
+        </Area>
+        <Image imageset="Button1" image="Popup_Menu_Right" />
+        <VertFormat type="CentreAligned" />
+        <HorzFormat type="CentreAligned" />
+      </ImageryComponent>
+    </ImagerySection>
+    <ImagerySection name="popup_arrow_left">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <UnifiedDim scale="1" offset="-15"  type="RightEdge" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="RightEdge">
+            <UnifiedDim scale="1" offset="-2"  type="RightEdge" />
+          </Dim>
+          <Dim type="BottomEdge">
+            <UnifiedDim scale="1" type="BottomEdge" />
+          </Dim>
+        </Area>
+        <Image imageset="Button1" image="Popup_Menu_Left" />
+        <VertFormat type="CentreAligned" />
+        <HorzFormat type="CentreAligned" />
+      </ImageryComponent>
+    </ImagerySection>
+    <ImagerySection name="frame">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" offset="0" type="RightEdge" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" offset="0" type="BottomEdge" />
+          </Dim>
+        </Area>
+        <Image imageset="CommonFrame" image="CommonEditBoxBK" />
+        <VertFormat type="Stretched" />
+        <HorzFormat type="Stretched" />
+      </ImageryComponent>
+    </ImagerySection>
+    <StateImagery name="EnabledNormal">
+      <Layer>
+        <Section section="label"/>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="EnabledHover">
+      <Layer>
+        <Section section="frame"/>
+        <Section section="label"/>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="EnabledPushed">
+      <Layer>
+        <Section section="frame">
+          <Colours topLeft="FF7F7F7F" topRight="FF7F7F7F" bottomLeft="FF7F7F7F" bottomRight="FF7F7F7F" />
+        </Section>
+        <Section section="label" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="EnabledPopupOpen">
+      <Layer>
+        <Section section="frame"/>
+        <Section section="label" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="DisabledNormal">
+      <Layer>
+        <Section section="frame"/>
+        <Section section="label" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="DisabledHover">
+      <Layer>
+        <Section section="frame"/>
+        <Section section="label" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="DisabledPushed">
+      <Layer>
+        <Section section="frame"/>
+        <Section section="label" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="DisabledPopupOpen">
+      <Layer>
+        <Section section="frame"/>
+        <Section section="label" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="PopupClosedIcon">
+      <Layer>
+        <Section section="popup_arrow_right"/>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="PopupOpenIcon">
+      <Layer>
+        <Section section="popup_arrow_right"/>
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+</Falagard>

@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<Imageset Name="Cuff3" Imagefile="Icons/Cuff3.jpg" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+	<Image Name="Cuff3_1" XPos="0" YPos="0" Width="64" Height="64" />
+	<Image Name="Cuff3_2" XPos="64" YPos="0" Width="64" Height="64" />
+	<Image Name="Cuff3_3" XPos="128" YPos="0" Width="64" Height="64" />
+	<Image Name="Cuff3_4" XPos="192" YPos="0" Width="64" Height="64" />
+	<Image Name="Cuff3_5" XPos="0" YPos="64" Width="64" Height="64" />
+	<Image Name="Cuff3_6" XPos="64" YPos="64" Width="64" Height="64" />
+	<Image Name="Cuff3_7" XPos="128" YPos="64" Width="64" Height="64" />
+	<Image Name="Cuff3_8" XPos="192" YPos="64" Width="64" Height="64" />
+	<Image Name="Cuff3_9" XPos="0" YPos="128" Width="64" Height="64" />
+	<Image Name="Cuff3_10" XPos="64" YPos="128" Width="64" Height="64" />
+	<Image Name="Cuff3_11" XPos="128" YPos="128" Width="64" Height="64" />
+	<Image Name="Cuff3_12" XPos="192" YPos="128" Width="64" Height="64" />
+	<Image Name="Cuff3_13" XPos="0" YPos="192" Width="64" Height="64" />
+	<Image Name="Cuff3_14" XPos="64" YPos="192" Width="64" Height="64" />
+	<Image Name="Cuff3_15" XPos="128" YPos="192" Width="64" Height="64" />
+	<Image Name="Cuff3_16" XPos="192" YPos="192" Width="64" Height="64" />
+</Imageset>

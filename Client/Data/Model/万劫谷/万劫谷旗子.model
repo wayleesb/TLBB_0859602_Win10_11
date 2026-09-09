@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="万劫谷旗子.frame" />
+    <entity mesh="万劫谷旗子杆.mesh" node="万劫谷旗子杆" />
+    <entity mesh="万劫谷旗子旗.mesh" />
+</model>

@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame1" Name="ZhengyouSearch_Frame">
+      <Property Name="AbsolutePosition" Value="x:101.000000 y:104.000000" />
+      <Property Name="AbsoluteSize" Value="w:600.000000 h:154.000000" />
+      <Window Type="DefaultWindow" Name="ZhengyouSearch_Function_Frame">
+            <Property Name="AbsolutePosition" Value="x:7.000000 y:36.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-13.000000},{1.000000,-55.000000}" />
+            <Window Type="TLBB_SimpleText" Name="ZhengyouSearch_Text1">
+              <Property Name="AbsolutePosition" Value="x:16.000000 y:47.000000" />
+			        <Property Name="AbsoluteSize" Value="w:33.000000 h:17.000000" />
+              <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_696}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="DefaultWindow" Name="ZhengyouSearch_Module">
+              <Property Name="AbsolutePosition" Value="x:3.000000 y:34.000000" />
+              <Property Name="AbsoluteSize" Value="w:394.000000 h:41.000000" />
+              <Window Type="TLBB_SimpleText" Name="ZhengyouSearch_Text2">
+                    <Property Name="Position" Value="x:0.160471 y:0.076923" />
+                    <Property Name="Size" Value="w:0.07591623 h:0.36538461" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_448}" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="ZhengyouSearch_Text3">
+                    <Property Name="Position" Value="x:0.544666 y:0.076923" />
+                    <Property Name="Size" Value="w:0.07591623 h:0.36538461" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_124}" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="ZhengyouSearch_Text4">
+                    <Property Name="Position" Value="x:0.160471 y:0.5961538" />
+                    <Property Name="Size" Value="w:0.07591623 h:0.36538461" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_774}" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="ZhengyouSearch_Text5">
+                    <Property Name="Position" Value="x:0.544666 y:0.5961538" />
+                    <Property Name="Size" Value="w:0.07591623 h:0.36538461" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_227}" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                </Window>
+                <Window Type="TLBB_ComboList" Name="ZhengyouSearch_MenPai">
+                    <Property Name="Position" Value="x:0.241387 y:0.076923" />
+                    <Property Name="Size" Value="w:0.22513089 h:0.403846153" />
+                </Window>
+                <Window Type="TLBB_ComboList" Name="ZhengyouSearch_Confraternity">
+                    <Property Name="Position" Value="x:0.62695 y:0.076923" />
+                    <Property Name="Size" Value="w:0.32460732 h:0.403846153" />
+                </Window>
+                <Window Type="TLBB_ComboList" Name="ZhengyouSearch_Sexy">
+                    <Property Name="Position" Value="x:0.241387 y:0.5961538" />
+                    <Property Name="Size" Value="w:0.22513089 h:0.403846153" />
+                </Window>
+                <Window Type="TLBB_ComboList" Name="ZhengyouSearch_Level">
+                    <Property Name="Position" Value="x:0.62695 y:0.5961538" />
+                    <Property Name="Size" Value="w:0.32460732 h:0.403846153" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="ZhengyouSearch_Text9">
+                    <Property Name="Position" Value="x:0.696763 y:0.373737" />
+                    <Property Name="Size" Value="w:0.05091623 h:0.17538461" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="Text" Value="人气" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="ZhengyouSearch_Text6">
+                    <Property Name="Position" Value="x:0.696763 y:0.575758" />
+                    <Property Name="Size" Value="w:0.05091623 h:0.17538461" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="Text" Value="#{ZYPT_081103_075}" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_ComboList" Name="ZhengyouSearch_Renqi">
+                    <Property Name="Position" Value="x:0.751278 y:0.373737" />
+                    <Property Name="Size" Value="w:0.158 h:0.17" />
+            </Window>
+            <Window Type="TLBB_ComboList" Name="ZhengyouSearch_Type">
+                    <Property Name="Position" Value="x:0.751278 y:0.585858" />
+                    <Property Name="Size" Value="w:0.158 h:0.17" />
+            </Window>
+            <Window Type="TLBB_Frame_Lace5" Name="ZhengyouSearch_Blank">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-115.000000},{0.000000,20.000000}" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="ZhengyouSearch_Begin">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-115.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:75.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_398}" />
+                <Event Name="Clicked" Function="ZhengyouSearch_BeginSearch();" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="ZhengyouSearch_Cancel">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-40.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_702}" />
+                <Event Name="Clicked" Function="ZhengyouSearch_Close();" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="ZhengyouSearch_Text7">
+                    <Property Name="Position" Value="x:0.020443 y:0.060606" />
+                    <Property Name="Size" Value="w:0.5091623 h:0.20538461" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="Text" Value="#{ZYPT_081103_100}" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+        </Window>
+        <Window Type="TLBB_ButtonHelp" Name="ZhengyouSearch_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*ZhengyouSearch&quot;);' />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="ZhengyouSearch_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function="ZhengyouSearch_Close();" />
+        </Window>
+        <Window Type="TLBB_DragTitle" Name="ZhengyouSearch_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+            <Property Name="Font" Value="YouYuan11.25" />
+            <Property Name="Text" Value="#{INTERFACE_XML_24}" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="DragTarget" Value="ZhengyouSearch_Frame" />
+        </Window>
+    </Window>
+</GUILayout>

@@ -1,0 +1,1112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Scene formatVersion="0.1.1" name="gudi">
+
+  <Terrain filename="gudi.Terrain"/>
+
+  <Object name="#FairyEnviroment" type="Enviroment">
+    <Property name="ambient" value="0 0.117647 0.309804"/>
+    <Property name="fog.mode" value="linear"/>
+    <Property name="fog.colour" value="0 0.686275 0.94902"/>
+    <Property name="fog.linear start" value="2500"/>
+    <Property name="fog.linear end" value="3700"/>
+  </Object>
+
+  <Object name="#FairyMainLightOne" type="Light">
+    <Property name="type" value="directional"/>
+    <Property name="diffuse" value="0 0.627451 0.968628"/>
+    <Property name="specular" value="0.3 0.3 0.3"/>
+    <Property name="direction" value="1 4 -1"/>
+  </Object>
+
+  <Object name="#FairyMainLightTwo" type="Light">
+    <Property name="type" value="directional"/>
+    <Property name="diffuse" value="0.011765 0.309804 0.466667"/>
+    <Property name="specular" value="0.137255 0.439216 0.105882"/>
+    <Property name="direction" value="1 -1.5 -1"/>
+    <Property name="cast shadows" value="true"/>
+  </Object>
+
+  <Object name="#FairySkyDome" type="SkyDome">
+    <Property name="material" value="CloudySky"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥布条1.mesh"/>
+    <Property name="position" value="-356.035 794.135 -1407.61"/>
+    <Property name="orientation" value="0.990485 0 0.13762 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥布条2.mesh"/>
+    <Property name="position" value="0 800 -1600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥布条3.mesh"/>
+    <Property name="position" value="226.443 776.735 -1514.55"/>
+    <Property name="orientation" value="0.97957 0 -0.201105 0"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.87451 0.007843"/>
+    <Property name="position" value="1900 1300 2600"/>
+    <Property name="range" value="500"/>
+    <Property name="attenuation.linear" value="0.004"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥路01.mesh"/>
+    <Property name="position" value="-2714 -399 -899"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+    <Property name="scale" value="0.5 0.5 0.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥路05.mesh"/>
+    <Property name="position" value="-2663 -500 2500"/>
+    <Property name="scale" value="0.5 0.5 0.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥路06.mesh"/>
+    <Property name="position" value="-2739 -400 1864"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+    <Property name="scale" value="0.5 0.5 0.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/钟乳石.mesh"/>
+    <Property name="position" value="-2100 0 700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/钟乳石1.mesh"/>
+    <Property name="position" value="-452.859 805.066 -1037.22"/>
+    <Property name="orientation" value="0.99729 0 0.0735646 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/钟乳石2.mesh"/>
+    <Property name="position" value="-452.841 800 60.8728"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/钟乳石5.mesh"/>
+    <Property name="position" value="-2412 -400 -394"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥路03.mesh"/>
+    <Property name="position" value="-2673 -400 453"/>
+    <Property name="scale" value="0.5 0.5 0.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥路01.mesh"/>
+    <Property name="position" value="-1800 -100 500"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥桥路02.mesh"/>
+    <Property name="position" value="-1737 -100 -2203"/>
+    <Property name="orientation" value="-0.492423 0 -0.870356 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥桥路07.mesh"/>
+    <Property name="position" value="-1800 207 2196"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥路01.mesh"/>
+    <Property name="position" value="2000 -300 -2900"/>
+    <Property name="scale" value="0.5 0.5 0.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥路04.mesh"/>
+    <Property name="position" value="-2730 -552 -1755"/>
+    <Property name="scale" value="0.5 0.5 0.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥路05.mesh"/>
+    <Property name="position" value="2900 0 -2700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/钟乳石1.mesh"/>
+    <Property name="position" value="2500 0 -1900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/钟乳石2.mesh"/>
+    <Property name="position" value="3100 0 -1600"/>
+    <Property name="scale" value="1 1.1 1"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/钟乳石7.mesh"/>
+    <Property name="position" value="1032.42 800 -693.115"/>
+    <Property name="orientation" value="0.993907 0 -0.110222 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥路01.mesh"/>
+    <Property name="position" value="-1674 -400 -123"/>
+    <Property name="orientation" value="0.961671 0 0.274205 0"/>
+    <Property name="scale" value="0.5 0.5 0.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥路05.mesh"/>
+    <Property name="position" value="-1075 -800 -370"/>
+    <Property name="orientation" value="0.754987 0 0.655736 0"/>
+    <Property name="scale" value="0.5 0.5 0.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="水瀑布/pubu_1.mesh"/>
+    <Property name="position" value="-2800 -500 -650"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+    <Property name="scale" value="0.5 1 0.4"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="pubushuihua_02"/>
+    <Property name="position" value="-2500 -300 -500"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/钟乳石4.mesh"/>
+    <Property name="position" value="-1840 810 182"/>
+    <Property name="orientation" value="0.92869 0 0.370853 0"/>
+    <Property name="scale" value="0.5 0.5 0.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/钟乳石4.mesh"/>
+    <Property name="position" value="1000 1800 400"/>
+    <Property name="orientation" value="0.922651 0 -0.385631 0"/>
+    <Property name="scale" value="0.5 0.5 0.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥布条3.mesh"/>
+    <Property name="position" value="-2300 400 -300"/>
+    <Property name="orientation" value="0.83317 0 0.553017 0"/>
+    <Property name="scale" value="0.6 0.6 0.6"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥布条2.mesh"/>
+    <Property name="position" value="-2300 100 -600"/>
+    <Property name="orientation" value="0.495565 0 0.86857 0"/>
+    <Property name="scale" value="0.6 0.6 0.6"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥布条1.mesh"/>
+    <Property name="position" value="-2400 0 -800"/>
+    <Property name="orientation" value="0.792106 0 0.610383 0"/>
+    <Property name="scale" value="0.6 0.6 0.6"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/钟乳石1.mesh"/>
+    <Property name="position" value="-400 800 2600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/钟乳石.mesh"/>
+    <Property name="position" value="-607 782 2437"/>
+    <Property name="orientation" value="0.803207 0 0.595698 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/钟乳石1.mesh"/>
+    <Property name="position" value="-2800 306 300"/>
+    <Property name="scale" value="0.5 0.5 0.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/钟乳石1.mesh"/>
+    <Property name="position" value="-1245 400 -461"/>
+    <Property name="orientation" value="0.967754 0 0.251898 0"/>
+    <Property name="scale" value="0.5 0.5 0.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥路01.mesh"/>
+    <Property name="position" value="909 -100 -2074"/>
+    <Property name="orientation" value="-2.84924e-008 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥桥路07.mesh"/>
+    <Property name="position" value="2700 -100 -2249"/>
+    <Property name="orientation" value="-1 0 -1.40778e-007 0"/>
+  </Object>
+
+  <Object type="TerrainLiquid">
+    <Property name="material" value="haihuwater"/>
+    <Property name="position" value="700 -200 -2600"/>
+    <Property name="texture scale" value="0.35"/>
+    <Property name="depth texture layer.enable" value="true"/>
+    <Property name="depth texture layer.height scale" value="0.003"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/钟乳石1.mesh"/>
+    <Property name="position" value="1872.92 792 -589.78"/>
+    <Property name="orientation" value="0.889048 0 -0.457813 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/钟乳石1.mesh"/>
+    <Property name="position" value="2400 1200 2600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/钟乳石.mesh"/>
+    <Property name="position" value="2200 1200 2800"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/钟乳石2.mesh"/>
+    <Property name="position" value="-2500 -400 1600"/>
+    <Property name="orientation" value="0.599171 0 0.800621 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/钟乳石.mesh"/>
+    <Property name="position" value="-2400 -400 1400"/>
+    <Property name="orientation" value="-0.427805 0 0.90387 0"/>
+  </Object>
+
+  <Object type="TerrainLiquid">
+    <Property name="material" value="haihuwater"/>
+    <Property name="position" value="-2900 -300 200"/>
+    <Property name="texture scale" value="0.35"/>
+    <Property name="depth texture layer.enable" value="true"/>
+    <Property name="depth texture layer.height scale" value="0.003"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥油灯2.mesh"/>
+    <Property name="position" value="-1536 400 410"/>
+    <Property name="orientation" value="0.912961 0 -0.408044 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/钟乳石2.mesh"/>
+    <Property name="position" value="2400 1194 1500"/>
+    <Property name="orientation" value="0.288914 0 -0.957355 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/钟乳石5.mesh"/>
+    <Property name="position" value="1600 1150 2500"/>
+    <Property name="orientation" value="0.77301 0 0.634393 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/钟乳石7.mesh"/>
+    <Property name="position" value="2522 1200 2452"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/钟乳石7.mesh"/>
+    <Property name="position" value="1485 1200 2496"/>
+    <Property name="orientation" value="0.248927 0 0.968522 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/钟乳石.mesh"/>
+    <Property name="position" value="2543 1146 2124"/>
+    <Property name="orientation" value="0.776888 0 -0.629638 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/钟乳石4.mesh"/>
+    <Property name="position" value="1800 2000 2200"/>
+    <Property name="orientation" value="0.884731 0 0.466098 0"/>
+    <Property name="scale" value="0.5 0.5 0.5"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yun"/>
+    <Property name="position" value="-2600 -200 1200"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yun"/>
+    <Property name="position" value="-2700 -200 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba02"/>
+    <Property name="position" value="-1422 1017 506"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba02"/>
+    <Property name="position" value="-1475 1053 394"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba02"/>
+    <Property name="position" value="-1612 880 327"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥路06.mesh"/>
+    <Property name="position" value="600 -300 -2900"/>
+    <Property name="orientation" value="1 0 -7.45058e-008 0"/>
+    <Property name="scale" value="0.5 0.5 0.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥路01.mesh"/>
+    <Property name="position" value="-749 -300 -3262"/>
+    <Property name="orientation" value="7.45058e-008 0 1 0"/>
+    <Property name="scale" value="0.5 0.5 0.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/钟乳石4.mesh"/>
+    <Property name="position" value="815 112 -2856"/>
+    <Property name="orientation" value="0.129642 0 0.99156 0"/>
+    <Property name="scale" value="0.3 0.3 0.3"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/钟乳石4.mesh"/>
+    <Property name="position" value="669 783 -2312"/>
+    <Property name="orientation" value="0.949053 0 -0.31512 0"/>
+    <Property name="scale" value="0.5 0.5 0.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/钟乳石.mesh"/>
+    <Property name="position" value="400 -300 -2400"/>
+    <Property name="orientation" value="0.96066 0 0.277728 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yun"/>
+    <Property name="position" value="400 -100 -2700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/钟乳石1.mesh"/>
+    <Property name="position" value="-279 0 -2261"/>
+    <Property name="scale" value="0.5 0.5 0.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥油灯2.mesh"/>
+    <Property name="position" value="-2772 250 367"/>
+    <Property name="orientation" value="0.231058 0 -0.972939 0"/>
+    <Property name="scale" value="0.5 0.5 0.5"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba02"/>
+    <Property name="position" value="-2832 556 408"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba02"/>
+    <Property name="position" value="-2724 488 339"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba02"/>
+    <Property name="position" value="-2771 574 393"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥油灯2.mesh"/>
+    <Property name="position" value="900 100 -2395"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba02"/>
+    <Property name="position" value="929 756 -2447"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba02"/>
+    <Property name="position" value="1045 715 -2413"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba02"/>
+    <Property name="position" value="790 578 -2391"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/钟乳石5.mesh"/>
+    <Property name="position" value="-2055 -2 2156"/>
+    <Property name="orientation" value="0.853554 0 0.521003 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/钟乳石5.mesh"/>
+    <Property name="position" value="186.893 1200 2299.95"/>
+    <Property name="orientation" value="0.921514 0 -0.388345 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/钟乳石7.mesh"/>
+    <Property name="position" value="-1900 0 800"/>
+    <Property name="orientation" value="0.104122 0 0.994565 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/钟乳石5.mesh"/>
+    <Property name="position" value="2000 0 -2500"/>
+    <Property name="orientation" value="0.99682 0 0.0796823 0"/>
+    <Property name="scale" value="0.5 0.5 0.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥秘籍02.mesh"/>
+    <Property name="position" value="1346 1200 3042"/>
+    <Property name="orientation" value="0.977848 0 0.209312 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥秘籍01.mesh"/>
+    <Property name="position" value="1900 1200 3100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥秘籍02.mesh"/>
+    <Property name="position" value="215 1200 3000"/>
+    <Property name="orientation" value="-0.0276083 0 0.999618 0"/>
+  </Object>
+
+  <Object type="TerrainLiquid">
+    <Property name="material" value="haihuwater"/>
+    <Property name="position" value="2000 1195 2200"/>
+    <Property name="texture scale" value="0.3"/>
+    <Property name="depth texture layer.enable" value="true"/>
+    <Property name="depth texture layer.height scale" value="0.01"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥蘑菇.mesh"/>
+    <Property name="position" value="424.53 1200 2585.13"/>
+    <Property name="orientation" value="0.500885 0 -0.865514 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/钟乳石1.mesh"/>
+    <Property name="position" value="-1600 -400 -1900"/>
+    <Property name="orientation" value="0.945607 0 0.32531 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/钟乳石.mesh"/>
+    <Property name="position" value="-1800 0 -2500"/>
+    <Property name="orientation" value="0.173984 0 -0.984749 0"/>
+    <Property name="scale" value="0.5 0.5 0.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="水瀑布/pubu_2.mesh"/>
+    <Property name="position" value="207 -200 -3224"/>
+    <Property name="orientation" value="0.99424 0 0.107172 0"/>
+    <Property name="scale" value="0.5 1 0.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="水瀑布/pubu_2.mesh"/>
+    <Property name="position" value="510 -400 -3080"/>
+    <Property name="orientation" value="0.990485 0 -0.13762 0"/>
+    <Property name="scale" value="0.3 0.8 0.3"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="pubushuihua_02"/>
+    <Property name="position" value="400 -200 -2778"/>
+    <Property name="orientation" value="0.993564 0 0.113271 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba02"/>
+    <Property name="position" value="-3012 -249 1391"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/钟乳石2.mesh"/>
+    <Property name="position" value="-100 -300 -2900"/>
+    <Property name="orientation" value="0.780737 0 0.624859 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥蘑菇.mesh"/>
+    <Property name="position" value="161.07 1199.67 2196.39"/>
+    <Property name="orientation" value="0.808656 0 -0.588282 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥蘑菇.mesh"/>
+    <Property name="position" value="257.098 1200 2435.13"/>
+    <Property name="orientation" value="0.994131 0 0.108189 0"/>
+    <Property name="scale" value="0.5 0.5 0.5"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.066667 0.909804 1"/>
+    <Property name="position" value="200 1400 2700"/>
+    <Property name="direction" value="-0.160569 -0.58394 -0.370192"/>
+    <Property name="range" value="300"/>
+    <Property name="attenuation.linear" value="0.003"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.866667 1 0.333333"/>
+    <Property name="position" value="-2100 600 -700"/>
+    <Property name="range" value="500"/>
+    <Property name="attenuation.linear" value="0.003"/>
+  </Object>
+
+  <Object type="TerrainLiquid">
+    <Property name="material" value="haihuwater"/>
+    <Property name="position" value="2100 790 800"/>
+    <Property name="texture scale" value="0.3"/>
+    <Property name="depth texture layer.enable" value="true"/>
+    <Property name="depth texture layer.height scale" value="0.01"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/钟乳石5.mesh"/>
+    <Property name="position" value="2375.27 758.941 493.903"/>
+    <Property name="orientation" value="0.937053 0 -0.349185 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/钟乳石1.mesh"/>
+    <Property name="position" value="1699 750 1100"/>
+    <Property name="orientation" value="0.966976 0 -0.254866 0"/>
+    <Property name="scale" value="1 1.2 1"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/钟乳石.mesh"/>
+    <Property name="position" value="1840.79 750.573 1281.12"/>
+    <Property name="orientation" value="0.95688 0 0.29048 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/钟乳石7.mesh"/>
+    <Property name="position" value="100 800 1600"/>
+    <Property name="orientation" value="0.996099 0 -0.0882424 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥蘑菇.mesh"/>
+    <Property name="position" value="-105.242 1211.9 2366.29"/>
+    <Property name="orientation" value="0.0388511 0 0.999245 0"/>
+    <Property name="scale" value="0.6 0.6 0.6"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="300 1200 2300"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="ziti01"/>
+    <Property name="position" value="1915.99 1194 2943.79"/>
+    <Property name="orientation" value="-0.0490677 0 0.998795 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="ziti01"/>
+    <Property name="position" value="326.675 1227 2878.22"/>
+    <Property name="orientation" value="0.0766236 0 0.997059 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥蘑菇.mesh"/>
+    <Property name="position" value="2647.14 1198 2380.48"/>
+    <Property name="orientation" value="0.97957 0 0.201105 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥蘑菇2.mesh"/>
+    <Property name="position" value="2676.42 1200 2053.6"/>
+    <Property name="orientation" value="0.365613 0 0.930767 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥蘑菇.mesh"/>
+    <Property name="position" value="-199.972 -2 -2235.03"/>
+    <Property name="orientation" value="0.42663 0 0.904426 0"/>
+    <Property name="scale" value="0.5 0.5 0.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/钟乳石2.mesh"/>
+    <Property name="position" value="2653.9 802.704 -973.307"/>
+    <Property name="orientation" value="0.894599 0 -0.446869 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥油灯2.mesh"/>
+    <Property name="position" value="2587.23 853.265 -919.433"/>
+    <Property name="orientation" value="0.482183 0 0.876069 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba02"/>
+    <Property name="position" value="2649.91 1334 -830.839"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba02"/>
+    <Property name="position" value="2527.44 1509.4 -911.93"/>
+    <Property name="orientation" value="0.989622 0 -0.143695 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba02"/>
+    <Property name="position" value="2492.08 1467.75 -1030.79"/>
+    <Property name="orientation" value="0.989622 0 -0.143695 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yun"/>
+    <Property name="position" value="-2500 100 -2500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/钟乳石5.mesh"/>
+    <Property name="position" value="-1624 -288.567 -1600"/>
+    <Property name="orientation" value="0.46326 0 0.886222 0"/>
+    <Property name="scale" value="0.6 0.6 0.6"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥钟乳石3.mesh"/>
+    <Property name="position" value="1475.94 753.664 -843.531"/>
+    <Property name="orientation" value="0.984748 0 0.173984 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥蘑菇2.mesh"/>
+    <Property name="position" value="-391.101 -26.8121 -2220.1"/>
+    <Property name="orientation" value="0.905297 0 -0.42478 0"/>
+    <Property name="scale" value="0.6 0.6 0.6"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥蘑菇2.mesh"/>
+    <Property name="position" value="357.158 1200 2307.43"/>
+    <Property name="orientation" value="0.529953 0 0.848027 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/钟乳石1.mesh"/>
+    <Property name="position" value="2797.48 813.269 -10.7032"/>
+    <Property name="orientation" value="0.851355 0 0.52459 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/钟乳石.mesh"/>
+    <Property name="position" value="2745.29 779.177 -122.315"/>
+    <Property name="orientation" value="0.583309 0 0.81225 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥蘑菇.mesh"/>
+    <Property name="position" value="1655.27 800 -521.832"/>
+    <Property name="orientation" value="0.996312 0 0.0857968 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥蘑菇2.mesh"/>
+    <Property name="position" value="1179.2 800 -852.787"/>
+    <Property name="orientation" value="0.410843 0 -0.911706 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/钟乳石.mesh"/>
+    <Property name="position" value="-256.932 776 187.021"/>
+    <Property name="orientation" value="0.278519 0 0.96043 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥蘑菇2.mesh"/>
+    <Property name="position" value="-452.745 800 211.908"/>
+    <Property name="orientation" value="0.831469 0 -0.55557 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥蘑菇.mesh"/>
+    <Property name="position" value="-304.986 800 -27.5777"/>
+    <Property name="orientation" value="0.0643826 0 -0.997925 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥蘑菇2.mesh"/>
+    <Property name="position" value="1995 800 -608"/>
+    <Property name="orientation" value="0.99894 0 0.0460031 0"/>
+    <Property name="scale" value="0.6 0.6 0.6"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="1300 900 -700"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="-300 900 100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥蘑菇2.mesh"/>
+    <Property name="position" value="-771 800 2430"/>
+    <Property name="orientation" value="-0.0433079 0 0.999062 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥蘑菇.mesh"/>
+    <Property name="position" value="2541 0 -2840"/>
+    <Property name="orientation" value="-0.667253 0 0.744831 0"/>
+    <Property name="scale" value="0.5 0.5 0.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥蘑菇2.mesh"/>
+    <Property name="position" value="2499.87 -0.812099 -2715.07"/>
+    <Property name="orientation" value="0.905297 0 -0.42478 0"/>
+    <Property name="scale" value="0.6 0.6 0.6"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/钟乳石1.mesh"/>
+    <Property name="position" value="600 0 -1600"/>
+    <Property name="orientation" value="0.979755 0 0.200199 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥桥路07.mesh"/>
+    <Property name="position" value="-1806 516 3289"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥蘑菇.mesh"/>
+    <Property name="position" value="-1912 -26.9889 1985"/>
+    <Property name="orientation" value="0.140658 0 -0.990057 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥蘑菇2.mesh"/>
+    <Property name="position" value="-1500 0 2200"/>
+    <Property name="orientation" value="0.322407 0 -0.946601 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥蘑菇.mesh"/>
+    <Property name="position" value="-1900 0 2389"/>
+    <Property name="orientation" value="0.996045 0 0.0888536 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥石花.mesh"/>
+    <Property name="position" value="2006 761 1083"/>
+    <Property name="orientation" value="0.990058 0 0.140658 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥石花.mesh"/>
+    <Property name="position" value="2570 835.657 -1100"/>
+    <Property name="orientation" value="0.860867 0 0.50883 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥石花.mesh"/>
+    <Property name="position" value="600 0 -1738"/>
+    <Property name="orientation" value="0.981964 0 0.189069 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥石花.mesh"/>
+    <Property name="position" value="-965.416 0 -1755.54"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥石花.mesh"/>
+    <Property name="position" value="-2000 0 900"/>
+    <Property name="orientation" value="0.998301 0 -0.0582583 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥石花.mesh"/>
+    <Property name="position" value="-1785 0 681"/>
+    <Property name="orientation" value="0.71787 0 0.696177 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥蘑菇2.mesh"/>
+    <Property name="position" value="-2150 0 2200"/>
+    <Property name="orientation" value="0.998118 0 0.0613201 0"/>
+    <Property name="scale" value="0.8 0.8 0.8"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.066667 0.909804 1"/>
+    <Property name="position" value="-1900 200 2000"/>
+    <Property name="direction" value="-0.160569 -0.58394 -0.370192"/>
+    <Property name="range" value="300"/>
+    <Property name="attenuation.linear" value="0.003"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥石花.mesh"/>
+    <Property name="position" value="1741 869.007 1343"/>
+    <Property name="orientation" value="0.240003 0 0.970773 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥石花.mesh"/>
+    <Property name="position" value="2128 1200 2622"/>
+    <Property name="orientation" value="0.951434 0 0.307849 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥石花.mesh"/>
+    <Property name="position" value="2312 1195.44 1606"/>
+    <Property name="orientation" value="0.177004 0 0.98421 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥石花.mesh"/>
+    <Property name="position" value="-2000 -4 -822"/>
+    <Property name="orientation" value="0.222093 0 -0.975025 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥石花.mesh"/>
+    <Property name="position" value="-1800 0 -2400"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.066667 0.909804 1"/>
+    <Property name="position" value="-1588 1133.93 400"/>
+    <Property name="direction" value="-0.160569 -0.58394 -0.370192"/>
+    <Property name="range" value="300"/>
+    <Property name="attenuation.linear" value="0.003"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="pubushuihua_02"/>
+    <Property name="position" value="-2605.67 -214.22 -2397.03"/>
+    <Property name="orientation" value="0.854558 0 0.519356 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/钟乳石.mesh"/>
+    <Property name="position" value="-791.822 768.151 1305.13"/>
+    <Property name="orientation" value="0.641481 0 0.767139 0"/>
+    <Property name="scale" value="0.8 0.8 0.8"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥秘籍02.mesh"/>
+    <Property name="position" value="2729.89 794 485.994"/>
+    <Property name="orientation" value="0.765167 0 -0.643831 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="ziti01"/>
+    <Property name="position" value="2601.01 800 409.097"/>
+    <Property name="orientation" value="0.722128 0 -0.691759 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥秘籍02.mesh"/>
+    <Property name="position" value="-2873.49 -400 2353.76"/>
+    <Property name="orientation" value="0.622461 0 0.78265 0"/>
+    <Property name="scale" value="0.6 0.6 0.6"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥秘籍01.mesh"/>
+    <Property name="position" value="-2923.39 -414 2020.17"/>
+    <Property name="orientation" value="0.622461 0 0.782651 0"/>
+    <Property name="scale" value="0.6 0.6 0.6"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="ziti01"/>
+    <Property name="position" value="-2792.67 -329 2432.84"/>
+    <Property name="orientation" value="0.700569 0 0.713585 0"/>
+    <Property name="scale" value="0.6 0.6 0.6"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥秘籍01.mesh"/>
+    <Property name="position" value="1958.42 -9.34814 -2895.77"/>
+    <Property name="orientation" value="0.997723 0 -0.0674439 0"/>
+    <Property name="scale" value="0.6 0.6 0.6"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥秘籍02.mesh"/>
+    <Property name="position" value="2363.81 0 -2934.51"/>
+    <Property name="orientation" value="0.986308 0 0.164913 0"/>
+    <Property name="scale" value="0.6 0.6 0.6"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="ziti01"/>
+    <Property name="position" value="1976.06 0 -2841.08"/>
+    <Property name="orientation" value="0.999529 0 0.0306748 0"/>
+    <Property name="scale" value="0.6 0.6 0.6"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥秘籍03.mesh"/>
+    <Property name="position" value="774 1200 3057"/>
+    <Property name="orientation" value="-0.926518 0 0.37625 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shuidi"/>
+    <Property name="position" value="1929.35 1145.14 2306.61"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shuidi"/>
+    <Property name="position" value="-353.528 799.053 506.82"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shuidi"/>
+    <Property name="position" value="2073 807.702 524.62"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shuidi_01"/>
+    <Property name="position" value="2074.92 770.037 473.934"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shuidi_01"/>
+    <Property name="position" value="-100.412 800 365.522"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shuidi_01"/>
+    <Property name="position" value="1912.05 1206.06 2362.19"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.066667 0.909804 1"/>
+    <Property name="position" value="-300 1000 -100"/>
+    <Property name="direction" value="-0.160569 -0.58394 -0.370192"/>
+    <Property name="range" value="500"/>
+    <Property name="attenuation.linear" value="0.003"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.066667 0.909804 1"/>
+    <Property name="position" value="2400 1715.53 -800"/>
+    <Property name="direction" value="-0.160569 -0.58394 -0.370192"/>
+    <Property name="range" value="500"/>
+    <Property name="attenuation.linear" value="0.003"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/钟乳石7.mesh"/>
+    <Property name="position" value="2200 0 -2800"/>
+    <Property name="orientation" value="0.280876 0 0.959743 0"/>
+    <Property name="scale" value="0.6 0.6 0.6"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/钟乳石5.mesh"/>
+    <Property name="position" value="-117.074 -274.908 -1776.73"/>
+    <Property name="orientation" value="0.210112 0 0.977676 0"/>
+    <Property name="scale" value="0.8 0.8 0.8"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/钟乳石1.mesh"/>
+    <Property name="position" value="-1589.89 400.891 -40.0084"/>
+    <Property name="orientation" value="0.195089 0 -0.980783 0"/>
+    <Property name="scale" value="0.4 0.4 0.4"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/钟乳石7.mesh"/>
+    <Property name="position" value="1516.99 853.287 1154.67"/>
+    <Property name="orientation" value="0.888297 0 0.459267 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/钟乳石7.mesh"/>
+    <Property name="position" value="-708.924 791.866 1164.55"/>
+    <Property name="orientation" value="-0.457085 0 0.889421 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥蘑菇.mesh"/>
+    <Property name="position" value="-649.318 804.71 1283.4"/>
+    <Property name="orientation" value="0.589439 0 0.807813 0"/>
+    <Property name="scale" value="0.6 0.6 0.6"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥蘑菇2.mesh"/>
+    <Property name="position" value="-773.624 792.618 1058.45"/>
+    <Property name="orientation" value="0.583807 0 0.811891 0"/>
+    <Property name="scale" value="0.8 0.8 0.8"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.87451 0.007843"/>
+    <Property name="position" value="2000 102.452 -2400"/>
+    <Property name="range" value="500"/>
+    <Property name="attenuation.linear" value="0.004"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0 1 0.023529"/>
+    <Property name="position" value="1400 1000 -500"/>
+    <Property name="range" value="500"/>
+    <Property name="attenuation.linear" value="0.004"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0 1 0.023529"/>
+    <Property name="position" value="-200 161.598 -2200"/>
+    <Property name="range" value="500"/>
+    <Property name="attenuation.linear" value="0.004"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="逍遥/逍遥蘑菇2.mesh"/>
+    <Property name="position" value="2690.74 793 -850.302"/>
+    <Property name="orientation" value="-0.787873 -0.00254508 0.61207 -0.067972"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="chuansongdian"/>
+    <Property name="position" value="1102.91 1258.88 2497.35"/>
+  </Object>
+
+</Scene>

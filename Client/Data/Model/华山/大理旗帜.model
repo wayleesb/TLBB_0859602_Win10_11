@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="大理旗帜.frame" />
+    <entity mesh="大理旗竿.mesh" node="大理旗竿" />
+    <entity mesh="大理旗.mesh" />
+</model>

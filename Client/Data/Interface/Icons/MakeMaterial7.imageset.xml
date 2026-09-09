@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<Imageset Name="MakeMaterial7" Imagefile="Icons/MakeMaterial7.jpg" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+	<Image Name="MakeMaterial7_1" XPos="0" YPos="0" Width="64" Height="64" />
+	<Image Name="MakeMaterial7_2" XPos="64" YPos="0" Width="64" Height="64" />
+	<Image Name="MakeMaterial7_3" XPos="128" YPos="0" Width="64" Height="64" />
+	<Image Name="MakeMaterial7_4" XPos="192" YPos="0" Width="64" Height="64" />
+	<Image Name="MakeMaterial7_5" XPos="0" YPos="64" Width="64" Height="64" />
+	<Image Name="MakeMaterial7_6" XPos="64" YPos="64" Width="64" Height="64" />
+	<Image Name="MakeMaterial7_7" XPos="128" YPos="64" Width="64" Height="64" />
+	<Image Name="MakeMaterial7_8" XPos="192" YPos="64" Width="64" Height="64" />
+	<Image Name="MakeMaterial7_9" XPos="0" YPos="128" Width="64" Height="64" />
+	<Image Name="MakeMaterial7_10" XPos="64" YPos="128" Width="64" Height="64" />
+	<Image Name="MakeMaterial7_11" XPos="128" YPos="128" Width="64" Height="64" />
+	<Image Name="MakeMaterial7_12" XPos="192" YPos="128" Width="64" Height="64" />
+	<Image Name="MakeMaterial7_13" XPos="0" YPos="192" Width="64" Height="64" />
+	<Image Name="MakeMaterial7_14" XPos="64" YPos="192" Width="64" Height="64" />
+	<Image Name="MakeMaterial7_15" XPos="128" YPos="192" Width="64" Height="64" />
+	<Image Name="MakeMaterial7_16" XPos="192" YPos="192" Width="64" Height="64" />
+</Imageset>

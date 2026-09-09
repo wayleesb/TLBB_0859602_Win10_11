@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="雪地灯笼.frame" />
+    <entity mesh="雪地灯笼杆.mesh" node="雪地灯笼杆" />
+    <entity mesh="雪地灯笼.mesh" />
+</model>

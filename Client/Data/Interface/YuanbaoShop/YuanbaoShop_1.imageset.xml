@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<Imageset Name="YuanbaoShop_1" Imagefile="YuanbaoShop/tga_YuanbaoShop_1.dds" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+	<Image Name="YuanbaoShop_left" XPos="115" YPos="9" Width="36" Height="31" />
+	<Image Name="YuanbaoShop_middle" XPos="151" YPos="9" Width="23" Height="31" />	
+	<Image Name="YuanbaoShop_right" XPos="174" YPos="9" Width="35" Height="31" />
+
+</Imageset>

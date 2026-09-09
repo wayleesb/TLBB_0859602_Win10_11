@@ -1,0 +1,229 @@
+material Terrain/OneLayer
+{
+    // fragment program, for compatible with other material
+
+    technique
+    {
+        pass
+        {
+            fragment_program_ref Terrain/OneLayer_ps
+            {
+            }
+
+            texture_unit
+            {
+                texture_alias <layer0>
+                texture <layer0>
+                tex_address_mode clamp
+            }
+        }
+    }
+
+    // Fixed-function pipeline
+
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture_alias <layer0>
+                texture <layer0>
+                tex_address_mode clamp
+            }
+        }
+    }
+}
+
+material Terrain/TwoLayer
+{
+    // fragment program for DirectX only, test on GeForce FX 5700LE, performance boost %5
+
+    technique
+    {
+        pass
+        {
+            fragment_program_ref Terrain/TwoLayer_ps
+            {
+            }
+
+            texture_unit
+            {
+                texture_alias <layer0>
+                texture <layer0>
+                tex_address_mode clamp
+            }
+
+            texture_unit
+            {
+                texture_alias <layer1>
+                texture <layer1>
+                tex_address_mode clamp
+                tex_coord_set 1
+            }
+        }
+    }
+
+    // Fixed-function pipeline
+
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture_alias <layer0>
+                texture <layer0>
+                tex_address_mode clamp
+            }
+        }
+
+        pass
+        {
+            scene_blend alpha_blend
+
+            texture_unit
+            {
+                texture_alias <layer1>
+                texture <layer1>
+                tex_address_mode clamp
+                tex_coord_set 1
+            }
+        }
+    }
+}
+
+material Terrain/OneLayerLightmap
+{
+    // fragment program, never tested
+
+    technique
+    {
+        pass
+        {
+            fragment_program_ref Terrain/OneLayerLightmap_ps
+            {
+            }
+
+            texture_unit
+            {
+                texture_alias <layer0>
+                texture <layer0>
+                tex_address_mode clamp
+            }
+
+            texture_unit
+            {
+                texture_alias <lightmap>
+                texture <lightmap>
+                tex_address_mode clamp
+                tex_coord_set 1
+            }
+        }
+    }
+
+    // Fixed-function pipeline
+
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture_alias <lightmap>
+                texture <lightmap>
+                tex_address_mode clamp
+                tex_coord_set 1
+            }
+
+            texture_unit
+            {
+                texture_alias <layer0>
+                texture <layer0>
+                tex_address_mode clamp
+            }
+        }
+    }
+}
+
+material Terrain/TwoLayerLightmap
+{
+    // fragment program, never tested
+
+    technique
+    {
+        pass
+        {
+            fragment_program_ref Terrain/TwoLayerLightmap_ps
+            {
+            }
+
+            texture_unit
+            {
+                texture_alias <layer0>
+                texture <layer0>
+                tex_address_mode clamp
+            }
+
+            texture_unit
+            {
+                texture_alias <layer1>
+                texture <layer1>
+                tex_address_mode clamp
+                tex_coord_set 1
+            }
+
+            texture_unit
+            {
+                texture_alias <lightmap>
+                texture <lightmap>
+                tex_address_mode clamp
+                tex_coord_set 2
+            }
+        }
+    }
+
+    // Fixed-function pipeline
+
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture_alias <lightmap>
+                texture <lightmap>
+                tex_address_mode clamp
+                tex_coord_set 2
+            }
+
+            texture_unit
+            {
+                texture_alias <layer0>
+                texture <layer0>
+                tex_address_mode clamp
+            }
+        }
+
+        pass
+        {
+            scene_blend alpha_blend
+
+            texture_unit
+            {
+                texture_alias <lightmap>
+                texture <lightmap>
+                tex_address_mode clamp
+                tex_coord_set 2
+            }
+
+            texture_unit
+            {
+                texture_alias <layer1>
+                texture <layer1>
+                tex_address_mode clamp
+                tex_coord_set 1
+            }
+        }
+    }
+}

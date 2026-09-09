@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="三级书院.frame" />
+    <entity mesh="三级书院旗.mesh" />
+    <entity mesh="三级书院.mesh" node="三级书院" />
+</model>

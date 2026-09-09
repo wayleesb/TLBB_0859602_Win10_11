@@ -1,0 +1,324 @@
+<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame3" Name="OtherInfo_Frame">
+        <Property Name="UnifiedPosition" Value="{{0.0,0},{0.12,0}}" />
+        <Property Name="AbsoluteSize" Value="w:360 h:402" />
+        <Window Type="TLBB_DragTitle" Name="OtherInfo_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:108.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-133.000000},{0.000000,20.000000}" />
+            <Property Name="Font" Value="YouYuan11.25" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="Text" Value="#{INTERFACE_XML_50}" />
+            <Property Name="DragTarget" Value="OtherInfo_Frame" />
+        </Window>
+        <Window Type="TLBB_ButtonHelp" Name="OtherInfo_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,88.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*OtherInfo&quot;);' />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="OtherInfo_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function="this:Hide();" />
+        </Window>
+        <Window Type="DefaultWindow" Name="OtherInfo_Frame_Client">
+            <Property Name="AbsolutePosition" Value="x:14.000000 y:50.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-20.000000},{1.000000,-80.000000}" />
+            <Window Type="TLBB_SimpleText" Name="OtherInfo_1_Text">
+                <Property Name="Position" Value="x:0.0 y:0.0" />
+                <Property Name="UnifiedSize" Value="{{0.15,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_587}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="OtherInfo_2_Text">
+                <Property Name="Position" Value="x:0.0 y:0.08" />
+                <Property Name="UnifiedSize" Value="{{0.15,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_580}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="OtherInfo_3_Text">
+                <Property Name="Position" Value="x:0.0 y:0.16" />
+                <Property Name="UnifiedSize" Value="{{0.22,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_942}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="OtherInfo_4_Text">
+                <Property Name="Position" Value="x:0.4 y:0.0" />
+                <Property Name="UnifiedSize" Value="{{0.25,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_452}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="OtherInfo_5_Text">
+                <Property Name="Position" Value="x:0.4 y:0.08" />
+                <Property Name="UnifiedSize" Value="{{0.25,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_126}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="OtherInfo_7_Text">
+                <Property Name="Position" Value="x:0.4 y:0.16" />
+                <Property Name="UnifiedSize" Value="{{0.25,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_395}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="OtherInfo_6_Text">
+                <Property Name="Position" Value="x:0.4 y:0.32" />
+                <Property Name="UnifiedSize" Value="{{0.35,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_142}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="OtherInfo_8_Text">
+                <Property Name="Position" Value="x:0.0 y:0.24" />
+                <Property Name="UnifiedSize" Value="{{0.22,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_1138}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="OtherInfo_9_Text">
+                <Property Name="Position" Value="x:0.0 y:0.32" />
+                <Property Name="UnifiedSize" Value="{{0.22,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_1180}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="OtherInfo_10_Text">
+                <Property Name="Position" Value="x:0.4 y:0.24" />
+                <Property Name="UnifiedSize" Value="{{0.25,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="荣誉值:" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="OtherInfo_1">
+                <Property Name="Position" Value="x:0.15 y:0.0" />
+                <Property Name="UnifiedSize" Value="{{0.2,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="0" />
+                <Property Name="TextColor" Value="FFFDF7A7" />
+                <Property Name="HorzFormatting" Value="RightAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="OtherInfo_2">
+                <Property Name="Position" Value="x:0.15 y:0.08" />
+                <Property Name="UnifiedSize" Value="{{0.2,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="0" />
+                <Property Name="TextColor" Value="FFFDF7A7" />
+                <Property Name="HorzFormatting" Value="RightAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="OtherInfo_3">
+                <Property Name="Position" Value="x:0.23 y:0.16" />
+                <Property Name="UnifiedSize" Value="{{0.12,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="" />
+                <Property Name="TextColor" Value="FFFDF7A7" />
+                <Property Name="HorzFormatting" Value="RightAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="OtherInfo_4">
+                <Property Name="Position" Value="x:0.65 y:0.0" />
+                <Property Name="UnifiedSize" Value="{{0.3,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="0/0" />
+                <Property Name="TextColor" Value="FFFDF7A7" />
+                <Property Name="HorzFormatting" Value="RightAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="OtherInfo_5">
+                <Property Name="Position" Value="x:0.65 y:0.08" />
+                <Property Name="UnifiedSize" Value="{{0.3,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="0/0" />
+                <Property Name="TextColor" Value="FFFDF7A7" />
+                <Property Name="HorzFormatting" Value="RightAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="OtherInfo_7">
+                <Property Name="Position" Value="x:0.65 y:0.16" />
+                <Property Name="UnifiedSize" Value="{{0.3,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="0/0" />
+                <Property Name="TextColor" Value="FFFDF7A7" />
+                <Property Name="HorzFormatting" Value="RightAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="OtherInfo_6">
+                <Property Name="Position" Value="x:0.75 y:0.32" />
+                <Property Name="UnifiedSize" Value="{{0.2,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="0/0" />
+                <Property Name="TextColor" Value="FFFDF7A7" />
+                <Property Name="HorzFormatting" Value="RightAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="OtherInfo_9">
+                <Property Name="Position" Value="x:0.23 y:0.32" />
+                <Property Name="UnifiedSize" Value="{{0.12,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="0/0" />
+                <Property Name="TextColor" Value="FFFDF7A7" />
+                <Property Name="HorzFormatting" Value="RightAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="OtherInfo_8">
+                <Property Name="Position" Value="x:0.23 y:0.24" />
+                <Property Name="UnifiedSize" Value="{{0.12,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="" />
+                <Property Name="TextColor" Value="FFFDF7A7" />
+                <Property Name="HorzFormatting" Value="RightAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="OtherInfo_10">
+                <Property Name="Position" Value="x:0.65 y:0.24" />
+                <Property Name="UnifiedSize" Value="{{0.3,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="0/0" />
+                <Property Name="TextColor" Value="FFFDF7A7" />
+                <Property Name="HorzFormatting" Value="RightAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="OtherInfo_Packet1_Text">
+                <Property Name="Position" Value="x:0.04 y:0.79" />
+                <Property Name="UnifiedSize" Value="{{0.0,34.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_772}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="OtherInfo_Packet1_Skill1">
+                <Property Name="Position" Value="x:0.04 y:0.85" />
+                <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                <Property Name="DragAcceptName" value="B1" />
+                <Property Name="DraggingEnabled" Value="True" />
+                <Event Name="Clicked" Function="SelfEquip_Bag_Click();" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="OtherInfo_Packet1_Info">
+                <Property Name="Position" Value="x:0.16 y:0.85" />
+                <Property Name="UnifiedSize" Value="{{0.3,0.000000},{0.000000,34.000000}" />
+                <Property Name="Text" Value="" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="OtherInfo_Packet2_Text">
+                <Property Name="Position" Value="x:0.53 y:0.79" />
+                <Property Name="UnifiedSize" Value="{{0.0,34.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_279}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="OtherInfo_Packet2_Skill1">
+                <Property Name="Position" Value="x:0.53 y:0.85" />
+                <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                <Property Name="DragAcceptName" value="B2" />
+                <Property Name="DraggingEnabled" Value="True" />
+                <Event Name="Clicked" Function="SelfEquip_Box_Click();" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="OtherInfo_Packet2_Info">
+                <Property Name="Position" Value="x:0.65 y:0.85" />
+                <Property Name="UnifiedSize" Value="{{0.3,0.000000},{0.000000,34.000000}" />
+                <Property Name="Text" Value="" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon2" Name="OtherInfo_OpenGruid">
+                <Property Name="Visible" Value="False" />
+                <Property Name="Position" Value="x:0.05 y:0.3" />
+                <Property Name="Size" Value="w:0.5 h:0.08" />
+                <Property Name="Text" Value="#{INTERFACE_XML_197}" />
+                <Event Name="Clicked" Function="OtherInfo_OnOpenGruidClick();" />
+            </Window>
+            <Window Type="TLBB_ButtonExp1" Name="OtherInfo_OpenGuanXi">
+                <Property Name="Position" Value="x:0.05 y:0.4" />
+                <Property Name="UnifiedSize" Value="{{0.35,0.000000},{0.000000,48.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_930}" />
+                <Event Name="Clicked" Function="OtherInfo_OpenGuanXi_Click();" />
+           </Window>
+            <Window Type="TLBB_ButtonExp1" Name="OtherInfo_OpenPaihang">
+                <Property Name="Position" Value="x:0.6 y:0.4" />
+                <Property Name="UnifiedSize" Value="{{0.35,0.000000},{0.000000,48.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_199}" />
+                <Event Name="Clicked" Function="Helper:GotoPaihang();" />
+            </Window>
+            <Window Type="TLBB_ButtonExp1" Name="OtherInfo_OpenReputation">
+                <Property Name="Position" Value="x:0.6 y:0.6" />
+                <Property Name="UnifiedSize" Value="{{0.35,0.000000},{0.000000,48.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_200}" />
+                <Event Name="Clicked" Function="OnOtherInfo_OpenReputationClick();" />
+            </Window>
+        </Window>
+        <Window Type="DefaultWindow" Name="OtherInfo_Checkbox_Frame">
+            <Property Name="UnifiedPosition" Value="{{0.0,8.000000},{1.000000,-25.000000}" />
+            <Property Name="UnifiedSize" Value="{{0.9,0.000000},{0.000000,24.000000}" />
+            <Window Type="TLBB_ButtonPageDown" Name="OtherInfo_SelfEquip">
+                <Property Name="AbsolutePosition" Value="x:0.0 y:0.0" />
+                <Property Name="AbsoluteSize" Value="w:42.000000 h:24.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_877}" />
+                <Property Name="HorzLabelFormatting" Value="WordWrapCentreAligned" />
+                <Event Name="Clicked" Function="OtherInfo_SelfEquip_Page_Switch();" />
+            </Window>
+            <Window Type="TLBB_ButtonPageDown" Name="OtherInfo_SelfData">
+                <Property Name="AbsolutePosition" Value="x:42.0 y:0.0" />
+                <Property Name="AbsoluteSize" Value="w:42.000000 h:24.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_882}" />
+                <Event Name="Clicked" Function="OtherInfo_SelfData_Switch();" />
+            </Window>
+            <Window Type="TLBB_ButtonPageDown" Name="OtherInfo_Blog">
+                <Property Name="AbsolutePosition" Value="x:84.0 y:0.0" />
+                <Property Name="AbsoluteSize" Value="w:42.000000 h:24.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_145}" />
+                <Event Name="Clicked" Function="Load_Blog_Infomation();" />
+            </Window>
+            <Window Type="TLBB_ButtonPageDown" Name="OtherInfo_Pet">
+                <Property Name="AbsolutePosition" Value="x:126.0 y:0.0" />
+                <Property Name="AbsoluteSize" Value="w:42.000000 h:24.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_854}" />
+                <Event Name="Clicked" Function="OtherInfo_Pet_Switch();" />
+            </Window>
+            <Window Type="TLBB_ButtonPageDown" Name="OtherInfo_Ride">
+                <Property Name="AbsolutePosition" Value="x:168.0 y:0.0" />
+                <Property Name="AbsoluteSize" Value="w:42.000000 h:24.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_497}" />
+                <Event Name="Clicked" Function="OtherInfo_Ride_Page_Switch();" />
+            </Window>
+            <Window Type="TLBB_ButtonPageDown" Name="OtherInfo_OtherInfo">
+                <Property Name="AbsolutePosition" Value="x:210.0 y:0.0" />
+                <Property Name="AbsoluteSize" Value="w:42.000000 h:24.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_496}" />
+                <Property Name="CheckMode" Value="1" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

@@ -1,0 +1,706 @@
+﻿<?xml version="1.0" ?>
+<GUILayout>
+	<Window Type="TLBB_MainFrame5" Name="XingYun_Frame">
+		<Property Name="UnifiedPosition" Value="{{0.000000,210.000000},{0.150000,56.649998}" />
+		<Property Name="AbsoluteSize" Value="w:397 h:389" />
+    <Window Type="TLBB_HLine" Name="XingYun_Line" >
+      <Property Name="AbsolutePosition" Value="x:17.000000 y:315.000000" />
+      <Property Name="AbsoluteSize" Value="w:364.000000 h:5.000000" />
+    </Window>
+    <Window Type="TLBB_StaticImageNULL" Name="XingYun_RedLine_Left" >
+      <Property Name="AbsolutePosition" Value="x:4.000000 y:36.000000" />
+      <Property Name="AbsoluteSize" Value="w:7.000000 h:31.000000" />
+      <Property Name="AlwaysOnTop" Value="True" />
+      <Property Name="Image" Value="set:ScrollInfo_1 image:ScrollInfo_xuzileft" />
+    </Window>
+    <Window Type="TLBB_StaticImageNULL" Name="XingYun_RedLine_Right" >
+      <Property Name="AbsolutePosition" Value="x:388.000000 y:36.000000" />
+      <Property Name="AbsoluteSize" Value="w:7.000000 h:31.000000" />
+      <Property Name="AlwaysOnTop" Value="True" />
+      <Property Name="Image" Value="set:ScrollInfo_1 image:ScrollInfo_xuziright" />
+    </Window>
+		<Window Type="TLBB_ButtonCampaign" Name="XingYun_GetPrize">
+         <Property Name="AbsolutePosition" Value="x:141.000000 y:322.000000" />
+         <Property Name="AbsoluteSize" Value="w:116.000000 h:50.000000" />
+         <Property Name="Text" Value="#{INTERFACE_XML_1114}" />
+         <Event Name="Clicked" Function="XingYun_Close();" />
+    </Window>
+		<Window Type="TLBB_DragTitle" Name="XingYun_DragTitle">
+			<Property Name="AbsolutePosition" Value="x:46.000000 y:12.000000" />
+			<Property Name="AbsoluteSize" Value="w:304.000000 h:20.000000" />
+			<Property Name="Font" Value="YouYuan11.25" />
+			<Property Name="HorzFormatting" Value="HorzCentred" />
+			<Property Name="VertFormatting" Value="VertCentred" />
+			<Property Name="Text" Value="#{XYKHS_20071229_01}" />
+			<Property Name="DragTarget" Value="XingYun_Frame" />
+		</Window>
+		<Window Type="TLBB_ButtonClose" Name="XingYun_Close">
+			<Property Name="AbsolutePosition" Value="x:356.000000 y:14.000000" />
+			<Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+			<Event Name="Clicked" Function="XingYun_Close();" />
+		</Window>
+		<Window Type="TLBB_ButtonHelp" Name="XingYun_Help">
+			<Property Name="UnifiedPosition" Value="{{0.000000,27.000000},{0.000000,14.000000}" />
+			<Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+      <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*XingYun&quot;);' />
+		</Window>
+		<Window Type="DefaultWindow" Name="XingYun_Background_Frame">
+			<Property Name="AbsolutePosition" Value="x:33.000000 y:50.000000" />
+			<Property Name="AbsoluteSize" Value="w:330 h:268" />
+
+			<Window Type="DefaultWindow" Name="XingYun_NPC1_Back">
+				<Property Name="UnifiedPosition" Value="{{0,10},{0,0}}" />
+				<Property Name="UnifiedSize" Value="{{0.0,54.000000},{0.000000,54.000000}" />
+				<Window Type="TLBB_Frame_Lace1" Name="XingYun_Head1_Back">
+					<Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+					<Property Name="AbsoluteSize" Value="w:54.000000 h:54.000000" />
+					<Window Type="TLBB_StaticImageNULL" Name="XingYun_Head1">
+						<Property Name="AbsolutePosition" Value="x:4.000000 y:3.000000" />
+						<Property Name="AbsoluteSize" Value="w:48.000000 h:48.000000" />
+						<Property Name="Image" Value="set:CommonNPCHeader12 image:CommonNPCHeader12_2" />
+            <Property Name="Tooltip" Value="#{INTERFACE_XML_1115}" />
+						<Event Name="MouseClick" Function="Play_Ani(1);" />
+						<Window Type="TLBB_AnimateImage" Name="XingYun_NPC1_Ani">
+			        <Property Name="UnifiedPosition" Value="{{0,0},{0,0}" />
+			        <Property Name="Size" Value="w:1 h:1" />
+			        <Property Name="Animate" Value="XingYun" />
+			  			<Property Name="MouseMoveHollow" Value="True" />
+			  			<Property Name="MouseHollow" Value="true" />
+			  			<Property Name="AlwaysOnTop" Value="True" />
+			  			<Property Name="Visible" Value="false" />
+		  			</Window>
+					</Window>
+					 <Window Type="TLBB_StaticImageNULL" Name="XingYun_Head_Cover1">
+						   <Property Name="Position" Value="x:0 y:0" />
+						   <Property Name="Size" Value="w:1 h:1" />
+						   <Property Name="Image" Value="set:CommonFrame7 image:SelectHead_Frame" />
+						   <Property Name="MouseMoveHollow" Value="True" />
+			  			 <Property Name="MouseHollow" Value="true" />
+			  			 <Property Name="AlwaysOnTop" Value="True" />
+						</Window>
+				</Window>
+			</Window>
+			
+			<Window Type="DefaultWindow" Name="XingYun_NPC2_Back">
+				<Property Name="UnifiedPosition" Value="{{0,10},{0,65}}" />
+				<Property Name="UnifiedSize" Value="{{0.0,54.000000},{0.000000,54.000000}" />
+				<Window Type="TLBB_Frame_Lace1" Name="XingYun_Head2_Back">
+					<Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+					<Property Name="AbsoluteSize" Value="w:54.000000 h:54.000000" />
+					<Window Type="TLBB_StaticImageNULL" Name="XingYun_Head2">
+						<Property Name="AbsolutePosition" Value="x:4.000000 y:3.000000" />
+						<Property Name="AbsoluteSize" Value="w:48.000000 h:48.000000" />
+						<Property Name="Image" Value="set:CommonNPCHeader12 image:CommonNPCHeader12_5" />
+            <Property Name="Tooltip" Value="#{INTERFACE_XML_1116}" />
+						<Event Name="MouseClick" Function="Play_Ani(2);" />
+						<Window Type="TLBB_AnimateImage" Name="XingYun_NPC2_Ani">
+			        <Property Name="UnifiedPosition" Value="{{0,0},{0,0}" />
+			        <Property Name="Size" Value="w:1 h:1" />
+			        <Property Name="Animate" Value="XingYun" />
+			  			<Property Name="MouseMoveHollow" Value="True" />
+			  			<Property Name="MouseHollow" Value="true" />
+			  			<Property Name="AlwaysOnTop" Value="True" />
+			  			<Property Name="Visible" Value="false" />
+		  			</Window>
+					</Window>
+					  <Window Type="TLBB_StaticImageNULL" Name="XingYun_Head_Cover2">
+						   <Property Name="Position" Value="x:0 y:0" />
+						   <Property Name="Size" Value="w:1 h:1" />
+						   <Property Name="Image" Value="set:CommonFrame7 image:SelectHead_Frame" />
+						   <Property Name="MouseMoveHollow" Value="True" />
+			  			 <Property Name="MouseHollow" Value="true" />
+			  			 <Property Name="AlwaysOnTop" Value="True" />
+						</Window>
+				</Window>
+			</Window>
+			<Window Type="DefaultWindow" Name="XingYun_NPC3_Back">
+				<Property Name="UnifiedPosition" Value="{{0,10},{0,130}}" />
+				<Property Name="UnifiedSize" Value="{{0.0,54.000000},{0.000000,54.000000}" />
+				<Window Type="TLBB_Frame_Lace1" Name="XingYun_Head3_Back">
+					<Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+					<Property Name="AbsoluteSize" Value="w:54.000000 h:54.000000" />
+					<Window Type="TLBB_StaticImageNULL" Name="XingYun_Head3">
+						<Property Name="AbsolutePosition" Value="x:4.000000 y:3.000000" />
+						<Property Name="AbsoluteSize" Value="w:48.000000 h:48.000000" />
+						<Property Name="Image" Value="set:CommonNPCHeader12 image:CommonNPCHeader12_1" />
+            <Property Name="Tooltip" Value="#{INTERFACE_XML_1117}" />
+						<Event Name="MouseClick" Function="Play_Ani(3);" />
+						<Window Type="TLBB_AnimateImage" Name="XingYun_NPC3_Ani">
+			        <Property Name="UnifiedPosition" Value="{{0,0},{0,0}" />
+			        <Property Name="Size" Value="w:1 h:1" />
+			        <Property Name="Animate" Value="XingYun" />
+			  			<Property Name="MouseMoveHollow" Value="True" />
+			  			<Property Name="MouseHollow" Value="true" />
+			  			<Property Name="AlwaysOnTop" Value="True" />
+			  			<Property Name="Visible" Value="false" />
+		  			</Window>
+					</Window>
+					 <Window Type="TLBB_StaticImageNULL" Name="XingYun_Head_Cover3">
+						   <Property Name="Position" Value="x:0 y:0" />
+						   <Property Name="Size" Value="w:1 h:1" />
+						   <Property Name="Image" Value="set:CommonFrame7 image:SelectHead_Frame" />
+							 <Property Name="MouseMoveHollow" Value="True" />
+			  			 <Property Name="MouseHollow" Value="true" />
+			  			 <Property Name="AlwaysOnTop" Value="True" />
+						</Window>
+				</Window>
+			</Window>
+			<Window Type="DefaultWindow" Name="XingYun_NPC4_Back">
+				<Property Name="UnifiedPosition" Value="{{0,10},{0,195}}" />
+				<Property Name="UnifiedSize" Value="{{0.0,54.000000},{0.000000,54.000000}" />
+				<Window Type="TLBB_Frame_Lace1" Name="XingYun_Head4_Back">
+					<Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+					<Property Name="AbsoluteSize" Value="w:54.000000 h:54.000000" />
+					<Window Type="TLBB_StaticImageNULL" Name="XingYun_Head4">
+						<Property Name="AbsolutePosition" Value="x:4.000000 y:3.000000" />
+						<Property Name="AbsoluteSize" Value="w:48.000000 h:48.000000" />
+						<Property Name="Image" Value="set:CommonNPCHeader12 image:CommonNPCHeader12_3" />
+            <Property Name="Tooltip" Value="#{INTERFACE_XML_1118}" />
+						<Event Name="MouseClick" Function="Play_Ani(4);" />
+						<Window Type="TLBB_AnimateImage" Name="XingYun_NPC4_Ani">
+			        <Property Name="UnifiedPosition" Value="{{0,0},{0,0}" />
+			        <Property Name="Size" Value="w:1 h:1" />
+			        <Property Name="Animate" Value="XingYun" />
+			  			<Property Name="MouseMoveHollow" Value="True" />
+			  			<Property Name="MouseHollow" Value="true" />
+			  			<Property Name="AlwaysOnTop" Value="True" />
+			  			<Property Name="Visible" Value="false" />
+		  			</Window>
+					</Window>
+					  <Window Type="TLBB_StaticImageNULL" Name="XingYun_Head_Cover4">
+						   <Property Name="Position" Value="x:0 y:0" />
+						   <Property Name="Size" Value="w:1 h:1" />
+						   <Property Name="Image" Value="set:CommonFrame7 image:SelectHead_Frame" />
+						   <Property Name="MouseMoveHollow" Value="True" />
+			  			 <Property Name="MouseHollow" Value="true" />
+			  			 <Property Name="AlwaysOnTop" Value="True" />
+						</Window>
+				</Window>
+			</Window>
+      <Window Type="DefaultWindow" Name="XingYun_NPC5_Back">
+        <Property Name="UnifiedPosition" Value="{{0,74},{0,0}}" />
+        <Property Name="UnifiedSize" Value="{{0.0,54.000000},{0.000000,54.000000}" />
+        <Window Type="TLBB_Frame_Lace1" Name="XingYun_Head5_Back">
+          <Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+          <Property Name="AbsoluteSize" Value="w:54.000000 h:54.000000" />
+          <Window Type="TLBB_StaticImageNULL" Name="XingYun_Head5">
+            <Property Name="AbsolutePosition" Value="x:4.000000 y:3.000000" />
+            <Property Name="AbsoluteSize" Value="w:48.000000 h:48.000000" />
+            <Property Name="Image" Value="set:CommonNPCHeader12 image:CommonNPCHeader12_11" />
+            <Property Name="Tooltip" Value="#{INTERFACE_XML_1119}" />
+            <Event Name="MouseClick" Function="Play_Ani(5);" />
+						<Window Type="TLBB_AnimateImage" Name="XingYun_NPC5_Ani">
+			        <Property Name="UnifiedPosition" Value="{{0,0},{0,0}" />
+			        <Property Name="Size" Value="w:1 h:1" />
+			        <Property Name="Animate" Value="XingYun" />
+			  			<Property Name="MouseMoveHollow" Value="True" />
+			  			<Property Name="MouseHollow" Value="true" />
+			  			<Property Name="AlwaysOnTop" Value="True" />
+			  			<Property Name="Visible" Value="false" />
+		  			</Window>
+          </Window>
+            <Window Type="TLBB_StaticImageNULL" Name="XingYun_Head_Cover5">
+						   <Property Name="Position" Value="x:0 y:0" />
+						   <Property Name="Size" Value="w:1 h:1" />
+						   <Property Name="Image" Value="set:CommonFrame7 image:SelectHead_Frame" />
+						   <Property Name="MouseMoveHollow" Value="True" />
+			  			 <Property Name="MouseHollow" Value="true" />
+			  			 <Property Name="AlwaysOnTop" Value="True" />
+						</Window>
+        </Window>
+      </Window>
+      <Window Type="DefaultWindow" Name="XingYun_NPC6_Back">
+        <Property Name="UnifiedPosition" Value="{{0,74},{0,65}}" />
+        <Property Name="UnifiedSize" Value="{{0.0,54.000000},{0.000000,54.000000}" />
+        <Window Type="TLBB_Frame_Lace1" Name="XingYun_Head6_Back">
+          <Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+          <Property Name="AbsoluteSize" Value="w:54.000000 h:54.000000" />
+          <Window Type="TLBB_StaticImageNULL" Name="XingYun_Head6">
+            <Property Name="AbsolutePosition" Value="x:4.000000 y:3.000000" />
+            <Property Name="AbsoluteSize" Value="w:48.000000 h:48.000000" />
+            <Property Name="Image" Value="set:CommonNPCHeader12 image:CommonNPCHeader12_8" />
+            <Property Name="Tooltip" Value="#{INTERFACE_XML_1120}" />
+            <Event Name="MouseClick" Function="Play_Ani(6);" />
+						<Window Type="TLBB_AnimateImage" Name="XingYun_NPC6_Ani">
+			        <Property Name="UnifiedPosition" Value="{{0,0},{0,0}" />
+			        <Property Name="Size" Value="w:1 h:1" />
+			        <Property Name="Animate" Value="XingYun" />
+			  			<Property Name="MouseMoveHollow" Value="True" />
+			  			<Property Name="MouseHollow" Value="true" />
+			  			<Property Name="AlwaysOnTop" Value="True" />
+			  			<Property Name="Visible" Value="false" />
+		  			</Window>
+          </Window>
+            <Window Type="TLBB_StaticImageNULL" Name="XingYun_Head_Cover6">
+						   <Property Name="Position" Value="x:0 y:0" />
+						   <Property Name="Size" Value="w:1 h:1" />
+						   <Property Name="Image" Value="set:CommonFrame7 image:SelectHead_Frame" />
+						   <Property Name="MouseMoveHollow" Value="True" />
+			  			 <Property Name="MouseHollow" Value="true" />
+			  			 <Property Name="AlwaysOnTop" Value="True" />
+						</Window>
+        </Window>
+      </Window>
+      <Window Type="DefaultWindow" Name="XingYun_NPC7_Back">
+        <Property Name="UnifiedPosition" Value="{{0,74},{0,130}}" />
+        <Property Name="UnifiedSize" Value="{{0.0,54.000000},{0.000000,54.000000}" />
+        <Window Type="TLBB_Frame_Lace1" Name="XingYun_Head7_Back">
+          <Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+          <Property Name="AbsoluteSize" Value="w:54.000000 h:54.000000" />
+          <Window Type="TLBB_StaticImageNULL" Name="XingYun_Head7">
+            <Property Name="AbsolutePosition" Value="x:4.000000 y:3.000000" />
+            <Property Name="AbsoluteSize" Value="w:48.000000 h:48.000000" />
+            <Property Name="Image" Value="set:CommonNPCHeader12 image:CommonNPCHeader12_6" />
+            <Property Name="Tooltip" Value="#{INTERFACE_XML_1121}" />
+            <Event Name="MouseClick" Function="Play_Ani(7);" />
+						<Window Type="TLBB_AnimateImage" Name="XingYun_NPC7_Ani">
+			        <Property Name="UnifiedPosition" Value="{{0,0},{0,0}" />
+			        <Property Name="Size" Value="w:1 h:1" />
+			        <Property Name="Animate" Value="XingYun" />
+			  			<Property Name="MouseMoveHollow" Value="True" />
+			  			<Property Name="MouseHollow" Value="true" />
+			  			<Property Name="AlwaysOnTop" Value="True" />
+			  			<Property Name="Visible" Value="false" />
+		  			</Window>
+          </Window>
+           <Window Type="TLBB_StaticImageNULL" Name="XingYun_Head_Cover7">
+						   <Property Name="Position" Value="x:0 y:0" />
+						   <Property Name="Size" Value="w:1 h:1" />
+						   <Property Name="Image" Value="set:CommonFrame7 image:SelectHead_Frame" />
+						   <Property Name="MouseMoveHollow" Value="True" />
+			  			 <Property Name="MouseHollow" Value="true" />
+			  			 <Property Name="AlwaysOnTop" Value="True" />
+						</Window>
+        </Window>
+      </Window>
+      <Window Type="DefaultWindow" Name="XingYun_NPC8_Back">
+        <Property Name="UnifiedPosition" Value="{{0,74},{0,195}}" />
+        <Property Name="UnifiedSize" Value="{{0.0,54.000000},{0.000000,54.000000}" />
+        <Window Type="TLBB_Frame_Lace1" Name="XingYun_Head8_Back">
+          <Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+          <Property Name="AbsoluteSize" Value="w:54.000000 h:54.000000" />
+          <Window Type="TLBB_StaticImageNULL" Name="XingYun_Head8">
+            <Property Name="AbsolutePosition" Value="x:4.000000 y:3.000000" />
+            <Property Name="AbsoluteSize" Value="w:48.000000 h:48.000000" />
+            <Property Name="Image" Value="set:CommonNPCHeader12 image:CommonNPCHeader12_4" />
+            <Property Name="Tooltip" Value="#{INTERFACE_XML_1122}" />
+            <Event Name="MouseClick" Function="Play_Ani(8);" />
+						<Window Type="TLBB_AnimateImage" Name="XingYun_NPC8_Ani">
+			        <Property Name="UnifiedPosition" Value="{{0,0},{0,0}" />
+			        <Property Name="Size" Value="w:1 h:1" />
+			        <Property Name="Animate" Value="XingYun" />
+			  			<Property Name="MouseMoveHollow" Value="True" />
+			  			<Property Name="MouseHollow" Value="true" />
+			  			<Property Name="AlwaysOnTop" Value="True" />
+			  			<Property Name="Visible" Value="false" />
+		  			</Window>
+          </Window>
+           <Window Type="TLBB_StaticImageNULL" Name="XingYun_Head_Cover8">
+						   <Property Name="Position" Value="x:0 y:0" />
+						   <Property Name="Size" Value="w:1 h:1" />
+						   <Property Name="Image" Value="set:CommonFrame7 image:SelectHead_Frame" />
+						   <Property Name="MouseMoveHollow" Value="True" />
+			  			 <Property Name="MouseHollow" Value="true" />
+			  			 <Property Name="AlwaysOnTop" Value="True" />
+						</Window>
+        </Window>
+      </Window>
+      <Window Type="DefaultWindow" Name="XingYun_NPC9_Back">
+        <Property Name="UnifiedPosition" Value="{{0,138},{0,0}}" />
+        <Property Name="UnifiedSize" Value="{{0.0,54.000000},{0.000000,54.000000}" />
+        <Window Type="TLBB_Frame_Lace1" Name="XingYun_Head9_Back">
+          <Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+          <Property Name="AbsoluteSize" Value="w:54.000000 h:54.000000" />
+          <Window Type="TLBB_StaticImageNULL" Name="XingYun_Head9">
+            <Property Name="AbsolutePosition" Value="x:4.000000 y:3.000000" />
+            <Property Name="AbsoluteSize" Value="w:48.000000 h:48.000000" />
+            <Property Name="Image" Value="set:CommonNPCHeader12 image:CommonNPCHeader12_10" />
+            <Property Name="Tooltip" Value="#{INTERFACE_XML_1123}" />
+            <Event Name="MouseClick" Function="Play_Ani(9);" />
+						<Window Type="TLBB_AnimateImage" Name="XingYun_NPC9_Ani">
+			        <Property Name="UnifiedPosition" Value="{{0,0},{0,0}" />
+			        <Property Name="Size" Value="w:1 h:1" />
+			        <Property Name="Animate" Value="XingYun" />
+			  			<Property Name="MouseMoveHollow" Value="True" />
+			  			<Property Name="MouseHollow" Value="true" />
+			  			<Property Name="AlwaysOnTop" Value="True" />
+			  			<Property Name="Visible" Value="false" />
+		  			</Window>
+          </Window>
+          <Window Type="TLBB_StaticImageNULL" Name="XingYun_Head_Cover9">
+						   <Property Name="Position" Value="x:0 y:0" />
+						   <Property Name="Size" Value="w:1 h:1" />
+						   <Property Name="Image" Value="set:CommonFrame7 image:SelectHead_Frame" />
+						   <Property Name="MouseMoveHollow" Value="True" />
+			  			 <Property Name="MouseHollow" Value="true" />
+			  			 <Property Name="AlwaysOnTop" Value="True" />
+						</Window>
+        </Window>
+      </Window>
+      <Window Type="DefaultWindow" Name="XingYun_NPC10_Back">
+        <Property Name="UnifiedPosition" Value="{{0,138},{0,65}}" />
+        <Property Name="UnifiedSize" Value="{{0.0,54.000000},{0.000000,54.000000}" />
+        <Window Type="TLBB_Frame_Lace1" Name="XingYun_Head10_Back">
+          <Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+          <Property Name="AbsoluteSize" Value="w:54.000000 h:54.000000" />
+          <Window Type="TLBB_StaticImageNULL" Name="XingYun_Head10">
+            <Property Name="AbsolutePosition" Value="x:4.000000 y:3.000000" />
+            <Property Name="AbsoluteSize" Value="w:48.000000 h:48.000000" />
+            <Property Name="Image" Value="set:CommonNPCHeader12 image:CommonNPCHeader12_12" />
+            <Property Name="Tooltip" Value="#{INTERFACE_XML_1124}" />
+            <Event Name="MouseClick" Function="Play_Ani(10);" />
+						<Window Type="TLBB_AnimateImage" Name="XingYun_NPC10_Ani">
+			        <Property Name="UnifiedPosition" Value="{{0,0},{0,0}" />
+			        <Property Name="Size" Value="w:1 h:1" />
+			        <Property Name="Animate" Value="XingYun" />
+			  			<Property Name="MouseMoveHollow" Value="True" />
+			  			<Property Name="MouseHollow" Value="true" />
+			  			<Property Name="AlwaysOnTop" Value="True" />
+			  			<Property Name="Visible" Value="false" />
+		  			</Window>
+          </Window>
+          <Window Type="TLBB_StaticImageNULL" Name="XingYun_Head_Cover10">
+						   <Property Name="Position" Value="x:0 y:0" />
+						   <Property Name="Size" Value="w:1 h:1" />
+						   <Property Name="Image" Value="set:CommonFrame7 image:SelectHead_Frame" />
+						   <Property Name="MouseMoveHollow" Value="True" />
+			  			 <Property Name="MouseHollow" Value="true" />
+			  			 <Property Name="AlwaysOnTop" Value="True" />
+						</Window>
+        </Window>
+      </Window>
+      <Window Type="DefaultWindow" Name="XingYun_NPC11_Back">
+        <Property Name="UnifiedPosition" Value="{{0,138},{0,130}}" />
+        <Property Name="UnifiedSize" Value="{{0.0,54.000000},{0.000000,54.000000}" />
+        <Window Type="TLBB_Frame_Lace1" Name="XingYun_Head11_Back">
+          <Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+          <Property Name="AbsoluteSize" Value="w:54.000000 h:54.000000" />
+          <Window Type="TLBB_StaticImageNULL" Name="XingYun_Head11">
+            <Property Name="AbsolutePosition" Value="x:4.000000 y:3.000000" />
+            <Property Name="AbsoluteSize" Value="w:48.000000 h:48.000000" />
+            <Property Name="Image" Value="set:CommonNPCHeader12 image:CommonNPCHeader12_9" />
+            <Property Name="Tooltip" Value="#{INTERFACE_XML_1125}" />
+            <Event Name="MouseClick" Function="Play_Ani(11);" />
+						<Window Type="TLBB_AnimateImage" Name="XingYun_NPC11_Ani">
+			        <Property Name="UnifiedPosition" Value="{{0,0},{0,0}" />
+			        <Property Name="Size" Value="w:1 h:1" />
+			        <Property Name="Animate" Value="XingYun" />
+			  			<Property Name="MouseMoveHollow" Value="True" />
+			  			<Property Name="MouseHollow" Value="true" />
+			  			<Property Name="AlwaysOnTop" Value="True" />
+			  			<Property Name="Visible" Value="false" />
+		  			</Window>
+          </Window>
+          <Window Type="TLBB_StaticImageNULL" Name="XingYun_Head_Cover11">
+						   <Property Name="Position" Value="x:0 y:0" />
+						   <Property Name="Size" Value="w:1 h:1" />
+						   <Property Name="Image" Value="set:CommonFrame7 image:SelectHead_Frame" />
+						   <Property Name="MouseMoveHollow" Value="True" />
+			  			 <Property Name="MouseHollow" Value="true" />
+			  			 <Property Name="AlwaysOnTop" Value="True" />
+						</Window>
+        </Window>
+      </Window>
+      <Window Type="DefaultWindow" Name="XingYun_NPC12_Back">
+        <Property Name="UnifiedPosition" Value="{{0,138},{0,195}}" />
+        <Property Name="UnifiedSize" Value="{{0.0,54.000000},{0.000000,54.000000}" />
+        <Window Type="TLBB_Frame_Lace1" Name="XingYun_Head12_Back">
+          <Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+          <Property Name="AbsoluteSize" Value="w:54.000000 h:54.000000" />
+          <Window Type="TLBB_StaticImageNULL" Name="XingYun_Head12">
+            <Property Name="AbsolutePosition" Value="x:4.000000 y:3.000000" />
+            <Property Name="AbsoluteSize" Value="w:48.000000 h:48.000000" />
+            <Property Name="Image" Value="set:CommonNPCHeader12 image:CommonNPCHeader12_13" />
+            <Property Name="Tooltip" Value="#{INTERFACE_XML_1126}" />
+            <Event Name="MouseClick" Function="Play_Ani(12);" />
+						<Window Type="TLBB_AnimateImage" Name="XingYun_NPC12_Ani">
+			        <Property Name="UnifiedPosition" Value="{{0,0},{0,0}" />
+			        <Property Name="Size" Value="w:1 h:1" />
+			        <Property Name="Animate" Value="XingYun" />
+			  			<Property Name="MouseMoveHollow" Value="True" />
+			  			<Property Name="MouseHollow" Value="true" />
+			  			<Property Name="AlwaysOnTop" Value="True" />
+			  			<Property Name="Visible" Value="false" />
+		  			</Window>
+          </Window>
+          <Window Type="TLBB_StaticImageNULL" Name="XingYun_Head_Cover12">
+						   <Property Name="Position" Value="x:0 y:0" />
+						   <Property Name="Size" Value="w:1 h:1" />
+						   <Property Name="Image" Value="set:CommonFrame7 image:SelectHead_Frame" />
+						   <Property Name="MouseMoveHollow" Value="True" />
+			  			 <Property Name="MouseHollow" Value="true" />
+			  			 <Property Name="AlwaysOnTop" Value="True" />
+						</Window>
+        </Window>
+      </Window>
+      <Window Type="DefaultWindow" Name="XingYun_NPC13_Back">
+        <Property Name="UnifiedPosition" Value="{{0,202},{0,0}}" />
+        <Property Name="UnifiedSize" Value="{{0.0,54.000000},{0.000000,54.000000}" />
+        <Window Type="TLBB_Frame_Lace1" Name="XingYun_Head13_Back">
+          <Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+          <Property Name="AbsoluteSize" Value="w:54.000000 h:54.000000" />
+          <Window Type="TLBB_StaticImageNULL" Name="XingYun_Head13">
+            <Property Name="AbsolutePosition" Value="x:4.000000 y:3.000000" />
+            <Property Name="AbsoluteSize" Value="w:48.000000 h:48.000000" />
+            <Property Name="Image" Value="set:CommonNPCHeader12 image:CommonNPCHeader12_7" />
+            <Property Name="Tooltip" Value="#{INTERFACE_XML_1127}" />
+            <Event Name="MouseClick" Function="Play_Ani(13);" />
+						<Window Type="TLBB_AnimateImage" Name="XingYun_NPC13_Ani">
+			        <Property Name="UnifiedPosition" Value="{{0,0},{0,0}" />
+			        <Property Name="Size" Value="w:1 h:1" />
+			        <Property Name="Animate" Value="XingYun" />
+			  			<Property Name="MouseMoveHollow" Value="True" />
+			  			<Property Name="MouseHollow" Value="true" />
+			  			<Property Name="AlwaysOnTop" Value="True" />
+			  			<Property Name="Visible" Value="false" />
+		  			</Window>
+          </Window>
+          <Window Type="TLBB_StaticImageNULL" Name="XingYun_Head_Cover13">
+						   <Property Name="Position" Value="x:0 y:0" />
+						   <Property Name="Size" Value="w:1 h:1" />
+						   <Property Name="Image" Value="set:CommonFrame7 image:SelectHead_Frame" />
+						   <Property Name="MouseMoveHollow" Value="True" />
+			  			 <Property Name="MouseHollow" Value="true" />
+			  			 <Property Name="AlwaysOnTop" Value="True" />
+						</Window>
+        </Window>
+      </Window>
+      <Window Type="DefaultWindow" Name="XingYun_NPC14_Back">
+        <Property Name="UnifiedPosition" Value="{{0,202},{0,65}}" />
+        <Property Name="UnifiedSize" Value="{{0.0,54.000000},{0.000000,54.000000}" />
+        <Window Type="TLBB_Frame_Lace1" Name="XingYun_Head14_Back">
+          <Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+          <Property Name="AbsoluteSize" Value="w:54.000000 h:54.000000" />
+          <Window Type="TLBB_StaticImageNULL" Name="XingYun_Head14">
+            <Property Name="AbsolutePosition" Value="x:4.000000 y:3.000000" />
+            <Property Name="AbsoluteSize" Value="w:48.000000 h:48.000000" />
+            <Property Name="Image" Value="set:CommonNPCHeader12 image:CommonNPCHeader12_20" />
+            <Property Name="Tooltip" Value="#{INTERFACE_XML_1128}" />
+            <Event Name="MouseClick" Function="Play_Ani(14);" />
+						<Window Type="TLBB_AnimateImage" Name="XingYun_NPC14_Ani">
+			        <Property Name="UnifiedPosition" Value="{{0,0},{0,0}" />
+			        <Property Name="Size" Value="w:1 h:1" />
+			        <Property Name="Animate" Value="XingYun" />
+			  			<Property Name="MouseMoveHollow" Value="True" />
+			  			<Property Name="MouseHollow" Value="true" />
+			  			<Property Name="AlwaysOnTop" Value="True" />
+			  			<Property Name="Visible" Value="false" />
+		  			</Window>
+          </Window>
+          <Window Type="TLBB_StaticImageNULL" Name="XingYun_Head_Cover14">
+						   <Property Name="Position" Value="x:0 y:0" />
+						   <Property Name="Size" Value="w:1 h:1" />
+						   <Property Name="Image" Value="set:CommonFrame7 image:SelectHead_Frame" />
+						   <Property Name="MouseMoveHollow" Value="True" />
+			  			 <Property Name="MouseHollow" Value="true" />
+			  			 <Property Name="AlwaysOnTop" Value="True" />
+						</Window>
+        </Window>
+      </Window>
+      <Window Type="DefaultWindow" Name="XingYun_NPC15_Back">
+        <Property Name="UnifiedPosition" Value="{{0,202},{0,130}}" />
+        <Property Name="UnifiedSize" Value="{{0.0,54.000000},{0.000000,54.000000}" />
+        <Window Type="TLBB_Frame_Lace1" Name="XingYun_Head15_Back">
+          <Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+          <Property Name="AbsoluteSize" Value="w:54.000000 h:54.000000" />
+          <Window Type="TLBB_StaticImageNULL" Name="XingYun_Head15">
+            <Property Name="AbsolutePosition" Value="x:4.000000 y:3.000000" />
+            <Property Name="AbsoluteSize" Value="w:48.000000 h:48.000000" />
+            <Property Name="Image" Value="set:CommonNPCHeader12 image:CommonNPCHeader12_21" />
+            <Property Name="Tooltip" Value="#{INTERFACE_XML_1129}" />
+            <Event Name="MouseClick" Function="Play_Ani(15);" />
+						<Window Type="TLBB_AnimateImage" Name="XingYun_NPC15_Ani">
+			        <Property Name="UnifiedPosition" Value="{{0,0},{0,0}" />
+			        <Property Name="Size" value="w:1 h:1" />
+			        <Property Name="Animate" Value="XingYun" />
+			  			<Property Name="MouseMoveHollow" Value="True" />
+			  			<Property Name="MouseHollow" Value="true" />
+			  			<Property Name="AlwaysOnTop" Value="True" />
+			  			<Property Name="Visible" Value="false" />
+		  			</Window>
+          </Window>
+          <Window Type="TLBB_StaticImageNULL" Name="XingYun_Head_Cover15">
+						   <Property Name="Position" Value="x:0 y:0" />
+						   <Property Name="Size" Value="w:1 h:1" />
+						   <Property Name="Image" Value="set:CommonFrame7 image:SelectHead_Frame" />
+						   <Property Name="MouseMoveHollow" Value="True" />
+			  			 <Property Name="MouseHollow" Value="true" />
+			  			 <Property Name="AlwaysOnTop" Value="True" />
+						</Window>
+        </Window>
+      </Window>
+      <Window Type="DefaultWindow" Name="XingYun_NPC16_Back">
+        <Property Name="UnifiedPosition" Value="{{0,202},{0,195}}" />
+        <Property Name="UnifiedSize" Value="{{0.0,54.000000},{0.000000,54.000000}" />
+        <Window Type="TLBB_Frame_Lace1" Name="XingYun_Head16_Back">
+          <Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+          <Property Name="AbsoluteSize" Value="w:54.000000 h:54.000000" />
+          <Window Type="TLBB_StaticImageNULL" Name="XingYun_Head16">
+            <Property Name="AbsolutePosition" Value="x:4.000000 y:3.000000" />
+            <Property Name="AbsoluteSize" Value="w:48.000000 h:48.000000" />
+            <Property Name="Image" Value="set:CommonNPCHeader12 image:CommonNPCHeader12_22" />
+            <Property Name="Tooltip" Value="#{INTERFACE_XML_1130}" />
+            <Event Name="MouseClick" Function="Play_Ani(16);" />
+						<Window Type="TLBB_AnimateImage" Name="XingYun_NPC16_Ani">
+			        <Property Name="UnifiedPosition" Value="{{0,0},{0,0}" />
+			        <Property Name="Size" Value="w:1 h:1" />
+			        <Property Name="Animate" Value="XingYun" />
+			  			<Property Name="MouseMoveHollow" Value="True" />
+			  			<Property Name="MouseHollow" Value="true" />
+			  			<Property Name="AlwaysOnTop" Value="True" />
+			  			<Property Name="Visible" Value="false" />
+		  			</Window>
+          </Window>
+          <Window Type="TLBB_StaticImageNULL" Name="XingYun_Head_Cover16">
+						   <Property Name="Position" Value="x:0 y:0" />
+						   <Property Name="Size" Value="w:1 h:1" />
+						   <Property Name="Image" Value="set:CommonFrame7 image:SelectHead_Frame" />
+						   <Property Name="MouseMoveHollow" Value="True" />
+			  			 <Property Name="MouseHollow" Value="true" />
+			  			 <Property Name="AlwaysOnTop" Value="True" />
+						</Window>
+        </Window>
+      </Window>
+      <Window Type="DefaultWindow" Name="XingYun_NPC17_Back">
+        <Property Name="UnifiedPosition" Value="{{0,266},{0,0}}" />
+        <Property Name="UnifiedSize" Value="{{0.0,54.000000},{0.000000,54.000000}" />
+        <Window Type="TLBB_Frame_Lace1" Name="XingYun_Head17_Back">
+          <Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+          <Property Name="AbsoluteSize" Value="w:54.000000 h:54.000000" />
+          <Window Type="TLBB_StaticImageNULL" Name="XingYun_Head17">
+            <Property Name="AbsolutePosition" Value="x:4.000000 y:3.000000" />
+            <Property Name="AbsoluteSize" Value="w:48.000000 h:48.000000" />
+            <Property Name="Image" Value="set:CommonNPCHeader12 image:CommonNPCHeader12_23" />
+            <Property Name="Tooltip" Value="#{INTERFACE_XML_1131}" />
+            <Event Name="MouseClick" Function="Play_Ani(17);" />
+						<Window Type="TLBB_AnimateImage" Name="XingYun_NPC17_Ani">
+			        <Property Name="UnifiedPosition" Value="{{0,0},{0,0}" />
+			        <Property Name="Size" Value="w:1 h:1" />
+			        <Property Name="Animate" Value="XingYun" />
+			  			<Property Name="MouseMoveHollow" Value="True" />
+			  			<Property Name="MouseHollow" Value="true" />
+			  			<Property Name="AlwaysOnTop" Value="True" />
+			  			<Property Name="Visible" Value="false" />
+		  			</Window>
+          </Window>
+          <Window Type="TLBB_StaticImageNULL" Name="XingYun_Head_Cover17">
+						   <Property Name="Position" Value="x:0 y:0" />
+						   <Property Name="Size" Value="w:1 h:1" />
+						   <Property Name="Image" Value="set:CommonFrame7 image:SelectHead_Frame" />
+						   <Property Name="MouseMoveHollow" Value="True" />
+			  			 <Property Name="MouseHollow" Value="true" />
+			  			 <Property Name="AlwaysOnTop" Value="True" />
+						</Window>
+        </Window>
+      </Window>
+      <Window Type="DefaultWindow" Name="XingYun_NPC18_Back">
+        <Property Name="UnifiedPosition" Value="{{0,266},{0,65}}" />
+        <Property Name="UnifiedSize" Value="{{0.0,54.000000},{0.000000,54.000000}" />
+        <Window Type="TLBB_Frame_Lace1" Name="XingYun_Head18_Back">
+          <Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+          <Property Name="AbsoluteSize" Value="w:54.000000 h:54.000000" />
+          <Window Type="TLBB_StaticImageNULL" Name="XingYun_Head18">
+            <Property Name="AbsolutePosition" Value="x:4.000000 y:3.000000" />
+            <Property Name="AbsoluteSize" Value="w:48.000000 h:48.000000" />
+            <Property Name="Image" Value="set:CommonNPCHeader12 image:CommonNPCHeader12_24" />
+            <Property Name="Tooltip" Value="#{INTERFACE_XML_1132}" />
+            <Event Name="MouseClick" Function="Play_Ani(18);" />
+						<Window Type="TLBB_AnimateImage" Name="XingYun_NPC18_Ani">
+			        <Property Name="UnifiedPosition" Value="{{0,0},{0,0}" />
+			        <Property Name="Size" Value="w:1 h:1" />
+			        <Property Name="Animate" Value="XingYun" />
+			  			<Property Name="MouseMoveHollow" Value="True" />
+			  			<Property Name="MouseHollow" Value="true" />
+			  			<Property Name="AlwaysOnTop" Value="True" />
+			  			<Property Name="Visible" Value="false" />
+		  			</Window>
+          </Window>
+          <Window Type="TLBB_StaticImageNULL" Name="XingYun_Head_Cover18">
+						   <Property Name="Position" Value="x:0 y:0" />
+						   <Property Name="Size" Value="w:1 h:1" />
+						   <Property Name="Image" Value="set:CommonFrame7 image:SelectHead_Frame" />
+						   <Property Name="MouseMoveHollow" Value="True" />
+			  			 <Property Name="MouseHollow" Value="true" />
+			  			 <Property Name="AlwaysOnTop" Value="True" />
+						</Window>
+        </Window>
+      </Window>
+      <Window Type="DefaultWindow" Name="XingYun_NPC19_Back">
+        <Property Name="UnifiedPosition" Value="{{0,266},{0,130}}" />
+        <Property Name="UnifiedSize" Value="{{0.0,54.000000},{0.000000,54.000000}" />
+        <Window Type="TLBB_Frame_Lace1" Name="XingYun_Head19_Back">
+          <Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+          <Property Name="AbsoluteSize" Value="w:54.000000 h:54.000000" />
+          <Window Type="TLBB_StaticImageNULL" Name="XingYun_Head19">
+            <Property Name="AbsolutePosition" Value="x:4.000000 y:3.000000" />
+            <Property Name="AbsoluteSize" Value="w:48.000000 h:48.000000" />
+            <Property Name="Image" Value="set:CommonNPCHeader12 image:CommonNPCHeader12_25" />
+            <Property Name="Tooltip" Value="#{INTERFACE_XML_1133}" />
+            <Event Name="MouseClick" Function="Play_Ani(19);" />
+						<Window Type="TLBB_AnimateImage" Name="XingYun_NPC19_Ani">
+			        <Property Name="UnifiedPosition" Value="{{0,0},{0,0}" />
+			        <Property Name="Size" Value="w:1 h:1" />
+			        <Property Name="Animate" Value="XingYun" />
+			  			<Property Name="MouseMoveHollow" Value="True" />
+			  			<Property Name="MouseHollow" Value="true" />
+			  			<Property Name="AlwaysOnTop" Value="True" />
+			  			<Property Name="Visible" Value="false" />
+		  			</Window>
+          </Window>
+          <Window Type="TLBB_StaticImageNULL" Name="XingYun_Head_Cover19">
+						   <Property Name="Position" Value="x:0 y:0" />
+						   <Property Name="Size" Value="w:1 h:1" />
+						   <Property Name="Image" Value="set:CommonFrame7 image:SelectHead_Frame" />
+						   <Property Name="MouseMoveHollow" Value="True" />
+			  			 <Property Name="MouseHollow" Value="true" />
+			  			 <Property Name="AlwaysOnTop" Value="True" />
+						</Window>
+        </Window>
+      </Window>
+      <Window Type="DefaultWindow" Name="XingYun_NPC20_Back">
+        <Property Name="UnifiedPosition" Value="{{0,266},{0,195}}" />
+        <Property Name="UnifiedSize" Value="{{0.0,54.000000},{0.000000,54.000000}" />
+        <Window Type="TLBB_Frame_Lace1" Name="XingYun_Head20_Back">
+          <Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+          <Property Name="AbsoluteSize" Value="w:54.000000 h:54.000000" />
+          <Window Type="TLBB_StaticImageNULL" Name="XingYun_Head20">
+            <Property Name="AbsolutePosition" Value="x:4.000000 y:3.000000" />
+            <Property Name="AbsoluteSize" Value="w:48.000000 h:48.000000" />
+            <Property Name="Image" Value="set:CommonNPCHeader6 image:CommonNPCHeader6_8" />
+            <Property Name="Tooltip" Value="#{INTERFACE_XML_1134}" />
+            <Event Name="MouseClick" Function="Play_Ani(20);" />
+						<Window Type="TLBB_AnimateImage" Name="XingYun_NPC20_Ani">
+			        <Property Name="UnifiedPosition" Value="{{0,0},{0,0}" />
+			        <Property Name="Size" Value="w:1 h:1" />
+			        <Property Name="Animate" Value="XingYun" />
+			  			<Property Name="MouseMoveHollow" Value="True" />
+			  			<Property Name="MouseHollow" Value="true" />
+			  			<Property Name="AlwaysOnTop" Value="True" />
+			  			<Property Name="Visible" Value="false" />
+		  			</Window>
+          </Window>
+          <Window Type="TLBB_StaticImageNULL" Name="XingYun_Head_Cover20">
+						   <Property Name="Position" Value="x:0 y:0" />
+						   <Property Name="Size" Value="w:1 h:1" />
+						   <Property Name="Image" Value="set:CommonFrame7 image:SelectHead_Frame" />
+						   <Property Name="MouseMoveHollow" Value="True" />
+			  			 <Property Name="MouseHollow" Value="true" />
+			  			 <Property Name="AlwaysOnTop" Value="True" />
+						</Window>
+        </Window>
+      </Window>
+      <Window Type="TLBB_StopWatch" Name="XingYunTimer_StopWatch1">
+			    <Property Name="UnifiedPosition" Value="{{1.0,1.000000},{1.000000,1.000000}" />
+			    <Property Name="UnifiedSize" Value="{{0.5,0.000000},{0.000000,18.000000}" />
+			    <Property Name="Timer" Value="-1" />
+		      <Event Name="ReachedZero" Function="XingYun_TimeReach1();" />
+		  </Window>
+		  <Window Type="TLBB_StopWatch" Name="XingYunTimer_StopWatch2">
+			    <Property Name="UnifiedPosition" Value="{{2.0,2.000000},{2.000000,2.000000}" />
+			    <Property Name="UnifiedSize" Value="{{0.5,0.000000},{0.000000,18.000000}" />
+			    <Property Name="Timer" Value="-1" />
+		      <Event Name="ReachedZero" Function="XingYun_TimeReach2();" />
+		  </Window>
+		</Window>
+	</Window>
+</GUILayout>

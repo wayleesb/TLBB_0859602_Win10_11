@@ -1,0 +1,225 @@
+<?xml version="1.0" ?>
+<Falagard>
+  <!--
+    ***************************************************
+        WoWLook/CreatureBoard
+    ***************************************************
+    -->
+  <WidgetLook name="TLBB_Look_CreatureBoard">
+    <Property name="RiseOnClick" value="False" />
+    <Property name="MouseHollow" value="True" />
+    <Property name="ClippedByParent" value="False" />
+    <Property name="Visible" value="False" />
+    <Property name="LeftAnimate" value="index:0 x:64 y:68 w:74 h:78 name: "/>
+    <Property name="LeftAnimate" value="index:1 x:64 y:68 w:74 h:78 name:nihongleft "/>
+    <Property name="LeftAnimate" value="index:2 x:64 y:68 w:74 h:78 name:wuqizuo"/>
+    <Property name="LeftAnimate" value="index:3 x:64 y:68 w:74 h:78 name:yifuzuo"/>
+    <Property name="LeftAnimate" value="index:4 x:64 y:68 w:74 h:78 name:chongwuzuo "/>
+    <Property name="LeftAnimate" value="index:5 x:64 y:68 w:74 h:78 name:baoshizuo "/>
+    <Property name="RightAnimate" value="index:0 x:10 y:68 w:74 h:78 name:  "/>
+    <Property name="RightAnimate" value="index:1 x:10 y:68 w:74 h:78 name:nihongright"/>
+    <Property name="RightAnimate" value="index:2 x:10 y:68 w:74 h:78 name:wuqiyou"/>
+    <Property name="RightAnimate" value="index:3 x:10 y:68 w:74 h:78 name:yifuyou "/>
+    <Property name="RightAnimate" value="index:4 x:10 y:68 w:74 h:78 name:chongwuyou "/>
+    <Property name="RightAnimate" value="index:5 x:10 y:68 w:74 h:78 name:baoshiyou "/>
+    
+    <Child type="TLBB_SelfWindow" nameSuffix="__auto_playername__">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="0" />
+        </Dim>
+        <Dim type="TopEdge">
+          <UnifiedDim scale="0.666666" type="Height" />
+        </Dim>
+        <Dim type="Width">
+          <UnifiedDim scale="1.0" type="Width" />
+        </Dim>
+        <Dim type="Height">
+          <UnifiedDim scale="0.333333" type="Height" />
+        </Dim>
+      </Area>
+      <Property name="Visible" value="False" />
+      <Property name="RiseOnClick" value="False" />
+      <Property name="Font" value="YouYuan9.75" />
+      <Property name="MouseHollow" value="True" />
+      <Property name="HorzFormatting" value="HorzCentred" />
+      <Property name="FitType" value="Bottom" />
+    </Child>
+    <Child type="TLBB_SelfWindow" nameSuffix="__auto_playertitle__">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="0" />
+        </Dim>
+        <Dim type="TopEdge">
+          <UnifiedDim scale="0.333333" type="Height" />
+        </Dim>
+        <Dim type="Width">
+          <UnifiedDim scale="1.0" type="Width" />
+        </Dim>
+        <Dim type="Height">
+          <UnifiedDim scale="0.333333" type="Height" />
+        </Dim>
+      </Area>
+      <Property name="Visible" value="False" />
+      <Property name="MouseHollow" value="True" />
+      <Property name="HorzFormatting" value="HorzCentred" />
+      <Property name="RiseOnClick" value="True" />
+      <Property name="ClippedByParent" value="False" />
+      <Property name="FitType" value="Bottom" />
+      <Property name="Font" value="YouYuan9.75" />
+      <Property name="MaxWidth" value="500" />
+      <Property name="MinHeight" value="32" />
+    </Child>
+    <Child type="TLBB_MapImage" nameSuffix="__auto_leaderflag__">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="0" />
+        </Dim>
+        <Dim type="TopEdge">
+          <AbsoluteDim value="0" />
+        </Dim>
+        <Dim type="Width">
+          <AbsoluteDim value="13" />
+        </Dim>
+        <Dim type="Height">
+          <AbsoluteDim value="13" />
+        </Dim>
+      </Area>
+      <Property name="MouseHollow" value="True" />
+      <Property name="RiseOnClick" value="True" />
+      <Property name="ClippedByParent" value="False" />
+      <Property name="ChildImage" value="name:leaderfull set:UIIcons image:LeaderFull" />
+      <Property name="ChildImage" value="name:leaderopening set:UIIcons image:LeaderOpening" />
+      <Property name="ChildImage" value="name:memberfull set:UIIcons image:MemberFull" />
+      <Property name="ChildImage" value="name:memberopening set:UIIcons image:MemberOpening" />
+
+    </Child>
+    <Child type="TLBB_MapImage" nameSuffix="__auto_PK__">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="0" />
+        </Dim>
+        <Dim type="TopEdge">
+          <AbsoluteDim value="0" />
+        </Dim>
+        <Dim type="Width">
+          <AbsoluteDim value="20" />
+        </Dim>
+        <Dim type="Height">
+          <AbsoluteDim value="20" />
+        </Dim>
+      </Area>
+      <Property name="MouseHollow" value="True" />
+      <Property name="RiseOnClick" value="True" />
+      <Property name="ClippedByParent" value="False" />
+      <Property name="ChildImage" value="name:PKV0 set:UIIcons image:newPK_Flag_1" />
+      <Property name="ChildImage" value="name:PKV1 set:UIIcons image:newPK_Flag_2" />
+      <Property name="ChildImage" value="name:PKV2 set:UIIcons image:newPK_Flag_3" />
+      <Property name="ChildImage" value="name:PKV3 set:UIIcons image:newPK_Flag_3" />
+      <Property name="ChildImage" value="name:PKV4 set:UIIcons image:newPK_Flag_4" />
+      <Property name="ChildImage" value="name:PKV5 set:UIIcons image:newPK_Flag_5" />
+      <Property name="ChildImage" value="name:PKV6 set:UIIcons image:newPK_Flag_6" />
+      <Property name="ChildImage" value="name:PKV7 set:UIIcons image:newPK_Flag_7" />
+    </Child>
+
+
+    <Child type="TLBB_StaticImageNULL" nameSuffix="__auto_bangpaiflag__">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="0" />
+        </Dim>
+        <Dim type="TopEdge">
+          <UnifiedDim scale="0.333333" type="Height" />
+        </Dim>
+        <Dim type="Width">
+          <UnifiedDim scale="1.0" type="Width" />
+        </Dim>
+        <Dim type="Height">
+          <UnifiedDim scale="0.333333" type="Height" />
+        </Dim>
+      </Area> 
+      <Property name="MouseHollow" value="True" />
+      <Property name="RiseOnClick" value="True" />
+      <Property name="ClippedByParent" value="False" />
+    </Child>
+    <Child type="TLBB_Animate" nameSuffix="__auto_leftAnimate_">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="0" />
+        </Dim>
+        <Dim type="TopEdge">
+          <UnifiedDim scale="0.0" type="Height" />
+        </Dim>
+        <Dim type="Width">
+          <UnifiedDim scale="1.0" type="Width" />
+        </Dim>
+        <Dim type="Height">
+          <UnifiedDim scale="0.3333333" type="Height" />
+        </Dim>
+      </Area>
+      <Property name="AlwaysOnTop" value="true" />
+      <Property name="MouseHollow" value="True" />
+    </Child>
+    <Child type="TLBB_Animate" nameSuffix="__auto_rightAnimate_">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="0" />
+        </Dim>
+        <Dim type="TopEdge">
+          <UnifiedDim scale="0.0" type="Height" />
+        </Dim>
+        <Dim type="Width">
+          <UnifiedDim scale="1.0" type="Width" />
+        </Dim>
+        <Dim type="Height">
+          <UnifiedDim scale="0.3333333" type="Height" />
+        </Dim>
+      </Area>
+      <Property name="AlwaysOnTop" value="true" />
+      <Property name="MouseHollow" value="True" />
+    </Child>
+    <Child type="TLBB_ButtonStall" nameSuffix="__auto_salessign__">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="0" />
+        </Dim>
+        <Dim type="TopEdge">
+          <UnifiedDim scale="0.0" type="Height" />
+        </Dim>
+        <Dim type="Width">
+          <UnifiedDim scale="1.0" type="Width" />
+        </Dim>
+        <Dim type="Height">
+          <UnifiedDim scale="0.3333333" type="Height" />
+        </Dim>
+      </Area>
+      <Property name="MinHeight" value="28" />
+    </Child>
+    <Child type="TLBB_PaoPao" nameSuffix="__auto_paopao__">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="0" />
+        </Dim>
+        <Dim type="TopEdge">
+          <UnifiedDim scale="0.0" type="Height" />
+        </Dim>
+        <Dim type="Width">
+          <UnifiedDim scale="1.0" type="Width" />
+        </Dim>
+        <Dim type="Height">
+          <UnifiedDim scale="0.3333333" type="Height" />
+        </Dim>
+      </Area>
+      <Property name="RiseOnClick" value="True" />
+      <Property name="MouseHollow" value="True" />
+      <Property name="ClippedByParent" value="False" />
+      <Property name="HorzFormatting" value="WordWrapLeftAligned" />
+      <Property name="VertFormatting" value="TopAligned" />
+      <Property name="FitType" value="Bottom" />
+      <Property name="MaxWidth" value="200" />
+      <Property name="Life" value="7" />
+      <Property name="FadeInTime" value="1" />
+      <Property name="FadeOutTime" value="2" />
+    </Child>
+  </WidgetLook>
+</Falagard>

@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame1" Name="YuanbaopiaoExchange_Frame">
+        <Property Name="UnifiedPosition" Value="{{0.5,-128},{0.15,0}}" />
+        <Property Name="AbsoluteSize" Value="w:256 h:173" />
+        <Window Type="TLBB_DragTitle" Name="YuanbaopiaoExchange_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="YuanbaopiaoExchange_Frame" />
+            <Property Name="Text" Value="#{INTERFACE_XML_85}" />
+            <Property Name="Font" Value="YouYuan11.25" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+        </Window>
+        <Window Type="TLBB_ButtonHelp" Name="YuanbaopiaoExchange_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*YuanbaopiaoExchange&quot;);' />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="YuanbaopiaoExchange_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function="YuanbaopiaoExchange_Cancel_Clicked();" />
+        </Window>
+        <Window Type="DefaultWindow" Name="YuanbaopiaoExchange_Function_Frame">
+            <Property Name="AbsolutePosition" Value="x:7.000000 y:36.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-13.000000},{1.000000,-55.000000}" />
+            <Window Type="TLBB_SimpleText" Name="YuanbaopiaoExchange_Text2">
+                <Property Name="AbsolutePosition" Value="x:10.0 y:15.0" />
+                <Property Name="UnifiedSize" Value="{{1.0,-20.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_527}" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="TextColor" Value="FFFFF263" />
+            </Window>
+            <Window Type="TLBB_EditBoxNormal" Name="YuanbaopiaoExchange_Moral_Value">
+                <Property Name="AbsolutePosition" Value="x:50.0 y:42.0" />
+                <Property Name="UnifiedSize" Value="{{1.0,-100.000000},{0.000000,20.000000}" />
+				<Property Name="MaxTextLength" Value="4" />
+                <Property Name="ValidationString" Value="[0-9]*" />
+              <Event Name="TextChanged" Function="YuanbaoPiaoExchange_Count_Change();" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="YuanbaopiaoExchange_Text1">
+                <Property Name="AbsolutePosition" Value="x:10.0 y:75.0" />
+                <Property Name="UnifiedSize" Value="{{1.0,-20.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_475}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="TextColor" Value="FFFFF263" />
+            </Window>
+            <Window Type="TLBB_Frame_Lace5" Name="YuanbaopiaoExchange_Blank">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-80.000000},{0.000000,20.000000}" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="YuanbaopiaoExchange_OK">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-80.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_258}" />
+                <Event Name="Clicked" Function="YuanbaopiaoExchange_OK_Clicked();" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="YuanbaopiaoExchange_Cancel">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-40.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_542}" />
+                <Event Name="Clicked" Function="YuanbaopiaoExchange_Cancel_Clicked();" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

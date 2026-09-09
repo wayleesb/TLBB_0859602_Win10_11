@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<xs:schema id="贴图信息" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="贴图信息" msdata:IsDataSet="true" msdata:Locale="zh-CN" msdata:EnforceConstraints="False">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="贴图">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="所属贴图名称" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="名称" form="unqualified" type="xs:string" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="画刷名称" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="名称" form="unqualified" type="xs:string" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="贴图大小" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="大小" form="unqualified" type="xs:string" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="贴图坐标" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="坐标" form="unqualified" type="xs:string" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="贴图类型" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="类型" form="unqualified" type="xs:string" />
+									<xs:attribute name="额外的类型信息" type="xs:string" use="optional" default="普通"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="旋转方向" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="方向类型" form="unqualified" type="xs:string" />									
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

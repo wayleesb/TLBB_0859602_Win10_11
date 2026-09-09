@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame1" Name="Service_Frame">
+        <Property Name="UnifiedPosition" Value="{{0.3,0},{0.12,0}}" />
+        <Property Name="AbsoluteSize" Value="w:256 h:340" />
+        <Event Name="Shown" Function="Service_OnShown();" />
+        <Event Name="Hidden" Function="Service_Close();" />
+        <Window Type="TLBB_DragTitle" Name="Service_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="Service_Frame" />
+            <Window Type="TLBB_SimpleText" Name="Service_Title">
+                <Property Name="Position" Value="x:0.0 y:0.0" />
+                <Property Name="Size" Value="w:1.0 h:1.0" />
+                <Property Name="Font" Value="YouYuan11.25" />
+                <Property Name="Text" Value="#{INTERFACE_XML_78}" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+        </Window>
+        <Window Type="TLBB_ButtonHelp" Name="Service_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*Service&quot;);' />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="Service_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function="Service_Close();" />
+        </Window>
+        <Window Type="DefaultWindow" Name="Service_Frame_Client">
+            <Property Name="AbsolutePosition" Value="x:7.000000 y:36.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-13.000000},{1.000000,-55.000000}" />
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="Service_Text">
+                <Property Name="Position" Value="x:0.0 y:0.0" />
+                <Property Name="Size" Value="w:1.000000 h:0.68" />
+                <Property Name="Text" Value="#{INTERFACE_XML_472}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="TopAligned" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="Service_Item_Text">
+                <Property Name="Position" Value="x:0.1 y:0.7" />
+                <Property Name="UnifiedSize" Value="{{0.6,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_513}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="Service_Item">
+                <Property Name="Position" Value="x:0.1 y:0.771605" />
+                <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                <Property Name="DragAcceptName" Value="G5" />
+                <Property Name="DraggingEnabled" Value="True" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="Service_Item_Explain">
+                <Property Name="Position" Value="x:0.27 y:0.771605" />
+                <Property Name="UnifiedSize" Value="{{0.6,0.000000},{0.000000,36.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_723}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_Frame_Lace5" Name="Service_Blank">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-80.000000},{0.000000,20.000000}" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="Service_Button_Refuse">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-40.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_542}" />
+                <Event Name="Clicked" Function="Service_Close();" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="Service_Button_Accept">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-80.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_712}" />
+                <Event Name="Clicked" Function="Service_Buttons_Clicked();" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

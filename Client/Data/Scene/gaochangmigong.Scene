@@ -1,0 +1,822 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Scene formatVersion="0.1.1" name="gaochangmigong">
+
+  <Terrain filename="gaochangmigong.Terrain"/>
+
+  <Object name="#FairyEnviroment" type="Enviroment">
+    <Property name="ambient" value="0.05098 0.129412 0.207843"/>
+    <Property name="fog.mode" value="linear"/>
+    <Property name="fog.colour" value="0.870588 0.580392 0.137255"/>
+    <Property name="fog.linear start" value="3000"/>
+    <Property name="fog.linear end" value="5500"/>
+  </Object>
+
+  <Object name="#FairyMainLightOne" type="Light">
+    <Property name="type" value="directional"/>
+    <Property name="diffuse" value="0.541176 0.258824 0.121569"/>
+    <Property name="specular" value="0.615686 0.101961 0.043137"/>
+    <Property name="direction" value="0.305785 -0.49089 -0.37587"/>
+    <Property name="cast shadows" value="true"/>
+  </Object>
+
+  <Object name="#FairyMainLightTwo" type="Light">
+    <Property name="type" value="directional"/>
+    <Property name="diffuse" value="0.192157 0.411765 0.635294"/>
+    <Property name="specular" value="0.180392 0.160784 0.486275"/>
+    <Property name="direction" value="-0.849174 0 0.396752"/>
+  </Object>
+
+  <Object name="#FairySkyDome" type="SkyDome">
+    <Property name="material" value="CloudySky"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="旋风"/>
+    <Property name="position" value="8227.08 184.075 908.941"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huangsha"/>
+    <Property name="position" value="3400 1601.72 -4300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域高昌废墟城墙.mesh"/>
+    <Property name="position" value="-9148.44 2139.92 -3993.32"/>
+    <Property name="orientation" value="0.724302 0 0.689483 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌断柱01.mesh"/>
+    <Property name="position" value="5816.28 1588.54 -128.599"/>
+    <Property name="orientation" value="0.468154 -0.50555 0.704973 -0.168116"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/楼兰野外帐篷圆形石堆02.mesh"/>
+    <Property name="position" value="5300 2009.28 700"/>
+    <Property name="orientation" value="0.731171 0 0.682195 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域高昌废墟城墙.mesh"/>
+    <Property name="position" value="-7100 2175.78 16100"/>
+    <Property name="orientation" value="1.12173e-007 0 0.999999 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌17.mesh"/>
+    <Property name="position" value="9700 1847.42 1400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌9.mesh"/>
+    <Property name="position" value="6516.28 1977.07 -1600"/>
+    <Property name="orientation" value="0.940764 -0.00424511 0.338998 0.00525127"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌宗教类建筑02.mesh"/>
+    <Property name="position" value="-8765.37 2362.68 -5897"/>
+    <Property name="orientation" value="0.730316 0 0.68311 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌石柱03.mesh"/>
+    <Property name="position" value="5600 2400 -2600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌石柱02.mesh"/>
+    <Property name="position" value="13900 2000 -1000"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌城门塔.mesh"/>
+    <Property name="position" value="13600 1895.15 1488.87"/>
+    <Property name="orientation" value="0.990723 0.129499 -0.0053399 0.0408524"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌断柱02.mesh"/>
+    <Property name="position" value="13689.8 1956.68 183.547"/>
+    <Property name="orientation" value="0.615305 0.194915 0.762903 0.0372725"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌石柱03.mesh"/>
+    <Property name="position" value="11900 2000 1300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌石柱03.mesh"/>
+    <Property name="position" value="10200 2000 1300"/>
+    <Property name="orientation" value="0.998485 0 0 0.055031"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌石柱02.mesh"/>
+    <Property name="position" value="9100 2000 1300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌石柱02.mesh"/>
+    <Property name="position" value="5400 2000 -1550.91"/>
+    <Property name="orientation" value="-0.883776 -0.152703 0.435834 -0.0753054"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌石柱02.mesh"/>
+    <Property name="position" value="5400 1853.27 1100"/>
+    <Property name="orientation" value="0.68075 0.117623 0.712454 -0.123101"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌城门塔.mesh"/>
+    <Property name="position" value="5600 2000 -822.559"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌石柱03.mesh"/>
+    <Property name="position" value="11312.2 2323.45 -2871.75"/>
+    <Property name="orientation" value="0.707088 -0.237483 0.621807 -0.238724"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌石柱03.mesh"/>
+    <Property name="position" value="5300 2400 -6000"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌石柱03.mesh"/>
+    <Property name="position" value="11332.3 2400 -3916.07"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌石柱03.mesh"/>
+    <Property name="position" value="12500 2400 -7700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌石柱03.mesh"/>
+    <Property name="position" value="9736.37 2342.01 -7783.44"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌断柱01.mesh"/>
+    <Property name="position" value="8603.23 2000 1003.56"/>
+    <Property name="orientation" value="0.95332 0.155649 -0.237414 0.102892"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域魔鬼岩山洞.mesh"/>
+    <Property name="position" value="4451.96 1099.9 -8177.05"/>
+    <Property name="orientation" value="0.915449 0 0.402435 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌石柱03.mesh"/>
+    <Property name="position" value="7200 2400 -7300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌石柱03.mesh"/>
+    <Property name="position" value="8355.53 2383.86 -2700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌城门塔.mesh"/>
+    <Property name="position" value="13882.9 2400 -2800"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌石柱03.mesh"/>
+    <Property name="position" value="9900 2400 -2673.97"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌石柱02.mesh"/>
+    <Property name="position" value="13856 2385.48 -7495.04"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域高昌废墟4.mesh"/>
+    <Property name="position" value="15110.1 700.082 -6857.39"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域高昌废墟4.mesh"/>
+    <Property name="position" value="15000 992.874 -2400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域高昌废墟3.mesh"/>
+    <Property name="position" value="13200 2384.25 -7700"/>
+    <Property name="orientation" value="0.650713 0 0.759324 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域高昌废墟4.mesh"/>
+    <Property name="position" value="10446.5 2281.32 -7849.18"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域高昌废墟3.mesh"/>
+    <Property name="position" value="5357.33 2363.88 -5408.22"/>
+  </Object>
+
+  <Object type="TerrainLiquid">
+    <Property name="material" value="heliuwater"/>
+    <Property name="position" value="5460.43 1203.67 -7360.94"/>
+    <Property name="texture scale" value="0.25"/>
+    <Property name="depth texture layer.enable" value="true"/>
+    <Property name="depth texture layer.height scale" value="0.002"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌城门塔.mesh"/>
+    <Property name="position" value="14092.3 1501.97 587.162"/>
+    <Property name="orientation" value="0.451491 -0.289638 0.741559 -0.402934"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域高昌废墟1.mesh"/>
+    <Property name="position" value="12401.6 1942.8 -2518.34"/>
+    <Property name="orientation" value="-0.00349082 0 0.999994 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌宗教类建筑01.mesh"/>
+    <Property name="position" value="4303.72 1474.18 2282.66"/>
+    <Property name="orientation" value="0.689619 0 0.724172 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌宗教类建筑02.mesh"/>
+    <Property name="position" value="4112.34 1832.67 2282.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域高昌废墟3.mesh"/>
+    <Property name="position" value="4146.55 1082.54 -324.491"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域高昌废墟3.mesh"/>
+    <Property name="position" value="14201.6 1949.36 -2050.23"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域高昌废墟4.mesh"/>
+    <Property name="position" value="12355.2 2221.78 -4213.71"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域高昌废墟3.mesh"/>
+    <Property name="position" value="13437.6 2347.1 -2711.95"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域高昌废墟5.mesh"/>
+    <Property name="position" value="7617.59 2400 -2675.38"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域高昌废墟5.mesh"/>
+    <Property name="position" value="10749.9 2400 -2625.98"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域高昌废墟5.mesh"/>
+    <Property name="position" value="9141.2 2400 -2658.45"/>
+    <Property name="orientation" value="-1.3278e-007 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌石柱03.mesh"/>
+    <Property name="position" value="6800 2400 -2700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域高昌废墟5.mesh"/>
+    <Property name="position" value="14187.8 2400 -3300"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域高昌废墟5.mesh"/>
+    <Property name="position" value="14146 2400 -4841.95"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域高昌废墟5.mesh"/>
+    <Property name="position" value="14157.5 2400 -6548.06"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌断柱01.mesh"/>
+    <Property name="position" value="11583.3 2400 -4231.28"/>
+    <Property name="orientation" value="0.966221 0 0.257715 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌断柱02.mesh"/>
+    <Property name="position" value="14299.6 2400 -5595.27"/>
+    <Property name="orientation" value="0.906752 0 -0.421665 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌断柱02.mesh"/>
+    <Property name="position" value="14110.4 2400 -4037.43"/>
+    <Property name="orientation" value="0.139589 0 -0.990209 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域高昌废墟5.mesh"/>
+    <Property name="position" value="13491.9 2400 -5409.4"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域高昌废墟门.mesh"/>
+    <Property name="position" value="6181.68 1949.2 -1066.44"/>
+    <Property name="orientation" value="-7.37365e-008 0 1 0"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域龙骨架01.mesh"/>
+    <Property name="position" value="13567.6 2379.09 -4169.61"/>
+    <Property name="orientation" value="0.94988 0 0.312615 0"/>
+    <Property name="scale" value="0.25641 0.25641 0.25641"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域龙骨架03.mesh"/>
+    <Property name="position" value="13508.9 2400 -4929.25"/>
+    <Property name="scale" value="0.526316 0.526316 0.526316"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域龙骨架04.mesh"/>
+    <Property name="position" value="13622.6 2362.71 -3552.6"/>
+    <Property name="scale" value="0.285714 0.285714 0.285714"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域龙骨架.mesh"/>
+    <Property name="position" value="11989.8 1667.03 -8849.42"/>
+    <Property name="orientation" value="0.951056 0 0.309017 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域龙骨架.mesh"/>
+    <Property name="position" value="4999.43 910.976 -7179.05"/>
+    <Property name="orientation" value="0.996535 0 0.083175 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域龙骨架.mesh"/>
+    <Property name="position" value="5693.99 891.455 -8148.97"/>
+    <Property name="orientation" value="0.557208 0.118459 0.817908 -0.0807017"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域龙骨架03.mesh"/>
+    <Property name="position" value="5728.36 2378.12 -5799.46"/>
+    <Property name="orientation" value="0.954504 0 0.298198 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域龙骨架.mesh"/>
+    <Property name="position" value="7426.55 1528.45 -8530.68"/>
+    <Property name="orientation" value="0.922058 0 0.38705 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域龙骨架.mesh"/>
+    <Property name="position" value="12400 1104.18 2400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域龙骨架03.mesh"/>
+    <Property name="position" value="11133 2000 896.752"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域龙骨架01.mesh"/>
+    <Property name="position" value="12600.9 1201.24 1178.85"/>
+    <Property name="orientation" value="0.30979 -0.30222 -0.895411 -0.10456"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域龙骨架03.mesh"/>
+    <Property name="position" value="5409.42 2355.54 -2560.49"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域龙骨架01.mesh"/>
+    <Property name="position" value="9500 1984.62 -5400"/>
+    <Property name="orientation" value="0.0491856 0 0.99879 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域龙骨架.mesh"/>
+    <Property name="position" value="14978.3 1725.89 -8203.63"/>
+    <Property name="orientation" value="0.51562 0 0.856814 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌断柱02.mesh"/>
+    <Property name="position" value="8400 1982.96 -2025.46"/>
+    <Property name="orientation" value="-0.157669 0.157819 0.967348 -0.120309"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域高昌废墟5.mesh"/>
+    <Property name="position" value="6788.63 1923.05 -1609.03"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域高昌废墟5.mesh"/>
+    <Property name="position" value="5574.66 2094.84 -1600"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域高昌废墟门.mesh"/>
+    <Property name="position" value="6210.4 1954.24 -2247"/>
+    <Property name="orientation" value="-1 0 0 0"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌城门塔.mesh"/>
+    <Property name="position" value="6809.26 2000 -874.876"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huangsha"/>
+    <Property name="position" value="6100 2600 -3600"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huangsha"/>
+    <Property name="position" value="12300 2695.69 -5100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/楼兰野外帐篷圆形石堆01.mesh"/>
+    <Property name="position" value="9218.27 2400 -7568.14"/>
+    <Property name="orientation" value="0.994353 0 0.10612 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/楼兰野外帐篷圆形石堆02.mesh"/>
+    <Property name="position" value="9473.49 2400 -7586.73"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/楼兰野外帐篷圆形石堆03.mesh"/>
+    <Property name="position" value="9984.94 2400 -7636.51"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/楼兰野外帐篷圆形石堆02.mesh"/>
+    <Property name="position" value="7046.38 2000 1016.57"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域高昌废墟6.mesh"/>
+    <Property name="position" value="6210.07 2270.29 1791.97"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+    <Property name="scale" value="0.714286 0.714286 0.714286"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域高昌废墟6.mesh"/>
+    <Property name="position" value="12300 2068.66 2083.04"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+    <Property name="scale" value="0.526316 0.526316 0.526316"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域高昌废墟6.mesh"/>
+    <Property name="position" value="13300 2000.58 2262.8"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+    <Property name="scale" value="0.526316 0.526316 0.526316"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域高昌废墟6.mesh"/>
+    <Property name="position" value="14900 2000 2122.19"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+    <Property name="scale" value="0.526316 0.526316 0.526316"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/草6.mesh"/>
+    <Property name="position" value="9200 2000 900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域高昌废墟6.mesh"/>
+    <Property name="position" value="8950.89 2074.76 1714.43"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+    <Property name="scale" value="0.714286 0.714286 0.714286"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域高昌废墟6.mesh"/>
+    <Property name="position" value="10600 1979.43 1700"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+    <Property name="scale" value="0.714286 0.714286 0.714286"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌宗教类建筑02.mesh"/>
+    <Property name="position" value="10520.6 2557.33 -8674.2"/>
+    <Property name="orientation" value="0.780301 0 0.625403 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域高昌废墟6.mesh"/>
+    <Property name="position" value="4817.03 1519.93 800"/>
+    <Property name="orientation" value="0.999995 0 -0.00342979 0"/>
+    <Property name="scale" value="0.714286 0.714286 0.714286"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域高昌废墟6.mesh"/>
+    <Property name="position" value="4802.44 1894.29 -3600"/>
+    <Property name="orientation" value="0.999995 0 -0.00342979 0"/>
+    <Property name="scale" value="0.714286 0.714286 0.714286"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域高昌废墟6.mesh"/>
+    <Property name="position" value="4783.77 2070.17 -5100"/>
+    <Property name="orientation" value="0.999995 0 -0.00342979 0"/>
+    <Property name="scale" value="0.714286 0.714286 0.714286"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域高昌废墟6.mesh"/>
+    <Property name="position" value="8700 2268.86 -8154.48"/>
+    <Property name="orientation" value="0.707108 0 -0.707107 0"/>
+    <Property name="scale" value="0.714286 0.714286 0.714286"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域高昌废墟6.mesh"/>
+    <Property name="position" value="12090.2 2487.68 -8200"/>
+    <Property name="orientation" value="0.707108 0 -0.707107 0"/>
+    <Property name="scale" value="0.714286 0.714286 0.714286"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域高昌废墟6.mesh"/>
+    <Property name="position" value="4508.06 1944.46 -6887.3"/>
+    <Property name="orientation" value="0.999995 0 -0.00342979 0"/>
+    <Property name="scale" value="0.714286 0.714286 0.714286"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域高昌废墟6.mesh"/>
+    <Property name="position" value="6000 2158.62 -8350.36"/>
+    <Property name="orientation" value="0.707108 0 -0.707107 0"/>
+    <Property name="scale" value="0.714286 0.714286 0.714286"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="狐仙点灯"/>
+    <Property name="position" value="4205.68 1123.14 -8214.85"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="狐仙点灯"/>
+    <Property name="position" value="6628.11 1635.51 -8903.76"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="狐仙点灯"/>
+    <Property name="position" value="15529.6 2183.53 -7737.51"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="狐仙点灯"/>
+    <Property name="position" value="14402.9 2444.04 -3591.99"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="狐仙点灯"/>
+    <Property name="position" value="12369.8 906.792 2248.66"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="狐仙点灯"/>
+    <Property name="position" value="6215.39 1265.76 2367.34"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="狐仙点灯"/>
+    <Property name="position" value="5299.67 2032.61 -1052.63"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="狐仙点灯"/>
+    <Property name="position" value="5977.15 2400 -5912.47"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="狐仙点灯"/>
+    <Property name="position" value="9658.42 2100.8 -5526.93"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域龙骨架01.mesh"/>
+    <Property name="position" value="14337.8 2419.29 -3600"/>
+    <Property name="orientation" value="0.94988 0 0.312615 0"/>
+    <Property name="scale" value="0.25641 0.25641 0.25641"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/楼兰野外帐篷圆形石堆02.mesh"/>
+    <Property name="position" value="9300 2029.8 1200"/>
+    <Property name="orientation" value="0.731171 0 0.682195 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/楼兰野外帐篷圆形石堆02.mesh"/>
+    <Property name="position" value="11955.3 2000 -1775.49"/>
+    <Property name="orientation" value="0.926175 0 0.377095 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/楼兰野外帐篷圆形石堆02.mesh"/>
+    <Property name="position" value="12200 2000 -1550.23"/>
+    <Property name="orientation" value="0.926175 0 0.377095 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/楼兰野外帐篷圆形石堆02.mesh"/>
+    <Property name="position" value="11900 2000 -1500"/>
+    <Property name="orientation" value="0.234446 0 0.972129 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/楼兰野外帐篷圆形石堆02.mesh"/>
+    <Property name="position" value="11000 2036.69 1300"/>
+    <Property name="orientation" value="0.731171 0 0.682195 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域野外破帐篷.mesh"/>
+    <Property name="position" value="13849.7 1981.23 -1536.08"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域野外破帐篷.mesh"/>
+    <Property name="position" value="11380.1 1977.08 -2145.01"/>
+    <Property name="orientation" value="0.79509 0 0.606491 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域高昌废墟5.mesh"/>
+    <Property name="position" value="11700 2372.17 -7800"/>
+    <Property name="orientation" value="-1.3278e-007 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域高昌废墟5.mesh"/>
+    <Property name="position" value="9000 2400 -7700"/>
+    <Property name="orientation" value="-1.3278e-007 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域高昌废墟7.mesh"/>
+    <Property name="position" value="8052.14 2400 -7576.96"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域高昌废墟7.mesh"/>
+    <Property name="position" value="6942.93 2333.75 -6421.12"/>
+    <Property name="orientation" value="0.740231 0 0.672352 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域高昌废墟5.mesh"/>
+    <Property name="position" value="5332.78 2454.99 -4308.22"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌石柱03.mesh"/>
+    <Property name="position" value="5300 2457.16 -3500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌断柱01.mesh"/>
+    <Property name="position" value="7700 2383.62 -7400"/>
+    <Property name="orientation" value="0.966221 0 0.257715 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌断柱01.mesh"/>
+    <Property name="position" value="6633.16 2344.74 -6086.04"/>
+    <Property name="orientation" value="-0.329817 0 0.944045 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌断柱01.mesh"/>
+    <Property name="position" value="10400 2354.98 -7700"/>
+    <Property name="orientation" value="-0.329817 0 0.944045 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌断柱01.mesh"/>
+    <Property name="position" value="13200 2328.34 -2945.34"/>
+    <Property name="orientation" value="0.210592 -0.417954 0.824405 -0.3183"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌断柱01.mesh"/>
+    <Property name="position" value="14800 1087.53 400"/>
+    <Property name="orientation" value="-0.215445 -0.61127 0.755776 0.0933908"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域高昌废墟4.mesh"/>
+    <Property name="position" value="15940.1 2823.83 978.657"/>
+    <Property name="orientation" value="0.733274 0 -0.679933 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域高昌废墟5.mesh"/>
+    <Property name="position" value="15900 2847.48 -100"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域高昌废墟5.mesh"/>
+    <Property name="position" value="15900 2828 2500"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域高昌废墟5.mesh"/>
+    <Property name="position" value="16000 2819.32 -1500"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域高昌废墟5.mesh"/>
+    <Property name="position" value="15900 2781.58 -3200"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域高昌废墟6.mesh"/>
+    <Property name="position" value="15100 2434.81 -2400"/>
+    <Property name="orientation" value="4.24771e-009 0 1 0"/>
+    <Property name="scale" value="0.526316 0.526316 0.526316"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域高昌废墟5.mesh"/>
+    <Property name="position" value="7933.1 2000 1200"/>
+    <Property name="orientation" value="-1.3278e-007 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域高昌废墟5.mesh"/>
+    <Property name="position" value="6395.97 2005.33 1200"/>
+    <Property name="orientation" value="-1.3278e-007 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌石柱02.mesh"/>
+    <Property name="position" value="7200 1999.79 1206.14"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/楼兰野外帐篷圆形石堆02.mesh"/>
+    <Property name="position" value="7900 2000 -500"/>
+    <Property name="orientation" value="0.925059 0.0454453 0.376641 0.0185032"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/坏镖箱.mesh"/>
+    <Property name="position" value="13452.2 1996.21 -2174.09"/>
+    <Property name="orientation" value="1 0 -1.4724e-008 0"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="chuansongdian"/>
+    <Property name="position" value="13885.1 2037.89 1103.97"/>
+  </Object>
+
+</Scene>

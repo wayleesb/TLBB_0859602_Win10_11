@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Terrain name="qijvxiuxi_4" tileSize="32" xsize="64" zsize="64">
+
+  <scale x="100" y="100" z="100"/>
+
+  <heightmap filename="qijvxiuxi_4.Heightmap" type="standard"/>
+
+  <gridInfo filename="qijvxiuxi_4.GridInfo" type="standard"/>
+
+  <lightmap filename="qijvxiuxi_4.lightmap.png" type="image"/>
+
+  <textures>
+    <texture filename="02明教/方砖地.jpg" type="image"/>
+    <texture filename="09洛阳/洛阳花砖边.tga" type="image"/>
+    <texture filename="09洛阳/洛阳砖地.tga" type="image"/>
+    <texture filename="09洛阳/洛阳砖地边.tga" type="image"/>
+    <texture filename="北方/北方砖地01.tga" type="image"/>
+    <texture filename="北方/北方砖地台阶.tga" type="image"/>
+    <texture filename="北方/台基座.tga" type="image"/>
+    <texture filename="北方/台基座高.tga" type="image"/>
+  </textures>
+
+  <pixmaps>
+    <pixmap textureId="0"/>
+    <pixmap bottom="0.5" left="0" right="0.5" textureId="1" top="0"/>
+    <pixmap bottom="1" left="0" right="0.5" textureId="1" top="0.5"/>
+    <pixmap bottom="0.5" left="0.5" right="1" textureId="1" top="0"/>
+    <pixmap bottom="1" left="0.5" right="1" textureId="1" top="0.5"/>
+    <pixmap bottom="0.25" left="0" right="0.5" textureId="2" top="0"/>
+    <pixmap bottom="0.5" left="0" right="0.5" textureId="2" top="0.25"/>
+    <pixmap bottom="0.75" left="0" right="0.5" textureId="2" top="0.5"/>
+    <pixmap bottom="1" left="0" right="0.5" textureId="2" top="0.75"/>
+    <pixmap bottom="0.25" left="0.5" right="1" textureId="2" top="0"/>
+    <pixmap bottom="0.5" left="0.5" right="1" textureId="2" top="0.25"/>
+    <pixmap bottom="0.75" left="0.5" right="1" textureId="2" top="0.5"/>
+    <pixmap bottom="1" left="0.5" right="1" textureId="2" top="0.75"/>
+    <pixmap bottom="0.5" left="0" right="0.5" textureId="3" top="0"/>
+    <pixmap bottom="1" left="0" right="0.5" textureId="3" top="0.5"/>
+    <pixmap bottom="0.5" left="0.5" right="1" textureId="3" top="0"/>
+    <pixmap bottom="0.25" left="0" right="0.5" textureId="4" top="0"/>
+    <pixmap bottom="0.5" left="0" right="0.5" textureId="4" top="0.25"/>
+    <pixmap bottom="0.75" left="0" right="0.5" textureId="4" top="0.5"/>
+    <pixmap bottom="1" left="0" right="0.5" textureId="4" top="0.75"/>
+    <pixmap bottom="0.25" left="0.5" right="1" textureId="4" top="0"/>
+    <pixmap bottom="0.5" left="0.5" right="1" textureId="4" top="0.25"/>
+    <pixmap bottom="0.75" left="0.5" right="1" textureId="4" top="0.5"/>
+    <pixmap bottom="1" left="0.5" right="1" textureId="4" top="0.75"/>
+    <pixmap bottom="0.5" left="0" right="0.5" textureId="5" top="0"/>
+    <pixmap bottom="1" left="0" right="0.5" textureId="5" top="0.5"/>
+    <pixmap bottom="0.5" left="0.5" right="1" textureId="5" top="0"/>
+    <pixmap bottom="1" left="0" right="0.5" textureId="6" top="0"/>
+    <pixmap bottom="1" left="0.5" right="1" textureId="7" top="0"/>
+  </pixmaps>
+
+  <materials>
+    <template material="Terrain/OneLayer" name="OneLayer"/>
+    <template material="Terrain/OneLayerLightmap" name="OneLayerLightmap"/>
+    <template material="Terrain/TwoLayer" name="TwoLayer"/>
+    <template material="Terrain/TwoLayerLightmap" name="TwoLayerLightmap"/>
+    <fog_replacement exp="Terrain/OneLayer_ps%fog_exp" exp2="Terrain/OneLayer_ps%fog_exp2" linear="Terrain/OneLayer_ps%fog_linear" none="Terrain/OneLayer_ps"/>
+    <fog_replacement exp="Terrain/TwoLayer_ps%fog_exp" exp2="Terrain/TwoLayer_ps%fog_exp2" linear="Terrain/TwoLayer_ps%fog_linear" none="Terrain/TwoLayer_ps"/>
+    <fog_replacement exp="Terrain/OneLayerLightmap_ps%fog_exp" exp2="Terrain/OneLayerLightmap_ps%fog_exp2" linear="Terrain/OneLayerLightmap_ps%fog_linear" none="Terrain/OneLayerLightmap_ps"/>
+    <fog_replacement exp="Terrain/TwoLayerLightmap_ps%fog_exp" exp2="Terrain/TwoLayerLightmap_ps%fog_exp2" linear="Terrain/TwoLayerLightmap_ps%fog_linear" none="Terrain/TwoLayerLightmap_ps"/>
+  </materials>
+
+</Terrain>

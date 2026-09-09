@@ -1,0 +1,61 @@
+<?xml version="1.0" ?>
+<GUILayout>
+<Window Type="DefaultWindow" Name="Agreement_MainFrame_Back">
+			<Property Name="AlwaysOnTop" Value="true" />
+		  <Property Name="Size" Value="w:1 h:1" />
+      <Property Name="Position" Value="x:0 y:0" />
+  <Window Type="DefaultWindow" Name="Agreement_MainFrame">
+    <Property Name="UnifiedPosition" Value="{{0.5,-200},{0.5,-220}}" />
+    <Property Name="AbsoluteSize" Value="w:400 h:384" />
+    <Window Type="TLBB_StaticImageNULL" Name="Agreement_DragonHead">
+      <Property Name="UnifiedPosition" Value="{{0.5, -56},{0.0, 0}}" />
+      <Property Name="AbsoluteSize" Value="w:114.000000 h:62.000000" />
+      <Property Name="Image" Value="set:Button4 image:Dragon_Head" />
+      <Property Name="MouseHollow" Value="False" />
+      <Property Name="AlwaysOnTop" Value="True" />
+    </Window>
+    <Window Type="TLBB_StaticImageNULL" Name="Agreement_RedLine_Left">
+      <Property Name="AbsolutePosition" Value="x:2.000000 y:47.000000" />
+      <Property Name="AbsoluteSize" Value="w:5.000000 h:83.000000" />
+      <Property Name="Image" Value="set:Button4 image:RedLine" />
+      <Property Name="MouseHollow" Value="False" />
+      <Property Name="AlwaysOnTop" Value="True" />
+    </Window>
+    <Window Type="TLBB_StaticImageNULL" Name="Agreement_RedLine_Right">
+      <Property Name="AbsolutePosition" Value="x:392.000000 y:47.000000" />
+      <Property Name="AbsoluteSize" Value="w:5.000000 h:83.000000" />
+      <Property Name="Image" Value="set:Button4 image:RedLine" />
+      <Property Name="MouseHollow" Value="False" />
+      <Property Name="AlwaysOnTop" Value="True" />
+    </Window>
+    <Window Type="TLBB_MainFrame_Logon" Name="Agreement_Frame">
+      <Property Name="UnifiedPosition" Value="{{0.5,-200},{0.0,24}}" />
+      <Property Name="AbsoluteSize" Value="w:400 h:360" />
+      <Window Type="TLBB_Frame_Lace4" Name="Agreement_Bk">
+        <Property Name="UnifiedPosition" Value="{{0.000000,24.000000},{0.000000,34.000000}" />
+        <Property Name="UnifiedSize" Value="{{1.000000,-47.000000},{1.000000,-74.000000}" />
+        <Window Type="TLBB_StaticText" Name="Agreement_Text">
+          <Property Name="UnifiedPosition" Value="{{0.000000,10.000000},{0.000000,12.000000}" />
+          <Property Name="UnifiedSize" Value="{{1.000000,-20.000000},{1.000000,-24.000000}" />
+		  <Property Name="VertScrollbar" Value="true" />
+		  <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+          <Property Name="VertFormatting" Value="TopAligned" />
+          <Property Name="Text" Value="" />
+        </Window>
+      </Window>
+      <Window Type="TLBB_ButtonCommon" Name="Agreement_Button_Accept">
+        <Property Name="UnifiedPosition" Value="{{0.5,-80.000000},{1.000000,-39.000000}" />
+        <Property Name="AbsoluteSize" Value="w:60.000000 h:20.000000" />
+        <Property Name="Text"  Value="#{Agreement_Info_OK}" />
+		<Event Name="Clicked" Function='Agreement_Accept();' />
+      </Window>
+      <Window Type="TLBB_ButtonCommon" Name="Agreement_Button_Continue">
+        <Property Name="UnifiedPosition" Value="{{0.5,20.000000},{1.000000,-39.000000}" />
+        <Property Name="AbsoluteSize" Value="w:60.000000 h:20.000000" />
+        <Property Name="Text"  Value="#{Agreement_Info_No}" />
+		<Event Name="Clicked" Function='Agreement_Cancel();' />
+      </Window>
+    </Window>
+  </Window>
+ </Window>
+</GUILayout>

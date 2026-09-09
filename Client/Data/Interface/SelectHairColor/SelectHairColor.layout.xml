@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame1" Name="SelectHairColor_Frame">
+        <Property Name="UnifiedPosition" Value="{{0.4,0},{0.15,0}}" />
+        <Property Name="UnifiedSize" Value="{{0,365},{0.0,260}}" />
+        <Event Name="Hidden" Function="SelectHairColor_Cancel_Clicked();" />
+        <Window Type="TLBB_DragTitle" Name="SelectHairColor_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="SelectHairColor_Frame" />
+            <Window Type="TLBB_SimpleText" Name="SelectHairColor_PageHeader">
+                <Property Name="Position" Value="x:0.0 y:0.0" />
+                <Property Name="Size" Value="w:1.0 h:1.0" />
+                <Property Name="Font" Value="YouYuan11.25" />
+                <Property Name="Text" Value="#{INTERFACE_XML_80}" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+        </Window>
+        <Window Type="TLBB_ButtonHelp" Name="SelectHairColor_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*SelectHairColor&quot;);' />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="SelectHairColor_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function="this:Hide();" />
+        </Window>
+        <Window Type="DefaultWindow" Name="SelectHairColor_Function_Frame">
+            <Property Name="AbsolutePosition" Value="x:7.000000 y:36.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-13.000000},{1.000000,-55.000000}" />
+            <Window Type="TLBB_FramePlayerOther" Name="SelectHairColor_Model_Frame">
+                <Property Name="Position" Value="x:0.0 y:0.0" />
+                <Property Name="UnifiedSize" Value="{{0.5,0.000000},{0.000000,100.000000}" />
+                <Window Type="TLBB_MeshWindow" Name="SelectHairColor_Model">
+                    <Property Name="Position" Value="x:0.1 y:0.1" />
+                    <Property Name="Size" Value="w:0.80 h:0.8" />
+                    <Property Name="ShowControl" Value="SelectHairColor_Frame" />
+                    <Property Name="RiseOnClick" Value="False" />
+                </Window>
+                <Window Type="TLBB_ButtonTurnLeft" Name="SelectHairColor_Model_TurnLeft">
+                    <Property Name="UnifiedPosition" Value="{{0.15000000,0.000000},{1.000000,-25.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:22.000000 h:22.000000" />
+                    <Event Name="MouseButtonDown" Function="Player_Hair_Color_Modle_TurnLeft(1);" />
+                    <Event Name="MouseButtonUp" Function="Player_Hair_Color_Modle_TurnLeft(0);" />
+                </Window>
+                <Window Type="TLBB_ButtonTurnRight" Name="SelectHairColor_Model_TurnRight">
+                    <Property Name="UnifiedPosition" Value="{{0.72000000,0.000000},{1.000000,-25.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:22.000000 h:22.000000" />
+                    <Event Name="MouseButtonDown" Function="Player_Hair_Color_Modle_TurnRight(1);" />
+                    <Event Name="MouseButtonUp" Function="Player_Hair_Color_Modle_TurnRight(0);" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="SelectHairColor_Red_Text">
+                <Property Name="Position" Value="x:0.5 y:0.0" />
+                <Property Name="UnifiedSize" Value="{{0.11000000,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_323}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_Slider" Name="SelectHairColor_Red">
+                <Property Name="UnifiedPosition" Value="{{0.63,0.000000},{0.015,0.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.26,0.000000},{0.000000,14.000000}" />
+                <Event Name="ScrollPosChanged" Function="SelectHairColor_SliderChanged();" />
+            </Window>
+            <Window Type="TLBB_EditBoxNormal" Name="SelectHairColor_Red_NumericalValue">
+                <Property Name="UnifiedPosition" Value="{{0.90,0.000000},{0.000000,0.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.1000000,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="244" />
+                <Property Name="MaxTextLength" Value="3" />
+                <Property Name="ValidationString" Value="[0-9]*" />
+                <Event Name="TextChanged" Function="Color_Change();" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="SelectHairColor_Green_Text">
+                <Property Name="UnifiedPosition" Value="{{0.5,0.000000},{0.000000,20.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.11000000,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_445}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_Slider" Name="SelectHairColor_Green">
+                <Property Name="UnifiedPosition" Value="{{0.63,0.000000},{0.015,20.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.26,0.000000},{0.000000,14.000000}" />
+                <Event Name="ScrollPosChanged" Function="SelectHairColor_SliderChanged();" />
+            </Window>
+            <Window Type="TLBB_EditBoxNormal" Name="SelectHairColor_Green_NumericalValue">
+                <Property Name="UnifiedPosition" Value="{{0.90,0.000000},{0.000000,20.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.1000000,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="244" />
+                <Property Name="MaxTextLength" Value="3" />
+                <Property Name="ValidationString" Value="[0-9]*" />
+                <Event Name="TextChanged" Function="Color_Change();" />
+                <Event Name="CaptureLost" Function="Text_Lost();" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="SelectHairColor_Blue_Text">
+                <Property Name="UnifiedPosition" Value="{{0.5,0.000000},{0.000000,40.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.11000000,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_422}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_Slider" Name="SelectHairColor_Blue">
+                <Property Name="UnifiedPosition" Value="{{0.63,0.000000},{0.015,40.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.26,0.000000},{0.000000,14.000000}" />
+                <Event Name="ScrollPosChanged" Function="SelectHairColor_SliderChanged();" />
+            </Window>
+            <Window Type="TLBB_EditBoxNormal" Name="SelectHairColor_Blue_NumericalValue">
+                <Property Name="UnifiedPosition" Value="{{0.90,0.000000},{0.000000,40.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.1000000,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="244" />
+                <Property Name="MaxTextLength" Value="3" />
+                <Property Name="ValidationString" Value="[0-9]*" />
+                <Event Name="TextChanged" Function="Color_Change();" />
+                <Event Name="CaptureLost" Function="Text_Lost();" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="SelectHairColor_Brightness_Text">
+                <Property Name="UnifiedPosition" Value="{{0.5,0.000000},{0.000000,60.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.11000000,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_434}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_Slider" Name="SelectHairColor_Brightness">
+                <Property Name="UnifiedPosition" Value="{{0.63,0.000000},{0.015,60.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.26,0.000000},{0.000000,14.000000}" />
+                <Event Name="ScrollPosChanged" Function="SelectHairColor_Lumination_Changed();" />
+            </Window>
+            <Window Type="TLBB_EditBoxNormal" Name="SelectHairColor_Brightness_NumericalValue">
+                <Property Name="UnifiedPosition" Value="{{0.90,0.000000},{0.000000,60.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.1000000,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="244" />
+                <Property Name="MaxTextLength" Value="3" />
+                <Event Name="TextChanged" Function="Lumination_Change();" />
+                <Event Name="CaptureLost" Function="Text_Lost();" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="SelectHairColor_Expendable">
+                <Property Name="UnifiedPosition" Value="{{0.5,0.000000},{0.000000,80.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.5,0.000000},{0.000000,20.000000}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="Text" Value="#{INTERFACE_XML_795}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+            </Window>
+            <Window Type="TLBB_StaticText" Name="SelectHairColor_WarningText">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-103.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.000000,0.000000},{0.000000,80.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_531}" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="TopAligned" />
+                <Property Name="VertScrollbar" Value="true" />
+            </Window>
+            <Window Type="TLBB_Frame_Lace5" Name="SelectHairColor_Blank">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-80.000000},{0.000000,20.000000}" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="SelectHairColor_Accept">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-80.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_557}" />
+                <Event Name="Clicked" Function="SelectHairColor_OK_Clicked();" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="SelectHairColor_Cancel">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-40.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_542}" />
+                <Event Name="Clicked" Function="this:Hide();" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

@@ -1,0 +1,944 @@
+<?xml version="1.0" ?>
+<Falagard>
+	<!--
+	  ***************************************************
+        用在血，魔，能量的进度条
+    ***************************************************
+    -->
+	<WidgetLook name="TLBB_Look_ProgressPropertyRed">
+		<Property name="LightEnable" value="false" />
+		<!-- 光头的显示大小 -->
+		<NamedArea name="LightArea">
+			<Area>
+				<Dim type="LeftEdge">
+					<AbsoluteDim value="0" />
+				</Dim>
+				<Dim type="TopEdge">
+					<AbsoluteDim value="0" />
+				</Dim>
+				<Dim type="Width">
+					<ImageDim imageset="CommonStaticImage" image="ProgressLight" dimension="Width" />
+				</Dim>
+				<Dim type="Height">
+					<ImageDim imageset="CommonStaticImage" image="ProgressLight" dimension="Height" />
+				</Dim>
+			</Area>
+		</NamedArea>
+		<!-- 进度栏的显示范围 -->
+		<NamedArea name="ProgressArea">
+			<Area>
+				<Dim type="LeftEdge">
+					<AbsoluteDim value="0" />
+				</Dim>
+				<Dim type="TopEdge">
+					<AbsoluteDim value="0" />
+				</Dim>
+				<Dim type="RightEdge">
+					<UnifiedDim scale="1" type="RightEdge">
+						<DimOperator op="Subtract">
+							<AbsoluteDim value="0" />
+						</DimOperator>
+					</UnifiedDim>
+				</Dim>
+				<Dim type="BottomEdge">
+					<UnifiedDim scale="1" type="BottomEdge">
+						<DimOperator op="Subtract">
+							<AbsoluteDim value="0" />
+						</DimOperator>
+					</UnifiedDim>
+				</Dim>
+			</Area>
+		</NamedArea>
+		<!-- 进度栏的显示图片 -->
+		<ImagerySection name="progressbar">
+			<FrameComponent>
+				<Area>
+					<Dim type="LeftEdge">
+						<AbsoluteDim value="0" />
+					</Dim>
+					<Dim type="TopEdge">
+						<AbsoluteDim value="0" />
+					</Dim>
+					<Dim type="RightEdge">
+						<UnifiedDim scale="1" type="RightEdge">
+							<DimOperator op="Subtract">
+								<AbsoluteDim value="0" />
+							</DimOperator>
+						</UnifiedDim>
+					</Dim>
+					<Dim type="BottomEdge">
+						<UnifiedDim scale="1" type="BottomEdge">
+							<DimOperator op="Subtract">
+								<AbsoluteDim value="0" />
+							</DimOperator>
+						</UnifiedDim>
+					</Dim>
+				</Area>
+				<Image imageset="CommonStaticImage" image="ProgressRedM" />
+				<VertFormat type="Stretched" />
+				<HorzFormat type="Stretched" />
+			</FrameComponent>
+		</ImagerySection>
+		<!-- 光图的显示图片 -->
+		<ImagerySection name="Light">
+			<ImageryComponent>
+				<Area>
+					<Dim type="LeftEdge">
+						<AbsoluteDim value="0" />
+					</Dim>
+					<Dim type="TopEdge">
+						<AbsoluteDim value="0" />
+					</Dim>
+					<Dim type="Width">
+						<ImageDim imageset="CommonStaticImage" image="ProgressLight" dimension="Width" />
+					</Dim>
+					<Dim type="Height">
+						<ImageDim imageset="CommonStaticImage" image="ProgressLight" dimension="Height" />
+					</Dim>
+				</Area>
+				<Image imageset="CommonStaticImage" image="ProgressLight" />
+				<VertFormat type="Stretched" />
+				<HorzFormat type="Stretched" />
+			</ImageryComponent>
+		</ImagerySection>
+		<StateImagery name="LightEnable">
+			<Layer>
+				<Section section="Light" />
+			</Layer>
+		</StateImagery>
+		<StateImagery name="LightDisable" />
+		<StateImagery name="Enabled">
+			<Layer>
+				<Section section="progressbar" />
+			</Layer>
+		</StateImagery>
+		<StateImagery name="Disabled">
+			<Layer>
+				<Section section="progressbar" />
+			</Layer>
+		</StateImagery>
+		<StateImagery name="Effect">
+			<Layer>
+				<Section section="progressbar" />
+			</Layer>
+		</StateImagery>
+	</WidgetLook>
+	<WidgetLook name="TLBB_Look_ProgressPropertyBlue">
+		<Property name="LightEnable" value="false" />
+		<!-- 光头的显示大小 -->
+		<NamedArea name="LightArea">
+			<Area>
+				<Dim type="LeftEdge">
+					<AbsoluteDim value="0" />
+				</Dim>
+				<Dim type="TopEdge">
+					<AbsoluteDim value="0" />
+				</Dim>
+				<Dim type="Width">
+					<ImageDim imageset="CommonStaticImage" image="ProgressLight" dimension="Width" />
+				</Dim>
+				<Dim type="Height">
+					<ImageDim imageset="CommonStaticImage" image="ProgressLight" dimension="Height" />
+				</Dim>
+			</Area>
+		</NamedArea>
+		<!-- 进度栏的显示范围 -->
+		<NamedArea name="ProgressArea">
+			<Area>
+				<Dim type="LeftEdge">
+					<AbsoluteDim value="0" />
+				</Dim>
+				<Dim type="TopEdge">
+					<AbsoluteDim value="0" />
+				</Dim>
+				<Dim type="RightEdge">
+					<UnifiedDim scale="1" type="RightEdge">
+						<DimOperator op="Subtract">
+							<AbsoluteDim value="0" />
+						</DimOperator>
+					</UnifiedDim>
+				</Dim>
+				<Dim type="BottomEdge">
+					<UnifiedDim scale="1" type="BottomEdge">
+						<DimOperator op="Subtract">
+							<AbsoluteDim value="0" />
+						</DimOperator>
+					</UnifiedDim>
+				</Dim>
+			</Area>
+		</NamedArea>
+		<!-- 进度栏的显示图片 -->
+		<ImagerySection name="progressbar">
+			<FrameComponent>
+				<Area>
+					<Dim type="LeftEdge">
+						<AbsoluteDim value="0" />
+					</Dim>
+					<Dim type="TopEdge">
+						<AbsoluteDim value="0" />
+					</Dim>
+					<Dim type="RightEdge">
+						<UnifiedDim scale="1" type="RightEdge">
+							<DimOperator op="Subtract">
+								<AbsoluteDim value="0" />
+							</DimOperator>
+						</UnifiedDim>
+					</Dim>
+					<Dim type="BottomEdge">
+						<UnifiedDim scale="1" type="BottomEdge">
+							<DimOperator op="Subtract">
+								<AbsoluteDim value="0" />
+							</DimOperator>
+						</UnifiedDim>
+					</Dim>
+				</Area>
+				<Image imageset="CommonStaticImage" image="ProgressBuleM" />
+				<VertFormat type="Stretched" />
+				<HorzFormat type="Stretched" />
+			</FrameComponent>
+		</ImagerySection>
+		<!-- 光图的显示图片 -->
+		<ImagerySection name="Light">
+			<ImageryComponent>
+				<Area>
+					<Dim type="LeftEdge">
+						<AbsoluteDim value="0" />
+					</Dim>
+					<Dim type="TopEdge">
+						<AbsoluteDim value="0" />
+					</Dim>
+					<Dim type="Width">
+						<ImageDim imageset="CommonStaticImage" image="ProgressLight" dimension="Width" />
+					</Dim>
+					<Dim type="Height">
+						<ImageDim imageset="CommonStaticImage" image="ProgressLight" dimension="Height" />
+					</Dim>
+				</Area>
+				<Image imageset="CommonStaticImage" image="ProgressLight" />
+				<VertFormat type="Stretched" />
+				<HorzFormat type="Stretched" />
+			</ImageryComponent>
+		</ImagerySection>
+		<StateImagery name="LightEnable">
+			<Layer>
+				<Section section="Light" />
+			</Layer>
+		</StateImagery>
+		<StateImagery name="LightDisable" />
+		<StateImagery name="Enabled">
+			<Layer>
+				<Section section="progressbar" />
+			</Layer>
+		</StateImagery>
+		<StateImagery name="Disabled">
+			<Layer>
+				<Section section="progressbar" />
+			</Layer>
+		</StateImagery>
+		<StateImagery name="Effect">
+			<Layer>
+				<Section section="progressbar" />
+			</Layer>
+		</StateImagery>
+	</WidgetLook>
+	<WidgetLook name="TLBB_Look_ProgressPropertyGreen">
+		<Property name="LightEnable" value="false" />
+		<!-- 光头的显示大小 -->
+		<NamedArea name="LightArea">
+			<Area>
+				<Dim type="LeftEdge">
+					<AbsoluteDim value="0" />
+				</Dim>
+				<Dim type="TopEdge">
+					<AbsoluteDim value="0" />
+				</Dim>
+				<Dim type="Width">
+					<ImageDim imageset="CommonStaticImage" image="ProgressLight" dimension="Width" />
+				</Dim>
+				<Dim type="Height">
+					<ImageDim imageset="CommonStaticImage" image="ProgressLight" dimension="Height" />
+				</Dim>
+			</Area>
+		</NamedArea>
+		<!-- 进度栏的显示范围 -->
+		<NamedArea name="ProgressArea">
+			<Area>
+				<Dim type="LeftEdge">
+					<AbsoluteDim value="0" />
+				</Dim>
+				<Dim type="TopEdge">
+					<AbsoluteDim value="0" />
+				</Dim>
+				<Dim type="RightEdge">
+					<UnifiedDim scale="1" type="RightEdge">
+						<DimOperator op="Subtract">
+							<AbsoluteDim value="0" />
+						</DimOperator>
+					</UnifiedDim>
+				</Dim>
+				<Dim type="BottomEdge">
+					<UnifiedDim scale="1" type="BottomEdge">
+						<DimOperator op="Subtract">
+							<AbsoluteDim value="0" />
+						</DimOperator>
+					</UnifiedDim>
+				</Dim>
+			</Area>
+		</NamedArea>
+		<!-- 进度栏的显示图片 -->
+		<ImagerySection name="progressbar">
+			<FrameComponent>
+				<Area>
+					<Dim type="LeftEdge">
+						<AbsoluteDim value="0" />
+					</Dim>
+					<Dim type="TopEdge">
+						<AbsoluteDim value="0" />
+					</Dim>
+					<Dim type="RightEdge">
+						<UnifiedDim scale="1" type="RightEdge">
+							<DimOperator op="Subtract">
+								<AbsoluteDim value="0" />
+							</DimOperator>
+						</UnifiedDim>
+					</Dim>
+					<Dim type="BottomEdge">
+						<UnifiedDim scale="1" type="BottomEdge">
+							<DimOperator op="Subtract">
+								<AbsoluteDim value="0" />
+							</DimOperator>
+						</UnifiedDim>
+					</Dim>
+				</Area>
+				<Image imageset="CommonStaticImage" image="ProgressGreenM" />
+				<VertFormat type="Stretched" />
+				<HorzFormat type="Stretched" />
+			</FrameComponent>
+		</ImagerySection>
+		<!-- 光图的显示图片 -->
+		<ImagerySection name="Light">
+			<ImageryComponent>
+				<Area>
+					<Dim type="LeftEdge">
+						<AbsoluteDim value="0" />
+					</Dim>
+					<Dim type="TopEdge">
+						<AbsoluteDim value="0" />
+					</Dim>
+					<Dim type="Width">
+						<ImageDim imageset="CommonStaticImage" image="ProgressLight" dimension="Width" />
+					</Dim>
+					<Dim type="Height">
+						<ImageDim imageset="CommonStaticImage" image="ProgressLight" dimension="Height" />
+					</Dim>
+				</Area>
+				<Image imageset="CommonStaticImage" image="ProgressLight" />
+				<VertFormat type="Stretched" />
+				<HorzFormat type="Stretched" />
+			</ImageryComponent>
+		</ImagerySection>
+		<StateImagery name="LightEnable">
+			<Layer>
+				<Section section="Light" />
+			</Layer>
+		</StateImagery>
+		<StateImagery name="LightDisable" />
+		<StateImagery name="Enabled">
+			<Layer>
+				<Section section="progressbar" />
+			</Layer>
+		</StateImagery>
+		<StateImagery name="Disabled">
+			<Layer>
+				<Section section="progressbar" />
+			</Layer>
+		</StateImagery>
+		<StateImagery name="Effect">
+			<Layer>
+				<Section section="progressbar" />
+			</Layer>
+		</StateImagery>
+	</WidgetLook>
+	<WidgetLook name="TLBB_Look_ProgressPropertyCyan">
+		<Property name="LightEnable" value="false" />
+		<!-- 光头的显示大小 -->
+		<NamedArea name="LightArea">
+			<Area>
+				<Dim type="LeftEdge">
+					<AbsoluteDim value="0" />
+				</Dim>
+				<Dim type="TopEdge">
+					<AbsoluteDim value="0" />
+				</Dim>
+				<Dim type="Width">
+					<ImageDim imageset="CommonStaticImage" image="ProgressLight" dimension="Width" />
+				</Dim>
+				<Dim type="Height">
+					<ImageDim imageset="CommonStaticImage" image="ProgressLight" dimension="Height" />
+				</Dim>
+			</Area>
+		</NamedArea>
+		<!-- 进度栏的显示范围 -->
+		<NamedArea name="ProgressArea">
+			<Area>
+				<Dim type="LeftEdge">
+					<AbsoluteDim value="0" />
+				</Dim>
+				<Dim type="TopEdge">
+					<AbsoluteDim value="0" />
+				</Dim>
+				<Dim type="RightEdge">
+					<UnifiedDim scale="1" type="RightEdge">
+						<DimOperator op="Subtract">
+							<AbsoluteDim value="0" />
+						</DimOperator>
+					</UnifiedDim>
+				</Dim>
+				<Dim type="BottomEdge">
+					<UnifiedDim scale="1" type="BottomEdge">
+						<DimOperator op="Subtract">
+							<AbsoluteDim value="0" />
+						</DimOperator>
+					</UnifiedDim>
+				</Dim>
+			</Area>
+		</NamedArea>
+		<!-- 进度栏的显示图片 -->
+		<ImagerySection name="progressbar">
+			<FrameComponent>
+				<Area>
+					<Dim type="LeftEdge">
+						<AbsoluteDim value="0" />
+					</Dim>
+					<Dim type="TopEdge">
+						<AbsoluteDim value="0" />
+					</Dim>
+					<Dim type="RightEdge">
+						<UnifiedDim scale="1" type="RightEdge">
+							<DimOperator op="Subtract">
+								<AbsoluteDim value="0" />
+							</DimOperator>
+						</UnifiedDim>
+					</Dim>
+					<Dim type="BottomEdge">
+						<UnifiedDim scale="1" type="BottomEdge">
+							<DimOperator op="Subtract">
+								<AbsoluteDim value="0" />
+							</DimOperator>
+						</UnifiedDim>
+					</Dim>
+				</Area>
+				<Image imageset="CommonStaticImage" image="ProgressCyanM" />
+				<VertFormat type="Stretched" />
+				<HorzFormat type="Stretched" />
+			</FrameComponent>
+		</ImagerySection>
+		<!-- 光图的显示图片 -->
+		<ImagerySection name="Light">
+			<ImageryComponent>
+				<Area>
+					<Dim type="LeftEdge">
+						<AbsoluteDim value="0" />
+					</Dim>
+					<Dim type="TopEdge">
+						<AbsoluteDim value="0" />
+					</Dim>
+					<Dim type="Width">
+						<ImageDim imageset="CommonStaticImage" image="ProgressLight" dimension="Width" />
+					</Dim>
+					<Dim type="Height">
+						<ImageDim imageset="CommonStaticImage" image="ProgressLight" dimension="Height" />
+					</Dim>
+				</Area>
+				<Image imageset="CommonStaticImage" image="ProgressLight" />
+				<VertFormat type="Stretched" />
+				<HorzFormat type="Stretched" />
+			</ImageryComponent>
+		</ImagerySection>
+		<StateImagery name="LightEnable">
+			<Layer>
+				<Section section="Light" />
+			</Layer>
+		</StateImagery>
+		<StateImagery name="LightDisable" />
+		<StateImagery name="Enabled">
+			<Layer>
+				<Section section="progressbar" />
+			</Layer>
+		</StateImagery>
+		<StateImagery name="Disabled">
+			<Layer>
+				<Section section="progressbar" />
+			</Layer>
+		</StateImagery>
+		<StateImagery name="Effect">
+			<Layer>
+				<Section section="progressbar" />
+			</Layer>
+		</StateImagery>
+	</WidgetLook>
+	<WidgetLook name="TLBB_Look_ProgressPropertyYellow">
+		<Property name="LightEnable" value="false" />
+		<!-- 光头的显示大小 -->
+		<NamedArea name="LightArea">
+			<Area>
+				<Dim type="LeftEdge">
+					<AbsoluteDim value="0" />
+				</Dim>
+				<Dim type="TopEdge">
+					<AbsoluteDim value="0" />
+				</Dim>
+				<Dim type="Width">
+					<ImageDim imageset="CommonStaticImage" image="ProgressLight" dimension="Width" />
+				</Dim>
+				<Dim type="Height">
+					<ImageDim imageset="CommonStaticImage" image="ProgressLight" dimension="Height" />
+				</Dim>
+			</Area>
+		</NamedArea>
+		<!-- 进度栏的显示范围 -->
+		<NamedArea name="ProgressArea">
+			<Area>
+				<Dim type="LeftEdge">
+					<AbsoluteDim value="0" />
+				</Dim>
+				<Dim type="TopEdge">
+					<AbsoluteDim value="0" />
+				</Dim>
+				<Dim type="RightEdge">
+					<UnifiedDim scale="1" type="RightEdge">
+						<DimOperator op="Subtract">
+							<AbsoluteDim value="0" />
+						</DimOperator>
+					</UnifiedDim>
+				</Dim>
+				<Dim type="BottomEdge">
+					<UnifiedDim scale="1" type="BottomEdge">
+						<DimOperator op="Subtract">
+							<AbsoluteDim value="0" />
+						</DimOperator>
+					</UnifiedDim>
+				</Dim>
+			</Area>
+		</NamedArea>
+		<!-- 进度栏的显示图片 -->
+		<ImagerySection name="progressbar">
+			<FrameComponent>
+				<Area>
+					<Dim type="LeftEdge">
+						<AbsoluteDim value="0" />
+					</Dim>
+					<Dim type="TopEdge">
+						<AbsoluteDim value="0" />
+					</Dim>
+					<Dim type="RightEdge">
+						<UnifiedDim scale="1" type="RightEdge">
+							<DimOperator op="Subtract">
+								<AbsoluteDim value="0" />
+							</DimOperator>
+						</UnifiedDim>
+					</Dim>
+					<Dim type="BottomEdge">
+						<UnifiedDim scale="1" type="BottomEdge">
+							<DimOperator op="Subtract">
+								<AbsoluteDim value="0" />
+							</DimOperator>
+						</UnifiedDim>
+					</Dim>
+				</Area>
+				<Image imageset="CommonStaticImage" image="ProgressYellowM" />
+				<VertFormat type="Stretched" />
+				<HorzFormat type="Stretched" />
+			</FrameComponent>
+		</ImagerySection>
+		<!-- 光图的显示图片 -->
+		<ImagerySection name="Light">
+			<ImageryComponent>
+				<Area>
+					<Dim type="LeftEdge">
+						<AbsoluteDim value="0" />
+					</Dim>
+					<Dim type="TopEdge">
+						<AbsoluteDim value="0" />
+					</Dim>
+					<Dim type="Width">
+						<ImageDim imageset="CommonStaticImage" image="ProgressLight" dimension="Width" />
+					</Dim>
+					<Dim type="Height">
+						<ImageDim imageset="CommonStaticImage" image="ProgressLight" dimension="Height" />
+					</Dim>
+				</Area>
+				<Image imageset="CommonStaticImage" image="ProgressLight" />
+				<VertFormat type="Stretched" />
+				<HorzFormat type="Stretched" />
+			</ImageryComponent>
+		</ImagerySection>
+		<StateImagery name="LightEnable">
+			<Layer>
+				<Section section="Light" />
+			</Layer>
+		</StateImagery>
+		<StateImagery name="LightDisable" />
+		<StateImagery name="Enabled">
+			<Layer>
+				<Section section="progressbar" />
+			</Layer>
+		</StateImagery>
+		<StateImagery name="Disabled">
+			<Layer>
+				<Section section="progressbar" />
+			</Layer>
+		</StateImagery>
+		<StateImagery name="Effect">
+			<Layer>
+				<Section section="progressbar" />
+			</Layer>
+		</StateImagery>
+	</WidgetLook>
+	<WidgetLook name="TLBB_Look_ProgressPropertyPure">
+		<Property name="LightEnable" value="false" />
+		<!-- 光头的显示大小 -->
+		<NamedArea name="LightArea">
+			<Area>
+				<Dim type="LeftEdge">
+					<AbsoluteDim value="0" />
+				</Dim>
+				<Dim type="TopEdge">
+					<AbsoluteDim value="0" />
+				</Dim>
+				<Dim type="Width">
+					<ImageDim imageset="CommonStaticImage" image="ProgressLight" dimension="Width" />
+				</Dim>
+				<Dim type="Height">
+					<ImageDim imageset="CommonStaticImage" image="ProgressLight" dimension="Height" />
+				</Dim>
+			</Area>
+		</NamedArea>
+		<!-- 进度栏的显示范围 -->
+		<NamedArea name="ProgressArea">
+			<Area>
+				<Dim type="LeftEdge">
+					<AbsoluteDim value="0" />
+				</Dim>
+				<Dim type="TopEdge">
+					<AbsoluteDim value="0" />
+				</Dim>
+				<Dim type="RightEdge">
+					<UnifiedDim scale="1" type="RightEdge">
+						<DimOperator op="Subtract">
+							<AbsoluteDim value="0" />
+						</DimOperator>
+					</UnifiedDim>
+				</Dim>
+				<Dim type="BottomEdge">
+					<UnifiedDim scale="1" type="BottomEdge">
+						<DimOperator op="Subtract">
+							<AbsoluteDim value="0" />
+						</DimOperator>
+					</UnifiedDim>
+				</Dim>
+			</Area>
+		</NamedArea>
+		<!-- 进度栏的显示图片 -->
+		<ImagerySection name="progressbar">
+			<FrameComponent>
+				<Area>
+					<Dim type="LeftEdge">
+						<AbsoluteDim value="0" />
+					</Dim>
+					<Dim type="TopEdge">
+						<AbsoluteDim value="0" />
+					</Dim>
+					<Dim type="RightEdge">
+						<UnifiedDim scale="1" type="RightEdge">
+							<DimOperator op="Subtract">
+								<AbsoluteDim value="0" />
+							</DimOperator>
+						</UnifiedDim>
+					</Dim>
+					<Dim type="BottomEdge">
+						<UnifiedDim scale="1" type="BottomEdge">
+							<DimOperator op="Subtract">
+								<AbsoluteDim value="0" />
+							</DimOperator>
+						</UnifiedDim>
+					</Dim>
+				</Area>
+				<Image imageset="CommonStaticImage" image="ProgressPureM" />
+				<VertFormat type="Stretched" />
+				<HorzFormat type="Stretched" />
+			</FrameComponent>
+		</ImagerySection>
+		<!-- 光图的显示图片 -->
+		<ImagerySection name="Light">
+			<ImageryComponent>
+				<Area>
+					<Dim type="LeftEdge">
+						<AbsoluteDim value="0" />
+					</Dim>
+					<Dim type="TopEdge">
+						<AbsoluteDim value="0" />
+					</Dim>
+					<Dim type="Width">
+						<ImageDim imageset="CommonStaticImage" image="ProgressLight" dimension="Width" />
+					</Dim>
+					<Dim type="Height">
+						<ImageDim imageset="CommonStaticImage" image="ProgressLight" dimension="Height" />
+					</Dim>
+				</Area>
+				<Image imageset="CommonStaticImage" image="ProgressLight" />
+				<VertFormat type="Stretched" />
+				<HorzFormat type="Stretched" />
+			</ImageryComponent>
+		</ImagerySection>
+		<StateImagery name="LightEnable">
+			<Layer>
+				<Section section="Light" />
+			</Layer>
+		</StateImagery>
+		<StateImagery name="LightDisable" />
+		<StateImagery name="Enabled">
+			<Layer>
+				<Section section="progressbar" />
+			</Layer>
+		</StateImagery>
+		<StateImagery name="Disabled">
+			<Layer>
+				<Section section="progressbar" />
+			</Layer>
+		</StateImagery>
+		<StateImagery name="Effect">
+			<Layer>
+				<Section section="progressbar" />
+			</Layer>
+		</StateImagery>
+	</WidgetLook>
+	<WidgetLook name="TLBB_Look_ProgressPropertyWhite">
+		<Property name="LightEnable" value="false" />
+		<!-- 光头的显示大小 -->
+		<!-- 进度栏的显示范围 -->
+		<NamedArea name="ProgressArea">
+			<Area>
+				<Dim type="LeftEdge">
+					<AbsoluteDim value="0" />
+				</Dim>
+				<Dim type="TopEdge">
+					<AbsoluteDim value="0" />
+				</Dim>
+				<Dim type="RightEdge">
+					<UnifiedDim scale="1" type="RightEdge" />
+				</Dim>
+				<Dim type="BottomEdge">
+					<UnifiedDim scale="1" type="BottomEdge" />
+				</Dim>
+			</Area>
+		</NamedArea>
+		<!-- 进度栏的显示图片 -->
+		<ImagerySection name="progressbar">
+			<FrameComponent>
+				<Area>
+					<Dim type="LeftEdge">
+						<AbsoluteDim value="0" />
+					</Dim>
+					<Dim type="TopEdge">
+						<AbsoluteDim value="0" />
+					</Dim>
+					<Dim type="RightEdge">
+						<UnifiedDim scale="1" type="RightEdge">
+							<DimOperator op="Subtract">
+								<AbsoluteDim value="0" />
+							</DimOperator>
+						</UnifiedDim>
+					</Dim>
+					<Dim type="BottomEdge">
+						<UnifiedDim scale="1" type="BottomEdge">
+							<DimOperator op="Subtract">
+								<AbsoluteDim value="0" />
+							</DimOperator>
+						</UnifiedDim>
+					</Dim>
+				</Area>
+				<Image imageset="Buttons" image="Cursor" />
+				<VertFormat type="Stretched" />
+				<HorzFormat type="Stretched" />
+			</FrameComponent>
+		</ImagerySection>
+		<StateImagery name="LightEnable">
+			<Layer></Layer>
+		</StateImagery>
+		<StateImagery name="LightDisable" />
+		<StateImagery name="Enabled">
+			<Layer>
+				<Section section="progressbar" />
+			</Layer>
+		</StateImagery>
+		<StateImagery name="Disabled">
+			<Layer>
+				<Section section="progressbar" />
+			</Layer>
+		</StateImagery>
+		<StateImagery name="Effect">
+			<Layer>
+				<Section section="progressbar" />
+			</Layer>
+		</StateImagery>
+	</WidgetLook>
+	<!--
+	  ***************************************************
+        用在技能使用的进度条
+    ***************************************************
+    -->
+	<WidgetLook name="TLBB_Look_ProgressSkill">
+		<Property name="LightEnable" value="true" />
+		<NamedArea name="TextArea">
+			<Area>
+				<Dim type="LeftEdge">
+					<AbsoluteDim value="17" />
+				</Dim>
+				<Dim type="TopEdge">
+					<AbsoluteDim value="6" />
+				</Dim>
+				<Dim type="RightEdge">
+					<UnifiedDim scale="1" offset="-17" type="RightEdge"></UnifiedDim>
+				</Dim>
+				<Dim type="BottomEdge">
+					<UnifiedDim scale="1" offset="-6" type="BottomEdge"></UnifiedDim>
+				</Dim>
+			</Area>
+		</NamedArea>
+		<!-- 光头的显示大小 -->
+		<NamedArea name="LightArea">
+			<Area>
+				<Dim type="LeftEdge">
+					<AbsoluteDim value="0" />
+				</Dim>
+				<Dim type="TopEdge">
+					<AbsoluteDim value="0" />
+				</Dim>
+				<Dim type="Width">
+					<AbsoluteDim value="20" />
+				</Dim>
+				<Dim type="Height">
+					<AbsoluteDim value="24" />
+				</Dim>
+			</Area>
+		</NamedArea>
+		<!-- 进度栏的显示范围 -->
+		<NamedArea name="ProgressArea">
+			<Area>
+				<Dim type="LeftEdge">
+					<AbsoluteDim value="17" />
+				</Dim>
+				<Dim type="TopEdge">
+					<AbsoluteDim value="6" />
+				</Dim>
+				<Dim type="RightEdge">
+					<UnifiedDim scale="1" offset="-17" type="RightEdge"></UnifiedDim>
+				</Dim>
+				<Dim type="BottomEdge">
+					<UnifiedDim scale="1" offset="-6" type="BottomEdge"></UnifiedDim>
+				</Dim>
+			</Area>
+		</NamedArea>
+		<!-- 进度栏的显示图片 -->
+		<ImagerySection name="progressbar">
+			<FrameComponent>
+        <Area>
+					<Dim type="LeftEdge">
+						<AbsoluteDim value="0" />
+					</Dim>
+					<Dim type="TopEdge">
+						<AbsoluteDim value="0" />
+					</Dim>
+					<Dim type="RightEdge">
+						<UnifiedDim scale="1" type="RightEdge"></UnifiedDim>
+					</Dim>
+					<Dim type="BottomEdge">
+						<UnifiedDim scale="1" type="BottomEdge"></UnifiedDim>
+					</Dim>
+				</Area>
+        <Image type="LeftEdge" imageset="CommonStaticImage" image="ProgressSkillL" />
+        <Image type="RightEdge" imageset="CommonStaticImage" image="ProgressSkillR" />f
+        <Image type="Background" imageset="CommonStaticImage" image="ProgressSkillM" />
+        <VertFormat type="Stretched" />
+        <HorzFormat type="Stretched" />
+      </FrameComponent>
+		</ImagerySection>
+		<ImagerySection name="background">
+			<FrameComponent>
+				<Area>
+					<Dim type="LeftEdge">
+						<AbsoluteDim value="0" />
+					</Dim>
+					<Dim type="TopEdge">
+						<AbsoluteDim value="0" />
+					</Dim>
+					<Dim type="Width">
+						<UnifiedDim scale="1" type="RightEdge"></UnifiedDim>
+					</Dim>
+					<Dim type="Height">
+						<UnifiedDim scale="1" type="BottomEdge"></UnifiedDim>
+					</Dim>
+				</Area>
+				<Image type="LeftEdge" imageset="CommonStaticImage" image="ProgressBarL" />
+				<Image type="RightEdge" imageset="CommonStaticImage" image="ProgressBarR" />
+				<Image type="Background" imageset="CommonStaticImage" image="ProgressBarM" />
+				<VertFormat type="Stretched" />
+				<HorzFormat type="Stretched" />
+			</FrameComponent>
+		</ImagerySection>
+		<!-- 光图的显示图片 -->
+		<ImagerySection name="Light">
+			<ImageryComponent>
+				<Area>
+					<Dim type="LeftEdge">
+						<AbsoluteDim value="0" />
+					</Dim>
+					<Dim type="TopEdge">
+						<AbsoluteDim value="0" />
+					</Dim>
+					<Dim type="Width">
+						<AbsoluteDim value="20" />
+					</Dim>
+					<Dim type="Height">
+						<AbsoluteDim value="24" />
+					</Dim>
+				</Area>
+				<Image imageset="CommonStaticImage" image="ProgressLight" />
+				<VertFormat type="Stretched" />
+				<HorzFormat type="Stretched" />
+			</ImageryComponent>
+		</ImagerySection>
+		<StateImagery name="LightEnable">
+			<Layer>
+				<Section section="Light" />
+			</Layer>
+		</StateImagery>
+		<StateImagery name="LightDisable" />
+		<StateImagery name="Enabled">
+			<Layer>
+				<Section section="progressbar" />
+			</Layer>
+		</StateImagery>
+		<StateImagery name="Disabled">
+			<Layer>
+				<Section section="progressbar" />
+			</Layer>
+		</StateImagery>
+		<StateImagery name="Effect">
+			<Layer>
+				<Section section="progressbar" />
+			</Layer>
+		</StateImagery>
+		<StateImagery name="Background">
+			<Layer>
+				<Section section="background" />
+			</Layer>
+		</StateImagery>
+	</WidgetLook>
+	<!--
+	  ***************************************************
+        用在读取进度的进度条，高度比较高，可以显示已行文字
+    ***************************************************
+    -->
+</Falagard>

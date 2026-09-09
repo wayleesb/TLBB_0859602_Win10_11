@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<Imageset Name="Scroll" Imagefile="Icons/Scroll.jpg" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+	<Image Name="Scroll_1" XPos="0" YPos="0" Width="64" Height="64" />
+	<Image Name="Scroll_2" XPos="64" YPos="0" Width="64" Height="64" />
+	<Image Name="Scroll_3" XPos="128" YPos="0" Width="64" Height="64" />
+	<Image Name="Scroll_4" XPos="192" YPos="0" Width="64" Height="64" />
+	<Image Name="Scroll_5" XPos="0" YPos="64" Width="64" Height="64" />
+	<Image Name="Scroll_6" XPos="64" YPos="64" Width="64" Height="64" />
+	<Image Name="Scroll_7" XPos="128" YPos="64" Width="64" Height="64" /> 
+  <Image Name="Scroll_8" XPos="192" YPos="64" Width="64" Height="64" /> 
+  <Image Name="Scroll_9" XPos="0" YPos="128" Width="64" Height="64" /> 
+  <Image Name="Scroll_10" XPos="64" YPos="128" Width="64" Height="64" /> 
+  <Image Name="Scroll_11" XPos="128" YPos="128" Width="64" Height="64" /> 
+  <Image Name="Scroll_12" XPos="192" YPos="128" Width="64" Height="64" /> 
+  <Image Name="Scroll_13" XPos="0" YPos="192" Width="64" Height="64" /> 
+  <Image Name="Scroll_14" XPos="64" YPos="192" Width="64" Height="64" /> 
+  <Image Name="Scroll_15" XPos="128" YPos="192" Width="64" Height="64" /> 
+  <Image Name="Scroll_16" XPos="192" YPos="192" Width="64" Height="64" />
+</Imageset>

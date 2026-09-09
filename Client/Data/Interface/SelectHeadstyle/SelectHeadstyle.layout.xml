@@ -1,0 +1,365 @@
+<?xml version="1.0" ?>
+<GUILayout>
+	<Window Type="TLBB_MainFrame1" Name="SelectHeadstyle_Frame">
+		<Property Name="UnifiedPosition" Value="{{0.000000,205.000000},{0.150000,-24}" />
+		<Property Name="AbsoluteSize" Value="w:400 h:470" />    
+		<Window Type="TLBB_DragTitle" Name="SelectHeadstyle_DragTitle">
+			<Property Name="AbsolutePosition" Value="x:24.000000 y:11.000000" />
+			<Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+			<Property Name="DragTarget" Value="SelectHeadstyle_Frame" />
+			<Property Name="Font" Value="YouYuan11.25" />
+			<Property Name="Text" Value="#{INTERHEAD_XML_001}" />
+			<Property Name="HorzFormatting" Value="HorzCentred" />
+			<Property Name="VertFormatting" Value="VertCentred" />
+		</Window>
+		<Window Type="TLBB_ButtonHelp" Name="SelectHeadstyle_Help">
+			<Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+			<Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+			<Event Name="Clicked" Function='Helper:GotoHelper(&quot;*SelectHeadstyle&quot;);' />
+		</Window>
+		<Window Type="TLBB_ButtonClose" Name="SelectHeadstyle_Close">
+			<Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+			<Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+			<Event Name="Clicked" Function="this:Hide();" />
+		</Window>		
+		<Window Type="DefaultWindow" Name="SelectHeadGroup_StyleList">
+			<Property Name="AbsolutePosition" Value="x:12.000000 y:45.000000" />                
+			<Property Name="UnifiedSize" Value="{{1.000000,-20.000000},{1.000000,-245.000000}" />
+			<Window Type="TLBB_StaticImageFrame" Name="SelectHeadGroup_Skill1_Lace1" >
+				<Property Name="UnifiedPosition" Value="{{0,10},{0,0}}" />
+				<Property Name="UnifiedSize" Value="{{0.0,54.000000},{0.000000,54.000000}" />
+				<Window Type="TLBB_ActionButton" Name="SelectHeadGroup_Skill1_BKG">
+					<Property Name="UnifiedPosition" Value="{{0,3},{0,3}}" />
+					<Property Name="UnifiedSize" Value="{{0.0,48.000000},{0.000000,48.000000}" />
+					<Property Name="Empty" Value="False" />
+					<Property Name="UseDefaultTooltip" Value="True" />
+	        <Event Name="Clicked" Function="SelectHeadGroup_Clicked(1);" />
+				</Window>
+			</Window>
+			<Window Type="TLBB_StaticImageFrame" Name="SelectHeadGroup_Skill2_Lace1" >
+				<Property Name="UnifiedPosition" Value="{{0,66},{0,0}}" />
+				<Property Name="UnifiedSize" Value="{{0.0,54.000000},{0.000000,54.000000}" />
+				<Window Type="TLBB_ActionButton" Name="SelectHeadGroup_Skill2_BKG">
+          <Property Name="UnifiedPosition" Value="{{0,3},{0,3}}" />
+          <Property Name="UnifiedSize" Value="{{0.0,48.000000},{0.000000,48.000000}" />
+					<Property Name="Empty" Value="False" />
+					<Property Name="UseDefaultTooltip" Value="True" />
+	        <Event Name="Clicked" Function="SelectHeadGroup_Clicked(2);" />
+				</Window>
+			</Window>
+			<Window Type="TLBB_StaticImageFrame" Name="SelectHeadGroup_Skill3_Lace1" >
+				<Property Name="UnifiedPosition" Value="{{0,122},{0,0}}" />
+				<Property Name="UnifiedSize" Value="{{0.0,54.000000},{0.000000,54.000000}" />
+				<Window Type="TLBB_ActionButton" Name="SelectHeadGroup_Skill3_BKG">
+          <Property Name="UnifiedPosition" Value="{{0,3},{0,3}}" />
+          <Property Name="UnifiedSize" Value="{{0.0,48.000000},{0.000000,48.000000}" />
+					<Property Name="Empty" Value="False" />
+					<Property Name="UseDefaultTooltip" Value="True" />
+	        <Event Name="Clicked" Function="SelectHeadGroup_Clicked(3);" />
+				</Window>
+			</Window>
+			<Window Type="TLBB_StaticImageFrame" Name="SelectHeadGroup_Skill4_Lace1" >
+				<Property Name="UnifiedPosition" Value="{{0,178},{0,0}}" />
+				<Property Name="UnifiedSize" Value="{{0.0,54.000000},{0.000000,54.000000}" />
+				<Window Type="TLBB_ActionButton" Name="SelectHeadGroup_Skill4_BKG">
+          <Property Name="UnifiedPosition" Value="{{0,3},{0,3}}" />
+          <Property Name="UnifiedSize" Value="{{0.0,48.000000},{0.000000,48.000000}" />
+					<Property Name="Empty" Value="False" />
+					<Property Name="UseDefaultTooltip" Value="True" />
+	        <Event Name="Clicked" Function="SelectHeadGroup_Clicked(4);" />
+				</Window>
+			</Window>
+			<Window Type="TLBB_StaticImageFrame" Name="SelectHeadGroup_Skill5_Lace1" >
+				<Property Name="UnifiedPosition" Value="{{0,234},{0,0}}" />
+				<Property Name="UnifiedSize" Value="{{0.0,54.000000},{0.000000,54.000000}" />
+				<Window Type="TLBB_ActionButton" Name="SelectHeadGroup_Skill5_BKG">
+          <Property Name="UnifiedPosition" Value="{{0,3},{0,3}}" />
+          <Property Name="UnifiedSize" Value="{{0.0,48.000000},{0.000000,48.000000}" />
+          <Property Name="Empty" Value="False" />
+					<Property Name="UseDefaultTooltip" Value="True" />
+	        <Event Name="Clicked" Function="SelectHeadGroup_Clicked(5);" />
+				</Window>
+			</Window>
+			<Window Type="TLBB_StaticImageFrame" Name="SelectHeadGroup_Skill6_Lace1" >
+				<Property Name="UnifiedPosition" Value="{{0,290},{0,0}}" />
+				<Property Name="UnifiedSize" Value="{{0.0,54.000000},{0.000000,54.000000}" />
+				<Window Type="TLBB_ActionButton" Name="SelectHeadGroup_Skill6_BKG">
+          <Property Name="UnifiedPosition" Value="{{0,3},{0,3}}" />
+          <Property Name="UnifiedSize" Value="{{0.0,48.000000},{0.000000,48.000000}" />
+          <Property Name="Empty" Value="False" />
+					<Property Name="UseDefaultTooltip" Value="True" />
+	        <Event Name="Clicked" Function="SelectHeadGroup_Clicked(6);" />
+				</Window>
+			</Window>
+			<Window Type="TLBB_StaticImageFrame" Name="SelectHeadGroup_Skill7_Lace1" >
+				<Property Name="UnifiedPosition" Value="{{0,10},{0,56}}" />
+				<Property Name="UnifiedSize" Value="{{0.0,54.000000},{0.000000,54.000000}" />
+				<Window Type="TLBB_ActionButton" Name="SelectHeadGroup_Skill7_BKG">
+          <Property Name="UnifiedPosition" Value="{{0,3},{0,3}}" />
+          <Property Name="UnifiedSize" Value="{{0.0,48.000000},{0.000000,48.000000}" />
+          <Property Name="Empty" Value="False" />
+					<Property Name="UseDefaultTooltip" Value="True" />
+	        <Event Name="Clicked" Function="SelectHeadGroup_Clicked(7);" />
+				</Window>
+			</Window>
+			<Window Type="TLBB_StaticImageFrame" Name="SelectHeadGroup_Skill8_Lace1" >
+				<Property Name="UnifiedPosition" Value="{{0,66},{0,56}}" />
+				<Property Name="UnifiedSize" Value="{{0.0,54.000000},{0.000000,54.000000}" />
+				<Window Type="TLBB_ActionButton" Name="SelectHeadGroup_Skill8_BKG">
+          <Property Name="UnifiedPosition" Value="{{0,3},{0,3}}" />
+          <Property Name="UnifiedSize" Value="{{0.0,48.000000},{0.000000,48.000000}" />
+          <Property Name="Empty" Value="False" />
+					<Property Name="UseDefaultTooltip" Value="True" />
+	        <Event Name="Clicked" Function="SelectHeadGroup_Clicked(8);" />
+				</Window>
+			</Window>
+			<Window Type="TLBB_StaticImageFrame" Name="SelectHeadGroup_Skill9_Lace1" >
+				<Property Name="UnifiedPosition" Value="{{0,122},{0,56}}" />
+				<Property Name="UnifiedSize" Value="{{0.0,54.000000},{0.000000,54.000000}" />
+				<Window Type="TLBB_ActionButton" Name="SelectHeadGroup_Skill9_BKG">
+          <Property Name="UnifiedPosition" Value="{{0,3},{0,3}}" />
+          <Property Name="UnifiedSize" Value="{{0.0,48.000000},{0.000000,48.000000}" />
+          <Property Name="Empty" Value="False" />
+					<Property Name="UseDefaultTooltip" Value="True" />
+	        <Event Name="Clicked" Function="SelectHeadGroup_Clicked(9);" />
+				</Window>
+			</Window>
+			<Window Type="TLBB_StaticImageFrame" Name="SelectHeadGroup_Skill10_Lace1" >
+				<Property Name="UnifiedPosition" Value="{{0,178},{0,56}}" />
+				<Property Name="UnifiedSize" Value="{{0.0,54.000000},{0.000000,54.000000}" />
+				<Window Type="TLBB_ActionButton" Name="SelectHeadGroup_Skill10_BKG">
+          <Property Name="UnifiedPosition" Value="{{0,3},{0,3}}" />
+          <Property Name="UnifiedSize" Value="{{0.0,48.000000},{0.000000,48.000000}" />
+          <Property Name="Empty" Value="False" />
+					<Property Name="UseDefaultTooltip" Value="True" />
+	        <Event Name="Clicked" Function="SelectHeadGroup_Clicked(10);" />
+				</Window>
+			</Window>
+			<Window Type="TLBB_StaticImageFrame" Name="SelectHeadGroup_Skill11_Lace1" >
+				<Property Name="UnifiedPosition" Value="{{0,234},{0,56}}" />
+				<Property Name="UnifiedSize" Value="{{0.0,54.000000},{0.000000,54.000000}" />
+				<Window Type="TLBB_ActionButton" Name="SelectHeadGroup_Skill11_BKG">
+          <Property Name="UnifiedPosition" Value="{{0,3},{0,3}}" />
+          <Property Name="UnifiedSize" Value="{{0.0,48.000000},{0.000000,48.000000}" />
+          <Property Name="Empty" Value="False" />
+					<Property Name="UseDefaultTooltip" Value="True" />
+	        <Event Name="Clicked" Function="SelectHeadGroup_Clicked(11);" />
+				</Window>
+			</Window>
+			<Window Type="TLBB_StaticImageFrame" Name="SelectHeadGroup_Skill12_Lace1" >
+				<Property Name="UnifiedPosition" Value="{{0,290},{0,56}}" />
+				<Property Name="UnifiedSize" Value="{{0.0,54.000000},{0.000000,54.000000}" />
+				<Window Type="TLBB_ActionButton" Name="SelectHeadGroup_Skill12_BKG">
+          <Property Name="UnifiedPosition" Value="{{0,3},{0,3}}" />
+          <Property Name="UnifiedSize" Value="{{0.0,48.000000},{0.000000,48.000000}" />
+          <Property Name="Empty" Value="False" />
+					<Property Name="UseDefaultTooltip" Value="True" />
+	        <Event Name="Clicked" Function="SelectHeadGroup_Clicked(12);" />
+				</Window>
+			</Window>
+			<Window Type="TLBB_StaticImageFrame" Name="SelectHeadGroup_Skill13_Lace1" >
+				<Property Name="UnifiedPosition" Value="{{0,10},{0,112}}" />
+				<Property Name="UnifiedSize" Value="{{0.0,54.000000},{0.000000,54.000000}" />
+        <Window Type="TLBB_ActionButton" Name="SelectHeadGroup_Skill13_BKG">
+          <Property Name="UnifiedPosition" Value="{{0,3},{0,3}}" />
+          <Property Name="UnifiedSize" Value="{{0.0,48.000000},{0.000000,48.000000}" />
+          <Property Name="Empty" Value="False" />
+          <Property Name="UseDefaultTooltip" Value="True" />
+          <Event Name="Clicked" Function="SelectHeadGroup_Clicked(13);" />
+        </Window>
+			</Window>
+			<Window Type="TLBB_StaticImageFrame" Name="SelectHeadGroup_Skill14_Lace1" >
+				<Property Name="UnifiedPosition" Value="{{0,66},{0,112}}" />
+				<Property Name="UnifiedSize" Value="{{0.0,54.000000},{0.000000,54.000000}" />
+        <Window Type="TLBB_ActionButton" Name="SelectHeadGroup_Skill14_BKG">
+          <Property Name="UnifiedPosition" Value="{{0,3},{0,3}}" />
+          <Property Name="UnifiedSize" Value="{{0.0,48.000000},{0.000000,48.000000}" />
+          <Property Name="Empty" Value="False" />
+          <Property Name="UseDefaultTooltip" Value="True" />
+          <Event Name="Clicked" Function="SelectHeadGroup_Clicked(14);" />
+        </Window>
+			</Window>
+			<Window Type="TLBB_StaticImageFrame" Name="SelectHeadGroup_Skill15_Lace1" >
+				<Property Name="UnifiedPosition" Value="{{0,122},{0,112}}" />
+				<Property Name="UnifiedSize" Value="{{0.0,54.000000},{0.000000,54.000000}" />
+        <Window Type="TLBB_ActionButton" Name="SelectHeadGroup_Skill15_BKG">
+          <Property Name="UnifiedPosition" Value="{{0,3},{0,3}}" />
+          <Property Name="UnifiedSize" Value="{{0.0,48.000000},{0.000000,48.000000}" />
+          <Property Name="Empty" Value="False" />
+					<Property Name="UseDefaultTooltip" Value="True" />
+	        <Event Name="Clicked" Function="SelectHeadGroup_Clicked(15);" />
+				</Window>
+			</Window>
+			<Window Type="TLBB_StaticImageFrame" Name="SelectHeadGroup_Skill16_Lace1" >
+				<Property Name="UnifiedPosition" Value="{{0,178},{0,112}}" />
+				<Property Name="UnifiedSize" Value="{{0.0,54.000000},{0.000000,54.000000}" />
+        <Window Type="TLBB_ActionButton" Name="SelectHeadGroup_Skill16_BKG">
+          <Property Name="UnifiedPosition" Value="{{0,3},{0,3}}" />
+          <Property Name="UnifiedSize" Value="{{0.0,48.000000},{0.000000,48.000000}" />
+          <Property Name="Empty" Value="False" />
+          <Property Name="UseDefaultTooltip" Value="True" />
+          <Event Name="Clicked" Function="SelectHeadGroup_Clicked(16);" />
+        </Window>
+			</Window>
+			<Window Type="TLBB_StaticImageFrame" Name="SelectHeadGroup_Skill17_Lace1" >
+				<Property Name="UnifiedPosition" Value="{{0,234},{0,112}}" />
+				<Property Name="UnifiedSize" Value="{{0.0,54.000000},{0.000000,54.000000}" />
+        <Window Type="TLBB_ActionButton" Name="SelectHeadGroup_Skill17_BKG">
+          <Property Name="UnifiedPosition" Value="{{0,3},{0,3}}" />
+          <Property Name="UnifiedSize" Value="{{0.0,48.000000},{0.000000,48.000000}" />
+          <Property Name="Empty" Value="False" />
+          <Property Name="UseDefaultTooltip" Value="True" />
+          <Event Name="Clicked" Function="SelectHeadGroup_Clicked(17);" />
+        </Window>
+			</Window>
+			<Window Type="TLBB_StaticImageFrame" Name="SelectHeadGroup_Skill18_Lace1" >
+				<Property Name="UnifiedPosition" Value="{{0,290},{0,112}}" />
+				<Property Name="UnifiedSize" Value="{{0.0,54.000000},{0.000000,54.000000}" />
+        <Window Type="TLBB_ActionButton" Name="SelectHeadGroup_Skill18_BKG">
+          <Property Name="UnifiedPosition" Value="{{0,3},{0,3}}" />
+          <Property Name="UnifiedSize" Value="{{0.0,48.000000},{0.000000,48.000000}" />
+          <Property Name="Empty" Value="False" />
+          <Property Name="UseDefaultTooltip" Value="True" />
+          <Event Name="Clicked" Function="SelectHeadGroup_Clicked(18);" />
+        </Window>
+			</Window>
+			<Window Type="TLBB_StaticImageFrame" Name="SelectHeadGroup_Skill19_Lace1" >
+				<Property Name="UnifiedPosition" Value="{{0,10},{0,168}}" />
+				<Property Name="UnifiedSize" Value="{{0.0,54.000000},{0.000000,54.000000}" />
+        <Window Type="TLBB_ActionButton" Name="SelectHeadGroup_Skill19_BKG">
+          <Property Name="UnifiedPosition" Value="{{0,3},{0,3}}" />
+          <Property Name="UnifiedSize" Value="{{0.0,48.000000},{0.000000,48.000000}" />
+          <Property Name="Empty" Value="False" />
+          <Property Name="UseDefaultTooltip" Value="True" />
+          <Event Name="Clicked" Function="SelectHeadGroup_Clicked(19);" />
+        </Window>
+			</Window>
+			<Window Type="TLBB_StaticImageFrame" Name="SelectHeadGroup_Skill20_Lace1" >
+				<Property Name="UnifiedPosition" Value="{{0,66},{0,168}}" />
+				<Property Name="UnifiedSize" Value="{{0.0,54.000000},{0.000000,54.000000}" />
+        <Window Type="TLBB_ActionButton" Name="SelectHeadGroup_Skill20_BKG">
+          <Property Name="UnifiedPosition" Value="{{0,3},{0,3}}" />
+          <Property Name="UnifiedSize" Value="{{0.0,48.000000},{0.000000,48.000000}" />
+          <Property Name="Empty" Value="False" />
+          <Property Name="UseDefaultTooltip" Value="True" />
+          <Event Name="Clicked" Function="SelectHeadGroup_Clicked(20);" />
+        </Window>
+			</Window>
+			<Window Type="TLBB_StaticImageFrame" Name="SelectHeadGroup_Skill21_Lace1" >
+				<Property Name="UnifiedPosition" Value="{{0,122},{0,168}}" />
+				<Property Name="UnifiedSize" Value="{{0.0,54.000000},{0.000000,54.000000}" />
+        <Window Type="TLBB_ActionButton" Name="SelectHeadGroup_Skill21_BKG">
+          <Property Name="UnifiedPosition" Value="{{0,3},{0,3}}" />
+          <Property Name="UnifiedSize" Value="{{0.0,48.000000},{0.000000,48.000000}" />
+          <Property Name="Empty" Value="False" />
+          <Property Name="UseDefaultTooltip" Value="True" />
+          <Event Name="Clicked" Function="SelectHeadGroup_Clicked(21);" />
+        </Window>
+			</Window>
+			<Window Type="TLBB_StaticImageFrame" Name="SelectHeadGroup_Skill22_Lace1" >
+				<Property Name="UnifiedPosition" Value="{{0,178},{0,168}}" />
+				<Property Name="UnifiedSize" Value="{{0.0,54.000000},{0.000000,54.000000}" />
+        <Window Type="TLBB_ActionButton" Name="SelectHeadGroup_Skill22_BKG">
+          <Property Name="UnifiedPosition" Value="{{0,3},{0,3}}" />
+          <Property Name="UnifiedSize" Value="{{0.0,48.000000},{0.000000,48.000000}" />
+          <Property Name="Empty" Value="False" />
+          <Property Name="UseDefaultTooltip" Value="True" />
+          <Event Name="Clicked" Function="SelectHeadGroup_Clicked(22);" />
+        </Window>
+			</Window>
+			<Window Type="TLBB_StaticImageFrame" Name="SelectHeadGroup_Skill23_Lace1" >
+				<Property Name="UnifiedPosition" Value="{{0,234},{0,168}}" />
+				<Property Name="UnifiedSize" Value="{{0.0,54.000000},{0.000000,54.000000}" />
+
+			</Window>
+			<Window Type="TLBB_StaticImageFrame" Name="SelectHeadGroup_Skill24_Lace1" >
+				<Property Name="UnifiedPosition" Value="{{0,290},{0,168}}" />
+				<Property Name="UnifiedSize" Value="{{0.0,54.000000},{0.000000,54.000000}" />
+
+			</Window>
+			<Window Type="TLBB_ButtonNULL" Name="SelectHeadstyle_PageUp">
+				<Property Name="UnifiedPosition" Value="{{1.000000,-23.000000},{0.000000,30.000000}" />
+        <Property Name="AbsoluteSize" Value="w:20.000000 h:26.000000" />
+				<Property Name="NormalImage" Value="set:Button6 image:PageUp_Btn_Normal" />
+				<Property Name="HoverImage" Value="set:Button6 image:PageUp_Btn_Hover" />
+				<Property Name="PushedImage" Value="set:Button6 image:PageUp_Btn_Pushed" />
+				<Property Name="DisabledImage" Value="set:Button6 image:PageUp_Btn_Disabled" />
+			</Window>
+			<Window Type="TLBB_ButtonNULL" Name="SelectHeadstyle_PageDown">
+				<Property Name="UnifiedPosition" Value="{{1.000000,-23.000000},{1.000000,-70.000000}" />
+        <Property Name="AbsoluteSize" Value="w:20.000000 h:26.000000" />
+				<Property Name="NormalImage" Value="set:Button6 image:PageDown_Btn_Normal" />
+				<Property Name="HoverImage" Value="set:Button6 image:PageDown_Btn_Hover" />
+				<Property Name="PushedImage" Value="set:Button6 image:PageDown_Btn_Pushed" />
+				<Property Name="DisabledImage" Value="set:Button6 image:PageDown_Btn_Disabled" />
+			</Window>
+		</Window>
+		<Window Type="DefaultWindow" Name="SelectHeadstyle_StyleList">
+      <Property Name="AbsolutePosition" Value="x:37.000000 y:294.000000" />
+      <Property Name="UnifiedSize" Value="{{0.000000,310.000000},{0.000000,54.000000}" />
+      <Window Type="TLBB_StaticImageFrame" Name="SelectHeadstyle_Skill1_Lace1" >
+        <Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+        <Property Name="AbsoluteSize" Value="w:54.000000 h:54.000000" />
+        <Window Type="TLBB_ActionButtonNULL" Name="SelectHeadstyle_Skill1_BKG">
+          <Property Name="UnifiedPosition" Value="{{0,3},{0,3}}" />
+          <Property Name="UnifiedSize" Value="{{0.0,48.000000},{0.000000,48.000000}" />
+					<Property Name="Empty" Value="False" />
+					<Property Name="UseDefaultTooltip" Value="True" />        
+				</Window>
+			</Window>
+			<Window Type="TLBB_Frame_Lace1" Name="SelectHeadstyle_Skill2_Lace1" >
+        <Property Name="UnifiedPosition" Value="{{0.000000,64.000000},{0.000000,0.000000}" />
+        <Property Name="UnifiedSize" Value="{{0.000000,54.000000},{0.000000,54.000000}" />
+
+			</Window>
+			<Window Type="TLBB_Frame_Lace1" Name="SelectHeadstyle_Skill3_Lace1" >
+        <Property Name="UnifiedPosition" Value="{{0.000000,128.000000},{0.000000,0.000000}" />
+        <Property Name="UnifiedSize" Value="{{0.000000,54.000000},{0.000000,54.000000}" />
+
+			</Window>
+			<Window Type="TLBB_Frame_Lace1" Name="SelectHeadstyle_Skill4_Lace1" >
+        <Property Name="UnifiedPosition" Value="{{0.000000,192.000000},{0.000000,0.000000}" />
+        <Property Name="UnifiedSize" Value="{{0.000000,54.000000},{0.000000,54.000000}" />
+
+			</Window>
+			<Window Type="TLBB_Frame_Lace1" Name="SelectHeadstyle_Skill5_Lace1" >
+        <Property Name="UnifiedPosition" Value="{{0.000000,256.000000},{0.000000,0.000000}" />
+        <Property Name="UnifiedSize" Value="{{0.000000,54.000000},{0.000000,54.000000}" />
+
+			</Window>
+		</Window>
+		<Window Type="TLBB_SimpleMulitiTextFrame" Name="SelectHeadstyle_Require">
+			<Property Name="AbsolutePosition" Value="x:9.000000 y:270.000000" />
+			<Property Name="UnifiedSize" Value="{{0.000000,383.000000},{0.000000,20.000000}" />
+			<Property Name="Text" Value="" />
+			<Property Name="TextColor" Value="FFFFF263" />
+			<Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+			<Property Name="VertFormatting" Value="TopAligned" />
+			<Property Name="RiseOnClick" Value="False" />
+		</Window>
+		<Window Type="TLBB_StaticText" Name="SelectHeadstyle_WarningText">
+			<Property Name="AbsolutePosition" Value="x:12.000000 y:351.000000" />
+      <Property Name="UnifiedSize" Value="{{0.000000,380.000000},{0.000000,75.000000}" />
+			<Property Name="Text" Value="#{INTERHEAD_XML_002}" />
+			<Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+			<Property Name="VertFormatting" Value="TopAligned" />
+			<Property Name="VertScrollbar" Value="true" />
+		</Window>
+		<Window Type="TLBB_Frame_Lace5" Name="SelectHeadstyle_Blank">
+			<Property Name="AbsolutePosition" Value="x:8.000000 y:431.000000" />
+			<Property Name="UnifiedSize" Value="{{0.000000,262.000000},{0.000000,20.000000}" />
+		</Window>
+		<Window Type="TLBB_ButtonCommon" Name="SelectHeadstyle_Accept">
+			<Property Name="UnifiedPosition" Value="{{1.000000,-129.000000},{1.000000,-38.000000}" />
+      <Property Name="AbsoluteSize" Value="w:60.000000 h:20.000000" />
+			<Property Name="Text" Value="#{INTERFACE_XML_556}" />
+      <Event Name="Clicked" Function="SelectHeadstyle_OK_Clicked();" />
+		</Window>
+		<Window Type="TLBB_ButtonCommon" Name="SelectHeadstyle_Cancel">
+			<Property Name="UnifiedPosition" Value="{{1.000000,-69.000000},{1.000000,-38.000000}" />
+      <Property Name="AbsoluteSize" Value="w:60.000000 h:20.000000" />
+			<Property Name="Text" Value="#{INTERFACE_XML_539}" />
+			<Event Name="Clicked" Function="this:Hide();" />
+		</Window>		
+	</Window>
+</GUILayout>

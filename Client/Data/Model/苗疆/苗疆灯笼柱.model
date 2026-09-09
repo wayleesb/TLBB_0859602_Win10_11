@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="苗疆灯笼柱.frame" />
+    <entity mesh="苗疆灯笼柱.mesh" />
+    <entity mesh="苗疆灯笼链子.mesh" node="苗疆灯笼链子" />
+</model>

@@ -1,0 +1,115 @@
+<?xml version="1.0" ?>
+<GUILayout>
+	<Window Type="DefaultWindow" Name="Pswprotect_BackGround_Frame">
+		<Property Name="Position" Value="x:0 y:0" />
+		<Property Name="Size" Value="w:1 h:1" />
+        <Event Name="MouseButtonDown" Function="" />
+		<Window Type="TLBB_MainFrame1" Name="Pswprotect_Frame">
+			<Property Name="UnifiedPosition" Value="{{0.000000,551.000000},{0.000000,118.000000}" />
+			<Property Name="AbsoluteSize" Value="w:245 h:220" />
+			<Window Type="TLBB_DragTitle" Name="Pswprotect_DragTitle">
+				<Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+				<Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+				<Property Name="DragTarget" Value="Pswprotect_Frame" />
+				<Property Name="Font" Value="YouYuan11.25" />
+				<Property Name="HorzFormatting" Value="HorzCentred" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+				<Property Name="Text" Value="#{INTERFACE_XML_944}" />
+			</Window>
+			<Window Type="TLBB_ButtonHelp" Name="Pswprotect_Help">
+				<Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+				<Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+				<Property Name="Text" Value="TLBB_ButtonHelp" />
+				<Event Name="Clicked" Function='Helper:GotoHelper(&quot;*Pswprotect&quot;);' />
+			</Window>
+			<Window Type="TLBB_ButtonClose" Name="Pswprotect_Close">
+				<Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+				<Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+				<Property Name="Text" Value="TLBB_ButtonClose" />
+				<Event Name="Clicked" Function="MiBao_Click_Cancel();" />
+			</Window>
+			<Window Type="DefaultWindow" Name="Pswprotect_Function_Frame">
+				<Property Name="AbsolutePosition" Value="x:6.000000 y:36.000000" />
+				<Property Name="UnifiedSize" Value="{{1.000000,-13.000000},{1.000000,-55.000000}" />
+				<Window Type="TLBB_SimpleText" Name="Pswprotect_Text">
+					<Property Name="AbsolutePosition" Value="x:5.000000 y:10.000000" />
+					<Property Name="UnifiedSize" Value="{{1.0,-10.000000},{0.000000,36.000000}" />
+					<Property Name="Text" Value="#{INTERFACE_XML_1014}" />
+					<Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+					<Property Name="VertFormatting" Value="TopAligned" />
+					<Property Name="TextColor" Value="FFFFF263" />
+				</Window>
+				<Window Type="TLBB_SimpleText" Name="Pswprotect_Text1">
+					<Property Name="AbsolutePosition" Value="x:25.000000 y:50.000000" />
+					<Property Name="AbsoluteSize" Value="w:130.000000 h:20.000000" />
+					<Property Name="HorzFormatting" Value="LeftAligned" />
+					<Property Name="VertFormatting" Value="VertCentred" />
+					<Property Name="TextColor" Value="FFFFF263" />
+					<Property Name="Text" Value="" />
+				</Window>
+				<Window Type="TLBB_EditBoxNormal" Name="Pswprotect_Input1">
+					<Property Name="AbsolutePosition" Value="x:165.000000 y:50.000000" />
+					<Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+					<Property Name="MaxTextLength" Value="2" />
+					<Property Name="ValidationString" Value="[0-9]*" />
+					<Property Name="Text" Value="" />
+					<Property Name="MaskText" Value="True" />
+					<Event Name="TabPressed" Function="MiBao_TabPressed(1);" />
+					<Event Name="Activated" Function="MiBao_Activated(1);" />
+				</Window>
+				<Window Type="TLBB_SimpleText" Name="Pswprotect_Text2">
+					<Property Name="AbsolutePosition" Value="x:25.000000 y:80.000000" />
+					<Property Name="AbsoluteSize" Value="w:130.000000 h:20.000000" />
+					<Property Name="HorzFormatting" Value="LeftAligned" />
+					<Property Name="VertFormatting" Value="VertCentred" />
+					<Property Name="TextColor" Value="FFFFF263" />
+					<Property Name="Text" Value="" />
+				</Window>
+				<Window Type="TLBB_EditBoxNormal" Name="Pswprotect_Input2">
+					<Property Name="AbsolutePosition" Value="x:165.000000 y:80.000000" />
+					<Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+					<Property Name="MaxTextLength" Value="2" />
+					<Property Name="ValidationString" Value="[0-9]*" />
+					<Property Name="Text" Value="" />
+					<Property Name="MaskText" Value="True" />
+					<Event Name="TabPressed" Function="MiBao_TabPressed(2);" />
+					<Event Name="Activated" Function="MiBao_Activated(2);" />
+				</Window>
+				<Window Type="TLBB_SimpleText" Name="Pswprotect_Text3">
+					<Property Name="AbsolutePosition" Value="x:25.000000 y:110.000000" />
+					<Property Name="AbsoluteSize" Value="w:130.000000 h:20.000000" />
+					<Property Name="HorzFormatting" Value="LeftAligned" />
+					<Property Name="VertFormatting" Value="VertCentred" />
+					<Property Name="TextColor" Value="FFFFF263" />
+					<Property Name="Text" Value="" />
+				</Window>
+				<Window Type="TLBB_EditBoxNormal" Name="Pswprotect_Input3">
+					<Property Name="AbsolutePosition" Value="x:165.000000 y:110.000000" />
+					<Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+					<Property Name="MaxTextLength" Value="2" />
+					<Property Name="MaskText" Value="True" />
+					<Property Name="ValidationString" Value="[0-9]*" />
+					<Property Name="Text" Value="" />
+					<Event Name="TabPressed" Function="MiBao_TabPressed(3);" />
+					<Event Name="Activated" Function="MiBao_Activated(3);" />
+				</Window>
+				<Window Type="TLBB_Frame_Lace5" Name="Pswprotect_Blank">
+					<Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-20.000000}" />
+					<Property Name="UnifiedSize" Value="{{1.000000,-80.000000},{0.000000,20.000000}" />
+				</Window>
+				<Window Type="TLBB_ButtonCommon" Name="Pswprotect_Accept">
+					<Property Name="UnifiedPosition" Value="{{1.000000,-80.000000},{1.000000,-20.000000}" />
+					<Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+					<Property Name="Text" Value="#{INTERFACE_XML_557}" />
+					<Event Name="Clicked" Function="MiBao_Click_OK();" />
+				</Window>
+				<Window Type="TLBB_ButtonCommon" Name="Pswprotect_Cancel">
+					<Property Name="UnifiedPosition" Value="{{1.000000,-40.000000},{1.000000,-20.000000}" />
+					<Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+					<Property Name="Text" Value="#{INTERFACE_XML_542}" />
+					<Event Name="Clicked" Function="MiBao_Click_Cancel();" />
+				</Window>
+			</Window>
+		</Window>
+	</Window>
+</GUILayout>

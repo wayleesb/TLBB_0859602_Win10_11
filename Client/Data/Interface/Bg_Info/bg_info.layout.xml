@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" ?>
+<GUILayout>
+	<Window Type="TLBB_StaticImageNULL" Name="BgInfo_Frame">
+		<Property Name="Position" Value="x:0 y:0" />
+		<Property Name="Size" Value="w:1 h:1" />
+		<Property Name="AlwaysOnTop" Value="True" />
+		<Property Name="RelativeMaxSize" Value="w:100 h:100" />
+		<Property Name="Image" Value="set:BGLogin_Ground image:BGImg" />
+		
+		
+		<Window Type="TLBB_StaticImageNULL" Name="BgInfo_Image">
+		    <Property Name="RelativeMaxSize" Value="w:100 h:100" />
+		    <Property Name="Size" Value="w:1 h:1" />
+		    
+			<Window Type="TLBB_StaticImageNULL" Name="BgInfo_Image_0">
+				<Property Name="Position" Value="x:0 y:0" />
+				<Property Name="Size" Value="w:0.5 h:0.66667" />
+				<Property Name="RelativeMaxSize" Value="w:100 h:100" />
+			</Window>
+			<Window Type="TLBB_StaticImageNULL" Name="BgInfo_Image_1">
+				<Property Name="Position" Value="x:0.5 y:0" />
+				<Property Name="Size" Value="w:0.5 h:0.66667" />
+				<Property Name="RelativeMaxSize" Value="w:100 h:100" />
+			</Window>
+			
+			<Window Type="TLBB_StaticImageNULL" Name="BgInfo_Image_2">
+				<Property Name="Position" Value="x:0 y:0.6667" />
+				<Property Name="Size" Value="w:0.5 h:0.3333" />
+				<Property Name="RelativeMaxSize" Value="w:100 h:100" />
+			</Window>
+			<Window Type="TLBB_StaticImageNULL" Name="BgInfo_Image_3">
+				<Property Name="Position" Value="x:0.5 y:0.6667" />
+				<Property Name="Size" Value="w:0.5 h:0.3333" />
+				<Property Name="RelativeMaxSize" Value="w:100 h:100" />
+			</Window>
+		</Window>
+		
+		<Window Type="TLBB_SimpleText" Name="BgInfo_Text">
+			<Property Name="UnifiedPosition" Value="{{0.200000,-1.000002},{0.920000,-33.080010}" />
+		    <Property Name="UnifiedSize" Value="{{0.500000,1.000000},{0.000000,70.000000}" />
+			<Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+			<Property Name="VertFormatting" Value="TopAligned" />
+			<Property Name="TextColor" Value="FF404040" />
+			<Property Name="Text" Value="小提示：木有奶牛关。木有奶牛关。木有奶牛关。木有奶牛关。木有奶牛关。木有奶牛关。木有奶牛关。木有奶牛关。" />
+		</Window>		
+  </Window>
+</GUILayout>

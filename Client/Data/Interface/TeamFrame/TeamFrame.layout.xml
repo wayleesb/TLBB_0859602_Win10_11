@@ -1,0 +1,447 @@
+<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame2" Name="Team_Frame">
+      <Property Name="UnifiedPosition" Value="{{0.500000,-385.500000},{0.500000,-200.000000}" />
+      <Property Name="AbsoluteSize" Value="w:773.000000 h:316.000000"  />
+        <Window Type="TLBB_DragTitle" Name="Team_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:26.000000 y:2.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-52.000000},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="Team_Frame" />
+            <Window Type="TLBB_SimpleText" Name="Team_Name">
+                <Property Name="Position" Value="x:0.000000 y:0.000000" />
+                <Property Name="Size" Value="w:1.000000 h:1.000000" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="Font" Value="YouYuan11.25" />
+            </Window>
+        </Window>
+        <Window Type="TLBB_ButtonHelp" Name="Team_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,5.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*Team_Frame&quot;);' />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="Team_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,5.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function="TeamFrame_CloseWindow();" />
+        </Window>
+        <Window Type="DefaultWindow" Name="Team_Function_Frame">
+            <Property Name="AbsolutePosition" Value="x:7.000000 y:25.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-13.000000},{1.000000,-30.000000}" />
+            <Window Type="TLBB_FramePlayerOther" Name="Team_Player1">
+                <Property Name="Position" Value="x:0.013605442 y:0.0" />
+                <Property Name="Size" Value="w:0.15646258 h:0.7047619" />
+                <Property Name="RiseOnClick" Value="false" />
+                <Window Type="TLBB_MeshWindow" Name="TeamFrame_FakeObject1">
+                    <Property Name="Position" Value="x:0.1 y:0.05" />
+                    <Property Name="Size" Value="w:0.8 h:0.9" />
+                    <Property Name="ShowControl" Value="Team_Frame" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_FramePlayerOther" Name="Team_Player2">
+                <Property Name="Position" Value="x:0.176870748299 y:0.0" />
+                <Property Name="Size" Value="w:0.15646258 h:0.7047619" />
+                <Property Name="RiseOnClick" Value="false" />
+                <Window Type="TLBB_MeshWindow" Name="TeamFrame_FakeObject2">
+                    <Property Name="Position" Value="x:0.1 y:0.05" />
+                    <Property Name="Size" Value="w:0.8 h:0.9" />
+                    <Property Name="ShowControl" Value="Team_Frame" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_FramePlayerOther" Name="Team_Player3">
+                <Property Name="Position" Value="x:0.340136054 y:0.0" />
+                <Property Name="Size" Value="w:0.15646258 h:0.7047619" />
+                <Property Name="RiseOnClick" Value="false" />
+                <Window Type="TLBB_MeshWindow" Name="TeamFrame_FakeObject3">
+                    <Property Name="Position" Value="x:0.1 y:0.05" />
+                    <Property Name="Size" Value="w:0.8 h:0.9" />
+                    <Property Name="ShowControl" Value="Team_Frame" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_FramePlayerOther" Name="Team_Player4">
+                <Property Name="Position" Value="x:0.50340136 y:0.0" />
+                <Property Name="Size" Value="w:0.15646258 h:0.7047619" />
+                <Property Name="RiseOnClick" Value="false" />
+                <Window Type="TLBB_MeshWindow" Name="TeamFrame_FakeObject4">
+                    <Property Name="Position" Value="x:0.1 y:0.05" />
+                    <Property Name="Size" Value="w:0.8 h:0.9" />
+                    <Property Name="ShowControl" Value="Team_Frame" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_FramePlayerOther" Name="Team_Player5">
+                <Property Name="Position" Value="x:0.6666666 y:0.0" />
+                <Property Name="Size" Value="w:0.15646258 h:0.7047619" />
+                <Property Name="RiseOnClick" Value="false" />
+                <Window Type="TLBB_MeshWindow" Name="TeamFrame_FakeObject5">
+                    <Property Name="Position" Value="x:0.1 y:0.05" />
+                    <Property Name="Size" Value="w:0.8 h:0.9" />
+                    <Property Name="ShowControl" Value="Team_Frame" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_FramePlayerOther" Name="Team_Player6">
+                <Property Name="Position" Value="x:0.82993197 y:0.0" />
+                <Property Name="Size" Value="w:0.15646258 h:0.7047619" />
+                <Property Name="RiseOnClick" Value="false" />
+                <Window Type="TLBB_MeshWindow" Name="TeamFrame_FakeObject6">
+                    <Property Name="Position" Value="x:0.1 y:0.05" />
+                    <Property Name="Size" Value="w:0.8 h:0.9" />
+                    <Property Name="ShowControl" Value="Team_Frame" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_ButtonCheckSelect" Name="Team_Model_1">
+                <Property Name="Position" Value="x:0.013605442 y:0.0" />
+                <Property Name="Size" Value="w:0.15646258 h:0.7047619" />
+                <Event Name="Clicked" Function="TeamFrame_Select1();" />
+                <Property Name="CheckMode" Value="1" />
+                <Window Type="TLBB_StaticImageNULL" Name="Team_Captain_Icon">
+                    <Property Name="Position" Value="x:0.00943396 y:0.00446428" />
+                    <Property Name="AbsoluteSize" Value="w:32.000000 h:32.000000" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="Image" Value="set:UIIcons image:Icon_Captain_2" />
+                </Window>
+                <Window Type="TLBB_StaticImageNULL" Name="Team_Die_Icon1">
+                    <Property Name="UnifiedPosition" Value="{{1.0,-33.000000},{1.000000,-33.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:32.000000 h:32.000000" />
+                    <Property Name="Image" Value="set:UIIcons image:Icon_Death" />
+                    <Property Name="RiseOnClick" Value="False" />
+                </Window>
+                <Window Type="TLBB_StaticImageNULL" Name="Team_Downline_Icon1">
+                    <Property Name="UnifiedPosition" Value="{{1.0,-33.000000},{1.000000,-33.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:32.000000 h:32.000000" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="Image" Value="set:UIIcons image:Icon_OutLine" />
+                </Window>
+                <Window Type="TLBB_StaticImageNULL" Name="Team_Model1_Disable">
+                    <Property Name="Position" Value="x:0.0 y:0.0" />
+                    <Property Name="Size" Value="w:1.0 h:1.0" />
+                    <Property Name="Visible" Value="False" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="MouseHollow" Value="True" />
+                    <Property Name="MouseMoveHollow" Value="True" />
+                    <Property Name="Image" Value="set:Face_04 image:Remind2_Bak" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_ButtonCheckSelect" Name="Team_Model_2">
+                <Property Name="Position" Value="x:0.176870748299 y:0.0" />
+                <Property Name="Size" Value="w:0.15646258 h:0.7047619" />
+                <Event Name="Clicked" Function="TeamFrame_Select2();" />
+                <Property Name="CheckMode" Value="1" />
+                <Window Type="TLBB_StaticImageNULL" Name="Team_Die_Icon2">
+                    <Property Name="UnifiedPosition" Value="{{1.0,-33.000000},{1.000000,-33.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:32.000000 h:32.000000" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="Image" Value="set:UIIcons image:Icon_Death" />
+                </Window>
+                <Window Type="TLBB_StaticImageNULL" Name="Team_Downline_Icon2">
+                    <Property Name="UnifiedPosition" Value="{{1.0,-33.000000},{1.000000,-33.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:32.000000 h:32.000000" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="Image" Value="set:UIIcons image:Icon_OutLine" />
+                </Window>
+                <Window Type="TLBB_StaticImageNULL" Name="Team_Model2_Disable">
+                    <Property Name="Position" Value="x:0.0 y:0.0" />
+                    <Property Name="Size" Value="w:1.0 h:1.0" />
+                    <Property Name="Visible" Value="False" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="MouseHollow" Value="True" />
+                    <Property Name="MouseMoveHollow" Value="True" />
+                    <Property Name="Image" Value="set:Face_04 image:Remind2_Bak" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_ButtonCheckSelect" Name="Team_Model_3">
+                <Property Name="Position" Value="x:0.340136054 y:0.0" />
+                <Property Name="Size" Value="w:0.15646258 h:0.7047619" />
+                <Event Name="Clicked" Function="TeamFrame_Select3();" />
+                <Property Name="CheckMode" Value="1" />
+                <Window Type="TLBB_StaticImageNULL" Name="Team_Die_Icon3">
+                    <Property Name="UnifiedPosition" Value="{{1.0,-33.000000},{1.000000,-33.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:32.000000 h:32.000000" />
+                    <Property Name="Image" Value="set:UIIcons image:Icon_Death" />
+                    <Property Name="RiseOnClick" Value="False" />
+                </Window>
+                <Window Type="TLBB_StaticImageNULL" Name="Team_Downline_Icon3">
+                    <Property Name="UnifiedPosition" Value="{{1.0,-33.000000},{1.000000,-33.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:32.000000 h:32.000000" />
+                    <Property Name="Image" Value="set:UIIcons image:Icon_OutLine" />
+                    <Property Name="RiseOnClick" Value="False" />
+                </Window>
+                <Window Type="TLBB_StaticImageNULL" Name="Team_Model3_Disable">
+                    <Property Name="Position" Value="x:0.0 y:0.0" />
+                    <Property Name="Size" Value="w:1.0 h:1.0" />
+                    <Property Name="Visible" Value="False" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="MouseHollow" Value="True" />
+                    <Property Name="MouseMoveHollow" Value="True" />
+                    <Property Name="Image" Value="set:Face_04 image:Remind2_Bak" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_ButtonCheckSelect" Name="Team_Model_4">
+                <Property Name="Position" Value="x:0.50340136 y:0.0" />
+                <Property Name="Size" Value="w:0.15646258 h:0.7047619" />
+                <Event Name="Clicked" Function="TeamFrame_Select4();" />
+                <Property Name="CheckMode" Value="1" />
+                <Window Type="TLBB_StaticImageNULL" Name="Team_Die_Icon4">
+                    <Property Name="UnifiedPosition" Value="{{1.0,-33.000000},{1.000000,-33.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:32.000000 h:32.000000" />
+                    <Property Name="Image" Value="set:UIIcons image:Icon_Death" />
+                    <Property Name="RiseOnClick" Value="False" />
+                </Window>
+                <Window Type="TLBB_StaticImageNULL" Name="Team_Downline_Icon4">
+                    <Property Name="UnifiedPosition" Value="{{1.0,-33.000000},{1.000000,-33.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:32.000000 h:32.000000" />
+                    <Property Name="Image" Value="set:UIIcons image:Icon_OutLine" />
+                    <Property Name="RiseOnClick" Value="False" />
+                </Window>
+                <Window Type="TLBB_StaticImageNULL" Name="Team_Model4_Disable">
+                    <Property Name="Position" Value="x:0.0 y:0.0" />
+                    <Property Name="Size" Value="w:1.0 h:1.0" />
+                    <Property Name="Visible" Value="False" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="MouseHollow" Value="True" />
+                    <Property Name="MouseMoveHollow" Value="True" />
+                    <Property Name="Image" Value="set:Face_04 image:Remind2_Bak" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_ButtonCheckSelect" Name="Team_Model_5">
+                <Property Name="Position" Value="x:0.6666666 y:0.0" />
+                <Property Name="Size" Value="w:0.15646258 h:0.7047619" />
+                <Event Name="Clicked" Function="TeamFrame_Select5();" />
+                <Property Name="CheckMode" Value="1" />
+                <Window Type="TLBB_StaticImageNULL" Name="Team_Die_Icon5">
+                    <Property Name="UnifiedPosition" Value="{{1.0,-33.000000},{1.000000,-33.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:32.000000 h:32.000000" />
+                    <Property Name="Image" Value="set:UIIcons image:Icon_Death" />
+                    <Property Name="RiseOnClick" Value="False" />
+                </Window>
+                <Window Type="TLBB_StaticImageNULL" Name="Team_Downline_Icon5">
+                    <Property Name="UnifiedPosition" Value="{{1.0,-33.000000},{1.000000,-33.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:32.000000 h:32.000000" />
+                    <Property Name="Image" Value="set:UIIcons image:Icon_OutLine" />
+                    <Property Name="RiseOnClick" Value="False" />
+                </Window>
+                <Window Type="TLBB_StaticImageNULL" Name="Team_Model5_Disable">
+                    <Property Name="Position" Value="x:0.0 y:0.0" />
+                    <Property Name="Size" Value="w:1.0 h:1.0" />
+                    <Property Name="Visible" Value="False" />
+                    <Property Name="Visible" Value="False" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="MouseHollow" Value="True" />
+                    <Property Name="MouseMoveHollow" Value="True" />
+                    <Property Name="Image" Value="set:Face_04 image:Remind2_Bak" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_ButtonCheckSelect" Name="Team_Model_6">
+                <Property Name="Position" Value="x:0.82993197 y:0.0" />
+                <Property Name="Size" Value="w:0.15646258 h:0.7047619" />
+                <Event Name="Clicked" Function="TeamFrame_Select6();" />
+                <Property Name="CheckMode" Value="1" />
+                <Window Type="TLBB_StaticImageNULL" Name="Team_Die_Icon6">
+                    <Property Name="UnifiedPosition" Value="{{1.0,-33.000000},{1.000000,-33.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:32.000000 h:32.000000" />
+                    <Property Name="Image" Value="set:UIIcons image:Icon_Death" />
+                    <Property Name="RiseOnClick" Value="False" />
+                </Window>
+                <Window Type="TLBB_StaticImageNULL" Name="Team_Downline_Icon6">
+                    <Property Name="UnifiedPosition" Value="{{1.0,-33.000000},{1.000000,-33.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:32.000000 h:32.000000" />
+                    <Property Name="Image" Value="set:UIIcons image:Icon_OutLine" />
+                    <Property Name="RiseOnClick" Value="False" />
+                </Window>
+                <Window Type="TLBB_StaticImageNULL" Name="Team_Model6_Disable">
+                    <Property Name="Position" Value="x:0.0 y:0.0" />
+                    <Property Name="Size" Value="w:1.0 h:1.0" />
+                    <Property Name="Visible" Value="False" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="MouseHollow" Value="True" />
+                    <Property Name="MouseMoveHollow" Value="True" />
+                    <Property Name="Image" Value="set:Face_04 image:Remind2_Bak" />
+                </Window>
+            </Window>
+            <Window Type="DefaultWindow" Name="Team_PlayerInfo_1">
+                <Property Name="Position" Value="x:0.01526717 y:0.75" />
+                <Property Name="Size" Value="w:0.15419847 h:0.10240963855" />
+                <Window Type="TLBB_SimpleText" Name="Team_PlayerInfo1_Name">
+                    <Property Name="Position" Value="x:0.0 y:0.0" />
+                    <Property Name="Size" Value="w:0.9047619047 h:0.5" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="Team_PlayerInfo1_School">
+                    <Property Name="Position" Value="x:0.0 y:0.5" />
+                    <Property Name="Size" Value="w:0.4 h:0.5" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="Team_PlayerInfo1_Level">
+                    <Property Name="Position" Value="x:0.6666666 y:0.5" />
+                    <Property Name="Size" Value="w:0.3238095 h:0.5" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+            </Window>
+            <Window Type="DefaultWindow" Name="Team_PlayerInfo_2">
+                <Property Name="Position" Value="x:0.178626 y:0.75" />
+                <Property Name="Size" Value="w:0.15419847 h:0.10240963855" />
+                <Window Type="TLBB_SimpleText" Name="Team_PlayerInfo2_Name">
+                    <Property Name="Position" Value="x:0.0 y:0.0" />
+                    <Property Name="Size" Value="w:0.9047619047 h:0.5" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="Team_PlayerInfo2_School">
+                    <Property Name="Position" Value="x:0.0 y:0.5" />
+                    <Property Name="Size" Value="w:0.4 h:0.5" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="Team_PlayerInfo2_Level">
+                    <Property Name="Position" Value="x:0.6666666 y:0.5" />
+                    <Property Name="Size" Value="w:0.3238095 h:0.5" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+            </Window>
+            <Window Type="DefaultWindow" Name="Team_PlayerInfo_3">
+                <Property Name="Position" Value="x:0.341985 y:0.75" />
+                <Property Name="Size" Value="w:0.15419847 h:0.10240963855" />
+                <Window Type="TLBB_SimpleText" Name="Team_PlayerInfo3_Name">
+                    <Property Name="Position" Value="x:0.0 y:0.0" />
+                    <Property Name="Size" Value="w:0.9047619047 h:0.5" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="Team_PlayerInfo3_School">
+                    <Property Name="Position" Value="x:0.0 y:0.5" />
+                    <Property Name="Size" Value="w:0.4 h:0.5" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="Team_PlayerInfo3_Level">
+                    <Property Name="Position" Value="x:0.6666666 y:0.5" />
+                    <Property Name="Size" Value="w:0.3238095 h:0.5" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+            </Window>
+            <Window Type="DefaultWindow" Name="Team_PlayerInfo_4">
+                <Property Name="Position" Value="x:0.505344 y:0.75" />
+                <Property Name="Size" Value="w:0.15419847 h:0.10240963855" />
+                <Window Type="TLBB_SimpleText" Name="Team_PlayerInfo4_Name">
+                    <Property Name="Position" Value="x:0.0 y:0.0" />
+                    <Property Name="Size" Value="w:0.9047619047 h:0.5" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="Team_PlayerInfo4_School">
+                    <Property Name="Position" Value="x:0.0 y:0.5" />
+                    <Property Name="Size" Value="w:0.4 h:0.5" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="Team_PlayerInfo4_Level">
+                    <Property Name="Position" Value="x:0.6666666 y:0.5" />
+                    <Property Name="Size" Value="w:0.3238095 h:0.5" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+            </Window>
+            <Window Type="DefaultWindow" Name="Team_PlayerInfo_5">
+                <Property Name="Position" Value="x:0.668702 y:0.75" />
+                <Property Name="Size" Value="w:0.15419847 h:0.10240963855" />
+                <Window Type="TLBB_SimpleText" Name="Team_PlayerInfo5_Name">
+                    <Property Name="Position" Value="x:0.0 y:0.0" />
+                    <Property Name="Size" Value="w:0.9047619047 h:0.5" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="Team_PlayerInfo5_School">
+                    <Property Name="Position" Value="x:0.0 y:0.5" />
+                    <Property Name="Size" Value="w:0.4 h:0.5" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="Team_PlayerInfo5_Level">
+                    <Property Name="Position" Value="x:0.6666666 y:0.5" />
+                    <Property Name="Size" Value="w:0.3238095 h:0.5" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+            </Window>
+            <Window Type="DefaultWindow" Name="Team_PlayerInfo_6">
+                <Property Name="Position" Value="x:0.832061 y:0.75" />
+                <Property Name="Size" Value="w:0.15419847 h:0.10240963855" />
+                <Window Type="TLBB_SimpleText" Name="Team_PlayerInfo6_Name">
+                    <Property Name="Position" Value="x:0.0 y:0.0" />
+                    <Property Name="Size" Value="w:0.9047619047 h:0.5" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="Team_PlayerInfo6_School">
+                    <Property Name="Position" Value="x:0.0 y:0.5" />
+                    <Property Name="Size" Value="w:0.4 h:0.5" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="Team_PlayerInfo6_Level">
+                    <Property Name="Position" Value="x:0.6666666 y:0.5" />
+                    <Property Name="Size" Value="w:0.3238095 h:0.5" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_ComboList" Name="Team_Exp_Mode">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-21.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.125,0.000000},{0.000000,20.000000}" />
+                <Event Name="ListSelectionAccepted" Function="Team_ExpMode_change();" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="Team_Exp_Mode_Text">
+                <Property Name="UnifiedPosition" Value="{{0.0,0.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.125,0.000000},{0.000000,20.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="Team_Follow_Button">
+                <Property Name="UnifiedPosition" Value="{{0.160000,-28.599997},{1.000000,-21.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.09,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_896}" />
+                <Event Name="Clicked" Function="Team_Button_Team_Follow_Click();" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="Team_AbortTeamFollow_Button">
+                <Property Name="UnifiedPosition" Value="{{0.260000,-37.599993},{1.000000,-21.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.09,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_543}" />
+                <Event Name="Clicked" Function="Team_Button_Abort_Team_Follow_Click();" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="Team_Button_Frame0">
+                <Property Name="UnifiedPosition" Value="{{0.360000,-46.600011},{1.000000,-21.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.09,0.000000},{0.000000,20.000000}" />
+                <Event Name="Clicked" Function="Team_Button_Frame0_Click();" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="Team_Button_Frame1">
+                <Property Name="UnifiedPosition" Value="{{0.450000,-47.999991},{1.000000,-21.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.09,0.000000},{0.000000,20.000000}" />
+                <Event Name="Clicked" Function="Team_Button_Frame1_Click();" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="Team_Button_Frame2">
+                <Property Name="UnifiedPosition" Value="{{0.550000,-57.000009},{1.000000,-21.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.09,0.000000},{0.000000,20.000000}" />
+                <Event Name="Clicked" Function="Team_Button_Frame2_Click();" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="Team_Button_Frame3">
+                <Property Name="UnifiedPosition" Value="{{0.630000,-50.799996},{1.000000,-21.000000}"/>
+                <Property Name="UnifiedSize" Value="{{0.09,0.000000},{0.000000,20.000000}" />
+                <Event Name="Clicked" Function="Team_Button_Frame3_Click();" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="Team_Button_Frame4">
+                <Property Name="UnifiedPosition" Value="{{0.725000,-56.000018},{1.000000,-21.000000}"/>
+                <Property Name="UnifiedSize" Value="{{0.09,0.000000},{0.000000,20.000000}" />
+                <Event Name="Clicked" Function="Team_Button_Frame4_Click();" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="Team_Button_Frame5">
+                <Property Name="UnifiedPosition" Value="{{0.810000,9.399998},{1.000000,-21.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.09,0.000000},{0.000000,20.000000}" />
+                <Event Name="Clicked" Function="Team_Button_Frame5_Click();" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="Team_Button_Frame6">
+                <Property Name="UnifiedPosition" Value="{{0.900000,8.000018},{1.000000,-21.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.09,0.000000},{0.000000,20.000000}" />
+                <Event Name="Clicked" Function="Team_Button_Frame6_Click();" />
+            </Window>
+          <Window Type="TLBB_ButtonCommon" Name="Team_Button_Frame7" >
+            <Property Name="AbsolutePosition" Value="x:562.000000 y:265.000000" />
+            <Property Name="AbsoluteSize" Value="w:64.000000 h:20.000000" />
+            <Event Name="Clicked" Function="Team_Button_Frame7_Click();" />
+          </Window>
+        </Window>
+        <Window Type="TLBB_HLine" Name="Team_Frame_Line1">
+            <Property Name="UnifiedPosition" Value="{{0.0,5.000000},{1.000000,-32.000000}" />
+            <Property Name="UnifiedSize" Value="{{1.0,-9.000000},{0.000000,4.000000}" />
+            <Property Name="RiseOnClick" Value="False" />
+        </Window>
+        <Window Type="TLBB_HLine" Name="Team_Frame_Line2">
+            <Property Name="UnifiedPosition" Value="{{0.0,5.000000},{1.000000,-85.000000}" />
+            <Property Name="UnifiedSize" Value="{{1.0,-9.000000},{0.000000,4.000000}" />
+            <Property Name="RiseOnClick" Value="False" />
+        </Window>
+    </Window>
+</GUILayout>

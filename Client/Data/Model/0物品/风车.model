@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="风车.frame" />
+    <entity mesh="风车.mesh" node="风车">
+        <offset>
+            <translate x="-2.02436e-007" y="15.0743" z="-119.163" />
+        </offset>
+    </entity>
+    <entity mesh="风车2.mesh" node="风车2">
+        <offset>
+            <translate x="-6.03257" y="28.9687" z="75.2665" />
+            <rotate w="0.982374" x="-0.000549568" y="-0.0187714" z="0.185981" />
+        </offset>
+    </entity>
+    <entity mesh="风车3.mesh" node="风车3">
+        <offset>
+            <translate x="0.391436" y="-24.4857" z="75.0887" />
+            <rotate w="0.984808" x="-1.89422e-009" y="1.01301e-009" z="-0.173648" />
+        </offset>
+    </entity>
+    <entity mesh="风车1.mesh" node="风车1">
+        <offset>
+            <translate x="-33.1567" y="-1.71345" z="76.5294" />
+            <rotate w="0.988375" x="2.98706e-009" y="5.04416e-010" z="0.152036" />
+        </offset>
+    </entity>
+    <entity mesh="风车6.mesh" node="风车6">
+        <offset>
+            <translate x="-1.66563" y="31.6065" z="42.8175" />
+            <rotate w="0.991445" x="-1.92215e-009" y="-3.69186e-009" z="0.130526" />
+        </offset>
+    </entity>
+    <entity mesh="风车5.mesh" node="风车5">
+        <offset>
+            <translate x="29.7859" y="4.22485" z="50.756" />
+            <rotate w="0.990785" x="2.63458e-010" y="-2.15955e-010" z="0.135446" />
+        </offset>
+    </entity>
+    <entity mesh="风车4.mesh" node="风车4">
+        <offset>
+            <translate x="0.256873" y="-26.4099" z="40.2141" />
+            <rotate w="0.906308" x="-8.917e-009" y="1.3971e-008" z="0.422618" />
+        </offset>
+    </entity>
+</model>

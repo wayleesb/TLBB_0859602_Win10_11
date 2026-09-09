@@ -1,0 +1,153 @@
+<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame1" Name="InfoBrowser_Frame">
+        <Property Name="UnifiedPosition" Value="{{0.3609375,0},{0.333333333,0}}" />
+        <Property Name="AbsoluteSize" Value="w:366 h:316" />
+        <Event Name="Hidden" Function="InfoBrowser_OnHiden();" />
+        <Window Type="TLBB_DragTitle" Name="InfoBrowser_Frame_Title">
+            <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="InfoBrowser_Frame" />
+            <Property Name="Font" Value="YouYuan11.25" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+        </Window>
+        <Window Type="TLBB_Frame_Lace4" Name="InfoBrowser_Frame_Player">
+            <Property Name="AbsolutePosition" Value="x:7.000000 y:36.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-13.000000},{1.000000,-80.000000}" />
+            <Window Type="TLBB_Frame_Lace6" Name="InfoBrowser_PlayerHead_Frame">
+                <Property Name="UnifiedPosition" Value="{{0.000000,6.000000},{0.000000,5.000000}" />
+                <Property Name="AbsoluteSize" Value="w:64.000000 h:64.000000" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Window Type="TLBB_StaticImageNULL" Name="InfoBrowser_PlayerHead">
+                    <Property Name="AbsolutePosition" Value="x:8.000000 y:8.000000" />
+                    <Property Name="AbsoluteSize" Value="w:49 h:49" />
+                    <Property Name="RiseOnClick" Value="False" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="InfoBrowser_From">
+                <Property Name="UnifiedPosition" Value="{{0.0,136.000000},{0.000000,6.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.599,0.000000},{0.000000,20.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_463}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="InfoBrowser_Fromwanjia">
+                <Property Name="UnifiedPosition" Value="{{0.0,70.000000},{0.000000,6.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.190,0.000000},{0.000000,20.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_1169}" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="InfoBrowser_Time">
+                <Property Name="UnifiedPosition" Value="{{0.0,70.000000},{0.000000,27.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.785,0.000000},{0.000000,20.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_641}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="InfoBrowser_Report">
+                <Property Name="UnifiedPosition" Value="{{1.0,-283.000000},{0.000000,49.000000}" />
+                <Property Name="AbsoluteSize" Value="w:64.000000 h:20.000000" />
+				 <Event Name="Clicked" Function="InfoBrowser_toushu();" />
+                <Property Name="Text" Value="#{XML_INFOBROWSER_001}" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="InfoBrowser_ExamineData">
+                <Property Name="UnifiedPosition" Value="{{1.0,-72.000000},{0.000000,49.000000}" />
+                <Property Name="AbsoluteSize" Value="w:64.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_162}" />
+                <Event Name="Clicked" Function="InfoBrowser_PlayerInfo();" />
+            </Window>
+            <Window Type="TLBB_StaticText" Name="InfoBrowser_Context">
+                <Property Name="UnifiedPosition" Value="{{0.0,9.000000},{0.000000,70.000000}" />
+                <Property Name="Size" Value="w:0.945 h:0.66" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="TopAligned" />
+                <Property Name="VertScrollbar" Value="true" />
+            </Window>
+        </Window>
+        <Window Type="TLBB_ButtonCommon" Name="InfoBrowser_Next">
+            <Property Name="UnifiedPosition" Value="{{0.000000,7.000000},{1.000000,-39.000000}" />
+            <Property Name="AbsoluteSize" Value="w:60.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_740}" />
+            <Event Name="Clicked" Function="InfoBrowser_NextMail();" />
+        </Window>
+        <Window Type="TLBB_ButtonCommon" Name="InfoBrowser_AddFriend">
+            <Property Name="UnifiedPosition" Value="{{0.000000,67.000000},{1.000000,-39.000000}" />
+            <Property Name="AbsoluteSize" Value="w:60.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_356}" />
+            <Event Name="Clicked" Function="InfoBrowser_AddToFriend();" />
+        </Window>
+        <Window Type="TLBB_Frame_Lace5" Name="InfoBrowser_Blank">
+            <Property Name="UnifiedPosition" Value="{{0.000000,127.000000},{1.000000,-39.000000}" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-214.000000},{0.000000,20.000000}" />
+        </Window>
+        <Window Type="TLBB_ButtonCommon" Name="InfoBrowser_Respondence">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-87.000000},{1.000000,-39.000000}" />
+            <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_336}" />
+            <Event Name="Clicked" Function="InfoBrowser_MailBack();" />
+        </Window>
+        <Window Type="TLBB_ButtonCommon" Name="InfoBrowser_Cancel">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-47.000000},{1.000000,-39.000000}" />
+            <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_702}" />
+            <Event Name="Clicked" Function="InfoBrowser_Close();" />
+        </Window>
+        <Window Type="TLBB_Frame_Lace4" Name="InfoBrowser_Frame_System">
+            <Property Name="AbsolutePosition" Value="x:7.000000 y:36.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-13.000000},{1.000000,-80.000000}" />
+            <Window Type="TLBB_Frame_Lace6" Name="SystemInfo_PlayerHead_Frame">
+                <Property Name="UnifiedPosition" Value="{{1.0,-71.000000},{0.000000,5.000000}" />
+                <Property Name="AbsoluteSize" Value="w:64 h:64" />
+                <Window Type="TLBB_StaticImageNULL" Name="SystemInfo_PlayerHead">
+                    <Property Name="AbsolutePosition" Value="x:8.000000 y:8.000000" />
+                    <Property Name="AbsoluteSize" Value="w:49 h:49" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="Image" Value="set:CommonNPCHeader9 image:CommonNPCHeader9_12" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="SystemInfo_From">
+                <Property Name="UnifiedPosition" Value="{{0.0,5.000000},{0.000000,5.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.785,0.000000},{0.000000,20.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_465}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="SystemInfo_Time">
+                <Property Name="UnifiedPosition" Value="{{0.0,5.000000},{0.000000,25.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.785,0.000000},{0.000000,20.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_641}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_StaticText" Name="SystemInfo_Context">
+                <Property Name="UnifiedPosition" Value="{{0.0,9.000000},{0.000000,70.000000}" />
+                <Property Name="Size" Value="w:0.945 h:0.66" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="TopAligned" />
+                <Property Name="VertScrollbar" Value="true" />
+                <Property Name="Text" Value="" />
+            </Window>
+        </Window>
+        <Window Type="TLBB_ButtonHelp" Name="InfoBrowser_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Property Name="Text" Value="TLBB_ButtonHelp" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*InfoBrowser&quot;);' />
+            <Property Name="AlwaysOnTop" Value="ture" />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="InfoBrowser_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Property Name="Text" Value="TLBB_ButtonClose" />
+            <Event Name="Clicked" Function="this:Hide();" />
+            <Property Name="AlwaysOnTop" Value="ture" />
+        </Window>
+    </Window>
+</GUILayout>

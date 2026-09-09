@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Terrain name="yuliu1" tileSize="32" xsize="256" zsize="256">
+
+  <scale x="100" y="100" z="100"/>
+
+  <heightmap filename="yuliu1.Heightmap" type="standard"/>
+
+  <gridInfo filename="yuliu1.GridInfo" type="standard"/>
+
+  <lightmap filename="yuliu1.Lightmap" type="standard"/>
+
+  <textures>
+    <texture filename="北方/北方山A03.jpg" type="image"/>
+  </textures>
+
+  <pixmaps>
+    <pixmap textureId="0"/>
+  </pixmaps>
+
+  <materials>
+    <template material="Terrain/OneLayer" name="OneLayer"/>
+    <template material="Terrain/OneLayerLightmap" name="OneLayerLightmap"/>
+    <template material="Terrain/TwoLayer" name="TwoLayer"/>
+    <template material="Terrain/TwoLayerLightmap" name="TwoLayerLightmap"/>
+  </materials>
+
+</Terrain>

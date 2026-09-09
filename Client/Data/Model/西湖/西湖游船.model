@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="西湖游船.frame" />
+    <entity mesh="西湖游船.mesh" node="西湖游船" />
+    <entity mesh="西湖游船灯笼.mesh" />
+    <entity mesh="西湖游船灯笼2.mesh" />
+</model>

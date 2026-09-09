@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" ?>
+<GUILayout>
+	<Window Type="TLBB_MainFrame1" Name="ConfraternityZT_Frame">
+		<Property Name="UnifiedSize" Value="{{0,256},{0.0,203}}" />
+		<Property Name="UnifiedPosition" Value="{{0.4,0.000000},{0.15000000,0.000000}" />
+		<Window Type="TLBB_DragTitle" Name="ConfraternityZT_DragTitle">
+			<Property Name="AbsolutePosition" Value="x:25.000000 y:12.000000" />
+			<Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+			<Property Name="DragTarget" Value="ConfraternityZT_Frame" />
+			<Property Name="Text" Value="" />
+			<Property Name="Font" Value="YouYuan11.25" />
+			<Property Name="HorzFormatting" Value="HorzCentred" />
+		</Window>
+		<Window Type="TLBB_ButtonHelp" Name="ConfraternityZT_Help">
+			<Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+			<Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+			<Event Name="Clicked" Function='Helper:GotoHelper(&quot;*ConfraternityPK&quot;);' />
+		</Window>
+		<Window Type="TLBB_ButtonClose" Name="ConfraternityZT_Close">
+			<Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+			<Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+			<Event Name="Clicked" Function="this:Hide();" />
+		</Window>
+		<Window Type="DefaultWindow" Name="ConfraternityZT_Client">
+			<Property Name="AbsolutePosition" Value="x:6.000000 y:36.000000" />
+			<Property Name="UnifiedSize" Value="{{1.000000,-12.000000},{1.000000,-55.000000}" />
+			<Window Type="TLBB_SimpleText" Name="ConfraternityZT_List_Text">
+				<Property Name="UnifiedPosition" Value="{{0.0000,5.000000},{0.000000,5.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.0,110.000000},{0.000000,20.000000}" />
+				<Property Name="HorzFormatting" Value="LeftAligned" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+				<Property Name="Text" Value="#{BHXZ_081103_96}" />
+				<Property Name="TextColor" Value="FFFFF263" />
+			</Window>
+			<Window Type="TLBB_ButtonCommon" Name="ConfraternityZT_StartBtn">
+				<Property Name="UnifiedPosition" Value="{{1.000000,-80.000000},{0.000000,5.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.000000,80.000000},{0.000000,20.000000}" />
+				<Property Name="Text" Value="#{BHXZ_081103_97}" />
+				<Event Name="Clicked" Function="ConfraternityZT_StartBtn_Click();" />
+			</Window>
+			<Window Type="TLBB_MultiColumnList" Name="ConfraternityZT_List">
+				<Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,25.000000}" />
+				<Property Name="UnifiedSize" Value="{{1.000000,0.000000},{0.000000,100.000000}" />
+				<Property Name="ForceHorzScrollbar" Value="False" />
+				<Property Name="ForceVertScrollbar" Value="True" />
+				<Property Name="SortSettingEnabled" Value="False" />
+				<Property Name="SelectionMode" Value="RowSingle" />
+				<Property Name="ColumnHeader" Value="text:#{BHXZ_081103_98} width:0.22 id:0" />
+				<Property Name="ColumnHeader" Value="text:#{BHXZ_081103_99} width:0.38 id:1" />
+				<Property Name="ColumnHeader" Value="text:#{BHXZ_081103_100} width:0.4 id:2" />
+				<Property Name="ColumnsSizable" Value="False" />
+				<Property Name="ColumnsMovable" Value="False" />
+				<Property Name="ColumnsAdjust" Value="True" />
+			</Window>
+			<Window Type="DefaultWindow" Name="ConfraternityZT_Buttons_Set">
+				<Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-20.000000}" />
+				<Property Name="UnifiedSize" Value="{{1.000000,0.000000},{0.000000,20.000000}" />
+        <Window Type="TLBB_ButtonCommon" Name="ConfraternityZT_LookupButton">
+          <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,0.000000}" />
+          <Property Name="UnifiedSize" Value="{{0.000000,120.000000},{0.000000,20.000000}" />
+          <Event Name="Clicked" Function="ConfraternityZT_LookupButton_Click();" />
+        </Window>
+        <Window Type="TLBB_ButtonCommon" Name="ConfraternityZT_JiezhanButton">
+          <Property Name="UnifiedPosition" Value="{{0.000000,120.000000},{0.000000,0.000000}" />
+          <Property Name="UnifiedSize" Value="{{0.000000,40.000000},{0.000000,20.000000}" />
+          <Event Name="Clicked" Function="ConfraternityZT_JiezhanButton_Click();" />
+          <Property Name="Text" Value="#{BHXZ_081103_101}" />
+        </Window>
+				<Window Type="TLBB_ButtonCommon" Name="ConfraternityZT_Button_Refuse">
+					<Property Name="UnifiedPosition" Value="{{1.000000,-40.000000},{0.000000,0.000000}" />
+					<Property Name="UnifiedSize" Value="{{0.000000,40.000000},{0.000000,20.000000}" />
+					<Property Name="Text" Value="#{INTERFACE_XML_302}" />
+					<Event Name="Clicked" Function="this:Hide();" />
+				</Window>
+			</Window>
+		</Window>
+	</Window>
+</GUILayout>

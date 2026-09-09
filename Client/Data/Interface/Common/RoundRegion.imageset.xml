@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+
+<Imageset Name="RoundRegion" Imagefile="Common/tga_RoundRegion.dds" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+	<Image Name="RoundRegion" XPos="0" YPos="0" Width="128" Height="128" />
+  <Image Name="Space" XPos="128" YPos="128" Width="128" Height="128" />
+</Imageset>

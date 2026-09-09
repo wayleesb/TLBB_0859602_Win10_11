@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="星宿旗帜.frame" />
+    <entity mesh="星宿旗竿.mesh" node="星宿旗竿" />
+    <entity mesh="星宿旗.mesh" />
+</model>

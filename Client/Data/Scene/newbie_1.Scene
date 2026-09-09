@@ -1,0 +1,2235 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Scene formatVersion="0.1.1" name="newbie_1">
+
+  <Terrain filename="newbie_1.Terrain"/>
+
+  <Object name="#FairyEnviroment" type="Enviroment">
+    <Property name="ambient" value="0.121569 0.121569 0.058824"/>
+    <Property name="fog.mode" value="linear"/>
+    <Property name="fog.colour" value="0.180392 0.039216 0.156863"/>
+    <Property name="fog.linear start" value="2000"/>
+    <Property name="fog.linear end" value="5000"/>
+  </Object>
+
+  <Object name="#FairyMainLightOne" type="Light">
+    <Property name="type" value="directional"/>
+    <Property name="diffuse" value="0.286275 0.094118 0.294118"/>
+    <Property name="specular" value="0.686275 0.388235 0.113725"/>
+    <Property name="direction" value="-1 -2 -2"/>
+    <Property name="cast shadows" value="true"/>
+  </Object>
+
+  <Object name="#FairyMainLightTwo" type="Light">
+    <Property name="type" value="directional"/>
+    <Property name="diffuse" value="0.54902 0.4 0.109804"/>
+    <Property name="direction" value="1 0 -1"/>
+  </Object>
+
+  <Object name="#FairySkyDome" type="SkyDome">
+    <Property name="material" value="CloudySky"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="太湖/木人巷齿轮大.model"/>
+    <Property name="position" value="-2914 -9 -2239"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="太湖/木人巷齿轮小.model"/>
+    <Property name="position" value="-2997 3 -2120"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="太湖/木人巷齿轮大.model"/>
+    <Property name="position" value="-2800 300 -2000"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷塔楼.mesh"/>
+    <Property name="position" value="-2900 0 -1800"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷柱子.mesh"/>
+    <Property name="position" value="-2900 -0.000366211 -2400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷柱子.mesh"/>
+    <Property name="position" value="-2900 0.740764 -783.025"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/木箱.mesh"/>
+    <Property name="position" value="-3333 561 -1581"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷架02.mesh"/>
+    <Property name="position" value="-2900 0 -1400"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷锁链.mesh"/>
+    <Property name="position" value="-4300 0 -1600"/>
+    <Property name="orientation" value="0.75025 0 0.661154 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷锁链.mesh"/>
+    <Property name="position" value="-4400 0 -1177"/>
+    <Property name="orientation" value="0.680601 0 -0.732654 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷柱子.mesh"/>
+    <Property name="position" value="-5600 0.000244141 -5700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷架01.mesh"/>
+    <Property name="position" value="-2900 0 -1600"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷柱子.mesh"/>
+    <Property name="position" value="2700 0 -5700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷架02.mesh"/>
+    <Property name="position" value="-5648.44 0.000244141 -1600"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷柱子.mesh"/>
+    <Property name="position" value="-2900 0 -1400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷柱子.mesh"/>
+    <Property name="position" value="-2900 0 2600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷柱子.mesh"/>
+    <Property name="position" value="-2900 0 1600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷柱子.mesh"/>
+    <Property name="position" value="-5600 0 -4400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷柱子.mesh"/>
+    <Property name="position" value="-5600 0 -3164.4"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷柱子.mesh"/>
+    <Property name="position" value="-5800 0 600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷柱子.mesh"/>
+    <Property name="position" value="-5800 0 1600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷柱子.mesh"/>
+    <Property name="position" value="-5800 0 2600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷柱子.mesh"/>
+    <Property name="position" value="-2600 0 2600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷柱子.mesh"/>
+    <Property name="position" value="-2600 0 -1400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷柱子.mesh"/>
+    <Property name="position" value="-2600 0 -2400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷柱子.mesh"/>
+    <Property name="position" value="2700 0 -4400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷柱子.mesh"/>
+    <Property name="position" value="2700 0 -3400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷柱子.mesh"/>
+    <Property name="position" value="2700 0 -2400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷柱子.mesh"/>
+    <Property name="position" value="2700 0 -1400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷柱子.mesh"/>
+    <Property name="position" value="2700 0 -400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷柱子.mesh"/>
+    <Property name="position" value="2700 0 600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷柱子.mesh"/>
+    <Property name="position" value="2700 0 1600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷柱子.mesh"/>
+    <Property name="position" value="2700 0 2600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷柱子.mesh"/>
+    <Property name="position" value="200 0 2650.9"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷柱子.mesh"/>
+    <Property name="position" value="200 0 1500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷柱子.mesh"/>
+    <Property name="position" value="200 0 400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷柱子.mesh"/>
+    <Property name="position" value="200 0 -600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷柱子.mesh"/>
+    <Property name="position" value="200 0.000244141 -1600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷柱子.mesh"/>
+    <Property name="position" value="-100 0.000244141 -1600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷柱子.mesh"/>
+    <Property name="position" value="-100 0 -600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷柱子.mesh"/>
+    <Property name="position" value="-100 0 400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷柱子.mesh"/>
+    <Property name="position" value="-100 0 1500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷柱子.mesh"/>
+    <Property name="position" value="-100 0 2637.03"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷柱子.mesh"/>
+    <Property name="position" value="-3500 0 -5700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷柱子.mesh"/>
+    <Property name="position" value="-100 0 -2600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷柱子.mesh"/>
+    <Property name="position" value="-1500 0 -5700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷柱子.mesh"/>
+    <Property name="position" value="1600 0 -5700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷柱子.mesh"/>
+    <Property name="position" value="500 0 -5700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷柱子.mesh"/>
+    <Property name="position" value="-500 0 -5700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/太湖箭楼.mesh"/>
+    <Property name="position" value="-200 0 -1800"/>
+    <Property name="orientation" value="5.51227e-008 0 1 0"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="太湖/木人巷齿轮大.model"/>
+    <Property name="position" value="0 0 -1345"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="太湖/木人巷齿轮大.model"/>
+    <Property name="position" value="0 300 -1100"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="太湖/木人巷齿轮大.model"/>
+    <Property name="position" value="0 300 -800"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="太湖/木人巷齿轮小.model"/>
+    <Property name="position" value="-181 0 -1228"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="太湖/木人巷齿轮大.model"/>
+    <Property name="position" value="6 300 -2053"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="太湖/木人巷齿轮大.model"/>
+    <Property name="position" value="6 300 -2354"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="太湖/木人巷齿轮小.model"/>
+    <Property name="position" value="-200 12 -2166"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷架01.mesh"/>
+    <Property name="position" value="-100 0 -1400"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮大转.mesh"/>
+    <Property name="position" value="-2999 500 -2650"/>
+    <Property name="orientation" value="0.707107 -0.707107 0 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮大.mesh"/>
+    <Property name="position" value="-2999 500 -2700"/>
+    <Property name="orientation" value="0.5 0.5 0.5 0.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷架01.mesh"/>
+    <Property name="position" value="200 0 -487"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷塔楼.mesh"/>
+    <Property name="position" value="200 0 -280"/>
+    <Property name="orientation" value="1.29072e-007 0 1 0"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="太湖/木人巷齿轮小.model"/>
+    <Property name="position" value="275 0 100"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="太湖/木人巷齿轮大.model"/>
+    <Property name="position" value="196 0 218"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷架01.mesh"/>
+    <Property name="position" value="-5600 0 -4253"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷架02.mesh"/>
+    <Property name="position" value="-5600 0 -3672.34"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="太湖/木人巷齿轮大.model"/>
+    <Property name="position" value="-5300 -600 1282"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="太湖/木人巷齿轮小.model"/>
+    <Property name="position" value="-5111 -913 1387"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="太湖/木人巷齿轮大.model"/>
+    <Property name="position" value="-5000 -800 700"/>
+    <Property name="orientation" value="-1.19209e-007 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷架01.mesh"/>
+    <Property name="position" value="-4400 -900 1700"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="太湖/木人巷齿轮小.model"/>
+    <Property name="position" value="-5111 -1459.28 1390"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="太湖/木人巷齿轮大.model"/>
+    <Property name="position" value="-5220 -1218 1200"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷架02.mesh"/>
+    <Property name="position" value="-5200 -1000 2500"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷木栅盖.mesh"/>
+    <Property name="position" value="-4800 0 2100"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷木栅盖.mesh"/>
+    <Property name="position" value="1800 0 600"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷塔楼.mesh"/>
+    <Property name="position" value="-5489.38 -52.8483 -3972.04"/>
+    <Property name="orientation" value="-2.98023e-008 0 1 0"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="太湖/木人巷齿轮大.model"/>
+    <Property name="position" value="-5611.68 247.152 -3574.04"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮大转.mesh"/>
+    <Property name="position" value="-5513.76 447.152 -3297.04"/>
+    <Property name="orientation" value="0.5 0.5 -0.5 -0.5"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="太湖/木人巷齿轮大.model"/>
+    <Property name="position" value="-5613.76 247.152 -2972.04"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="太湖/木人巷齿轮小.model"/>
+    <Property name="position" value="-5341.81 -87.9717 -3458.04"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷木栅盖.mesh"/>
+    <Property name="position" value="-4800 0 1100"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷塔楼.mesh"/>
+    <Property name="position" value="2600 0 800"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷架01.mesh"/>
+    <Property name="position" value="2700 0 1000"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷锁链.mesh"/>
+    <Property name="position" value="1500 0 -400"/>
+    <Property name="orientation" value="0.73779 0 0.675031 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷架02.mesh"/>
+    <Property name="position" value="1500 -900 213"/>
+    <Property name="orientation" value="-0.0153395 0 0.999882 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮小.mesh"/>
+    <Property name="position" value="2100 -600 600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮匣.mesh"/>
+    <Property name="position" value="-2814 473 -2675"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮匣.mesh"/>
+    <Property name="position" value="-2792 499.159 -2000"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮匣.mesh"/>
+    <Property name="position" value="-2882 187 -2239"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮匣.mesh"/>
+    <Property name="position" value="-43 211 -1345"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮匣.mesh"/>
+    <Property name="position" value="0 500 -1100"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮匣.mesh"/>
+    <Property name="position" value="0 500 -800"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮匣.mesh"/>
+    <Property name="position" value="0 500 -2052"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮匣.mesh"/>
+    <Property name="position" value="0 500 -2352"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮匣.mesh"/>
+    <Property name="position" value="-5267 -392 1282"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮匣.mesh"/>
+    <Property name="position" value="-5000 -600 700"/>
+    <Property name="orientation" value="1.49012e-007 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮匣.mesh"/>
+    <Property name="position" value="-5200 -1012 1200"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮匣.mesh"/>
+    <Property name="position" value="153 184 220"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮匣.mesh"/>
+    <Property name="position" value="2771 421 1800"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮匣.mesh"/>
+    <Property name="position" value="2735 300 1200"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮匣.mesh"/>
+    <Property name="position" value="2766 289.378 1500"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮大转.mesh"/>
+    <Property name="position" value="2700 312 1226"/>
+    <Property name="orientation" value="0.707107 -0.707107 0 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮大.mesh"/>
+    <Property name="position" value="2700 312 1176"/>
+    <Property name="orientation" value="0.5 0.5 0.5 0.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮大转.mesh"/>
+    <Property name="position" value="2700 312 1475"/>
+    <Property name="orientation" value="0.707107 0.707107 0 0"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="太湖/木人巷齿轮大.model"/>
+    <Property name="position" value="2720 250 1800"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yanjiangzhengqi"/>
+    <Property name="position" value="-2808 600 -2004"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yanjiangzhengqi"/>
+    <Property name="position" value="-2893 300 -2247"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yanjiangzhengqi"/>
+    <Property name="position" value="-5180 -876 1180"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yanjiangzhengqi"/>
+    <Property name="position" value="-5238 -313 1275"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yanjiangzhengqi"/>
+    <Property name="position" value="-17 627 -817"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yanjiangzhengqi"/>
+    <Property name="position" value="-16 626 -1116"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yanjiangzhengqi"/>
+    <Property name="position" value="-109 46 -1362"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yanjiangzhengqi"/>
+    <Property name="position" value="-16 632 -2371"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷锁链.mesh"/>
+    <Property name="position" value="-1300 -1 -837"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷锁链.mesh"/>
+    <Property name="position" value="-1500 199 -2288"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="万劫谷/万劫谷地道口.mesh"/>
+    <Property name="position" value="1877.19 0 2219.71"/>
+    <Property name="orientation" value="-1.41161e-007 0 1 0"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="TerrainLiquid">
+    <Property name="material" value="haihuwater"/>
+    <Property name="position" value="-3400 -443.781 1500"/>
+    <Property name="texture scale" value="0.3"/>
+    <Property name="depth texture layer.enable" value="true"/>
+    <Property name="depth texture layer.height scale" value="0.008"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷木栅盖.mesh"/>
+    <Property name="position" value="-3493.06 1.12152 1097.78"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷木栅盖.mesh"/>
+    <Property name="position" value="-3496.19 0 2103.99"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="公用小建筑/小台阶边.mesh"/>
+    <Property name="position" value="-2205.63 -196.82 -498.096"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="公用小建筑/小台阶边.mesh"/>
+    <Property name="position" value="-2202.01 -196.861 298.45"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="公用小建筑/小台阶边.mesh"/>
+    <Property name="position" value="-700 -200 1199.22"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="公用小建筑/小台阶边.mesh"/>
+    <Property name="position" value="-1392.02 -197 1203.75"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷柱子.mesh"/>
+    <Property name="position" value="-2900 1.08132 700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷架01.mesh"/>
+    <Property name="position" value="-5600 0 -800"/>
+    <Property name="orientation" value="1 0 -9.11219e-008 0"/>
+  </Object>
+
+  <Object type="TerrainLiquid">
+    <Property name="material" value="haihuwater"/>
+    <Property name="position" value="-4900 -1499 1500"/>
+    <Property name="texture scale" value="0.3"/>
+    <Property name="depth texture layer.enable" value="true"/>
+    <Property name="depth texture layer.height scale" value="0.008"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="水瀑布/pubu2.mesh"/>
+    <Property name="position" value="-4800.96 -1567.42 1718.52"/>
+    <Property name="scale" value="0.7 1 1"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="水瀑布/pubu2.mesh"/>
+    <Property name="position" value="-4470.83 -1306.42 2254.27"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+    <Property name="scale" value="0.4 0.8 0.7"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="武夷山/武夷山水缸.mesh"/>
+    <Property name="position" value="-1000 0 -5600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="武夷山/武夷山香炉.mesh"/>
+    <Property name="position" value="-4000 -0.336902 2391.56"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="苗疆/水车.model"/>
+    <Property name="position" value="-3390.13 -579.564 1594.33"/>
+    <Property name="orientation" value="1 0 -1.45998e-008 0"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.937255 0.435294 0.188235"/>
+    <Property name="position" value="-3700 -331.815 1600"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.constant" value="1.2"/>
+    <Property name="attenuation.linear" value="0.002"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="太湖/木人巷齿轮小.model"/>
+    <Property name="position" value="-3660.36 -795.046 1041.96"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷架02.mesh"/>
+    <Property name="position" value="-4100 -735.196 1027"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="太湖/木人巷齿轮大.model"/>
+    <Property name="position" value="-3798.98 -470.478 1080.95"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="万劫谷/万劫谷木桩.mesh"/>
+    <Property name="position" value="-3992.28 -735.196 1112.86"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="草原/蒙古立火柱.mesh"/>
+    <Property name="position" value="-3700 -735.196 1600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮大转.mesh"/>
+    <Property name="position" value="-3760.36 -288.045 1202.96"/>
+    <Property name="orientation" value="0.5 0.5 -0.5 -0.5"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="太湖/木人巷齿轮大.model"/>
+    <Property name="position" value="-3860.36 -488.045 1527.96"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="苗疆/水车.model"/>
+    <Property name="position" value="-3600 -796.591 2006.68"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷木栅盖.mesh"/>
+    <Property name="position" value="-5117.97 -16.1045 -3260.57"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="TerrainLiquid">
+    <Property name="material" value="haihuwater"/>
+    <Property name="position" value="-5100 -505 -3200"/>
+    <Property name="texture scale" value="0.3"/>
+    <Property name="depth texture layer.enable" value="true"/>
+    <Property name="depth texture layer.height scale" value="0.008"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷柱子.mesh"/>
+    <Property name="position" value="-5914.72 377.689 -3419.95"/>
+    <Property name="orientation" value="0.755749 0 0 -0.654861"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="太湖/木人巷齿轮大.model"/>
+    <Property name="position" value="-5227.23 -713.682 -3493"/>
+    <Property name="orientation" value="1 0 3.77147e-007 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮匣.mesh"/>
+    <Property name="position" value="-3082.77 0 -2238.93"/>
+    <Property name="orientation" value="0.5 0.5 -0.5 0.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮匣.mesh"/>
+    <Property name="position" value="-5628.11 496.904 -2973.8"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮匣.mesh"/>
+    <Property name="position" value="-5700 441.095 -3571.31"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮匣.mesh"/>
+    <Property name="position" value="-5228.76 -320.538 -3621.58"/>
+    <Property name="orientation" value="-2.45027e-008 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁吊灯.mesh"/>
+    <Property name="position" value="2501 247 -2188.67"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.937255 0.435294 0.188235"/>
+    <Property name="position" value="2501 199 -2300"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.constant" value="1.2"/>
+    <Property name="attenuation.linear" value="0.0001"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="2501 575 -2200"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="2501 595 -2200"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.937255 0.435294 0.188235"/>
+    <Property name="position" value="2500 200 2700"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.constant" value="1.2"/>
+    <Property name="attenuation.linear" value="0.002"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁吊灯.mesh"/>
+    <Property name="position" value="2500 72 2700"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="2500 400 2700"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="2500 420 2700"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="-400 625.213 -3200"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="-400 660.213 -3200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁吊灯.mesh"/>
+    <Property name="position" value="-401 308.213 -3193"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="-2591 502 -3119"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="-2600 522 -3122"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁吊灯.mesh"/>
+    <Property name="position" value="-2600 174 -3100"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="700 701 2300"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.937255 0.435294 0.188235"/>
+    <Property name="position" value="600 175 2400"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.constant" value="1.2"/>
+    <Property name="attenuation.linear" value="0.002"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁吊灯.mesh"/>
+    <Property name="position" value="700 373 2300"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="700 721 2300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁吊灯.mesh"/>
+    <Property name="position" value="-4158 199.663 2400"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="-5300 620 -200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁吊灯.mesh"/>
+    <Property name="position" value="-5302 273 -189"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="-5300 600 -200"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.937255 0.435294 0.188235"/>
+    <Property name="position" value="-5300 200 -200"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.constant" value="1.2"/>
+    <Property name="attenuation.linear" value="0.0001"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁吊灯.mesh"/>
+    <Property name="position" value="-5400 254 -2591.21"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="-5401 602 -2600"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="-5401 582 -2600"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="-5400 680 -5400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁吊灯.mesh"/>
+    <Property name="position" value="-5411 352 -5385"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="-5400 700 -5400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷柱子.mesh"/>
+    <Property name="position" value="-2498 0 -5700"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="-2100 600 -5500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁吊灯.mesh"/>
+    <Property name="position" value="-2100 272 -5500"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="-2100 620 -5500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁吊灯.mesh"/>
+    <Property name="position" value="0 272 -5501"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="0 620 -5501"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="0 600 -5501"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁吊灯.mesh"/>
+    <Property name="position" value="300 272 -2000"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁吊灯.mesh"/>
+    <Property name="position" value="300 272 736.165"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="300 600 736.165"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="300 620 736.165"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="水瀑布/pubu2.mesh"/>
+    <Property name="position" value="-5100 -1165.91 -2900"/>
+    <Property name="scale" value="0.4 1 1"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="太湖/木人巷齿轮小.model"/>
+    <Property name="position" value="-5339.23 -627.315 -3460.74"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷柱子.mesh"/>
+    <Property name="position" value="-5691.75 -18.4866 -3466.93"/>
+    <Property name="orientation" value="0.755749 0 0 -0.654861"/>
+    <Property name="scale" value="0.649351 0.649351 0.649351"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮匣.mesh"/>
+    <Property name="position" value="-3143.25 -261.792 2100"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮匣.mesh"/>
+    <Property name="position" value="-2100 295.121 -2600"/>
+    <Property name="orientation" value="6.011e-008 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮匣.mesh"/>
+    <Property name="position" value="-676.458 250.385 -2600"/>
+    <Property name="orientation" value="6.011e-008 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮匣.mesh"/>
+    <Property name="position" value="-1400 275.764 -2607.33"/>
+    <Property name="orientation" value="6.011e-008 0 1 0"/>
+    <Property name="scale" value="1.6 1.2 1"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="太湖/木人巷齿轮大.model"/>
+    <Property name="position" value="-2101.01 62.4112 -2596.49"/>
+    <Property name="orientation" value="1.17726e-008 0 1 0"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="太湖/木人巷齿轮大.model"/>
+    <Property name="position" value="-675.901 0 -2600"/>
+    <Property name="orientation" value="1.17726e-008 0 1 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="jiujiaozhengqi"/>
+    <Property name="position" value="-600 300 -2700"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="jiujiaozhengqi"/>
+    <Property name="position" value="-2100 364 -2600"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="jiujiaozhengqi"/>
+    <Property name="position" value="-1400 400 -2600"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="太湖/木人巷齿轮大.model"/>
+    <Property name="position" value="-1400.94 30.8601 -2602.73"/>
+    <Property name="orientation" value="2.06957e-008 0 -1 0"/>
+    <Property name="scale" value="1.2 1.2 1.2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷柱子.mesh"/>
+    <Property name="position" value="-181.768 -3.89073 -1228.62"/>
+    <Property name="scale" value="0.4 1 0.4"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷柱子.mesh"/>
+    <Property name="position" value="-201.058 0 -2165.02"/>
+    <Property name="scale" value="0.4 1 0.4"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="-1000 103 -5600"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="-1000 83 -5600"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="jiujiaozhengqi_01"/>
+    <Property name="position" value="-3100 100 -2244"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="jiujiaozhengqi_01"/>
+    <Property name="position" value="-3221 17 -2247"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮匣.mesh"/>
+    <Property name="position" value="386.987 48 216.684"/>
+    <Property name="orientation" value="0.508363 0.508363 0.491494 -0.491494"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="jiujiaozhengqi"/>
+    <Property name="position" value="401 21 220"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="武夷山/武夷山水缸.mesh"/>
+    <Property name="position" value="2017.22 -1000 500"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="2017.89 -904.134 500"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="2017.89 -924.134 500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁吊灯.mesh"/>
+    <Property name="position" value="-1400 372 -3190"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="-3101.03 600 -1444.31"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁吊灯.mesh"/>
+    <Property name="position" value="-3101.03 268 -1434.31"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁吊灯.mesh"/>
+    <Property name="position" value="2500 170 -390"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="2500 503 -400"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.937255 0.435294 0.188235"/>
+    <Property name="position" value="2500 101 -400"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.constant" value="1.2"/>
+    <Property name="attenuation.linear" value="0.0001"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="-1292.9 926.151 522.421"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁吊灯.mesh"/>
+    <Property name="position" value="-1292.9 598.151 522.421"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="-1292.9 946.151 522.421"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="1000 118 -5600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="武夷山/武夷山水缸.mesh"/>
+    <Property name="position" value="1000 -3 -5600"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="1000 138 -5600"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="2100 580 -5600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁吊灯.mesh"/>
+    <Property name="position" value="2100 252 -5600"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="2100 600 -5600"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="-900 94 -3119.76"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="-900 114 -3119.76"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="武夷山/武夷山水缸.mesh"/>
+    <Property name="position" value="-900 -3 -3119.76"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="-2100 100 -3137.54"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="武夷山/武夷山水缸.mesh"/>
+    <Property name="position" value="-2100 0 -3137.54"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="-2100 120 -3137.54"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/太湖水师战车.mesh"/>
+    <Property name="position" value="2216.02 0 69.2952"/>
+    <Property name="orientation" value="1 0 1.85303e-008 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="2700 443.835 -3640.74"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="2700 463.835 -3640.74"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.937255 0.435294 0.188235"/>
+    <Property name="position" value="2600 139.835 -3800"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.constant" value="1.2"/>
+    <Property name="attenuation.linear" value="0.0001"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁吊灯.mesh"/>
+    <Property name="position" value="2700 115.835 -3638.49"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮匣.mesh"/>
+    <Property name="position" value="200.531 192.365 -1132.16"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮匣.mesh"/>
+    <Property name="position" value="206.853 195.246 -2500"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮匣.mesh"/>
+    <Property name="position" value="2696 190.428 -2900"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮匣.mesh"/>
+    <Property name="position" value="2694.43 195.735 -5040.56"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮匣.mesh"/>
+    <Property name="position" value="2696.31 197.402 -900"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮匣.mesh"/>
+    <Property name="position" value="2700 189.94 -1900"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮匣.mesh"/>
+    <Property name="position" value="2700 196.291 -3900"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮匣.mesh"/>
+    <Property name="position" value="2694.33 198.198 122.345"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮大转.mesh"/>
+    <Property name="position" value="2538.93 80.8597 -1123.49"/>
+    <Property name="orientation" value="0.349158 -0.28182 0.893617 -0.010288"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮大转.mesh"/>
+    <Property name="position" value="400 97.425 -2800"/>
+    <Property name="orientation" value="0.869094 -0.109468 -0.354225 -0.327431"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮大转.mesh"/>
+    <Property name="position" value="-100 102.951 -3100"/>
+    <Property name="orientation" value="0.554781 -0.344216 0.756978 0.0266281"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮大转.mesh"/>
+    <Property name="position" value="-5400 77 -5300"/>
+    <Property name="orientation" value="0.921289 -0.163587 0.267747 -0.229712"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮大转.mesh"/>
+    <Property name="position" value="-5500 80 -5000"/>
+    <Property name="orientation" value="0.955504 -0.0686113 -0.0864526 -0.273534"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="苏州/铁钻1.mesh"/>
+    <Property name="position" value="-5340.71 0 -5600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="苏州/铁锤1.mesh"/>
+    <Property name="position" value="-5267.35 7.30482 -5520.69"/>
+    <Property name="orientation" value="0.54589 -0.386965 0.74312 -0.00580325"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yun001"/>
+    <Property name="position" value="-4100 399.663 2200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="万劫谷/万劫谷木桩.mesh"/>
+    <Property name="position" value="500 0 2600"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="万劫谷/万劫谷木桩.mesh"/>
+    <Property name="position" value="1000 0 2600"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷柱子.mesh"/>
+    <Property name="position" value="-5600 0 -2400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷柱子.mesh"/>
+    <Property name="position" value="-5600 36.1173 -1400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷墙壁.mesh"/>
+    <Property name="position" value="-2700 12.3268 -600"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷墙壁.mesh"/>
+    <Property name="position" value="-2800 1.12152 500"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷柱子.mesh"/>
+    <Property name="position" value="-2600 1.41539 700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷柱子.mesh"/>
+    <Property name="position" value="-2600 0 -783.025"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="武夷山/武夷山水缸.mesh"/>
+    <Property name="position" value="-2000 -0.254311 1600"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="-2000 99.7457 1600"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="-2000 79.7457 1600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷墙壁.mesh"/>
+    <Property name="position" value="-5600 0 -500"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷柱子.mesh"/>
+    <Property name="position" value="-5800 0 -400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁吊灯.mesh"/>
+    <Property name="position" value="-1859.23 372.005 2500"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="-1859.23 720.005 2500"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="-1859.23 700.005 2500"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="-300 100 1500"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="-300 80 1500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="武夷山/武夷山水缸.mesh"/>
+    <Property name="position" value="-300 0 1500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮大转.mesh"/>
+    <Property name="position" value="2500 71 -5400"/>
+    <Property name="orientation" value="0.0241464 -0.268494 0.959104 0.0862503"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷柱子.mesh"/>
+    <Property name="position" value="-1500 0 1500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷柱子.mesh"/>
+    <Property name="position" value="-600 0 1500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷柱子.mesh"/>
+    <Property name="position" value="-2500 0 1500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷木栅盖.mesh"/>
+    <Property name="position" value="-1999.44 0 2200"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="TerrainLiquid">
+    <Property name="material" value="haihuwater"/>
+    <Property name="position" value="-2000 -201 2200"/>
+    <Property name="texture scale" value="0.3"/>
+    <Property name="depth texture layer.enable" value="true"/>
+    <Property name="depth texture layer.height scale" value="0.008"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮匣.mesh"/>
+    <Property name="position" value="-3166.37 -432.14 2368.16"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮匣.mesh"/>
+    <Property name="position" value="-3190.1 -395.097 1100"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮匣.mesh"/>
+    <Property name="position" value="-4700 -570.308 2499.23"/>
+    <Property name="orientation" value="1 0 -1.49678e-007 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮匣.mesh"/>
+    <Property name="position" value="-4417.54 -575.384 2251.01"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+    <Property name="scale" value="3 1 1"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="pubushuihua_02"/>
+    <Property name="position" value="-4700 -1000 2400"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="pubushuihua_03"/>
+    <Property name="position" value="-4700 -1000 2200"/>
+    <Property name="orientation" value="6.89463e-008 0 -1 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="pubushuihua_03"/>
+    <Property name="position" value="-4800 -2000 1900"/>
+    <Property name="orientation" value="-1.10645e-007 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮匣.mesh"/>
+    <Property name="position" value="-1700 -242.354 1315.72"/>
+    <Property name="orientation" value="-1 0 -1.1892e-007 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮匣.mesh"/>
+    <Property name="position" value="-1702.01 -241.011 1847.53"/>
+    <Property name="orientation" value="1.63528e-007 -8.55159e-017 -1 4.65658e-010"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮匣.mesh"/>
+    <Property name="position" value="-2327.68 -246.618 2278.98"/>
+    <Property name="orientation" value="0.707107 3.2927e-010 -0.707107 3.2927e-010"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮匣.mesh"/>
+    <Property name="position" value="-3806.07 -445.182 2336.99"/>
+    <Property name="orientation" value="0.707107 3.2927e-010 -0.707107 3.2927e-010"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="-3100 100.046 -600"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="-3100 80.0459 -600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="武夷山/武夷山水缸.mesh"/>
+    <Property name="position" value="-3100 0.0459314 -600"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="-3100 100.517 500"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="-3100 80.517 500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="武夷山/武夷山水缸.mesh"/>
+    <Property name="position" value="-3100 0.516955 500"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yun001"/>
+    <Property name="position" value="-300 201 2000"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="武夷山/武夷山香炉.mesh"/>
+    <Property name="position" value="-100 3 2091.56"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="jiujiaozhengqi_01"/>
+    <Property name="position" value="-3199 -298.878 1100"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="jiujiaozhengqi_01"/>
+    <Property name="position" value="-3099 -373.935 2100"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="jiujiaozhengqi_01"/>
+    <Property name="position" value="-3100 -507.558 2400"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="jiujiaozhengqi_01"/>
+    <Property name="position" value="2700 100 -2900"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="jiujiaozhengqi_01"/>
+    <Property name="position" value="2700 200 -3900"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="jiujiaozhengqi_01"/>
+    <Property name="position" value="2700 200 -1900"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="jiujiaozhengqi_01"/>
+    <Property name="position" value="2694 205 -5025"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="jiujiaozhengqi_01"/>
+    <Property name="position" value="2800 300 -5065"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮匣.mesh"/>
+    <Property name="position" value="-4900 322.005 -5708.41"/>
+    <Property name="orientation" value="3.62872e-009 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷柱子.mesh"/>
+    <Property name="position" value="-4500 0 -5700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="武夷山/武夷山水缸.mesh"/>
+    <Property name="position" value="-2900 0 -5500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁吊灯.mesh"/>
+    <Property name="position" value="-3820.76 200 -5500"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="-3820.76 548 -5500"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="-3820.76 528 -5500"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="jiujiaozhengqi_01"/>
+    <Property name="position" value="-4895 200 -5700"/>
+    <Property name="orientation" value="1 0 1.90438e-008 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="wenquanzhengqi"/>
+    <Property name="position" value="-2200 -400 2300"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="wenquanzhengqi"/>
+    <Property name="position" value="-5100 -778.513 -3600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷塔楼.mesh"/>
+    <Property name="position" value="-5500 0 -600"/>
+    <Property name="orientation" value="-2.98023e-008 0 1 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="jiujiaozhengqi_01"/>
+    <Property name="position" value="2677 100 100"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="jiujiaozhengqi_01"/>
+    <Property name="position" value="2654 386 1767"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮匣.mesh"/>
+    <Property name="position" value="-600 329.053 2720.23"/>
+    <Property name="orientation" value="1 0 -7.41008e-009 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮匣.mesh"/>
+    <Property name="position" value="-1219.76 325.077 2717.32"/>
+    <Property name="orientation" value="1 0 -7.41008e-009 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="-900 648.98 2600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁吊灯.mesh"/>
+    <Property name="position" value="-900 320.98 2600"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="-900 668.98 2600"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="jiujiaozhengqi_01"/>
+    <Property name="position" value="-600 203 2700"/>
+    <Property name="orientation" value="1.19988e-008 0 -1 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="jiujiaozhengqi_01"/>
+    <Property name="position" value="-1200 203 2700"/>
+    <Property name="orientation" value="1.19988e-008 0 -1 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="jiujiaozhengqi_01"/>
+    <Property name="position" value="2700 102 -899"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="jiujiaozhengqi_01"/>
+    <Property name="position" value="235 100 -1143"/>
+    <Property name="orientation" value="0.714058 0 0.700087 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="jiujiaozhengqi_01"/>
+    <Property name="position" value="200 200 -2500"/>
+    <Property name="orientation" value="0.714058 0 0.700087 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="丐帮/丐帮兵器架.mesh"/>
+    <Property name="position" value="-2565.29 0 -3087.97"/>
+    <Property name="orientation" value="0.717507 0 -0.696551 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="丐帮/丐帮兵器架.mesh"/>
+    <Property name="position" value="-600 1.75734 -3100"/>
+    <Property name="orientation" value="0.717507 0 -0.696551 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="丐帮/丐帮兵器架2.mesh"/>
+    <Property name="position" value="-1343.44 0 -3092.79"/>
+    <Property name="orientation" value="0.710591 0 -0.703605 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮匣.mesh"/>
+    <Property name="position" value="-2600 260.922 -1000"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+    <Property name="scale" value="1.6 1.2 1"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮匣.mesh"/>
+    <Property name="position" value="-2632.59 301.569 -1901.44"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+    <Property name="scale" value="1.6 1.2 1"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮匣.mesh"/>
+    <Property name="position" value="-65.1594 304.474 -166.183"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+    <Property name="scale" value="1.6 1.2 1"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮匣.mesh"/>
+    <Property name="position" value="-77.9067 303.978 1000"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+    <Property name="scale" value="1.6 1.2 1"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="太湖/木人巷齿轮大.model"/>
+    <Property name="position" value="-107.679 141.667 996.843"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="jiujiaozhengqi"/>
+    <Property name="position" value="-2654 338 -1888"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="jiujiaozhengqi"/>
+    <Property name="position" value="53 200 -197"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="jiujiaozhengqi"/>
+    <Property name="position" value="-199 156 1000"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="jiujiaozhengqi"/>
+    <Property name="position" value="-2600 100 -1002"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷木栅盖.mesh"/>
+    <Property name="position" value="-1402.72 -200 -1202.08"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.145098 0.486275 0.196078"/>
+    <Property name="position" value="-1500 -429.471 -1347"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.constant" value="0"/>
+    <Property name="attenuation.linear" value="0.0001"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮匣.mesh"/>
+    <Property name="position" value="-1175.31 -626.004 -891.442"/>
+    <Property name="orientation" value="-1 0 -1.1892e-007 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮匣.mesh"/>
+    <Property name="position" value="-1614.8 -560.966 -887.094"/>
+    <Property name="orientation" value="-1 0 -1.1892e-007 0"/>
+  </Object>
+
+  <Object type="TerrainLiquid">
+    <Property name="material" value="haihuwater"/>
+    <Property name="position" value="-1500 -940 -1347"/>
+    <Property name="texture scale" value="0.3"/>
+    <Property name="depth texture layer.enable" value="true"/>
+    <Property name="depth texture layer.height scale" value="0.008"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮匣.mesh"/>
+    <Property name="position" value="-1677.37 -776.861 -1485.32"/>
+    <Property name="orientation" value="5.86113e-008 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="太湖/木人巷齿轮匣.mesh"/>
+    <Property name="position" value="-1200 -776.469 -1480.28"/>
+    <Property name="orientation" value="5.86113e-008 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="水瀑布/pubu2.mesh"/>
+    <Property name="position" value="-1678.99 -953.119 -1400.65"/>
+    <Property name="orientation" value="0.027608 0 0.999619 0"/>
+    <Property name="scale" value="0.1 0.3 0.2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="水瀑布/pubu2.mesh"/>
+    <Property name="position" value="-1200 -935.781 -1443.83"/>
+    <Property name="orientation" value="0.027608 0 0.999619 0"/>
+    <Property name="scale" value="0.1 0.3 0.2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="水瀑布/pubu2.mesh"/>
+    <Property name="position" value="-1612.09 -956.129 -935.32"/>
+    <Property name="orientation" value="-1 0 0.000760139 0"/>
+    <Property name="scale" value="0.1 0.4 0.2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="水瀑布/pubu2.mesh"/>
+    <Property name="position" value="-1168.09 -924.794 -951.461"/>
+    <Property name="orientation" value="-1 0 0.000760139 0"/>
+    <Property name="scale" value="0.1 0.4 0.2"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.937255 0.435294 0.188235"/>
+    <Property name="position" value="-3101.03 198 -1444.31"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.constant" value="1.2"/>
+    <Property name="attenuation.linear" value="0.0001"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="300 600 -2000"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="300 620 -2000"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="-4158 514.663 2400"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="-4158 534.663 2400"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.937255 0.435294 0.188235"/>
+    <Property name="position" value="-4200 399.663 2400"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.constant" value="1.2"/>
+    <Property name="attenuation.linear" value="0.002"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="-1392 659 -3196"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="-1392 694 -3196"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.937255 0.435294 0.188235"/>
+    <Property name="position" value="300 181 -2000"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.constant" value="1.2"/>
+    <Property name="attenuation.linear" value="0.0001"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.937255 0.435294 0.188235"/>
+    <Property name="position" value="500 203 700"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.constant" value="1.2"/>
+    <Property name="attenuation.linear" value="0.0001"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.937255 0.435294 0.188235"/>
+    <Property name="position" value="-1299 1 400"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.constant" value="1.2"/>
+    <Property name="attenuation.linear" value="0.0001"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.937255 0.435294 0.188235"/>
+    <Property name="position" value="-1100 305 2500"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.constant" value="1.2"/>
+    <Property name="attenuation.linear" value="0.0001"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.937255 0.435294 0.188235"/>
+    <Property name="position" value="-800 219 -3300"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.constant" value="1.2"/>
+    <Property name="attenuation.linear" value="0.0001"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.937255 0.435294 0.188235"/>
+    <Property name="position" value="-2799 200 -3319"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.constant" value="1.2"/>
+    <Property name="attenuation.linear" value="0.0001"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.937255 0.435294 0.188235"/>
+    <Property name="position" value="2100 190 -5600"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.constant" value="1.2"/>
+    <Property name="attenuation.linear" value="0.0001"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.937255 0.435294 0.188235"/>
+    <Property name="position" value="0 141 -5400"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.constant" value="1.2"/>
+    <Property name="attenuation.linear" value="0.0001"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.937255 0.435294 0.188235"/>
+    <Property name="position" value="-2100 182 -5500"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.constant" value="1.2"/>
+    <Property name="attenuation.linear" value="0.0001"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.937255 0.435294 0.188235"/>
+    <Property name="position" value="-3800 172 -5400"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.constant" value="1.2"/>
+    <Property name="attenuation.linear" value="0.0001"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.937255 0.435294 0.188235"/>
+    <Property name="position" value="-5300 200 -5300"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.constant" value="1.2"/>
+    <Property name="attenuation.linear" value="0.0001"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.937255 0.435294 0.188235"/>
+    <Property name="position" value="-5200 108 -2300"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.constant" value="1.2"/>
+    <Property name="attenuation.linear" value="0.0001"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="pubushuihua_02"/>
+    <Property name="position" value="-5100 -224.205 -2600"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="pubushuihua_03"/>
+    <Property name="position" value="-5100 -224.205 -2800"/>
+    <Property name="orientation" value="6.89463e-008 0 -1 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="pubushuihua_02"/>
+    <Property name="position" value="-5100 -700.133 -2700"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="pubushuihua_03"/>
+    <Property name="position" value="-5100 -700.133 -2900"/>
+    <Property name="orientation" value="6.89463e-008 0 -1 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="pubushuihua_03"/>
+    <Property name="position" value="-5300 -644.78 -2900"/>
+    <Property name="orientation" value="6.89463e-008 0 -1 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="pubushuihua_02"/>
+    <Property name="position" value="-5300 -644.78 -2700"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="pubushuihua_02"/>
+    <Property name="position" value="-5100 -1763.45 2100"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="pubushuihua_03"/>
+    <Property name="position" value="-5100 -1763.45 1900"/>
+    <Property name="orientation" value="6.89463e-008 0 -1 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="pubushuihua_03"/>
+    <Property name="position" value="-5100 -1591.63 1700"/>
+    <Property name="orientation" value="6.89463e-008 0 -1 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="pubushuihua_02"/>
+    <Property name="position" value="-5100 -1591.63 1900"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="chuansongmen"/>
+    <Property name="position" value="1876.26 114 1898.55"/>
+  </Object>
+
+</Scene>

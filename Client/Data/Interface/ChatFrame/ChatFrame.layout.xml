@@ -1,0 +1,213 @@
+<?xml version="1.0" ?>
+<GUILayout>
+  <Window Type="DefaultWindow" Name="LoginArtLayout__">
+    <Property Name="Position" Value="x:0.000000 y:0.000000" />
+    <Property Name="Size" Value="w:1.000000 h:1.000000" />
+    <Property Name="MouseHollow" Value="True" />
+    <Property Name="MouseMoveHollow" Value="True" />
+
+    <Window Type="DefaultWindow" Name="Chat_Frame">
+      <Property Name="UnifiedSize" Value="{{0,320},{0.0,196}}" />
+      <Property Name="UnifiedXPosition" Value="{0.0,0}" />
+      <Property Name="UnifiedYPosition" Value="{1.0,-196}" />
+      <Property Name="MouseHollow" Value="True" />
+      <Window Type="DefaultWindow" Name="Chat_CheckBox_Frame">
+        <Property Name="Position" Value="x:0.0 y:0.0" />
+        <Property Name="Size" Value="w:1.0 h:0.115" />
+        <Property Name="MouseLButtonHollow" Value="True" />
+        <Property Name="MouseRButtonHollow" Value="True" />
+        <Window Type="TLBB_ButtonCheckForChatPage" Name="Chat_SystemChk">
+          <Property Name="Position" Value="x:0.007 y:0.0" />
+          <Property Name="Size" Value="w:0.125 h:1.0" />
+          <Property Name="Text" Value="#{INTERFACE_XML_893}" />
+          <Property Name="CheckMode" Value="1" />
+          <Property Name="Selected" Value="True" />
+          <Event Name="Clicked" Function="Chat_ChangeTabIndex(0);" />
+          <Event Name="CaptureLost" Function="Chat_OnTabCaptureLost(0)" />      
+        </Window>
+        <Window Type="TLBB_ButtonCheckForChatPage" Name="Chat_CommonChk">
+          <Property Name="Position" Value="x:0.132 y:0.0" />
+          <Property Name="Size" Value="w:0.125 h:1.0" />
+          <Property Name="Text" Value="#{INTERFACE_XML_734}" />
+          <Property Name="CheckMode" Value="1" />
+          <Property Name="Selected" Value="False" />
+          <Event Name="Clicked" Function="Chat_ChangeTabIndex(1);" />
+          <Event Name="CaptureLost" Function="Chat_OnTabCaptureLost(1)" />        
+        </Window>
+        <Window Type="TLBB_ButtonCheckForChatPage" Name="Chat_SelfChk">
+          <Property Name="Position" Value="x:0.257 y:0.0" />
+          <Property Name="Size" Value="w:0.125 h:1.0" />
+          <Property Name="Text" Value="#{INTERFACE_XML_280}" />
+          <Property Name="CheckMode" Value="1" />
+          <Property Name="Selected" Value="False" />
+          <Event Name="Clicked" Function="Chat_ChangeTabIndex(2);" />
+          <Event Name="CaptureLost" Function="Chat_OnTabCaptureLost(2)" />      
+        </Window>
+        <Window Type="TLBB_ButtonCheckForChatPage" Name="Chat_City" >
+          <Property Name="Position" Value="x:0.382 y:0.000000" />
+          <Property Name="Size" Value="w:0.125 h:1.000000" />
+          <Property Name="CheckMode" Value="1" />
+          <Property Name="Selected" Value="False" />
+          <Property Name="Text" Value="#{INTERFACE_XML_280}" />
+          <Event Name="Clicked" Function="Chat_ChangeTabIndex(3);" />
+          <Event Name="CaptureLost" Function="Chat_OnTabCaptureLost(3)" />          
+		  <Window Type="TLBB_Animate" Name="Chat_City_Flash">
+               <Property Name="Position" Value="x:0 y:0" />
+               <Property Name="Size" Value="w:1 h:1" />
+               <Property Name="Animate" Value="Tongxiang_Flash" />
+               <Property Name="MouseHollow" Value="true" />
+               <Property Name="MouseMoveHollow" Value="true" />
+               <Property Name="MouseLButtonHollow" Value="true" />
+               <Property Name="MouseRButtonHollow" Value="true" />
+			   <Property Name="AlwaysOnTop" Value="True" />
+          </Window>
+        </Window>
+        <Window Type="TLBB_ButtonCheckForChatPage" Name="Chat_CreateChk1">
+          <Property Name="Position" Value="x:0.507 y:0.0" />
+          <Property Name="Size" Value="w:0.16 h:1.0" />
+          <Property Name="Text" Value="#{INTERFACE_XML_889}" />
+          <Property Name="CheckMode" Value="1" />
+          <Property Name="Selected" Value="False" />
+          <Property Name="Visible" Value="False" />
+          <Property Name="MouseRButtonHollow" Value="True" />
+          <Event Name="Clicked" Function="Chat_ChangeTabIndex(4);" />
+          <Event Name="CaptureLost" Function="Chat_OnTabCaptureLost(4)" />
+          <Event Name="MouseRClick" Function="Chat_DestoryTabIndex(4);" />
+        </Window>
+        <Window Type="TLBB_ButtonCheckForChatPage" Name="Chat_CreateChk2">
+				<Property Name="Position" Value="x:0.665625 y:0.000000" />
+          <Property Name="Size" Value="w:0.16 h:1.0" />
+          <Property Name="Text" Value="#{INTERFACE_XML_890}" />
+          <Property Name="CheckMode" Value="1" />
+          <Property Name="Selected" Value="False" />
+          <Property Name="Visible" Value="False" />
+          <Property Name="MouseRButtonHollow" Value="True" />
+          <Event Name="Clicked" Function="Chat_ChangeTabIndex(5);" />
+          <Event Name="CaptureLost" Function="Chat_OnTabCaptureLost(5)" />
+          <Event Name="MouseRClick" Function="Chat_DestoryTabIndex(5);" />
+        </Window>
+        <Window Type="TLBB_ButtonCheckForChatPage" Name="Chat_CreateChk3">
+          <Property Name="Position" Value="x:0.825 y:0.0" />
+          <Property Name="Size" Value="w:0.16 h:1.0" />
+          <Property Name="Text" Value="#{INTERFACE_XML_891}" />
+          <Property Name="CheckMode" Value="1" />
+          <Property Name="Selected" Value="False" />
+          <Property Name="Visible" Value="False" />
+          <Property Name="MouseRButtonHollow" Value="True" />
+          <Event Name="Clicked" Function="Chat_ChangeTabIndex(6);" />
+          <Event Name="CaptureLost" Function="Chat_OnTabCaptureLost(6)" />
+          <Event Name="MouseRClick" Function="Chat_DestoryTabIndex(6);" />
+        </Window>
+      </Window>
+      <Window Type="TLBB_Frame2" Name="Chat_Frame_HistoryFrame">
+        <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,23.000000}" />
+        <Property Name="UnifiedSize" Value="{{1.000000,0.000000},{1.000000,-24.000000}" />
+        <Property Name="RiseOnClick" Value="False" />
+        <Window Type="TLBB_ChatHistory" Name="Chat_Frame_History">
+          <Property Name="Position" Value="x:0.0 y:0.0" />
+          <Property Name="Size" Value="w:1.0 h:1.0" />
+          <Property Name="ChatBoardNumber" Value="60" />
+          <Property Name="BoardKillTimer" Value="5" />
+          <Property Name="MouseLButtonHollow" Value="True" />
+        </Window>
+      </Window>
+    </Window>
+    <Window Type="DefaultWindow" Name="Chat_Frame_ChannelFrame">
+      <Property Name="UnifiedSize" Value="{{1.0,0},{1.0,0}}" />
+      <Property Name="UnifiedPosition" Value="{{0.0,0.0},{0.0,0.0}}" />
+      <Property Name="Visible" Value="False" />
+      <Event Name="MouseButtonDown" Function="Chat_Frame_ChannelFrame:Hide();" />
+      <Window Type="TLBB_ChatChannel" Name="Chat_Frame_Channel">
+        <Property Name="UnifiedSize" Value="{{1.0,0},{1.0,0}}" />
+        <Property Name="UnifiedPosition" Value="{{0.0,0.0},{0.0,0.0}}" />
+        <Property Name="ItemSize" Value="w:120.0 h:22.0" />
+        <Property Name="AnchorPosition" Value="x:0.0 y:23.0" />
+        <Property Name="HoverColor" Value="0xB3277112" />
+        <Property Name="ChannelBkg" Value="dir:CommonFrame set:Chat image:CommonEditBoxBK" />
+        <Property Name="ChannelBkg" Value="dir:CommonFrame set:Chat image:CommonEditBoxBK" />
+        <Property Name="ChannelBkg" Value="dir:CommonFrame set:Chat image:CommonEditBoxBK" />
+        <Property Name="HoverChannelBkg" Value="set:CommonFrame image:CommonEditBoxBK" />
+        <Event Name="MouseClick" Function="ChatFrame_ChannelListSelect();" />
+      </Window>
+    </Window>
+    <Window Type="DefaultWindow" Name="Chat_ChatSpeaker">
+      <Property Name="UnifiedSize" Value="{{0.0,335},{0.0,85}}" />
+      <Property Name="UnifiedXPosition" Value="{0.0,0}" />
+      <Property Name="UnifiedYPosition" Value="{1.0,-348}" />
+      <Property Name="AlwaysOnTop" Value="true" />
+      <Property Name="MouseHollow" Value="True" />
+      <Property Name="MouseMoveHollow" Value="True" />
+      <Property Name="MouseLButtonHollow" Value="True" />
+      <Property Name="MouseRButtonHollow" Value="True" />
+      <Window Type="TLBB_StarWindow" Name="Chat_ChatSpeaker_StarWindow2">
+        <Property Name="MouseHollow" Value="True" />
+        <Property Name="MouseMoveHollow" Value="True" />
+        <Property Name="MouseLButtonHollow" Value="True" />
+        <Property Name="MouseRButtonHollow" Value="True" />
+        <Property Name="VertFormatting" Value="BottomAligned" />
+
+        <Property Name="Position" Value="x:0 y:0" />
+        <Property Name="Size" Value="w:1 h:1" />
+        <Property Name="Life" Value="30000" />
+
+        <Property Name="StarElement" Value="key:SizeScale value:min:1,max:1" />
+        <Property Name="StarElement" Value="key:SpeedXScale value:min:0,max:0" />
+        <Property Name="StarElement" Value="key:SpeedYScale value:min:100,max:100" />
+        <Property Name="StarElement" Value="key:AccelerateXScale value:min:0,max:0" />
+        <Property Name="StarElement" Value="key:AccelerateYScale value:min:0,max:0" />
+
+        <Property Name="StarElement" Value="key:Size value:min:20,max:30" />
+        <Property Name="StarElement" Value="key:SizeSpeed value:min:0,max:0" />
+        <Property Name="StarElement" Value="key:MaxLife value:min:500,max:500" />
+        <Property Name="StarElement" Value="key:Animate value:LittleStar2" />
+
+        <Property Name="StarBuilder" Value="key:MetricsMode value:Absolute" />
+        <Property Name="StarBuilder" Value="key:EndPos value:x:600,y:65" />
+        <Property Name="StarBuilder" Value="key:StartPos value:x:0,y:65" />
+        <Property Name="StarBuilder" Value="key:BuilderSize value:w:65,h:250" />
+        <Property Name="StarBuilder" Value="key:Life value:3000" />
+        <Property Name="StarBuilder" Value="key:TailNumber value:100" />
+        <Property Name="StarBuilder" Value="key:ClipperOpen value:false" />
+        <Property Name="StarBuilder" Value="key:TailOpen value:true" />
+      </Window>
+      <Window Type="TLBB_StarWindow" Name="Chat_ChatSpeaker_StarWindow">
+        <Property Name="MouseHollow" Value="True" />
+        <Property Name="MouseMoveHollow" Value="True" />
+        <Property Name="MouseLButtonHollow" Value="True" />
+        <Property Name="MouseRButtonHollow" Value="True" />
+		<Property Name="VertFormatting" Value="TopAligned" />
+        <Property Name="Position" Value="x:0 y:0" />
+        <Property Name="Size" Value="w:1 h:1" />
+        <Property Name="BackgroundLeft" Value="set:stall01 image:tusu.gif_00" />
+        <Property Name="Background" Value="set:stall01 image:tusu.gif_02" />
+        <Property Name="BackgroundRight" Value="set:stall01 image:tusu.gif_01" />
+        <Property Name="StarElement" Value="key:SizeScale value:min:1,max:1" />
+        <Property Name="StarElement" Value="key:SpeedXScale value:min:100,max:200" />
+        <Property Name="StarElement" Value="key:SpeedYScale value:min:0,max:0" />
+        <Property Name="StarElement" Value="key:AccelerateXScale value:min:0,max:0" />
+        <Property Name="StarElement" Value="key:AccelerateYScale value:min:0,max:0" />
+        <Property Name="StarElement" Value="key:Size value:min:10,max:20" />
+        <Property Name="StarElement" Value="key:SizeSpeed value:min:0,max:0" />
+        <Property Name="StarElement" Value="key:MaxLife value:min:500,max:500" />
+        <Property Name="StarElement" Value="key:Animate value:LittleStar" />
+        <Property Name="StarBuilder" Value="key:MetricsMode value:Absolute" />
+        <Property Name="StarBuilder" Value="key:EndPos value:x:600,y:20" />
+        <Property Name="StarBuilder" Value="key:StartPos value:x:0,y:20" />
+        <Property Name="StarBuilder" Value="key:BuilderSize value:w:20,h:58" />
+        <Property Name="StarBuilder" Value="key:AnimateSize value:w:182,h:58" />
+        <!--<Property Name="StarBuilder" Value="key:Animate value:StarAnimate" />-->
+        <Property Name="StarBuilder" Value="key:Life value:3000" />
+        <Property Name="StarBuilder" Value="key:Number value:100" />
+        <Property Name="StarBuilder" Value="key:TailNumber value:50" />
+        <Property Name="StarBuilder" Value="key:ClipperOpen value:true" />
+        <Property Name="StarBuilder" Value="key:TailOpen value:false" />
+        <Property Name="Life" Value="30000" />
+        <Property Name="AlwaysOnTop" Value="true" />
+        <Event Name="NameLClick" Function="Chat_ChatSpeaker_NameLClick()" />
+        <Event Name="NameRClick" Function="Chat_ChatSpeaker_NameRClick()" />
+		<Event Name="Hidden" Function="Talk:HideContexMenu4Speaker();" />
+      </Window>
+    </Window>
+  </Window>
+</GUILayout>
+

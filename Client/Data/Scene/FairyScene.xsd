@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+	<xsd:element name="Scene" type="Scene"/>
+
+	<xsd:complexType name="Scene">
+		<xsd:sequence>
+			<xsd:element name="Author" minOccurs="0" maxOccurs="unbounded" type="xsd:string"/>
+			<xsd:element name="Copyright" minOccurs="0" maxOccurs="unbounded" type="xsd:string"/>
+			<xsd:element name="Description" minOccurs="0" maxOccurs="unbounded" type="xsd:string"/>
+			<xsd:element name="Terrain" minOccurs="0" maxOccurs="1" type="TerrainType"/>
+			<xsd:element name="Attribute" minOccurs="0" maxOccurs="unbounded" type="AttributeType"/>
+			<xsd:element name="Object" minOccurs="0" maxOccurs="unbounded" type="ObjectType"/>
+		</xsd:sequence>
+		<xsd:attribute name="formatVersion" type="xsd:string" use="required"/>
+		<xsd:attribute name="name" type="xsd:string"/>
+	</xsd:complexType>
+
+	<xsd:complexType name="TerrainType">
+		<xsd:attribute name="filename" type="xsd:string" use="required"/>
+	</xsd:complexType>
+
+	<xsd:complexType name="AttributeType">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="name" type="xsd:string" use="required"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="ObjectType">
+		<xsd:sequence>
+			<xsd:element name="Property" type="PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="type" type="xsd:string" use="required"/>
+		<xsd:attribute name="name" type="xsd:string"/>
+	</xsd:complexType>
+
+	<xsd:complexType name="PropertyType">
+		<xsd:attribute name="name" type="xsd:string" use="required"/>
+		<xsd:attribute name="value" type="xsd:string" use="required"/>
+	</xsd:complexType>
+
+</xsd:schema>

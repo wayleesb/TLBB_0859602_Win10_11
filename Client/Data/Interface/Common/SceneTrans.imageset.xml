@@ -1,0 +1,4 @@
+<?xml version="1.0" ?>
+<Imageset Name="SceneTrans" Imagefile="Common/tga_SceneTrans.dds" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+	<Image Name="SceneTrans" XPos="0" YPos="0" Width="256" Height="256" />
+</Imageset>

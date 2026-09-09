@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<Imageset Name="CommonFrame7" Imagefile="Common/tga_CommonFrame7.dds" NativeHorzRes="1024" NativeVertRes="768"	AutoScaled="false">
+  <Image Name="XingYunFrame_UpLeft" XPos="5" YPos="8" Width="46" Height="42" />
+  <Image Name="XingYunFrame_UpMiddle" XPos="51" YPos="8" Width="40" Height="42" />
+  <Image Name="XingYunFrame_UpRight" XPos="91" YPos="8" Width="46" Height="42" />
+  
+  <Image Name="XingYunFrame_MiddleLeft" XPos="5" YPos="50" Width="18" Height="12" />
+  <Image Name="XingYunFrame_MiddleRight" XPos="119" YPos="50" Width="18" Height="12" />
+
+  <Image Name="XingYunFrame_DownLeft" XPos="5" YPos="62" Width="46" Height="15" />
+  <Image Name="XingYunFrame_DownMiddle" XPos="51" YPos="62" Width="40" Height="15" />
+  <Image Name="XingYunFrame_DownRight" XPos="91" YPos="62" Width="46" Height="15" />
+
+  <Image Name="SelectHead_Frame" XPos="145" YPos="18" Width="54" Height="54" />
+  
+  <Image Name="XunIcon_A1" XPos="2" YPos="79" Width="30" Height="30" />
+  <Image Name="XunIcon_A2" XPos="34" YPos="79" Width="30" Height="30" />
+  <Image Name="XunIcon_A3" XPos="66" YPos="79" Width="30" Height="30" />
+  <Image Name="XunIcon_A4" XPos="98" YPos="79" Width="30" Height="30" />
+
+  <Image Name="XunIcon_B1" XPos="130" YPos="79" Width="20" Height="20" />
+  <Image Name="XunIcon_B2" XPos="152" YPos="79" Width="20" Height="20" />
+  <Image Name="XunIcon_B3" XPos="174" YPos="79" Width="20" Height="20" />
+  <Image Name="XunIcon_B4" XPos="196" YPos="79" Width="20" Height="20" />
+
+  <Image Name="PetEquip_Hufu" XPos="0" YPos="111" Width="36" Height="36" />
+  <Image Name="PetEquip_Qugan" XPos="39" YPos="111" Width="36" Height="36" />
+  <Image Name="PetEquip_Tou" XPos="78" YPos="111" Width="36" Height="36" />
+  <Image Name="PetEquip_Xiangquan" XPos="117" YPos="111" Width="36" Height="36" />
+  <Image Name="PetEquip_Zhua" XPos="156" YPos="111" Width="36" Height="36" />
+
+</Imageset>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="长白山莽盖2.frame" />
+    <entity mesh="长白山莽盖2纹石.mesh" />
+    <entity mesh="长白山莽盖2铜饰2.mesh" node="长白山莽盖2铜饰2">
+        <offset>
+            <translate x="0.000143286" y="4.0394e-005" z="-176.501" />
+        </offset>
+    </entity>
+    <entity mesh="长白山莽盖2铜饰3.mesh" node="长白山莽盖2铜饰3">
+        <offset>
+            <translate x="-0.000164422" y="-8.37708e-005" z="-176.501" />
+        </offset>
+    </entity>
+    <entity mesh="长白山莽盖2铜饰4.mesh" node="长白山莽盖2铜饰4">
+        <offset>
+            <translate x="-2.99787" y="-17.1339" z="-197.326" />
+        </offset>
+    </entity>
+    <entity mesh="长白山莽盖2铜饰6.mesh" node="长白山莽盖2铜饰6">
+        <offset>
+            <translate x="0.000104256" y="-0.000103557" z="-176.501" />
+        </offset>
+    </entity>
+    <entity mesh="长白山莽盖2铜饰7.mesh" node="长白山莽盖2铜饰7">
+        <offset>
+            <translate x="-0.000250985" y="-0.000208251" z="-176.501" />
+        </offset>
+    </entity>
+    <entity mesh="长白山莽盖2铜饰8.mesh" node="长白山莽盖2铜饰8">
+        <offset>
+            <translate x="-2.99769" y="-17.1342" z="-197.326" />
+        </offset>
+    </entity>
+</model>

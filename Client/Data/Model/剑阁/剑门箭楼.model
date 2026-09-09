@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="剑门箭楼.frame" />
+    <entity mesh="剑门箭楼耳环1.mesh" node="剑门箭楼耳环1" />
+    <entity mesh="剑门箭楼耳环2.mesh" node="剑门箭楼耳环2" />
+    <entity mesh="剑门箭楼耳环3.mesh" node="剑门箭楼耳环3" />
+    <entity mesh="剑门箭楼耳环5.mesh" node="剑门箭楼耳环5" />
+    <entity mesh="剑门箭楼耳环6.mesh" node="剑门箭楼耳环6" />
+    <entity mesh="剑门箭楼耳环4.mesh" node="剑门箭楼耳环4" />
+    <entity mesh="剑门箭楼.mesh" node="剑门箭楼" />
+</model>

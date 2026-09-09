@@ -1,0 +1,887 @@
+﻿<?xml version="1.0" ?>
+<GUIScheme Name="WoWLookSkin">
+	<WindowSet Filename="CEGUIFalagard" />
+	<LookNFeel Filename="Schema/TLBBLook_Frame.looknfeel.xml"/>
+	<LookNFeel Filename="Schema/TLBBLook_Button.looknfeel.xml" />
+  <LookNFeel Filename="Schema/TLBBLook_Common.looknfeel.xml" />
+  <LookNFeel Filename="Schema/TLBBLook_ScrollBar.looknfeel.xml" />
+  <LookNFeel Filename="Schema/TLBBLook_Progress.looknfeel.xml" />
+  <LookNFeel Filename="Schema/TLBBLook_StaticImage.looknfeel.xml" />
+  <LookNFeel Filename="Schema/TLBBLook_Line.looknfeel.xml" />
+  <LookNFeel Filename="Schema/TLBBLook_Spin.looknfeel.xml" />
+  <LookNFeel Filename="Schema/TLBBLook_EditBox.looknfeel.xml" />
+  <LookNFeel Filename="Schema/TLBBLook_List.looknfeel.xml" />
+  <LookNFeel Filename="Schema/TLBBLook_StaticText.looknfeel.xml" />
+  <LookNFeel Filename="Schema/TLBBLook_ComplexWindow.looknfeel.xml" />
+  <LookNFeel Filename="Schema/TLBBLook_Chat.looknfeel.xml" />
+  <LookNFeel Filename="Schema/TLBBLook_CreatureBoard.looknfeel.xml" />
+  <LookNFeel Filename="Schema/TLBBLook_Tooltip.looknfeel.xml" />
+  <LookNFeel Filename="Schema/TLBBLook_PopMenu.looknfeel.xml" />
+
+  <Font Name="SongTiBmp12" Filename="Schema/SongTiBmp12.font" Type="Bitmap" />
+  <Font Name="YouYuan9.75" Filename="Schema/YouYuan9.75.font" Type="FreeType" />
+  <Font Name="YouYuan11.25" Filename="Schema/YouYuan11.25.font" Type="FreeType" />
+  <Font Name="YouYuanMono" Filename="Schema/YouYuanMono.font" Type="FreeType" />
+
+  <!-- #b blink time in seconds -->
+	<!--
+	<FontBlinkTime Seconds="0.8" />
+	-->
+	
+	<!--
+	***************************
+		ImageSet
+	***************************
+	-->
+	
+
+	<!--
+	***************************
+		Common
+	***************************
+	
+	
+ -->
+  <!--
+	***************************
+		边框
+	***************************
+	-->
+  <FalagardMapping WindowType="TLBB_ScrollInfoFrame" TargetType="Falagard/StaticImage" LookNFeel="TLBB_Look_StaticImageScrollInfo" />
+  <FalagardMapping WindowType="TLBB_ScrollInfoFixedFrame" TargetType="Falagard/StaticImage" LookNFeel="TLBB_Look_StaticImageScrollInfoFixed" />  
+  <FalagardMapping WindowType="TLBB_MainFrameNULL" TargetType="Falagard/BoundWindow" LookNFeel="TLBB_Look_StaticImage" />
+  <FalagardMapping WindowType="TLBB_MainFrame0" TargetType="Falagard/BoundWindow" LookNFeel="TLBB_Look_MainFrameWindow0" />
+  <FalagardMapping WindowType="TLBB_MainFrame1" TargetType="Falagard/BoundWindow" LookNFeel="TLBB_Look_MainFrameWindow1" />
+  <FalagardMapping WindowType="TLBB_MainFrame2" TargetType="Falagard/BoundWindow" LookNFeel="TLBB_Look_MainFrameWindow2" />
+  <FalagardMapping WindowType="TLBB_MainFrame3" TargetType="Falagard/BoundWindow" LookNFeel="TLBB_Look_MainFrameWindow3" />
+  <FalagardMapping WindowType="TLBB_MainFrame4" TargetType="Falagard/BoundWindow" LookNFeel="TLBB_Look_MainFrameWindow4" />
+  <FalagardMapping WindowType="TLBB_MainFrame_SelectServer" TargetType="Falagard/BoundWindow" LookNFeel="TLBB_Look_Frame_SelectServer" />
+  <FalagardMapping WindowType="TLBB_MainFrame_SelectServer2" TargetType="Falagard/BoundWindow" LookNFeel="TLBB_Look_Frame_SelectServer2" />
+  <FalagardMapping WindowType="TLBB_MainFrame_Logon" TargetType="Falagard/BoundWindow" LookNFeel="TLBB_Look_Frame_Logon" />
+
+  <FalagardMapping WindowType="TLBB_MainFrame5" TargetType="Falagard/BoundWindow" LookNFeel="TLBB_Look_MainFrameWindow5" />
+
+  <FalagardMapping WindowType="TLBB_Frame_Lace1" TargetType="Falagard/StaticImage" LookNFeel="TLBB_Look_Frame_Lace1" />
+  <FalagardMapping WindowType="TLBB_Frame_Lace2" TargetType="Falagard/StaticImage" LookNFeel="TLBB_Look_Frame_Lace2" />
+  <FalagardMapping WindowType="TLBB_Frame_Lace3" TargetType="Falagard/StaticImage" LookNFeel="TLBB_Look_Frame_Lace3" />
+  <FalagardMapping WindowType="TLBB_Frame_Lace4" TargetType="Falagard/StaticImage" LookNFeel="TLBB_Look_Frame_Lace4" />
+  <FalagardMapping WindowType="TLBB_Frame_Lace5" TargetType="Falagard/StaticImage" LookNFeel="TLBB_Look_Frame_Lace5" />
+  <FalagardMapping WindowType="TLBB_Frame_Lace6" TargetType="Falagard/StaticImage" LookNFeel="TLBB_Look_Frame_Lace6" />
+  
+  <FalagardMapping WindowType="TLBB_Frame1" TargetType="Falagard/StaticImage" LookNFeel="TLBB_Look_Frame1" />
+  <FalagardMapping WindowType="TLBB_Frame2" TargetType="Falagard/StaticImage" LookNFeel="TLBB_Look_Frame2" />
+  <FalagardMapping WindowType="TLBB_FramePaoPao" TargetType="Falagard/StaticImage" LookNFeel="TLBB_Look_FramePaoPao" />
+  <FalagardMapping WindowType="TLBB_FramePet" TargetType="Falagard/StaticImage" LookNFeel="TLBB_Look_FramePet" />
+  <FalagardMapping WindowType="TLBB_FramePlayer" TargetType="Falagard/StaticImage" LookNFeel="TLBB_Look_FramePlayer" />
+  <FalagardMapping WindowType="TLBB_FramePlayerOther" TargetType="Falagard/StaticImage" LookNFeel="TLBB_Look_FramePlayerOther" />
+  <FalagardMapping WindowType="TLBB_FrameSelect" TargetType="Falagard/StaticImage" LookNFeel="TLBB_Look_FrameSelect" />
+
+  <FalagardMapping WindowType="TLBB_MainMenuBarLeft" TargetType="Falagard/StaticImage" LookNFeel="TLBB_Look_MainMenuBarLeft" />
+  <FalagardMapping WindowType="TLBB_MainMenuBarRight" TargetType="Falagard/StaticImage" LookNFeel="TLBB_Look_MainMenuBarRight" />
+  <FalagardMapping WindowType="TLBB_MainMenuBarCenter" TargetType="Falagard/StaticImage" LookNFeel="TLBB_Look_MainMenuBarCenter" />
+
+  <FalagardMapping WindowType="TLBB_Frame_Campaign" TargetType="Falagard/StaticImage" LookNFeel="TLBB_Look_Frame_Campaign" />
+  
+  <!--
+	***************************
+		按钮类型
+	***************************
+	-->
+  <!-- 通用actionbutton -->
+  <FalagardMapping WindowType="TLBB_ActionButton" TargetType="Falagard/ActionButton" LookNFeel="TLBB_Look_ActionButton" />
+  <FalagardMapping WindowType="TLBB_ActionButtonNULL" TargetType="Falagard/ActionButton" LookNFeel="TLBB_Look_ActionButtonNULL" />
+  <FalagardMapping WindowType="TLBB_ActionButtonTooltip" TargetType="Falagard/ActionButton" LookNFeel="TLBB_Look_ActionButtonTooltip" />
+  <!-- 通用按钮 -->
+  <FalagardMapping WindowType="TLBB_ButtonCommon" TargetType="Falagard/Button" LookNFeel="TLBB_Look_ButtonCommon" />
+  <!-- 通用按钮 2-->
+  <FalagardMapping WindowType="TLBB_ButtonCommon2" TargetType="Falagard/Button" LookNFeel="TLBB_Look_ButtonCommon2" />
+  <!-- 通用按钮 3-->
+  <FalagardMapping WindowType="TLBB_ButtonCommon3" TargetType="Falagard/Button" LookNFeel="TLBB_Look_ButtonCommon3" />
+  <!-- 通用按钮 4-->
+  <FalagardMapping WindowType="TLBB_ButtonCommon4" TargetType="Falagard/Button" LookNFeel="TLBB_Look_ButtonCommon4" />
+  <!-- 特殊按钮 1-->
+  <FalagardMapping WindowType="TLBB_ButtonExpCheck1" TargetType="Falagard/CheckBox" LookNFeel="TLBB_Look_ButtonExp1" />
+  <FalagardMapping WindowType="TLBB_ButtonExp1" TargetType="Falagard/Button" LookNFeel="TLBB_Look_ButtonExp1" />
+  <!-- 特殊按钮 2-->
+  <FalagardMapping WindowType="TLBB_ButtonExp2" TargetType="Falagard/Button" LookNFeel="TLBB_Look_ButtonExp2" />
+  <!-- 分页按钮 -->
+  <FalagardMapping WindowType="TLBB_ButtonPageUp" TargetType="Falagard/CheckBox" LookNFeel="TLBB_Look_ButtonPageUp" />
+  <FalagardMapping WindowType="TLBB_ButtonPageDown" TargetType="Falagard/CheckBox" LookNFeel="TLBB_Look_ButtonPageDown" />
+  <!-- 空按钮，需要外部指定四态图片-->
+  <FalagardMapping WindowType="TLBB_ButtonNULL" TargetType="Falagard/Button" LookNFeel="TLBB_Look_ButtonNULL" />
+  <!-- 系统关闭 -->
+  <FalagardMapping WindowType="TLBB_ButtonClose" TargetType="Falagard/Button" LookNFeel="TLBB_Look_ButtonClose" />
+  <!-- 系统帮助 -->
+  <FalagardMapping WindowType="TLBB_ButtonHelp" TargetType="Falagard/Button" LookNFeel="TLBB_Look_ButtonHelp" />
+  <!-- Radio 按钮 -->
+  <FalagardMapping WindowType="TLBB_ButtonRadio" TargetType="Falagard/RadioButton" LookNFeel="TLBB_Look_ButtonRadio" />
+  <!-- check 按钮 -->
+  <FalagardMapping WindowType="TLBB_ButtonCheckHead" TargetType="Falagard/CheckBox" LookNFeel="TLBB_Look_CheckHead" />
+  <FalagardMapping WindowType="TLBB_ButtonCheckSelect" TargetType="Falagard/CheckBox" LookNFeel="TLBB_Look_CheckSelect" />
+  <!-- check 按钮 -->
+  <FalagardMapping WindowType="TLBB_ButtonCheck" TargetType="Falagard/CheckBox" LookNFeel="TLBB_Look_ButtonRadio" />
+  <FalagardMapping WindowType="TLBB_ButtonCheck1" TargetType="Falagard/CheckBox" LookNFeel="TLBB_Look_ButtonCommon" />
+  <!-- 服务器选择按钮 -->
+  <FalagardMapping WindowType="TLBB_ButtonCheckForServer" TargetType="Falagard/CheckBox" LookNFeel="TLBB_Look_ButtonExpForServer2" />
+  <FalagardMapping WindowType="TLBB_ButtonCheckForServer3" TargetType="Falagard/CheckBox" LookNFeel="TLBB_Look_ButtonExpForServer3" />
+  <!-- 服务器选择按钮 -->
+  <FalagardMapping WindowType="TLBB_ButtonCheckForPage" TargetType="Falagard/CheckBox" LookNFeel="TLBB_Look_ButtonCommon3" />
+  <FalagardMapping WindowType="TLBB_NewButtonCheckForPage" TargetType="Falagard/CheckBox" LookNFeel="TLBB_Look_ButtonCheckForServer" />
+  <!-- 推荐服务器选择按钮 -->
+  <FalagardMapping WindowType="TLBB_ButtonCheckForComServer" TargetType="Falagard/CheckBox" LookNFeel="TLBB_Look_ButtonForComServer" />
+  <!-- 服务器选择按钮 -->
+  <FalagardMapping WindowType="TLBB_ButtonCheckNULL" TargetType="Falagard/CheckBox" LookNFeel="TLBB_Look_ButtonNULL" />
+  <!-- add 按钮 -->
+  <FalagardMapping WindowType="TLBB_ButtonAdd" TargetType="Falagard/Button" LookNFeel="TLBB_Look_ButtonAdd" />
+  <!-- sub 按钮 -->
+  <FalagardMapping WindowType="TLBB_ButtonSub" TargetType="Falagard/Button" LookNFeel="TLBB_Look_ButtonSub" />
+  <!-- 聊天框分页按钮 -->
+  <FalagardMapping WindowType="TLBB_ButtonCheckForChatPage" TargetType="Falagard/CheckBox" LookNFeel="TLBB_Look_ButtonCheckForChatPage" />
+  <!-- 任务日志可接任务按钮 -->
+  <FalagardMapping WindowType="TLBB_ButtonCheckForQuest" TargetType="Falagard/CheckBox" LookNFeel="TLBB_Look_ButtonCheckForQuest" />
+  <!-- 应广大人民要求制作的一款怪异的绿色按钮 -->
+  <FalagardMapping WindowType="TLBB_ButtonGreen" TargetType="Falagard/Button" LookNFeel="TLBB_Look_ButtonCheckForQuest" />
+
+  <!-- 左旋转 按钮 -->
+  <FalagardMapping WindowType="TLBB_ButtonTurnLeft" TargetType="Falagard/Button" LookNFeel="TLBB_Look_ButtonTurnLeft" />
+  <!-- 右旋转 按钮 -->
+  <FalagardMapping WindowType="TLBB_ButtonTurnRight" TargetType="Falagard/Button" LookNFeel="TLBB_Look_ButtonTurnRight" />
+  <!-- 软键盘 按钮 -->
+  <FalagardMapping WindowType="TLBB_ButtonKey" TargetType="Falagard/Button" LookNFeel="TLBB_Look_ButtonKey" />
+
+  <FalagardMapping WindowType="TLBB_ButtonKey" TargetType="Falagard/Button" LookNFeel="TLBB_Look_ButtonKey" />
+  <!-- 货架 按钮 -->
+  <FalagardMapping WindowType="TLBB_ButtonSale" TargetType="Falagard/CheckBox" LookNFeel="TLBB_Look_ButtonSale" />
+  <!-- 摊位 按钮 -->
+  <FalagardMapping WindowType="TLBB_ButtonStall" TargetType="Falagard/CheckBox" LookNFeel="TLBB_Look_ButtonStall" />
+
+  <!-- 任务选项按钮 -->
+  <FalagardMapping WindowType="TLBB_QuestButton" TargetType="Falagard/Button" LookNFeel="TLBB_Look_QuestButton" />
+  <!-- 星级按钮 -->
+  <FalagardMapping WindowType="TLBB_StarPic" TargetType="Falagard/AnimateImage" LookNFeel="TLBB_Look_ImageStar" />
+  <FalagardMapping WindowType="TLBB_GemPic" TargetType="Falagard/StaticImage" LookNFeel="TLBB_Look_ImageGem" />
+	<!-- 特殊按钮，活动专用 -->
+  <FalagardMapping WindowType="TLBB_ButtonCampaign" TargetType="Falagard/Button" LookNFeel="TLBB_Look_ButtonCampaign" />
+  <FalagardMapping WindowType="TLBB_ButtonCheckForRMBShop" TargetType="Falagard/CheckBox" LookNFeel="TLBB_Look_ButtonCheckRMBShop" />
+  <!--
+  
+	***************************
+		滚动条 
+
+	***************************
+	-->
+  <FalagardMapping WindowType="TLBB_Scrollbar_Common" TargetType="Falagard/Scrollbar" LookNFeel="TLBB_Look_Scrollbar_Common" />
+  <FalagardMapping WindowType="TLBB_ScrollbarThumb_Common" TargetType="Falagard/Thumb" LookNFeel="TLBB_Look_ScrollbarThumb_Common" />
+
+  <!--
+	***************************
+		进度条
+
+
+
+	***************************
+	-->
+  <!-- 用在血，魔，能量的进度条 -->
+  <FalagardMapping WindowType="TLBB_ProgressPropertyRed" TargetType="Falagard/SuperProgress" LookNFeel="TLBB_Look_ProgressPropertyRed" />
+  <FalagardMapping WindowType="TLBB_ProgressPropertyBlue" TargetType="Falagard/SuperProgress" LookNFeel="TLBB_Look_ProgressPropertyBlue" />
+  <FalagardMapping WindowType="TLBB_ProgressPropertyYellow" TargetType="Falagard/SuperProgress" LookNFeel="TLBB_Look_ProgressPropertyYellow" />
+  <FalagardMapping WindowType="TLBB_ProgressPropertyGreen" TargetType="Falagard/SuperProgress" LookNFeel="TLBB_Look_ProgressPropertyGreen" />
+  <FalagardMapping WindowType="TLBB_ProgressPropertyCyan" TargetType="Falagard/SuperProgress" LookNFeel="TLBB_Look_ProgressPropertyCyan" />
+  <FalagardMapping WindowType="TLBB_ProgressPropertyPure" TargetType="Falagard/SuperProgress" LookNFeel="TLBB_Look_ProgressPropertyPure" />
+  <FalagardMapping WindowType="TLBB_ProgressPropertyWhite" TargetType="Falagard/SuperProgress" LookNFeel="TLBB_Look_ProgressPropertyWhite" />
+  <!-- 用在技能使用的进度条 -->
+  <FalagardMapping WindowType="TLBB_ProgressSkill" TargetType="Falagard/SuperProgress" LookNFeel="TLBB_Look_ProgressSkill" />
+  <!-- 用在读取进度的进度条 -->
+
+  <!--
+	***************************
+		图片
+	***************************
+	-->
+  <!-- 空图片，需要外部指定显示的图片-->
+  <FalagardMapping WindowType="TLBB_StaticImageNULL" TargetType="Falagard/StaticImage" LookNFeel="TLBB_Look_StaticImage" />
+  <FalagardMapping WindowType="TLBB_StaticImageFrame" TargetType="Falagard/StaticImage" LookNFeel="TLBB_Look_ImageWithFrame" />
+  <FalagardMapping WindowType="TLBB_StaticImageFrame2" TargetType="Falagard/StaticImage" LookNFeel="TLBB_Look_ImageWithFrame2" />
+  <FalagardMapping WindowType="TLBB_StaticImageTextColor" TargetType="Falagard/StaticImage" LookNFeel="TLBB_Look_ImageTextColor" />
+  <FalagardMapping WindowType="TLBB_MapImage" TargetType="Falagard/MapImage" LookNFeel="TLBB_Look_StaticImage" />
+  <FalagardMapping WindowType="TLBB_StaticImageLock" TargetType="Falagard/StaticImage" LookNFeel="TLBB_Look_ImageLock" />
+
+  <!--
+	***************************
+		文字片
+
+
+
+	***************************
+	-->
+  <!-- 只显示文字得控件，空底板-->
+  <FalagardMapping WindowType="TLBB_SimpleText" TargetType="Falagard/SimpleText" LookNFeel="TLBB_Look_SimpleText" />
+  <FalagardMapping WindowType="TLBB_SimpleTextFrame" TargetType="Falagard/SimpleText" LookNFeel="TLBB_Look_SimpleText" />
+  <FalagardMapping WindowType="TLBB_SimpleMulitiTextFrame" TargetType="Falagard/SimpleText" LookNFeel="TLBB_Look_MuliteTextFrame" />
+  <FalagardMapping WindowType="TLBB_SimpleTextFrameLeft" TargetType="Falagard/SimpleText" LookNFeel="TLBB_Look_SimpleTextLeft" />
+  <FalagardMapping WindowType="TLBB_SimpleTextFrameRight" TargetType="Falagard/SimpleText" LookNFeel="TLBB_Look_SimpleTextRight" />
+  <FalagardMapping WindowType="TLBB_SimpleTextInfo" TargetType="Falagard/SimpleText" LookNFeel="TLBB_Look_SimpleTextInfo" />
+
+  <FalagardMapping WindowType="TLBB_StaticText" TargetType="Falagard/StaticText" LookNFeel="TLBB_Look_StaticText" />
+  <!-- 自适应得控件，会根据文字得多少自动调节高度-->
+  <FalagardMapping WindowType="TLBB_SelfWindow" TargetType="Falagard/SelfFitWindow" LookNFeel="TLBB_Look_SelfWindow" />
+  <FalagardMapping WindowType="TLBB_PaoPao" TargetType="Falagard/PaoPao" LookNFeel="TLBB_Look_PaoPao" />
+  <!--
+	***************************
+		线
+
+
+
+	***************************
+	-->
+  <!-- 横线  -->
+  <FalagardMapping WindowType="TLBB_HLine" TargetType="Falagard/StaticImage" LookNFeel="TLBB_Look_HLine" />
+ 
+  <!-- 竖线 -->
+  <FalagardMapping WindowType="TLBB_VLine" TargetType="Falagard/StaticImage" LookNFeel="TLBB_Look_VLine" />
+  
+  <!--
+	***************************
+		微调控件
+	***************************
+	-->
+  <FalagardMapping WindowType="TLBB_Spinner" TargetType="Falagard/Spinner" LookNFeel="TLBB_Look_Spinner" />
+
+  <!--
+	***************************
+		编辑框
+
+
+
+	***************************
+	-->
+  
+  <FalagardMapping WindowType="TLBB_EditBoxNull" TargetType="Falagard/IMEEditBox" LookNFeel="TLBB_Look_EditBoxNULL" />
+  <FalagardMapping WindowType="TLBB_EditBoxNormal" TargetType="Falagard/IMEEditBox" LookNFeel="TLBB_Look_EditBoxNormal" />
+  <FalagardMapping WindowType="TLBB_EditBoxInput" TargetType="Falagard/IMEEditBox" LookNFeel="TLBB_Look_EditBoxInput" />
+  <FalagardMapping WindowType="TLBB_EditBoxDropList" TargetType="Falagard/Editbox" LookNFeel="TLBB_Look_ComboEditbox" />
+  <FalagardMapping WindowType="TLBB_EditBoxSafe" TargetType="Falagard/SafeIMEEditBox" LookNFeel="TLBB_Look_EditBoxNormal" />
+  <FalagardMapping WindowType="TLBB_MultiIMEEditBox" TargetType="Falagard/MultiIMEEditBox" LookNFeel="TLBB_Look_MultiEditbox_IME" />
+
+  <!--
+	***************************
+		列表框
+
+
+
+	***************************
+	-->
+
+  <FalagardMapping WindowType="TLBB_ListBoxCommon" TargetType="Falagard/Listbox" LookNFeel="TLBB_Look_ListBoxCommon" />
+  <FalagardMapping WindowType="TLBB_ComboDropList" TargetType="Falagard/ComboDropList" LookNFeel="TLBB_Look_ComboDropList" />
+  <FalagardMapping WindowType="TLBB_ComboList" TargetType="Falagard/Combobox" LookNFeel="TLBB_Look_Combobox" />
+
+  <FalagardMapping WindowType="TLBB_InfoList" TargetType="Falagard/InfoList" LookNFeel="TLBB_Look_Listbox_Debug" />
+  
+  <FalagardMapping WindowType="TLBB_MenuItem" TargetType="Falagard/MenuItem" LookNFeel="TLBB_Look_MenuItem" />
+  <FalagardMapping WindowType="TLBB_PopupMenu" TargetType="Falagard/PopupMenu" LookNFeel="TLBB_Look_PopupMenu" />
+
+  <!--
+	***************************
+		多列列表框
+
+
+
+	***************************
+	-->
+
+  <FalagardMapping WindowType="TLBB_ListHeaderSegment" TargetType="Falagard/ListHeaderSegment" LookNFeel="TLBB_Look_ListHeaderSegment" />
+  <FalagardMapping WindowType="TLBB_MultiColumnList" TargetType="Falagard/MultiColumnList" LookNFeel="TLBB_Look_MultiColumnList" />
+  <FalagardMapping WindowType="TLBB_ListHeader" TargetType="Falagard/ListHeader" LookNFeel="TLBB_Look_ListHeader" />
+  <!--
+	***************************
+		模型窗口
+	***************************
+	-->
+
+  <FalagardMapping WindowType="TLBB_MeshWindow" TargetType="Falagard/MeshWindow" LookNFeel="TLBB_Look_MeshWindow" />
+  <!--
+	***************************
+		拖动窗口
+	***************************
+	-->
+  <FalagardMapping WindowType="TLBB_DragTitle" TargetType="Falagard/DragTitle" LookNFeel="TLBB_Look_DragTitle" />
+  <!--
+	***************************
+		软键盘
+
+
+
+	***************************
+	-->
+  <FalagardMapping WindowType="TLBB_SoftKeyWindow" TargetType="Falagard/SoftKeyWindow" LookNFeel="TLBB_Look_StaticImage" />
+
+  <!--
+	***************************
+		复杂窗口
+	***************************
+	-->
+  <FalagardMapping WindowType="TLBB_RewardItem" TargetType="Falagard/RewardItem" LookNFeel="TLBB_Look_RewardItem" />
+  <FalagardMapping WindowType="TLBB_ComplexWindow" TargetType="Falagard/ComplexWindow" LookNFeel="TLBB_Look_ComplexWindow" />
+  <FalagardMapping WindowType="TLBB_ComplexWindow_ParentWindow" TargetType="Falagard/ComplexWindow/ParentWindow" LookNFeel="TLBB_Look_ComplexWindow_ParentWindow" />
+  <!--
+	***************************
+		聊天窗口
+	***************************
+	-->
+  <FalagardMapping WindowType="TLBB_ChatBoard" TargetType="Falagard/ChatBoard" LookNFeel="TLBB_Look_ChatBoard" />
+  <FalagardMapping WindowType="TLBB_ChatHistory" TargetType="Falagard/ChatHistory" LookNFeel="TLBB_Look_ChatHistory" />
+  <FalagardMapping WindowType="TLBB_ChatHistory_ParentWindow" TargetType="Falagard/ChatHistory/ParentWindow" LookNFeel="TLBB_Look_ChatHistory_ParentWindow" />
+  <FalagardMapping WindowType="TLBB_ChatChannel" TargetType="Falagard/ChatChannel" LookNFeel="TLBB_Look_ChatChannel" />
+  <!--
+	***************************
+		任务头顶板
+
+
+
+	***************************
+	-->
+  <FalagardMapping WindowType="TLBB_CreatureBoard" TargetType="Falagard/CreatureBoard" LookNFeel="TLBB_Look_CreatureBoard" />
+
+  <!--
+	***************************
+		被集中信息
+
+
+
+	***************************
+	-->
+  <FalagardMapping WindowType="TLBB_BeHitBoard" TargetType="Falagard/BeHidBoard" LookNFeel="TLBB_Look_BeHitBoard" />
+  <!--
+	***************************
+		钱控件
+
+
+
+	***************************
+	-->
+  <FalagardMapping WindowType="TLBB_Money" TargetType="Falagard/Money" LookNFeel="TLBB_Look_Money" />
+  <FalagardMapping WindowType="TLBB_JiaoZi" TargetType="Falagard/Money" LookNFeel="TLBB_Look_JiaoZi" />
+  <!--
+	***************************
+		tooltip
+	***************************
+	-->
+  <FalagardMapping WindowType="TLBB_Tooltip" TargetType="Falagard/Tooltip" LookNFeel="TLBB_Look_Tooltip" />
+  <FalagardMapping WindowType="TLBB_TripperTooltip" TargetType="Falagard/TripperTooltip" LookNFeel="TLBB_Look_Tooltip" />
+  <FalagardMapping WindowType="TLBB_SuperTooltip" TargetType="Falagard/SuperTooltip" LookNFeel="TLBB_Look_SuperTooltip" />
+  <FalagardMapping WindowType="TLBB_SuperTooltip_ResizeText" TargetType="Falagard/SuperTooltip/ResizeText" LookNFeel="TLBB_Look_ResizeTextFrame" />
+  <!--
+	***************************
+		滚动信息
+	***************************
+	-->
+  <FalagardMapping WindowType="TLBB_ScrollInfo" TargetType="Falagard/ScrollInfo" LookNFeel="TLBB_Look_ScrollInfo" />
+  <FalagardMapping WindowType="TLBB_ScrollInfoFixed" TargetType="Falagard/ScrollInfoFixed" LookNFeel="TLBB_Look_ScrollInfo" />
+  <!--
+	***************************
+		雷达
+	***************************
+	-->
+  <FalagardMapping WindowType="TLBB_SceneMap" TargetType="Falagard/SceneMap" LookNFeel="TLBB_Look_SceneMap" />
+  <FalagardMapping WindowType="TLBB_WorldMap" TargetType="Falagard/WorldMap" LookNFeel="TLBB_Look_WorldMap" />
+  <!--
+	***************************
+		动画控件
+	***************************
+	-->
+  <FalagardMapping WindowType="TLBB_AnimateImage" TargetType="Falagard/AnimateImage" LookNFeel="TLBB_Look_StaticImage" />
+  <FalagardMapping WindowType="TLBB_Animate" TargetType="Falagard/Animate" LookNFeel="TLBB_Look_ButtonNULL" />
+  <FalagardMapping WindowType="TLBB_AnimateFace" TargetType="Falagard/Animate" LookNFeel="TLBB_Look_ActionButtonNULL" />
+
+  <FalagardMapping WindowType="TLBB_StopWatch" TargetType="Falagard/StopWatch" LookNFeel="TLBB_Look_NULL" />
+
+  <FalagardMapping WindowType="TLBB_Slider" TargetType="Falagard/Scrollbar" LookNFeel="TLBB_Look_Slider" />
+  <FalagardMapping WindowType="TLBB_SliderThumb" TargetType="Falagard/Thumb" LookNFeel="TLBB_Look_SliderThumb" />
+
+  <FalagardMapping WindowType="TLBB_StarWindow" TargetType="Falagard/Star" LookNFeel="TLBB_Look_ChatSpeaker" />
+  <Imageset Name="StarAnimate" Filename="Common/StarAnimate.imageset.xml" />
+
+  <Imageset Name="stall01" Filename="Common/stall01.imageset.xml" />
+  <Imageset Name="stall02" Filename="Common/stall02.imageset.xml" />
+  <Imageset Name="stall03" Filename="Common/stall03.imageset.xml" />
+  <Imageset Name="stall04" Filename="Common/stall04.imageset.xml" />
+  <Imageset Name="stall05" Filename="Common/stall05.imageset.xml" />
+  <Imageset Name="stall07" Filename="Common/stall07.imageset.xml" />
+  <!--
+	***************************
+		登陆界面背景
+	***************************
+	-->
+  <Imageset Name="SelectServer1" Filename="SelectServer/SelectServer1.imageset.xml" />
+  <Imageset Name="SelectServer2" Filename="SelectServer/SelectServer2.imageset.xml" />
+  <Imageset Name="SelectServer3" Filename="SelectServer/SelectServer3.imageset.xml" />
+  <Imageset Name="SelectServer4" Filename="SelectServer/SelectServer4.imageset.xml" />
+  <Imageset Name="SelectServer5" Filename="SelectServer/SelectServer5.imageset.xml" />
+  <Imageset Name="AccountLogin1" Filename="SelectServer/AccountLogin1.imageset.xml" />
+  <Imageset Name="AccountLogin2" Filename="SelectServer/AccountLogin2.imageset.xml" />
+  <Imageset Name="AccountLogin3" Filename="SelectServer/AccountLogin3.imageset.xml" />
+  <Imageset Name="AccountLogin4" Filename="SelectServer/AccountLogin4.imageset.xml" />
+  <Imageset Name="AccountLogin5" Filename="SelectServer/AccountLogin5.imageset.xml" />
+
+  
+  <!--
+	***************************
+		图片定义
+	***************************
+	-->
+  <Imageset Name="Button1" Filename="Common/Buttons1.imageset.xml" />
+  <Imageset Name="Button2" Filename="Common/Buttons2.imageset.xml" />
+  <Imageset Name="Button3" Filename="Common/Buttons3.imageset.xml" />
+  <Imageset Name="Button4" Filename="Common/Buttons4.imageset.xml" />
+  <Imageset Name="Button5" Filename="Common/Buttons5.imageset.xml" />
+  <Imageset Name="Button6" Filename="Common/Buttons6.imageset.xml" />
+  <Imageset Name="Button7" Filename="Common/Buttons7.imageset.xml" />
+  <Imageset Name="Buttons" Filename="Common/Buttons.imageset.xml" />
+  <Imageset Name="ButtonCampaign" Filename="Common/ButtonCampaign.imageset.xml" />
+  <Imageset Name="ButtonCampaign1" Filename="Common/ButtonCampaign1.imageset.xml" />
+  <Imageset Name="ButtonCampaign2" Filename="Common/ButtonCampaign2.imageset.xml" />
+  <Imageset Name="ButtonCampaign3" Filename="Common/ButtonCampaign3.imageset.xml" />
+  <Imageset Name="CSystem_00" Filename="Common/CSystem_00.imageset.xml" />
+  
+  <Imageset Name="CommonFrame" Filename="Common/CommonFrame.imageset.xml" />
+  <Imageset Name="CommonFrame2" Filename="Common/CommonFrame2.imageset.xml" />
+  <Imageset Name="CommonFrame3" Filename="Common/CommonFrame3.imageset.xml" />
+  <Imageset Name="CommonFrame4" Filename="Common/CommonFrame4.imageset.xml" />
+  <Imageset Name="CommonItem" Filename="Common/CommonItem.imageset.xml" />
+  <Imageset Name="CommonStaticImage" Filename="Common/CommonStaticImage.imageset.xml" />
+  <Imageset Name="CommonStaticImage2" Filename="Common/CommonStaticImage2.imageset.xml" />
+  <Imageset Name="CommonStaticImage3" Filename="Common/CommonStaticImage3.imageset.xml" />
+  <Imageset Name="CommonStaticImage4" Filename="Common/CommonStaticImage4.imageset.xml" />
+  <Imageset Name="CommonStaticImage5" Filename="Common/CommonStaticImage5.imageset.xml" />
+
+  <Imageset Name="MiniMap" Filename="Common/Minimap.imageset.xml" />
+  <Imageset Name="RoundRegion" Filename="Common/RoundRegion.imageset.xml" />
+
+  <Imageset Name="UIIcons" Filename="Common/UIIcons.imageset.xml" />
+  <Imageset Name="MiniMap_Arrow" Filename="Common/MiniMap_Arrow.imageset.xml" />
+  <Imageset Name="MiniMap_Arrow2" Filename="Common/MiniMap_Arrow2.imageset.xml" />
+  <Imageset Name="MiniMap_Arrow3" Filename="Common/MiniMap_Arrow3.imageset.xml" />
+
+  <Imageset Name="MiniMap_Icon" Filename="Common/MiniMap_Icon.imageset.xml" />
+  <Imageset Name="MiniMap_Icon2" Filename="Common/MiniMap_Icon2.imageset.xml" />
+  <Imageset Name="MiniMap_Icon3" Filename="Common/MiniMap_Icon3.imageset.xml" />
+  <Imageset Name="MiniMap_Icon4" Filename="Common/MiniMap_Icon4.imageset.xml" />
+  <Imageset Name="MiniMap_Icon5" Filename="Common/MiniMap_Icon5.imageset.xml" />
+
+
+  <Imageset Name="Background" Filename="Common/Background.imageset.xml" />
+  <Imageset Name="Background1" Filename="Common/Background1.imageset.xml" />
+
+	<Imageset Name="BGLogin_0_0" Filename="Bg_Info/Img/Login/0_0.imageset.xml" />
+	<Imageset Name="BGLogin_0_1" Filename="Bg_Info/Img/Login/0_1.imageset.xml" />
+	<Imageset Name="BGLogin_0_2" Filename="Bg_Info/Img/Login/0_2.imageset.xml" />
+	<Imageset Name="BGLogin_0_3" Filename="Bg_Info/Img/Login/0_3.imageset.xml" />
+	
+	<Imageset Name="BGLogin_1_0" Filename="Bg_Info/Img/Login/1_0.imageset.xml" />
+	<Imageset Name="BGLogin_1_1" Filename="Bg_Info/Img/Login/1_1.imageset.xml" />
+	<Imageset Name="BGLogin_1_2" Filename="Bg_Info/Img/Login/1_2.imageset.xml" />
+	<Imageset Name="BGLogin_1_3" Filename="Bg_Info/Img/Login/1_3.imageset.xml" />
+	
+	<Imageset Name="BGLogin_2_0" Filename="Bg_Info/Img/Login/2_0.imageset.xml" />
+	<Imageset Name="BGLogin_2_1" Filename="Bg_Info/Img/Login/2_1.imageset.xml" />
+	<Imageset Name="BGLogin_2_2" Filename="Bg_Info/Img/Login/2_2.imageset.xml" />
+	<Imageset Name="BGLogin_2_3" Filename="Bg_Info/Img/Login/2_3.imageset.xml" />
+	
+	<Imageset Name="BGLogin_3_0" Filename="Bg_Info/Img/Login/3_0.imageset.xml" />
+	<Imageset Name="BGLogin_3_1" Filename="Bg_Info/Img/Login/3_1.imageset.xml" />
+	<Imageset Name="BGLogin_3_2" Filename="Bg_Info/Img/Login/3_2.imageset.xml" />
+	<Imageset Name="BGLogin_3_3" Filename="Bg_Info/Img/Login/3_3.imageset.xml" />
+	
+	<Imageset Name="BGLogin_4_0" Filename="Bg_Info/Img/Login/4_0.imageset.xml" />
+	<Imageset Name="BGLogin_4_1" Filename="Bg_Info/Img/Login/4_1.imageset.xml" />
+	<Imageset Name="BGLogin_4_2" Filename="Bg_Info/Img/Login/4_2.imageset.xml" />
+	<Imageset Name="BGLogin_4_3" Filename="Bg_Info/Img/Login/4_3.imageset.xml" />
+	
+	<Imageset Name="BGLogin_5_0" Filename="Bg_Info/Img/Login/5_0.imageset.xml" />
+	<Imageset Name="BGLogin_5_1" Filename="Bg_Info/Img/Login/5_1.imageset.xml" />
+	<Imageset Name="BGLogin_5_2" Filename="Bg_Info/Img/Login/5_2.imageset.xml" />
+	<Imageset Name="BGLogin_5_3" Filename="Bg_Info/Img/Login/5_3.imageset.xml" />
+	
+	<Imageset Name="BGLogin_6_0" Filename="Bg_Info/Img/Login/6_0.imageset.xml" />
+	<Imageset Name="BGLogin_6_1" Filename="Bg_Info/Img/Login/6_1.imageset.xml" />
+	<Imageset Name="BGLogin_6_2" Filename="Bg_Info/Img/Login/6_2.imageset.xml" />
+	<Imageset Name="BGLogin_6_3" Filename="Bg_Info/Img/Login/6_3.imageset.xml" />
+	
+	<Imageset Name="BGLogin_7_0" Filename="Bg_Info/Img/Login/7_0.imageset.xml" />
+	<Imageset Name="BGLogin_7_1" Filename="Bg_Info/Img/Login/7_1.imageset.xml" />
+	<Imageset Name="BGLogin_7_2" Filename="Bg_Info/Img/Login/7_2.imageset.xml" />
+	<Imageset Name="BGLogin_7_3" Filename="Bg_Info/Img/Login/7_3.imageset.xml" />
+	
+	<Imageset Name="BGLogin_8_0" Filename="Bg_Info/Img/Login/8_0.imageset.xml" />
+	<Imageset Name="BGLogin_8_1" Filename="Bg_Info/Img/Login/8_1.imageset.xml" />
+	<Imageset Name="BGLogin_8_2" Filename="Bg_Info/Img/Login/8_2.imageset.xml" />
+	<Imageset Name="BGLogin_8_3" Filename="Bg_Info/Img/Login/8_3.imageset.xml" />
+	
+	<Imageset Name="BGLogin_9_0" Filename="Bg_Info/Img/Login/9_0.imageset.xml" />
+	<Imageset Name="BGLogin_9_1" Filename="Bg_Info/Img/Login/9_1.imageset.xml" />
+	<Imageset Name="BGLogin_9_2" Filename="Bg_Info/Img/Login/9_2.imageset.xml" />
+	<Imageset Name="BGLogin_9_3" Filename="Bg_Info/Img/Login/9_3.imageset.xml" />
+	
+	<Imageset Name="BGLogin_Ground" Filename="Bg_Info/Img/Login/BGLogin_Ground.imageset.xml" />
+
+	<Imageset Name="CityTrendGraph" Filename="Common/CityTrendGraph.imageset.xml" />
+	<Imageset Name="SceneTrans" Filename="Common/SceneTrans.imageset.xml" />
+	<Imageset Name="PKWarning" Filename="Common/PKWarning.imageset.xml" />
+
+	<Imageset Name="CommonFrame5" Filename="Common/CommonFrame5.imageset.xml" />
+
+  <Imageset Name="Menpaishuxing" Filename="Common/Menpaishuxing.imageset.xml" />
+  
+  <!--
+	***************************
+		表情定义
+	***************************
+	-->
+  <Imageset Name="Face_00" Filename="Common/face_00.imageset.xml" />
+  <Imageset Name="Face_01" Filename="Common/face_01.imageset.xml" />
+  <Imageset Name="Face_02" Filename="Common/face_02.imageset.xml" />
+  <Imageset Name="Face_03" Filename="Common/face_03.imageset.xml" />
+  <Imageset Name="Face_04" Filename="Common/face_04.imageset.xml" />
+  <Imageset Name="Face_05" Filename="Common/face_05.imageset.xml" />
+  <Imageset Name="Face_06" Filename="Common/face_06.imageset.xml" />
+
+
+
+  <!--
+	***************************
+		Icons
+	***************************
+	-->
+  <Imageset Name="CoolDownIcon" Filename="Icons/CoolDown.imageset.xml" />
+  <Imageset Name="PercentageIcon" Filename="Icons/Percentage.imageset.xml" />
+  <Imageset Name="Icons0" Filename="Icons/Icons0.imageset.xml" />
+  <Imageset Name="Annulus1" Filename="Icons/Annulus1.imageset.xml" />
+  <Imageset Name="Annulus2" Filename="Icons/Annulus2.imageset.xml" />
+  <Imageset Name="Annulus3" Filename="Icons/Annulus3.imageset.xml" />
+  <Imageset Name="Annulus4" Filename="Icons/Annulus4.imageset.xml" />
+  <Imageset Name="BothHands1" Filename="Icons/BothHands1.imageset.xml" />
+  <Imageset Name="BothHands2" Filename="Icons/BothHands2.imageset.xml" />
+  <Imageset Name="BothHands3" Filename="Icons/BothHands3.imageset.xml" />
+  <Imageset Name="BothHands4" Filename="Icons/BothHands4.imageset.xml" />
+  <Imageset Name="Broadsword1" Filename="Icons/Broadsword1.imageset.xml" />
+  <Imageset Name="Broadsword2" Filename="Icons/Broadsword2.imageset.xml" />
+  <Imageset Name="Broadsword3" Filename="Icons/Broadsword3.imageset.xml" />
+  <Imageset Name="Broadsword4" Filename="Icons/Broadsword4.imageset.xml" />
+  <Imageset Name="Expression" Filename="Icons/Expression.imageset.xml" />
+  <Imageset Name="Expression2" Filename="Icons/Expression2.imageset.xml" />
+  <Imageset Name="Charm" Filename="Icons/Charm.imageset.xml" />
+  <Imageset Name="CommonNPCHeader1" Filename="Icons/CommonNPCHeader1.imageset.xml" />
+  <Imageset Name="CommonNPCHeader2" Filename="Icons/CommonNPCHeader2.imageset.xml" />
+  <Imageset Name="CommonNPCHeader3" Filename="Icons/CommonNPCHeader3.imageset.xml" />
+  <Imageset Name="CommonNPCHeader4" Filename="Icons/CommonNPCHeader4.imageset.xml" />
+  <Imageset Name="CommonNPCHeader5" Filename="Icons/CommonNPCHeader5.imageset.xml" />
+  <Imageset Name="CommonNPCHeader6" Filename="Icons/CommonNPCHeader6.imageset.xml" />
+  <Imageset Name="CommonNPCHeader7" Filename="Icons/CommonNPCHeader7.imageset.xml" />
+  <Imageset Name="CommonNPCHeader8" Filename="Icons/CommonNPCHeader8.imageset.xml" />
+  <Imageset Name="CommonNPCHeader9" Filename="Icons/CommonNPCHeader9.imageset.xml" />
+  <Imageset Name="CommonNPCHeader10" Filename="Icons/CommonNPCHeader10.imageset.xml" />
+  <Imageset Name="CommonNPCHeader11" Filename="Icons/CommonNPCHeader11.imageset.xml" />
+  <Imageset Name="CommonNPCHeader12" Filename="Icons/CommonNPCHeader12.imageset.xml" />
+  <Imageset Name="CommonNPCHeader13" Filename="Icons/CommonNPCHeader13.imageset.xml" />
+  <Imageset Name="CoolDownIcon" Filename="Icons/CoolDownIcon.imageset.xml" />
+  <Imageset Name="Corn" Filename="Icons/Corn.imageset.xml" />
+  <Imageset Name="Drygoods" Filename="Icons/Drygoods.imageset.xml" />
+  <Imageset Name="Fan1" Filename="Icons/Fan1.imageset.xml" />
+  <Imageset Name="Fan2" Filename="Icons/Fan2.imageset.xml" />
+  <Imageset Name="Fan3" Filename="Icons/Fan3.imageset.xml" />
+  <Imageset Name="Fan4" Filename="Icons/Fan4.imageset.xml" />
+  <Imageset Name="FightSkillTianShan" Filename="Icons/FightSkillTianShan.imageset.xml" />
+  <Imageset Name="FightSkillShaoLin1" Filename="Icons/FightSkillShaoLin1.imageset.xml" />
+  <Imageset Name="FightSkillShaoLin2" Filename="Icons/FightSkillShaoLin2.imageset.xml" />
+  <Imageset Name="FightSkillWuDang1" Filename="Icons/FightSkillWuDang1.imageset.xml" />
+  <Imageset Name="FightSkillWuDang2" Filename="Icons/FightSkillWuDang2.imageset.xml" />
+  <Imageset Name="FightSkillXiaoYao" Filename="Icons/FightSkillXiaoYao.imageset.xml" />
+  <Imageset Name="FightSkillXinXiu1" Filename="Icons/FightSkillXinXiu1.imageset.xml" />
+  <Imageset Name="FightSkillXinXiu2" Filename="Icons/FightSkillXinXiu2.imageset.xml" />
+  <Imageset Name="FightNPCHeader1" Filename="Icons/FightNPCHeader1.imageset.xml" />
+  <Imageset Name="FightNPCHeader2" Filename="Icons/FightNPCHeader2.imageset.xml" />
+  <Imageset Name="FightNPCHeader3" Filename="Icons/FightNPCHeader3.imageset.xml" />
+  <Imageset Name="FightNPCHeader4" Filename="Icons/FightNPCHeader4.imageset.xml" />
+  <Imageset Name="FightNPCHeader5" Filename="Icons/FightNPCHeader5.imageset.xml" />
+  <Imageset Name="FightNPCHeader6" Filename="Icons/FightNPCHeader6.imageset.xml" />
+  <Imageset Name="FightNPCHeader7" Filename="Icons/FightNPCHeader7.imageset.xml" />
+  <Imageset Name="FightNPCHeader8" Filename="Icons/FightNPCHeader8.imageset.xml" />
+  <Imageset Name="FightSkillDaLi" Filename="Icons/FightSkillDaLi.imageset.xml" />
+  <Imageset Name="FightSkillEMei1" Filename="Icons/FightSkillEMei1.imageset.xml" />
+  <Imageset Name="FightSkillEMei2" Filename="Icons/FightSkillEMei2.imageset.xml" />
+  <Imageset Name="FightSkillGaiBang" Filename="Icons/FightSkillGaiBang.imageset.xml" />
+  <Imageset Name="FightSkillMingJiao" Filename="Icons/FightSkillMingJiao.imageset.xml" />
+  <Imageset Name="FightSkillTianShan1" Filename="Icons/FightSkillTianShan1.imageset.xml" />
+  <Imageset Name="FightSkillXiaoYao1" Filename="Icons/FightSkillXiaoYao1.imageset.xml" />
+  <Imageset Name="FightSkillDaLi1" Filename="Icons/FightSkillDaLi1.imageset.xml" />
+  <Imageset Name="FightSkillGaiBang1" Filename="Icons/FightSkillGaiBang1.imageset.xml" />
+  <Imageset Name="FightSkillMingJiao1" Filename="Icons/FightSkillMingJiao1.imageset.xml" />
+  <Imageset Name="Girdle" Filename="Icons/Girdle.imageset.xml" />
+  <Imageset Name="Girdle2" Filename="Icons/Girdle2.imageset.xml" />
+  <Imageset Name="Herbal1" Filename="Icons/Herbal1.imageset.xml" />
+  <Imageset Name="Herbal2" Filename="Icons/Herbal2.imageset.xml" />
+  <Imageset Name="Fish" Filename="Icons/Fish.imageset.xml" />
+  <Imageset Name="Fish2" Filename="Icons/Fish2.imageset.xml" />
+  <Imageset Name="Flix" Filename="Icons/Flix.imageset.xml" />
+  <Imageset Name="Flower" Filename="Icons/Flower.imageset.xml" />
+  <Imageset Name="Food" Filename="Icons/Food.imageset.xml" />
+  <Imageset Name="Food2" Filename="Icons/Food2.imageset.xml" />
+  <Imageset Name="Girdle" Filename="Icons/Girdle.imageset.xml" />
+  <Imageset Name="PetHeader1" Filename="Icons/PetHeader1.imageset.xml" />
+  <Imageset Name="PetHeader2" Filename="Icons/PetHeader2.imageset.xml" />
+  <Imageset Name="PetHeader3" Filename="Icons/PetHeader3.imageset.xml" />
+  <Imageset Name="PetHeader4" Filename="Icons/PetHeader4.imageset.xml" />
+  <Imageset Name="PetSkill1" Filename="Icons/PetSkill1.imageset.xml" />
+  <Imageset Name="PetSkill2" Filename="Icons/PetSkill2.imageset.xml" />
+  <Imageset Name="PetSkill3" Filename="Icons/PetSkill3.imageset.xml" />
+  <Imageset Name="Ring" Filename="Icons/Ring.imageset.xml" />
+  <Imageset Name="Ring2" Filename="Icons/Ring2.imageset.xml" />
+  <Imageset Name="Ring3" Filename="Icons/Ring3.imageset.xml" />
+  <Imageset Name="Ring4" Filename="Icons/Ring4.imageset.xml" />
+  <Imageset Name="Scroll" Filename="Icons/Scroll.imageset.xml" />
+  <Imageset Name="Spear1" Filename="Icons/Spear1.imageset.xml" />
+  <Imageset Name="Spear2" Filename="Icons/Spear2.imageset.xml" />
+  <Imageset Name="Spear3" Filename="Icons/Spear3.imageset.xml" />
+  <Imageset Name="Spear4" Filename="Icons/Spear4.imageset.xml" />
+  <Imageset Name="Sword1" Filename="Icons/Sword1.imageset.xml" />
+  <Imageset Name="Sword2" Filename="Icons/Sword2.imageset.xml" />
+  <Imageset Name="Sword3" Filename="Icons/Sword3.imageset.xml" />
+  <Imageset Name="Sword4" Filename="Icons/Sword4.imageset.xml" />
+  <Imageset Name="TaskTools1" Filename="Icons/TaskTools1.imageset.xml" />
+  <Imageset Name="TaskTools2" Filename="Icons/TaskTools2.imageset.xml" />
+  <Imageset Name="TaskTools3" Filename="Icons/TaskTools3.imageset.xml" />
+  <Imageset Name="TaskTools4" Filename="Icons/TaskTools4.imageset.xml" />
+  <Imageset Name="TaskTools5" Filename="Icons/TaskTools5.imageset.xml" />
+  <Imageset Name="TaskTools6" Filename="Icons/TaskTools6.imageset.xml" />
+  <Imageset Name="TaskTools7" Filename="Icons/TaskTools7.imageset.xml" />
+  <Imageset Name="TaskTools8" Filename="Icons/TaskTools8.imageset.xml" />
+  <Imageset Name="TaskTools9" Filename="Icons/TaskTools9.imageset.xml" />
+
+  <Imageset Name="Medicine1" Filename="Icons/Medicine1.imageset.xml" />
+  <Imageset Name="Medicine2" Filename="Icons/Medicine2.imageset.xml" />
+  <Imageset Name="Medicine3" Filename="Icons/Medicine3.imageset.xml" />
+  <Imageset Name="Medicine4" Filename="Icons/Medicine4.imageset.xml" />
+  <Imageset Name="Meet" Filename="Icons/Meet.imageset.xml" />
+  <Imageset Name="MenpaiGoods" Filename="Icons/MenpaiGoods.imageset.xml" />
+  <Imageset Name="Necklace" Filename="Icons/Necklace.imageset.xml" />
+  <Imageset Name="Necklace2" Filename="Icons/Necklace2.imageset.xml" />
+  <Imageset Name="Necklace3" Filename="Icons/Necklace3.imageset.xml" />
+  <Imageset Name="Ore" Filename="Icons/Ore.imageset.xml" />
+  <Imageset Name="OtherTools1" Filename="Icons/OtherTools1.imageset.xml" />
+  <Imageset Name="OtherTools2" Filename="Icons/OtherTools2.imageset.xml" />
+  <Imageset Name="GirlProtagonist" Filename="Icons/GirlProtagonist.imageset.xml" />
+  <Imageset Name="ManProtagonist" Filename="Icons/ManProtagonist.imageset.xml" />
+  <Imageset Name="RideHeader1" Filename="Icons/RideHeader1.imageset.xml" />
+  <Imageset Name="RideHeader2" Filename="Icons/RideHeader2.imageset.xml" />
+  <Imageset Name="MenpaiLiveSkill" Filename="Icons/MenpaiLiveSkill.imageset.xml" />
+  <Imageset Name="MenpaiLiveSkill2" Filename="Icons/MenpaiLiveSkill2.imageset.xml" />
+  <Imageset Name="XinFa1" Filename="Icons/XinFa1.imageset.xml" />
+  <Imageset Name="XinFa2" Filename="Icons/XinFa2.imageset.xml" />
+  <Imageset Name="XinFa3" Filename="Icons/XinFa3.imageset.xml" />
+  <Imageset Name="XinFa4" Filename="Icons/XinFa4.imageset.xml" />
+  <Imageset Name="Gem1_1" Filename="Icons/Gem1_1.imageset.xml" />
+  <Imageset Name="Gem1_2" Filename="Icons/Gem1_2.imageset.xml" />
+  <Imageset Name="Gem3_1" Filename="Icons/Gem3_1.imageset.xml" />
+  <Imageset Name="Gem3_2" Filename="Icons/Gem3_2.imageset.xml" />
+  <Imageset Name="Gem6_1" Filename="Icons/Gem6_1.imageset.xml" />
+  <Imageset Name="Gem6_2" Filename="Icons/Gem6_2.imageset.xml" />
+  <Imageset Name="Gem9_1" Filename="Icons/Gem9_1.imageset.xml" />
+  <Imageset Name="Gem9_2" Filename="Icons/Gem9_2.imageset.xml" />
+  <Imageset Name="Ride1" Filename="Icons/Ride1.imageset.xml" />
+  <Imageset Name="Ride2" Filename="Icons/Ride2.imageset.xml" />
+  <Imageset Name="CommonLiveSkill" Filename="Icons/CommonLiveSkill.imageset.xml" />
+  <Imageset Name="CommonLiveSkill2" Filename="Icons/CommonLiveSkill2.imageset.xml" />
+  <Imageset Name="NewCloth1" Filename="Icons/NewCloth1.imageset.xml" />
+  <Imageset Name="NewCloth2" Filename="Icons/NewCloth2.imageset.xml" />
+  <Imageset Name="NewCloth3" Filename="Icons/NewCloth3.imageset.xml" />
+  <Imageset Name="NewCloth4" Filename="Icons/NewCloth4.imageset.xml" />
+  <Imageset Name="Cloth1" Filename="Icons/Cloth1.imageset.xml" />
+  <Imageset Name="Cloth2" Filename="Icons/Cloth2.imageset.xml" />
+  <Imageset Name="Cloth3" Filename="Icons/Cloth3.imageset.xml" />
+  <Imageset Name="Cloth4" Filename="Icons/Cloth4.imageset.xml" />
+  <Imageset Name="Cloth5" Filename="Icons/Cloth5.imageset.xml" />
+  <Imageset Name="Cloth6" Filename="Icons/Cloth6.imageset.xml" />
+  <Imageset Name="Cloth7" Filename="Icons/Cloth7.imageset.xml" />
+  <Imageset Name="Cloth8" Filename="Icons/Cloth8.imageset.xml" />
+  <Imageset Name="Cloth9" Filename="Icons/Cloth9.imageset.xml" />
+  <Imageset Name="Cloth10" Filename="Icons/Cloth10.imageset.xml" />
+  <Imageset Name="Cuff1" Filename="Icons/Cuff1.imageset.xml" />
+  <Imageset Name="Cuff2" Filename="Icons/Cuff2.imageset.xml" />
+  <Imageset Name="Cuff3" Filename="Icons/Cuff3.imageset.xml" />
+  <Imageset Name="Cuff4" Filename="Icons/Cuff4.imageset.xml" />
+  <Imageset Name="Hat1" Filename="Icons/Hat1.imageset.xml" />
+  <Imageset Name="Hat2" Filename="Icons/Hat2.imageset.xml" />
+  <Imageset Name="Hat3" Filename="Icons/Hat3.imageset.xml" />
+  <Imageset Name="Hat4" Filename="Icons/Hat4.imageset.xml" />
+  <Imageset Name="PetSkill4" Filename="Icons/PetSkill4.imageset.xml" />
+  <Imageset Name="Shoes1" Filename="Icons/Shoes1.imageset.xml" />
+  <Imageset Name="Shoes2" Filename="Icons/Shoes2.imageset.xml" />
+  <Imageset Name="Shoes3" Filename="Icons/Shoes3.imageset.xml" />
+  <Imageset Name="Shoes4" Filename="Icons/Shoes4.imageset.xml" />
+  <Imageset Name="PetSkill5" Filename="Icons/PetSkill5.imageset.xml" />
+  <Imageset Name="PetSkill6" Filename="Icons/PetSkill6.imageset.xml" />
+  <Imageset Name="PeiFang" Filename="Icons/PeiFang.imageset.xml" />
+  <Imageset Name="PetFood" Filename="Icons/PetFood.imageset.xml" />
+  <Imageset Name="Wedding" Filename="Icons/Wedding.imageset.xml" />
+  <Imageset Name="Stiletto1" Filename="Icons/Stiletto1.imageset.xml" />
+  <Imageset Name="MakeMaterial1" Filename="Icons/MakeMaterial1.imageset.xml" />
+  <Imageset Name="MakeMaterial2" Filename="Icons/MakeMaterial2.imageset.xml" />
+  <Imageset Name="MakeMaterial3" Filename="Icons/MakeMaterial3.imageset.xml" />
+  <Imageset Name="MakeMaterial4" Filename="Icons/MakeMaterial4.imageset.xml" />
+  <Imageset Name="MakeMaterial5" Filename="Icons/MakeMaterial5.imageset.xml" />
+  <Imageset Name="MakeMaterial6" Filename="Icons/MakeMaterial6.imageset.xml" />
+  <Imageset Name="MakeMaterial7" Filename="Icons/MakeMaterial7.imageset.xml" />
+  <Imageset Name="MakeMaterial8" Filename="Icons/MakeMaterial8.imageset.xml" />
+  <Imageset Name="MakeMaterial9" Filename="Icons/MakeMaterial9.imageset.xml" />
+  <Imageset Name="MakeMaterial10" Filename="Icons/MakeMaterial10.imageset.xml" />
+  <Imageset Name="MakeMaterial11" Filename="Icons/MakeMaterial11.imageset.xml" />
+  <Imageset Name="MakeMaterial12" Filename="Icons/MakeMaterial12.imageset.xml" />
+  <Imageset Name="MakeMaterial13" Filename="Icons/MakeMaterial13.imageset.xml" />
+  <Imageset Name="MakeMaterial14" Filename="Icons/MakeMaterial14.imageset.xml" />
+  <Imageset Name="MakeMaterial15" Filename="Icons/MakeMaterial15.imageset.xml" />
+  <Imageset Name="Treasure" Filename="Icons/Treasure.imageset.xml" />
+  <Imageset Name="Treasure2" Filename="Icons/Treasure2.imageset.xml" />
+  <Imageset Name="PetBauble" Filename="Icons/PetBauble.imageset.xml" />
+  <Imageset Name="TaskTools8" Filename="Icons/TaskTools8.imageset.xml" />
+  <Imageset Name="Fish3" Filename="Icons/Fish3.imageset.xml" />
+  <Imageset Name="Flix2" Filename="Icons/Flix2.imageset.xml" />
+  <Imageset Name="Girl_hair" Filename="Icons/Girl_hair.imageset.xml" />
+  <Imageset Name="Lining" Filename="Icons/Lining.imageset.xml" />
+  <Imageset Name="Man_hair" Filename="Icons/Man_hair.imageset.xml" />
+  <Imageset Name="Bag" Filename="Icons/Bag.imageset.xml" />
+  <Imageset Name="Bag2" Filename="Icons/Bag2.imageset.xml" />
+  <Imageset Name="Charm2" Filename="Icons/Charm2.imageset.xml" />
+  <Imageset Name="Charm3" Filename="Icons/Charm3.imageset.xml" />
+  <Imageset Name="Merchandise1" Filename="Icons/Merchandise1.imageset.xml" />
+  <Imageset Name="Merchandise2" Filename="Icons/Merchandise2.imageset.xml" />
+  <Imageset Name="Merchandise3" Filename="Icons/Merchandise3.imageset.xml" />
+  <Imageset Name="Merchandise4" Filename="Icons/Merchandise4.imageset.xml" />
+  <Imageset Name="Merchandise5" Filename="Icons/Merchandise5.imageset.xml" />
+  <Imageset Name="Banner" Filename="Icons/Banner.imageset.xml" />
+  <Imageset Name="Function" Filename="Icons/Function.imageset.xml" />
+  <Imageset Name="Amulet1" Filename="Icons/Amulet1.imageset.xml" />
+  <Imageset Name="Amulet2" Filename="Icons/Amulet2.imageset.xml" />
+  <Imageset Name="Arm" Filename="Icons/Arm.imageset.xml" />
+  <Imageset Name="Chrismas" Filename="Icons/Chrismas.imageset.xml" />
+  <Imageset Name="Chrismas2" Filename="Icons/Chrismas2.imageset.xml" />
+  <Imageset Name="Shoulder" Filename="Icons/Shoulder.imageset.xml" />
+  
+  	<Imageset Name="Buff0" Filename="Icons/Buff0.imageset.xml" />
+	<Imageset Name="Buff1" Filename="Icons/Buff1.imageset.xml" />
+	<Imageset Name="Buff2" Filename="Icons/Buff2.imageset.xml" />
+	<Imageset Name="Buff3" Filename="Icons/Buff3.imageset.xml" />
+	<Imageset Name="Buff4" Filename="Icons/Buff4.imageset.xml" />
+	<Imageset Name="Buff5" Filename="Icons/Buff5.imageset.xml" />
+
+	<Imageset Name="Icons01" Filename="Icons/Icons01.imageset.xml" />
+	<Imageset Name="Icons02" Filename="Icons/Icons02.imageset.xml" />
+
+	<Imageset Name="CircularTaskTool1" Filename="Icons/CircularTaskTool1.imageset.xml" />
+	<Imageset Name="CircularTaskTool2" Filename="Icons/CircularTaskTool2.imageset.xml" />
+	<Imageset Name="CircularTaskTool3" Filename="Icons/CircularTaskTool3.imageset.xml" />
+	<Imageset Name="CircularTaskTool4" Filename="Icons/CircularTaskTool4.imageset.xml" />
+	<Imageset Name="CircularTaskTool5" Filename="Icons/CircularTaskTool5.imageset.xml" />
+	<Imageset Name="CircularTaskTool6" Filename="Icons/CircularTaskTool6.imageset.xml" />
+
+  <Imageset Name="playerhouse1" Filename="Icons/playerhouse1.imageset.xml" />
+  <Imageset Name="playerhouse2" Filename="Icons/playerhouse2.imageset.xml" />
+  <Imageset Name="playerhouse3" Filename="Icons/playerhouse3.imageset.xml" />
+  <Imageset Name="playerhouse4" Filename="Icons/playerhouse4.imageset.xml" />
+  <Imageset Name="playerhouse5" Filename="Icons/playerhouse5.imageset.xml" />
+  <Imageset Name="playerhouse6" Filename="Icons/playerhouse6.imageset.xml" />
+  <Imageset Name="playerhouse7" Filename="Icons/playerhouse7.imageset.xml" />
+  <Imageset Name="playerhouse8" Filename="Icons/playerhouse8.imageset.xml" />
+  <Imageset Name="playerhouse9" Filename="Icons/playerhouse9.imageset.xml" />
+
+
+  <Imageset Name="Weather1" Filename="Icons/Weather1.imageset.xml" />
+  <Imageset Name="fuqiskill" Filename="Icons/fuqiskill.imageset.xml" />
+  <Imageset Name="Buff6" Filename="Icons/Buff6.imageset.xml" />
+  <Imageset Name="Girdle3" Filename="Icons/Girdle3.imageset.xml" />
+  <Imageset Name="Shenqi" Filename="Icons/Shenqi.imageset.xml" />
+  <Imageset Name="Choujiang" Filename="Icons/Choujiang.imageset.xml" />
+  <Imageset Name="Shenqi_1" Filename="Icons/Shenqi_1.imageset.xml" />
+  <Imageset Name="Shenqi_2" Filename="Icons/Shenqi_2.imageset.xml" />
+  <Imageset Name="Amulet3" Filename="Icons/Amulet3.imageset.xml" />
+  <Imageset Name="Huodong" Filename="Icons/Huodong.imageset.xml" />
+  <Imageset Name="YuanDan1" Filename="Icons/YuanDan1.imageset.xml" />
+  <Imageset Name="Food3" Filename="Icons/Food3.imageset.xml" />
+  <Imageset Name="Choujiang2" Filename="Icons/Choujiang2.imageset.xml" />
+  <Imageset Name="Arm2" Filename="Icons/Arm2.imageset.xml" />
+  <Imageset Name="Hat5" Filename="Icons/Hat5.imageset.xml" />
+  <Imageset Name="Shoes5" Filename="Icons/Shoes5.imageset.xml" />
+  <Imageset Name="Shoulder2" Filename="Icons/Shoulder2.imageset.xml" />
+  <Imageset Name="CircularTaskTool7" Filename="Icons/CircularTaskTool7.imageset.xml" />
+  <Imageset Name="ChunJie" Filename="Icons/ChunJie.imageset.xml" />
+  <Imageset Name="CircularTaskTool8" Filename="Icons/CircularTaskTool8.imageset.xml" />
+  <Imageset Name="Fabao" Filename="Icons/Fabao.imageset.xml" />
+  <Imageset Name="FabaoDaoju" Filename="Icons/FabaoDaoju.imageset.xml" />
+  <Imageset Name="FabaoSkill" Filename="Icons/FabaoSkill.imageset.xml" />
+  <Imageset Name="PetEquipAmulet1" Filename="Icons/PetEquipAmulet1.imageset.xml" />
+  <Imageset Name="PetEquipChaplet1" Filename="Icons/PetEquipChaplet1.imageset.xml" />
+  <Imageset Name="PetEquipClaw1" Filename="Icons/PetEquipClaw1.imageset.xml" />
+  <Imageset Name="PetEquipCloth1" Filename="Icons/PetEquipCloth1.imageset.xml" />
+  <Imageset Name="PetEquipHat1" Filename="Icons/PetEquipHat1.imageset.xml" />
+  <Imageset Name="RideHeader3" Filename="Icons/RideHeader3.imageset.xml" />
+  <Imageset Name="FightSkillXinShou" Filename="Icons/FightSkillXinShou.imageset.xml" />
+  <Imageset Name="TaskTools11" Filename="Icons/TaskTools11.imageset.xml" />
+  <Imageset Name="Huodong_3" Filename="Icons/Huodong_3.imageset.xml" />
+  <Imageset Name="Treasure3" Filename="Icons/Treasure3.imageset.xml" />
+  <!--
+  活动日程背景
+  -->
+  <Imageset Name="Huodongricheng3" Filename="Huodongricheng/Huodongricheng3.imageset.xml" />
+  <Imageset Name="Huodongricheng2" Filename="Huodongricheng/Huodongricheng2.imageset.xml" />
+  <Imageset Name="Huodongricheng1" Filename="Huodongricheng/Huodongricheng1.imageset.xml" />
+
+  <!--
+  滚动条背景
+
+  -->
+   <Imageset Name="ScrollInfo_1" Filename="ScrollInfo/ScrollInfo_1.imageset.xml" />
+   <Imageset Name="YuanbaoShop_1" Filename="YuanbaoShop/YuanbaoShop_1.imageset.xml" />
+
+
+   <Imageset Name="CommonFrame6" Filename="Common/CommonFrame6.imageset.xml" />
+   <Imageset Name="stall07" Filename="Common/stall07.imageset.xml" />
+   
+   <Imageset Name="CommonFrame7" Filename="Common/CommonFrame7.imageset.xml" />
+   <Imageset Name="Charm4" Filename="Icons/Charm4.imageset.xml" />
+   <Imageset Name="FightNPCHeader9" Filename="Icons/FightNPCHeader9.imageset.xml" />
+   <Imageset Name="Cloth11" Filename="Icons/Cloth11.imageset.xml" />
+   <Imageset Name="Buff7" Filename="Icons/Buff7.imageset.xml" />
+   <Imageset Name="Banner1" Filename="Icons/Banner1.imageset.xml" />
+   <Imageset Name="CommonNPCHeader14" Filename="Icons/CommonNPCHeader14.imageset.xml" />
+   <Imageset Name="Huodong_2" Filename="Icons/Huodong_2.imageset.xml" />
+   <Imageset Name="Charm5" Filename="Icons/Charm5.imageset.xml" />
+   <Imageset Name="Choujiang3" Filename="Icons/Choujiang3.imageset.xml" />
+   <Imageset Name="Kangxingzhuang" Filename="Icons/Kangxingzhuang.imageset.xml" />
+   <Imageset Name="Icons03" Filename="Icons/Icons03.imageset.xml" />
+   <Imageset Name="Buff8" Filename="Icons/Buff8.imageset.xml" />
+   <Imageset Name="Buff9" Filename="Icons/Buff9.imageset.xml" />
+   <Imageset Name="Arm3" Filename="Icons/Arm3.imageset.xml" />
+   <Imageset Name="Ring5" Filename="Icons/Ring5.imageset.xml" />
+   <Imageset Name="Amulet4" Filename="Icons/Amulet4.imageset.xml" />
+   <Imageset Name="PetSkill7" Filename="Icons/PetSkill7.imageset.xml" />
+   <Imageset Name="Gemjiankang" Filename="Icons/Gemjiankang.imageset.xml" />
+   <Imageset Name="Cloth12" Filename="Icons/Cloth12.imageset.xml" />
+   <Imageset Name="TaskTools10" Filename="Icons/TaskTools10.imageset.xml" />
+   <Imageset Name="Buff10" Filename="Icons/Buff10.imageset.xml" />
+   <Imageset Name="Charm6" Filename="Icons/Charm6.imageset.xml" />
+   <Imageset Name="PetMedicine" Filename="Icons/PetMedicine.imageset.xml" />
+   <Imageset Name="PetSkill8" Filename="Icons/PetSkill8.imageset.xml" />
+   <Imageset Name="PetSkill9" Filename="Icons/PetSkill9.imageset.xml" />
+   <Imageset Name="Gem9_3" Filename="Icons/Gem9_3.imageset.xml" />
+   <Imageset Name="Ore2" Filename="Icons/Ore2.imageset.xml" />
+   <Imageset Name="CommonNPCHeader15" Filename="Icons/CommonNPCHeader15.imageset.xml" />
+   <Imageset Name="taiwanzhuanyong" Filename="Icons/taiwanzhuanyong.imageset.xml" />
+   <Imageset Name="taiwanzhuanyong2" Filename="Icons/taiwanzhuanyong2.imageset.xml" />
+   <Imageset Name="taiwanzhuanyong3" Filename="Icons/taiwanzhuanyong3.imageset.xml" />
+   <Imageset Name="taiwanzhuanyong4" Filename="Icons/taiwanzhuanyong4.imageset.xml" />
+   <Imageset Name="taiwanzhuanyong5" Filename="Icons/taiwanzhuanyong5.imageset.xml" />
+   <Imageset Name="taiwanzhuanyong6" Filename="Icons/taiwanzhuanyong6.imageset.xml" />
+   <Imageset Name="haiwai1" Filename="Icons/haiwai1.imageset.xml" />
+   <Imageset Name="GemSP" Filename="Icons/GemSP.imageset.xml" />
+</GUIScheme>
+

@@ -1,0 +1,171 @@
+<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame1" Name="GemMelting_Frame">
+        <Property Name="UnifiedPosition" Value="{{0.0,368},{0.12,0}}" />
+        <Property Name="AbsoluteSize" Value="w:292 h:321" />
+        <Event Name="Hidden" Function="GemMelting_OnHide();" />
+        <Window Type="TLBB_ButtonHelp" Name="GemMelting_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*GemMelting&quot;);' />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="GemMelting_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function="GemMelting_Close();" />
+        </Window>
+        <Window Type="TLBB_DragTitle" Name="GemMelting_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="GemMelting_Frame" />
+            <Property Name="Font" Value="YouYuan11.25" />
+            <Property Name="Text" Value="#{JKBS_081021_001}" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+        </Window>
+        <Window Type="DefaultWindow" Name="GemMelting_Function_Frame">
+            <Property Name="AbsolutePosition" Value="x:7.000000 y:36.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-13.000000},{1.000000,-55.000000}" />
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="GemMelting_Explain1">
+                <Property Name="UnifiedPosition" Value="{{0.0100000,0.000000},{0.000000,0.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.98000000,.000000},{0.000000,70.000000}" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="Text" Value="#{JKBS_081021_002}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="GemMelting_Explain2">
+                <Property Name="UnifiedPosition" Value="{{0.0100000,0.000000},{0.000000,77.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.98000000,.000000},{0.000000,18.000000}" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{JKBS_081021_003}" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="GemMelting_GemItem1">
+                <Property Name="UnifiedPosition" Value="{{0.000000,12.000000},{0.000000,100.000000}" />
+                <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                <Property Name="DraggingEnabled" Value="True" />
+                <Property Name="Empty" Value="false" />
+                <Property Name="DragAcceptName" Value="G61" />
+                <Event Name="RBClicked" Function="Resume_Equip_GemMelting(1);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="GemMelting_GemItem2">
+                <Property Name="UnifiedPosition" Value="{{0.000000,48.000000},{0.000000,100.000000}" />
+                <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                <Property Name="DraggingEnabled" Value="True" />
+                <Property Name="Empty" Value="false" />
+                <Property Name="DragAcceptName" Value="G62" />
+                <Event Name="RBClicked" Function="Resume_Equip_GemMelting(2);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="GemMelting_GemItem3">
+                <Property Name="UnifiedPosition" Value="{{0.000000,84.000000},{0.000000,100.000000}" />
+                <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                <Property Name="DraggingEnabled" Value="True" />
+                <Property Name="Empty" Value="false" />
+                <Property Name="DragAcceptName" Value="G63" />
+                <Event Name="RBClicked" Function="Resume_Equip_GemMelting(3);" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="GemMelting_State">
+                <Property Name="UnifiedPosition" Value="{{0.000000,121.000000},{0.000000,97.000000}" />
+                <Property Name="AbsoluteSize" Value="w:140.000000 h:40.300000" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Property Name="TextColor" Value="FFFFF263" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="GemMelting_Explain3">
+                <Property Name="UnifiedPosition" Value="{{0.000000,47.000000},{0.000000,150.000000}" />
+                <Property Name="AbsoluteSize" Value="w:110.000000 h:18.000000" />
+                <Property Name="Text" Value="#{JKBS_081021_004}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="GemMelting_NeedItem">
+                <Property Name="UnifiedPosition" Value="{{0.000000,173.000000},{0.000000,140.000000}" />
+                <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                <Property Name="Empty" Value="false" />
+                <Property Name="DragAcceptName" Value="G64" />
+                <Property Name="DraggingEnabled" Value="True" />
+                <Event Name="RBClicked" Function="Resume_Equip_GemMelting(4);" />
+            </Window>
+             <Window Type="TLBB_ActionButton" Name="GemMelting_ProductItem">
+                <Property Name="UnifiedPosition" Value="{{0.000000,225.000000},{0.000000,100.000000}" />
+                <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                <Property Name="Empty" Value="false" />
+                <Property Name="DraggingEnabled" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="GemMelting_NeedMoney_Text">
+                <Property Name="UnifiedPosition" Value="{{0.05,0.000000},{1.000000,-87.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.9,0.000000},{0.000000,22.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_789}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Window Type="TLBB_Money" Name="GemMelting_NeedMoney">
+                    <Property Name="UnifiedPosition" Value="{{0.0,0.000000},{0.000000,0.000000}" />
+                    <Property Name="UnifiedSize" Value="{{1.0,0.000000},{0.000000,20.000000}" />
+                    <Property Name="MoneyNumber" Value="0" />
+                    <Property Name="HorzFormatting" Value="RightAligned" />
+                    <Property Name="GoldIcon" Value = "set:Button6 image:Lace_JiaoziJin" />
+                    <Property Name="SilverIcon" Value = "set:Button6 image:Lace_JiaoziYin" />
+                    <Property Name="CopperIcon" Value = "set:Button6 image:Lace_JiaoziTong" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="GemMelting_CurrentJiaozi_Text">
+                <Property Name="UnifiedPosition" Value="{{0.05,0.000000},{1.000000,-66.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.9,0.000000},{0.000000,22.000000}" />
+                <Property Name="Text" Value="#{BDJB_051210_1}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Window Type="TLBB_Money" Name="GemMelting_CurrentJiaozi">
+                    <Property Name="UnifiedPosition" Value="{{0.0,0.000000},{0.000000,0.000000}" />
+                    <Property Name="UnifiedSize" Value="{{1.0,0.000000},{0.000000,20.000000}" />
+                    <Property Name="MoneyNumber" Value="0" />
+                    <Property Name="HorzFormatting" Value="RightAligned" />
+                    <Property Name="GoldIcon" Value = "set:Button6 image:Lace_JiaoziJin" />
+                    <Property Name="SilverIcon" Value = "set:Button6 image:Lace_JiaoziYin" />
+                    <Property Name="CopperIcon" Value = "set:Button6 image:Lace_JiaoziTong" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="GemMelting_CurrentMoney_Text">
+                <Property Name="UnifiedPosition" Value="{{0.05,0.000000},{1.000000,-45.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.9,0.000000},{0.000000,22.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_834}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Window Type="TLBB_Money" Name="GemMelting_CurrentMoney">
+                    <Property Name="UnifiedPosition" Value="{{0.0,0.000000},{0.000000,0.000000}" />
+                    <Property Name="UnifiedSize" Value="{{1.0,0.000000},{0.000000,20.000000}" />
+                    <Property Name="MoneyNumber" Value="0" />
+                    <Property Name="HorzFormatting" Value="RightAligned" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_Frame_Lace5" Name="GemMelting_Blank">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-120.000000},{0.000000,20.000000}" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="GemMelting_Accept">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-120.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:60.000000 h:20.000000" />
+                <Property Name="Text" Value="#{JKBS_081021_005}" />
+                <Event Name="Clicked" Function="GemMelting_Buttons_Clicked();" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="GemMelting_Cancel">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-60.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:60.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_542}" />
+                <Event Name="Clicked" Function="GemMelting_Close();" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

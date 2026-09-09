@@ -1,0 +1,4604 @@
+<?xml version="1.0" ?>
+<Falagard>
+	
+	<!--
+    ***************************************************
+        Action Button
+    ***************************************************
+    -->
+	<WidgetLook name="TLBB_Look_ActionButton">
+		<PropertyDefinition name="VertLabelFormatting" initialValue="CentreAligned" />
+		<PropertyDefinition name="HorzLabelFormatting" initialValue="CentreAligned" />
+		<PropertyDefinition name="DragThreshold" initialValue="8.0" />
+		<PropertyDefinition name="FlashAnimate" initialValue="ProgressFlash" />
+		<Property name="ClickSound" value="17" />
+    <NamedArea name="ActionArea">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="1" />
+        </Dim>
+        <Dim type="TopEdge">
+          <AbsoluteDim value="1" />
+        </Dim>
+        <Dim type="RightEdge">
+          <UnifiedDim scale="1" offset="-1" type="RightEdge"/>
+        </Dim>
+        <Dim type="BottomEdge">
+          <UnifiedDim scale="1" offset="-1" type="BottomEdge"/>
+        </Dim>
+      </Area>
+    </NamedArea>
+    <ImagerySection name="normal">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="RightEdge">
+            <UnifiedDim scale="1" offset="0" type="RightEdge"/>
+          </Dim>
+          <Dim type="BottomEdge">
+            <UnifiedDim scale="1" offset="0" type="BottomEdge"/>
+          </Dim>
+        </Area>
+        <VertFormat type="Stretched" />
+        <HorzFormat type="Stretched" />
+      </ImageryComponent>
+    </ImagerySection>
+		<ImagerySection name="hover">
+			<ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="1" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="1" />
+          </Dim>
+          <Dim type="RightEdge">
+            <UnifiedDim scale="1" offset="-1" type="RightEdge"/>
+          </Dim>
+          <Dim type="BottomEdge">
+            <UnifiedDim scale="1" offset="-1" type="BottomEdge"/>
+          </Dim>
+        </Area>
+        <Image imageset="CommonFrame" image="ActionButtonHover" />
+        <VertFormat type="Stretched" />
+        <HorzFormat type="Stretched" />
+      </ImageryComponent>
+    </ImagerySection>
+    <ImagerySection name="default">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="1" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="1" />
+          </Dim>
+          <Dim type="RightEdge">
+            <UnifiedDim scale="1" offset="-1" type="RightEdge"/>
+          </Dim>
+          <Dim type="BottomEdge">
+            <UnifiedDim scale="1" offset="-1" type="BottomEdge"/>
+          </Dim>
+        </Area>
+        <Image imageset="Icons0" image="ButtonActive0" />
+        <VertFormat type="Stretched" />
+        <HorzFormat type="Stretched" />
+      </ImageryComponent>
+    </ImagerySection>
+    <ImagerySection name="pushed">
+      <ImageryComponent>
+				<Area>
+					<Dim type="LeftEdge">
+						<AbsoluteDim value="1" />
+					</Dim>
+					<Dim type="TopEdge">
+						<AbsoluteDim value="1" />
+					</Dim>
+          <Dim type="RightEdge">
+            <UnifiedDim scale="1" offset="-1" type="RightEdge"/>
+          </Dim>
+          <Dim type="BottomEdge">
+            <UnifiedDim scale="1" offset="-1" type="BottomEdge"/>
+          </Dim>
+        </Area>
+        <Image imageset="CommonFrame" image="ActionButtonPushed" />
+        <VertFormat type="Stretched" />
+        <HorzFormat type="Stretched" />
+      </ImageryComponent>
+    </ImagerySection>
+    <ImagerySection name="disabled">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="1" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="1" />
+          </Dim>
+          <Dim type="RightEdge">
+            <UnifiedDim scale="1" offset="-1" type="RightEdge"/>
+          </Dim>
+          <Dim type="BottomEdge">
+            <UnifiedDim scale="1" offset="-1" type="BottomEdge"/>
+          </Dim>
+        </Area>
+        <Image imageset="Face_04" image="Remind_Bak" />
+        <VertFormat type="Stretched" />
+        <HorzFormat type="Stretched" />
+      </ImageryComponent>
+    </ImagerySection>
+    <ImagerySection name="BackgroundImage">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image imageset="CommonItem" image="ActionBK" />
+        <VertFormat type="Stretched" />
+        <HorzFormat type="Stretched" />
+      </ImageryComponent>
+    </ImagerySection>
+    <StateImagery name="BackgroundImage">
+      <Layer>
+        <Section section="BackgroundImage" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Normal">
+      <Layer>
+        <Section section="normal" />
+      </Layer>
+		</StateImagery>
+		<StateImagery name="Hover">
+			<Layer>
+				<Section section="hover" />
+			</Layer>
+		</StateImagery>
+		<StateImagery name="Pushed">
+			<Layer>
+				<Section section="pushed" />
+			</Layer>
+		</StateImagery>
+		<StateImagery name="Defaulted">
+			<Layer>
+				<Section section="default" />
+			</Layer>
+		</StateImagery>
+		<StateImagery name="Disabled">
+			<Layer>
+        <Section section="disabled"/>
+			</Layer>
+		</StateImagery>
+    
+	
+</WidgetLook>
+  <!--
+    ***************************************************
+       用在suppertooltip上的
+    ***************************************************
+    -->
+  <WidgetLook name="TLBB_Look_ActionButtonTooltip">
+    <PropertyDefinition name="VertLabelFormatting" initialValue="CentreAligned" />
+    <PropertyDefinition name="HorzLabelFormatting" initialValue="CentreAligned" />
+    <NamedArea name="ActionArea">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="2" />
+        </Dim>
+        <Dim type="TopEdge">
+          <AbsoluteDim value="2" />
+        </Dim>
+        <Dim type="RightEdge">
+          <UnifiedDim scale="1" offset="-2" type="RightEdge"/>
+        </Dim>
+        <Dim type="BottomEdge">
+          <UnifiedDim scale="1" offset="-2" type="BottomEdge"/>
+        </Dim>
+      </Area>
+    </NamedArea>
+    <ImagerySection name="normal">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="2" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="2" />
+          </Dim>
+          <Dim type="RightEdge">
+            <UnifiedDim scale="1" offset="-2" type="RightEdge"/>
+          </Dim>
+          <Dim type="BottomEdge">
+            <UnifiedDim scale="1" offset="-2" type="BottomEdge"/>
+          </Dim>
+        </Area>
+        <VertFormat type="Stretched" />
+        <HorzFormat type="Stretched" />
+      </ImageryComponent>
+    </ImagerySection>
+    <ImagerySection name="BackgroundImage">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image imageset="Button6" image="SupperTooltipIcon" />
+        <VertFormat type="Stretched" />
+        <HorzFormat type="Stretched" />
+      </ImageryComponent>
+    </ImagerySection>
+    <StateImagery name="BackgroundImage">
+      <Layer>
+        <Section section="BackgroundImage" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Normal">
+      <Layer>
+        <Section section="normal" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Hover">
+    </StateImagery>
+    <StateImagery name="Pushed">
+    </StateImagery>
+    <StateImagery name="Defaulted">
+      <Layer>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+    </StateImagery>
+
+
+  </WidgetLook>
+  <!--
+    ***************************************************
+        空的actionbutton
+    ***************************************************
+    -->
+  <WidgetLook name="TLBB_Look_ActionButtonNULL">
+    <PropertyDefinition name="VertLabelFormatting" initialValue="CentreAligned" />
+    <PropertyDefinition name="HorzLabelFormatting" initialValue="CentreAligned" />
+    <PropertyDefinition name="DragThreshold" initialValue="8.0" />
+    <PropertyDefinition name="FlashAnimate" initialValue="ProgressFlash" />
+    <Property name="ClickSound" value="17" />
+    <NamedArea name="ActionArea">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="2" />
+        </Dim>
+        <Dim type="TopEdge">
+          <AbsoluteDim value="2" />
+        </Dim>
+        <Dim type="RightEdge">
+          <UnifiedDim scale="1" offset="-2" type="RightEdge"/>
+        </Dim>
+        <Dim type="BottomEdge">
+          <UnifiedDim scale="1" offset="-2" type="BottomEdge"/>
+        </Dim>
+      </Area>
+    </NamedArea>
+    <ImagerySection name="normal">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="2" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="2" />
+          </Dim>
+          <Dim type="RightEdge">
+            <UnifiedDim scale="1" offset="-2" type="RightEdge"/>
+          </Dim>
+          <Dim type="BottomEdge">
+            <UnifiedDim scale="1" offset="-2" type="BottomEdge"/>
+          </Dim>
+        </Area>
+        <VertFormat type="Stretched" />
+        <HorzFormat type="Stretched" />
+      </ImageryComponent>
+    </ImagerySection>
+    <ImagerySection name="hover">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="2" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="2" />
+          </Dim>
+          <Dim type="RightEdge">
+            <UnifiedDim scale="1" offset="-2" type="RightEdge"/>
+          </Dim>
+          <Dim type="BottomEdge">
+            <UnifiedDim scale="1" offset="-2" type="BottomEdge"/>
+          </Dim>
+        </Area>
+        <Image imageset="CommonFrame" image="ActionButtonHover" />
+        <VertFormat type="Stretched" />
+        <HorzFormat type="Stretched" />
+      </ImageryComponent>
+    </ImagerySection>
+    <ImagerySection name="default">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="2" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="2" />
+          </Dim>
+          <Dim type="RightEdge">
+            <UnifiedDim scale="1" offset="-2" type="RightEdge"/>
+          </Dim>
+          <Dim type="BottomEdge">
+            <UnifiedDim scale="1" offset="-2" type="BottomEdge"/>
+          </Dim>
+        </Area>
+        <Image imageset="CommonFrame" image="ActionButtonHover" />
+        <VertFormat type="Stretched" />
+        <HorzFormat type="Stretched" />
+      </ImageryComponent>
+    </ImagerySection>
+    <ImagerySection name="pushed">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="2" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="2" />
+          </Dim>
+          <Dim type="RightEdge">
+            <UnifiedDim scale="1" offset="-2" type="RightEdge"/>
+          </Dim>
+          <Dim type="BottomEdge">
+            <UnifiedDim scale="1" offset="-2" type="BottomEdge"/>
+          </Dim>
+        </Area>
+        <Image imageset="CommonFrame" image="ActionButtonPushed" />
+        <VertFormat type="Stretched" />
+        <HorzFormat type="Stretched" />
+      </ImageryComponent>
+    </ImagerySection>
+    <ImagerySection name="BackgroundImage">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image imageset="CommonItem" image="ActionBK" />
+        <VertFormat type="Stretched" />
+        <HorzFormat type="Stretched" />
+      </ImageryComponent>
+    </ImagerySection>
+    <StateImagery name="BackgroundImage">
+      <Layer>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Normal">
+      <Layer>
+        <Section section="normal" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Hover">
+      <Layer>
+        <Section section="hover" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Pushed">
+      <Layer>
+        <Section section="pushed" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Defaulted">
+      <Layer>
+        <Section section="default" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="default">
+          <Colours topLeft="88888888" topRight="88888888" bottomLeft="88888888" bottomRight="88888888" />
+        </Section>
+      </Layer>
+    </StateImagery>
+
+
+  </WidgetLook>
+  <!--
+    ***************************************************
+
+        空按钮，外部指定图片的按钮
+
+
+
+    ***************************************************
+    -->
+  <WidgetLook name="TLBB_Look_ButtonNULL">
+    <PropertyDefinition name="VertLabelFormatting" initialValue="CentreAligned" />
+    <PropertyDefinition name="HorzLabelFormatting" initialValue="CentreAligned" />
+    <Property name="ClickSound" value="17" />
+    <ImagerySection name="label">
+      <TextComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <VertFormatProperty name="VertLabelFormatting" />
+        <HorzFormatProperty name="HorzLabelFormatting" />
+      </TextComponent>
+    </ImagerySection>
+    <StateImagery name="Normal">
+      <Layer>
+        <Section section="label">
+          <Colours topLeft="FFFDEB78" topRight="FFFDEB78" bottomLeft="FFFDEB78" bottomRight="FFFDEB78" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Hover">
+      <Layer>
+        <Section section="label"/>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Pushed">
+      <Layer>
+        <Section section="label"/>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="label"/>
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+  <!--
+    ***************************************************
+
+        普通按钮，界面通用按钮ﺍ
+
+
+
+    ***************************************************
+    -->
+  <WidgetLook name="TLBB_Look_ButtonCommon">
+    <PropertyDefinition name="VertLabelFormatting" initialValue="CentreAligned" />
+    <PropertyDefinition name="HorzLabelFormatting" initialValue="CentreAligned" />
+    <Property name="ClickSound" value="17" />
+    <ImagerySection name="label">
+      <TextComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <VertFormatProperty name="VertLabelFormatting" />
+        <HorzFormatProperty name="HorzLabelFormatting" />
+      </TextComponent>
+    </ImagerySection>
+    <ImagerySection name="normal">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button1" image="BtnCommon_Left_Normal" />
+        <Image type="RightEdge" imageset="Button1" image="BtnCommon_Right_Normal" />
+        <Image type="Background" imageset="Button1" image="BtnCommon_Mid_Normal" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="hover">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button1" image="BtnCommon_Left_Hover" />
+        <Image type="RightEdge" imageset="Button1" image="BtnCommon_Right_Hover" />
+        <Image type="Background" imageset="Button1" image="BtnCommon_Mid_Hover" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="pushed">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button1" image="BtnCommon_Left_Pushed" />
+        <Image type="RightEdge" imageset="Button1" image="BtnCommon_Right_Pushed" />
+        <Image type="Background" imageset="Button1" image="BtnCommon_Mid_Pushed" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="disabled">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button1" image="BtnCommon_Left_Disable" />
+        <Image type="RightEdge" imageset="Button1" image="BtnCommon_Right_Disable" />
+        <Image type="Background" imageset="Button1" image="BtnCommon_Mid_Disable" />
+      </FrameComponent>
+    </ImagerySection>
+    <StateImagery name="Normal">
+      <Layer>
+        <Section section="normal" />
+        <Section section="label">
+          <Colours topLeft="FFFDEB78" topRight="FFFDEB78" bottomLeft="FFFDEB78" bottomRight="FFFDEB78" />
+        </Section>
+       </Layer>
+    </StateImagery>
+    <StateImagery name="Hover">
+      <Layer>
+        <Section section="hover" />
+        <Section section="label">
+
+          <Colours topLeft="FFFFFF00" topRight="FFFFFF00" bottomLeft="FFFFFF00" bottomRight="FFFFFF00" />
+
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Pushed">
+      <Layer>
+        <Section section="pushed" />
+        <Section section="label">
+          <Colours topLeft="FF968B47" topRight="FF968B47" bottomLeft="FF968B47" bottomRight="FF968B47" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="disabled" />
+        <Section section="label">
+          <Colours topLeft="FFBBBBBB" topRight="FFBBBBBB" bottomLeft="FFBBBBBB" bottomRight="FFBBBBBB" />
+        </Section>
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+  
+      <!--
+    ***************************************************
+
+        普通按钮，界面通用按钮ﺍ
+
+
+
+    ***************************************************
+    -->
+  <WidgetLook name="TLBB_Look_ButtonSale">
+    <PropertyDefinition name="VertLabelFormatting" initialValue="CentreAligned" />
+    <PropertyDefinition name="HorzLabelFormatting" initialValue="CentreAligned" />
+    <Property name="ClickSound" value="17" />
+    <Property name="CheckMode" value="1" />
+    <ImagerySection name="label">
+      <TextComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <VertFormatProperty name="VertLabelFormatting" />
+        <HorzFormatProperty name="HorzLabelFormatting" />
+      </TextComponent>
+    </ImagerySection>
+    <ImagerySection name="normal">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="hover">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="pushed">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="disabled">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+      </FrameComponent>
+    </ImagerySection>
+    <StateImagery name="Normal">
+      <Layer>
+        <Section section="normal" />
+        <Section section="label">
+          <Colours topLeft="FFFFF263" topRight="FFFFF263" bottomLeft="FFFFF263" bottomRight="FFFFF263" />
+        </Section>
+       </Layer>
+    </StateImagery>
+    <StateImagery name="Hover">
+      <Layer>
+        <Section section="hover" />
+        <Section section="label">
+
+          <Colours topLeft="FFFF3D01" topRight="FFFF3D01" bottomLeft="FFFF3D01" bottomRight="FFFF3D01" />
+
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Pushed">
+      <Layer>
+        <Section section="pushed" />
+        <Section section="label">
+          <Colours topLeft="FFFF3D01" topRight="FFFF3D01" bottomLeft="FFFF3D01" bottomRight="FFFF3D01" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="disabled" />
+        <Section section="label">
+          <Colours topLeft="FFBBBBBB" topRight="FFBBBBBB" bottomLeft="FFBBBBBB" bottomRight="FFBBBBBB" />
+        </Section>
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+    <!--
+    ***************************************************
+
+        摊位按钮
+
+    ***************************************************
+    -->
+  <WidgetLook name="TLBB_Look_ButtonStall">
+    <PropertyDefinition name="VertLabelFormatting" initialValue="CentreAligned" />
+    <PropertyDefinition name="HorzLabelFormatting" initialValue="CentreAligned" />
+    <Property name="ClickSound" value="17" />
+    <Property name="CheckMode" value="2" />
+    <ImagerySection name="label">
+      <TextComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <VertFormatProperty name="VertLabelFormatting" />
+        <HorzFormatProperty name="HorzLabelFormatting" />
+      </TextComponent>
+    </ImagerySection>
+    <ImagerySection name="normal">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Buttons" image="Stall_L_Normal" />
+        <Image type="RightEdge" imageset="Buttons" image="Stall_R_Normal" />
+        <Image type="Background" imageset="Buttons" image="Stall_M_Normal" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="hover">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Buttons" image="Stall_L_Hover" />
+        <Image type="RightEdge" imageset="Buttons" image="Stall_R_Hover" />
+        <Image type="Background" imageset="Buttons" image="Stall_M_Hover" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="pushed">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Buttons" image="Stall_L_Hover" />
+        <Image type="RightEdge" imageset="Buttons" image="Stall_R_Hover" />
+        <Image type="Background" imageset="Buttons" image="Stall_M_Hover" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="disabled">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Buttons" image="Stall_L_Disable" />
+        <Image type="RightEdge" imageset="Buttons" image="Stall_R_Disable" />
+        <Image type="Background" imageset="Buttons" image="Stall_M_Disable" />
+      </FrameComponent>
+    </ImagerySection>
+    <StateImagery name="Normal">
+      <Layer>
+        <Section section="normal" />
+        <Section section="label">
+          <Colours topLeft="FFFDEB78" topRight="FFFDEB78" bottomLeft="FFFDEB78" bottomRight="FFFDEB78" />
+        </Section>
+       </Layer>
+    </StateImagery>
+    <StateImagery name="Hover">
+      <Layer>
+        <Section section="hover" />
+        <Section section="label">
+
+          <Colours topLeft="FFFFFF00" topRight="FFFFFF00" bottomLeft="FFFFFF00" bottomRight="FFFFFF00" />
+
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Pushed">
+      <Layer>
+        <Section section="hover" />
+        <Section section="label">
+
+          <Colours topLeft="FFFFFF00" topRight="FFFFFF00" bottomLeft="FFFFFF00" bottomRight="FFFFFF00" />
+
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="disabled" />
+        <Section section="label">
+          <Colours topLeft="FFBBBBBB" topRight="FFBBBBBB" bottomLeft="FFBBBBBB" bottomRight="FFBBBBBB" />
+        </Section>
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+    <!--
+    ***************************************************
+     另一种普通按钮，界面通用按钮ﺍ
+
+
+
+    ***************************************************
+    -->
+  <WidgetLook name="TLBB_Look_ButtonCommon2">
+      <PropertyDefinition name="VertLabelFormatting" initialValue="CentreAligned" />
+      <PropertyDefinition name="HorzLabelFormatting" initialValue="CentreAligned" />
+
+      <Property name="ClickSound" value="17" />
+      <ImagerySection name="label">
+        <TextComponent>
+          <Area>
+            <Dim type="LeftEdge">
+              <AbsoluteDim value="0" />
+            </Dim>
+            <Dim type="TopEdge">
+              <AbsoluteDim value="0" />
+            </Dim>
+            <Dim type="Width">
+              <UnifiedDim scale="1" type="Width" />
+            </Dim>
+            <Dim type="Height">
+              <UnifiedDim scale="1" type="Height" />
+            </Dim>
+          </Area>
+          <VertFormatProperty name="VertLabelFormatting" />
+          <HorzFormatProperty name="HorzLabelFormatting" />
+        </TextComponent>
+      </ImagerySection>
+      <ImagerySection name="normal">
+        <FrameComponent>
+          <Area>
+            <Dim type="LeftEdge">
+              <AbsoluteDim value="0" />
+            </Dim>
+            <Dim type="TopEdge">
+              <AbsoluteDim value="0" />
+            </Dim>
+            <Dim type="Width">
+              <UnifiedDim scale="1" type="Width" />
+            </Dim>
+            <Dim type="Height">
+              <UnifiedDim scale="1" type="Height" />
+            </Dim>
+          </Area>
+          <Image type="LeftEdge" imageset="Button1" image="BtnCommon3_Left_Normal" />
+          <Image type="RightEdge" imageset="Button1" image="BtnCommon3_Right_Normal" />
+          <Image type="Background" imageset="Button1" image="BtnCommon3_Mid_Normal" />
+        </FrameComponent>
+      </ImagerySection>
+      <ImagerySection name="hover">
+        <FrameComponent>
+          <Area>
+            <Dim type="LeftEdge">
+              <AbsoluteDim value="0" />
+            </Dim>
+            <Dim type="TopEdge">
+              <AbsoluteDim value="0" />
+            </Dim>
+            <Dim type="Width">
+              <UnifiedDim scale="1" type="Width" />
+            </Dim>
+            <Dim type="Height">
+              <UnifiedDim scale="1" type="Height" />
+            </Dim>
+          </Area>
+          <Image type="LeftEdge" imageset="Button1" image="BtnCommon3_Left_Hover" />
+          <Image type="RightEdge" imageset="Button1" image="BtnCommon3_Right_Hover" />
+          <Image type="Background" imageset="Button1" image="BtnCommon3_Mid_Hover" />
+        </FrameComponent>
+      </ImagerySection>
+      <ImagerySection name="pushed">
+        <FrameComponent>
+          <Area>
+            <Dim type="LeftEdge">
+              <AbsoluteDim value="0" />
+            </Dim>
+            <Dim type="TopEdge">
+              <AbsoluteDim value="0" />
+            </Dim>
+            <Dim type="Width">
+              <UnifiedDim scale="1" type="Width" />
+            </Dim>
+            <Dim type="Height">
+              <UnifiedDim scale="1" type="Height" />
+            </Dim>
+          </Area>
+          <Image type="LeftEdge" imageset="Button1" image="BtnCommon3_Left_Pushed" />
+          <Image type="RightEdge" imageset="Button1" image="BtnCommon3_Right_Pushed" />
+          <Image type="Background" imageset="Button1" image="BtnCommon3_Mid_Pushed" />
+        </FrameComponent>
+      </ImagerySection>
+      <ImagerySection name="disabled">
+        <FrameComponent>
+          <Area>
+            <Dim type="LeftEdge">
+              <AbsoluteDim value="0" />
+            </Dim>
+            <Dim type="TopEdge">
+              <AbsoluteDim value="0" />
+            </Dim>
+            <Dim type="Width">
+              <UnifiedDim scale="1" type="Width" />
+            </Dim>
+            <Dim type="Height">
+              <UnifiedDim scale="1" type="Height" />
+            </Dim>
+          </Area>
+          <Image type="LeftEdge" imageset="Button1" image="BtnCommon3_Left_Disable" />
+          <Image type="RightEdge" imageset="Button1" image="BtnCommon3_Right_Disable" />
+          <Image type="Background" imageset="Button1" image="BtnCommon3_Mid_Disable" />
+        </FrameComponent>
+      </ImagerySection>
+      <StateImagery name="Normal">
+        <Layer>
+          <Section section="normal" />
+          <Section section="label">
+			<Colours topLeft="FFFDEB78" topRight="FFFDEB78" bottomLeft="FFFDEB78" bottomRight="FFFDEB78" />
+          </Section>
+        </Layer>
+      </StateImagery>
+      <StateImagery name="Hover">
+        <Layer>
+          <Section section="hover" />
+          <Section section="label">
+			<Colours topLeft="FFFFFF00" topRight="FFFFFF00" bottomLeft="FFFFFF00" bottomRight="FFFFFF00" />
+          </Section>
+        </Layer>
+      </StateImagery>
+      <StateImagery name="Pushed">
+        <Layer>
+          <Section section="pushed" />
+          <Section section="label">
+			<Colours topLeft="FF968B47" topRight="FF968B47" bottomLeft="FF968B47" bottomRight="FF968B47" />
+          </Section>
+        </Layer>
+      </StateImagery>
+      <StateImagery name="Disabled">
+        <Layer>
+          <Section section="disabled" />
+          <Section section="label">
+			<Colours topLeft="FFBBBBBB" topRight="FFBBBBBB" bottomLeft="FFBBBBBB" bottomRight="FFBBBBBB" />
+          </Section>
+        </Layer>
+      </StateImagery>
+    </WidgetLook>
+    <WidgetLook name="TLBB_Look_ButtonCheckForChatPage">
+    <PropertyDefinition name="WantsMultiClickEvents" initialValue="true" />
+    <PropertyDefinition name="VertLabelFormatting" initialValue="CentreAligned" />
+    <PropertyDefinition name="HorzLabelFormatting" initialValue="CentreAligned" />
+
+    <Property name="ClickSound" value="17" />
+    <ImagerySection name="label">
+      <TextComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <VertFormatProperty name="VertLabelFormatting" />
+        <HorzFormatProperty name="HorzLabelFormatting" />
+      </TextComponent>
+    </ImagerySection>
+    <ImagerySection name="normal">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button2" image="BtnCommon2_Left_Normal" />
+        <Image type="RightEdge" imageset="Button2" image="BtnCommon2_Right_Normal" />
+        <Image type="Background" imageset="Button2" image="BtnCommon2_Mid_Normal" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="hover">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button2" image="BtnCommon2_Left_Hover" />
+        <Image type="RightEdge" imageset="Button2" image="BtnCommon2_Right_Hover" />
+        <Image type="Background" imageset="Button2" image="BtnCommon2_Mid_Hover" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="pushed">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button2" image="BtnCommon2_Left_Hover" />
+        <Image type="RightEdge" imageset="Button2" image="BtnCommon2_Right_Hover" />
+        <Image type="Background" imageset="Button2" image="BtnCommon2_Mid_Hover" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="disabled">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button2" image="BtnCommon2_Left_Disable" />
+        <Image type="RightEdge" imageset="Button2" image="BtnCommon2_Right_Disable" />
+        <Image type="Background" imageset="Button2" image="BtnCommon2_Mid_Disable" />
+      </FrameComponent>
+    </ImagerySection>
+    <StateImagery name="Normal">
+      <Layer>
+        <Section section="normal" />
+        <Section section="label">
+
+          <Colours topLeft="FFFDEB78" topRight="FFFDEB78" bottomLeft="FFFDEB78" bottomRight="FFFDEB78" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Hover">
+      <Layer>
+        <Section section="hover" />
+        <Section section="label">
+          <Colours topLeft="FFFFFF00" topRight="FFFFFF00" bottomLeft="FFFFFF00" bottomRight="FFFFFF00" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Pushed">
+      <Layer>
+        <Section section="pushed" />
+        <Section section="label">
+          <Colours topLeft="FFFFFF00" topRight="FFFFFF00" bottomLeft="FFFFFF00" bottomRight="FFFFFF00" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="disabled" />
+        <Section section="label">
+          <Colours topLeft="FFBBBBBB" topRight="FFBBBBBB" bottomLeft="FFBBBBBB" bottomRight="FFBBBBBB" />
+        </Section>
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+  <!--特殊按钮 begin-->
+  <WidgetLook name="TLBB_Look_ButtonForServer">
+    <PropertyDefinition name="WantsMultiClickEvents" initialValue="true" />
+    <PropertyDefinition name="VertLabelFormatting" initialValue="CentreAligned" />
+    <PropertyDefinition name="HorzLabelFormatting" initialValue="CentreAligned" />
+    <Property name="ClickSound" value="17" />
+    <ImagerySection name="label">
+      <TextComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <VertFormatProperty name="VertLabelFormatting" />
+        <HorzFormatProperty name="HorzLabelFormatting" />
+      </TextComponent>
+    </ImagerySection>
+    <ImagerySection name="normal">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button4" image="BtnServer_Left_Normal" />
+        <Image type="RightEdge" imageset="Button4" image="BtnServer_Right_Normal" />
+        <Image type="Background" imageset="Button4" image="BtnServer_Mid_Normal" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="hover">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button4" image="BtnServer_Left_Hover" />
+        <Image type="RightEdge" imageset="Button4" image="BtnServer_Right_Hover" />
+        <Image type="Background" imageset="Button4" image="BtnServer_Mid_Hover" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="pushed">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button4" image="BtnServer_Left_Pushed" />
+        <Image type="RightEdge" imageset="Button4" image="BtnServer_Right_Pushed" />
+        <Image type="Background" imageset="Button4" image="BtnServer_Mid_Pushed" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="disabled">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button4" image="BtnServer_Left_Disable" />
+        <Image type="RightEdge" imageset="Button4" image="BtnServer_Right_Disable" />
+        <Image type="Background" imageset="Button4" image="BtnServer_Mid_Disable" />
+      </FrameComponent>
+    </ImagerySection>
+    <StateImagery name="Normal">
+      <Layer>
+        <Section section="normal" />
+        <Section section="label">
+
+          <Colours topLeft="FFFDEB78" topRight="FFFDEB78" bottomLeft="FFFDEB78" bottomRight="FFFDEB78" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Hover">
+      <Layer>
+        <Section section="hover" />
+        <Section section="label">
+          <Colours topLeft="FFFFFF00" topRight="FFFFFF00" bottomLeft="FFFFFF00" bottomRight="FFFFFF00" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Pushed">
+      <Layer>
+        <Section section="pushed" />
+        <Section section="label">
+          <Colours topLeft="FFFFFF00" topRight="FFFFFF00" bottomLeft="FFFFFF00" bottomRight="FFFFFF00" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="disabled" />
+        <Section section="label">
+          <Colours topLeft="FFBBBBBB" topRight="FFBBBBBB" bottomLeft="FFBBBBBB" bottomRight="FFBBBBBB" />
+        </Section>
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+<!--特殊按钮 end-->
+
+  <WidgetLook name="TLBB_Look_ButtonCommon3">
+    <PropertyDefinition name="WantsMultiClickEvents" initialValue="true" />
+    <PropertyDefinition name="VertLabelFormatting" initialValue="CentreAligned" />
+    <PropertyDefinition name="HorzLabelFormatting" initialValue="CentreAligned" />
+
+    <Property name="ClickSound" value="17" />
+    <ImagerySection name="label">
+      <TextComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <VertFormatProperty name="VertLabelFormatting" />
+        <HorzFormatProperty name="HorzLabelFormatting" />
+      </TextComponent>
+    </ImagerySection>
+    <ImagerySection name="normal">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button1" image="BtnCommon_Left_Normal" />
+        <Image type="RightEdge" imageset="Button1" image="BtnCommon_Right_Normal" />
+        <Image type="Background" imageset="Button1" image="BtnCommon_Mid_Normal" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="hover">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button1" image="BtnCommon_Left_Hover" />
+        <Image type="RightEdge" imageset="Button1" image="BtnCommon_Right_Hover" />
+        <Image type="Background" imageset="Button1" image="BtnCommon_Mid_Hover" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="pushed">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button1" image="BtnCommon_Left_Hover" />
+        <Image type="RightEdge" imageset="Button1" image="BtnCommon_Right_Hover" />
+        <Image type="Background" imageset="Button1" image="BtnCommon_Mid_Hover" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="disabled">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button1" image="BtnCommon_Left_Disable" />
+        <Image type="RightEdge" imageset="Button1" image="BtnCommon_Right_Disable" />
+        <Image type="Background" imageset="Button1" image="BtnCommon_Mid_Disable" />
+      </FrameComponent>
+    </ImagerySection>
+    <StateImagery name="Normal">
+      <Layer>
+        <Section section="normal" />
+        <Section section="label">
+
+          <Colours topLeft="FFFDEB78" topRight="FFFDEB78" bottomLeft="FFFDEB78" bottomRight="FFFDEB78" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Hover">
+      <Layer>
+        <Section section="hover" />
+        <Section section="label">
+          <Colours topLeft="FFFFFF00" topRight="FFFFFF00" bottomLeft="FFFFFF00" bottomRight="FFFFFF00" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Pushed">
+      <Layer>
+        <Section section="pushed" />
+        <Section section="label">
+          <Colours topLeft="FFFFFF00" topRight="FFFFFF00" bottomLeft="FFFFFF00" bottomRight="FFFFFF00" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="disabled" />
+        <Section section="label">
+          <Colours topLeft="FFBBBBBB" topRight="FFBBBBBB" bottomLeft="FFBBBBBB" bottomRight="FFBBBBBB" />
+        </Section>
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+    <WidgetLook name="TLBB_Look_ButtonCheckForServer">
+    <PropertyDefinition name="WantsMultiClickEvents" initialValue="true" />
+    <PropertyDefinition name="VertLabelFormatting" initialValue="CentreAligned" />
+    <PropertyDefinition name="HorzLabelFormatting" initialValue="CentreAligned" />
+
+    <Property name="ClickSound" value="17" />
+    <ImagerySection name="label">
+      <TextComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <VertFormatProperty name="VertLabelFormatting" />
+        <HorzFormatProperty name="HorzLabelFormatting" />
+      </TextComponent>
+    </ImagerySection>
+    <ImagerySection name="normal">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button1" image="BtnCommon_Left_Normal" />
+        <Image type="RightEdge" imageset="Button1" image="BtnCommon_Right_Normal" />
+        <Image type="Background" imageset="Button1" image="BtnCommon_Mid_Normal" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="hover">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button1" image="BtnCommon_Left_Hover" />
+        <Image type="RightEdge" imageset="Button1" image="BtnCommon_Right_Hover" />
+        <Image type="Background" imageset="Button1" image="BtnCommon_Mid_Hover" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="pushed">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button4" image="BtnCommon_Purple_Left_Pushed" />
+        <Image type="RightEdge" imageset="Button4" image="BtnCommon_Purple_Right_Pushed" />
+        <Image type="Background" imageset="Button4" image="BtnCommon_Purple_Mid_Pushed" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="disabled">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button1" image="BtnCommon_Left_Disable" />
+        <Image type="RightEdge" imageset="Button1" image="BtnCommon_Right_Disable" />
+        <Image type="Background" imageset="Button1" image="BtnCommon_Mid_Disable" />
+      </FrameComponent>
+    </ImagerySection>
+    <StateImagery name="Normal">
+      <Layer>
+        <Section section="normal" />
+        <Section section="label">
+
+          <Colours topLeft="FFFDEB78" topRight="FFFDEB78" bottomLeft="FFFDEB78" bottomRight="FFFDEB78" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Hover">
+      <Layer>
+        <Section section="hover" />
+        <Section section="label">
+          <Colours topLeft="FFFFFF00" topRight="FFFFFF00" bottomLeft="FFFFFF00" bottomRight="FFFFFF00" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Pushed">
+      <Layer>
+        <Section section="pushed" />
+        <Section section="label">
+          <Colours topLeft="FFFFFF00" topRight="FFFFFF00" bottomLeft="FFFFFF00" bottomRight="FFFFFF00" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="disabled" />
+        <Section section="label">
+          <Colours topLeft="FFBBBBBB" topRight="FFBBBBBB" bottomLeft="FFBBBBBB" bottomRight="FFBBBBBB" />
+        </Section>
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+    <WidgetLook name="TLBB_Look_ButtonCheckForQuest">
+    <PropertyDefinition name="WantsMultiClickEvents" initialValue="true" />
+    <PropertyDefinition name="VertLabelFormatting" initialValue="CentreAligned" />
+    <PropertyDefinition name="HorzLabelFormatting" initialValue="CentreAligned" />
+
+    <Property name="ClickSound" value="17" />
+    <ImagerySection name="label">
+      <TextComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <VertFormatProperty name="VertLabelFormatting" />
+        <HorzFormatProperty name="HorzLabelFormatting" />
+      </TextComponent>
+    </ImagerySection>
+    <ImagerySection name="normal">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button4" image="BtnCommon_Green_Left_Normal" />
+        <Image type="RightEdge" imageset="Button4" image="BtnCommon_Green_Right_Normal" />
+        <Image type="Background" imageset="Button4" image="BtnCommon_Green_Mid_Normal" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="hover">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button4" image="BtnCommon_Green_Left_Hover" />
+        <Image type="RightEdge" imageset="Button4" image="BtnCommon_Green_Right_Hover" />
+        <Image type="Background" imageset="Button4" image="BtnCommon_Green_Mid_Hover" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="pushed">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button4" image="BtnCommon_Green_Left_Hover" />
+        <Image type="RightEdge" imageset="Button4" image="BtnCommon_Green_Right_Hover" />
+        <Image type="Background" imageset="Button4" image="BtnCommon_Green_Mid_Hover" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="disabled">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button1" image="BtnCommon_Left_Disable" />
+        <Image type="RightEdge" imageset="Button1" image="BtnCommon_Right_Disable" />
+        <Image type="Background" imageset="Button1" image="BtnCommon_Mid_Disable" />
+      </FrameComponent>
+    </ImagerySection>
+    <StateImagery name="Normal">
+      <Layer>
+        <Section section="normal" />
+        <Section section="label">
+
+          <Colours topLeft="FFFDEB78" topRight="FFFDEB78" bottomLeft="FFFDEB78" bottomRight="FFFDEB78" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Hover">
+      <Layer>
+        <Section section="hover" />
+        <Section section="label">
+          <Colours topLeft="FFFFFF00" topRight="FFFFFF00" bottomLeft="FFFFFF00" bottomRight="FFFFFF00" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Pushed">
+      <Layer>
+        <Section section="pushed" />
+        <Section section="label">
+          <Colours topLeft="FFFFFF00" topRight="FFFFFF00" bottomLeft="FFFFFF00" bottomRight="FFFFFF00" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="disabled" />
+        <Section section="label">
+          <Colours topLeft="FFBBBBBB" topRight="FFBBBBBB" bottomLeft="FFBBBBBB" bottomRight="FFBBBBBB" />
+        </Section>
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+    <WidgetLook name="TLBB_Look_ButtonCommon4">
+    <PropertyDefinition name="VertLabelFormatting" initialValue="CentreAligned" />
+    <PropertyDefinition name="HorzLabelFormatting" initialValue="CentreAligned" />
+
+    <Property name="ClickSound" value="17" />
+    <ImagerySection name="label">
+      <TextComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <VertFormatProperty name="VertLabelFormatting" />
+        <HorzFormatProperty name="HorzLabelFormatting" />
+      </TextComponent>
+    </ImagerySection>
+    <ImagerySection name="normal">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button2" image="BtnCommon2_Left_Normal" />
+        <Image type="RightEdge" imageset="Button2" image="BtnCommon2_Right_Normal" />
+        <Image type="Background" imageset="Button2" image="BtnCommon2_Mid_Normal" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="hover">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button2" image="BtnCommon2_Left_Hover" />
+        <Image type="RightEdge" imageset="Button2" image="BtnCommon2_Right_Hover" />
+        <Image type="Background" imageset="Button2" image="BtnCommon2_Mid_Hover" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="pushed">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button2" image="BtnCommon2_Left_Pushed" />
+        <Image type="RightEdge" imageset="Button2" image="BtnCommon2_Right_Pushed" />
+        <Image type="Background" imageset="Button2" image="BtnCommon2_Mid_Pushed" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="disabled">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button2" image="BtnCommon2_Left_Disable" />
+        <Image type="RightEdge" imageset="Button2" image="BtnCommon2_Mid_Disable" />
+        <Image type="Background" imageset="Button2" image="BtnCommon2_Right_Disable" />
+      </FrameComponent>
+    </ImagerySection>
+    <StateImagery name="Normal">
+      <Layer>
+        <Section section="normal" />
+        <Section section="label">
+          <Colours topLeft="FFFFFFFF" topRight="FFFFFFFF" bottomLeft="FFFFFFFF" bottomRight="FFFFFFFF" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Hover">
+      <Layer>
+        <Section section="hover" />
+        <Section section="label">
+          <Colours topLeft="FFFFFF00" topRight="FFFFFF00" bottomLeft="FFFFFF00" bottomRight="FFFFFF00" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Pushed">
+      <Layer>
+        <Section section="pushed" />
+        <Section section="label">
+          <Colours topLeft="FF968B47" topRight="FF968B47" bottomLeft="FF968B47" bottomRight="FF968B47" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="disabled" />
+        <Section section="label">
+          <Colours topLeft="FFBBBBBB" topRight="FFBBBBBB" bottomLeft="FFBBBBBB" bottomRight="FFBBBBBB" />
+        </Section>
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+    <!--
+    ***************************************************
+
+       特殊边框的按钮，不常璍
+
+
+
+    ***************************************************
+    -->
+  <WidgetLook name="TLBB_Look_ButtonExp1">
+    <PropertyDefinition name="VertLabelFormatting" initialValue="CentreAligned" />
+    <PropertyDefinition name="HorzLabelFormatting" initialValue="CentreAligned" />
+
+    <Property name="ClickSound" value="17" />
+    <ImagerySection name="label">
+      <TextComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <VertFormatProperty name="VertLabelFormatting" />
+        <HorzFormatProperty name="HorzLabelFormatting" />
+      </TextComponent>
+    </ImagerySection>
+    <ImagerySection name="normal">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button1" image="BtnCommon4_Left_Normal" />
+        <Image type="RightEdge" imageset="Button1" image="BtnCommon4_Right_Normal" />
+        <Image type="Background" imageset="Button1" image="BtnCommon4_Mid_Normal" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="hover">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button1" image="BtnCommon4_Left_Hover" />
+        <Image type="RightEdge" imageset="Button1" image="BtnCommon4_Right_Hover" />
+        <Image type="Background" imageset="Button1" image="BtnCommon4_Mid_Hover" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="pushed">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button1" image="BtnCommon4_Left_Pushed" />
+        <Image type="RightEdge" imageset="Button1" image="BtnCommon4_Right_Pushed" />
+        <Image type="Background" imageset="Button1" image="BtnCommon4_Mid_Pushed" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="disabled">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button1" image="BtnCommon4_Left_Disable" />
+        <Image type="RightEdge" imageset="Button1" image="BtnCommon4_Right_Disable" />
+        <Image type="Background" imageset="Button1" image="BtnCommon4_Mid_Disable" />
+      </FrameComponent>
+    </ImagerySection>
+    <StateImagery name="Normal">
+      <Layer>
+        <Section section="normal" />
+        <Section section="label">
+          <Colours topLeft="FFFDEB78" topRight="FFFDEB78" bottomLeft="FFFDEB78" bottomRight="FFFDEB78" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Hover">
+      <Layer>
+        <Section section="hover" />
+        <Section section="label">
+          <Colours topLeft="FFFFFF00" topRight="FFFFFF00" bottomLeft="FFFFFF00" bottomRight="FFFFFF00" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Pushed">
+      <Layer>
+        <Section section="pushed" />
+        <Section section="label">
+          <Colours topLeft="FF968B47" topRight="FF968B47" bottomLeft="FF968B47" bottomRight="FF968B47" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="disabled" />
+        <Section section="label">
+          <Colours topLeft="FFBBBBBB" topRight="FFBBBBBB" bottomLeft="FFBBBBBB" bottomRight="FFBBBBBB" />
+        </Section>
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+  <!--
+    ***************************************************
+
+       特殊边框的按钮，不常璍
+
+
+
+    ***************************************************
+    -->
+  <WidgetLook name="TLBB_Look_ButtonExp2">
+    <PropertyDefinition name="VertLabelFormatting" initialValue="CentreAligned" />
+    <PropertyDefinition name="HorzLabelFormatting" initialValue="CentreAligned" />
+    <Property name="ClickSound" value="17" />
+    <ImagerySection name="label">
+      <TextComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <VertFormatProperty name="VertLabelFormatting" />
+        <HorzFormatProperty name="HorzLabelFormatting" />
+      </TextComponent>
+    </ImagerySection>
+    <ImagerySection name="normal">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button2" image="BtnCommon1_Left_Normal" />
+        <Image type="RightEdge" imageset="Button2" image="BtnCommon1_Right_Normal" />
+        <Image type="Background" imageset="Button2" image="BtnCommon1_Mid_Normal" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="hover">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button2" image="BtnCommon1_Left_Hover" />
+        <Image type="RightEdge" imageset="Button2" image="BtnCommon1_Right_Hover" />
+        <Image type="Background" imageset="Button2" image="BtnCommon1_Mid_Hover" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="pushed">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button2" image="BtnCommon1_Left_Pushed" />
+        <Image type="RightEdge" imageset="Button2" image="BtnCommon1_Right_Pushed" />
+        <Image type="Background" imageset="Button2" image="BtnCommon1_Mid_Pushed" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="disabled">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button2" image="BtnCommon1_Left_Disable"/>
+        <Image type="RightEdge" imageset="Button2" image="BtnCommon1_Right_Disable"/>
+        <Image type="Background" imageset="Button2" image="BtnCommon1_Mid_Disable"/>
+      </FrameComponent>
+    </ImagerySection>
+    <StateImagery name="Normal">
+      <Layer>
+        <Section section="normal" />
+        <Section section="label">
+          <Colours topLeft="FFFDEB78" topRight="FFFDEB78" bottomLeft="FFFDEB78" bottomRight="FFFDEB78" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Hover">
+      <Layer>
+        <Section section="hover" />
+        <Section section="label">
+          <Colours topLeft="FFFFFF00" topRight="FFFFFF00" bottomLeft="FFFFFF00" bottomRight="FFFFFF00" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Pushed">
+      <Layer>
+        <Section section="pushed" />
+        <Section section="label">
+          <Colours topLeft="FFFFFF00" topRight="FFFFFF00" bottomLeft="FFFFFF00" bottomRight="FFFFFF00" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="disabled" />
+        <Section section="label">
+          <Colours topLeft="FFBBBBBB" topRight="FFBBBBBB" bottomLeft="FFBBBBBB" bottomRight="FFBBBBBB" />
+        </Section>
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+  <!--
+    ***************************************************
+
+       特殊边框的按钮，不常璍
+
+
+
+    ***************************************************
+    -->
+  <WidgetLook name="TLBB_Look_ButtonExpForServer2">
+    <PropertyDefinition name="VertLabelFormatting" initialValue="CentreAligned" />
+    <PropertyDefinition name="HorzLabelFormatting" initialValue="CentreAligned" />
+    <Property name="CheckMode" value="1" />
+    <ImagerySection name="label">
+      <TextComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <VertFormatProperty name="VertLabelFormatting" />
+        <HorzFormatProperty name="HorzLabelFormatting" />
+      </TextComponent>
+    </ImagerySection>
+    <ImagerySection name="normal">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button4" image="BtnCommon_Server_Left_Normal" />
+        <Image type="RightEdge" imageset="Button4" image="BtnCommon_Server_Right_Normal" />
+        <Image type="Background" imageset="Button4" image="BtnCommon_Server_Mid_Normal" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="hover">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button4" image="BtnCommon_Server_Left_Hover" />
+        <Image type="RightEdge" imageset="Button4" image="BtnCommon_Server_Right_Hover" />
+        <Image type="Background" imageset="Button4" image="BtnCommon_Server_Mid_Hover" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="pushed">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button4" image="BtnCommon_Server_Left_Hover" />
+        <Image type="RightEdge" imageset="Button4" image="BtnCommon_Server_Right_Hover" />
+        <Image type="Background" imageset="Button4" image="BtnCommon_Server_Mid_Hover" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="disabled">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button1" image="BtnCommon_Left_Disable" />
+        <Image type="RightEdge" imageset="Button1" image="BtnCommon_Right_Disable" />
+        <Image type="Background" imageset="Button1" image="BtnCommon_Mid_Disable" />
+      </FrameComponent>
+    </ImagerySection>
+    <StateImagery name="Normal">
+      <Layer>
+        <Section section="normal" />
+        <Section section="label">
+          <Colours topLeft="FFFFF263" topRight="FFFFF263" bottomLeft="FFFFF263" bottomRight="FFFFF263" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Hover">
+      <Layer>
+        <Section section="hover" />
+        <Section section="label">
+          <Colours topLeft="FFFFFF00" topRight="FFFFFF00" bottomLeft="FFFFFF00" bottomRight="FFFFFF00" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Pushed">
+      <Layer>
+        <Section section="pushed" />
+        <Section section="label">
+          <Colours topLeft="FFFFFF00" topRight="FFFFFF00" bottomLeft="FFFFFF00" bottomRight="FFFFFF00" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="disabled" />
+        <Section section="label">
+          <Colours topLeft="FFBBBBBB" topRight="FFBBBBBB" bottomLeft="FFBBBBBB" bottomRight="FFBBBBBB" />
+        </Section>
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+    <WidgetLook name="TLBB_Look_ButtonExpForServer3">
+    <PropertyDefinition name="VertLabelFormatting" initialValue="CentreAligned" />
+    <PropertyDefinition name="HorzLabelFormatting" initialValue="CentreAligned" />
+    <Property name="CheckMode" value="1" />
+    <ImagerySection name="label">
+      <TextComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <VertFormatProperty name="VertLabelFormatting" />
+        <HorzFormatProperty name="HorzLabelFormatting" />
+      </TextComponent>
+    </ImagerySection>
+    <ImagerySection name="normal">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button4" image="BtnCommon2_Server_Left_Normal" />
+        <Image type="RightEdge" imageset="Button4" image="BtnCommon2_Server_Right_Normal" />
+        <Image type="Background" imageset="Button4" image="BtnCommon2_Server_Mid_Normal" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="hover">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button4" image="BtnCommon2_Server_Left_Hover" />
+        <Image type="RightEdge" imageset="Button4" image="BtnCommon2_Server_Right_Hover" />
+        <Image type="Background" imageset="Button4" image="BtnCommon2_Server_Mid_Hover" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="pushed">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button4" image="BtnCommon_Server_Left_Hover" />
+        <Image type="RightEdge" imageset="Button4" image="BtnCommon_Server_Right_Hover" />
+        <Image type="Background" imageset="Button4" image="BtnCommon_Server_Mid_Hover" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="disabled">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button1" image="BtnCommon_Left_Disable" />
+        <Image type="RightEdge" imageset="Button1" image="BtnCommon_Right_Disable" />
+        <Image type="Background" imageset="Button1" image="BtnCommon_Mid_Disable" />
+      </FrameComponent>
+    </ImagerySection>
+    <StateImagery name="Normal">
+      <Layer>
+        <Section section="normal" />
+        <Section section="label">
+          <Colours topLeft="FFFFF263" topRight="FFFFF263" bottomLeft="FFFFF263" bottomRight="FFFFF263" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Hover">
+      <Layer>
+        <Section section="hover" />
+        <Section section="label">
+          <Colours topLeft="FFFFFF00" topRight="FFFFFF00" bottomLeft="FFFFFF00" bottomRight="FFFFFF00" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Pushed">
+      <Layer>
+        <Section section="pushed" />
+        <Section section="label">
+          <Colours topLeft="FFFFFF00" topRight="FFFFFF00" bottomLeft="FFFFFF00" bottomRight="FFFFFF00" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="disabled" />
+        <Section section="label">
+          <Colours topLeft="FFBBBBBB" topRight="FFBBBBBB" bottomLeft="FFBBBBBB" bottomRight="FFBBBBBB" />
+        </Section>
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+  <!--
+    ***************************************************
+       ?分页窗口的分页按钮，
+    ***************************************************
+    -->
+  <WidgetLook name="TLBB_Look_ButtonPageUp">
+    <PropertyDefinition name="VertLabelFormatting" initialValue="CentreAligned" />
+    <PropertyDefinition name="HorzLabelFormatting" initialValue="CentreAligned" />
+    <Property name="ClickSound" value="22" />
+    <ImagerySection name="label">
+      <TextComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="4" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" offset="-4" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" offset="-4" type="Height" />
+          </Dim>
+        </Area>
+        <VertFormatProperty name="VertLabelFormatting" />
+        <HorzFormatProperty name="HorzLabelFormatting" />
+      </TextComponent>
+    </ImagerySection>
+    <ImagerySection name="normal">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image imageset="Button5" image="BtnPage_Up_Normal" />
+        <VertFormat type="Stretched" />
+        <HorzFormat type="Stretched" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="hover">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image imageset="Button5" image="BtnPage_Up_Hover" />
+        <VertFormat type="Stretched" />
+        <HorzFormat type="Stretched" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="pushed">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image imageset="Button5" image="BtnPage_Up_Pushed" />
+        <VertFormat type="Stretched" />
+        <HorzFormat type="Stretched" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="disable">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image imageset="Button5" image="BtnPage_Up_Disabled" />
+        <VertFormat type="Stretched" />
+        <HorzFormat type="Stretched" />
+      </FrameComponent>
+    </ImagerySection>
+    <StateImagery name="Normal">
+      <Layer>
+        <Section section="normal" />
+        <Section section="label">
+          <Colours topLeft="FFFDEB78" topRight="FFFDEB78" bottomLeft="FFFDEB78" bottomRight="FFFDEB78" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Hover">
+      <Layer>
+        <Section section="hover" />
+        <Section section="label">
+          <Colours topLeft="FFFFFF00" topRight="FFFFFF00" bottomLeft="FFFFFF00" bottomRight="FFFFFF00" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Pushed">
+      <Layer>
+        <Section section="pushed" />
+        <Section section="label">
+          <Colours topLeft="FFFFFF00" topRight="FFFFFF00" bottomLeft="FFFFFF00" bottomRight="FFFFFF00" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="disable" />
+        <Section section="label">
+          <Colours topLeft="FFBBBBBB" topRight="FFBBBBBB" bottomLeft="FFBBBBBB" bottomRight="FFBBBBBB" />
+        </Section>
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+  <!--
+    ***************************************************
+       分页窗口的分页按钮，
+    ***************************************************
+    -->
+  <WidgetLook name="TLBB_Look_ButtonPageDown">
+    <PropertyDefinition name="VertLabelFormatting" initialValue="CentreAligned" />
+    <PropertyDefinition name="HorzLabelFormatting" initialValue="CentreAligned" />
+
+    <Property name="ClickSound" value="23" />
+    <ImagerySection name="label">
+      <TextComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" offset="-4" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" offset="-2" type="Height" />
+          </Dim>
+        </Area>
+        <VertFormatProperty name="VertLabelFormatting" />
+        <HorzFormatProperty name="HorzLabelFormatting" />
+      </TextComponent>
+    </ImagerySection>
+    <ImagerySection name="normal">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image imageset="Button5" image="BtnPage_Down_Normal" />
+        <VertFormat type="Stretched" />
+        <HorzFormat type="Stretched" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="hover">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image imageset="Button5" image="BtnPage_Down_Hover" />
+        <VertFormat type="Stretched" />
+        <HorzFormat type="Stretched" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="pushed">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image imageset="Button5" image="BtnPage_Down_Pushed" />
+        <VertFormat type="Stretched" />
+        <HorzFormat type="Stretched" />
+      </FrameComponent>
+    </ImagerySection>
+    <StateImagery name="Normal">
+      <Layer>
+        <Section section="normal" />
+        <Section section="label">
+          <Colours topLeft="FFFDEB78" topRight="FFFDEB78" bottomLeft="FFFDEB78" bottomRight="FFFDEB78" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Hover">
+      <Layer>
+        <Section section="hover" />
+        <Section section="label">
+          <Colours topLeft="FFFFFF00" topRight="FFFFFF00" bottomLeft="FFFFFF00" bottomRight="FFFFFF00" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Pushed">
+      <Layer>
+        <Section section="pushed" />
+        <Section section="label">
+          <Colours topLeft="FFFFFF00" topRight="FFFFFF00" bottomLeft="FFFFFF00" bottomRight="FFFFFF00" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="normal" />
+        <Section section="label">
+          <Colours topLeft="FFBBBBBB" topRight="FFBBBBBB" bottomLeft="FFBBBBBB" bottomRight="FFBBBBBB" />
+        </Section>
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+  <!--
+    ***************************************************
+
+       系统关闭按钮ﺍ
+
+
+
+    ***************************************************
+    -->
+  <WidgetLook name="TLBB_Look_ButtonClose">
+    <PropertyDefinition name="VertLabelFormatting" initialValue="CentreAligned" />
+    <PropertyDefinition name="HorzLabelFormatting" initialValue="CentreAligned" />
+    <ImagerySection name="normal">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image imageset="Button1" image="BtnClose_Normal" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="hover">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image imageset="Button1" image="BtnClose_Hover" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="pushed">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image imageset="Button1" image="BtnClose_Pushed" />
+      </FrameComponent>
+    </ImagerySection>
+    <StateImagery name="Normal">
+      <Layer>
+        <Section section="normal" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Hover">
+      <Layer>
+        <Section section="hover" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Pushed">
+      <Layer>
+        <Section section="pushed" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="normal" >
+          <Colours topLeft="FF7F7F7F" topRight="FF7F7F7F" bottomLeft="FF7F7F7F" bottomRight="FF7F7F7F" />
+        </Section>
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+  <!--
+    ***************************************************
+       系统帮助按钮ﺍ
+
+
+    ***************************************************
+    -->
+  <WidgetLook name="TLBB_Look_ButtonHelp">
+    <PropertyDefinition name="VertLabelFormatting" initialValue="CentreAligned" />
+    <PropertyDefinition name="HorzLabelFormatting" initialValue="CentreAligned" />
+    <Property name="ClickSound" value="17" />
+    <ImagerySection name="normal">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image imageset="Button1" image="BtnHelp_Normal" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="hover">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image imageset="Button1" image="BtnHelp_Hover" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="pushed">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image imageset="Button1" image="BtnHelp_Pushed" />
+      </FrameComponent>
+    </ImagerySection>
+    <StateImagery name="Normal">
+      <Layer>
+        <Section section="normal" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Hover">
+      <Layer>
+        <Section section="hover" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Pushed">
+      <Layer>
+        <Section section="pushed" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="normal" >
+          <Colours topLeft="FF7F7F7F" topRight="FF7F7F7F" bottomLeft="FF7F7F7F" bottomRight="FF7F7F7F" />
+        </Section>
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+  <!--
+    ***************************************************
+       ?单选按钮，
+    ***************************************************
+    -->
+  <WidgetLook name="TLBB_Look_ButtonRadio">
+    <PropertyDefinition name="VertLabelFormatting" initialValue="CentreAligned" />
+    <PropertyDefinition name="HorzLabelFormatting" initialValue="CentreAligned" />
+<!--    <Property name="ClickSound" value="17" /> -->
+    <ImagerySection name="normal">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image imageset="Button1" image="BtnRedio_Normal" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="hover">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image imageset="Button1" image="BtnRedio_Normal" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="pushed">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image imageset="Button1" image="BtnRedio_Pushed" />
+      </FrameComponent>
+    </ImagerySection>
+    <StateImagery name="Normal">
+      <Layer>
+        <Section section="normal" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Hover">
+      <Layer>
+        <Section section="hover" >
+          <Colours topLeft="FFFFFFFF" topRight="FFFFFFFF" bottomLeft="FFFFFFFF" bottomRight="FFFFFFFF" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Pushed">
+      <Layer>
+        <Section section="pushed" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="normal" >
+          <Colours topLeft="FF7F7F7F" topRight="FF7F7F7F" bottomLeft="FF7F7F7F" bottomRight="FF7F7F7F" />
+        </Section>
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+  <!--
+    ***************************************************
+       加号按钮
+    ***************************************************
+    -->
+  <WidgetLook name="TLBB_Look_ButtonAdd">
+    <PropertyDefinition name="VertLabelFormatting" initialValue="CentreAligned" />
+    <PropertyDefinition name="HorzLabelFormatting" initialValue="CentreAligned" />
+    <Property name="ClickSound" value="17" />
+    <ImagerySection name="normal">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image imageset="Button1" image="BtnAdd_Normal" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="hover">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image imageset="Button1" image="BtnAdd_Hover" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="pushed">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image imageset="Button1" image="BtnAdd_Pushed" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="disabled">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image imageset="Button1" image="BtnAdd_Disable" />
+      </FrameComponent>
+    </ImagerySection>
+    <StateImagery name="Normal">
+      <Layer>
+        <Section section="normal" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Hover">
+      <Layer>
+        <Section section="hover" >
+          <Colours topLeft="FFFFFFFF" topRight="FFFFFFFF" bottomLeft="FFFFFFFF" bottomRight="FFFFFFFF" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Pushed">
+      <Layer>
+        <Section section="pushed" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="disabled" />
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+  <!--
+    ***************************************************
+
+      减号按钮ﺍ
+
+
+
+    ***************************************************
+    -->
+    <WidgetLook name="TLBB_Look_ButtonSub">
+      <PropertyDefinition name="VertLabelFormatting" initialValue="CentreAligned" />
+      <PropertyDefinition name="HorzLabelFormatting" initialValue="CentreAligned" />
+      <Property name="ClickSound" value="17" />
+      <ImagerySection name="normal">
+        <FrameComponent>
+          <Area>
+            <Dim type="LeftEdge">
+              <AbsoluteDim value="0" />
+            </Dim>
+            <Dim type="TopEdge">
+              <AbsoluteDim value="0" />
+            </Dim>
+            <Dim type="Width">
+              <UnifiedDim scale="1" type="Width" />
+            </Dim>
+            <Dim type="Height">
+              <UnifiedDim scale="1" type="Height" />
+            </Dim>
+          </Area>
+          <Image imageset="Button1" image="BtnSub_Normal" />
+        </FrameComponent>
+      </ImagerySection>
+      <ImagerySection name="hover">
+        <FrameComponent>
+          <Area>
+            <Dim type="LeftEdge">
+              <AbsoluteDim value="0" />
+            </Dim>
+            <Dim type="TopEdge">
+              <AbsoluteDim value="0" />
+            </Dim>
+            <Dim type="Width">
+              <UnifiedDim scale="1" type="Width" />
+            </Dim>
+            <Dim type="Height">
+              <UnifiedDim scale="1" type="Height" />
+            </Dim>
+          </Area>
+          <Image imageset="Button1" image="BtnSub_Hover" />
+        </FrameComponent>
+      </ImagerySection>
+      <ImagerySection name="pushed">
+        <FrameComponent>
+          <Area>
+            <Dim type="LeftEdge">
+              <AbsoluteDim value="0" />
+            </Dim>
+            <Dim type="TopEdge">
+              <AbsoluteDim value="0" />
+            </Dim>
+            <Dim type="Width">
+              <UnifiedDim scale="1" type="Width" />
+            </Dim>
+            <Dim type="Height">
+              <UnifiedDim scale="1" type="Height" />
+            </Dim>
+          </Area>
+          <Image imageset="Button1" image="BtnSub_Pushed" />
+        </FrameComponent>
+      </ImagerySection>
+      <ImagerySection name="disabled">
+        <FrameComponent>
+          <Area>
+            <Dim type="LeftEdge">
+              <AbsoluteDim value="0" />
+            </Dim>
+            <Dim type="TopEdge">
+              <AbsoluteDim value="0" />
+            </Dim>
+            <Dim type="Width">
+              <UnifiedDim scale="1" type="Width" />
+            </Dim>
+            <Dim type="Height">
+              <UnifiedDim scale="1" type="Height" />
+            </Dim>
+          </Area>
+          <Image imageset="Button1" image="BtnSub_Disable" />
+        </FrameComponent>
+      </ImagerySection>
+      <StateImagery name="Normal">
+        <Layer>
+          <Section section="normal" />
+        </Layer>
+      </StateImagery>
+      <StateImagery name="Hover">
+        <Layer>
+          <Section section="hover" >
+            <Colours topLeft="FFFFFFFF" topRight="FFFFFFFF" bottomLeft="FFFFFFFF" bottomRight="FFFFFFFF" />
+          </Section>
+        </Layer>
+      </StateImagery>
+      <StateImagery name="Pushed">
+        <Layer>
+          <Section section="pushed" />
+        </Layer>
+      </StateImagery>
+      <StateImagery name="Disabled">
+        <Layer>
+          <Section section="disabled" />
+        </Layer>
+      </StateImagery>
+    </WidgetLook>
+    <!--
+    ***************************************************
+
+       左转模型按钮ﺍ
+
+
+
+    ***************************************************
+    -->
+  <WidgetLook name="TLBB_Look_ButtonTurnLeft">
+    <PropertyDefinition name="VertLabelFormatting" initialValue="CentreAligned" />
+    <PropertyDefinition name="HorzLabelFormatting" initialValue="CentreAligned" />
+    <Property name="ClickSound" value="17" />
+    <ImagerySection name="normal">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image imageset="Button1" image="BtnTrunLeft_Normal" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="hover">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image imageset="Button1" image="BtnTrunLeft_Hover" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="pushed">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image imageset="Button1" image="BtnTrunLeft_Pushed" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="disabled">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image imageset="Button1" image="BtnTrunLeft_Disable" />
+      </FrameComponent>
+    </ImagerySection>
+    <StateImagery name="Normal">
+      <Layer>
+        <Section section="normal" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Hover">
+      <Layer>
+        <Section section="hover" >
+          <Colours topLeft="FFFFFFFF" topRight="FFFFFFFF" bottomLeft="FFFFFFFF" bottomRight="FFFFFFFF" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Pushed">
+      <Layer>
+        <Section section="pushed" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="disabled" />
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+  <!--
+    ***************************************************
+
+       右转模型按钮ﺍ
+
+
+
+    ***************************************************
+    -->
+  <WidgetLook name="TLBB_Look_ButtonTurnRight">
+    <PropertyDefinition name="VertLabelFormatting" initialValue="CentreAligned" />
+    <PropertyDefinition name="HorzLabelFormatting" initialValue="CentreAligned" />
+    <Property name="ClickSound" value="17" />
+    <ImagerySection name="normal">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image imageset="Button1" image="BtnTrunRight_Normal" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="hover">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image imageset="Button1" image="BtnTrunRight_Hover" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="pushed">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image imageset="Button1" image="BtnTrunRight_Pushed" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="disabled">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image imageset="Button1" image="BtnTrunRight_Disable" />
+      </FrameComponent>
+    </ImagerySection>
+    <StateImagery name="Normal">
+      <Layer>
+        <Section section="normal" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Hover">
+      <Layer>
+        <Section section="hover" >
+          <Colours topLeft="FFFFFFFF" topRight="FFFFFFFF" bottomLeft="FFFFFFFF" bottomRight="FFFFFFFF" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Pushed">
+      <Layer>
+        <Section section="pushed" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="disabled" />
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+  <!--
+    ***************************************************
+        ?软键盘普通按键按钮，
+    ***************************************************
+    -->
+  <WidgetLook name="TLBB_Look_ButtonKey">
+    <PropertyDefinition name="VertLabelFormatting" initialValue="CentreAligned" />
+    <PropertyDefinition name="HorzLabelFormatting" initialValue="CentreAligned" />
+    <Property name="ClickSound" value="17" />
+    <ImagerySection name="normal">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image imageset="Button1" image="BtnKey_Normal" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="hover">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image imageset="Button1" image="BtnKey_Hover" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="pushed">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image imageset="Button1" image="BtnKey_Pushed" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="disabled">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image imageset="Button1" image="BtnKey_Disable" />
+      </FrameComponent>
+    </ImagerySection>
+    <StateImagery name="Normal">
+      <Layer>
+        <Section section="normal" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Hover">
+      <Layer>
+        <Section section="hover" >
+          <Colours topLeft="FFFFFFFF" topRight="FFFFFFFF" bottomLeft="FFFFFFFF" bottomRight="FFFFFFFF" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Pushed">
+      <Layer>
+        <Section section="pushed" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="disabled" />
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+  <!--
+    ***************************************************
+
+        动画按钮ﺍ
+
+
+
+    ***************************************************
+    -->
+  <WidgetLook name="TLBB_Look_ButtonAnimate">
+    <PropertyDefinition name="VertLabelFormatting" initialValue="CentreAligned" />
+    <PropertyDefinition name="HorzLabelFormatting" initialValue="CentreAligned" />
+    <Property name="ClickSound" value="17" />
+    <ImagerySection name="normal">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image imageset="Button1" image="BtnKey_Normal" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="hover">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image imageset="Button1" image="BtnKey_Hover" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="pushed">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image imageset="Button1" image="BtnKey_Pushed" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="disabled">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image imageset="Button1" image="BtnKey_Disable" />
+      </FrameComponent>
+    </ImagerySection>
+    <StateImagery name="Normal">
+      <Layer>
+        <Section section="normal" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Hover">
+      <Layer>
+        <Section section="hover" >
+          <Colours topLeft="FFFFFFFF" topRight="FFFFFFFF" bottomLeft="FFFFFFFF" bottomRight="FFFFFFFF" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Pushed">
+      <Layer>
+        <Section section="pushed" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="disabled" />
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+
+  <!--
+    ***************************************************
+        Action Button
+    ***************************************************
+    -->
+  <WidgetLook name="TLBB_Look_CheckHead">
+    <PropertyDefinition name="CheckMode" initialValue="1" />
+    <PropertyDefinition name="VertLabelFormatting" initialValue="CentreAligned" />
+    <PropertyDefinition name="HorzLabelFormatting" initialValue="CentreAligned" />
+    <ImagerySection name="normal">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="RightEdge">
+            <UnifiedDim scale="1" type="RightEdge"/>
+          </Dim>
+          <Dim type="BottomEdge">
+            <UnifiedDim scale="1" type="BottomEdge"/>
+          </Dim>
+        </Area>
+      </ImageryComponent>
+    </ImagerySection>
+    <ImagerySection name="hover">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="RightEdge">
+            <UnifiedDim scale="1" type="RightEdge"/>
+          </Dim>
+          <Dim type="BottomEdge">
+            <UnifiedDim scale="1" type="BottomEdge"/>
+          </Dim>
+        </Area>
+        <Image imageset="CommonFrame" image="ActionButtonHover" />
+        <VertFormat type="Stretched" />
+        <HorzFormat type="Stretched" />
+      </ImageryComponent>
+    </ImagerySection>
+    <ImagerySection name="pushed">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="RightEdge">
+            <UnifiedDim scale="1" type="RightEdge"/>
+          </Dim>
+          <Dim type="BottomEdge">
+            <UnifiedDim scale="1" type="BottomEdge"/>
+          </Dim>
+        </Area>
+        <Image imageset="CommonFrame" image="ActionButtonPushed" />
+        <VertFormat type="Stretched" />
+        <HorzFormat type="Stretched" />
+      </ImageryComponent>
+    </ImagerySection>
+    <StateImagery name="Normal">
+        <Layer>
+          <Section section="normal" />
+        </Layer>
+    </StateImagery>
+    <StateImagery name="Hover">
+      <Layer>
+        <Section section="hover" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Pushed">
+      <Layer>
+        <Section section="pushed" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+      </Layer>
+    </StateImagery>
+
+
+  </WidgetLook>
+
+
+  <!--
+    ***************************************************
+        Quest Button
+    ***************************************************
+    -->
+  <WidgetLook name="TLBB_Look_QuestButton">
+
+      <PropertyDefinition name="VertLabelFormatting" initialValue="CentreAligned" />
+      <PropertyDefinition name="HorzLabelFormatting" initialValue="LeftAligned" />
+
+      <Property name="ClickSound" value="17" />
+      <ImagerySection name="label">
+        <TextComponent>
+          <Area>
+            <Dim type="LeftEdge">
+              <AbsoluteDim value="10" />
+            </Dim>
+            <Dim type="TopEdge">
+              <AbsoluteDim value="0" />
+            </Dim>
+            <Dim type="Width">
+              <UnifiedDim scale="1" offset="-10" type="Width" />
+            </Dim>
+            <Dim type="Height">
+              <UnifiedDim scale="1" type="Height" />
+            </Dim>
+          </Area>
+          <VertFormatProperty name="VertLabelFormatting" />
+          <HorzFormatProperty name="HorzLabelFormatting" />
+        </TextComponent>
+      </ImagerySection>
+      <ImagerySection name="normal">
+        <FrameComponent>
+          <Area>
+            <Dim type="LeftEdge">
+              <AbsoluteDim value="0" />
+            </Dim>
+            <Dim type="TopEdge">
+              <AbsoluteDim value="0" />
+            </Dim>
+            <Dim type="Width">
+              <UnifiedDim scale="1" type="Width" />
+            </Dim>
+            <Dim type="Height">
+              <UnifiedDim scale="1" type="Height" />
+            </Dim>
+          </Area>
+          <Image imageset="Button3" image="QuestButton_Normal" />
+        </FrameComponent>
+      </ImagerySection>
+      <ImagerySection name="hover">
+        <FrameComponent>
+          <Area>
+            <Dim type="LeftEdge">
+              <AbsoluteDim value="0" />
+            </Dim>
+            <Dim type="TopEdge">
+              <AbsoluteDim value="0" />
+            </Dim>
+            <Dim type="Width">
+              <UnifiedDim scale="1" type="Width" />
+            </Dim>
+            <Dim type="Height">
+              <UnifiedDim scale="1" type="Height" />
+            </Dim>
+          </Area>
+          <Image imageset="Button3" image="QuestButton_Hover" />
+        </FrameComponent>
+      </ImagerySection>
+      <ImagerySection name="pushed">
+        <FrameComponent>
+          <Area>
+            <Dim type="LeftEdge">
+              <AbsoluteDim value="0" />
+            </Dim>
+            <Dim type="TopEdge">
+              <AbsoluteDim value="0" />
+            </Dim>
+            <Dim type="Width">
+              <UnifiedDim scale="1" type="Width" />
+            </Dim>
+            <Dim type="Height">
+              <UnifiedDim scale="1" type="Height" />
+            </Dim>
+          </Area>
+          <Image imageset="Button3" image="QuestButton_Pushed" />
+        </FrameComponent>
+      </ImagerySection>
+      <ImagerySection name="disabled">
+        <FrameComponent>
+          <Area>
+            <Dim type="LeftEdge">
+              <AbsoluteDim value="0" />
+            </Dim>
+            <Dim type="TopEdge">
+              <AbsoluteDim value="0" />
+            </Dim>
+            <Dim type="Width">
+              <UnifiedDim scale="1" type="Width" />
+            </Dim>
+            <Dim type="Height">
+              <UnifiedDim scale="1" type="Height" />
+            </Dim>
+          </Area>
+          <Image imageset="Button3" image="QuestButton_Normal" />
+        </FrameComponent>
+      </ImagerySection>
+      <StateImagery name="Normal">
+        <Layer>
+          <Section section="normal" />
+          <Section section="label">
+            <Colours topLeft="FFFFFFFF" topRight="FFFFFFFF" bottomLeft="FFFFFFFF" bottomRight="FFFFFFFF" />
+          </Section>
+        </Layer>
+      </StateImagery>
+      <StateImagery name="Hover">
+        <Layer>
+          <Section section="hover" />
+          <Section section="label">
+            <ColourProperty name="HoverTextColour" />
+          </Section>
+        </Layer>
+      </StateImagery>
+      <StateImagery name="Pushed">
+        <Layer>
+          <Section section="pushed" />
+          <Section section="label">
+            <ColourProperty name="PushedTextColour" />
+          </Section>
+        </Layer>
+      </StateImagery>
+      <StateImagery name="Disabled">
+        <Layer>
+          <Section section="disabled" />
+          <Section section="label">
+            <Colours topLeft="FF7F7F7F" topRight="FF7F7F7F" bottomLeft="FF7F7F7F" bottomRight="FF7F7F7F" />
+          </Section>
+        </Layer>
+      </StateImagery>
+    </WidgetLook>
+
+
+
+  <WidgetLook name="TLBB_Look_AnimateFace">
+    <PropertyDefinition name="VertLabelFormatting" initialValue="CentreAligned" />
+    <PropertyDefinition name="HorzLabelFormatting" initialValue="CentreAligned" />
+    <ImagerySection name="label">
+      <TextComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <VertFormatProperty name="VertLabelFormatting" />
+        <HorzFormatProperty name="HorzLabelFormatting" />
+      </TextComponent>
+    </ImagerySection>
+    <ImagerySection name="normal">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button1" image="BtnCommon_Left_Normal" />
+        <Image type="RightEdge" imageset="Button1" image="BtnCommon_Right_Normal" />
+        <Image type="Background" imageset="Button1" image="BtnCommon_Mid_Normal" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="hover">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button1" image="BtnCommon_Left_Hover" />
+        <Image type="RightEdge" imageset="Button1" image="BtnCommon_Right_Hover" />
+        <Image type="Background" imageset="Button1" image="BtnCommon_Mid_Hover" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="pushed">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button1" image="BtnCommon_Left_Pushed" />
+        <Image type="RightEdge" imageset="Button1" image="BtnCommon_Right_Pushed" />
+        <Image type="Background" imageset="Button1" image="BtnCommon_Mid_Pushed" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="disabled">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button1" image="BtnCommon_Left_Disable" />
+        <Image type="RightEdge" imageset="Button1" image="BtnCommon_Right_Disable" />
+        <Image type="Background" imageset="Button1" image="BtnCommon_Mid_Disable" />
+      </FrameComponent>
+    </ImagerySection>
+    <StateImagery name="Normal">
+      <Layer>
+        <Section section="normal" />
+        <Section section="label">
+          <Colours topLeft="FFFFFFFF" topRight="FFFFFFFF" bottomLeft="FFFFFFFF" bottomRight="FFFFFFFF" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Hover">
+      <Layer>
+        <Section section="hover" />
+        <Section section="label">
+          <ColourProperty name="HoverTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Pushed">
+      <Layer>
+        <Section section="pushed" />
+        <Section section="label">
+          <ColourProperty name="PushedTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="disabled" />
+        <Section section="label">
+          <Colours topLeft="FF7F7F7F" topRight="FF7F7F7F" bottomLeft="FF7F7F7F" bottomRight="FF7F7F7F" />
+        </Section>
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+
+  <!--
+    ***************************************************
+        Action Button
+    ***************************************************
+    -->
+  <WidgetLook name="TLBB_Look_CheckSelect">
+    <PropertyDefinition name="VertLabelFormatting" initialValue="CentreAligned" />
+    <PropertyDefinition name="HorzLabelFormatting" initialValue="CentreAligned" />
+    <PropertyDefinition name="DragThreshold" initialValue="8.0" />
+    <StateImagery name="Normal">
+      <Layer>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Hover">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Frame_Type_Select2" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Pushed">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Frame_Type_Select2" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+
+  <!--
+    ***************************************************
+        特殊按钮，活动专璍
+
+    ***************************************************
+    -->
+  <WidgetLook name="TLBB_Look_ButtonCampaign">
+    <PropertyDefinition name="VertLabelFormatting" initialValue="CentreAligned" />
+    <PropertyDefinition name="HorzLabelFormatting" initialValue="CentreAligned" />
+
+    <Property name="ClickSound" value="17" />
+    <ImagerySection name="label">
+      <TextComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <VertFormatProperty name="VertLabelFormatting" />
+        <HorzFormatProperty name="HorzLabelFormatting" />
+      </TextComponent>
+    </ImagerySection>
+    <ImagerySection name="normal">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="ButtonCampaign" image="ButtonCampaign_Left_Normal" />
+        <Image type="RightEdge" imageset="ButtonCampaign" image="ButtonCampaign_Right_Normal" />
+        <Image type="Background" imageset="ButtonCampaign" image="ButtonCampaign_Mid_Normal" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="hover">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="ButtonCampaign" image="ButtonCampaign_Left_Hover" />
+        <Image type="RightEdge" imageset="ButtonCampaign" image="ButtonCampaign_Right_Hover" />
+        <Image type="Background" imageset="ButtonCampaign" image="ButtonCampaign_Mid_Hover" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="pushed">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="ButtonCampaign" image="ButtonCampaign_Left_Pushed" />
+        <Image type="RightEdge" imageset="ButtonCampaign" image="ButtonCampaign_Right_Pushed" />
+        <Image type="Background" imageset="ButtonCampaign" image="ButtonCampaign_Mid_Pushed" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="disabled">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="ButtonCampaign" image="ButtonCampaign_Left_Disable" />
+        <Image type="RightEdge" imageset="ButtonCampaign" image="ButtonCampaign_Right_Disable" />
+        <Image type="Background" imageset="ButtonCampaign" image="ButtonCampaign_Mid_Disable" />
+      </FrameComponent>
+    </ImagerySection>
+    <StateImagery name="Normal">
+      <Layer>
+        <Section section="normal" />
+        <Section section="label">
+          <Colours topLeft="FFFDEB78" topRight="FFFDEB78" bottomLeft="FFFDEB78" bottomRight="FFFDEB78" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Hover">
+      <Layer>
+        <Section section="hover" />
+        <Section section="label">
+          <Colours topLeft="FFFFFF00" topRight="FFFFFF00" bottomLeft="FFFFFF00" bottomRight="FFFFFF00" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Pushed">
+      <Layer>
+        <Section section="pushed" />
+        <Section section="label">
+          <Colours topLeft="FF968B47" topRight="FF968B47" bottomLeft="FF968B47" bottomRight="FF968B47" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="disabled" />
+        <Section section="label">
+          <Colours topLeft="FFBBBBBB" topRight="FFBBBBBB" bottomLeft="FFBBBBBB" bottomRight="FFBBBBBB" />
+        </Section>
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+
+    <!--特殊按钮 begin-->
+  <WidgetLook name="TLBB_Look_ButtonForComServer">
+    <PropertyDefinition name="WantsMultiClickEvents" initialValue="true" />
+    <PropertyDefinition name="VertLabelFormatting" initialValue="CentreAligned" />
+    <PropertyDefinition name="HorzLabelFormatting" initialValue="CentreAligned" />
+    <Property name="ClickSound" value="17" />
+    <ImagerySection name="label">
+      <TextComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <VertFormatProperty name="VertLabelFormatting" />
+        <HorzFormatProperty name="HorzLabelFormatting" />
+      </TextComponent>
+    </ImagerySection>
+    <ImagerySection name="normal">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="CommonFrame6" image="TuiJian_Left_Normal" />
+        <Image type="RightEdge" imageset="CommonFrame6" image="TuiJian_Right_Normal" />
+        <Image type="Background" imageset="CommonFrame6" image="TuiJian_Mid_Normal" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="hover">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="CommonFrame6" image="TuiJian_Left_Hover" />
+        <Image type="RightEdge" imageset="CommonFrame6" image="TuiJian_Right_Hover" />
+        <Image type="Background" imageset="CommonFrame6" image="TuiJian_Mid_Hover" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="pushed">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="CommonFrame6" image="TuiJian_Left_Hover" />
+        <Image type="RightEdge" imageset="CommonFrame6" image="TuiJian_Right_Hover" />
+        <Image type="Background" imageset="CommonFrame6" image="TuiJian_Mid_Hover" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="disabled">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="CommonFrame6" image="TuiJian_Left_Normal" />
+        <Image type="RightEdge" imageset="CommonFrame6" image="TuiJian_Right_Normal" />
+        <Image type="Background" imageset="CommonFrame6" image="TuiJian_Mid_Normal" />
+      </FrameComponent>
+    </ImagerySection>
+    <StateImagery name="Normal">
+      <Layer>
+        <Section section="normal" />
+        <Section section="label">
+
+          <Colours topLeft="FFFDEB78" topRight="FFFDEB78" bottomLeft="FFFDEB78" bottomRight="FFFDEB78" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Hover">
+      <Layer>
+        <Section section="hover" />
+        <Section section="label">
+          <Colours topLeft="FFFFFF00" topRight="FFFFFF00" bottomLeft="FFFFFF00" bottomRight="FFFFFF00" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Pushed">
+      <Layer>
+        <Section section="pushed" />
+        <Section section="label">
+          <Colours topLeft="FFFFFF00" topRight="FFFFFF00" bottomLeft="FFFFFF00" bottomRight="FFFFFF00" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="disabled" />
+        <Section section="label">
+          <Colours topLeft="FFBBBBBB" topRight="FFBBBBBB" bottomLeft="FFBBBBBB" bottomRight="FFBBBBBB" />
+        </Section>
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+  <WidgetLook name="TLBB_Look_ButtonCheckRMBShop">
+    <PropertyDefinition name="WantsMultiClickEvents" initialValue="true" />
+    <PropertyDefinition name="VertLabelFormatting" initialValue="CentreAligned" />
+    <PropertyDefinition name="HorzLabelFormatting" initialValue="CentreAligned" />
+    <Property name="ClickSound" value="17" />
+	<ImagerySection name="label">
+      <TextComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <VertFormatProperty name="VertLabelFormatting" />
+        <HorzFormatProperty name="HorzLabelFormatting" />
+      </TextComponent>
+    </ImagerySection>
+ 	<ImagerySection name="normal">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button1" image="BtnCommon_Left_Normal" />
+        <Image type="RightEdge" imageset="Button1" image="BtnCommon_Right_Normal" />
+        <Image type="Background" imageset="Button1" image="BtnCommon_Mid_Normal" />
+      </FrameComponent>
+    </ImagerySection>
+	<ImagerySection name="hover">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button4" image="BtnCommon_Green_Left_Hover" />
+        <Image type="RightEdge" imageset="Button4" image="BtnCommon_Green_Right_Hover" />
+        <Image type="Background" imageset="Button4" image="BtnCommon_Green_Mid_Hover" />
+      </FrameComponent>
+    </ImagerySection>
+	<ImagerySection name="pushed">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button4" image="BtnCommon_Green_Left_Normal" />
+        <Image type="RightEdge" imageset="Button4" image="BtnCommon_Green_Right_Normal" />
+        <Image type="Background" imageset="Button4" image="BtnCommon_Green_Mid_Normal" />
+      </FrameComponent>
+    </ImagerySection>
+	<ImagerySection name="disabled">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button1" image="BtnCommon_Left_Disable" />
+        <Image type="RightEdge" imageset="Button1" image="BtnCommon_Right_Disable" />
+        <Image type="Background" imageset="Button1" image="BtnCommon_Mid_Disable" />
+      </FrameComponent>
+    </ImagerySection>
+	<StateImagery name="Normal">
+      <Layer>
+        <Section section="normal" />
+        <Section section="label">
+          <Colours topLeft="FFFDEB78" topRight="FFFDEB78" bottomLeft="FFFDEB78" bottomRight="FFFDEB78" />
+        </Section>
+      </Layer>
+    </StateImagery>
+	<StateImagery name="Hover">
+      <Layer>
+        <Section section="hover" />
+        <Section section="label">
+          <Colours topLeft="FFFFFF00" topRight="FFFFFF00" bottomLeft="FFFFFF00" bottomRight="FFFFFF00" />
+        </Section>
+      </Layer>
+    </StateImagery>
+	<StateImagery name="Pushed">
+      <Layer>
+        <Section section="pushed" />
+        <Section section="label">
+          <Colours topLeft="FFFFFF00" topRight="FFFFFF00" bottomLeft="FFFFFF00" bottomRight="FFFFFF00" />
+        </Section>
+      </Layer>
+    </StateImagery>
+ 	<StateImagery name="Disabled">
+      <Layer>
+        <Section section="disabled" />
+        <Section section="label">
+          <Colours topLeft="FFBBBBBB" topRight="FFBBBBBB" bottomLeft="FFBBBBBB" bottomRight="FFBBBBBB" />
+        </Section>
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+<!--特殊按钮 end-->
+</Falagard>

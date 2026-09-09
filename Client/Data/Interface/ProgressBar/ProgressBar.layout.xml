@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<GUILayout>
+
+		<Window Type="TLBB_ProgressSkill" Name="ProgressBar_Progress">
+      <Property Name="UnifiedPosition" Value="{{0.5,-102},{0.795,0}}" />
+      <Property Name="AbsoluteSize" Value="w:205 h:25" />
+      <Property Name="AlwaysOnTop" Value="true" />
+      <Property Name="CurrentProgress" Value="0.33" />
+	</Window>
+</GUILayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="水车.frame" />
+    <entity mesh="水车支架.mesh" node="水车支架">
+        <offset>
+            <translate x="-7.62939e-006" y="-270.455" z="-9.62275" />
+        </offset>
+    </entity>
+    <entity mesh="水车转轮.mesh" node="水车转轮">
+        <offset>
+            <translate x="-7.62939e-006" y="-270.455" z="-9.62275" />
+        </offset>
+    </entity>
+</model>

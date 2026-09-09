@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="娥眉亭子2上.frame" />
+    <entity mesh="娥眉亭子2上.mesh" node="娥眉亭子2上" />
+    <entity mesh="娥眉亭子2绸带01.mesh" />
+    <entity mesh="娥眉亭子2绸带02.mesh" />
+    <entity mesh="娥眉亭子2铃01.mesh" node="娥眉亭子2铃01">
+        <offset>
+            <translate x="124.313" y="-337.331" z="-52.2753" />
+        </offset>
+    </entity>
+    <entity mesh="娥眉亭子2铃02.mesh" node="娥眉亭子2铃02">
+        <offset>
+            <translate x="124.313" y="-337.33" z="-52.2753" />
+        </offset>
+    </entity>
+    <entity mesh="娥眉亭子2铃03.mesh" node="娥眉亭子2铃03">
+        <offset>
+            <translate x="124.313" y="-337.33" z="-52.2753" />
+        </offset>
+    </entity>
+    <entity mesh="娥眉亭子2铃04.mesh" node="娥眉亭子2铃04">
+        <offset>
+            <translate x="124.313" y="-337.33" z="-52.2753" />
+        </offset>
+    </entity>
+</model>

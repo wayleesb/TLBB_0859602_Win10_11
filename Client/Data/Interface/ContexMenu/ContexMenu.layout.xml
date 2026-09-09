@@ -1,0 +1,865 @@
+﻿<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="DefaultWindow" Name="ContexMenuFrame">
+        <Property Name="RelativeMinSize" Value="w:0.0 h:0.0" />
+        <Property Name="RelativeMaxSize" Value="w:1.0 h:1.0" />
+        <Property Name="Position" Value="x:0.0 y:0.0" />
+        <Property Name="Size" Value="w:1.0 h:1.0" />
+        <Property Name="AlwaysOnTop" Value="True" />
+        <Event Name="MouseButtonUp" Function="ContexMenuFrame_Clicked();" />
+        <Window Type="TLBB_PopupMenu" Name="ContexMenu_OtherPlayer">
+            <Property Name="Position" Value="x:0.25 y:0.1" />
+            <Property Name="Size" Value="w:0.4 h:0.3" />
+            <Property Name="AutoResizeEnabled" Value="True" />
+            <Window Type="TLBB_MenuItem" Name="OtherPlayer_Siliao">
+                <Property Name="TextOriginal" Value="#{SILIAO}" />
+                <Event Name="Clicked" Function='ContexMenu_OtherPlayer_Clicked(&quot;siliao&quot;);' />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="OtherPlayer_Follow">
+                <Property Name="Text" Value="#{INTERFACE_XML_288}" />
+                <Event Name="Clicked" Function="ContexMenu_OtherPlayer_Follow_Clicked();" />
+            </Window>
+            
+            <Window Type="TLBB_MenuItem" Name="OtherPlayer_InviteAddFriend">
+                <Property Name="Text" Value="#{INTERFACE_XML_INVITE_ADD_FRIEND}" />
+                <Event Name="Clicked" Function='ContexMenu_OtherPlayer_Clicked(&quot;inviteaddfriend&quot;);' />
+            </Window>
+            
+            <Window Type="TLBB_MenuItem" Name="OtherPlayer_ZuDui">
+                <Property Name="TextOriginal" Value="#{ZUDUI}" />
+                <Event Name="Clicked" Function='ContexMenu_OtherPlayer_Clicked(&quot;zudui&quot;);' />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="OtherPlayer_TiaoZhan">
+                <Property Name="TextOriginal" Value="#{TIAOZHAN}" />
+                <Event Name="Clicked" Function='ContexMenu_OtherPlayer_Clicked(&quot;tiaozhan&quot;);' />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="OtherPlayer_JiaoYi">
+                <Property Name="TextOriginal" Value="#{INTERFACE_XML_367}" />
+                <Event Name="Clicked" Function="ContexMenu_Exchange_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="Apply_Join_Team">
+                <Property Name="Text" Value="#{INTERFACE_XML_624}" />
+                <Event Name="Clicked" Function="ContexMenu_OtherPlayer_Apply_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="OtherPlayer_Invite">
+                <Property Name="Text" Value="#{INTERFACE_XML_816}" />
+                <Event Name="Clicked" Function='ContexMenu_OtherPlayer_Clicked(&quot;zudui&quot;);' />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="OtherPlayer_InviteToGuild">
+                <Property Name="Text" Value="#{INTERFACE_XML_817}" />
+                <Event Name="Clicked" Function="ContexMenu_InviteToGuild_Clicked();" />
+            </Window>
+        </Window>
+        <Window Type="TLBB_PopupMenu" Name="ContexMenu_NPC">
+            <Property Name="Position" Value="x:0.27 y:0.25" />
+            <Property Name="Size" Value="w:0.4 h:0.5" />
+            <Property Name="AutoResizeEnabled" Value="True" />
+            <Window Type="TLBB_MenuItem" Name="NPC_Siliao">
+                <Property Name="TextOriginal" Value="#{SILIAO}" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="NPC_ZuDui">
+                <Property Name="TextOriginal" Value="#{ZUDUI}" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="NPC_TiaoZhan">
+                <Property Name="TextOriginal" Value="#{TIAOZHAN}" />
+            </Window>
+        </Window>
+        <!--
+		  普通队员弹出的菜单
+		-->
+        <Window Type="TLBB_PopupMenu" Name="ContexMenu_TeamMember">
+            <Property Name="Position" Value="x:0.25 y:0.25" />
+            <Property Name="Size" Value="w:0.4 h:0.5" />
+            <Property Name="AutoResizeEnabled" Value="True" />
+            <Window Type="TLBB_MenuItem" Name="Member_Leave">
+                <Property Name="Text" Value="#{INTERFACE_XML_427}" />
+                <Event Name="Clicked" Function="ContexMenu_LeaveTeam_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="Member_MakeFriend">
+                <Property Name="Text" Value="#{INTERFACE_XML_358}" />
+                <Event Name="Clicked" Function="ContexMenu_AddFriendTeamate();" />
+            </Window>
+ 	          <Window Type="TLBB_MenuItem">
+                <Property Name="Text" Value="#{INTERFACE_XML_INVITE_ADD_FRIEND}" />
+                <Event Name="Clicked" Function='ContexMenu_InviteAddFriendByteam();' />
+            </Window>
+
+            <Window Type="TLBB_MenuItem">
+                <Property Name="Text" Value="#{INTERFACE_XML_608}" />
+                <Event Name="Clicked" Function="ContexMenu_OnPrivate_FromInc();" />
+            </Window>
+            
+            <Window Type="TLBB_MenuItem" Name="OtherPlayer_JiaoYi_CommonPlayer">
+                <Property Name="Text" Value="#{INTERFACE_XML_367}" />
+                <Event Name="Clicked" Function="ContexMenu_Exchange_Clicked();" />
+            </Window>
+        </Window>
+        <!--
+		  普通队员跟随状态弹出的菜单
+		-->
+        <Window Type="TLBB_PopupMenu" Name="ContexMenu_TeamFollowMember">
+            <Property Name="Position" Value="x:0.25 y:0.25" />
+            <Property Name="Size" Value="w:0.4 h:0.5" />
+            <Property Name="AutoResizeEnabled" Value="True" />
+            <Window Type="TLBB_MenuItem">
+                <Property Name="Text" Value="#{INTERFACE_XML_427}" />
+                <Event Name="Clicked" Function="ContexMenu_LeaveTeam_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem">
+                <Property Name="Text" Value="#{INTERFACE_XML_358}" />
+                <Event Name="Clicked" Function="ContexMenu_AddFriendTeamate();" />
+            </Window>
+ 	          <Window Type="TLBB_MenuItem">
+                <Property Name="Text" Value="#{INTERFACE_XML_INVITE_ADD_FRIEND}" />
+                <Event Name="Clicked" Function='ContexMenu_InviteAddFriendByteam' />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="Member_StopFollow">
+                <Property Name="Text" Value="#{INTERFACE_XML_698}" />
+                <Event Name="Clicked" Function="ContexMenu_StopFollow_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem">
+                <Property Name="Text" Value="#{INTERFACE_XML_608}" />
+                <Event Name="Clicked" Function="ContexMenu_OnPrivate_FromInc();" />
+            </Window>
+        </Window>
+        <!--
+		  队长弹出的菜单
+			-->
+        <Window Type="TLBB_PopupMenu" Name="ContexMenu_TeamLeader">
+            <Property Name="Position" Value="x:0.25 y:0.25" />
+            <Property Name="Size" Value="w:0.4 h:0.3" />
+            <Property Name="AutoResizeEnabled" Value="True" />
+            <Window Type="TLBB_MenuItem" Name="Leader_Leave">
+                <Property Name="Text" Value="#{INTERFACE_XML_428}" />
+                <Event Name="Clicked" Function="ContexMenu_LeaveTeam_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="Leader_MakeFriend">
+                <Property Name="Text" Value="#{INTERFACE_XML_359}" />
+                <Event Name="Clicked" Function="ContexMenu_AddFriendTeamate();" />
+            </Window>
+	          <Window Type="TLBB_MenuItem" Name="Leader_InviteFriend">
+                <Property Name="Text" Value="#{INTERFACE_XML_INVITE_ADD_FRIEND}" />
+                <Event Name="Clicked" Function='ContexMenu_InviteAddFriendByteam();' />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="Leader_RiseToLeader">
+                <Property Name="Text" Value="#{INTERFACE_XML_684}" />
+                <Event Name="Clicked" Function="ContexMenu_AppointLeader_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="Leader_DelMember">
+                <Property Name="Text" Value="#{INTERFACE_XML_683}" />
+                <Event Name="Clicked" Function="ContexMenu_KickTeamMember_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="Leader_Dismiss">
+                <Property Name="Text" Value="#{INTERFACE_XML_376}" />
+                <Event Name="Clicked" Function="ContexMenu_DismissTeam_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem">
+                <Property Name="Text" Value="#{INTERFACE_XML_608}" />
+                <Event Name="Clicked" Function="ContexMenu_OnPrivate_FromInc();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="OtherPlayer_JiaoYi_TeamLeader">
+                <Property Name="Text" Value="#{INTERFACE_XML_367}" />
+                <Event Name="Clicked" Function="ContexMenu_Exchange_Clicked();" />
+            </Window>
+        </Window>
+        <!--
+		  队长队伍跟随状态弹出的菜单
+			-->
+        <Window Type="TLBB_PopupMenu" Name="ContexMenu_TeamFollowLeader">
+            <Property Name="Position" Value="x:0.25 y:0.25" />
+            <Property Name="Size" Value="w:0.4 h:0.3" />
+            <Property Name="AutoResizeEnabled" Value="True" />
+            <Window Type="TLBB_MenuItem">
+                <Property Name="Text" Value="#{INTERFACE_XML_428}" />
+                <Event Name="Clicked" Function="ContexMenu_LeaveTeam_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem">
+                <Property Name="Text" Value="#{INTERFACE_XML_359}" />
+                <Event Name="Clicked" Function="ContexMenu_AddFriendTeamate();" />
+            </Window>
+            <Window Type="TLBB_MenuItem">
+                <Property Name="Text" Value="#{INTERFACE_XML_INVITE_ADD_FRIEND}" />
+                <Event Name="Clicked" Function='ContexMenu_InviteAddFriendByteam();' />
+            </Window>
+            <Window Type="TLBB_MenuItem">
+                <Property Name="Text" Value="#{INTERFACE_XML_684}" />
+                <Event Name="Clicked" Function="ContexMenu_AppointLeader_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem">
+                <Property Name="Text" Value="#{INTERFACE_XML_683}" />
+                <Event Name="Clicked" Function="ContexMenu_KickTeamMember_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem">
+                <Property Name="Text" Value="#{INTERFACE_XML_376}" />
+                <Event Name="Clicked" Function="ContexMenu_DismissTeam_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem">
+                <Property Name="Text" Value="#{INTERFACE_XML_255}" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="Leader_StopFollow">
+                <Property Name="Text" Value="#{INTERFACE_XML_544}" />
+                <Event Name="Clicked" Function="ContexMenu_StopFollow_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem">
+                <Property Name="Text" Value="#{INTERFACE_XML_608}" />
+                <Event Name="Clicked" Function="ContexMenu_OnPrivate_FromInc();" />
+            </Window>
+        </Window>
+        <!--21级以前PVP模式选择菜单-->
+        <Window Type="TLBB_PopupMenu" Name="Menu_PVPMode_Before21">
+            <Property Name="Position" Value="x:0.25 y:0.25" />
+            <Property Name="Size" Value="w:0.4 h:0.3" />
+            <Property Name="AutoResizeEnabled" Value="True" />
+            <Window Type="TLBB_MenuItem" Name="PVP_Peace_Before21">
+                <Property Name="Text" Value="#{INTERFACE_XML_317}" />
+                <Property Name="Tooltip" Value="#{INTERFACE_XML_845}" />
+                <Event Name="Clicked" Function="ContexMenu_PVP_Peace_Clicked();" />
+            </Window>
+        </Window>
+        <!--
+		  点击自己弹出的菜单
+			-->
+        <Window Type="TLBB_PopupMenu" Name="ContexMenu_Self">
+            <Property Name="Position" Value="x:0.25 y:0.25" />
+            <Property Name="Size" Value="w:0.4 h:0.3" />
+            <Property Name="AutoResizeEnabled" Value="True" />
+            <Window Type="TLBB_MenuItem" Name="Create_Self">
+                <Property Name="Text" Value="#{INTERFACE_XML_892}" />
+                <Event Name="Clicked" Function="ContexMenu_SelfCreateTeam_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="Stall">
+                <Property Name="Text" Value="#{INTERFACE_XML_123}" />
+                <Event Name="Clicked" Function="ContexMenu_StallSale_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_ChangePVPMode">
+                <Property Name="Text" Value="#{INTERFACE_XML_291}" />
+            </Window>
+   
+			<Window Type="TLBB_MenuItem" Name="Myself_DisbondRide">
+				<Property Name="Text" Value=""/>
+				<Event Name="Clicked" Function="DisbandRide();" />
+			</Window>
+	
+        </Window>
+        <!--
+		  点击自己弹出的菜单, 自己已经在队伍中
+			-->
+        <Window Type="TLBB_PopupMenu" Name="ContexMenu_Self_In_Team">
+            <Property Name="Position" Value="x:0.25 y:0.25" />
+            <Property Name="Size" Value="w:0.4 h:0.3" />
+            <Property Name="AutoResizeEnabled" Value="True" />
+            <Window Type="TLBB_MenuItem" Name="Myself_QuitTeam">
+                <Property Name="Text" Value="#{INTERFACE_XML_704}" />
+                <Event Name="Clicked" Function="ContexMenu_LeaveTeam_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="Stall_InGroup">
+                <Property Name="Text" Value="#{INTERFACE_XML_123}" />
+                <Event Name="Clicked" Function="ContexMenu_StallSale_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_Self_InTeam_ChangePVPMode">
+                <Property Name="Text" Value="#{INTERFACE_XML_291}" />
+                <Event Name="Clicked" Function="ContexMenu_ChangePVPMode_Clicked();" />
+            </Window>
+            		<Window Type="TLBB_MenuItem" Name="Myself_InTeam_DisbondRide">
+				<Property Name="Text" Value=""/>
+				<Event Name="Clicked" Function="DisbandRide();" />
+			</Window>
+        </Window>
+        <!--
+		  通过模型打开队友菜单, 无论是否在同一个队伍中
+			-->
+        <Window Type="TLBB_PopupMenu" Name="ContexMenu_Model_Open_Other">
+            <Property Name="Position" Value="x:0.25 y:0.25" />
+            <Property Name="Size" Value="w:0.4 h:0.3" />
+            <Property Name="AutoResizeEnabled" Value="True" />
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_Model_Open_Other_friend">
+                <Property Name="Text" Value="#{INTERFACE_XML_359}" />
+                <Event Name="Clicked" Function="ContexMenu_AddFriend();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_Model_Open_Other_InviteAddFriend">
+                <Property Name="Text" Value="#{INTERFACE_XML_INVITE_ADD_FRIEND}" />
+                <Event Name="Clicked" Function='ContexMenu_InviteAddFriend();' />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_Model_Open_Other_chat">
+                <Property Name="Text" Value="#{INTERFACE_XML_608}" />
+                <Event Name="Clicked" Function="ContexMenu_OnPrivate();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_Model_Open_Other_exchange">
+                <Property Name="Text" Value="#{INTERFACE_XML_367}" />
+                <Event Name="Clicked" Function="ContexMenu_Exchange_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_Model_Open_Other_view">
+                <Property Name="Text" Value="#{INTERFACE_XML_164}" />
+                <Event Name="Clicked" Function="send_detail();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_Model_Open_Other_fallow">
+                <Property Name="Text" Value="#{INTERFACE_XML_289}" />
+                <Event Name="Clicked" Function="ContexMenu_OtherPlayer_Follow_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_Model_Open_Other_Challenge">
+                <Property Name="Text" Value="#{INTERFACE_XML_695}" />
+                <Event Name="Clicked" Function="ContexMenu_OtherPlayer_Challenge();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="Open_Other_PVP_Challenge">
+                <Property Name="Text" Value="#{INTERFACE_XML_796}" />
+                <Event Name="Clicked" Function="ContexMenu_PVP_Challenge_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_Model_Open_Other_InviteToGuild">
+                <Property Name="Text" Value="#{INTERFACE_XML_817}" />
+                <Event Name="Clicked" Function="ContexMenu_InviteToGuild_Clicked();" />
+            </Window>
+            
+			<Window Type="TLBB_MenuItem" Name="ContexMenu_Model_Open_Other_Invite_Ride">
+				<Property Name="Text" Value=""/>
+				<Event Name="Clicked" Function="ContexMenu_OtherPlayer_Clicked(&quot;Ride&quot;);" />
+			</Window>
+		    <Window Type="TLBB_MenuItem" Name="OtherPlayer_GiveRose_1">
+                <Property Name="Text" Value="#{INTERFACE_XML_943}" />
+                <Event Name="Clicked" Function="ContexMenu_GiveRose_Clicked();" />
+            </Window>
+
+        </Window>
+        <!--
+		  通过模型打开非组队玩家, 自己已经组队
+			-->
+        <Window Type="TLBB_PopupMenu" Name="ContexMenu_Model_Open_Other_Not_teammer">
+            <Property Name="Position" Value="x:0.25 y:0.25" />
+            <Property Name="Size" Value="w:0.4 h:0.3" />
+            <Property Name="AutoResizeEnabled" Value="True" />
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_Model_Open_Other_Not_teammer_Invite">
+                <Property Name="Text" Value="#{INTERFACE_XML_815}" />
+                <Event Name="Clicked" Function='ContexMenu_OtherPlayer_Clicked(&quot;zudui&quot;);' />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_Model_Open_Other_Not_teammer_friend">
+                <Property Name="Text" Value="#{INTERFACE_XML_359}" />
+                <Event Name="Clicked" Function="ContexMenu_AddFriend();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_Model_Open_Other_Not_teammer_InviteAddFriend">
+                <Property Name="Text" Value="#{INTERFACE_XML_INVITE_ADD_FRIEND}" />
+                <Event Name="Clicked" Function='ContexMenu_InviteAddFriend();' />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_Model_Open_Other_Not_teammer_chat">
+                <Property Name="Text" Value="#{INTERFACE_XML_608}" />
+                <Event Name="Clicked" Function="ContexMenu_OnPrivate();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_Model_Open_Other_Not_teammer_exchange">
+                <Property Name="Text" Value="#{INTERFACE_XML_367}" />
+                <Event Name="Clicked" Function="ContexMenu_Exchange_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_Model_Open_Other_Not_teammer_view">
+                <Property Name="Text" Value="#{INTERFACE_XML_164}" />
+                <Event Name="Clicked" Function="send_detail();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_Model_Open_Other_Not_teammer_fallow">
+                <Property Name="Text" Value="#{INTERFACE_XML_289}" />
+                <Event Name="Clicked" Function="ContexMenu_OtherPlayer_Follow_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_Model_Open_Other_Not_teammer__Challenge">
+                <Property Name="Text" Value="#{INTERFACE_XML_695}" />
+                <Event Name="Clicked" Function="ContexMenu_OtherPlayer_Challenge();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="Open_Other_Not_teammer_PVP_Challenge">
+                <Property Name="Text" Value="#{INTERFACE_XML_796}" />
+                <Event Name="Clicked" Function="ContexMenu_PVP_Challenge_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_Model_Open_Other_Not_teammer_InviteToGuild">
+                <Property Name="Text" Value="#{INTERFACE_XML_817}" />
+                <Event Name="Clicked" Function="ContexMenu_InviteToGuild_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_Model_Open_Other_Not_teammer_Invite_Ride">
+				      <Property Name="Text" Value="#{INTERFACE_XML_1018}"/>
+				      <Event Name="Clicked" Function="ContexMenu_OtherPlayer_Clicked(&quot;Ride&quot;);" />
+		    </Window>
+		    <Window Type="TLBB_MenuItem" Name="OtherPlayer_GiveRose_2">
+                <Property Name="Text" Value="#{INTERFACE_XML_943}" />
+                <Event Name="Clicked" Function="ContexMenu_GiveRose_Clicked();" />
+            </Window>
+		
+        </Window>
+        <!--
+		  通过模型打开组队玩家菜单, 自己没有组队
+			-->
+        <Window Type="TLBB_PopupMenu" Name="ContexMenu_Model_Open_Other_teammer_me_not_teammer">
+            <Property Name="Position" Value="x:0.25 y:0.25" />
+            <Property Name="Size" Value="w:0.4 h:0.3" />
+            <Property Name="AutoResizeEnabled" Value="True" />
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_Model_Open_Other_teammer_me_not_teammer_Apply">
+                <Property Name="Text" Value="#{INTERFACE_XML_622}" />
+                <Event Name="Clicked" Function="ContexMenu_OtherPlayer_Apply_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_Model_Open_Other_teammer_me_not_teammer_friend">
+                <Property Name="Text" Value="#{INTERFACE_XML_359}" />
+                <Event Name="Clicked" Function="ContexMenu_AddFriend();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_Model_Open_Other_teammer_InviteAddFriend">
+                <Property Name="Text" Value="#{INTERFACE_XML_INVITE_ADD_FRIEND}" />
+                <Event Name="Clicked" Function='ContexMenu_InviteAddFriend();' />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_Model_Open_Other_teammer_me_not_teammer_chat">
+                <Property Name="Text" Value="#{INTERFACE_XML_608}" />
+                <Event Name="Clicked" Function="ContexMenu_OnPrivate();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_Model_Open_Other_teammer_me_not_teammer_exchange">
+                <Property Name="Text" Value="#{INTERFACE_XML_367}" />
+                <Event Name="Clicked" Function="ContexMenu_Exchange_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_Model_Open_Other_teammer_me_not_teammer_view">
+                <Property Name="Text" Value="#{INTERFACE_XML_164}" />
+                <Event Name="Clicked" Function="send_detail();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_Model_Open_Other_teammer_me_not_teammer_fallow">
+                <Property Name="Text" Value="#{INTERFACE_XML_289}" />
+                <Event Name="Clicked" Function="ContexMenu_OtherPlayer_Follow_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_Model_Challenge">
+                <Property Name="Text" Value="#{INTERFACE_XML_694}" />
+                <Event Name="Clicked" Function="ContexMenu_OtherPlayer_Challenge();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="Model_PVP_Challenge">
+                <Property Name="Text" Value="#{INTERFACE_XML_796}" />
+                <Event Name="Clicked" Function="ContexMenu_PVP_Challenge_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_Model_Open_Other_teammer_me_InviteToGuild">
+                <Property Name="Text" Value="#{INTERFACE_XML_817}" />
+                <Event Name="Clicked" Function="ContexMenu_InviteToGuild_Clicked();" />
+            </Window>
+          <Window Type="TLBB_MenuItem" Name="ContexMenu_Model_Open_Other_teammer_me_Ride">
+            <Property Name="Text" Value="#{INTERFACE_XML_1018}"/>
+            <Event Name="Clicked" Function="ContexMenu_OtherPlayer_Clicked(&quot;Ride&quot;);" />
+          </Window>
+		    <Window Type="TLBB_MenuItem" Name="OtherPlayer_GiveRose_3">
+                <Property Name="Text" Value="#{INTERFACE_XML_943}" />
+                <Event Name="Clicked" Function="ContexMenu_GiveRose_Clicked();" />
+            </Window>
+        </Window>
+        <!-- 聊天-->
+        <Window Type="TLBB_PopupMenu" Name="ContexMenu_ChatBoard">
+            <Property Name="Position" Value="x:0.25 y:0.25" />
+            <Property Name="Size" Value="w:0.4 h:0.3" />
+            <Property Name="AutoResizeEnabled" Value="True" />
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_ChatBoard_TargetChoose">
+                <Property Name="Text" Value="#{XZWJ_081028_01}" />
+                <Event Name="Clicked" Function="ContexMenu_OnSelectThePlayer();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_ChatBoard_Private_Talk">
+                <Property Name="Text" Value="#{INTERFACE_XML_666}" />
+                <Event Name="Clicked" Function="ContexMenu_ChatBoard_Private_Talk_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_ChatBoard_CheckInfo">
+                <Property Name="Text" Value="#{INTERFACE_XML_163}" />
+                <Event Name="Clicked" Function="ContexMenu_ChatBoard_CheckInfo_Clicked();" />
+            </Window>
+            
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_ChatBoard_AddFriend">
+                <Property Name="Text" Value="#{INTERFACE_XML_357}" />
+                <Event Name="Clicked" Function="ContexMenu_ChatBoard_AddFriend_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_ChatBoard_Invite">
+                <Property Name="Text" Value="#{INTERFACE_XML_814}" />
+                <Event Name="Clicked" Function="ContexMenu_ChatBoard_Invite_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_ChatBoard_Apply">
+                <Property Name="Text" Value="#{INTERFACE_XML_621}" />
+                <Event Name="Clicked" Function="ContexMenu_ChatBoard_Apply_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_ChatBoard_PingBi">
+                <Property Name="Text" Value="#{INTERFACE_XML_493}" />
+                <Event Name="Clicked" Function="ContexMenu_ChatBoard_PingBi_Clicked();" />
+            </Window>
+            
+						<Window Type="TLBB_MenuItem" Name="ContexMenu_ChatBoard_Toushu">
+                <Property Name="Text" Value="#{XML_INFOBROWSER_001}" />
+                <Event Name="Clicked" Function="ContexMenu_ChatBoard_Toushu_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_ChatBoard_LookPos">
+                <Property Name="Text" Value="#{MYXZ_2007_1218_05}" />
+                <Event Name="Clicked" Function="ContexMenu_ChatBoard_LookPos_Clicked();" />
+                <Property Name="Tooltip" Value="#{INTERFACE_XML_1112}" />
+            </Window>
+        </Window>
+		<Window Type="TLBB_PopupMenu" Name="ContexMenu_ChatBoard_NoToushu">
+            <Property Name="Position" Value="x:0.25 y:0.25" />
+            <Property Name="Size" Value="w:0.4 h:0.3" />
+            <Property Name="AutoResizeEnabled" Value="True" />
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_ChatBoard_TargetChoose_NoToushu">
+                <Property Name="Text" Value="#{XZWJ_081028_01}" />
+                <Event Name="Clicked" Function="ContexMenu_OnSelectThePlayer();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_ChatBoard_Private_Talk_NoToushu">
+                <Property Name="Text" Value="#{INTERFACE_XML_666}" />
+                <Event Name="Clicked" Function="ContexMenu_ChatBoard_Private_Talk_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_ChatBoard_CheckInfo_NoToushu">
+                <Property Name="Text" Value="#{INTERFACE_XML_163}" />
+                <Event Name="Clicked" Function="ContexMenu_ChatBoard_CheckInfo_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_ChatBoard_AddFriend_NoToushu">
+                <Property Name="Text" Value="#{INTERFACE_XML_357}" />
+                <Event Name="Clicked" Function="ContexMenu_ChatBoard_AddFriend_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_ChatBoard_Invite_NoToushu">
+                <Property Name="Text" Value="#{INTERFACE_XML_814}" />
+                <Event Name="Clicked" Function="ContexMenu_ChatBoard_Invite_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_ChatBoard_Apply_NoToushu">
+                <Property Name="Text" Value="#{INTERFACE_XML_621}" />
+                <Event Name="Clicked" Function="ContexMenu_ChatBoard_Apply_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_ChatBoard_PingBi_NoToushu">
+                <Property Name="Text" Value="#{INTERFACE_XML_493}" />
+                <Event Name="Clicked" Function="ContexMenu_ChatBoard_PingBi_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_ChatBoard_LookPos_NoToushu">
+                <Property Name="Text" Value="#{MYXZ_2007_1218_05}" />
+                <Event Name="Clicked" Function="ContexMenu_ChatBoard_LookPos_Clicked();" />
+                <Property Name="Tooltip" Value="#{INTERFACE_XML_1112}" />
+            </Window>
+        </Window>
+       	<Window Type="TLBB_PopupMenu" Name="ContexMenu_FindFriend_VoteInfo">
+            <Property Name="Position" Value="x:0.25 y:0.25" />
+            <Property Name="Size" Value="w:0.4 h:0.3" />
+            <Property Name="AutoResizeEnabled" Value="True" />
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_FindFriend_VoteInfo_Talk">
+                <Property Name="Text" Value="#{INTERFACE_XML_666}" />
+                <Event Name="Clicked" Function="ContexMenu_FindFriend_VoteInfo_Talk_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_FindFriend_VoteInfo_CheckInfo">
+                <Property Name="Text" Value="#{INTERFACE_XML_163}" />
+                <Event Name="Clicked" Function="ContexMenu_FindFriend_VoteInfo_CheckInfo_Clicked();" />
+            </Window>
+            
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_FindFriend_VoteInfo_AddFriend">
+                <Property Name="Text" Value="#{INTERFACE_XML_357}" />
+                <Event Name="Clicked" Function="ContexMenu_FindFriend_VoteInfo_AddFriend_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_FindFriend_VoteInfo_Invite">
+                <Property Name="Text" Value="#{INTERFACE_XML_814}" />
+                <Event Name="Clicked" Function="ContexMenu_FindFriend_VoteInfo_Invite_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_FindFriend_VoteInfo_Apply">
+                <Property Name="Text" Value="#{INTERFACE_XML_621}" />
+                <Event Name="Clicked" Function="ContexMenu_FindFriend_VoteInfo_Apply_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_FindFriend_VoteInfo_PingBi">
+                <Property Name="Text" Value="#{INTERFACE_XML_493}" />
+                <Event Name="Clicked" Function="ContexMenu_CFindFriend_VoteInfo_PingBi_Clicked();" />
+            </Window>
+            <!--     
+						<Window Type="TLBB_MenuItem" Name="ContexMenu_FindFriend_VoteInfo_Toushu">
+                <Property Name="Text" Value="#{XML_INFOBROWSER_001}" />
+                <Event Name="Clicked" Function="ContexMenu_FindFriend_VoteInfo_Toushu_Clicked();" />
+            </Window>
+            -->
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_FindFriend_VoteInfo_LookPos">
+                <Property Name="Text" Value="#{MYXZ_2007_1218_05}" />
+                <Event Name="Clicked" Function="ContexMenu_FindFriend_VoteInfo_LookPos_Clicked();" />
+                <Property Name="Tooltip" Value="#{INTERFACE_XML_1112}" />
+            </Window>
+        </Window>
+
+				<!-- 帮会列表 在线-->
+		<Window Type="TLBB_PopupMenu" Name="ContexMenu_GuildList">
+            <Property Name="Position" Value="x:0.25 y:0.25" />
+            <Property Name="Size" Value="w:0.4 h:0.3" />
+            <Property Name="AutoResizeEnabled" Value="True" />
+      			<Window Type="TLBB_MenuItem" Name="ContexMenu_GuildList_TargetChoose">
+                <Property Name="Text" Value="#{XZWJ_081028_01}" />
+                <Event Name="Clicked" Function="ContexMenu_GuildList_OnSelectThePlayer();" />
+            </Window>
+			      <Window Type="TLBB_MenuItem" Name="ContexMenu_GuildList_SendMail">
+                <Property Name="Text" Value="#{INTERFACE_XML_265}" />
+                <Event Name="Clicked" Function="ContexMenu_GuildList_OnSendMail();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_GuildList_Private_Talk">
+                <Property Name="Text" Value="#{INTERFACE_XML_666}" />
+                <Event Name="Clicked" Function="ContexMenu_GuildList_Private_Talk_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_GuildList_CheckInfo">
+                <Property Name="Text" Value="#{INTERFACE_XML_163}" />
+                <Event Name="Clicked" Function="ContexMenu_GuildList_CheckInfo_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_GuildList_AddFriend">
+                <Property Name="Text" Value="#{INTERFACE_XML_357}" />
+                <Event Name="Clicked" Function="ContexMenu_GuildList_AddFriend_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_GuildList_Invite">
+                <Property Name="Text" Value="#{INTERFACE_XML_814}" />
+                <Event Name="Clicked" Function="ContexMenu_GuildList_Invite_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_GuildList_Apply">
+                <Property Name="Text" Value="#{INTERFACE_XML_621}" />
+                <Event Name="Clicked" Function="ContexMenu_GuildList_Apply_Clicked();" />
+            </Window>
+        </Window>
+				<!-- 同盟成员列表 -->
+				<Window Type="TLBB_PopupMenu" Name="ContexMenu_GuildLeagueMember">
+            <Property Name="Position" Value="x:0.25 y:0.25" />
+            <Property Name="Size" Value="w:0.4 h:0.3" />
+            <Property Name="AutoResizeEnabled" Value="True" />
+						<Window Type="TLBB_MenuItem" Name="ContexMenu_GuildLeagueMember_DetailInfo">
+                <Property Name="Text" Value="#{INTERFACE_XML_155}" />
+                <Event Name="Clicked" Function="ContexMenu_GuildLeagueMember_DetailInfo_Clicked();" />
+            </Window>
+        </Window>
+        <!-- 官员列表 在线右键菜单 add by xindefeng-->
+        <Window Type="TLBB_PopupMenu" Name="ContexMenu_OfficialPopMenu">
+            <Property Name="Position" Value="x:0.25 y:0.25" />
+            <Property Name="Size" Value="w:0.4 h:0.3" />
+            <Property Name="AutoResizeEnabled" Value="True" />
+						<Window Type="TLBB_MenuItem" Name="ContexMenu_OfficialPopMenu_SendMail">
+                <Property Name="Text" Value="#{INTERFACE_XML_265}" />
+                <Event Name="Clicked" Function="ContexMenu_OfficialPopMenu_SendMail_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_OfficialPopMenu_Private_Talk">
+                <Property Name="Text" Value="#{INTERFACE_XML_666}" />
+                <Event Name="Clicked" Function="ContexMenu_OfficialPopMenu_PrivateTalk_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_OfficialPopMenu_CheckInfo">
+                <Property Name="Text" Value="#{INTERFACE_XML_163}" />
+                <Event Name="Clicked" Function="ContexMenu_OfficialPopMenu_CheckInfo_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_OfficialPopMenu_AddFriend">
+                <Property Name="Text" Value="#{INTERFACE_XML_357}" />
+                <Event Name="Clicked" Function="ContexMenu_OfficialPopMenu_AddFriend_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_OfficialPopMenu_Invite">
+                <Property Name="Text" Value="#{INTERFACE_XML_814}" />
+                <Event Name="Clicked" Function="ContexMenu_OfficialPopMenu_Invite_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_OfficialPopMenu_Apply">
+                <Property Name="Text" Value="#{INTERFACE_XML_621}" />
+                <Event Name="Clicked" Function="ContexMenu_OfficialPopMenu_Apply_Clicked();" />
+            </Window>
+        </Window>
+        <Window Type="TLBB_PopupMenu" Name="ContexMenu_GroupingMenu">
+            <Property Name="Position" Value="x:0.25 y:0.25" />
+            <Property Name="Size" Value="w:0.4 h:0.3" />
+            <Property Name="AutoResizeEnabled" Value="True" />
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_GroupingMoveTo1">
+                <Property Name="Text" Value="#{INTERFACE_XML_823}" />
+                <Event Name="Clicked" Function="ContexMenu_ThrowList( 1 );" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_GroupingMoveTo2">
+                <Property Name="Text" Value="#{INTERFACE_XML_824}" />
+                <Event Name="Clicked" Function="ContexMenu_ThrowList( 2 );" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_GroupingMoveTo3">
+                <Property Name="Text" Value="#{INTERFACE_XML_825}" />
+                <Event Name="Clicked" Function="ContexMenu_ThrowList( 3 );" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_GroupingMoveTo4">
+                <Property Name="Text" Value="#{INTERFACE_XML_826}" />
+                <Event Name="Clicked" Function="ContexMenu_ThrowList( 4 );" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_GroupingBlackList">
+                <Property Name="Text" Value="#{INTERFACE_XML_320}" />
+                <Event Name="Clicked" Function="ContexMenu_ThrowList(5);" />
+            </Window>
+        </Window>
+        <!-- 好友列表-->
+        <Window Type="TLBB_PopupMenu" Name="ContexMenu_FriendMenu">
+            <Property Name="Position" Value="x:0.25 y:0.25" />
+            <Property Name="Size" Value="w:0.4 h:0.3" />
+            <Property Name="AutoResizeEnabled" Value="True" />
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_TargetChoose">
+                <Property Name="Text" Value="#{XZWJ_081028_01}" />
+                <Event Name="Clicked" Function="ContexMenu_OnSelectThePlayer();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_SendMail">
+                <Property Name="Text" Value="#{INTERFACE_XML_265}" />
+                <Event Name="Clicked" Function="ContexMenu_OnSendMail();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_FriendHistroy">
+                <Property Name="Text" Value="#{INTERFACE_XML_433}" />
+                <Event Name="Clicked" Function="ContexMenu_OnFriendHistroy();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_FriendInfo">
+                <Property Name="Text" Value="#{INTERFACE_XML_158}" />
+                <Event Name="Clicked" Function="ContexMenu_OnFriendInfo();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_DelFriend">
+                <Property Name="Text" Value="#{INTERFACE_XML_582}" />
+                <Event Name="Clicked" Function="ContexMenu_OnDelFriend();" />
+            </Window>
+ 	          <Window Type="TLBB_MenuItem" Name="ContexMenu_InviteFriend">
+                <Property Name="Text" Value="#{INTERFACE_XML_INVITE_ADD_FRIEND}" />
+                <Event Name="Clicked" Function='ContexMenu_InviteAddFriendByFriendList();' />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_SetPrivateChat">
+                <Property Name="Text" Value="#{INTERFACE_XML_607}" />
+                <Event Name="Clicked" Function="ContexFriend_OnPrivate();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_InviteTeam">
+                <Property Name="Text" Value="#{INTERFACE_XML_818}" />
+                <Event Name="Clicked" Function="ContexMenu_OnInviteTeam();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_AskTeam">
+                <Property Name="Text" Value="#{INTERFACE_XML_626}" />
+                <Event Name="Clicked" Function="ContexMenu_OnAskTeam();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_GroupChange">
+                <Property Name="Text" Value="#{INTERFACE_XML_272}" />
+                <Property Name="PopMenu" Value="ContexMenu_GroupingMenu" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_FriendInfoEx">
+              	<Property Name="Text" Value="#{MYXZ_2007_1218_05}" />
+                <Event Name="Clicked" Function="ContexMenu_OnFriendInfoEx();" />
+                <Property Name="Tooltip" Value="#{INTERFACE_XML_1112}" />
+            </Window>
+        </Window>
+        <!-- 黑名单-->
+        <Window Type="TLBB_PopupMenu" Name="ContexMenu_BlackListMenu">
+            <Property Name="Position" Value="x:0.25 y:0.25" />
+            <Property Name="Size" Value="w:0.4 h:0.3" />
+            <Property Name="AutoResizeEnabled" Value="True" />
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_BlackList_TargetChoose">
+                <Property Name="Text" Value="#{XZWJ_081028_01}" />
+                <Event Name="Clicked" Function="ContexMenu_OnSelectThePlayer();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_BlackListDelete">
+                <Property Name="Text" Value="#{INTERFACE_XML_581}" />
+                <Event Name="Clicked" Function="ContexMenu_OnDelFriend();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_BlackListInfo">
+              <Property Name="Text" Value="#{INTERFACE_XML_158}" />
+              <Event Name="Clicked" Function="ContexMenu_OnFriendInfo();" />
+            </Window>  
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_BlackListSetPrivateChat">
+              <Property Name="Text" Value="#{INTERFACE_XML_607}" />
+              <Event Name="Clicked" Function="ContexFriend_OnPrivate();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_BlackListInfoEx">
+              <Property Name="Text" Value="#{MYXZ_2007_1218_05}" />
+              <Event Name="Clicked" Function="ContexMenu_OnFriendInfoEx();" />
+              <Property Name="Tooltip" Value="#{INTERFACE_XML_1112}" />
+            </Window>
+        </Window>
+        <Window Type="TLBB_PopupMenu" Name="ContexMenu_EnmeyListMenu">
+          <Property Name="Position" Value="x:0.25 y:0.25" />
+          <Property Name="Size" Value="w:0.4 h:0.3" />
+          <Property Name="AutoResizeEnabled" Value="True" />
+          <Window Type="TLBB_MenuItem" Name="ContexMenu_EnmeyList_TargetChoose">
+            <Property Name="Text" Value="#{XZWJ_081028_01}" />
+            <Event Name="Clicked" Function="ContexMenu_OnSelectThePlayer();" />
+          </Window>
+          <Window Type="TLBB_MenuItem" Name="ContexMenu_EnmeyListSetPrivateChat">
+            <Property Name="Text" Value="#{INTERFACE_XML_607}" />
+            <Event Name="Clicked" Function="ContexFriend_OnPrivate();" />
+          </Window>
+          <Window Type="TLBB_MenuItem" Name="ContexMenu_EnmeyListInfo">
+            <Property Name="Text" Value="#{INTERFACE_XML_158}" />
+            <Event Name="Clicked" Function="ContexMenu_OnFriendInfo();" />
+          </Window>
+          <Window Type="TLBB_MenuItem" Name="ContexMenu_EnmeyListDelete">
+            <Property Name="Text" Value="#{INTERFACE_XML_581}" />
+            <Event Name="Clicked" Function="ContexMenu_OnDelFriend();" />
+          </Window>
+          <Window Type="TLBB_MenuItem" Name="ContexMenu_EnmeyListGroupChange">
+            <Property Name="Text" Value="#{INTERFACE_XML_272}" />
+            <Property Name="PopMenu" Value="ContexMenu_GroupingMenu" />
+          </Window>
+          <Window Type="TLBB_MenuItem" Name="ContexMenu_EnmeyListInfoEx">
+            <Property Name="Text" Value="#{MYXZ_2007_1218_05}" />
+            <Event Name="Clicked" Function="ContexMenu_OnFriendInfoEx();" />
+            <Property Name="Tooltip" Value="#{INTERFACE_XML_1112}" />
+          </Window>
+        </Window>
+        <!--
+		自己的宠物		-->
+        <Window Type="TLBB_PopupMenu" Name="ContexMenu_MyPetMenu">
+            <Property Name="Position" Value="x:0.25 y:0.25" />
+            <Property Name="Size" Value="w:0.4 h:0.3" />
+            <Property Name="AutoResizeEnabled" Value="True" />
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_MyPetFeedItem">
+                <Property Name="Text" Value="#{INTERFACE_XML_713}" />
+                <Event Name="Clicked" Function="ContexMenu_PetHandle(1);" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_MyPetDomesticationItem">
+                <Property Name="Text" Value="#{INTERFACE_XML_807}" />
+                <Event Name="Clicked" Function="ContexMenu_PetHandle(2);" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_MyPetRelax">
+                <Property Name="Text" Value="#{INTERFACE_XML_776}" />
+                <Event Name="Clicked" Function="ContexMenu_PetHandle(3);" />
+            </Window>
+        </Window>
+				        <!--
+		自己的宠物点击petframe	-->
+        <Window Type="TLBB_PopupMenu" Name="ContexMenu_MyPetMenuFromPetFrame">
+            <Property Name="Position" Value="x:0.25 y:0.25" />
+            <Property Name="Size" Value="w:0.4 h:0.3" />
+            <Property Name="AutoResizeEnabled" Value="True" />
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_MyPetFeedItemFromPetFrame">
+                <Property Name="Text" Value="#{INTERFACE_XML_713}" />
+                <Event Name="Clicked" Function="ContexMenu_PetHandleSelf(1);" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_MyPetDomesticationItemFromPetFrame">
+                <Property Name="Text" Value="#{INTERFACE_XML_807}" />
+                <Event Name="Clicked" Function="ContexMenu_PetHandleSelf(2);" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_MyPetRelaxFromPetFrame">
+                <Property Name="Text" Value="#{INTERFACE_XML_776}" />
+                <Event Name="Clicked" Function="ContexMenu_PetHandleSelf(3);" />
+            </Window>
+        </Window>
+        <!--
+		其他玩家的宠物		-->
+        <Window Type="TLBB_PopupMenu" Name="ContexMenu_OtherPetMenu">
+            <Property Name="Position" Value="x:0.25 y:0.25" />
+            <Property Name="Size" Value="w:0.4 h:0.3" />
+            <Property Name="AutoResizeEnabled" Value="True" />
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_OtherPetDetailItem">
+                <Property Name="Text" Value="#{INTERFACE_XML_160}" />
+                <Event Name="Clicked" Function="ContexMenu_PetHandle(4);" />
+            </Window>
+        </Window>
+        <!--PVP模式选择菜单-->
+        <Window Type="TLBB_PopupMenu" Name="Menu_PVPMode">
+            <Property Name="Position" Value="x:0.25 y:0.25" />
+            <Property Name="Size" Value="w:0.4 h:0.3" />
+            <Property Name="AutoResizeEnabled" Value="True" />
+            <Window Type="TLBB_MenuItem" Name="PVP_Peace">
+                <Property Name="Text" Value="#{INTERFACE_XML_317}" />
+                <Property Name="Tooltip" Value="#{INTERFACE_XML_845}" />
+                <Event Name="Clicked" Function="ContexMenu_PVP_Peace_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="PVP_Moral">
+                <Property Name="Text" Value="#{INTERFACE_XML_588}" />
+                <Property Name="Tooltip" Value="#{INTERFACE_XML_846}" />
+                <Event Name="Clicked" Function="ContexMenu_PVP_Moral_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="PVP_FreeforAll">
+                <Property Name="Text" Value="#{INTERFACE_XML_281}" />
+                <Property Name="Tooltip" Value="#{INTERFACE_XML_412}" />
+                <Event Name="Clicked" Function="ContexMenu_PVP_FreeforAll_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="PVP_FreeforTeam">
+                <Property Name="Text" Value="#{INTERFACE_XML_897}" />
+                <Property Name="Tooltip" Value="#{INTERFACE_XML_411}" />
+                <Event Name="Clicked" Function="ContexMenu_PVP_FreeforTeam_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="PVP_FreeforGuild">
+                <Property Name="Text" Value="#{INTERFACE_XML_133}" />
+                <Property Name="Tooltip" Value="#{TM_20080311_16}" />
+                <Event Name="Clicked" Function="ContexMenu_PVP_FreeforGuild_Clicked();" />
+            </Window>
+            <Window Type="TLBB_MenuItem" Name="PVP_AboutPK">
+                <Property Name="Text" Value="#{INTERFACE_XML_1019}" />
+                <Property Name="Tooltip" Value="#{INTERFACE_XML_1020}" />
+                <Event Name="Clicked" Function="ContexMenu_AboutPK_Clicked();" />
+            </Window>
+            
+        </Window>
+        
+       <Window Type="TLBB_PopupMenu" Name="ContexMenu_MemberPetMenu">
+            <Property Name="Position" Value="x:0.25 y:0.25" />
+            <Property Name="Size" Value="w:0.4 h:0.3" />
+            <Property Name="AutoResizeEnabled" Value="True" />
+            <Window Type="TLBB_MenuItem" Name="ContexMenu_MemberPetDetailInfo">                
+                <Property Name="Text" Value="#Y#{INTERFACE_XML_160}" />
+                <Event Name="Clicked" Function="ContexMenu_PetHandle(4);" />
+            </Window>
+        </Window>
+
+    </Window>
+</GUILayout>

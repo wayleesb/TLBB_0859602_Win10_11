@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame1" Name="EquipBind_Frame">
+        <Property Name="UnifiedPosition" Value="{{0.5,-128},{0.5,-178}}" />
+        <Property Name="AbsoluteSize" Value="w:256 h:246" />
+        <Event Name="Hidden" Function="EquipBind_OnHiden();" />
+        <Window Type="TLBB_DragTitle" Name="EquipBind_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="EquipBind_Frame" />
+            <Window Type="TLBB_SimpleText" Name="EquipBind_Title">
+                <Property Name="Position" Value="x:0.0 y:0.0" />
+                <Property Name="Size" Value="w:1.0 h:1.0" />
+                <Property Name="Font" Value="YouYuan11.25" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="Text" Value="#{INTERFACE_XML_91}" />
+            </Window>
+        </Window>
+        <Window Type="TLBB_ButtonHelp" Name="EquipBind_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Property Name="Text" Value="TLBB_ButtonHelp" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*EquipBind&quot;);' />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="EquipBind_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Property Name="Text" Value="TLBB_ButtonClose" />
+            <Event Name="Clicked" Function="this:Hide();" />
+        </Window>
+        <Window Type="DefaultWindow" Name="EquipBind_Frame_Client">
+            <Property Name="AbsolutePosition" Value="x:7.000000 y:36.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-13.000000},{1.000000,-55.000000}" />
+            <Window Type="TLBB_SimpleText" Name="EquipBind_MainItem_Text">
+                <Property Name="Position" Value="x:0.1 y:0.1" />
+                <Property Name="UnifiedSize" Value="{{0.6,0.000000},{0.000000,20.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_510}" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="EquipBind_MainItem">
+                <Property Name="Position" Value="x:0.7 y:0.05" />
+                <Property Name="AbsoluteSize" Value="w:36 h:36" />
+                <Property Name="DragAcceptName" Value="G31" />
+                <Property Name="DraggingEnabled" Value="True" />
+                <Event Name="RBClicked" Function="EquipBind_Resume_Gem(31);" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="EquipBind_OtherItem_Text">
+                <Property Name="Position" Value="x:0.1 y:0.35" />
+                <Property Name="UnifiedSize" Value="{{0.6,0.000000},{0.000000,20.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_793}" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="EquipBind_OtherItem">
+                <Property Name="Position" Value="x:0.7 y:0.3" />
+                <Property Name="AbsoluteSize" Value="w:36 h:36" />
+                <Property Name="DragAcceptName" Value="G32" />
+                <Property Name="DraggingEnabled" Value="True" />
+                <Event Name="RBClicked" Function="EquipBind_Resume_Gem(32);" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="EquipBind_NeedMoney_Text">
+                <Property Name="UnifiedPosition" Value="{{0.05,0.000000},{1.000000,-91.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.9,0.000000},{0.000000,22.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_789}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Window Type="TLBB_Money" Name="EquipBind_NeedMoney">
+                    <Property Name="UnifiedPosition" Value="{{0.0,0.000000},{0.000000,0.000000}" />
+                    <Property Name="UnifiedSize" Value="{{1.0,0.000000},{0.000000,20.000000}" />
+                    <Property Name="HorzFormatting" Value="RightAligned" />
+                    <Property Name="MoneyNumber" Value="0" />
+                    <Property Name="GoldIcon" Value = "set:Button6 image:Lace_JiaoziJin" />
+                    <Property Name="SilverIcon" Value = "set:Button6 image:Lace_JiaoziYin" />
+                  <Property Name="CopperIcon" Value = "set:Button6 image:Lace_JiaoziTong" />
+                </Window>
+              </Window>
+              <Window Type="TLBB_SimpleMulitiTextFrame" Name="EquipBind_SelfJiaozi_Text">
+                <Property Name="UnifiedPosition" Value="{{0.05,0.000000},{1.000000,-69.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.9,0.000000},{0.000000,22.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{BDJB_051210_1}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Window Type="TLBB_Money" Name="EquipBind_SelfJiaozi">
+                  <Property Name="UnifiedPosition" Value="{{0.0,0.000000},{0.000000,0.000000}" />
+                  <Property Name="UnifiedSize" Value="{{1.0,0.000000},{0.000000,20.000000}" />
+                  <Property Name="HorzFormatting" Value="RightAligned" />
+                  <Property Name="MoneyNumber" Value="0" />
+                  <Property Name="GoldIcon" Value = "set:Button6 image:Lace_JiaoziJin" />
+                  <Property Name="SilverIcon" Value = "set:Button6 image:Lace_JiaoziYin" />
+                  <Property Name="CopperIcon" Value = "set:Button6 image:Lace_JiaoziTong" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="EquipBind_SelfMoney_Text">
+                <Property Name="UnifiedPosition" Value="{{0.05,0.000000},{1.000000,-47.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.9,0.000000},{0.000000,22.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_834}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Window Type="TLBB_Money" Name="EquipBind_SelfMoney">
+                    <Property Name="UnifiedPosition" Value="{{0.0,0.000000},{0.000000,0.000000}" />
+                    <Property Name="UnifiedSize" Value="{{1.0,0.000000},{0.000000,20.000000}" />
+                    <Property Name="HorzFormatting" Value="RightAligned" />
+                    <Property Name="MoneyNumber" Value="0" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_Frame_Lace5" Name="EquipBind_Blank">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-80.000000},{0.000000,20.000000}" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="EquipBind_OK">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-80.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_557}" />
+                <Event Name="Clicked" Function="EquipBind_Buttons_Clicked();" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="EquipBind_Cancel">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-40.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_542}" />
+                <Event Name="Clicked" Function="this:Hide();" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

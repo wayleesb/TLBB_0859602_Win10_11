@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<Imageset Name="Icons0" Imagefile="Icons/Icons0.tga" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+	<Image Name="ButtonHilight-Square" XPos="0" YPos="0" Width="32" Height="32" />
+	<Image Name="ButtonHilight-SquareQuickslot" XPos="64" YPos="0" Width="64" Height="46" />
+	<Image Name="CheckButtonHilight" XPos="33" YPos="0" Width="32" Height="32" />
+	<Image Name="IconBorder-GlowRing" XPos="192" YPos="0" Width="64" Height="64" />
+	<Image Name="OldButtonHilight-Square" XPos="0" YPos="64" Width="64" Height="64" />
+	<Image Name="UI-AutoCastableOverlay" XPos="64" YPos="64" Width="64" Height="64" />
+	<Image Name="UI-EmptySlot-Disabled" XPos="128" YPos="64" Width="64" Height="64" />
+	<Image Name="UI-EmptySlot-White" XPos="192" YPos="64" Width="64" Height="64" />
+	<Image Name="UI-EmptySlot" XPos="0" YPos="128" Width="64" Height="64" />
+	<Image Name="UI-Quickslot-Depress" XPos="64" YPos="128" Width="64" Height="64" />
+	<Image Name="UI-Quickslot" XPos="128" YPos="128" Width="64" Height="64" />
+	<Image Name="UI-Quickslot2" XPos="192" YPos="128" Width="64" Height="64" />
+	<Image Name="UI-QuickslotRed" XPos="0" YPos="192" Width="64" Height="64" />
+	<Image Name="Default" XPos="0" YPos="192" Width="64" Height="64" />
+	<Image Name="ButtonActive0" XPos="66" YPos="0" Width="32" Height="32" />
+</Imageset>

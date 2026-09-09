@@ -1,0 +1,90 @@
+<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame1" Name="Agname_Frame">
+        <Property Name="UnifiedPosition" Value="{{0.5,-96},{0.2,0}}" />
+        <Property Name="AbsoluteSize" Value="w:192 h:280" />
+        <Window Type="TLBB_DragTitle" Name="Agname_Frame_Title">
+            <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+            <Property Name="Font" Value="YouYuan11.25" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="Text" Value="#{INTERFACE_XML_26}" />
+            <Property Name="DragTarget" Value="Agname_Frame" />
+        </Window>
+        <Window Type="TLBB_ButtonHelp" Name="Agname_Frame_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Property Name="Text" Value="TLBB_ButtonHelp" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*Agname&quot;);' />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="Agname_Frame_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Property Name="Text" Value="TLBB_ButtonClose" />
+            <Event Name="Clicked" Function="this:Hide();" />
+        </Window>
+        <Window Type="DefaultWindow" Name="Agname_Frame_Client">
+            <Property Name="AbsolutePosition" Value="x:7.000000 y:36.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-13.000000},{1.000000,-55.000000}" />
+            <Window Type="TLBB_SimpleText" Name="Agname_Currently_Title">
+                <Property Name="Position" Value="x:0.09 y:0" />
+                <Property Name="UnifiedSize" Value="{{0.9000000,0.000000},{0.000000,20.000000}" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_213}" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="Agname_Currently">
+              <Property Name="Position" Value="x:0.050279 y:0.093333" />
+              <Property Name="UnifiedSize" Value="{{0.9000000,0.000000},{0.000000,33.000000}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_720}" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="Agname_Hold_Text">
+              <Property Name="Position" Value="x:0.089385 y:0.240000" />
+              <Property Name="UnifiedSize" Value="{{0.9000000,0.000000},{0.000000,18.000000}" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_832}" />
+            </Window>
+            <Window Type="TLBB_ListBoxCommon" Name="Agname_Listbox">
+              <Property Name="Position" Value="x:0.050279 y:0.328889" />
+              <Property Name="Size" Value="w:0.9 h:0.3063063" />
+                <Event Name="ItemSelectionChanged" Function="AgnameListBox_Selected();" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="Agname_Explain">
+              <Property Name="Position" Value="x:0.050279 y:0.644444" />
+              <Property Name="UnifiedSize" Value="{{0.90,0.000000},{0.000000,55.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="TopAligned" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="Agname_Button_Hide">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:50.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_829}" />
+                <Event Name="Clicked" Function="Agname_HideTitle_Clicked();" />
+            </Window>
+            <Window Type="TLBB_Frame_Lace5" Name="Agname_Blank">
+                <Property Name="UnifiedPosition" Value="{{0.000000,50.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-100.000000},{0.000000,20.000000}" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="Agname_Button_Change">
+                <Property Name="UnifiedPosition" Value="{{0.5000000,-25.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:50.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_290}" />
+                <Event Name="Clicked" Function="Agname_ChangeBtn_Clicked();" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="Agname_Button_Close">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-50.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:50.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_302}" />
+                <Event Name="Clicked" Function="this:Hide();" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

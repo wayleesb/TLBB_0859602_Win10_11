@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<Imageset Name="Drygoods" Imagefile="Icons/Drygoods.jpg" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+	<Image Name="Drygoods_1" XPos="0" YPos="0" Width="64" Height="64" />
+	<Image Name="Drygoods_2" XPos="64" YPos="0" Width="64" Height="64" />
+	<Image Name="Drygoods_3" XPos="128" YPos="0" Width="64" Height="64" />
+	<Image Name="Drygoods_4" XPos="192" YPos="0" Width="64" Height="64" />
+	<Image Name="Drygoods_5" XPos="0" YPos="64" Width="64" Height="64" />
+	<Image Name="Drygoods_6" XPos="64" YPos="64" Width="64" Height="64" />
+	<Image Name="Drygoods_7" XPos="128" YPos="64" Width="64" Height="64" />
+	<Image Name="Drygoods_8" XPos="192" YPos="64" Width="64" Height="64" />
+	<Image Name="Drygoods_9" XPos="0" YPos="128" Width="64" Height="64" />
+	<Image Name="Drygoods_10" XPos="64" YPos="128" Width="64" Height="64" />
+	<Image Name="Drygoods_11" XPos="128" YPos="128" Width="64" Height="64" />
+	<Image Name="Drygoods_12" XPos="192" YPos="128" Width="64" Height="64" />
+</Imageset>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="太湖水师建筑01灯笼.frame" />
+    <entity mesh="太湖水师建筑01灯笼.mesh" node="太湖水师建筑01灯笼">
+        <offset>
+            <translate x="-2.87529" y="-687.393" z="-119.609" />
+        </offset>
+    </entity>
+    <entity mesh="太湖水师建筑01灯笼杆.mesh" node="太湖水师建筑01灯笼杆" />
+</model>

@@ -1,0 +1,84 @@
+<?xml version="1.0" ?>
+	<Imageset Name="CommonFrame" Imagefile="Common/CommonFrame.tga" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="false">
+		<Image Name="CommonMainFrame1_LT" XPos="0" YPos="0" Width="28" Height="37" />
+    <Image Name="CommonMainFrame1_LB" XPos="0" YPos="63" Width="39" Height="22" />
+    <Image Name="CommonMainFrame1_RT" XPos="66" YPos="0" Width="28" Height="37" />
+    <Image Name="CommonMainFrame1_RB" XPos="45" YPos="63" Width="49" Height="22" />
+    <Image Name="CommonMainFrame1_L" XPos="0" YPos="37" Width="7" Height="25" />
+    <Image Name="CommonMainFrame1_R" XPos="87" YPos="37" Width="7" Height="25" />
+    <Image Name="CommonMainFrame1_T" XPos="28" YPos="0" Width="38" Height="38" />
+    <Image Name="CommonMainFrame1_B" XPos="38" YPos="63" Width="18" Height="22" />
+    <Image Name="CommonMainFrame1_BK" XPos="193" YPos="76" Width="35" Height="20" />
+
+    <Image Name="CommonMainFrame2_LT" XPos="97" YPos="0" Width="28" Height="30" />
+    <Image Name="CommonMainFrame2_LB" XPos="97" YPos="56" Width="15" Height="10" />
+    <Image Name="CommonMainFrame2_RT" XPos="158" YPos="0" Width="28" Height="30" />
+    <Image Name="CommonMainFrame2_RB" XPos="140" YPos="56" Width="46" Height="10" />
+    <Image Name="CommonMainFrame2_L" XPos="97" YPos="30" Width="15" Height="25" />
+    <Image Name="CommonMainFrame2_R" XPos="140" YPos="30" Width="46" Height="25" />
+    <Image Name="CommonMainFrame2_T" XPos="125" YPos="0" Width="33" Height="30" />
+    <Image Name="CommonMainFrame2_B" XPos="108" YPos="56" Width="70" Height="10" />
+    <Image Name="CommonMainFrame2_BK" XPos="105" YPos="27" Width="70" Height="30" />
+
+  
+    <Image Name="CommonMainFrame3_LT" XPos="0" YPos="86" Width="111" Height="40" />
+    <Image Name="CommonMainFrame3_LB" XPos="0" YPos="160" Width="20" Height="30" />
+    <Image Name="CommonMainFrame3_RT" XPos="152" YPos="86" Width="28" Height="34" />
+    <Image Name="CommonMainFrame3_RB" XPos="170" YPos="154" Width="10" Height="36" />
+    <Image Name="CommonMainFrame3_L" XPos="0" YPos="126" Width="10" Height="35" />
+    <Image Name="CommonMainFrame3_R" XPos="174" YPos="122" Width="6" Height="35" />
+    <Image Name="CommonMainFrame3_T" XPos="111" YPos="86" Width="41" Height="33" />
+    <Image Name="CommonMainFrame3_B" XPos="13" YPos="164" Width="156" Height="26" />
+    <Image Name="CommonMainFrame3_BK" XPos="105" YPos="27" Width="70" Height="30" />
+
+    <Image Name="CommonFrame1_LT" XPos="0" YPos="190" Width="75" Height="20" />
+    <Image Name="CommonFrame1_LB" XPos="0" YPos="241" Width="75" Height="15" />
+    <Image Name="CommonFrame1_RT" XPos="110" YPos="190" Width="75" Height="20" />
+    <Image Name="CommonFrame1_RB" XPos="110" YPos="241" Width="75" Height="15" />
+    <Image Name="CommonFrame1_L" XPos="0" YPos="207" Width="15" Height="25" />
+    <Image Name="CommonFrame1_R" XPos="170" YPos="207" Width="15" Height="25" />
+    <Image Name="CommonFrame1_T" XPos="75" YPos="190" Width="34" Height="20" />
+    <Image Name="CommonFrame1_B" XPos="75" YPos="241" Width="34" Height="15" />
+    <Image Name="CommonFrame1_BK" XPos="105" YPos="27" Width="70" Height="30" />
+
+    <Image Name="CommonEditBoxBK" XPos="100" YPos="68" Width="10" Height="15" />
+
+    <Image Name="CommonEditBoxL" XPos="189" YPos="0" Width="10" Height="20" />
+    <Image Name="CommonEditBoxR" XPos="218" YPos="0" Width="10" Height="20" />
+    <Image Name="CommonEditBoxM" XPos="195" YPos="0" Width="25" Height="20" />
+
+    <Image Name="ActionButtonPushed" XPos="183" YPos="121" Width="30" Height="30" />
+    <Image Name="ActionButtonHover" XPos="183" YPos="156" Width="30" Height="30" />
+
+    <Image Name="CommonFrame2_LT" XPos="222" YPos="225" Width="7" Height="7" />
+    <Image Name="CommonFrame2_LB" XPos="222" YPos="249" Width="7" Height="7" />
+    <Image Name="CommonFrame2_RT" XPos="249" YPos="225" Width="7" Height="7" />
+    <Image Name="CommonFrame2_RB" XPos="249" YPos="249" Width="7" Height="7" />
+    <Image Name="CommonFrame2_L" XPos="222" YPos="232" Width="3" Height="17" />
+    <Image Name="CommonFrame2_R" XPos="253" YPos="232" Width="3" Height="17" />
+    <Image Name="CommonFrame2_T" XPos="229" YPos="225" Width="17" Height="3" />
+    <Image Name="CommonFrame2_B" XPos="229" YPos="253" Width="17" Height="3" />
+
+    <Image Name="PaoPao_LT" XPos="186" YPos="68" Width="8" Height="8" />
+    <Image Name="PaoPao_LB" XPos="186" YPos="96" Width="8" Height="21" />
+    <Image Name="PaoPao_RT" XPos="227" YPos="68" Width="8" Height="8" />
+    <Image Name="PaoPao_RB" XPos="227" YPos="96" Width="8" Height="21" />
+    <Image Name="PaoPao_L" XPos="186" YPos="77" Width="8" Height="18" />
+    <Image Name="PaoPao_R" XPos="227" YPos="77" Width="8" Height="18" />
+    <Image Name="PaoPao_T" XPos="200" YPos="68" Width="20" Height="5" />
+    <Image Name="PaoPao_B" XPos="215" YPos="99" Width="5" Height="18" />
+    <Image Name="PaoPao_BK" XPos="192" YPos="80" Width="37" Height="20" />
+    <Image Name="PaoPao_Cornu" XPos="198" YPos="99" Width="18" Height="18" />
+
+
+    <Image Name="Background_LT" XPos="216" YPos="120" Width="3" Height="3" />
+    <Image Name="Background_LB" XPos="216" YPos="146" Width="3" Height="3" />
+    <Image Name="Background_RT" XPos="242" YPos="120" Width="3" Height="3" />
+    <Image Name="Background_RB" XPos="242" YPos="146" Width="3" Height="3" />
+    <Image Name="Background_L" XPos="216" YPos="123" Width="3" Height="24" />
+    <Image Name="Background_R" XPos="242" YPos="123" Width="3" Height="24" />
+    <Image Name="Background_T" XPos="219" YPos="120" Width="24" Height="3" />
+    <Image Name="Background_B" XPos="219" YPos="146" Width="24" Height="3" />
+    
+    <Image Name="BtnHelp_BK" XPos="191" YPos="189" Width="28" Height="24" />
+  </Imageset>

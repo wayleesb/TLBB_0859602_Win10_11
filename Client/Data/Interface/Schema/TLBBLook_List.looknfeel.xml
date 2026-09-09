@@ -1,0 +1,585 @@
+<?xml version="1.0" ?>
+<Falagard>
+
+  <!--  
+    ***************************************************
+        WoWLook/Listbox
+    ***************************************************
+    
+  -->
+   <WidgetLook name="TLBB_Look_ListBoxCommon">
+    <Property name="SelectColour" value="tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+    <Property name="SelectBrush" value="set:CommonFrame image:CommonEditBoxBK" />
+     <NamedArea name="ItemRenderingArea">
+       <Area>
+         <Dim type="LeftEdge">
+          <AbsoluteDim value="6" />
+        </Dim>
+         <Dim type="TopEdge">
+          <AbsoluteDim value="3" />
+        </Dim>
+         <Dim type="RightEdge">
+          <UnifiedDim scale="1" offset="-3" type="RightEdge" />
+        </Dim>
+         <Dim type="BottomEdge">
+          <UnifiedDim scale="1" offset="-3" type="BottomEdge" />
+        </Dim>
+      </Area>
+    </NamedArea>
+     <NamedArea name="ItemRenderingAreaVScroll">
+       <Area>
+         <Dim type="LeftEdge">
+           <AbsoluteDim value="6" />
+         </Dim>
+         <Dim type="TopEdge">
+           <AbsoluteDim value="3" />
+         </Dim>
+         <Dim type="RightEdge">
+           <UnifiedDim scale="1" offset="-3" type="RightEdge">
+             <DimOperator op="Subtract">
+               <WidgetDim widget="__auto_vscrollbar__" dimension="Width" />
+             </DimOperator>
+           </UnifiedDim>
+         </Dim>
+         <Dim type="BottomEdge">
+           <UnifiedDim scale="1" offset="-3" type="BottomEdge" />
+         </Dim>
+       </Area>
+     </NamedArea>
+     <Child type="TLBB_Scrollbar_Common" nameSuffix="__auto_vscrollbar__">
+    <Area>
+      <Dim type="LeftEdge">
+        <AbsoluteDim value="0" />
+      </Dim>
+      <Dim type="TopEdge">
+        <AbsoluteDim value="1" />
+      </Dim>
+      <Dim type="Width">
+        <AbsoluteDim value="16" />
+      </Dim>
+      <Dim type="Height">
+        <UnifiedDim scale="1" offset="-2" type="BottomEdge" />
+      </Dim>
+    </Area>
+    <HorzAlignment type="RightAligned" />
+  </Child>
+      <StateImagery name="Enabled">
+         <Layer>
+           <Section look="TLBB_Look_Common" section="Background_Common1" />
+           <Section look="TLBB_Look_Common" section="Frame_Type_Lace1" />
+        </Layer>
+      </StateImagery>
+     <StateImagery name="Disabled">
+       <Layer>
+         <Section look="TLBB_Look_Common" section="Background_Common1" />
+         <Section look="TLBB_Look_Common" section="Frame_Type_Lace1" />
+       </Layer>
+     </StateImagery>
+  </WidgetLook>
+  <!--
+  ***************************************************
+  WoWLook/Listbox
+  ***************************************************
+  -->
+  <WidgetLook name="TLBB_Look_Combobox">
+    <Property name="RiseOnClick" value="False" />
+    <Property name="SelectColour" value="tl:FFC8B88E tr:FFC8B88E bl:FFC8B88E br:FFC8B88E" />
+    <Property name="SelectBrush" value="set:CommonFrame image:CommonEditBoxBK" />
+    <Child type="TLBB_EditBoxDropList" nameSuffix="__auto_editbox__">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="0" />
+        </Dim>
+        <Dim type="TopEdge">
+          <AbsoluteDim value="0" />
+        </Dim>
+        <Dim type="RightEdge">
+          <UnifiedDim scale="1" type="RightEdge">
+            <DimOperator op="Subtract">
+              <UnifiedDim scale="1" type="Height" />
+            </DimOperator>
+          </UnifiedDim>
+        </Dim>
+        <Dim type="BottomEdge">
+         <UnifiedDim scale="1" type="Height" />
+         </Dim>
+        </Area>
+      </Child>
+    <Child type="TLBB_ComboDropList" nameSuffix="__auto_droplist__">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="0" />
+        </Dim>
+        <Dim type="TopEdge">
+          <WidgetDim widget="__auto_editbox__" dimension="Height" />
+        </Dim>
+        <Dim type="Width">
+          <UnifiedDim scale="1" type="Width" />
+        </Dim>
+        <Dim type="BottomEdge">
+          <UnifiedDim scale="1" type="BottomEdge" />
+        </Dim>
+      </Area>
+    </Child>
+    <Child type="TLBB_ButtonNULL" nameSuffix="__auto_button__">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="0" />
+        </Dim>
+        <Dim type="TopEdge">
+          <AbsoluteDim value="0" />
+        </Dim>
+        <Dim type="Width">
+          <UnifiedDim scale="1" type="BottomEdge" />
+        </Dim>
+        <Dim type="Height">
+          <UnifiedDim scale="1" type="BottomEdge" />
+        </Dim>
+      </Area>
+      <HorzAlignment type="RightAligned" />
+      <Property name="UseStandardImagery" value="False" />
+      <Property name="NormalImage" value="set:Button3 image:ComboListButton_Normal" />
+      <Property name="HoverImage" value="set:Button3 image:ComboListButton_Hover" />
+      <Property name="PushedImage" value="set:Button3 image:ComboListButton_Pushed" />
+    </Child>
+    <StateImagery name="Enabled" >
+      
+     </StateImagery>
+    <StateImagery name="Disabled" >
+      
+    </StateImagery>
+  </WidgetLook>
+
+  <!--
+    ***************************************************
+        下拉列表框的下拉列表
+    ***************************************************
+    -->
+  <WidgetLook name="TLBB_Look_ComboDropList">
+    <NamedArea name="ItemRenderingArea">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="3" />
+        </Dim>
+        <Dim type="TopEdge">
+          <AbsoluteDim value="3" />
+        </Dim>
+        <Dim type="RightEdge">
+          <UnifiedDim scale="1" type="RightEdge">
+            <DimOperator op="Subtract">
+              <AbsoluteDim value="3" />
+            </DimOperator>
+          </UnifiedDim>
+        </Dim>
+        <Dim type="BottomEdge">
+          <UnifiedDim scale="1" type="BottomEdge">
+            <DimOperator op="Subtract">
+              <AbsoluteDim value="3" />
+            </DimOperator>
+          </UnifiedDim>
+        </Dim>
+      </Area>
+    </NamedArea>
+    <NamedArea name="ItemRenderingAreaHScroll">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="3" />
+        </Dim>
+        <Dim type="TopEdge">
+          <AbsoluteDim value="3" />
+        </Dim>
+        <Dim type="RightEdge">
+          <UnifiedDim scale="1" type="RightEdge">
+            <DimOperator op="Subtract">
+              <AbsoluteDim value="3" />
+            </DimOperator>
+          </UnifiedDim>
+        </Dim>
+        <Dim type="BottomEdge">
+          <UnifiedDim scale="1" type="BottomEdge">
+            <DimOperator op="Subtract">
+              <WidgetDim widget="__auto_hscrollbar__" dimension="Height">
+                <DimOperator op="Add">
+                  <AbsoluteDim value="3" />
+                </DimOperator>
+              </WidgetDim>
+            </DimOperator>
+          </UnifiedDim>
+        </Dim>
+      </Area>
+    </NamedArea>
+    <NamedArea name="ItemRenderingAreaVScroll">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="3" />
+        </Dim>
+        <Dim type="TopEdge">
+          <AbsoluteDim value="3" />
+        </Dim>
+        <Dim type="RightEdge">
+          <UnifiedDim scale="1" type="RightEdge">
+            <DimOperator op="Subtract">
+              <WidgetDim widget="__auto_vscrollbar__" dimension="Width">
+                <DimOperator op="Add">
+                  <AbsoluteDim value="3" />
+                </DimOperator>
+              </WidgetDim>
+            </DimOperator>
+          </UnifiedDim>
+        </Dim>
+        <Dim type="BottomEdge">
+          <UnifiedDim scale="1" type="BottomEdge">
+            <DimOperator op="Subtract">
+              <AbsoluteDim value="3" />
+            </DimOperator>
+          </UnifiedDim>
+        </Dim>
+      </Area>
+    </NamedArea>
+    <NamedArea name="ItemRenderingAreaHVScroll">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="3" />
+        </Dim>
+        <Dim type="TopEdge">
+          <AbsoluteDim value="3" />
+        </Dim>
+        <Dim type="RightEdge">
+          <UnifiedDim scale="1" type="RightEdge">
+            <DimOperator op="Subtract">
+              <WidgetDim widget="__auto_vscrollbar__" dimension="Width">
+                <DimOperator op="Add">
+                  <AbsoluteDim value="3" />
+                </DimOperator>
+              </WidgetDim>
+            </DimOperator>
+          </UnifiedDim>
+        </Dim>
+        <Dim type="BottomEdge">
+          <UnifiedDim scale="1" type="BottomEdge">
+            <DimOperator op="Subtract">
+              <WidgetDim widget="__auto_hscrollbar__" dimension="Height">
+                <DimOperator op="Add">
+                  <AbsoluteDim value="3" />
+                </DimOperator>
+              </WidgetDim>
+            </DimOperator>
+          </UnifiedDim>
+        </Dim>
+      </Area>
+    </NamedArea>
+    <Child type="TLBB_Scrollbar_Common" nameSuffix="__auto_vscrollbar__">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="0" />
+        </Dim>
+        <Dim type="TopEdge">
+          <AbsoluteDim value="0" />
+        </Dim>
+        <Dim type="Width">
+          <AbsoluteDim value="16" />
+        </Dim>
+        <Dim type="Height">
+          <UnifiedDim scale="1" type="Height" />
+        </Dim>
+      </Area>
+      <HorzAlignment type="RightAligned" />
+    </Child>
+    <StateImagery name="Enabled">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Frame_Type2" />
+        <Section look="TLBB_Look_Common" section="Background_Common1" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Frame_Type2" />
+        <Section look="TLBB_Look_Common" section="Background_Common1" />
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+
+  <!--
+    ***************************************************
+        WoWLook/ListHeaderSegment
+    ***************************************************
+    -->
+  <WidgetLook name="TLBB_Look_ListHeaderSegment">
+ 
+    <ImagerySection name="segment_normal">
+      <Colours topLeft="FFDDDDDD" topRight="FFDDDDDD" bottomLeft="FFDDDDDD" bottomRight="FFDDDDDD" />
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button1" image="BtnCommon_Left_Normal" />
+        <Image type="RightEdge" imageset="Button1" image="BtnCommon_Right_Normal" />
+        <Image type="Background" imageset="Button1" image="BtnCommon_Mid_Normal" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="segment_hover">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button1" image="BtnCommon_Left_Hover" />
+        <Image type="RightEdge" imageset="Button1" image="BtnCommon_Right_Hover" />
+        <Image type="Background" imageset="Button1" image="BtnCommon_Mid_Hover" />
+      </FrameComponent>
+    </ImagerySection>
+   
+    <ImagerySection name="label">
+      <TextComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="8" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="RightEdge">
+            <UnifiedDim scale="1" type="RightEdge" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <VertFormat type="CentreAligned" />
+      </TextComponent>
+    </ImagerySection>
+    <StateImagery name="Normal">
+      <Layer>
+        <Section section="segment_normal" />
+        <Section section="label" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Hover">
+      <Layer>
+        <Section section="segment_hover" />
+        <Section section="label" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="SplitterHover">
+      <Layer>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="DragGhost" clipped="false">
+     
+    </StateImagery>
+    <StateImagery name="AscendingSortIcon">
+     
+    </StateImagery>
+    <StateImagery name="DescendingSortIcon">
+      
+    </StateImagery>
+    <StateImagery name="GhostAscendingSortIcon" clipped="false">
+    
+    </StateImagery>
+    <StateImagery name="GhostDescendingSortIcon" clipped="false">
+     
+    </StateImagery>
+    <StateImagery name="Disabled">
+    
+    </StateImagery>
+  </WidgetLook>
+  <!--
+    ***************************************************
+        WoWLook/ListHeader
+    ***************************************************
+    -->
+  <WidgetLook name="TLBB_Look_ListHeader">
+    <Property name="SegmentWidgetType" value="TLBB_ListHeaderSegment" />
+    <StateImagery name="Enabled" />
+    <StateImagery name="Disabled" />
+  </WidgetLook>
+
+  <!--
+    ***************************************************
+        WoWLook/MultiColumnList
+    ***************************************************
+    -->
+  <WidgetLook name="TLBB_Look_MultiColumnList">
+    <Property name="SelectColour" value="tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+    <Property name="SelectBrush" value="set:CommonFrame image:CommonEditBoxBK" />
+    <Property name="DrawOffset" value="1" />
+    <NamedArea name="ItemRenderingArea">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="5" />
+        </Dim>
+        <Dim type="TopEdge">
+          <WidgetDim widget="__auto_listheader__" dimension="BottomEdge" />
+        </Dim>
+        <Dim type="RightEdge">
+          <UnifiedDim scale="1" offset="-3" type="RightEdge">
+          </UnifiedDim>
+        </Dim>
+        <Dim type="BottomEdge">
+          <UnifiedDim scale="1" offset="-8" type="BottomEdge">
+          </UnifiedDim>
+        </Dim>
+      </Area>
+    </NamedArea>
+
+    <NamedArea name="ItemRenderingAreaVScroll">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="0" />
+        </Dim>
+        <Dim type="TopEdge">
+          <WidgetDim widget="__auto_listheader__" dimension="BottomEdge" />
+        </Dim>
+        <Dim type="RightEdge">
+          <UnifiedDim scale="1" offset="-16" type="RightEdge">
+
+          </UnifiedDim>
+        </Dim>
+        <Dim type="BottomEdge">
+          <UnifiedDim scale="1" offset="-5" type="BottomEdge">
+          </UnifiedDim>
+        </Dim>
+      </Area>
+    </NamedArea>
+   
+    <Child type="TLBB_ListHeader" nameSuffix="__auto_listheader__">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="0" />
+        </Dim>
+        <Dim type="TopEdge">
+          <AbsoluteDim value="0" />
+        </Dim>
+        <Dim type="Width">
+          <UnifiedDim scale="1" type="Width" />
+        </Dim>
+        <Dim type="Height">
+          <FontDim type="LineSpacing">
+            <DimOperator op="Multiply">
+              <AbsoluteDim value="1.5" />
+            </DimOperator>
+          </FontDim>
+        </Dim>
+      </Area>
+      <HorzAlignment type="RightAligned" />
+    </Child>
+    <Child type="TLBB_Scrollbar_Common" nameSuffix="__auto_vscrollbar__">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="0" />
+        </Dim>
+        <Dim type="TopEdge">
+          <WidgetDim widget="__auto_listheader__" dimension="Height" />
+        </Dim>
+        <Dim type="Width">
+          <AbsoluteDim value="17" />
+        </Dim>
+        <Dim type="BottomEdge">
+          <UnifiedDim scale="1" offset="-1" type="BottomEdge" />
+        </Dim>
+      </Area>
+      <HorzAlignment type="RightAligned" />
+    </Child>
+    <StateImagery name="Enabled">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Background_Common1" />
+        <Section look="TLBB_Look_Common" section="Frame_Type_Lace1" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Background_Common1" />
+        <Section look="TLBB_Look_Common" section="Frame_Type_Lace1" />
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+
+
+
+  <WidgetLook name="TLBB_Look_Listbox_Debug">
+    <NamedArea name="ItemRenderingArea">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="6" />
+        </Dim>
+        <Dim type="TopEdge">
+          <AbsoluteDim value="3" />
+        </Dim>
+        <Dim type="RightEdge">
+          <UnifiedDim scale="1" offset="-3" type="RightEdge" />
+        </Dim>
+        <Dim type="BottomEdge">
+          <UnifiedDim scale="1" offset="-3" type="BottomEdge" />
+        </Dim>
+      </Area>
+    </NamedArea>
+    <Child type="TLBB_Scrollbar_Common" nameSuffix="__auto_vscrollbar__">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="0" />
+        </Dim>
+        <Dim type="TopEdge">
+          <AbsoluteDim value="3" />
+        </Dim>
+        <Dim type="RightEdge">
+          <UnifiedDim scale="1" offset="-18" type="RightEdge" />
+        </Dim>
+        <Dim type="BottomEdge">
+          <UnifiedDim scale="1" offset="-3" type="BottomEdge" />
+        </Dim>
+      </Area>
+      <HorzAlignment type="RightAligned" />
+    </Child>
+    <ImagerySection name="main">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+      </FrameComponent>
+    </ImagerySection>
+    <StateImagery name="Enabled">
+      <Layer>
+        <Section section="main" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="main">
+          <Colours topLeft="FF7F7F7F" topRight="FF7F7F7F" bottomLeft="FF7F7F7F" bottomRight="FF7F7F7F" />
+        </Section>
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+</Falagard>

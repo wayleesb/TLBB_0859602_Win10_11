@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="苗疆旗02.frame" />
+    <entity mesh="苗疆旗.mesh" />
+    <entity mesh="苗疆旗02.mesh" node="苗疆旗02" />
+</model>

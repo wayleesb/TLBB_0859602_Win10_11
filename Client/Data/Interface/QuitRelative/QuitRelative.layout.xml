@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<GUILayout>
+	<Window Type="DefaultWindow" Name="QuitRelative_Frame_Back">
+			<Property Name="AlwaysOnTop" Value="true" />
+		 <Property Name="Size" Value="w:1 h:1" />
+        <Property Name="Position" Value="x:0 y:0" />
+    <Window Type="TLBB_Frame2" Name="QuitRelative_Frame">
+        <Property Name="UnifiedXPosition" Value="{0.5,-128}" />
+        <Property Name="UnifiedYPosition" Value="{0.2,0}" />
+        <Property Name="AbsoluteSize" Value="w:256 h:128" />
+        <Window Type="TLBB_SelfWindow" Name="QuitRelative_Text">
+            <Property Name="AbsolutePosition" Value="x:5.000000 y:5.000000" />
+            <Property Name="AbsoluteSize" Value="w:0.000000 h:0.000000" />
+            <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="RiseOnClick" Value="False" />
+            <Property Name="MaxWidth" Value="250" />
+            <Property Name="MinWidth" Value="250" />
+            <Property Name="MinHeight" Value="50" />
+            <Property Name="TextColor" Value="FFFFF263" />
+        </Window>
+        <Window Type="TLBB_ButtonCommon2" Name="QuitRelative_OK_Button">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-85.000000},{1.000000,-25.000000}" />
+            <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_557}" />
+            <Event Name="Clicked" Function="QuitRelative_OK_Clicked();" />
+        </Window>
+        <Window Type="TLBB_ButtonCommon2" Name="QuitRelative_Cancel_Button">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-45.000000},{1.000000,-25.000000}" />
+            <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_542}" />
+            <Event Name="Clicked" Function="QuitRelative_Cancel_Clicked();" />
+        </Window>
+    </Window>
+    </Window>
+</GUILayout>

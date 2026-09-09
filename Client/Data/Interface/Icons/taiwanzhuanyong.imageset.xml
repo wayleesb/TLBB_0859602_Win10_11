@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<Imageset Name="taiwanzhuanyong" Imagefile="Icons/taiwanzhuanyong.jpg" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+	<Image Name="taiwanzhuanyong_1" XPos="0" YPos="0" Width="64" Height="64" />
+	<Image Name="taiwanzhuanyong_2" XPos="64" YPos="0" Width="64" Height="64" />
+	<Image Name="taiwanzhuanyong_3" XPos="128" YPos="0" Width="64" Height="64" />
+	<Image Name="taiwanzhuanyong_4" XPos="192" YPos="0" Width="64" Height="64" />
+	<Image Name="taiwanzhuanyong_5" XPos="0" YPos="64" Width="64" Height="64" />
+	<Image Name="taiwanzhuanyong_6" XPos="64" YPos="64" Width="64" Height="64" />
+	<Image Name="taiwanzhuanyong_7" XPos="128" YPos="64" Width="64" Height="64" />
+	<Image Name="taiwanzhuanyong_8" XPos="192" YPos="64" Width="64" Height="64" />
+	<Image Name="taiwanzhuanyong_9" XPos="0" YPos="128" Width="64" Height="64" />
+	<Image Name="taiwanzhuanyong_10" XPos="64" YPos="128" Width="64" Height="64" />
+	<Image Name="taiwanzhuanyong_11" XPos="128" YPos="128" Width="64" Height="64" />
+	<Image Name="taiwanzhuanyong_12" XPos="192" YPos="128" Width="64" Height="64" />
+	<Image Name="taiwanzhuanyong_13" XPos="0" YPos="192" Width="64" Height="64" />
+	<Image Name="taiwanzhuanyong_14" XPos="64" YPos="192" Width="64" Height="64" />
+	<Image Name="taiwanzhuanyong_15" XPos="128" YPos="192" Width="64" Height="64" />
+	<Image Name="taiwanzhuanyong_16" XPos="192" YPos="192" Width="64" Height="64" />
+</Imageset>

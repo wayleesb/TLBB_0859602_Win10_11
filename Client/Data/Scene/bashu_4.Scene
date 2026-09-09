@@ -1,0 +1,2620 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Scene formatVersion="0.1.1" name="bashu_4">
+
+  <Terrain filename="bashu_4.Terrain"/>
+
+  <Object name="#FairyEnviroment" type="Enviroment">
+    <Property name="ambient" value="0.109804 0.109804 0.109804"/>
+    <Property name="fog.mode" value="linear"/>
+    <Property name="fog.colour" value="0 0.290196 0.368627"/>
+    <Property name="fog.linear start" value="2300"/>
+    <Property name="fog.linear end" value="3800"/>
+  </Object>
+
+  <Object name="#FairyMainLightOne" type="Light">
+    <Property name="type" value="directional"/>
+    <Property name="diffuse" value="0.019608 0.313726 0.176471"/>
+    <Property name="specular" value="0.3 0.3 0.3"/>
+    <Property name="direction" value="-1 1 -1"/>
+  </Object>
+
+  <Object name="#FairyMainLightTwo" type="Light">
+    <Property name="type" value="directional"/>
+    <Property name="diffuse" value="0.321569 0.219608 0.003922"/>
+    <Property name="specular" value="0.027451 0.34902 0.486275"/>
+    <Property name="direction" value="1 -1 -1"/>
+  </Object>
+
+  <Object name="#FairySkyDome" type="SkyDome">
+    <Property name="material" value="CloudySky"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁2.mesh"/>
+    <Property name="position" value="1600 0 -5500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁1.mesh"/>
+    <Property name="position" value="3600 0 -5800"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁1.mesh"/>
+    <Property name="position" value="5800 0 -3900"/>
+    <Property name="orientation" value="0.751165 0 -0.660114 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁2.mesh"/>
+    <Property name="position" value="5100 0 -5000"/>
+    <Property name="orientation" value="0.994879 0 -0.10107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱1.mesh"/>
+    <Property name="position" value="700 0 -6200"/>
+    <Property name="orientation" value="0.844854 0 0.534998 0"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁2.mesh"/>
+    <Property name="position" value="2700 -500 -2400"/>
+    <Property name="orientation" value="0.900016 0 -0.435857 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁1.mesh"/>
+    <Property name="position" value="2200 -500 -4100"/>
+    <Property name="orientation" value="0.871595 0 -0.490226 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="石林/石柱2.mesh"/>
+    <Property name="position" value="3899 0 -5383"/>
+    <Property name="orientation" value="0.603066 0 -0.79769 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱1.mesh"/>
+    <Property name="position" value="3500 0 -5300"/>
+    <Property name="orientation" value="0.780736 0 0.624858 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱3.mesh"/>
+    <Property name="position" value="4114 0 -5184"/>
+    <Property name="orientation" value="0.890449 0 0.455084 0"/>
+    <Property name="scale" value="1.4 1.4 1.4"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱2.mesh"/>
+    <Property name="position" value="4100 400 -5600"/>
+    <Property name="orientation" value="0.792106 0 -0.610382 0"/>
+    <Property name="scale" value="1.5 1.5 1.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱4.mesh"/>
+    <Property name="position" value="4200 0 -5200"/>
+    <Property name="orientation" value="0.996044 0 0.0888535 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/蛛丝树根3.mesh"/>
+    <Property name="position" value="3889 0 -5676"/>
+    <Property name="orientation" value="0.997059 0 -0.0766238 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/蛛丝树根2.mesh"/>
+    <Property name="position" value="2900 353 -5400"/>
+    <Property name="orientation" value="0.569834 0.241937 -0.54181 0.568504"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/蛛丝树根1.mesh"/>
+    <Property name="position" value="3518 333 -5300"/>
+    <Property name="orientation" value="0.779166 0.195858 -0.517172 -0.295078"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网3.mesh"/>
+    <Property name="position" value="3400 0 -5100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网3.mesh"/>
+    <Property name="position" value="4200 -0.00012207 -5200"/>
+    <Property name="orientation" value="0.648514 0 0.761202 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="4200 0 -4557"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="3044 0 -4600"/>
+    <Property name="orientation" value="0.935184 0 -0.354163 0"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="3710 0 -5142"/>
+    <Property name="orientation" value="0.99171 0 0.128499 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="4000 0.00012207 -5300"/>
+    <Property name="orientation" value="0.986809 0 0.161886 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="3960 672 -5014"/>
+    <Property name="orientation" value="0.935073 -0.00543259 -0.354122 -0.014345"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/蜘蛛卵囊.mesh"/>
+    <Property name="position" value="3200 0 -4600"/>
+    <Property name="orientation" value="0.99424 0 -0.107172 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/蜘蛛卵囊.mesh"/>
+    <Property name="position" value="4300 0 -5000"/>
+    <Property name="orientation" value="0.228072 0 0.973644 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/蜘蛛卵囊.mesh"/>
+    <Property name="position" value="3336 807 -5005"/>
+    <Property name="orientation" value="0.654072 0.177531 0.64916 0.345341"/>
+    <Property name="scale" value="0.6 0.6 0.6"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="chuansongmen"/>
+    <Property name="position" value="3917 200 -5300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/蛛丝树根1.mesh"/>
+    <Property name="position" value="4800 0 -3900"/>
+    <Property name="orientation" value="-0.419217 0 0.907886 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/蛛丝树根1.mesh"/>
+    <Property name="position" value="2672 200 -5800"/>
+    <Property name="orientation" value="0.688017 0.192453 -0.671335 -0.197235"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.035294 0.929412 1"/>
+    <Property name="position" value="3900 200 -5200"/>
+    <Property name="range" value="900"/>
+    <Property name="attenuation.linear" value="0.006"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁2.mesh"/>
+    <Property name="position" value="1300 -1000 -3200"/>
+    <Property name="orientation" value="0.766043 0 -0.642787 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="xiangluyan"/>
+    <Property name="position" value="1900 -400 -3300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱1.mesh"/>
+    <Property name="position" value="3100 0 -3400"/>
+    <Property name="orientation" value="0.010069 0 -0.999949 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="xiangluyan_01"/>
+    <Property name="position" value="1950 -450 -3300"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_02"/>
+    <Property name="position" value="1900 -400 -3300"/>
+    <Property name="orientation" value="0.996045 0 0.0888536 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱3.mesh"/>
+    <Property name="position" value="3200 0 -3500"/>
+    <Property name="orientation" value="0.345172 0 -0.938539 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网3.mesh"/>
+    <Property name="position" value="3100 0 -3400"/>
+    <Property name="orientation" value="0.606095 0 -0.795392 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱3.mesh"/>
+    <Property name="position" value="1833 -500 -3068"/>
+    <Property name="orientation" value="0.943087 0 0.33254 0"/>
+    <Property name="scale" value="0.8 0.8 0.8"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱3.mesh"/>
+    <Property name="position" value="1756 -500 -3489"/>
+    <Property name="orientation" value="0.882316 0 -0.470657 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱5.mesh"/>
+    <Property name="position" value="2900 0 -3800"/>
+    <Property name="orientation" value="-0.274992 0 -0.961445 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱2.mesh"/>
+    <Property name="position" value="2100 -500 -3400"/>
+    <Property name="orientation" value="0.839766 0 0.542948 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="3262 -56 -2959"/>
+    <Property name="orientation" value="0.987582 0 0.157097 0"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网3.mesh"/>
+    <Property name="position" value="2600 0 -5100"/>
+    <Property name="orientation" value="0.995265 0 0.0971819 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁1.mesh"/>
+    <Property name="position" value="5700 0 -1800"/>
+    <Property name="orientation" value="0.692724 0 -0.721202 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/蛛丝树根3.mesh"/>
+    <Property name="position" value="5300 0 -800"/>
+    <Property name="orientation" value="0.461748 0 -0.887009 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/蛛丝树根1.mesh"/>
+    <Property name="position" value="5300 351 -1900"/>
+    <Property name="orientation" value="-0.33627 0.330475 -0.872633 0.127349"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/蛛丝树根2.mesh"/>
+    <Property name="position" value="5301 500 -842"/>
+    <Property name="orientation" value="0.195933 -0.0376553 -0.754805 0.624868"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱5.mesh"/>
+    <Property name="position" value="5800 0 -2900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱1.mesh"/>
+    <Property name="position" value="5600 0 -3100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁3.mesh"/>
+    <Property name="position" value="4700 -500 -1100"/>
+    <Property name="orientation" value="0.919979 0 0.391967 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁4.mesh"/>
+    <Property name="position" value="3300 -500 -1400"/>
+    <Property name="orientation" value="0.725835 0 -0.687867 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱2.mesh"/>
+    <Property name="position" value="5151.51 -194.033 -2893.79"/>
+    <Property name="orientation" value="-0.433094 0 0.901348 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁1.mesh"/>
+    <Property name="position" value="5200 -500 -500"/>
+    <Property name="orientation" value="0.691759 0 -0.722128 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁1.mesh"/>
+    <Property name="position" value="1200 -1000 -1600"/>
+    <Property name="orientation" value="0.468689 0 -0.883363 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁2.mesh"/>
+    <Property name="position" value="100 -1000 100"/>
+    <Property name="orientation" value="0.711432 0 -0.702755 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱1.mesh"/>
+    <Property name="position" value="2000 -500 -2200"/>
+    <Property name="orientation" value="0.975024 0 0.222094 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁1.mesh"/>
+    <Property name="position" value="600 -1000 2100"/>
+    <Property name="orientation" value="0.757208 0 -0.653173 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁2.mesh"/>
+    <Property name="position" value="2000 -1000 3300"/>
+    <Property name="orientation" value="0.981379 0 0.19208 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁2.mesh"/>
+    <Property name="position" value="6000 0 -200"/>
+    <Property name="orientation" value="0.64383 0 -0.765165 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁1.mesh"/>
+    <Property name="position" value="6000 0 1800"/>
+    <Property name="orientation" value="0.685083 0 -0.728464 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁4.mesh"/>
+    <Property name="position" value="2900 -1000 3300"/>
+    <Property name="orientation" value="0.962953 0 -0.269668 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁2.mesh"/>
+    <Property name="position" value="5000 -500 900"/>
+    <Property name="orientation" value="0.685083 0 -0.728464 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁1.mesh"/>
+    <Property name="position" value="5400 -500 2900"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁2.mesh"/>
+    <Property name="position" value="4600 -1000 3000"/>
+    <Property name="orientation" value="0.753186 0 -0.657807 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁1.mesh"/>
+    <Property name="position" value="1700 -1000 5800"/>
+    <Property name="orientation" value="0.0521311 0 0.99864 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁2.mesh"/>
+    <Property name="position" value="3500 -1000 5700"/>
+    <Property name="orientation" value="0.177004 0 -0.984209 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁1.mesh"/>
+    <Property name="position" value="5000 -1000 4900"/>
+    <Property name="orientation" value="0.709273 0 -0.704934 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱5.mesh"/>
+    <Property name="position" value="2100 -500 700"/>
+    <Property name="orientation" value="0.290284 0 0.95694 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱4.mesh"/>
+    <Property name="position" value="4800 -500 2100"/>
+    <Property name="orientation" value="0.962121 0 0.272621 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱1.mesh"/>
+    <Property name="position" value="1800 -500 600"/>
+    <Property name="orientation" value="0.900015 0 -0.435856 0"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.035294 0.929412 1"/>
+    <Property name="position" value="1900 -400 -3300"/>
+    <Property name="direction" value="0.0175781 -0.96826 -0.0224439"/>
+    <Property name="range" value="600"/>
+    <Property name="attenuation.linear" value="0.01"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网3.mesh"/>
+    <Property name="position" value="2800 0 -3900"/>
+    <Property name="orientation" value="0.901349 0 -0.433093 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网3.mesh"/>
+    <Property name="position" value="4636.31 -500 1984.53"/>
+    <Property name="orientation" value="0.738887 0 -0.673829 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁2.mesh"/>
+    <Property name="position" value="800 -500 -5000"/>
+    <Property name="orientation" value="0.956045 0 -0.293219 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱3.mesh"/>
+    <Property name="position" value="1333 -500 2832"/>
+    <Property name="orientation" value="0.943087 0 0.33254 0"/>
+    <Property name="scale" value="0.8 0.8 0.8"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.035294 0.929412 1"/>
+    <Property name="position" value="1400 -451 2600"/>
+    <Property name="direction" value="0.0175781 -0.96826 -0.0224439"/>
+    <Property name="range" value="600"/>
+    <Property name="attenuation.linear" value="0.01"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="xiangluyan_01"/>
+    <Property name="position" value="1450 -501 2600"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="xiangluyan"/>
+    <Property name="position" value="1400 -451 2600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱2.mesh"/>
+    <Property name="position" value="1600 -500 2500"/>
+    <Property name="orientation" value="0.839766 0 0.542948 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_02"/>
+    <Property name="position" value="1400 -451 2600"/>
+    <Property name="orientation" value="0.996045 0 0.0888536 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱3.mesh"/>
+    <Property name="position" value="1256 -500 2411"/>
+    <Property name="orientation" value="0.882316 0 -0.470657 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱4.mesh"/>
+    <Property name="position" value="1100 -495.054 2800"/>
+    <Property name="orientation" value="0.444122 0 -0.895966 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网3.mesh"/>
+    <Property name="position" value="2100 -500 600"/>
+    <Property name="orientation" value="-0.0337413 0 -0.99943 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁2.mesh"/>
+    <Property name="position" value="1000 -1300 -4000"/>
+    <Property name="orientation" value="0.846491 0 -0.532403 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="xiangluyan_01"/>
+    <Property name="position" value="1350 -642 -4200"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.035294 0.929412 1"/>
+    <Property name="position" value="1300 -592 -4200"/>
+    <Property name="direction" value="0.0175781 -0.96826 -0.0224439"/>
+    <Property name="range" value="600"/>
+    <Property name="attenuation.linear" value="0.01"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="xiangluyan"/>
+    <Property name="position" value="1300 -592 -4200"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_02"/>
+    <Property name="position" value="1300 -592 -4200"/>
+    <Property name="orientation" value="0.996045 0 0.0888536 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱3.mesh"/>
+    <Property name="position" value="1210 -620.932 -4000"/>
+    <Property name="orientation" value="0.827574 0 0.561355 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱3.mesh"/>
+    <Property name="position" value="3805 -2.8365 -2211"/>
+    <Property name="orientation" value="0.260794 0 -0.965393 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱1.mesh"/>
+    <Property name="position" value="5000 8.89231 -1500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/蛛丝树根1.mesh"/>
+    <Property name="position" value="2300 -500 -1400"/>
+    <Property name="orientation" value="0.18304 0 -0.983105 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="xiangluyan"/>
+    <Property name="position" value="5500 150 900"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.035294 0.929412 1"/>
+    <Property name="position" value="5500 150 900"/>
+    <Property name="direction" value="0.0175781 -0.96826 -0.0224439"/>
+    <Property name="range" value="600"/>
+    <Property name="attenuation.linear" value="0.01"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_02"/>
+    <Property name="position" value="5500 150 900"/>
+    <Property name="orientation" value="0.996045 0 0.0888536 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="xiangluyan_01"/>
+    <Property name="position" value="5550 100 900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱1.mesh"/>
+    <Property name="position" value="4800 -1000 6000"/>
+    <Property name="orientation" value="0.97637 0 -0.216107 0"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="2524.96 -564 -1238.37"/>
+    <Property name="orientation" value="0.987094 0 0.160126 0"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="3275 9.77365 -3503"/>
+    <Property name="orientation" value="0.867931 0 0.496679 0"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="4558 -504.531 2485"/>
+    <Property name="orientation" value="0.973233 0 -0.229807 0"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="1525 -500 2963"/>
+    <Property name="orientation" value="0.818607 0 0.574348 0"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="2180 -500 225"/>
+    <Property name="orientation" value="0.0355231 0 0.999366 0"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱1.mesh"/>
+    <Property name="position" value="5600 0 400"/>
+    <Property name="orientation" value="0.980785 0 -0.19509 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱3.mesh"/>
+    <Property name="position" value="5400 91.147 1100"/>
+    <Property name="orientation" value="0.852961 0 0.521975 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱3.mesh"/>
+    <Property name="position" value="4700 -500 2200"/>
+    <Property name="orientation" value="0.954228 0 0.29908 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱4.mesh"/>
+    <Property name="position" value="1300 -528.541 -1000"/>
+    <Property name="orientation" value="0.460538 0 -0.887639 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱1.mesh"/>
+    <Property name="position" value="4629 -507 -204"/>
+    <Property name="orientation" value="0.907885 0 0.419217 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁2.mesh"/>
+    <Property name="position" value="-1300 -1500 -800"/>
+    <Property name="orientation" value="0.0919086 0 -0.995767 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/枯枝2.mesh"/>
+    <Property name="position" value="4332.98 13.1045 -4562.48"/>
+    <Property name="orientation" value="0.413638 0 0.910441 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/枯枝2.mesh"/>
+    <Property name="position" value="2947.11 0 -4046.49"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/枯枝2.mesh"/>
+    <Property name="position" value="3567.3 -169.288 -2994.92"/>
+    <Property name="orientation" value="0.898674 0 0.438616 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/枯枝2.mesh"/>
+    <Property name="position" value="5473.81 0 -3367.35"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/枯枝2.mesh"/>
+    <Property name="position" value="5013.45 -67.3469 -2336.98"/>
+    <Property name="orientation" value="0.500885 0 0.865514 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/枯枝2.mesh"/>
+    <Property name="position" value="2188.09 0 -4955.1"/>
+    <Property name="orientation" value="0.700569 0 0.713585 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/枯枝2.mesh"/>
+    <Property name="position" value="4428.9 -119.101 -4233.67"/>
+    <Property name="orientation" value="0.983662 0 0.180023 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/枯枝2.mesh"/>
+    <Property name="position" value="4496.77 -488.856 -74.7228"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/枯枝2.mesh"/>
+    <Property name="position" value="5402.78 207.327 1003.76"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/枯枝2.mesh"/>
+    <Property name="position" value="1847.92 -459.767 -3099.04"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/枯枝2.mesh"/>
+    <Property name="position" value="1145.48 -671.138 -3981.19"/>
+    <Property name="orientation" value="0.87607 0 -0.482184 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/枯枝2.mesh"/>
+    <Property name="position" value="2848.19 -500 -1704.29"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/枯枝2.mesh"/>
+    <Property name="position" value="1215.07 -489.131 -867.297"/>
+    <Property name="orientation" value="0.585798 0 0.810457 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/枯枝2.mesh"/>
+    <Property name="position" value="2260.43 -500 982.458"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/枯枝2.mesh"/>
+    <Property name="position" value="1400.94 -463.169 2318.4"/>
+    <Property name="orientation" value="-0.0184071 0 0.99983 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/枯枝2.mesh"/>
+    <Property name="position" value="1004.24 -692.203 -227.655"/>
+    <Property name="orientation" value="0.981964 0 0.189069 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/枯枝2.mesh"/>
+    <Property name="position" value="2084.92 -484.476 2966.47"/>
+    <Property name="orientation" value="0.275572 0 -0.96128 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁2.mesh"/>
+    <Property name="position" value="-1200 -1000 4500"/>
+    <Property name="orientation" value="0.573297 0 0.819347 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁3.mesh"/>
+    <Property name="position" value="-2000 -1000 1800"/>
+    <Property name="orientation" value="-0.167938 0 -0.985797 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁1.mesh"/>
+    <Property name="position" value="-800 -1000 5500"/>
+    <Property name="orientation" value="0.0521316 0 0.99864 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱1.mesh"/>
+    <Property name="position" value="400 -1000 5900"/>
+    <Property name="orientation" value="0.801376 0 -0.598161 0"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁2.mesh"/>
+    <Property name="position" value="5800 -500 5700"/>
+    <Property name="orientation" value="0.251898 0 -0.967754 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁2.mesh"/>
+    <Property name="position" value="6200 -500 4300"/>
+    <Property name="orientation" value="0.578314 0 -0.815814 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁1.mesh"/>
+    <Property name="position" value="-2200 -1000 800"/>
+    <Property name="orientation" value="0.751165 0 0.660114 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱2.mesh"/>
+    <Property name="position" value="2000 -700 1329"/>
+    <Property name="orientation" value="0.884796 0 -0.465976 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱3.mesh"/>
+    <Property name="position" value="2843 -1000 5457"/>
+    <Property name="orientation" value="0.977028 0 -0.21311 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁4.mesh"/>
+    <Property name="position" value="-1400 -988.483 3700"/>
+    <Property name="orientation" value="0.907886 0 0.419217 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_02"/>
+    <Property name="position" value="-900 -1094.5 800"/>
+    <Property name="orientation" value="0.996045 0 0.0888536 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="xiangluyan"/>
+    <Property name="position" value="-900 -1094.5 800"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="xiangluyan_01"/>
+    <Property name="position" value="-850 -1144.5 800"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.035294 0.929412 1"/>
+    <Property name="position" value="-1100 -955.96 600"/>
+    <Property name="direction" value="0.0175781 -0.96826 -0.0224439"/>
+    <Property name="range" value="800"/>
+    <Property name="attenuation.linear" value="0.008"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="xiangluyan"/>
+    <Property name="position" value="-1300 -1055.96 300"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_02"/>
+    <Property name="position" value="-1300 -1055.96 300"/>
+    <Property name="orientation" value="0.996045 0 0.0888536 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="xiangluyan_01"/>
+    <Property name="position" value="-1250 -1105.96 300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱5.mesh"/>
+    <Property name="position" value="-2700 -500 1800"/>
+    <Property name="orientation" value="0.521975 0 0.85296 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱1.mesh"/>
+    <Property name="position" value="1400 -1200 4100"/>
+    <Property name="orientation" value="0.883363 0 0.468689 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱3.mesh"/>
+    <Property name="position" value="1415 -1200 4246"/>
+    <Property name="orientation" value="0.662416 0 0.749137 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱4.mesh"/>
+    <Property name="position" value="1300 -1000 5499"/>
+    <Property name="orientation" value="0.821102 0 -0.570781 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁1.mesh"/>
+    <Property name="position" value="500 -1500 -2200"/>
+    <Property name="orientation" value="0.715731 0 -0.698376 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/蛛丝树根3.mesh"/>
+    <Property name="position" value="-300 -1700 -1200"/>
+    <Property name="orientation" value="0.104121 0 -0.994562 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/蛛丝树根1.mesh"/>
+    <Property name="position" value="-800 -1058 -600"/>
+    <Property name="orientation" value="0.26093 0.201209 -0.942878 -0.0490902"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁2.mesh"/>
+    <Property name="position" value="-3300 -1000 -700"/>
+    <Property name="orientation" value="0.104121 0 -0.994564 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁4.mesh"/>
+    <Property name="position" value="-4200 -1000 -600"/>
+    <Property name="orientation" value="0.316594 0 0.948561 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁1.mesh"/>
+    <Property name="position" value="-5600 -1000 200"/>
+    <Property name="orientation" value="0.643831 0 0.765167 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁1.mesh"/>
+    <Property name="position" value="-5900 -500 1500"/>
+    <Property name="orientation" value="0.71787 0 0.696177 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁2.mesh"/>
+    <Property name="position" value="-5700 -500 3500"/>
+    <Property name="orientation" value="0.657806 0 0.753186 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁1.mesh"/>
+    <Property name="position" value="-2600 -500 6000"/>
+    <Property name="orientation" value="-0.0214743 0 0.999769 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁2.mesh"/>
+    <Property name="position" value="-400 -500 6300"/>
+    <Property name="orientation" value="-0.302006 0 -0.953306 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁1.mesh"/>
+    <Property name="position" value="-5700 -500 5000"/>
+    <Property name="orientation" value="0.529803 0 0.84812 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁2.mesh"/>
+    <Property name="position" value="-4300 -500 5400"/>
+    <Property name="orientation" value="0.13458 0 0.990902 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱1.mesh"/>
+    <Property name="position" value="-3700 0 6300"/>
+    <Property name="orientation" value="0.877545 0 0.479493 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱2.mesh"/>
+    <Property name="position" value="-5512 0 6158"/>
+    <Property name="orientation" value="0.393992 0 -0.919113 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="公用小建筑/燕南北山洞.mesh"/>
+    <Property name="position" value="-100 -1500 -1100"/>
+    <Property name="orientation" value="0.237023 0 -0.971504 0"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.035294 0.929412 1"/>
+    <Property name="position" value="-100 -1300 -1300"/>
+    <Property name="direction" value="0.0175781 -0.96826 -0.0224439"/>
+    <Property name="range" value="600"/>
+    <Property name="attenuation.linear" value="0.008"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网3.mesh"/>
+    <Property name="position" value="100 -1500 -1800"/>
+    <Property name="orientation" value="-0.529803 0 -0.84812 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="-65 -1500 -1104"/>
+    <Property name="orientation" value="0.408044 0 -0.912962 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="-200 -1500 -1400"/>
+    <Property name="orientation" value="-0.0796825 0 -0.99682 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="-585 -1500 -1286"/>
+    <Property name="orientation" value="0.527199 0 -0.849742 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网3.mesh"/>
+    <Property name="position" value="-300 -1500 -1000"/>
+    <Property name="orientation" value="0.99285 0 -0.119365 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁2.mesh"/>
+    <Property name="position" value="-2900 -1500 -2100"/>
+    <Property name="orientation" value="0.382683 0 0.923879 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁2.mesh"/>
+    <Property name="position" value="-2500 -1500 -4300"/>
+    <Property name="orientation" value="0.844853 0 0.534997 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱1.mesh"/>
+    <Property name="position" value="-3500 -1000 -3800"/>
+    <Property name="orientation" value="0.890448 0 -0.455083 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁2.mesh"/>
+    <Property name="position" value="-2700 -1000 -5900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁1.mesh"/>
+    <Property name="position" value="-5700 -1000 -1800"/>
+    <Property name="orientation" value="0.732654 0 0.680601 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁1.mesh"/>
+    <Property name="position" value="-800 -500 -6100"/>
+    <Property name="orientation" value="0.999699 0 -0.0245412 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁2.mesh"/>
+    <Property name="position" value="-1300 -1000 -5600"/>
+    <Property name="orientation" value="0.989622 0 -0.143695 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁1.mesh"/>
+    <Property name="position" value="-6200 -500 -1000"/>
+    <Property name="orientation" value="0.702755 0 0.711432 0"/>
+    <Property name="scale" value="1 1.2 0.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱1.mesh"/>
+    <Property name="position" value="-6300 -574 200"/>
+    <Property name="orientation" value="0.793975 0 -0.60795 0"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁2.mesh"/>
+    <Property name="position" value="-5300 -1000 -5300"/>
+    <Property name="orientation" value="0.938403 0 0.345541 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁1.mesh"/>
+    <Property name="position" value="-3900 -1000 -5900"/>
+    <Property name="orientation" value="0.999981 0 0.0061359 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁1.mesh"/>
+    <Property name="position" value="-5600 -1000 -4300"/>
+    <Property name="orientation" value="0.657807 0 0.753187 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱1.mesh"/>
+    <Property name="position" value="-5700 -1000 -3100"/>
+    <Property name="orientation" value="-0.0705049 0 -0.997511 0"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁2.mesh"/>
+    <Property name="position" value="100 -1500 -4600"/>
+    <Property name="orientation" value="0.962121 0 -0.272621 0"/>
+    <Property name="scale" value="1 1.5 1"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁1.mesh"/>
+    <Property name="position" value="-1300 -1500 -4900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁1.mesh"/>
+    <Property name="position" value="300 -1500 -4100"/>
+    <Property name="orientation" value="0.759209 0 -0.650847 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱5.mesh"/>
+    <Property name="position" value="-2900 -1000 -5000"/>
+    <Property name="orientation" value="0.555569 0 -0.831469 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱4.mesh"/>
+    <Property name="position" value="-1500 -500 4400"/>
+    <Property name="orientation" value="0.388345 0 0.921514 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱5.mesh"/>
+    <Property name="position" value="-5600 -500 4300"/>
+    <Property name="orientation" value="0.272621 0 0.962121 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱3.mesh"/>
+    <Property name="position" value="-2700 -500 2100"/>
+    <Property name="orientation" value="0.751165 0 0.660114 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱2.mesh"/>
+    <Property name="position" value="-5224 -500 4186"/>
+    <Property name="orientation" value="0.996571 0 0.0827403 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱1.mesh"/>
+    <Property name="position" value="-3700 -500 3500"/>
+    <Property name="orientation" value="0.730563 0 0.682845 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱3.mesh"/>
+    <Property name="position" value="-3641 -500 3367"/>
+    <Property name="orientation" value="0.468689 0 -0.883363 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱4.mesh"/>
+    <Property name="position" value="-3100 -500 200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱4.mesh"/>
+    <Property name="position" value="-5000 -1000 -3900"/>
+    <Property name="orientation" value="0.385516 0 -0.9227 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱5.mesh"/>
+    <Property name="position" value="-1200 -1500 -4400"/>
+    <Property name="orientation" value="0.402435 0 0.915449 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱4.mesh"/>
+    <Property name="position" value="-977 -1500 -3200"/>
+    <Property name="orientation" value="0.537587 0 -0.843208 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱4.mesh"/>
+    <Property name="position" value="-3900 -1000 -2600"/>
+    <Property name="orientation" value="0.865513 0 -0.500885 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/蛛丝树根1.mesh"/>
+    <Property name="position" value="-1900 -1200 -5000"/>
+    <Property name="orientation" value="0.801376 0 -0.59816 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/蛛丝树根3.mesh"/>
+    <Property name="position" value="-300 -1500 -3500"/>
+    <Property name="orientation" value="0.650846 0 -0.759209 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/蛛丝树根1.mesh"/>
+    <Property name="position" value="-600 -1044 -3800"/>
+    <Property name="orientation" value="0.224706 -0.346303 0.9089 -0.0589955"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网3.mesh"/>
+    <Property name="position" value="-900 -1500 -3200"/>
+    <Property name="orientation" value="-0.940505 0 -0.339777 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网3.mesh"/>
+    <Property name="position" value="-4800 -1000 -3800"/>
+    <Property name="orientation" value="-0.906595 0 -0.422 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网3.mesh"/>
+    <Property name="position" value="-3600 -500 3400"/>
+    <Property name="orientation" value="-0.529803 0 -0.84812 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网3.mesh"/>
+    <Property name="position" value="-2800 -500 2000"/>
+    <Property name="orientation" value="0.868571 0 -0.495565 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网3.mesh"/>
+    <Property name="position" value="4700 -500 -100"/>
+    <Property name="orientation" value="0.568259 0 0.82285 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网3.mesh"/>
+    <Property name="position" value="-5300 -500 4400"/>
+    <Property name="orientation" value="0.941544 0 0.33689 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="xiangluyan_01"/>
+    <Property name="position" value="-3450 -800 -5400"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_02"/>
+    <Property name="position" value="-3500 -750 -5400"/>
+    <Property name="orientation" value="0.996045 0 0.0888536 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="xiangluyan"/>
+    <Property name="position" value="-3500 -750 -5400"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.035294 0.929412 1"/>
+    <Property name="position" value="-3700 -750 -5200"/>
+    <Property name="direction" value="0.0175781 -0.96826 -0.0224439"/>
+    <Property name="range" value="600"/>
+    <Property name="attenuation.linear" value="0.008"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="xiangluyan"/>
+    <Property name="position" value="-4100 -881 -5100"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="xiangluyan_01"/>
+    <Property name="position" value="-4050 -931 -5100"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_02"/>
+    <Property name="position" value="-4100 -881 -5100"/>
+    <Property name="orientation" value="0.996045 0 0.0888536 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="xiangluyan_01"/>
+    <Property name="position" value="-2750 -893 -4600"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="xiangluyan"/>
+    <Property name="position" value="-2800 -843 -4600"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_02"/>
+    <Property name="position" value="-2800 -843 -4600"/>
+    <Property name="orientation" value="0.996045 0 0.0888536 0"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.035294 0.929412 1"/>
+    <Property name="position" value="-2800 -843 -4600"/>
+    <Property name="direction" value="0.0175781 -0.96826 -0.0224439"/>
+    <Property name="range" value="600"/>
+    <Property name="attenuation.linear" value="0.01"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱2.mesh"/>
+    <Property name="position" value="-3200 -1000 -5201"/>
+    <Property name="orientation" value="0.996313 0 0.0857973 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱3.mesh"/>
+    <Property name="position" value="-3775 -999 -5309"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱3.mesh"/>
+    <Property name="position" value="-2900 -999.504 -4400"/>
+    <Property name="orientation" value="0.901349 0 0.433094 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱2.mesh"/>
+    <Property name="position" value="-4300 -980.691 -4900"/>
+    <Property name="orientation" value="0.511469 0 -0.859302 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_02"/>
+    <Property name="position" value="-3700 -821 -1300"/>
+    <Property name="orientation" value="0.996045 0 0.0888536 0"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.035294 0.929412 1"/>
+    <Property name="position" value="-3500 -621 -1500"/>
+    <Property name="direction" value="0.0175781 -0.96826 -0.0224439"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="0.01"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="xiangluyan"/>
+    <Property name="position" value="-3700 -821 -1300"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="xiangluyan_01"/>
+    <Property name="position" value="-3650 -871 -1300"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_02"/>
+    <Property name="position" value="-3300 -768 -1700"/>
+    <Property name="orientation" value="0.996045 0 0.0888536 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="xiangluyan"/>
+    <Property name="position" value="-3300 -768 -1700"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="xiangluyan_01"/>
+    <Property name="position" value="-3250 -818 -1700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/枯枝2.mesh"/>
+    <Property name="position" value="-3600 -1000 -4000"/>
+    <Property name="orientation" value="0.774952 0 0.632018 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱1.mesh"/>
+    <Property name="position" value="100 -1500 -1800"/>
+    <Property name="orientation" value="0.957826 0 -0.287347 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="xiangluyan"/>
+    <Property name="position" value="-2400 -900 -1100"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.035294 0.929412 1"/>
+    <Property name="position" value="-2200 -900 -1200"/>
+    <Property name="direction" value="0.0175781 -0.96826 -0.0224439"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="0.008"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="xiangluyan_01"/>
+    <Property name="position" value="-2350 -950 -1100"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_02"/>
+    <Property name="position" value="-2400 -900 -1100"/>
+    <Property name="orientation" value="0.996045 0 0.0888536 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="xiangluyan_01"/>
+    <Property name="position" value="-1950 -1350 -1300"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_02"/>
+    <Property name="position" value="-2000 -1300 -1300"/>
+    <Property name="orientation" value="0.996045 0 0.0888536 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="xiangluyan"/>
+    <Property name="position" value="-2000 -1300 -1300"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_02"/>
+    <Property name="position" value="-5200 -400 1600"/>
+    <Property name="orientation" value="0.996045 0 0.0888536 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="xiangluyan"/>
+    <Property name="position" value="-5200 -400 1600"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="xiangluyan_01"/>
+    <Property name="position" value="-5150 -450 1600"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.035294 0.929412 1"/>
+    <Property name="position" value="-5300 -185 1400"/>
+    <Property name="direction" value="0.0175781 -0.96826 -0.0224439"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="0.008"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="xiangluyan_01"/>
+    <Property name="position" value="-5350 -335 1200"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_02"/>
+    <Property name="position" value="-5400 -285 1200"/>
+    <Property name="orientation" value="0.996045 0 0.0888536 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="xiangluyan"/>
+    <Property name="position" value="-5400 -285 1200"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.035294 0.929412 1"/>
+    <Property name="position" value="-4600 -336 -200"/>
+    <Property name="direction" value="0.0175781 -0.96826 -0.0224439"/>
+    <Property name="range" value="600"/>
+    <Property name="attenuation.linear" value="0.008"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="xiangluyan_01"/>
+    <Property name="position" value="-4550 -386 -200"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_02"/>
+    <Property name="position" value="-4600 -336 -200"/>
+    <Property name="orientation" value="0.996045 0 0.0888536 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="xiangluyan"/>
+    <Property name="position" value="-4600 -336 -200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网3.mesh"/>
+    <Property name="position" value="-3000 -1000 -5000"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网3.mesh"/>
+    <Property name="position" value="-1100 -1500 -4200"/>
+    <Property name="orientation" value="0.977677 0 0.210112 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱3.mesh"/>
+    <Property name="position" value="-3222 -500 179"/>
+    <Property name="orientation" value="0.988722 0 0.149765 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱3.mesh"/>
+    <Property name="position" value="-5300 -471.344 1000"/>
+    <Property name="orientation" value="0.377007 0 -0.92621 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱3.mesh"/>
+    <Property name="position" value="-4900 -613.085 -200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱2.mesh"/>
+    <Property name="position" value="-4300 -529.581 0"/>
+    <Property name="orientation" value="0.870087 0 -0.492898 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱3.mesh"/>
+    <Property name="position" value="-5100 -500 1800"/>
+    <Property name="orientation" value="0.471397 0 0.881921 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/蛛丝树根1.mesh"/>
+    <Property name="position" value="-4628.06 -1007.78 -1840.63"/>
+    <Property name="orientation" value="0.999699 0 -0.0245413 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/蛛丝树根1.mesh"/>
+    <Property name="position" value="-5556.98 -400 2725.79"/>
+    <Property name="orientation" value="0.948709 -0.0206754 0.0281099 -0.314216"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/蛛丝树根1.mesh"/>
+    <Property name="position" value="-2300 -500 5200"/>
+    <Property name="orientation" value="0.503538 0 0.863973 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/蛛丝树根1.mesh"/>
+    <Property name="position" value="-5100 -500 5100"/>
+    <Property name="orientation" value="0.745265 -0.203785 0.587723 -0.240064"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/蛛丝树根1.mesh"/>
+    <Property name="position" value="4500 -400 3300"/>
+    <Property name="orientation" value="-0.287348 0 0.957826 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/蛛丝树根1.mesh"/>
+    <Property name="position" value="565 -1000 4793"/>
+    <Property name="orientation" value="0.917861 -0.00365198 0.0084475 -0.396793"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/蛛丝树根1.mesh"/>
+    <Property name="position" value="2196.59 -1000 4699.31"/>
+    <Property name="orientation" value="0.792106 0 -0.610382 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/蛛丝树根1.mesh"/>
+    <Property name="position" value="519.059 -1200 -2784.02"/>
+    <Property name="orientation" value="0.21311 0 0.977027 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/蛛丝树根1.mesh"/>
+    <Property name="position" value="-1582.53 -1600 -1925.63"/>
+    <Property name="orientation" value="0.698376 0 0.71573 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网3.mesh"/>
+    <Property name="position" value="-3441.87 -1000 -3919.43"/>
+    <Property name="orientation" value="0.862424 0 0.506187 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网3.mesh"/>
+    <Property name="position" value="1051.48 -1000 -2352.28"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网3.mesh"/>
+    <Property name="position" value="2588.84 -500 -1478.3"/>
+    <Property name="orientation" value="0.970031 0 -0.24298 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网3.mesh"/>
+    <Property name="position" value="5031.57 -400 3117.04"/>
+    <Property name="orientation" value="0.636762 0 0.77106 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网3.mesh"/>
+    <Property name="position" value="-1589.13 -500 4662.62"/>
+    <Property name="orientation" value="0.662416 0 0.749136 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网3.mesh"/>
+    <Property name="position" value="-4668.83 -500 4713.67"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网3.mesh"/>
+    <Property name="position" value="-5222.98 -1000 -1921.06"/>
+    <Property name="orientation" value="0.795837 0 -0.605511 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网3.mesh"/>
+    <Property name="position" value="-3284.57 -500 311.716"/>
+    <Property name="orientation" value="0.947585 0 -0.319502 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="-119.158 -1500 -2790.6"/>
+    <Property name="orientation" value="0.903223 0 -0.429165 0"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="-4888.21 -1000 -3501.71"/>
+    <Property name="orientation" value="0.97675 0 0.214365 0"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="-5025.19 -500 2811.43"/>
+    <Property name="orientation" value="0.961768 0 0.273856 0"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="-1925.93 -500 4523.23"/>
+    <Property name="orientation" value="0.80579 0 -0.592196 0"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="-1129.35 -1198.55 -168.989"/>
+    <Property name="orientation" value="0.976028 -0.0425646 -0.210033 -0.0379234"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="2430.66 -1202.81 4597.19"/>
+    <Property name="orientation" value="0.949122 0 0.314901 0"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="1515.61 -1198.6 4990.98"/>
+    <Property name="orientation" value="0.798462 0 -0.602039 0"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/蛛丝树根3.mesh"/>
+    <Property name="position" value="-4268.9 -502.699 2721.93"/>
+    <Property name="orientation" value="0.88502 0.0692068 0.438696 0.139617"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/蛛丝树根3.mesh"/>
+    <Property name="position" value="-3839.65 -1000 -4832.6"/>
+    <Property name="orientation" value="0.94236 -0.239124 -0.226852 0.0575638"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/蛛丝树根3.mesh"/>
+    <Property name="position" value="355.163 -895.7 -4366.02"/>
+    <Property name="orientation" value="0.55557 0 -0.831469 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/蛛丝树根3.mesh"/>
+    <Property name="position" value="300 -1103.09 4000"/>
+    <Property name="orientation" value="0.730805 -0.0181771 0.662363 0.163908"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/蛛丝树根1.mesh"/>
+    <Property name="position" value="-5000 -400 -4900"/>
+    <Property name="orientation" value="0.503538 0 -0.863973 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="-2380.94 -500 2144.62"/>
+    <Property name="orientation" value="0.930294 0 0.366807 0"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="-3503.42 -500 3270.09"/>
+    <Property name="orientation" value="0.999564 0 -0.029391 0"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="-4860.57 -500 4558.49"/>
+    <Property name="orientation" value="-0.536502 0 -0.843895 0"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="-542.531 -1500.74 -1520.81"/>
+    <Property name="orientation" value="-0.315374 0 -0.948964 0"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="5038.09 5.26327 -1720.6"/>
+    <Property name="orientation" value="0.996918 0 -0.0784017 0"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="4582.81 -202.738 -3245.56"/>
+    <Property name="orientation" value="0.800305 0 -0.599587 0"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="-4192.1 -1000 -2300.92"/>
+    <Property name="orientation" value="0.935634 0 -0.352961 0"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="-3525.25 -500 299.584"/>
+    <Property name="orientation" value="0.80579 0 -0.592196 0"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="-5771.47 -541.222 274.644"/>
+    <Property name="orientation" value="0.884195 0 0.467111 0"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="-5193.33 -599 5090.4"/>
+    <Property name="orientation" value="0.794753 0 -0.606927 0"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="-2925.98 -500 5422.04"/>
+    <Property name="orientation" value="0.80579 0 -0.592196 0"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="1544.64 -1231 4552.85"/>
+    <Property name="orientation" value="0.988525 0 0.151034 0"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="1693.62 -571.169 -789.057"/>
+    <Property name="orientation" value="0.857064 0 0.515202 0"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="-371.027 -1504.35 -1930.22"/>
+    <Property name="orientation" value="0.604089 0 -0.796913 0"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="-3780.65 -1000 -3839.61"/>
+    <Property name="orientation" value="0.98758 0 0.157097 0"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/蛛丝树根1.mesh"/>
+    <Property name="position" value="3745.52 -489.875 197.38"/>
+    <Property name="orientation" value="0.167938 0 0.985797 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="3809.74 -505.966 896.266"/>
+    <Property name="orientation" value="0.993357 0 -0.115042 0"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="1573.3 -591.448 -826.329"/>
+    <Property name="orientation" value="0.80579 0 -0.592196 0"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱5.mesh"/>
+    <Property name="position" value="4755.94 -1000 5431.8"/>
+    <Property name="orientation" value="0.966189 0 -0.257831 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网3.mesh"/>
+    <Property name="position" value="4501.74 -1000 5171.63"/>
+    <Property name="orientation" value="0.296151 0 0.955141 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="4268.47 -1000 5450.77"/>
+    <Property name="orientation" value="0.735607 0 -0.677404 0"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="-1756.14 -1692.56 -1883.55"/>
+    <Property name="orientation" value="0.591793 0 -0.806085 0"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网3.mesh"/>
+    <Property name="position" value="5177.49 0 -1810.06"/>
+    <Property name="orientation" value="0.761202 0 0.648514 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱1.mesh"/>
+    <Property name="position" value="-3442.06 -500 5654.13"/>
+    <Property name="orientation" value="0.134581 0 -0.990903 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱3.mesh"/>
+    <Property name="position" value="-63.6868 -1000 1898.19"/>
+    <Property name="orientation" value="0.999322 0 0.0368072 0"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱3.mesh"/>
+    <Property name="position" value="873.065 -643.356 537.571"/>
+    <Property name="orientation" value="0.116319 0 -0.993212 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱3.mesh"/>
+    <Property name="position" value="-2721.76 -1371.46 -2495.37"/>
+    <Property name="orientation" value="0.503538 0 -0.863973 0"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱3.mesh"/>
+    <Property name="position" value="-1744.99 -1426.6 -1310.54"/>
+    <Property name="orientation" value="-0.0857973 0 -0.996312 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱3.mesh"/>
+    <Property name="position" value="-2177.76 -1430.28 -1424.6"/>
+    <Property name="orientation" value="0.863973 0 -0.503538 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱3.mesh"/>
+    <Property name="position" value="-687.696 -1080.84 832.878"/>
+    <Property name="orientation" value="-0.225084 0 -0.974339 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱3.mesh"/>
+    <Property name="position" value="-1460.31 -1114.19 189.718"/>
+    <Property name="orientation" value="0.951435 0 -0.30785 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱3.mesh"/>
+    <Property name="position" value="-3507.96 -870.555 -1725"/>
+    <Property name="orientation" value="0.995185 0 -0.0980171 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱2.mesh"/>
+    <Property name="position" value="-3156.21 -993.969 -1971.58"/>
+    <Property name="orientation" value="0.761202 0 0.648514 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱2.mesh"/>
+    <Property name="position" value="-3515.29 -500 5439.13"/>
+    <Property name="orientation" value="0.851355 0 0.52459 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/枯枝2.mesh"/>
+    <Property name="position" value="-1772.76 -603.989 2145.56"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/枯枝2.mesh"/>
+    <Property name="position" value="-4511.88 -177.892 -291.058"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/枯枝2.mesh"/>
+    <Property name="position" value="-5345.45 -500 2872.61"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/枯枝2.mesh"/>
+    <Property name="position" value="-3277.33 -500 5545.91"/>
+    <Property name="orientation" value="0.39681 0 0.917901 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/枯枝2.mesh"/>
+    <Property name="position" value="-2287.94 -500 3963.09"/>
+    <Property name="orientation" value="0.726359 0 0.687316 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/枯枝2.mesh"/>
+    <Property name="position" value="425.639 -1000 3145.51"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/枯枝2.mesh"/>
+    <Property name="position" value="-1284.68 -1182.71 608.338"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/枯枝2.mesh"/>
+    <Property name="position" value="-928.34 -1500 -3034.04"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/枯枝2.mesh"/>
+    <Property name="position" value="-3407.12 -1019.74 -3645.87"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/枯枝2.mesh"/>
+    <Property name="position" value="-3756.23 -905.943 -5271.33"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/枯枝2.mesh"/>
+    <Property name="position" value="-5289.48 -1000 -2643.89"/>
+    <Property name="orientation" value="0.77106 0 0.636762 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/枯枝2.mesh"/>
+    <Property name="position" value="-3172.13 -500 -4.79399"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/枯枝2.mesh"/>
+    <Property name="position" value="2604.76 -1000 5625.07"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/枯枝2.mesh"/>
+    <Property name="position" value="3305.74 -616.85 2920.72"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/枯枝2.mesh"/>
+    <Property name="position" value="4259.38 -547.154 2446.94"/>
+    <Property name="orientation" value="0.940506 0 0.339777 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/枯枝2.mesh"/>
+    <Property name="position" value="1460.89 -682.082 721.691"/>
+    <Property name="orientation" value="0.720002 0 -0.693971 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/枯枝2.mesh"/>
+    <Property name="position" value="1911.53 -1179.05 4294.32"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/枯枝2.mesh"/>
+    <Property name="position" value="-3456.38 -569.452 4747.48"/>
+    <Property name="orientation" value="0.999981 0 -0.00613589 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/枯枝2.mesh"/>
+    <Property name="position" value="-4853.93 -1000 -4941.54"/>
+    <Property name="orientation" value="0.893224 0 0.449611 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/枯枝2.mesh"/>
+    <Property name="position" value="-1440.91 -1633.01 -2898.66"/>
+    <Property name="orientation" value="0.371317 0 0.928506 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/枯枝2.mesh"/>
+    <Property name="position" value="-1454.98 -1500 -4281.87"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/枯枝2.mesh"/>
+    <Property name="position" value="200.76 -1000 5394.41"/>
+    <Property name="orientation" value="0.942573 0 -0.334 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shidenglong_02"/>
+    <Property name="position" value="-2800 -291 1200"/>
+    <Property name="orientation" value="0.996045 0 0.0888536 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="xiangluyan"/>
+    <Property name="position" value="-2800 -291 1200"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="xiangluyan_01"/>
+    <Property name="position" value="-2750 -341 1200"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.035294 0.929412 1"/>
+    <Property name="position" value="-2800 -300 1200"/>
+    <Property name="direction" value="0.0175781 -0.96826 -0.0224439"/>
+    <Property name="range" value="800"/>
+    <Property name="attenuation.linear" value="0.01"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱1.mesh"/>
+    <Property name="position" value="-2800 -500 1500"/>
+    <Property name="orientation" value="0.977027 0 0.21311 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱3.mesh"/>
+    <Property name="position" value="-2700 -500 1000"/>
+    <Property name="orientation" value="0.410843 0 -0.911706 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="-3023 -546 1965"/>
+    <Property name="orientation" value="0.977942 0 -0.208856 0"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱3.mesh"/>
+    <Property name="position" value="-2066 -1428.51 -3650"/>
+    <Property name="orientation" value="0.585797 0 0.810457 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱1.mesh"/>
+    <Property name="position" value="-1961.97 -500 -6428.56"/>
+    <Property name="orientation" value="0.851354 0 0.524589 0"/>
+    <Property name="scale" value="1.5 1.5 1.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="4145.58 -93.734 -1987.28"/>
+    <Property name="orientation" value="0.542751 0 -0.839894 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="5357.86 0 1431.14"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="1897.43 -500.008 -1133.7"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="1662.61 -1052.17 5304.66"/>
+    <Property name="orientation" value="0.685084 0 -0.728464 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="-3466.24 -500 2733.23"/>
+    <Property name="orientation" value="0.207111 0 0.978317 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="-4062.4 -1000 -1520.05"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="-1561.15 -1480.31 -3341.63"/>
+    <Property name="orientation" value="0.99729 0 -0.0735646 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="4088.73 -490.941 439.425"/>
+    <Property name="orientation" value="0.848119 0 -0.529803 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="-4184.38 -1000 -4295.82"/>
+    <Property name="orientation" value="0.841554 0 -0.540171 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/枯枝2.mesh"/>
+    <Property name="position" value="-3004.96 -500 958.066"/>
+    <Property name="orientation" value="-0.155829 0 0.987784 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/枯枝2.mesh"/>
+    <Property name="position" value="1158.67 -1200 4868.4"/>
+    <Property name="orientation" value="-0.152797 0 -0.988257 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/枯枝2.mesh"/>
+    <Property name="position" value="-3770.73 -1000 -1619.51"/>
+    <Property name="orientation" value="0.99729 0 0.0735645 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/枯枝2.mesh"/>
+    <Property name="position" value="-4204.27 -520.589 128.275"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/枯枝2.mesh"/>
+    <Property name="position" value="-4179.87 -500 1190.87"/>
+    <Property name="orientation" value="0.814037 0 -0.580814 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/枯枝2.mesh"/>
+    <Property name="position" value="-490.895 -970.633 3176.28"/>
+    <Property name="orientation" value="0.21311 0 0.977028 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="-3555.53 -500 3757.07"/>
+    <Property name="orientation" value="0.939459 0 0.34266 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="-4157.64 -544.124 3480.44"/>
+    <Property name="orientation" value="0.699292 0 -0.71483 0"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="-5436.19 -511 891.753"/>
+    <Property name="orientation" value="0.999769 -0.0214741 0 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="-4892.94 -500 2112.9"/>
+    <Property name="orientation" value="0.930767 0 0.365613 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网3.mesh"/>
+    <Property name="position" value="-4925.53 -500 2998.22"/>
+    <Property name="orientation" value="0.78265 0 0.622461 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="3210.62 -523.999 583.917"/>
+    <Property name="orientation" value="0.830475 0 -0.55705 0"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱1.mesh"/>
+    <Property name="position" value="6300 0 3100"/>
+    <Property name="orientation" value="0.620058 0 0.784557 0"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="-5180.51 -500 2343.33"/>
+    <Property name="orientation" value="-0.743008 0 0.669282 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="1976.65 -501.782 -1885.55"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁1.mesh"/>
+    <Property name="position" value="-6241.25 -500 -3154.73"/>
+    <Property name="orientation" value="0.702755 0 0.711432 0"/>
+    <Property name="scale" value="1 1.2 0.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/蜘蛛卵囊.mesh"/>
+    <Property name="position" value="3674.31 -1.7263 -5276.8"/>
+    <Property name="orientation" value="0.939459 0 0.342661 0"/>
+    <Property name="scale" value="0.833333 0.833333 0.833333"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.035294 1 0.32549"/>
+    <Property name="position" value="4300 -800 5100"/>
+    <Property name="direction" value="0.0175781 -0.96826 -0.0224439"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="0.005"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.035294 1 0.32549"/>
+    <Property name="position" value="2100 -300 300"/>
+    <Property name="direction" value="0.0175781 -0.96826 -0.0224439"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="0.005"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网3.mesh"/>
+    <Property name="position" value="-5500 -500 2300"/>
+    <Property name="orientation" value="0.889048 0 0.457813 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网3.mesh"/>
+    <Property name="position" value="4900 -200 -3000"/>
+    <Property name="orientation" value="0.738887 0 -0.673829 0"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="chuansongmen"/>
+    <Property name="position" value="-100 -1400 -1200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="500 -1133.76 3878"/>
+    <Property name="orientation" value="0.821832 0 -0.569723 0"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="900 -510.573 -4300"/>
+    <Property name="orientation" value="0.949122 0 0.3149 0"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝墙壁1.mesh"/>
+    <Property name="position" value="-6300 -500 -5200"/>
+    <Property name="orientation" value="0.702755 0 0.711432 0"/>
+    <Property name="scale" value="1 1.2 0.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/蛛丝石柱1.mesh"/>
+    <Property name="position" value="-6200 -500 -4300"/>
+    <Property name="orientation" value="0.757209 0 -0.653173 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/人骨.mesh"/>
+    <Property name="position" value="-3800 -1000 -3900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/人骨.mesh"/>
+    <Property name="position" value="-100 -1500 -2200"/>
+    <Property name="orientation" value="0.506186 0 0.862424 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/人骨.mesh"/>
+    <Property name="position" value="3100 0 -4700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/人骨.mesh"/>
+    <Property name="position" value="4700 -200 -2900"/>
+    <Property name="orientation" value="0.829761 0 0.558119 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/人骨.mesh"/>
+    <Property name="position" value="2000 -493.065 300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/人骨.mesh"/>
+    <Property name="position" value="3100 -558.544 2700"/>
+    <Property name="orientation" value="0.724247 0 -0.689541 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/人骨.mesh"/>
+    <Property name="position" value="-3700 -1003.98 -4900"/>
+    <Property name="orientation" value="0.955141 0 0.296151 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/人骨.mesh"/>
+    <Property name="position" value="-1600 -1500 -4100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/人骨.mesh"/>
+    <Property name="position" value="-700 -1500 -1600"/>
+    <Property name="orientation" value="0.605511 0 0.795837 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/人骨.mesh"/>
+    <Property name="position" value="-5000 -500 2000"/>
+    <Property name="orientation" value="0.39681 0 -0.917901 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/人骨.mesh"/>
+    <Property name="position" value="100 -1000 1400"/>
+    <Property name="orientation" value="0.870087 0 0.492898 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/人骨.mesh"/>
+    <Property name="position" value="-1900 -500 4300"/>
+    <Property name="orientation" value="0.583309 0 0.81225 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/人骨.mesh"/>
+    <Property name="position" value="4100 -1000 5100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/人骨.mesh"/>
+    <Property name="position" value="4500 -1000 5100"/>
+    <Property name="orientation" value="0.751165 0 0.660114 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/人骨.mesh"/>
+    <Property name="position" value="4100 4.76837e-007 -4800"/>
+    <Property name="orientation" value="0.33689 0 -0.941544 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/人骨.mesh"/>
+    <Property name="position" value="3400 0 -3500"/>
+    <Property name="orientation" value="0.947585 0 -0.319502 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/人骨.mesh"/>
+    <Property name="position" value="2300 0 -5200"/>
+    <Property name="orientation" value="0.595699 0 -0.803208 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/人骨.mesh"/>
+    <Property name="position" value="-5200 -1000 -3500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/人骨.mesh"/>
+    <Property name="position" value="-2900 -500 400"/>
+    <Property name="orientation" value="0.650847 0 -0.759209 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/人骨.mesh"/>
+    <Property name="position" value="-3500 -500 3300"/>
+    <Property name="orientation" value="0.903989 0 -0.427555 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/人骨.mesh"/>
+    <Property name="position" value="-5100 -500 4100"/>
+    <Property name="orientation" value="0.646176 0 -0.763188 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/人骨.mesh"/>
+    <Property name="position" value="1600 -1209.38 4900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/人骨.mesh"/>
+    <Property name="position" value="2400 -1201.17 4500"/>
+    <Property name="orientation" value="0.42478 0 0.905297 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/人骨.mesh"/>
+    <Property name="position" value="1200 -500 2200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/人骨.mesh"/>
+    <Property name="position" value="3700 -520.625 1300"/>
+    <Property name="orientation" value="0.755201 0 -0.655493 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/人骨.mesh"/>
+    <Property name="position" value="-5400 -1000 -2300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/人骨.mesh"/>
+    <Property name="position" value="-4700 -500 2600"/>
+    <Property name="orientation" value="0.993564 0 -0.113271 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/人骨.mesh"/>
+    <Property name="position" value="2219.27 -509.625 -1841.94"/>
+    <Property name="orientation" value="-0.0184068 0 0.999831 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨6.mesh"/>
+    <Property name="position" value="-100 -1500 -2400"/>
+    <Property name="orientation" value="0.610382 0 0.792106 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨6.mesh"/>
+    <Property name="position" value="-2200 -1399.47 -3600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨6.mesh"/>
+    <Property name="position" value="-5600 -715.374 -300"/>
+    <Property name="orientation" value="0.743008 0 -0.669282 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨6.mesh"/>
+    <Property name="position" value="-2500 -517.894 5400"/>
+    <Property name="orientation" value="0.839894 0 0.54275 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨6.mesh"/>
+    <Property name="position" value="4400 -439.484 1100"/>
+    <Property name="orientation" value="0.627252 0 0.778816 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨6.mesh"/>
+    <Property name="position" value="2800 -476.057 -400"/>
+    <Property name="orientation" value="0.968522 0 0.248928 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨6.mesh"/>
+    <Property name="position" value="2900 0 -2800"/>
+    <Property name="orientation" value="0.998475 0 -0.055195 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨6.mesh"/>
+    <Property name="position" value="2800 -500 2400"/>
+    <Property name="orientation" value="0.331106 0 -0.943593 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨6.mesh"/>
+    <Property name="position" value="-800 -993.025 4200"/>
+    <Property name="orientation" value="0.859302 0 -0.511469 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨6.mesh"/>
+    <Property name="position" value="400 -456.499 400"/>
+    <Property name="orientation" value="0.931884 0 -0.362756 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨6.mesh"/>
+    <Property name="position" value="-1900 -1000 400"/>
+    <Property name="orientation" value="0.873094 0 -0.48755 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨6.mesh"/>
+    <Property name="position" value="-3300 -466.008 -500"/>
+    <Property name="orientation" value="-0.113271 0 0.993564 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨6.mesh"/>
+    <Property name="position" value="-4800 -500 3700"/>
+    <Property name="orientation" value="-0.269668 0 0.962953 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨6.mesh"/>
+    <Property name="position" value="-3300 -500 3500"/>
+    <Property name="orientation" value="0.385516 0 -0.922701 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨6.mesh"/>
+    <Property name="position" value="-5100 -1000 -3400"/>
+    <Property name="orientation" value="0.186055 0 0.982539 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨6.mesh"/>
+    <Property name="position" value="-3300 -985.163 -4800"/>
+    <Property name="orientation" value="0.879012 0 0.476799 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨6.mesh"/>
+    <Property name="position" value="-3000 -1207.96 -2700"/>
+    <Property name="orientation" value="0.894599 0 -0.446869 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨6.mesh"/>
+    <Property name="position" value="100 -1500 -3500"/>
+    <Property name="orientation" value="0.799537 0 0.600616 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨6.mesh"/>
+    <Property name="position" value="-500 -1500 -1300"/>
+    <Property name="orientation" value="0.99424 0 -0.107172 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨6.mesh"/>
+    <Property name="position" value="2500 -6.20266 -4300"/>
+    <Property name="orientation" value="0.860867 0 -0.50883 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨6.mesh"/>
+    <Property name="position" value="5100 -162.966 -2700"/>
+    <Property name="orientation" value="0.662416 0 0.749136 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨6.mesh"/>
+    <Property name="position" value="3200 -555.565 1300"/>
+    <Property name="orientation" value="0.938403 0 0.345541 0"/>
+  </Object>
+
+</Scene>

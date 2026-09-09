@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<Imageset Name="FightNPCHeader6" Imagefile="Icons/FightNPCHeader6.jpg" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+	<Image Name="FightNPCHeader6_1" XPos="0" YPos="0" Width="48" Height="48" />
+	<Image Name="FightNPCHeader6_2" XPos="48" YPos="0" Width="48" Height="48" />
+	<Image Name="FightNPCHeader6_3" XPos="96" YPos="0" Width="48" Height="48" />
+	<Image Name="FightNPCHeader6_4" XPos="144" YPos="0" Width="48" Height="48" />
+	<Image Name="FightNPCHeader6_5" XPos="192" YPos="0" Width="48" Height="48" />
+	<Image Name="FightNPCHeader6_6" XPos="0" YPos="48" Width="48" Height="48" />
+	<Image Name="FightNPCHeader6_7" XPos="48" YPos="48" Width="48" Height="48" />
+	<Image Name="FightNPCHeader6_8" XPos="96" YPos="48" Width="48" Height="48" />
+	<Image Name="FightNPCHeader6_9" XPos="144" YPos="48" Width="48" Height="48" />
+	<Image Name="FightNPCHeader6_10" XPos="192" YPos="48" Width="48" Height="48" />
+	<Image Name="FightNPCHeader6_11" XPos="0" YPos="96" Width="48" Height="48" />
+	<Image Name="FightNPCHeader6_12" XPos="48" YPos="96" Width="48" Height="48" />
+	<Image Name="FightNPCHeader6_13" XPos="96" YPos="96" Width="48" Height="48" />
+	<Image Name="FightNPCHeader6_14" XPos="144" YPos="96" Width="48" Height="48" />
+	<Image Name="FightNPCHeader6_15" XPos="192" YPos="96" Width="48" Height="48" />
+	<Image Name="FightNPCHeader6_16" XPos="0" YPos="144" Width="48" Height="48" />
+	<Image Name="FightNPCHeader6_17" XPos="48" YPos="144" Width="48" Height="48" />
+	<Image Name="FightNPCHeader6_18" XPos="96" YPos="144" Width="48" Height="48" />
+	<Image Name="FightNPCHeader6_19" XPos="144" YPos="144" Width="48" Height="48" />
+	<Image Name="FightNPCHeader6_20" XPos="192" YPos="144" Width="48" Height="48" />
+	<Image Name="FightNPCHeader6_21" XPos="0" YPos="192" Width="48" Height="48" />
+	<Image Name="FightNPCHeader6_22" XPos="48" YPos="192" Width="48" Height="48" />
+	<Image Name="FightNPCHeader6_23" XPos="96" YPos="192" Width="48" Height="48" />
+	<Image Name="FightNPCHeader6_24" XPos="144" YPos="192" Width="48" Height="48" />
+	<Image Name="FightNPCHeader6_25" XPos="192" YPos="192" Width="48" Height="48" />
+</Imageset>

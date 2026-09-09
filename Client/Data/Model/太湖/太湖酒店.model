@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="太湖酒店.frame" />
+    <entity mesh="太湖酒店.mesh" node="太湖酒店" />
+    <entity mesh="太湖酒店灯笼01.mesh" />
+    <entity mesh="太湖酒店灯笼02.mesh" />
+    <entity mesh="太湖酒店灯笼03.mesh" node="太湖酒店灯笼03">
+        <offset>
+            <translate x="462.477" y="-427.646" z="-219.518" />
+        </offset>
+    </entity>
+    <entity mesh="太湖酒店灯笼04.mesh" node="太湖酒店灯笼04">
+        <offset>
+            <translate x="14.5793" y="-427.646" z="-219.518" />
+        </offset>
+    </entity>
+    <entity mesh="太湖酒店灯笼05.mesh" node="太湖酒店灯笼05">
+        <offset>
+            <translate x="367.73" y="-223.459" z="-364.189" />
+        </offset>
+    </entity>
+    <entity mesh="太湖酒店灯笼07.mesh" node="太湖酒店灯笼07">
+        <offset>
+            <translate x="99.1978" y="-223.459" z="-364.189" />
+        </offset>
+    </entity>
+    <entity mesh="太湖酒店灯笼10.mesh" node="太湖酒店灯笼10">
+        <offset>
+            <translate x="-677.148" y="-195.482" z="163.709" />
+        </offset>
+    </entity>
+    <entity mesh="太湖酒店灯笼08.mesh" node="太湖酒店灯笼08">
+        <offset>
+            <translate x="-351.711" y="-171.139" z="-256.816" />
+        </offset>
+    </entity>
+    <entity mesh="太湖酒店灯笼09.mesh" node="太湖酒店灯笼09">
+        <offset>
+            <translate x="-551.557" y="-195.482" z="-3.73936" />
+        </offset>
+    </entity>
+    <entity mesh="太湖酒店灯笼06.mesh" node="太湖酒店灯笼06">
+        <offset>
+            <translate x="501.132" y="-215.973" z="-147.579" />
+        </offset>
+    </entity>
+</model>

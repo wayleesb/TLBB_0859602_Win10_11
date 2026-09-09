@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<Imageset Name="PetBauble" Imagefile="Icons/PetBauble.jpg" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+	<Image Name="PetBauble_1" XPos="0" YPos="0" Width="64" Height="64" />
+	<Image Name="PetBauble_2" XPos="64" YPos="0" Width="64" Height="64" />
+	<Image Name="PetBauble_3" XPos="128" YPos="0" Width="64" Height="64" />
+	<Image Name="PetBauble_4" XPos="192" YPos="0" Width="64" Height="64" />
+	<Image Name="PetBauble_5" XPos="0" YPos="64" Width="64" Height="64" />
+	<Image Name="PetBauble_6" XPos="64" YPos="64" Width="64" Height="64" />
+	<Image Name="PetBauble_7" XPos="128" YPos="64" Width="64" Height="64" />
+	<Image Name="PetBauble_8" XPos="192" YPos="64" Width="64" Height="64" />
+	<Image Name="PetBauble_9" XPos="0" YPos="128" Width="64" Height="64" />
+	<Image Name="PetBauble_10" XPos="64" YPos="128" Width="64" Height="64" />
+	<Image Name="PetBauble_11" XPos="128" YPos="128" Width="64" Height="64" />
+	<Image Name="PetBauble_12" XPos="192" YPos="128" Width="64" Height="64" />
+	<Image Name="PetBauble_13" XPos="0" YPos="192" Width="64" Height="64" />
+	<Image Name="PetBauble_14" XPos="64" YPos="192" Width="64" Height="64" />
+	<Image Name="PetBauble_15" XPos="128" YPos="192" Width="64" Height="64" />
+	<Image Name="PetBauble_16" XPos="192" YPos="192" Width="64" Height="64" />
+</Imageset>
+

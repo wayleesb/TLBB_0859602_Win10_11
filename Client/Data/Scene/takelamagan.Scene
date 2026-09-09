@@ -1,0 +1,1488 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Scene formatVersion="0.1.1" name="takelamagan">
+
+  <Terrain filename="takelamagan.Terrain"/>
+
+  <Object name="#FairyEnviroment" type="Enviroment">
+    <Property name="ambient" value="0.082353 0.105882 0.156863"/>
+    <Property name="fog.mode" value="linear"/>
+    <Property name="fog.colour" value="0.168627 0.290196 0.72549"/>
+    <Property name="fog.linear start" value="3000"/>
+    <Property name="fog.linear end" value="6000"/>
+  </Object>
+
+  <Object name="#FairyMainLightOne" type="Light">
+    <Property name="type" value="directional"/>
+    <Property name="diffuse" value="0.388235 0.376471 0.807843"/>
+    <Property name="specular" value="0.411765 0.086275 0.705882"/>
+    <Property name="position" value="0 0 3"/>
+    <Property name="direction" value="0.5 -0.404271 -0.542923"/>
+    <Property name="cast shadows" value="true"/>
+  </Object>
+
+  <Object name="#FairyMainLightTwo" type="Light">
+    <Property name="type" value="directional"/>
+    <Property name="diffuse" value="0.188235 0.188235 0.780392"/>
+    <Property name="direction" value="-0.5 -0.5 1"/>
+  </Object>
+
+  <Object name="#FairySkyDome" type="SkyDome">
+    <Property name="material" value="CloudySky"/>
+  </Object>
+
+  <Object type="TerrainLiquid">
+    <Property name="material" value="haihuwater"/>
+    <Property name="position" value="4500 196.698 -3100"/>
+    <Property name="texture scale" value="0.2"/>
+    <Property name="depth texture layer.enable" value="true"/>
+    <Property name="depth texture layer.height scale" value="0.005"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域芦苇.mesh"/>
+    <Property name="position" value="5600 -118.048 -4500"/>
+    <Property name="orientation" value="-0.160181 0 0.987078 0"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="旋风"/>
+    <Property name="position" value="7772.84 718.178 5017.15"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="武夷山/武夷山石桥.mesh"/>
+    <Property name="position" value="9425.87 688.628 3221.85"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="TerrainLiquid">
+    <Property name="material" value="haihuwater"/>
+    <Property name="position" value="9500 -73.026 2100"/>
+    <Property name="texture scale" value="0.2"/>
+    <Property name="depth texture layer.enable" value="true"/>
+    <Property name="depth texture layer.height scale" value="0.005"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌断柱01.mesh"/>
+    <Property name="position" value="14140.4 911.867 3646.71"/>
+    <Property name="orientation" value="0.955256 0 0.295784 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌断柱01.mesh"/>
+    <Property name="position" value="14651.7 978.222 -232.413"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌断柱01.mesh"/>
+    <Property name="position" value="14428.6 1021.34 346.643"/>
+    <Property name="orientation" value="0.688453 0 0.725281 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域魔鬼岩山洞.mesh"/>
+    <Property name="position" value="4785.07 697.24 3254.56"/>
+    <Property name="orientation" value="0.672045 0 0.740511 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域魔鬼岩5.mesh"/>
+    <Property name="position" value="7962.95 720.498 4124.7"/>
+    <Property name="animation level" value="100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域魔鬼岩4.mesh"/>
+    <Property name="position" value="6785.02 688.846 4226.07"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域魔鬼岩2.mesh"/>
+    <Property name="position" value="7763.27 -53.3711 -300.583"/>
+    <Property name="orientation" value="0.911696 0 0.410866 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域魔鬼岩1.mesh"/>
+    <Property name="position" value="4043.23 237.814 -1002.1"/>
+    <Property name="orientation" value="0.704817 0 0.709388 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域魔鬼岩2.mesh"/>
+    <Property name="position" value="7700 55.8782 2233.97"/>
+    <Property name="orientation" value="0.106457 0 0.994316 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域魔鬼岩3.mesh"/>
+    <Property name="position" value="7400 309.066 400"/>
+    <Property name="animation level" value="100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域魔鬼岩3.mesh"/>
+    <Property name="position" value="5880.12 343.241 16.4708"/>
+    <Property name="animation level" value="100"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shedengguangzhu_02"/>
+    <Property name="position" value="9780.97 24.2474 611.594"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝石晶体蓝.mesh"/>
+    <Property name="position" value="9781.86 -57.9224 597.325"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui_lan"/>
+    <Property name="position" value="9746.11 226.48 630.262"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui_lan01"/>
+    <Property name="position" value="9773.76 193.034 645.434"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域魔鬼岩2.mesh"/>
+    <Property name="position" value="9773.15 503.004 5478.58"/>
+    <Property name="orientation" value="0.106457 0 0.994316 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域魔鬼岩2.mesh"/>
+    <Property name="position" value="10960.1 59.4393 -2174.23"/>
+    <Property name="orientation" value="0.963042 0 0.269353 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域魔鬼岩4.mesh"/>
+    <Property name="position" value="9329.92 61.823 -1704.77"/>
+    <Property name="orientation" value="0.970045 0 0.242932 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域魔鬼岩2.mesh"/>
+    <Property name="position" value="5013.19 862.774 4500"/>
+    <Property name="orientation" value="0.368947 0 0.92945 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域魔鬼岩2.mesh"/>
+    <Property name="position" value="4498.65 667.616 1459.66"/>
+    <Property name="orientation" value="0.535538 0 0.844512 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui_lan"/>
+    <Property name="position" value="15208.5 123.943 -6065.87"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝石晶体蓝.mesh"/>
+    <Property name="position" value="15244.2 -60.4587 -6098.81"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shedengguangzhu_02"/>
+    <Property name="position" value="15243.3 -78.2887 -6084.54"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui_lan01"/>
+    <Property name="position" value="15236.1 190.497 -6050.7"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域龙骨架.mesh"/>
+    <Property name="position" value="13144.9 222.764 -5349.85"/>
+    <Property name="orientation" value="0.911874 0 0.410469 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域龙骨架01.mesh"/>
+    <Property name="position" value="11912 14.7278 -6048.82"/>
+    <Property name="orientation" value="0.9171 0 -0.398659 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域龙骨架03.mesh"/>
+    <Property name="position" value="13702.8 367.75 -4292.14"/>
+    <Property name="orientation" value="0.979872 0 -0.199627 0"/>
+  </Object>
+
+  <Object type="TerrainLiquid">
+    <Property name="material" value="haihuwater"/>
+    <Property name="position" value="14600 -228.101 -5700"/>
+    <Property name="texture scale" value="0.2"/>
+    <Property name="depth texture layer.enable" value="true"/>
+    <Property name="depth texture layer.height scale" value="0.005"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域魔鬼岩6.mesh"/>
+    <Property name="position" value="11189.9 798.593 3970.15"/>
+    <Property name="animation level" value="100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域魔鬼岩4.mesh"/>
+    <Property name="position" value="13100 825.146 4629.19"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域魔鬼岩1.mesh"/>
+    <Property name="position" value="3886.27 91.7999 -5314.67"/>
+    <Property name="orientation" value="0.704817 0 0.709388 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域魔鬼岩1.mesh"/>
+    <Property name="position" value="3806.43 46.5285 -3086.59"/>
+    <Property name="orientation" value="0.757618 0 0.652697 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域魔鬼岩1.mesh"/>
+    <Property name="position" value="5448.55 -7.11365 -6175.03"/>
+    <Property name="orientation" value="0.99996 0 -0.00887555 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域魔鬼岩2.mesh"/>
+    <Property name="position" value="12157.9 100.127 344.359"/>
+    <Property name="orientation" value="-0.413311 0 0.910589 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域魔鬼岩2.mesh"/>
+    <Property name="position" value="11129.1 -196.009 1906.73"/>
+    <Property name="orientation" value="-0.264686 0 0.964336 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域魔鬼岩6.mesh"/>
+    <Property name="position" value="12649.2 577.072 -400"/>
+    <Property name="animation level" value="100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域魔鬼岩6.mesh"/>
+    <Property name="position" value="5708.88 687.06 -3400"/>
+    <Property name="animation level" value="100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域魔鬼岩3.mesh"/>
+    <Property name="position" value="9911.06 210.065 -1807.23"/>
+    <Property name="animation level" value="100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域魔鬼岩2.mesh"/>
+    <Property name="position" value="11578.5 879.137 4600"/>
+    <Property name="orientation" value="-0.264686 0 0.964336 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域魔鬼岩2.mesh"/>
+    <Property name="position" value="7921.88 385.13 5100"/>
+    <Property name="orientation" value="0.896058 0 0.44394 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/楼兰野外帐篷圆形石堆01.mesh"/>
+    <Property name="position" value="13998.5 911.867 3318.11"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/楼兰野外帐篷圆形石堆01.mesh"/>
+    <Property name="position" value="14737.6 1044.16 1043.35"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/楼兰野外帐篷圆形石堆01.mesh"/>
+    <Property name="position" value="13938.6 906.003 -16.1113"/>
+    <Property name="orientation" value="0.852939 0 0.522011 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/楼兰野外帐篷圆形石堆02.mesh"/>
+    <Property name="position" value="13906 910.659 200.034"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/楼兰野外帐篷圆形石堆02.mesh"/>
+    <Property name="position" value="14556.2 1036.11 -68.3639"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/楼兰野外帐篷圆形石堆02.mesh"/>
+    <Property name="position" value="13934.5 911.867 2168.36"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/楼兰野外帐篷圆形石堆02.mesh"/>
+    <Property name="position" value="13777 933.453 3546.97"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/楼兰野外帐篷圆形石堆03.mesh"/>
+    <Property name="position" value="13903.7 911.867 3159.38"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域残迹4.mesh"/>
+    <Property name="position" value="14381.4 533.383 -2867.14"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域残迹5.mesh"/>
+    <Property name="position" value="15013.4 369.826 -1265.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域残迹民居2.mesh"/>
+    <Property name="position" value="14417.6 982.961 1836.83"/>
+    <Property name="orientation" value="0.688967 0 -0.724792 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域野外破帐篷.mesh"/>
+    <Property name="position" value="12331.2 910.09 3834.96"/>
+    <Property name="orientation" value="0.867926 0 0.496693 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域野外破帐篷.mesh"/>
+    <Property name="position" value="13455.7 952.134 4031.64"/>
+    <Property name="orientation" value="0.966836 0 0.255397 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域沙柳.mesh"/>
+    <Property name="position" value="10834.8 830.204 4066.23"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域沙柳.mesh"/>
+    <Property name="position" value="12035.4 708.793 579.901"/>
+    <Property name="orientation" value="0.986133 0 0.165952 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域沙柳.mesh"/>
+    <Property name="position" value="10196.1 59.0672 -1619.12"/>
+    <Property name="orientation" value="0.869491 0 -0.493944 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域沙柳.mesh"/>
+    <Property name="position" value="5008.36 681.644 2680.15"/>
+    <Property name="orientation" value="0.976107 0 -0.217281 0"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.835294 0.168627 0.701961"/>
+    <Property name="position" value="5235.13 1106.6 3180.25"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="1e-005"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域魔鬼岩1.mesh"/>
+    <Property name="position" value="5174.35 279.329 -1859.79"/>
+    <Property name="orientation" value="-0.7515 0 0.659732 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域魔鬼岩3.mesh"/>
+    <Property name="position" value="5810.65 608.831 -658.824"/>
+    <Property name="orientation" value="0.925724 0 0.3782 0"/>
+    <Property name="animation level" value="100"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="旋风"/>
+    <Property name="position" value="10021.1 914.282 -4017.25"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="选人台_02"/>
+    <Property name="position" value="9805.47 21.9702 613.918"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="选人台_02"/>
+    <Property name="position" value="15246.1 91.8073 -6103.25"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域龙骨架03.mesh"/>
+    <Property name="position" value="14296 647.778 -3079.91"/>
+    <Property name="orientation" value="0.559777 0 -0.828643 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域魔鬼岩1.mesh"/>
+    <Property name="position" value="7200 1016.86 -6500"/>
+    <Property name="orientation" value="0.999864 0 0.0164535 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域野外破帐篷.mesh"/>
+    <Property name="position" value="6900 1017.79 -5600"/>
+    <Property name="orientation" value="0.867926 0 0.496693 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域野外破帐篷.mesh"/>
+    <Property name="position" value="7600 962.232 -5400"/>
+    <Property name="orientation" value="0.999281 0 -0.0378863 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域魔鬼岩2.mesh"/>
+    <Property name="position" value="8860.37 -119.914 5752.24"/>
+    <Property name="orientation" value="0.516115 0 0.856517 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="水瀑布/pubu2.mesh"/>
+    <Property name="position" value="8729.38 -86.1908 4887.59"/>
+    <Property name="orientation" value="0.955268 0 -0.295741 0"/>
+    <Property name="scale" value="0.3 0.7 0.5"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.835294 0.168627 0.701961"/>
+    <Property name="position" value="5795 1161.03 -3000"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="1e-005"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.835294 0.168627 0.701961"/>
+    <Property name="position" value="11895.6 940.356 -3297.52"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="1e-005"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝石晶体红.mesh"/>
+    <Property name="position" value="11877 603.087 -3252.73"/>
+    <Property name="orientation" value="0.980785 0 -0.19509 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝石晶体红.mesh"/>
+    <Property name="position" value="5766.84 804.403 -2981.61"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui_hong"/>
+    <Property name="position" value="11897.2 862.705 -3238.05"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui_hong01"/>
+    <Property name="position" value="11877.4 867.221 -3243.26"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui_hong01"/>
+    <Property name="position" value="5820.82 1014.69 -2977.89"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui_hong"/>
+    <Property name="position" value="5812.29 1014.69 -2963.96"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域魔鬼岩1.mesh"/>
+    <Property name="position" value="5900 208.474 -5157.6"/>
+    <Property name="orientation" value="0.658341 0 -0.752719 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌断柱01.mesh"/>
+    <Property name="position" value="15090.8 1040.56 400"/>
+    <Property name="orientation" value="0.111964 0 0.993712 0"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.835294 0.168627 0.701961"/>
+    <Property name="position" value="8628.16 356.231 2212.04"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="1e-005"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui_hong01"/>
+    <Property name="position" value="8653.98 209.891 2234.15"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui_hong"/>
+    <Property name="position" value="8645.45 209.891 2248.07"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝石晶体红.mesh"/>
+    <Property name="position" value="8600 -0.395761 2248.89"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.835294 0.168627 0.701961"/>
+    <Property name="position" value="7593.06 1011.89 3800"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="1e-005"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui_hong"/>
+    <Property name="position" value="7610.35 865.551 3836.03"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝石晶体红.mesh"/>
+    <Property name="position" value="7564.9 655.264 3818.39"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui_hong01"/>
+    <Property name="position" value="7618.88 865.551 3822.11"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域龙骨架.mesh"/>
+    <Property name="position" value="9813.76 467.599 -5279.66"/>
+    <Property name="orientation" value="0.306733 0 0.951795 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域沙柳.mesh"/>
+    <Property name="position" value="7650.54 650.689 -400"/>
+    <Property name="orientation" value="0.976107 0 -0.217281 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域沙柳.mesh"/>
+    <Property name="position" value="6003.39 878.818 -3733.07"/>
+    <Property name="orientation" value="0.976107 0 -0.217281 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/楼兰木棺.mesh"/>
+    <Property name="position" value="14839 416.534 -1877.37"/>
+    <Property name="orientation" value="0.835256 -0.117643 0.499864 0.196577"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域龙骨架01.mesh"/>
+    <Property name="position" value="9000 43.2107 -6275.73"/>
+    <Property name="orientation" value="0.847292 0 0.531128 0"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="狐仙点灯"/>
+    <Property name="position" value="9737.33 777.722 -4751.31"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="狐仙点灯"/>
+    <Property name="position" value="8756.72 138.625 -6361.55"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="狐仙点灯"/>
+    <Property name="position" value="12316.7 27.0169 -5780.88"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="狐仙点灯"/>
+    <Property name="position" value="13349.2 400.65 -5002.26"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="狐仙点灯"/>
+    <Property name="position" value="14236.4 715.707 -2972.32"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="狐仙点灯"/>
+    <Property name="position" value="13257.5 418.268 -5179.25"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="狐仙点灯"/>
+    <Property name="position" value="10726.3 0.552422 -5839.64"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域龙骨架.mesh"/>
+    <Property name="position" value="10800 -271.67 -6000"/>
+    <Property name="orientation" value="0.950985 0 0.309234 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域沙柳.mesh"/>
+    <Property name="position" value="11300 826.607 -4472.24"/>
+    <Property name="orientation" value="0.945642 0 -0.325204 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨4.mesh"/>
+    <Property name="position" value="9231.98 819.572 -2104.79"/>
+    <Property name="orientation" value="0.828947 0 0.559326 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨4.mesh"/>
+    <Property name="position" value="5700.64 847.308 -6786.15"/>
+    <Property name="orientation" value="0.828947 0 0.559326 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨5.mesh"/>
+    <Property name="position" value="11788.9 643.678 1033.63"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨7.mesh"/>
+    <Property name="position" value="14906.5 649.85 -3832.21"/>
+    <Property name="orientation" value="0.773204 0 -0.634157 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨4.mesh"/>
+    <Property name="position" value="7600 351.488 409.161"/>
+    <Property name="orientation" value="0.47896 0 0.877836 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shedengguangzhu_01"/>
+    <Property name="position" value="11879.2 706.487 -3251.96"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shedengguangzhu_01"/>
+    <Property name="position" value="5792.64 865.1 -2981.85"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shedengguangzhu_01"/>
+    <Property name="position" value="7574.87 718.325 3853.65"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shedengguangzhu_01"/>
+    <Property name="position" value="8622.84 42.5178 2266.09"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui_hong01"/>
+    <Property name="position" value="14500 1298.84 4400"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui_hong"/>
+    <Property name="position" value="14491.5 1298.84 4413.92"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shedengguangzhu_01"/>
+    <Property name="position" value="14463.2 1153.8 4385.68"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.835294 0.168627 0.701961"/>
+    <Property name="position" value="14474.2 1445.18 4377.89"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="1e-005"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝石晶体红.mesh"/>
+    <Property name="position" value="14446 1138.41 4396.28"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域魔鬼岩2.mesh"/>
+    <Property name="position" value="14600 760.423 4700"/>
+    <Property name="orientation" value="-0.946235 0 -0.323482 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌宗教类建筑02.mesh"/>
+    <Property name="position" value="15400 1214.56 1900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/人骨.mesh"/>
+    <Property name="position" value="11139 885.881 -4509.91"/>
+    <Property name="orientation" value="0.939459 0 -0.342661 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="7236.57 1290.57 -6010.47"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/坏镖箱.mesh"/>
+    <Property name="position" value="7673.88 1048.07 -5499.18"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/坏镖箱.mesh"/>
+    <Property name="position" value="7680.71 1161.92 -6366.87"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/坏镖箱.mesh"/>
+    <Property name="position" value="6900 1028.54 -5300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/坏镖车.mesh"/>
+    <Property name="position" value="7145.95 998.576 -5205.62"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="赤壁/赤壁破栅栏.mesh"/>
+    <Property name="position" value="7271.88 1170.49 -6007.67"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="7761.51 1183.8 -5212.49"/>
+    <Property name="orientation" value="0.986781 0 -0.162059 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="6902 1481.15 -5560"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.835294 0.168627 0.701961"/>
+    <Property name="position" value="7300 1187.7 -5500"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="1e-005"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="7329 1408.31 -5502"/>
+  </Object>
+
+  <Object type="Model">
+    <Property name="model name" value="赤壁/赤壁破旗.model"/>
+    <Property name="position" value="7329.16 890.099 -5512.14"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="12300 1250.51 3800"/>
+    <Property name="orientation" value="0.986781 0 -0.162059 0"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.835294 0.168627 0.701961"/>
+    <Property name="position" value="12300 1248.35 3800"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="1e-005"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="狐仙点灯"/>
+    <Property name="position" value="8700 244.347 -1200"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="狐仙点灯"/>
+    <Property name="position" value="11500 275.94 -1800"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/马骨.mesh"/>
+    <Property name="position" value="11791.1 313.072 -2106.67"/>
+    <Property name="orientation" value="0.925176 0.216663 0.296643 -0.095417"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="狐仙点灯"/>
+    <Property name="position" value="8900 80.7217 3700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域魔鬼岩7.mesh"/>
+    <Property name="position" value="11685.2 42.4851 -500"/>
+    <Property name="orientation" value="0.940242 0 0.340508 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域魔鬼岩7.mesh"/>
+    <Property name="position" value="11398.8 99.3961 -1557.98"/>
+    <Property name="orientation" value="0.462734 0 0.886497 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌断柱01.mesh"/>
+    <Property name="position" value="11633.4 123.62 -1626.98"/>
+    <Property name="orientation" value="0.693789 0.0981138 0.69124 0.176684"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌断柱01.mesh"/>
+    <Property name="position" value="12442.4 738.487 -800"/>
+    <Property name="orientation" value="0.834818 -0.0518225 -0.242644 -0.491438"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌断柱01.mesh"/>
+    <Property name="position" value="11000 158.491 -1284.25"/>
+    <Property name="orientation" value="0.323748 -0.742714 0.583883 -0.0513477"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨7.mesh"/>
+    <Property name="position" value="8326.7 -28.0189 1707.84"/>
+    <Property name="orientation" value="0.85072 0 -0.525618 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨7.mesh"/>
+    <Property name="position" value="12100 318.686 -700"/>
+    <Property name="orientation" value="0.964579 0 0 0.263795"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域沙柳.mesh"/>
+    <Property name="position" value="14400 690.275 -2655.95"/>
+    <Property name="orientation" value="0.945642 0 -0.325204 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域沙柳.mesh"/>
+    <Property name="position" value="12281.9 255.003 -1054.6"/>
+    <Property name="orientation" value="0.877334 0 -0.479877 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域沙柳.mesh"/>
+    <Property name="position" value="9600 861.55 -2340.21"/>
+    <Property name="orientation" value="0.923731 0 -0.383038 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域沙柳.mesh"/>
+    <Property name="position" value="6000 737.643 -900"/>
+    <Property name="orientation" value="0.94076 0 0.339065 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域沙柳.mesh"/>
+    <Property name="position" value="6286.4 581.276 2400"/>
+    <Property name="orientation" value="0.682542 0 -0.730843 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨5.mesh"/>
+    <Property name="position" value="7431.48 448.494 600"/>
+    <Property name="orientation" value="0.795413 0 -0.606067 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨5.mesh"/>
+    <Property name="position" value="6200 1081.41 -6198.29"/>
+    <Property name="orientation" value="0.723598 0 -0.690222 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨5.mesh"/>
+    <Property name="position" value="4100 353.573 -4400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨5.mesh"/>
+    <Property name="position" value="5641.02 853.137 -1700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨5.mesh"/>
+    <Property name="position" value="8570.95 851.767 -1835.47"/>
+    <Property name="orientation" value="0.249636 0 0.96834 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨5.mesh"/>
+    <Property name="position" value="11200 785.356 -2700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨5.mesh"/>
+    <Property name="position" value="12800 683.669 -700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨5.mesh"/>
+    <Property name="position" value="14800 908.434 -2600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="赤壁/赤壁破箱.mesh"/>
+    <Property name="position" value="12227.7 949.239 3925.75"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="赤壁/赤壁破箱.mesh"/>
+    <Property name="position" value="13049.6 943.347 4096.95"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="赤壁/赤壁破箱.mesh"/>
+    <Property name="position" value="12659 938.62 4121.45"/>
+    <Property name="orientation" value="0.902176 0 0.431368 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="赤壁/赤壁破箱.mesh"/>
+    <Property name="position" value="7884.24 922.08 -5200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="赤壁/赤壁破箱.mesh"/>
+    <Property name="position" value="7200 1100.88 -5700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="赤壁/赤壁破箱.mesh"/>
+    <Property name="position" value="6762.51 1043.09 -5500"/>
+    <Property name="orientation" value="0.915739 0 -0.401774 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="赤壁/赤壁破箱.mesh"/>
+    <Property name="position" value="12836.2 944.344 4118.6"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="赤壁/赤壁破栅栏.mesh"/>
+    <Property name="position" value="12711 974.156 4225.77"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="12671 1033.87 4101"/>
+    <Property name="orientation" value="0.986781 0 -0.162059 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨5.mesh"/>
+    <Property name="position" value="8800 421.506 4200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨4.mesh"/>
+    <Property name="position" value="10066.6 476.495 4763.84"/>
+    <Property name="orientation" value="-0.945161 -0.0722018 0.241763 -0.207361"/>
+    <Property name="scale" value="0.625 0.625 0.625"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域魔鬼岩7.mesh"/>
+    <Property name="position" value="6178.63 520.6 -100"/>
+    <Property name="orientation" value="0.940242 0 0.340508 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域龙骨架.mesh"/>
+    <Property name="position" value="13100 811.993 -6299.17"/>
+    <Property name="orientation" value="0.113712 -0.042489 0.945286 0.302812"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域龙骨架.mesh"/>
+    <Property name="position" value="4600 -84.4857 -5500"/>
+    <Property name="orientation" value="0.944387 0 0.328834 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域龙骨架.mesh"/>
+    <Property name="position" value="4600 131.169 -1438.14"/>
+    <Property name="orientation" value="0.965497 0 0.26041 0"/>
+    <Property name="scale" value="0.833333 0.833333 0.833333"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域龙骨架.mesh"/>
+    <Property name="position" value="9500 -402.532 3400"/>
+    <Property name="orientation" value="0.985193 0 0.171441 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域龙骨架01.mesh"/>
+    <Property name="position" value="9300 -285.524 4505.05"/>
+    <Property name="orientation" value="0.318311 0 0.947987 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="pubushuihua_02"/>
+    <Property name="position" value="8751.13 -77.7266 4900.53"/>
+    <Property name="orientation" value="0.108844 0 0.994057 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="pubushuihua_02"/>
+    <Property name="position" value="8715.65 -63.3351 4840.07"/>
+    <Property name="orientation" value="0.507499 0 0.861652 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="pubushuihua_02"/>
+    <Property name="position" value="8465.32 745.873 5230.14"/>
+    <Property name="orientation" value="0.150804 0 0.988562 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="pubushuihua_03"/>
+    <Property name="position" value="8486.28 677.574 5206.87"/>
+    <Property name="orientation" value="0.150804 0 0.988562 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="水瀑布/pubu2.mesh"/>
+    <Property name="position" value="8502.66 584.304 5215.18"/>
+    <Property name="orientation" value="0.958645 0 -0.284599 0"/>
+    <Property name="scale" value="0.3 0.3 0.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域魔鬼岩6.mesh"/>
+    <Property name="position" value="7973.59 972.16 4990.4"/>
+    <Property name="orientation" value="0.991105 0 -0.133081 0"/>
+    <Property name="animation level" value="100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域魔鬼岩6.mesh"/>
+    <Property name="position" value="8170.8 860.789 5390.84"/>
+    <Property name="orientation" value="0.967932 0 0.251211 0"/>
+    <Property name="animation level" value="100"/>
+  </Object>
+
+   <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨4.mesh"/>
+    <Property name="position" value="4500 891.483 369.886"/>
+    <Property name="orientation" value="-0.0701911 0 0.997533 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌石柱03.mesh"/>
+    <Property name="position" value="14406.4 1084.32 2704.12"/>
+    <Property name="orientation" value="0.977005 0 0.213216 0"/>
+    <Property name="scale" value="0.625 0.625 0.625"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌石柱03.mesh"/>
+    <Property name="position" value="15221.6 1135.11 0"/>
+    <Property name="orientation" value="0.882808 -0.12858 0.429192 0.1411"/>
+    <Property name="scale" value="0.625 0.625 0.625"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌石柱03.mesh"/>
+    <Property name="position" value="14300 1160.67 1200"/>
+    <Property name="orientation" value="0.964432 0.129905 0.221065 -0.0642174"/>
+    <Property name="scale" value="0.625 0.625 0.625"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌石柱03.mesh"/>
+    <Property name="position" value="15041.1 1181.34 3015.97"/>
+    <Property name="orientation" value="0.4752 0.222294 0.78822 0.321677"/>
+    <Property name="scale" value="0.625 0.625 0.625"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌石柱03.mesh"/>
+    <Property name="position" value="14275.2 521.412 -1830.74"/>
+    <Property name="orientation" value="0.74479 -0.299511 -0.575198 0.157243"/>
+    <Property name="scale" value="0.625 0.625 0.625"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌石柱03.mesh"/>
+    <Property name="position" value="14600 521.563 -900"/>
+    <Property name="orientation" value="0.713832 0.0934771 0.613196 0.325106"/>
+    <Property name="scale" value="0.625 0.625 0.625"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌石柱03.mesh"/>
+    <Property name="position" value="14500 481.022 -4130.86"/>
+    <Property name="orientation" value="0.588548 0.170954 0.739846 0.277505"/>
+    <Property name="scale" value="0.625 0.625 0.625"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域龙骨架.mesh"/>
+    <Property name="position" value="15345.9 -38.957 -5441"/>
+    <Property name="orientation" value="0.753025 -0.313759 0.577417 0.0331079"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域沙柳.mesh"/>
+    <Property name="position" value="14242.3 508.549 -3800"/>
+    <Property name="orientation" value="0.963936 0 -0.266126 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域沙柳.mesh"/>
+    <Property name="position" value="11288.6 756.888 -2867.95"/>
+    <Property name="orientation" value="0.993608 0 -0.112865 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨5.mesh"/>
+    <Property name="position" value="10300 770.368 -2200"/>
+    <Property name="orientation" value="-0.589101 0 0.808059 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨5.mesh"/>
+    <Property name="position" value="10784.3 148.349 1500"/>
+    <Property name="orientation" value="0.12178 0 0.992556 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨5.mesh"/>
+    <Property name="position" value="14300 1028.28 2400"/>
+    <Property name="orientation" value="0.12178 0 0.992556 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨5.mesh"/>
+    <Property name="position" value="14300 1111.61 1000"/>
+    <Property name="orientation" value="0.12178 0 0.992556 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨5.mesh"/>
+    <Property name="position" value="8300 870.555 -5200"/>
+    <Property name="orientation" value="-0.870599 0 0.49199 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨5.mesh"/>
+    <Property name="position" value="11800 754.117 -4700"/>
+    <Property name="orientation" value="-0.870599 0 0.49199 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨5.mesh"/>
+    <Property name="position" value="6300 860.798 -4400"/>
+    <Property name="orientation" value="-0.870599 0 0.49199 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域沙柳.mesh"/>
+    <Property name="position" value="5483.2 695.716 3800"/>
+    <Property name="orientation" value="0.976107 0 -0.217281 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域沙柳.mesh"/>
+    <Property name="position" value="7886.97 629.695 2600"/>
+    <Property name="orientation" value="0.809547 0 0.587049 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域沙柳.mesh"/>
+    <Property name="position" value="7276.91 446.801 613.638"/>
+    <Property name="orientation" value="0.866204 0 0.499682 0"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="狐仙点灯"/>
+    <Property name="position" value="11600 305.413 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域魔鬼岩6.mesh"/>
+    <Property name="position" value="14619.5 1030.09 3060.28"/>
+    <Property name="orientation" value="0.988316 0 0.152414 0"/>
+    <Property name="animation level" value="100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌断柱01.mesh"/>
+    <Property name="position" value="14595.2 1057.69 3583.35"/>
+    <Property name="orientation" value="-0.858461 0.15484 0.488692 -0.0156617"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/楼兰野外帐篷圆形石堆02.mesh"/>
+    <Property name="position" value="13900 919.081 44.5131"/>
+    <Property name="orientation" value="0.89792 0 0.440158 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域沙柳.mesh"/>
+    <Property name="position" value="11768.5 846.734 1800"/>
+    <Property name="orientation" value="0.986133 0 0.165952 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域沙柳.mesh"/>
+    <Property name="position" value="10845.8 759.222 2800"/>
+    <Property name="orientation" value="0.998323 0 -0.0578762 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌断柱01.mesh"/>
+    <Property name="position" value="14533.8 1052 1900"/>
+    <Property name="orientation" value="0.776804 0 0.629742 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域魔鬼岩4.mesh"/>
+    <Property name="position" value="16000 1646.13 2418"/>
+    <Property name="orientation" value="0.696088 0 -0.717956 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域魔鬼岩4.mesh"/>
+    <Property name="position" value="16000 1793.14 200"/>
+    <Property name="orientation" value="0.696088 0 -0.717956 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/马骨.mesh"/>
+    <Property name="position" value="6300 867.778 -4100"/>
+    <Property name="orientation" value="0.669645 0.14438 0.703934 -0.187621"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="选人台_01"/>
+    <Property name="position" value="5777.26 870.41 -2986.08"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="选人台_01"/>
+    <Property name="position" value="8619.97 49.2858 2283.22"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="选人台_01"/>
+    <Property name="position" value="7567.61 745.13 3855.83"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="选人台_01"/>
+    <Property name="position" value="14431.9 1219.05 4381.69"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="选人台_01"/>
+    <Property name="position" value="11880 698.988 -3246.2"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="旋风"/>
+    <Property name="position" value="13300 630.732 -2700"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="旋风"/>
+    <Property name="position" value="13100 911.867 2000"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="旋风"/>
+    <Property name="position" value="6200 509.868 1300"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="旋风"/>
+    <Property name="position" value="7200 889.878 -1800"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨4.mesh"/>
+    <Property name="position" value="8700 516.886 5100"/>
+    <Property name="orientation" value="-0.211929 0.152272 0.952293 -0.158192"/>
+    <Property name="scale" value="0.297619 0.297619 0.297619"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/坏镖车.mesh"/>
+    <Property name="position" value="12200 641.412 -4700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/坏镖车.mesh"/>
+    <Property name="position" value="14400 470.345 -1300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域魔鬼岩4.mesh"/>
+    <Property name="position" value="16010 1705.62 4586"/>
+    <Property name="orientation" value="0.696088 0 -0.717956 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域魔鬼岩4.mesh"/>
+    <Property name="position" value="14900 1721.09 5600"/>
+    <Property name="orientation" value="0.0152154 0 -0.999884 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域魔鬼岩4.mesh"/>
+    <Property name="position" value="12800 1652.74 5600"/>
+    <Property name="orientation" value="-0.0307985 0 -0.999525 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域魔鬼岩4.mesh"/>
+    <Property name="position" value="10600 1558.99 5700"/>
+    <Property name="orientation" value="-0.0307985 0 -0.999525 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域魔鬼岩4.mesh"/>
+    <Property name="position" value="8400 1452.2 5901"/>
+    <Property name="orientation" value="0.0244175 0 -0.999701 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域魔鬼岩4.mesh"/>
+    <Property name="position" value="6249.1 1501.06 5600"/>
+    <Property name="orientation" value="-0.0307985 0 -0.999525 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域魔鬼岩4.mesh"/>
+    <Property name="position" value="4067.08 1462.35 5600"/>
+    <Property name="orientation" value="-0.0307985 0 -0.999525 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域魔鬼岩4.mesh"/>
+    <Property name="position" value="3314.13 1461.97 4300"/>
+    <Property name="orientation" value="-0.717956 0 -0.696088 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨7.mesh"/>
+    <Property name="position" value="7400 1249.72 4900"/>
+    <Property name="orientation" value="0.901566 -0.0528092 -0.413694 0.115088"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨7.mesh"/>
+    <Property name="position" value="4400 1447.93 4667.08"/>
+    <Property name="orientation" value="0.989848 -0.00823883 -0.064541 0.126357"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌断柱01.mesh"/>
+    <Property name="position" value="13978.6 711.447 -1000"/>
+    <Property name="orientation" value="-0.572012 0 0.820245 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/高昌断柱01.mesh"/>
+    <Property name="position" value="13870.9 696.718 -1582.49"/>
+    <Property name="orientation" value="0.688453 0 0.725281 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域魔鬼岩4.mesh"/>
+    <Property name="position" value="15900 1588.12 -2100"/>
+    <Property name="orientation" value="0.696088 0 -0.717956 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域魔鬼岩4.mesh"/>
+    <Property name="position" value="15945.5 1413.79 -4300"/>
+    <Property name="orientation" value="0.696088 0 -0.717956 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="赤壁/赤壁破箱.mesh"/>
+    <Property name="position" value="12800 929.975 3700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="赤壁/赤壁破箱.mesh"/>
+    <Property name="position" value="13100 935.13 3600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="赤壁/赤壁破箱.mesh"/>
+    <Property name="position" value="12641.1 895.37 3600"/>
+    <Property name="orientation" value="0.836548 0 0.547894 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨5.mesh"/>
+    <Property name="position" value="8000 722.298 2800"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域魔鬼岩7.mesh"/>
+    <Property name="position" value="8000 784.935 3700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨7.mesh"/>
+    <Property name="position" value="10600 718.497 3800"/>
+    <Property name="orientation" value="0.989848 -0.00823883 -0.064541 0.126357"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="西域/西域魔鬼岩3.mesh"/>
+    <Property name="position" value="11100 779.288 2400"/>
+    <Property name="animation level" value="100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/胡杨5.mesh"/>
+    <Property name="position" value="11200 830.932 2000"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="sunny02"/>
+    <Property name="position" value="7543.8 898.363 3222.3"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="sunny04"/>
+    <Property name="position" value="6400 1040.68 2900"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="chuansongdian"/>
+    <Property name="position" value="6602.92 1078.18 -5273.15"/>
+  </Object>
+
+</Scene>

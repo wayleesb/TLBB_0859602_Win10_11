@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame1" Name="ConfraternityList_Frame">
+        <Property Name="UnifiedPosition" Value="{{0.5,-280},{0.12,0}}" />
+        <Property Name="AbsoluteSize" Value="w:665 h:344" />
+        <Window Type="TLBB_DragTitle" Name="ConfraternityList_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="ConfraternityList_Frame" />
+            <Window Type="TLBB_SimpleText" Name="ConfraternityList_PageHeader">
+                <Property Name="Position" Value="x:0.0 y:0.0" />
+                <Property Name="Size" Value="w:1.0 h:1.0" />
+                <Property Name="Font" Value="YouYuan11.25" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Property Name="Text" Value="#{INTERFACE_XML_16}" />
+            </Window>
+        </Window>
+        <Window Type="TLBB_ButtonHelp" Name="ConfraternityList_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Property Name="Text" Value="TLBB_ButtonHelp" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*ConfraternityList&quot;);' />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="ConfraternityList_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Property Name="Text" Value="TLBB_ButtonClose" />
+            <Event Name="Clicked" Function="this:Hide();" />
+        </Window>
+        <Window Type="DefaultWindow" Name="ConfraternityList_Function_Frame">
+            <Property Name="AbsolutePosition" Value="x:6.000000 y:36.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-12.000000},{1.000000,-55.000000}" />
+            <Window Type="TLBB_Frame_Lace1" Name="ValidCity_Info_Frame">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,0.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-1.000000},{0.000000,21.000000}" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="ValidCity_Info">
+                <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,1.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-10.000000},{0.000000,19.000000}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_461}" />
+            </Window>
+            <Window Type="TLBB_MultiColumnList" Name="ConfraternityList_List">
+                <Property Name="UnifiedPosition" Value="{{0.000000,2.000000},{0.000000,22.000000}" />
+                <Property Name="AbsoluteSize" Value="w:450 h:243" />
+                <Property Name="ForceHorzScrollbar" Value="False" />
+                <Property Name="ForceVertScrollbar" Value="True" />
+                <Property Name="SortSettingEnabled" Value="False" />
+                <Property Name="SelectionMode" Value="RowSingle" />
+                <Property Name="ColumnHeader" Value="text:ID width:0.10 id:0" />
+                <Property Name="ColumnHeader" Value="text:#{INTERFACE_XML_1022} width:0.41 id:1" />
+                <Property Name="ColumnHeader" Value="text:#{INTERFACE_XML_1156} width:0.12 id:2" />
+                <Property Name="ColumnHeader" Value="text:#{INTERFACE_XML_1179} width:0.15 id:3" />
+                <Property Name="ColumnHeader" Value="text:#{BZJM_81215_1} width:0.22 id:4" />
+                <Property Name="ColumnsSizable" Value="False" />
+                <Property Name="ColumnsAdjust" Value="True" />
+                <Property Name="ColumnsMovable" Value="False" />
+                <Event Name="SelectionChanged" Function="Guild_List_Selected();" />
+            </Window>
+            <Window Type="TLBB_Frame_Lace1" Name="ConfraternityList_Bk">
+                <Property Name="UnifiedPosition" Value="{{0.5,121.500000},{0.000000,22.000000}" />
+                 <Property Name="AbsoluteSize" Value="w:203 h:125" />
+              <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="ConfraternityList_Info1">
+                <Property Name="UnifiedPosition" Value="{{0.5000000,126.500000},{0.000000,23.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.5000000,-65.000000},{0.000000,18.000000}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_461}" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="ConfraternityList_Info2">
+                <Property Name="UnifiedPosition" Value="{{0.5000000,126.500000},{0.000000,57.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.5000000,-65.000000},{0.000000,18.000000}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_229}" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="ConfraternityList_Info3">
+                <Property Name="UnifiedPosition" Value="{{0.5000000,126.500000},{0.000000,75.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.5000000,-145.000000},{0.000000,18.000000}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_179}" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="ConfraternityList_Info4">
+                <Property Name="UnifiedPosition" Value="{{0.5000000,126.500000},{0.000000,93.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.5000000,-145.000000},{0.000000,18.000000}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_134}" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="ConfraternityList_OfficialPosition" >
+              <Property Name="UnifiedPosition" Value="{{0.500000,250.500000},{1.000000,-216.000000}" />
+              <Property Name="UnifiedSize" Value="{{0.0,65.000000},{0.000000,20.000000}" />
+              <Property Name="Text" Value="#{INTERFACE_XML_1136}" />
+              <Event Name="Clicked" Function="Guild_List_CheckOfficial();" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="ConfraternityList_Info5">
+                <Property Name="UnifiedPosition" Value="{{0.5000000,126.500000},{0.000000,111.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.5000000,-65.000000},{0.000000,18.000000}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_565}" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="ConfraternityList_Info6">
+                <Property Name="UnifiedPosition" Value="{{0.5000000,126.500000},{0.000000,129.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.5000000,-65.000000},{0.000000,18.000000}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_181}" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="ConfraternityList_Info7">
+                <Property Name="UnifiedPosition" Value="{{0.5000000,126.500000},{0.000000,40.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.5,-65.000000},{0.000000,18.000000}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="TextColor" Value="FFFFF263" />
+              <Property Name="Text" Value="#{TM_20080331_03}" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="ConfraternityList_Tenet_Text">
+                <Property Name="UnifiedPosition" Value="{{0.5000000,126.500000},{0.000000,146.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.5000000,-32.000000},{0.000000,18.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_132}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="ConfraternityList_Tenet">
+                <Property Name="UnifiedPosition" Value="{{0.5000000,121.500000},{0.000000,164.000000}" />
+              <Property Name="AbsoluteSize" Value="w:203 h:99" />
+              <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="TextColor" Value="FFFFF263" />
+            </Window>
+            <Window Type="TLBB_Frame_Lace5" Name="ConfraternityList_Blank">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.5000000,0.000000},{0.000000,20.000000}" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="ConfraternityList_Info8" >
+                <Property Name="UnifiedPosition" Value="{{0.500000,0.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,100.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_160}" />
+                <Event Name="Clicked" Function="Guild_List_CheckDetail();" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="ConfraternityList_PageUp">
+                <Property Name="UnifiedPosition" Value="{{0.25,-60.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,60.000000},{0.000000,20.000000}" />
+                <Event Name="Clicked" Function="PageUp();" />
+                <Property Name="Text" Value="#{INTERFACE_XML_499}" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="ConfraternityList_PageDown">
+                <Property Name="UnifiedPosition" Value="{{0.25,0.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,60.000000},{0.000000,20.000000}" />
+                <Event Name="Clicked" Function="PageDown();" />
+                <Property Name="Text" Value="#{INTERFACE_XML_325}" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="ConfraternityList_Join">
+                <Property Name="UnifiedPosition" Value="{{0.500000,99.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,97.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_623}" />
+                <Event Name="Clicked" Function="Guild_List_Join();" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="ConfraternityList_Cancel">
+                <Property Name="UnifiedPosition" Value="{{0.85000000,10.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,68.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_542}" />
+                <Event Name="Clicked" Function="this:Hide();" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

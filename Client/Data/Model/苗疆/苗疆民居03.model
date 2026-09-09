@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="苗疆民居03.frame" />
+    <entity mesh="苗疆民居03.mesh" node="苗疆民居03" />
+    <entity mesh="苗疆民居03灯笼.mesh" />
+</model>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="大理派门.frame" />
+    <entity mesh="大理派门铃3.mesh" node="大理派门铃3">
+        <offset>
+            <translate x="328.92" y="-203.887" z="323.357" />
+        </offset>
+    </entity>
+    <entity mesh="大理派门铃2.mesh" node="大理派门铃2">
+        <offset>
+            <translate x="-528.855" y="-203.887" z="323.357" />
+        </offset>
+    </entity>
+    <entity mesh="大理派门铃1.mesh" node="大理派门铃1">
+        <offset>
+            <translate x="-528.855" y="-203.887" z="-422.774" />
+        </offset>
+    </entity>
+    <entity mesh="大理派门铃4.mesh" node="大理派门铃4">
+        <offset>
+            <translate x="328.92" y="-203.887" z="-422.774" />
+        </offset>
+    </entity>
+    <entity mesh="大理派门.mesh" node="大理派门" />
+</model>

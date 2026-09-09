@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="镜湖大晒鱼架.frame" />
+    <entity mesh="镜湖大晒鱼架.mesh" node="镜湖大晒鱼架" />
+    <entity mesh="镜湖大晒鱼架鱼.mesh" node="镜湖大晒鱼架鱼">
+        <offset>
+            <translate x="40.9586" y="-470.717" z="3.16528" />
+        </offset>
+    </entity>
+    <entity mesh="镜湖大晒鱼架小鱼.mesh" node="镜湖大晒鱼架小鱼">
+        <offset>
+            <translate x="-109.387" y="-491.328" z="4.15603" />
+        </offset>
+    </entity>
+</model>

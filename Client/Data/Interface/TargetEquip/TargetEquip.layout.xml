@@ -1,0 +1,254 @@
+<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame3" Name="TargetEquip_Frame">
+        <Property Name="UnifiedPosition" Value="{{0.46,0},{0.12,0}}" />
+        <Property Name="AbsoluteSize" Value="w:360 h:402" />
+        <Event Name="Hidden" Function="TargetEquip_CloseUI();" />
+        <Window Type="TLBB_DragTitle" Name="TargetEquip_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:108.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-133.000000},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="TargetEquip_Frame" />
+            <Window Type="TLBB_SimpleText" Name="TargetEquip_PageHeader">
+                <Property Name="Position" Value="x:0.0 y:0.0" />
+                <Property Name="Size" Value="w:1.0 h:1.0" />
+                <Property Name="Font" Value="YouYuan11.25" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Property Name="Text" Value="" />
+            </Window>
+        </Window>
+        <Window Type="TLBB_ButtonHelp" Name="TargetEquip_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,88.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*TargetEquip&quot;);' />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="TargetEquip_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function="TargetEquip_CloseUI();" />
+        </Window>
+        <Window Type="DefaultWindow" Name="TargetEquip_Frame_Client">
+            <Property Name="AbsolutePosition" Value="x:10.000000 y:35.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-17.000000},{1.000000,-60.000000}" />
+            <Window Type="TLBB_ActionButton" Name="TargetEquip_Equip1">
+                <Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+                <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="TargetEquip_Equip3">
+                <Property Name="AbsolutePosition" Value="x:0.000000 y:34.000000" />
+                <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="TargetEquip_Equip8">
+                <Property Name="AbsolutePosition" Value="x:0.000000 y:68.000000" />
+                <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="TargetEquip_Equip2">
+                <Property Name="AbsolutePosition" Value="x:0.000000 y:102.000000" />
+                <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="TargetEquip_Equip7">
+                <Property Name="AbsolutePosition" Value="x:0.000000 y:136.000000" />
+                <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="TargetEquip_Equip4">
+                <Property Name="AbsolutePosition" Value="x:0.000000 y:170.000000" />
+                <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="TargetEquip_Equip6">
+                <Property Name="AbsolutePosition" Value="x:0.000000 y:204.000000" />
+                <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="TargetEquip_Equip5">
+                <Property Name="AbsolutePosition" Value="x:0.000000 y:238.000000" />
+                <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="TargetEquip_Equip9">
+                <Property Name="AbsolutePosition" Value="x:0.000000 y:272.000000" />
+                <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="TargetEquip_Equip10">
+                <Property Name="AbsolutePosition" Value="x:0.000000 y:306.000000" />
+                <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="TargetEquip_Equip11">
+                <Property Name="AbsolutePosition" Value="x:34.000000 y:0.000000" />
+                <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="TargetEquip_Equip12">
+                <Property Name="AbsolutePosition" Value="x:68.000000 y:0.000000" />
+                <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="TargetEquip_Equip13">
+                <Property Name="AbsolutePosition" Value="x:102.000000 y:0.000000" />
+                <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="TargetEquip_Equip14">
+                <Property Name="AbsolutePosition" Value="x:136.000000 y:0.000000" />
+                <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="TargetEquip_Equip15">
+                <Property Name="AbsolutePosition" Value="x:170.000000 y:0.000000" />
+                <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+            </Window>
+            <Window Type="TLBB_FramePlayerOther" Name="TargetEquip_FakeObject_Frame">
+                <Property Name="AbsolutePosition" Value="x:35.0 y:35.0" />
+                <Property Name="Size" Value="w:0.5 h:0.895" />
+                <Window Type="TLBB_MeshWindow" Name="TargetEquip_FakeObject">
+                    <Property Name="Position" Value="x:0.05 y:0.05" />
+                    <Property Name="Size" Value="w:0.9 h:0.9" />
+                    <Property Name="MouseHollow" Value="True" />
+                    <Property Name="ShowControl" Value="TargetEquip_Frame" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="TargetEquip_Level">
+                    <Property Name="Position" Value="x:0.02 y:0.02" />
+                    <Property Name="UnifiedSize" Value="{{0.300000,0.000000},{0.000000,20.000000}" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="HorzFormatting" Value="HorzCentred" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                    <Property Name="AlwaysOnTop" Value="true" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_114}" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="TargetEquip_MenPai">
+                    <Property Name="Position" Value="x:0.55 y:0.02" />
+                    <Property Name="UnifiedSize" Value="{{0.4,0.000000},{0.000000,20.000000}" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="HorzFormatting" Value="HorzCentred" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                    <Property Name="AlwaysOnTop" Value="true" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_454}" />
+                </Window>
+                <Window Type="TLBB_ButtonTurnLeft" Name="TargetEquip_Model_TurnLeft">
+                    <Property Name="Position" Value="x:0.15 y:0.9" />
+                    <Property Name="AbsoluteSize" Value="w:25.000000 h:25.000000" />
+                    <Event Name="MouseButtonDown" Function="TargetEquip_Modle_TurnLeft(1);" />
+                    <Event Name="MouseButtonUp" Function="TargetEquip_Modle_TurnLeft(0);" />
+                    <Event Name="CaptureLost" Function="TargetEquip_Modle_TurnLeft(0);" />
+                </Window>
+                <Window Type="TLBB_ButtonTurnRight" Name="TargetEquip_Model_TurnRight">
+                    <Property Name="Position" Value="x:0.72 y:0.9" />
+                    <Property Name="AbsoluteSize" Value="w:25.000000 h:25.000000" />
+                    <Event Name="MouseButtonDown" Function="TargetEquip_Modle_TurnRight(1);" />
+                    <Event Name="MouseButtonUp" Function="TargetEquip_Modle_TurnRight(0);" />
+                    <Event Name="CaptureLost" Function="TargetEquip_Modle_TurnRight(0);" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="TargetEquip_Confraternity_Text">
+                <Property Name="UnifiedPosition" Value="{{0.5,44.000000},{0.000000,0.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.5,-38.000000},{0.000000,20.000000}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="Text" Value="#{INTERFACE_XML_124}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="TargetEquip_Confraternity">
+                <Property Name="UnifiedPosition" Value="{{0.5,38.000000},{0.000000,20.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.5,-40.000000},{0.000000,20.000000}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="Text" Value="#{INTERFACE_XML_124}" />
+                <Property Name="TextColor" Value="FFFDF7A7" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="TargetEquip_Agname_Text">
+                <Property Name="UnifiedPosition" Value="{{0.5,44.000000},{0.000000,40.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.5,-38.000000},{0.000000,20.000000}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="Text" Value="#{INTERFACE_XML_173}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="TargetEquip_Agname">
+                <Property Name="UnifiedPosition" Value="{{0.5,38.000000},{0.000000,62.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.5,-38.000000},{0.000000,33.000000}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="Text" Value="" />
+                <Property Name="TextColor" Value="FFFDF7A7" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="TargetEquip_Spouse_Text">
+                <Property Name="UnifiedPosition" Value="{{0.5,44.000000},{0.000000,97.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.5,-38.000000},{0.000000,20.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_485}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="TargetEquip_Spouse">
+                <Property Name="UnifiedPosition" Value="{{0.5,38.000000},{0.000000,118.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.5,-38.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_487}" />
+                <Property Name="TextColor" Value="FFFDF7A7" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="TargetEquip_Message_Text">
+                <Property Name="UnifiedPosition" Value="{{0.5,44.000000},{0.000000,138.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.5,-38.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_282}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="TargetEquip_Message">
+                <Property Name="UnifiedPosition" Value="{{0.5,38.000000},{0.000000,160.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.5,-38.000000},{0.000000,155.000000}" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="TopAligned" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Property Name="TextColor" Value="FFFDF7A7" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="TargetEquip_Chat">
+                <Property Name="UnifiedPosition" Value="{{0.5,38.000000},{1.000000,-24.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.17,0.000000},{0.0,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_665}" />
+                <Event Name="Clicked" Function="Set_To_Private();" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="TargetEquip_AddFriend">
+                <Property Name="UnifiedPosition" Value="{{0.8,0.000000},{1.000000,-24.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.2,0.000000},{0.0,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_356}" />
+                <Event Name="Clicked" Function="Set_To_Friend();" />
+            </Window>
+        </Window>
+        <Window Type="DefaultWindow" Name="TargetEquip_Checkbox_Frame">
+            <Property Name="UnifiedPosition" Value="{{0.0,8.000000},{1.000000,-25.000000}" />
+            <Property Name="UnifiedSize" Value="{{0.96,0.000000},{0.000000,24.000000}" />
+            <Window Type="TLBB_ButtonPageDown" Name="TargetEquip_SelfEquip">
+                <Property Name="AbsolutePosition" Value="x:0.0 y:0.0" />
+                <Property Name="AbsoluteSize" Value="w:42.000000 h:24.000000" />
+                <Property Name="CheckMode" Value="1" />
+                <Property Name="Text" Value="#{INTERFACE_XML_6}" />
+                <Property Name="Selected" Value="true" />
+                <Property Name="HorzLabelFormatting" Value="WordWrapCentreAligned" />
+            </Window>
+            <Window Type="TLBB_ButtonPageDown" Name="TargetEquip_TargetData">
+                <Property Name="AbsolutePosition" Value="x:42.0 y:0.0" />
+                <Property Name="AbsoluteSize" Value="w:42.000000 h:24.000000" />
+                <Property Name="CheckMode" Value="1" />
+                <Property Name="Text" Value="#{INTERFACE_XML_14}" />
+                <Event Name="Clicked" Function="TargetEquip_TargetData_Down();" />
+            </Window>
+            <Window Type="TLBB_ButtonPageDown" Name="TargetEquip_Blog">
+                <Property Name="AbsolutePosition" Value="x:84.0 y:0.0" />
+                <Property Name="AbsoluteSize" Value="w:42.000000 h:24.000000" />
+                <Property Name="CheckMode" Value="1" />
+                <Property Name="Text" Value="#{INTERFACE_XML_8}" />
+                <Event Name="Clicked" Function="TargetEquip_TargetBlog_Down();" />
+            </Window>
+            <Window Type="TLBB_ButtonPageDown" Name="TargetEquip_Pet">
+                <Property Name="AbsolutePosition" Value="x:126.0 y:0.0" />
+                <Property Name="AbsoluteSize" Value="w:42.000000 h:24.000000" />
+                <Property Name="CheckMode" Value="1" />
+                <Property Name="Text" Value="#{INTERFACE_XML_12}" />
+                <Event Name="Clicked" Function="TargetEquip_OtherPet_Down();" />
+            </Window>
+			<Window Type="TLBB_ButtonPageDown" Name="TargetEquip_Ride">
+                <Property Name="AbsolutePosition" Value="x:168.0 y:0.0" />
+                <Property Name="AbsoluteSize" Value="w:42.000000 h:24.000000" />
+                <Property Name="CheckMode" Value="1" />
+                <Property Name="Text" Value="#{INTERFACE_XML_497}" />
+                <Event Name="Clicked" Function="TargetEquip_OtherRide_Down();" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

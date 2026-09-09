@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="婚礼屏风.frame" />
+    <entity mesh="婚礼屏风.mesh" node="婚礼屏风" />
+    <entity mesh="婚礼屏风结1.mesh" node="婚礼屏风结1">
+        <offset>
+            <translate x="210.714" y="1015.54" z="-29.1119" />
+        </offset>
+    </entity>
+    <entity mesh="婚礼屏风结2.mesh" node="婚礼屏风结2">
+        <offset>
+            <translate x="210.714" y="1015.54" z="-29.1119" />
+        </offset>
+    </entity>
+    <entity mesh="婚礼屏风绸带1.mesh" />
+    <entity mesh="婚礼屏风绸带2.mesh" />
+</model>

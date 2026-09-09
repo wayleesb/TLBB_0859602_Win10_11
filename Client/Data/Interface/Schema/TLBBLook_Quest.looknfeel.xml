@@ -1,0 +1,2541 @@
+<?xml version="1.0" ?>
+<Falagard>
+
+  <WidgetLook name="TLBB_Look_QuestButton_1">
+    <PropertyDefinition name="VertLabelFormatting" initialValue="CentreAligned" />
+    <PropertyDefinition name="HorzLabelFormatting" initialValue="LeftAligned" />
+    <ImagerySection name="label">
+      <TextComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <VertFormatProperty name="VertLabelFormatting" />
+        <HorzFormatProperty name="HorzLabelFormatting" />
+      </TextComponent>
+    </ImagerySection>
+    <ImagerySection name="normal">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton1_Normal_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton1_Normal_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton1_Normal_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="hover">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton1_Hover_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton1_Hover_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton1_Hover_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="pushed">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton1_Normal_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton1_Normal_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton1_Normal_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="disabled">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton1_Disable_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton1_Disable_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton1_Disable_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <StateImagery name="Normal">
+      <Layer>
+        <Section section="normal" />
+        <Section section="label">
+          <ColourProperty name="NormalTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Hover">
+      <Layer>
+        <Section section="hover" />
+        <Section section="label">
+          <ColourProperty name="HoverTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Pushed">
+      <Layer>
+        <Section section="pushed" />
+        <Section section="label">
+          <ColourProperty name="PushedTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="disabled" />
+        <Section section="label">
+          <ColourProperty name="DisabledTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+  <!-- 2-->
+  <WidgetLook name="TLBB_Look_QuestButton_2">
+    <PropertyDefinition name="VertLabelFormatting" initialValue="CentreAligned" />
+    <PropertyDefinition name="HorzLabelFormatting" initialValue="LeftAligned" />
+    <ImagerySection name="label">
+      <TextComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <VertFormatProperty name="VertLabelFormatting" />
+        <HorzFormatProperty name="HorzLabelFormatting" />
+      </TextComponent>
+    </ImagerySection>
+    <ImagerySection name="normal">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton2_Normal_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton2_Normal_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton2_Normal_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="hover">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton2_Hover_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton2_Hover_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton2_Hover_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="pushed">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton2_Normal_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton2_Normal_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton2_Normal_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="disabled">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton2_Disable_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton2_Disable_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton2_Disable_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <StateImagery name="Normal">
+      <Layer>
+        <Section section="normal" />
+        <Section section="label">
+          <ColourProperty name="NormalTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Hover">
+      <Layer>
+        <Section section="hover" />
+        <Section section="label">
+          <ColourProperty name="HoverTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Pushed">
+      <Layer>
+        <Section section="pushed" />
+        <Section section="label">
+          <ColourProperty name="PushedTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="disabled" />
+        <Section section="label">
+          <ColourProperty name="DisabledTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+  <!-- 3-->
+  <WidgetLook name="TLBB_Look_QuestButton_3">
+    <PropertyDefinition name="VertLabelFormatting" initialValue="CentreAligned" />
+    <PropertyDefinition name="HorzLabelFormatting" initialValue="LeftAligned" />
+    <ImagerySection name="label">
+      <TextComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <VertFormatProperty name="VertLabelFormatting" />
+        <HorzFormatProperty name="HorzLabelFormatting" />
+      </TextComponent>
+    </ImagerySection>
+    <ImagerySection name="normal">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton3_Normal_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton3_Normal_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton3_Normal_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="hover">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton3_Hover_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton3_Hover_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton3_Hover_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="pushed">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton3_Normal_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton3_Normal_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton3_Normal_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="disabled">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton3_Disable_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton3_Disable_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton3_Disable_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <StateImagery name="Normal">
+      <Layer>
+        <Section section="normal" />
+        <Section section="label">
+          <ColourProperty name="NormalTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Hover">
+      <Layer>
+        <Section section="hover" />
+        <Section section="label">
+          <ColourProperty name="HoverTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Pushed">
+      <Layer>
+        <Section section="pushed" />
+        <Section section="label">
+          <ColourProperty name="PushedTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="disabled" />
+        <Section section="label">
+          <ColourProperty name="DisabledTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+  <!-- 4-->
+  <WidgetLook name="TLBB_Look_QuestButton_4">
+    <PropertyDefinition name="VertLabelFormatting" initialValue="CentreAligned" />
+    <PropertyDefinition name="HorzLabelFormatting" initialValue="LeftAligned" />
+    <ImagerySection name="label">
+      <TextComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <VertFormatProperty name="VertLabelFormatting" />
+        <HorzFormatProperty name="HorzLabelFormatting" />
+      </TextComponent>
+    </ImagerySection>
+    <ImagerySection name="normal">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton4_Normal_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton4_Normal_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton4_Normal_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="hover">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton4_Hover_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton4_Hover_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton4_Hover_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="pushed">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton4_Normal_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton4_Normal_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton4_Normal_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="disabled">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton4_Disable_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton4_Disable_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton4_Disable_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <StateImagery name="Normal">
+      <Layer>
+        <Section section="normal" />
+        <Section section="label">
+          <ColourProperty name="NormalTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Hover">
+      <Layer>
+        <Section section="hover" />
+        <Section section="label">
+          <ColourProperty name="HoverTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Pushed">
+      <Layer>
+        <Section section="pushed" />
+        <Section section="label">
+          <ColourProperty name="PushedTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="disabled" />
+        <Section section="label">
+          <ColourProperty name="DisabledTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+  <!--5-->
+  <WidgetLook name="TLBB_Look_QuestButton_5">
+    <PropertyDefinition name="VertLabelFormatting" initialValue="CentreAligned" />
+    <PropertyDefinition name="HorzLabelFormatting" initialValue="LeftAligned" />
+    <ImagerySection name="label">
+      <TextComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <VertFormatProperty name="VertLabelFormatting" />
+        <HorzFormatProperty name="HorzLabelFormatting" />
+      </TextComponent>
+    </ImagerySection>
+    <ImagerySection name="normal">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton5_Normal_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton5_Normal_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton5_Normal_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="hover">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton5_Hover_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton5_Hover_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton5_Hover_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="pushed">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton5_Normal_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton5_Normal_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton5_Normal_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="disabled">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton5_Disable_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton5_Disable_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton5_Disable_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <StateImagery name="Normal">
+      <Layer>
+        <Section section="normal" />
+        <Section section="label">
+          <ColourProperty name="NormalTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Hover">
+      <Layer>
+        <Section section="hover" />
+        <Section section="label">
+          <ColourProperty name="HoverTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Pushed">
+      <Layer>
+        <Section section="pushed" />
+        <Section section="label">
+          <ColourProperty name="PushedTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="disabled" />
+        <Section section="label">
+          <ColourProperty name="DisabledTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+  <!--6-->
+  <WidgetLook name="TLBB_Look_QuestButton_6">
+    <PropertyDefinition name="VertLabelFormatting" initialValue="CentreAligned" />
+    <PropertyDefinition name="HorzLabelFormatting" initialValue="LeftAligned" />
+    <ImagerySection name="label">
+      <TextComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <VertFormatProperty name="VertLabelFormatting" />
+        <HorzFormatProperty name="HorzLabelFormatting" />
+      </TextComponent>
+    </ImagerySection>
+    <ImagerySection name="normal">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton6_Normal_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton6_Normal_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton6_Normal_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="hover">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton6_Hover_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton6_Hover_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton6_Hover_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="pushed">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton6_Normal_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton6_Normal_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton6_Normal_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="disabled">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton6_Disable_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton6_Disable_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton6_Disable_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <StateImagery name="Normal">
+      <Layer>
+        <Section section="normal" />
+        <Section section="label">
+          <ColourProperty name="NormalTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Hover">
+      <Layer>
+        <Section section="hover" />
+        <Section section="label">
+          <ColourProperty name="HoverTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Pushed">
+      <Layer>
+        <Section section="pushed" />
+        <Section section="label">
+          <ColourProperty name="PushedTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="disabled" />
+        <Section section="label">
+          <ColourProperty name="DisabledTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+  <!--7-->
+  <WidgetLook name="TLBB_Look_QuestButton_7">
+    <PropertyDefinition name="VertLabelFormatting" initialValue="CentreAligned" />
+    <PropertyDefinition name="HorzLabelFormatting" initialValue="LeftAligned" />
+    <ImagerySection name="label">
+      <TextComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <VertFormatProperty name="VertLabelFormatting" />
+        <HorzFormatProperty name="HorzLabelFormatting" />
+      </TextComponent>
+    </ImagerySection>
+    <ImagerySection name="normal">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton7_Normal_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton7_Normal_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton7_Normal_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="hover">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton7_Hover_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton7_Hover_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton7_Hover_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="pushed">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton7_Normal_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton7_Normal_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton7_Normal_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="disabled">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton7_Disable_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton7_Disable_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton7_Disable_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <StateImagery name="Normal">
+      <Layer>
+        <Section section="normal" />
+        <Section section="label">
+          <ColourProperty name="NormalTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Hover">
+      <Layer>
+        <Section section="hover" />
+        <Section section="label">
+          <ColourProperty name="HoverTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Pushed">
+      <Layer>
+        <Section section="pushed" />
+        <Section section="label">
+          <ColourProperty name="PushedTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="disabled" />
+        <Section section="label">
+          <ColourProperty name="DisabledTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+  <!--8-->
+  <WidgetLook name="TLBB_Look_QuestButton_8">
+    <PropertyDefinition name="VertLabelFormatting" initialValue="CentreAligned" />
+    <PropertyDefinition name="HorzLabelFormatting" initialValue="LeftAligned" />
+    <ImagerySection name="label">
+      <TextComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <VertFormatProperty name="VertLabelFormatting" />
+        <HorzFormatProperty name="HorzLabelFormatting" />
+      </TextComponent>
+    </ImagerySection>
+    <ImagerySection name="normal">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton8_Normal_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton8_Normal_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton8_Normal_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="hover">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton8_Hover_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton8_Hover_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton8_Hover_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="pushed">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton8_Normal_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton8_Normal_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton8_Normal_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="disabled">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton8_Disable_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton8_Disable_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton8_Disable_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <StateImagery name="Normal">
+      <Layer>
+        <Section section="normal" />
+        <Section section="label">
+          <ColourProperty name="NormalTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Hover">
+      <Layer>
+        <Section section="hover" />
+        <Section section="label">
+          <ColourProperty name="HoverTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Pushed">
+      <Layer>
+        <Section section="pushed" />
+        <Section section="label">
+          <ColourProperty name="PushedTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="disabled" />
+        <Section section="label">
+          <ColourProperty name="DisabledTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+  <!--9-->
+  <WidgetLook name="TLBB_Look_QuestButton_9">
+    <PropertyDefinition name="VertLabelFormatting" initialValue="CentreAligned" />
+    <PropertyDefinition name="HorzLabelFormatting" initialValue="LeftAligned" />
+    <ImagerySection name="label">
+      <TextComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <VertFormatProperty name="VertLabelFormatting" />
+        <HorzFormatProperty name="HorzLabelFormatting" />
+      </TextComponent>
+    </ImagerySection>
+    <ImagerySection name="normal">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton9_Normal_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton9_Normal_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton9_Normal_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="hover">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton9_Hover_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton9_Hover_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton9_Hover_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="pushed">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton9_Normal_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton9_Normal_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton9_Normal_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="disabled">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton9_Disable_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton9_Disable_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton9_Disable_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <StateImagery name="Normal">
+      <Layer>
+        <Section section="normal" />
+        <Section section="label">
+          <ColourProperty name="NormalTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Hover">
+      <Layer>
+        <Section section="hover" />
+        <Section section="label">
+          <ColourProperty name="HoverTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Pushed">
+      <Layer>
+        <Section section="pushed" />
+        <Section section="label">
+          <ColourProperty name="PushedTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="disabled" />
+        <Section section="label">
+          <ColourProperty name="DisabledTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+  <!--10-->
+  <WidgetLook name="TLBB_Look_QuestButton_10">
+    <PropertyDefinition name="VertLabelFormatting" initialValue="CentreAligned" />
+    <PropertyDefinition name="HorzLabelFormatting" initialValue="LeftAligned" />
+    <ImagerySection name="label">
+      <TextComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <VertFormatProperty name="VertLabelFormatting" />
+        <HorzFormatProperty name="HorzLabelFormatting" />
+      </TextComponent>
+    </ImagerySection>
+    <ImagerySection name="normal">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton10_Normal_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton10_Normal_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton10_Normal_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="hover">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton10_Hover_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton10_Hover_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton10_Hover_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="pushed">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton10_Normal_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton10_Normal_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton10_Normal_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="disabled">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton10_Disable_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton10_Disable_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton10_Disable_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <StateImagery name="Normal">
+      <Layer>
+        <Section section="normal" />
+        <Section section="label">
+          <ColourProperty name="NormalTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Hover">
+      <Layer>
+        <Section section="hover" />
+        <Section section="label">
+          <ColourProperty name="HoverTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Pushed">
+      <Layer>
+        <Section section="pushed" />
+        <Section section="label">
+          <ColourProperty name="PushedTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="disabled" />
+        <Section section="label">
+          <ColourProperty name="DisabledTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+  <!--11-->
+  <WidgetLook name="TLBB_Look_QuestButton_11">
+    <PropertyDefinition name="VertLabelFormatting" initialValue="CentreAligned" />
+    <PropertyDefinition name="HorzLabelFormatting" initialValue="LeftAligned" />
+    <ImagerySection name="label">
+      <TextComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <VertFormatProperty name="VertLabelFormatting" />
+        <HorzFormatProperty name="HorzLabelFormatting" />
+      </TextComponent>
+    </ImagerySection>
+    <ImagerySection name="normal">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton11_Normal_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton11_Normal_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton11_Normal_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="hover">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton11_Hover_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton11_Hover_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton11_Hover_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="pushed">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton11_Normal_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton11_Normal_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton11_Normal_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="disabled">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton11_Disable_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton11_Disable_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton11_Disable_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <StateImagery name="Normal">
+      <Layer>
+        <Section section="normal" />
+        <Section section="label">
+          <ColourProperty name="NormalTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Hover">
+      <Layer>
+        <Section section="hover" />
+        <Section section="label">
+          <ColourProperty name="HoverTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Pushed">
+      <Layer>
+        <Section section="pushed" />
+        <Section section="label">
+          <ColourProperty name="PushedTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="disabled" />
+        <Section section="label">
+          <ColourProperty name="DisabledTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+  <!-- 12-->
+  <WidgetLook name="TLBB_Look_QuestButton_12">
+    <PropertyDefinition name="VertLabelFormatting" initialValue="CentreAligned" />
+    <PropertyDefinition name="HorzLabelFormatting" initialValue="LeftAligned" />
+    <ImagerySection name="label">
+      <TextComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <VertFormatProperty name="VertLabelFormatting" />
+        <HorzFormatProperty name="HorzLabelFormatting" />
+      </TextComponent>
+    </ImagerySection>
+    <ImagerySection name="normal">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton12_Normal_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton12_Normal_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton12_Normal_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="hover">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton12_Hover_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton12_Hover_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton12_Hover_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="pushed">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton12_Normal_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton12_Normal_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton12_Normal_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="disabled">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton12_Disable_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton12_Disable_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton12_Disable_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <StateImagery name="Normal">
+      <Layer>
+        <Section section="normal" />
+        <Section section="label">
+          <ColourProperty name="NormalTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Hover">
+      <Layer>
+        <Section section="hover" />
+        <Section section="label">
+          <ColourProperty name="HoverTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Pushed">
+      <Layer>
+        <Section section="pushed" />
+        <Section section="label">
+          <ColourProperty name="PushedTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="disabled" />
+        <Section section="label">
+          <ColourProperty name="DisabledTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+  <!-- 13-->
+  <WidgetLook name="TLBB_Look_QuestButton_13">
+    <PropertyDefinition name="VertLabelFormatting" initialValue="CentreAligned" />
+    <PropertyDefinition name="HorzLabelFormatting" initialValue="LeftAligned" />
+    <ImagerySection name="label">
+      <TextComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <VertFormatProperty name="VertLabelFormatting" />
+        <HorzFormatProperty name="HorzLabelFormatting" />
+      </TextComponent>
+    </ImagerySection>
+    <ImagerySection name="normal">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton13_Normal_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton13_Normal_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton13_Normal_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="hover">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton13_Hover_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton13_Hover_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton13_Hover_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="pushed">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton13_Normal_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton13_Normal_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton13_Normal_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="disabled">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton13_Disable_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton13_Disable_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton13_Disable_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <StateImagery name="Normal">
+      <Layer>
+        <Section section="normal" />
+        <Section section="label">
+          <ColourProperty name="NormalTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Hover">
+      <Layer>
+        <Section section="hover" />
+        <Section section="label">
+          <ColourProperty name="HoverTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Pushed">
+      <Layer>
+        <Section section="pushed" />
+        <Section section="label">
+          <ColourProperty name="PushedTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="disabled" />
+        <Section section="label">
+          <ColourProperty name="DisabledTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+  <!-- 14-->
+  <WidgetLook name="TLBB_Look_QuestButton_14">
+    <PropertyDefinition name="VertLabelFormatting" initialValue="CentreAligned" />
+    <PropertyDefinition name="HorzLabelFormatting" initialValue="LeftAligned" />
+    <ImagerySection name="label">
+      <TextComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <VertFormatProperty name="VertLabelFormatting" />
+        <HorzFormatProperty name="HorzLabelFormatting" />
+      </TextComponent>
+    </ImagerySection>
+    <ImagerySection name="normal">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton14_Normal_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton14_Normal_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton14_Normal_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="hover">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton14_Hover_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton14_Hover_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton14_Hover_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="pushed">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton14_Normal_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton14_Normal_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton14_Normal_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="disabled">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton14_Disable_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton14_Disable_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton14_Disable_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <StateImagery name="Normal">
+      <Layer>
+        <Section section="normal" />
+        <Section section="label">
+          <ColourProperty name="NormalTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Hover">
+      <Layer>
+        <Section section="hover" />
+        <Section section="label">
+          <ColourProperty name="HoverTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Pushed">
+      <Layer>
+        <Section section="pushed" />
+        <Section section="label">
+          <ColourProperty name="PushedTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="disabled" />
+        <Section section="label">
+          <ColourProperty name="DisabledTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+  <!--15-->
+  <WidgetLook name="TLBB_Look_QuestButton_15">
+    <PropertyDefinition name="VertLabelFormatting" initialValue="CentreAligned" />
+    <PropertyDefinition name="HorzLabelFormatting" initialValue="LeftAligned" />
+    <ImagerySection name="label">
+      <TextComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <VertFormatProperty name="VertLabelFormatting" />
+        <HorzFormatProperty name="HorzLabelFormatting" />
+      </TextComponent>
+    </ImagerySection>
+    <ImagerySection name="normal">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton15_Normal_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton15_Normal_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton15_Normal_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="hover">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton15_Hover_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton15_Hover_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton15_Hover_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="pushed">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton15_Normal_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton15_Normal_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton15_Normal_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="disabled">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton15_Disable_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton15_Disable_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton15_Disable_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <StateImagery name="Normal">
+      <Layer>
+        <Section section="normal" />
+        <Section section="label">
+          <ColourProperty name="NormalTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Hover">
+      <Layer>
+        <Section section="hover" />
+        <Section section="label">
+          <ColourProperty name="HoverTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Pushed">
+      <Layer>
+        <Section section="pushed" />
+        <Section section="label">
+          <ColourProperty name="PushedTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="disabled" />
+        <Section section="label">
+          <ColourProperty name="DisabledTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+  <!--16-->
+  <WidgetLook name="TLBB_Look_QuestButton_16">
+    <PropertyDefinition name="VertLabelFormatting" initialValue="CentreAligned" />
+    <PropertyDefinition name="HorzLabelFormatting" initialValue="LeftAligned" />
+    <ImagerySection name="label">
+      <TextComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <VertFormatProperty name="VertLabelFormatting" />
+        <HorzFormatProperty name="HorzLabelFormatting" />
+      </TextComponent>
+    </ImagerySection>
+    <ImagerySection name="normal">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton16_Normal_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton16_Normal_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton16_Normal_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="hover">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton16_Hover_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton16_Hover_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton16_Hover_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="pushed">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton16_Normal_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton16_Normal_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton16_Normal_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="disabled">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton16_Disable_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton16_Disable_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton16_Disable_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <StateImagery name="Normal">
+      <Layer>
+        <Section section="normal" />
+        <Section section="label">
+          <ColourProperty name="NormalTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Hover">
+      <Layer>
+        <Section section="hover" />
+        <Section section="label">
+          <ColourProperty name="HoverTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Pushed">
+      <Layer>
+        <Section section="pushed" />
+        <Section section="label">
+          <ColourProperty name="PushedTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="disabled" />
+        <Section section="label">
+          <ColourProperty name="DisabledTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+  <!--17-->
+  <WidgetLook name="TLBB_Look_QuestButton_17">
+    <PropertyDefinition name="VertLabelFormatting" initialValue="CentreAligned" />
+    <PropertyDefinition name="HorzLabelFormatting" initialValue="LeftAligned" />
+    <ImagerySection name="label">
+      <TextComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <VertFormatProperty name="VertLabelFormatting" />
+        <HorzFormatProperty name="HorzLabelFormatting" />
+      </TextComponent>
+    </ImagerySection>
+    <ImagerySection name="normal">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton17_Normal_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton17_Normal_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton17_Normal_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="hover">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton17_Hover_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton17_Hover_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton17_Hover_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="pushed">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton17_Normal_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton17_Normal_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton17_Normal_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="disabled">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton17_Disable_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton17_Disable_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton17_Disable_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <StateImagery name="Normal">
+      <Layer>
+        <Section section="normal" />
+        <Section section="label">
+          <ColourProperty name="NormalTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Hover">
+      <Layer>
+        <Section section="hover" />
+        <Section section="label">
+          <ColourProperty name="HoverTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Pushed">
+      <Layer>
+        <Section section="pushed" />
+        <Section section="label">
+          <ColourProperty name="PushedTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="disabled" />
+        <Section section="label">
+          <ColourProperty name="DisabledTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+  <!--18-->
+  <WidgetLook name="TLBB_Look_QuestButton_18">
+    <PropertyDefinition name="VertLabelFormatting" initialValue="CentreAligned" />
+    <PropertyDefinition name="HorzLabelFormatting" initialValue="LeftAligned" />
+    <ImagerySection name="label">
+      <TextComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <VertFormatProperty name="VertLabelFormatting" />
+        <HorzFormatProperty name="HorzLabelFormatting" />
+      </TextComponent>
+    </ImagerySection>
+    <ImagerySection name="normal">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton18_Normal_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton18_Normal_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton18_Normal_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="hover">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton18_Hover_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton18_Hover_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton18_Hover_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="pushed">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton18_Normal_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton18_Normal_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton18_Normal_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="disabled">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="QuestButton" image="QuestButton18_Disable_Left" />
+        <Image type="RightEdge" imageset="QuestButton" image="QuestButton18_Disable_Right" />
+        <Image type="Background" imageset="QuestButton" image="QuestButton18_Disable_Middle" />
+      </FrameComponent>
+    </ImagerySection>
+    <StateImagery name="Normal">
+      <Layer>
+        <Section section="normal" />
+        <Section section="label">
+          <ColourProperty name="NormalTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Hover">
+      <Layer>
+        <Section section="hover" />
+        <Section section="label">
+          <ColourProperty name="HoverTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Pushed">
+      <Layer>
+        <Section section="pushed" />
+        <Section section="label">
+          <ColourProperty name="PushedTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="disabled" />
+        <Section section="label">
+          <ColourProperty name="DisabledTextColour" />
+        </Section>
+      </Layer>
+    </StateImagery>
+  </WidgetLook> 
+</Falagard>

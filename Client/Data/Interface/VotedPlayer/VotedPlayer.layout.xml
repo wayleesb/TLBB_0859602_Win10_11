@@ -1,0 +1,71 @@
+<?xml version="1.0" ?>
+<GUILayout>
+       <Window Type="TLBB_MainFrame1" Name="VotedPlayer_Frame">
+	       <Property Name="UnifiedPosition" Value="{{1.000000,-300.000000},{1.000000,-450.000000}}"/>
+	       <Property Name="UnifiedSize" Value="{{0.000000,165.000000},{0.000000,280.000000}}"/>
+            <Window Type="TLBB_DragTitle" Name="VotedPlayer_DragTitle">
+	             <Property Name="UnifiedPosition" Value="{{0.000000,25.000000},{0.000000,11.000000}}"/>
+	             <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}}"/>
+	             <Property Name="DragTarget" Value="VotedPlayer_Frame"/>
+                   <Window Type="TLBB_SimpleText" Name="VotedPlayer_PageHeader_Name">
+	                  <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,0.000000}}"/>
+	                  <Property Name="UnifiedSize" Value="{{1.000000,0.000000},{1.000000,0.000000}}"/>
+	                  <Property Name="Font" Value="YouYuan9.75"/>
+	                  <Property Name="HorzFormatting" Value="HorzCentred"/>
+                  </Window>
+            </Window>
+            <Window Type="TLBB_ButtonHelp" Name="VotedPlayer_Help">
+	             <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}}"/>
+	             <Property Name="UnifiedSize" Value="{{0.000000,14.000000},{0.000000,14.000000}}"/>
+            </Window>
+            <Window Type="TLBB_ButtonClose" Name="VotedPlayer_Close">
+	             <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}}"/>
+	             <Property Name="UnifiedSize" Value="{{0.000000,14.000000},{0.000000,14.000000}}"/>
+	             <Event Name="Clicked" Function="VotedPlayer_Hide();"/>
+            </Window>
+            <Window Type="DefaultWindow" Name="VotedPlayer_Frame_Client">
+	             <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,36.000000}}"/>
+	             <Property Name="UnifiedSize" Value="{{1.000000,-10.000000},{1.000000,-55.000000}}"/>
+                 <Window Type="TLBB_ListBoxCommon" Name="VotedPlayer_List">
+	                 <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.100000,0.108900}}"/>
+	                 <Property Name="UnifiedSize" Value="{{1.000000,0.000000},{0.810000,0.000000}}"/>
+	                 <Event Name="ItemSelectionByRButton" Function="VotedPlayer_OpenMenu();"/>
+					         <Event Name="MouseLClick" Function="VotedPlayer_PlayerSelect(0);"/>"
+					         <Event Name="MouseDoubleClick" Function="VotedPlayer_PlayerSelect(1);"/>"
+                </Window>
+                <Window Type="TLBB_Frame_Lace1" Name="VotePlayer_Bk">
+                      <Property Name="UnifiedPosition" Value="{{0.0,0.000000},{0.000000,0.000000}" />
+                      <Property Name="AbsoluteSize" Value="w:155 h:26" />
+                      <Property Name="RiseOnClick" Value="False" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="VotePlayer_Info3">
+                      <Property Name="UnifiedPosition" Value="{{0.0000000,0.000000},{0.000000,0.000000}" />
+                      <Property Name="UnifiedSize" Value="{{0.0,155.000000},{0.000000,26.000000}" />
+                      <Property Name="HorzFormatting" Value="HorzCentred" />
+                      <Property Name="VertFormatting" Value="VertCentred" />
+                      <Property Name="TextColor" Value="FFFFF263" />
+                      <Property Name="Text" Value="#{ZYPT_081103_105}" />
+                </Window>
+                <Window Type="TLBB_ButtonCommon" Name="VotedPlayer_PageUp">
+                    <Property Name="UnifiedPosition" Value="{{0.25,18.000000},{1.000000,-20.000000}" />
+                    <Property Name="UnifiedSize" Value="{{0.0,48.000000},{0.000000,20.000000}" />
+                    <Event Name="Clicked" Function="VotedPlayer_PageUp_Func();" />
+                    <Property Name="Text" Value="#{ZYPT_081103_017}" />
+                </Window>
+                <Window Type="TLBB_ButtonCommon" Name="VotedPlayer_PageDown">
+                    <Property Name="UnifiedPosition" Value="{{0.25,68.000000},{1.000000,-20.000000}" />
+                    <Property Name="UnifiedSize" Value="{{0.0,48.000000},{0.000000,20.000000}" />
+                    <Event Name="Clicked" Function="VotedPlayer_PageDown_Func();" />
+                    <Property Name="Text" Value="#{ZYPT_081103_018}" />
+                </Window>
+                <Window Type="TLBB_SimpleMulitiTextFrame" Name="VotedPlayer_Amount">
+                    <Property Name="UnifiedPosition" Value="{{1.000000,-155.000000},{0.000000,204.000000}" />
+                    <Property Name="UnifiedSize" Value="{{0.000000,47.000000},{0.000000,22.000000}" />
+                    <Property Name="Text" Value="" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="HorzFormatting" Value="HorzCentred" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                </Window>
+            </Window>
+        </Window>
+</GUILayout>

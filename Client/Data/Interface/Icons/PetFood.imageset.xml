@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<Imageset Name="PetFood" Imagefile="Icons/PetFood.jpg" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+	<Image Name="PetFood_1" XPos="0" YPos="0" Width="64" Height="64" />
+	<Image Name="PetFood_2" XPos="64" YPos="0" Width="64" Height="64" />
+	<Image Name="PetFood_3" XPos="128" YPos="0" Width="64" Height="64" />
+	<Image Name="PetFood_4" XPos="192" YPos="0" Width="64" Height="64" />
+	<Image Name="PetFood_5" XPos="0" YPos="64" Width="64" Height="64" />
+	<Image Name="PetFood_6" XPos="64" YPos="64" Width="64" Height="64" />
+	<Image Name="PetFood_7" XPos="128" YPos="64" Width="64" Height="64" />
+	<Image Name="PetFood_8" XPos="192" YPos="64" Width="64" Height="64" />
+	<Image Name="PetFood_9" XPos="0" YPos="128" Width="64" Height="64" />
+	<Image Name="PetFood_10" XPos="64" YPos="128" Width="64" Height="64" />
+	<Image Name="PetFood_11" XPos="128" YPos="128" Width="64" Height="64" />
+	<Image Name="PetFood_12" XPos="192" YPos="128" Width="64" Height="64" />
+	<Image Name="PetFood_13" XPos="0" YPos="192" Width="64" Height="64" />
+	<Image Name="PetFood_14" XPos="64" YPos="192" Width="64" Height="64" />
+	<Image Name="PetFood_15" XPos="128" YPos="192" Width="64" Height="64" />
+	<Image Name="PetFood_16" XPos="192" YPos="192" Width="64" Height="64" />
+</Imageset>

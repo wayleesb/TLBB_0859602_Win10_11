@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Terrain name="yewai" tileSize="32" xsize="128" zsize="128">
+
+  <scale x="100" y="100" z="100"/>
+
+  <heightmap filename="yewai.Heightmap" type="standard"/>
+
+  <gridInfo filename="yewai.GridInfo" type="standard"/>
+
+  <lightmap filename="yewai.lightmap.png" type="image"/>
+
+  <textures>
+    <texture filename="03南海/贝壳特效上层.tga" type="image"/>
+    <texture filename="03南海/干沙地底层.jpg" type="image"/>
+    <texture filename="03南海/干沙地上层.tga" type="image"/>
+    <texture filename="03南海/南海草地底层.jpg" type="image"/>
+    <texture filename="03南海/南海草地上层.tga" type="image"/>
+    <texture filename="03南海/南海碎砖.tga" type="image"/>
+    <texture filename="03南海/南海土地底层.jpg" type="image"/>
+    <texture filename="03南海/南海土地上层.tga" type="image"/>
+    <texture filename="03南海/石子特效.tga" type="image"/>
+    <texture filename="03南海/岩石海礁01.jpg" type="image"/>
+    <texture filename="03南海/岩石海礁02.jpg" type="image"/>
+    <texture filename="03南海/岩石海礁03.jpg" type="image"/>
+    <texture filename="06雁门关/烧焦底层.jpg" type="image"/>
+    <texture filename="06雁门关/烧焦上层.tga" type="image"/>
+    <texture filename="江南/石子.tga" type="image"/>
+    <texture filename="西南/沼泽.jpg" type="image"/>
+  </textures>
+
+  <pixmaps>
+    <pixmap bottom="0.25" left="0" right="0.5" textureId="0" top="0"/>
+    <pixmap bottom="0.5" left="0" right="0.5" textureId="0" top="0.25"/>
+    <pixmap bottom="0.75" left="0" right="0.5" textureId="0" top="0.5"/>
+    <pixmap bottom="1" left="0" right="0.5" textureId="0" top="0.75"/>
+    <pixmap bottom="0.25" left="0.5" right="1" textureId="0" top="0"/>
+    <pixmap bottom="0.5" left="1" right="0.5" textureId="0" top="0.25"/>
+    <pixmap bottom="0.75" left="1" right="0.5" textureId="0" top="0.5"/>
+    <pixmap bottom="1" left="1" right="0.5" textureId="0" top="0.75"/>
+    <pixmap bottom="0.25" left="0" right="0.5" textureId="1" top="0"/>
+    <pixmap bottom="0.5" left="0" right="0.5" textureId="1" top="0.25"/>
+    <pixmap bottom="0.75" left="0" right="0.5" textureId="1" top="0.5"/>
+    <pixmap bottom="1" left="0" right="0.5" textureId="1" top="0.75"/>
+    <pixmap bottom="0.2480469" left="0.00390625" right="0.4960938" textureId="1" top="0.001953125"/>
+    <pixmap bottom="0.4980469" left="0.00390625" right="0.4960938" textureId="1" top="0.2519531"/>
+    <pixmap bottom="0.7480469" left="0.00390625" right="0.4960938" textureId="1" top="0.5019531"/>
+    <pixmap bottom="0.9980469" left="0.00390625" right="0.4960938" textureId="1" top="0.7519531"/>
+    <pixmap bottom="0.25" left="0.5" right="1" textureId="1" top="0"/>
+    <pixmap bottom="0.5" left="0.5" right="1" textureId="1" top="0.25"/>
+    <pixmap bottom="0.75" left="0.5" right="1" textureId="1" top="0.5"/>
+    <pixmap bottom="1" left="0.5" right="1" textureId="1" top="0.75"/>
+    <pixmap bottom="0.2480469" left="0.5039063" right="0.9960938" textureId="1" top="0.001953125"/>
+    <pixmap bottom="0.4980469" left="0.5039063" right="0.9960938" textureId="1" top="0.2519531"/>
+    <pixmap bottom="0.7480469" left="0.5039063" right="0.9960938" textureId="1" top="0.5019531"/>
+    <pixmap bottom="0.9980469" left="0.5039063" right="0.9960938" textureId="1" top="0.7519531"/>
+    <pixmap bottom="0.2480469" left="0.00390625" right="0.4960938" textureId="2" top="0.001953125"/>
+    <pixmap bottom="0.4980469" left="0.00390625" right="0.4960938" textureId="2" top="0.2519531"/>
+    <pixmap bottom="0.7480469" left="0.00390625" right="0.4960938" textureId="2" top="0.5019531"/>
+    <pixmap bottom="0.9980469" left="0.00390625" right="0.4960938" textureId="2" top="0.7519531"/>
+    <pixmap bottom="0.2480469" left="0.5039063" right="0.9960938" textureId="2" top="0.001953125"/>
+    <pixmap bottom="0.4980469" left="0.9960938" right="0.5039063" textureId="2" top="0.2519531"/>
+    <pixmap bottom="0.7480469" left="0.9960938" right="0.5039063" textureId="2" top="0.5019531"/>
+    <pixmap bottom="0.9980469" left="0.9960938" right="0.5039063" textureId="2" top="0.7519531"/>
+    <pixmap bottom="0.2480469" left="0.00390625" right="0.4960938" textureId="3" top="0.001953125"/>
+    <pixmap bottom="0.4980469" left="0.00390625" right="0.4960938" textureId="3" top="0.2519531"/>
+    <pixmap bottom="0.7480469" left="0.00390625" right="0.4960938" textureId="3" top="0.5019531"/>
+    <pixmap bottom="0.9980469" left="0.00390625" right="0.4960938" textureId="3" top="0.7519531"/>
+    <pixmap bottom="0.2480469" left="0.5039063" right="0.9960938" textureId="3" top="0.001953125"/>
+    <pixmap bottom="0.4980469" left="0.5039063" right="0.9960938" textureId="3" top="0.2519531"/>
+    <pixmap bottom="0.7480469" left="0.5039063" right="0.9960938" textureId="3" top="0.5019531"/>
+    <pixmap bottom="0.9980469" left="0.5039063" right="0.9960938" textureId="3" top="0.7519531"/>
+    <pixmap bottom="0.2480469" left="0.00390625" right="0.4960938" textureId="4" top="0.001953125"/>
+    <pixmap bottom="0.4980469" left="0.00390625" right="0.4960938" textureId="4" top="0.2519531"/>
+    <pixmap bottom="0.7480469" left="0.00390625" right="0.4960938" textureId="4" top="0.5019531"/>
+    <pixmap bottom="0.9980469" left="0.00390625" right="0.4960938" textureId="4" top="0.7519531"/>
+    <pixmap bottom="0.2480469" left="0.5039063" right="0.9960938" textureId="4" top="0.001953125"/>
+    <pixmap bottom="0.4980469" left="0.9960938" right="0.5039063" textureId="4" top="0.2519531"/>
+    <pixmap bottom="0.7480469" left="0.9960938" right="0.5039063" textureId="4" top="0.5019531"/>
+    <pixmap bottom="0.9980469" left="0.9960938" right="0.5039063" textureId="4" top="0.7519531"/>
+    <pixmap bottom="0.25" left="0" right="0.5" textureId="5" top="0"/>
+    <pixmap bottom="0.5" left="0" right="0.5" textureId="5" top="0.25"/>
+    <pixmap bottom="0.75" left="0" right="0.5" textureId="5" top="0.5"/>
+    <pixmap bottom="1" left="0" right="0.5" textureId="5" top="0.75"/>
+    <pixmap bottom="0.25" left="0.5" right="1" textureId="5" top="0"/>
+    <pixmap bottom="0.5" left="1" right="0.5" textureId="5" top="0.25"/>
+    <pixmap bottom="0.75" left="1" right="0.5" textureId="5" top="0.5"/>
+    <pixmap bottom="1" left="1" right="0.5" textureId="5" top="0.75"/>
+    <pixmap bottom="0.2480469" left="0.00390625" right="0.4960938" textureId="6" top="0.001953125"/>
+    <pixmap bottom="0.4980469" left="0.00390625" right="0.4960938" textureId="6" top="0.2519531"/>
+    <pixmap bottom="0.7480469" left="0.00390625" right="0.4960938" textureId="6" top="0.5019531"/>
+    <pixmap bottom="0.9980469" left="0.00390625" right="0.4960938" textureId="6" top="0.7519531"/>
+    <pixmap bottom="0.2480469" left="0.5039063" right="0.9960938" textureId="6" top="0.001953125"/>
+    <pixmap bottom="0.4980469" left="0.5039063" right="0.9960938" textureId="6" top="0.2519531"/>
+    <pixmap bottom="0.7480469" left="0.5039063" right="0.9960938" textureId="6" top="0.5019531"/>
+    <pixmap bottom="0.9980469" left="0.5039063" right="0.9960938" textureId="6" top="0.7519531"/>
+    <pixmap bottom="0.2480469" left="0.00390625" right="0.4960938" textureId="7" top="0.001953125"/>
+    <pixmap bottom="0.4980469" left="0.00390625" right="0.4960938" textureId="7" top="0.2519531"/>
+    <pixmap bottom="0.7480469" left="0.00390625" right="0.4960938" textureId="7" top="0.5019531"/>
+    <pixmap bottom="0.9980469" left="0.00390625" right="0.4960938" textureId="7" top="0.7519531"/>
+    <pixmap bottom="0.4980469" left="0.9960938" right="0.5039063" textureId="7" top="0.2519531"/>
+    <pixmap bottom="0.7480469" left="0.9960938" right="0.5039063" textureId="7" top="0.5019531"/>
+    <pixmap bottom="0.9980469" left="0.9960938" right="0.5039063" textureId="7" top="0.7519531"/>
+    <pixmap bottom="0.5" left="0" right="0.5" textureId="8" top="0"/>
+    <pixmap bottom="1" left="0" right="0.5" textureId="8" top="0.5"/>
+    <pixmap bottom="0.5" left="0.5" right="1" textureId="8" top="0"/>
+    <pixmap bottom="1" left="0.5" right="1" textureId="8" top="0.5"/>
+    <pixmap bottom="0.250977" left="0.00195313" right="0.250977" textureId="9" top="0.00195313"/>
+    <pixmap bottom="0.5" left="0.00195313" right="0.250977" textureId="9" top="0.250977"/>
+    <pixmap bottom="0.749023" left="0.00195313" right="0.250977" textureId="9" top="0.5"/>
+    <pixmap bottom="0.998047" left="0.00195313" right="0.250977" textureId="9" top="0.749023"/>
+    <pixmap bottom="0.250977" left="0.250977" right="0.5" textureId="9" top="0.00195313"/>
+    <pixmap bottom="0.5" left="0.250977" right="0.5" textureId="9" top="0.250977"/>
+    <pixmap bottom="0.749023" left="0.250977" right="0.5" textureId="9" top="0.5"/>
+    <pixmap bottom="0.998047" left="0.250977" right="0.5" textureId="9" top="0.749023"/>
+    <pixmap bottom="0.250977" left="0.5" right="0.749023" textureId="9" top="0.00195313"/>
+    <pixmap bottom="0.5" left="0.5" right="0.749023" textureId="9" top="0.250977"/>
+    <pixmap bottom="0.749023" left="0.5" right="0.749023" textureId="9" top="0.5"/>
+    <pixmap bottom="0.998047" left="0.5" right="0.749023" textureId="9" top="0.749023"/>
+    <pixmap bottom="0.250977" left="0.749023" right="0.998047" textureId="9" top="0.00195313"/>
+    <pixmap bottom="0.5" left="0.749023" right="0.998047" textureId="9" top="0.250977"/>
+    <pixmap bottom="0.749023" left="0.749023" right="0.998047" textureId="9" top="0.5"/>
+    <pixmap bottom="0.998047" left="0.749023" right="0.998047" textureId="9" top="0.749023"/>
+    <pixmap bottom="0.25" left="0.00195313" right="0.25" textureId="10" top="0.00195313"/>
+    <pixmap bottom="0.498047" left="0.00195313" right="0.25" textureId="10" top="0.25"/>
+    <pixmap bottom="0.75" left="0.00195313" right="0.250977" textureId="10" top="0.501953"/>
+    <pixmap bottom="0.998047" left="0.00195313" right="0.250977" textureId="10" top="0.75"/>
+    <pixmap bottom="0.25" left="0.25" right="0.498047" textureId="10" top="0.00195313"/>
+    <pixmap bottom="0.498047" left="0.25" right="0.498047" textureId="10" top="0.25"/>
+    <pixmap bottom="0.75" left="0.250977" right="0.5" textureId="10" top="0.501953"/>
+    <pixmap bottom="0.998047" left="0.250977" right="0.5" textureId="10" top="0.75"/>
+    <pixmap bottom="0.75" left="0.5" right="0.749023" textureId="10" top="0.501953"/>
+    <pixmap bottom="0.998047" left="0.5" right="0.749023" textureId="10" top="0.75"/>
+    <pixmap bottom="0.25" left="0.501953" right="0.75" textureId="10" top="0.00195313"/>
+    <pixmap bottom="0.498047" left="0.501953" right="0.75" textureId="10" top="0.25"/>
+    <pixmap bottom="0.75" left="0.749023" right="0.998047" textureId="10" top="0.501953"/>
+    <pixmap bottom="0.998047" left="0.749023" right="0.998047" textureId="10" top="0.75"/>
+    <pixmap bottom="0.25" left="0.75" right="0.998047" textureId="10" top="0.00195313"/>
+    <pixmap bottom="0.498047" left="0.75" right="0.998047" textureId="10" top="0.25"/>
+    <pixmap bottom="0.5" left="0.00390625" right="0.5" textureId="11" top="0.00390625"/>
+    <pixmap bottom="0.996094" left="0.00390625" right="0.5" textureId="11" top="0.5"/>
+    <pixmap bottom="0.5" left="0.5" right="0.996094" textureId="11" top="0.00390625"/>
+    <pixmap bottom="0.996094" left="0.5" right="0.996094" textureId="11" top="0.5"/>
+    <pixmap bottom="0.7480469" left="0.00390625" right="0.4960938" textureId="12" top="0.5019531"/>
+    <pixmap bottom="0.2480469" left="0.5039063" right="0.9960938" textureId="12" top="0.001953125"/>
+    <pixmap bottom="0.4980469" left="0.5039063" right="0.9960938" textureId="12" top="0.2519531"/>
+    <pixmap bottom="0.7480469" left="0.5039063" right="0.9960938" textureId="12" top="0.5019531"/>
+    <pixmap bottom="0.9980469" left="0.5039063" right="0.9960938" textureId="12" top="0.7519531"/>
+    <pixmap bottom="0.2480469" left="0.00390625" right="0.4960938" textureId="13" top="0.001953125"/>
+    <pixmap bottom="0.4980469" left="0.00390625" right="0.4960938" textureId="13" top="0.2519531"/>
+    <pixmap bottom="0.7480469" left="0.00390625" right="0.4960938" textureId="13" top="0.5019531"/>
+    <pixmap bottom="0.4980469" left="0.9960938" right="0.5039063" textureId="13" top="0.2519531"/>
+    <pixmap bottom="0.7480469" left="0.9960938" right="0.5039063" textureId="13" top="0.5019531"/>
+    <pixmap bottom="0.9980469" left="0.9960938" right="0.5039063" textureId="13" top="0.7519531"/>
+    <pixmap bottom="0.25" left="0" right="0.5" textureId="14" top="0"/>
+    <pixmap bottom="0.5" left="0" right="0.5" textureId="14" top="0.25"/>
+    <pixmap bottom="0.75" left="0" right="0.5" textureId="14" top="0.5"/>
+    <pixmap bottom="1" left="0" right="0.5" textureId="14" top="0.75"/>
+    <pixmap bottom="0.25" left="0.5" right="1" textureId="14" top="0"/>
+    <pixmap bottom="0.5" left="0.5" right="1" textureId="14" top="0.25"/>
+    <pixmap bottom="0.75" left="0.5" right="1" textureId="14" top="0.5"/>
+    <pixmap bottom="1" left="0.5" right="1" textureId="14" top="0.75"/>
+    <pixmap bottom="0.25" left="0" right="0.25" textureId="15" top="0"/>
+    <pixmap bottom="0.5" left="0" right="0.25" textureId="15" top="0.25"/>
+    <pixmap bottom="0.75" left="0" right="0.25" textureId="15" top="0.5"/>
+    <pixmap bottom="1" left="0" right="0.25" textureId="15" top="0.75"/>
+    <pixmap bottom="0.25" left="0.25" right="0.5" textureId="15" top="0"/>
+    <pixmap bottom="0.5" left="0.25" right="0.5" textureId="15" top="0.25"/>
+    <pixmap bottom="0.75" left="0.25" right="0.5" textureId="15" top="0.5"/>
+    <pixmap bottom="1" left="0.25" right="0.5" textureId="15" top="0.75"/>
+    <pixmap bottom="0.25" left="0.5" right="0.75" textureId="15" top="0"/>
+    <pixmap bottom="0.5" left="0.5" right="0.75" textureId="15" top="0.25"/>
+    <pixmap bottom="0.75" left="0.5" right="0.75" textureId="15" top="0.5"/>
+    <pixmap bottom="1" left="0.5" right="0.75" textureId="15" top="0.75"/>
+    <pixmap bottom="0.25" left="0.75" right="1" textureId="15" top="0"/>
+    <pixmap bottom="0.5" left="0.75" right="1" textureId="15" top="0.25"/>
+    <pixmap bottom="0.75" left="0.75" right="1" textureId="15" top="0.5"/>
+    <pixmap bottom="1" left="0.75" right="1" textureId="15" top="0.75"/>
+  </pixmaps>
+
+  <materials>
+    <template material="Terrain/OneLayer" name="OneLayer"/>
+    <template material="Terrain/OneLayerLightmap" name="OneLayerLightmap"/>
+    <template material="Terrain/TwoLayer" name="TwoLayer"/>
+    <template material="Terrain/TwoLayerLightmap" name="TwoLayerLightmap"/>
+    <fog_replacement exp="Terrain/OneLayer_ps%fog_exp" exp2="Terrain/OneLayer_ps%fog_exp2" linear="Terrain/OneLayer_ps%fog_linear" none="Terrain/OneLayer_ps"/>
+    <fog_replacement exp="Terrain/TwoLayer_ps%fog_exp" exp2="Terrain/TwoLayer_ps%fog_exp2" linear="Terrain/TwoLayer_ps%fog_linear" none="Terrain/TwoLayer_ps"/>
+    <fog_replacement exp="Terrain/OneLayerLightmap_ps%fog_exp" exp2="Terrain/OneLayerLightmap_ps%fog_exp2" linear="Terrain/OneLayerLightmap_ps%fog_linear" none="Terrain/OneLayerLightmap_ps"/>
+    <fog_replacement exp="Terrain/TwoLayerLightmap_ps%fog_exp" exp2="Terrain/TwoLayerLightmap_ps%fog_exp2" linear="Terrain/TwoLayerLightmap_ps%fog_linear" none="Terrain/TwoLayerLightmap_ps"/>
+  </materials>
+
+</Terrain>

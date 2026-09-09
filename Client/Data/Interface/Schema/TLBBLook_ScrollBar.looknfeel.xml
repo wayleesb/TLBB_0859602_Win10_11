@@ -1,0 +1,528 @@
+<?xml version="1.0" ?>
+<Falagard>
+  <!--
+	***************************************************
+        TLBB_Look_ScrollbarThumb_Common
+        普通滚动条
+    ***************************************************
+    -->
+  <WidgetLook name="TLBB_Look_ScrollbarThumb_Common">
+    <Property name="VertFree" value="True" />
+    <ImagerySection name="normal">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="1" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <ImageDim imageset="Button1" image="ScrollBar_Thumb_Normal" dimension="Width" />
+          </Dim>
+          <Dim type="Height">
+            <ImageDim imageset="Button1" image="ScrollBar_Thumb_Normal" dimension="Height" />
+          </Dim>
+        </Area>
+        <Image imageset="Button1" image="ScrollBar_Thumb_Normal" />
+        <VertFormat type="Stretched" />
+        <HorzFormat type="Stretched" />
+      </ImageryComponent>
+    </ImagerySection>
+    <ImagerySection name="Hover">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="1" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <ImageDim imageset="Button1" image="ScrollBar_Thumb_Normal" dimension="Width" />
+          </Dim>
+          <Dim type="Height">
+            <ImageDim imageset="Button1" image="ScrollBar_Thumb_Normal" dimension="Height" />
+          </Dim>
+        </Area>
+        <Image imageset="Button1" image="ScrollBar_Thumb_Hover" />
+        <VertFormat type="Stretched" />
+        <HorzFormat type="Stretched" />
+      </ImageryComponent>
+    </ImagerySection>
+    <ImagerySection name="Pushed">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="1" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <ImageDim imageset="Button1" image="ScrollBar_Thumb_Normal" dimension="Width" />
+          </Dim>
+          <Dim type="Height">
+            <ImageDim imageset="Button1" image="ScrollBar_Thumb_Normal" dimension="Height" />
+          </Dim>
+        </Area>
+        <Image imageset="Button1" image="ScrollBar_Thumb_Pushed" />
+        <VertFormat type="Stretched" />
+        <HorzFormat type="Stretched" />
+      </ImageryComponent>
+    </ImagerySection>
+    <ImagerySection name="Disabled">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="1" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <ImageDim imageset="Button1" image="ScrollBar_Thumb_Normal" dimension="Width" />
+          </Dim>
+          <Dim type="Height">
+            <ImageDim imageset="Button1" image="ScrollBar_Thumb_Normal" dimension="Height" />
+          </Dim>
+        </Area>
+        <Image imageset="Button1" image="ScrollBar_Thumb_Normal" />
+        <VertFormat type="Stretched" />
+        <HorzFormat type="Stretched" />
+      </ImageryComponent>
+    </ImagerySection>
+    <ImagerySection name="SpecialNormal">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="1" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <ImageDim imageset="CommonFrame4" image="Special_Thumb_Normal" dimension="Width" />
+          </Dim>
+          <Dim type="Height">
+            <ImageDim imageset="CommonFrame4" image="Special_Thumb_Normal" dimension="Height" />
+          </Dim>
+        </Area>
+        <Image imageset="CommonFrame4" image="Special_Thumb_Normal" />
+        <VertFormat type="Stretched" />
+        <HorzFormat type="Stretched" />
+      </ImageryComponent>
+    </ImagerySection>
+    <StateImagery name="Normal">
+      <Layer>
+        <Section section="normal" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Hover">
+      <Layer>
+        <Section section="normal" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Pushed">
+      <Layer>
+        <Section section="normal" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="normal">
+          <Colours topLeft="FF7F7F7F" topRight="FF7F7F7F" bottomLeft="FF7F7F7F" bottomRight="FF7F7F7F" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="SpecialNormal">
+      <Layer>
+        <Section section="SpecialNormal" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="SpecialHover">
+      <Layer>
+        <Section section="SpecialNormal" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="SpecialPushed">
+      <Layer>
+        <Section section="SpecialNormal" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="SpecialDisabled">
+      <Layer>
+        <Section section="SpecialNormal">
+          <Colours topLeft="FF7F7F7F" topRight="FF7F7F7F" bottomLeft="FF7F7F7F" bottomRight="FF7F7F7F" />
+        </Section>
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+  
+  
+  
+  
+  <WidgetLook name="TLBB_Look_Scrollbar_Common">
+    <Property name="VerticalScrollbar" value="True" />
+    <NamedArea name="ThumbTrackArea">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="0" />
+        </Dim>
+        <Dim type="TopEdge">
+          <ImageDim imageset="Button1" image="ScrollBar_Up_Normal" dimension="Height" />
+        </Dim>
+        <Dim type="RightEdge">
+          <UnifiedDim scale="1" type="TopEdge" />
+          </Dim>
+        <Dim type="BottomEdge">
+          <UnifiedDim scale="1" type="BottomEdge">
+            <DimOperator op="Subtract">
+              <ImageDim imageset="Button1" image="ScrollBar_Down_Normal" dimension="Width" />
+            </DimOperator>
+           </UnifiedDim>
+        </Dim>
+      </Area>
+    </NamedArea>
+    <Child type="TLBB_ButtonNULL" nameSuffix="__auto_incbtn__">
+      <Property name="MouseButtonDownAutoRepeat" value="True" />
+      <Property name="ClickSound" value="19" />
+	  <Property name="BtnAnimation" value="ScrollBar_Flash" />
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="0" />
+        </Dim>
+        <Dim type="TopEdge">
+          <UnifiedDim scale="1" type="TopEdge">
+            <DimOperator op="Subtract">
+              <ImageDim imageset="Button1" image="ScrollBar_Down_Normal" dimension="Height" />
+            </DimOperator>
+          </UnifiedDim>
+       </Dim>
+        <Dim type="Width">
+          <ImageDim imageset="Button1" image="ScrollBar_Down_Normal" dimension="Width" />
+        </Dim>
+        <Dim type="Height">
+          <ImageDim imageset="Button1" image="ScrollBar_Down_Normal" dimension="Height" />
+        </Dim>
+      </Area>
+      <Property name="UseStandardImagery" value="False" />
+      <Property name="NormalImage" value="set:Button1 image:ScrollBar_Down_Normal" />
+      <Property name="HoverImage" value="set:Button1 image:ScrollBar_Down_Hover" />
+      <Property name="PushedImage" value="set:Button1 image:ScrollBar_Down_Pushed" />
+    </Child>
+    <Child type="TLBB_ButtonNULL" nameSuffix="__auto_decbtn__">
+      <Property name="MouseButtonDownAutoRepeat" value="True" />
+      <Property name="ClickSound" value="20" />
+	  <Property name="BtnAnimation" value="ScrollBar_Flash" />
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="0" />
+        </Dim>
+        <Dim type="TopEdge">
+          <AbsoluteDim value="0" />
+        </Dim>
+        <Dim type="Width">
+          <ImageDim imageset="Button1" image="ScrollBar_Up_Normal" dimension="Width" />
+        </Dim>
+        <Dim type="Height">
+          <ImageDim imageset="Button1" image="ScrollBar_Up_Normal" dimension="Height" />
+        </Dim>
+      </Area>
+      <Property name="UseStandardImagery" value="False" />
+      <Property name="NormalImage" value="set:Button1 image:ScrollBar_Up_Normal" />
+      <Property name="HoverImage" value="set:Button1 image:ScrollBar_Up_Hover" />
+      <Property name="PushedImage" value="set:Button1 image:ScrollBar_Up_Pushed" />
+    </Child>
+    <Child type="TLBB_ScrollbarThumb_Common" nameSuffix="__auto_thumb__">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="1" />
+        </Dim>
+        <Dim type="TopEdge">
+          <AbsoluteDim value="0" />
+        </Dim>
+        <Dim type="Width">
+          <ImageDim imageset="Button1" image="ScrollBar_Thumb_Normal" dimension="Width" />
+        </Dim>
+        <Dim type="Height">
+          <ImageDim imageset="Button1" image="ScrollBar_Thumb_Normal" dimension="Height" />
+        </Dim>
+      </Area>
+    </Child>
+    <ImagerySection name="main">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+             <ImageDim imageset="Button1" image="ScrollBar_Up_Normal" dimension="Height" />
+          </Dim>
+          <Dim type="RightEdge">
+            <ImageDim imageset="Button1" image="ScrollBar_Bar" dimension="Width" />
+          </Dim>
+          <Dim type="BottomEdge">
+            <UnifiedDim scale="1" type="BottomEdge">
+              <DimOperator op="Subtract">
+                <ImageDim imageset="Button1" image="ScrollBar_Down_Normal" dimension="Height" />
+              </DimOperator>
+            </UnifiedDim>
+          </Dim>
+        </Area>
+        <Image imageset="Button1" image="ScrollBar_Bar" />
+        <VertFormat type="Tiled" />
+        <HorzFormat type="CentreAligned" />
+      </ImageryComponent>
+    </ImagerySection>
+    <StateImagery name="Enabled">
+      <Layer>
+        <Section section="main" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="main">
+          <Colours topLeft="FF7F7F7F" topRight="FF7F7F7F" bottomLeft="FF7F7F7F" bottomRight="FF7F7F7F" />
+        </Section>
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+
+
+  <WidgetLook name="TLBB_Look_SliderThumb">
+    <Property name="HorzFree" value="True" />
+    <ImagerySection name="normal">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <AbsoluteDim value="12" />
+          </Dim>
+          <Dim type="Height">
+            <AbsoluteDim value="14" />
+          </Dim>
+        </Area>
+        <Image imageset="Button1" image="Slider_Thumb_Normal" />
+        <VertFormat type="Stretched" />
+        <HorzFormat type="Stretched" />
+      </ImageryComponent>
+    </ImagerySection>
+    <ImagerySection name="Hover">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <AbsoluteDim value="12" />
+          </Dim>
+          <Dim type="Height">
+            <AbsoluteDim value="14" />
+          </Dim>
+        </Area>
+        <Image imageset="Button1" image="Slider_Thumb_Normal" />
+        <VertFormat type="Stretched" />
+        <HorzFormat type="Stretched" />
+      </ImageryComponent>
+    </ImagerySection>
+    <ImagerySection name="Pushed">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <AbsoluteDim value="12" />
+          </Dim>
+          <Dim type="Height">
+            <AbsoluteDim value="14" />
+          </Dim>
+        </Area>
+        <Image imageset="Button1" image="Slider_Thumb_Pushed" />
+        <VertFormat type="Stretched" />
+        <HorzFormat type="Stretched" />
+      </ImageryComponent>
+    </ImagerySection>
+    <ImagerySection name="Disabled">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <AbsoluteDim value="12" />
+          </Dim>
+          <Dim type="Height">
+            <AbsoluteDim value="14" />
+          </Dim>
+        </Area>
+        <Image imageset="Button1" image="Slider_Thumb_Normal" />
+        <VertFormat type="Stretched" />
+        <HorzFormat type="Stretched" />
+      </ImageryComponent>
+    </ImagerySection>
+    <StateImagery name="Normal">
+      <Layer>
+        <Section section="normal" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Hover">
+      <Layer>
+        <Section section="normal" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Pushed">
+      <Layer>
+        <Section section="normal" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="normal">
+          <Colours topLeft="FF7F7F7F" topRight="FF7F7F7F" bottomLeft="FF7F7F7F" bottomRight="FF7F7F7F" />
+        </Section>
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+  
+  
+  <WidgetLook name="TLBB_Look_Slider">
+    <NamedArea name="ThumbTrackArea">
+      <Area>
+        <Dim type="LeftEdge">
+          <ImageDim imageset="Button2" image="SliderLeft_Normal" dimension="Height" />
+        </Dim>
+        <Dim type="TopEdge">
+          <AbsoluteDim value="0" />
+        </Dim>
+        <Dim type="RightEdge">
+          <UnifiedDim scale="1" offset="-14" type="RightEdge" >
+          </UnifiedDim>
+        </Dim>
+        <Dim type="BottomEdge">
+          <UnifiedDim scale="1" type="BottomEdge"/>
+        </Dim>
+      </Area>
+    </NamedArea>
+    <Child type="TLBB_ButtonNULL" nameSuffix="__auto_decbtn__">
+      <Property name="MouseButtonDownAutoRepeat" value="True" />
+      <Property name="ClickSound" value="-1" />
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="0" />
+        </Dim>
+        <Dim type="TopEdge">
+          <AbsoluteDim value="0" />
+        </Dim>
+        <Dim type="Width">
+          <ImageDim imageset="Button2" image="SliderLeft_Normal" dimension="Width" />
+        </Dim>
+        <Dim type="Height">
+          <ImageDim imageset="Button2" image="SliderLeft_Normal" dimension="Height" />
+        </Dim>
+      </Area>
+      <Property name="UseStandardImagery" value="False" />
+      <Property name="NormalImage" value="set:Button2 image:SliderLeft_Normal" />
+      <Property name="HoverImage" value="set:Button2 image:SliderLeft_Hover" />
+      <Property name="PushedImage" value="set:Button2 image:SliderLeft_Pushed" />
+      <Property name="RiseOnClick" value="false" />
+    </Child>
+    <Child type="TLBB_ButtonNULL" nameSuffix="__auto_incbtn__">
+      <Property name="MouseButtonDownAutoRepeat" value="True" />
+      <Property name="ClickSound" value="-1" />
+      <Property name="RiseOnClick" value="false" />
+      <Area>
+        <Dim type="LeftEdge">
+          <UnifiedDim scale="1" type="RightEdge" >
+            <DimOperator op="Subtract">
+              <ImageDim imageset="Button2" image="SliderRight_Normal" dimension="Width" />
+            </DimOperator>
+          </UnifiedDim>
+        </Dim>
+        <Dim type="TopEdge">
+          <AbsoluteDim value="0" />
+        </Dim>
+        <Dim type="Width">
+          <ImageDim imageset="Button2" image="SliderRight_Normal" dimension="Width" />
+        </Dim>
+        <Dim type="Height">
+          <ImageDim imageset="Button2" image="SliderRight_Normal" dimension="Height" />
+        </Dim>
+      </Area>
+      <Property name="UseStandardImagery" value="False" />
+      <Property name="NormalImage" value="set:Button2 image:SliderRight_Normal" />
+      <Property name="HoverImage" value="set:Button2 image:SliderRight_Hover" />
+      <Property name="PushedImage" value="set:Button2 image:SliderRight_Pushed" />
+    </Child>
+    <Child type="TLBB_SliderThumb" nameSuffix="__auto_thumb__">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="0" />
+        </Dim>
+        <Dim type="TopEdge">
+          <AbsoluteDim value="0" />
+        </Dim>
+        <Dim type="Width">
+          <AbsoluteDim value="12" />
+        </Dim>
+        <Dim type="Height">
+          <AbsoluteDim value="14" />
+        </Dim>
+      </Area>
+      <Property name="AlwaysOnTop" value="True" />
+    </Child>
+    <ImagerySection name="main">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <ImageDim imageset="Button2" image="SliderLeft_Normal" dimension="Height" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="RightEdge">
+            <UnifiedDim scale="1" type="RightEdge">
+              <DimOperator op="Subtract">
+                <ImageDim imageset="Button2" image="SliderRight_Normal" dimension="Height" />
+              </DimOperator>
+            </UnifiedDim>
+          </Dim>
+          <Dim type="BottomEdge">
+            <UnifiedDim scale="1" type="BottomEdge"/>
+          </Dim>
+        </Area>
+        <Image imageset="Button2" image="Slider_Bar" />
+        <VertFormat type="CentreAligned" />
+        <HorzFormat type="Tiled" />
+      </ImageryComponent>
+    </ImagerySection>
+    <StateImagery name="Enabled">
+      <Layer>
+        <Section section="main" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="main">
+          <Colours topLeft="FF7F7F7F" topRight="FF7F7F7F" bottomLeft="FF7F7F7F" bottomRight="FF7F7F7F" />
+        </Section>
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+  
+</Falagard>

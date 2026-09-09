@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<GUILayout>
+	<Window Type="DefaultWindow" Name="SceneTrans_Frame">
+		<Property Name="Position" Value="x:0.0 y:0.0" />
+		<Property Name="Size" Value="w:1.0 h:1.0" />
+		<Window Type="TLBB_StaticImageNULL" Name="SceneTrans_Board" >
+			<Property Name="UnifiedSize" Value="{{0.0,256},{0.0,256}}" />
+			<Property Name="UnifiedPosition" Value="{{0.5,-128},{0.37,-128}}" />
+			<Property Name="Image" Value="set:SceneTrans image:SceneTrans" />
+			<Window Type="TLBB_SimpleText" Name="SceneTrans_TargetScene" >
+				<Property Name="Position" Value="x:0.136 y:0.789" />
+				<Property Name="Size" Value="w:0.745 h:0.08" />
+ 				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="HorzFormatting" Value="HorzCentred" />
+				<Property Name="VertFormatting" Value="VertCentred" />	
+			</Window>
+		</Window>
+	</Window>
+</GUILayout>

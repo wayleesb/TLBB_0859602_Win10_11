@@ -1,0 +1,253 @@
+<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame3" Name="LifeSkill_Frame">
+        <Property Name="UnifiedPosition" Value="{{0.0,0},{0.12,0}}" />
+        <Property Name="AbsoluteSize" Value="w:256 h:360" />
+        <Property Name="MouseHollow" Value="True" />
+        <Window Type="TLBB_DragTitle" Name="LifeSkill_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:108.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-133.000000},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="LifeSkill_Frame" />
+            <Property Name="Text" Value="#{INTERFACE_XML_58}" />
+            <Property Name="Font" Value="YouYuan11.25" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+        </Window>
+        <Window Type="TLBB_ButtonHelp" Name="LifeSkill_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,88.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*LifeSkill&quot;);' />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="LifeSkill_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function="Life_Skill_Close();" />
+        </Window>
+        <Window Type="DefaultWindow" Name="LifeSkill_Frame_Client">
+            <Property Name="AbsolutePosition" Value="x:10.000000 y:37.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-15.000000},{1.000000,-66.000000}" />
+            <Window Type="TLBB_Frame_Lace2" Name="LifeSkill_Bk">
+                <Property Name="UnifiedPosition" Value="{{0.000000,7.000000},{0.000000,1.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,208.000000},{0.000000,159.000000}" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="LifeSkill_Skill1">
+                <Property Name="Position" Value="x:0.05 y:0.02" />
+                <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                <Property Name="DraggingEnabled" Value="True" />
+                <Event Name="Clicked" Function="LifeSkill_Buttons_Clicked(1);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="LifeSkill_Skill2">
+                <Property Name="Position" Value="x:0.22 y:0.02" />
+                <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                <Property Name="DraggingEnabled" Value="True" />
+                <Event Name="Clicked" Function="LifeSkill_Buttons_Clicked(2);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="LifeSkill_Skill3">
+                <Property Name="Position" Value="x:0.39 y:0.02" />
+                <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                <Property Name="DraggingEnabled" Value="True" />
+                <Event Name="Clicked" Function="LifeSkill_Buttons_Clicked(3);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="LifeSkill_Skill4">
+                <Property Name="Position" Value="x:0.56 y:0.02" />
+                <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                <Property Name="DraggingEnabled" Value="True" />
+                <Event Name="Clicked" Function="LifeSkill_Buttons_Clicked(4);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="LifeSkill_Skill5">
+                <Property Name="Position" Value="x:0.73 y:0.02" />
+                <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                <Property Name="DraggingEnabled" Value="True" />
+                <Event Name="Clicked" Function="LifeSkill_Buttons_Clicked(5);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="LifeSkill_Skill6">
+                <Property Name="Position" Value="x:0.05 y:0.15" />
+                <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                <Property Name="DraggingEnabled" Value="True" />
+                <Event Name="Clicked" Function="LifeSkill_Buttons_Clicked(6);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="LifeSkill_Skill7">
+                <Property Name="Position" Value="x:0.22 y:0.15" />
+                <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                <Property Name="DraggingEnabled" Value="True" />
+                <Event Name="Clicked" Function="LifeSkill_Buttons_Clicked(7);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="LifeSkill_Skill8">
+                <Property Name="Position" Value="x:0.39 y:0.15" />
+                <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                <Property Name="DraggingEnabled" Value="True" />
+                <Event Name="Clicked" Function="LifeSkill_Buttons_Clicked(8);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="LifeSkill_Skill9">
+                <Property Name="Position" Value="x:0.56 y:0.15" />
+                <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                <Property Name="DraggingEnabled" Value="True" />
+                <Event Name="Clicked" Function="LifeSkill_Buttons_Clicked(9);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="LifeSkill_Skill10">
+                <Property Name="Position" Value="x:0.73 y:0.15" />
+                <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                <Property Name="DraggingEnabled" Value="True" />
+                <Event Name="Clicked" Function="LifeSkill_Buttons_Clicked(10);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="LifeSkill_Skill11">
+                <Property Name="Position" Value="x:0.05 y:0.28" />
+                <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                <Property Name="DraggingEnabled" Value="True" />
+                <Event Name="Clicked" Function="LifeSkill_Buttons_Clicked(11);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="LifeSkill_Skill12">
+                <Property Name="Position" Value="x:0.22 y:0.28" />
+                <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                <Property Name="DraggingEnabled" Value="True" />
+                <Event Name="Clicked" Function="LifeSkill_Buttons_Clicked(12);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="LifeSkill_Skill13">
+                <Property Name="Position" Value="x:0.39 y:0.28" />
+                <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                <Property Name="DraggingEnabled" Value="True" />
+                <Event Name="Clicked" Function="LifeSkill_Buttons_Clicked(13);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="LifeSkill_Skill14">
+                <Property Name="Position" Value="x:0.56 y:0.28" />
+                <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                <Property Name="DraggingEnabled" Value="True" />
+                <Event Name="Clicked" Function="LifeSkill_Buttons_Clicked(14);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="LifeSkill_Skill15">
+                <Property Name="Position" Value="x:0.73 y:0.28" />
+                <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                <Property Name="DraggingEnabled" Value="True" />
+                <Event Name="Clicked" Function="LifeSkill_Buttons_Clicked(15);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="LifeSkill_Skill16">
+                <Property Name="Position" Value="x:0.05 y:0.41" />
+                <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                <Property Name="DraggingEnabled" Value="True" />
+                <Event Name="Clicked" Function="LifeSkill_Buttons_Clicked(16);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="LifeSkill_Skill17">
+                <Property Name="Position" Value="x:0.22 y:0.41" />
+                <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                <Property Name="DraggingEnabled" Value="True" />
+                <Event Name="Clicked" Function="LifeSkill_Buttons_Clicked(17);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="LifeSkill_Skill18">
+                <Property Name="Position" Value="x:0.39 y:0.41" />
+                <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                <Property Name="DraggingEnabled" Value="True" />
+                <Event Name="Clicked" Function="LifeSkill_Buttons_Clicked(18);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="LifeSkill_Skill19">
+                <Property Name="Position" Value="x:0.56 y:0.41" />
+                <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                <Property Name="DraggingEnabled" Value="True" />
+                <Event Name="Clicked" Function="LifeSkill_Buttons_Clicked(19);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="LifeSkill_Skill20">
+                <Property Name="Position" Value="x:0.73 y:0.41" />
+                <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                <Property Name="DraggingEnabled" Value="True" />
+                <Event Name="Clicked" Function="LifeSkill_Buttons_Clicked(20);" />
+            </Window>
+            <Window Type="TLBB_ButtonNULL" Name="LifeSkill_UPdata1">
+                <Property Name="Position" Value="x:0.91 y:0.088" />
+                <Property Name="AbsoluteSize" Value="w:20.0 h:26.0" />
+                <Property Name="NormalImage" Value="set:Button6 image:PageUp_Btn_Normal" />
+                <Property Name="HoverImage" Value="set:Button6 image:PageUp_Btn_Hover" />
+                <Property Name="PushedImage" Value="set:Button6 image:PageUp_Btn_Pushed" />
+                <Property Name="DisabledImage" Value="set:Button6 image:PageUp_Btn_Disabled" />
+                <Event Name="Clicked" Function="LifeSkill_Page(-1);" />
+            </Window>
+            <Window Type="TLBB_ButtonNULL" Name="LifeSkill_UPdata2">
+                <Property Name="Position" Value="x:0.91 y:0.38" />
+                <Property Name="AbsoluteSize" Value="w:20.0 h:26.0" />
+                <Property Name="NormalImage" Value="set:Button6 image:PageDown_Btn_Normal" />
+                <Property Name="HoverImage" Value="set:Button6 image:PageDown_Btn_Hover" />
+                <Property Name="PushedImage" Value="set:Button6 image:PageDown_Btn_Pushed" />
+                <Property Name="DisabledImage" Value="set:Button6 image:PageDown_Btn_Disabled" />
+                <Event Name="Clicked" Function="LifeSkill_Page(1);" />
+            </Window>
+            		<Window Type="TLBB_ActionButton" Name="LifeSkill_Target_Skill" >
+			<Property Name="Position" Value="x:0.037344 y:0.578231" />
+			<Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+			<Event Name="Clicked" Function="LifeSkill_Synthesize_Clicked();" />
+		</Window>
+
+            		<Window Type="TLBB_SimpleMulitiTextFrame" Name="LifeSkill_Target_Skill_Name" >
+			<Property Name="Position" Value="x:0.199170 y:0.571429" />
+			<Property Name="UnifiedSize" Value="{{0.220000,16.959996},{0.000000,20.000000}" />
+			<Property Name="HorzFormatting" Value="LeftAligned" />
+			<Property Name="RiseOnClick" Value="False" />
+			<Property Name="Text" Value="#{INTERFACE_XML_812}" />
+			<Property Name="TextColor" Value="FFFFF263" />
+			<Property Name="VertFormatting" Value="TopAligned" />
+		</Window>
+
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="LifeSkill_Target_Skill_Level">
+                <Property Name="Position" Value="x:0.49 y:0.57" />
+                <Property Name="UnifiedSize" Value="{{0.26,0.000000},{0.000000,20.000000}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="TopAligned" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Property Name="Text" Value="#{INTERFACE_XML_230}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+            </Window>
+            		<Window Type="TLBB_SimpleMulitiTextFrame" Name="LifeSkill_Target_Skill_Sleight" >
+			<Property Name="UnifiedPosition" Value="{{0.270000,-17.140006},{0.570000,20.840000}" />
+			<Property Name="UnifiedSize" Value="{{0.480000,17.640006},{0.000000,20.000000}" />
+			<Property Name="HorzFormatting" Value="LeftAligned" />
+			<Property Name="RiseOnClick" Value="False" />
+			<Property Name="Text" Value="#{INTERFACE_XML_662}" />
+			<Property Name="TextColor" Value="FFFFF263" />
+			<Property Name="VertFormatting" Value="TopAligned" />
+		</Window>
+
+            <Window Type="TLBB_ButtonCommon" Name="LifeSkill_Next1">
+                <Property Name="Position" Value="x:0.76 y:0.6" />
+                <Property Name="UnifiedSize" Value="{{0.2,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_871}" />
+                <Event Name="Clicked" Function="LifeSkill_Synthesize_Clicked();" />
+            </Window>
+            <Window Type="TLBB_Frame_Lace4" Name="LifeSkill_Target_Skill_Explain_Bk">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-80.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.000000,0.000000},{0.000000,80.000000}" />
+                <Window Type="TLBB_StaticText" Name="LifeSkill_Target_Skill_Explain">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,7.000000},{0.000000,6.000000}" />
+                    <Property Name="UnifiedSize" Value="{{1.000000,-14.000000},{1.000000,-12.000000}" />
+                    <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                    <Property Name="VertFormatting" Value="TopAligned" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="VertScrollbar" Value="true" />
+                </Window>
+            </Window>
+        </Window>
+        <Window Type="DefaultWindow" Name="LifeSkill_Checkbox_Frame">
+            <Property Name="UnifiedPosition" Value="{{0.0,8.000000},{1.000000,-25.000000}" />
+            <Property Name="UnifiedSize" Value="{{0.9,0.000000},{0.000000,24.000000}" />
+            <Property Name="RiseOnClick" Value="False" />
+            <Window Type="TLBB_ButtonPageDown" Name="LifeSkill_CommonlySkill">
+                <Property Name="AbsolutePosition" Value="x:0.0 y:0.0" />
+                <Property Name="AbsoluteSize" Value="w:42.000000 h:24.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_494}" />
+                <Property Name="CheckMode" Value="1" />
+                <Event Name="Clicked" Function="Life_Common_Page_Switch();" />
+            </Window>
+            <Window Type="TLBB_ButtonPageDown" Name="LifeSkill_ActionSkill">
+                <Property Name="AbsolutePosition" Value="x:44.0 y:0.0" />
+                <Property Name="AbsoluteSize" Value="w:42.000000 h:24.000000" />
+                <Property Name="CheckMode" Value="1" />
+                <Property Name="Text" Value="#{INTERFACE_XML_448}" />
+                <Event Name="Clicked" Function="Life_Action_Page_Switch();" />
+            </Window>
+            <Window Type="TLBB_ButtonPageDown" Name="LifeSkill_LifeSkill">
+                <Property Name="AbsolutePosition" Value="x:88.0 y:0.0" />
+                <Property Name="AbsoluteSize" Value="w:42.000000 h:24.000000" />
+                <Property Name="CheckMode" Value="1" />
+                <Property Name="Text" Value="#{INTERFACE_XML_635}" />
+                <Property Name="Selected" Value="True" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

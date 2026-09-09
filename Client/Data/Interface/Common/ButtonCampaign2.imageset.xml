@@ -1,0 +1,20 @@
+<Imageset Name="ButtonCampaign2" Imagefile="Common/tga_ButtonCampaign2.dds" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+
+    <Image Name="Campaign_IMG_jinriL_Normal" XPos="124" YPos="5" Width="116" Height="33" />
+    <Image Name="Campaign_IMG_jinriL_Pushed" XPos="124" YPos="43" Width="116" Height="33" />
+    <Image Name="Campaign_IMG_jinriL_Hover" XPos="124" YPos="81" Width="116" Height="33" />
+    <Image Name="Campaign_IMG_jinri_Normal" XPos="124" YPos="121" Width="116" Height="33" />
+    <Image Name="Campaign_IMG_jinri_Pushed" XPos="124" YPos="159" Width="116" Height="33" />
+    <Image Name="Campaign_IMG_jinri_Hover" XPos="124" YPos="197" Width="116" Height="33" />
+  
+  
+  
+    <Image Name="Campaign_IMG_mingriL_Normal" XPos="5" YPos="5" Width="116" Height="33" />
+    <Image Name="Campaign_IMG_mingriL_Pushed" XPos="5" YPos="43" Width="116" Height="33" />
+    <Image Name="Campaign_IMG_mingriL_Hover" XPos="5" YPos="81" Width="116" Height="33" />
+    <Image Name="Campaign_IMG_mingri_Normal" XPos="5" YPos="121" Width="116" Height="33" />
+    <Image Name="Campaign_IMG_mingri_Pushed" XPos="5" YPos="159" Width="116" Height="33" />
+    <Image Name="Campaign_IMG_mingri_Hover" XPos="5" YPos="197" Width="116" Height="33" />
+  
+  
+</Imageset>

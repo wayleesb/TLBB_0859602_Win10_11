@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+	<Imageset Name="CommonFrame2" Imagefile="Common/CommonFrame2.tga" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="false">
+		<Image Name="TooltipFrame_LT" XPos="183" YPos="232" Width="18" Height="21" />
+    <Image Name="TooltipFrame_LB" XPos="183" YPos="232" Width="18" Height="21" />
+    <Image Name="TooltipFrame_RT" XPos="183" YPos="232" Width="18" Height="21" />
+    <Image Name="TooltipFrame_RB" XPos="183" YPos="232" Width="18" Height="21" />
+    <Image Name="TooltipFrame_L" XPos="183" YPos="232" Width="18" Height="21" />
+    <Image Name="TooltipFrame_R" XPos="183" YPos="232" Width="18" Height="21" />
+    <Image Name="TooltipFrame_T" XPos="183" YPos="232" Width="18" Height="21" />
+    <Image Name="TooltipFrame_B" XPos="183" YPos="232" Width="18" Height="21" />
+
+    <Image Name="PlayerFrame" XPos="0" YPos="106" Width="191" Height="63" />
+    <Image Name="PetFrame" XPos="0" YPos="170" Width="148" Height="37" />
+    <Image Name="TeamFrame" XPos="0" YPos="210" Width="150" Height="40" />
+    <Image Name="FenIcon_A1" XPos="183" YPos="3" Width="30" Height="30" />
+    <Image Name="FenIcon_A2" XPos="216" YPos="3" Width="30" Height="30" />
+    <Image Name="FenIcon_A3" XPos="183" YPos="35" Width="30" Height="30" />
+    <Image Name="FenIcon_A4" XPos="216" YPos="35" Width="30" Height="30" />
+
+    <Image Name="FenIcon_B1" XPos="182" YPos="67" Width="20" Height="20" />
+    <Image Name="FenIcon_B2" XPos="204" YPos="67" Width="20" Height="20" />
+    <Image Name="FenIcon_B3" XPos="226" YPos="67" Width="20" Height="20" />
+    <Image Name="FenIcon_B4" XPos="194" YPos="89" Width="20" Height="20" />
+
+    <Image Name="XinPaoIcon_B1" XPos="162" YPos="203" Width="22" Height="22" />
+    <Image Name="XinPaoIcon_B2" XPos="186" YPos="203" Width="22" Height="22" />
+    <Image Name="XinPaoIcon_B3" XPos="210" YPos="203" Width="22" Height="22" />
+    <Image Name="XinPaoIcon_B4" XPos="234" YPos="203" Width="22" Height="22" />
+
+    <Image Name="XinNiuIcon_B1" XPos="226" YPos="172" Width="30" Height="30" />
+    <Image Name="XinNiuIcon_B2" XPos="161" YPos="226" Width="30" Height="30" />
+    <Image Name="XinNiuIcon_B3" XPos="194" YPos="226" Width="30" Height="30" />
+    <Image Name="XinNiuIcon_B4" XPos="226" YPos="226" Width="30" Height="30" />
+	</Imageset>

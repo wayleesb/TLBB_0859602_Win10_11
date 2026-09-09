@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame1" Name="SystemNotice_Frame">
+        <Property Name="UnifiedPosition" Value="{{0.5,-128},{0.5,-178}}" />
+        <Property Name="AbsoluteSize" Value="w:256 h:128" />
+        <Window Type="TLBB_DragTitle" Name="SystemNotice_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="SystemNotice_Frame" />
+            <Window Type="TLBB_SimpleText" Name="SystemNotice_Title">
+                <Property Name="Position" Value="x:0.0 y:0.0" />
+                <Property Name="Size" Value="w:1.0 h:1.0" />
+                <Property Name="Font" Value="YouYuan11.25" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Property Name="Text" Value="#{INTERFACE_XML_63}" />
+            </Window>
+        </Window>
+        <Window Type="TLBB_ButtonHelp" Name="SystemNotice_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*SystemNotice&quot;);' />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="SystemNotice_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function="this:Hide();" />
+        </Window>
+        <Window Type="DefaultWindow" Name="SystemNotice_Client">
+            <Property Name="AbsolutePosition" Value="x:7.000000 y:36.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-13.000000},{1.000000,-55.000000}" />
+            <Window Type="TLBB_MultiIMEEditBox" Name="SystemNotice_InputTenet">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,0.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.000000,0.000000},{1.000000,-24.000000}" />
+                <Property Name="MaxTextLength" Value="50" />
+            </Window>
+            <Window Type="TLBB_Frame_Lace5" Name="SystemNotice_Blank">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-120.000000},{0.000000,20.000000}" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="SystemNotice_OK">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-120.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:60.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_740}" />
+                <Event Name="Clicked" Function="SystemNotice_Next();" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="SystemNotice_Cancel">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-60.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:60.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_539}" />
+                <Event Name="Clicked" Function="this:Hide();" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

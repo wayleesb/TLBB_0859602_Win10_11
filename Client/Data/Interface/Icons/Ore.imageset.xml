@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<Imageset Name="Ore" Imagefile="Icons/Ore.jpg" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+	<Image Name="Ore_1" XPos="0" YPos="0" Width="64" Height="64" />
+	<Image Name="Ore_2" XPos="64" YPos="0" Width="64" Height="64" />
+	<Image Name="Ore_3" XPos="128" YPos="0" Width="64" Height="64" />
+	<Image Name="Ore_4" XPos="192" YPos="0" Width="64" Height="64" />
+	<Image Name="Ore_5" XPos="0" YPos="64" Width="64" Height="64" />
+	<Image Name="Ore_6" XPos="64" YPos="64" Width="64" Height="64" />
+	<Image Name="Ore_7" XPos="128" YPos="64" Width="64" Height="64" />
+	<Image Name="Ore_8" XPos="192" YPos="64" Width="64" Height="64" />
+	<Image Name="Ore_9" XPos="0" YPos="128" Width="64" Height="64" />
+	<Image Name="Ore_10" XPos="64" YPos="128" Width="64" Height="64" />
+	<Image Name="Ore_11" XPos="128" YPos="128" Width="64" Height="64" />
+	<Image Name="Ore_12" XPos="192" YPos="128" Width="64" Height="64" />
+	<Image Name="Ore_13" XPos="0" YPos="192" Width="64" Height="64" />
+	<Image Name="Ore_14" XPos="64" YPos="192" Width="64" Height="64" />
+	<Image Name="Ore_15" XPos="128" YPos="192" Width="64" Height="64" />
+	<Image Name="Ore_16" XPos="192" YPos="192" Width="64" Height="64" />
+</Imageset>

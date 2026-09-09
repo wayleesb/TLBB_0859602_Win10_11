@@ -1,0 +1,4 @@
+<?xml version="1.0" ?>
+<Imageset Name="PKWarning" Imagefile="Common/tga_PKWarning.dds" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+	<Image Name="PKWarning" XPos="0" YPos="0" Width="128" Height="128" />
+</Imageset>

@@ -1,0 +1,314 @@
+<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame1" Name="CityTrendGraph_Frame">
+        <Property Name="UnifiedPosition" Value="{{0.0,0},{0.12,0}}" />
+        <Property Name="AbsoluteSize" Value="w:256 h:360" />
+        <Window Type="TLBB_DragTitle" Name="CityTrendGraph_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="CityTrendGraph_Frame" />
+            <Window Type="TLBB_SimpleText" Name="CityTrendGraph_PageHeader">
+                <Property Name="Position" Value="x:0.0 y:0.0" />
+                <Property Name="Size" Value="w:1.0 h:1.0" />
+                <Property Name="Font" Value="YouYuan11.25" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="Text" Value="#{INTERFACE_XML_33}" />
+            </Window>
+        </Window>
+        <Window Type="TLBB_ButtonHelp" Name="CityTrendGraph_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Property Name="Text" Value="TLBB_ButtonHelp" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*CityTrendGraph&quot;);' />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="CityTrendGraph_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Property Name="Text" Value="TLBB_ButtonClose" />
+            <Event Name="Clicked" Function="this:Hide();" />
+        </Window>
+        <Window Type="DefaultWindow" Name="CityTrendGraph_Function_Frame">
+            <Property Name="AbsolutePosition" Value="x:6.000000 y:36.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-12.000000},{1.000000,-55.000000}" />
+            <Window Type="TLBB_Frame_Lace4" Name="CityTrendGraph_Graph">
+                <Property Name="Position" Value="x:0.0 y:0.0" />
+                <Property Name="Size" Value="w:1.0 h:0.72" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Window Type="TLBB_StaticImageNULL">
+                    <Property Name="UnifiedPosition" Value="{{0.5,-90.000000},{0.5000000,-90.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:180.000000 h:180.000000" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="Image" Value="set:CityTrendGraph image:CityTrendGraph_Graph" />
+                    <Window Type="TLBB_StaticImageNULL" Name="CityTrendGraph_Trendline">
+                        <Property Name="UnifiedPosition" Value="{{0.0,0.000000},{0.000000,0.000000}" />
+                        <Property Name="AbsoluteSize" Value="w:180.000000 h:180.000000" />
+                        <Property Name="RiseOnClick" Value="False" />
+                        <Window Type="TLBB_StaticImageNULL" Name="CityTrendGraph_Numerical">
+                            <Property Name="Position" Value="x:0.445833333 y:0.025" />
+                            <Property Name="Size" Value="w:0.0458333333 h:0.4833333333" />
+                            <Property Name="RiseOnClick" Value="False" />
+                            <Property Name="Image" Value="set:CityTrendGraph image:CityTrendGraph_Numerical" />
+                        </Window>
+                    </Window>
+                </Window>
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="CityTrendGraph_Text1">
+                <Property Name="Position" Value="x:0.4 y:0.02" />
+                <Property Name="UnifiedSize" Value="{{0.2,0.000000},{0.000000,20.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_294}" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="CityTrendGraph_Text2">
+                <Property Name="Position" Value="x:0.4 y:0.64" />
+                <Property Name="UnifiedSize" Value="{{0.2,0.000000},{0.000000,20.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_309}" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="CityTrendGraph_Text3">
+                <Property Name="Position" Value="x:0.0 y:0.2" />
+                <Property Name="UnifiedSize" Value="{{0.2,0.000000},{0.000000,20.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_419}" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="CityTrendGraph_Text4">
+                <Property Name="Position" Value="x:0.8 y:0.2" />
+                <Property Name="UnifiedSize" Value="{{0.2,0.000000},{0.000000,20.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_478}" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="CityTrendGraph_Text5">
+                <Property Name="Position" Value="x:0.0 y:0.45" />
+                <Property Name="UnifiedSize" Value="{{0.2,0.000000},{0.000000,20.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_402}" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="CityTrendGraph_Text6">
+                <Property Name="Position" Value="x:0.8 y:0.45" />
+                <Property Name="UnifiedSize" Value="{{0.2,0.000000},{0.000000,20.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_594}" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleTextFrameLeft" Name="CityTrendGraph_Text7">
+                <Property Name="UnifiedPosition" Value="{{0.0,0.000000},{1.000000,-83.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,60.000000},{0.000000,20.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_295}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleTextFrameRight" Name="CityTrendGraph_Numerical1">
+                <Property Name="UnifiedPosition" Value="{{0.0,60.000000},{1.000000,-83.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,30.000000},{0.000000,20.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="9999" />
+                <Property Name="HorzFormatting" Value="RightAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleTextFrameLeft" Name="CityTrendGraph_Text9">
+                <Property Name="UnifiedPosition" Value="{{0.0,0.000000},{1.000000,-63.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,60.000000},{0.000000,20.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_420}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleTextFrameRight" Name="CityTrendGraph_Numerical3">
+                <Property Name="UnifiedPosition" Value="{{0.0,60.000000},{1.000000,-63.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,30.000000},{0.000000,20.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="9999" />
+                <Property Name="HorzFormatting" Value="RightAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleTextFrameLeft" Name="CityTrendGraph_Text11">
+                <Property Name="UnifiedPosition" Value="{{0.0,0.000000},{1.000000,-43.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,60.000000},{0.000000,20.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_403}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleTextFrameRight" Name="CityTrendGraph_Numerical5">
+                <Property Name="UnifiedPosition" Value="{{0.0,60.000000},{1.000000,-43.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,30.000000},{0.000000,20.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="9999" />
+                <Property Name="HorzFormatting" Value="RightAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleTextFrameLeft" Name="CityTrendGraph_Text10">
+                <Property Name="UnifiedPosition" Value="{{0.5,0.000000},{1.000000,-83.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,60.000000},{0.000000,20.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_479}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleTextFrameRight" Name="CityTrendGraph_Numerical4">
+                <Property Name="UnifiedPosition" Value="{{0.5,60.000000},{1.000000,-83.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,30.000000},{0.000000,20.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="9999" />
+                <Property Name="HorzFormatting" Value="RightAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleTextFrameLeft" Name="CityTrendGraph_Text12">
+                <Property Name="UnifiedPosition" Value="{{0.5,0.000000},{1.000000,-63.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,60.000000},{0.000000,20.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_595}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleTextFrameRight" Name="CityTrendGraph_Numerical6">
+                <Property Name="UnifiedPosition" Value="{{0.5,60.000000},{1.000000,-63.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,30.000000},{0.000000,20.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="9999" />
+                <Property Name="HorzFormatting" Value="RightAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleTextFrameLeft" Name="CityTrendGraph_Text8">
+                <Property Name="UnifiedPosition" Value="{{0.5,0.000000},{1.000000,-43.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,60.000000},{0.000000,20.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_310}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleTextFrameRight" Name="CityTrendGraph_Numerical2">
+                <Property Name="UnifiedPosition" Value="{{0.5,60.000000},{1.000000,-43.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,30.000000},{0.000000,20.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="9999" />
+                <Property Name="HorzFormatting" Value="RightAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_ButtonAdd" Name="CityTrendGraph_Addition_Button1">
+                <Property Name="UnifiedPosition" Value="{{0.0,91.000000},{1.000000,-80.000000}" />
+                <Property Name="AbsoluteSize" Value="w:15.000000 h:15.000000" />
+                <Event Name="Clicked" Function="City_Trend_Add(1);" />
+            </Window>
+            <Window Type="TLBB_ButtonSub" Name="CityTrendGraph_Decrease_Button1">
+                <Property Name="UnifiedPosition" Value="{{0.0,106.000000},{1.000000,-80.000000}" />
+                <Property Name="AbsoluteSize" Value="w:15.000000 h:15.000000" />
+                <Event Name="Clicked" Function="City_Trend_Dec(1);" />
+            </Window>
+            <Window Type="TLBB_ButtonAdd" Name="CityTrendGraph_Addition_Button2">
+                <Property Name="UnifiedPosition" Value="{{0.5,91.000000},{1.000000,-40.000000}" />
+                <Property Name="AbsoluteSize" Value="w:15.000000 h:15.000000" />
+                <Event Name="Clicked" Function="City_Trend_Add(3);" />
+            </Window>
+            <Window Type="TLBB_ButtonSub" Name="CityTrendGraph_Decrease_Button2">
+                <Property Name="UnifiedPosition" Value="{{0.5,106.000000},{1.000000,-40.000000}" />
+                <Property Name="AbsoluteSize" Value="w:15.000000 h:15.000000" />
+                <Event Name="Clicked" Function="City_Trend_Dec(3);" />
+            </Window>
+            <Window Type="TLBB_ButtonAdd" Name="CityTrendGraph_Addition_Button3">
+                <Property Name="UnifiedPosition" Value="{{0.0,91.000000},{1.000000,-60.000000}" />
+                <Property Name="AbsoluteSize" Value="w:15.000000 h:15.000000" />
+                <Event Name="Clicked" Function="City_Trend_Add(5);" />
+            </Window>
+            <Window Type="TLBB_ButtonSub" Name="CityTrendGraph_Decrease_Button3">
+                <Property Name="UnifiedPosition" Value="{{0.0,106.000000},{1.000000,-60.000000}" />
+                <Property Name="AbsoluteSize" Value="w:15.000000 h:15.000000" />
+                <Event Name="Clicked" Function="City_Trend_Dec(5);" />
+            </Window>
+            <Window Type="TLBB_ButtonAdd" Name="CityTrendGraph_Addition_Button4">
+                <Property Name="UnifiedPosition" Value="{{0.5,91.000000},{1.000000,-80.000000}" />
+                <Property Name="AbsoluteSize" Value="w:15.000000 h:15.000000" />
+                <Event Name="Clicked" Function="City_Trend_Add(2);" />
+            </Window>
+            <Window Type="TLBB_ButtonSub" Name="CityTrendGraph_Decrease_Button4">
+                <Property Name="UnifiedPosition" Value="{{0.5,106.000000},{1.000000,-80.000000}" />
+                <Property Name="AbsoluteSize" Value="w:15.000000 h:15.000000" />
+                <Event Name="Clicked" Function="City_Trend_Dec(2);" />
+            </Window>
+            <Window Type="TLBB_ButtonAdd" Name="CityTrendGraph_Addition_Button5">
+                <Property Name="UnifiedPosition" Value="{{0.0,91.000000},{1.000000,-40.000000}" />
+                <Property Name="AbsoluteSize" Value="w:15.000000 h:15.000000" />
+                <Event Name="Clicked" Function="City_Trend_Add(4);" />
+            </Window>
+            <Window Type="TLBB_ButtonSub" Name="CityTrendGraph_Decrease_Button5">
+                <Property Name="UnifiedPosition" Value="{{0.0,106.000000},{1.000000,-40.000000}" />
+                <Property Name="AbsoluteSize" Value="w:15.000000 h:15.000000" />
+                <Event Name="Clicked" Function="City_Trend_Dec(4);" />
+            </Window>
+            <Window Type="TLBB_ButtonAdd" Name="CityTrendGraph_Addition_Button6">
+                <Property Name="UnifiedPosition" Value="{{0.5,91.000000},{1.000000,-60.000000}" />
+                <Property Name="AbsoluteSize" Value="w:15.000000 h:15.000000" />
+                <Event Name="Clicked" Function="City_Trend_Add(6);" />
+            </Window>
+            <Window Type="TLBB_ButtonSub" Name="CityTrendGraph_Decrease_Button6">
+                <Property Name="UnifiedPosition" Value="{{0.5,106.000000},{1.000000,-60.000000}" />
+                <Property Name="AbsoluteSize" Value="w:15.000000 h:15.000000" />
+                <Event Name="Clicked" Function="City_Trend_Dec(6);" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="CityTrendGraph_Text13">
+                <Property Name="UnifiedPosition" Value="{{0.0,0.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,110.000000},{0.000000,20.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_640}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Window Type="TLBB_SimpleText" Name="CityTrendGraph_Text14">
+                    <Property Name="UnifiedPosition" Value="{{0.0,70.000000},{1.000000,-20.000000}" />
+                    <Property Name="UnifiedSize" Value="{{0.0,30.000000},{0.000000,20.000000}" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="Text" Value="0" />
+                    <Property Name="HorzFormatting" Value="RightAligned" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                    <Property Name="RiseOnClick" Value="False" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_Frame_Lace5" Name="CityTrendGraph_Blank">
+                <Property Name="UnifiedPosition" Value="{{0.000000,110.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-210.000000},{0.000000,20.000000}" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="CityTrendGraph_Accept">
+                <Property Name="UnifiedPosition" Value="{{1.0,-100.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,60.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_558}" />
+                <Event Name="Clicked" Function="City_Trend_Accept_Clicked();" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="CityTrendGraph_Cancel">
+                <Property Name="UnifiedPosition" Value="{{1.0,-40.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,40.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_426}" />
+                <Event Name="Clicked" Function="this:Hide();" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

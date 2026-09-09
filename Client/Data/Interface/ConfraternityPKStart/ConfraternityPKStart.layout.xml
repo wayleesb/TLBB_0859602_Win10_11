@@ -1,0 +1,72 @@
+<?xml version="1.0" ?>
+<GUILayout>
+	<Window Type="TLBB_MainFrame1" Name="ConfraternityPKStart_Frame">
+		<Property Name="UnifiedPosition" Value="{{0.5,-128},{0.4,-64}}" />
+		<Property Name="AbsoluteSize" Value="w:256 h:170" />
+		 <Event Name="Hidden" Function="ConfraternityPKStart_OnHide();" />
+		<Window Type="TLBB_DragTitle" Name="ConfraternityPKStart_DragTitle">
+			<Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+			<Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+			<Property Name="DragTarget" Value="ConfraternityPKStart_Frame" />
+			<Property Name="Font" Value="YouYuan11.25" />
+			<Property Name="HorzFormatting" Value="HorzCentred" />
+			<Property Name="VertFormatting" Value="VertCentred" />
+			<Property Name="Text" Value="#{ConfraternityPK_XML_6}" />
+		</Window>
+		<Window Type="TLBB_ButtonHelp" Name="ConfraternityPKStart_Help">
+			<Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+			<Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+			<Property Name="Text" Value="TLBB_ButtonHelp" />
+			<Event Name="Clicked" Function='Helper:GotoHelper(&quot;*ConfraternityPKStart&quot;);' />
+		</Window>
+		<Window Type="TLBB_ButtonClose" Name="ConfraternityPKStart_Close">
+			<Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+			<Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+			<Property Name="Text" Value="TLBB_ButtonClose" />
+			<Event Name="Clicked" Function="this:Hide();" />
+		</Window>
+		<Window Type="DefaultWindow" Name="ConfraternityPKStart_Function_Frame">
+			<Property Name="AbsolutePosition" Value="x:6.000000 y:36.000000" />
+			<Property Name="UnifiedSize" Value="{{1.000000,-12.000000},{1.000000,-55.000000}" />
+			<Window Type="TLBB_SimpleMulitiTextFrame" Name="ConfraternityPKStart_Text1">
+				<Property Name="Position" Value="x:0.0 y:0.0" />
+				<Property Name="UnifiedSize" Value="{{1.0,0.000000},{0.000000,45.000000}" />
+				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="Text" Value="#{ConfraternityPK_XML_7}" />
+				<Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+			</Window>
+			<Window Type="TLBB_SimpleText" Name="ConfraternityPKStart_Text2">
+				<Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-60.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.0,160.000000},{0.000000,20.000000}" />
+				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="Text" Value="#{ConfraternityPK_XML_8}" />
+				<Property Name="HorzFormatting" Value="RightAligned" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+			</Window>
+			<Window Type="TLBB_EditBoxNormal" Name="ConfraternityPKStart_Input">
+				<Property Name="UnifiedPosition" Value="{{0.000000,165.000000},{1.000000,-60.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.0,60.000000},{0.000000,20.000000}" />
+				<Property Name="ValidationString" Value="[0-9]*" />
+				<Property Name="MaxTextLength" Value="3" />
+				<Property Name="Text" Value="999" />
+			</Window>
+			<Window Type="TLBB_Frame_Lace5" Name="ConfraternityPKStart_Blank">
+				<Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-20.000000}" />
+				<Property Name="UnifiedSize" Value="{{1.000000,-120.000000},{0.000000,20.000000}" />
+			</Window>
+			<Window Type="TLBB_ButtonCommon" Name="ConfraternityPKStart_Accept">
+				<Property Name="UnifiedPosition" Value="{{1.000000,-120.000000},{1.000000,-20.000000}" />
+				<Property Name="AbsoluteSize" Value="w:60.000000 h:20.000000" />
+				<Event Name="Clicked" Function="ConfraternityPKStart_Accept_BtnClick();" />
+				<Property Name="Text" Value="#{INTERFACE_XML_556}" />
+			</Window>
+			<Window Type="TLBB_ButtonCommon" Name="ConfraternityPKStart_Cancel">
+				<Property Name="UnifiedPosition" Value="{{1.000000,-60.000000},{1.000000,-20.000000}" />
+				<Property Name="AbsoluteSize" Value="w:60.000000 h:20.000000" />
+				<Event Name="Clicked" Function="ConfraternityPKStart_Cancel_BtnClick();" />
+				<Property Name="Text" Value="#{INTERFACE_XML_539}" />
+			</Window>
+		</Window>
+	</Window>
+</GUILayout>

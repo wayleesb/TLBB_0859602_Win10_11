@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="渔村3.frame" />
+    <entity mesh="渔村3.mesh" node="渔村3" />
+    <entity mesh="渔村3灯笼1.mesh" node="渔村3灯笼1">
+        <offset>
+            <translate x="-288.104" y="-418.687" z="-300.053" />
+        </offset>
+    </entity>
+    <entity mesh="渔村3灯笼2.mesh" node="渔村3灯笼2">
+        <offset>
+            <translate x="-494.266" y="-428.601" z="74.3115" />
+        </offset>
+    </entity>
+</model>

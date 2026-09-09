@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+	<Imageset Name="CommonFrame3" Imagefile="Common/tga_CommonFrame3.dds" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="false">
+		<Image Name="TragetFrame" XPos="0" YPos="0" Width="182" Height="73" />
+    
+    <Image Name="TragetType0" XPos="0" YPos="74" Width="77" Height="90" />
+    <Image Name="TragetType1" XPos="77" YPos="74" Width="77" Height="90" />
+    <Image Name="TragetType2" XPos="154" YPos="74" Width="77" Height="90" />
+    <Image Name="TragetType3" XPos="0" YPos="165" Width="77" Height="90" />
+    <Image Name="TragetType4" XPos="77" YPos="165" Width="77" Height="90" />
+    <Image Name="TragetType5" XPos="154" YPos="165" Width="77" Height="90" />
+
+    <Image Name="TragetProperty0" XPos="233" YPos="0" Width="23" Height="21" />
+    <Image Name="TragetProperty1" XPos="233" YPos="22" Width="23" Height="21" />
+    <Image Name="TragetProperty2" XPos="233" YPos="44" Width="23" Height="21" />
+    <Image Name="TragetProperty3" XPos="233" YPos="66" Width="23" Height="21" />
+    <Image Name="TragetProperty4" XPos="233" YPos="88" Width="23" Height="21" />
+    <Image Name="TragetProperty5" XPos="233" YPos="110" Width="23" Height="21" />
+    <Image Name="TragetProperty6" XPos="233" YPos="132" Width="23" Height="21" />
+    
+    <Image Name="TragetCamp" XPos="231" YPos="169" Width="25" Height="87" />
+   
+	</Imageset>

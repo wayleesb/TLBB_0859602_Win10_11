@@ -1,0 +1,739 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Scene formatVersion="0.1.1" name="bianguan_4">
+
+  <Terrain filename="bianguan_4.Terrain"/>
+
+  <Object name="#FairyEnviroment" type="Enviroment">
+    <Property name="ambient" value="0.043137 0.062745 0.290196"/>
+    <Property name="fog.mode" value="linear"/>
+    <Property name="fog.colour" value="0.137255 0.223529 0.572549"/>
+    <Property name="fog.linear start" value="2500"/>
+    <Property name="fog.linear end" value="4000"/>
+  </Object>
+
+  <Object name="#FairyMainLightOne" type="Light">
+    <Property name="type" value="directional"/>
+    <Property name="diffuse" value="0.67451 0.34902 0.058824"/>
+    <Property name="specular" value="0.807843 0.6 0.05098"/>
+    <Property name="direction" value="-1 -3 -1"/>
+    <Property name="cast shadows" value="true"/>
+  </Object>
+
+  <Object name="#FairyMainLightTwo" type="Light">
+    <Property name="type" value="directional"/>
+    <Property name="diffuse" value="0.168627 0.356863 0.717647"/>
+    <Property name="direction" value="1 -1 -1"/>
+  </Object>
+
+  <Object name="#FairySkyDome" type="SkyDome">
+    <Property name="material" value="CloudySky"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yun"/>
+    <Property name="position" value="-2804.78 2314.4 1049.85"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yun"/>
+    <Property name="position" value="2063.4 2343.57 2918.09"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yun"/>
+    <Property name="position" value="3908.84 1810.36 2078.41"/>
+    <Property name="orientation" value="0.557609 0 0.830104 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yun"/>
+    <Property name="position" value="2714.44 2427.69 -358.11"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yun"/>
+    <Property name="position" value="-2343.78 2737.77 -1219.41"/>
+    <Property name="orientation" value="0.77301 0 0.634393 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yun"/>
+    <Property name="position" value="-1477.84 2224.51 3261.7"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yun"/>
+    <Property name="position" value="-3400 2362.86 200"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yun"/>
+    <Property name="position" value="1700 2225.98 -2900"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yun"/>
+    <Property name="position" value="-1300 1851.36 -3100"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yun"/>
+    <Property name="position" value="-100 2377.92 2801"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="水瀑布/pubu2.mesh"/>
+    <Property name="position" value="-67.8269 956.544 -2569"/>
+    <Property name="orientation" value="0.0448388 0 0.998994 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/苗疆树3.mesh"/>
+    <Property name="position" value="2954.29 2046.89 -741.938"/>
+    <Property name="orientation" value="0.719269 0 0.694731 0"/>
+    <Property name="scale" value="0.625 0.625 0.625"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/苗疆树3.mesh"/>
+    <Property name="position" value="2900 2038.14 2000"/>
+    <Property name="orientation" value="0.985306 0 0.170793 0"/>
+    <Property name="scale" value="0.625 0.625 0.625"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/苗疆树3.mesh"/>
+    <Property name="position" value="-3000 2088.92 1900"/>
+    <Property name="orientation" value="0.534852 0 -0.844944 0"/>
+    <Property name="scale" value="0.625 0.625 0.625"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/苗疆树3.mesh"/>
+    <Property name="position" value="-3000 2010.5 -1300"/>
+    <Property name="orientation" value="-0.221662 0 -0.975122 0"/>
+    <Property name="scale" value="0.625 0.625 0.625"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/苗疆树3.mesh"/>
+    <Property name="position" value="-400 1948.17 -3000"/>
+    <Property name="orientation" value="-0.378302 0 -0.92568 0"/>
+    <Property name="scale" value="0.625 0.625 0.625"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨松03.mesh"/>
+    <Property name="position" value="3036.13 1246.1 1166.09"/>
+    <Property name="scale" value="0.714286 0.714286 0.714286"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨松03.mesh"/>
+    <Property name="position" value="2000 1082.25 2900"/>
+    <Property name="scale" value="0.714286 0.714286 0.714286"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨松03.mesh"/>
+    <Property name="position" value="-1900 1038.26 2732.33"/>
+    <Property name="scale" value="0.714286 0.714286 0.714286"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨松03.mesh"/>
+    <Property name="position" value="-3000 1351 -700"/>
+    <Property name="scale" value="0.714286 0.714286 0.714286"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨松03.mesh"/>
+    <Property name="position" value="2300 1141.4 -2400"/>
+    <Property name="scale" value="0.714286 0.714286 0.714286"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.980392 0.513726 0.352941"/>
+    <Property name="position" value="-2500 2358.78 2100"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="1e-005"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/苗疆树3.mesh"/>
+    <Property name="position" value="700 2408.05 3000"/>
+    <Property name="orientation" value="0.936316 0 -0.351155 0"/>
+    <Property name="scale" value="0.625 0.625 0.625"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui02"/>
+    <Property name="position" value="692.074 2366.01 2888.9"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui02"/>
+    <Property name="position" value="2754.14 2025.62 2464"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui02"/>
+    <Property name="position" value="2853.5 2037.26 -873.216"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui02"/>
+    <Property name="position" value="2366.96 1314.31 -2456.74"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui02"/>
+    <Property name="position" value="1247.17 1918.18 -2659.64"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui02"/>
+    <Property name="position" value="-363.046 1985.24 -2907.06"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui02"/>
+    <Property name="position" value="-2379.66 1902.4 -2038.32"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui02"/>
+    <Property name="position" value="-2834.49 2015.07 -1316.43"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui02"/>
+    <Property name="position" value="-2770.51 2137.25 -328.388"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui02"/>
+    <Property name="position" value="-2824.94 2085.08 1495.5"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui02"/>
+    <Property name="position" value="-2488.16 2255.33 2588.85"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui02"/>
+    <Property name="position" value="-463.334 2341.92 2942.44"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui02"/>
+    <Property name="position" value="-1893.35 1716.9 2865.7"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui02"/>
+    <Property name="position" value="369.737 2467.32 3004.8"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui02"/>
+    <Property name="position" value="2290.05 1630.53 3163.04"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui02"/>
+    <Property name="position" value="2336.23 1842.9 2906.23"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="2485.46 1931.61 2490.85"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="2743.77 1884.28 1766.05"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="2939.75 2823.04 -608.243"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="2709.18 1871.03 -1772.3"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="1855.78 1660.18 -2667.64"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="594.462 1955.58 -2755.59"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="-518.053 1449.19 -2725.24"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="-2601.23 2002.27 -1499.97"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="-2742.95 1923.84 -2705.04"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="-2953.57 1996.33 1300.16"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="-2608.24 2433.93 2748.52"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="-1684.27 1656.8 2978.45"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="-915.287 1684.95 3053.76"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="1064.19 2110.87 2690.6"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="-268.409 3000 1739.6"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="-1678.72 3017.43 -43.1149"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="1499.63 3000 -330.798"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="-1078.03 2989.06 -1140.63"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="-2508.05 1375.71 -2627.9"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="-568.18 1633.44 -2840.5"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="3115.04 2101.36 -1636.35"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="2827.14 2165.04 -2163.07"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="3045.31 1998.52 1672.7"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="1061.88 2492.44 2961.59"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="-1798.87 1859.44 2895.38"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="-2205.16 2016.49 2749.72"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="-1578.25 3018.09 1393.41"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.705882 0.258824"/>
+    <Property name="position" value="151.186 3400 -1069.91"/>
+    <Property name="range" value="650"/>
+    <Property name="attenuation.linear" value="0.002"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.478431 0.2"/>
+    <Property name="position" value="-1300 3500 -688"/>
+    <Property name="range" value="650"/>
+    <Property name="attenuation.linear" value="0.002"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.486275 0.952941 0.203922"/>
+    <Property name="position" value="-1500 3400 981"/>
+    <Property name="range" value="650"/>
+    <Property name="attenuation.linear" value="0.002"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.266667 0.960784 1"/>
+    <Property name="position" value="111 3419 1600"/>
+    <Property name="range" value="650"/>
+    <Property name="attenuation.linear" value="0.002"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.156863 0.156863"/>
+    <Property name="position" value="1400 3379 -400"/>
+    <Property name="range" value="650"/>
+    <Property name="attenuation.linear" value="0.0015"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌7.mesh"/>
+    <Property name="position" value="378.115 3000 1835.13"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌7.mesh"/>
+    <Property name="position" value="-182.277 3000 1862.75"/>
+    <Property name="orientation" value="0.904827 0 -0.425779 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌8.mesh"/>
+    <Property name="position" value="1505.19 2978.03 1534.48"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌8.mesh"/>
+    <Property name="position" value="1606.12 2998.2 1159.41"/>
+    <Property name="orientation" value="0.866576 0 0.499045 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/小灌4.mesh"/>
+    <Property name="position" value="1581.44 3000 -309.573"/>
+    <Property name="orientation" value="0.992409 0 0.122981 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/小灌4.mesh"/>
+    <Property name="position" value="1483.7 3000 -651.343"/>
+    <Property name="orientation" value="0.893247 0 0.449565 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌12.mesh"/>
+    <Property name="position" value="300.067 3000 -1264.13"/>
+    <Property name="orientation" value="0.859899 0 0.510464 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌12.mesh"/>
+    <Property name="position" value="13.5863 3000 -1272.97"/>
+    <Property name="orientation" value="0.555227 0 -0.831699 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌13.mesh"/>
+    <Property name="position" value="-1542.6 3040.85 -686.579"/>
+    <Property name="orientation" value="0.876307 0 -0.481754 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌13.mesh"/>
+    <Property name="position" value="-1340.4 3033.01 -933.668"/>
+    <Property name="orientation" value="0.783008 0 0.622011 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌15.mesh"/>
+    <Property name="position" value="-1620.53 3000 860.96"/>
+    <Property name="orientation" value="0.999802 0 -0.0198403 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌15.mesh"/>
+    <Property name="position" value="-1564.44 3010.58 1158.49"/>
+    <Property name="orientation" value="0.484649 0 -0.874709 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/将军柏.mesh"/>
+    <Property name="position" value="1387.68 2953.25 -1180.9"/>
+    <Property name="orientation" value="0.941439 0 0.337182 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/小红枫树.mesh"/>
+    <Property name="position" value="890.486 3000 -1255.83"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/小红枫树1.mesh"/>
+    <Property name="position" value="1424.71 3000 -1046.03"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨松01.mesh"/>
+    <Property name="position" value="-2432.45 1455.86 -2668.8"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨松01.mesh"/>
+    <Property name="position" value="-3140.68 1244.18 739.156"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨松01.mesh"/>
+    <Property name="position" value="-1314.24 1152.42 3053.56"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨松01.mesh"/>
+    <Property name="position" value="3119.04 733.232 82.2223"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨松02.mesh"/>
+    <Property name="position" value="-652.052 2589.66 2133.83"/>
+    <Property name="orientation" value="0.455463 0 0.890255 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨松02.mesh"/>
+    <Property name="position" value="2382.22 2089.59 314.053"/>
+    <Property name="orientation" value="0.691745 0 -0.722142 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨松01.mesh"/>
+    <Property name="position" value="-1073.11 2012.62 -1773.37"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/将军柏.mesh"/>
+    <Property name="position" value="-3000 2113.97 -399"/>
+    <Property name="orientation" value="0.00330624 0 0.999994 0"/>
+    <Property name="scale" value="0.714286 0.714286 0.714286"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨松02.mesh"/>
+    <Property name="position" value="-2600 2355.39 2800"/>
+    <Property name="orientation" value="0.712929 0 -0.701237 0"/>
+    <Property name="scale" value="0.434783 0.434783 0.434783"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/巨松02.mesh"/>
+    <Property name="position" value="-200 2223.12 3000"/>
+    <Property name="orientation" value="0.95308 0 -0.30272 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/苗疆树3.mesh"/>
+    <Property name="position" value="3000 2264.94 2900"/>
+    <Property name="orientation" value="0.985306 0 0.170793 0"/>
+    <Property name="scale" value="0.625 0.625 0.625"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/苗疆树3.mesh"/>
+    <Property name="position" value="3000 1668.57 -1400"/>
+    <Property name="orientation" value="0.985306 0 0.170793 0"/>
+    <Property name="scale" value="0.625 0.625 0.625"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/苗疆树3.mesh"/>
+    <Property name="position" value="3000 2254.01 -2100"/>
+    <Property name="orientation" value="0.985306 0 0.170793 0"/>
+    <Property name="scale" value="0.625 0.625 0.625"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="丐帮/丐帮兵器架.mesh"/>
+    <Property name="position" value="-588.176 3000 -1128.41"/>
+    <Property name="orientation" value="0.821613 0 -0.570046 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="丐帮/丐帮兵器架.mesh"/>
+    <Property name="position" value="-1055.15 3031.3 1501.83"/>
+    <Property name="orientation" value="0.565976 0 -0.824422 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="丐帮/丐帮兵器架.mesh"/>
+    <Property name="position" value="875.05 3000 1659.68"/>
+    <Property name="orientation" value="0.804341 0 -0.594168 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="丐帮/丐帮兵器架2.mesh"/>
+    <Property name="position" value="-1625.92 3000.86 121.982"/>
+    <Property name="orientation" value="0.0280168 0 0.999608 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="丐帮/丐帮兵器架2.mesh"/>
+    <Property name="position" value="1651.42 3000 378.032"/>
+    <Property name="orientation" value="-0.999865 0 0.0164816 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/小红枫树.mesh"/>
+    <Property name="position" value="-1700 2994.67 300"/>
+    <Property name="orientation" value="0.887918 0 0.460001 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/小红枫树.mesh"/>
+    <Property name="position" value="-1685.28 3006.92 -117.439"/>
+    <Property name="orientation" value="0.220684 0 0.975345 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="丐帮/丐帮石锁01.mesh"/>
+    <Property name="position" value="1673.31 3000 168.829"/>
+    <Property name="orientation" value="0.980543 0 0.196301 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="丐帮/丐帮石锁02.mesh"/>
+    <Property name="position" value="1652.63 2985.86 580.882"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="丐帮/丐帮石锁02.mesh"/>
+    <Property name="position" value="-1635.26 2996.55 374.407"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="丐帮/丐帮石锁02.mesh"/>
+    <Property name="position" value="-1610.41 3005.19 -40.4151"/>
+    <Property name="orientation" value="0.971087 0 0.238725 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="大理/大理龙柱小右.mesh"/>
+    <Property name="position" value="-139.282 3000 241.58"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba02"/>
+    <Property name="position" value="-205.892 3500 284.04"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌12.mesh"/>
+    <Property name="position" value="0 3000 300"/>
+    <Property name="orientation" value="0.930981 0 0.365067 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/大灌12.mesh"/>
+    <Property name="position" value="-237.191 3000 140.159"/>
+    <Property name="orientation" value="-0.318654 0 0.94787 0"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.956863 0.156863"/>
+    <Property name="position" value="1399 3400 1290"/>
+    <Property name="range" value="650"/>
+    <Property name="attenuation.linear" value="0.002"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.4 0.607843 1"/>
+    <Property name="position" value="-200 3495 291"/>
+    <Property name="range" value="900"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/苗疆树3.mesh"/>
+    <Property name="position" value="1000 1725.14 -2698"/>
+    <Property name="orientation" value="-0.405397 0 -0.914139 0"/>
+    <Property name="scale" value="0.625 0.625 0.625"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/小红枫树.mesh"/>
+    <Property name="position" value="1500 3000 1300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/小红枫树.mesh"/>
+    <Property name="position" value="1500 3000 -408.615"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/小红枫树.mesh"/>
+    <Property name="position" value="129.752 3000 -1300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/小红枫树.mesh"/>
+    <Property name="position" value="-1500 3035.5 -800"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/小红枫树.mesh"/>
+    <Property name="position" value="-1700 3000 1100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0树木/小红枫树.mesh"/>
+    <Property name="position" value="100 2999.2 1800"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="丐帮/丐帮石锁01.mesh"/>
+    <Property name="position" value="-1300 3025.16 1400"/>
+    <Property name="orientation" value="0.980543 0 0.196301 0"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="chuansongdian"/>
+    <Property name="position" value="-669.363 3033.98 1684.58"/>
+  </Object>
+
+</Scene>

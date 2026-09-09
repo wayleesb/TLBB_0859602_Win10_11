@@ -1,0 +1,622 @@
+INT	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING	INT	INT	STRING
+INT	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING	INT	INT	STRING
+0	空手站立01	长枪站立01	长枪站立01	双短站立01	单短站立01	扇子站立01	双环站立01	站立	站立	0	-1	(和平)休息
+1	空手休闲	长枪休闲	长枪休闲	双短休闲	单短休闲	扇子休闲	双环休闲	站立	休闲	0	-1	(和平)休息小动作1
+2	空手站立01	长枪站立01	长枪站立01	双短站立01	单短站立01	扇子站立01	双环站立01	站立	休闲	0	-1	(和平)休息小动作2
+3								行走	行走	0	-1	(和平)行走
+4	g01_跑步	g01_长枪跑步	g01_长枪跑步	g01_双短跑步	g01_单短跑步	g01_扇子跑步	g01_双环跑步	跑步	跑步	0	-1	(和平)跑步
+5	坐下1a	坐下1a	坐下1a	坐下1a	坐下1a	坐下1a	坐下1a	坐下a	坐下a	1	-1	(和平)坐下
+6	坐下1b	坐下1b	坐下1b	坐下1b	坐下1b	坐下1b	坐下1b	坐下b	坐下b	1	-1	(和平)坐下休息
+7	坐下1c	坐下1c	坐下1c	坐下1c	坐下1c	坐下1c	坐下1c	坐下c	坐下c	1	-1	(和平)坐下起身
+8	g01_跑跃	g01_跑跃	g01_跑跃	g01_跑跃	g01_跑跃	g01_跑跃	g01_跑跃	跳跃	跳跃	0	-1	保留
+9	g01_跑跳a	g01_跑跳a	g01_跑跳a	g01_跑跳a	g01_跑跳a	g01_跑跳a	g01_跑跳a	跑跳a	跑跳a	0	-1	(和平)正常跳跃中
+10	g01_跑跳b	g01_跑跳b	g01_跑跳b	g01_跑跳b	g01_跑跳b	g01_跑跳b	g01_跑跳b	跑跳b	跑跳b	0	-1	保留
+11	g01_跑跳b	g01_跑跳b	g01_跑跳b	g01_跑跳b	g01_跑跳b	g01_跑跳b	g01_跑跳b	跑跳b	跑跳b	0	-1	保留
+12	g01_跑跳b	g01_跑跳b	g01_跑跳b	g01_跑跳b	g01_跑跳b	g01_跑跳b	g01_跑跳b	跑跳b	跑跳b	0	-1	(和平)移动中跳跃
+13	g01_跑跳b	g01_跑跳b	g01_跑跳b	g01_跑跳b	g01_跑跳b	g01_跑跳b	g01_跑跳b	跑跳b	跑跳b	0	-1	保留
+14	空手警戒	长枪警戒	大刀警戒	双短警戒	单短警戒	扇子警戒	双环警戒	站立	站立	0	-1	(战斗)休息
+15								行走	行走	0	-1	(战斗)行走
+16	g01_跑步	g01_长枪跑步	g01_长枪跑步	g01_双短跑步	g01_单短跑步	g01_扇子跑步	g01_双环跑步	跑步	跑步	0	-1	(战斗)跑步
+17	g01_跑跃	g01_跑跃	g01_跑跃	g01_跑跃	g01_跑跃	g01_跑跃	g01_跑跃	跳跃a	跳跃a	0	-1	保留
+18	g01_跑跃	g01_跑跃	g01_跑跃	g01_跑跃	g01_跑跃	g01_跑跃	g01_跑跃	跳跃b1	跳跃b1	0	-1	(战斗)正常跳跃中
+19	g01_跑跃	g01_跑跃	g01_跑跃	g01_跑跃	g01_跑跃	g01_跑跃	g01_跑跃	跳跃c	跳跃c	0	-1	保留
+20	g01_跑跃	g01_跑跃	g01_跑跃	g01_跑跃	g01_跑跃	g01_跑跃	g01_跑跃	跳跃a	跳跃a	0	-1	保留
+21	g01_跑跃	g01_跑跃	g01_跑跃	g01_跑跃	g01_跑跃	g01_跑跃	g01_跑跃	跳跃b2	跳跃b2	0	-1	(战斗)移动中跳跃
+22	g01_跑跃	g01_跑跃	g01_跑跃	g01_跑跃	g01_跑跃	g01_跑跃	g01_跑跃	跳跃c	跳跃c	0	-1	保留
+23	空手受击	长枪受击	大刀受击	双短受击	单短受击	扇子受击	双环受击	受击	受击	0	-1	(战斗)被击中
+24	倒地	倒地	倒地	倒地	倒地	倒地	倒地	倒地	倒地	0	-1	(战斗)死亡
+25	死亡	死亡	死亡	死亡	死亡	死亡	死亡	死亡	死亡	0	-1	(战斗)尸体
+26	倒飞a	倒飞a	倒飞a	倒飞a	倒飞a	倒飞a	倒飞a	倒飞a	倒飞a	0	-1	(战斗)倒飞起始
+27	倒飞b	倒飞b	倒飞b	倒飞b	倒飞b	倒飞b	倒飞b	倒飞b	倒飞b	0	-1	(战斗)倒飞过程
+28	倒飞c	倒飞c	倒飞c	倒飞c	倒飞c	倒飞c	倒飞c	倒飞c	倒飞c	0	-1	(战斗)倒飞结束
+29	骑乘站立_马	骑乘站立_马	骑乘站立_马	骑乘站立_马	骑乘站立_马	骑乘站立_马	骑乘站立_马	骑乘站立_马	骑乘站立_马	0	-1	(坐骑上)休息
+30	骑乘休闲_马	骑乘休闲_马	骑乘休闲_马	骑乘休闲_马	骑乘休闲_马	骑乘休闲_马	骑乘休闲_马	骑乘休闲_马	骑乘休闲_马	0	-1	(坐骑上)休息小动作1
+31	骑乘休闲_马	骑乘休闲_马	骑乘休闲_马	骑乘休闲_马	骑乘休闲_马	骑乘休闲_马	骑乘休闲_马	骑乘休闲_马	骑乘休闲_马	0	-1	(坐骑上)休息小动作2
+32	骑乘跑步_马	骑乘跑步_马	骑乘跑步_马	骑乘跑步_马	骑乘跑步_马	骑乘跑步_马	骑乘跑步_马	骑乘跑步_马	骑乘跑步_马	0	-1	(坐骑上)行走
+33	骑乘跑步_马	骑乘跑步_马	骑乘跑步_马	骑乘跑步_马	骑乘跑步_马	骑乘跑步_马	骑乘跑步_马	骑乘跑步_马	骑乘跑步_马	0	-1	(坐骑上)跑步
+34										0	-1	保留
+35	骑乘跳跃_马	骑乘跳跃_马	骑乘跳跃_马	骑乘跳跃_马	骑乘跳跃_马	骑乘跳跃_马	骑乘跳跃_马	骑乘跳跃_马	骑乘跳跃_马	0	-1	(坐骑上)正常跳跃中
+36										0	-1	(保留
+37										0	-1	保留
+38	骑乘跑跳_马	骑乘跑跳_马	骑乘跑跳_马	骑乘跑跳_马	骑乘跑跳_马	骑乘跑跳_马	骑乘跑跳_马	骑乘跑跳_马	骑乘跑跳_马	0	-1	(坐骑上)移动中跳跃
+39										0	-1	保留
+40	骑乘站立_虎	骑乘站立_虎	骑乘站立_虎	骑乘站立_虎	骑乘站立_虎	骑乘站立_虎	骑乘站立_虎	骑乘站立_虎	骑乘站立_虎	0	-1	(坐骑上)休息
+41	骑乘休闲_虎	骑乘休闲_虎	骑乘休闲_虎	骑乘休闲_虎	骑乘休闲_虎	骑乘休闲_虎	骑乘休闲_虎	骑乘休闲_虎	骑乘休闲_虎	0	-1	(坐骑上)休息小动作1
+42	骑乘休闲_虎	骑乘休闲_虎	骑乘休闲_虎	骑乘休闲_虎	骑乘休闲_虎	骑乘休闲_虎	骑乘休闲_虎	骑乘休闲_虎	骑乘休闲_虎	0	-1	(坐骑上)休息小动作2
+43	骑乘跑步_虎	骑乘跑步_虎	骑乘跑步_虎	骑乘跑步_虎	骑乘跑步_虎	骑乘跑步_虎	骑乘跑步_虎	骑乘跑步_虎	骑乘跑步_虎	0	-1	(坐骑上)行走
+44	骑乘跑步_虎	骑乘跑步_虎	骑乘跑步_虎	骑乘跑步_虎	骑乘跑步_虎	骑乘跑步_虎	骑乘跑步_虎	骑乘跑步_虎	骑乘跑步_虎	0	-1	(坐骑上)跑步
+45										0	-1	保留
+46	骑乘跳跃_虎	骑乘跳跃_虎	骑乘跳跃_虎	骑乘跳跃_虎	骑乘跳跃_虎	骑乘跳跃_虎	骑乘跳跃_虎	骑乘跳跃_虎	骑乘跳跃_虎	0	-1	(坐骑上)正常跳跃中
+47										0	-1	保留
+48										0	-1	保留
+49	骑乘跑跳_虎	骑乘跑跳_虎	骑乘跑跳_虎	骑乘跑跳_虎	骑乘跑跳_虎	骑乘跑跳_虎	骑乘跑跳_虎	骑乘跑跳_虎	骑乘跑跳_虎	0	-1	(坐骑上)移动中跳跃
+50										0	-1	保留
+51	空手警戒	长枪警戒	大刀警戒	双短警戒	单短警戒	扇子警戒	双环警戒	站立	站立	0	-1	(潜行)休息
+52										0	-1	
+53	空手潜行	长枪潜行	长枪潜行	双短潜行	单短潜行	扇子潜行	双环潜行	站立	站立	0	-1	(潜行)跑步
+63	击飞	击飞	击飞	击飞	击飞	击飞	击飞	击飞	击飞	0	-1	"(战斗)向后""打飞""死亡"
+64	融合受击	融合受击	融合受击	融合受击	融合受击	融合受击	融合受击	融合受击	融合受击	0	-1	(战斗)被击融合
+65										0	-1	
+88	开宝箱	开宝箱	开宝箱	开宝箱	开宝箱	开宝箱	开宝箱	开宝箱	开宝箱	1	-1	开宝箱
+89	女掷雪球蓄力	女掷雪球蓄力	女掷雪球蓄力	女掷雪球蓄力	女掷雪球蓄力	女掷雪球蓄力	女掷雪球蓄力	女掷雪球蓄力	女掷雪球蓄力	1	-1	聚气扔雪球聚气
+90	女掷雪球	女掷雪球	女掷雪球	女掷雪球	女掷雪球	女掷雪球	女掷雪球	女掷雪球	女掷雪球	1	-1	聚气扔雪球发招
+91	女休闲掷雪球	女休闲掷雪球	女休闲掷雪球	女休闲掷雪球	女休闲掷雪球	女休闲掷雪球	女休闲掷雪球	女休闲掷雪球	女休闲掷雪球	1	-1	休闲扔雪球
+92	g01_升级_shengji	g01_升级_shengji	g01_升级_shengji	g01_升级_shengji	g01_升级_shengji	g01_升级_shengji	g01_升级_shengji	g01_升级_shengji	g01_升级_shengji	0	-1	生活技能升级
+93	g01_升级_shengji	g01_升级_shengji	g01_升级_shengji	g01_升级_shengji	g01_升级_shengji	g01_升级_shengji	g01_升级_shengji	g01_升级_shengji	g01_升级_shengji	0	-1	心法升级
+95	鞠躬	鞠躬	鞠躬	鞠躬	鞠躬	鞠躬	鞠躬	站立	站立	1	-1	
+96	打招呼	打招呼	打招呼	打招呼	打招呼	打招呼	打招呼	站立	站立	1	-1	
+97	高兴	高兴	高兴	高兴	高兴	高兴	高兴	站立	站立	1	-1	
+98	悲伤	悲伤	悲伤	悲伤	悲伤	悲伤	悲伤	站立	站立	1	-1	
+99	g01_心法升级_shengji	g01_心法升级_shengji	g01_心法升级_shengji	g01_心法升级_shengji	g01_心法升级_shengji	g01_心法升级_shengji	g01_心法升级_shengji	g01_心法升级_shengji	g01_心法升级_shengji	0	-1	升级
+100	晕倒a	晕倒a	晕倒a	晕倒a	晕倒a	晕倒a	晕倒a	站立	站立	1	-1	
+101	晕倒b	晕倒b	晕倒b	晕倒b	晕倒b	晕倒b	晕倒b	站立	站立	1	-1	
+102	晕倒c	晕倒c	晕倒c	晕倒c	晕倒c	晕倒c	晕倒c	站立	站立	1	-1	
+103	下跪a	下跪a	下跪a	下跪a	下跪a	下跪a	下跪a	站立	站立	1	-1	
+104	下跪b	下跪b	下跪b	下跪b	下跪b	下跪b	下跪b	站立	站立	1	-1	
+105	下跪c	下跪c	下跪c	下跪c	下跪c	下跪c	下跪c	站立	站立	1	-1	
+106	称赞	称赞	称赞	称赞	称赞	称赞	称赞	站立	站立	1	-1	
+107	吃惊	吃惊	吃惊	吃惊	吃惊	吃惊	吃惊	站立	站立	1	-1	
+108	抱拳	抱拳	抱拳	抱拳	抱拳	抱拳	抱拳	站立	站立	1	-1	
+109	愤怒	愤怒	愤怒	愤怒	愤怒	愤怒	愤怒	站立	站立	1	-1	
+110	哈欠	哈欠	哈欠	哈欠	哈欠	哈欠	哈欠	站立	站立	1	-1	
+111	鼓掌	鼓掌	鼓掌	鼓掌	鼓掌	鼓掌	鼓掌	站立	站立	1	-1	
+112	摇头	摇头	摇头	摇头	摇头	摇头	摇头	站立	站立	1	-1	
+113	点头	点头	点头	点头	点头	点头	点头	站立	站立	1	-1	
+114	睡觉a	睡觉a	睡觉a	睡觉a	睡觉a	睡觉a	睡觉a	站立	站立	1	-1	
+115	睡觉b	睡觉b	睡觉b	睡觉b	睡觉b	睡觉b	睡觉b	站立	站立	1	-1	
+116	睡觉c	睡觉c	睡觉c	睡觉c	睡觉c	睡觉c	睡觉c	站立	站立	1	-1	
+117	飞吻	飞吻	飞吻	飞吻	飞吻	飞吻	飞吻	站立	站立	1	-1	
+118	打开	打开	打开	打开	打开	打开	打开	攻击	攻击	1	-1	操作中
+119	钓鱼	钓鱼	钓鱼	钓鱼	钓鱼	钓鱼	钓鱼	攻击	攻击	1	362	钓鱼
+120	采药	采药	采药	采药	采药	采药	采药	攻击	攻击	1	-1	收割
+121	采药	采药	采药	采药	采药	采药	采药	攻击	攻击	1	361	采草药
+124	g01_xuexipeifang	g01_xuexipeifang	g01_xuexipeifang	g01_xuexipeifang	g01_xuexipeifang	g01_xuexipeifang	g01_xuexipeifang	g01_xuexipeifang	g01_xuexipeifang	1	-1	学习配方
+125	单短横扫	单短横扫	单短横扫	单短横扫	单短横扫	单短横扫	单短横扫	单短横扫	单短横扫	0	-1	
+126	单短法2蓄力	单短法2蓄力	单短法2蓄力	单短法2蓄力	单短法2蓄力	单短法2蓄力	单短法2蓄力	单短法2蓄力	单短法2蓄力	0	-1	
+127	单短攻击01	单短攻击01	单短攻击01	单短攻击01	单短攻击01	单短攻击01	单短攻击01	单短攻击01	单短攻击01	0	-1	
+128	单短法2发出	单短法2发出	单短法2发出	单短法2发出	单短法2发出	单短法2发出	单短法2发出	单短法2发出	单短法2发出	0	-1	
+129	单短攻击01	长枪攻击01	长枪攻击01	双短攻击01	单短攻击01	单短攻击01	双短攻击01	攻击	攻击	0	-1	
+130	单短攻击01	长枪凿地c	长枪凿地c	双短凿地c	单短凿地c	单短凿地c	双短凿地c	攻击	攻击	0	-1	
+131	维持1a	维持1a	维持1a	维持1a	维持1a	维持1a	维持1a	攻击	攻击	0	-1	
+132	维持1b	维持1b	维持1b	维持1b	维持1b	维持1b	维持1b	攻击	攻击	0	-1	
+133	单短攻击01	长枪丹凤朝阳	长枪丹凤朝阳	双短丹凤朝阳	单短丹凤朝阳	单短丹凤朝阳	双短丹凤朝阳	攻击	攻击	0	-1	
+134	单短攻击01	长枪慈航普渡	长枪慈航普渡	双短慈航普渡	单短慈航普渡	单短慈航普渡	双短慈航普渡	攻击	攻击	0	-1	
+135	单短攻击01	长枪少泽剑	长枪少泽剑	双短少泽剑	单短少泽剑	单短少泽剑	双短少泽剑	攻击	攻击	0	-1	
+136	空手站立02	长枪站立02	大刀站立02	双短站立02	单短站立02	扇子站立02	双环站立02	攻击	攻击	0	-1	
+137	空手站立02	长枪站立02	大刀攻击01	双短站立01	单短站立01	扇子站立01	双环站立01	攻击	攻击	0	-1	
+138	空手站立02	长枪站立02	大刀站立01	双短站立01	单短站立01	扇子攻击01	双环站立01	攻击	攻击	0	-1	
+139	空手站立02	长枪站立02	大刀站立01	双短站立01	单短攻击02	扇子站立01	双环站立01	攻击	攻击	0	-1	
+140	空手站立02	长枪站立02	大刀站立01	双短站立01	单短攻击03	扇子站立01	双环站立01	攻击	攻击	0	-1	
+141	空手站立02	长枪站立02	大刀站立01	双短站立01	单短攻击03	扇子站立01	双环攻击03	攻击	攻击	0	-1	
+142	采矿	采矿	采矿	采矿	采矿	采矿	采矿	攻击	攻击	1	363	采矿
+143	打开	打开	打开	打开	打开	打开	打开	攻击	攻击	1	-1	
+144	钓鱼	钓鱼	钓鱼	钓鱼	钓鱼	钓鱼	钓鱼	攻击	攻击	0	-1	
+145	跳跃	跳跃	跳跃	跳跃	跳跃	跳跃	跳跃	攻击	攻击	0	-1	
+146	g01_普通攻击01_kongshou	g01_长枪连招1	g01_长枪连招1	g01_双短连招1	g01_单短连招1	g01_单短连招1_shan	g01_双短连招_huan	npc_attack	npc_attack	0	-1	连招1
+147	g01_普通攻击01_kongshou	g01_长枪连招2	g01_长枪连招2	g01_双短连招2	g01_单短连招2	g01_单短连招2_shan	g01_双短连招2_huan	npc_attack	npc_attack	0	-1	连招2
+148	g01_普通攻击01_kongshou	g01_长枪连招3	g01_长枪连招3	g01_双短连招3	g01_单短连招3	g01_单短连招3_shan	g01_双短连招3_huan	npc_attack	npc_attack	0	-1	连招3
+149	g01_普通攻击01_kongshou	g01_长枪连招4	g01_长枪连招4	g01_双短连招4	g01_单短连招4	g01_单短连招4_shan	g01_双短连招4_huan	npc_attack	npc_attack	0	-1	连招4
+150	g01_扫地	g01_扫地	g01_扫地	g01_扫地	g01_扫地	g01_扫地	g01_扫地	npc_attack	npc_attack	0	364	扫地
+151	g01_空手站立01	g01_空手站立01	g01_空手站立01	g01_空手站立01	g01_空手站立01	g01_空手站立01	g01_空手站立01	npc_attack	npc_attack	0	364	扫地完成
+152	g01_招宠成功	g01_招宠成功	g01_招宠成功	g01_招宠成功	g01_招宠成功	g01_招宠成功	g01_招宠成功	m_magic	m_magic	0	-1	捉宠成功
+153	g01_双手合十_luohanzhen	g01_双手合十_luohanzhen	g01_双手合十_luohanzhen	g01_双手合十_luohanzhen	g01_双手合十_luohanzhen	g01_双手合十_luohanzhen	g01_双手合十_luohanzhen	m_magic	m_magic	1	-1	罗汉阵
+154	g01_双手合十_shizihou	g01_双手合十_shizihou	g01_双手合十_shizihou	g01_双手合十_shizihou	g01_双手合十_shizihou	g01_双手合十_shizihou	g01_双手合十_shizihou	m_magic	m_magic	1	-1	狮子吼
+155	g01_双手合十_cihangpudu	g01_双手合十_cihangpudu	g01_双手合十_cihangpudu	g01_双手合十_cihangpudu	g01_双手合十_cihangpudu	g01_双手合十_cihangpudu	g01_双手合十_cihangpudu	m_magic	m_magic	1	-1	慈航普渡
+156	g01_双手合十_lijingrulai	g01_双手合十_lijingrulai	g01_双手合十_lijingrulai	g01_双手合十_lijingrulai	g01_双手合十_lijingrulai	g01_双手合十_lijingrulai	g01_双手合十_lijingrulai	m_magic	m_magic	1	-1	礼敬如来
+157	g01_双手合十_yiweidujiang	g01_双手合十_yiweidujiang	g01_双手合十_yiweidujiang	g01_双手合十_yiweidujiang	g01_双手合十_yiweidujiang	g01_双手合十_yiweidujiang	g01_双手合十_yiweidujiang	m_magic	m_magic	1	-1	一苇渡江
+158	g01_双手合十_qiguanquanshen	g01_双手合十_qiguanquanshen	g01_双手合十_qiguanquanshen	g01_双手合十_qiguanquanshen	g01_双手合十_qiguanquanshen	g01_双手合十_qiguanquanshen	g01_双手合十_qiguanquanshen	m_magic	m_magic	1	-1	气贯全身
+159	g01_摩诃无量_mokewuliang	g01_摩诃无量_mokewuliang	g01_摩诃无量_mokewuliang	g01_摩诃无量_mokewuliang	g01_摩诃无量_mokewuliang	g01_摩诃无量_mokewuliang	g01_摩诃无量_mokewuliang	m_magic	m_magic	0	-1	摩诃无量
+160	g01_多罗叶指_duoluoyezhi	g01_多罗叶指_duoluoyezhi	g01_多罗叶指_duoluoyezhi	g01_多罗叶指_duoluoyezhi	g01_多罗叶指_duoluoyezhi	g01_多罗叶指_duoluoyezhi	g01_多罗叶指_duoluoyezhi	m_magic	m_magic	0	-1	多罗叶指
+161	g01_金钟罩_jinzhongzhao	g01_金钟罩_jinzhongzhao	g01_金钟罩_jinzhongzhao	g01_金钟罩_jinzhongzhao	g01_金钟罩_jinzhongzhao	g01_金钟罩_jinzhongzhao	g01_金钟罩_jinzhongzhao	m_magic	m_magic	0	-1	金钟罩
+162	g01_普通攻击01_kongshou	g01_普通攻击01_changqiang	g01_普通攻击01_dadao	g01_普通攻击01_shuangduan	g01_普通攻击01_danduan	g01_普通攻击01_shanzi	g01_普通攻击01_shuanghuan	npc_attack	npc_attack	0	-1	普通攻击1
+163	g01_普通攻击01_kongshou	g01_普通攻击02_changqiang	g01_普通攻击02_dadao	g01_普通攻击02_shuangduan	g01_普通攻击02_danduan	g01_普通攻击02_shanzi	g01_普通攻击02_shuanghuan	npc_attack	npc_attack	0	-1	普通攻击2
+164	g01_普通攻击01_kongshou	g01_普通攻击03_changqiang	g01_普通攻击03_dadao	g01_普通攻击03_shuangduan	g01_普通攻击03_danduan	g01_普通攻击03_shanzi	g01_普通攻击03_shuanghuan	npc_attack	npc_attack	0	-1	普通攻击3
+165	g01_普通攻击01_kongshou	g01_连招1a	g01_连招1a	g01_连招1a	g01_连招1a	g01_连招1a	g01_连招1a	npc_attack	npc_attack	0	-1	连招1a
+166	g01_普通攻击01_kongshou	g01_连招1b	g01_连招1b	g01_连招1b	g01_连招1b	g01_连招1b	g01_连招1b	npc_attack	npc_attack	0	-1	连招1b
+167	g01_普通攻击01_kongshou	g01_连招1c	g01_连招1c	g01_连招1c	g01_连招1c	g01_连招1c	g01_连招1c	npc_attack	npc_attack	0	-1	连招1c
+168	轻功1a	轻功1a	轻功1a	轻功1a	轻功1a	轻功1a	轻功1a	npc_attack	npc_attack	0	-1	轻功1a
+169	g01轻功1b	g01轻功1b	g01轻功1b	g01轻功1b	g01轻功1b	g01轻功1b	g01轻功1b	npc_attack	npc_attack	0	-1	g01轻功1b
+170	轻功1c	轻功1c	轻功1c	轻功1c	轻功1c	轻功1c	轻功1c	npc_attack	npc_attack	0	-1	轻功1c
+171	打坐a	打坐a	打坐a	打坐a	打坐a	打坐a	打坐a	npc_attack	npc_attack	1	-1	打坐a
+172	打坐b	打坐b	打坐b	打坐b	打坐b	打坐b	打坐b	npc_attack	npc_attack	1	-1	打坐b
+173	打坐c	打坐c	打坐c	打坐c	打坐c	打坐c	打坐c	npc_attack	npc_attack	1	-1	打坐c
+174	g01_普通攻击01_kongshou	g01_攻击动作4_huoxingchongri	g01_攻击动作4_huoxingchongri	g01_攻击动作4_huoxingchongri	g01_攻击动作4_huoxingchongri	g01_攻击动作4_huoxingchongri	g01_攻击动作4_huoxingchongri	npc_attack	npc_attack	0	-1	
+175	g01_抬头挺胸_qixingluochangkong	g01_抬头挺胸_qixingluochangkong	g01_抬头挺胸_qixingluochangkong	g01_抬头挺胸_qixingluochangkong	g01_抬头挺胸_qixingluochangkong	g01_抬头挺胸_qixingluochangkong	g01_抬头挺胸_qixingluochangkong	npc_attack	npc_attack	0	-1	
+176	g01_抬头挺胸_shenxingbaibian	g01_抬头挺胸_shenxingbaibian	g01_抬头挺胸_shenxingbaibian	g01_抬头挺胸_shenxingbaibian	g01_抬头挺胸_shenxingbaibian	g01_抬头挺胸_shenxingbaibian	g01_抬头挺胸_shenxingbaibian	npc_attack	npc_attack	0	-1	
+177	g01_抬头挺胸_zhiluweima	g01_抬头挺胸_zhiluweima	g01_抬头挺胸_zhiluweima	g01_抬头挺胸_zhiluweima	g01_抬头挺胸_zhiluweima	g01_抬头挺胸_zhiluweima	g01_抬头挺胸_zhiluweima	npc_attack	npc_attack	0	-1	
+178	g01_抬头挺胸_toulianghuanzhu	g01_抬头挺胸_toulianghuanzhu	g01_抬头挺胸_toulianghuanzhu	g01_抬头挺胸_toulianghuanzhu	g01_抬头挺胸_toulianghuanzhu	g01_抬头挺胸_toulianghuanzhu	g01_抬头挺胸_toulianghuanzhu	npc_attack	npc_attack	0	-1	
+179	g01_抬头挺胸_qiannuyuren	g01_抬头挺胸_qiannuyuren	g01_抬头挺胸_qiannuyuren	g01_抬头挺胸_qiannuyuren	g01_抬头挺胸_qiannuyuren	g01_抬头挺胸_qiannuyuren	g01_抬头挺胸_qiannuyuren	npc_attack	npc_attack	0	-1	
+180	g01_抬头挺胸_nufachongguan	g01_抬头挺胸_nufachongguan	g01_抬头挺胸_nufachongguan	g01_抬头挺胸_nufachongguan	g01_抬头挺胸_nufachongguan	g01_抬头挺胸_nufachongguan	g01_抬头挺胸_nufachongguan	npc_attack	npc_attack	0	-1	
+181	g01_普通攻击01_kongshou	g01_攻击动作2_leitingzhinu	g01_攻击动作2_leitingzhinu	g01_攻击动作2_leitingzhinu	g01_攻击动作2_leitingzhinu	g01_攻击动作2_leitingzhinu	g01_攻击动作2_leitingzhinu	npc_attack	npc_attack	0	-1	
+182	g01_义愤填膺_yiwentianying	g01_义愤填膺_yiwentianying	g01_义愤填膺_yiwentianying	g01_义愤填膺_yiwentianying	g01_义愤填膺_yiwentianying	g01_义愤填膺_yiwentianying	g01_义愤填膺_yiwentianying	npc_attack	npc_attack	0	-1	
+183	g01_普通攻击01_kongshou	g01_厚积薄发_houjibofa	g01_厚积薄发_houjibofa	g01_厚积薄发_houjibofa	g01_厚积薄发_houjibofa	g01_厚积薄发_houjibofa	g01_厚积薄发_houjibofa	npc_attack	npc_attack	0	-1	
+184	g01_普通攻击01_kongshou	g01_攻击动作19_renguitongtu	g01_攻击动作19_renguitongtu	g01_攻击动作19_renguitongtu	g01_攻击动作19_renguitongtu	g01_攻击动作19_renguitongtu	g01_攻击动作19_renguitongtu	npc_attack	npc_attack	0	-1	
+185	站立喝药	站立喝药	站立喝药	站立喝药	站立喝药	站立喝药	站立喝药	npc_attack	npc_attack	1	-1	
+186	坐着喝药	坐着喝药	坐着喝药	坐着喝药	坐着喝药	坐着喝药	坐着喝药	npc_attack	npc_attack	1	-1	
+187	通用发招动作	通用发招动作	通用发招动作	通用发招动作	通用发招动作	通用发招动作	通用发招动作	npc_attack	npc_attack	0	-1	
+188	g01l_捉宠_zhuachong	g01l_捉宠_zhuachong	g01l_捉宠_zhuachong	g01l_捉宠_zhuachong	g01l_捉宠_zhuachong	g01l_捉宠_zhuachong	g01l_捉宠_zhuachong	npc_attack	npc_attack	1	-1	
+189	g01_普通攻击01_kongshou	g01_厚积薄发_houjibofa_yanshi	g01_厚积薄发_houjibofa_yanshi	g01_厚积薄发_houjibofa_yanshi	g01_厚积薄发_houjibofa_yanshi	g01_厚积薄发_houjibofa_yanshi	g01_厚积薄发_houjibofa_yanshi	npc_attack	npc_attack	0	-1	
+190	g01_普通攻击01_kongshou	g01_攻击动作19_renguitongtu_yanshi	g01_攻击动作19_renguitongtu_yanshi	g01_攻击动作19_renguitongtu_yanshi	g01_攻击动作19_renguitongtu_yanshi	g01_攻击动作19_renguitongtu_yanshi	g01_攻击动作19_renguitongtu_yanshi	npc_attack	npc_attack	0	-1	
+191	g01_普通攻击01_kongshou	g01_攻击动作17_tianditongshou_yanshi	g01_攻击动作17_tianditongshou_yanshi	g01_攻击动作17_tianditongshou_yanshi	g01_攻击动作17_tianditongshou_yanshi	g01_攻击动作17_tianditongshou_yanshi	g01_攻击动作17_tianditongshou_yanshi	npc_attack	npc_attack	0	-1	
+192	g01_yanhuo	g01_yanhuo	g01_yanhuo	g01_yanhuo	g01_yanhuo	g01_yanhuo	g01_yanhuo	npc_attack	npc_attack	0	-1	施放焰火
+193	guid_chongwu_buff	guid_chongwu_buff	guid_chongwu_buff	guid_chongwu_buff	guid_chongwu_buff	guid_chongwu_buff	guid_chongwu_buff	guid_chongwu_buff	guid_chongwu_buff	0	-1	宠物释放buff动作
+194	guid_chongwu_hanbingzhou	guid_chongwu_hanbingzhou	guid_chongwu_hanbingzhou	guid_chongwu_hanbingzhou	guid_chongwu_hanbingzhou	guid_chongwu_hanbingzhou	guid_chongwu_hanbingzhou	guid_chongwu_hanbingzhou	guid_chongwu_hanbingzhou	0	-1	宠物释放寒冰咒的动作
+195	guid_chongwu_gongji	guid_chongwu_gongji	guid_chongwu_gongji	guid_chongwu_gongji	guid_chongwu_gongji	guid_chongwu_gongji	guid_chongwu_gongji	guid_chongwu_gongji	guid_chongwu_gongji	0	-1	宠物攻击动作
+196	guid_chongwu_mengji	guid_chongwu_mengji	guid_chongwu_mengji	guid_chongwu_mengji	guid_chongwu_mengji	guid_chongwu_mengji	guid_chongwu_mengji	guid_chongwu_mengji	guid_chongwu_mengji	0	-1	宠物释放猛击的动作
+197	guid_chongwu_fushen	guid_chongwu_fushen	guid_chongwu_fushen	guid_chongwu_fushen	guid_chongwu_fushen	guid_chongwu_fushen	guid_chongwu_fushen	guid_chongwu_fushen	guid_chongwu_fushen	0	-1	宠物附身动作
+198	g01_攻击动作5	g01_攻击动作5	g01_攻击动作5	g01_攻击动作5	g01_攻击动作5	g01_攻击动作5	g01_攻击动作5	npc_attack	npc_attack	0	-1	鲲跃北溟
+199	g01_攻击动作28_peiranyouyu	g01_攻击动作28_peiranyouyu	g01_攻击动作28_peiranyouyu	g01_攻击动作28_peiranyouyu	g01_攻击动作28_peiranyouyu	g01_攻击动作28_peiranyouyu	g01_攻击动作28_peiranyouyu	npc_attack	npc_attack	0	-1	沛然有雨
+200	g01_遨游东海_aoyoudonghai	g01_遨游东海_aoyoudonghai	g01_遨游东海_aoyoudonghai	g01_遨游东海_aoyoudonghai	g01_遨游东海_aoyoudonghai	g01_遨游东海_aoyoudonghai	g01_遨游东海_aoyoudonghai	npc_attack	npc_attack	0	-1	遨游东海
+201	g01_普通攻击01_changqiang	g01_普通攻击01_changqiang	g01_普通攻击01_changqiang	g01_普通攻击01_shuangduan	g01_普通攻击01_danduan	g01_普通攻击01_danduan	g01_普通攻击01_shuangduan	npc_attack	npc_attack	0	-1	普通攻击1
+202	g01_普通攻击02_changqiang	g01_普通攻击02_changqiang	g01_普通攻击02_changqiang	g01_普通攻击02_shuangduan	g01_普通攻击02_danduan	g01_普通攻击02_danduan	g01_普通攻击02_shuangduan	npc_attack	npc_attack	0	-1	普通攻击2
+203	g01_普通攻击03_changqiang	g01_普通攻击03_changqiang	g01_普通攻击03_changqiang	g01_普通攻击03_shuangduan	g01_普通攻击03_danduan	g01_普通攻击03_danduan	g01_普通攻击03_shuangduan	npc_attack	npc_attack	0	-1	普通攻击3
+204	g01_连招1a	g01_连招1a	g01_连招1a	g01_连招1a	g01_连招1a	g01_连招1a	g01_连招1a	npc_attack	npc_attack	0	-1	连招1a
+205	g01_连招1b	g01_连招1b	g01_连招1b	g01_连招1b	g01_连招1b	g01_连招1b	g01_连招1b	npc_attack	npc_attack	0	-1	连招1b
+206	g01_连招1c	g01_连招1c	g01_连招1c	g01_连招1c	g01_连招1c	g01_连招1c	g01_连招1c	npc_attack	npc_attack	0	-1	连招1c
+221	g01_攻击动作1	g01_攻击动作1	g01_攻击动作1	g01_攻击动作11_fuhuquan	g01_攻击动作6_fuhuquan	g01_扇子_攻击动作6_fuhuquan	g01_huan_攻击动作11_fuhuquan	npc_attack	npc_attack	0	-1	伏虎拳
+222	g01_攻击动作2	g01_攻击动作2	g01_攻击动作2	g01_攻击动作12_banruozhang	g01_攻击动作7_banruozhang	g01_扇子_攻击动作7_banruozhang	g01_huan_攻击动作12_banruozhang	npc_attack	npc_attack	0	-1	般若掌
+223	g01_群体攻击动作1	g01_群体攻击动作1	g01_群体攻击动作1	g01_群体攻击动作3_jingangfumoquan	g01_群体攻击动作2_jingangfumoquan	g01_扇子_群体攻击动作2_jingangfumoquan	g01_群体攻击动作3_jingangfumoquan	npc_attack	npc_attack	0	-1	金刚伏魔圈
+224	g01_攻击动作301	g01_攻击动作301	g01_攻击动作301	g01_攻击动作301	g01_攻击动作301	g01_攻击动作301	g01_攻击动作301	npc_attack	npc_attack	0	-1	横扫千军
+225	g01_攻击动作3	g01_攻击动作3	g01_攻击动作3	g01_攻击动作13_yipailiangsan	g01_攻击动作8_yipailiangsan	g01_扇子_攻击动作8_yipailiangsan	g01_huan_攻击动作13_yipailiangsan	npc_attack	npc_attack	0	-1	一拍两散
+226	g01_攻击动作4	g01_攻击动作4	g01_攻击动作4	g01_攻击动作14_weituochu	g01_攻击动作9_weituochu	g01_攻击动作9_weituochu	g01_huan_攻击动作14_weituochu	npc_attack	npc_attack	0	-1	韦陀杵
+227	g01_双手合十_tiebushan	g01_双手合十_tiebushan	g01_双手合十_tiebushan	g01_双手合十_tiebushan	g01_双手合十_tiebushan	g01_双手合十_tiebushan	g01_双手合十_tiebushan	npc_attack	npc_attack	1	-1	铁布衫
+228	g01_攻击动作5	g01_攻击动作5	g01_攻击动作5	g01_攻击动作15_wanxiangjiezhi	g01_攻击动作10_wanxiangjiezhi	g01_扇子_攻击动作10_wanxiangjiezhi	g01_huan_攻击动作15_wanxiangjiezhi	npc_attack	npc_attack	0	-1	无相劫指
+229	g01_双手合十_luohanzhen	g01_双手合十_luohanzhen	g01_双手合十_luohanzhen	g01_双手合十_luohanzhen	g01_双手合十_luohanzhen	g01_双手合十_luohanzhen	g01_双手合十_luohanzhen	npc_attack	npc_attack	1	-1	罗汉阵
+230	g01_双手合十_shizihou	g01_双手合十_shizihou	g01_双手合十_shizihou	g01_双手合十_shizihou	g01_双手合十_shizihou	g01_双手合十_shizihou	g01_双手合十_shizihou	npc_attack	npc_attack	1	-1	狮子吼
+231	g01_双手合十_cihangpudu	g01_双手合十_cihangpudu	g01_双手合十_cihangpudu	g01_双手合十_cihangpudu	g01_双手合十_cihangpudu	g01_双手合十_cihangpudu	g01_双手合十_cihangpudu	npc_attack	npc_attack	1	-1	慈航普渡
+232	g01_双手合十_lijingrulai	g01_双手合十_lijingrulai	g01_双手合十_lijingrulai	g01_双手合十_lijingrulai	g01_双手合十_lijingrulai	g01_双手合十_lijingrulai	g01_双手合十_lijingrulai	npc_attack	npc_attack	1	-1	礼敬如来
+233	g01_双手合十_yiweidujiang	g01_双手合十_yiweidujiang	g01_双手合十_yiweidujiang	g01_双手合十_yiweidujiang	g01_双手合十_yiweidujiang	g01_双手合十_yiweidujiang	g01_双手合十_yiweidujiang	npc_attack	npc_attack	1	-1	一苇渡江
+234	g01_双手合十_qiguanquanshen	g01_双手合十_qiguanquanshen	g01_双手合十_qiguanquanshen	g01_双手合十_qiguanquanshen	g01_双手合十_qiguanquanshen	g01_双手合十_qiguanquanshen	g01_双手合十_qiguanquanshen	npc_attack	npc_attack	1	-1	气贯全身
+235	g01_摩诃无量_mokewuliang	g01_摩诃无量_mokewuliang	g01_摩诃无量_mokewuliang	g01_摩诃无量_mokewuliang	g01_摩诃无量_mokewuliang	g01_摩诃无量_mokewuliang	g01_摩诃无量_mokewuliang	npc_attack	npc_attack	1	-1	摩诃无量
+236	g01_多罗叶指_duoluoyezhi	g01_多罗叶指_duoluoyezhi	g01_多罗叶指_duoluoyezhi	g01_多罗叶指_duoluoyezhi	g01_多罗叶指_duoluoyezhi	g01_多罗叶指_duoluoyezhi	g01_多罗叶指_duoluoyezhi	npc_attack	npc_attack	1	-1	多罗叶指
+237	g01_金钟罩_jinzhongzhao	g01_金钟罩_jinzhongzhao	g01_金钟罩_jinzhongzhao	g01_金钟罩_jinzhongzhao	g01_金钟罩_jinzhongzhao	g01_金钟罩_jinzhongzhao	g01_金钟罩_jinzhongzhao	npc_attack	npc_attack	0	-1	金钟罩
+241	g01_攻击动作1_cuogufenjin	g01_攻击动作1_cuogufenjin	g01_攻击动作1_cuogufenjin	g01_攻击动作11_cuogufenjin	g01_攻击动作6_cuogufenjin	g01_扇子_攻击动作6_cuogufenjin	g01_huan_攻击动作11_cuogufenjin	npc_attack	npc_attack	0	-1	错骨分筋
+242	g01_攻击动作16_cuixinliepi	g01_攻击动作16_cuixinliepi	g01_攻击动作16_cuixinliepi	g01_攻击动作24_cuixinliepi	g01_攻击动作20_cuixinliepi	g01_扇子_攻击动作20_cuixinliepi	g01_huan_攻击动作24_cuixinliepi	npc_attack	npc_attack	0	-1	催心裂脾
+243	g01_群体攻击动作1_xuanyinzhiyang	g01_群体攻击动作1_xuanyinzhiyang	g01_群体攻击动作1_xuanyinzhiyang	g01_群体攻击动作3_xuanyinzhiyang	g01_群体攻击动作2_xuanyinzhiyang	g01_扇子_群体攻击动作2_xuanyinzhiyang	g01_huan_群体攻击动作3_xuanyinzhiyang	npc_attack	npc_attack	0	-1	玄阴至阳
+244	npc_attack	npc_attack	npc_attack	npc_attack	npc_attack	npc_attack	npc_attack	npc_attack	npc_attack	0	-1	玉碎昆岗
+245	g01_攻击动作17_tianditongshou	g01_攻击动作17_tianditongshou	g01_攻击动作17_tianditongshou	g01_攻击动作25_tianditongshou	g01_攻击动作21_tianditongshou	g01_扇子_攻击动作21_tianditongshou	g01_huan_攻击动作25_tianditongshou	npc_attack	npc_attack	0	-1	天地同寿
+246	g01_抬头挺胸_wuxinglianzhu	g01_抬头挺胸_wuxinglianzhu	g01_抬头挺胸_wuxinglianzhu	g01_抬头挺胸_wuxinglianzhu	g01_抬头挺胸_wuxinglianzhu	g01_抬头挺胸_wuxinglianzhu	g01_抬头挺胸_wuxinglianzhu	npc_attack	npc_attack	1	-1	五星连珠
+247	g01_攻击动作4_huoxingchongri	g01_攻击动作4_huoxingchongri	g01_攻击动作4_huoxingchongri	g01_攻击动作14_huoxingchongri	g01_攻击动作9_huoxingchongri	g01_攻击动作9_huoxingchongri	g01_huan_攻击动作14_huoxingchongri	npc_attack	npc_attack	0	-1	火星冲日
+248	g01_抬头挺胸_qixingluochangkong	g01_抬头挺胸_qixingluochangkong	g01_抬头挺胸_qixingluochangkong	g01_抬头挺胸_qixingluochangkong	g01_抬头挺胸_qixingluochangkong	g01_抬头挺胸_qixingluochangkong	g01_抬头挺胸_qixingluochangkong	npc_attack	npc_attack	1	-1	七星落长空
+249	g01_抬头挺胸_shenxingbaibian	g01_抬头挺胸_shenxingbaibian	g01_抬头挺胸_shenxingbaibian	g01_抬头挺胸_shenxingbaibian	g01_抬头挺胸_shenxingbaibian	g01_抬头挺胸_shenxingbaibian	g01_抬头挺胸_shenxingbaibian	npc_attack	npc_attack	1	-1	神行百变
+250	g01_抬头挺胸_zhiluweima	g01_抬头挺胸_zhiluweima	g01_抬头挺胸_zhiluweima	g01_抬头挺胸_zhiluweima	g01_抬头挺胸_zhiluweima	g01_抬头挺胸_zhiluweima	g01_抬头挺胸_zhiluweima	npc_attack	npc_attack	1	-1	指鹿为马
+251	g01_抬头挺胸_toulianghuanzhu	g01_抬头挺胸_toulianghuanzhu	g01_抬头挺胸_toulianghuanzhu	g01_抬头挺胸_toulianghuanzhu	g01_抬头挺胸_toulianghuanzhu	g01_抬头挺胸_toulianghuanzhu	g01_抬头挺胸_toulianghuanzhu	npc_attack	npc_attack	1	-1	偷梁换柱
+252	g01_抬头挺胸_qiannuyuren	g01_抬头挺胸_qiannuyuren	g01_抬头挺胸_qiannuyuren	g01_抬头挺胸_qiannuyuren	g01_抬头挺胸_qiannuyuren	g01_抬头挺胸_qiannuyuren	g01_抬头挺胸_qiannuyuren	npc_attack	npc_attack	1	-1	迁怒于人
+253	g01_抬头挺胸_nufachongguan	g01_抬头挺胸_nufachongguan	g01_抬头挺胸_nufachongguan	g01_抬头挺胸_nufachongguan	g01_抬头挺胸_nufachongguan	g01_抬头挺胸_nufachongguan	g01_抬头挺胸_nufachongguan	npc_attack	npc_attack	1	-1	怒发冲冠
+254	g01_攻击动作2_leitingzhinu	g01_攻击动作2_leitingzhinu	g01_攻击动作2_leitingzhinu	g01_攻击动作12_leitingzhinu	g01_攻击动作7_leitingzhinu	g01_攻击动作7_leitingzhinu	g01_攻击动作12_leitingzhinu	npc_attack	npc_attack	0	-1	雷霆之怒
+255	g01_义愤填膺_yiwentianying	g01_义愤填膺_yiwentianying	g01_义愤填膺_yiwentianying	g01_义愤填膺_yiwentianying	g01_义愤填膺_yiwentianying	g01_义愤填膺_yiwentianying	g01_义愤填膺_yiwentianying	npc_attack	npc_attack	1	-1	义愤填膺
+256	g01_攻击动作18_houjibofa	g01_攻击动作18_houjibofa	g01_攻击动作18_houjibofa	g01_攻击动作26_houjibofa	g01_攻击动作22_houjibofa	g01_扇子_攻击动作22_houjibofa	g01_huan_攻击动作26_houjibofa	npc_attack	npc_attack	0	-1	厚积薄发
+257	g01_攻击动作19_renguitongtu	g01_攻击动作19_renguitongtu	g01_攻击动作19_renguitongtu	g01_攻击动作27_renguitongtu	g01_攻击动作23_renguitongtu	g01_扇子_攻击动作23_renguitongtu	g01_huan_攻击动作27_renguitongtu	npc_attack	npc_attack	0	-1	人鬼同途
+261	g01_攻击动作5_kunyuebeiming	g01_攻击动作5_kunyuebeiming	g01_攻击动作5_kunyuebeiming	g01_攻击动作15_kunyuebeiming	g01_攻击动作10_kunyuebeiming	g01_扇子_攻击动作10_kunyuebeiming	g01_攻击动作15_kunyuebeiming	npc_attack	npc_attack	0	-1	鲲跃北溟
+262	g01_攻击动作28_peiranyouyu	g01_攻击动作28_peiranyouyu	g01_攻击动作28_peiranyouyu	g01_攻击动作58_peiranyouyu	g01_攻击动作20_peiranyouyu	g01_扇子_攻击动作20_peiranyouyu	g01_huan_攻击动作58_peiranyouyu	npc_attack	npc_attack	0	-1	沛然有雨
+263	g01_群体攻击动作4_aoyoudonghai	g01_群体攻击动作4_aoyoudonghai	g01_群体攻击动作4_aoyoudonghai	g01_群体攻击动作7_aoyoudonghai	g01_群体攻击动作6_aoyoudonghai	g01_扇子_群体攻击动作6_aoyoudonghai	g01_huan_群体攻击动作7_aoyoudonghai	npc_attack	npc_attack	0	-1	遨游东海
+264	npc_attack	npc_attack	npc_attack	npc_attack	npc_attack	npc_attack	npc_attack	npc_attack	npc_attack	0	-1	大鹏展翅
+265	g01_攻击动作31_jianlongzaitian	g01_攻击动作31_jianlongzaitian	g01_攻击动作31_jianlongzaitian	g01_攻击动作59_jianlongzaitian	g01_攻击动作9_jianlongzaitian	g01_攻击动作9_jianlongzaitian	g01_攻击动作59_jianlongzaitian	npc_attack	npc_attack	0	-1	见龙在田
+266	g01_蹲马砸拳_shenlongbaiwei	g01_蹲马砸拳_shenlongbaiwei	g01_蹲马砸拳_shenlongbaiwei	g01_蹲马砸拳_shenlongbaiwei	g01_蹲马砸拳_shenlongbaiwei	g01_蹲马砸拳_shenlongbaiwei	g01_蹲马砸拳_shenlongbaiwei	npc_attack	npc_attack	1	-1	神龙摆尾
+267	g01_蹲马砸拳_feilongzaitian	g01_蹲马砸拳_feilongzaitian	g01_蹲马砸拳_feilongzaitian	g01_蹲马砸拳_feilongzaitian	g01_蹲马砸拳_feilongzaitian	g01_蹲马砸拳_feilongzaitian	g01_蹲马砸拳_feilongzaitian	npc_attack	npc_attack	1	-1	飞龙在天
+268	g01_攻击动作29_kanglongyouhui	g01_攻击动作29_kanglongyouhui	g01_攻击动作29_kanglongyouhui	g01_攻击动作60_kanglongyouhui	g01_攻击动作55_kanglongyouhui	g01_扇子_攻击动作55_kanglongyouhui	g01_huan_攻击动作60_kanglongyouhui	npc_attack	npc_attack	1	-1	亢龙有悔
+269	g01_攻击动作28_geianguanhuo	g01_攻击动作28_geianguanhuo	g01_攻击动作28_geianguanhuo	g01_攻击动作61_geianguanhuo	g01_攻击动作56_geianguanhuo	g01_攻击动作56_geianguanhuo	g01_huan_攻击动作61_geianguanhuo	npc_attack	npc_attack	0	-1	隔岸观火
+270	g01_蹲马砸拳_lidaitaojiang	g01_蹲马砸拳_lidaitaojiang	g01_蹲马砸拳_lidaitaojiang	g01_蹲马砸拳_lidaitaojiang	g01_蹲马砸拳_lidaitaojiang	g01_蹲马砸拳_lidaitaojiang	g01_蹲马砸拳_lidaitaojiang	npc_attack	npc_attack	1	-1	李代桃僵
+271	g01_蹲马砸拳_mantianguohai	g01_蹲马砸拳_mantianguohai	g01_蹲马砸拳_mantianguohai	g01_蹲马砸拳_mantianguohai	g01_蹲马砸拳_mantianguohai	g01_蹲马砸拳_mantianguohai	g01_蹲马砸拳_mantianguohai	npc_attack	npc_attack	1	-1	瞒天过海
+272	g01_蹲马砸拳_tianxiawugou	g01_蹲马砸拳_tianxiawugou	g01_蹲马砸拳_tianxiawugou	g01_蹲马砸拳_tianxiawugou	g01_蹲马砸拳_tianxiawugou	g01_蹲马砸拳_tianxiawugou	g01_蹲马砸拳_tianxiawugou	npc_attack	npc_attack	1	-1	天下无狗
+273	g01_蹲马砸拳_bogouchaotian	g01_蹲马砸拳_bogouchaotian	g01_蹲马砸拳_bogouchaotian	g01_蹲马砸拳_bogouchaotian	g01_蹲马砸拳_bogouchaotian	g01_蹲马砸拳_bogouchaotian	g01_蹲马砸拳_bogouchaotian	npc_attack	npc_attack	1	-1	拨狗朝天
+274	g01_攻击动作30_yabiangoubei	g01_攻击动作30_yabiangoubei	g01_攻击动作30_yabiangoubei	g01_攻击动作62_yabiangoubei	g01_攻击动作57_yabiangoubei	g01_扇子_攻击动作57_yabiangoubei	g01_huan_攻击动作62_yabiangoubei	npc_attack	npc_attack	0	-1	压扁狗背
+275	g01_先下手为强_xianxiashouweiqiang	g01_先下手为强_xianxiashouweiqiang	g01_先下手为强_xianxiashouweiqiang	g01_先下手为强_xianxiashouweiqiang	g01_先下手为强_xianxiashouweiqiang	g01_先下手为强_xianxiashouweiqiang	g01_先下手为强_xianxiashouweiqiang	npc_attack	npc_attack	1	-1	先下手为强
+276	g01_金蝉脱壳_jinchantuoqiao	g01_金蝉脱壳_jinchantuoqiao	g01_金蝉脱壳_jinchantuoqiao	g01_金蝉脱壳_jinchantuoqiao	g01_金蝉脱壳_jinchantuoqiao	g01_金蝉脱壳_jinchantuoqiao	g01_金蝉脱壳_jinchantuoqiao	npc_attack	npc_attack	1	-1	金蝉脱壳
+277	g01_抱残守缺_baocanshouque	g01_抱残守缺_baocanshouque	g01_抱残守缺_baocanshouque	g01_抱残守缺_baocanshouque	g01_抱残守缺_baocanshouque	g01_抱残守缺_baocanshouque	g01_抱残守缺_baocanshouque	npc_attack	npc_attack	1	-1	抱残守缺
+281	g01_聚气动作15_gaotanma	g01_聚气动作15_gaotanma	g01_聚气动作15_gaotanma	g01_聚气动作13_gaotanma	g01_聚气动作11_gaotanma	g01_聚气动作11_gaotanma	g01_聚气动作13_gaotanma	npc_attack	npc_attack	0	-1	高探马聚气
+282	g01_攻击动作111_gaotanma	g01_攻击动作111_gaotanma	g01_攻击动作111_gaotanma	g01_攻击动作105_gaotanma	g01_攻击动作99_gaotanma	g01_攻击动作99_gaotanma	g01_攻击动作105_gaotanma	npc_attack	npc_attack	0	-1	高探马攻击
+283	g01_聚气动作16_yunvchuansuo	g01_聚气动作16_yunvchuansuo	g01_聚气动作16_yunvchuansuo	g01_聚气动作14_yunvchuansuo	g01_聚气动作12_yunvchuansuo	g01_聚气动作12_yunvchuansuo	g01_聚气动作14_yunvchuansuo	npc_attack	npc_attack	0	-1	玉女穿梭（引导）
+284	g01_攻击动作115_yourenyouyu	g01_攻击动作115_yourenyouyu	g01_攻击动作115_yourenyouyu	g01_攻击动作109_yourenyouyu	g01_攻击动作103_yourenyouyu	g01_攻击动作103_yourenyouyu	g01_攻击动作109_yourenyouyu	npc_attack	npc_attack	0	-1	游刃有余
+285	g01_状态动作15_yanzichaoshui	g01_状态动作15_yanzichaoshui	g01_状态动作15_yanzichaoshui	g01_状态动作15_yanzichaoshui	g01_状态动作15_yanzichaoshui	g01_状态动作15_yanzichaoshui	g01_状态动作15_yanzichaoshui	npc_attack	npc_attack	1	-1	燕子抄水
+286	g01_攻击动作112_baiheliangchi	g01_攻击动作112_baiheliangchi	g01_攻击动作112_baiheliangchi	g01_攻击动作106_baiheliangchi	g01_攻击动作100_baiheliangchi	g01_扇子_攻击动作100_baiheliangchi	g01_huan_攻击动作106_baiheliangchi	npc_attack	npc_attack	0	-1	白鹤晾翅
+287	g01_状态动作12_hubaotou	g01_状态动作12_hubaotou	g01_状态动作12_hubaotou	g01_状态动作12_hubaotou	g01_状态动作12_hubaotou	g01_状态动作12_hubaotou	g01_状态动作12_hubaotou	npc_attack	npc_attack	1	-1	虎抱头
+288	g01_聚气动作15_gaotanma	g01_聚气动作15_gaotanma	g01_聚气动作15_gaotanma	g01_聚气动作13_gaotanma	g01_聚气动作11_gaotanma	g01_聚气动作11_gaotanma	g01_聚气动作13_gaotanma	npc_attack	npc_attack	0	-1	双峰贯耳聚气
+289	g01_攻击动作110_shuangfengguaner	g01_攻击动作110_shuangfengguaner	g01_攻击动作110_shuangfengguaner	g01_攻击动作104_shuangfengguaner	g01_攻击动作98_shuangfengguaner	g01_攻击动作98_shuangfengguaner	g01_攻击动作104_shuangfengguaner	npc_attack	npc_attack	0	-1	双峰贯耳攻击
+290	g01_聚气动作113_sanhuantaoyue	g01_聚气动作113_sanhuantaoyue	g01_聚气动作113_sanhuantaoyue	g01_聚气动作13_sanhuantaoyue	g01_聚气动作11_sanhuantaoyue	g01_聚气动作11_sanhuantaoyue	g01_聚气动作13_sanhuantaoyue	npc_attack	npc_attack	0	-1	三环套月聚气
+291	g01_攻击动作113_sanhuantaoyue	g01_攻击动作113_sanhuantaoyue	g01_攻击动作113_sanhuantaoyue	g01_攻击动作107_sanhuantaoyue	g01_攻击动作101_sanhuantaoyue	g01_攻击动作101_sanhuantaoyue	g01_攻击动作107_sanhuantaoyue	npc_attack	npc_attack	0	-1	三环套月攻击
+292	g01_聚气动作16_揽雀尾	g01_聚气动作16_揽雀尾	g01_聚气动作16_揽雀尾	g01_聚气动作14_揽雀尾	g01_聚气动作12_揽雀尾	g01_聚气动作12_揽雀尾	g01_聚气动作14_揽雀尾	npc_attack	npc_attack	0	-1	揽雀尾（引导）
+293	g01_状态动作12_xiangruyimo	g01_状态动作12_xiangruyimo	g01_状态动作12_xiangruyimo	g01_状态动作12_xiangruyimo	g01_状态动作12_xiangruyimo	g01_状态动作12_xiangruyimo	g01_状态动作12_xiangruyimo	npc_attack	npc_attack	1	-1	相濡以沫
+294	g01_状态动作14_tiyunzong	g01_状态动作14_tiyunzong	g01_状态动作14_tiyunzong	g01_状态动作14_tiyunzong	g01_状态动作14_tiyunzong	g01_状态动作14_tiyunzong	g01_状态动作14_tiyunzong	npc_attack	npc_attack	1	-1	梯云纵
+295	g01_聚气动作16_yemayunzong	g01_聚气动作16_yemayunzong	g01_聚气动作16_yemayunzong	g01_聚气动作14_yemayunzong	g01_聚气动作12_yemayunzong	g01_聚气动作12_yemayunzong	g01_聚气动作14_yemayunzong	npc_attack	npc_attack	0	-1	野马分鬃(引导)
+296	g01_攻击动作114_rufengsibi	g01_攻击动作114_rufengsibi	g01_攻击动作114_rufengsibi	g01_攻击动作108_rufengsibi	g01_攻击动作102_rufengsibi	g01_攻击动作102_rufengsibi	g01_攻击动作108_rufengsibi	npc_attack	npc_attack	0	-1	如封似闭
+297	g01_状态动作12_hanmeiyingxue	g01_状态动作12_hanmeiyingxue	g01_状态动作12_hanmeiyingxue	g01_状态动作12_hanmeiyingxue	g01_状态动作12_hanmeiyingxue	g01_状态动作12_hanmeiyingxue	g01_状态动作12_hanmeiyingxue	npc_attack	npc_attack	1	-1	寒梅映雪
+298	g01_攻击动作114_dakuixing	g01_攻击动作114_dakuixing	g01_攻击动作114_dakuixing	g01_攻击动作108_dakuixing	g01_攻击动作102_dakuixing	g01_攻击动作102_dakuixing	g01_攻击动作108_dakuixing	npc_attack	npc_attack	0	-1	大魁星
+299	g01_状态动作13_zhenwuqijiezhen	g01_状态动作13_zhenwuqijiezhen	g01_状态动作13_zhenwuqijiezhen	g01_状态动作13_zhenwuqijiezhen	g01_状态动作13_zhenwuqijiezhen	g01_状态动作13_zhenwuqijiezhen	g01_状态动作13_zhenwuqijiezhen	npc_attack	npc_attack	1	-1	真武七截阵
+301	g01_攻击动作80_yueluoxishan	g01_攻击动作80_yueluoxishan	g01_攻击动作80_yueluoxishan	g01_攻击动作76_yueluoxishan	g01_攻击动作31_yueluoxishan	g01_攻击动作31_yueluoxishan	g01_攻击动作76_yueluoxishan	npc_attack	npc_attack	0	-1	月落西山
+302	g01_聚气动作1_huanpeiguihun	g01_聚气动作1_huanpeiguihun	g01_聚气动作1_huanpeiguihun	g01_聚气动作1_huanpeiguihun	g01_聚气动作1_huanpeiguihun	g01_聚气动作1_huanpeiguihun	g01_聚气动作1_huanpeiguihun	npc_attack	npc_attack	0	-1	环佩归魂聚气
+303	g01_攻击动作81_huanpeiguihun	g01_攻击动作81_huanpeiguihun	g01_攻击动作81_huanpeiguihun	g01_攻击动作77_huanpeiguihun	g01_攻击动作32_huanpeiguihun	g01_攻击动作32_huanpeiguihun	g01_huan_攻击动作77_huanpeiguihun	npc_attack	npc_attack	0	-1	环佩归魂攻击
+304	g01_高抬右手_tiesuohengjiang	g01_高抬右手_tiesuohengjiang	g01_高抬右手_tiesuohengjiang	g01_高抬右手_tiesuohengjiang	g01_高抬右手_tiesuohengjiang	g01_高抬右手_tiesuohengjiang	g01_高抬右手_tiesuohengjiang	npc_attack	npc_attack	0	-1	铁锁横江
+305	g01_聚气动作1_jiuyinbaiguzhao	g01_聚气动作1_jiuyinbaiguzhao	g01_聚气动作1_jiuyinbaiguzhao	g01_聚气动作1_jiuyinbaiguzhao	g01_聚气动作1_jiuyinbaiguzhao	g01_聚气动作1_jiuyinbaiguzhao	g01_聚气动作1_jiuyinbaiguzhao	npc_attack	npc_attack	0	-1	九阴白骨爪聚气
+306	g01_攻击动作82_jiuyinbaiguzhao	g01_攻击动作82_jiuyinbaiguzhao	g01_攻击动作82_jiuyinbaiguzhao	g01_攻击动作78_jiuyinbaiguzhao	g01_攻击动作33_jiuyinbaiguzhao	g01_攻击动作33_jiuyinbaiguzhao	g01_攻击动作78_jiuyinbaiguzhao	npc_attack	npc_attack	0	-1	九阴白骨爪攻击
+307	g01_金鸡独立_taiedaochi	g01_金鸡独立_taiedaochi	g01_金鸡独立_taiedaochi	g01_金鸡独立_taiedaochi	g01_金鸡独立_taiedaochi	g01_金鸡独立_taiedaochi	g01_金鸡独立_taiedaochi	npc_attack	npc_attack	1	-1	太阿倒持
+308	g01_高抬右手_foguangpuzhao	g01_高抬右手_foguangpuzhao	g01_高抬右手_foguangpuzhao	g01_高抬右手_foguangpuzhao	g01_高抬右手_foguangpuzhao	g01_高抬右手_foguangpuzhao	g01_高抬右手_foguangpuzhao	npc_attack	npc_attack	1	-1	佛光普照
+309	g01_聚气动作2_jinzhendujie	g01_聚气动作2_jinzhendujie	g01_聚气动作2_jinzhendujie	g01_聚气动作2_jinzhendujie	g01_聚气动作2_jinzhendujie	g01_聚气动作2_jinzhendujie	g01_聚气动作2_jinzhendujie	npc_attack	npc_attack	1	-1	金针渡劫聚气
+310	g01_高抬右手_jinzhendujie	g01_高抬右手_jinzhendujie	g01_高抬右手_jinzhendujie	g01_高抬右手_jinzhendujie	g01_高抬右手_jinzhendujie	g01_高抬右手_jinzhendujie	g01_高抬右手_jinzhendujie	npc_attack	npc_attack	1	-1	金针渡劫攻击
+311	g01_聚气动作2_ningjingzhiyu	g01_聚气动作2_ningjingzhiyu	g01_聚气动作2_ningjingzhiyu	g01_聚气动作2_ningjingzhiyu	g01_聚气动作2_ningjingzhiyu	g01_聚气动作2_ningjingzhiyu	g01_聚气动作2_ningjingzhiyu	npc_attack	npc_attack	1	-1	宁静之雨
+312	g01_金鸡独立_chongxuyangqi	g01_金鸡独立_chongxuyangqi	g01_金鸡独立_chongxuyangqi	g01_金鸡独立_chongxuyangqi	g01_金鸡独立_chongxuyangqi	g01_金鸡独立_chongxuyangqi	g01_金鸡独立_chongxuyangqi	npc_attack	npc_attack	1	-1	冲虚养气
+313	g01_高抬右手_miaobishenghua	g01_高抬右手_miaobishenghua	g01_高抬右手_miaobishenghua	g01_高抬右手_miaobishenghua	g01_高抬右手_miaobishenghua	g01_高抬右手_miaobishenghua	g01_高抬右手_miaobishenghua	npc_attack	npc_attack	1	-1	妙笔生花
+314	g01_高抬右手_qisihuisheng	g01_高抬右手_qisihuisheng	g01_高抬右手_qisihuisheng	g01_高抬右手_qisihuisheng	g01_高抬右手_qisihuisheng	g01_高抬右手_qisihuisheng	g01_高抬右手_qisihuisheng	npc_attack	npc_attack	1	-1	起死回生
+315	g01_金鸡独立_jingmainixing	g01_金鸡独立_jingmainixing	g01_金鸡独立_jingmainixing	g01_金鸡独立_jingmainixing	g01_金鸡独立_jingmainixing	g01_金鸡独立_jingmainixing	g01_金鸡独立_jingmainixing	npc_attack	npc_attack	1	-1	经脉逆行
+316	g01_移魂大法_yihundafa	g01_移魂大法_yihundafa	g01_移魂大法_yihundafa	g01_移魂大法_yihundafa	g01_移魂大法_yihundafa	g01_移魂大法_yihundafa	g01_移魂大法_yihundafa	npc_attack	npc_attack	0	-1	移魂大法
+317	g01_金鸡独立_yijinduangu	g01_金鸡独立_yijinduangu	g01_金鸡独立_yijinduangu	g01_金鸡独立_yijinduangu	g01_金鸡独立_yijinduangu	g01_金鸡独立_yijinduangu	g01_金鸡独立_yijinduangu	npc_attack	npc_attack	1	-1	易筋锻骨
+318	g01_群体攻击动作9_wanyuechaozong_01	g01_群体攻击动作9_wanyuechaozong_01	g01_群体攻击动作9_wanyuechaozong_01	g01_群体攻击动作8_wanyuechaozong_01	g01_群体攻击动作5_wanyuechaozong_01	g01_扇子_群体攻击动作5_wanyuechaozong_01	g01_huan_群体攻击动作8_wanyuechaozong_01	npc_attack	npc_attack	0	-1	万岳朝宗
+319	g01_金鸡独立_yannianyishou	g01_金鸡独立_yannianyishou	g01_金鸡独立_yannianyishou	g01_金鸡独立_yannianyishou	g01_金鸡独立_yannianyishou	g01_金鸡独立_yannianyishou	g01_金鸡独立_yannianyishou	npc_attack	npc_attack	1	-1	延年益寿
+320	g01_金鸡独立_shengmingzhiquan	g01_金鸡独立_shengmingzhiquan	g01_金鸡独立_shengmingzhiquan	g01_金鸡独立_shengmingzhiquan	g01_金鸡独立_shengmingzhiquan	g01_金鸡独立_shengmingzhiquan	g01_金鸡独立_shengmingzhiquan	npc_attack	npc_attack	1	-1	生命之泉
+321	g01_攻击动作83_lanshadu	g01_攻击动作83_lanshadu	g01_攻击动作83_lanshadu	g01_攻击动作79_lanshadu	g01_攻击动作37_lanshadu	g01_攻击动作37_lanshadu	g01_攻击动作79_lanshadu	npc_attack	npc_attack	0	-1	蓝砂毒
+322	g01_挥左手_fushidu	g01_挥左手_fushidu	g01_挥左手_fushidu	g01_挥左手_fushidu	g01_挥左手_fushidu	g01_挥左手_fushidu	g01_挥左手_fushidu	npc_attack	npc_attack	0	-1	腐尸毒
+323	g01_聚气动作3_lianzhufushidu	g01_聚气动作3_lianzhufushidu	g01_聚气动作3_lianzhufushidu	g01_聚气动作3_lianzhufushidu	g01_聚气动作3_lianzhufushidu	g01_聚气动作3_lianzhufushidu	g01_聚气动作3_lianzhufushidu	npc_attack	npc_attack	0	-1	连珠腐尸毒（引导）
+324	g01_聚气动作4_qixingtougu	g01_聚气动作4_qixingtougu	g01_聚气动作4_qixingtougu	g01_聚气动作4_qixingtougu	g01_聚气动作4_qixingtougu	g01_聚气动作4_qixingtougu	g01_聚气动作4_qixingtougu	npc_attack	npc_attack	0	-1	七星透骨聚气
+325	g01_攻击动作38_qixingtougu	g01_攻击动作38_qixingtougu	g01_攻击动作38_qixingtougu	g01_攻击动作38_qixingtougu	g01_攻击动作38_qixingtougu	g01_攻击动作38_qixingtougu	g01_攻击动作38_qixingtougu	npc_attack	npc_attack	0	-1	七星透骨攻击
+326	g01_信心十足_yinzhenzhike	g01_信心十足_yinzhenzhike	g01_信心十足_yinzhenzhike	g01_信心十足_yinzhenzhike	g01_信心十足_yinzhenzhike	g01_信心十足_yinzhenzhike	g01_信心十足_yinzhenzhike	npc_attack	npc_attack	1	-1	饮鸩止渴
+327	g01_挥左手_tuonidaishui	g01_挥左手_tuonidaishui	g01_挥左手_tuonidaishui	g01_挥左手_tuonidaishui	g01_挥左手_tuonidaishui	g01_挥左手_tuonidaishui	g01_挥左手_tuonidaishui	npc_attack	npc_attack	0	-1	拖泥带水
+328	g01_挥左手_焦头烂额_jiaotoulaner	g01_挥左手_焦头烂额_jiaotoulaner	g01_挥左手_焦头烂额_jiaotoulaner	g01_挥左手_焦头烂额_jiaotoulaner	g01_挥左手_焦头烂额_jiaotoulaner	g01_挥左手_焦头烂额_jiaotoulaner	g01_挥左手_焦头烂额_jiaotoulaner	npc_attack	npc_attack	0	-1	焦头烂额
+329	g01_聚气动作3_yihuajiemu	g01_聚气动作3_yihuajiemu	g01_聚气动作3_yihuajiemu	g01_聚气动作3_yihuajiemu	g01_聚气动作3_yihuajiemu	g01_聚气动作3_yihuajiemu	g01_聚气动作3_yihuajiemu	npc_attack	npc_attack	0	-1	移花接木（引导）
+330	g01_聚气动作3_xiaolicangdao	g01_聚气动作3_xiaolicangdao	g01_聚气动作3_xiaolicangdao	g01_聚气动作3_xiaolicangdao	g01_聚气动作3_xiaolicangdao	g01_聚气动作3_xiaolicangdao	g01_聚气动作3_xiaolicangdao	npc_attack	npc_attack	0	-1	笑里藏刀（引导）
+331	g01_挥左手_笑口常开_xiaokouchangkai	g01_挥左手_笑口常开_xiaokouchangkai	g01_挥左手_笑口常开_xiaokouchangkai	g01_挥左手_笑口常开_xiaokouchangkai	g01_挥左手_笑口常开_xiaokouchangkai	g01_挥左手_笑口常开_xiaokouchangkai	g01_挥左手_笑口常开_xiaokouchangkai	npc_attack	npc_attack	0	-1	笑口常开
+332	g01_聚气动作3_xiaoyujieyi	g01_聚气动作3_xiaoyujieyi	g01_聚气动作3_xiaoyujieyi	g01_聚气动作3_xiaoyujieyi	g01_聚气动作3_xiaoyujieyi	g01_聚气动作3_xiaoyujieyi	g01_聚气动作3_xiaoyujieyi	npc_attack	npc_attack	0	-1	笑语解颐（引导）
+333	g01_挥左手_hanshasheying	g01_挥左手_hanshasheying	g01_挥左手_hanshasheying	g01_挥左手_hanshasheying	g01_挥左手_hanshasheying	g01_挥左手_hanshasheying	g01_挥左手_hanshasheying	npc_attack	npc_attack	0	-1	含沙射影
+334	g01_挥左手_四面楚歌_simianchuge	g01_挥左手_四面楚歌_simianchuge	g01_挥左手_四面楚歌_simianchuge	g01_挥左手_四面楚歌_simianchuge	g01_挥左手_四面楚歌_simianchuge	g01_挥左手_四面楚歌_simianchuge	g01_挥左手_四面楚歌_simianchuge	npc_attack	npc_attack	0	-1	四面楚歌
+335	g01_聚气动作3_呆若木鸡_dairuomuji	g01_聚气动作3_呆若木鸡_dairuomuji	g01_聚气动作3_呆若木鸡_dairuomuji	g01_聚气动作3_呆若木鸡_dairuomuji	g01_聚气动作3_呆若木鸡_dairuomuji	g01_聚气动作3_呆若木鸡_dairuomuji	g01_聚气动作3_呆若木鸡_dairuomuji	npc_attack	npc_attack	0	-1	呆若木鸡（引导）
+336	g01_挥左手_shuiyanqijun	g01_挥左手_shuiyanqijun	g01_挥左手_shuiyanqijun	g01_挥左手_shuiyanqijun	g01_挥左手_shuiyanqijun	g01_挥左手_shuiyanqijun	g01_挥左手_shuiyanqijun	npc_attack	npc_attack	0	-1	水淹七军
+337	g01_信心十足_行尸走肉_xingshizourou	g01_信心十足_行尸走肉_xingshizourou	g01_信心十足_行尸走肉_xingshizourou	g01_信心十足_行尸走肉_xingshizourou	g01_信心十足_行尸走肉_xingshizourou	g01_信心十足_行尸走肉_xingshizourou	g01_信心十足_行尸走肉_xingshizourou	npc_attack	npc_attack	1	-1	行尸走肉
+338	g01_信心十足_eguanmanying	g01_信心十足_eguanmanying	g01_信心十足_eguanmanying	g01_信心十足_eguanmanying	g01_信心十足_eguanmanying	g01_信心十足_eguanmanying	g01_信心十足_eguanmanying	npc_attack	npc_attack	1	-1	恶贯满盈
+341	g01_攻击动作84_烟霭茫茫_yanaimangmang	g01_攻击动作84_烟霭茫茫_yanaimangmang	g01_攻击动作84_烟霭茫茫_yanaimangmang	g01_攻击动作39_烟霭茫茫_yanaimangmang	g01_攻击动作54_烟霭茫茫_yanaimangmang	g01_扇子_攻击动作54_烟霭茫茫	g01_huan_攻击动作39_烟霭茫茫_yanaimangmang	npc_attack	npc_attack	0	-1	烟霭茫茫
+342	g01_攻击动作85_快活三_kuaihuosan	g01_攻击动作85_快活三_kuaihuosan	g01_攻击动作85_快活三_kuaihuosan	g01_攻击动作40_快活三_kuaihuosan	g01_攻击动作63_快活三_kuaihuosan	g01_攻击动作63_快活三_kuaihuosan	g01_huan_攻击动作40_快活三_kuaihuosan	npc_attack	npc_attack	0	-1	快活三
+343	g01_攻击动作86_huifengbiliu	g01_攻击动作86_huifengbiliu	g01_攻击动作86_huifengbiliu	g01_攻击动作64_huifengbiliu	g01_攻击动作41_huifengbiliu	g01_攻击动作41_huifengbiliu	g01_攻击动作64_huifengbiliu	npc_attack	npc_attack	0	-1	回风拂柳
+344	npc_attack	npc_attack	npc_attack	npc_attack	npc_attack	npc_attack	npc_attack	npc_attack	npc_attack	0	-1	云蒸霞蔚
+345	g01_状态动作8_youchangwuchang	g01_状态动作8_youchangwuchang	g01_状态动作8_youchangwuchang	g01_状态动作8_youchangwuchang	g01_状态动作8_youchangwuchang	g01_状态动作8_youchangwuchang	g01_状态动作8_youchangwuchang	npc_attack	npc_attack	1	-1	有常无常
+346	g01_状态动作8_wuzhongshengxiang	g01_状态动作8_wuzhongshengxiang	g01_状态动作8_wuzhongshengxiang	g01_状态动作8_wuzhongshengxiang	g01_状态动作8_wuzhongshengxiang	g01_状态动作8_wuzhongshengxiang	g01_状态动作8_wuzhongshengxiang	npc_attack	npc_attack	1	-1	无众生相
+347	g01_状态动作8_feikufeirong	g01_状态动作8_feikufeirong	g01_状态动作8_feikufeirong	g01_状态动作8_feikufeirong	g01_状态动作8_feikufeirong	g01_状态动作8_feikufeirong	g01_状态动作8_feikufeirong	npc_attack	npc_attack	1	-1	非枯非荣
+348	g01_双手合十_金玉满堂_jinyumantang	g01_双手合十_金玉满堂_jinyumantang	g01_双手合十_金玉满堂_jinyumantang	g01_双手合十_金玉满堂_jinyumantang	g01_双手合十_金玉满堂_jinyumantang	g01_双手合十_金玉满堂_jinyumantang	g01_双手合十_金玉满堂_jinyumantang	npc_attack	npc_attack	1	-1	金玉满堂
+349	g01_双手合十_lidichengfo	g01_双手合十_lidichengfo	g01_双手合十_lidichengfo	g01_双手合十_lidichengfo	g01_双手合十_lidichengfo	g01_双手合十_lidichengfo	g01_双手合十_lidichengfo	npc_attack	npc_attack	1	-1	立地成佛
+350	g01_聚气动作10_danfengchaoyang	g01_聚气动作10_danfengchaoyang	g01_聚气动作10_danfengchaoyang	g01_聚气动作5_danfengchaoyang	g01_聚气动作7_danfengchaoyang	g01_聚气动作7_danfengchaoyang	g01_聚气动作5_danfengchaoyang	npc_attack	npc_attack	0	-1	丹凤朝阳聚气
+351	g01_攻击动作87_danfengchaoyang	g01_攻击动作87_danfengchaoyang	g01_攻击动作87_danfengchaoyang	g01_攻击动作42_danfengchaoyang	g01_攻击动作65_danfengchaoyang	g01_攻击动作65_danfengchaoyang	g01_攻击动作42_danfengchaoyang	npc_attack	npc_attack	0	-1	丹凤朝阳攻击
+352	g01_信心十足_baijuguoxi	g01_信心十足_baijuguoxi	g01_信心十足_baijuguoxi	g01_信心十足_baijuguoxi	g01_信心十足_baijuguoxi	g01_信心十足_baijuguoxi	g01_信心十足_baijuguoxi	npc_attack	npc_attack	0	-1	白驹过隙
+353	g01_状态动作8_少泽剑_shaozejian	g01_状态动作8_少泽剑_shaozejian	g01_状态动作8_少泽剑_shaozejian	g01_状态动作8_少泽剑_shaozejian	g01_状态动作8_少泽剑_shaozejian	g01_状态动作8_少泽剑_shaozejian	g01_状态动作8_少泽剑_shaozejian	npc_attack	npc_attack	1	-1	少泽剑
+354	g01_义愤填膺_yiwentianying	g01_义愤填膺_yiwentianying	g01_义愤填膺_yiwentianying	g01_义愤填膺_yiwentianying	g01_义愤填膺_yiwentianying	g01_义愤填膺_yiwentianying	g01_义愤填膺_yiwentianying	npc_attack	npc_attack	0	-1	商阳剑
+355	g01_攻击动作43_shaoshangjian	g01_攻击动作43_shaoshangjian	g01_攻击动作43_shaoshangjian	g01_攻击动作43_shaoshangjian	g01_攻击动作43_shaoshangjian	g01_攻击动作43_shaoshangjian	g01_攻击动作43_shaoshangjian	npc_attack	npc_attack	1	-1	少商剑
+356	g01_攻击动作43_baihongguanri	g01_攻击动作43_baihongguanri	g01_攻击动作43_baihongguanri	g01_攻击动作43_baihongguanri	g01_攻击动作43_baihongguanri	g01_攻击动作43_baihongguanri	g01_攻击动作43_baihongguanri	npc_attack	npc_attack	1	-1	白虹贯日
+357	g01_抬头挺胸_微服私访_weifusifang	g01_抬头挺胸_微服私访_weifusifang	g01_抬头挺胸_微服私访_weifusifang	g01_抬头挺胸_微服私访_weifusifang	g01_抬头挺胸_微服私访_weifusifang	g01_抬头挺胸_微服私访_weifusifang	g01_抬头挺胸_微服私访_weifusifang	npc_attack	npc_attack	0	-1	微服私访
+358	g01_聚气动作6_万国来朝_wanguolaichao	g01_聚气动作6_万国来朝_wanguolaichao	g01_聚气动作6_万国来朝_wanguolaichao	g01_聚气动作6_万国来朝_wanguolaichao	g01_聚气动作6_万国来朝_wanguolaichao	g01_聚气动作6_万国来朝_wanguolaichao	g01_聚气动作6_万国来朝_wanguolaichao	npc_attack	npc_attack	0	-1	万国来朝(引导)
+361	g01_攻击动作4_luomuxiaoxiao	g01_攻击动作4_luomuxiaoxiao	g01_攻击动作4_luomuxiaoxiao	g01_攻击动作41_luomuxiaoxiao	g01_攻击动作64_luomuxiaoxiao	g01_攻击动作64_luomuxiaoxiao	g01_攻击动作41_luomuxiaoxiao	npc_attack	npc_attack	0	-1	落木萧萧
+362	g01_攻击动作89_wangmeizhike	g01_攻击动作89_wangmeizhike	g01_攻击动作89_wangmeizhike	g01_攻击动作45_wangmeizhike	g01_攻击动作67_wangmeizhike	g01_扇子_攻击动作67_wangmeizhike	g01_huan_攻击动作45_wangmeizhike	npc_attack	npc_attack	0	-1	望梅止渴
+363	npc_attack	npc_attack	npc_attack	npc_attack	npc_attack	npc_attack	npc_attack	npc_attack	npc_attack	0	-1	梅花三弄
+364	npc_attack	npc_attack	npc_attack	npc_attack	npc_attack	npc_attack	npc_attack	npc_attack	npc_attack	0	-1	暗香疏影
+365	g01_攻击动作90_yangguansandie	g01_攻击动作90_yangguansandie	g01_攻击动作90_yangguansandie	g01_攻击动作46_yangguansandie	g01_攻击动作68_yangguansandie	g01_攻击动作68_yangguansandie	g01_huan_攻击动作46_yangguansandie	npc_attack	npc_attack	0	-1	阳关三叠
+366	g01_聚气动作10_yangfengyinwei	g01_聚气动作10_yangfengyinwei	g01_聚气动作10_yangfengyinwei	g01_聚气动作10_yangfengyinwei	g01_聚气动作10_yangfengyinwei	g01_聚气动作10_yangfengyinwei	g01_聚气动作10_yangfengyinwei	npc_attack	npc_attack	0	-1	阳奉阴违聚气
+367	g01_状态动作9_yangfengyinwei	g01_状态动作9_yangfengyinwei	g01_状态动作9_yangfengyinwei	g01_状态动作9_yangfengyinwei	g01_状态动作9_yangfengyinwei	g01_状态动作9_yangfengyinwei	g01_状态动作9_yangfengyinwei	npc_attack	npc_attack	1	-1	阳奉阴违攻击
+368	g01_攻击动作91_yanggetianjun	g01_攻击动作91_yanggetianjun	g01_攻击动作91_yanggetianjun	g01_攻击动作47_yanggetianjun	g01_攻击动作69_yanggetianjun	g01_扇子_攻击动作69_yanggetianjun	g01_huan_攻击动作47_yanggetianjun	npc_attack	npc_attack	0	-1	阳歌天钧
+369	g01_攻击动作92_yangchunbaixue	g01_攻击动作92_yangchunbaixue	g01_攻击动作92_yangchunbaixue	g01_攻击动作58_yangchunbaixue	g01_攻击动作20_yangchunbaixue	g01_扇子_攻击动作20_yangchunbaixue	g01_huan_攻击动作58_yangchunbaixue	npc_attack	npc_attack	0	-1	阳春白雪
+370	g01_聚气动作10_taxuewuhen	g01_聚气动作10_taxuewuhen	g01_聚气动作10_taxuewuhen	g01_聚气动作10_taxuewuhen	g01_聚气动作10_taxuewuhen	g01_聚气动作10_taxuewuhen	g01_聚气动作10_taxuewuhen	npc_attack	npc_attack	0	-1	踏雪无痕聚气
+371	g01_状态动作10_taxuewuhen	g01_状态动作10_taxuewuhen	g01_状态动作10_taxuewuhen	g01_状态动作10_taxuewuhen	g01_状态动作10_taxuewuhen	g01_状态动作10_taxuewuhen	g01_状态动作10_taxuewuhen	npc_attack	npc_attack	0	-1	踏雪无痕攻击
+372	g01_状态动作10_guixigong	g01_状态动作10_guixigong	g01_状态动作10_guixigong	g01_状态动作10_guixigong	g01_状态动作10_guixigong	g01_状态动作10_guixigong	g01_状态动作10_guixigong	npc_attack	npc_attack	1	-1	龟息功
+373	g01_状态动作10_chunwangchihan	g01_状态动作10_chunwangchihan	g01_状态动作10_chunwangchihan	g01_状态动作10_chunwangchihan	g01_状态动作10_chunwangchihan	g01_状态动作10_chunwangchihan	g01_状态动作10_chunwangchihan	npc_attack	npc_attack	1	-1	唇亡齿寒
+374	g01_聚气动作12_shimianmaifu	g01_聚气动作12_shimianmaifu	g01_聚气动作12_shimianmaifu	g01_聚气动作12_shimianmaifu	g01_聚气动作12_shimianmaifu	g01_聚气动作12_shimianmaifu	g01_聚气动作12_shimianmaifu	npc_attack	npc_attack	0	-1	十面埋伏聚气
+375	g01_状态动作10_shimianmaifu	g01_状态动作10_shimianmaifu	g01_状态动作10_shimianmaifu	g01_状态动作10_shimianmaifu	g01_状态动作10_shimianmaifu	g01_状态动作10_shimianmaifu	g01_状态动作10_shimianmaifu	npc_attack	npc_attack	0	-1	十面埋伏攻击
+376	g01_状态动作10_yuezudaipao	g01_状态动作10_yuezudaipao	g01_状态动作10_yuezudaipao	g01_状态动作10_yuezudaipao	g01_状态动作10_yuezudaipao	g01_状态动作10_yuezudaipao	g01_状态动作10_yuezudaipao	npc_attack	npc_attack	1	-1	越俎代庖
+377	g01_状态动作9_guiqulaixi	g01_状态动作9_guiqulaixi	g01_状态动作9_guiqulaixi	g01_状态动作9_guiqulaixi	g01_状态动作9_guiqulaixi	g01_状态动作9_guiqulaixi	g01_状态动作9_guiqulaixi	npc_attack	npc_attack	1	-1	归去来兮
+378	g01_攻击动作85_pingxuyufeng	g01_攻击动作85_pingxuyufeng	g01_攻击动作85_pingxuyufeng	g01_攻击动作40_pingxuyufeng	g01_攻击动作63_pingxuyufeng	g01_攻击动作63_pingxuyufeng	g01_huan_攻击动作40_pingxuyufeng	npc_attack	npc_attack	0	-1	凭虚御风
+379	g01_状态动作9_jingyingchenbi	g01_状态动作9_jingyingchenbi	g01_状态动作9_jingyingchenbi	g01_状态动作9_jingyingchenbi	g01_状态动作9_jingyingchenbi	g01_状态动作9_jingyingchenbi	g01_状态动作9_jingyingchenbi	npc_attack	npc_attack	1	-1	静影沉璧
+380	g01_状态动作9_daxiangwuxing	g01_状态动作9_daxiangwuxing	g01_状态动作9_daxiangwuxing	g01_状态动作9_daxiangwuxing	g01_状态动作9_daxiangwuxing	g01_状态动作9_daxiangwuxing	g01_状态动作9_daxiangwuxing	npc_attack	npc_attack	1	-1	大象无形
+381	g01_攻击动作2_haoyueqianli	g01_攻击动作2_haoyueqianli	g01_攻击动作2_haoyueqianli	g01_攻击动作49_haoyueqianli	g01_攻击动作71_haoyueqianli	g01_攻击动作71_haoyueqianli	g01_huan_攻击动作49_haoyueqianli	npc_attack	npc_attack	0	-1	皓月千里
+382	g01_攻击动作94_wangyangxingtan	g01_攻击动作94_wangyangxingtan	g01_攻击动作94_wangyangxingtan	g01_攻击动作50_wangyangxingtan	g01_攻击动作72_wangyangxingtan	g01_扇子_攻击动作72_wangyangxingtan	g01_huan_攻击动作50_wangyangxingtan	npc_attack	npc_attack	0	-1	望洋兴叹
+383	npc_attack	npc_attack	npc_attack	npc_attack	npc_attack	npc_attack	npc_attack	npc_attack	npc_attack	0	-1	海纳百川
+384	g01_攻击动作95_hudiezhen	g01_攻击动作95_hudiezhen	g01_攻击动作95_hudiezhen	g01_攻击动作51_hudiezhen	g01_攻击动作73_hudiezhen	g01_攻击动作73_hudiezhen	g01_攻击动作51_hudiezhen	npc_attack	npc_attack	0	-1	蝴蝶阵
+385	g01_聚气动作3_xianjing	g01_聚气动作3_xianjing	g01_聚气动作3_xianjing	g01_聚气动作3_xianjing	g01_聚气动作3_xianjing	g01_聚气动作3_xianjing	g01_聚气动作3_xianjing	npc_attack	npc_attack	0	-1	八门金锁聚气
+386	g01_状态动作11_bamenjinsuo	g01_状态动作11_bamenjinsuo	g01_状态动作11_bamenjinsuo	g01_状态动作11_bamenjinsuo	g01_状态动作11_bamenjinsuo	g01_状态动作11_bamenjinsuo	g01_状态动作11_bamenjinsuo	npc_attack	npc_attack	0	-1	八门金锁攻击
+387	g01_聚气动作3_xianjing	g01_聚气动作3_xianjing	g01_聚气动作3_xianjing	g01_聚气动作3_xianjing	g01_聚气动作3_xianjing	g01_聚气动作3_xianjing	g01_聚气动作3_xianjing	npc_attack	npc_attack	0	-1	一字长蛇聚气
+388	g01_状态动作11_yizichangshe	g01_状态动作11_yizichangshe	g01_状态动作11_yizichangshe	g01_状态动作11_yizichangshe	g01_状态动作11_yizichangshe	g01_状态动作11_yizichangshe	g01_状态动作11_yizichangshe	npc_attack	npc_attack	0	-1	一字长蛇攻击
+389	g01_聚气动作3_xianjing	g01_聚气动作3_xianjing	g01_聚气动作3_xianjing	g01_聚气动作3_xianjing	g01_聚气动作3_xianjing	g01_聚气动作3_xianjing	g01_聚气动作3_xianjing	npc_attack	npc_attack	0	-1	太乙三才聚气
+390	g01_状态动作11_taiyisancai	g01_状态动作11_taiyisancai	g01_状态动作11_taiyisancai	g01_状态动作11_taiyisancai	g01_状态动作11_taiyisancai	g01_状态动作11_taiyisancai	g01_状态动作11_taiyisancai	npc_attack	npc_attack	0	-1	太乙三才攻击
+391	g01_聚气动作3_xianjing	g01_聚气动作3_xianjing	g01_聚气动作3_xianjing	g01_聚气动作3_xianjing	g01_聚气动作3_xianjing	g01_聚气动作3_xianjing	g01_聚气动作3_xianjing	npc_attack	npc_attack	0	-1	八阵图聚气
+392	g01_状态动作11_bazhentu	g01_状态动作11_bazhentu	g01_状态动作11_bazhentu	g01_状态动作11_bazhentu	g01_状态动作11_bazhentu	g01_状态动作11_bazhentu	g01_状态动作11_bazhentu	npc_attack	npc_attack	0	-1	八阵图攻击
+393	g01_挥左手_huoyanjinjing	g01_挥左手_huoyanjinjing	g01_挥左手_huoyanjinjing	g01_挥左手_huoyanjinjing	g01_挥左手_huoyanjinjing	g01_挥左手_huoyanjinjing	g01_挥左手_huoyanjinjing	npc_attack	npc_attack	1	-1	火眼金睛
+394	g01_状态动作9_zhongmiaozhimen	g01_状态动作9_zhongmiaozhimen	g01_状态动作9_zhongmiaozhimen	g01_状态动作9_zhongmiaozhimen	g01_状态动作9_zhongmiaozhimen	g01_状态动作9_zhongmiaozhimen	g01_状态动作9_zhongmiaozhimen	npc_attack	npc_attack	1	-1	众妙之门
+395	g01_状态动作9_shenguanglihe	g01_状态动作9_shenguanglihe	g01_状态动作9_shenguanglihe	g01_状态动作9_shenguanglihe	g01_状态动作9_shenguanglihe	g01_状态动作9_shenguanglihe	g01_状态动作9_shenguanglihe	npc_attack	npc_attack	1	-1	神光离合
+396	g01_状态动作9_lingboweibu	g01_状态动作9_lingboweibu	g01_状态动作9_lingboweibu	g01_状态动作9_lingboweibu	g01_状态动作9_lingboweibu	g01_状态动作9_lingboweibu	g01_状态动作9_lingboweibu	npc_attack	npc_attack	1	-1	凌波微步
+397	g01_攻击动作96_lvshuangbingzhi	g01_攻击动作96_lvshuangbingzhi	g01_攻击动作96_lvshuangbingzhi	g01_攻击动作11_lvshuangbingzhi	g01_攻击动作11_lvshuangbingzhi	g01_攻击动作11_lvshuangbingzhi	g01_huan_攻击动作11_lvshuangbingzhi	npc_attack	npc_attack	0	-1	履霜冰至
+398	g01_状态动作9_yuqinguzong	g01_状态动作9_yuqinguzong	g01_状态动作9_yuqinguzong	g01_状态动作9_yuqinguzong	g01_状态动作9_yuqinguzong	g01_状态动作9_yuqinguzong	g01_状态动作9_yuqinguzong	npc_attack	npc_attack	1	-1	欲擒故纵
+399	g01_状态动作9_tuibisanshe	g01_状态动作9_tuibisanshe	g01_状态动作9_tuibisanshe	g01_状态动作9_tuibisanshe	g01_状态动作9_tuibisanshe	g01_状态动作9_tuibisanshe	g01_状态动作9_tuibisanshe	npc_attack	npc_attack	1	-1	退避三舍
+400	g01_聚气动作10_danfengchaoyang	g01_聚气动作10_danfengchaoyang	g01_聚气动作10_danfengchaoyang	g01_聚气动作5_danfengchaoyang	g01_聚气动作7_danfengchaoyang	g01_聚气动作7_danfengchaoyang	g01_聚气动作5_danfengchaoyang	npc_attack	npc_attack	0	-1	朝三暮四聚气
+401	g01_状态动作9_zhaosanmusi	g01_状态动作9_zhaosanmusi	g01_状态动作9_zhaosanmusi	g01_状态动作9_zhaosanmusi	g01_状态动作9_zhaosanmusi	g01_状态动作9_zhaosanmusi	g01_状态动作9_zhaosanmusi	npc_attack	npc_attack	0	-1	朝三暮四攻击
+402	g01_攻击动作97_yihubaiying	g01_攻击动作97_yihubaiying	g01_攻击动作97_yihubaiying	g01_攻击动作52_yihubaiying	g01_攻击动作75_yihubaiying	g01_扇子_攻击动作75_yihubaiying	g01_攻击动作52_yihubaiying	npc_attack	npc_attack	0	-1	一呼百应
+403	g01_聚气动作3_shengmingshengquan	g01_聚气动作3_shengmingshengquan	g01_聚气动作3_shengmingshengquan	g01_聚气动作3_shengmingshengquan	g01_聚气动作3_shengmingshengquan	g01_聚气动作3_shengmingshengquan	g01_聚气动作3_shengmingshengquan	npc_attack	npc_attack	1	-1	生命之泉
+404	g01_聚气动作1_chujizhiliao	g01_聚气动作1_chujizhiliao	g01_聚气动作1_chujizhiliao	g01_聚气动作1_chujizhiliao	g01_聚气动作1_chujizhiliao	g01_聚气动作1_chujizhiliao	g01_聚气动作1_chujizhiliao	npc_attack	npc_attack	1	-1	初级治疗
+405	轻功2a	轻功2a	轻功2a	轻功2a	轻功2a	轻功2a	轻功2a	npc_attack	npc_attack	0	-1	轻功2a
+406	g01轻功2b	g01轻功2b	g01轻功2b	g01轻功2b	g01轻功2b	g01轻功2b	g01轻功2b	npc_attack	npc_attack	0	-1	g01轻功2b
+407	轻功2c	轻功2c	轻功2c	轻功2c	轻功2c	轻功2c	轻功2c	npc_attack	npc_attack	0	-1	轻功2c
+408	轻功3a	轻功3a	轻功3a	轻功3a	轻功3a	轻功3a	轻功3a	npc_attack	npc_attack	0	-1	轻功3a
+409	g01轻功3b	g01轻功3b	g01轻功3b	g01轻功3b	g01轻功3b	g01轻功3b	g01轻功3b	npc_attack	npc_attack	0	-1	g01轻功3b
+410	轻功3c	轻功3c	轻功3c	轻功3c	轻功3c	轻功3c	轻功3c	npc_attack	npc_attack	0	-1	轻功3c
+411	轻功4a	轻功4a	轻功4a	轻功4a	轻功4a	轻功4a	轻功4a	npc_attack	npc_attack	0	-1	轻功4a
+412	g01轻功4b	g01轻功4b	g01轻功4b	g01轻功4b	g01轻功4b	g01轻功4b	g01轻功4b	npc_attack	npc_attack	0	-1	g01轻功4b
+413	轻功4c	轻功4c	轻功4c	轻功4c	轻功4c	轻功4c	轻功4c	npc_attack	npc_attack	0	-1	轻功4c
+414	轻功5a	轻功5a	轻功5a	轻功5a	轻功5a	轻功5a	轻功5a	npc_attack	npc_attack	0	-1	轻功5a
+415	g01轻功5b	g01轻功5b	g01轻功5b	g01轻功5b	g01轻功5b	g01轻功5b	g01轻功5b	npc_attack	npc_attack	0	-1	g01轻功5b
+416	轻功5c	轻功5c	轻功5c	轻功5c	轻功5c	轻功5c	轻功5c	npc_attack	npc_attack	0	-1	轻功5c
+417	轻功6a	轻功6a	轻功6a	轻功6a	轻功6a	轻功6a	轻功6a	npc_attack	npc_attack	0	-1	轻功6a
+418	g01轻功6b	g01轻功6b	g01轻功6b	g01轻功6b	g01轻功6b	g01轻功6b	g01轻功6b	npc_attack	npc_attack	0	-1	g01轻功6b
+419	轻功6c	轻功6c	轻功6c	轻功6c	轻功6c	轻功6c	轻功6c	npc_attack	npc_attack	0	-1	轻功6c
+420	轻功7a	轻功7a	轻功7a	轻功7a	轻功7a	轻功7a	轻功7a	npc_attack	npc_attack	0	-1	轻功7a
+421	g01轻功7b	g01轻功7b	g01轻功7b	g01轻功7b	g01轻功7b	g01轻功7b	g01轻功7b	npc_attack	npc_attack	0	-1	g01轻功7b
+422	轻功7c	轻功7c	轻功7c	轻功7c	轻功7c	轻功7c	轻功7c	npc_attack	npc_attack	0	-1	轻功7c
+423	轻功8a	轻功8a	轻功8a	轻功8a	轻功8a	轻功8a	轻功8a	npc_attack	npc_attack	0	-1	轻功8a
+424	g01轻功8b	g01轻功8b	g01轻功8b	g01轻功8b	g01轻功8b	g01轻功8b	g01轻功8b	npc_attack	npc_attack	0	-1	g01轻功8b
+425	轻功8c	轻功8c	轻功8c	轻功8c	轻功8c	轻功8c	轻功8c	npc_attack	npc_attack	0	-1	轻功8c
+426	轻功9a	轻功9a	轻功9a	轻功9a	轻功9a	轻功9a	轻功9a	npc_attack	npc_attack	0	-1	轻功9a
+427	g01轻功9b	g01轻功9b	g01轻功9b	g01轻功9b	g01轻功9b	g01轻功9b	g01轻功9b	npc_attack	npc_attack	0	-1	g01轻功9b
+428	轻功9c	轻功9c	轻功9c	轻功9c	轻功9c	轻功9c	轻功9c	npc_attack	npc_attack	0	-1	轻功9c
+429	轻功10a	轻功10a	轻功10a	轻功10a	轻功10a	轻功10a	轻功10a	npc_attack	npc_attack	0	-1	轻功10a
+430	g01轻功10b	g01轻功10b	g01轻功10b	g01轻功10b	g01轻功10b	g01轻功10b	g01轻功10b	npc_attack	npc_attack	0	-1	g01轻功10b
+431	轻功10c	轻功10c	轻功10c	轻功10c	轻功10c	轻功10c	轻功10c	npc_attack	npc_attack	0	-1	轻功10c
+451	鄙视	鄙视	鄙视	鄙视	鄙视	鄙视	鄙视	鄙视	鄙视	1	-1	鄙视
+452	大笑	大笑	大笑	大笑	大笑	大笑	大笑	大笑	大笑	1	-1	大笑
+453	蹲马步	蹲马步	蹲马步	蹲马步	蹲马步	蹲马步	蹲马步	蹲马步	蹲马步	1	-1	蹲马步
+454	骄傲	骄傲	骄傲	骄傲	骄傲	骄傲	骄傲	骄傲	骄傲	1	-1	骄傲
+455	咆哮	咆哮	咆哮	咆哮	咆哮	咆哮	咆哮	咆哮	咆哮	1	-1	咆哮
+456	招式1	招式1	招式1	招式1	招式1	招式1	招式1	招式1	招式1	1	-1	招式1
+491	少林_g01	少林_g01	少林_g01	少林_g01	少林_g01	少林_g01	少林_g01	npc_attack	npc_attack	1	364	少林师门
+492	明教_g01	明教_g01	明教_g01	明教_g01	明教_g01	明教_g01	明教_g01	npc_attack	npc_attack	1	643	明教师门
+493	丐帮_g01	丐帮_g01	丐帮_g01	丐帮_g01	丐帮_g01	丐帮_g01	丐帮_g01	npc_attack	npc_attack	1	-1	丐帮师门
+494	武当_g01	武当_g01	武当_g01	武当_g01	武当_g01	武当_g01	武当_g01	npc_attack	npc_attack	1	642	武当师门
+495	峨嵋_g01	峨嵋_g01	峨嵋_g01	峨嵋_g01	峨嵋_g01	峨嵋_g01	峨嵋_g01	npc_attack	npc_attack	1	-1	峨嵋师门
+496	星宿_g01	星宿_g01	星宿_g01	星宿_g01	星宿_g01	星宿_g01	星宿_g01	npc_attack	npc_attack	1	-1	星宿师门
+497	天龙_g01	天龙_g01	天龙_g01	天龙_g01	天龙_g01	天龙_g01	天龙_g01	npc_attack	npc_attack	1	-1	天龙师门
+498	天山_g01	天山_g01	天山_g01	天山_g01	天山_g01	天山_g01	天山_g01	npc_attack	npc_attack	1	642	天山师门
+499	逍遥_g01	逍遥_g01	逍遥_g01	逍遥_g01	逍遥_g01	逍遥_g01	逍遥_g01	npc_attack	npc_attack	1	-1	逍遥师门
+500	长枪连招_g01_01	长枪连招_g01_01	大刀连招_g01_01	双短连招_g01_01	单短连招_g01_01	扇子连招_g01_01	双环连招_g01_01	npc_attack	npc_attack	0	-1	少林长拳
+501	g01_sl_金刚伏魔圈	g01_sl_金刚伏魔圈	g01_sl_金刚伏魔圈	g01_sl_sd_金刚伏魔圈	g01_sl_dd_金刚伏魔圈	g01_sl_shan_金刚伏魔圈	g01_sl_sh_金刚伏魔圈	npc_attack	npc_attack	0	-1	金刚伏魔圈
+502	g01_sl_大力金刚掌	g01_sl_大力金刚掌	g01_sl_大力金刚掌	g01_sl_sd_大力金刚掌	g01_sl_dd_大力金刚掌	g01_sl_shan_大力金刚掌	g01_sl_sh_大力金刚掌	npc_attack	npc_attack	0	-1	大力金刚掌
+503	g01_sl_一苇渡江	g01_sl_一苇渡江	g01_sl_一苇渡江	g01_sl_一苇渡江	g01_sl_一苇渡江	g01_sl_一苇渡江	g01_sl_一苇渡江	npc_attack	npc_attack	0	-1	一苇渡江
+504	g01_sl_拈花指	g01_sl_拈花指	g01_sl_拈花指	g01_sl_拈花指	g01_sl_拈花指	g01_sl_拈花指	g01_sl_拈花指	npc_attack	npc_attack	0	-1	拈花指
+505	g01_sl_罗汉阵	g01_sl_罗汉阵	g01_sl_罗汉阵	g01_sl_罗汉阵	g01_sl_罗汉阵	g01_sl_罗汉阵	g01_sl_罗汉阵	npc_attack	npc_attack	0	-1	罗汉阵
+506	g01_sl_狮子吼	g01_sl_狮子吼	g01_sl_狮子吼	g01_sl_狮子吼	g01_sl_狮子吼	g01_sl_狮子吼	g01_sl_狮子吼	npc_attack	npc_attack	0	-1	狮子吼
+507	g01_sl_袈裟伏魔功	g01_sl_袈裟伏魔功	g01_sl_袈裟伏魔功	g01_sl_袈裟伏魔功	g01_sl_袈裟伏魔功	g01_sl_袈裟伏魔功	g01_sl_袈裟伏魔功	npc_attack	npc_attack	0	-1	袈裟伏魔
+508	g01_sl_礼敬如来	g01_sl_礼敬如来	g01_sl_礼敬如来	g01_sl_礼敬如来	g01_sl_礼敬如来	g01_sl_礼敬如来	g01_sl_礼敬如来	npc_attack	npc_attack	0	-1	礼敬如来
+509	g01_sl_摩诃无量	g01_sl_摩诃无量	g01_sl_摩诃无量	g01_sl_摩诃无量	g01_sl_摩诃无量	g01_sl_摩诃无量	g01_sl_摩诃无量	npc_attack	npc_attack	0	-1	摩诃无量
+510	g01_sl_jq_铁布衫	g01_sl_jq_铁布衫	g01_sl_jq_铁布衫	g01_sl_jq_铁布衫	g01_sl_jq_铁布衫	g01_sl_jq_铁布衫	g01_sl_jq_铁布衫	npc_attack	npc_attack	1	-1	铁布衫(聚气）
+511	g01_sl_铁布衫	g01_sl_铁布衫	g01_sl_铁布衫	g01_sl_铁布衫	g01_sl_铁布衫	g01_sl_铁布衫	g01_sl_铁布衫	npc_attack	npc_attack	1	-1	铁布衫（发招）
+512	g01_sl_百无禁忌	g01_sl_百无禁忌	g01_sl_百无禁忌	g01_sl_百无禁忌	g01_sl_百无禁忌	g01_sl_百无禁忌	g01_sl_百无禁忌	npc_attack	npc_attack	0	-1	百无禁忌
+513	g01_sl_般若掌	g01_sl_般若掌	g01_sl_般若掌	g01_sl_sd_般若掌	g01_sl_dd_般若掌	g01_sl_shan_般若掌	g01_sl_sh_般若掌	npc_attack	npc_attack	0	-1	一拍两散
+514	g01_sl_jq_韦陀杵	g01_sl_jq_韦陀杵	g01_sl_jq_韦陀杵	g01_sl_jq_韦陀杵	g01_sl_jq_韦陀杵	g01_sl_jq_韦陀杵	g01_sl_jq_韦陀杵	npc_attack	npc_attack	1	-1	韦陀杵（聚气）
+515	g01_sl_韦陀杵	g01_sl_韦陀杵	g01_sl_韦陀杵	g01_sl_韦陀杵	g01_sl_韦陀杵	g01_sl_韦陀杵	g01_sl_韦陀杵	npc_attack	npc_attack	1	-1	韦陀杵（发招）
+516	g01_sl_气贯长虹	g01_sl_气贯长虹	g01_sl_气贯长虹	g01_sl_气贯长虹	g01_sl_气贯长虹	g01_sl_气贯长虹	g01_sl_气贯长虹	npc_attack	npc_attack	0	-1	气贯长虹
+517	g01_sl_如来神掌	g01_sl_如来神掌	g01_sl_如来神掌	g01_sl_如来神掌	g01_sl_如来神掌	g01_sl_如来神掌	g01_sl_如来神掌	npc_attack	npc_attack	1	-1	如来神掌
+518	g01_sl_明镜台	g01_sl_明镜台	g01_sl_明镜台	g01_sl_明镜台	g01_sl_明镜台	g01_sl_明镜台	g01_sl_明镜台	npc_attack	npc_attack	1	-1	明镜台
+519	g01_sl_金刚不坏体	g01_sl_金刚不坏体	g01_sl_金刚不坏体	g01_sl_金刚不坏体	g01_sl_金刚不坏体	g01_sl_金刚不坏体	g01_sl_金刚不坏体	npc_attack	npc_attack	1	-1	金刚不坏体
+520	长枪连招_g01_01	长枪连招_g01_01	大刀连招_g01_01	双短连招_g01_01	单短连招_g01_01	扇子连招_g01_01	双环连招_g01_01	npc_attack	npc_attack	0	-1	火焰斩
+521	g01_mj_摩尼圣火阵	g01_mj_摩尼圣火阵	g01_mj_摩尼圣火阵	g01_mj_sd_摩尼圣火阵	g01_mj_dd_摩尼圣火阵	g01_mj_shan_摩尼圣火阵	g01_mj_sh_摩尼圣火阵	npc_attack	npc_attack	0	-1	摩尼圣火阵
+522	g01_mj_圣火令	g01_mj_圣火令	g01_mj_圣火令	g01_mj_sd_圣火令	g01_mj_dd_圣火令	g01_mj_shan_圣火令	g01_mj_sh_圣火令	npc_attack	npc_attack	0	-1	圣火令
+523	g01_mj_葵花移影	g01_mj_葵花移影	g01_mj_葵花移影	g01_mj_葵花移影	g01_mj_葵花移影	g01_mj_葵花移影	g01_mj_葵花移影	npc_attack	npc_attack	0	-1	葵花移影
+524	g01_mj_葵花点穴手	g01_mj_葵花点穴手	g01_mj_葵花点穴手	g01_mj_葵花点穴手	g01_mj_葵花点穴手	g01_mj_葵花点穴手	g01_mj_葵花点穴手	npc_attack	npc_attack	0	-1	葵花点穴手
+525	g01_mj_葵花向阳	g01_mj_葵花向阳	g01_mj_葵花向阳	g01_mj_葵花向阳	g01_mj_葵花向阳	g01_mj_葵花向阳	g01_mj_葵花向阳	npc_attack	npc_attack	0	-1	葵花向阳
+526	g01_mj_乾坤倒转	g01_mj_乾坤倒转	g01_mj_乾坤倒转	g01_mj_乾坤倒转	g01_mj_乾坤倒转	g01_mj_乾坤倒转	g01_mj_乾坤倒转	npc_attack	npc_attack	0	-1	乾坤倒转
+527	g01_mj_回光返照	g01_mj_回光返照	g01_mj_回光返照	g01_mj_回光返照	g01_mj_回光返照	g01_mj_回光返照	g01_mj_回光返照	npc_attack	npc_attack	0	-1	回光返照
+528	g01_mj_朗朗乾坤	g01_mj_朗朗乾坤	g01_mj_朗朗乾坤	g01_mj_sd_朗朗乾坤	g01_mj_dd_朗朗乾坤	g01_mj_shan_朗朗乾坤	g01_mj_sh_朗朗乾坤	npc_attack	npc_attack	0	-1	朗朗乾坤
+529	g01_mj_炎龙斩	g01_mj_炎龙斩	g01_mj_炎龙斩	g01_mj_sd_炎龙斩	g01_mj_dd_炎龙斩	g01_mj_shan_炎龙斩	g01_mj_sh_炎龙斩	npc_attack	npc_attack	0	-1	炎龙斩
+530	g01_mj_jq_日行式	g01_mj_jq_日行式	g01_mj_jq_日行式	g01_mj_jq_日行式	g01_mj_jq_日行式	g01_mj_jq_日行式	g01_mj_jq_日行式	npc_attack	npc_attack	1	-1	日行式（聚气）
+531	g01_mj_日行式	g01_mj_日行式	g01_mj_日行式	g01_mj_日行式	g01_mj_日行式	g01_mj_日行式	g01_mj_日行式	npc_attack	npc_attack	1	-1	日行式（发招）
+532	g01_mj_同仇敌忾	g01_mj_同仇敌忾	g01_mj_同仇敌忾	g01_mj_同仇敌忾	g01_mj_同仇敌忾	g01_mj_同仇敌忾	g01_mj_同仇敌忾	npc_attack	npc_attack	0	-1	同仇敌忾
+533	g01_mj_月夜斩	g01_mj_月夜斩	g01_mj_月夜斩	g01_mj_sd_月夜斩	g01_mj_dd_月夜斩	g01_mj_shan_月夜斩	g01_mj_sh_月夜斩	npc_attack	npc_attack	0	-1	月夜斩
+534	g01_mj_jq_夜行式	g01_mj_jq_夜行式	g01_mj_jq_夜行式	g01_mj_jq_夜行式	g01_mj_jq_夜行式	g01_mj_jq_夜行式	g01_mj_jq_夜行式	npc_attack	npc_attack	1	-1	夜行式（聚气）
+535	g01_mj_夜行式	g01_mj_夜行式	g01_mj_夜行式	g01_mj_夜行式	g01_mj_夜行式	g01_mj_夜行式	g01_mj_夜行式	npc_attack	npc_attack	1	-1	夜行式（发招）
+536	g01_mj_月明星稀	g01_mj_月明星稀	g01_mj_月明星稀	g01_mj_月明星稀	g01_mj_月明星稀	g01_mj_月明星稀	g01_mj_月明星稀	npc_attack	npc_attack	0	-1	月明星稀
+537	g01_mj_天人乱	g01_mj_天人乱	g01_mj_天人乱	g01_mj_天人乱	g01_mj_天人乱	g01_mj_天人乱	g01_mj_天人乱	npc_attack	npc_attack	1	-1	天人乱
+538	g01_mj_心守一	g01_mj_心守一	g01_mj_心守一	g01_mj_心守一	g01_mj_心守一	g01_mj_心守一	g01_mj_心守一	npc_attack	npc_attack	1	-1	心守一
+539	g01_mj_逆天行	g01_mj_逆天行	g01_mj_逆天行	g01_mj_逆天行	g01_mj_逆天行	g01_mj_逆天行	g01_mj_逆天行	npc_attack	npc_attack	1	-1	逆天行
+540	长枪连招_g01_01	长枪连招_g01_01	大刀连招_g01_01	双短连招_g01_01	单短连招_g01_01	扇子连招_g01_01	双环连招_g01_01	npc_attack	npc_attack	0	-1	棒打狗头
+541	g01_gb_天下无狗	g01_gb_天下无狗	g01_gb_天下无狗	g01_gb_sd_天下无狗	g01_gb_dd_天下无狗	g01_gb_shan_天下无狗	g01_gb_sh_天下无狗	npc_attack	npc_attack	0	-1	天下无狗
+542	g01_gb_拨狗朝天	g01_gb_拨狗朝天	g01_gb_拨狗朝天	g01_gb_sd_拨狗朝天	g01_gb_dd_拨狗朝天	g01_gb_shan_拨狗朝天	g01_gb_sh_拨狗朝天	npc_attack	npc_attack	0	-1	拨狗朝天
+543	g01_gb_飞龙在天	g01_gb_飞龙在天	g01_gb_飞龙在天	g01_gb_飞龙在天	g01_gb_飞龙在天	g01_gb_飞龙在天	g01_gb_飞龙在天	npc_attack	npc_attack	0	-1	飞龙在天
+544	g01_gb_潜龙勿用	g01_gb_潜龙勿用	g01_gb_潜龙勿用	g01_gb_潜龙勿用	g01_gb_潜龙勿用	g01_gb_潜龙勿用	g01_gb_潜龙勿用	npc_attack	npc_attack	0	-1	潜龙勿用
+545	g01_gb_见龙在田	g01_gb_见龙在田	g01_gb_见龙在田	g01_gb_见龙在田	g01_gb_见龙在田	g01_gb_见龙在田	g01_gb_见龙在田	npc_attack	npc_attack	0	-1	见龙在田
+546	g01_gb_亢龙有悔	g01_gb_亢龙有悔	g01_gb_亢龙有悔	g01_gb_亢龙有悔	g01_gb_亢龙有悔	g01_gb_亢龙有悔	g01_gb_亢龙有悔	npc_attack	npc_attack	1	-1	亢龙有悔
+547	g01_gb_龙战于野	g01_gb_龙战于野	g01_gb_龙战于野	g01_gb_龙战于野	g01_gb_龙战于野	g01_gb_龙战于野	g01_gb_龙战于野	npc_attack	npc_attack	0	-1	龙战于野
+548	g01_gb_神龙摆尾	g01_gb_神龙摆尾	g01_gb_神龙摆尾	g01_gb_神龙摆尾	g01_gb_神龙摆尾	g01_gb_神龙摆尾	g01_gb_神龙摆尾	npc_attack	npc_attack	0	-1	神龙摆尾
+549	g01_gb_升龙霸	g01_gb_升龙霸	g01_gb_升龙霸	g01_gb_sd_升龙霸	g01_gb_dd_升龙霸	g01_gb_shan_升龙霸	g01_gb_sh_升龙霸	npc_attack	npc_attack	0	-1	升龙霸
+550	g01_gb_jq_囚龙式	g01_gb_jq_囚龙式	g01_gb_jq_囚龙式	g01_gb_jq_囚龙式	g01_gb_jq_囚龙式	g01_gb_jq_囚龙式	g01_gb_jq_囚龙式	npc_attack	npc_attack	1	-1	囚龙式(聚气）
+551	g01_gb_囚龙式	g01_gb_囚龙式	g01_gb_囚龙式	g01_gb_囚龙式	g01_gb_囚龙式	g01_gb_囚龙式	g01_gb_囚龙式	npc_attack	npc_attack	1	-1	囚龙式（发招）
+552	g01_gb_游龙诀	g01_gb_游龙诀	g01_gb_游龙诀	g01_gb_游龙诀	g01_gb_游龙诀	g01_gb_游龙诀	g01_gb_游龙诀	npc_attack	npc_attack	0	-1	游龙诀
+553	g01_gb_屠龙掌	g01_gb_屠龙掌	g01_gb_屠龙掌	g01_gb_sd_屠龙掌	g01_gb_dd_屠龙掌	g01_gb_shan_屠龙掌	g01_gb_sh_屠龙掌	npc_attack	npc_attack	0	-1	屠龙掌
+554	g01_gb_jq_擒龙式	g01_gb_jq_擒龙式	g01_gb_jq_擒龙式	g01_gb_jq_擒龙式	g01_gb_jq_擒龙式	g01_gb_jq_擒龙式	g01_gb_jq_擒龙式	npc_attack	npc_attack	1	-1	擒龙式（聚气）
+555	g01_gb_擒龙式	g01_gb_擒龙式	g01_gb_擒龙式	g01_gb_擒龙式	g01_gb_擒龙式	g01_gb_擒龙式	g01_gb_擒龙式	npc_attack	npc_attack	1	-1	擒龙式（发招）
+556	g01_gb_斩龙诀	g01_gb_斩龙诀	g01_gb_斩龙诀	g01_gb_斩龙诀	g01_gb_斩龙诀	g01_gb_斩龙诀	g01_gb_斩龙诀	npc_attack	npc_attack	0	-1	斩龙诀
+557	g01_gb_大鹏展翅	g01_gb_大鹏展翅	g01_gb_大鹏展翅	g01_gb_大鹏展翅	g01_gb_大鹏展翅	g01_gb_大鹏展翅	g01_gb_大鹏展翅	npc_attack	npc_attack	1	-1	大鹏展翅
+558	g01_gb_鲲鹏无忌	g01_gb_鲲鹏无忌	g01_gb_鲲鹏无忌	g01_gb_鲲鹏无忌	g01_gb_鲲鹏无忌	g01_gb_鲲鹏无忌	g01_gb_鲲鹏无忌	npc_attack	npc_attack	1	-1	鲲鹏无忌
+559	g01_gb_沾衣十八跌	g01_gb_沾衣十八跌	g01_gb_沾衣十八跌	g01_gb_沾衣十八跌	g01_gb_沾衣十八跌	g01_gb_沾衣十八跌	g01_gb_沾衣十八跌	npc_attack	npc_attack	1	-1	沾衣十八跌
+560	g01_武当远程连招	g01_武当远程连招	g01_武当远程连招	g01_武当远程连招	g01_武当远程连招	g01_武当远程连招	g01_武当远程连招	npc_attack	npc_attack	1	-1	劈空掌
+561	g01_wd_天罡北斗阵	g01_wd_天罡北斗阵	g01_wd_天罡北斗阵	g01_wd_sd_天罡北斗阵	g01_wd_dd_天罡北斗阵	g01_wd_shan_天罡北斗阵	g01_wd_sh_天罡北斗阵	npc_attack	npc_attack	0	-1	天罡北斗阵
+562	g01_wd_真武七截阵	g01_wd_真武七截阵	g01_wd_真武七截阵	g01_wd_真武七截阵	g01_wd_真武七截阵	g01_wd_真武七截阵	g01_wd_真武七截阵	npc_attack	npc_attack	0	-1	真武七截阵
+563	g01_wd_乱环诀	g01_wd_乱环诀	g01_wd_乱环诀	g01_wd_乱环诀	g01_wd_乱环诀	g01_wd_乱环诀	g01_wd_乱环诀	npc_attack	npc_attack	0	-1	乱环诀
+564	g01_wd_jq_阴阳诀	g01_wd_jq_阴阳诀	g01_wd_jq_阴阳诀	g01_wd_jq_阴阳诀	g01_wd_jq_阴阳诀	g01_wd_jq_阴阳诀	g01_wd_jq_阴阳诀	npc_attack	npc_attack	1	-1	阴阳诀（聚气）
+565	g01_wd_阴阳诀	g01_wd_阴阳诀	g01_wd_阴阳诀	g01_wd_阴阳诀	g01_wd_阴阳诀	g01_wd_阴阳诀	g01_wd_阴阳诀	npc_attack	npc_attack	1	-1	阴阳诀（发招）
+566	g01_wd_天人诀	g01_wd_天人诀	g01_wd_天人诀	g01_wd_天人诀	g01_wd_天人诀	g01_wd_天人诀	g01_wd_天人诀	npc_attack	npc_attack	0	-1	天人诀
+567	g01_wd_jq_天马飞瀑	g01_wd_jq_天马飞瀑	g01_wd_jq_天马飞瀑	g01_wd_jq_天马飞瀑	g01_wd_jq_天马飞瀑	g01_wd_jq_天马飞瀑	g01_wd_jq_天马飞瀑	npc_attack	npc_attack	1	-1	天马飞瀑（聚气）
+568	g01_wd_天马飞瀑	g01_wd_天马飞瀑	g01_wd_天马飞瀑	g01_wd_天马飞瀑	g01_wd_天马飞瀑	g01_wd_天马飞瀑	g01_wd_天马飞瀑	npc_attack	npc_attack	1	-1	天马飞瀑（发招）
+569	g01_wd_指南针	g01_wd_指南针	g01_wd_指南针	g01_wd_指南针	g01_wd_指南针	g01_wd_指南针	g01_wd_指南针	npc_attack	npc_attack	0	-1	指南针
+570	g01_wd_梯云纵	g01_wd_梯云纵	g01_wd_梯云纵	g01_wd_梯云纵	g01_wd_梯云纵	g01_wd_梯云纵	g01_wd_梯云纵	npc_attack	npc_attack	0	-1	梯云纵
+571	g01_wd_仙人指路	g01_wd_仙人指路	g01_wd_仙人指路	g01_wd_仙人指路	g01_wd_仙人指路	g01_wd_仙人指路	g01_wd_仙人指路	npc_attack	npc_attack	0	-1	仙人指路
+572	g01_wd_jq_犀牛望月式	g01_wd_jq_犀牛望月式	g01_wd_jq_犀牛望月式	g01_wd_jq_犀牛望月式	g01_wd_jq_犀牛望月式	g01_wd_jq_犀牛望月式	g01_wd_jq_犀牛望月式	npc_attack	npc_attack	1	-1	犀牛望月式（聚气）
+573	g01_wd_犀牛望月式	g01_wd_犀牛望月式	g01_wd_犀牛望月式	g01_wd_犀牛望月式	g01_wd_犀牛望月式	g01_wd_犀牛望月式	g01_wd_犀牛望月式	npc_attack	npc_attack	1	-1	犀牛望月式（发招）
+574	g01_wd_jq_玉女穿梭	g01_wd_jq_玉女穿梭	g01_wd_jq_玉女穿梭	g01_wd_jq_玉女穿梭	g01_wd_jq_玉女穿梭	g01_wd_jq_玉女穿梭	g01_wd_jq_玉女穿梭	npc_attack	npc_attack	1	-1	玉女穿梭（聚气）
+575	g01_wd_玉女穿梭	g01_wd_玉女穿梭	g01_wd_玉女穿梭	g01_wd_玉女穿梭	g01_wd_玉女穿梭	g01_wd_玉女穿梭	g01_wd_玉女穿梭	npc_attack	npc_attack	1	-1	玉女穿梭（发招）
+576	g01_wd_如封似闭	g01_wd_如封似闭	g01_wd_如封似闭	g01_wd_如封似闭	g01_wd_如封似闭	g01_wd_如封似闭	g01_wd_如封似闭	npc_attack	npc_attack	0	-1	如封似闭
+577	g01_wd_jq_野马分鬃式	g01_wd_jq_野马分鬃式	g01_wd_jq_野马分鬃式	g01_wd_jq_野马分鬃式	g01_wd_jq_野马分鬃式	g01_wd_jq_野马分鬃式	g01_wd_jq_野马分鬃式	npc_attack	npc_attack	1	-1	野马分鬃式（聚气）
+578	g01_wd_野马分鬃式	g01_wd_野马分鬃式	g01_wd_野马分鬃式	g01_wd_野马分鬃式	g01_wd_野马分鬃式	g01_wd_野马分鬃式	g01_wd_野马分鬃式	npc_attack	npc_attack	1	-1	野马分鬃式（发招）
+579	g01_wd_白鹤亮翅	g01_wd_白鹤亮翅	g01_wd_白鹤亮翅	g01_wd_白鹤亮翅	g01_wd_白鹤亮翅	g01_wd_白鹤亮翅	g01_wd_白鹤亮翅	npc_attack	npc_attack	0	-1	白鹤亮翅
+580	g01_wd_三味真火	g01_wd_三味真火	g01_wd_三味真火	g01_wd_三味真火	g01_wd_三味真火	g01_wd_三味真火	g01_wd_三味真火	npc_attack	npc_attack	1	-1	三味真火
+581	g01_wd_纯阳护体	g01_wd_纯阳护体	g01_wd_纯阳护体	g01_wd_纯阳护体	g01_wd_纯阳护体	g01_wd_纯阳护体	g01_wd_纯阳护体	npc_attack	npc_attack	1	-1	纯阳护体
+582	g01_wd_天罡正气	g01_wd_天罡正气	g01_wd_天罡正气	g01_wd_天罡正气	g01_wd_天罡正气	g01_wd_天罡正气	g01_wd_天罡正气	npc_attack	npc_attack	1	-1	天罡正气
+583	g01_峨嵋远程连招	g01_峨嵋远程连招	g01_峨嵋远程连招	g01_峨嵋远程连招	g01_峨嵋远程连招	g01_峨嵋远程连招	g01_峨嵋远程连招	npc_attack	npc_attack	1	-1	乾坤一掷
+584	g01_em_九影摄魂	g01_em_九影摄魂	g01_em_九影摄魂	g01_em_九影摄魂	g01_em_九影摄魂	g01_em_九影摄魂	g01_em_九影摄魂	npc_attack	npc_attack	0	-1	九影摄魂
+585	g01_em_jq_九阴白骨爪	g01_em_jq_九阴白骨爪	g01_em_jq_九阴白骨爪	g01_em_jq_九阴白骨爪	g01_em_jq_九阴白骨爪	g01_em_jq_九阴白骨爪	g01_em_jq_九阴白骨爪	npc_attack	npc_attack	1	-1	九阴白骨爪（聚气）
+586	g01_em_九阴白骨爪	g01_em_九阴白骨爪	g01_em_九阴白骨爪	g01_em_九阴白骨爪	g01_em_九阴白骨爪	g01_em_九阴白骨爪	g01_em_九阴白骨爪	npc_attack	npc_attack	1	-1	九阴白骨爪（发招）
+587	g01_em_yd_飘雪穿云	g01_em_yd_飘雪穿云	g01_em_yd_飘雪穿云	g01_em_yd_飘雪穿云	g01_em_yd_飘雪穿云	g01_em_yd_飘雪穿云	g01_em_yd_飘雪穿云	npc_attack	npc_attack	0	-1	飘雪穿云
+588	g01_em_sf_鹤影迷途_抬头挺胸	g01_em_sf_鹤影迷途_抬头挺胸	g01_em_sf_鹤影迷途_抬头挺胸	g01_em_sf_鹤影迷途_抬头挺胸	g01_em_sf_鹤影迷途_抬头挺胸	g01_em_sf_鹤影迷途_抬头挺胸	g01_em_sf_鹤影迷途_抬头挺胸	npc_attack	npc_attack	0	-1	鹤影迷途
+589	g01_em_jq_金风玉露_聚气一	g01_em_jq_金风玉露_聚气一	g01_em_jq_金风玉露_聚气一	g01_em_jq_金风玉露_聚气一	g01_em_jq_金风玉露_聚气一	g01_em_jq_金风玉露_聚气一	g01_em_jq_金风玉露_聚气一	npc_attack	npc_attack	1	-1	金风玉露（聚气）
+590	g01_em_jq_金风玉露_状态动作一	g01_em_jq_金风玉露_状态动作一	g01_em_jq_金风玉露_状态动作一	g01_em_jq_金风玉露_状态动作一	g01_em_jq_金风玉露_状态动作一	g01_em_jq_金风玉露_状态动作一	g01_em_jq_金风玉露_状态动作一	npc_attack	npc_attack	1	-1	金风玉露（发招）
+591	g01_em_jq_慈航普渡_聚气一	g01_em_jq_慈航普渡_聚气一	g01_em_jq_慈航普渡_聚气一	g01_em_jq_慈航普渡_聚气一	g01_em_jq_慈航普渡_聚气一	g01_em_jq_慈航普渡_聚气一	g01_em_jq_慈航普渡_聚气一	npc_attack	npc_attack	1	-1	慈航普渡（聚气）
+592	g01_em_jq_慈航普渡_状态动作一	g01_em_jq_慈航普渡_状态动作一	g01_em_jq_慈航普渡_状态动作一	g01_em_jq_慈航普渡_状态动作一	g01_em_jq_慈航普渡_状态动作一	g01_em_jq_慈航普渡_状态动作一	g01_em_jq_慈航普渡_状态动作一	npc_attack	npc_attack	1	-1	慈航普渡（发招）
+593	g01_em_jq_大慈悲赋_聚气一	g01_em_jq_大慈悲赋_聚气一	g01_em_jq_大慈悲赋_聚气一	g01_em_jq_大慈悲赋_聚气一	g01_em_jq_大慈悲赋_聚气一	g01_em_jq_大慈悲赋_聚气一	g01_em_jq_大慈悲赋_聚气一	npc_attack	npc_attack	1	-1	大慈悲赋（聚气）
+594	g01_em_jq_大慈悲赋_状态动作一	g01_em_jq_大慈悲赋_状态动作一	g01_em_jq_大慈悲赋_状态动作一	g01_em_jq_大慈悲赋_状态动作一	g01_em_jq_大慈悲赋_状态动作一	g01_em_jq_大慈悲赋_状态动作一	g01_em_jq_大慈悲赋_状态动作一	npc_attack	npc_attack	1	-1	大慈悲赋（发招）
+595	g01_em_jq_菩提护体_聚气一	g01_em_jq_菩提护体_聚气一	g01_em_jq_菩提护体_聚气一	g01_em_jq_菩提护体_聚气一	g01_em_jq_菩提护体_聚气一	g01_em_jq_菩提护体_聚气一	g01_em_jq_菩提护体_聚气一	npc_attack	npc_attack	1	-1	菩提护体（聚气）
+596	g01_em_jq_菩提护体_状态动作一	g01_em_jq_菩提护体_状态动作一	g01_em_jq_菩提护体_状态动作一	g01_em_jq_菩提护体_状态动作一	g01_em_jq_菩提护体_状态动作一	g01_em_jq_菩提护体_状态动作一	g01_em_jq_菩提护体_状态动作一	npc_attack	npc_attack	1	-1	菩提护体（发招）
+597	g01_em_sf_回心诀_抬头挺胸	g01_em_sf_回心诀_抬头挺胸	g01_em_sf_回心诀_抬头挺胸	g01_em_sf_回心诀_抬头挺胸	g01_em_sf_回心诀_抬头挺胸	g01_em_sf_回心诀_抬头挺胸	g01_em_sf_回心诀_抬头挺胸	npc_attack	npc_attack	0	-1	回心诀
+598	g01_em_jq_绝剑式_聚气一	g01_em_jq_绝剑式_聚气一	g01_em_jq_绝剑式_聚气一	g01_em_jq_绝剑式_聚气一	g01_em_jq_绝剑式_聚气一	g01_em_jq_绝剑式_聚气一	g01_em_jq_绝剑式_聚气一	npc_attack	npc_attack	1	-1	绝剑式（聚气）
+599	g01_em_jq_绝剑式_状态动作一	g01_em_jq_绝剑式_状态动作一	g01_em_jq_绝剑式_状态动作一	g01_em_jq_绝剑式_状态动作一	g01_em_jq_绝剑式_状态动作一	g01_em_jq_绝剑式_状态动作一	g01_em_jq_绝剑式_状态动作一	npc_attack	npc_attack	1	-1	绝剑式（发招）
+600	g01_em_sf_护心诀_抬头挺胸	g01_em_sf_护心诀_抬头挺胸	g01_em_sf_护心诀_抬头挺胸	g01_em_sf_护心诀_抬头挺胸	g01_em_sf_护心诀_抬头挺胸	g01_em_sf_护心诀_抬头挺胸	g01_em_sf_护心诀_抬头挺胸	npc_attack	npc_attack	0	-1	护心诀
+601	g01_em_金顶绵掌	g01_em_金顶绵掌	g01_em_金顶绵掌	g01_em_金顶绵掌	g01_em_金顶绵掌	g01_em_金顶绵掌	g01_em_金顶绵掌	npc_attack	npc_attack	0	-1	金顶绵掌
+602	g01_em_jq_灭剑式_聚气一	g01_em_jq_灭剑式_聚气一	g01_em_jq_灭剑式_聚气一	g01_em_jq_灭剑式_聚气一	g01_em_jq_灭剑式_聚气一	g01_em_jq_灭剑式_聚气一	g01_em_jq_灭剑式_聚气一	npc_attack	npc_attack	1	-1	灭剑式（聚气）
+603	g01_em_jq_灭剑式_状态动作一	g01_em_jq_灭剑式_状态动作一	g01_em_jq_灭剑式_状态动作一	g01_em_jq_灭剑式_状态动作一	g01_em_jq_灭剑式_状态动作一	g01_em_jq_灭剑式_状态动作一	g01_em_jq_灭剑式_状态动作一	npc_attack	npc_attack	1	-1	灭剑式（发招）
+604	g01_em_sf_斩情诀_抬头挺胸	g01_em_sf_斩情诀_抬头挺胸	g01_em_sf_斩情诀_抬头挺胸	g01_em_sf_斩情诀_抬头挺胸	g01_em_sf_斩情诀_抬头挺胸	g01_em_sf_斩情诀_抬头挺胸	g01_em_sf_斩情诀_抬头挺胸	npc_attack	npc_attack	0	-1	斩情诀
+605	g01_em_sf_天人合一_状态动作二	g01_em_sf_天人合一_状态动作二	g01_em_sf_天人合一_状态动作二	g01_em_sf_天人合一_状态动作二	g01_em_sf_天人合一_状态动作二	g01_em_sf_天人合一_状态动作二	g01_em_sf_天人合一_状态动作二	npc_attack	npc_attack	1	-1	天人合一
+606	g01_em_sf_守心散意_状态动作一	g01_em_sf_守心散意_状态动作一	g01_em_sf_守心散意_状态动作一	g01_em_sf_守心散意_状态动作一	g01_em_sf_守心散意_状态动作一	g01_em_sf_守心散意_状态动作一	g01_em_sf_守心散意_状态动作一	npc_attack	npc_attack	1	-1	守心散意
+607	g01_em_sf_真身不败_状态动作二	g01_em_sf_真身不败_状态动作二	g01_em_sf_真身不败_状态动作二	g01_em_sf_真身不败_状态动作二	g01_em_sf_真身不败_状态动作二	g01_em_sf_真身不败_状态动作二	g01_em_sf_真身不败_状态动作二	npc_attack	npc_attack	1	-1	真身不败
+608	g01_星宿远程连招	g01_星宿远程连招	g01_星宿远程连招	g01_星宿远程连招	g01_星宿远程连招	g01_星宿远程连招	g01_星宿远程连招	npc_attack	npc_attack	1	-1	蓝砂手
+609	g01_xx_yd_连珠腐尸毒	g01_xx_yd_连珠腐尸毒	g01_xx_yd_连珠腐尸毒	g01_xx_yd_连珠腐尸毒	g01_xx_yd_连珠腐尸毒	g01_xx_yd_连珠腐尸毒	g01_xx_yd_连珠腐尸毒	npc_attack	npc_attack	0	-1	连珠腐尸毒
+610	g01_xx_jq_玄冥神掌_聚气一	g01_xx_jq_玄冥神掌_聚气一	g01_xx_jq_玄冥神掌_聚气一	g01_xx_jq_玄冥神掌_聚气一	g01_xx_jq_玄冥神掌_聚气一	g01_xx_jq_玄冥神掌_聚气一	g01_xx_jq_玄冥神掌_聚气一	npc_attack	npc_attack	1	-1	玄冥神掌（聚气）
+611	g01_xx_jq_玄冥神掌_状态动作二	g01_xx_jq_玄冥神掌_状态动作二	g01_xx_jq_玄冥神掌_状态动作二	g01_xx_jq_玄冥神掌_状态动作二	g01_xx_jq_玄冥神掌_状态动作二	g01_xx_jq_玄冥神掌_状态动作二	g01_xx_jq_玄冥神掌_状态动作二	npc_attack	npc_attack	1	-1	玄冥神掌（发招）
+612	g01_xx_sf_蝎尾针_状态动作二	g01_xx_sf_蝎尾针_状态动作二	g01_xx_sf_蝎尾针_状态动作二	g01_xx_sf_蝎尾针_状态动作二	g01_xx_sf_蝎尾针_状态动作二	g01_xx_sf_蝎尾针_状态动作二	g01_xx_sf_蝎尾针_状态动作二	npc_attack	npc_attack	0	-1	蝎尾针
+613	g01_xx_jq_蛤蟆功_聚气一	g01_xx_jq_蛤蟆功_聚气一	g01_xx_jq_蛤蟆功_聚气一	g01_xx_jq_蛤蟆功_聚气一	g01_xx_jq_蛤蟆功_聚气一	g01_xx_jq_蛤蟆功_聚气一	g01_xx_jq_蛤蟆功_聚气一	npc_attack	npc_attack	1	-1	蛤蟆功（聚气）
+614	g01_xx_jq_蛤蟆功_状态动作二	g01_xx_jq_蛤蟆功_状态动作二	g01_xx_jq_蛤蟆功_状态动作二	g01_xx_jq_蛤蟆功_状态动作二	g01_xx_jq_蛤蟆功_状态动作二	g01_xx_jq_蛤蟆功_状态动作二	g01_xx_jq_蛤蟆功_状态动作二	npc_attack	npc_attack	1	-1	蛤蟆功（发招）
+615	g01_xx_sf_蜈蚣阵_抬头挺胸	g01_xx_sf_蜈蚣阵_抬头挺胸	g01_xx_sf_蜈蚣阵_抬头挺胸	g01_xx_sf_蜈蚣阵_抬头挺胸	g01_xx_sf_蜈蚣阵_抬头挺胸	g01_xx_sf_蜈蚣阵_抬头挺胸	g01_xx_sf_蜈蚣阵_抬头挺胸	npc_attack	npc_attack	0	-1	蜈蚣阵
+616	g01_xx_yd_噬血一笑	g01_xx_yd_噬血一笑	g01_xx_yd_噬血一笑	g01_xx_yd_噬血一笑	g01_xx_yd_噬血一笑	g01_xx_yd_噬血一笑	g01_xx_yd_噬血一笑	npc_attack	npc_attack	0	-1	噬血一笑
+617	g01_xx_sf_笑里藏刀_抬头挺胸	g01_xx_sf_笑里藏刀_抬头挺胸	g01_xx_sf_笑里藏刀_抬头挺胸	g01_xx_sf_笑里藏刀_抬头挺胸	g01_xx_sf_笑里藏刀_抬头挺胸	g01_xx_sf_笑里藏刀_抬头挺胸	g01_xx_sf_笑里藏刀_抬头挺胸	npc_attack	npc_attack	0	-1	笑里藏刀
+618	g01_xx_jq_含笑还阳_聚气一	g01_xx_jq_含笑还阳_聚气一	g01_xx_jq_含笑还阳_聚气一	g01_xx_jq_含笑还阳_聚气一	g01_xx_jq_含笑还阳_聚气一	g01_xx_jq_含笑还阳_聚气一	g01_xx_jq_含笑还阳_聚气一	npc_attack	npc_attack	1	-1	含笑还阳(聚气）
+619	g01_xx_jq_含笑还阳_状态动作一	g01_xx_jq_含笑还阳_状态动作一	g01_xx_jq_含笑还阳_状态动作一	g01_xx_jq_含笑还阳_状态动作一	g01_xx_jq_含笑还阳_状态动作一	g01_xx_jq_含笑还阳_状态动作一	g01_xx_jq_含笑还阳_状态动作一	npc_attack	npc_attack	1	-1	含笑还阳(发招）
+620	g01_xx_sf_青蛇掌_远程攻击三	g01_xx_sf_青蛇掌_远程攻击三	g01_xx_sf_青蛇掌_远程攻击三	g01_xx_sf_青蛇掌_远程攻击三	g01_xx_sf_青蛇掌_远程攻击三	g01_xx_sf_青蛇掌_远程攻击三	g01_xx_sf_青蛇掌_远程攻击三	npc_attack	npc_attack	0	-1	青蛇掌
+621	g01_xx_jq_神木行_聚气一	g01_xx_jq_神木行_聚气一	g01_xx_jq_神木行_聚气一	g01_xx_jq_神木行_聚气一	g01_xx_jq_神木行_聚气一	g01_xx_jq_神木行_聚气一	g01_xx_jq_神木行_聚气一	npc_attack	npc_attack	1	-1	神木行（聚气）
+622	g01_xx_jq_神木行_状态动作一	g01_xx_jq_神木行_状态动作一	g01_xx_jq_神木行_状态动作一	g01_xx_jq_神木行_状态动作一	g01_xx_jq_神木行_状态动作一	g01_xx_jq_神木行_状态动作一	g01_xx_jq_神木行_状态动作一	npc_attack	npc_attack	1	-1	神木行（发招）
+623	g01_xx_yd_化嗔无形_状态动作14	g01_xx_yd_化嗔无形_状态动作14	g01_xx_yd_化嗔无形_状态动作14	g01_xx_yd_化嗔无形_状态动作14	g01_xx_yd_化嗔无形_状态动作14	g01_xx_yd_化嗔无形_状态动作14	g01_xx_yd_化嗔无形_状态动作14	npc_attack	npc_attack	0	-1	化嗔无形
+624	g01_xx_冰蚕掌	g01_xx_冰蚕掌	g01_xx_冰蚕掌	g01_xx_冰蚕掌	g01_xx_冰蚕掌	g01_xx_冰蚕掌	g01_xx_冰蚕掌	npc_attack	npc_attack	0	-1	冰蚕掌
+625	g01_xx_jq_御水行_聚气一	g01_xx_jq_御水行_聚气一	g01_xx_jq_御水行_聚气一	g01_xx_jq_御水行_聚气一	g01_xx_jq_御水行_聚气一	g01_xx_jq_御水行_聚气一	g01_xx_jq_御水行_聚气一	npc_attack	npc_attack	1	-1	御水行（聚气）
+626	g01_xx_jq_御水行_状态动作一	g01_xx_jq_御水行_状态动作一	g01_xx_jq_御水行_状态动作一	g01_xx_jq_御水行_状态动作一	g01_xx_jq_御水行_状态动作一	g01_xx_jq_御水行_状态动作一	g01_xx_jq_御水行_状态动作一	npc_attack	npc_attack	1	-1	御水行（发招）
+627	g01_xx_sf_心血逆行_状态动作一	g01_xx_sf_心血逆行_状态动作一	g01_xx_sf_心血逆行_状态动作一	g01_xx_sf_心血逆行_状态动作一	g01_xx_sf_心血逆行_状态动作一	g01_xx_sf_心血逆行_状态动作一	g01_xx_sf_心血逆行_状态动作一	npc_attack	npc_attack	0	-1	心血逆行
+628	g01_xx_化血绵掌	g01_xx_化血绵掌	g01_xx_化血绵掌	g01_xx_化血绵掌	g01_xx_化血绵掌	g01_xx_化血绵掌	g01_xx_化血绵掌	npc_attack	npc_attack	1	-1	化血绵掌
+629	g01_xx_sf_黯然无伤_状态动作一	g01_xx_sf_黯然无伤_状态动作一	g01_xx_sf_黯然无伤_状态动作一	g01_xx_sf_黯然无伤_状态动作一	g01_xx_sf_黯然无伤_状态动作一	g01_xx_sf_黯然无伤_状态动作一	g01_xx_sf_黯然无伤_状态动作一	npc_attack	npc_attack	1	-1	黯然无伤
+630	g01_xx_sf_化骨绵掌_状态动作二	g01_xx_sf_化骨绵掌_状态动作二	g01_xx_sf_化骨绵掌_状态动作二	g01_xx_sf_化骨绵掌_状态动作二	g01_xx_sf_化骨绵掌_状态动作二	g01_xx_sf_化骨绵掌_状态动作二	g01_xx_sf_化骨绵掌_状态动作二	npc_attack	npc_attack	1	-1	化骨绵掌
+631	g01_大理远程连招	g01_大理远程连招	g01_大理远程连招	g01_大理远程连招	g01_大理远程连招	g01_大理远程连招	g01_大理远程连招	npc_attack	npc_attack	1	-1	正阳手
+632	g01_dl_yd_三阳开泰	g01_dl_yd_三阳开泰	g01_dl_yd_三阳开泰	g01_dl_yd_三阳开泰	g01_dl_yd_三阳开泰	g01_dl_yd_三阳开泰	g01_dl_yd_三阳开泰	npc_attack	npc_attack	0	-1	三阳开泰
+633	g01_dl_一阳指	g01_dl_一阳指	g01_dl_一阳指	g01_dl_一阳指	g01_dl_一阳指	g01_dl_一阳指	g01_dl_一阳指	npc_attack	npc_attack	0	-1	一阳指
+634	g01_dl_中冲剑	g01_dl_中冲剑	g01_dl_中冲剑	g01_dl_中冲剑	g01_dl_中冲剑	g01_dl_中冲剑	g01_dl_中冲剑	npc_attack	npc_attack	0	-1	中冲剑
+635	g01_dl_少商剑	g01_dl_少商剑	g01_dl_少商剑	g01_dl_少商剑	g01_dl_少商剑	g01_dl_少商剑	g01_dl_少商剑	npc_attack	npc_attack	0	-1	少商剑
+636	g01_dl_少阳剑	g01_dl_少阳剑	g01_dl_少阳剑	g01_dl_少阳剑	g01_dl_少阳剑	g01_dl_少阳剑	g01_dl_少阳剑	npc_attack	npc_attack	0	-1	少阳剑
+637	g01_dl_商阳剑	g01_dl_商阳剑	g01_dl_商阳剑	g01_dl_商阳剑	g01_dl_商阳剑	g01_dl_商阳剑	g01_dl_商阳剑	npc_attack	npc_attack	0	-1	商阳剑
+638	g01_dl_关冲剑	g01_dl_关冲剑	g01_dl_关冲剑	g01_dl_关冲剑	g01_dl_关冲剑	g01_dl_关冲剑	g01_dl_关冲剑	npc_attack	npc_attack	0	-1	关冲剑
+639	g01_dl_少泽剑	g01_dl_少泽剑	g01_dl_少泽剑	g01_dl_少泽剑	g01_dl_少泽剑	g01_dl_少泽剑	g01_dl_少泽剑	npc_attack	npc_attack	0	-1	少泽剑
+640	g01_dl_金玉拳	g01_dl_金玉拳	g01_dl_金玉拳	g01_dl_金玉拳	g01_dl_金玉拳	g01_dl_金玉拳	g01_dl_金玉拳	npc_attack	npc_attack	0	-1	金玉拳
+641	g01_dl_jq_天南步法	g01_dl_jq_天南步法	g01_dl_jq_天南步法	g01_dl_jq_天南步法	g01_dl_jq_天南步法	g01_dl_jq_天南步法	g01_dl_jq_天南步法	npc_attack	npc_attack	1	-1	天南步法（聚气）
+642	g01_dl_天南步法	g01_dl_天南步法	g01_dl_天南步法	g01_dl_天南步法	g01_dl_天南步法	g01_dl_天南步法	g01_dl_天南步法	npc_attack	npc_attack	1	-1	天南步法（发招）
+643	g01_dl_风花雪月	g01_dl_风花雪月	g01_dl_风花雪月	g01_dl_风花雪月	g01_dl_风花雪月	g01_dl_风花雪月	g01_dl_风花雪月	npc_attack	npc_attack	0	-1	风花雪月
+644	g01_dl_枯心指	g01_dl_枯心指	g01_dl_枯心指	g01_dl_枯心指	g01_dl_枯心指	g01_dl_枯心指	g01_dl_枯心指	npc_attack	npc_attack	0	-1	枯心指
+645	g01_dl_jq_天龙步法	g01_dl_jq_天龙步法	g01_dl_jq_天龙步法	g01_dl_jq_天龙步法	g01_dl_jq_天龙步法	g01_dl_jq_天龙步法	g01_dl_jq_天龙步法	npc_attack	npc_attack	1	-1	天龙步法（聚气）
+646	g01_dl_天龙步法	g01_dl_天龙步法	g01_dl_天龙步法	g01_dl_天龙步法	g01_dl_天龙步法	g01_dl_天龙步法	g01_dl_天龙步法	npc_attack	npc_attack	1	-1	天龙步法（发招）
+647	g01_dl_非枯非荣	g01_dl_非枯非荣	g01_dl_非枯非荣	g01_dl_非枯非荣	g01_dl_非枯非荣	g01_dl_非枯非荣	g01_dl_非枯非荣	npc_attack	npc_attack	0	-1	非枯非荣
+648	g01_dl_回风扶柳	g01_dl_回风扶柳	g01_dl_回风扶柳	g01_dl_回风扶柳	g01_dl_回风扶柳	g01_dl_回风扶柳	g01_dl_回风扶柳	npc_attack	npc_attack	1	-1	回风拂柳
+649	g01_dl_烟消云散	g01_dl_烟消云散	g01_dl_烟消云散	g01_dl_烟消云散	g01_dl_烟消云散	g01_dl_烟消云散	g01_dl_烟消云散	npc_attack	npc_attack	1	-1	烟消云散
+650	g01_dl_青云直上	g01_dl_青云直上	g01_dl_青云直上	g01_dl_青云直上	g01_dl_青云直上	g01_dl_青云直上	g01_dl_青云直上	npc_attack	npc_attack	1	-1	青云直上
+651	长枪连招_g01_01	长枪连招_g01_01	大刀连招_g01_01	双短连招_g01_01	单短连招_g01_01	扇子连招_g01_01	双环连招_g01_01	npc_attack	npc_attack	0	-1	踏雪寻梅
+652	g01_ts_梅花三弄	g01_ts_梅花三弄	g01_ts_梅花三弄	g01_ts_sd_梅花三弄	g01_ts_dd_梅花三弄	g01_ts_shan_梅花三弄	g01_ts_sh_梅花三弄	npc_attack	npc_attack	0	-1	梅花三弄
+653	g01_ts_葬花魂	g01_ts_葬花魂	g01_ts_葬花魂	g01_ts_sd_葬花魂	g01_ts_dd_葬花魂	g01_ts_shan_葬花魂	g01_ts_sh_葬花魂	npc_attack	npc_attack	0	-1	葬花魂
+654	g01_ts_过隙无痕	g01_ts_过隙无痕	g01_ts_过隙无痕	g01_ts_过隙无痕	g01_ts_过隙无痕	g01_ts_过隙无痕	g01_ts_过隙无痕	npc_attack	npc_attack	0	-1	过隙无痕
+655	g01_ts_寿者无相	g01_ts_寿者无相	g01_ts_寿者无相	g01_ts_寿者无相	g01_ts_寿者无相	g01_ts_寿者无相	g01_ts_寿者无相	npc_attack	npc_attack	0	-1	寿者无相
+656	g01_ts_jq_众生无相	g01_ts_jq_众生无相	g01_ts_jq_众生无相	g01_ts_jq_众生无相	g01_ts_jq_众生无相	g01_ts_jq_众生无相	g01_ts_jq_众生无相	npc_attack	npc_attack	1	-1	众生无相(聚气)
+657	g01_ts_众生无相	g01_ts_众生无相	g01_ts_众生无相	g01_ts_众生无相	g01_ts_众生无相	g01_ts_众生无相	g01_ts_众生无相	npc_attack	npc_attack	1	-1	众生无相（发招）
+658	g01_ts_jq_无我无相	g01_ts_jq_无我无相	g01_ts_jq_无我无相	g01_ts_jq_无我无相	g01_ts_jq_无我无相	g01_ts_jq_无我无相	g01_ts_jq_无我无相	npc_attack	npc_attack	1	-1	无我无相(聚气)
+659	g01_ts_无我无相	g01_ts_无我无相	g01_ts_无我无相	g01_ts_无我无相	g01_ts_无我无相	g01_ts_无我无相	g01_ts_无我无相	npc_attack	npc_attack	1	-1	无我无相（发招）
+660	g01_ts_真水无香	g01_ts_真水无香	g01_ts_真水无香	g01_ts_真水无香	g01_ts_真水无香	g01_ts_真水无香	g01_ts_真水无香	npc_attack	npc_attack	0	-1	真水无香
+661	g01_ts_人我无相	g01_ts_人我无相	g01_ts_人我无相	g01_ts_人我无相	g01_ts_人我无相	g01_ts_人我无相	g01_ts_人我无相	npc_attack	npc_attack	0	-1	人我无相
+662	g01_ts_六合独尊	g01_ts_六合独尊	g01_ts_六合独尊	g01_ts_sd_六合独尊	g01_ts_dd_六合独尊	g01_ts_shan_六合独尊	g01_ts_sh_六合独尊	npc_attack	npc_attack	0	-1	六合独尊
+663	g01_ts_jq_奈何心生	g01_ts_jq_奈何心生	g01_ts_jq_奈何心生	g01_ts_jq_奈何心生	g01_ts_jq_奈何心生	g01_ts_jq_奈何心生	g01_ts_jq_奈何心生	npc_attack	npc_attack	1	-1	奈何心生(聚气)
+664	g01_ts_奈何心生	g01_ts_奈何心生	g01_ts_奈何心生	g01_ts_奈何心生	g01_ts_奈何心生	g01_ts_奈何心生	g01_ts_奈何心生	npc_attack	npc_attack	1	-1	奈何心生（发招）
+665	g01_ts_大象无形	g01_ts_大象无形	g01_ts_大象无形	g01_ts_大象无形	g01_ts_大象无形	g01_ts_大象无形	g01_ts_大象无形	npc_attack	npc_attack	0	-1	大象无形
+666	g01_ts_八荒唯我	g01_ts_八荒唯我	g01_ts_八荒唯我	g01_ts_sd_八荒唯我	g01_ts_dd_八荒唯我	g01_ts_shan_八荒唯我	g01_ts_sh_八荒唯我	npc_attack	npc_attack	0	-1	八荒唯我
+667	g01_ts_jq_奈何心死	g01_ts_jq_奈何心死	g01_ts_jq_奈何心死	g01_ts_jq_奈何心死	g01_ts_jq_奈何心死	g01_ts_jq_奈何心死	g01_ts_jq_奈何心死	npc_attack	npc_attack	1	-1	奈何心死(聚气)
+668	g01_ts_奈何心死	g01_ts_奈何心死	g01_ts_奈何心死	g01_ts_奈何心死	g01_ts_奈何心死	g01_ts_奈何心死	g01_ts_奈何心死	npc_attack	npc_attack	1	-1	奈何心死（发招）
+669	g01_ts_生死符	g01_ts_生死符	g01_ts_生死符	g01_ts_生死符	g01_ts_生死符	g01_ts_生死符	g01_ts_生死符	npc_attack	npc_attack	0	-1	生死符
+670	g01_ts_阳歌天钧	g01_ts_阳歌天钧	g01_ts_阳歌天钧	g01_ts_阳歌天钧	g01_ts_阳歌天钧	g01_ts_阳歌天钧	g01_ts_阳歌天钧	npc_attack	npc_attack	1	-1	阳歌天钧
+671	g01_ts_阳春白雪	g01_ts_阳春白雪	g01_ts_阳春白雪	g01_ts_阳春白雪	g01_ts_阳春白雪	g01_ts_阳春白雪	g01_ts_阳春白雪	npc_attack	npc_attack	1	-1	阳春白雪
+672	g01_ts_阳关三叠	g01_ts_阳关三叠	g01_ts_阳关三叠	g01_ts_阳关三叠	g01_ts_阳关三叠	g01_ts_阳关三叠	g01_ts_阳关三叠	npc_attack	npc_attack	1	-1	阳关三叠
+673	g01_逍遥远程连招	g01_逍遥远程连招	g01_逍遥远程连招	g01_逍遥远程连招	g01_逍遥远程连招	g01_逍遥远程连招	g01_逍遥远程连招	npc_attack	npc_attack	1	-1	落英剑
+674	g01_xy_jq_桃花阵_聚气一	g01_xy_jq_桃花阵_聚气一	g01_xy_jq_桃花阵_聚气一	g01_xy_jq_桃花阵_聚气一	g01_xy_jq_桃花阵_聚气一	g01_xy_jq_桃花阵_聚气一	g01_xy_jq_桃花阵_聚气一	npc_attack	npc_attack	1	-1	桃花阵（聚气）
+675	g01_xy_jq_桃花阵_状态动作四	g01_xy_jq_桃花阵_状态动作四	g01_xy_jq_桃花阵_状态动作四	g01_xy_jq_桃花阵_状态动作四	g01_xy_jq_桃花阵_状态动作四	g01_xy_jq_桃花阵_状态动作四	g01_xy_jq_桃花阵_状态动作四	npc_attack	npc_attack	1	-1	桃花阵（发招）
+676	g01_xy_sf_花开縻荼_远程攻击四	g01_xy_sf_花开縻荼_远程攻击四	g01_xy_sf_花开縻荼_远程攻击四	g01_xy_sf_花开縻荼_远程攻击四	g01_xy_sf_花开縻荼_远程攻击四	g01_xy_sf_花开縻荼_远程攻击四	g01_xy_sf_花开縻荼_远程攻击四	npc_attack	npc_attack	0	-1	花开縻荼
+677	g01_xy_凌波微步	g01_xy_凌波微步	g01_xy_凌波微步	g01_xy_凌波微步	g01_xy_凌波微步	g01_xy_凌波微步	g01_xy_凌波微步	npc_attack	npc_attack	0	-1	凌波微步
+678	g01_xy_sf_画地为牢_状态动作二	g01_xy_sf_画地为牢_状态动作二	g01_xy_sf_画地为牢_状态动作二	g01_xy_sf_画地为牢_状态动作二	g01_xy_sf_画地为牢_状态动作二	g01_xy_sf_画地为牢_状态动作二	g01_xy_sf_画地为牢_状态动作二	npc_attack	npc_attack	0	-1	画地为牢
+679	g01_xy_jq_黄金甲_聚气一	g01_xy_jq_黄金甲_聚气一	g01_xy_jq_黄金甲_聚气一	g01_xy_jq_黄金甲_聚气一	g01_xy_jq_黄金甲_聚气一	g01_xy_jq_黄金甲_聚气一	g01_xy_jq_黄金甲_聚气一	npc_attack	npc_attack	1	-1	黄金甲（聚气）
+680	g01_xy_jq_黄金甲_状态动作一	g01_xy_jq_黄金甲_状态动作一	g01_xy_jq_黄金甲_状态动作一	g01_xy_jq_黄金甲_状态动作一	g01_xy_jq_黄金甲_状态动作一	g01_xy_jq_黄金甲_状态动作一	g01_xy_jq_黄金甲_状态动作一	npc_attack	npc_attack	1	-1	黄金甲（发招）
+681	g01_xy_jq_八阵图_聚气一	g01_xy_jq_八阵图_聚气一	g01_xy_jq_八阵图_聚气一	g01_xy_jq_八阵图_聚气一	g01_xy_jq_八阵图_聚气一	g01_xy_jq_八阵图_聚气一	g01_xy_jq_八阵图_聚气一	npc_attack	npc_attack	1	-1	八阵图（聚气）
+682	g01_xy_jq_八阵图_状态动作四	g01_xy_jq_八阵图_状态动作四	g01_xy_jq_八阵图_状态动作四	g01_xy_jq_八阵图_状态动作四	g01_xy_jq_八阵图_状态动作四	g01_xy_jq_八阵图_状态动作四	g01_xy_jq_八阵图_状态动作四	npc_attack	npc_attack	1	-1	八阵图（发招）
+683	g01_xy_jq_千里眼_聚气一	g01_xy_jq_千里眼_聚气一	g01_xy_jq_千里眼_聚气一	g01_xy_jq_千里眼_聚气一	g01_xy_jq_千里眼_聚气一	g01_xy_jq_千里眼_聚气一	g01_xy_jq_千里眼_聚气一	npc_attack	npc_attack	1	-1	千里眼（聚气）
+684	g01_xy_jq_千里眼_状态动作一	g01_xy_jq_千里眼_状态动作一	g01_xy_jq_千里眼_状态动作一	g01_xy_jq_千里眼_状态动作一	g01_xy_jq_千里眼_状态动作一	g01_xy_jq_千里眼_状态动作一	g01_xy_jq_千里眼_状态动作一	npc_attack	npc_attack	1	-1	千里眼（发招）
+685	g01_xy_jq_诛仙阵_聚气一	g01_xy_jq_诛仙阵_聚气一	g01_xy_jq_诛仙阵_聚气一	g01_xy_jq_诛仙阵_聚气一	g01_xy_jq_诛仙阵_聚气一	g01_xy_jq_诛仙阵_聚气一	g01_xy_jq_诛仙阵_聚气一	npc_attack	npc_attack	1	-1	诛仙阵（聚气）
+686	g01_xy_jq_诛仙阵_状态动作四	g01_xy_jq_诛仙阵_状态动作四	g01_xy_jq_诛仙阵_状态动作四	g01_xy_jq_诛仙阵_状态动作四	g01_xy_jq_诛仙阵_状态动作四	g01_xy_jq_诛仙阵_状态动作四	g01_xy_jq_诛仙阵_状态动作四	npc_attack	npc_attack	1	-1	诛仙阵（发招）
+687	g01_xy_胡笳十八拍	g01_xy_胡笳十八拍	g01_xy_胡笳十八拍	g01_xy_胡笳十八拍	g01_xy_胡笳十八拍	g01_xy_胡笳十八拍	g01_xy_胡笳十八拍	npc_attack	npc_attack	0	-1	胡笳十八拍
+688	g01_xy_jq_抚琴式_聚气一	g01_xy_jq_抚琴式_聚气一	g01_xy_jq_抚琴式_聚气一	g01_xy_jq_抚琴式_聚气一	g01_xy_jq_抚琴式_聚气一	g01_xy_jq_抚琴式_聚气一	g01_xy_jq_抚琴式_聚气一	npc_attack	npc_attack	1	-1	抚琴式（聚气）
+689	g01_xy_jq_抚琴式_状态动作一	g01_xy_jq_抚琴式_状态动作一	g01_xy_jq_抚琴式_状态动作一	g01_xy_jq_抚琴式_状态动作一	g01_xy_jq_抚琴式_状态动作一	g01_xy_jq_抚琴式_状态动作一	g01_xy_jq_抚琴式_状态动作一	npc_attack	npc_attack	1	-1	抚琴式（发招）
+690	g01_xy_sf_高山留水_远程攻击三	g01_xy_sf_高山留水_远程攻击三	g01_xy_sf_高山留水_远程攻击三	g01_xy_sf_高山留水_远程攻击三	g01_xy_sf_高山留水_远程攻击三	g01_xy_sf_高山留水_远程攻击三	g01_xy_sf_高山留水_远程攻击三	npc_attack	npc_attack	0	-1	高山流水
+691	g01_xy_凌烟十八功	g01_xy_凌烟十八功	g01_xy_凌烟十八功	g01_xy_凌烟十八功	g01_xy_凌烟十八功	g01_xy_凌烟十八功	g01_xy_凌烟十八功	npc_attack	npc_attack	0	-1	凌烟十八功
+692	g01_xy_jq_运笔式_聚气一	g01_xy_jq_运笔式_聚气一	g01_xy_jq_运笔式_聚气一	g01_xy_jq_运笔式_聚气一	g01_xy_jq_运笔式_聚气一	g01_xy_jq_运笔式_聚气一	g01_xy_jq_运笔式_聚气一	npc_attack	npc_attack	1	-1	运笔式（聚气）
+693	g01_xy_jq_运笔式_状态动作一	g01_xy_jq_运笔式_状态动作一	g01_xy_jq_运笔式_状态动作一	g01_xy_jq_运笔式_状态动作一	g01_xy_jq_运笔式_状态动作一	g01_xy_jq_运笔式_状态动作一	g01_xy_jq_运笔式_状态动作一	npc_attack	npc_attack	1	-1	运笔式（发招）
+694	g01_xy_sf_江行初雪_抬头挺胸	g01_xy_sf_江行初雪_抬头挺胸	g01_xy_sf_江行初雪_抬头挺胸	g01_xy_sf_江行初雪_抬头挺胸	g01_xy_sf_江行初雪_抬头挺胸	g01_xy_sf_江行初雪_抬头挺胸	g01_xy_sf_江行初雪_抬头挺胸	npc_attack	npc_attack	0	-1	江行初雪
+695	g01_xy_北冥神拳	g01_xy_北冥神拳	g01_xy_北冥神拳	g01_xy_北冥神拳	g01_xy_北冥神拳	g01_xy_北冥神拳	g01_xy_北冥神拳	npc_attack	npc_attack	1	-1	北冥神拳
+696	g01_xy_sf_冥冥天意_状态动作一	g01_xy_sf_冥冥天意_状态动作一	g01_xy_sf_冥冥天意_状态动作一	g01_xy_sf_冥冥天意_状态动作一	g01_xy_sf_冥冥天意_状态动作一	g01_xy_sf_冥冥天意_状态动作一	g01_xy_sf_冥冥天意_状态动作一	npc_attack	npc_attack	1	-1	冥冥天意
+697	g01_xy_sf_排山倒海_状态动作一	g01_xy_sf_排山倒海_状态动作一	g01_xy_sf_排山倒海_状态动作一	g01_xy_sf_排山倒海_状态动作一	g01_xy_sf_排山倒海_状态动作一	g01_xy_sf_排山倒海_状态动作一	g01_xy_sf_排山倒海_状态动作一	npc_attack	npc_attack	1	-1	排山倒海
+698	g01_gh_sl	g01_gh_sl	g01_gh_sl	g01_gh_sl	g01_gh_sl	g01_gh_sl	g01_gh_sl	npc_attack	npc_attack	1	-1	弥勒护身:增加体力
+699	g01_gh_mj	g01_gh_mj	g01_gh_mj	g01_gh_mj	g01_gh_mj	g01_gh_mj	g01_gh_mj	npc_attack	npc_attack	1	-1	葵花神力:增加力量
+700	g01_gh_gb	g01_gh_gb	g01_gh_gb	g01_gh_gb	g01_gh_gb	g01_gh_gb	g01_gh_gb	npc_attack	npc_attack	1	-1	如影随形:增加身法
+701	g01_gh_wd	g01_gh_wd	g01_gh_wd	g01_gh_wd	g01_gh_wd	g01_gh_wd	g01_gh_wd	npc_attack	npc_attack	1	-1	犀牛望月:增加灵气
+702	g01_gh_em	g01_gh_em	g01_gh_em	g01_gh_em	g01_gh_em	g01_gh_em	g01_gh_em	npc_attack	npc_attack	1	-1	坐怀不乱:增加定力
+703	g01_gh_xx	g01_gh_xx	g01_gh_xx	g01_gh_xx	g01_gh_xx	g01_gh_xx	g01_gh_xx	npc_attack	npc_attack	1	-1	百毒不侵:增加毒抗
+704	g01_gh_dl	g01_gh_dl	g01_gh_dl	g01_gh_dl	g01_gh_dl	g01_gh_dl	g01_gh_dl	npc_attack	npc_attack	1	-1	正气浩然:增加玄抗
+705	g01_gh_ts	g01_gh_ts	g01_gh_ts	g01_gh_ts	g01_gh_ts	g01_gh_ts	g01_gh_ts	npc_attack	npc_attack	1	-1	冰肌玉骨:增加冰抗
+706	g01_gh_xy	g01_gh_xy	g01_gh_xy	g01_gh_xy	g01_gh_xy	g01_gh_xy	g01_gh_xy	npc_attack	npc_attack	1	-1	墨守成规:增加火抗
+707	g01_秘籍_sl	g01_秘籍_sl	g01_秘籍_sl	g01_秘籍_sl	g01_秘籍_sl	g01_秘籍_sl	g01_秘籍_sl	npc_attack	npc_attack	0	-1	易筋锻骨
+708	g01_秘籍_mj	g01_秘籍_mj	g01_秘籍_mj	g01_秘籍_mj	g01_秘籍_mj	g01_秘籍_mj	g01_秘籍_mj	npc_attack	npc_attack	0	-1	纯阳无极
+709	g01_秘籍_gb_mj	g01_秘籍_gb_mj	g01_秘籍_gb_mj	g01_秘籍_gb_mj	g01_秘籍_gb_mj	g01_秘籍_gb_mj	g01_秘籍_gb_mj	npc_attack	npc_attack	0	-1	天下无狗
+710	g01_秘籍_wd	g01_秘籍_wd	g01_秘籍_wd	g01_秘籍_wd	g01_秘籍_wd	g01_秘籍_wd	g01_秘籍_wd	npc_attack	npc_attack	0	-1	天外飞仙
+711	g01_秘籍_em	g01_秘籍_em	g01_秘籍_em	g01_秘籍_em	g01_秘籍_em	g01_秘籍_em	g01_秘籍_em	npc_attack	npc_attack	0	-1	九阴白骨爪
+712	g01_秘籍_xx	g01_秘籍_xx	g01_秘籍_xx	g01_秘籍_xx	g01_秘籍_xx	g01_秘籍_xx	g01_秘籍_xx	npc_attack	npc_attack	0	-1	化骨绵掌
+713	g01_秘籍_dl	g01_秘籍_dl	g01_秘籍_dl	g01_秘籍_dl	g01_秘籍_dl	g01_秘籍_dl	g01_秘籍_dl	npc_attack	npc_attack	0	-1	少泽剑
+714	g01_秘籍_ts	g01_秘籍_ts	g01_秘籍_ts	g01_秘籍_ts	g01_秘籍_ts	g01_秘籍_ts	g01_秘籍_ts	npc_attack	npc_attack	0	-1	同生共死
+715	g01_秘籍_xy	g01_秘籍_xy	g01_秘籍_xy	g01_秘籍_xy	g01_秘籍_xy	g01_秘籍_xy	g01_秘籍_xy	npc_attack	npc_attack	0	-1	鲲跃北溟
+716	g01_dl_中冲剑_聚气	g01_dl_中冲剑_聚气	g01_dl_中冲剑_聚气	g01_dl_中冲剑_聚气	g01_dl_中冲剑_聚气	g01_dl_中冲剑_聚气	g01_dl_中冲剑_聚气	npc_attack	npc_attack	1	-1	中冲剑聚气
+717	g01_dl_新中冲剑	g01_dl_新中冲剑	g01_dl_新中冲剑	g01_dl_新中冲剑	g01_dl_新中冲剑	g01_dl_新中冲剑	g01_dl_新中冲剑	npc_attack	npc_attack	1	-1	中冲剑发招
+718	h_鞭炮02	h_鞭炮02	h_鞭炮02	h_鞭炮02	h_鞭炮02	h_鞭炮02	h_鞭炮02	h_鞭炮02	h_鞭炮02	1	-1	燃放一枚鞭炮
+719	h_鞭炮01	h_鞭炮01	h_鞭炮01	h_鞭炮01	h_鞭炮01	h_鞭炮01	h_鞭炮01	h_鞭炮01	h_鞭炮01	1	-1	燃放一挂鞭炮
+720	g01_gb_空手神龙闪现	g01_gb_长枪神龙闪现	g01_gb_长枪神龙闪现	g01_gb_双短神龙闪现	g01_gb_单短神龙闪现	g01_gb_单短神龙闪现	g01_gb_双短神龙闪现	npc_attack	npc_attack	0	-1	神龙闪现
+721	收集签名	收集签名	收集签名	收集签名	收集签名	收集签名	收集签名	npc_attack	npc_attack	1	-1	收集签名
+722	go1_爱神之箭_jq_01	go1_爱神之箭_jq_01	go1_爱神之箭_jq_01	go1_爱神之箭_jq_01	go1_爱神之箭_jq_01	go1_爱神之箭_jq_01	go1_爱神之箭_jq_01	npc_attack	npc_attack	1	-1	爱神之箭聚气动作
+723	go1_爱神之箭_tz_01	go1_爱神之箭_tz_01	go1_爱神之箭_tz_01	go1_爱神之箭_tz_01	go1_爱神之箭_tz_01	go1_爱神之箭_tz_01	go1_爱神之箭_tz_01	npc_attack	npc_attack	1	-1	爱神之箭投掷动作
+724	g01_tz_斩妖剑01	g01_tz_斩妖剑01	g01_tz_斩妖剑01	g01_tz_斩妖剑01	g01_tz_斩妖剑01	g01_tz_斩妖剑01	g01_tz_斩妖剑01	npc_attack	npc_attack	1	-1	斩妖剑投掷
+725	g01_暗器投掷01	g01_暗器投掷01	g01_暗器投掷01	g01_暗器投掷01	g01_暗器投掷01	g01_暗器投掷01	g01_暗器投掷01	npc_attack	npc_attack	1	-1	暗器投掷
+726	g01_暗器打穴01	g01_暗器打穴01	g01_暗器打穴01	g01_暗器打穴01	g01_暗器打穴01	g01_暗器打穴01	g01_暗器打穴01	npc_attack	npc_attack	1	-1	暗器打穴
+727	g01_暗器护体	g01_暗器护体	g01_暗器护体	g01_暗器护体	g01_暗器护体	g01_暗器护体	g01_暗器护体	npc_attack	npc_attack	1	-1	暗器护体
+728	g01_dl_新商阳剑	g01_dl_新商阳剑	g01_dl_新商阳剑	g01_dl_新商阳剑	g01_dl_新商阳剑	g01_dl_新商阳剑	g01_dl_新商阳剑	npc_attack	npc_attack	1	-1	新商阳剑
+729	g01_ts_天地明灭	g01_ts_天地明灭	g01_ts_天地明灭	g01_ts_天地明灭	g01_ts_天地明灭	g01_ts_天地明灭	g01_ts_天地明灭	npc_attack	npc_attack	1	-1	天地明灭
+730	g01_wd_腾云驾雾	g01_wd_腾云驾雾	g01_wd_腾云驾雾	g01_wd_腾云驾雾	g01_wd_腾云驾雾	g01_wd_腾云驾雾	g01_wd_腾云驾雾	npc_attack	npc_attack	1	-1	腾云驾雾
+731	g01_xx_吸星噬月	g01_xx_吸星噬月	g01_xx_吸星噬月	g01_xx_吸星噬月	g01_xx_吸星噬月	g01_xx_吸星噬月	g01_xx_吸星噬月	npc_attack	npc_attack	1	-1	吸星噬月
+732	g01_xy_定海神针	g01_xy_定海神针	g01_xy_定海神针	g01_xy_定海神针	g01_xy_定海神针	g01_xy_定海神针	g01_xy_定海神针	npc_attack	npc_attack	1	-1	定海神针发招
+733	g01_xy_定海神针聚气	g01_xy_定海神针聚气	g01_xy_定海神针聚气	g01_xy_定海神针聚气	g01_xy_定海神针聚气	g01_xy_定海神针聚气	g01_xy_定海神针聚气	npc_attack	npc_attack	1	-1	定海神针聚气
+734	g01_mj_烽火连城	g01_mj_烽火连城	g01_mj_烽火连城	g01_mj_烽火连城	g01_mj_烽火连城	g01_mj_烽火连城	g01_mj_烽火连城	npc_attack	npc_attack	1	-1	烽火连城

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="娥嵋牌坊.frame" />
+    <entity mesh="娥嵋牌坊.mesh" node="娥嵋牌坊" />
+    <entity mesh="娥嵋牌坊绸带01.mesh" />
+    <entity mesh="娥嵋牌坊绸带02.mesh" />
+    <entity mesh="娥嵋牌坊绸带03.mesh" />
+    <entity mesh="娥嵋牌坊绸带04.mesh" />
+    <entity mesh="娥嵋牌坊灯笼2.mesh" node="娥嵋牌坊灯笼2">
+        <offset>
+            <translate x="0.164157" y="-336.635" z="-0.974121" />
+        </offset>
+    </entity>
+    <entity mesh="娥嵋牌坊灯笼1.mesh" node="娥嵋牌坊灯笼1">
+        <offset>
+            <translate x="0.164169" y="-336.635" z="-0.974121" />
+        </offset>
+    </entity>
+</model>

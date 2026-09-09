@@ -1,0 +1,113 @@
+<?xml version="1.0" ?>
+<GUILayout>
+	<Window Type="TLBB_MainFrame1" Name="Denaturalization_Frame">
+		<Property Name="UnifiedPosition" Value="{{0.4,0},{0.12,25}}" />
+		<Property Name="AbsoluteSize" Value="w:200 h:385" />
+		<Event Name="Hidden" Function="Denaturalization_OnHide();" />
+		 <Window Type="TLBB_DragTitle" Name="Denaturalization_Frame_Title">
+            <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+            <Property Name="Font" Value="YouYuan11.25" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="Text" Value="" />
+            <Property Name="DragTarget" Value="Denaturalization_Frame" />
+        </Window>
+    <Window Type="TLBB_ButtonHelp" Name="Denaturalization_Help">
+      <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+      <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+      <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*Shop&quot;);' />
+    </Window>
+    <Window Type="TLBB_ButtonClose" Name="Denaturalization_Close">
+      <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+      <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+      <Event Name="Clicked" Function="Denaturalization_Cancel_Click();" />
+    </Window>
+    <Window Type="TLBB_FramePlayer" Name="Denaturalization_FakeObject_Frame" >
+      <Property Name="Position" Value="x:0.05 y:0.102339" />
+      <Property Name="Size" Value="w:0.9000 h:0.780000" />
+      <Window Type="TLBB_MeshWindow" Name="Denaturalization_FakeObject" >
+        <Property Name="Position" Value="x:0.043243 y:0.041199" />
+        <Property Name="Size" Value="w:0.918919 h:0.876405" />
+        <Property Name="MouseHollow" Value="True" />
+        <Property Name="ShowControl" Value="Denaturalization_Frame" />
+      </Window>
+      <Window Type="TLBB_SimpleText" Name="Denaturalization_Level" >
+        <Property Name="Position" Value="x:0.030000 y:0.030000" />
+        <Property Name="UnifiedSize" Value="{{0.200000,37.000000},{0.000000,18.000000}" />
+        <Property Name="AlwaysOnTop" Value="true" />
+        <Property Name="HorzFormatting" Value="HorzCentred" />
+        <Property Name="TextColor" Value="FFFFF263" />
+        <Property Name="VertFormatting" Value="VertCentred" />
+      </Window>
+      <Window Type="TLBB_SimpleText" Name="Denaturalization_MenPai" >
+        <Property Name="UnifiedPosition" Value="{{0.800000,-5.000002},{0.030000,-0.010000}" />
+        <Property Name="UnifiedSize" Value="{{0.200000,-111.000002},{0.000000,9.990000}" />
+        <Property Name="AlwaysOnTop" Value="true" />
+        <Property Name="HorzFormatting" Value="HorzCentred" />
+        <Property Name="Text" Value="#{INTERFACE_XML_689}" />
+        <Property Name="TextColor" Value="FFFFF263" />
+        <Property Name="VertFormatting" Value="VertCentred" />
+      </Window>
+      <Window Type="TLBB_ButtonTurnLeft" Name="Denaturalization_Model_TurnLeft" >
+        <Property Name="Position" Value="x:0.050000 y:0.820000" />
+        <Property Name="AbsoluteSize" Value="w:25.000000 h:25.000000" />
+        <Event Name="CaptureLost" Function="Denaturalization_Modle_TurnLeft(0);" />
+        <Event Name="MouseButtonDown" Function="Denaturalization_Modle_TurnLeft(1);" />
+        <Event Name="MouseButtonUp" Function="Denaturalization_Modle_TurnLeft(0);" />
+      </Window>
+      <Window Type="TLBB_ButtonTurnRight" Name="Denaturalization_Model_TurnRight" >
+        <Property Name="Position" Value="x:0.810000 y:0.820000" />
+        <Property Name="AbsoluteSize" Value="w:25.000000 h:25.000000" />
+        <Event Name="CaptureLost" Function="Denaturalization_Modle_TurnRight(0);" />
+        <Event Name="MouseButtonDown" Function="Denaturalization_Modle_TurnRight(1);" />
+        <Event Name="MouseButtonUp" Function="Denaturalization_Modle_TurnRight(0);" />
+      </Window>
+      
+      <Window Type="TLBB_StaticImageNULL" Name="Denaturalization_IceFastness" >
+        <Property Name="UnifiedPosition" Value="{{0.300000,0.499998},{1.000000,-17.000000}" />
+        <Property Name="AbsoluteSize" Value="w:16.000000 h:16.000000" />
+        <Property Name="Image" Value="set:UIIcons image:Ice_Repellency_Normal" />
+        <Property Name="RiseOnClick" Value="False" />
+      </Window>
+      <Window Type="TLBB_StaticImageNULL" Name="Denaturalization_FireFastness" >
+        <Property Name="UnifiedPosition" Value="{{0.400000,-0.000001},{1.000000,-17.000000}" />
+        <Property Name="AbsoluteSize" Value="w:16.000000 h:16.000000" />
+        <Property Name="Image" Value="set:UIIcons image:Fire_Repellency_Normal" />
+        <Property Name="RiseOnClick" Value="False" />
+      </Window>
+      <Window Type="TLBB_StaticImageNULL" Name="Denaturalization_ThunderFastness" >
+        <Property Name="UnifiedPosition" Value="{{0.500000,0.500000},{1.000000,-17.000000}" />
+        <Property Name="AbsoluteSize" Value="w:16.000000 h:16.000000" />
+        <Property Name="Image" Value="set:UIIcons image:Thunder_Repellency_Normal" />
+        <Property Name="RiseOnClick" Value="False" />
+      </Window>
+      <Window Type="TLBB_StaticImageNULL" Name="Denaturalization_PoisonFastness" >
+        <Property Name="UnifiedPosition" Value="{{0.600000,-0.000004},{1.000000,-17.000000}" />
+        <Property Name="AbsoluteSize" Value="w:16.000000 h:16.000000" />
+        <Property Name="Image" Value="set:UIIcons image:Poison_Repellency_Normal" />
+        <Property Name="RiseOnClick" Value="False" />
+      </Window>
+    </Window>
+    <Window Type="TLBB_Frame_Lace5" Name="ZhuanXingDang_Blank">
+      <Property Name="UnifiedPosition" Value="{{0.000000,8.000000},{1.000000,-39.000000}" />
+      <Property Name="UnifiedSize" Value="{{1.000000,-16.000000},{0.000000,20.000000}" />
+      <Property Name="MouseHollow" Value="true" />
+      <Property Name="MouseMoveHollow" Value="true" />
+      <Property Name="MouseLButtonHollow" Value="true" />
+      <Property Name="MouseRButtonHollow" Value="true" />
+    </Window>
+    <Window Type="TLBB_ButtonCommon" Name="Denaturalization_Cancel">
+      <Property Name="UnifiedPosition" Value="{{0.5000000,43.000000},{1.000000,-39.000000}" />
+      <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+      <Event Name="Clicked" Function="Denaturalization_Cancel_Click()" />
+      <Property Name="Text" Value="#{INTERFACE_XML_542}" />
+    </Window>
+    <Window Type="TLBB_ButtonCommon" Name="Denaturalization_Ok">     
+      <Property Name="UnifiedPosition" Value="{{0.5000000,3.000000},{1.000000,-39.000000}" />
+      <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+      <Event Name="Clicked" Function="Denaturalization_OK_Click()" />
+      <Property Name="Text" Value="#{INTERFACE_XML_557}" />
+    </Window>
+	</Window>
+</GUILayout>

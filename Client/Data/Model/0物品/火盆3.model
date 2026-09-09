@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="火盆3.frame" />
+    <entity mesh="火盆3.mesh" node="火盆3">
+        <offset>
+            <translate x="3.56799e-022" y="-452.065" z="-1.96739e-005" />
+        </offset>
+    </entity>
+</model>

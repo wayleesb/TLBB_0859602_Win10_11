@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="峨嵋屏风.frame" />
+    <entity mesh="峨嵋屏风.mesh" node="峨嵋屏风" />
+    <entity mesh="峨嵋屏风旗2.mesh" />
+    <entity mesh="峨嵋屏风旗1.mesh" />
+</model>

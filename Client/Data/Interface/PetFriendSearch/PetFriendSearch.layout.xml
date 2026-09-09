@@ -1,0 +1,461 @@
+<?xml version="1.0" ?>
+<GUILayout>
+<Window Type="TLBB_MainFrame1" Name="PetFriendSearch_Frame" >
+	<Property Name="UnifiedPosition" Value="{{0.350000,0.000005},{0.120000,0.000002}" />
+	<Property Name="UnifiedSize" Value="{{0.000000,320.000000},{0.000000,390.000000}" />
+	<Window Type="TLBB_DragTitle" Name="PetFriendSearch_DragTitle" >
+		<Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+		<Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+		<Property Name="DragTarget" Value="PetFriendSearch_Frame" />
+		<Window Type="TLBB_SimpleText" Name="PetFriendSearch_PageHeader" >
+			<Property Name="Position" Value="x:0.000000 y:0.000000" />
+			<Property Name="Size" Value="w:1.000000 h:1.000000" />
+			<Property Name="Font" Value="YouYuan11.25" />
+			<Property Name="HorzFormatting" Value="HorzCentred" />
+			<Property Name="Text" Value="#{PETFRIEND_PROP_PET}" />
+			<Property Name="TextColor" Value="FFFFF263" />
+			<Property Name="VertFormatting" Value="VertCentred" />
+		</Window>
+	</Window>
+	<Window Type="TLBB_ButtonHelp" Name="PetFriendSearch_Help" >
+		<Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+		<Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+		<Event Name="Clicked" Function="Helper:GotoHelper('PetFriendSearch');" />
+	</Window>
+	<Window Type="TLBB_ButtonClose" Name="PetFriendSearch_Close" >
+		<Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+		<Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+		<Event Name="Clicked" Function="PetFriendSearch_Hide();" />
+	</Window>
+	<Window Type="DefaultWindow" Name="PetFriendSearch_Function_Frame" >
+		<Property Name="AbsolutePosition" Value="x:7.000000 y:36.000000" />
+		<Property Name="UnifiedSize" Value="{{1.000000,-13.000000},{1.000000,-55.000000}" />
+		<Window Type="TLBB_FramePet" Name="PetFriendSearch_Mode1_def" >
+			<Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,3.000000}" />
+			<Property Name="UnifiedSize" Value="{{0.600000,-0.800044},{0.000000,98.000000}" />
+			<Property Name="RiseOnClick" Value="False" />
+			<Window Type="TLBB_MeshWindow" Name="PetFriendSearch_PetModel1" >
+				<Property Name="Position" Value="x:0.100000 y:0.100000" />
+				<Property Name="Size" Value="w:0.800000 h:0.850000" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Property Name="ShowControl" Value="PetFriendSearch_Frame" />
+			</Window>
+			<Window Type="TLBB_SimpleText" Name="PetFriendSearch_Type1" >
+				<Property Name="Position" Value="x:0.300000 y:0.820000" />
+				<Property Name="UnifiedSize" Value="{{0.400000,-0.400006},{0.000000,20.000000}" />
+				<Property Name="HorzFormatting" Value="HorzCentred" />
+				<Property Name="Tooltip" Value="#{INTERFACE_XML_857}" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+			</Window>
+			<Window Type="TLBB_SimpleText" Name="PetFriendSearch_Flash_Name1" >
+				<Property Name="Position" Value="x:0.097933 y:0.050000" />
+				<Property Name="AbsoluteSize" Value="w:150.000000 h:30.000000" />
+				<Property Name="Font" Value="YouYuan11.25" />
+				<Property Name="HorzFormatting" Value="HorzCentred" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+			</Window>
+			<Window Type="TLBB_ButtonTurnLeft" Name="PetFriendSearch_PetModel1_TurnLeft" >
+				<Property Name="UnifiedPosition" Value="{{0.000000,4.000000},{1.000000,-23.000000}" />
+				<Property Name="AbsoluteSize" Value="w:20.000000 h:20.000000" />
+				<Event Name="CaptureLost" Function="PetFriendSearch_Modle_TurnLeft(5,0);" />
+				<Event Name="MouseButtonDown" Function="local mouse_button = CEArg:GetValue('MouseButton');if(mouse_button == 'LeftButton') then PetFriendSearch_Modle_TurnLeft(5,1) end;" />
+				<Event Name="MouseButtonUp" Function="local mouse_button = CEArg:GetValue('MouseButton');if(mouse_button == 'LeftButton') then PetFriendSearch_Modle_TurnLeft(5,0) end;" />
+			</Window>
+			<Window Type="TLBB_ButtonTurnRight" Name="PetFriendSearch_PetModel1_TurnRight" >
+				<Property Name="UnifiedPosition" Value="{{1.000000,-24.000000},{1.000000,-23.000000}" />
+				<Property Name="AbsoluteSize" Value="w:20.000000 h:20.000000" />
+				<Event Name="CaptureLost" Function="PetFriendSearch_Modle_TurnRight(5,0);" />
+				<Event Name="MouseButtonDown" Function="local mouse_button = CEArg:GetValue('MouseButton');if(mouse_button == 'LeftButton') then PetFriendSearch_Modle_TurnRight(5,1) end;" />
+				<Event Name="MouseButtonUp" Function="local mouse_button = CEArg:GetValue('MouseButton');if(mouse_button == 'LeftButton') then PetFriendSearch_Modle_TurnRight(5,0) end;" />
+			</Window>
+		</Window>
+		<Window Type="TLBB_FramePet" Name="PetFriendSearch_Mode2_def" >
+			<Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,158.000000}" />
+			<Property Name="UnifiedSize" Value="{{0.600000,-0.800044},{0.000000,98.000000}" />
+			<Property Name="RiseOnClick" Value="False" />
+			<Window Type="TLBB_MeshWindow" Name="PetFriendSearch_PetModel2" >
+				<Property Name="Position" Value="x:0.100000 y:0.100000" />
+				<Property Name="Size" Value="w:0.800000 h:0.850000" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Property Name="ShowControl" Value="PetFriendSearch_Frame" />
+			</Window>
+			<Window Type="TLBB_SimpleText" Name="PetFriendSearch_Type2" >
+				<Property Name="Position" Value="x:0.300000 y:0.820000" />
+				<Property Name="UnifiedSize" Value="{{0.400000,-0.400006},{0.000000,20.000000}" />
+				<Property Name="HorzFormatting" Value="HorzCentred" />
+				<Property Name="Tooltip" Value="#{INTERFACE_XML_857}" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+			</Window>
+			<Window Type="TLBB_SimpleText" Name="PetFriendSearch_Flash_Name2" >
+				<Property Name="Position" Value="x:0.097933 y:0.050000" />
+				<Property Name="AbsoluteSize" Value="w:150.000000 h:30.000000" />
+				<Property Name="Font" Value="YouYuan11.25" />
+				<Property Name="HorzFormatting" Value="HorzCentred" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+			</Window>
+			<Window Type="TLBB_ButtonTurnLeft" Name="PetFriendSearch_PetModel2_TurnLeft" >
+				<Property Name="UnifiedPosition" Value="{{0.000000,4.000000},{1.000000,-23.000000}" />
+				<Property Name="AbsoluteSize" Value="w:20.000000 h:20.000000" />
+				<Event Name="CaptureLost" Function="PetFriendSearch_Modle_TurnLeft(6,0);" />
+				<Event Name="MouseButtonDown" Function="local mouse_button = CEArg:GetValue('MouseButton');if(mouse_button == 'LeftButton') then PetFriendSearch_Modle_TurnLeft(6,1) end;" />
+				<Event Name="MouseButtonUp" Function="local mouse_button = CEArg:GetValue('MouseButton');if(mouse_button == 'LeftButton') then PetFriendSearch_Modle_TurnLeft(6,0) end;" />
+			</Window>
+			<Window Type="TLBB_ButtonTurnRight" Name="PetFriendSearch_PetModel2_TurnRight" >
+				<Property Name="UnifiedPosition" Value="{{1.000000,-24.000000},{1.000000,-23.000000}" />
+				<Property Name="AbsoluteSize" Value="w:20.000000 h:20.000000" />
+				<Event Name="CaptureLost" Function="PetFriendSearch_Modle_TurnRight(6,0);" />
+				<Event Name="MouseButtonDown" Function="local mouse_button = CEArg:GetValue('MouseButton');if(mouse_button == 'LeftButton') then PetFriendSearch_Modle_TurnRight(6,1) end;" />
+				<Event Name="MouseButtonUp" Function="local mouse_button = CEArg:GetValue('MouseButton');if(mouse_button == 'LeftButton') then PetFriendSearch_Modle_TurnRight(6,0) end;" />
+			</Window>
+		</Window>
+		<Window Type="TLBB_SimpleText" Name="PetFriendSearch_Master1Info" >
+			<Property Name="UnifiedPosition" Value="{{0.610000,-0.810013},{0.000000,0.000000}" />
+			<Property Name="UnifiedSize" Value="{{0.380000,1.020025},{0.000000,18.000000}" />
+			<Property Name="HorzFormatting" Value="HorzCentred" />
+			<Property Name="RiseOnClick" Value="False" />
+			<Property Name="Text" Value="#{INTERFACE_XML_1141}" />
+			<Property Name="TextColor" Value="FFFFF263" />
+			<Property Name="VertFormatting" Value="VertCentred" />
+		</Window>
+		<Window Type="TLBB_SimpleTextFrame" Name="PetFriendSearch_Master1_Name" >
+			<Property Name="UnifiedPosition" Value="{{0.610000,-0.810013},{0.000000,20.000000}" />
+			<Property Name="UnifiedSize" Value="{{0.000000,38.000000},{0.000000,18.000000}" />
+			<Property Name="HorzFormatting" Value="LeftAligned" />
+			<Property Name="RiseOnClick" Value="False" />
+			<Property Name="Text" Value="#{INTERFACE_XML_1142}" />
+			<Property Name="TextColor" Value="FFFFF263" />
+			<Property Name="VertFormatting" Value="VertCentred" />
+		</Window>
+		<Window Type="TLBB_SimpleTextFrame" Name="PetFriendSearch_Master1_NameInfo" >
+			<Property Name="UnifiedPosition" Value="{{0.610000,38.729996},{0.000000,20.000000}" />
+			<Property Name="UnifiedSize" Value="{{0.000000,80.000000},{0.000000,18.000000}" />
+			<Property Name="HorzFormatting" Value="LeftAligned" />
+			<Property Name="RiseOnClick" Value="False" />
+			<Property Name="Text" Value="" />
+			<Property Name="VertFormatting" Value="VertCentred" />
+		</Window>
+		<Window Type="TLBB_SimpleTextFrame" Name="PetFriendSearch_Master1_Level" >
+			<Property Name="UnifiedPosition" Value="{{0.610000,-0.810013},{0.000000,60.000000}" />
+			<Property Name="UnifiedSize" Value="{{0.000000,38.000000},{0.000000,18.000000}" />
+			<Property Name="HorzFormatting" Value="LeftAligned" />
+			<Property Name="RiseOnClick" Value="False" />
+			<Property Name="Text" Value="#{INTERFACE_XML_1144}" />
+			<Property Name="TextColor" Value="FFFFF263" />
+			<Property Name="VertFormatting" Value="VertCentred" />
+		</Window>
+		<Window Type="TLBB_SimpleTextFrame" Name="PetFriendSearch_Master1_LevelInfo" >
+			<Property Name="UnifiedPosition" Value="{{0.610000,39.729996},{0.000000,60.000000}" />
+			<Property Name="UnifiedSize" Value="{{0.000000,38.000000},{0.000000,18.000000}" />
+			<Property Name="HorzFormatting" Value="LeftAligned" />
+			<Property Name="RiseOnClick" Value="False" />
+			<Property Name="Text" Value="" />
+			<Property Name="VertFormatting" Value="VertCentred" />
+		</Window>
+		<Window Type="TLBB_SimpleTextFrame" Name="PetFriendSearch_Master1_ManPai" >
+			<Property Name="UnifiedPosition" Value="{{0.610000,-0.810013},{0.000000,40.000000}" />
+			<Property Name="UnifiedSize" Value="{{0.000000,38.000000},{0.000000,18.000000}" />
+			<Property Name="HorzFormatting" Value="LeftAligned" />
+			<Property Name="RiseOnClick" Value="False" />
+			<Property Name="Text" Value="#{INTERFACE_XML_1143}" />
+			<Property Name="TextColor" Value="FFFFF263" />
+			<Property Name="VertFormatting" Value="VertCentred" />
+		</Window>
+		<Window Type="TLBB_SimpleTextFrame" Name="PetFriendSearch_Master1_ManPaiInfo" >
+			<Property Name="UnifiedPosition" Value="{{0.610000,39.729996},{0.000000,40.000000}" />
+			<Property Name="UnifiedSize" Value="{{0.000000,50.000000},{0.000000,18.000000}" />
+			<Property Name="HorzFormatting" Value="LeftAligned" />
+			<Property Name="RiseOnClick" Value="False" />
+			<Property Name="Text" Value="" />
+			<Property Name="VertFormatting" Value="VertCentred" />
+		</Window>
+		<Window Type="TLBB_SimpleTextFrame" Name="PetFriendSearch_Master1_Gender" >
+			<Property Name="UnifiedPosition" Value="{{0.610000,-0.810013},{0.000000,80.000000}" />
+			<Property Name="UnifiedSize" Value="{{0.000000,38.000000},{0.000000,18.000000}" />
+			<Property Name="HorzFormatting" Value="LeftAligned" />
+			<Property Name="RiseOnClick" Value="False" />
+			<Property Name="Text" Value="#{INTERFACE_XML_1145}" />
+			<Property Name="TextColor" Value="FFFFF263" />
+			<Property Name="VertFormatting" Value="VertCentred" />
+		</Window>
+		<Window Type="TLBB_SimpleTextFrame" Name="PetFriendSearch_Master1_GenderInfo" >
+			<Property Name="UnifiedPosition" Value="{{0.610000,39.729996},{0.000000,80.000000}" />
+			<Property Name="UnifiedSize" Value="{{0.000000,38.000000},{0.000000,18.000000}" />
+			<Property Name="HorzFormatting" Value="LeftAligned" />
+			<Property Name="RiseOnClick" Value="False" />
+			<Property Name="Text" Value="" />
+			<Property Name="VertFormatting" Value="VertCentred" />
+		</Window>
+		<Window Type="TLBB_SimpleMulitiTextFrame" Name="PetFriendSearch_Pet1_Line" >
+			<Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,104.000000}" />
+			<Property Name="UnifiedSize" Value="{{1.000000,0.000000},{0.000000,50.000000}" />
+			<Property Name="RiseOnClick" Value="False" />
+			<Window Type="TLBB_SimpleTextFrame" Name="PetFriendSearch_Master1Pet_Name" >
+				<Property Name="UnifiedPosition" Value="{{0.610000,-179.810013},{0.000000,5.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.000000,60.000000},{0.000000,18.000000}" />
+				<Property Name="HorzFormatting" Value="LeftAligned" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Property Name="Text" Value="#{INTERFACE_XML_1146}" />
+				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+			</Window>
+			<Window Type="TLBB_SimpleTextFrame" Name="PetFriendSearch_Master1Pet_NameInfo" >
+				<Property Name="UnifiedPosition" Value="{{0.610000,-115.810013},{0.000000,5.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.000000,82.000000},{0.000000,18.000000}" />
+				<Property Name="HorzFormatting" Value="LeftAligned" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Property Name="Text" Value="" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+			</Window>
+			<Window Type="TLBB_SimpleTextFrame" Name="PetFriendSearch_Master1Pet_Gender" >
+				<Property Name="UnifiedPosition" Value="{{0.610000,-32.810013},{0.000000,5.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.000000,40.000000},{0.000000,18.000000}" />
+				<Property Name="HorzFormatting" Value="LeftAligned" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Property Name="Text" Value="#{INTERFACE_XML_1145}" />
+				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+			</Window>
+			<Window Type="TLBB_SimpleTextFrame" Name="PetFriendSearch_Master1Pet_GenderInfo" >
+				<Property Name="UnifiedPosition" Value="{{0.610000,3.689987},{0.000000,5.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.000000,20.000000},{0.000000,18.000000}" />
+				<Property Name="HorzFormatting" Value="LeftAligned" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Property Name="Text" Value="" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+			</Window>
+			<Window Type="TLBB_SimpleTextFrame" Name="PetFriendSearch_Master1Pet_ChenZhang" >
+				<Property Name="UnifiedPosition" Value="{{0.610000,-179.810013},{0.000000,27.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.000000,45.000000},{0.000000,18.000000}" />
+				<Property Name="HorzFormatting" Value="LeftAligned" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Property Name="Text" Value="#{INTERFACE_XML_1147}" />
+				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+			</Window>
+			<Window Type="TLBB_SimpleTextFrame" Name="PetFriendSearch_Master1Pet_ChenZhangInfo" >
+				<Property Name="UnifiedPosition" Value="{{0.610000,-115.810013},{0.000000,27.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.000000,50.000000},{0.000000,18.000000}" />
+				<Property Name="HorzFormatting" Value="LeftAligned" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Property Name="Text" Value="" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+			</Window>
+			<Window Type="TLBB_SimpleTextFrame" Name="PetFriendSearch_Master1Pet_Level" >
+				<Property Name="UnifiedPosition" Value="{{0.610000,-32.810013},{0.000000,27.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.000000,38.000000},{0.000000,18.000000}" />
+				<Property Name="HorzFormatting" Value="LeftAligned" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Property Name="Text" Value="#{INTERFACE_XML_1144}" />
+				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+			</Window>
+			<Window Type="TLBB_SimpleTextFrame" Name="PetFriendSearch_Master1Pet_LevelInfo" >
+				<Property Name="UnifiedPosition" Value="{{0.610000,3.689987},{0.000000,27.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.000000,38.000000},{0.000000,18.000000}" />
+				<Property Name="HorzFormatting" Value="LeftAligned" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Property Name="Text" Value="105" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+			</Window>
+			<Window Type="TLBB_ButtonCommon" Name="PetFriendSearch_Pet1_Investigate" >
+				<Property Name="UnifiedPosition" Value="{{1.000000,-81.000000},{0.000000,4.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.000000,75.000000},{0.000000,20.000000}" />
+				<Property Name="Text" Value="#{INTERFACE_XML_153}" />
+				<Event Name="Clicked" Function="PetFriendSearch_ShowTargetFrame(5);" />
+			</Window>
+			<Window Type="TLBB_ButtonCommon" Name="PetFriendSearch_Pet1_Acquaintance" >
+				<Property Name="UnifiedPosition" Value="{{1.000000,-81.000000},{0.000000,26.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.000000,75.000000},{0.000000,20.000000}" />
+				<Property Name="Text" Value="#{INTERFACE_XML_374}" />
+				<Event Name="Clicked" Function="PetFriendSearch_SendMail(5);" />
+			</Window>
+		</Window>
+		<Window Type="TLBB_SimpleText" Name="PetFriendSearch_Master2Info2" >
+			<Property Name="UnifiedPosition" Value="{{0.610000,-1.080017},{0.000000,155.000000}" />
+			<Property Name="UnifiedSize" Value="{{0.380000,1.020009},{0.000000,18.000000}" />
+			<Property Name="HorzFormatting" Value="HorzCentred" />
+			<Property Name="RiseOnClick" Value="False" />
+			<Property Name="Text" Value="#{INTERFACE_XML_1141}" />
+			<Property Name="TextColor" Value="FFFFF263" />
+			<Property Name="VertFormatting" Value="VertCentred" />
+		</Window>
+		<Window Type="TLBB_SimpleTextFrame" Name="PetFriendSearch_Master2_Name" >
+			<Property Name="UnifiedPosition" Value="{{0.610000,-1.080017},{0.000000,173.000000}" />
+			<Property Name="UnifiedSize" Value="{{0.000000,38.000000},{0.000000,18.000000}" />
+			<Property Name="HorzFormatting" Value="LeftAligned" />
+			<Property Name="RiseOnClick" Value="False" />
+			<Property Name="Text" Value="#{INTERFACE_XML_1142}" />
+			<Property Name="TextColor" Value="FFFFF263" />
+			<Property Name="VertFormatting" Value="VertCentred" />
+		</Window>
+		<Window Type="TLBB_SimpleTextFrame" Name="PetFriendSearch_Master2_NameInfo" >
+			<Property Name="UnifiedPosition" Value="{{0.610000,36.689987},{0.000000,173.000000}" />
+			<Property Name="UnifiedSize" Value="{{0.000000,79.999969},{0.000000,18.000000}" />
+			<Property Name="HorzFormatting" Value="LeftAligned" />
+			<Property Name="RiseOnClick" Value="False" />
+			<Property Name="Text" Value="" />
+			<Property Name="VertFormatting" Value="VertCentred" />
+		</Window>
+		<Window Type="TLBB_SimpleTextFrame" Name="PetFriendSearch_Master2_Level" >
+			<Property Name="UnifiedPosition" Value="{{0.610000,-1.080017},{0.000000,192.000000}" />
+			<Property Name="UnifiedSize" Value="{{0.000000,38.000000},{0.000000,18.000000}" />
+			<Property Name="HorzFormatting" Value="LeftAligned" />
+			<Property Name="RiseOnClick" Value="False" />
+			<Property Name="Text" Value="#{INTERFACE_XML_1144}" />
+			<Property Name="TextColor" Value="FFFFF263" />
+			<Property Name="VertFormatting" Value="VertCentred" />
+		</Window>
+		<Window Type="TLBB_SimpleTextFrame" Name="PetFriendSearch_Master2_LevelInfo" >
+			<Property Name="UnifiedPosition" Value="{{0.610000,38.729996},{0.000000,192.000000}" />
+			<Property Name="UnifiedSize" Value="{{0.000000,38.000000},{0.000000,18.000000}" />
+			<Property Name="HorzFormatting" Value="LeftAligned" />
+			<Property Name="RiseOnClick" Value="False" />
+			<Property Name="Text" Value="" />
+			<Property Name="VertFormatting" Value="VertCentred" />
+		</Window>
+		<Window Type="TLBB_SimpleTextFrame" Name="PetFriendSearch_Master2_ManPai" >
+			<Property Name="UnifiedPosition" Value="{{0.610000,-1.080017},{0.000000,212.000000}" />
+			<Property Name="UnifiedSize" Value="{{0.000000,38.000000},{0.000000,18.000000}" />
+			<Property Name="HorzFormatting" Value="LeftAligned" />
+			<Property Name="RiseOnClick" Value="False" />
+			<Property Name="Text" Value="#{INTERFACE_XML_1144}" />
+			<Property Name="TextColor" Value="FFFFF263" />
+			<Property Name="VertFormatting" Value="VertCentred" />
+		</Window>
+		<Window Type="TLBB_SimpleTextFrame" Name="PetFriendSearch_Master2_ManPaiInfo" >
+			<Property Name="UnifiedPosition" Value="{{0.610000,38.729996},{0.000000,212.000000}" />
+			<Property Name="UnifiedSize" Value="{{0.000000,50.000000},{0.000000,18.000000}" />
+			<Property Name="HorzFormatting" Value="LeftAligned" />
+			<Property Name="RiseOnClick" Value="False" />
+			<Property Name="Text" Value="" />
+			<Property Name="VertFormatting" Value="VertCentred" />
+		</Window>
+		<Window Type="TLBB_SimpleTextFrame" Name="PetFriendSearch_Master2_Gender" >
+			<Property Name="UnifiedPosition" Value="{{0.610000,-1.080017},{0.000000,233.000000}" />
+			<Property Name="UnifiedSize" Value="{{0.000000,38.000000},{0.000000,18.000000}" />
+			<Property Name="HorzFormatting" Value="LeftAligned" />
+			<Property Name="RiseOnClick" Value="False" />
+			<Property Name="Text" Value="#{INTERFACE_XML_1145}" />
+			<Property Name="TextColor" Value="FFFFF263" />
+			<Property Name="VertFormatting" Value="VertCentred" />
+		</Window>
+		<Window Type="TLBB_SimpleTextFrame" Name="PetFriendSearch_Master2_GenderInfo" >
+			<Property Name="UnifiedPosition" Value="{{0.610000,38.729996},{0.000000,233.000000}" />
+			<Property Name="UnifiedSize" Value="{{0.000000,38.000000},{0.000000,18.000000}" />
+			<Property Name="HorzFormatting" Value="LeftAligned" />
+			<Property Name="RiseOnClick" Value="False" />
+			<Property Name="Text" Value="" />
+			<Property Name="VertFormatting" Value="VertCentred" />
+		</Window>
+		<Window Type="TLBB_SimpleMulitiTextFrame" Name="PetFriendSearch_Pet2_Line" >
+			<Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,259.000000}" />
+			<Property Name="UnifiedSize" Value="{{1.000000,0.000000},{0.000000,50.000000}" />
+			<Property Name="RiseOnClick" Value="False" />
+			<Window Type="TLBB_SimpleTextFrame" Name="PetFriendSearch_Master2Pet_Name" >
+				<Property Name="UnifiedPosition" Value="{{0.610000,-179.810013},{0.000000,5.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.000000,60.000000},{0.000000,18.000000}" />
+				<Property Name="HorzFormatting" Value="LeftAligned" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Property Name="Text" Value="#{INTERFACE_XML_1146}" />
+				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+			</Window>
+			<Window Type="TLBB_SimpleTextFrame" Name="PetFriendSearch_Master2Pet_NameInfo" >
+				<Property Name="UnifiedPosition" Value="{{0.610000,-116.270004},{0.000000,5.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.000000,82.000000},{0.000000,18.000000}" />
+				<Property Name="HorzFormatting" Value="LeftAligned" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Property Name="Text" Value="" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+			</Window>
+			<Window Type="TLBB_SimpleTextFrame" Name="PetFriendSearch_Master2Pet_Gender" >
+				<Property Name="UnifiedPosition" Value="{{0.610000,-32.810013},{0.000000,5.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.000000,38.000000},{0.000000,18.000000}" />
+				<Property Name="HorzFormatting" Value="LeftAligned" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Property Name="Text" Value="#{INTERFACE_XML_1145}" />
+				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+			</Window>
+			<Window Type="TLBB_SimpleTextFrame" Name="PetFriendSearch_Master2Pet_GenderInfo" >
+				<Property Name="UnifiedPosition" Value="{{0.610000,3.689987},{0.000000,5.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.000000,20.000000},{0.000000,18.000000}" />
+				<Property Name="HorzFormatting" Value="LeftAligned" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Property Name="Text" Value="" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+			</Window>
+			<Window Type="TLBB_SimpleTextFrame" Name="PetFriendSearch_Master2Pet_ChenZhang" >
+				<Property Name="UnifiedPosition" Value="{{0.610000,-179.810013},{0.000000,27.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.000000,45.000000},{0.000000,18.000000}" />
+				<Property Name="HorzFormatting" Value="LeftAligned" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Property Name="Text" Value="#{INTERFACE_XML_1147}" />
+				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+			</Window>
+			<Window Type="TLBB_SimpleTextFrame" Name="PetFriendSearch_Master2Pet_ChenZhangInfo" >
+				<Property Name="UnifiedPosition" Value="{{0.610000,-115.540009},{0.000000,27.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.000000,50.000000},{0.000000,18.000000}" />
+				<Property Name="HorzFormatting" Value="LeftAligned" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Property Name="Text" Value="" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+			</Window>
+			<Window Type="TLBB_SimpleTextFrame" Name="PetFriendSearch_Master2Pet_Level" >
+				<Property Name="UnifiedPosition" Value="{{0.610000,-32.810013},{0.000000,27.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.000000,38.000000},{0.000000,18.000000}" />
+				<Property Name="HorzFormatting" Value="LeftAligned" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Property Name="Text" Value="#{INTERFACE_XML_1144}" />
+				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+			</Window>
+			<Window Type="TLBB_SimpleTextFrame" Name="PetFriendSearch_Master2Pet_LevelInfo" >
+				<Property Name="UnifiedPosition" Value="{{0.610000,3.689987},{0.000000,27.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.000000,38.000000},{0.000000,18.000000}" />
+				<Property Name="HorzFormatting" Value="LeftAligned" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Property Name="Text" Value="" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+			</Window>
+			<Window Type="TLBB_ButtonCommon" Name="PetFriendSearch_Pet2_Investigate" >
+				<Property Name="UnifiedPosition" Value="{{1.000000,-81.000000},{0.000000,4.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.000000,75.000000},{0.000000,20.000000}" />
+				<Property Name="Text" Value="#{INTERFACE_XML_153}" />
+				<Event Name="Clicked" Function="PetFriendSearch_ShowTargetFrame(6);" />
+			</Window>
+			<Window Type="TLBB_ButtonCommon" Name="PetFriendSearch_Pet2_Acquaintance" >
+				<Property Name="UnifiedPosition" Value="{{1.000000,-81.000000},{0.000000,26.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.000000,75.000000},{0.000000,20.000000}" />
+				<Property Name="Text" Value="#{INTERFACE_XML_374}" />
+				<Event Name="Clicked" Function="PetFriendSearch_SendMail(6);" />
+			</Window>
+		</Window>
+		<Window Type="TLBB_ButtonCommon" Name="PetFriendSearch_PageUp" >
+			<Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-20.000000}" />
+			<Property Name="UnifiedSize" Value="{{0.000000,70.000000},{0.000000,20.000000}" />
+			<Property Name="Text" Value="#{INTERFACE_XML_1060}" />
+			<Event Name="Clicked" Function="PetFriendSearch_PrevPage();" />
+		</Window>
+		<Window Type="TLBB_ButtonCommon" Name="PetFriendSearch_PageDown" >
+			<Property Name="UnifiedPosition" Value="{{0.000000,70.000000},{1.000000,-20.000000}" />
+			<Property Name="UnifiedSize" Value="{{0.000000,70.000000},{0.000000,20.000000}" />
+			<Property Name="Text" Value="#{INTERFACE_XML_1061}" />
+			<Event Name="Clicked" Function="PetFriendSearch_NextPage();" />
+		</Window>
+		<Window Type="TLBB_Frame_Lace5" Name="PetFriendSearch_Blank" >
+			<Property Name="UnifiedPosition" Value="{{0.000000,140.000000},{1.000000,-20.000000}" />
+			<Property Name="UnifiedSize" Value="{{1.000000,-200.000000},{0.000000,20.000000}" />
+		</Window>
+		<Window Type="TLBB_ButtonCommon" Name="PetFriendSearch_Cancel" >
+			<Property Name="UnifiedPosition" Value="{{1.000000,-60.000000},{1.000000,-20.000000}" />
+			<Property Name="UnifiedSize" Value="{{0.000000,60.000000},{0.000000,20.000000}" />
+			<Property Name="Text" Value="#{INTERFACE_XML_425}" />
+			<Event Name="Clicked" Function="PetFriendSearch_Hide();" />
+		</Window>
+	</Window>
+</Window>
+
+
+</GUILayout>

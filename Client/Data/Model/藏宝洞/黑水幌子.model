@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="黑水幌子.frame" />
+    <entity mesh="黑水幌子.mesh" node="黑水幌子" />
+    <entity mesh="黑水灯笼.mesh" />
+</model>

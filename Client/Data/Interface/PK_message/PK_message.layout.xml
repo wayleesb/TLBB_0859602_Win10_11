@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame0" Name="PK_Frame">
+        <Property Name="UnifiedPosition" Value="{{0.4,0},{0.15,0}}" />
+        <Property Name="AbsoluteSize" Value="w:256 h:128" />
+        <Window Type="TLBB_DragTitle" Name="PK_message_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="PK_Frame" />
+            <Window Type="TLBB_SimpleText" Name="PK_message_Title">
+                <Property Name="Position" Value="x:0.0 y:0.0" />
+                <Property Name="Size" Value="w:1.0 h:1.0" />
+                <Property Name="Text" Value="#{INTERFACE_XML_44}" />
+                <Property Name="Font" Value="YouYuan11.25" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="PK_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function="this:Hide();" />
+        </Window>
+        <Window Type="TLBB_ButtonHelp" Name="PK_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*PK_Message&quot;);' />
+        </Window>
+        <Window Type="DefaultWindow" Name="PK_message_Frame_Client">
+            <Property Name="AbsolutePosition" Value="x:7.000000 y:36.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-13.000000},{1.000000,-55.000000}" />
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="PK_Info">
+                <Property Name="Position" Value="w:0.0 h:0.0" />
+                <Property Name="UnifiedSize" Value="{{1.000000,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_524}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAliagn" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="PK_ID">
+                <Property Name="Position" Value="x:0.1 y:0.33" />
+                <Property Name="UnifiedSize" Value="{{0.2,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="ID:" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAliagn" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_EditBoxNormal" Name="PK_Input_ID">
+                <Property Name="Position" Value="x:0.3 y:0.33" />
+                <Property Name="UnifiedSize" Value="{{0.4,0.000000},{0.000000,20.000000}" />
+                <Property Name="ValidationString" Value="[0-9a-fA-F]*" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon2" Name="PK_Input_ID_OK">
+                <Property Name="Position" Value="x:0.72 y:0.33" />
+                <Property Name="UnifiedSize" Value="{{0.2,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_557}" />
+                <Event Name="Clicked" Function="PK_message_PK_Input_ID_OK_Clicked();" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="PK_Name">
+                <Property Name="Position" Value="x:0.1 y:0.65" />
+                <Property Name="UnifiedSize" Value="{{0.2,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_463}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAliagn" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_EditBoxNormal" Name="PK_Input_Name">
+                <Property Name="Position" Value="x:0.3 y:0.65" />
+                <Property Name="UnifiedSize" Value="{{0.4,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_908}" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon2" Name="PK_Input_Name_OK">
+                <Property Name="Position" Value="x:0.72 y:0.65" />
+                <Property Name="UnifiedSize" Value="{{0.2,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_557}" />
+                <Event Name="Clicked" Function="PK_message_PK_Input_Name_OK_Clicked();" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

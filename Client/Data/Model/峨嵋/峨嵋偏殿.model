@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="峨嵋偏殿.frame" />
+    <entity mesh="峨嵋偏殿.mesh" node="峨嵋偏殿" />
+    <entity mesh="峨嵋偏殿绸带01.mesh" />
+    <entity mesh="峨嵋偏殿绸带02.mesh" />
+    <entity mesh="峨嵋偏殿绸带03.mesh" />
+    <entity mesh="峨嵋偏殿绸带04.mesh" />
+    <entity mesh="娥眉偏殿灯笼1.mesh" node="娥眉偏殿灯笼1">
+        <offset>
+            <translate x="0.164158" y="-336.635" z="-0.974152" />
+        </offset>
+    </entity>
+    <entity mesh="娥眉偏殿灯笼2.mesh" node="娥眉偏殿灯笼2">
+        <offset>
+            <translate x="0.16415" y="-336.635" z="-0.974152" />
+        </offset>
+    </entity>
+</model>

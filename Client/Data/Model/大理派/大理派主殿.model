@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="大理派主殿.frame" />
+    <entity mesh="大理派主殿铃铛14.mesh" node="大理派主殿铃铛14">
+        <offset>
+            <translate x="-634.216" y="-239.608" z="449.584" />
+        </offset>
+    </entity>
+    <entity mesh="大理派主殿.mesh" node="大理派主殿" />
+    <entity mesh="大理派主殿铃铛01.mesh" node="大理派主殿铃铛01">
+        <offset>
+            <translate x="451.549" y="-476.882" z="-210.223" />
+        </offset>
+    </entity>
+    <entity mesh="大理派主殿铃铛02.mesh" node="大理派主殿铃铛02">
+        <offset>
+            <translate x="-385.398" y="-476.882" z="-210.223" />
+        </offset>
+    </entity>
+    <entity mesh="大理派主殿铃铛03.mesh" node="大理派主殿铃铛03">
+        <offset>
+            <translate x="-634.216" y="-239.608" z="-102.239" />
+        </offset>
+    </entity>
+    <entity mesh="大理派主殿铃铛04.mesh" node="大理派主殿铃铛04">
+        <offset>
+            <translate x="-409.826" y="-226.799" z="-265.2" />
+        </offset>
+    </entity>
+    <entity mesh="大理派主殿铃铛05.mesh" node="大理派主殿铃铛05">
+        <offset>
+            <translate x="-218.18" y="-222.295" z="-481.767" />
+        </offset>
+    </entity>
+    <entity mesh="大理派主殿铃铛06.mesh" node="大理派主殿铃铛06">
+        <offset>
+            <translate x="301.287" y="-222.295" z="-485.354" />
+        </offset>
+    </entity>
+    <entity mesh="大理派主殿铃铛07.mesh" node="大理派主殿铃铛07">
+        <offset>
+            <translate x="475.977" y="-226.799" z="-265.2" />
+        </offset>
+    </entity>
+    <entity mesh="大理派主殿铃铛08.mesh" node="大理派主殿铃铛08">
+        <offset>
+            <translate x="704.503" y="-239.608" z="-102.239" />
+        </offset>
+    </entity>
+    <entity mesh="大理派主殿铃铛09.mesh" node="大理派主殿铃铛09">
+        <offset>
+            <translate x="-385.398" y="-476.882" z="460.025" />
+        </offset>
+    </entity>
+    <entity mesh="大理派主殿铃铛10.mesh" node="大理派主殿铃铛10">
+        <offset>
+            <translate x="451.549" y="-476.882" z="460.025" />
+        </offset>
+    </entity>
+    <entity mesh="大理派主殿铃铛11.mesh" node="大理派主殿铃铛11">
+        <offset>
+            <translate x="475.977" y="-226.8" z="515.001" />
+        </offset>
+    </entity>
+    <entity mesh="大理派主殿铃铛12.mesh" node="大理派主殿铃铛12">
+        <offset>
+            <translate x="-409.826" y="-226.799" z="515.001" />
+        </offset>
+    </entity>
+    <entity mesh="大理派主殿铃铛13.mesh" node="大理派主殿铃铛13">
+        <offset>
+            <translate x="704.503" y="-239.608" z="449.584" />
+        </offset>
+    </entity>
+</model>

@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+	<Imageset Name="Button3" Imagefile="Common/Button03.tga" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="false">
+		<Image Name="BtnCommon_Left_Pushed" XPos="0" YPos="0" Width="6" Height="40" />
+		<Image Name="BtnCommon_Mid_Pushed" XPos="6" YPos="0" Width="93" Height="40" />
+		<Image Name="BtnCommon_Right_Pushed" XPos="99" YPos="0" Width="6" Height="40" />			
+		<Image Name="BtnCommon_Left_Hover" XPos="106" YPos="0" Width="6" Height="40" />
+		<Image Name="BtnCommon_Mid_Hover" XPos="112" YPos="0" Width="93" Height="40" />
+		<Image Name="BtnCommon_Right_Hover" XPos="205" YPos="0" Width="6" Height="40" />			
+		<Image Name="BtnCommon_Left_Disable" XPos="0" YPos="41" Width="6" Height="40" />
+		<Image Name="BtnCommon_Mid_Disable" XPos="6" YPos="41" Width="93" Height="40" />
+		<Image Name="BtnCommon_Right_Disable" XPos="99" YPos="41" Width="6" Height="40" />			
+		<Image Name="BtnCommon_Left_Normal" XPos="106" YPos="41" Width="6" Height="40" />
+		<Image Name="BtnCommon_Mid_Normal" XPos="112" YPos="41" Width="93" Height="40" />
+		<Image Name="BtnCommon_Right_Normal" XPos="205" YPos="41" Width="6" Height="40" />	
+		
+		
+		<Image Name="BtnUp_Hover" XPos="45" YPos="91" Width="27" Height="17" />
+		<Image Name="BtnUp_Normal" XPos="45" YPos="173" Width="27" Height="17" />
+		<Image Name="BtnUp_Pushed" XPos="162" YPos="172" Width="27" Height="17" />
+		
+		<Image Name="BtnDown_Hover" XPos="36" YPos="130" Width="46" Height="41" />
+		<Image Name="BtnDown_Normal" XPos="36" YPos="212" Width="46" Height="41" />
+		<Image Name="BtnDown_Pushed" XPos="153" YPos="211" Width="46" Height="41" />
+		
+		<Image Name="BtnLeft_Hover" XPos="1" YPos="108" Width="41" Height="25" />
+		<Image Name="BtnLeft_Normal" XPos="1" YPos="190" Width="41" Height="25" />
+		<Image Name="BtnLeft_Pushed" XPos="118" YPos="189" Width="41" Height="25" />
+		
+		<Image Name="BtnRight_Hover" XPos="75" YPos="107" Width="41" Height="25" />
+		<Image Name="BtnRight_Normal" XPos="75" YPos="189" Width="41" Height="25" />
+		<Image Name="BtnRight_Pushed" XPos="192" YPos="188" Width="41" Height="25" />
+
+    <Image Name="QuestButton_Normal" XPos="129" YPos="83" Width="124" Height="25" />
+    <Image Name="QuestButton_Hover" XPos="129" YPos="108" Width="124" Height="25" />
+    <Image Name="QuestButton_Pushed" XPos="129" YPos="137" Width="124" Height="25" />
+    <Image Name="QuestButton_Disabled" XPos="129" YPos="83" Width="124" Height="25" />
+
+    <Image Name="ComboListButton_Normal" XPos="218" YPos="0" Width="19" Height="18" />
+    <Image Name="ComboListButton_Hover" XPos="237" YPos="18" Width="19" Height="18" />
+    <Image Name="ComboListButton_Pushed" XPos="237" YPos="0" Width="19" Height="18" />
+    <Image Name="ComboListButton_Disabled" XPos="218" YPos="18" Width="19" Height="18" />
+
+    <Image Name="EditBox_L" XPos="218" YPos="36" Width="6" Height="18" />
+    <Image Name="EditBox_R" XPos="236" YPos="36" Width="6" Height="18" />
+    <Image Name="EditBox_M" XPos="225" YPos="36" Width="10" Height="18" />
+    
+	</Imageset>

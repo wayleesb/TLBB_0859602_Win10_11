@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="太湖水师建筑02.frame" />
+    <entity mesh="太湖水师建筑02.mesh" node="太湖水师建筑02" />
+    <entity mesh="太湖水师建筑02灯01.mesh" />
+    <entity mesh="太湖水师建筑02灯02.mesh" />
+</model>

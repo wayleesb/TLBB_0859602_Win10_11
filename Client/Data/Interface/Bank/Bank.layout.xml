@@ -1,0 +1,332 @@
+<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame1" Name="Bank_Frame">
+        <Property Name="UnifiedPosition" Value="{{0.5,-120},{0.2,0}}" />
+        <Property Name="AbsoluteSize" Value="w:240 h:335" />
+        <Event Name="Hidden" Function="Bank_Close_Clicked();" />
+        <Window Type="TLBB_ButtonHelp" Name="Bank_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*Bank&quot;);' />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="Bank_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function="Bank_Close_Clicked();" />
+        </Window>
+        <Window Type="TLBB_DragTitle" Name="Bank_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="Bank_Frame" />
+            <Property Name="Font" Value="YouYuan11.25" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="Text" Value="#{INTERFACE_XML_82}" />
+        </Window>
+        <Window Type="DefaultWindow" Name="Bank_Client">
+            <Property Name="AbsolutePosition" Value="x:7.000000 y:36.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-13.000000},{1.000000,-55.000000}" />
+            <Window Type="TLBB_SimpleText" Name="Bank_Text1">
+                <Property Name="AbsolutePosition" Value="x:8.000000 y:3.000000" />
+                <Property Name="AbsoluteSize" Value="w:210.000000 h:18.000000" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_727}" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="DefaultWindow" Name="Bank_Item_Set">
+                <Property Name="UnifiedPosition" Value="{{0.000000,19.000000},{0.000000,22.000000}" />
+                <Property Name="AbsoluteSize" Value="w:190.000000 h:150.000000" />
+                <Window Type="TLBB_ActionButton" Name="Bank_Item1">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,0.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="DragAcceptName" Value="B00" />
+                    <Property Name="DraggingEnabled" Value="True" />
+                    <Property Name="Empty" Value="True" />
+                    <Event Name="RBClicked" Function="Bank_Item1:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="Bank_Item2">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,38.000000},{0.000000,0.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="DragAcceptName" Value="B01" />
+                    <Property Name="DraggingEnabled" Value="True" />
+                    <Property Name="Empty" Value="True" />
+                    <Event Name="RBClicked" Function="Bank_Item2:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="Bank_Item3">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,76.000000},{0.000000,0.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="DragAcceptName" Value="B02" />
+                    <Property Name="DraggingEnabled" Value="True" />
+                    <Property Name="Empty" Value="True" />
+                    <Event Name="RBClicked" Function="Bank_Item3:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="Bank_Item4">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,114.000000},{0.000000,0.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="DragAcceptName" Value="B03" />
+                    <Property Name="DraggingEnabled" Value="True" />
+                    <Property Name="Empty" Value="True" />
+                    <Event Name="RBClicked" Function="Bank_Item4:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="Bank_Item5">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,152.000000},{0.000000,0.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="DragAcceptName" Value="B04" />
+                    <Property Name="DraggingEnabled" Value="True" />
+                    <Property Name="Empty" Value="True" />
+                    <Event Name="RBClicked" Function="Bank_Item5:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="Bank_Item6">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,38.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="DragAcceptName" Value="B05" />
+                    <Property Name="DraggingEnabled" Value="True" />
+                    <Property Name="Empty" Value="True" />
+                    <Event Name="RBClicked" Function="Bank_Item6:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="Bank_Item7">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,38.000000},{0.000000,38.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="DragAcceptName" Value="B06" />
+                    <Property Name="DraggingEnabled" Value="True" />
+                    <Property Name="Empty" Value="True" />
+                    <Event Name="RBClicked" Function="Bank_Item7:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="Bank_Item8">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,76.000000},{0.000000,38.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="DragAcceptName" Value="B07" />
+                    <Property Name="DraggingEnabled" Value="True" />
+                    <Property Name="Empty" Value="True" />
+                    <Event Name="RBClicked" Function="Bank_Item8:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="Bank_Item9">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,114.000000},{0.000000,38.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="DragAcceptName" Value="B08" />
+                    <Property Name="DraggingEnabled" Value="True" />
+                    <Property Name="Empty" Value="True" />
+                    <Event Name="RBClicked" Function="Bank_Item9:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="Bank_Item10">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,152.000000},{0.000000,38.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="DragAcceptName" Value="B09" />
+                    <Property Name="DraggingEnabled" Value="True" />
+                    <Property Name="Empty" Value="True" />
+                    <Event Name="RBClicked" Function="Bank_Item10:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="Bank_Item11">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,76.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="DragAcceptName" Value="B10" />
+                    <Property Name="DraggingEnabled" Value="True" />
+                    <Property Name="Empty" Value="True" />
+                    <Event Name="RBClicked" Function="Bank_Item11:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="Bank_Item12">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,38.000000},{0.000000,76.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="DragAcceptName" Value="B11" />
+                    <Property Name="DraggingEnabled" Value="True" />
+                    <Property Name="Empty" Value="True" />
+                    <Event Name="RBClicked" Function="Bank_Item12:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="Bank_Item13">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,76.000000},{0.000000,76.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="DragAcceptName" Value="B12" />
+                    <Property Name="DraggingEnabled" Value="True" />
+                    <Property Name="Empty" Value="True" />
+                    <Event Name="RBClicked" Function="Bank_Item13:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="Bank_Item14">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,114.000000},{0.000000,76.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="DragAcceptName" Value="B13" />
+                    <Property Name="DraggingEnabled" Value="True" />
+                    <Property Name="Empty" Value="True" />
+                    <Event Name="RBClicked" Function="Bank_Item14:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="Bank_Item15">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,152.000000},{0.000000,76.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="DragAcceptName" Value="B14" />
+                    <Property Name="DraggingEnabled" Value="True" />
+                    <Property Name="Empty" Value="True" />
+                    <Event Name="RBClicked" Function="Bank_Item15:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="Bank_Item16">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,114.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="DragAcceptName" Value="B15" />
+                    <Property Name="DraggingEnabled" Value="True" />
+                    <Property Name="Empty" Value="True" />
+                    <Event Name="RBClicked" Function="Bank_Item16:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="Bank_Item17">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,38.000000},{0.000000,114.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="DragAcceptName" Value="B16" />
+                    <Property Name="DraggingEnabled" Value="True" />
+                    <Property Name="Empty" Value="True" />
+                    <Event Name="RBClicked" Function="Bank_Item17:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="Bank_Item18">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,76.000000},{0.000000,114.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="DragAcceptName" Value="B17" />
+                    <Property Name="DraggingEnabled" Value="True" />
+                    <Property Name="Empty" Value="True" />
+                    <Event Name="RBClicked" Function="Bank_Item18:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="Bank_Item19">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,114.000000},{0.000000,114.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="DragAcceptName" Value="B18" />
+                    <Property Name="DraggingEnabled" Value="True" />
+                    <Property Name="Empty" Value="True" />
+                    <Event Name="RBClicked" Function="Bank_Item19:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="Bank_Item20">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,152.000000},{0.000000,114.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="DragAcceptName" Value="B19" />
+                    <Property Name="DraggingEnabled" Value="True" />
+                    <Property Name="Empty" Value="True" />
+                    <Event Name="RBClicked" Function="Bank_Item20:DoAction();" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="Bank_Text2">
+                <Property Name="UnifiedPosition" Value="{{0.000000,8.000000},{0.000000,174.000000}" />
+                <Property Name="AbsoluteSize" Value="w:210.000000 h:18.000000" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_895}" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="DefaultWindow" Name="Bank_patulousBox_Set">
+                <Property Name="UnifiedPosition" Value="{{0.000000,19.000000},{0.000000,194.000000}" />
+                <Property Name="AbsoluteSize" Value="w:190.000000 h:36.000000" />
+                <Window Type="TLBB_StaticImageNULL" Name="Bank_patulousBox1_bk">
+                    <Property Name="UnifiedPosition" Value="{{0.0,0.000000},{0.0,0.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                    <Property Name="Image" Value="set:CommonItem image:ActionBK" />
+                    <Window Type="TLBB_ActionButtonNULL" Name="Bank_patulousBox_1">
+                        <Property Name="UnifiedPosition" Value="{{0.000000,1.000000},{0.000000,1.000000}" />
+                        <Property Name="AbsoluteSize" Value="w:32.000000 h:32.000000" />
+                        <Property Name="Empty" Value="False" />
+                        <Property Name="DragAcceptName" Value="R1" />
+                        <Event Name="Clicked" Function="Bank_patulousBox_Clicked(1);" />
+                        <Property Name="NormalImage" Value="set:Buttons image:Coffer_Normal" />
+                        <Property Name="HoverImage" Value="set:Buttons image:Coffer_Hover" />
+                        <Property Name="PushedImage" Value="set:Buttons image:Coffer_Hover" />
+                        <Property Name="DisabledImage" Value="set:Buttons image:Coffer_Disable" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_StaticImageNULL" Name="Bank_patulousBox2_bk">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,38.000000},{0.000000,0.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                    <Property Name="Image" Value="set:CommonItem image:ActionBK" />
+                    <Window Type="TLBB_ActionButtonNULL" Name="Bank_patulousBox_2">
+                        <Property Name="UnifiedPosition" Value="{{0.000000,1.000000},{0.000000,1.000000}" />
+                        <Property Name="AbsoluteSize" Value="w:32.000000 h:32.000000" />
+                        <Property Name="Empty" Value="False" />
+                        <Property Name="DragAcceptName" Value="R2" />
+                        <Event Name="Clicked" Function="Bank_patulousBox_Clicked(2);" />
+                        <Property Name="NormalImage" Value="set:Buttons image:Coffer_Normal" />
+                        <Property Name="HoverImage" Value="set:Buttons image:Coffer_Hover" />
+                        <Property Name="PushedImage" Value="set:Buttons image:Coffer_Hover" />
+                        <Property Name="DisabledImage" Value="set:Buttons image:Coffer_Disable" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_StaticImageNULL" Name="Bank_patulousBox3_bk">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,76.000000},{0.000000,0.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                    <Property Name="Image" Value="set:CommonItem image:ActionBK" />
+                    <Window Type="TLBB_ActionButtonNULL" Name="Bank_patulousBox_3">
+                        <Property Name="UnifiedPosition" Value="{{0.000000,1.000000},{0.000000,1.000000}" />
+                        <Property Name="AbsoluteSize" Value="w:32.000000 h:32.000000" />
+                        <Property Name="Empty" Value="False" />
+                        <Property Name="DragAcceptName" Value="R3" />
+                        <Event Name="Clicked" Function="Bank_patulousBox_Clicked(3);" />
+                        <Property Name="NormalImage" Value="set:Buttons image:Coffer_Normal" />
+                        <Property Name="HoverImage" Value="set:Buttons image:Coffer_Hover" />
+                        <Property Name="PushedImage" Value="set:Buttons image:Coffer_Hover" />
+                        <Property Name="DisabledImage" Value="set:Buttons image:Coffer_Disable" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_StaticImageNULL" Name="Bank_patulousBox4_bk">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,114.000000},{0.000000,0.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                    <Property Name="Image" Value="set:CommonItem image:ActionBK" />
+                    <Window Type="TLBB_ActionButtonNULL" Name="Bank_patulousBox_4">
+                        <Property Name="UnifiedPosition" Value="{{0.000000,1.000000},{0.000000,1.000000}" />
+                        <Property Name="AbsoluteSize" Value="w:32.000000 h:32.000000" />
+                        <Property Name="Empty" Value="False" />
+                        <Property Name="DragAcceptName" Value="R4" />
+                        <Event Name="Clicked" Function="Bank_patulousBox_Clicked(4);" />
+                        <Property Name="NormalImage" Value="set:Buttons image:Coffer_Normal" />
+                        <Property Name="HoverImage" Value="set:Buttons image:Coffer_Hover" />
+                        <Property Name="PushedImage" Value="set:Buttons image:Coffer_Hover" />
+                        <Property Name="DisabledImage" Value="set:Buttons image:Coffer_Disable" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_StaticImageNULL" Name="Bank_patulousBox5_bk">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,152.000000},{0.000000,0.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                    <Property Name="Image" Value="set:CommonItem image:ActionBK" />
+                    <Window Type="TLBB_ActionButtonNULL" Name="Bank_patulousBox_5">
+                        <Property Name="UnifiedPosition" Value="{{0.000000,1.000000},{0.000000,1.000000}" />
+                        <Property Name="AbsoluteSize" Value="w:32.000000 h:32.000000" />
+                        <Property Name="Empty" Value="False" />
+                        <Property Name="DragAcceptName" Value="R5" />
+                        <Event Name="Clicked" Function="Bank_patulousBox_Clicked(5);" />
+                        <Property Name="NormalImage" Value="set:Buttons image:Coffer_Normal" />
+                        <Property Name="HoverImage" Value="set:Buttons image:Coffer_Hover" />
+                        <Property Name="PushedImage" Value="set:Buttons image:Coffer_Pushed" />
+                        <Property Name="DisabledImage" Value="set:Buttons image:Coffer_Disable" />
+                    </Window>
+                </Window>
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="Bank_Money_Text">
+                <Property Name="UnifiedPosition" Value="{{0.000000,8.000000},{1.000000,-45.000000}" />
+                <Property Name="AbsoluteSize" Value="w:210.000000 h:22.000000" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_379}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Window Type="TLBB_Money" Name="Bank_Money">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,0.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:205.000000 h:20.000000" />
+                    <Property Name="MoneyNumber" Value="0" />
+                    <Property Name="HorzFormatting" Value="RightAligned" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="Bank_SuperPassword">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:70.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_458}" />
+                <Event Name="Clicked" Function="Bank_SuperPassword_Clicked();" />
+            </Window>
+            <Window Type="TLBB_Frame_Lace5" Name="Bank_Blank">
+                <Property Name="UnifiedPosition" Value="{{0.000000,70.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-190.000000},{0.000000,20.000000}" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="Bank_Save">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-120.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:60.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_196}" />
+                <Event Name="Clicked" Function="Bank_Save_Clicked();" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="Bank_Get">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-60.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:60.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_538}" />
+                <Event Name="Clicked" Function="Bank_Get_Clicked();" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

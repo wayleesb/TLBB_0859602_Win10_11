@@ -1,0 +1,1161 @@
+﻿<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame1" Name="ZiDingYi_Frame">
+      <Property Name="UnifiedPosition" Value="{{0.22500000,0.000000},{0.20000,0.000000}" />
+      <Property Name="AbsoluteSize" Value="w:435.000000 h:350.000000" />
+      <Event Name="Hidden" Function="AcceSetup_Cancel_Clicked()" />
+        <Window Type="TLBB_DragTitle" Name="ZiDingYi_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="ZiDingYi_Frame" />
+            <Window Type="TLBB_SimpleText" Name="ZiDingYi_Title">
+                <Property Name="Position" Value="x:0.0 y:0.0" />
+                <Property Name="Size" Value="w:1.0 h:1.0" />
+                <Property Name="Font" Value="YouYuan11.25" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Property Name="Text" Value="#{INTERFACE_XML_1053}" />
+            </Window>
+        </Window>
+        <Window Type="TLBB_ButtonHelp" Name="ZiDingYi_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*AcceSetup&quot;);' />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="ZiDingYi_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function="AcceSetup_Cancel_Clicked()" />
+        </Window>
+        <Window Type="DefaultWindow" Name="ZiDingYi_Client">
+            <Property Name="AbsolutePosition" Value="x:7.000000 y:36.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-13.000000},{1.000000,-55.000000}" />
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_moren">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-421.000000},{1.000000,-20.000000}" />
+            <Property Name="AbsoluteSize" Value="w:110.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1057}" />
+            <Event Name="Clicked" Function="ComeBackAcce_Clicked();" />
+          </Window>
+          <Window Type="TLBB_SimpleText" Name="ZiDingYi_List_Text1">
+            <Property Name="Position" Value="x:0.005952 y:0.013559" />
+            <Property Name="UnifiedSize" Value="{{0.000000,195.000000},{0.000000,21.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1054}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZiDingYi_List_Name1">
+            <Property Name="Position" Value="x:0.005952 y:0.111864" />
+            <Property Name="UnifiedSize" Value="{{0.000000,195.000000},{0.000000,20.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1062}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZiDingYi_List_Name2">
+            <Property Name="Position" Value="x:0.005952 y:0.179661" />
+            <Property Name="UnifiedSize" Value="{{0.000000,195.000000},{0.000000,20.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1063}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZiDingYi_List_Name3">
+            <Property Name="Position" Value="x:0.005952 y:0.247458" />
+            <Property Name="UnifiedSize" Value="{{0.000000,195.000000},{0.000000,20.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1064}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZiDingYi_List_Name4">
+            <Property Name="Position" Value="x:0.005952 y:0.315254" />
+            <Property Name="UnifiedSize" Value="{{0.000000,195.000000},{0.000000,20.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1065}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZiDingYi_List_Name5">
+            <Property Name="Position" Value="x:0.005952 y:0.383051" />
+            <Property Name="UnifiedSize" Value="{{0.000000,195.000000},{0.000000,20.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1066}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZiDingYi_List_Name6">
+            <Property Name="Position" Value="x:0.005952 y:0.450847" />
+            <Property Name="UnifiedSize" Value="{{0.000000,195.000000},{0.000000,20.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1067}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZiDingYi_List_Name7">
+            <Property Name="Position" Value="x:0.005952 y:0.518644" />
+            <Property Name="UnifiedSize" Value="{{0.000000,195.000000},{0.000000,20.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1068}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZiDingYi_List_Name8">
+            <Property Name="Position" Value="x:0.005952 y:0.586441" />
+            <Property Name="UnifiedSize" Value="{{0.000000,195.000000},{0.000000,20.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1069}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZiDingYi_List_Name9">
+            <Property Name="Position" Value="x:0.005952 y:0.654237" />
+            <Property Name="UnifiedSize" Value="{{0.000000,195.000000},{0.000000,20.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1070}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZiDingYi_List_Name10">
+            <Property Name="Position" Value="x:0.005952 y:0.722034" />
+            <Property Name="UnifiedSize" Value="{{0.000000,195.000000},{0.000000,20.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1071}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZiDingYi_List_Name11">
+            <Property Name="Position" Value="x:0.005952 y:0.111864" />
+            <Property Name="UnifiedSize" Value="{{0.000000,195.000000},{0.000000,20.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1072}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZiDingYi_List_Name12">
+            <Property Name="Position" Value="x:0.005952 y:0.179661" />
+            <Property Name="UnifiedSize" Value="{{0.000000,195.000000},{0.000000,20.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1073}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZiDingYi_List_Name13">
+            <Property Name="Position" Value="x:0.005952 y:0.247458" />
+            <Property Name="UnifiedSize" Value="{{0.000000,195.000000},{0.000000,20.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1074}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZiDingYi_List_Name14">
+            <Property Name="Position" Value="x:0.005952 y:0.315254" />
+            <Property Name="UnifiedSize" Value="{{0.000000,195.000000},{0.000000,20.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1075}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZiDingYi_List_Name15">
+            <Property Name="Position" Value="x:0.005952 y:0.383051" />
+            <Property Name="UnifiedSize" Value="{{0.000000,195.000000},{0.000000,20.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1076}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZiDingYi_List_Name16">
+            <Property Name="Position" Value="x:0.005952 y:0.450847" />
+            <Property Name="UnifiedSize" Value="{{0.000000,195.000000},{0.000000,20.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1077}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZiDingYi_List_Name17">
+            <Property Name="Position" Value="x:0.005952 y:0.518644" />
+            <Property Name="UnifiedSize" Value="{{0.000000,195.000000},{0.000000,20.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1078}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZiDingYi_List_Name18">
+            <Property Name="Position" Value="x:0.005952 y:0.586441" />
+            <Property Name="UnifiedSize" Value="{{0.000000,195.000000},{0.000000,20.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1079}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZiDingYi_List_Name19">
+            <Property Name="Position" Value="x:0.005952 y:0.654237" />
+            <Property Name="UnifiedSize" Value="{{0.000000,195.000000},{0.000000,20.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1080}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZiDingYi_List_Name20">
+            <Property Name="Position" Value="x:0.005952 y:0.722034" />
+            <Property Name="UnifiedSize" Value="{{0.000000,195.000000},{0.000000,20.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1081}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZiDingYi_List_Name21">
+            <Property Name="Position" Value="x:0.005952 y:0.111864" />
+            <Property Name="UnifiedSize" Value="{{0.000000,195.000000},{0.000000,20.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1082}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZiDingYi_List_Name22">
+            <Property Name="Position" Value="x:0.005952 y:0.179661" />
+            <Property Name="UnifiedSize" Value="{{0.000000,195.000000},{0.000000,20.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1083}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZiDingYi_List_Name23">
+            <Property Name="Position" Value="x:0.005952 y:0.247458" />
+            <Property Name="UnifiedSize" Value="{{0.000000,195.000000},{0.000000,20.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1084}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZiDingYi_List_Name24">
+            <Property Name="Position" Value="x:0.005952 y:0.315254" />
+            <Property Name="UnifiedSize" Value="{{0.000000,195.000000},{0.000000,20.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1085}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZiDingYi_List_Name25">
+            <Property Name="Position" Value="x:0.005952 y:0.383051" />
+            <Property Name="UnifiedSize" Value="{{0.000000,195.000000},{0.000000,20.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1086}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZiDingYi_List_Name26">
+            <Property Name="Position" Value="x:0.005952 y:0.450847" />
+            <Property Name="UnifiedSize" Value="{{0.000000,195.000000},{0.000000,20.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1087}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZiDingYi_List_Name27">
+            <Property Name="Position" Value="x:0.005952 y:0.518644" />
+            <Property Name="UnifiedSize" Value="{{0.000000,195.000000},{0.000000,20.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1088}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZiDingYi_List_Name28">
+            <Property Name="Position" Value="x:0.005952 y:0.586441" />
+            <Property Name="UnifiedSize" Value="{{0.000000,195.000000},{0.000000,20.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1089}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZiDingYi_List_Name29">
+            <Property Name="Position" Value="x:0.005952 y:0.654237" />
+            <Property Name="UnifiedSize" Value="{{0.000000,195.000000},{0.000000,20.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1090}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZiDingYi_List_Name30">
+            <Property Name="Position" Value="x:0.005952 y:0.722034" />
+            <Property Name="UnifiedSize" Value="{{0.000000,195.000000},{0.000000,20.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1091}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZiDingYi_List_Name31">
+            <Property Name="Position" Value="x:0.005952 y:0.111864" />
+            <Property Name="UnifiedSize" Value="{{0.000000,195.000000},{0.000000,20.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1092}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZiDingYi_List_Name32">
+            <Property Name="Position" Value="x:0.005952 y:0.179661" />
+            <Property Name="UnifiedSize" Value="{{0.000000,195.000000},{0.000000,20.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1093}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZiDingYi_List_Name33">
+            <Property Name="Position" Value="x:0.005952 y:0.247458" />
+            <Property Name="UnifiedSize" Value="{{0.000000,195.000000},{0.000000,20.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1094}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZiDingYi_List_Name34">
+            <Property Name="Position" Value="x:0.005952 y:0.315254" />
+            <Property Name="UnifiedSize" Value="{{0.000000,195.000000},{0.000000,20.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1095}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZiDingYi_List_Name35">
+            <Property Name="Position" Value="x:0.005952 y:0.383051" />
+            <Property Name="UnifiedSize" Value="{{0.000000,195.000000},{0.000000,20.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1096}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZiDingYi_List_Name36">
+            <Property Name="Position" Value="x:0.005952 y:0.450847" />
+            <Property Name="UnifiedSize" Value="{{0.000000,195.000000},{0.000000,20.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1097}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZiDingYi_List_Name37">
+            <Property Name="Position" Value="x:0.005952 y:0.518644" />
+            <Property Name="UnifiedSize" Value="{{0.000000,195.000000},{0.000000,20.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1098}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZiDingYi_List_Name38">
+            <Property Name="Position" Value="x:0.005952 y:0.586441" />
+            <Property Name="UnifiedSize" Value="{{0.000000,195.000000},{0.000000,20.000000}" />
+            <Property Name="Text" Value="#{ZDYK_081212_01}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZiDingYi_List_Name39">
+            <Property Name="Position" Value="x:0.005952 y:0.654237" />
+            <Property Name="UnifiedSize" Value="{{0.000000,195.000000},{0.000000,20.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1100}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZiDingYi_List_Name40">
+            <Property Name="Position" Value="x:0.005952 y:0.722034" />
+            <Property Name="UnifiedSize" Value="{{0.000000,195.000000},{0.000000,20.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1101}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZiDingYi_List_Name41">
+            <Property Name="Position" Value="x:0.005952 y:0.111864" />
+            <Property Name="UnifiedSize" Value="{{0.000000,195.000000},{0.000000,20.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1102}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZiDingYi_List_Name42">
+            <Property Name="Position" Value="x:0.005952 y:0.179661" />
+            <Property Name="UnifiedSize" Value="{{0.000000,195.000000},{0.000000,20.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1103}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZiDingYi_List_Name43">
+            <Property Name="Position" Value="x:0.005952 y:0.247458" />
+            <Property Name="UnifiedSize" Value="{{0.000000,195.000000},{0.000000,20.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1104}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZiDingYi_List_Name44">
+            <Property Name="Position" Value="x:0.005952 y:0.315254" />
+            <Property Name="UnifiedSize" Value="{{0.000000,195.000000},{0.000000,20.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1105}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZiDingYi_List_Name45">
+            <Property Name="Position" Value="x:0.005952 y:0.518644" />
+            <Property Name="UnifiedSize" Value="{{0.000000,195.000000},{0.000000,20.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1106}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="Visible" Value="False" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZiDingYi_List_Name46">
+            <Property Name="Position" Value="x:0.005952 y:0.586441" />
+            <Property Name="UnifiedSize" Value="{{0.000000,195.000000},{0.000000,20.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1107}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="Visible" Value="False" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZiDingYi_List_Name47">
+            <Property Name="Position" Value="x:0.005952 y:0.383051" />
+            <Property Name="UnifiedSize" Value="{{0.000000,195.000000},{0.000000,20.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1108}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZiDingYi_List_Name48">
+            <Property Name="Position" Value="x:0.005952 y:0.450847" />
+            <Property Name="UnifiedSize" Value="{{0.000000,195.000000},{0.000000,20.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1109}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZiDingYi_List_Name49">
+            <Property Name="Position" Value="x:0.005952 y:0.518644" />
+            <Property Name="UnifiedSize" Value="{{0.000000,195.000000},{0.000000,20.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1170}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZiDingYi_List_Name50">
+            <Property Name="Position" Value="x:0.005952 y:0.586441" />
+            <Property Name="UnifiedSize" Value="{{0.000000,195.000000},{0.000000,20.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1107}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="Visible" Value="False" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZiDingYi_List_Name51">
+            <Property Name="Position" Value="x:0.005952 y:0.654237" />
+            <Property Name="UnifiedSize" Value="{{0.000000,195.000000},{0.000000,20.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1100}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="Visible" Value="False" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZiDingYi_List_Name52">
+            <Property Name="Position" Value="x:0.005952 y:0.722034" />
+            <Property Name="UnifiedSize" Value="{{0.000000,195.000000},{0.000000,20.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1101}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="Visible" Value="False" />
+          </Window>
+          <Window Type="TLBB_SimpleText" Name="ZiDingYi_List_Text2">
+            <Property Name="Position" Value="x:0.490521 y:0.013559" />
+            <Property Name="UnifiedSize" Value="{{0.000000,85.000000},{0.000000,21.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1055}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_NotChat_Button1">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-215.000000},{1.000000,-262.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1055}" />
+            <Event Name="Clicked" Function="NoChat_Button_Clicked(1);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_NotChat_Button2">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-215.000000},{1.000000,-242.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1055}" />
+            <Event Name="Clicked" Function="NoChat_Button_Clicked(2);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_NotChat_Button3">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-215.000000},{1.000000,-222.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1055}" />
+            <Event Name="Clicked" Function="NoChat_Button_Clicked(3);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_NotChat_Button4">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-215.000000},{1.000000,-202.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1055}" />
+            <Event Name="Clicked" Function="NoChat_Button_Clicked(4);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_NotChat_Button5">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-215.000000},{1.000000,-182.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1055}" />
+            <Event Name="Clicked" Function="NoChat_Button_Clicked(5);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_NotChat_Button6">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-215.000000},{1.000000,-162.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1055}" />
+            <Event Name="Clicked" Function="NoChat_Button_Clicked(6);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_NotChat_Button7">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-215.000000},{1.000000,-142.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1055}" />
+            <Event Name="Clicked" Function="NoChat_Button_Clicked(7);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_NotChat_Button8">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-215.000000},{1.000000,-122.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1055}" />
+            <Event Name="Clicked" Function="NoChat_Button_Clicked(8);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_NotChat_Button9">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-215.000000},{1.000000,-102.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1055}" />
+            <Event Name="Clicked" Function="NoChat_Button_Clicked(9);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_NotChat_Button10">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-215.000000},{1.000000,-82.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1055}" />
+            <Event Name="Clicked" Function="NoChat_Button_Clicked(10);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_NotChat_Button11">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-215.000000},{1.000000,-262.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1055}" />
+            <Event Name="Clicked" Function="NoChat_Button_Clicked(11);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_NotChat_Button12">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-215.000000},{1.000000,-242.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1055}" />
+            <Event Name="Clicked" Function="NoChat_Button_Clicked(12);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_NotChat_Button13">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-215.000000},{1.000000,-222.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1055}" />
+            <Event Name="Clicked" Function="NoChat_Button_Clicked(13);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_NotChat_Button14">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-215.000000},{1.000000,-202.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1055}" />
+            <Event Name="Clicked" Function="NoChat_Button_Clicked(14);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_NotChat_Button15">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-215.000000},{1.000000,-182.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1055}" />
+            <Event Name="Clicked" Function="NoChat_Button_Clicked(15);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_NotChat_Button16">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-215.000000},{1.000000,-162.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1055}" />
+            <Event Name="Clicked" Function="NoChat_Button_Clicked(16);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_NotChat_Button17">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-215.000000},{1.000000,-142.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1055}" />
+            <Event Name="Clicked" Function="NoChat_Button_Clicked(17);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_NotChat_Button18">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-215.000000},{1.000000,-122.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1055}" />
+            <Event Name="Clicked" Function="NoChat_Button_Clicked(18);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_NotChat_Button19">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-215.000000},{1.000000,-102.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1055}" />
+            <Event Name="Clicked" Function="NoChat_Button_Clicked(19);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_NotChat_Button20">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-215.000000},{1.000000,-82.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1055}" />
+            <Event Name="Clicked" Function="NoChat_Button_Clicked(20);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_NotChat_Button21">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-215.000000},{1.000000,-262.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1055}" />
+            <Event Name="Clicked" Function="NoChat_Button_Clicked(21);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_NotChat_Button22">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-215.000000},{1.000000,-242.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1055}" />
+            <Event Name="Clicked" Function="NoChat_Button_Clicked(22);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_NotChat_Button23">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-215.000000},{1.000000,-222.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1055}" />
+            <Event Name="Clicked" Function="NoChat_Button_Clicked(23);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_NotChat_Button24">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-215.000000},{1.000000,-202.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1055}" />
+            <Event Name="Clicked" Function="NoChat_Button_Clicked(24);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_NotChat_Button25">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-215.000000},{1.000000,-182.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1055}" />
+            <Event Name="Clicked" Function="NoChat_Button_Clicked(25);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_NotChat_Button26">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-215.000000},{1.000000,-162.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1055}" />
+            <Event Name="Clicked" Function="NoChat_Button_Clicked(26);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_NotChat_Button27">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-215.000000},{1.000000,-142.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1055}" />
+            <Event Name="Clicked" Function="NoChat_Button_Clicked(27);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_NotChat_Button28">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-215.000000},{1.000000,-122.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1055}" />
+            <Event Name="Clicked" Function="NoChat_Button_Clicked(28);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_NotChat_Button29">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-215.000000},{1.000000,-102.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1055}" />
+            <Event Name="Clicked" Function="NoChat_Button_Clicked(29);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_NotChat_Button30">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-215.000000},{1.000000,-82.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1055}" />
+            <Event Name="Clicked" Function="NoChat_Button_Clicked(30);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_NotChat_Button31">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-215.000000},{1.000000,-262.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1055}" />
+            <Event Name="Clicked" Function="NoChat_Button_Clicked(31);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_NotChat_Button32">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-215.000000},{1.000000,-242.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1055}" />
+            <Event Name="Clicked" Function="NoChat_Button_Clicked(32);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_NotChat_Button33">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-215.000000},{1.000000,-222.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1055}" />
+            <Event Name="Clicked" Function="NoChat_Button_Clicked(33);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_NotChat_Button34">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-215.000000},{1.000000,-202.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1055}" />
+            <Event Name="Clicked" Function="NoChat_Button_Clicked(34);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_NotChat_Button35">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-215.000000},{1.000000,-182.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1055}" />
+            <Event Name="Clicked" Function="NoChat_Button_Clicked(35);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_NotChat_Button36">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-215.000000},{1.000000,-162.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1055}" />
+            <Event Name="Clicked" Function="NoChat_Button_Clicked(36);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_NotChat_Button37">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-215.000000},{1.000000,-142.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1055}" />
+            <Event Name="Clicked" Function="NoChat_Button_Clicked(37);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_NotChat_Button38">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-215.000000},{1.000000,-122.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1055}" />
+            <Event Name="Clicked" Function="NoChat_Button_Clicked(38);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_NotChat_Button39">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-215.000000},{1.000000,-102.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1055}" />
+            <Event Name="Clicked" Function="NoChat_Button_Clicked(39);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_NotChat_Button40">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-215.000000},{1.000000,-82.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1055}" />
+            <Event Name="Clicked" Function="NoChat_Button_Clicked(40);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_NotChat_Button41">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-215.000000},{1.000000,-262.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1055}" />
+            <Event Name="Clicked" Function="NoChat_Button_Clicked(41);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_NotChat_Button42">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-215.000000},{1.000000,-242.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1055}" />
+            <Event Name="Clicked" Function="NoChat_Button_Clicked(42);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_NotChat_Button43">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-215.000000},{1.000000,-222.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1055}" />
+            <Event Name="Clicked" Function="NoChat_Button_Clicked(43);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_NotChat_Button44">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-215.000000},{1.000000,-202.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1055}" />
+            <Event Name="Clicked" Function="NoChat_Button_Clicked(44);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_NotChat_Button45">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-215.000000},{1.000000,-142.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1055}" />
+            <Event Name="Clicked" Function="NoChat_Button_Clicked(45);" />
+            <Property Name="Visible" Value="False" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_NotChat_Button46">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-215.000000},{1.000000,-122.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1055}" />
+            <Event Name="Clicked" Function="NoChat_Button_Clicked(46);" />
+            <Property Name="Visible" Value="False" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_NotChat_Button47">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-215.000000},{1.000000,-182.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1055}" />
+            <Event Name="Clicked" Function="NoChat_Button_Clicked(47);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_NotChat_Button48">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-215.000000},{1.000000,-162.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1055}" />
+            <Event Name="Clicked" Function="NoChat_Button_Clicked(48);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_NotChat_Button49">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-215.000000},{1.000000,-142.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1055}" />
+            <Event Name="Clicked" Function="NoChat_Button_Clicked(49);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_NotChat_Button50">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-215.000000},{1.000000,-122.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1055}" />
+            <Event Name="Clicked" Function="NoChat_Button_Clicked(50);" />
+            <Property Name="Visible" Value="False" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_NotChat_Button51">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-215.000000},{1.000000,-102.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1055}" />
+            <Event Name="Clicked" Function="NoChat_Button_Clicked(51);" />
+            <Property Name="Visible" Value="False" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_NotChat_Button52">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-215.000000},{1.000000,-82.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1055}" />
+            <Event Name="Clicked" Function="NoChat_Button_Clicked(52);" />
+            <Property Name="Visible" Value="False" />
+          </Window>
+          <Window Type="TLBB_SimpleText" Name="ZiDingYi_List_Text3">
+            <Property Name="Position" Value="x:0.713270 y:0.013559" />
+            <Property Name="UnifiedSize" Value="{{0.000000,85.000000},{0.000000,21.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1056}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_Chat_Button1">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-121.000000},{1.000000,-262.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1056}" />
+            <Event Name="Clicked" Function="Chat_Button_Clicked(1);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_Chat_Button2">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-121.000000},{1.000000,-242.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1056}" />
+            <Event Name="Clicked" Function="Chat_Button_Clicked(2);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_Chat_Button3">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-121.000000},{1.000000,-222.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1056}" />
+            <Event Name="Clicked" Function="Chat_Button_Clicked(3);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_Chat_Button4">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-121.000000},{1.000000,-202.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1056}" />
+            <Event Name="Clicked" Function="Chat_Button_Clicked(4);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_Chat_Button5">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-121.000000},{1.000000,-182.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1056}" />
+            <Event Name="Clicked" Function="Chat_Button_Clicked(5);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_Chat_Button6">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-121.000000},{1.000000,-162.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1056}" />
+            <Event Name="Clicked" Function="Chat_Button_Clicked(6);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_Chat_Button7">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-121.000000},{1.000000,-142.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1056}" />
+            <Event Name="Clicked" Function="Chat_Button_Clicked(7);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_Chat_Button8">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-121.000000},{1.000000,-122.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1056}" />
+            <Event Name="Clicked" Function="Chat_Button_Clicked(8);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_Chat_Button9">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-121.000000},{1.000000,-102.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1056}" />
+            <Event Name="Clicked" Function="Chat_Button_Clicked(9);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_Chat_Button10">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-121.000000},{1.000000,-82.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1056}" />
+            <Event Name="Clicked" Function="Chat_Button_Clicked(10);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_Chat_Button11">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-121.000000},{1.000000,-262.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1056}" />
+            <Event Name="Clicked" Function="Chat_Button_Clicked(11);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_Chat_Button12">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-121.000000},{1.000000,-242.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1056}" />
+            <Event Name="Clicked" Function="Chat_Button_Clicked(12);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_Chat_Button13">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-121.000000},{1.000000,-222.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1056}" />
+            <Event Name="Clicked" Function="Chat_Button_Clicked(13);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_Chat_Button14">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-121.000000},{1.000000,-202.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1056}" />
+            <Event Name="Clicked" Function="Chat_Button_Clicked(14);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_Chat_Button15">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-121.000000},{1.000000,-182.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1056}" />
+            <Event Name="Clicked" Function="Chat_Button_Clicked(15);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_Chat_Button16">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-121.000000},{1.000000,-162.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1056}" />
+            <Event Name="Clicked" Function="Chat_Button_Clicked(16);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_Chat_Button17">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-121.000000},{1.000000,-142.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1056}" />
+            <Event Name="Clicked" Function="Chat_Button_Clicked(17);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_Chat_Button18">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-121.000000},{1.000000,-122.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1056}" />
+            <Event Name="Clicked" Function="Chat_Button_Clicked(18);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_Chat_Button19">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-121.000000},{1.000000,-102.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1056}" />
+            <Event Name="Clicked" Function="Chat_Button_Clicked(19);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_Chat_Button20">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-121.000000},{1.000000,-82.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1056}" />
+            <Event Name="Clicked" Function="Chat_Button_Clicked(20);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_Chat_Button21">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-121.000000},{1.000000,-262.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1056}" />
+            <Event Name="Clicked" Function="Chat_Button_Clicked(21);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_Chat_Button22">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-121.000000},{1.000000,-242.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1056}" />
+            <Event Name="Clicked" Function="Chat_Button_Clicked(22);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_Chat_Button23">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-121.000000},{1.000000,-222.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1056}" />
+            <Event Name="Clicked" Function="Chat_Button_Clicked(23);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_Chat_Button24">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-121.000000},{1.000000,-202.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1056}" />
+            <Event Name="Clicked" Function="Chat_Button_Clicked(24);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_Chat_Button25">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-121.000000},{1.000000,-182.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1056}" />
+            <Event Name="Clicked" Function="Chat_Button_Clicked(25);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_Chat_Button26">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-121.000000},{1.000000,-162.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1056}" />
+            <Event Name="Clicked" Function="Chat_Button_Clicked(26);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_Chat_Button27">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-121.000000},{1.000000,-142.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1056}" />
+            <Event Name="Clicked" Function="Chat_Button_Clicked(27);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_Chat_Button28">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-121.000000},{1.000000,-122.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1056}" />
+            <Event Name="Clicked" Function="Chat_Button_Clicked(28);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_Chat_Button29">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-121.000000},{1.000000,-102.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1056}" />
+            <Event Name="Clicked" Function="Chat_Button_Clicked(29);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_Chat_Button30">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-121.000000},{1.000000,-82.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1056}" />
+            <Event Name="Clicked" Function="Chat_Button_Clicked(30);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_Chat_Button31">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-121.000000},{1.000000,-262.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1056}" />
+            <Event Name="Clicked" Function="Chat_Button_Clicked(31);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_Chat_Button32">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-121.000000},{1.000000,-242.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1056}" />
+            <Event Name="Clicked" Function="Chat_Button_Clicked(32);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_Chat_Button33">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-121.000000},{1.000000,-222.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1056}" />
+            <Event Name="Clicked" Function="Chat_Button_Clicked(33);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_Chat_Button34">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-121.000000},{1.000000,-202.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1056}" />
+            <Event Name="Clicked" Function="Chat_Button_Clicked(34);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_Chat_Button35">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-121.000000},{1.000000,-182.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1056}" />
+            <Event Name="Clicked" Function="Chat_Button_Clicked(35);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_Chat_Button36">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-121.000000},{1.000000,-162.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1056}" />
+            <Event Name="Clicked" Function="Chat_Button_Clicked(36);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_Chat_Button37">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-121.000000},{1.000000,-142.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1056}" />
+            <Event Name="Clicked" Function="Chat_Button_Clicked(37);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_Chat_Button38">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-121.000000},{1.000000,-122.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1056}" />
+            <Event Name="Clicked" Function="Chat_Button_Clicked(38);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_Chat_Button39">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-121.000000},{1.000000,-102.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1056}" />
+            <Event Name="Clicked" Function="Chat_Button_Clicked(39);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_Chat_Button40">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-121.000000},{1.000000,-82.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1056}" />
+            <Event Name="Clicked" Function="Chat_Button_Clicked(40);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_Chat_Button41">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-121.000000},{1.000000,-262.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1056}" />
+            <Event Name="Clicked" Function="Chat_Button_Clicked(41);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_Chat_Button42">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-121.000000},{1.000000,-242.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1056}" />
+            <Event Name="Clicked" Function="Chat_Button_Clicked(42);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_Chat_Button43">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-121.000000},{1.000000,-222.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1056}" />
+            <Event Name="Clicked" Function="Chat_Button_Clicked(43);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_Chat_Button44">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-121.000000},{1.000000,-202.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1056}" />
+            <Event Name="Clicked" Function="Chat_Button_Clicked(44);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_Chat_Button45">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-121.000000},{1.000000,-142.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1056}" />
+            <Event Name="Clicked" Function="Chat_Button_Clicked(45);" />
+            <Property Name="Visible" Value="False" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_Chat_Button46">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-121.000000},{1.000000,-122.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1056}" />
+            <Event Name="Clicked" Function="Chat_Button_Clicked(46);" />
+            <Property Name="Visible" Value="False" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_Chat_Button47">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-121.000000},{1.000000,-182.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1056}" />
+            <Event Name="Clicked" Function="Chat_Button_Clicked(47);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_Chat_Button48">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-121.000000},{1.000000,-162.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1056}" />
+            <Event Name="Clicked" Function="Chat_Button_Clicked(48);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_Chat_Button49">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-121.000000},{1.000000,-142.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1056}" />
+            <Event Name="Clicked" Function="Chat_Button_Clicked(49);" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_Chat_Button50">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-121.000000},{1.000000,-122.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1056}" />
+            <Event Name="Clicked" Function="Chat_Button_Clicked(50);" />
+            <Property Name="Visible" Value="False" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_Chat_Button51">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-121.000000},{1.000000,-102.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1056}" />
+            <Event Name="Clicked" Function="Chat_Button_Clicked(51);" />
+            <Property Name="Visible" Value="False" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_Chat_Button52">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-121.000000},{1.000000,-82.000000}" />
+            <Property Name="AbsoluteSize" Value="w:85.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1056}" />
+            <Event Name="Clicked" Function="Chat_Button_Clicked(52);" />
+            <Property Name="Visible" Value="False" />
+          </Window>
+          <Window Type="TLBB_SimpleText" Name="ZiDingYi_List_Text4">
+            <Property Name="Position" Value="x:0.005952 y:0.825" />
+            <Property Name="UnifiedSize" Value="{{0.000000,410.000000},{0.000000,21.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1113}" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_ok">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-142.000000},{1.000000,-20.000000}" />
+            <Property Name="AbsoluteSize" Value="w:70.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_1058}" />
+            <Event Name="Clicked" Function="AcceSetup_Accept_Clicked()" />
+          </Window>
+            <Window Type="TLBB_ButtonCommon" Name="ZiDingYi_Cancel">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-72.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:70.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_1059}" />
+                <Event Name="Clicked" Function="AcceSetup_Cancel_Clicked()" />
+            </Window>
+          <Window Type="TLBB_ButtonNULL" Name="ZiDingYi_shangyiye">
+              <Property Name="UnifiedPosition" Value="{{1.000000,-27.000000},{0.000000,37.000000}" />
+              <Property Name="AbsoluteSize" Value="w:20.000000 h:26.000000" />
+              <Property Name="DisabledImage" Value="set:Button6 image:PageUp_Btn_Disabled" />
+              <Property Name="HoverImage" Value="set:Button6 image:PageUp_Btn_Hover" />
+              <Property Name="NormalImage" Value="set:Button6 image:PageUp_Btn_Normal" />
+              <Property Name="PushedImage" Value="set:Button6 image:PageUp_Btn_Pushed" />
+              <Property Name="Tooltip" Value="#{INTERFACE_XML_1060}" />
+              <Property Name="Disabled" Value="True" />
+              <Event Name="Clicked" Function="ZiDingYi_shangyiye_Clicked();" />
+          </Window>
+          <Window Type="TLBB_ButtonNULL" Name="ZiDingYi_xiayiye">
+              <Property Name="UnifiedPosition" Value="{{1.000000,-27.000000},{1.000000,-119.000000}" />
+              <Property Name="AbsoluteSize" Value="w:20.000000 h:26.000000" />
+              <Property Name="DisabledImage" Value="set:Button6 image:PageDown_Btn_Disabled" />
+              <Property Name="HoverImage" Value="set:Button6 image:PageDown_Btn_Hover" />
+              <Property Name="NormalImage" Value="set:Button6 image:PageDown_Btn_Normal" />
+              <Property Name="PushedImage" Value="set:Button6 image:PageDown_Btn_Pushed" />
+              <Property Name="Tooltip" Value="#{INTERFACE_XML_1061}" />
+              <Event Name="Clicked" Function="ZiDingYi_xiayiye_Clicked();" />
+          </Window>
+        </Window>
+    </Window>
+</GUILayout>

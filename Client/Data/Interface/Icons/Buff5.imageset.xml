@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<Imageset Name="Buff5" Imagefile="Icons/Buff5.jpg" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+	<Image Name="Buff5_1" XPos="0" YPos="0" Width="64" Height="64" />
+	<Image Name="Buff5_2" XPos="64" YPos="0" Width="64" Height="64" />
+	<Image Name="Buff5_3" XPos="128" YPos="0" Width="64" Height="64" />
+	<Image Name="Buff5_4" XPos="192" YPos="0" Width="64" Height="64" />
+	<Image Name="Buff5_5" XPos="0" YPos="64" Width="64" Height="64" />
+	<Image Name="Buff5_6" XPos="64" YPos="64" Width="64" Height="64" />
+	<Image Name="Buff5_7" XPos="128" YPos="64" Width="64" Height="64" />
+	<Image Name="Buff5_8" XPos="192" YPos="64" Width="64" Height="64" />
+	<Image Name="Buff5_9" XPos="0" YPos="128" Width="64" Height="64" />
+	<Image Name="Buff5_10" XPos="64" YPos="128" Width="64" Height="64" />
+	<Image Name="Buff5_11" XPos="128" YPos="128" Width="64" Height="64" />
+	<Image Name="Buff5_12" XPos="192" YPos="128" Width="64" Height="64" />
+	<Image Name="Buff5_13" XPos="0" YPos="192" Width="64" Height="64" />
+	<Image Name="Buff5_14" XPos="64" YPos="192" Width="64" Height="64" />
+	<Image Name="Buff5_15" XPos="128" YPos="192" Width="64" Height="64" />
+	<Image Name="Buff5_16" XPos="192" YPos="192" Width="64" Height="64" />
+</Imageset>

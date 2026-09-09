@@ -1,0 +1,176 @@
+<?xml version="1.0" ?>
+<GUILayout>
+<Window Type="TLBB_MainFrame1" Name="Friend_Frame">
+	<Property Name="UnifiedPosition" Value="{{1.000000,-152.000000},{1.000000,-450.000000}}"/>
+	<Property Name="UnifiedSize" Value="{{0.000000,150.000000},{0.000000,400.000000}}"/>
+<Window Type="TLBB_DragTitle" Name="Friend_DragTitle">
+	<Property Name="UnifiedPosition" Value="{{0.000000,25.000000},{0.000000,11.000000}}"/>
+	<Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}}"/>
+	<Property Name="DragTarget" Value="Friend_Frame"/>
+<Window Type="TLBB_SimpleText" Name="Friend_PageHeader_Name">
+	<Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,0.000000}}"/>
+	<Property Name="UnifiedSize" Value="{{1.000000,0.000000},{1.000000,0.000000}}"/>
+	<Property Name="Font" Value="YouYuan11.25"/>
+	<Property Name="HorzFormatting" Value="HorzCentred"/>
+	<Property Name="Text" Value="#{INTERFACE_XML_36}"/>
+</Window>
+</Window>
+<Window Type="TLBB_ButtonHelp" Name="Friend_Help">
+	<Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}}"/>
+	<Property Name="UnifiedSize" Value="{{0.000000,14.000000},{0.000000,14.000000}}"/>
+	<Event Name="Clicked" Function="Friend_OnHelp();"/>
+</Window>
+<Window Type="TLBB_ButtonClose" Name="Friend_Close">
+	<Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}}"/>
+	<Property Name="UnifiedSize" Value="{{0.000000,14.000000},{0.000000,14.000000}}"/>
+	<Event Name="Clicked" Function="Friend_Hide();"/>
+</Window>
+<Window Type="DefaultWindow" Name="Friend_Frame_Client">
+	<Property Name="UnifiedPosition" Value="{{0.000000,7.000000},{0.000000,36.000000}}"/>
+	<Property Name="UnifiedSize" Value="{{1.000000,-13.000000},{1.000000,-55.000000}}"/>
+<Window Type="TLBB_SimpleText" Name="Friend_Agname_Title">
+	<Property Name="UnifiedPosition" Value="{{0.050000,0.000000},{0.000000,0.000000}}"/>
+	<Property Name="UnifiedSize" Value="{{0.500000,0.000000},{0.000000,20.000000}}"/>
+	<Property Name="RiseOnClick" Value="False"/>
+	<Property Name="Text" Value="#{INTERFACE_XML_718}"/>
+</Window>
+<Window Type="TLBB_ButtonCommon" Name="Friend_Agname">
+	<Property Name="UnifiedPosition" Value="{{0.450000,0.000000},{0.000000,0.000000}}"/>
+	<Property Name="UnifiedSize" Value="{{0.500000,0.000000},{0.000000,20.000000}}"/>
+	<Property Name="Text" Value="#{INTERFACE_XML_779}"/>
+	<Event Name="Clicked" Function="OpenTitleList();"/>
+</Window>
+<Window Type="TLBB_SimpleMulitiTextFrame" Name="Friend_Agname_Text">
+	<Property Name="UnifiedPosition" Value="{{0.050000,0.000000},{0.000000,21.000000}}"/>
+	<Property Name="UnifiedSize" Value="{{0.900000,0.000000},{0.000000,30.000000}}"/>
+	<Property Name="RiseOnClick" Value="False"/>
+</Window>
+<Window Type="TLBB_SimpleText" Name="Friend_TargetName">
+	<Property Name="UnifiedPosition" Value="{{0.050000,0.000000},{0.000000,50.000000}}"/>
+	<Property Name="UnifiedSize" Value="{{0.960000,0.000000},{0.000000,20.000000}}"/>
+	<Property Name="RiseOnClick" Value="False"/>
+	<Property Name="Text" Value="#{INTERFACE_XML_763}"/>
+</Window>
+<Window Type="TLBB_SimpleMulitiTextFrame" Name="Friend_TargetExplain">
+	<Property Name="UnifiedPosition" Value="{{0.050000,0.000000},{0.000000,70.000000}}"/>
+	<Property Name="UnifiedSize" Value="{{0.800000,0.000000},{0.000000,40.000000}}"/>
+	<Property Name="HorzFormatting" Value="WordWrapLeftAligned"/>
+	<Property Name="RiseOnClick" Value="False"/>
+</Window>
+<Window Type="TLBB_ButtonNULL" Name="Friend_ViewMood">
+	<Property Name="UnifiedPosition" Value="{{0.860000,2.000000},{0.000000,72.000000}}"/>
+	<Property Name="UnifiedSize" Value="{{0.000000,15.000000},{0.000000,15.000000}}"/>
+	<Property Name="DisabledImage" Value="set:Button7 image:Friend_ViewMood_Disable"/>
+	<Property Name="HoverImage" Value="set:Button7 image:Friend_ViewMood_Hover"/>
+	<Property Name="NormalImage" Value="set:Button7 image:Friend_ViewMood_Normal"/>
+	<Property Name="PushedImage" Value="set:Button7 image:Friend_ViewMood_Pushed"/>
+	<Property Name="Tooltip" Value="#{INTERFACE_XML_161}"/>
+	<Event Name="Clicked" Function="Friend_ViewMood_Clicked();"/>
+	<Event Name="MouseEnter" Function="Friend_ViewMood_MouseEnter();"/>
+</Window>
+<Window Type="TLBB_ButtonNULL" Name="Friend_Edit">
+	<Property Name="UnifiedPosition" Value="{{0.860000,2.000000},{0.000000,92.000000}}"/>
+	<Property Name="UnifiedSize" Value="{{0.000000,15.000000},{0.000000,15.000000}}"/>
+	<Property Name="DisabledImage" Value="set:Button7 image:Friend_ChangeMood_Disable"/>
+	<Property Name="HoverImage" Value="set:Button7 image:Friend_ChangeMood_Hover"/>
+	<Property Name="NormalImage" Value="set:Button7 image:Friend_ChangeMood_Normal"/>
+	<Property Name="PushedImage" Value="set:Button7 image:Friend_ChangeMood_Pushed"/>
+	<Property Name="Tooltip" Value="#{INTERFACE_XML_782}"/>
+	<Event Name="Clicked" Function="Friend_EditMood();"/>
+</Window>
+<Window Type="DefaultWindow" Name="Friend_TabPage_Frame">
+	<Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.330000,0.000000}}"/>
+	<Property Name="UnifiedSize" Value="{{1.000000,0.000000},{0.600000,0.000000}}"/>
+<Window Type="TLBB_ButtonCheckForPage" Name="Friend_Temporary">
+	<Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,0.000000}}"/>
+	<Property Name="UnifiedSize" Value="{{0.000000,40.000000},{0.000000,20.000000}}"/>
+	<Property Name="CheckMode" Value="1"/>
+	<Property Name="Text" Value="#{INTERFACE_XML_436}"/>
+	<Event Name="Clicked" Function="Friend_ChannalChange( 8 );"/>
+</Window>
+<Window Type="TLBB_ButtonCheckForPage" Name="Friend_BlackList">
+	<Property Name="UnifiedPosition" Value="{{0.000000,87.000000},{0.000000,0.000000}}"/>
+	<Property Name="UnifiedSize" Value="{{0.000000,50.000000},{0.000000,20.000000}}"/>
+	<Property Name="CheckMode" Value="1"/>
+	<Property Name="Text" Value="#{INTERFACE_XML_320}"/>
+	<Event Name="Clicked" Function="Friend_ChannalChange( 5 );"/>
+</Window>
+<Window Type="TLBB_ButtonPageUp" Name="Friend_Tab1">
+	<Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,20.000000}}"/>
+	<Property Name="UnifiedSize" Value="{{0.250000,0.000000},{0.000000,24.000000}}"/>
+	<Property Name="CheckMode" Value="1"/>
+	<Property Name="Text" Value="1"/>
+	<Event Name="Clicked" Function="Friend_ChannalChange( 1 );"/>
+</Window>
+<Window Type="TLBB_ButtonPageUp" Name="Friend_Tab2">
+	<Property Name="UnifiedPosition" Value="{{0.250000,0.000000},{0.000000,20.000000}}"/>
+	<Property Name="UnifiedSize" Value="{{0.250000,0.000000},{0.000000,24.000000}}"/>
+	<Property Name="CheckMode" Value="1"/>
+	<Property Name="Text" Value="2"/>
+	<Event Name="Clicked" Function="Friend_ChannalChange( 2 );"/>
+</Window>
+<Window Type="TLBB_ButtonPageUp" Name="Friend_Tab3">
+	<Property Name="UnifiedPosition" Value="{{0.500000,0.000000},{0.000000,20.000000}}"/>
+	<Property Name="UnifiedSize" Value="{{0.250000,0.000000},{0.000000,24.000000}}"/>
+	<Property Name="CheckMode" Value="1"/>
+	<Property Name="Text" Value="3"/>
+	<Event Name="Clicked" Function="Friend_ChannalChange( 3 );"/>
+</Window>
+<Window Type="TLBB_ButtonPageUp" Name="Friend_Tab4">
+	<Property Name="UnifiedPosition" Value="{{0.750000,0.000000},{0.000000,20.000000}}"/>
+	<Property Name="UnifiedSize" Value="{{0.250000,0.000000},{0.000000,24.000000}}"/>
+	<Property Name="CheckMode" Value="1"/>
+	<Property Name="Text" Value="4"/>
+	<Event Name="Clicked" Function="Friend_ChannalChange( 4 );"/>
+</Window>
+<Window Type="TLBB_ListBoxCommon" Name="Friend_List">
+	<Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.220000,0.000000}}"/>
+	<Property Name="UnifiedSize" Value="{{1.000000,0.000000},{0.780000,0.000000}}"/>
+	<Event Name="ItemSelectionByRButton" Function="Friend_OpenMenu();"/>
+	<Event Name="MouseDoubleClick" Function="Friend_FriendSelect();"/>
+</Window>
+<Window Type="TLBB_ButtonCheckForPage" Name="Friend_EnmeyList">
+	<Property Name="UnifiedPosition" Value="{{0.000000,41.000000},{0.000000,0.000000}}"/>
+	<Property Name="UnifiedSize" Value="{{0.000000,45.000000},{0.000000,19.000000}}"/>
+  <Property Name="CheckMode" Value="1"/>
+  <Property Name="Text" Value="#{INTERFACE_XML_988}"/>
+	<Event Name="Clicked" Function="Friend_ChannalChange( 6 );"/>
+</Window>
+</Window>
+<Window Type="TLBB_ButtonNULL" Name="Friend_SystemInfo">
+	<Property Name="UnifiedPosition" Value="{{0.000000,3.000000},{1.000000,-17.000000}}"/>
+	<Property Name="UnifiedSize" Value="{{0.000000,15.000000},{0.000000,15.000000}}"/>
+	<Property Name="DisabledImage" Value="set:Button7 image:Friend_SystemInfo_Disable"/>
+	<Property Name="HoverImage" Value="set:Button7 image:Friend_SystemInfo_Hover"/>
+	<Property Name="NormalImage" Value="set:Button7 image:Friend_SystemInfo_Normal"/>
+	<Property Name="PushedImage" Value="set:Button7 image:Friend_SystemInfo_Pushed"/>
+	<Property Name="Tooltip" Value="#{INTERFACE_XML_737}"/>
+	<Event Name="Clicked" Function="Friend_SystemInfo();"/>
+</Window>
+<Window Type="TLBB_Frame_Lace5" Name="Friend_blank">
+	<Property Name="UnifiedPosition" Value="{{0.000000,20.000000},{1.000000,-20.000000}}"/>
+	<Property Name="UnifiedSize" Value="{{1.000000,-60.000000},{0.000000,20.000000}}"/>
+</Window>
+<Window Type="TLBB_ButtonNULL" Name="Friend_Lookup">
+	<Property Name="UnifiedPosition" Value="{{1.000000,-36.000000},{1.000000,-17.000000}}"/>
+	<Property Name="UnifiedSize" Value="{{0.000000,15.000000},{0.000000,15.000000}}"/>
+	<Property Name="DisabledImage" Value="set:Button7 image:Friend_Serach_Disable"/>
+	<Property Name="HoverImage" Value="set:Button7 image:Friend_Serach_Hover"/>
+	<Property Name="NormalImage" Value="set:Button7 image:Friend_Serach_Normal"/>
+	<Property Name="PushedImage" Value="set:Button7 image:Friend_Serach_Pushed"/>
+	<Property Name="Tooltip" Value="#{INTERFACE_XML_165}"/>
+	<Event Name="Clicked" Function="Friend_Search();"/>
+</Window>
+<Window Type="TLBB_ButtonNULL" Name="Friend_Add">
+	<Property Name="UnifiedPosition" Value="{{1.000000,-18.000000},{1.000000,-17.000000}}"/>
+	<Property Name="UnifiedSize" Value="{{0.000000,15.000000},{0.000000,15.000000}}"/>
+	<Property Name="DisabledImage" Value="set:Button7 image:Friend_Add_Disable"/>
+	<Property Name="HoverImage" Value="set:Button7 image:Friend_Add_Hover"/>
+	<Property Name="NormalImage" Value="set:Button7 image:Friend_Add_Normal"/>
+	<Property Name="PushedImage" Value="set:Button7 image:Friend_Add_Pushed"/>
+	<Property Name="Tooltip" Value="#{INTERFACE_XML_692}"/>
+	<Event Name="Clicked" Function="Friend_AddNewFriend();"/>
+</Window>
+</Window>
+</Window>
+</GUILayout>

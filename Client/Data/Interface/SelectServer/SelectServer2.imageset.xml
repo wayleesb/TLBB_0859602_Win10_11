@@ -1,0 +1,4 @@
+<?xml version="1.0" ?>
+<Imageset Name="SelectServer2" Imagefile="SelectServer/tga_SelectServerBack2.dds" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+	<Image Name="view" XPos="0" YPos="0" Width="256" Height="256" />
+</Imageset>

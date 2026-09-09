@@ -1,0 +1,803 @@
+<?xml version="1.0" ?>
+<Falagard>
+  <!--
+	***************************************************
+        TLBB_Look_MainFrameWindow1
+    ***************************************************
+    -->
+  <WidgetLook name="TLBB_Look_MainFrameWindow0">
+    <Property name="FrameEnabled" value="True" />
+    <Property name="BackgroundEnabled" value="True" />
+    <StateImagery name="Enabled" />
+    <StateImagery name="Disabled" />
+    <StateImagery name="EnabledFrame">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Main_Frame_Type0" />
+      </Layer>
+    </StateImagery>
+
+    <StateImagery name="DisabledFrame" >
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Main_Frame_Type0" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="EnabledBackground">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Background_Type1" />
+        <Section look="TLBB_Look_Common" section="Main_Frame_Back_Type1" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="DisabledBackground" >
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Background_Type1" />
+        <Section look="TLBB_Look_Common" section="Main_Frame_Back_Type1" />
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+
+  <WidgetLook name="TLBB_Look_MainFrameWindow1">
+    <Property name="FrameEnabled" value="True" />
+    <Property name="BackgroundEnabled" value="True" />
+    <StateImagery name="Enabled" />
+    <StateImagery name="Disabled" />
+    <StateImagery name="EnabledFrame">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Main_Frame_Type1" />
+      </Layer>
+    </StateImagery>
+
+    <StateImagery name="DisabledFrame" >
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Main_Frame_Type1" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="EnabledBackground">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Background_Type1" />
+        <Section look="TLBB_Look_Common" section="Main_Frame_Back_Type1" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="DisabledBackground" >
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Background_Type1" />
+        <Section look="TLBB_Look_Common" section="Main_Frame_Back_Type1" />
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+
+  <!--
+	***************************************************
+        TLBB_Look_MainFrameWindow2
+    ***************************************************
+    -->
+  <WidgetLook name="TLBB_Look_MainFrameWindow2">
+    <Property name="FrameEnabled" value="True" />
+    <Property name="BackgroundEnabled" value="True" />
+    <StateImagery name="Enabled" />
+    <StateImagery name="Disabled" />
+    <StateImagery name="EnabledFrame">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Main_Frame_Type2" />
+      </Layer>
+    </StateImagery>
+
+    <StateImagery name="DisabledFrame" >
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Main_Frame_Type2" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="EnabledBackground">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Background_Common" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="DisabledBackground" >
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Background_Common" />
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+  <!--
+	***************************************************
+        TLBB_Look_MainFrameWindow3
+    ***************************************************
+    -->
+  <WidgetLook name="TLBB_Look_MainFrameWindow3">
+    <Property name="FrameEnabled" value="True" />
+    <Property name="BackgroundEnabled" value="True" />
+    <StateImagery name="Enabled" />
+    <StateImagery name="Disabled" />
+    <StateImagery name="EnabledFrame">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Main_Frame_Type3" />
+      </Layer>
+    </StateImagery>
+
+    <StateImagery name="DisabledFrame" >
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Main_Frame_Type3" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="EnabledBackground">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Background_Type3" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="DisabledBackground" >
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Background_Type3" />
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+  <!--
+	***************************************************
+        TLBB_Look_MainFrameWindow4
+    ***************************************************
+    -->
+  <WidgetLook name="TLBB_Look_MainFrameWindow4">
+    <Property name="FrameEnabled" value="True" />
+    <Property name="BackgroundEnabled" value="True" />
+    <StateImagery name="Enabled" />
+    <StateImagery name="Disabled" />
+    <StateImagery name="EnabledFrame">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Main_Frame_Type4" />
+      </Layer>
+    </StateImagery>
+
+    <StateImagery name="DisabledFrame" >
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Main_Frame_Type4" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="EnabledBackground">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Background_Type4" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="DisabledBackground" >
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Background_Type4" />
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+  <!--
+	***************************************************
+        TLBB_Look_Frame1
+    ***************************************************
+    -->
+  <WidgetLook name="TLBB_Look_Frame1">
+    <Property name="FrameEnabled" value="True" />
+    <Property name="BackgroundEnabled" value="True" />
+    <StateImagery name="Enabled" />
+    <StateImagery name="Disabled" />
+    <StateImagery name="EnabledFrame">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Frame_Type1" />
+      </Layer>
+    </StateImagery>
+
+    <StateImagery name="DisabledFrame" >
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Frame_Type1" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="EnabledBackground">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Background_Frame_Type1" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="DisabledBackground" >
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Background_Frame_Type1" />
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+  <!--
+	***************************************************
+        TLBB_Look_Frame2
+    ***************************************************
+    -->
+  <WidgetLook name="TLBB_Look_Frame2">
+    <Property name="FrameEnabled" value="True" />
+    <Property name="BackgroundEnabled" value="True" />
+    <StateImagery name="Enabled" />
+    <StateImagery name="Disabled" />
+    <StateImagery name="EnabledFrame">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Frame_Type2" />
+      </Layer>
+    </StateImagery>
+
+    <StateImagery name="DisabledFrame" >
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Frame_Type2" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="EnabledBackground">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Background_Frame_Type2" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="DisabledBackground" >
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Background_Frame_Type2" />
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+  
+  
+  <WidgetLook name="TLBB_Look_MainMenuBarLeft">
+    <Property name="FrameEnabled" value="True" />
+    <Property name="BackgroundEnabled" value="True" />
+    <StateImagery name="Enabled" />
+    <StateImagery name="Disabled" />
+    <StateImagery name="EnabledFrame">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Frame_Type_MainMenuBarLeft" />
+      </Layer>
+    </StateImagery>
+
+    <StateImagery name="DisabledFrame" >
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Frame_Type_MainMenuBarLeft" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="EnabledBackground">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Background_Frame_MainMenuBarLeft" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="DisabledBackground" >
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Background_Frame_MainMenuBarLeft" />
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+
+  <WidgetLook name="TLBB_Look_MainMenuBarRight">
+    <Property name="FrameEnabled" value="True" />
+    <Property name="BackgroundEnabled" value="True" />
+    <StateImagery name="Enabled" />
+    <StateImagery name="Disabled" />
+    <StateImagery name="EnabledFrame">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Frame_Type_MainMenuBarRight" />
+      </Layer>
+    </StateImagery>
+
+    <StateImagery name="DisabledFrame" >
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Frame_Type_MainMenuBarRight" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="EnabledBackground">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Background_Frame_MainMenuBarRight" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="DisabledBackground" >
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Background_Frame_MainMenuBarRight" />
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+
+  <WidgetLook name="TLBB_Look_MainMenuBarCenter">
+    <Property name="FrameEnabled" value="True" />
+    <Property name="BackgroundEnabled" value="True" />
+    <StateImagery name="Enabled" />
+    <StateImagery name="Disabled" />
+    <StateImagery name="EnabledFrame">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Frame_Type_MainMenuBarCenter" />
+      </Layer>
+    </StateImagery>
+
+    <StateImagery name="DisabledFrame" >
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Frame_Type_MainMenuBarCenter" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="EnabledBackground">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Background_Frame_MainMenuBarCenter" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="DisabledBackground" >
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Background_Frame_MainMenuBarCenter" />
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+
+  <WidgetLook name="TLBB_Look_FramePaoPao">
+    <Property name="FrameEnabled" value="True" />
+    <Property name="BackgroundEnabled" value="True" />
+    <StateImagery name="Enabled" />
+    <StateImagery name="Disabled" />
+    <StateImagery name="EnabledFrame">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Frame_PaoPao" />
+      </Layer>
+    </StateImagery>
+
+    <StateImagery name="DisabledFrame" >
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Frame_PaoPao" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="EnabledBackground">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Background_PaoPao" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="DisabledBackground" >
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Background_PaoPao" />
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+
+  <WidgetLook name="TLBB_Look_FramePet">
+    <Property name="FrameEnabled" value="True" />
+    <Property name="BackgroundEnabled" value="True" />
+    <StateImagery name="Enabled" />
+    <StateImagery name="Disabled" />
+    <StateImagery name="EnabledFrame">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Frame_Type_Pet" />
+      </Layer>
+    </StateImagery>
+
+    <StateImagery name="DisabledFrame" >
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Frame_Type_Pet" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="EnabledBackground">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Background_Common1" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="DisabledBackground" >
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Background_Common1" />
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+
+  <WidgetLook name="TLBB_Look_FramePlayer">
+    <Property name="FrameEnabled" value="True" />
+    <Property name="BackgroundEnabled" value="True" />
+    <StateImagery name="Enabled" />
+    <StateImagery name="Disabled" />
+    <StateImagery name="EnabledFrame">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Frame_Type_Player" />
+      </Layer>
+    </StateImagery>
+
+    <StateImagery name="DisabledFrame" >
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Frame_Type_Player" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="EnabledBackground">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Background_Common1" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="DisabledBackground" >
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Background_Common1" />
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+
+  <WidgetLook name="TLBB_Look_FramePlayerOther">
+    <Property name="FrameEnabled" value="True" />
+    <Property name="BackgroundEnabled" value="True" />
+    <StateImagery name="Enabled" />
+    <StateImagery name="Disabled" />
+    <StateImagery name="EnabledFrame">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Frame_Type_PlayerOther" />
+      </Layer>
+    </StateImagery>
+
+    <StateImagery name="DisabledFrame" >
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Frame_Type_PlayerOther" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="EnabledBackground">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Background_Common1" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="DisabledBackground" >
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Background_Common1" />
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+
+  <WidgetLook name="TLBB_Look_FrameSelect">
+    <Property name="FrameEnabled" value="True" />
+    <Property name="BackgroundEnabled" value="True" />
+    <StateImagery name="Enabled" />
+    <StateImagery name="Disabled" />
+    <StateImagery name="EnabledFrame">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Frame_Type_Select" />
+      </Layer>
+    </StateImagery>
+
+    <StateImagery name="DisabledFrame" >
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Frame_Type_Select" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="EnabledBackground">
+      <Layer>
+    
+      </Layer>
+    </StateImagery>
+    <StateImagery name="DisabledBackground" >
+      <Layer>
+     
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+
+
+  <WidgetLook name="TLBB_Look_Frame_Lace1">
+    <Property name="FrameEnabled" value="True" />
+    <Property name="BackgroundEnabled" value="True" />
+    <StateImagery name="Enabled" />
+    <StateImagery name="Disabled" />
+    <StateImagery name="EnabledFrame">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Frame_Type_Lace1" />
+      </Layer>
+    </StateImagery>
+
+    <StateImagery name="DisabledFrame" >
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Frame_Type_Lace1" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="EnabledBackground">
+      <Layer>
+
+      </Layer>
+    </StateImagery>
+    <StateImagery name="DisabledBackground" >
+      <Layer>
+
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+
+
+  <WidgetLook name="TLBB_Look_Frame_Lace2">
+    <Property name="FrameEnabled" value="True" />
+    <Property name="BackgroundEnabled" value="True" />
+    <StateImagery name="Enabled" />
+    <StateImagery name="Disabled" />
+    <StateImagery name="EnabledFrame">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Frame_Type_Lace2" />
+      </Layer>
+    </StateImagery>
+
+    <StateImagery name="DisabledFrame" >
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Frame_Type_Lace2" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="EnabledBackground">
+      <Layer>
+
+      </Layer>
+    </StateImagery>
+    <StateImagery name="DisabledBackground" >
+      <Layer>
+
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+
+  <WidgetLook name="TLBB_Look_Frame_Lace3">
+    <Property name="FrameEnabled" value="True" />
+    <Property name="BackgroundEnabled" value="True" />
+    <StateImagery name="Enabled" />
+    <StateImagery name="Disabled" />
+    <StateImagery name="EnabledFrame">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Frame_Type_Lace3" />
+      </Layer>
+    </StateImagery>
+
+    <StateImagery name="DisabledFrame" >
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Frame_Type_Lace3" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="EnabledBackground">
+      <Layer>
+
+      </Layer>
+    </StateImagery>
+    <StateImagery name="DisabledBackground" >
+      <Layer>
+
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+
+  <WidgetLook name="TLBB_Look_Frame_Lace4">
+    <Property name="FrameEnabled" value="True" />
+    <Property name="BackgroundEnabled" value="True" />
+    <StateImagery name="Enabled" />
+    <StateImagery name="Disabled" />
+    <StateImagery name="EnabledFrame">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Frame_Type_Lace4" />
+      </Layer>
+    </StateImagery>
+
+    <StateImagery name="DisabledFrame" >
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Frame_Type_Lace4" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="EnabledBackground">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Background_Common1" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="DisabledBackground" >
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Background_Common1" />
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+
+  <WidgetLook name="TLBB_Look_Frame_Lace5">
+    <Property name="FrameEnabled" value="True" />
+    <Property name="BackgroundEnabled" value="True" />
+    <StateImagery name="Enabled" />
+    <StateImagery name="Disabled" />
+    <StateImagery name="EnabledFrame">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Frame_Type_Lace5" />
+      </Layer>
+    </StateImagery>
+
+    <StateImagery name="DisabledFrame" >
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Frame_Type_Lace5" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="EnabledBackground">
+      <Layer>
+
+      </Layer>
+    </StateImagery>
+    <StateImagery name="DisabledBackground" >
+      <Layer>
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+  
+  <WidgetLook name="TLBB_Look_Frame_Lace6">
+    <Property name="FrameEnabled" value="True" />
+    <Property name="BackgroundEnabled" value="True" />
+    <StateImagery name="Enabled" />
+    <StateImagery name="Disabled" />
+    <StateImagery name="EnabledFrame">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Frame_Type_Lace6" />
+      </Layer>
+    </StateImagery>
+
+    <StateImagery name="DisabledFrame" >
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Frame_Type_Lace6" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="EnabledBackground">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Background_Common1" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="DisabledBackground" >
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Background_Common1" />
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+  
+  <WidgetLook name="TLBB_Look_Frame_SelectServer">
+    <Property name="FrameEnabled" value="True" />
+    <Property name="BackgroundEnabled" value="True" />
+    <StateImagery name="Enabled" />
+    <StateImagery name="Disabled" />
+    <StateImagery name="EnabledFrame">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Frame_Type_SelectServer" />
+      </Layer>
+    </StateImagery>
+
+    <StateImagery name="DisabledFrame" >
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Frame_Type_SelectServer" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="EnabledBackground">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Background_Common2" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="DisabledBackground" >
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Background_Common2" />
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+
+  <WidgetLook name="TLBB_Look_Frame_SelectServer2">
+    <Property name="FrameEnabled" value="True" />
+    <Property name="BackgroundEnabled" value="True" />
+    <StateImagery name="Enabled" />
+    <StateImagery name="Disabled" />
+    <StateImagery name="EnabledFrame">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Frame_Type_SelectServer2" />
+      </Layer>
+    </StateImagery>
+
+    <StateImagery name="DisabledFrame" >
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Frame_Type_SelectServer2" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="EnabledBackground">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Background_Common3" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="DisabledBackground" >
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Background_Common3" />
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+
+  <WidgetLook name="TLBB_Look_Frame_Logon">
+    <Property name="FrameEnabled" value="True" />
+    <Property name="BackgroundEnabled" value="True" />
+    <StateImagery name="Enabled" />
+    <StateImagery name="Disabled" />
+    <StateImagery name="EnabledFrame">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Frame_Type_Logon" />
+      </Layer>
+    </StateImagery>
+
+    <StateImagery name="DisabledFrame" >
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Frame_Type_Logon" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="EnabledBackground">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Background_Logon" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="DisabledBackground" >
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Background_Logon" />
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+
+  <WidgetLook name="TLBB_Look_MeshWindow">
+    <Property name="BackgroundName" value="Common/MeshBack.dds" />
+  </WidgetLook>
+
+  <WidgetLook name="TLBB_Look_Frame_Campaign">
+    <Property name="FrameEnabled" value="True" />
+    <Property name="BackgroundEnabled" value="True" />
+    <StateImagery name="Enabled" />
+    <StateImagery name="Disabled" />
+    <StateImagery name="EnabledFrame">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Frame_Type_Campaign" />
+      </Layer>
+    </StateImagery>
+
+    <StateImagery name="DisabledFrame" >
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Frame_Type_Campaign" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="EnabledBackground">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Background_Campaign" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="DisabledBackground" >
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Background_Campaign" />
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+  
+  <!--
+	***************************************************
+        TLBB_Look_MainFrameWindow2
+    ***************************************************
+    -->
+  <WidgetLook name="2008-1-72">
+    <Property name="FrameEnabled" value="True" />
+    <Property name="BackgroundEnabled" value="True" />
+    <StateImagery name="Enabled" />
+    <StateImagery name="Disabled" />
+    <StateImagery name="EnabledFrame">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Main_Frame_Type2" />
+      </Layer>
+    </StateImagery>
+
+    <StateImagery name="DisabledFrame" >
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Main_Frame_Type2" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="EnabledBackground">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Background_Common" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="DisabledBackground" >
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Background_Common" />
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+  <!--
+	***************************************************
+        TLBB_Look_MainFrameWindow5
+    ***************************************************
+    -->
+  <WidgetLook name="TLBB_Look_MainFrameWindow5">
+    <Property name="FrameEnabled" value="True" />
+    <Property name="BackgroundEnabled" value="True" />
+    <StateImagery name="Enabled" />
+    <StateImagery name="Disabled" />
+    <StateImagery name="EnabledFrame">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Main_Frame_Type5" />
+      </Layer>
+    </StateImagery>
+
+    <StateImagery name="DisabledFrame" >
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Main_Frame_Type5" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="EnabledBackground">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Background_Type5" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="DisabledBackground" >
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Background_Type5" />
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+</Falagard>

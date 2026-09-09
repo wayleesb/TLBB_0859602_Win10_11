@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="西湖酒楼.frame" />
+    <entity mesh="西湖酒楼.mesh" node="西湖酒楼" />
+    <entity mesh="西湖酒楼铃铛3.mesh" node="西湖酒楼铃铛3">
+        <offset>
+            <translate x="79.7139" y="-443.223" z="302.547" />
+        </offset>
+    </entity>
+    <entity mesh="西湖酒楼铃铛4.mesh" node="西湖酒楼铃铛4">
+        <offset>
+            <translate x="79.7139" y="-438.102" z="-49.5541" />
+        </offset>
+    </entity>
+    <entity mesh="西湖酒楼铃铛1.mesh" node="西湖酒楼铃铛1">
+        <offset>
+            <translate x="-427.104" y="-438.102" z="-49.5541" />
+        </offset>
+    </entity>
+    <entity mesh="西湖酒楼铃铛2.mesh" node="西湖酒楼铃铛2">
+        <offset>
+            <translate x="-427.104" y="-438.102" z="302.547" />
+        </offset>
+    </entity>
+    <entity mesh="西湖酒楼铃铛5.mesh" node="西湖酒楼铃铛5">
+        <offset>
+            <translate x="511.409" y="-246.323" z="-52.3677" />
+        </offset>
+    </entity>
+    <entity mesh="西湖酒楼铃铛9.mesh" node="西湖酒楼铃铛9">
+        <offset>
+            <translate x="511.409" y="-262.509" z="337.22" />
+        </offset>
+    </entity>
+    <entity mesh="西湖酒楼铃铛8.mesh" node="西湖酒楼铃铛8">
+        <offset>
+            <translate x="-419.071" y="-249.539" z="346.343" />
+        </offset>
+    </entity>
+    <entity mesh="西湖酒楼铃铛7.mesh" node="西湖酒楼铃铛7">
+        <offset>
+            <translate x="-419.071" y="-249.539" z="-396.376" />
+        </offset>
+    </entity>
+    <entity mesh="西湖酒楼铃铛6.mesh" node="西湖酒楼铃铛6">
+        <offset>
+            <translate x="81.5201" y="-249.539" z="-396.376" />
+        </offset>
+    </entity>
+    <entity mesh="西湖酒楼灯笼.mesh" />
+</model>

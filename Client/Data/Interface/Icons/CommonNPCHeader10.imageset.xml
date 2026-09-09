@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<Imageset Name="CommonNPCHeader10" Imagefile="Icons/CommonNPCHeader10.jpg" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+	<Image Name="CommonNPCHeader10_1" XPos="0" YPos="0" Width="48" Height="48" />
+	<Image Name="CommonNPCHeader10_2" XPos="48" YPos="0" Width="48" Height="48" />
+	<Image Name="CommonNPCHeader10_3" XPos="96" YPos="0" Width="48" Height="48" />
+	<Image Name="CommonNPCHeader10_4" XPos="144" YPos="0" Width="48" Height="48" />
+	<Image Name="CommonNPCHeader10_5" XPos="192" YPos="0" Width="48" Height="48" />
+	<Image Name="CommonNPCHeader10_6" XPos="0" YPos="48" Width="48" Height="48" />
+	<Image Name="CommonNPCHeader10_7" XPos="48" YPos="48" Width="48" Height="48" />
+	<Image Name="CommonNPCHeader10_8" XPos="96" YPos="48" Width="48" Height="48" />
+	<Image Name="CommonNPCHeader10_9" XPos="144" YPos="48" Width="48" Height="48" />
+	<Image Name="CommonNPCHeader10_10" XPos="192" YPos="48" Width="48" Height="48" />
+	<Image Name="CommonNPCHeader10_11" XPos="0" YPos="96" Width="48" Height="48" />
+	<Image Name="CommonNPCHeader10_12" XPos="48" YPos="96" Width="48" Height="48" />
+	<Image Name="CommonNPCHeader10_13" XPos="96" YPos="96" Width="48" Height="48" />
+	<Image Name="CommonNPCHeader10_14" XPos="144" YPos="96" Width="48" Height="48" />
+	<Image Name="CommonNPCHeader10_15" XPos="192" YPos="96" Width="48" Height="48" />
+	<Image Name="CommonNPCHeader10_16" XPos="0" YPos="144" Width="48" Height="48" />
+	<Image Name="CommonNPCHeader10_17" XPos="48" YPos="144" Width="48" Height="48" />
+	<Image Name="CommonNPCHeader10_18" XPos="96" YPos="144" Width="48" Height="48" />
+	<Image Name="CommonNPCHeader10_19" XPos="144" YPos="144" Width="48" Height="48" />
+	<Image Name="CommonNPCHeader10_20" XPos="192" YPos="144" Width="48" Height="48" />
+	<Image Name="CommonNPCHeader10_21" XPos="0" YPos="192" Width="48" Height="48" />
+	<Image Name="CommonNPCHeader10_22" XPos="48" YPos="192" Width="48" Height="48" />
+	<Image Name="CommonNPCHeader10_23" XPos="96" YPos="192" Width="48" Height="48" />
+	<Image Name="CommonNPCHeader10_24" XPos="144" YPos="192" Width="48" Height="48" />
+	<Image Name="CommonNPCHeader10_25" XPos="192" YPos="192" Width="48" Height="48" />
+</Imageset>

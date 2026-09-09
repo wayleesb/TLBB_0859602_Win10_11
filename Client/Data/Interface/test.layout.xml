@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" ?>
+
+<GUILayout>
+	<Window Type="DefaultWindow" Name="Test_Backgournd">
+		<Property Name="Size" Value="w:1 h:1" />
+		<Property Name="Position" Value="x:0 y:0" />
+
+    <Window Type="TLBB_Frame_Lace6" Name="Button_Pack">
+      <Property Name="AbsolutePosition" Value="x:4.000000 y:9.000000" />
+      <Property Name="AbsoluteSize" Value="w:120.000000 h:120.000000" />
+      
+    </Window>
+    
+  </Window>
+</GUILayout>

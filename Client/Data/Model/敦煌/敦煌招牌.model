@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="敦煌招牌.frame" />
+    <entity mesh="敦煌招牌旗.mesh" />
+    <entity mesh="敦煌招牌灯1.mesh" node="敦煌招牌灯1">
+        <offset>
+            <translate x="60.6623" y="-450.158" z="-1.38587" />
+        </offset>
+    </entity>
+    <entity mesh="敦煌招牌灯2.mesh" node="敦煌招牌灯2">
+        <offset>
+            <translate x="60.6623" y="-385.214" z="-1.38584" />
+        </offset>
+    </entity>
+    <entity mesh="敦煌招牌灯3.mesh" node="敦煌招牌灯3">
+        <offset>
+            <translate x="60.6623" y="-318.054" z="-1.38581" />
+        </offset>
+    </entity>
+    <entity mesh="敦煌招牌灯4.mesh" node="敦煌招牌灯4">
+        <offset>
+            <translate x="60.6623" y="-253.811" z="-1.38575" />
+        </offset>
+    </entity>
+</model>

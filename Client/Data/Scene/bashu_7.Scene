@@ -1,0 +1,1762 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Scene formatVersion="0.1.1" name="bashu_7">
+
+  <Terrain filename="bashu_7.Terrain"/>
+
+  <Object name="#FairyEnviroment" type="Enviroment">
+    <Property name="ambient" value="0.172549 0.258824 0.141176"/>
+    <Property name="fog.mode" value="linear"/>
+    <Property name="fog.colour" value="0.066667 0.160784 0.062745"/>
+    <Property name="fog.linear start" value="1700"/>
+    <Property name="fog.linear end" value="3000"/>
+  </Object>
+
+  <Object name="#FairyMainLightOne" type="Light">
+    <Property name="type" value="directional"/>
+    <Property name="diffuse" value="0.117647 0.25098 0.121569"/>
+    <Property name="specular" value="0.082353 0.141176 0.094118"/>
+    <Property name="direction" value="-1 -6 3"/>
+  </Object>
+
+  <Object name="#FairyMainLightTwo" type="Light">
+    <Property name="type" value="directional"/>
+    <Property name="diffuse" value="0.07451 0.109804 0.12549"/>
+    <Property name="direction" value="1 -1 -1"/>
+  </Object>
+
+  <Object name="#FairySkyDome" type="SkyDome">
+    <Property name="material" value="CloudySky"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深柱子.mesh"/>
+    <Property name="position" value="-128.971 1442.8 38.1521"/>
+    <Property name="orientation" value="-6.70552e-008 1 0 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深柱子.mesh"/>
+    <Property name="position" value="-66.1631 1346.6 247.31"/>
+    <Property name="orientation" value="2.56609e-008 -0.382683 -6.19509e-008 -0.92388"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深柱子.mesh"/>
+    <Property name="position" value="140.373 -54.1907 43.8342"/>
+  </Object>
+
+  <Object type="TerrainLiquid">
+    <Property name="material" value="haihuwater"/>
+    <Property name="position" value="-641.948 -86.6584 807.223"/>
+    <Property name="texture scale" value="0.2"/>
+    <Property name="depth texture layer.enable" value="true"/>
+    <Property name="depth texture layer.height scale" value="0.003"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="秦地宫/地宫台阶边.mesh"/>
+    <Property name="position" value="-5712.53 0 -4100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="秦地宫/地宫台阶边.mesh"/>
+    <Property name="position" value="-5712.53 0 -3300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="秦地宫/地宫台阶边.mesh"/>
+    <Property name="position" value="-4100 -400 -4700"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="秦地宫/地宫台阶边.mesh"/>
+    <Property name="position" value="-3500 -400 -4700"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="秦地宫/地宫台阶边.mesh"/>
+    <Property name="position" value="400 -400 3600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="秦地宫/地宫台阶边.mesh"/>
+    <Property name="position" value="400 -400 4300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="秦地宫/地宫台阶边.mesh"/>
+    <Property name="position" value="4900 -800 4400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="秦地宫/地宫台阶边.mesh"/>
+    <Property name="position" value="4900 -800 3900"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shuimianlianyi"/>
+    <Property name="position" value="-465.171 -102.207 -319.979"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shuidi"/>
+    <Property name="position" value="-578.443 -115.731 -330.761"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shuidi"/>
+    <Property name="position" value="-185.014 -115.774 537.008"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shuimianlianyi"/>
+    <Property name="position" value="-143.932 -121.825 573.897"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.196078 0.023529"/>
+    <Property name="specular" value="0.823529 0.141176 0.066667"/>
+    <Property name="position" value="-329.893 280.541 5531.7"/>
+    <Property name="range" value="500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="秦地宫/地宫柱子.mesh"/>
+    <Property name="position" value="-3300 0 -4600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="秦地宫/地宫柱子.mesh"/>
+    <Property name="position" value="-3300 0 -2200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="秦地宫/地宫柱子.mesh"/>
+    <Property name="position" value="-3300 0 -3000"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="秦地宫/地宫柱子.mesh"/>
+    <Property name="position" value="-3300 0 -3800"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="秦地宫/地宫柱子.mesh"/>
+    <Property name="position" value="-471.788 0 -4482.77"/>
+    <Property name="orientation" value="0.728313 0.643756 0.191419 -0.135996"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="秦地宫/地宫柱子破2.mesh"/>
+    <Property name="position" value="-500 0 -3800"/>
+    <Property name="orientation" value="0.844192 0 0.53604 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="秦地宫/地宫柱子破1.mesh"/>
+    <Property name="position" value="-713.13 -2.99459 -3463.35"/>
+    <Property name="orientation" value="0.886807 0 0.462138 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="秦地宫/地宫柱子.mesh"/>
+    <Property name="position" value="-497.136 0 -3000"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="秦地宫/地宫柱子.mesh"/>
+    <Property name="position" value="-380.442 3.19312 -2189.87"/>
+    <Property name="orientation" value="0.707857 0.513564 0.161994 0.457104"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.94902 0 0"/>
+    <Property name="position" value="4253.26 -1446.84 -3871.85"/>
+    <Property name="range" value="300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀地宫石人.mesh"/>
+    <Property name="position" value="-4700 0 4700"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀地宫石人.mesh"/>
+    <Property name="position" value="-4700 0 2700"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀地宫石人.mesh"/>
+    <Property name="position" value="-4700 0 700"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀地宫石人.mesh"/>
+    <Property name="position" value="-4700 0 -1300"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀地宫石人.mesh"/>
+    <Property name="position" value="1145.24 -400 4888.79"/>
+    <Property name="orientation" value="-1.13621e-007 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀地宫石人.mesh"/>
+    <Property name="position" value="2046.87 -400 4900"/>
+    <Property name="orientation" value="-1.13621e-007 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀地宫石人.mesh"/>
+    <Property name="position" value="2950.07 -400 4900"/>
+    <Property name="orientation" value="-1.13621e-007 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀地宫石人.mesh"/>
+    <Property name="position" value="3851.91 -400 4900"/>
+    <Property name="orientation" value="-1.13621e-007 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀地宫石人.mesh"/>
+    <Property name="position" value="4749.99 -400 4900"/>
+    <Property name="orientation" value="-1.13621e-007 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀棺材小.mesh"/>
+    <Property name="position" value="-5100 100 3700"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀供桌.mesh"/>
+    <Property name="position" value="-5100 0 3700"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀地宫石人.mesh"/>
+    <Property name="position" value="-4700 0 3700"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀棺材小.mesh"/>
+    <Property name="position" value="-5100 100 4700"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀供桌.mesh"/>
+    <Property name="position" value="-5100 0 4700"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀供桌.mesh"/>
+    <Property name="position" value="-5100 0 2700"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀棺材小.mesh"/>
+    <Property name="position" value="-5100 100 2700"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀棺材小.mesh"/>
+    <Property name="position" value="-5100 100 1700"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀供桌.mesh"/>
+    <Property name="position" value="-5100 0 1700"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀供桌.mesh"/>
+    <Property name="position" value="-5100 4.5517 700"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀棺材小.mesh"/>
+    <Property name="position" value="-5100 104.552 730.065"/>
+    <Property name="orientation" value="0.583528 0 -0.812093 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀供桌.mesh"/>
+    <Property name="position" value="-5100 -17.6862 -300"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀棺材小.mesh"/>
+    <Property name="position" value="-5100 82.3138 -381.487"/>
+    <Property name="orientation" value="0.699541 -0.103163 -0.699541 0.103163"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀棺材小.mesh"/>
+    <Property name="position" value="-5100 100 -1300"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀供桌.mesh"/>
+    <Property name="position" value="-5100 0 -1300"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀棺材小.mesh"/>
+    <Property name="position" value="-5100 100 -2300"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀供桌.mesh"/>
+    <Property name="position" value="-5100 0 -2300"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀地宫石人.mesh"/>
+    <Property name="position" value="-4700 0 -2300"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀地宫石人.mesh"/>
+    <Property name="position" value="-4700 0 1700"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀地宫石人.mesh"/>
+    <Property name="position" value="-4659.72 4.1023 -290.981"/>
+    <Property name="orientation" value="0.671589 -0.0270018 0.706591 -0.221289"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.996078 0.227451 0.039216"/>
+    <Property name="specular" value="0.666667 0 0"/>
+    <Property name="position" value="1700 -743.6 -5300"/>
+    <Property name="range" value="1000"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.94902 0.141176 0"/>
+    <Property name="specular" value="0.482353 0.094118 0"/>
+    <Property name="position" value="4169 -263.376 -3800"/>
+    <Property name="range" value="400"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.996078 0.227451 0.039216"/>
+    <Property name="specular" value="0.733333 0 0"/>
+    <Property name="position" value="1700 -1292.08 -4600"/>
+    <Property name="range" value="500"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yun"/>
+    <Property name="position" value="-164.331 -3.50776 13.6633"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="wenquan"/>
+    <Property name="position" value="4199.47 -597.923 -3772.3"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="xiangluyan"/>
+    <Property name="position" value="4241.97 -527.942 -3837.17"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="chuansongmen_03"/>
+    <Property name="position" value="1524.64 -719.327 -4423.85"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="xiangluyan"/>
+    <Property name="position" value="1410.95 -1584.19 -5736.6"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="xiangluyan"/>
+    <Property name="position" value="1784.55 -1431.63 -6161.04"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="xiangluyan_01"/>
+    <Property name="position" value="1742.88 -1589.53 -5546.17"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.996078 0.227451 0.039216"/>
+    <Property name="specular" value="0.666667 0 0"/>
+    <Property name="position" value="1400 -1072.88 -6300"/>
+    <Property name="range" value="1000"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.996078 0.227451 0.039216"/>
+    <Property name="specular" value="0.666667 0 0"/>
+    <Property name="position" value="1500 -749.686 -4400"/>
+    <Property name="range" value="500"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="xiangluyan_01"/>
+    <Property name="position" value="1120.98 -1220.22 -6215.97"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.996078 0.227451 0.039216"/>
+    <Property name="specular" value="0.666667 0 0"/>
+    <Property name="position" value="2200 -1579.93 -4000"/>
+    <Property name="range" value="500"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.94902 0.141176 0"/>
+    <Property name="position" value="5182 -3.69 -2565"/>
+    <Property name="range" value="400"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="wenquan"/>
+    <Property name="position" value="5267.47 -338.237 -2561.3"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.94902 0 0"/>
+    <Property name="position" value="4884.26 -1587.15 -2671.85"/>
+    <Property name="range" value="300"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="xiangluyan"/>
+    <Property name="position" value="5239.97 -268.256 -2539.17"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.94902 0 0"/>
+    <Property name="position" value="5300 -866.83 -2500"/>
+    <Property name="range" value="300"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.94902 0 0"/>
+    <Property name="specular" value="0.976471 0.247059 0"/>
+    <Property name="position" value="4679 -271.18 -2798"/>
+    <Property name="range" value="200"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="xiangluyan"/>
+    <Property name="position" value="4700 -448.126 -2788"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="xiangluyan"/>
+    <Property name="position" value="3100 -634.8 -1500"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.94902 0.309804 0"/>
+    <Property name="specular" value="0.509804 0.05098 0"/>
+    <Property name="position" value="3100 -450.651 -1500"/>
+    <Property name="range" value="200"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.94902 0 0"/>
+    <Property name="position" value="4700 -890.803 -2800"/>
+    <Property name="range" value="200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="秦地宫/地宫台阶边.mesh"/>
+    <Property name="position" value="4200 -800 600"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="秦地宫/地宫台阶边.mesh"/>
+    <Property name="position" value="3500 -800 600"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀地宫石人.mesh"/>
+    <Property name="position" value="1161.54 -400 2900"/>
+    <Property name="orientation" value="-1 0 2.98023e-008 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀地宫石人.mesh"/>
+    <Property name="position" value="2050.55 -400 2900"/>
+    <Property name="orientation" value="-1 0 2.98023e-008 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀地宫石人.mesh"/>
+    <Property name="position" value="2700 -400 2249.65"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀地宫石人.mesh"/>
+    <Property name="position" value="2700 -400 1349.67"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀地宫石人.mesh"/>
+    <Property name="position" value="2700 -800 -152.523"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀地宫石人.mesh"/>
+    <Property name="position" value="2700 -800 -1053.86"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀地宫石人.mesh"/>
+    <Property name="position" value="4900 -800 -147.896"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀地宫石人.mesh"/>
+    <Property name="position" value="4900 -800 -1050.1"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀地宫石人.mesh"/>
+    <Property name="position" value="4824.54 -800 -2210.87"/>
+    <Property name="orientation" value="-0.557203 -0.0993097 0.69569 -0.442367"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀地宫石人.mesh"/>
+    <Property name="position" value="4670.77 -735.272 -3503.13"/>
+    <Property name="orientation" value="-0.0335949 0.593655 -0.708411 -0.380268"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="chuansongmen_03"/>
+    <Property name="position" value="-3510.87 586.01 5258.13"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/人骨.mesh"/>
+    <Property name="position" value="-3660.15 428.028 5209.58"/>
+    <Property name="orientation" value="0.84223 -0.241294 0.482104 0.00292568"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/人骨.mesh"/>
+    <Property name="position" value="-3300 210.496 4800"/>
+    <Property name="orientation" value="0.85532 -0.36706 -0.358356 0.0727196"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/人骨.mesh"/>
+    <Property name="position" value="-3289.86 179.311 4700"/>
+    <Property name="orientation" value="-0.205485 -0.739845 -0.0370198 -0.639575"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/人骨.mesh"/>
+    <Property name="position" value="-3400 359.705 5100"/>
+    <Property name="orientation" value="-0.0849713 0.0721336 0.949544 -0.293247"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/人骨.mesh"/>
+    <Property name="position" value="-4011.34 48.7836 4293.81"/>
+    <Property name="orientation" value="0.346835 -0.406222 -0.722197 0.439491"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/人骨.mesh"/>
+    <Property name="position" value="-3700 451.137 5200"/>
+    <Property name="orientation" value="-0.0827231 0.2018 -0.116277 -0.96899"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/人骨.mesh"/>
+    <Property name="position" value="-3800 307.623 5000"/>
+    <Property name="orientation" value="0.992106 -0.0387409 0.0752359 -0.092613"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/人骨.mesh"/>
+    <Property name="position" value="-3600 289.661 5000"/>
+    <Property name="orientation" value="0.354154 0.0620748 0.921997 -0.143724"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.043137 0.756863 0.968627"/>
+    <Property name="position" value="-3500 610.819 5300"/>
+    <Property name="range" value="500"/>
+    <Property name="attenuation.linear" value="0.001"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="秦地宫/地宫柱子.mesh"/>
+    <Property name="position" value="-3683.58 169.195 4136.75"/>
+    <Property name="orientation" value="0.596194 -0.584385 0.219272 0.504949"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="秦地宫/地宫柱子.mesh"/>
+    <Property name="position" value="-3000 100 3600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="秦地宫/地宫柱子.mesh"/>
+    <Property name="position" value="-3000 100 4200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="秦地宫/地宫柱子破2.mesh"/>
+    <Property name="position" value="-3600 100 3600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="秦地宫/地宫柱子破1.mesh"/>
+    <Property name="position" value="-3925.12 0.0628662 3103.41"/>
+    <Property name="orientation" value="0.888299 0.00864908 -0.459167 -0.00447072"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀地宫石人.mesh"/>
+    <Property name="position" value="4900 -400 2900"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀地宫石人.mesh"/>
+    <Property name="position" value="4900 -400 1900"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀地宫石人.mesh"/>
+    <Property name="position" value="4900 -400 900"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="秦地宫/地宫柱子.mesh"/>
+    <Property name="position" value="300 0 4400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="秦地宫/地宫柱子破2.mesh"/>
+    <Property name="position" value="300 0 3400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="秦地宫/地宫柱子破1.mesh"/>
+    <Property name="position" value="706.726 -400 3200"/>
+    <Property name="orientation" value="0.382683 0 -0.92388 0"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.27451 0.035294"/>
+    <Property name="specular" value="0.976471 0.05098 0"/>
+    <Property name="position" value="2300 -800 -3800"/>
+    <Property name="range" value="500"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.611765 0.035294"/>
+    <Property name="specular" value="0.666667 0 0"/>
+    <Property name="position" value="1800 -480.355 -3500"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="0.003"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/珠宝箱子2.mesh"/>
+    <Property name="position" value="5175.6 -400 3012.71"/>
+    <Property name="orientation" value="0.427555 0 -0.903988 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/珠宝箱子1.mesh"/>
+    <Property name="position" value="5496.19 -400 2756.2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/珠宝缸子.mesh"/>
+    <Property name="position" value="5296.41 -400 2901.35"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/珠宝缸子.mesh"/>
+    <Property name="position" value="5499.89 -400 3023.74"/>
+    <Property name="orientation" value="0.610383 0 0.792107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/珠宝缸子.mesh"/>
+    <Property name="position" value="5417.57 -400 1797.21"/>
+    <Property name="orientation" value="0.689541 0 -0.724247 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/珠宝金元宝.mesh"/>
+    <Property name="position" value="5396.9 -400 3010.03"/>
+    <Property name="orientation" value="0.588282 0 -0.808656 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/珠宝金器.mesh"/>
+    <Property name="position" value="5458.15 -304.913 3001.17"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/珠宝银元宝.mesh"/>
+    <Property name="position" value="5188.06 -400 2913.5"/>
+    <Property name="orientation" value="0.881412 -0.19959 -0.416877 0.0974138"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/珠宝金砖.mesh"/>
+    <Property name="position" value="5451.83 -400 2834.88"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/珠宝金砖.mesh"/>
+    <Property name="position" value="5402.73 -400 2827.14"/>
+    <Property name="orientation" value="0.887639 0 -0.460538 0"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.796078 0.101961"/>
+    <Property name="specular" value="0.976471 0.92549 0"/>
+    <Property name="position" value="5293 -200 2921"/>
+    <Property name="range" value="100"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.796078 0.101961"/>
+    <Property name="specular" value="0.976471 0.92549 0"/>
+    <Property name="position" value="5408.48 -200 1805.37"/>
+    <Property name="range" value="100"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.796078 0.101961"/>
+    <Property name="specular" value="0.976471 0.92549 0"/>
+    <Property name="position" value="5485 -200 3017"/>
+    <Property name="range" value="200"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.796078 0.101961"/>
+    <Property name="specular" value="0.976471 0.92549 0"/>
+    <Property name="position" value="5200 -300 3001"/>
+    <Property name="range" value="100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/藏宝洞宝箱.mesh"/>
+    <Property name="position" value="5350.95 -400 2769.08"/>
+    <Property name="orientation" value="0.965394 0 0.260794 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/青瓷石海.mesh"/>
+    <Property name="position" value="5493.92 -400 2879.83"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/陶罐02.mesh"/>
+    <Property name="position" value="5011.81 -400 2737.78"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝藏洞供桌.mesh"/>
+    <Property name="position" value="5357.8 -400 1993.49"/>
+    <Property name="orientation" value="0.177004 0 -0.984209 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀罐1.mesh"/>
+    <Property name="position" value="5438.87 -217.222 1968.46"/>
+    <Property name="orientation" value="0.932993 0 -0.359895 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/藏宝洞宝箱.mesh"/>
+    <Property name="position" value="5337.66 -222.005 2000"/>
+    <Property name="orientation" value="0.452349 0 -0.89184 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/珠宝金元宝.mesh"/>
+    <Property name="position" value="5278.47 -218.694 2000"/>
+    <Property name="orientation" value="-0.59816 0 -0.801376 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/珠宝金元宝.mesh"/>
+    <Property name="position" value="5234.9 -210.071 2011.12"/>
+    <Property name="orientation" value="0.0245416 0 -0.999699 0"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.796078 0.101961"/>
+    <Property name="specular" value="0.976471 0.92549 0"/>
+    <Property name="position" value="5300 -100 2000"/>
+    <Property name="range" value="100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀罐1.mesh"/>
+    <Property name="position" value="5172.72 -368.894 1800"/>
+    <Property name="orientation" value="0.671491 0.168873 0.416609 -0.589082"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/珠宝箱子1.mesh"/>
+    <Property name="position" value="5100 -400 2054.15"/>
+    <Property name="orientation" value="-0.0613209 0 -0.998117 0"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.796078 0.101961"/>
+    <Property name="specular" value="0.976471 0.92549 0"/>
+    <Property name="position" value="5490.91 -200 1023.33"/>
+    <Property name="range" value="100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/珠宝缸子.mesh"/>
+    <Property name="position" value="5500 -400 1015.17"/>
+    <Property name="orientation" value="0.902673 0 -0.430326 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/珠宝缸子.mesh"/>
+    <Property name="position" value="5300 -400 1015.17"/>
+    <Property name="orientation" value="0.402435 0 -0.915448 0"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.796078 0.101961"/>
+    <Property name="specular" value="0.976471 0.92549 0"/>
+    <Property name="position" value="5290.91 -200 1023.33"/>
+    <Property name="range" value="100"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.796078 0.101961"/>
+    <Property name="specular" value="0.976471 0.92549 0"/>
+    <Property name="position" value="5480.66 -200 843.006"/>
+    <Property name="range" value="100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/珠宝缸子.mesh"/>
+    <Property name="position" value="5489.75 -400 834.846"/>
+    <Property name="orientation" value="-0.13458 0 -0.990901 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/青瓷石海.mesh"/>
+    <Property name="position" value="5158.36 -400 994.925"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/藏宝洞宝箱.mesh"/>
+    <Property name="position" value="5184.72 -206.659 1027.48"/>
+    <Property name="orientation" value="0.815687 -0.348261 -0.28085 0.366724"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/珠宝金元宝.mesh"/>
+    <Property name="position" value="5131.73 -255.25 986.953"/>
+    <Property name="orientation" value="-0.7552 0 -0.655493 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/陶罐01.mesh"/>
+    <Property name="position" value="5202.02 -400 732.44"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/陶罐02.mesh"/>
+    <Property name="position" value="5182.16 -400 771.666"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/陶罐.mesh"/>
+    <Property name="position" value="5110.2 -385.057 735.052"/>
+    <Property name="orientation" value="0.812009 0.170529 0.290541 0.476597"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/藏宝洞宝箱.mesh"/>
+    <Property name="position" value="5363.14 -400 800"/>
+    <Property name="orientation" value="0.819347 0 -0.573297 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/藏宝洞宝箱.mesh"/>
+    <Property name="position" value="5273.58 -400 800"/>
+    <Property name="orientation" value="-0.110222 0 -0.993906 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/藏宝洞宝箱.mesh"/>
+    <Property name="position" value="5335.31 -330.771 779.439"/>
+    <Property name="orientation" value="-0.00920404 0 -0.999956 0"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.796078 0.101961"/>
+    <Property name="specular" value="0.976471 0.92549 0"/>
+    <Property name="position" value="5325 -248 850"/>
+    <Property name="range" value="100"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui02"/>
+    <Property name="position" value="5254.79 -200 2009.19"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui03"/>
+    <Property name="position" value="5441.41 -264 1796.64"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui02"/>
+    <Property name="position" value="5397.4 -285 1816.65"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui02"/>
+    <Property name="position" value="5506.7 -269 3023.24"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui03"/>
+    <Property name="position" value="5295.42 -257 2872.38"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui02"/>
+    <Property name="position" value="5160.33 -319 3005.64"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui02"/>
+    <Property name="position" value="5047.03 -313 2024.9"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui03"/>
+    <Property name="position" value="5310.73 -265 1033.86"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui02"/>
+    <Property name="position" value="5433.84 -264 869.912"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui02"/>
+    <Property name="position" value="5493.97 -300 1020.23"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/珠宝金元宝.mesh"/>
+    <Property name="position" value="5400 -400 900"/>
+    <Property name="orientation" value="-0.405241 0 -0.91421 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/珠宝金元宝.mesh"/>
+    <Property name="position" value="5100 -400 800"/>
+    <Property name="orientation" value="0.427555 0 -0.903989 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/珠宝金砖.mesh"/>
+    <Property name="position" value="5000 -400 1000"/>
+    <Property name="orientation" value="0.902673 0 -0.430326 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/珠宝金砖.mesh"/>
+    <Property name="position" value="5284.24 -219.449 2073.99"/>
+    <Property name="orientation" value="0.844853 0 -0.534997 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝石晶体蓝.mesh"/>
+    <Property name="position" value="-386.071 -68.5706 259.439"/>
+    <Property name="orientation" value="0.996723 0.0643051 -0.00315911 0.0489659"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝石晶体绿.mesh"/>
+    <Property name="position" value="-62.2791 -39.2068 -149.104"/>
+    <Property name="orientation" value="-0.188769 -0.106526 -0.969751 0.112249"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝石晶体蓝.mesh"/>
+    <Property name="position" value="-117.193 -141.203 402.632"/>
+    <Property name="orientation" value="0.466705 0.0647897 -0.879624 -0.0651885"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.168627 0.976471 0.023529"/>
+    <Property name="specular" value="0.058824 0.392157 0.043137"/>
+    <Property name="position" value="36 195.323 -272"/>
+    <Property name="range" value="200"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.043137 0.756863 0.968627"/>
+    <Property name="specular" value="0.058824 0.462745 0.866667"/>
+    <Property name="position" value="-500 227.157 300"/>
+    <Property name="range" value="200"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.043137 0.756863 0.968627"/>
+    <Property name="specular" value="0.070588 0.415686 0.670588"/>
+    <Property name="position" value="-135 164.825 500"/>
+    <Property name="range" value="150"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui03"/>
+    <Property name="position" value="-435.515 83.0199 370.479"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui03"/>
+    <Property name="position" value="-360.782 203.371 313.216"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui03"/>
+    <Property name="position" value="-173.199 82.7223 421.871"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui01"/>
+    <Property name="position" value="-41.4497 191.559 -224.992"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui01"/>
+    <Property name="position" value="129.242 27.9416 -91.0847"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀火盆.mesh"/>
+    <Property name="position" value="-3600 0 700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀火盆.mesh"/>
+    <Property name="position" value="-3600 0 -300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀火盆.mesh"/>
+    <Property name="position" value="-3300 99.5143 3900"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.501961 0"/>
+    <Property name="specular" value="0.709804 0 0"/>
+    <Property name="position" value="-3600 200 -300"/>
+    <Property name="range" value="300"/>
+    <Property name="attenuation.linear" value="0.003"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01_big"/>
+    <Property name="position" value="-3602.95 87 -297.107"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="-3605.81 130 -297.095"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="-3599.9 229 -303.722"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.501961 0"/>
+    <Property name="specular" value="0.709804 0 0"/>
+    <Property name="position" value="-3600.1 171 703.722"/>
+    <Property name="range" value="300"/>
+    <Property name="attenuation.linear" value="0.003"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="-3605.91 101 706.627"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01_big"/>
+    <Property name="position" value="-3603.05 58 706.615"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="-3600 200 700"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01_big"/>
+    <Property name="position" value="-3303.05 181.575 3906.61"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.501961 0"/>
+    <Property name="specular" value="0.709804 0 0"/>
+    <Property name="position" value="-3300.1 494.575 3903.72"/>
+    <Property name="range" value="450"/>
+    <Property name="attenuation.linear" value="0.003"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="-3305.91 224.575 3906.63"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="-3300 323.575 3900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀火盆.mesh"/>
+    <Property name="position" value="-3600 0.490768 1900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀火盆.mesh"/>
+    <Property name="position" value="1600 -400 3200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀火盆.mesh"/>
+    <Property name="position" value="2500 -400 3200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀火盆.mesh"/>
+    <Property name="position" value="1600 -400 4600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀火盆.mesh"/>
+    <Property name="position" value="2500 -400 4600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀火盆.mesh"/>
+    <Property name="position" value="3300 -300 1400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀火盆.mesh"/>
+    <Property name="position" value="3300 -300 2200"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="1600 -270 3200"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.501961 0"/>
+    <Property name="specular" value="0.709804 0 0"/>
+    <Property name="position" value="1600 -200 3200"/>
+    <Property name="range" value="300"/>
+    <Property name="attenuation.linear" value="0.003"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="1600 -171 3200"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01_big"/>
+    <Property name="position" value="1600 -313 3200"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01_big"/>
+    <Property name="position" value="1600 -313 4600"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.501961 0"/>
+    <Property name="specular" value="0.709804 0 0"/>
+    <Property name="position" value="1600 -200 4600"/>
+    <Property name="range" value="300"/>
+    <Property name="attenuation.linear" value="0.003"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="1600 -171 4600"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="1600 -270 4600"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01_big"/>
+    <Property name="position" value="2500 -300 4600"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="2500 -158 4600"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="2500 -257 4600"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.501961 0"/>
+    <Property name="specular" value="0.709804 0 0"/>
+    <Property name="position" value="2500 -187 4600"/>
+    <Property name="range" value="300"/>
+    <Property name="attenuation.linear" value="0.003"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="2500 -257 3200"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01_big"/>
+    <Property name="position" value="2500 -300 3200"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.501961 0"/>
+    <Property name="specular" value="0.709804 0 0"/>
+    <Property name="position" value="2500 -187 3200"/>
+    <Property name="range" value="300"/>
+    <Property name="attenuation.linear" value="0.003"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="2500 -158 3200"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="3300 -58 2200"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.501961 0"/>
+    <Property name="specular" value="0.709804 0 0"/>
+    <Property name="position" value="3300 -87 2200"/>
+    <Property name="range" value="300"/>
+    <Property name="attenuation.linear" value="0.003"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="3300 -157 2200"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01_big"/>
+    <Property name="position" value="3300 -200 2200"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.501961 0"/>
+    <Property name="specular" value="0.709804 0 0"/>
+    <Property name="position" value="3300 -87 1400"/>
+    <Property name="range" value="300"/>
+    <Property name="attenuation.linear" value="0.003"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01_big"/>
+    <Property name="position" value="3300 -200 1400"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="3300 -58 1400"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="3300 -157 1400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀火盆.mesh"/>
+    <Property name="position" value="3400 -400 4600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀火盆.mesh"/>
+    <Property name="position" value="4300 -400.837 4600"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.501961 0"/>
+    <Property name="specular" value="0.709804 0 0"/>
+    <Property name="position" value="3400 -229 4600"/>
+    <Property name="range" value="300"/>
+    <Property name="attenuation.linear" value="0.003"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="3400 -200 4600"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="3400 -299 4600"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01_big"/>
+    <Property name="position" value="3400 -342 4600"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="4300 -198.481 4600"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.501961 0"/>
+    <Property name="specular" value="0.709804 0 0"/>
+    <Property name="position" value="4300 -227.481 4600"/>
+    <Property name="range" value="300"/>
+    <Property name="attenuation.linear" value="0.003"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="4300 -297.481 4600"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01_big"/>
+    <Property name="position" value="4300 -340.481 4600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀石柱.mesh"/>
+    <Property name="position" value="4300 -400 700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀石柱.mesh"/>
+    <Property name="position" value="3300 -400 700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀石柱.mesh"/>
+    <Property name="position" value="3300 -400 2900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀石柱.mesh"/>
+    <Property name="position" value="4300 -400 2900"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01_big"/>
+    <Property name="position" value="4300 -200 1400"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.501961 0"/>
+    <Property name="specular" value="0.709804 0 0"/>
+    <Property name="position" value="4300 -87 1400"/>
+    <Property name="range" value="300"/>
+    <Property name="attenuation.linear" value="0.003"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="4300 -157 1400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀火盆.mesh"/>
+    <Property name="position" value="4300 -300 1400"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="4300 -58 1400"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01_big"/>
+    <Property name="position" value="4300 -200 2200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀火盆.mesh"/>
+    <Property name="position" value="4300 -300 2200"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="4300 -58 2200"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="4300 -157 2200"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.501961 0"/>
+    <Property name="specular" value="0.709804 0 0"/>
+    <Property name="position" value="4300 -87 2200"/>
+    <Property name="range" value="300"/>
+    <Property name="attenuation.linear" value="0.003"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀罐2.mesh"/>
+    <Property name="position" value="3800 -300 1800"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀火盆.mesh"/>
+    <Property name="position" value="1400 -800.225 -3900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀火盆.mesh"/>
+    <Property name="position" value="4600 -800 -600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀火盆.mesh"/>
+    <Property name="position" value="4600 -800 -1500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀火盆.mesh"/>
+    <Property name="position" value="3000 -800 -600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀火盆.mesh"/>
+    <Property name="position" value="3148.43 -761.878 -1795.3"/>
+    <Property name="orientation" value="0.83147 -0.519317 -0.189334 -0.0558885"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀地宫石人.mesh"/>
+    <Property name="position" value="1300 -800 -3457.25"/>
+    <Property name="orientation" value="0.67844 -0.00722795 0.73325 -0.0448834"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="秦地宫/地宫柱子.mesh"/>
+    <Property name="position" value="-2200 100 -3700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="秦地宫/地宫柱子.mesh"/>
+    <Property name="position" value="-2200 100 -3100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="秦地宫/地宫柱子.mesh"/>
+    <Property name="position" value="-1600 100 -3100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="秦地宫/地宫柱子.mesh"/>
+    <Property name="position" value="-1600 100 -3700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="巴蜀古墓/巴蜀火盆.mesh"/>
+    <Property name="position" value="-1900 102.037 -3400"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="-1900 224.037 -3400"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="-1900 323.037 -3400"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01_big"/>
+    <Property name="position" value="-1900 181.037 -3400"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.501961 0"/>
+    <Property name="specular" value="0.709804 0 0"/>
+    <Property name="position" value="-1900 294.037 -3400"/>
+    <Property name="range" value="400"/>
+    <Property name="attenuation.linear" value="0.003"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01_big"/>
+    <Property name="position" value="3300 587 700"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="3300 729 700"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="3300 630 700"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.501961 0"/>
+    <Property name="specular" value="0.709804 0 0"/>
+    <Property name="position" value="3300 700 700"/>
+    <Property name="range" value="300"/>
+    <Property name="attenuation.linear" value="0.003"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.501961 0"/>
+    <Property name="specular" value="0.709804 0 0"/>
+    <Property name="position" value="3000 -600 -600"/>
+    <Property name="range" value="300"/>
+    <Property name="attenuation.linear" value="0.003"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01_big"/>
+    <Property name="position" value="3000 -713 -600"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="3000 -571 -600"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="3000 -670 -600"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.501961 0"/>
+    <Property name="specular" value="0.709804 0 0"/>
+    <Property name="position" value="4600 -596.834 -1500"/>
+    <Property name="range" value="300"/>
+    <Property name="attenuation.linear" value="0.003"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="4600 -567.834 -1500"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="4600 -666.834 -1500"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01_big"/>
+    <Property name="position" value="4600 -709.834 -1500"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="4300 729 700"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="4300 630 700"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01_big"/>
+    <Property name="position" value="4300 587 700"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.501961 0"/>
+    <Property name="specular" value="0.709804 0 0"/>
+    <Property name="position" value="4300 700 700"/>
+    <Property name="range" value="300"/>
+    <Property name="attenuation.linear" value="0.003"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.501961 0"/>
+    <Property name="specular" value="0.709804 0 0"/>
+    <Property name="position" value="4300 700 2900"/>
+    <Property name="range" value="300"/>
+    <Property name="attenuation.linear" value="0.003"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01_big"/>
+    <Property name="position" value="4300 587 2900"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="4300 630 2900"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="4300 729 2900"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01_big"/>
+    <Property name="position" value="3300 587 2900"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.501961 0"/>
+    <Property name="specular" value="0.709804 0 0"/>
+    <Property name="position" value="3300 700 2900"/>
+    <Property name="range" value="300"/>
+    <Property name="attenuation.linear" value="0.003"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="3300 729 2900"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="3300 630 2900"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.47451 1 0"/>
+    <Property name="specular" value="0.290196 0.537255 0.172549"/>
+    <Property name="position" value="-3900 200 -3700"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="0.003"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.376471 0"/>
+    <Property name="specular" value="0.705882 0.337255 0.003922"/>
+    <Property name="position" value="3800 -200 3700"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="0.003"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.47451 1 0"/>
+    <Property name="specular" value="0.290196 0.537255 0.172549"/>
+    <Property name="position" value="-600 300 3900"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="0.003"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.45098 0"/>
+    <Property name="specular" value="0.709804 0.156863 0"/>
+    <Property name="position" value="3700 -500 -2700"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="0.003"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.52549 0"/>
+    <Property name="specular" value="0.709804 0.211765 0"/>
+    <Property name="position" value="4100 -600 -800"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="0.003"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.168627 0.976471 0.023529"/>
+    <Property name="specular" value="0.058824 0.392157 0.043137"/>
+    <Property name="position" value="-600 105.014 -900"/>
+    <Property name="range" value="300"/>
+    <Property name="attenuation.linear" value="0.01"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.043137 0.756863 0.968627"/>
+    <Property name="specular" value="0.058824 0.462745 0.866667"/>
+    <Property name="position" value="-900 138.352 1300"/>
+    <Property name="range" value="600"/>
+    <Property name="attenuation.linear" value="0.01"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.501961 0"/>
+    <Property name="specular" value="0.921569 0.560784 0.027451"/>
+    <Property name="position" value="2000 -200 3900"/>
+    <Property name="range" value="600"/>
+    <Property name="attenuation.linear" value="0.009"/>
+  </Object>
+
+</Scene>

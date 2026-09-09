@@ -1,0 +1,207 @@
+INT	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING	INT	INT	STRING
+INT	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING	INT	INT	STRING
+0	空手站立01	长枪站立01	大刀站立01	双短站立01	单短站立01	扇子站立01	双环站立01	站立	站立	0	-1	(和平)休息
+1	空手站立01	空手站立01	空手站立01	空手站立01	空手站立01	空手站立01	空手站立01	站立	休闲	0	-1	(和平)休息小动作1
+2	空手站立01	空手站立01	空手站立01	空手站立01	空手站立01	空手站立01	空手站立01	站立	休闲	0	-1	(和平)休息小动作2
+3								行走	行走	0	-1	(和平)行走
+4	跑步	长枪跑步	长枪跑步	双短跑步	单短跑步	扇子跑步	双环跑步	跑步	跑步	0	-1	(和平)跑步
+14	空手警戒	长枪警戒	大刀警戒	双短警戒	单短警戒	扇子警戒	双环警戒	站立	站立	0	-1	(战斗)休息
+15								行走	行走	0	-1	(战斗)行走
+16	跑步	跑步	跑步	跑步	跑步	跑步	跑步	跑步	跑步	0	-1	(战斗)跑步
+23	空手受击	长枪受击	大刀受击	双短受击	单短受击	扇子受击	双环受击	受击	受击	0	-1	(战斗)被击中
+24	倒地	倒地	倒地	倒地	倒地	倒地	倒地	npc_qinjiazhaibing_daodi	npc_qinjiazhaibing_daodi	0	-1	(战斗)死亡
+25	死亡	死亡	死亡	死亡	死亡	死亡	死亡	死亡	死亡	0	-1	(战斗)尸体
+52										0	-1	
+61	闪避	闪避	闪避	闪避	闪避	闪避	闪避	闪避	闪避	0	-1	(战斗)闪避
+62	闪避	闪避	闪避	闪避	闪避	闪避	闪避	闪避	闪避	0	-1	(战斗)搁挡
+63	击飞	击飞	击飞	击飞	击飞	击飞	击飞	npc_qinjiazhaibing_jifei	npc_qinjiazhaibing_jifei	0	-1	"(战斗)向后""击飞""死亡"
+64	融合受击	融合受击	融合受击	融合受击	融合受击	融合受击	融合受击	融合受击	融合受击	0	-1	(战斗)被击融合
+65										0	-1	
+130	单短攻击01	长枪凿地c	长枪凿地c	双短凿地c	单短凿地c	单短凿地c	双短凿地c	攻击	攻击	0	-1	
+131	维持1a	维持1a	维持1a	维持1a	维持1a	维持1a	维持1a	攻击	攻击	0	-1	
+132	维持1b	维持1b	维持1b	维持1b	维持1b	维持1b	维持1b	攻击	攻击	0	-1	
+133	单短攻击01	长枪丹凤朝阳	长枪丹凤朝阳	双短丹凤朝阳	单短丹凤朝阳	单短丹凤朝阳	双短丹凤朝阳	攻击	攻击	0	-1	
+134	单短攻击01	长枪慈航普渡	长枪慈航普渡	双短慈航普渡	单短慈航普渡	单短慈航普渡	双短慈航普渡	攻击	攻击	0	-1	
+135	单短攻击01	长枪少泽剑	长枪少泽剑	双短少泽剑	单短少泽剑	单短少泽剑	双短少泽剑	攻击	攻击	0	-1	
+136	空手站立02	长枪站立02	大刀站立02	双短站立02	单短站立02	扇子站立02	双环站立02	攻击	攻击	0	-1	
+137	空手站立02	长枪站立02	大刀攻击01	双短站立01	单短站立01	扇子站立01	双环站立01	攻击	攻击	0	-1	
+138	空手站立02	长枪站立02	大刀站立01	双短站立01	单短站立01	扇子攻击01	双环站立01	攻击	攻击	0	-1	
+139	空手站立02	长枪站立02	大刀站立01	双短站立01	单短攻击02	扇子站立01	双环站立01	攻击	攻击	0	-1	
+140	空手站立02	长枪站立02	大刀站立01	双短站立01	单短攻击03	扇子站立01	双环站立01	攻击	攻击	0	-1	
+141	空手站立02	长枪站立02	大刀站立01	双短站立01	单短攻击03	扇子站立01	双环攻击03	攻击	攻击	0	-1	
+142	采矿	采矿	采矿	采矿	采矿	采矿	采矿	攻击	攻击	0	-1	
+143	打开	打开	打开	打开	打开	打开	打开	攻击	攻击	0	-1	
+144	钓鱼	钓鱼	钓鱼	钓鱼	钓鱼	钓鱼	钓鱼	攻击	攻击	0	-1	
+145	跳跃	跳跃	跳跃	跳跃	跳跃	跳跃	跳跃	攻击	攻击	0	-1	
+146	g01_普通攻击01_kongshou	g01_攻击动作1	g01_攻击动作1	g01_攻击动作1	g01_攻击动作1	g01_攻击动作1	g01_攻击动作1	npc_attack	npc_attack	0	-1	
+147	g01_普通攻击01_kongshou	g01_攻击动作2	g01_攻击动作2	g01_攻击动作2	g01_攻击动作2	g01_攻击动作2	g01_攻击动作2	npc_attack	npc_attack	0	-1	
+148	g01_普通攻击01_kongshou	g01_攻击动作3	g01_攻击动作3	g01_攻击动作3	g01_攻击动作3	g01_攻击动作3	g01_攻击动作3	npc_attack	npc_attack	0	-1	
+149	g01_普通攻击01_kongshou	g01_攻击动作4	g01_攻击动作4	g01_攻击动作4	g01_攻击动作4	g01_攻击动作4	g01_攻击动作4	npc_attack	npc_attack	0	-1	
+150	g01_普通攻击01_kongshou	g01_攻击动作5	g01_攻击动作5	g01_攻击动作5	g01_攻击动作5	g01_攻击动作5	g01_攻击动作5	npc_attack	npc_attack	0	-1	
+151	g01_普通攻击01_kongshou	g01_群体攻击动作1	g01_群体攻击动作1	g01_群体攻击动作1	g01_群体攻击动作1	g01_群体攻击动作1	g01_群体攻击动作1	npc_attack	npc_attack	0	-1	
+152	g01_双手合十_tiebushan	g01_双手合十_tiebushan	g01_双手合十_tiebushan	g01_双手合十_tiebushan	g01_双手合十_tiebushan	g01_双手合十_tiebushan	g01_双手合十_tiebushan	m_magic	m_magic	0	-1	铁布杉
+153	g01_双手合十_luohanzhen	g01_双手合十_luohanzhen	g01_双手合十_luohanzhen	g01_双手合十_luohanzhen	g01_双手合十_luohanzhen	g01_双手合十_luohanzhen	g01_双手合十_luohanzhen	m_magic	m_magic	0	-1	罗汉阵
+154	g01_双手合十_shizihou	g01_双手合十_shizihou	g01_双手合十_shizihou	g01_双手合十_shizihou	g01_双手合十_shizihou	g01_双手合十_shizihou	g01_双手合十_shizihou	m_magic	m_magic	0	-1	狮子吼
+155	g01_双手合十_cihangpudu	g01_双手合十_cihangpudu	g01_双手合十_cihangpudu	g01_双手合十_cihangpudu	g01_双手合十_cihangpudu	g01_双手合十_cihangpudu	g01_双手合十_cihangpudu	m_magic	m_magic	0	-1	慈航普渡
+156	g01_双手合十_lijingrulai	g01_双手合十_lijingrulai	g01_双手合十_lijingrulai	g01_双手合十_lijingrulai	g01_双手合十_lijingrulai	g01_双手合十_lijingrulai	g01_双手合十_lijingrulai	m_magic	m_magic	0	-1	礼敬如来
+157	g01_双手合十_yiweidujiang	g01_双手合十_yiweidujiang	g01_双手合十_yiweidujiang	g01_双手合十_yiweidujiang	g01_双手合十_yiweidujiang	g01_双手合十_yiweidujiang	g01_双手合十_yiweidujiang	m_magic	m_magic	0	-1	一苇渡江
+158	g01_双手合十_qiguanquanshen	g01_双手合十_qiguanquanshen	g01_双手合十_qiguanquanshen	g01_双手合十_qiguanquanshen	g01_双手合十_qiguanquanshen	g01_双手合十_qiguanquanshen	g01_双手合十_qiguanquanshen	m_magic	m_magic	0	-1	气贯全身
+159	g01_摩诃无量_mokewuliang	g01_摩诃无量_mokewuliang	g01_摩诃无量_mokewuliang	g01_摩诃无量_mokewuliang	g01_摩诃无量_mokewuliang	g01_摩诃无量_mokewuliang	g01_摩诃无量_mokewuliang	m_magic	m_magic	0	-1	摩诃无量
+160	g01_多罗叶指_duoluoyezhi	g01_多罗叶指_duoluoyezhi	g01_多罗叶指_duoluoyezhi	g01_多罗叶指_duoluoyezhi	g01_多罗叶指_duoluoyezhi	g01_多罗叶指_duoluoyezhi	g01_多罗叶指_duoluoyezhi	m_magic	m_magic	0	-1	多罗叶指
+161	g01_金钟罩_jinzhongzhao	g01_金钟罩_jinzhongzhao	g01_金钟罩_jinzhongzhao	g01_金钟罩_jinzhongzhao	g01_金钟罩_jinzhongzhao	g01_金钟罩_jinzhongzhao	g01_金钟罩_jinzhongzhao	m_magic	m_magic	0	-1	金钟罩
+162	g01_普通攻击01_kongshou	g01_普通攻击01_changqiang	g01_普通攻击01_dadao	g01_普通攻击01_shuangduan	g01_普通攻击01_danduan	g01_普通攻击01_shanzi	g01_普通攻击01_shuanghuan	npc_attack	npc_attack	0	-1	普通攻击1
+163	g01_普通攻击01_kongshou	g01_普通攻击02_changqiang	g01_普通攻击02_dadao	g01_普通攻击02_shuangduan	g01_普通攻击02_danduan	g01_普通攻击02_shanzi	g01_普通攻击02_shuanghuan	npc_attack	npc_attack	0	-1	普通攻击2
+164	g01_普通攻击01_kongshou	g01_普通攻击03_changqiang	g01_普通攻击03_dadao	g01_普通攻击03_shuangduan	g01_普通攻击03_danduan	g01_普通攻击03_shanzi	g01_普通攻击03_shuanghuan	npc_attack	npc_attack	0	-1	普通攻击3
+165	g01_普通攻击01_kongshou	g01_连招1a	g01_连招1a	g01_连招1a	g01_连招1a	g01_连招1a	g01_连招1a	npc_attack	npc_attack	0	-1	连招1a
+166	g01_普通攻击01_kongshou	g01_连招1b	g01_连招1b	g01_连招1b	g01_连招1b	g01_连招1b	g01_连招1b	npc_attack	npc_attack	0	-1	连招1b
+167	g01_普通攻击01_kongshou	g01_连招1c	g01_连招1c	g01_连招1c	g01_连招1c	g01_连招1c	g01_连招1c	npc_attack	npc_attack	0	-1	连招1c
+168	g01_普通攻击01_kongshou	g01_攻击动作301	g01_攻击动作301	g01_攻击动作301	g01_攻击动作301	g01_攻击动作301	g01_攻击动作301	npc_attack	npc_attack	0	-1	
+169	g01_普通攻击01_kongshou	g01_攻击动作1_cuogufenjin	g01_攻击动作1_cuogufenjin	g01_攻击动作1_cuogufenjin	g01_攻击动作1_cuogufenjin	g01_攻击动作1_cuogufenjin	g01_攻击动作1_cuogufenjin	npc_attack	npc_attack	0	-1	
+170	g01_普通攻击01_kongshou	g01_攻击动作16_cuixinliepi	g01_攻击动作16_cuixinliepi	g01_攻击动作16_cuixinliepi	g01_攻击动作16_cuixinliepi	g01_攻击动作16_cuixinliepi	g01_攻击动作16_cuixinliepi	npc_attack	npc_attack	0	-1	
+171	g01_普通攻击01_kongshou	g01_群体攻击动作1_xuanyinzhiyang	g01_群体攻击动作1_xuanyinzhiyang	g01_群体攻击动作1_xuanyinzhiyang	g01_群体攻击动作1_xuanyinzhiyang	g01_群体攻击动作1_xuanyinzhiyang	g01_群体攻击动作1_xuanyinzhiyang	npc_attack	npc_attack	0	-1	
+172	g01_普通攻击01_kongshou	g01_攻击动作17_tianditongshou	g01_攻击动作17_tianditongshou	g01_攻击动作17_tianditongshou	g01_攻击动作17_tianditongshou	g01_攻击动作17_tianditongshou	g01_攻击动作17_tianditongshou	npc_attack	npc_attack	0	-1	
+173	g01_抬头挺胸_wuxinglianzhu	g01_抬头挺胸_wuxinglianzhu	g01_抬头挺胸_wuxinglianzhu	g01_抬头挺胸_wuxinglianzhu	g01_抬头挺胸_wuxinglianzhu	g01_抬头挺胸_wuxinglianzhu	g01_抬头挺胸_wuxinglianzhu	npc_attack	npc_attack	0	-1	
+174	g01_普通攻击01_kongshou	g01_攻击动作4_huoxingchongri	g01_攻击动作4_huoxingchongri	g01_攻击动作4_huoxingchongri	g01_攻击动作4_huoxingchongri	g01_攻击动作4_huoxingchongri	g01_攻击动作4_huoxingchongri	npc_attack	npc_attack	0	-1	
+175	g01_抬头挺胸_qixingluochangkong	g01_抬头挺胸_qixingluochangkong	g01_抬头挺胸_qixingluochangkong	g01_抬头挺胸_qixingluochangkong	g01_抬头挺胸_qixingluochangkong	g01_抬头挺胸_qixingluochangkong	g01_抬头挺胸_qixingluochangkong	npc_attack	npc_attack	0	-1	
+176	g01_抬头挺胸_shenxingbaibian	g01_抬头挺胸_shenxingbaibian	g01_抬头挺胸_shenxingbaibian	g01_抬头挺胸_shenxingbaibian	g01_抬头挺胸_shenxingbaibian	g01_抬头挺胸_shenxingbaibian	g01_抬头挺胸_shenxingbaibian	npc_attack	npc_attack	0	-1	
+177	g01_抬头挺胸_zhiluweima	g01_抬头挺胸_zhiluweima	g01_抬头挺胸_zhiluweima	g01_抬头挺胸_zhiluweima	g01_抬头挺胸_zhiluweima	g01_抬头挺胸_zhiluweima	g01_抬头挺胸_zhiluweima	npc_attack	npc_attack	0	-1	
+178	g01_抬头挺胸_toulianghuanzhu	g01_抬头挺胸_toulianghuanzhu	g01_抬头挺胸_toulianghuanzhu	g01_抬头挺胸_toulianghuanzhu	g01_抬头挺胸_toulianghuanzhu	g01_抬头挺胸_toulianghuanzhu	g01_抬头挺胸_toulianghuanzhu	npc_attack	npc_attack	0	-1	
+179	g01_抬头挺胸_qiannuyuren	g01_抬头挺胸_qiannuyuren	g01_抬头挺胸_qiannuyuren	g01_抬头挺胸_qiannuyuren	g01_抬头挺胸_qiannuyuren	g01_抬头挺胸_qiannuyuren	g01_抬头挺胸_qiannuyuren	npc_attack	npc_attack	0	-1	
+180	g01_抬头挺胸_nufachongguan	g01_抬头挺胸_nufachongguan	g01_抬头挺胸_nufachongguan	g01_抬头挺胸_nufachongguan	g01_抬头挺胸_nufachongguan	g01_抬头挺胸_nufachongguan	g01_抬头挺胸_nufachongguan	npc_attack	npc_attack	0	-1	
+181	g01_普通攻击01_kongshou	g01_攻击动作2_leitingzhinu	g01_攻击动作2_leitingzhinu	g01_攻击动作2_leitingzhinu	g01_攻击动作2_leitingzhinu	g01_攻击动作2_leitingzhinu	g01_攻击动作2_leitingzhinu	npc_attack	npc_attack	0	-1	
+182	g01_义愤填膺_yiwentianying	g01_义愤填膺_yiwentianying	g01_义愤填膺_yiwentianying	g01_义愤填膺_yiwentianying	g01_义愤填膺_yiwentianying	g01_义愤填膺_yiwentianying	g01_义愤填膺_yiwentianying	npc_attack	npc_attack	0	-1	
+183	g01_普通攻击01_kongshou	g01_厚积薄发_houjibofa	g01_厚积薄发_houjibofa	g01_厚积薄发_houjibofa	g01_厚积薄发_houjibofa	g01_厚积薄发_houjibofa	g01_厚积薄发_houjibofa	npc_attack	npc_attack	0	-1	
+184	g01_普通攻击01_kongshou	g01_攻击动作19_renguitongtu	g01_攻击动作19_renguitongtu	g01_攻击动作19_renguitongtu	g01_攻击动作19_renguitongtu	g01_攻击动作19_renguitongtu	g01_攻击动作19_renguitongtu	npc_attack	npc_attack	0	-1	
+185	站立喝药	站立喝药	站立喝药	站立喝药	站立喝药	站立喝药	站立喝药	npc_attack	npc_attack	0	-1	
+186	坐着喝药	坐着喝药	坐着喝药	坐着喝药	坐着喝药	坐着喝药	坐着喝药	npc_attack	npc_attack	0	-1	
+187	通用发招动作	通用发招动作	通用发招动作	通用发招动作	通用发招动作	通用发招动作	通用发招动作	npc_attack	npc_attack	0	-1	
+188	g01l_捉宠_zhuachong	g01l_捉宠_zhuachong	g01l_捉宠_zhuachong	g01l_捉宠_zhuachong	g01l_捉宠_zhuachong	g01l_捉宠_zhuachong	g01l_捉宠_zhuachong	npc_attack	npc_attack	0	-1	
+189	g01_普通攻击01_kongshou	g01_厚积薄发_houjibofa_yanshi	g01_厚积薄发_houjibofa_yanshi	g01_厚积薄发_houjibofa_yanshi	g01_厚积薄发_houjibofa_yanshi	g01_厚积薄发_houjibofa_yanshi	g01_厚积薄发_houjibofa_yanshi	npc_attack	npc_attack	0	-1	
+190	g01_普通攻击01_kongshou	g01_攻击动作19_renguitongtu_yanshi	g01_攻击动作19_renguitongtu_yanshi	g01_攻击动作19_renguitongtu_yanshi	g01_攻击动作19_renguitongtu_yanshi	g01_攻击动作19_renguitongtu_yanshi	g01_攻击动作19_renguitongtu_yanshi	npc_attack	npc_attack	0	-1	
+191	g01_普通攻击01_kongshou	g01_攻击动作17_tianditongshou_yanshi	g01_攻击动作17_tianditongshou_yanshi	g01_攻击动作17_tianditongshou_yanshi	g01_攻击动作17_tianditongshou_yanshi	g01_攻击动作17_tianditongshou_yanshi	g01_攻击动作17_tianditongshou_yanshi	npc_attack	npc_attack	0	-1	
+192	采药	采药	采药	采药	采药	采药	采药	npc_attack	npc_attack	0	-1	
+193	guid_chongwu_buff	guid_chongwu_buff	guid_chongwu_buff	guid_chongwu_buff	guid_chongwu_buff	guid_chongwu_buff	guid_chongwu_buff	guid_chongwu_buff	guid_chongwu_buff	0	-1	宠物释放buff动作
+194	guid_chongwu_hanbingzhou	guid_chongwu_hanbingzhou	guid_chongwu_hanbingzhou	guid_chongwu_hanbingzhou	guid_chongwu_hanbingzhou	guid_chongwu_hanbingzhou	guid_chongwu_hanbingzhou	guid_chongwu_hanbingzhou	guid_chongwu_hanbingzhou	0	-1	宠物释放寒冰咒的动作
+195	guid_chongwu_gongji	guid_chongwu_gongji	guid_chongwu_gongji	guid_chongwu_gongji	guid_chongwu_gongji	guid_chongwu_gongji	guid_chongwu_gongji	guid_chongwu_gongji	guid_chongwu_gongji	0	-1	宠物攻击动作
+196	guid_chongwu_mengji	guid_chongwu_mengji	guid_chongwu_mengji	guid_chongwu_mengji	guid_chongwu_mengji	guid_chongwu_mengji	guid_chongwu_mengji	guid_chongwu_mengji	guid_chongwu_mengji	0	-1	宠物释放猛击的动作
+197	guid_chongwu_fushen	guid_chongwu_fushen	guid_chongwu_fushen	guid_chongwu_fushen	guid_chongwu_fushen	guid_chongwu_fushen	guid_chongwu_fushen	guid_chongwu_fushen	guid_chongwu_fushen	0	-1	宠物附身动作
+198	g01_攻击动作5	g01_攻击动作5	g01_攻击动作5	g01_攻击动作5	g01_攻击动作5	g01_攻击动作5	g01_攻击动作5	npc_attack	npc_attack	0	-1	鲲跃北溟
+199	g01_攻击动作28_peiranyouyu	g01_攻击动作28_peiranyouyu	g01_攻击动作28_peiranyouyu	g01_攻击动作28_peiranyouyu	g01_攻击动作28_peiranyouyu	g01_攻击动作28_peiranyouyu	g01_攻击动作28_peiranyouyu	npc_attack	npc_attack	0	-1	沛然有雨
+200	g01_遨游东海_aoyoudonghai	g01_遨游东海_aoyoudonghai	g01_遨游东海_aoyoudonghai	g01_遨游东海_aoyoudonghai	g01_遨游东海_aoyoudonghai	g01_遨游东海_aoyoudonghai	g01_遨游东海_aoyoudonghai	npc_attack	npc_attack	0	-1	遨游东海
+201	g01_普通攻击01_kongshou	g01_普通攻击01_changqiang	g01_普通攻击01_changqiang	g01_普通攻击01_shuangduan	g01_普通攻击01_danduan	g01_普通攻击01_danduan	g01_普通攻击01_shuangduan	npc_attack	npc_attack	0	-1	普通攻击1
+202	g01_普通攻击01_kongshou	g01_普通攻击02_changqiang	g01_普通攻击02_changqiang	g01_普通攻击02_shuangduan	g01_普通攻击02_danduan	g01_普通攻击02_danduan	g01_普通攻击02_shuangduan	npc_attack	npc_attack	0	-1	普通攻击2
+203	g01_普通攻击01_kongshou	g01_普通攻击03_changqiang	g01_普通攻击03_changqiang	g01_普通攻击03_shuangduan	g01_普通攻击03_danduan	g01_普通攻击03_danduan	g01_普通攻击03_shuangduan	npc_attack	npc_attack	0	-1	普通攻击3
+204	g01_普通攻击01_kongshou	g01_连招1a	g01_连招1a	g01_连招1a	g01_连招1a	g01_连招1a	g01_连招1a	npc_attack	npc_attack	0	-1	连招1a
+205	g01_普通攻击01_kongshou	g01_连招1b	g01_连招1b	g01_连招1b	g01_连招1b	g01_连招1b	g01_连招1b	npc_attack	npc_attack	0	-1	连招1b
+206	g01_普通攻击01_kongshou	g01_连招1c	g01_连招1c	g01_连招1c	g01_连招1c	g01_连招1c	g01_连招1c	npc_attack	npc_attack	0	-1	连招1c
+450								npc_gaojidaji	npc_gaojidaji	0	-1	高级打击(NPC)
+451								npc_yuanchenggongji	npc_yuanchenggongji	0	-1	远程普通攻击(NPC)
+452								npc_magic	npc_magic	0	-1	寒冰咒(NPC)
+453								npc_magic2	npc_magic2	0	-1	烈火咒(NPC)
+454								npc_magic1	npc_magic1	0	-1	玄雷咒(NPC)
+455								npc_magic2	npc_magic2	0	-1	血毒咒(NPC)
+456								npc_bingbao	npc_bingbao	0	-1	冰爆（NPC）
+457								npc_huobao	npc_huobao	0	-1	火爆（NPC）
+458								npc_leibao	npc_leibao	0	-1	雷爆（NPC）
+459								npc_dubao	npc_dubao	0	-1	毒爆（NPC)
+460								npc_qunmoluanwu	npc_qunmoluanwu	0	-1	群魔乱舞（NPC）
+461								npc_zhendigongji	npc_zhendigongji	0	-1	震地攻击（NPC）
+462								npc_magic2	npc_magic2	0	-1	封穴(NPC)
+463								npc_magic2	npc_magic2	0	-1	麻痹(NPC)
+464								npc_magic2	npc_magic2	0	-1	围困
+465								npc_magic2	npc_magic2	0	-1	石化
+466								npc_magic2	npc_magic2	0	-1	失明
+467								npc_magic2	npc_magic2	0	-1	恐惧
+468								npc_magic2	npc_magic2	0	-1	寸步难移
+469								npc_magic2	npc_magic2	0	-1	缠绕
+470								npc_magic2	npc_magic2	0	-1	就擒
+471								npc_magic2	npc_magic2	0	-1	死缠烂打(NPC)
+472								npc_magic2	npc_magic2	0	-1	软弱无力(NPC)
+473								npc_magic2	npc_magic2	0	-1	反应迟钝(NPC)
+474								npc_magic2	npc_magic2	0	-1	身体虚弱(NPC)
+475								npc_magic2	npc_magic2	0	-1	无精打采(NPC)
+476								npc_magic2	npc_magic2	0	-1	内力外泄(NPC)
+477								npc_magic2	npc_magic2	0	-1	弱不禁风(NPC)
+478								npc_magic2	npc_magic2	0	-1	噬血(NPC)
+479								npc_magic2	npc_magic2	0	-1	中毒(NPC)
+480								npc_zhiliao	npc_zhiliao	0	-1	治疗(NPC)
+481								npc_jinghua	npc_jinghua	0	-1	净化驱散SOT，DOT(NPC)
+482								npc_shixue	npc_shixue	0	-1	嗜血增加物攻(NPC)
+483								npc_shifu	npc_shifu	0	-1	石肤增加防御(NPC)
+484								npc_attack	npc_attack	0	-1	开膛(伤半血NPC)
+485								npc_magic2	npc_magic2	0	-1	破抗(NPC)
+486								npc_attack	npc_attack	0	-1	宠物普通攻击
+487								cw_buff_bingjing	cw_buff_bingjing	0	-1	冰精（特性，食冰与畏火）
+488								cw_buff_huoling	cw_buff_huoling	0	-1	火灵（特性，食火与畏冰）
+489								cw_buff_dugu	cw_buff_dugu	0	-1	毒蛊（特性，食毒与畏玄）
+490								cw_buff_xuanshou	cw_buff_xuanshou	0	-1	玄兽（特性，食玄与畏毒）
+491								cw_buff_chidun	cw_buff_chidun	0	-1	迟钝（特性，增强自身血上限，但命中和闪避削弱）
+492								cw_buff_jiaohua	cw_buff_jiaohua	0	-1	狡猾（特性，增强自身命中、闪避，但防御（外/内）被削弱）
+493								cw_buff_hanhou	cw_buff_hanhou	0	-1	憨厚（特性，增强自身防御（外/内），削弱自身会心）
+494								cw_buff_pingming	cw_buff_pingming	0	-1	拼命（特性，增强宠物的会心，但血上限被削弱）
+495								cw_buff_fahun	cw_buff_fahun	0	-1	法魂（增强自身内攻，削弱自身外功）
+496								cw_buff_manli	cw_buff_manli	0	-1	蛮力（增强自身外功，削弱自身内攻）
+497								cw_magic	cw_magic	0	-1	借力（增强主人的力量）
+498								cw_magic	cw_magic	0	-1	高级借力（增强主人的力量）
+499								cw_magic	cw_magic	0	-1	移魂（增强主人的定力）
+500								cw_magic	cw_magic	0	-1	高级移魂（增强主人的定力）
+501								cw_magic	cw_magic	0	-1	加速（增强主人的身法）
+502								cw_magic	cw_magic	0	-1	高级加速（增强主人的身法）
+503								cw_magic	cw_magic	0	-1	强身（增强主人的体力）
+504								cw_magic	cw_magic	0	-1	高级强身（增强主人的体力）
+505								cw_magic	cw_magic	0	-1	凝神（增强主人的灵气）
+506								cw_magic	cw_magic	0	-1	高级凝神（增强主人的灵气）
+507								cw_fs_jibingningsha	cw_fs_jibingningsha	0	-1	极冰凝杀（手动冰系群杀）
+508								cw_fs_jiehuofensha	cw_fs_jiehuofensha	0	-1	劫火焚杀（手动火系群杀）
+509								cw_fs_fudushisha	cw_fs_fudushisha	0	-1	腐毒蚀杀（手动毒系群杀）
+510								cw_fs_jiuleijisha	cw_fs_jiuleijisha	0	-1	玄雷击杀（手动雷系群杀）
+511								cw_fs_xuebao	cw_fs_xuebao	0	-1	血爆（手动，范围攻击）
+512								cw_fs_xuebao	cw_fs_xuebao	0	-1	高级血爆（手动，范围攻击）
+513								cw_fs_shengbao	cw_fs_shengbao	0	-1	圣爆（手动，范围加血）
+514								cw_fs_shengbao	cw_fs_shengbao	0	-1	高级圣爆（手动，范围加血）
+515								cw_fs_bingbao	cw_fs_bingbao	0	-1	冰爆（手动，范围冰封）
+516								cw_fs_bingbao	cw_fs_bingbao	0	-1	高级冰爆（手动，范围冰封）
+517								cw_fs_jinghua	cw_fs_jinghua	0	-1	净化（手动，净化主人身上一个不良BUFF)
+518								cw_fs_jinghua	cw_fs_jinghua	0	-1	高级净化（手动，净化主人身上一个不良BUFF)
+519								cw_magic	cw_magic	0	-1	重生（手动，使宠物死后复活）
+520								cw_magic	cw_magic	0	-1	高级重生（手动，使宠物死后复活）
+521								cw_fs_gongsheng	cw_fs_gongsheng	0	-1	共生（手动，让宠匀血给主人）
+522								cw_fs_gongsheng	cw_fs_gongsheng	0	-1	高级共生（手动，让宠匀血给主人
+523								cw_magic	cw_magic	0	-1	治疗（手动，治疗主人）
+524								cw_magic	cw_magic	0	-1	高级治疗（手动，治疗主人）
+525								cw_magic	cw_magic	0	-1	肉墙（手动，一定时间内宠物为主人承受伤害）
+526								cw_magic	cw_magic	0	-1	高级肉墙（手动，一定时间内宠物为主人承受伤害）
+527								cw_magic	cw_magic	0	-1	神佑（手动，宠物令主人进入无敌状态）
+528								cw_magic	cw_magic	0	-1	高级神佑（手动，宠物令主人进入无敌状态）
+529								cw_magic	cw_magic	0	-1	嗜血（手动，宠物进入嗜血状态）
+530								cw_magic	cw_magic	0	-1	高级嗜血（手动，宠物进入嗜血状态）
+531								cw_fs_xueji	cw_fs_xueji	0	-1	血祭（手动，用宠物的HP换取主人MP）
+532								cw_fs_xueji	cw_fs_xueji	0	-1	高级血祭（手动，用宠物的HP换取主人MP）
+533								cw_magic	cw_magic	0	-1	伪装(手动，令宠物进入无敌状态)
+534								cw_magic	cw_magic	0	-1	高级伪装(手动，令宠物进入无敌状态)
+535								cw_magic	cw_magic	0	-1	附身（手动，令宠物控制一个敌人）
+536								cw_magic	cw_magic	0	-1	高级附身（手动，令宠物控制一个敌人）
+537								npc_magic	npc_magic	0	-1	寒冰咒（单体法攻）
+538								npc_magic2	npc_magic2	0	-1	烈火咒（单体法攻）
+539								npc_magic2	npc_magic2	0	-1	血毒咒（单体法攻）
+540								npc_magic1	npc_magic1	0	-1	玄雷咒（单体法攻）
+541								cw_fanji	cw_fanji	0	-1	反击（一定几率反击敌人）
+542								cw_fanji	cw_fanji	0	-1	高级反击（一定几率反击敌人）
+543								cw_fs_xixue	cw_fs_xixue	0	-1	吸血（吸取生命）
+544								cw_fs_xixue	cw_fs_xixue	0	-1	高级吸血（吸取生命）
+545								cw_fs_fanzhen	cw_fs_fanzhen	0	-1	反震（自动报复）
+546								cw_fs_fanzhen	cw_fs_fanzhen	0	-1	高级反震（自动报复）
+547								cw_fs_lingdong	cw_fs_lingdong	0	-1	灵动（一定几率减少伤害）
+548								cw_fs_lingdong	cw_fs_lingdong	0	-1	高级灵动（一定几率减少伤害）
+549								cw_fs_ximo	cw_fs_ximo	0	-1	吸气（一定几率吸取对方内力）
+550								cw_fs_ximo	cw_fs_ximo	0	-1	高级吸气（一定几率吸取对方内力）
+551								cw_fs_danu	cw_fs_danu	0	-1	打怒（一定几率打消对手怒气）
+552								cw_fs_danu	cw_fs_danu	0	-1	高级打怒（一定几率打消对手怒气）
+553								cw_magic	cw_magic	0	-1	忠心（一定几率替主人承受必杀伤害）
+554								cw_magic	cw_magic	0	-1	高级忠心（一定几率替主人承受必杀伤害）
+555								cw_magic	cw_magic	0	-1	灵气（一定几率替主人承受不良BUFF)
+556								cw_magic	cw_magic	0	-1	高级灵气（一定几率替主人承受不良BUFF)
+557								npc_fs_mengji	npc_fs_mengji	0	-1	猛击（加强物攻技能）
+558								npc_fs_mengji	npc_fs_mengji	0	-1	高级猛击（加强物攻技能）
+559								cw_magic	cw_magic	0	-1	识破（加强主人识破隐身的能力）
+560								cw_magic	cw_magic	0	-1	高级识破（加强主人识破隐身的能力）

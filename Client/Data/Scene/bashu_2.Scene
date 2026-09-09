@@ -1,0 +1,1384 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Scene formatVersion="0.1.1" name="bashu_2">
+
+  <Terrain filename="bashu_2.Terrain"/>
+
+  <Object name="#FairyEnviroment" type="Enviroment">
+    <Property name="ambient" value="0.223529 0.27451 0.156863"/>
+    <Property name="fog.mode" value="linear"/>
+    <Property name="fog.colour" value="0.196078 0.513726 0.360784"/>
+    <Property name="fog.linear start" value="3000"/>
+    <Property name="fog.linear end" value="4000"/>
+  </Object>
+
+  <Object name="#FairyMainLightOne" type="Light">
+    <Property name="type" value="directional"/>
+    <Property name="diffuse" value="0.270588 0.470588 0.196078"/>
+    <Property name="specular" value="0.105882 0.094118 0.078431"/>
+    <Property name="direction" value="2 -6 -3"/>
+  </Object>
+
+  <Object name="#FairyMainLightTwo" type="Light">
+    <Property name="type" value="directional"/>
+    <Property name="diffuse" value="0.270588 0.219608 0.121569"/>
+    <Property name="direction" value="-1 6 -9"/>
+  </Object>
+
+  <Object name="#FairySkyDome" type="SkyDome">
+    <Property name="material" value="CloudySky"/>
+  </Object>
+
+  <Object type="TerrainLiquid">
+    <Property name="material" value="haihuwater"/>
+    <Property name="position" value="4080.25 -309.269 7884.26"/>
+    <Property name="texture scale" value="0.2"/>
+    <Property name="depth texture layer.enable" value="true"/>
+    <Property name="depth texture layer.height scale" value="0.003"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深层树根2.mesh"/>
+    <Property name="position" value="5886.86 -1281.52 7636.61"/>
+    <Property name="orientation" value="-0.110222 0 -0.993907 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深层树根2.mesh"/>
+    <Property name="position" value="5959.56 -1678.26 6891.03"/>
+    <Property name="orientation" value="-0.180586 0 -0.98356 0"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深柱子.mesh"/>
+    <Property name="position" value="3844.97 -150.012 7653.29"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深柱子.mesh"/>
+    <Property name="position" value="2568.59 -419.371 3195.3"/>
+    <Property name="orientation" value="0.616434 0 -0.787408 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深层墙2.mesh"/>
+    <Property name="position" value="7278.31 -289.639 5300.76"/>
+    <Property name="orientation" value="0.95694 0 -0.290285 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深层墙2.mesh"/>
+    <Property name="position" value="546.555 -385.001 6375.72"/>
+    <Property name="orientation" value="0.678349 0 -0.734738 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深层树根3.mesh"/>
+    <Property name="position" value="7870.42 222.883 7976.56"/>
+    <Property name="orientation" value="0.154702 0.00223358 -0.84821 -0.506557"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深层树根1.mesh"/>
+    <Property name="position" value="6157.38 -333.363 7090.72"/>
+    <Property name="orientation" value="-0.299819 0.330729 -0.878433 0.170524"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深层墙2.mesh"/>
+    <Property name="position" value="1414.26 -1277.44 3818.13"/>
+    <Property name="orientation" value="0.446869 0 -0.894599 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深层树根2.mesh"/>
+    <Property name="position" value="2929.35 -1345.44 2146.7"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shuidi"/>
+    <Property name="position" value="4485.27 -336.024 5362.48"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shuimianlianyi"/>
+    <Property name="position" value="4521.75 -335.28 5306.96"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深柱子.mesh"/>
+    <Property name="position" value="4668.07 -348.096 5388.19"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深层树根1.mesh"/>
+    <Property name="position" value="7403.63 -43.5447 6306.31"/>
+    <Property name="orientation" value="-0.17165 0.263655 -0.9382 -0.14422"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深层树根3.mesh"/>
+    <Property name="position" value="5013.16 705.829 3813.37"/>
+    <Property name="orientation" value="0.0922682 0 -0.995734 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深层树根1.mesh"/>
+    <Property name="position" value="6076.21 -92.2552 4762.78"/>
+    <Property name="orientation" value="0.372007 0.24245 -0.89002 -0.10341"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深层树根5.mesh"/>
+    <Property name="position" value="6132 -102.588 4930.42"/>
+    <Property name="orientation" value="0.008105 0 -0.999967 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深层树根4.mesh"/>
+    <Property name="position" value="6208.99 -16.3424 3292.01"/>
+    <Property name="orientation" value="-0.319608 0.552017 -0.768611 0.0485977"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深层树根1.mesh"/>
+    <Property name="position" value="3703.22 -784.383 2696.54"/>
+    <Property name="orientation" value="0.370994 -0.426208 0.817295 -0.11284"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shuidi_01"/>
+    <Property name="position" value="2880.89 -333.992 4950.79"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深层树根1.mesh"/>
+    <Property name="position" value="915.132 -74.6008 7992.65"/>
+    <Property name="orientation" value="0.925706 1.40907e-009 3.44852e-009 -0.378244"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深柱子.mesh"/>
+    <Property name="position" value="1913.96 -351.614 5645.25"/>
+    <Property name="orientation" value="0.76796 0 -0.640496 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深层树根4.mesh"/>
+    <Property name="position" value="1210.54 -52.6865 5918.05"/>
+    <Property name="orientation" value="0.92483 0.063972 -0.17981 -0.329033"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深柱子.mesh"/>
+    <Property name="position" value="3331.38 1099.83 4517.4"/>
+    <Property name="orientation" value="0.0276077 0.999618 0 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深柱子.mesh"/>
+    <Property name="position" value="6119.61 214.333 2204.55"/>
+    <Property name="orientation" value="-3.89136e-008 -0.379847 -9.47671e-008 0.925049"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深柱子.mesh"/>
+    <Property name="position" value="1173.91 -411.364 3802.05"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深层树根1.mesh"/>
+    <Property name="position" value="709.076 -523.325 5012.71"/>
+    <Property name="orientation" value="-0.149899 0.455705 -0.869276 -0.119283"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深层树根3.mesh"/>
+    <Property name="position" value="-31.4365 374.819 4430.25"/>
+    <Property name="orientation" value="0.496362 0 0.868118 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="水瀑布/pubu2.mesh"/>
+    <Property name="position" value="6150.89 -332.969 8624.31"/>
+    <Property name="orientation" value="0.962734 0 0.270456 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深柱子.mesh"/>
+    <Property name="position" value="5643.39 231.999 7600.58"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深层树根1.mesh"/>
+    <Property name="position" value="5544.61 -99.9104 8841.16"/>
+    <Property name="orientation" value="0.607501 -0.33099 0.653158 -0.307853"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深层树根1.mesh"/>
+    <Property name="position" value="-330.119 -912.588 3605.41"/>
+    <Property name="orientation" value="0.0124535 -0.611388 0.791176 -0.00962366"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shuidi"/>
+    <Property name="position" value="1426.28 -312.727 4908.88"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shuimianlianyi"/>
+    <Property name="position" value="1592.53 -312.698 4947.38"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深柱子.mesh"/>
+    <Property name="position" value="3512.67 -367.962 4734.64"/>
+    <Property name="orientation" value="0.806419 0 -0.591345 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深层树根5.mesh"/>
+    <Property name="position" value="1286.86 -143.523 4987.54"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shuimianlianyi"/>
+    <Property name="position" value="2657.37 -310.315 6835.56"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shuidi"/>
+    <Property name="position" value="2642.69 -366.741 6858.55"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="chuansongmen_03"/>
+    <Property name="position" value="5861.47 -10.2722 6748.02"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.156863 0.890196 0.976471"/>
+    <Property name="specular" value="0.156863 0.807843 0.92549"/>
+    <Property name="position" value="5800 10.369 6500"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="0.0001"/>
+    <Property name="attenuation.quadric" value="1e-005"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.470588 0.886275 0.247059"/>
+    <Property name="specular" value="0.847059 0.8 0.239216"/>
+    <Property name="position" value="5900 -6.48102 5000"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="0.001"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.513726 0.937255 0.196078"/>
+    <Property name="specular" value="0.819608 0.792157 0.254902"/>
+    <Property name="position" value="1500 -138.408 4956"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="0.0001"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深层树根2.mesh"/>
+    <Property name="position" value="1170.41 -211.708 7378.97"/>
+    <Property name="orientation" value="0.254334 0 -0.967117 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深层树根2.mesh"/>
+    <Property name="position" value="6349.41 -1302.88 1743.87"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深层墙2.mesh"/>
+    <Property name="position" value="7911.52 -1277.44 1171.21"/>
+    <Property name="orientation" value="0.967532 0 0.252749 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深柱子.mesh"/>
+    <Property name="position" value="3300 1074.3 6500"/>
+    <Property name="orientation" value="0.00494818 -0.806403 -0.00362846 0.591333"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深层树根5.mesh"/>
+    <Property name="position" value="3247.37 -83.1565 6478.52"/>
+    <Property name="orientation" value="-0.302006 0 -0.953306 0"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.513726 0.937255 0.196078"/>
+    <Property name="specular" value="0.690196 0.717647 0.356863"/>
+    <Property name="position" value="3100 -85.391 6400"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="0.0001"/>
+    <Property name="attenuation.quadric" value="1e-006"/>
+  </Object>
+
+  <Object type="TerrainLiquid">
+    <Property name="material" value="haihuwater"/>
+    <Property name="position" value="1023.09 -1287.56 2958.82"/>
+    <Property name="texture scale" value="0.2"/>
+    <Property name="depth texture layer.enable" value="true"/>
+    <Property name="depth texture layer.height scale" value="0.003"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深柱子.mesh"/>
+    <Property name="position" value="2900 82.9984 -400"/>
+    <Property name="orientation" value="-5.82155e-008 -0.568258 -8.42972e-008 0.822849"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深柱子.mesh"/>
+    <Property name="position" value="2727.84 148.089 -637.574"/>
+    <Property name="orientation" value="-9.98868e-008 -0.975024 -2.27525e-008 0.222093"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深柱子.mesh"/>
+    <Property name="position" value="3180.03 -1277.57 -686.018"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shuidi"/>
+    <Property name="position" value="3185.84 -1307.74 -157.275"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shuimianlianyi"/>
+    <Property name="position" value="3200.73 -1295.66 -124.756"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shuimianlianyi"/>
+    <Property name="position" value="1298.02 -1309.42 2296.25"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shuidi"/>
+    <Property name="position" value="1187.36 -1333.17 2433.19"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深柱子.mesh"/>
+    <Property name="position" value="100 98 2400"/>
+    <Property name="orientation" value="-8.97009e-008 -0.875596 4.94853e-008 -0.48304"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="7868.04 -1277.44 599.496"/>
+    <Property name="orientation" value="-0.0553735 0 -0.998467 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深层树根1.mesh"/>
+    <Property name="position" value="8034.83 -977.442 1218.32"/>
+    <Property name="orientation" value="0.469042 -0.266143 0.828961 -0.148308"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深柱子.mesh"/>
+    <Property name="position" value="-1187.39 -1305.03 1074.11"/>
+  </Object>
+
+  <Object type="TerrainLiquid">
+    <Property name="material" value="haihuwater"/>
+    <Property name="position" value="5839.93 -2044.07 -1751.49"/>
+    <Property name="texture scale" value="0.2"/>
+    <Property name="depth texture layer.enable" value="true"/>
+    <Property name="depth texture layer.height scale" value="0.003"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深柱子.mesh"/>
+    <Property name="position" value="2900 -653.9 -2800"/>
+    <Property name="orientation" value="-2.19989e-009 -0.0214744 1.02422e-007 -0.999767"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深层墙2.mesh"/>
+    <Property name="position" value="8320.43 -1320.67 -1022.42"/>
+    <Property name="orientation" value="-0.55557 0 -0.831469 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深层墙1.mesh"/>
+    <Property name="position" value="6395.5 -2117.83 -2371.84"/>
+    <Property name="orientation" value="0.819347 0 -0.573297 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深柱子.mesh"/>
+    <Property name="position" value="6803.94 -1511.43 -782.51"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深柱子.mesh"/>
+    <Property name="position" value="6900 143.07 -893.042"/>
+    <Property name="orientation" value="-8.62134e-008 -0.841554 5.5338e-008 -0.540171"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深柱子.mesh"/>
+    <Property name="position" value="200 -653.9 -1663.35"/>
+    <Property name="orientation" value="-5.82155e-008 -0.568258 -8.42972e-008 0.822849"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="石林/石壁.mesh"/>
+    <Property name="position" value="7714.19 -1277.06 -1904.57"/>
+    <Property name="orientation" value="0.989622 0 -0.143695 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="石林/石柱2.mesh"/>
+    <Property name="position" value="7302.22 -1266.93 -1375.61"/>
+    <Property name="orientation" value="0.877545 0 -0.479494 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="7213.33 -1265.26 964.313"/>
+    <Property name="orientation" value="0.619478 0 -0.785015 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="7464.37 -1271.37 805.509"/>
+    <Property name="orientation" value="0.545368 0 -0.838198 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="7495.32 -1266.09 889.453"/>
+    <Property name="orientation" value="0.104096 0 -0.994569 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="石林/石柱2.mesh"/>
+    <Property name="position" value="7622.97 -1270.54 965.642"/>
+    <Property name="orientation" value="0.514976 0 0.857206 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="石林/石柱3.mesh"/>
+    <Property name="position" value="7963.84 -1242.48 -1366.07"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深层墙2.mesh"/>
+    <Property name="position" value="6906.13 -1277.44 -2619.39"/>
+    <Property name="orientation" value="-0.655493 0 -0.7552 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="石林/石柱5.mesh"/>
+    <Property name="position" value="7035.99 -1256.64 -1659.38"/>
+    <Property name="orientation" value="0.990485 0 0.13762 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/蜘蛛卵囊.mesh"/>
+    <Property name="position" value="7808.67 -1273.4 -1379.44"/>
+    <Property name="orientation" value="0.839894 0 0.54275 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="7822.44 -1269.68 -1252.03"/>
+    <Property name="orientation" value="0.934092 0 0.357031 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="7619.84 -1276.73 -1217.59"/>
+    <Property name="orientation" value="0.936265 0 0.351293 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="7450.79 -1257.4 -1179.86"/>
+    <Property name="orientation" value="0.699768 -0.101608 0.699768 0.101608"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="6671.21 -1277.78 -585.092"/>
+    <Property name="orientation" value="0.977677 0 -0.210112 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="6734.85 -1265.74 -460.241"/>
+    <Property name="orientation" value="0.894894 -0.238806 -0.364261 -0.0972042"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网3.mesh"/>
+    <Property name="position" value="7050.36 -826.602 -1626.95"/>
+    <Property name="orientation" value="0.819961 0.141281 -0.229363 -0.505071"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="7848.26 -1254.53 -1112.85"/>
+    <Property name="orientation" value="0.965394 0 -0.260794 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/蜘蛛卵囊.mesh"/>
+    <Property name="position" value="7215.03 -1266.93 -1553.28"/>
+    <Property name="orientation" value="0.982508 0 0 -0.186219"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深层树根1.mesh"/>
+    <Property name="position" value="8290.26 -1129.74 -1280.22"/>
+    <Property name="orientation" value="0.273776 0.330051 -0.903377 0.00440045"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="7320.98 -1257.4 -930.352"/>
+    <Property name="orientation" value="0.95694 -0.13895 0.25222 0.036623"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深层树根3.mesh"/>
+    <Property name="position" value="5065.21 -1102.44 -2086.11"/>
+    <Property name="orientation" value="0.257167 0.0585782 0.940499 0.214229"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深层树根1.mesh"/>
+    <Property name="position" value="4408.67 -1652.84 -1527.44"/>
+    <Property name="orientation" value="0.413594 0.227568 -0.874802 -0.108966"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深层树根5.mesh"/>
+    <Property name="position" value="6972.78 -1026.63 -892.056"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深层树根4.mesh"/>
+    <Property name="position" value="6647.8 -966.968 -611.206"/>
+    <Property name="orientation" value="0.330896 0.453522 -0.821052 -0.103418"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="6892.9 -1324.27 -231.435"/>
+    <Property name="orientation" value="0.886373 -0.0431584 0.457409 0.0570731"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网3.mesh"/>
+    <Property name="position" value="6639.15 -1286.34 -380.03"/>
+    <Property name="orientation" value="0.997722 0.0674439 0 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="6492.36 -1308.82 -57.4862"/>
+    <Property name="orientation" value="0.953739 -0.20065 -0.203807 -0.0926493"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="chuansongmen_03"/>
+    <Property name="position" value="7371.42 -1154.13 -1368.46"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="7356.54 -1306.91 -1918.76"/>
+    <Property name="orientation" value="0.942739 -0.113341 0.311439 -0.0374427"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="6887.12 -841.598 -1256.49"/>
+    <Property name="orientation" value="0.837705 -0.159355 -0.405681 -0.329057"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="6900 -969.996 -974.607"/>
+    <Property name="orientation" value="0.887594 -0.195961 -0.193886 -0.369031"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="7126.98 -1140.05 -927.527"/>
+    <Property name="orientation" value="0.990058 -0.140658 0 0"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.305882 0.552941 0.827451"/>
+    <Property name="specular" value="0.329412 0.458824 0.752941"/>
+    <Property name="position" value="7354 -1250.07 -1358"/>
+    <Property name="range" value="500"/>
+    <Property name="attenuation.linear" value="0.001"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="8084.09 -1190.13 -977.608"/>
+    <Property name="orientation" value="0.815814 0 -0.578314 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深层树根5.mesh"/>
+    <Property name="position" value="8173.49 -1117.35 29.1777"/>
+    <Property name="orientation" value="-0.210112 0 -0.977677 0"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.941176 0.905882 0.192157"/>
+    <Property name="specular" value="0.847059 0.8 0.239216"/>
+    <Property name="position" value="7900 -1023.73 69"/>
+    <Property name="range" value="500"/>
+    <Property name="attenuation.linear" value="0.0001"/>
+    <Property name="attenuation.quadric" value="8e-006"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="7928.58 -1353.73 173.72"/>
+    <Property name="orientation" value="0.932991 0 -0.359895 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="7917.02 -1351.57 -107.808"/>
+    <Property name="orientation" value="0.468688 0 -0.883363 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="8060.39 -1281.34 307.325"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="8269.34 -1318.23 -125.84"/>
+    <Property name="orientation" value="-0.424779 0 -0.905295 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="7846.36 -1326.81 -244.229"/>
+    <Property name="orientation" value="0.999205 -0.0398729 0 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="7612.92 -1321.68 -481.891"/>
+    <Property name="orientation" value="0.709956 -0.0452452 -0.701297 -0.0458039"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="7694.81 -1303.03 -847.623"/>
+    <Property name="orientation" value="0.399624 0 -0.916679 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="6523.8 -1311.02 1290.33"/>
+    <Property name="orientation" value="0.365923 0 -0.930645 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shuidi"/>
+    <Property name="position" value="7779.56 -1373.94 -76.7573"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shuimianlianyi"/>
+    <Property name="position" value="7740.14 -1285.66 -22.0483"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深层树根5.mesh"/>
+    <Property name="position" value="-595.626 -1048.22 3551.37"/>
+    <Property name="orientation" value="0.989086 0 0.14734 0"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.470588 0.886275 0.247059"/>
+    <Property name="specular" value="0.847059 0.8 0.239216"/>
+    <Property name="position" value="-400 -847 3400"/>
+    <Property name="range" value="800"/>
+    <Property name="attenuation.linear" value="0.002"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深柱子.mesh"/>
+    <Property name="position" value="-2556.07 -2116.91 5470.8"/>
+    <Property name="orientation" value="0.822697 0 -0.568481 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深层树根1.mesh"/>
+    <Property name="position" value="-1119.18 -1932.1 5893.24"/>
+    <Property name="orientation" value="-0.18848 0.263183 -0.943501 -0.0708288"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shuidi"/>
+    <Property name="position" value="-237.388 -1371.87 3915.42"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shuimianlianyi"/>
+    <Property name="position" value="-259.445 -1289.21 3850.46"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深层树根1.mesh"/>
+    <Property name="position" value="1858.94 -2102.95 -2845.12"/>
+    <Property name="orientation" value="0.93348 0.179789 -0.195696 -0.240821"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深层树根1.mesh"/>
+    <Property name="position" value="387.473 -1633.98 -2638.41"/>
+    <Property name="orientation" value="0.382003 0.338695 -0.839121 -0.187709"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深层树根3.mesh"/>
+    <Property name="position" value="-1593.04 -909.1 -1366.52"/>
+    <Property name="orientation" value="0.946256 -0.156476 -0.277884 -0.0538241"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网3.mesh"/>
+    <Property name="position" value="-2708.36 -2005.35 2781.7"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="-2476.17 -2016.55 2647.72"/>
+    <Property name="orientation" value="-0.0262867 0 -0.999654 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="-2296.53 -2050.4 2697.05"/>
+    <Property name="orientation" value="0.4338 0.0342842 0.897558 0.0709361"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/蜘蛛卵囊.mesh"/>
+    <Property name="position" value="-2726.1 -2004.95 2789.39"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深层树根1.mesh"/>
+    <Property name="position" value="-2027.73 -1854.19 638.624"/>
+    <Property name="orientation" value="0.503208 0.114357 -0.835266 -0.189819"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深层树根5.mesh"/>
+    <Property name="position" value="-1344.71 -1865.43 -1362.72"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.756863 0.882353 0.25098"/>
+    <Property name="specular" value="0.847059 0.8 0.239216"/>
+    <Property name="position" value="-1200 -1856.7 -1500"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="0.001"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="-969.918 -1249.08 895.949"/>
+    <Property name="orientation" value="-0.39192 0.138627 -0.902056 -0.116077"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="-1094.68 -1260.39 1165.04"/>
+    <Property name="orientation" value="0.879644 0.106243 0.456043 -0.0834457"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="-1103.22 -1261 1335.73"/>
+    <Property name="orientation" value="0.967514 -0.124662 0.205242 0.079067"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深柱子.mesh"/>
+    <Property name="position" value="472.16 91.52 1037.57"/>
+    <Property name="orientation" value="-9.86657e-008 -0.963105 2.75706e-008 -0.269124"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深柱子.mesh"/>
+    <Property name="position" value="300 156.61 800"/>
+    <Property name="orientation" value="-9.98868e-008 -0.975024 -2.27525e-008 0.222093"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="570.191 -1296.46 925.724"/>
+    <Property name="orientation" value="0.914168 0 0.405335 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="653.948 -1293.33 848.535"/>
+    <Property name="orientation" value="0.338243 0 0.941059 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深层树根5.mesh"/>
+    <Property name="position" value="363.347 -991.643 1097.44"/>
+    <Property name="orientation" value="0.294606 0 -0.955619 0"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.941176 0.737255 0.192157"/>
+    <Property name="specular" value="0.847059 0.8 0.239216"/>
+    <Property name="position" value="265 -955.12 1240"/>
+    <Property name="range" value="800"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="8e-006"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/热带灌木02.mesh"/>
+    <Property name="position" value="6939.3 -122.695 5776.47"/>
+    <Property name="orientation" value="-0.176524 0 -0.984297 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/热带灌木01.mesh"/>
+    <Property name="position" value="6571.66 -239.55 6269.55"/>
+    <Property name="orientation" value="0.788132 0.0382824 -0.612334 0.0492731"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/草11.mesh"/>
+    <Property name="position" value="6866.61 -122.027 5676.91"/>
+    <Property name="orientation" value="0.997183 0.029501 0.0020391 0.0689249"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/草11.mesh"/>
+    <Property name="position" value="6808.38 -142.76 5581.42"/>
+    <Property name="orientation" value="0.775351 0 -0.631531 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/草11.mesh"/>
+    <Property name="position" value="6156.68 -341.679 4818.79"/>
+    <Property name="orientation" value="0.994408 0.0457817 -0.00437622 0.0950545"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芭蕉2.mesh"/>
+    <Property name="position" value="3978.72 -24.5062 7603.23"/>
+    <Property name="orientation" value="0.985726 0.149784 -0.0573494 -0.0511534"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/草11.mesh"/>
+    <Property name="position" value="3839.24 -21.0056 7557.54"/>
+    <Property name="orientation" value="0.997081 -0.0689179 0.00226558 -0.0327777"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/草11.mesh"/>
+    <Property name="position" value="3700.92 -130.57 7750.83"/>
+    <Property name="orientation" value="0.953662 0 -0.30088 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/草11.mesh"/>
+    <Property name="position" value="1622 -243.116 7381.53"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/草11.mesh"/>
+    <Property name="position" value="1646.63 -249.306 7230.9"/>
+    <Property name="orientation" value="0.879392 0 -0.4761 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/草11.mesh"/>
+    <Property name="position" value="1481.72 -186.985 7075.08"/>
+    <Property name="orientation" value="0.869834 0 0.493345 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/热带灌木01.mesh"/>
+    <Property name="position" value="1598.2 -198.807 7109.54"/>
+    <Property name="orientation" value="0.743168 -0.052513 -0.664449 -0.0587344"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/热带灌木02.mesh"/>
+    <Property name="position" value="874.249 -287.755 5445.26"/>
+    <Property name="orientation" value="0.560343 0 -0.828261 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/热带灌木01.mesh"/>
+    <Property name="position" value="940.68 -291.018 5386.61"/>
+    <Property name="orientation" value="-0.269384 0 -0.963033 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/草11.mesh"/>
+    <Property name="position" value="777.456 -317.127 6163.57"/>
+    <Property name="orientation" value="0.743292 0 -0.668968 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深柱子.mesh"/>
+    <Property name="position" value="4900 49.48 500"/>
+    <Property name="orientation" value="-9.86657e-008 -0.963105 2.75706e-008 -0.269124"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深柱子.mesh"/>
+    <Property name="position" value="4727.84 114.57 262.43"/>
+    <Property name="orientation" value="-9.98868e-008 -0.975024 -2.27525e-008 0.222093"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深柱子.mesh"/>
+    <Property name="position" value="4709.79 -1352.81 546.238"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="5059.71 -1342.86 309.822"/>
+    <Property name="orientation" value="0.803575 0 0.595204 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="4827.77 -1305.56 -33.7885"/>
+    <Property name="orientation" value="0.0328559 0 -0.99946 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="5072.77 -1311.71 -90.7182"/>
+    <Property name="orientation" value="-0.267945 0.118319 -0.937824 -0.186244"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shuidi"/>
+    <Property name="position" value="4814.66 -1325.56 749.128"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shuimianlianyi"/>
+    <Property name="position" value="4825.06 -1290.3 736.727"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深层树根5.mesh"/>
+    <Property name="position" value="4162.96 -477.094 3481.17"/>
+    <Property name="orientation" value="0.941059 0 0.338243 0"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.470588 0.886275 0.247059"/>
+    <Property name="specular" value="0.847059 0.8 0.239216"/>
+    <Property name="position" value="4300 -542.9 3300"/>
+    <Property name="range" value="800"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="8e-006"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.470588 0.886275 0.247059"/>
+    <Property name="specular" value="0.847059 0.8 0.239216"/>
+    <Property name="position" value="4200 -480.225 3500"/>
+    <Property name="range" value="800"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="8e-006"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/草11.mesh"/>
+    <Property name="position" value="5993.23 -1277.59 1943.99"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/草11.mesh"/>
+    <Property name="position" value="5935.84 -1293.15 2014.16"/>
+    <Property name="orientation" value="0.793687 0 -0.608327 0"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.956863 0.862745 0.176471"/>
+    <Property name="specular" value="0.847059 0.8 0.239216"/>
+    <Property name="position" value="7200 -957.4 -900"/>
+    <Property name="range" value="500"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="5e-005"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="7397.68 -1281.28 -1162.64"/>
+    <Property name="orientation" value="0.979976 0 -0.199117 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深层树根4.mesh"/>
+    <Property name="position" value="2574.3 -958.639 -317.63"/>
+    <Property name="orientation" value="-0.0774699 0.358737 -0.908639 0.199199"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="187.552 -1319.09 542.518"/>
+    <Property name="orientation" value="0.160328 0 -0.987064 0"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.470588 0.886275 0.247059"/>
+    <Property name="specular" value="0.847059 0.8 0.239216"/>
+    <Property name="position" value="100 -922.47 2100"/>
+    <Property name="range" value="800"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="8e-006"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.470588 0.886275 0.247059"/>
+    <Property name="specular" value="0.847059 0.8 0.239216"/>
+    <Property name="position" value="1500 -734.86 3100"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="8e-006"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深层树根5.mesh"/>
+    <Property name="position" value="1683.97 -861.878 3210.78"/>
+    <Property name="orientation" value="0.282019 0 0.959409 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深层树根5.mesh"/>
+    <Property name="position" value="3005.21 -999.514 -406.66"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.470588 0.886275 0.247059"/>
+    <Property name="specular" value="0.847059 0.8 0.239216"/>
+    <Property name="position" value="3200 -1000.87 -400"/>
+    <Property name="range" value="800"/>
+    <Property name="attenuation.linear" value="0.001"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yun"/>
+    <Property name="position" value="2890.51 -270.494 5439.36"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yun"/>
+    <Property name="position" value="3686.72 -1133.28 845.665"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yun"/>
+    <Property name="position" value="-1946.07 -1947.24 5157.98"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yun"/>
+    <Property name="position" value="2654.94 -1962.53 -2445.34"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="294.853 -859.664 1179.06"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="-490.709 -931.3 3485.13"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="1535.86 -718.842 3174.75"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="8001.01 -1036.5 62.1749"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="3109.83 -901.914 -378.717"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="4211.06 -253.842 3411.24"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="1428.83 -56.5301 4956.67"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="6013.62 -160.593 4954.84"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="3125.43 15.6951 6492.54"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="pubushuihua_02"/>
+    <Property name="position" value="5877.81 -286.307 8172.63"/>
+    <Property name="orientation" value="0.972905 0 0.231208 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="pubushuihua_02"/>
+    <Property name="position" value="5779.83 -305.36 8529.76"/>
+    <Property name="orientation" value="0.718629 0 0.695394 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui01"/>
+    <Property name="position" value="-1963.57 -2147.05 5119.52"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui01"/>
+    <Property name="position" value="-1985.11 -2132.53 1788.04"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui01"/>
+    <Property name="position" value="-860.423 -2086.92 -1781.01"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui01"/>
+    <Property name="position" value="2348.28 -2147.81 -2078.21"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui01"/>
+    <Property name="position" value="2602.21 -317.863 8891.93"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui01"/>
+    <Property name="position" value="6554.97 -469.022 6757.59"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui01"/>
+    <Property name="position" value="5887.17 -411.224 6423.81"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui01"/>
+    <Property name="position" value="1462.23 -424.136 8528.21"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="-1200.74 -1755.61 -1358.4"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="地下深层/地下深层树根1.mesh"/>
+    <Property name="position" value="-2558.49 -2056.94 3032.55"/>
+    <Property name="orientation" value="0.909092 -0.165504 0.341651 -0.171564"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui01"/>
+    <Property name="position" value="5050.65 -2084.28 -2022.25"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui01"/>
+    <Property name="position" value="5276.48 -2117.83 -1580.33"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui01"/>
+    <Property name="position" value="5919.11 -2064.87 -2061.64"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="7140.68 -757.403 -892.714"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui01"/>
+    <Property name="position" value="4520.93 -1237.18 331.304"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.470588 0.886275 0.247059"/>
+    <Property name="specular" value="0.847059 0.8 0.239216"/>
+    <Property name="position" value="1500 -1220.85 2900"/>
+    <Property name="range" value="600"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="1e-005"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.470588 0.886275 0.247059"/>
+    <Property name="specular" value="0.847059 0.8 0.239216"/>
+    <Property name="position" value="4400 -905.77 300"/>
+    <Property name="range" value="400"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="8e-006"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yun"/>
+    <Property name="position" value="5453.16 -1917.83 -2039.86"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shuidi"/>
+    <Property name="position" value="-2065.93 -2090.17 4790.08"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shuimianlianyi"/>
+    <Property name="position" value="-2043.04 -2089.59 4772.99"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shuidi"/>
+    <Property name="position" value="5506.98 -2117.83 -2166.63"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shuimianlianyi"/>
+    <Property name="position" value="5481.69 -2052.83 -2101.65"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/热带灌木01.mesh"/>
+    <Property name="position" value="2530.66 -1277.44 2046.15"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/热带灌木02.mesh"/>
+    <Property name="position" value="2531.02 -1277.44 2115.21"/>
+    <Property name="orientation" value="0.929823 0 0.368007 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/草11.mesh"/>
+    <Property name="position" value="706.215 -325.877 4313.22"/>
+    <Property name="orientation" value="0.953078 -0.12053 -0.27758 0.0080444"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/草11.mesh"/>
+    <Property name="position" value="838.385 -316.766 4260.72"/>
+    <Property name="orientation" value="0.901061 -0.0399766 0.43142 -0.0191404"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/草11.mesh"/>
+    <Property name="position" value="725.374 -399.967 4178.9"/>
+    <Property name="orientation" value="0.831469 0 -0.55557 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/热带灌木02.mesh"/>
+    <Property name="position" value="669.667 -327.422 4405.53"/>
+    <Property name="orientation" value="0.954139 0 0.299363 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/热带灌木02.mesh"/>
+    <Property name="position" value="883.006 -303.889 4321.46"/>
+    <Property name="orientation" value="0.856913 0 -0.51546 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芭蕉.mesh"/>
+    <Property name="position" value="2709.27 -278.73 3220.93"/>
+    <Property name="orientation" value="0.977998 -0.14349 -0.151352 -0.00479481"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芭蕉2.mesh"/>
+    <Property name="position" value="5672.26 -303.474 4523.14"/>
+    <Property name="orientation" value="0.992382 0 0.123196 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/芭蕉.mesh"/>
+    <Property name="position" value="5543.62 -298.989 4380.58"/>
+    <Property name="orientation" value="0.521286 0.130771 -0.842051 -0.0459311"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0灌木/草11.mesh"/>
+    <Property name="position" value="5622.29 -282.825 4324.71"/>
+    <Property name="orientation" value="0.994544 0 -0.104318 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="5225.01 -1362.83 454.806"/>
+    <Property name="orientation" value="0.510022 0 0.860161 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="5367.23 -1358.28 541.475"/>
+    <Property name="orientation" value="0.581095 -0.192189 0.786116 0.0861035"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="6901.68 -1297.59 1034.76"/>
+    <Property name="orientation" value="0.88636 0 -0.462997 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="牢房/牢房蛛网2.mesh"/>
+    <Property name="position" value="6967.86 -1289.36 760.688"/>
+    <Property name="orientation" value="0.299362 0 -0.954139 0"/>
+  </Object>
+
+</Scene>

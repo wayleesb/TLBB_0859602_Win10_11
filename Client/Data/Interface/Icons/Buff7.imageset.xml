@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<Imageset Name="Buff7" Imagefile="Icons/Buff7.jpg" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+	<Image Name="Buff7_1" XPos="0" YPos="0" Width="64" Height="64" />
+	<Image Name="Buff7_2" XPos="64" YPos="0" Width="64" Height="64" />
+	<Image Name="Buff7_3" XPos="128" YPos="0" Width="64" Height="64" />
+	<Image Name="Buff7_4" XPos="192" YPos="0" Width="64" Height="64" />
+	<Image Name="Buff7_5" XPos="0" YPos="64" Width="64" Height="64" />
+	<Image Name="Buff7_6" XPos="64" YPos="64" Width="64" Height="64" />
+	<Image Name="Buff7_7" XPos="128" YPos="64" Width="64" Height="64" />
+	<Image Name="Buff7_8" XPos="192" YPos="64" Width="64" Height="64" />
+	<Image Name="Buff7_9" XPos="0" YPos="128" Width="64" Height="64" />
+	<Image Name="Buff7_10" XPos="64" YPos="128" Width="64" Height="64" />
+	<Image Name="Buff7_11" XPos="128" YPos="128" Width="64" Height="64" />
+	<Image Name="Buff7_12" XPos="192" YPos="128" Width="64" Height="64" />
+	<Image Name="Buff7_13" XPos="0" YPos="192" Width="64" Height="64" />
+	<Image Name="Buff7_14" XPos="64" YPos="192" Width="64" Height="64" />
+	<Image Name="Buff7_15" XPos="128" YPos="192" Width="64" Height="64" />
+	<Image Name="Buff7_16" XPos="192" YPos="192" Width="64" Height="64" />
+</Imageset>

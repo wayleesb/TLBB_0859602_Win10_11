@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame1" Name="SoundSetup_Frame">
+        <Property Name="UnifiedPosition" Value="{{0.5,-128},{0.5,-128}}" />
+        <Property Name="AbsoluteSize" Value="w:256 h:256" />
+        <Window Type="TLBB_DragTitle" Name="SoundSetup_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="SoundSetup_Frame" />
+            <Window Type="TLBB_SimpleText" Name="SoundSetup_PageHeader">
+                <Property Name="Position" Value="x:0.0 y:0.0" />
+                <Property Name="Size" Value="w:1.0 h:1.0" />
+                <Property Name="Font" Value="YouYuan11.25" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Property Name="Text" Value="#{INTERFACE_XML_60}" />
+            </Window>
+        </Window>
+        <Window Type="TLBB_ButtonHelp" Name="SoundSetup_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Property Name="Text" Value="TLBB_ButtonHelp" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*SoundSetup&quot;);' />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="SoundSetup_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Property Name="Text" Value="TLBB_ButtonClose" />
+            <Event Name="Clicked" Function="this:Hide();" />
+        </Window>
+        <Window Type="DefaultWindow" Name="SoundSetup_Frame_Client">
+            <Property Name="AbsolutePosition" Value="x:6.000000 y:36.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-12.000000},{1.000000,-55.000000}" />
+            <Property Name="RiseOnClick" Value="False" />
+            <Window Type="TLBB_Frame_Lace3" Name="SoundSetup_Bk">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.25,0.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.0,0.000000},{0.75,-24.000000}" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_ButtonCheck" Name="SoundSetup_Item1">
+                <Property Name="Position" Value="x:0.04296875 y:0.1" />
+                <Property Name="UnifiedSize" Value="{{0.0,12.000000},{0.000000,12.000000}" />
+                <Property Name="CheckMode" Value="0" />
+                <Event Name="MouseButtonUp" Function="SoundSetup_Check_Clicked(1);" />
+            </Window>
+            <Window Type="TLBB_ButtonCheck" Name="SoundSetup_Item2">
+                <Property Name="Position" Value="x:0.04296875 y:0.34984375" />
+                <Property Name="UnifiedSize" Value="{{0.0,12.000000},{0.000000,12.000000}" />
+                <Property Name="CheckMode" Value="0" />
+                <Event Name="MouseButtonUp" Function="SoundSetup_Check_Clicked(2);" />
+            </Window>
+            <Window Type="TLBB_ButtonCheck" Name="SoundSetup_Item3">
+                <Property Name="Position" Value="x:0.04296875 y:0.47484375" />
+                <Property Name="UnifiedSize" Value="{{0.0,12.000000},{0.000000,12.000000}" />
+                <Property Name="CheckMode" Value="0" />
+                <Event Name="MouseButtonUp" Function="SoundSetup_Check_Clicked(3);" />
+            </Window>
+            <Window Type="TLBB_ButtonCheck" Name="SoundSetup_Item4">
+                <Property Name="Position" Value="x:0.04296875 y:0.59984375" />
+                <Property Name="UnifiedSize" Value="{{0.0,12.000000},{0.000000,12.000000}" />
+                <Property Name="CheckMode" Value="0" />
+                <Event Name="MouseButtonUp" Function="SoundSetup_Check_Clicked(4);" />
+            </Window>
+            <Window Type="TLBB_ButtonCheck" Name="SoundSetup_Item5">
+                <Property Name="Position" Value="x:0.04296875 y:0.72484375" />
+                <Property Name="UnifiedSize" Value="{{0.0,12.000000},{0.000000,12.000000}" />
+                <Property Name="CheckMode" Value="0" />
+                <Event Name="MouseButtonUp" Function="SoundSetup_Check_Clicked(5);" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="SoundSetup_Item1_Text">
+                <Property Name="Position" Value="x:0.1171875 y:0.08" />
+                <Property Name="UnifiedSize" Value="{{0.0,70.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_386}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Property Name="Tooltip" Value="#{INTERFACE_XML_620}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="SoundSetup_Item2_Text">
+                <Property Name="Position" Value="x:0.1171875 y:0.33203125" />
+                <Property Name="UnifiedSize" Value="{{0.0,70.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_141}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Property Name="Tooltip" Value="#{INTERFACE_XML_169}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="SoundSetup_Item3_Text">
+                <Property Name="Position" Value="x:0.1171875 y:0.45703125" />
+                <Property Name="UnifiedSize" Value="{{0.0,70.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_333}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Property Name="Tooltip" Value="#{INTERFACE_XML_170}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="SoundSetup_Item4_Text">
+                <Property Name="Position" Value="x:0.1171875 y:0.58203125" />
+                <Property Name="UnifiedSize" Value="{{0.0,70.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_351}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Property Name="Tooltip" Value="#{INTERFACE_XML_349}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="SoundSetup_Item5_Text">
+                <Property Name="Position" Value="x:0.1171875 y:0.70703125" />
+                <Property Name="UnifiedSize" Value="{{0.0,70.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_648}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Property Name="Tooltip" Value="#{INTERFACE_XML_647}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+            </Window>
+            <Window Type="DefaultWindow" Name="SoundSetup_Item2_Control_Frame">
+                <Property Name="Position" Value="x:0.45 y:0.3359375" />
+                <Property Name="UnifiedSize" Value="{{0.0,140.000000},{0.000000,20.000000}" />
+                <Window Type="TLBB_SimpleText" Name="SoundSetup_Item2_Control_Text2">
+                    <Property Name="Position" Value="x:0.0 y:0.0" />
+                    <Property Name="Size" Value="w:0.15 h:1.0" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_232}" />
+                    <Property Name="HorzFormatting" Value="HorzCentred" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="SoundSetup_Item2_Control_Text3">
+                    <Property Name="Position" Value="x:0.75 y:0.0" />
+                    <Property Name="Size" Value="w:0.15 h:1.0" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_276}" />
+                    <Property Name="HorzFormatting" Value="HorzCentred" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_Slider" Name="SoundSetup_Item2_Control">
+                    <Property Name="Position" Value="x:0.15 y:0.1428571428" />
+                    <Property Name="UnifiedSize" Value="{{0.,80.000000},{0.000000,14.000000}" />
+                </Window>
+            </Window>
+            <Window Type="DefaultWindow" Name="SoundSetup_Item3_Control_Frame">
+                <Property Name="Position" Value="x:0.45 y:0.4609375" />
+                <Property Name="UnifiedSize" Value="{{0.0,140.000000},{0.000000,20.000000}" />
+                <Window Type="TLBB_SimpleText" Name="SoundSetup_Item3_Control_Text2">
+                    <Property Name="Position" Value="x:0.0 y:0.0" />
+                    <Property Name="Size" Value="w:0.15 h:1.0" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_232}" />
+                    <Property Name="HorzFormatting" Value="HorzCentred" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="SoundSetup_Item3_Control_Text3">
+                    <Property Name="Position" Value="x:0.75 y:0.0" />
+                    <Property Name="Size" Value="w:0.15 h:1.0" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_276}" />
+                    <Property Name="HorzFormatting" Value="HorzCentred" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_Slider" Name="SoundSetup_Item3_Control">
+                    <Property Name="Position" Value="x:0.15 y:0.1428571428" />
+                    <Property Name="UnifiedSize" Value="{{0.,80.000000},{0.000000,14.000000}" />
+                </Window>
+            </Window>
+            <Window Type="DefaultWindow" Name="SoundSetup_Item4_Control_Frame">
+                <Property Name="Position" Value="x:0.45 y:0.5859375" />
+                <Property Name="UnifiedSize" Value="{{0.0,140.000000},{0.000000,20.000000}" />
+                <Window Type="TLBB_SimpleText" Name="SoundSetup_Item4_Control_Text2">
+                    <Property Name="Position" Value="x:0.0 y:0.0" />
+                    <Property Name="Size" Value="w:0.15 h:1.0" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_232}" />
+                    <Property Name="HorzFormatting" Value="HorzCentred" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="SoundSetup_Item4_Control_Text3">
+                    <Property Name="Position" Value="x:0.75 y:0.0" />
+                    <Property Name="Size" Value="w:0.15 h:1.0" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_276}" />
+                    <Property Name="HorzFormatting" Value="HorzCentred" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_Slider" Name="SoundSetup_Item4_Control">
+                    <Property Name="Position" Value="x:0.15 y:0.1428571428" />
+                    <Property Name="UnifiedSize" Value="{{0.,80.000000},{0.000000,14.000000}" />
+                </Window>
+            </Window>
+            <Window Type="DefaultWindow" Name="SoundSetup_Item5_Control_Frame">
+                <Property Name="Position" Value="x:0.45 y:0.7109375" />
+                <Property Name="UnifiedSize" Value="{{0.0,140.000000},{0.000000,20.000000}" />
+                <Window Type="TLBB_SimpleText" Name="SoundSetup_Item5_Control_Text2">
+                    <Property Name="Position" Value="x:0.0 y:0.0" />
+                    <Property Name="Size" Value="w:0.15 h:1.0" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_232}" />
+                    <Property Name="HorzFormatting" Value="HorzCentred" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="SoundSetup_Item5_Control_Text3">
+                    <Property Name="Position" Value="x:0.75 y:0.0" />
+                    <Property Name="Size" Value="w:0.15 h:1.0" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_276}" />
+                    <Property Name="HorzFormatting" Value="HorzCentred" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_Slider" Name="SoundSetup_Item5_Control">
+                    <Property Name="Position" Value="x:0.15 y:0.1428571428" />
+                    <Property Name="UnifiedSize" Value="{{0.,80.000000},{0.000000,14.000000}" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="SoundSetup_DefaultSetting">
+                <Property Name="UnifiedPosition" Value="{{0.0,0.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,80.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_335}" />
+                <Event Name="Clicked" Function="SoundSetup_Default_Clicked()" />
+            </Window>
+            <Window Type="TLBB_Frame_Lace5" Name="SoundSetup_Blank">
+                <Property Name="UnifiedPosition" Value="{{0.000000,80.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-160.000000},{0.000000,20.000000}" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="SoundSetup_Accept">
+                <Property Name="UnifiedPosition" Value="{{1.0,-80.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,40.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_557}" />
+                <Event Name="Clicked" Function="SoundSetup_IDOK_Clicked()" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="SoundSetup_Cancel">
+                <Property Name="UnifiedPosition" Value="{{1.0,-40.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,40.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_542}" />
+                <Event Name="Clicked" Function="this:Hide()" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

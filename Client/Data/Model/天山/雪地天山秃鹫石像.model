@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="雪地天山秃鹫石像.frame" />
+    <entity mesh="雪地天山秃鹫石像.mesh" node="雪地天山秃鹫石像" />
+</model>

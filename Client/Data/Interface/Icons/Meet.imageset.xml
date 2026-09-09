@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<Imageset Name="Meet" Imagefile="Icons/Meet.jpg" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+	<Image Name="Meet_1" XPos="0" YPos="0" Width="64" Height="64" />
+	<Image Name="Meet_2" XPos="64" YPos="0" Width="64" Height="64" />
+	<Image Name="Meet_3" XPos="128" YPos="0" Width="64" Height="64" />
+	<Image Name="Meet_4" XPos="192" YPos="0" Width="64" Height="64" />
+	<Image Name="Meet_5" XPos="0" YPos="64" Width="64" Height="64" />
+	<Image Name="Meet_6" XPos="64" YPos="64" Width="64" Height="64" />
+	<Image Name="Meet_7" XPos="128" YPos="64" Width="64" Height="64" />
+	<Image Name="Meet_8" XPos="192" YPos="64" Width="64" Height="64" />
+	<Image Name="Meet_9" XPos="0" YPos="128" Width="64" Height="64" />
+	<Image Name="Meet_10" XPos="64" YPos="128" Width="64" Height="64" />
+	<Image Name="Meet_11" XPos="128" YPos="128" Width="64" Height="64" />
+	<Image Name="Meet_12" XPos="192" YPos="128" Width="64" Height="64" />
+</Imageset>

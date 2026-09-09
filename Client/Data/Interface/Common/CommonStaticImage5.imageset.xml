@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+	<Imageset Name="CommonStaticImage5" Imagefile="Common/CommonStaticImage5.tga" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="false">
+
+		<Image Name="MainMenuBar_Character_Normal" XPos="1" YPos="1" Width="34" Height="34" />
+		<Image Name="MainMenuBar_Pet_Normal" XPos="38" YPos="75" Width="34" Height="34" />
+		<Image Name="MainMenuBar_Skills_Normal" XPos="75" YPos="1" Width="34" Height="34" />
+		<Image Name="MainMenuBar_Mission_Normal" XPos="112" YPos="1" Width="34" Height="34" />
+		<Image Name="MainMenuBar_Exchange_Normal" XPos="75" YPos="38" Width="34" Height="34" />
+		<Image Name="MainMenuBar_Packet_Normal" XPos="38" YPos="1" Width="34" Height="34" />
+		<Image Name="MainMenuBar_Friend_Normal" XPos="38" YPos="38" Width="34" Height="34" />
+		<Image Name="MainMenuBar_Team_Normal" XPos="1" YPos="38" Width="34" Height="34" />
+		<Image Name="MainMenuBar_BangHui_Normal" XPos="1" YPos="75" Width="34" Height="34" />
+		<Image Name="MainMenuBar_System_Normal" XPos="112" YPos="38" Width="34" Height="34" />
+
+		<Image Name="MainMenuBar_Character_Hover" XPos="1" YPos="111" Width="34" Height="34" />
+		<Image Name="MainMenuBar_Pet_Hover" XPos="38" YPos="185" Width="34" Height="34" />
+		<Image Name="MainMenuBar_Skills_Hover" XPos="75" YPos="111" Width="34" Height="34" />
+		<Image Name="MainMenuBar_Mission_Hover" XPos="112" YPos="111" Width="34" Height="34" />
+		<Image Name="MainMenuBar_Exchange_Hover" XPos="75" YPos="148" Width="34" Height="34" />
+		<Image Name="MainMenuBar_Packet_Hover" XPos="38" YPos="111" Width="34" Height="34" />
+		<Image Name="MainMenuBar_Friend_Hover" XPos="38" YPos="148" Width="34" Height="34" />
+		<Image Name="MainMenuBar_Team_Hover" XPos="1" YPos="148" Width="34" Height="34" />
+		<Image Name="MainMenuBar_BangHui_Hover" XPos="1" YPos="185" Width="34" Height="34" />
+		<Image Name="MainMenuBar_System_Hover" XPos="112" YPos="148" Width="34" Height="34" />
+
+		<Image Name="MainMenuBar_Character_Pushed" XPos="184" YPos="1" Width="34" Height="34" />
+		<Image Name="MainMenuBar_Pet_Pushed" XPos="221" YPos="149" Width="34" Height="34" />
+		<Image Name="MainMenuBar_Skills_Pushed" XPos="184" YPos="75" Width="34" Height="34" />
+		<Image Name="MainMenuBar_Mission_Pushed" XPos="221" YPos="75" Width="34" Height="34" />
+		<Image Name="MainMenuBar_Exchange_Pushed" XPos="184" YPos="112" Width="34" Height="34" />
+		<Image Name="MainMenuBar_Packet_Pushed" XPos="221" YPos="1" Width="34" Height="34" />
+		<Image Name="MainMenuBar_Friend_Pushed" XPos="221" YPos="38" Width="34" Height="34" />
+		<Image Name="MainMenuBar_Team_Pushed" XPos="184" YPos="38" Width="34" Height="34" />
+		<Image Name="MainMenuBar_BangHui_Pushed" XPos="184" YPos="149" Width="34" Height="34" />
+		<Image Name="MainMenuBar_System_Pushed" XPos="221" YPos="112" Width="34" Height="34" />
+
+
+	<Image Name="GaiBangZongDuo_Normal" XPos="130" YPos="217" Width="68" Height="17" />
+	<Image Name="GaiBangZongDuo_Hover" XPos="130" YPos="236" Width="68" Height="17" />
+	<Image Name="TianLongSi_Normal" XPos="202" YPos="217" Width="51" Height="19" />
+	<Image Name="TianLongSi_Hover" XPos="202" YPos="236" Width="51" Height="19" />
+
+
+	</Imageset>

@@ -1,0 +1,305 @@
+<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame3" Name="SelfData_Frame">
+        <Property Name="UnifiedPosition" Value="{{0.0,0},{0.12,0}}" />
+        <Property Name="AbsoluteSize" Value="w:360 h:402" />
+        <Event Name="Hidden" Function="SelfData_Frame_OnHiden();" />
+        <Window Type="TLBB_DragTitle" Name="SelfData_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:108.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-133.000000},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="SelfData_Frame" />
+            <Window Type="TLBB_SimpleText" Name="SelfData_PageHeader">
+                <Property Name="Position" Value="x:0.02 y:0.0" />
+                <Property Name="Size" Value="w:1.0 h:1.0" />
+                <Property Name="Font" Value="YouYuan11.25" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Property Name="Text" Value="" />
+            </Window>
+        </Window>
+        <Window Type="TLBB_ButtonHelp" Name="SelfData_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,88.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*SelfData&quot;);' />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="SelfData_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function="this:Hide();" />
+        </Window>
+        <Window Type="DefaultWindow" Name="SelfData_Frame_Client">
+            <Property Name="AbsolutePosition" Value="x:10.000000 y:35.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-14.000000},{1.000000,-62.000000}" />
+            <Window Type="TLBB_SimpleText" Name="SelfData_DataShareMode_Text">
+                <Property Name="Position" Value="x:0.02 y:0.01" />
+                <Property Name="UnifiedSize" Value="{{0.200000,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_828}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="DefaultWindow" Name="SelfData_DataShareMode">
+                <Property Name="Position" Value="x:0.2 y:0.01" />
+                <Property Name="UnifiedSize" Value="{{0.800000,0.000000},{0.000000,20.000000}" />
+                <Window Type="TLBB_ButtonCheck" Name="SelfData_Mode1">
+                    <Property Name="Position" Value="x:0.0 y:0.20" />
+                    <Property Name="AbsoluteSize" Value="w:12.000000 h:12.000000" />
+                    <Property Name="CheckMode" Value="1" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="SelfData_Mode1_Text">
+                    <Property Name="Position" Value="x:0.05 y:0.0" />
+                    <Property Name="Size" Value="w:0.25 h:1" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_709}" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                </Window>
+                <Window Type="TLBB_ButtonCheck" Name="SelfData_Mode2">
+                    <Property Name="Position" Value="x:0.3 y:0.20" />
+                    <Property Name="AbsoluteSize" Value="w:12.000000 h:12.000000" />
+                    <Property Name="CheckMode" Value="1" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="SelfData_Mode2_Text">
+                    <Property Name="Position" Value="x:0.35 y:0.0" />
+                    <Property Name="Size" Value="w:0.3 h:1" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_380}" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                </Window>
+                <Window Type="TLBB_ButtonCheck" Name="SelfData_Mode3">
+                    <Property Name="Position" Value="x:0.65 y:0.20" />
+                    <Property Name="AbsoluteSize" Value="w:12.000000 h:12.000000" />
+                    <Property Name="CheckMode" Value="1" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="SelfData_Mode3_Text">
+                    <Property Name="Position" Value="x:0.7 y:0.0" />
+                    <Property Name="Size" Value="w:0.25 h:1" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_708}" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="SelfData_ID">
+                <Property Name="Position" Value="x:0.02 y:0.1" />
+                <Property Name="UnifiedSize" Value="{{0.25,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="ID:888EEE99" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="SelfData_Age_Text">
+                <Property Name="Position" Value="x:0.25 y:0.1" />
+                <Property Name="UnifiedSize" Value="{{0.1,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_473}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+            </Window>
+            <Window Type="TLBB_EditBoxNormal" Name="SelfData_Age">
+                <Property Name="Position" Value="x:0.35 y:0.1" />
+                <Property Name="UnifiedSize" Value="{{0.1,0.000000},{0.000000,20.000000}" />
+                <Property Name="ValidationString" Value="[0-9]*" />
+                <Property Name="MaxTextLength" Value="2" />
+                <Property Name="Text" Value="99" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="SelfData_Sex_Text">
+                <Property Name="Position" Value="x:0.47 y:0.1" />
+                <Property Name="UnifiedSize" Value="{{0.1,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_774}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_ComboList" Name="SelfData_Sex">
+                <Property Name="Position" Value="x:0.57 y:0.1" />
+                <Property Name="UnifiedSize" Value="{{0.15,0.000000},{0.000000,20.000000}" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="SelfData_BloodType_Text">
+                <Property Name="Position" Value="x:0.74 y:0.1" />
+                <Property Name="UnifiedSize" Value="{{0.1,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_806}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_ComboList" Name="SelfData_BloodType">
+                <Property Name="Position" Value="x:0.84 y:0.1" />
+                <Property Name="UnifiedSize" Value="{{0.14,0.000000},{0.000000,20.000000}" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="SelfData_YearAnimal_Text">
+                <Property Name="Position" Value="x:0.02 y:0.2" />
+                <Property Name="UnifiedSize" Value="{{0.1,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_636}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_ComboList" Name="SelfData_YearAnimal">
+                <Property Name="Position" Value="x:0.1 y:0.2" />
+                <Property Name="UnifiedSize" Value="{{0.15,0.000000},{0.000000,20.000000}" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="SelfData_Constellation_Text">
+                <Property Name="Position" Value="x:0.27 y:0.2" />
+                <Property Name="UnifiedSize" Value="{{0.1,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_771}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_ComboList" Name="SelfData_Constellation">
+                <Property Name="Position" Value="x:0.37 y:0.2" />
+                <Property Name="UnifiedSize" Value="{{0.2,0.000000},{0.000000,20.000000}" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="SelfData_Province_Text">
+                <Property Name="Position" Value="x:0.59 y:0.2" />
+                <Property Name="UnifiedSize" Value="{{0.1,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_638}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_ComboList" Name="SelfData_Province">
+                <Property Name="Position" Value="x:0.69 y:0.2" />
+                <Property Name="UnifiedSize" Value="{{0.29,0.000000},{0.000000,20.000000}" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="SelfData_City_Text">
+                <Property Name="Position" Value="x:0.02 y:0.3" />
+                <Property Name="UnifiedSize" Value="{{0.200000,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_180}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_EditBoxNormal" Name="SelfData_City">
+                <Property Name="Position" Value="x:0.2 y:0.3" />
+                <Property Name="UnifiedSize" Value="{{0.78,0.000000},{0.000000,20.000000}" />
+                <Property Name="MaxTextLength" Value="14" />
+                <Property Name="ValidationString" Value="[^#,&apos;?]*" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="SelfData_Job_Text">
+                <Property Name="Position" Value="x:0.02 y:0.38" />
+                <Property Name="UnifiedSize" Value="{{0.200000,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_864}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_EditBoxNormal" Name="SelfData_Job">
+                <Property Name="Position" Value="x:0.2 y:0.38" />
+                <Property Name="UnifiedSize" Value="{{0.78,0.000000},{0.000000,20.000000}" />
+                <Property Name="MaxTextLength" Value="40" />
+                <Property Name="ValidationString" Value="[^#,&apos;?]*" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="SelfData_School_Text">
+                <Property Name="Position" Value="x:0.02 y:0.46" />
+                <Property Name="UnifiedSize" Value="{{0.200000,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_143}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_EditBoxNormal" Name="SelfData_School">
+                <Property Name="Position" Value="x:0.2 y:0.46" />
+                <Property Name="UnifiedSize" Value="{{0.78,0.000000},{0.000000,20.000000}" />
+                <Property Name="MaxTextLength" Value="38" />
+                <Property Name="ValidationString" Value="[^#,&apos;?]*" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="SelfData_EMail_Text">
+                <Property Name="Position" Value="x:0.02 y:0.54" />
+                <Property Name="UnifiedSize" Value="{{0.200000,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_238}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_EditBoxNormal" Name="SelfData_EMail">
+                <Property Name="Position" Value="x:0.2 y:0.54" />
+                <Property Name="UnifiedSize" Value="{{0.78,0.000000},{0.000000,20.000000}" />
+                <Property Name="MaxTextLength" Value="38" />
+                <Property Name="ValidationString" Value="[^#,&apos;?]*" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="SelfData_MessageBoard_Text">
+                <Property Name="Position" Value="x:0.02 y:0.63" />
+                <Property Name="UnifiedSize" Value="{{0.25,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_282}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_MultiIMEEditBox" Name="SelfData_MessageBoard">
+                <Property Name="Position" Value="x:0.02 y:0.69" />
+                <Property Name="Size" Value="w:0.960 h:0.23" />
+                <Property Name="MaxTextLength" Value="184" />
+                <Property Name="ActiveSelectionColour" Value="FF00FF00" />
+								<Property Name="SelectedTextColour" Value="FFFFFFFF" />
+            </Window>
+            <Window Type="TLBB_Frame_Lace2" Name="SelfData_Bk">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-25.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.0,0.000000},{0.000000,25.000000}" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_Frame_Lace5" Name="SelfData_Blank">
+                <Property Name="UnifiedPosition" Value="{{0.000000,2.000000},{1.000000,-22.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.0,-85.000000},{0.000000,20.000000}" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="SelfData_Accept">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-82.000000},{1.000000,-22.000000}" />
+                <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_557}" />
+                <Event Name="Clicked" Function="SelfData_Accept_Clicked();" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="SelfData_Cancel">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-42.000000},{1.000000,-22.000000}" />
+                <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_542}" />
+                <Event Name="Clicked" Function="this:Hide();" />
+            </Window>
+        </Window>
+        <Window Type="DefaultWindow" Name="SelfData_Checkbox_Frame">
+            <Property Name="UnifiedPosition" Value="{{0.0,8.000000},{1.000000,-25.000000}" />
+            <Property Name="UnifiedSize" Value="{{0.9,0.000000},{0.000000,24.000000}" />
+            <Window Type="TLBB_ButtonPageDown" Name="SelfData_SelfEquip">
+                <Property Name="AbsolutePosition" Value="x:0.0 y:0.0" />
+                <Property Name="AbsoluteSize" Value="w:42.000000 h:24.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_877}" />
+                <Property Name="HorzLabelFormatting" Value="WordWrapCentreAligned" />
+                <Event Name="Clicked" Function="SelfData_SelfEquip_Down(0);" />
+            </Window>
+            <Window Type="TLBB_ButtonPageDown" Name="SelfData_SelfData">
+                <Property Name="AbsolutePosition" Value="x:42.0 y:0.0" />
+                <Property Name="AbsoluteSize" Value="w:42.000000 h:24.000000" />
+                <Property Name="CheckMode" Value="1" />
+                <Property Name="Text" Value="#{INTERFACE_XML_882}" />
+            </Window>
+            <Window Type="TLBB_ButtonPageDown" Name="SelfData_Blog">
+                <Property Name="AbsolutePosition" Value="x:84.0 y:0.0" />
+                <Property Name="AbsoluteSize" Value="w:42.000000 h:24.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_145}" />
+                <Event Name="Clicked" Function="Load_Blog_Infomation();" />
+            </Window>
+            <Window Type="TLBB_ButtonPageDown" Name="SelfData_Pet">
+                <Property Name="AbsolutePosition" Value="x:126.0 y:0.0" />
+                <Property Name="AbsoluteSize" Value="w:42.000000 h:24.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_854}" />
+                <Event Name="Clicked" Function="SelfData_Pet_Down();" />
+            </Window>
+            <Window Type="TLBB_ButtonPageDown" Name="SelfData_Ride">
+                <Property Name="AbsolutePosition" Value="x:168.0 y:0.0" />
+                <Property Name="AbsoluteSize" Value="w:42.000000 h:24.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_497}" />
+                <Event Name="Clicked" Function="SelfData_Ride_Switch();" />
+            </Window>
+            <Window Type="TLBB_ButtonPageDown" Name="SelfData_OtherInfo">
+                <Property Name="AbsolutePosition" Value="x:210.0 y:0.0" />
+                <Property Name="AbsoluteSize" Value="w:42.000000 h:24.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_496}" />
+                <Event Name="Clicked" Function="SelfData_Other_Info_Page_Switch();" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

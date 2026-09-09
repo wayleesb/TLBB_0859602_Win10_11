@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<HelperItemSet>
+	<Item name="游戏登陆及其帐号注册" anchor="yxzcdl" url="yxzcdl.html">
+		<Item name="帐号注册" anchor="yxzcdl" url="yxzcdl.html"/>
+		<Item name="游戏登陆" anchor="yxzcdl" url="yxzcdl.html"/>
+	</Item>
+	<Item name="常用信息" anchor="cyxx" url="24.html">
+		<Item name="游戏配置" anchor="yxpz" url="yxpz.html"/>
+		<Item name="官方信息" anchor="gfxx" url="gfxx.html"/>
+        <Item name="游戏安全" anchor="yxaq" url="yxaq.html"/>
+		<Item name="疑难问题FAQ" anchor="ynwt" url="ynwt.html"/>
+	    <Item name="收费充值" anchor="73" url="73.html"/>
+		<Item name="银行保险箱" anchor="wjsd" url="wjsd.html"/>
+	</Item>
+
+	<Item name="游戏介绍" anchor="yxjs" url="yxbj.html"> 
+	    <Item name="游戏背景" anchor="yxbj" url="yxbj.html"/>
+		<Item name="游戏地图" anchor="yxdt" url="yxdt.html"/>
+        <Item name="游戏门派" anchor="yxmp" url="yxmp.html"/>
+	</Item>
+	
+	<Item name="新手指引" anchor="xszy" url="xszy.html">
+		<Item name="创造新角色" anchor="czxjs" url="xszy.html"/>
+		<Item name="新手城市" anchor="xscs" url="xszy.html"/>
+        <Item name="人物行走" anchor="rwxz" url="xszy.html"/>
+		<Item name="聊天" anchor="liaotian" url="xszy.html"/>
+        <Item name="查找小地图" anchor="xszy" url="xszy.html"/>
+		<Item name="查看场景地图" anchor="ckcjdt" url="xszy.html"/>
+        <Item name="查看世界地图" anchor="cksjdt" url="xszy.html"/>
+		<Item name="其他玩家信息" anchor="qtwjxx" url="xszy.html"/>
+        <Item name="打怪" anchor="xszy" url="xszy.html"/>
+		<Item name="城市地图红字" anchor="csdths" url="xszy.html"/>
+        <Item name="补气血" anchor="bqx" url="bqx.html"/>
+		<Item name="人物死亡后的损失" anchor="xszy" url="xszy.html"/>
+        <Item name="战斗地图的各色圆点" anchor="xszy" url="xszy.html"/>
+		<Item name="游戏如何截图" anchor="rhjt" url="xszy.html"/>
+        <Item name="装备道具" anchor="xszy" url="xszy.html"/>
+		<Item name="加好友" anchor="jhy" url="xszy.html"/>
+        <Item name="跟随" anchor="gs" url="xszy.html"/>
+		<Item name="组队" anchor="zd" url="xszy.html"/>
+        <Item name="买卖东西" anchor="mmdx" url="xszy.html"/>
+		<Item name="使用生活技能" anchor="xszy" url="xszy.html"/>
+        <Item name="加门派" anchor="jmp" url="xszy.html"/>
+	</Item>
+        
+    <Item name="操作介绍" anchor="czjs" url="jbcz.html">
+		<Item name="游戏界面" anchor="yxjm" url="yxjm.html"/>
+		<Item name="基本操作" anchor="jbcz" url="jbcz.html"/>
+        <Item name="快捷键" anchor="kjj" url="kjj.html"/>
+		<Item name="快捷栏" anchor="kjl" url="kjl.html"/>
+       	<Item name="小地图" anchor="48" url="48.html"/>
+		<Item name="自动寻路" anchor="66" url="66.html"/>
+    </Item>
+
+    <Item name="人物属性" anchor="rwsx" url="jbsx.html">
+		<Item name="基本属性" anchor="jbsx" url="jbsx.html"/>
+		<Item name="社会属性" anchor="shsx" url="shsx.html"/>
+        <Item name="技能属性" anchor="jnsx" url="jnsx.html"/>
+	</Item>
+        
+    <Item name="道具介绍" anchor="djjs" url="wqzb.html">
+		<Item name="武器装备" anchor="wqzb" url="wqzb.html"/>
+		<Item name="消耗物品" anchor="xhdj" url="xhdj.html"/>
+        <Item name="技能道具" anchor="jndj" url="jndj.html"/>
+		<Item name="任务道具" anchor="rwdj" url="rwdj.html"/>
+	</Item>
+	
+	<Item name="暗器介绍" anchor="aqjs" url="aqjs.html">
+		<Item name="暗器升级" anchor="aqsj" url="aqsj.html"/>
+        <Item name="暗器品阶" anchor="aqpj" url="aqpj.html"/>
+        <Item name="暗器重洗" anchor="aqcx" url="aqcx.html"/>
+	</Item>
+        
+    <Item name="武功技能" anchor="wgzs" url="wgzs.html">
+        <Item name="武功技能综述" anchor="wgzs" url="wgzs.html"/>
+		<Item name="少林武功" anchor="wgsl" url="wgsl.html"/>
+		<Item name="丐帮武功" anchor="wggb" url="wggb.html"/>
+        <Item name="峨嵋武功" anchor="wgem" url="wgem.html"/>
+		<Item name="武当武功" anchor="wgwd" url="wgwd.html"/>
+        <Item name="星宿武功" anchor="wgxu" url="wgxu.html"/>
+		<Item name="天龙武功" anchor="wgtl" url="wgtl.html"/>
+        <Item name="天山武功" anchor="wgts" url="wgts.html"/>
+		<Item name="逍遥武功" anchor="wgxy" url="wgxy.html"/>
+        <Item name="明教武功" anchor="wgmj" url="wgmj.html"/>
+    </Item>
+        
+    <Item name="生活技能" anchor="shxt" url="shzs.html">
+        <Item name="生活技能综述" anchor="shzs" url="shzs.html"/>
+		<Item name="基本生活技能" anchor="jbsh" url="jbsh.html"/>
+		<Item name="门派生活技能" anchor="mpsh" url="mpsh.html"/>
+        <Item name="原材料分布" anchor="yclfb" url="yclfb.html"/>
+	</Item>
+        
+    <Item name="经济系统" anchor="jjxt" url="jy.html">
+		<Item name="交易" anchor="jy" url="jy.html"/>
+		<Item name="摆摊" anchor="bt" url="bt.html"/>
+        <Item name="漕运" anchor="cy" url="cy.html"/>
+		<Item name="玩家自建商店" anchor="zjsd" url="zjsd.html"/>
+	    <Item name="帮派经济" anchor="bpjj" url="bpjj.html"/>
+	    <Item name="交子" anchor="jz" url="jz.html"/>
+    </Item>
+
+    <Item name="战斗系统" anchor="wgzs" url="wgzs.html">
+	    <Item name="打怪" anchor="zddg" url="zddg.html"/>
+		<Item name="PK" anchor="pk" url="pk.html"/>
+        <Item name="挑战" anchor="tz" url="tz.html"/>
+    </Item>
+        
+    <Item name="任务系统" anchor="rwzs" url="rwzs.html">
+        <Item name="任务系统综述" anchor="rwzs" url="rwzs.html"/>
+		<Item name="新手任务" anchor="xs" url="xs.html"/>
+        <Item name="剧情任务" anchor="rwjq" url="rwjq.html"/>
+		<Item name="场景任务" anchor="rwcj" url="rwcj.html"/>
+	    <Item name="师门任务" anchor="rwsm" url="rwsm.html"/>
+		<Item name="漕运任务" anchor="cy" url="cy.html"/>
+        <Item name="任务日志" anchor="rwrz" url="rwrz.html"/>
+    </Item>
+         
+    <Item name="帮会系统" anchor="bhzs" url="bhzs.html">
+        <Item name="帮会系统综述" anchor="bhzs" url="bhzs.html"/>
+        <Item name="帮会管理" anchor="bhzw" url="bhzw.html"/>
+		<Item name="帮会技能" anchor="bhjn" url="bhjn.html"/>
+        <Item name="帮会经济" anchor="bhjj" url="bhjj.html"/>
+        <Item name="帮会任务" anchor="bhrw" url="bhrw.html"/>
+        <Item name="帮战" anchor="bpcs" url="sfcz.html"/>
+		<Item name="帮会宣战" anchor="67" url="67.html"/>
+
+    </Item>
+         
+    <Item name="人际关系" anchor="rjgx" url="hy.html">
+		<Item name="好友" anchor="hy" url="hy.html"/>
+        <Item name="队友" anchor="dy" url="dy.html"/>
+		<Item name="同帮派" anchor="tbp" url="tbp.html"/>
+	    <Item name="同门派" anchor="tmp" url="tmp.html"/>
+		<Item name="结拜" anchor="jb" url="jb.html"/>
+        <Item name="师徒" anchor="st" url="st.html"/>
+        <Item name="夫妻" anchor="fq" url="fq.html"/>
+	    <Item name="黑名单" anchor="hmd" url="hmd.html"/>
+		<Item name="友好度" anchor="yhd" url="yhd.html"/>
+		<Item name="征友交互平台" anchor="zypt" url="zypt.html"/>
+    </Item>
+         
+    <Item name="聊天系统" anchor="ltxt" url="ltzs.html">
+        <Item name="聊天系统综述" anchor="ltzs" url="ltzs.html"/>
+		<Item name="表情符号" anchor="bqfh" url="bqfh.html"/>
+        <Item name="定义聊天语言" anchor="dyltyy" url="dyltyy.html"/>
+		<Item name="聊天文字特效" anchor="ltwztx" url="ltwztx.html"/>
+    </Item>
+         
+    <Item name="珍兽系统" anchor="cwxt" url="cwzs.html">
+        <Item name="珍兽系统综述" anchor="cwzs" url="cwzs.html"/>
+		<Item name="珍兽养成" anchor="cwyc" url="cwyc.html"/>
+        <Item name="珍兽战斗" anchor="cwzd" url="cwzd.html"/>
+    </Item>
+         
+    <Item name="坐骑系统" anchor="zqxt" url="zqzs.html">
+        <Item name="坐骑系统综述" anchor="zqzs" url="zqzs.html"/>
+        <Item name="坐骑种类" anchor="zqzl" url="zqzl.html"/>
+    </Item>
+         
+    <Item name="游戏特色" anchor="yxts" url="gbfx.html">
+		<Item name="改变发型发色和头像" anchor="gbfx" url="gbfx.html"/>
+        <Item name="变身" anchor="bs" url="bs.html"/>
+		<Item name="排行榜" anchor="phb" url="phb.html"/>
+		<Item name="幸运轮盘" anchor="xylp" url="xylp.html"/>
+    </Item>
+         
+    <Item name="NPC坐标" anchor="npc" url="csnpc.html">
+		<Item name="城市NPC坐标" anchor="csnpc" url="csnpc.html"/>
+        <Item name="门派NPC坐标" anchor="mpnpc" url="mpnpc.html"/>
+    </Item>
+
+ <Item name="UI界面帮助" anchor="24" url="24.html">
+		<Item name="战斗技能界面" anchor="wgzs" url="wgzs.html"/>
+        <Item name="师门技能学习" anchor="44" url="44.html"/>
+        <Item name="称号选择界面" anchor="27" url="27.html"/>
+        <Item name="修改密码界面" anchor="53" url="53.html"/>
+		<Item name="聊天界面" anchor="33" url="33.html"/>
+		<Item name="玩家信息" anchor="27" url="27.html"/>	
+        <Item name="通用技能界面" anchor="42" url="42.html"/>	
+        <Item name="交易物品界面" anchor="30" url="30.html"/>		
+        <Item name="好友信息查询" anchor="25" url="25.html"/>
+        <Item name="游戏配置" anchor="54" url="54.html"/>
+	    <Item name="好友消息接受" anchor="25" url="25.html"/>	
+	    <Item name="好友消息发送" anchor="25" url="25.html"/>	
+	    <Item name="存钱、取钱" anchor="52" url="52.html"/>	
+	    <Item name="心情寄语" anchor="27" url="27.html"/>	
+	    <Item name="登陆界面帮助" anchor="24" url="24.html"/>	
+	    <Item name="快捷栏" anchor="31" url="31.html"/>	
+	    <Item name="珍兽放生界面" anchor="19" url="19.html"/>	
+	    <Item name="交任务界面" anchor="37" url="37.html"/>	
+	    <Item name="系统界面" anchor="51" url="51.html"/>	
+	    <Item name="其他信息" anchor="35" url="35.html"/>	
+	    <Item name="珍兽属性界面" anchor="17" url="17.html"/>	
+	    <Item name="珍兽列表" anchor="16" url="16.html"/>	
+	    <Item name="死亡后询问" anchor="45" url="45.html"/>	
+	    <Item name="骑乘" anchor="60" url="60.html"/>	
+	    <Item name="玩家资料" anchor="27" url="27.html"/>	
+	    <Item name="玩家属性" anchor="46" url="46.html"/>	
+	    <Item name="密码设置" anchor="53" url="53.html"/>	
+	    <Item name="物品拆分界面" anchor="11" url="11.html"/>	
+	    <Item name="解除密码界面" anchor="53" url="53.html"/>	
+	    <Item name="小地图" anchor="48" url="48.html"/>	
+	    <Item name="对话" anchor="24" url="24.html"/>	
+	    <Item name="生活技能界面" anchor="39" url="39.html"/>	
+	    <Item name="拾取包" anchor="40" url="40.html"/>	
+	    <Item name="珍兽头像、属性" anchor="17" url="17.html"/>	
+	    <Item name="主角色头像、属性" anchor="29" url="29.html"/>	
+	    <Item name="选中角色头像、属性" anchor="27" url="27.html"/>	
+	    <Item name="城市商店" anchor="14" url="14.html"/>	
+	    <Item name="银行界面" anchor="52" url="52.html"/>	
+	    <Item name="漕运交易界面" anchor="21" url="21.html"/>	
+	    <Item name="城市发展方向" anchor="4" url="4.html"/>	
+	    <Item name="帮会领地申请列表" anchor="6" url="6.html"/>	
+	    <Item name="领地命名" anchor="4" url="4.html"/>	
+	    <Item name="帮会详细信息" anchor="4" url="4.html"/>	
+	    <Item name="帮会列表" anchor="4" url="4.html"/>	
+	    <Item name="帮会管理" anchor="5" url="5.html"/>	
+	    <Item name="职位列表" anchor="5" url="5.html"/>	
+	    <Item name="帮会生活技能" anchor="3" url="3.html"/>	
+	    <Item name="帮会建立商业路线" anchor="2" url="2.html"/>	
+	    <Item name="帮会创建" anchor="4" url="4.html"/>	
+	    <Item name="好友界面" anchor="25" url="25.html"/>	
+	    <Item name="帮会内政" anchor="4" url="4.html"/>	
+	    <Item name="生活技能学习" anchor="39" url="39.html"/>	
+	    <Item name="合成界面" anchor="9" url="9.html"/>	
+	    <Item name="队友头像" anchor="57" url="57.html"/>	
+	    <Item name="珍兽征友公告栏的界面" anchor="19" url="19.html"/>	
+	    <Item name="珍兽提交繁殖界面" anchor="15" url="15.html"/>	
+	    <Item name="珍兽悟性提升" anchor="18" url="18.html"/>	
+	    <Item name="珍兽普通技能学习界面" anchor="20" url="20.html"/>	
+	    <Item name="BUFF格子" anchor="29" url="29.html"/>	
+	    <Item name="玩家商店申请界面" anchor="59" url="59.html"/>	
+	    <Item name="玩家商店信息" anchor="59" url="59.html"/>	
+		<Item name="玩家商店物品购物界面" anchor="59" url="59.html"/>	
+	    <Item name="商店管理界面" anchor="59" url="59.html"/>	
+	    <Item name="智力问答" anchor="49" url="49.html"/>	
+	    <Item name="城市研究" anchor="2" url="2.html"/>	
+	    <Item name="仇杀申请" anchor="34" url="34.html"/>	
+	    <Item name="聊天屏蔽界面" anchor="33" url="33.html"/>	
+	    <Item name="帮会设定商业路线" anchor="2" url="2.html"/>	
+	    <Item name="批量购买" anchor="14" url="14.html"/>	
+	    <Item name="宝石摘除" anchor="8" url="8.html"/>	
+	    <Item name="购买摆摊界面" anchor="10" url="10.html"/>	
+	    <Item name="摆位留言板卖方" anchor="10" url="10.html"/>	
+	    <Item name="摆摊界面" anchor="10" url="10.html"/>	
+	    <Item name="装备打孔" anchor="55" url="55.html"/>	
+	    <Item name="选中目标资料" anchor="12" url="12.html"/>	
+	    <Item name="查看装备界面" anchor="47" url="47.html"/>	
+	    <Item name="队伍界面（队长）" anchor="22" url="22.html"/>	
+	    <Item name="队伍信息对话框" anchor="57" url="57.html"/>	
+	    <Item name="江湖指南" anchor="28" url="28.html"/>	
+	    <Item name="登陆服务器选择列表" anchor="24" url="24.html"/>	
+	    <Item name="任务记录界面" anchor="37" url="37.html"/>	
+	    <Item name="物品悬停界" anchor="24" url="24.html"/>	
+	    <Item name="休闲动作" anchor="33" url="33.html"/>	
+	    <Item name="输入结拜名称" anchor="26" url="26.html"/>	
+	    <Item name="挑战询问界面" anchor="43" url="43.html"/>	
+	    <Item name="频道自定义" anchor="33" url="33.html"/>	
+	    <Item name="好友搜索" anchor="25" url="25.html"/>	
+	    <Item name="物品加锁界面" anchor="53" url="53.html"/>	
+	    <Item name="任务物品销毁界面" anchor="36" url="36.html"/>	
+	    <Item name="珍兽合成界面" anchor="24" url="24.html"/>	
+	    <Item name="输入决斗人物名称界面" anchor="34" url="34.html"/>	
+	    <Item name="充入本金" anchor="13" url="13.html"/>	
+	    <Item name="玩家商店搜索" anchor="38" url="38.html"/>	
+		<Item name="玩家商店列表界面" anchor="59" url="59.html"/>	
+	    <Item name="玩家店铺盘出" anchor="59" url="59.html"/>	
+	    <Item name="发色选择界面" anchor="23" url="23.html"/>	
+	    <Item name="发型选择界面" anchor="23" url="23.html"/>	
+	    <Item name="装备修理" anchor="56" url="56.html"/>	
+	    <Item name="NPC商店界面" anchor="14" url="14.html"/>	
+	    <Item name="物品传输道具界面" anchor="24" url="24.html"/>	
+	    <Item name="物品合成界面" anchor="24" url="24.html"/>	
+	    <Item name="包裹界面" anchor="1" url="1.html"/>	
+	    <Item name="其他" anchor="24" url="24.html"/>	
+	    <Item name="表情解密那" anchor="7" url="7.html"/>	
+	    <Item name="颜色界面" anchor="32" url="32.html"/>	
+	    <Item name="查看宠物界面" anchor="17" url="17.html"/>	
+	    <Item name="背景图片" anchor="24" url="24.html"/>	
+	    <Item name="视频配置" anchor="50" url="50.html"/>	
+	    <Item name="声音配置" anchor="41" url="41.html"/>	
+        <Item name="数字提示解析" anchor="61" url="61.html"/>	
+		<Item name="财富卡说明" anchor="62" url="62.html"/>	
+		<Item name="师徒评价功能" anchor="63" url="63.html"/>	
+		<Item name="全部加锁功能" anchor="64" url="64.html"/>	
+		<Item name="寄售" anchor="65" url="65.html"/>	
+		<Item name="玩家商店收购及其出售材料的介绍" anchor="68" url="68.html"/>	
+		<Item name="宝石雕琢功能介绍" anchor="69" url="69.html"/>	
+		<Item name="装备强化介绍" anchor="70" url="70.html"/>	
+		<Item name="蹴鞠大赛介绍" anchor="71" url="71.html"/>	
+		<Item name="关系值介绍" anchor="72" url="72.html"/>
+                <Item name="附近玩家列表" anchor="74" url="74.html"/>	
+</Item>
+	
+</HelperItemSet>

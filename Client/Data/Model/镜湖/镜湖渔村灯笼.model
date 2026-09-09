@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="镜湖渔村灯笼.frame" />
+    <entity mesh="镜湖渔村灯笼杆.mesh" node="镜湖渔村灯笼杆" />
+    <entity mesh="镜湖渔村灯笼灯.mesh" node="镜湖渔村灯笼灯">
+        <offset>
+            <translate x="-3.63509" y="-280.108" z="-196.774" />
+        </offset>
+    </entity>
+</model>

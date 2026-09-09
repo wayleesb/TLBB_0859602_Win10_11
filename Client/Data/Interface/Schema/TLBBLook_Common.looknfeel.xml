@@ -1,0 +1,1296 @@
+<?xml version="1.0" ?>
+<Falagard>
+  <WidgetLook name="TLBB_Look_NULL"></WidgetLook>
+	<WidgetLook name="TLBB_Look_Common">
+		<ImagerySection name="Main_Frame_Type0">
+			<FrameComponent>
+				<Area>
+					<Dim type="LeftEdge">
+						<AbsoluteDim value="0" />
+					</Dim>
+					<Dim type="TopEdge">
+						<AbsoluteDim value="0" />
+					</Dim>
+					<Dim type="Width">
+						<UnifiedDim scale="1" type="Width" />
+					</Dim>
+					<Dim type="Height">
+						<UnifiedDim scale="1" type="Height" />
+					</Dim>
+				</Area>
+				<Image type="TopLeftCorner" imageset="CommonFrame" image="CommonMainFrame1_LT" />
+				<Image type="TopRightCorner" imageset="CommonFrame" image="CommonMainFrame1_RT" />
+				<Image type="BottomLeftCorner" imageset="CommonFrame" image="CommonMainFrame1_LB" />
+				<Image type="BottomRightCorner" imageset="CommonFrame" image="CommonMainFrame1_RB" />
+				<Image type="LeftEdge" imageset="CommonFrame" image="CommonMainFrame1_L" />
+				<Image type="RightEdge" imageset="CommonFrame" image="CommonMainFrame1_R" />
+				<Image type="TopEdge" imageset="CommonFrame" image="CommonMainFrame1_T" />
+				<Image type="BottomEdge" imageset="CommonFrame" image="CommonMainFrame1_B" />
+			</FrameComponent>
+		</ImagerySection>
+    <ImagerySection name="Main_Frame_Type1">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="TopLeftCorner" imageset="CommonStaticImage3" image="CommonMainFrame0_LT" />
+        <Image type="TopRightCorner" imageset="CommonStaticImage3" image="CommonMainFrame0_RT" />
+        <Image type="BottomLeftCorner" imageset="CommonStaticImage3" image="CommonMainFrame0_LB" />
+        <Image type="BottomRightCorner" imageset="CommonStaticImage3" image="CommonMainFrame0_RB" />
+        <Image type="LeftEdge" imageset="CommonStaticImage3" image="CommonMainFrame0_L" />
+        <Image type="RightEdge" imageset="CommonStaticImage3" image="CommonMainFrame0_R" />
+        <Image type="TopEdge" imageset="CommonStaticImage3" image="CommonMainFrame0_T" />
+        <Image type="BottomEdge" imageset="CommonStaticImage3" image="CommonMainFrame0_B" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="Main_Frame_Type2">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="TopLeftCorner" imageset="CommonFrame" image="CommonMainFrame2_LT" />
+        <Image type="TopRightCorner" imageset="CommonFrame" image="CommonMainFrame2_RT" />
+        <Image type="BottomLeftCorner" imageset="CommonFrame" image="CommonMainFrame2_LB" />
+        <Image type="BottomRightCorner" imageset="CommonFrame" image="CommonMainFrame2_RB" />
+        <Image type="LeftEdge" imageset="CommonFrame" image="CommonMainFrame2_L" />
+        <Image type="RightEdge" imageset="CommonFrame" image="CommonMainFrame2_R" />
+        <Image type="TopEdge" imageset="CommonFrame" image="CommonMainFrame2_T" />
+        <Image type="BottomEdge" imageset="CommonFrame" image="CommonMainFrame2_B" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="Main_Frame_Type3">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="TopLeftCorner" imageset="CommonFrame" image="CommonMainFrame3_LT" />
+        <Image type="TopRightCorner" imageset="CommonFrame" image="CommonMainFrame3_RT" />
+        <Image type="BottomLeftCorner" imageset="CommonFrame" image="CommonMainFrame3_LB" />
+        <Image type="BottomRightCorner" imageset="CommonFrame" image="CommonMainFrame3_RB" />
+        <Image type="LeftEdge" imageset="CommonFrame" image="CommonMainFrame3_L" />
+        <Image type="RightEdge" imageset="CommonFrame" image="CommonMainFrame3_R" />
+        <Image type="TopEdge" imageset="CommonFrame" image="CommonMainFrame3_T" />
+        <Image type="BottomEdge" imageset="CommonFrame" image="CommonMainFrame3_B" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="Main_Frame_Type4">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="TopLeftCorner" imageset="Buttons" image="Frame1_LT" />
+        <Image type="TopRightCorner" imageset="Buttons" image="Frame1_RT" />
+        <Image type="BottomLeftCorner" imageset="Buttons" image="Frame1_LB" />
+        <Image type="BottomRightCorner" imageset="Buttons" image="Frame1_RB" />
+        <Image type="LeftEdge" imageset="Buttons" image="Frame1_L" />
+        <Image type="RightEdge" imageset="Buttons" image="Frame1_R" />
+        <Image type="TopEdge" imageset="Buttons" image="Frame1_T" />
+        <Image type="BottomEdge" imageset="Buttons" image="Frame1_B" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="Main_Frame_Back_Type1">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="4" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="34" />
+          </Dim>
+          <Dim type="RightEdge">
+            <UnifiedDim scale="1" offset="-4" type="RightEdge">
+            </UnifiedDim>
+          </Dim>
+          <Dim type="BottomEdge">
+            <UnifiedDim scale="1" offset="-4" type="BottomEdge">
+            </UnifiedDim>
+          </Dim>
+        </Area>
+        <Image type="TopLeftCorner" imageset="CommonFrame" image="Background_LT" />
+        <Image type="TopRightCorner" imageset="CommonFrame" image="Background_RT" />
+        <Image type="BottomLeftCorner" imageset="CommonFrame" image="Background_LB" />
+        <Image type="BottomRightCorner" imageset="CommonFrame" image="Background_RB" />
+        <Image type="LeftEdge" imageset="CommonFrame" image="Background_L" />
+        <Image type="RightEdge" imageset="CommonFrame" image="Background_R" />
+        <Image type="TopEdge" imageset="CommonFrame" image="Background_T" />
+        <Image type="BottomEdge" imageset="CommonFrame" image="Background_B" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="Background_Type1">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="6" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="36" />
+          </Dim>
+          <Dim type="RightEdge">
+            <UnifiedDim scale="1" type="RightEdge">
+              <DimOperator op="Subtract">
+                <AbsoluteDim value="5" />
+              </DimOperator>
+            </UnifiedDim>
+          </Dim>
+          <Dim type="BottomEdge">
+            <UnifiedDim scale="1" type="BottomEdge">
+              <DimOperator op="Subtract">
+                <AbsoluteDim value="18" />
+              </DimOperator>
+            </UnifiedDim>
+          </Dim>
+        </Area>
+        <Image imageset="Background" image="View" />
+        <VertFormat type="Tiled" />
+        <HorzFormat type="Tiled" />
+      </ImageryComponent>
+    </ImagerySection>
+    <ImagerySection name="Background_Type2">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="7" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="24" />
+          </Dim>
+          <Dim type="RightEdge">
+            <UnifiedDim scale="1" type="RightEdge">
+              <DimOperator op="Subtract">
+                <AbsoluteDim value="7" />
+              </DimOperator>
+            </UnifiedDim>
+          </Dim>
+          <Dim type="BottomEdge">
+            <UnifiedDim scale="1" type="BottomEdge">
+              <DimOperator op="Subtract">
+                <AbsoluteDim value="3" />
+              </DimOperator>
+            </UnifiedDim>
+          </Dim>
+        </Area>
+        <Image imageset="Background" image="View" />
+        <VertFormat type="Tiled" />
+        <HorzFormat type="Tiled" />
+      </ImageryComponent>
+    </ImagerySection>
+    <ImagerySection name="Background_Type3">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="8" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="33" />
+          </Dim>
+          <Dim type="RightEdge">
+            <UnifiedDim scale="1" type="RightEdge">
+              <DimOperator op="Subtract">
+                <AbsoluteDim value="3" />
+              </DimOperator>
+            </UnifiedDim>
+          </Dim>
+          <Dim type="BottomEdge">
+            <UnifiedDim scale="1" type="BottomEdge">
+              <DimOperator op="Subtract">
+                <AbsoluteDim value="26" />
+              </DimOperator>
+            </UnifiedDim>
+          </Dim>
+        </Area>
+        <Image imageset="Background" image="View" />
+        <VertFormat type="Tiled" />
+        <HorzFormat type="Tiled" />
+      </ImageryComponent>
+    </ImagerySection>
+
+    <ImagerySection name="Background_Type4">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="8" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="8" />
+          </Dim>
+          <Dim type="RightEdge">
+            <UnifiedDim scale="1" offset="-8" type="RightEdge">
+            </UnifiedDim>
+          </Dim>
+          <Dim type="BottomEdge">
+            <UnifiedDim scale="1" offset="-10" type="BottomEdge">
+            </UnifiedDim>
+          </Dim>
+        </Area>
+        <Image imageset="CommonFrame" image="PaoPao_BK" />
+        <VertFormat type="Tiled" />
+        <HorzFormat type="Tiled" />
+      </ImageryComponent>
+    </ImagerySection>
+    <ImagerySection name="Frame_Type1">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="TopLeftCorner" imageset="CommonFrame" image="CommonFrame1_LT" />
+        <Image type="TopRightCorner" imageset="CommonFrame" image="CommonFrame1_RT" />
+        <Image type="BottomLeftCorner" imageset="CommonFrame" image="CommonFrame1_LB" />
+        <Image type="BottomRightCorner" imageset="CommonFrame" image="CommonFrame1_RB" />
+        <Image type="LeftEdge" imageset="CommonFrame" image="CommonFrame1_L" />
+        <Image type="RightEdge" imageset="CommonFrame" image="CommonFrame1_R" />
+        <Image type="TopEdge" imageset="CommonFrame" image="CommonFrame1_T" />
+        <Image type="BottomEdge" imageset="CommonFrame" image="CommonFrame1_B" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="Background_Frame_Type1">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="5" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="10" />
+          </Dim>
+          <Dim type="RightEdge">
+            <UnifiedDim scale="1" offset="-5" type="RightEdge">
+            </UnifiedDim>
+          </Dim>
+          <Dim type="BottomEdge">
+            <UnifiedDim scale="1" offset="-10" type="BottomEdge">
+            </UnifiedDim>
+          </Dim>
+        </Area>
+        <Image imageset="CommonFrame" image="CommonMainFrame1_BK" />
+        <VertFormat type="Tiled" />
+        <HorzFormat type="Tiled" />
+      </ImageryComponent>
+    </ImagerySection>
+
+    <ImagerySection name="Frame_Type2">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="TopLeftCorner" imageset="CommonFrame" image="CommonFrame2_LT" />
+        <Image type="TopRightCorner" imageset="CommonFrame" image="CommonFrame2_RT" />
+        <Image type="BottomLeftCorner" imageset="CommonFrame" image="CommonFrame2_LB" />
+        <Image type="BottomRightCorner" imageset="CommonFrame" image="CommonFrame2_RB" />
+        <Image type="LeftEdge" imageset="CommonFrame" image="CommonFrame2_L" />
+        <Image type="RightEdge" imageset="CommonFrame" image="CommonFrame2_R" />
+        <Image type="TopEdge" imageset="CommonFrame" image="CommonFrame2_T" />
+        <Image type="BottomEdge" imageset="CommonFrame" image="CommonFrame2_B" />
+      </FrameComponent>
+    </ImagerySection>
+    
+    <ImagerySection name="Frame_Type3">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="TopLeftCorner" imageset="stall07" image="GemFrame2_LT" />
+        <Image type="TopRightCorner" imageset="stall07" image="GemFrame2_RT" />
+        <Image type="BottomLeftCorner" imageset="stall07" image="GemFrame2_LB" />
+        <Image type="BottomRightCorner" imageset="stall07" image="GemFrame2_RB" />
+        <Image type="LeftEdge" imageset="stall07" image="GemFrame2_L" />
+        <Image type="RightEdge" imageset="stall07" image="GemFrame2_R" />
+        <Image type="TopEdge" imageset="stall07" image="GemFrame2_T" />
+        <Image type="BottomEdge" imageset="stall07" image="GemFrame2_B" />
+      </FrameComponent>
+    </ImagerySection>
+    
+    <ImagerySection name="Background_Frame_Type2">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="3" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="3" />
+          </Dim>
+          <Dim type="RightEdge">
+            <UnifiedDim scale="1" type="RightEdge">
+              <DimOperator op="Subtract">
+                <AbsoluteDim value="3" />
+              </DimOperator>
+            </UnifiedDim>
+          </Dim>
+          <Dim type="BottomEdge">
+            <UnifiedDim scale="1" type="BottomEdge">
+              <DimOperator op="Subtract">
+                <AbsoluteDim value="3" />
+              </DimOperator>
+            </UnifiedDim>
+          </Dim>
+        </Area>
+        <Image imageset="CommonFrame" image="CommonMainFrame1_BK" />
+        <VertFormat type="Tiled" />
+        <HorzFormat type="Tiled" />
+      </ImageryComponent>
+    </ImagerySection>
+
+    <ImagerySection name="Frame_Type_MainMenuBarLeft">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="CommonStaticImage" image="MainMenuBar_LeftL" />
+        <Image type="RightEdge" imageset="CommonStaticImage" image="MainMenuBar_LeftR" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="Background_Frame_MainMenuBarLeft">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="14" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="RightEdge">
+            <UnifiedDim scale="1" type="RightEdge">
+              <DimOperator op="Subtract">
+                <AbsoluteDim value="12" />
+              </DimOperator>
+            </UnifiedDim>
+          </Dim>
+          <Dim type="BottomEdge">
+            <UnifiedDim scale="1" type="BottomEdge">
+              <DimOperator op="Subtract">
+                <AbsoluteDim value="0" />
+              </DimOperator>
+            </UnifiedDim>
+          </Dim>
+        </Area>
+        <Image imageset="CommonStaticImage" image="MainMenuBar_LeftM" />
+        <VertFormat type="Tiled" />
+        <HorzFormat type="Tiled" />
+      </ImageryComponent>
+    </ImagerySection>
+    <ImagerySection name="Frame_Type_MainMenuBarRight">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="CommonStaticImage" image="MainMenuBar_RightL" />
+        <Image type="RightEdge" imageset="CommonStaticImage" image="MainMenuBar_RightR" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="Background_Frame_MainMenuBarRight">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="12" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="RightEdge">
+            <UnifiedDim scale="1" type="RightEdge">
+              <DimOperator op="Subtract">
+                <AbsoluteDim value="13" />
+              </DimOperator>
+            </UnifiedDim>
+          </Dim>
+          <Dim type="BottomEdge">
+            <UnifiedDim scale="1" type="BottomEdge">
+              <DimOperator op="Subtract">
+                <AbsoluteDim value="0" />
+              </DimOperator>
+            </UnifiedDim>
+          </Dim>
+        </Area>
+        <Image imageset="CommonStaticImage" image="MainMenuBar_RightM" />
+        <VertFormat type="Tiled" />
+        <HorzFormat type="Tiled" />
+      </ImageryComponent>
+    </ImagerySection>
+
+    <ImagerySection name="Frame_Type_MainMenuBarCenter">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="CommonStaticImage" image="MainMenuBar_CenterL" />
+        <Image type="RightEdge" imageset="CommonStaticImage" image="MainMenuBar_CenterR" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="Background_Frame_MainMenuBarCenter">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="43" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="RightEdge">
+            <UnifiedDim scale="1" type="RightEdge">
+              <DimOperator op="Subtract">
+                <AbsoluteDim value="42" />
+              </DimOperator>
+            </UnifiedDim>
+          </Dim>
+          <Dim type="BottomEdge">
+            <UnifiedDim scale="1" type="BottomEdge">
+              <DimOperator op="Subtract">
+                <AbsoluteDim value="0" />
+              </DimOperator>
+            </UnifiedDim>
+          </Dim>
+        </Area>
+        <Image imageset="CommonStaticImage" image="MainMenuBar_CenterM" />
+        <VertFormat type="Tiled" />
+        <HorzFormat type="Tiled" />
+      </ImageryComponent>
+    </ImagerySection>
+    <ImagerySection name="Frame_PaoPao">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="TopLeftCorner" imageset="CommonFrame" image="PaoPao_LT" />
+        <Image type="TopRightCorner" imageset="CommonFrame" image="PaoPao_RT" />
+        <Image type="BottomLeftCorner" imageset="CommonFrame" image="PaoPao_LB" />
+        <Image type="BottomRightCorner" imageset="CommonFrame" image="PaoPao_RB" />
+        <Image type="LeftEdge" imageset="CommonFrame" image="PaoPao_L" />
+        <Image type="RightEdge" imageset="CommonFrame" image="PaoPao_R" />
+        <Image type="TopEdge" imageset="CommonFrame" image="PaoPao_T" />
+        <Image type="BottomEdge" imageset="CommonFrame" image="PaoPao_B" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="Background_PaoPao">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="3" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="3" />
+          </Dim>
+          <Dim type="RightEdge">
+            <UnifiedDim scale="1" type="RightEdge">
+              <DimOperator op="Subtract">
+                <AbsoluteDim value="3" />
+              </DimOperator>
+            </UnifiedDim>
+          </Dim>
+          <Dim type="BottomEdge">
+            <UnifiedDim scale="1" type="BottomEdge">
+              <DimOperator op="Subtract">
+                <AbsoluteDim value="19" />
+              </DimOperator>
+            </UnifiedDim>
+          </Dim>
+        </Area>
+        <Image imageset="CommonFrame" image="PaoPao_BK" />
+        <VertFormat type="Tiled" />
+        <HorzFormat type="Tiled" />
+      </ImageryComponent>
+    </ImagerySection>
+
+    <ImagerySection name="Frame_Type_Pet">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="TopLeftCorner" imageset="CommonItem" image="PetFrame_LT" />
+        <Image type="TopRightCorner" imageset="CommonItem" image="PetFrame_RT" />
+        <Image type="BottomLeftCorner" imageset="CommonItem" image="PetFrame_LB" />
+        <Image type="BottomRightCorner" imageset="CommonItem" image="PetFrame_RB" />
+        <Image type="LeftEdge" imageset="CommonItem" image="PetFrame_L" />
+        <Image type="RightEdge" imageset="CommonItem" image="PetFrame_R" />
+        <Image type="TopEdge" imageset="CommonItem" image="PetFrame_T" />
+        <Image type="BottomEdge" imageset="CommonItem" image="PetFrame_B" />
+      </FrameComponent>
+    </ImagerySection>
+
+    <ImagerySection name="Background_Pet">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="4" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="12" />
+          </Dim>
+          <Dim type="RightEdge">
+            <UnifiedDim scale="1" type="RightEdge">
+              <DimOperator op="Subtract">
+                <AbsoluteDim value="4" />
+              </DimOperator>
+            </UnifiedDim>
+          </Dim>
+          <Dim type="BottomEdge">
+            <UnifiedDim scale="1" type="BottomEdge">
+              <DimOperator op="Subtract">
+                <AbsoluteDim value="4" />
+              </DimOperator>
+            </UnifiedDim>
+          </Dim>
+        </Area>
+        <Image imageset="Background" image="View" />
+        <VertFormat type="Tiled" />
+        <HorzFormat type="Tiled" />
+      </ImageryComponent>
+    </ImagerySection>
+
+    <ImagerySection name="Frame_Type_Player">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="TopLeftCorner" imageset="CommonItem" image="PlayerFrame_LT" />
+        <Image type="TopRightCorner" imageset="CommonItem" image="PlayerFrame_RT" />
+        <Image type="BottomLeftCorner" imageset="CommonItem" image="PlayerFrame_LB" />
+        <Image type="BottomRightCorner" imageset="CommonItem" image="PlayerFrame_RB" />
+        <Image type="LeftEdge" imageset="CommonItem" image="PlayerFrame_L" />
+        <Image type="RightEdge" imageset="CommonItem" image="PlayerFrame_R" />
+        <Image type="TopEdge" imageset="CommonItem" image="PlayerFrame_T" />
+        <Image type="BottomEdge" imageset="CommonItem" image="PlayerFrame_B" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="Frame_Type_PlayerOther">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="TopLeftCorner" imageset="CommonItem" image="PlayerFrame_LT" />
+        <Image type="TopRightCorner" imageset="CommonItem" image="PlayerFrame_RT" />
+        <Image type="BottomLeftCorner" imageset="CommonItem" image="PlayerFrame_LB2" />
+        <Image type="BottomRightCorner" imageset="CommonItem" image="PlayerFrame_RB2" />
+        <Image type="LeftEdge" imageset="CommonItem" image="PlayerFrame_L" />
+        <Image type="RightEdge" imageset="CommonItem" image="PlayerFrame_R" />
+        <Image type="TopEdge" imageset="CommonItem" image="PlayerFrame_T" />
+        <Image type="BottomEdge" imageset="CommonItem" image="PlayerFrame_B2" />
+      </FrameComponent>
+    </ImagerySection>
+
+    <ImagerySection name="Background_Common">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image imageset="Background" image="View" />
+        <VertFormat type="Tiled" />
+        <HorzFormat type="Tiled" />
+      </ImageryComponent>
+    </ImagerySection>
+    <ImagerySection name="Background_Common1">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image imageset="Background1" image="View" />
+        <VertFormat type="Tiled" />
+        <HorzFormat type="Tiled" />
+      </ImageryComponent>
+    </ImagerySection>
+    <ImagerySection name="Background_Common2">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image imageset="CommonFrame" image="PaoPao_BK" />
+        <VertFormat type="Tiled" />
+        <HorzFormat type="Tiled" />
+      </ImageryComponent>
+    </ImagerySection>
+    <ImagerySection name="Background_Common3">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" offset="-4" type="Height" />
+          </Dim>
+        </Area>
+        <Image imageset="CommonFrame" image="PaoPao_BK" />
+        <VertFormat type="Tiled" />
+        <HorzFormat type="Tiled" />
+      </ImageryComponent>
+    </ImagerySection>
+    <ImagerySection name="Frame_Type_Select">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="TopLeftCorner" imageset="Button6" image="SelectFrame_LT" />
+        <Image type="TopRightCorner" imageset="Button6" image="SelectFrame_RT" />
+        <Image type="BottomLeftCorner" imageset="Button6" image="SelectFrame_LB" />
+        <Image type="BottomRightCorner" imageset="Button6" image="SelectFrame_RB" />
+        <Image type="LeftEdge" imageset="Button6" image="SelectFrame_L" />
+        <Image type="RightEdge" imageset="Button6" image="SelectFrame_R" />
+        <Image type="TopEdge" imageset="Button6" image="SelectFrame_T" />
+        <Image type="BottomEdge" imageset="Button6" image="SelectFrame_B" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="Frame_Type_Select2">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="TopLeftCorner" imageset="Button6" image="SelectFrame2_LT" />
+        <Image type="TopRightCorner" imageset="Button6" image="SelectFrame2_RT" />
+        <Image type="BottomLeftCorner" imageset="Button6" image="SelectFrame2_LB" />
+        <Image type="BottomRightCorner" imageset="Button6" image="SelectFrame2_RB" />
+        <Image type="LeftEdge" imageset="Button6" image="SelectFrame2_L" />
+        <Image type="RightEdge" imageset="Button6" image="SelectFrame2_R" />
+        <Image type="TopEdge" imageset="Button6" image="SelectFrame2_T" />
+        <Image type="BottomEdge" imageset="Button6" image="SelectFrame2_B" />
+      </FrameComponent>
+    </ImagerySection>
+
+    <ImagerySection name="Frame_Type_SupperTooltip">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="TopLeftCorner" imageset="Button6" image="SelectFrame_LT" />
+        <Image type="TopRightCorner" imageset="Button6" image="SelectFrame_RT" />
+        <Image type="BottomLeftCorner" imageset="Button6" image="SelectFrame_LB" />
+        <Image type="BottomRightCorner" imageset="Button6" image="SelectFrame_RB" />
+        <Image type="LeftEdge" imageset="Button6" image="SelectFrame_L" />
+        <Image type="RightEdge" imageset="Button6" image="SelectFrame_R" />
+        <Image type="TopEdge" imageset="Button6" image="SelectFrame_T" />
+        <Image type="BottomEdge" imageset="Button6" image="SelectFrame_B" />
+      </FrameComponent>
+    </ImagerySection>
+
+    <ImagerySection name="Frame_Type_Lace1">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="TopLeftCorner" imageset="Button6" image="Lace_Frame1_LT" />
+        <Image type="TopRightCorner" imageset="Button6" image="Lace_Frame1_RT" />
+        <Image type="BottomLeftCorner" imageset="Button6" image="Lace_Frame1_LB" />
+        <Image type="BottomRightCorner" imageset="Button6" image="Lace_Frame1_RB" />
+        <Image type="LeftEdge" imageset="Button6" image="Lace_Frame1_L" />
+        <Image type="RightEdge" imageset="Button6" image="Lace_Frame1_R" />
+        <Image type="TopEdge" imageset="Button6" image="Lace_Frame1_T" />
+        <Image type="BottomEdge" imageset="Button6" image="Lace_Frame1_B" />
+      </FrameComponent>
+    </ImagerySection>
+
+    <ImagerySection name="Frame_Type_Lace2">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="TopLeftCorner" imageset="Button6" image="Lace_Frame2_LT" />
+        <Image type="TopRightCorner" imageset="Button6" image="Lace_Frame2_RT" />
+        <Image type="BottomLeftCorner" imageset="Button6" image="Lace_Frame2_LB" />
+        <Image type="BottomRightCorner" imageset="Button6" image="Lace_Frame2_RB" />
+        <Image type="LeftEdge" imageset="Button6" image="Lace_Frame2_L" />
+        <Image type="RightEdge" imageset="Button6" image="Lace_Frame2_R" />
+        <Image type="TopEdge" imageset="Button6" image="Lace_Frame2_T" />
+        <Image type="BottomEdge" imageset="Button6" image="Lace_Frame2_B" />
+      </FrameComponent>
+    </ImagerySection>
+
+    <ImagerySection name="Frame_Type_Lace3">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="TopLeftCorner" imageset="Button6" image="Lace_Frame3_LT" />
+        <Image type="TopRightCorner" imageset="Button6" image="Lace_Frame3_RT" />
+        <Image type="BottomLeftCorner" imageset="Button6" image="Lace_Frame3_LB" />
+        <Image type="BottomRightCorner" imageset="Button6" image="Lace_Frame3_RB" />
+        <Image type="LeftEdge" imageset="Button6" image="Lace_Frame3_L" />
+        <Image type="RightEdge" imageset="Button6" image="Lace_Frame3_R" />
+        <Image type="TopEdge" imageset="Button6" image="Lace_Frame3_T" />
+        <Image type="BottomEdge" imageset="Button6" image="Lace_Frame3_B" />
+      </FrameComponent>
+    </ImagerySection>
+
+
+    <ImagerySection name="Frame_Type_Lace4">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="TopLeftCorner" imageset="Button6" image="Lace_Frame4_LT" />
+        <Image type="TopRightCorner" imageset="Button6" image="Lace_Frame4_RT" />
+        <Image type="BottomLeftCorner" imageset="Button6" image="Lace_Frame4_LB" />
+        <Image type="BottomRightCorner" imageset="Button6" image="Lace_Frame4_RB" />
+        <Image type="LeftEdge" imageset="Button6" image="Lace_Frame4_L" />
+        <Image type="RightEdge" imageset="Button6" image="Lace_Frame4_R" />
+        <Image type="TopEdge" imageset="Button6" image="Lace_Frame4_T" />
+        <Image type="BottomEdge" imageset="Button6" image="Lace_Frame4_B" />
+      </FrameComponent>
+    </ImagerySection>
+
+    <ImagerySection name="Frame_Type_Lace5">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button6" image="Lace_Frame5_L" />
+        <Image type="RightEdge" imageset="Button6" image="Lace_Frame5_R" />
+        <Image type="Background" imageset="Button6" image="Lace_Frame5_M" />
+      </FrameComponent>
+    </ImagerySection>
+
+    <ImagerySection name="Frame_Type_Lace6">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="TopLeftCorner" imageset="Buttons" image="Lace_Frame6_LT" />
+        <Image type="TopRightCorner" imageset="Buttons" image="Lace_Frame6_RT" />
+        <Image type="BottomLeftCorner" imageset="Buttons" image="Lace_Frame6_LB" />
+        <Image type="BottomRightCorner" imageset="Buttons" image="Lace_Frame6_RB" />
+        <Image type="LeftEdge" imageset="Buttons" image="Lace_Frame6_L" />
+        <Image type="RightEdge" imageset="Buttons" image="Lace_Frame6_R" />
+        <Image type="TopEdge" imageset="Buttons" image="Lace_Frame6_T" />
+        <Image type="BottomEdge" imageset="Buttons" image="Lace_Frame6_B" />
+      </FrameComponent>
+    </ImagerySection>
+
+    <ImagerySection name="Frame_Type_SelectServer">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="TopLeftCorner" imageset="CommonStaticImage4" image="SelectServer_LT" />
+        <Image type="TopRightCorner" imageset="CommonStaticImage4" image="SelectServer_RT" />
+        <Image type="BottomLeftCorner" imageset="CommonStaticImage4" image="SelectServer_LB" />
+        <Image type="BottomRightCorner" imageset="CommonStaticImage4" image="SelectServer_RB" />
+        <Image type="LeftEdge" imageset="CommonStaticImage4" image="SelectServer_L" />
+        <Image type="RightEdge" imageset="CommonStaticImage4" image="SelectServer_R" />
+        <Image type="TopEdge" imageset="CommonStaticImage4" image="SelectServer_T" />
+        <Image type="BottomEdge" imageset="CommonStaticImage4" image="SelectServer_B" />
+      </FrameComponent>
+    </ImagerySection>
+
+    <ImagerySection name="Frame_Type_SelectServer2">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="TopLeftCorner" imageset="CommonStaticImage4" image="SelectServer2_LT" />
+        <Image type="TopRightCorner" imageset="CommonStaticImage4" image="SelectServer2_RT" />
+        <Image type="BottomLeftCorner" imageset="CommonStaticImage4" image="SelectServer2_LB" />
+        <Image type="BottomRightCorner" imageset="CommonStaticImage4" image="SelectServer2_RB" />
+        <Image type="LeftEdge" imageset="CommonStaticImage4" image="SelectServer2_L" />
+        <Image type="RightEdge" imageset="CommonStaticImage4" image="SelectServer2_R" />
+        <Image type="TopEdge" imageset="CommonStaticImage4" image="SelectServer2_T" />
+        <Image type="BottomEdge" imageset="CommonStaticImage4" image="SelectServer2_B" />
+      </FrameComponent>
+    </ImagerySection>
+
+    <ImagerySection name="Frame_Type_Logon">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="TopLeftCorner" imageset="Button7" image="Logon_LT" />
+        <Image type="TopRightCorner" imageset="Button7" image="Logon_RT" />
+        <Image type="BottomLeftCorner" imageset="Button7" image="Logon_LB" />
+        <Image type="BottomRightCorner" imageset="Button7" image="Logon_RB" />
+        <Image type="LeftEdge" imageset="Button7" image="Logon_L" />
+        <Image type="RightEdge" imageset="Button7" image="Logon_R" />
+        <Image type="TopEdge" imageset="Button7" image="Logon_T" />
+        <Image type="BottomEdge" imageset="Button7" image="Logon_B" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="Background_Logon">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="15" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="25" />
+          </Dim>
+          <Dim type="RightEdge">
+            <UnifiedDim scale="1" offset="-15" type="RightEdge" />
+          </Dim>
+          <Dim type="BottomEdge">
+            <UnifiedDim scale="1" offset="-10" type="BottomEdge" />
+          </Dim>
+        </Area>
+        <Image imageset="CommonFrame" image="PaoPao_BK" />
+        <VertFormat type="Tiled" />
+        <HorzFormat type="Tiled" />
+      </ImageryComponent>
+    </ImagerySection>
+
+    <ImagerySection name="Frame_Type_Campaign">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="TopLeftCorner" imageset="CommonFrame5" image="CommonFrame5_LT" />
+        <Image type="TopRightCorner" imageset="CommonFrame5" image="CommonFrame5_RT" />
+        <Image type="BottomLeftCorner" imageset="CommonFrame5" image="CommonFrame5_LB" />
+        <Image type="BottomRightCorner" imageset="CommonFrame5" image="CommonFrame5_RB" />
+        <Image type="LeftEdge" imageset="CommonFrame5" image="CommonFrame5_L" />
+        <Image type="RightEdge" imageset="CommonFrame5" image="CommonFrame5_R" />
+        <Image type="TopEdge" imageset="CommonFrame5" image="CommonFrame5_T" />
+        <Image type="BottomEdge" imageset="CommonFrame5" image="CommonFrame5_B" />
+      </FrameComponent>
+    </ImagerySection>
+
+	<ImagerySection name="Background_Campaign">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="7" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="16" />
+          </Dim>
+          <Dim type="RightEdge">
+            <UnifiedDim scale="1" offset="-7" type="RightEdge" />
+          </Dim>
+          <Dim type="BottomEdge">
+            <UnifiedDim scale="1" offset="-7" type="BottomEdge" />
+          </Dim>
+        </Area>
+        <Image imageset="CommonFrame" image="PaoPao_BK" />
+        <VertFormat type="Tiled" />
+        <HorzFormat type="Tiled" />
+      </ImageryComponent>
+    </ImagerySection>
+
+  <ImagerySection name="Frame_Type_ScrollInfo">
+	  <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="ScrollInfo_1" image="ScrollInfo_left" />
+        <Image type="RightEdge" imageset="ScrollInfo_1" image="ScrollInfo_right" />
+        <Image type="Background" imageset="ScrollInfo_1" image="ScrollInfo_middle" />
+      </FrameComponent>
+    </ImagerySection>
+    
+  <ImagerySection name="Frame_Type_ScrollInfoFixed">
+	  <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="YuanbaoShop_1" image="YuanbaoShop_left" />
+        <Image type="RightEdge" imageset="YuanbaoShop_1" image="YuanbaoShop_right" />
+        <Image type="Background" imageset="YuanbaoShop_1" image="YuanbaoShop_middle" />
+      </FrameComponent>
+    </ImagerySection>
+    
+    <ImagerySection name="Main_Frame_Type5">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="TopLeftCorner" imageset="CommonFrame7" image="XingYunFrame_UpLeft" />
+        <Image type="TopRightCorner" imageset="CommonFrame7" image="XingYunFrame_UpRight" />
+        <Image type="BottomLeftCorner" imageset="CommonFrame7" image="XingYunFrame_DownLeft" />
+        <Image type="BottomRightCorner" imageset="CommonFrame7" image="XingYunFrame_DownRight" />
+        <Image type="LeftEdge" imageset="CommonFrame7" image="XingYunFrame_MiddleLeft" />
+        <Image type="RightEdge" imageset="CommonFrame7" image="XingYunFrame_MiddleRight" />
+        <Image type="TopEdge" imageset="CommonFrame7" image="XingYunFrame_UpMiddle" />
+        <Image type="BottomEdge" imageset="CommonFrame7" image="XingYunFrame_DownMiddle" />
+      </FrameComponent>
+    </ImagerySection>
+    
+   <ImagerySection name="Background_Type5">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="18" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="32" />
+          </Dim>
+          <Dim type="RightEdge">
+            <UnifiedDim scale="1" type="RightEdge">
+              <DimOperator op="Subtract">
+                <AbsoluteDim value="18" />
+              </DimOperator>
+            </UnifiedDim>
+          </Dim>
+          <Dim type="BottomEdge">
+            <UnifiedDim scale="1" type="BottomEdge">
+              <DimOperator op="Subtract">
+                <AbsoluteDim value="15" />
+              </DimOperator>
+            </UnifiedDim>
+          </Dim>
+        </Area>
+        <Image imageset="Background" image="View" />
+        <VertFormat type="Tiled" />
+        <HorzFormat type="Tiled" />
+      </ImageryComponent>
+    </ImagerySection>
+  </WidgetLook>
+</Falagard>

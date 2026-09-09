@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame2" Name="TextEditor_Frame">
+        <Property Name="UnifiedSize" Value="{{0,162},{0.0,120}}" />
+        <Property Name="UnifiedPosition" Value="{{0.0,32},{1.0,-143.0}}" />
+        <Property Name="AlwaysOnTop" Value="true" />
+        <Window Type="TLBB_DragTitle" Name="TextEditor_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:26.000000 y:2.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-52.000000},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="TextEditor_Frame" />
+            <Property Name="Font" Value="YouYuan11.25" />
+            <Property Name="Text" Value="#{INTERFACE_XML_67}" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+        </Window>
+        <Window Type="TLBB_ButtonHelp" Name="TextEditor_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,5.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="TextEditor_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,5.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function="this:Hide();" />
+        </Window>
+        <Window Type="DefaultWindow" Name="TextEditor_Frame1">
+            <Property Name="UnifiedSize" Value="{{0,160},{0.0,100}}" />
+            <Property Name="UnifiedPosition" Value="{{0.0,1},{0.0,21.0}}" />
+            <Window Type="DefaultWindow" Name="TextEditor_Checkbox_Frame">
+                <Property Name="Position" Value="x:0.025 y:0.03" />
+                <Property Name="Size" Value="w:0.95 h:0.93" />
+                <Window Type="TLBB_StaticImageTextColor" Name="Color_1">
+                    <Property Name="Position" Value="x:0 y:0" />
+                    <Property Name="Size" Value="w:0.125 h:0.2" />
+                    <Property Name="ImageColours" Value="tl:FB000000 tr:FB000000 bl:FB000000 br:FB000000" />
+                    <Property Name="Tooltip" Value="#K" />
+                    <Event Name="MouseLClick" Function="ChatTextColorFrame_SelectColor(1);" />
+                </Window>
+                <Window Type="TLBB_StaticImageTextColor" Name="Color_2">
+                    <Property Name="Position" Value="x:0.125 y:0" />
+                    <Property Name="Size" Value="w:0.125 h:0.2" />
+                    <Property Name="ImageColours" Value="tl:FBFF0000 tr:FBFF0000 bl:FBFF0000 br:FBFF0000" />
+                    <Property Name="Tooltip" Value="#cFF0000" />
+                    <Event Name="MouseLClick" Function="ChatTextColorFrame_SelectColor(2);" />
+                </Window>
+                <Window Type="TLBB_StaticImageTextColor" Name="Color_3">
+                    <Property Name="Position" Value="x:0.25 y:0" />
+                    <Property Name="Size" Value="w:0.125 h:0.2" />
+                    <Property Name="ImageColours" Value="tl:FB00FF00 tr:FB00FF00 bl:FB00FF00 br:FB00FF00" />
+                    <Property Name="Tooltip" Value="#G" />
+                    <Event Name="MouseLClick" Function="ChatTextColorFrame_SelectColor(3);" />
+                </Window>
+                <Window Type="TLBB_StaticImageTextColor" Name="Color_4">
+                    <Property Name="Position" Value="x:0.375 y:0" />
+                    <Property Name="Size" Value="w:0.125 h:0.2" />
+                    <Property Name="ImageColours" Value="tl:FB0000FF tr:FB0000FF bl:FB0000FF br:FB0000FF" />
+                    <Property Name="Tooltip" Value="#c0000FF" />
+                    <Event Name="MouseLClick" Function="ChatTextColorFrame_SelectColor(4);" />
+                </Window>
+                <Window Type="TLBB_StaticImageTextColor" Name="Color_5">
+                    <Property Name="Position" Value="x:0.5 y:0" />
+                    <Property Name="Size" Value="w:0.125 h:0.2" />
+                    <Property Name="ImageColours" Value="tl:FBFFFF00 tr:FBFFFF00 bl:FBFFFF00 br:FBFFFF00" />
+                    <Property Name="Tooltip" Value="#Y" />
+                    <Event Name="MouseLClick" Function="ChatTextColorFrame_SelectColor(5);" />
+                </Window>
+                <Window Type="TLBB_StaticImageTextColor" Name="Color_6">
+                    <Property Name="Position" Value="x:0.625 y:0" />
+                    <Property Name="Size" Value="w:0.125 h:0.2" />
+                    <Property Name="ImageColours" Value="tl:FBFFFFFF tr:FBFFFFFF bl:FBFFFFFF br:FBFFFFFF" />
+                    <Property Name="Tooltip" Value="#W" />
+                    <Event Name="MouseLClick" Function="ChatTextColorFrame_SelectColor(6);" />
+                </Window>
+                <Window Type="TLBB_StaticImageTextColor" Name="Color_7">
+                    <Property Name="Position" Value="x:0.75 y:0" />
+                    <Property Name="Size" Value="w:0.125 h:0.2" />
+                    <Property Name="ImageColours" Value="tl:FBcccccc tr:FBcccccc bl:FBcccccc br:FBcccccc" />
+                    <Property Name="Tooltip" Value="#ccccccc" />
+                    <Event Name="MouseLClick" Function="ChatTextColorFrame_SelectColor(7);" />
+                </Window>
+                <Window Type="TLBB_StaticImageTextColor" Name="Color_8">
+                    <Property Name="Position" Value="x:0.875 y:0" />
+                    <Property Name="Size" Value="w:0.125 h:0.2" />
+                    <Property Name="ImageColours" Value="tl:FBff99cc tr:FBff99cc bl:FBff99cc br:FBff99cc" />
+                    <Property Name="Tooltip" Value="#cff99cc" />
+                    <Event Name="MouseLClick" Function="ChatTextColorFrame_SelectColor(8);" />
+                </Window>
+                <Window Type="TLBB_StaticImageTextColor" Name="Color_9">
+                    <Property Name="Position" Value="x:0.0 y:0.2" />
+                    <Property Name="Size" Value="w:0.125 h:0.2" />
+                    <Property Name="ImageColours" Value="tl:FBffcccc tr:FBffcccc bl:FBffcccc br:FBffcccc" />
+                    <Property Name="Tooltip" Value="#cffcccc" />
+                    <Event Name="MouseLClick" Function="ChatTextColorFrame_SelectColor(9);" />
+                </Window>
+                <Window Type="TLBB_StaticImageTextColor" Name="Color_10">
+                    <Property Name="Position" Value="x:0.125 y:0.2" />
+                    <Property Name="Size" Value="w:0.125 h:0.2" />
+                    <Property Name="ImageColours" Value="tl:FBffcc00 tr:FBffcc00 bl:FBffcc00 br:FBffcc00" />
+                    <Property Name="Tooltip" Value="#cffcc00" />
+                    <Event Name="MouseLClick" Function="ChatTextColorFrame_SelectColor(10);" />
+                </Window>
+                <Window Type="TLBB_StaticImageTextColor" Name="Color_11">
+                    <Property Name="Position" Value="x:0.25 y:0.2" />
+                    <Property Name="Size" Value="w:0.125 h:0.2" />
+					<Property Name="ImageColours" Value="tl:FBffcc88 tr:FBffcc88 bl:FBffcc88 br:FBffcc88" />
+					<Property Name="Tooltip" Value="#cffcc88" />
+                    <Event Name="MouseLClick" Function="ChatTextColorFrame_SelectColor(11);" />
+                </Window>
+                <Window Type="TLBB_StaticImageTextColor" Name="Color_12">
+                    <Property Name="Position" Value="x:0.375 y:0.2" />
+                    <Property Name="Size" Value="w:0.125 h:0.2" />
+                    <Property Name="ImageColours" Value="tl:FB33ffcc tr:FB33ffcc bl:FB33ffcc br:FB33ffcc" />
+                    <Property Name="Tooltip" Value="#c33ffcc" />
+                    <Event Name="MouseLClick" Function="ChatTextColorFrame_SelectColor(12);" />
+                </Window>
+                <Window Type="TLBB_StaticImageTextColor" Name="Color_13">
+                    <Property Name="Position" Value="x:0.5 y:0.2" />
+                    <Property Name="Size" Value="w:0.125 h:0.2" />
+                    <Property Name="ImageColours" Value="tl:FB66ffff tr:FB66ffff bl:FB66ffff br:FB66ffff" />
+                    <Property Name="Tooltip" Value="#c66ffff" />
+                    <Event Name="MouseLClick" Function="ChatTextColorFrame_SelectColor(13);" />
+                </Window>
+                <Window Type="TLBB_StaticImageTextColor" Name="Color_14">
+                    <Property Name="Position" Value="x:0.625 y:0.2" />
+                    <Property Name="Size" Value="w:0.125 h:0.2" />
+                    <Property Name="ImageColours" Value="tl:FB66ccff tr:FB66ccff bl:FB66ccff br:FB66ccff" />
+                    <Property Name="Tooltip" Value="#c66ccff" />
+                    <Event Name="MouseLClick" Function="ChatTextColorFrame_SelectColor(14);" />
+                </Window>
+                <Window Type="TLBB_StaticImageTextColor" Name="Color_15">
+                    <Property Name="Position" Value="x:0.75 y:0.2" />
+                    <Property Name="Size" Value="w:0.125 h:0.2" />
+                    <Property Name="ImageColours" Value="tl:FBff99ff tr:FBff99ff bl:FBff99ff br:FBff99ff" />
+                    <Property Name="Tooltip" Value="#cff99ff" />
+                    <Event Name="MouseLClick" Function="ChatTextColorFrame_SelectColor(15);" />
+                </Window>
+                <Window Type="TLBB_StaticImageTextColor" Name="Color_16">
+                    <Property Name="Position" Value="x:0.875 y:0.2" />
+                    <Property Name="Size" Value="w:0.125 h:0.2" />
+                    <Property Name="ImageColours" Value="tl:FB00ffff tr:FB00ffff bl:FB00ffff br:FB00ffff" />
+                    <Property Name="Tooltip" Value="#c00ffff" />
+                    <Event Name="MouseLClick" Function="ChatTextColorFrame_SelectColor(16);" />
+                </Window>
+                <Window Type="TLBB_StaticImageTextColor" Name="Color_17">
+                    <Property Name="Position" Value="x:0.0 y:0.4" />
+                    <Property Name="Size" Value="w:0.125 h:0.2" />
+                    <Property Name="ImageColours" Value="tl:FB6699ff tr:FB6699ff bl:FB6699ff br:FB6699ff" />
+                    <Property Name="Tooltip" Value="#c6699ff" />
+                    <Event Name="MouseLClick" Function="ChatTextColorFrame_SelectColor(17);" />
+                </Window>
+                <Window Type="TLBB_StaticImageTextColor" Name="Color_18">
+                    <Property Name="Position" Value="x:0.125 y:0.4" />
+                    <Property Name="Size" Value="w:0.125 h:0.2" />
+                    <Property Name="ImageColours" Value="tl:FB993366 tr:FB993366 bl:FB993366 br:FB993366" />
+                    <Property Name="Tooltip" Value="#c993366" />
+                    <Event Name="MouseLClick" Function="ChatTextColorFrame_SelectColor(18);" />
+                </Window>
+                <Window Type="TLBB_StaticImageTextColor" Name="Color_19">
+                    <Property Name="Position" Value="x:0.25 y:0.4" />
+                    <Property Name="Size" Value="w:0.125 h:0.2" />
+					<Property Name="ImageColours" Value="tl:FBff6633 tr:FBff6633 bl:FBff6633 br:FBff6633" />
+					<Property Name="Tooltip" Value="#cff6633" />
+                    <Event Name="MouseLClick" Function="ChatTextColorFrame_SelectColor(19);" />
+                </Window>
+                <Window Type="TLBB_StaticImageTextColor" Name="Color_20">
+                    <Property Name="Position" Value="x:0.375 y:0.4" />
+                    <Property Name="Size" Value="w:0.125 h:0.2" />
+                    <Property Name="ImageColours" Value="tl:FB33ff99 tr:FB33ff99 bl:FB33ff99 br:FB33ff99" />
+                    <Property Name="Tooltip" Value="#c33ff99" />
+                    <Event Name="MouseLClick" Function="ChatTextColorFrame_SelectColor(20);" />
+                </Window>
+                <Window Type="TLBB_StaticImageTextColor" Name="Color_21">
+                    <Property Name="Position" Value="x:0.5 y:0.4" />
+                    <Property Name="Size" Value="w:0.125 h:0.2" />
+                    <Property Name="ImageColours" Value="tl:FB33cc99 tr:FB33cc99 bl:FB33cc99 br:FB33cc99" />
+                    <Property Name="Tooltip" Value="#c33cc99" />
+                    <Event Name="MouseLClick" Function="ChatTextColorFrame_SelectColor(21);" />
+                </Window>
+                <Window Type="TLBB_StaticImageTextColor" Name="Color_22">
+                    <Property Name="Position" Value="x:0.625 y:0.4" />
+                    <Property Name="Size" Value="w:0.125 h:0.2" />
+                    <Property Name="ImageColours" Value="tl:FB66cccc tr:FB66cccc bl:FB66cccc br:FB66cccc" />
+                    <Property Name="Tooltip" Value="#c66cccc" />
+                    <Event Name="MouseLClick" Function="ChatTextColorFrame_SelectColor(22);" />
+                </Window>
+                <Window Type="TLBB_StaticImageTextColor" Name="Color_23">
+                    <Property Name="Position" Value="x:0.75 y:0.4" />
+                    <Property Name="Size" Value="w:0.125 h:0.2" />
+                    <Property Name="ImageColours" Value="tl:FB0066ff tr:FB0066ff bl:FB0066ff br:FB0066ff" />
+                    <Property Name="Tooltip" Value="#c0066ff" />
+                    <Event Name="MouseLClick" Function="ChatTextColorFrame_SelectColor(23);" />
+                </Window>
+                <Window Type="TLBB_StaticImageTextColor" Name="Color_24">
+                    <Property Name="Position" Value="x:0.875 y:0.4" />
+                    <Property Name="Size" Value="w:0.125 h:0.2" />
+                    <Property Name="ImageColours" Value="tl:FBcc33cc tr:FBcc33cc bl:FBcc33cc br:FBcc33cc" />
+                    <Property Name="Tooltip" Value="#ccc33cc" />
+                    <Event Name="MouseLClick" Function="ChatTextColorFrame_SelectColor(24);" />
+                </Window>
+                <Window Type="TLBB_StaticImageTextColor" Name="Color_25">
+                    <Property Name="Position" Value="x:0.0 y:0.6" />
+                    <Property Name="Size" Value="w:0.125 h:0.2" />
+                    <Property Name="ImageColours" Value="tl:FB993333 tr:FB993333 bl:FB993333 br:FB993333" />
+                    <Property Name="Tooltip" Value="#c993333" />
+                    <Event Name="MouseLClick" Function="ChatTextColorFrame_SelectColor(25);" />
+                </Window>
+                <Window Type="TLBB_StaticImageTextColor" Name="Color_26">
+                    <Property Name="Position" Value="x:0.125 y:0.6" />
+                    <Property Name="Size" Value="w:0.125 h:0.2" />
+                    <Property Name="ImageColours" Value="tl:FBff9900 tr:FBff9900 bl:FBff9900 br:FBff9900" />
+                    <Property Name="Tooltip" Value="#cff9900" />
+                    <Event Name="MouseLClick" Function="ChatTextColorFrame_SelectColor(26);" />
+                </Window>
+                <Window Type="TLBB_StaticImageTextColor" Name="Color_27">
+                    <Property Name="Position" Value="x:0.25 y:0.6" />
+                    <Property Name="Size" Value="w:0.125 h:0.2" />
+					<Property Name="ImageColours" Value="tl:FBff9966 tr:FBff9966 bl:FBff9966 br:FBff9966" />
+					<Property Name="Tooltip" Value="#cff9966" />
+                    <Event Name="MouseLClick" Function="ChatTextColorFrame_SelectColor(27);" />
+                </Window>
+                <Window Type="TLBB_StaticImageTextColor" Name="Color_28">
+                    <Property Name="Position" Value="x:0.375 y:0.6" />
+                    <Property Name="Size" Value="w:0.125 h:0.2" />
+                    <Property Name="ImageColours" Value="tl:fb999933 tr:fb999933 bl:fb999933 br:fb999933" />
+                    <Property Name="Tooltip" Value="#c999933" />
+                    <Event Name="MouseLClick" Function="ChatTextColorFrame_SelectColor(28);" />
+                </Window>
+                <Window Type="TLBB_StaticImageTextColor" Name="Color_29">
+                    <Property Name="Position" Value="x:0.5 y:0.6" />
+                    <Property Name="Size" Value="w:0.125 h:0.2" />
+                    <Property Name="ImageColours" Value="tl:fb009933 tr:fb009933 bl:fb009933 br:fb009933" />
+                    <Property Name="Tooltip" Value="#c009933" />
+                    <Event Name="MouseLClick" Function="ChatTextColorFrame_SelectColor(29);" />
+                </Window>
+                <Window Type="TLBB_StaticImageTextColor" Name="Color_30">
+                    <Property Name="Position" Value="x:0.625 y:0.6" />
+                    <Property Name="Size" Value="w:0.125 h:0.2" />
+                    <Property Name="ImageColours" Value="tl:fb009966 tr:fb009966 bl:fb009966 br:fb009966" />
+                    <Property Name="Tooltip" Value="#c009966" />
+                    <Event Name="MouseLClick" Function="ChatTextColorFrame_SelectColor(30);" />
+                </Window>
+                <Window Type="TLBB_StaticImageTextColor" Name="Color_31">
+                    <Property Name="Position" Value="x:0.75 y:0.6" />
+                    <Property Name="Size" Value="w:0.125 h:0.2" />
+                    <Property Name="ImageColours" Value="tl:fb9966cc tr:fb9966cc bl:fb9966cc br:fb9966cc" />
+                    <Property Name="Tooltip" Value="#c9966cc" />
+                    <Event Name="MouseLClick" Function="ChatTextColorFrame_SelectColor(31);" />
+                </Window>
+                <Window Type="TLBB_StaticImageTextColor" Name="Color_32">
+                    <Property Name="Position" Value="x:0.875 y:0.6" />
+                    <Property Name="Size" Value="w:0.125 h:0.2" />
+                    <Property Name="ImageColours" Value="tl:fb996666 tr:fb996666 bl:fb996666 br:fb996666" />
+                    <Property Name="Tooltip" Value="#c996666" />
+                    <Event Name="MouseLClick" Function="ChatTextColorFrame_SelectColor(32);" />
+                </Window>
+                <Window Type="TLBB_StaticImageTextColor" Name="Color_33">
+                    <Property Name="Position" Value="x:0.0 y:0.8" />
+                    <Property Name="Size" Value="w:0.125 h:0.2" />
+                    <Property Name="ImageColours" Value="tl:fb666600 tr:fb666600 bl:fb666600 br:fb666600" />
+                    <Property Name="Tooltip" Value="#c666600" />
+                    <Event Name="MouseLClick" Function="ChatTextColorFrame_SelectColor(33);" />
+                </Window>
+                <Window Type="TLBB_StaticImageTextColor" Name="Color_34">
+                    <Property Name="Position" Value="x:0.125 y:0.8" />
+                    <Property Name="Size" Value="w:0.125 h:0.2" />
+                    <Property Name="ImageColours" Value="tl:fb333366 tr:fb333366 bl:fb333366 br:fb333366" />
+                    <Property Name="Tooltip" Value="#c333366" />
+                    <Event Name="MouseLClick" Function="ChatTextColorFrame_SelectColor(34);" />
+                </Window>
+                <Window Type="TLBB_StaticImageTextColor" Name="Color_35">
+                    <Property Name="Position" Value="x:0.25 y:0.8" />
+                    <Property Name="Size" Value="w:0.125 h:0.2" />
+                    <Property Name="ImageColours" Value="tl:fb330066 tr:fb330066 bl:fb330066 br:fb330066" />
+                    <Property Name="Tooltip" Value="#c330066" />
+                    <Event Name="MouseLClick" Function="ChatTextColorFrame_SelectColor(35);" />
+                </Window>
+                <Window Type="TLBB_StaticImageTextColor" Name="Color_36">
+                    <Property Name="Position" Value="x:0.375 y:0.8" />
+                    <Property Name="Size" Value="w:0.125 h:0.2" />
+                    <Property Name="ImageColours" Value="tl:fb333399 tr:fb333399 bl:fb333399 br:fb333399" />
+                    <Property Name="Tooltip" Value="#c333399" />
+                    <Event Name="MouseLClick" Function="ChatTextColorFrame_SelectColor(36);" />
+                </Window>
+                <Window Type="TLBB_StaticImageTextColor" Name="Color_37">
+                    <Property Name="Position" Value="x:0.5 y:0.8" />
+                    <Property Name="Size" Value="w:0.125 h:0.2" />
+                    <Property Name="ImageColours" Value="tl:fbff66cc tr:fbff66cc bl:fbff66cc br:fbff66cc" />
+                    <Property Name="Tooltip" Value="#cff66cc" />
+                    <Event Name="MouseLClick" Function="ChatTextColorFrame_SelectColor(37);" />
+                </Window>
+                <Window Type="TLBB_StaticImageTextColor" Name="Color_38">
+                    <Property Name="Position" Value="x:0.625 y:0.8" />
+                    <Property Name="Size" Value="w:0.125 h:0.2" />
+                    <Property Name="ImageColours" Value="tl:fbcccc66 tr:fbcccc66 bl:fbcccc66 br:fbcccc66" />
+                    <Property Name="Tooltip" Value="#ccccc66" />
+                    <Event Name="MouseLClick" Function="ChatTextColorFrame_SelectColor(38);" />
+                </Window>
+                <Window Type="TLBB_StaticImageTextColor" Name="Color_39">
+                    <Property Name="Position" Value="x:0.75 y:0.8" />
+                    <Property Name="Size" Value="w:0.125 h:0.2" />
+                    <Property Name="ImageColours" Value="tl:fb0000cc tr:fb0000cc bl:fb0000cc br:fb0000cc" />
+                    <Property Name="Tooltip" Value="#c0000cc" />
+                    <Event Name="MouseLClick" Function="ChatTextColorFrame_SelectColor(39);" />
+                </Window>
+                <Window Type="TLBB_StaticImageTextColor" Name="Color_40">
+                    <Property Name="Position" Value="x:0.875 y:0.8" />
+                    <Property Name="Size" Value="w:0.125 h:0.2" />
+                    <Property Name="ImageColours" Value="tl:fbcc6699 tr:fbcc6699 bl:fbcc6699 br:fbcc6699" />
+                    <Property Name="Tooltip" Value="#ccc6699" />
+                    <Event Name="MouseLClick" Function="ChatTextColorFrame_SelectColor(40);" />
+                </Window>
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

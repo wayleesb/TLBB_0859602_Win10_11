@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="少林旗帜.frame" />
+    <entity mesh="少林旗竿.mesh" node="少林旗竿" />
+    <entity mesh="少林旗.mesh" />
+</model>

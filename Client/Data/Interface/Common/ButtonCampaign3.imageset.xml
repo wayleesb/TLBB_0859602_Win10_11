@@ -1,0 +1,6 @@
+<Imageset Name="ButtonCampaign3" Imagefile="Common/tga_ButtonCampaign3.dds" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+
+    <Image Name="Campaign_IMG_XianZai" XPos="11" YPos="10" Width="126" Height="34" />
+
+    
+</Imageset>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="伞盖.frame" />
+    <entity mesh="伞盖.mesh" />
+    <entity mesh="伞底座.mesh" node="伞底座">
+        <offset>
+            <translate x="-52.5559" y="27.6326" z="124.948" />
+        </offset>
+    </entity>
+</model>

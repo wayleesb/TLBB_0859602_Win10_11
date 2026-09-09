@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="渔船2.frame" />
+    <entity mesh="渔船2.mesh" node="渔船2" />
+    <entity mesh="渔船2灯笼.mesh" />
+</model>

@@ -1,0 +1,175 @@
+<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="DefaultWindow" Name="SelectRole_Frame">
+        <Property Name="Position" Value="x:0.0 y:0.0" />
+        <Property Name="Size" Value="w:1.0 h:1.0" />
+        <Property Name="MouseLButtonHollow" Value="true" />
+        <Window Type="TLBB_StaticImageNULL" Name="SelectRole_PageHeader_Bak">
+            <Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+            <Property Name="AbsoluteSize" Value="w:165.000000 h:189.000000" />
+            <Property Name="Image" Value="set:CommonStaticImage2 image:CreateReleHead" />
+            <Window Type="TLBB_StaticImageNULL" Name="SelectRole_PageHeader_BakText">
+                <Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+                <Property Name="AbsoluteSize" Value="w:31.000000 h:103.000000" />
+                <Property Name="Image" Value="set:CommonStaticImage2 image:SelectRoleHead" />
+            </Window>
+        </Window>
+        <Window Type="DefaultWindow" Name="SelectRole_InfoBackground_Frame">
+            <Property Name="Position" Value="x:0.000000 y:0.000000" />
+            <Property Name="Size" Value="w:1.000000 h:1.000000" />
+            <Property Name="MouseLButtonHollow" Value="true" />
+            <Window Type="TLBB_SimpleTextInfo" Name="SelectRole_Info">
+                <Property Name="UnifiedPosition" Value="{{0.500000,-252.000000},{1.000000,-54.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.000000,513.000000},{0.000000,21.000000}" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="DefaultWindow" Name="SelectRole_TargetInfo_Frame_Background">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-208.000000},{0.500000,-210.000000}" />
+                <Property Name="AbsoluteSize" Value="w:190.000000 h:190.000000" />
+                <Window Type="TLBB_MainFrame4" Name="SelectRole_TargetInfo_Frame">
+                    <Property Name="AbsolutePosition" Value="x:10.000000 y:41.000000" />
+                    <Property Name="AbsoluteSize" Value="w:168.000000 h:150.000000" />
+                    <Window Type="TLBB_Frame_Lace3" Name="SelectRole_TargetInfo_Bk">
+                      <Property Name="UnifiedPosition" Value="{{0.1,0.000000},{0.15333,0.000000}" />
+                      <Property Name="Size" Value="w:0.8 h:0.7" />
+                      <Property Name="RiseOnClick" Value="False" />
+                    </Window>
+                    <Window Type="TLBB_SimpleText" Name="SelectRole_TargetInfo_Name_Text">
+                        <Property Name="Position" Value="x:0.17 y:0.22" />
+                        <Property Name="Size" Value="w:0.76551724 h:0.12" />
+                        <Property Name="Text" Value="#{INTERFACE_XML_464}" />
+                        <Property Name="HorzFormatting" Value="LeftAligned" />
+                        <Property Name="VertFormatting" Value="VertCentred" />
+                        <Property Name="RiseOnClick" Value="False" />
+                    </Window>
+                    <Window Type="TLBB_SimpleText" Name="SelectRole_TargetInfo_Menpai_Text">
+                        <Property Name="Position" Value="x:0.17 y:0.38" />
+                        <Property Name="Size" Value="w:0.76551724 h:0.12" />
+                        <Property Name="Text" Value="#{INTERFACE_XML_451}" />
+                        <Property Name="HorzFormatting" Value="LeftAligned" />
+                        <Property Name="VertFormatting" Value="VertCentred" />
+                        <Property Name="RiseOnClick" Value="False" />
+                    </Window>
+                    <Window Type="TLBB_SimpleText" Name="SelectRole_TargetInfo_Level_Text">
+                        <Property Name="Position" Value="x:0.17 y:0.53" />
+                        <Property Name="Size" Value="w:0.76551724 h:0.12" />
+                        <Property Name="Text" Value="#{INTERFACE_XML_230}" />
+                        <Property Name="HorzFormatting" Value="LeftAligned" />
+                        <Property Name="VertFormatting" Value="VertCentred" />
+                        <Property Name="RiseOnClick" Value="False" />
+                    </Window>
+                   <Window Type="TLBB_SimpleText" Name="SelectRole_TargetInfo_Delete">
+                        <Property Name="Position" Value="x:0.17 y:0.67" />
+                        <Property Name="Size" Value="w:0.76551724 h:0.12" />
+                        <Property Name="HorzFormatting" Value="LeftAligned" />
+                        <Property Name="VertFormatting" Value="VertCentred" />
+                        <Property Name="RiseOnClick" Value="False" />
+                  </Window>
+                </Window>
+                <Window Type="TLBB_StaticImageNULL" Name="SelectRole_TargetInfo_Background_RedLine">
+                    <Property Name="AbsolutePosition" Value="x:173.000000 y:53.000000" />
+                    <Property Name="AbsoluteSize" Value="w:5.000000 h:83.000000" />
+                    <Property Name="Image" Value="set:Button4 image:RedLine" />
+                    <Property Name="RiseOnClick" Value="False" />
+                </Window>
+                <Window Type="TLBB_StaticImageNULL" Name="SelectRole_TargetInfo_Background_RedLine2">
+                    <Property Name="AbsolutePosition" Value="x:11.000000 y:53.000000" />
+                    <Property Name="AbsoluteSize" Value="w:5.000000 h:83.000000" />
+                    <Property Name="Image" Value="set:Button4 image:RedLine" />
+                    <Property Name="RiseOnClick" Value="False" />
+                </Window>
+                <Window Type="TLBB_StaticImageNULL" Name="SelectRole_TargetInfo_Background_DragonHead">
+                    <Property Name="AbsolutePosition" Value="x:38.000000 y:3.000000" />
+                    <Property Name="AbsoluteSize" Value="w:114.000000 h:62.000000" />
+                    <Property Name="Image" Value="set:Button4 image:Dragon_Head" />
+                    <Property Name="AlwaysOnTop" Value="True" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_StaticImageNULL" Name="SelectRole_TargetButton_Frame">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-182.000000},{0.500000,0.000000}" />
+                <Property Name="AbsoluteSize" Value="w:139.000000 h:212.000000" />
+                <Property Name="FrameEnabled" Value="true" />
+                <Property Name="BackgroundEnabled" Value="true" />
+                <Property Name="TopFrameImage" Value="set:CommonStaticImage2 image:SelectRoleButtnBackT" />
+                <Property Name="BottomFrameImage" Value="set:CommonStaticImage2 image:SelectRoleButtnBackB" />
+                <Property Name="BackgroundImage" Value="set:CommonStaticImage2 image:SelectRoleButtnBackM" />
+                <Window Type="DefaultWindow" Name="SelectRole_TargetButton_Frame_Client">
+                    <Property Name="AbsolutePosition" Value="x:16.000000 y:28.000000" />
+                    <Property Name="AbsoluteSize" Value="w:109.000000 h:160.000000" />
+                    <Window Type="TLBB_ButtonExp1" Name="SelectRole_Play">
+                        <Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+                        <Property Name="AbsoluteSize" Value="w:109.000000 h:40.000000" />
+                        <Property Name="Text" Value="#{INTERFACE_XML_381}" />
+                        <Event Name="Clicked" Function="SelectRole_EnterGame();" />
+                        <Event Name="MouseEnter" Function="SelectRole_Play_MouseEnter();" />
+                        <Event Name="MouseLeave" Function="SelectRole_MouseLeave();" />
+                    </Window>
+                    <Window Type="TLBB_ButtonExp1" Name="SelectRole_Create">
+                        <Property Name="AbsolutePosition" Value="x:0.000000 y:40.000000" />
+                        <Property Name="AbsoluteSize" Value="w:109.000000 h:40.000000" />
+                        <Property Name="Text" Value="#{INTERFACE_XML_190}" />
+                        <Event Name="Clicked" Function="SelectRole_CreateRole();" />
+                        <Event Name="MouseEnter" Function="SelectRole_Create_MouseEnter();" />
+                        <Event Name="MouseLeave" Function="SelectRole_MouseLeave();" />
+                    </Window>
+                    <Window Type="TLBB_ButtonExp1" Name="SelectRole_Delete">
+                        <Property Name="AbsolutePosition" Value="x:0.000000 y:80.000000" />
+                        <Property Name="AbsoluteSize" Value="w:109.000000 h:40.000000" />
+                        <Event Name="Clicked" Function="SelectRole_DelRole();" />
+                        <Property Name="Text" Value="#{INTERFACE_XML_584}" />
+                        <Event Name="MouseEnter" Function="SelectRole_Delete_MouseEnter();" />
+                        <Event Name="MouseLeave" Function="SelectRole_MouseLeave();" />
+                    </Window>
+                    <Window Type="TLBB_ButtonExp1" Name="SelectRole_Last">
+                        <Property Name="AbsolutePosition" Value="x:0.000000 y:120.000000" />
+                        <Property Name="AbsoluteSize" Value="w:109.000000 h:40.000000" />
+                        <Property Name="Text" Value="#{INTERFACE_XML_600}" />
+                        <Event Name="Clicked" Function="SelectRole_Return();" />
+                        <Event Name="MouseEnter" Function="SelectRole_Last_MouseEnter();" />
+                        <Event Name="MouseLeave" Function="SelectRole_MouseLeave();" />
+                    </Window>
+                </Window>
+            </Window>
+            <Window Type="DefaultWindow" Name="SelectRole_Model_Frame">
+                <Property Name="UnifiedPosition" Value="{{0.500000,-65.000000},{1.000000,-150.000000}" />
+                <Property Name="AbsoluteSize" Value="w:132.000000 h:80.000000" />
+                <Window Type="TLBB_ButtonNULL" Name="SelectRole_Role2_Model_TurnLeft">
+                    <Property Name="AbsolutePosition" Value="x:7.000000 y:22.000000" />
+                    <Property Name="AbsoluteSize" Value="w:41.000000 h:25.000000" />
+                    <Property Name="HoverImage" Value="set:Button3 image:BtnLeft_Hover" />
+                    <Property Name="NormalImage" Value="set:Button3 image:BtnLeft_Normal" />
+                    <Property Name="PushedImage" Value="set:Button3 image:BtnLeft_Pushed" />
+                    <Event Name="MouseButtonUp" Function="SelectRole_Role_Modle_TurnLeft(0);" />
+                    <Event Name="MouseLButtonDown" Function="SelectRole_Role_Modle_TurnLeft(1);" />
+                </Window>
+                <Window Type="TLBB_ButtonNULL" Name="SelectRole_Role2_Model_TurnRight">
+                    <Property Name="AbsolutePosition" Value="x:82.000000 y:23.000000" />
+                    <Property Name="AbsoluteSize" Value="w:41.000000 h:25.000000" />
+                    <Property Name="HoverImage" Value="set:Button3 image:BtnRight_Hover" />
+                    <Property Name="NormalImage" Value="set:Button3 image:BtnRight_Normal" />
+                    <Property Name="PushedImage" Value="set:Button3 image:BtnRight_Pushed" />
+                    <Event Name="MouseButtonUp" Function="SelectRole_Role_Modle_TurnRight(0);" />
+                    <Event Name="MouseLButtonDown" Function="SelectRole_Role_Modle_TurnRight(1);" />
+                </Window>
+                <Window Type="TLBB_ButtonNULL" Name="SelectRole_ModelZoomIn">
+                    <Property Name="AbsolutePosition" Value="x:52.000000 y:6.000000" />
+                    <Property Name="AbsoluteSize" Value="w:27.000000 h:17.000000" />
+                    <Property Name="HoverImage" Value="set:Button3 image:BtnUp_Hover" />
+                    <Property Name="NormalImage" Value="set:Button3 image:BtnUp_Normal" />
+                    <Property Name="PushedImage" Value="set:Button3 image:BtnUp_Pushed" />
+                    <Event Name="MouseButtonUp" Function="SelectRole_Modle_ZoomIn(0);" />
+                    <Event Name="MouseLButtonDown" Function="SelectRole_Modle_ZoomIn(1);" />
+                </Window>
+                <Window Type="TLBB_ButtonNULL" Name="SelectRole_ModelZoomOut">
+                    <Property Name="AbsolutePosition" Value="x:45.000000 y:47.000000" />
+                    <Property Name="AbsoluteSize" Value="w:41.000000 h:25.000000" />
+                    <Property Name="HoverImage" Value="set:Button3 image:BtnDown_Hover" />
+                    <Property Name="NormalImage" Value="set:Button3 image:BtnDown_Normal" />
+                    <Property Name="PushedImage" Value="set:Button3 image:BtnDown_Pushed" />
+                    <Event Name="MouseButtonUp" Function="SelectRole_Modle_ZoomOut(0);" />
+                    <Event Name="MouseLButtonDown" Function="SelectRole_Modle_ZoomOut(1);" />
+                </Window>
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

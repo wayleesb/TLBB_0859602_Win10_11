@@ -1,0 +1,197 @@
+<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame1" Name="SelectHairstyle_Frame">
+        <Property Name="UnifiedPosition" Value="{{0.4,0},{0.15,0}}" />
+        <Property Name="UnifiedSize" Value="{{0,365},{0.0,280}}" />
+        <Event Name="Hidden" Function="SelectHairstyle_Cancel_Clicked();" />
+        <Window Type="TLBB_DragTitle" Name="SelectHairstyle_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="SelectHairstyle_Frame" />
+            <Window Type="TLBB_SimpleText" Name="SelectHairstyle_PageHeader">
+                <Property Name="Position" Value="x:0.0 y:0.0" />
+                <Property Name="Size" Value="w:1.0 h:1.0" />
+                <Property Name="Font" Value="YouYuan11.25" />
+                <Property Name="Text" Value="#{INTERFACE_XML_79}" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+        </Window>
+        <Window Type="TLBB_ButtonHelp" Name="SelectHairstyle_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*SelectHairstyle&quot;);' />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="SelectHairstyle_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function="this:Hide();" />
+        </Window>
+        <Window Type="DefaultWindow" Name="SelectHairstyle_Function_Frame">
+            <Property Name="AbsolutePosition" Value="x:7.000000 y:36.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-13.000000},{1.000000,-55.000000}" />
+            <Window Type="TLBB_FramePlayerOther" Name="SelectHairstyle_Model_Frame">
+                <Property Name="Position" Value="x:0.0 y:0.0" />
+                <Property Name="UnifiedSize" Value="{{0.5,0.000000},{0.000000,130.000000}" />
+                <Window Type="TLBB_MeshWindow" Name="SelectHairstyle_Model">
+                    <Property Name="Position" Value="x:0.1 y:0.1" />
+                    <Property Name="Size" Value="w:0.80 h:0.8" />
+                    <Property Name="ShowControl" Value="SelectHairstyle_Frame" />
+                    <Property Name="RiseOnClick" Value="False" />
+                </Window>
+                <Window Type="TLBB_ButtonTurnLeft" Name="SelectHairstyle_Model_TurnLeft">
+                    <Property Name="UnifiedPosition" Value="{{0.15000000,0.000000},{1.000000,-25.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:22.000000 h:22.000000" />
+                    <Event Name="MouseButtonDown" Function="Player_Head_Modle_TurnLeft(1);" />
+                    <Event Name="MouseButtonUp" Function="Player_Head_Modle_TurnLeft(0);" />
+                </Window>
+                <Window Type="TLBB_ButtonTurnRight" Name="SelectHairstyle_Model_TurnRight">
+                    <Property Name="UnifiedPosition" Value="{{0.72000000,0.000000},{1.000000,-25.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:22.000000 h:22.000000" />
+                    <Event Name="MouseButtonDown" Function="Player_Head_Modle_TurnRight(1);" />
+                    <Event Name="MouseButtonUp" Function="Player_Head_Modle_TurnRight(0);" />
+                </Window>
+            </Window>
+            <Window Type="DefaultWindow" Name="SelectHairstyle_StyleList">
+                <Property Name="Position" Value="x:0.51 y:0.01" />
+                <Property Name="AbsoluteSize" Value="w:170.000000 h:105.000000" />
+                <Window Type="TLBB_ActionButton" Name="SelectHairstyle_Skill1_BKG">
+                    <Property Name="AbsolutePosition" Value="x:0.0 y:0.0" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                    <Property Name="Empty" Value="False" />
+                    <Property Name="UseDefaultTooltip" Value="True" />
+                    <Event Name="Clicked" Function="SelectHairstyle_Clicked(1);" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="SelectHairstyle_Skill2_BKG">
+                    <Property Name="AbsolutePosition" Value="x:35.0 y:0.0" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                    <Property Name="Empty" Value="False" />
+                    <Property Name="UseDefaultTooltip" Value="True" />
+                    <Event Name="Clicked" Function="SelectHairstyle_Clicked(2);" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="SelectHairstyle_Skill3_BKG">
+                    <Property Name="AbsolutePosition" Value="x:70.0 y:0.0" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                    <Property Name="Empty" Value="False" />
+                    <Property Name="UseDefaultTooltip" Value="True" />
+                    <Event Name="Clicked" Function="SelectHairstyle_Clicked(3);" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="SelectHairstyle_Skill4_BKG">
+                    <Property Name="AbsolutePosition" Value="x:105.0 y:0.0" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                    <Property Name="Empty" Value="False" />
+                    <Property Name="UseDefaultTooltip" Value="True" />
+                    <Event Name="Clicked" Function="SelectHairstyle_Clicked(4);" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="SelectHairstyle_Skill5_BKG">
+                    <Property Name="AbsolutePosition" Value="x:0.0 y:35.0" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                    <Property Name="Empty" Value="False" />
+                    <Property Name="UseDefaultTooltip" Value="True" />
+                    <Event Name="Clicked" Function="SelectHairstyle_Clicked(5);" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="SelectHairstyle_Skill6_BKG">
+                    <Property Name="AbsolutePosition" Value="x:35.0 y:35.0" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                    <Property Name="Empty" Value="False" />
+                    <Property Name="UseDefaultTooltip" Value="True" />
+                    <Event Name="Clicked" Function="SelectHairstyle_Clicked(6);" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="SelectHairstyle_Skill7_BKG">
+                    <Property Name="AbsolutePosition" Value="x:70.0 y:35.0" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                    <Property Name="Empty" Value="False" />
+                    <Property Name="UseDefaultTooltip" Value="True" />
+                    <Event Name="Clicked" Function="SelectHairstyle_Clicked(7);" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="SelectHairstyle_Skill8_BKG">
+                    <Property Name="AbsolutePosition" Value="x:105.0 y:35.0" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                    <Property Name="Empty" Value="False" />
+                    <Property Name="UseDefaultTooltip" Value="True" />
+                    <Event Name="Clicked" Function="SelectHairstyle_Clicked(8);" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="SelectHairstyle_Skill9_BKG">
+                    <Property Name="AbsolutePosition" Value="x:0.0 y:70.0" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                    <Property Name="Empty" Value="False" />
+                    <Property Name="UseDefaultTooltip" Value="True" />
+                    <Event Name="Clicked" Function="SelectHairstyle_Clicked(9);" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="SelectHairstyle_Skill10_BKG">
+                    <Property Name="AbsolutePosition" Value="x:35.0 y:70.0" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                    <Property Name="Empty" Value="False" />
+                    <Property Name="UseDefaultTooltip" Value="True" />
+                    <Event Name="Clicked" Function="SelectHairstyle_Clicked(10);" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="SelectHairstyle_Skill11_BKG">
+                    <Property Name="AbsolutePosition" Value="x:70.0 y:70.0" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                    <Property Name="Empty" Value="False" />
+                    <Property Name="UseDefaultTooltip" Value="True" />
+                    <Event Name="Clicked" Function="SelectHairstyle_Clicked(11);" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="SelectHairstyle_Skill12_BKG">
+                    <Property Name="AbsolutePosition" Value="x:105.0 y:70.0" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                    <Property Name="Empty" Value="False" />
+                    <Property Name="UseDefaultTooltip" Value="True" />
+                    <Event Name="Clicked" Function="SelectHairstyle_Clicked(12);" />
+                </Window>
+                <Window Type="TLBB_ButtonNULL" Name="SelectHairstyle_PageUp">
+                    <Property Name="UnifiedPosition" Value="{{1.000000,-23.000000},{0.000000,15.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:20.0 h:26.0" />
+                    <Property Name="NormalImage" Value="set:Button6 image:PageUp_Btn_Normal" />
+                    <Property Name="HoverImage" Value="set:Button6 image:PageUp_Btn_Hover" />
+                    <Property Name="PushedImage" Value="set:Button6 image:PageUp_Btn_Pushed" />
+                    <Property Name="DisabledImage" Value="set:Button6 image:PageUp_Btn_Disabled" />
+                    <Event Name="Clicked" Function="SelectHairstyle_Page(-1);" />
+                </Window>
+                <Window Type="TLBB_ButtonNULL" Name="SelectHairstyle_PageDown">
+                    <Property Name="UnifiedPosition" Value="{{1.000000,-23.000000},{1.000000,-41.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:20.0 h:26.0" />
+                    <Property Name="NormalImage" Value="set:Button6 image:PageDown_Btn_Normal" />
+                    <Property Name="HoverImage" Value="set:Button6 image:PageDown_Btn_Hover" />
+                    <Property Name="PushedImage" Value="set:Button6 image:PageDown_Btn_Pushed" />
+                    <Property Name="DisabledImage" Value="set:Button6 image:PageDown_Btn_Disabled" />
+                    <Event Name="Clicked" Function="SelectHairstyle_Page(1);" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="SelectHairstyle_Require">
+                <Property Name="UnifiedPosition" Value="{{0.51,0.000000},{0.01,106.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.49000000,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_447}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="TopAligned" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_StaticText" Name="SelectHairstyle_WarningText">
+                <Property Name="UnifiedPosition" Value="{{0.0,0.000000},{0.01,127.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.0,0.000000},{0.99,-150.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_535}" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="TopAligned" />
+                <Property Name="VertScrollbar" Value="true" />
+            </Window>
+            <Window Type="TLBB_Frame_Lace5" Name="SelectHairstyle_Blank">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-80.000000},{0.000000,20.000000}" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="SelectHairstyle_Accept">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-80.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_557}" />
+                <Event Name="Clicked" Function="SelectHairstyle_OK_Clicked();" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="SelectHairstyle_Cancel">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-40.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_542}" />
+                <Event Name="Clicked" Function="this:Hide();" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

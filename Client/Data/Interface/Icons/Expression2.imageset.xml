@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<Imageset Name="Expression2" Imagefile="Icons/Expression2.jpg" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+	<Image Name="Expression2_1" XPos="0" YPos="0" Width="64" Height="64" />
+	<Image Name="Expression2_2" XPos="64" YPos="0" Width="64" Height="64" />
+	<Image Name="Expression2_3" XPos="128" YPos="0" Width="64" Height="64" />
+	<Image Name="Expression2_4" XPos="192" YPos="0" Width="64" Height="64" />
+	<Image Name="Expression2_5" XPos="0" YPos="64" Width="64" Height="64" />
+	<Image Name="Expression2_6" XPos="64" YPos="64" Width="64" Height="64" />
+	<Image Name="Expression2_7" XPos="128" YPos="64" Width="64" Height="64" />
+</Imageset>

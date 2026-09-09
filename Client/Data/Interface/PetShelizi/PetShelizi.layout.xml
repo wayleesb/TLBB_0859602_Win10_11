@@ -1,0 +1,131 @@
+<?xml version="1.0" ?>
+<GUILayout>
+	<Window Type="TLBB_MainFrame1" Name="PetShelizi_Frame">
+		<Property Name="UnifiedPosition" Value="{{0.35,0},{0.18,0}}" />
+		<Property Name="AbsoluteSize" Value="w:275 h:255" />
+		<Event Name="Hidden" Function="PetShelizi_OnHidden();" />
+		
+		<Window Type="TLBB_DragTitle" Name="PetShelizi_DragTitle">
+			<Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+			<Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+			<Property Name="DragTarget" Value="PetShelizi_Frame" />
+			<Property Name="Font" Value="YouYuan11.25" />
+			<Property Name="HorzFormatting" Value="HorzCentred" />
+			<Property Name="VertFormatting" Value="VertCentred" />
+			<Property Name="Text" Value="#{ZSKSSJ_081113_04}" />
+		</Window>
+		<Window Type="TLBB_ButtonHelp" Name="PetShelizi_Help">
+			<Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+			<Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+			<Property Name="Text" Value="TLBB_ButtonHelp" />
+			<Event Name="Clicked" Function='Helper:GotoHelper("");' />
+		</Window>
+		<Window Type="TLBB_ButtonClose" Name="PetShelizi_Close">
+			<Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+			<Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+			<Property Name="Text" Value="TLBB_ButtonClose" />
+			<Event Name="Clicked" Function="PetShelizi_Cancel_Clicked();" />
+		</Window>
+		<Window Type="DefaultWindow" Name="PetShelizi_Function_Frame">
+			<Property Name="AbsolutePosition" Value="x:7.000000 y:36.000000" />
+			<Property Name="UnifiedSize" Value="{{1.000000,-13.000000},{1.000000,-55.000000}" />
+			<Window Type="TLBB_SimpleMulitiTextFrame" Name="PetShelizi_Text">
+				<Property Name="UnifiedPosition" Value="{{0.0,0.000000},{0.000000,0.000000}" />
+				<Property Name="UnifiedSize" Value="{{1.0,0.000000},{0.000000,60.000000}" />
+				<Property Name="Text" Value="#{ZSKSSJ_081113_02}" />
+				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+			</Window>
+			<Window Type="TLBB_SimpleText" Name="PetShelizi_Text1">
+				<Property Name="UnifiedPosition" Value="{{0.0,25.000000},{0.000000,65.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.0,163.000000},{0.000000,20.000000}" />
+				<Property Name="Text" Value="#{ZSKSSJ_081113_03}" />
+				<Property Name="TextColor" Value="FFFAFFA4" />
+				<Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+			</Window>
+			<Window Type="TLBB_SimpleMulitiTextFrame" Name="PetShelizi_Pet1_Text">
+				<Property Name="UnifiedPosition" Value="{{0.15,0.000000},{0.000000,90.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.45,0.000000},{0.000000,20.000000}" />
+			</Window>
+			<Window Type="TLBB_ButtonCommon" Name="PetShelizi_PetList1_Select">
+				<Property Name="UnifiedPosition" Value="{{0.63,0.000000},{0.000000,90.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.25,0.000000},{0.000000,20.000000}" />
+				<Property Name="Text" Value="#{INTERFACE_XML_959}" />
+				
+				<Event Name="Clicked" Function="PetShelizi_SelectPet_Clicked();" />
+				
+			</Window>
+      <Window Type="TLBB_SimpleMulitiTextFrame" Name="PetShelizi_Demand_Money_Text">
+        <Property Name="UnifiedPosition" Value="{{0.0,0.000000},{1.000000,-81.000000}" />
+        <Property Name="UnifiedSize" Value="{{1,0.000000},{0.000000,20.000000}" />
+        <Property Name="TextColor" Value="FFFFF263" />
+        <Property Name="Text" Value="#{INTERFACE_XML_789}" />
+        <Property Name="HorzFormatting" Value="LeftAligned" />
+        <Property Name="VertFormatting" Value="VertCentred" />
+        <Property Name="RiseOnClick" Value="False" />
+      </Window>
+      <Window Type="TLBB_Money" Name="PetShelizi_Demand_Money">
+        <Property Name="UnifiedPosition" Value="{{0.5,0.000000},{1.000000,-81.000000}" />
+        <Property Name="UnifiedSize" Value="{{0.5,0.000000},{0.000000,18.000000}" />
+        <Property Name="HorzFormatting" Value="RightAligned" />
+        <Property Name="MoneyNumber" Value="0" />
+        <Property Name="GoldIcon" Value = "set:Button6 image:Lace_JiaoziJin" />
+        <Property Name="SilverIcon" Value = "set:Button6 image:Lace_JiaoziYin" />
+        <Property Name="CopperIcon" Value = "set:Button6 image:Lace_JiaoziTong" />
+      </Window>
+      <Window Type="TLBB_SimpleMulitiTextFrame" Name="PetShelizi_Currently_Jiaozi_Text">
+        <Property Name="UnifiedPosition" Value="{{0.0,0.000000},{1.000000,-62.000000}" />
+        <Property Name="UnifiedSize" Value="{{1,0.000000},{0.000000,20.000000}" />
+        <Property Name="TextColor" Value="FFFFF263" />
+        <Property Name="Text" Value="#{INTERFACE_XML_1248}" />
+        <Property Name="HorzFormatting" Value="LeftAligned" />
+        <Property Name="VertFormatting" Value="VertCentred" />
+        <Property Name="RiseOnClick" Value="False" />
+      </Window>
+      <Window Type="TLBB_Money" Name="PetShelizi_Currently_Jiaozi">
+        <Property Name="UnifiedPosition" Value="{{0.5,0.000000},{1.000000,-62.000000}" />
+        <Property Name="UnifiedSize" Value="{{0.5,0.000000},{0.000000,18.000000}" />
+        <Property Name="HorzFormatting" Value="RightAligned" />
+        <Property Name="MoneyNumber" Value="0" />
+        <Property Name="GoldIcon" Value = "set:Button6 image:Lace_JiaoziJin" />
+        <Property Name="SilverIcon" Value = "set:Button6 image:Lace_JiaoziYin" />
+        <Property Name="CopperIcon" Value = "set:Button6 image:Lace_JiaoziTong" />
+      </Window>
+      <Window Type="TLBB_SimpleMulitiTextFrame" Name="PetShelizi_Currently_Money_Text">
+        <Property Name="UnifiedPosition" Value="{{0.0,0.000000},{1.000000,-43.000000}" />
+        <Property Name="UnifiedSize" Value="{{1,0.000000},{0.000000,20.000000}" />
+        <Property Name="TextColor" Value="FFFFF263" />
+        <Property Name="Text" Value="#{INTERFACE_XML_834}" />
+        <Property Name="HorzFormatting" Value="LeftAligned" />
+        <Property Name="VertFormatting" Value="VertCentred" />
+        <Property Name="RiseOnClick" Value="False" />
+      </Window>
+      <Window Type="TLBB_Money" Name="PetShelizi_Currently_Money">
+        <Property Name="UnifiedPosition" Value="{{0.5,0.000000},{1.000000,-43.000000}" />
+        <Property Name="UnifiedSize" Value="{{0.5,0.000000},{0.000000,18.000000}" />
+        <Property Name="HorzFormatting" Value="RightAligned" />
+        <Property Name="MoneyNumber" Value="0" />
+      </Window>
+			<Window Type="TLBB_Frame_Lace5" Name="PetShelizi_Blank">
+				<Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-20.000000}" />
+				<Property Name="UnifiedSize" Value="{{1.000000,-80.000000},{0.000000,20.000000}" />
+			</Window>
+			<Window Type="TLBB_ButtonCommon" Name="PetShelizi_OK">
+				<Property Name="UnifiedPosition" Value="{{1.000000,-80.000000},{1.000000,-20.000000}" />
+				<Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+				<Property Name="Text" Value="#{INTERFACE_XML_557}" />
+				
+				<Event Name="Clicked" Function="PetShelizi_OK_Clicked();" />
+				
+			</Window>
+			<Window Type="TLBB_ButtonCommon" Name="PetShelizi_Cancel">
+				<Property Name="UnifiedPosition" Value="{{1.000000,-40.000000},{1.000000,-20.000000}" />
+				<Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+				<Property Name="Text" Value="#{INTERFACE_XML_542}" />
+				<Event Name="Clicked" Function="PetShelizi_Cancel_Clicked();" />
+			</Window>
+		</Window>
+	</Window>
+</GUILayout>

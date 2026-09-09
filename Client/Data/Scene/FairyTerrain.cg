@@ -1,0 +1,105 @@
+#if defined(ARB_fog_linear) || defined(ARB_fog_exp) || defined(ARB_fog_exp2)
+
+varying float fogCoord : FOGC;
+
+float3 Fogging(float3 finalColour)
+{
+    // We must use abs/negate function here, since Ogre use right-hand rule,
+    // the camera was look at negate z-axis always.
+    float fogDistance = -(fogCoord);
+
+#if defined(ARB_fog_linear)
+    float fogFactor = (glstate.fog.params.z - fogDistance) * glstate.fog.params.w;
+#elif defined(ARB_fog_exp)
+    float fogFactor = exp(- fogDistance * glstate.fog.params.x);
+#elif defined(ARB_fog_exp2)
+    float fogFactor = exp(- (fogDistance * glstate.fog.params.x) * (fogDistance * glstate.fog.params.x));
+#endif
+    fogFactor = saturate(fogFactor);
+    return lerp(glstate.fog.color.rgb, finalColour, fogFactor);
+}
+
+#else // No fog
+
+float3 Fogging(float3 finalColour)
+{
+    return finalColour;
+}
+
+#endif
+
+void
+TwoLayerLightmap_ps(
+    in float2 uv0 : TEXCOORD0,
+    in float2 uv1 : TEXCOORD1,
+    in float2 uvLightmap : TEXCOORD2,
+    in uniform sampler2D layer0,
+    in uniform sampler2D layer1,
+    in uniform sampler2D lightmap,
+    in float4 diffuse : COLOR0,
+    in float4 specular : COLOR1,
+    out float4 oColour : COLOR)
+{
+    float4 c0 = tex2D(layer0, uv0);
+    float4 c1 = tex2D(layer1, uv1);
+    float3 texturedColour = lerp(c0.rgb, c1.rgb, c1.a);
+    float4 lightmapColour = tex2D(lightmap, uvLightmap);
+    float4 baseColour = diffuse * lightmapColour;
+    float3 finalColour = baseColour.rgb * texturedColour + specular.rgb * (1-c0.a) * (1-c1.a) * lightmapColour.a;
+    float3 resultColour = Fogging(finalColour);
+    oColour = float4(resultColour, baseColour.a);
+}
+
+void
+TwoLayer_ps(
+    in float2 uv0 : TEXCOORD0,
+    in float2 uv1 : TEXCOORD1,
+    in uniform sampler2D layer0,
+    in uniform sampler2D layer1,
+    in float4 diffuse : COLOR0,
+    in float4 specular : COLOR1,
+    out float4 oColour : COLOR)
+{
+    float4 c0 = tex2D(layer0, uv0);
+    float4 c1 = tex2D(layer1, uv1);
+    float3 texturedColour = lerp(c0.rgb, c1.rgb, c1.a);
+    float4 baseColour = diffuse;
+    float3 finalColour = baseColour.rgb * texturedColour + specular.rgb * (1-c0.a) * (1-c1.a);
+    float3 resultColour = Fogging(finalColour);
+    oColour = float4(resultColour, baseColour.a);
+}
+
+void
+OneLayerLightmap_ps(
+    in float2 uv0 : TEXCOORD0,
+    in float2 uvLightmap : TEXCOORD1,
+    in uniform sampler2D layer0,
+    in uniform sampler2D lightmap,
+    in float4 diffuse : COLOR0,
+    in float4 specular : COLOR1,
+    out float4 oColour : COLOR)
+{
+    float4 c0 = tex2D(layer0, uv0);
+    float3 texturedColour = c0.rgb;
+    float4 lightmapColour = tex2D(lightmap, uvLightmap);
+    float4 baseColour = diffuse * lightmapColour;
+    float3 finalColour = baseColour.rgb * texturedColour + specular.rgb * (1-c0.a) * lightmapColour.a;
+    float3 resultColour = Fogging(finalColour);
+    oColour = float4(resultColour, baseColour.a);
+}
+
+void
+OneLayer_ps(
+    in float2 uv0 : TEXCOORD0,
+    in uniform sampler2D layer0,
+    in float4 diffuse : COLOR0,
+    in float4 specular : COLOR1,
+    out float4 oColour : COLOR)
+{
+    float4 c0 = tex2D(layer0, uv0);
+    float3 texturedColour = c0.rgb;
+    float4 baseColour = diffuse;
+    float3 finalColour = baseColour.rgb * texturedColour + specular.rgb * (1-c0.a);
+    float3 resultColour = Fogging(finalColour);
+    oColour = float4(resultColour, baseColour.a);
+}

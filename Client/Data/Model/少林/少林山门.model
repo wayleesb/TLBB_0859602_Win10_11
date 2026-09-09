@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="少林山门.frame" />
+    <entity mesh="少林山门.mesh" node="少林山门" />
+    <entity mesh="少林山门铃.mesh" />
+</model>

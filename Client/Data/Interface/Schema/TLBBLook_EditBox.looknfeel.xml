@@ -1,0 +1,503 @@
+<?xml version="1.0" ?>
+<Falagard>
+  <WidgetLook name="TLBB_Look_EditBoxNULL">
+    <NamedArea name="TextArea">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="6" />
+        </Dim>
+        <Dim type="TopEdge">
+          <AbsoluteDim value="3" />
+        </Dim>
+        <Dim type="Width">
+          <UnifiedDim scale="1.0" offset="-2" type="RightEdge" />
+        </Dim>
+        <Dim type="Height">
+          <UnifiedDim scale="1.0" offset="-1" type="BottomEdge" />
+        </Dim>
+      </Area>
+    </NamedArea>
+    
+    <ImagerySection name="selection">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="2" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="1" />
+          </Dim>
+          <Dim type="RightEdge">
+            <UnifiedDim scale="1" type="RightEdge">
+              <DimOperator op="Subtract">
+                <AbsoluteDim value="2" />
+              </DimOperator>
+            </UnifiedDim>
+          </Dim>
+          <Dim type="BottomEdge">
+            <UnifiedDim scale="1" type="BottomEdge">
+              <DimOperator op="Subtract">
+                <AbsoluteDim value="1" />
+              </DimOperator>
+            </UnifiedDim>
+          </Dim>
+        </Area>
+      </ImageryComponent>
+    </ImagerySection>
+    <ImagerySection name="Carat">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <AbsoluteDim value="3" />
+          </Dim>
+          <Dim type="BottomEdge">
+            <UnifiedDim scale="1.0" type="BottomEdge" />
+          </Dim>
+        </Area>
+      </ImageryComponent>
+    </ImagerySection>
+    <StateImagery name="ActiveSelection">
+    </StateImagery>
+    <StateImagery name="InactiveSelection">
+    </StateImagery>
+    <StateImagery name="Normal">
+    </StateImagery>
+  </WidgetLook>
+    
+  <WidgetLook name="TLBB_Look_EditBoxNormal">
+    <Property name="SelectedTextColour" value="FFFFFFFF" />
+    <NamedArea name="TextArea">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="6" />
+        </Dim>
+        <Dim type="TopEdge">
+          <AbsoluteDim value="3" />
+        </Dim>
+        <Dim type="Width">
+          <UnifiedDim scale="1.0" offset="-2" type="RightEdge" />
+        </Dim>
+        <Dim type="Height">
+          <UnifiedDim scale="1.0" offset="-1" type="BottomEdge" />
+        </Dim>
+      </Area>
+    </NamedArea>
+    <ImagerySection name="normal">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button3" image="EditBox_L" />
+        <Image type="RightEdge" imageset="Button3" image="EditBox_R" />
+        <Image type="Background" imageset="Button3" image="EditBox_M" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="selection">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="2" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="1" />
+          </Dim>
+          <Dim type="RightEdge">
+            <UnifiedDim scale="1" type="RightEdge">
+              <DimOperator op="Subtract">
+                <AbsoluteDim value="2" />
+              </DimOperator>
+            </UnifiedDim>
+          </Dim>
+          <Dim type="BottomEdge">
+            <UnifiedDim scale="1" type="BottomEdge">
+              <DimOperator op="Subtract">
+                <AbsoluteDim value="1" />
+              </DimOperator>
+            </UnifiedDim>
+          </Dim>
+        </Area>
+        <Image imageset="CommonFrame" image="CommonEditBoxBK" />
+        <VertFormat type="Stretched" />
+        <HorzFormat type="Stretched" />
+      </ImageryComponent>
+    </ImagerySection>
+    <ImagerySection name="Carat">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <AbsoluteDim value="1" />
+          </Dim>
+          <Dim type="BottomEdge">
+            <UnifiedDim scale="1.0" type="BottomEdge" />
+          </Dim>
+        </Area>
+        <Image imageset="Buttons" image="Cursor" />
+        <VertFormat type="Stretched" />
+        <HorzFormat type="Stretched" />
+      </ImageryComponent>
+    </ImagerySection>
+    <StateImagery name="ActiveSelection">
+      <Layer>
+        <Section section="selection" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="InactiveSelection">
+      <Layer>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Normal">
+      <Layer>
+        <Section section="normal" />
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+
+  <WidgetLook name="TLBB_Look_EditBoxInput">
+    <Property name="SelectedTextColour" value="FFFFFFFF" />
+    <NamedArea name="TextArea">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="10" />
+        </Dim>
+        <Dim type="TopEdge">
+          <AbsoluteDim value="3" />
+        </Dim>
+        <Dim type="Width">
+          <UnifiedDim scale="1.0" offset="-10" type="RightEdge" />
+        </Dim>
+        <Dim type="Height">
+          <UnifiedDim scale="1.0" offset="-1" type="BottomEdge" />
+        </Dim>
+      </Area>
+    </NamedArea>
+    <ImagerySection name="normal">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="CommonStaticImage" image="MainMenuBar_InputL" />
+        <Image type="RightEdge" imageset="CommonStaticImage" image="MainMenuBar_InputR" />
+        <Image type="Background" imageset="CommonStaticImage" image="MainMenuBar_InputM" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="selection">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="2" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="1" />
+          </Dim>
+          <Dim type="RightEdge">
+            <UnifiedDim scale="1" type="RightEdge">
+              <DimOperator op="Subtract">
+                <AbsoluteDim value="2" />
+              </DimOperator>
+            </UnifiedDim>
+          </Dim>
+          <Dim type="BottomEdge">
+            <UnifiedDim scale="1" type="BottomEdge">
+              <DimOperator op="Subtract">
+                <AbsoluteDim value="1" />
+              </DimOperator>
+            </UnifiedDim>
+          </Dim>
+        </Area>
+        <Image imageset="CommonFrame" image="CommonEditBoxBK" />
+        <VertFormat type="Stretched" />
+        <HorzFormat type="Stretched" />
+      </ImageryComponent>
+    </ImagerySection>
+    <ImagerySection name="Carat">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <AbsoluteDim value="2" />
+          </Dim>
+          <Dim type="BottomEdge">
+            <UnifiedDim scale="1.0" type="BottomEdge" />
+          </Dim>
+        </Area>
+        <Image imageset="Buttons" image="Cursor" />
+        <VertFormat type="Stretched" />
+        <HorzFormat type="Stretched" />
+      </ImageryComponent>
+    </ImagerySection>
+    <StateImagery name="ActiveSelection">
+      <Layer>
+        <Section section="selection" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="InactiveSelection">
+      <Layer>
+        <Section section="selection" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Normal">
+      <Layer>
+        <Section section="normal" />
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+
+  <WidgetLook name="TLBB_Look_ComboEditbox">
+    <Property name="SelectedTextColour" value="FFFFFFFF" />
+    <NamedArea name="TextArea">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="5" />
+        </Dim>
+        <Dim type="TopEdge">
+          <UnifiedDim scale="0" type="TopEdge" />
+        </Dim>
+        <Dim type="RightEdge">
+          <UnifiedDim scale="1" type="RightEdge">
+            <DimOperator op="Subtract">
+              <AbsoluteDim value="5" />
+            </DimOperator>
+          </UnifiedDim>
+        </Dim>
+        <Dim type="BottomEdge">
+          <UnifiedDim scale="1" type="BottomEdge" />
+        </Dim>
+      </Area>
+    </NamedArea>
+    <ImagerySection name="container_normal">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="LeftEdge" imageset="Button3" image="EditBox_L" />
+        <Image type="RightEdge" imageset="Button3" image="EditBox_R" />
+        <Image type="Background" imageset="Button3" image="EditBox_M" />
+        <HorzFormat type="Tiled" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="selection"></ImagerySection>
+    <ImagerySection name="Carat"></ImagerySection>
+    <StateImagery name="Enabled">
+      <Layer>
+        <Section section="container_normal" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="ReadOnly">
+      <Layer>
+        <Section section="container_normal" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="container_normal">
+          <Colours topLeft="FF7F7F7F" topRight="FF7F7F7F" bottomLeft="FF7F7F7F" bottomRight="FF7F7F7F" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="ActiveSelection">
+      <Layer />
+    </StateImagery>
+    <StateImagery name="InactiveSelection">
+      <Layer />
+    </StateImagery>
+  </WidgetLook>
+
+  <!--
+    ***************************************************
+        WoWLook/MultiEditbox_IME
+    ***************************************************
+    -->
+  <WidgetLook name="TLBB_Look_MultiEditbox_IME">
+    <Property name="SelectionBrushImage" value="set:CommonFrame image:CommonEditBoxBK" />
+    <NamedArea name="TextArea">
+      <Area>
+        <Dim type="LeftEdge">
+          <UnifiedDim scale="0.0" offset="5" type="Width" />
+        </Dim>
+        <Dim type="TopEdge">
+          <UnifiedDim scale="0.0" offset="5" type="Height" />
+        </Dim>
+        <Dim type="RightEdge">
+          <UnifiedDim scale="1.0" offset="-7" type="RightEdge" />
+        </Dim>
+        <Dim type="BottomEdge">
+          <UnifiedDim scale="1.0" offset="-5" type="BottomEdge" />
+        </Dim>
+      </Area>
+    </NamedArea>
+    <NamedArea name="TextAreaHScroll">
+      <Area>
+        <Dim type="LeftEdge">
+          <ImageDim imageset="CommonFrame" image="CommonFrame2_L" dimension="Width" />
+        </Dim>
+        <Dim type="TopEdge">
+          <ImageDim imageset="CommonFrame" image="CommonFrame2_T" dimension="Height" />
+        </Dim>
+        <Dim type="RightEdge">
+          <UnifiedDim scale="1" type="RightEdge">
+            <DimOperator op="Subtract">
+              <ImageDim imageset="CommonFrame" image="CommonFrame2_B" dimension="Width" />
+            </DimOperator>
+          </UnifiedDim>
+        </Dim>
+        <Dim type="BottomEdge">
+          <UnifiedDim scale="1" type="BottomEdge">
+            <DimOperator op="Subtract">
+              <WidgetDim widget="__auto_hscrollbar__" dimension="Height" />
+            </DimOperator>
+          </UnifiedDim>
+        </Dim>
+      </Area>
+    </NamedArea>
+    <NamedArea name="TextAreaVScroll">
+	  <Area>
+        <Dim type="LeftEdge">
+          <ImageDim imageset="CommonFrame" image="CommonFrame2_L" dimension="Width" />
+        </Dim>
+        <Dim type="TopEdge">
+          <ImageDim imageset="CommonFrame" image="CommonFrame2_T" dimension="Height" />
+        </Dim>
+        <Dim type="RightEdge">
+          <UnifiedDim scale="1" type="RightEdge">
+            <DimOperator op="Subtract">
+              <WidgetDim widget="__auto_vscrollbar__" dimension="Width" />
+            </DimOperator>
+          </UnifiedDim>
+        </Dim>
+        <Dim type="BottomEdge">
+			<UnifiedDim scale="1.0" offset="-5" type="BottomEdge" />
+        </Dim>
+      </Area>
+    </NamedArea>
+    <NamedArea name="TextAreaHVScroll">
+      <Area>
+        <Dim type="LeftEdge">
+          <ImageDim imageset="CommonFrame" image="CommonFrame2_L" dimension="Width" />
+        </Dim>
+        <Dim type="TopEdge">
+          <ImageDim imageset="CommonFrame" image="CommonFrame2_T" dimension="Height" />
+        </Dim>
+        <Dim type="RightEdge">
+          <UnifiedDim scale="1" type="RightEdge">
+            <DimOperator op="Subtract">
+              <WidgetDim widget="__auto_vscrollbar__" dimension="Width" />
+            </DimOperator>
+          </UnifiedDim>
+        </Dim>
+        <Dim type="BottomEdge">
+          <UnifiedDim scale="1" type="BottomEdge">
+            <DimOperator op="Subtract">
+              <WidgetDim widget="__auto_hscrollbar__" dimension="Height" />
+            </DimOperator>
+          </UnifiedDim>
+        </Dim>
+      </Area>
+    </NamedArea>
+    <Child type="TLBB_Scrollbar_Common" nameSuffix="__auto_vscrollbar__">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="0" />
+        </Dim>
+        <Dim type="TopEdge">
+          <AbsoluteDim value="1" />
+        </Dim>
+        <Dim type="Width">
+          <AbsoluteDim value="16" />
+        </Dim>
+        <Dim type="Height">
+          <UnifiedDim scale="1" offset="-2" type="Height" />
+        </Dim>
+      </Area>
+      <HorzAlignment type="RightAligned" />
+    </Child>
+    <ImagerySection name="Carat">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <AbsoluteDim value="2" />
+          </Dim>
+          <Dim type="BottomEdge">
+            <UnifiedDim scale="1.0" type="BottomEdge" />
+          </Dim>
+        </Area>
+        <Image imageset="Buttons" image="Cursor" />
+        <VertFormat type="Stretched" />
+        <HorzFormat type="Stretched" />
+      </ImageryComponent>
+    </ImagerySection>
+    <StateImagery name="Enabled">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Background_Common1" />
+        <Section look="TLBB_Look_Common" section="Frame_Type_Lace1" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="ReadOnly">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Background_Common1" />
+        <Section look="TLBB_Look_Common" section="Frame_Type_Lace1" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Background_Common1" />
+        <Section look="TLBB_Look_Common" section="Frame_Type_Lace1" />
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+</Falagard>

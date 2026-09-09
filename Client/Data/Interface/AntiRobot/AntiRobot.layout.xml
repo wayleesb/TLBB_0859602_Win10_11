@@ -1,0 +1,100 @@
+<?xml version="1.0" ?>
+<GUILayout>
+	<Window Type="TLBB_MainFrame0" Name="AntiRobot_Frame">
+		<Property Name="UnifiedPosition" Value="{{0.5,-120.000000},{0.15,0.0}" />
+		<Property Name="AbsoluteSize" Value="w:240 h:310" />
+	        <Event Name="Hidden" Function="AntiRobot_OnClose();" />
+		<Window Type="TLBB_DragTitle" Name="AntiRobot_DragTitle">
+			<Property Name="AbsolutePosition" Value="x:25.000000 y:12.000000" />
+			<Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+			<Property Name="Font" Value="YouYuan11.25" />
+			<Property Name="HorzFormatting" Value="HorzCentred" />
+			<Property Name="VertFormatting" Value="VertCentred" />
+			<Property Name="Text" Value="#{ANTIROBOT_TITLE}" />
+			<Property Name="DragTarget" Value="AntiRobot_Frame" />
+		</Window>
+		<Window Type="DefaultWindow" Name="AntiRobot_Background_Frame">
+			<Property Name="AbsolutePosition" Value="x:7.000000 y:38.000000" />
+			<Property Name="UnifiedSize" Value="{{1.000000,-14.000000},{1.000000,-57.000000}" />
+			<Window Type="TLBB_SimpleText" Name="AntiRobot_WarningText">
+				<Property Name="UnifiedPosition" Value="{{0.000000,2.000000},{0.000000,2.000000}" />
+				<Property Name="UnifiedSize" Value="{{1.000000,-4.000000},{0.000000,60.000000}" />
+				<Property Name="Text" Value="#{ANTIROBOT_WARNING_TEXT0}" />
+				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+				<Property Name="RiseOnClick" Value="False" />
+			</Window>
+			<Window Type="TLBB_Frame_Lace1" Name="AntiRobot_Image_Back">
+				<Property Name="UnifiedPosition" Value="{{0.5,-83.000000},{0.000000,70.000000}" />
+				<Property Name="AbsoluteSize" Value="w:166.000000 h:51.000000" />
+				<Window Type="TLBB_StaticImageNULL" Name="AntiRobot_Image">
+					<Property Name="AbsolutePosition" Value="x:3.000000 y:3.000000" />
+					<Property Name="AbsoluteSize" Value="w:160.000000 h:45.000000" />
+				</Window>
+			</Window>
+			<Window Type="TLBB_ButtonCheck" Name="AntiRobot_Answer1_Check">
+				<Property Name="UnifiedPosition" Value="{{0.0,57.000000},{1.000000,-115.000000}" />
+				<Property Name="AbsoluteSize" Value="w:12.000000 h:12.000000" />
+				<Property Name="CheckMode" Value="0" />
+		            	<Event Name="Clicked" Function="AntiRobot_SelAnswer(0);" />
+			</Window>
+			<Window Type="TLBB_ButtonNULL" Name="AntiRobot_Answer1">
+				<Property Name="UnifiedPosition" Value="{{0.0,70.000000},{1.000000,-120.000000}" />
+				<Property Name="UnifiedSize" Value="{{1.0,-128.000000},{0.000000,22.000000}" />
+				<Property Name="Text" Value="" />
+		            	<Event Name="Clicked" Function="AntiRobot_SelAnswer(0);" />
+			</Window>
+			<Window Type="TLBB_ButtonCheck" Name="AntiRobot_Answer2_Check">
+				<Property Name="UnifiedPosition" Value="{{0.0,57.000000},{1.000000,-90.000000}" />
+				<Property Name="AbsoluteSize" Value="w:12.000000 h:12.000000" />
+				<Property Name="CheckMode" Value="0" />
+		            	<Event Name="Clicked" Function="AntiRobot_SelAnswer(1);" />
+			</Window>
+			<Window Type="TLBB_ButtonNULL" Name="AntiRobot_Answer2">
+				<Property Name="UnifiedPosition" Value="{{0.0,70.000000},{1.000000,-95.000000}" />
+				<Property Name="UnifiedSize" Value="{{1.0,-128.000000},{0.000000,22.000000}" />
+				<Property Name="Text" Value="" />
+		            	<Event Name="Clicked" Function="AntiRobot_SelAnswer(1);" />
+			</Window>
+			<Window Type="TLBB_ButtonCheck" Name="AntiRobot_Answer3_Check">
+				<Property Name="UnifiedPosition" Value="{{0.0,57.000000},{1.000000,-65.000000}" />
+				<Property Name="AbsoluteSize" Value="w:12.000000 h:12.000000" />
+				<Property Name="CheckMode" Value="0" />
+		            	<Event Name="Clicked" Function="AntiRobot_SelAnswer(2);" />
+			</Window>
+			<Window Type="TLBB_ButtonNULL" Name="AntiRobot_Answer3">
+				<Property Name="UnifiedPosition" Value="{{0.0,70.000000},{1.000000,-70.000000}" />
+				<Property Name="UnifiedSize" Value="{{1.0,-128.000000},{0.000000,22.000000}" />
+				<Property Name="Text" Value="" />
+		            	<Event Name="Clicked" Function="AntiRobot_SelAnswer(2);" />
+			</Window>
+			<Window Type="TLBB_ButtonCheck" Name="AntiRobot_Answer4_Check">
+				<Property Name="UnifiedPosition" Value="{{0.0,57.000000},{1.000000,-40.000000}" />
+				<Property Name="AbsoluteSize" Value="w:12.000000 h:12.000000" />
+				<Property Name="CheckMode" Value="0" />
+		            	<Event Name="Clicked" Function="AntiRobot_SelAnswer(3);" />
+			</Window>
+			<Window Type="TLBB_ButtonNULL" Name="AntiRobot_Answer4">
+				<Property Name="UnifiedPosition" Value="{{0.0,70.000000},{1.000000,-45.000000}" />
+				<Property Name="UnifiedSize" Value="{{1.0,-128.000000},{0.000000,22.000000}" />
+				<Property Name="Text" Value="" />
+		            	<Event Name="Clicked" Function="AntiRobot_SelAnswer(3);" />
+			</Window>
+			<Window Type="TLBB_ButtonCommon" Name="AntiRobot_Accept">
+				<Property Name="UnifiedPosition" Value="{{1.0,-50.000000},{1.000000,-20.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.0,50.000000},{0.000000,20.000000}" />
+				<Property Name="Text" Value="#{INTERFACE_XML_557}" />
+				<Property Name="Disabled" Value="True" />
+		            	<Event Name="Clicked" Function="AntiRobot_Commit();" />
+			</Window>
+		
+			<Window Type="TLBB_StopWatch" Name="AntiRobot_StopWatch">
+				<Property Name="UnifiedPosition" Value="{{0.0,10.000000},{1.000000,-20.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.5,0.000000},{0.000000,18.000000}" />
+				<Property Name="Timer" Value="-1" />
+		            	<Event Name="ReachedZero" Function="AntiRobot_TimeReach();" />
+			</Window>
+		</Window>
+	</Window>
+</GUILayout>

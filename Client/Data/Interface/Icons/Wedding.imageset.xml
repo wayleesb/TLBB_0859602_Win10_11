@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<Imageset Name="Wedding" Imagefile="Icons/Wedding.jpg" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+	<Image Name="Wedding_1" XPos="0" YPos="0" Width="64" Height="64" />
+	<Image Name="Wedding_2" XPos="64" YPos="0" Width="64" Height="64" />
+	<Image Name="Wedding_3" XPos="128" YPos="0" Width="64" Height="64" />
+	<Image Name="Wedding_4" XPos="192" YPos="0" Width="64" Height="64" />
+	<Image Name="Wedding_5" XPos="0" YPos="64" Width="64" Height="64" />
+	<Image Name="Wedding_6" XPos="64" YPos="64" Width="64" Height="64" />
+	<Image Name="Wedding_7" XPos="128" YPos="64" Width="64" Height="64" />
+	<Image Name="Wedding_8" XPos="192" YPos="64" Width="64" Height="64" />
+	<Image Name="Wedding_9" XPos="0" YPos="128" Width="64" Height="64" />
+	<Image Name="Wedding_10" XPos="64" YPos="128" Width="64" Height="64" />
+	<Image Name="Wedding_11" XPos="128" YPos="128" Width="64" Height="64" />
+	<Image Name="Wedding_12" XPos="192" YPos="128" Width="64" Height="64" />
+	<Image Name="Wedding_13" XPos="0" YPos="192" Width="64" Height="64" />
+	<Image Name="Wedding_14" XPos="64" YPos="192" Width="64" Height="64" />
+	<Image Name="Wedding_15" XPos="128" YPos="192" Width="64" Height="64" />
+	<Image Name="Wedding_16" XPos="192" YPos="192" Width="64" Height="64" />
+</Imageset>

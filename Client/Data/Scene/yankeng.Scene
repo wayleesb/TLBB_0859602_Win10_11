@@ -1,0 +1,2607 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Scene formatVersion="0.1.1" name="yankeng">
+
+  <Terrain filename="yankeng.Terrain"/>
+
+  <Object name="#FairyEnviroment" type="Enviroment">
+    <Property name="ambient" value="0.145098 0.156863 0.254902"/>
+    <Property name="fog.mode" value="linear"/>
+    <Property name="fog.colour" value="0.07451 0.282353 0.211765"/>
+    <Property name="fog.linear start" value="3000"/>
+    <Property name="fog.linear end" value="6000"/>
+  </Object>
+
+  <Object name="#FairyMainLightOne" type="Light">
+    <Property name="type" value="directional"/>
+    <Property name="diffuse" value="0.156863 0.266667 0.439216"/>
+    <Property name="specular" value="0.443137 0.301961 0.768627"/>
+    <Property name="direction" value="-0.260163 -0.461447 -0.403712"/>
+    <Property name="cast shadows" value="true"/>
+  </Object>
+
+  <Object name="#FairyMainLightTwo" type="Light">
+    <Property name="type" value="directional"/>
+    <Property name="diffuse" value="0.388235 0.760784 0.462745"/>
+    <Property name="direction" value="0.941532 0 0.761021"/>
+  </Object>
+
+  <Object name="#FairySkyDome" type="SkyDome">
+    <Property name="material" value="CloudySky"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱1.mesh"/>
+    <Property name="position" value="12032.4 -200.998 -4044.53"/>
+    <Property name="orientation" value="0.999999 0 3.65105e-009 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱1.mesh"/>
+    <Property name="position" value="3400 -377.959 -11700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱4.mesh"/>
+    <Property name="position" value="2001.18 81.349 -2293.24"/>
+    <Property name="orientation" value="0.829984 0 0.557787 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱2.mesh"/>
+    <Property name="position" value="10636.4 588.917 -7242.21"/>
+    <Property name="orientation" value="0.670381 0 0.742017 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱2.mesh"/>
+    <Property name="position" value="8000 823.818 -11367.8"/>
+    <Property name="orientation" value="0.382683 0 0.92388 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱3.mesh"/>
+    <Property name="position" value="5043.5 974.327 -11110.9"/>
+    <Property name="orientation" value="0.402435 0 0.915449 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱4.mesh"/>
+    <Property name="position" value="6400 859.355 -10800"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱1.mesh"/>
+    <Property name="position" value="2242.67 -345.119 -11900"/>
+    <Property name="orientation" value="0.533539 0 0.845775 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱2.mesh"/>
+    <Property name="position" value="8844.47 949.51 -10837.5"/>
+    <Property name="orientation" value="0.998377 0 -0.0569595 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱4.mesh"/>
+    <Property name="position" value="7700 553.161 -11500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱4.mesh"/>
+    <Property name="position" value="10551.3 627.208 -6129.63"/>
+    <Property name="orientation" value="0.852732 0 0.522349 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱4.mesh"/>
+    <Property name="position" value="10804.1 633.563 -7900"/>
+    <Property name="orientation" value="0.703319 0 0.710875 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱4.mesh"/>
+    <Property name="position" value="10700 923.999 -10226.6"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱4.mesh"/>
+    <Property name="position" value="9840.48 976.067 -10798.8"/>
+    <Property name="orientation" value="0.783951 0 -0.620822 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱2.mesh"/>
+    <Property name="position" value="10539.8 620.197 -6500"/>
+    <Property name="orientation" value="0.421004 0 0.90706 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱3.mesh"/>
+    <Property name="position" value="300 -145.779 -3145.54"/>
+    <Property name="orientation" value="0.680193 0 0.733033 0"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="旋风学"/>
+    <Property name="position" value="3077.03 0 -42.6601"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="旋风学"/>
+    <Property name="position" value="171.405 699.724 -5749.19"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="旋风学"/>
+    <Property name="position" value="6702.95 429.7 -9288.1"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="旋风学"/>
+    <Property name="position" value="9383.61 467.107 -7238.89"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="旋风学"/>
+    <Property name="position" value="8608.93 646.057 -2012.12"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐架.mesh"/>
+    <Property name="position" value="11675.7 -349.326 -354.511"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐架.mesh"/>
+    <Property name="position" value="11675.7 -349.326 -1554.51"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐架.mesh"/>
+    <Property name="position" value="11194.9 -241.322 -3203.64"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐架.mesh"/>
+    <Property name="position" value="11194.9 -241.322 -4403.64"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐架.mesh"/>
+    <Property name="position" value="11194.9 -241.322 -5603.64"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱4.mesh"/>
+    <Property name="position" value="10781.2 739.216 -8200"/>
+    <Property name="orientation" value="0.0439629 0 0.999033 0"/>
+    <Property name="scale" value="0.526316 0.526316 0.526316"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱4.mesh"/>
+    <Property name="position" value="10756.9 538.416 -7586.84"/>
+    <Property name="orientation" value="0.98042 0 0.196912 0"/>
+    <Property name="scale" value="0.526316 0.526316 0.526316"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱1.mesh"/>
+    <Property name="position" value="600 361.202 -10300"/>
+    <Property name="orientation" value="0.593915 0 -0.804527 0"/>
+    <Property name="scale" value="0.454545 0.454545 0.454545"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱2.mesh"/>
+    <Property name="position" value="7941.28 963.974 -10771.2"/>
+    <Property name="orientation" value="0.00807174 0 0.999968 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱4.mesh"/>
+    <Property name="position" value="8300 450.107 -11100"/>
+    <Property name="orientation" value="0.077094 0 -0.997023 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱4.mesh"/>
+    <Property name="position" value="5500 606.568 -1996.85"/>
+    <Property name="orientation" value="-2.78339e-007 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱2.mesh"/>
+    <Property name="position" value="10304.3 959.29 -10612.8"/>
+    <Property name="orientation" value="0.947063 0 -0.321044 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱1.mesh"/>
+    <Property name="position" value="6900 643.083 -800"/>
+    <Property name="orientation" value="0.704986 0 -0.709219 0"/>
+    <Property name="scale" value="0.454545 0.454545 0.454545"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱1.mesh"/>
+    <Property name="position" value="7500 660.605 -712.789"/>
+    <Property name="orientation" value="0.691704 0 0.722179 0"/>
+    <Property name="scale" value="0.454545 0.454545 0.454545"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱1.mesh"/>
+    <Property name="position" value="6635.24 623.841 -1000"/>
+    <Property name="orientation" value="0.569397 0 0.822062 0"/>
+    <Property name="scale" value="0.454545 0.454545 0.454545"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱1.mesh"/>
+    <Property name="position" value="11000 -59.5281 -3700"/>
+    <Property name="orientation" value="0.994418 0 0.105515 0"/>
+    <Property name="scale" value="0.454545 0.454545 0.454545"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱1.mesh"/>
+    <Property name="position" value="2283.21 86.2799 -1928.34"/>
+    <Property name="orientation" value="0.859566 0 0.511023 0"/>
+    <Property name="scale" value="0.454545 0.454545 0.454545"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱1.mesh"/>
+    <Property name="position" value="2632.96 622.949 -2200"/>
+    <Property name="orientation" value="0.707106 0 0.707107 0"/>
+    <Property name="scale" value="0.454545 0.454545 0.454545"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱1.mesh"/>
+    <Property name="position" value="10756.1 -341.509 -3600"/>
+    <Property name="orientation" value="0.649386 0 -0.760456 0"/>
+  </Object>
+
+  <Object type="TerrainLiquid">
+    <Property name="material" value="haihuwater"/>
+    <Property name="position" value="11700 477.621 -7800"/>
+    <Property name="texture scale" value="0.3"/>
+    <Property name="depth texture layer.enable" value="true"/>
+    <Property name="depth texture layer.height scale" value="0.003"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱2.mesh"/>
+    <Property name="position" value="11278.3 313.587 -6733.42"/>
+    <Property name="orientation" value="0.102026 0 0.994784 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱1.mesh"/>
+    <Property name="position" value="7375.67 1009.05 -8700"/>
+    <Property name="orientation" value="0.629946 0 0.776639 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="8298.69 903.547 -2394.36"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="苗疆/苗疆火盆木架.mesh"/>
+    <Property name="position" value="8298.04 672.547 -2389.63"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="8298.62 903.547 -2399.41"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐晶.mesh"/>
+    <Property name="position" value="7400 979.257 -10800"/>
+    <Property name="orientation" value="0.127191 0 -0.99188 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐晶.mesh"/>
+    <Property name="position" value="7899.86 991.241 -10500"/>
+    <Property name="orientation" value="0.943083 0 -0.332565 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐晶.mesh"/>
+    <Property name="position" value="10800 957.456 -9860.13"/>
+    <Property name="orientation" value="0.877364 0 -0.479829 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐晶.mesh"/>
+    <Property name="position" value="8100 751.618 -11800"/>
+    <Property name="orientation" value="0.628526 0 -0.77779 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐晶.mesh"/>
+    <Property name="position" value="8519.47 983.303 -10577.5"/>
+    <Property name="orientation" value="0.996747 0 -0.0806322 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐晶.mesh"/>
+    <Property name="position" value="7175.67 998.266 -8900"/>
+    <Property name="orientation" value="0.973842 0 0.22724 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐晶.mesh"/>
+    <Property name="position" value="7675.67 1000.24 -8830.62"/>
+    <Property name="orientation" value="0.225669 0 0.974209 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱1.mesh"/>
+    <Property name="position" value="2600 -343.992 -10800"/>
+    <Property name="orientation" value="0.0918558 0 0.995773 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐晶.mesh"/>
+    <Property name="position" value="7200 657.518 -800"/>
+    <Property name="orientation" value="0.990105 0 -0.140361 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖晒盐.mesh"/>
+    <Property name="position" value="11670.4 437.204 -1754.51"/>
+    <Property name="orientation" value="0.997749 0 -0.0669952 0"/>
+    <Property name="scale" value="0.833333 0.833333 0.833333"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐架.mesh"/>
+    <Property name="position" value="10966.3 -292.069 -2353.08"/>
+    <Property name="orientation" value="-1 0 -6.04818e-008 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐晶.mesh"/>
+    <Property name="position" value="10900 50.1397 -2700"/>
+    <Property name="orientation" value="0.171881 0 -0.985121 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖晒盐.mesh"/>
+    <Property name="position" value="10704.6 494.084 -2367.84"/>
+    <Property name="orientation" value="0.707101 0 0.707107 0"/>
+    <Property name="scale" value="0.833333 0.833333 0.833333"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖晒盐.mesh"/>
+    <Property name="position" value="11130 494.378 -2359.52"/>
+    <Property name="orientation" value="0.707101 0 0.707107 0"/>
+    <Property name="scale" value="0.833333 0.833333 0.833333"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="草料场/麻袋.mesh"/>
+    <Property name="position" value="10427.6 451.338 -2300"/>
+    <Property name="orientation" value="0.955707 0 0.294317 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="草料场/麻袋.mesh"/>
+    <Property name="position" value="11658.8 426.766 -1254.51"/>
+    <Property name="orientation" value="0.955707 0 0.294317 0"/>
+    <Property name="scale" value="0.757576 0.757576 0.757576"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱1.mesh"/>
+    <Property name="position" value="10914.3 502.029 -6038.1"/>
+    <Property name="orientation" value="0.249632 0 -0.96834 0"/>
+    <Property name="scale" value="0.454545 0.454545 0.454545"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱3.mesh"/>
+    <Property name="position" value="4600 1219.08 -12600"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱3.mesh"/>
+    <Property name="position" value="3600 1107.63 -12700"/>
+    <Property name="orientation" value="-0.721601 0 0.692309 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="pubushuihua_02"/>
+    <Property name="position" value="3300 -277.623 -11800"/>
+    <Property name="orientation" value="0.9992 0 0.0400525 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱1.mesh"/>
+    <Property name="position" value="10500 660.141 -3300"/>
+    <Property name="orientation" value="-9.59727e-009 0 1 0"/>
+    <Property name="scale" value="0.454545 0.454545 0.454545"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱1.mesh"/>
+    <Property name="position" value="8730.14 547.136 -2400"/>
+    <Property name="orientation" value="0.887562 0 -0.460688 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐架.mesh"/>
+    <Property name="position" value="10090.1 -145.204 -2011.4"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+    <Property name="scale" value="1 1 1.1"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱4.mesh"/>
+    <Property name="position" value="7700 725.711 -600"/>
+    <Property name="orientation" value="-0.0838271 0 0.99648 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐架斜.mesh"/>
+    <Property name="position" value="10076.5 618.027 -402.791"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱4.mesh"/>
+    <Property name="position" value="8900 -410.039 -1200"/>
+    <Property name="orientation" value="0.991806 0 0.127754 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱1.mesh"/>
+    <Property name="position" value="9500 -399.737 -900"/>
+    <Property name="orientation" value="0.959915 0 -0.280291 0"/>
+    <Property name="scale" value="0.454545 0.454545 0.454545"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱3.mesh"/>
+    <Property name="position" value="10700 660.141 -3100"/>
+    <Property name="orientation" value="-0.193364 0 -0.981127 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱3.mesh"/>
+    <Property name="position" value="9300 589.895 -2500"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱1.mesh"/>
+    <Property name="position" value="1383.95 218.494 -10600"/>
+    <Property name="orientation" value="0.947758 0 -0.31899 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱1.mesh"/>
+    <Property name="position" value="3400 677.611 -2000"/>
+    <Property name="orientation" value="0.769918 0 -0.638143 0"/>
+    <Property name="scale" value="0.454545 0.454545 0.454545"/>
+  </Object>
+
+  <Object type="TerrainLiquid">
+    <Property name="material" value="haihuwater"/>
+    <Property name="position" value="1800 386.256 -10900"/>
+    <Property name="texture scale" value="0.3"/>
+    <Property name="depth texture layer.enable" value="true"/>
+    <Property name="depth texture layer.height scale" value="0.003"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱3.mesh"/>
+    <Property name="position" value="800 80.3615 -6500"/>
+    <Property name="orientation" value="-0.0675971 0 0.997713 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱1.mesh"/>
+    <Property name="position" value="900 177.159 -5400"/>
+    <Property name="orientation" value="0.985984 0 -0.166841 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖帐篷.mesh"/>
+    <Property name="position" value="10500 660.141 -4000"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐晶.mesh"/>
+    <Property name="position" value="1600 -15.8927 -1300"/>
+    <Property name="orientation" value="0.99812 0 -0.0613086 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="水瀑布/pubu2.mesh"/>
+    <Property name="position" value="2603.24 359.489 -12218.8"/>
+    <Property name="orientation" value="2.87402e-007 0 1 0"/>
+    <Property name="scale" value="0.7 1.2 1"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="水瀑布/pubu2.mesh"/>
+    <Property name="position" value="2094.78 328.287 -12170.1"/>
+    <Property name="orientation" value="-0.0569162 0 0.998379 0"/>
+    <Property name="scale" value="0.4 1.2 1"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="水瀑布/pubu2.mesh"/>
+    <Property name="position" value="1552.29 196.486 -11942.7"/>
+    <Property name="orientation" value="-0.539284 0 0.842123 0"/>
+    <Property name="scale" value="0.5 1.1 1"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="水瀑布/pubu2.mesh"/>
+    <Property name="position" value="1258.45 304.91 -11436.4"/>
+    <Property name="orientation" value="-0.375908 0 0.926656 0"/>
+    <Property name="scale" value="0.8 1.1 1"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="水瀑布/pubu2.mesh"/>
+    <Property name="position" value="721.439 249.83 -11039.1"/>
+    <Property name="orientation" value="-0.109995 0 0.993931 0"/>
+    <Property name="scale" value="0.5 1.1 1"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱4.mesh"/>
+    <Property name="position" value="5600 1068.58 -11000"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱3.mesh"/>
+    <Property name="position" value="5500 1096.52 -11400"/>
+    <Property name="orientation" value="0.680173 0 -0.733052 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱1.mesh"/>
+    <Property name="position" value="6300 1011.26 -11000"/>
+    <Property name="orientation" value="0.602298 0 0.798272 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱1.mesh"/>
+    <Property name="position" value="7200 700.877 -2300"/>
+    <Property name="orientation" value="0.831682 0 -0.555253 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱1.mesh"/>
+    <Property name="position" value="7800 688.818 -2400"/>
+    <Property name="orientation" value="0.658259 0 -0.752791 0"/>
+    <Property name="scale" value="0.454545 0.454545 0.454545"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱1.mesh"/>
+    <Property name="position" value="2000 1009.56 -6900"/>
+    <Property name="orientation" value="-0.244531 0 0.969643 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱1.mesh"/>
+    <Property name="position" value="2100 1005.76 -7800"/>
+    <Property name="orientation" value="0.999402 0 0.0345701 0"/>
+    <Property name="scale" value="0.636363 0.636363 0.636363"/>
+  </Object>
+
+  <Object type="TerrainLiquid">
+    <Property name="material" value="haihuwater"/>
+    <Property name="position" value="2200 -59.272 -1100"/>
+    <Property name="texture scale" value="0.3"/>
+    <Property name="depth texture layer.enable" value="true"/>
+    <Property name="depth texture layer.height scale" value="0.003"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱1.mesh"/>
+    <Property name="position" value="1100 289.055 -8200"/>
+    <Property name="orientation" value="-0.996336 0 -0.0855375 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱4.mesh"/>
+    <Property name="position" value="824.763 313.057 -3130.29"/>
+    <Property name="orientation" value="0.829984 0 0.557787 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱3.mesh"/>
+    <Property name="position" value="1575.89 381.535 -3134.48"/>
+    <Property name="orientation" value="3.56643e-007 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱1.mesh"/>
+    <Property name="position" value="702.763 334.598 -3900"/>
+    <Property name="orientation" value="-0.244531 0 0.969643 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱3.mesh"/>
+    <Property name="position" value="1200 287.302 -4600"/>
+    <Property name="orientation" value="0.566892 0 0.823793 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱1.mesh"/>
+    <Property name="position" value="3800 988.785 -9900"/>
+    <Property name="orientation" value="0.450624 0 0.892714 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱2.mesh"/>
+    <Property name="position" value="2000 1009.56 -4300"/>
+    <Property name="orientation" value="0.613317 0 0.789837 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱4.mesh"/>
+    <Property name="position" value="2100 1009.56 -5300"/>
+    <Property name="orientation" value="0.934724 0 0.355373 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐晶.mesh"/>
+    <Property name="position" value="2200 1009.56 -5100"/>
+    <Property name="orientation" value="0.316055 0 -0.948747 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱3.mesh"/>
+    <Property name="position" value="2180.32 964.707 -9203.96"/>
+    <Property name="orientation" value="0.996449 0 -0.0841948 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱3.mesh"/>
+    <Property name="position" value="3000 940.486 -10000"/>
+    <Property name="orientation" value="0.568259 0 0.82285 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐晶.mesh"/>
+    <Property name="position" value="10400 1002.5 -10200"/>
+    <Property name="orientation" value="0.896948 0 -0.442148 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐晶.mesh"/>
+    <Property name="position" value="10000 1018.66 -10500"/>
+    <Property name="orientation" value="0.972352 0 -0.233525 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱1.mesh"/>
+    <Property name="position" value="900 278.883 -10100"/>
+    <Property name="orientation" value="-0.0356736 0.00125728 0.999358 -0.00279851"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐架.mesh"/>
+    <Property name="position" value="9312.99 -144.118 -1849.46"/>
+    <Property name="orientation" value="-1 0 4.86372e-009 0"/>
+    <Property name="scale" value="1 1 1.1"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐架.mesh"/>
+    <Property name="position" value="8109.99 -141.625 -1853.03"/>
+    <Property name="orientation" value="-1 0 4.86372e-009 0"/>
+    <Property name="scale" value="1 1 1.1"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐架.mesh"/>
+    <Property name="position" value="4516.96 -273.566 -1605.7"/>
+    <Property name="orientation" value="-1 0 4.86372e-009 0"/>
+    <Property name="scale" value="1 1 1.1"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐架.mesh"/>
+    <Property name="position" value="5719.96 -276.059 -1602.13"/>
+    <Property name="orientation" value="-1 0 4.86372e-009 0"/>
+    <Property name="scale" value="1 1 1.1"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐架.mesh"/>
+    <Property name="position" value="2711.65 -78.6194 -851.562"/>
+    <Property name="orientation" value="-1 0 4.86372e-009 0"/>
+    <Property name="scale" value="1 1 1.1"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐架.mesh"/>
+    <Property name="position" value="1508.65 -76.1264 -855.132"/>
+    <Property name="orientation" value="-1 0 4.86372e-009 0"/>
+    <Property name="scale" value="1 1 1.1"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐架斜.mesh"/>
+    <Property name="position" value="1087.61 -67.1535 -1297.78"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐架斜.mesh"/>
+    <Property name="position" value="4601 755.936 -11777.3"/>
+    <Property name="orientation" value="-1 0 4.34299e-008 0"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐架.mesh"/>
+    <Property name="position" value="6703 764.62 -11776.6"/>
+    <Property name="orientation" value="-1 0 4.86372e-009 0"/>
+    <Property name="scale" value="1 1 1.1"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐架.mesh"/>
+    <Property name="position" value="5500 767.117 -11780.2"/>
+    <Property name="orientation" value="-1 0 4.86372e-009 0"/>
+    <Property name="scale" value="1 1 1.1"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱1.mesh"/>
+    <Property name="position" value="3900 294.348 -11501.7"/>
+    <Property name="orientation" value="0.52816 0.00260514 0.849139 -0.00162038"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐架.mesh"/>
+    <Property name="position" value="7797 773.133 -11756.2"/>
+    <Property name="orientation" value="-1 0 4.86372e-009 0"/>
+    <Property name="scale" value="1 1 1.1"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐架.mesh"/>
+    <Property name="position" value="9000 770.636 -11752.6"/>
+    <Property name="orientation" value="-1 0 4.86372e-009 0"/>
+    <Property name="scale" value="1 1 1.1"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐架.mesh"/>
+    <Property name="position" value="11932.1 1123.08 -10633.5"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+    <Property name="scale" value="1 1 1.1"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐架.mesh"/>
+    <Property name="position" value="11935.7 1120.58 -11836.5"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+    <Property name="scale" value="1 1 1.1"/>
+  </Object>
+
+  <Object type="TerrainLiquid">
+    <Property name="material" value="haihuwater"/>
+    <Property name="position" value="11300 992.19 -10600"/>
+    <Property name="texture scale" value="0.3"/>
+    <Property name="depth texture layer.enable" value="true"/>
+    <Property name="depth texture layer.height scale" value="0.003"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱4.mesh"/>
+    <Property name="position" value="4400 963.37 -10300"/>
+    <Property name="scale" value="2 3 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱4.mesh"/>
+    <Property name="position" value="2100 1009.56 -6200"/>
+    <Property name="scale" value="2 3 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱4.mesh"/>
+    <Property name="position" value="3100 755.45 -2600"/>
+    <Property name="scale" value="2 3 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱4.mesh"/>
+    <Property name="position" value="6300 682.13 -2400"/>
+    <Property name="scale" value="2 3 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐筐.mesh"/>
+    <Property name="position" value="5700 653.797 -2100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱1.mesh"/>
+    <Property name="position" value="3216.49 793.217 -2860.89"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+    <Property name="scale" value="0.454545 0.454545 0.454545"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱3.mesh"/>
+    <Property name="position" value="6300 615.956 -2679.98"/>
+    <Property name="orientation" value="0.48755 0 -0.873094 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱4.mesh"/>
+    <Property name="position" value="10500 660.141 -5000"/>
+    <Property name="orientation" value="0.707107 0 0.707107 0"/>
+    <Property name="scale" value="2 3 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱1.mesh"/>
+    <Property name="position" value="10200 660.141 -5000"/>
+    <Property name="orientation" value="0.999999 0 3.65105e-009 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱4.mesh"/>
+    <Property name="position" value="10561.3 909.975 -9700"/>
+    <Property name="orientation" value="0.818902 0 -0.573935 0"/>
+    <Property name="scale" value="2 3 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐晶.mesh"/>
+    <Property name="position" value="10400 1007.12 -9500"/>
+    <Property name="orientation" value="0.896948 0 -0.442148 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱4.mesh"/>
+    <Property name="position" value="10700 1018.21 -9400"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱4.mesh"/>
+    <Property name="position" value="10530.8 790.617 -8387.57"/>
+    <Property name="orientation" value="0.658535 0 0.752551 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱4.mesh"/>
+    <Property name="position" value="2300 877.327 -8600"/>
+    <Property name="orientation" value="0.878604 0 0.477551 0"/>
+    <Property name="scale" value="2 3 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐晶.mesh"/>
+    <Property name="position" value="2200 1032.38 -6400"/>
+    <Property name="orientation" value="0.941357 0 -0.337428 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐晶.mesh"/>
+    <Property name="position" value="2500 1004.29 -8700"/>
+    <Property name="orientation" value="0.941357 0 -0.337428 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐晶.mesh"/>
+    <Property name="position" value="2800 843.212 -2900"/>
+    <Property name="orientation" value="0.999431 0 -0.0338779 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="苗疆/苗疆火盆木架.mesh"/>
+    <Property name="position" value="5200 1104.78 -10900"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="5200.58 1335.78 -10909.8"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="5200.65 1335.78 -10904.7"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="苗疆/苗疆火盆木架.mesh"/>
+    <Property name="position" value="9700 1014.69 -10300"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="9700.58 1245.69 -10309.8"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="9700.65 1245.69 -10304.7"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐晶.mesh"/>
+    <Property name="position" value="7400 1005.31 -8500"/>
+    <Property name="orientation" value="0.988993 0 -0.147979 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐晶.mesh"/>
+    <Property name="position" value="9300 616.991 -2800"/>
+    <Property name="orientation" value="-0.388272 0 -0.921549 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐晶.mesh"/>
+    <Property name="position" value="5900 861.784 -5600"/>
+    <Property name="orientation" value="-0.388272 0 -0.921549 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐晶.mesh"/>
+    <Property name="position" value="3300 978.121 -9853.92"/>
+    <Property name="orientation" value="-0.388272 0 -0.921549 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱1.mesh"/>
+    <Property name="position" value="1874.84 1057.86 -5600"/>
+    <Property name="orientation" value="0.999951 0 -0.00995608 0"/>
+    <Property name="scale" value="0.454545 0.454545 0.454545"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱4.mesh"/>
+    <Property name="position" value="4706.57 1054.56 -10700"/>
+    <Property name="orientation" value="0.85509 0 0.518479 0"/>
+    <Property name="scale" value="0.526316 0.526316 0.526316"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱4.mesh"/>
+    <Property name="position" value="2300 585.963 -10600"/>
+    <Property name="orientation" value="0.85509 0 0.518479 0"/>
+    <Property name="scale" value="0.526316 0.526316 0.526316"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱4.mesh"/>
+    <Property name="position" value="2300 1127.23 -9700"/>
+    <Property name="orientation" value="0.85509 0 0.518479 0"/>
+    <Property name="scale" value="0.526316 0.526316 0.526316"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐架.mesh"/>
+    <Property name="position" value="3912.15 -79.9936 -849.682"/>
+    <Property name="orientation" value="-1 0 4.86372e-009 0"/>
+    <Property name="scale" value="1 1 1.1"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐架.mesh"/>
+    <Property name="position" value="5106.32 -85.8715 -850.42"/>
+    <Property name="orientation" value="-1 0 4.86372e-009 0"/>
+    <Property name="scale" value="1 1 1.1"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐架斜.mesh"/>
+    <Property name="position" value="6688.31 693.108 -870.368"/>
+    <Property name="orientation" value="-1 0 -5.80314e-008 0"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐架.mesh"/>
+    <Property name="position" value="7597.42 718.023 -884.556"/>
+    <Property name="orientation" value="-1 0 4.86372e-009 0"/>
+    <Property name="scale" value="1 1 1.1"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱3.mesh"/>
+    <Property name="position" value="913.798 313.822 -4900"/>
+    <Property name="orientation" value="-0.240257 0 0.97071 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱1.mesh"/>
+    <Property name="position" value="1000 381.929 -2300"/>
+    <Property name="orientation" value="-0.774991 0 0.631976 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱1.mesh"/>
+    <Property name="position" value="3400 -123.648 -1168.47"/>
+    <Property name="orientation" value="-0.774991 0 0.631976 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱1.mesh"/>
+    <Property name="position" value="4900 674.004 -500"/>
+    <Property name="orientation" value="-0.774991 0 0.631976 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐架斜.mesh"/>
+    <Property name="position" value="7197.5 -113.93 -1842.61"/>
+    <Property name="orientation" value="-1 0 -5.80314e-008 0"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐架.mesh"/>
+    <Property name="position" value="8359.56 711.347 -448.323"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+    <Property name="scale" value="1 1 1.1"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐架.mesh"/>
+    <Property name="position" value="8388.51 -60.5985 -900"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+    <Property name="scale" value="1 1 1.1"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐架.mesh"/>
+    <Property name="position" value="9324.02 529.362 -218.066"/>
+    <Property name="orientation" value="3.78659e-008 -1.14714e-015 -1 2.95343e-008"/>
+    <Property name="scale" value="1 1 1.1"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱3.mesh"/>
+    <Property name="position" value="9100 409.996 -422.239"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱3.mesh"/>
+    <Property name="position" value="11000 -197.636 -863.674"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐架.mesh"/>
+    <Property name="position" value="10874.1 -283.605 -700"/>
+    <Property name="orientation" value="-1 0 2.75105e-007 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐架.mesh"/>
+    <Property name="position" value="10864.6 520.999 -178.419"/>
+    <Property name="orientation" value="-1 0 2.75105e-007 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐架.mesh"/>
+    <Property name="position" value="12316.4 15.7357 -4500"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐架.mesh"/>
+    <Property name="position" value="12311.7 19.5762 -3300"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐架.mesh"/>
+    <Property name="position" value="12316.4 16.3604 -2102.3"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="12238 397.918 -5238.2"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shuidi"/>
+    <Property name="position" value="9703.43 985.686 -9413.82"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shuidi"/>
+    <Property name="position" value="2700 898.863 -3400"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shuimianlianyi"/>
+    <Property name="position" value="11493.9 994.454 -10213.3"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="sunny04"/>
+    <Property name="position" value="7520.26 2309.14 -8688.85"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shuidi"/>
+    <Property name="position" value="7200 1598.89 -7600"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="sunny04"/>
+    <Property name="position" value="4271.52 1898.03 -3259.65"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐晶.mesh"/>
+    <Property name="position" value="3900 658.46 -2200"/>
+    <Property name="orientation" value="0.985149 0 0.171736 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱4.mesh"/>
+    <Property name="position" value="4600 577.02 -2177.25"/>
+    <Property name="orientation" value="0.707106 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱1.mesh"/>
+    <Property name="position" value="5000 652.069 -2200"/>
+    <Property name="orientation" value="0.769918 0 -0.638143 0"/>
+    <Property name="scale" value="0.454545 0.454545 0.454545"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱1.mesh"/>
+    <Property name="position" value="6400 1029.33 -10496.1"/>
+    <Property name="orientation" value="-1.85056e-008 0 -1 0"/>
+    <Property name="scale" value="0.454545 0.454545 0.454545"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="苗疆/苗疆火盆木架.mesh"/>
+    <Property name="position" value="2300 1014.67 -7600"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="2300.58 1245.67 -7609.78"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="2300.65 1245.67 -7604.73"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="苗疆/苗疆火盆木架.mesh"/>
+    <Property name="position" value="6600 706.761 -2300"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="6600.58 937.761 -2309.78"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="6600.65 937.761 -2304.73"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="10500.7 912.319 -4404.73"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="苗疆/苗疆火盆木架.mesh"/>
+    <Property name="position" value="10500 681.319 -4400"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="10500.6 912.319 -4409.78"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="10600.7 1231.01 -8904.73"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="10600.6 1231.01 -8909.78"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="苗疆/苗疆火盆木架.mesh"/>
+    <Property name="position" value="10600 1000.01 -8900"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="sunny04"/>
+    <Property name="position" value="6315.14 1800.38 -5193.71"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="sunny04"/>
+    <Property name="position" value="2772.21 1836.45 -9318.6"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="sunny04"/>
+    <Property name="position" value="10100 1018.99 -2600"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="sunny04"/>
+    <Property name="position" value="10000 2023.88 -1300"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="sunny04"/>
+    <Property name="position" value="11400 1242.08 -1000"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱3.mesh"/>
+    <Property name="position" value="11629.9 369.325 -7600"/>
+    <Property name="orientation" value="0.983075 0 -0.183198 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱3.mesh"/>
+    <Property name="position" value="11200 1100.17 -8814.65"/>
+    <Property name="orientation" value="0.95575 0 -0.294176 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱3.mesh"/>
+    <Property name="position" value="11800 983.423 -9900"/>
+    <Property name="orientation" value="0.95575 0 -0.294176 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱3.mesh"/>
+    <Property name="position" value="9800 1210.72 -11900"/>
+    <Property name="orientation" value="0.973958 0 0.226722 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱3.mesh"/>
+    <Property name="position" value="2005.11 987.978 -7316.27"/>
+    <Property name="orientation" value="-0.999722 0 0.0235722 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐晶.mesh"/>
+    <Property name="position" value="2200 1020.52 -7200"/>
+    <Property name="orientation" value="0.744208 0 -0.667957 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐晶.mesh"/>
+    <Property name="position" value="2100 1016.8 -8100"/>
+    <Property name="orientation" value="0.316055 0 -0.948747 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐晶.mesh"/>
+    <Property name="position" value="2400 1095.43 -9900"/>
+    <Property name="orientation" value="0.316055 0 -0.948747 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐晶.mesh"/>
+    <Property name="position" value="10446.8 658.803 -5346.16"/>
+    <Property name="orientation" value="0.316055 0 -0.948747 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐晶.mesh"/>
+    <Property name="position" value="7800 663.124 -4700"/>
+    <Property name="orientation" value="-0.388272 0 -0.921549 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐晶.mesh"/>
+    <Property name="position" value="7000 1091.4 -10270.2"/>
+    <Property name="orientation" value="-0.388272 0 -0.921549 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐晶.mesh"/>
+    <Property name="position" value="4100 970.586 -7600"/>
+    <Property name="orientation" value="0.197136 0 -0.98038 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐晶.mesh"/>
+    <Property name="position" value="5900 703.237 -2700"/>
+    <Property name="orientation" value="0.0903094 0 -0.995918 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐晶.mesh"/>
+    <Property name="position" value="7529.34 672.198 -2500"/>
+    <Property name="orientation" value="-0.388272 0 -0.921549 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐晶.mesh"/>
+    <Property name="position" value="8500 688.802 -2400"/>
+    <Property name="orientation" value="-0.388272 0 -0.921549 0"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.952941 0.235294 0.152941"/>
+    <Property name="position" value="9700 1305.55 -10300"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.952941 0.235294 0.152941"/>
+    <Property name="position" value="5200 1499.21 -10900"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.92549 0.721569 0.176471"/>
+    <Property name="position" value="2500 1315.65 -9700"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.976471 0.317647 0.12549"/>
+    <Property name="position" value="2300 1319.29 -7600"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.952941 0.168627 0.145098"/>
+    <Property name="position" value="6600 990.917 -2300"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.905882 0.376471 0.196078"/>
+    <Property name="position" value="10500 980.491 -4400"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="10295.7 844.832 -6375.52"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="10295.7 844.832 -6380.57"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="苗疆/苗疆火盆木架.mesh"/>
+    <Property name="position" value="10295.1 613.832 -6370.79"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.980392 0.184314 0.121569"/>
+    <Property name="position" value="10300 836.356 -6400"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.905882 0.376471 0.196078"/>
+    <Property name="position" value="10600 1297.34 -8900"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoba01"/>
+    <Property name="position" value="2199.93 1050.49 -3105.05"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.976471 0.317647 0.12549"/>
+    <Property name="position" value="2199.35 1124.11 -3095.27"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="苗疆/苗疆火盆木架.mesh"/>
+    <Property name="position" value="2199.35 819.486 -3095.27"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="huoxing"/>
+    <Property name="position" value="2200 1050.49 -3100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="8530.77 2028.83 -4198.79"/>
+    <Property name="orientation" value="-0.0550587 0 0 0.998484"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="5600 2509.56 -8100"/>
+    <Property name="orientation" value="-0.0550587 0 0 0.998484"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="3400 2409.56 -5400"/>
+    <Property name="orientation" value="-0.0550587 0 0 0.998484"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="9000 2038.89 -5400"/>
+    <Property name="orientation" value="-0.0550587 0 0 0.998484"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="3000 2409.56 -6700"/>
+    <Property name="orientation" value="-0.0550587 0 0 0.998484"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="9600 2420.69 -8700"/>
+    <Property name="orientation" value="-0.0550587 0 0 0.998484"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="6900 2008.93 -2500"/>
+    <Property name="orientation" value="-0.0550587 0 0 0.998484"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="1200 1963.18 -10400"/>
+    <Property name="orientation" value="-0.0550587 0 0 0.998484"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="2400 1914.38 -11000"/>
+    <Property name="orientation" value="-0.0208788 0.923908 -0.0509464 0.378636"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="800 1961.1 -7700"/>
+    <Property name="orientation" value="-0.0208788 0.923908 -0.0509464 0.378636"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="2100 2314.79 -8100"/>
+    <Property name="orientation" value="-0.0208788 0.923908 -0.0509464 0.378636"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="10400 1868.19 -5700"/>
+    <Property name="orientation" value="-0.0208788 0.923908 -0.0509464 0.378636"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="10400 1862.09 -2700"/>
+    <Property name="orientation" value="-0.0208788 0.923908 -0.0509464 0.378636"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="3300 2026.19 -2200"/>
+    <Property name="orientation" value="-0.0208788 0.923908 -0.0509464 0.378636"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="4000 1948.3 -2000"/>
+    <Property name="orientation" value="-0.0208788 0.923908 -0.0509464 0.378636"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="2400 2122.79 -3600"/>
+    <Property name="orientation" value="0.0061451 0.992246 -0.0547147 -0.11144"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱2.mesh"/>
+    <Property name="position" value="9600 2159.71 -11300"/>
+    <Property name="orientation" value="-0.0208788 0.923908 -0.0509464 0.378636"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="长白山/冰柱.mesh"/>
+    <Property name="position" value="2300 769.195 -2800"/>
+    <Property name="orientation" value="0.894242 0 0.447583 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐晶.mesh"/>
+    <Property name="position" value="7047.76 673.756 -2377.68"/>
+    <Property name="orientation" value="-0.388272 0 -0.921549 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="水瀑布/pubu5.mesh"/>
+    <Property name="position" value="2375.03 391.534 -11407.8"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.956863 0.796078 0.141176"/>
+    <Property name="position" value="3769 1186.55 -3792"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.956863 0.796078 0.141176"/>
+    <Property name="position" value="5900 1139.34 -5600"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.956863 0.796078 0.141176"/>
+    <Property name="position" value="7300 1209.72 -9200"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="水瀑布/pubu5.mesh"/>
+    <Property name="position" value="1121.91 387.594 -10326.7"/>
+    <Property name="orientation" value="0.988257 0 0.152797 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="水瀑布/pubu5.mesh"/>
+    <Property name="position" value="1700 377.317 -10900"/>
+    <Property name="orientation" value="0.98421 0 0.177004 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐晶.mesh"/>
+    <Property name="position" value="10600 636.576 -5800"/>
+    <Property name="orientation" value="0.316055 0 -0.948747 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐晶.mesh"/>
+    <Property name="position" value="10600 667.823 -7800"/>
+    <Property name="orientation" value="0.316055 0 -0.948747 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐晶.mesh"/>
+    <Property name="position" value="11000 1144.83 -8800"/>
+    <Property name="orientation" value="0.316055 0 -0.948747 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐晶.mesh"/>
+    <Property name="position" value="10300 1216.29 -11100"/>
+    <Property name="orientation" value="0.316055 0 -0.948747 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐晶.mesh"/>
+    <Property name="position" value="8900 915.354 -11700"/>
+    <Property name="orientation" value="0.316055 0 -0.948747 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐晶.mesh"/>
+    <Property name="position" value="7500 1058.05 -10300"/>
+    <Property name="orientation" value="0.316055 0 -0.948747 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐晶.mesh"/>
+    <Property name="position" value="4700 1044.71 -10400"/>
+    <Property name="orientation" value="0.316055 0 -0.948747 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐晶.mesh"/>
+    <Property name="position" value="4300 978.666 -9970.32"/>
+    <Property name="orientation" value="0.316055 0 -0.948747 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐晶.mesh"/>
+    <Property name="position" value="2400 1017.92 -8400"/>
+    <Property name="orientation" value="0.316055 0 -0.948747 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐晶.mesh"/>
+    <Property name="position" value="1900 990.707 -8800"/>
+    <Property name="orientation" value="0.862717 0 0.505699 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐晶.mesh"/>
+    <Property name="position" value="9400 965.197 -11500"/>
+    <Property name="orientation" value="0.316055 0 -0.948747 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐晶.mesh"/>
+    <Property name="position" value="7200 1380.02 -10600"/>
+    <Property name="orientation" value="0.673412 0 -0.739275 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐晶.mesh"/>
+    <Property name="position" value="7200 1601.04 -10800"/>
+    <Property name="orientation" value="0.684673 0 -0.728859 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱3.mesh"/>
+    <Property name="position" value="5800 1401.4 -12200"/>
+    <Property name="orientation" value="0.736817 0 0.676092 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐架.mesh"/>
+    <Property name="position" value="11849.9 517.829 -7864.35"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐架.mesh"/>
+    <Property name="position" value="11845.2 521.67 -6664.35"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐架斜.mesh"/>
+    <Property name="position" value="11860.5 510.309 -5760.95"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐架斜.mesh"/>
+    <Property name="position" value="11859.5 -262.797 -4458.31"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱4.mesh"/>
+    <Property name="position" value="11700 -125.953 -5000"/>
+    <Property name="orientation" value="0.750245 0 0.661159 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐架.mesh"/>
+    <Property name="position" value="12320.8 13.4926 -5700.53"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐架.mesh"/>
+    <Property name="position" value="11915.3 1127.54 -9437.12"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐架.mesh"/>
+    <Property name="position" value="11175.6 1115.96 -12201.9"/>
+    <Property name="orientation" value="-2.39622e-008 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐架.mesh"/>
+    <Property name="position" value="574.502 399.795 -5600"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐架.mesh"/>
+    <Property name="position" value="594.219 421.422 -4400.25"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐架.mesh"/>
+    <Property name="position" value="589.421 412.909 -3203.31"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐架.mesh"/>
+    <Property name="position" value="586.687 419.253 -6815.35"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐架.mesh"/>
+    <Property name="position" value="999.64 419.217 -7564.4"/>
+    <Property name="orientation" value="9.58672e-008 0 -1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐架斜.mesh"/>
+    <Property name="position" value="600 426.44 -2296.22"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐架斜.mesh"/>
+    <Property name="position" value="934.866 410.673 -8006.92"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱1.mesh"/>
+    <Property name="position" value="2000 -67.7328 -1000"/>
+    <Property name="orientation" value="0.778816 0 0.627252 0"/>
+    <Property name="scale" value="0.454545 0.454545 0.454545"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐晶.mesh"/>
+    <Property name="position" value="6156.37 223.151 -1100"/>
+    <Property name="orientation" value="-0.388272 0 -0.921549 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖帐篷.mesh"/>
+    <Property name="position" value="9319.6 44.0856 -900.175"/>
+    <Property name="scale" value="0.625 0.625 0.625"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖帐篷.mesh"/>
+    <Property name="position" value="5378.51 665.96 -800"/>
+    <Property name="scale" value="0.625 0.625 0.625"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖帐篷.mesh"/>
+    <Property name="position" value="2906.83 622.437 -500"/>
+    <Property name="scale" value="0.625 0.625 0.625"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖帐篷.mesh"/>
+    <Property name="position" value="740.262 552.099 -1200"/>
+    <Property name="scale" value="0.625 0.625 0.625"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖帐篷.mesh"/>
+    <Property name="position" value="600 1197.72 -7564.4"/>
+    <Property name="scale" value="0.625 0.625 0.625"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖帐篷.mesh"/>
+    <Property name="position" value="7041.32 1537.59 -11700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖帐篷.mesh"/>
+    <Property name="position" value="10373.4 1405.03 -11500"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖晒盐.mesh"/>
+    <Property name="position" value="5169.5 1549.54 -11806.9"/>
+    <Property name="orientation" value="0.680338 0 0.732898 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖木头.mesh"/>
+    <Property name="position" value="4911.98 1147.38 -11609.5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖木头.mesh"/>
+    <Property name="position" value="1288.4 231.101 -1063.7"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖木头.mesh"/>
+    <Property name="position" value="5700 310.023 -1022.22"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖木头.mesh"/>
+    <Property name="position" value="6993.94 694.816 -1027.18"/>
+    <Property name="scale" value="1 1.5 1"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖木头.mesh"/>
+    <Property name="position" value="9920.21 -58.8558 -1368.93"/>
+    <Property name="scale" value="1 1.3 1"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖木头.mesh"/>
+    <Property name="position" value="10256.3 -91.9368 -1357.67"/>
+    <Property name="scale" value="1 1.3 1"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐架.mesh"/>
+    <Property name="position" value="11995.1 2.18854 -1200"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖木头.mesh"/>
+    <Property name="position" value="11695.2 496.09 -6088.08"/>
+    <Property name="scale" value="1 1.3 1"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖木头.mesh"/>
+    <Property name="position" value="11675.8 763.289 -8462.83"/>
+    <Property name="orientation" value="0.98252 0.186052 -0.00114161 0.00602875"/>
+    <Property name="scale" value="1 1.3 1"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖木头.mesh"/>
+    <Property name="position" value="11752.4 1413.83 -8873.64"/>
+    <Property name="scale" value="1 1.3 1"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐架斜.mesh"/>
+    <Property name="position" value="10780.2 1127.2 -11752"/>
+    <Property name="orientation" value="-0.707107 0 -0.707107 0"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖幌子.mesh"/>
+    <Property name="position" value="10300 1336.96 -11200"/>
+    <Property name="orientation" value="0.958842 0 -0.28394 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="水瀑布/pubu2.mesh"/>
+    <Property name="position" value="635.538 1310.13 -12353.2"/>
+    <Property name="orientation" value="-0.332837 0 0.942985 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="pubushuihua_02"/>
+    <Property name="position" value="1618.16 340.204 -11096.8"/>
+    <Property name="orientation" value="0.813824 0 0.581111 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="pubushuihua_02"/>
+    <Property name="position" value="900 320.883 -10500"/>
+    <Property name="orientation" value="0.996619 0 0.0821645 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="pubushuihua_02"/>
+    <Property name="position" value="1954 267.76 -11681"/>
+    <Property name="orientation" value="0.847264 0 0.531171 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="pubushuihua_02"/>
+    <Property name="position" value="2489 282.347 -11800"/>
+    <Property name="orientation" value="0.996619 0 0.0821645 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐晶.mesh"/>
+    <Property name="position" value="2967.44 669.739 -11725"/>
+    <Property name="orientation" value="-0.772527 0 -0.634988 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐筐.mesh"/>
+    <Property name="position" value="5233.09 689.101 -859.731"/>
+    <Property name="scale" value="0.649351 0.649351 0.649351"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐筐.mesh"/>
+    <Property name="position" value="5000 683.339 -816.755"/>
+    <Property name="scale" value="0.649351 0.649351 0.649351"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐筐.mesh"/>
+    <Property name="position" value="4800 695.32 -816.755"/>
+    <Property name="scale" value="0.649351 0.649351 0.649351"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖帐篷.mesh"/>
+    <Property name="position" value="4640.96 699.967 -858.757"/>
+    <Property name="scale" value="0.625 0.625 0.625"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖帐篷.mesh"/>
+    <Property name="position" value="9728.26 260.553 -636.829"/>
+    <Property name="scale" value="0.625 0.625 0.625"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐筐.mesh"/>
+    <Property name="position" value="10400 650.889 -4100"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐筐.mesh"/>
+    <Property name="position" value="10500 655.223 -3900"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐筐.mesh"/>
+    <Property name="position" value="10600 662.702 -4200"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐晶.mesh"/>
+    <Property name="position" value="10400 852.048 -8541.66"/>
+    <Property name="orientation" value="0.575025 0 -0.818143 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐晶.mesh"/>
+    <Property name="position" value="10285.4 964.423 -9959.13"/>
+    <Property name="orientation" value="0.575025 0 -0.818143 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="草料场/麻袋.mesh"/>
+    <Property name="position" value="10466.1 660.895 -3711.55"/>
+    <Property name="orientation" value="0.999743 0 0.0226225 0"/>
+    <Property name="scale" value="0.757576 0.757576 0.757576"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="草料场/麻袋.mesh"/>
+    <Property name="position" value="10202.2 1421.57 -11400"/>
+    <Property name="orientation" value="0.999743 0 0.0226225 0"/>
+    <Property name="scale" value="0.757576 0.757576 0.757576"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="草料场/麻袋.mesh"/>
+    <Property name="position" value="7000 1600.37 -11500"/>
+    <Property name="orientation" value="0.999743 0 0.0226225 0"/>
+    <Property name="scale" value="0.757576 0.757576 0.757576"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="草料场/麻袋.mesh"/>
+    <Property name="position" value="700 1196.66 -7531.4"/>
+    <Property name="orientation" value="0.999743 0 0.0226225 0"/>
+    <Property name="scale" value="0.757576 0.757576 0.757576"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="草料场/麻袋.mesh"/>
+    <Property name="position" value="788.853 513.873 -1175.05"/>
+    <Property name="orientation" value="0.889924 0 0.456106 0"/>
+    <Property name="scale" value="0.757576 0.757576 0.757576"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="草料场/麻袋.mesh"/>
+    <Property name="position" value="4200 650.912 -2000"/>
+    <Property name="orientation" value="0.999743 0 0.0226225 0"/>
+    <Property name="scale" value="0.757576 0.757576 0.757576"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="草料场/麻袋.mesh"/>
+    <Property name="position" value="5871.94 665.495 -2136.38"/>
+    <Property name="orientation" value="0.999743 0 0.0226225 0"/>
+    <Property name="scale" value="0.757576 0.757576 0.757576"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐筐.mesh"/>
+    <Property name="position" value="5526.74 653.116 -2079.83"/>
+    <Property name="orientation" value="0.935717 0 -0.352752 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖车.mesh"/>
+    <Property name="position" value="5297.62 671.868 -2138.54"/>
+    <Property name="orientation" value="0.349738 0 -0.936847 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖车.mesh"/>
+    <Property name="position" value="1484.34 437.141 -2500"/>
+    <Property name="orientation" value="0.676907 0 -0.736068 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐铲.mesh"/>
+    <Property name="position" value="2160.51 815.648 -2939.1"/>
+    <Property name="orientation" value="0.988578 0 0 -0.150709"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐铲.mesh"/>
+    <Property name="position" value="5500 663.247 -2200"/>
+    <Property name="orientation" value="0.988578 0 0 -0.150709"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐铲.mesh"/>
+    <Property name="position" value="10400 654.54 -2700"/>
+    <Property name="orientation" value="0.988578 0 0 -0.150709"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖帐篷.mesh"/>
+    <Property name="position" value="11658.5 427.262 -557.232"/>
+    <Property name="scale" value="0.625 0.625 0.625"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="草料场/麻袋.mesh"/>
+    <Property name="position" value="11600 431.345 -700"/>
+    <Property name="orientation" value="0.955707 0 0.294317 0"/>
+    <Property name="scale" value="0.757576 0.757576 0.757576"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖帐篷.mesh"/>
+    <Property name="position" value="11972.5 722.284 -1463.24"/>
+    <Property name="scale" value="0.625 0.625 0.625"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖帐篷.mesh"/>
+    <Property name="position" value="11431.2 486.635 -2390.03"/>
+    <Property name="scale" value="0.625 0.625 0.625"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐筐.mesh"/>
+    <Property name="position" value="11221.3 539.31 -4312.46"/>
+    <Property name="scale" value="0.769231 0.769231 0.769231"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐筐.mesh"/>
+    <Property name="position" value="11252.9 532.304 -6235.77"/>
+    <Property name="scale" value="0.769231 0.769231 0.769231"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖帐篷.mesh"/>
+    <Property name="position" value="11447.3 509.92 -6600"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱1.mesh"/>
+    <Property name="position" value="7134.08 1403.05 -10728.8"/>
+    <Property name="orientation" value="0.722128 0 -0.691759 0"/>
+    <Property name="scale" value="0.636363 0.636363 0.636363"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱1.mesh"/>
+    <Property name="position" value="1500 10.3301 -1100"/>
+    <Property name="orientation" value="0.707107 0 -0.707107 0"/>
+    <Property name="scale" value="0.636363 0.636363 0.636363"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shuidi"/>
+    <Property name="position" value="2900 1041.26 -9600"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shuidi"/>
+    <Property name="position" value="2500 1000.8 -4300"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shuidi"/>
+    <Property name="position" value="8000 692.766 -2600"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shuidi"/>
+    <Property name="position" value="5400 1009.56 -8400"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shuidi"/>
+    <Property name="position" value="8700 635.839 -6000"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shuidi"/>
+    <Property name="position" value="10600 724.54 -3400"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="shuidi"/>
+    <Property name="position" value="9600 972.519 -11300"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐铲.mesh"/>
+    <Property name="position" value="9800 1031.29 -11300"/>
+    <Property name="orientation" value="0.988578 0 0 -0.150709"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖幌子.mesh"/>
+    <Property name="position" value="7000 1420.33 -10600"/>
+    <Property name="orientation" value="0.958842 0 -0.28394 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖幌子.mesh"/>
+    <Property name="position" value="1533.39 1123.02 -7520.61"/>
+    <Property name="orientation" value="0.871834 0 -0.489801 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖幌子.mesh"/>
+    <Property name="position" value="2024.61 773.414 -3129.56"/>
+    <Property name="orientation" value="0.871834 0 -0.489801 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖幌子.mesh"/>
+    <Property name="position" value="6800 619.718 -1100"/>
+    <Property name="orientation" value="0.972112 0 0.234516 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖幌子.mesh"/>
+    <Property name="position" value="10700 675.74 -2800"/>
+    <Property name="orientation" value="0.871834 0 -0.489801 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖幌子.mesh"/>
+    <Property name="position" value="11660.3 488.947 -6320.25"/>
+    <Property name="orientation" value="0.871834 0 -0.489801 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖幌子.mesh"/>
+    <Property name="position" value="11500 1260.7 -8600"/>
+    <Property name="orientation" value="0.871834 0 -0.489801 0"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="旋风学"/>
+    <Property name="position" value="4077.07 1009.56 -5820.18"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="旋风学"/>
+    <Property name="position" value="7722.88 860.865 -6890.53"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="旋风学"/>
+    <Property name="position" value="9580.64 660.141 -3457.39"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="222.26 1245.27 -4445.98"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="829.286 403.709 -3329.84"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="3579.83 683.221 -536.664"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="7592.03 483.959 -1131.27"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="10012.2 335.343 -781.759"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="12227.6 342.831 -2860.21"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="11699.6 516.89 -5997.93"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="11530.6 889.547 -8405.81"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="11742.8 1025.83 -10814"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="8912.73 1059.31 -11992.8"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="7415.18 1364.36 -11744"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="6150.38 1164.03 -11910.4"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="3358.6 959.712 -12073.9"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="1705.81 780.735 -11410.8"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="2966.38 500.046 -11438.5"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="1378.87 671.829 -10767.2"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="1066.85 827.958 -9162.56"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="808.173 486.745 -7974.7"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="973.732 678.604 -5809.49"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="yinghuochong"/>
+    <Property name="position" value="884.271 601.996 -3945.15"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐铲.mesh"/>
+    <Property name="position" value="10700 1027.25 -8700"/>
+    <Property name="orientation" value="0.57418 -0.122683 0.804738 -0.0875339"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐铲.mesh"/>
+    <Property name="position" value="11600 489.762 -6900"/>
+    <Property name="orientation" value="0.988578 0 0 -0.150709"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="草料场/麻袋.mesh"/>
+    <Property name="position" value="11425.2 450.741 -6787.72"/>
+    <Property name="orientation" value="0.999743 0 0.0226225 0"/>
+    <Property name="scale" value="0.757576 0.757576 0.757576"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="草料场/麻袋.mesh"/>
+    <Property name="position" value="8501.21 1545.47 -11700"/>
+    <Property name="orientation" value="0.999743 0 0.0226225 0"/>
+    <Property name="scale" value="0.757576 0.757576 0.757576"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="草料场/麻袋.mesh"/>
+    <Property name="position" value="607.196 1203.93 -6900"/>
+    <Property name="orientation" value="0.999743 0 0.0226225 0"/>
+    <Property name="scale" value="0.757576 0.757576 0.757576"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖帐篷.mesh"/>
+    <Property name="position" value="1600 715.561 -600"/>
+    <Property name="scale" value="0.625 0.625 0.625"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.952941 0.168627 0.145098"/>
+    <Property name="position" value="8300 904.871 -2400"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.952941 0.537255 0.160784"/>
+    <Property name="position" value="9900 842.164 -2900"/>
+    <Property name="range" value="1000"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="2e-006"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐筐.mesh"/>
+    <Property name="position" value="6500 709.995 -2500"/>
+    <Property name="orientation" value="0.935717 0 -0.352752 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐铲.mesh"/>
+    <Property name="position" value="6495.04 732.019 -2620.86"/>
+    <Property name="orientation" value="0.0110128 -0.1507 0.988517 -0.0016789"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐晶.mesh"/>
+    <Property name="position" value="7900 694.674 -956"/>
+    <Property name="orientation" value="0.598916 0 0.800818 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="pubushuihua_02"/>
+    <Property name="position" value="1100 1373.51 -11600"/>
+    <Property name="orientation" value="0.813824 0 0.581111 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="pubushuihua_02"/>
+    <Property name="position" value="1300 1252.79 -12100"/>
+    <Property name="orientation" value="0.813824 0 0.581111 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="pubushuihua_02"/>
+    <Property name="position" value="600 1301.42 -11300"/>
+    <Property name="orientation" value="0.813824 0 0.581111 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱1.mesh"/>
+    <Property name="position" value="9280.38 323.762 -600"/>
+    <Property name="orientation" value="0.806453 0 -0.591298 0"/>
+    <Property name="scale" value="0.454545 0.454545 0.454545"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐架斜.mesh"/>
+    <Property name="position" value="11834 27.9927 -2993.53"/>
+    <Property name="orientation" value="-1 0 -1.24511e-007 0"/>
+    <Property name="receive shadows" value="true"/>
+    <Property name="receive decals" value="true"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱4.mesh"/>
+    <Property name="position" value="2300 276.679 -11800"/>
+    <Property name="orientation" value="0.85509 1.11015e-007 0.518479 -1.81877e-007"/>
+    <Property name="scale" value="0.526316 0.526316 0.526316"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱4.mesh"/>
+    <Property name="position" value="3000 783.542 -11913.7"/>
+    <Property name="orientation" value="0.85509 1.11015e-007 0.518479 -1.81877e-007"/>
+    <Property name="scale" value="0.684211 0.684211 0.684211"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱4.mesh"/>
+    <Property name="position" value="1900 253.202 -11400"/>
+    <Property name="orientation" value="0.85509 -1.08903e-007 0.518479 1.80345e-007"/>
+    <Property name="scale" value="0.684211 0.684211 0.684211"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐柱4.mesh"/>
+    <Property name="position" value="5100 1468.77 -12200"/>
+    <Property name="orientation" value="0.85509 1.11015e-007 0.518479 -1.81877e-007"/>
+    <Property name="scale" value="0.684211 0.684211 0.684211"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖晒盐.mesh"/>
+    <Property name="position" value="11202.7 545.284 -5358.84"/>
+    <Property name="orientation" value="-3.65575e-007 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖晒盐.mesh"/>
+    <Property name="position" value="11101.9 501.798 -700"/>
+    <Property name="orientation" value="-0.707107 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖晒盐.mesh"/>
+    <Property name="position" value="12315.4 802.241 -4148.43"/>
+    <Property name="orientation" value="-3.65575e-007 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖晒盐.mesh"/>
+    <Property name="position" value="11234.4 545.201 -3459.73"/>
+    <Property name="orientation" value="-3.65575e-007 0 1 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐晶.mesh"/>
+    <Property name="position" value="9400 977.292 -10412"/>
+    <Property name="orientation" value="2.48984e-007 0 1 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="pubushuihua_02"/>
+    <Property name="position" value="2100 1485.63 -12400"/>
+    <Property name="orientation" value="1 0 1.35192e-007 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="pubushuihua_02"/>
+    <Property name="position" value="2700 1508.99 -12300"/>
+    <Property name="orientation" value="1 0 7.80096e-008 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖车.mesh"/>
+    <Property name="position" value="2000 1038.05 -4900"/>
+    <Property name="orientation" value="0.349738 0 -0.936847 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖车.mesh"/>
+    <Property name="position" value="2125.71 937.662 -3715.68"/>
+    <Property name="orientation" value="0.707106 0 0.707107 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖车.mesh"/>
+    <Property name="position" value="2080.95 1008.35 -5823"/>
+    <Property name="orientation" value="0.85093 0 0.525277 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐铲.mesh"/>
+    <Property name="position" value="2095.56 1069.84 -5700"/>
+    <Property name="orientation" value="0.906408 -0.0601574 0.394603 -0.138182"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="盐湖/盐湖盐铲.mesh"/>
+    <Property name="position" value="2300 1020.38 -7800"/>
+    <Property name="orientation" value="0.988578 0 0 -0.150709"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="草料场/麻袋.mesh"/>
+    <Property name="position" value="2300 1007.59 -7900"/>
+    <Property name="orientation" value="0.999743 0 0.0226225 0"/>
+    <Property name="scale" value="0.757576 0.757576 0.757576"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="草料场/麻袋.mesh"/>
+    <Property name="position" value="2100 1060.03 -5500"/>
+    <Property name="orientation" value="0.85692 -0.0116525 0.0193906 0.514951"/>
+    <Property name="scale" value="0.757576 0.757576 0.757576"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="草料场/麻袋.mesh"/>
+    <Property name="position" value="8348.06 710.062 -1274.31"/>
+    <Property name="orientation" value="0.995999 0 0.0893475 0"/>
+    <Property name="scale" value="0.757576 0.757576 0.757576"/>
+  </Object>
+
+  <Object type="Effect">
+    <Property name="effect name" value="chuansongdian"/>
+    <Property name="position" value="10049.6 696.203 -2944.63"/>
+  </Object>
+
+</Scene>

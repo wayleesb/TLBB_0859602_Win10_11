@@ -1,0 +1,189 @@
+<?xml version="1.0" ?>
+<Falagard>
+  <!--
+    ***************************************************
+        WoWLook/ChatFrame
+    ***************************************************
+    -->
+  <WidgetLook name="TLBB_Look_ChatBoard">
+    <Property name="Font" value="SongTiBmp12" />
+  </WidgetLook>
+  <WidgetLook name="TLBB_Look_ChatHistory_ParentWindow"></WidgetLook>
+  <WidgetLook name="TLBB_Look_ChatHistory">
+    <Property name="ChildItem" value="key:ChatBoard name:TLBB_ChatBoard" />
+    <Child type="TLBB_ChatHistory_ParentWindow" nameSuffix="__auto_parent__">
+      <Area>
+        <Dim type="LeftEdge">
+          <UnifiedDim scale="0.0" offset="20" type="Width" />
+        </Dim>
+        <Dim type="TopEdge">
+          <UnifiedDim scale="0.0" offset="3" type="Height" />
+        </Dim>
+        <Dim type="RightEdge">
+          <UnifiedDim scale="1.0" offset="-3" type="Width" />
+        </Dim>
+        <Dim type="BottomEdge">
+          <UnifiedDim scale="1.0" offset="-3" type="Height">
+          </UnifiedDim>
+        </Dim>
+      </Area>
+    </Child>
+    <Child type="TLBB_Scrollbar_Common" nameSuffix="__auto_vscrollbar__">
+      <Property name="InheritsAlpha" value="false" />
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="3" />
+        </Dim>
+        <Dim type="TopEdge">
+          <AbsoluteDim value="3" />
+        </Dim>
+        <Dim type="Width">
+          <AbsoluteDim value="16" />
+        </Dim>
+        <Dim type="Height">
+          <UnifiedDim scale="1" offset="-20" type="Height" />
+        </Dim>
+      </Area>
+      
+    </Child>
+    <Child type="TLBB_ButtonNULL" nameSuffix="__auto_toend_btn__">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="3" />
+        </Dim>
+        <Dim type="TopEdge">
+          <UnifiedDim scale="1" offset="-17" type="Height" />
+        </Dim>
+        <Dim type="Width">
+          <ImageDim imageset="Button1" image="ScrollBar_Up_Normal" dimension="Width" />
+        </Dim>
+        <Dim type="Height">
+          <ImageDim imageset="Button1" image="ScrollBar_Up_Normal" dimension="Height" />
+        </Dim>
+      </Area>
+      <Property name="UseStandardImagery" value="False" />
+      <Property name="InheritsAlpha" value="false" />
+      <Property name="NormalImage" value="set:Buttons image:ImmediacyScrollBar_Down_Normal" />
+      <Property name="HoverImage" value="set:Buttons image:ImmediacyScrollBar_Down_Hover" />
+      <Property name="PushedImage" value="set:Buttons image:ImmediacyScrollBar_Down_Pushed" />
+    </Child>
+  </WidgetLook>
+  <WidgetLook name="TLBB_Look_ChatChannel">
+    <NamedArea name="ItemSize">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="0" />
+        </Dim>
+        <Dim type="TopEdge">
+          <AbsoluteDim value="0" />
+        </Dim>
+        <Dim type="RightEdge">
+          <AbsoluteDim value="23" />
+        </Dim>
+        <Dim type="BottomEdge">
+          <AbsoluteDim value="16" />
+        </Dim>
+      </Area>
+    </NamedArea>
+    <NamedArea name="ItemBkgLeftSize">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="0" />
+        </Dim>
+        <Dim type="TopEdge">
+          <AbsoluteDim value="0" />
+        </Dim>
+        <Dim type="RightEdge">
+          <AbsoluteDim value="25" />
+        </Dim>
+        <Dim type="BottomEdge">
+          <AbsoluteDim value="22" />
+        </Dim>
+      </Area>
+    </NamedArea>
+    <NamedArea name="ItemBkgMiddleSize">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="0" />
+        </Dim>
+        <Dim type="TopEdge">
+          <AbsoluteDim value="0" />
+        </Dim>
+        <Dim type="RightEdge">
+          <AbsoluteDim value="81" />
+        </Dim>
+        <Dim type="BottomEdge">
+          <AbsoluteDim value="22" />
+        </Dim>
+      </Area>
+    </NamedArea>
+    <NamedArea name="ItemBkgRightSize">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="0" />
+        </Dim>
+        <Dim type="TopEdge">
+          <AbsoluteDim value="0" />
+        </Dim>
+        <Dim type="RightEdge">
+          <AbsoluteDim value="3" />
+        </Dim>
+        <Dim type="BottomEdge">
+          <AbsoluteDim value="22" />
+        </Dim>
+      </Area>
+    </NamedArea>
+    <NamedArea name="IconSize">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="6" />
+        </Dim>
+        <Dim type="TopEdge">
+          <AbsoluteDim value="3" />
+        </Dim>
+        <Dim type="RightEdge">
+          <AbsoluteDim value="25" >
+            <DimOperator op="Subtract">
+              <AbsoluteDim value="3" />
+            </DimOperator>
+          </AbsoluteDim>
+        </Dim>
+        <Dim type="BottomEdge">
+          <AbsoluteDim value="22" >
+            <DimOperator op="Subtract">
+              <AbsoluteDim value="3" />
+            </DimOperator>
+          </AbsoluteDim>
+        </Dim>
+      </Area>
+    </NamedArea>
+    <StateImagery name="Frame">
+      <Layer>
+        <Section look="TLBB_Look_Common" section="Background_Common1" />
+        <Section look="TLBB_Look_Common" section="Frame_Type_Lace3" />
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+  <WidgetLook name="TLBB_Look_ChatSpeaker">
+    <Child type="TLBB_SimpleText" nameSuffix="__auto_name__">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="0" />
+        </Dim>
+        <Dim type="TopEdge">
+          <UnifiedDim scale="0.666666" type="Height" />
+        </Dim>
+        <Dim type="Width">
+          <UnifiedDim scale="1.0" type="Width" />
+        </Dim>
+        <Dim type="Height">
+          <UnifiedDim scale="0.333333" type="Height" />
+        </Dim>
+      </Area>
+    </Child>
+    <StateImagery name="Enabled">
+    </StateImagery>
+    <StateImagery name="Disabled">
+    </StateImagery>
+  </WidgetLook>
+</Falagard>

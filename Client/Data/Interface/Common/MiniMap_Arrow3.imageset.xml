@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<Imageset Name="MiniMap_Arrow3" Imagefile="Common/tga_MiniMap_Arrow3.dds" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+	<Image Name="Arrow_00000" XPos="0" YPos="0" Width="32" Height="32" />
+	<Image Name="Arrow_00001" XPos="32" YPos="0" Width="32" Height="32" />
+	<Image Name="Arrow_00002" XPos="64" YPos="0" Width="32" Height="32" />
+	<Image Name="Arrow_00003" XPos="96" YPos="0" Width="32" Height="32" />
+	<Image Name="Arrow_00004" XPos="128" YPos="0" Width="32" Height="32" />
+	<Image Name="Arrow_00005" XPos="160" YPos="0" Width="32" Height="32" />
+	<Image Name="Arrow_00006" XPos="192" YPos="0" Width="32" Height="32" />
+	<Image Name="Arrow_00007" XPos="224" YPos="0" Width="32" Height="32" />
+	<Image Name="Arrow_00008" XPos="0" YPos="32" Width="32" Height="32" />
+	<Image Name="Arrow_00009" XPos="32" YPos="32" Width="32" Height="32" />
+	<Image Name="Arrow_00010" XPos="64" YPos="32" Width="32" Height="32" />
+	<Image Name="Arrow_00011" XPos="96" YPos="32" Width="32" Height="32" />
+	<Image Name="Arrow_00012" XPos="128" YPos="32" Width="32" Height="32" />
+	<Image Name="Arrow_00013" XPos="160" YPos="32" Width="32" Height="32" />
+	<Image Name="Arrow_00014" XPos="192" YPos="32" Width="32" Height="32" />
+	<Image Name="Arrow_00015" XPos="224" YPos="32" Width="32" Height="32" />
+	<Image Name="Arrow_00016" XPos="0" YPos="64" Width="32" Height="32" />
+	<Image Name="Arrow_00017" XPos="32" YPos="64" Width="32" Height="32" />
+	<Image Name="Arrow_00018" XPos="64" YPos="64" Width="32" Height="32" />
+	<Image Name="Arrow_00019" XPos="96" YPos="64" Width="32" Height="32" />
+	<Image Name="Arrow_00020" XPos="128" YPos="64" Width="32" Height="32" />
+	<Image Name="Arrow_00021" XPos="160" YPos="64" Width="32" Height="32" />
+	<Image Name="Arrow_00022" XPos="192" YPos="64" Width="32" Height="32" />
+	<Image Name="Arrow_00023" XPos="224" YPos="64" Width="32" Height="32" />
+	<Image Name="Arrow_00024" XPos="0" YPos="96" Width="32" Height="32" />
+	<Image Name="Arrow_00025" XPos="32" YPos="96" Width="32" Height="32" />
+	<Image Name="Arrow_00026" XPos="64" YPos="96" Width="32" Height="32" />
+	<Image Name="Arrow_00027" XPos="96" YPos="96" Width="32" Height="32" />
+	<Image Name="Arrow_00028" XPos="128" YPos="96" Width="32" Height="32" />
+	<Image Name="Arrow_00029" XPos="160" YPos="96" Width="32" Height="32" />
+</Imageset>

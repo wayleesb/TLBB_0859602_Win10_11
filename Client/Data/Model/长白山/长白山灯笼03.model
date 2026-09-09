@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="长白山灯笼03.frame" />
+    <entity mesh="长白山灯笼03.mesh" node="长白山灯笼03">
+        <offset>
+            <translate x="2.80754e-022" y="-355.716" z="-1.52711e-005" />
+        </offset>
+    </entity>
+</model>

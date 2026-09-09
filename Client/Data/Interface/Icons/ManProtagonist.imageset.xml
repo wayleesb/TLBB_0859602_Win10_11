@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<Imageset Name="ManProtagonist" Imagefile="Icons/ManProtagonist.jpg" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+	<Image Name="ManProtagonist_1" XPos="0" YPos="0" Width="48" Height="48" />
+	<Image Name="ManProtagonist_2" XPos="48" YPos="0" Width="48" Height="48" />
+	<Image Name="ManProtagonist_3" XPos="96" YPos="0" Width="48" Height="48" />
+	<Image Name="ManProtagonist_4" XPos="144" YPos="0" Width="48" Height="48" />
+	<Image Name="ManProtagonist_5" XPos="192" YPos="0" Width="48" Height="48" />
+	<Image Name="ManProtagonist_6" XPos="0" YPos="48" Width="48" Height="48" />
+	<Image Name="ManProtagonist_7" XPos="48" YPos="48" Width="48" Height="48" />
+	<Image Name="ManProtagonist_8" XPos="96" YPos="48" Width="48" Height="48" />
+	<Image Name="ManProtagonist_9" XPos="144" YPos="48" Width="48" Height="48" />
+	<Image Name="ManProtagonist_10" XPos="192" YPos="48" Width="48" Height="48" />
+	<Image Name="ManProtagonist_11" XPos="0" YPos="96" Width="48" Height="48" />
+	<Image Name="ManProtagonist_12" XPos="48" YPos="96" Width="48" Height="48" />
+	<Image Name="ManProtagonist_13" XPos="96" YPos="96" Width="48" Height="48" />
+	<Image Name="ManProtagonist_14" XPos="144" YPos="96" Width="48" Height="48" />
+	<Image Name="ManProtagonist_15" XPos="192" YPos="96" Width="48" Height="48" />
+	<Image Name="ManProtagonist_16" XPos="0" YPos="144" Width="48" Height="48" />
+	<Image Name="ManProtagonist_17" XPos="48" YPos="144" Width="48" Height="48" />
+	<Image Name="ManProtagonist_18" XPos="96" YPos="144" Width="48" Height="48" />
+	<Image Name="ManProtagonist_19" XPos="144" YPos="144" Width="48" Height="48" />
+	<Image Name="ManProtagonist_20" XPos="192" YPos="144" Width="48" Height="48" />
+	<Image Name="ManProtagonist_21" XPos="0" YPos="192" Width="48" Height="48" />
+	<Image Name="ManProtagonist_22" XPos="48" YPos="192" Width="48" Height="48" />
+	<Image Name="ManProtagonist_23" XPos="96" YPos="192" Width="48" Height="48" />
+	<Image Name="ManProtagonist_24" XPos="144" YPos="192" Width="48" Height="48" />
+	<Image Name="ManProtagonist_25" XPos="192" YPos="192" Width="48" Height="48" />
+</Imageset>

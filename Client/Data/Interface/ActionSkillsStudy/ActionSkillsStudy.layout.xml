@@ -1,0 +1,244 @@
+<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame0" Name="ActionSkillsStudy_Frame">
+        <Property Name="UnifiedPosition" Value="{{0.5,-128.000000},{0.1,0.0}" />
+        <Property Name="AbsoluteSize" Value="w:280.000000 h:436.000000" />
+        <Event Name="Hidden" Function="ActionSkillsStudy_Close_Cilcked();" />
+        <!--title help close start-->
+        <Window Type="TLBB_DragTitle" Name="ActionSkillsStudy_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="ActionSkillsStudy_Frame" />
+            <Window Type="TLBB_SimpleText" Name="ActionSkillsStudy_NpcName">
+                <Property Name="Position" Value="x:0.0 y:0.0" />
+                <Property Name="Size" Value="w:1.00000 h:1" />
+                <Property Name="Font" Value="YouYuan11.25" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+            </Window>
+        </Window>
+        <Window Type="TLBB_ButtonHelp" Name="ActionSkillsStudy_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Property Name="Text" Value="TLBB_ButtonHelp" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*ActionSkillsStudy&quot;);' />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="ActionSkillsStudy_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Property Name="Text" Value="TLBB_ButtonClose" />
+            <Event Name="Clicked" Function="ActionSkillsStudy_Close_Cilcked();" />
+        </Window>
+        <!--title help close end-->
+        <!--client start-->
+        <Window Type="DefaultWindow" Name="ActionSkillsStudy_Frame_Client">
+            <Property Name="AbsolutePosition" Value="x:6.000000 y:36.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-12.000000},{1.000000,-55.000000}" />
+            <!--心法-->
+          <Window Type="TLBB_SimpleText" Name="ActionSkillsStudy_MenPai_Attr_Intro">
+            <Property Name="Position" Value="x:0.118 y:0.005" />
+            <Property Name="UnifiedSize" Value="{{0.000000,80.000000},{0.000000,20.000000}" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="Tooltip" Value="#{MPZSX_20071221_10}" />
+          </Window>
+          <Window Type="DefaultWindow" Name="ActionSkillsStudy_Frame_Fastness">
+            <Property Name="AbsolutePosition" Value="x:118.000000 y:2.000000" />
+            <Property Name="UnifiedSize" Value="{{0.000000,80.000000},{0.000000,20.000000}" />
+          <Window Type="TLBB_StaticImageNULL" Name="ActionSkillsStudy_MenPai_ICON">
+            <Property Name="UnifiedPosition" Value="{{0.0,0.000000},{0.0,2.000000}" />
+            <Property Name="AbsoluteSize" Value="w:62.000000 h:16.000000" />
+            <Property Name="RiseOnClick" Value="False" />
+          </Window>
+          </Window>
+            <Window Type="TLBB_ActionButton" Name="ActionSkillsStudy_XinfaSkill_1">
+                <Property Name="Position" Value="x:0.128 y:0.073491" />
+                <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                <Event Name="Clicked" Function="ActionSkillsStudy_Xinfa_Clicked(1);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="ActionSkillsStudy_XinfaSkill_2">
+                <Property Name="Position" Value="x:0.328 y:0.073491" />
+                <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                <Event Name="Clicked" Function="ActionSkillsStudy_Xinfa_Clicked(2);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="ActionSkillsStudy_XinfaSkill_3">
+                <Property Name="Position" Value="x:0.533 y:0.073491" />
+                <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                <Event Name="Clicked" Function="ActionSkillsStudy_Xinfa_Clicked(3);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="ActionSkillsStudy_XinfaSkill_4">
+                <Property Name="Position" Value="x:0.728 y:0.073491" />
+                <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                <Event Name="Clicked" Function="ActionSkillsStudy_Xinfa_Clicked(4);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="ActionSkillsStudy_XinfaSkill_5">
+                <Property Name="Position" Value="x:0.128 y:0.188976" />
+                <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                <Event Name="Clicked" Function="ActionSkillsStudy_Xinfa_Clicked(5);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="ActionSkillsStudy_XinfaSkill_6">
+                <Property Name="Position" Value="x:0.328 y:0.188976" />
+                <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                <Event Name="Clicked" Function="ActionSkillsStudy_Xinfa_Clicked(6);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="ActionSkillsStudy_XinfaSkill_7">
+                <Property Name="Position" Value="x:0.528 y:0.188976" />
+                <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                <Event Name="Clicked" Function="ActionSkillsStudy_Xinfa_Clicked(7);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="ActionSkillsStudy_XinfaSkill_8">
+                <Property Name="Position" Value="x:0.728 y:0.188976" />
+                <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                <Event Name="Clicked" Function="ActionSkillsStudy_Xinfa_Clicked(8);" />
+            </Window>
+            <!--招式-->
+            <Window Type="TLBB_Frame_Lace1" Name="ActionSkillsStudy_ZhaoshiSkill_Back">
+                <Property Name="Position" Value="x:0.000000  y:0.299213" />
+                <Property Name="Size" Value="w:1.0 h:0.123360" />
+                <Window Type="TLBB_ActionButton" Name="ActionSkillsStudy_ZhaoshiSkill_1">
+                    <Property Name="Position" Value="x:0.025000 y:0.111111" />
+                    <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                    <Property Name="DraggingEnabled" Value="True" />
+                    <Event Name="Clicked" Function="ActionSkillsStudy_Skill_Clicked(1);" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ActionSkillsStudy_ZhaoshiSkill_2">
+                    <Property Name="Position" Value="x:0.225000 y:0.111111" />
+                    <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                    <Property Name="DraggingEnabled" Value="True" />
+                    <Event Name="Clicked" Function="ActionSkillsStudy_Skill_Clicked(2);" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ActionSkillsStudy_ZhaoshiSkill_3">
+                    <Property Name="Position" Value="x:0.425000 y:0.111111" />
+                    <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                    <Property Name="DraggingEnabled" Value="True" />
+                    <Event Name="Clicked" Function="ActionSkillsStudy_Skill_Clicked(3);" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ActionSkillsStudy_ZhaoshiSkill_4">
+                    <Property Name="Position" Value="x:0.625000 y:0.111111" />
+                    <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                    <Property Name="DraggingEnabled" Value="True" />
+                    <Event Name="Clicked" Function="ActionSkillsStudy_Skill_Clicked(4);" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ActionSkillsStudy_ZhaoshiSkill_5">
+                    <Property Name="Position" Value="x:0.825000 y:0.111111" />
+                    <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                    <Property Name="DraggingEnabled" Value="True" />
+                    <Event Name="Clicked" Function="ActionSkillsStudy_Skill_Clicked(5);" />
+                </Window>
+            </Window>
+            <!--study window -->
+            <Window Type="DefaultWindow" Name="ActionSkillsStudy_SkillIcon_Frame">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-218.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.0,0.000000},{0.000000,48.000000}" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Window Type="TLBB_ActionButton" Name="ActionSkillsStudy_XinfaIcon">
+                    <Property Name="UnifiedPosition" Value="{{0.1,0.000000},{0.000000,8.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                    <Property Name="DraggingEnabled" Value="True" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ActionSkillsStudy_SkillIcon">
+                    <Property Name="UnifiedPosition" Value="{{0.1,0.000000},{0.000000,8.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:34.0 h:34.0" />
+                    <Property Name="DraggingEnabled" Value="True" />
+                </Window>
+                <Window Type="TLBB_SimpleMulitiTextFrame" Name="ActionSkillsStudy_SkillName">
+                    <Property Name="UnifiedPosition" Value="{{0.3,0.000000},{0.000000,5.000000}" />
+                    <Property Name="UnifiedSize" Value="{{0.6,0.000000},{0.000000,20.000000}" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_466}" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                </Window>
+                <Window Type="TLBB_SimpleMulitiTextFrame" Name="ActionSkillsStudy_SkillLevel">
+                    <Property Name="UnifiedPosition" Value="{{0.3,0.000000},{0.000000,25.000000}" />
+                    <Property Name="UnifiedSize" Value="{{0.6,0.000000},{0.000000,20.000000}" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_231}" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                </Window>
+            </Window>
+            <!--textinfo-->
+            <Window Type="TLBB_Frame_Lace4" Name="ActionSkillsStudy_Explain_Bk">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-171.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.000000,0.000000},{0.000000,90.000000}" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Window Type="TLBB_SimpleMulitiTextFrame" Name="ActionSkillsStudy_SkillInfo">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,10.000000},{0.000000,8.000000}" />
+                    <Property Name="UnifiedSize" Value="{{1.000000,-20.000000},{1.000000,-16.000000}" />
+                    <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                    <Property Name="VertFormatting" Value="TopAligned" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="ActionSkillsStudy_CurrentlyExp_Character_Text">
+                <Property Name="UnifiedPosition" Value="{{0.0,0.000000},{1.000000,-81.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.5,0.000000},{0.000000,20.000000}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="TextColor" Value="FFFFF263" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="ActionSkillsStudy_DemandExp_Character_Text">
+                <Property Name="UnifiedPosition" Value="{{0.5,0.000000},{1.000000,-81.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.5,0.000000},{0.000000,20.000000}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="TextColor" Value="FFFFF263" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="ActionSkillsStudy_Currently_Money_Text">
+                <Property Name="UnifiedPosition" Value="{{0.0,0.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.76,0.000000},{0.000000,20.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_833}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_Money" Name="ActionSkillsStudy_Currently_Money">
+                <Property Name="UnifiedPosition" Value="{{0.25,0.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.5,0.000000},{0.000000,18.000000}" />
+                <Property Name="HorzFormatting" Value="RightAligned" />
+                <Property Name="MoneyNumber" Value="0" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="ActionSkillsStudy_Demand_Jiaozi_Text">
+                <Property Name="UnifiedPosition" Value="{{0.0,0.000000},{1.000000,-60.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.76,0.000000},{0.000000,20.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_1249}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_Money" Name="ActionSkillsStudy_Demand_Jiaozi">
+                <Property Name="UnifiedPosition" Value="{{0.25,0.000000},{1.000000,-60.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.5,0.000000},{0.000000,18.000000}" />
+                <Property Name="HorzFormatting" Value="RightAligned" />
+                <Property Name="MoneyNumber" Value="0" />
+                <Property Name="GoldIcon" Value = "set:Button6 image:Lace_JiaoziJin" />
+                <Property Name="SilverIcon" Value = "set:Button6 image:Lace_JiaoziYin" />
+                <Property Name="CopperIcon" Value = "set:Button6 image:Lace_JiaoziTong" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="ActionSkillsStudy_Currently_Jiaozi_Text">
+                <Property Name="UnifiedPosition" Value="{{0.0,0.000000},{1.000000,-40.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.76,0.000000},{0.000000,20.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{BDJB_051021_3}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_Money" Name="ActionSkillsStudy_Currently_Jiaozi">
+                <Property Name="UnifiedPosition" Value="{{0.25,0.000000},{1.000000,-40.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.5,0.000000},{0.000000,18.000000}" />
+                <Property Name="HorzFormatting" Value="RightAligned" />
+                <Property Name="MoneyNumber" Value="0" />
+                <Property Name="GoldIcon" Value = "set:Button6 image:Lace_JiaoziJin" />
+                <Property Name="SilverIcon" Value = "set:Button6 image:Lace_JiaoziYin" />
+                <Property Name="CopperIcon" Value = "set:Button6 image:Lace_JiaoziTong" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="ActionSkillsStudy_UpLevel_Frame">
+                <Property Name="UnifiedPosition" Value="{{0.78,0.000000},{1.000000,-42.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.2,0.000000},{0.000000,26.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_804}" />
+                <Event Name="Clicked" Function="ActionSkillsStudy_UpLevel_Clicked();" />
+            </Window>
+        </Window>
+        <!--client end-->
+    </Window>
+</GUILayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="大理派厢房.frame" />
+    <entity mesh="大理派厢房铃铛1.mesh" node="大理派厢房铃铛1">
+        <offset>
+            <translate x="363.697" y="-299.075" z="-134.5" />
+        </offset>
+    </entity>
+    <entity mesh="大理派厢房铃铛2.mesh" node="大理派厢房铃铛2">
+        <offset>
+            <translate x="-357.716" y="-299.292" z="-134.5" />
+        </offset>
+    </entity>
+    <entity mesh="大理派厢房.mesh" node="大理派厢房" />
+    <entity mesh="大理派厢房铃铛03.mesh" node="大理派厢房铃铛03">
+        <offset>
+            <translate x="-357.716" y="-299.292" z="-134.5" />
+        </offset>
+    </entity>
+    <entity mesh="大理派厢房铃铛04.mesh" node="大理派厢房铃铛04">
+        <offset>
+            <translate x="363.697" y="-299.075" z="-134.5" />
+        </offset>
+    </entity>
+</model>

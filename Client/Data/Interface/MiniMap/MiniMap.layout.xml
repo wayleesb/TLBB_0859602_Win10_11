@@ -1,0 +1,523 @@
+<?xml version="1.0" ?>
+<GUILayout>
+	<Window Type="DefaultWindow" Name="MiniMap_Frame">
+		<Property Name="UnifiedPosition" Value="{{1.0,-195},{0.0,0}}" />
+		<Property Name="AbsoluteSize" Value="w:195 h:246" />
+		<Property Name="MouseLButtonHollow" Value="true" />
+		<Property Name="MouseRButtonHollow" Value="true" />
+		<Window Type="TLBB_StaticImageNULL" Name="MiniMap_Background_Time">
+			<Property Name="AbsolutePosition" Value="x:0 y:0" />
+			<Property Name="AbsoluteSize" Value="w:51.000000 h:42.000000" />
+			<Property Name="Image" Value="set:MiniMap image:Minimap_Time" />
+			<Property Name="RiseOnClick" Value="False" />
+			<Window Type="TLBB_MapImage" Name="MiniMap_ChineseTime">
+				<Property Name="AbsolutePosition" Value="x:21.000000 y:10.000000" />
+				<Property Name="AbsoluteSize" Value="w:20.000000 h:20.000000" />
+				<Property Name="Image" Value="set:CommonStaticImage image:Minimap_Time1" />
+				<Property Name="ChildImage" Value="name:Time1 set:CommonStaticImage image:Minimap_Time1" />
+				<Property Name="ChildImage" Value="name:Time2 set:CommonStaticImage image:Minimap_Time2" />
+				<Property Name="ChildImage" Value="name:Time3 set:CommonStaticImage image:Minimap_Time3" />
+				<Property Name="ChildImage" Value="name:Time4 set:CommonStaticImage image:Minimap_Time4" />
+				<Property Name="ChildImage" Value="name:Time5 set:CommonStaticImage image:Minimap_Time5" />
+				<Property Name="ChildImage" Value="name:Time6 set:CommonStaticImage image:Minimap_Time6" />
+				<Property Name="ChildImage" Value="name:Time7 set:CommonStaticImage image:Minimap_Time7" />
+				<Property Name="ChildImage" Value="name:Time8 set:CommonStaticImage image:Minimap_Time8" />
+				<Property Name="ChildImage" Value="name:Time9 set:CommonStaticImage image:Minimap_Time9" />
+				<Property Name="ChildImage" Value="name:Time10 set:CommonStaticImage image:Minimap_Time10" />
+				<Property Name="ChildImage" Value="name:Time11 set:CommonStaticImage image:Minimap_Time11" />
+				<Property Name="ChildImage" Value="name:Time12 set:CommonStaticImage image:Minimap_Time12" />
+				<Property Name="MouseHollow" Value="true" />
+                <Property Name="MouseMoveHollow" Value="true" />
+                        <Property Name="MouseLButtonHollow" Value="true" />
+                        <Property Name="MouseRButtonHollow" Value="true" />
+			</Window>
+			<Window Type="TLBB_MapImage" Name="MiniMap_MiniMap_NetStatus">
+				<Property Name="AbsolutePosition" Value="x:15.000000 y:5.000000" />
+				<Property Name="AbsoluteSize" Value="w:31.000000 h:30.000000" />
+				<Property Name="Image" Value="set:CommonStaticImage image:Minimap_NetState1" />
+				<Property Name="ChildImage" Value="name:NetState1 set:CommonStaticImage image:Minimap_NetState1" />
+				<Property Name="ChildImage" Value="name:NetState2 set:CommonStaticImage image:Minimap_NetState2" />
+				<Property Name="ChildImage" Value="name:NetState3 set:CommonStaticImage image:Minimap_NetState3" />
+				<Property Name="ChildImage" Value="name:NetState4 set:CommonStaticImage image:Minimap_NetState4" />
+				<Event Name="MouseEnter" Function="MiniMap_NetStatus_MouseEnter();" />
+				<Event Name="MouseLeave" Function="MiniMap_NetStatus_MouseLeave();" />
+				<Event Name="MouseLButtonDown" Function="MiniMap_NetStatus_MouseLButtonDown();" />
+				<Window Type="TLBB_Animate" Name="MiniMap_NetStatus_Flash">
+                        <Property Name="Position" Value="x:0 y:0" />
+                        <Property Name="Size" Value="w:1 h:1" />
+                        <Property Name="Animate" Value="ProgressFlash" />
+                        <Property Name="MouseHollow" Value="true" />
+                        <Property Name="MouseMoveHollow" Value="true" />
+                        <Property Name="MouseLButtonHollow" Value="true" />
+                        <Property Name="MouseRButtonHollow" Value="true" />
+                </Window>
+				<Window Type="TLBB_StaticImageNULL" Name="MiniMap_TimeDot1">
+					<Property Name="AbsolutePosition" Value="x:20.000000 y:0.000000" />
+					<Property Name="AbsoluteSize" Value="w:9.000000 h:9.000000" />
+					<Property Name="Image" Value="set:CommonStaticImage image:Minimap_TimePointer" />
+				</Window>
+				<Window Type="TLBB_StaticImageNULL" Name="MiniMap_TimeDot2">
+					<Property Name="AbsolutePosition" Value="x:24.000000 y:5.000000" />
+					<Property Name="AbsoluteSize" Value="w:9.000000 h:9.000000" />
+					<Property Name="Image" Value="set:CommonStaticImage image:Minimap_TimePointer" />
+                        <Property Name="MouseHollow" Value="true" />
+                        <Property Name="MouseMoveHollow" Value="true" />
+                        <Property Name="MouseLButtonHollow" Value="true" />
+                        <Property Name="MouseRButtonHollow" Value="true" />
+				</Window>
+				<Window Type="TLBB_StaticImageNULL" Name="MiniMap_TimeDot3">
+					<Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+					<Property Name="AbsoluteSize" Value="w:9.000000 h:9.000000" />
+					<Property Name="Image" Value="set:CommonStaticImage image:Minimap_TimePointer" />
+                        <Property Name="MouseHollow" Value="true" />
+                        <Property Name="MouseMoveHollow" Value="true" />
+                        <Property Name="MouseLButtonHollow" Value="true" />
+                        <Property Name="MouseRButtonHollow" Value="true" />
+				</Window>
+				<Window Type="TLBB_StaticImageNULL" Name="MiniMap_TimeDot4">
+					<Property Name="AbsolutePosition" Value="x:23.000000 y:18.000000" />
+					<Property Name="AbsoluteSize" Value="w:9.000000 h:9.000000" />
+					<Property Name="Image" Value="set:CommonStaticImage image:Minimap_TimePointer" />
+                        <Property Name="MouseHollow" Value="true" />
+                        <Property Name="MouseMoveHollow" Value="true" />
+                        <Property Name="MouseLButtonHollow" Value="true" />
+                        <Property Name="MouseRButtonHollow" Value="true" />
+				</Window>
+				<Window Type="TLBB_StaticImageNULL" Name="MiniMap_TimeDot5">
+					<Property Name="AbsolutePosition" Value="x:19.000000 y:22.000000" />
+					<Property Name="AbsoluteSize" Value="w:9.000000 h:9.000000" />
+					<Property Name="Image" Value="set:CommonStaticImage image:Minimap_TimePointer" />
+                        <Property Name="MouseHollow" Value="true" />
+                        <Property Name="MouseMoveHollow" Value="true" />
+                        <Property Name="MouseLButtonHollow" Value="true" />
+                        <Property Name="MouseRButtonHollow" Value="true" />				
+				</Window>
+				<Window Type="TLBB_StaticImageNULL" Name="MiniMap_TimeDot6">
+					<Property Name="AbsolutePosition" Value="x:11.000000 y:24.000000" />
+					<Property Name="AbsoluteSize" Value="w:9.000000 h:9.000000" />
+					<Property Name="Image" Value="set:CommonStaticImage image:Minimap_TimePointer" />
+                        <Property Name="MouseHollow" Value="true" />
+                        <Property Name="MouseMoveHollow" Value="true" />
+                        <Property Name="MouseLButtonHollow" Value="true" />
+                        <Property Name="MouseRButtonHollow" Value="true" />
+				</Window>
+				<Window Type="TLBB_StaticImageNULL" Name="MiniMap_TimeDot7">
+					<Property Name="AbsolutePosition" Value="x:3.000000 y:22.000000" />
+					<Property Name="AbsoluteSize" Value="w:9.000000 h:9.000000" />
+					<Property Name="Image" Value="set:CommonStaticImage image:Minimap_TimePointer" />
+                        <Property Name="MouseHollow" Value="true" />
+                        <Property Name="MouseMoveHollow" Value="true" />
+                        <Property Name="MouseLButtonHollow" Value="true" />
+                        <Property Name="MouseRButtonHollow" Value="true" />
+				</Window>
+				<Window Type="TLBB_StaticImageNULL" Name="MiniMap_TimeDot8">
+					<Property Name="AbsolutePosition" Value="x:-1.000000 y:18.000000" />
+					<Property Name="AbsoluteSize" Value="w:9.000000 h:9.000000" />
+					<Property Name="Image" Value="set:CommonStaticImage image:Minimap_TimePointer" />
+                        <Property Name="MouseHollow" Value="true" />
+                        <Property Name="MouseMoveHollow" Value="true" />
+                        <Property Name="MouseLButtonHollow" Value="true" />
+                        <Property Name="MouseRButtonHollow" Value="true" />
+				</Window>
+				<Window Type="TLBB_StaticImageNULL" Name="MiniMap_TimeDot9">
+					<Property Name="AbsolutePosition" Value="x:-4.000000 y:11.000000" />
+					<Property Name="AbsoluteSize" Value="w:9.000000 h:9.000000" />
+					<Property Name="Image" Value="set:CommonStaticImage image:Minimap_TimePointer" />
+                        <Property Name="MouseHollow" Value="true" />
+                        <Property Name="MouseMoveHollow" Value="true" />
+                        <Property Name="MouseLButtonHollow" Value="true" />
+                        <Property Name="MouseRButtonHollow" Value="true" />
+				</Window>
+				<Window Type="TLBB_StaticImageNULL" Name="MiniMap_TimeDot10">
+					<Property Name="AbsolutePosition" Value="x:-2.000000 y:5.000000" />
+					<Property Name="AbsoluteSize" Value="w:9.000000 h:9.000000" />
+					<Property Name="Image" Value="set:CommonStaticImage image:Minimap_TimePointer" />
+                        <Property Name="MouseHollow" Value="true" />
+                        <Property Name="MouseMoveHollow" Value="true" />
+                        <Property Name="MouseLButtonHollow" Value="true" />
+                        <Property Name="MouseRButtonHollow" Value="true" />
+				</Window>
+				<Window Type="TLBB_StaticImageNULL" Name="MiniMap_TimeDot11">
+					<Property Name="AbsolutePosition" Value="x:2.000000 y:0.000000" />
+					<Property Name="AbsoluteSize" Value="w:9.000000 h:9.000000" />
+					<Property Name="Image" Value="set:CommonStaticImage image:Minimap_TimePointer" />
+                        <Property Name="MouseHollow" Value="true" />
+                        <Property Name="MouseMoveHollow" Value="true" />
+                        <Property Name="MouseLButtonHollow" Value="true" />
+                        <Property Name="MouseRButtonHollow" Value="true" />
+				</Window>
+				<Window Type="TLBB_StaticImageNULL" Name="MiniMap_TimeDot12">
+					<Property Name="AbsolutePosition" Value="x:11.000000 y:-4.000000" />
+					<Property Name="AbsoluteSize" Value="w:9.000000 h:9.000000" />
+					<Property Name="Image" Value="set:CommonStaticImage image:Minimap_TimePointer" />
+					<Property Name="MouseHollow" Value="true" />
+                    <Property Name="MouseMoveHollow" Value="true" />
+                    <Property Name="MouseLButtonHollow" Value="true" />
+                    <Property Name="MouseRButtonHollow" Value="true" />
+				</Window>
+			</Window>
+		</Window>
+		<Window Type="TLBB_StaticImageNULL" Name="MiniMap_Background_Title">
+			<Property Name="UnifiedPosition" Value="{{1.0,-144},{0.0,0}}" />
+			<Property Name="AbsoluteSize" Value="w:144.000000 h:42.000000" />
+			<Property Name="Image" Value="set:MiniMap image:Minimap_BK" />
+			
+			<Window Type="TLBB_SimpleText" Name="MiniMap_Placename">
+				<Property Name="AbsolutePosition" Value="x:2.000000 y:8.000000" />
+				<Property Name="AbsoluteSize" Value="w:100.000000 h:18.000000" />
+        <Property Name="Font" Value="YouYuan9.75" />
+        <Property Name="RiseOnClick" Value="False" />
+        <Property Name="HorzFormatting" Value="HorzCentred" />
+        <Property Name="VertFormatting" Value="VertCentred" />
+				
+			</Window>
+			<Window Type="TLBB_ButtonHelp" Name="MiniMap_Help">
+				<Property Name="UnifiedPosition" Value="{{1.000000,-35.000000},{0.000000,6.000000}" />
+				<Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+				<Event Name="Clicked" Function='Helper:GotoHelper(&quot;*MiniMap&quot;);' />
+			</Window>
+			<Window Type="TLBB_ButtonNULL" Name="MiniMap_CloseButtons">
+				<Property Name="UnifiedPosition" Value="{{1.000000,-20.000000},{0.000000,6.000000}" />
+				<Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+				<Property Name="NormalImage" Value="set:CommonStaticImage image:MinimapZoomIn_Normal" />
+				<Property Name="HoverImage" Value="set:CommonStaticImage image:MinimapZoomIn_Hover" />
+				<Property Name="PushedImage" Value="set:CommonStaticImage image:MinimapZoomIn_Pushed" />
+				<Property Name="Tooltip" Value="#{INTERFACE_XML_906}" />
+				<Event Name="Clicked" Function="Minimap_Min();" />
+			</Window>
+			<Window Type="TLBB_ButtonNULL" Name="MiniMap_OpenButtons">
+				<Property Name="UnifiedPosition" Value="{{1.000000,-20.000000},{0.000000,6.000000}" />
+				<Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+				<Property Name="NormalImage" Value="set:CommonStaticImage image:MinimapZoomOut_Normal" />
+				<Property Name="HoverImage" Value="set:CommonStaticImage image:MinimapZoomOut_Hover" />
+				<Property Name="PushedImage" Value="set:CommonStaticImage image:MinimapZoomOut_Pushed" />
+				<Event Name="Clicked" Function="Minimap_Max();" />
+				<Property Name="Tooltip" Value="#{INTERFACE_XML_332}" />
+			</Window>
+			<Window Type="TLBB_SimpleText" Name="MiniMap_Coordinate">
+				<Property Name="AbsolutePosition" Value="x:0.000000 y:25.000000" />
+				<Property Name="AbsoluteSize" Value="w:144.000000 h:16.000000" />
+				<Property Name="HorzFormatting" Value="HorzCentred" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Property Name="Text" Value="x:300 y:300" />
+				<Property Name="MouseMoveHollow" Value="true" />
+			</Window>
+		</Window>
+		<Window Type="DefaultWindow" Name="MiniMap_Background_Frame">
+			<Property Name="AbsolutePosition" Value="x:0.000000 y:42.000000" />
+			<Property Name="AbsoluteSize" Value="w:195.000000 h:185.000000" />
+			<Window Type="TLBB_StaticImageNULL" Name="MiniMap_Background_Map">
+				<Property Name="UnifiedPosition" Value="{{1.000000,-154.000000},{0.000000,0.000000}" />
+				<Property Name="AbsoluteSize" Value="w:154.000000 h:184.000000" />
+				<Property Name="Image" Value="set:MiniMap image:Minimap_Area" />
+				<Property Name="RiseOnClick" Value="False" />
+				<!--  
+        IMAGE_TYPE_Animy		= 0, // 敌人
+        IMAGE_TYPE_ExpNpc		= 1, // 特殊npc
+        IMAGE_TYPE_Team			= 2, // 队友
+        IMAGE_TYPE_Player		= 3, // 别的玩家
+        IMAGE_TYPE_ExpObj		= 4, // 生长
+        IMAGE_TYPE_ScenePos		= 5, // 场景跳转
+        IMAGE_TYPE_Pet			= 6, // 宠物
+        IMAGE_TYPE_Guid			= 7, // 同帮派成
+
+        IMAGE_TYPE_Active		= 8, // 激活方向点//激活点的箭头，如果看的到就不显示这个箭头而是一个闪光点，否则就显示指向这个点的方向箭头
+        IMAGE_TYPE_Direction	= 9,// 方向箭头//方向箭头，指的是一个方向，
+        IMAGE_TYPE_MYSELF		= 10, //自己// 自己的箭
+
+        IMAGE_TYPE_NUM,
+        -->
+				<Window Type="TLBB_SceneMap" Name="MiniMap_MapArea">
+					<Property Name="AbsolutePosition" Value="x:8.000000 y:10.000000" />
+					<Property Name="AbsoluteSize" Value="w:140.000000 h:140.000000" />
+					<Property Name="RiseOnClick" Value="False" />
+					<Property Name="RoundEnabled" Value="True" />
+					<Property Name="ChildItem" Value="key:Image name:TLBB_StaticImageNULL" />
+					<Property Name="ChildItem" Value="key:Animate name:TLBB_AnimateImage" />
+					<Property Name="IconImage" Value="type:Icon0 set:UIIcons image:Map_Animy" />
+					<Property Name="IconImage" Value="type:Icon1 set:UIIcons image:Map_NPC" />
+					<Property Name="IconImage" Value="type:Icon2 set:UIIcons image:Map_Teammate" />
+					<Property Name="IconImage" Value="type:Icon3 set:UIIcons image:Map_OtherPlayer" />
+					<Property Name="IconImage" Value="type:Icon4 set:UIIcons image:Map_Resource" />
+					<Property Name="IconImage" Value="type:Icon6 set:UIIcons image:Map_Pet" />
+					<Property Name="IconImage" Value="type:Icon7 set:UIIcons image:Map_Gurid" />
+					<Property Name="IconImage" Value="type:Icon8 set:UIIcons image:Map_NPC" />
+					<Property Name="IconImage" Value="type:Icon12 set:UIIcons image:Resource_Mine" />
+					<Property Name="IconImage" Value="type:Icon13 set:UIIcons image:Resource_Herbal" />
+					<Property Name="IconImage" Value="type:Icon14 set:UIIcons image:Resource_Fish" />
+					<Property Name="AnimateImage" Value="type:Animate8 animate:Minimap_Direction2" />
+					<Property Name="AnimateImage" Value="type:Animate9 animate:Minimap_Direction" />
+					<Property Name="AnimateImage" Value="type:Animate10 animate:Minimap_arrow" />
+					<Property Name="FlashAnimateImage" Value="type:FlashAnimateImage0 animate:ActiveFlash" />
+					<Property Name="FlashAnimateImage" Value="type:FlashAnimateImage1 animate:ActiveFlash" />
+					<Property Name="FlashAnimateImage" Value="type:FlashAnimateImage2 animate:ActiveFlash" />
+					<Property Name="FlashAnimateImage" Value="type:FlashAnimateImage3 animate:ActiveFlash" />
+					<Property Name="FlashAnimateImage" Value="type:FlashAnimateImage4 animate:ActiveFlash" />
+					<Property Name="FlashAnimateImage" Value="type:FlashAnimateImage5 animate:ActiveFlash" />
+					<Property Name="FlashAnimateImage" Value="type:FlashAnimateImage6 animate:ActiveFlash" />
+					<Property Name="FlashAnimateImage" Value="type:FlashAnimateImage7 animate:ActiveFlash" />
+					<Property Name="FlashAnimateImage" Value="type:FlashAnimateImage8 animate:ActiveFlash" />
+					<Property Name="AutoReset" Value="true" />
+					<Property Name="MouseHollow" Value="false" />
+					<Event Name="MouseMove" Function="Minimap_CoordinateUpdate();" />
+					<Event Name="MouseLeave" Function="UpdateMinimap();" />
+					<Event Name="MouseLButtonClick" Function="MiniMap_GotoDirectly();" />
+				</Window>
+			</Window>
+			<Window Type="TLBB_ButtonNULL" Name="MiniMap_North">
+				<Property Name="AbsolutePosition" Value="x:108.000000 y:0.000000" />
+				<Property Name="AbsoluteSize" Value="w:20.000000 h:22.000000" />
+				<Property Name="NormalImage" Value="set:Button4 image:BtnN_Normal" />
+				<Property Name="HoverImage" Value="set:Button4 image:BtnN_Hover" />
+				<Property Name="PushedImage" Value="set:Button4 image:BtnN_Pushed" />
+				<Property Name="Tooltip" Value="#{INTERFACE_XML_869}" />
+				<Event Name="Clicked" Function="ResetCamera();" />
+			</Window>
+			<Window Type="TLBB_ButtonNULL" Name="MiniMap_Plot">
+				<Property Name="AbsolutePosition" Value="x:32.000000 y:55.000000" />
+				<Property Name="AbsoluteSize" Value="w:20.000000 h:22.000000" />
+				<Property Name="NormalImage" Value="set:Button4 image:BtnQ_Normal" />
+				<Property Name="HoverImage" Value="set:Button4 image:BtnQ_Hover" />
+				<Property Name="PushedImage" Value="set:Button4 image:BtnQ_Pushed" />
+				<Property Name="Tooltip" Value="#{INTERFACE_XML_233}" />
+				<Event Name="Clicked" Function="ToggleSceneMap();" />
+			</Window>
+			<Window Type="TLBB_ButtonNULL" Name="MiniMap_WorldMap">
+				<Property Name="AbsolutePosition" Value="x:32.000000 y:83.000000" />
+				<Property Name="AbsoluteSize" Value="w:20.000000 h:22.000000" />
+				<Property Name="NormalImage" Value="set:Button4 image:BtnEye_Normal" />
+				<Property Name="HoverImage" Value="set:Button4 image:BtnEye_Hover" />
+				<Property Name="PushedImage" Value="set:Button4 image:BtnEye_Pushed" />
+				<Property Name="Tooltip" Value="#{INTERFACE_XML_645}" />
+				<Event Name="Clicked" Function="ToggleLargeMap();" />
+			</Window>
+			<Window Type="TLBB_MapImage" Name="MiniMap_PK_Mode">
+				<Property Name="UnifiedPosition" Value="{{1.000000,-36.000000},{0.000000,4.000000}" />
+				<Property Name="AbsoluteSize" Value="w:32.000000 h:32.000000" />
+				<Property Name="Image" Value="set:Button4 image:ModeWar" />
+				<Property Name="ChildImage" Value="name:War set:Button4 image:ModeWar" />
+				<Property Name="ChildImage" Value="name:Peace set:Button4 image:ModePeace" />
+				<Event Name="MouseRClick" Function="MiniMap_PK_Mode_Show_Menu_Func();" />
+			</Window>
+			<!--
+        <Window Type="TLBB_ButtonNULL" Name="MiniMap_SuperHelp">
+          <Property Name="AbsolutePosition" Value="x:35.000000 y:124.000000" />
+          <Property Name="AbsoluteSize" Value="w:32.000000 h:32.000000" />
+          <Property Name="NormalImage" Value="set:CommonStaticImage image:SuperHelp_Normal" />
+          <Property Name="HoverImage" Value="set:CommonStaticImage image:SuperHelp_Hover" />
+          <Property Name="PushedImage" Value="set:CommonStaticImage image:SuperHelp_Pushed" />
+          <Property Name="Tooltip" Value="帮助" />
+          <Event Name="Clicked" Function="Minimap_OpenSuperHelp();" />
+        </Window>
+-->
+			<Window Type="TLBB_ButtonNULL" Name="MiniMap_SuperHelp2">
+				<Property Name="AbsolutePosition" Value="x:41.000000 y:23.000000" />
+				<Property Name="AbsoluteSize" Value="w:30.000000 h:30.000000" />
+				<Property Name="NormalImage" Value="set:Button7 image:Minimap_Wenhao_Normal" />
+				<Property Name="HoverImage" Value="set:Button7 image:Minimap_Wenhao_Hover" />
+				<Property Name="PushedImage" Value="set:Button7 image:Minimap_Wenhao_Pushed" />
+				<Property Name="Tooltip" Value="#{INTERFACE_XML_135}" />
+				<Event Name="Clicked" Function='Helper:GotoHelper(&quot;*ActionSkill&quot;);' />
+			</Window>
+			<Window Type="TLBB_ButtonNULL" Name="MiniMap_PlayerAsk_Bn">
+				<Property Name="AbsolutePosition" Value="x:36.000000 y:26.000000" />
+				<Property Name="AbsoluteSize" Value="w:30.000000 h:30.000000" />
+				<Property Name="NormalImage" Value="set:CommonFrame7 image:XunIcon_A1" />
+				<Property Name="HoverImage" Value="set:CommonFrame7 image:XunIcon_A2" />
+				<Property Name="PushedImage" Value="set:CommonFrame7 image:XunIcon_A3" />
+				<Property Name="Tooltip" Value="#{YXDY_081027_01}" />
+				<Event Name="Clicked" Function='MiniMap_PlayerAsk_Bn_Clicked();' />
+		        <Property Name="ZOrderChangeEnabled" Value="False" />
+				<Property Name="Visible" Value="False" />
+				<Window Type="TLBB_AnimateImage" Name="MiniMap_PlayerAsk">
+					<Property Name="AbsolutePosition" Value="x:5.000000 y:5.000000" />
+					<Property Name="AbsoluteSize" Value="w:18.000000 h:18.000000" />
+					<Property Name="Animate" Value="MinMap_Player_Ask" />
+					<Property Name="MouseMoveHollow" Value="True" />
+					<Property Name="MouseHollow" Value="true" />
+					<Property Name="Visible" Value="False" />
+				</Window>
+
+			</Window>
+
+			<Window Type="TLBB_ButtonNULL" Name="MiniMap_HuaShanLunJian">
+				<Property Name="Visible" Value="False" />
+				<Property Name="AbsolutePosition" Value="x:5.000000 y:0.000000" />
+				<Property Name="AbsoluteSize" Value="w:30.000000 h:30.000000" />
+				<Property Name="NormalImage" Value="set:Buttons image:HuaShanLunJian_Normal" />
+				<Property Name="HoverImage" Value="set:Buttons image:HuaShanLunJian_Hover" />
+				<Property Name="PushedImage" Value="set:Buttons image:HuaShanLunJian_Pushed" />
+				<Property Name="Tooltip" Value="#{INTERFACE_XML_331}" />
+			</Window>
+			<Window Type="TLBB_ButtonNULL" Name="MiniMap_AutoSearch">
+				<Event Name="Clicked" Function="Do_OpenAutoSearch();" />
+				<Property Name="AbsolutePosition" Value="x:111.000000 y:139.000000" />
+				<Property Name="AbsoluteSize" Value="w:77.000000 h:40.000000" />
+				<Property Name="NormalImage" Value="set:Button4 image:MiniMap_AutoSearch_Normal" />
+				<Property Name="HoverImage" Value="set:Button4 image:MiniMap_AutoSearch_Hover" />
+				<Property Name="PushedImage" Value="set:Button4 image:MiniMap_AutoSearch_Pushed" />
+			</Window>
+			<Window Type="TLBB_ButtonNULL" Name="MiniMap_JiangHu">
+				<Property Name="AbsolutePosition" Value="x:69.000000 y:4.000000" />
+				<Property Name="AbsoluteSize" Value="w:30.000000 h:30.000000" />
+				<Property Name="NormalImage" Value="set:Button4 image:MiniMap_JiangHu_Normal" />
+				<Property Name="HoverImage" Value="set:Button4 image:MiniMap_JiangHu_Hover" />
+				<Property Name="PushedImage" Value="set:Button4 image:MiniMap_JiangHu_Pushed" />
+				<Event Name="Clicked" Function="OpenWordrefence();" />
+				<Property Name="Tooltip" Value="#{INTERFACE_XML_198}" />
+			</Window>
+			<Window Type="TLBB_ButtonNULL" Name="MiniMap_Yuanbao">
+				<Property Name="AbsolutePosition" Value="x:66.000000 y:136.000000" />
+				<Property Name="AbsoluteSize" Value="w:31.000000 h:32.000000" />
+				<Property Name="NormalImage" Value="set:Button7 image:Minimap_Yuanbao_Normal" />
+				<Property Name="HoverImage" Value="set:Button7 image:Minimap_Yuanbao_Hover" />
+				<Property Name="PushedImage" Value="set:Button7 image:Minimap_Yuanbao_Pushed" />
+				<Event Name="Clicked" Function="MiniMap_YuanBaoFunc();" />
+			</Window>
+      <Window Type="TLBB_ButtonNULL" Name="MiniMap_Liebiao">
+        <Property Name="AbsolutePosition" Value="x:36.000000 y:107.000000" />
+        <Property Name="AbsoluteSize" Value="w:31.000000 h:32.000000" />
+        <Property Name="NormalImage" Value="set:ButtonCampaign1 image:Campaign_IMG_Liebiao_Normal" />
+        <Property Name="HoverImage" Value="set:ButtonCampaign1 image:Campaign_IMG_Liebiao_Hover" />
+        <Property Name="PushedImage" Value="set:ButtonCampaign1 image:Campaign_IMG_Liebiao_Pushed" />
+        <Event Name="Clicked" Function="MiniMap_LiebiaoFunc();" />
+		<Property Name="Tooltip" Value="#{FJWJ_081106_01}" />
+      </Window>
+			<Window Type="TLBB_ButtonNULL" Name="MiniMap_SafeLockBack">
+        <Property Name="AbsolutePosition" Value="x:27.000000 y:0.000000" />
+        <Property Name="AbsoluteSize" Value="w:24.000000 h:23.000000" />
+        <Window Type="TLBB_MapImage" Name="MiniMap_SafeLock">
+          <Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+          <Property Name="AbsoluteSize" Value="w:24.000000 h:23.000000" />
+          <Property Name="ChildImage" Value="name:red set:Button4 image:BtnLock_Red" />
+          <Property Name="ChildImage" Value="name:green set:Button4 image:BtnLock_Green" />
+          <Property Name="ChildImage" Value="name:gray set:Button4 image:BtnLock_Disable" />
+          <Window Type="TLBB_MapImage" Name="MiniMap_SafeLockState">
+            <Property Name="AbsolutePosition" Value="x:7.000000 y:6.000000" />
+            <Property Name="AbsoluteSize" Value="w:10.000000 h:11.000000" />
+            <Property Name="ChildImage" Value="name:Unlock set:Button4 image:BtnLock_Unlock" />
+            <Property Name="ChildImage" Value="name:Lock set:Button4 image:BtnLock_lock" />
+            <Property Name="ChildImage" Value="name:Null set: image:" />
+          </Window>
+    		 </Window>
+
+        <Window Type="TLBB_AnimateImage" Name="MiniMap_SafeLockFlash">
+          <Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+          <Property Name="AbsoluteSize" Value="w:24.000000 h:23.000000" />
+          <Property Name="Animate" Value="HaveNoLock" />
+          <Property Name="MouseHollow" Value="true" />
+        </Window>
+        <Window Type="TLBB_ButtonNULL" Name="MiniMap_SafeLockButton">
+          <Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+          <Property Name="AbsoluteSize" Value="w:24.000000 h:23.000000" />
+          <Event Name="Clicked" Function="MiniMap_LockFunc();" />
+          <Property Name="AlwaysOnTop" Value="True" />
+          <Property Name="Tooltip" Value="#{INTERFACE_XML_953}" />
+        </Window>
+      
+      </Window>
+	  		<Window Type="TLBB_ButtonNULL" Name="MiniMap_Fangchengmi_Btn" >
+				<Property Name="AbsolutePosition" Value="x:4.000000 y:23.000000" />
+				<Property Name="AbsoluteSize" Value="w:24.000000 h:23.000000" />
+				<!--<Property Name="AlwaysOnTop" Value="True" />-->
+				 <Property Name="Tooltip" Value="#{INTERFACE_XML_1040}" />
+				<Event Name="Clicked" Function="MiniMap_Fangchengmi_Click();" />
+                <Property Name="HoverImage" Value="set:CommonFrame4 image:JingTanHao_Hover" />
+                <Property Name="NormalImage" Value="set:CommonFrame4 image:JingTanHao_Normal" />
+                <Property Name="PushedImage" Value="set:CommonFrame4 image:JingTanHao_Normal" />
+                <!--<Property Name="DisabledImage" Value="set:Button7 image:Sale_NULL" />-->
+				<Window Type="TLBB_AnimateImage" Name="MiniMap_Fangchengmi_Flash">
+                        <Property Name="Position" Value="x:0 y:0" />
+                        <Property Name="Size" Value="w:1 h:1" />
+                        <Property Name="Animate" Value="Fangchengmi_Flash" />
+                        <Property Name="MouseHollow" Value="true" />
+                        <Property Name="MouseMoveHollow" Value="true" />
+                        <Property Name="MouseLButtonHollow" Value="true" />
+                        <Property Name="MouseRButtonHollow" Value="true" />
+						<Property Name="Visible" Value="False" />
+                </Window>
+				<Window Type="TLBB_AnimateImage" Name="MiniMap_Fangchengmi_Flash1">
+                        <Property Name="Position" Value="x:0 y:0" />
+                        <Property Name="Size" Value="w:1 h:1" />
+                        <Property Name="Animate" Value="Fangchengmi_Flash1" />
+                        <Property Name="MouseHollow" Value="true" />
+                        <Property Name="MouseMoveHollow" Value="true" />
+                        <Property Name="MouseLButtonHollow" Value="true" />
+                        <Property Name="MouseRButtonHollow" Value="true" />
+						<Property Name="Visible" Value="False" />
+                </Window>
+			</Window>
+  <!--fangyuan add  for account safe  -->
+  		<Window Type="TLBB_ButtonNULL" Name="MiniMap_AccountSafeBack">
+        <Property Name="AbsolutePosition" Value="x:4.000000 y:0.000000" />
+        <Property Name="AbsoluteSize" Value="w:24.000000 h:23.000000" />
+        <Window Type="TLBB_MapImage" Name="MiniMap_AccountSafe">
+          <Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+          <Property Name="AbsoluteSize" Value="w:24.000000 h:23.000000" />
+          <Property Name="ChildImage" Value="name:red set:Button4 image:BtnLock_Red" />
+          <Property Name="ChildImage" Value="name:green set:Button4 image:BtnLock_Green" />
+          <Property Name="ChildImage" Value="name:gray set:Button4 image:BtnLock_Disable" />
+          <Window Type="TLBB_MapImage" Name="MiniMap_AccountSafeState">
+            <Property Name="AbsolutePosition" Value="x:3.000000 y:3.000000" />
+            <Property Name="AbsoluteSize" Value="w:17.000000 h:16.000000" />
+            <Property Name="ChildImage" Value="name:SafeIcon set:CommonFrame6 image:Anquan_Normal" />
+            <!--<Property Name="ChildImage" Value="name:Lock set:Button4 image:BtnLock_lock" />
+            <Property Name="ChildImage" Value="name:Null set: image:" /> !-->
+          </Window>
+    		 </Window>
+
+        <Window Type="TLBB_AnimateImage" Name="MiniMap_AccountSafeFlash">
+          <Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+          <Property Name="AbsoluteSize" Value="w:24.000000 h:23.000000" />
+          <Property Name="Animate" Value="HaveNoLock" />
+          <Property Name="MouseHollow" Value="true" />
+        </Window>
+        <Window Type="TLBB_ButtonNULL" Name="MiniMap_AccountSafeButton">
+          <Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+          <Property Name="AbsoluteSize" Value="w:24.000000 h:23.000000" />
+          <Property Name="NormalImage" Value="name:Unlock set:Button4 image:BtnLock_Unlock" />
+          <Property Name="HoverImage" Value="name:Lock set:Button4 image:BtnLock_lock" />
+          <Event Name="Clicked" Function="MiniMap_AccountSafeFunc();" />
+          <Property Name="AlwaysOnTop" Value="True" />
+          <Property Name="Tooltip" Value="#{INTERFACE_XML_FY_003}" />
+        </Window>
+      
+      </Window>
+ <!-- fangyuan end 2007-12-10-->    
+      
+			<Window Type="TLBB_StaticImageNULL" Name="MiniMap_EquipEndurance">
+				<Property Name="UnifiedPosition" Value="{{0.000000,29.000000},{1.000000,-45.000000}" />
+				<Property Name="AbsoluteSize" Value="w:32.000000 h:44.000000" />
+				<Property Name="Image" Value="set:Buttons image:EquipEndurance" />
+				<Property Name="RiseOnClick" Value="False" />
+			</Window>
+		</Window>
+  	<Window Type="TLBB_SimpleMulitiTextFrame" Name="MiniMap_SafeTime_Frame">
+			<Property Name="UnifiedPosition" Value="{{1.0,-150.000000},{0.000000,226.000000}" />
+			<Property Name="UnifiedSize" Value="{{0.0,150.000000},{0.000000,20.000000}" />
+			<Property Name="HorzFormatting" Value="LeftAligned" />
+			<Property Name="VertFormatting" Value="VertCentred" />
+			<Property Name="TextColor" Value="FFFFF263" />
+			<Property Name="Text" Value="#{INTERFACE_XML_MINI_02}" />
+			<Property Name="Tooltip" Value="#{INTERFACE_XML_MINI_01}" />
+      <Event Name="MouseClick" Function="MiniMap_OpenSafeTimeDlg();" />
+      <Window Type="TLBB_Animate" Name="MiniMap_SafeTimeAnimate">
+	      <Property Name="UnifiedPosition" Value="{{0.0,-1.000000},{0.000000,-1.000000}" />
+	      <Property Name="UnifiedSize" Value="{{0.0,151.000000},{0.000000,21.000000}" />
+	    	<Property Name="Animate" Value="AccountSafe_Time_Flash" />
+	      <Property Name="MouseHollow" Value="true" />
+	      <Property Name="MouseMoveHollow" Value="true" />
+	      <Property Name="MouseLButtonHollow" Value="true" />
+	      <Property Name="MouseRButtonHollow" Value="true" />
+    </Window>
+			<Window Type="TLBB_StopWatch" Name="MiniMap_SafeTime_StopWatch">
+				<Property Name="UnifiedPosition" Value="{{0.0,84.000000},{0.000000,0.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.0,60.000000},{0.000000,20.000000}" />
+				<Property Name="HorzFormatting" Value="HorzCentred" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+        <Property Name="MouseHollow" Value="true" />				
+			</Window>
+		</Window>
+	</Window>
+</GUILayout>

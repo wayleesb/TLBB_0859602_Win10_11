@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="峨嵋偏殿2.frame" />
+    <entity mesh="峨嵋偏殿2.mesh" node="峨嵋偏殿2" />
+    <entity mesh="峨嵋偏殿2绸带01.mesh" />
+    <entity mesh="峨嵋偏殿2绸带05.mesh" />
+    <entity mesh="峨嵋偏殿2绸带03.mesh" />
+    <entity mesh="峨嵋偏殿2绸带04.mesh" />
+    <entity mesh="峨嵋偏殿2绸带02.mesh" />
+</model>

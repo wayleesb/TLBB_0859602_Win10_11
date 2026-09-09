@@ -1,0 +1,123 @@
+fragment_program Terrain/TwoLayerLightmap_ps cg
+{
+	source FairyTerrain.cg
+	entry_point TwoLayerLightmap_ps
+	profiles ps_1_1 arbfp1
+}
+
+fragment_program Terrain/TwoLayer_ps cg
+{
+	source FairyTerrain.cg
+	entry_point TwoLayer_ps
+	profiles ps_1_1 arbfp1
+}
+
+fragment_program Terrain/OneLayerLightmap_ps cg
+{
+	source FairyTerrain.cg
+	entry_point OneLayerLightmap_ps
+	profiles ps_1_1 arbfp1
+}
+
+fragment_program Terrain/OneLayer_ps cg
+{
+	source FairyTerrain.cg
+	entry_point OneLayer_ps
+	profiles ps_1_1 arbfp1
+}
+
+fragment_program Terrain/TwoLayerLightmap_ps%fog_linear cg
+{
+	source FairyTerrain.cg
+	entry_point TwoLayerLightmap_ps
+	profiles arbfp1
+	compile_arguments -DARB_fog_linear
+}
+
+fragment_program Terrain/TwoLayer_ps%fog_linear cg
+{
+	source FairyTerrain.cg
+	entry_point TwoLayer_ps
+	profiles arbfp1
+	compile_arguments -DARB_fog_linear
+}
+
+fragment_program Terrain/OneLayerLightmap_ps%fog_linear cg
+{
+	source FairyTerrain.cg
+	entry_point OneLayerLightmap_ps
+	profiles arbfp1
+	compile_arguments -DARB_fog_linear
+}
+
+fragment_program Terrain/OneLayer_ps%fog_linear cg
+{
+	source FairyTerrain.cg
+	entry_point OneLayer_ps
+	profiles arbfp1
+	compile_arguments -DARB_fog_linear
+}
+
+fragment_program Terrain/TwoLayerLightmap_ps%fog_exp cg
+{
+	source FairyTerrain.cg
+	entry_point TwoLayerLightmap_ps
+	profiles arbfp1
+	compile_arguments -DARB_fog_exp
+}
+
+fragment_program Terrain/TwoLayer_ps%fog_exp cg
+{
+	source FairyTerrain.cg
+	entry_point TwoLayer_ps
+	profiles arbfp1
+	compile_arguments -DARB_fog_exp
+}
+
+fragment_program Terrain/OneLayerLightmap_ps%fog_exp cg
+{
+	source FairyTerrain.cg
+	entry_point OneLayerLightmap_ps
+	profiles arbfp1
+	compile_arguments -DARB_fog_exp
+}
+
+fragment_program Terrain/OneLayer_ps%fog_exp cg
+{
+	source FairyTerrain.cg
+	entry_point OneLayer_ps
+	profiles arbfp1
+	compile_arguments -DARB_fog_exp
+}
+
+fragment_program Terrain/TwoLayerLightmap_ps%fog_exp2 cg
+{
+	source FairyTerrain.cg
+	entry_point TwoLayerLightmap_ps
+	profiles arbfp1
+	compile_arguments -DARB_fog_exp2
+}
+
+fragment_program Terrain/TwoLayer_ps%fog_exp2 cg
+{
+	source FairyTerrain.cg
+	entry_point TwoLayer_ps
+	profiles arbfp1
+	compile_arguments -DARB_fog_exp2
+}
+
+fragment_program Terrain/OneLayerLightmap_ps%fog_exp2 cg
+{
+	source FairyTerrain.cg
+	entry_point OneLayerLightmap_ps
+	profiles arbfp1
+	compile_arguments -DARB_fog_exp2
+}
+
+fragment_program Terrain/OneLayer_ps%fog_exp2 cg
+{
+	source FairyTerrain.cg
+	entry_point OneLayer_ps
+	profiles arbfp1
+	compile_arguments -DARB_fog_exp2
+}

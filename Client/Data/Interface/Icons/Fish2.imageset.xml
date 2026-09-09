@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<Imageset Name="Fish2" Imagefile="Icons/Fish2.jpg" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+	<Image Name="Fish2_1" XPos="0" YPos="0" Width="64" Height="64" />
+	<Image Name="Fish2_2" XPos="64" YPos="0" Width="64" Height="64" />
+	<Image Name="Fish2_3" XPos="128" YPos="0" Width="64" Height="64" />
+	<Image Name="Fish2_4" XPos="192" YPos="0" Width="64" Height="64" />
+	<Image Name="Fish2_5" XPos="0" YPos="64" Width="64" Height="64" />
+	<Image Name="Fish2_6" XPos="64" YPos="64" Width="64" Height="64" />
+	<Image Name="Fish2_7" XPos="128" YPos="64" Width="64" Height="64" />
+	<Image Name="Fish2_8" XPos="192" YPos="64" Width="64" Height="64" />
+	<Image Name="Fish2_9" XPos="0" YPos="128" Width="64" Height="64" />
+	<Image Name="Fish2_10" XPos="64" YPos="128" Width="64" Height="64" />
+	<Image Name="Fish2_11" XPos="128" YPos="128" Width="64" Height="64" />
+	<Image Name="Fish2_12" XPos="192" YPos="128" Width="64" Height="64" />
+</Imageset>

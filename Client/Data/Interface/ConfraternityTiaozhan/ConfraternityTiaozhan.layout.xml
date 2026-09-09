@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame1" Name="ConfraternityTiaozhan_Frame">
+        <Property Name="UnifiedPosition" Value="{{0.500000,-128.000000},{0.500000,-118.000000}" />
+        <Property Name="UnifiedSize" Value="{{0.000000,270.000000},{0.000000,180.000000}" />
+        <Property Name="AlwaysOnTop" Value="True" />
+        <Window Type="TLBB_DragTitle" Name="ConfraternityTiaozhan_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="ConfraternityTiaozhan_Frame" />
+            <Property Name="Font" Value="YouYuan11.25" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+        </Window>
+        <Window Type="TLBB_ButtonHelp" Name="ConfraternityTiaozhan_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function="ConfraternityTiaozhan_Help();" />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="ConfraternityTiaozhan_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function="this:Hide();" />
+        </Window>
+        <Window Type="DefaultWindow" Name="ConfraternityTiaozhan_Frame_Client">
+            <Property Name="AbsolutePosition" Value="x:7.000000 y:36.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-13.000000},{1.000000,-55.000000}" />
+          <Window Type="TLBB_SimpleText" Name="SConfraternityTiaozhan_tianzhan" >
+            <Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+            <Property Name="AbsoluteSize" Value="w:260.000000 h:22.000000" />
+            <Property Name="HorzFormatting" Value="HorzLeft" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+          </Window>
+          <Window Type="TLBB_SelfWindow" Name="ConfraternityTiaozhan_Text">
+                <Property Name="AbsolutePosition" Value="x:0.000000 y:6.000000" />
+                <Property Name="AbsoluteSize" Value="w:0.000000 h:0.000000" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Property Name="MaxWidth" Value="250" />
+                <Property Name="MinHeight" Value="22" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{BHXZ_081103_91}" />
+            </Window>
+            <Window Type="TLBB_ButtonExp2" Name="ConfraternityTiaozhan_Info1" >
+                <Property Name="UnifiedPosition" Value="{{0.500000,36.000000},{1.000000,-76.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,80.000000},{0.000000,45.000000}" />
+                <Property Name="Text" Value="#{TM_20080318_17}" />
+                <Event Name="Clicked" Function="ConfraternityTiaozhan_Refuse_Click()" />
+            </Window>
+            <Window Type="TLBB_ButtonExp2" Name="ConfraternityTiaozhan_Info2" >
+                <Property Name="UnifiedPosition" Value="{{0.500000,-120.000000},{1.000000,-76.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,80.000000},{0.000000,45.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_373}" />
+                <Event Name="Clicked" Function="ConfraternityTiaozhan_Accept_Click()" />
+            </Window>
+            <Window Type="TLBB_Frame_Lace5" Name="ConfraternityTiaozhan_Blank">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.000000,1.000000},{0.000000,20.000000}" />
+            </Window>
+          <Window Type="TLBB_SimpleText" Name="ConfraternityTiaozhan_StopWatch_Text">
+                <Property Name="UnifiedPosition" Value="{{0.0,5.000000},{0.000000,105.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.0,-10.000000},{0.000000,18.000000}" />
+                <Property Name="HorzFormatting" Value="HorzLeft" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="TextColor" Value="FFFFF263" />
+          </Window>
+          <Window Type="TLBB_StopWatch" Name="ConfraternityTiaozhan_StopWatch">
+                <Property Name="UnifiedPosition" Value="{{0.0,161.000000},{0.000000,105.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,40.000000},{0.000000,18.000000}" />
+                <Property Name="HorzFormatting" Value="HorzLeft" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="MouseHollow" Value="True" />
+                <Property Name="Text" Value="06:15" />
+          </Window>
+        </Window>
+    </Window>
+</GUILayout>

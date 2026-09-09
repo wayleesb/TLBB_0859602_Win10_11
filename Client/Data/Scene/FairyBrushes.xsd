@@ -1,0 +1,82 @@
+<?xml version="1.0" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+  <xsd:element name="Brushes" type="BrushesType" />
+
+  <xsd:complexType name="BrushesType">
+    <xsd:sequence>
+      <xsd:element name="pixmaps" minOccurs="0" maxOccurs="unbounded" type="PixmapSetType" />
+      <xsd:element name="joints" minOccurs="0" maxOccurs="unbounded" type="JointSetType" />
+      <xsd:element name="exchengeables" minOccurs="0" maxOccurs="unbounded" type="ExchengeableSetType" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="PixmapSetType">
+    <xsd:sequence>
+      <xsd:element name="pixmap" minOccurs="0" maxOccurs="unbounded" type="PixmapType" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="PixmapType">
+    <xsd:attribute name="id" type="xsd:string" use="required" />
+    <xsd:attribute name="group" type="xsd:string" use="required" />
+    <xsd:attribute name="name" type="xsd:string" use="optional" />
+    <xsd:attribute name="texture" type="xsd:string" use="required" />
+    <xsd:attribute name="left" type="xsd:float" use="optional" default="0" />
+    <xsd:attribute name="top" type="xsd:float" use="optional" default="0" />
+    <xsd:attribute name="right" type="xsd:float" use="optional" default="1" />
+    <xsd:attribute name="bottom" type="xsd:float" use="optional" default="1" />
+  </xsd:complexType>
+
+  <xsd:complexType name="JointSetType">
+    <xsd:sequence>
+      <xsd:element name="joint" minOccurs="0" maxOccurs="unbounded" type="JointType" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="JointType">
+    <xsd:sequence>
+      <xsd:element name="item" minOccurs="2" maxOccurs="2" type="PixmapEdgeType" />
+    </xsd:sequence>
+    <xsd:attribute name="flip" type="xsd:boolean" use="optional" default="false" />
+  </xsd:complexType>
+
+  <xsd:complexType name="PixmapEdgeType">
+    <xsd:attribute name="pixmapId" type="xsd:string" use="required" />
+    <xsd:attribute name="edge" type="EdgeType" use="required" />
+  </xsd:complexType>
+
+	<xsd:simpleType name="EdgeType">
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="left"/>
+			<xsd:enumeration value="top"/>
+			<xsd:enumeration value="right"/>
+			<xsd:enumeration value="bottom"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+  <xsd:complexType name="ExchengeableSetType">
+    <xsd:sequence>
+      <xsd:element name="exchengeable" minOccurs="0" maxOccurs="unbounded" type="ExchengeableType" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="ExchengeableType">
+    <xsd:sequence>
+      <xsd:element name="item" minOccurs="2" maxOccurs="unbounded" type="OrientedPixmapType" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="OrientedPixmapType">
+    <xsd:attribute name="pixmapId" type="xsd:string" use="required" />
+    <xsd:attribute name="orientation" type="OrientationType" use="required" />
+  </xsd:complexType>
+
+  <xsd:simpleType name="OrientationType">
+    <xsd:restriction base="xsd:nonNegativeInteger">
+      <xsd:minInclusive value="0" />
+      <xsd:maxInclusive value="7" />
+    </xsd:restriction>
+  </xsd:simpleType>
+
+</xsd:schema>

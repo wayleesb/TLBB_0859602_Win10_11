@@ -1,0 +1,300 @@
+<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame1" Name="PS_Shop_Frame">
+        <Property Name="UnifiedPosition" Value="{{0.42,0},{0.15,0}}" />
+        <Property Name="AbsoluteSize" Value="w:205 h:360" />
+        <Window Type="TLBB_DragTitle" Name="PS_Shop_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_240}" />
+            <Property Name="Font" Value="YouYuan11.25" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="DragTarget" Value="PS_Shop_Frame" />
+        </Window>
+        <Window Type="TLBB_ButtonHelp" Name="PS_Shop_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*PS_Shop&quot;);' />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="PS_Shop_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function="PS_Shop_ExitClick();" />
+        </Window>
+        <Window Type="DefaultWindow" Name="PS_Shop_Frame_Client">
+            <Property Name="AbsolutePosition" Value="x:6.000000 y:36.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-12.000000},{1.000000,-55.000000}" />
+            <Window Type="TLBB_SimpleText" Name="PS_Shop_Name_Text">
+                <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,0.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.0,-10.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_243}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_ChatBoard" Name="PS_Shop_Master_Text">
+                <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,23.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.50,15.000000},{0.0,16.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_247}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="PS_Shop_ID_Text">
+                <Property Name="UnifiedPosition" Value="{{0.5,20.000000},{0.000000,20.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.50,-20.000000},{0.0,20.000000}" />
+                <Property Name="Text" Value="ID:12345678" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="DefaultWindow" Name="PS_Shop_PageList">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,45.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.0000000,0.000000},{0.000000,20.000000}" />
+                <Window Type="TLBB_SimpleText" Name="PS_Shop_State">
+                    <Property Name="UnifiedPosition" Value="{{0.8,0.000000},{0.000000,0.000000}" />
+                    <Property Name="UnifiedSize" Value="{{0.2,0.000000},{0.000000,20.000000}" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_206}" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="HorzFormatting" Value="HorzCentred" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                    <Property Name="RiseOnClick" Value="False" />
+                </Window>
+                <Window Type="TLBB_ButtonSale" Name="PS_Shop_Page1">
+                    <Property Name="Position" Value="x:0.0 y:0.0" />
+                    <Property Name="UnifiedSize" Value="{{0.08,0.000000},{0.000000,20.000000}" />
+                    <Property Name="Text" Value="1" />
+                    <Event Name="Clicked" Function="PS_Shop_Page_Click(1);" />
+                </Window>
+                <Window Type="TLBB_ButtonSale" Name="PS_Shop_Page2">
+                    <Property Name="Position" Value="x:0.08 y:0.0" />
+                    <Property Name="UnifiedSize" Value="{{0.08,0.000000},{0.000000,20.000000}" />
+                    <Property Name="Text" Value="2" />
+                    <Event Name="Clicked" Function="PS_Shop_Page_Click(2);" />
+                </Window>
+                <Window Type="TLBB_ButtonSale" Name="PS_Shop_Page3">
+                    <Property Name="Position" Value="x:0.16 y:0.0" />
+                    <Property Name="UnifiedSize" Value="{{0.08,0.000000},{0.000000,20.000000}" />
+                    <Property Name="Text" Value="3" />
+                    <Event Name="Clicked" Function="PS_Shop_Page_Click(3);" />
+                </Window>
+                <Window Type="TLBB_ButtonSale" Name="PS_Shop_Page4">
+                    <Property Name="Position" Value="x:0.24 y:0.0" />
+                    <Property Name="UnifiedSize" Value="{{0.08,0.000000},{0.000000,20.000000}" />
+                    <Property Name="Text" Value="4" />
+                    <Event Name="Clicked" Function="PS_Shop_Page_Click(4);" />
+                </Window>
+                <Window Type="TLBB_ButtonSale" Name="PS_Shop_Page5">
+                    <Property Name="Position" Value="x:0.32 y:0.0" />
+                    <Property Name="UnifiedSize" Value="{{0.08,0.000000},{0.000000,20.000000}" />
+                    <Property Name="Text" Value="5" />
+                    <Event Name="Clicked" Function="PS_Shop_Page_Click(5);" />
+                </Window>
+                <Window Type="TLBB_ButtonSale" Name="PS_Shop_Page6">
+                    <Property Name="Position" Value="x:0.40 y:0.0" />
+                    <Property Name="UnifiedSize" Value="{{0.08,0.000000},{0.000000,20.000000}" />
+                    <Property Name="Text" Value="6" />
+                    <Event Name="Clicked" Function="PS_Shop_Page_Click(6);" />
+                </Window>
+                <Window Type="TLBB_ButtonSale" Name="PS_Shop_Page7">
+                    <Property Name="Position" Value="x:0.48 y:0.0" />
+                    <Property Name="UnifiedSize" Value="{{0.08,0.000000},{0.000000,20.000000}" />
+                    <Property Name="Text" Value="7" />
+                    <Event Name="Clicked" Function="PS_Shop_Page_Click(7);" />
+                </Window>
+                <Window Type="TLBB_ButtonSale" Name="PS_Shop_Page8">
+                    <Property Name="Position" Value="x:0.56 y:0.0" />
+                    <Property Name="UnifiedSize" Value="{{0.08,0.000000},{0.000000,20.000000}" />
+                    <Property Name="Text" Value="8" />
+                    <Event Name="Clicked" Function="PS_Shop_Page_Click(8);" />
+                </Window>
+                <Window Type="TLBB_ButtonSale" Name="PS_Shop_Page9">
+                    <Property Name="Position" Value="x:0.64 y:0.0" />
+                    <Property Name="UnifiedSize" Value="{{0.08,0.000000},{0.000000,20.000000}" />
+                    <Property Name="Text" Value="9" />
+                    <Event Name="Clicked" Function="PS_Shop_Page_Click(9);" />
+                </Window>
+                <Window Type="TLBB_ButtonSale" Name="PS_Shop_Page10">
+                    <Property Name="Position" Value="x:0.72 y:0.0" />
+                    <Property Name="UnifiedSize" Value="{{0.08,0.000000},{0.000000,20.000000}" />
+                    <Property Name="Text" Value="10" />
+                    <Event Name="Clicked" Function="PS_Shop_Page_Click(10);" />
+                </Window>
+            </Window>
+            <Window Type="DefaultWindow" Name="PS_Shop_PetList_Client">
+                <Property Name="UnifiedPosition" Value="{{0.000000,7.000000},{0.000000,65.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.000000,180.000000},{0.000000,146.000000}" />
+                <Window Type="TLBB_ListBoxCommon" Name="PS_Shop_PetList">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,0.000000}" />
+                    <Property Name="UnifiedSize" Value="{{1.000000,0.000000},{1.000000,0.000000}" />
+                    <Event Name="ItemSelectionChanged" Function="PS_Shop_PetList_Selected();" />
+                    <Event Name="MouseRClick" Function="PS_Shop_PetList_RClick();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="PS_Shop_Item1">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,1.000000},{0.000000,1.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                    <Event Name="Clicked" Function="PS_Shop_Item1:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="PS_Shop_Item2">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,37.000000},{0.000000,1.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                    <Event Name="Clicked" Function="PS_Shop_Item2:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="PS_Shop_Item3">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,73.000000},{0.000000,1.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                    <Event Name="Clicked" Function="PS_Shop_Item3:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="PS_Shop_Item4">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,109.000000},{0.000000,1.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                    <Event Name="Clicked" Function="PS_Shop_Item4:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="PS_Shop_Item5">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,145.000000},{0.000000,1.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                    <Event Name="Clicked" Function="PS_Shop_Item5:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="PS_Shop_Item6">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,1.000000},{0.000000,37.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                    <Event Name="Clicked" Function="PS_Shop_Item6:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="PS_Shop_Item7">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,37.000000},{0.000000,37.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                    <Event Name="Clicked" Function="PS_Shop_Item7:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="PS_Shop_Item8">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,73.000000},{0.000000,37.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                    <Event Name="Clicked" Function="PS_Shop_Item8:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="PS_Shop_Item9">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,109.000000},{0.000000,37.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                    <Event Name="Clicked" Function="PS_Shop_Item9:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="PS_Shop_Item10">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,145.000000},{0.000000,37.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                    <Event Name="Clicked" Function="PS_Shop_Item10:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="PS_Shop_Item11">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,1.000000},{0.000000,73.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                    <Event Name="Clicked" Function="PS_Shop_Item11:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="PS_Shop_Item12">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,37.000000},{0.000000,73.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                    <Event Name="Clicked" Function="PS_Shop_Item12:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="PS_Shop_Item13">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,73.000000},{0.000000,73.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                    <Event Name="Clicked" Function="PS_Shop_Item13:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="PS_Shop_Item14">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,109.000000},{0.000000,73.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                    <Event Name="Clicked" Function="PS_Shop_Item14:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="PS_Shop_Item15">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,145.000000},{0.000000,73.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                    <Event Name="Clicked" Function="PS_Shop_Item15:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="PS_Shop_Item16">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,1.000000},{0.000000,109.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                    <Event Name="Clicked" Function="PS_Shop_Item16:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="PS_Shop_Item17">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,37.000000},{0.000000,109.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                    <Event Name="Clicked" Function="PS_Shop_Item17:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="PS_Shop_Item18">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,73.000000},{0.000000,109.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                    <Event Name="Clicked" Function="PS_Shop_Item18:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="PS_Shop_Item19">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,109.000000},{0.000000,109.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                    <Event Name="Clicked" Function="PS_Shop_Item19:DoAction();" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="PS_Shop_Item20">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,145.000000},{0.000000,109.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                    <Event Name="Clicked" Function="PS_Shop_Item20:DoAction();" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="PS_Shop_Last">
+                <Property Name="UnifiedPosition" Value="{{0.000000,2.000000},{0.72,0.000000}" />
+                <Property Name="AbsoluteSize" Value="w:70.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_601}" />
+                <Event Name="Clicked" Function="PS_Shop_Last_Click();" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="PS_Shop_PageNum">
+                <Property Name="UnifiedPosition" Value="{{0.5000,-25.000000},{0.72,0.000000}" />
+                <Property Name="AbsoluteSize" Value="w:50.000000 h:20.000000" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Property Name="Text" Value="99" />
+                <Property Name="TextColor" Value="FFFFF263" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="PS_Shop_Next">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-72.000000},{0.72,0.000000}" />
+                <Property Name="AbsoluteSize" Value="w:70.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_739}" />
+                <Event Name="Clicked" Function="PS_Shop_Next_Click();" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="PS_Shop_TargetItem_Name">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.8,0.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.000000,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_466}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_Money" Name="PS_Shop_TargetItem_Money">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.8600000,0.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.000000,0.000000},{0.000000,20.000000}" />
+                <Property Name="MoneyNumber" Value="0" />
+                <Property Name="HorzFormatting" Value="RightAligned" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="PS_Shop_Item_Num">
+                <Property Name="UnifiedPosition" Value="{{0,0.000000},{1,-40.000000}" />
+                <Property Name="AbsoluteSize" Value="w:60.000000 h:18.000000" />
+                <Property Name="Text" Value="" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_Frame_Lace5" Name="PS_Shop_Blank">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-80.000000},{0.000000,20.000000}" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="PS_Shop_Buy">
+                <Property Name="UnifiedPosition" Value="{{1,-80.000000},{1,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_299}" />
+                <Event Name="Clicked" Function="PS_Shop_BuyClick();" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="PS_Shop_Exit">
+                <Property Name="UnifiedPosition" Value="{{1,-40.000000},{1,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_426}" />
+                <Event Name="Clicked" Function="PS_Shop_ExitClick();" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

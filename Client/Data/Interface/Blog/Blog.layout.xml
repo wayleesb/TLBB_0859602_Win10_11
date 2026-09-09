@@ -1,0 +1,180 @@
+<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame3" Name="Blog_Frame">
+        <Property Name="UnifiedPosition" Value="{{0.0,0},{0.12,0}}" />
+        <Property Name="AbsoluteSize" Value="w:360 h:402" />
+        <Window Type="TLBB_DragTitle" Name="Blog_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:108.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-133.000000},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="Blog_Frame" />
+            <Window Type="TLBB_SimpleText" Name="Blog_PageHeader">
+                <Property Name="Position" Value="x:0.0 y:0.0" />
+                <Property Name="Size" Value="w:1.0 h:1.0" />
+                <Property Name="Font" Value="YouYuan11.25" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="Text" Value="#{INTERFACE_XML_22}" />
+            </Window>
+        </Window>
+        <Window Type="TLBB_ButtonHelp" Name="Blog_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,88.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*Blog&quot;);' />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="Blog_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function="this:Hide();" />
+        </Window>
+        <Window Type="DefaultWindow" Name="Blog_Frame_Client">
+            <Property Name="AbsolutePosition" Value="x:10.000000 y:35.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-14.000000},{1.000000,-62.000000}" />
+            <Window Type="DefaultWindow" Name="Blog_Function_Frame_Contents">
+                <Property Name="AbsolutePosition" Value="x:0.000000 y:8.000000" />
+                <Property Name="Size" Value="w:1.0 h:0.9" />
+                <Window Type="TLBB_SimpleTextFrame" Name="Blog_Text1">
+                    <Property Name="Position" Value="x:0 y:0.0" />
+                    <Property Name="UnifiedSize" Value="{{1.0,0.000000},{0.000000,20.000000}" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="Text" Value="xxxxx" />
+                    <Property Name="HorzFormatting" Value="HorzCentred" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                </Window>
+                <Window Type="TLBB_SimpleTextFrame" Name="Blog_Text2">
+                    <Property Name="UnifiedPosition" Value="{{0.0,0.000000},{0.000000,20.000000}" />
+                    <Property Name="UnifiedSize" Value="{{1.0,0.000000},{0.000000,20.000000}" />
+                    <Property Name="Text" Value="yyyy" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="HorzFormatting" Value="HorzCentred" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                </Window>
+                <Window Type="TLBB_ButtonNULL" Name="Blog_Text3">
+                    <Property Name="UnifiedPosition" Value="{{0.05,0.000000},{0.000000,40.000000}" />
+                    <Property Name="UnifiedSize" Value="{{0.9,0.000000},{0.000000,20.000000}" />
+                    <Property Name="Text" Value="http://blog.sohu.com" />
+                    <Property Name="HorzLabelFormatting" Value="LeftAligned" />
+                    <Event Name="Clicked" Function="Blog_Click(0);" />
+                </Window>
+                <Window Type="TLBB_SimpleTextFrame" Name="Blog_Text4">
+                    <Property Name="UnifiedPosition" Value="{{0.05,0.000000},{0.000000,60.000000}" />
+                    <Property Name="UnifiedSize" Value="{{0.6,0.000000},{0.000000,20.000000}" />
+                    <Property Name="Text" Value="" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                </Window>
+                <Window Type="TLBB_ButtonCommon" Name="Blog_Text5">
+                    <Property Name="UnifiedPosition" Value="{{0.65,0.000000},{0.000000,60.000000}" />
+                    <Property Name="UnifiedSize" Value="{{0.3,0.000000},{0.000000,20.000000}" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_1139}" />
+                    <Event Name="Clicked" Function="Blog_Click(0);" />
+                </Window>
+                <Window Type="TLBB_ButtonNULL" Name="Blog_Text6">
+                    <Property Name="UnifiedPosition" Value="{{0.05,0.000000},{0.000000,80.000000}" />
+                    <Property Name="UnifiedSize" Value="{{0.9,0.000000},{0.000000,20.000000}" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_103}" />
+                    <Property Name="HorzLabelFormatting" Value="LeftAligned" />
+                    <Event Name="Clicked" Function="Blog_Click(1);" />
+                </Window>
+                <Window Type="TLBB_StaticText" Name="Blog_Text7">
+                    <Property Name="UnifiedPosition" Value="{{0.0,0.000000},{0.000000,100.000000}" />
+                    <Property Name="Size" Value="w:1.0 h:0.25" />
+                    <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                    <Property Name="VertFormatting" Value="TopAligned" />
+                    <Property Name="BackgroundEnabled" Value="True" />
+                    <Property Name="VertScrollbar" Value="true" />
+                </Window>
+                <Window Type="TLBB_ButtonNULL" Name="Blog_Text8">
+                    <Property Name="UnifiedPosition" Value="{{0.05,0.000000},{0.25,100.000000}" />
+                    <Property Name="UnifiedSize" Value="{{0.9,0.000000},{0.000000,20.000000}" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_102}" />
+                    <Property Name="HorzLabelFormatting" Value="LeftAligned" />
+                    <Event Name="Clicked" Function="Blog_Click(2);" />
+                </Window>
+                <Window Type="TLBB_ButtonNULL" Name="Blog_Text9">
+                    <Property Name="UnifiedPosition" Value="{{0.05,0.000000},{0.25,120.000000}" />
+                    <Property Name="UnifiedSize" Value="{{0.9,0.000000},{0.000000,20.000000}" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_101}" />
+                    <Property Name="HorzLabelFormatting" Value="LeftAligned" />
+                    <Event Name="Clicked" Function="Blog_Click(3);" />
+                </Window>
+                <Window Type="TLBB_SimpleMulitiTextFrame" Name="Blog_Text10">
+                    <Property Name="UnifiedPosition" Value="{{0.0,0.000000},{0.25,140.000000}" />
+                    <Property Name="UnifiedSize" Value="{{1.0,0.000000},{0.75000,-140.000000}" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                    <Property Name="VertFormatting" Value="TopAligned" />
+                </Window>
+            </Window>
+            <Window Type="DefaultWindow" Name="Blog_Function_Frame_Cover">
+                <Property Name="Position" Value="x:0.0 y:0.0" />
+                <Property Name="Size" Value="w:1.0 h:0.9" />
+                <Property Name="Visible" Value="false" />
+                <Window Type="TLBB_SimpleText" Name="Blog_Cover_Text">
+                    <Property Name="Position" Value="x:0.0 y:0.5" />
+                    <Property Name="UnifiedSize" Value="{{1.0,0.000000},{0.000000,20.000000}" />
+                    <Property Name="Text" Value="xxxxx" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="HorzFormatting" Value="HorzCentred" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_Frame_Lace2" Name="Blog_Bk">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-25.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.0,0.000000},{0.000000,25.000000}" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_Frame_Lace5" Name="Blog_Blank">
+                <Property Name="UnifiedPosition" Value="{{0.000000,2.000000},{1.000000,-22.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.85000000,-5.000000},{0.000000,20.000000}" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="Blog_Cancel">
+                <Property Name="UnifiedPosition" Value="{{0.85,-2.000000},{1.0,-22.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.15,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_425}" />
+                <Event Name="Clicked" Function="this:Hide();" />
+            </Window>
+        </Window>
+        <Window Type="DefaultWindow" Name="SelfBlog_Checkbox_Frame">
+            <Property Name="UnifiedPosition" Value="{{0.0,8.000000},{1.000000,-25.000000}" />
+            <Property Name="UnifiedSize" Value="{{0.9,0.000000},{0.000000,24.000000}" />
+            <Window Type="TLBB_ButtonPageDown" Name="SelfBlog_SelfEquip">
+                <Property Name="AbsolutePosition" Value="x:0.0 y:0.0" />
+                <Property Name="AbsoluteSize" Value="w:42.000000 h:24.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_877}" />
+                <Property Name="HorzLabelFormatting" Value="WordWrapCentreAligned" />
+                <Event Name="Clicked" Function="Blog_SelfEquip_Page_Switch();" />
+            </Window>
+            <Window Type="TLBB_ButtonPageDown" Name="SelfBlog_SelfData">
+                <Property Name="AbsolutePosition" Value="x:42.0 y:0.0" />
+                <Property Name="AbsoluteSize" Value="w:42.000000 h:24.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_882}" />
+                <Event Name="Clicked" Function="Blog_SelfData_Switch();" />
+            </Window>
+            <Window Type="TLBB_ButtonPageDown" Name="SelfBlog_Blog">
+                <Property Name="AbsolutePosition" Value="x:84.0 y:0.0" />
+                <Property Name="AbsoluteSize" Value="w:42.000000 h:24.000000" />
+                <Property Name="CheckMode" Value="1" />
+                <Property Name="Text" Value="#{INTERFACE_XML_145}" />
+            </Window>
+            <Window Type="TLBB_ButtonPageDown" Name="SelfBlog_Pet">
+                <Property Name="AbsolutePosition" Value="x:126.0 y:0.0" />
+                <Property Name="AbsoluteSize" Value="w:42.000000 h:24.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_854}" />
+                <Event Name="Clicked" Function="Blog_Pet_Switch();" />
+            </Window>
+            <Window Type="TLBB_ButtonPageDown" Name="SelfBlog_Ride">
+                <Property Name="AbsolutePosition" Value="x:168.0 y:0.0" />
+                <Property Name="AbsoluteSize" Value="w:42.000000 h:24.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_497}" />
+                <Event Name="Clicked" Function="Blog_Ride_Switch();" />
+            </Window>
+            <Window Type="TLBB_ButtonPageDown" Name="SelfBlog_OtherInfo">
+                <Property Name="AbsolutePosition" Value="x:210.0 y:0.0" />
+                <Property Name="AbsoluteSize" Value="w:42.000000 h:24.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_496}" />
+                <Event Name="Clicked" Function="Blog_Other_Info_Page_Switch();" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<Imageset Name="fuqiskill" Imagefile="Icons/fuqiskill.jpg" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+	<Image Name="fuqiskill_1" XPos="0" YPos="0" Width="64" Height="64" />
+	<Image Name="fuqiskill_2" XPos="64" YPos="0" Width="64" Height="64" />
+	<Image Name="fuqiskill_3" XPos="128" YPos="0" Width="64" Height="64" />
+	<Image Name="fuqiskill_4" XPos="192" YPos="0" Width="64" Height="64" />
+	<Image Name="fuqiskill_5" XPos="0" YPos="64" Width="64" Height="64" />
+	<Image Name="fuqiskill_6" XPos="64" YPos="64" Width="64" Height="64" />
+	<Image Name="fuqiskill_7" XPos="128" YPos="64" Width="64" Height="64" />
+	<Image Name="fuqiskill_8" XPos="192" YPos="64" Width="64" Height="64" />
+	<Image Name="fuqiskill_9" XPos="0" YPos="128" Width="64" Height="64" />
+	<Image Name="fuqiskill_10" XPos="64" YPos="128" Width="64" Height="64" />
+	<Image Name="fuqiskill_11" XPos="128" YPos="128" Width="64" Height="64" />
+	<Image Name="fuqiskill_12" XPos="192" YPos="128" Width="64" Height="64" />
+	<Image Name="fuqiskill_13" XPos="0" YPos="192" Width="64" Height="64" />
+	<Image Name="fuqiskill_14" XPos="64" YPos="192" Width="64" Height="64" />
+	<Image Name="fuqiskill_15" XPos="128" YPos="192" Width="64" Height="64" />
+	<Image Name="fuqiskill_16" XPos="192" YPos="192" Width="64" Height="64" />
+</Imageset>

@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="DefaultWindow" Name="Test_Backgournd">
+        <Property Name="Size" Value="w:1 h:1" />
+        <Property Name="Position" Value="x:0 y:0" />
+        <Window Type="TLBB_MainFrame1" Name="Test_Frame">
+            <Property Name="Size" Value="w:0.5 h:0.5" />
+            <Property Name="Position" Value="x:0 y:0" />
+            <Window Type="TLBB_DragTitle" Name="Test_Frame1_Title">
+                <Property Name="AbsolutePosition" Value="x:4.000000 y:11.000000" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-47.000000},{0.000000,19.000000}" />
+                <Property Name="Text" Value="TLBB_MainFrame1" />
+                <Property Name="DragTarget" Value="Test_Frame" />
+            </Window>
+            <Window Type="TLBB_ButtonHelp" Name="Test_Frame_Help">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-35.000000},{0.000000,13.000000}" />
+                <Property Name="AbsoluteSize" Value="w:16.000000 h:15.000000" />
+                <Property Name="Text" Value="TLBB_ButtonHelp" />
+            </Window>
+            <Window Type="TLBB_ButtonClose" Name="Test_Frame_Close">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-20.000000},{0.000000,13.000000}" />
+                <Property Name="AbsoluteSize" Value="w:16.000000 h:15.000000" />
+                <Property Name="Text" Value="TLBB_ButtonClose" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon2" Name="Test_Frame_OK">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-85.000000},{1.000000,-39.000000}" />
+                <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_557}" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon2" Name="Test_Frame_Cancle">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-45.000000},{1.000000,-39.000000}" />
+                <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_542}" />
+            </Window>
+            <Window Type="DefaultWindow" Name="Test_Frame1_Client">
+                <Property Name="AbsolutePosition" Value="x:7.000000 y:36.000000" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-13.000000},{1.000000,-55.000000}" />
+                <Window Type="TLBB_ButtonCommon" Name="ButtonCommon">
+                    <Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+                    <Property Name="AbsoluteSize" Value="w:120.000000 h:30.000000" />
+                    <Property Name="Text" Value="TLBB_ButtonCommon" />
+                </Window>
+                <Window Type="TLBB_ButtonCommon2" Name="ButtonCommon2">
+                    <Property Name="AbsolutePosition" Value="x:120.000000 y:0.000000" />
+                    <Property Name="AbsoluteSize" Value="w:120.000000 h:30.000000" />
+                    <Property Name="Text" Value="TLBB_ButtonCommon2" />
+                </Window>
+                <Window Type="TLBB_ButtonCommon3" Name="ButtonCommon3">
+                    <Property Name="AbsolutePosition" Value="x:120.000000 y:30.000000" />
+                    <Property Name="AbsoluteSize" Value="w:120.000000 h:30.000000" />
+                    <Property Name="Text" Value="TLBB_ButtonCommon3" />
+                </Window>
+                <Window Type="TLBB_ButtonCommon4" Name="ButtonCommon4">
+                    <Property Name="AbsolutePosition" Value="x:240.000000 y:0.000000" />
+                    <Property Name="AbsoluteSize" Value="w:120.000000 h:30.000000" />
+                    <Property Name="Text" Value="TLBB_ButtonCommon4" />
+                </Window>
+                <Window Type="TLBB_ButtonExp1" Name="ButtonExp1">
+                    <Property Name="AbsolutePosition" Value="x:6.000000 y:106.000000" />
+                    <Property Name="AbsoluteSize" Value="w:150.000000 h:58.000000" />
+                    <Property Name="Text" Value="TLBB_ButtonExp1" />
+                </Window>
+                <Window Type="TLBB_ButtonExp2" Name="ButtonExp2">
+                    <Property Name="AbsolutePosition" Value="x:200.000000 y:106.000000" />
+                    <Property Name="AbsoluteSize" Value="w:150.000000 h:58.000000" />
+                    <Property Name="Text" Value="TLBB_ButtonExp2" />
+                </Window>
+                <Window Type="TLBB_ButtonPageUp" Name="ButtonPageUp">
+                    <Property Name="AbsolutePosition" Value="x:0.000000 y:30.000000" />
+                    <Property Name="AbsoluteSize" Value="w:42.000000 h:24.000000" />
+                </Window>
+                <Window Type="TLBB_ButtonPageDown" Name="ButtonPageDown">
+                    <Property Name="AbsolutePosition" Value="x:120.000000 y:30.000000" />
+                    <Property Name="AbsoluteSize" Value="w:42.000000 h:24.000000" />
+                </Window>
+                <Window Type="TLBB_ButtonRadio" Name="ButtonRadio">
+                    <Property Name="AbsolutePosition" Value="x:14.000000 y:60.000000" />
+                    <Property Name="AbsoluteSize" Value="w:12.000000 h:12.000000" />
+                    <Property Name="Text" Value="TLBB_ButtonRadio" />
+                </Window>
+                <Window Type="TLBB_ButtonAdd" Name="ButtonAdd">
+                    <Property Name="AbsolutePosition" Value="x:30.000000 y:60.000000" />
+                    <Property Name="AbsoluteSize" Value="w:15.000000 h:15.000000" />
+                    <Property Name="Text" Value="TLBB_ButtonAdd" />
+                </Window>
+                <Window Type="TLBB_ButtonSub" Name="ButtonSub">
+                    <Property Name="AbsolutePosition" Value="x:30.000000 y:74.000000" />
+                    <Property Name="AbsoluteSize" Value="w:15.000000 h:15.000000" />
+                    <Property Name="Text" Value="TLBB_ButtonSub" />
+                </Window>
+                <Window Type="TLBB_ButtonTurnLeft" Name="ButtonTurnLeft">
+                    <Property Name="AbsolutePosition" Value="x:60.000000 y:74.000000" />
+                    <Property Name="AbsoluteSize" Value="w:25.000000 h:25.000000" />
+                    <Property Name="Text" Value="TLBB_ButtonTurnLeft" />
+                </Window>
+                <Window Type="TLBB_ButtonTurnRight" Name="ButtonTurnRight">
+                    <Property Name="AbsolutePosition" Value="x:90.000000 y:74.000000" />
+                    <Property Name="AbsoluteSize" Value="w:25.000000 h:25.000000" />
+                    <Property Name="Text" Value="TLBB_ButtonTurnRight" />
+                </Window>
+                <Window Type="TLBB_ButtonKey" Name="ButtonKey">
+                    <Property Name="AbsolutePosition" Value="x:120.000000 y:74.000000" />
+                    <Property Name="AbsoluteSize" Value="w:29.000000 h:29.000000" />
+                    <Property Name="Text" Value="TLBB_ButtonKey" />
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ButtonAction">
+                    <Property Name="AbsolutePosition" Value="x:120.000000 y:74.000000" />
+                    <Property Name="AbsoluteSize" Value="w:29.000000 h:29.000000" />
+                    <Property Name="Text" Value="TLBB_ActionButton" />
+                </Window>
+                <Window Type="TLBB_ButtonCheckForPage" Name="CheckButtonForPage">
+                    <Property Name="AbsolutePosition" Value="x:158.000000 y:79.000000" />
+                    <Property Name="AbsoluteSize" Value="w:149.000000 h:21.000000" />
+                    <Property Name="Text" Value="TLBB_ButtonCheckForPage" />
+                </Window>
+                <Window Type="TLBB_StaticImageFrame" Name="StaticImageNULL">
+                    <Property Name="AbsolutePosition" Value="x:42.000000 y:187.000000" />
+                    <Property Name="AbsoluteSize" Value="w:300.000000 h:29.000000" />
+                    <Property Name="Image" Value="set:CommonStaticImage image:ProgressBarL" />
+                    <Property Name="Text" Value="TLBB_ActionButton" />
+                </Window>
+            </Window>
+        </Window>
+        <Window Type="TLBB_MainFrame2" Name="Test_Frame2">
+            <Property Name="Size" Value="w:0.5 h:0.5" />
+            <Property Name="Position" Value="x:0.5 y:0" />
+            <Window Type="TLBB_DragTitle" Name="Test_Frame2_Title">
+                <Property Name="AbsolutePosition" Value="x:6.000000 y:2.000000" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-48.000000},{0.000000,19.000000}" />
+                <Property Name="Text" Value="Test_Frame2" />
+                <Property Name="DragTarget" Value="Test_Frame2" />
+            </Window>
+            <Window Type="TLBB_ButtonHelp" Name="Test_Frame2_Help">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-34.000000},{0.000000,4.000000}" />
+                <Property Name="AbsoluteSize" Value="w:15.000000 h:15.000000" />
+                <Property Name="Text" Value="TLBB_ButtonHelp" />
+            </Window>
+            <Window Type="TLBB_ButtonClose" Name="Test_Frame2_Close">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-20.000000},{0.000000,4.000000}" />
+                <Property Name="AbsoluteSize" Value="w:15.000000 h:15.000000" />
+                <Property Name="Text" Value="TLBB_ButtonClose" />
+            </Window>
+            <Window Type="DefaultWindow" Name="Test_Frame2_Client">
+                <Property Name="AbsolutePosition" Value="x:10.000000 y:26.000000" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-18.000000},{1.000000,-31.000000}" />
+                <Window Type="TLBB_ComboList" Name="Test_TLBB_ComboList">
+                    <Property Name="AbsolutePosition" Value="x:11.000000 y:180.000000" />
+                    <Property Name="AbsoluteSize" Value="w:190.000000 h:20.000000" />
+                </Window>
+                <Window Type="TLBB_ListBoxCommon" Name="Test_TLBB_ListBoxCommon">
+                    <Property Name="AbsolutePosition" Value="x:161.000000 y:41.000000" />
+                    <Property Name="AbsoluteSize" Value="w:90.000000 h:200.000000" />
+                </Window>
+                <Window Type="TLBB_StaticText" Name="Test_TLBB_Static_Text">
+                    <Property Name="AbsolutePosition" Value="x:211.000000 y:41.000000" />
+                    <Property Name="AbsoluteSize" Value="w:90.000000 h:200.000000" />
+                </Window>
+                <Window Type="TLBB_MultiIMEEditBox" Name="Test_TLBB_MultiEditbox">
+                    <Property Name="AbsolutePosition" Value="x:4.000000 y:13.000000" />
+                    <Property Name="AbsoluteSize" Value="w:146.000000 h:97.000000" />
+                </Window>
+                <Window Type="TLBB_SimpleMulitiTextFrame" Name="TLBB_SimpleMulitiTextFrame">
+                    <Property Name="AbsolutePosition" Value="x:4.000000 y:13.000000" />
+                    <Property Name="AbsoluteSize" Value="w:146.000000 h:97.000000" />
+                </Window>
+                <Window Type="TLBB_SimpleTextFrame" Name="TLBB_SimpleTextFrame">
+                    <Property Name="AbsolutePosition" Value="x:4.000000 y:13.000000" />
+                    <Property Name="AbsoluteSize" Value="w:146.000000 h:97.000000" />
+                </Window>
+                <Window Type="TLBB_ProgressPropertyRed" Name="Test_TLBB_Progress1">
+                    <Property Name="AbsolutePosition" Value="x:11.000000 y:180.000000" />
+                    <Property Name="AbsoluteSize" Value="w:190.000000 h:20.000000" />
+                    <Property Name="EffectColorLevel" Value="index:0 tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+                    <Property Name="CurrentProgress" Value="0.5" />
+                </Window>
+            </Window>
+        </Window>
+        <Window Type="TLBB_Frame_Lace1" Name="Test_Frame3">
+            <Property Name="Size" Value="w:0.5 h:0.5" />
+            <Property Name="Position" Value="x:0 y:0.5" />
+            <Window Type="TLBB_ButtonHelp" Name="Test_Frame3_Help">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-34.000000},{0.000000,14.000000}" />
+                <Property Name="AbsoluteSize" Value="w:15.000000 h:15.000000" />
+                <Property Name="Text" Value="TLBB_ButtonHelp" />
+            </Window>
+            <Window Type="TLBB_ButtonClose" Name="Test_Frame3_Close">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+                <Property Name="AbsoluteSize" Value="w:15.000000 h:15.000000" />
+                <Property Name="Text" Value="TLBB_ButtonClose" />
+            </Window>
+            <Window Type="TLBB_DragTitle" Name="Test_Frame3_Title">
+                <Property Name="AbsolutePosition" Value="x:93.000000 y:11.000000" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-133.000000},{0.000000,19.000000}" />
+                <Property Name="Text" Value="Test_Frame3" />
+                <Property Name="DragTarget" Value="Test_Frame3" />
+            </Window>
+            <Window Type="DefaultWindow" Name="Test_Frame3_Client">
+                <Property Name="AbsolutePosition" Value="x:10.000000 y:35.000000" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-14.000000},{1.000000,-62.000000}" />
+                <Window Type="TLBB_Frame1" Name="Test_SimpleFrame1">
+                    <Property Name="AbsolutePosition" Value="x:11.000000 y:5.000000" />
+                    <Property Name="AbsoluteSize" Value="w:190.000000 h:64.000000" />
+                </Window>
+                <Window Type="TLBB_EditBoxNormal" Name="Test_TLBB_EditBoxNormal">
+                    <Property Name="AbsolutePosition" Value="x:11.000000 y:100.000000" />
+                    <Property Name="AbsoluteSize" Value="w:190.000000 h:20.000000" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_208}" />
+                </Window>
+                <Window Type="TLBB_Scrollbar_Common" Name="Test_ScrollBar">
+                    <Property Name="AbsolutePosition" Value="x:270.000000 y:13.000000" />
+                    <Property Name="AbsoluteSize" Value="w:16.000000 h:128.000000" />
+                </Window>
+                <Window Type="TLBB_Slider" Name="Test_Slider">
+                    <Property Name="AbsolutePosition" Value="x:270.000000 y:13.000000" />
+                    <Property Name="AbsoluteSize" Value="w:128.000000 h:16.000000" />
+                </Window>
+                <Window Type="TLBB_EditBoxNull" Name="Test_TLBB_EditBoxNULL">
+                    <Property Name="AbsolutePosition" Value="x:11.000000 y:120.000000" />
+                    <Property Name="AbsoluteSize" Value="w:190.000000 h:20.000000" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_867}" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="Test_TLBB_SimpleText">
+                    <Property Name="AbsolutePosition" Value="x:11.000000 y:140.000000" />
+                    <Property Name="AbsoluteSize" Value="w:190.000000 h:20.000000" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_868}" />
+                </Window>
+                <Window Type="TLBB_SimpleTextFrameLeft" Name="Test_TLBB_SimpleTextFrameLeft">
+                    <Property Name="AbsolutePosition" Value="x:11.000000 y:160.000000" />
+                    <Property Name="AbsoluteSize" Value="w:100.000000 h:20.000000" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_910}" />
+                </Window>
+                <Window Type="TLBB_SimpleTextFrameRight" Name="Test_TLBB_SimpleTextFrameRight">
+                    <Property Name="AbsolutePosition" Value="x:121.000000 y:160.000000" />
+                    <Property Name="AbsoluteSize" Value="w:90.000000 h:20.000000" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_840}" />
+                </Window>
+                <Window Type="TLBB_SimpleTextInfo" Name="Test_TLBB_SimpleTextInfo">
+                    <Property Name="AbsolutePosition" Value="x:11.000000 y:180.000000" />
+                    <Property Name="AbsoluteSize" Value="w:190.000000 h:20.000000" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_769}" />
+                </Window>
+                <Window Type="TLBB_Money" Name="Test_TLBB_Money">
+                    <Property Name="AbsolutePosition" Value="x:11.000000 y:200.000000" />
+                    <Property Name="AbsoluteSize" Value="w:190.000000 h:20.000000" />
+                </Window>
+                <Window Type="TLBB_Spinner" Name="Test_TLBB_Spinner">
+                    <Property Name="AbsolutePosition" Value="x:11.000000 y:220.000000" />
+                    <Property Name="AbsoluteSize" Value="w:190.000000 h:20.000000" />
+                </Window>
+            </Window>
+        </Window>
+        <Window Type="TLBB_FramePet" Name="Test_Pet">
+            <Property Name="AbsolutePosition" Value="x:400.000000 y:300.000000" />
+            <Property Name="AbsoluteSize" Value="w:120.000000 h:220.000000" />
+            <Window Type="TLBB_StaticImageNULL" Name="PetHead">
+                <Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+                <Property Name="AbsoluteSize" Value="w:68.000000 h:26.000000" />
+                <Property Name="Image" Value="set:CommonItem image:PetFrame_Head" />
+            </Window>
+        </Window>
+        <Window Type="TLBB_FramePlayer" Name="Test_Player">
+            <Property Name="AbsolutePosition" Value="x:550.000000 y:300.000000" />
+            <Property Name="AbsoluteSize" Value="w:120.000000 h:220.000000" />
+        </Window>
+        <Window Type="TLBB_FramePlayerOther" Name="Test_PlayerOther">
+            <Property Name="AbsolutePosition" Value="x:550.000000 y:350.000000" />
+            <Property Name="AbsoluteSize" Value="w:120.000000 h:220.000000" />
+        </Window>
+        <Window Type="TLBB_FrameSelect" Name="Test_SelectPlayer">
+            <Property Name="AbsolutePosition" Value="x:650.000000 y:300.000000" />
+            <Property Name="AbsoluteSize" Value="w:120.000000 h:220.000000" />
+        </Window>
+        <Window Type="TLBB_Slider" Name="Text_TLBB_Slider">
+            <Property Name="AbsolutePosition" Value="x:650.000000 y:550.000000" />
+            <Property Name="AbsoluteSize" Value="w:200.000000 h:20.000000" />
+        </Window>
+    </Window>
+</GUILayout>

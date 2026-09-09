@@ -1,0 +1,5 @@
+<?xml version="1.0" ?>
+<Fonts>
+<Font Name="SongTiBmp12" Filename="Schema/GBK12.bin" Size="12"  TextureSize="512" CodePage="936" />
+<Font Name="SongTiBmp12" Filename="Schema/VTNAM14.bin" Size="14"  TextureSize="512" CodePage="1258" />
+</Fonts>

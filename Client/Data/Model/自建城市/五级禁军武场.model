@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="五级禁军武场.frame" />
+    <entity mesh="五级禁军武场.mesh" node="五级禁军武场" />
+    <entity mesh="五级禁军武场旗帜.mesh" />
+</model>

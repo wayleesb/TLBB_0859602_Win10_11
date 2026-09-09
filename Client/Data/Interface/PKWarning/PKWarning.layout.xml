@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<GUILayout>
+	<Window Type="TLBB_Animate" Name="PKWarning_Frame">
+		<Property Name="Position" Value="x:0 y:0" />
+		<Property Name="Size" Value="w:1 h:1" />
+		<Property Name="Animate" Value="Animate_PKWarning" />
+		<Property Name="MouseHollow" Value="true" />
+		<Property Name="MouseMoveHollow" Value="true" />
+		<Property Name="MouseLButtonHollow" Value="true" />
+		<Property Name="MouseRButtonHollow" Value="true" />
+		<Property Name="AlwaysOnTop" Value="True" />
+	</Window>
+</GUILayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" ?>
+<Imageset Name="CommonFrame4" Imagefile="Common/tga_CommonFrame4.dds" NativeHorzRes="1024" NativeVertRes="768"	AutoScaled="false">
+	<Image Name="TragetCamp_DaLiao" XPos="0" YPos="0" Width="19" Height="39" />
+	<Image Name="TragetCamp_DaLi" XPos="19" YPos="0" Width="19" Height="39" />
+	<Image Name="TragetCamp_XiXia" XPos="38" YPos="0" Width="19" Height="39" />
+	<Image Name="TragetCamp_WuDang" XPos="57" YPos="0" Width="19" Height="39" />
+	<Image Name="TragetCamp_YeShou" XPos="76" YPos="0" Width="19" Height="39" />
+	<Image Name="TragetCamp_EShen" XPos="95" YPos="0" Width="19" Height="39" />
+	<Image Name="TragetCamp_YueNan" XPos="114" YPos="0" Width="19" Height="39" />
+	<Image Name="TragetCamp_FanBang" XPos="133" YPos="0" Width="19" Height="39" />
+	<Image Name="TragetCamp_XinShou" XPos="152" YPos="0" Width="19" Height="39" />
+	<Image Name="TragetCamp_BaiMiao" XPos="171" YPos="0" Width="19" Height="39" />
+	<Image Name="TragetCamp_YaoMo" XPos="190" YPos="0" Width="19" Height="39" />
+	<Image Name="TragetCamp_XiuLuo" XPos="209" YPos="0" Width="19" Height="39" />
+	<Image Name="TragetCamp_TianLong" XPos="228" YPos="0" Width="19" Height="39" />
+	<Image Name="TragetCamp_MangGai" XPos="0" YPos="39" Width="19" Height="39" />
+	<Image Name="TragetCamp_GaiBang" XPos="19" YPos="39" Width="19" Height="39" />
+	<Image Name="TragetCamp_YueNv" XPos="38" YPos="39" Width="19" Height="39" />
+	<Image Name="TragetCamp_LangRen" XPos="57" YPos="39" Width="19" Height="39" />
+	<Image Name="TragetCamp_LvLin" XPos="76" YPos="39" Width="19" Height="39" />
+	<Image Name="TragetCamp_TianShan" XPos="95" YPos="39" Width="19" Height="39" />
+	<Image Name="TragetCamp_MingJiao" XPos="114" YPos="39" Width="19" Height="39" />
+	<Image Name="TragetCamp_ShaoLin" XPos="133" YPos="39" Width="19" Height="39" />
+	<Image Name="TragetCamp_YiMin" XPos="152" YPos="39" Width="19" Height="39" />
+	<Image Name="TragetCamp_EMei" XPos="171" YPos="39" Width="19" Height="39" />
+	<Image Name="TragetCamp_DaSong" XPos="190" YPos="39" Width="19" Height="39" />
+	<Image Name="TragetCamp_XiaoYao" XPos="209" YPos="39" Width="19" Height="39" />
+	<Image Name="TragetCamp_XingXiu" XPos="228" YPos="39" Width="19" Height="39" />
+	<Image Name="TragetCamp_HeiMiao" XPos="0" YPos="78" Width="19" Height="39" />
+	<Image Name="ConfraternityPK1" XPos="6" YPos="180" Width="42" Height="71" />
+	<Image Name="ConfraternityPK2" XPos="62" YPos="180" Width="42" Height="71" />
+	<Image Name="ConfraternityPK3" XPos="119" YPos="180" Width="42" Height="71" />
+
+  <Image Name="MessageBallred_ture" XPos="213" YPos="211" Width="19" Height="19" />
+  <Image Name="MessageBallred_false" XPos="233" YPos="211" Width="19" Height="19" />
+  <Image Name="MessageBallyellow_ture" XPos="213" YPos="233" Width="19" Height="19" />
+  <Image Name="MessageBallyellow_false" XPos="233" YPos="233" Width="19" Height="19" />
+
+  <Image Name="Special_Thumb_Normal" XPos="239" YPos="189" Width="14" Height="14" />
+
+  <Image Name="XiaoLaBa_Normal" XPos="177" YPos="195" Width="17" Height="17" />
+  <Image Name="XiaoLaBa_Hover" XPos="177" YPos="214" Width="17" Height="17" />
+  <Image Name="XiaoLaBa_Pushed" XPos="177" YPos="233" Width="17" Height="17" />
+
+  <Image Name="Jian" XPos="206" YPos="175" Width="25" Height="25" />
+
+  <Image Name="Lev1" XPos="22" YPos="82" Width="34" Height="34" />
+  <Image Name="Lev2" XPos="58" YPos="82" Width="34" Height="34" />
+  <Image Name="Lev3" XPos="94" YPos="82" Width="34" Height="34" />
+  <Image Name="Lev4" XPos="130" YPos="82" Width="34" Height="34" />
+  <Image Name="Lev5" XPos="22" YPos="120" Width="34" Height="34" />
+  <Image Name="Lev6" XPos="58" YPos="120" Width="34" Height="34" />
+  <Image Name="Lev7" XPos="94" YPos="120" Width="34" Height="34" />
+  <Image Name="Lev8" XPos="130" YPos="120" Width="34" Height="34" />
+  <Image Name="baby" XPos="168" YPos="82" Width="34" Height="34" />
+  <Image Name="manhood" XPos="205" YPos="82" Width="34" Height="34" />
+
+  <Image Name="Safe" XPos="210" YPos="123" Width="36" Height="36" />
+
+  <Image Name="JingTanHao_Normal" XPos="171" YPos="121" Width="24" Height="23" />
+  <Image Name="JingTanHao_Hover" XPos="171" YPos="149" Width="24" Height="23" />
+</Imageset>

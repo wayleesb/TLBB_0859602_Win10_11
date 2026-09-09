@@ -1,0 +1,225 @@
+<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrameNULL" Name="SuperTooltip2_Frame">
+        <Property Name="AbsolutePosition" Value="x:0 y:0" />
+        <Property Name="AbsoluteSize" Value="w:206 h:393" />
+		 <Property Name="ClippedByParent" Value="false" />
+        <Window Type="TLBB_SuperTooltip" Name="_SuperTooltip2_">
+            <Property Name="AbsolutePosition" Value="x:0 y:0" />
+            <Property Name="AbsoluteSize" Value="w:206 h:393" />
+			 <Property Name="ClippedByParent" Value="false" />
+			
+            <!--- Static Part Page Header  -->
+            <Window Type="TLBB_Frame_Lace3" Name="SuperTooltip2_PageHeader">
+                <Property Name="AbsolutePosition" Value="x:2 y:2" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-4.000000},{0.000000,106.000000}" />
+                <Event Name="MouseLClick" Function="SuperTooltip2_LClick();" />
+                <Window Type="TLBB_SimpleMulitiTextFrame" Name="SuperTooltip2_StaticPart_Title">
+                    <Property Name="AbsolutePosition" Value="x:0 y:0" />
+                    <Property Name="UnifiedSize" Value="{{1.000000,0.000000},{0.000000,25.000000}" />
+                    <Property Name="Font" Value="YouYuan9.75" />
+                    <Property Name="HorzFormatting" Value="HorzCentred" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                    <Window Type="TLBB_DragTitle" Name="SuperTooltip2_Title">
+                        <Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+                        <Property Name="UnifiedSize" Value="{{1.000000,-25.000000},{1.000000,0.000000}" />
+                        <Property Name="DragTarget" Value="SuperTooltip2_Frame" />
+                    </Window>
+                    <Window Type="TLBB_ButtonClose" Name="SuperTooltip2_Close">
+                        <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,5.000000}" />
+                        <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+                        <Event Name="Clicked" Function="SuperTooltip2_LClick();" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_StaticImageFrame" Name="SuperTooltip2_StaticPart_Icon">
+                    <Property Name="AbsolutePosition" Value="x:7.000000 y:32.000000" />
+                    <Property Name="AbsoluteSize" Value="w:66.000000 h:66.000000" />
+                    <Window Type="TLBB_StaticImageNULL" Name="SuperTooltip2_StaticPart_Icon_Protected">
+                        <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{1.000000,-19.000000}" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="Image" Value="set:UIIcons image:Icon_Lock" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="SuperTooltip2_StaticPart_Item1">
+                    <Property Name="AbsolutePosition" Value="x:77.000000 y:32.000000" />
+                    <Property Name="AbsoluteSize" Value="w:124.000000 h:16.000000" />
+                    <Property Name="Text" Value="" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="SuperTooltip2_StaticPart_Item2">
+                    <Property Name="AbsolutePosition" Value="x:77.000000 y:48.000000" />
+                    <Property Name="AbsoluteSize" Value="w:124.000000 h:16.000000" />
+                    <Property Name="Text" Value="" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="SuperTooltip2_StaticPart_Item3">
+                    <Property Name="AbsolutePosition" Value="x:77 y:64" />
+                    <Property Name="AbsoluteSize" Value="w:124 h:16" />
+                    <Property Name="Text" Value="" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="SuperTooltip2_StaticPart_Item4">
+                    <Property Name="AbsolutePosition" Value="x:77 y:80" />
+                    <Property Name="AbsoluteSize" Value="w:124 h:16" />
+                    <Property Name="Text" Value="" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                </Window>
+            </Window>
+            <!--- Static Short Desc Part  -->
+            <Window Type="TLBB_StaticImageNULL" Name="SuperTooltip2_ShortDesc">
+                <Property Name="AbsolutePosition" Value="x:2.000000 y:106.000000" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-4.000000},{0.000000,18.000000}" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Window Type="TLBB_SimpleText" Name="SuperTooltip2_ShortDesc_Text">
+                    <Property Name="AbsolutePosition" Value="x:3.000000 y:0.000000" />
+                    <Property Name="AbsoluteSize" Value="w:70.000000 h:18.000000" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_150}" />
+                    <Property Name="HorzFormatting" Value="HorzCentred" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                </Window>
+                <!--- modify start by tongxi  强化等级显示星星，目前只做了10颗，如果程序改变，请通知我-->
+                <Window Type="DefaultWindow" Name="SuperTooltip2_StarSet">
+                    <Property Name="AbsolutePosition" Value="x:80.000000 y:2.000000" />
+                    <Property Name="AbsoluteSize" Value="w:120.000000 h:16.000000" />
+                    <Window Type="TLBB_StarPic" Name="SuperTooltip2_StaticPart_Star1">
+                        <Property Name="AbsolutePosition" Value="x:1.000000 y:3.000000" />
+                        <Property Name="AbsoluteSize" Value="w:10.000000 h:10.000000" />
+                    </Window>
+                    <Window Type="TLBB_StarPic" Name="SuperTooltip2_StaticPart_Star2">
+                        <Property Name="AbsolutePosition" Value="x:13.000000 y:3.000000" />
+                        <Property Name="AbsoluteSize" Value="w:10.000000 h:10.000000" />
+                    </Window>
+                    <Window Type="TLBB_StarPic" Name="SuperTooltip2_StaticPart_Star3">
+                        <Property Name="AbsolutePosition" Value="x:25.000000 y:3.000000" />
+                        <Property Name="AbsoluteSize" Value="w:10.000000 h:10.000000" />
+                    </Window>
+                    <Window Type="TLBB_StarPic" Name="SuperTooltip2_StaticPart_Star4">
+                        <Property Name="AbsolutePosition" Value="x:37.000000 y:3.000000" />
+                        <Property Name="AbsoluteSize" Value="w:10.000000 h:10.000000" />
+                    </Window>
+                    <Window Type="TLBB_StarPic" Name="SuperTooltip2_StaticPart_Star5">
+                        <Property Name="AbsolutePosition" Value="x:49.000000 y:3.000000" />
+                        <Property Name="AbsoluteSize" Value="w:10.000000 h:10.000000" />
+                    </Window>
+                    <Window Type="TLBB_StarPic" Name="SuperTooltip2_StaticPart_Star6">
+                        <Property Name="AbsolutePosition" Value="x:61.000000 y:3.000000" />
+                        <Property Name="AbsoluteSize" Value="w:10.000000 h:10.000000" />
+                    </Window>
+                    <Window Type="TLBB_StarPic" Name="SuperTooltip2_StaticPart_Star7">
+                        <Property Name="AbsolutePosition" Value="x:73.000000 y:3.000000" />
+                        <Property Name="AbsoluteSize" Value="w:10.000000 h:10.000000" />
+                    </Window>
+                    <Window Type="TLBB_StarPic" Name="SuperTooltip2_StaticPart_Star8">
+                        <Property Name="AbsolutePosition" Value="x:85.000000 y:3.000000" />
+                        <Property Name="AbsoluteSize" Value="w:10.000000 h:10.000000" />
+                    </Window>
+                    <Window Type="TLBB_StarPic" Name="SuperTooltip2_StaticPart_Star9">
+                        <Property Name="AbsolutePosition" Value="x:97.000000 y:3.000000" />
+                        <Property Name="AbsoluteSize" Value="w:10.000000 h:10.000000" />
+                    </Window>
+                </Window>
+                <!--- modify end  -->
+            </Window>
+            <!--- Static Short Gem Part  -->
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="SuperTooltip2_StaticPart_Yuanbaojiaoyi">
+                <Property Name="AbsolutePosition" Value="x:2.000000 y:124.000000" />
+                <Property Name="UnifiedSize" Value="{{0.9800000,0.000000},{0.000000,30.000000}" />
+                <Property Name="Font" Value="YouYuan8.75" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_StaticImageNULL" Name="SuperTooltip2_GemPart">
+                <Property Name="AbsolutePosition" Value="x:2.000000 y:154.000000" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-4.000000},{0.000000,21.000000}" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Window Type="TLBB_StaticImageFrame" Name="SuperTooltip2_StaticPart_Gem1">
+                    <Property Name="AbsolutePosition" Value="x:11 y:1" />
+                    <Property Name="AbsoluteSize" Value="w:18 h:18" />
+                </Window>
+                <Window Type="TLBB_StaticImageFrame" Name="SuperTooltip2_StaticPart_Gem2">
+                    <Property Name="AbsolutePosition" Value="x:30 y:1" />
+                    <Property Name="AbsoluteSize" Value="w:18 h:18" />
+                </Window>
+                <Window Type="TLBB_StaticImageFrame" Name="SuperTooltip2_StaticPart_Gem3">
+                    <Property Name="AbsolutePosition" Value="x:49 y:1" />
+                    <Property Name="AbsoluteSize" Value="w:18 h:18" />
+                </Window>
+                <Window Type="TLBB_StaticImageFrame2" Name="SuperTooltip2_StaticPart_Gem4">
+                    <Property Name="AbsolutePosition" Value="x:68 y:1" />
+                    <Property Name="AbsoluteSize" Value="w:18 h:18" />
+                </Window>
+            </Window>
+            <!--- Static Money Part  -->
+            <Window Type="TLBB_StaticImageNULL" Name="SuperTooltip2_MoneyPart">
+                <Property Name="AbsolutePosition" Value="x:2.000000 y:176.000000" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-4.000000},{0.000000,21.000000}" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Window Type="TLBB_SimpleText" Name="SuperTooltip2_StaticPart_Money_Text">
+                    <Property Name="AbsolutePosition" Value="x:7 y:1" />
+                    <Property Name="AbsoluteSize" Value="w:60 h:18" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_785}" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                </Window>
+                <Window Type="TLBB_Money" Name="SuperTooltip2_StaticPart_Money">
+                    <Property Name="AbsolutePosition" Value="x:0 y:1" />
+                    <Property Name="AbsoluteSize" Value="w:200 h:18" />
+                    <Property Name="MoneyNumber" Value="" />
+                    <Property Name="HorzFormatting" Value="RightAligned" />
+                </Window>
+            </Window>
+            <!--- Static Money Part 2 -->
+            <Window Type="TLBB_StaticImageNULL" Name="SuperTooltip2_MoneyPart_2">
+                <Property Name="AbsolutePosition" Value="x:2.000000 y:197.000000" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-4.000000},{0.000000,21.000000}" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Window Type="TLBB_SimpleText" Name="SuperTooltip2_StaticPart_Money_Text_2">
+                    <Property Name="AbsolutePosition" Value="x:7 y:1" />
+                    <Property Name="AbsoluteSize" Value="w:70 h:18" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_904}" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                </Window>
+                <Window Type="TLBB_Money" Name="SuperTooltip2_StaticPart_Money_2">
+                    <Property Name="AbsolutePosition" Value="x:0 y:1" />
+                    <Property Name="AbsoluteSize" Value="w:200 h:18" />
+                    <Property Name="MoneyNumber" Value="" />
+                    <Property Name="HorzFormatting" Value="RightAligned" />
+                </Window>
+            </Window>
+            <!--- Static Part Manufacturer  -->
+            <Window Type="TLBB_StaticImageNULL" Name="SuperTooltip2_Manufacturer_Frame">
+                <Property Name="AbsolutePosition" Value="x:2.000000 y:217.000000" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-4.000000},{0.000000,18.000000}" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Window Type="TLBB_SimpleText" Name="SuperTooltip2_Manufacturer">
+                    <Property Name="Position" Value="x:0.017964 y:0.086956" />
+                    <Property Name="Size" Value="w:0.9640718 h:1.0" />
+                    <Property Name="Text" Value="" />
+                    <Property Name="HorzFormatting" Value="HorzCentred" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_SuperTooltip_ResizeText" Name="SuperTooltip2_Explain">
+                <Property Name="AbsolutePosition" Value="x:2.000000 y:224.000000" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-4.000000},{0.000000,59.000000}" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+				 <Property Name="ClippedByParent" Value="false" />
+                <Property Name="MaxWidth" Value="202" />
+                <Property Name="MinWidth" Value="202" />
+            </Window>
+            <!--- Dynamic Part   -->
+            <Window Type="TLBB_SuperTooltip_ResizeText" Name="SuperTooltip2_Property">
+                <Property Name="AbsolutePosition" Value="x:2.000000 y:205.000000" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-4.000000},{0.000000,20.000000}" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="RiseOnClick" Value="False" />
+				 <Property Name="ClippedByParent" Value="false" />
+                <Property Name="MaxWidth" Value="202" />
+                <Property Name="MinWidth" Value="202" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

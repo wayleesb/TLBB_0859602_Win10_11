@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="大理派建筑01.frame" />
+    <entity mesh="大理派建筑01铃3.mesh" node="大理派建筑01铃3">
+        <offset>
+            <translate x="328.92" y="-203.887" z="323.357" />
+        </offset>
+    </entity>
+    <entity mesh="大理派建筑01铃2.mesh" node="大理派建筑01铃2">
+        <offset>
+            <translate x="-528.855" y="-203.887" z="323.357" />
+        </offset>
+    </entity>
+    <entity mesh="大理派建筑01铃1.mesh" node="大理派建筑01铃1">
+        <offset>
+            <translate x="-528.855" y="-203.887" z="-422.774" />
+        </offset>
+    </entity>
+    <entity mesh="大理派建筑01铃7.mesh" node="大理派建筑01铃7">
+        <offset>
+            <translate x="-507.637" y="-388.226" z="297.806" />
+        </offset>
+    </entity>
+    <entity mesh="大理派建筑01铃6.mesh" node="大理派建筑01铃6">
+        <offset>
+            <translate x="-507.637" y="-388.226" z="-397.223" />
+        </offset>
+    </entity>
+    <entity mesh="大理派建筑01铃8.mesh" node="大理派建筑01铃8">
+        <offset>
+            <translate x="307.702" y="-388.226" z="297.806" />
+        </offset>
+    </entity>
+    <entity mesh="大理派建筑01铃5.mesh" node="大理派建筑01铃5">
+        <offset>
+            <translate x="307.702" y="-388.226" z="-397.028" />
+        </offset>
+    </entity>
+    <entity mesh="大理派建筑01铃4.mesh" node="大理派建筑01铃4">
+        <offset>
+            <translate x="328.92" y="-203.887" z="-422.774" />
+        </offset>
+    </entity>
+    <entity mesh="大理派建筑01.mesh" node="大理派建筑01" />
+</model>

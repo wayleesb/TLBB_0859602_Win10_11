@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="太湖水师灯笼.frame" />
+    <entity mesh="太湖水师灯笼干.mesh" node="太湖水师灯笼干" />
+    <entity mesh="太湖水师灯笼.mesh" />
+</model>

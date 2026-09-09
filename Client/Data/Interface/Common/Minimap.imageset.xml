@@ -1,0 +1,18 @@
+<Imageset Name="MiniMap" Imagefile="Common/tga_Minimap.dds" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+  <Image Name="Minimap_BK" XPos="113" YPos="0" Width="143" Height="42" />
+  <Image Name="Minimap_Time" XPos="62" YPos="0" Width="51" Height="42" />
+  <Image Name="Minimap_Area" XPos="102" YPos="50" Width="154" Height="184" />
+
+  <Image Name="Key_F1" XPos="0" YPos="219" Width="36" Height="36" />
+  <Image Name="Key_F2" XPos="37" YPos="219" Width="36" Height="36" />
+  <Image Name="Key_F3" XPos="37" YPos="182" Width="36" Height="36" />
+  <Image Name="Key_F4" XPos="37" YPos="71" Width="36" Height="36" />
+  <Image Name="Key_F5" XPos="37" YPos="108" Width="36" Height="36" />
+  <Image Name="Key_F6" XPos="37" YPos="145" Width="36" Height="36" />
+  <Image Name="Key_F7" XPos="0" YPos="182" Width="36" Height="36" />
+  <Image Name="Key_F8" XPos="0" YPos="145" Width="36" Height="36" />
+  <Image Name="Key_F9" XPos="0" YPos="108" Width="36" Height="36" />
+  <Image Name="Key_F10" XPos="0" YPos="71" Width="36" Height="36" />
+
+ 
+</Imageset>

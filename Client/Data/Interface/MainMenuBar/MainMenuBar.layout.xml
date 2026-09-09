@@ -1,0 +1,765 @@
+<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrameNULL" Name="MainMenuBar">
+        <Property Name="UnifiedPosition" Value="{{0.500000,-427.000000},{1.000000,-71.000000}" />
+        <Property Name="AbsoluteSize" Value="w:854.000000 h:71.000000" />
+        <Property Name="UnifiedMaxSize" Value="{{0.0000000,854},{1.000000,0.000000}" />
+        <!--
+		<Window Type="TLBB_StaticImageNULL" Name="MainMenuBar_LeftBar">
+		<Property Name="AbsolutePosition" Value="x:0.000000 y:25.000000" />
+		<Property Name="AbsoluteSize" Value="w:27.000000 h:45.000000" />
+		</Window>
+		-->
+        <Window Type="DefaultWindow" Name="MainMenuBar_LeftBack">
+            <Property Name="UnifiedPosition" Value="{{0.500000,-427.000000},{0.000000,27.000000}" />
+            <Property Name="AbsoluteSize" Value="w:207.000000 h:45.000000" />
+            <Window Type="TLBB_StaticImageNULL" Name="MainMenuBar_LeftBar">
+                <Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+                <Property Name="AbsoluteSize" Value="w:27.000000 h:45.000000" />
+                <Property Name="Image" Value="set:CommonStaticImage image:MainMenuBar_LeftBlock" />
+            </Window>
+            <Window Type="TLBB_MainMenuBarLeft" Name="MainMenuBar_Left">
+                <Property Name="AbsolutePosition" Value="x:27.000000 y:0.000000" />
+                <Property Name="AbsoluteSize" Value="w:180.000000 h:45.000000" />
+                <Window Type="TLBB_ActionButtonNULL" Name="Button_Character">
+                    <Property Name="AbsolutePosition" Value="x:2.000000 y:8.000000" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                    <Event Name="Clicked" Function="MainMenuBar_SelfEquip_Clicked();" />
+                    <Property Name="Tooltip" Value="#{INTERFACE_XML_566}" />
+                    <Property Name="UseDefaultTooltip" Value="true" />
+                    <Property Name="HoverImage" Value="set:CommonStaticImage5 image:MainMenuBar_Character_Hover" />
+                    <Property Name="NormalImage" Value="set:CommonStaticImage5 image:MainMenuBar_Character_Normal" />
+                    <Property Name="PushedImage" Value="set:CommonStaticImage5 image:MainMenuBar_Character_Pushed" />
+                    <Property Name="DisabledImage" Value="set:CommonStaticImage5 image:MainMenuBar_Character_Normal" />
+                    <Property Name="Empty" Value="False" />
+                </Window>
+                <Window Type="TLBB_ActionButtonNULL" Name="Button_Skills">
+                    <Property Name="AbsolutePosition" Value="x:37.000000 y:8.000000" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                    <Property Name="Empty" Value="False" />
+                    <Event Name="Clicked" Function="MainMenuBar_Skill_Clicked();" />
+                    <Property Name="Tooltip" Value="#{INTERFACE_XML_346}" />
+                    <Property Name="UseDefaultTooltip" Value="true" />
+                    <Property Name="HoverImage" Value="set:CommonStaticImage5 image:MainMenuBar_Skills_Hover" />
+                    <Property Name="NormalImage" Value="set:CommonStaticImage5 image:MainMenuBar_Skills_Normal" />
+                    <Property Name="PushedImage" Value="set:CommonStaticImage5 image:MainMenuBar_Skills_Pushed" />
+                    <Property Name="DisabledImage" Value="set:CommonStaticImage5 image:MainMenuBar_Skills_Normal" />
+                </Window>
+                <Window Type="TLBB_ActionButtonNULL" Name="Button_Pet">
+                    <Property Name="AbsolutePosition" Value="x:72.000000 y:8.000000" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                    <Property Name="Tooltip" Value="#{INTERFACE_XML_855}" />
+                    <Property Name="UseDefaultTooltip" Value="true" />
+                    <Property Name="Empty" Value="False" />
+                    <Property Name="HoverImage" Value="set:CommonStaticImage5 image:MainMenuBar_Pet_Hover" />
+                    <Property Name="NormalImage" Value="set:CommonStaticImage5 image:MainMenuBar_Pet_Normal" />
+                    <Property Name="PushedImage" Value="set:CommonStaticImage5 image:MainMenuBar_Pet_Pushed" />
+                    <Property Name="DisabledImage" Value="set:CommonStaticImage5 image:MainMenuBar_Pet_Normal" />
+                    <Event Name="Clicked" Function="TogglePetPage();" />
+                </Window>
+                <Window Type="TLBB_ActionButtonNULL" Name="Button_Mission">
+                    <Property Name="AbsolutePosition" Value="x:107.000000 y:8.000000" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                    <Property Name="Empty" Value="False" />
+                    <Event Name="Clicked" Function="MainMenuBar_Mission_Clicked();" />
+                    <Property Name="Tooltip" Value="#{INTERFACE_XML_572}" />
+                    <Property Name="UseDefaultTooltip" Value="true" />
+                    <Property Name="HoverImage" Value="set:CommonStaticImage5 image:MainMenuBar_Mission_Hover" />
+                    <Property Name="NormalImage" Value="set:CommonStaticImage5 image:MainMenuBar_Mission_Normal" />
+                    <Property Name="PushedImage" Value="set:CommonStaticImage5 image:MainMenuBar_Mission_Pushed" />
+                    <Property Name="DisabledImage" Value="set:CommonStaticImage5 image:MainMenuBar_Mission_Normal" />
+                </Window>
+                <Window Type="TLBB_ActionButtonNULL" Name="Button_Exchange">
+                    <Property Name="AbsolutePosition" Value="x:142.000000 y:8.000000" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                    <Property Name="ClickSound" Value="24" />
+                    <Property Name="Tooltip" Value="#{INTERFACE_XML_368}" />
+                    <Property Name="Empty" Value="False" />
+                    <Property Name="UseDefaultTooltip" Value="true" />
+                    <Event Name="Clicked" Function="MainMenuBar_Exchange_Clicked();" />
+                    <Property Name="HoverImage" Value="set:CommonStaticImage5 image:MainMenuBar_Exchange_Hover" />
+                    <Property Name="NormalImage" Value="set:CommonStaticImage5 image:MainMenuBar_Exchange_Normal" />
+                    <Property Name="PushedImage" Value="set:CommonStaticImage5 image:MainMenuBar_Exchange_Pushed" />
+                    <Property Name="DisabledImage" Value="set:CommonStaticImage5 image:MainMenuBar_Exchange_Normal" />
+                </Window>
+            </Window>
+        </Window>
+        <Window Type="TLBB_ButtonNULL" Name="Button_GuildBattleScore" >
+            <Property Name="AbsolutePosition" Value="x:754.000000 y:3.000000" />
+            <Property Name="AbsoluteSize" Value="w:26.000000 h:26.000000" />
+            <Property Name="HoverImage" Value="set:CommonFrame2 image:FenIcon_A3" />
+            <Property Name="NormalImage" Value="set:CommonFrame2 image:FenIcon_A1" />
+            <Property Name="PushedImage" Value="set:CommonFrame2 image:FenIcon_A2" />
+            <Property Name="Tooltip" Value="#{BHXZ_081103_158}" />
+            <Event Name="Clicked" Function="MainMenuBar_BattleScore_Clicked();" />
+            <Property Name="ZOrderChangeEnabled" Value="False" />
+            <Window Type="TLBB_AnimateImage" Name="Button_GuildBattleScoreFlash" >
+					    <Property Name="AbsolutePosition" Value="x:2.000000 y:2.000000" />
+					    <Property Name="AbsoluteSize" Value="w:18.000000 h:18.000000" />
+					    <Property Name="Animate" Value="GuildBattleScoreFlash" />
+					    <Property Name="MouseMoveHollow" Value="True" />
+					    <Property Name="MouseHollow" Value="true" />
+				    </Window>
+        </Window>
+        <Window Type="TLBB_MainMenuBarCenter" Name="MainMenuBar_Center">
+            <Property Name="UnifiedPosition" Value="{{0.500000,-220.00000},{0.000000,0.000000}" />
+            <Property Name="AbsoluteSize" Value="w:440.000000 h:71.000000" />
+            <Property Name="FrameEnabled" Value="true" />
+            <Property Name="BackgroundEnabled" Value="true" />
+            <Window Type="TLBB_ProgressPropertyWhite" Name="MainMenuBar_EXP2">
+                <Property Name="AbsolutePosition" Value="x:40.000000 y:9.000000" />
+                <Property Name="AbsoluteSize" Value="w:361.000000 h:4.000000" />
+                <Property Name="CurrentProgress" Value="1.0" />
+                <Property Name="EffectColor" Value="tl:FF40015E tr:FF40015E bl:FF40015E br:FF40015E" />
+                <Property Name="EffectColorLevel" Value="index:0 tl:FFFF0000 tr:FFFF0000 bl:FFFF0000 br:FFFF0000" />
+                <Property Name="EffectColorLevel" Value="index:1 tl:FFFF7800 tr:FFFF7800 bl:FFFF7800 br:FFFF7800" />
+                <Property Name="EffectColorLevel" Value="index:3 tl:FFFFEA00 tr:FFFFEA00 bl:FFFFEA00 br:FFFFEA00" />
+                <Property Name="EffectColorLevel" Value="index:4 tl:FF5FE000 tr:FF5FE000 bl:FF5FE000 br:FF5FE000" />
+                <Property Name="EffectColorLevel" Value="index:5 tl:FF38CFDD tr:FF38CFDD bl:FF38CFDD br:FF38CFDD" />
+                <Property Name="EffectColorLevel" Value="index:7 tl:FF3573FF tr:FF3573FF bl:FF3573FF br:FF3573FF" />
+                <Property Name="EffectColorLevel" Value="index:9 tl:FFBA29E1 tr:FFBA29E1 bl:FFBA29E1 br:FFBA29E1" />
+                <Property Name="MoveSpeed" Value="1" />
+                <Property Name="AlwaysOnTop" Value="true" />
+                <Property Name="ProgressImage" Value="set:MainMenuBar image:EXPBar_3" />
+                <Event Name="MouseMove" Function="MainMenuBar_ShowExpTooltip();" />
+                <Event Name="MouseEnter" Function="MainMenuBar_ShowExpTooltip();" />
+            </Window>
+            <Window Type="DefaultWindow" Name="MainMenuBar_Button_ActionFrame">
+				<Property Name="AbsolutePosition" Value="x:40.000000 y:15.000000" />
+                <Property Name="AbsoluteSize" Value="w:361.000000 h:36.000000" />
+                <Window Type="TLBB_StaticImageNULL" Name="Button_Action1_Bak">
+                    <Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="Image" Value="set:MiniMap image:Key_F1" />
+                    <Window Type="TLBB_ActionButtonNULL" Name="Button_Action1">
+                        <Property Name="Position" Value="x:0.000000 y:0.000000" />
+                        <Property Name="Size" Value="w:1.000000 h:1.000000" />
+                        <Property Name="DraggingEnabled" Value="True" />
+                        <Property Name="DragAcceptName" Value="M00" />
+                        <Property Name="CornerChar" Value="TopRight F1" />
+                        <Event Name="Clicked" Function="MainMenuBar_Clicked(1);" />
+                        <Event Name="RBClicked" Function="MainMenuBar_Clicked(1);" />
+                    </Window>
+                    <Window Type="TLBB_ActionButtonNULL" Name="Button_Action11">
+                        <Property Name="Position" Value="x:0.000000 y:0.000000" />
+                        <Property Name="Size" Value="w:1.000000 h:1.000000" />
+                        <Property Name="DraggingEnabled" Value="True" />
+                        <Property Name="DragAcceptName" Value="M10" />
+                        <Property Name="CornerChar" Value="TopRight F1" />
+                        <Event Name="Clicked" Function="MainMenuBar_Clicked(11);" />
+                        <Event Name="RBClicked" Function="MainMenuBar_Clicked(11);" />
+                    </Window>
+                    <Window Type="TLBB_ActionButtonNULL" Name="Button_Action21">
+                        <Property Name="Position" Value="x:0.000000 y:0.000000" />
+                        <Property Name="Size" Value="w:1.000000 h:1.000000" />
+                        <Property Name="DraggingEnabled" Value="True" />
+                        <Property Name="DragAcceptName" Value="M20" />
+                        <Property Name="CornerChar" Value="TopRight F1" />
+                        <Event Name="Clicked" Function="MainMenuBar_Clicked(21);" />
+                        <Event Name="RBClicked" Function="MainMenuBar_Clicked(21);" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_StaticImageNULL" Name="Button_Action2_Bak">
+                    <Property Name="AbsolutePosition" Value="x:36.000000 y:0.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="Image" Value="set:MiniMap image:Key_F2" />
+                    <Window Type="TLBB_ActionButtonNULL" Name="Button_Action2">
+                        <Property Name="Position" Value="x:0.000000 y:0.000000" />
+                        <Property Name="Size" Value="w:1.000000 h:1.000000" />
+                        <Property Name="DraggingEnabled" Value="True" />
+                        <Property Name="DragAcceptName" Value="M01" />
+                        <Property Name="CornerChar" Value="TopRight F2" />
+                        <Event Name="Clicked" Function="MainMenuBar_Clicked(2);" />
+                        <Event Name="RBClicked" Function="MainMenuBar_Clicked(2);" />
+                    </Window>
+                    <Window Type="TLBB_ActionButtonNULL" Name="Button_Action12">
+                        <Property Name="Position" Value="x:0.000000 y:0.000000" />
+                        <Property Name="Size" Value="w:1.000000 h:1.000000" />
+                        <Property Name="DraggingEnabled" Value="True" />
+                        <Property Name="DragAcceptName" Value="M11" />
+                        <Property Name="CornerChar" Value="TopRight F2" />
+                        <Event Name="Clicked" Function="MainMenuBar_Clicked(12);" />
+                        <Event Name="RBClicked" Function="MainMenuBar_Clicked(12);" />
+                    </Window>
+                    <Window Type="TLBB_ActionButtonNULL" Name="Button_Action22">
+                        <Property Name="Position" Value="x:0.000000 y:0.000000" />
+                        <Property Name="Size" Value="w:1.000000 h:1.000000" />
+                        <Property Name="DraggingEnabled" Value="True" />
+                        <Property Name="DragAcceptName" Value="M21" />
+                        <Property Name="CornerChar" Value="TopRight F2" />
+                        <Event Name="Clicked" Function="MainMenuBar_Clicked(22);" />
+                        <Event Name="RBClicked" Function="MainMenuBar_Clicked(22);" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_StaticImageNULL" Name="Button_Action3_Bak">
+                    <Property Name="AbsolutePosition" Value="x:72.000000 y:0.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="Image" Value="set:MiniMap image:Key_F3" />
+                    <Window Type="TLBB_ActionButtonNULL" Name="Button_Action3">
+                        <Property Name="Position" Value="x:0.000000 y:0.000000" />
+                        <Property Name="Size" Value="w:1.000000 h:1.000000" />
+                        <Property Name="DraggingEnabled" Value="True" />
+                        <Property Name="DragAcceptName" Value="M02" />
+                        <Property Name="CornerChar" Value="TopRight F3" />
+                        <Event Name="Clicked" Function="MainMenuBar_Clicked(3);" />
+                        <Event Name="RBClicked" Function="MainMenuBar_Clicked(3);" />
+                    </Window>
+                    <Window Type="TLBB_ActionButtonNULL" Name="Button_Action13">
+                        <Property Name="Position" Value="x:0.000000 y:0.000000" />
+                        <Property Name="Size" Value="w:1.000000 h:1.000000" />
+                        <Property Name="DraggingEnabled" Value="True" />
+                        <Property Name="DragAcceptName" Value="M12" />
+                        <Property Name="CornerChar" Value="TopRight F3" />
+                        <Event Name="Clicked" Function="MainMenuBar_Clicked(13);" />
+                        <Event Name="RBClicked" Function="MainMenuBar_Clicked(13);" />
+                    </Window>
+                    <Window Type="TLBB_ActionButtonNULL" Name="Button_Action23">
+                        <Property Name="Position" Value="x:0.000000 y:0.000000" />
+                        <Property Name="Size" Value="w:1.000000 h:1.000000" />
+                        <Property Name="DraggingEnabled" Value="True" />
+                        <Property Name="DragAcceptName" Value="M22" />
+                        <Property Name="CornerChar" Value="TopRight F3" />
+                        <Event Name="Clicked" Function="MainMenuBar_Clicked(23);" />
+                        <Event Name="RBClicked" Function="MainMenuBar_Clicked(23);" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_StaticImageNULL" Name="Button_Action4_Bak">
+                    <Property Name="AbsolutePosition" Value="x:108.000000 y:0.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="Image" Value="set:MiniMap image:Key_F4" />
+                    <Window Type="TLBB_ActionButtonNULL" Name="Button_Action4">
+                        <Property Name="Position" Value="x:0.000000 y:0.000000" />
+                        <Property Name="Size" Value="w:1.000000 h:1.000000" />
+                        <Property Name="DraggingEnabled" Value="True" />
+                        <Property Name="DragAcceptName" Value="M03" />
+                        <Property Name="CornerChar" Value="TopRight F4" />
+                        <Event Name="Clicked" Function="MainMenuBar_Clicked(4);" />
+                        <Event Name="RBClicked" Function="MainMenuBar_Clicked(4);" />
+                    </Window>
+                    <Window Type="TLBB_ActionButtonNULL" Name="Button_Action14">
+                        <Property Name="Position" Value="x:0.000000 y:0.000000" />
+                        <Property Name="Size" Value="w:1.000000 h:1.000000" />
+                        <Property Name="DraggingEnabled" Value="True" />
+                        <Property Name="DragAcceptName" Value="M13" />
+                        <Property Name="CornerChar" Value="TopRight F4" />
+                        <Event Name="Clicked" Function="MainMenuBar_Clicked(14);" />
+                        <Event Name="RBClicked" Function="MainMenuBar_Clicked(14);" />
+                    </Window>
+                    <Window Type="TLBB_ActionButtonNULL" Name="Button_Action24">
+                        <Property Name="Position" Value="x:0.000000 y:0.000000" />
+                        <Property Name="Size" Value="w:1.000000 h:1.000000" />
+                        <Property Name="DraggingEnabled" Value="True" />
+                        <Property Name="DragAcceptName" Value="M23" />
+                        <Property Name="CornerChar" Value="TopRight F4" />
+                        <Event Name="Clicked" Function="MainMenuBar_Clicked(24);" />
+                        <Event Name="RBClicked" Function="MainMenuBar_Clicked(24);" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_StaticImageNULL" Name="Button_Action5_Bak">
+                    <Property Name="AbsolutePosition" Value="x:144.000000 y:0.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="Image" Value="set:MiniMap image:Key_F5" />
+                    <Window Type="TLBB_ActionButtonNULL" Name="Button_Action5">
+                        <Property Name="Position" Value="x:0.000000 y:0.000000" />
+                        <Property Name="Size" Value="w:1.000000 h:1.000000" />
+                        <Property Name="DraggingEnabled" Value="True" />
+                        <Property Name="DragAcceptName" Value="M04" />
+                        <Property Name="CornerChar" Value="TopRight F5" />
+                        <Event Name="Clicked" Function="MainMenuBar_Clicked(5);" />
+                        <Event Name="RBClicked" Function="MainMenuBar_Clicked(5);" />
+                    </Window>
+                    <Window Type="TLBB_ActionButtonNULL" Name="Button_Action15">
+                        <Property Name="Position" Value="x:0.000000 y:0.000000" />
+                        <Property Name="Size" Value="w:1.000000 h:1.000000" />
+                        <Property Name="DraggingEnabled" Value="True" />
+                        <Property Name="DragAcceptName" Value="M14" />
+                        <Property Name="CornerChar" Value="TopRight F5" />
+                        <Event Name="Clicked" Function="MainMenuBar_Clicked(15);" />
+                        <Event Name="RBClicked" Function="MainMenuBar_Clicked(15);" />
+                    </Window>
+                    <Window Type="TLBB_ActionButtonNULL" Name="Button_Action25">
+                        <Property Name="Position" Value="x:0.000000 y:0.000000" />
+                        <Property Name="Size" Value="w:1.000000 h:1.000000" />
+                        <Property Name="DraggingEnabled" Value="True" />
+                        <Property Name="DragAcceptName" Value="M24" />
+                        <Property Name="CornerChar" Value="TopRight F5" />
+                        <Event Name="Clicked" Function="MainMenuBar_Clicked(25);" />
+                        <Event Name="RBClicked" Function="MainMenuBar_Clicked(25);" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_StaticImageNULL" Name="Button_Action6_Bak">
+                    <Property Name="AbsolutePosition" Value="x:180.000000 y:0.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="Image" Value="set:MiniMap image:Key_F6" />
+                    <Window Type="TLBB_ActionButtonNULL" Name="Button_Action6">
+                        <Property Name="Position" Value="x:0.000000 y:0.000000" />
+                        <Property Name="Size" Value="w:1.000000 h:1.000000" />
+                        <Property Name="DraggingEnabled" Value="True" />
+                        <Property Name="DragAcceptName" Value="M05" />
+                        <Property Name="CornerChar" Value="TopRight F6" />
+                        <Event Name="Clicked" Function="MainMenuBar_Clicked(6);" />
+                        <Event Name="RBClicked" Function="MainMenuBar_Clicked(6);" />
+                    </Window>
+                    <Window Type="TLBB_ActionButtonNULL" Name="Button_Action16">
+                        <Property Name="Position" Value="x:0.000000 y:0.000000" />
+                        <Property Name="Size" Value="w:1.000000 h:1.000000" />
+                        <Property Name="DraggingEnabled" Value="True" />
+                        <Property Name="DragAcceptName" Value="M15" />
+                        <Property Name="CornerChar" Value="TopRight F6" />
+                        <Event Name="Clicked" Function="MainMenuBar_Clicked(16);" />
+                        <Event Name="RBClicked" Function="MainMenuBar_Clicked(16);" />
+                    </Window>
+                    <Window Type="TLBB_ActionButtonNULL" Name="Button_Action26">
+                        <Property Name="Position" Value="x:0.000000 y:0.000000" />
+                        <Property Name="Size" Value="w:1.000000 h:1.000000" />
+                        <Property Name="DraggingEnabled" Value="True" />
+                        <Property Name="DragAcceptName" Value="M25" />
+                        <Property Name="CornerChar" Value="TopRight F6" />
+                        <Event Name="Clicked" Function="MainMenuBar_Clicked(26);" />
+                        <Event Name="RBClicked" Function="MainMenuBar_Clicked(26);" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_StaticImageNULL" Name="Button_Action7_Bak">
+                    <Property Name="AbsolutePosition" Value="x:216.000000 y:0.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="Image" Value="set:MiniMap image:Key_F7" />
+                    <Window Type="TLBB_ActionButtonNULL" Name="Button_Action7">
+                        <Property Name="Position" Value="x:0.000000 y:0.000000" />
+                        <Property Name="Size" Value="w:1.000000 h:1.000000" />
+                        <Property Name="DraggingEnabled" Value="True" />
+                        <Property Name="DragAcceptName" Value="M06" />
+                        <Property Name="CornerChar" Value="TopRight F7" />
+                        <Event Name="Clicked" Function="MainMenuBar_Clicked(7);" />
+                        <Event Name="RBClicked" Function="MainMenuBar_Clicked(7);" />
+                    </Window>
+                    <Window Type="TLBB_ActionButtonNULL" Name="Button_Action17">
+                        <Property Name="Position" Value="x:0.000000 y:0.000000" />
+                        <Property Name="Size" Value="w:1.000000 h:1.000000" />
+                        <Property Name="DraggingEnabled" Value="True" />
+                        <Property Name="DragAcceptName" Value="M16" />
+                        <Property Name="CornerChar" Value="TopRight F7" />
+                        <Event Name="Clicked" Function="MainMenuBar_Clicked(17);" />
+                        <Event Name="RBClicked" Function="MainMenuBar_Clicked(17);" />
+                    </Window>
+                    <Window Type="TLBB_ActionButtonNULL" Name="Button_Action27">
+                        <Property Name="Position" Value="x:0.000000 y:0.000000" />
+                        <Property Name="Size" Value="w:1.000000 h:1.000000" />
+                        <Property Name="DraggingEnabled" Value="True" />
+                        <Property Name="DragAcceptName" Value="M26" />
+                        <Property Name="CornerChar" Value="TopRight F7" />
+                        <Event Name="Clicked" Function="MainMenuBar_Clicked(27);" />
+                        <Event Name="RBClicked" Function="MainMenuBar_Clicked(27);" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_StaticImageNULL" Name="Button_Action8_Bak">
+                    <Property Name="AbsolutePosition" Value="x:252.000000 y:0.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="Image" Value="set:MiniMap image:Key_F8" />
+                    <Window Type="TLBB_ActionButtonNULL" Name="Button_Action8">
+                        <Property Name="Position" Value="x:0.000000 y:0.000000" />
+                        <Property Name="Size" Value="w:1.000000 h:1.000000" />
+                        <Property Name="DraggingEnabled" Value="True" />
+                        <Property Name="DragAcceptName" Value="M07" />
+                        <Property Name="CornerChar" Value="TopRight F8" />
+                        <Event Name="Clicked" Function="MainMenuBar_Clicked(8);" />
+                        <Event Name="RBClicked" Function="MainMenuBar_Clicked(8);" />
+                    </Window>
+                    <Window Type="TLBB_ActionButtonNULL" Name="Button_Action18">
+                        <Property Name="Position" Value="x:0.000000 y:0.000000" />
+                        <Property Name="Size" Value="w:1.000000 h:1.000000" />
+                        <Property Name="DraggingEnabled" Value="True" />
+                        <Property Name="DragAcceptName" Value="M17" />
+                        <Property Name="CornerChar" Value="TopRight F8" />
+                        <Event Name="Clicked" Function="MainMenuBar_Clicked(18);" />
+                        <Event Name="RBClicked" Function="MainMenuBar_Clicked(18);" />
+                    </Window>
+                    <Window Type="TLBB_ActionButtonNULL" Name="Button_Action28">
+                        <Property Name="Position" Value="x:0.000000 y:0.000000" />
+                        <Property Name="Size" Value="w:1.000000 h:1.000000" />
+                        <Property Name="DraggingEnabled" Value="True" />
+                        <Property Name="DragAcceptName" Value="M27" />
+                        <Property Name="CornerChar" Value="TopRight F8" />
+                        <Event Name="Clicked" Function="MainMenuBar_Clicked(28);" />
+                        <Event Name="RBClicked" Function="MainMenuBar_Clicked(28);" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_StaticImageNULL" Name="Button_Action9_Bak">
+                    <Property Name="AbsolutePosition" Value="x:288.000000 y:0.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="Image" Value="set:MiniMap image:Key_F9" />
+                    <Window Type="TLBB_ActionButtonNULL" Name="Button_Action9">
+                        <Property Name="Position" Value="x:0.000000 y:0.000000" />
+                        <Property Name="Size" Value="w:1.000000 h:1.000000" />
+                        <Property Name="DraggingEnabled" Value="True" />
+                        <Property Name="DragAcceptName" Value="M08" />
+                        <Property Name="CornerChar" Value="TopRight F9" />
+                        <Event Name="Clicked" Function="MainMenuBar_Clicked(9);" />
+                        <Event Name="RBClicked" Function="MainMenuBar_Clicked(9);" />
+                    </Window>
+                    <Window Type="TLBB_ActionButtonNULL" Name="Button_Action19">
+                        <Property Name="Position" Value="x:0.000000 y:0.000000" />
+                        <Property Name="Size" Value="w:1.000000 h:1.000000" />
+                        <Property Name="DraggingEnabled" Value="True" />
+                        <Property Name="DragAcceptName" Value="M18" />
+                        <Property Name="CornerChar" Value="TopRight F9" />
+                        <Event Name="Clicked" Function="MainMenuBar_Clicked(19);" />
+                        <Event Name="RBClicked" Function="MainMenuBar_Clicked(19);" />
+                    </Window>
+                    <Window Type="TLBB_ActionButtonNULL" Name="Button_Action29">
+                        <Property Name="Position" Value="x:0.000000 y:0.000000" />
+                        <Property Name="Size" Value="w:1.000000 h:1.000000" />
+                        <Property Name="DraggingEnabled" Value="True" />
+                        <Property Name="DragAcceptName" Value="M28" />
+                        <Property Name="CornerChar" Value="TopRight F9" />
+                        <Event Name="Clicked" Function="MainMenuBar_Clicked(29);" />
+                        <Event Name="RBClicked" Function="MainMenuBar_Clicked(29);" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_StaticImageNULL" Name="Button_Action10_Bak">
+                    <Property Name="AbsolutePosition" Value="x:324.000000 y:0.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="Image" Value="set:MiniMap image:Key_F10" />
+                    <Window Type="TLBB_ActionButtonNULL" Name="Button_Action10">
+                        <Property Name="Position" Value="x:0.000000 y:0.000000" />
+                        <Property Name="Size" Value="w:1.000000 h:1.000000" />
+                        <Property Name="DraggingEnabled" Value="True" />
+                        <Property Name="DragAcceptName" Value="M09" />
+                        <Property Name="CornerChar" Value="TopRight F10" />
+                        <Event Name="Clicked" Function="MainMenuBar_Clicked(10);" />
+                        <Event Name="RBClicked" Function="MainMenuBar_Clicked(10);" />
+                    </Window>
+                    <Window Type="TLBB_ActionButtonNULL" Name="Button_Action20">
+                        <Property Name="Position" Value="x:0.000000 y:0.000000" />
+                        <Property Name="Size" Value="w:1.000000 h:1.000000" />
+                        <Property Name="DraggingEnabled" Value="True" />
+                        <Property Name="DragAcceptName" Value="M19" />
+                        <Property Name="CornerChar" Value="TopRight F10" />
+                        <Event Name="Clicked" Function="MainMenuBar_Clicked(20);" />
+                        <Event Name="RBClicked" Function="MainMenuBar_Clicked(20);" />
+                    </Window>
+                    <Window Type="TLBB_ActionButtonNULL" Name="Button_Action30">
+                        <Property Name="Position" Value="x:0.000000 y:0.000000" />
+                        <Property Name="Size" Value="w:1.000000 h:1.000000" />
+                        <Property Name="DraggingEnabled" Value="True" />
+                        <Property Name="DragAcceptName" Value="M29" />
+                        <Property Name="CornerChar" Value="TopRight F10" />
+                        <Event Name="Clicked" Function="MainMenuBar_Clicked(30);" />
+                        <Event Name="RBClicked" Function="MainMenuBar_Clicked(30);" />
+                    </Window>
+                </Window>
+            </Window>
+            <Window Type="TLBB_ButtonNULL" Name="MainMenuBar_MainMenuBar_On">
+                <Property Name="AbsolutePosition" Value="x:7.000000 y:33.000000" />
+                <Property Name="AbsoluteSize" Value="w:15.000000 h:15.000000" />
+                <Property Name="NormalImage" Value="set:Button1 image:BtnUp_Normal" />
+                <Property Name="HoverImage" Value="set:Button1 image:BtnUp_Hover" />
+                <Property Name="PushedImage" Value="set:Button1 image:BtnUp_Pushed" />
+                <Property Name="DisabledImage" Value="set:Button1 image:BtnUp_Disable" />
+                <Event Name="Clicked" Function="MainMenuBar_MainMenuBar_On_Clk();" />
+                <Property Name="Tooltip" Value="#{INTERFACE_XML_201}" />
+            </Window>
+            <Window Type="TLBB_ButtonNULL" Name="MainMenuBar_MainMenuBar_Off">
+                <Property Name="AbsolutePosition" Value="x:7.000000 y:33.000000" />
+                <Property Name="AbsoluteSize" Value="w:15.000000 h:15.000000" />
+                <Property Name="NormalImage" Value="set:Button1 image:BtnDown_Normal" />
+                <Property Name="HoverImage" Value="set:Button1 image:BtnDown_Hover" />
+                <Property Name="PushedImage" Value="set:Button1 image:BtnDown_Pushed" />
+                <Property Name="DisabledImage" Value="set:Button1 image:BtnDown_Disable" />
+                <Event Name="Clicked" Function="MainMenuBar_MainMenuBar_Off_Clk();" />
+                <Property Name="Tooltip" Value="#{INTERFACE_XML_304}" />
+            </Window>
+            <Window Type="TLBB_ButtonNULL" Name="MainMenuBar_ScrollBar_Up">
+                <Property Name="AbsolutePosition" Value="x:421.000000 y:24.000000" />
+                <Property Name="AbsoluteSize" Value="w:15.000000 h:12.000000" />
+                <Property Name="NormalImage" Value="set:Button1 image:BtnUp2_Normal" />
+                <Property Name="HoverImage" Value="set:Button1 image:BtnUp2_Hover" />
+                <Property Name="PushedImage" Value="set:Button1 image:BtnUp2_Pushed" />
+                <Property Name="DisabledImage" Value="set:Button1 image:BtnUp2_Disable" />
+                <Event Name="Clicked" Function="MainmenuBar_PageUp();" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="MainMenuBar_ScrollBar_Number">
+                <Property Name="AbsolutePosition" Value="x:420.000000 y:39.000000" />
+                <Property Name="AbsoluteSize" Value="w:16.000000 h:14.000000" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="Text" Value="1" />
+            </Window>
+            <Window Type="TLBB_ButtonNULL" Name="MainMenuBar_ScrollBar_Down">
+                <Property Name="AbsolutePosition" Value="x:421.000000 y:54.000000" />
+                <Property Name="AbsoluteSize" Value="w:15.000000 h:12.000000" />
+                <Property Name="NormalImage" Value="set:Button1 image:BtnDown2_Normal" />
+                <Property Name="HoverImage" Value="set:Button1 image:BtnDown2_Hover" />
+                <Property Name="PushedImage" Value="set:Button1 image:BtnDown2_Pushed" />
+                <Property Name="DisabledImage" Value="set:Button1 image:BtnDown2_Disable" />
+                <Event Name="Clicked" Function="MainmenuBar_PageDown();" />
+            </Window>
+            <Window Type="TLBB_EditBoxInput" Name="MainMenuBar_EditBox">
+				<Property Name="AbsolutePosition" Value="x:93.000000 y:51.000000" />
+				<Property Name="AbsoluteSize" Value="w:305.000000 h:18.000000" />
+                <Property Name="MaxTextLength" Value="255" />
+                <Event Name="TextAccepted" Function="MainMenuBar_TextAccepted();" />
+                <Event Name="ItemelementJoinFailure" Function="MainMenuBar_JoinItemElementFailure();" />
+                <Event Name="ItemElementFull" Function="MainMenuBar_ItemElementFull();" />
+            </Window>
+            <Window Type="DefaultWindow" Name="MainMenuBar_Button_LeftFrame">
+                <Property Name="AbsolutePosition" Value="x:4.000000 y:52.000000" />
+				<Property Name="AbsoluteSize" Value="w:90.000000 h:17.000000" />
+                <Window Type="TLBB_ButtonNULL" Name="MainMenuBar_Chat_IME">
+                    <Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+                    <Property Name="AbsoluteSize" Value="w:17.000000 h:17.000000" />
+                    <Property Name="NormalImage" Value="set:Button2 image:BtnE_Normal" />
+                    <Property Name="HoverImage" Value="set:Button2 image:BtnE_Hover" />
+                    <Property Name="PushedImage" Value="set:Button2 image:BtnE_Pushed" />
+                    <Property Name="DisabledImage" Value="set:Button2 image:BtnE_Disable" />
+                    <Property Name="Tooltip" Value="#{INTERFACE_XML_656}" />
+                    <Event Name="Clicked" Function="MainMenuBar_extendRegionTest();" />
+                </Window>
+                <Window Type="TLBB_ButtonNULL" Name="MainMenuBar_Chat_LetterColor">
+                    <Property Name="AbsolutePosition" Value="x:18.000000 y:0.000000" />
+                    <Property Name="AbsoluteSize" Value="w:17.000000 h:17.000000" />
+                    <Property Name="NormalImage" Value="set:Button2 image:BtnA_Normal" />
+                    <Property Name="HoverImage" Value="set:Button2 image:BtnA_Hover" />
+                    <Property Name="PushedImage" Value="set:Button2 image:BtnA_Pushed" />
+                    <Property Name="DisabledImage" Value="set:Button2 image:BtnA_Disable" />
+                    <Property Name="Tooltip" Value="#{INTERFACE_XML_714}" />
+                    <Event Name="Clicked" Function="MainMenuBar_SelectTextColor();" />
+                </Window>
+                <Window Type="TLBB_ButtonNULL" Name="MainMenuBar_Chat_Face">
+                    <Property Name="AbsolutePosition" Value="x:36.000000 y:0.000000" />
+                    <Property Name="AbsoluteSize" Value="w:17.000000 h:17.000000" />
+                    <Property Name="NormalImage" Value="set:Button2 image:BtnFace_Normal" />
+                    <Property Name="HoverImage" Value="set:Button2 image:BtnFace_Hover" />
+                    <Property Name="PushedImage" Value="set:Button2 image:BtnFace_Pushed" />
+                    <Property Name="DisabledImage" Value="set:Button2 image:BtnFace_Disable" />
+                    <Property Name="Tooltip" Value="#{INTERFACE_XML_144}" />
+                    <Event Name="Clicked" Function="MainMenuBar_SelectFaceMotion();" />
+                </Window>
+                <Window Type="TLBB_ButtonNULL" Name="MainMenuBar_Chat_Action">
+                    <Property Name="AbsolutePosition" Value="x:54.000000 y:0.000000" />
+                    <Property Name="AbsoluteSize" Value="w:17.000000 h:17.000000" />
+                    <Property Name="NormalImage" Value="set:Button2 image:BtnRun_Normal" />
+                    <Property Name="HoverImage" Value="set:Button2 image:BtnRun_Hover" />
+                    <Property Name="PushedImage" Value="set:Button2 image:BtnRun_Pushed" />
+                    <Property Name="DisabledImage" Value="set:Button2 image:BtnRun_Disable" />
+                    <Property Name="Tooltip" Value="#{INTERFACE_XML_254}" />
+                    <Event Name="Clicked" Function="MainMenuBar_ChatMood();" />
+                </Window>
+                <Window Type="TLBB_ButtonNULL" Name="MainMenuBar_ChannelSelecter">
+					<Property Name="AbsolutePosition" Value="x:72.000000 y:0.000000" />
+                    <Property Name="AbsoluteSize" Value="w:17.000000 h:17.000000" />
+                    <Property Name="NormalImage" Value="set:Button2 image:BtnNearBy_Normal" />
+                    <Property Name="HoverImage" Value="set:Button2 image:BtnNearBy_Hover" />
+                    <Property Name="PushedImage" Value="set:Button2 image:BtnNearBy_Pushed" />
+                    <Property Name="DisabledImage" Value="set:Button2 image:BtnNearBy_Disable" />
+                    <Property Name="Tooltip" Value="#{INTERFACE_XML_491}" />
+                    <Event Name="Clicked" Function="MainMenuBar_ChannelSelect();" />
+                </Window>
+            </Window>
+            <Window Type="DefaultWindow" Name="MainMenuBar_Button_RightFrame">
+				<Property Name="AbsolutePosition" Value="x:399.000000 y:52.000000" />
+				<Property Name="AbsoluteSize" Value="w:18.000000 h:17.000000" />
+                <Window Type="TLBB_ButtonNULL" Name="MainMenuBar_EditEnter">
+                    <Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+                    <Property Name="AbsoluteSize" Value="w:17.000000 h:17.000000" />
+                    <Property Name="NormalImage" Value="set:Button2 image:BtnBack_Normal" />
+                    <Property Name="HoverImage" Value="set:Button2 image:BtnBack_Hover" />
+                    <Property Name="PushedImage" Value="set:Button2 image:BtnBack_Pushed" />
+                    <Property Name="DisabledImage" Value="set:Button2 image:BtnBack_Disable" />
+                    <Event Name="Clicked" Function="MainMenuBar_TextAccepted();" />
+                </Window>
+			</Window>
+		</Window>
+		<Window Type="TLBB_Frame_Lace2" Name="MainMenuBar_Button_ChatFrame">
+			<Property Name="AbsolutePosition" Value="x:28.000000 y:5.000000" />
+			<Property Name="AbsoluteSize" Value="w:165.000000 h:22.000000" />
+      <Window Type="TLBB_ButtonNULL" Name="MainMenuBar_Chat_SpeakerBtn">
+        <Property Name="AbsolutePosition" Value="x:146.000000 y:3.000000" />
+        <Property Name="AbsoluteSize" Value="w:17.000000 h:17.000000" />
+        <Property Name="NormalImage" Value="set:CommonFrame6 image:Xiaolaba_Normal" />
+        <Property Name="HoverImage" Value="set:CommonFrame6 image:Xiaolaba_Hover" />
+        <Property Name="PushedImage" Value="set:CommonFrame6 image:Xiaolaba_Pushed" />
+        <Property Name="DisabledImage" Value="set:CommonFrame6 image:Xiaolaba_Normal" />
+        <Property Name="Tooltip" Value="#{INTERFACE_XML_1038}" />
+        <Event Name="Clicked" Function="MainMenuBar_OpenSpeakerBox();" />
+      </Window>
+			<Window Type="DefaultWindow" Name="MainMenuBar_Button_Chat">
+				<Property Name="AbsolutePosition" Value="x:3.000000 y:3.000000" />
+				<Property Name="AbsoluteSize" Value="w:144.000000 h:17.000000" />
+				<Window Type="TLBB_ButtonNULL" Name="MainMenuBar_Save_Reduce">
+					<Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+					<Property Name="AbsoluteSize" Value="w:17.000000 h:17.000000" />
+					<Property Name="NormalImage" Value="set:Button2 image:BtnSave_Normal" />
+					<Property Name="HoverImage" Value="set:Button2 image:BtnSave_Hover" />
+					<Property Name="PushedImage" Value="set:Button2 image:BtnSave_Pushed" />
+					<Property Name="DisabledImage" Value="set:Button2 image:BtnSave_Disable" />
+					<Property Name="Tooltip" Value="#{INTERFACE_XML_140}" />
+					<Event Name="Clicked" Function="MainMenuBar_SaveTabTalkHistory();" />
+				</Window>
+
+				<Window Type="TLBB_ButtonNULL" Name="MainMenuBar_Chat_Screen">
+                    <Property Name="AbsolutePosition" Value="x:18.000000 y:0.000000" />
+                    <Property Name="AbsoluteSize" Value="w:17.000000 h:17.000000" />
+					<Property Name="NormalImage" Value="set:Button2 image:BtnClose_Normal" />
+					<Property Name="HoverImage" Value="set:Button2 image:BtnClose_Hover" />
+					<Property Name="PushedImage" Value="set:Button2 image:BtnClose_Pushed" />
+					<Property Name="DisabledImage" Value="set:Button2 image:BtnClose_Disable" />
+					<Property Name="Tooltip" Value="#{INTERFACE_XML_492}" />
+					<Event Name="Clicked" Function="MainMenuBar_PingBi();" />
+				</Window>
+				<Window Type="TLBB_ButtonNULL" Name="MainMenuBar_Chat_User">
+					<Property Name="AbsolutePosition" Value="x:36.000000 y:0.000000" />
+					<Property Name="AbsoluteSize" Value="w:17.000000 h:17.000000" />
+                    <Property Name="NormalImage" Value="set:Button2 image:BtnEdit_Normal" />
+                    <Property Name="HoverImage" Value="set:Button2 image:BtnEdit_Hover" />
+                    <Property Name="PushedImage" Value="set:Button2 image:BtnEdit_Pushed" />
+                    <Property Name="DisabledImage" Value="set:Button2 image:BtnEdit_Disable" />
+                    <Property Name="Tooltip" Value="#{INTERFACE_XML_884}" />
+                    <Event Name="Clicked" Function="MainMenuBar_CreateTab();" />
+                </Window>
+                <Window Type="TLBB_ButtonNULL" Name="MainMenuBar_Chat_Config">
+					<Property Name="AbsolutePosition" Value="x:54.000000 y:0.000000" />
+                    <Property Name="AbsoluteSize" Value="w:17.000000 h:17.000000" />
+                    <Property Name="NormalImage" Value="set:Button2 image:BtnRepair_Normal" />
+                    <Property Name="HoverImage" Value="set:Button2 image:BtnRepair_Hover" />
+                    <Property Name="PushedImage" Value="set:Button2 image:BtnRepair_Pushed" />
+                    <Property Name="DisabledImage" Value="set:Button2 image:BtnRepair_Disable" />
+                    <Property Name="Tooltip" Value="#{INTERFACE_XML_488}" />
+                    <Event Name="Clicked" Function="MainMenuBar_ConfigTab();" />
+                </Window>
+                <Window Type="TLBB_ButtonNULL" Name="MainMenuBar_Chat_Extend">
+					<Property Name="AbsolutePosition" Value="x:72.000000 y:0.000000" />
+                    <Property Name="AbsoluteSize" Value="w:17.000000 h:17.000000" />
+                    <Property Name="NormalImage" Value="set:Button2 image:BtnAdd_Normal" />
+                    <Property Name="HoverImage" Value="set:Button2 image:BtnAdd_Hover" />
+                    <Property Name="PushedImage" Value="set:Button2 image:BtnAdd_Pushed" />
+                    <Property Name="DisabledImage" Value="set:Button2 image:BtnAdd_Disable" />
+                    <Property Name="Tooltip" Value="#{INTERFACE_XML_416}" />
+                    <Event Name="Clicked" Function="MainMenuBar_AskFrameSizeUP();" />
+                </Window>
+                <Window Type="TLBB_ButtonNULL" Name="MainMenuBar_Chat_Reduce">
+					<Property Name="AbsolutePosition" Value="x:90.000000 y:0.000000" />
+                    <Property Name="AbsoluteSize" Value="w:17.000000 h:17.000000" />
+                    <Property Name="NormalImage" Value="set:Button2 image:BtnSub_Normal" />
+                    <Property Name="HoverImage" Value="set:Button2 image:BtnSub_Hover" />
+                    <Property Name="PushedImage" Value="set:Button2 image:BtnSub_Pushed" />
+                    <Property Name="DisabledImage" Value="set:Button2 image:BtnSub_Disable" />
+                    <Property Name="Tooltip" Value="#{INTERFACE_XML_670}" />
+                    <Event Name="Clicked" Function="MainMenuBar_AskFrameSizeDown();" />
+                </Window>
+				<Window Type="TLBB_ButtonNULL" Name="MainMenuBar_Chat_AddWidth">
+					<Property Name="AbsolutePosition" Value="x:108.000000 y:0.000000" />
+                    <Property Name="AbsoluteSize" Value="w:17.000000 h:17.000000" />
+					<Property Name="NormalImage" Value="set:Button7 image:BtnAddWidth_Normal" />
+					<Property Name="HoverImage" Value="set:Button7 image:BtnAddWidth_Hover" />
+					<Property Name="PushedImage" Value="set:Button7 image:BtnAddWidth_Pushed" />
+					<Property Name="DisabledImage" Value="set:Button7 image:BtnAddWidth_Disable" />
+          <Property Name="Tooltip" Value="#{INTERFACE_XML_1051}" />
+					<Event Name="Clicked" Function="MainMenuBar_AskFrameWidthUP();" />
+				</Window>
+				<Window Type="TLBB_ButtonNULL" Name="MainMenuBar_Chat_SubWidth">
+					<Property Name="AbsolutePosition" Value="x:126.000000 y:0.000000" />
+					<Property Name="AbsoluteSize" Value="w:17.000000 h:17.000000" />
+					<Property Name="NormalImage" Value="set:Button7 image:BtnSubWidth_Normal" />
+					<Property Name="HoverImage" Value="set:Button7 image:BtnSubWidth_Hover" />
+					<Property Name="PushedImage" Value="set:Button7 image:BtnSubWidth_Pushed" />
+					<Property Name="DisabledImage" Value="set:Button7 image:BtnSubWidth_Disable" />
+          <Property Name="Tooltip" Value="#{INTERFACE_XML_1052}" />
+					<Event Name="Clicked" Function="MainMenuBar_AskFrameWidthDown();" />
+                </Window>
+            </Window>
+        </Window>
+        <Window Type="DefaultWindow" Name="MainMenuBar_RightBack">
+            <Property Name="UnifiedPosition" Value="{{0.500000,220.000000},{0.000000,27.000000}" />
+            <Property Name="AbsoluteSize" Value="w:207.000000 h:71.000000" />
+            <Window Type="TLBB_StaticImageNULL" Name="MainMenuBar_RightBar">
+                <Property Name="AbsolutePosition" Value="x:180.000000 y:0.000000" />
+                <Property Name="AbsoluteSize" Value="w:27.000000 h:45.000000" />
+                <Property Name="Image" Value="set:CommonStaticImage image:MainMenuBar_RightBlock" />
+            </Window>
+            <Window Type="TLBB_MainMenuBarRight" Name="MainMenuBar_Right">
+                <Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+                <Property Name="AbsoluteSize" Value="w:180.000000 h:45.000000" />
+                <Property Name="FrameEnabled" Value="true" />
+                <Property Name="BackgroundEnabled" Value="true" />
+                <Window Type="TLBB_ActionButtonNULL" Name="Button_Pack">
+                    <Property Name="AbsolutePosition" Value="x:4.000000 y:9.000000" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                    <Property Name="Empty" Value="False" />
+                    <Event Name="Clicked" Function="MainMenuBar_Packet_Clicked();" />
+                    <Property Name="Tooltip" Value="#{INTERFACE_XML_725}" />
+                    <Property Name="UseDefaultTooltip" Value="true" />
+                    <Property Name="HoverImage" Value="set:CommonStaticImage5 image:MainMenuBar_Packet_Hover" />
+                    <Property Name="NormalImage" Value="set:CommonStaticImage5 image:MainMenuBar_Packet_Normal" />
+                    <Property Name="PushedImage" Value="set:CommonStaticImage5 image:MainMenuBar_Packet_Pushed" />
+                    <Property Name="DisabledImage" Value="set:CommonStaticImage5 image:MainMenuBar_Packet_Normal" />
+                </Window>
+                <Window Type="TLBB_ActionButtonNULL" Name="Button_Friend">
+                    <Property Name="AbsolutePosition" Value="x:35.000000 y:9.000000" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                    <Property Name="Empty" Value="False" />
+                    <Property Name="Tooltip" Value="#{INTERFACE_XML_313}" />
+                    <Property Name="UseDefaultTooltip" Value="true" />
+                    <Property Name="Empty" Value="False" />
+                    <Event Name="Clicked" Function="MainMenuBar_Friend_Clicked();" />
+                    <Property Name="HoverImage" Value="set:CommonStaticImage5 image:MainMenuBar_Friend_Hover" />
+                    <Property Name="NormalImage" Value="set:CommonStaticImage5 image:MainMenuBar_Friend_Normal" />
+                    <Property Name="PushedImage" Value="set:CommonStaticImage5 image:MainMenuBar_Friend_Pushed" />
+                    <Property Name="DisabledImage" Value="set:CommonStaticImage5 image:MainMenuBar_Friend_Normal" />
+                </Window>
+                <Window Type="TLBB_ActionButtonNULL" Name="Button_Team">
+                    <Property Name="AbsolutePosition" Value="x:70.000000 y:9.000000" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                    <Property Name="Tooltip" Value="#{INTERFACE_XML_256}" />
+                    <Property Name="UseDefaultTooltip" Value="true" />
+                    <Property Name="Empty" Value="False" />
+                    <Event Name="Clicked" Function="MainMenuBar_Team_Clicked();" />
+                    <Property Name="HoverImage" Value="set:CommonStaticImage5 image:MainMenuBar_Team_Hover" />
+                    <Property Name="NormalImage" Value="set:CommonStaticImage5 image:MainMenuBar_Team_Normal" />
+                    <Property Name="PushedImage" Value="set:CommonStaticImage5 image:MainMenuBar_Team_Pushed" />
+                    <Property Name="DisabledImage" Value="set:CommonStaticImage5 image:MainMenuBar_Team_Normal" />
+                </Window>
+                <Window Type="TLBB_ActionButtonNULL" Name="Button_Reputation">
+                    <Property Name="AbsolutePosition" Value="x:105.000000 y:9.000000" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                    <Property Name="Tooltip" Value="#{INTERFACE_XML_125}" />
+                    <Property Name="UseDefaultTooltip" Value="true" />
+                    <Property Name="Empty" Value="False" />
+                    <Property Name="HoverImage" Value="set:CommonStaticImage5 image:MainMenuBar_BangHui_Hover" />
+                    <Property Name="NormalImage" Value="set:CommonStaticImage5 image:MainMenuBar_BangHui_Normal" />
+                    <Property Name="PushedImage" Value="set:CommonStaticImage5 image:MainMenuBar_BangHui_Pushed" />
+                    <Property Name="DisabledImage" Value="set:CommonStaticImage5 image:MainMenuBar_BangHui_Normal" />
+                    <Event Name="Clicked" Function="OtherInfo_OnOpenGruidClick();" />
+                </Window>
+                <Window Type="TLBB_ActionButtonNULL" Name="Button_System">
+                    <Property Name="AbsolutePosition" Value="x:140.000000 y:9.000000" />
+                    <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+                    <Property Name="UseDefaultTooltip" Value="true" />
+                    <Property Name="Tooltip" Value="#{INTERFACE_XML_735}" />
+                    <Property Name="Empty" Value="False" />
+                    <Event Name="Clicked" Function="MainMenuBar_Setup_Clicked();" />
+                    <Property Name="HoverImage" Value="set:CommonStaticImage5 image:MainMenuBar_System_Hover" />
+                    <Property Name="NormalImage" Value="set:CommonStaticImage5 image:MainMenuBar_System_Normal" />
+                    <Property Name="PushedImage" Value="set:CommonStaticImage5 image:MainMenuBar_System_Pushed" />
+                    <Property Name="DisabledImage" Value="set:CommonStaticImage5 image:MainMenuBar_System_Normal" />
+                </Window>
+            </Window>
+        </Window>
+		<Window Type="TLBB_AnimateImage" Name="Button_ConfraternityPK_Ani">
+			<Property Name="UnifiedPosition" Value="{{0.500000,318.000000},{0.000000,0.000000}" />
+			<Property Name="AbsoluteSize" Value="w:42.000000 h:71.000000" />
+			<Property Name="Animate" Value="Animate_ConfraternityPK" />
+			<Property Name="MouseMoveHollow" Value="True" />
+			<Property Name="MouseHollow" Value="true" />
+			<Property Name="AlwaysOnTop" Value="True" />
+		</Window>
+	</Window>
+</GUILayout>

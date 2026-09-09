@@ -1,0 +1,4 @@
+<?xml version="1.0" ?>
+<Imageset Name="playerhouse9" Imagefile="Icons/playerhouse9.jpg" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+	<Image Name="playerhouse9_1" XPos="0" YPos="0" Width="64" Height="64" />
+</Imageset>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="五级紫禁城.frame" />
+    <entity mesh="五级紫禁城铃铛.mesh" />
+    <entity mesh="五级紫禁城.mesh" node="五级紫禁城" />
+</model>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="太湖水师白虎旗.frame" />
+    <entity mesh="太湖水师白虎旗干.mesh" node="太湖水师白虎旗干">
+        <offset>
+            <translate x="236.279" y="-348.227" z="-56.8264" />
+        </offset>
+    </entity>
+    <entity mesh="太湖水师白虎旗.mesh" />
+</model>

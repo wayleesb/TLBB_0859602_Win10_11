@@ -1,0 +1,1156 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Scene formatVersion="0.1.1" name="loulanxunbao">
+
+  <Terrain filename="loulanxunbao.Terrain"/>
+
+  <Object name="#FairyEnviroment" type="Enviroment">
+    <Property name="ambient" value="0.227451 0.082353 0.027451"/>
+    <Property name="fog.mode" value="linear"/>
+    <Property name="fog.colour" value="0.54902 0.2 0.6"/>
+    <Property name="fog.linear start" value="2500"/>
+    <Property name="fog.linear end" value="4000"/>
+  </Object>
+
+  <Object name="#FairyMainLightOne" type="Light">
+    <Property name="type" value="directional"/>
+    <Property name="diffuse" value="0.878431 0.45098 0.062745"/>
+    <Property name="specular" value="0.627451 0.262745 0.019608"/>
+    <Property name="direction" value="0.219101 -0.38243 0.508969"/>
+    <Property name="cast shadows" value="true"/>
+  </Object>
+
+  <Object name="#FairyMainLightTwo" type="Light">
+    <Property name="type" value="directional"/>
+    <Property name="diffuse" value="0.54902 0.309804 0.043137"/>
+    <Property name="direction" value="-0.0660112 -0.203758 -0.789238"/>
+  </Object>
+
+  <Object name="#FairySkyDome" type="SkyDome">
+    <Property name="material" value="CloudySky"/>
+  </Object>
+
+  <Object type="TerrainLiquid">
+    <Property name="material" value="haihuwater"/>
+    <Property name="position" value="852.29 1986.46 -1097.19"/>
+    <Property name="texture scale" value="0.3"/>
+    <Property name="depth texture layer.enable" value="true"/>
+    <Property name="depth texture layer.height scale" value="0.06"/>
+  </Object>
+
+  <Object type="TerrainLiquid">
+    <Property name="material" value="haihuwater"/>
+    <Property name="position" value="1700 200.747 3500"/>
+    <Property name="texture scale" value="0.2"/>
+    <Property name="depth texture layer.enable" value="true"/>
+    <Property name="depth texture layer.height scale" value="0.2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁中心柱子.mesh"/>
+    <Property name="position" value="700 2253.59 700"/>
+    <Property name="scale" value="0.3 0.972 0.3"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁中心柱子.mesh"/>
+    <Property name="position" value="700 2253.59 -500"/>
+    <Property name="scale" value="0.3 0.972 0.3"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁中心柱子.mesh"/>
+    <Property name="position" value="-500 2253.59 -500"/>
+    <Property name="scale" value="0.3 0.972 0.3"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="自建城市/书阁中心柱子.mesh"/>
+    <Property name="position" value="-500 2253.59 700"/>
+    <Property name="scale" value="0.3 0.972 0.3"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui_hong01"/>
+    <Property name="position" value="3479.23 2301.88 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/汉白玉石海.mesh"/>
+    <Property name="position" value="3479.23 2000.13 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝石晶体红.mesh"/>
+    <Property name="position" value="3479.23 2140.33 0"/>
+    <Property name="orientation" value="0.989643 0 0.143549 0"/>
+    <Property name="scale" value="0.510204 0.510204 0.510204"/>
+    <Property name="transparency" value="0.1"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui_hong"/>
+    <Property name="position" value="3479.23 2301.88 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/汉白玉石海.mesh"/>
+    <Property name="position" value="2077.09 1996.56 -2294.9"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/汉白玉石海.mesh"/>
+    <Property name="position" value="-436.9 1997.46 -3071.41"/>
+    <Property name="orientation" value="0.998598 0 0 0.0529234"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui_hong01"/>
+    <Property name="position" value="-436.9 2299.21 -3071.41"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui_hong"/>
+    <Property name="position" value="-436.9 2299.21 -3071.41"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝石晶体红.mesh"/>
+    <Property name="position" value="-436.9 2137.66 -3071.41"/>
+    <Property name="orientation" value="0.98371 -0.0110793 0.167154 0.0652023"/>
+    <Property name="scale" value="0.510204 0.510204 0.510204"/>
+    <Property name="transparency" value="0.2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/汉白玉石海.mesh"/>
+    <Property name="position" value="-2786.65 1990.92 -1319.37"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui_hong"/>
+    <Property name="position" value="-2786.65 2292.67 -1319.37"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝石晶体红.mesh"/>
+    <Property name="position" value="-2786.65 2131.12 -1319.37"/>
+    <Property name="orientation" value="0.989643 0 0.143549 0"/>
+    <Property name="scale" value="0.510204 0.510204 0.510204"/>
+    <Property name="transparency" value="0.2"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui_hong01"/>
+    <Property name="position" value="-2786.65 2292.67 -1319.37"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/汉白玉石海.mesh"/>
+    <Property name="position" value="0 1997.82 3475.23"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui_hong"/>
+    <Property name="position" value="0 2299.57 3475.23"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝石晶体红.mesh"/>
+    <Property name="position" value="0 2138.02 3475.23"/>
+    <Property name="orientation" value="0.989643 0 0.143549 0"/>
+    <Property name="scale" value="0.510204 0.510204 0.510204"/>
+    <Property name="transparency" value="0.1"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui_hong01"/>
+    <Property name="position" value="0 2299.57 3475.23"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝石晶体蓝.mesh"/>
+    <Property name="position" value="2057.83 2159.72 -2294.9"/>
+    <Property name="scale" value="0.5 0.5 0.5"/>
+    <Property name="transparency" value="0.1"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui_lan"/>
+    <Property name="position" value="2077.09 2300 -2294.9"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui_lan01"/>
+    <Property name="position" value="2077.09 2300 -2294.9"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/汉白玉石海.mesh"/>
+    <Property name="position" value="2455.7 1999.36 2348.49"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝石晶体蓝.mesh"/>
+    <Property name="position" value="2438.26 2162.52 2348.49"/>
+    <Property name="scale" value="0.5 0.5 0.5"/>
+    <Property name="transparency" value="0.1"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/汉白玉石海.mesh"/>
+    <Property name="position" value="-2529.08 1996.65 1977.44"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝石晶体蓝.mesh"/>
+    <Property name="position" value="-2529.08 2159.81 1977.44"/>
+    <Property name="scale" value="0.5 0.5 0.5"/>
+    <Property name="transparency" value="0.1"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/地涌金莲花.mesh"/>
+    <Property name="position" value="1370.83 2000 -957.19"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/地涌金莲花.mesh"/>
+    <Property name="position" value="1465.28 1992.15 -1027.93"/>
+    <Property name="orientation" value="0.990799 -0.0663262 -0.00788048 -0.117721"/>
+    <Property name="scale" value="0.6 0.6 0.6"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝石晶体绿.mesh"/>
+    <Property name="position" value="925.865 1943.14 -915.432"/>
+    <Property name="orientation" value="0.508118 0.0297833 -0.855454 -0.0955622"/>
+    <Property name="transparency" value="0.1"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝石晶体绿.mesh"/>
+    <Property name="position" value="873.059 2090.2 -764.262"/>
+    <Property name="orientation" value="0.893279 -0.370681 -0.24793 -0.0563969"/>
+    <Property name="scale" value="0.5 0.5 0.5"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui_lv"/>
+    <Property name="position" value="977.925 1989.65 -1032.61"/>
+    <Property name="orientation" value="0.993172 0 0.116661 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui_lv"/>
+    <Property name="position" value="725.784 2039.08 -912.439"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui_lv01"/>
+    <Property name="position" value="932.805 2098.46 -809.992"/>
+    <Property name="orientation" value="0.993172 0 0.116661 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝石晶体绿.mesh"/>
+    <Property name="position" value="1099.92 1932.18 -877.772"/>
+    <Property name="orientation" value="-0.614278 -0.0391711 -0.784898 0.0712321"/>
+    <Property name="transparency" value="0.1"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui_lv"/>
+    <Property name="position" value="1193.59 2094.7 -892.802"/>
+    <Property name="orientation" value="0.955976 0 0.29345 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui_lv01"/>
+    <Property name="position" value="1093.7 2176.31 -891.142"/>
+    <Property name="orientation" value="0.955976 0 0.29345 0"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.113725 0.572549 0.945098"/>
+    <Property name="specular" value="0.015686 0.537255 0.968627"/>
+    <Property name="position" value="2077.09 2300 -2294.9"/>
+    <Property name="range" value="600"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="1e-006"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.901961 0.156863 0.807843"/>
+    <Property name="specular" value="0.894118 0.078431 0.752941"/>
+    <Property name="position" value="3479.23 2300 0"/>
+    <Property name="range" value="400"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="1e-006"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.992157 0.090196 0.066667"/>
+    <Property name="specular" value="0.894118 0.078431 0.752941"/>
+    <Property name="position" value="0 2300 3475.23"/>
+    <Property name="range" value="600"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="1e-006"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.058824 0.152941"/>
+    <Property name="specular" value="0.968627 0 0.023529"/>
+    <Property name="position" value="-2786.65 2291.17 -1319.37"/>
+    <Property name="range" value="600"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="1e-006"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.901961 0.156863 0.807843"/>
+    <Property name="specular" value="0.894118 0.078431 0.752941"/>
+    <Property name="position" value="-436.9 2300.26 -3071.41"/>
+    <Property name="range" value="600"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="1e-006"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.113725 0.572549 0.945098"/>
+    <Property name="specular" value="0.015686 0.537255 0.968627"/>
+    <Property name="position" value="2455.7 2200 2348.49"/>
+    <Property name="range" value="600"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="1e-006"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui_lan"/>
+    <Property name="position" value="2455.7 2200 2348.49"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui_lan01"/>
+    <Property name="position" value="2455.7 2200 2348.49"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui_lan"/>
+    <Property name="position" value="-2529.08 2200 1977.44"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui_lan01"/>
+    <Property name="position" value="-2529.08 2200 1977.44"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.113725 0.572549 0.945098"/>
+    <Property name="specular" value="0.015686 0.537255 0.968627"/>
+    <Property name="position" value="-2529.08 2200 1977.44"/>
+    <Property name="range" value="600"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="1e-006"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝石晶体黄.mesh"/>
+    <Property name="position" value="-667.719 1951.21 -980.33"/>
+    <Property name="orientation" value="0.0436905 0 -0.999045 0"/>
+    <Property name="transparency" value="0.1"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝石晶体绿.mesh"/>
+    <Property name="position" value="293.061 1936.35 1294.56"/>
+    <Property name="orientation" value="0.40485 0.0407283 -0.908889 -0.0914351"/>
+    <Property name="transparency" value="0.1"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui_lan"/>
+    <Property name="position" value="388.714 2090 1377.92"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝石晶体绿.mesh"/>
+    <Property name="position" value="153.601 1968.85 1343.26"/>
+    <Property name="orientation" value="0.850364 0.199608 -0.474086 0.110835"/>
+    <Property name="scale" value="0.5 0.5 0.5"/>
+    <Property name="transparency" value="0.1"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui_lv01"/>
+    <Property name="position" value="300 2091.67 1400"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.12549 0.972549 0.078431"/>
+    <Property name="specular" value="0.121569 0.917647 0.058824"/>
+    <Property name="position" value="388.714 2090 1377.92"/>
+    <Property name="range" value="600"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="1e-006"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/地涌金莲花.mesh"/>
+    <Property name="position" value="-905.55 1992.15 1228.26"/>
+    <Property name="orientation" value="0.990799 -0.0663262 -0.00788048 -0.117721"/>
+    <Property name="scale" value="0.6 0.6 0.6"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/地涌金莲花.mesh"/>
+    <Property name="position" value="-1000 1988.85 1300"/>
+    <Property name="orientation" value="0.989576 9.91794e-005 -0.114093 -0.0878925"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/地涌金莲花.mesh"/>
+    <Property name="position" value="-1132.91 1992.15 1134.9"/>
+    <Property name="orientation" value="0.989863 -0.0624523 -0.0236851 0.125359"/>
+    <Property name="scale" value="0.6 0.6 0.6"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/地涌金莲花.mesh"/>
+    <Property name="position" value="-1068.08 1985.91 1200"/>
+    <Property name="orientation" value="0.893813 -0.0738691 -0.437927 0.0621423"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/地涌金莲花.mesh"/>
+    <Property name="position" value="-1100 1970 1300"/>
+    <Property name="orientation" value="0.950462 0.103866 -0.286001 0.0635695"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝石晶体黄.mesh"/>
+    <Property name="position" value="-704.582 1944.93 -1163.57"/>
+    <Property name="orientation" value="-0.321986 0.0633895 -0.94355 0.0449921"/>
+    <Property name="scale" value="0.595238 0.933333 0.699301"/>
+    <Property name="transparency" value="0.1"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝藏洞石柱矮.mesh"/>
+    <Property name="position" value="-2293.91 1981.73 -1924.03"/>
+    <Property name="orientation" value="0.311703 0 0.950179 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝藏洞石柱矮.mesh"/>
+    <Property name="position" value="-1087.31 2000 -2819.9"/>
+    <Property name="orientation" value="0.585177 0 0.810906 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝藏洞石柱矮.mesh"/>
+    <Property name="position" value="187.373 2000 -3084.74"/>
+    <Property name="orientation" value="0.709112 0 0.705095 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝藏洞石柱矮.mesh"/>
+    <Property name="position" value="1426.47 1970.68 -2701.84"/>
+    <Property name="orientation" value="0.842336 0 0.538953 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝藏洞石柱矮.mesh"/>
+    <Property name="position" value="2519.14 2000 -1872.35"/>
+    <Property name="orientation" value="0.944607 0 0.328202 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝藏洞石柱矮.mesh"/>
+    <Property name="position" value="3130.54 2000 -728.501"/>
+    <Property name="orientation" value="0.983123 0 0.182946 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝藏洞石柱矮.mesh"/>
+    <Property name="position" value="3374.79 1968.49 655.13"/>
+    <Property name="orientation" value="0.994855 0 -0.10131 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝藏洞石柱矮.mesh"/>
+    <Property name="position" value="2845.9 2000 1800"/>
+    <Property name="orientation" value="0.960393 0 -0.278652 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝藏洞石柱矮.mesh"/>
+    <Property name="position" value="1909.68 1982.81 2720.54"/>
+    <Property name="orientation" value="0.869679 0 -0.493618 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝藏洞石柱矮.mesh"/>
+    <Property name="position" value="767.548 2000 3197.22"/>
+    <Property name="orientation" value="0.787266 0 -0.616614 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝藏洞石柱矮.mesh"/>
+    <Property name="position" value="-671.559 2000 3200"/>
+    <Property name="orientation" value="0.580983 0 -0.813916 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝藏洞石柱矮.mesh"/>
+    <Property name="position" value="-1918.79 2000 2596.43"/>
+    <Property name="orientation" value="0.427056 0 -0.904225 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝藏洞石柱矮.mesh"/>
+    <Property name="position" value="-2770.16 2000 1262.59"/>
+    <Property name="orientation" value="-0.101123 0 0.994873 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝藏洞石柱矮.mesh"/>
+    <Property name="position" value="-3010.3 2000 -390.313"/>
+    <Property name="orientation" value="0.017648 0 0.999844 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/佛教布条.mesh"/>
+    <Property name="position" value="-2741.62 2000 2093.46"/>
+    <Property name="orientation" value="0.905073 0 -0.425254 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/佛教布条.mesh"/>
+    <Property name="position" value="-3253.31 2000 410.076"/>
+    <Property name="orientation" value="0.79679 0 -0.604256 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/佛教布条.mesh"/>
+    <Property name="position" value="-3030.34 1981 -1525.78"/>
+    <Property name="orientation" value="0.539361 0 -0.842074 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/佛教布条.mesh"/>
+    <Property name="position" value="-1795.07 2000 -2533.84"/>
+    <Property name="orientation" value="0.295414 0 -0.955369 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/佛教布条.mesh"/>
+    <Property name="position" value="-466.074 1996.06 -3337.68"/>
+    <Property name="orientation" value="0.0635025 0 -0.997981 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/佛教布条.mesh"/>
+    <Property name="position" value="1003.99 2000 -3164.55"/>
+    <Property name="orientation" value="0.982094 0 -0.188389 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/佛教布条.mesh"/>
+    <Property name="position" value="2302.36 2000 -2597.16"/>
+    <Property name="orientation" value="0.921407 0 -0.388598 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/佛教布条.mesh"/>
+    <Property name="position" value="3028.82 2000 -1389.9"/>
+    <Property name="orientation" value="0.537483 0 0.843275 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/佛教布条.mesh"/>
+    <Property name="position" value="3816.37 2000 -96.3868"/>
+    <Property name="orientation" value="0.778943 0 -0.627094 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/佛教布条.mesh"/>
+    <Property name="position" value="3180.97 1996.43 1342.29"/>
+    <Property name="orientation" value="0.855625 0 0.517594 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/佛教布条.mesh"/>
+    <Property name="position" value="2685.39 2000 2534.25"/>
+    <Property name="orientation" value="0.937038 0 0.349227 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/佛教布条.mesh"/>
+    <Property name="position" value="1301.12 1999.88 3032.62"/>
+    <Property name="orientation" value="0.971676 0 0.236317 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/佛教布条.mesh"/>
+    <Property name="position" value="-3.7025 2000 3712.37"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/佛教布条.mesh"/>
+    <Property name="position" value="-1462.17 1964.16 3165.69"/>
+    <Property name="orientation" value="0.963827 0 -0.266528 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝石晶体黄.mesh"/>
+    <Property name="position" value="-1359.1 1962.71 2976.87"/>
+    <Property name="orientation" value="0.310382 0 -0.950612 0"/>
+    <Property name="transparency" value="0.1"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="明净台球_02"/>
+    <Property name="position" value="-1466.55 2061.69 2902.63"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.788235 0.05098"/>
+    <Property name="specular" value="0.976471 0.733333 0"/>
+    <Property name="position" value="-1465.76 2067.12 2925.97"/>
+    <Property name="range" value="600"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="1e-006"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.992157 0.52549 0.058824"/>
+    <Property name="specular" value="0.972549 0.247059 0.003922"/>
+    <Property name="position" value="100 2500 100"/>
+    <Property name="range" value="600"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="1e-006"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="明净台球_02"/>
+    <Property name="position" value="-971.973 2115.27 -614.62"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝石晶体黄.mesh"/>
+    <Property name="position" value="-938.903 1961.82 -571.609"/>
+    <Property name="orientation" value="0.950867 0.0158886 -0.308469 -0.0211723"/>
+    <Property name="scale" value="1.2 1.2 1.2"/>
+    <Property name="transparency" value="0.1"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.788235 0.05098"/>
+    <Property name="specular" value="0.976471 0.733333 0"/>
+    <Property name="position" value="-971.183 2120.7 -591.28"/>
+    <Property name="range" value="600"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="1e-006"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui_hong01"/>
+    <Property name="position" value="1200.01 2183.5 700"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.901961 0.156863 0.807843"/>
+    <Property name="specular" value="0.894118 0.078431 0.752941"/>
+    <Property name="position" value="1200.01 2183.93 700"/>
+    <Property name="range" value="600"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="1e-006"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui_hong"/>
+    <Property name="position" value="1200.01 2183.5 700"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝石晶体红.mesh"/>
+    <Property name="position" value="1200.01 1939.21 700"/>
+    <Property name="orientation" value="0.989643 0 0.143549 0"/>
+    <Property name="transparency" value="0.1"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝石晶体红.mesh"/>
+    <Property name="position" value="1300.01 1940.21 927.619"/>
+    <Property name="orientation" value="0.690869 0 0.722979 0"/>
+    <Property name="scale" value="0.5 0.5 0.5"/>
+    <Property name="transparency" value="0.1"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="明净台球_02"/>
+    <Property name="position" value="-2400 2090.13 -1800"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝石晶体黄.mesh"/>
+    <Property name="position" value="-2448.21 1961.16 -1743.54"/>
+    <Property name="orientation" value="0.992085 0.00543947 0.122773 -0.0259061"/>
+    <Property name="transparency" value="0.1"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="1 0.788235 0.05098"/>
+    <Property name="specular" value="0.976471 0.733333 0"/>
+    <Property name="position" value="-2399.21 2095.56 -1776.66"/>
+    <Property name="range" value="600"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="1e-006"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui01"/>
+    <Property name="position" value="-2429.96 2181.34 -1676.86"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui01"/>
+    <Property name="position" value="-916.303 2281.23 -535.309"/>
+  </Object>
+
+  <Object type="Light">
+    <Property name="diffuse" value="0.12549 0.972549 0.078431"/>
+    <Property name="specular" value="0.121569 0.917647 0.058824"/>
+    <Property name="position" value="1093.59 2081.19 -892.802"/>
+    <Property name="range" value="400"/>
+    <Property name="attenuation.linear" value="0.001"/>
+    <Property name="attenuation.quadric" value="5e-006"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui01"/>
+    <Property name="position" value="-743.7 2195.22 -1001.99"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="明净台球_02"/>
+    <Property name="position" value="-700.792 2090.97 -1023.34"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/佛教布条01.mesh"/>
+    <Property name="position" value="136.443 2258.59 682.688"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/佛教布条01.mesh"/>
+    <Property name="position" value="147.026 2258.59 -547.871"/>
+    <Property name="orientation" value="0.0198539 0 -0.999803 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/佛教布条01.mesh"/>
+    <Property name="position" value="706.344 2258.59 135.538"/>
+    <Property name="orientation" value="0.721006 0 0.692928 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝石晶体绿.mesh"/>
+    <Property name="position" value="1622.51 1951.06 -2700"/>
+    <Property name="orientation" value="0.850701 0.00493286 -0.518051 -0.0889571"/>
+    <Property name="scale" value="0.5 0.5 0.5"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui_lv"/>
+    <Property name="position" value="1599.1 1995.94 -2763.54"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/珠宝金元宝.mesh"/>
+    <Property name="position" value="-932.917 1986.7 -998.73"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/珠宝金元宝.mesh"/>
+    <Property name="position" value="-800 1986.7 -934.12"/>
+    <Property name="orientation" value="0.852416 0.239189 0.447657 0.125613"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/珠宝箱子2.mesh"/>
+    <Property name="position" value="-862.025 1986.7 -1053.66"/>
+    <Property name="orientation" value="0.199416 0 0.979915 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/珠宝缸子.mesh"/>
+    <Property name="position" value="-917.995 1975.36 -844.6"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/珠宝金元宝.mesh"/>
+    <Property name="position" value="-930.058 1986.7 -939.483"/>
+    <Property name="orientation" value="0.939817 0 -0.341677 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/珠宝箱子1.mesh"/>
+    <Property name="position" value="-947.912 1937.86 -701.689"/>
+    <Property name="orientation" value="0.93292 -0.0286937 -0.350734 -0.0763224"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui01"/>
+    <Property name="position" value="-900 2084.88 -800"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝藏洞3层石柱03.mesh"/>
+    <Property name="position" value="-2258.51 0 -4807.49"/>
+    <Property name="scale" value="3 3 3"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝藏洞3层石柱02.mesh"/>
+    <Property name="position" value="-1569.56 0 -4335.92"/>
+    <Property name="orientation" value="0.483995 0 -0.875071 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/岩石柱01.mesh"/>
+    <Property name="position" value="-3606.55 -1999.97 -3754.91"/>
+    <Property name="orientation" value="-0.827775 0 -0.561062 0"/>
+    <Property name="scale" value="3 3 3"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/岩石柱.mesh"/>
+    <Property name="position" value="-4116.59 70.9282 -1516.13"/>
+    <Property name="orientation" value="0.833914 0 0.551897 0"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/岩石柱a.mesh"/>
+    <Property name="position" value="-5105.7 0 -657.068"/>
+    <Property name="orientation" value="0.819011 0 0.573777 0"/>
+    <Property name="scale" value="5 5 5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/岩石柱02.mesh"/>
+    <Property name="position" value="-5123.17 -595.879 580.704"/>
+    <Property name="orientation" value="0.865289 0 -0.501273 0"/>
+    <Property name="scale" value="3 3 3"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/岩石柱.mesh"/>
+    <Property name="position" value="-3200 0 3400"/>
+    <Property name="orientation" value="0.057329 0 0.998356 0"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/岩石柱a.mesh"/>
+    <Property name="position" value="-4189.11 -70.9282 3631.4"/>
+    <Property name="orientation" value="0.976243 0 0.216679 0"/>
+    <Property name="scale" value="5 5 5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/岩石柱02.mesh"/>
+    <Property name="position" value="-1006.58 -666.807 5296.83"/>
+    <Property name="orientation" value="0.865289 0 -0.501273 0"/>
+    <Property name="scale" value="3 3 3"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/岩石柱02.mesh"/>
+    <Property name="position" value="3893.42 -666.807 4396.83"/>
+    <Property name="orientation" value="0.865289 0 -0.501273 0"/>
+    <Property name="scale" value="3 3 3"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/岩石柱a.mesh"/>
+    <Property name="position" value="3910.89 -70.9282 3159.06"/>
+    <Property name="orientation" value="0.819011 0 0.573777 0"/>
+    <Property name="scale" value="5 5 5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/岩石柱.mesh"/>
+    <Property name="position" value="4900 0 2300"/>
+    <Property name="orientation" value="-0.0154428 0 0.999882 0"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/岩石柱a.mesh"/>
+    <Property name="position" value="3610.89 -70.9282 -3940.94"/>
+    <Property name="orientation" value="0.819011 0 0.573777 0"/>
+    <Property name="scale" value="5 5 5"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/岩石柱02.mesh"/>
+    <Property name="position" value="4093.42 -666.807 -3003.17"/>
+    <Property name="orientation" value="0.865289 0 -0.501273 0"/>
+    <Property name="scale" value="3 3 3"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/岩石柱.mesh"/>
+    <Property name="position" value="3300 0 -4000"/>
+    <Property name="orientation" value="0.833914 0 0.551897 0"/>
+    <Property name="scale" value="2 2 2"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/珠宝金元宝.mesh"/>
+    <Property name="position" value="2256.78 2000 2038.86"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/珠宝金元宝.mesh"/>
+    <Property name="position" value="2325.07 2000 2072.01"/>
+    <Property name="orientation" value="0.852416 0.239189 0.447657 0.125613"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/珠宝缸子.mesh"/>
+    <Property name="position" value="2580.87 1988.66 2219.14"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/珠宝箱子2.mesh"/>
+    <Property name="position" value="2648.81 2000 2062.59"/>
+    <Property name="orientation" value="-0.29612 0 0.95515 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/珠宝箱子1.mesh"/>
+    <Property name="position" value="2373.56 1996.79 2492.48"/>
+    <Property name="orientation" value="0.935986 0.00231304 -0.351808 -0.0126538"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/珠宝金元宝.mesh"/>
+    <Property name="position" value="2558.56 2000 2400.7"/>
+    <Property name="orientation" value="0.939817 0 -0.341677 0"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui_lv"/>
+    <Property name="position" value="2608.45 2100 2262.94"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui02"/>
+    <Property name="position" value="2712.45 2100 2162.94"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui02"/>
+    <Property name="position" value="2312.7 2100 2484.49"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/珠宝金器.mesh"/>
+    <Property name="position" value="2343.34 2000 2395.42"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/珠宝金砖.mesh"/>
+    <Property name="position" value="2301.82 2000 2406.33"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/坏镖箱.mesh"/>
+    <Property name="position" value="1182.6 1963.52 -2073.32"/>
+    <Property name="orientation" value="0.99667 0 0 -0.0815378"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/货箱.mesh"/>
+    <Property name="position" value="2310.62 2000 2266.27"/>
+    <Property name="orientation" value="0.941913 0 -0.335855 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/镖箱.mesh"/>
+    <Property name="position" value="-553.45 1958.11 -1240.81"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝石晶体黄.mesh"/>
+    <Property name="position" value="-286.294 1875.93 -1000"/>
+    <Property name="orientation" value="-0.929179 0.00640696 -0.361369 0.0774691"/>
+    <Property name="scale" value="0.595238 0.933333 0.699301"/>
+    <Property name="transparency" value="0.1"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝石晶体黄.mesh"/>
+    <Property name="position" value="700 1939.35 -999.517"/>
+    <Property name="orientation" value="-0.0190744 0.0392984 -0.997949 0.0468485"/>
+    <Property name="scale" value="0.595238 0.933333 0.699301"/>
+    <Property name="transparency" value="0.1"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/珠宝金元宝.mesh"/>
+    <Property name="position" value="-1153.18 1962.07 3118"/>
+    <Property name="orientation" value="0.852416 0.239189 0.447657 0.125613"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui02"/>
+    <Property name="position" value="-1464.47 2062.07 3120.85"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/珠宝箱子2.mesh"/>
+    <Property name="position" value="-1055.23 1962.07 3029.92"/>
+    <Property name="orientation" value="-0.107518 0 0.994203 0"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/珠宝箱子1.mesh"/>
+    <Property name="position" value="-1403.61 1958.86 3128.84"/>
+    <Property name="orientation" value="0.986428 -0.000183629 -0.163705 -0.0128622"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui_lv"/>
+    <Property name="position" value="-1221.47 2062.07 3184.85"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/珠宝金器.mesh"/>
+    <Property name="position" value="-1433.83 1962.07 3031.78"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/珠宝缸子.mesh"/>
+    <Property name="position" value="-1204.11 1982.05 3157.45"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui02"/>
+    <Property name="position" value="-1117.47 2062.07 3084.85"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/货箱.mesh"/>
+    <Property name="position" value="-1552.82 1949.18 2902.63"/>
+    <Property name="orientation" value="0.876644 -0.085309 -0.442298 -0.169084"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/坏镖箱.mesh"/>
+    <Property name="position" value="1500 1961.21 54.4976"/>
+    <Property name="orientation" value="0.962816 0.0152292 -0.032819 0.267719"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/珠宝金元宝.mesh"/>
+    <Property name="position" value="-431.71 1978.09 -2466.85"/>
+    <Property name="orientation" value="0.852416 0.239189 0.447657 0.125613"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/珠宝金元宝.mesh"/>
+    <Property name="position" value="-500 1978.09 -2500"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui_hong01"/>
+    <Property name="position" value="-1000 2179.64 800"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui_hong"/>
+    <Property name="position" value="-1000 2179.64 800"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝石晶体红.mesh"/>
+    <Property name="position" value="-900 1936.35 1027.62"/>
+    <Property name="orientation" value="0.690869 0 0.722979 0"/>
+    <Property name="scale" value="0.5 0.5 0.5"/>
+    <Property name="transparency" value="0.1"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝石晶体红.mesh"/>
+    <Property name="position" value="-1000 1935.35 800"/>
+    <Property name="orientation" value="0.989643 0 0.143549 0"/>
+    <Property name="transparency" value="0.1"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/珠宝箱子1.mesh"/>
+    <Property name="position" value="1600.62 1915.92 669.831"/>
+    <Property name="orientation" value="0.932867 0.179683 -0.311385 -0.0226205"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝石晶体绿.mesh"/>
+    <Property name="position" value="1071.12 1916.56 -521.059"/>
+    <Property name="orientation" value="-0.566808 0.120088 -0.805441 -0.124799"/>
+    <Property name="scale" value="1.2 1.56 1.2"/>
+    <Property name="transparency" value="0.1"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝石晶体红.mesh"/>
+    <Property name="position" value="1110.76 1933.06 886.285"/>
+    <Property name="orientation" value="0.586154 0.134421 -0.798855 0.0134879"/>
+    <Property name="scale" value="1 1.2 1"/>
+    <Property name="transparency" value="0.1"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="0物品/坏镖箱.mesh"/>
+    <Property name="position" value="1100 1986.69 2000"/>
+    <Property name="orientation" value="0.739888 0.0382801 -0.670344 0.0416385"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/宝石晶体绿.mesh"/>
+    <Property name="position" value="560.486 1946.63 1229.14"/>
+    <Property name="orientation" value="0.152777 0.0352323 -0.984459 0.079114"/>
+    <Property name="scale" value="1.4 1.2 1"/>
+    <Property name="transparency" value="0.1"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui_lv"/>
+    <Property name="position" value="1000 2262.35 -500"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui_lv"/>
+    <Property name="position" value="500 2221.73 1200"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui01"/>
+    <Property name="position" value="-1100 2093.47 -700"/>
+  </Object>
+
+  <Object type="ParticleSystem">
+    <Property name="particle system name" value="kuangdui01"/>
+    <Property name="position" value="-237 2102.48 -1000"/>
+  </Object>
+
+  <Object type="StaticEntity">
+    <Property name="mesh name" value="藏宝洞/佛教布条01.mesh"/>
+    <Property name="position" value="-461.262 2258.59 76.8404"/>
+    <Property name="orientation" value="0.694517 0 -0.719476 0"/>
+  </Object>
+
+</Scene>

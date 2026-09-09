@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="茶馆旗子.frame" />
+    <entity mesh="茶馆旗子.mesh" node="茶馆旗子" />
+    <entity mesh="茶馆旗.mesh" />
+</model>

@@ -1,0 +1,5 @@
+<?xml version="1.0" ?>
+<Imageset Name="CityTrendGraph" Imagefile="Common/tga_CityTrendGraph.dds" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+	<Image Name="CityTrendGraph_Graph" XPos="6" YPos="0" Width="208" Height="240" />
+	<Image Name="CityTrendGraph_Numerical" XPos="240" YPos="0" Width="11" Height="116" />
+</Imageset>

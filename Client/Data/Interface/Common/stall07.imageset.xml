@@ -1,0 +1,19 @@
+<Imageset Name="stall07" Imagefile="Common/tga_stall07.dds" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+  <Image Name="huoyan.gif_00" XPos="6" YPos="6" Width="52" Height="53" />
+  <Image Name="huoyan.gif_01" XPos="58" YPos="6" Width="52" Height="53" />
+  <Image Name="huoyan.gif_02" XPos="111" YPos="6" Width="51" Height="53" />
+  <Image Name="huoyan.gif_03" XPos="6" YPos="59" Width="52" Height="51" />
+  <Image Name="huoyan.gif_04" XPos="58" YPos="59" Width="52" Height="51" />
+  <Image Name="huoyan.gif_05" XPos="111" YPos="59" Width="52" Height="51" />
+
+  <Image Name="ScrollBar.gif_00" XPos="174" YPos="4" Width="19" Height="21" />
+  
+  <Image Name="GemFrame2_LT" XPos="3" YPos="235" Width="6" Height="7" />
+  <Image Name="GemFrame2_RT" XPos="15" YPos="235" Width="6" Height="7" />
+  <Image Name="GemFrame2_LB" XPos="3" YPos="247" Width="6" Height="6" />
+  <Image Name="GemFrame2_RB" XPos="15" YPos="247" Width="6" Height="6" />
+  <Image Name="GemFrame2_L" XPos="3" YPos="242" Width="6" Height="5" />
+  <Image Name="GemFrame2_R" XPos="15" YPos="242" Width="6" Height="5" />
+  <Image Name="GemFrame2_T" XPos="9" YPos="235" Width="6" Height="7" />
+  <Image Name="GemFrame2_B" XPos="9" YPos="247" Width="6" Height="6" />
+</Imageset>

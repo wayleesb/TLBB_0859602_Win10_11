@@ -1,0 +1,386 @@
+<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame2" Name="Challenge_Frame">
+        <Property Name="UnifiedPosition" Value="{{0.5,-350},{0.5,-166}}" />
+        <Property Name="AbsoluteSize" Value="w:700 h:315" />
+        <Event Name="Hidden" Function="Challenge_No_Click();" />
+        <Window Type="TLBB_DragTitle" Name="Challenge_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:26.000000 y:2.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-52.000000},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="Challenge_Frame" />
+            <Window Type="TLBB_SimpleText" Name="Challenge_Name">
+                <Property Name="Position" Value="x:0.000000 y:0.000000" />
+                <Property Name="Size" Value="w:1.000000 h:1.000000" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="Font" Value="YouYuan11.25" />
+                <Property Name="TextColor" Value="FFFEE601" />
+            </Window>
+        </Window>
+        <Window Type="TLBB_ButtonHelp" Name="Challenge_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,5.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*Challenge&quot;);' />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="Challenge_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,5.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function="Challenge_No_Click();" />
+        </Window>
+        <Window Type="DefaultWindow" Name="Challenge_Function_Frame">
+            <Property Name="AbsolutePosition" Value="x:7.000000 y:25.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-13.000000},{1.000000,-28.000000}" />
+            <Window Type="TLBB_FramePlayerOther" Name="Challenge_Player1">
+                <Property Name="Position" Value="x:0.013605442 y:0.0" />
+                <Property Name="Size" Value="w:0.15646258 h:0.7047619" />
+                <Window Type="TLBB_MeshWindow" Name="Challenge_FakeObject1">
+                    <Property Name="Position" Value="x:0.1 y:0.05" />
+                    <Property Name="Size" Value="w:0.8 h:0.9" />
+                    <Property Name="ShowControl" Value="Challenge_Frame" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_FramePlayerOther" Name="Challenge_Player2">
+                <Property Name="Position" Value="x:0.176870748299 y:0.0" />
+                <Property Name="Size" Value="w:0.15646258 h:0.7047619" />
+                <Window Type="TLBB_MeshWindow" Name="Challenge_FakeObject2">
+                    <Property Name="Position" Value="x:0.1 y:0.05" />
+                    <Property Name="Size" Value="w:0.8 h:0.9" />
+                    <Property Name="ShowControl" Value="Challenge_Frame" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_FramePlayerOther" Name="Challenge_Player3">
+                <Property Name="Position" Value="x:0.340136054 y:0.0" />
+                <Property Name="Size" Value="w:0.15646258 h:0.7047619" />
+                <Window Type="TLBB_MeshWindow" Name="Challenge_FakeObject3">
+                    <Property Name="Position" Value="x:0.1 y:0.05" />
+                    <Property Name="Size" Value="w:0.8 h:0.9" />
+                    <Property Name="ShowControl" Value="Challenge_Frame" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_FramePlayerOther" Name="Challenge_Player4">
+                <Property Name="Position" Value="x:0.50340136 y:0.0" />
+                <Property Name="Size" Value="w:0.15646258 h:0.7047619" />
+                <Window Type="TLBB_MeshWindow" Name="Challenge_FakeObject4">
+                    <Property Name="Position" Value="x:0.1 y:0.05" />
+                    <Property Name="Size" Value="w:0.8 h:0.9" />
+                    <Property Name="ShowControl" Value="Challenge_Frame" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_FramePlayerOther" Name="Challenge_Player5">
+                <Property Name="Position" Value="x:0.6666666 y:0.0" />
+                <Property Name="Size" Value="w:0.15646258 h:0.7047619" />
+                <Window Type="TLBB_MeshWindow" Name="Challenge_FakeObject5">
+                    <Property Name="Position" Value="x:0.1 y:0.05" />
+                    <Property Name="Size" Value="w:0.8 h:0.9" />
+                    <Property Name="ShowControl" Value="Challenge_Frame" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_FramePlayerOther" Name="Challenge_Player6">
+                <Property Name="Position" Value="x:0.82993197 y:0.0" />
+                <Property Name="Size" Value="w:0.15646258 h:0.7047619" />
+                <Window Type="TLBB_MeshWindow" Name="Challenge_FakeObject6">
+                    <Property Name="Position" Value="x:0.1 y:0.05" />
+                    <Property Name="Size" Value="w:0.8 h:0.9" />
+                    <Property Name="ShowControl" Value="Challenge_Frame" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_ButtonCheckNULL" Name="Challenge_Model_1">
+                <Property Name="Position" Value="x:0.013605442 y:0.0" />
+                <Property Name="Size" Value="w:0.15646258 h:0.7047619" />
+                <Property Name="CheckMode" Value="1" />
+                <Window Type="TLBB_StaticImageNULL" Name="Challenge_Captain_Icon">
+                    <Property Name="Position" Value="x:0.00943396 y:0.00446428" />
+                    <Property Name="AbsoluteSize" Value="w:32.000000 h:32.000000" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="Image" Value="set:UIIcons image:Icon_Captain_2" />
+                </Window>
+                <Window Type="TLBB_StaticImageNULL" Name="Challenge_Die_Icon1">
+                    <Property Name="UnifiedPosition" Value="{{1.0,-33.000000},{1.000000,-33.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:32.000000 h:32.000000" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="Image" Value="set:UIIcons image:Icon_Death" />
+                </Window>
+                <Window Type="TLBB_StaticImageNULL" Name="Challenge_Downline_Icon1">
+                    <Property Name="UnifiedPosition" Value="{{1.0,-33.000000},{1.000000,-33.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:32.000000 h:32.000000" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="Image" Value="set:UIIcons image:Icon_OutLine" />
+                </Window>
+                <Window Type="TLBB_StaticImageNULL" Name="Challenge_Model1_Disable">
+                    <Property Name="Position" Value="x:0.0 y:0.0" />
+                    <Property Name="Size" Value="w:1.0 h:1.0" />
+                    <Property Name="Visible" Value="False" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="MouseHollow" Value="True" />
+                    <Property Name="MouseMoveHollow" Value="True" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_ButtonCheckNULL" Name="Challenge_Model_2">
+                <Property Name="Position" Value="x:0.176870748299 y:0.0" />
+                <Property Name="Size" Value="w:0.15646258 h:0.7047619" />
+                <Property Name="CheckMode" Value="1" />
+                <Window Type="TLBB_StaticImageNULL" Name="Challenge_Die_Icon2">
+                    <Property Name="UnifiedPosition" Value="{{1.0,-33.000000},{1.000000,-33.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:32.000000 h:32.000000" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="Image" Value="set:UIIcons image:Icon_Death" />
+                </Window>
+                <Window Type="TLBB_StaticImageNULL" Name="Challenge_Downline_Icon2">
+                    <Property Name="UnifiedPosition" Value="{{1.0,-33.000000},{1.000000,-33.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:32.000000 h:32.000000" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="Image" Value="set:UIIcons image:Icon_OutLine" />
+                </Window>
+                <Window Type="TLBB_StaticImageNULL" Name="Challenge_Model2_Disable">
+                    <Property Name="Position" Value="x:0.0 y:0.0" />
+                    <Property Name="Size" Value="w:1.0 h:1.0" />
+                    <Property Name="Visible" Value="False" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="MouseHollow" Value="True" />
+                    <Property Name="MouseMoveHollow" Value="True" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_ButtonCheckNULL" Name="Challenge_Model_3">
+                <Property Name="Position" Value="x:0.340136054 y:0.0" />
+                <Property Name="Size" Value="w:0.15646258 h:0.7047619" />
+                <Property Name="CheckMode" Value="1" />
+                <Window Type="TLBB_StaticImageNULL" Name="Challenge_Die_Icon3">
+                    <Property Name="UnifiedPosition" Value="{{1.0,-33.000000},{1.000000,-33.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:32.000000 h:32.000000" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="Image" Value="set:UIIcons image:Icon_Death" />
+                </Window>
+                <Window Type="TLBB_StaticImageNULL" Name="Challenge_Downline_Icon3">
+                    <Property Name="UnifiedPosition" Value="{{1.0,-33.000000},{1.000000,-33.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:32.000000 h:32.000000" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="Image" Value="set:UIIcons image:Icon_OutLine" />
+                </Window>
+                <Window Type="TLBB_StaticImageNULL" Name="Challenge_Model3_Disable">
+                    <Property Name="Position" Value="x:0.0 y:0.0" />
+                    <Property Name="Size" Value="w:1.0 h:1.0" />
+                    <Property Name="Visible" Value="False" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="MouseHollow" Value="True" />
+                    <Property Name="MouseMoveHollow" Value="True" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_ButtonCheckNULL" Name="Challenge_Model_4">
+                <Property Name="Position" Value="x:0.50340136 y:0.0" />
+                <Property Name="Size" Value="w:0.15646258 h:0.7047619" />
+                <Property Name="CheckMode" Value="1" />
+                <Window Type="TLBB_StaticImageNULL" Name="Challenge_Die_Icon4">
+                    <Property Name="UnifiedPosition" Value="{{1.0,-33.000000},{1.000000,-33.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:32.000000 h:32.000000" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="Image" Value="set:UIIcons image:Icon_Death" />
+                </Window>
+                <Window Type="TLBB_StaticImageNULL" Name="Challenge_Downline_Icon4">
+                    <Property Name="UnifiedPosition" Value="{{1.0,-33.000000},{1.000000,-33.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:32.000000 h:32.000000" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="Image" Value="set:UIIcons image:Icon_OutLine" />
+                </Window>
+                <Window Type="TLBB_StaticImageNULL" Name="Challenge_Model4_Disable">
+                    <Property Name="Position" Value="x:0.0 y:0.0" />
+                    <Property Name="Size" Value="w:1.0 h:1.0" />
+                    <Property Name="Visible" Value="False" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="MouseHollow" Value="True" />
+                    <Property Name="MouseMoveHollow" Value="True" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_ButtonCheckNULL" Name="Challenge_Model_5">
+                <Property Name="Position" Value="x:0.6666666 y:0.0" />
+                <Property Name="Size" Value="w:0.15646258 h:0.7047619" />
+                <Property Name="CheckMode" Value="1" />
+                <Window Type="TLBB_StaticImageNULL" Name="Challenge_Die_Icon5">
+                    <Property Name="UnifiedPosition" Value="{{1.0,-33.000000},{1.000000,-33.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:32.000000 h:32.000000" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="Image" Value="set:UIIcons image:Icon_Death" />
+                </Window>
+                <Window Type="TLBB_StaticImageNULL" Name="Challenge_Downline_Icon5">
+                    <Property Name="UnifiedPosition" Value="{{1.0,-33.000000},{1.000000,-33.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:32.000000 h:32.000000" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="Image" Value="set:UIIcons image:Icon_OutLine" />
+                </Window>
+                <Window Type="TLBB_StaticImageNULL" Name="Challenge_Model5_Disable">
+                    <Property Name="Position" Value="x:0.0 y:0.0" />
+                    <Property Name="Size" Value="w:1.0 h:1.0" />
+                    <Property Name="Visible" Value="False" />
+                    <Property Name="Visible" Value="False" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="MouseHollow" Value="True" />
+                    <Property Name="MouseMoveHollow" Value="True" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_ButtonCheckNULL" Name="Challenge_Model_6">
+                <Property Name="Position" Value="x:0.82993197 y:0.0" />
+                <Property Name="Size" Value="w:0.15646258 h:0.7047619" />
+                <Property Name="CheckMode" Value="1" />
+                <Window Type="TLBB_StaticImageNULL" Name="Challenge_Die_Icon6">
+                    <Property Name="UnifiedPosition" Value="{{1.0,-33.000000},{1.000000,-33.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:32.000000 h:32.000000" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="Image" Value="set:UIIcons image:Icon_Death" />
+                </Window>
+                <Window Type="TLBB_StaticImageNULL" Name="Challenge_Downline_Icon6">
+                    <Property Name="UnifiedPosition" Value="{{1.0,-33.000000},{1.000000,-33.000000}" />
+                    <Property Name="AbsoluteSize" Value="w:32.000000 h:32.000000" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="Image" Value="set:UIIcons image:Icon_OutLine" />
+                </Window>
+                <Window Type="TLBB_StaticImageNULL" Name="Challenge_Model6_Disable">
+                    <Property Name="Position" Value="x:0.0 y:0.0" />
+                    <Property Name="Size" Value="w:1.0 h:1.0" />
+                    <Property Name="Visible" Value="False" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="MouseHollow" Value="True" />
+                    <Property Name="MouseMoveHollow" Value="True" />
+                </Window>
+            </Window>
+            <Window Type="DefaultWindow" Name="Challenge_PlayerInfo_1">
+                <Property Name="Position" Value="x:0.01526717 y:0.75" />
+                <Property Name="Size" Value="w:0.15419847 h:0.10240963855" />
+                <Window Type="TLBB_SimpleText" Name="Challenge_PlayerInfo1_Name">
+                    <Property Name="Position" Value="x:0.0 y:0.0" />
+                    <Property Name="Size" Value="w:0.9047619047 h:0.5" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="Challenge_PlayerInfo1_School">
+                    <Property Name="Position" Value="x:0.0 y:0.5" />
+                    <Property Name="Size" Value="w:0.4 h:0.5" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="Challenge_PlayerInfo1_Level">
+                    <Property Name="Position" Value="x:0.6666666 y:0.5" />
+                    <Property Name="Size" Value="w:0.3238095 h:0.5" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+            </Window>
+            <Window Type="DefaultWindow" Name="Challenge_PlayerInfo_2">
+                <Property Name="Position" Value="x:0.178626 y:0.75" />
+                <Property Name="Size" Value="w:0.15419847 h:0.10240963855" />
+                <Window Type="TLBB_SimpleText" Name="Challenge_PlayerInfo2_Name">
+                    <Property Name="Position" Value="x:0.0 y:0.0" />
+                    <Property Name="Size" Value="w:0.9047619047 h:0.5" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="Challenge_PlayerInfo2_School">
+                    <Property Name="Position" Value="x:0.0 y:0.5" />
+                    <Property Name="Size" Value="w:0.4 h:0.5" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="Challenge_PlayerInfo2_Level">
+                    <Property Name="Position" Value="x:0.6666666 y:0.5" />
+                    <Property Name="Size" Value="w:0.3238095 h:0.5" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+            </Window>
+            <Window Type="DefaultWindow" Name="Challenge_PlayerInfo_3">
+                <Property Name="Position" Value="x:0.341985 y:0.75" />
+                <Property Name="Size" Value="w:0.15419847 h:0.10240963855" />
+                <Window Type="TLBB_SimpleText" Name="Challenge_PlayerInfo3_Name">
+                    <Property Name="Position" Value="x:0.0 y:0.0" />
+                    <Property Name="Size" Value="w:0.9047619047 h:0.5" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="Challenge_PlayerInfo3_School">
+                    <Property Name="Position" Value="x:0.0 y:0.5" />
+                    <Property Name="Size" Value="w:0.4 h:0.5" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="Challenge_PlayerInfo3_Level">
+                    <Property Name="Position" Value="x:0.6666666 y:0.5" />
+                    <Property Name="Size" Value="w:0.3238095 h:0.5" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+            </Window>
+            <Window Type="DefaultWindow" Name="Challenge_PlayerInfo_4">
+                <Property Name="Position" Value="x:0.505344 y:0.75" />
+                <Property Name="Size" Value="w:0.15419847 h:0.10240963855" />
+                <Window Type="TLBB_SimpleText" Name="Challenge_PlayerInfo4_Name">
+                    <Property Name="Position" Value="x:0.0 y:0.0" />
+                    <Property Name="Size" Value="w:0.9047619047 h:0.5" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="Challenge_PlayerInfo4_School">
+                    <Property Name="Position" Value="x:0.0 y:0.5" />
+                    <Property Name="Size" Value="w:0.4 h:0.5" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="Challenge_PlayerInfo4_Level">
+                    <Property Name="Position" Value="x:0.6666666 y:0.5" />
+                    <Property Name="Size" Value="w:0.3238095 h:0.5" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+            </Window>
+            <Window Type="DefaultWindow" Name="Challenge_PlayerInfo_5">
+                <Property Name="Position" Value="x:0.668702 y:0.75" />
+                <Property Name="Size" Value="w:0.15419847 h:0.10240963855" />
+                <Window Type="TLBB_SimpleText" Name="Challenge_PlayerInfo5_Name">
+                    <Property Name="Position" Value="x:0.0 y:0.0" />
+                    <Property Name="Size" Value="w:0.9047619047 h:0.5" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="Challenge_PlayerInfo5_School">
+                    <Property Name="Position" Value="x:0.0 y:0.5" />
+                    <Property Name="Size" Value="w:0.4 h:0.5" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="Challenge_PlayerInfo5_Level">
+                    <Property Name="Position" Value="x:0.6666666 y:0.5" />
+                    <Property Name="Size" Value="w:0.3238095 h:0.5" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+            </Window>
+            <Window Type="DefaultWindow" Name="Challenge_PlayerInfo_6">
+                <Property Name="Position" Value="x:0.832061 y:0.75" />
+                <Property Name="Size" Value="w:0.15419847 h:0.10240963855" />
+                <Window Type="TLBB_SimpleText" Name="Challenge_PlayerInfo6_Name">
+                    <Property Name="Position" Value="x:0.0 y:0.0" />
+                    <Property Name="Size" Value="w:0.9047619047 h:0.5" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="Challenge_PlayerInfo6_School">
+                    <Property Name="Position" Value="x:0.0 y:0.5" />
+                    <Property Name="Size" Value="w:0.4 h:0.5" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="Challenge_PlayerInfo6_Level">
+                    <Property Name="Position" Value="x:0.6666666 y:0.5" />
+                    <Property Name="Size" Value="w:0.3238095 h:0.5" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_Frame_Lace5" Name="Challenge_Blank">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-120.000000},{0.000000,20.000000}" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="Challenge_Button_Frame5">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-120.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:60.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_699}" />
+                <Event Name="Clicked" Function="Challenge_Yes_Click();" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="Challenge_Button_Frame6">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-60.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:60.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_387}" />
+                <Event Name="Clicked" Function="Challenge_No_Click();" />
+            </Window>
+        </Window>
+        <Window Type="TLBB_HLine" Name="Challenge_Frame_Line1">
+            <Property Name="UnifiedPosition" Value="{{0.0,5.000000},{1.000000,-27.000000}" />
+            <Property Name="UnifiedSize" Value="{{1.0,-9.000000},{0.000000,4.000000}" />
+            <Property Name="RiseOnClick" Value="False" />
+        </Window>
+        <Window Type="TLBB_HLine" Name="Challenge_Frame_Line2">
+            <Property Name="UnifiedPosition" Value="{{0.0,5.000000},{1.000000,-85.000000}" />
+            <Property Name="UnifiedSize" Value="{{1.0,-9.000000},{0.000000,4.000000}" />
+            <Property Name="RiseOnClick" Value="False" />
+        </Window>
+    </Window>
+</GUILayout>

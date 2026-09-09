@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="镜湖花船.frame" />
+    <entity mesh="镜湖花船.mesh" node="镜湖花船" />
+    <entity mesh="镜湖花船灯08.mesh" node="镜湖花船灯08">
+        <offset>
+            <translate x="-1031.04" y="-1125.43" z="36.0849" />
+        </offset>
+    </entity>
+    <entity mesh="镜湖花船灯07.mesh" node="镜湖花船灯07">
+        <offset>
+            <translate x="-1031.04" y="-1006.6" z="36.0849" />
+        </offset>
+    </entity>
+    <entity mesh="镜湖花船灯06.mesh" node="镜湖花船灯06">
+        <offset>
+            <translate x="-1031.04" y="-886.786" z="36.0849" />
+        </offset>
+    </entity>
+    <entity mesh="镜湖花船灯05.mesh" node="镜湖花船灯05">
+        <offset>
+            <translate x="-1031.04" y="-758.165" z="36.0849" />
+        </offset>
+    </entity>
+    <entity mesh="镜湖花船灯04.mesh" node="镜湖花船灯04">
+        <offset>
+            <translate x="769.2" y="-1125.43" z="-286.974" />
+        </offset>
+    </entity>
+    <entity mesh="镜湖花船灯03.mesh" node="镜湖花船灯03">
+        <offset>
+            <translate x="769.2" y="-1006.6" z="-286.974" />
+        </offset>
+    </entity>
+    <entity mesh="镜湖花船灯02.mesh" node="镜湖花船灯02">
+        <offset>
+            <translate x="769.2" y="-886.786" z="-286.974" />
+        </offset>
+    </entity>
+    <entity mesh="镜湖花船灯01.mesh" node="镜湖花船灯01">
+        <offset>
+            <translate x="769.2" y="-763.137" z="-286.974" />
+        </offset>
+    </entity>
+</model>

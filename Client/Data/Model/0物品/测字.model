@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="测字.frame" />
+    <entity mesh="测字.mesh" node="测字" />
+    <entity mesh="测字旗.mesh" />
+</model>

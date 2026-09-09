@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="酒肆.frame" />
+    <entity mesh="酒肆.mesh" node="酒肆" />
+    <entity mesh="酒肆旗.mesh" />
+</model>

@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame1" Name="Quest_Frame">
+        <Property Name="UnifiedPosition" Value="{{0.0,0},{0.12,0}}" />
+        <Property Name="AbsoluteSize" Value="w:270 h:379" />
+        <Window Type="TLBB_DragTitle" Name="Quest_Frame_Debug">
+            <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+            <Property Name="Font" Value="YouYuan11.25" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="DragTarget" Value="Quest_Frame" />
+        </Window>
+        <Window Type="TLBB_Frame_Lace4" Name="Quest_Bk">
+            <Property Name="UnifiedPosition" Value="{{0.000000,4.000000},{0.000000,34.000000}" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-7.000000},{1.000000,-74.000000}" />
+            <Window Type="TLBB_ComplexWindow" Name="QuestGreeting_Desc">
+                <Property Name="UnifiedPosition" Value="{{0.000000,10.000000},{0.000000,12.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-20.000000},{1.000000,-24.000000}" />
+                <Event Name="OptionClicked" Function="QuestOption_Clicked();" />
+                <Event Name="RewardItemClicked" Function="RewardItem_Clicked();" />
+                <Event Name="ActionButtonClicked" Function="RewardItem_Clicked();" />
+            </Window>
+        </Window>
+        <Window Type="TLBB_ButtonCommon" Name="Quest_Button_Refuse">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-47.000000},{1.000000,-39.000000}" />
+            <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_388}" />
+            <Event Name="Clicked" Function="QuestRefuse_Clicked();" />
+        </Window>
+        <Window Type="TLBB_Frame_Lace5" Name="Quest_Blank">
+            <Property Name="UnifiedPosition" Value="{{0.000000,88.000000},{1.000000,-39.000000}" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-135.000000},{0.000000,20.000000}" />
+        </Window>
+        <Window Type="TLBB_ButtonCommon" Name="Quest_Button_Accept">
+            <Property Name="UnifiedPosition" Value="{{0.000000,8.000000},{1.000000,-39.000000}" />
+            <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_373}" />
+            <Event Name="Clicked" Function="QuestAccept_Clicked();" />
+        </Window>
+        <Window Type="TLBB_ButtonCommon" Name="Quest_Button_Continue">
+            <Property Name="UnifiedPosition" Value="{{0.000000,48.000000},{1.000000,-39.000000}" />
+            <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+            <Property Name="Text" Value="#{INTERFACE_XML_352}" />
+            <Event Name="Clicked" Function="MissionContinue_Clicked();" />
+        </Window>
+        <Window Type="TLBB_ButtonHelp" Name="Quest_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*Quest&quot;);' />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="Quest_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function="this:Hide();" />
+        </Window>
+    </Window>
+</GUILayout>

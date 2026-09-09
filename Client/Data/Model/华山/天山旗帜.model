@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="天山旗帜.frame" />
+    <entity mesh="天山旗竿.mesh" node="天山旗竿" />
+    <entity mesh="天山旗.mesh" />
+</model>

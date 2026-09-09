@@ -1,0 +1,161 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+    <xsd:element name="Terrain" type="TerrainType" />
+
+    <xsd:complexType name="TerrainType">
+        <xsd:sequence>
+            <xsd:choice minOccurs="0" maxOccurs="1">
+                <xsd:element name="scale" type="PositiveVector3Type" />
+                <xsd:element name="size" type="PositiveVector3Type" />
+            </xsd:choice>
+            <xsd:choice minOccurs="0" maxOccurs="1">
+                <xsd:element name="position" type="Vector3Type" />
+                <xsd:element name="centre" type="Vector3Type" />
+                <xsd:element name="center" type="Vector3Type" />
+            </xsd:choice>
+            <xsd:element name="heightmap" minOccurs="0" maxOccurs="1" type="HeightmapType" />
+            <xsd:element name="gridInfo" minOccurs="0" maxOccurs="1" type="GridInfoType" />
+            <xsd:element name="lightmap" minOccurs="0" maxOccurs="1" type="ImageDataType" />
+            <xsd:element name="textures" minOccurs="0" maxOccurs="unbounded" type="TextureSetType" />
+            <xsd:element name="pixmaps" minOccurs="0" maxOccurs="unbounded" type="PixmapSetType" />
+            <xsd:element name="materials" minOccurs="0" maxOccurs="unbounded" type="MaterialSetType" />
+        </xsd:sequence>
+        <xsd:attribute name="name" type="xsd:string" use="optional" default="" />
+        <xsd:attribute name="xsize" type="xsd:positiveInteger" use="required" />
+        <xsd:attribute name="zsize" type="xsd:positiveInteger" use="required" />
+        <xsd:attribute name="tileSize" type="xsd:positiveInteger" use="required" />
+    </xsd:complexType>
+
+    <xsd:complexType name="MaterialSetType">
+        <xsd:sequence>
+            <xsd:element name="template" minOccurs="0" maxOccurs="unbounded" type="MaterialTemplateType" />
+            <xsd:element name="fog_replacement" minOccurs="0" maxOccurs="unbounded" type="FogReplacementType" />
+            <xsd:element name="surface" minOccurs="0" maxOccurs="1" type="SurfacePropertiesType" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="MaterialTemplateType">
+        <xsd:attribute name="name" type="xsd:string" use="required" />
+        <xsd:attribute name="material" type="xsd:string" use="required" />
+    </xsd:complexType>
+
+    <xsd:complexType name="FogReplacementType">
+        <xsd:attribute name="none" type="xsd:string" use="required" />
+        <xsd:attribute name="exp" type="xsd:string" use="required" />
+        <xsd:attribute name="exp2" type="xsd:string" use="required" />
+        <xsd:attribute name="linear" type="xsd:string" use="required" />
+    </xsd:complexType>
+
+    <xsd:complexType name="SurfacePropertiesType">
+        <xsd:sequence>
+            <xsd:element name="ambient" minOccurs="0" maxOccurs="1" type="ColourRGBType" />
+            <xsd:element name="diffuse" minOccurs="0" maxOccurs="1" type="ColourRGBType" />
+            <xsd:element name="specular" minOccurs="0" maxOccurs="1" type="SpecularType" />
+            <xsd:element name="emissive" minOccurs="0" maxOccurs="1" type="ColourRGBType" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="TextureSetType">
+        <xsd:sequence>
+            <xsd:element name="texture" minOccurs="0" maxOccurs="unbounded" type="ImageDataType" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="PixmapSetType">
+        <xsd:sequence>
+            <xsd:element name="pixmap" minOccurs="0" maxOccurs="unbounded" type="PixmapType" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="PixmapType">
+        <xsd:attribute name="textureId" type="xsd:nonNegativeInteger" use="required" />
+        <xsd:attribute name="left" type="xsd:float" use="optional" default="0" />
+        <xsd:attribute name="top" type="xsd:float" use="optional" default="0" />
+        <xsd:attribute name="right" type="xsd:float" use="optional" default="1" />
+        <xsd:attribute name="bottom" type="xsd:float" use="optional" default="1" />
+    </xsd:complexType>
+
+    <xsd:complexType name="HeightmapType">
+        <xsd:attribute name="type" use="optional" default="standard">
+            <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                    <xsd:enumeration value="standard"/>
+                    <xsd:enumeration value="raw"/>
+                    <xsd:enumeration value="image"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+        </xsd:attribute>
+        <xsd:attribute name="filename" type="xsd:string" use="required" />
+    </xsd:complexType>
+    
+    <xsd:complexType name="GridInfoType">
+        <xsd:attribute name="type" type="xsd:string" use="optional" fixed="standard" />
+        <xsd:attribute name="filename" type="xsd:string" use="required" />
+    </xsd:complexType>
+
+    <xsd:complexType name="ImageDataType">
+        <xsd:attribute name="type" use="optional" default="standard">
+            <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                    <xsd:enumeration value="standard"/>
+                    <xsd:enumeration value="image"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+        </xsd:attribute>
+        <xsd:attribute name="filename" type="xsd:string" use="required" />
+    </xsd:complexType>
+
+    <xsd:complexType name="Vector3Type">
+        <xsd:attribute name="x" type="xsd:float" use="required" />
+        <xsd:attribute name="y" type="xsd:float" use="required" />
+        <xsd:attribute name="z" type="xsd:float" use="required" />
+    </xsd:complexType>
+
+    <xsd:complexType name="PositiveVector3Type">
+        <xsd:attribute name="x" type="PositiveFloatType" use="required" />
+        <xsd:attribute name="y" type="PositiveFloatType" use="required" />
+        <xsd:attribute name="z" type="PositiveFloatType" use="required" />
+    </xsd:complexType>
+
+    <xsd:simpleType name="PositiveFloatType">
+        <xsd:restriction base="xsd:float">
+            <xsd:minExclusive value="0"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:complexType name="ColourRGBType">
+        <xsd:attributeGroup ref="RGB"/>
+    </xsd:complexType>
+
+    <xsd:complexType name="ColourRGBAType">
+        <xsd:attributeGroup ref="RGB"/>
+        <xsd:attribute name="a" type="ColourComponentType" use="optional" default="1" />
+    </xsd:complexType>
+
+    <xsd:complexType name="SpecularType">
+        <xsd:attributeGroup ref="RGB"/>
+        <xsd:attribute name="shininess" use="optional">
+            <xsd:simpleType>
+                <xsd:restriction base="xsd:float">
+                    <xsd:minInclusive value="0"/>
+                    <xsd:maxInclusive value="128"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+        </xsd:attribute>
+    </xsd:complexType>
+
+    <xsd:attributeGroup name="RGB">
+        <xsd:attribute name="r" type="ColourComponentType" use="required" />
+        <xsd:attribute name="g" type="ColourComponentType" use="required" />
+        <xsd:attribute name="b" type="ColourComponentType" use="required" />
+    </xsd:attributeGroup>
+
+    <xsd:simpleType name="ColourComponentType">
+        <xsd:restriction base="xsd:float">
+            <xsd:minInclusive value="0"/>
+            <xsd:maxInclusive value="1"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+</xsd:schema>

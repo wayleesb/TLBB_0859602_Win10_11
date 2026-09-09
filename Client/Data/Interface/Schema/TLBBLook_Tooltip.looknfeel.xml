@@ -1,0 +1,133 @@
+<?xml version="1.0" ?>
+<Falagard>
+  <!--
+    ***************************************************
+        WoWLoop/SuperTooltip
+    ***************************************************
+    -->
+  <WidgetLook name="TLBB_Look_SuperTooltip">
+    <StateImagery name="Frame">
+      <Layer>
+
+        <Section look="TLBB_Look_Common" section="Background_Common" />
+        <Section look="TLBB_Look_Common" section="Frame_Type2" />
+      </Layer>
+    </StateImagery>
+     <StateImagery name="Enabled">
+      <Layer>
+        
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+
+  <!--
+    ***************************************************
+        WoWLook/SuperTooltip/ResizeText
+    ***************************************************
+    -->
+  <WidgetLook name="TLBB_Look_SuperTooltip_ResizeText"></WidgetLook>
+  <!--
+    ***************************************************
+        TaharezLook/Tooltip
+    ***************************************************
+    -->
+  <WidgetLook name="TLBB_Look_Tooltip">
+    <NamedArea name="TextArea">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="6" />
+        </Dim>
+        <Dim type="TopEdge">
+          <AbsoluteDim value="6" />
+        </Dim>
+        <Dim type="RightEdge">
+          <UnifiedDim scale="1" type="RightEdge">
+            <DimOperator op="Subtract">
+              <AbsoluteDim value="6" />
+            </DimOperator>
+          </UnifiedDim>
+        </Dim>
+        <Dim type="BottomEdge">
+          <UnifiedDim scale="1" type="BottomEdge">
+            <DimOperator op="Subtract">
+              <AbsoluteDim value="6" />
+            </DimOperator>
+          </UnifiedDim>
+        </Dim>
+      </Area>
+    </NamedArea>
+    <ImagerySection name="main">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width" />
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height" />
+          </Dim>
+        </Area>
+        <Image type="Background" imageset="CommonFrame" image="PaoPao_BK" />
+        <Image type="TopLeftCorner" imageset="CommonFrame" image="CommonFrame2_LT" />
+        <Image type="TopRightCorner" imageset="CommonFrame" image="CommonFrame2_RT" />
+        <Image type="BottomLeftCorner" imageset="CommonFrame" image="CommonFrame2_LB" />
+        <Image type="BottomRightCorner" imageset="CommonFrame" image="CommonFrame2_RB" />
+        <Image type="LeftEdge" imageset="CommonFrame" image="CommonFrame2_L" />
+        <Image type="RightEdge" imageset="CommonFrame" image="CommonFrame2_R" />
+        <Image type="TopEdge" imageset="CommonFrame" image="CommonFrame2_T" />
+        <Image type="BottomEdge" imageset="CommonFrame" image="CommonFrame2_B" />
+      </FrameComponent>
+    </ImagerySection>
+    <ImagerySection name="label">
+      <TextComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="6" />
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="6" />
+          </Dim>
+          <Dim type="RightEdge">
+            <UnifiedDim scale="1" type="RightEdge">
+              <DimOperator op="Subtract">
+                <AbsoluteDim value="6" />
+              </DimOperator>
+            </UnifiedDim>
+          </Dim>
+          <Dim type="BottomEdge">
+            <UnifiedDim scale="1" type="BottomEdge">
+              <DimOperator op="Subtract">
+                <AbsoluteDim value="6" />
+              </DimOperator>
+            </UnifiedDim>
+          </Dim>
+        </Area>
+        <Colours topLeft="FFffff00" topRight="FFffff00" bottomLeft="FFffff00" bottomRight="FFffff00" />
+        <VertFormat type="TopAligned" />
+        <HorzFormat type="WordWrapLeftAligned" />
+      </TextComponent>
+    </ImagerySection>
+    <StateImagery name="Enabled">
+      <Layer>
+        <Section section="main" />
+        <Section section="label" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="main" />
+        <Section section="label" />
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+</Falagard>

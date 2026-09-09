@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame0" Name="CoupleQuestion_Frame">
+        <Property Name="UnifiedPosition" Value="{{0.3662109,0},{0.12,0}}" />
+        <Property Name="AbsoluteSize" Value="w:333 h:320" />
+        <Window Type="TLBB_DragTitle" Name="CoupleQuestion_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="CoupleQuestion_Frame" />
+            <Window Type="TLBB_SimpleText" Name="CoupleQuestion_Pageheader">
+                <Property Name="Position" Value="x:0.0 y:0.0" />
+                <Property Name="Size" Value="w:1.0 h:1.0" />
+                <Property Name="Font" Value="YouYuan11.25" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="Text" Value="#{INTERFACE_XML_REC_1011}" />
+            </Window>
+        </Window>
+        <Window Type="TLBB_ButtonHelp" Name="CoupleQuestion_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Property Name="Text" Value="TLBB_ButtonHelp" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*CoupleQuestion&quot;);' />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="CoupleQuestion_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Property Name="Text" Value="TLBB_ButtonClose" />
+            <Event Name="Clicked" Function="CoupleQuestion_Quit_Clicked();" />
+        </Window>
+        <Window Type="DefaultWindow" Name="CoupleQuestion_Frame_Client">
+            <Property Name="AbsolutePosition" Value="x:6.000000 y:36.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-12.000000},{1.000000,-55.000000}" />
+            <Window Type="TLBB_SimpleText" Name="CoupleQuestion_NPCName_Text">
+              <Property Name="Position" Value="x:0.003 y:0.034" />
+              <Property Name="UnifiedSize" Value="{{1.0,0.000000},{0.000000,18.000000}" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="TextColor" Value="FFFFF263" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="CoupleQuestion_Type_Text">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,9.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.5,0.000000},{0.000000,18.000000}" />
+                <Property Name="HorzFormatting" Value="HorzLeft" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="TextColor" Value="FFFFF263" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="CoupleQuestion_Number_Text">
+              <Property Name="UnifiedPosition" Value="{{0.700000,-6},{0.000000,10.000000}" />
+              <Property Name="UnifiedSize" Value="{{0.3,0.000000},{0.000000,18.000000}" />
+                <Property Name="HorzFormatting" Value="RightAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="TextColor" Value="FFFFF263" />
+            </Window>
+            <Window Type="TLBB_StaticText" Name="CoupleQuestion_Text">
+                <Property Name="UnifiedPosition" Value="{{0.0,0.000000},{0.000000,36.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.0,0.000000},{0.000000,85.000000}" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="TopAligned" />
+                <Property Name="VertScrollbar" Value="true" />
+            </Window>
+          <Window Type="TLBB_StaticText" Name="CoupleQuestion_Text2" >
+            <Property Name="UnifiedPosition" Value="{{0.000000,3.000000},{0.000000,223.000000}" />
+            <Property Name="UnifiedSize" Value="{{0.000000,110.000000},{0.000000,20.000000}" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+          </Window>
+
+          <Window Type="TLBB_ButtonCheck1" Name="CoupleQuestion_Button_1" >
+              <Property Name="UnifiedPosition" Value="{{0.000000,15.000000},{0.000000,130.000000}" />
+              <Property Name="UnifiedSize" Value="{{0.000000,290.000000},{0.000000,20.000000}" />
+              <Property Name="CheckMode" Value="1" />
+              <Event Name="Clicked" Function="CoupleQuestion_Button_Clicked(1);" />
+            </Window>
+
+          <Window Type="TLBB_ButtonCheck1" Name="CoupleQuestion_Button_2" >
+            <Property Name="UnifiedPosition" Value="{{0.000000,15.000000},{0.000000,160.000000}" />
+            <Property Name="UnifiedSize" Value="{{0.000000,290.000000},{0.000000,20.000000}" />
+            <Property Name="CheckMode" Value="1" />
+            <Event Name="Clicked" Function="CoupleQuestion_Button_Clicked(2);" />
+          </Window>
+
+          <Window Type="TLBB_ButtonCheck1" Name="CoupleQuestion_Button_3" >
+            <Property Name="UnifiedPosition" Value="{{0.000000,15.000000},{0.000000,190.000000}" />
+            <Property Name="UnifiedSize" Value="{{0.000000,290.000000},{0.000000,20.000000}" />
+            <Property Name="CheckMode" Value="1" />
+            <Event Name="Clicked" Function="CoupleQuestion_Button_Clicked(3);" />
+          </Window>
+            <Window Type="TLBB_ButtonCommon" Name="CoupleQuestion_ok">
+                <Property Name="UnifiedPosition" Value="{{0.0,187.000000},{0.000000,225.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.4,0.000000},{0.000000,18.000000}" />
+                <Property Name="Text" Value="#{INTERFACE_XML_REC_1012}" />
+                <Event Name="Clicked" Function="CoupleQuestion_OK_Clicked();" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="CoupleQuestion_Total_StopWatch_Text">
+                <Property Name="UnifiedPosition" Value="{{0.0,2.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,85.000000},{0.000000,18.000000}" />
+                <Property Name="HorzFormatting" Value="HorzLeft" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="MouseHollow" Value="True" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_REC_1013}" />
+            </Window>
+            <Window Type="TLBB_StopWatch" Name="CoupleQuestion_Total_StopWatch">
+                <Property Name="UnifiedPosition" Value="{{0.0,89.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:40.000000 h:18.000000" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="MouseHollow" Value="True" />
+                <Property Name="Text" Value="06:15" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="CoupleQuestion_StopWatch_Text">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-125.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:125.000000 h:18.000000" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="MouseHollow" Value="True" />
+                <Property Name="TextColor" Value="FFFFF263" />
+            </Window>
+            <Window Type="TLBB_StopWatch" Name="CoupleQuestion_Time_Text">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,0.000000}" />
+                <Property Name="AbsoluteSize" Value="w:0.000000 h:0.000000" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />                  
+                <Property Name="Text" Value="00:00" />                                         
+            </Window>
+            <Window Type="TLBB_StopWatch" Name="CoupleQuestion_Time_Event">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,0.000000}" />
+                <Property Name="AbsoluteSize" Value="w:0.000000 h:0.000000" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />                  
+                <Property Name="Text" Value="00:00" />    
+                <Event Name="ReachedZero" Function="CoupleQuestion_TimeReach();" />                                 
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

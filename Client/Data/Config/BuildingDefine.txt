@@ -1,0 +1,17 @@
+INT	STRING	STRING	STRING	STRING	STRING	STRING	STRING
+INT	STRING	STRING	STRING	STRING	STRING	STRING	STRING
+1	Model	自建城市/一级县衙.model	自建城市/二级州衙.model	自建城市/三级府衙.model	自建城市/四级王宫.model	自建城市/五级紫禁城.model	
+2	Model	自建城市/帮会大旗.model	自建城市/帮会大旗.model	自建城市/帮会大旗.model	自建城市/帮会大旗.model	自建城市/帮会大旗.model	
+4	Mesh	自建城市/一级武坊.mesh	自建城市/二级武馆.mesh	自建城市/三级兵营.mesh	自建城市/四级兵署.mesh	自建城市/五级兵部.mesh	
+5	Mesh	自建城市/一级防具.mesh	自建城市/二级防具坊.mesh	自建城市/四级防具馆.mesh	自建城市/五级防具院.mesh		
+6	Mesh	自建城市/一级钱庄.mesh	自建城市/二级钱庄.mesh	自建城市/三级银号.mesh	自建城市/四级银库.mesh	自建城市/五级金库.mesh	自建城市/五级金库.mesh
+7	Model	自建城市/一级校场.model	自建城市/二级习武场.model	自建城市/三级演武场.model	自建城市/四级军武场.model	自建城市/五级禁军武场.model	
+8	Mesh	自建城市/一级米仓.mesh	自建城市/二级粮地.mesh	自建城市/三级粮库.mesh	自建城市/四级粮署.mesh	自建城市/五级栗部.mesh	
+9	Model	自建城市/一级书院.model	自建城市/二级书院.model	自建城市/三级书院.model	自建城市/四级书院.model	自建城市/五级书院.model	
+11	Mesh	自建城市/一级医舍.mesh	自建城市/二级医舍.mesh	自建城市/四级医馆.mesh	自建城市/五级济世堂.mesh		
+12	Mesh	自建城市/一级商会.mesh	自建城市/二级商会.mesh	自建城市/三级商会.mesh	自建城市/四级商会.mesh	自建城市/五级商会.mesh	
+13	Model	自建城市/一级酒店.model	自建城市/二级酒店.model	自建城市/四级酒店.model	自建城市/五级酒店.model		
+14	Mesh	自建城市/一级厢房.mesh	自建城市/二级厢房.mesh	自建城市/三级厢房.mesh	自建城市/四级厢房.mesh	自建城市/五级厢房.mesh	自建城市/五级厢房.mesh
+15	Mesh	自建城市/一级武具.mesh	自建城市/二级武具坊.mesh	自建城市/四级武具坊.mesh	自建城市/五级武具院.mesh		
+16	Mesh	自建城市/一级锻台.mesh	自建城市/二级工坊.mesh	自建城市/三级匠坊.mesh	自建城市/四级工署.mesh	自建城市/五级工部.mesh	
+17	Mesh	自建城市/一级城墙总.mesh	自建城市/二级城墙总.mesh	自建城市/三级城墙总.mesh	自建城市/四级城墙总.mesh	自建城市/五级城墙总.mesh	自建城市/五级城墙总.mesh

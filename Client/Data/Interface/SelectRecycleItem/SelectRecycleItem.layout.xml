@@ -1,0 +1,410 @@
+﻿<?xml version="1.0" ?>
+<GUILayout>
+	<Window Type="TLBB_MainFrame1" Name="SelRecycleItem_Frame">
+		<Property Name="Position" Value="x:0.2 y:0.05" />
+		<Property Name="AbsoluteSize" Value="w:466.000000 h:450.000000" />
+		<Window Type="TLBB_ButtonHelp" Name="SelRecycleItem_Help">
+			<Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+			<Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+			<Event Name="Clicked" Function='Helper:GotoHelper(&quot;*SelRecycleItem&quot;);' />
+		</Window>
+		<Window Type="TLBB_ButtonClose" Name="SelRecycleItem_Close">
+			<Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+			<Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+			<Event Name="Clicked" Function="SelRecycleItem_Close_Clicked();" />
+		</Window>
+		<Window Type="TLBB_DragTitle" Name="SelRecycleItem_DragTitle">
+			<Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+			<Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+			<Property Name="DragTarget" Value="SelRecycleItem_Frame" />
+			<Property Name="Font" Value="YouYuan11.25" />
+			<Property Name="HorzFormatting" Value="HorzCentred" />
+			<Property Name="Text" Value="#{INTERFACE_RECTCLESHOP_7}" />
+		</Window>
+		<Window Type="DefaultWindow" Name="SelRecycleItem_Function_Frame">
+			<Property Name="AbsolutePosition" Value="x:6.000000 y:36.000000" />
+			<Property Name="UnifiedSize" Value="{{1.000000,-12.000000},{1.000000,-55.000000}" />
+			<Window Type="TLBB_Frame_Lace3" Name="SelRecycleItem_List">
+				<Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,0.000000}" />
+				<Property Name="UnifiedSize" Value="{{1.000000,0.000000},{0.000000,55.000000}" />
+				<Window Type="TLBB_ButtonSale" Name="SelRecycleItem_1">
+					<Property Name="UnifiedPosition" Value="{{0.000000,6.000000},{0.000000,5.000000}" />
+					<Property Name="AbsoluteSize" Value="w:80.000000 h:20.000000" />
+					<Event Name="Clicked" Function="SelRecycleItem_Class_Clicked(1);" />
+				</Window>
+				<Window Type="TLBB_ButtonSale" Name="SelRecycleItem_2">
+					<Property Name="UnifiedPosition" Value="{{0.000000,95.000000},{0.000000,5.000000}" />
+					<Property Name="AbsoluteSize" Value="w:80.000000 h:20.000000" />
+					<Property Name="Text" Value="" />
+					<Event Name="Clicked" Function="SelRecycleItem_Class_Clicked(2);" />
+				</Window>
+				<Window Type="TLBB_ButtonSale" Name="SelRecycleItem_3">
+					<Property Name="UnifiedPosition" Value="{{0.000000,184.000000},{0.000000,5.000000}" />
+					<Property Name="AbsoluteSize" Value="w:80.000000 h:20.000000" />
+					<Property Name="Text" Value="" />
+					<Event Name="Clicked" Function="SelRecycleItem_Class_Clicked(3);" />
+				</Window>
+				<Window Type="TLBB_ButtonSale" Name="SelRecycleItem_4">
+					<Property Name="UnifiedPosition" Value="{{0.000000,273.000000},{0.000000,5.000000}" />
+					<Property Name="AbsoluteSize" Value="w:80.000000 h:20.000000" />
+					<Property Name="Text" Value="" />
+					<Event Name="Clicked" Function="SelRecycleItem_Class_Clicked(4);" />
+				</Window>
+				<Window Type="TLBB_ButtonSale" Name="SelRecycleItem_5">
+					<Property Name="UnifiedPosition" Value="{{0.000000,362.000000},{0.000000,5.000000}" />
+					<Property Name="AbsoluteSize" Value="w:80.000000 h:20.000000" />
+					<Property Name="Text" Value="" />
+					<Event Name="Clicked" Function="SelRecycleItem_Class_Clicked(5);" />
+				</Window>
+				<Window Type="TLBB_ButtonSale" Name="SelRecycleItem_6">
+					<Property Name="UnifiedPosition" Value="{{0.000000,6.000000},{0.000000,30.000000}" />
+					<Property Name="AbsoluteSize" Value="w:80.000000 h:20.000000" />
+					<Property Name="Text" Value="" />
+					<Event Name="Clicked" Function="SelRecycleItem_Class_Clicked(6);" />
+				</Window>
+				<Window Type="TLBB_ButtonSale" Name="SelRecycleItem_7">
+					<Property Name="UnifiedPosition" Value="{{0.000000,95.000000},{0.000000,30.000000}" />
+					<Property Name="AbsoluteSize" Value="w:80.000000 h:20.000000" />
+					<Property Name="Text" Value="" />
+					<Event Name="Clicked" Function="SelRecycleItem_Class_Clicked(7);" />
+				</Window>
+				<Window Type="TLBB_ButtonSale" Name="SelRecycleItem_8">
+					<Property Name="UnifiedPosition" Value="{{0.000000,184.000000},{0.000000,30.000000}" />
+					<Property Name="AbsoluteSize" Value="w:80.000000 h:20.000000" />
+					<Property Name="Text" Value="" />
+					<Event Name="Clicked" Function="SelRecycleItem_Class_Clicked(8);" />
+				</Window>
+				<Window Type="TLBB_ButtonSale" Name="SelRecycleItem_9">
+					<Property Name="UnifiedPosition" Value="{{0.000000,273.000000},{0.000000,30.000000}" />
+					<Property Name="AbsoluteSize" Value="w:80.000000 h:20.000000" />
+					<Property Name="Text" Value="" />
+					<Event Name="Clicked" Function="SelRecycleItem_Class_Clicked(9);" />
+				</Window>
+				<Window Type="TLBB_ButtonSale" Name="SelRecycleItem_10">
+					<Property Name="UnifiedPosition" Value="{{0.000000,362.000000},{0.000000,30.000000}" />
+					<Property Name="AbsoluteSize" Value="w:80.000000 h:20.000000" />
+					<Property Name="Text" Value="" />
+					<Event Name="Clicked" Function="SelRecycleItem_Class_Clicked(10);" />
+				</Window>
+			</Window>
+			<Window Type="TLBB_Frame_Lace3" Name="SelRecycleItem_List1">
+				<Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,55.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.000000,454.000000},{0.000000,105.000000}" />
+				<Window Type="TLBB_ButtonSale" Name="SelRecycleItem_12">
+					<Property Name="UnifiedPosition" Value="{{0.000000,6.000000},{0.000000,5.000000}" />
+					<Property Name="AbsoluteSize" Value="w:100.000000 h:20.000000" />
+					<Event Name="Clicked" Function="SelRecycleItem_Type_Clicked(1);" />
+				</Window>
+				<Window Type="TLBB_ButtonSale" Name="SelRecycleItem_13">
+					<Property Name="UnifiedPosition" Value="{{0.000000,111.000000},{0.000000,5.000000}" />
+					<Property Name="AbsoluteSize" Value="w:100.000000 h:20.000000" />
+					<Property Name="Text" Value="" />
+					<Event Name="Clicked" Function="SelRecycleItem_Type_Clicked(2);" />
+				</Window>
+				<Window Type="TLBB_ButtonSale" Name="SelRecycleItem_14">
+					<Property Name="UnifiedPosition" Value="{{0.000000,216.000000},{0.000000,5.000000}" />
+					<Property Name="AbsoluteSize" Value="w:100.000000 h:20.000000" />
+					<Property Name="Text" Value="" />
+					<Event Name="Clicked" Function="SelRecycleItem_Type_Clicked(3);" />
+				</Window>
+				<Window Type="TLBB_ButtonSale" Name="SelRecycleItem_15">
+					<Property Name="UnifiedPosition" Value="{{0.000000,321.000000},{0.000000,5.000000}" />
+					<Property Name="AbsoluteSize" Value="w:100.000000 h:20.000000" />
+					<Property Name="Text" Value="" />
+					<Event Name="Clicked" Function="SelRecycleItem_Type_Clicked(4);" />
+				</Window>
+				<Window Type="TLBB_ButtonSale" Name="SelRecycleItem_16">
+					<Property Name="UnifiedPosition" Value="{{0.000000,6.000000},{0.000000,30.000000}" />
+					<Property Name="AbsoluteSize" Value="w:100.000000 h:20.000000" />
+					<Property Name="Text" Value="" />
+					<Event Name="Clicked" Function="SelRecycleItem_Type_Clicked(5);" />
+				</Window>
+				<Window Type="TLBB_ButtonSale" Name="SelRecycleItem_17">
+					<Property Name="UnifiedPosition" Value="{{0.000000,111.000000},{0.000000,30.000000}" />
+					<Property Name="AbsoluteSize" Value="w:100.000000 h:20.000000" />
+					<Property Name="Text" Value="" />
+          <Event Name="Clicked" Function="SelRecycleItem_Type_Clicked(6);" />
+        </Window>
+        <Window Type="TLBB_ButtonSale" Name="SelRecycleItem_18">
+          <Property Name="UnifiedPosition" Value="{{0.000000,216.000000},{0.000000,30.000000}" />
+          <Property Name="AbsoluteSize" Value="w:100.000000 h:20.000000" />
+          <Property Name="Text" Value="" />
+					<Event Name="Clicked" Function="SelRecycleItem_Type_Clicked(7);" />
+				</Window>
+				<Window Type="TLBB_ButtonSale" Name="SelRecycleItem_19">
+					<Property Name="UnifiedPosition" Value="{{0.000000,321.000000},{0.000000,30.000000}" />
+					<Property Name="AbsoluteSize" Value="w:100.000000 h:20.000000" />
+					<Property Name="Text" Value="" />
+					<Event Name="Clicked" Function="SelRecycleItem_Type_Clicked(8);" />
+				</Window>
+				<Window Type="TLBB_ButtonSale" Name="SelRecycleItem_20">
+					<Property Name="UnifiedPosition" Value="{{0.000000,6.000000},{0.000000,55.000000}" />
+					<Property Name="AbsoluteSize" Value="w:100.000000 h:20.000000" />
+					<Property Name="Text" Value="" />
+					<Event Name="Clicked" Function="SelRecycleItem_Type_Clicked(9);" />
+				</Window>
+				<Window Type="TLBB_ButtonSale" Name="SelRecycleItem_21">
+					<Property Name="UnifiedPosition" Value="{{0.000000,111.000000},{0.000000,55.000000}" />
+					<Property Name="AbsoluteSize" Value="w:100.000000 h:20.000000" />
+					<Property Name="Text" Value="" />
+					<Event Name="Clicked" Function="SelRecycleItem_Type_Clicked(10);" />
+				</Window>
+				<Window Type="TLBB_ButtonSale" Name="SelRecycleItem_22">
+					<Property Name="UnifiedPosition" Value="{{0.000000,216.000000},{0.000000,55.000000}" />
+					<Property Name="AbsoluteSize" Value="w:100.000000 h:20.000000" />
+					<Property Name="Text" Value="" />
+					<Event Name="Clicked" Function="SelRecycleItem_Type_Clicked(11);" />
+				</Window>
+				<Window Type="TLBB_ButtonSale" Name="SelRecycleItem_23">
+					<Property Name="UnifiedPosition" Value="{{0.000000,321.000000},{0.000000,55.000000}" />
+					<Property Name="AbsoluteSize" Value="w:100.000000 h:20.000000" />
+					<Property Name="Text" Value="" />
+					<Event Name="Clicked" Function="SelRecycleItem_Type_Clicked(12);" />
+				</Window>
+				<Window Type="TLBB_ButtonSale" Name="SelRecycleItem_24">
+					<Property Name="UnifiedPosition" Value="{{0.000000,6.000000},{0.000000,80.000000}" />
+					<Property Name="AbsoluteSize" Value="w:100.000000 h:20.000000" />
+					<Property Name="Text" Value="" />
+					<Event Name="Clicked" Function="SelRecycleItem_Type_Clicked(13);" />
+				</Window>
+				<Window Type="TLBB_ButtonSale" Name="SelRecycleItem_25">
+					<Property Name="UnifiedPosition" Value="{{0.000000,111.000000},{0.000000,80.000000}" />
+					<Property Name="AbsoluteSize" Value="w:100.000000 h:20.000000" />
+					<Property Name="Text" Value="" />
+					<Event Name="Clicked" Function="SelRecycleItem_Type_Clicked(14);" />
+				</Window>
+				<Window Type="TLBB_ButtonSale" Name="SelRecycleItem_26">
+					<Property Name="UnifiedPosition" Value="{{0.000000,216.000000},{0.000000,80.000000}" />
+					<Property Name="AbsoluteSize" Value="w:100.000000 h:20.000000" />
+					<Property Name="Text" Value="" />
+					<Event Name="Clicked" Function="SelRecycleItem_Type_Clicked(15);" />
+				</Window>
+				<Window Type="TLBB_ButtonSale" Name="SelRecycleItem_27">
+					<Property Name="UnifiedPosition" Value="{{0.000000,321.000000},{0.000000,80.000000}" />
+					<Property Name="AbsoluteSize" Value="w:100.000000 h:20.000000" />
+					<Property Name="Text" Value="" />
+					<Event Name="Clicked" Function="SelRecycleItem_Type_Clicked(16);" />
+				</Window>
+			</Window>
+			<Window Type="TLBB_Frame_Lace3" Name="SelRecycleItem_List2">
+				<Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,160.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.000000,454.000000},{0.000000,80.000000}" />
+				<Window Type="TLBB_ButtonNULL" Name="SelRecycleItem_PageUp">
+					<Property Name="UnifiedPosition" Value="{{1.000000,-25.000000},{0.000000,8.000000}" />
+					<Property Name="AbsoluteSize" Value="w:20.000000 h:26.000000" />
+					<Property Name="DisabledImage" Value="set:Button6 image:PageUp_Btn_Disabled" />
+					<Property Name="HoverImage" Value="set:Button6 image:PageUp_Btn_Hover" />
+					<Property Name="NormalImage" Value="set:Button6 image:PageUp_Btn_Normal" />
+					<Property Name="PushedImage" Value="set:Button6 image:PageUp_Btn_Pushed" />
+					<Event Name="Clicked" Function="SelRecycleItem_Page(-1);" />
+				</Window>
+				<Window Type="TLBB_ButtonNULL" Name="SelRecycleItem_PageDown">
+					<Property Name="UnifiedPosition" Value="{{1.000000,-25.000000},{1.000000,-34.000000}" />
+					<Property Name="AbsoluteSize" Value="w:20.000000 h:26.000000" />
+					<Property Name="DisabledImage" Value="set:Button6 image:PageDown_Btn_Disabled" />
+					<Property Name="HoverImage" Value="set:Button6 image:PageDown_Btn_Hover" />
+					<Property Name="NormalImage" Value="set:Button6 image:PageDown_Btn_Normal" />
+					<Property Name="PushedImage" Value="set:Button6 image:PageDown_Btn_Pushed" />
+					<Event Name="Clicked" Function="SelRecycleItem_Page(1);" />
+				</Window>
+				<Window Type="TLBB_ButtonSale" Name="SelRecycleItem_28">
+					<Property Name="UnifiedPosition" Value="{{0.000000,6.000000},{0.000000,5.000000}" />
+					<Property Name="AbsoluteSize" Value="w:100.000000 h:20.000000" />
+					<Event Name="Clicked" Function="SelRecycleItem_Item_Clicked(1);" />
+				</Window>
+				<Window Type="TLBB_ButtonSale" Name="SelRecycleItem_29">
+					<Property Name="UnifiedPosition" Value="{{0.000000,111.000000},{0.000000,5.000000}" />
+					<Property Name="AbsoluteSize" Value="w:100.000000 h:20.000000" />
+					<Property Name="Text" Value="" />
+					<Event Name="Clicked" Function="SelRecycleItem_Item_Clicked(2);" />
+				</Window>
+				<Window Type="TLBB_ButtonSale" Name="SelRecycleItem_30">
+					<Property Name="UnifiedPosition" Value="{{0.000000,216.000000},{0.000000,5.000000}" />
+					<Property Name="AbsoluteSize" Value="w:100.000000 h:20.000000" />
+					<Property Name="Text" Value="" />
+					<Event Name="Clicked" Function="SelRecycleItem_Item_Clicked(3);" />
+				</Window>
+				<Window Type="TLBB_ButtonSale" Name="SelRecycleItem_31">
+					<Property Name="UnifiedPosition" Value="{{0.000000,321.000000},{0.000000,5.000000}" />
+					<Property Name="AbsoluteSize" Value="w:100.000000 h:20.000000" />
+          <Property Name="Text" Value="" />
+          <Event Name="Clicked" Function="SelRecycleItem_Item_Clicked(4);" />
+        </Window>
+        <Window Type="TLBB_ButtonSale" Name="SelRecycleItem_32">
+          <Property Name="UnifiedPosition" Value="{{0.000000,6.000000},{0.000000,30.000000}" />
+          <Property Name="AbsoluteSize" Value="w:100.000000 h:20.000000" />
+					<Property Name="Text" Value="" />
+					<Event Name="Clicked" Function="SelRecycleItem_Item_Clicked(5);" />
+				</Window>
+				<Window Type="TLBB_ButtonSale" Name="SelRecycleItem_33">
+					<Property Name="UnifiedPosition" Value="{{0.000000,111.000000},{0.000000,30.000000}" />
+					<Property Name="AbsoluteSize" Value="w:100.000000 h:20.000000" />
+					<Property Name="Text" Value="" />
+					<Event Name="Clicked" Function="SelRecycleItem_Item_Clicked(6);" />
+				</Window>
+				<Window Type="TLBB_ButtonSale" Name="SelRecycleItem_34">
+					<Property Name="UnifiedPosition" Value="{{0.000000,215.000000},{0.000000,30.000000}" />
+					<Property Name="AbsoluteSize" Value="w:100.000000 h:20.000000" />
+					<Property Name="Text" Value="" />
+					<Event Name="Clicked" Function="SelRecycleItem_Item_Clicked(7);" />
+				</Window>
+				<Window Type="TLBB_ButtonSale" Name="SelRecycleItem_35">
+					<Property Name="UnifiedPosition" Value="{{0.000000,321.000000},{0.000000,30.000000}" />
+					<Property Name="AbsoluteSize" Value="w:100.000000 h:20.000000" />
+					<Property Name="Text" Value="" />
+					<Event Name="Clicked" Function="SelRecycleItem_Item_Clicked(8);" />
+				</Window>
+				<Window Type="TLBB_ButtonSale" Name="SelRecycleItem_36">
+					<Property Name="UnifiedPosition" Value="{{0.000000,6.000000},{0.000000,55.000000}" />
+					<Property Name="AbsoluteSize" Value="w:100.000000 h:20.000000" />
+					<Property Name="Text" Value="" />
+					<Event Name="Clicked" Function="SelRecycleItem_Item_Clicked(9);" />
+				</Window>
+				<Window Type="TLBB_ButtonSale" Name="SelRecycleItem_37">
+					<Property Name="UnifiedPosition" Value="{{0.000000,111.000000},{0.000000,55.000000}" />
+					<Property Name="AbsoluteSize" Value="w:100.000000 h:20.000000" />
+					<Property Name="Text" Value="" />
+					<Event Name="Clicked" Function="SelRecycleItem_Item_Clicked(10);" />
+				</Window>
+				<Window Type="TLBB_ButtonSale" Name="SelRecycleItem_38">
+					<Property Name="UnifiedPosition" Value="{{0.000000,216.000000},{0.000000,55.000000}" />
+					<Property Name="AbsoluteSize" Value="w:100.000000 h:20.000000" />
+					<Property Name="Text" Value="" />
+					<Event Name="Clicked" Function="SelRecycleItem_Item_Clicked(11);" />
+				</Window>
+				<Window Type="TLBB_ButtonSale" Name="SelRecycleItem_39">
+					<Property Name="UnifiedPosition" Value="{{0.000000,321.000000},{0.000000,55.000000}" />
+					<Property Name="AbsoluteSize" Value="w:100.000000 h:20.000000" />
+					<Property Name="Text" Value="" />
+					<Event Name="Clicked" Function="SelRecycleItem_Item_Clicked(12);" />
+				</Window>
+			</Window>
+			<Window Type="TLBB_SimpleMulitiTextFrame" Name="SelRecycleItem_List3">
+				<Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,240.000000}" />
+				<Property Name="UnifiedSize" Value="{{1.000000,0.000000},{1.000000,-333.000000}" />
+				<Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="TopAligned" />
+			</Window>
+			<Window Type="TLBB_SimpleText" Name="SelRecycleItem_Name_Text0">
+				<Property Name="UnifiedPosition" Value="{{0.000000,20.000000},{1.000000,-90.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.000000,150.000000},{0.000000,20.000000}" />
+				<Property Name="HorzFormatting" Value="LeftAligned" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Property Name="Text" Value="#{INTERFACE_XML_1012}" />
+				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+			</Window>
+			<Window Type="TLBB_EditBoxNormal" Name="SelRecycleItem_Name_Text0_Input">
+				<Property Name="UnifiedPosition" Value="{{0.000000,175.000000},{1.000000,-90.000000}" />
+				<Property Name="AbsoluteSize" Value="w:80.000000 h:20.000000" />
+				<Property Name="MaxTextLength" Value="5" />
+				<Property Name="ValidationString" Value="[0-9]*" />
+				<Event   Name="TextChanged" Function="SelRecycleItem_CheckIfOK();"  />		
+			</Window>
+			<Window Type="TLBB_SimpleText" Name="SelRecycleItem_Name_Text9">
+				<Property Name="UnifiedPosition" Value="{{0.000000,20.000000},{1.000000,-67.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.000000,150.000000},{0.000000,18.000000}" />
+				<Property Name="HorzFormatting" Value="LeftAligned" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Property Name="Text" Value="#{INTERFACE_SELREC_1}" />
+				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+			</Window>
+			<Window Type="TLBB_SimpleText" Name="SelRecycleItem_Name_Text10">
+				<Property Name="UnifiedPosition" Value="{{0.000000,20.000000},{1.000000,-44.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.000000,150.000000},{0.000000,18.000000}" />
+				<Property Name="HorzFormatting" Value="LeftAligned" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Property Name="Text" Value="#{INTERFACE_SELREC_2}" />
+				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+			</Window>
+			<Window Type="DefaultWindow" Name="SelRecycleItem_TargetItem_Money">
+				<Property Name="UnifiedPosition" Value="{{0.000000,175.000000},{1.000000,-67.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.000000,160.000000},{0.000000,20.000000}" />
+				<Window Type="TLBB_EditBoxNormal" Name="SelRecycleItem_InputMoney_Gold">
+					<Property Name="Position" Value="x:0.0 y:0.0" />
+					<Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+					<Property Name="MaxTextLength" Value="3" />
+					<Property Name="ValidationString" Value="[0-9]*" />
+					<Property Name="Text" Value="9999" />
+					<Event   Name="TextChanged" Function="SelRecycleItem_CheckMoneyIfOK(0);"  />
+				</Window>
+				<Window Type="TLBB_StaticImageNULL" Name="SelRecycleItem_InputMoney_Gold_Icon">
+					<Property Name="UnifiedPosition" Value="{{0.0,42.000000},{0.0,2.000000}" />
+					<Property Name="UnifiedSize" Value="{{0.000000,16.000000},{0.000000,16.000000}" />
+					<Property Name="RiseOnClick" Value="False" />
+					<Property Name="Image" Value="set:Button2 image:Icon_GoldCoin" />
+				</Window>
+				<Window Type="TLBB_EditBoxNormal" Name="SelRecycleItem_InputMoney_Silver">
+					<Property Name="UnifiedPosition" Value="{{0.0,60.000000},{0.0,0.000000}" />
+					<Property Name="AbsoluteSize" Value="w:30.000000 h:20.000000" />
+					<Property Name="MaxTextLength" Value="2" />
+					<Property Name="ValidationString" Value="[0-9]*" />
+					<Event   Name="TextChanged" Function="SelRecycleItem_CheckMoneyIfOK(1);"  />	
+				</Window>
+				<Window Type="TLBB_StaticImageNULL" Name="SelRecycleItem_InputMoney_Silver_Icon">
+					<Property Name="UnifiedPosition" Value="{{0.0,92.000000},{0.0,2.000000}" />
+					<Property Name="UnifiedSize" Value="{{0.000000,16.000000},{0.000000,16.000000}" />
+					<Property Name="RiseOnClick" Value="False" />
+					<Property Name="Image" Value="set:Button2 image:Icon_SilverCoin" />	
+				</Window>
+				<Window Type="TLBB_EditBoxNormal" Name="SelRecycleItem_InputMoney_CopperCoin">
+					<Property Name="UnifiedPosition" Value="{{0.0,110.000000},{0.0,0.000000}" />
+					<Property Name="AbsoluteSize" Value="w:30.000000 h:20.000000" />
+					<Property Name="MaxTextLength" Value="2" />
+					<Property Name="ValidationString" Value="[0-9]*" />
+					<Event   Name="TextChanged" Function="SelRecycleItem_CheckMoneyIfOK(2);"  />	
+				</Window>
+				<Window Type="TLBB_StaticImageNULL" Name="SelRecycleItem_InputMoney_CopperCoin_Icon">
+					<Property Name="UnifiedPosition" Value="{{0.0,142.000000},{0.0,2.000000}" />
+					<Property Name="UnifiedSize" Value="{{0.000000,16.000000},{0.000000,16.000000}" />
+					<Property Name="RiseOnClick" Value="False" />
+					<Property Name="Image" Value="set:Button2 image:Icon_CopperCoin" />
+				</Window>
+			</Window>
+			<Window Type="TLBB_Money" Name="SelRecycleItem_Name_Text_TotalMoney" >
+				<Property Name="UnifiedPosition" Value="{{0.000000,175.000000},{1.000000,-44.000000}" />
+				<Property Name="AbsoluteSize" Value="w:160.000000 h:20.000000" />
+				<Property Name="MoneyNumber" Value="0" />
+			</Window>			
+<!--
+			<Window Type="TLBB_SimpleText" Name="SelRecycleItem_Text8">
+				<Property Name="UnifiedPosition" Value="{{0.000000,62.000000},{0.000000,371.000000}" />
+				<Property Name="UnifiedSize" Value="{{1.000000,-243.000000},{0.000000,19.000000}" />
+				<Property Name="HorzFormatting" Value="LeftAligned" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Property Name="Text" Value="" />
+				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+			</Window>
+			<Window Type="TLBB_SimpleText" Name="SelRecycleItem_Text7">
+				<Property Name="UnifiedPosition" Value="{{0.000000,21.000000},{0.000000,371.000000}" />
+				<Property Name="UnifiedSize" Value="{{1.000000,-248.000000},{0.000000,20.000000}" />
+				<Property Name="HorzFormatting" Value="LeftAligned" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Property Name="Text" Value="" />
+				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+			</Window>
+-->
+			<Window Type="TLBB_Frame_Lace5" Name="SelRecycleItem_Blank">
+				<Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-20.000000}" />
+				<Property Name="UnifiedSize" Value="{{1.000000,-120.000000},{0.000000,20.000000}" />
+				<Property Name="RiseOnClick" Value="False" />
+			</Window>
+			<Window Type="TLBB_ButtonCommon" Name="SelRecycleItem_ButtonOK">
+				<Property Name="UnifiedPosition" Value="{{1.000000,-120.000000},{1.000000,-20.000000}" />
+				<Property Name="AbsoluteSize" Value="w:60.000000 h:20.000000" />
+				<Property Name="Text" Value="#{INTERFACE_XML_557}" />
+				<Event Name="Clicked" Function="SelRecycleItem_OK_Clicked();" />
+			</Window>
+			<Window Type="TLBB_ButtonCommon" Name="SelRecycleItem_ButtonCancel">
+				<Property Name="UnifiedPosition" Value="{{1.000000,-60.000000},{1.000000,-20.000000}" />
+				<Property Name="AbsoluteSize" Value="w:60.000000 h:20.000000" />
+				<Property Name="Text" Value="#{INTERFACE_XML_542}" />
+				<Event Name="Clicked" Function="SelRecycleItem_Close_Clicked();" />
+			</Window>
+		</Window>
+	</Window>
+</GUILayout>

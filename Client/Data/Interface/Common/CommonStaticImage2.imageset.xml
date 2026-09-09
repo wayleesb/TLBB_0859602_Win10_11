@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+	<Imageset Name="CommonStaticImage2" Imagefile="Common/tga_CommonStaticImage2.dds" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="false">
+		<Image Name="CreateReleHead" XPos="0" YPos="0" Width="165" Height="189" />
+    <Image Name="SelectRoleHead" XPos="171" YPos="0" Width="31" Height="103" />
+    <Image Name="SelectRoleButtnBackT" XPos="0" YPos="190" Width="139" Height="25" />
+    <Image Name="SelectRoleButtnBackM" XPos="0" YPos="217" Width="139" Height="15" />
+    <Image Name="SelectRoleButtnBackB" XPos="0" YPos="231" Width="139" Height="25" />
+
+    <Image Name="QuestLog_Head" XPos="154" YPos="154" Width="101" Height="101" />
+
+  </Imageset>

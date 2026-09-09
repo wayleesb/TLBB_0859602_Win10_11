@@ -1,0 +1,6 @@
+[System]
+navmapname=lingxingfeng.nav
+monsterfile=lingxingfeng_monster.ini
+patrolpoint=lingxingfeng_patrolpoint.ini
+eventfile=lingxingfeng_area.ini
+petfile=lingxingfeng_pet.ini

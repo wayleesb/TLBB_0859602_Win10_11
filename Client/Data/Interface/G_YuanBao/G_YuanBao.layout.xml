@@ -1,0 +1,147 @@
+<?xml version="1.0" ?>
+<GUILayout>
+	<Window Type="TLBB_MainFrame1" Name="G_YuanBao_Frame">
+		<Property Name="Position" Value="x:0.35000000 y:0.15000000" />
+		<Property Name="AbsoluteSize" Value="w:300.000000 h:230.000000" />
+		<Window Type="TLBB_DragTitle" Name="G_YuanBao_DragTitle">
+			<Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+			<Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+			<Property Name="DragTarget" Value="G_YuanBao_Frame" />
+			<Property Name="Font" Value="YouYuan11.25" />
+			<Property Name="Text" Value="#{G_YuanBao_1}" />
+			<Property Name="HorzFormatting" Value="HorzCentred" />
+			<Property Name="VertFormatting" Value="VertCentred" />
+		</Window>
+		<Window Type="TLBB_ButtonHelp" Name="G_YuanBao_Help">
+			<Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+			<Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+			<Event Name="Clicked" Function='Helper:GotoHelper(&quot;*G_YuanBao&quot;);' />
+		</Window>
+		<Window Type="TLBB_ButtonClose" Name="G_YuanBao_Close">
+			<Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+			<Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+			<Event Name="Clicked" Function="this:Hide();" />
+		</Window>
+		<Window Type="DefaultWindow" Name="G_YuanBao_Function_Frame">
+			<Property Name="AbsolutePosition" Value="x:7.000000 y:36.000000" />
+			<Property Name="UnifiedSize" Value="{{1.000000,-13.000000},{1.000000,-55.000000}" />
+			<Window Type="TLBB_SimpleMulitiTextFrame" Name="G_YuanBao_Text">
+				<Property Name="UnifiedPosition" Value="{{0.0,0.000000},{0.000000,0.000000}" />
+				<Property Name="UnifiedSize" Value="{{1.0,0.000000},{0.000000,40.000000}" />
+				<Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+				<Property Name="VertFormatting" Value="TopAligned" />
+				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="Text" Value="#{G_YuanBao_2}" />
+			</Window>
+			<Window Type="TLBB_SimpleText" Name="G_YuanBao_Text1">
+				<Property Name="UnifiedPosition" Value="{{0.05,0.000000},{0.000000,45.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.8,0.000000},{0.000000,18.000000}" />
+				<Property Name="Text" Value="#{G_YuanBao_3}" />
+				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="HorzFormatting" Value="LeftAligned" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+			</Window>
+			<Window Type="TLBB_ButtonCheck" Name="G_YuanBao_Type1">
+				<Property Name="UnifiedPosition" Value="{{0.000000,20.000000},{0.000000,68.000000}" />
+				<Property Name="AbsoluteSize" Value="w:12.000000 h:12.000000" />
+				<Property Name="CheckMode" Value="1" />
+			</Window>
+			<Window Type="TLBB_SimpleText" Name="G_YuanBao_Type1_Text">
+				<Property Name="UnifiedPosition" Value="{{0.000000,35.000000},{0.000000,65.000000}" />
+				<Property Name="AbsoluteSize" Value="w:30.000000 h:18.000000" />
+				<Property Name="Text" Value="10" />
+				<Property Name="TextColor" Value="FFFFFF00" />
+				<Property Name="HorzFormatting" Value="LeftAligned" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+			</Window>
+			<Window Type="TLBB_StaticImageNULL" Name="G_YuanBao_Type1_Gold_Icon">
+				<Property Name="UnifiedPosition" Value="{{0.0,50.000000},{0.000000,66.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.000000,16.000000},{0.000000,16.000000}" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Property Name="Image" Value="set:Button2 image:Icon_GoldCoin" />
+			</Window>
+			<Window Type="TLBB_ButtonCheck" Name="G_YuanBao_Type2">
+				<Property Name="UnifiedPosition" Value="{{0.0,110.000000},{0.000000,68.000000}" />
+				<Property Name="AbsoluteSize" Value="w:12.000000 h:12.000000" />
+				<Property Name="CheckMode" Value="1" />
+			</Window>
+			<Window Type="TLBB_SimpleText" Name="G_YuanBao_Type2_Text">
+				<Property Name="UnifiedPosition" Value="{{0.0,125.000000},{0.000000,65.000000}" />
+				<Property Name="AbsoluteSize" Value="w:30.000000 h:18.000000" />
+				<Property Name="Text" Value="50" />
+				<Property Name="TextColor" Value="FFFFFF00" />
+				<Property Name="HorzFormatting" Value="LeftAligned" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+			</Window>
+			<Window Type="TLBB_StaticImageNULL" Name="G_YuanBao_Type2_Gold_Icon">
+				<Property Name="UnifiedPosition" Value="{{0.0,140.000000},{0.000000,66.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.000000,16.000000},{0.000000,16.000000}" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Property Name="Image" Value="set:Button2 image:Icon_GoldCoin" />
+			</Window>
+			<Window Type="TLBB_ButtonCheck" Name="G_YuanBao_Type3">
+				<Property Name="UnifiedPosition" Value="{{0.0,200.000000},{0.000000,68.000000}" />
+				<Property Name="AbsoluteSize" Value="w:12.000000 h:12.000000" />
+				<Property Name="CheckMode" Value="1" />
+			</Window>
+			<Window Type="TLBB_SimpleText" Name="G_YuanBao_Type3_Text">
+				<Property Name="UnifiedPosition" Value="{{0.0,215.000000},{0.000000,65.000000}" />
+				<Property Name="AbsoluteSize" Value="w:30.000000 h:18.000000" />
+				<Property Name="Text" Value="150" />
+				<Property Name="TextColor" Value="FFFFFF00" />
+				<Property Name="HorzFormatting" Value="LeftAligned" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+			</Window>
+			<Window Type="TLBB_StaticImageNULL" Name="G_YuanBao_Type3_Gold_Icon">
+				<Property Name="UnifiedPosition" Value="{{0.0,235.000000},{0.000000,66.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.000000,16.000000},{0.000000,16.000000}" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Property Name="Image" Value="set:Button2 image:Icon_GoldCoin" />
+			</Window>
+			<Window Type="TLBB_SimpleText" Name="G_YuanBao_Text2">
+				<Property Name="UnifiedPosition" Value="{{0.05,0.000000},{0.000000,90.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.8,0.000000},{0.000000,18.000000}" />
+				<Property Name="Text" Value="#{G_YuanBao_4}" />
+				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="HorzFormatting" Value="LeftAligned" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+			</Window>
+			<Window Type="DefaultWindow" Name="G_YuanBao_InputYuanBao_Frame">
+				<Property Name="UnifiedPosition" Value="{{0.0,70.000000},{0.000000,115.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.0,200.000000},{0.000000,20.000000}" />
+				<Window Type="TLBB_EditBoxNormal" Name="G_YuanBao_InputYuanBao">
+					<Property Name="UnifiedPosition" Value="{{0.0,0.000000},{0.000000,0.000000}" />
+					<Property Name="AbsoluteSize" Value="w:60.000000 h:20.000000" />
+					<Property Name="MaxTextLength" Value="5" />
+					<Event   Name="TextChanged" Function="G_YuanBao_CheckIfOK();"  />	
+					<Property Name="ValidationString" Value="[0-9]*" />	
+					<Property Name="Text" Value="1234567890" />
+				</Window>
+				<Window Type="TLBB_SimpleText" Name="G_YuanBao_InputYuanBao_Text">
+					<Property Name="UnifiedPosition" Value="{{0.0,65.000000},{0.000000,0.000000}" />
+					<Property Name="UnifiedSize" Value="{{0.0,40.000000},{0.000000,18.000000}" />
+					<Property Name="Text" Value="#{G_YuanBao_5}" />
+					<Property Name="TextColor" Value="FFFFF263" />
+					<Property Name="HorzFormatting" Value="LeftAligned" />
+					<Property Name="VertFormatting" Value="VertCentred" />
+				</Window>
+			</Window>
+			<Window Type="TLBB_Frame_Lace5" Name="G_YuanBao_Blank">
+				<Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-20.000000}" />
+				<Property Name="UnifiedSize" Value="{{1.000000,-80.000000},{0.000000,20.000000}" />
+			</Window>
+			<Window Type="TLBB_ButtonCommon" Name="G_YuanBao_Accept">
+				<Property Name="UnifiedPosition" Value="{{1.000000,-80.000000},{1.000000,-20.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.000000,40.000000},{0.000000,20.000000}" />
+				<Property Name="Text" Value="#{INTERFACE_XML_557}" />
+				<Event Name="Clicked" Function="G_YuanBao_OK_Click();" />	
+			</Window>
+			<Window Type="TLBB_ButtonCommon" Name="G_YuanBao_Cancel">
+				<Property Name="UnifiedPosition" Value="{{1.000000,-40.000000},{1.000000,-20.000000}" />
+				<Property Name="UnifiedSize" Value="{{0.000000,40.000000},{0.000000,20.000000}" />
+				<Property Name="Text" Value="#{INTERFACE_XML_542}" />
+				<Event Name="Clicked" Function="this:Hide();" />	
+			</Window>
+		</Window>
+	</Window>
+</GUILayout>

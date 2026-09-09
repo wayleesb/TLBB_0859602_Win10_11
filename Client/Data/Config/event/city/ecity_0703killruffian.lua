@@ -1,0 +1,50 @@
+--MisDescBegin
+x600039_g_ScriptId = 600039
+x600039_g_MissionId = 1111
+x600039_g_Name = "郑无名"
+x600039_g_MissionLevel = 10000
+x600039_g_MissionKind = 50
+x600039_g_IfMissionElite = 0
+x600039_g_IsMissionOkFail			=0	--0 任务完成标记
+x600039_g_MissionParam_SubId		=1	--1 子任务脚本号存放位置
+x600039_g_Param_sceneid				=2	--2 当前副本任务的场景号
+x600039_g_MissionParam_BossIndex	=3	--3 某 Boss 的名字索引
+x600039_g_Param_Killed				=4	--4 已杀死的数量
+x600039_g_Param_Needed				=5	--5 需杀死的数量
+x600039_g_MissionRound = 59
+x600039_g_MissionName = "建设任务"
+x600039_g_MissionInfo = ""													--任务描述
+x600039_g_MissionTarget = "    找到江湖人称%s的头领和他带来的寻衅小辈并杀死他们。"				--任务目标
+x600039_g_ContinueInfo = "    你的任务还没有完成么？"						--未完成任务的npc对话
+x600039_g_SubmitInfo = "    事情进展得如何？"								--完成未提交时的npc对话
+x600039_g_MissionComplete = "    甚好，甚好，建筑的进度又加快了。"			--完成任务npc说话的话
+x600039_g_Parameter_Kill_CountRandom = { { id = 300471, numNeeded = 5, numKilled = 4 } }
+x600039_g_StrForePart = 3
+x600039_g_StrList = {
+[0 ] = "",
+[1 ] = "小太岁",
+[2 ] = "赛太岁",
+[3 ] = "活太岁",
+[4 ] = "病太岁",
+[5 ] = "当值太岁",
+[6 ] = "青面太岁",
+[7 ] = "血手太岁",
+[8 ] = "八面太岁",
+[9 ] = "恶手阎罗",
+[10] = "小阎罗",
+[11] = "赛阎罗",
+[12] = "活阎罗",
+[13] = "病阎罗",
+[14] = "九头阎罗",
+[15] = "金眼阎罗",
+[16] = "金掌霸王",
+[17] = "铁拳霸王",
+[18] = "泼霸王",
+[19] = "病霸王",
+[20] = "小霸王",
+[21] = "赛霸王",
+[22] = "活霸王",
+}
+x600039_g_CityMissionScript = 600001
+x600039_g_ConstructionScript = 600035
+--MisDescEnd

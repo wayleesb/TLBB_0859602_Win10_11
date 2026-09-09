@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="DefaultWindow" Name="FangChenMiRefuse_Frame">
+        <Property Name="AlwaysOnTop" Value="True" />
+        <Property Name="Position" Value="x:0.0 y:0.0" />
+        <Property Name="Size" Value="w:1.0 h:1.0" />
+		<Event Name="Hidden" Function="FangChenMiRefuse_Frame_OnHiden();" />
+        <Window Type="TLBB_Frame2" Name="FangChenMiRefuse_Frame_sub">
+            <Property Name="UnifiedPosition" Value="{{0.500000,-173.000000},{0.500000,-118.000000}" />
+            <Property Name="UnifiedSize" Value="{{0.000000,346.000000},{0.000000,91.000000}" />
+            <Window Type="TLBB_SelfWindow" Name="FangChenMiRefuse_InfoWindow">
+                <Property Name="AbsolutePosition" Value="x:15.000000 y:15.000000" />
+                <Property Name="AbsoluteSize" Value="w:0.000000 h:0.000000" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Property Name="MaxWidth" Value="326" />
+                <Property Name="MinHeight" Value="25" />
+		<Property Name="Text" Value="#{FCM2_90408_3}" />
+            </Window>
+            <Window Type="TLBB_ButtonGreen" Name="FangChenMiRefuse_Button1">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-109.000000},{1.000000,-29.000000}" />
+                <Property Name="AbsoluteSize" Value="w:92.000000 h:20.000000" />
+                <Property Name="Text" Value="#{FCM2_90408_4}" />
+                <Event Name="Clicked" Function="FangChenMiRefuse_Bn2Click();" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

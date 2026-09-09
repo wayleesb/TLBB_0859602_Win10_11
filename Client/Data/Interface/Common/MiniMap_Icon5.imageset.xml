@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<Imageset Name="MiniMap_Icon5" Imagefile="Common/tga_MiniMap_Icon5.dds" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+
+  <Image Name="Huoyangu_Normal" XPos="7" YPos="91" Width="43" Height="13" />	
+  <Image Name="Huoyangu_Hover" XPos="7" YPos="91" Width="43" Height="13" />		
+  <Image Name="Gaochangmigong_Normal" XPos="8" YPos="73" Width="54" Height="15" />	
+  <Image Name="Gaochangmigong_Hover" XPos="8" YPos="73" Width="54" Height="15" />		
+  <Image Name="Takelamagan_Normal" XPos="6" YPos="57" Width="70" Height="13" />	
+  <Image Name="Takelamagan_Hover" XPos="6" YPos="57" Width="70" Height="13" />		
+  <Image Name="Kunlunfudi_Normal" XPos="8" YPos="40" Width="55" Height="13" />	
+  <Image Name="Kunlunfudi_Hover" XPos="8" YPos="40" Width="55" Height="13" />	  
+  <Image Name="Hanxieling_Normal" XPos="8" YPos="24" Width="43" Height="13" />	
+  <Image Name="Hanxieling_Hover" XPos="8" YPos="24" Width="43" Height="13" />  
+  <Image Name="Shenghuogong_Normal" XPos="8" YPos="7" Width="40" Height="13" />	
+  <Image Name="Shenghuogong_Hover" XPos="8" YPos="7" Width="40" Height="13" />
+  <Image Name="Suheguzhen_Normal" XPos="4" YPos="110" Width="68" Height="17" />	
+  <Image Name="Suheguzhen_Hover" XPos="4" YPos="110" Width="68" Height="17" /> 
+  <Image Name="qinhuanggong_Normal" XPos="8" YPos="135" Width="69" Height="17" />	
+  <Image Name="qinhuanggong_Hover" XPos="8" YPos="135" Width="69" Height="17" />   
+	<Image Name="Sign54_Normal" XPos="190" YPos="41" Width="55" Height="37" />
+	<Image Name="Sign54_Hover" XPos="190" YPos="3" Width="55" Height="37" />
+	<Image Name="Sign55_Normal" XPos="194" YPos="141" Width="47" Height="50" />
+	<Image Name="Sign55_Hover" XPos="194" YPos="86" Width="47" Height="50" />
+</Imageset>

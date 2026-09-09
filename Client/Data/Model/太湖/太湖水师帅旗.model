@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="太湖水师帅旗.frame" />
+    <entity mesh="太湖水师帅旗灯笼2.mesh" />
+    <entity mesh="太湖水师帅旗灯笼1.mesh" />
+    <entity mesh="太湖水师帅旗杆.mesh" node="太湖水师帅旗杆" />
+    <entity mesh="太湖水师帅旗旗.mesh" />
+</model>

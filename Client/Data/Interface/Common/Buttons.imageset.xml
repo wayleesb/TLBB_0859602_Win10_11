@@ -1,0 +1,214 @@
+<?xml version="1.0" ?>
+<Imageset Name="Buttons" Imagefile="Common/Buttons.tga" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+	
+	<Image Name="ChannelTeam_Normal" XPos="0" YPos="51" Width="17" Height="17" />
+	<Image Name="ChannelTeam_Hover" XPos="0" YPos="34" Width="17" Height="17" />
+	<Image Name="ChannelTeam_Pushed" XPos="0" YPos="17" Width="17" Height="17" />
+	<Image Name="ChannelTeam_Disable" XPos="0" YPos="0" Width="17" Height="17" />
+	<Image Name="ChannelWorld_Normal" XPos="17" YPos="51" Width="17" Height="17" />
+	<Image Name="ChannelWorld_Hover" XPos="17" YPos="34" Width="17" Height="17" />
+	<Image Name="ChannelWorld_Pushed" XPos="17" YPos="17" Width="17" Height="17" />
+	<Image Name="ChannelWorld_Disable" XPos="17" YPos="0" Width="17" Height="17" />
+	<Image Name="ChannelMenpai_Normal" XPos="34" YPos="51" Width="17" Height="17" />
+	<Image Name="ChannelMenpai_Hover" XPos="34" YPos="34" Width="17" Height="17" />
+	<Image Name="ChannelMenpai_Pushed" XPos="34" YPos="17" Width="17" Height="17" />
+	<Image Name="ChannelMenpai_Disable" XPos="34" YPos="0" Width="17" Height="17" />
+	<Image Name="ChannelPersonal_Normal" XPos="51" YPos="51" Width="17" Height="17" />
+	<Image Name="ChannelPersonal_Hover" XPos="51" YPos="34" Width="17" Height="17" />
+	<Image Name="ChannelPersonal_Pushed" XPos="51" YPos="17" Width="17" Height="17" />
+	<Image Name="ChannelPersonal_Disable" XPos="51" YPos="0" Width="17" Height="17" />
+	<Image Name="Channelvicinity_Normal" XPos="68" YPos="51" Width="17" Height="17" />
+	<Image Name="ChannelVicinity_Hover" XPos="68" YPos="34" Width="17" Height="17" />
+	<Image Name="ChannelVicinity_Pushed" XPos="68" YPos="17" Width="17" Height="17" />
+	<Image Name="ChannelVicinity_Disable" XPos="68" YPos="0" Width="17" Height="17" />
+	<Image Name="ChannelCorporative_Normal" XPos="85" YPos="51" Width="17" Height="17" />
+	<Image Name="ChannelCorporative_Hover" XPos="85" YPos="34" Width="17" Height="17" />
+	<Image Name="ChannelCorporative_Pushed" XPos="85" YPos="17" Width="17" Height="17" />
+	<Image Name="ChannelCorporative_Disable" XPos="85" YPos="0" Width="17" Height="17" />
+	
+	<Image Name="Maximize_Normal" XPos="119" YPos="68" Width="16" Height="16" />
+	<Image Name="Maximize_Hover" XPos="119" YPos="85" Width="16" Height="16" />
+	<Image Name="Maximize_Pushed" XPos="119" YPos="102" Width="16" Height="16" />
+	<Image Name="Maximize_Disable" XPos="119" YPos="119" Width="16" Height="16" />
+	<Image Name="minimize_Normal" XPos="102" YPos="68" Width="16" Height="16" />
+	<Image Name="minimize_Hover" XPos="102" YPos="85" Width="16" Height="16" />
+	<Image Name="minimize_Pushed" XPos="102" YPos="102" Width="16" Height="16" />
+	<Image Name="minimize_Disable" XPos="102" YPos="119" Width="16" Height="16" />
+	
+	
+	<Image Name="Send_Normal" XPos="102" YPos="0" Width="16" Height="16" />
+	<Image Name="Send_Hover" XPos="102" YPos="17" Width="16" Height="16" />
+	<Image Name="Send_Pushed" XPos="102" YPos="34" Width="16" Height="16" />
+	<Image Name="Send_Disable" XPos="102" YPos="51" Width="16" Height="16" />
+	
+	<Image Name="North_Normal" XPos="51" YPos="68" Width="16" Height="16" />
+	<Image Name="North_Hover" XPos="51" YPos="85" Width="16" Height="16" />
+	<Image Name="North_Pushed" XPos="51" YPos="102" Width="16" Height="16" />
+	<Image Name="North_Disable" XPos="51" YPos="119" Width="16" Height="16" />
+	<Image Name="Extend_Normal" XPos="34" YPos="68" Width="16" Height="16" />
+	<Image Name="Extend_Hover" XPos="34" YPos="85" Width="16" Height="16" />
+	<Image Name="Extend_Pushed" XPos="34" YPos="102" Width="16" Height="16" />
+	<Image Name="Extend_Disable" XPos="34" YPos="119" Width="16" Height="16" />
+	<Image Name="Scene_Normal" XPos="85" YPos="68" Width="16" Height="16" />
+	<Image Name="Scene_Hover" XPos="85" YPos="85" Width="16" Height="16" />
+	<Image Name="Scene_Pushed" XPos="85" YPos="102" Width="16" Height="16" />
+	<Image Name="Scene_Disable" XPos="85" YPos="119" Width="16" Height="16" />
+	<Image Name="Large_Normal" XPos="68" YPos="68" Width="16" Height="16" />
+	<Image Name="Large_Hover" XPos="68" YPos="85" Width="16" Height="16" />
+	<Image Name="Large_Pushed" XPos="68" YPos="102" Width="16" Height="16" />
+	<Image Name="Large_Disable" XPos="68" YPos="119" Width="16" Height="16" />
+	
+	<Image Name="Addition_Normal" XPos="0" YPos="68" Width="16" Height="16" />
+	<Image Name="Addition_Hover" XPos="0" YPos="85" Width="16" Height="16" />
+	<Image Name="Addition_Pushed" XPos="0" YPos="102" Width="16" Height="16" />
+	<Image Name="Addition_Disable" XPos="0" YPos="119" Width="16" Height="16" />
+	<Image Name="Decrease_Normal" XPos="17" YPos="68" Width="16" Height="16" />
+	<Image Name="Decrease_Hover" XPos="17" YPos="85" Width="16" Height="16" />
+	<Image Name="Decrease_Pushed" XPos="17" YPos="102" Width="16" Height="16" />
+	<Image Name="Decrease_Disable" XPos="17" YPos="119" Width="16" Height="16" />
+	
+	<Image Name="Friend_Edit_Normal" XPos="136" YPos="0" Width="16" Height="16" />
+	<Image Name="Friend_Edit_Hover" XPos="136" YPos="17" Width="16" Height="16" />
+	<Image Name="Friend_Edit_Pushed" XPos="136" YPos="34" Width="16" Height="16" />
+	<Image Name="Friend_Edit_Disable" XPos="136" YPos="51" Width="16" Height="16" />
+	
+	<Image Name="Friend_Lookup_Normal" XPos="153" YPos="0" Width="16" Height="16" />
+	<Image Name="Friend_Lookup_Hover" XPos="153" YPos="17" Width="16" Height="16" />
+	<Image Name="Friend_Lookup_Pushed" XPos="153" YPos="34" Width="16" Height="16" />
+	<Image Name="Friend_Lookup_Disable" XPos="153" YPos="51" Width="16" Height="16" />
+	<Image Name="Friend_Add_Normal" XPos="119" YPos="0" Width="16" Height="16" />
+	<Image Name="Friend_Add_Hover" XPos="119" YPos="17" Width="16" Height="16" />
+	<Image Name="Friend_Add_Pushed" XPos="119" YPos="34" Width="16" Height="16" />
+	<Image Name="Friend_Add_Disable" XPos="119" YPos="51" Width="16" Height="16" />
+	
+	<Image Name="Chat_IME" XPos="0" YPos="136" Width="16" Height="16" />
+	<Image Name="Chat_IME_Push" XPos="0" YPos="153" Width="16" Height="16" />
+	
+	<Image Name="Chat_LetterColor" XPos="17" YPos="136" Width="16" Height="16" />
+	<Image Name="Chat_LetterColor_Push" XPos="17" YPos="153" Width="16" Height="16" />
+	
+	<Image Name="Chat_Face" XPos="34" YPos="136" Width="16" Height="16" />
+	<Image Name="Chat_Face_Push" XPos="34" YPos="153" Width="16" Height="16" />
+	
+	<Image Name="Chat_Action" XPos="51" YPos="136" Width="16" Height="16" />
+	<Image Name="Chat_Action_Push" XPos="51" YPos="153" Width="16" Height="16" />
+	
+	<Image Name="Chat_User" XPos="85" YPos="136" Width="16" Height="16" />
+	<Image Name="Chat_User_Push" XPos="85" YPos="153" Width="16" Height="16" />
+	
+	<Image Name="Chat_Config" XPos="102" YPos="136" Width="16" Height="16" />
+	<Image Name="Chat_Config_Push" XPos="102" YPos="153" Width="16" Height="16" />
+	
+	<Image Name="Chat_Extend" XPos="119" YPos="136" Width="16" Height="16" />
+	<Image Name="Chat_Extend_Push" XPos="119" YPos="153" Width="16" Height="16" />
+	
+	<Image Name="Chat_Reduce" XPos="136" YPos="136" Width="16" Height="16" />
+	<Image Name="Chat_Reduce_Push" XPos="136" YPos="153" Width="16" Height="16" />
+	
+	<Image Name="Chat_Screen" XPos="153" YPos="136" Width="16" Height="16" />
+	<Image Name="Chat_Screen_Push" XPos="153" YPos="153" Width="16" Height="16" />
+	
+	<Image Name="Chat_History" XPos="204" YPos="136" Width="16" Height="16" />
+	<Image Name="Chat_History_Push" XPos="204" YPos="153" Width="16" Height="16" />
+	
+	<Image Name="MainMenuBar_2_on" XPos="221" YPos="136" Width="16" Height="16" />
+	<Image Name="MainMenuBar_2_on_Push" XPos="221" YPos="153" Width="16" Height="16" />
+	<Image Name="MainMenuBar_2_on_Dis" XPos="221" YPos="171" Width="16" Height="16" />
+	
+	<Image Name="MainMenuBar_2_off" XPos="238" YPos="136" Width="16" Height="16" />
+	<Image Name="MainMenuBar_2_off_Push" XPos="238" YPos="153" Width="16" Height="16" />
+	<Image Name="MainMenuBar_2_off_Dis" XPos="238" YPos="171" Width="16" Height="16" />
+	
+	<Image Name="Repair_Normal" XPos="0" YPos="170" Width="32" Height="32" />
+	<Image Name="Repair_Hover" XPos="0" YPos="203" Width="32" Height="32" />
+	<Image Name="Repair_Pushed" XPos="99" YPos="170" Width="32" Height="32" />
+	<Image Name="Repair_Disable" XPos="99" YPos="203" Width="32" Height="32" />
+	
+	<Image Name="CompletelyRepairs_Normal" XPos="33" YPos="170" Width="32" Height="32" />
+	<Image Name="CompletelyRepairs_Hover" XPos="33" YPos="203" Width="32" Height="32" />
+	<Image Name="CompletelyRepairs_Pushed" XPos="132" YPos="170" Width="32" Height="32" />
+	<Image Name="CompletelyRepairs_Disable" XPos="132" YPos="203" Width="32" Height="32" />
+	
+	<Image Name="Coffer_Normal" XPos="66" YPos="170" Width="32" Height="32" />
+	<Image Name="Coffer_Hover" XPos="66" YPos="203" Width="32" Height="32" />
+	<Image Name="Coffer_Pushed" XPos="165" YPos="170" Width="32" Height="32" />
+	<Image Name="Coffer_Disable" XPos="165" YPos="203" Width="32" Height="32" />
+	
+	<Image Name="Delete_Normal" XPos="219" YPos="0" Width="16" Height="16" />
+	<Image Name="Delete_Pushed" XPos="219" YPos="17" Width="16" Height="16" />
+	<Image Name="Recall_Normal" XPos="236" YPos="0" Width="16" Height="16" />
+	<Image Name="Recall_Pushed" XPos="236" YPos="17" Width="16" Height="16" />	
+	
+	<Image Name="IME_Chinese" XPos="102" YPos="51" Width="17" Height="17" />
+	<Image Name="IME_Chinese_Push" XPos="102" YPos="17" Width="17" Height="17" />
+	<Image Name="IME_English" XPos="187" YPos="136" Width="16" Height="16" />
+	<Image Name="IME_English_Push" XPos="187" YPos="153" Width="16" Height="16" />
+	
+	<Image Name="Chat_Show_Normal" XPos="170" YPos="0" Width="16" Height="16" />
+	<Image Name="Chat_Show_Hover" XPos="170" YPos="17" Width="16" Height="16" />
+	<Image Name="Chat_Show_Pushed" XPos="170" YPos="34" Width="16" Height="16" />
+	<Image Name="Chat_Show_Disable" XPos="170" YPos="51" Width="16" Height="16" />
+	
+	<Image Name="SystemInfo_Normal" XPos="187" YPos="0" Width="16" Height="16" />
+	<Image Name="SystemInfo_Hover" XPos="187" YPos="17" Width="16" Height="16" />
+	<Image Name="SystemInfo_Pushed" XPos="187" YPos="34" Width="16" Height="16" />
+	<Image Name="SystemInfo_Disable" XPos="187" YPos="51" Width="16" Height="16" />
+
+  <Image Name="Frame1_LT" XPos="0" YPos="75" Width="15" Height="20" />
+  <Image Name="Frame1_LB" XPos="0" YPos="101" Width="25" Height="33" />
+  <Image Name="Frame1_RT" XPos="58" YPos="75" Width="15" Height="20" />
+  <Image Name="Frame1_RB" XPos="48" YPos="101" Width="25" Height="33" />
+  <Image Name="Frame1_L" XPos="0" YPos="95" Width="11" Height="8" />
+  <Image Name="Frame1_R" XPos="62" YPos="95" Width="11" Height="8" />
+  <Image Name="Frame1_T" XPos="20" YPos="75" Width="30" Height="15" />
+  <Image Name="Frame1_B" XPos="25" YPos="116" Width="20" Height="18" />
+
+  <Image Name="Lace_Frame6_LT" XPos="125" YPos="0" Width="15" Height="15" />
+  <Image Name="Lace_Frame6_LB" XPos="125" YPos="24" Width="15" Height="15" />
+  <Image Name="Lace_Frame6_RT" XPos="149" YPos="0" Width="15" Height="15" />
+  <Image Name="Lace_Frame6_RB" XPos="149" YPos="24" Width="15" Height="15" />
+  <Image Name="Lace_Frame6_L" XPos="125" YPos="15" Width="15" Height="5" />
+  <Image Name="Lace_Frame6_R" XPos="149" YPos="15" Width="15" Height="5" />
+  <Image Name="Lace_Frame6_T" XPos="140" YPos="0" Width="5" Height="15" />
+  <Image Name="Lace_Frame6_B" XPos="140" YPos="24" Width="5" Height="15" />
+
+  <Image Name="Cursor" XPos="176" YPos="5" Width="4" Height="4" />
+
+  <Image Name="EquipEndurance" XPos="211" YPos="169" Width="33" Height="44" />
+  
+  <Image Name="HuaShanLunJian_Normal" XPos="181" YPos="37" Width="30" Height="30" />
+  <Image Name="HuaShanLunJian_Hover" XPos="181" YPos="69" Width="30" Height="30" />
+  <Image Name="HuaShanLunJian_Pushed" XPos="181" YPos="101" Width="30" Height="30" />
+  
+  <Image Name="SceneMap_Up_Normal" XPos="76" YPos="69" Width="33" Height="33" />
+  <Image Name="SceneMap_Up_Hover" XPos="110" YPos="69" Width="33" Height="33" />
+  <Image Name="SceneMap_Up_Pushed" XPos="144" YPos="69" Width="33" Height="33" />
+  <Image Name="SceneMap_Down_Normal" XPos="76" YPos="103" Width="33" Height="33" />
+  <Image Name="SceneMap_Down_Hover" XPos="110" YPos="103" Width="33" Height="33" />
+  <Image Name="SceneMap_Down_Pushed" XPos="144" YPos="103" Width="33" Height="33" />
+  <Image Name="SceneMap_Left_Normal" XPos="2" YPos="137" Width="33" Height="33" />
+  <Image Name="SceneMap_Left_Hover" XPos="70" YPos="137" Width="33" Height="33" />
+  <Image Name="SceneMap_Left_Pushed" XPos="138" YPos="137" Width="33" Height="33" />
+  <Image Name="SceneMap_Right_Normal" XPos="36" YPos="137" Width="33" Height="33" />
+  <Image Name="SceneMap_Right_Hover" XPos="104" YPos="137" Width="33" Height="33" />
+  <Image Name="SceneMap_Right_Pushed" XPos="172" YPos="137" Width="33" Height="33" />
+
+	<Image Name="Stall_L_Normal" XPos="213" YPos="36" Width="16" Height="28" />
+	<Image Name="Stall_L_Hover" XPos="213" YPos="100" Width="16" Height="28" />
+	<Image Name="Stall_L_Pushed" XPos="213" YPos="67" Width="16" Height="28" />
+	<Image Name="Stall_L_Disable" XPos="213" YPos="132" Width="16" Height="28" />
+	<Image Name="Stall_M_Normal" XPos="229" YPos="36" Width="11" Height="28" />
+	<Image Name="Stall_M_Hover" XPos="229" YPos="100" Width="11" Height="28" />
+	<Image Name="Stall_M_Pushed" XPos="229" YPos="67" Width="11" Height="28" />
+	<Image Name="Stall_M_Disable" XPos="229" YPos="132" Width="11" Height="16" />
+	<Image Name="Stall_R_Normal" XPos="240" YPos="36" Width="16" Height="28" />
+	<Image Name="Stall_R_Hover" XPos="240" YPos="100" Width="16" Height="28" />
+	<Image Name="Stall_R_Pushed" XPos="240" YPos="67" Width="16" Height="28" />
+	<Image Name="Stall_R_Disable" XPos="240" YPos="132" Width="16" Height="16" />
+ 
+    <Image Name="ImmediacyScrollBar_Down_Normal" XPos="34" YPos="237" Width="16" Height="18" />
+    <Image Name="ImmediacyScrollBar_Down_Hover" XPos="17" YPos="237" Width="16" Height="18" />
+    <Image Name="ImmediacyScrollBar_Down_Pushed" XPos="51" YPos="237" Width="16" Height="18" />
+    <Image Name="ImmediacyScrollBar_Down_Disalbed" XPos="0" YPos="237" Width="16" Height="18" />
+
+</Imageset>

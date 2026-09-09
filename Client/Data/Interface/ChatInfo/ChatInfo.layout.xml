@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame1" Name="ChatInfo_Frame">
+        <Property Name="UnifiedPosition" Value="{{0.7809375,-232},{0.333333333,0}}" />
+        <Property Name="AbsoluteSize" Value="w:256 h:310" />
+        <Window Type="TLBB_DragTitle" Name="ChatInfo_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="ChatInfo_Frame" />
+            <Window Type="TLBB_SimpleText" Name="ChatInfo_PageHeader">
+                <Property Name="Position" Value="x:0.0 y:0.0" />
+                <Property Name="Size" Value="w:1.0 h:1.0" />
+                <Property Name="Font" Value="YouYuan11.25" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="Text" Value="#{INTERFACE_XML_66}" />
+            </Window>
+        </Window>
+        <Window Type="TLBB_ButtonHelp" Name="ChatInfo_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Property Name="Text" Value="TLBB_ButtonHelp" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*ChatInfo&quot;);' />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="ChatInfo_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Property Name="Text" Value="TLBB_ButtonClose" />
+            <Event Name="Clicked" Function="this:Hide();" />
+        </Window>
+        <Window Type="DefaultWindow" Name="ChatInfo_Frame_Client">
+            <Property Name="AbsolutePosition" Value="x:7.000000 y:36.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-13.000000},{1.000000,-55.000000}" />
+            <Window Type="TLBB_Frame_Lace6" Name="ChatInfo_PlayerHead_Frame">
+                <Property Name="UnifiedPosition" Value="{{1.0,-66.000000},{0.000000,7.000000}" />
+                <Property Name="AbsoluteSize" Value="w:64 h:64" />
+                <Property Name="FrameEnabled" Value="True" />
+                <Property Name="BackgroundEnabled" Value="True" />
+                <Window Type="TLBB_StaticImageNULL" Name="ChatInfo_PlayerHead">
+                    <Property Name="AbsolutePosition" Value="x:8.000000 y:8.000000" />
+                    <Property Name="AbsoluteSize" Value="w:49 h:49" />
+                    <Property Name="RiseOnClick" Value="False" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="ChatInfo_ID">
+                <Property Name="UnifiedPosition" Value="{{0.02,0.000000},{0.0,0.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.7,0.000000},{0.000000,18.000000}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="ID:124678" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="ChatInfo_Name">
+                <Property Name="UnifiedPosition" Value="{{0.0,0.000000},{0.0,18.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.72,0.000000},{0.000000,18.000000}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_773}" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="ChatInfo_Level">
+                <Property Name="UnifiedPosition" Value="{{0.0,0.000000},{0.0,36.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.3,0.000000},{0.000000,18.000000}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_345}" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="ChatInfo_MenPai">
+                <Property Name="UnifiedPosition" Value="{{0.3,0.000000},{0.0,36.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.42,0.000000},{0.000000,18.000000}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_450}" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="ChatInfo_FriendlyGrade">
+                <Property Name="UnifiedPosition" Value="{{0.0,0.000000},{0.0,54.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.72,0.000000},{0.000000,18.000000}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="TextColor" Value="FFFFF263" />
+            </Window>
+            <Window Type="TLBB_Frame_Lace1" Name="ChatInfo_Bk">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.0,75.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.0,0.000000},{1.000000,-100.000000}" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Window Type="TLBB_SimpleText" Name="ChatInfo_Confraternity">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.0,5.000000}" />
+                    <Property Name="UnifiedSize" Value="{{1.0,0.000000},{0.000000,18.000000}" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_128}" />
+                </Window>
+              <Window Type="TLBB_SimpleText" Name="ChatInfo_GuildLeague">
+                <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.0,26.00000}" />
+                <Property Name="UnifiedSize" Value="{{1.0,0.000000},{0.000000,18.000000}" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{TM_20080311_30}" />
+              </Window>
+                <Window Type="TLBB_SimpleText" Name="ChatInfo_Explain">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.0,47.000000}" />
+                    <Property Name="UnifiedSize" Value="{{1.0,0.000000},{0.000000,18.000000}" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_764}" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="ChatInfo_Agname">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.0,64.00000}" />
+                    <Property Name="UnifiedSize" Value="{{1.0,0.000000},{0.000000,26.000000}" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_174}" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="ChatInfo_Relation">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.0,90.00000}" />
+                    <Property Name="UnifiedSize" Value="{{1.0,0.000000},{0.000000,18.000000}" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="ChatInfo_Locus">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.0,111.00000}" />
+                    <Property Name="UnifiedSize" Value="{{1.0,0.000000},{0.000000,18.000000}" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="ChatInfo_TeamInfo">
+                    <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.0,132.00000}" />
+                    <Property Name="UnifiedSize" Value="{{1.0,0.000000},{0.000000,18.000000}" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="ChatInfo_YaoQingTeam">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:60.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_FY_002}" />
+                <Event Name="Clicked" Function="ChatInfo_YaoQingTeam();" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="ChatInfo_ShengQingTeam">
+                <Property Name="UnifiedPosition" Value="{{0.000000,61.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:60.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_FY_001}" />
+                <Event Name="Clicked" Function="ChatInfo_ShengQingTeam();" />
+            </Window>
+           
+            <Window Type="TLBB_ButtonCommon" Name="ChatInfo_Join">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-121.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:60.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_356}" />
+                <Event Name="Clicked" Function="ChatInfo_AddFriend();" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="ChatInfo_HistoryMessage">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-60.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:60.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_607}" />
+                <Event Name="Clicked" Function="ChatInfo_SetPrivateName();" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

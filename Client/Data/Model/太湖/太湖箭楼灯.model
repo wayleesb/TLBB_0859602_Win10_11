@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="太湖箭楼灯.frame" />
+    <entity mesh="太湖箭楼灯01.mesh" node="太湖箭楼灯01">
+        <offset>
+            <translate x="538.599" y="-382.651" z="-84.0988" />
+        </offset>
+    </entity>
+    <entity mesh="太湖箭楼灯02.mesh" node="太湖箭楼灯02">
+        <offset>
+            <translate x="538.599" y="-382.651" z="-84.0988" />
+        </offset>
+    </entity>
+    <entity mesh="太湖箭楼灯03.mesh" node="太湖箭楼灯03">
+        <offset>
+            <translate x="538.599" y="-382.651" z="-84.0988" />
+        </offset>
+    </entity>
+    <entity mesh="太湖箭楼灯04.mesh" node="太湖箭楼灯04">
+        <offset>
+            <translate x="538.599" y="-382.651" z="-84.0988" />
+        </offset>
+    </entity>
+    <entity mesh="太湖箭楼灯05.mesh" node="太湖箭楼灯05">
+        <offset>
+            <translate x="538.599" y="-382.651" z="-84.0988" />
+        </offset>
+    </entity>
+    <entity mesh="太湖箭楼灯06.mesh" node="太湖箭楼灯06">
+        <offset>
+            <translate x="538.599" y="-382.651" z="-84.0988" />
+        </offset>
+    </entity>
+    <entity mesh="太湖箭楼灯07.mesh" node="太湖箭楼灯07">
+        <offset>
+            <translate x="538.599" y="-382.651" z="-84.0988" />
+        </offset>
+    </entity>
+    <entity mesh="太湖箭楼灯08.mesh" node="太湖箭楼灯08">
+        <offset>
+            <translate x="538.599" y="-382.651" z="-84.0988" />
+        </offset>
+    </entity>
+    <entity mesh="太湖箭楼灯09.mesh" node="太湖箭楼灯09">
+        <offset>
+            <translate x="538.599" y="-382.651" z="-84.0988" />
+        </offset>
+    </entity>
+    <entity mesh="太湖箭楼灯绳.mesh" node="太湖箭楼灯绳" />
+</model>

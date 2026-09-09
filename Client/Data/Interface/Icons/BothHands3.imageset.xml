@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<Imageset Name="BothHands3" Imagefile="Icons/BothHands3.jpg" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+	<Image Name="BothHands3_1" XPos="0" YPos="0" Width="64" Height="64" />
+	<Image Name="BothHands3_2" XPos="64" YPos="0" Width="64" Height="64" />
+	<Image Name="BothHands3_3" XPos="128" YPos="0" Width="64" Height="64" />
+	<Image Name="BothHands3_4" XPos="192" YPos="0" Width="64" Height="64" />
+	<Image Name="BothHands3_5" XPos="0" YPos="64" Width="64" Height="64" />
+	<Image Name="BothHands3_6" XPos="64" YPos="64" Width="64" Height="64" />
+	<Image Name="BothHands3_7" XPos="128" YPos="64" Width="64" Height="64" />
+	<Image Name="BothHands3_8" XPos="192" YPos="64" Width="64" Height="64" />
+	<Image Name="BothHands3_9" XPos="0" YPos="128" Width="64" Height="64" />
+	<Image Name="BothHands3_10" XPos="64" YPos="128" Width="64" Height="64" />
+	<Image Name="BothHands3_11" XPos="128" YPos="128" Width="64" Height="64" />
+	<Image Name="BothHands3_12" XPos="192" YPos="128" Width="64" Height="64" />
+	<Image Name="BothHands3_13" XPos="0" YPos="192" Width="64" Height="64" />
+	<Image Name="BothHands3_14" XPos="64" YPos="192" Width="64" Height="64" />
+	<Image Name="BothHands3_15" XPos="128" YPos="192" Width="64" Height="64" />
+	<Image Name="BothHands3_16" XPos="192" YPos="192" Width="64" Height="64" />
+</Imageset>

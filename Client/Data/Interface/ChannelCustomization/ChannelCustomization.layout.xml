@@ -1,0 +1,256 @@
+<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="TLBB_MainFrame1" Name="ChannelCustomization_Frame">
+        <Property Name="UnifiedSize" Value="{{0.0,270},{0.0,240}}" />
+        <Property Name="UnifiedPosition" Value="{{0.0,151},{1.0,-360.0}}" />
+        <Property Name="AlwaysOnTop" Value="true" />
+        <Window Type="TLBB_DragTitle" Name="ChannelCustomization_DragTitle">
+            <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+            <Property Name="DragTarget" Value="ChannelCustomization_Frame" />
+            <Window Type="TLBB_SimpleText" Name="ChannelCustomization_PageHeader_Text">
+                <Property Name="Position" Value="x:0.0 y:0.0" />
+                <Property Name="Size" Value="w:1.0 h:1.0" />
+                <Property Name="Text" Value="#{INTERFACE_XML_490}" />
+                <Property Name="Font" Value="YouYuan11.25" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+        </Window>
+        <Window Type="TLBB_ButtonHelp" Name="ChannelCustomization_Help">
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*ChannelCustomization&quot;);' />
+        </Window>
+        <Window Type="TLBB_ButtonClose" Name="ChannelCustomization_Close">
+            <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+            <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+            <Event Name="Clicked" Function="ChannelCustomization_Close_Clicked();" />
+        </Window>
+        <Window Type="DefaultWindow" Name="ChannelCustomization_Frame_Client">
+            <Property Name="AbsolutePosition" Value="x:7.000000 y:36.000000" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-13.000000},{1.000000,-55.000000}" />
+            <Window Type="TLBB_SimpleText" Name="ChannelCustomization_Text1">
+                <Property Name="Position" Value="x:0.0 y:0.0" />
+                <Property Name="UnifiedSize" Value="{{0.3,0.000000},{0.000000,20.000000}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{INTERFACE_XML_886}" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <!--
+创建页面选项时，使用EditBox
+-->
+            <Window Type="TLBB_EditBoxNormal" Name="ChannelCustomization_EditName">
+                <Property Name="Position" Value="x:0.3 y:0.0" />
+                <Property Name="UnifiedSize" Value="{{0.65,0.000000},{0.000000,20.000000}" />
+                <Property Name="MaxTextLength" Value="6" />
+                <Property Name="ValidationString" Value="^[^#@.*]*" />
+                <Property Name="Text" Value="#{INTERFACE_XML_885}" />
+            </Window>
+            <!--
+配置页面选项时，使用StaticText
+-->
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="ChannelCustomization_TxtName">
+                <Property Name="Position" Value="x:0.3 y:0.0" />
+                <Property Name="UnifiedSize" Value="{{0.65,0.000000},{0.000000,20.000000}" />
+                <Property Name="Text" Value="" />
+                <Property Name="HorzFormatting" Value="LeftAligned" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+            </Window>
+            <Window Type="DefaultWindow" Name="ChannelCustomization_Checkbox_Frame">
+                <Property Name="Position" Value="x:0.0 y:0.135" />
+                <Property Name="Size" Value="w:1.0 h:0.740" />
+                <Window Type="TLBB_ButtonCheck" Name="ChannelCustomization_WorldInfo">
+                    <Property Name="Position" Value="x:0.02 y:0.06338" />
+                    <Property Name="AbsoluteSize" Value="w:12.0 h:12.0" />
+                    <Property Name="CheckMode" Value="0" />
+                </Window>
+                <Window Type="TLBB_ButtonCheck" Name="ChannelCustomization_VicinityInfo">
+                  <Property Name="Position" Value="x:0.019455  y:0.239437" />
+                  <Property Name="AbsoluteSize" Value="w:12.0 h:12.0" />
+                    <Property Name="CheckMode" Value="0" />
+                </Window>
+                <Window Type="TLBB_ButtonCheck" Name="ChannelCustomization_PersonalInfo">
+                  <Property Name="Position" Value="x:0.019455 y:0.422535" />
+                  <Property Name="AbsoluteSize" Value="w:12.0 h:12.0" />
+                    <Property Name="CheckMode" Value="0" />
+                </Window>
+                <Window Type="TLBB_ButtonCheck" Name="ChannelCustomization_MenpaiInfo">
+                    <Property Name="Position" Value="x:0.35 y:0.06338" />
+                    <Property Name="AbsoluteSize" Value="w:12.0 h:12.0" />
+                    <Property Name="CheckMode" Value="0" />
+                </Window>
+                <Window Type="TLBB_ButtonCheck" Name="ChannelCustomization_CorporateInfo">
+                  <Property Name="Position" Value="x:0.350195  y:0.239437" />
+                  <Property Name="AbsoluteSize" Value="w:12.0 h:12.0" />
+                    <Property Name="CheckMode" Value="0" />
+                </Window>
+                <Window Type="TLBB_ButtonCheck" Name="ChannelCustomization_SelfInfo">
+                  <Property Name="Position" Value="x:0.350195 y:0.422535" />
+                  <Property Name="AbsoluteSize" Value="w:12.0 h:12.0" />
+                    <Property Name="CheckMode" Value="0" />
+                </Window>
+                <Window Type="TLBB_ButtonCheck" Name="ChannelCustomization_TeamInfo">
+                    <Property Name="Position" Value="x:0.68 y:0.06338" />
+                    <Property Name="AbsoluteSize" Value="w:12.0 h:12.0" />
+                    <Property Name="CheckMode" Value="0" />
+                </Window>
+                <Window Type="TLBB_ButtonCheck" Name="ChannelCustomization_HelpInfo">
+                  <Property Name="Position" Value="x:0.680934  y:0.239437" />
+                  <Property Name="AbsoluteSize" Value="w:12.0 h:12.0" />
+                    <Property Name="CheckMode" Value="0" />
+                </Window>
+                <Window Type="TLBB_ButtonCheck" Name="ChannelCustomization_SystemInfo">
+                  <Property Name="Position" Value="x:0.680934 y:0.422535" />
+                  <Property Name="AbsoluteSize" Value="w:12.0 h:12.0" />
+                    <Property Name="CheckMode" Value="0" />
+                </Window>
+              <Window Type="TLBB_ButtonCheck" Name="ChannelCustomization_GuildLeagueInfo">
+                <Property Name="Position" Value="x:0.019455 y:0.605634" />
+                <Property Name="AbsoluteSize" Value="w:12.0 h:12.0" />
+                <Property Name="CheckMode" Value="0" />
+              </Window>
+                <Window Type="TLBB_ButtonCheck" Name="ChannelCustomization_City">
+                  <Property Name="Position" Value="x:0.019455 y:0.788321" />
+                  <Property Name="AbsoluteSize" Value="w:12.0 h:12.0" />
+                  <Property Name="CheckMode" Value="0" />
+					<Event Name="Clicked" Function="ChannelCustomization_City_Click();" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="ChannelCustomization_WorldInfo_Text">
+                  <Property Name="Position" Value="x:0.070039 y:0.035211" />
+                  <Property Name="AbsoluteSize" Value="w:60.0 h:18.0" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_646}" />
+                    <Property Name="HorzFormatting" Value="HorzCentred" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                    <Property Name="RiseOnClick" Value="False" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="ChannelCustomization_VicinityInfo_Text">
+                  <Property Name="Position" Value="x:0.070039 y:0.218310" />
+                  <Property Name="AbsoluteSize" Value="w:60.0 h:18.0" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_273}" />
+                    <Property Name="HorzFormatting" Value="HorzCentred" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                    <Property Name="RiseOnClick" Value="False" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="ChannelCustomization_PersonalInfo_Text">
+                  <Property Name="Position" Value="x:0.070039 y:0.401408" />
+                  <Property Name="AbsoluteSize" Value="w:60.0 h:18.0" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_667}" />
+                    <Property Name="HorzFormatting" Value="HorzCentred" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                    <Property Name="RiseOnClick" Value="False" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="ChannelCustomization_MenpaiInfo_Text">
+                  <Property Name="Position" Value="x:0.400778 y:0.035211" />
+                  <Property Name="AbsoluteSize" Value="w:60.0 h:18.0" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_453}" />
+                    <Property Name="HorzFormatting" Value="HorzCentred" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                    <Property Name="RiseOnClick" Value="False" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="ChannelCustomization_CorporateInfo_Text">
+                  <Property Name="Position" Value="x:0.400778 y:0.218310" />
+                  <Property Name="AbsoluteSize" Value="w:60.0 h:18.0" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_129}" />
+                    <Property Name="HorzFormatting" Value="HorzCentred" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                    <Property Name="RiseOnClick" Value="False" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="ChannelCustomization_SelfInfo_Text">
+                  <Property Name="Position" Value="x:0.400778 y:0.401408" />
+                  <Property Name="AbsoluteSize" Value="w:60.0 h:18.0" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_283}" />
+                    <Property Name="HorzFormatting" Value="HorzCentred" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                    <Property Name="RiseOnClick" Value="False" />
+                </Window>
+              <Window Type="TLBB_SimpleText" Name="ChannelCustomization_GuildLeagueInfo_Text">
+                <Property Name="Position" Value="x:0.073930  y:0.584507" />
+                <Property Name="AbsoluteSize" Value="w:60.0 h:18.0" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="Text" Value="#{TM_20080320_01}" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+                <Property Name="RiseOnClick" Value="False" />
+              </Window>
+                <Window Type="TLBB_SimpleText" Name="ChannelCustomization_TeamInfo_Text">
+                  <Property Name="Position" Value="x:0.731517 y:0.035211" />
+                  <Property Name="AbsoluteSize" Value="w:60.0 h:18.0" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_257}" />
+                    <Property Name="HorzFormatting" Value="HorzCentred" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                    <Property Name="RiseOnClick" Value="False" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="ChannelCustomization_HelpInfo_Text">
+                  <Property Name="Position" Value="x:0.731517 y:0.218310" />
+                  <Property Name="AbsoluteSize" Value="w:60.0 h:18.0" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_136}" />
+                    <Property Name="HorzFormatting" Value="HorzCentred" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                    <Property Name="RiseOnClick" Value="False" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="ChannelCustomization_SystemInfo_Text">
+                  <Property Name="Position" Value="x:0.731517 y:0.401408" />
+                  <Property Name="AbsoluteSize" Value="w:60.0 h:18.0" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="Text" Value="#{INTERFACE_XML_736}" />
+                    <Property Name="HorzFormatting" Value="HorzCentred" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                    <Property Name="RiseOnClick" Value="False" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="ChannelCustomization_City_Text">
+                  <Property Name="Position" Value="x:0.073930 y:0.766423" />
+                  <Property Name="AbsoluteSize" Value="w:60.0 h:18.0" />
+                  <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="Text" Value="#{face_ChannelCustomization_City_Text}" />
+                    <Property Name="HorzFormatting" Value="HorzCentred" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                    <Property Name="RiseOnClick" Value="False" />
+              </Window>
+              <Window Type="TLBB_ComboList" Name="ChannelCustomization_ProvinceCity" >
+                <Property Name="Position" Value="x:0.650000 y:0.759259" />
+                <Property Name="UnifiedSize" Value="{{0.35000,0.000000},{0.000000,20.000000}" />
+				<Event Name="ListSelectionAccepted" Function="ChannelCustomization_ComboListProvinceCityChanged();" />
+              </Window>
+              <Window Type="TLBB_ComboList" Name="ChannelCustomization_Province" >
+                <Property Name="Position" Value="x:0.330086 y:0.759259" />
+                <Property Name="UnifiedSize" Value="{{0.30000,0.000000},{0.000000,20.000000}" />
+				<Event Name="ListSelectionAccepted" Function="ChannelCustomization_ComboListProvinceChanged(-1);" />
+              </Window>
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="ChannelCustomization_Destory">
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_581}" />
+                <Event Name="Clicked" Function="ChannelCustomization_Destory_Clicked();" />
+            </Window>
+            <Window Type="TLBB_Frame_Lace5" Name="ChannelCustomization_Blank">
+                <Property Name="UnifiedPosition" Value="{{0.000000,40.000000},{1.000000,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.000000,-120.000000},{0.000000,20.000000}" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="ChannelCustomization_Accept">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-80.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_557}" />
+                <Event Name="Clicked" Function="ChannelCustomization_Accept_Clicked();" />
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="ChannelCustomization_Cancel">
+                <Property Name="UnifiedPosition" Value="{{1.000000,-40.000000},{1.000000,-20.000000}" />
+                <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_542}" />
+                <Event Name="Clicked" Function="ChannelCustomization_Cancel_Clicked();" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

@@ -1,0 +1,201 @@
+<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="DefaultWindow" Name="PlayerFrame">
+        <Property Name="UnifiedPosition" Value="{{0.0,0},{0.0,0}}" />
+        <Property Name="AbsoluteSize" Value="w:191 h:93" />
+        <Property Name="ZOrderChangeEnabled" Value="False" />
+      <Window Type="TLBB_ButtonNULL" Name="PlayerFrame_ZhenShouZhengYou" >
+        <Property Name="AbsolutePosition" Value="x:1.000000 y:64.000000" />
+        <Property Name="AbsoluteSize" Value="w:26.000000 h:26.000000" />
+        <Property Name="HoverImage" Value="set:CommonFrame6 image:ZhengIcon_A3" />
+        <Property Name="NormalImage" Value="set:CommonFrame6 image:ZhengIcon_A1" />
+        <Property Name="PushedImage" Value="set:CommonFrame6 image:ZhengIcon_A2" />
+        <Property Name="Tooltip" Value="#{PETFRIEND_FRAME_TOOLTIP}" />
+        <Event Name="Clicked" Function="PlayerFrame_HitZhengShou()" />
+        <Property Name="ZOrderChangeEnabled" Value="False" />
+        <Window Type="TLBB_AnimateImage" Name="PlayerFrame_ZhengShouZhenYouFlash" >
+					<Property Name="AbsolutePosition" Value="x:2.000000 y:2.000000" />
+					<Property Name="AbsoluteSize" Value="w:18.000000 h:18.000000" />
+					<Property Name="Animate" Value="PetFriend_Flash" />
+					<Property Name="MouseMoveHollow" Value="True" />
+					<Property Name="MouseHollow" Value="true" />
+					
+				</Window>
+      </Window>
+      
+      <Window Type="TLBB_ButtonNULL" Name="PlayerFrame_UpdateBtn" >
+        <Property Name="AbsolutePosition" Value="x:28.000000 y:64.000000" />
+        <Property Name="AbsoluteSize" Value="w:26.000000 h:26.000000" />
+        <Property Name="HoverImage" Value="set:CommonFrame2 image:XinNiuIcon_B3" />
+        <Property Name="NormalImage" Value="set:CommonFrame2 image:XinNiuIcon_B1" />
+        <Property Name="PushedImage" Value="set:CommonFrame2 image:XinNiuIcon_B2" />
+        <Property Name="Tooltip" Value="#{GXGG_090407_1}" />
+        <Event Name="Clicked" Function="PlayerFrame_UpdateBtnOnClicked()" />
+        <Property Name="ZOrderChangeEnabled" Value="False" />
+        <Window Type="TLBB_AnimateImage" Name="PlayerFrame_UpdateBtnFlash" >
+					<Property Name="AbsolutePosition" Value="x:2.000000 y:2.000000" />
+					<Property Name="AbsoluteSize" Value="w:18.000000 h:18.000000" />
+					<Property Name="Animate" Value="XinHuoDong_Flash" />
+					<Property Name="MouseMoveHollow" Value="True" />
+					<Property Name="MouseHollow" Value="true" />
+					
+				</Window>
+      </Window>
+         
+      <Window Type="TLBB_StaticImageNULL" Name="PlayerFrame_Background">
+            <Property Name="Position" Value="x:0.000000 y:0.000000" />
+            <Property Name="AbsoluteSize" Value="w:191 h:63" />
+            <Property Name="RiseOnClick" Value="False" />
+            <Property Name="BackgroundEnabled" Value="False" />
+            <Property Name="FrameEnabled" Value="False" />
+            <Property Name="Image" Value="set:CommonFrame2 image:PlayerFrame" />
+            <Window Type="TLBB_SimpleText" Name="PlayerFrame_Name">
+                <Property Name="AbsolutePosition" Value="x:62.000000 y:10.000000" />
+                <Property Name="AbsoluteSize" Value="w:129.000000 h:18.000000" />
+                <Property Name="Text" Value="#{INTERFACE_XML_821}" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="PlayerFrame_Level">
+                <Property Name="AbsolutePosition" Value="x:60.000000 y:48.000000" />
+                <Property Name="AbsoluteSize" Value="w:38.000000 h:14.000000" />
+                <Property Name="Text" Value="999" />
+                <Property Name="TextColor" Value="FFFFF263" />
+                <Property Name="RiseOnClick" Value="False" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="VertFormatting" Value="VertCentred" />
+            </Window>
+            <Window Type="DefaultWindow" Name="PlayerFrame_DataBack">
+                <Property Name="AbsolutePosition" Value="x:64.000000 y:29.000000" />
+                <Property Name="AbsoluteSize" Value="w:124.000000 h:18.000000" />
+                <Window Type="TLBB_ProgressPropertyRed" Name="PlayerFrame_HP">
+                    <Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+                    <Property Name="UnifiedSize" Value="{{1.000000,.000000},{0.000000,5.000000}" />
+                    <Property Name="CurrentProgress" Value="1.0" />
+                    <Property Name="EffectColor" Value="tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+                    <Property Name="EffectColorLevel" Value="index:0 tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+                    <Property Name="MoveSpeed" Value="1" />
+                    <Event Name="MouseEnter" Function="PlayerFrame_ShowTooltip(1)" />
+                    <Event Name="MouseLeave" Function="PlayerFrame_HideTooltip(1)" />
+                    <Window Type="TLBB_Animate" Name="PlayerFrame_HP_Flash">
+                        <Property Name="Position" Value="x:0 y:0" />
+                        <Property Name="Size" Value="w:1 h:1" />
+                        <Property Name="Animate" Value="ProgressFlash" />
+                        <Property Name="MouseHollow" Value="true" />
+                        <Property Name="MouseMoveHollow" Value="true" />
+                        <Property Name="MouseLButtonHollow" Value="true" />
+                        <Property Name="MouseRButtonHollow" Value="true" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ProgressPropertyBlue" Name="PlayerFrame_MP">
+                    <Property Name="AbsolutePosition" Value="x:0.000000 y:6.000000" />
+                    <Property Name="UnifiedSize" Value="{{1.000000,.000000},{0.000000,5.000000}" />
+                    <Property Name="CurrentProgress" Value="1.0" />
+                    <Property Name="EffectColor" Value="tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+                    <Property Name="EffectColorLevel" Value="index:0 tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+                    <Property Name="MoveSpeed" Value="1" />
+                    <Event Name="MouseEnter" Function="PlayerFrame_ShowTooltip(2)" />
+                    <Event Name="MouseLeave" Function="PlayerFrame_HideTooltip(2)" />
+                </Window>
+                <Window Type="TLBB_ProgressPropertyWhite" Name="PlayerFrame_SP">
+                    <Property Name="AbsolutePosition" Value="x:0.000000 y:12.000000" />
+                    <Property Name="UnifiedSize" Value="{{1.000000,.000000},{0.000000,5.000000}" />
+                    <Property Name="CurrentProgress" Value="1" />
+                    <Property Name="EffectColor" Value="tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+                    <Property Name="EffectColorLevel" Value="index:0 tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+                    <Property Name="MoveSpeed" Value="1" />
+					<Property Name="UseUninterruptedEffectColor" Value="defcolor=(tl:FF000000 tr:FF000000 bl:FF000000 br:FF000000) startpoint:0 startcolor=(tl:FFBD9500 tr:FFBD9500 bl:FFBD9500 br:FFBD9500) endpoint:100 endcolor=(tl:FFFFFF00 tr:FFFFFF00  bl:FFFFFF00  br:FFFFFF00)" />
+					 <Property Name="FlashPoint" Value="50,100" />
+					 <Property Name="FlashSetting" Value="speed:400 color=(tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF) lifetime:4800" />
+					<Property Name="EffectColorType" Value="uninterrupted" />
+                    <Event Name="MouseEnter" Function="PlayerFrame_ShowTooltip(3)" />
+                    <Event Name="MouseLeave" Function="PlayerFrame_HideTooltip(3)" />
+                </Window>
+            </Window>
+            <Window Type="DefaultWindow" Name="PlayerFrame_DoubleHitBack">
+                <Property Name="AbsolutePosition" Value="x:111.000000 y:50.000000" />
+                <Property Name="AbsoluteSize" Value="w:79.000000 h:10.000000" />
+                <Window Type="TLBB_StaticImageNULL" Name="PlayerFrame_DoubleHit1">
+                    <Property Name="Position" Value="x:0 y:0" />
+                    <Property Name="Size" Value="w:0.1 h:1" />
+                    <Property Name="Image" Value="set:UIIcons image:DoubleHit_Dot1" />
+                </Window>
+                <Window Type="TLBB_StaticImageNULL" Name="PlayerFrame_DoubleHit2">
+                    <Property Name="Position" Value="x:0.1 y:0" />
+                    <Property Name="Size" Value="w:0.1 h:1" />
+                    <Property Name="Image" Value="set:UIIcons image:DoubleHit_Dot1" />
+                </Window>
+                <Window Type="TLBB_StaticImageNULL" Name="PlayerFrame_DoubleHit3">
+                    <Property Name="Position" Value="x:0.2 y:0" />
+                    <Property Name="Size" Value="w:0.1 h:1" />
+                    <Property Name="Image" Value="set:UIIcons image:DoubleHit_Dot1" />
+                </Window>
+                <Window Type="TLBB_StaticImageNULL" Name="PlayerFrame_DoubleHit4">
+                    <Property Name="Position" Value="x:0.3 y:0" />
+                    <Property Name="Size" Value="w:0.1 h:1" />
+                    <Property Name="Image" Value="set:UIIcons image:DoubleHit_Dot2" />
+                </Window>
+                <Window Type="TLBB_StaticImageNULL" Name="PlayerFrame_DoubleHit5">
+                    <Property Name="Position" Value="x:0.4 y:0" />
+                    <Property Name="Size" Value="w:0.1 h:1" />
+                    <Property Name="Image" Value="set:UIIcons image:DoubleHit_Dot2" />
+                </Window>
+                <Window Type="TLBB_StaticImageNULL" Name="PlayerFrame_DoubleHit6">
+                    <Property Name="Position" Value="x:0.5 y:0" />
+                    <Property Name="Size" Value="w:0.1 h:1" />
+                    <Property Name="Image" Value="set:UIIcons image:DoubleHit_Dot2" />
+                </Window>
+                <Window Type="TLBB_StaticImageNULL" Name="PlayerFrame_DoubleHit7">
+                    <Property Name="Position" Value="x:0.6 y:0" />
+                    <Property Name="Size" Value="w:0.1 h:1" />
+                    <Property Name="Image" Value="set:UIIcons image:DoubleHit_Dot3" />
+                </Window>
+                <Window Type="TLBB_StaticImageNULL" Name="PlayerFrame_DoubleHit8">
+                    <Property Name="Position" Value="x:0.7 y:0" />
+                    <Property Name="Size" Value="w:0.1 h:1" />
+                    <Property Name="Image" Value="set:UIIcons image:DoubleHit_Dot3" />
+                </Window>
+                <Window Type="TLBB_StaticImageNULL" Name="PlayerFrame_DoubleHit9">
+                    <Property Name="Position" Value="x:0.8 y:0" />
+                    <Property Name="Size" Value="w:0.1 h:1" />
+                    <Property Name="Image" Value="set:UIIcons image:DoubleHit_Dot3" />
+                </Window>
+            </Window>
+            <Window Type="TLBB_StaticImageNULL" Name="PlayerFrame_Icon">
+                <Property Name="AbsolutePosition" Value="x:12.000000 y:12.000000" />
+                <Property Name="AbsoluteSize" Value="w:48.000000 h:48.000000" />
+                <Event Name="MouseRClick" Function="PlayerFrame_Show_Menu_Func();" />
+                <Event Name="MouseLClick" Function="PlayerFrame_SelectMyselfAsTarget();" />
+                <Property Name="Image" Value="set:ManProtagonist image:ManProtagonist_1" />
+                <Window Type="TLBB_ActionButtonNULL" Name="PlayerFrame_Icon_Action">
+                    <Property Name="Position" Value="x:0 y:0" />
+                    <Property Name="Size" Value="w:1 h:1" />
+                    <Property Name="Empty" Value="False" />
+                    <Property Name="HoverImage" Value="set:Common image:Dummy" />
+                    <Property Name="DragAcceptName" Value="L" />
+                    <Event Name="MouseRClick" Function="PlayerFrame_Show_Menu_Func();" />
+                    <Event Name="MouseLClick" Function="PlayerFrame_SelectMyselfAsTarget();" />
+                    <Event Name="MouseDoubleClick" Function="OpenEquip( 1 );" />
+                    <Window Type="TLBB_StaticImageNULL" Name="PlayerFrame_Mask">
+                        <Property Name="Position" Value="x:0 y:0" />
+                        <Property Name="Size" Value="w:1 h:1" />
+                        <Property Name="MouseLButtonHollow" Value="true" />
+                        <Property Name="MouseRButtonHollow" Value="true" />
+                        <Property Name="MouseMoveHollow" Value="true" />
+                        <Property Name="Image" Value="set:Face_04 image:Remind3_Bak" />
+                        <Property Name="Alpha" Value="1.0" />
+                    </Window>
+                    <Window Type="TLBB_StaticImageNULL" Name="PlayerFrame_Captain">
+                        <Property Name="Position" Value="x:0.75 y:0.75" />
+                        <Property Name="Size" Value="w:0.25 h:0.25" />
+                        <Property Name="RiseOnClick" Value="False" />
+                        <Property Name="AlwaysOnTop" Value="True" />
+                        <Property Name="Image" Value="set:UIIcons image:LeaderOpening" />
+                    </Window>
+                </Window>
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+    <frame name="幌子2.frame" />
+    <entity mesh="幌子2柱.mesh" node="幌子2柱" />
+    <entity mesh="幌子2灯.mesh" />
+    <entity mesh="幌子2招牌.mesh" />
+</model>

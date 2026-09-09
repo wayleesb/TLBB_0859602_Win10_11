@@ -1,0 +1,75 @@
+<?xml version="1.0" ?>
+<GUILayout>
+	<Window Type="DefaultWindow" Name="TextValidate_Frame_Back">
+			<Property Name="AlwaysOnTop" Value="true" />
+		  <Property Name="Size" Value="w:1 h:1" />
+      <Property Name="Position" Value="x:0 y:0" />
+	  <Event Name="Hidden" Function="TextValidate_Frame_Hidden();" />
+      <Window Type="TLBB_Frame2" Name="TextValidate_Frame">
+        <Property Name="UnifiedXPosition" Value="{0.4,-95}" />
+        <Property Name="UnifiedYPosition" Value="{0.2,44}" />
+        <Property Name="AbsoluteSize" Value="w:400 h:128" />
+        <Window Type="TLBB_Frame_Lace1" Name="TextValidate_Image_Back" >
+          <Property Name="UnifiedPosition" Value="{{0.500000,-42.000000},{0.000000,4.000000}" />
+          <Property Name="AbsoluteSize" Value="w:166.000000 h:51.000000" />
+          <Window Type="TLBB_StaticImageNULL" Name="TextValidate_Image" >
+            <Property Name="AbsolutePosition" Value="x:3.000000 y:3.000000" />
+            <Property Name="AbsoluteSize" Value="w:160.000000 h:45.000000" />
+          </Window>
+        </Window>
+        <Window Type="TLBB_SimpleText" Name="TextValidate_Text" >
+          <Property Name="UnifiedPosition" Value="{{0.000000,10.000000},{1.000000,-115.000000}" />
+          <Property Name="UnifiedSize" Value="{{0.000000,80.000000},{0.000000,25.000000}" />
+          <Property Name="HorzFormatting" Value="LeftAligned" />
+          <Property Name="Text" Value="#{INTERFACE_XML_984}" />
+        </Window>
+        <Window Type="TLBB_EditBoxNormal" Name="TextValidate_Input" >
+          <Property Name="UnifiedPosition" Value="{{0.000000,91.000000},{0.000000,14.000000}" />
+          <Property Name="UnifiedSize" Value="{{0.000000,65.000000},{0.000000,25.000000}" />
+          <Property Name="MaxTextLength" Value="4" />
+          <Event Name="TextAccepted" Function="TextValidate_Input_TextAccepted();" />
+        </Window>
+        <Window Type="TLBB_SimpleMulitiTextFrame" Name="TextValidate_WarningText" >
+          <Property Name="UnifiedPosition" Value="{{0.000000,8.000000},{0.000000,56.000000}" />
+          <Property Name="UnifiedSize" Value="{{0.000000,385.000000},{0.000000,46.000000}" />
+          <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+        </Window>
+        <Window Type="TLBB_ButtonCommon" Name="TextValidate_ChangePic">
+          <Property Name="UnifiedPosition" Value="{{1.000000,-75.000000},{1.000000,-113.000000}" />
+          <Property Name="AbsoluteSize" Value="w:70.000000 h:25.000000" />
+          <Property Name="Text" Value="#{INTERFACE_XML_985}" />
+		  <Event Name="Clicked" Function="TextValidate_BtnChangePicClick();" />
+        </Window>
+        <Window Type="TLBB_ButtonCommon" Name="TextValidate_Accept">
+          <Property Name="UnifiedPosition" Value="{{1.000000,-47.000000},{1.000000,-24.000000}" />
+          <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+          <Property Name="Text" Value="#{INTERFACE_XML_557}" />
+            <Event Name="Clicked" Function="TextValidate_BtnCommitClick();" />
+        </Window>
+        <Window Type="TLBB_ButtonCommon" Name="TextValidate_Close">
+          <Property Name="UnifiedPosition" Value="{{1.000000,-392.000000},{1.000000,-24.000000}" />
+          <Property Name="AbsoluteSize" Value="w:40.000000 h:20.000000" />
+          <Property Name="Text" Value="#{INTERFACE_XML_542}" />
+		  <Event Name="Clicked" Function="TextValidate_BtnCloseClick();" />
+        </Window>
+        <Window Type="TLBB_ButtonNULL" Name="TextValidate_NotUse">
+			<Property Name="UnifiedPosition" Value="{{1.0,1.000000},{1.000000,1.000000}" />
+			<Property Name="UnifiedSize" Value="{{1.0,1.000000},{1.000000,1.000000}" />
+			<Property Name="Text" Value="" />
+			<Property Name="Visible" Value="False" />
+		</Window>
+		<Window Type="TLBB_StopWatch" Name="TextValidate_StopWatch1">
+			<Property Name="UnifiedPosition" Value="{{1.0,1.000000},{1.000000,1.000000}" />
+			<Property Name="UnifiedSize" Value="{{0.5,0.000000},{0.000000,18.000000}" />
+			<Property Name="Timer" Value="-1" />
+		       <Event Name="ReachedZero" Function="TextValidate_TimeReach1();" />
+		</Window>
+		<Window Type="TLBB_StopWatch" Name="TextValidate_StopWatch2">
+			<Property Name="UnifiedPosition" Value="{{1.0,1.000000},{1.000000,1.000000}" />
+			<Property Name="UnifiedSize" Value="{{0.5,0.000000},{0.000000,18.000000}" />
+			<Property Name="Timer" Value="-1" />
+		    <Event Name="ReachedZero" Function="TextValidate_TimeReach2();" />
+		</Window>
+    </Window>
+    </Window>
+</GUILayout>

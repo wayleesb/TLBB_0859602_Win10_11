@@ -1,0 +1,372 @@
+<?xml version="1.0" ?>
+<GUILayout>
+  <Window Type="DefaultWindow" Name="HuoDongRiCheng_Frame" >
+    <Property Name="UnifiedPosition" Value="{{0.0,0.0},{0.000000,0.0}" />
+    <Property Name="UnifiedSize" Value="{{1.0,0.0},{1.0,0.0}" />
+    <Window Type="DefaultWindow" Name="HuoDongRiCheng_Background1_Frame" >
+      <Property Name="Position" Value="x:0.000000 y:0.000000" />
+      <Property Name="Size" Value="w:1.000000 h:1.000000" />
+      <Property Name="RiseOnClick" Value="False" />
+      <Window Type="TLBB_StaticImageNULL" Name="HuoDongRiCheng_Bak1" >
+        <Property Name="UnifiedPosition" Value="{{0.0,0.0},{0.0,0.0}" />
+        <Property Name="UnifiedSize" Value="{{0.0,512.0},{0.0,512.0}" />
+        <Property Name="Image" Value="set:Huodongricheng1 image:Huodongricheng1" />
+        <Property Name="MouseHollow" Value="False" />
+        <Property Name="RiseOnClick" Value="False" />
+      </Window>
+      <Window Type="TLBB_StaticImageNULL" Name="HuoDongRiCheng_Bak2" >
+        <Property Name="UnifiedPosition" Value="{{0.0,512.0},{0.0,0.0}" />
+        <Property Name="UnifiedSize" Value="{{0.0,287.0},{0.0,512.0}" />
+        <Property Name="Image" Value="set:Huodongricheng2 image:Huodongricheng2" />
+        <Property Name="MouseHollow" Value="False" />
+        <Property Name="RiseOnClick" Value="False" />
+      </Window>
+      <Window Type="TLBB_StaticImageNULL" Name="HuoDongRiCheng_Bak3" >
+        <Property Name="UnifiedPosition" Value="{{0.0,0.0},{0.0,512.0}" />
+        <Property Name="UnifiedSize" Value="{{0.0,512.0},{0.0,297.0}" />
+        <Property Name="Image" Value="set:Huodongricheng3 image:Huodongricheng3_1" />
+        <Property Name="MouseHollow" Value="False" />
+        <Property Name="RiseOnClick" Value="False" />
+      </Window>
+      <Window Type="TLBB_StaticImageNULL" Name="HuoDongRiCheng_Bak4" >
+        <Property Name="UnifiedPosition" Value="{{0.0,512.0},{0.0,512.0}" />
+        <Property Name="UnifiedSize" Value="{{0.0,287.0},{0.0,241.0}" />
+        <Property Name="Image" Value="set:Huodongricheng3 image:Huodongricheng3_2" />
+        <Property Name="MouseHollow" Value="False" />
+        <Property Name="RiseOnClick" Value="False" />
+      </Window>
+    </Window>
+
+
+      <Window Type="DefaultWindow" Name="HuoDongRiCheng_Background_teshuhuodong" >
+        <Property Name="UnifiedPosition" Value="{{0.0,310.00},{0.0,145.0}" />
+        <Property Name="UnifiedSize" Value="{{0.0,271.0},{0.0,328.0}" />
+    	<Window Type="TLBB_ButtonNULL" Name="HuoDongRiCheng_jinrianniu">
+          <Property Name="AbsolutePosition" Value="x:54.000000 y:0.000000" />
+          <Property Name="AbsoluteSize" Value="w:107.000000 h:34.000000" />
+          <Property Name="NormalImage" Value="set:ButtonCampaign2 image:Campaign_IMG_jinri_Normal" />
+          <Property Name="HoverImage" Value="set:ButtonCampaign2 image:Campaign_IMG_jinri_Hover" />
+          <Property Name="PushedImage" Value="set:ButtonCampaign2 image:Campaign_IMG_jinri_Pushed" />
+          <Event Name="Clicked" Function="Do_OpenTadayHD();" />
+        </Window>
+        <Window Type="TLBB_ButtonNULL" Name="HuoDongRiCheng_mingrianniu">
+          <Property Name="AbsolutePosition" Value="x:161.000000 y:0.000000" />
+          <Property Name="AbsoluteSize" Value="w:109.000000 h:34.000000" />
+          <Property Name="NormalImage" Value="set:ButtonCampaign2 image:Campaign_IMG_mingri_Normal" />
+          <Property Name="HoverImage" Value="set:ButtonCampaign2 image:Campaign_IMG_mingri_Hover" />
+          <Property Name="PushedImage" Value="set:ButtonCampaign2 image:Campaign_IMG_mingri_Pushed" />
+          <Event Name="Clicked" Function="Do_OpenTomorrowHD();" />
+        </Window>
+       <!--
+        <Window Type="TLBB_StaticImageNULL" Name="HuoDongRiCheng_jinriteshuhuodong" >
+          <Property Name="UnifiedPosition" Value="{{0.000000,84.000000},{0.000000,3.000000}" />
+          <Property Name="UnifiedSize" Value="{{0.000000,162.000000},{0.000000,46.000000}" />
+		  <Property Name="Image" Value="set:ButtonCampaign1 image:Campaign_IMG_jinri" />
+		  <Property Name="RiseOnClick" Value="False" />
+        </Window>-->
+		<Window Type="TLBB_Frame_Campaign" Name="HuoDongRiCheng_Background_anniu" >
+        <Property Name="UnifiedPosition" Value="{{0.0,54.0},{0.0,34.0}" />
+        <Property Name="UnifiedSize" Value="{{0.0,215.0},{0.0,256.0}" />
+		<Window Type="DefaultWindow" Name="HuoDongRiCheng_jinriteshuhuodong_StaticImageFrames" >
+		 <Property Name="UnifiedPosition" Value="{{0.0,8.0},{0.0,17.0}" />
+        <Property Name="UnifiedSize" Value="{{1.0,-15.0},{1.0,-25.0}" />
+        <Window Type="TLBB_StaticImageFrame" Name="HuoDongRiCheng_Button1" >
+          <Property Name="UnifiedPosition" Value="{{0.000000,6.0},{0.000000,6.0}" />
+          <Property Name="AbsoluteSize" Value="w:38.000000 h:38.000000" />
+        </Window>
+        <Window Type="TLBB_StaticImageFrame" Name="HuoDongRiCheng_Button2" >
+          <Property Name="UnifiedPosition" Value="{{0.000000,55.000000},{0.000000,6.0}" />
+          <Property Name="AbsoluteSize" Value="w:38.000000 h:38.000000" />
+        </Window>
+        <Window Type="TLBB_StaticImageFrame" Name="HuoDongRiCheng_Button3" >
+          <Property Name="UnifiedPosition" Value="{{0.000000,104.250},{0.000000,6.0}" />
+          <Property Name="AbsoluteSize" Value="w:38.000000 h:38.000000" />
+        </Window>
+        <Window Type="TLBB_StaticImageFrame" Name="HuoDongRiCheng_Button4" >
+          <Property Name="UnifiedPosition" Value="{{0.000000,153.0},{0.000000,6.00}" />
+          <Property Name="AbsoluteSize" Value="w:38.000000 h:38.000000" />
+        </Window>
+        <Window Type="TLBB_StaticImageFrame" Name="HuoDongRiCheng_Button5" >
+          <Property Name="UnifiedPosition" Value="{{0.000000,6.00},{0.000000,51.00}" />
+          <Property Name="AbsoluteSize" Value="w:38.000000 h:38.000000" />
+        </Window>
+        <Window Type="TLBB_StaticImageFrame" Name="HuoDongRiCheng_Button6" >
+          <Property Name="UnifiedPosition" Value="{{0.000000,55.000000},{0.000000,51.00}" />
+          <Property Name="AbsoluteSize" Value="w:38.000000 h:38.000000" />
+        </Window>
+      <Window Type="TLBB_StaticImageFrame" Name="HuoDongRiCheng_Button7" >
+        <Property Name="UnifiedPosition" Value="{{0.000000,104.25},{0.000000,51.00}" />
+        <Property Name="AbsoluteSize" Value="w:38.000000 h:38.000000" />
+      </Window>
+      <Window Type="TLBB_StaticImageFrame" Name="HuoDongRiCheng_Button8" >
+        <Property Name="UnifiedPosition" Value="{{0.000000,153.0},{0.000000,51.00}" />
+        <Property Name="AbsoluteSize" Value="w:38.000000 h:38.000000" />
+      </Window>
+      <Window Type="TLBB_StaticImageFrame" Name="HuoDongRiCheng_Button9" >
+        <Property Name="UnifiedPosition" Value="{{0.000000,6.00},{0.000000,96.00}" />
+        <Property Name="AbsoluteSize" Value="w:38.000000 h:38.000000" />
+      </Window>
+      <Window Type="TLBB_StaticImageFrame" Name="HuoDongRiCheng_Button10" >
+        <Property Name="UnifiedPosition" Value="{{0.000000,55.000000},{0.000000,96.00}" />
+        <Property Name="AbsoluteSize" Value="w:38.000000 h:38.000000" />
+      </Window>
+      <Window Type="TLBB_StaticImageFrame" Name="HuoDongRiCheng_Button11" >
+        <Property Name="UnifiedPosition" Value="{{0.000000,104.25},{0.000000,96.00}" />
+        <Property Name="AbsoluteSize" Value="w:38.000000 h:38.000000" />
+      </Window>
+      <Window Type="TLBB_StaticImageFrame" Name="HuoDongRiCheng_Button12" >
+        <Property Name="UnifiedPosition" Value="{{0.000000,153.0},{0.000000,96.00}" />
+        <Property Name="AbsoluteSize" Value="w:38.000000 h:38.000000" />
+      </Window>
+      <Window Type="TLBB_StaticImageFrame" Name="HuoDongRiCheng_Button13" >
+        <Property Name="UnifiedPosition" Value="{{0.000000,6.00},{0.000000,141.00}" />
+        <Property Name="AbsoluteSize" Value="w:38.000000 h:38.000000" />
+      </Window>
+      <Window Type="TLBB_StaticImageFrame" Name="HuoDongRiCheng_Button14" >
+        <Property Name="UnifiedPosition" Value="{{0.000000,55.000000},{0.000000,141.00}" />
+        <Property Name="AbsoluteSize" Value="w:38.000000 h:38.000000" />
+      </Window>
+      <Window Type="TLBB_StaticImageFrame" Name="HuoDongRiCheng_Button15" >
+        <Property Name="UnifiedPosition" Value="{{0.000000,104.25},{0.000000,141.00}" />
+        <Property Name="AbsoluteSize" Value="w:38.000000 h:38.000000" />
+      </Window>
+      <Window Type="TLBB_StaticImageFrame" Name="HuoDongRiCheng_Button16" >
+        <Property Name="UnifiedPosition" Value="{{0.000000,153.0},{0.000000,141.00}" />
+        <Property Name="AbsoluteSize" Value="w:38.000000 h:38.000000" />
+      </Window>
+      <Window Type="TLBB_StaticImageFrame" Name="HuoDongRiCheng_Button17" >
+        <Property Name="UnifiedPosition" Value="{{0.000000,6.00},{0.000000,186.00}" />
+        <Property Name="AbsoluteSize" Value="w:38.000000 h:38.000000" />
+      </Window>
+      <Window Type="TLBB_StaticImageFrame" Name="HuoDongRiCheng_Button18" >
+        <Property Name="UnifiedPosition" Value="{{0.000000,55.000000},{0.000000,186.00}" />
+        <Property Name="AbsoluteSize" Value="w:38.000000 h:38.000000" />
+      </Window>
+        <Window Type="TLBB_StaticImageFrame" Name="HuoDongRiCheng_Button19" >
+          <Property Name="UnifiedPosition" Value="{{0.000000,104.25},{0.000000,186.00}" />
+          <Property Name="AbsoluteSize" Value="w:38.000000 h:38.000000" />
+        </Window>
+        <Window Type="TLBB_StaticImageFrame" Name="HuoDongRiCheng_Button20" >
+          <Property Name="UnifiedPosition" Value="{{0.000000,153.0},{0.000000,186.00}" />
+          <Property Name="AbsoluteSize" Value="w:38.000000 h:38.000000" />
+        </Window>
+      <!--
+      <Window Type="TLBB_StaticImageFrame" Name="HuoDongRiCheng_Button21" >
+        <Property Name="UnifiedPosition" Value="{{0.000000,6.00},{0.000000,226.00}" />
+        <Property Name="AbsoluteSize" Value="w:38.000000 h:38.000000" />
+      </Window>
+      <Window Type="TLBB_StaticImageFrame" Name="HuoDongRiCheng_Button22" >
+        <Property Name="UnifiedPosition" Value="{{0.000000,55.000000},{0.000000,226.00}" />
+        <Property Name="AbsoluteSize" Value="w:38.000000 h:38.000000" />
+      </Window>
+      <Window Type="TLBB_StaticImageFrame" Name="HuoDongRiCheng_Button23" >
+        <Property Name="UnifiedPosition" Value="{{0.000000,104.25},{0.000000,226.00}" />
+        <Property Name="AbsoluteSize" Value="w:38.000000 h:38.000000" />
+      </Window>
+      <Window Type="TLBB_StaticImageFrame" Name="HuoDongRiCheng_Button24" >
+        <Property Name="UnifiedPosition" Value="{{0.000000,153.0},{0.000000,226.00}" />
+        <Property Name="AbsoluteSize" Value="w:38.000000 h:38.000000" />
+      </Window>-->
+      </Window>
+    </Window>
+    <!--<Window Type="TLBB_StaticImageNULL" Name="HuoDongRiCheng_mingriteshuhuodong" >
+          <Property Name="UnifiedPosition" Value="{{0.000000,84.000000},{0.000000,149.000000}" />
+          <Property Name="UnifiedSize" Value="{{0.000000,162.000000},{0.000000,46.000000}" />
+          <Property Name="Image" Value="set:ButtonCampaign1 image:Campaign_IMG_mingri" />
+          <Property Name="RiseOnClick" Value="False" />
+        </Window>
+        
+        <Window Type="TLBB_Frame_Campaign" Name="HuoDongRiCheng_Background_anniu1" >
+          <Property Name="UnifiedPosition" Value="{{0.0,79.0},{0.0,181.0}" />
+          <Property Name="UnifiedSize" Value="{{0.0,163.0},{0.0,109.0}" />
+          <Window Type="DefaultWindow" Name="HuoDongRiCheng_mingriteshuhuodong_StaticImageFrames" >
+            <Property Name="UnifiedPosition" Value="{{0.0,8.0},{0.0,17.0}" />
+            <Property Name="UnifiedSize" Value="{{1.0,-15.0},{1.0,-25.0}" />
+            <Window Type="TLBB_StaticImageFrame" Name="HuoDongRiCheng_Button7" >
+              <Property Name="UnifiedPosition" Value="{{0.000000,6.0},{0.000000,2.0}" />
+              <Property Name="AbsoluteSize" Value="w:38.000000 h:38.000000" />
+            </Window>
+            <Window Type="TLBB_StaticImageFrame" Name="HuoDongRiCheng_Button8" >
+              <Property Name="UnifiedPosition" Value="{{0.000000,55.000000},{0.000000,2.0}" />
+              <Property Name="AbsoluteSize" Value="w:38.000000 h:38.000000" />
+            </Window>
+            <Window Type="TLBB_StaticImageFrame" Name="HuoDongRiCheng_Button9" >
+              <Property Name="UnifiedPosition" Value="{{0.000000,104.250},{0.000000,2.0}" />
+              <Property Name="AbsoluteSize" Value="w:38.000000 h:38.000000" />
+            </Window>
+            <Window Type="TLBB_StaticImageFrame" Name="HuoDongRiCheng_Button10" >
+              <Property Name="UnifiedPosition" Value="{{0.000000,6.0},{0.000000,45.00}" />
+              <Property Name="AbsoluteSize" Value="w:38.000000 h:38.000000" />
+            </Window>
+            <Window Type="TLBB_StaticImageFrame" Name="HuoDongRiCheng_Button11" >
+              <Property Name="UnifiedPosition" Value="{{0.000000,55.00},{0.000000,45.00}" />
+              <Property Name="AbsoluteSize" Value="w:38.000000 h:38.000000" />
+            </Window>
+            <Window Type="TLBB_StaticImageFrame" Name="HuoDongRiCheng_Button12" >
+              <Property Name="UnifiedPosition" Value="{{0.000000,104.25},{0.000000,45.00}" />
+              <Property Name="AbsoluteSize" Value="w:38.000000 h:38.000000" />
+            </Window>
+          </Window>
+        </Window>-->
+      </Window>
+	  <Window Type="DefaultWindow" Name="HuoDongRiCheng_Background_dangqianrichanghuodong_Frame" >
+        <Property Name="UnifiedPosition" Value="{{0.0,599.0},{0.0,140.0}" />
+        <Property Name="UnifiedSize" Value="{{0.0,200.0},{0.0,310.0}" />
+        <Window Type="TLBB_StaticImageNULL" Name="HuoDongRiCheng_Background_dangqianrichanghuodong" >
+          <Property Name="UnifiedPosition" Value="{{0.000000,26.000000},{0.000000,3.000000}" />
+          <Property Name="UnifiedSize" Value="{{0.000000,126.000000},{0.000000,36.000000}" />
+		      <Property Name="Image" Value="set:ButtonCampaign3 image:Campaign_IMG_XianZai" />
+          <Property Name="RiseOnClick" Value="False" />
+        </Window>
+		<Window Type="TLBB_Frame_Campaign" Name="HuoDongRiCheng_Background_neirong" >
+        <Property Name="UnifiedPosition" Value="{{0.0,2.0},{0.0,38.0}" />
+        <Property Name="UnifiedSize" Value="{{0.0,175.0},{0.0,256.0}" />
+        <Window Type="TLBB_SimpleText" Name="HuoDongRiCheng_Text7" >
+          <Property Name="UnifiedPosition" Value="{{0.000000,21.000000},{0.000000,21.000000}" />
+          <Property Name="UnifiedSize" Value="{{0.000000,45.000000},{0.000000,20.000000}" />
+          <Property Name="RiseOnClick" Value="False" />
+          <Property Name="Text" Value="#{INTERFACE_XML_1005}" />
+          <Property Name="TextColor" Value="FFFFF263" />
+        </Window>
+        <Window Type="TLBB_SimpleText" Name="HuoDongRiCheng_Text7_1" >
+          <Property Name="UnifiedPosition" Value="{{0.000000,57.000000},{0.000000,20.000000}" />
+          <Property Name="UnifiedSize" Value="{{0.000000,100.000000},{0.000000,20.000000}" />
+          <Property Name="RiseOnClick" Value="False" />
+          <Property Name="Text" Value="" />
+          <Property Name="TextColor" Value="FFFFFF00" />
+        </Window>
+        <Window Type="TLBB_SimpleText" Name="HuoDongRiCheng_Text8" >
+          <Property Name="UnifiedPosition" Value="{{0.000000,20.000000},{0.000000,46.000000}" />
+          <Property Name="UnifiedSize" Value="{{0.000000,45.000000},{0.000000,20.000000}" />
+          <Property Name="RiseOnClick" Value="False" />
+          <Property Name="Text" Value="#{INTERFACE_XML_1006}" />
+          <Property Name="TextColor" Value="FFFFF263" />
+        </Window>
+        <Window Type="TLBB_SimpleText" Name="HuoDongRiCheng_Text8_1" >
+          <Property Name="UnifiedPosition" Value="{{0.000000,57.000000},{0.000000,46.000000}" />
+          <Property Name="UnifiedSize" Value="{{0.000000,100.000000},{0.000000,20.000000}" />
+          <Property Name="RiseOnClick" Value="False" />
+          <Property Name="Text" Value="" />
+          <Property Name="TextColor" Value="FFFFFF00" />
+        </Window>
+        <Window Type="TLBB_SimpleText" Name="HuoDongRiCheng_Text9" >
+          <Property Name="UnifiedPosition" Value="{{0.000000,20.000000},{0.000000,70.000000}" />
+          <Property Name="UnifiedSize" Value="{{0.000000,45.000000},{0.000000,20.000000}" />
+          <Property Name="RiseOnClick" Value="False" />
+          <Property Name="Text" Value="#{INTERFACE_XML_1007}" />
+          <Property Name="TextColor" Value="FFFFF263" />
+        </Window>
+        <Window Type="TLBB_SimpleText" Name="HuoDongRiCheng_Text9_1" >
+          <Property Name="UnifiedPosition" Value="{{0.000000,57.000000},{0.000000,72.000000}" />
+          <Property Name="UnifiedSize" Value="{{0.000000,100.000000},{0.000000,50.000000}" />
+          <Property Name="RiseOnClick" Value="False" />
+          <Property Name="Text" Value="" />
+          <Property Name="TextColor" Value="FFFFFF00" />
+          <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+          <Property Name="VertFormatting" Value="TopAligned" />
+        </Window>
+        <Window Type="TLBB_HLine" Name="HuoDongRiCheng_Line1" >
+          <Property Name="UnifiedPosition" Value="{{0.000000,8.000000},{0.000000,129.000000}" />
+          <Property Name="UnifiedSize" Value="{{1.000000,-15.000000},{0.000000,4.000000}" />
+          <Property Name="RiseOnClick" Value="False" />
+        </Window>
+        <Window Type="TLBB_SimpleText" Name="HuoDongRiCheng_Text10" >
+          <Property Name="UnifiedPosition" Value="{{0.000000,21.000000},{0.000000,135.000000}" />
+          <Property Name="UnifiedSize" Value="{{0.000000,45.000000},{0.000000,20.000000}" />
+          <Property Name="RiseOnClick" Value="False" />
+          <Property Name="Text" Value="#{INTERFACE_XML_1005}" />
+          <Property Name="TextColor" Value="FFFFF263" />
+        </Window>
+
+        <Window Type="TLBB_SimpleText" Name="HuoDongRiCheng_Text10_1" >
+          <Property Name="UnifiedPosition" Value="{{0.000000,57.000000},{0.000000,134.000000}" />
+          <Property Name="UnifiedSize" Value="{{0.000000,100.000000},{0.000000,20.000000}" />
+          <Property Name="RiseOnClick" Value="False" />
+          <Property Name="Text" Value="" />
+          <Property Name="TextColor" Value="FFFFFF00" />
+        </Window>
+
+        <Window Type="TLBB_SimpleText" Name="HuoDongRiCheng_Text11" >
+          <Property Name="UnifiedPosition" Value="{{0.000000,20.000000},{0.000000,163.000000}" />
+          <Property Name="UnifiedSize" Value="{{0.000000,45.000000},{0.000000,20.000000}" />
+          <Property Name="RiseOnClick" Value="False" />
+          <Property Name="Text" Value="#{INTERFACE_XML_1006}" />
+          <Property Name="TextColor" Value="FFFFF263" />
+        </Window>
+        <Window Type="TLBB_SimpleText" Name="HuoDongRiCheng_Text11_1" >
+          <Property Name="UnifiedPosition" Value="{{0.000000,57.000000},{0.000000,163.000000}" />
+          <Property Name="UnifiedSize" Value="{{0.000000,100.000000},{0.000000,20.000000}" />
+          <Property Name="RiseOnClick" Value="False" />
+          <Property Name="Text" Value="" />
+          <Property Name="TextColor" Value="FFFFFF00" />
+        </Window>
+        <Window Type="TLBB_SimpleText" Name="HuoDongRiCheng_Text12" >
+          <Property Name="UnifiedPosition" Value="{{0.000000,20.000000},{0.000000,192.000000}" />
+          <Property Name="UnifiedSize" Value="{{0.000000,45.000000},{0.000000,20.000000}" />
+          <Property Name="RiseOnClick" Value="False" />
+          <Property Name="Text" Value="#{INTERFACE_XML_1007}" />
+          <Property Name="TextColor" Value="FFFFF263" />
+        </Window>
+        <Window Type="TLBB_SimpleText" Name="HuoDongRiCheng_Text12_1" >
+          <Property Name="UnifiedPosition" Value="{{0.000000,57.000000},{0.000000,194.000000}" />
+          <Property Name="UnifiedSize" Value="{{0.000000,100.000000},{0.000000,50.000000}" />
+          <Property Name="RiseOnClick" Value="False" />
+          <Property Name="Text" Value="" />
+          <Property Name="TextColor" Value="FFFFFF00" />
+          <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+          <Property Name="VertFormatting" Value="TopAligned" />
+        </Window>
+      </Window>
+      </Window>
+
+	   <Window Type="TLBB_ButtonCampaign" Name="HuoDongRiCheng_next" >
+		<Property Name="AbsolutePosition" Value="x:630.000000 y:458.000000" />
+		<Property Name="AbsoluteSize" Value="w:117.000000 h:57.000000" />
+      <Property Name="Text" Value="#{INTERFACE_XML_1009}" />
+	  <Event Name="Clicked" Function="HuoDongRiCheng_next_click();" />
+    </Window>
+
+    <Window Type="DefaultWindow" Name="HuoDongRiCheng_Info" >
+		<Property Name="UnifiedPosition" Value="{{0.000000,210.000000},{0.000000,553.000000}" />
+		<Property Name="UnifiedSize" Value="{{0.000000,430.000000},{0.000000,25.000000}" />
+
+	  <Window Type="TLBB_SimpleText" Name="HuoDongRiCheng_Text1" >
+        <Property Name="UnifiedPosition" Value="{{0.000000,10.000000},{0.000000,0.000000}" />
+        <Property Name="UnifiedSize" Value="{{0.000000,50.000000},{0.000000,25.000000}" />
+        <Property Name="RiseOnClick" Value="False" />
+        <Property Name="Text" Value="#{INTERFACE_XML_1008}" />
+        <Property Name="Font" Value="YouYuan11.25" />
+		<Property Name="HorzFormatting" Value="HorzCentred" />
+		<Property Name="VertFormatting" Value="VertCentred" />
+      </Window>
+      <Window Type="TLBB_SimpleText" Name="HuoDongRiCheng_Text2" >
+        <Property Name="UnifiedPosition" Value="{{0.000000,70.000000},{0.000000,0.000000}" />
+        <Property Name="UnifiedSize" Value="{{0.000000,100.000000},{0.000000,25.000000}" />
+        <Property Name="RiseOnClick" Value="False" />
+        <Property Name="Text" Value="" />
+        <Property Name="Font" Value="YouYuan11.25" />
+		<Property Name="HorzFormatting" Value="HorzCentred" />
+		<Property Name="VertFormatting" Value="VertCentred" />
+      </Window>
+      <Window Type="TLBB_SimpleText" Name="HuoDongRiCheng_Text3" >
+        <Property Name="UnifiedPosition" Value="{{0.000000,180.000000},{0.000000,0.000000}" />
+        <Property Name="UnifiedSize" Value="{{0.000000,145.000000},{0.000000,25.000000}" />
+        <Property Name="RiseOnClick" Value="False" />
+        <Property Name="Text" Value="" />
+        <Property Name="Font" Value="YouYuan11.25" />
+		<Property Name="HorzFormatting" Value="HorzCentred" />
+		<Property Name="VertFormatting" Value="VertCentred" />
+      </Window>
+      <Window Type="TLBB_SimpleText" Name="HuoDongRiCheng_Text4" >
+        <Property Name="UnifiedPosition" Value="{{0.000000,310.000000},{0.000000,0.000000}" />
+        <Property Name="UnifiedSize" Value="{{0.000000,100.000000},{0.000000,25.000000}" />
+        <Property Name="RiseOnClick" Value="False" />
+        <Property Name="Text" Value="" />
+        <Property Name="Font" Value="YouYuan11.25" />
+		<Property Name="HorzFormatting" Value="HorzCentred" />
+		<Property Name="VertFormatting" Value="VertCentred" />
+      </Window>
+    </Window>
+
+  </Window>
+</GUILayout>

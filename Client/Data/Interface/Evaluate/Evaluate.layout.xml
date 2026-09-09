@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+<GUILayout>
+	<Window Type="TLBB_MainFrame0" Name="Evaluate_Frame">
+		<Property Name="UnifiedPosition" Value="{{0.5,-155.000000},{0.5,-180.0}" />
+		<Property Name="AbsoluteSize" Value="w:310 h:180" />
+		<Window Type="TLBB_DragTitle" Name="Evaluate_DragTitle">
+			<Property Name="AbsolutePosition" Value="x:25.000000 y:12.000000" />
+			<Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
+			<Property Name="Font" Value="YouYuan11.25" />
+			<Property Name="HorzFormatting" Value="HorzCentred" />
+			<Property Name="VertFormatting" Value="VertCentred" />
+			<Property Name="Text" Value="" />
+			<Property Name="DragTarget" Value="Evaluate_Frame" />
+		</Window>
+		<Window Type="TLBB_ButtonClose" Name="Evaluate_Close">
+			<Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+			<Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+			<Event Name="Clicked" Function="this:Hide();" />
+		</Window>
+		<Window Type="TLBB_ButtonHelp" Name="Evaluate_Help">
+			<Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
+			<Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+      <Event Name="Clicked" Function="Helper:GotoHelper(&quot;*Evaluate&quot;);" />
+		</Window>
+		<Window Type="DefaultWindow" Name="Evaluate_Background_Frame">
+			<Property Name="AbsolutePosition" Value="x:7.000000 y:38.000000" />
+			<Property Name="UnifiedSize" Value="{{1.000000,-14.000000},{1.000000,-57.000000}" />
+			<Window Type="TLBB_SimpleText" Name="Evaluate_WarningText">
+				<Property Name="UnifiedPosition" Value="{{0.000000,2.000000},{0.000000,2.000000}" />
+				<Property Name="UnifiedSize" Value="{{1.000000,-4.000000},{0.000000,54.000000}" />
+				<Property Name="Text" Value="" />
+				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+				<Property Name="RiseOnClick" Value="False" />
+			</Window>
+			<Window Type="TLBB_ButtonCommon" Name="Evaluate_Answer1">
+				<Property Name="UnifiedPosition" Value="{{0.0,0.000000},{1.000000,-66.000000}" />
+				<Property Name="UnifiedSize" Value="{{1.0,0.000000},{0.000000,20.000000}" />
+				<Property Name="Text" Value="" />
+				<Event Name="Clicked" Function="Evaluate_Answer1_OnClicked();" />
+			</Window>
+			<Window Type="TLBB_ButtonCommon" Name="Evaluate_Answer2">
+				<Property Name="UnifiedPosition" Value="{{0.0,0.000000},{1.000000,-44.000000}" />
+				<Property Name="UnifiedSize" Value="{{1.0,0.000000},{0.000000,20.000000}" />
+				<Property Name="Text" Value="" />
+				<Event Name="Clicked" Function="Evaluate_Answer2_OnClicked();" />
+			</Window>
+			<Window Type="TLBB_ButtonCommon" Name="Evaluate_Answer3">
+				<Property Name="UnifiedPosition" Value="{{0.0,0.000000},{1.000000,-22.000000}" />
+				<Property Name="UnifiedSize" Value="{{1.0,0.000000},{0.000000,20.000000}" />
+				<Property Name="Text" Value="" />
+				<Event Name="Clicked" Function="Evaluate_Answer3_OnClicked();" />
+			</Window>
+
+		</Window>
+	</Window>
+</GUILayout>

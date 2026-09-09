@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<Imageset Name="AccountLogin5" Imagefile="SelectServer/jpg_AccountLogin5.dds" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true">
+	<Image Name="AccountLogin1_6" XPos="0" YPos="0" Width="32" Height="256" />
+	<Image Name="AccountLogin1_7" XPos="33" YPos="0" Width="32" Height="256" />
+	<Image Name="AccountLogin1_8" XPos="66" YPos="0" Width="32" Height="88" />
+</Imageset>

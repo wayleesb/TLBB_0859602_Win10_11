@@ -32,8 +32,8 @@ function x805019_OnDefaultEvent( sceneId, selfId,targetId )
 		AddText(sceneId,strText);
 		AddNumText( sceneId, x805019_g_scriptId, "厢房介绍", 8, 1 )
 --关闭珍兽舍利子及帮助，添加寄练珍兽， by zhangqiang 2009.6.19
---		AddNumText( sceneId, x805019_g_scriptId, "炼制珍兽舍利子", 6, 2 )
---		AddNumText( sceneId, x805019_g_scriptId, "关于珍兽快速升级", 11, 3 )
+		AddNumText( sceneId, x805019_g_scriptId, "炼制珍兽舍利子", 6, 2 )
+		AddNumText( sceneId, x805019_g_scriptId, "关于珍兽快速升级", 11, 3 )
 		AddNumText( sceneId, x805019_g_scriptId, "寄练珍兽", 6, 4 )
 
 	EndEvent(sceneId)
@@ -46,20 +46,20 @@ end
 function x805019_OnEventRequest( sceneId, selfId, targetId, eventId )
 	
 	if GetNumText() == 3 then
---		BeginEvent(sceneId)
---			AddText( sceneId, "#{ZSKSSJ_081113_27}" )	
---		EndEvent(sceneId)
---		DispatchEventList( sceneId, selfId, targetId )
+		BeginEvent(sceneId)
+			AddText( sceneId, "#{ZSKSSJ_081113_27}" )	
+		EndEvent(sceneId)
+		DispatchEventList( sceneId, selfId, targetId )
 	elseif GetNumText() == 1 then
 		BeginEvent(sceneId)
 			AddText( sceneId, "#{City_Intro_XiangFang}" )	
 		EndEvent(sceneId)
 		DispatchEventList( sceneId, selfId, targetId )
 	elseif (GetNumText() == 2) then
---		BeginUICommand(sceneId);
---			UICommand_AddInt(sceneId, targetId);
---		EndUICommand(sceneId);
---		DispatchUICommand(sceneId, selfId, 8050191);
+		BeginUICommand(sceneId);
+			UICommand_AddInt(sceneId, targetId);
+		EndUICommand(sceneId);
+		DispatchUICommand(sceneId, selfId, 8050191);
 	elseif GetNumText() == 4 then 
 		BeginEvent(sceneId)
 			AddText( sceneId, "这个功能即将开放" )	

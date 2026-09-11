@@ -24,7 +24,6 @@ x888902_g_shoplist[15]	= {146, 135, 152}					--我要学习新技能
 -- op是请求类别，比如1代表元宝相关的随身操作……
 --**********************************
 function x888902_OpenYuanbaoShop( sceneId, selfId, targetId , shopA ,shopB )
-
 	local bCheck = x888902_YuanbaoShopCheckOp(sceneId,selfId);
 	
 	if bCheck > 0 then

@@ -39,7 +39,8 @@ local szName = GetName( sceneId, nObjID );
       return 0;                                            
     end 
     
-    if LuaFnIsFriend(sceneId, nObjID, selfId) ~= 1 then
+    if LuaFnIsFriend(sceneId, nObjID, selfId) ~= 1 or
+       LuaFnIsFriend(sceneId, selfId, nObjID) ~= 1 then
 			LuaFnSendOResultToPlayer(sceneId, selfId, OR_INVALID_TARGET)
 			return 0;
 	end
@@ -65,10 +66,16 @@ end
 
 function x006673_DoUseItemReal( sceneId, selfId, param1, param2 )
 
+	local targetId = param1;
+	-- 确认送花时重新检查双向好友，关系失效不能扣除道具。
+	if LuaFnIsFriend(sceneId, targetId, selfId) ~= 1 or
+	   LuaFnIsFriend(sceneId, selfId, targetId) ~= 1 then
+		LuaFnSendOResultToPlayer(sceneId, selfId, OR_INVALID_TARGET)
+		return 0;
+	end
+
 	local szNameTarget = GetName( sceneId, param1 );
 	local szNameSelf = GetName( sceneId, selfId );
-
-	local targetId = param1;
 	if LuaFnGetPropertyBagSpace( sceneId, param1 ) < 1 then
 		x006673_NotifyTip( sceneId, selfId, "对方背包已满，无法接受送花!" )
 		return 0

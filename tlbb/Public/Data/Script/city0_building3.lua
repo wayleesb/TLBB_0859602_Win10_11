@@ -33,15 +33,15 @@ function x805010_OnEventRequest( sceneId, selfId, targetId, eventId )
 	end
 	
 	if GetNumText() == 1 then
-		CityBuildingChange(sceneId, selfId, x805010_g_BuildingID4, 0)
+		--CityBuildingChange(sceneId, selfId, x805010_g_BuildingID4, 0)
 	elseif GetNumText() == 2 then
-		CityBuildingChange(sceneId, selfId, x805010_g_BuildingID4, 1)
+		--CityBuildingChange(sceneId, selfId, x805010_g_BuildingID4, 1)
 	elseif GetNumText() == 3 then
-		CityBuildingChange(sceneId, selfId, x805010_g_BuildingID4, 2)
+		--CityBuildingChange(sceneId, selfId, x805010_g_BuildingID4, 2)
 	elseif GetNumText() == 4 then
-		CityBuildingChange(sceneId, selfId, x805010_g_BuildingID4, 3)
+		--CityBuildingChange(sceneId, selfId, x805010_g_BuildingID4, 3)
 	elseif GetNumText() == 5 then
-		CityBuildingChange(sceneId, selfId, x805010_g_BuildingID4, 4)
+		--CityBuildingChange(sceneId, selfId, x805010_g_BuildingID4, 4)
 	elseif GetNumText() == 6 then
 		BeginUICommand(sceneId)
 			UICommand_AddInt(sceneId,targetId) --调用城市商店界面

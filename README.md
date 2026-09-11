@@ -24,19 +24,11 @@ git clone https://github.com/wayleesb/TLBB_0859602_Win10_11.git
 cd TLBB_0859602_Win10_11
 ```
 
-MariaDB 安装包 `TLBB_Env/mariadb-10.11.18-winx64.zip` 已包含在仓库中。
-从 [Release 页面](https://github.com/wayleesb/TLBB_0859602_Win10_11/releases/tag/initial-import) 下载启动程序：
-
-- 将 `TLBB_Launcher.exe` 放到仓库根目录，并重命名为 `雪舞天龙启动工具.exe`。
-
-已安装 GitHub CLI 的用户，也可以在仓库根目录执行：
-
-```powershell
-gh release download initial-import --repo wayleesb/TLBB_0859602_Win10_11 --pattern "*.exe" --dir .
-Rename-Item -LiteralPath TLBB_Launcher.exe -NewName '雪舞天龙启动工具.exe'
-```
-
-无需 Git LFS。GitHub 自动生成的源码压缩包不包含启动程序，需要单独下载。
+也可以通过 GitHub 的 **Code > Download ZIP** 下载当前版本。
+仓库已包含 `雪舞天龙启动工具.exe`、完整的 MariaDB 解压目录
+`TLBB_Env/mariadb-10.11.18-winx64/` 和 ODBC 安装包，无需 Git LFS 或另外下载 Release 附件。
+启动工具优先校验并使用 MariaDB 目录，也兼容仅带原 ZIP 的旧整合包。
+EXE 使用 .NET 内置单文件压缩，无需手动解压或预装 .NET。
 仓库不跟踪运行日志、本地备份及 IDA 分析文件。
 
 ### 本地打包
@@ -45,7 +37,7 @@ Rename-Item -LiteralPath TLBB_Launcher.exe -NewName '雪舞天龙启动工具.ex
 脚本会在仓库目录旁的 `Packages/` 文件夹中生成带时间戳的 `.7z` 压缩包，并在完成后校验完整性。
 
 打包时排除 Git 元数据目录和常见凭据、私钥文件名对应的文件。
-本地客户端文件、已下载的 Release 附件、日志和游戏 / 数据库配置会保留在压缩包中；
+本地客户端文件、启动工具、MariaDB 目录、日志和游戏 / 数据库配置会保留在压缩包中；
 脚本不使用 `.gitignore` 作为打包排除列表，也不会删除本地文件。
 
 <a id="english"></a>
@@ -70,21 +62,13 @@ git clone https://github.com/wayleesb/TLBB_0859602_Win10_11.git
 cd TLBB_0859602_Win10_11
 ```
 
-The MariaDB package `TLBB_Env/mariadb-10.11.18-winx64.zip` is included in the repository.
-Download the launcher from the [release page](https://github.com/wayleesb/TLBB_0859602_Win10_11/releases/tag/initial-import):
-
-- Place `TLBB_Launcher.exe` in the repository root and rename it to `雪舞天龙启动工具.exe`.
-
-With GitHub CLI installed, you can also run these commands from the repository root:
-
-```powershell
-gh release download initial-import --repo wayleesb/TLBB_0859602_Win10_11 --pattern "*.exe" --dir .
-Rename-Item -LiteralPath TLBB_Launcher.exe -NewName '雪舞天龙启动工具.exe'
-```
-
-Git LFS is not required. GitHub's automatically generated source archives do not include
-the launcher; download it separately. Runtime logs, local backups, and IDA
-analysis files are not tracked in the repository.
+You can also download the current version using **Code > Download ZIP** on GitHub.
+The repository includes `雪舞天龙启动工具.exe`, the complete expanded MariaDB directory
+`TLBB_Env/mariadb-10.11.18-winx64/`, and the ODBC installer. No Git LFS or separate
+release assets are required. The launcher verifies and uses the MariaDB directory
+first, while remaining compatible with older packages containing only the original ZIP.
+The EXE uses .NET single-file compression; no manual extraction or .NET installation
+is needed. Runtime logs, local backups, and IDA analysis files are not tracked in the repository.
 
 ### Package Locally
 
@@ -93,7 +77,7 @@ The script creates a timestamped `.7z` archive in `Packages/` next to the reposi
 directory and verifies archive integrity before reporting success.
 
 Git metadata directories and files matching common credential/private-key filenames
-are excluded. Local client files, downloaded release assets, logs, and game/database
+are excluded. Local client files, the launcher, the MariaDB directory, logs, and game/database
 settings are included in the archive. The script does not use `.gitignore` as its
 packaging exclusion list and does not delete local files.
 
@@ -119,21 +103,13 @@ git clone https://github.com/wayleesb/TLBB_0859602_Win10_11.git
 cd TLBB_0859602_Win10_11
 ```
 
-Gói MariaDB `TLBB_Env/mariadb-10.11.18-winx64.zip` đã có sẵn trong kho mã.
-Tải trình khởi chạy từ [trang phát hành](https://github.com/wayleesb/TLBB_0859602_Win10_11/releases/tag/initial-import):
-
-- Đặt `TLBB_Launcher.exe` vào thư mục gốc của kho mã và đổi tên thành `雪舞天龙启动工具.exe`.
-
-Nếu đã cài GitHub CLI, bạn cũng có thể chạy các lệnh sau tại thư mục gốc của kho mã:
-
-```powershell
-gh release download initial-import --repo wayleesb/TLBB_0859602_Win10_11 --pattern "*.exe" --dir .
-Rename-Item -LiteralPath TLBB_Launcher.exe -NewName '雪舞天龙启动工具.exe'
-```
-
-Không cần Git LFS. Các gói mã nguồn do GitHub tự động tạo không bao gồm trình khởi chạy;
-bạn cần tải riêng. Nhật ký hoạt động, bản sao lưu cục bộ
-và các tệp phân tích IDA không được theo dõi trong kho mã.
+Bạn cũng có thể tải phiên bản hiện tại bằng **Code > Download ZIP** trên GitHub.
+Kho mã đã bao gồm `雪舞天龙启动工具.exe`, toàn bộ thư mục MariaDB đã giải nén
+`TLBB_Env/mariadb-10.11.18-winx64/` và bộ cài ODBC. Không cần Git LFS hay tải riêng
+tệp đính kèm bản phát hành. Trình khởi chạy ưu tiên kiểm tra và sử dụng thư mục MariaDB,
+đồng thời vẫn tương thích với các gói cũ chỉ có tệp ZIP gốc.
+Tệp EXE sử dụng tính năng nén tệp đơn của .NET; không cần giải nén thủ công hoặc cài đặt .NET.
+Nhật ký hoạt động, bản sao lưu cục bộ và các tệp phân tích IDA không được theo dõi trong kho mã.
 
 ### Đóng gói trên máy
 
@@ -142,6 +118,6 @@ Tập lệnh tạo tệp nén `.7z` có dấu thời gian trong thư mục `Pack
 với thư mục kho mã và kiểm tra tính toàn vẹn trước khi thông báo thành công.
 
 Các thư mục siêu dữ liệu Git và các tệp có tên thường dùng để lưu thông tin xác thực
-hoặc khóa riêng sẽ bị loại khỏi gói nén. Các tệp client cục bộ, tệp đính kèm bản phát hành
-đã tải xuống, nhật ký và cấu hình trò chơi / cơ sở dữ liệu vẫn được đưa vào gói nén.
+hoặc khóa riêng sẽ bị loại khỏi gói nén. Các tệp client cục bộ, trình khởi chạy, thư mục MariaDB,
+nhật ký và cấu hình trò chơi / cơ sở dữ liệu vẫn được đưa vào gói nén.
 Tập lệnh không dùng `.gitignore` làm danh sách loại trừ khi đóng gói và không xóa tệp cục bộ.

@@ -22,5 +22,5 @@
 Thumbs.db
 Desktop.ini
 
-# The launcher is distributed separately because it exceeds GitHub's file limit.
-/*.exe
+# The repository ships the expanded MariaDB directory.
+/TLBB_Env/mariadb-10.11.18-winx64.zip

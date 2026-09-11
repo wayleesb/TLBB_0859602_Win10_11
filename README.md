@@ -33,3 +33,13 @@ Rename-Item -LiteralPath TLBB_Launcher.exe -NewName '雪舞天龙启动工具.ex
 
 Git LFS is not required. The source archive does not include release assets.
 Runtime logs, local backups, and IDA analysis files are excluded.
+
+## Package Locally
+
+Install 7-Zip and double-click `一键打包客户端.bat` in the repository root.
+The script creates a timestamped `.7z` archive in `Packages/` next to the
+repository directory and verifies archive integrity before reporting success.
+
+Git metadata and common credential/private-key filenames are excluded.
+Local client files, release assets, logs, and game/database settings are preserved;
+the script does not use `.gitignore` as its packaging exclusion list.

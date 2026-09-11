@@ -22,6 +22,5 @@
 Thumbs.db
 Desktop.ini
 
-# Distributed as GitHub Release assets.
+# The launcher is distributed separately because it exceeds GitHub's file limit.
 /*.exe
-/TLBB_Env/*.zip

@@ -24,20 +24,19 @@ git clone https://github.com/wayleesb/TLBB_0859602_Win10_11.git
 cd TLBB_0859602_Win10_11
 ```
 
-从 [Release 页面](https://github.com/wayleesb/TLBB_0859602_Win10_11/releases/tag/initial-import) 下载两个大文件：
+MariaDB 安装包 `TLBB_Env/mariadb-10.11.18-winx64.zip` 已包含在仓库中。
+从 [Release 页面](https://github.com/wayleesb/TLBB_0859602_Win10_11/releases/tag/initial-import) 下载启动程序：
 
 - 将 `TLBB_Launcher.exe` 放到仓库根目录，并重命名为 `雪舞天龙启动工具.exe`。
-- 将 `mariadb-10.11.18-winx64.zip` 放到 `TLBB_Env/` 目录。
 
 已安装 GitHub CLI 的用户，也可以在仓库根目录执行：
 
 ```powershell
 gh release download initial-import --repo wayleesb/TLBB_0859602_Win10_11 --pattern "*.exe" --dir .
-gh release download initial-import --repo wayleesb/TLBB_0859602_Win10_11 --pattern "*.zip" --dir TLBB_Env
 Rename-Item -LiteralPath TLBB_Launcher.exe -NewName '雪舞天龙启动工具.exe'
 ```
 
-无需 Git LFS。GitHub 自动生成的源码压缩包不包含上述 Release 附件，需要单独下载。
+无需 Git LFS。GitHub 自动生成的源码压缩包不包含启动程序，需要单独下载。
 仓库不跟踪运行日志、本地备份及 IDA 分析文件。
 
 ### 本地打包
@@ -71,21 +70,20 @@ git clone https://github.com/wayleesb/TLBB_0859602_Win10_11.git
 cd TLBB_0859602_Win10_11
 ```
 
-Download both large files from the [release page](https://github.com/wayleesb/TLBB_0859602_Win10_11/releases/tag/initial-import):
+The MariaDB package `TLBB_Env/mariadb-10.11.18-winx64.zip` is included in the repository.
+Download the launcher from the [release page](https://github.com/wayleesb/TLBB_0859602_Win10_11/releases/tag/initial-import):
 
 - Place `TLBB_Launcher.exe` in the repository root and rename it to `雪舞天龙启动工具.exe`.
-- Place `mariadb-10.11.18-winx64.zip` in `TLBB_Env/`.
 
 With GitHub CLI installed, you can also run these commands from the repository root:
 
 ```powershell
 gh release download initial-import --repo wayleesb/TLBB_0859602_Win10_11 --pattern "*.exe" --dir .
-gh release download initial-import --repo wayleesb/TLBB_0859602_Win10_11 --pattern "*.zip" --dir TLBB_Env
 Rename-Item -LiteralPath TLBB_Launcher.exe -NewName '雪舞天龙启动工具.exe'
 ```
 
 Git LFS is not required. GitHub's automatically generated source archives do not include
-these release assets; download them separately. Runtime logs, local backups, and IDA
+the launcher; download it separately. Runtime logs, local backups, and IDA
 analysis files are not tracked in the repository.
 
 ### Package Locally
@@ -121,21 +119,20 @@ git clone https://github.com/wayleesb/TLBB_0859602_Win10_11.git
 cd TLBB_0859602_Win10_11
 ```
 
-Tải hai tệp lớn từ [trang phát hành](https://github.com/wayleesb/TLBB_0859602_Win10_11/releases/tag/initial-import):
+Gói MariaDB `TLBB_Env/mariadb-10.11.18-winx64.zip` đã có sẵn trong kho mã.
+Tải trình khởi chạy từ [trang phát hành](https://github.com/wayleesb/TLBB_0859602_Win10_11/releases/tag/initial-import):
 
 - Đặt `TLBB_Launcher.exe` vào thư mục gốc của kho mã và đổi tên thành `雪舞天龙启动工具.exe`.
-- Đặt `mariadb-10.11.18-winx64.zip` vào thư mục `TLBB_Env/`.
 
 Nếu đã cài GitHub CLI, bạn cũng có thể chạy các lệnh sau tại thư mục gốc của kho mã:
 
 ```powershell
 gh release download initial-import --repo wayleesb/TLBB_0859602_Win10_11 --pattern "*.exe" --dir .
-gh release download initial-import --repo wayleesb/TLBB_0859602_Win10_11 --pattern "*.zip" --dir TLBB_Env
 Rename-Item -LiteralPath TLBB_Launcher.exe -NewName '雪舞天龙启动工具.exe'
 ```
 
-Không cần Git LFS. Các gói mã nguồn do GitHub tự động tạo không bao gồm những tệp
-đính kèm bản phát hành này; bạn cần tải riêng. Nhật ký hoạt động, bản sao lưu cục bộ
+Không cần Git LFS. Các gói mã nguồn do GitHub tự động tạo không bao gồm trình khởi chạy;
+bạn cần tải riêng. Nhật ký hoạt động, bản sao lưu cục bộ
 và các tệp phân tích IDA không được theo dõi trong kho mã.
 
 ### Đóng gói trên máy

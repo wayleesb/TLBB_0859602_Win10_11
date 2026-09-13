@@ -1,5 +1,5 @@
 INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT
-INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT
+Index	允许摆放的场景1	场景2	场景3	场景4	场景5	场景6	场景7	场景8	场景9	场景10	场景11	场景12	场景13	场景14	场景15	场景16	场景17	场景18	场景19	场景20	场景21	场景22	场景23	场景24	场景25	场景26	场景27	场景28	场景29	场景30	场景31	场景32	是否允许在副本打开	是否所有场景都能用
 1	0	1	2	186	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	71	72	0	0
 2	0	1	2	186	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	71	72	0	0
 3	0	1	2	186	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	71	72	0	0

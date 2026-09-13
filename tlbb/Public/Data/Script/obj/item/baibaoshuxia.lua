@@ -3,8 +3,6 @@
 --Author:  houzhifang  2008-11-06
 
 x332205_g_scriptId = 332205
-x332205_g_strGongGaoInfo = "#H ´‘ª°∞ È÷–◊‘”–ª∆ΩŒ›°±£¨#{_INFOUSR%s}#H«Û È»Ùø £¨ΩÒ»’≈º»ªº‰‘⁄#G#{_ITEM30501171}#H÷–∑¢œ÷¡À“ª±æ#{_INFOMSG%s}#H°£"
---x332205_g_strGongGaoInfo = "#{_INFOUSR%s}#H‘⁄ π”√∞Ÿ±¶ Èœª∫Û£¨ªÒµ√¡À“ª±æ#{_INFOMSG%s}#H’‰ ﬁººƒ‹ È°£"
 x332205_g_giftitem_index = 30501318
 
 --**********************************
@@ -39,7 +37,7 @@ end
 --**********************************
 function x332205_OnConditionCheck( sceneId, selfId )
 
-	--–£—È π”√µƒŒÔ∆	
+	--–£—È π”√µƒŒÔ?
 	if(1~=LuaFnVerifyUsedItem(sceneId, selfId)) then
 		return 0
 	end

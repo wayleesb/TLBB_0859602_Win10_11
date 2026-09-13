@@ -1,5 +1,5 @@
 INT	INT	STRING	STRING	STRING	INT	FLOAT	INT	INT	INT	FLOAT	INT	FLOAT	INT	FLOAT	INT	FLOAT	INT	FLOAT	INT	FLOAT	INT	FLOAT	INT	FLOAT	INT	FLOAT	INT	FLOAT
-INT	INT	STRING	STRING	STRING	INT	FLOAT	INT	INT	INT	FLOAT	INT	FLOAT	INT	FLOAT	INT	FLOAT	INT	FLOAT	INT	FLOAT	INT	FLOAT	INT	FLOAT	INT	FLOAT	INT	FLOAT
+心法ID	门派ID	心法名称$1$	心法描述$1$	心法图标	心法影响属性逻辑	心法修正率(废)	是否直接学会	升级人物等级限制	心法等级段1	心法修正率1	心法等级段2	心法修正率2	心法等级段3	心法修正率3	心法等级段4	心法修正率4	心法等级段5	心法修正率5	心法等级段6	心法修正率6	心法等级段7	心法修正率7	心法等级段8	心法修正率8	心法等级段9	心法修正率9	心法等级段10	心法修正率10
 1	0	金刚经	全名金刚般若波罗蜜经，记载佛陀舍卫国说法之故事，其中蕴有金刚降魔之力。修习之后可以提升少林弟子的命中率。#r#c54FF00学习等级10	XinFa1_1	6	0.2	1	10	45	0.2	60	4	75	6	90	8	105	10	120	12	135	14	150	16	175	18	200	20
 2	0	法华经	全名妙法莲华经，记载诸佛如来秘密之藏，其玄妙莫可名状。修习之后可以提升少林弟子的闪避率。#r#c54FF00学习等级20	XinFa1_2	7	0.07	1	20	45	0.07	60	1.05	75	1.75	90	2.45	105	3.15	120	3.85	135	4.55	150	5.25	175	5.95	200	6.65
 3	0	大光明经	天竺镇国三经之一，记载西天四方四佛悲天悯人的深奥佛法。修习之后可以提升少林弟子的生命力。#r#c54FF00学习等级20	XinFa1_3	0	6	1	20	45	6	60	30	75	48	90	60	105	72	120	84	135	96	150	108	175	120	200	132

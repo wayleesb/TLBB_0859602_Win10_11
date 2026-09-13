@@ -1,5 +1,5 @@
 INT	STRING	STRING	INT	INT	INT	INT	INT	STRING	INT	STRING	INT	STRING	INT	INT	INT	INT	STRING	INT	INT	FLOAT	FLOAT	INT	INT	INT	INT	INT	INT	STRING	INT	STRING	INT	STRING	INT	STRING	INT	STRING	INT	STRING	INT	STRING	INT	STRING	INT	STRING	INT	STRING	INT	STRING	INT	STRING	INT	STRING	INT	STRING	INT	STRING	INT	STRING	INT	STRING
-INT	STRING	STRING	INT	INT	INT	INT	INT	STRING	INT	STRING	INT	STRING	INT	INT	INT	INT	STRING	INT	INT	FLOAT	FLOAT	INT	INT	INT	INT	INT	INT	STRING	INT	STRING	INT	STRING	INT	STRING	INT	STRING	INT	STRING	INT	STRING	INT	STRING	INT	STRING	INT	STRING	INT	STRING	INT	STRING	INT	STRING	INT	STRING	INT	STRING	INT	STRING	INT	STRING
+ID	名称$1$	ToolTips$1$	类别	逻辑ID	隐形级别	陷阱专用标记	可激活次数	生存期持续特效	生存期持续音效	激发特效	激发音效	死亡特效	死亡音效	预留	预留	预留	 子弹ID	持续时间	激活或触发时间间隔	触发半径	影响半径	影响个体数目	预留	预留	预留	预留	预留	参数说明	参数值	参数说明	参数值	参数说明	参数值	参数说明	参数值	参数说明	参数值	参数说明	参数值	参数说明	参数值	参数说明	参数值	参数说明	参数值	参数说明	参数值	参数说明	参数值	参数说明	参数值	参数说明	参数值	参数说明	参数值	参数说明	参数值	参数说明	参数值	详细说明(内部使用)
 1	漫天花雨	漫天花雨	0	1	0	0	0	漫天花雨3	-1		-1		0	0	0	0		125000	500	0	0	0	0	0	0	0	0	效果1	-1	效果2	-1	效果3几率	-1	效果3	-1		0		0		0		0		0		0		0		0		0		0		0		0	
 2	飞火流星	飞火流星	0	1	0	0	0	yanhuo19	-1		-1		0	0	0	0		30000	500	0	0	0	0	0	0	0	0	效果1	-1	效果2	-1	效果3几率	-1	效果3	-1		0		0		0		0		0		0		0		0		0		0		0		0	
 3	八面玲珑	八面玲珑	0	1	0	0	0	yanhuo20	-1		-1		0	0	0	0		30000	500	0	0	0	0	0	0	0	0	效果1	-1	效果2	-1	效果3几率	-1	效果3	-1		0		0		0		0		0		0		0		0		0		0		0		0	
@@ -92,6 +92,9 @@ INT	STRING	STRING	INT	INT	INT	INT	INT	STRING	INT	STRING	INT	STRING	INT	INT	INT	I
 90	元宵节快乐	元宵节快乐	0	1	0	0	0	yanhuo_元宵节	-1		-1		0	0	0	0		35000	500	0	0	0	0	0	0	0	0	效果1	-1	效果2	-1	效果3几率	-1	效果3	-1		0		0		0		0		0		0		0		0		0		0		0		0	
 91	圣诞大家乐	圣诞大家乐	0	1	0	0	0	yanhuo_圣诞节	-1		-1		0	0	0	0		35000	500	0	0	0	0	0	0	0	0	效果1	-1	效果2	-1	效果3几率	-1	效果3	-1		0		0		0		0		0		0		0		0		0		0		0		0	
 92	帮会宣战烟花	帮会宣战烟花	0	1	0	0	0	yanhua_全屏烟花	-1		-1		0	0	0	0		40000	500	0	0	0	0	0	0	0	0	效果1	-1	效果2	-1	效果3几率	-1	效果3	-1		0		0		0		0		0		0		0		0		0		0		0		0	
+93	龙之庆典	龙之庆典	0	1	0	0	0	天龙生日烟花	-1									35000	500	0	0	0						效果4	-1	效果5	-1	效果6几率	-1	效果6	-1																									
+94	周年庆生	周年庆生	0	1	0	0	0	天龙烟花发射	-1									35000	500	0	0	0						效果4	-1	效果5	-1	效果6几率	-1	效果6	-1																									
+95	周年庆生	周年庆生	0	1	0	0	0	天龙烟花发射	-1									35000	500	0	0	0						效果4	-1	效果5	-1	效果6几率	-1	效果6	-1																									
 100	木人傀儡爆炸	木人傀儡爆炸	2	0	0	1	1	cw_shixue	-1	g01_zdo_eguangmanying	897	g01_zdo_eguangmanying	897	0	0	0		100	100	0	0	0	0	0	0	0	0	效果1	-1	效果2	-1	效果3几率	-1	效果3	-1		0		0		0		0		0		0		0		0		0		0		0		0	
 101	桃花阵	桃花阵	1	0	10	2	1	g01_xy_jq_xj_桃花阵	-1	g01_xy_jq_zdo_桃花阵	-1		0	0	0	0		30000	500	2	3	3	0	0	0	0	0	效果1	2452	效果2	-1	效果3几率	-1	效果3	-1		0		0		0		0		0		0		0		0		0		0		0		0	
 102	桃花阵	桃花阵	1	0	20	2	1	g01_xy_jq_xj_桃花阵	-1	g01_xy_jq_zdo_桃花阵	-1		0	0	0	0		30000	500	2	3	3	0	0	0	0	0	效果1	2453	效果2	-1	效果3几率	-1	效果3	-1		0		0		0		0		0		0		0		0		0		0		0		0	

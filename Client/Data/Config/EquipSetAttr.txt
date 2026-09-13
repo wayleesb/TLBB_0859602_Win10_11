@@ -1,5 +1,5 @@
 INT	STRING	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT
-INT	STRING	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT
+套装编号	套装名字$1$	组件数	特效	绑定点	效果类型0	效果值	效果类型1	效果值	效果类型2	效果值	效果类型3	效果值	效果类型4	效果值	效果类型5	效果值	效果类型6	效果值	效果类型7	效果值	效果类型8	效果值	效果类型9	效果值	效果类型10	效果值	效果类型11	效果值	效果类型12	效果值	效果类型13	效果值	效果类型14	效果值	效果类型15	效果值
 0	摩柯	3	-1	-1	-1	-1	22	54	44	6	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1
 1	无相	3	-1	-1	-1	-1	42	10	0	966	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1
 2	韦陀	4	-1	-1	-1	-1	47	3	48	2	37	3	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1

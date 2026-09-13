@@ -43,7 +43,7 @@ function x001050_OnDefaultEvent( sceneId, selfId,targetId )
 		CallScriptFunction( 800103, "OnEnumerate", sceneId, selfId, targetId )
 		CallScriptFunction( 800104, "OnEnumerate", sceneId, selfId, targetId )
 		CallScriptFunction( 800106, "OnEnumerate", sceneId, selfId, targetId )
-		--CallScriptFunction( 800108, "OnEnumerate", sceneId, selfId, targetId )
+		CallScriptFunction( 800108, "OnEnumerate", sceneId, selfId, targetId )
 
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, selfId, targetId )

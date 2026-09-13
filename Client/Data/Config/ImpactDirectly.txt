@@ -1,5 +1,5 @@
 INT	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING
-INT	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING
+ID	特效ID1	音效ID1	特效的绑定点1	特效ID2	音效ID2	特效的绑定点2	特效ID3	音效ID3	特效的绑定点3	特效ID4	音效ID4	特效的绑定点4	特效ID5	音效ID5	特效的绑定点5	预留1	预留2	效果说明
 0	all_bj0000	Skills\Weapon\fist_hit_middle_2.wav	身体受击点	all_bj0000	Skills\Weapon\fist_hit_middle_2.wav	身体受击点	all_bj0000	Skills\Weapon\fist_hit_middle_2.wav	身体受击点	all_bj0000	Skills\Weapon\fist_hit_middle_2.wav	身体受击点	all_bj0000	Skills\Weapon\fist_hit_middle_2.wav	身体受击点			物理伤害
 1	all_bj02		身体受击点	all_bj02		身体受击点	all_bj02		身体受击点	all_bj02		身体受击点	all_bj02		身体受击点			魔法伤害
 2	all_bj04		身体受击点	all_bj04		身体受击点	all_bj04		身体受击点	all_bj04		身体受击点	all_bj04		身体受击点			冰伤害

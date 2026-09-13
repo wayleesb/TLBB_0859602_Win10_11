@@ -1,5 +1,5 @@
 INT	STRING	STRING	INT
-INT	STRING	STRING	INT
+ID	市	省	直辖市
 10	北京	北京	0
 21	上海	上海	0
 22	天津	天津	0

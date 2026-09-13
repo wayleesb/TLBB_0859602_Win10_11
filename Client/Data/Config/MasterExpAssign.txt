@@ -1,5 +1,5 @@
 INT	FLOAT
-INT	FLOAT
+徒弟级别	贡献给师傅的经验比例
 1	0
 2	0
 3	0

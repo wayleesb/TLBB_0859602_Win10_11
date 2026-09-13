@@ -1,5 +1,5 @@
 INT	INT	STRING
-INT	INT	STRING
+珍兽类型	显示名称文本	名称$1$
 298	1	飘飘鸭
 299	1	飘飘兔
 300	5	兔子

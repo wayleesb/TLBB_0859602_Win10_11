@@ -1,5 +1,5 @@
 INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	STRING	INT	INT	INT	STRING
-INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	STRING	INT	INT	INT	STRING
+ID	Class_ID	互斥标记	是否同步(0/1)	最大叠加次数	发作时间间隔(ms)	持续时间(ms)	持续时间修正修正公式ID	原子操作ID(1)	参数1(1)	参数2(1)	修正公式ID(1)	原子操作ID(2)	参数1(2)	参数2(2)	修正公式ID(2)	原子操作ID(3)	参数1(3)	参数2(3)	修正公式ID(3)	原子操作ID(4)	参数1(4)	参数2(4)	修正公式ID(4)	原子操作ID(5)	参数1(5)	参数2(5)	修正公式ID(5)	原子操作ID(6)	参数1(6)	参数2(6)	修正公式ID(6)	原子操作ID(7)	参数1(7)	参数2(7)	修正公式ID(7)	原子操作ID(8)	参数1(8)	参数2(8)	修正公式ID(8)	触发特效ID	触发特效的绑定点	伤害特效ID	伤害特效的绑定点	图标ID	效果描述$1$
 10	-1	-1	0	1	0	0	-1	0	18	30	1	4	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	12	0	-1	金刚附魔圈的伤害
 11	-1	-1	0	1	0	0	-1	13	0	10	2	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	金刚附魔圈的减怒
 1	-1	-1	0	1	0	0	-1	4	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	12	0	-1	普通攻击

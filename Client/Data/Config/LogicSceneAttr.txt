@@ -1,5 +1,5 @@
 INT	STRING	INT	INT
-INT	STRING	INT	INT
+场景ID	Name$1$	场景ID	所属商区
 0	洛阳	0	1
 1	苏州	1	2
 2	大理	2	3

@@ -1,5 +1,5 @@
 INT	INT	INT	INT	STRING	INT	STRING	STRING
-INT	INT	INT	INT	STRING	INT	STRING	STRING
+ID(递增)	CLASS	LEVEL	槽位（未实现）	称号（限长20个CHAR）$1$	有效期（小时，未实现）	COLOR	描述$1$
 0	0	1	-1	天灵兽	-1	#e195e1a#c72d27c	[已废弃]珍兽初级悟性称号#r天御之息，皎皎圣灵。
 1	0	2	-1	天灵兽	-1	#e195e1a#c72d27c	[已废弃]珍兽初级悟性称号#r天御之息，皎皎圣灵。
 2	0	3	-1	天灵兽	-1	#e195e1a#c72d27c	[已废弃]珍兽初级悟性称号#r天御之息，皎皎圣灵。

@@ -41,8 +41,6 @@ end
 --·µ»Ø1£ºÌõ¼ş¼ì²âÍ¨¹ı£¬¿ÉÒÔ¼ÌĞøÖ´ĞĞ£»·µ»Ø0£ºÌõ¼ş¼ì²âÊ§°Ü£¬ÖĞ¶ÏºóĞøÖ´ĞĞ¡£
 --**********************************
 function x332203_OnConditionCheck( sceneId, selfId )
-
-	--Ğ£ÑéÊ¹ÓÃµÄÎïÆ	
 	if(1~=LuaFnVerifyUsedItem(sceneId, selfId)) then
 		return 0
 	end

@@ -1,5 +1,5 @@
 INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	STRING	INT	INT	STRING	INT	INT	STRING	INT	INT	STRING	INT	INT	STRING	INT	INT	STRING	INT
-INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	STRING	INT	INT	STRING	INT	INT	STRING	INT	INT	STRING	INT	INT	STRING	INT	INT	STRING	INT
+id	opt_type	time_type	time_start	sceneid	scriptid	time_slice	reserve1	reserve2	reserve3	reserve4	reserve5	广播类型	慢报间隔	慢报内容$1$	慢报结束时间点	快报间隔	快报内容$1$	快报结束时间点	刚开报间隔	刚开报内容$1$	刚开报结束时间点	进行中报间隔	进行中报内容$1$	进行中报结束时间点	快结束报间隔	快结束报内容$1$	结束时间点	ruler	活动名称$1$	失效时间
 0	0	1	66	0	808000	0	0	0	0	0	0	4	30	#{QJ_20080317_01}	230	3	#{QJ_20080317_02}	240	10	#{QJ_20080317_03}	320	3	#{QJ_20080317_04}	329	1	#{QJ_20080317_05}	330	0	棋局	-1
 1	0	1	54	2	808000	4	-1	-1	-1	-1	-1	4	30	#{KJ_20080317_01}	230	3	#{KJ_20080317_02}	240	170	#{KJ_20080317_03}	410	3	#{KJ_20080317_04}	420	-1	-1	-1	-1	0	-1
 2	0	1	70	2	801016	0	-1	-1	-1	-1	1000	4	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	0	-1

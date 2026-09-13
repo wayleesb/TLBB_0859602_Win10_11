@@ -1,5 +1,5 @@
 INT	STRING	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT
-INT	STRING	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT
+ID	Name$1$	类型	安全级别	可以站立的位置X	可以站立的位置Z	是否可以产生挂机终结者	场景怪物0	场景怪物1	场景怪物2	场景怪物3	场景怪物4	场景怪物5	场景怪物6	场景怪物7	场景怪物8	场景怪物9	场景怪物10	场景怪物11	场景怪物12	场景怪物13	场景怪物14	场景怪物15
 0	洛阳	5	1	160	278	0	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1
 1	苏州	5	1	182	265	0	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1
 2	大理	5	1	160	277	0	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1

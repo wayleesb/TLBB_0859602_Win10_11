@@ -6,7 +6,6 @@
 --脚本号
 x402040_g_ScriptId = 402040
 
-x402040_TIME_2000_01_03_ = 946828868
 --MisDescEnd
 --************************************************************************
 
@@ -101,7 +100,6 @@ x402040_g_BigFootBall = {9160,9170,9180,9190,39160,39170,39180,39190}
 function x402040_OnDefaultEvent( sceneId, selfId, targetId )
 	if GetNumText() == 1  then
 		BeginEvent(sceneId)
-		--	AddText(sceneId,"#B关于蹴鞠大赛");
 			AddText(sceneId,"#{CUDS_20071010}");
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
@@ -111,56 +109,51 @@ function x402040_OnDefaultEvent( sceneId, selfId, targetId )
 	-- 1，检查活动时间 （每月第一个星期天下午19：00~晚上23：00，持续4个小时）
 	
 	-- a，是不是星期天
-	local nWeek = GetTodayWeek()
-	if nWeek~=0  then
-		BeginEvent(sceneId)
-			AddText(sceneId,"#B横扫牡丹腕");
-			AddText(sceneId,"  洛阳横扫牡丹碗蹴鞠大赛下一场关键大赛正在筹备之中。请在每月第一周及第三周的周日晚上19点到23点之间前来参赛。");
-		EndEvent(sceneId)
-		DispatchEventList(sceneId,selfId,targetId)
-		
-		return
-	end
-	-- xiehong 天龙嘉年华之纵横四海活动特例：4月12号，4月19号，4月26号，5月3号，5月10号
-	local curDate = GetTime2Day()
+	-- local nWeek = GetTodayWeek()
+	-- if nWeek~=0  then
+		-- BeginEvent(sceneId)
+			-- AddText(sceneId,"#B横扫牡丹腕");
+			-- AddText(sceneId,"  洛阳横扫牡丹碗蹴鞠大赛下一场关键大赛正在筹备之中。请在每月第一周及第三周的周日晚上19点到23点之间前来参赛。");
+		-- EndEvent(sceneId)
+		-- DispatchEventList(sceneId,selfId,targetId)
+		-- return
+	-- end
 	
-	if curDate == 20090412
-	or curDate == 20090419
-	or curDate == 20090426
-	or curDate == 20090503
-	or curDate == 20090510 
-	or curDate == 20090621 then
-		local temp = 1
-	else
-	-- b，是不是一个月的第一个星期天
-	local nToday = LuaFnGetDayOfThisMonth()
-	if nToday > 7 then -- zchw
-		BeginEvent(sceneId)
-			AddText(sceneId,"#B横扫牡丹腕");
-			AddText(sceneId,"  洛阳横扫牡丹碗蹴鞠大赛下一场关键大赛正在筹备之中。请在每月第一周及第三周的周日晚上19点到23点之间前来参赛。");
-		EndEvent(sceneId)
-		DispatchEventList(sceneId,selfId,targetId)
-		
-		return
-	end
-	end
+	-- xiehong 天龙嘉年华之纵横四海活动特例：4月12号，4月19号，4月26号，5月3号，5月10号
+	-- local curDate = GetTime2Day()
+	
+	-- if curDate == 20090412
+	-- or curDate == 20090419
+	-- or curDate == 20090426
+	-- or curDate == 20090503
+	-- or curDate == 20090510 
+	-- or curDate == 20090621 then
+		-- local temp = 1
+	-- else
+		-- -- b，是不是一个月的第一个星期天
+		-- local nToday = LuaFnGetDayOfThisMonth()
+		-- if nToday > 7 then -- zchw
+			-- BeginEvent(sceneId)
+				-- AddText(sceneId,"#B横扫牡丹腕");
+				-- AddText(sceneId,"  洛阳横扫牡丹碗蹴鞠大赛下一场关键大赛正在筹备之中。请在每月第一周及第三周的周日晚上19点到23点之间前来参赛。");
+			-- EndEvent(sceneId)
+			-- DispatchEventList(sceneId,selfId,targetId)
+			
+			-- return
+		-- end
+	-- end
 		
 	-- c，时间在 19:00 ~ 23:00
-	--begin modified by zhangguoxin 090207
-	--local nHour = GetHourTime()
-	--local temp = floor(nHour/100)*100
-	--if nHour - temp < 76  or nHour - temp > 92   then
-	local nQuarter = mod(GetQuarterTime(),100);
-	if nQuarter < 76 or nQuarter > 92 then
-	--end modified by zhangguoxin 090207
-		BeginEvent(sceneId)
-			AddText(sceneId,"#B横扫牡丹腕");
-			AddText(sceneId,"  洛阳横扫牡丹腕蹴鞠大赛下一场关键大赛正在筹备之中。请在每月第一周的周日晚上19点到23点之间前来参赛。");
-		EndEvent(sceneId)
-		DispatchEventList(sceneId,selfId,targetId)
+	-- local nQuarter = mod(GetQuarterTime(),100);
+	-- if nQuarter < 76 or nQuarter > 92 then
+		-- BeginEvent(sceneId)
+			-- AddText(sceneId,"#B横扫牡丹腕");
+			-- AddText(sceneId,"  洛阳横扫牡丹腕蹴鞠大赛下一场关键大赛正在筹备之中。请在每月第一周的周日晚上19点到23点之间前来参赛。");
+		-- EndEvent(sceneId)
+		-- DispatchEventList(sceneId,selfId,targetId)
 		
-		return
-	end
+		-- return
+	-- end
 	
 	-- 2，检测玩家是不是组队了
 	if LuaFnHasTeam(sceneId,selfId) ~= 1  then
@@ -235,16 +228,20 @@ function x402040_OnDefaultEvent( sceneId, selfId, targetId )
 		end
 	end
 	
-	-- 8，检测是不是有人已经参加过蹴鞠活动
+	-- 8，每人每天可参加一次，按缥缈峰的日期和次数格式记录
+	local CurDayTime = GetDayTime()
 	for	i=0, nearteammembercount-1    do
 		local memId = GetNearTeamMember(sceneId, selfId, i)
-		local time = GetMissionData(sceneId, memId, MD_CUJU_PRE_TIME)
-		local nCurTime = LuaFnGetCurrentTime()
-		-- 看上次参加的时间是不是和现在有12个小时以上的CD
-		if nCurTime-time < 60*60*12   then
+		local lastTime = GetMissionData(sceneId, memId, MD_CUJU_PRE_TIME)
+		local lastDayTime = floor(lastTime / 100)
+		local lastDayCount = mod(lastTime, 100)
+		if CurDayTime > lastDayTime then
+			lastDayCount = 0
+		end
+		if lastDayCount >= 1 then
 			BeginEvent(sceneId)
 				AddText(sceneId,"#B横扫牡丹腕");
-				AddText(sceneId,"  别以为我眼睛是专门拿来看美女帅哥的。那个谁！你刚才不是已经来参加过比赛了吗？");
+				AddText(sceneId,"  "..GetName(sceneId, memId).."本日已经参加过蹴鞠大赛了。每人每天可参加1次，请明天再来。");
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,targetId)
 			return
@@ -265,7 +262,7 @@ function x402040_OnDefaultEvent( sceneId, selfId, targetId )
 	end
 	
 	-- 10，满足所有条件了
-	local str = "我正式宣布，" .. GetName(sceneId,selfId) .. "和他的队伍已经可以正式入场，参加一月一度的横扫牡丹腕蹴鞠大赛了！#r" .. GetName(sceneId,selfId) .. "#W，祝你好运。"
+	local str = "我正式宣布，" .. GetName(sceneId,selfId) .. "和他的队伍已经可以正式入场，参加今天的横扫牡丹腕蹴鞠大赛了！#r" .. GetName(sceneId,selfId) .. "#W，祝你好运。"
 	BeginEvent(sceneId)
 		AddText(sceneId,"#B横扫牡丹腕")
 		AddText(sceneId, str)
@@ -281,35 +278,35 @@ end
 function x402040_OnEnumerate( sceneId, selfId, targetId )
 	AddNumText( sceneId, x402040_g_ScriptId, "关于蹴鞠大赛",11 ,1  )
 	-- a，是不是星期天
-	local nWeek = GetTodayWeek()
-	if nWeek~=0  then
-		return
-	end
+	-- local nWeek = GetTodayWeek()
+	-- if nWeek~=0  then
+		-- return
+	-- end
 	
 	-- xiehong 天龙嘉年华之纵横四海活动特例：4月12号，4月19号，4月26号，5月3号，5月10号
-	local curDate = GetTime2Day()
+	-- local curDate = GetTime2Day()
 	
-	if curDate == 20090412
-	or curDate == 20090419
-	or curDate == 20090426
-	or curDate == 20090503
-	or curDate == 20090510 
-	or curDate == 20090621 then
-		local temp = 1
-	else
-	-- b，是不是一个月的第一个星期天
-	local nToday = LuaFnGetDayOfThisMonth()
-	if nToday > 7 then -- zchw
-		return
-	end
-	end
+	-- if curDate == 20090412
+	-- or curDate == 20090419
+	-- or curDate == 20090426
+	-- or curDate == 20090503
+	-- or curDate == 20090510 
+	-- or curDate == 20090621 then
+		-- local temp = 1
+	-- else
+		-- -- b，是不是一个月的第一个星期天
+		-- local nToday = LuaFnGetDayOfThisMonth()
+		-- if nToday > 7 then -- zchw
+			-- return
+		-- end
+	-- end
 	
 	-- c，时间在 19:00 ~ 23:00
-	local nHour = GetHourTime()
-	local temp = floor(nHour/100)*100
-	if nHour - temp < 76  or nHour - temp > 92   then
-		return
-	end
+	-- local nHour = GetHourTime()
+	-- local temp = floor(nHour/100)*100
+	-- if nHour - temp < 76  or nHour - temp > 92   then
+		-- return
+	-- end
 	AddNumText( sceneId, x402040_g_ScriptId, "横扫牡丹碗",10 ,-1  )
 end
 
@@ -479,11 +476,17 @@ end
 --**********************************
 function x402040_OnPlayerEnter( sceneId, selfId )
 	
-	-- 2,记录时间
-	local nPreTime = GetMissionData(sceneId,selfId, MD_CUJU_PRE_TIME)
-	local nCurTime = LuaFnGetCurrentTime()
-
-	SetMissionData(sceneId, selfId, MD_CUJU_PRE_TIME, nCurTime)
+	-- 2，入场时记录当天次数，跨天后重新计数
+	local lastTime = GetMissionData(sceneId, selfId, MD_CUJU_PRE_TIME)
+	local lastDayTime = floor(lastTime / 100)
+	local lastDayCount = mod(lastTime, 100)
+	local CurDayTime = GetDayTime()
+	if CurDayTime > lastDayTime then
+		lastDayTime = CurDayTime
+		lastDayCount = 0
+	end
+	lastDayCount = lastDayCount + 1
+	SetMissionData(sceneId, selfId, MD_CUJU_PRE_TIME, lastDayTime * 100 + lastDayCount)
 	
 	-- 3,设置死亡事件
 	SetPlayerDefaultReliveInfo( sceneId, selfId, "%50", -1, "0", sceneId, x402040_g_Fuben_X, x402040_g_Fuben_Z )

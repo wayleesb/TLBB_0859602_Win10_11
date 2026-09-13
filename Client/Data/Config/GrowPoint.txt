@@ -1,5 +1,5 @@
 INT	STRING	STRING	INT	INT	STRING	INT	INT	INT
-INT	STRING	STRING	INT	INT	STRING	INT	INT	INT
+编号	名称$1$	对应模型	对应生活技能ID	对应任务ID	Tips默认$1$	打开时间默认	脚本ID	打开动画
 1	铜矿	草药矿石/铜矿石.obj	7	0		0	710000	0
 2	铁矿	草药矿石/铁矿石.obj	7	0		0	710000	0
 3	银矿	草药矿石/银矿石.obj	7	0		0	710000	0

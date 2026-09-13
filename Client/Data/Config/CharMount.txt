@@ -1,5 +1,5 @@
 INT	STRING	INT	INT	FLOAT	INT	INT	STRING	INT	STRING	INT	INT
-INT	STRING	INT	INT	FLOAT	INT	INT	STRING	INT	STRING	INT	INT
+ID	名称	准乘人数	ModelID	AddHeight	RideRecipe	主坐动作组索引	主绑定点	副坐动作组索引	副绑定点	坐骑的移动声音ID	是否能跳跃
 0	虎	1	1010	0.5	447	0	attach1	0	attach1	-1	1
 1	黄骠马	1	1011	0.6	448	1	attach1	1	attach1	-1	1
 2	灰狼	1	1012	0.5	455	2	attach1	2	attach1	-1	1

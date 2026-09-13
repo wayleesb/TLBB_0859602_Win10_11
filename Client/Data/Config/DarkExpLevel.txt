@@ -1,5 +1,5 @@
 INT	INT
-INT	INT
+Level	Exp
 1	10
 2	12
 3	14

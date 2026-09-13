@@ -1,5 +1,5 @@
 INT	STRING	INT	INT	STRING	INT	INT	INT	FLOAT	INT	INT	STRING	INT	STRING	INT	STRING	INT	INT	INT	INT	INT
-INT	STRING	INT	INT	STRING	INT	INT	INT	FLOAT	INT	INT	STRING	INT	STRING	INT	STRING	INT	INT	INT	INT	INT
+ID	名称$1$	所需等级	最高等级	升级需求和消耗表	操作时间基数	工具ID	工具ID2	辅助平台的有效距离	辅助平台ID	操作动作ID	图标	对应动作表现工具编号（Itemvisuallocator)	技能说明$1$	是否有合成界面	进度条显示的字$1$	消耗活力还是精力（0表示不消耗活力精力，1表示消耗活力，2表示消耗精力，3表示消耗活力和精力）	开始时播放的声音	是否循环 0：不循环 1：循环	成功时播放的声音	失败时播放的声音
 1	烹饪	-1	10	pengren.txt	5000	-1	-1	5	-1	118	CommonLiveSkill_6	-1	民以食为天，食物是恢复体力和内力的主要手段。鱼，肉，粮食都可以用来制作美味。	1	烹饪	1	250	0	-1	-1
 2	制药	15	10	zhiyao.txt	5000	-1	-1	5	1	118	CommonLiveSkill_10	-1	不想生病？想变得强壮？拿上药草到炼丹炉旁炼一炉丹药吧。	1	制药	1	252	0	-1	-1
 3	镶嵌	-1	10	putongshenghuo.txt	5000	-1	-1	-1	-1	118	CommonLiveSkill_4	-1	为你的装备附加上绚丽又实用的宝石，能提高你的战斗力哦。	2	镶嵌	2	253	1	-1	-1

@@ -1,5 +1,5 @@
 INT	INT	STRING	STRING	INT	INT	INT	STRING
-INT	INT	STRING	STRING	INT	INT	INT	STRING
+ID	类型(策划分类用)	名称$1$	描述$1$	逻辑类型(程序用)	等级	时间	注释
 0	1	系统占用	设置等级称号为0，即清除等级称号	1	1	-1	设置等级称号为0，即清除等级称号
 1	1	已废弃	已废弃	0	0	-1	
 2	1	已废弃	已废弃	0	0	-1	

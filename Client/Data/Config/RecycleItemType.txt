@@ -1,5 +1,5 @@
 INT	INT	INT	STRING
-INT	INT	INT	STRING
+index	classID（和RecycleItemClass.txt里id对应）	typeID（自己定）	描述$1$
 0	1	1	矿石
 1	1	2	锻石
 2	1	3	铸铁

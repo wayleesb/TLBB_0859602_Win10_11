@@ -1,5 +1,5 @@
 INT	INT	INT	INT	INT	INT	INT
-INT	INT	INT	INT	INT	INT	INT
+资质点	物理攻击	物理防御	魔法攻击	魔法防御	闪避	命中
 1	2	2	2	2	2	2
 2	2	2	2	2	2	2
 3	2	2	2	2	2	2

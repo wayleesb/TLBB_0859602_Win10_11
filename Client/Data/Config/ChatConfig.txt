@@ -1,5 +1,5 @@
 INT	STRING	STRING	INT	INT	INT	INT	INT	INT	INT	INT
-INT	STRING	STRING	INT	INT	INT	INT	INT	INT	INT	INT
+ID	频道名称$1$	前导字符$1$	发送时间间隔（毫秒）	"消耗类型1(MP:0,精力1,活力:2,不需要:-1)"	消耗数值1	消耗类型2	消耗数值2	消耗类型3	消耗数值3	等级限制
 0	附近频道	附近	3000	-1	0	-1	0	-1	0	0
 1	队伍频道	队伍	1000	-1	0	-1	0	-1	0	0
 2	世界频道	世界	180000	1	2	2	2	-1	0	15

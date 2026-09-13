@@ -1,5 +1,5 @@
 INT	INT	INT	STRING	STRING	STRING	STRING	STRING	STRING	STRING	INT	INT	INT	INT	INT	STRING	STRING
-INT	INT	INT	STRING	STRING	STRING	STRING	STRING	STRING	STRING	INT	INT	INT	INT	INT	STRING	STRING
+ID	分类 ID（互斥用）	PRI优先级	图标文件名	触发特效ID	触发特效的音效ID	触发特效的绑定点	持续性特效ID	持续特效的音效ID	持续性特效的绑定点	死后是否保留	是否可以被技能驱散	是否是负面效果	是否可以被手动取消	是否为线性特效	线性特效的绑定点	效果说明$1$
 1	1	0	Buff0_1				g01_buff2		身体受击点	0	1	1	0	0		撕裂：持续掉血
 2	2	0	Buff0_2				npc_buff_19		身体受击点	0	1	1	0	0		中毒：持续掉血
 3	3	0	Buff0_3				g01_buff32		身体受击点	0	1	1	0	0		诅咒：持续掉血

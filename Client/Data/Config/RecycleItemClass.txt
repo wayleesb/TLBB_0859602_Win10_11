@@ -1,5 +1,5 @@
 INT	STRING
-INT	STRING
+ID	描述$1$
 1	铸造材料
 2	烹饪材料
 3	制药材料

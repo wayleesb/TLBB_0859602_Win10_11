@@ -19,7 +19,7 @@ function x000004_UpdateEventList( sceneId, selfId,targetId )
 	end
 	BeginEvent(sceneId)
 	local  PlayerName=GetName(sceneId,selfId)
-	AddText(sceneId,"  "..PlayerName..PlayerSex.."，见到你真高兴啊！我现在负责蹴鞠大赛的工作。蹴鞠大赛在每个月第一个及第三个周日的晚上19点开始，到晚上23点结束。机会难得，不要错过哦！");
+	AddText(sceneId,"  "..PlayerName..PlayerSex.."，见到你真高兴啊！我现在负责蹴鞠大赛的工作。蹴鞠大赛每天全天开放，每人每天可参加1次，次数于每日零点重置。机会难得，不要错过哦！");
 	for i, eventId in x000004_g_eventList do
 		CallScriptFunction( eventId, "OnEnumerate",sceneId, selfId, targetId )
 	end

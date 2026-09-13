@@ -1,5 +1,9 @@
 INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT
-INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT
+actid	sceneid_0	rate_0	sceneid_1	rate_1	sceneid_2	rate_2	sceneid_3	rate_3	sceneid_4	rate_4	sceneid_5	rate_5	sceneid_6	rate_6	sceneid_7	rate_7	sceneid_8	rate_8	sceneid_9	rate_9
+#<0>actid	活动编号																			
+#<1>sceneid_?	Group?：场景ID																			
+#<2>rate_?	Group?：随机分子，分母为同组中所有分子的和																			
+#																				
 0	0	1	1	1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1
 6	140	1	139	1	142	1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1
 7	140	1	139	1	142	1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1

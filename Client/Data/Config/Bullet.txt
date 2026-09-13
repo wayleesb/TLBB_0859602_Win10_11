@@ -1,5 +1,5 @@
 INT	INT	INT	STRING	STRING	FLOAT	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING
-INT	INT	INT	STRING	STRING	FLOAT	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING
+ID	轨迹类型	预留	子弹飞行特效ID	飞行音效ID	速度(m/s)	子弹爆炸特效ID	爆炸音效ID	击中特效的绑定点	预留1	预留2	预留3	预留4	预留5	描述
 1	0	0	npc_anqi_zd		15	npc_anqi_zdo		身体受击点						月落西山
 2	0	0	g01_zd_huanpeiguihun		15	g01_zdo_huanpeiguihun		身体受击点						环佩归魂
 3	2	0			15	g01_zdo_tiesuohengjiang	Skills\Wd\Wd_三环套月.wav	身体受击点						铁索横江

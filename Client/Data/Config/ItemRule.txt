@@ -1,5 +1,5 @@
 INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT
-INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT
+index	丢弃	重叠	快捷	出售	交易	使用	拾取绑定	装备绑定	是否唯一	是否需要鉴定	是否虚拟道具	是否可以存入银行	快捷栏是否叠加显示
 1	1	0	0	1	1	1	0	0	0	0	0	1	0
 2	1	0	0	1	1	1	0	1	0	0	0	1	0
 3	1	0	0	1	0	1	1	0	0	0	0	1	0

@@ -1,5 +1,5 @@
 INT	INT	STRING	INT	INT	INT	STRING	STRING	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT
-INT	INT	STRING	INT	INT	INT	STRING	STRING	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT
+ID	CityID	Name$1$	BuildingType	BuildingID	InitialLevel	GfxPosition	GfxOrientation	LevelRequire1	LevelRequire2	LevelRequire3	LevelRequire4	LevelRequire5	ResearchItem0	ResearchItem1	ResearchItem2	ResearchItem3	ResearchItem4	Maintain0	Maintain1	Maintain2	Maintain3	Maintain4
 1	205	œÿ—√	0	1	0	400 1200 -5600	1 0 0 0	72	73	74	75	-1	-1	-1	-1	-1	-1	20000	40000	80000	160000	320000
 2	205	¥Û∆Ï	17	2	0	400 1200 -3600	1 0 0 0	1	1	1	1	-1	-1	-1	-1	-1	-1	0	0	0	0	0
 3	205	Œ‰∑ª	11	4	0	3900 800 -5700	1 0 0 0	2	3	4	5	-1	6	7	8	9	10	9000	15300	26000	44200	75200

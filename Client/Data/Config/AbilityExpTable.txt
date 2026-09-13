@@ -1,5 +1,5 @@
 STRING	INT	INT	FLOAT	INT	INT
-STRING	INT	INT	FLOAT	INT	INT
+对象名称$1$	基础熟练度	对应技能等级	损耗比例	AbilityId	编号（对象的编号）
 铜矿脉	1	1	0	8	20003001
 锡矿	2	10	0.2	8	20003002
 铁矿	4	15	0.4	8	20003003

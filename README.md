@@ -8,6 +8,13 @@
 
 适用于 Windows 10/11 的 TLBB 0859602 客户端及配套工具。
 
+### V0.8 更新
+
+修复客户端崩溃、网络断开、模型与特效显示、界面缩放、任务及寻路等问题；
+修复 GM 工具暗器技能编辑，新增 GM BUFF 2691 / 2692，优化启动工具日志占用并新增“强制停服”。
+
+查看 [V0.8 完整更新日志（31 项）](CHANGELOG.md#v08)。
+
 ### 目录结构
 
 - `Client/`：客户端、资源文件及 32 位 / 64 位程序。
@@ -45,6 +52,14 @@ EXE 使用 .NET 内置单文件压缩，无需手动解压或预装 .NET。
 ## English
 
 TLBB 0859602 client and bundled tools for Windows 10/11.
+
+### V0.8 Update
+
+Fixes client crashes, disconnections, model and effect rendering, UI scaling, quests, and pathfinding.
+Also fixes hidden-weapon skill editing in the GM tool, adds GM buffs 2691 / 2692,
+reduces launcher log disk usage, and adds a force-stop server option.
+
+See the [complete V0.8 changelog (31 entries, in Chinese)](CHANGELOG.md#v08).
 
 ### Directory Structure
 
@@ -86,6 +101,14 @@ packaging exclusion list and does not delete local files.
 ## Tiếng Việt
 
 Client TLBB 0859602 và các công cụ đi kèm dành cho Windows 10/11.
+
+### Cập nhật V0.8
+
+Sửa lỗi client bị văng, mất kết nối, hiển thị mô hình và hiệu ứng, tỷ lệ giao diện, nhiệm vụ và tìm đường.
+Sửa lỗi chỉnh sửa kỹ năng ám khí trong công cụ GM, thêm buff GM 2691 / 2692,
+giảm dung lượng nhật ký của trình khởi chạy và thêm tùy chọn buộc dừng máy chủ.
+
+Xem [nhật ký thay đổi V0.8 đầy đủ (31 mục, bằng tiếng Trung)](CHANGELOG.md#v08).
 
 ### Cấu trúc thư mục
 

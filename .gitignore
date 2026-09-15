@@ -6,6 +6,9 @@
 /tlbb/Server/Log/*
 !/tlbb/Server/Log/.gitkeep
 
+# Local client account and character caches.
+/Client/Accounts/*/
+
 # Local IDA databases and working files.
 *.i64
 *.idb

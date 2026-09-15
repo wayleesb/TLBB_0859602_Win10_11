@@ -1,9 +1,8 @@
---道具：玉液净瓶<ID:31000002>
+--道具：玉液净瓶<ID:31000002> 玉液宝瓶<ID:31000007>
 --脚本号 332102
 --Author: Steven.Han 18:26 2007-5-17
 
 x332102_g_scriptId = 332102
---x332102_g_MaxValue = 500000 zchw
 x332102_g_IncPerAct = 1000
 
 --**********************************
@@ -82,9 +81,9 @@ function x332102_OnActivateOnce( sceneId, selfId )
     local UsedItemNum = LuaFnGetItemIndexOfUsedItem(sceneId, selfId);   
        
     if( tonumber(UsedItemNum) == 31000007 ) then  --宝瓶
-    		x332102_g_MaxValue =50000;
+    	x332102_g_MaxValue =50000;
     else
-    		x332102_g_MaxValue =500000;		--净瓶
+    	x332102_g_MaxValue =500000;		--净瓶
     end
     local ValidValue = x332102_g_MaxValue - UseValue
     
@@ -120,22 +119,20 @@ function x332102_OnActivateOnce( sceneId, selfId )
             
         end
 
-
         local szName = GetName( sceneId, selfId )
         local nGuid = LuaFnGetGUID( sceneId, selfId )
 		local nMPA = GetMp(sceneId, selfId)             --使用后玩家hp
 		
         if bErased < 0 then
-			--local szLog = "Use31000002, Name=%s, Guid=%d, CB=%d, CA=%d, HPB=%d, HPA=%d, BIDX=%d"
-			local szLog = "Use31000002, 名字=%s, Guid=%d, 使用前药量=%d, 使用后药量=%d, 使用前MP=%d, 使用后MP=%d, 背包位置=%d"
+			local szLog = "Use%d, 名字=%s, Guid=%d, 使用前药量=%d, 使用后药量=%d, 使用前MP=%d, 使用后MP=%d, 背包位置=%d"
 			local UseValue_log = GetBagItemParam( sceneId, selfId, bagId, 8, 2 )
 			local nCA = x332102_g_MaxValue - UseValue_log   --使用后容量
 			
-			local szDebugLog = format( szLog, szName, nGuid, nCB, nCA, nMPB, nMPA, bagId )
+			local szDebugLog = format( szLog, UsedItemNum, szName, nGuid, nCB, nCA, nMPB, nMPA, bagId )
 			WriteDebugLog( sceneId, selfId, szDebugLog )  
         else
-			local szLog = "Use31000002, 名字=%s, Guid=%d, 使用前药量=%d, 已被删除, 使用前MP=%d, 使用后MP=%d, 背包位置=%d"
-			local szDebugLog = format( szLog, szName, nGuid, nCB, nMPB, nMPA, bagId )
+			local szLog = "Use%d, 名字=%s, Guid=%d, 使用前药量=%d, 已被删除, 使用前MP=%d, 使用后MP=%d, 背包位置=%d"
+			local szDebugLog = format( szLog, UsedItemNum, szName, nGuid, nCB, nMPB, nMPA, bagId )
 			WriteDebugLog( sceneId, selfId, szDebugLog )
         end
         

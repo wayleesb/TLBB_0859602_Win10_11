@@ -1,75 +1,75 @@
---���ߣ�����Կ��<ID:30008011>
---�ű��� 332200
+--道具：暗金钥匙<ID:30008011>
+--脚本号 332200
 --Author: Steven.Han 10:39 2007-5-17
 
 x332200_g_scriptId = 332200
 x332200_g_DarkBox = 30008010
 
 --**********************************
---�¼��������
+--事件交互入口
 --**********************************
 function x332200_OnDefaultEvent( sceneId, selfId, bagIndex )
--- ����Ҫ����ӿڣ���Ҫ�����պ���
+-- 不需要这个接口，但要保留空函数
 end
 
 --**********************************
---�����Ʒ��ʹ�ù����Ƿ������ڼ��ܣ�
---ϵͳ����ִ�п�ʼʱ�����������ķ���ֵ���������ʧ������Ժ�������Ƽ��ܵ�ִ�С�
---����1���������Ƶ���Ʒ�����Լ������Ƽ��ܵ�ִ�У�����0�����Ժ���Ĳ�����
+--这个物品的使用过程是否类似于技能：
+--系统会在执行开始时检测这个函数的返回值，如果返回失败则忽略后面的类似技能的执行。
+--返回1：技能类似的物品，可以继续类似技能的执行；返回0：忽略后面的操作。
 --**********************************
 function x332200_IsSkillLikeScript( sceneId, selfId)
-	return 1; --����ű���Ҫ����֧��
+	return 1; --这个脚本需要动作支持
 end
 
 --**********************************
---ֱ��ȡ��Ч����
---ϵͳ��ֱ�ӵ�������ӿڣ���������������ķ���ֵȷ���Ժ�������Ƿ�ִ�С�
---����1���Ѿ�ȡ����ӦЧ��������ִ�к�������������0��û�м�⵽���Ч��������ִ�С�
+--直接取消效果：
+--系统会直接调用这个接口，并根据这个函数的返回值确定以后的流程是否执行。
+--返回1：已经取消对应效果，不再执行后续操作；返回0：没有检测到相关效果，继续执行。
 --**********************************
 function x332200_CancelImpacts( sceneId, selfId )
-	return 0; --����Ҫ����ӿڣ���Ҫ�����պ���,����ʼ�շ���0��
+	return 0; --不需要这个接口，但要保留空函数,并且始终返回0。
 end
 
 --**********************************
---���������ڣ�
---ϵͳ���ڼ��ܼ���ʱ����������ӿڣ���������������ķ���ֵȷ���Ժ�������Ƿ�ִ�С�
---����1���������ͨ�������Լ���ִ�У�����0���������ʧ�ܣ��жϺ���ִ�С�
+--条件检测入口：
+--系统会在技能检测的时间点调用这个接口，并根据这个函数的返回值确定以后的流程是否执行。
+--返回1：条件检测通过，可以继续执行；返回0：条件检测失败，中断后续执行。
 --**********************************
 function x332200_OnConditionCheck( sceneId, selfId )
-	--У��ʹ�õ���Ʒ
+	--校验使用的物品
 	if(1~=LuaFnVerifyUsedItem(sceneId, selfId)) then
 		return 0
 	end
 	
 	local FreeSpace = LuaFnGetPropertyBagSpace( sceneId, selfId )
 	if( FreeSpace < 1 ) then
-	        local strNotice = "���ĵ�����û�пռ䣬��Ҫ������"
+	        local strNotice = "您的道具栏没有空间，需要整理。"
 		    x332200_ShowNotice( sceneId, selfId, strNotice)
 	        return 0
 	end
 	
 	FreeSpace = LuaFnGetMaterialBagSpace( sceneId, selfId )
 	if( FreeSpace < 1 ) then
-	        local strNotice = "���Ĳ�����û�пռ䣬��Ҫ������"
+	        local strNotice = "您的材料栏没有空间，需要整理。"
 		    x332200_ShowNotice( sceneId, selfId, strNotice)
 	        return 0
 	end
 		
 	local ItemCount = LuaFnGetAvailableItemCount( sceneId, selfId, x332200_g_DarkBox )
 	if ItemCount < 1 then
-		local strNotice = "��Ҫ".."#{_ITEM"..(x332200_g_DarkBox).."}" --������
+		local strNotice = "需要".."#{_ITEM"..(x332200_g_DarkBox).."}" --暗金宝箱
 		x332200_ShowNotice( sceneId, selfId, strNotice)
 	    return 0
 	end
 		
-	return 1; --����Ҫ�κ�����������ʼ�շ���1��
+	return 1; --不需要任何条件，并且始终返回1。
 end
 
 --**********************************
---���ļ�⼰������ڣ�
---ϵͳ���ڼ������ĵ�ʱ����������ӿڣ���������������ķ���ֵȷ���Ժ�������Ƿ�ִ�С�
---����1�����Ĵ���ͨ�������Լ���ִ�У�����0�����ļ��ʧ�ܣ��жϺ���ִ�С�
---ע�⣺�ⲻ�⸺�����ĵļ��Ҳ�������ĵ�ִ�С�
+--消耗检测及处理入口：
+--系统会在技能消耗的时间点调用这个接口，并根据这个函数的返回值确定以后的流程是否执行。
+--返回1：消耗处理通过，可以继续执行；返回0：消耗检测失败，中断后续执行。
+--注意：这不光负责消耗的检测也负责消耗的执行。
 --**********************************
 function x332200_OnDeplete( sceneId, selfId )
 	if(0<LuaFnDepletingUsedItem(sceneId, selfId)) then
@@ -80,21 +80,21 @@ function x332200_OnDeplete( sceneId, selfId )
 end
 
 --**********************************
---ֻ��ִ��һ����ڣ�
---������˲�����ܻ���������ɺ��������ӿڣ������������Ҹ��������������ʱ�򣩣�������
---����Ҳ����������ɺ��������ӿڣ����ܵ�һ��ʼ�����ĳɹ�ִ��֮�󣩡�
---����1�������ɹ�������0������ʧ�ܡ�
---ע�������Ǽ�����Чһ�ε����
+--只会执行一次入口：
+--聚气和瞬发技能会在消耗完成后调用这个接口（聚气结束并且各种条件都满足的时候），而引导
+--技能也会在消耗完成后调用这个接口（技能的一开始，消耗成功执行之后）。
+--返回1：处理成功；返回0：处理失败。
+--注：这里是技能生效一次的入口
 --**********************************
 function x332200_OnActivateOnce( sceneId, selfId )
 
-    --����һ������
+    --消耗一个宝箱
     ret = LuaFnDelAvailableItem(sceneId, selfId, x332200_g_DarkBox, 1)
 	if ret ~= 1 then
-		return   --����ɾ����ʧ��,���жϲ���,�����������κ���Ʒ
+		return   --假如删除操失败,则中断操作,不会给予玩家任何物品
 	end
 	
-    --����ͳ�ƣ��������ʹ��
+    --数据统计：暗金宝箱的使用
 	LuaFnAuditDarkKeyUsed(sceneId, selfId, 0, 0)
 	
     local RandomBase = GetDarkBoxItemDropCount( sceneId, selfId )
@@ -118,23 +118,23 @@ function x332200_OnActivateOnce( sceneId, selfId )
 					x332200_ShowRandomSystemNotice( sceneId, selfId, ItemInfo )
 				end
 				
-				local strNotice = "�ɹ��򿪱��䣬��ϲ�������".."#B#{_ITEM"..(RandomID).."}"
+				local strNotice = "成功打开宝箱，恭喜您获得了".."#B#{_ITEM"..(RandomID).."}"
 				x332200_ShowNotice( sceneId, selfId, strNotice)
 				LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, 18, 0);
 			
 			else
-				local strNotice = "�����ռ䲻��"
+				local strNotice = "背包空间不足"
 				x332200_ShowNotice( sceneId, selfId, strNotice)
 			end
 			
-			local SubItem = 30008026  --������Ʒ��100%���ʻ��
+			local SubItem = 30008026  --附属物品，100%几率获得
 			BeginAddItem(sceneId)
 				AddItem( sceneId, SubItem, 1 )
 			Ret = LuaFnEndAddItemIgnoreFatigueState( sceneId, selfId )
 			if Ret > 0 then
 				LuaFnAddItemListToHumanIgnoreFatigueState(sceneId,selfId)
 			else
-				local strNotice = "�����ռ䲻��"
+				local strNotice = "背包空间不足"
 				x332200_ShowNotice( sceneId, selfId, strNotice)
 			end
 			
@@ -146,13 +146,13 @@ function x332200_OnActivateOnce( sceneId, selfId )
 end
 
 --**********************************
---��������������ڣ�
---�������ܻ���ÿ����������ʱ��������ӿڡ�
---���أ�1�����´�������0���ж�������
---ע�������Ǽ�����Чһ�ε����
+--引导心跳处理入口：
+--引导技能会在每次心跳结束时调用这个接口。
+--返回：1继续下次心跳；0：中断引导。
+--注：这里是技能生效一次的入口
 --**********************************
 function x332200_OnActivateEachTick( sceneId, selfId)
-	return 1; --���������Խű�, ֻ�����պ���.
+	return 1; --不是引导性脚本, 只保留空函数.
 end
 
 function x332200_ShowNotice( sceneId, selfId, strNotice)
@@ -166,12 +166,12 @@ function x332200_ShowRandomSystemNotice( sceneId, selfId, strItemInfo )
 	
 	local strNotice =
 	{
-	"#W%s#H���ſտ���Ҳ��#Y%s#H��ŭ����ͷ��ӵ����俳�飬���ⷢ�ֱ���в��в��ŵ�#W%s��",
-	"#W%s#H˫�ֲ����Ľ�#Y%s#H�����򿪣�ֻ��һ�����������#W%s#H�;�����������ס�",
-	"#W%s#H��ԡ���£�ի����ʳ�����о�ǧ��󣬴���#Y%s#H���������Ȼ��һ��#W%s��"
+	"#W%s#H看着空空如也的#Y%s#H，怒从心头起挥刀将其砍碎，意外发现宝箱夹层中藏着的#W%s。",
+	"#W%s#H双手颤抖的将#Y%s#H缓缓打开，只见一道金光闪过，#W%s#H就静静的躺在箱底。",
+	"#W%s#H沐浴更衣，斋戒素食……诵经千遍后，打开了#Y%s#H，箱子里果然有一个#W%s！"
 	}
 	
-	local strDarkBox = "#{_ITEM30008010}" --������
+	local strDarkBox = "#{_ITEM30008010}" --暗金宝箱
 	
 	local PlayerName = GetName( sceneId, selfId )
 	local PlayerInfoName = "#{_INFOUSR"..PlayerName .."}"

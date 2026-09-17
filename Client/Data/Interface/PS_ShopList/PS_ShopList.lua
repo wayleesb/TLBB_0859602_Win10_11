@@ -3,16 +3,16 @@ local g_Selectindex = -1;
 local g_nShopIndex = {};
 local objCared = -1;
 local MAX_OBJ_DISTANCE = 3.0;
-local OpenType =0; --0:ÉÌµêÁĞ±í 1:ÊÕ¹ºÉÌµêÁĞ±í
+local OpenType =0; --0:å•†åº—åˆ—è¡¨ 1:æ”¶è´­å•†åº—åˆ—è¡¨
 local g_LastSelect_NormalShop =""
 local g_LastSelect_RecycleShop =""
 --===============================================
 -- OnLoad
 --===============================================
 function PS_ShopList_PreLoad()
-	this:RegisterEvent("PS_OPEN_SHOPLIST");						-- ´ò¿ªËùÓĞÉÌµêµÄÁĞ±í
-	this:RegisterEvent("PS_UPDATE_SEARCH_SHOPLIST");	-- ´ò¿ª·ÖÀàÕĞÕĞºóµÄÁĞ±í
-	this:RegisterEvent("PS_OPEN_RECYCLESHOPLIST");	-- ´ò¿ª·ÖÀàÕĞÕĞºóµÄÁĞ±í
+	this:RegisterEvent("PS_OPEN_SHOPLIST");						-- æ‰“å¼€æ‰€æœ‰å•†åº—çš„åˆ—è¡¨
+	this:RegisterEvent("PS_UPDATE_SEARCH_SHOPLIST");	-- æ‰“å¼€åˆ†ç±»æ‹›æ‹›åçš„åˆ—è¡¨
+	this:RegisterEvent("PS_OPEN_RECYCLESHOPLIST");	-- æ‰“å¼€åˆ†ç±»æ‹›æ‹›åçš„åˆ—è¡¨
 	this:RegisterEvent("OBJECT_CARED_EVENT");
 	this:RegisterEvent("PS_UPDATE_SEARCH_RECYCLESHOPLIST");
 	
@@ -45,12 +45,12 @@ function PS_ShopList_OnEvent(event)
 		if(tonumber(arg0) ~= objCared) then
 			return;
 		end
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ı£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æœå’ŒNPCçš„è·ç¦»å¤§äºä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if(arg1 == "distance" and tonumber(arg2)>MAX_OBJ_DISTANCE or arg1=="destroy") then
 			g_InitiativeClose = 1;
 			this:Hide();
 
-			--È¡Ïû¹ØĞÄ
+			--å–æ¶ˆå…³å¿ƒ
 			this:CareObject(objCared, 0, "PS_Shoplist");
 		end	
 	elseif(event == "PS_UPDATE_SEARCH_RECYCLESHOPLIST")then
@@ -62,13 +62,13 @@ function PS_ShopList_OnEvent(event)
 end
 
 --===============================================
--- UpdateFrame()   ÒÑ¾­Ã»ÓĞÊ¹ÓÃÕâ¸öº¯ÊıÁË
+-- UpdateFrame()   å·²ç»æ²¡æœ‰ä½¿ç”¨è¿™ä¸ªå‡½æ•°äº†
 --===============================================
 function PS_ShopList_UpdateFrame()
 	
-	--ÉÌÒµÖ¸Êı
+	--å•†ä¸šæŒ‡æ•°
 	local szTemp = PlayerShop:GetCommercialFactor();
-	PS_ShopList_Commerce:SetText("ÉÌÒµÖ¸Êı;" .. szTemp);
+	PS_ShopList_Commerce:SetText("å•†ä¸šæŒ‡æ•°;" .. szTemp);
 	
 	PS_ShopList_ShopList:RemoveAllItem();
 	
@@ -76,7 +76,7 @@ function PS_ShopList_UpdateFrame()
 	
 	for i=0 , nNum-1 do
 		g_nShopIndex[i] = -1;
-		--	    Ãû×Ö,     ×ÜÊıÁ¿, ¿ªÕÅÊı, ÀàĞÍ
+		--	    åå­—,     æ€»æ•°é‡, å¼€å¼ æ•°, ç±»å‹
 		local szShopName,OpenNum,SaleNum,szType = PlayerShop:EnumShop(i);
 		local szState = SaleNum.."/"..OpenNum;
 		PS_ShopList_ShopList:AddNewItem(szShopName, 0, i);
@@ -91,7 +91,7 @@ function PS_ShopList_UpdateFrame()
 end
 
 --===============================================
--- ÏÔÊ¾·ÖÀà²éÑ¯½á¹û
+-- æ˜¾ç¤ºåˆ†ç±»æŸ¥è¯¢ç»“æœ
 --===============================================
 function PS_ShopList_Search_UpdateFrame()
 	PS_ShopList_Check_Item:Show();
@@ -102,7 +102,7 @@ function PS_ShopList_Search_UpdateFrame()
 		PS_ShopList_Check_Item:SetCheck(0);
 		PS_ShopList_RecycleShopList:Hide();
 		PS_ShopList_ShopList:Show();
-		PS_ShopList_Button_Accept:SetProperty("Text", "¹ºÎï");
+		PS_ShopList_Button_Accept:SetProperty("Text", "è´­ç‰©");
 		ListCtr = PS_ShopList_ShopList;
 		PS_ShopList_Find:Show();
 		PS_ShopList_Button_Remove:Show();
@@ -112,7 +112,7 @@ function PS_ShopList_Search_UpdateFrame()
 		PS_ShopList_Check_Item:SetCheck(1);
 		PS_ShopList_RecycleShopList:Show();
 		PS_ShopList_ShopList:Hide();
-		PS_ShopList_Button_Accept:SetProperty("Text", "³öÊÛ");
+		PS_ShopList_Button_Accept:SetProperty("Text", "å‡ºå”®");
 		ListCtr = PS_ShopList_RecycleShopList;
 		PS_ShopList_Find:Hide();
 		PS_ShopList_Button_Manage:Show();
@@ -122,7 +122,7 @@ function PS_ShopList_Search_UpdateFrame()
 
 	
 
-	PS_ShopList_DragTitle:SetText("#gFF0FA0ÉÌ»áµêÆÌ");
+	PS_ShopList_DragTitle:SetText("#gFF0FA0å•†ä¼šåº—é“º");
 
 	local szType = PlayerShop:GetShopListType();
 	if(szType == "panchu" and OpenType==0)  then
@@ -131,23 +131,23 @@ function PS_ShopList_Search_UpdateFrame()
 		PS_ShopList_Check_Item2:Hide();
 		PS_ShopList_Button_Remove:Hide();
 		PS_ShopList_Button_Manage:Hide();
-		PS_ShopList_Button_Accept:SetText("²é¿´");
-		PS_ShopList_DragTitle:SetText("#gFF0FA0×¼±¸ÅÌ³öµÄµêÆÌ");
+		PS_ShopList_Button_Accept:SetText("æŸ¥çœ‹");
+		PS_ShopList_DragTitle:SetText("#gFF0FA0å‡†å¤‡ç›˜å‡ºçš„åº—é“º");
 
 	end
 
 
-	--Çå¿ÕËµÃ÷ÄÚÈİ
-	PS_ShopList_Since:SetText("");				-- ¿ªµêÊ±¼ä
-	PS_ShopList_ShopOwner:SetText("");		-- µêÖ÷Ãû×Ö
-	PS_ShopList_ShopOwnerID:SetText("");	-- µêÖ÷ID
-	PS_ShopList_ShopInfo:SetText("");			-- ½éÉÜ
+	--æ¸…ç©ºè¯´æ˜å†…å®¹
+	PS_ShopList_Since:SetText("");				-- å¼€åº—æ—¶é—´
+	PS_ShopList_ShopOwner:SetText("");		-- åº—ä¸»åå­—
+	PS_ShopList_ShopOwnerID:SetText("");	-- åº—ä¸»ID
+	PS_ShopList_ShopInfo:SetText("");			-- ä»‹ç»
 
 	g_Selectindex = -1;
 
-	--ÉÌÒµÖ¸Êı
+	--å•†ä¸šæŒ‡æ•°
 	local szTemp = PlayerShop:GetCommercialFactor();
-	PS_ShopList_Commerce:SetText("ÉÌÒµÖ¸Êı:" .. szTemp);
+	PS_ShopList_Commerce:SetText("å•†ä¸šæŒ‡æ•°:" .. szTemp);
 	ListCtr:RemoveAllItem();
 	
 	local nNum = PlayerShop:GetShopNum("search");
@@ -203,7 +203,7 @@ end
 --===============================================
 function PS_ShopListRefuse_Clicked()
 	this:Hide();
-	--È¡Ïû¹ØĞÄ
+	--å–æ¶ˆå…³å¿ƒ
 	this:CareObject(objCared, 0, "PS_Shoplist");
 
 end
@@ -212,10 +212,10 @@ end
 -- Accept
 --===============================================
 function PS_ShopListAccept_Clicked(szType)
-	--È¥´ò¿ªÑ¡ÖĞµÄÁĞ±í
+	--å»æ‰“å¼€é€‰ä¸­çš„åˆ—è¡¨
 	if( g_Selectindex >= 0 )      then
 		if OpenType ==1 then
-			--ÊÕ¹ºÉÌµê,¹ºÎï
+			--æ”¶è´­å•†åº—,è´­ç‰©
 			PlayerShop:OpenRecycleShopDLG2(g_nShopIndex[g_Selectindex],szType);
 			return
 		else
@@ -226,18 +226,18 @@ function PS_ShopListAccept_Clicked(szType)
 			end
 		end
 	else 
-		PushDebugMessage("ÇëÑ¡ÔñÒ»¸öÉÌµê");
+		PushDebugMessage("è¯·é€‰æ‹©ä¸€ä¸ªå•†åº—");
 		return;
 	end
 	
 --	this:Hide();
-	--È¡Ïû¹ØĞÄ
+	--å–æ¶ˆå…³å¿ƒ
 --	this:CareObject(objCared, 0, "PS_Shoplist");
 	
 end
 
 --===============================================
--- µã»÷ÁĞ±í
+-- ç‚¹å‡»åˆ—è¡¨
 --===============================================
 function PS_ShopList_SelectChanged()
 	
@@ -254,7 +254,7 @@ function PS_ShopList_SelectChanged()
 	
 	g_LastSelect_NormalShop = szShopName;
 	
-	--¸üĞÂÏÔÊ¾µÄĞÅÏ¢
+	--æ›´æ–°æ˜¾ç¤ºçš„ä¿¡æ¯
 	UpdateShopInfo()
 	
 end
@@ -274,13 +274,13 @@ function PS_RecycleShopList_SelectChanged()
 	
 	g_LastSelect_RecycleShop = szShopName;
 	
-	--¸üĞÂÏÔÊ¾µÄĞÅÏ¢
+	--æ›´æ–°æ˜¾ç¤ºçš„ä¿¡æ¯
 	UpdateShopInfo()
 	
 end
 
 --===============================================
--- ¸üĞÂÉÌµêµÄĞÅÏ¢
+-- æ›´æ–°å•†åº—çš„ä¿¡æ¯
 --===============================================
 function UpdateShopInfo()
 
@@ -288,20 +288,20 @@ function UpdateShopInfo()
 		return;
 	end
 	
-	--¸üĞÂĞÅÏ¢
-	-- ¿ªµêÊ±¼ä
+	--æ›´æ–°ä¿¡æ¯
+	-- å¼€åº—æ—¶é—´
 	local szSince = PlayerShop:EnumShopInfo("since",g_nShopIndex[g_Selectindex]);
-	PS_ShopList_Since:SetText("´´½¨Ê±¼ä:".. szSince);
+	PS_ShopList_Since:SetText("åˆ›å»ºæ—¶é—´:".. szSince);
 	
-	-- µêÖ÷Ãû×Ö --¸ÄÎª³¬Á´½Ó by wangdw
+	-- åº—ä¸»åå­— --æ”¹ä¸ºè¶…é“¾æ¥ by wangdw
 	local szName = PlayerShop:EnumShopInfo("ownername",g_nShopIndex[g_Selectindex]);
-	PS_ShopList_ShopOwner:SetChatString("#YµêÖ÷:#{_INFOUSR".. szName .. "}");
+	PS_ShopList_ShopOwner:SetChatString("#Yåº—ä¸»:#{_INFOUSR".. szName .. "}");
 	
-	-- µêÖ÷ID
+	-- åº—ä¸»ID
 	local szID = PlayerShop:EnumShopInfo("ownerid",g_nShopIndex[g_Selectindex]);
 	PS_ShopList_ShopOwnerID:SetText("ID:".. szID);
 	
-	-- ½éÉÜ
+	-- ä»‹ç»
 	local szInfo = "";
 	if(OpenType == 0)then
 		 szInfo = PlayerShop:EnumShopInfo("desc",g_nShopIndex[g_Selectindex]);
@@ -311,13 +311,13 @@ function UpdateShopInfo()
 		
 	PS_ShopList_ShopInfo:SetText(szInfo);
 	
-	-- ¼ÓÈë/È¥³ı Ãûµê
+	-- åŠ å…¥/å»é™¤ ååº—
 	if( g_Selectindex == -1 )   then 
 		return;
 	end
 	local szShopName,OpenNum,SaleNum,szType,nIsFavor = PlayerShop:EnumShop(g_nShopIndex[g_Selectindex]);
 	if(nIsFavor == 1)   then
-		PS_ShopList_Button_Remove:SetText("È¥³ıÃûµê");
+		PS_ShopList_Button_Remove:SetText("å»é™¤ååº—");
 	else
 		PS_ShopList_Button_Remove:SetText("#{INTERFACE_XML_353}");
 	end
@@ -330,19 +330,19 @@ end
 --===============================================
 function PS_CreateShopClose_Clicked()
 	this:Hide();
-	--È¡Ïû¹ØĞÄ
+	--å–æ¶ˆå…³å¿ƒ
 	this:CareObject(objCared, 0, "PS_Shoplist");
 end
 
 --===============================================
--- ²éÕÒ
+-- æŸ¥æ‰¾
 --===============================================
 function PS_ShopList_Find_Clicked()
 	PlayerShop:OpenFindShop();
 end
 
 --===============================================
--- ¼ÓÈë/È¥³ı Ãûµê
+-- åŠ å…¥/å»é™¤ ååº—
 --===============================================
 function PS_ShopList_Favor_Clicked()
 	local selectIndex = PS_ShopList_ShopList:GetSelectItem();
@@ -353,7 +353,7 @@ function PS_ShopList_Favor_Clicked()
 	
 	local totalCount = PS_ShopList_ShopList:GetItemCount();
 	
-	--¼ÓÈëÃûµêºó£¬×Ô¶¯Ñ¡ÖĞÏÂÒ»¸öµê£¬Èç¹ûÒÑ¾­ÊÇ×îºóÒ»¸öµêÁË£¬ÔòÑ¡ÖĞÇ°Ò»¸ö£¬Èç¹ûÖ»ÓĞÒ»¸öµê£¬ÔòÑ¡ÖĞ×Ô¼º
+	--åŠ å…¥ååº—åï¼Œè‡ªåŠ¨é€‰ä¸­ä¸‹ä¸€ä¸ªåº—ï¼Œå¦‚æœå·²ç»æ˜¯æœ€åä¸€ä¸ªåº—äº†ï¼Œåˆ™é€‰ä¸­å‰ä¸€ä¸ªï¼Œå¦‚æœåªæœ‰ä¸€ä¸ªåº—ï¼Œåˆ™é€‰ä¸­è‡ªå·±
 	if(selectIndex + 1 < totalCount) then
 		local szShopName,OpenNum,SaleNum,szType,nIsFavor,nRecItemnum, nFrezeType = PlayerShop:EnumShop(g_nShopIndex[selectIndex + 1]);
 		g_LastSelect_NormalShop = szShopName;

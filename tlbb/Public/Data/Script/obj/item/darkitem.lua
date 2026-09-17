@@ -1,5 +1,5 @@
---���ߣ�����˫������ʹ�����
---�ű��� 332207
+--道具：暗器双倍经验使用相关
+--脚本号 332207
 --Author:  houzhifang  2008-12-11
 
 x332207_g_scriptId = 332207
@@ -16,34 +16,34 @@ x332207_DarkItem_ResetQuality = {type1= 30503119, type2= 30503120}
 x332207_DarkItem_Resetdark = 30503121
 
 --**********************************
---�¼��������
+--事件交互入口
 --**********************************
 function x332207_OnDefaultEvent( sceneId, selfId, bagIndex )
--- ����Ҫ����ӿڣ������պ���
+-- 不需要这个接口，保留空函数
 end
 
 --**********************************
---�����Ʒ��ʹ�ù����Ƿ������ڼ��ܣ�
---ϵͳ����ִ�п�ʼʱ�����������ķ���ֵ���������ʧ������Ժ�������Ƽ��ܵ�ִ�С�
---����1���������Ƶ���Ʒ�����Լ������Ƽ��ܵ�ִ�У�����0�����Ժ���Ĳ�����
+--这个物品的使用过程是否类似于技能：
+--系统会在执行开始时检测这个函数的返回值，如果返回失败则忽略后面的类似技能的执行。
+--返回1：技能类似的物品，可以继续类似技能的执行；返回0：忽略后面的操作。
 --**********************************
 function x332207_IsSkillLikeScript( sceneId, selfId)
-	return 1; --����ű���Ҫ����֧��
+	return 1; --这个脚本需要动作支持
 end
 
 --**********************************
---ֱ��ȡ��Ч����
---ϵͳ��ֱ�ӵ�������ӿڣ���������������ķ���ֵȷ���Ժ�������Ƿ�ִ�С�
---����1���Ѿ�ȡ����ӦЧ��������ִ�к�������������0��û�м�⵽���Ч��������ִ�С�
+--直接取消效果：
+--系统会直接调用这个接口，并根据这个函数的返回值确定以后的流程是否执行。
+--返回1：已经取消对应效果，不再执行后续操作；返回0：没有检测到相关效果，继续执行。
 --**********************************
 function x332207_CancelImpacts( sceneId, selfId )
-	return 0; --����Ҫ����ӿڣ���Ҫ�����պ���,����ʼ�շ���0��
+	return 0; --不需要这个接口，但要保留空函数,并且始终返回0。
 end
 
 --**********************************
---���������ڣ�
---ϵͳ���ڼ��ܼ���ʱ����������ӿڣ���������������ķ���ֵȷ���Ժ�������Ƿ�ִ�С�
---����1���������ͨ�������Լ���ִ�У�����0���������ʧ�ܣ��жϺ���ִ�С�
+--条件检测入口：
+--系统会在技能检测的时间点调用这个接口，并根据这个函数的返回值确定以后的流程是否执行。
+--返回1：条件检测通过，可以继续执行；返回0：条件检测失败，中断后续执行。
 --**********************************
 function x332207_OnConditionCheck( sceneId, selfId )
 	if(1~=LuaFnVerifyUsedItem(sceneId, selfId)) then
@@ -67,7 +67,7 @@ function x332207_OnConditionCheck( sceneId, selfId )
 	end
 	
 	local nHaveImpact = 0
-	--houzf 20090114�޸ģ�����Ѿ����ù�2���ģ��Ͳ��������ˣ�����Ѿ��������1.5���ģ�����Ա�2���Ķ�������������1.5����
+	--houzf 20090114修改，如果已经设置过2倍的，就不能再设了，如果已经设过的是1.5倍的，则可以被2倍的顶掉，不能再设1.5倍的
 	if (nItemIndex == x332207_DarkItem_DoubleExp[2].ItemIndex) then
 		for i = 1, getn(x332207_DarkItem_DoubleExp) do
 			local nRet = LuaFnHaveImpactOfSpecificDataIndex(sceneId, selfId, x332207_DarkItem_DoubleExp[i].ImpactId)
@@ -95,14 +95,14 @@ function x332207_OnConditionCheck( sceneId, selfId )
 		return 0;
 	end
 	
-	return 1; --����Ҫ�κ�����������ʼ�շ���1��
+	return 1; --不需要任何条件，并且始终返回1。
 end
 
 --**********************************
---���ļ�⼰������ڣ�
---ϵͳ���ڼ������ĵ�ʱ����������ӿڣ���������������ķ���ֵȷ���Ժ�������Ƿ�ִ�С�
---����1�����Ĵ���ͨ�������Լ���ִ�У�����0�����ļ��ʧ�ܣ��жϺ���ִ�С�
---ע�⣺�ⲻ�⸺�����ĵļ��Ҳ�������ĵ�ִ�С�
+--消耗检测及处理入口：
+--系统会在技能消耗的时间点调用这个接口，并根据这个函数的返回值确定以后的流程是否执行。
+--返回1：消耗处理通过，可以继续执行；返回0：消耗检测失败，中断后续执行。
+--注意：这不光负责消耗的检测也负责消耗的执行。
 --**********************************
 function x332207_OnDeplete( sceneId, selfId )
 	
@@ -114,11 +114,11 @@ function x332207_OnDeplete( sceneId, selfId )
 end
 
 --**********************************
---ֻ��ִ��һ����ڣ�
---������˲�����ܻ���������ɺ��������ӿڣ������������Ҹ��������������ʱ�򣩣�������
---����Ҳ����������ɺ��������ӿڣ����ܵ�һ��ʼ�����ĳɹ�ִ��֮�󣩡�
---����1�������ɹ�������0������ʧ�ܡ�
---ע�������Ǽ�����Чһ�ε����
+--只会执行一次入口：
+--聚气和瞬发技能会在消耗完成后调用这个接口（聚气结束并且各种条件都满足的时候），而引导
+--技能也会在消耗完成后调用这个接口（技能的一开始，消耗成功执行之后）。
+--返回1：处理成功；返回0：处理失败。
+--注：这里是技能生效一次的入口
 --**********************************
 function x332207_OnActivateOnce( sceneId, selfId )
 
@@ -138,7 +138,7 @@ function x332207_OnActivateOnce( sceneId, selfId )
 	end
 	
 	local nHaveImpact = 0
-	--houzf 20090114�޸ģ�����Ѿ����ù�2���ģ��Ͳ��������ˣ�����Ѿ��������1.5���ģ�����Ա�2���Ķ�������������1.5����
+	--houzf 20090114修改，如果已经设置过2倍的，就不能再设了，如果已经设过的是1.5倍的，则可以被2倍的顶掉，不能再设1.5倍的
 	if (nItemIndex == x332207_DarkItem_DoubleExp[2].ItemIndex) then
 		for i = 1, getn(x332207_DarkItem_DoubleExp) do
 			local nRet = LuaFnHaveImpactOfSpecificDataIndex(sceneId, selfId, x332207_DarkItem_DoubleExp[i].ImpactId)
@@ -172,13 +172,13 @@ function x332207_OnActivateOnce( sceneId, selfId )
 end
 
 --**********************************
---��������������ڣ�
---�������ܻ���ÿ����������ʱ��������ӿڡ�
---���أ�1�����´�������0���ж�������
---ע�������Ǽ�����Чһ�ε����
+--引导心跳处理入口：
+--引导技能会在每次心跳结束时调用这个接口。
+--返回：1继续下次心跳；0：中断引导。
+--注：这里是技能生效一次的入口
 --**********************************
 function x332207_OnActivateEachTick( sceneId, selfId)
-	return 1; --���������Խű�, ֻ�����պ���.
+	return 1; --不是引导性脚本, 只保留空函数.
 end
 
 function x332207_ShowNotice( sceneId, selfId, strNotice)
@@ -190,7 +190,7 @@ end
 
 function x332207_ShowRandomSystemNotice( sceneId, selfId, strItemInfo )
 	
-	--�����������û����
+	--这个函数现在没有用
 	--local PlayerName = GetName(sceneId,selfId)
 	--local str = format( x332206_g_strGongGaoInfo, PlayerName, strItemInfo )
 	--BroadMsgByChatPipe( sceneId, selfId, str, 4 )
@@ -214,7 +214,7 @@ function x332207_DarkAttrAdjustForBagItem( sceneId, selfId, bagpos, attrfrom )
 		return
 	end
 	
-	--�������Ʒ��
+	--有这个物品吗
 	local bHave = LuaFnGetAvailableItemCount(sceneId, selfId, x332207_DarkItem_AdjustAttrItem);
 	if(bHave < 1) then
 		DarkOperateResult(sceneId, selfId, 0, -2);
@@ -230,7 +230,7 @@ function x332207_DarkAttrAdjustForBagItem( sceneId, selfId, bagpos, attrfrom )
 	    return
 	end
 	
-	--�۳��ɹ�
+	--扣除成功
 	if (LuaFnDelAvailableItem(sceneId, selfId, x332207_DarkItem_AdjustAttrItem, 1) ~= 1)  then
 		DarkOperateResult(sceneId, selfId, 0, -2);
 		return
@@ -239,10 +239,10 @@ function x332207_DarkAttrAdjustForBagItem( sceneId, selfId, bagpos, attrfrom )
 	SetDarkCleanTimes(sceneId, selfId, bagpos, nCleanTimes+1);
 	local nAttrTo = AdjustDarkAttrForBagItem(sceneId, selfId, bagpos, attrfrom );
 	if nAttrTo == -1 then
-		--ʧ���ˣ�֪ͨ�ͻ���
+		--失败了，通知客户端
 		DarkOperateResult(sceneId, selfId, 0, -1);
 	else
-		--�ɹ��ˣ�֪ͨ�ͻ���
+		--成功了，通知客户端
 		DarkOperateResult(sceneId, selfId, 0, nAttrTo);
 		x332207_SendImpact(sceneId, selfId, 1);
 	end
@@ -250,7 +250,7 @@ end
 
 function x332207_DarkSkillAdjustForBagItem( sceneId, selfId, bagpos )
 	
-	--�������Ʒ��
+	--有这个物品吗
 	local bHave = LuaFnGetAvailableItemCount(sceneId, selfId, x332207_DarkItem_AdjustSkillItem);
 	if(bHave < 1) then
 		DarkOperateResult(sceneId, selfId, 1, -2);
@@ -264,7 +264,7 @@ function x332207_DarkSkillAdjustForBagItem( sceneId, selfId, bagpos )
 	if ( 1 ~= bCostMoney ) then
 	    return
 	end
-	--�۳��ɹ�
+	--扣除成功
 	if (LuaFnDelAvailableItem(sceneId, selfId, x332207_DarkItem_AdjustSkillItem, 1) ~= 1)  then
 		DarkOperateResult(sceneId, selfId, 1, -2);
 		return
@@ -272,17 +272,17 @@ function x332207_DarkSkillAdjustForBagItem( sceneId, selfId, bagpos )
 	
 	local nSucc = AdjustDarkSkillForBagItem(sceneId, selfId, bagpos);
 	if nSucc ~= 1 then
-		--ʧ���ˣ�֪ͨ�ͻ���
+		--失败了，通知客户端
 		DarkOperateResult(sceneId, selfId, 1, -1);
 	else
-		--�ɹ��ˣ�֪ͨ�ͻ���
+		--成功了，通知客户端
 		DarkOperateResult(sceneId, selfId, 1, 1);
 		x332207_SendImpact(sceneId, selfId, 2);
 	end
 end
 
 function x332207_DarkResetForBagItem( sceneId, selfId, bagpos )
-	--�������Ʒ��
+	--有这个物品吗
 	local nNeedItem = x332207_DarkItem_Resetdark;
 		 
 	local bHave = LuaFnGetAvailableItemCount(sceneId, selfId, nNeedItem);
@@ -298,7 +298,7 @@ function x332207_DarkResetForBagItem( sceneId, selfId, bagpos )
 	if ( 1 ~= bCostMoney ) then
 	    return
 	end
-	--�۳��ɹ�
+	--扣除成功
 	if (LuaFnDelAvailableItem(sceneId, selfId, nNeedItem, 1) ~= 1)  then
 		DarkOperateResult(sceneId, selfId, 6, -2);
 		return
@@ -306,17 +306,17 @@ function x332207_DarkResetForBagItem( sceneId, selfId, bagpos )
 	
 	local nSucc = ResetDarkForBagItem(sceneId, selfId, bagpos);
 	if nSucc ~= 1 then
-		--ʧ���ˣ�֪ͨ�ͻ���
+		--失败了，通知客户端
 		DarkOperateResult(sceneId, selfId, 6, -1);
 	else
-		--�ɹ��ˣ�֪ͨ�ͻ���
+		--成功了，通知客户端
 		DarkOperateResult(sceneId, selfId, 6, 1);
 		x332207_SendImpact(sceneId, selfId, 3);
 	end
 end
 
 function x332207_DarkResetQualityForBagItem( sceneId, selfId, bagpos, resettype)
---�������Ʒ��
+--有这个物品吗
 	local nNeedItem = x332207_DarkItem_ResetQuality.type1;
 	if(resettype == 2) then
 		nNeedItem = x332207_DarkItem_ResetQuality.type2;
@@ -341,7 +341,7 @@ function x332207_DarkResetQualityForBagItem( sceneId, selfId, bagpos, resettype)
 	    return
 	end
 	
-	--�۳��ɹ�
+	--扣除成功
 	if (LuaFnDelAvailableItem(sceneId, selfId, nNeedItem, 1) ~= 1)  then
 		DarkOperateResult(sceneId, selfId, 2, -2);
 		return
@@ -349,10 +349,10 @@ function x332207_DarkResetQualityForBagItem( sceneId, selfId, bagpos, resettype)
 	
 	local nSucc = ResetDarkQualityForBagItem(sceneId, selfId, bagpos, resettype);
 	if nSucc ~= 1 then
-		--ʧ���ˣ�֪ͨ�ͻ���
+		--失败了，通知客户端
 		DarkOperateResult(sceneId, selfId, 2, -1);
 	else
-		--�ɹ��ˣ�֪ͨ�ͻ���
+		--成功了，通知客户端
 		DarkOperateResult(sceneId, selfId, 2, 1);
 		x332207_SendImpact(sceneId, selfId, 3);
 	end
@@ -374,7 +374,7 @@ end
 
 function x332207_SendImpact(sceneId, playerId, ntype)
 
-	LuaFnSendSpecificImpactToUnit(sceneId, playerId, playerId, playerId, 18, 0 )   --������������������Чһ��
+	LuaFnSendSpecificImpactToUnit(sceneId, playerId, playerId, playerId, 18, 0 )   --与珍兽悟性提升的特效一致
 	
 end
 
@@ -392,7 +392,7 @@ function x332207_NotifyMailOnLogin(sceneId, selfId)
 end
 
 function x332207_HaveEnoughMoney(sceneId, selfId, nType, nMoney)
-   	--�ж���������Ƿ����㹻��Ǯ
+   	--判断玩家身上是否有足够的钱
 	local nHaveMoney = GetMoney(sceneId, selfId) + GetMoneyJZ(sceneId, selfId);
 	if (nHaveMoney >= nMoney) then
 	    return 1;
@@ -403,7 +403,7 @@ function x332207_HaveEnoughMoney(sceneId, selfId, nType, nMoney)
 end
 
 function x332207_CostMoney(sceneId, selfId, nType, nMoney)
-   	--��Ǯ
+   	--扣钱
 	local nRet, nRetJB = LuaFnCostMoneyWithPriority(sceneId, selfId,nMoney);
 	if (nRet == -1) then
         DarkOperateResult(sceneId, selfId, nType, -4);

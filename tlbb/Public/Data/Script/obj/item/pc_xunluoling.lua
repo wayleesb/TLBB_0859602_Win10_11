@@ -1,13 +1,13 @@
---Íæ¼Ò³ÇÊĞ¡¢Ñ²ÂßÁî
+--ç©å®¶åŸå¸‚ã€å·¡é€»ä»¤
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x300024_g_scriptId = 300024
 
---ÈÎÎñºÅ
+--ä»»åŠ¡å·
 x300024_g_MissionId = 1109
 
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x300024_g_eventList={211208}
 
 x300024_g_Pos = {{x=44,z=45},{x=55,z=55},{x=65,z=55},{x=99,z=55},{x=45,z=74},{x=56,z=64},{x=56,z=80},
@@ -16,7 +16,7 @@ x300024_g_Pos = {{x=44,z=45},{x=55,z=55},{x=65,z=55},{x=99,z=55},{x=45,z=74},{x=
 							{x=44,z=125},{x=44,z=135},{x=45,z=145},{x=99,z=143},{x=75,z=140},{x=64,z=150},{x=140,z=130},
 							{x=150,z=140},{x=120,z=150},{x=120,z=150}}
 
--- ÌØ±ğ×¢Òâ£¬ÕâÀïµÄ¶¨Òå£¬Í¬ÊÂÔÚpc_xunluoing.lua ÖĞÒ²ÓĞÏàÍ¬µÄ¶¨Òå£¬ĞèÒªÍ¬²½¸Ä
+-- ç‰¹åˆ«æ³¨æ„ï¼Œè¿™é‡Œçš„å®šä¹‰ï¼ŒåŒäº‹åœ¨pc_xunluoing.lua ä¸­ä¹Ÿæœ‰ç›¸åŒçš„å®šä¹‰ï¼Œéœ€è¦åŒæ­¥æ”¹
 x300024_g_MonsterId = {
 {n=100,id=3550},{n=101,id=3551},{n=102,id=3552},{n=103,id=3553},{n=104,id=3554},{n=105,id=3555},{n=106,id=3556},{n=107,id=3557},{n=108,id=3558},{n=109,id=3559},
 {n=110,id=3560},{n=111,id=3561},{n=112,id=3562},{n=113,id=3563},{n=114,id=3564},{n=115,id=3565},{n=116,id=3566},{n=117,id=3567},{n=118,id=3568},{n=119,id=3569},
@@ -29,22 +29,22 @@ x300024_g_MonsterId = {
 {n=180,id=3630},{n=181,id=3631},{n=182,id=3632},{n=183,id=3633},{n=184,id=3634},{n=185,id=3635},{n=186,id=3636},{n=187,id=3637},{n=188,id=3638},{n=189,id=3639},
 }
 
--- ÌØ±ğ×¢Òâ£¬ÕâÀïµÄ¶¨Òå£¬Í¬ÊÂÔÚpc_xunluoing.lua ÖĞÒ²ÓĞÏàÍ¬µÄ¶¨Òå£¬ĞèÒªÍ¬²½¸Ä
+-- ç‰¹åˆ«æ³¨æ„ï¼Œè¿™é‡Œçš„å®šä¹‰ï¼ŒåŒäº‹åœ¨pc_xunluoing.lua ä¸­ä¹Ÿæœ‰ç›¸åŒçš„å®šä¹‰ï¼Œéœ€è¦åŒæ­¥æ”¹
 x300024_g_MonsterName = {
-"ÄÂ",
-"µË",
-"¹Ø",
-"ËÎ",
-"ÓÚ",
-"¼×¶ù",
-"Ğ¡¼×",
-"ÒÒ¶ù",
-"Ğ¡ÒÒ",
-"±û¶ù",
+"ç©†",
+"é‚“",
+"å…³",
+"å®‹",
+"äº",
+"ç”²å„¿",
+"å°ç”²",
+"ä¹™å„¿",
+"å°ä¹™",
+"ä¸™å„¿",
 }
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x300024_OnDefaultEvent( sceneId, selfId, BagIndex )
 
@@ -65,25 +65,25 @@ function x300024_OnDefaultEvent( sceneId, selfId, BagIndex )
 		return
 	end
 
-	-- »ñµÃµ±Ç°µÄËæ»úÖµ£¬¿´¿´ÊÇ²»ÊÇ0£¬Èç¹ûÊÇ0£¬¾Í´ÓĞÂÈ¡µÃËæ»úÊı
+	-- è·å¾—å½“å‰çš„éšæœºå€¼ï¼Œçœ‹çœ‹æ˜¯ä¸æ˜¯0ï¼Œå¦‚æœæ˜¯0ï¼Œå°±ä»æ–°å–å¾—éšæœºæ•°
 	local nData = GetMissionData(sceneId, selfId, MD_MILITARY_ROND_POSITION)
 	if nData == 0   then 
 		nData = random( getn(x300024_g_Pos) )
 		SetMissionData( sceneId, selfId, MD_MILITARY_ROND_POSITION, nData)
 	end
 
-	-- ÅĞ¶¨Íæ¼ÒÊÇ²»ÊÇÒÑ¾­½øÈëÁËÕâ¸öÇøÓò
-	-- È¡µÃÍæ¼Òµ±Ç°×ø±ê
+	-- åˆ¤å®šç©å®¶æ˜¯ä¸æ˜¯å·²ç»è¿›å…¥äº†è¿™ä¸ªåŒºåŸŸ
+	-- å–å¾—ç©å®¶å½“å‰åæ ‡
 	PlayerX = GetHumanWorldX(sceneId,selfId)
 	PlayerZ = GetHumanWorldZ(sceneId,selfId)
 	
-	--¼ÆËãÍæ¼ÒÓë±¦²ØµÄ¾àÀë
+	--è®¡ç®—ç©å®¶ä¸å®è—çš„è·ç¦»
 	Distance = floor(sqrt((x300024_g_Pos[nData].x - PlayerX) * (x300024_g_Pos[nData].x - PlayerX) + (x300024_g_Pos[nData].z - PlayerZ) * (x300024_g_Pos[nData].z - PlayerZ)))
 	
 	if Distance > 5  then
-		-- Íæ¼Òµã»÷Õâ¸öÎïÆ·£¬»áµ¯³öÑ²ÂßÁîµÄ£¬¸æËßÍæ¼ÒÔÚÊ²Ã´µØµã¿ÉÒÔÊ¹ÓÃÕâ¸öÎïÆ·
+		-- ç©å®¶ç‚¹å‡»è¿™ä¸ªç‰©å“ï¼Œä¼šå¼¹å‡ºå·¡é€»ä»¤çš„ï¼Œå‘Šè¯‰ç©å®¶åœ¨ä»€ä¹ˆåœ°ç‚¹å¯ä»¥ä½¿ç”¨è¿™ä¸ªç‰©å“
 		BeginEvent(sceneId)
-			AddText(sceneId,"  ÄãĞèÒªµ½×Ô¼º³ÇÊĞµÄÕâ¸öÎ»ÖÃ£¨" .. tostring(x300024_g_Pos[nData].x) .. "," .. tostring(x300024_g_Pos[nData].z) .. "£©È¥Ñ°ÕÒ¼äµı")
+			AddText(sceneId,"  ä½ éœ€è¦åˆ°è‡ªå·±åŸå¸‚çš„è¿™ä¸ªä½ç½®ï¼ˆ" .. tostring(x300024_g_Pos[nData].x) .. "," .. tostring(x300024_g_Pos[nData].z) .. "ï¼‰å»å¯»æ‰¾é—´è°")
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,-1)
 	
@@ -97,25 +97,25 @@ function x300024_OnDefaultEvent( sceneId, selfId, BagIndex )
 
 		if DelItem( sceneId, selfId, 40004413, 1 ) > 0 then
 		
-			-- ÕâÀï¸ù¾İÈÎÎñÖĞ±£´æµÄÊı¾İÀ´·Å¹Ö
+			-- è¿™é‡Œæ ¹æ®ä»»åŠ¡ä¸­ä¿å­˜çš„æ•°æ®æ¥æ”¾æ€ª
 			local nIndex = GetMissionParam(sceneId, selfId, misIndex, 5)
 			for i ,nn in x300024_g_MonsterId  do
 				if nn.n == nIndex  then
-					--´´½¨¹ÖÎï£¬
+					--åˆ›å»ºæ€ªç‰©ï¼Œ
 					local MonsterId = LuaFnCreateMonster(sceneId, nn.id, x300024_g_Pos[nData].x, x300024_g_Pos[nData].z, 1, 0, -1)
 					
-					-- ÉèÖÃÕâ¸ö¹ÖµÄ×Ô¶¯ÏûÊ§Ê±¼ä  £¨15·ÖÖĞ¡££©
+					-- è®¾ç½®è¿™ä¸ªæ€ªçš„è‡ªåŠ¨æ¶ˆå¤±æ—¶é—´  ï¼ˆ15åˆ†ä¸­ã€‚ï¼‰
 					SetCharacterDieTime(sceneId, MonsterId, 15*60000)
 		
-					-- ÉèÖÃ¹ÖÎïµÈ¼¶
+					-- è®¾ç½®æ€ªç‰©ç­‰çº§
 					local nPlayerLevel = GetLevel(sceneId, selfId)
 					SetLevel(sceneId, MonsterId, nPlayerLevel - 2)
 
-					-- ÉèÖÃÕâ¸ö¹ÖÎª²»ÄÜ¹¥»÷
-					local curCampID = 8 --¶ÔÍæ¼Ò¶Ô¹Ö¶¼ÊÇÓÑºÃµÄÕóÓª
+					-- è®¾ç½®è¿™ä¸ªæ€ªä¸ºä¸èƒ½æ”»å‡»
+					local curCampID = 8 --å¯¹ç©å®¶å¯¹æ€ªéƒ½æ˜¯å‹å¥½çš„é˜µè¥
 					SetNpcCamp(sceneId, MonsterId, curCampID)
 
-					-- ±£´æÕâ¸ö¹ÖÎïµÄ±àºÅ,Í¬Ê±±£´æÒ»¸öÒÑ¾­·Å³ö¹ÖÎïµÄ±êÖ¾
+					-- ä¿å­˜è¿™ä¸ªæ€ªç‰©çš„ç¼–å·,åŒæ—¶ä¿å­˜ä¸€ä¸ªå·²ç»æ”¾å‡ºæ€ªç‰©çš„æ ‡å¿—
 					SetMissionByIndex(sceneId, selfId, misIndex, 4, MonsterId)
 					SetMissionByIndex(sceneId, selfId, misIndex, 3, 999)
 					
@@ -124,7 +124,7 @@ function x300024_OnDefaultEvent( sceneId, selfId, BagIndex )
 					
 					local szXin = x300024_g_MonsterName[nXin] .. x300024_g_MonsterName[nMing]
 					
-					-- °Ñ¹ÖµÄÃû×ÖÉèÖÃÎª³ÆºÅ£¬È»ºóÃû×ÖÓÃÕâ¸ö±íÊ¾
+					-- æŠŠæ€ªçš„åå­—è®¾ç½®ä¸ºç§°å·ï¼Œç„¶ååå­—ç”¨è¿™ä¸ªè¡¨ç¤º
 					SetCharacterTitle(sceneId, MonsterId, GetName(sceneId, MonsterId))
 					
 					-- 
@@ -134,8 +134,8 @@ function x300024_OnDefaultEvent( sceneId, selfId, BagIndex )
 			end
 
 			BeginEvent(sceneId)
-				AddText(sceneId, "  ÎÒÖ»ÊÇÔÚ¹ó°ï¹ä¹ä£¬²¢ÎŞ¶ñÒâ¡£")
-				AddNumText(sceneId, x300024_g_scriptId,"»³ÒÉÄãÊÇÏ¸×÷£¬ÄÃÏÂ£¡", 10, 1)
+				AddText(sceneId, "  æˆ‘åªæ˜¯åœ¨è´µå¸®é€›é€›ï¼Œå¹¶æ— æ¶æ„ã€‚")
+				AddNumText(sceneId, x300024_g_scriptId,"æ€€ç–‘ä½ æ˜¯ç»†ä½œï¼Œæ‹¿ä¸‹ï¼", 10, 1)
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,-1)
 		end
@@ -143,7 +143,7 @@ function x300024_OnDefaultEvent( sceneId, selfId, BagIndex )
 end
 
 --**********************************
---Ë¢ĞÂÊÂ¼ş
+--åˆ·æ–°äº‹ä»¶
 --**********************************
 function x300024_OnEventRequest( sceneId, selfId, targetId, eventId )
 		--CallScriptFunction( eventId, "OnDefaultEvent",sceneId, selfId, targetId )
@@ -151,7 +151,7 @@ function x300024_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x300024_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x300024_g_eventList do
@@ -166,10 +166,10 @@ function x300024_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x300024_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
-	--¾Ü¾øÖ®ºó£¬Òª·µ»ØNPCµÄÊÂ¼şÁĞ±í
+	--æ‹’ç»ä¹‹åï¼Œè¦è¿”å›NPCçš„äº‹ä»¶åˆ—è¡¨
 	--for i, findId in x300024_g_eventList do
 	--	if missionScriptId == findId then
 	--		UpdateEventList( sceneId, selfId, targetId )
@@ -183,7 +183,7 @@ function x300024_IsSkillLikeScript( sceneId, selfId)
 end
 
 --**********************************
---É±ËÀ¹ÖÎï»òÍæ¼Ò
+--æ€æ­»æ€ªç‰©æˆ–ç©å®¶
 --**********************************
 function x300024_OnKillObject( sceneId, selfId, objdataId ,objId )
 

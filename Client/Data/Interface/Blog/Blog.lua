@@ -24,20 +24,20 @@ function Blog_OnEvent(event)
 		end
 		
 		if(arg1 == "BLOG_STATUS_FAILED") then
-			Blog_Show_Cover("#Y´ò¿ª²©¿ÍÊ§°Ü!");
+			Blog_Show_Cover("#Yæ‰“å¼€åšå®¢å¤±è´¥!");
 		elseif(arg1 == "BLOG_STATUS_WORKING") then
-			Blog_Show_Cover("´ò¿ª²©¿ÍÖĞ...");
+			Blog_Show_Cover("æ‰“å¼€åšå®¢ä¸­...");
 		end
 	elseif(event == "UPDATE_BLOG") then
 		
 		if(arg0 == "BLOG_STATUS_INEXIT") then
-			Blog_Show_Cover("#Y²©¿Í²»´æÔÚ!");
+			Blog_Show_Cover("#Yåšå®¢ä¸å­˜åœ¨!");
 		elseif(arg0 == "BLOG_STATUS_FAILED") then
-			Blog_Show_Cover("#Y´ò¿ª²©¿ÍÊ§°Ü!");
+			Blog_Show_Cover("#Yæ‰“å¼€åšå®¢å¤±è´¥!");
 		elseif(arg0 == "BLOG_STATUS_SUCCESS") then
 			Blog_UpdateFrame();
 		else 
-			Blog_Show_Cover("#RÎ´Öª´íÎó:" .. arg1);
+			Blog_Show_Cover("#RæœªçŸ¥é”™è¯¯:" .. arg1);
 		end
 	end
 
@@ -70,8 +70,8 @@ function Blog_UpdateFrame()
 	Blog_Text3:SetProperty("Text_Utf8",strName)
 	Link[0] = strName
 	
-	--ĞŞ¸Ä³¬Á´½ÓÏÔÊ¾µÄÑùÊ½(ÓëÕæÊµ³¬Á´½ÓµØÖ·²»Ò»Ñù) --add by xindefeng
-	local strShowLink = Player:GetName().." µÄ²©¿Í"
+	--ä¿®æ”¹è¶…é“¾æ¥æ˜¾ç¤ºçš„æ ·å¼(ä¸çœŸå®è¶…é“¾æ¥åœ°å€ä¸ä¸€æ ·) --add by xindefeng
+	local strShowLink = Player:GetName().." çš„åšå®¢"
 	Blog_Text3:SetText(strShowLink)
 
 	strName = Blog:GetBlogContents("article_title_0");
@@ -114,7 +114,7 @@ function Blog_SelfEquip_Page_Switch()
 	OpenEquip(1);
 end
 
---´ò¿ª×Ô¼ºµÄ×ÊÁÏÒ³Ãæ
+--æ‰“å¼€è‡ªå·±çš„èµ„æ–™é¡µé¢
 function Blog_SelfData_Switch()
 	Variable:SetVariable("SelfUnionPos", Blog_Frame:GetProperty("UnifiedPosition"), 1);
 	SystemSetup:OpenPrivatePage("self");

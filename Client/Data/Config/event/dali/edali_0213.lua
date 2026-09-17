@@ -3,21 +3,21 @@ x210213_g_ScriptId = 210213
 x210213_g_Position_X=160.0895
 x210213_g_Position_Z=156.9309
 x210213_g_SceneID=2
-x210213_g_AccomplishNPC_Name="ÕÔÌìÊ¦"
+x210213_g_AccomplishNPC_Name="èµµå¤©å¸ˆ"
 x210213_g_MissionId = 453
-x210213_g_Name	="ÕÔÌìÊ¦"
+x210213_g_Name	="èµµå¤©å¸ˆ"
 x210213_g_MissionKind = 13
 x210213_g_MissionLevel = 4
 x210213_g_IfMissionElite = 0
-x210213_g_DemandKill ={{id=719,num=8}}		--±äÁ¿µÚ1Î»
-x210213_g_MissionName="µÚÒ»´ÎÉ±¹Ö"
+x210213_g_DemandKill ={{id=719,num=8}}		--å˜é‡ç¬¬1ä½
+x210213_g_MissionName="ç¬¬ä¸€æ¬¡æ€æ€ª"
 x210213_g_MissionInfo="#{event_dali_0018}"
 x210213_g_MissionTarget="#{event_dali_0019}"
-x210213_g_ContinueInfo="ÄãÒÑ¾­É±ËÀ8Ö»#RÊñµÀ°×Ô³#WÁËÂğ£¿"
-x210213_g_MissionComplete="  ¸ÉµÃºÃ£¬ÏÖÔÚ#G¶ÑÊ¯Ì²#WµÄ#RÊñµÀ°×Ô³#WÔÙÒ²²»¸ÒÇáÒ×Ï®»÷°ÙĞÕÁË¡£"
-x210213_g_SignPost = {x = 160, z = 156, tip = "ÕÔÌìÊ¦"}
+x210213_g_ContinueInfo="ä½ å·²ç»æ€æ­»8åª#Rèœ€é“ç™½çŒ¿#Wäº†å—ï¼Ÿ"
+x210213_g_MissionComplete="  å¹²å¾—å¥½ï¼Œç°åœ¨#Gå †çŸ³æ»©#Wçš„#Rèœ€é“ç™½çŒ¿#Wå†ä¹Ÿä¸æ•¢è½»æ˜“è¢­å‡»ç™¾å§“äº†ã€‚"
+x210213_g_SignPost = {x = 160, z = 156, tip = "èµµå¤©å¸ˆ"}
 x210213_g_MoneyBonus=200
 x210213_g_ItemBonus={{id=40002108,num=1},{id=30101001,num=5}}
-x210213_g_DemandTrueKill ={{name="ÊñµÀ°×Ô³",num=8}}
-x210213_g_IsMissionOkFail = 1		--±äÁ¿µÄµÚ0Î»
+x210213_g_DemandTrueKill ={{name="èœ€é“ç™½çŒ¿",num=8}}
+x210213_g_IsMissionOkFail = 1		--å˜é‡çš„ç¬¬0ä½
 --MisDescEnd

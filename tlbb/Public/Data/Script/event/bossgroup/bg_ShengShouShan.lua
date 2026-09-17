@@ -1,46 +1,46 @@
---ʥ��ɽ BOSSȺˢ�½ű�
+--圣兽山 BOSS群刷新脚本
 
---�ű���
+--脚本号
 x810110_g_ScriptId	= 810110
 
---ˢ�·�ʽΪ:
---����˽ű�ʱ����ˢ��10��BOSS....
+--刷新方式为:
+--激活此脚本时定点刷出10个BOSS....
 
---��Ҫˢ����BOSS�����ݱ�....
---BOSS��MonsterID�����ظ�....�ڳ�����ͬһʱ��ͬһ��MonsterID�Ĺ�ֻ�ܴ���һ��....���˾Ͳ�ˢ��....
+--需要刷出的BOSS的数据表....
+--BOSS的MonsterID不能重复....在场景中同一时刻同一个MonsterID的怪只能存在一个....有了就不刷了....
 x810110_g_BossData = {
 
-	-- ID						BOSS�� monster id
-	-- PosX					����
-	-- PosY					����
-	-- BaseAI				BOSS��BaseAI....
-	-- ExtAIScript	BOSS����չAI....
-	-- ScriptID			BOSS�Ľű�ID....
-	-- NeedCreate		����1....
+	-- ID						BOSS的 monster id
+	-- PosX					坐标
+	-- PosY					坐标
+	-- BaseAI				BOSS的BaseAI....
+	-- ExtAIScript	BOSS的扩展AI....
+	-- ScriptID			BOSS的脚本ID....
+	-- NeedCreate		都填1....
 
 	{ ID=11353, PosX=172,  PosY=34, BaseAI=22, ExtAIScript=259, ScriptID=501000, NeedCreate=1 },
 }
 
 
 --**********************************
---�ű���ں���
+--脚本入口函数
 --**********************************
 function x810110_OnDefaultEvent( sceneId, actId, iNoticeType, param2, param3, param4, param5 )
 
-	--�����....
+	--开启活动....
 	StartOneActivity( sceneId, actId, 180*1000, iNoticeType )
 
-	--BOSS���ݱ�Ϊ�վͲ�ˢBOSS....
+	--BOSS数据表为空就不刷BOSS....
 	if getn(x810110_g_BossData) < 1 then
 		return
 	end
 
-	--����Boss�ؽ�״̬....
+	--重置Boss重建状态....
 	for _, Data in x810110_g_BossData do
 		Data.NeedCreate = 1
 	end
 
-	--�������������еĹ�....����BOSS�ؽ�״̬....
+	--遍历场景中所有的怪....更新BOSS重建状态....
 	local nMonsterNum = GetMonsterCount(sceneId)
 	for i=0, nMonsterNum-1 do
 		local MonsterId = GetMonsterObjID(sceneId,i)
@@ -48,22 +48,22 @@ function x810110_OnDefaultEvent( sceneId, actId, iNoticeType, param2, param3, pa
 		x810110_CurSceneHaveMonster( sceneId, MosDataID )
 	end
 
-	--�ؽ���Ҫ�ؽ���BOSS....
+	--重建需要重建的BOSS....
 	for _, BossData in x810110_g_BossData do
 		if BossData.NeedCreate == 1 then
 			local MonsterID = LuaFnCreateMonster(sceneId, BossData.ID, BossData.PosX, BossData.PosY, BossData.BaseAI, BossData.ExtAIScript, BossData.ScriptID )
-			SetCharacterTitle(sceneId, MonsterID, "ǧ����ʥ��")
+			SetCharacterTitle(sceneId, MonsterID, "千年天圣兽")
 		end
 	end
 
 end
 
 --**********************************
---��������
+--心跳函数
 --**********************************
 function x810110_OnTimer( sceneId, actId, uTime )
 
-	--����Ƿ����
+	--检测活动是否过期
 	if CheckActiviyValidity( sceneId, actId ) == 0 then
 		StopOneActivity( sceneId, actId )
 	end
@@ -71,7 +71,7 @@ function x810110_OnTimer( sceneId, actId, uTime )
 end
 
 --**********************************
---���ڸ����ؽ�״̬....
+--用于更新重建状态....
 --**********************************
 function x810110_CurSceneHaveMonster( sceneId, DataID )
 

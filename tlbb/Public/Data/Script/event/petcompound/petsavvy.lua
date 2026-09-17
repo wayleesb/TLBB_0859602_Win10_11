@@ -1,16 +1,16 @@
--- ³èÎïÎòĞÔÌáÉı
+-- å® ç‰©æ‚Ÿæ€§æå‡
 
--- ½Å±¾ºÅ
+-- è„šæœ¬å·
 x800104_g_ScriptId = 800104
 
--- NPC Ãû×Ö
-x800104_g_Name = "ÔÆö­ö­"
+-- NPC åå­—
+x800104_g_Name = "äº‘éœéœ"
 
 --**********************************
--- ÈÎÎñÈë¿Úº¯Êı
+-- ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
-function x800104_OnDefaultEvent( sceneId, selfId, targetId )	--µã»÷¸ÃÈÎÎñºóÖ´ĞĞ´Ë½Å±¾
-	if GetName( sceneId, targetId ) ~= x800104_g_Name then		--ÅĞ¶Ï¸Ã npc ÊÇ·ñÊÇÖ¸¶¨µÄnpc
+function x800104_OnDefaultEvent( sceneId, selfId, targetId )	--ç‚¹å‡»è¯¥ä»»åŠ¡åæ‰§è¡Œæ­¤è„šæœ¬
+	if GetName( sceneId, targetId ) ~= x800104_g_Name then		--åˆ¤æ–­è¯¥ npc æ˜¯å¦æ˜¯æŒ‡å®šçš„npc
 		return
 	end
 
@@ -21,33 +21,33 @@ function x800104_OnDefaultEvent( sceneId, selfId, targetId )	--µã»÷¸ÃÈÎÎñºóÖ´ĞĞ´
 end
 
 --**********************************
--- ÁĞ¾ÙÊÂ¼ş
+-- åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x800104_OnEnumerate( sceneId, selfId, targetId )
-	if GetName( sceneId, targetId ) ~= x800104_g_Name then		--ÅĞ¶Ï¸Ã npc ÊÇ·ñÊÇÖ¸¶¨µÄnpc
+	if GetName( sceneId, targetId ) ~= x800104_g_Name then		--åˆ¤æ–­è¯¥ npc æ˜¯å¦æ˜¯æŒ‡å®šçš„npc
 		return
 	end
 
-	AddNumText( sceneId, x800104_g_ScriptId, "ÌáÉıÕäÊŞµÄÎòĞÔµÈ¼¶" ,6,-1)
+	AddNumText( sceneId, x800104_g_ScriptId, "æå‡çå…½çš„æ‚Ÿæ€§ç­‰çº§" ,6,-1)
 end
 
 
 --**********************************
--- ³èÎïÎòĞÔÌáÉı
+-- å® ç‰©æ‚Ÿæ€§æå‡
 --**********************************
 function x800104_PetSavvy( sceneId, selfId, mainPetGuidH, mainPetGuidL, assisPetGuidH, assisPetGuidL )
-	--ÅĞ¶Ï¸ù¹Ç
+	--åˆ¤æ–­æ ¹éª¨
 	local gengu = LuaFnGetPetGenGuByGUID(sceneId, selfId, assisPetGuidH, assisPetGuidL)
 	if gengu ==0 then
 		BeginEvent( sceneId )
-			AddText( sceneId, "¸ù¹ÇÎª0µÄÕäÊŞÎŞ·¨ÌáÉıÖ÷ÕäÊŞµÄÎòĞÔ¡£" )
+			AddText( sceneId, "æ ¹éª¨ä¸º0çš„çå…½æ— æ³•æå‡ä¸»çå…½çš„æ‚Ÿæ€§ã€‚" )
 		EndEvent( sceneId )
 		DispatchMissionTips( sceneId, selfId )
 		return 0
 	end
 	local retDiff = IncreaceSavvyByCompound( sceneId, selfId, mainPetGuidH, mainPetGuidL, assisPetGuidH, assisPetGuidL )
 	if retDiff and retDiff > 0 then
-		--³É¹¦µÄ¹âĞ§
+		--æˆåŠŸçš„å…‰æ•ˆ
 		LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, 18, 0);
 	end
 end

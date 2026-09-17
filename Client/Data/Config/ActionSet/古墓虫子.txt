@@ -1,265 +1,265 @@
 INT	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING	INT	INT	STRING
 INT	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING	INT	INT	STRING
-0	¿ÕÊÖÕ¾Á¢01	³¤Ç¹Õ¾Á¢01	´óµ¶Õ¾Á¢01	Ë«¶ÌÕ¾Á¢01	µ¥¶ÌÕ¾Á¢01	ÉÈ×ÓÕ¾Á¢01	Ë«»·Õ¾Á¢01	npc_¹ÅÄ¹³æ×ÓÕ¾Á¢	npc_¹ÅÄ¹³æ×ÓÕ¾Á¢	0	-1	(ºÍÆ½)ĞİÏ¢
-1	¿ÕÊÖÕ¾Á¢01	¿ÕÊÖÕ¾Á¢01	¿ÕÊÖÕ¾Á¢01	¿ÕÊÖÕ¾Á¢01	¿ÕÊÖÕ¾Á¢01	¿ÕÊÖÕ¾Á¢01	¿ÕÊÖÕ¾Á¢01	ĞİÏĞ	ĞİÏĞ	0	-1	(ºÍÆ½)ĞİÏ¢Ğ¡¶¯×÷1
-2	¿ÕÊÖÕ¾Á¢01	¿ÕÊÖÕ¾Á¢01	¿ÕÊÖÕ¾Á¢01	¿ÕÊÖÕ¾Á¢01	¿ÕÊÖÕ¾Á¢01	¿ÕÊÖÕ¾Á¢01	¿ÕÊÖÕ¾Á¢01	ĞİÏĞ	ĞİÏĞ	0	-1	(ºÍÆ½)ĞİÏ¢Ğ¡¶¯×÷2
-3								ÅÜ²½	ÅÜ²½	0	-1	(ºÍÆ½)ĞĞ×ß
-4	ÅÜ²½	³¤Ç¹ÅÜ²½	³¤Ç¹ÅÜ²½	Ë«¶ÌÅÜ²½	µ¥¶ÌÅÜ²½	ÉÈ×ÓÅÜ²½	Ë«»·ÅÜ²½	ÅÜ²½	ÅÜ²½	0	-1	(ºÍÆ½)ÅÜ²½
-14	¿ÕÊÖ¾¯½ä	³¤Ç¹¾¯½ä	´óµ¶¾¯½ä	Ë«¶Ì¾¯½ä	µ¥¶Ì¾¯½ä	ÉÈ×Ó¾¯½ä	Ë«»·¾¯½ä	Õ¾Á¢	Õ¾Á¢	0	-1	(Õ½¶·)ĞİÏ¢
-15								ÅÜ²½	ÅÜ²½	0	-1	(Õ½¶·)ĞĞ×ß
-16	ÅÜ²½	ÅÜ²½	ÅÜ²½	ÅÜ²½	ÅÜ²½	ÅÜ²½	ÅÜ²½	ÅÜ²½	ÅÜ²½	0	-1	(Õ½¶·)ÅÜ²½
-23	¿ÕÊÖÊÜ»÷	³¤Ç¹ÊÜ»÷	´óµ¶ÊÜ»÷	Ë«¶ÌÊÜ»÷	µ¥¶ÌÊÜ»÷	ÉÈ×ÓÊÜ»÷	Ë«»·ÊÜ»÷	ÊÜ»÷	ÊÜ»÷	0	-1	(Õ½¶·)±»»÷ÖĞ
-24	µ¹µØ	µ¹µØ	µ¹µØ	µ¹µØ	µ¹µØ	µ¹µØ	µ¹µØ	µ¹µØ	µ¹µØ	0	-1	(Õ½¶·)ËÀÍö
-25	ËÀÍö	ËÀÍö	ËÀÍö	ËÀÍö	ËÀÍö	ËÀÍö	ËÀÍö	µ¹µØ	µ¹µØ	0	-1	(Õ½¶·)Ê¬Ìå
-53	¿ÕÊÖÇ±ĞĞ	³¤Ç¹Ç±ĞĞ	³¤Ç¹Ç±ĞĞ	Ë«¶ÌÇ±ĞĞ	µ¥¶ÌÇ±ĞĞ	ÉÈ×ÓÇ±ĞĞ	Ë«»·Ç±ĞĞ	ÅÜ²½	ÅÜ²½	0	-1	(Ç±ĞĞ)ÅÜ²½
-99	g01_Éı¼¶_shengji	g01_Éı¼¶_shengji	g01_Éı¼¶_shengji	g01_Éı¼¶_shengji	g01_Éı¼¶_shengji	g01_Éı¼¶_shengji	g01_Éı¼¶_shengji	g01_Éı¼¶_shengji	g01_Éı¼¶_shengji	0	-1	Éı¼¶
-125	µ¥¶ÌºáÉ¨	µ¥¶ÌºáÉ¨	µ¥¶ÌºáÉ¨	µ¥¶ÌºáÉ¨	µ¥¶ÌºáÉ¨	µ¥¶ÌºáÉ¨	µ¥¶ÌºáÉ¨	µ¥¶ÌºáÉ¨	µ¥¶ÌºáÉ¨	0	-1	
-126	µ¥¶Ì·¨2ĞîÁ¦	µ¥¶Ì·¨2ĞîÁ¦	µ¥¶Ì·¨2ĞîÁ¦	µ¥¶Ì·¨2ĞîÁ¦	µ¥¶Ì·¨2ĞîÁ¦	µ¥¶Ì·¨2ĞîÁ¦	µ¥¶Ì·¨2ĞîÁ¦	µ¥¶Ì·¨2ĞîÁ¦	µ¥¶Ì·¨2ĞîÁ¦	0	-1	
-127	µ¥¶Ì¹¥»÷01	µ¥¶Ì¹¥»÷01	µ¥¶Ì¹¥»÷01	µ¥¶Ì¹¥»÷01	µ¥¶Ì¹¥»÷01	µ¥¶Ì¹¥»÷01	µ¥¶Ì¹¥»÷01	µ¥¶Ì¹¥»÷01	µ¥¶Ì¹¥»÷01	0	-1	
-128	µ¥¶Ì·¨2·¢³ö	µ¥¶Ì·¨2·¢³ö	µ¥¶Ì·¨2·¢³ö	µ¥¶Ì·¨2·¢³ö	µ¥¶Ì·¨2·¢³ö	µ¥¶Ì·¨2·¢³ö	µ¥¶Ì·¨2·¢³ö	µ¥¶Ì·¨2·¢³ö	µ¥¶Ì·¨2·¢³ö	0	-1	
-129	µ¥¶Ì¹¥»÷01	³¤Ç¹¹¥»÷01	³¤Ç¹¹¥»÷01	Ë«¶Ì¹¥»÷01	µ¥¶Ì¹¥»÷01	µ¥¶Ì¹¥»÷01	Ë«¶Ì¹¥»÷01	¹¥»÷	¹¥»÷	0	-1	
-130	µ¥¶Ì¹¥»÷01	³¤Ç¹ÔäµØc	³¤Ç¹ÔäµØc	Ë«¶ÌÔäµØc	µ¥¶ÌÔäµØc	µ¥¶ÌÔäµØc	Ë«¶ÌÔäµØc	¹¥»÷	¹¥»÷	0	-1	
-131	Î¬³Ö1a	Î¬³Ö1a	Î¬³Ö1a	Î¬³Ö1a	Î¬³Ö1a	Î¬³Ö1a	Î¬³Ö1a	¹¥»÷	¹¥»÷	0	-1	
-132	Î¬³Ö1b	Î¬³Ö1b	Î¬³Ö1b	Î¬³Ö1b	Î¬³Ö1b	Î¬³Ö1b	Î¬³Ö1b	¹¥»÷	¹¥»÷	0	-1	
-133	µ¥¶Ì¹¥»÷01	³¤Ç¹µ¤·ï³¯Ñô	³¤Ç¹µ¤·ï³¯Ñô	Ë«¶Ìµ¤·ï³¯Ñô	µ¥¶Ìµ¤·ï³¯Ñô	µ¥¶Ìµ¤·ï³¯Ñô	Ë«¶Ìµ¤·ï³¯Ñô	¹¥»÷	¹¥»÷	0	-1	
-134	µ¥¶Ì¹¥»÷01	³¤Ç¹´Èº½ÆÕ¶É	³¤Ç¹´Èº½ÆÕ¶É	Ë«¶Ì´Èº½ÆÕ¶É	µ¥¶Ì´Èº½ÆÕ¶É	µ¥¶Ì´Èº½ÆÕ¶É	Ë«¶Ì´Èº½ÆÕ¶É	¹¥»÷	¹¥»÷	0	-1	
-135	µ¥¶Ì¹¥»÷01	³¤Ç¹ÉÙÔó½£	³¤Ç¹ÉÙÔó½£	Ë«¶ÌÉÙÔó½£	µ¥¶ÌÉÙÔó½£	µ¥¶ÌÉÙÔó½£	Ë«¶ÌÉÙÔó½£	¹¥»÷	¹¥»÷	0	-1	
-136	¿ÕÊÖÕ¾Á¢02	³¤Ç¹Õ¾Á¢02	´óµ¶Õ¾Á¢02	Ë«¶ÌÕ¾Á¢02	µ¥¶ÌÕ¾Á¢02	ÉÈ×ÓÕ¾Á¢02	Ë«»·Õ¾Á¢02	¹¥»÷	¹¥»÷	0	-1	
-137	¿ÕÊÖÕ¾Á¢02	³¤Ç¹Õ¾Á¢02	´óµ¶¹¥»÷01	Ë«¶ÌÕ¾Á¢01	µ¥¶ÌÕ¾Á¢01	ÉÈ×ÓÕ¾Á¢01	Ë«»·Õ¾Á¢01	¹¥»÷	¹¥»÷	0	-1	
-138	¿ÕÊÖÕ¾Á¢02	³¤Ç¹Õ¾Á¢02	´óµ¶Õ¾Á¢01	Ë«¶ÌÕ¾Á¢01	µ¥¶ÌÕ¾Á¢01	ÉÈ×Ó¹¥»÷01	Ë«»·Õ¾Á¢01	¹¥»÷	¹¥»÷	0	-1	
-139	¿ÕÊÖÕ¾Á¢02	³¤Ç¹Õ¾Á¢02	´óµ¶Õ¾Á¢01	Ë«¶ÌÕ¾Á¢01	µ¥¶Ì¹¥»÷02	ÉÈ×ÓÕ¾Á¢01	Ë«»·Õ¾Á¢01	¹¥»÷	¹¥»÷	0	-1	
-140	¿ÕÊÖÕ¾Á¢02	³¤Ç¹Õ¾Á¢02	´óµ¶Õ¾Á¢01	Ë«¶ÌÕ¾Á¢01	µ¥¶Ì¹¥»÷03	ÉÈ×ÓÕ¾Á¢01	Ë«»·Õ¾Á¢01	¹¥»÷	¹¥»÷	0	-1	
-141	¿ÕÊÖÕ¾Á¢02	³¤Ç¹Õ¾Á¢02	´óµ¶Õ¾Á¢01	Ë«¶ÌÕ¾Á¢01	µ¥¶Ì¹¥»÷03	ÉÈ×ÓÕ¾Á¢01	Ë«»·¹¥»÷03	¹¥»÷	¹¥»÷	0	-1	
-142	²É¿ó	²É¿ó	²É¿ó	²É¿ó	²É¿ó	²É¿ó	²É¿ó	¹¥»÷	¹¥»÷	0	-1	
-143	´ò¿ª	´ò¿ª	´ò¿ª	´ò¿ª	´ò¿ª	´ò¿ª	´ò¿ª	¹¥»÷	¹¥»÷	0	-1	
-144	µöÓã	µöÓã	µöÓã	µöÓã	µöÓã	µöÓã	µöÓã	¹¥»÷	¹¥»÷	0	-1	
-145	ÌøÔ¾	ÌøÔ¾	ÌøÔ¾	ÌøÔ¾	ÌøÔ¾	ÌøÔ¾	ÌøÔ¾	¹¥»÷	¹¥»÷	0	-1	
-146	g01_ÆÕÍ¨¹¥»÷01_kongshou	g01_¹¥»÷¶¯×÷1	g01_¹¥»÷¶¯×÷1	g01_¹¥»÷¶¯×÷1	g01_¹¥»÷¶¯×÷1	g01_¹¥»÷¶¯×÷1	g01_¹¥»÷¶¯×÷1	npc_attack	npc_attack	0	-1	
-147	g01_ÆÕÍ¨¹¥»÷01_kongshou	g01_¹¥»÷¶¯×÷2	g01_¹¥»÷¶¯×÷2	g01_¹¥»÷¶¯×÷2	g01_¹¥»÷¶¯×÷2	g01_¹¥»÷¶¯×÷2	g01_¹¥»÷¶¯×÷2	npc_attack	npc_attack	0	-1	
-148	g01_ÆÕÍ¨¹¥»÷01_kongshou	g01_¹¥»÷¶¯×÷3	g01_¹¥»÷¶¯×÷3	g01_¹¥»÷¶¯×÷3	g01_¹¥»÷¶¯×÷3	g01_¹¥»÷¶¯×÷3	g01_¹¥»÷¶¯×÷3	npc_attack	npc_attack	0	-1	
-149	g01_ÆÕÍ¨¹¥»÷01_kongshou	g01_¹¥»÷¶¯×÷4	g01_¹¥»÷¶¯×÷4	g01_¹¥»÷¶¯×÷4	g01_¹¥»÷¶¯×÷4	g01_¹¥»÷¶¯×÷4	g01_¹¥»÷¶¯×÷4	npc_attack	npc_attack	0	-1	
-150	g01_ÆÕÍ¨¹¥»÷01_kongshou	g01_¹¥»÷¶¯×÷5	g01_¹¥»÷¶¯×÷5	g01_¹¥»÷¶¯×÷5	g01_¹¥»÷¶¯×÷5	g01_¹¥»÷¶¯×÷5	g01_¹¥»÷¶¯×÷5	npc_attack	npc_attack	0	-1	
-151	g01_ÆÕÍ¨¹¥»÷01_kongshou	g01_ÈºÌå¹¥»÷¶¯×÷1	g01_ÈºÌå¹¥»÷¶¯×÷1	g01_ÈºÌå¹¥»÷¶¯×÷1	g01_ÈºÌå¹¥»÷¶¯×÷1	g01_ÈºÌå¹¥»÷¶¯×÷1	g01_ÈºÌå¹¥»÷¶¯×÷1	npc_attack	npc_attack	0	-1	
-152	g01_Ë«ÊÖºÏÊ®_tiebushan	g01_Ë«ÊÖºÏÊ®_tiebushan	g01_Ë«ÊÖºÏÊ®_tiebushan	g01_Ë«ÊÖºÏÊ®_tiebushan	g01_Ë«ÊÖºÏÊ®_tiebushan	g01_Ë«ÊÖºÏÊ®_tiebushan	g01_Ë«ÊÖºÏÊ®_tiebushan	m_magic	m_magic	0	-1	Ìú²¼É¼
-153	g01_Ë«ÊÖºÏÊ®_luohanzhen	g01_Ë«ÊÖºÏÊ®_luohanzhen	g01_Ë«ÊÖºÏÊ®_luohanzhen	g01_Ë«ÊÖºÏÊ®_luohanzhen	g01_Ë«ÊÖºÏÊ®_luohanzhen	g01_Ë«ÊÖºÏÊ®_luohanzhen	g01_Ë«ÊÖºÏÊ®_luohanzhen	m_magic	m_magic	0	-1	ÂŞººÕó
-154	g01_Ë«ÊÖºÏÊ®_shizihou	g01_Ë«ÊÖºÏÊ®_shizihou	g01_Ë«ÊÖºÏÊ®_shizihou	g01_Ë«ÊÖºÏÊ®_shizihou	g01_Ë«ÊÖºÏÊ®_shizihou	g01_Ë«ÊÖºÏÊ®_shizihou	g01_Ë«ÊÖºÏÊ®_shizihou	m_magic	m_magic	0	-1	Ê¨×Óºğ
-155	g01_Ë«ÊÖºÏÊ®_cihangpudu	g01_Ë«ÊÖºÏÊ®_cihangpudu	g01_Ë«ÊÖºÏÊ®_cihangpudu	g01_Ë«ÊÖºÏÊ®_cihangpudu	g01_Ë«ÊÖºÏÊ®_cihangpudu	g01_Ë«ÊÖºÏÊ®_cihangpudu	g01_Ë«ÊÖºÏÊ®_cihangpudu	m_magic	m_magic	0	-1	´Èº½ÆÕ¶É
-156	g01_Ë«ÊÖºÏÊ®_lijingrulai	g01_Ë«ÊÖºÏÊ®_lijingrulai	g01_Ë«ÊÖºÏÊ®_lijingrulai	g01_Ë«ÊÖºÏÊ®_lijingrulai	g01_Ë«ÊÖºÏÊ®_lijingrulai	g01_Ë«ÊÖºÏÊ®_lijingrulai	g01_Ë«ÊÖºÏÊ®_lijingrulai	m_magic	m_magic	0	-1	Àñ¾´ÈçÀ´
-157	g01_Ë«ÊÖºÏÊ®_yiweidujiang	g01_Ë«ÊÖºÏÊ®_yiweidujiang	g01_Ë«ÊÖºÏÊ®_yiweidujiang	g01_Ë«ÊÖºÏÊ®_yiweidujiang	g01_Ë«ÊÖºÏÊ®_yiweidujiang	g01_Ë«ÊÖºÏÊ®_yiweidujiang	g01_Ë«ÊÖºÏÊ®_yiweidujiang	m_magic	m_magic	0	-1	Ò»Î­¶É½­
-158	g01_Ë«ÊÖºÏÊ®_qiguanquanshen	g01_Ë«ÊÖºÏÊ®_qiguanquanshen	g01_Ë«ÊÖºÏÊ®_qiguanquanshen	g01_Ë«ÊÖºÏÊ®_qiguanquanshen	g01_Ë«ÊÖºÏÊ®_qiguanquanshen	g01_Ë«ÊÖºÏÊ®_qiguanquanshen	g01_Ë«ÊÖºÏÊ®_qiguanquanshen	m_magic	m_magic	0	-1	Æø¹áÈ«Éí
-159	g01_Ä¦Ú­ÎŞÁ¿_mokewuliang	g01_Ä¦Ú­ÎŞÁ¿_mokewuliang	g01_Ä¦Ú­ÎŞÁ¿_mokewuliang	g01_Ä¦Ú­ÎŞÁ¿_mokewuliang	g01_Ä¦Ú­ÎŞÁ¿_mokewuliang	g01_Ä¦Ú­ÎŞÁ¿_mokewuliang	g01_Ä¦Ú­ÎŞÁ¿_mokewuliang	m_magic	m_magic	0	-1	Ä¦Ú­ÎŞÁ¿
-160	g01_¶àÂŞÒ¶Ö¸_duoluoyezhi	g01_¶àÂŞÒ¶Ö¸_duoluoyezhi	g01_¶àÂŞÒ¶Ö¸_duoluoyezhi	g01_¶àÂŞÒ¶Ö¸_duoluoyezhi	g01_¶àÂŞÒ¶Ö¸_duoluoyezhi	g01_¶àÂŞÒ¶Ö¸_duoluoyezhi	g01_¶àÂŞÒ¶Ö¸_duoluoyezhi	m_magic	m_magic	0	-1	¶àÂŞÒ¶Ö¸
-161	g01_½ğÖÓÕÖ_jinzhongzhao	g01_½ğÖÓÕÖ_jinzhongzhao	g01_½ğÖÓÕÖ_jinzhongzhao	g01_½ğÖÓÕÖ_jinzhongzhao	g01_½ğÖÓÕÖ_jinzhongzhao	g01_½ğÖÓÕÖ_jinzhongzhao	g01_½ğÖÓÕÖ_jinzhongzhao	m_magic	m_magic	0	-1	½ğÖÓÕÖ
-162	g01_ÆÕÍ¨¹¥»÷01_kongshou	g01_ÆÕÍ¨¹¥»÷01_changqiang	g01_ÆÕÍ¨¹¥»÷01_dadao	g01_ÆÕÍ¨¹¥»÷01_shuangduan	g01_ÆÕÍ¨¹¥»÷01_danduan	g01_ÆÕÍ¨¹¥»÷01_shanzi	g01_ÆÕÍ¨¹¥»÷01_shuanghuan	¹¥»÷	¹¥»÷	0	-1	ÆÕÍ¨¹¥»÷1
-163	g01_ÆÕÍ¨¹¥»÷01_kongshou	g01_ÆÕÍ¨¹¥»÷02_changqiang	g01_ÆÕÍ¨¹¥»÷02_dadao	g01_ÆÕÍ¨¹¥»÷02_shuangduan	g01_ÆÕÍ¨¹¥»÷02_danduan	g01_ÆÕÍ¨¹¥»÷02_shanzi	g01_ÆÕÍ¨¹¥»÷02_shuanghuan	¹¥»÷2	¹¥»÷2	0	-1	ÆÕÍ¨¹¥»÷2
-164	g01_ÆÕÍ¨¹¥»÷01_kongshou	g01_ÆÕÍ¨¹¥»÷03_changqiang	g01_ÆÕÍ¨¹¥»÷03_dadao	g01_ÆÕÍ¨¹¥»÷03_shuangduan	g01_ÆÕÍ¨¹¥»÷03_danduan	g01_ÆÕÍ¨¹¥»÷03_shanzi	g01_ÆÕÍ¨¹¥»÷03_shuanghuan	Ô¶³Ì¹¥»÷	Ô¶³Ì¹¥»÷	0	-1	ÆÕÍ¨¹¥»÷3
-165	g01_ÆÕÍ¨¹¥»÷01_kongshou	g01_Á¬ÕĞ1a	g01_Á¬ÕĞ1a	g01_Á¬ÕĞ1a	g01_Á¬ÕĞ1a	g01_Á¬ÕĞ1a	g01_Á¬ÕĞ1a	npc_attack	npc_attack	0	-1	Á¬ÕĞ1a
-166	g01_ÆÕÍ¨¹¥»÷01_kongshou	g01_Á¬ÕĞ1b	g01_Á¬ÕĞ1b	g01_Á¬ÕĞ1b	g01_Á¬ÕĞ1b	g01_Á¬ÕĞ1b	g01_Á¬ÕĞ1b	npc_attack	npc_attack	0	-1	Á¬ÕĞ1b
-167	g01_ÆÕÍ¨¹¥»÷01_kongshou	g01_Á¬ÕĞ1c	g01_Á¬ÕĞ1c	g01_Á¬ÕĞ1c	g01_Á¬ÕĞ1c	g01_Á¬ÕĞ1c	g01_Á¬ÕĞ1c	npc_attack	npc_attack	0	-1	Á¬ÕĞ1c
-168	g01_ÆÕÍ¨¹¥»÷01_kongshou	g01_¹¥»÷¶¯×÷301	g01_¹¥»÷¶¯×÷301	g01_¹¥»÷¶¯×÷301	g01_¹¥»÷¶¯×÷301	g01_¹¥»÷¶¯×÷301	g01_¹¥»÷¶¯×÷301	npc_attack	npc_attack	0	-1	
-169	g01_ÆÕÍ¨¹¥»÷01_kongshou	g01_¹¥»÷¶¯×÷1_cuogufenjin	g01_¹¥»÷¶¯×÷1_cuogufenjin	g01_¹¥»÷¶¯×÷1_cuogufenjin	g01_¹¥»÷¶¯×÷1_cuogufenjin	g01_¹¥»÷¶¯×÷1_cuogufenjin	g01_¹¥»÷¶¯×÷1_cuogufenjin	npc_attack	npc_attack	0	-1	
-170	g01_ÆÕÍ¨¹¥»÷01_kongshou	g01_¹¥»÷¶¯×÷16_cuixinliepi	g01_¹¥»÷¶¯×÷16_cuixinliepi	g01_¹¥»÷¶¯×÷16_cuixinliepi	g01_¹¥»÷¶¯×÷16_cuixinliepi	g01_¹¥»÷¶¯×÷16_cuixinliepi	g01_¹¥»÷¶¯×÷16_cuixinliepi	npc_attack	npc_attack	0	-1	
-171	g01_ÆÕÍ¨¹¥»÷01_kongshou	g01_ÈºÌå¹¥»÷¶¯×÷1_xuanyinzhiyang	g01_ÈºÌå¹¥»÷¶¯×÷1_xuanyinzhiyang	g01_ÈºÌå¹¥»÷¶¯×÷1_xuanyinzhiyang	g01_ÈºÌå¹¥»÷¶¯×÷1_xuanyinzhiyang	g01_ÈºÌå¹¥»÷¶¯×÷1_xuanyinzhiyang	g01_ÈºÌå¹¥»÷¶¯×÷1_xuanyinzhiyang	npc_attack	npc_attack	0	-1	
-172	g01_ÆÕÍ¨¹¥»÷01_kongshou	g01_¹¥»÷¶¯×÷17_tianditongshou	g01_¹¥»÷¶¯×÷17_tianditongshou	g01_¹¥»÷¶¯×÷17_tianditongshou	g01_¹¥»÷¶¯×÷17_tianditongshou	g01_¹¥»÷¶¯×÷17_tianditongshou	g01_¹¥»÷¶¯×÷17_tianditongshou	npc_attack	npc_attack	0	-1	
-173	g01_Ì§Í·Í¦ĞØ_wuxinglianzhu	g01_Ì§Í·Í¦ĞØ_wuxinglianzhu	g01_Ì§Í·Í¦ĞØ_wuxinglianzhu	g01_Ì§Í·Í¦ĞØ_wuxinglianzhu	g01_Ì§Í·Í¦ĞØ_wuxinglianzhu	g01_Ì§Í·Í¦ĞØ_wuxinglianzhu	g01_Ì§Í·Í¦ĞØ_wuxinglianzhu	npc_attack	npc_attack	0	-1	
-174	g01_ÆÕÍ¨¹¥»÷01_kongshou	g01_¹¥»÷¶¯×÷4_huoxingchongri	g01_¹¥»÷¶¯×÷4_huoxingchongri	g01_¹¥»÷¶¯×÷4_huoxingchongri	g01_¹¥»÷¶¯×÷4_huoxingchongri	g01_¹¥»÷¶¯×÷4_huoxingchongri	g01_¹¥»÷¶¯×÷4_huoxingchongri	npc_attack	npc_attack	0	-1	
-175	g01_Ì§Í·Í¦ĞØ_qixingluochangkong	g01_Ì§Í·Í¦ĞØ_qixingluochangkong	g01_Ì§Í·Í¦ĞØ_qixingluochangkong	g01_Ì§Í·Í¦ĞØ_qixingluochangkong	g01_Ì§Í·Í¦ĞØ_qixingluochangkong	g01_Ì§Í·Í¦ĞØ_qixingluochangkong	g01_Ì§Í·Í¦ĞØ_qixingluochangkong	npc_attack	npc_attack	0	-1	
-176	g01_Ì§Í·Í¦ĞØ_shenxingbaibian	g01_Ì§Í·Í¦ĞØ_shenxingbaibian	g01_Ì§Í·Í¦ĞØ_shenxingbaibian	g01_Ì§Í·Í¦ĞØ_shenxingbaibian	g01_Ì§Í·Í¦ĞØ_shenxingbaibian	g01_Ì§Í·Í¦ĞØ_shenxingbaibian	g01_Ì§Í·Í¦ĞØ_shenxingbaibian	npc_attack	npc_attack	0	-1	
-177	g01_Ì§Í·Í¦ĞØ_zhiluweima	g01_Ì§Í·Í¦ĞØ_zhiluweima	g01_Ì§Í·Í¦ĞØ_zhiluweima	g01_Ì§Í·Í¦ĞØ_zhiluweima	g01_Ì§Í·Í¦ĞØ_zhiluweima	g01_Ì§Í·Í¦ĞØ_zhiluweima	g01_Ì§Í·Í¦ĞØ_zhiluweima	npc_attack	npc_attack	0	-1	
-178	g01_Ì§Í·Í¦ĞØ_toulianghuanzhu	g01_Ì§Í·Í¦ĞØ_toulianghuanzhu	g01_Ì§Í·Í¦ĞØ_toulianghuanzhu	g01_Ì§Í·Í¦ĞØ_toulianghuanzhu	g01_Ì§Í·Í¦ĞØ_toulianghuanzhu	g01_Ì§Í·Í¦ĞØ_toulianghuanzhu	g01_Ì§Í·Í¦ĞØ_toulianghuanzhu	npc_attack	npc_attack	0	-1	
-179	g01_Ì§Í·Í¦ĞØ_qiannuyuren	g01_Ì§Í·Í¦ĞØ_qiannuyuren	g01_Ì§Í·Í¦ĞØ_qiannuyuren	g01_Ì§Í·Í¦ĞØ_qiannuyuren	g01_Ì§Í·Í¦ĞØ_qiannuyuren	g01_Ì§Í·Í¦ĞØ_qiannuyuren	g01_Ì§Í·Í¦ĞØ_qiannuyuren	npc_attack	npc_attack	0	-1	
-180	g01_Ì§Í·Í¦ĞØ_nufachongguan	g01_Ì§Í·Í¦ĞØ_nufachongguan	g01_Ì§Í·Í¦ĞØ_nufachongguan	g01_Ì§Í·Í¦ĞØ_nufachongguan	g01_Ì§Í·Í¦ĞØ_nufachongguan	g01_Ì§Í·Í¦ĞØ_nufachongguan	g01_Ì§Í·Í¦ĞØ_nufachongguan	npc_attack	npc_attack	0	-1	
-181	g01_ÆÕÍ¨¹¥»÷01_kongshou	g01_¹¥»÷¶¯×÷2_leitingzhinu	g01_¹¥»÷¶¯×÷2_leitingzhinu	g01_¹¥»÷¶¯×÷2_leitingzhinu	g01_¹¥»÷¶¯×÷2_leitingzhinu	g01_¹¥»÷¶¯×÷2_leitingzhinu	g01_¹¥»÷¶¯×÷2_leitingzhinu	npc_attack	npc_attack	0	-1	
-182	g01_Òå·ßÌîâß_yiwentianying	g01_Òå·ßÌîâß_yiwentianying	g01_Òå·ßÌîâß_yiwentianying	g01_Òå·ßÌîâß_yiwentianying	g01_Òå·ßÌîâß_yiwentianying	g01_Òå·ßÌîâß_yiwentianying	g01_Òå·ßÌîâß_yiwentianying	npc_attack	npc_attack	0	-1	
-183	g01_ÆÕÍ¨¹¥»÷01_kongshou	g01_ºñ»ı±¡·¢_houjibofa	g01_ºñ»ı±¡·¢_houjibofa	g01_ºñ»ı±¡·¢_houjibofa	g01_ºñ»ı±¡·¢_houjibofa	g01_ºñ»ı±¡·¢_houjibofa	g01_ºñ»ı±¡·¢_houjibofa	npc_attack	npc_attack	0	-1	
-184	g01_ÆÕÍ¨¹¥»÷01_kongshou	g01_¹¥»÷¶¯×÷19_renguitongtu	g01_¹¥»÷¶¯×÷19_renguitongtu	g01_¹¥»÷¶¯×÷19_renguitongtu	g01_¹¥»÷¶¯×÷19_renguitongtu	g01_¹¥»÷¶¯×÷19_renguitongtu	g01_¹¥»÷¶¯×÷19_renguitongtu	npc_attack	npc_attack	0	-1	
-185	Õ¾Á¢ºÈÒ©	Õ¾Á¢ºÈÒ©	Õ¾Á¢ºÈÒ©	Õ¾Á¢ºÈÒ©	Õ¾Á¢ºÈÒ©	Õ¾Á¢ºÈÒ©	Õ¾Á¢ºÈÒ©	npc_attack	npc_attack	0	-1	
-186	×ø×ÅºÈÒ©	×ø×ÅºÈÒ©	×ø×ÅºÈÒ©	×ø×ÅºÈÒ©	×ø×ÅºÈÒ©	×ø×ÅºÈÒ©	×ø×ÅºÈÒ©	npc_attack	npc_attack	0	-1	
-187	Í¨ÓÃ·¢ÕĞ¶¯×÷	Í¨ÓÃ·¢ÕĞ¶¯×÷	Í¨ÓÃ·¢ÕĞ¶¯×÷	Í¨ÓÃ·¢ÕĞ¶¯×÷	Í¨ÓÃ·¢ÕĞ¶¯×÷	Í¨ÓÃ·¢ÕĞ¶¯×÷	Í¨ÓÃ·¢ÕĞ¶¯×÷	npc_attack	npc_attack	0	-1	
-188	g01l_×½³è_zhuachong	g01l_×½³è_zhuachong	g01l_×½³è_zhuachong	g01l_×½³è_zhuachong	g01l_×½³è_zhuachong	g01l_×½³è_zhuachong	g01l_×½³è_zhuachong	npc_attack	npc_attack	0	-1	
-189	g01_ÆÕÍ¨¹¥»÷01_kongshou	g01_ºñ»ı±¡·¢_houjibofa_yanshi	g01_ºñ»ı±¡·¢_houjibofa_yanshi	g01_ºñ»ı±¡·¢_houjibofa_yanshi	g01_ºñ»ı±¡·¢_houjibofa_yanshi	g01_ºñ»ı±¡·¢_houjibofa_yanshi	g01_ºñ»ı±¡·¢_houjibofa_yanshi	npc_attack	npc_attack	0	-1	
-190	g01_ÆÕÍ¨¹¥»÷01_kongshou	g01_¹¥»÷¶¯×÷19_renguitongtu_yanshi	g01_¹¥»÷¶¯×÷19_renguitongtu_yanshi	g01_¹¥»÷¶¯×÷19_renguitongtu_yanshi	g01_¹¥»÷¶¯×÷19_renguitongtu_yanshi	g01_¹¥»÷¶¯×÷19_renguitongtu_yanshi	g01_¹¥»÷¶¯×÷19_renguitongtu_yanshi	npc_attack	npc_attack	0	-1	
-191	g01_ÆÕÍ¨¹¥»÷01_kongshou	g01_¹¥»÷¶¯×÷17_tianditongshou_yanshi	g01_¹¥»÷¶¯×÷17_tianditongshou_yanshi	g01_¹¥»÷¶¯×÷17_tianditongshou_yanshi	g01_¹¥»÷¶¯×÷17_tianditongshou_yanshi	g01_¹¥»÷¶¯×÷17_tianditongshou_yanshi	g01_¹¥»÷¶¯×÷17_tianditongshou_yanshi	npc_attack	npc_attack	0	-1	
-192	²ÉÒ©	²ÉÒ©	²ÉÒ©	²ÉÒ©	²ÉÒ©	²ÉÒ©	²ÉÒ©	npc_attack	npc_attack	0	-1	
-193	guid_chongwu_buff	guid_chongwu_buff	guid_chongwu_buff	guid_chongwu_buff	guid_chongwu_buff	guid_chongwu_buff	guid_chongwu_buff	guid_chongwu_buff	guid_chongwu_buff	0	-1	³èÎïÊÍ·Åbuff¶¯×÷
-194	guid_chongwu_hanbingzhou	guid_chongwu_hanbingzhou	guid_chongwu_hanbingzhou	guid_chongwu_hanbingzhou	guid_chongwu_hanbingzhou	guid_chongwu_hanbingzhou	guid_chongwu_hanbingzhou	guid_chongwu_hanbingzhou	guid_chongwu_hanbingzhou	0	-1	³èÎïÊÍ·Åº®±ùÖäµÄ¶¯×÷
-195	guid_chongwu_gongji	guid_chongwu_gongji	guid_chongwu_gongji	guid_chongwu_gongji	guid_chongwu_gongji	guid_chongwu_gongji	guid_chongwu_gongji	guid_chongwu_gongji	guid_chongwu_gongji	0	-1	³èÎï¹¥»÷¶¯×÷
-196	guid_chongwu_mengji	guid_chongwu_mengji	guid_chongwu_mengji	guid_chongwu_mengji	guid_chongwu_mengji	guid_chongwu_mengji	guid_chongwu_mengji	guid_chongwu_mengji	guid_chongwu_mengji	0	-1	³èÎïÊÍ·ÅÃÍ»÷µÄ¶¯×÷
-197	guid_chongwu_fushen	guid_chongwu_fushen	guid_chongwu_fushen	guid_chongwu_fushen	guid_chongwu_fushen	guid_chongwu_fushen	guid_chongwu_fushen	guid_chongwu_fushen	guid_chongwu_fushen	0	-1	³èÎï¸½Éí¶¯×÷
-198	g01_¹¥»÷¶¯×÷5	g01_¹¥»÷¶¯×÷5	g01_¹¥»÷¶¯×÷5	g01_¹¥»÷¶¯×÷5	g01_¹¥»÷¶¯×÷5	g01_¹¥»÷¶¯×÷5	g01_¹¥»÷¶¯×÷5	npc_attack	npc_attack	0	-1	öïÔ¾±±äé
-199	g01_¹¥»÷¶¯×÷28_peiranyouyu	g01_¹¥»÷¶¯×÷28_peiranyouyu	g01_¹¥»÷¶¯×÷28_peiranyouyu	g01_¹¥»÷¶¯×÷28_peiranyouyu	g01_¹¥»÷¶¯×÷28_peiranyouyu	g01_¹¥»÷¶¯×÷28_peiranyouyu	g01_¹¥»÷¶¯×÷28_peiranyouyu	npc_attack	npc_attack	0	-1	ÅæÈ»ÓĞÓê
-200	g01_åÛÓÎ¶«º£_aoyoudonghai	g01_åÛÓÎ¶«º£_aoyoudonghai	g01_åÛÓÎ¶«º£_aoyoudonghai	g01_åÛÓÎ¶«º£_aoyoudonghai	g01_åÛÓÎ¶«º£_aoyoudonghai	g01_åÛÓÎ¶«º£_aoyoudonghai	g01_åÛÓÎ¶«º£_aoyoudonghai	npc_attack	npc_attack	0	-1	åÛÓÎ¶«º£
-201	g01_ÆÕÍ¨¹¥»÷01_kongshou	g01_ÆÕÍ¨¹¥»÷01_changqiang	g01_ÆÕÍ¨¹¥»÷01_changqiang	g01_ÆÕÍ¨¹¥»÷01_shuangduan	g01_ÆÕÍ¨¹¥»÷01_danduan	g01_ÆÕÍ¨¹¥»÷01_danduan	g01_ÆÕÍ¨¹¥»÷01_shuangduan	npc_attack	npc_attack	0	-1	ÆÕÍ¨¹¥»÷1
-202	g01_ÆÕÍ¨¹¥»÷01_kongshou	g01_ÆÕÍ¨¹¥»÷02_changqiang	g01_ÆÕÍ¨¹¥»÷02_changqiang	g01_ÆÕÍ¨¹¥»÷02_shuangduan	g01_ÆÕÍ¨¹¥»÷02_danduan	g01_ÆÕÍ¨¹¥»÷02_danduan	g01_ÆÕÍ¨¹¥»÷02_shuangduan	npc_attack	npc_attack	0	-1	ÆÕÍ¨¹¥»÷2
-203	g01_ÆÕÍ¨¹¥»÷01_kongshou	g01_ÆÕÍ¨¹¥»÷03_changqiang	g01_ÆÕÍ¨¹¥»÷03_changqiang	g01_ÆÕÍ¨¹¥»÷03_shuangduan	g01_ÆÕÍ¨¹¥»÷03_danduan	g01_ÆÕÍ¨¹¥»÷03_danduan	g01_ÆÕÍ¨¹¥»÷03_shuangduan	npc_attack	npc_attack	0	-1	ÆÕÍ¨¹¥»÷3
-204	g01_ÆÕÍ¨¹¥»÷01_kongshou	g01_Á¬ÕĞ1a	g01_Á¬ÕĞ1a	g01_Á¬ÕĞ1a	g01_Á¬ÕĞ1a	g01_Á¬ÕĞ1a	g01_Á¬ÕĞ1a	npc_attack	npc_attack	0	-1	Á¬ÕĞ1a
-205	g01_ÆÕÍ¨¹¥»÷01_kongshou	g01_Á¬ÕĞ1b	g01_Á¬ÕĞ1b	g01_Á¬ÕĞ1b	g01_Á¬ÕĞ1b	g01_Á¬ÕĞ1b	g01_Á¬ÕĞ1b	npc_attack	npc_attack	0	-1	Á¬ÕĞ1b
-206	g01_ÆÕÍ¨¹¥»÷01_kongshou	g01_Á¬ÕĞ1c	g01_Á¬ÕĞ1c	g01_Á¬ÕĞ1c	g01_Á¬ÕĞ1c	g01_Á¬ÕĞ1c	g01_Á¬ÕĞ1c	npc_attack	npc_attack	0	-1	Á¬ÕĞ1c
-450								npc_ren_danwai	npc_ren_danwai	0	-1	¸ß¼¶´ò»÷
-451								npc_attack	npc_attack	0	-1	°µÆ÷Í¶ÖÀ
-452								npc_all_danbing	npc_all_danbing	0	-1	º®±ùÖä
-453								npc_all_danhuo	npc_all_danhuo	0	-1	ÁÒ»ğÖä
-454								npc_qijuboss_yuancheng	npc_qijuboss_yuancheng	0	-1	ĞşÀ×Öä
-455								npc_all_dandu	npc_all_dandu	0	-1	Ñª¶¾Öä
-456								npc_all_bingbao	npc_all_bingbao	0	-1	±ù±¬
-457								npc_all_huobao	npc_all_huobao	0	-1	»ğ±¬
-458								npc_all_xuanbao	npc_all_xuanbao	0	-1	À×±¬
-459								npc_all_dubao	npc_all_dubao	0	-1	¶¾±¬
-460								npc_all_qunshang_jq	npc_all_qunshang_jq	0	-1	ÈºÄ§ÂÒÎè¾ÛÆø
-461								npc_ren_qunwai	npc_ren_qunwai	0	-1	ÈºÄ§ÂÒÎè·¢ÕĞ
-462								npc_all_qunshang_jq	npc_all_qunshang_jq	0	-1	ÕğµØ¹¥»÷¾ÛÆø
-463								npc_shou_qunwai	npc_shou_qunwai	0	-1	ÕğµØ¹¥»÷·¢ÕĞ
-464								npc_all_kongzhi	npc_all_kongzhi	0	-1	·âÑ¨
-465								npc_all_kongzhi	npc_all_kongzhi	0	-1	Âé±Ô
-466								npc_all_kongzhi	npc_all_kongzhi	0	-1	Î§À§
-467								npc_all_kongzhi	npc_all_kongzhi	0	-1	Ê¯»¯
-468								npc_all_kongzhi	npc_all_kongzhi	0	-1	Ê§Ã÷
-469								npc_all_kongzhi	npc_all_kongzhi	0	-1	¿Ö¾å
-470								npc_all_kongzhi	npc_all_kongzhi	0	-1	´ç²½ÄÑÒÆ
-471								npc_all_kongzhi	npc_all_kongzhi	0	-1	²øÈÆ
-472								npc_all_kongzhi	npc_all_kongzhi	0	-1	¾ÍÇÜ
-473								npc_all_kongzhi	npc_all_kongzhi	0	-1	ËÀ²øÀÃ´ò
-474								npc_all_kongzhi	npc_all_kongzhi	0	-1	ÈíÈõÎŞÁ¦
-475								npc_all_kongzhi	npc_all_kongzhi	0	-1	·´Ó¦³Ù¶Û
-476								npc_all_kongzhi	npc_all_kongzhi	0	-1	ÉíÌåĞéÈõ
-477								npc_all_kongzhi	npc_all_kongzhi	0	-1	ÎŞ¾«´ò²É
-478								npc_all_kongzhi	npc_all_kongzhi	0	-1	ÄÚÁ¦ÍâĞ¹
-479								npc_all_kongzhi	npc_all_kongzhi	0	-1	Èõ²»½û·ç
-480								npc_all_danhuo	npc_all_danhuo	0	-1	ÊÉÑª
-481								npc_all_dandu	npc_all_dandu	0	-1	ÖĞ¶¾
-482								npc_all_zhiliao	npc_all_zhiliao	0	-1	ÖÎÁÆ
-483								npc_all_jinghua	npc_all_jinghua	0	-1	¾»»¯
-484								npc_all_zhufu	npc_all_zhufu	0	-1	ÊÈÑª
-485								npc_all_jinghua	npc_all_jinghua	0	-1	Ê¯·ô
-486								npc_all_kaitang	npc_all_kaitang	0	-1	¿ªÌÅ
-487								npc_all_dandu	npc_all_dandu	0	-1	ÆÆ¿¹
-488								npc_shou_danwai	npc_shou_danwai	0	-1	ÁÒ×¦¿ñ»÷
-489								npc_all_qunshang_jq	npc_all_qunshang_jq	0	-1	ÁéÖ¥¾Å×ª¾ÛÆø
-490								npc_all_zhiliao	npc_all_zhiliao	0	-1	ÁéÖ¥¾Å×ª·¢ÕĞ
-491								npc_all_shouwangnuhou	npc_all_shouwangnuhou	0	-1	ÀûÑÀÅØÏø
-492								npc_all_kaitang	npc_all_kaitang	0	-1	ÖÂÃü´ò»÷
-493								npc_all_qunnei	npc_all_qunnei	0	-1	ÅÅÉ½µ¹º£
-494								npc_all_dandu	npc_all_dandu	0	-1	¶¾Áé×¦
-495								npc_all_qunshang_jq	npc_all_qunshang_jq	0	-1	°Ù²İÏÉÂ¶¾ÛÆø
-496								npc_all_zhiliao	npc_all_zhiliao	0	-1	°Ù²İÏÉÂ¶·¢ÕĞ
-497								npc_all_dandu	npc_all_dandu	0	-1	¶¾Òº»÷
-498								npc_all_dubao	npc_all_dubao	0	-1	¶¾Ë¿²øÈÆ
-499								npc_all_danbing	npc_all_danbing	0	-1	±ù¾«Ò»ÖÀ
-500								npc_all_kongzhi	npc_all_kongzhi	0	-1	ĞÄÄ§±ÏÏÖ
-501								npc_all_qunnei	npc_all_qunnei	0	-1	ÈçÃÎ»ÃÏñ
-502								npc_all_dannei	npc_all_dannei	0	-1	Ğé»ÃÕ¶
-503								npc_all_qunnei	npc_all_qunnei	0	-1	Ğé»ÃÆÆ
-504								npc_all_juqi	npc_all_juqi	0	-1	´óÑ©±À¾ÛÆø
-505								npc_all_qunbing	npc_all_qunbing	0	-1	´óÑ©±À·¢ÕĞ
-506								npc_all_shouwangnuhou	npc_all_shouwangnuhou	0	-1	ÊŞÍõÅ­ºğ
-507								npc_all_juqi	npc_all_juqi	0	-1	ÃîÊÖ»Ø´º¾ÛÆø
-508								npc_all_qunzhiliao	npc_all_qunzhiliao	0	-1	ÃîÊÖ»Ø´º·¢ÕĞ
-509								npc_all_tianluodiwang	npc_all_tianluodiwang	0	-1	ÌìÂŞµØÍø
-510								npc_all_qunshang_jq	npc_all_qunshang_jq	0	-1	ÓñÊ¯¾ã·Ù¾ÛÆø
-511								npc_all_qunshang	npc_all_qunshang	0	-1	ÓñÊ¯¾ã·Ù·¢ÕĞ
-512								npc_all_kongzhi	npc_all_kongzhi	0	-1	Ê§»êÂäÆÇ
-513								npc_all_kongzhi	npc_all_kongzhi	0	-1	Ê®ÏãÈí½î
-514								npc_shou_danwai	npc_shou_danwai	0	-1	ËºÁÑ
-515								npc_all_qunhuo_jq	npc_all_qunhuo_jq	0	-1	ÁÒÑæÁ¶Óü¾ÛÆø
-516								npc_all_qunhuo	npc_all_qunhuo	0	-1	ÁÒÑæÁ¶Óü·¢ÕĞ
-517								npc_attack	npc_attack	0	-1	×¦»÷
-518								npc_attack	npc_attack	0	-1	Õ¶»÷
-519								npc_attack	npc_attack	0	-1	ÕÆ»÷
-520								npc_qijuboss_gongji2	npc_qijuboss_gongji2	0	-1	Í´»÷
-521								npc_all_qunxuan_jq	npc_all_qunxuan_jq	0	-1	¿ñÀ×ÌìÀÎ¾ÛÆø
-522								npc_qijuboss_gongji	npc_qijuboss_gongji	0	-1	¿ñÀ×ÌìÀÎ·¢ÕĞ
-523								npc_all_kongzhi	npc_all_kongzhi	0	-1	×çÖä
-524								npc_all_danhuo	npc_all_danhuo	0	-1	×ÆÉÕ
-525								npc_all_dandu	npc_all_dandu	0	-1	¸¯Ê´
-526								npc_all_juqi	npc_all_juqi	0	-1	¶İÌìÈëµØ¾ÛÆø
-527								npc_all_fushen	npc_all_fushen	0	-1	¶İÌìÈëµØ·¢ÕĞ
-528								npc_all_zhufu	npc_all_zhufu	0	-1	±ù¾«
-529								npc_all_zhufu	npc_all_zhufu	0	-1	»ğÁé
-530								npc_all_zhufu	npc_all_zhufu	0	-1	¶¾¹Æ
-531								npc_all_zhufu	npc_all_zhufu	0	-1	ĞşÊŞ
-532								npc_all_zhufu	npc_all_zhufu	0	-1	³Ù¶Û
-533								npc_all_zhufu	npc_all_zhufu	0	-1	½Æ»«
-534								npc_all_zhufu	npc_all_zhufu	0	-1	º©ºñ
-535								npc_all_zhufu	npc_all_zhufu	0	-1	Æ´Ãü
-536								npc_all_zhufu	npc_all_zhufu	0	-1	·¨»ê
-537								npc_all_zhufu	npc_all_zhufu	0	-1	ÂùÁ¦
-538								npc_all_zhufu	npc_all_zhufu	0	-1	½èÁ¦
-539								npc_all_zhufu	npc_all_zhufu	0	-1	¸ß¼¶½èÁ¦
-540								npc_all_zhufu	npc_all_zhufu	0	-1	ÒÆ»ê
-541								npc_all_zhufu	npc_all_zhufu	0	-1	¸ß¼¶ÒÆ»ê
-542								npc_all_zhufu	npc_all_zhufu	0	-1	Ë²Ó°
-543								npc_all_zhufu	npc_all_zhufu	0	-1	¸ß¼¶Ë²Ó°
-544								npc_all_zhufu	npc_all_zhufu	0	-1	Ç¿Éí
-545								npc_all_zhufu	npc_all_zhufu	0	-1	¸ß¼¶Ç¿Éí
-546								npc_all_zhufu	npc_all_zhufu	0	-1	ÄıÉñ
-547								npc_all_zhufu	npc_all_zhufu	0	-1	¸ß¼¶ÄıÉñ
-548								cw_danbing	cw_danbing	0	-1	¼«±ùÄıÉ±
-549								cw_danhuo	cw_danhuo	0	-1	½Ù»ğ·ÙÉ±
-550								cw_dandu	cw_dandu	0	-1	¸¯¶¾Ê´É±
-551								cw_danxuan	cw_danxuan	0	-1	¾ÅÀ×»÷É±
-552								npc_all_qunshang	npc_all_qunshang	0	-1	Ñª±¬
-553								npc_all_qunshang	npc_all_qunshang	0	-1	¸ß¼¶Ñª±¬
-554								npc_all_qunzhiliao	npc_all_qunzhiliao	0	-1	Ê¥±¬
-555								npc_all_qunzhiliao	npc_all_qunzhiliao	0	-1	¸ß¼¶Ê¥±¬
-556								npc_all_bingbao	npc_all_bingbao	0	-1	±ù±¬
-557								npc_all_bingbao	npc_all_bingbao	0	-1	¸ß¼¶±ù±¬
-558								npc_all_jinghua	npc_all_jinghua	0	-1	¾»»¯
-559								npc_all_jinghua	npc_all_jinghua	0	-1	¸ß¼¶¾»»¯
-560								npc_all_zhufu	npc_all_zhufu	0	-1	ÖØÉú
-561								npc_all_zhufu	npc_all_zhufu	0	-1	¸ß¼¶ÖØÉú
-562								npc_all_gongsheng	npc_all_gongsheng	0	-1	¹²Éú
-563								npc_all_gongsheng	npc_all_gongsheng	0	-1	¸ß¼¶¹²Éú
-564								npc_all_zhiliao	npc_all_zhiliao	0	-1	ÖÎÁÆ
-565								npc_all_zhiliao	npc_all_zhiliao	0	-1	¸ß¼¶ÖÎÁÆ
-566								npc_all_gongsheng	npc_all_gongsheng	0	-1	ÈâÇ½
-567								npc_all_gongsheng	npc_all_gongsheng	0	-1	¸ß¼¶ÈâÇ½
-568								npc_all_zhufu	npc_all_zhufu	0	-1	ÉñÓÓ
-569								npc_all_zhufu	npc_all_zhufu	0	-1	¸ß¼¶ÉñÓÓ
-570								npc_all_zhufu	npc_all_zhufu	0	-1	ÊÈÑª
-571								npc_all_zhufu	npc_all_zhufu	0	-1	¸ß¼¶ÊÈÑª
-572								cw_fs_xueji	cw_fs_xueji	0	-1	Ñª¼À
-573								cw_fs_xueji	cw_fs_xueji	0	-1	¸ß¼¶Ñª¼À
-574								npc_all_zhufu	npc_all_zhufu	0	-1	Î±×°
-575								npc_all_zhufu	npc_all_zhufu	0	-1	¸ß¼¶Î±×°
-576								npc_all_fushen	npc_all_fushen	0	-1	¸½Éí
-577								npc_all_fushen	npc_all_fushen	0	-1	¸ß¼¶¸½Éí
-578								cw_danbing	cw_danbing	0	-1	º®±ùÖä
-579								cw_danhuo	cw_danhuo	0	-1	ÁÒ»ğÖä
-580								cw_dandu	cw_dandu	0	-1	Ñª¶¾Öä
-581								cw_danxuan	cw_danxuan	0	-1	ĞşÀ×Öä
-582								cw_fs_fanji	cw_fs_fanji	0	-1	·´»÷
-583								cw_fs_fanji	cw_fs_fanji	0	-1	¸ß¼¶·´»÷
-584								cw_fs_xixue	cw_fs_xixue	0	-1	ÎüÑª
-585								cw_fs_xixue	cw_fs_xixue	0	-1	¸ß¼¶ÎüÑª
-586								cw_fs_fanzhen	cw_fs_fanzhen	0	-1	·´Õğ
-587								cw_fs_fanzhen	cw_fs_fanzhen	0	-1	¸ß¼¶·´Õğ
-588								cw_fs_lingdong	cw_fs_lingdong	0	-1	Áé¶¯
-589								cw_fs_lingdong	cw_fs_lingdong	0	-1	¸ß¼¶Áé¶¯
-590								cw_fs_ximo	cw_fs_ximo	0	-1	ÎüÆø
-591								cw_fs_ximo	cw_fs_ximo	0	-1	¸ß¼¶ÎüÆø
-592								cw_fs_danu	cw_fs_danu	0	-1	´òÅ­
-593								cw_fs_danu	cw_fs_danu	0	-1	¸ß¼¶´òÅ­
-594								cw_fs_zhongxin	cw_fs_zhongxin	0	-1	ÖÒĞÄ
-595								cw_fs_zhongxin	cw_fs_zhongxin	0	-1	¸ß¼¶ÖÒĞÄ
-596								npc_all_zhufu	npc_all_zhufu	0	-1	ÁéÆø
-597								npc_all_zhufu	npc_all_zhufu	0	-1	¸ß¼¶ÁéÆø
-598								npc_shou_danwai	npc_shou_danwai	0	-1	ÃÍ»÷
-599								npc_shou_danwai	npc_shou_danwai	0	-1	¸ß¼¶ÃÍ»÷
-600								npc_all_zhufu	npc_all_zhufu	0	-1	Ê¶ÆÆ
-601								npc_all_zhufu	npc_all_zhufu	0	-1	¸ß¼¶Ê¶ÆÆ
-602								npc_all_lianji	npc_all_lianji	0	-1	Á¬»÷
-603								npc_all_lianji	npc_all_lianji	0	-1	¸ß¼¶Á¬»÷
-604								npc_all_dannei	npc_all_dannei	0	-1	Í´»÷
-605								npc_all_dannei	npc_all_dannei	0	-1	¸ß¼¶Í´»÷
-606								npc_all_kongzhi	npc_all_kongzhi	0	-1	ĞéÈõ
-607								npc_all_kongzhi	npc_all_kongzhi	0	-1	¸ß¼¶ĞéÈõ
-608								npc_all_kongzhi	npc_all_kongzhi	0	-1	ÆÆÕÀ
-609								npc_all_kongzhi	npc_all_kongzhi	0	-1	¸ß¼¶ÆÆÕÀ
-610								npc_all_kongzhi	npc_all_kongzhi	0	-1	Ë¤°í
-611								npc_all_kongzhi	npc_all_kongzhi	0	-1	¸ß¼¶Ë¤°í
-612								npc_all_jinghua	npc_all_jinghua	0	-1	½âÑ¨
-613								npc_all_jinghua	npc_all_jinghua	0	-1	ÇåĞÑ
-614								npc_all_jinghua	npc_all_jinghua	0	-1	Ã÷Ä¿
-615								npc_all_jinghua	npc_all_jinghua	0	-1	ÇáÁé
-616								npc_all_jinghua	npc_all_jinghua	0	-1	¹ÌÔª
-617								npc_all_jinghua	npc_all_jinghua	0	-1	È÷ÍÑ
+0	ç©ºæ‰‹ç«™ç«‹01	é•¿æªç«™ç«‹01	å¤§åˆ€ç«™ç«‹01	åŒçŸ­ç«™ç«‹01	å•çŸ­ç«™ç«‹01	æ‰‡å­ç«™ç«‹01	åŒç¯ç«™ç«‹01	npc_å¤å¢“è™«å­ç«™ç«‹	npc_å¤å¢“è™«å­ç«™ç«‹	0	-1	(å’Œå¹³)ä¼‘æ¯
+1	ç©ºæ‰‹ç«™ç«‹01	ç©ºæ‰‹ç«™ç«‹01	ç©ºæ‰‹ç«™ç«‹01	ç©ºæ‰‹ç«™ç«‹01	ç©ºæ‰‹ç«™ç«‹01	ç©ºæ‰‹ç«™ç«‹01	ç©ºæ‰‹ç«™ç«‹01	ä¼‘é—²	ä¼‘é—²	0	-1	(å’Œå¹³)ä¼‘æ¯å°åŠ¨ä½œ1
+2	ç©ºæ‰‹ç«™ç«‹01	ç©ºæ‰‹ç«™ç«‹01	ç©ºæ‰‹ç«™ç«‹01	ç©ºæ‰‹ç«™ç«‹01	ç©ºæ‰‹ç«™ç«‹01	ç©ºæ‰‹ç«™ç«‹01	ç©ºæ‰‹ç«™ç«‹01	ä¼‘é—²	ä¼‘é—²	0	-1	(å’Œå¹³)ä¼‘æ¯å°åŠ¨ä½œ2
+3								è·‘æ­¥	è·‘æ­¥	0	-1	(å’Œå¹³)è¡Œèµ°
+4	è·‘æ­¥	é•¿æªè·‘æ­¥	é•¿æªè·‘æ­¥	åŒçŸ­è·‘æ­¥	å•çŸ­è·‘æ­¥	æ‰‡å­è·‘æ­¥	åŒç¯è·‘æ­¥	è·‘æ­¥	è·‘æ­¥	0	-1	(å’Œå¹³)è·‘æ­¥
+14	ç©ºæ‰‹è­¦æˆ’	é•¿æªè­¦æˆ’	å¤§åˆ€è­¦æˆ’	åŒçŸ­è­¦æˆ’	å•çŸ­è­¦æˆ’	æ‰‡å­è­¦æˆ’	åŒç¯è­¦æˆ’	ç«™ç«‹	ç«™ç«‹	0	-1	(æˆ˜æ–—)ä¼‘æ¯
+15								è·‘æ­¥	è·‘æ­¥	0	-1	(æˆ˜æ–—)è¡Œèµ°
+16	è·‘æ­¥	è·‘æ­¥	è·‘æ­¥	è·‘æ­¥	è·‘æ­¥	è·‘æ­¥	è·‘æ­¥	è·‘æ­¥	è·‘æ­¥	0	-1	(æˆ˜æ–—)è·‘æ­¥
+23	ç©ºæ‰‹å—å‡»	é•¿æªå—å‡»	å¤§åˆ€å—å‡»	åŒçŸ­å—å‡»	å•çŸ­å—å‡»	æ‰‡å­å—å‡»	åŒç¯å—å‡»	å—å‡»	å—å‡»	0	-1	(æˆ˜æ–—)è¢«å‡»ä¸­
+24	å€’åœ°	å€’åœ°	å€’åœ°	å€’åœ°	å€’åœ°	å€’åœ°	å€’åœ°	å€’åœ°	å€’åœ°	0	-1	(æˆ˜æ–—)æ­»äº¡
+25	æ­»äº¡	æ­»äº¡	æ­»äº¡	æ­»äº¡	æ­»äº¡	æ­»äº¡	æ­»äº¡	å€’åœ°	å€’åœ°	0	-1	(æˆ˜æ–—)å°¸ä½“
+53	ç©ºæ‰‹æ½œè¡Œ	é•¿æªæ½œè¡Œ	é•¿æªæ½œè¡Œ	åŒçŸ­æ½œè¡Œ	å•çŸ­æ½œè¡Œ	æ‰‡å­æ½œè¡Œ	åŒç¯æ½œè¡Œ	è·‘æ­¥	è·‘æ­¥	0	-1	(æ½œè¡Œ)è·‘æ­¥
+99	g01_å‡çº§_shengji	g01_å‡çº§_shengji	g01_å‡çº§_shengji	g01_å‡çº§_shengji	g01_å‡çº§_shengji	g01_å‡çº§_shengji	g01_å‡çº§_shengji	g01_å‡çº§_shengji	g01_å‡çº§_shengji	0	-1	å‡çº§
+125	å•çŸ­æ¨ªæ‰«	å•çŸ­æ¨ªæ‰«	å•çŸ­æ¨ªæ‰«	å•çŸ­æ¨ªæ‰«	å•çŸ­æ¨ªæ‰«	å•çŸ­æ¨ªæ‰«	å•çŸ­æ¨ªæ‰«	å•çŸ­æ¨ªæ‰«	å•çŸ­æ¨ªæ‰«	0	-1	
+126	å•çŸ­æ³•2è“„åŠ›	å•çŸ­æ³•2è“„åŠ›	å•çŸ­æ³•2è“„åŠ›	å•çŸ­æ³•2è“„åŠ›	å•çŸ­æ³•2è“„åŠ›	å•çŸ­æ³•2è“„åŠ›	å•çŸ­æ³•2è“„åŠ›	å•çŸ­æ³•2è“„åŠ›	å•çŸ­æ³•2è“„åŠ›	0	-1	
+127	å•çŸ­æ”»å‡»01	å•çŸ­æ”»å‡»01	å•çŸ­æ”»å‡»01	å•çŸ­æ”»å‡»01	å•çŸ­æ”»å‡»01	å•çŸ­æ”»å‡»01	å•çŸ­æ”»å‡»01	å•çŸ­æ”»å‡»01	å•çŸ­æ”»å‡»01	0	-1	
+128	å•çŸ­æ³•2å‘å‡º	å•çŸ­æ³•2å‘å‡º	å•çŸ­æ³•2å‘å‡º	å•çŸ­æ³•2å‘å‡º	å•çŸ­æ³•2å‘å‡º	å•çŸ­æ³•2å‘å‡º	å•çŸ­æ³•2å‘å‡º	å•çŸ­æ³•2å‘å‡º	å•çŸ­æ³•2å‘å‡º	0	-1	
+129	å•çŸ­æ”»å‡»01	é•¿æªæ”»å‡»01	é•¿æªæ”»å‡»01	åŒçŸ­æ”»å‡»01	å•çŸ­æ”»å‡»01	å•çŸ­æ”»å‡»01	åŒçŸ­æ”»å‡»01	æ”»å‡»	æ”»å‡»	0	-1	
+130	å•çŸ­æ”»å‡»01	é•¿æªå‡¿åœ°c	é•¿æªå‡¿åœ°c	åŒçŸ­å‡¿åœ°c	å•çŸ­å‡¿åœ°c	å•çŸ­å‡¿åœ°c	åŒçŸ­å‡¿åœ°c	æ”»å‡»	æ”»å‡»	0	-1	
+131	ç»´æŒ1a	ç»´æŒ1a	ç»´æŒ1a	ç»´æŒ1a	ç»´æŒ1a	ç»´æŒ1a	ç»´æŒ1a	æ”»å‡»	æ”»å‡»	0	-1	
+132	ç»´æŒ1b	ç»´æŒ1b	ç»´æŒ1b	ç»´æŒ1b	ç»´æŒ1b	ç»´æŒ1b	ç»´æŒ1b	æ”»å‡»	æ”»å‡»	0	-1	
+133	å•çŸ­æ”»å‡»01	é•¿æªä¸¹å‡¤æœé˜³	é•¿æªä¸¹å‡¤æœé˜³	åŒçŸ­ä¸¹å‡¤æœé˜³	å•çŸ­ä¸¹å‡¤æœé˜³	å•çŸ­ä¸¹å‡¤æœé˜³	åŒçŸ­ä¸¹å‡¤æœé˜³	æ”»å‡»	æ”»å‡»	0	-1	
+134	å•çŸ­æ”»å‡»01	é•¿æªæ…ˆèˆªæ™®æ¸¡	é•¿æªæ…ˆèˆªæ™®æ¸¡	åŒçŸ­æ…ˆèˆªæ™®æ¸¡	å•çŸ­æ…ˆèˆªæ™®æ¸¡	å•çŸ­æ…ˆèˆªæ™®æ¸¡	åŒçŸ­æ…ˆèˆªæ™®æ¸¡	æ”»å‡»	æ”»å‡»	0	-1	
+135	å•çŸ­æ”»å‡»01	é•¿æªå°‘æ³½å‰‘	é•¿æªå°‘æ³½å‰‘	åŒçŸ­å°‘æ³½å‰‘	å•çŸ­å°‘æ³½å‰‘	å•çŸ­å°‘æ³½å‰‘	åŒçŸ­å°‘æ³½å‰‘	æ”»å‡»	æ”»å‡»	0	-1	
+136	ç©ºæ‰‹ç«™ç«‹02	é•¿æªç«™ç«‹02	å¤§åˆ€ç«™ç«‹02	åŒçŸ­ç«™ç«‹02	å•çŸ­ç«™ç«‹02	æ‰‡å­ç«™ç«‹02	åŒç¯ç«™ç«‹02	æ”»å‡»	æ”»å‡»	0	-1	
+137	ç©ºæ‰‹ç«™ç«‹02	é•¿æªç«™ç«‹02	å¤§åˆ€æ”»å‡»01	åŒçŸ­ç«™ç«‹01	å•çŸ­ç«™ç«‹01	æ‰‡å­ç«™ç«‹01	åŒç¯ç«™ç«‹01	æ”»å‡»	æ”»å‡»	0	-1	
+138	ç©ºæ‰‹ç«™ç«‹02	é•¿æªç«™ç«‹02	å¤§åˆ€ç«™ç«‹01	åŒçŸ­ç«™ç«‹01	å•çŸ­ç«™ç«‹01	æ‰‡å­æ”»å‡»01	åŒç¯ç«™ç«‹01	æ”»å‡»	æ”»å‡»	0	-1	
+139	ç©ºæ‰‹ç«™ç«‹02	é•¿æªç«™ç«‹02	å¤§åˆ€ç«™ç«‹01	åŒçŸ­ç«™ç«‹01	å•çŸ­æ”»å‡»02	æ‰‡å­ç«™ç«‹01	åŒç¯ç«™ç«‹01	æ”»å‡»	æ”»å‡»	0	-1	
+140	ç©ºæ‰‹ç«™ç«‹02	é•¿æªç«™ç«‹02	å¤§åˆ€ç«™ç«‹01	åŒçŸ­ç«™ç«‹01	å•çŸ­æ”»å‡»03	æ‰‡å­ç«™ç«‹01	åŒç¯ç«™ç«‹01	æ”»å‡»	æ”»å‡»	0	-1	
+141	ç©ºæ‰‹ç«™ç«‹02	é•¿æªç«™ç«‹02	å¤§åˆ€ç«™ç«‹01	åŒçŸ­ç«™ç«‹01	å•çŸ­æ”»å‡»03	æ‰‡å­ç«™ç«‹01	åŒç¯æ”»å‡»03	æ”»å‡»	æ”»å‡»	0	-1	
+142	é‡‡çŸ¿	é‡‡çŸ¿	é‡‡çŸ¿	é‡‡çŸ¿	é‡‡çŸ¿	é‡‡çŸ¿	é‡‡çŸ¿	æ”»å‡»	æ”»å‡»	0	-1	
+143	æ‰“å¼€	æ‰“å¼€	æ‰“å¼€	æ‰“å¼€	æ‰“å¼€	æ‰“å¼€	æ‰“å¼€	æ”»å‡»	æ”»å‡»	0	-1	
+144	é’“é±¼	é’“é±¼	é’“é±¼	é’“é±¼	é’“é±¼	é’“é±¼	é’“é±¼	æ”»å‡»	æ”»å‡»	0	-1	
+145	è·³è·ƒ	è·³è·ƒ	è·³è·ƒ	è·³è·ƒ	è·³è·ƒ	è·³è·ƒ	è·³è·ƒ	æ”»å‡»	æ”»å‡»	0	-1	
+146	g01_æ™®é€šæ”»å‡»01_kongshou	g01_æ”»å‡»åŠ¨ä½œ1	g01_æ”»å‡»åŠ¨ä½œ1	g01_æ”»å‡»åŠ¨ä½œ1	g01_æ”»å‡»åŠ¨ä½œ1	g01_æ”»å‡»åŠ¨ä½œ1	g01_æ”»å‡»åŠ¨ä½œ1	npc_attack	npc_attack	0	-1	
+147	g01_æ™®é€šæ”»å‡»01_kongshou	g01_æ”»å‡»åŠ¨ä½œ2	g01_æ”»å‡»åŠ¨ä½œ2	g01_æ”»å‡»åŠ¨ä½œ2	g01_æ”»å‡»åŠ¨ä½œ2	g01_æ”»å‡»åŠ¨ä½œ2	g01_æ”»å‡»åŠ¨ä½œ2	npc_attack	npc_attack	0	-1	
+148	g01_æ™®é€šæ”»å‡»01_kongshou	g01_æ”»å‡»åŠ¨ä½œ3	g01_æ”»å‡»åŠ¨ä½œ3	g01_æ”»å‡»åŠ¨ä½œ3	g01_æ”»å‡»åŠ¨ä½œ3	g01_æ”»å‡»åŠ¨ä½œ3	g01_æ”»å‡»åŠ¨ä½œ3	npc_attack	npc_attack	0	-1	
+149	g01_æ™®é€šæ”»å‡»01_kongshou	g01_æ”»å‡»åŠ¨ä½œ4	g01_æ”»å‡»åŠ¨ä½œ4	g01_æ”»å‡»åŠ¨ä½œ4	g01_æ”»å‡»åŠ¨ä½œ4	g01_æ”»å‡»åŠ¨ä½œ4	g01_æ”»å‡»åŠ¨ä½œ4	npc_attack	npc_attack	0	-1	
+150	g01_æ™®é€šæ”»å‡»01_kongshou	g01_æ”»å‡»åŠ¨ä½œ5	g01_æ”»å‡»åŠ¨ä½œ5	g01_æ”»å‡»åŠ¨ä½œ5	g01_æ”»å‡»åŠ¨ä½œ5	g01_æ”»å‡»åŠ¨ä½œ5	g01_æ”»å‡»åŠ¨ä½œ5	npc_attack	npc_attack	0	-1	
+151	g01_æ™®é€šæ”»å‡»01_kongshou	g01_ç¾¤ä½“æ”»å‡»åŠ¨ä½œ1	g01_ç¾¤ä½“æ”»å‡»åŠ¨ä½œ1	g01_ç¾¤ä½“æ”»å‡»åŠ¨ä½œ1	g01_ç¾¤ä½“æ”»å‡»åŠ¨ä½œ1	g01_ç¾¤ä½“æ”»å‡»åŠ¨ä½œ1	g01_ç¾¤ä½“æ”»å‡»åŠ¨ä½œ1	npc_attack	npc_attack	0	-1	
+152	g01_åŒæ‰‹åˆå_tiebushan	g01_åŒæ‰‹åˆå_tiebushan	g01_åŒæ‰‹åˆå_tiebushan	g01_åŒæ‰‹åˆå_tiebushan	g01_åŒæ‰‹åˆå_tiebushan	g01_åŒæ‰‹åˆå_tiebushan	g01_åŒæ‰‹åˆå_tiebushan	m_magic	m_magic	0	-1	é“å¸ƒæ‰
+153	g01_åŒæ‰‹åˆå_luohanzhen	g01_åŒæ‰‹åˆå_luohanzhen	g01_åŒæ‰‹åˆå_luohanzhen	g01_åŒæ‰‹åˆå_luohanzhen	g01_åŒæ‰‹åˆå_luohanzhen	g01_åŒæ‰‹åˆå_luohanzhen	g01_åŒæ‰‹åˆå_luohanzhen	m_magic	m_magic	0	-1	ç½—æ±‰é˜µ
+154	g01_åŒæ‰‹åˆå_shizihou	g01_åŒæ‰‹åˆå_shizihou	g01_åŒæ‰‹åˆå_shizihou	g01_åŒæ‰‹åˆå_shizihou	g01_åŒæ‰‹åˆå_shizihou	g01_åŒæ‰‹åˆå_shizihou	g01_åŒæ‰‹åˆå_shizihou	m_magic	m_magic	0	-1	ç‹®å­å¼
+155	g01_åŒæ‰‹åˆå_cihangpudu	g01_åŒæ‰‹åˆå_cihangpudu	g01_åŒæ‰‹åˆå_cihangpudu	g01_åŒæ‰‹åˆå_cihangpudu	g01_åŒæ‰‹åˆå_cihangpudu	g01_åŒæ‰‹åˆå_cihangpudu	g01_åŒæ‰‹åˆå_cihangpudu	m_magic	m_magic	0	-1	æ…ˆèˆªæ™®æ¸¡
+156	g01_åŒæ‰‹åˆå_lijingrulai	g01_åŒæ‰‹åˆå_lijingrulai	g01_åŒæ‰‹åˆå_lijingrulai	g01_åŒæ‰‹åˆå_lijingrulai	g01_åŒæ‰‹åˆå_lijingrulai	g01_åŒæ‰‹åˆå_lijingrulai	g01_åŒæ‰‹åˆå_lijingrulai	m_magic	m_magic	0	-1	ç¤¼æ•¬å¦‚æ¥
+157	g01_åŒæ‰‹åˆå_yiweidujiang	g01_åŒæ‰‹åˆå_yiweidujiang	g01_åŒæ‰‹åˆå_yiweidujiang	g01_åŒæ‰‹åˆå_yiweidujiang	g01_åŒæ‰‹åˆå_yiweidujiang	g01_åŒæ‰‹åˆå_yiweidujiang	g01_åŒæ‰‹åˆå_yiweidujiang	m_magic	m_magic	0	-1	ä¸€è‹‡æ¸¡æ±Ÿ
+158	g01_åŒæ‰‹åˆå_qiguanquanshen	g01_åŒæ‰‹åˆå_qiguanquanshen	g01_åŒæ‰‹åˆå_qiguanquanshen	g01_åŒæ‰‹åˆå_qiguanquanshen	g01_åŒæ‰‹åˆå_qiguanquanshen	g01_åŒæ‰‹åˆå_qiguanquanshen	g01_åŒæ‰‹åˆå_qiguanquanshen	m_magic	m_magic	0	-1	æ°”è´¯å…¨èº«
+159	g01_æ‘©è¯ƒæ— é‡_mokewuliang	g01_æ‘©è¯ƒæ— é‡_mokewuliang	g01_æ‘©è¯ƒæ— é‡_mokewuliang	g01_æ‘©è¯ƒæ— é‡_mokewuliang	g01_æ‘©è¯ƒæ— é‡_mokewuliang	g01_æ‘©è¯ƒæ— é‡_mokewuliang	g01_æ‘©è¯ƒæ— é‡_mokewuliang	m_magic	m_magic	0	-1	æ‘©è¯ƒæ— é‡
+160	g01_å¤šç½—å¶æŒ‡_duoluoyezhi	g01_å¤šç½—å¶æŒ‡_duoluoyezhi	g01_å¤šç½—å¶æŒ‡_duoluoyezhi	g01_å¤šç½—å¶æŒ‡_duoluoyezhi	g01_å¤šç½—å¶æŒ‡_duoluoyezhi	g01_å¤šç½—å¶æŒ‡_duoluoyezhi	g01_å¤šç½—å¶æŒ‡_duoluoyezhi	m_magic	m_magic	0	-1	å¤šç½—å¶æŒ‡
+161	g01_é‡‘é’Ÿç½©_jinzhongzhao	g01_é‡‘é’Ÿç½©_jinzhongzhao	g01_é‡‘é’Ÿç½©_jinzhongzhao	g01_é‡‘é’Ÿç½©_jinzhongzhao	g01_é‡‘é’Ÿç½©_jinzhongzhao	g01_é‡‘é’Ÿç½©_jinzhongzhao	g01_é‡‘é’Ÿç½©_jinzhongzhao	m_magic	m_magic	0	-1	é‡‘é’Ÿç½©
+162	g01_æ™®é€šæ”»å‡»01_kongshou	g01_æ™®é€šæ”»å‡»01_changqiang	g01_æ™®é€šæ”»å‡»01_dadao	g01_æ™®é€šæ”»å‡»01_shuangduan	g01_æ™®é€šæ”»å‡»01_danduan	g01_æ™®é€šæ”»å‡»01_shanzi	g01_æ™®é€šæ”»å‡»01_shuanghuan	æ”»å‡»	æ”»å‡»	0	-1	æ™®é€šæ”»å‡»1
+163	g01_æ™®é€šæ”»å‡»01_kongshou	g01_æ™®é€šæ”»å‡»02_changqiang	g01_æ™®é€šæ”»å‡»02_dadao	g01_æ™®é€šæ”»å‡»02_shuangduan	g01_æ™®é€šæ”»å‡»02_danduan	g01_æ™®é€šæ”»å‡»02_shanzi	g01_æ™®é€šæ”»å‡»02_shuanghuan	æ”»å‡»2	æ”»å‡»2	0	-1	æ™®é€šæ”»å‡»2
+164	g01_æ™®é€šæ”»å‡»01_kongshou	g01_æ™®é€šæ”»å‡»03_changqiang	g01_æ™®é€šæ”»å‡»03_dadao	g01_æ™®é€šæ”»å‡»03_shuangduan	g01_æ™®é€šæ”»å‡»03_danduan	g01_æ™®é€šæ”»å‡»03_shanzi	g01_æ™®é€šæ”»å‡»03_shuanghuan	è¿œç¨‹æ”»å‡»	è¿œç¨‹æ”»å‡»	0	-1	æ™®é€šæ”»å‡»3
+165	g01_æ™®é€šæ”»å‡»01_kongshou	g01_è¿æ‹›1a	g01_è¿æ‹›1a	g01_è¿æ‹›1a	g01_è¿æ‹›1a	g01_è¿æ‹›1a	g01_è¿æ‹›1a	npc_attack	npc_attack	0	-1	è¿æ‹›1a
+166	g01_æ™®é€šæ”»å‡»01_kongshou	g01_è¿æ‹›1b	g01_è¿æ‹›1b	g01_è¿æ‹›1b	g01_è¿æ‹›1b	g01_è¿æ‹›1b	g01_è¿æ‹›1b	npc_attack	npc_attack	0	-1	è¿æ‹›1b
+167	g01_æ™®é€šæ”»å‡»01_kongshou	g01_è¿æ‹›1c	g01_è¿æ‹›1c	g01_è¿æ‹›1c	g01_è¿æ‹›1c	g01_è¿æ‹›1c	g01_è¿æ‹›1c	npc_attack	npc_attack	0	-1	è¿æ‹›1c
+168	g01_æ™®é€šæ”»å‡»01_kongshou	g01_æ”»å‡»åŠ¨ä½œ301	g01_æ”»å‡»åŠ¨ä½œ301	g01_æ”»å‡»åŠ¨ä½œ301	g01_æ”»å‡»åŠ¨ä½œ301	g01_æ”»å‡»åŠ¨ä½œ301	g01_æ”»å‡»åŠ¨ä½œ301	npc_attack	npc_attack	0	-1	
+169	g01_æ™®é€šæ”»å‡»01_kongshou	g01_æ”»å‡»åŠ¨ä½œ1_cuogufenjin	g01_æ”»å‡»åŠ¨ä½œ1_cuogufenjin	g01_æ”»å‡»åŠ¨ä½œ1_cuogufenjin	g01_æ”»å‡»åŠ¨ä½œ1_cuogufenjin	g01_æ”»å‡»åŠ¨ä½œ1_cuogufenjin	g01_æ”»å‡»åŠ¨ä½œ1_cuogufenjin	npc_attack	npc_attack	0	-1	
+170	g01_æ™®é€šæ”»å‡»01_kongshou	g01_æ”»å‡»åŠ¨ä½œ16_cuixinliepi	g01_æ”»å‡»åŠ¨ä½œ16_cuixinliepi	g01_æ”»å‡»åŠ¨ä½œ16_cuixinliepi	g01_æ”»å‡»åŠ¨ä½œ16_cuixinliepi	g01_æ”»å‡»åŠ¨ä½œ16_cuixinliepi	g01_æ”»å‡»åŠ¨ä½œ16_cuixinliepi	npc_attack	npc_attack	0	-1	
+171	g01_æ™®é€šæ”»å‡»01_kongshou	g01_ç¾¤ä½“æ”»å‡»åŠ¨ä½œ1_xuanyinzhiyang	g01_ç¾¤ä½“æ”»å‡»åŠ¨ä½œ1_xuanyinzhiyang	g01_ç¾¤ä½“æ”»å‡»åŠ¨ä½œ1_xuanyinzhiyang	g01_ç¾¤ä½“æ”»å‡»åŠ¨ä½œ1_xuanyinzhiyang	g01_ç¾¤ä½“æ”»å‡»åŠ¨ä½œ1_xuanyinzhiyang	g01_ç¾¤ä½“æ”»å‡»åŠ¨ä½œ1_xuanyinzhiyang	npc_attack	npc_attack	0	-1	
+172	g01_æ™®é€šæ”»å‡»01_kongshou	g01_æ”»å‡»åŠ¨ä½œ17_tianditongshou	g01_æ”»å‡»åŠ¨ä½œ17_tianditongshou	g01_æ”»å‡»åŠ¨ä½œ17_tianditongshou	g01_æ”»å‡»åŠ¨ä½œ17_tianditongshou	g01_æ”»å‡»åŠ¨ä½œ17_tianditongshou	g01_æ”»å‡»åŠ¨ä½œ17_tianditongshou	npc_attack	npc_attack	0	-1	
+173	g01_æŠ¬å¤´æŒºèƒ¸_wuxinglianzhu	g01_æŠ¬å¤´æŒºèƒ¸_wuxinglianzhu	g01_æŠ¬å¤´æŒºèƒ¸_wuxinglianzhu	g01_æŠ¬å¤´æŒºèƒ¸_wuxinglianzhu	g01_æŠ¬å¤´æŒºèƒ¸_wuxinglianzhu	g01_æŠ¬å¤´æŒºèƒ¸_wuxinglianzhu	g01_æŠ¬å¤´æŒºèƒ¸_wuxinglianzhu	npc_attack	npc_attack	0	-1	
+174	g01_æ™®é€šæ”»å‡»01_kongshou	g01_æ”»å‡»åŠ¨ä½œ4_huoxingchongri	g01_æ”»å‡»åŠ¨ä½œ4_huoxingchongri	g01_æ”»å‡»åŠ¨ä½œ4_huoxingchongri	g01_æ”»å‡»åŠ¨ä½œ4_huoxingchongri	g01_æ”»å‡»åŠ¨ä½œ4_huoxingchongri	g01_æ”»å‡»åŠ¨ä½œ4_huoxingchongri	npc_attack	npc_attack	0	-1	
+175	g01_æŠ¬å¤´æŒºèƒ¸_qixingluochangkong	g01_æŠ¬å¤´æŒºèƒ¸_qixingluochangkong	g01_æŠ¬å¤´æŒºèƒ¸_qixingluochangkong	g01_æŠ¬å¤´æŒºèƒ¸_qixingluochangkong	g01_æŠ¬å¤´æŒºèƒ¸_qixingluochangkong	g01_æŠ¬å¤´æŒºèƒ¸_qixingluochangkong	g01_æŠ¬å¤´æŒºèƒ¸_qixingluochangkong	npc_attack	npc_attack	0	-1	
+176	g01_æŠ¬å¤´æŒºèƒ¸_shenxingbaibian	g01_æŠ¬å¤´æŒºèƒ¸_shenxingbaibian	g01_æŠ¬å¤´æŒºèƒ¸_shenxingbaibian	g01_æŠ¬å¤´æŒºèƒ¸_shenxingbaibian	g01_æŠ¬å¤´æŒºèƒ¸_shenxingbaibian	g01_æŠ¬å¤´æŒºèƒ¸_shenxingbaibian	g01_æŠ¬å¤´æŒºèƒ¸_shenxingbaibian	npc_attack	npc_attack	0	-1	
+177	g01_æŠ¬å¤´æŒºèƒ¸_zhiluweima	g01_æŠ¬å¤´æŒºèƒ¸_zhiluweima	g01_æŠ¬å¤´æŒºèƒ¸_zhiluweima	g01_æŠ¬å¤´æŒºèƒ¸_zhiluweima	g01_æŠ¬å¤´æŒºèƒ¸_zhiluweima	g01_æŠ¬å¤´æŒºèƒ¸_zhiluweima	g01_æŠ¬å¤´æŒºèƒ¸_zhiluweima	npc_attack	npc_attack	0	-1	
+178	g01_æŠ¬å¤´æŒºèƒ¸_toulianghuanzhu	g01_æŠ¬å¤´æŒºèƒ¸_toulianghuanzhu	g01_æŠ¬å¤´æŒºèƒ¸_toulianghuanzhu	g01_æŠ¬å¤´æŒºèƒ¸_toulianghuanzhu	g01_æŠ¬å¤´æŒºèƒ¸_toulianghuanzhu	g01_æŠ¬å¤´æŒºèƒ¸_toulianghuanzhu	g01_æŠ¬å¤´æŒºèƒ¸_toulianghuanzhu	npc_attack	npc_attack	0	-1	
+179	g01_æŠ¬å¤´æŒºèƒ¸_qiannuyuren	g01_æŠ¬å¤´æŒºèƒ¸_qiannuyuren	g01_æŠ¬å¤´æŒºèƒ¸_qiannuyuren	g01_æŠ¬å¤´æŒºèƒ¸_qiannuyuren	g01_æŠ¬å¤´æŒºèƒ¸_qiannuyuren	g01_æŠ¬å¤´æŒºèƒ¸_qiannuyuren	g01_æŠ¬å¤´æŒºèƒ¸_qiannuyuren	npc_attack	npc_attack	0	-1	
+180	g01_æŠ¬å¤´æŒºèƒ¸_nufachongguan	g01_æŠ¬å¤´æŒºèƒ¸_nufachongguan	g01_æŠ¬å¤´æŒºèƒ¸_nufachongguan	g01_æŠ¬å¤´æŒºèƒ¸_nufachongguan	g01_æŠ¬å¤´æŒºèƒ¸_nufachongguan	g01_æŠ¬å¤´æŒºèƒ¸_nufachongguan	g01_æŠ¬å¤´æŒºèƒ¸_nufachongguan	npc_attack	npc_attack	0	-1	
+181	g01_æ™®é€šæ”»å‡»01_kongshou	g01_æ”»å‡»åŠ¨ä½œ2_leitingzhinu	g01_æ”»å‡»åŠ¨ä½œ2_leitingzhinu	g01_æ”»å‡»åŠ¨ä½œ2_leitingzhinu	g01_æ”»å‡»åŠ¨ä½œ2_leitingzhinu	g01_æ”»å‡»åŠ¨ä½œ2_leitingzhinu	g01_æ”»å‡»åŠ¨ä½œ2_leitingzhinu	npc_attack	npc_attack	0	-1	
+182	g01_ä¹‰æ„¤å¡«è†º_yiwentianying	g01_ä¹‰æ„¤å¡«è†º_yiwentianying	g01_ä¹‰æ„¤å¡«è†º_yiwentianying	g01_ä¹‰æ„¤å¡«è†º_yiwentianying	g01_ä¹‰æ„¤å¡«è†º_yiwentianying	g01_ä¹‰æ„¤å¡«è†º_yiwentianying	g01_ä¹‰æ„¤å¡«è†º_yiwentianying	npc_attack	npc_attack	0	-1	
+183	g01_æ™®é€šæ”»å‡»01_kongshou	g01_åšç§¯è–„å‘_houjibofa	g01_åšç§¯è–„å‘_houjibofa	g01_åšç§¯è–„å‘_houjibofa	g01_åšç§¯è–„å‘_houjibofa	g01_åšç§¯è–„å‘_houjibofa	g01_åšç§¯è–„å‘_houjibofa	npc_attack	npc_attack	0	-1	
+184	g01_æ™®é€šæ”»å‡»01_kongshou	g01_æ”»å‡»åŠ¨ä½œ19_renguitongtu	g01_æ”»å‡»åŠ¨ä½œ19_renguitongtu	g01_æ”»å‡»åŠ¨ä½œ19_renguitongtu	g01_æ”»å‡»åŠ¨ä½œ19_renguitongtu	g01_æ”»å‡»åŠ¨ä½œ19_renguitongtu	g01_æ”»å‡»åŠ¨ä½œ19_renguitongtu	npc_attack	npc_attack	0	-1	
+185	ç«™ç«‹å–è¯	ç«™ç«‹å–è¯	ç«™ç«‹å–è¯	ç«™ç«‹å–è¯	ç«™ç«‹å–è¯	ç«™ç«‹å–è¯	ç«™ç«‹å–è¯	npc_attack	npc_attack	0	-1	
+186	åç€å–è¯	åç€å–è¯	åç€å–è¯	åç€å–è¯	åç€å–è¯	åç€å–è¯	åç€å–è¯	npc_attack	npc_attack	0	-1	
+187	é€šç”¨å‘æ‹›åŠ¨ä½œ	é€šç”¨å‘æ‹›åŠ¨ä½œ	é€šç”¨å‘æ‹›åŠ¨ä½œ	é€šç”¨å‘æ‹›åŠ¨ä½œ	é€šç”¨å‘æ‹›åŠ¨ä½œ	é€šç”¨å‘æ‹›åŠ¨ä½œ	é€šç”¨å‘æ‹›åŠ¨ä½œ	npc_attack	npc_attack	0	-1	
+188	g01l_æ‰å® _zhuachong	g01l_æ‰å® _zhuachong	g01l_æ‰å® _zhuachong	g01l_æ‰å® _zhuachong	g01l_æ‰å® _zhuachong	g01l_æ‰å® _zhuachong	g01l_æ‰å® _zhuachong	npc_attack	npc_attack	0	-1	
+189	g01_æ™®é€šæ”»å‡»01_kongshou	g01_åšç§¯è–„å‘_houjibofa_yanshi	g01_åšç§¯è–„å‘_houjibofa_yanshi	g01_åšç§¯è–„å‘_houjibofa_yanshi	g01_åšç§¯è–„å‘_houjibofa_yanshi	g01_åšç§¯è–„å‘_houjibofa_yanshi	g01_åšç§¯è–„å‘_houjibofa_yanshi	npc_attack	npc_attack	0	-1	
+190	g01_æ™®é€šæ”»å‡»01_kongshou	g01_æ”»å‡»åŠ¨ä½œ19_renguitongtu_yanshi	g01_æ”»å‡»åŠ¨ä½œ19_renguitongtu_yanshi	g01_æ”»å‡»åŠ¨ä½œ19_renguitongtu_yanshi	g01_æ”»å‡»åŠ¨ä½œ19_renguitongtu_yanshi	g01_æ”»å‡»åŠ¨ä½œ19_renguitongtu_yanshi	g01_æ”»å‡»åŠ¨ä½œ19_renguitongtu_yanshi	npc_attack	npc_attack	0	-1	
+191	g01_æ™®é€šæ”»å‡»01_kongshou	g01_æ”»å‡»åŠ¨ä½œ17_tianditongshou_yanshi	g01_æ”»å‡»åŠ¨ä½œ17_tianditongshou_yanshi	g01_æ”»å‡»åŠ¨ä½œ17_tianditongshou_yanshi	g01_æ”»å‡»åŠ¨ä½œ17_tianditongshou_yanshi	g01_æ”»å‡»åŠ¨ä½œ17_tianditongshou_yanshi	g01_æ”»å‡»åŠ¨ä½œ17_tianditongshou_yanshi	npc_attack	npc_attack	0	-1	
+192	é‡‡è¯	é‡‡è¯	é‡‡è¯	é‡‡è¯	é‡‡è¯	é‡‡è¯	é‡‡è¯	npc_attack	npc_attack	0	-1	
+193	guid_chongwu_buff	guid_chongwu_buff	guid_chongwu_buff	guid_chongwu_buff	guid_chongwu_buff	guid_chongwu_buff	guid_chongwu_buff	guid_chongwu_buff	guid_chongwu_buff	0	-1	å® ç‰©é‡Šæ”¾buffåŠ¨ä½œ
+194	guid_chongwu_hanbingzhou	guid_chongwu_hanbingzhou	guid_chongwu_hanbingzhou	guid_chongwu_hanbingzhou	guid_chongwu_hanbingzhou	guid_chongwu_hanbingzhou	guid_chongwu_hanbingzhou	guid_chongwu_hanbingzhou	guid_chongwu_hanbingzhou	0	-1	å® ç‰©é‡Šæ”¾å¯’å†°å’’çš„åŠ¨ä½œ
+195	guid_chongwu_gongji	guid_chongwu_gongji	guid_chongwu_gongji	guid_chongwu_gongji	guid_chongwu_gongji	guid_chongwu_gongji	guid_chongwu_gongji	guid_chongwu_gongji	guid_chongwu_gongji	0	-1	å® ç‰©æ”»å‡»åŠ¨ä½œ
+196	guid_chongwu_mengji	guid_chongwu_mengji	guid_chongwu_mengji	guid_chongwu_mengji	guid_chongwu_mengji	guid_chongwu_mengji	guid_chongwu_mengji	guid_chongwu_mengji	guid_chongwu_mengji	0	-1	å® ç‰©é‡Šæ”¾çŒ›å‡»çš„åŠ¨ä½œ
+197	guid_chongwu_fushen	guid_chongwu_fushen	guid_chongwu_fushen	guid_chongwu_fushen	guid_chongwu_fushen	guid_chongwu_fushen	guid_chongwu_fushen	guid_chongwu_fushen	guid_chongwu_fushen	0	-1	å® ç‰©é™„èº«åŠ¨ä½œ
+198	g01_æ”»å‡»åŠ¨ä½œ5	g01_æ”»å‡»åŠ¨ä½œ5	g01_æ”»å‡»åŠ¨ä½œ5	g01_æ”»å‡»åŠ¨ä½œ5	g01_æ”»å‡»åŠ¨ä½œ5	g01_æ”»å‡»åŠ¨ä½œ5	g01_æ”»å‡»åŠ¨ä½œ5	npc_attack	npc_attack	0	-1	é²²è·ƒåŒ—æºŸ
+199	g01_æ”»å‡»åŠ¨ä½œ28_peiranyouyu	g01_æ”»å‡»åŠ¨ä½œ28_peiranyouyu	g01_æ”»å‡»åŠ¨ä½œ28_peiranyouyu	g01_æ”»å‡»åŠ¨ä½œ28_peiranyouyu	g01_æ”»å‡»åŠ¨ä½œ28_peiranyouyu	g01_æ”»å‡»åŠ¨ä½œ28_peiranyouyu	g01_æ”»å‡»åŠ¨ä½œ28_peiranyouyu	npc_attack	npc_attack	0	-1	æ²›ç„¶æœ‰é›¨
+200	g01_é¨æ¸¸ä¸œæµ·_aoyoudonghai	g01_é¨æ¸¸ä¸œæµ·_aoyoudonghai	g01_é¨æ¸¸ä¸œæµ·_aoyoudonghai	g01_é¨æ¸¸ä¸œæµ·_aoyoudonghai	g01_é¨æ¸¸ä¸œæµ·_aoyoudonghai	g01_é¨æ¸¸ä¸œæµ·_aoyoudonghai	g01_é¨æ¸¸ä¸œæµ·_aoyoudonghai	npc_attack	npc_attack	0	-1	é¨æ¸¸ä¸œæµ·
+201	g01_æ™®é€šæ”»å‡»01_kongshou	g01_æ™®é€šæ”»å‡»01_changqiang	g01_æ™®é€šæ”»å‡»01_changqiang	g01_æ™®é€šæ”»å‡»01_shuangduan	g01_æ™®é€šæ”»å‡»01_danduan	g01_æ™®é€šæ”»å‡»01_danduan	g01_æ™®é€šæ”»å‡»01_shuangduan	npc_attack	npc_attack	0	-1	æ™®é€šæ”»å‡»1
+202	g01_æ™®é€šæ”»å‡»01_kongshou	g01_æ™®é€šæ”»å‡»02_changqiang	g01_æ™®é€šæ”»å‡»02_changqiang	g01_æ™®é€šæ”»å‡»02_shuangduan	g01_æ™®é€šæ”»å‡»02_danduan	g01_æ™®é€šæ”»å‡»02_danduan	g01_æ™®é€šæ”»å‡»02_shuangduan	npc_attack	npc_attack	0	-1	æ™®é€šæ”»å‡»2
+203	g01_æ™®é€šæ”»å‡»01_kongshou	g01_æ™®é€šæ”»å‡»03_changqiang	g01_æ™®é€šæ”»å‡»03_changqiang	g01_æ™®é€šæ”»å‡»03_shuangduan	g01_æ™®é€šæ”»å‡»03_danduan	g01_æ™®é€šæ”»å‡»03_danduan	g01_æ™®é€šæ”»å‡»03_shuangduan	npc_attack	npc_attack	0	-1	æ™®é€šæ”»å‡»3
+204	g01_æ™®é€šæ”»å‡»01_kongshou	g01_è¿æ‹›1a	g01_è¿æ‹›1a	g01_è¿æ‹›1a	g01_è¿æ‹›1a	g01_è¿æ‹›1a	g01_è¿æ‹›1a	npc_attack	npc_attack	0	-1	è¿æ‹›1a
+205	g01_æ™®é€šæ”»å‡»01_kongshou	g01_è¿æ‹›1b	g01_è¿æ‹›1b	g01_è¿æ‹›1b	g01_è¿æ‹›1b	g01_è¿æ‹›1b	g01_è¿æ‹›1b	npc_attack	npc_attack	0	-1	è¿æ‹›1b
+206	g01_æ™®é€šæ”»å‡»01_kongshou	g01_è¿æ‹›1c	g01_è¿æ‹›1c	g01_è¿æ‹›1c	g01_è¿æ‹›1c	g01_è¿æ‹›1c	g01_è¿æ‹›1c	npc_attack	npc_attack	0	-1	è¿æ‹›1c
+450								npc_ren_danwai	npc_ren_danwai	0	-1	é«˜çº§æ‰“å‡»
+451								npc_attack	npc_attack	0	-1	æš—å™¨æŠ•æ·
+452								npc_all_danbing	npc_all_danbing	0	-1	å¯’å†°å’’
+453								npc_all_danhuo	npc_all_danhuo	0	-1	çƒˆç«å’’
+454								npc_qijuboss_yuancheng	npc_qijuboss_yuancheng	0	-1	ç„é›·å’’
+455								npc_all_dandu	npc_all_dandu	0	-1	è¡€æ¯’å’’
+456								npc_all_bingbao	npc_all_bingbao	0	-1	å†°çˆ†
+457								npc_all_huobao	npc_all_huobao	0	-1	ç«çˆ†
+458								npc_all_xuanbao	npc_all_xuanbao	0	-1	é›·çˆ†
+459								npc_all_dubao	npc_all_dubao	0	-1	æ¯’çˆ†
+460								npc_all_qunshang_jq	npc_all_qunshang_jq	0	-1	ç¾¤é­”ä¹±èˆèšæ°”
+461								npc_ren_qunwai	npc_ren_qunwai	0	-1	ç¾¤é­”ä¹±èˆå‘æ‹›
+462								npc_all_qunshang_jq	npc_all_qunshang_jq	0	-1	éœ‡åœ°æ”»å‡»èšæ°”
+463								npc_shou_qunwai	npc_shou_qunwai	0	-1	éœ‡åœ°æ”»å‡»å‘æ‹›
+464								npc_all_kongzhi	npc_all_kongzhi	0	-1	å°ç©´
+465								npc_all_kongzhi	npc_all_kongzhi	0	-1	éº»ç—¹
+466								npc_all_kongzhi	npc_all_kongzhi	0	-1	å›´å›°
+467								npc_all_kongzhi	npc_all_kongzhi	0	-1	çŸ³åŒ–
+468								npc_all_kongzhi	npc_all_kongzhi	0	-1	å¤±æ˜
+469								npc_all_kongzhi	npc_all_kongzhi	0	-1	ææƒ§
+470								npc_all_kongzhi	npc_all_kongzhi	0	-1	å¯¸æ­¥éš¾ç§»
+471								npc_all_kongzhi	npc_all_kongzhi	0	-1	ç¼ ç»•
+472								npc_all_kongzhi	npc_all_kongzhi	0	-1	å°±æ“’
+473								npc_all_kongzhi	npc_all_kongzhi	0	-1	æ­»ç¼ çƒ‚æ‰“
+474								npc_all_kongzhi	npc_all_kongzhi	0	-1	è½¯å¼±æ— åŠ›
+475								npc_all_kongzhi	npc_all_kongzhi	0	-1	ååº”è¿Ÿé’
+476								npc_all_kongzhi	npc_all_kongzhi	0	-1	èº«ä½“è™šå¼±
+477								npc_all_kongzhi	npc_all_kongzhi	0	-1	æ— ç²¾æ‰“é‡‡
+478								npc_all_kongzhi	npc_all_kongzhi	0	-1	å†…åŠ›å¤–æ³„
+479								npc_all_kongzhi	npc_all_kongzhi	0	-1	å¼±ä¸ç¦é£
+480								npc_all_danhuo	npc_all_danhuo	0	-1	å™¬è¡€
+481								npc_all_dandu	npc_all_dandu	0	-1	ä¸­æ¯’
+482								npc_all_zhiliao	npc_all_zhiliao	0	-1	æ²»ç–—
+483								npc_all_jinghua	npc_all_jinghua	0	-1	å‡€åŒ–
+484								npc_all_zhufu	npc_all_zhufu	0	-1	å—œè¡€
+485								npc_all_jinghua	npc_all_jinghua	0	-1	çŸ³è‚¤
+486								npc_all_kaitang	npc_all_kaitang	0	-1	å¼€è†›
+487								npc_all_dandu	npc_all_dandu	0	-1	ç ´æŠ—
+488								npc_shou_danwai	npc_shou_danwai	0	-1	çƒˆçˆªç‹‚å‡»
+489								npc_all_qunshang_jq	npc_all_qunshang_jq	0	-1	çµèŠä¹è½¬èšæ°”
+490								npc_all_zhiliao	npc_all_zhiliao	0	-1	çµèŠä¹è½¬å‘æ‹›
+491								npc_all_shouwangnuhou	npc_all_shouwangnuhou	0	-1	åˆ©ç‰™å’†å“®
+492								npc_all_kaitang	npc_all_kaitang	0	-1	è‡´å‘½æ‰“å‡»
+493								npc_all_qunnei	npc_all_qunnei	0	-1	æ’å±±å€’æµ·
+494								npc_all_dandu	npc_all_dandu	0	-1	æ¯’çµçˆª
+495								npc_all_qunshang_jq	npc_all_qunshang_jq	0	-1	ç™¾è‰ä»™éœ²èšæ°”
+496								npc_all_zhiliao	npc_all_zhiliao	0	-1	ç™¾è‰ä»™éœ²å‘æ‹›
+497								npc_all_dandu	npc_all_dandu	0	-1	æ¯’æ¶²å‡»
+498								npc_all_dubao	npc_all_dubao	0	-1	æ¯’ä¸ç¼ ç»•
+499								npc_all_danbing	npc_all_danbing	0	-1	å†°ç²¾ä¸€æ·
+500								npc_all_kongzhi	npc_all_kongzhi	0	-1	å¿ƒé­”æ¯•ç°
+501								npc_all_qunnei	npc_all_qunnei	0	-1	å¦‚æ¢¦å¹»åƒ
+502								npc_all_dannei	npc_all_dannei	0	-1	è™šå¹»æ–©
+503								npc_all_qunnei	npc_all_qunnei	0	-1	è™šå¹»ç ´
+504								npc_all_juqi	npc_all_juqi	0	-1	å¤§é›ªå´©èšæ°”
+505								npc_all_qunbing	npc_all_qunbing	0	-1	å¤§é›ªå´©å‘æ‹›
+506								npc_all_shouwangnuhou	npc_all_shouwangnuhou	0	-1	å…½ç‹æ€’å¼
+507								npc_all_juqi	npc_all_juqi	0	-1	å¦™æ‰‹å›æ˜¥èšæ°”
+508								npc_all_qunzhiliao	npc_all_qunzhiliao	0	-1	å¦™æ‰‹å›æ˜¥å‘æ‹›
+509								npc_all_tianluodiwang	npc_all_tianluodiwang	0	-1	å¤©ç½—åœ°ç½‘
+510								npc_all_qunshang_jq	npc_all_qunshang_jq	0	-1	ç‰çŸ³ä¿±ç„šèšæ°”
+511								npc_all_qunshang	npc_all_qunshang	0	-1	ç‰çŸ³ä¿±ç„šå‘æ‹›
+512								npc_all_kongzhi	npc_all_kongzhi	0	-1	å¤±é­‚è½é­„
+513								npc_all_kongzhi	npc_all_kongzhi	0	-1	åé¦™è½¯ç­‹
+514								npc_shou_danwai	npc_shou_danwai	0	-1	æ’•è£‚
+515								npc_all_qunhuo_jq	npc_all_qunhuo_jq	0	-1	çƒˆç„°ç‚¼ç‹±èšæ°”
+516								npc_all_qunhuo	npc_all_qunhuo	0	-1	çƒˆç„°ç‚¼ç‹±å‘æ‹›
+517								npc_attack	npc_attack	0	-1	çˆªå‡»
+518								npc_attack	npc_attack	0	-1	æ–©å‡»
+519								npc_attack	npc_attack	0	-1	æŒå‡»
+520								npc_qijuboss_gongji2	npc_qijuboss_gongji2	0	-1	ç—›å‡»
+521								npc_all_qunxuan_jq	npc_all_qunxuan_jq	0	-1	ç‹‚é›·å¤©ç‰¢èšæ°”
+522								npc_qijuboss_gongji	npc_qijuboss_gongji	0	-1	ç‹‚é›·å¤©ç‰¢å‘æ‹›
+523								npc_all_kongzhi	npc_all_kongzhi	0	-1	è¯…å’’
+524								npc_all_danhuo	npc_all_danhuo	0	-1	ç¼çƒ§
+525								npc_all_dandu	npc_all_dandu	0	-1	è…èš€
+526								npc_all_juqi	npc_all_juqi	0	-1	éå¤©å…¥åœ°èšæ°”
+527								npc_all_fushen	npc_all_fushen	0	-1	éå¤©å…¥åœ°å‘æ‹›
+528								npc_all_zhufu	npc_all_zhufu	0	-1	å†°ç²¾
+529								npc_all_zhufu	npc_all_zhufu	0	-1	ç«çµ
+530								npc_all_zhufu	npc_all_zhufu	0	-1	æ¯’è›Š
+531								npc_all_zhufu	npc_all_zhufu	0	-1	ç„å…½
+532								npc_all_zhufu	npc_all_zhufu	0	-1	è¿Ÿé’
+533								npc_all_zhufu	npc_all_zhufu	0	-1	ç‹¡çŒ¾
+534								npc_all_zhufu	npc_all_zhufu	0	-1	æ†¨åš
+535								npc_all_zhufu	npc_all_zhufu	0	-1	æ‹¼å‘½
+536								npc_all_zhufu	npc_all_zhufu	0	-1	æ³•é­‚
+537								npc_all_zhufu	npc_all_zhufu	0	-1	è›®åŠ›
+538								npc_all_zhufu	npc_all_zhufu	0	-1	å€ŸåŠ›
+539								npc_all_zhufu	npc_all_zhufu	0	-1	é«˜çº§å€ŸåŠ›
+540								npc_all_zhufu	npc_all_zhufu	0	-1	ç§»é­‚
+541								npc_all_zhufu	npc_all_zhufu	0	-1	é«˜çº§ç§»é­‚
+542								npc_all_zhufu	npc_all_zhufu	0	-1	ç¬å½±
+543								npc_all_zhufu	npc_all_zhufu	0	-1	é«˜çº§ç¬å½±
+544								npc_all_zhufu	npc_all_zhufu	0	-1	å¼ºèº«
+545								npc_all_zhufu	npc_all_zhufu	0	-1	é«˜çº§å¼ºèº«
+546								npc_all_zhufu	npc_all_zhufu	0	-1	å‡ç¥
+547								npc_all_zhufu	npc_all_zhufu	0	-1	é«˜çº§å‡ç¥
+548								cw_danbing	cw_danbing	0	-1	æå†°å‡æ€
+549								cw_danhuo	cw_danhuo	0	-1	åŠ«ç«ç„šæ€
+550								cw_dandu	cw_dandu	0	-1	è…æ¯’èš€æ€
+551								cw_danxuan	cw_danxuan	0	-1	ä¹é›·å‡»æ€
+552								npc_all_qunshang	npc_all_qunshang	0	-1	è¡€çˆ†
+553								npc_all_qunshang	npc_all_qunshang	0	-1	é«˜çº§è¡€çˆ†
+554								npc_all_qunzhiliao	npc_all_qunzhiliao	0	-1	åœ£çˆ†
+555								npc_all_qunzhiliao	npc_all_qunzhiliao	0	-1	é«˜çº§åœ£çˆ†
+556								npc_all_bingbao	npc_all_bingbao	0	-1	å†°çˆ†
+557								npc_all_bingbao	npc_all_bingbao	0	-1	é«˜çº§å†°çˆ†
+558								npc_all_jinghua	npc_all_jinghua	0	-1	å‡€åŒ–
+559								npc_all_jinghua	npc_all_jinghua	0	-1	é«˜çº§å‡€åŒ–
+560								npc_all_zhufu	npc_all_zhufu	0	-1	é‡ç”Ÿ
+561								npc_all_zhufu	npc_all_zhufu	0	-1	é«˜çº§é‡ç”Ÿ
+562								npc_all_gongsheng	npc_all_gongsheng	0	-1	å…±ç”Ÿ
+563								npc_all_gongsheng	npc_all_gongsheng	0	-1	é«˜çº§å…±ç”Ÿ
+564								npc_all_zhiliao	npc_all_zhiliao	0	-1	æ²»ç–—
+565								npc_all_zhiliao	npc_all_zhiliao	0	-1	é«˜çº§æ²»ç–—
+566								npc_all_gongsheng	npc_all_gongsheng	0	-1	è‚‰å¢™
+567								npc_all_gongsheng	npc_all_gongsheng	0	-1	é«˜çº§è‚‰å¢™
+568								npc_all_zhufu	npc_all_zhufu	0	-1	ç¥ä½‘
+569								npc_all_zhufu	npc_all_zhufu	0	-1	é«˜çº§ç¥ä½‘
+570								npc_all_zhufu	npc_all_zhufu	0	-1	å—œè¡€
+571								npc_all_zhufu	npc_all_zhufu	0	-1	é«˜çº§å—œè¡€
+572								cw_fs_xueji	cw_fs_xueji	0	-1	è¡€ç¥­
+573								cw_fs_xueji	cw_fs_xueji	0	-1	é«˜çº§è¡€ç¥­
+574								npc_all_zhufu	npc_all_zhufu	0	-1	ä¼ªè£…
+575								npc_all_zhufu	npc_all_zhufu	0	-1	é«˜çº§ä¼ªè£…
+576								npc_all_fushen	npc_all_fushen	0	-1	é™„èº«
+577								npc_all_fushen	npc_all_fushen	0	-1	é«˜çº§é™„èº«
+578								cw_danbing	cw_danbing	0	-1	å¯’å†°å’’
+579								cw_danhuo	cw_danhuo	0	-1	çƒˆç«å’’
+580								cw_dandu	cw_dandu	0	-1	è¡€æ¯’å’’
+581								cw_danxuan	cw_danxuan	0	-1	ç„é›·å’’
+582								cw_fs_fanji	cw_fs_fanji	0	-1	åå‡»
+583								cw_fs_fanji	cw_fs_fanji	0	-1	é«˜çº§åå‡»
+584								cw_fs_xixue	cw_fs_xixue	0	-1	å¸è¡€
+585								cw_fs_xixue	cw_fs_xixue	0	-1	é«˜çº§å¸è¡€
+586								cw_fs_fanzhen	cw_fs_fanzhen	0	-1	åéœ‡
+587								cw_fs_fanzhen	cw_fs_fanzhen	0	-1	é«˜çº§åéœ‡
+588								cw_fs_lingdong	cw_fs_lingdong	0	-1	çµåŠ¨
+589								cw_fs_lingdong	cw_fs_lingdong	0	-1	é«˜çº§çµåŠ¨
+590								cw_fs_ximo	cw_fs_ximo	0	-1	å¸æ°”
+591								cw_fs_ximo	cw_fs_ximo	0	-1	é«˜çº§å¸æ°”
+592								cw_fs_danu	cw_fs_danu	0	-1	æ‰“æ€’
+593								cw_fs_danu	cw_fs_danu	0	-1	é«˜çº§æ‰“æ€’
+594								cw_fs_zhongxin	cw_fs_zhongxin	0	-1	å¿ å¿ƒ
+595								cw_fs_zhongxin	cw_fs_zhongxin	0	-1	é«˜çº§å¿ å¿ƒ
+596								npc_all_zhufu	npc_all_zhufu	0	-1	çµæ°”
+597								npc_all_zhufu	npc_all_zhufu	0	-1	é«˜çº§çµæ°”
+598								npc_shou_danwai	npc_shou_danwai	0	-1	çŒ›å‡»
+599								npc_shou_danwai	npc_shou_danwai	0	-1	é«˜çº§çŒ›å‡»
+600								npc_all_zhufu	npc_all_zhufu	0	-1	è¯†ç ´
+601								npc_all_zhufu	npc_all_zhufu	0	-1	é«˜çº§è¯†ç ´
+602								npc_all_lianji	npc_all_lianji	0	-1	è¿å‡»
+603								npc_all_lianji	npc_all_lianji	0	-1	é«˜çº§è¿å‡»
+604								npc_all_dannei	npc_all_dannei	0	-1	ç—›å‡»
+605								npc_all_dannei	npc_all_dannei	0	-1	é«˜çº§ç—›å‡»
+606								npc_all_kongzhi	npc_all_kongzhi	0	-1	è™šå¼±
+607								npc_all_kongzhi	npc_all_kongzhi	0	-1	é«˜çº§è™šå¼±
+608								npc_all_kongzhi	npc_all_kongzhi	0	-1	ç ´ç»½
+609								npc_all_kongzhi	npc_all_kongzhi	0	-1	é«˜çº§ç ´ç»½
+610								npc_all_kongzhi	npc_all_kongzhi	0	-1	æ‘”ç»Š
+611								npc_all_kongzhi	npc_all_kongzhi	0	-1	é«˜çº§æ‘”ç»Š
+612								npc_all_jinghua	npc_all_jinghua	0	-1	è§£ç©´
+613								npc_all_jinghua	npc_all_jinghua	0	-1	æ¸…é†’
+614								npc_all_jinghua	npc_all_jinghua	0	-1	æ˜ç›®
+615								npc_all_jinghua	npc_all_jinghua	0	-1	è½»çµ
+616								npc_all_jinghua	npc_all_jinghua	0	-1	å›ºå…ƒ
+617								npc_all_jinghua	npc_all_jinghua	0	-1	æ´’è„±

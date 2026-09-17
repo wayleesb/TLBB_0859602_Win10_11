@@ -1,31 +1,31 @@
---´óÀíÆòØ¤
+--å¤§ç†ä¹ä¸
 
---ÈÎÎñºÅ
+--ä»»åŠ¡å·
 x002070_g_MissionId_1 = 706
 x002070_g_MissionId_2 = 707
 x002070_g_MissionId_3 = 708
 
 x002070_g_scriptId=002070
 
-x002070_g_SignPost = {x = 215, z = 284, tip = "¶ÎÑÓÇì"}
+x002070_g_SignPost = {x = 215, z = 284, tip = "æ®µå»¶åº†"}
 
-function x002070_OnDefaultEvent( sceneId, selfId, targetId )	--µã»÷¸ÃÈÎÎñºóÖ´ĞĞ´Ë½Å±¾
+function x002070_OnDefaultEvent( sceneId, selfId, targetId )	--ç‚¹å‡»è¯¥ä»»åŠ¡åæ‰§è¡Œæ­¤è„šæœ¬
 	misIndex_1 = GetMissionIndexByID(sceneId,selfId,x002070_g_MissionId_1)
 	misIndex_2 = GetMissionIndexByID(sceneId,selfId,x002070_g_MissionId_2)
 	misIndex_3 = GetMissionIndexByID(sceneId,selfId,x002070_g_MissionId_3)
 	BeginEvent(sceneId)
-		AddText(sceneId,"  ÎØÎØÎØ¡­¡­ÎÒºÃÏëµùÄï°¡£¬µ±ÄêÎŞÁ¿É½µÄÒ»³¡ÄÖË®ÔÖ£¬º¦µÃÎÒÁ÷ÀëÊ§Ëù£¬¼ÒÆÆÈËÍö£¡Ö»ºÃÔÚ´óÀí³ÇÌÖ·¹¶ÈÈÕ¡£")
+		AddText(sceneId,"  å‘œå‘œå‘œâ€¦â€¦æˆ‘å¥½æƒ³çˆ¹å¨˜å•Šï¼Œå½“å¹´æ— é‡å±±çš„ä¸€åœºé—¹æ°´ç¾ï¼Œå®³å¾—æˆ‘æµç¦»å¤±æ‰€ï¼Œå®¶ç ´äººäº¡ï¼åªå¥½åœ¨å¤§ç†åŸè®¨é¥­åº¦æ—¥ã€‚")
 		if	IsHaveMission(sceneId,selfId,x002070_g_MissionId_1) > 0	 then
 			if	GetMissionParam( sceneId, selfId, misIndex_1,0) < 1  then
-				AddNumText(sceneId,x002070_g_scriptId,"¸øËûÒ»¸öÂøÍ·",2,0)
+				AddNumText(sceneId,x002070_g_scriptId,"ç»™ä»–ä¸€ä¸ªé¦’å¤´",2,0)
 			end
 		elseif	IsHaveMission(sceneId,selfId,x002070_g_MissionId_2) > 0	 then
 			if	GetMissionParam( sceneId, selfId, misIndex_2,0) < 1  then
-				AddNumText(sceneId,x002070_g_scriptId,"¸øËûÒ»¼ş²¼ÒÂ",2,1)
+				AddNumText(sceneId,x002070_g_scriptId,"ç»™ä»–ä¸€ä»¶å¸ƒè¡£",2,1)
 			end
 		elseif	IsHaveMission(sceneId,selfId,x002070_g_MissionId_3) > 0	 then
 			if	GetMissionParam( sceneId, selfId, misIndex_3,0) < 1  then
-				AddNumText(sceneId,x002070_g_scriptId,"¸øËûÒ»°Ñ¿ó³ú",2,2)
+				AddNumText(sceneId,x002070_g_scriptId,"ç»™ä»–ä¸€æŠŠçŸ¿é”„",2,2)
 			end
 		end
 	EndEvent( )
@@ -42,17 +42,17 @@ function x002070_OnEventRequest( sceneId, selfId, targetId, eventId )
 			SetMissionByIndex( sceneId, selfId, misIndex_1, 0, 1)
 			SetMissionByIndex( sceneId, selfId, misIndex_1, 1, 1)
 			BeginEvent(sceneId)
-				AddText(sceneId,"  Ì«Ğ»Ğ»ÄãÁË£¡#r<Ğ¡ÆòØ¤Èı¿ÚÁ½¿Ú³ÔµôÁËÕâ¸öÂøÍ·>")
+				AddText(sceneId,"  å¤ªè°¢è°¢ä½ äº†ï¼#r<å°ä¹ä¸ä¸‰å£ä¸¤å£åƒæ‰äº†è¿™ä¸ªé¦’å¤´>")
 			EndEvent( )
 			DispatchEventList(sceneId,selfId,targetId)
 			BeginEvent(sceneId)
-				AddText(sceneId,"ÈÎÎñÍê³É£¡")
+				AddText(sceneId,"ä»»åŠ¡å®Œæˆï¼")
 			EndEvent( )
 			DispatchMissionTips(sceneId,selfId)
 			CallScriptFunction( SCENE_SCRIPT_ID, "AskTheWay", sceneId, selfId,sceneId, x002070_g_SignPost.x, x002070_g_SignPost.z, x002070_g_SignPost.tip )
 		else
 			BeginEvent(sceneId)
-				AddText(sceneId,"ÂøÍ·£¿ÂøÍ·ÔÚÄÄÀï£¿")
+				AddText(sceneId,"é¦’å¤´ï¼Ÿé¦’å¤´åœ¨å“ªé‡Œï¼Ÿ")
 			EndEvent( )
 			DispatchEventList(sceneId,selfId,targetId)
 		end
@@ -62,17 +62,17 @@ function x002070_OnEventRequest( sceneId, selfId, targetId, eventId )
 			SetMissionByIndex( sceneId, selfId, misIndex_2, 0, 1)
 			SetMissionByIndex( sceneId, selfId, misIndex_2, 1, 1)
 			BeginEvent(sceneId)
-				AddText(sceneId,"  Ì«Ğ»Ğ»ÄãÁË£¡#r<Ğ¡ÆòØ¤°Ñ²¼ÒÂ¹üÔÚÉíÉÏ>")
+				AddText(sceneId,"  å¤ªè°¢è°¢ä½ äº†ï¼#r<å°ä¹ä¸æŠŠå¸ƒè¡£è£¹åœ¨èº«ä¸Š>")
 			EndEvent( )
 			DispatchEventList(sceneId,selfId,targetId)
 			BeginEvent(sceneId)
-				AddText(sceneId,"ÈÎÎñÍê³É£¡")
+				AddText(sceneId,"ä»»åŠ¡å®Œæˆï¼")
 			EndEvent( )
 			DispatchMissionTips(sceneId,selfId)
 			CallScriptFunction( SCENE_SCRIPT_ID, "AskTheWay", sceneId, selfId,sceneId, x002070_g_SignPost.x, x002070_g_SignPost.z, x002070_g_SignPost.tip )
 		else
 			BeginEvent(sceneId)
-				AddText(sceneId,"²¼ÒÂ£¿²¼ÒÂÔÚÄÄÀï£¿")
+				AddText(sceneId,"å¸ƒè¡£ï¼Ÿå¸ƒè¡£åœ¨å“ªé‡Œï¼Ÿ")
 			EndEvent( )
 			DispatchEventList(sceneId,selfId,targetId)
 		end
@@ -82,17 +82,17 @@ function x002070_OnEventRequest( sceneId, selfId, targetId, eventId )
 			SetMissionByIndex( sceneId, selfId, misIndex_3, 0, 1)
 			SetMissionByIndex( sceneId, selfId, misIndex_3, 1, 1)
 			BeginEvent(sceneId)
-				AddText(sceneId,"  ¶ò¡­¡­ÄãÎªÊ²Ã´Òª¸øÎÒ¿ó³úÄØ£¿#r  ºÃ°É£¬ÎÒÊÕÏÂÁË£¬¿ÉÊÇÎÒ»¹ÊÇ²»ÏëÈ¥¸É»î£¬ÌìÌìÕâÑùÒª·¹Ò²Í¦ºÃ°¡¡£")
+				AddText(sceneId,"  å„â€¦â€¦ä½ ä¸ºä»€ä¹ˆè¦ç»™æˆ‘çŸ¿é”„å‘¢ï¼Ÿ#r  å¥½å§ï¼Œæˆ‘æ”¶ä¸‹äº†ï¼Œå¯æ˜¯æˆ‘è¿˜æ˜¯ä¸æƒ³å»å¹²æ´»ï¼Œå¤©å¤©è¿™æ ·è¦é¥­ä¹ŸæŒºå¥½å•Šã€‚")
 			EndEvent( )
 			DispatchEventList(sceneId,selfId,targetId)
 			BeginEvent(sceneId)
-				AddText(sceneId,"ÈÎÎñÍê³É£¡")
+				AddText(sceneId,"ä»»åŠ¡å®Œæˆï¼")
 			EndEvent( )
 			DispatchMissionTips(sceneId,selfId)
 			CallScriptFunction( SCENE_SCRIPT_ID, "AskTheWay", sceneId, selfId,sceneId, x002070_g_SignPost.x, x002070_g_SignPost.z, x002070_g_SignPost.tip )
 		else
 			BeginEvent(sceneId)
-				AddText(sceneId,"¿ó³ú£¿Ã»ÓĞ¾ÍËãÁË£¬±¾À´ÎÒÒ²²»ÏëÒªµÄ¡£")
+				AddText(sceneId,"çŸ¿é”„ï¼Ÿæ²¡æœ‰å°±ç®—äº†ï¼Œæœ¬æ¥æˆ‘ä¹Ÿä¸æƒ³è¦çš„ã€‚")
 			EndEvent( )
 			DispatchEventList(sceneId,selfId,targetId)
 		end

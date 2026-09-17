@@ -1,61 +1,61 @@
--- ÂåÑôµÄId = 4µÄÊÂ¼şÇøÓò
--- ¹¦ÄÜ£¬µ±Íæ¼ÒÍê³ÉÈÎÎñ21£¬Í¬Ê±ÓÖÃ»ÓĞÍê³ÉÈÎÎñ22£¬Í¬Ê±ÂåÑô³¡¾°Ã»ÓĞ±ğÈËÔÙ×öÕâ¸öÈÎÎñµÄÊ±ºò£¬
+-- æ´›é˜³çš„Id = 4çš„äº‹ä»¶åŒºåŸŸ
+-- åŠŸèƒ½ï¼Œå½“ç©å®¶å®Œæˆä»»åŠ¡21ï¼ŒåŒæ—¶åˆæ²¡æœ‰å®Œæˆä»»åŠ¡22ï¼ŒåŒæ—¶æ´›é˜³åœºæ™¯æ²¡æœ‰åˆ«äººå†åšè¿™ä¸ªä»»åŠ¡çš„æ—¶å€™ï¼Œ
 
--- Ç°ĞøÈÎÎñ
+-- å‰ç»­ä»»åŠ¡
 x113007_g_PreMissionId = 21
 x113007_g_MissionId = 22
 
 x113007_g_OnTimerIndex = -1
 
--- ¶ÓÎé±àºÅ
+-- é˜Ÿä¼ç¼–å·
 x113007_g_GroupId = 1
 
 --**********************************
---½øÈëÇøÓòÊÂ¼ş
+--è¿›å…¥åŒºåŸŸäº‹ä»¶
 --**********************************
 function x113007_OnEnterArea( sceneId, selfId, areaId)
 
-	-- Âú×ãÈÎÎñ³öÏÖµÄÌõ¼ş	
+	-- æ»¡è¶³ä»»åŠ¡å‡ºç°çš„æ¡ä»¶	
   if IsMissionHaveDone(sceneId,selfId,x113007_g_PreMissionId) < 1 then
   	return 0
   end
   
-  -- Èç¹ûÍæ¼ÒÒÑ¾­Íê³ÉÁËÕâ¸öÈÎÎñ£¬¾Í²»ÔÙË¢ÇÇ·å³öÀ´ÁË
+  -- å¦‚æœç©å®¶å·²ç»å®Œæˆäº†è¿™ä¸ªä»»åŠ¡ï¼Œå°±ä¸å†åˆ·ä¹”å³°å‡ºæ¥äº†
   if IsMissionHaveDone(sceneId,selfId,x113007_g_MissionId) > 0 then
   	return 0
   end
   
-  -- ¼ì²âµØÍ¼ÖĞÊÇ²»ÊÇÒÑ¾­´æÔÚÕâ¸öÈËÎï£¬Õâ¸ö¼ì²âÊÇ²»»á¼ì²âÍæ¼ÒµÄ£¬¿ÉÒÔ·ÅĞÄÓÃ
+  -- æ£€æµ‹åœ°å›¾ä¸­æ˜¯ä¸æ˜¯å·²ç»å­˜åœ¨è¿™ä¸ªäººç‰©ï¼Œè¿™ä¸ªæ£€æµ‹æ˜¯ä¸ä¼šæ£€æµ‹ç©å®¶çš„ï¼Œå¯ä»¥æ”¾å¿ƒç”¨
   local nMonsterNum = GetMonsterCount(sceneId)
 	local ii = 0
 	local bHaveMonster = 0
 	for ii=1, nMonsterNum-1 do
 		local nMonsterId = GetMonsterObjID(sceneId,ii)
 		
-		if GetName(sceneId, nMonsterId)  == "ÇÇ·å"  then
+		if GetName(sceneId, nMonsterId)  == "ä¹”å³°"  then
 			return
 		end
 		
-		if GetName(sceneId, nMonsterId)  == "°¢Öì"  then
+		if GetName(sceneId, nMonsterId)  == "é˜¿æœ±"  then
 			return
 		end
 	end
 
-  -- ´´½¨ÈËÎï£¬ÇÇ·å£¬°¢Öì
+  -- åˆ›å»ºäººç‰©ï¼Œä¹”å³°ï¼Œé˜¿æœ±
   local nNpc1 = LuaFnCreateMonster(sceneId, 442, 283, 116, 3, 0, 36008)
 	local nNpc2 = LuaFnCreateMonster(sceneId, 443, 283, 113, 3, 0, 200025)
 
-	SetCharacterName(sceneId, nNpc1, "ÇÇ·å")
-	SetCharacterName(sceneId, nNpc2, "°¢Öì")
+	SetCharacterName(sceneId, nNpc1, "ä¹”å³°")
+	SetCharacterName(sceneId, nNpc2, "é˜¿æœ±")
 	
-	-- ÉèÖÃÏûÊ§Ê±¼ä
+	-- è®¾ç½®æ¶ˆå¤±æ—¶é—´
 	SetCharacterDieTime(sceneId, nNpc1, 600000)
 	SetCharacterDieTime(sceneId, nNpc2, 600000)
 	
-	-- ÉêÇëÒ»¸ö¶ÓÎé
+	-- ç”³è¯·ä¸€ä¸ªé˜Ÿä¼
 	--local groupId = AllocateMonsterGroup(sceneId)
 	
-	-- ÏÖÔÚ¹Ì¶¨µÄÊ¹ÓÃÒ»¸ö¶ÓÎé±àºÅ,ÔÚÊ¹ÓÃÇ°ÏÖÇå¿Õ¾Í¿ÉÒÔ
+	-- ç°åœ¨å›ºå®šçš„ä½¿ç”¨ä¸€ä¸ªé˜Ÿä¼ç¼–å·,åœ¨ä½¿ç”¨å‰ç°æ¸…ç©ºå°±å¯ä»¥
 	ReleaseMonsterGroup(sceneId, x113007_g_GroupId)
 	
 	AddGroupLeader(sceneId, x113007_g_GroupId, nNpc1)
@@ -69,7 +69,7 @@ function x113007_OnEnterArea( sceneId, selfId, areaId)
 end
 
 --**********************************
---½øÈëÇøÓòÊÂ¼ş
+--è¿›å…¥åŒºåŸŸäº‹ä»¶
 --**********************************
 function x113007_OnLeaveArea( sceneId, selfId, areaId)
 

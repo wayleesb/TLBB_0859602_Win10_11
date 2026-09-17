@@ -49,45 +49,45 @@ function Quest_OnLoad()
 end
 
 --=========================================================
--- ÊÂ¼ş´¦Àí
+-- äº‹ä»¶å¤„ç†
 --=========================================================
 function Quest_OnEvent(event)
 	local objCared = tonumber(arg0);
 	AxTrace(0, 0, "event = ".. event);
-	--µÚÒ»´ÎºÍnpc¶Ô»°£¬µÃµ½npcËùÄÜ¼¤»îµÄ²Ù×÷
+	--ç¬¬ä¸€æ¬¡å’Œnpcå¯¹è¯ï¼Œå¾—åˆ°npcæ‰€èƒ½æ¿€æ´»çš„æ“ä½œ
 	if(event == "QUEST_EVENTLIST") then
-		--¹ØĞÄNPC
+		--å…³å¿ƒNPC
 		BeginCareObject_Quest(objCared)
 		Quest_Open();
 		QuestGreeting_Desc:ClearAllElement();
 		Quest_EventListUpdate();
 
 
-	--ÔÚ½ÓÈÎÎñÊ±£¬¿´µ½µÄÈÎÎñĞÅÏ¢
+	--åœ¨æ¥ä»»åŠ¡æ—¶ï¼Œçœ‹åˆ°çš„ä»»åŠ¡ä¿¡æ¯
 	elseif(event == "QUEST_INFO") then
-		--¹ØĞÄNPC
+		--å…³å¿ƒNPC
 		BeginCareObject_Quest(objCared)
 		Quest_Open();
 		QuestGreeting_Desc:ClearAllElement();
 		Quest_QuestInfoUpdate()
 
 
-	--½ÓÊÜÈÎÎñºó£¬ÔÙ´ÎºÍnpc¶Ô»°£¬ËùµÃµ½µÄÈÎÎñĞèÇóĞÅÏ¢£¬(ÈÎÎñÍê³É)
+	--æ¥å—ä»»åŠ¡åï¼Œå†æ¬¡å’Œnpcå¯¹è¯ï¼Œæ‰€å¾—åˆ°çš„ä»»åŠ¡éœ€æ±‚ä¿¡æ¯ï¼Œ(ä»»åŠ¡å®Œæˆ)
 	elseif(event == "QUEST_CONTINUE_DONE") then
 		QuestGreeting_Desc:ClearAllElement();
 		Quest_MissionContinueUpdate(1);
 
-	--½ÓÊÜÈÎÎñºó£¬ÔÙ´ÎºÍnpc¶Ô»°£¬ËùµÃµ½µÄÈÎÎñĞèÇóĞÅÏ¢£¬(ÈÎÎñÎ´Íê³É)
+	--æ¥å—ä»»åŠ¡åï¼Œå†æ¬¡å’Œnpcå¯¹è¯ï¼Œæ‰€å¾—åˆ°çš„ä»»åŠ¡éœ€æ±‚ä¿¡æ¯ï¼Œ(ä»»åŠ¡æœªå®Œæˆ)
 	elseif(event == "QUEST_CONTINUE_NOTDONE") then
 		QuestGreeting_Desc:ClearAllElement();
 		Quest_MissionContinueUpdate(0);
 
-		--¹ØĞÄNPC
+		--å…³å¿ƒNPC
 		BeginCareObject_Quest(objCared)
 
-	--µã»÷¡°¼ÌĞøÖ®ºó¡±£¬½±Æ·Ñ¡Ôñ½çÃæ
+	--ç‚¹å‡»â€œç»§ç»­ä¹‹åâ€ï¼Œå¥–å“é€‰æ‹©ç•Œé¢
 	elseif(event == "QUEST_AFTER_CONTINUE") then
-		--¹ØĞÄNPC
+		--å…³å¿ƒNPC
 		Quest_Open();
 		QuestGreeting_Desc:ClearAllElement();
 		Quest_MissionRewardUpdate();
@@ -97,31 +97,31 @@ function Quest_OnEvent(event)
 			return;
 		end
 
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ı£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æœå’ŒNPCçš„è·ç¦»å¤§äºä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if(arg1 == "distance" and tonumber(arg2)>MAX_OBJ_DISTANCE or arg1=="destroy") then
 			Quest_Close();
 
-			--È¡Ïû¹ØĞÄ
+			--å–æ¶ˆå…³å¿ƒ
 			StopCareObject_Quest(objCared);
 		end
 
 	elseif (event == "TOGLE_SKILLSTUDY") then
-		AxTrace(0,0,"´ò¿ªÑ§Ï°½çÃæ£¬¹Ø±ÕºÍNPCµÄ¶Ô»°¿ò");
+		AxTrace(0,0,"æ‰“å¼€å­¦ä¹ ç•Œé¢ï¼Œå…³é—­å’ŒNPCçš„å¯¹è¯æ¡†");
 		Quest_Close();
 
-		--È¡Ïû¹ØĞÄ
+		--å–æ¶ˆå…³å¿ƒ
 		StopCareObject_Quest(objCared);
 
 	elseif (event == "TOGLE_BANK") then
-		AxTrace(0,0,"´ò¿ªÒøĞĞ½çÃæ£¬¹Ø±ÕºÍNPCµÄ¶Ô»°¿ò");
+		AxTrace(0,0,"æ‰“å¼€é“¶è¡Œç•Œé¢ï¼Œå…³é—­å’ŒNPCçš„å¯¹è¯æ¡†");
 		Quest_Close();
 
-		--È¡Ïû¹ØĞÄ
+		--å–æ¶ˆå…³å¿ƒ
 		StopCareObject_Quest(objCared);
 	elseif ( event == "REPLY_MISSION" ) then
 		Quest_Close();
 
-	-- ²¥·ÅÒôĞ§
+	-- æ’­æ”¾éŸ³æ•ˆ
 	elseif ( event == "UI_COMMAND" ) then
 		AxTrace(0,1,"tonumber(arg0)="..tonumber(arg0))
 		if tonumber(arg0) == 123 then
@@ -136,7 +136,7 @@ function Quest_OnEvent(event)
 			Quest_Close();
 		end
 
-	-- ÇĞ»»³¡¾°
+	-- åˆ‡æ¢åœºæ™¯
 	elseif(event == "PLAYER_LEAVE_WORLD" and this:IsVisible()) then
 		Quest_Close();
 		if objCared then
@@ -149,15 +149,15 @@ function Quest_OnEvent(event)
 end
 
 --=========================================================
--- ¹Ø±ÕÏàÓ¦
+-- å…³é—­ç›¸åº”
 --=========================================================
 function Quest_Close()
-	--È¡Ïû¹ØĞÄ
+	--å–æ¶ˆå…³å¿ƒ
 	StopCareObject_Quest(objCared);
 end
 
 --=========================================================
--- ÏÔÊ¾ÈÎÎñÁĞ±í
+-- æ˜¾ç¤ºä»»åŠ¡åˆ—è¡¨
 --=========================================================
 function Quest_EventListUpdate()
 	local nEventListNum = DataPool:GetNPCEventList_Num();
@@ -187,15 +187,15 @@ function Quest_EventListUpdate()
 				strState = 8
 			end
 			if( tonumber( strScriptId ) == 808007 ) then
-				if( strTemp == "ÎÒÏëÁÙÊ±½âËø" ) then
+				if( strTemp == "æˆ‘æƒ³ä¸´æ—¶è§£é”" ) then
 					nTitleType = 1
-				elseif( strTemp == "ÎÒÏëµ¥¸ö½âËø" ) then
+				elseif( strTemp == "æˆ‘æƒ³å•ä¸ªè§£é”" ) then
 					nTitleType = 1
-				elseif( strTemp == "È«²¿¼ÓËø" ) then
+				elseif( strTemp == "å…¨éƒ¨åŠ é”" ) then
 					nTitleType = 2
-				elseif( strTemp == "µ¥¸ö¼ÓËø" ) then
+				elseif( strTemp == "å•ä¸ªåŠ é”" ) then
 					nTitleType = 2
-				elseif( strTemp == "È·ÈÏ" ) then
+				elseif( strTemp == "ç¡®è®¤" ) then
 					nTitleType = 2
 				end
 			end
@@ -236,22 +236,22 @@ function Quest_EventListUpdate()
 
 
 	g_nQuestState = QUEST_STATE_EVENTLIST;
-	Quest_Frame_Debug:SetText("#gFF0FA0"..Target:GetDialogNpcName());--get npcµÄname
+	Quest_Frame_Debug:SetText("#gFF0FA0"..Target:GetDialogNpcName());--get npcçš„name
 	if( nTitleType == 1 ) then
-		Quest_Frame_Debug:SetText("#gFF0FA0½âËø" );
+		Quest_Frame_Debug:SetText("#gFF0FA0è§£é”" );
 	elseif( nTitleType == 2 ) then
-		Quest_Frame_Debug:SetText("#gFF0FA0¼ÓËø" );
+		Quest_Frame_Debug:SetText("#gFF0FA0åŠ é”" );
 	end
 	AxTrace( 8,0,"title="..Target:GetDialogNpcName() );
-	Quest_Button_Continue:SetText("¼ÌĞø");--¼ÌĞø
+	Quest_Button_Continue:SetText("ç»§ç»­");--ç»§ç»­
 	Quest_Button_Continue:Disable();
 	Quest_Button_Accept:Disable();
 	Quest_Button_Accept:SetProperty( "Flash", "0" );
-	Quest_Button_Refuse:SetText("ÔÙ¼û");--ÔÙ¼û
+	Quest_Button_Refuse:SetText("å†è§");--å†è§
 end
 
 --=========================================================
--- ÏÔÊ¾ÈÎÎñĞÅÏ¢
+-- æ˜¾ç¤ºä»»åŠ¡ä¿¡æ¯
 --=========================================================
 function Quest_QuestInfoUpdate()
 	local nTextNum, nBonusNum = DataPool:GetMissionInfo_Num();
@@ -261,26 +261,28 @@ function Quest_QuestInfoUpdate()
 		QuestGreeting_Desc:AddTextElement(strInfo);
 	end
 
---	QuestGreeting_Desc:AddTextElement("#Y½±Àø£º#W");
+--	QuestGreeting_Desc:AddTextElement("#Yå¥–åŠ±ï¼š#W");
 	local nRadio = 1;
 	local nRadio_Necessary = 1;
 	local nItemID;
 	local ActionID;
 
 	for i=1, nBonusNum do
-		--    ½±ÀøµÄÀàĞÍ£¬½±ÀøÎïÆ·ID£¬½±Àø¶àÉÙ¸ö
+		--    å¥–åŠ±çš„ç±»å‹ï¼Œå¥–åŠ±ç‰©å“IDï¼Œå¥–åŠ±å¤šå°‘ä¸ª
 		local strType, nItemID, nNum = DataPool:GetMissionInfo_Bonus(i-1);
 
 		if(strType == "money") then
 			if(nRadio_Necessary == 1) then
-				QuestGreeting_Desc:AddTextElement("#Y¹Ì¶¨½±Àø:#W")
+				QuestGreeting_Desc:AddTextElement("#Yå›ºå®šå¥–åŠ±:#W")
 				nRadio_Necessary = 0;
 			end
 			
 			QuestGreeting_Desc:AddMoneyElement(nNum);
+		elseif(strType == "exp") then
+			QuestGreeting_Desc:AddTextElement("ç»éªŒï¼š" .. string.format("%.0f", nNum));
 		elseif(strType == "item") then
 			if(nRadio_Necessary == 1) then
-				QuestGreeting_Desc:AddTextElement("#Y¹Ì¶¨½±Àø:#W")
+				QuestGreeting_Desc:AddTextElement("#Yå›ºå®šå¥–åŠ±:#W")
 				nRadio_Necessary = 0;
 			end
 --			QuestGreeting_Desc:AddItemElement(nItemID, nNum, 0);
@@ -293,14 +295,14 @@ function Quest_QuestInfoUpdate()
 			end	
 		elseif(strType == "itemrand") then
 			if(nRadio_Necessary == 1) then
-				QuestGreeting_Desc:AddTextElement("#Y¹Ì¶¨½±Àø:#W")
+				QuestGreeting_Desc:AddTextElement("#Yå›ºå®šå¥–åŠ±:#W")
 				nRadio_Necessary = 0;
 			end
 			QuestGreeting_Desc:AddItemElement(-1, nNum, 0);
 		elseif(strType == "itemradio") then
 			if (nRadio == 1) then
 				nRadio = 0;
-				QuestGreeting_Desc:AddTextElement("#YÍê³ÉÈÎÎñºó¿ÉÑ¡Ò»¸ö×÷Îª½±Æ·:#W");
+				QuestGreeting_Desc:AddTextElement("#Yå®Œæˆä»»åŠ¡åå¯é€‰ä¸€ä¸ªä½œä¸ºå¥–å“:#W");
 			end
 --			QuestGreeting_Desc:AddItemElement(nItemID, nNum, 0);
 			nItemID = LifeAbility : GetQuestUI_Reward(i-1);
@@ -314,20 +316,20 @@ function Quest_QuestInfoUpdate()
 	end
 
 	g_nQuestState = QUEST_STATE_MISSON_INFO
---	Quest_Frame_Debug:SetText("QUEST_STATE_MISSON_INFO");--get npcµÄname
+--	Quest_Frame_Debug:SetText("QUEST_STATE_MISSON_INFO");--get npcçš„name
 	if( Target:IsPresent()) then
-		--Quest_Frame_Debug:SetText(Target:GetDialogNpcName());--get npcµÄname
+		--Quest_Frame_Debug:SetText(Target:GetDialogNpcName());--get npcçš„name
 	end
 
 	Quest_Button_Continue:Disable();
 	Quest_Button_Accept:SetProperty( "Flash", "1" );
 	Quest_Button_Accept:Enable();
-	Quest_Button_Continue:SetText("¼ÌĞø");--¼ÌĞø
-	Quest_Button_Refuse:SetText("È¡Ïû");--È¡Ïû
+	Quest_Button_Continue:SetText("ç»§ç»­");--ç»§ç»­
+	Quest_Button_Refuse:SetText("å–æ¶ˆ");--å–æ¶ˆ
 end
 
 --=========================================================
---ContinueÈÎÎñµÄ¶Ô»°¿ò
+--Continueä»»åŠ¡çš„å¯¹è¯æ¡†
 --=========================================================
 function Quest_MissionContinueUpdate(bDone)
 	local nTextNum, nBonusNum = DataPool:GetMissionDemand_Num();
@@ -338,11 +340,11 @@ function Quest_MissionContinueUpdate(bDone)
 	end
 
 	if( nBonusNum>1 ) then
-		QuestGreeting_Desc:AddTextElement("#YĞèÒªÎïÆ·:#W");
+		QuestGreeting_Desc:AddTextElement("#Yéœ€è¦ç‰©å“:#W");
 	end
 
 	for i=1, nBonusNum do
-		--    ĞèÒªµÄÀàĞÍ£¬ĞèÒªÎïÆ·ID£¬ĞèÒª¶àÉÙ¸ö
+		--    éœ€è¦çš„ç±»å‹ï¼Œéœ€è¦ç‰©å“IDï¼Œéœ€è¦å¤šå°‘ä¸ª
 		local nItemID, nNum = DataPool:GetMissionDemand_Item(i-1);
 --		QuestGreeting_Desc:AddItemElement(nItemID, nNum, 0);
 			nItemID = LifeAbility : GetQuestUI_Demand(i-1);
@@ -366,31 +368,31 @@ function Quest_MissionContinueUpdate(bDone)
 	end
 
 	if( Target:IsPresent()) then
-		--Quest_Frame_Debug:SetText(Target:GetDialogNpcName());--get npcµÄname
+		--Quest_Frame_Debug:SetText(Target:GetDialogNpcName());--get npcçš„name
 	end
 
 	Quest_Button_Accept:Disable();
 	Quest_Button_Accept:SetProperty( "Flash", "0" );
-	Quest_Button_Refuse:SetText("È¡Ïû");--È¡Ïû
-	Quest_Button_Continue:SetText("¼ÌĞø");--¼ÌĞø
+	Quest_Button_Refuse:SetText("å–æ¶ˆ");--å–æ¶ˆ
+	Quest_Button_Continue:SetText("ç»§ç»­");--ç»§ç»­
 
 end
 
 --=========================================================
---ÊÕÈ¡½±ÀøÎïÆ·µÄ¶Ô»°¿ò
+--æ”¶å–å¥–åŠ±ç‰©å“çš„å¯¹è¯æ¡†
 --=========================================================
 function Quest_MissionRewardUpdate()
 	g_nQuestState = QUEST_STATE_AFTER_CONTINUE;
 	if( Target:IsPresent()) then
-		--Quest_Frame_Debug:SetText(Target:GetDialogNpcName());--get npcµÄname
+		--Quest_Frame_Debug:SetText(Target:GetDialogNpcName());--get npcçš„name
 	end
 --	Quest_Frame_Debug:SetText("AFTER_CONTINUE");--get npc name
 
 	Quest_Button_Continue:Enable();
 	Quest_Button_Accept:Disable();
 	Quest_Button_Accept:SetProperty( "Flash", "0" );
-	Quest_Button_Refuse:SetText("È¡Ïû");--È¡Ïû
-	Quest_Button_Continue:SetText("Íê³É");--Íê³É
+	Quest_Button_Refuse:SetText("å–æ¶ˆ");--å–æ¶ˆ
+	Quest_Button_Continue:SetText("å®Œæˆ");--å®Œæˆ
 
 	local nTextNum, nBonusNum = DataPool:GetMissionContinue_Num();
 
@@ -407,18 +409,20 @@ function Quest_MissionRewardUpdate()
 	bBeingRadio = 0;
 	bRadioSelect = 0;
 	for i=1, nBonusNum do
-		--    ½±ÀøµÄÀàĞÍ£¬½±ÀøÎïÆ·ID£¬½±Àø¶àÉÙ¸ö
+		--    å¥–åŠ±çš„ç±»å‹ï¼Œå¥–åŠ±ç‰©å“IDï¼Œå¥–åŠ±å¤šå°‘ä¸ª
 		local strType, nItemID, nNum = DataPool:GetMissionInfo_Bonus(i-1);
 
 		if(strType == "money") then
 			if(nRadio_Necessary == 1) then
-				QuestGreeting_Desc:AddTextElement("#Y¹Ì¶¨½±Àø:#W")
+				QuestGreeting_Desc:AddTextElement("#Yå›ºå®šå¥–åŠ±:#W")
 				nRadio_Necessary = 0;
 			end
 			QuestGreeting_Desc:AddMoneyElement(nNum);
+		elseif(strType == "exp") then
+			QuestGreeting_Desc:AddTextElement("ç»éªŒï¼š" .. string.format("%.0f", nNum));
 		elseif(strType == "item") then
 			if(nRadio_Necessary == 1) then
-				QuestGreeting_Desc:AddTextElement("#Y¹Ì¶¨½±Àø:#W")
+				QuestGreeting_Desc:AddTextElement("#Yå›ºå®šå¥–åŠ±:#W")
 				nRadio_Necessary = 0;
 			end
 --			QuestGreeting_Desc:AddItemElement(nItemID, nNum, 0);		
@@ -431,7 +435,7 @@ function Quest_MissionRewardUpdate()
 			end
 		elseif(strType == "itemrand") then
 			if(nRadio_Necessary == 1) then
-				QuestGreeting_Desc:AddTextElement("#Y¹Ì¶¨½±Àø:#W")
+				QuestGreeting_Desc:AddTextElement("#Yå›ºå®šå¥–åŠ±:#W")
 				nRadio_Necessary = 0;
 			end
 			QuestGreeting_Desc:AddItemElement(-1, nNum, 0);
@@ -440,9 +444,9 @@ function Quest_MissionRewardUpdate()
 			if (nRadio == 1) then
 				nRadio = 0;
 				if nRadio_Necessary == 1 then
-					QuestGreeting_Desc:AddTextElement("#YÄã¿ÉÒÔ´ÓÒÔÏÂ½±ÀøÖĞÑ¡ÔñÒ»Ïî:#W");
+					QuestGreeting_Desc:AddTextElement("#Yä½ å¯ä»¥ä»ä»¥ä¸‹å¥–åŠ±ä¸­é€‰æ‹©ä¸€é¡¹:#W");
 				else
-					QuestGreeting_Desc:AddTextElement("#Y»¹¿ÉÒÔ´ÓÒÔÏÂ½±ÀøÖĞÑ¡ÔñÒ»Ïî:#W");
+					QuestGreeting_Desc:AddTextElement("#Yè¿˜å¯ä»¥ä»ä»¥ä¸‹å¥–åŠ±ä¸­é€‰æ‹©ä¸€é¡¹:#W");
 				end
 				
 			end
@@ -460,12 +464,12 @@ function Quest_MissionRewardUpdate()
 end
 
 --=========================================================
--- Ñ¡ÔñÒ»¸öÈÎÎñ
+-- é€‰æ‹©ä¸€ä¸ªä»»åŠ¡
 --=========================================================
 function QuestOption_Clicked()
 
 --	AxTrace(0,0,"click " .. arg0);
-	--ÎÄ×ÖµÄ¸ñÊ½ÊÇ
+	--æ–‡å­—çš„æ ¼å¼æ˜¯
 	--QuestGreeting_option_03#211207,0
 	pos1,pos2 = string.find(arg0,"#");
 	pos3,pos4 = string.find(arg0,",");
@@ -477,9 +481,9 @@ function QuestOption_Clicked()
 --	AxTrace(0,0,"strOptionExtra1" .. strOptionExtra1);
 --	AxTrace(0,0,"strOptionExtra2" .. strOptionExtra2);
 
---	AxTrace(0,0,"Ñ¡ÖĞID" .. tonumber(strOptionID));
---	AxTrace(0,0,"Ñ¡ÖĞ1Str" .. tonumber(strOptionExtra1));
---	AxTrace(0,0,"Ñ¡ÖĞ2Str" .. tonumber(strOptionExtra2));
+--	AxTrace(0,0,"é€‰ä¸­ID" .. tonumber(strOptionID));
+--	AxTrace(0,0,"é€‰ä¸­1Str" .. tonumber(strOptionExtra1));
+--	AxTrace(0,0,"é€‰ä¸­2Str" .. tonumber(strOptionExtra2));
 
 	QuestFrameOptionClicked(tonumber(strOptionID),tonumber(strOptionExtra1),tonumber(strOptionExtra2));
 
@@ -487,7 +491,7 @@ function QuestOption_Clicked()
 end
 
 --=========================================================
--- Ñ¡ÔñÒ»¸ö¶àÑ¡Ò»µÄ½±ÀøÎïÆ·
+-- é€‰æ‹©ä¸€ä¸ªå¤šé€‰ä¸€çš„å¥–åŠ±ç‰©å“
 --=========================================================
 function RewardItem_Clicked()
 	--AxTrace(0, 1, "------------" .. arg0);
@@ -503,7 +507,7 @@ function MissionContinue_Clicked()
 	if ( g_nQuestState == QUEST_STATE_CONTINUE_DONE ) then
 		QuestFrameMissionContinue();
 --		Quest_Close();
-		--È¡Ïû¹ØĞÄ
+		--å–æ¶ˆå…³å¿ƒ
 --		StopCareObject_Quest(objCared);
 
 	elseif( g_nQuestState == QUEST_STATE_AFTER_CONTINUE )then
@@ -514,24 +518,24 @@ function MissionContinue_Clicked()
 				bBeingRadio = 0;
 				bRadioSelect = 0;
 				Quest_Close();
-				--È¡Ïû¹ØĞÄ
+				--å–æ¶ˆå…³å¿ƒ
 				StopCareObject_Quest(objCared);
 			else
-				PushDebugMessage("ÇëÑ¡Ôñ½±ÀøÎïÆ·£¡");
+				PushDebugMessage("è¯·é€‰æ‹©å¥–åŠ±ç‰©å“ï¼");
 			end
 		else
 				QuestFrameMissionComplete(g_nRewardItemID);
 				bBeingRadio = 0;
 				bRadioSelect = 0;
 				Quest_Close();
-				--È¡Ïû¹ØĞÄ
+				--å–æ¶ˆå…³å¿ƒ
 				StopCareObject_Quest(objCared);
 		end
 	end
 end
 
 --=========================================================
--- ½ÓÊÜÈÎÎñ
+-- æ¥å—ä»»åŠ¡
 --=========================================================
 function QuestAccept_Clicked()
 	if(g_nQuestState == QUEST_STATE_MISSON_INFO) then
@@ -539,12 +543,12 @@ function QuestAccept_Clicked()
 	end
 
 	Quest_Close();
-	--È¡Ïû¹ØĞÄ
+	--å–æ¶ˆå…³å¿ƒ
 	StopCareObject_Quest(objCared);
 end
 
 --=========================================================
---¾Ü¾øÈÎÎñ
+--æ‹’ç»ä»»åŠ¡
 --=========================================================
 function QuestRefuse_Clicked()
 	if(g_nQuestState == QUEST_STATE_MISSON_INFO) then
@@ -552,7 +556,7 @@ function QuestRefuse_Clicked()
 	end
 
 	Quest_Close();
-	--È¡Ïû¹ØĞÄ
+	--å–æ¶ˆå…³å¿ƒ
 	StopCareObject_Quest(objCared);
 
 	NpcShop:Close();
@@ -560,9 +564,9 @@ function QuestRefuse_Clicked()
 end
 
 --=========================================================
---¿ªÊ¼¹ØĞÄNPC£¬
---ÔÚ¿ªÊ¼¹ØĞÄÖ®Ç°ĞèÒªÏÈÈ·¶¨Õâ¸ö½çÃæÊÇ²»ÊÇÒÑ¾­ÓĞ¡°¹ØĞÄ¡±µÄNPC£¬
---Èç¹ûÓĞµÄ»°£¬ÏÈÈ¡ÏûÒÑ¾­ÓĞµÄ¡°¹ØĞÄ¡±
+--å¼€å§‹å…³å¿ƒNPCï¼Œ
+--åœ¨å¼€å§‹å…³å¿ƒä¹‹å‰éœ€è¦å…ˆç¡®å®šè¿™ä¸ªç•Œé¢æ˜¯ä¸æ˜¯å·²ç»æœ‰â€œå…³å¿ƒâ€çš„NPCï¼Œ
+--å¦‚æœæœ‰çš„è¯ï¼Œå…ˆå–æ¶ˆå·²ç»æœ‰çš„â€œå…³å¿ƒâ€
 --=========================================================
 function BeginCareObject_Quest(objCaredId)
 
@@ -573,7 +577,7 @@ function BeginCareObject_Quest(objCaredId)
 end
 
 --=========================================================
---Í£Ö¹¶ÔÄ³NPCµÄ¹ØĞÄ
+--åœæ­¢å¯¹æŸNPCçš„å…³å¿ƒ
 --=========================================================
 function StopCareObject_Quest(objCaredId)
 	this:CareObject(objCaredId, 0, "Quest");
@@ -582,14 +586,14 @@ function StopCareObject_Quest(objCaredId)
 end
 
 --=========================================================
---²¥·ÅÒôĞ§
+--æ’­æ”¾éŸ³æ•ˆ
 --=========================================================
 function PlaySoundEffect()
 	Sound:PlaySound( Get_XParam_INT(0), false );
 end
 
 --=========================================================
---²¥·Å±³¾°ÒôÀÖ
+--æ’­æ”¾èƒŒæ™¯éŸ³ä¹
 --=========================================================
 function PlayBackSound()
 	Sound:PlaySound( Get_XParam_INT(0),false );

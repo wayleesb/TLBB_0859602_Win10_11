@@ -18,9 +18,9 @@ INT	STRING	STRING
 15	weapon_shake_21.wav	
 16	weapon_shake_22.wav	
 17	weapon_shake_23.wav	
-18	music\luoyang.mp3	ÂåÑô±³¾°ÒôÀÖ
-19	music\suzhou.mp3	ËÕÖİÎ÷ºşÁúÈª±³¾°ÒôÀÖ
-20	music\jiange.mp3	½£¸ó±³¾°ÒôÀÖ
+18	music\luoyang.mp3	æ´›é˜³èƒŒæ™¯éŸ³ä¹
+19	music\suzhou.mp3	è‹å·è¥¿æ¹–é¾™æ³‰èƒŒæ™¯éŸ³ä¹
+20	music\jiange.mp3	å‰‘é˜èƒŒæ™¯éŸ³ä¹
 21	skill_cihangpudu.wav	
 22	skill_duoluoyezhi.wav	
 23	skill_jinzhongzhao.wav	
@@ -47,186 +47,186 @@ INT	STRING	STRING
 44	skill_wuxinglianzhu.wav	
 45	skill_yifentianying.wav	
 46	skill_zhiluweima.wav	
-47	UI´íÎó.wav	
+47	UIé”™è¯¯.wav	
 48	magic_restore.wav	
 49	yanhuo02.wav	
 50	yanhuo03.wav	
-53	ambience\nature\water\wave_small_1.wav	·çÉù
-55	ambience\society\iron_hit_1.wav	´òÌúÉù
-56	ambience\nature\water\river_1.wav	Ë®Á÷¶¯Éù
-57	ambience\nature\water\waterfall_1.wav	ÆÙ²¼Éù
-58	ambience\society\fire_1.wav	»ğ¶ÑÈ¼ÉÕ
-59	ambience\society\bell_big_1.wav	ÖÓÉù
-60	interface\sound_shoudao.wav	ÊÕµ½¶ÓÎéÑûÇë
-61	interface\sound_lidui.wav	Àë¿ª¶ÓÎé
-62	interface\sound_jiaru.wav	¼ÓÈë¶ÓÎé¡¢°İÈëÊ¦ÃÅ
-63	interface\sound_shangjia.wav	ÉÌÆ·ÉÏÏÂ¼Ü
-64	interface\sound_repair.wav	ĞŞÀí
-65	interface\sound_zhiliao.wav	ÖÎÁÆÉù
-66	interface\sound_shengji.wav	µÈ¼¶ÌáÉı
-67	interface\sound_equip.wav	×°±¸ÎäÆ÷»ò·À¾ß
-68	interface\sound_enterworld.wav	µã»÷½øÈëÓÎÏ·
-69	interface\sound_caiyao.wav	²É¼¯Ò©²İ
-70	interface\sound_deyao.wav	»ñµÃÒ©²İ
-71	interface\sound_caikuang.wav	²É¿ó
-72	interface\sound_dekuang.wav	»ñµÃ¿ó
-73	interface\sound_shuaigan.wav	µöÓãË¦¸Í
-74	interface\sound_deyu.wav	µöÓã³É¹¦
-75	interface\sound_pengren.wav	Åëâ¿
-76	interface\sound_zhiyao.wav	ÖÆÒ©
-77	interface\sound_dazao.wav	ÖÆ×÷×°±¸
-78	interface\sound_dazaochenggong.wav	ÖÆ×÷×°±¸³É¹¦
-79	interface\sound_baoshi.wav	±¦Ê¯ºÏ³É
-80	interface\sound_baoshichenggong.wav	ºÏ³É³É¹¦
-81	interface\sound_baoshishibai.wav	ºÏ³ÉÊ§°Ü
-82	interface\sound_xiangqianchenggong.wav	ÏâÇ¶³É¹¦
-83	interface\sound_xiangqianshibai.wav	ÏâÇ¶Ê§°Ü
-84	interface\sound_money.wav	»ñµÃ½ğÇ®
-85	interface\sound_horse.wav	ÆïÂí£¬ÂíË»
-86	interface\sound_tiger.wav	Æï»¢£¬»¢Ğ¥
+53	ambience\nature\water\wave_small_1.wav	é£å£°
+55	ambience\society\iron_hit_1.wav	æ‰“é“å£°
+56	ambience\nature\water\river_1.wav	æ°´æµåŠ¨å£°
+57	ambience\nature\water\waterfall_1.wav	ç€‘å¸ƒå£°
+58	ambience\society\fire_1.wav	ç«å †ç‡ƒçƒ§
+59	ambience\society\bell_big_1.wav	é’Ÿå£°
+60	interface\sound_shoudao.wav	æ”¶åˆ°é˜Ÿä¼é‚€è¯·
+61	interface\sound_lidui.wav	ç¦»å¼€é˜Ÿä¼
+62	interface\sound_jiaru.wav	åŠ å…¥é˜Ÿä¼ã€æ‹œå…¥å¸ˆé—¨
+63	interface\sound_shangjia.wav	å•†å“ä¸Šä¸‹æ¶
+64	interface\sound_repair.wav	ä¿®ç†
+65	interface\sound_zhiliao.wav	æ²»ç–—å£°
+66	interface\sound_shengji.wav	ç­‰çº§æå‡
+67	interface\sound_equip.wav	è£…å¤‡æ­¦å™¨æˆ–é˜²å…·
+68	interface\sound_enterworld.wav	ç‚¹å‡»è¿›å…¥æ¸¸æˆ
+69	interface\sound_caiyao.wav	é‡‡é›†è¯è‰
+70	interface\sound_deyao.wav	è·å¾—è¯è‰
+71	interface\sound_caikuang.wav	é‡‡çŸ¿
+72	interface\sound_dekuang.wav	è·å¾—çŸ¿
+73	interface\sound_shuaigan.wav	é’“é±¼ç”©ç«¿
+74	interface\sound_deyu.wav	é’“é±¼æˆåŠŸ
+75	interface\sound_pengren.wav	çƒ¹é¥ª
+76	interface\sound_zhiyao.wav	åˆ¶è¯
+77	interface\sound_dazao.wav	åˆ¶ä½œè£…å¤‡
+78	interface\sound_dazaochenggong.wav	åˆ¶ä½œè£…å¤‡æˆåŠŸ
+79	interface\sound_baoshi.wav	å®çŸ³åˆæˆ
+80	interface\sound_baoshichenggong.wav	åˆæˆæˆåŠŸ
+81	interface\sound_baoshishibai.wav	åˆæˆå¤±è´¥
+82	interface\sound_xiangqianchenggong.wav	é•¶åµŒæˆåŠŸ
+83	interface\sound_xiangqianshibai.wav	é•¶åµŒå¤±è´¥
+84	interface\sound_money.wav	è·å¾—é‡‘é’±
+85	interface\sound_horse.wav	éª‘é©¬ï¼Œé©¬å˜¶
+86	interface\sound_tiger.wav	éª‘è™ï¼Œè™å•¸
 87	yanhuo04.wav	
-88	ambience\nature\bird\bird_2.wav	Äñ½Ğ
-89	ambience\society\boat_1.wav	´¬Ö»»Î¶¯
-90	ambience\nature\animal\bear_1.wav	ĞÜ½Ğ
-91	ambience\society\waterwheel_1.wav	Ë®³µ×ª¶¯Éù
-92	ambience\nature\animal\frog_2.wav	ÇàÍÜ½Ğ
-93	ambience\nature\bird\buguniao_2.wav	Äñ½Ğ
-94	ambience\nature\lava_1.wav	ÑÒ½¬±¼ÌÚ
-95	mAncientStep5.wav	¹ÖÊŞ½Å²½Éù
-96	interface\sound_bagfull.wav	±³°üÂú
-97	ambience\82.wav	µã»÷UIÉÏ°´Å¥Ëù·¢µÄßİßİÉù(Ã»ÓĞÕâ¸öÒôĞ§ÎÄ¼ş)
-98	ambience\83.wav	µ¯³ö¶ÀÕ¼UIÊ±£¬±Ä~Éù(Ã»ÓĞÕâ¸öÒôĞ§ÎÄ¼ş)
-99	interface\FriendJoin.wav	ºÃÓÑÉÏÏßÌáÊ¾Òô
-101	music\dali.mp3	´óÀíÎäÒÄÃ·Áë±³¾°ÒôÀÖ
-102	music\songshan.mp3	áÔÉ½Ì«ºşµÈ±³¾°ÒôÀÖ
-103	music\jinghu.mp3	¾µºş±³¾°ÒôÀÖ
-104	music\dunhuang.mp3	¶Ø»Í±³¾°ÒôÀÖ
-105	music\shaolin.mp3	ÉÙÁÖÌìÁúËÂ±³¾°ÒôÀÖ
-106	music\mingjiao.mp3	¹âÃ÷¶¥ÌìÉ½±³¾°ÒôÀÖ
-107	music\xiaoyao.mp3	Áè²¨¶´±³¾°ÒôÀÖ
-108	music\emei.mp3	¶ëáÒÉ½±³¾°ÒôÀÖ
-109	music\xingxiu.mp3	ĞÇËŞº£±³¾°ÒôÀÖ
-110	music\yannan.mp3	ÑãÄÏÑã±±±³¾°ÒôÀÖ
-111	music\caoyuan.mp3	²İÔ­ÁÉÎ÷±³¾°ÒôÀÖ
-112	music\changbai.mp3	³¤°×É½»ÆÁú¸®±³¾°ÒôÀÖ
-113	music\cangshan.mp3	²ÔÉ½¶ıº£±³¾°ÒôÀÖ
-114	music\shilin.mp3	Ê¯ÁÖÓñÏª±³¾°ÒôÀÖ
-115	music\nanzhao.mp3	ÄÏÚ¯Ãç½®±³¾°ÒôÀÖ
-116	music\nanhai.mp3	ÄÏº£ÇíÖİ±³¾°ÒôÀÖ
-117	music\panjun.mp3	ÅÑ¾üÓªµØ±³¾°ÒôÀÖ
-118	male_01.wav	ÄĞÖ÷½Ç¹¥»÷
-119	music\siwang.mp3	µØ¸®±³¾°ÒôÀÖ
-120	music\zhandou.mp3	¸±±¾Õ½¶·ÒôÀÖ
-121	music\huanjing.mp3	ÁáççÆå¾Ö±³¾°ÒôÀÖ
-122	music\diewu.mp3	ÎŞÁ¿É½±³¾°ÒôÀÖ
-123	music\luoyangjieri.mp3	ÂåÑô½ÚÈÕÒôÀÖ
-130	interface\sound_29.wav	½ø²ÍÉùĞ§
-131	interface\30.wav	ÆïÀÇ£¬ÀÇº¿
-132	interface\31.wav	ÆïÂ¹£¬Â¹½Ğ
-133	interface\32.wav	Æïº×£¬º×Ãù
-134	interface\33.wav	Æï·ï£¬·ïÃù
-135	interface\34.wav	ÆïêóÅ££¬êóÅ£½Ğ
-136	interface\35.wav	ÆïÂæÍÕ£¬ÂæÍÕ½Ğ
-137	interface\36.wav	Æïµñ£¬µñ½Ğ
-138	interface\37.wav	ÕÙ»½³èÎï£¬³èÎï³öÏÖÊ±µÄÉùÒô
-139	music\dali2.mp3	Î÷ÄÏÃñ×å·ç¸ñÒôÀÖ
-140	music\jiang1.mp3	¼¤°ºÒôÀÖÊÊºÏÕ½¶·³¡¾°
-141	music\jiang2.mp3	¼¤°ºÒôÀÖÊÊºÏÕ½¶·³¡¾°
-142	music\jiang3.mp3	¼¤°ºÒôÀÖÊÊºÏÕ½¶·³¡¾°
-143	music\shenchen1.mp3	Éî³ÁÒôÀÖ
-144	music\shenchen2.mp3	Éî³ÁÒôÀÖ
-145	music\shenchen3.mp3	Éî³ÁÒôÀÖ
-146	music\yinsen1.mp3	ÒõÉ­ÒôÀÖ
-147	music\yinsen2.mp3	ÒõÉ­ÒôÀÖ
-148	music\yinsen3.mp3	ÒõÉ­ÒôÀÖ
-151	ambience\society\flag_1.wav	ÆìÖÄ±»·ç´µ¶¯Éù
-152	ambience\society\market_1.wav	ÄÖÊĞàĞÔÓµÄÈËÈº
-153	ambience\society\market_2.wav	³ÇÊĞÖĞÈËÏà¶ÔÉÙµÄµØ·½
-154	ambience\nature\water\wave_small_2.wav	º£ÀËÅÄ°¶Éù
-155	ambience\nature\mix\seashore_mix_1.wav	º£Å¸½ĞÉù
-156	ambience\nature\animal\sheep_1.wav	ÑòÈº½ĞÉù
-157	ambience\nature\animal\dog_1.wav	È®·Í
-158	ambience\nature\animal\cat_1.wav	Ã¨½Ğ
-160	ambience\nature\water\wave_1.wav	Ê÷Ò¶µÄ»©»©Éù
-161	ambience\nature\wind_1.wav	¸ß´¦µÄ·çÉù
-162	ambience\society\woodbridge_1.wav	×ßÔÚÄ¾ÖÊË÷ÇÅÉÏµÄÖ¨Ö¨Éù
-163	ambience\nature\water\wave_2.wav	É³Ä®ÖĞµÄ·ç´µ¶¯µÄÉùÒô
-164	ambience\nature\bird\xique_1.wav	Ï²Èµ½ĞÉù
-165	ambience\nature\bird\wuya_1.wav	ÎÚÑ»½ĞÉù
-167	ambience\nature\bird\buguniao_1.wav	²¼¹ÈÄñµÄ½ĞÉù
-168	ambience\nature\bird\hawk_1.wav	Ó¥ÔÚ¸ß¿ÕÅÌĞıµÄ½ĞÉù
-169	ambience\nature\bird\zhuomuniao_1.wav	×ÄÄ¾ÄñµÄ½ĞÉù
-170	ambience\society\zhangu_1.wav	Õ½Ç°µÄ¹ÄÉù--¼¤°º
-171	ambience\nature\water\rain_middle_1.wav	ÏÂĞ¡ÓêÂäÔÚµØÉÏµÄ»©»©Éù
-172	ambience\nature\insect\ququ_1.wav	òĞòĞ½ĞÉù
-173	ambience\nature\water\liurushuichi_1.wav	Ë®Á÷Á÷ÈëË®³ØµÄÉùÒô
-174	ambience\nature\bird\dayan_1.wav	Í·¶¥´óÑãµÄ·É¹ı½ĞÉù
-175	ambience\society\woodgear_1.wav	Ä¾Í·³İÂÖÒ§ºÏµÄ¿©Ö¨¿©Ö¨Éù
-176	ambience\nature\water\drop_in_cave_1.wav	åĞÒ£¶´ÖĞµÄ±³¾°ÉùÒô£¬ËÆºõÓĞË®µÎÂä
-177	ambience\nature\animal\wolf_1.wav	Ô¶´¦ÀÇµÄàÆ½ĞÉù
-178	ambience\nature\bird\owl_1.wav	Ã¨Í·Ó¥µÄ½ĞÉù
-179	ambience\nature\insect\guoguo_1.wav	òåòåµÄ½ĞÉù
-180	ambience\society\woodfish_1.wav	µ¥¶ÀµÄÇÃ»÷Ä¾ÓãµÄÉùÒô
-181	ambience\society\iron_hit_2.wav	Ë«½£»òÕßË«µ¶Ïà×²»÷µÄÉùÒô
-182	run\90.wav	ÄĞÖ÷½ÇÔÚ×©µØ£¨ÉùÒôÀàËÆ¡°É³¡±£©ÉÏµÄÅÜ²½ÒôĞ§£¬0.86ÃëÄÚ×óÓÒ×ã¸÷×ÅµØ1´Î£¬¿ªÊ¼¡¢½áÊøÊ±¼äÎª²ÈµØÉù
-183	run\91.wav	ÄĞÖ÷½ÇÔÚ·Ç×©µØ£¨ÉùÒôÀàËÆ¡°àÛ¡±£©ÉÏµÄÅÜ²½ÒôĞ§£¬0.86ÃëÄÚ×óÓÒ×ã¸÷×ÅµØ1´Î£¬¿ªÊ¼¡¢½áÊøÊ±¼äÎª²ÈµØÉù
-184	run\92.wav	ÄĞÖ÷½ÇÔÚË®ÖĞ£¨ÉùÒôÀàËÆ¡°»©¡±£©µÄÅÜ²½ÒôĞ§£¬0.86ÃëÄÚ×óÓÒ×ã¸÷×ÅµØ1´Î£¬¿ªÊ¼¡¢½áÊøÊ±¼äÎª²ÈµØÉù
-185	run\93.wav	Å®Ö÷½ÇÔÚ×©µØ£¨ÉùÒôÀàËÆ¡°É³¡±£©ÉÏµÄÅÜ²½ÒôĞ§£¬0.8ÃëÄÚ×óÓÒ×ã¸÷×ÅµØ1´Î£¬¿ªÊ¼¡¢½áÊøÊ±¼äÎª²ÈµØÉù
-186	run\94.wav	Å®Ö÷½ÇÔÚ·Ç×©µØ£¨ÉùÒôÀàËÆ¡°àÛ¡±£©ÉÏµÄÅÜ²½ÒôĞ§£¬0.8ÃëÄÚ×óÓÒ×ã¸÷×ÅµØ1´Î£¬¿ªÊ¼¡¢½áÊøÊ±¼äÎª²ÈµØÉù
-187	run\95.wav	Å®Ö÷½ÇÔÚË®ÖĞ£¨ÉùÒôÀàËÆ¡°»©¡±£©µÄÅÜ²½ÒôĞ§£¬0.8ÃëÄÚ×óÓÒ×ã¸÷×ÅµØ1´Î£¬¿ªÊ¼¡¢½áÊøÊ±¼äÎª²ÈµØÉù
-188	run\96.wav	Æï³ËÀÏ»¢ÔÚ×©µØ£¨ÉùÒôÀàËÆ¡°ßÕ¡±£©ÉÏµÄÅÜ²½ÒôĞ§£¬0.72ÃëÄÚÇ°ºó×ã¸÷×ÅµØ1´Î£¬¿ªÊ¼¡¢½áÊøÊ±¼äÎª²ÈµØÉù
-189	run\97.wav	Æï³ËÀÏ»¢ÔÚ·Ç×©µØ£¨ÉùÒôÀàËÆ¡°àÛ¡±£©ÉÏµÄÅÜ²½ÒôĞ§£¬0.72ÃëÄÚÇ°ºó×ã¸÷×ÅµØ1´Î£¬¿ªÊ¼¡¢½áÊøÊ±¼äÎª²ÈµØÉù
-190	run\98.wav	Æï³ËÀÏ»¢ÔÚË®ÖĞ£¨ÉùÒôÀàËÆ¡°»©¡±£©µÄÅÜ²½ÒôĞ§£¬0.72ÃëÄÚÇ°ºó×ã¸÷×ÅµØ1´Î£¬¿ªÊ¼¡¢½áÊøÊ±¼äÎª²ÈµØÉù
-191	run\99.wav	Æï³ËÂíÔÚ×©µØ£¨ÉùÒôÀàËÆ¡°ßÕ¡±£©ÉÏµÄÅÜ²½ÒôĞ§£¬0.72ÃëÄÚÇ°ºó×ã¸÷×ÅµØ1´Î£¬¿ªÊ¼¡¢½áÊøÊ±¼äÎª²ÈµØÉù
-192	run\100.wav	Æï³ËÂíÔÚ·Ç×©µØ£¨ÉùÒôÀàËÆ¡°àÛ¡±£©ÉÏµÄÅÜ²½ÒôĞ§£¬0.72ÃëÄÚÇ°ºó×ã¸÷×ÅµØ1´Î£¬¿ªÊ¼¡¢½áÊøÊ±¼äÎª²ÈµØÉù
-193	run\101.wav	Æï³ËÂíÔÚË®ÖĞ£¨ÉùÒôÀàËÆ¡°»©¡±£©µÄÅÜ²½ÒôĞ§£¬0.72ÃëÄÚÇ°ºó×ã¸÷×ÅµØ1´Î£¬¿ªÊ¼¡¢½áÊøÊ±¼äÎª²ÈµØÉù
-194	run\102.wav	Æï³ËêóÅ£ÔÚ×©µØ£¨ÉùÒôÀàËÆ¡°ßÕ¡±£©ÉÏµÄÅÜ²½ÒôĞ§£¬0.72ÃëÄÚÇ°ºó×ã¸÷×ÅµØ1´Î£¬¿ªÊ¼¡¢½áÊøÊ±¼äÎª²ÈµØÉù
-195	run\103.wav	Æï³ËêóÅ£ÔÚ·Ç×©µØ£¨ÉùÒôÀàËÆ¡°àÛ¡±£©ÉÏµÄÅÜ²½ÒôĞ§£¬0.72ÃëÄÚÇ°ºó×ã¸÷×ÅµØ1´Î£¬¿ªÊ¼¡¢½áÊøÊ±¼äÎª²ÈµØÉù
-196	run\104.wav	Æï³ËêóÅ£ÔÚË®ÖĞ£¨ÉùÒôÀàËÆ¡°»©¡±£©µÄÅÜ²½ÒôĞ§£¬0.72ÃëÄÚÇ°ºó×ã¸÷×ÅµØ1´Î£¬¿ªÊ¼¡¢½áÊøÊ±¼äÎª²ÈµØÉù
-197	run\105.wav	Æï³ËÂ½ĞĞµñÔÚ×©µØ£¨ÉùÒôÀàËÆ¡°ßÕ¡±£©ÉÏµÄÅÜ²½ÒôĞ§£¬1.04ÃëÄÚÇ°ºó×ã¸÷×ÅµØ1´Î£¬¿ªÊ¼¡¢½áÊøÊ±¼äÎª²ÈµØÉù
-198	run\106.wav	Æï³ËÂ½ĞĞµñÔÚ·Ç×©µØ£¨ÉùÒôÀàËÆ¡°àÛ¡±£©ÉÏµÄÅÜ²½ÒôĞ§£¬1.04ÃëÄÚÇ°ºó×ã¸÷×ÅµØ1´Î£¬¿ªÊ¼¡¢½áÊøÊ±¼äÎª²ÈµØÉù
-199	run\107.wav	Æï³ËÂ½ĞĞµñÔÚË®ÖĞ£¨ÉùÒôÀàËÆ¡°»©¡±£©µÄÅÜ²½ÒôĞ§£¬1.04ÃëÄÚÇ°ºó×ã¸÷×ÅµØ1´Î£¬¿ªÊ¼¡¢½áÊøÊ±¼äÎª²ÈµØÉù
-200	run\108.wav	Æï³ËÀÇÔÚ×©µØ£¨ÉùÒôÀàËÆ¡°É³¡±£©ÉÏµÄÅÜ²½ÒôĞ§£¬0.8ÃëÄÚÇ°ºó×ã¸÷×ÅµØ1´Î£¬¿ªÊ¼¡¢½áÊøÊ±¼äÎª²ÈµØÉù
-201	run\109.wav	Æï³ËÀÇÔÚ·Ç×©µØ£¨ÉùÒôÀàËÆ¡°àÛ¡±£©ÉÏµÄÅÜ²½ÒôĞ§£¬0.8ÃëÄÚÇ°ºó×ã¸÷×ÅµØ1´Î£¬¿ªÊ¼¡¢½áÊøÊ±¼äÎª²ÈµØÉù
-202	run\110.wav	Æï³ËÀÇÔÚË®ÖĞ£¨ÉùÒôÀàËÆ¡°»©¡±£©µÄÅÜ²½ÒôĞ§£¬0.8ÃëÄÚÇ°ºó×ã¸÷×ÅµØ1´Î£¬¿ªÊ¼¡¢½áÊøÊ±¼äÎª²ÈµØÉù
-203	run\111.wav	Æï³ËÂæÍÕÔÚ×©µØ£¨ÉùÒôÀàËÆ¡°É³¡±£©ÉÏµÄÅÜ²½ÒôĞ§£¬0.8ÃëÄÚÇ°ºó×ã¸÷×ÅµØ1´Î£¬¿ªÊ¼¡¢½áÊøÊ±¼äÎª²ÈµØÉù
-204	run\112.wav	Æï³ËÂæÍÕÔÚ·Ç×©µØ£¨ÉùÒôÀàËÆ¡°àÛ¡±£©ÉÏµÄÅÜ²½ÒôĞ§£¬0.8ÃëÄÚÇ°ºó×ã¸÷×ÅµØ1´Î£¬¿ªÊ¼¡¢½áÊøÊ±¼äÎª²ÈµØÉù
-205	run\113.wav	Æï³ËÂæÍÕÔÚË®ÖĞ£¨ÉùÒôÀàËÆ¡°»©¡±£©µÄÅÜ²½ÒôĞ§£¬0.8ÃëÄÚÇ°ºó×ã¸÷×ÅµØ1´Î£¬¿ªÊ¼¡¢½áÊøÊ±¼äÎª²ÈµØÉù
-206	run\114.wav	Æï³ËÂ¹ÔÚ×©µØ£¨ÉùÒôÀàËÆ¡°É³¡±£©ÉÏµÄÅÜ²½ÒôĞ§£¬0.8ÃëÄÚÇ°ºó×ã¸÷×ÅµØ1´Î£¬¿ªÊ¼¡¢½áÊøÊ±¼äÎª²ÈµØÉù
-207	run\115.wav	Æï³ËÂ¹ÔÚ·Ç×©µØ£¨ÉùÒôÀàËÆ¡°àÛ¡±£©ÉÏµÄÅÜ²½ÒôĞ§£¬0.8ÃëÄÚÇ°ºó×ã¸÷×ÅµØ1´Î£¬¿ªÊ¼¡¢½áÊøÊ±¼äÎª²ÈµØÉù
-208	run\116.wav	Æï³ËÂ¹ÔÚË®ÖĞ£¨ÉùÒôÀàËÆ¡°»©¡±£©µÄÅÜ²½ÒôĞ§£¬0.8ÃëÄÚÇ°ºó×ã¸÷×ÅµØ1´Î£¬¿ªÊ¼¡¢½áÊøÊ±¼äÎª²ÈµØÉù
-209	Skills\Ts\Ts_ÈËÎÒÎŞÏà.wav	
-210	Skills\Ts\Ts_°Ë»ÄÎ¬ÎÒ.wav	
-211	Skills\Ts\Ts_ÁùºÏ¶À×ğ.wav	
-212	Skills\Ts\Ts_Ã·»¨ÈıÅª.wav	
-213	Skills\Ts\Ts_ÉúËÀ·û.wav	
-214	Skills\Ts\Ts_ÊÙÕßÎŞÏà.wav	
-215	Skills\Ts\Ts_Ì¤Ñ©Ñ°Ã·.wav	
-216	Skills\Ts\Ts_Ñô¸èÌì¾û.wav	
-217	Skills\Ts\Ts_Ñô¹ØÈıµş.wav	
-218	Skills\Ts\Ts_Ôá»¨»ê.wav	
-219	Skills\Ts\Ts_ÕæË®ÎŞÏã.wav	
-220	Skills\Em\Em_¾ÅÒõ°×¹Ç×¦.wav	
-221	Skills\Em\Em_Æ®Ñ©´©ÔÆYd.wav	
-222	Skills\Em\Em_½ğ¶¥ÃàÕÆ.wav	
-223	Skills\Wd\Wd_Åü¿ÕÕÆ.wav	
-224	Skills\Wd\Wd_Èç·âËÆ±Õ.wav	
-225	Skills\Wd\Wd_ÌìÂí·ÉÆÙJq.wav	
-226	Skills\Wd\Wd_ÏÉÈËÖ¸Â·.wav	
-227	Skills\Wd\Wd_Ììî¸±±¶·Õó.wav	
-228	Skills\Xx\XX_Á¬Öé¸¯Ê¬¶¾.wav	
-229	Skills\Dl\Dl_ÈıÑô¿ªÌ©.wav	
-230	Skills\Dl\Dl_ÉÌÑô½£.wav	
-231	Skills\Dl\Dl_¿İĞÄÖ¸.wav	
-232	Skills\Xy\Xy_ÁèÑÌÊ®°Ë¹¦.wav	
-233	Skills\Gb\Gb_ÍÀÁúÕÆ.wav	
-234	Skills\Gb\Gb_ÌìÏÂÎŞ¹·.wav	
-235	Skills\Gb\Gb_ÉıÁú°Ô.wav	
-236	Skills\Mj\Mj_Ä¦ÄáÊ¥»ğÕó.wav	
-237	Skills\Mj\Mj_Ñ×ÁúÕ¶.wav	
-238	Skills\Mj\Mj_ÔÂÒ¹Õ¶.wav	
-240	Skills\Sl\Sl_½ğ¸Õ·üÄ§È¦.wav	
-241	Skills\Sl\Sl_Ä¦Ú­ÎŞÁ¿.wav	
+88	ambience\nature\bird\bird_2.wav	é¸Ÿå«
+89	ambience\society\boat_1.wav	èˆ¹åªæ™ƒåŠ¨
+90	ambience\nature\animal\bear_1.wav	ç†Šå«
+91	ambience\society\waterwheel_1.wav	æ°´è½¦è½¬åŠ¨å£°
+92	ambience\nature\animal\frog_2.wav	é’è›™å«
+93	ambience\nature\bird\buguniao_2.wav	é¸Ÿå«
+94	ambience\nature\lava_1.wav	å²©æµ†å¥”è…¾
+95	mAncientStep5.wav	æ€ªå…½è„šæ­¥å£°
+96	interface\sound_bagfull.wav	èƒŒåŒ…æ»¡
+97	ambience\82.wav	ç‚¹å‡»UIä¸ŠæŒ‰é’®æ‰€å‘çš„å’»å’»å£°(æ²¡æœ‰è¿™ä¸ªéŸ³æ•ˆæ–‡ä»¶)
+98	ambience\83.wav	å¼¹å‡ºç‹¬å UIæ—¶ï¼Œè¹¦~å£°(æ²¡æœ‰è¿™ä¸ªéŸ³æ•ˆæ–‡ä»¶)
+99	interface\FriendJoin.wav	å¥½å‹ä¸Šçº¿æç¤ºéŸ³
+101	music\dali.mp3	å¤§ç†æ­¦å¤·æ¢…å²­èƒŒæ™¯éŸ³ä¹
+102	music\songshan.mp3	åµ©å±±å¤ªæ¹–ç­‰èƒŒæ™¯éŸ³ä¹
+103	music\jinghu.mp3	é•œæ¹–èƒŒæ™¯éŸ³ä¹
+104	music\dunhuang.mp3	æ•¦ç…ŒèƒŒæ™¯éŸ³ä¹
+105	music\shaolin.mp3	å°‘æ—å¤©é¾™å¯ºèƒŒæ™¯éŸ³ä¹
+106	music\mingjiao.mp3	å…‰æ˜é¡¶å¤©å±±èƒŒæ™¯éŸ³ä¹
+107	music\xiaoyao.mp3	å‡Œæ³¢æ´èƒŒæ™¯éŸ³ä¹
+108	music\emei.mp3	å³¨åµ‹å±±èƒŒæ™¯éŸ³ä¹
+109	music\xingxiu.mp3	æ˜Ÿå®¿æµ·èƒŒæ™¯éŸ³ä¹
+110	music\yannan.mp3	é›å—é›åŒ—èƒŒæ™¯éŸ³ä¹
+111	music\caoyuan.mp3	è‰åŸè¾½è¥¿èƒŒæ™¯éŸ³ä¹
+112	music\changbai.mp3	é•¿ç™½å±±é»„é¾™åºœèƒŒæ™¯éŸ³ä¹
+113	music\cangshan.mp3	è‹å±±æ´±æµ·èƒŒæ™¯éŸ³ä¹
+114	music\shilin.mp3	çŸ³æ—ç‰æºªèƒŒæ™¯éŸ³ä¹
+115	music\nanzhao.mp3	å—è¯è‹—ç–†èƒŒæ™¯éŸ³ä¹
+116	music\nanhai.mp3	å—æµ·ç¼å·èƒŒæ™¯éŸ³ä¹
+117	music\panjun.mp3	å›å†›è¥åœ°èƒŒæ™¯éŸ³ä¹
+118	male_01.wav	ç”·ä¸»è§’æ”»å‡»
+119	music\siwang.mp3	åœ°åºœèƒŒæ™¯éŸ³ä¹
+120	music\zhandou.mp3	å‰¯æœ¬æˆ˜æ–—éŸ³ä¹
+121	music\huanjing.mp3	ç²ç‘æ£‹å±€èƒŒæ™¯éŸ³ä¹
+122	music\diewu.mp3	æ— é‡å±±èƒŒæ™¯éŸ³ä¹
+123	music\luoyangjieri.mp3	æ´›é˜³èŠ‚æ—¥éŸ³ä¹
+130	interface\sound_29.wav	è¿›é¤å£°æ•ˆ
+131	interface\30.wav	éª‘ç‹¼ï¼Œç‹¼åš
+132	interface\31.wav	éª‘é¹¿ï¼Œé¹¿å«
+133	interface\32.wav	éª‘é¹¤ï¼Œé¹¤é¸£
+134	interface\33.wav	éª‘å‡¤ï¼Œå‡¤é¸£
+135	interface\34.wav	éª‘ç‰¦ç‰›ï¼Œç‰¦ç‰›å«
+136	interface\35.wav	éª‘éª†é©¼ï¼Œéª†é©¼å«
+137	interface\36.wav	éª‘é›•ï¼Œé›•å«
+138	interface\37.wav	å¬å”¤å® ç‰©ï¼Œå® ç‰©å‡ºç°æ—¶çš„å£°éŸ³
+139	music\dali2.mp3	è¥¿å—æ°‘æ—é£æ ¼éŸ³ä¹
+140	music\jiang1.mp3	æ¿€æ˜‚éŸ³ä¹é€‚åˆæˆ˜æ–—åœºæ™¯
+141	music\jiang2.mp3	æ¿€æ˜‚éŸ³ä¹é€‚åˆæˆ˜æ–—åœºæ™¯
+142	music\jiang3.mp3	æ¿€æ˜‚éŸ³ä¹é€‚åˆæˆ˜æ–—åœºæ™¯
+143	music\shenchen1.mp3	æ·±æ²‰éŸ³ä¹
+144	music\shenchen2.mp3	æ·±æ²‰éŸ³ä¹
+145	music\shenchen3.mp3	æ·±æ²‰éŸ³ä¹
+146	music\yinsen1.mp3	é˜´æ£®éŸ³ä¹
+147	music\yinsen2.mp3	é˜´æ£®éŸ³ä¹
+148	music\yinsen3.mp3	é˜´æ£®éŸ³ä¹
+151	ambience\society\flag_1.wav	æ——å¸œè¢«é£å¹åŠ¨å£°
+152	ambience\society\market_1.wav	é—¹å¸‚å˜ˆæ‚çš„äººç¾¤
+153	ambience\society\market_2.wav	åŸå¸‚ä¸­äººç›¸å¯¹å°‘çš„åœ°æ–¹
+154	ambience\nature\water\wave_small_2.wav	æµ·æµªæ‹å²¸å£°
+155	ambience\nature\mix\seashore_mix_1.wav	æµ·é¸¥å«å£°
+156	ambience\nature\animal\sheep_1.wav	ç¾Šç¾¤å«å£°
+157	ambience\nature\animal\dog_1.wav	çŠ¬å 
+158	ambience\nature\animal\cat_1.wav	çŒ«å«
+160	ambience\nature\water\wave_1.wav	æ ‘å¶çš„å“—å“—å£°
+161	ambience\nature\wind_1.wav	é«˜å¤„çš„é£å£°
+162	ambience\society\woodbridge_1.wav	èµ°åœ¨æœ¨è´¨ç´¢æ¡¥ä¸Šçš„å±å±å£°
+163	ambience\nature\water\wave_2.wav	æ²™æ¼ ä¸­çš„é£å¹åŠ¨çš„å£°éŸ³
+164	ambience\nature\bird\xique_1.wav	å–œé¹Šå«å£°
+165	ambience\nature\bird\wuya_1.wav	ä¹Œé¸¦å«å£°
+167	ambience\nature\bird\buguniao_1.wav	å¸ƒè°·é¸Ÿçš„å«å£°
+168	ambience\nature\bird\hawk_1.wav	é¹°åœ¨é«˜ç©ºç›˜æ—‹çš„å«å£°
+169	ambience\nature\bird\zhuomuniao_1.wav	å•„æœ¨é¸Ÿçš„å«å£°
+170	ambience\society\zhangu_1.wav	æˆ˜å‰çš„é¼“å£°--æ¿€æ˜‚
+171	ambience\nature\water\rain_middle_1.wav	ä¸‹å°é›¨è½åœ¨åœ°ä¸Šçš„å“—å“—å£°
+172	ambience\nature\insect\ququ_1.wav	è›è›å«å£°
+173	ambience\nature\water\liurushuichi_1.wav	æ°´æµæµå…¥æ°´æ± çš„å£°éŸ³
+174	ambience\nature\bird\dayan_1.wav	å¤´é¡¶å¤§é›çš„é£è¿‡å«å£°
+175	ambience\society\woodgear_1.wav	æœ¨å¤´é½¿è½®å’¬åˆçš„å’¯å±å’¯å±å£°
+176	ambience\nature\water\drop_in_cave_1.wav	é€é¥æ´ä¸­çš„èƒŒæ™¯å£°éŸ³ï¼Œä¼¼ä¹æœ‰æ°´æ»´è½
+177	ambience\nature\animal\wolf_1.wav	è¿œå¤„ç‹¼çš„å—¥å«å£°
+178	ambience\nature\bird\owl_1.wav	çŒ«å¤´é¹°çš„å«å£°
+179	ambience\nature\insect\guoguo_1.wav	èˆèˆçš„å«å£°
+180	ambience\society\woodfish_1.wav	å•ç‹¬çš„æ•²å‡»æœ¨é±¼çš„å£°éŸ³
+181	ambience\society\iron_hit_2.wav	åŒå‰‘æˆ–è€…åŒåˆ€ç›¸æ’å‡»çš„å£°éŸ³
+182	run\90.wav	ç”·ä¸»è§’åœ¨ç –åœ°ï¼ˆå£°éŸ³ç±»ä¼¼â€œæ²™â€ï¼‰ä¸Šçš„è·‘æ­¥éŸ³æ•ˆï¼Œ0.86ç§’å†…å·¦å³è¶³å„ç€åœ°1æ¬¡ï¼Œå¼€å§‹ã€ç»“æŸæ—¶é—´ä¸ºè¸©åœ°å£°
+183	run\91.wav	ç”·ä¸»è§’åœ¨éç –åœ°ï¼ˆå£°éŸ³ç±»ä¼¼â€œå™—â€ï¼‰ä¸Šçš„è·‘æ­¥éŸ³æ•ˆï¼Œ0.86ç§’å†…å·¦å³è¶³å„ç€åœ°1æ¬¡ï¼Œå¼€å§‹ã€ç»“æŸæ—¶é—´ä¸ºè¸©åœ°å£°
+184	run\92.wav	ç”·ä¸»è§’åœ¨æ°´ä¸­ï¼ˆå£°éŸ³ç±»ä¼¼â€œå“—â€ï¼‰çš„è·‘æ­¥éŸ³æ•ˆï¼Œ0.86ç§’å†…å·¦å³è¶³å„ç€åœ°1æ¬¡ï¼Œå¼€å§‹ã€ç»“æŸæ—¶é—´ä¸ºè¸©åœ°å£°
+185	run\93.wav	å¥³ä¸»è§’åœ¨ç –åœ°ï¼ˆå£°éŸ³ç±»ä¼¼â€œæ²™â€ï¼‰ä¸Šçš„è·‘æ­¥éŸ³æ•ˆï¼Œ0.8ç§’å†…å·¦å³è¶³å„ç€åœ°1æ¬¡ï¼Œå¼€å§‹ã€ç»“æŸæ—¶é—´ä¸ºè¸©åœ°å£°
+186	run\94.wav	å¥³ä¸»è§’åœ¨éç –åœ°ï¼ˆå£°éŸ³ç±»ä¼¼â€œå™—â€ï¼‰ä¸Šçš„è·‘æ­¥éŸ³æ•ˆï¼Œ0.8ç§’å†…å·¦å³è¶³å„ç€åœ°1æ¬¡ï¼Œå¼€å§‹ã€ç»“æŸæ—¶é—´ä¸ºè¸©åœ°å£°
+187	run\95.wav	å¥³ä¸»è§’åœ¨æ°´ä¸­ï¼ˆå£°éŸ³ç±»ä¼¼â€œå“—â€ï¼‰çš„è·‘æ­¥éŸ³æ•ˆï¼Œ0.8ç§’å†…å·¦å³è¶³å„ç€åœ°1æ¬¡ï¼Œå¼€å§‹ã€ç»“æŸæ—¶é—´ä¸ºè¸©åœ°å£°
+188	run\96.wav	éª‘ä¹˜è€è™åœ¨ç –åœ°ï¼ˆå£°éŸ³ç±»ä¼¼â€œå“’â€ï¼‰ä¸Šçš„è·‘æ­¥éŸ³æ•ˆï¼Œ0.72ç§’å†…å‰åè¶³å„ç€åœ°1æ¬¡ï¼Œå¼€å§‹ã€ç»“æŸæ—¶é—´ä¸ºè¸©åœ°å£°
+189	run\97.wav	éª‘ä¹˜è€è™åœ¨éç –åœ°ï¼ˆå£°éŸ³ç±»ä¼¼â€œå™—â€ï¼‰ä¸Šçš„è·‘æ­¥éŸ³æ•ˆï¼Œ0.72ç§’å†…å‰åè¶³å„ç€åœ°1æ¬¡ï¼Œå¼€å§‹ã€ç»“æŸæ—¶é—´ä¸ºè¸©åœ°å£°
+190	run\98.wav	éª‘ä¹˜è€è™åœ¨æ°´ä¸­ï¼ˆå£°éŸ³ç±»ä¼¼â€œå“—â€ï¼‰çš„è·‘æ­¥éŸ³æ•ˆï¼Œ0.72ç§’å†…å‰åè¶³å„ç€åœ°1æ¬¡ï¼Œå¼€å§‹ã€ç»“æŸæ—¶é—´ä¸ºè¸©åœ°å£°
+191	run\99.wav	éª‘ä¹˜é©¬åœ¨ç –åœ°ï¼ˆå£°éŸ³ç±»ä¼¼â€œå“’â€ï¼‰ä¸Šçš„è·‘æ­¥éŸ³æ•ˆï¼Œ0.72ç§’å†…å‰åè¶³å„ç€åœ°1æ¬¡ï¼Œå¼€å§‹ã€ç»“æŸæ—¶é—´ä¸ºè¸©åœ°å£°
+192	run\100.wav	éª‘ä¹˜é©¬åœ¨éç –åœ°ï¼ˆå£°éŸ³ç±»ä¼¼â€œå™—â€ï¼‰ä¸Šçš„è·‘æ­¥éŸ³æ•ˆï¼Œ0.72ç§’å†…å‰åè¶³å„ç€åœ°1æ¬¡ï¼Œå¼€å§‹ã€ç»“æŸæ—¶é—´ä¸ºè¸©åœ°å£°
+193	run\101.wav	éª‘ä¹˜é©¬åœ¨æ°´ä¸­ï¼ˆå£°éŸ³ç±»ä¼¼â€œå“—â€ï¼‰çš„è·‘æ­¥éŸ³æ•ˆï¼Œ0.72ç§’å†…å‰åè¶³å„ç€åœ°1æ¬¡ï¼Œå¼€å§‹ã€ç»“æŸæ—¶é—´ä¸ºè¸©åœ°å£°
+194	run\102.wav	éª‘ä¹˜ç‰¦ç‰›åœ¨ç –åœ°ï¼ˆå£°éŸ³ç±»ä¼¼â€œå“’â€ï¼‰ä¸Šçš„è·‘æ­¥éŸ³æ•ˆï¼Œ0.72ç§’å†…å‰åè¶³å„ç€åœ°1æ¬¡ï¼Œå¼€å§‹ã€ç»“æŸæ—¶é—´ä¸ºè¸©åœ°å£°
+195	run\103.wav	éª‘ä¹˜ç‰¦ç‰›åœ¨éç –åœ°ï¼ˆå£°éŸ³ç±»ä¼¼â€œå™—â€ï¼‰ä¸Šçš„è·‘æ­¥éŸ³æ•ˆï¼Œ0.72ç§’å†…å‰åè¶³å„ç€åœ°1æ¬¡ï¼Œå¼€å§‹ã€ç»“æŸæ—¶é—´ä¸ºè¸©åœ°å£°
+196	run\104.wav	éª‘ä¹˜ç‰¦ç‰›åœ¨æ°´ä¸­ï¼ˆå£°éŸ³ç±»ä¼¼â€œå“—â€ï¼‰çš„è·‘æ­¥éŸ³æ•ˆï¼Œ0.72ç§’å†…å‰åè¶³å„ç€åœ°1æ¬¡ï¼Œå¼€å§‹ã€ç»“æŸæ—¶é—´ä¸ºè¸©åœ°å£°
+197	run\105.wav	éª‘ä¹˜é™†è¡Œé›•åœ¨ç –åœ°ï¼ˆå£°éŸ³ç±»ä¼¼â€œå“’â€ï¼‰ä¸Šçš„è·‘æ­¥éŸ³æ•ˆï¼Œ1.04ç§’å†…å‰åè¶³å„ç€åœ°1æ¬¡ï¼Œå¼€å§‹ã€ç»“æŸæ—¶é—´ä¸ºè¸©åœ°å£°
+198	run\106.wav	éª‘ä¹˜é™†è¡Œé›•åœ¨éç –åœ°ï¼ˆå£°éŸ³ç±»ä¼¼â€œå™—â€ï¼‰ä¸Šçš„è·‘æ­¥éŸ³æ•ˆï¼Œ1.04ç§’å†…å‰åè¶³å„ç€åœ°1æ¬¡ï¼Œå¼€å§‹ã€ç»“æŸæ—¶é—´ä¸ºè¸©åœ°å£°
+199	run\107.wav	éª‘ä¹˜é™†è¡Œé›•åœ¨æ°´ä¸­ï¼ˆå£°éŸ³ç±»ä¼¼â€œå“—â€ï¼‰çš„è·‘æ­¥éŸ³æ•ˆï¼Œ1.04ç§’å†…å‰åè¶³å„ç€åœ°1æ¬¡ï¼Œå¼€å§‹ã€ç»“æŸæ—¶é—´ä¸ºè¸©åœ°å£°
+200	run\108.wav	éª‘ä¹˜ç‹¼åœ¨ç –åœ°ï¼ˆå£°éŸ³ç±»ä¼¼â€œæ²™â€ï¼‰ä¸Šçš„è·‘æ­¥éŸ³æ•ˆï¼Œ0.8ç§’å†…å‰åè¶³å„ç€åœ°1æ¬¡ï¼Œå¼€å§‹ã€ç»“æŸæ—¶é—´ä¸ºè¸©åœ°å£°
+201	run\109.wav	éª‘ä¹˜ç‹¼åœ¨éç –åœ°ï¼ˆå£°éŸ³ç±»ä¼¼â€œå™—â€ï¼‰ä¸Šçš„è·‘æ­¥éŸ³æ•ˆï¼Œ0.8ç§’å†…å‰åè¶³å„ç€åœ°1æ¬¡ï¼Œå¼€å§‹ã€ç»“æŸæ—¶é—´ä¸ºè¸©åœ°å£°
+202	run\110.wav	éª‘ä¹˜ç‹¼åœ¨æ°´ä¸­ï¼ˆå£°éŸ³ç±»ä¼¼â€œå“—â€ï¼‰çš„è·‘æ­¥éŸ³æ•ˆï¼Œ0.8ç§’å†…å‰åè¶³å„ç€åœ°1æ¬¡ï¼Œå¼€å§‹ã€ç»“æŸæ—¶é—´ä¸ºè¸©åœ°å£°
+203	run\111.wav	éª‘ä¹˜éª†é©¼åœ¨ç –åœ°ï¼ˆå£°éŸ³ç±»ä¼¼â€œæ²™â€ï¼‰ä¸Šçš„è·‘æ­¥éŸ³æ•ˆï¼Œ0.8ç§’å†…å‰åè¶³å„ç€åœ°1æ¬¡ï¼Œå¼€å§‹ã€ç»“æŸæ—¶é—´ä¸ºè¸©åœ°å£°
+204	run\112.wav	éª‘ä¹˜éª†é©¼åœ¨éç –åœ°ï¼ˆå£°éŸ³ç±»ä¼¼â€œå™—â€ï¼‰ä¸Šçš„è·‘æ­¥éŸ³æ•ˆï¼Œ0.8ç§’å†…å‰åè¶³å„ç€åœ°1æ¬¡ï¼Œå¼€å§‹ã€ç»“æŸæ—¶é—´ä¸ºè¸©åœ°å£°
+205	run\113.wav	éª‘ä¹˜éª†é©¼åœ¨æ°´ä¸­ï¼ˆå£°éŸ³ç±»ä¼¼â€œå“—â€ï¼‰çš„è·‘æ­¥éŸ³æ•ˆï¼Œ0.8ç§’å†…å‰åè¶³å„ç€åœ°1æ¬¡ï¼Œå¼€å§‹ã€ç»“æŸæ—¶é—´ä¸ºè¸©åœ°å£°
+206	run\114.wav	éª‘ä¹˜é¹¿åœ¨ç –åœ°ï¼ˆå£°éŸ³ç±»ä¼¼â€œæ²™â€ï¼‰ä¸Šçš„è·‘æ­¥éŸ³æ•ˆï¼Œ0.8ç§’å†…å‰åè¶³å„ç€åœ°1æ¬¡ï¼Œå¼€å§‹ã€ç»“æŸæ—¶é—´ä¸ºè¸©åœ°å£°
+207	run\115.wav	éª‘ä¹˜é¹¿åœ¨éç –åœ°ï¼ˆå£°éŸ³ç±»ä¼¼â€œå™—â€ï¼‰ä¸Šçš„è·‘æ­¥éŸ³æ•ˆï¼Œ0.8ç§’å†…å‰åè¶³å„ç€åœ°1æ¬¡ï¼Œå¼€å§‹ã€ç»“æŸæ—¶é—´ä¸ºè¸©åœ°å£°
+208	run\116.wav	éª‘ä¹˜é¹¿åœ¨æ°´ä¸­ï¼ˆå£°éŸ³ç±»ä¼¼â€œå“—â€ï¼‰çš„è·‘æ­¥éŸ³æ•ˆï¼Œ0.8ç§’å†…å‰åè¶³å„ç€åœ°1æ¬¡ï¼Œå¼€å§‹ã€ç»“æŸæ—¶é—´ä¸ºè¸©åœ°å£°
+209	Skills\Ts\Ts_äººæˆ‘æ— ç›¸.wav	
+210	Skills\Ts\Ts_å…«è’ç»´æˆ‘.wav	
+211	Skills\Ts\Ts_å…­åˆç‹¬å°Š.wav	
+212	Skills\Ts\Ts_æ¢…èŠ±ä¸‰å¼„.wav	
+213	Skills\Ts\Ts_ç”Ÿæ­»ç¬¦.wav	
+214	Skills\Ts\Ts_å¯¿è€…æ— ç›¸.wav	
+215	Skills\Ts\Ts_è¸é›ªå¯»æ¢….wav	
+216	Skills\Ts\Ts_é˜³æ­Œå¤©é’§.wav	
+217	Skills\Ts\Ts_é˜³å…³ä¸‰å .wav	
+218	Skills\Ts\Ts_è‘¬èŠ±é­‚.wav	
+219	Skills\Ts\Ts_çœŸæ°´æ— é¦™.wav	
+220	Skills\Em\Em_ä¹é˜´ç™½éª¨çˆª.wav	
+221	Skills\Em\Em_é£˜é›ªç©¿äº‘Yd.wav	
+222	Skills\Em\Em_é‡‘é¡¶ç»µæŒ.wav	
+223	Skills\Wd\Wd_åŠˆç©ºæŒ.wav	
+224	Skills\Wd\Wd_å¦‚å°ä¼¼é—­.wav	
+225	Skills\Wd\Wd_å¤©é©¬é£ç€‘Jq.wav	
+226	Skills\Wd\Wd_ä»™äººæŒ‡è·¯.wav	
+227	Skills\Wd\Wd_å¤©ç½¡åŒ—æ–—é˜µ.wav	
+228	Skills\Xx\XX_è¿ç è…å°¸æ¯’.wav	
+229	Skills\Dl\Dl_ä¸‰é˜³å¼€æ³°.wav	
+230	Skills\Dl\Dl_å•†é˜³å‰‘.wav	
+231	Skills\Dl\Dl_æ¯å¿ƒæŒ‡.wav	
+232	Skills\Xy\Xy_å‡ŒçƒŸåå…«åŠŸ.wav	
+233	Skills\Gb\Gb_å± é¾™æŒ.wav	
+234	Skills\Gb\Gb_å¤©ä¸‹æ— ç‹—.wav	
+235	Skills\Gb\Gb_å‡é¾™éœ¸.wav	
+236	Skills\Mj\Mj_æ‘©å°¼åœ£ç«é˜µ.wav	
+237	Skills\Mj\Mj_ç‚é¾™æ–©.wav	
+238	Skills\Mj\Mj_æœˆå¤œæ–©.wav	
+240	Skills\Sl\Sl_é‡‘åˆšä¼é­”åœˆ.wav	
+241	Skills\Sl\Sl_æ‘©è¯ƒæ— é‡.wav	
 242	Skills\Common\Discharge_1.wav	
 243	Skills\Common\Discharge_2.wav	
 244	Skills\Common\Fix_1.wav	
@@ -243,89 +243,89 @@ INT	STRING	STRING
 255	UI\Ui1.wav	
 256	UI\Ui2.wav	
 257	UI\Ui3.wav	
-258	Skills\Xx\Xx_»¯ÑªÃàÕÆ.wav	
-260	Skills\Sl\Sl_´óÁ¦½ğ¸ÕÕÆ.wav	
-261	Skills\Sl\Sl_ÂŞººÕó.wav	
-262	Skills\Sl\Sl_Ìú²¼ÉÀ.wav	
-263	Skills\Sl\Sl_Äé»¨Ö¸.wav	
-264	Skills\Sl\Sl_Ê¨×Óºğ.wav	
-266	Skills\Sl\Sl_åÈÒ¶»áĞÄ.wav	
-267	Skills\Sl\Sl_Ã÷¾µÌ¨.wav	
-268	Skills\Sl\Sl_½ğ¸Õ²»»µÌå.wav	
-269	Skills\Mj\Mj_Ê¥»ğÁî.wav	
-270	Skills\Mj\Mj_¿û»¨ÒÆÓ°.wav	
-271	Skills\Mj\Mj_¿û»¨µãÑ¨ÊÖ.wav	
-272	Skills\Mj\Mj_¿û»¨ÏòÑô.wav	
-273	Skills\Mj\Mj_ÀÊÀÊÇ¬À¤.wav	
-274	Skills\Common\ÑÌ»ğ1.wav	
-275	Skills\Common\ÑÌ»ğ2.wav	
-276	Skills\Common\ÑÌ»ğ3.wav	
-277	Skills\Gb\Gb_²¦¹·³¯Ìì.wav	
-278	Skills\Gb\Gb_´óÅôÕ¹³á.wav	
-279	Skills\Gb\Gb_·ÉÁúÔÚÌì.wav	
-280	Skills\Gb\Gb_¼ûÁúÔÚÌï.wav	
-281	Skills\Gb\Gb_¿ºÁúÓĞ»Ú.wav	
-282	Skills\Gb\Gb_ÁúÕ½ÓÚÒ°.wav	
-283	Skills\Gb\Gb_ÉñÁú°ÚÎ².wav	
-284	Skills\Gb\Gb_ÓÎÁú¾÷.wav	
-285	Skills\Gb\Gb_Õ³ÒÂÊ®°Ëµø.wav	
-286	Skills\Gb\Gb_Õ¶Áú¾÷.wav	
-287	Skills\Dl\Dl_ÉÙÉÌ½£.wav	
-288	Skills\Dl\Dl_Ò»ÑôÖ¸.wav	
-289	Skills\Dl\Dl_ÖĞ³å½£.wav	
-290	Skills\Dl\Dl_·Ç¿İ·ÇÈÙ.wav	
-291	Skills\Dl\Dl_ÌìÁú²½·¨.wav	
-292	Skills\Dl\Dl_ÑÌÏûÔÆÉ¢.wav	
-293	Skills\Xy\Xy_°ËÕóÍ¼.wav	
-294	Skills\Xy\Xy_¸§ÇÙÊ½.wav	
-295	Skills\Xy\Xy_¸ßÉ½Á÷Ë®.wav	
-296	Skills\Xy\Xy_½­ĞĞ³õÑ©.wav	
-297	Skills\Xy\Xy_ÅÅÉ½µ¹º£.wav	
-298	Skills\Xy\Xy_Ç§ÀïÑÛ.wav	
-299	Skills\Xy\Xy_ÔË±ÊÊ½.wav	
-300	Skills\Xy\Xy_ÖïÏÉÕó.wav	
-301	Skills\Xx\Xx_ÉñÄ¾ĞĞ.wav	
-302	Skills\Xx\Xx_òÚò¼Õó.wav	
-303	Skills\Xx\Xx_ĞşÚ¤ÉñÕÆ.wav	
-304	Skills\Xy\Xy_»¨¿ª÷ãİ±.wav	
-305	Skills\Xy\Xy_»­µØÎªÀÎ.wav	
-306	Skills\Xy\Xy_»Æ½ğ¼×.wav	
-307	Skills\Xy\Xy_ÌÒ»¨Õó.wav	
+258	Skills\Xx\Xx_åŒ–è¡€ç»µæŒ.wav	
+260	Skills\Sl\Sl_å¤§åŠ›é‡‘åˆšæŒ.wav	
+261	Skills\Sl\Sl_ç½—æ±‰é˜µ.wav	
+262	Skills\Sl\Sl_é“å¸ƒè¡«.wav	
+263	Skills\Sl\Sl_æ‹ˆèŠ±æŒ‡.wav	
+264	Skills\Sl\Sl_ç‹®å­å¼.wav	
+266	Skills\Sl\Sl_è¿¦å¶ä¼šå¿ƒ.wav	
+267	Skills\Sl\Sl_æ˜é•œå°.wav	
+268	Skills\Sl\Sl_é‡‘åˆšä¸åä½“.wav	
+269	Skills\Mj\Mj_åœ£ç«ä»¤.wav	
+270	Skills\Mj\Mj_è‘µèŠ±ç§»å½±.wav	
+271	Skills\Mj\Mj_è‘µèŠ±ç‚¹ç©´æ‰‹.wav	
+272	Skills\Mj\Mj_è‘µèŠ±å‘é˜³.wav	
+273	Skills\Mj\Mj_æœ—æœ—ä¹¾å¤.wav	
+274	Skills\Common\çƒŸç«1.wav	
+275	Skills\Common\çƒŸç«2.wav	
+276	Skills\Common\çƒŸç«3.wav	
+277	Skills\Gb\Gb_æ‹¨ç‹—æœå¤©.wav	
+278	Skills\Gb\Gb_å¤§é¹å±•ç¿….wav	
+279	Skills\Gb\Gb_é£é¾™åœ¨å¤©.wav	
+280	Skills\Gb\Gb_è§é¾™åœ¨ç”°.wav	
+281	Skills\Gb\Gb_äº¢é¾™æœ‰æ‚”.wav	
+282	Skills\Gb\Gb_é¾™æˆ˜äºé‡.wav	
+283	Skills\Gb\Gb_ç¥é¾™æ‘†å°¾.wav	
+284	Skills\Gb\Gb_æ¸¸é¾™è¯€.wav	
+285	Skills\Gb\Gb_ç²˜è¡£åå…«è·Œ.wav	
+286	Skills\Gb\Gb_æ–©é¾™è¯€.wav	
+287	Skills\Dl\Dl_å°‘å•†å‰‘.wav	
+288	Skills\Dl\Dl_ä¸€é˜³æŒ‡.wav	
+289	Skills\Dl\Dl_ä¸­å†²å‰‘.wav	
+290	Skills\Dl\Dl_éæ¯éè£.wav	
+291	Skills\Dl\Dl_å¤©é¾™æ­¥æ³•.wav	
+292	Skills\Dl\Dl_çƒŸæ¶ˆäº‘æ•£.wav	
+293	Skills\Xy\Xy_å…«é˜µå›¾.wav	
+294	Skills\Xy\Xy_æŠšç´å¼.wav	
+295	Skills\Xy\Xy_é«˜å±±æµæ°´.wav	
+296	Skills\Xy\Xy_æ±Ÿè¡Œåˆé›ª.wav	
+297	Skills\Xy\Xy_æ’å±±å€’æµ·.wav	
+298	Skills\Xy\Xy_åƒé‡Œçœ¼.wav	
+299	Skills\Xy\Xy_è¿ç¬”å¼.wav	
+300	Skills\Xy\Xy_è¯›ä»™é˜µ.wav	
+301	Skills\Xx\Xx_ç¥æœ¨è¡Œ.wav	
+302	Skills\Xx\Xx_èœˆèš£é˜µ.wav	
+303	Skills\Xx\Xx_ç„å†¥ç¥æŒ.wav	
+304	Skills\Xy\Xy_èŠ±å¼€ç¸»è¼.wav	
+305	Skills\Xy\Xy_ç”»åœ°ä¸ºç‰¢.wav	
+306	Skills\Xy\Xy_é»„é‡‘ç”².wav	
+307	Skills\Xy\Xy_æ¡ƒèŠ±é˜µ.wav	
 308	Skills\Common\fix5.wav	
 309	Skills\Common\Discharge_3.wav	
 310	Skills\Common\Discharge_4.wav	
 311	Skills\Common\Discharge_5.wav	
 312	Skills\Common\Fix_6.wav	
 313	Skills\Common\Fix_7.wav	
-314	Skills\Em\Em_º×Ó°ÃÔÍ¾.wav	
-315	Skills\Em\Em_¾ø½£Ê½.wav	
-316	Skills\Em\Em_ÊØĞÄÉ¢Òâ.wav	
-317	Skills\Em\Em_ÌìÈËºÏÒ».wav	
-318	Skills\Em\Em_Õ¶Çé¾÷.wav	
-319	Skills\Em\Em_ÕæÉí²»°Ü.wav	
-320	Skills\Wd\Wd_°×º×ÁÁ³á.wav	
-321	Skills\Wd\Wd_ÂÒ»·¾÷.wav	
-322	Skills\Wd\Wd_Ììî¸ÕıÆø.wav	
-323	Skills\Xx\Xx_»¯¹ÇÃŞÕÆ.wav	
-329	Skills\Sl\Sl_½ğ¸Õ·üÄ§È¦_¶¨Éí.wav	
-330	Skills\Sl\Sl_Ò»Î­¶É½­.wav	
-331	Skills\Sl\Sl_Äé»¨Ö¸_É¢¹¦.wav	
-346	Skills\Xy\Xy_¾ÛÆø_ÌÒ»¨Õó.wav	
+314	Skills\Em\Em_é¹¤å½±è¿·é€”.wav	
+315	Skills\Em\Em_ç»å‰‘å¼.wav	
+316	Skills\Em\Em_å®ˆå¿ƒæ•£æ„.wav	
+317	Skills\Em\Em_å¤©äººåˆä¸€.wav	
+318	Skills\Em\Em_æ–©æƒ…è¯€.wav	
+319	Skills\Em\Em_çœŸèº«ä¸è´¥.wav	
+320	Skills\Wd\Wd_ç™½é¹¤äº®ç¿….wav	
+321	Skills\Wd\Wd_ä¹±ç¯è¯€.wav	
+322	Skills\Wd\Wd_å¤©ç½¡æ­£æ°”.wav	
+323	Skills\Xx\Xx_åŒ–éª¨æ£‰æŒ.wav	
+329	Skills\Sl\Sl_é‡‘åˆšä¼é­”åœˆ_å®šèº«.wav	
+330	Skills\Sl\Sl_ä¸€è‹‡æ¸¡æ±Ÿ.wav	
+331	Skills\Sl\Sl_æ‹ˆèŠ±æŒ‡_æ•£åŠŸ.wav	
+346	Skills\Xy\Xy_èšæ°”_æ¡ƒèŠ±é˜µ.wav	
 347	Skills\Common\bullet_fly_by1.wav	
 348	Skills\Common\bullet_explode1.wav	
-349	Skills\Xy\Xy_»­µØÎªÀÎ_»÷ÖĞ.wav	
-350	Skills\Xy\Xy_ÔÆÌå·çÉí_¼¯Æø.wav	
-351	Skills\Sl\Sl_ôÂôÄ·üÄ§¹¦.wav	
-352	Skills\Sl\Sl_Ìú²¼ÉÀ_ĞîÆø.wav	
-353	Skills\Sl\Sl_Ò»ÅÄÁ½É¢.wav	
-354	Skills\Sl\Sl_Î¤ÍÓèÆ_ĞîÆø.wav	
-355	Skills\Sl\Sl_Î¤ÍÓèÆ.wav	
-356	Skills\Sl\Sl_ÈçÀ´ÉñÕÆ.wav	
+349	Skills\Xy\Xy_ç”»åœ°ä¸ºç‰¢_å‡»ä¸­.wav	
+350	Skills\Xy\Xy_äº‘ä½“é£èº«_é›†æ°”.wav	
+351	Skills\Sl\Sl_è¢ˆè£Ÿä¼é­”åŠŸ.wav	
+352	Skills\Sl\Sl_é“å¸ƒè¡«_è“„æ°”.wav	
+353	Skills\Sl\Sl_ä¸€æ‹ä¸¤æ•£.wav	
+354	Skills\Sl\Sl_éŸ¦é™€æµ_è“„æ°”.wav	
+355	Skills\Sl\Sl_éŸ¦é™€æµ.wav	
+356	Skills\Sl\Sl_å¦‚æ¥ç¥æŒ.wav	
 358	ambience\nature\water\river_3.wav	
 359	ambience\nature\water\river_2.wav	
 360	ambience\nature\water\lake_1.wav	
 361	ambience\nature\mix\forest_day_1.wav	
-362	ambience\nature\water\waterfall_2.wav	ÆÙ²¼2
+362	ambience\nature\water\waterfall_2.wav	ç€‘å¸ƒ2
 363	ambience\nature\insect\fly_1.wav	
 364	ambience\nature\insect\fly_2.wav	
 365	ambience\nature\animal\monkey_1.wav	
@@ -353,123 +353,123 @@ INT	STRING	STRING
 387	ambience\nature\mix\forest_day_autumn.wav	
 388	ambience\nature\animal\wolf_2.wav	
 389	ambience\nature\mix\cave_1.wav	
-390	Skills\Xy\Xy_Áè²¨Î¢²½.wav	
-391	Skills\Xy\Xy_°ËÕóÍ¼_±¬Õ¨.wav	
+390	Skills\Xy\Xy_å‡Œæ³¢å¾®æ­¥.wav	
+391	Skills\Xy\Xy_å…«é˜µå›¾_çˆ†ç‚¸.wav	
 392	Skills\Common\bullet_fly_by2.wav	
-393	Skills\Xy\Xy_äìÏæÒ¹Óê.wav	
+393	Skills\Xy\Xy_æ½‡æ¹˜å¤œé›¨.wav	
 394	Skills\Common\bullet_fly_by4.wav	
-395	Skills\Xy\Xy_¾ªÌÎº§ÀË.wav	
+395	Skills\Xy\Xy_æƒŠæ¶›éª‡æµª.wav	
 396	ambience\nature\wind_7.wav	
 397	ambience\nature\bird\hawk_2.wav	
 398	ambience\nature\wind_8.wav	
 399	ambience\society\war_1.wav	
 400	ambience\society\bell_big_3.wav	
-401	ambience\nature\mix\spring_wind.wav	´ºÌìµÄÎ¢·çÉù£¬35Ãë
+401	ambience\nature\mix\spring_wind.wav	æ˜¥å¤©çš„å¾®é£å£°ï¼Œ35ç§’
 402	ambience\nature\insect\ququ_2.wav	
-403	ambience\nature\animal\horse_1.wav	ÂíË»
-404	ambience\nature\bird\wing_1.wav	´óÄñÉÈ¶¯³á°ò1
-405	ambience\nature\bird\wing_2.wav	´óÄñÉÈ¶¯³á°ò2
-406	ambience\nature\mix\autumn_wind.wav	Çï·ç
-407	ambience\society\bell_big_2.wav	ËÂÃíÀïÃæµÄÖÓÉù
-408	ambience\nature\mix\lava_hall_1.wav	ËÄÖÜ¶¼ÊÇÑÒ½¬µÄ´óÌü
-409	ambience\nature\mix\forest_plain.wav	Ê÷½ÏÉÙµÄÆ½Ô­
-410	ambience\nature\water\rain_thunder_1.wav	À×Óê
+403	ambience\nature\animal\horse_1.wav	é©¬å˜¶
+404	ambience\nature\bird\wing_1.wav	å¤§é¸Ÿæ‰‡åŠ¨ç¿…è†€1
+405	ambience\nature\bird\wing_2.wav	å¤§é¸Ÿæ‰‡åŠ¨ç¿…è†€2
+406	ambience\nature\mix\autumn_wind.wav	ç§‹é£
+407	ambience\society\bell_big_2.wav	å¯ºåº™é‡Œé¢çš„é’Ÿå£°
+408	ambience\nature\mix\lava_hall_1.wav	å››å‘¨éƒ½æ˜¯å²©æµ†çš„å¤§å…
+409	ambience\nature\mix\forest_plain.wav	æ ‘è¾ƒå°‘çš„å¹³åŸ
+410	ambience\nature\water\rain_thunder_1.wav	é›·é›¨
 411	ambience\society\tone_yipintang.wav	
 412	ambience\nature\wind_9.wav	
 413	ambience\nature\wind_10.wav	
 414	ambience\nature\mix\forest_night_1.wav	
 415	ambience\society\steam_1.wav	
-416	music\horror_1.mp3	¿Ö²À±³¾°ÒôÀÖ
-417	music\horror_2.mp3	¿Ö²À±³¾°ÒôÀÖ
-418	ambience\nature\mix\seashore_mix_2.wav	º£±ß»ìÒô2
-419	ambience\nature\water\wave_3.wav	º£ÀË3
-420	ambience\nature\mix\machine_hall.wav	»úĞµÎİ×Ó
-421	ambience\society\prison.wav	¼àÓü
-422	ambience\nature\bird\crac.wav	µ°¿ÇµÈÁÑ¿ª
-423	ambience\society\fire_3.wav	ÁÒ»ğ
-424	ambience\nature\insect\spider_1.wav	Ö©Öë
-425	ambience\nature\animal\lion_1.wav	Ê¨×Ó
-426	ambience\nature\insect\fly_3.wav	ÃÛ·ä»ò²ÔÓ¬
-427	ambience\nature\animal\pig_1.wav	Öí
-428	music\hunli.mp3	»éÀñÒôÀÖ
-429	ambience\society\crowd_1.wav	¾ÆÏ¯ÉÏµÄÈËÈºàĞÔÓÉù
-430	interface\click_fail.wav	Í¨ÓÃ²Ù×÷Ê§°ÜÌáÊ¾
-431	interface\quest_accept.wav	½ÓÊÜÈÎÎñ
-432	interface\quest_complete.wav	Íê³ÉÈÎÎñ
-433	interface\click_cancel.wav	È¡Ïû
-434	interface\click_close.wav	¹Ø±Õ´°¿Ú°´Å¥
-435	interface\click_common_1.wav	Í¨ÓÃ°´Å¥
-436	interface\quest_window_close.wav	¹Ø±ÕÈÎÎñ´°¿Ú
-437	interface\quest_window_open.wav	´ò¿ªÈÎÎñ´°¿Ú
-438	interface\trade_begin.wav	µã»÷½»Ò×°´Å¥
-439	interface\character_window_open.wav	´ò¿ª½ÇÉ«´°¿Ú
-440	interface\common_window_close.wav	¹Ø±ÕÍ¨ÓÃ´°¿Ú
-441	interface\common_window_open.wav	´ò¿ªÍ¨ÓÃ´°¿Ú
-442	interface\letter_receive.wav	ÊÕµ½ĞÅ
-443	interface\packet_window_close.wav	¹Ø±Õ±³°ü´°¿Ú
-444	interface\packet_window_open.wav	´ò¿ª±³°ü´°¿Ú
-445	interface\scroll_down.wav	ÏòÏÂ¹ö¶¯
-446	interface\scroll_up.wav	ÏòÉÏ¹ö¶¯
-447	interface\skill_window_close.wav	¹Ø±Õ¼¼ÄÜ´°¿Ú
-448	interface\skill_window_open.wav	´ò¿ª¼¼ÄÜ´°¿Ú
-449	interface\system_window_close.wav	¹Ø±ÕÏµÍ³´°¿Ú
-450	interface\system_window_open.wav	´ò¿ªÏµÍ³´°¿Ú
-451	interface\tab_change.wav	ÇĞ»»Ò³Ãæ
-452	ambience\society\boat_2.wav	´¬»Î¶¯
-453	ambience\nature\lava_2.wav	ÑÒ½¬
-454	ambience\nature\mix\cave_2.wav	¾Ş´óÉ½¶´ÎŞË®µÎ
-455	ambience\nature\mix\forest_night_2.wav	Ã¯ÃÜÉ­ÁÖ2
-456	ambience\nature\water\poison_water.wav	¶¾Òº
-457	ambience\nature\water\Bubble_1.wav	ÆøÅİ
-458	ambience\nature\crystal_1.wav	Ë®¾§
-459	run\woodhorsestep_1.wav	Ä¾Å£½Å²½£¬×©µØ
-460	run\woodhorsestep_2.wav	Ä¾Å£½Å²½£¬Ë®
-461	run\woodhorsestep_3.wav	Ä¾Å£½Å²½£¬²İµØ
-462	run\elephant_step_1.wav	´óÏó½Å²½£¬×©ºÍ²İ
-463	run\elephant_step_2.wav	´óÏó½Å²½£¬Ë®
-464	run\spider_step_1.wav	Ö©Öë½Å²½£¬×©
-465	run\spider_step_2.wav	Ö©Öë½Å²½£¬Ë®
-466	run\spider_step_3.wav	Ö©Öë½Å²½£¬·Ç×©
-467	ambience\nature\animal\xiniu.wav	Ï¬Å£½ĞÉù
-468	ambience\nature\animal\elephant.wav	´óÏó½ĞÉù
-469	ambience\nature\bird\tuoniao.wav	ÍÒÄñ½Ğ
-470	run\tuoniao_step_1.wav	ÍÒÄñ½Å²½ ×©
-471	run\tuoniao_step_2.wav	ÍÒÄñ½Å²½ ·Ç×©
-472	run\tuoniao_step_3.wav	ÍÒÄñ½Å²½ Ë®
-473	ambience\nature\animal\river_horse.wav	ºÓÂí½Ğ
-474	ambience\nature\animal\carriage.wav	Âí³µ
-475	ambience\nature\animal\horse_2.wav	·ÉÂí
-476	ambience\nature\animal\dance_lion.wav	ÎèÊ¨
-477	run\carriage_step_1.wav	Âí³µ½Å²½ ×©
-478	run\carriage_step_2.wav	Âí³µ½Å²½ ·Ç×©
-479	run\carriage_step_3.wav	Âí³µ½Å²½ Ë®
-480	run\flyhorse_step_1.wav	ÌìÂí½Å²½ ×©
-481	run\flyhorse_step_2.wav	ÌìÂí½Å²½ ·Ç×©
-482	run\flyhorse_step_3.wav	ÌìÂí½Å²½ Ë®
-483	run\rabbit_step_1.wav	ÍÃ×Ó½Å²½ ×©
-484	run\rabbit_step_2.wav	ÍÃ×Ó½Å²½ ·Ç×©
-485	run\rabbit_step_3.wav	ÍÃ×Ó½Å²½ Ë®
-486	run\deer_step_1.wav	Ñ±Â¹½Å²½ ×©
-487	run\deer_step_2.wav	Ñ±Â¹½Å²½ ·Ç×©
-488	run\deer_step_3.wav	Ñ±Â¹½Å²½ Ë®
-489	run\wushi_step_1.wav	ÎèÊ¨½Å²½ ×©
-490	run\wushi_step_2.wav	ÎèÊ¨½Å²½ ·Ç×©
-491	run\wushi_step_3.wav	ÎèÊ¨½Å²½ Ë®
-492	ambience\nature\water\rain_middle_2.wav	ÏÂÓêÌìÆø
-493	ambience\nature\water\rain_thunder_2.wav	À×ÓêÌìÆø
-494	music\yanziwu.mp3	Ñà×ÓÎë±³¾°ÒôÀÖ
-495	ambience\nature\bird\wing_3.wav	´óÄñÉÈ¶¯³á°ò3
-496	interface\kuaihuosan_end_air.wav	ĞÒÔËÂÖÅÌ¿ªµ½¿ÕÆøµÄÒôĞ§
-497	interface\kuaihuosan_end_common.wav	ĞÒÔËÂÖÅÌ¿ªµ½ÆÕÍ¨½±Æ·µÄÒôĞ§
-498	interface\kuaihuosan_end_kuaihuosan.wav	ĞÒÔËÂÖÅÌ¿ªµ½´ó½±µÄÒôĞ§
-499	interface\kuaihuosan_start.wav	ĞÒÔËÂÖÅÌµã»÷Í·Ïñ²¥·ÅµÄ¼±´ÙÒôĞ§
-500	music\huoyanshan.mp3	»ğÑæÉ½±³¾°ÒôÀÖ
-501	music\gaochang.mp3	¸ß²ı±³¾°ÒôÀÖ
-502	ambience\society\bianpao_single.wav	µ¥¸ö±ŞÅÚÒôĞ§
-503	ambience\society\bianpao_several.wav	Ò»´®±ŞÅÚÒôĞ§
-504	music\talimu.mp3	ËşÀïÄ¾±³¾°ÒôÀÖ
-505	music\loulan.mp3	Â¥À¼±³¾°ÒôÀÖ
-506	music\bangzhan.mp3	°ïÕ½±³¾°ÒôÀÖ
+416	music\horror_1.mp3	ææ€–èƒŒæ™¯éŸ³ä¹
+417	music\horror_2.mp3	ææ€–èƒŒæ™¯éŸ³ä¹
+418	ambience\nature\mix\seashore_mix_2.wav	æµ·è¾¹æ··éŸ³2
+419	ambience\nature\water\wave_3.wav	æµ·æµª3
+420	ambience\nature\mix\machine_hall.wav	æœºæ¢°å±‹å­
+421	ambience\society\prison.wav	ç›‘ç‹±
+422	ambience\nature\bird\crac.wav	è›‹å£³ç­‰è£‚å¼€
+423	ambience\society\fire_3.wav	çƒˆç«
+424	ambience\nature\insect\spider_1.wav	èœ˜è››
+425	ambience\nature\animal\lion_1.wav	ç‹®å­
+426	ambience\nature\insect\fly_3.wav	èœœèœ‚æˆ–è‹è‡
+427	ambience\nature\animal\pig_1.wav	çŒª
+428	music\hunli.mp3	å©šç¤¼éŸ³ä¹
+429	ambience\society\crowd_1.wav	é…’å¸­ä¸Šçš„äººç¾¤å˜ˆæ‚å£°
+430	interface\click_fail.wav	é€šç”¨æ“ä½œå¤±è´¥æç¤º
+431	interface\quest_accept.wav	æ¥å—ä»»åŠ¡
+432	interface\quest_complete.wav	å®Œæˆä»»åŠ¡
+433	interface\click_cancel.wav	å–æ¶ˆ
+434	interface\click_close.wav	å…³é—­çª—å£æŒ‰é’®
+435	interface\click_common_1.wav	é€šç”¨æŒ‰é’®
+436	interface\quest_window_close.wav	å…³é—­ä»»åŠ¡çª—å£
+437	interface\quest_window_open.wav	æ‰“å¼€ä»»åŠ¡çª—å£
+438	interface\trade_begin.wav	ç‚¹å‡»äº¤æ˜“æŒ‰é’®
+439	interface\character_window_open.wav	æ‰“å¼€è§’è‰²çª—å£
+440	interface\common_window_close.wav	å…³é—­é€šç”¨çª—å£
+441	interface\common_window_open.wav	æ‰“å¼€é€šç”¨çª—å£
+442	interface\letter_receive.wav	æ”¶åˆ°ä¿¡
+443	interface\packet_window_close.wav	å…³é—­èƒŒåŒ…çª—å£
+444	interface\packet_window_open.wav	æ‰“å¼€èƒŒåŒ…çª—å£
+445	interface\scroll_down.wav	å‘ä¸‹æ»šåŠ¨
+446	interface\scroll_up.wav	å‘ä¸Šæ»šåŠ¨
+447	interface\skill_window_close.wav	å…³é—­æŠ€èƒ½çª—å£
+448	interface\skill_window_open.wav	æ‰“å¼€æŠ€èƒ½çª—å£
+449	interface\system_window_close.wav	å…³é—­ç³»ç»Ÿçª—å£
+450	interface\system_window_open.wav	æ‰“å¼€ç³»ç»Ÿçª—å£
+451	interface\tab_change.wav	åˆ‡æ¢é¡µé¢
+452	ambience\society\boat_2.wav	èˆ¹æ™ƒåŠ¨
+453	ambience\nature\lava_2.wav	å²©æµ†
+454	ambience\nature\mix\cave_2.wav	å·¨å¤§å±±æ´æ— æ°´æ»´
+455	ambience\nature\mix\forest_night_2.wav	èŒ‚å¯†æ£®æ—2
+456	ambience\nature\water\poison_water.wav	æ¯’æ¶²
+457	ambience\nature\water\Bubble_1.wav	æ°”æ³¡
+458	ambience\nature\crystal_1.wav	æ°´æ™¶
+459	run\woodhorsestep_1.wav	æœ¨ç‰›è„šæ­¥ï¼Œç –åœ°
+460	run\woodhorsestep_2.wav	æœ¨ç‰›è„šæ­¥ï¼Œæ°´
+461	run\woodhorsestep_3.wav	æœ¨ç‰›è„šæ­¥ï¼Œè‰åœ°
+462	run\elephant_step_1.wav	å¤§è±¡è„šæ­¥ï¼Œç –å’Œè‰
+463	run\elephant_step_2.wav	å¤§è±¡è„šæ­¥ï¼Œæ°´
+464	run\spider_step_1.wav	èœ˜è››è„šæ­¥ï¼Œç –
+465	run\spider_step_2.wav	èœ˜è››è„šæ­¥ï¼Œæ°´
+466	run\spider_step_3.wav	èœ˜è››è„šæ­¥ï¼Œéç –
+467	ambience\nature\animal\xiniu.wav	çŠ€ç‰›å«å£°
+468	ambience\nature\animal\elephant.wav	å¤§è±¡å«å£°
+469	ambience\nature\bird\tuoniao.wav	é¸µé¸Ÿå«
+470	run\tuoniao_step_1.wav	é¸µé¸Ÿè„šæ­¥ ç –
+471	run\tuoniao_step_2.wav	é¸µé¸Ÿè„šæ­¥ éç –
+472	run\tuoniao_step_3.wav	é¸µé¸Ÿè„šæ­¥ æ°´
+473	ambience\nature\animal\river_horse.wav	æ²³é©¬å«
+474	ambience\nature\animal\carriage.wav	é©¬è½¦
+475	ambience\nature\animal\horse_2.wav	é£é©¬
+476	ambience\nature\animal\dance_lion.wav	èˆç‹®
+477	run\carriage_step_1.wav	é©¬è½¦è„šæ­¥ ç –
+478	run\carriage_step_2.wav	é©¬è½¦è„šæ­¥ éç –
+479	run\carriage_step_3.wav	é©¬è½¦è„šæ­¥ æ°´
+480	run\flyhorse_step_1.wav	å¤©é©¬è„šæ­¥ ç –
+481	run\flyhorse_step_2.wav	å¤©é©¬è„šæ­¥ éç –
+482	run\flyhorse_step_3.wav	å¤©é©¬è„šæ­¥ æ°´
+483	run\rabbit_step_1.wav	å…”å­è„šæ­¥ ç –
+484	run\rabbit_step_2.wav	å…”å­è„šæ­¥ éç –
+485	run\rabbit_step_3.wav	å…”å­è„šæ­¥ æ°´
+486	run\deer_step_1.wav	é©¯é¹¿è„šæ­¥ ç –
+487	run\deer_step_2.wav	é©¯é¹¿è„šæ­¥ éç –
+488	run\deer_step_3.wav	é©¯é¹¿è„šæ­¥ æ°´
+489	run\wushi_step_1.wav	èˆç‹®è„šæ­¥ ç –
+490	run\wushi_step_2.wav	èˆç‹®è„šæ­¥ éç –
+491	run\wushi_step_3.wav	èˆç‹®è„šæ­¥ æ°´
+492	ambience\nature\water\rain_middle_2.wav	ä¸‹é›¨å¤©æ°”
+493	ambience\nature\water\rain_thunder_2.wav	é›·é›¨å¤©æ°”
+494	music\yanziwu.mp3	ç‡•å­åèƒŒæ™¯éŸ³ä¹
+495	ambience\nature\bird\wing_3.wav	å¤§é¸Ÿæ‰‡åŠ¨ç¿…è†€3
+496	interface\kuaihuosan_end_air.wav	å¹¸è¿è½®ç›˜å¼€åˆ°ç©ºæ°”çš„éŸ³æ•ˆ
+497	interface\kuaihuosan_end_common.wav	å¹¸è¿è½®ç›˜å¼€åˆ°æ™®é€šå¥–å“çš„éŸ³æ•ˆ
+498	interface\kuaihuosan_end_kuaihuosan.wav	å¹¸è¿è½®ç›˜å¼€åˆ°å¤§å¥–çš„éŸ³æ•ˆ
+499	interface\kuaihuosan_start.wav	å¹¸è¿è½®ç›˜ç‚¹å‡»å¤´åƒæ’­æ”¾çš„æ€¥ä¿ƒéŸ³æ•ˆ
+500	music\huoyanshan.mp3	ç«ç„°å±±èƒŒæ™¯éŸ³ä¹
+501	music\gaochang.mp3	é«˜æ˜ŒèƒŒæ™¯éŸ³ä¹
+502	ambience\society\bianpao_single.wav	å•ä¸ªé­ç‚®éŸ³æ•ˆ
+503	ambience\society\bianpao_several.wav	ä¸€ä¸²é­ç‚®éŸ³æ•ˆ
+504	music\talimu.mp3	å¡”é‡Œæœ¨èƒŒæ™¯éŸ³ä¹
+505	music\loulan.mp3	æ¥¼å…°èƒŒæ™¯éŸ³ä¹
+506	music\bangzhan.mp3	å¸®æˆ˜èƒŒæ™¯éŸ³ä¹
 801	Skills\Weapon\fan_hit_1.wav	
 802	Skills\Weapon\fan_hit_2.wav	
 803	Skills\Weapon\fan_swing_1.wav	
@@ -493,11 +493,11 @@ INT	STRING	STRING
 821	Skills\Weapon\defence_4.wav	
 822	Skills\Weapon\stick_swing_1.wav	
 823	Skills\Weapon\stick_hit_1.wav	
-824	¼¼ÄÜÒôĞ§.wav	
+824	æŠ€èƒ½éŸ³æ•ˆ.wav	
 825	Skills\Weapon\sword_swing_1.wav	
-826	½Å²½.wav	
-827	ÄĞ°¤´ò½ĞÉù1.wav	
-828	ÄĞ°¤´ò½ĞÉù2.wav	
+826	è„šæ­¥.wav	
+827	ç”·æŒ¨æ‰“å«å£°1.wav	
+828	ç”·æŒ¨æ‰“å«å£°2.wav	
 829	Skills\Weapon\light_weapon_swing_2.wav	
 830	Skills\Weapon\light_weapon_swing_1.wav	
 831	Skills\Weapon\fist_hit_middle_2.wav	
@@ -508,15 +508,15 @@ INT	STRING	STRING
 836	Skills\Weapon\sword_hit_middle_2.wav	
 837	Skills\Weapon\heavy_weapon_swing_1.wav	
 838	Character\Npc\tiger_dead.wav	
-839	±ª×Ó×¦»÷.wav	
+839	è±¹å­çˆªå‡».wav	
 840	Character\Npc\male_hit_3.wav	
-841	¹¥»÷1.wav	
-842	¹¥»÷2.wav	
-843	Á¬Ğø¹¥»÷.wav	
-844	ÊÜ»÷1.wav	
-845	ÊÜ»÷2.wav	
-846	ÔÆÄ¸Ê¯ÈË¹¥»÷2.wav	
-847	ÔÆÄ¸Ê¯ÈËËÀÍö.wav	
+841	æ”»å‡»1.wav	
+842	æ”»å‡»2.wav	
+843	è¿ç»­æ”»å‡».wav	
+844	å—å‡»1.wav	
+845	å—å‡»2.wav	
+846	äº‘æ¯çŸ³äººæ”»å‡»2.wav	
+847	äº‘æ¯çŸ³äººæ­»äº¡.wav	
 848	Skills\Weapon\stick_hit_ground.wav	
 849	Skills\Weapon\light_weapon_swing_4.wav	
 850	Skills\Weapon\light_weapon_swing_5.wav	
@@ -538,19 +538,19 @@ INT	STRING	STRING
 866	Skills\Weapon\light_weapon_swing_7.wav	
 867	Skills\Weapon\light_weapon_swing_8.wav	
 868	Skills\Weapon\light_weapon_swing_9.wav	
-869	Skills\Xx\Xx_À¶É°ÊÖ_¼¯Æø.wav	
-870	Skills\Xx\Xx_À¶É°ÊÖ_·¢ÕĞ.wav	
-871	Skills\Xx\Xx_À¶É°ÊÖ_»÷ÖĞ.wav	
-872	Skills\Xy\Xy_ÂäÓ¢½£_¼¯Æø.wav	
-873	Skills\Xy\Xy_ÂäÓ¢½£_·¢ÕĞ.wav	
-874	Skills\Wd\Wd_°ËØÔÕÆ_¼¯Æø.wav	
-875	Skills\Wd\Wd_°ËØÔÕÆ_·¢ÕĞ.wav	
-876	Skills\Em\Em_õõ²õ°İÔÂ_¼¯Æø.wav	
-877	Skills\Em\Em_õõ²õ°İÔÂ_·¢ÕĞ.wav	
-878	Skills\Dl\Dl_ÕıÑôÊÖ_¼¯Æø.wav	
-879	Skills\Dl\Dl_ÕıÑôÊÖ_·¢ÕĞ_1.wav	
-880	Skills\Wd\Wd_°ËØÔÕÆ_»÷ÖĞ.wav	
-881	Skills\Em\Em_õõ²õ°İÔÂ_»÷ÖĞ.wav	
+869	Skills\Xx\Xx_è“ç ‚æ‰‹_é›†æ°”.wav	
+870	Skills\Xx\Xx_è“ç ‚æ‰‹_å‘æ‹›.wav	
+871	Skills\Xx\Xx_è“ç ‚æ‰‹_å‡»ä¸­.wav	
+872	Skills\Xy\Xy_è½è‹±å‰‘_é›†æ°”.wav	
+873	Skills\Xy\Xy_è½è‹±å‰‘_å‘æ‹›.wav	
+874	Skills\Wd\Wd_å…«å¦æŒ_é›†æ°”.wav	
+875	Skills\Wd\Wd_å…«å¦æŒ_å‘æ‹›.wav	
+876	Skills\Em\Em_è²‚è‰æ‹œæœˆ_é›†æ°”.wav	
+877	Skills\Em\Em_è²‚è‰æ‹œæœˆ_å‘æ‹›.wav	
+878	Skills\Dl\Dl_æ­£é˜³æ‰‹_é›†æ°”.wav	
+879	Skills\Dl\Dl_æ­£é˜³æ‰‹_å‘æ‹›_1.wav	
+880	Skills\Wd\Wd_å…«å¦æŒ_å‡»ä¸­.wav	
+881	Skills\Em\Em_è²‚è‰æ‹œæœˆ_å‡»ä¸­.wav	
 882	Skills\Weapon\light_weapon_swing_10.wav	
 883	Skills\Weapon\light_weapon_swing_11.wav	
 884	Skills\Weapon\light_weapon_swing_12.wav	
@@ -559,13 +559,13 @@ INT	STRING	STRING
 887	Skills\Weapon\sword_hit_heavy_3.wav	
 888	Skills\Weapon\fist_hit_heavy_2.wav	
 889	Skills\Weapon\fist_hit_middle_2_late.wav	
-890	Skills\Mj\Mj_Å­·¢³å¹Ú.wav	
-891	Skills\Mj\Mj_Å­·¢³å¹Ú_ÄĞ.wav	
-892	Skills\Mj\Mj_»ğÉÕ³à±Ú.wav	
-893	Skills\Gb\Gb_¿ºÁúÓĞ»Ú_2.wav	
-894	Skills\Wd\Wd_Èı»·Ì×ÔÂ.wav	
-895	Skills\Wd\Wd_ÌìÂí·ÉÆÙ_»÷ÖĞ.wav	
-896	Skills\Mj\Mj_ÑªÕ½°Ë·½_³ÖĞøĞ§¹û.wav	
+890	Skills\Mj\Mj_æ€’å‘å†²å† .wav	
+891	Skills\Mj\Mj_æ€’å‘å†²å† _ç”·.wav	
+892	Skills\Mj\Mj_ç«çƒ§èµ¤å£.wav	
+893	Skills\Gb\Gb_äº¢é¾™æœ‰æ‚”_2.wav	
+894	Skills\Wd\Wd_ä¸‰ç¯å¥—æœˆ.wav	
+895	Skills\Wd\Wd_å¤©é©¬é£ç€‘_å‡»ä¸­.wav	
+896	Skills\Mj\Mj_è¡€æˆ˜å…«æ–¹_æŒç»­æ•ˆæœ.wav	
 897	Skills\Common\explosion_1.wav	
 898	Skills\Common\snow_1.wav	
 899	Skills\Common\fire_charge_1.wav	
@@ -579,18 +579,18 @@ INT	STRING	STRING
 907	Skills\Common\blizzard_1.wav	
 908	Skills\Common\fire_explode_2.wav	
 909	Skills\Common\electric_jiqi.wav	
-910	Skills\Common\ice_explode_1.wav	±ùµ¯»÷ÖĞÒôĞ§
-911	Skills\Common\poison_3.wav	¶¾»÷ÖĞ3
-912	Skills\Common\poison_4.wav	¶¾»÷ÖĞ4
+910	Skills\Common\ice_explode_1.wav	å†°å¼¹å‡»ä¸­éŸ³æ•ˆ
+911	Skills\Common\poison_3.wav	æ¯’å‡»ä¸­3
+912	Skills\Common\poison_4.wav	æ¯’å‡»ä¸­4
 913	Skills\Common\explosion_2.wav	
 914	Skills\Common\fog.wav	
-915	Skills\Common\fear_1.wav	±»¿Ö¾å
+915	Skills\Common\fear_1.wav	è¢«ææƒ§
 916	Skills\Common\rock_huge_1.wav	
 917	Skills\Common\whoosh_1.wav	
 918	Skills\Common\explosion_3.wav	
 919	Skills\Weapon\hammer_hit_ground_1.wav	
-920	Skills\Common\Zyj_±¬Õ¨À×µç.wav	
-921	nianshousiwang.wav	ÄêÊŞËÀÍö
+920	Skills\Common\Zyj_çˆ†ç‚¸é›·ç”µ.wav	
+921	nianshousiwang.wav	å¹´å…½æ­»äº¡
 2001	Character\Npc\zhaotianshi_xiuxian.wav	
 2002	Character\Npc\yiqimuren_daodi.wav	
 2003	Character\Npc\yiqimuren_jifei.wav	
@@ -610,30 +610,30 @@ INT	STRING	STRING
 2017	Character\Npc\body_fall_6.wav	
 2018	Character\Npc\zombine_1.wav	
 2019	Character\Npc\chess_boss_1.wav	
-2020	ambience\nature\animal\shuhe01.wav	ÊøºÓ¹ÅÕòÒôĞ§
-2021	ambience\nature\animal\shuhe02.wav	ÊøºÓ¹ÅÕòÒôĞ§
-2022	ambience\nature\animal\shuhe03.wav	ÊøºÓ¹ÅÕòÒôĞ§
-2023	Character\Npc\shuhe04.wav	ÊøºÓ¹ÅÕòÒôĞ§
-2024	Character\Npc\shuhe05.wav	ÊøºÓ¹ÅÕòÒôĞ§
-2025	Skills\Common\±ù±©.wav	çÎç¿·å×¨ÓÃ¼¼ÄÜ
-2026	Skills\Common\³ÖĞø¼Ó×´Ì¬15Ãë.wav	çÎç¿·å×¨ÓÃ¼¼ÄÜ
-2027	Skills\Common\½£Îè.wav	çÎç¿·å×¨ÓÃ¼¼ÄÜ
-2028	Skills\Common\½ğ¼×Ã÷¾µ.wav	çÎç¿·å×¨ÓÃ¼¼ÄÜ
-2029	Skills\Common\ÂÌ²¨ÏãÂ¶.wav	çÎç¿·å×¨ÓÃ¼¼ÄÜ
-2030	Skills\Common\ÄÄÀï×ß.wav	çÎç¿·å×¨ÓÃ¼¼ÄÜ
-2031	Skills\Common\Å£Ã«¶¾Õë.wav	çÎç¿·å×¨ÓÃ¼¼ÄÜ
-2032	Skills\Common\Ğ¡ÎŞÏà¹¦.wav	çÎç¿·å×¨ÓÃ¼¼ÄÜ
-2033	Skills\Common\ÑÌ»¨¡¢°µÀ×.wav	çÎç¿·å×¨ÓÃ¼¼ÄÜ
-2034	music\shuhe.mp3	ÊøºÓ¹ÅÕò±³¾°ÒôÀÖ
-2035	ambience\nature\water\Óê.wav	ÊøºÓ¹ÅÕòÓêÌìÊ±ÒôĞ§
-2036	ambience\nature\mix\·ç.wav	ÊøºÓ¹ÅÕò¹Î·çÊ±ÒôĞ§
-2037	music\tianshan.mp3	ÌìÉ½ÃÅÅÉÒôÀÖ
-2038	music\dawan.mp3	´óÍğ±³¾°ÒôÀÖ
-2039	interface\lingdang.wav	ÁåîõÉù
-2040	interface\µ¹Ëú.wav	°ïÕ½½¨Öşµ¹ËúÉù
-2041	Skills\Wd\Wd_ÏÉ·çµÀ¹Ç.wav	
-2042	Skills\Mj\Mj_·é»ğÁ¬³Ç.wav	
-2043	Skills\Dl\ÉÌÑô½£_·¢.wav	
-2044	Skills\Xx\Xx_ÎüĞÇÊÉÔÂ_·¢.wav	
-2045	Skills\Xx\Xx_ÎüĞÇÊÉÔÂ_»è.wav	
-2046	Skills\Ts\Ts_ÌìµØÃ÷Ãğ_·¢.wav	
+2020	ambience\nature\animal\shuhe01.wav	æŸæ²³å¤é•‡éŸ³æ•ˆ
+2021	ambience\nature\animal\shuhe02.wav	æŸæ²³å¤é•‡éŸ³æ•ˆ
+2022	ambience\nature\animal\shuhe03.wav	æŸæ²³å¤é•‡éŸ³æ•ˆ
+2023	Character\Npc\shuhe04.wav	æŸæ²³å¤é•‡éŸ³æ•ˆ
+2024	Character\Npc\shuhe05.wav	æŸæ²³å¤é•‡éŸ³æ•ˆ
+2025	Skills\Common\å†°æš´.wav	ç¼¥ç¼ˆå³°ä¸“ç”¨æŠ€èƒ½
+2026	Skills\Common\æŒç»­åŠ çŠ¶æ€15ç§’.wav	ç¼¥ç¼ˆå³°ä¸“ç”¨æŠ€èƒ½
+2027	Skills\Common\å‰‘èˆ.wav	ç¼¥ç¼ˆå³°ä¸“ç”¨æŠ€èƒ½
+2028	Skills\Common\é‡‘ç”²æ˜é•œ.wav	ç¼¥ç¼ˆå³°ä¸“ç”¨æŠ€èƒ½
+2029	Skills\Common\ç»¿æ³¢é¦™éœ².wav	ç¼¥ç¼ˆå³°ä¸“ç”¨æŠ€èƒ½
+2030	Skills\Common\å“ªé‡Œèµ°.wav	ç¼¥ç¼ˆå³°ä¸“ç”¨æŠ€èƒ½
+2031	Skills\Common\ç‰›æ¯›æ¯’é’ˆ.wav	ç¼¥ç¼ˆå³°ä¸“ç”¨æŠ€èƒ½
+2032	Skills\Common\å°æ— ç›¸åŠŸ.wav	ç¼¥ç¼ˆå³°ä¸“ç”¨æŠ€èƒ½
+2033	Skills\Common\çƒŸèŠ±ã€æš—é›·.wav	ç¼¥ç¼ˆå³°ä¸“ç”¨æŠ€èƒ½
+2034	music\shuhe.mp3	æŸæ²³å¤é•‡èƒŒæ™¯éŸ³ä¹
+2035	ambience\nature\water\é›¨.wav	æŸæ²³å¤é•‡é›¨å¤©æ—¶éŸ³æ•ˆ
+2036	ambience\nature\mix\é£.wav	æŸæ²³å¤é•‡åˆ®é£æ—¶éŸ³æ•ˆ
+2037	music\tianshan.mp3	å¤©å±±é—¨æ´¾éŸ³ä¹
+2038	music\dawan.mp3	å¤§å®›èƒŒæ™¯éŸ³ä¹
+2039	interface\lingdang.wav	é“ƒé“›å£°
+2040	interface\å€’å¡Œ.wav	å¸®æˆ˜å»ºç­‘å€’å¡Œå£°
+2041	Skills\Wd\Wd_ä»™é£é“éª¨.wav	
+2042	Skills\Mj\Mj_çƒ½ç«è¿åŸ.wav	
+2043	Skills\Dl\å•†é˜³å‰‘_å‘.wav	
+2044	Skills\Xx\Xx_å¸æ˜Ÿå™¬æœˆ_å‘.wav	
+2045	Skills\Xx\Xx_å¸æ˜Ÿå™¬æœˆ_æ˜.wav	
+2046	Skills\Ts\Ts_å¤©åœ°æ˜ç­_å‘.wav	

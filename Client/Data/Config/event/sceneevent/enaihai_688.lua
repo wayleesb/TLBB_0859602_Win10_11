@@ -2,17 +2,17 @@
 x212114_g_ScriptId = 212114
 x212114_g_MissionId = 688
 x212114_g_PreMissionId = 687
-x212114_g_Name	="Ò¶Á÷·²"
+x212114_g_Name	="å¶æµå‡¡"
 x212114_g_MissionKind = 45
 x212114_g_MissionLevel = 82
 x212114_g_IfMissionElite = 0
-x212114_g_MissionName="µÚ¶ş¿éÑª¼£"
+x212114_g_MissionName="ç¬¬äºŒå—è¡€è¿¹"
 x212114_g_MissionInfo="#{Mis_S_Nanhai_1010193}"
-x212114_g_MissionTarget="  °Ñ#YÑªÒÂ#WËÍ¸ø#GÄÏº£½£ÅÉ#WµÄ#RÒ¶Á÷·²#W#{_INFOAIM115,58,34,Ò¶Á÷·²}¡£"
-x212114_g_MissionContinue="  ÄãÕÒÎÒÓĞÊ²Ã´ÊÂÇéÂğ£¿"
-x212114_g_MissionComplete="  Õâ¡­¡­Õâ¼şÑªÒÂ¡­¡­ºÃÏñÊÇÒ»¼şÄÏÚ¯°×ÃçÈËµÄÒÂ·ş¡£"
+x212114_g_MissionTarget="  æŠŠ#Yè¡€è¡£#Wé€ç»™#Gå—æµ·å‰‘æ´¾#Wçš„#Rå¶æµå‡¡#W#{_INFOAIM115,58,34,å¶æµå‡¡}ã€‚"
+x212114_g_MissionContinue="  ä½ æ‰¾æˆ‘æœ‰ä»€ä¹ˆäº‹æƒ…å—ï¼Ÿ"
+x212114_g_MissionComplete="  è¿™â€¦â€¦è¿™ä»¶è¡€è¡£â€¦â€¦å¥½åƒæ˜¯ä¸€ä»¶å—è¯ç™½è‹—äººçš„è¡£æœã€‚"
 x212114_g_MoneyBonus=36900
 x212114_g_exp=35000
-x212114_g_Custom	= { {id="ÒÑµÃµ½ÑªÒÂ",num=1} }
+x212114_g_Custom	= { {id="å·²å¾—åˆ°è¡€è¡£",num=1} }
 x212114_g_IsMissionOkFail = 0
 --MisDescEnd

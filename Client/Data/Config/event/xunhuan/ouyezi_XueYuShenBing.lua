@@ -3,20 +3,20 @@ x500503_g_ScriptId	= 500503
 x500503_g_Position_X=266.2833
 x500503_g_Position_Z=140.0340
 x500503_g_SceneID=1
-x500503_g_AccomplishNPC_Name="Å·Ò±×Ó"
+x500503_g_AccomplishNPC_Name="æ¬§å†¶å­"
 x500503_g_MissionId			= 420
 x500503_g_MissionIdNext	= 420
-x500503_g_Name			= "Å·Ò±×Ó"
+x500503_g_Name			= "æ¬§å†¶å­"
 x500503_g_MissionKind			= 55
 x500503_g_MissionLevel		= 10000
 x500503_g_IfMissionElite	= 0
-x500503_g_IsMissionOkFail	= 0		--±äÁ¿µÄµÚ0Î»
-x500503_g_RandomCustom = {{ id = "ÒÑÉ±ËÀ¹ÖÎï", numNeeded = 3, numComplete = 1 }}
-x500503_g_MissionName			= "ÑªÔ¡Éñ±ø"
-x500503_g_MissionInfo			= "ÉñÆ÷ÖıÔì"
+x500503_g_IsMissionOkFail	= 0		--å˜é‡çš„ç¬¬0ä½
+x500503_g_RandomCustom = {{ id = "å·²æ€æ­»æ€ªç‰©", numNeeded = 3, numComplete = 1 }}
+x500503_g_MissionName			= "è¡€æµ´ç¥å…µ"
+x500503_g_MissionInfo			= "ç¥å™¨é“¸é€ "
 x500503_g_MissionTarget		= "#{XYSB_20070928_010}"
 x500503_g_ContinueInfo		= "#{XYSB_20070928_009}"
-x500503_g_MissionComplete	= "ÎÒ½»¸øÄãµÄÊÂÇéÒÑ¾­×öÍêÁËÂğ£¿"
+x500503_g_MissionComplete	= "æˆ‘äº¤ç»™ä½ çš„äº‹æƒ…å·²ç»åšå®Œäº†å—ï¼Ÿ"
 x500503_g_MaxRound	= 0
 x500503_g_ControlScript		= 001066
 --MisDescEnd

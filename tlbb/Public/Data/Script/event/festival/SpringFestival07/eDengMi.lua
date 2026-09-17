@@ -1,23 +1,23 @@
---2007ÔªÏü½Ú»î¶¯....
---µÆÃÕ....
+--2007å…ƒå®µèŠ‚æ´»åŠ¨....
+--ç¯è°œ....
 
---´ðÌâÈÎÎñ½Å±¾....
+--ç­”é¢˜ä»»åŠ¡è„šæœ¬....
 
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x050043_g_ScriptId = 050043
 
---»î¶¯Ê±¼ä
-x050043_g_StartDayTime = 9039		--»î¶¯¿ªÊ¼Ê±¼ä 2009-02-09
-x050043_g_EndDayTime   = 9048		--»î¶¯½áÊøÊ±¼ä 2008-02-18
+--æ´»åŠ¨æ—¶é—´
+x050043_g_StartDayTime = 9039		--æ´»åŠ¨å¼€å§‹æ—¶é—´ 2009-02-09
+x050043_g_EndDayTime   = 9048		--æ´»åŠ¨ç»“æŸæ—¶é—´ 2008-02-18
 
---´ðÌâ½Å±¾½Å±¾ºÅ
+--ç­”é¢˜è„šæœ¬è„šæœ¬å·
 x050043_g_QuizScriptId = 050042
 
---½±Æ·±í....
+--å¥–å“è¡¨....
 x050043_g_GiftTbl = { 30501154, 30501155, 30501156 }
 
---¾­Ñé±í....
+--ç»éªŒè¡¨....
 x050043_g_ExpTbl = {
 
 	[10]=380,[11]=460,[12]=548,[13]=643,[14]=745,
@@ -48,25 +48,25 @@ x050043_g_ExpTbl = {
 
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êý
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
-function x050043_OnDefaultEvent( sceneId, selfId, targetId )	--µã»÷¸ÃÈÎÎñºóÖ´ÐÐ´Ë½Å±¾
+function x050043_OnDefaultEvent( sceneId, selfId, targetId )	--ç‚¹å‡»è¯¥ä»»åŠ¡åŽæ‰§è¡Œæ­¤è„šæœ¬
 
 	BeginEvent( sceneId )
 
 		local npcName = LuaFnGetName( sceneId, targetId )
-		if npcName == "·ç»¨Ñ©ÔÂµÆÁý" then
+		if npcName == "é£ŽèŠ±é›ªæœˆç¯ç¬¼" then
 			AddText( sceneId, "#{YXDM_20080118_01}" )
-		elseif npcName == "ÂåÉñÄµµ¤µÆÁý" then
+		elseif npcName == "æ´›ç¥žç‰¡ä¸¹ç¯ç¬¼" then
 			AddText( sceneId, "#{YXDM_20080118_02}" )
-		elseif npcName == "ÇúÔº·çºÉµÆÁý" then
+		elseif npcName == "æ›²é™¢é£Žè·ç¯ç¬¼" then
 			AddText( sceneId, "#{YXDM_20080118_03}" )
 		end
 
 		if 1 == x050043_CheckRightTime() then
-			AddNumText(sceneId,x050043_g_ScriptId,"ÎÒÒª´ðµÆÃÕ",6,100)
+			AddNumText(sceneId,x050043_g_ScriptId,"æˆ‘è¦ç­”ç¯è°œ",6,100)
 		end
-		AddNumText(sceneId,x050043_g_ScriptId,"¹ØÓÚÔªÏüµÆÃÕ ",11,101)
+		AddNumText(sceneId,x050043_g_ScriptId,"å…³äºŽå…ƒå®µç¯è°œ ",11,101)
 
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, selfId, targetId )
@@ -74,7 +74,7 @@ function x050043_OnDefaultEvent( sceneId, selfId, targetId )	--µã»÷¸ÃÈÎÎñºóÖ´ÐÐ´
 end
 
 --**********************************
---ÊÂ¼þÁÐ±íÑ¡ÖÐÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x050043_OnEventRequest( sceneId, selfId, targetId, eventId )
 	local NumText = GetNumText()
@@ -92,11 +92,11 @@ function x050043_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---ÏÔÊ¾Ï²´ÓÌì½µ´ðÌâ½çÃæ
+--æ˜¾ç¤ºå–œä»Žå¤©é™ç­”é¢˜ç•Œé¢
 --**********************************
 function x050043_ShowQuiz( sceneId, selfId, targetId )
 
-	--¼ì²âÊÇ·ñ¿ÉÒÔ´ðÌâ....
+	--æ£€æµ‹æ˜¯å¦å¯ä»¥ç­”é¢˜....
 	local ret, msg = x050043_CheckCanDoQuiz( sceneId, selfId )
 	if 0 == ret then
 		BeginEvent( sceneId )
@@ -106,18 +106,18 @@ function x050043_ShowQuiz( sceneId, selfId, targetId )
 		return
 	end
 
-	--´ò¿ªÏ²´ÓÌì½µ´ðÌâ½çÃæ....
+	--æ‰“å¼€å–œä»Žå¤©é™ç­”é¢˜ç•Œé¢....
 	CallScriptFunction( x050043_g_QuizScriptId, "ShowQuizUI",sceneId, selfId, targetId )
 
 end
 
 --**********************************
---¼ì²âÍæ¼Òµ±Ç°ÊÇ·ñ¿ÉÒÔ×ö´ðÌâ
+--æ£€æµ‹çŽ©å®¶å½“å‰æ˜¯å¦å¯ä»¥åšç­”é¢˜
 --**********************************
 function x050043_CheckCanDoQuiz( sceneId, selfId )
 
 	if 1 ~= x050043_CheckRightTime() then
-		return 0, "µ±Ç°»î¶¯Ê±¼äÒÑ¹ý£¬¸ÐÐ»Äú²ÎÓëµÆÃÕ»î¶¯"
+		return 0, "å½“å‰æ´»åŠ¨æ—¶é—´å·²è¿‡ï¼Œæ„Ÿè°¢æ‚¨å‚ä¸Žç¯è°œæ´»åŠ¨"
 	end
 
 	local lastDayTime = GetMissionData( sceneId, selfId, MD_SPRING07DENGMI_DAYTIME )
@@ -140,7 +140,7 @@ function x050043_CheckCanDoQuiz( sceneId, selfId )
 end
 
 --**********************************
---¼ì²âµ±Ç°ÊÇ·ñÊÇ»î¶¯Ê±¼ä
+--æ£€æµ‹å½“å‰æ˜¯å¦æ˜¯æ´»åŠ¨æ—¶é—´
 --**********************************
 function x050043_CheckRightTime()
 
@@ -154,26 +154,26 @@ function x050043_CheckRightTime()
 end
 
 --**********************************
---Íæ¼Ò´ð¶ÔËùÓÐÌâÄ¿Ê±»Øµ÷´Ëº¯Êý
+--çŽ©å®¶ç­”å¯¹æ‰€æœ‰é¢˜ç›®æ—¶å›žè°ƒæ­¤å‡½æ•°
 --**********************************
 function x050043_OnPlayerFinishQuiz( sceneId, selfId )
 
-	--°²È«¼ì²â....
+	--å®‰å…¨æ£€æµ‹....
 	local ret, msg = x050043_CheckCanDoQuiz( sceneId, selfId )
 	if 0 == ret then
 		return
 	end
 
-	--¼ÇÂ¼½ñÌìÒÑ¾­×ö¹ý´ðÌâÈÎÎñÁË....
+	--è®°å½•ä»Šå¤©å·²ç»åšè¿‡ç­”é¢˜ä»»åŠ¡äº†....
 	local CurDayTime = GetDayTime()
 	SetMissionData( sceneId, selfId, MD_SPRING07DENGMI_DAYTIME, CurDayTime )
 
-	--¸ø±äÉíµÀ¾ß....
+	--ç»™å˜èº«é“å…·....
 	local idx = random( getn(x050043_g_GiftTbl) )
 	local ItemId = x050043_g_GiftTbl[idx]
 	TryRecieveItem( sceneId, selfId, ItemId, QUALITY_MUST_BE_CHANGE )
 
-	--¸ø¾­Ñé....
+	--ç»™ç»éªŒ....
 	local CurLevel = LuaFnGetLevel( sceneId, selfId )
 	local CurExp = x050043_g_ExpTbl[CurLevel]
 	if CurExp and CurExp > 0 then
@@ -181,7 +181,7 @@ function x050043_OnPlayerFinishQuiz( sceneId, selfId )
 		LuaFnAddExp( sceneId, selfId, CurExp)
 	end
 	
-	--ÈÕÖ¾Í³¼Æ
+	--æ—¥å¿—ç»Ÿè®¡
 	local guid = LuaFnObjId2Guid(sceneId, selfId)
 	local log = format("sceneId=%d", sceneId)
 	ScriptGlobal_AuditGeneralLog(LUAAUDIT_DENGMI_END, guid, log)

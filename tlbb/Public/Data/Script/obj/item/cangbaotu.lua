@@ -1,6 +1,6 @@
---Ê¹ÓÃ²Ø±¦Í¼
+--ä½¿ç”¨è—å®å›¾
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x300022_g_scriptId = 300022
 
 x300022_g_ItemId = 30000000
@@ -27,15 +27,15 @@ x300022_g_MissionIndex80 = 49
 x300022_g_MissionIndex90 = 50
 
 --g_ItemTable = {
---							{sn=30001001, name="ĞĞÑªÉ¢"},
---							{sn=30002007, name="ÏÉµ¤ÇïÔÂ"},
---							{sn=30007003, name="ÍõÄ¸ÏÉµ¤"},
---							{sn=30101017, name="½È×Ó"},
---							{sn=30402016, name="¸ß¼¶¼ÓËÙ¼¼ÄÜÊé"},
---							{sn=30505004, name="ÑÌ»¨"},
---							{sn=30505001, name="ËÙĞĞĞ¬"},
---							{sn=30701009, name="×øÆï£º°×»¢"},
---							{sn=30701007, name="×øÆï£ºÂ¹"}
+--							{sn=30001001, name="è¡Œè¡€æ•£"},
+--							{sn=30002007, name="ä»™ä¸¹ç§‹æœˆ"},
+--							{sn=30007003, name="ç‹æ¯ä»™ä¸¹"},
+--							{sn=30101017, name="é¥ºå­"},
+--							{sn=30402016, name="é«˜çº§åŠ é€ŸæŠ€èƒ½ä¹¦"},
+--							{sn=30505004, name="çƒŸèŠ±"},
+--							{sn=30505001, name="é€Ÿè¡Œé‹"},
+--							{sn=30701009, name="åéª‘ï¼šç™½è™"},
+--							{sn=30701007, name="åéª‘ï¼šé¹¿"}
 --							}
 
 
@@ -46,24 +46,24 @@ x300022_g_CorpseMonsterPosTable = {
 													}
 
 x300022_g_SceneMapDefine = {	
-										{sceneId=18,	sceneName="ÑãÄÏ",	CorpseMonsterId=3512},
-										{sceneId=19,	sceneName="Ñã±±",	CorpseMonsterId=3513},
-										{sceneId=20,	sceneName="²İÔ­",	CorpseMonsterId=3515},
-										{sceneId=21,	sceneName="ÁÉÎ÷",	CorpseMonsterId=3516},
-										{sceneId=22,	sceneName="³¤°×É½",	CorpseMonsterId=3518},
-										{sceneId=23,	sceneName="»ÆÁú¸®",	CorpseMonsterId=3519},
-										{sceneId=24,	sceneName="¶ıº£",	CorpseMonsterId=3511},
-										{sceneId=25,	sceneName="²ÔÉ½",	CorpseMonsterId=3513},
-										{sceneId=26,	sceneName="Ê¯ÁÖ",	CorpseMonsterId=3514},
-										{sceneId=27,	sceneName="ÓñÏª",	CorpseMonsterId=3516},
-										{sceneId=28,	sceneName="ÄÏÚ¯",	CorpseMonsterId=3517},
-										{sceneId=29,	sceneName="Ãç½®",	CorpseMonsterId=3518},
-										{sceneId=30,	sceneName="Î÷ºş",	CorpseMonsterId=3511},
-										{sceneId=31,	sceneName="ÁúÈª",	CorpseMonsterId=3512},
-										{sceneId=32,	sceneName="ÎäÒÄ",	CorpseMonsterId=3514},
-										{sceneId=33,	sceneName="Ã·Áë",	CorpseMonsterId=3515},
-										{sceneId=34,	sceneName="ÄÏº£",	CorpseMonsterId=3517},
-										{sceneId=35,	sceneName="ÇíÖİ",	CorpseMonsterId=3518},
+										{sceneId=18,	sceneName="é›å—",	CorpseMonsterId=3512},
+										{sceneId=19,	sceneName="é›åŒ—",	CorpseMonsterId=3513},
+										{sceneId=20,	sceneName="è‰åŸ",	CorpseMonsterId=3515},
+										{sceneId=21,	sceneName="è¾½è¥¿",	CorpseMonsterId=3516},
+										{sceneId=22,	sceneName="é•¿ç™½å±±",	CorpseMonsterId=3518},
+										{sceneId=23,	sceneName="é»„é¾™åºœ",	CorpseMonsterId=3519},
+										{sceneId=24,	sceneName="æ´±æµ·",	CorpseMonsterId=3511},
+										{sceneId=25,	sceneName="è‹å±±",	CorpseMonsterId=3513},
+										{sceneId=26,	sceneName="çŸ³æ—",	CorpseMonsterId=3514},
+										{sceneId=27,	sceneName="ç‰æºª",	CorpseMonsterId=3516},
+										{sceneId=28,	sceneName="å—è¯",	CorpseMonsterId=3517},
+										{sceneId=29,	sceneName="è‹—ç–†",	CorpseMonsterId=3518},
+										{sceneId=30,	sceneName="è¥¿æ¹–",	CorpseMonsterId=3511},
+										{sceneId=31,	sceneName="é¾™æ³‰",	CorpseMonsterId=3512},
+										{sceneId=32,	sceneName="æ­¦å¤·",	CorpseMonsterId=3514},
+										{sceneId=33,	sceneName="æ¢…å²­",	CorpseMonsterId=3515},
+										{sceneId=34,	sceneName="å—æµ·",	CorpseMonsterId=3517},
+										{sceneId=35,	sceneName="ç¼å·",	CorpseMonsterId=3518},
 									}
 								 
 x300022_g_GhoulMonsterTable = {
@@ -75,7 +75,7 @@ x300022_g_GhoulMonsterTable = {
 											}									 
 									 
 --**********************************
---µÃµ½itemµÄ²ÎÊıĞÅÏ¢
+--å¾—åˆ°itemçš„å‚æ•°ä¿¡æ¯
 --**********************************
 function x300022_GetItemParam(sceneId, selfId, BagPos)							
 	--local BagPos = GetBagPosByItemSn(sceneId, selfId, x300022_g_ItemId)
@@ -91,12 +91,12 @@ function x300022_GetItemParam(sceneId, selfId, BagPos)
 end
 
 --**********************************
---ÍÚµ½ÒøÁ½ --OK
+--æŒ–åˆ°é“¶ä¸¤ --OK
 --**********************************
 function x300022_DiscoverMoney(sceneId, selfId)
 		--PrintStr("DiscoverMoney...")
 		local Bonus = random(x300022_g_maxValue-x300022_g_minValue) + x300022_g_minValue
-		local str = "ÄãÍÚµ½#{_MONEY" .. tostring(Bonus) .. "}"
+		local str = "ä½ æŒ–åˆ°#{_MONEY" .. tostring(Bonus) .. "}"
 		AddMoney(sceneId, selfId, Bonus)
 		Msg2Player(  sceneId, selfId, str, MSG2PLAYER_PARA )
 		BeginEvent(sceneId)
@@ -106,7 +106,7 @@ function x300022_DiscoverMoney(sceneId, selfId)
 end
 
 --**********************************
---ÓöµÁÄ¹Ôô --OK
+--é‡ç›—å¢“è´¼ --OK
 --**********************************
 function x300022_DiscoverGhoulMonster(sceneId, selfId)
 	local humanLevel = LuaFnGetLevel(sceneId, selfId)
@@ -130,14 +130,14 @@ function x300022_DiscoverGhoulMonster(sceneId, selfId)
 
 		
 	BeginEvent(sceneId)		
-		AddText(sceneId, "Ğ¡ĞÄ! µÁÄ¹Ôô");
+		AddText(sceneId, "å°å¿ƒ! ç›—å¢“è´¼");
 	EndEvent(sceneId)
 	DispatchMissionTips(sceneId,selfId)
 	
 end
 
 --**********************************
---»ñµÃÎïÆ· --OK
+--è·å¾—ç‰©å“ --OK
 --**********************************
 function x300022_DiscoverItem(sceneId, selfId)
 	
@@ -172,13 +172,13 @@ function x300022_DiscoverItem(sceneId, selfId)
 		local canAdd = EndAddItem(sceneId,selfId)
 		
 		if canAdd > 0 then
-			--½±ÀøÍ³¼Æ
+			--å¥–åŠ±ç»Ÿè®¡
 			local itemName;
 			_,itemName,_ = GetItemInfoByItemId(ItemSn)
-			LuaFnAuditItemCreate(sceneId,selfId,1,ItemSn,itemName,"ÍÚ±¦")
+			LuaFnAuditItemCreate(sceneId,selfId,1,ItemSn,itemName,"æŒ–å®")
 
 		AddItemListToHuman(sceneId,selfId)
-		local strText = format("Äã»ñµÃÁË%s", ItemName)
+		local strText = format("ä½ è·å¾—äº†%s", ItemName)
 		
 		BeginEvent(sceneId)
 			AddText(sceneId, strText);
@@ -190,12 +190,12 @@ function x300022_DiscoverItem(sceneId, selfId)
 
 		local _, sceneName = CallScriptFunction(x300022_g_ChengxiongdatuScriptId, "GetScenePosInfo", sceneId,sceneId)
 		ItemName = GetItemTransfer(sceneId,selfId,0)
-		strText = format("#W#{_INFOUSR%s}#PÔÚ#G%s#PÍÚ±¦Ê±ĞÒÔËµÄµÃµ½ÁË#W#{_INFOMSG%s}", PlayName, sceneName, ItemName)
+		strText = format("#W#{_INFOUSR%s}#Påœ¨#G%s#PæŒ–å®æ—¶å¹¸è¿çš„å¾—åˆ°äº†#W#{_INFOMSG%s}", PlayName, sceneName, ItemName)
 		--PrintNum(bBroadCast)
 			BroadMsgByChatPipe(sceneId, selfId, strText, bBroadCast)
 		else
 			BeginEvent(sceneId)
-				AddText(sceneId, "ÄãµÄ±³°üÒÑÂú£¡")
+				AddText(sceneId, "ä½ çš„èƒŒåŒ…å·²æ»¡ï¼")
 			EndEvent()	
 			DispatchMissionTips(sceneId, selfId)
 			return 0
@@ -204,7 +204,7 @@ function x300022_DiscoverItem(sceneId, selfId)
 end
 
 --**********************************
---¸ù¾İ³¡¾°IdµÃ³ö¶ÔÓ¦µÄ¹ÖÎïµÄID
+--æ ¹æ®åœºæ™¯Idå¾—å‡ºå¯¹åº”çš„æ€ªç‰©çš„ID
 --**********************************
 function x300022_GetDataIDbySceneID(sceneId)
 		for i, SceneMapInfo in x300022_g_SceneMapDefine do
@@ -216,14 +216,14 @@ function x300022_GetDataIDbySceneID(sceneId)
 end
 
 --**********************************
---·Å³ö½©Ê¬
+--æ”¾å‡ºåƒµå°¸
 --**********************************
 function x300022_DiscoverCorpseMonster(sceneId, selfId)
 
 		local corpseMonsterId = x300022_GetDataIDbySceneID(sceneId)
 		for i=1, 10 do
 			local _, sceneName, x, z, _ = CallScriptFunction(x300022_g_ChengxiongdatuScriptId, "GetScenePosInfo", sceneId,sceneId)
-			--ÖÁÉÙ±£Ö¤ÔÚÍæ¼ÒÉí±ß³öÏÖÒ»¸ö¶á±¦ÂíÔô
+			--è‡³å°‘ä¿è¯åœ¨ç©å®¶èº«è¾¹å‡ºç°ä¸€ä¸ªå¤ºå®é©¬è´¼
 			if i == 1 then
 				x, z = GetWorldPos(sceneId,selfId)
 				x = x + 2
@@ -233,11 +233,11 @@ function x300022_DiscoverCorpseMonster(sceneId, selfId)
 			local aifile = random(10)
 			local MonsterId = LuaFnCreateMonster(sceneId, corpseMonsterId, x, z, 0, aifile, x300022_g_NpcScriptID)
 			SetCharacterDieTime(sceneId, MonsterId, 60*60000)
-			--ÉèÖÃ¶Ô¹ÖÎªÓÑºÃµÄ Ä¿Ç°ÊÇ0ºÅÊÇÓÑºÃµÄ£¬Èç¹ûÓĞÈË¸Ä±äÁËÏàÓ¦µÄÊÆÁ¦ÉùÍûÄÇÎÒ¾Í²ÒÁË£¡£¡:-(((
+			--è®¾ç½®å¯¹æ€ªä¸ºå‹å¥½çš„ ç›®å‰æ˜¯0å·æ˜¯å‹å¥½çš„ï¼Œå¦‚æœæœ‰äººæ”¹å˜äº†ç›¸åº”çš„åŠ¿åŠ›å£°æœ›é‚£æˆ‘å°±æƒ¨äº†ï¼ï¼:-(((
 			SetUnitReputationID(sceneId, selfId, MonsterId, 0)
 			local  monsterLevel = GetLevel(sceneId, MonsterId)
 			SetLevel(sceneId, MonsterId, monsterLevel+i-1)
-			--Èç¹û¹ÖÎïµÄ×î´óµÈ¼¶³¬¹ıÍæ¼Ò×î´óµÈ¼¶ÉÏÏŞ£¬Ôò¹ÖÎïµÈ¼¶µÈÓÚÍæ¼Ò×î´óµÈ¼¶ÉÏÏŞ
+			--å¦‚æœæ€ªç‰©çš„æœ€å¤§ç­‰çº§è¶…è¿‡ç©å®¶æœ€å¤§ç­‰çº§ä¸Šé™ï¼Œåˆ™æ€ªç‰©ç­‰çº§ç­‰äºç©å®¶æœ€å¤§ç­‰çº§ä¸Šé™
 			local PlayerMaxLevel = GetHumanMaxLevelLimit()
 			if monsterLevel+i-1 > PlayerMaxLevel then
 				SetLevel(sceneId, MonsterId, PlayerMaxLevel)
@@ -245,14 +245,14 @@ function x300022_DiscoverCorpseMonster(sceneId, selfId)
 		end
 		
 		BeginEvent(sceneId)
-			AddText(sceneId, "·Å¶á±¦ÂíÔô");
+			AddText(sceneId, "æ”¾å¤ºå®é©¬è´¼");
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		
 		local _, sceneName = CallScriptFunction(x300022_g_ChengxiongdatuScriptId, "GetScenePosInfo", sceneId,sceneId)
 		
 		local playerName = GetName(sceneId,selfId)
-		local strText = format("#W#{_INFOUSR%s}#PÔÚÍÚ±¦Ê±²»É÷Ğ¹Â©ÏûÏ¢£¬ÔÚ#G%s#PÒıÀ´ÁËÒ»»ï#{_BOSS48}¡£½­ºşÖ¾Ê¿Ö»ÒªÈ¥½ËÃğÂíÔô£¬¾ÍÄÜ»ñµÃÂíÔôµÄ²Ø±¦£¡", 
+		local strText = format("#W#{_INFOUSR%s}#Påœ¨æŒ–å®æ—¶ä¸æ…æ³„æ¼æ¶ˆæ¯ï¼Œåœ¨#G%s#På¼•æ¥äº†ä¸€ä¼™#{_BOSS48}ã€‚æ±Ÿæ¹–å¿—å£«åªè¦å»å‰¿ç­é©¬è´¼ï¼Œå°±èƒ½è·å¾—é©¬è´¼çš„è—å®ï¼", 
 					playerName, sceneName)
 
 		BroadMsgByChatPipe(sceneId, selfId, strText, 4)
@@ -260,18 +260,18 @@ function x300022_DiscoverCorpseMonster(sceneId, selfId)
 end
 
 --**********************************
---µôÈë±¦²Ø
+--æ‰å…¥å®è—
 --**********************************
 function x300022_DiscoverInstance(sceneId, selfId)
 		BeginEvent(sceneId)
-			AddText(sceneId, "µôÈë±¦²Ø");
+			AddText(sceneId, "æ‰å…¥å®è—");
 			CallScriptFunction(x300022_g_DiaorubaozangScriptId, "MakeCopyScene",sceneId, selfId, 0)
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 end
 
 --**********************************
---ÔâÓö»ú¹Ø --OK
+--é­é‡æœºå…³ --OK
 --**********************************
 function x300022_DiscoverTrap(sceneId, selfId)
 		local nHp = GetHp(sceneId, selfId)
@@ -290,63 +290,63 @@ function x300022_DiscoverTrap(sceneId, selfId)
 		SetMp(sceneId, selfId, nMp)
 		
 		BeginEvent(sceneId)
-			AddText(sceneId, "ÔâÓö»ú¹Ø");
+			AddText(sceneId, "é­é‡æœºå…³");
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 end
 
 --**********************************
---Ä¬ÈÏÊÂ¼ş
+--é»˜è®¤äº‹ä»¶
 --**********************************
 function x300022_OnDefaultEvent( sceneId, selfId, BagPos)
 	--PrintStr("cangbaotu...x300022_OnDefaultEvent...")
 	
-	--Î´Âú30¼¶Ê±ÇáÉæ±¦²Ø¿ÖÓĞĞÔÃüÖ®Óİ°¡
+	--æœªæ»¡30çº§æ—¶è½»æ¶‰å®è—ææœ‰æ€§å‘½ä¹‹è™å•Š
 	if GetLevel(sceneId, selfId) < 30 then
 		BeginEvent(sceneId)
-			AddText(sceneId, "Î´Âú30¼¶Ê±ÇáÉæ±¦²Ø¿ÖÓĞĞÔÃüÖ®Óİ°¡")
+			AddText(sceneId, "æœªæ»¡30çº§æ—¶è½»æ¶‰å®è—ææœ‰æ€§å‘½ä¹‹è™å•Š")
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,-1)
 		return
 	end	
 	
 	-- /////////////////////////////////////////////////////////////////
-	-- ÏÈÈ¡³öÎïÆ·ÖĞÊı¾İ£¬Èç¹ûÊÇÄ¬ÈÏÖµ0ÔòËµÃ÷ÊÇµÚÒ»´ÎÊ¹ÓÃ£¬Á¢¼´Éú³ÉÊı¾İ
-	-- Èç¹ûÒÑ¾­ÓĞÊı¾İÔòÊ²Ã´¶¼²»×ö
+	-- å…ˆå–å‡ºç‰©å“ä¸­æ•°æ®ï¼Œå¦‚æœæ˜¯é»˜è®¤å€¼0åˆ™è¯´æ˜æ˜¯ç¬¬ä¸€æ¬¡ä½¿ç”¨ï¼Œç«‹å³ç”Ÿæˆæ•°æ®
+	-- å¦‚æœå·²ç»æœ‰æ•°æ®åˆ™ä»€ä¹ˆéƒ½ä¸åš
 	local targetSceneId, targetX, targetZ, r = x300022_GetItemParam(sceneId, selfId, BagPos)
 	if targetSceneId==nil or targetSceneId<=0
 		or targetX==nil or targetX<=0
 		or targetZ==nil or targetZ<=0
 		or r==nil or r<=0 then
 		--PrintStr("the first time .... nil nil nil")
-		--Á¢¼´Éú³ÉÊı¾İ
+		--ç«‹å³ç”Ÿæˆæ•°æ®
 		CallScriptFunction(x300022_g_ChengxiongdatuScriptId, "ProduceItemParamData", sceneId, selfId, BagPos)
-		--ÖØĞÂ»ñÈ¡ÎïÆ·Êı¾İ
+		--é‡æ–°è·å–ç‰©å“æ•°æ®
 		targetSceneId, targetX, targetZ, r = x300022_GetItemParam(sceneId, selfId, BagPos)
 	end
-	-- ÓĞĞ©BT ÎÒÃÇÔÙ×öÒ»´Î¼ì²â
+	-- æœ‰äº›BT æˆ‘ä»¬å†åšä¸€æ¬¡æ£€æµ‹
 	if targetSceneId==nil or targetSceneId<=0
 		or targetX==nil or targetX<=0
 		or targetZ==nil or targetZ<=0
 		or r==nil or r<=0 then
 		--PrintStr("the second time .... nil nil nil")
-		--Á¢¼´Éú³ÉÊı¾İ
+		--ç«‹å³ç”Ÿæˆæ•°æ®
 		CallScriptFunction(x300022_g_ChengxiongdatuScriptId, "ProduceItemParamData", sceneId, selfId, BagPos)
-		--ÖØĞÂ»ñÈ¡ÎïÆ·Êı¾İ
+		--é‡æ–°è·å–ç‰©å“æ•°æ®
 		targetSceneId, targetX, targetZ, r = x300022_GetItemParam(sceneId, selfId, BagPos)
 	end
-	--Èç¹û²»ÔÚÖ¸¶¨µÄ³¡¾°, Ö¸¶¨µÄ×ø±ê¾Íµ¯³ö¶Ô»°¿òÌáÊ¾Íæ¼ÒÈ¥ÄÄ¶ùÄÄ¶ùÄÄ¶ù
+	--å¦‚æœä¸åœ¨æŒ‡å®šçš„åœºæ™¯, æŒ‡å®šçš„åæ ‡å°±å¼¹å‡ºå¯¹è¯æ¡†æç¤ºç©å®¶å»å“ªå„¿å“ªå„¿å“ªå„¿
 	local sceneName = CallScriptFunction(x300022_g_ChengxiongdatuScriptId, "GetSceneName", sceneId, selfId, targetSceneId)
 	-- /////////////////////////////////////////////////////////////////
 	
 	--local sceneName = GetSceneName(targetSceneId)
 	--PrintStr(sceneName)
-	local strText = format("Äãµ½%sµÄ[%d,%d]²ÅÄÜÊ¹ÓÃ", sceneName, targetX, targetZ)
+	local strText = format("ä½ åˆ°%sçš„[%d,%d]æ‰èƒ½ä½¿ç”¨", sceneName, targetX, targetZ)
 	
-	--È¡µÃÍæ¼Òµ±Ç°×ø±ê
+	--å–å¾—ç©å®¶å½“å‰åæ ‡
 	local PlayerX = GetHumanWorldX(sceneId, selfId)
 	local PlayerZ = GetHumanWorldZ(sceneId, selfId)
-	--¼ÆËãÍæ¼ÒÓëÄ¿±êµãµÄ¾àÀë
+	--è®¡ç®—ç©å®¶ä¸ç›®æ ‡ç‚¹çš„è·ç¦»
 	local Distance = floor(sqrt((targetX-PlayerX)*(targetX-PlayerX)+(targetZ-PlayerZ)*(targetZ-PlayerZ)))
 	--print(PlayerX,PlayerZ)
 
@@ -354,7 +354,7 @@ function x300022_OnDefaultEvent( sceneId, selfId, BagPos)
 		--print(sceneId,selfId,targetId)
 		BeginEvent(sceneId)
 			AddText(sceneId, strText);
-			AddText(sceneId, "#e00f000Ğ¡ÌáÊ¾£º#e000000ÓĞµÄÊ±ºò²Ø±¦Í¼»á³öÏÖÔÚ#gfff0f0¸ßÓÚÄúÄ¿Ç°µÈ¼¶µÄµØÍ¼#g000000ÕâĞ©µØÍ¼ÉÏÃæ¹ÖÎïµÈ¼¶½Ï¸ß£¬#gfff0f0ÇëÇ§ÍòĞ¡ĞÄ#g000000£¬Äú¿ÉÒÔ½«²Ø±¦Í¼³öÊÛ¸øÆäËûÍæ¼Ò»òÕßÁô´ı×Ô¼ºµÈ¼¶ÉÏÉıÖ®ºóÔÙÀ´Ê¹ÓÃ¡£")
+			AddText(sceneId, "#e00f000å°æç¤ºï¼š#e000000æœ‰çš„æ—¶å€™è—å®å›¾ä¼šå‡ºç°åœ¨#gfff0f0é«˜äºæ‚¨ç›®å‰ç­‰çº§çš„åœ°å›¾#g000000è¿™äº›åœ°å›¾ä¸Šé¢æ€ªç‰©ç­‰çº§è¾ƒé«˜ï¼Œ#gfff0f0è¯·åƒä¸‡å°å¿ƒ#g000000ï¼Œæ‚¨å¯ä»¥å°†è—å®å›¾å‡ºå”®ç»™å…¶ä»–ç©å®¶æˆ–è€…ç•™å¾…è‡ªå·±ç­‰çº§ä¸Šå‡ä¹‹åå†æ¥ä½¿ç”¨ã€‚")
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,-1)
 
@@ -364,40 +364,40 @@ function x300022_OnDefaultEvent( sceneId, selfId, BagPos)
 		return
 	end	
 	
-	--É¾³ı¸ÃÎïÆ·
+	--åˆ é™¤è¯¥ç‰©å“
 	if LuaFnIsItemAvailable(sceneId, selfId, BagPos) <= 0 then
 		BeginEvent(sceneId)
-			AddText(sceneId, "ÄúµÄÎïÆ·ÏÖÔÚ²»¿ÉÓÃ»òÒÑ±»Ëø¶¨¡£")
+			AddText(sceneId, "æ‚¨çš„ç‰©å“ç°åœ¨ä¸å¯ç”¨æˆ–å·²è¢«é”å®šã€‚")
 		EndEvent( )
 		DispatchMissionTips(sceneId,selfId)	
 		return	
 	end	
 	
 	--PrintStr("begin random...")
-	--Èç¹ûÔÚÊ¹ÓÃ·¶Î§, ÔòËæ»ú´¥·¢ÒÔÏÂÊÂ¼ş
+	--å¦‚æœåœ¨ä½¿ç”¨èŒƒå›´, åˆ™éšæœºè§¦å‘ä»¥ä¸‹äº‹ä»¶
 	local ret = random(100)
-	if ret < 30 then --ÍÚµ½ÒøÁ½
+	if ret < 30 then --æŒ–åˆ°é“¶ä¸¤
 		x300022_DiscoverMoney(sceneId, selfId)
-	elseif ret < 40 then --·Å³ö½©Ê¬
+	elseif ret < 40 then --æ”¾å‡ºåƒµå°¸
 		x300022_DiscoverCorpseMonster(sceneId, selfId)
-	elseif ret < 80 then --»ñµÃÎïÆ·
+	elseif ret < 80 then --è·å¾—ç‰©å“
 		local retval = x300022_DiscoverItem(sceneId, selfId)
 		if retval == 0 then
-		  --¼ÇÂ¼Í³¼ÆĞÅÏ¢
+		  --è®°å½•ç»Ÿè®¡ä¿¡æ¯
 	    LuaFnAuditWaBao(sceneId, selfId)
 			return
 		end
-	elseif ret < 85 then --ÓöµÁÄ¹Ôô
+	elseif ret < 85 then --é‡ç›—å¢“è´¼
 		x300022_DiscoverGhoulMonster(sceneId, selfId)
-	elseif ret < 95 then --µôÈë±¦²Ø
+	elseif ret < 95 then --æ‰å…¥å®è—
 		x300022_DiscoverInstance(sceneId, selfId)
-	else --ÔâÓö»ú¹Ø
+	else --é­é‡æœºå…³
 		x300022_DiscoverTrap(sceneId, selfId)
 	end
 	
   EraseItem( sceneId, selfId, BagPos )
 	
-	--¼ÇÂ¼Í³¼ÆĞÅÏ¢
+	--è®°å½•ç»Ÿè®¡ä¿¡æ¯
 	LuaFnAuditWaBao(sceneId, selfId)
 		
 end

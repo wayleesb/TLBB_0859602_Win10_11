@@ -1,46 +1,46 @@
---´óÌÓÉ±
---»Øµ÷½Å±¾
+--å¤§é€ƒæ€
+--å›è°ƒè„šæœ¬
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x808003_g_ScriptId			= 808003
 
-x808003_g_TickTime			= 60		--»Øµ÷½Å±¾µÄÊ±ÖÓÊ±¼ä£¨µ¥Î»£ºÃë/´Î£©
-x808003_g_NotifyTime		= 29		--¹«¸æÊ±¼ä³¤¶È£¨µ¥Î»£ºÊ±ÖÓµãÊı£©
-x808003_g_JoinTime			= 3			--±¨ÃûÊ±¼ä³¤¶È£¨µ¥Î»£ºÊ±ÖÓµãÊı£©
-x808003_g_AttackTime		= 10		--±ÈÎäÊ±¼ä³¤¶È£¨µ¥Î»£ºÊ±ÖÓµãÊı£©
-x808003_g_IdleTime			= 2			--Ã¿ÂÖÖ®¼äµÄ¿ÕÏĞÊ±¼ä³¤¶È£¨µ¥Î»£ºÊ±ÖÓµãÊı£©
-x808003_g_RoundMax			= 5			--×î´ó»ØºÏÊı£¬¼´ÂúÔ±64ÈËµÄÇéĞÎÏÂ
-x808003_g_TParamNum			= 8			--±íµ¥²ÎÊıÊıÁ¿
-x808003_g_CareResultMax	= 5			--×´ÔªÅÅÃûÊ±Ëù¹ØĞÄµÄ×î´óÈËÊı
+x808003_g_TickTime			= 60		--å›è°ƒè„šæœ¬çš„æ—¶é’Ÿæ—¶é—´ï¼ˆå•ä½ï¼šç§’/æ¬¡ï¼‰
+x808003_g_NotifyTime		= 29		--å…¬å‘Šæ—¶é—´é•¿åº¦ï¼ˆå•ä½ï¼šæ—¶é’Ÿç‚¹æ•°ï¼‰
+x808003_g_JoinTime			= 3			--æŠ¥åæ—¶é—´é•¿åº¦ï¼ˆå•ä½ï¼šæ—¶é’Ÿç‚¹æ•°ï¼‰
+x808003_g_AttackTime		= 10		--æ¯”æ­¦æ—¶é—´é•¿åº¦ï¼ˆå•ä½ï¼šæ—¶é’Ÿç‚¹æ•°ï¼‰
+x808003_g_IdleTime			= 2			--æ¯è½®ä¹‹é—´çš„ç©ºé—²æ—¶é—´é•¿åº¦ï¼ˆå•ä½ï¼šæ—¶é’Ÿç‚¹æ•°ï¼‰
+x808003_g_RoundMax			= 5			--æœ€å¤§å›åˆæ•°ï¼Œå³æ»¡å‘˜64äººçš„æƒ…å½¢ä¸‹
+x808003_g_TParamNum			= 8			--è¡¨å•å‚æ•°æ•°é‡
+x808003_g_CareResultMax	= 5			--çŠ¶å…ƒæ’åæ—¶æ‰€å…³å¿ƒçš„æœ€å¤§äººæ•°
 
---»î¶¯Êı¾İÇøË÷Òı
+--æ´»åŠ¨æ•°æ®åŒºç´¢å¼•
 x808003_g_ActParam	=
 {
-	["tim"]	= 0,	--Ê±ÖÓ×ÜµãÊı
-	["pha"]	= 1,	--»î¶¯½×¶Î£¬»ØºÏÊı*10(1-6»ØºÏ) + »ØºÏ±ê¼Ç(1£¬±¨Ãû£»2£¬¿ªÊ¼£»0£¬¿ÕÏĞ)
-	["tab"]	= 2,	--±íµ¥ID
-	["unt"]	= 3,	--µ¥ÂÖÖ´ĞĞÊ±¼äµãÊı
-	["minl"]= 4,	--¼¶±ğÏÂÏŞ
-	["maxl"]= 5,	--¼¶±ğÉÏÏŞ
+	["tim"]	= 0,	--æ—¶é’Ÿæ€»ç‚¹æ•°
+	["pha"]	= 1,	--æ´»åŠ¨é˜¶æ®µï¼Œå›åˆæ•°*10(1-6å›åˆ) + å›åˆæ ‡è®°(1ï¼ŒæŠ¥åï¼›2ï¼Œå¼€å§‹ï¼›0ï¼Œç©ºé—²)
+	["tab"]	= 2,	--è¡¨å•ID
+	["unt"]	= 3,	--å•è½®æ‰§è¡Œæ—¶é—´ç‚¹æ•°
+	["minl"]= 4,	--çº§åˆ«ä¸‹é™
+	["maxl"]= 5,	--çº§åˆ«ä¸Šé™
 }
 
---ÏûÏ¢ÌáÊ¾
+--æ¶ˆæ¯æç¤º
 x808003_g_Msg				=
 {
-	["n_pre"]	= "#P±ÈÎä´ó»á#Y%d¼¶±ğ#P×é#YµÚ%d´Î#P»î¶¯±¨Ãû½«ÓÚ#Y%d·ÖÖÓ#Pºó¿ªÊ¼£¬Çë¸÷Î»×öºÃ×¼±¸¡£",
-	["n_bgn"]	= "#P±ÈÎä´ó»á#Y%d¼¶±ğ#P×é#YµÚ%d´Î#P»î¶¯±¨ÃûÒÑ¾­¿ªÊ¼£¬Çë¸÷Î»¾¡¿ì±¨Ãû¡£",
-	["n_end"]	= "#P±ÈÎä´ó»á#Y%d¼¶±ğ#P×é»î¶¯µ½´Ë½áÊø£¡",
-	["n_bny"]	= "#P±ÈÎä´ó»á#Y%d¼¶±ğ#P×éµÄ¹ÚÑÇ¾üÒÑ¾­²úÉú£¬·Ö±ğÎª£º#Y",
+	["n_pre"]	= "#Pæ¯”æ­¦å¤§ä¼š#Y%dçº§åˆ«#Pç»„#Yç¬¬%dæ¬¡#Pæ´»åŠ¨æŠ¥åå°†äº#Y%dåˆ†é’Ÿ#Påå¼€å§‹ï¼Œè¯·å„ä½åšå¥½å‡†å¤‡ã€‚",
+	["n_bgn"]	= "#Pæ¯”æ­¦å¤§ä¼š#Y%dçº§åˆ«#Pç»„#Yç¬¬%dæ¬¡#Pæ´»åŠ¨æŠ¥åå·²ç»å¼€å§‹ï¼Œè¯·å„ä½å°½å¿«æŠ¥åã€‚",
+	["n_end"]	= "#Pæ¯”æ­¦å¤§ä¼š#Y%dçº§åˆ«#Pç»„æ´»åŠ¨åˆ°æ­¤ç»“æŸï¼",
+	["n_bny"]	= "#Pæ¯”æ­¦å¤§ä¼š#Y%dçº§åˆ«#Pç»„çš„å† äºšå†›å·²ç»äº§ç”Ÿï¼Œåˆ†åˆ«ä¸ºï¼š#Y",
 }
 
---»î¶¯×é±ğĞÅÏ¢
---»î¶¯ID£¬¶¨ÒåÔÚ¡¶ActivityNotice¡·±íÖĞ
+--æ´»åŠ¨ç»„åˆ«ä¿¡æ¯
+--æ´»åŠ¨IDï¼Œå®šä¹‰åœ¨ã€ŠActivityNoticeã€‹è¡¨ä¸­
 x808003_g_Act				=
 {
-	--ĞèÒªÅäÖÃ¹«¸æ
-	[1]	= { id=22, minLev=40, maxLev=49 },	--ÖÜÁù40¼¶±ğ×é
-	[2]	= { id=23, minLev=40, maxLev=49 },	--ÖÜÈı40¼¶±ğ×é
-	--²»ĞèÒªÅäÖÃ¹«¸æ
+	--éœ€è¦é…ç½®å…¬å‘Š
+	[1]	= { id=22, minLev=40, maxLev=49 },	--å‘¨å…­40çº§åˆ«ç»„
+	[2]	= { id=23, minLev=40, maxLev=49 },	--å‘¨ä¸‰40çº§åˆ«ç»„
+	--ä¸éœ€è¦é…ç½®å…¬å‘Š
 	[3]	= { id=30, minLev=50, maxLev=59 },
 	[4]	= { id=31, minLev=50, maxLev=59 },
 	[5]	= { id=32, minLev=60, maxLev=69 },
@@ -58,12 +58,12 @@ x808003_g_Act				=
 }
 
 --**********************************
---½Å±¾Èë¿Úº¯Êı
---C++»Øµ÷º¯Êı
+--è„šæœ¬å…¥å£å‡½æ•°
+--C++å›è°ƒå‡½æ•°
 --**********************************
 function x808003_OnDefaultEvent( sceneId, actId, iNoticeType, param2, param3, param4, param5 )
 
-	--Ò»¸ö»î¶¯¶ÔÓ¦Ò»¸ö×é±ğ
+	--ä¸€ä¸ªæ´»åŠ¨å¯¹åº”ä¸€ä¸ªç»„åˆ«
 	local	ActInfo	= nil
 	for i = 1, getn( x808003_g_Act ) do
 		ActInfo			= x808003_g_Act[i]
@@ -73,19 +73,19 @@ function x808003_OnDefaultEvent( sceneId, actId, iNoticeType, param2, param3, pa
 			ActInfo		= nil
 		end
 	end
-	if ActInfo == nil then	--Ã»ÓĞÕÒµ½Õâ¸ö×é±ğµÄ»î¶¯
+	if ActInfo == nil then	--æ²¡æœ‰æ‰¾åˆ°è¿™ä¸ªç»„åˆ«çš„æ´»åŠ¨
 		return
 	end
 
-	--²ÎÊıËµÃ÷£º³¡¾°ID£¬»î¶¯ID£¬Ê±¼ä¼ä¸ô£¨ºÁÃë£©
+	--å‚æ•°è¯´æ˜ï¼šåœºæ™¯IDï¼Œæ´»åŠ¨IDï¼Œæ—¶é—´é—´éš”ï¼ˆæ¯«ç§’ï¼‰
 	StartOneActivity( sceneId, ActInfo.id, floor(x808003_g_TickTime*1000), iNoticeType )
-	--×¢²áÅÅĞĞ°ñ±íµ¥£¬Çë×¢ÒâÔÚ»î¶¯½áÊøÊ±ÊÍ·Å
+	--æ³¨å†Œæ’è¡Œæ¦œè¡¨å•ï¼Œè¯·æ³¨æ„åœ¨æ´»åŠ¨ç»“æŸæ—¶é‡Šæ”¾
 	tabId	= HitParadeRegisterTab( sceneId )
 
-	--»î¶¯Êı¾İÇø
-	SetActivityParam( sceneId, ActInfo.id, x808003_g_ActParam["tim"], 0 )			--±£´æÊ±ÖÓ×ÜµãÊı
-	SetActivityParam( sceneId, ActInfo.id, x808003_g_ActParam["pha"], 0 )			--±£´æ»î¶¯½×¶Î
-	SetActivityParam( sceneId, ActInfo.id, x808003_g_ActParam["tab"], tabId )	--±£´æ±íµ¥ID
+	--æ´»åŠ¨æ•°æ®åŒº
+	SetActivityParam( sceneId, ActInfo.id, x808003_g_ActParam["tim"], 0 )			--ä¿å­˜æ—¶é’Ÿæ€»ç‚¹æ•°
+	SetActivityParam( sceneId, ActInfo.id, x808003_g_ActParam["pha"], 0 )			--ä¿å­˜æ´»åŠ¨é˜¶æ®µ
+	SetActivityParam( sceneId, ActInfo.id, x808003_g_ActParam["tab"], tabId )	--ä¿å­˜è¡¨å•ID
 	SetActivityParam( sceneId, ActInfo.id, x808003_g_ActParam["minl"], ActInfo.minLev )
 	SetActivityParam( sceneId, ActInfo.id, x808003_g_ActParam["maxl"], ActInfo.maxLev )
 
@@ -97,12 +97,12 @@ function x808003_OnDefaultEvent( sceneId, actId, iNoticeType, param2, param3, pa
 end
 
 --**********************************
---ĞÄÌøº¯Êı
---C++»Øµ÷º¯Êı
+--å¿ƒè·³å‡½æ•°
+--C++å›è°ƒå‡½æ•°
 --**********************************
 function x808003_OnTimer( sceneId, actId, uTime )
 
-	--Ò»¸ö»î¶¯¶ÔÓ¦Ò»¸ö×é±ğ
+	--ä¸€ä¸ªæ´»åŠ¨å¯¹åº”ä¸€ä¸ªç»„åˆ«
 	local	ActInfo	= nil
 	for i = 1, getn( x808003_g_Act ) do
 		ActInfo			= x808003_g_Act[i]
@@ -112,34 +112,34 @@ function x808003_OnTimer( sceneId, actId, uTime )
 			ActInfo		= nil
 		end
 	end
-	if ActInfo == nil then	--Ã»ÓĞÕÒµ½Õâ¸ö×é±ğµÄ»î¶¯
+	if ActInfo == nil then	--æ²¡æœ‰æ‰¾åˆ°è¿™ä¸ªç»„åˆ«çš„æ´»åŠ¨
 		return
 	end
 
 	local	m_actId	= actId
 
-	--±íµ¥ID
+	--è¡¨å•ID
 	tabId	= GetActivityParam( sceneId, m_actId, x808003_g_ActParam["tab"] )
 	if tabId < 0 then
 		return
 	end
 
-	--»î¶¯Êı¾İÇø
+	--æ´»åŠ¨æ•°æ®åŒº
 	tim		= GetActivityParam( sceneId, m_actId, x808003_g_ActParam["tim"] )
-	SetActivityParam( sceneId, m_actId, x808003_g_ActParam["tim"], tim+1 )	--±£´æÊ±ÖÓ×ÜµãÊı
+	SetActivityParam( sceneId, m_actId, x808003_g_ActParam["tim"], tim+1 )	--ä¿å­˜æ—¶é’Ÿæ€»ç‚¹æ•°
 
-	--±£´æ»î¶¯½×¶Î£¬ÓÉÊ±¼ä»®·Ö£º
-	--7£º00¹«¸æ
-	--µÚÒ»´Î»î¶¯±¨Ãû7£º30£¬»î¶¯¿ªÊ¼7£º35£¬»î¶¯½áÊø7£º45¡£
-	--µÚ¶ş´Î¿ªÊ¼±¨Ãû7£º50£¬»î¶¯¿ªÊ¼7£º55£¬»î¶¯½áÊø8£º05¡£
-	--ÒÔºóÃ¿´Î»î¶¯±¨Ãû¿ÕÏĞÊ±¼ä5·ÖÖÓ£¬±¨Ãû5·ÖÖÓ£¬»î¶¯Ê±¼ä10·ÖÖÓ¡£
-	local	tim_0		= x808003_g_NotifyTime	--²ÎÕÕÊ±¼äµã£¬¼´µÚÒ»»ØºÏµÄ±¨ÃûÊ±¼ä
+	--ä¿å­˜æ´»åŠ¨é˜¶æ®µï¼Œç”±æ—¶é—´åˆ’åˆ†ï¼š
+	--7ï¼š00å…¬å‘Š
+	--ç¬¬ä¸€æ¬¡æ´»åŠ¨æŠ¥å7ï¼š30ï¼Œæ´»åŠ¨å¼€å§‹7ï¼š35ï¼Œæ´»åŠ¨ç»“æŸ7ï¼š45ã€‚
+	--ç¬¬äºŒæ¬¡å¼€å§‹æŠ¥å7ï¼š50ï¼Œæ´»åŠ¨å¼€å§‹7ï¼š55ï¼Œæ´»åŠ¨ç»“æŸ8ï¼š05ã€‚
+	--ä»¥åæ¯æ¬¡æ´»åŠ¨æŠ¥åç©ºé—²æ—¶é—´5åˆ†é’Ÿï¼ŒæŠ¥å5åˆ†é’Ÿï¼Œæ´»åŠ¨æ—¶é—´10åˆ†é’Ÿã€‚
+	local	tim_0		= x808003_g_NotifyTime	--å‚ç…§æ—¶é—´ç‚¹ï¼Œå³ç¬¬ä¸€å›åˆçš„æŠ¥åæ—¶é—´
 	local	tim_pnt	=
 	{
-		["jon"]	= 0,									--±¾»ØºÏµÄµÚ0¸öÊ±¼äµã¿ªÊ¼±¨Ãû
-		["bgn"]	= x808003_g_JoinTime,	--±¾»ØºÏµÄµÚ5¸öÊ±¼äµã¿ªÊ¼±ÈÎä
-		["end"]	= x808003_g_JoinTime + x808003_g_AttackTime,											--±¾»ØºÏµÄµÚ15¸öÊ±¼äµã½áÊø
-		["idl"]	= x808003_g_JoinTime + x808003_g_AttackTime + x808003_g_IdleTime,	--¿ÕÏĞÖÁµÚ20¸öÊ±¼äµã¿ªÊ¼ÏÂÒ»»ØºÏ
+		["jon"]	= 0,									--æœ¬å›åˆçš„ç¬¬0ä¸ªæ—¶é—´ç‚¹å¼€å§‹æŠ¥å
+		["bgn"]	= x808003_g_JoinTime,	--æœ¬å›åˆçš„ç¬¬5ä¸ªæ—¶é—´ç‚¹å¼€å§‹æ¯”æ­¦
+		["end"]	= x808003_g_JoinTime + x808003_g_AttackTime,											--æœ¬å›åˆçš„ç¬¬15ä¸ªæ—¶é—´ç‚¹ç»“æŸ
+		["idl"]	= x808003_g_JoinTime + x808003_g_AttackTime + x808003_g_IdleTime,	--ç©ºé—²è‡³ç¬¬20ä¸ªæ—¶é—´ç‚¹å¼€å§‹ä¸‹ä¸€å›åˆ
 	}
 	local	tim_all	= tim_pnt["idl"]
 	pha			= GetActivityParam( sceneId, m_actId, x808003_g_ActParam["pha"] )
@@ -149,66 +149,66 @@ function x808003_OnTimer( sceneId, actId, uTime )
 	
 	if tmp_mul > x808003_g_RoundMax then
 		x808003_OnActivityEnd( sceneId, m_actId, tabId )
-		--È«Çò¹«¸æ
+		--å…¨çƒå…¬å‘Š
 		str		= format( x808003_g_Msg["n_end"], ActInfo.minLev )
 		x808003_MyGlobalNews( sceneId, str )
 		return
 	end
 	
-	--µ¥ÂÖÖ´ĞĞÊ±¼äµãÊı
+	--å•è½®æ‰§è¡Œæ—¶é—´ç‚¹æ•°
 	if tmp_mod < 0 or tmp_mod >= tim_all then
 		SetActivityParam( sceneId, m_actId, x808003_g_ActParam["unt"], 0 )
 	else
 		SetActivityParam( sceneId, m_actId, x808003_g_ActParam["unt"], tmp_mod )
 	end
 
-	--»î¶¯½ø¶È
-	if pha == 0 then	--µÚÒ»»ØºÏ
+	--æ´»åŠ¨è¿›åº¦
+	if pha == 0 then	--ç¬¬ä¸€å›åˆ
 	
-		--»î¶¯Ô¤±¨
+		--æ´»åŠ¨é¢„æŠ¥
 		if tim == floor(tim_0-x808003_g_IdleTime) then
 			str	= format( x808003_g_Msg["n_pre"], ActInfo.minLev, 1, x808003_g_IdleTime )
-			--È«Çò¹«¸æ
+			--å…¨çƒå…¬å‘Š
 			x808003_MyGlobalNews( sceneId, str )
 		end
 
-		--¿ªÊ¼±¨Ãû
+		--å¼€å§‹æŠ¥å
 		if tim >= tim_0 then
 			SetActivityParam( sceneId, m_actId, x808003_g_ActParam["pha"], (tmp_mul+1)*10+1 )
 			str	= format( x808003_g_Msg["n_bgn"], ActInfo.minLev, (tmp_mul+1) )
-			--È«Çò¹«¸æ
+			--å…¨çƒå…¬å‘Š
 			x808003_MyGlobalNews( sceneId, str )
-			--±íµ¥³õÊ¼»¯
+			--è¡¨å•åˆå§‹åŒ–
 			for i = 0, x808003_g_TParamNum do
 				HitParadeSetTabParam( sceneId, tabId, i, 0 )
 			end
 		end
 
 	else
-		if tmp_mod == tim_pnt["jon"] then					--±¨ÃûÖĞ
+		if tmp_mod == tim_pnt["jon"] then					--æŠ¥åä¸­
 			SetActivityParam( sceneId, m_actId, x808003_g_ActParam["pha"], (tmp_mul+1)*10+1 )
 			
 			if tmp_mul >= 1 then
-				--»î¶¯ÅÅÃû£¬·µ»ØÊ¤³öÈËÊı£¬µÈÓÚ1Ê±¹Ú¾ü²úÉú
+				--æ´»åŠ¨æ’åï¼Œè¿”å›èƒœå‡ºäººæ•°ï¼Œç­‰äº1æ—¶å† å†›äº§ç”Ÿ
 				if x808003_OnActivitySort( sceneId, m_actId, tabId ) > 1 then
-					--¼ÌĞøÏÂÂÖ±ÈÎä
+					--ç»§ç»­ä¸‹è½®æ¯”æ­¦
 					str	= format( x808003_g_Msg["n_bgn"], ActInfo.minLev, (tmp_mul+1) )
-					--È«Çò¹«¸æ
+					--å…¨çƒå…¬å‘Š
 					x808003_MyGlobalNews( sceneId, str )
-					--±íµ¥³õÊ¼»¯
+					--è¡¨å•åˆå§‹åŒ–
 					for i = 0, x808003_g_TParamNum do
 						HitParadeSetTabParam( sceneId, tabId, i, 0 )
 					end
 				end
 			end
 
-		elseif tmp_mod == tim_pnt["bgn"] then			--±ÈÎäÖĞ
+		elseif tmp_mod == tim_pnt["bgn"] then			--æ¯”æ­¦ä¸­
 			SetActivityParam( sceneId, m_actId, x808003_g_ActParam["pha"], (tmp_mul+1)*10+2 )
-		elseif tmp_mod == tim_pnt["end"] then			--¿ÕÏĞÖĞ
+		elseif tmp_mod == tim_pnt["end"] then			--ç©ºé—²ä¸­
 			SetActivityParam( sceneId, m_actId, x808003_g_ActParam["pha"], (tmp_mul+1)*10 )
-		elseif tmp_mod == (tim_pnt["end"]+2) then	--¿ÕÏĞÖĞ
+		elseif tmp_mod == (tim_pnt["end"]+2) then	--ç©ºé—²ä¸­
 			str		= format( x808003_g_Msg["n_pre"], ActInfo.minLev, (tmp_mul+2), (x808003_g_IdleTime-2) )
-			--È«Çò¹«¸æ
+			--å…¨çƒå…¬å‘Š
 			x808003_MyGlobalNews( sceneId, str )
 		end
 
@@ -217,11 +217,11 @@ function x808003_OnTimer( sceneId, actId, uTime )
 end
 
 --**********************************
---»î¶¯ÅÅÃû£¬·µ»ØÊ¤³öÈËÊı£¬µÈÓÚ1Ê±¹Ú¾ü²úÉú
+--æ´»åŠ¨æ’åï¼Œè¿”å›èƒœå‡ºäººæ•°ï¼Œç­‰äº1æ—¶å† å†›äº§ç”Ÿ
 --**********************************
 function x808003_OnActivitySort( sceneId, actId, tabId )
 
-	--Ò»¸ö»î¶¯¶ÔÓ¦Ò»¸ö×é±ğ
+	--ä¸€ä¸ªæ´»åŠ¨å¯¹åº”ä¸€ä¸ªç»„åˆ«
 	local	ActInfo	= nil
 	for i = 1, getn( x808003_g_Act ) do
 		ActInfo			= x808003_g_Act[i]
@@ -231,15 +231,15 @@ function x808003_OnActivitySort( sceneId, actId, tabId )
 			ActInfo		= nil
 		end
 	end
-	if ActInfo == nil then	--Ã»ÓĞÕÒµ½Õâ¸ö×é±ğµÄ»î¶¯
+	if ActInfo == nil then	--æ²¡æœ‰æ‰¾åˆ°è¿™ä¸ªç»„åˆ«çš„æ´»åŠ¨
 		return 0
 	end
 
 	local	m_actId	= actId
 
-	--²ÎÕÕÅÅĞĞ¼üÖµ£¬½µĞòÅÅĞò£¨¼üÖµÔ½´ó£¬ÅÅÃûÔ½¿¿Ç°£©
+	--å‚ç…§æ’è¡Œé”®å€¼ï¼Œé™åºæ’åºï¼ˆé”®å€¼è¶Šå¤§ï¼Œæ’åè¶Šé å‰ï¼‰
 	HitParadeSort( sceneId, tabId )
-	--»ñÈ¡µ±Ç°±¨ÃûÈËÊı
+	--è·å–å½“å‰æŠ¥åäººæ•°
 	local	jon_num	= HitParadeGetTabInfo( sceneId, tabId )
 	if jon_num == nil then
 		return 0
@@ -248,12 +248,12 @@ function x808003_OnActivitySort( sceneId, actId, tabId )
 		LogInfo	= format( "[TAOSHA]: HitParadeGetTabInfo( sceneId=%d, tabId=%d ), JoinNum=%d",
 			sceneId, tabId, jon_num )
 		MissionLog( sceneId, LogInfo )
-		--×î¶à¼ì²éÇ°5Ãû¾Í×ã¹»
+		--æœ€å¤šæ£€æŸ¥å‰5åå°±è¶³å¤Ÿ
 		if jon_num > x808003_g_CareResultMax then
 			jon_num		= x808003_g_CareResultMax
 		end
 	end
-	--»ñÈ¡²ÎÈü³É¼¨
+	--è·å–å‚èµ›æˆç»©
 	local	no1_num	= 0
 	local	guid		= {}
 	local	key			= {}
@@ -270,7 +270,7 @@ function x808003_OnActivitySort( sceneId, actId, tabId )
 		MissionLog( sceneId, LogInfo )
 	end
 
-	--»ñÈ¡¹Ú¾üÈËÊı£¬¾ö¶¨ËÄÇ¿Èü
+	--è·å–å† å†›äººæ•°ï¼Œå†³å®šå››å¼ºèµ›
 	for i = 0, jon_num do
 		if guid[i] == nil then
 			break
@@ -282,15 +282,15 @@ function x808003_OnActivitySort( sceneId, actId, tabId )
 		end
 	end
 
-	--ÔİÊ±Î´ÄÜÑ¡³öËÄÇ¿£¬¼ÌĞø½øĞĞÏÂÒ»ÂÖ
+	--æš‚æ—¶æœªèƒ½é€‰å‡ºå››å¼ºï¼Œç»§ç»­è¿›è¡Œä¸‹ä¸€è½®
 	if no1_num > 4 then
 		return no1_num
 	end
 
-	--¹Ú¾üÊ¤³ö£¬»î¶¯½áÊø
+	--å† å†›èƒœå‡ºï¼Œæ´»åŠ¨ç»“æŸ
 	local	name1, name2
 	if no1_num <= 1 then
-		--½±ÀøÈı¼×
+		--å¥–åŠ±ä¸‰ç”²
 		if key[0] ~= nil and mod( key[0], 3 ) > 0 then
 			x808003_OnPlyBounty( sceneId, guid[0], 1, tabId )
 		else
@@ -306,18 +306,18 @@ function x808003_OnActivitySort( sceneId, actId, tabId )
 		else
 			guid[2]	= nil
 		end
-		--»î¶¯½áÊø
+		--æ´»åŠ¨ç»“æŸ
 		x808003_OnActivityEnd( sceneId, m_actId, tabId )
-		--È«Çò¹«¸æ
+		--å…¨çƒå…¬å‘Š
 		name1	= x808003_GetPlyName( sceneId, guid[0] )
 		name2	= x808003_GetPlyName( sceneId, guid[1] )
 		str		= format( x808003_g_Msg["n_bny"], ActInfo.minLev )
-		x808003_MyGlobalNews( sceneId, str.."×´Ôª"..name1.."£¬°ñÑÛ"..name2.."¡£" )
+		x808003_MyGlobalNews( sceneId, str.."çŠ¶å…ƒ"..name1.."ï¼Œæ¦œçœ¼"..name2.."ã€‚" )
 
-	--¼´½«¿ªÊ¼¾öÈü
+	--å³å°†å¼€å§‹å†³èµ›
 	elseif no1_num == 2 then
 
-	--¼´½«¿ªÊ¼ËÄÇ¿Èü£¬µ±È»Ò²ĞíÖ»ÓĞÈıÇ¿
+	--å³å°†å¼€å§‹å››å¼ºèµ›ï¼Œå½“ç„¶ä¹Ÿè®¸åªæœ‰ä¸‰å¼º
 	elseif no1_num <= 4 then
 
 	end
@@ -326,14 +326,14 @@ function x808003_OnActivitySort( sceneId, actId, tabId )
 end
 
 --**********************************
---»î¶¯½áÊø
+--æ´»åŠ¨ç»“æŸ
 --**********************************
 function x808003_OnActivityEnd( sceneId, actId, tabId )
 
 	local	m_actId	= actId
 
-	SetActivityParam( sceneId, m_actId, x808003_g_ActParam["pha"], 0 )			--±£´æ»î¶¯½×¶Î
-	SetActivityParam( sceneId, m_actId, x808003_g_ActParam["tab"], -1 )			--±£´æ±íµ¥ID
+	SetActivityParam( sceneId, m_actId, x808003_g_ActParam["pha"], 0 )			--ä¿å­˜æ´»åŠ¨é˜¶æ®µ
+	SetActivityParam( sceneId, m_actId, x808003_g_ActParam["tab"], -1 )			--ä¿å­˜è¡¨å•ID
 	StopOneActivity( sceneId, m_actId )
 	HitParadeReleaseTab( sceneId, tabId )
 	
@@ -345,7 +345,7 @@ function x808003_OnActivityEnd( sceneId, actId, tabId )
 end
 
 --**********************************
---¸ù¾İÍæ¼ÒµÈ¼¶»ñÈ¡×é±ğĞÅÏ¢
+--æ ¹æ®ç©å®¶ç­‰çº§è·å–ç»„åˆ«ä¿¡æ¯
 --**********************************
 function x808003_GetGroupInfo( sceneId, selfId )
 
@@ -361,16 +361,16 @@ function x808003_GetGroupInfo( sceneId, selfId )
 		ActInfo			= x808003_g_Act[i]
 		minl				= GetActivityParam( sceneId, ActInfo.id, x808003_g_ActParam["minl"] )
 		maxl				= GetActivityParam( sceneId, ActInfo.id, x808003_g_ActParam["maxl"] )
-		if lev >= ActInfo.minLev and	--ÊÊºÏµÈ¼¶
+		if lev >= ActInfo.minLev and	--é€‚åˆç­‰çº§
 			lev <= ActInfo.maxLev and
-			minl > 0 and								--´Ë»î¶¯ÒÑ¿ªÆô
+			minl > 0 and								--æ­¤æ´»åŠ¨å·²å¼€å¯
 			maxl > 0 then
 			break
 		else
 			ActInfo		= nil
 		end
 	end
-	if ActInfo == nil then	--Ã»ÓĞÕÒµ½Õâ¸ö×é±ğµÄ»î¶¯
+	if ActInfo == nil then	--æ²¡æœ‰æ‰¾åˆ°è¿™ä¸ªç»„åˆ«çš„æ´»åŠ¨
 		return nil
 	end
 	return ActInfo.id, ActInfo.minLev, ActInfo.maxLev
@@ -378,7 +378,7 @@ function x808003_GetGroupInfo( sceneId, selfId )
 end
 
 --**********************************
---ÊÇ·ñ´¦ÔÚ±¨Ãû½×¶Î
+--æ˜¯å¦å¤„åœ¨æŠ¥åé˜¶æ®µ
 --**********************************
 function x808003_IsJoinDoing( sceneId, selfId )
 
@@ -397,7 +397,7 @@ function x808003_IsJoinDoing( sceneId, selfId )
 end
 
 --**********************************
---»ñÈ¡±íµ¥ID
+--è·å–è¡¨å•ID
 --**********************************
 function x808003_GetTableID( sceneId, selfId )
 
@@ -411,7 +411,7 @@ function x808003_GetTableID( sceneId, selfId )
 end
 
 --**********************************
---»ñÈ¡±ÈÎä»ØºÏÊı
+--è·å–æ¯”æ­¦å›åˆæ•°
 --**********************************
 function x808003_GetRound( sceneId, selfId )
 
@@ -426,7 +426,7 @@ function x808003_GetRound( sceneId, selfId )
 end
 
 --**********************************
---»ñÈ¡µ¥ÂÖÖ´ĞĞÊ±¼ä
+--è·å–å•è½®æ‰§è¡Œæ—¶é—´
 --**********************************
 function x808003_GetCurrentUnitTime( sceneId, selfId, TickTime )
 
@@ -442,37 +442,37 @@ function x808003_GetCurrentUnitTime( sceneId, selfId, TickTime )
 end
 
 --**********************************
---»ñÈ¡Ò»¸ö»ØºÏÖĞµÄ±¨ÃûÊ±¼ä³¤¶È
+--è·å–ä¸€ä¸ªå›åˆä¸­çš„æŠ¥åæ—¶é—´é•¿åº¦
 --**********************************
 function x808003_GetJoinTime( sceneId, TickTime )
 
-	--¸Ãº¯ÊıÖ»ÄÜÊ¹ÓÃÈ«¾Ö±äÁ¿Óëº¯Êı´«²Î
-	--Ô­Òò£º±¨Ãû³¡¾°£¨ËÕÖİ£©¡¢±ÈÎä³¡¾°£¨¸±±¾£©ÔÚ²»Í¬Ïß³Ì£¬¸Ãº¯Êı»áÔÚ²»Í¬³¡¾°Ëù¹ÒÆğµÄ½Å±¾ÖĞµ÷ÓÃ
+	--è¯¥å‡½æ•°åªèƒ½ä½¿ç”¨å…¨å±€å˜é‡ä¸å‡½æ•°ä¼ å‚
+	--åŸå› ï¼šæŠ¥ååœºæ™¯ï¼ˆè‹å·ï¼‰ã€æ¯”æ­¦åœºæ™¯ï¼ˆå‰¯æœ¬ï¼‰åœ¨ä¸åŒçº¿ç¨‹ï¼Œè¯¥å‡½æ•°ä¼šåœ¨ä¸åŒåœºæ™¯æ‰€æŒ‚èµ·çš„è„šæœ¬ä¸­è°ƒç”¨
 	ret	= floor( x808003_g_JoinTime * x808003_g_TickTime / TickTime )
 	return ret
 
 end
 
 --**********************************
---»ñÈ¡Ò»¸ö»ØºÏÖĞµÄ±ÈÎäÊ±¼ä³¤¶È
+--è·å–ä¸€ä¸ªå›åˆä¸­çš„æ¯”æ­¦æ—¶é—´é•¿åº¦
 --**********************************
 function x808003_GetAttackTime( sceneId, TickTime )
 
-	--¸Ãº¯ÊıÖ»ÄÜÊ¹ÓÃÈ«¾Ö±äÁ¿Óëº¯Êı´«²Î
-	--Ô­Òò£º±¨Ãû³¡¾°£¨ËÕÖİ£©¡¢±ÈÎä³¡¾°£¨¸±±¾£©ÔÚ²»Í¬Ïß³Ì£¬¸Ãº¯Êı»áÔÚ²»Í¬³¡¾°Ëù¹ÒÆğµÄ½Å±¾ÖĞµ÷ÓÃ
+	--è¯¥å‡½æ•°åªèƒ½ä½¿ç”¨å…¨å±€å˜é‡ä¸å‡½æ•°ä¼ å‚
+	--åŸå› ï¼šæŠ¥ååœºæ™¯ï¼ˆè‹å·ï¼‰ã€æ¯”æ­¦åœºæ™¯ï¼ˆå‰¯æœ¬ï¼‰åœ¨ä¸åŒçº¿ç¨‹ï¼Œè¯¥å‡½æ•°ä¼šåœ¨ä¸åŒåœºæ™¯æ‰€æŒ‚èµ·çš„è„šæœ¬ä¸­è°ƒç”¨
 	ret	= floor( x808003_g_AttackTime * x808003_g_TickTime / TickTime )
 	return ret
 
 end
 
 --**********************************
---¸ù¾İGUID»ñÈ¡Íæ¼ÒÃû³Æ
+--æ ¹æ®GUIDè·å–ç©å®¶åç§°
 --**********************************
 function x808003_GetPlyName( sceneId, guid )
 
-	--Íæ¼ÒÊÇ·ñÔÚ¸Ã³¡¾°
+	--ç©å®¶æ˜¯å¦åœ¨è¯¥åœºæ™¯
 	if guid == nil then
-		return "[¿Õ]"
+		return "[ç©º]"
 	end
 	ObjId		= LuaFnGuid2ObjId( sceneId, guid )
 	if LuaFnIsObjValid( sceneId, ObjId ) ~= 1 then
@@ -484,27 +484,27 @@ function x808003_GetPlyName( sceneId, guid )
 	if objNam ~= nil then
 		str		= "#{_INFOUSR"..objNam.."}"
 	else
-		str		= "[¿Õ]"
+		str		= "[ç©º]"
 	end
 	return str
 
 end
 
 --**********************************
---Èı¼×½±Àø
+--ä¸‰ç”²å¥–åŠ±
 --**********************************
 function x808003_OnPlyBounty( sceneId, guid, place, tabId )
 
-	--Ö»¹ØĞÄÇ°Èı¼×
+	--åªå…³å¿ƒå‰ä¸‰ç”²
 	if place < 1 or place > 3 then
 		return
 	end
-	--Íæ¼ÒÊÇ·ñÔÚ¸Ã³¡¾°
+	--ç©å®¶æ˜¯å¦åœ¨è¯¥åœºæ™¯
 	if guid == nil then
 		return
 	end
 
-	--¼ì²é²ÎÈü³É¼¨
+	--æ£€æŸ¥å‚èµ›æˆç»©
 	local	guid_tmp
 	local	key_tmp
 	local	isFind				= 0
@@ -535,75 +535,75 @@ function x808003_OnPlyBounty( sceneId, guid, place, tabId )
 
 	local	lev		= GetLevel( sceneId, ObjId )
 	local	gold	= 0
-	--×´Ôª
+	--çŠ¶å…ƒ
 	if place == 1 then
 		gold	= lev * 1000
 	
-	--°ñÑÛ
+	--æ¦œçœ¼
 	elseif place == 2 then
 		gold	= lev * 500
 	
-	--Ì½»¨
+	--æ¢èŠ±
 	elseif place == 3 then
 		gold	= lev * 200
 
 	end
 
-	--½ğÇ®½±Àø
+	--é‡‘é’±å¥–åŠ±
 	AddMoney( sceneId, ObjId, gold )
 
-	--ÎïÆ·½±Àø
+	--ç‰©å“å¥–åŠ±
 	local	item_lst	=
 	{
-		--×´Ôª£¬¶ş¼¶±¦Ê¯
+		--çŠ¶å…ƒï¼ŒäºŒçº§å®çŸ³
 		{ 50201001, 50201002, 50211001, 50211002 },
-		--°ñÑÛ£¬¶ş¼¶±¦Ê¯
+		--æ¦œçœ¼ï¼ŒäºŒçº§å®çŸ³
 		{ 50201001, 50201002, 50211001, 50211002 },
-		--Ì½»¨£¬Ò»¼¶±¦Ê¯
+		--æ¢èŠ±ï¼Œä¸€çº§å®çŸ³
 		{ 50101001, 50101002, 50111001, 50111002 },
 	}
 	local	item_unt	= item_lst[place]
 	local	item_rnd	= random( getn( item_unt ) )
 	local	item_nam	= GetItemName( sceneId, item_unt[item_rnd] )
 	if item_nam ~= nil then
-		x808003_MsgBox( sceneId, ObjId, "µÃµ½"..item_nam )
+		x808003_MsgBox( sceneId, ObjId, "å¾—åˆ°"..item_nam )
 	end
 
 	local nBagIndex	= LuaFnTryRecieveItem( sceneId, ObjId, item_unt[item_rnd], 1 )
 	local	szTranEqp	= nil
 	if  nBagIndex == -1 then
-		x808003_MsgBox( sceneId, ObjId, "ºÜÒÅº¶£¬±³°ü¿Õ¼ä²»×ã" )
+		x808003_MsgBox( sceneId, ObjId, "å¾ˆé—æ†¾ï¼ŒèƒŒåŒ…ç©ºé—´ä¸è¶³" )
 	else
 		szTranEqp			= GetBagItemTransfer( sceneId, ObjId, nBagIndex )
 	end
 
-	--³ÆºÅ½±Àø
+	--ç§°å·å¥–åŠ±
 	local	title_lst	=
 	{
-		{ 136,	"#P±ÈÎä´ó»á×´Ôª" },		--×´Ôª
-		{ 137,	"#P±ÈÎä´ó»á°ñÑÛ" },		--°ñÑÛ
-		{ 138,	"#P±ÈÎä´ó»áÌ½»¨" },		--Ì½»¨
+		{ 136,	"#Pæ¯”æ­¦å¤§ä¼šçŠ¶å…ƒ" },		--çŠ¶å…ƒ
+		{ 137,	"#Pæ¯”æ­¦å¤§ä¼šæ¦œçœ¼" },		--æ¦œçœ¼
+		{ 138,	"#Pæ¯”æ­¦å¤§ä¼šæ¢èŠ±" },		--æ¢èŠ±
 	}
 	local	title			= title_lst[place]
-	x808003_MsgBox( sceneId, ObjId, "µÃµ½"..title[2].."³ÆºÅ" )
-	LuaFnAwardTitle( sceneId, ObjId, 7, title[1], 7*24 )	--³ÆºÅµÄÓĞĞ§ÆÚÒ»ÖÜ£¬UsefulLifeµ¥Î»Ğ¡Ê±
-	LuaFnDispatchAllTitle( sceneId, ObjId )								--¸üĞÂËùÓĞ³ÆºÅµ½CLIENT
+	x808003_MsgBox( sceneId, ObjId, "å¾—åˆ°"..title[2].."ç§°å·" )
+	LuaFnAwardTitle( sceneId, ObjId, 7, title[1], 7*24 )	--ç§°å·çš„æœ‰æ•ˆæœŸä¸€å‘¨ï¼ŒUsefulLifeå•ä½å°æ—¶
+	LuaFnDispatchAllTitle( sceneId, ObjId )								--æ›´æ–°æ‰€æœ‰ç§°å·åˆ°CLIENT
 	
 	local	strMsg
 	local	rndMsg		= random( 3 )
 	if szTranEqp ~= nil then
 		if rndMsg == 1 then	
-		  strMsg	= format( "#W#{_INFOUSR%s}#PÔÚ±ÈÎä´ó»áÉÏ¼¼Ñ¹ÈºĞÛ£¬ÁîÌìÏÂÓ¢ĞÛÕÛ·ş²»ÒÑ£¬»ñµÃÁË#Y%s#P³ÆºÅ£¬°ä½±ÒÇÊ½ÉÏÈÈÇéµÄÖ§³ÖÕßÃÇËÍÉÏÁË#W#{_INFOMSG%s}#PºÍ#W#{_MONEY%d}#PÒÔÊ¾¶ÔÆäµÄÏ²°®¡£",
+		  strMsg	= format( "#W#{_INFOUSR%s}#Påœ¨æ¯”æ­¦å¤§ä¼šä¸ŠæŠ€å‹ç¾¤é›„ï¼Œä»¤å¤©ä¸‹è‹±é›„æŠ˜æœä¸å·²ï¼Œè·å¾—äº†#Y%s#Pç§°å·ï¼Œé¢å¥–ä»ªå¼ä¸Šçƒ­æƒ…çš„æ”¯æŒè€…ä»¬é€ä¸Šäº†#W#{_INFOMSG%s}#På’Œ#W#{_MONEY%d}#Pä»¥ç¤ºå¯¹å…¶çš„å–œçˆ±ã€‚",
 		  	LuaFnGetName( sceneId, ObjId ),
 		  	title[2],
 		  	szTranEqp, gold )
 		elseif rndMsg == 2 then
-			strMsg	= format( "#W#{_INFOUSR%s}#PÔÚ±ÈÎä´ó»á±íÏÖ³öÖÚ£¬¾ª¶¯ÁË³¯Í¢£¬ÌØ´Í#W%s#P³ÆºÅ¼°#W#{_INFOMSG%s}#PÓë#W#{_MONEY%d}#PÒÔÊ¾»Ê¶÷ºÆµ´¡£",
+			strMsg	= format( "#W#{_INFOUSR%s}#Påœ¨æ¯”æ­¦å¤§ä¼šè¡¨ç°å‡ºä¼—ï¼ŒæƒŠåŠ¨äº†æœå»·ï¼Œç‰¹èµ#W%s#Pç§°å·åŠ#W#{_INFOMSG%s}#Pä¸#W#{_MONEY%d}#Pä»¥ç¤ºçš‡æ©æµ©è¡ã€‚",
 				LuaFnGetName( sceneId, ObjId ),
 				title[2],
 				szTranEqp, gold )
 		else
-			strMsg	= format( "#W#{_INFOUSR%s}#PÎª¶áÈ¡#W%s#P³ÆºÅ£¬ÔÚ±ÈÎä´ó»áÉÏÊ¹ÆäÃÅÅÉÑïÃû½­ºş£¬¸ÃÃÅÅÉÕÆÃÅÈËÉõÊÇĞÄÏ²£¬¶îÍâÓÖ´ÍÆä#W#{_INFOMSG%s}#PºÍ#W#{_MONEY%d}#PÒÔÕÃÆä¹¦¡£",
+			strMsg	= format( "#W#{_INFOUSR%s}#Pä¸ºå¤ºå–#W%s#Pç§°å·ï¼Œåœ¨æ¯”æ­¦å¤§ä¼šä¸Šä½¿å…¶é—¨æ´¾æ‰¬åæ±Ÿæ¹–ï¼Œè¯¥é—¨æ´¾æŒé—¨äººç”šæ˜¯å¿ƒå–œï¼Œé¢å¤–åˆèµå…¶#W#{_INFOMSG%s}#På’Œ#W#{_MONEY%d}#Pä»¥å½°å…¶åŠŸã€‚",
 				LuaFnGetName( sceneId, ObjId ),
 				title[2],
 				szTranEqp, gold )
@@ -614,14 +614,14 @@ function x808003_OnPlyBounty( sceneId, guid, place, tabId )
 end
 
 --**********************************
---ĞÑÄ¿ÌáÊ¾
+--é†’ç›®æç¤º
 --**********************************
 function x808003_MsgBox( sceneId, selfId, Msg )
 
 	if Msg == nil then
 		return
 	end
-	--ÊÇ·ñ´¦ÓÚÎŞ·¨Ö´ĞĞÂß¼­µÄ×´Ì¬
+	--æ˜¯å¦å¤„äºæ— æ³•æ‰§è¡Œé€»è¾‘çš„çŠ¶æ€
 	if LuaFnIsCanDoScriptLogic( sceneId, selfId ) ~= 1 then
 		return
 	end
@@ -640,7 +640,7 @@ function x808003_MsgBox( sceneId, selfId, Msg )
 end
 
 --**********************************
---È«Çò¹«¸æ
+--å…¨çƒå…¬å‘Š
 --**********************************
 function x808003_MyGlobalNews( sceneId, Msg )
 

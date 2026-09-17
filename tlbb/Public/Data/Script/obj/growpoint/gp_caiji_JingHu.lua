@@ -1,32 +1,32 @@
--- Éú³¤µã ²É¼¯[²É¿ó²ÉÒ©]
+-- ç”Ÿé•¿ç‚¹ é‡‡é›†[é‡‡çŸ¿é‡‡è¯]
 
--- ½Å±¾ºÅ
+-- è„šæœ¬å·
 x710531_g_ScriptId = 710531
 
--- Éú³¤µãĞÅÏ¢
+-- ç”Ÿé•¿ç‚¹ä¿¡æ¯
 x710531_g_GPInfo = {}
 
--- Ëæ»úÒò×Ó
+-- éšæœºå› å­
 x710531_g_RandNum = 10000
 
--- abilityId: Éú³¤µã¶ÔÓ¦¼¼ÄÜ name: Éú³¤µãµÄÃû×Ö
--- mainId: Ö÷Òªµô³öÎï mExtraCountOdds: Ö÷Òªµô³öÎï¶îÍâµô³öÊıÁ¿µÄ¼¸ÂÊ
--- associatedId: ¸±²úÆ·ÁĞ±í£¬aOdds ¼¸ÂÊ³öÏÖÊ±Ëæ»ú³öÒ»¸ö£¬ÁĞ±í¿ÉÒÔÎª¿Õ aOdds: ¸±²úÆ·µô³öÂÊ aExtraCountOdds: ³öÏÖ¸±²úÆ·ºó¶îÍâÊıÁ¿¼¸ÂÊ
--- rareId: Ï¡ÓĞÎïÆ·£¬Ï¡ÓĞÎïÆ·¿ÉÒÔÃ»ÓĞ£¬Ìî -1£¬ rOdds: Ï¡ÓĞÎïÆ·µô³öÂÊ
--- needLevel: ²É¼¯´ËÉú³¤µãĞèÒªµÄ¼¶±ğ
+-- abilityId: ç”Ÿé•¿ç‚¹å¯¹åº”æŠ€èƒ½ name: ç”Ÿé•¿ç‚¹çš„åå­—
+-- mainId: ä¸»è¦æ‰å‡ºç‰© mExtraCountOdds: ä¸»è¦æ‰å‡ºç‰©é¢å¤–æ‰å‡ºæ•°é‡çš„å‡ ç‡
+-- associatedId: å‰¯äº§å“åˆ—è¡¨ï¼ŒaOdds å‡ ç‡å‡ºç°æ—¶éšæœºå‡ºä¸€ä¸ªï¼Œåˆ—è¡¨å¯ä»¥ä¸ºç©º aOdds: å‰¯äº§å“æ‰å‡ºç‡ aExtraCountOdds: å‡ºç°å‰¯äº§å“åé¢å¤–æ•°é‡å‡ ç‡
+-- rareId: ç¨€æœ‰ç‰©å“ï¼Œç¨€æœ‰ç‰©å“å¯ä»¥æ²¡æœ‰ï¼Œå¡« -1ï¼Œ rOdds: ç¨€æœ‰ç‰©å“æ‰å‡ºç‡
+-- needLevel: é‡‡é›†æ­¤ç”Ÿé•¿ç‚¹éœ€è¦çš„çº§åˆ«
 
--- ÒÔÏÂ²¿·ÖÎª²İÒ©
+-- ä»¥ä¸‹éƒ¨åˆ†ä¸ºè‰è¯
 
-x710531_g_GPInfo[776] = { abilityId = ABILITY_CAIYAO, name = "¾µºşÇ§Äê²İ", mainId = 40004414 }
+x710531_g_GPInfo[776] = { abilityId = ABILITY_CAIYAO, name = "é•œæ¹–åƒå¹´è‰", mainId = 40004414 }
 
--- ÒÔÉÏ²¿·ÖÎª²İÒ©
+-- ä»¥ä¸Šéƒ¨åˆ†ä¸ºè‰è¯
 
--- ³¤Éú³¤µã
+-- é•¿ç”Ÿé•¿ç‚¹
 function x710531_OnCreate( sceneId, growPointType, x, y )
 	
 	
 	-------------------------------------------------------------------	
-	--»î¶¯ÊÇ·ñ¿ªÊ¼
+	--æ´»åŠ¨æ˜¯å¦å¼€å§‹
 	local actId = 36;	
 	local bActStatus = GetActivityParam( sceneId, actId, 0 );
 	
@@ -34,7 +34,7 @@ function x710531_OnCreate( sceneId, growPointType, x, y )
 		return -1;
 	end
 	
-	--²İÒ©ÊÇ·ñÒÑ¾­²úÉú
+	--è‰è¯æ˜¯å¦å·²ç»äº§ç”Ÿ
 	local bQianNianCaoGen = GetActivityParam( sceneId, actId, 1 );
 
 	if bQianNianCaoGen > 0 then
@@ -45,9 +45,9 @@ function x710531_OnCreate( sceneId, growPointType, x, y )
 	
 --	PrintStr("growPointType".."x:"..x.."y:"..y);
 
-	-- Ã¿¸öÉú³¤µã×îÉÙÄÜµÃµ½Ò»¸öÎïÆ·£¬ÕâÀïÖ±½Ó·ÅÈë itembox ÖĞÒ»¸ö
+	-- æ¯ä¸ªç”Ÿé•¿ç‚¹æœ€å°‘èƒ½å¾—åˆ°ä¸€ä¸ªç‰©å“ï¼Œè¿™é‡Œç›´æ¥æ”¾å…¥ itembox ä¸­ä¸€ä¸ª
 	local ItemBoxId = ItemBoxEnterScene( x, y, growPointType, sceneId, QUALITY_MUST_BE_CHANGE,1, 40004414 )	
-	SetItemBoxMaxGrowTime(sceneId,ItemBoxId,30*60*1000)	--Éè¶¨»ØÊÕÊ±¼ä
+	SetItemBoxMaxGrowTime(sceneId,ItemBoxId,30*60*1000)	--è®¾å®šå›æ”¶æ—¶é—´
 	
 	SetActivityParam( sceneId, actId, 1, 1 );
 	
@@ -56,7 +56,7 @@ function x710531_OnCreate( sceneId, growPointType, x, y )
 
 end
 
--- µã»÷Éú³¤µãÊ±
+-- ç‚¹å‡»ç”Ÿé•¿ç‚¹æ—¶
 function x710531_OnOpen( sceneId, selfId, targetId )
 
 
@@ -64,28 +64,28 @@ function x710531_OnOpen( sceneId, selfId, targetId )
 	return OR_OK
 end
 
--- ½ø¶ÈÌõ×ßÍêÁË
+-- è¿›åº¦æ¡èµ°å®Œäº†
 function x710531_OnProcOver( sceneId, selfId, targetId )
 	local growPointType = LuaFnGetItemBoxGrowPointType( sceneId, targetId )
 	
 
-	-- ÏûºÄ¾«Á¦
+	-- æ¶ˆè€—ç²¾åŠ›
 --	CallScriptFunction( ABILITYLOGIC_ID, "EnergyCostCaiJi", sceneId, selfId, GPInfo.abilityId, GPInfo.needLevel )
 	return OR_OK
 end
 
--- Ïä×Ó¼ñÍêÁË£¬»ØÊÕ
+-- ç®±å­æ¡å®Œäº†ï¼Œå›æ”¶
 function x710531_OnRecycle( sceneId, selfId, targetId)
 	local growPointType = LuaFnGetItemBoxGrowPointType( sceneId, targetId )
 	
 
-	--Í³¼ÆÊı¾İ
-	LuaFnAuditHDXianCaoZhengDuo(sceneId, selfId, "²É¼¯ÏÉ²İ");
+	--ç»Ÿè®¡æ•°æ®
+	LuaFnAuditHDXianCaoZhengDuo(sceneId, selfId, "é‡‡é›†ä»™è‰");
 
 --	LuaFnAuditAbility(sceneId, selfId, GPInfo.abilityId, -1, -1)
-	-- Ôö¼ÓÊìÁ·¶È
+	-- å¢åŠ ç†Ÿç»ƒåº¦
 --	CallScriptFunction( ABILITYLOGIC_ID, "GainExperience", sceneId, selfId, GPInfo.abilityId, GPInfo.needLevel )
-	--·µ»Ø1£¬Éú³¤µã»ØÊÕ
+	--è¿”å›1ï¼Œç”Ÿé•¿ç‚¹å›æ”¶
 	return 1
 end
 

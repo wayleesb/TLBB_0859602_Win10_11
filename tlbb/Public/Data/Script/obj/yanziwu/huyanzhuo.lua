@@ -1,18 +1,18 @@
 -- 402241
--- ºôÑÓ×Æ   Ñà×ÓÎë¸±±¾ÄÚ
+-- å‘¼å»¶ç¼   ç‡•å­åå‰¯æœ¬å†…
 
---Ì«ºş Àî¸Ù
+--å¤ªæ¹– æçº²
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x402241_g_scriptId = 402241
 
 x402241_g_SceneData_1 = 8
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x402241_g_eventList={}
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x402241_UpdateEventList( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
@@ -25,8 +25,8 @@ function x402241_UpdateEventList( sceneId, selfId,targetId )
 		
 		
 		if LuaFnGetCopySceneData_Param(sceneId, 8) == 1  then
-			AddNumText( sceneId, x402241_g_scriptId, "Õ½¶·°É£¡", 10 ,1  )
-			--AddNumText( sceneId, x402241_g_scriptId, "Ö±½ÓÌøµ½µÚ¶ş¹Ø", 10 ,2  )
+			AddNumText( sceneId, x402241_g_scriptId, "æˆ˜æ–—å§ï¼", 10 ,1  )
+			--AddNumText( sceneId, x402241_g_scriptId, "ç›´æ¥è·³åˆ°ç¬¬äºŒå…³", 10 ,2  )
 		end
 		
 		for i, eventId in x402241_g_eventList do
@@ -37,20 +37,20 @@ function x402241_UpdateEventList( sceneId, selfId,targetId )
 end
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x402241_OnDefaultEvent( sceneId, selfId,targetId )
 	x402241_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x402241_OnEventRequest( sceneId, selfId, targetId, eventId )
 
 	if GetNumText() == 1  then
-		-- ¼ì²âµ±Ç°ÊÇ²»ÊÇÔÚÏà¹Ø¸±±¾£¬ÕâÀï±ØĞëÒª×ö°²È«¼ì²é£¬ÏÖÔÚÏÖ²»×ö
-		if GetName(sceneId, targetId) ~= "ºôÑÓ±ª"  then
+		-- æ£€æµ‹å½“å‰æ˜¯ä¸æ˜¯åœ¨ç›¸å…³å‰¯æœ¬ï¼Œè¿™é‡Œå¿…é¡»è¦åšå®‰å…¨æ£€æŸ¥ï¼Œç°åœ¨ç°ä¸åš
+		if GetName(sceneId, targetId) ~= "å‘¼å»¶è±¹"  then
 			return
 		end
 		
@@ -58,7 +58,7 @@ function x402241_OnEventRequest( sceneId, selfId, targetId, eventId )
 			LuaFnSetCopySceneData_Param(sceneId, 8, 2)
 		end
 
-		-- ¹Ø±Õ½çÃæ
+		-- å…³é—­ç•Œé¢
 		BeginUICommand(sceneId)
 		EndUICommand(sceneId)
 		DispatchUICommand(sceneId,selfId, 1000)
@@ -67,8 +67,8 @@ function x402241_OnEventRequest( sceneId, selfId, targetId, eventId )
 	end
 	
 	if GetNumText() == 2  then
-		-- ¼ì²âµ±Ç°ÊÇ²»ÊÇÔÚÏà¹Ø¸±±¾£¬ÕâÀï±ØĞëÒª×ö°²È«¼ì²é£¬ÏÖÔÚÏÖ²»×ö
-		if GetName(sceneId, targetId) ~= "ºôÑÓ±ª"  then
+		-- æ£€æµ‹å½“å‰æ˜¯ä¸æ˜¯åœ¨ç›¸å…³å‰¯æœ¬ï¼Œè¿™é‡Œå¿…é¡»è¦åšå®‰å…¨æ£€æŸ¥ï¼Œç°åœ¨ç°ä¸åš
+		if GetName(sceneId, targetId) ~= "å‘¼å»¶è±¹"  then
 			return
 		end
 		
@@ -76,7 +76,7 @@ function x402241_OnEventRequest( sceneId, selfId, targetId, eventId )
 			LuaFnSetCopySceneData_Param(sceneId, 8, 10)
 		end
 		BeginEvent(sceneId)
-			AddText(sceneId, "µÚ¶ş¹ØÒÑ¾­¿ªÆô¡£")
+			AddText(sceneId, "ç¬¬äºŒå…³å·²ç»å¼€å¯ã€‚")
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 
@@ -92,7 +92,7 @@ function x402241_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x402241_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x402241_g_eventList do
@@ -107,10 +107,10 @@ function x402241_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x402241_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
-	--¾Ü¾øÖ®ºó£¬Òª·µ»ØNPCµÄÊÂ¼şÁĞ±í
+	--æ‹’ç»ä¹‹åï¼Œè¦è¿”å›NPCçš„äº‹ä»¶åˆ—è¡¨
 	for i, findId in x402241_g_eventList do
 		if missionScriptId == findId then
 			x402241_UpdateEventList( sceneId, selfId, targetId )
@@ -120,7 +120,7 @@ function x402241_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¼ÌĞø£¨ÒÑ¾­½ÓÁËÈÎÎñ£©
+--ç»§ç»­ï¼ˆå·²ç»æ¥äº†ä»»åŠ¡ï¼‰
 --**********************************
 function x402241_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x402241_g_eventList do
@@ -132,7 +132,7 @@ function x402241_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---Ìá½»ÒÑ×öÍêµÄÈÎÎñ
+--æäº¤å·²åšå®Œçš„ä»»åŠ¡
 --**********************************
 function x402241_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, selectRadioId )
 	for i, findId in x402241_g_eventList do
@@ -144,7 +144,7 @@ function x402241_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 end
 
 --**********************************
---ËÀÍöÊÂ¼ş
+--æ­»äº¡äº‹ä»¶
 --**********************************
 function x402241_OnDie( sceneId, selfId, killerId )
 	LuaFnSetCopySceneData_Param(sceneId, 26, 500)

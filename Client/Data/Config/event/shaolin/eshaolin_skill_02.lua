@@ -3,20 +3,20 @@ x212141_g_ScriptId = 212141
 x212141_g_Position_X=262
 x212141_g_Position_Z=46
 x212141_g_SceneID=18
-x212141_g_AccomplishNPC_Name="ÖÖÊÀºâ"
+x212141_g_AccomplishNPC_Name="ç§ä¸–è¡¡"
 x212141_g_MissionId = 964
 x212141_g_PreMissionId = 963
 x212141_g_MissionKind = 20
 x212141_g_MissionLevel = 30
 x212141_g_IfMissionElite = 0
-x212141_g_MissionName="À§ÊŞÓÌ¶·"
+x212141_g_MissionName="å›°å…½çŠ¹æ–—"
 x212141_g_MissionInfo="#{Mis_shaolin_964}"
-x212141_g_MissionTarget="#GÑãÃÅ¹Ø#WµÄ#RÖÖÊÀºâ#W#{_INFOAIM263,46,18,ÖÖÊÀºâ}ÒªÄãÔÚÑãÃÅ¹Ø°üÎ§È¦ÖĞÉ±ËÀ¶şÊ®ÃûÇØ¼ÒÕ¯°Ü±ø¡£"
-x212141_g_MissionContinue="  ÄãÒÑ¾­¸ÉµôËùÓĞµÄÇØ¼ÒÕ¯°Ü±øÁËÂğ£¿"
-x212141_g_MissionComplete="  Õæ²»À¢ÊÇÀÏÊ¦Ö¸µã¹ıµÄÈËÎï£¬$N¹ûÈ»Ãû²»Ğé´«£¡"
+x212141_g_MissionTarget="#Gé›é—¨å…³#Wçš„#Rç§ä¸–è¡¡#W#{_INFOAIM263,46,18,ç§ä¸–è¡¡}è¦ä½ åœ¨é›é—¨å…³åŒ…å›´åœˆä¸­æ€æ­»äºŒååç§¦å®¶å¯¨è´¥å…µã€‚"
+x212141_g_MissionContinue="  ä½ å·²ç»å¹²æ‰æ‰€æœ‰çš„ç§¦å®¶å¯¨è´¥å…µäº†å—ï¼Ÿ"
+x212141_g_MissionComplete="  çœŸä¸æ„§æ˜¯è€å¸ˆæŒ‡ç‚¹è¿‡çš„äººç‰©ï¼Œ$Næœç„¶åä¸è™šä¼ ï¼"
 x212141_g_MoneyBonus=1000
 x212141_g_exp=2000
-x212141_g_Custom	= { {id="ÒÑÉ±ËÀÇØ¼ÒÕ¯°Ü±ø",num=20} }
+x212141_g_Custom	= { {id="å·²æ€æ­»ç§¦å®¶å¯¨è´¥å…µ",num=20} }
 x212141_g_IsMissionOkFail = 0
 x212141_g_Menpai = 0
 --MisDescEnd

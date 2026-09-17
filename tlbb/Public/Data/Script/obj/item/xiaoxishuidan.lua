@@ -1,25 +1,25 @@
 -- 300043 
--- Ğ¡Ï´Ëèµ¤
--- Ê¹ÓÃÖ®ºó¿ÉÒÔ½«Ñ¡ÔñÊôĞÔµÄ·ÖÅäµãÊıÖĞµÄ5µã±äÎªÇ±ÄÜ¡£
+-- å°æ´—é«“ä¸¹
+-- ä½¿ç”¨ä¹‹åå¯ä»¥å°†é€‰æ‹©å±æ€§çš„åˆ†é…ç‚¹æ•°ä¸­çš„5ç‚¹å˜ä¸ºæ½œèƒ½ã€‚
 
 
--- ½Å±¾ºÅ
+-- è„šæœ¬å·
 x300043_g_scriptId = 300043
-x300043_g_ItemId = 30008005  -- Ò©Ë®ID
+x300043_g_ItemId = 30008005  -- è¯æ°´ID
 x300043_g_UseScriptId = 300053
 --**********************************
--- ÊÂ¼ş½»»¥Èë¿Ú
+-- äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x300043_OnDefaultEvent( sceneId, selfId )
 	BeginEvent(sceneId)
-		AddText(sceneId, "#YĞ¡Ï´Ëèµ¤")
-		AddText(sceneId, "  Ê¹ÓÃÖ®ºó¿ÉÒÔ½«Ä³Ò»ÏîÊôĞÔÒÑ·ÖÅäµãÊıÖĞµÄ#Y5µã#W±äÎªÇ±ÄÜ¡£")
-		AddNumText(sceneId, x300043_g_UseScriptId,"Íü¼Ç5µãÁ¦Á¿", 0, 1)
-		AddNumText(sceneId, x300043_g_UseScriptId,"Íü¼Ç5µãÁéÆø", 0, 2)
-		AddNumText(sceneId, x300043_g_UseScriptId,"Íü¼Ç5µãÌåÁ¦", 0, 3)
-		AddNumText(sceneId, x300043_g_UseScriptId,"Íü¼Ç5µã¶¨Á¦", 0, 4)
-		AddNumText(sceneId, x300043_g_UseScriptId,"Íü¼Ç5µãÉí·¨", 0, 5)
-		AddNumText(sceneId, x300043_g_UseScriptId,"ÒÔºóÔÙËµ", 0, 6)
+		AddText(sceneId, "#Yå°æ´—é«“ä¸¹")
+		AddText(sceneId, "  ä½¿ç”¨ä¹‹åå¯ä»¥å°†æŸä¸€é¡¹å±æ€§å·²åˆ†é…ç‚¹æ•°ä¸­çš„#Y5ç‚¹#Wå˜ä¸ºæ½œèƒ½ã€‚")
+		AddNumText(sceneId, x300043_g_UseScriptId,"å¿˜è®°5ç‚¹åŠ›é‡", 0, 1)
+		AddNumText(sceneId, x300043_g_UseScriptId,"å¿˜è®°5ç‚¹çµæ°”", 0, 2)
+		AddNumText(sceneId, x300043_g_UseScriptId,"å¿˜è®°5ç‚¹ä½“åŠ›", 0, 3)
+		AddNumText(sceneId, x300043_g_UseScriptId,"å¿˜è®°5ç‚¹å®šåŠ›", 0, 4)
+		AddNumText(sceneId, x300043_g_UseScriptId,"å¿˜è®°5ç‚¹èº«æ³•", 0, 5)
+		AddNumText(sceneId, x300043_g_UseScriptId,"ä»¥åå†è¯´", 0, 6)
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,-1)
 	
@@ -34,14 +34,14 @@ function x300043_IsSkillLikeScript( sceneId, selfId)
 end
 
 function x300043_WashPoint(sceneId, selfId, nType, nPoint, szStr)
-	-- ¿Û³ıÏà¹ØµÄÎïÆ·
+	-- æ‰£é™¤ç›¸å…³çš„ç‰©å“
 	local ret = DelItem(sceneId, selfId, x300043_g_ItemId, 1)
 	if ret == 1  then
 		local nNumber = LuaFnWashSomePoints(sceneId, selfId, nType, nPoint)
 		
 		BeginEvent(sceneId)
-			AddText(sceneId, "#YĞ¡Ï´Ëèµ¤")
-			AddText(sceneId, "  Äú³É¹¦½«#Y" .. tonumber(nNumber) .. "µã#WÒÑ·ÖÅäµÄ#Y" .. szStr.. "#WÊôĞÔ±äÎªÇ±ÄÜ¡£")
+			AddText(sceneId, "#Yå°æ´—é«“ä¸¹")
+			AddText(sceneId, "  æ‚¨æˆåŠŸå°†#Y" .. tonumber(nNumber) .. "ç‚¹#Wå·²åˆ†é…çš„#Y" .. szStr.. "#Wå±æ€§å˜ä¸ºæ½œèƒ½ã€‚")
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,-1)
 	end		

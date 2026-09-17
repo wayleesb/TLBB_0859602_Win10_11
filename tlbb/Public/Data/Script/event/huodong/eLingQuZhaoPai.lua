@@ -1,75 +1,75 @@
 --------------------------------------------
---ÎåÒ»ÁìÈ¡ÕĞÅÆ»î¶¯½Å±¾
---Created By ĞÅµÂ·å
+--äº”ä¸€é¢†å–æ‹›ç‰Œæ´»åŠ¨è„šæœ¬
+--Created By ä¿¡å¾·å³°
 --------------------------------------------
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x808090_g_ScriptId = 808090
 
---»î¶¯²ÎÓëÍæ¼ÒµÈ¼¶ÏÂÏŞ
+--æ´»åŠ¨å‚ä¸ç©å®¶ç­‰çº§ä¸‹é™
 x808090_g_LowerLimitLevel = 30
 
---·¢ËÍ»î¶¯Í¨ÖªÓÊ¼şÊ±¼äÓò
-x808090_g_MailStartDayTime = 8121		--·¢ËÍÓÊ¼ş¿ªÊ¼Ê±¼ä 2008-05-01
-x808090_g_MailEndDayTime = 8127			--·¢ËÍÓÊ¼ş½áÊøÊ±¼ä 2008-05-07
+--å‘é€æ´»åŠ¨é€šçŸ¥é‚®ä»¶æ—¶é—´åŸŸ
+x808090_g_MailStartDayTime = 8121		--å‘é€é‚®ä»¶å¼€å§‹æ—¶é—´ 2008-05-01
+x808090_g_MailEndDayTime = 8127			--å‘é€é‚®ä»¶ç»“æŸæ—¶é—´ 2008-05-07
 
---ÕĞÅÆID±í
+--æ‹›ç‰ŒIDè¡¨
 x808090_g_ZhaoPaiIDT = {
-													{30008021,	"ÕĞÅÆ£ºÄŞºçµÆ"},
-													{30008022,	"ÕĞÅÆ£ºµ¶½£Õù·æ"},
-													{30008023,	"ÕĞÅÆ£ºÌú¼×Í­±Ú"},
-													{30008024,	"ÕĞÅÆ£ºÕäÇİÒìÊŞ"},
-													{30008025,	"ÕĞÅÆ£º½ğ×ÖÕĞÅÆ"}
+													{30008021,	"æ‹›ç‰Œï¼šéœ“è™¹ç¯"},
+													{30008022,	"æ‹›ç‰Œï¼šåˆ€å‰‘äº‰é”‹"},
+													{30008023,	"æ‹›ç‰Œï¼šé“ç”²é“œå£"},
+													{30008024,	"æ‹›ç‰Œï¼šçç¦½å¼‚å…½"},
+													{30008025,	"æ‹›ç‰Œï¼šé‡‘å­—æ‹›ç‰Œ"}
 												}
 
---¿É¹©ÁìÈ¡ÕĞÅÆÖÖÀà
+--å¯ä¾›é¢†å–æ‹›ç‰Œç§ç±»
 x808090_g_ZhaoPaiType = 5												
 
---Ã¿´ÎÁìÈ¡ÕĞÅÆµÄÊıÁ¿
+--æ¯æ¬¡é¢†å–æ‹›ç‰Œçš„æ•°é‡
 x808090_g_ZhaoPaiCount = 1
 
---ÁìÈ¡ÕĞÅÆÊ±ºòĞ§¹ûID(¸ÃĞ§¹û°üº¬ÒôĞ§)
+--é¢†å–æ‹›ç‰Œæ—¶å€™æ•ˆæœID(è¯¥æ•ˆæœåŒ…å«éŸ³æ•ˆ)
 x808090_g_GetZhaoPaiImpactID = 49
 
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x808090_OnDefaultEvent( sceneId, selfId, targetId )
 	local ItemID = GetNumText()
-	if(ItemID == 10) then	--´ó¼ÒÒ»ÆğÀ´°ÚÌ¯
+	if(ItemID == 10) then	--å¤§å®¶ä¸€èµ·æ¥æ‘†æ‘Š
 		BeginEvent(sceneId)
 			AddText(sceneId,"#{LQZP_INTRO}")
-			AddNumText( sceneId, x808090_g_ScriptId, "ÁìÈ¡ÕĞÅÆ", 6, 12 )
-			AddNumText( sceneId, x808090_g_ScriptId, "È¡Ïû", 6, 13 )
+			AddNumText( sceneId, x808090_g_ScriptId, "é¢†å–æ‹›ç‰Œ", 6, 12 )
+			AddNumText( sceneId, x808090_g_ScriptId, "å–æ¶ˆ", 6, 13 )
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)		
-	elseif(ItemID == 11) then	--°ïÖú
+	elseif(ItemID == 11) then	--å¸®åŠ©
 		BeginEvent(sceneId)
 			AddText(sceneId,"#{LQZP_HELP}")
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 	elseif(ItemID == 12) then
-		--·¢·ÅÕĞÅÆ
+		--å‘æ”¾æ‹›ç‰Œ
 		x808090_GeiZhaoPai(sceneId, selfId, targetId)
-	elseif(ItemID == 13) then	--"ÎÒÔÙÏëÏë"
-		--¹Ø±Õ½çÃæ
+	elseif(ItemID == 13) then	--"æˆ‘å†æƒ³æƒ³"
+		--å…³é—­ç•Œé¢
 		DispatchUICommand(sceneId, selfId, 1000)
 	end	
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x808090_OnEnumerate( sceneId, selfId, targetId )
-	if x808090_CheckRightTime() == 1 then	--ÕıÈ·µÄ»î¶¯Ê±¼ä
-		AddNumText(sceneId, x808090_g_ScriptId, "´ó¼ÒÒ»ÆğÀ´°ÚÌ¯", 6, 10 )
-		AddNumText(sceneId, x808090_g_ScriptId, "´ó¼ÒÒ»ÆğÀ´°ÚÌ¯»î¶¯°ïÖú", 11, 11 )
+	if x808090_CheckRightTime() == 1 then	--æ­£ç¡®çš„æ´»åŠ¨æ—¶é—´
+		AddNumText(sceneId, x808090_g_ScriptId, "å¤§å®¶ä¸€èµ·æ¥æ‘†æ‘Š", 6, 10 )
+		AddNumText(sceneId, x808090_g_ScriptId, "å¤§å®¶ä¸€èµ·æ¥æ‘†æ‘Šæ´»åŠ¨å¸®åŠ©", 11, 11 )
 	end
 end
 
 --**********************************
---¼ì²âµ±Ç°ÊÇ·ñÊÇ»î¶¯Ê±¼ä
+--æ£€æµ‹å½“å‰æ˜¯å¦æ˜¯æ´»åŠ¨æ—¶é—´
 --**********************************
 function x808090_CheckRightTime()
 	if GetDayTime() >= x808090_g_MailStartDayTime then
@@ -80,10 +80,10 @@ function x808090_CheckRightTime()
 end
 
 --**********************************
---·¢·ÅÕĞÅÆ
+--å‘æ”¾æ‹›ç‰Œ
 --**********************************
 function x808090_GeiZhaoPai(sceneId, selfId, targetId)	
-	--¼ì²âµÈ¼¶ÊÇ·ñ´ïµ½ÒªÇó
+	--æ£€æµ‹ç­‰çº§æ˜¯å¦è¾¾åˆ°è¦æ±‚
 	if GetLevel( sceneId, selfId ) < x808090_g_LowerLimitLevel then
 		BeginEvent( sceneId )
 			AddText( sceneId, "#{LQZP_LOWERLIMITLEVEL}" )
@@ -92,10 +92,10 @@ function x808090_GeiZhaoPai(sceneId, selfId, targetId)
 		return
 	end
 	
-	--¼ì²âµ±ÌìÊÇ·ñÁìÈ¡¹ı"ÕĞÅÆ":Ã¿ÌìÖ»ÄÜÁì1´Î.	
-	local LastDayValue = GetMissionData(sceneId, selfId, MD_LINGQUZHAOPAI_LASTDATE)--ÉÏ´ÎÁìÈ¡µÄÈÕÆÚÖµ(ÒÔÌìÎªµ¥Î»)
-	local CurDayValue = GetDayTime()--µ±Ç°Ê±¼äÖµ(ÒÔÌìÎªµ¥Î»)
-	if(CurDayValue <= LastDayValue) then	--Áì¹ıÒ»´ÎÁË
+	--æ£€æµ‹å½“å¤©æ˜¯å¦é¢†å–è¿‡"æ‹›ç‰Œ":æ¯å¤©åªèƒ½é¢†1æ¬¡.	
+	local LastDayValue = GetMissionData(sceneId, selfId, MD_LINGQUZHAOPAI_LASTDATE)--ä¸Šæ¬¡é¢†å–çš„æ—¥æœŸå€¼(ä»¥å¤©ä¸ºå•ä½)
+	local CurDayValue = GetDayTime()--å½“å‰æ—¶é—´å€¼(ä»¥å¤©ä¸ºå•ä½)
+	if(CurDayValue <= LastDayValue) then	--é¢†è¿‡ä¸€æ¬¡äº†
 		BeginEvent( sceneId )
 			AddText( sceneId, "#{LQZP_ONCEPERDAY}" )
 		EndEvent( sceneId )
@@ -103,69 +103,69 @@ function x808090_GeiZhaoPai(sceneId, selfId, targetId)
 		return
 	end	
 	
-	--¼ì²â±³°üÊÇ·ñÓĞµØ·½
+	--æ£€æµ‹èƒŒåŒ…æ˜¯å¦æœ‰åœ°æ–¹
 	if (LuaFnGetPropertyBagSpace( sceneId, selfId ) < x808090_g_ZhaoPaiCount) then
 		BeginEvent( sceneId )
 			AddText( sceneId, "#{LQZP_BAGFULL}" )
 		EndEvent( sceneId )
-		DispatchEventList( sceneId, selfId, targetId )--´°¿ÚÏÔÊ¾"¿Õ¼ä²»×ã"
+		DispatchEventList( sceneId, selfId, targetId )--çª—å£æ˜¾ç¤º"ç©ºé—´ä¸è¶³"
 
 		BeginEvent( sceneId )
 			AddText( sceneId, "#{LQZP_BAGFULLTIP}" )
 		EndEvent( sceneId )
-		DispatchMissionTips( sceneId, selfId )	--ĞÑÄ¿ÌáÊ¾"¿Õ¼ä²»×ã"
+		DispatchMissionTips( sceneId, selfId )	--é†’ç›®æç¤º"ç©ºé—´ä¸è¶³"
 		return
 	end	
 	
-	--Ìõ¼şÍ¨¹ı	
-	--¼ÇÂ¼ÁìÈ¡µÄÊ±¼ä,±£Ö¤Ò»ÌìÒ»´Î
+	--æ¡ä»¶é€šè¿‡	
+	--è®°å½•é¢†å–çš„æ—¶é—´,ä¿è¯ä¸€å¤©ä¸€æ¬¡
 	SetMissionData(sceneId, selfId, MD_LINGQUZHAOPAI_LASTDATE, CurDayValue)
 	
-	--Ëæ»ú·¢·ÅÒ»¸ö"ÕĞÅÆ"
-	local randValue = random(x808090_g_ZhaoPaiType)							--Ëæ¼´Öµ
-	local randZhaoPaiID = x808090_g_ZhaoPaiIDT[randValue][1]		--Ëæ¼´»ñÈ¡µÄÕĞÅÆID
-	local randZhaoPaiName = x808090_g_ZhaoPaiIDT[randValue][2]	--Ëæ»ú»ñÈ¡µÄÕĞÅÆÃû³Æ
+	--éšæœºå‘æ”¾ä¸€ä¸ª"æ‹›ç‰Œ"
+	local randValue = random(x808090_g_ZhaoPaiType)							--éšå³å€¼
+	local randZhaoPaiID = x808090_g_ZhaoPaiIDT[randValue][1]		--éšå³è·å–çš„æ‹›ç‰ŒID
+	local randZhaoPaiName = x808090_g_ZhaoPaiIDT[randValue][2]	--éšæœºè·å–çš„æ‹›ç‰Œåç§°
 	
 	BeginAddItem(sceneId)
 		AddItem(sceneId, randZhaoPaiID, x808090_g_ZhaoPaiCount)
 	EndAddItem(sceneId, selfId)
-	AddItemListToHuman(sceneId, selfId)--¼ÓÎïÆ·¸øÍæ¼Ò
+	AddItemListToHuman(sceneId, selfId)--åŠ ç‰©å“ç»™ç©å®¶
 	
-	--¼ÓÒ»¸ö°üº¬ÉùÒôµÄÌØĞ§
+	--åŠ ä¸€ä¸ªåŒ…å«å£°éŸ³çš„ç‰¹æ•ˆ
 	LuaFnSendSpecificImpactToUnit( sceneId, selfId, selfId, selfId, x808090_g_GetZhaoPaiImpactID, 0 )
 	
-	--ÍêÊÂÁË,ĞÂ½çÃæ:Äú¾ÍÊÕÏÂ°É:)
-	local str = format("    Õâ¸ö#G%s#WÄãÊÕÏÂ°É£¡ÔÚ°ÚÌ¯µÄÊ±ºòÊ¹ÓÃ£¬»áÓĞÒâÏë²»µ½µÄĞ§¹ûàŞ£¡", randZhaoPaiName)
+	--å®Œäº‹äº†,æ–°ç•Œé¢:æ‚¨å°±æ”¶ä¸‹å§:)
+	local str = format("    è¿™ä¸ª#G%s#Wä½ æ”¶ä¸‹å§ï¼åœ¨æ‘†æ‘Šçš„æ—¶å€™ä½¿ç”¨ï¼Œä¼šæœ‰æ„æƒ³ä¸åˆ°çš„æ•ˆæœå™¢ï¼", randZhaoPaiName)
 	BeginEvent( sceneId )
 		AddText( sceneId, str )
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, selfId, targetId )	
 	
-	--ĞÑÄ¿ÌáÊ¾
-	str = format("Äã»ñµÃÒ»¸ö%s¡£", randZhaoPaiName)	
+	--é†’ç›®æç¤º
+	str = format("ä½ è·å¾—ä¸€ä¸ª%sã€‚", randZhaoPaiName)	
 	BeginEvent( sceneId )
 		AddText( sceneId, str )
 	EndEvent( sceneId )
 	DispatchMissionTips( sceneId, selfId )
 	
-	--¹«¸æÍæ¼Ò×Ô¼º
+	--å…¬å‘Šç©å®¶è‡ªå·±
 	BroadMsgByChatPipe( sceneId, selfId, str, MSG2PLAYER_PARA )
 	
-	--Í³¼Æ"ÕĞÅÆ"ÁìÈ¡ÈË´Î
+	--ç»Ÿè®¡"æ‹›ç‰Œ"é¢†å–äººæ¬¡
 	AuditGeiZhaoPai(sceneId, selfId, tostring(randZhaoPaiName))
 end
 
 --**********************************
---¸øĞÂÍæ¼Ò·¢ÓÊ¼ş
+--ç»™æ–°ç©å®¶å‘é‚®ä»¶
 --**********************************
 function x808090_OnPlayerLogin( sceneId, selfId )
 	local curDayTime = GetDayTime()	
-	if curDayTime >= x808090_g_MailStartDayTime and curDayTime <= x808090_g_MailEndDayTime then	--ÔÚ·¢ÓÊ¼şÊ±¼ä
+	if curDayTime >= x808090_g_MailStartDayTime and curDayTime <= x808090_g_MailEndDayTime then	--åœ¨å‘é‚®ä»¶æ—¶é—´
 	
-		local HaveMail = GetMissionData(sceneId, selfId, MD_LINGQUZHAOPAI_HAVESENDMAIL)	--»ñÈ¡¼ÇÂ¼Öµ
-		if(HaveMail == 0)then		--±£Ö¤Íæ¼ÒÔÚÎåÒ»ÆÚ¼äµÇÂ½£¬Ö»»áÊÕµ½Ò»·âÓÊ¼ş
+		local HaveMail = GetMissionData(sceneId, selfId, MD_LINGQUZHAOPAI_HAVESENDMAIL)	--è·å–è®°å½•å€¼
+		if(HaveMail == 0)then		--ä¿è¯ç©å®¶åœ¨äº”ä¸€æœŸé—´ç™»é™†ï¼Œåªä¼šæ”¶åˆ°ä¸€å°é‚®ä»¶
 			LuaFnSendSystemMail( sceneId, GetName(sceneId,selfId), "#{LQZP_HUODONGMAIL}" )
-			SetMissionData(sceneId, selfId, MD_LINGQUZHAOPAI_HAVESENDMAIL, 1)	--¼ÇÂ¼ÊÕµ½¹ıÓÊ¼şÁË
+			SetMissionData(sceneId, selfId, MD_LINGQUZHAOPAI_HAVESENDMAIL, 1)	--è®°å½•æ”¶åˆ°è¿‡é‚®ä»¶äº†
 		end
 	end	
 end

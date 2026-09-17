@@ -1,23 +1,23 @@
---ÎäÒÄNPC
---½§Í¡
---5¡«8¼¶¼ø¶¨ÉÌ
+--æ­¦å¤·NPC
+--æ¶§æ±€
+--5ï½8çº§é‰´å®šå•†
 
 x032006_g_scriptId = 032006
 x032006_g_shoptableindex = 140
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x032006_OnDefaultEvent( sceneId, selfId, targetId )
 	BeginEvent( sceneId )
-		AddText( sceneId, "    ÎÒÕâÀïÓĞÒ»Ğ©¿ÉÒÔ¼ø¶¨×°±¸µÄÊé¾í£¬Äã²»¿´¿´Ã´£¿" )
-		AddNumText( sceneId, x032006_g_scriptId, "¹ºÂò¼ø¶¨·û", 7, 0 )
+		AddText( sceneId, "    æˆ‘è¿™é‡Œæœ‰ä¸€äº›å¯ä»¥é‰´å®šè£…å¤‡çš„ä¹¦å·ï¼Œä½ ä¸çœ‹çœ‹ä¹ˆï¼Ÿ" )
+		AddNumText( sceneId, x032006_g_scriptId, "è´­ä¹°é‰´å®šç¬¦", 7, 0 )
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x032006_OnEventRequest( sceneId, selfId, targetId, eventId )
 	if GetNumText() == 0 then

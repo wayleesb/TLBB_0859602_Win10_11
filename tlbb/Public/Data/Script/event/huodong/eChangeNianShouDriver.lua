@@ -1,67 +1,67 @@
 
--- ¶Ò»»ÎïÆ·
+-- å…‘æ¢ç‰©å“
 x889051_g_scriptId = 889051
 
---°ó¶¨µÄËéÆ¬
+--ç»‘å®šçš„ç¢ç‰‡
 x889051_g_SuiPian1ID = 30504022
---ÆÕÍ¨µÄËéÆ¬
+--æ™®é€šçš„ç¢ç‰‡
 x889051_g_SuiPian2ID = 30504021
---°ó¶¨µÄÆ´Í¼µÄID
+--ç»‘å®šçš„æ‹¼å›¾çš„ID
 x889051_g_FigureID1   = 30504024
---·Ç°ó¶¨µÄÆ´Í¼µÄID
+--éç»‘å®šçš„æ‹¼å›¾çš„ID
 x889051_g_FigureID2   = 30504023
---¶Ò»»Æ´Í¼ĞèÒªµÄËéÆ¬ÊıÁ¿
+--å…‘æ¢æ‹¼å›¾éœ€è¦çš„ç¢ç‰‡æ•°é‡
 x889051_g_FigureCount = 300
 
---¶Ò»»³õ¼¶ÄêÊŞĞèÒªµÄËéÆ¬ÊıÁ¿
+--å…‘æ¢åˆçº§å¹´å…½éœ€è¦çš„ç¢ç‰‡æ•°é‡
 x889051_g_LowNianShouCount = 49
 
---¶Ò»»ÖĞ¼¶ÄêÊŞĞèÒªµÄÆ´Í¼ÊıÁ¿
+--å…‘æ¢ä¸­çº§å¹´å…½éœ€è¦çš„æ‹¼å›¾æ•°é‡
 x889051_g_MiddleNianShouCount = 1
 
---¶Ò»»¸ß¼¶ÄêÊŞĞèÒªµÄÆ´Í¼ÊıÁ¿
+--å…‘æ¢é«˜çº§å¹´å…½éœ€è¦çš„æ‹¼å›¾æ•°é‡
 x889051_g_HighNianShouCount = 15
 
---µÍ¼¶ÄêÊŞID
+--ä½çº§å¹´å…½ID
 x889051_g_LowNianShouID = 10141800
---ÖĞ¼¶ÄêÊŞID
+--ä¸­çº§å¹´å…½ID
 x889051_g_MiddleNianShouID = 10141801
---¸ß¼¶ÄêÊŞID
+--é«˜çº§å¹´å…½ID
 x889051_g_HighNianShouID = 10141802
 
 x889051_gGongGaoInfo ={
-  "#{_INFOUSR%s}#cff99cc½«ÊÕ¼¯µ½µÄ49¸öÄêÊŞËéÆ¬½»µ½#GÂåÑôïÚÊ¦£¨81£¬117£©#Y¼ÖÍşĞÅ#cff99ccÊÖÉÏ£¬Ò»Ö»#{_INFOMSG%s}#cff99ccµ®ÉúÁË¡£",
-  "#{_INFOUSR%s}#cff99ccÓÃ²ü¶¶µÄË«ÊÖ½«1¸öÄêÊŞÆ´Í¼½»µ½#GÂåÑôïÚÊ¦£¨81£¬117£©#Y¼ÖÍşĞÅ#cff99ccÊÖÉÏ£¬Ò»Ö»#{_INFOMSG%s}#cff99cc´ÓÌì¶ø½µ¡£",
-  "#{_INFOUSR%s}#cff99cc½«15¸öÄêÊŞÆ´Í¼½»µ½#GÂåÑôïÚÊ¦£¨81£¬117£©#Y¼ÖÍşĞÅ#cff99ccÊÖÉÏ£¬Ò»Ö»#{_INFOMSG%s}#cff99ccÆÆËéĞé¿Õ¶øÀ´¡£",
+  "#{_INFOUSR%s}#cff99ccå°†æ”¶é›†åˆ°çš„49ä¸ªå¹´å…½ç¢ç‰‡äº¤åˆ°#Gæ´›é˜³é•–å¸ˆï¼ˆ81ï¼Œ117ï¼‰#Yè´¾å¨ä¿¡#cff99ccæ‰‹ä¸Šï¼Œä¸€åª#{_INFOMSG%s}#cff99ccè¯ç”Ÿäº†ã€‚",
+  "#{_INFOUSR%s}#cff99ccç”¨é¢¤æŠ–çš„åŒæ‰‹å°†1ä¸ªå¹´å…½æ‹¼å›¾äº¤åˆ°#Gæ´›é˜³é•–å¸ˆï¼ˆ81ï¼Œ117ï¼‰#Yè´¾å¨ä¿¡#cff99ccæ‰‹ä¸Šï¼Œä¸€åª#{_INFOMSG%s}#cff99ccä»å¤©è€Œé™ã€‚",
+  "#{_INFOUSR%s}#cff99ccå°†15ä¸ªå¹´å…½æ‹¼å›¾äº¤åˆ°#Gæ´›é˜³é•–å¸ˆï¼ˆ81ï¼Œ117ï¼‰#Yè´¾å¨ä¿¡#cff99ccæ‰‹ä¸Šï¼Œä¸€åª#{_INFOMSG%s}#cff99ccç ´ç¢è™šç©ºè€Œæ¥ã€‚",
 }
 
 
 --MisDescEnd
 
---¶Ò»»³õ¼¶ÄêÊŞ
+--å…‘æ¢åˆçº§å¹´å…½
 function x889051_ChangeLowNianShou(sceneId, selfId, targetId)
 	local nCount =LuaFnGetAvailableItemCount(sceneId, selfId,x889051_g_SuiPian1ID) + LuaFnGetAvailableItemCount(sceneId, selfId,x889051_g_SuiPian2ID)
-	--ÉíÉÏÊÇ·ñÓĞÎïÆ·
+	--èº«ä¸Šæ˜¯å¦æœ‰ç‰©å“
 	if (nCount<=0) then
 		x889051_NotifyFailBox( sceneId, selfId, targetId, "#{NSDH_PT_02}")
 		return
 	end
 	
-	--ÊıÁ¿ÊÇ·ñ×ã¹»
+	--æ•°é‡æ˜¯å¦è¶³å¤Ÿ
 	if (nCount<x889051_g_LowNianShouCount) then
 		x889051_NotifyFailBox( sceneId, selfId, targetId, "#{NSDH_PT_03}")
 		return
 	end
 	
 	
-		--¼ì²â±³°üÊÇ·ñÓĞµØ·½....
+		--æ£€æµ‹èƒŒåŒ…æ˜¯å¦æœ‰åœ°æ–¹....
 	if LuaFnGetPropertyBagSpace( sceneId, selfId ) < 1 then
 		x889051_NotifyFailBox( sceneId, selfId,targetId, "#{NSDH_SP_04}" )
 		return
 	end
 	
-	--¿Û³ıÎïÆ·
-	-- É¾³ıÎïÆ· ÏÈÉ¾³ı°ó¶¨µÄ
+	--æ‰£é™¤ç‰©å“
+	-- åˆ é™¤ç‰©å“ å…ˆåˆ é™¤ç»‘å®šçš„
 	local BangdingNum = LuaFnGetAvailableItemCount( sceneId, selfId, x889051_g_SuiPian1ID );
 	if(BangdingNum >= x889051_g_LowNianShouCount) then
 		local ret1 = LuaFnDelAvailableItem(sceneId,selfId, x889051_g_SuiPian1ID, x889051_g_LowNianShouCount)
@@ -79,7 +79,7 @@ function x889051_ChangeLowNianShou(sceneId, selfId, targetId)
 			return
 		end
 		
-		--É¾Ã»°ó¶¨µÄ
+		--åˆ æ²¡ç»‘å®šçš„
 		local Delete = x889051_g_LowNianShouCount - BangdingNum;
 		ret1 = LuaFnDelAvailableItem(sceneId,selfId, x889051_g_SuiPian2ID, Delete)
 		if ret1 < 1  then
@@ -88,52 +88,52 @@ function x889051_ChangeLowNianShou(sceneId, selfId, targetId)
 		
 	end
 	
-		--¸øÍæ¼ÒÌí¼ÓÎïÆ·
+		--ç»™ç©å®¶æ·»åŠ ç‰©å“
 	local bagpos01 = TryRecieveItem( sceneId, selfId, x889051_g_LowNianShouID, QUALITY_MUST_BE_CHANGE )
 	LuaFnItemBind( sceneId, selfId, bagpos01 )
 	Audit_ChangeNianShouDriver(sceneId,selfId,1)
-	x889051_MsgBox( sceneId, selfId, "³õ¼¶ÄêÊŞ×øÆï¶Ò»»³É¹¦" )
+	x889051_MsgBox( sceneId, selfId, "åˆçº§å¹´å…½åéª‘å…‘æ¢æˆåŠŸ" )
 	local szItemTransfer = GetBagItemTransfer(sceneId,selfId,bagpos01)
 	x889051_ShowSystemNotice(sceneId, selfId, szItemTransfer,1)
 	x889051_CloseWindow(sceneId,selfId, targetId)
 	
 end
---¶Ò»»³õ¼¶ÄêÊŞµÄÃèÊö
+--å…‘æ¢åˆçº§å¹´å…½çš„æè¿°
 function x889051_ChangeLowNianShouDescript(sceneId, selfId, targetId)
 	local str = "#{NSDH_PT_01}"
 	--x889051_NotifyFailBox( sceneId, selfId, targetId, str)
 	
 	BeginEvent(sceneId)
 		AddText(sceneId,str)
-		AddNumText( sceneId, x889051_g_scriptId, "È·¶¨", 6, 11 )
-		AddNumText( sceneId, x889051_g_scriptId, "È¡Ïû", 6, 21 )
+		AddNumText( sceneId, x889051_g_scriptId, "ç¡®å®š", 6, 11 )
+		AddNumText( sceneId, x889051_g_scriptId, "å–æ¶ˆ", 6, 21 )
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 end
 
---¶Ò»»ÖĞ¼¶ÄêÊŞ
+--å…‘æ¢ä¸­çº§å¹´å…½
 function x889051_ChangeMiddleNianShou(sceneId, selfId, targetId)
 	
 	local nCount =LuaFnGetAvailableItemCount(sceneId, selfId,x889051_g_FigureID1) + LuaFnGetAvailableItemCount(sceneId, selfId,x889051_g_FigureID2)
-	--ÉíÉÏÊÇ·ñÓĞÎïÆ·
+	--èº«ä¸Šæ˜¯å¦æœ‰ç‰©å“
 	if (nCount<=0) then
 		x889051_NotifyFailBox( sceneId, selfId, targetId, "#{NSDH_PT_06}")
 		return
 	end
 
-	--ÊıÁ¿ÊÇ·ñ×ã¹»
+	--æ•°é‡æ˜¯å¦è¶³å¤Ÿ
 	if (nCount<x889051_g_MiddleNianShouCount) then
 		x889051_NotifyFailBox( sceneId, selfId, targetId, "#{NSDH_PT_07}")
 		return
 	end
 	
-		--¼ì²â±³°üÊÇ·ñÓĞµØ·½....
+		--æ£€æµ‹èƒŒåŒ…æ˜¯å¦æœ‰åœ°æ–¹....
 	if LuaFnGetPropertyBagSpace( sceneId, selfId ) < 1 then
 		x889051_NotifyFailBox( sceneId, selfId, targetId,"#{NSDH_SP_04}" )
 		return
 	end
-	--¿Û³ıÎïÆ·
-	-- É¾³ıÎïÆ· ÏÈÉ¾³ı°ó¶¨µÄ
+	--æ‰£é™¤ç‰©å“
+	-- åˆ é™¤ç‰©å“ å…ˆåˆ é™¤ç»‘å®šçš„
 	local BangdingNum = LuaFnGetAvailableItemCount( sceneId, selfId, x889051_g_FigureID1 );
 
 	if (BangdingNum >= x889051_g_MiddleNianShouCount) then
@@ -153,7 +153,7 @@ function x889051_ChangeMiddleNianShou(sceneId, selfId, targetId)
 		if ret1 < 1  then
 			return
 		end
-		--É¾Ã»°ó¶¨µÄ
+		--åˆ æ²¡ç»‘å®šçš„
 		local Delete = x889051_g_MiddleNianShouCount - BangdingNum;
 		ret1 = LuaFnDelAvailableItem(sceneId,selfId, x889051_g_FigureID2, Delete)
 		if ret1 < 1  then
@@ -162,52 +162,52 @@ function x889051_ChangeMiddleNianShou(sceneId, selfId, targetId)
 		
 	end
 	
-		--¸øÍæ¼ÒÌí¼ÓÎïÆ·
+		--ç»™ç©å®¶æ·»åŠ ç‰©å“
 	local bagpos01 = TryRecieveItem( sceneId, selfId, x889051_g_MiddleNianShouID, QUALITY_MUST_BE_CHANGE )
 	LuaFnItemBind( sceneId, selfId, bagpos01 )
 	Audit_ChangeNianShouDriver(sceneId,selfId,2)
-	x889051_MsgBox( sceneId, selfId, "ÖĞ¼¶ÄêÊŞ×øÆï¶Ò»»³É¹¦" )
+	x889051_MsgBox( sceneId, selfId, "ä¸­çº§å¹´å…½åéª‘å…‘æ¢æˆåŠŸ" )
 	local szItemTransfer = GetBagItemTransfer(sceneId,selfId,bagpos01)
 	x889051_ShowSystemNotice(sceneId, selfId, szItemTransfer,2)
 	x889051_CloseWindow(sceneId,selfId, targetId)
 end
 
---¶Ò»»ÖĞ¼¶ÄêÊŞµÄÃèÊö
+--å…‘æ¢ä¸­çº§å¹´å…½çš„æè¿°
 function x889051_ChangeMiddleNianShouDescript(sceneId, selfId, targetId)
 	local str = "#{NSDH_PT_05}"
 	--x889051_NotifyFailBox( sceneId, selfId, targetId, str)
 
 	BeginEvent(sceneId)
 		AddText(sceneId,str)
-		AddNumText( sceneId, x889051_g_scriptId, "È·¶¨", 6, 12 )
-		AddNumText( sceneId, x889051_g_scriptId, "È¡Ïû", 6, 21 )
+		AddNumText( sceneId, x889051_g_scriptId, "ç¡®å®š", 6, 12 )
+		AddNumText( sceneId, x889051_g_scriptId, "å–æ¶ˆ", 6, 21 )
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 end
 
---¶Ò»»¸ß¼¶ÄêÊŞ
+--å…‘æ¢é«˜çº§å¹´å…½
 function x889051_ChangeHighNianShou(sceneId, selfId, targetId, targetId)
 	local nCount =LuaFnGetAvailableItemCount(sceneId, selfId,x889051_g_FigureID1) + LuaFnGetAvailableItemCount(sceneId, selfId,x889051_g_FigureID2)
-	--ÉíÉÏÊÇ·ñÓĞÎïÆ·
+	--èº«ä¸Šæ˜¯å¦æœ‰ç‰©å“
 	if (nCount<=0) then
 		x889051_NotifyFailBox( sceneId, selfId, targetId, "#{NSDH_PT_10}")
 		return
 	end
 	
-	--ÊıÁ¿ÊÇ·ñ×ã¹»
+	--æ•°é‡æ˜¯å¦è¶³å¤Ÿ
 	if (nCount<x889051_g_HighNianShouCount) then
 		x889051_NotifyFailBox( sceneId, selfId, targetId, "#{NSDH_PT_11}")
 		return
 	end
 	
-		--¼ì²â±³°üÊÇ·ñÓĞµØ·½....
+		--æ£€æµ‹èƒŒåŒ…æ˜¯å¦æœ‰åœ°æ–¹....
 	if LuaFnGetPropertyBagSpace( sceneId, selfId ) < 1 then
 		x889051_NotifyFailBox( sceneId, selfId,targetId, "#{NSDH_SP_04}" )
 		return
 	end
 	
-	--¿Û³ıÎïÆ·
-	-- É¾³ıÎïÆ· ÏÈÉ¾³ı°ó¶¨µÄ
+	--æ‰£é™¤ç‰©å“
+	-- åˆ é™¤ç‰©å“ å…ˆåˆ é™¤ç»‘å®šçš„
 	local BangdingNum = LuaFnGetAvailableItemCount( sceneId, selfId, x889051_g_FigureID1 )
 	if(BangdingNum >= x889051_g_HighNianShouCount) then
 		local ret1 = LuaFnDelAvailableItem(sceneId,selfId, x889051_g_FigureID1, x889051_g_HighNianShouCount)
@@ -225,7 +225,7 @@ function x889051_ChangeHighNianShou(sceneId, selfId, targetId, targetId)
 			return
 		end
 		
-		--É¾Ã»°ó¶¨µÄ
+		--åˆ æ²¡ç»‘å®šçš„
 		local Delete = x889051_g_HighNianShouCount - BangdingNum;
 		ret1 = LuaFnDelAvailableItem(sceneId,selfId, x889051_g_FigureID2, Delete)
 		if ret1 < 1  then
@@ -234,33 +234,33 @@ function x889051_ChangeHighNianShou(sceneId, selfId, targetId, targetId)
 		
 	end
 	
-		--¸øÍæ¼ÒÌí¼ÓÎïÆ·
+		--ç»™ç©å®¶æ·»åŠ ç‰©å“
 	local bagpos01 = TryRecieveItem( sceneId, selfId, x889051_g_HighNianShouID, QUALITY_MUST_BE_CHANGE )
 	LuaFnItemBind( sceneId, selfId, bagpos01 )
 	Audit_ChangeNianShouDriver(sceneId,selfId,3)
-	x889051_MsgBox( sceneId, selfId, "¸ß¼¶ÄêÊŞ×øÆï¶Ò»»³É¹¦" )
+	x889051_MsgBox( sceneId, selfId, "é«˜çº§å¹´å…½åéª‘å…‘æ¢æˆåŠŸ" )
 	local szItemTransfer = GetBagItemTransfer(sceneId,selfId,bagpos01)
 	x889051_ShowSystemNotice(sceneId, selfId, szItemTransfer,3)
 	x889051_CloseWindow(sceneId,selfId, targetId)
 end
 
---¶Ò»»¸ß¼¶ÄêÊŞµÄÃèÊö
+--å…‘æ¢é«˜çº§å¹´å…½çš„æè¿°
 function x889051_ChangeHighNianShouDescript(sceneId, selfId,targetId)
 	local str = "#{NSDH_PT_09}"
 	BeginEvent(sceneId)
 		AddText(sceneId,str)
-		AddNumText( sceneId, x889051_g_scriptId, "È·¶¨", 6, 13 )
-		AddNumText( sceneId, x889051_g_scriptId, "È¡Ïû", 6, 21 )
+		AddNumText( sceneId, x889051_g_scriptId, "ç¡®å®š", 6, 13 )
+		AddNumText( sceneId, x889051_g_scriptId, "å–æ¶ˆ", 6, 21 )
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 end
 
---×éºÏÄêÊŞÆ´Í¼
+--ç»„åˆå¹´å…½æ‹¼å›¾
 function x889051_CompositeFigure(sceneId, selfId, targetId)
 	--LuaFnItemBind( sceneId, selfId, bagpos01 )
 	
 	local nCount =LuaFnGetAvailableItemCount(sceneId, selfId,x889051_g_SuiPian1ID) + LuaFnGetAvailableItemCount(sceneId, selfId,x889051_g_SuiPian2ID)
-	--ÉíÉÏÊÇ·ñÓĞÎïÆ·
+	--èº«ä¸Šæ˜¯å¦æœ‰ç‰©å“
 	
 	if (nCount<=0) then
 		
@@ -268,20 +268,20 @@ function x889051_CompositeFigure(sceneId, selfId, targetId)
 		return
 	end
 	
-	--ÊıÁ¿ÊÇ·ñ×ã¹»
+	--æ•°é‡æ˜¯å¦è¶³å¤Ÿ
 	if (nCount<x889051_g_FigureCount) then
 		x889051_NotifyFailBox( sceneId, selfId, targetId, "#{NSDH_SP_03}" )
 		return
 	end
-	--¼ì²â±³°üÊÇ·ñÓĞµØ·½....
+	--æ£€æµ‹èƒŒåŒ…æ˜¯å¦æœ‰åœ°æ–¹....
 	if LuaFnGetPropertyBagSpace( sceneId, selfId ) < 1 then
 		x889051_NotifyFailBox( sceneId, selfId,targetId, "#{NSDH_SP_04}" )
 		return
 	end
 	local IsBind = 0
 	
-	--¿Û³ıÎïÆ·
-	-- É¾³ıÎïÆ· ÏÈÉ¾³ı°ó¶¨µÄ
+	--æ‰£é™¤ç‰©å“
+	-- åˆ é™¤ç‰©å“ å…ˆåˆ é™¤ç»‘å®šçš„
 	local BangdingNum = LuaFnGetAvailableItemCount( sceneId, selfId, x889051_g_SuiPian1ID );
 	if(BangdingNum >= x889051_g_FigureCount) then
 		local ret1 = LuaFnDelAvailableItem(sceneId,selfId, x889051_g_SuiPian1ID, x889051_g_FigureCount)
@@ -300,7 +300,7 @@ function x889051_CompositeFigure(sceneId, selfId, targetId)
 			return
 		end
 		
-		--É¾Ã»°ó¶¨µÄ
+		--åˆ æ²¡ç»‘å®šçš„
 		local Delete = x889051_g_FigureCount - BangdingNum;
 		ret1 = LuaFnDelAvailableItem(sceneId,selfId, x889051_g_SuiPian2ID, Delete)
 		if ret1 < 1  then
@@ -310,9 +310,9 @@ function x889051_CompositeFigure(sceneId, selfId, targetId)
 		IsBind = 1
 	end
 	
-	--¸øÍæ¼ÒÌí¼ÓÎïÆ·
+	--ç»™ç©å®¶æ·»åŠ ç‰©å“
 	BeginAddItem(sceneId)
-		--ÓĞ°ó¶¨µÄ¸ø°ó¶¨ÎïÆ·£¬Ã»ÓĞ°ó¶¨µÄ¸øÆÕÍ¨Æ´Í¼
+		--æœ‰ç»‘å®šçš„ç»™ç»‘å®šç‰©å“ï¼Œæ²¡æœ‰ç»‘å®šçš„ç»™æ™®é€šæ‹¼å›¾
 		if IsBind == 1 then
 			AddItem( sceneId, x889051_g_FigureID1, 1 )
 		else
@@ -324,18 +324,18 @@ function x889051_CompositeFigure(sceneId, selfId, targetId)
 	end
 	AddItemListToHuman(sceneId,selfId)
 	AuditCompositeFigure(sceneId,selfId)
-	x889051_MsgBox( sceneId, selfId, "×éºÏÄêÊŞÆ´Í¼³É¹¦" )
+	x889051_MsgBox( sceneId, selfId, "ç»„åˆå¹´å…½æ‹¼å›¾æˆåŠŸ" )
 	x889051_CloseWindow(sceneId,selfId, targetId)
 end
 
 
---×éºÏÄêÊŞÆ´Í¼
+--ç»„åˆå¹´å…½æ‹¼å›¾
 function x889051_CompositeFigureDescript(sceneId, selfId, targetId)
 	local str = "#{NSDH_SP_01}"
 	BeginEvent(sceneId)
 		AddText(sceneId,str)
-		AddNumText( sceneId, x889051_g_scriptId, "È·¶¨", 6, 14 )
-		AddNumText( sceneId, x889051_g_scriptId, "È¡Ïû", 6, 21 )
+		AddNumText( sceneId, x889051_g_scriptId, "ç¡®å®š", 6, 14 )
+		AddNumText( sceneId, x889051_g_scriptId, "å–æ¶ˆ", 6, 21 )
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 end
@@ -348,34 +348,34 @@ function x889051_CloseWindow(sceneId,selfId, targetId)
 end
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x889051_OnDefaultEvent( sceneId, selfId, targetId )
 
 	local nNum = GetNumText()
 
-	--¶Ò»»³õ¼¶×øÆïµÄ¶Ô»°
+	--å…‘æ¢åˆçº§åéª‘çš„å¯¹è¯
 	if (nNum == 1 ) then
 		x889051_ChangeLowNianShouDescript(sceneId, selfId, targetId)
-	--¶Ò»»ÖĞ¼¶×øÆïµÄ¶Ô»°
+	--å…‘æ¢ä¸­çº§åéª‘çš„å¯¹è¯
 	elseif nNum == 2 then
 		x889051_ChangeMiddleNianShouDescript(sceneId, selfId, targetId)
-	--¶Ò»»¸ß¼¶×øÆïµÄ¶Ô»°
+	--å…‘æ¢é«˜çº§åéª‘çš„å¯¹è¯
 	elseif nNum == 3 then
 		x889051_ChangeHighNianShouDescript(sceneId, selfId, targetId)
-	--×éºÏÄêÊŞÆ½Í¼µÄ¶Ô»°
+	--ç»„åˆå¹´å…½å¹³å›¾çš„å¯¹è¯
 	elseif nNum == 4 then
 		x889051_CompositeFigureDescript(sceneId, selfId, targetId)
-	--¶Ò»»³õ¼¶×øÆï
+	--å…‘æ¢åˆçº§åéª‘
 	elseif nNum == 11 then
 		x889051_ChangeLowNianShou(sceneId, selfId, targetId)
-	--¶Ò»»ÖĞ¼¶×øÆï
+	--å…‘æ¢ä¸­çº§åéª‘
 	elseif nNum == 12 then
 		x889051_ChangeMiddleNianShou(sceneId, selfId, targetId)
-	--¶Ò»»¸ß¼¶×øÆï
+	--å…‘æ¢é«˜çº§åéª‘
 	elseif nNum == 13 then
 		x889051_ChangeHighNianShou(sceneId, selfId, targetId)
-	--×éºÏÆ´Í¼
+	--ç»„åˆæ‹¼å›¾
 	elseif nNum == 14 then
 		x889051_CompositeFigure(sceneId, selfId, targetId)
 	elseif nNum == 21 then
@@ -387,50 +387,50 @@ function x889051_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x889051_OnEnumerate( sceneId, selfId, targetId )
-	AddNumText( sceneId, x889051_g_scriptId, "¶Ò»»³õ¼¶×øÆïÄêÊŞÌ¤·ç", 6, 1 )
-	AddNumText( sceneId, x889051_g_scriptId, "¶Ò»»ÖĞ¼¶×øÆïÄêÊŞÖğÈÕ", 6, 2 )
-	AddNumText( sceneId, x889051_g_scriptId, "¶Ò»»¸ß¼¶×øÆïÄêÊŞÀ×öª", 6, 3 )
-	AddNumText( sceneId, x889051_g_scriptId, "×éºÏÄêÊŞÆ´Í¼",     6, 4 )
-	AddNumText( sceneId, x889051_g_scriptId, "¹ØÓÚÄêÊŞ×øÆï¶Ò»»»î¶¯µÄ½éÉÜ", 11, 5 )
+	AddNumText( sceneId, x889051_g_scriptId, "å…‘æ¢åˆçº§åéª‘å¹´å…½è¸é£", 6, 1 )
+	AddNumText( sceneId, x889051_g_scriptId, "å…‘æ¢ä¸­çº§åéª‘å¹´å…½é€æ—¥", 6, 2 )
+	AddNumText( sceneId, x889051_g_scriptId, "å…‘æ¢é«˜çº§åéª‘å¹´å…½é›·éœ†", 6, 3 )
+	AddNumText( sceneId, x889051_g_scriptId, "ç»„åˆå¹´å…½æ‹¼å›¾",     6, 4 )
+	AddNumText( sceneId, x889051_g_scriptId, "å…³äºå¹´å…½åéª‘å…‘æ¢æ´»åŠ¨çš„ä»‹ç»", 11, 5 )
 	
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x889051_CheckAccept( sceneId, selfId )
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x889051_OnAccept( sceneId, selfId )
 
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x889051_OnAbandon( sceneId, selfId )
 end
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x889051_OnContinue( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x889051_CheckSubmit( sceneId, selfId )
 end
 
 --**********************************
---ËÍ³ö³èÎïµ°µÄ¹«¸æ
+--é€å‡ºå® ç‰©è›‹çš„å…¬å‘Š
 --**********************************
 function x889051_ShowSystemNotice( sceneId, selfId, strItemInfo,iIndex )
 	
@@ -442,7 +442,7 @@ function x889051_ShowSystemNotice( sceneId, selfId, strItemInfo,iIndex )
 end
 
 --**********************************
--- ¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+-- å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x889051_NotifyFailBox( sceneId, selfId, targetId, msg )
 	BeginEvent( sceneId )
@@ -452,7 +452,7 @@ function x889051_NotifyFailBox( sceneId, selfId, targetId, msg )
 end
 
 --**********************************
---ĞÑÄ¿ĞÅÏ¢ÌáÊ¾
+--é†’ç›®ä¿¡æ¯æç¤º
 --**********************************
 function x889051_MsgBox( sceneId, selfId, msg )
 	BeginEvent( sceneId )
@@ -462,26 +462,26 @@ function x889051_MsgBox( sceneId, selfId, msg )
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x889051_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 		
 end
 
 --**********************************
---É±ËÀ¹ÖÎï»òÍæ¼Ò
+--æ€æ­»æ€ªç‰©æˆ–ç©å®¶
 --**********************************
 function x889051_OnKillObject( sceneId, selfId, objdataId ,objId )
 end
 
 --**********************************
---½øÈëÇøÓòÊÂ¼ş
+--è¿›å…¥åŒºåŸŸäº‹ä»¶
 --**********************************
 function x889051_OnEnterArea( sceneId, selfId, zoneId )
 end
 
 --**********************************
---µÀ¾ß¸Ä±ä
+--é“å…·æ”¹å˜
 --**********************************
 function x889051_OnItemChanged( sceneId, selfId, itemdataId )
 end

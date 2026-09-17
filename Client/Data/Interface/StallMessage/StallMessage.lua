@@ -1,21 +1,21 @@
---°ÚÌ¯ĞÅÏ¢
+--æ‘†æ‘Šä¿¡æ¯
 
---£¨Ì¯Ö÷£©·¢ËÍĞÂÌû»¹ÊÇ»Ø¸´Ìû×Ó
+--ï¼ˆæ‘Šä¸»ï¼‰å‘é€æ–°å¸–è¿˜æ˜¯å›å¤å¸–å­
 local NEW_MESSAGE   = 0;
 local REPLY_MESSAGE = 1;
 local g_NewOrReply  = NEW_MESSAGE;
 
---Ì¯Ö÷»òÕßÂò¼ÒµÄ±êÖ¾	=1±íÊ¾Ì¯Ö÷  =0±íÊ¾Âò¼Ò
+--æ‘Šä¸»æˆ–è€…ä¹°å®¶çš„æ ‡å¿—	=1è¡¨ç¤ºæ‘Šä¸»  =0è¡¨ç¤ºä¹°å®¶
 local SALESMAN = 1;
 local BUYER  = 0;
 local g_nSalesman = -1;
 
--- ĞŞ¸Ä¹ã¸æÓï°´Å¥µÄÁ½ÖÖ×´Ì¬¡°·¢²¼¡±£¬¡°¸ü¸Ä¡±
+-- ä¿®æ”¹å¹¿å‘Šè¯­æŒ‰é’®çš„ä¸¤ç§çŠ¶æ€â€œå‘å¸ƒâ€ï¼Œâ€œæ›´æ”¹â€
 local AD_ISSUE		=0  
 local AD_REJIGGER =1  
 local g_AdState		= AD_REJIGGER;
 
---»Ø¸´°´Å¥¶ÔÓ¦µÄĞÅÏ¢ID
+--å›å¤æŒ‰é’®å¯¹åº”çš„ä¿¡æ¯ID
 local g_nMessageId = -1;
 
 --===============================================
@@ -38,7 +38,7 @@ function StallMessage_OnEvent(event)
 
 	if(event == "OPEN_STALL_MESSAGE") then
 		
-		--Ì¯Ö÷´ò¿ªµÄBBS
+		--æ‘Šä¸»æ‰“å¼€çš„BBS
 		if(arg0 == "sale") then
 			g_nSalesman = SALESMAN;
 			
@@ -46,11 +46,11 @@ function StallMessage_OnEvent(event)
 			StallMessage_Checkbox_Locked:SetCheck(0);
 			
 			if(g_AdState == AD_ISSUE) then
-				StallMessage_Ad:SetText("·¢²¼");
+				StallMessage_Ad:SetText("å‘å¸ƒ");
 				StallMessage_EditText:Show();
 				StallMessage_StaticText:Hide();
 			else
-				StallMessage_Ad:SetText("¸ü¸Ä");
+				StallMessage_Ad:SetText("æ›´æ”¹");
 				StallMessage_EditText:Hide();
 				StallMessage_StaticText:Show();
 				StallMessage_StaticText:SetText("#c9CCF00".. StallSale:GetAdvertise());
@@ -59,7 +59,7 @@ function StallMessage_OnEvent(event)
 			
 			end
 			
-			--Ö»ÒªÊÇÌ¯Ö÷´ò¿ª£¬Ê¼ÖÕĞèÒªÏÔÊ¾Õâ¸ö°´Å¥			
+			--åªè¦æ˜¯æ‘Šä¸»æ‰“å¼€ï¼Œå§‹ç»ˆéœ€è¦æ˜¾ç¤ºè¿™ä¸ªæŒ‰é’®			
 			StallMessage_Ad:Show();
 			StallMessage_ClearMessage:Show()
 
@@ -82,9 +82,9 @@ end
 --===============================================
 -- OnEvent()
 --===============================================
---¸øAddChatBoardElementº¯Êı¼Ó¸ö²ÎÊı£¬´«Èëindex±íÊ¾ÊÇµÚ¼¸ÌõÏûÏ¢£¬
---×Ô¼ºµÄ°ÚÌ¯ÖĞindexÎª -2 µ½ -21 £¬ ±ğÈËµÄ°ÚÌ¯ÖĞindexÎª -22 µ½ -41
---ÔÚÉÏÃæµã»÷ÓÒ¼üÊ±ÄÜÍ¨¹ıÕâ¸öIDµÃµ½·¢ÑÔÄÚÈİ£¬ÓÃÓÚ¾Ù±¨¡£
+--ç»™AddChatBoardElementå‡½æ•°åŠ ä¸ªå‚æ•°ï¼Œä¼ å…¥indexè¡¨ç¤ºæ˜¯ç¬¬å‡ æ¡æ¶ˆæ¯ï¼Œ
+--è‡ªå·±çš„æ‘†æ‘Šä¸­indexä¸º -2 åˆ° -21 ï¼Œ åˆ«äººçš„æ‘†æ‘Šä¸­indexä¸º -22 åˆ° -41
+--åœ¨ä¸Šé¢ç‚¹å‡»å³é”®æ—¶èƒ½é€šè¿‡è¿™ä¸ªIDå¾—åˆ°å‘è¨€å†…å®¹ï¼Œç”¨äºä¸¾æŠ¥ã€‚
 --by wangdw 2008.05.22
 function StallMessage_UpdateFrame(event)
 
@@ -97,55 +97,55 @@ function StallMessage_UpdateFrame(event)
 	local bReply;
 	local szReplyMsg;
 	
-	--¶ÔÓÚÌ¯Ö÷
+	--å¯¹äºæ‘Šä¸»
 	if(g_nSalesman == SALESMAN) then
 	
 		StallMessage_EditText:Hide();
 		StallMessage_StaticText:Show();
 		
 		g_AdState = AD_REJIGGER;
-		StallMessage_Ad:SetText("¸ü¸Ä");
+		StallMessage_Ad:SetText("æ›´æ”¹");
 
 		local nMessageNum = StallBbs:GetMessageNum("sale");
 		for i=1, nMessageNum do
 			
 			nMsgId,szAuthorName,szTime,szMessage,bReply,szReplyMsg = StallBbs:EnumMessage(i-1,"sale");
 			
-			--1¡¢¶Ô±ÈÃû×ÖºÍID×éºÏ£¬Èç¹ûÊÇ×Ô¼º£¬
+			--1ã€å¯¹æ¯”åå­—å’ŒIDç»„åˆï¼Œå¦‚æœæ˜¯è‡ªå·±ï¼Œ
 			if(szAuthorName == "#{_INFOUSR"..Player:GetName().."}("..StallSale:GetGuid()..")" )then
 				StallMessage_Desc:AddChatBoardElement(szAuthorName);
 				--StallMessage_Desc:AddChatBoardElement(szTime);
 				StallMessage_Desc:AddChatBoardElement(szTime..":#c9CCF00"..szMessage);
 				
 			elseif(szAuthorName == "_SYSTEM")  then
-				StallMessage_Desc:AddChatBoardElement("¹ºÂò¼ÇÂ¼:"..szTime);
+				StallMessage_Desc:AddChatBoardElement("è´­ä¹°è®°å½•:"..szTime);
 				--StallMessage_Desc:AddChatBoardElement(szTime);
 				StallMessage_Desc:AddChatBoardElement("#R"..szMessage,i-1);
 			
-			--2¡¢Èç¹û²»ÊÇ×Ô¼º
+			--2ã€å¦‚æœä¸æ˜¯è‡ªå·±
 			else
 				StallMessage_Desc:AddChatBoardElement(szAuthorName,i-1);
 				--StallMessage_Desc:AddChatBoardElement(szTime);
 				StallMessage_Desc:AddChatBoardElement(szTime..":#c9CCF00"..szMessage);
-				--Èç¹ûÒÑ¾­ÓĞ»Ø¸´ĞÅÏ¢
+				--å¦‚æœå·²ç»æœ‰å›å¤ä¿¡æ¯
 				if(bReply == true) then
-					StallMessage_Desc:AddChatBoardElement("  Ì¯Ö÷»Ø¸´£º"..szReplyMsg);
+					StallMessage_Desc:AddChatBoardElement("  æ‘Šä¸»å›å¤ï¼š"..szReplyMsg);
 				else
-					--»Ø¸´°´Å¥
-					--StallMessage_Desc:AddOptionElement("»Ø¸´" .. tostring(nMsgId));
-					StallMessage_Desc:AddOptionElement("»Ø¸´&".. nMsgId ..",0$-1");
+					--å›å¤æŒ‰é’®
+					--StallMessage_Desc:AddOptionElement("å›å¤" .. tostring(nMsgId));
+					StallMessage_Desc:AddOptionElement("å›å¤&".. nMsgId ..",0$-1");
 				end
 			
 			end
 		end
 	
-	--¶ÔÓÚÂò¼Ò
+	--å¯¹äºä¹°å®¶
 	elseif(g_nSalesman == BUYER) then
 		StallMessage_StaticText:SetText("#c9CCF00"..StallBuy:GetAdvertise());
 
 		nMessageNum = StallBbs:GetMessageNum("buy");
 		
-		--²»ÄÜ»Ø¸´
+		--ä¸èƒ½å›å¤
 		StallMessage_Checkbox_Locked:SetCheck(0);
 		StallMessage_Checkbox_Locked:Disable();
 
@@ -156,7 +156,7 @@ function StallMessage_UpdateFrame(event)
 			
 			if(szAuthorName == "_SYSTEM")  then
 				
-				StallMessage_Desc:AddChatBoardElement("¹ºÂò¼ÇÂ¼:"..szTime);
+				StallMessage_Desc:AddChatBoardElement("è´­ä¹°è®°å½•:"..szTime);
 				--StallMessage_Desc:AddChatBoardElement(szTime);
 				StallMessage_Desc:AddChatBoardElement("#R"..szMessage,i-1+20);
 
@@ -165,7 +165,7 @@ function StallMessage_UpdateFrame(event)
 				--StallMessage_Desc:AddChatBoardElement(szTime);
 				StallMessage_Desc:AddChatBoardElement(szTime..":#c9CCF00"..szMessage);
 				if(bReply == true) then
-					StallMessage_Desc:AddChatBoardElement("  Ì¯Ö÷»Ø¸´£º"..szReplyMsg);
+					StallMessage_Desc:AddChatBoardElement("  æ‘Šä¸»å›å¤ï¼š"..szReplyMsg);
 				end
 			
 			end
@@ -183,22 +183,22 @@ function StallMessage_FrameUpdate()
 end
 
 --===============================================
--- ·¢²¼ & »Ø¸´£¬ÓĞÁ½¸ö×´Ì¬£¨Ö»ÓĞÔÚÌ¯Ö÷½çÃæÉÏÓĞĞ§£©
---     ×´Ì¬1¡£¡°·¢²¼¡±
---     ×´Ì¬2¡£¡°»Ø¸´¡±
+-- å‘å¸ƒ & å›å¤ï¼Œæœ‰ä¸¤ä¸ªçŠ¶æ€ï¼ˆåªæœ‰åœ¨æ‘Šä¸»ç•Œé¢ä¸Šæœ‰æ•ˆï¼‰
+--     çŠ¶æ€1ã€‚â€œå‘å¸ƒâ€
+--     çŠ¶æ€2ã€‚â€œå›å¤â€
 --===============================================
 function StallMessage_SendMessage_Clicked()
 
-	--¶ÔÓÚÌ¯Ö÷
+	--å¯¹äºæ‘Šä¸»
 	if(g_nSalesman == SALESMAN) then
 		--AxTrace(0, 0, "sale");
 		if(g_NewOrReply == NEW_MESSAGE) then
-			--·¢ĞÂĞÅÏ¢
+			--å‘æ–°ä¿¡æ¯
 			--AxTrace(0, 0, "AddMsg");
 			StallBbs:AddMessage(StallMessage_EditInfoText:GetText(),"sale");
 			
 		else
-			--»Ø¸´
+			--å›å¤
 			StallBbs:ReplyMessage(g_nMessageId+0,StallMessage_EditInfoText:GetText());
 			
 			g_NewOrReply = NEW_MESSAGE;
@@ -206,7 +206,7 @@ function StallMessage_SendMessage_Clicked()
 					
 		end
 		
-	-- ¶ÔÓÚÂò¼Ò	£¨Ã»ÓĞ»Ø¸´×´Ì¬£©
+	-- å¯¹äºä¹°å®¶	ï¼ˆæ²¡æœ‰å›å¤çŠ¶æ€ï¼‰
 	elseif(g_nSalesman == BUYER)  then
 			StallBbs:AddMessage(StallMessage_EditInfoText:GetText(),"buy");
 		
@@ -219,7 +219,7 @@ end
 
 
 --===============================================
--- Çå³ıÁôÑÔ
+-- æ¸…é™¤ç•™è¨€
 --===============================================
 function StallMessage_ClearMessage_Clicked()
 
@@ -235,16 +235,16 @@ function StallMessage_ClearMessage_Clicked()
 end
 
 --===============================================
--- ¹ã¸æÈ·¶¨°´Å¥£¬ÓĞÁ½¸ö×´Ì¬£¨Ö»ÓĞÔÚÌ¯Ö÷½çÃæÉÏÓĞĞ§£©
---     ×´Ì¬1¡£¡°·¢²¼¡±
---     ×´Ì¬2¡£¡°¸ü¸Ä¡±
+-- å¹¿å‘Šç¡®å®šæŒ‰é’®ï¼Œæœ‰ä¸¤ä¸ªçŠ¶æ€ï¼ˆåªæœ‰åœ¨æ‘Šä¸»ç•Œé¢ä¸Šæœ‰æ•ˆï¼‰
+--     çŠ¶æ€1ã€‚â€œå‘å¸ƒâ€
+--     çŠ¶æ€2ã€‚â€œæ›´æ”¹â€
 --===============================================
 function StallMessage_Ad_Clicked()
 
 	if(g_AdState == AD_ISSUE) then
 	
 		if( 0 == StallSale:ApplyAd(StallMessage_EditText:GetText()) )  then
-			--¸ü¸ÄÊ§°Ü
+			--æ›´æ”¹å¤±è´¥
 			return;
 		end
 				
@@ -253,20 +253,20 @@ function StallMessage_Ad_Clicked()
 		StallMessage_StaticText:Show();
 		
 		g_AdState = AD_REJIGGER;
-		StallMessage_Ad:SetText("¸ü¸Ä");
+		StallMessage_Ad:SetText("æ›´æ”¹");
 		
 		
 		StallMessage_EditText:SetProperty("DefaultEditBox", "False");
 	
 	else
 --		local str = string.sub(StallMessage_StaticText:GetText(),2); --modify by dengxx
---		if str == "»¶Ó­ÄãÀ´µ½±¾Ì¯Î»" then
+--		if str == "æ¬¢è¿ä½ æ¥åˆ°æœ¬æ‘Šä½" then
 --		  StallMessage_EditText:SetText(str);
 --	  end
 		StallMessage_EditText:Show();
 		StallMessage_StaticText:Hide();
 		g_AdState = AD_ISSUE;
-		StallMessage_Ad:SetText("·¢²¼");
+		StallMessage_Ad:SetText("å‘å¸ƒ");
 		StallMessage_EditText:SetProperty("DefaultEditBox", "True");
 	
 	end
@@ -274,7 +274,7 @@ function StallMessage_Ad_Clicked()
 end
 
 --===============================================
--- µã»÷Ò»¸ö»Ø¸´°´Å¥µÄ²Ù×÷ 
+-- ç‚¹å‡»ä¸€ä¸ªå›å¤æŒ‰é’®çš„æ“ä½œ 
 --===============================================
 function StallMessageOption_Clicked()
 
@@ -283,14 +283,14 @@ function StallMessageOption_Clicked()
 	
 	AxTrace(0,0, pos1 .. pos2 .. pos3 .. pos4 );
 	
-	-- ¼ÇÂ¼µã»÷µÄÏûÏ¢µÄID	
+	-- è®°å½•ç‚¹å‡»çš„æ¶ˆæ¯çš„ID	
 	g_nMessageId = string.sub(arg0, pos2+1,pos3-1 );
 	
-	-- ÏàÓ¦µÄ½çÃæ±ä¶¯
+	-- ç›¸åº”çš„ç•Œé¢å˜åŠ¨
 	StallMessage_Checkbox_Locked:SetCheck(1);
 	StallMessage_Checkbox_Locked:Enable();
 	
-	StallMessage_Checkbox_Text:SetText("»Ø¸´ÁôÑÔ");
+	StallMessage_Checkbox_Text:SetText("å›å¤ç•™è¨€");
 	
 	StallMessage_EditInfoText:SetProperty("DefaultEditBox", "True");
 	
@@ -299,11 +299,11 @@ function StallMessageOption_Clicked()
 end
 
 --===============================================
--- £¨µã»÷CheckBox£©È¡Ïû»Ø¸´×´Ì¬ 
+-- ï¼ˆç‚¹å‡»CheckBoxï¼‰å–æ¶ˆå›å¤çŠ¶æ€ 
 --===============================================
 function StallMessage_ReplyCheck_Clicked()
 
-	-- ÏàÓ¦µÄ½çÃæ±ä¶¯
+	-- ç›¸åº”çš„ç•Œé¢å˜åŠ¨
 	StallMessage_Checkbox_Locked:SetCheck(0);
 	StallMessage_Checkbox_Locked:Disable();
 	StallMessage_Checkbox_Text:SetText("");

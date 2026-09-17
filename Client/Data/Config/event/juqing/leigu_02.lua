@@ -5,17 +5,17 @@ x200041_g_PreMissionId = 33
 x200041_g_Position_X=152
 x200041_g_Position_Z=153
 x200041_g_SceneID=14
-x200041_g_AccomplishNPC_Name="·¶°ÙÁä"
-x200041_g_Name = "ËÕĞÇºÓ"
+x200041_g_AccomplishNPC_Name="èŒƒç™¾é¾„"
+x200041_g_Name = "è‹æ˜Ÿæ²³"
 x200041_g_IfMissionElite = 1
 x200041_g_MissionLevel = 60
 x200041_g_MissionKind = 53
-x200041_g_MissionName="¾²ºò¼ÑÒô"
+x200041_g_MissionName="é™å€™ä½³éŸ³"
 x200041_g_MissionInfo="#{Mis_juqing_0034}"
 x200041_g_MissionTarget="#{Mis_juqing_Tar_0034}"
-x200041_g_MissionComplete="  ÔÚÏÂ¹§ºò¶àÊ±ÁË£¬´óÏÀÇëÈë¾ÖÒ»×ø¡£"
+x200041_g_MissionComplete="  åœ¨ä¸‹æ­å€™å¤šæ—¶äº†ï¼Œå¤§ä¾ è¯·å…¥å±€ä¸€åã€‚"
 x200041_g_MoneyBonus=7200
 x200041_g_exp=17000
 x200041_g_RadioItemBonus={{id=10415008 ,num=1},{id=10415009,num=1},{id=10415010,num=1},{id=10415011,num=1}}
-x200041_g_Custom	= { {id="ÒÑÕÒµ½ËÕĞÇºÓ",num=1} }
+x200041_g_Custom	= { {id="å·²æ‰¾åˆ°è‹æ˜Ÿæ²³",num=1} }
 --MisDescEnd

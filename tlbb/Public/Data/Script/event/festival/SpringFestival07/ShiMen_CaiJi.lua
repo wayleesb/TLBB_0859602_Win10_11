@@ -1,27 +1,27 @@
- --Ê¦ÃÅ²É¼¯
+ --å¸ˆé—¨é‡‡é›†
 
 --************************************************************************
 --MisDescBegin
 
--- ½Å±¾ºÅ
+-- è„šæœ¬å·
 x050059_g_ScriptId = 050059
 
--- ÈÎÎñÎÄ±¾ÃèÊö
-x050059_g_MissionName = "ÃÅÅÉÄê»õ´ó²É¹º"
+-- ä»»åŠ¡æ–‡æœ¬æè¿°
+x050059_g_MissionName = "é—¨æ´¾å¹´è´§å¤§é‡‡è´­"
 
 
 --MisDescEnd
 
 x050059_g_Times=8
---»î¶¯Ê±¼ä
-x050059_Time_Start = 09024 --»î¶¯¿ªÊ¼2009Äê1ÔÂ25ÈÕ0Ê±
-x050059_Time_End   = 09031 --»î¶¯¿ªÊ¼2009Äê2ÔÂ1ÈÕ24Ê±
+--æ´»åŠ¨æ—¶é—´
+x050059_Time_Start = 09024 --æ´»åŠ¨å¼€å§‹2009å¹´1æœˆ25æ—¥0æ—¶
+x050059_Time_End   = 09031 --æ´»åŠ¨å¼€å§‹2009å¹´2æœˆ1æ—¥24æ—¶
 
 x050059_g_StrForePart=4
 
---¶Ò»»Ê±¼ä
-x050059_ChangeTime_Start =  09024 --¶Ò»»¿ªÊ¼2009Äê1ÔÂ25ÈÕ0Ê±
-x050059_ChangeTime_End   =  09037  --¶Ò»»½ØÖÁ2009Äê2ÔÂ7ÈÕ24Ê±
+--å…‘æ¢æ—¶é—´
+x050059_ChangeTime_Start =  09024 --å…‘æ¢å¼€å§‹2009å¹´1æœˆ25æ—¥0æ—¶
+x050059_ChangeTime_End   =  09037  --å…‘æ¢æˆªè‡³2009å¹´2æœˆ7æ—¥24æ—¶
 
 x050059_TaskMaxCount  =24
 
@@ -32,7 +32,7 @@ x050059_g_strGongGaoInfo = {
 
 x050059_gPetGongGaoInfo = "#{SMCJ_081014_27}#{_INFOUSR%s}#{SMCJ_081014_28}#{_INFOMSG%s}#{JG_8731}"
 
---Ñ°Îï±íÊıÁ¿
+--å¯»ç‰©è¡¨æ•°é‡
 x050059_XunWuCount = 18
 
 x050059_XunWuTbl = {
@@ -255,7 +255,7 @@ x050059_g_ExpTbl[8]={[10]=1750,[11]=1875,[12]=2000,[13]=2125,[14]=2250,
 [120]=46057,
 	}
 	
---´ºÁª±í
+--æ˜¥è”è¡¨
 x050059_g_ChunLianTbl = {30505241,
 									30505242,
 									30505243,
@@ -266,7 +266,7 @@ x050059_g_ChunLianTbl = {30505241,
 									30505248,
 								}
 								
---ÑÌ»¨±í
+--çƒŸèŠ±è¡¨
 x050059_g_YanHuaTbl = {
 		30509042,
 		30509043,
@@ -274,7 +274,7 @@ x050059_g_YanHuaTbl = {
 		30509045,
 		30509046,
 	}
---³èÎïÁĞ±í
+--å® ç‰©åˆ—è¡¨
 x050059_g_PetTbl = {{id = 30309649,Level = 5},
 		{id = 30309650,Level = 45},
 		{id = 30309651,Level = 55},
@@ -282,7 +282,7 @@ x050059_g_PetTbl = {{id = 30309649,Level = 5},
 		{id = 30309653,Level = 75},
 		{id = 30309654,Level = 85},
 	}
--- ´ºÁªµÄ»ñµÃ¸ÅÂÊ±í
+-- æ˜¥è”çš„è·å¾—æ¦‚ç‡è¡¨
 x050059_g_RateTbl = {
 		{MinLevel = 10,MaxLevel = 39,rate = 0},
 		{MinLevel = 40,MaxLevel = 49,rate = 4},
@@ -303,16 +303,16 @@ function x050059_GetStrIndexByStrValue(stringV)
 			return i-1
 		end
 	end
-	local strText = format("±ØĞë½«%s×¢²áµ½StrListÖĞ", stringV)
+	local strText = format("å¿…é¡»å°†%sæ³¨å†Œåˆ°StrListä¸­", stringV)
 	----PrintStr(strText)
 	return 0;
 end
 				
 --**********************************
---¼ì²â¶Ò»»»î¶¯Ê±¼ä
+--æ£€æµ‹å…‘æ¢æ´»åŠ¨æ—¶é—´
 --**********************************
 function x050059_CheckTime()
-	local today = GetDayTime()						--µ±Ç°Ê±¼ä
+	local today = GetDayTime()						--å½“å‰æ—¶é—´
 	
 	if today < x050059_ChangeTime_Start or today > x050059_ChangeTime_End then
 		return 0
@@ -323,10 +323,10 @@ end
 
 --/////////////////////////////////////////////////////////////////////////////////////////////////////
 --**********************************
---¼ì²â²É¼¯»î¶¯Ê±¼ä
+--æ£€æµ‹é‡‡é›†æ´»åŠ¨æ—¶é—´
 --**********************************
 function x050059_CheckCaiJiTime()
-	local today = GetDayTime()						--µ±Ç°Ê±¼ä
+	local today = GetDayTime()						--å½“å‰æ—¶é—´
 
 	if today < x050059_Time_Start or today > x050059_Time_End then
 		return 0
@@ -336,7 +336,7 @@ function x050059_CheckCaiJiTime()
 end
 --/////////////////////////////////////////////////////////////////////////////////////////////////////
 --**********************************
---¸ù¾İÍæ¼ÒµÈ¼¶»ñµÃÕäÊŞĞòºÅ
+--æ ¹æ®ç©å®¶ç­‰çº§è·å¾—çå…½åºå·
 --**********************************
 function x050059_GetPetIndexByLevel(sceneId, selfId)
 	local nLevel = GetLevel(sceneId, selfId)
@@ -360,18 +360,18 @@ function x050059_GetPetIndexByLevel(sceneId, selfId)
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --********************************** 
 function x050059_OnEnumerate( sceneId, selfId, targetId,ScriptID )
 	if (x050059_CheckTime() == 1) then
-		--Ê¦ÃÅ²É¼¯
+		--å¸ˆé—¨é‡‡é›†
 		AddNumText(sceneId,ScriptID,"#{SMCJ_081014_01}",4,1);
 	end
 end
 
 function x050059_GetGift(sceneId, selfId, targetId,MenPai)
 	
-	--¼ì²âÊÇ·ñ»î¶¯Ê±¼ä
+	--æ£€æµ‹æ˜¯å¦æ´»åŠ¨æ—¶é—´
 	if (x050059_CheckTime() < 1) then
 		return
 	end
@@ -381,7 +381,7 @@ function x050059_GetGift(sceneId, selfId, targetId,MenPai)
 		x050059_CloseWindow(sceneId, selfId,targetId)
 		return
 	end
-	--¼ì²â´ºÁªÊÇ·ñÒ»×é
+	--æ£€æµ‹æ˜¥è”æ˜¯å¦ä¸€ç»„
 	for i, item in x050059_g_ChunLianTbl do
 		if (LuaFnGetAvailableItemCount(sceneId, selfId, item) <1) then
 			x050059_MsgBox(sceneId, selfId,"#{SMCJ_081014_18}")
@@ -389,7 +389,7 @@ function x050059_GetGift(sceneId, selfId, targetId,MenPai)
 			return
 		end
 	end
-	-- ¼ì²é±³°ü¿Õ¼ä
+	-- æ£€æŸ¥èƒŒåŒ…ç©ºé—´
 	if LuaFnGetPropertyBagSpace( sceneId, selfId ) < 1 then
 			x050059_MsgBox(sceneId, selfId,"#{LLFB_80821_6}")
 			x050059_CloseWindow(sceneId, selfId,targetId)
@@ -402,7 +402,7 @@ function x050059_GetGift(sceneId, selfId, targetId,MenPai)
 			end
 		end
 		local iIndex = x050059_GetPetIndexByLevel(sceneId, selfId)
-		--¸øÍæ¼Ò¶«Î÷£¬Íê³É
+		--ç»™ç©å®¶ä¸œè¥¿ï¼Œå®Œæˆ
 		BeginAddItem( sceneId )
 		local nIndex = AddItem(sceneId,x050059_g_PetTbl[iIndex].id, 1 )
 		local ret = EndAddItem(sceneId, selfId )
@@ -414,32 +414,32 @@ function x050059_GetGift(sceneId, selfId, targetId,MenPai)
 		local szItemTransfer = GetItemTransfer(sceneId,selfId,0)
 		x050059_ShowPetSystemNotice( sceneId, selfId, szItemTransfer )
 		x050059_CloseWindow(sceneId, selfId,targetId)
-		--»ñµÃ¸÷¸ö¼¶±ğÕäÊŞµÄÍæ¼Ò
+		--è·å¾—å„ä¸ªçº§åˆ«çå…½çš„ç©å®¶
 		AuditShiMenCaiJiPet(sceneId, selfId,x050059_g_PetTbl[iIndex].Level)
 end
 
 --/////////////////////////////////////////////////////////////////////////////////////////////////////
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
-function x050059_OnDefaultEvent( sceneId, selfId, targetId,MenPai,MissionID,ScriptID  )	--µã»÷¸ÃÈÎÎñºóÖ´ĞĞ´Ë½Å±¾
-	--¼ì²âÃÅÅÉĞÅÏ¢ÊÇ·ñºÏ·¨
+function x050059_OnDefaultEvent( sceneId, selfId, targetId,MenPai,MissionID,ScriptID  )	--ç‚¹å‡»è¯¥ä»»åŠ¡åæ‰§è¡Œæ­¤è„šæœ¬
+	--æ£€æµ‹é—¨æ´¾ä¿¡æ¯æ˜¯å¦åˆæ³•
 		
 		local NumText = GetNumText()
 		if (NumText == 2) then
-			--½ÓÊÜÈÎÎñ
+			--æ¥å—ä»»åŠ¡
 			x050059_AcceptTask(sceneId, selfId,targetId,MenPai,MissionID,ScriptID)
 		elseif (NumText == 3) then
-			--¶Ò½±
+			--å…‘å¥–
 			x050059_GetGift(sceneId, selfId,targetId,MenPai)
 		elseif (NumText == 4) then
-			--°ïÖú
+			--å¸®åŠ©
 			BeginEvent(sceneId)
 				AddText(sceneId,"#{SMCJ_081014_20}")
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,targetId)
 		else
-			--Ê¦ÃÅ²É¼¯»î¶¯Ò»¼¶²Ëµ¥
+			--å¸ˆé—¨é‡‡é›†æ´»åŠ¨ä¸€çº§èœå•
 			BeginEvent(sceneId)
 			if (x050059_CheckCaiJiTime() >0) then
 				AddNumText(sceneId,ScriptID,"#{SMCJ_081014_02}",4,2);
@@ -453,7 +453,7 @@ function x050059_OnDefaultEvent( sceneId, selfId, targetId,MenPai,MissionID,Scri
 end
 --/////////////////////////////////////////////////////////////////////////////////////////////////////
 --**********************************
---¹Ø±Õ´°¿Ú
+--å…³é—­çª—å£
 --**********************************
 function x050059_CloseWindow(sceneId,selfId, targetId)
 	BeginUICommand( sceneId )
@@ -463,20 +463,20 @@ function x050059_CloseWindow(sceneId,selfId, targetId)
 end
 
 --**********************************
--- »ñµÃ½ñÌìµÄÈÎÎñÊıÁ¿ -1±íÊ¾½ñÌìµÄÈÎÎñÒÑÂú¶î
+-- è·å¾—ä»Šå¤©çš„ä»»åŠ¡æ•°é‡ -1è¡¨ç¤ºä»Šå¤©çš„ä»»åŠ¡å·²æ»¡é¢
 --**********************************
 function x050059_GetTaskCount(sceneId,selfId)
-	--ÅĞ¶Ï½ñÌìµÄÈÎÎñÁ¿ÊÇ·ñ³¬³ö
+	--åˆ¤æ–­ä»Šå¤©çš„ä»»åŠ¡é‡æ˜¯å¦è¶…å‡º
 		local iTaskCount =0
 		local td = GetDayTime()
 		local LastGetTaskTime = GetMissionData(sceneId,selfId,MD_SHIMENCAIJI_DAY)
-		--µ±Ç°ÈÕÆÚÒÑ¾­¹ıÆÚ
+		--å½“å‰æ—¥æœŸå·²ç»è¿‡æœŸ
 		if td < LastGetTaskTime then
 			iTaskCount = -1
-		--µ±Ç°ÈÕÆÚ£¬¼ì²âµ±ÌìµÄÈÎÎñ´ÎÊı
+		--å½“å‰æ—¥æœŸï¼Œæ£€æµ‹å½“å¤©çš„ä»»åŠ¡æ¬¡æ•°
 		else
 			local TaskCount = GetMissionData(sceneId,selfId,MD_SHIMENCAIJI_COUNT)
-			--µ±ÌìµÄÈÎÎñ´ÎÊı´óÓÚ24£¬»¹ÓĞ¿ÉÄÜÊÇ½»ÈÎÎñ£¬ËùÒÔ24ÔÚ´Îº¯ÊıÖĞÈÏÎªÊÇºÏ·¨´ÎÊı
+			--å½“å¤©çš„ä»»åŠ¡æ¬¡æ•°å¤§äº24ï¼Œè¿˜æœ‰å¯èƒ½æ˜¯äº¤ä»»åŠ¡ï¼Œæ‰€ä»¥24åœ¨æ¬¡å‡½æ•°ä¸­è®¤ä¸ºæ˜¯åˆæ³•æ¬¡æ•°
 			if (TaskCount>x050059_TaskMaxCount) then
 				iTaskCount = -1
 			else
@@ -487,7 +487,7 @@ function x050059_GetTaskCount(sceneId,selfId)
 end
 
 --**********************************
--- ¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+-- å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x050059_NotifyFailBox( sceneId, selfId, targetId, msg )
 	BeginEvent( sceneId )
@@ -497,7 +497,7 @@ function x050059_NotifyFailBox( sceneId, selfId, targetId, msg )
 end
 
 --**********************************
---ĞÑÄ¿ĞÅÏ¢ÌáÊ¾
+--é†’ç›®ä¿¡æ¯æç¤º
 --**********************************
 function x050059_MsgBox( sceneId, selfId, msg )
 	BeginEvent( sceneId )
@@ -507,11 +507,11 @@ function x050059_MsgBox( sceneId, selfId, msg )
 end
 
 --**********************************
--- Âú×ã»ñÈ¡ÈÎÎñµÄÌõ¼ş£¬½ÓÊÜÈÎÎñ
+-- æ»¡è¶³è·å–ä»»åŠ¡çš„æ¡ä»¶ï¼Œæ¥å—ä»»åŠ¡
 --**********************************
 function x050059_AcceptTask(sceneId, selfId,targetId,MenPai,MissionID,ScriptID)
 
-	--¼ì²âÊÇ·ñ»î¶¯Ê±¼ä
+	--æ£€æµ‹æ˜¯å¦æ´»åŠ¨æ—¶é—´
 	if (x050059_CheckCaiJiTime() <=0) then
 		return
 	end
@@ -525,14 +525,14 @@ function x050059_AcceptTask(sceneId, selfId,targetId,MenPai,MissionID,ScriptID)
 		return
 	end
 	local iTaskCount = x050059_GetTaskCount(sceneId,selfId)
-	--½ñÌìµÄÈÎÎñ´ÎÊıÒÑÂú£¬ĞÑÄ¿ÌáÊ¾£¬ÍË³ö
+	--ä»Šå¤©çš„ä»»åŠ¡æ¬¡æ•°å·²æ»¡ï¼Œé†’ç›®æç¤ºï¼Œé€€å‡º
 	if (-1 == iTaskCount) then
 		x050059_MsgBox(sceneId, selfId, "#{SMCJ_081014_06}")
 		x050059_CloseWindow(sceneId, selfId,targetId)
 		return 
 	end
 	
-	--24´ÎµÄÊ±ºòÖ»ÄÜ½»ÈÎÎñ£¬²»ÄÜ½ÓÈÎÎñ
+	--24æ¬¡çš„æ—¶å€™åªèƒ½äº¤ä»»åŠ¡ï¼Œä¸èƒ½æ¥ä»»åŠ¡
 	if (x050059_TaskMaxCount == iTaskCount and IsHaveMission(sceneId,selfId,MissionID) == 0) then
 		local td = GetDayTime()
 		local LastGetTaskTime = GetMissionData(sceneId,selfId,MD_SHIMENCAIJI_DAY)
@@ -542,7 +542,7 @@ function x050059_AcceptTask(sceneId, selfId,targetId,MenPai,MissionID,ScriptID)
 			return
 		end
 	end
-	--ÉíÉÏÒÑ¾­ÓĞÒ»¸öÈÎÎñ
+	--èº«ä¸Šå·²ç»æœ‰ä¸€ä¸ªä»»åŠ¡
 	if IsHaveMission(sceneId,selfId,MissionID) > 0 then
 		local bDone = x050059_CheckSubmit( sceneId, selfId,MissionID)
 		local str = "#{SMCJ_081014_09}"
@@ -558,13 +558,13 @@ function x050059_AcceptTask(sceneId, selfId,targetId,MenPai,MissionID,ScriptID)
 		local td = GetDayTime()
 		local LastGetTaskTime = GetMissionData(sceneId,selfId,MD_SHIMENCAIJI_DAY)
 
-		--µ±Ç°ÈÕÆÚÒÑ¾­¹ıÆÚ
+		--å½“å‰æ—¥æœŸå·²ç»è¿‡æœŸ
 		if td > LastGetTaskTime then
 			SetMissionData(sceneId, selfId, MD_SHIMENCAIJI_DAY, td)
 			SetMissionData(sceneId, selfId, MD_SHIMENCAIJI_COUNT, 0)
 			SetMissionData(sceneId, selfId, MD_SHIMENCAIJI_ABANDON,0)
 		end
-		--µ±ÌìµÄ·ÅÆú´ÎÊı
+		--å½“å¤©çš„æ”¾å¼ƒæ¬¡æ•°
 		local iAbandonCount = GetMissionData(sceneId,selfId,MD_SHIMENCAIJI_ABANDON)
 		if (iAbandonCount>=3) then
 			x050059_MsgBox( sceneId, selfId, "#{SMCJ_081103_01}")
@@ -584,10 +584,10 @@ function x050059_AcceptTask(sceneId, selfId,targetId,MenPai,MissionID,ScriptID)
 end 
 
 --**********************************
---¸ù¾İÍæ¼ÒµÈ¼¶µÃ³öÈÎÎñµÄµÈ¼¶½×¶Î(1~5)
+--æ ¹æ®ç©å®¶ç­‰çº§å¾—å‡ºä»»åŠ¡çš„ç­‰çº§é˜¶æ®µ(1~5)
 --**********************************
 function x050059_Accept(sceneId, selfId,MissionID,ScriptID)
-	--¼ÓÈëÈÎÎñµ½Íæ¼ÒÁĞ±í
+	--åŠ å…¥ä»»åŠ¡åˆ°ç©å®¶åˆ—è¡¨
 	local bAdd = AddMission( sceneId,selfId, MissionID, ScriptID, 0, 0, 1 )
 	if bAdd < 1 then
 		return
@@ -596,48 +596,48 @@ function x050059_Accept(sceneId, selfId,MissionID,ScriptID)
 	local nitemId = x050059_XunWuTbl[iRandom]
 	local strItemName = "#{_ITEM"..nitemId.."}"
 	
-	Msg2Player(sceneId, selfId, "#Y½ÓÊÜÈÎÎñ£ºÃÅÅÉÄê»õ´ó²É¹º", MSG2PLAYER_PARA )
-	--µÃµ½ÈÎÎñÔÚ20¸öÈÎÎñÖĞµÄĞòÁĞºÅ
+	Msg2Player(sceneId, selfId, "#Yæ¥å—ä»»åŠ¡ï¼šé—¨æ´¾å¹´è´§å¤§é‡‡è´­", MSG2PLAYER_PARA )
+	--å¾—åˆ°ä»»åŠ¡åœ¨20ä¸ªä»»åŠ¡ä¸­çš„åºåˆ—å·
 	local misIndex = GetMissionIndexByID(sceneId,selfId,MissionID)
 	
-	SetMissionByIndex(sceneId, selfId, misIndex, 0, 0) --ÉèÖÃÈÎÎñÊÇ·ñÍê³É£¨Î´Íê³É£©
-	--ÔÚFormatListÖĞµÄĞòºÅ
-	SetMissionByIndex(sceneId, selfId, misIndex, x050059_g_StrForePart, iRandom-1)--formet×Ö·û´®Ë÷Òı
-	--ÔÚstrListÖĞµÄĞòºÅ
+	SetMissionByIndex(sceneId, selfId, misIndex, 0, 0) --è®¾ç½®ä»»åŠ¡æ˜¯å¦å®Œæˆï¼ˆæœªå®Œæˆï¼‰
+	--åœ¨FormatListä¸­çš„åºå·
+	SetMissionByIndex(sceneId, selfId, misIndex, x050059_g_StrForePart, iRandom-1)--formetå­—ç¬¦ä¸²ç´¢å¼•
+	--åœ¨strListä¸­çš„åºå·
 	--SetMissionByIndex(sceneId, selfId, misIndex, x050059_g_StrForePart+1, iRandom-1)
 	SetMissionByIndex(sceneId, selfId, misIndex, x050059_g_StrForePart+2, nitemId)
 		
-	--µÚ¼¸ÂÖÈÎÎñ
+	--ç¬¬å‡ è½®ä»»åŠ¡
 	local iDayCount = GetMissionData(sceneId,selfId,MD_SHIMENCAIJI_COUNT)
 	
 	local strMissionTarget = format("#{SMCJ_081014_07}%s#{SMCJ_081014_08}", strItemName)
 	local iTimes = mod(iDayCount,x050059_g_Times)+1
-	AddText(sceneId,"±¾´ÎÎª½ñÈÕµÚ"..(floor(iDayCount/x050059_g_Times)+1).."ÂÖµÚ"..iTimes.."´ÎÈÎÎñ")
+	AddText(sceneId,"æœ¬æ¬¡ä¸ºä»Šæ—¥ç¬¬"..(floor(iDayCount/x050059_g_Times)+1).."è½®ç¬¬"..iTimes.."æ¬¡ä»»åŠ¡")
 	AddText(sceneId, strMissionTarget)
 	
-	--»·Êı
+	--ç¯æ•°
 	SetMissionByIndex(sceneId, selfId, misIndex, 1, iTimes)
 	SetMissionData(sceneId, selfId,MD_SHIMENCAIJI_COUNT,iDayCount+1)
 	
-	--¼ì²âÍæ¼ÒÉíÉÏµÄµÀ¾ßÊÇ·ñÒÑ¾­Âú×ãÍê³ÉÌõ¼ş
+	--æ£€æµ‹ç©å®¶èº«ä¸Šçš„é“å…·æ˜¯å¦å·²ç»æ»¡è¶³å®Œæˆæ¡ä»¶
 	local bHaveItem = HaveItem(sceneId, selfId, nitemId)
 	if bHaveItem == 1 then
-		SetMissionByIndex(sceneId,selfId,misIndex,0,1)					--°ÑÈÎÎñÍê³É±êÖ¾ÖÃÎª1
+		SetMissionByIndex(sceneId,selfId,misIndex,0,1)					--æŠŠä»»åŠ¡å®Œæˆæ ‡å¿—ç½®ä¸º1
 		ResetMissionEvent(sceneId, selfId, x050059_g_StrForePart, 2)
 	end	
-	--Í³¼Æ²Î¼Ó»î¶¯µÄÈË
+	--ç»Ÿè®¡å‚åŠ æ´»åŠ¨çš„äºº
 	AuditShiMenCaiJi(sceneId, selfId,1)
 end
 
 function x050059_CheckSubmit(sceneId, selfId,MissionID)
-	--ÉíÉÏÃ»ÓĞÈÎÎñ
+	--èº«ä¸Šæ²¡æœ‰ä»»åŠ¡
 	if IsHaveMission( sceneId, selfId, MissionID ) <= 0 then
 		return 0
 	end
-	--ÔÚ´ËÅĞ¶ÏÌá½»Ìõ¼şÊÇ·ñ·ûºÏ£¬²¢¸øÓèÏàÓ¦½±Àø
+	--åœ¨æ­¤åˆ¤æ–­æäº¤æ¡ä»¶æ˜¯å¦ç¬¦åˆï¼Œå¹¶ç»™äºˆç›¸åº”å¥–åŠ±
 	local misIndex = GetMissionIndexByID(sceneId,selfId,MissionID)
 	local demandItemId = GetMissionParam(sceneId, selfId, misIndex, x050059_g_StrForePart+2)
-	if GetItemCount(sceneId,selfId,demandItemId) <= 0 then --Ã»ÓĞË÷ÒªµÄÎïÆ·
+	if GetItemCount(sceneId,selfId,demandItemId) <= 0 then --æ²¡æœ‰ç´¢è¦çš„ç‰©å“
 		return 0
 	end
 	return 1
@@ -645,7 +645,7 @@ end
 
 function x050059_CheckAccept(sceneId, selfId)
 	local nLevel = GetLevel(sceneId, selfId)
-	--Íæ¼ÒµÈ¼¶>=10¼¶
+	--ç©å®¶ç­‰çº§>=10çº§
 	if nLevel < 10 then
 		return 0
 	else
@@ -659,17 +659,17 @@ function x050059_CheckAccept(sceneId, selfId)
 end 
 
 --**********************************
---µÀ¾ß¸Ä±ä
+--é“å…·æ”¹å˜
 --**********************************
 function x050059_OnItemChanged( sceneId, selfId, itemdataId,MissionID)
 	local misIndex = GetMissionIndexByID(sceneId, selfId, MissionID)
-	--»ñµÃ¸ÃÎïÆ·µÄÃû³Æ
+	--è·å¾—è¯¥ç‰©å“çš„åç§°
 	local _, strItemName, _ = x050059_GetItemDetailInfo(itemdataId)
 	local demandItemId = GetMissionParam(sceneId, selfId, misIndex, x050059_g_StrForePart+2)
 	local _, strDemandItemName, _ = x050059_GetItemDetailInfo(demandItemId)
 	if strItemName == strDemandItemName then
 		BeginEvent(sceneId)
-			strText = format("ÒÑµÃµ½%s", strItemName)
+			strText = format("å·²å¾—åˆ°%s", strItemName)
 			AddText(sceneId,strText)
 		EndEvent(sceneId)
 
@@ -680,18 +680,18 @@ function x050059_OnItemChanged( sceneId, selfId, itemdataId,MissionID)
 end
 
 --/////////////////////////////////////////////////////////////////////////////////////////////////////
---»ñÈ¡¾ßÌåitemµÄÏêÏ¸ĞÅÏ¢
+--è·å–å…·ä½“itemçš„è¯¦ç»†ä¿¡æ¯
 function x050059_GetItemDetailInfo(itemId)
 	local itemId, itemName, itemDesc = GetItemInfoByItemId(itemId)
 	if itemId == -1 then
-		local strText = "ÎïÆ·²»´æÔÚ!!"
+		local strText = "ç‰©å“ä¸å­˜åœ¨!!"
 		PrintStr(strText)
 	end
 	return itemId, itemName, itemDesc
 end	
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x050059_OnContinue( sceneId, selfId, targetId,MissionID,ScriptID)
 	if x050059_CheckAccept(sceneId,selfId) > 0 then
@@ -704,7 +704,7 @@ function x050059_OnContinue( sceneId, selfId, targetId,MissionID,ScriptID)
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x050059_OnSubmit( sceneId, selfId, targetId, selectRadioId,MissionID )
 	local misIndex = GetMissionIndexByID(sceneId, selfId, MissionID)
@@ -712,9 +712,9 @@ function x050059_OnSubmit( sceneId, selfId, targetId, selectRadioId,MissionID )
 	if x050059_CheckSubmit( sceneId, selfId,MissionID)>=1 then
 		local iDayCount = GetMissionData(sceneId,selfId,MD_SHIMENCAIJI_COUNT)
 		local iDayHuan = mod(iDayCount,x050059_g_Times)
-		--µÚ8»·Òª½±ÀøÎïÆ·£¬¼ì²âÊÇ·ñÓĞ±³°ü¿Õ¼ä
+		--ç¬¬8ç¯è¦å¥–åŠ±ç‰©å“ï¼Œæ£€æµ‹æ˜¯å¦æœ‰èƒŒåŒ…ç©ºé—´
 		if (iDayHuan==0) then
-			-- ¼ì²é±³°ü¿Õ¼ä
+			-- æ£€æŸ¥èƒŒåŒ…ç©ºé—´
 			if LuaFnGetPropertyBagSpace( sceneId, selfId ) < 1 then
 					x050059_MsgBox( sceneId, selfId, "#{LLFB_80821_6}")
 					return
@@ -733,30 +733,30 @@ function x050059_OnSubmit( sceneId, selfId, targetId, selectRadioId,MissionID )
 		end
 		
 		DelMission( sceneId, selfId, MissionID )
-		--µ÷ÓÃÍ¨ÓÃÌá½»ÈÎÎñ½Ó¿Ú½Ó¿Ú	
+		--è°ƒç”¨é€šç”¨æäº¤ä»»åŠ¡æ¥å£æ¥å£	
 		x050059_OnSubmit_Necessary(sceneId, selfId, targetId)	
 	end
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x050059_OnSubmit_Necessary( sceneId, selfId, targetId)
 	local Level =GetLevel(sceneId, selfId)
 	local iDayCount = GetMissionData(sceneId,selfId,MD_SHIMENCAIJI_COUNT)
 	
-	--ÉèÖÃµ±ÌìµÄÈÎÎñ×ÜÊı(½ÓÊÜÈÎÎñµÄÊ±ºòÒÑ¾­¼ÇÂ¼ÁË´ÎÊı£¬ËùÒÔ×¢ÊÍÁË´ËĞĞ
+	--è®¾ç½®å½“å¤©çš„ä»»åŠ¡æ€»æ•°(æ¥å—ä»»åŠ¡çš„æ—¶å€™å·²ç»è®°å½•äº†æ¬¡æ•°ï¼Œæ‰€ä»¥æ³¨é‡Šäº†æ­¤è¡Œ
 	--SetMissionData(sceneId,selfId,MD_SHIMENCAIJI_COUNT,iDayCount)
 	local iDayHuan = mod(iDayCount,x050059_g_Times)
 	if (iDayHuan==0) then
 		iDayHuan=x050059_g_Times
 	end
-	--Ôö¼Ó¾­ÑéÖµ
+	--å¢åŠ ç»éªŒå€¼
 	AddExp( sceneId,selfId,x050059_g_ExpTbl[iDayHuan][Level])
 	
 	if (iDayHuan ==x050059_g_Times) then
 		local giftID = x050059_GiveChunLian(sceneId, selfId)
-		--ËÍ´ºÁª³É¹¦»òÕßÑÌ»¨
+		--é€æ˜¥è”æˆåŠŸæˆ–è€…çƒŸèŠ±
 		if (0 == giftID) then
 			return
 		else
@@ -767,7 +767,7 @@ function x050059_OnSubmit_Necessary( sceneId, selfId, targetId)
 	end
 	
 	if (iDayCount == x050059_TaskMaxCount) then
-		--Íê³ÉÈı»·µÄÍæ¼Ò
+		--å®Œæˆä¸‰ç¯çš„ç©å®¶
 		AuditShiMenCaiJi(sceneId, selfId,2)
 	end 
 
@@ -776,10 +776,10 @@ function x050059_OnSubmit_Necessary( sceneId, selfId, targetId)
 end
 --/////////////////////////////////////////////////////////////////////////////////////////////////////
 --**********************************
---ËÍ³ö´ºÁª
+--é€å‡ºæ˜¥è”
 --**********************************
 function x050059_GiveChunLian(sceneId, selfId)
-	-- ¼ì²é±³°ü¿Õ¼ä
+	-- æ£€æŸ¥èƒŒåŒ…ç©ºé—´
 		if LuaFnGetPropertyBagSpace( sceneId, selfId ) < 1 then
 				BeginEvent(sceneId)
 					AddText( sceneId, "#{LLFB_80821_6}" )
@@ -789,7 +789,7 @@ function x050059_GiveChunLian(sceneId, selfId)
 		else
 			local Level =GetLevel(sceneId, selfId)
 			local iIndex = 1
-			--²éÑ¯Íæ¼ÒµÈ¼¶¶ÔÓ¦µÄ¸ÅÂÊ±í
+			--æŸ¥è¯¢ç©å®¶ç­‰çº§å¯¹åº”çš„æ¦‚ç‡è¡¨
 			for i, v in x050059_g_RateTbl do
 				if (Level>=v.MinLevel and Level<=v.MaxLevel) then
 					iIndex = i
@@ -798,11 +798,11 @@ function x050059_GiveChunLian(sceneId, selfId)
 			end
 			local iRandom1 = random(1,1000)
 			local giftID = 0
-			--»ñµÃ´ºÁª
+			--è·å¾—æ˜¥è”
 			if (iRandom1<=x050059_g_RateTbl[iIndex].rate) then
-				--»ñµÃ´ºÁª
+				--è·å¾—æ˜¥è”
 				local iRandom2 = random(1,8)
-				--¸øÍæ¼Ò¶«Î÷£¬Íê³É
+				--ç»™ç©å®¶ä¸œè¥¿ï¼Œå®Œæˆ
 				BeginAddItem( sceneId )
 				local nIndex = AddItem( sceneId, x050059_g_ChunLianTbl[iRandom2], 1 )
 				local ret = EndAddItem( sceneId, selfId )
@@ -814,9 +814,9 @@ function x050059_GiveChunLian(sceneId, selfId)
 				local szItemTransfer = GetItemTransfer(sceneId,selfId,0)
 				x050059_ShowRandomSystemNotice( sceneId, selfId, szItemTransfer )
 			else
-				--»ñµÃ´º½ÚÑÌ»¨
+				--è·å¾—æ˜¥èŠ‚çƒŸèŠ±
 				local iRandom2 = random(1,5)
-				--¸øÍæ¼Ò¶«Î÷£¬Íê³É
+				--ç»™ç©å®¶ä¸œè¥¿ï¼Œå®Œæˆ
 				BeginAddItem( sceneId )
 				local nIndex = AddItem( sceneId, x050059_g_YanHuaTbl[iRandom2], 1 )
 				local ret = EndAddItem( sceneId, selfId )
@@ -833,7 +833,7 @@ end
 
 --/////////////////////////////////////////////////////////////////////////////////////////////////////
 --**********************************
---ËÍ³ö³èÎïµ°µÄ¹«¸æ
+--é€å‡ºå® ç‰©è›‹çš„å…¬å‘Š
 --**********************************
 function x050059_ShowPetSystemNotice( sceneId, selfId, strItemInfo )
 	
@@ -846,7 +846,7 @@ end
 
 --/////////////////////////////////////////////////////////////////////////////////////////////////////
 --**********************************
---ËÍ³ö´ºÁªµÄ¹«¸æ
+--é€å‡ºæ˜¥è”çš„å…¬å‘Š
 --**********************************
 function x050059_ShowRandomSystemNotice( sceneId, selfId, strItemInfo )
 	
@@ -863,27 +863,27 @@ function x050059_ShowRandomSystemNotice( sceneId, selfId, strItemInfo )
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x050059_OnAbandon( sceneId, selfId,MissionID)
 	----PrintStr("OnAbandon...")
 	if IsHaveMission(sceneId, selfId, MissionID) > 0 then	
-			--É¾³ıÍæ¼ÒÈÎÎñÁĞ±íÖĞ¶ÔÓ¦µÄÈÎÎñ
+			--åˆ é™¤ç©å®¶ä»»åŠ¡åˆ—è¡¨ä¸­å¯¹åº”çš„ä»»åŠ¡
 	  DelMission( sceneId, selfId, MissionID )
 		local td = GetDayTime()
 		local LastGetTaskTime = GetMissionData(sceneId,selfId,MD_SHIMENCAIJI_DAY)
-		--µ±Ç°ÈÕÆÚÊÇ·ñ´óÓÚÒÑ¾­¼ÇÂ¼µÄÈÕÆÚ
+		--å½“å‰æ—¥æœŸæ˜¯å¦å¤§äºå·²ç»è®°å½•çš„æ—¥æœŸ
 		if td > LastGetTaskTime then
 			SetMissionData(sceneId, selfId, MD_SHIMENCAIJI_DAY, td)
-			SetMissionData(sceneId,selfId,MD_SHIMENCAIJI_COUNT,0)	--µ±Ç°»·ÊıÇå0
+			SetMissionData(sceneId,selfId,MD_SHIMENCAIJI_COUNT,0)	--å½“å‰ç¯æ•°æ¸…0
 			SetMissionData(sceneId, selfId, MD_SHIMENCAIJI_ABANDON,1)
 			x050059_MsgBox( sceneId, selfId, "#{SMCJ_081014_16}")
 			return
-		--µ±Ç°ÈÕÆÚ£¬¼ì²âµ±ÌìµÄÈÎÎñ´ÎÊı
+		--å½“å‰æ—¥æœŸï¼Œæ£€æµ‹å½“å¤©çš„ä»»åŠ¡æ¬¡æ•°
 		else
 			local TaskCount = GetMissionData(sceneId,selfId,MD_SHIMENCAIJI_COUNT)
 	  	local iDayHuan = floor((TaskCount-1)/x050059_g_Times)
-	  	SetMissionData(sceneId,selfId,MD_SHIMENCAIJI_COUNT,iDayHuan*x050059_g_Times)	--µ±Ç°»·ÊıÇå0
+	  	SetMissionData(sceneId,selfId,MD_SHIMENCAIJI_COUNT,iDayHuan*x050059_g_Times)	--å½“å‰ç¯æ•°æ¸…0
 	  	local iAbandonCount = GetMissionData(sceneId,selfId,MD_SHIMENCAIJI_ABANDON)
 	  	SetMissionData(sceneId,selfId,MD_SHIMENCAIJI_ABANDON,iAbandonCount+1)
 			x050059_MsgBox( sceneId, selfId, "#{SMCJ_081014_16}")

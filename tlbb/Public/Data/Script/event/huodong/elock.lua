@@ -1,33 +1,33 @@
---È«²¿¼ÓËø
+--å…¨éƒ¨åŠ é”
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x808007_g_ScriptId	= 808007
 
---²Ù×÷¼¯
+--æ“ä½œé›†
 x808007_g_Key	=
 {
-	["hlp"]			= 1,		--°ïÖú
-	["lck_s"]		= 11,		--È«²¿¼ÓËø
-	["lck_sY"]	= 111,	--È«²¿¼ÓËø£¬È·¶¨
-	["lck_1"]		= 10,		--µ¥¸ö¼ÓËø
-	["unl_s"]		= 21,		--ÎÒÏëÁÙÊ±½âËø
-	["unl_1"]		= 20,		--ÎÒÏëµ¥¸ö½âËø
+	["hlp"]			= 1,		--å¸®åŠ©
+	["lck_s"]		= 11,		--å…¨éƒ¨åŠ é”
+	["lck_sY"]	= 111,	--å…¨éƒ¨åŠ é”ï¼Œç¡®å®š
+	["lck_1"]		= 10,		--å•ä¸ªåŠ é”
+	["unl_s"]		= 21,		--æˆ‘æƒ³ä¸´æ—¶è§£é”
+	["unl_1"]		= 20,		--æˆ‘æƒ³å•ä¸ªè§£é”
 
-	["lck_set"]	= 31,		--ÉèÖÃ¶þ¼¶ÃÜÂë
-	["lck_res"]	= 30,		--ÐÞ¸Ä¶þ¼¶ÃÜÂë
+	["lck_set"]	= 31,		--è®¾ç½®äºŒçº§å¯†ç 
+	["lck_res"]	= 30,		--ä¿®æ”¹äºŒçº§å¯†ç 
 }
 
 x808007_g_Msg	=
 {
 	["lck"]		= "#{JSJS_090206_01}",
 	["ask_l"]	= "    #{PBSD_20080103_01}",
-	["unl"]		= "    ÁÙÊ±½âËøºóÄú¿ÉÒÔ½øÐÐÏàÓ¦µÄ²Ù×÷£¬ÏÂÏßºó»á×Ô¶¯ÖÃÎªÉÏËø×´Ì¬£»µ¥¶À½âËø¿É´ò¿ª¶ÔÒÑÉÏËøµÄÎïÆ·¿ªËø£¬ÄúÏë½âËøÂð£¿",
-	["ask_2"]   = "#r    Òò½üÆÚÍÆ³ö#GÐÂ¹¦ÄÜ£ºÎïÆ·»ò³èÎï¼ÓËø3Ììºó²ÅÄÜÕýÊ½½âËø#W£¬Îª·ÀÖ¹Ä³Ð©Íæ¼ÒÒòÎó²Ù×÷½«È«²¿ÎïÆ·¼ÓËø¶øÓ°ÏìÕý³£ÓÎÏ·µÄÇé¿ö£¬ÔÝÊ±ÕÚÕÖÈ«²¿¼ÓËø¹¦ÄÜ£¬ÉÔºó½«ÔÙ´Î¿ª·Å¡£"
+	["unl"]		= "    ä¸´æ—¶è§£é”åŽæ‚¨å¯ä»¥è¿›è¡Œç›¸åº”çš„æ“ä½œï¼Œä¸‹çº¿åŽä¼šè‡ªåŠ¨ç½®ä¸ºä¸Šé”çŠ¶æ€ï¼›å•ç‹¬è§£é”å¯æ‰“å¼€å¯¹å·²ä¸Šé”çš„ç‰©å“å¼€é”ï¼Œæ‚¨æƒ³è§£é”å—ï¼Ÿ",
+	["ask_2"]   = "#r    å› è¿‘æœŸæŽ¨å‡º#Gæ–°åŠŸèƒ½ï¼šç‰©å“æˆ–å® ç‰©åŠ é”3å¤©åŽæ‰èƒ½æ­£å¼è§£é”#Wï¼Œä¸ºé˜²æ­¢æŸäº›çŽ©å®¶å› è¯¯æ“ä½œå°†å…¨éƒ¨ç‰©å“åŠ é”è€Œå½±å“æ­£å¸¸æ¸¸æˆçš„æƒ…å†µï¼Œæš‚æ—¶é®ç½©å…¨éƒ¨åŠ é”åŠŸèƒ½ï¼Œç¨åŽå°†å†æ¬¡å¼€æ”¾ã€‚"
 }
---ÕÊºÅ  to  ÕËºÅ
+--å¸å·  to  è´¦å·
 
 --**********************************
---½Å±¾Èë¿Úº¯Êý
+--è„šæœ¬å…¥å£å‡½æ•°
 --**********************************
 function x808007_OnDefaultEvent( sceneId, selfId, op )
 
@@ -35,21 +35,21 @@ function x808007_OnDefaultEvent( sceneId, selfId, op )
 		return
 	end
 	if GetLevel( sceneId, selfId ) <= 15 then
-		x808007_MyNotifyTip( sceneId, selfId, "15¼¶Ö®ºó´ò¿ª´Ë¹¦ÄÜ" )
+		x808007_MyNotifyTip( sceneId, selfId, "15çº§ä¹‹åŽæ‰“å¼€æ­¤åŠŸèƒ½" )
 		return
 	end
 	if LuaFnIsStalling( sceneId, selfId ) == 1 then
-		x808007_MyNotifyTip( sceneId, selfId, "°ÚÌ¯×´Ì¬ÏÂ²»¿É½øÐÐ´Ë²Ù×÷" )
+		x808007_MyNotifyTip( sceneId, selfId, "æ‘†æ‘ŠçŠ¶æ€ä¸‹ä¸å¯è¿›è¡Œæ­¤æ“ä½œ" )
 		return
 	end
 
-	--¿Í»§¶Ë¿ªÆô
+	--å®¢æˆ·ç«¯å¼€å¯
 	if op == x808007_g_ScriptId then
-		--ÊÇ·ñÒÑÉèÖÃ¶þ¼¶ÃÜÂë
+		--æ˜¯å¦å·²è®¾ç½®äºŒçº§å¯†ç 
 		if LuaFnIsPasswordSetup( sceneId, selfId, 0 ) ~= 1 then
 			x808007_OnLockUI( sceneId, selfId )
 		else
-			--ÊÇ·ñ½âËø¶þ¼¶ÃÜÂë
+			--æ˜¯å¦è§£é”äºŒçº§å¯†ç 
 			if LuaFnIsPasswordUnlocked( sceneId, selfId, 0 ) == 1 then
 				x808007_OnLockUI( sceneId, selfId )
 			else
@@ -70,7 +70,7 @@ function x808007_OnDefaultEvent( sceneId, selfId, op )
 	elseif key == x808007_g_Key["lck_s"] then
 		BeginEvent( sceneId )
 			AddText( sceneId, x808007_g_Msg["ask_l"] )
-			AddNumText( sceneId, x808007_g_ScriptId, "È·ÈÏ", 2, x808007_g_Key["lck_sY"] )
+			AddNumText( sceneId, x808007_g_ScriptId, "ç¡®è®¤", 2, x808007_g_Key["lck_sY"] )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, -1 )
 		return
@@ -88,10 +88,10 @@ function x808007_OnDefaultEvent( sceneId, selfId, op )
 		x808007_OnLockAllObj( sceneId, selfId )
 		return
 	elseif key == x808007_g_Key["lck_set"] then
-		--ÉèÖÃ¶þ¼¶ÃÜÂë
+		--è®¾ç½®äºŒçº§å¯†ç 
 		LuaFnSendOpResult( sceneId, selfId, OR_EXE_SETPASSWORD )
 	elseif key == x808007_g_Key["lck_res"] then
-		--ÐÞ¸Ä¶þ¼¶ÃÜÂë
+		--ä¿®æ”¹äºŒçº§å¯†ç 
 		LuaFnSendOpResult( sceneId, selfId, OR_EXE_CHANGEPASSWORD )
 	end
 	
@@ -102,57 +102,57 @@ function x808007_OnDefaultEvent( sceneId, selfId, op )
 end
 
 --**********************************
---¼ÓËø½çÃæ
+--åŠ é”ç•Œé¢
 --**********************************
 function x808007_OnLockUI( sceneId, selfId )
 
 	BeginEvent( sceneId )
 		AddText( sceneId, x808007_g_Msg["lck"] )
-		AddNumText( sceneId, x808007_g_ScriptId, "È«²¿¼ÓËø", 2, x808007_g_Key["lck_s"] )
-		AddNumText( sceneId, x808007_g_ScriptId, "µ¥¸ö¼ÓËø", 2, x808007_g_Key["lck_1"] )
+		AddNumText( sceneId, x808007_g_ScriptId, "å…¨éƒ¨åŠ é”", 2, x808007_g_Key["lck_s"] )
+		AddNumText( sceneId, x808007_g_ScriptId, "å•ä¸ªåŠ é”", 2, x808007_g_Key["lck_1"] )
 		if LuaFnIsPasswordSetup( sceneId, selfId, 0 ) ~= 1 then
-			AddNumText( sceneId, x808007_g_ScriptId, "ÉèÖÃ¶þ¼¶ÃÜÂë", 2, x808007_g_Key["lck_set"] )
+			AddNumText( sceneId, x808007_g_ScriptId, "è®¾ç½®äºŒçº§å¯†ç ", 2, x808007_g_Key["lck_set"] )
 		else
-			AddNumText( sceneId, x808007_g_ScriptId, "ÐÞ¸Ä¶þ¼¶ÃÜÂë", 2, x808007_g_Key["lck_res"] )
+			AddNumText( sceneId, x808007_g_ScriptId, "ä¿®æ”¹äºŒçº§å¯†ç ", 2, x808007_g_Key["lck_res"] )
 		end
-		AddNumText( sceneId, x808007_g_ScriptId, "¹ØÓÚÈ«²¿¼ÓËø", 11, x808007_g_Key["hlp"] )
+		AddNumText( sceneId, x808007_g_ScriptId, "å…³äºŽå…¨éƒ¨åŠ é”", 11, x808007_g_Key["hlp"] )
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, selfId, -1 )
 
 end
 
 --**********************************
---½âËø½çÃæ
+--è§£é”ç•Œé¢
 --**********************************
 function x808007_OnUnlockUI( sceneId, selfId )
 
 	BeginEvent( sceneId )
 		AddText( sceneId, x808007_g_Msg["unl"] )
-		AddNumText( sceneId, x808007_g_ScriptId, "ÎÒÏë¶Ô²Ù×÷ÁÙÊ±½âËø", 2, x808007_g_Key["unl_s"] )
-		AddNumText( sceneId, x808007_g_ScriptId, "ÎÒÏëµ¥¶À¶ÔÄ³ÎïÆ·½âËø", 2, x808007_g_Key["unl_1"] )
+		AddNumText( sceneId, x808007_g_ScriptId, "æˆ‘æƒ³å¯¹æ“ä½œä¸´æ—¶è§£é”", 2, x808007_g_Key["unl_s"] )
+		AddNumText( sceneId, x808007_g_ScriptId, "æˆ‘æƒ³å•ç‹¬å¯¹æŸç‰©å“è§£é”", 2, x808007_g_Key["unl_1"] )
 		if LuaFnIsPasswordSetup( sceneId, selfId, 0 ) ~= 1 then
-			AddNumText( sceneId, x808007_g_ScriptId, "ÉèÖÃ¶þ¼¶ÃÜÂë", 2, x808007_g_Key["lck_set"] )
+			AddNumText( sceneId, x808007_g_ScriptId, "è®¾ç½®äºŒçº§å¯†ç ", 2, x808007_g_Key["lck_set"] )
 		else
-			AddNumText( sceneId, x808007_g_ScriptId, "ÐÞ¸Ä¶þ¼¶ÃÜÂë", 2, x808007_g_Key["lck_res"] )
+			AddNumText( sceneId, x808007_g_ScriptId, "ä¿®æ”¹äºŒçº§å¯†ç ", 2, x808007_g_Key["lck_res"] )
 		end
-		AddNumText( sceneId, x808007_g_ScriptId, "¹ØÓÚÈ«²¿¼ÓËø", 11, x808007_g_Key["hlp"] )
+		AddNumText( sceneId, x808007_g_ScriptId, "å…³äºŽå…¨éƒ¨åŠ é”", 11, x808007_g_Key["hlp"] )
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, selfId, -1 )
 
 end
 
 --**********************************
---¶þ¼¶ÃÜÂëËø¶¨ËùÓÐÎïÆ·¡¢³èÎï
+--äºŒçº§å¯†ç é”å®šæ‰€æœ‰ç‰©å“ã€å® ç‰©
 --**********************************
 function x808007_OnLockAllObj( sceneId, selfId )
 
-	--ÊÇ·ñÒÑÉèÖÃ¶þ¼¶ÃÜÂë
+	--æ˜¯å¦å·²è®¾ç½®äºŒçº§å¯†ç 
 	if LuaFnIsPasswordSetup( sceneId, selfId, 0 ) ~= 1 then
 		LuaFnSendOpResult( sceneId, selfId, OR_NEED_SETMINORPASSWORD )
 	else
 		SetAllItemPWLock( sceneId, selfId, 1 )
 		SetAllPetPWLock( sceneId, selfId, 1 )
-		x808007_MyNotifyTip( sceneId, selfId, "³É¹¦¼ÓËø" )
+		x808007_MyNotifyTip( sceneId, selfId, "æˆåŠŸåŠ é”" )
 		BeginUICommand( sceneId )
 		EndUICommand( sceneId )
 		DispatchUICommand( sceneId, selfId, 1000 )
@@ -161,7 +161,7 @@ function x808007_OnLockAllObj( sceneId, selfId )
 end
 
 --**********************************
---ÐÑÄ¿ÌáÊ¾
+--é†’ç›®æç¤º
 --**********************************
 function x808007_MyNotifyTip( sceneId, selfId, str )
 

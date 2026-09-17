@@ -1,5 +1,5 @@
---ÄêÊŞbossµôÂä±¦ÏäÉú³¤µã
---ÎŞµĞbuff
+--å¹´å…½bossæ‰è½å®ç®±ç”Ÿé•¿ç‚¹
+--æ— æ•Œbuff
 x050055_strErrorNotice = "#{NSBS_20071228_10}"
 x050055_g_impactID = 54
 
@@ -15,7 +15,7 @@ end
 function x050055_OnOpen(sceneId,selfId,targetId)
 	local level = GetLevel( sceneId, selfId )
 	
-	--¼ì²éÓÃ»§µÈ¼¶ÊÇ·ñµ½10
+	--æ£€æŸ¥ç”¨æˆ·ç­‰çº§æ˜¯å¦åˆ°10
 	if level < 10 then
 		BeginEvent(sceneId)
 		AddText(sceneId, x050055_strErrorNotice);
@@ -24,12 +24,12 @@ function x050055_OnOpen(sceneId,selfId,targetId)
 		return OR_NEED_HIGH_LEVEL;
 	end
 	
-	--2.¸ø¿ªÆôÕß¼ÓÌØĞ§
+	--2.ç»™å¼€å¯è€…åŠ ç‰¹æ•ˆ
 	--LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, x050055_g_impactID, 0)
 	return OR_OK;
 end
 
 function x050055_OnProcOver(sceneId,selfId,targetId)
-	--2.¸ø¿ªÆôÕß¼ÓÌØĞ§
+	--2.ç»™å¼€å¯è€…åŠ ç‰¹æ•ˆ
 	LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, x050055_g_impactID, 0)
 end

@@ -1,13 +1,13 @@
---ËÕÖİNPC
---êË²¹Ö®
---Ò»°ã
+--è‹å·NPC
+--æ™è¡¥ä¹‹
+--ä¸€èˆ¬
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x001005_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
-		AddText(sceneId,"  ÕÅñçĞÖºÍºØÄêĞÖ²Å»ª¶¼Ô¶ÔÚÎÒÖ®ÉÏ¡£")
+		AddText(sceneId,"  å¼ è€’å…„å’Œè´ºå¹´å…„æ‰åéƒ½è¿œåœ¨æˆ‘ä¹‹ä¸Šã€‚")
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 end

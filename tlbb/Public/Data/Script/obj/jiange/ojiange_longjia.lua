@@ -1,24 +1,24 @@
 -- created by zchw 
 -- 007113
--- Áú¼Ö µØ¹¬´«ËÍÊ¹
+-- é¾™è´¾ åœ°å®«ä¼ é€ä½¿
 
--- ½Å±¾ºÅ
+-- è„šæœ¬å·
 x007113_g_scriptId = 007113
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x007113_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
 		msg = "#{DG_8724_1}"
 		AddText(sceneId,msg);
-		AddNumText( sceneId, x007113_g_scriptId, "´«ËÍµ½ÇØ»ÊµØ¹¬", 9, 1 )
+		AddNumText( sceneId, x007113_g_scriptId, "ä¼ é€åˆ°ç§¦çš‡åœ°å®«", 9, 1 )
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x007113_OnEventRequest( sceneId, selfId, targetId, eventId )
 	if GetNumText() == 1 then

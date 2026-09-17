@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Terrain xsize="64" zsize="64" tileSize="32">
 
     <scale x="100" y="100" z="100" />

@@ -1,21 +1,21 @@
---Â¥À¼NPC....
---çº·¢....
+--æ¥¼å…°NPC....
+--ç»¾å‘....
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x001134_g_scriptId = 001134
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x001134_g_eventList = { 801010 }
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x001134_OnDefaultEvent( sceneId, selfId,targetId )
 
 	BeginEvent(sceneId)
 		AddText(sceneId,"#{loulan_huanfa_20080329}")
-		AddNumText( sceneId, x001134_g_scriptId, "ĞŞ¸Ä·¢ĞÍ½éÉÜ", 11, 1 )
-		AddNumText(sceneId,x001134_g_scriptId,"ĞŞ¸Ä·¢ĞÍ", 6, 2 )
+		AddNumText( sceneId, x001134_g_scriptId, "ä¿®æ”¹å‘å‹ä»‹ç»", 11, 1 )
+		AddNumText(sceneId,x001134_g_scriptId,"ä¿®æ”¹å‘å‹", 6, 2 )
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 
@@ -34,7 +34,7 @@ function x001134_OnEventRequest( sceneId, selfId, targetId, eventId )
 
 	elseif NumText == 2 then
 
-		-- ĞŞ¸Ä·¢ĞÍ
+		-- ä¿®æ”¹å‘å‹
 		CallScriptFunction( 801010, "OnEnumerate",sceneId, selfId, targetId )
 
 	end

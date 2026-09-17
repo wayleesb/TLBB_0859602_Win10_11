@@ -1,25 +1,25 @@
 
---µ±Ç°³¡¾°ÀàĞÍ....²»ÓÃµÄ³¡¾°ÀàĞÍËùĞèÏÔÊ¾µÄTabÒ³²»Í¬....
--- -1 ÎŞĞ§
---  0 ³ÇÊĞ   --È«²¿£¬¹¦ÄÜ£¬ÉÌµê£¬ÈÎÎñ
---  1 ÃÅÅÉ   --È«²¿£¬¹¦ÄÜ
---  2 ĞşÎäµº --È«²¿£¬ÈËÎï£¬¼ÒÊŞ£¬ÃÍÊŞ
---  3 ÆäËü   --È«²¿£¬¹ÖÎï£¬ÈËÎï
+--å½“å‰åœºæ™¯ç±»å‹....ä¸ç”¨çš„åœºæ™¯ç±»å‹æ‰€éœ€æ˜¾ç¤ºçš„Tabé¡µä¸åŒ....
+-- -1 æ— æ•ˆ
+--  0 åŸå¸‚   --å…¨éƒ¨ï¼ŒåŠŸèƒ½ï¼Œå•†åº—ï¼Œä»»åŠ¡
+--  1 é—¨æ´¾   --å…¨éƒ¨ï¼ŒåŠŸèƒ½
+--  2 ç„æ­¦å²› --å…¨éƒ¨ï¼Œäººç‰©ï¼Œå®¶å…½ï¼ŒçŒ›å…½
+--  3 å…¶å®ƒ   --å…¨éƒ¨ï¼Œæ€ªç‰©ï¼Œäººç‰©
 g_CurSceneType = -1
 
---³ÇÊĞ³¡¾°µÄIDÁĞ±í....
+--åŸå¸‚åœºæ™¯çš„IDåˆ—è¡¨....
 g_CitySceneIDList = { 0, 1, 2, 242, 246, 260 }
---ÃÅÅÉ³¡¾°µÄIDÁĞ±í....
+--é—¨æ´¾åœºæ™¯çš„IDåˆ—è¡¨....
 g_MenpaiSceneIDList = { 9, 10, 11, 12, 13, 14, 15, 16, 17 }
---³èÎï³¡¾°µÄIDÁĞ±í....
+--å® ç‰©åœºæ™¯çš„IDåˆ—è¡¨....
 g_PetSceneIDList = { 112, 201 }
 
---µ±Ç°Ñ¡ÔñµÄTabÒ³....
+--å½“å‰é€‰æ‹©çš„Tabé¡µ....
 g_CurSelectTabIndex = 1;
 
---²»Í¬³¡¾°ÀàĞÍÏÂ¸÷¸öTab°´Å¥Ëù¶ÔÓ¦µÄ·ÖÀàÀàĞÍ....
---½çÃæÉÏÒ»¹²ÓĞ5¸öTab....
---·ÖÀàÀàĞÍ ÎŞĞ§=-1£¬È«=0£¬¹Ö=1£¬ÈË=2£¬ÊŞ=3£¬ÃÍ=4£¬¹¦=5£¬µê=6£¬ÈÎ=7£¬ÎŞ·ÖÀà±êÇ©=99
+--ä¸åŒåœºæ™¯ç±»å‹ä¸‹å„ä¸ªTabæŒ‰é’®æ‰€å¯¹åº”çš„åˆ†ç±»ç±»å‹....
+--ç•Œé¢ä¸Šä¸€å…±æœ‰5ä¸ªTab....
+--åˆ†ç±»ç±»å‹ æ— æ•ˆ=-1ï¼Œå…¨=0ï¼Œæ€ª=1ï¼Œäºº=2ï¼Œå…½=3ï¼ŒçŒ›=4ï¼ŒåŠŸ=5ï¼Œåº—=6ï¼Œä»»=7ï¼Œæ— åˆ†ç±»æ ‡ç­¾=99
 g_TableTabIndex2TabType = {
 	{	0,	5,	6,	7,	-1,	},
 	{	0,	5,	-1,	-1,	-1,	},
@@ -27,10 +27,10 @@ g_TableTabIndex2TabType = {
 	{	0,	1,	2,	-1,	-1,	},
 }
 
---ÉÏ´Î¸üĞÂ±¾´°¿ÚÊ±Íæ¼ÒËùÔÚ³¡¾°ID....
+--ä¸Šæ¬¡æ›´æ–°æœ¬çª—å£æ—¶ç©å®¶æ‰€åœ¨åœºæ™¯ID....
 g_LastUpdateSceneID = -1;
 
---¸÷¸öTabÒ³µÄ×Ô¶¯Ñ°Â·Êı¾İ....»»³¡¾°µÄÊ±ºò²ÅÖØĞÂ¼ÆËã....
+--å„ä¸ªTabé¡µçš„è‡ªåŠ¨å¯»è·¯æ•°æ®....æ¢åœºæ™¯çš„æ—¶å€™æ‰é‡æ–°è®¡ç®—....
 g_TabListData = {};
 g_TabListData[1] = {};
 g_TabListData[2] = {};
@@ -48,19 +48,19 @@ end
 
 function AutoSearch_OnLoad()
 
-	--´°¿Ú¼ÓÔØÊ±¶¯Ì¬µÄ²åÈëÁĞ....Ö±½ÓÔÚxmlÀïÅäÖÃÁĞµÄ»°ÎŞ·¨ÒıÓÃ×Öµä....
-	AutoSearch_List:AddColumn( "Ãû³Æ", 0, 0.6 );
-	AutoSearch_List:AddColumn( "¼òÊö", 1, 0.4 );
+	--çª—å£åŠ è½½æ—¶åŠ¨æ€çš„æ’å…¥åˆ—....ç›´æ¥åœ¨xmlé‡Œé…ç½®åˆ—çš„è¯æ— æ³•å¼•ç”¨å­—å…¸....
+	AutoSearch_List:AddColumn( "åç§°", 0, 0.6 );
+	AutoSearch_List:AddColumn( "ç®€è¿°", 1, 0.4 );
 
 	--*****************************************
-	--CEGUIÓĞÒ»´¦Ğ´µÄ²»ºÏÀíµÄµØ·½(Bug?)....µ¼ÖÂ¶àÁĞÁĞ±íÉèÖÃÊôĞÔÊ±»á³öÏÖÒ»Ğ©´íÎó....
-	--¾ßÌåÎª£º
-	--ÔÚXMLÖĞ¸ø¶àÁĞÁĞ±íÅäÖÃÁËColumnsSizable=True....¾Í»áÉèÖÃ¸Ã¿Ø¼şµÄColumnsSizable=True....»¹»áÉèÖÃÆäËùÓĞÁĞµÄColumnsSizable=True....
-	--ÓĞĞ©¶àÁĞÁĞ±íÈç±¾´°¿ÚµÄĞèÒªÔÚ½Å±¾ÖĞ¶¯Ì¬µÄ²åÈëÁĞ....ÕâÊ±XMLÖĞÅäÖÃµÄColumnsSizable=TrueÖ»»áÉèÖÃ¸Ã¿Ø¼şµÄColumnsSizable=True....²»»áÉèÖÃÁĞµÄColumnsSizable=True(ÒòÎªµ±Ê±Ò»¸öÁĞ¶¼Ã»ÓĞ)....
-	--Òò´ËÔÚ½Å±¾ÖĞ¶¯Ì¬²åÈëÁĞºóÁĞµÄColumnsSizableÒòÎªÃ»±»ÉèÖÃ¹ı¾Í²»ÊÇTrue....
-	--Èç¹ûÏëÔÚ¶¯Ì¬²åÈëÁĞºóÔÚ½Å±¾ÀïÔÙÖØĞÂ¸ø¶àÁĞÁĞ±íÉèÖÃColumnsSizable=TrueÒ²²»ĞĞ....
-	--ÒòÎªÉèÖÃ¸ÃÊôĞÔµÄÖµÊ±»áÅĞ¶ÏÊÇ·ñÓëµ±Ç°¸ÃÊôĞÔµÄÖµÒ»Ñù....Èç¹ûÒ»Ñù¾ÍÖ±½Ó·µ»Ø....¶ø¸Ã¿Ø¼şµÄColumnsSizableÔÚ³õÊ¼»¯XMLµÄÊ±ºò±»Éè³ÉTrueÁËËùÒÔ»áÖ±½Ó·µ»Ø....Ò²¾Í²»»á¸øËüµÄÁĞÉèÖÃ¸ÃÊôĞÔ....
-	--Òò´ËÈç¹ûÏë¶¯Ì¬²åÈëÁĞ¾ÍĞèÒªÔÚ¶¯Ì¬²åÈëºóÔÙÉèÖÃºÍÁĞÓĞ¹ØµÄÊôĞÔ....Í¬Ê±ÔÚXMLÖĞ²»ÄÜ¶ÔºÍÁĞÓĞ¹ØµÄÊôĞÔ½øĞĞÉèÖÃ....
+	--CEGUIæœ‰ä¸€å¤„å†™çš„ä¸åˆç†çš„åœ°æ–¹(Bug?)....å¯¼è‡´å¤šåˆ—åˆ—è¡¨è®¾ç½®å±æ€§æ—¶ä¼šå‡ºç°ä¸€äº›é”™è¯¯....
+	--å…·ä½“ä¸ºï¼š
+	--åœ¨XMLä¸­ç»™å¤šåˆ—åˆ—è¡¨é…ç½®äº†ColumnsSizable=True....å°±ä¼šè®¾ç½®è¯¥æ§ä»¶çš„ColumnsSizable=True....è¿˜ä¼šè®¾ç½®å…¶æ‰€æœ‰åˆ—çš„ColumnsSizable=True....
+	--æœ‰äº›å¤šåˆ—åˆ—è¡¨å¦‚æœ¬çª—å£çš„éœ€è¦åœ¨è„šæœ¬ä¸­åŠ¨æ€çš„æ’å…¥åˆ—....è¿™æ—¶XMLä¸­é…ç½®çš„ColumnsSizable=Trueåªä¼šè®¾ç½®è¯¥æ§ä»¶çš„ColumnsSizable=True....ä¸ä¼šè®¾ç½®åˆ—çš„ColumnsSizable=True(å› ä¸ºå½“æ—¶ä¸€ä¸ªåˆ—éƒ½æ²¡æœ‰)....
+	--å› æ­¤åœ¨è„šæœ¬ä¸­åŠ¨æ€æ’å…¥åˆ—ååˆ—çš„ColumnsSizableå› ä¸ºæ²¡è¢«è®¾ç½®è¿‡å°±ä¸æ˜¯True....
+	--å¦‚æœæƒ³åœ¨åŠ¨æ€æ’å…¥åˆ—ååœ¨è„šæœ¬é‡Œå†é‡æ–°ç»™å¤šåˆ—åˆ—è¡¨è®¾ç½®ColumnsSizable=Trueä¹Ÿä¸è¡Œ....
+	--å› ä¸ºè®¾ç½®è¯¥å±æ€§çš„å€¼æ—¶ä¼šåˆ¤æ–­æ˜¯å¦ä¸å½“å‰è¯¥å±æ€§çš„å€¼ä¸€æ ·....å¦‚æœä¸€æ ·å°±ç›´æ¥è¿”å›....è€Œè¯¥æ§ä»¶çš„ColumnsSizableåœ¨åˆå§‹åŒ–XMLçš„æ—¶å€™è¢«è®¾æˆTrueäº†æ‰€ä»¥ä¼šç›´æ¥è¿”å›....ä¹Ÿå°±ä¸ä¼šç»™å®ƒçš„åˆ—è®¾ç½®è¯¥å±æ€§....
+	--å› æ­¤å¦‚æœæƒ³åŠ¨æ€æ’å…¥åˆ—å°±éœ€è¦åœ¨åŠ¨æ€æ’å…¥åå†è®¾ç½®å’Œåˆ—æœ‰å…³çš„å±æ€§....åŒæ—¶åœ¨XMLä¸­ä¸èƒ½å¯¹å’Œåˆ—æœ‰å…³çš„å±æ€§è¿›è¡Œè®¾ç½®....
 	--*****************************************
 	AutoSearch_List:SetProperty( "ColumnsSizable", "False" );
 	AutoSearch_List:SetProperty( "ColumnsAdjust", "True" );
@@ -81,7 +81,7 @@ function AutoSearch_OnEvent(event)
 
 	elseif ( event == "SCENE_TRANSED" ) then
 	
-		--ÇĞ»»³¡¾°Ê±¹Ø±Õ±¾´°¿Ú	
+		--åˆ‡æ¢åœºæ™¯æ—¶å…³é—­æœ¬çª—å£	
 		this:Hide();
 		local curSceneID = GetSceneID();
 		if (curSceneID == 112) then
@@ -101,49 +101,49 @@ end
 
 
 --**********************************
---´ò¿ª×Ô¶¯Ñ°Â·´°¿Ú....
+--æ‰“å¼€è‡ªåŠ¨å¯»è·¯çª—å£....
 --**********************************
 function AutoSearch_Open()
 
-	--´ò¿ª´°¿ÚÊ±Ä¬ÈÏÊÇTab1....
+	--æ‰“å¼€çª—å£æ—¶é»˜è®¤æ˜¯Tab1....
 	if ( true == AutoSearch_UpdateFrame(1) ) then
-		--ÉèÖÃTab1°´Å¥ÎªÑ¡ÖĞ×´Ì¬....
+		--è®¾ç½®Tab1æŒ‰é’®ä¸ºé€‰ä¸­çŠ¶æ€....
 		AutoSearch_Tab1:SetCheck(1);
 		this:Show();
 	else
-		--Èç¹ûÃ»ÓĞÈÎºÎ¿ÉÑ°Â·µÄÎ»ÖÃ£¬ÔòÏÔÊ¾"µ±Ç°µÄ³¡¾°Ã»ÓĞ¿ÉÑ°Â·µÄÄ¿±ê¡£"
-		PushDebugMessage("µ±Ç°µÄ³¡¾°Ã»ÓĞ¿ÉÑ°Â·µÄÄ¿±ê¡£");
+		--å¦‚æœæ²¡æœ‰ä»»ä½•å¯å¯»è·¯çš„ä½ç½®ï¼Œåˆ™æ˜¾ç¤º"å½“å‰çš„åœºæ™¯æ²¡æœ‰å¯å¯»è·¯çš„ç›®æ ‡ã€‚"
+		PushDebugMessage("å½“å‰çš„åœºæ™¯æ²¡æœ‰å¯å¯»è·¯çš„ç›®æ ‡ã€‚");
 	end
 
 end
 
 --**********************************
---¸üĞÂ×Ô¶¯Ñ°Â·´°¿Ú....
---Èçµ±Ç°³¡¾°Ã»ÓĞ¿ÉÑ°Â·µÄÎ»ÖÃÔò·µ»Øfalse....
+--æ›´æ–°è‡ªåŠ¨å¯»è·¯çª—å£....
+--å¦‚å½“å‰åœºæ™¯æ²¡æœ‰å¯å¯»è·¯çš„ä½ç½®åˆ™è¿”å›false....
 --**********************************
 function AutoSearch_UpdateFrame( tabIndex )
 
 	g_CurSelectTabIndex = tabIndex;
 
-	--¸üĞÂÍæ¼Òµ±Ç°ËùÔÚ³¡¾°µÄ³¡¾°ÀàĞÍ....
+	--æ›´æ–°ç©å®¶å½“å‰æ‰€åœ¨åœºæ™¯çš„åœºæ™¯ç±»å‹....
 	UpdateCurrentSceneType();
 
-	--¸ù¾İµ±Ç°µÄ³¡¾°ÀàĞÍ¸üĞÂTab°´Å¥....
+	--æ ¹æ®å½“å‰çš„åœºæ™¯ç±»å‹æ›´æ–°TabæŒ‰é’®....
 	UpdateTabButton();
 
-	--¸üĞÂ×Ô¶¯Ñ°Â·ÁĞ±í....
+	--æ›´æ–°è‡ªåŠ¨å¯»è·¯åˆ—è¡¨....
 	return UpdateList( tabIndex );
 
 end
 
 --**********************************
---¸üĞÂÍæ¼Òµ±Ç°ËùÔÚ³¡¾°µÄ³¡¾°ÀàĞÍ....
+--æ›´æ–°ç©å®¶å½“å‰æ‰€åœ¨åœºæ™¯çš„åœºæ™¯ç±»å‹....
 --**********************************
 function UpdateCurrentSceneType()
 
 	local curSceneID = GetSceneID();
 
-	--³ÇÊĞ
+	--åŸå¸‚
 	for i, sceneId in g_CitySceneIDList do
 		if curSceneID == sceneId then
 			g_CurSceneType = 0;
@@ -151,7 +151,7 @@ function UpdateCurrentSceneType()
 		end
 	end
 
-	--ÃÅÅÉ
+	--é—¨æ´¾
 	for i, sceneId in g_MenpaiSceneIDList do
 		if curSceneID == sceneId then
 			g_CurSceneType = 1;
@@ -159,7 +159,7 @@ function UpdateCurrentSceneType()
 		end
 	end
 
-	--³èÎï
+	--å® ç‰©
 	for i, sceneId in g_PetSceneIDList do
 		if curSceneID == sceneId then
 			g_CurSceneType = 2;
@@ -167,17 +167,17 @@ function UpdateCurrentSceneType()
 		end
 	end
 
-	--ÆäËü³¡¾°
+	--å…¶å®ƒåœºæ™¯
 	g_CurSceneType = 3;
 
 end
 
 --**********************************
---¸ù¾İµ±Ç°µÄ³¡¾°ÀàĞÍ¸üĞÂTab°´Å¥....
+--æ ¹æ®å½“å‰çš„åœºæ™¯ç±»å‹æ›´æ–°TabæŒ‰é’®....
 --**********************************
 function UpdateTabButton()
 
-	--³ÇÊĞ
+	--åŸå¸‚
 	if g_CurSceneType == 0 then
 	
 		AutoSearch_Tab1:Show();
@@ -185,12 +185,12 @@ function UpdateTabButton()
 		AutoSearch_Tab3:Show();
 		AutoSearch_Tab4:Show();
 		AutoSearch_Tab5:Hide();
-		AutoSearch_Tab1:SetText("È«");
-		AutoSearch_Tab2:SetText("¹¦");
-		AutoSearch_Tab3:SetText("µê");
-		AutoSearch_Tab4:SetText("ÈÎ");
+		AutoSearch_Tab1:SetText("å…¨");
+		AutoSearch_Tab2:SetText("åŠŸ");
+		AutoSearch_Tab3:SetText("åº—");
+		AutoSearch_Tab4:SetText("ä»»");
 	
-	--ÃÅÅÉ
+	--é—¨æ´¾
 	elseif g_CurSceneType == 1 then
 	
 		AutoSearch_Tab1:Show();
@@ -198,10 +198,10 @@ function UpdateTabButton()
 		AutoSearch_Tab3:Hide();
 		AutoSearch_Tab4:Hide();
 		AutoSearch_Tab5:Hide();
-		AutoSearch_Tab1:SetText("È«");
-		AutoSearch_Tab2:SetText("¹¦");
+		AutoSearch_Tab1:SetText("å…¨");
+		AutoSearch_Tab2:SetText("åŠŸ");
 	
-	--³èÎï
+	--å® ç‰©
 	elseif g_CurSceneType == 2 then
 
 		AutoSearch_Tab1:Show();
@@ -209,12 +209,12 @@ function UpdateTabButton()
 		AutoSearch_Tab3:Show();
 		AutoSearch_Tab4:Show();
 		AutoSearch_Tab5:Hide();
-		AutoSearch_Tab1:SetText("È«");
-		AutoSearch_Tab2:SetText("ÈË");
-		AutoSearch_Tab3:SetText("ÊŞ");
-		AutoSearch_Tab4:SetText("ÃÍ");
+		AutoSearch_Tab1:SetText("å…¨");
+		AutoSearch_Tab2:SetText("äºº");
+		AutoSearch_Tab3:SetText("å…½");
+		AutoSearch_Tab4:SetText("çŒ›");
 
-	--ÆäËü
+	--å…¶å®ƒ
 	elseif g_CurSceneType == 3 then
 
 		AutoSearch_Tab1:Show();
@@ -222,24 +222,24 @@ function UpdateTabButton()
 		AutoSearch_Tab3:Show();
 		AutoSearch_Tab4:Hide();
 		AutoSearch_Tab5:Hide();
-		AutoSearch_Tab1:SetText("È«");
-		AutoSearch_Tab2:SetText("¹Ö");
-		AutoSearch_Tab3:SetText("ÈË");
+		AutoSearch_Tab1:SetText("å…¨");
+		AutoSearch_Tab2:SetText("æ€ª");
+		AutoSearch_Tab3:SetText("äºº");
 
 	end
 
 end
 
 --**********************************
---¸üĞÂ×Ô¶¯Ñ°Â·ÁĞ±í....
---Èç¹ûµ±Ç°³¡¾°Ã»ÓĞ¿ÉÑ°Â·µÄÎ»ÖÃÔò·µ»Øfalse....
+--æ›´æ–°è‡ªåŠ¨å¯»è·¯åˆ—è¡¨....
+--å¦‚æœå½“å‰åœºæ™¯æ²¡æœ‰å¯å¯»è·¯çš„ä½ç½®åˆ™è¿”å›false....
 --**********************************
 function UpdateList( tabIndex )
 
-	--Çå¿ÕList¿Ø¼şÖĞµÄÄÚÈİ....
+	--æ¸…ç©ºListæ§ä»¶ä¸­çš„å†…å®¹....
 	AutoSearch_List:RemoveAllItem();
 
-	--Èç¹û´ÓÉÏ´Î¸üĞÂÊı¾İÖ®ºó³¡¾°¸Ä±äÁË....ÔòÇå¿ÕÉÏ´Î¼ÆËãºÃµÄ¸÷TabÒ³µÄ×Ô¶¯Ñ°Â·Êı¾İ....
+	--å¦‚æœä»ä¸Šæ¬¡æ›´æ–°æ•°æ®ä¹‹ååœºæ™¯æ”¹å˜äº†....åˆ™æ¸…ç©ºä¸Šæ¬¡è®¡ç®—å¥½çš„å„Tabé¡µçš„è‡ªåŠ¨å¯»è·¯æ•°æ®....
 	local curSceneID = GetSceneID();
 	if g_LastUpdateSceneID ~= curSceneID then
 		g_TabListData[1] = nil;
@@ -250,24 +250,24 @@ function UpdateList( tabIndex )
 		g_LastUpdateSceneID = curSceneID;
 	end
 
-	--»ñÈ¡ÅäÖÃÎÄ¼şÖĞ....±¾³¡¾°×Ô¶¯Ñ°Â·Êı¾İµÄÆğÊ¼Óë½áÊøÎ»ÖÃ....
+	--è·å–é…ç½®æ–‡ä»¶ä¸­....æœ¬åœºæ™¯è‡ªåŠ¨å¯»è·¯æ•°æ®çš„èµ·å§‹ä¸ç»“æŸä½ç½®....
 	local nStart, nEnd = DataPool:GetAutoSearchSceneStartEnd( GetSceneID() )
 
-	--Èç¹û±¾³¡¾°Ã»ÓĞ¿ÉÑ°Â·µÄÎ»ÖÃÔò·µ»Øfalse....
+	--å¦‚æœæœ¬åœºæ™¯æ²¡æœ‰å¯å¯»è·¯çš„ä½ç½®åˆ™è¿”å›false....
 	if nStart == -1 then
 		return false;
 	end
 
-	--Èç¹ûÃ»ÓĞ±¾TabÒ³µÄ×Ô¶¯Ñ°Â·Êı¾İÔòÖØĞÂ¼ÆËã....
+	--å¦‚æœæ²¡æœ‰æœ¬Tabé¡µçš„è‡ªåŠ¨å¯»è·¯æ•°æ®åˆ™é‡æ–°è®¡ç®—....
 	local g_TabListDataTablePtr = g_TabListData[tabIndex];
 
 	if not g_TabListDataTablePtr then
 
-		----PushDebugMessage("±¾tabÒ³µÄÊı¾İ»¹Ã»ÓĞ£¬µÃÖØËã")
+		----PushDebugMessage("æœ¬tabé¡µçš„æ•°æ®è¿˜æ²¡æœ‰ï¼Œå¾—é‡ç®—")
 		g_TabListData[tabIndex] = {};
 		g_TabListDataTablePtr = g_TabListData[tabIndex];
 
-		--Ìî³ä±¾³¡¾°×Ô¶¯Ñ°Â·Êı¾İµÄIDºÍÓÅÏÈ¼¶µ½±í¸ñ....
+		--å¡«å……æœ¬åœºæ™¯è‡ªåŠ¨å¯»è·¯æ•°æ®çš„IDå’Œä¼˜å…ˆçº§åˆ°è¡¨æ ¼....
 		local tblPriority = {};
 		local nCount = nEnd - nStart + 1;
 		local k = 1;
@@ -278,8 +278,8 @@ function UpdateList( tabIndex )
 			k = k + 1;
 		end
 
-		--°´ÓÅÏÈ¼¶¶Ô±í¸ñ½øĞĞÅÅĞò....
-		--Ëã·¨ÓĞµã²»ºÃÀí½â....²ß»®ÒªÇóÈ¨ÖµÏàÍ¬µÄÅÅĞòºóÏà¶ÔÎ»ÖÃ²»ÄÜ¸Ä±ä....¾ÍÏÈÕâÃ´Ğ´ÁË....
+		--æŒ‰ä¼˜å…ˆçº§å¯¹è¡¨æ ¼è¿›è¡Œæ’åº....
+		--ç®—æ³•æœ‰ç‚¹ä¸å¥½ç†è§£....ç­–åˆ’è¦æ±‚æƒå€¼ç›¸åŒçš„æ’åºåç›¸å¯¹ä½ç½®ä¸èƒ½æ”¹å˜....å°±å…ˆè¿™ä¹ˆå†™äº†....
 		local temp1,temp2;
 		for m=nCount, 1, -1 do
 			for n=m-1, 1, -1 do
@@ -294,7 +294,7 @@ function UpdateList( tabIndex )
 			end
 		end
 
-		--°´ÅÅĞòºóµÄIDË³Ğò½«×Ô¶¯Ñ°Â·µÄÊı¾İ¼Óµ½±¾TabÒ³µÄ×Ô¶¯Ñ°Â·Êı¾İ±íÖĞ....
+		--æŒ‰æ’åºåçš„IDé¡ºåºå°†è‡ªåŠ¨å¯»è·¯çš„æ•°æ®åŠ åˆ°æœ¬Tabé¡µçš„è‡ªåŠ¨å¯»è·¯æ•°æ®è¡¨ä¸­....
 		local curTabType = TabIndex2TabType(tabIndex);
 		local x, y, name, tooltips, info, tabtype; 
 		k = 1;
@@ -308,14 +308,14 @@ function UpdateList( tabIndex )
 				g_TabListDataTablePtr[k].strName = name;
 				g_TabListDataTablePtr[k].strToolTips = tooltips;
 				g_TabListDataTablePtr[k].strInfo = info;
-				--g_TabListDataTablePtr[k].strInfo = tostring(tblPriority[nCount-i+1].pri).."£¬"..tostring(tblPriority[nCount-i+1].id);
+				--g_TabListDataTablePtr[k].strInfo = tostring(tblPriority[nCount-i+1].pri).."ï¼Œ"..tostring(tblPriority[nCount-i+1].id);
 				k = k + 1;
 			end
 		end
 
 	end --end of (if not g_TabListDataTablePtr then)
 
-	--Ìî³ä±¾Ò³µÄ×Ô¶¯Ñ°Â·Êı¾İµ½ListÖĞ....
+	--å¡«å……æœ¬é¡µçš„è‡ªåŠ¨å¯»è·¯æ•°æ®åˆ°Listä¸­....
 	local nTabListCount = table.getn( g_TabListDataTablePtr );
 	----PushDebugMessage("count ="..tostring(nTabListCount) )
 	for i=1, nTabListCount do
@@ -329,7 +329,7 @@ function UpdateList( tabIndex )
 end
 
 --**********************************
---»ñÈ¡ÔÚµ±Ç°³¡¾°ÏÂÖ¸¶¨Tab°´Å¥Ëù¶ÔÓ¦µÄ·ÖÀàÀàĞÍ....
+--è·å–åœ¨å½“å‰åœºæ™¯ä¸‹æŒ‡å®šTabæŒ‰é’®æ‰€å¯¹åº”çš„åˆ†ç±»ç±»å‹....
 --**********************************
 function TabIndex2TabType( tabIndex )
 
@@ -342,17 +342,17 @@ function TabIndex2TabType( tabIndex )
 end
 
 --**********************************
---×Ô¶¯Ñ°Â·µ½Ö¸¶¨×ø±ê....
+--è‡ªåŠ¨å¯»è·¯åˆ°æŒ‡å®šåæ ‡....
 --**********************************
 function AutoMoveTo()
 
-	--»ñÈ¡µ±Ç°TabÒ³µÄ×Ô¶¯Ñ°Â·Êı¾İ....
+	--è·å–å½“å‰Tabé¡µçš„è‡ªåŠ¨å¯»è·¯æ•°æ®....
 	g_TabListDataTablePtr = g_TabListData[g_CurSelectTabIndex];
 	if not g_TabListDataTablePtr then
 		return;
 	end
 
-	--Ñ¡ÖĞÁËµÚ¼¸Ïî....
+	--é€‰ä¸­äº†ç¬¬å‡ é¡¹....
 	local nSelIndex = AutoSearch_List:GetSelectItem();
 	if nSelIndex < 0 then
 		return;
@@ -360,10 +360,10 @@ function AutoMoveTo()
 
 	nSelIndex = nSelIndex + 1;
 
-	--×Ô¶¯ÒÆ¶¯µ½Ö¸¶¨Î»ÖÃ
+	--è‡ªåŠ¨ç§»åŠ¨åˆ°æŒ‡å®šä½ç½®
 	AutoRunToTarget( g_TabListDataTablePtr[nSelIndex].nPosX, g_TabListDataTablePtr[nSelIndex].nPosY );
 
-	--ÉèÖÃÄ¿±êNPCµÄÃû×Ö£¬µ½´ï¸ÃNPC´¦ºó»á×Ô¶¯ÓëÆä¶Ô»°
+	--è®¾ç½®ç›®æ ‡NPCçš„åå­—ï¼Œåˆ°è¾¾è¯¥NPCå¤„åä¼šè‡ªåŠ¨ä¸å…¶å¯¹è¯
 	SetAutoRunTargetNPCName( g_TabListDataTablePtr[nSelIndex].strName );
 
 end

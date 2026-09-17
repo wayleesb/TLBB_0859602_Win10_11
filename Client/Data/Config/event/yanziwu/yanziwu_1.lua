@@ -1,4 +1,4 @@
 --MisDescBegin
 x401040_g_ScriptId = 401040
-x401040_g_Name = "Àî¸Ù"
+x401040_g_Name = "æçº²"
 --MisDescEnd

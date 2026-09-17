@@ -38,7 +38,7 @@ end
 
 --===============================================
 -- UpdateFrame()
--- µÚ¼¸¸öÆµµÀµÄµÚ¼¸¸öÈË
+-- ç¬¬å‡ ä¸ªé¢‘é“çš„ç¬¬å‡ ä¸ªäºº
 --===============================================
 function FriendInfo_Update( nChannel, nIndex )
 	g_name = "";
@@ -48,53 +48,53 @@ function FriendInfo_Update( nChannel, nIndex )
 		if( nChannel== -1 ) then
 			FriendInfo_PlayerHead:SetProperty("Image", "");
 			FriendInfo_ID:SetText( "ID:");
-			FriendInfo_Name:SetText( "ĞÕÃû:" );
-			FriendInfo_Level:SetText( "¼¶±ğ:" );
-			FriendInfo_MenPai:SetText( "ÃÅÅÉ:");
-			FriendInfo_FriendlyGrade:SetText( "ÓÑºÃ¶È:" );
-			FriendInfo_Confraternity:SetText( "°ï»áÃû³Æ:");
+			FriendInfo_Name:SetText( "å§“å:" );
+			FriendInfo_Level:SetText( "çº§åˆ«:" );
+			FriendInfo_MenPai:SetText( "é—¨æ´¾:");
+			FriendInfo_FriendlyGrade:SetText( "å‹å¥½åº¦:" );
+			FriendInfo_Confraternity:SetText( "å¸®ä¼šåç§°:");
 			FriendInfo_GuildLeague:SetText( "#{TM_20080311_30}");
-			FriendInfo_Explain:SetText( "ĞÄÇé:" );
-			FriendInfo_Relation:SetText( "¹ØÏµ:" );
-			FriendInfo_Agname:SetText( "³ÆºÅ:" );
-			FriendInfo_Locus:SetText( "Î»ÖÃ:" );
-			FriendInfo_TeamInfo:SetText( "¶ÓÎé:" );
+			FriendInfo_Explain:SetText( "å¿ƒæƒ…:" );
+			FriendInfo_Relation:SetText( "å…³ç³»:" );
+			FriendInfo_Agname:SetText( "ç§°å·:" );
+			FriendInfo_Locus:SetText( "ä½ç½®:" );
+			FriendInfo_TeamInfo:SetText( "é˜Ÿä¼:" );
 			
-			FriendInfo_Join:SetText( "ÑûÇë¼Ó¶Ó" );
+			FriendInfo_Join:SetText( "é‚€è¯·åŠ é˜Ÿ" );
 			FriendInfo_Join:Disable();
 	
 		else
 			g_name = DataPool:GetFriend( nChannel, nIndex, "NAME"  ) ;
 			FriendInfo_PlayerHead:SetProperty("Image", tostring(strFaceImage));
 			FriendInfo_ID:SetText( "ID:"..tostring( DataPool:GetFriend( nChannel, nIndex, "ID_TEXT" ) ) );
-			FriendInfo_Name:SetText( "ĞÕÃû:"..DataPool:GetFriend( nChannel, nIndex, "NAME"  ) );
-			FriendInfo_Level:SetText( "¼¶±ğ:"..tostring( DataPool:GetFriend( nChannel, nIndex, "LEVEL" ) ) );
-			FriendInfo_MenPai:SetText( "ÃÅÅÉ:"..DataPool:GetFriend( nChannel, nIndex, "MENPAI_TEXT" ) );
+			FriendInfo_Name:SetText( "å§“å:"..DataPool:GetFriend( nChannel, nIndex, "NAME"  ) );
+			FriendInfo_Level:SetText( "çº§åˆ«:"..tostring( DataPool:GetFriend( nChannel, nIndex, "LEVEL" ) ) );
+			FriendInfo_MenPai:SetText( "é—¨æ´¾:"..DataPool:GetFriend( nChannel, nIndex, "MENPAI_TEXT" ) );
 			if( tonumber( nChannel ) == 6 ) then 
-				FriendInfo_FriendlyGrade:SetText( "ÓÑºÃ¶È:" );
+				FriendInfo_FriendlyGrade:SetText( "å‹å¥½åº¦:" );
 			else
-				FriendInfo_FriendlyGrade:SetText( "ÓÑºÃ¶È:"..tostring( DataPool:GetFriend( nChannel, nIndex, "FRIENDSHIP" ) ) );
+				FriendInfo_FriendlyGrade:SetText( "å‹å¥½åº¦:"..tostring( DataPool:GetFriend( nChannel, nIndex, "FRIENDSHIP" ) ) );
 			end
-			FriendInfo_Confraternity:SetText( "°ï»áÃû³Æ:"..DataPool:GetFriend( nChannel, nIndex, "GUID_NAME" ) );
+			FriendInfo_Confraternity:SetText( "å¸®ä¼šåç§°:"..DataPool:GetFriend( nChannel, nIndex, "GUID_NAME" ) );
 			FriendInfo_GuildLeague:SetText( "#{TM_20080311_30}"..DataPool:GetFriend( nChannel, nIndex, "GUILD_LEAGUE_NAME" ) );
-			FriendInfo_Explain:SetText( "ĞÄÇé:"..DataPool:GetFriend( nChannel, nIndex, "MOOD" ) );
+			FriendInfo_Explain:SetText( "å¿ƒæƒ…:"..DataPool:GetFriend( nChannel, nIndex, "MOOD" ) );
 			
 			if( tonumber( nChannel ) == 6 ) then 
-				FriendInfo_Relation:SetText( "¹ØÏµ:½»¶ñ" );
+				FriendInfo_Relation:SetText( "å…³ç³»:äº¤æ¶" );
 			else
-				FriendInfo_Relation:SetText( "¹ØÏµ:"..DataPool:GetFriend( nChannel, nIndex, "RELATION_TEXT" ) );
+				FriendInfo_Relation:SetText( "å…³ç³»:"..DataPool:GetFriend( nChannel, nIndex, "RELATION_TEXT" ) );
 			end
 			
 			
-			FriendInfo_Agname:SetText( "³ÆºÅ:"..DataPool:GetFriend( nChannel, nIndex, "TITLE" ) );
-			FriendInfo_Locus:SetText( "Î»ÖÃ:"..DataPool:GetFriend( nChannel, nIndex, "SCENE" ) );
-			FriendInfo_TeamInfo:SetText( "¶ÓÎé:"..DataPool:GetFriend( nChannel, nIndex, "TEAM_NUMBER" ) );
+			FriendInfo_Agname:SetText( "ç§°å·:"..DataPool:GetFriend( nChannel, nIndex, "TITLE" ) );
+			FriendInfo_Locus:SetText( "ä½ç½®:"..DataPool:GetFriend( nChannel, nIndex, "SCENE" ) );
+			FriendInfo_TeamInfo:SetText( "é˜Ÿä¼:"..DataPool:GetFriend( nChannel, nIndex, "TEAM_NUMBER" ) );
 			local TeamNumber = DataPool:GetFriend( nChannel, nIndex, "TEAM_NUMBER" );
 			FriendInfo_Join:Enable();
-			if( TeamNumber == "Î´×é¶Ó" ) then
-				FriendInfo_Join:SetText( "ÑûÇë¼Ó¶Ó" );
+			if( TeamNumber == "æœªç»„é˜Ÿ" ) then
+				FriendInfo_Join:SetText( "é‚€è¯·åŠ é˜Ÿ" );
 			else
-				FriendInfo_Join:SetText( "ÉêÇëÈë¶Ó" );
+				FriendInfo_Join:SetText( "ç”³è¯·å…¥é˜Ÿ" );
 			end
 		end
 		if( tonumber( nChannel ) == 5 ) then 
@@ -131,7 +131,7 @@ function FriendInfo_WriteMail()
 	if(tonumber(group) ~=-1 and tonumber(index)~=-1)then
 		DataPool:OpenMail( g_name );
 	else
-		PushDebugMessage("²Ù×÷Ê§°Ü£¬´ËºÃÓÑ²»´æÔÚ¡£")
+		PushDebugMessage("æ“ä½œå¤±è´¥ï¼Œæ­¤å¥½å‹ä¸å­˜åœ¨ã€‚")
 		FriendInfo_OnHide();
 	end
 end
@@ -147,7 +147,7 @@ function FriendInfo_OnHistroy()
 	if(tonumber(group) ~=-1 and tonumber(index)~=-1)then
 		DataPool:OpenHistroy(tonumber(group) ,tonumber(index) );
 	else
-		PushDebugMessage("²Ù×÷Ê§°Ü£¬´ËºÃÓÑ²»´æÔÚ¡£")
+		PushDebugMessage("æ“ä½œå¤±è´¥ï¼Œæ­¤å¥½å‹ä¸å­˜åœ¨ã€‚")
 		FriendInfo_OnHide();
 	end
 	
@@ -160,13 +160,13 @@ function FriendInfo_OnJoin()
 	local group,index = DataPool:GetFriendByName(g_name);
 	if(tonumber(group) ~=-1 and tonumber(index)~=-1)then
 		local TeamNumber = DataPool:GetFriend(tonumber(group) ,tonumber(index), "TEAM_NUMBER" );
-		if( TeamNumber == "Î´×é¶Ó" ) then
+		if( TeamNumber == "æœªç»„é˜Ÿ" ) then
 			Friend:InviteTeam( DataPool:GetFriend(tonumber(group) ,tonumber(index), "NAME"  ) );
 		else
 			Friend:AskTeam( DataPool:GetFriend(tonumber(group) ,tonumber(index), "NAME"  ) );
 		end
 	else
-		PushDebugMessage("²Ù×÷Ê§°Ü£¬´ËºÃÓÑ²»´æÔÚ¡£")
+		PushDebugMessage("æ“ä½œå¤±è´¥ï¼Œæ­¤å¥½å‹ä¸å­˜åœ¨ã€‚")
 		FriendInfo_OnHide();
 	end
 
@@ -181,7 +181,7 @@ function FriendInfo_OnGroup()
 	if(tonumber(group) ~=-1 and tonumber(index)~=-1)then
 		Friend:OpenGrouping(tonumber(group) ,tonumber(index)  );
 	else
-		PushDebugMessage("²Ù×÷Ê§°Ü£¬´ËºÃÓÑ²»´æÔÚ¡£")
+		PushDebugMessage("æ“ä½œå¤±è´¥ï¼Œæ­¤å¥½å‹ä¸å­˜åœ¨ã€‚")
 		FriendInfo_OnHide();
 	end
 	
@@ -195,7 +195,7 @@ function FriendInfo_OnDelete()
 	if(tonumber(group) ~=-1 and tonumber(index)~=-1)then
 		DataPool:AskDelFriend( tonumber(group) ,tonumber(index) );
 	else
-		PushDebugMessage("²Ù×÷Ê§°Ü£¬´ËºÃÓÑ²»´æÔÚ¡£")
+		PushDebugMessage("æ“ä½œå¤±è´¥ï¼Œæ­¤å¥½å‹ä¸å­˜åœ¨ã€‚")
 	end
 	
 	FriendInfo_OnHide();

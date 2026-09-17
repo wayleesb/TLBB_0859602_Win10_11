@@ -1,39 +1,39 @@
--- 125023 ±¦Ïä
--- »ñÈ¡buffµÄ±¦Ïä
+-- 125023 å®ç®±
+-- è·å–buffçš„å®ç®±
 
 x125023_g_scriptId = 125023
 
 x125023_g_SmallBoxBuff = {
-				{id=1,name="×ÏÉ«ÃØóÅ",buff=8053},
-				{id=2,name="»ÆÉ«ÃØóÅ",buff=8052},
-				{id=3,name="ÂÌÉ«ÃØóÅ",buff=8051},
-				{id=4,name="°×É«ÃØóÅ",buff=8050},
-				{id=5,name="ºÚÉ«ÃØóÅ",buff=8049},
-				{id=6,name="À¶É«ÃØóÅ",buff=8048},
-				{id=7,name="ºìÉ«ÃØóÅ",buff=8047},
+				{id=1,name="ç´«è‰²ç§˜ç¬ˆ",buff=8053},
+				{id=2,name="é»„è‰²ç§˜ç¬ˆ",buff=8052},
+				{id=3,name="ç»¿è‰²ç§˜ç¬ˆ",buff=8051},
+				{id=4,name="ç™½è‰²ç§˜ç¬ˆ",buff=8050},
+				{id=5,name="é»‘è‰²ç§˜ç¬ˆ",buff=8049},
+				{id=6,name="è“è‰²ç§˜ç¬ˆ",buff=8048},
+				{id=7,name="çº¢è‰²ç§˜ç¬ˆ",buff=8047},
 }
 
 --**********************************
---ÌØÊâ½»»¥:Ìõ¼şÅĞ¶Ï
+--ç‰¹æ®Šäº¤äº’:æ¡ä»¶åˆ¤æ–­
 --**********************************
 function x125023_OnActivateConditionCheck( sceneId, selfId, activatorId )
-	-- ÏŞÖÆÉíÉÏµÄbuff
+	-- é™åˆ¶èº«ä¸Šçš„buff
 	return 1
 end
 
 --**********************************
---ÌØÊâ½»»¥:ÏûºÄºÍ¿Û³ı´¦Àí
+--ç‰¹æ®Šäº¤äº’:æ¶ˆè€—å’Œæ‰£é™¤å¤„ç†
 --**********************************
 function x125023_OnActivateDeplete( sceneId, selfId, activatorId )
 	return 1
 end
 
 --**********************************
---ÌØÊâ½»»¥:¾ÛÆøÀà³É¹¦ÉúĞ§´¦Àí
+--ç‰¹æ®Šäº¤äº’:èšæ°”ç±»æˆåŠŸç”Ÿæ•ˆå¤„ç†
 --**********************************
 function x125023_OnActivateEffectOnce( sceneId, selfId, activatorId )
 	
-	-- °´ÕÕÕâ¸öNpcµÄĞÕÃû¸øÍæ¼Ò+buff£¬
+	-- æŒ‰ç…§è¿™ä¸ªNpcçš„å§“åç»™ç©å®¶+buffï¼Œ
 	local szName = GetName(sceneId, selfId)
 	for i=1, getn(x125023_g_SmallBoxBuff)  do
 		if szName == x125023_g_SmallBoxBuff[i].name  then
@@ -47,28 +47,28 @@ function x125023_OnActivateEffectOnce( sceneId, selfId, activatorId )
 end
 
 --**********************************
---ÌØÊâ½»»¥:Òıµ¼ÀàÃ¿Ê±¼ä¼ä¸ôÉúĞ§´¦Àí
+--ç‰¹æ®Šäº¤äº’:å¼•å¯¼ç±»æ¯æ—¶é—´é—´éš”ç”Ÿæ•ˆå¤„ç†
 --**********************************
 function x125023_OnActivateEffectEachTick( sceneId, selfId, activatorId )
 	return 1
 end
 
 --**********************************
---ÌØÊâ½»»¥:½»»¥¿ªÊ¼Ê±µÄÌØÊâ´¦Àí
+--ç‰¹æ®Šäº¤äº’:äº¤äº’å¼€å§‹æ—¶çš„ç‰¹æ®Šå¤„ç†
 --**********************************
 function x125023_OnActivateActionStart( sceneId, selfId, activatorId )
 	return 1
 end
 
 --**********************************
---ÌØÊâ½»»¥:½»»¥³·ÏûÊ±µÄÌØÊâ´¦Àí
+--ç‰¹æ®Šäº¤äº’:äº¤äº’æ’¤æ¶ˆæ—¶çš„ç‰¹æ®Šå¤„ç†
 --**********************************
 function x125023_OnActivateCancel( sceneId, selfId, activatorId )
 	return 0
 end
 
 --**********************************
---ÌØÊâ½»»¥:½»»¥ÖĞ¶ÏÊ±µÄÌØÊâ´¦Àí
+--ç‰¹æ®Šäº¤äº’:äº¤äº’ä¸­æ–­æ—¶çš„ç‰¹æ®Šå¤„ç†
 --**********************************
 function x125023_OnActivateInterrupt( sceneId, selfId, activatorId )
 	return 0

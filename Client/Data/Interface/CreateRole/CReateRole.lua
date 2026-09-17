@@ -1,35 +1,35 @@
 ----------------------------------------------------------------------------------------------------------------
 --
--- È«¾Ö±äÁ¿¶¨Òå
+-- å…¨å±€å˜é‡å®šä¹‰
 --
 
--- Ã¿Ò»Ò³ÖĞÍ·ÏñµÄ¸öÊı.
+-- æ¯ä¸€é¡µä¸­å¤´åƒçš„ä¸ªæ•°.
 local g_iFaceCountInPage = 9;
 
--- µ±Ç°Ñ¡ÔñµÄĞÔ±ğ
-local iCurSelSex = 0;			-- 0 : Å®
-													-- 1 : ÄĞ
---Á³ĞÎ¿Ø¼ş
+-- å½“å‰é€‰æ‹©çš„æ€§åˆ«
+local iCurSelSex = 0;			-- 0 : å¥³
+													-- 1 : ç”·
+--è„¸å½¢æ§ä»¶
 local g_FaceSel = {};
 
---µ±Ç°Ñ¡ÔñµÄÒ³Êı
+--å½“å‰é€‰æ‹©çš„é¡µæ•°
 local g_FacePageCount = 0;
 
--- µ±Ç°µÃµ½Á³ĞÎµÄ¸öÊı
+-- å½“å‰å¾—åˆ°è„¸å½¢çš„ä¸ªæ•°
 local g_iCurFaceCount = 0;
 
--- µ±Ç°Ñ¡ÔñµÄÍ·ÏñµÄË÷Òı
+-- å½“å‰é€‰æ‹©çš„å¤´åƒçš„ç´¢å¼•
 local g_iCurSelFaceIndex = 0;
 
--- µ±Ç°Ñ¡ÔñµÄÁ³ĞÎ
+-- å½“å‰é€‰æ‹©çš„è„¸å½¢
 local g_iCurSelFaceIndex    = 0;
 local g_iCurSelFaceIndexOld = 0;
 
--- µ±Ç°Ñ¡ÔñµÄ·¢ĞÍ
+-- å½“å‰é€‰æ‹©çš„å‘å‹
 local g_iCurSelHairIndex    = 0;
 local g_iCurSelHairIndexOld = 0;
 
--- µ±Ç°Ñ¡ÔñµÄÌ××°2006-6-2
+-- å½“å‰é€‰æ‹©çš„å¥—è£…2006-6-2
 local g_iCurSelEquipSetIndex    = 0;
 local g_iCurSelEquipSetIndexOld = 0;
 
@@ -40,31 +40,31 @@ local g_iCurSelectFace = 0
 
 -----------------------------------------------------------------------------------------------------------------
 --
--- º¯Êı¶¨Òå
+-- å‡½æ•°å®šä¹‰
 --
 
 function LoginCreateRole_PreLoad()
-	-- ´ò¿ª½çÃæ
+	-- æ‰“å¼€ç•Œé¢
 	this:RegisterEvent("GAMELOGIN_OPEN_CREATE_CHARACTOR");
 	
-	-- ¹Ø±Õ½çÃæ
+	-- å…³é—­ç•Œé¢
 	this:RegisterEvent("GAMELOGIN_CLOSE_CREATE_CHARACTOR");
 	
-	-- Çå¿Õ´´½¨½ÇÉ«Ãû×Ö¡£
+	-- æ¸…ç©ºåˆ›å»ºè§’è‰²åå­—ã€‚
 	this:RegisterEvent("GAMELOGIN_CREATE_CLEAR_NAME");
 
 end
 
--- ×¢²áonLoadÊÂ¼ş
+-- æ³¨å†ŒonLoadäº‹ä»¶
 function LoginCreateRole_OnLoad()
 	
-	CreateRole_SelectSex_Girl:SetText("Å®");
-	CreateRole_SelectSex_Boy:SetText("ÄĞ");
+	CreateRole_SelectSex_Girl:SetText("å¥³");
+	CreateRole_SelectSex_Boy:SetText("ç”·");
 	
 	CreateRole_SelectSex_Girl:SetProperty("CheckMode", "1");	
 	CreateRole_SelectSex_Boy:SetProperty("CheckMode", "1");	
 	
-	-- Í·ÏñÑ¡Ôñ°´Å¥
+	-- å¤´åƒé€‰æ‹©æŒ‰é’®
 	g_FaceSel[0] = CreateRole_Select_HeadImage1;
 	g_FaceSel[1] = CreateRole_Select_HeadImage2;
 	g_FaceSel[2] = CreateRole_Select_HeadImage3;
@@ -79,16 +79,16 @@ function LoginCreateRole_OnLoad()
 		g_FaceModel[i] = -1
 	end	
 	
-	-- µÃµ½Á³ĞÎĞÅÏ¢
+	-- å¾—åˆ°è„¸å½¢ä¿¡æ¯
 	CreateRole_GetFaceModel();
 	
-	-- µÃµ½·¢ĞÍĞÅÏ¢
+	-- å¾—åˆ°å‘å‹ä¿¡æ¯
 	CreateRole_GetHairModel();
 	
-	-- µÃµ½Ì××°ĞÅÏ¢
+	-- å¾—åˆ°å¥—è£…ä¿¡æ¯
 	CreateRole_GetNewRoleEquipSet();
 	
-	-- Ëæ»úÑ¡ÔñÒ»¸öĞÂÊÖ×°¡£
+	-- éšæœºé€‰æ‹©ä¸€ä¸ªæ–°æ‰‹è£…ã€‚
 	local RandVal = math.random( 0, MaxEquipIndex )
   g_iCurSelEquipSetIndex = RandVal
 	
@@ -104,14 +104,14 @@ function LoginCreateRole_OnEvent(event)
 		CreateRole_Name:SetProperty("DefaultEditBox", "True");
 		this:Show();
 		if(0 == iCurSelSex) then
-			-- Ñ¡ÔñÅ®Ö÷½Ç.
+			-- é€‰æ‹©å¥³ä¸»è§’.
 			CreateRole_SelectGirl();
 		elseif(1 == iCurSelSex) then
-			-- Ñ¡ÔñÄĞÖ÷½Ç.
+			-- é€‰æ‹©ç”·ä¸»è§’.
 			CreateRole_SelectBoy();
 		end
 		
-		-- ÏÔÊ¾Í·Ïñ.
+		-- æ˜¾ç¤ºå¤´åƒ.
 		CreateRole_ShowRoleFace(iCurSelSex);
 		
 		return;
@@ -136,7 +136,7 @@ end
 
 ---------------------------------------------------------------------------------------------------------
 --
--- ¸ü¶àÁ³ĞÎ
+-- æ›´å¤šè„¸å½¢
 --
 function CreateRole_BnClickMoreFace()
 			
@@ -144,7 +144,7 @@ end
 
 ---------------------------------------------------------------------------------------------------------
 --
--- ´´½¨½ÇÉ«
+-- åˆ›å»ºè§’è‰²
 --
 function CreateRole_BnClickCreateRole()
 
@@ -155,18 +155,18 @@ end
 
 ---------------------------------------------------------------------------------------------------------
 --
--- »Øµ½ÈËÎïÑ¡Ôñ½çÃæ
+-- å›åˆ°äººç‰©é€‰æ‹©ç•Œé¢
 --
 function CreateRole_BnClickReturnSelectRole()
 
-	-- ´ÓÈËÎï´´½¨½çÃæ·µ»Øµ½ÈËÎïÑ¡Ôñ½çÃæ.
+	-- ä»äººç‰©åˆ›å»ºç•Œé¢è¿”å›åˆ°äººç‰©é€‰æ‹©ç•Œé¢.
 	GameProduceLogin:ChangeToSelectRoleDlgFromCreateRole();
 end
 
 
 ---------------------------------------------------------------------------------------------------------
 --
--- Ñ¡ÔñÅ®
+-- é€‰æ‹©å¥³
 --
 function CreateRole_SelectGirl()
 
@@ -174,44 +174,44 @@ function CreateRole_SelectGirl()
 	CreateRole_Model:SetFakeObject("CreateRole_Woman");
 	CreateRole_SelectSex_Girl:SetCheck(1);
 	
-	-- Ñ¡ÔñÅ®
+	-- é€‰æ‹©å¥³
 	iCurSelSex = 0;
 	
-	-- ÏÔÊ¾µÚÒ»Ò³
+	-- æ˜¾ç¤ºç¬¬ä¸€é¡µ
 	g_FacePageCount = 0;
 	
-	-- ÏÔÊ¾Í·Ïñ.
+	-- æ˜¾ç¤ºå¤´åƒ.
 	CreateRole_ShowRoleFace(iCurSelSex);
 	
-	-- Ñ¡ÔñµÚÒ»¸öÁ³ĞÎ
+	-- é€‰æ‹©ç¬¬ä¸€ä¸ªè„¸å½¢
 	CreateRole_BnSelFace1();
 	
-	-- ÉèÖÃÍ·Ïñ°´Å¥×´Ì¬
+	-- è®¾ç½®å¤´åƒæŒ‰é’®çŠ¶æ€
 	CreateRole_SetFacePageStatus();
 	
-	-- ÏÔÊ¾Á³ĞÎÄ£ĞÍ
+	-- æ˜¾ç¤ºè„¸å½¢æ¨¡å‹
 	CreateRole_GetFaceModel();
 	
-	-- µÃµ½·¢ĞÍĞÅÏ¢
+	-- å¾—åˆ°å‘å‹ä¿¡æ¯
 	CreateRole_GetHairModel();
 	
-	-- µ±Ç°Ñ¡ÔñµÄÁ³ĞÎ
+	-- å½“å‰é€‰æ‹©çš„è„¸å½¢
 	g_iCurSelFaceIndex = 0;
 
-	-- µ±Ç°Ñ¡ÔñµÄ·¢ĞÍ
+	-- å½“å‰é€‰æ‹©çš„å‘å‹
 	g_iCurSelHairIndex = 0;
 	
-	-- Ñ¡ÔñµÚÒ»¸ö·¢ĞÍ
+	-- é€‰æ‹©ç¬¬ä¸€ä¸ªå‘å‹
 	CreateRole_SelHairModel(g_iCurSelHairIndex);
 	
-	-- ½çÃæÑ¡ÔñÒ»¸öÏÂÀ­ÁĞ±í
+	-- ç•Œé¢é€‰æ‹©ä¸€ä¸ªä¸‹æ‹‰åˆ—è¡¨
 	CreateRole_SelectFace:SetCurrentSelect(0);
-	-- Ñ¡ÔñµÚÒ»¸öÁ³ĞÎ
+	-- é€‰æ‹©ç¬¬ä¸€ä¸ªè„¸å½¢
 	CreateRole_SelFaceModel(g_FaceModel[0]);
 	
-	-- ¸Ä±äĞÂÊÖ×°
+	-- æ”¹å˜æ–°æ‰‹è£…
 	
-	-- Ëæ»úÑ¡ÔñÒ»¸öĞÂÊÖ×°¡£
+	-- éšæœºé€‰æ‹©ä¸€ä¸ªæ–°æ‰‹è£…ã€‚
 	local RandVal = math.random( 0, MaxEquipIndex )
   g_iCurSelEquipSetIndex = RandVal
 	
@@ -224,7 +224,7 @@ end
 
 ---------------------------------------------------------------------------------------------------------
 --
--- Ñ¡ÔñÄĞ
+-- é€‰æ‹©ç”·
 --			
 function CreateRole_SelectBoy()
 
@@ -232,42 +232,42 @@ function CreateRole_SelectBoy()
 	CreateRole_Model:SetFakeObject("CreateRole_Man");
 	CreateRole_SelectSex_Boy:SetCheck(1);
 	
-	-- Ñ¡ÔñÄĞ
+	-- é€‰æ‹©ç”·
 	iCurSelSex = 1;
 	
-	-- ÏÔÊ¾µÚÒ»Ò³
+	-- æ˜¾ç¤ºç¬¬ä¸€é¡µ
 	g_FacePageCount = 0;
 	
-	-- ÏÔÊ¾Í·Ïñ.
+	-- æ˜¾ç¤ºå¤´åƒ.
 	CreateRole_ShowRoleFace(iCurSelSex);
 	
-	-- Ñ¡ÔñµÚÒ»¸öÁ³ĞÎ
+	-- é€‰æ‹©ç¬¬ä¸€ä¸ªè„¸å½¢
 	CreateRole_BnSelFace1();
 	
-	-- ÉèÖÃÍ·Ïñ°´Å¥×´Ì¬
+	-- è®¾ç½®å¤´åƒæŒ‰é’®çŠ¶æ€
 	CreateRole_SetFacePageStatus();
 	
-	-- ÏÔÊ¾Á³ĞÎÄ£ĞÍ
+	-- æ˜¾ç¤ºè„¸å½¢æ¨¡å‹
 	CreateRole_GetFaceModel();
 	
-	-- µÃµ½·¢ĞÍĞÅÏ¢
+	-- å¾—åˆ°å‘å‹ä¿¡æ¯
 	CreateRole_GetHairModel();
 	
-	-- µ±Ç°Ñ¡ÔñµÄÁ³ĞÎ
+	-- å½“å‰é€‰æ‹©çš„è„¸å½¢
 	g_iCurSelFaceIndex = 0;
 
-	-- µ±Ç°Ñ¡ÔñµÄ·¢ĞÍ
+	-- å½“å‰é€‰æ‹©çš„å‘å‹
 	g_iCurSelHairIndex = 0;
 	
-	-- Ñ¡ÔñµÚÒ»¸ö·¢ĞÍ
+	-- é€‰æ‹©ç¬¬ä¸€ä¸ªå‘å‹
 	CreateRole_SelHairModel(g_iCurSelHairIndex);
 	
 	CreateRole_SelectFace:SetCurrentSelect(0);
-	-- Ñ¡ÔñµÚÒ»¸öÁ³ĞÎ
+	-- é€‰æ‹©ç¬¬ä¸€ä¸ªè„¸å½¢
 	CreateRole_SelFaceModel(g_FaceModel[0]);
 	
-	-- ¸Ä±äĞÂÊÖ×°
-	-- Ëæ»úÑ¡ÔñÒ»¸öĞÂÊÖ×°¡£
+	-- æ”¹å˜æ–°æ‰‹è£…
+	-- éšæœºé€‰æ‹©ä¸€ä¸ªæ–°æ‰‹è£…ã€‚
 	local RandVal = math.random( 0, MaxEquipIndex )
   g_iCurSelEquipSetIndex = RandVal
 	
@@ -279,11 +279,11 @@ end
 
 ---------------------------------------------------------------------------------------------------------
 --
--- ÏÔÊ¾Ö÷½ÇÍ·Ïñ
+-- æ˜¾ç¤ºä¸»è§’å¤´åƒ
 --			
 function CreateRole_ShowRoleFace(iType)
 
-	-- Çå¿ÕÍ·ÏñÊı¾İ.
+	-- æ¸…ç©ºå¤´åƒæ•°æ®.
 	CreateRole_ClearImageData();
 	if(0 == iType) then
 	
@@ -293,15 +293,15 @@ function CreateRole_ShowRoleFace(iType)
 		g_iCurFaceCount = GameProduceLogin:GetManFaceCount();
 	end
 	
-	-- Ë¢ĞÂµ±Ç°Ò³
+	-- åˆ·æ–°å½“å‰é¡µ
 	CreateRole_RefreshCurShowFacePage();
 	
 		CreateRole_SetFacePageStatus();
 	
-	-- µ±Ç°¿ªÊ¼ÏÔÊ¾Í·ÏñµÄÎ»ÖÃ
+	-- å½“å‰å¼€å§‹æ˜¾ç¤ºå¤´åƒçš„ä½ç½®
 	--local iCurStart = g_FacePageCount * g_iFaceCountInPage;
 	
-	-- µ±Ç°ÏÔÊ¾Í·Ïñ½áÊøµÄÎ»ÖÃ
+	-- å½“å‰æ˜¾ç¤ºå¤´åƒç»“æŸçš„ä½ç½®
 	--local iCurEnd   = iCurStart + g_iFaceCountInPage;
 	--if(iCurEnd > g_iCurFaceCount) then
 	
@@ -319,7 +319,7 @@ end
 
 ---------------------------------------------------------------------------------------------------------
 --
--- ÏÔÊ¾Ö÷½ÇÍ·Ïñ
+-- æ˜¾ç¤ºä¸»è§’å¤´åƒ
 --			
 function CreateRole_ClearImageData()
 
@@ -337,17 +337,17 @@ end
 
 ---------------------------------------------------------------------------------------------------------
 --
--- Ë¢ĞÂµ±Ç°ÏÔÊ¾µÄÍ·ÏñÒ³
+-- åˆ·æ–°å½“å‰æ˜¾ç¤ºçš„å¤´åƒé¡µ
 --
 function CreateRole_RefreshCurShowFacePage()
 
-	-- Çå¿ÕÍ¼ÏñÊı¾İ
+	-- æ¸…ç©ºå›¾åƒæ•°æ®
 	CreateRole_ClearImageData();
 	
-	-- µ±Ç°¿ªÊ¼ÏÔÊ¾Í·ÏñµÄÎ»ÖÃ
+	-- å½“å‰å¼€å§‹æ˜¾ç¤ºå¤´åƒçš„ä½ç½®
 	local iCurStart = g_FacePageCount * g_iFaceCountInPage;
 	
-	-- µ±Ç°ÏÔÊ¾Í·Ïñ½áÊøµÄÎ»ÖÃ
+	-- å½“å‰æ˜¾ç¤ºå¤´åƒç»“æŸçš„ä½ç½®
 	local iCurEnd   = iCurStart + g_iFaceCountInPage;
 	if(iCurEnd > g_iCurFaceCount) then
 	
@@ -365,7 +365,7 @@ end
 
 ---------------------------------------------------------------------------------------------------------
 --
--- Ö÷½ÇÍ·ÏñÉÏ·­Ò»Ò³
+-- ä¸»è§’å¤´åƒä¸Šç¿»ä¸€é¡µ
 --
 function CreateRole_BnClickFacePageUp()
 	
@@ -379,10 +379,10 @@ function CreateRole_BnClickFacePageUp()
 		return;
 	end
 	
-	-- Ë¢ĞÂµ±Ç°ÏÔÊ¾µÄfaceÒ³
+	-- åˆ·æ–°å½“å‰æ˜¾ç¤ºçš„faceé¡µ
 	CreateRole_RefreshCurShowFacePage();
 	
-	-- ÉèÖÃÍ·Ïñ°´Å¥×´Ì¬
+	-- è®¾ç½®å¤´åƒæŒ‰é’®çŠ¶æ€
 	CreateRole_SetFacePageStatus();
 	
 end
@@ -390,7 +390,7 @@ end
 
 ---------------------------------------------------------------------------------------------------------
 --
--- Ö÷½ÇÍ·ÏñÏÂ·­Ò»Ò³
+-- ä¸»è§’å¤´åƒä¸‹ç¿»ä¸€é¡µ
 --
 function CreateRole_BnClickFacePageDown()
 	
@@ -404,10 +404,10 @@ function CreateRole_BnClickFacePageDown()
 		return;
 	end;
 	
-	-- Ë¢ĞÂµ±Ç°ÏÔÊ¾µÄfaceÒ³
+	-- åˆ·æ–°å½“å‰æ˜¾ç¤ºçš„faceé¡µ
 	CreateRole_RefreshCurShowFacePage();
 	
-	-- ÉèÖÃÍ·Ïñ°´Å¥×´Ì¬
+	-- è®¾ç½®å¤´åƒæŒ‰é’®çŠ¶æ€
 	CreateRole_SetFacePageStatus();
 	
 end
@@ -415,7 +415,7 @@ end
 
 ---------------------------------------------------------------------------------------------------------
 --
--- Ñ¡ÔñÍ·Ïñ1
+-- é€‰æ‹©å¤´åƒ1
 --
 function CreateRole_BnSelFace1()
 
@@ -426,13 +426,13 @@ function CreateRole_BnSelFace1()
 		return;
 	end;
 	
-	-- Í¨¹ıĞÔ±ğºÍË÷ÒıÉèÖÃÍ·Ïñid
+	-- é€šè¿‡æ€§åˆ«å’Œç´¢å¼•è®¾ç½®å¤´åƒid
 	GameProduceLogin:SetFaceId(iCurSelSex, g_iCurSelFaceIndex);
 end
 
 ---------------------------------------------------------------------------------------------------------
 --
--- Ñ¡ÔñÍ·Ïñ2
+-- é€‰æ‹©å¤´åƒ2
 --
 function CreateRole_BnSelFace2()
 
@@ -443,14 +443,14 @@ function CreateRole_BnSelFace2()
 		return;
 	end;
 	
-	-- Í¨¹ıĞÔ±ğºÍË÷ÒıÉèÖÃÍ·Ïñid
+	-- é€šè¿‡æ€§åˆ«å’Œç´¢å¼•è®¾ç½®å¤´åƒid
 	GameProduceLogin:SetFaceId(iCurSelSex, g_iCurSelFaceIndex);
 end
 
 
 ---------------------------------------------------------------------------------------------------------
 --
--- Ñ¡ÔñÍ·Ïñ3
+-- é€‰æ‹©å¤´åƒ3
 --
 function CreateRole_BnSelFace3()
 
@@ -461,13 +461,13 @@ function CreateRole_BnSelFace3()
 		return;
 	end;
 	
-	-- Í¨¹ıĞÔ±ğºÍË÷ÒıÉèÖÃÍ·Ïñid
+	-- é€šè¿‡æ€§åˆ«å’Œç´¢å¼•è®¾ç½®å¤´åƒid
 	GameProduceLogin:SetFaceId(iCurSelSex, g_iCurSelFaceIndex);
 end
 
 ---------------------------------------------------------------------------------------------------------
 --
--- Ñ¡ÔñÍ·Ïñ4
+-- é€‰æ‹©å¤´åƒ4
 --
 function CreateRole_BnSelFace4()
 
@@ -478,13 +478,13 @@ function CreateRole_BnSelFace4()
 		return;
 	end;
 	
-	-- Í¨¹ıĞÔ±ğºÍË÷ÒıÉèÖÃÍ·Ïñid
+	-- é€šè¿‡æ€§åˆ«å’Œç´¢å¼•è®¾ç½®å¤´åƒid
 	GameProduceLogin:SetFaceId(iCurSelSex, g_iCurSelFaceIndex);
 end
 
 ---------------------------------------------------------------------------------------------------------
 --
--- Ñ¡ÔñÍ·Ïñ5
+-- é€‰æ‹©å¤´åƒ5
 --
 function CreateRole_BnSelFace5()
 
@@ -495,13 +495,13 @@ function CreateRole_BnSelFace5()
 		return;
 	end;
 	
-	-- Í¨¹ıĞÔ±ğºÍË÷ÒıÉèÖÃÍ·Ïñid
+	-- é€šè¿‡æ€§åˆ«å’Œç´¢å¼•è®¾ç½®å¤´åƒid
 	GameProduceLogin:SetFaceId(iCurSelSex, g_iCurSelFaceIndex);
 end
 
 ---------------------------------------------------------------------------------------------------------
 --
--- Ñ¡ÔñÍ·Ïñ6
+-- é€‰æ‹©å¤´åƒ6
 --
 function CreateRole_BnSelFace6()
 
@@ -512,13 +512,13 @@ function CreateRole_BnSelFace6()
 		return;
 	end;
 	
-	-- Í¨¹ıĞÔ±ğºÍË÷ÒıÉèÖÃÍ·Ïñid
+	-- é€šè¿‡æ€§åˆ«å’Œç´¢å¼•è®¾ç½®å¤´åƒid
 	GameProduceLogin:SetFaceId(iCurSelSex, g_iCurSelFaceIndex);
 end
 
 ---------------------------------------------------------------------------------------------------------
 --
--- Ñ¡ÔñÍ·Ïñ7
+-- é€‰æ‹©å¤´åƒ7
 --
 function CreateRole_BnSelFace7()
 	
@@ -529,13 +529,13 @@ function CreateRole_BnSelFace7()
 		return;
 	end;
 	
-	-- Í¨¹ıĞÔ±ğºÍË÷ÒıÉèÖÃÍ·Ïñid
+	-- é€šè¿‡æ€§åˆ«å’Œç´¢å¼•è®¾ç½®å¤´åƒid
 	GameProduceLogin:SetFaceId(iCurSelSex, g_iCurSelFaceIndex);
 end
 
 ---------------------------------------------------------------------------------------------------------
 --
--- Ñ¡ÔñÍ·Ïñ8
+-- é€‰æ‹©å¤´åƒ8
 --
 function CreateRole_BnSelFace8()
 
@@ -546,13 +546,13 @@ function CreateRole_BnSelFace8()
 		return;
 	end;
 	
-	-- Í¨¹ıĞÔ±ğºÍË÷ÒıÉèÖÃÍ·Ïñid
+	-- é€šè¿‡æ€§åˆ«å’Œç´¢å¼•è®¾ç½®å¤´åƒid
 	GameProduceLogin:SetFaceId(iCurSelSex, g_iCurSelFaceIndex);
 end
 
 ---------------------------------------------------------------------------------------------------------
 --
--- Ñ¡ÔñÍ·Ïñ9
+-- é€‰æ‹©å¤´åƒ9
 --
 function CreateRole_BnSelFace9()
 
@@ -563,18 +563,18 @@ function CreateRole_BnSelFace9()
 		return;
 	end;
 	
-	-- Í¨¹ıĞÔ±ğºÍË÷ÒıÉèÖÃÍ·Ïñid
+	-- é€šè¿‡æ€§åˆ«å’Œç´¢å¼•è®¾ç½®å¤´åƒid
 	GameProduceLogin:SetFaceId(iCurSelSex, g_iCurSelFaceIndex);
 end
 
 
 ---------------------------------------------------------------------------------------------------------
 --
--- ÉèÖÃÍ·Ïñ°´Å¥µÄ×´Ì¬
+-- è®¾ç½®å¤´åƒæŒ‰é’®çš„çŠ¶æ€
 --
 function CreateRole_SetFacePageStatus()
 
-	-- Í·ÏñÏòÉÏ·­Ò³°´Å¥
+	-- å¤´åƒå‘ä¸Šç¿»é¡µæŒ‰é’®
 	local PageCount = g_FacePageCount;
 	PageCount = PageCount - 1;
 	if(PageCount < 0) then
@@ -587,7 +587,7 @@ function CreateRole_SetFacePageStatus()
 	
 	
 	PageCount = g_FacePageCount;
-	-- Í·ÏñÏòÏÂ·­Ò³°´Å¥
+	-- å¤´åƒå‘ä¸‹ç¿»é¡µæŒ‰é’®
 	PageCount = PageCount + 1;
 	if(PageCount * g_iFaceCountInPage >= g_iCurFaceCount) then
 	
@@ -601,7 +601,7 @@ end
 
 -----------------------------------------------------------------------------------------------------------
 --
--- Ñ¡ÔñĞÂµÄ·¢ĞÍ
+-- é€‰æ‹©æ–°çš„å‘å‹
 --
 function CreateRole_ComboListSelectHairChanged()
 
@@ -609,7 +609,7 @@ function CreateRole_ComboListSelectHairChanged()
   strMeshName
 	,g_iCurSelHairIndex = CreateRole_SelectHair:GetCurrentSelect();
 	
-	--AxTrace( 0,0, "==Ñ¡Ôñ·¢ĞÍË÷Òı"..tostring(g_iCurSelHairIndex));
+	--AxTrace( 0,0, "==é€‰æ‹©å‘å‹ç´¢å¼•"..tostring(g_iCurSelHairIndex));
 	--if(g_iCurSelHairIndexOld == g_iCurSelHairIndex) then
 		
 	--	return;
@@ -622,7 +622,7 @@ end
 	
 -----------------------------------------------------------------------------------------------------------
 --
--- Ñ¡ÔñĞÂµÄÁ³ĞÍ
+-- é€‰æ‹©æ–°çš„è„¸å‹
 --	
 function CreateRole_ComboListSelectFaceChanged()
 	
@@ -630,7 +630,7 @@ function CreateRole_ComboListSelectFaceChanged()
 	 
 	strMeshName
 	,g_iCurSelectFace = CreateRole_SelectFace:GetCurrentSelect();
-	--AxTrace( 0,0, "==Ñ¡ÔñÁ³ĞÍË÷Òı"..tostring(g_iCurSelFaceIndex));
+	--AxTrace( 0,0, "==é€‰æ‹©è„¸å‹ç´¢å¼•"..tostring(g_iCurSelFaceIndex));
 	
 	--if(g_iCurSelFaceIndexOld == g_iCurSelFaceIndex) then
 		
@@ -645,11 +645,11 @@ end
 
 -----------------------------------------------------------------------------------------------------------
 --
--- µÃµ½Á³ĞÎÊı¾İ
+-- å¾—åˆ°è„¸å½¢æ•°æ®
 --	
 function CreateRole_GetFaceModel()
 	
-	-- Çå¿ÕÊı¾İ
+	-- æ¸…ç©ºæ•°æ®
 	CreateRole_SelectFace:ResetList();
 	
 	local iFaceCount = GameProduceLogin:GetFaceModelCount(iCurSelSex);
@@ -671,11 +671,11 @@ end
 
 -----------------------------------------------------------------------------------------------------------
 --
--- µÃµ½·¢ĞÎÊı¾İ
+-- å¾—åˆ°å‘å½¢æ•°æ®
 --	
 function CreateRole_GetHairModel()
 	
-	-- Çå¿ÕÊı¾İ
+	-- æ¸…ç©ºæ•°æ®
 	CreateRole_SelectHair:ResetList();
 	
 	local iHairCount = GameProduceLogin:GetHairModelCount(iCurSelSex);
@@ -692,11 +692,11 @@ end
 
 -----------------------------------------------------------------------------------------------------------
 --
--- Ñ¡Ôñ·¢ĞÍ
+-- é€‰æ‹©å‘å‹
 --	
 function CreateRole_SelHairModel(index)
 	
-	--AxTrace( 0,0, "==Ñ¡Ôñ·¢ĞÍ"..tostring(index));
+	--AxTrace( 0,0, "==é€‰æ‹©å‘å‹"..tostring(index));
 	CreateRole_SelectHair:SetCurrentSelect(index);
 	GameProduceLogin:SetHairModelId(iCurSelSex, index);
 
@@ -705,11 +705,11 @@ end
 
 -----------------------------------------------------------------------------------------------------------
 --
--- Ñ¡ÔñÁ³ĞÎ
+-- é€‰æ‹©è„¸å½¢
 --	
 function CreateRole_SelFaceModel(index)
 	
-	--AxTrace( 0,0, "==Ñ¡ÔñÁ³ĞÎ"..tostring(index));
+	--AxTrace( 0,0, "==é€‰æ‹©è„¸å½¢"..tostring(index));
 	--CreateRole_SelectFace:SetCurrentSelect(index);
 	GameProduceLogin:SetFaceModelId(iCurSelSex, index);
 
@@ -718,7 +718,7 @@ end
 
 function CreateRole_Name_MouseEnter()
 
-	CreateRole_Info:SetText("ÊäÈëÒ»¸ö½ÇÉ«Ãû×Ö");
+	CreateRole_Info:SetText("è¾“å…¥ä¸€ä¸ªè§’è‰²åå­—");
 
 end
 
@@ -729,47 +729,47 @@ end
 
 function CreateRole_SelectHair_MouseEnter()
 	
-	--AxTrace( 0,0, "<==?Ñ¡Ôñ·¢ĞÍ");
-	CreateRole_Info:SetText("ÎªÄãÑ¡Ôñ½ÇÉ«·¢ĞÍ");
+	--AxTrace( 0,0, "<==?é€‰æ‹©å‘å‹");
+	CreateRole_Info:SetText("ä¸ºä½ é€‰æ‹©è§’è‰²å‘å‹");
 end
 
 
 function CreateRole_SelectFace_MouseEnter()
 	
-	--AxTrace( 0,0, "<==?Ñ¡ÔñÁ³ĞÎ");
-	CreateRole_Info:SetText("ÎªÄãÑ¡Ôñ½ÇÉ«Á³ĞÎ");
+	--AxTrace( 0,0, "<==?é€‰æ‹©è„¸å½¢");
+	CreateRole_Info:SetText("ä¸ºä½ é€‰æ‹©è§’è‰²è„¸å½¢");
 end
 
 function CreateRole_SelectRace_MouseEnter()
 
-	CreateRole_Info:SetText("ÎªÄãÑ¡Ôñ½ÇÉ«ĞÔ±ğ");
+	CreateRole_Info:SetText("ä¸ºä½ é€‰æ‹©è§’è‰²æ€§åˆ«");
 end
 
 function CreateRole_SelectHead_MouseEnter()
 
-	CreateRole_Info:SetText("ÎªÄãÑ¡Ôñ½ÇÉ«Í·Ïñ");
+	CreateRole_Info:SetText("ä¸ºä½ é€‰æ‹©è§’è‰²å¤´åƒ");
 end
 
 function CreateRole_CreateRole_MouseEnter()
 
-	CreateRole_Info:SetText("´´½¨½ÇÉ«");
+	CreateRole_Info:SetText("åˆ›å»ºè§’è‰²");
 end
 
 function CreateRole_Last_MouseEnter()
 
-	CreateRole_Info:SetText("·µ»Øµ½½ÇÉ«Ñ¡Ôñ½çÃæ");
+	CreateRole_Info:SetText("è¿”å›åˆ°è§’è‰²é€‰æ‹©ç•Œé¢");
 end
 
 ----------------------------------------------------------------------------------
 --
--- Ğı×ªÈËÎïÄ£ĞÍ£¨Ïò×ó)
+-- æ—‹è½¬äººç‰©æ¨¡å‹ï¼ˆå‘å·¦)
 --
 function CreateRole_Modle_TurnLeft(start)
-	--Ïò×óĞı×ª¿ªÊ¼
+	--å‘å·¦æ—‹è½¬å¼€å§‹
 	if(start == 1) then
 		--CreateRole_Model:RotateBegin(-0.3);
                 GameProduceLogin:ModelRotBegin(-1.0)
-	--Ïò×óĞı×ª½áÊø
+	--å‘å·¦æ—‹è½¬ç»“æŸ
 	else
 		--CreateRole_Model:ModelRotEnd( 0 );
                 GameProduceLogin:ModelRotEnd( 0.0 )
@@ -778,14 +778,14 @@ end
 
 ----------------------------------------------------------------------------------
 --
---Ğı×ªÈËÎïÄ£ĞÍ£¨ÏòÓÒ)
+--æ—‹è½¬äººç‰©æ¨¡å‹ï¼ˆå‘å³)
 --
 function CreateRole_Modle_TurnRight(start)
-	--ÏòÓÒĞı×ª¿ªÊ¼
+	--å‘å³æ—‹è½¬å¼€å§‹
 	if(start == 1) then
 		--CreateRole_Model:RotateBegin(0.3);
                 GameProduceLogin:ModelRotBegin(1.0)
-	--ÏòÓÒĞı×ª½áÊø
+	--å‘å³æ—‹è½¬ç»“æŸ
 	else
 		--CreateRole_Model:RotateEnd();
                 GameProduceLogin:ModelRotEnd( 0.0 )
@@ -796,21 +796,21 @@ end
 
 -----------------------------------------------------------------------------------------------------------
 --
--- µÃµ½Ì××°Êı¾İ
+-- å¾—åˆ°å¥—è£…æ•°æ®
 --	
 function CreateRole_GetNewRoleEquipSet()
 	
-	-- Çå¿ÕÊı¾İ
+	-- æ¸…ç©ºæ•°æ®
 	CreateRole_SelectClothin:ResetList();
 	
 	local iCount = GameProduceLogin:GetEquipSetCount();
-	--AxTrace( 0,0, "µÃµ½Ì××°¸öÊı £½ "..tostring(iCount));
+	--AxTrace( 0,0, "å¾—åˆ°å¥—è£…ä¸ªæ•° ï¼ "..tostring(iCount));
 	
 	local strShowName = "";
 	for index = 0, iCount - 1 do
 	
 		strShowName = GameProduceLogin:GetEquipSetName(index);
-		--AxTrace( 0,0, "µÃµ½Ì××°Ãû×Ö £½ "..tostring(strShowName));
+		--AxTrace( 0,0, "å¾—åˆ°å¥—è£…åå­— ï¼ "..tostring(strShowName));
 		CreateRole_SelectClothin:ComboBoxAddItem(strShowName, index);
 	end;
 
@@ -819,7 +819,7 @@ end
 
 -----------------------------------------------------------------------------------------------------------
 --
--- Ñ¡Ôñ·¢ĞÍ
+-- é€‰æ‹©å‘å‹
 --	
 function CreateRole_SelEquipSet(index)
 	
@@ -837,10 +837,10 @@ function CreateRole_ComboListSelectClothin()
 	
 	g_iCurSelEquipSetIndexOld = g_iCurSelEquipSetIndex;
 	
-	--AxTrace( 0,0, "Ñ¡ÔñÌ××° £½ "..tostring(g_iCurSelEquipSetIndex));
+	--AxTrace( 0,0, "é€‰æ‹©å¥—è£… ï¼ "..tostring(g_iCurSelEquipSetIndex));
 	CreateRole_SelEquipSet(g_iCurSelEquipSetIndex);
 	
-	-- ¸Ä±äĞÂÊÖ×°
+	-- æ”¹å˜æ–°æ‰‹è£…
 	GameProduceLogin:ChangeNewRoleEquipSet(iCurSelSex, g_iCurSelEquipSetIndex);
 
 end;

@@ -1,9 +1,9 @@
 <?xml version="1.0" ?>
 <GUILayout>
 	<Window Type="TLBB_MainFrameNULL" Name="Packet_Frame">
-		<Property Name="UnifiedSize" Value="{{0,190},{0.0,354}}" />
-		<Property Name="UnifiedXPosition" Value="{1.0,-218}" />
-		<Property Name="UnifiedYPosition" Value="{1.0,-420}" />
+		<Property Name="UnifiedSize" Value="{{0,365},{0.0,555}}" />
+		<Property Name="UnifiedXPosition" Value="{1.0,-393}" />
+		<Property Name="UnifiedYPosition" Value="{1.0,-575}" />
 		<Event Name="Hidden" Function="Packet_Close();" />
 		<Window Type="TLBB_DragTitle" Name="Packet_Title">
 			<Property Name="AbsolutePosition" Value="x:61.000000 y:19.000000" />
@@ -17,7 +17,7 @@
 		</Window>
 		<Window Type="TLBB_MainFrame0" Name="Packet_MainFrame">
 			<Property Name="UnifiedPosition" Value="{{0.000000,3.000000},{0.000000,8.000000}" />
-			<Property Name="UnifiedSize" Value="{{0.000000,187.000000},{1.000000,-8.000000}" />
+			<Property Name="UnifiedSize" Value="{{0.000000,362.000000},{1.000000,-8.000000}" />
 			<Event Name="Shown" Function="Packet_OnShow();" />
 			<Property Name="RiseOnClick" Value="False" />
 			<Window Type="TLBB_ButtonClose" Name="Packet_Close">
@@ -67,11 +67,11 @@
 				</Window>
 				<Window Type="DefaultWindow" Name="Packet_Space_Frame">
 					<Property Name="AbsolutePosition" Value="x:0.000000 y:25.000000" />
-					<Property Name="UnifiedSize" Value="{{0.000000,177.000000},{1.000000,-142.000000}" />
+					<Property Name="UnifiedSize" Value="{{0.000000,352.000000},{1.000000,-142.000000}" />
 					<Property Name="RiseOnClick" Value="False" />
 					<Window Type="DefaultWindow" Name="Packet_Space_Line1">
 						<Property Name="AbsolutePosition" Value="x:0 y:0" />
-						<Property Name="AbsoluteSize" Value="w:183 h:35" />
+						<Property Name="AbsoluteSize" Value="w:350 h:35" />
 						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line1_Row1_button">
 							<Property Name="AbsolutePosition" Value="x:0 y:0" />
 							<Property Name="AbsoluteSize" Value="w:35 h:35" />
@@ -112,10 +112,50 @@
 							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(1,5);" />
 							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(1,5);" />
 						</Window>
+						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line1_Row6_button">
+							<Property Name="AbsolutePosition" Value="x:175 y:0" />
+							<Property Name="AbsoluteSize" Value="w:35 h:35" />
+							<Property Name="Empty" Value="false" />
+							<Property Name="DraggingEnabled" Value="True" />
+							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(1,6);" />
+							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(1,6);" />
+						</Window>
+						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line1_Row7_button">
+							<Property Name="AbsolutePosition" Value="x:210 y:0" />
+							<Property Name="AbsoluteSize" Value="w:35 h:35" />
+							<Property Name="Empty" Value="false" />
+							<Property Name="DraggingEnabled" Value="True" />
+							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(1,7);" />
+							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(1,7);" />
+						</Window>
+						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line1_Row8_button">
+							<Property Name="AbsolutePosition" Value="x:245 y:0" />
+							<Property Name="AbsoluteSize" Value="w:35 h:35" />
+							<Property Name="Empty" Value="false" />
+							<Property Name="DraggingEnabled" Value="True" />
+							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(1,8);" />
+							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(1,8);" />
+						</Window>
+						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line1_Row9_button">
+							<Property Name="AbsolutePosition" Value="x:280 y:0" />
+							<Property Name="AbsoluteSize" Value="w:35 h:35" />
+							<Property Name="Empty" Value="false" />
+							<Property Name="DraggingEnabled" Value="True" />
+							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(1,9);" />
+							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(1,9);" />
+						</Window>
+						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line1_Row10_button">
+							<Property Name="AbsolutePosition" Value="x:315 y:0" />
+							<Property Name="AbsoluteSize" Value="w:35 h:35" />
+							<Property Name="Empty" Value="false" />
+							<Property Name="DraggingEnabled" Value="True" />
+							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(1,10);" />
+							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(1,10);" />
+						</Window>
 					</Window>
 					<Window Type="DefaultWindow" Name="Packet_Space_Line2">
 						<Property Name="AbsolutePosition" Value="x:0 y:35" />
-						<Property Name="AbsoluteSize" Value="w:183 h:35" />
+						<Property Name="AbsoluteSize" Value="w:350 h:35" />
 						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line2_Row1_button">
 							<Property Name="AbsolutePosition" Value="x:0 y:0" />
 							<Property Name="AbsoluteSize" Value="w:35 h:35" />
@@ -156,10 +196,50 @@
 							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(2,5);" />
 							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(2,5);" />
 						</Window>
+						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line2_Row6_button">
+							<Property Name="AbsolutePosition" Value="x:175 y:0" />
+							<Property Name="AbsoluteSize" Value="w:35 h:35" />
+							<Property Name="Empty" Value="false" />
+							<Property Name="DraggingEnabled" Value="True" />
+							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(2,6);" />
+							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(2,6);" />
+						</Window>
+						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line2_Row7_button">
+							<Property Name="AbsolutePosition" Value="x:210 y:0" />
+							<Property Name="AbsoluteSize" Value="w:35 h:35" />
+							<Property Name="Empty" Value="false" />
+							<Property Name="DraggingEnabled" Value="True" />
+							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(2,7);" />
+							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(2,7);" />
+						</Window>
+						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line2_Row8_button">
+							<Property Name="AbsolutePosition" Value="x:245 y:0" />
+							<Property Name="AbsoluteSize" Value="w:35 h:35" />
+							<Property Name="Empty" Value="false" />
+							<Property Name="DraggingEnabled" Value="True" />
+							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(2,8);" />
+							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(2,8);" />
+						</Window>
+						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line2_Row9_button">
+							<Property Name="AbsolutePosition" Value="x:280 y:0" />
+							<Property Name="AbsoluteSize" Value="w:35 h:35" />
+							<Property Name="Empty" Value="false" />
+							<Property Name="DraggingEnabled" Value="True" />
+							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(2,9);" />
+							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(2,9);" />
+						</Window>
+						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line2_Row10_button">
+							<Property Name="AbsolutePosition" Value="x:315 y:0" />
+							<Property Name="AbsoluteSize" Value="w:35 h:35" />
+							<Property Name="Empty" Value="false" />
+							<Property Name="DraggingEnabled" Value="True" />
+							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(2,10);" />
+							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(2,10);" />
+						</Window>
 					</Window>
 					<Window Type="DefaultWindow" Name="Packet_Space_Line3">
 						<Property Name="AbsolutePosition" Value="x:0 y:70" />
-						<Property Name="AbsoluteSize" Value="w:183 h:35" />
+						<Property Name="AbsoluteSize" Value="w:350 h:35" />
 						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line3_Row1_button">
 							<Property Name="AbsolutePosition" Value="x:0 y:0" />
 							<Property Name="AbsoluteSize" Value="w:35 h:35" />
@@ -200,10 +280,50 @@
 							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(3,5);" />
 							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(3,5);" />
 						</Window>
+						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line3_Row6_button">
+							<Property Name="AbsolutePosition" Value="x:175 y:0" />
+							<Property Name="AbsoluteSize" Value="w:35 h:35" />
+							<Property Name="Empty" Value="false" />
+							<Property Name="DraggingEnabled" Value="True" />
+							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(3,6);" />
+							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(3,6);" />
+						</Window>
+						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line3_Row7_button">
+							<Property Name="AbsolutePosition" Value="x:210 y:0" />
+							<Property Name="AbsoluteSize" Value="w:35 h:35" />
+							<Property Name="Empty" Value="false" />
+							<Property Name="DraggingEnabled" Value="True" />
+							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(3,7);" />
+							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(3,7);" />
+						</Window>
+						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line3_Row8_button">
+							<Property Name="AbsolutePosition" Value="x:245 y:0" />
+							<Property Name="AbsoluteSize" Value="w:35 h:35" />
+							<Property Name="Empty" Value="false" />
+							<Property Name="DraggingEnabled" Value="True" />
+							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(3,8);" />
+							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(3,8);" />
+						</Window>
+						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line3_Row9_button">
+							<Property Name="AbsolutePosition" Value="x:280 y:0" />
+							<Property Name="AbsoluteSize" Value="w:35 h:35" />
+							<Property Name="Empty" Value="false" />
+							<Property Name="DraggingEnabled" Value="True" />
+							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(3,9);" />
+							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(3,9);" />
+						</Window>
+						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line3_Row10_button">
+							<Property Name="AbsolutePosition" Value="x:315 y:0" />
+							<Property Name="AbsoluteSize" Value="w:35 h:35" />
+							<Property Name="Empty" Value="false" />
+							<Property Name="DraggingEnabled" Value="True" />
+							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(3,10);" />
+							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(3,10);" />
+						</Window>
 					</Window>
 					<Window Type="DefaultWindow" Name="Packet_Space_Line4">
 						<Property Name="AbsolutePosition" Value="x:0 y:105.0" />
-						<Property Name="AbsoluteSize" Value="w:183 h:35" />
+						<Property Name="AbsoluteSize" Value="w:350 h:35" />
 						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line4_Row1_button">
 							<Property Name="AbsolutePosition" Value="x:0 y:0" />
 							<Property Name="AbsoluteSize" Value="w:35 h:35" />
@@ -244,10 +364,50 @@
 							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(4,5);" />
 							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(4,5);" />
 						</Window>
+						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line4_Row6_button">
+							<Property Name="AbsolutePosition" Value="x:175 y:0" />
+							<Property Name="AbsoluteSize" Value="w:35 h:35" />
+							<Property Name="Empty" Value="false" />
+							<Property Name="DraggingEnabled" Value="True" />
+							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(4,6);" />
+							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(4,6);" />
+						</Window>
+						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line4_Row7_button">
+							<Property Name="AbsolutePosition" Value="x:210 y:0" />
+							<Property Name="AbsoluteSize" Value="w:35 h:35" />
+							<Property Name="Empty" Value="false" />
+							<Property Name="DraggingEnabled" Value="True" />
+							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(4,7);" />
+							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(4,7);" />
+						</Window>
+						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line4_Row8_button">
+							<Property Name="AbsolutePosition" Value="x:245 y:0" />
+							<Property Name="AbsoluteSize" Value="w:35 h:35" />
+							<Property Name="Empty" Value="false" />
+							<Property Name="DraggingEnabled" Value="True" />
+							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(4,8);" />
+							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(4,8);" />
+						</Window>
+						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line4_Row9_button">
+							<Property Name="AbsolutePosition" Value="x:280 y:0" />
+							<Property Name="AbsoluteSize" Value="w:35 h:35" />
+							<Property Name="Empty" Value="false" />
+							<Property Name="DraggingEnabled" Value="True" />
+							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(4,9);" />
+							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(4,9);" />
+						</Window>
+						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line4_Row10_button">
+							<Property Name="AbsolutePosition" Value="x:315 y:0" />
+							<Property Name="AbsoluteSize" Value="w:35 h:35" />
+							<Property Name="Empty" Value="false" />
+							<Property Name="DraggingEnabled" Value="True" />
+							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(4,10);" />
+							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(4,10);" />
+						</Window>
 					</Window>
 					<Window Type="DefaultWindow" Name="Packet_Space_Line5">
 						<Property Name="AbsolutePosition" Value="x:0 y:140.0" />
-						<Property Name="AbsoluteSize" Value="w:183 h:35" />
+						<Property Name="AbsoluteSize" Value="w:350 h:35" />
 						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line5_Row1_button">
 							<Property Name="AbsolutePosition" Value="x:0 y:0" />
 							<Property Name="AbsoluteSize" Value="w:35 h:35" />
@@ -288,10 +448,50 @@
 							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(5,5);" />
 							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(5,5);" />
 						</Window>
+						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line5_Row6_button">
+							<Property Name="AbsolutePosition" Value="x:175 y:0" />
+							<Property Name="AbsoluteSize" Value="w:35 h:35" />
+							<Property Name="Empty" Value="false" />
+							<Property Name="DraggingEnabled" Value="True" />
+							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(5,6);" />
+							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(5,6);" />
+						</Window>
+						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line5_Row7_button">
+							<Property Name="AbsolutePosition" Value="x:210 y:0" />
+							<Property Name="AbsoluteSize" Value="w:35 h:35" />
+							<Property Name="Empty" Value="false" />
+							<Property Name="DraggingEnabled" Value="True" />
+							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(5,7);" />
+							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(5,7);" />
+						</Window>
+						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line5_Row8_button">
+							<Property Name="AbsolutePosition" Value="x:245 y:0" />
+							<Property Name="AbsoluteSize" Value="w:35 h:35" />
+							<Property Name="Empty" Value="false" />
+							<Property Name="DraggingEnabled" Value="True" />
+							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(5,8);" />
+							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(5,8);" />
+						</Window>
+						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line5_Row9_button">
+							<Property Name="AbsolutePosition" Value="x:280 y:0" />
+							<Property Name="AbsoluteSize" Value="w:35 h:35" />
+							<Property Name="Empty" Value="false" />
+							<Property Name="DraggingEnabled" Value="True" />
+							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(5,9);" />
+							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(5,9);" />
+						</Window>
+						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line5_Row10_button">
+							<Property Name="AbsolutePosition" Value="x:315 y:0" />
+							<Property Name="AbsoluteSize" Value="w:35 h:35" />
+							<Property Name="Empty" Value="false" />
+							<Property Name="DraggingEnabled" Value="True" />
+							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(5,10);" />
+							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(5,10);" />
+						</Window>
 					</Window>
 					<Window Type="DefaultWindow" Name="Packet_Space_Line6">
 						<Property Name="AbsolutePosition" Value="x:0 y:175.0" />
-						<Property Name="AbsoluteSize" Value="w:183 h:35" />
+						<Property Name="AbsoluteSize" Value="w:350 h:35" />
 						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line6_Row1_button">
 							<Property Name="AbsolutePosition" Value="x:0 y:0" />
 							<Property Name="AbsoluteSize" Value="w:35 h:35" />
@@ -332,10 +532,50 @@
 							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(6,5);" />
 							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(6,5);" />
 						</Window>
+						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line6_Row6_button">
+							<Property Name="AbsolutePosition" Value="x:175 y:0" />
+							<Property Name="AbsoluteSize" Value="w:35 h:35" />
+							<Property Name="Empty" Value="false" />
+							<Property Name="DraggingEnabled" Value="True" />
+							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(6,6);" />
+							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(6,6);" />
+						</Window>
+						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line6_Row7_button">
+							<Property Name="AbsolutePosition" Value="x:210 y:0" />
+							<Property Name="AbsoluteSize" Value="w:35 h:35" />
+							<Property Name="Empty" Value="false" />
+							<Property Name="DraggingEnabled" Value="True" />
+							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(6,7);" />
+							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(6,7);" />
+						</Window>
+						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line6_Row8_button">
+							<Property Name="AbsolutePosition" Value="x:245 y:0" />
+							<Property Name="AbsoluteSize" Value="w:35 h:35" />
+							<Property Name="Empty" Value="false" />
+							<Property Name="DraggingEnabled" Value="True" />
+							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(6,8);" />
+							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(6,8);" />
+						</Window>
+						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line6_Row9_button">
+							<Property Name="AbsolutePosition" Value="x:280 y:0" />
+							<Property Name="AbsoluteSize" Value="w:35 h:35" />
+							<Property Name="Empty" Value="false" />
+							<Property Name="DraggingEnabled" Value="True" />
+							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(6,9);" />
+							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(6,9);" />
+						</Window>
+						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line6_Row10_button">
+							<Property Name="AbsolutePosition" Value="x:315 y:0" />
+							<Property Name="AbsoluteSize" Value="w:35 h:35" />
+							<Property Name="Empty" Value="false" />
+							<Property Name="DraggingEnabled" Value="True" />
+							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(6,10);" />
+							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(6,10);" />
+						</Window>
 					</Window>
 					<Window Type="DefaultWindow" Name="Packet_Space_Line7">
 						<Property Name="AbsolutePosition" Value="x:0.0 y:210.0" />
-						<Property Name="AbsoluteSize" Value="w:183 h:35" />
+						<Property Name="AbsoluteSize" Value="w:350 h:35" />
 						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line7_Row1_button">
 							<Property Name="AbsolutePosition" Value="x:0 y:0" />
 							<Property Name="AbsoluteSize" Value="w:35 h:35" />
@@ -376,10 +616,50 @@
 							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(7,5);" />
 							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(7,5);" />
 						</Window>
+						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line7_Row6_button">
+							<Property Name="AbsolutePosition" Value="x:175 y:0" />
+							<Property Name="AbsoluteSize" Value="w:35 h:35" />
+							<Property Name="Empty" Value="false" />
+							<Property Name="DraggingEnabled" Value="True" />
+							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(7,6);" />
+							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(7,6);" />
+						</Window>
+						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line7_Row7_button">
+							<Property Name="AbsolutePosition" Value="x:210 y:0" />
+							<Property Name="AbsoluteSize" Value="w:35 h:35" />
+							<Property Name="Empty" Value="false" />
+							<Property Name="DraggingEnabled" Value="True" />
+							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(7,7);" />
+							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(7,7);" />
+						</Window>
+						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line7_Row8_button">
+							<Property Name="AbsolutePosition" Value="x:245 y:0" />
+							<Property Name="AbsoluteSize" Value="w:35 h:35" />
+							<Property Name="Empty" Value="false" />
+							<Property Name="DraggingEnabled" Value="True" />
+							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(7,8);" />
+							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(7,8);" />
+						</Window>
+						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line7_Row9_button">
+							<Property Name="AbsolutePosition" Value="x:280 y:0" />
+							<Property Name="AbsoluteSize" Value="w:35 h:35" />
+							<Property Name="Empty" Value="false" />
+							<Property Name="DraggingEnabled" Value="True" />
+							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(7,9);" />
+							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(7,9);" />
+						</Window>
+						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line7_Row10_button">
+							<Property Name="AbsolutePosition" Value="x:315 y:0" />
+							<Property Name="AbsoluteSize" Value="w:35 h:35" />
+							<Property Name="Empty" Value="false" />
+							<Property Name="DraggingEnabled" Value="True" />
+							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(7,10);" />
+							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(7,10);" />
+						</Window>
 					</Window>
 					<Window Type="DefaultWindow" Name="Packet_Space_Line8">
 						<Property Name="AbsolutePosition" Value="x:0.0 y:245.0" />
-						<Property Name="AbsoluteSize" Value="w:183 h:35" />
+						<Property Name="AbsoluteSize" Value="w:350 h:35" />
 						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line8_Row1_button">
 							<Property Name="AbsolutePosition" Value="x:0 y:0" />
 							<Property Name="AbsoluteSize" Value="w:35 h:35" />
@@ -420,10 +700,50 @@
 							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(8,5);" />
 							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(8,5);" />
 						</Window>
+						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line8_Row6_button">
+							<Property Name="AbsolutePosition" Value="x:175 y:0" />
+							<Property Name="AbsoluteSize" Value="w:35 h:35" />
+							<Property Name="Empty" Value="false" />
+							<Property Name="DraggingEnabled" Value="True" />
+							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(8,6);" />
+							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(8,6);" />
+						</Window>
+						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line8_Row7_button">
+							<Property Name="AbsolutePosition" Value="x:210 y:0" />
+							<Property Name="AbsoluteSize" Value="w:35 h:35" />
+							<Property Name="Empty" Value="false" />
+							<Property Name="DraggingEnabled" Value="True" />
+							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(8,7);" />
+							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(8,7);" />
+						</Window>
+						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line8_Row8_button">
+							<Property Name="AbsolutePosition" Value="x:245 y:0" />
+							<Property Name="AbsoluteSize" Value="w:35 h:35" />
+							<Property Name="Empty" Value="false" />
+							<Property Name="DraggingEnabled" Value="True" />
+							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(8,8);" />
+							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(8,8);" />
+						</Window>
+						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line8_Row9_button">
+							<Property Name="AbsolutePosition" Value="x:280 y:0" />
+							<Property Name="AbsoluteSize" Value="w:35 h:35" />
+							<Property Name="Empty" Value="false" />
+							<Property Name="DraggingEnabled" Value="True" />
+							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(8,9);" />
+							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(8,9);" />
+						</Window>
+						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line8_Row10_button">
+							<Property Name="AbsolutePosition" Value="x:315 y:0" />
+							<Property Name="AbsoluteSize" Value="w:35 h:35" />
+							<Property Name="Empty" Value="false" />
+							<Property Name="DraggingEnabled" Value="True" />
+							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(8,10);" />
+							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(8,10);" />
+						</Window>
 					</Window>
 					<Window Type="DefaultWindow" Name="Packet_Space_Line9">
 						<Property Name="AbsolutePosition" Value="x:0.0 y:280.0" />
-						<Property Name="AbsoluteSize" Value="w:183 h:35" />
+						<Property Name="AbsoluteSize" Value="w:350 h:35" />
 						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line9_Row1_button">
 							<Property Name="AbsolutePosition" Value="x:0 y:0" />
 							<Property Name="AbsoluteSize" Value="w:35 h:35" />
@@ -464,10 +784,50 @@
 							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(9,5);" />
 							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(9,5);" />
 						</Window>
+						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line9_Row6_button">
+							<Property Name="AbsolutePosition" Value="x:175 y:0" />
+							<Property Name="AbsoluteSize" Value="w:35 h:35" />
+							<Property Name="Empty" Value="false" />
+							<Property Name="DraggingEnabled" Value="True" />
+							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(9,6);" />
+							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(9,6);" />
+						</Window>
+						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line9_Row7_button">
+							<Property Name="AbsolutePosition" Value="x:210 y:0" />
+							<Property Name="AbsoluteSize" Value="w:35 h:35" />
+							<Property Name="Empty" Value="false" />
+							<Property Name="DraggingEnabled" Value="True" />
+							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(9,7);" />
+							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(9,7);" />
+						</Window>
+						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line9_Row8_button">
+							<Property Name="AbsolutePosition" Value="x:245 y:0" />
+							<Property Name="AbsoluteSize" Value="w:35 h:35" />
+							<Property Name="Empty" Value="false" />
+							<Property Name="DraggingEnabled" Value="True" />
+							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(9,8);" />
+							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(9,8);" />
+						</Window>
+						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line9_Row9_button">
+							<Property Name="AbsolutePosition" Value="x:280 y:0" />
+							<Property Name="AbsoluteSize" Value="w:35 h:35" />
+							<Property Name="Empty" Value="false" />
+							<Property Name="DraggingEnabled" Value="True" />
+							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(9,9);" />
+							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(9,9);" />
+						</Window>
+						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line9_Row10_button">
+							<Property Name="AbsolutePosition" Value="x:315 y:0" />
+							<Property Name="AbsoluteSize" Value="w:35 h:35" />
+							<Property Name="Empty" Value="false" />
+							<Property Name="DraggingEnabled" Value="True" />
+							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(9,10);" />
+							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(9,10);" />
+						</Window>
 					</Window>
 					<Window Type="DefaultWindow" Name="Packet_Space_Line10">
 						<Property Name="AbsolutePosition" Value="x:0.0 y:315.0" />
-						<Property Name="AbsoluteSize" Value="w:183 h:35" />
+						<Property Name="AbsoluteSize" Value="w:350 h:35" />
 						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line10_Row1_button">
 							<Property Name="AbsolutePosition" Value="x:0 y:0" />
 							<Property Name="AbsoluteSize" Value="w:35 h:35" />
@@ -507,6 +867,46 @@
 							<Property Name="DraggingEnabled" Value="True" />
 							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(10,5);" />
 							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(10,5);" />
+						</Window>
+						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line10_Row6_button">
+							<Property Name="AbsolutePosition" Value="x:175 y:0" />
+							<Property Name="AbsoluteSize" Value="w:35 h:35" />
+							<Property Name="Empty" Value="false" />
+							<Property Name="DraggingEnabled" Value="True" />
+							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(10,6);" />
+							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(10,6);" />
+						</Window>
+						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line10_Row7_button">
+							<Property Name="AbsolutePosition" Value="x:210 y:0" />
+							<Property Name="AbsoluteSize" Value="w:35 h:35" />
+							<Property Name="Empty" Value="false" />
+							<Property Name="DraggingEnabled" Value="True" />
+							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(10,7);" />
+							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(10,7);" />
+						</Window>
+						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line10_Row8_button">
+							<Property Name="AbsolutePosition" Value="x:245 y:0" />
+							<Property Name="AbsoluteSize" Value="w:35 h:35" />
+							<Property Name="Empty" Value="false" />
+							<Property Name="DraggingEnabled" Value="True" />
+							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(10,8);" />
+							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(10,8);" />
+						</Window>
+						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line10_Row9_button">
+							<Property Name="AbsolutePosition" Value="x:280 y:0" />
+							<Property Name="AbsoluteSize" Value="w:35 h:35" />
+							<Property Name="Empty" Value="false" />
+							<Property Name="DraggingEnabled" Value="True" />
+							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(10,9);" />
+							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(10,9);" />
+						</Window>
+						<Window Type="TLBB_ActionButton" Name="Packet_Space_Line10_Row10_button">
+							<Property Name="AbsolutePosition" Value="x:315 y:0" />
+							<Property Name="AbsoluteSize" Value="w:35 h:35" />
+							<Property Name="Empty" Value="false" />
+							<Property Name="DraggingEnabled" Value="True" />
+							<Event Name="RBClicked" Function="Packet_ItemBtnClicked(10,10);" />
+							<Event Name="Clicked" Function="Packet_ItemBtnSubClicked(10,10);" />
 						</Window>
 					</Window>
 				</Window>

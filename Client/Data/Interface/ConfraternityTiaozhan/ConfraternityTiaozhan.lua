@@ -1,4 +1,4 @@
---帮派征讨接受挑战界面
+--甯淳寰佽鎺ュ彈鎸戞垬鐣岄潰
 
 function ConfraternityTiaozhan_PreLoad()
 	this:RegisterEvent("GUILD_SHOW_TIAOZHAN");	

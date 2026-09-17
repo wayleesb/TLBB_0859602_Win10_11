@@ -1,23 +1,23 @@
 --MisDescBegin
 x600027_g_ScriptId = 600027
 x600027_g_MissionId = 1110
-x600027_g_Name = "Ù¡Ü½ÈØ"
+x600027_g_Name = "ä½ŸèŠ™è“‰"
 x600027_g_MissionKind = 50
 x600027_g_MissionLevel = 10000
 x600027_g_IfMissionElite = 0
-x600027_g_IsMissionOkFail			=0	--0 ÈÎÎñÍê³É±ê¼Ç[Öµ²»ÄÜ±ä]
-x600027_g_MissionParam_SubId		=1	--1 ×ÓÈÎÎñ½Å±¾ºÅ´æ·ÅÎ»ÖÃ[Öµ²»ÄÜ±ä]
-x600027_g_GemCount					=2	--2 ĞèÒªµÄ±¦Ê¯ÊıÁ¿
-x600027_g_GemSerialNum				=3	--3 ĞèÒªµÄ±¦Ê¯
-x600027_g_MissionName = "À©ÕÅÈÎÎñ"
-x600027_g_MissionInfo = ""			--ÈÎÎñÃèÊö
-x600027_g_MissionTarget = "    ÕÒ%s¸ö%i½»»¹µ½±¾°ïµÄÙ¡Ü½ÈØ ( 148, 96 )´¦¡£"	--ÈÎÎñÄ¿±ê
-x600027_g_ContinueInfo = "    ÄãµÄÈÎÎñ»¹Ã»ÓĞÍê³ÉÃ´£¿"					--Î´Íê³ÉÈÎÎñµÄnpc¶Ô»°
-x600027_g_SubmitInfo = "    ÊÂÇé½øÕ¹µÃÈçºÎ£¿"							--Íê³ÉÎ´Ìá½»Ê±µÄnpc¶Ô»°
-x600027_g_MissionComplete = "    ÉõºÃÉõºÃ¡£"							--Íê³ÉÈÎÎñnpcËµ»°µÄ»°
+x600027_g_IsMissionOkFail			=0	--0 ä»»åŠ¡å®Œæˆæ ‡è®°[å€¼ä¸èƒ½å˜]
+x600027_g_MissionParam_SubId		=1	--1 å­ä»»åŠ¡è„šæœ¬å·å­˜æ”¾ä½ç½®[å€¼ä¸èƒ½å˜]
+x600027_g_GemCount					=2	--2 éœ€è¦çš„å®çŸ³æ•°é‡
+x600027_g_GemSerialNum				=3	--3 éœ€è¦çš„å®çŸ³
+x600027_g_MissionName = "æ‰©å¼ ä»»åŠ¡"
+x600027_g_MissionInfo = ""			--ä»»åŠ¡æè¿°
+x600027_g_MissionTarget = "    æ‰¾%sä¸ª%iäº¤è¿˜åˆ°æœ¬å¸®çš„ä½ŸèŠ™è“‰ ( 148, 96 )å¤„ã€‚"	--ä»»åŠ¡ç›®æ ‡
+x600027_g_ContinueInfo = "    ä½ çš„ä»»åŠ¡è¿˜æ²¡æœ‰å®Œæˆä¹ˆï¼Ÿ"					--æœªå®Œæˆä»»åŠ¡çš„npcå¯¹è¯
+x600027_g_SubmitInfo = "    äº‹æƒ…è¿›å±•å¾—å¦‚ä½•ï¼Ÿ"							--å®Œæˆæœªæäº¤æ—¶çš„npcå¯¹è¯
+x600027_g_MissionComplete = "    ç”šå¥½ç”šå¥½ã€‚"							--å®Œæˆä»»åŠ¡npcè¯´è¯çš„è¯
 x600027_g_Parameter_Item_AllRandom = { { id = 3, num = 2 } }
 x600027_g_StrForePart = 2
-x600027_g_Offset = 35													-- Suppose to £¿, ±íÀïµÚ¼¸¸öÎïÆ·ÁĞµÄÆ«ÒÆÁ¿
+x600027_g_Offset = 35													-- Suppose to ï¼Ÿ, è¡¨é‡Œç¬¬å‡ ä¸ªç‰©å“åˆ—çš„åç§»é‡
 x600027_g_MissionRound = 55
 x600027_g_CityMissionScript = 600001
 x600027_g_ExpandScript = 600023

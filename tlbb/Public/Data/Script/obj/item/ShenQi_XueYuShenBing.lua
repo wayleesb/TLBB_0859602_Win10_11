@@ -1,34 +1,34 @@
--- ´´½¨ÈË[ QUFEI 2007-09-30 21:53 UPDATE BugID 25497 ]
--- ĞŞ¸Ä[ñÒÉÙÎ¢ 2008.5.22 Ìí¼ÓĞÂµÄ27¸öÉñÆ÷]
+-- åˆ›å»ºäºº[ QUFEI 2007-09-30 21:53 UPDATE BugID 25497 ]
+-- ä¿®æ”¹[è¤šå°‘å¾® 2008.5.22 æ·»åŠ æ–°çš„27ä¸ªç¥å™¨]
 
--- ÉñÆ÷ºÏ³ÉÅä·½
--- ItemID = 10300000~10305005(ÉñÆ÷Åä·½)				10300100~10305202£¨102¼¶ÉñÆ÷£©
--- ResourceID = 30505900~30505905(Á¬ÈÖÉñ½Ú)		30505906£¨Á¬ÈÖÉñ½Ú7¼¶£©
+-- ç¥å™¨åˆæˆé…æ–¹
+-- ItemID = 10300000~10305005(ç¥å™¨é…æ–¹)				10300100~10305202ï¼ˆ102çº§ç¥å™¨ï¼‰
+-- ResourceID = 30505900~30505905(è¿æˆç¥èŠ‚)		30505906ï¼ˆè¿æˆç¥èŠ‚7çº§ï¼‰
 -- 335134
--- Í¨¹ıÁ¬ÈÖÉñ½ÚÓëÉñÆ÷Åä·½ºÏ³ÉÉñÆ÷
--- ²ÄÁÏ¿ÉÒÔÊ¹ÓÃ1´Î
--- Ê¹ÓÃÍê¾ÍÉ¾³ı²ÄÁÏ
+-- é€šè¿‡è¿æˆç¥èŠ‚ä¸ç¥å™¨é…æ–¹åˆæˆç¥å™¨
+-- ææ–™å¯ä»¥ä½¿ç”¨1æ¬¡
+-- ä½¿ç”¨å®Œå°±åˆ é™¤ææ–™
 
--- ¸Ã½Å±¾ÓĞÒÔÏÂ¶ş¸ö±Ø±¸¹¦ÄÜº¯Êı£º
--- x335134_AbilityCheck		- ¼¼ÄÜÊ¹ÓÃ¼ì²éº¯Êı
--- x335134_AbilityProduce	-  ºÏ³É³É¹¦£¬¸ºÔğÏûºÄÒÔ¼°²ú³ö²úÆ·
+-- è¯¥è„šæœ¬æœ‰ä»¥ä¸‹äºŒä¸ªå¿…å¤‡åŠŸèƒ½å‡½æ•°ï¼š
+-- x335134_AbilityCheck		- æŠ€èƒ½ä½¿ç”¨æ£€æŸ¥å‡½æ•°
+-- x335134_AbilityProduce	-  åˆæˆæˆåŠŸï¼Œè´Ÿè´£æ¶ˆè€—ä»¥åŠäº§å‡ºäº§å“
 
--- ½Å±¾ºÅ
+-- è„šæœ¬å·
 x335134_g_ScriptId	= 335134
 
--- ²ÄÁÏ±í Á¬ÈÖÉñ½Ú
-x335134_g_Stuff			= { 30505900, 30505901, 30505902, 30505903, 30505904, 30505905, 30505906 }		-- ñÒÉÙÎ¢ 2008.5.22 Ìí¼ÓÁ¬ÈÖÉñ½Ú7¼¶ 30505906
+-- ææ–™è¡¨ è¿æˆç¥èŠ‚
+x335134_g_Stuff			= { 30505900, 30505901, 30505902, 30505903, 30505904, 30505905, 30505906 }		-- è¤šå°‘å¾® 2008.5.22 æ·»åŠ è¿æˆç¥èŠ‚7çº§ 30505906
 
--- Åä·½±í
--- Ë÷ÒıÎªÅä·½ ID
--- abilityId: Éú»î¼¼ÄÜºÅ
--- recipeLevel: Åä·½µÈ¼¶
--- matTbl: ¸ÃÅä·½Ê¹ÓÃµÄ²ÄÁÏ×é±í
---		matList:Ä³¸öµµ´ÎµÄ²ÄÁÏÇåµ¥
---		count:Ê¹ÓÃ¸Ãµµ´ÎµÄ²ÄÁÏĞèÒªµÄÊıÁ¿
--- Product: ²úÆ·
+-- é…æ–¹è¡¨
+-- ç´¢å¼•ä¸ºé…æ–¹ ID
+-- abilityId: ç”Ÿæ´»æŠ€èƒ½å·
+-- recipeLevel: é…æ–¹ç­‰çº§
+-- matTbl: è¯¥é…æ–¹ä½¿ç”¨çš„ææ–™ç»„è¡¨
+--		matList:æŸä¸ªæ¡£æ¬¡çš„ææ–™æ¸…å•
+--		count:ä½¿ç”¨è¯¥æ¡£æ¬¡çš„ææ–™éœ€è¦çš„æ•°é‡
+-- Product: äº§å“
 x335134_g_CompoundInfo			= {}
--- ÉñÆ÷Åä·½±í ÈÛ½ğÂäÈÕ
+-- ç¥å™¨é…æ–¹è¡¨ ç†”é‡‘è½æ—¥
 x335134_g_CompoundInfo[419]	= {
 	abilityId = ABILITY_ZHUZAO,
 	recipeLevel = 1,
@@ -43,7 +43,7 @@ x335134_g_CompoundInfo[419]	= {
 	},
 }
 
--- ÉñÆ÷Åä·½±í ÇïË®ÎŞºÛ
+-- ç¥å™¨é…æ–¹è¡¨ ç§‹æ°´æ— ç—•
 x335134_g_CompoundInfo[420]	= {
 	abilityId = ABILITY_ZHUZAO,
 	recipeLevel = 1,
@@ -58,7 +58,7 @@ x335134_g_CompoundInfo[420]	= {
 	},	
 }
 
--- ÉñÆ÷Åä·½±í ±Ìº£ÒøÌÎ
+-- ç¥å™¨é…æ–¹è¡¨ ç¢§æµ·é“¶æ¶›
 x335134_g_CompoundInfo[421]	= {
 	abilityId = ABILITY_ZHUZAO,
 	recipeLevel = 1,
@@ -73,7 +73,7 @@ x335134_g_CompoundInfo[421]	= {
 	},	
 }
 
--- ÉñÆ÷Åä·½±í ÍòÛÖËÉ·ç
+-- ç¥å™¨é…æ–¹è¡¨ ä¸‡å£‘æ¾é£
 x335134_g_CompoundInfo[422]	= {
 	abilityId = ABILITY_ZHUZAO,
 	recipeLevel = 1,
@@ -89,9 +89,9 @@ x335134_g_CompoundInfo[422]	= {
 }
 
 ----------------------------------------------------------------------------------------
--- ñÒÉÙÎ¢ 2008.5.22 Ìí¼Ó7ÖÖ102¼¶ÉñÆ÷
+-- è¤šå°‘å¾® 2008.5.22 æ·»åŠ 7ç§102çº§ç¥å™¨
 ----------------------------------------------------------------------------------------
--- ÉñÆ÷Åä·½±í ´óÏÄÁúÈ¸
+-- ç¥å™¨é…æ–¹è¡¨ å¤§å¤é¾™é›€
 x335134_g_CompoundInfo[980]	= {
 	abilityId = ABILITY_ZHUZAO,
 	recipeLevel = 1,
@@ -100,7 +100,7 @@ x335134_g_CompoundInfo[980]	= {
 		{ matList = x335134_g_Stuff[7], count = 1, Product = 10300100, },
 	},
 }
--- ÉñÆ÷Åä·½±í ´óÏÄÁúÈ¸1
+-- ç¥å™¨é…æ–¹è¡¨ å¤§å¤é¾™é›€1
 x335134_g_CompoundInfo[981]	= {
 	abilityId = ABILITY_ZHUZAO,
 	recipeLevel = 1,
@@ -109,7 +109,7 @@ x335134_g_CompoundInfo[981]	= {
 		{ matList = x335134_g_Stuff[7], count = 1, Product = 10300101, },
 	},
 }
--- ÉñÆ÷Åä·½±í ´óÏÄÁúÈ¸2
+-- ç¥å™¨é…æ–¹è¡¨ å¤§å¤é¾™é›€2
 x335134_g_CompoundInfo[982]	= {
 	abilityId = ABILITY_ZHUZAO,
 	recipeLevel = 1,
@@ -120,7 +120,7 @@ x335134_g_CompoundInfo[982]	= {
 }
 
 
--- ÉñÆ÷Åä·½±í ´óÉÌ³¾Ó°
+-- ç¥å™¨é…æ–¹è¡¨ å¤§å•†å°˜å½±
 x335134_g_CompoundInfo[983]	= {
 	abilityId = ABILITY_ZHUZAO,
 	recipeLevel = 1,
@@ -129,7 +129,7 @@ x335134_g_CompoundInfo[983]	= {
 		{ matList = x335134_g_Stuff[7], count = 1, Product = 10302100, },
 	},
 }
--- ÉñÆ÷Åä·½±í ´óÉÌ³¾Ó°1
+-- ç¥å™¨é…æ–¹è¡¨ å¤§å•†å°˜å½±1
 x335134_g_CompoundInfo[984]	= {
 	abilityId = ABILITY_ZHUZAO,
 	recipeLevel = 1,
@@ -138,7 +138,7 @@ x335134_g_CompoundInfo[984]	= {
 		{ matList = x335134_g_Stuff[7], count = 1, Product = 10302101, },
 	},
 }
--- ÉñÆ÷Åä·½±í ´óÉÌ³¾Ó°2
+-- ç¥å™¨é…æ–¹è¡¨ å¤§å•†å°˜å½±2
 x335134_g_CompoundInfo[985]	= {
 	abilityId = ABILITY_ZHUZAO,
 	recipeLevel = 1,
@@ -148,7 +148,7 @@ x335134_g_CompoundInfo[985]	= {
 	},
 }
 
--- ÉñÆ÷Åä·½±í ´óÖÜá°Ò¹
+-- ç¥å™¨é…æ–¹è¡¨ å¤§å‘¨å²šå¤œ
 x335134_g_CompoundInfo[986]	= {
 	abilityId = ABILITY_ZHUZAO,
 	recipeLevel = 1,
@@ -157,7 +157,7 @@ x335134_g_CompoundInfo[986]	= {
 		{ matList = x335134_g_Stuff[7], count = 1, Product = 10303100, },
 	},
 }
--- ÉñÆ÷Åä·½±í ´óÖÜá°Ò¹1
+-- ç¥å™¨é…æ–¹è¡¨ å¤§å‘¨å²šå¤œ1
 x335134_g_CompoundInfo[987]	= {
 	abilityId = ABILITY_ZHUZAO,
 	recipeLevel = 1,
@@ -166,7 +166,7 @@ x335134_g_CompoundInfo[987]	= {
 		{ matList = x335134_g_Stuff[7], count = 1, Product = 10303101, },
 	},
 }
--- ÉñÆ÷Åä·½±í ´óÖÜá°Ò¹2
+-- ç¥å™¨é…æ–¹è¡¨ å¤§å‘¨å²šå¤œ2
 x335134_g_CompoundInfo[988]	= {
 	abilityId = ABILITY_ZHUZAO,
 	recipeLevel = 1,
@@ -176,7 +176,7 @@ x335134_g_CompoundInfo[988]	= {
 	},
 }
 
--- ÉñÆ÷Åä·½±í ´óÇØ·æïá
+-- ç¥å™¨é…æ–¹è¡¨ å¤§ç§¦é”‹é•
 x335134_g_CompoundInfo[989]	= {
 	abilityId = ABILITY_ZHUZAO,
 	recipeLevel = 1,
@@ -185,7 +185,7 @@ x335134_g_CompoundInfo[989]	= {
 		{ matList = x335134_g_Stuff[7], count = 1, Product = 10301100, },
 	},
 }
--- ÉñÆ÷Åä·½±í ´óÇØ·æïá1
+-- ç¥å™¨é…æ–¹è¡¨ å¤§ç§¦é”‹é•1
 x335134_g_CompoundInfo[990]	= {
 	abilityId = ABILITY_ZHUZAO,
 	recipeLevel = 1,
@@ -194,7 +194,7 @@ x335134_g_CompoundInfo[990]	= {
 		{ matList = x335134_g_Stuff[7], count = 1, Product = 10301101, },
 	},
 }
--- ÉñÆ÷Åä·½±í ´óÇØ·æïá2
+-- ç¥å™¨é…æ–¹è¡¨ å¤§ç§¦é”‹é•2
 x335134_g_CompoundInfo[991]	= {
 	abilityId = ABILITY_ZHUZAO,
 	recipeLevel = 1,
@@ -204,7 +204,7 @@ x335134_g_CompoundInfo[991]	= {
 	},
 }
 
--- ÉñÆ÷Åä·½±í ´óºººë¸Ù
+-- ç¥å™¨é…æ–¹è¡¨ å¤§æ±‰å¼˜çº²
 x335134_g_CompoundInfo[992]	= {
 	abilityId = ABILITY_ZHUZAO,
 	recipeLevel = 1,
@@ -213,7 +213,7 @@ x335134_g_CompoundInfo[992]	= {
 		{ matList = x335134_g_Stuff[7], count = 1, Product = 10305100, },
 	},
 }
--- ÉñÆ÷Åä·½±í ´óºººë¸Ù1
+-- ç¥å™¨é…æ–¹è¡¨ å¤§æ±‰å¼˜çº²1
 x335134_g_CompoundInfo[993]	= {
 	abilityId = ABILITY_ZHUZAO,
 	recipeLevel = 1,
@@ -222,7 +222,7 @@ x335134_g_CompoundInfo[993]	= {
 		{ matList = x335134_g_Stuff[7], count = 1, Product = 10305101, },
 	},
 }
--- ÉñÆ÷Åä·½±í ´óºººë¸Ù2
+-- ç¥å™¨é…æ–¹è¡¨ å¤§æ±‰å¼˜çº²2
 x335134_g_CompoundInfo[994]	= {
 	abilityId = ABILITY_ZHUZAO,
 	recipeLevel = 1,
@@ -232,7 +232,7 @@ x335134_g_CompoundInfo[994]	= {
 	},
 }
 
--- ÉñÆ÷Åä·½±í ´ó½úĞÇºÛ
+-- ç¥å™¨é…æ–¹è¡¨ å¤§æ™‹æ˜Ÿç—•
 x335134_g_CompoundInfo[995]	= {
 	abilityId = ABILITY_ZHUZAO,
 	recipeLevel = 1,
@@ -241,7 +241,7 @@ x335134_g_CompoundInfo[995]	= {
 		{ matList = x335134_g_Stuff[7], count = 1, Product = 10303200, },
 	},
 }
--- ÉñÆ÷Åä·½±í ´ó½úĞÇºÛ1
+-- ç¥å™¨é…æ–¹è¡¨ å¤§æ™‹æ˜Ÿç—•1
 x335134_g_CompoundInfo[996]	= {
 	abilityId = ABILITY_ZHUZAO,
 	recipeLevel = 1,
@@ -250,7 +250,7 @@ x335134_g_CompoundInfo[996]	= {
 		{ matList = x335134_g_Stuff[7], count = 1, Product = 10303201, },
 	},
 }
--- ÉñÆ÷Åä·½±í ´ó½úĞÇºÛ2
+-- ç¥å™¨é…æ–¹è¡¨ å¤§æ™‹æ˜Ÿç—•2
 x335134_g_CompoundInfo[997]	= {
 	abilityId = ABILITY_ZHUZAO,
 	recipeLevel = 1,
@@ -260,7 +260,7 @@ x335134_g_CompoundInfo[997]	= {
 	},
 }
 
--- ÉñÆ÷Åä·½±í ´óËåÄıËª
+-- ç¥å™¨é…æ–¹è¡¨ å¤§éš‹å‡éœœ
 x335134_g_CompoundInfo[998]	= {
 	abilityId = ABILITY_ZHUZAO,
 	recipeLevel = 1,
@@ -270,8 +270,8 @@ x335134_g_CompoundInfo[998]	= {
 	},
 }
 
--- Bug ID´íÎó
--- ÉñÆ÷Åä·½±í ´óËåÄıËª1
+-- Bug IDé”™è¯¯
+-- ç¥å™¨é…æ–¹è¡¨ å¤§éš‹å‡éœœ1
 x335134_g_CompoundInfo[999]	= {
 	abilityId = ABILITY_ZHUZAO,
 	recipeLevel = 1,
@@ -280,7 +280,7 @@ x335134_g_CompoundInfo[999]	= {
 		{ matList = x335134_g_Stuff[7], count = 1, Product = 10305200, },
 	},
 }
--- ÉñÆ÷Åä·½±í ´óËåÄıËª2
+-- ç¥å™¨é…æ–¹è¡¨ å¤§éš‹å‡éœœ2
 x335134_g_CompoundInfo[1000]	= {
 	abilityId = ABILITY_ZHUZAO,
 	recipeLevel = 1,
@@ -290,7 +290,7 @@ x335134_g_CompoundInfo[1000]	= {
 	},
 }
 
--- ÉñÆ÷Åä·½±í ´óÌÆÀ¥ÔÀ
+-- ç¥å™¨é…æ–¹è¡¨ å¤§å”æ˜†å²³
 x335134_g_CompoundInfo[1001]	= {
 	abilityId = ABILITY_ZHUZAO,
 	recipeLevel = 1,
@@ -299,7 +299,7 @@ x335134_g_CompoundInfo[1001]	= {
 		{ matList = x335134_g_Stuff[7], count = 1, Product = 10301200, },
 	},
 }
--- ÉñÆ÷Åä·½±í ´óÌÆÀ¥ÔÀ1
+-- ç¥å™¨é…æ–¹è¡¨ å¤§å”æ˜†å²³1
 x335134_g_CompoundInfo[1002]	= {
 	abilityId = ABILITY_ZHUZAO,
 	recipeLevel = 1,
@@ -308,7 +308,7 @@ x335134_g_CompoundInfo[1002]	= {
 		{ matList = x335134_g_Stuff[7], count = 1, Product = 10301201, },
 	},
 }
--- ÉñÆ÷Åä·½±í ´óÌÆÀ¥ÔÀ2
+-- ç¥å™¨é…æ–¹è¡¨ å¤§å”æ˜†å²³2
 x335134_g_CompoundInfo[1003]	= {
 	abilityId = ABILITY_ZHUZAO,
 	recipeLevel = 1,
@@ -318,7 +318,7 @@ x335134_g_CompoundInfo[1003]	= {
 	},
 }
 
--- ÉñÆ÷Åä·½±í ´óËÎ¾ıá¯
+-- ç¥å™¨é…æ–¹è¡¨ å¤§å®‹å›å²‘
 x335134_g_CompoundInfo[1004]	= {
 	abilityId = ABILITY_ZHUZAO,
 	recipeLevel = 1,
@@ -327,7 +327,7 @@ x335134_g_CompoundInfo[1004]	= {
 		{ matList = x335134_g_Stuff[7], count = 1, Product = 10304100, },
 	},
 }
--- ÉñÆ÷Åä·½±í ´óËÎ¾ıá¯
+-- ç¥å™¨é…æ–¹è¡¨ å¤§å®‹å›å²‘
 x335134_g_CompoundInfo[1005]	= {
 	abilityId = ABILITY_ZHUZAO,
 	recipeLevel = 1,
@@ -336,7 +336,7 @@ x335134_g_CompoundInfo[1005]	= {
 		{ matList = x335134_g_Stuff[7], count = 1, Product = 10304101, },
 	},
 }
--- ÉñÆ÷Åä·½±í ´óËÎ¾ıá¯
+-- ç¥å™¨é…æ–¹è¡¨ å¤§å®‹å›å²‘
 x335134_g_CompoundInfo[1006]	= {
 	abilityId = ABILITY_ZHUZAO,
 	recipeLevel = 1,
@@ -346,17 +346,17 @@ x335134_g_CompoundInfo[1006]	= {
 	},
 }
 ----------------------------------------------------------------------------------------
--- ñÒÉÙÎ¢ 2008.5.22 Ìí¼Ó7ÖÖ102¼¶ÉñÆ÷
+-- è¤šå°‘å¾® 2008.5.22 æ·»åŠ 7ç§102çº§ç¥å™¨
 ----------------------------------------------------------------------------------------
 
--- ±³°üĞèÒªµÄ¿Õ¼ä
+-- èƒŒåŒ…éœ€è¦çš„ç©ºé—´
 x335134_g_BagSpace	= 1
 
--- Ê¹ÓÃÅä·½Öı³ÉÉñÆ÷Ê±µÄÌØĞ§ID
+-- ä½¿ç”¨é…æ–¹é“¸æˆç¥å™¨æ—¶çš„ç‰¹æ•ˆID
 x335134_g_ImpactID = 152
 
 ----------------------------------------------------------------------------------------
---	¼¼ÄÜÊ¹ÓÃ¼ì²éº¯Êı
+--	æŠ€èƒ½ä½¿ç”¨æ£€æŸ¥å‡½æ•°
 ----------------------------------------------------------------------------------------
 function x335134_AbilityCheck( sceneId, selfId, recipeId )
 	-- PrintStr("AbilityCheck...")
@@ -369,7 +369,7 @@ function x335134_AbilityCheck( sceneId, selfId, recipeId )
 		return OR_ERROR
 	end
 
-	-- ¼ì²â±³°üÊÇ²»ÊÇÓĞ¿Õ¸ñ£¬Ã»ÓĞ¿Õ¸ñ¾Í²»ÄÜ½øĞĞ
+	-- æ£€æµ‹èƒŒåŒ…æ˜¯ä¸æ˜¯æœ‰ç©ºæ ¼ï¼Œæ²¡æœ‰ç©ºæ ¼å°±ä¸èƒ½è¿›è¡Œ
 	if LuaFnGetPropertyBagSpace( sceneId, selfId ) < x335134_g_BagSpace then
 		return OR_BAG_OUT_OF_SPACE
 	end
@@ -379,7 +379,7 @@ function x335134_AbilityCheck( sceneId, selfId, recipeId )
 		return OR_NO_LEVEL
 	end
 
-	-- ÅĞ¶ÏÉíÉÏµÄ²ÄÁÏÊÇ·ñ×ã¹»
+	-- åˆ¤æ–­èº«ä¸Šçš„ææ–™æ˜¯å¦è¶³å¤Ÿ
 	local i, matInfo, tblCount, bMatEnoughFlag, idx, MatSN, Count
 
 	tblCount = getn( CompoundInfo.matTbl )
@@ -411,7 +411,7 @@ function x335134_AbilityCheck( sceneId, selfId, recipeId )
 		Count = Count + LuaFnGetAvailableItemCount( sceneId, selfId, MatSN )
 		-- PrintStr("Count ="..Count)
 
-		-- ÔÚÕâÀï½øĞĞÅĞ¶Ï£¬ÒÔ¼õÉÙÑ­»·´ÎÊı£¨ÌØ±ğÊÇµ±²ÄÁÏ³äÔ£Ê±£©
+		-- åœ¨è¿™é‡Œè¿›è¡Œåˆ¤æ–­ï¼Œä»¥å‡å°‘å¾ªç¯æ¬¡æ•°ï¼ˆç‰¹åˆ«æ˜¯å½“ææ–™å……è£•æ—¶ï¼‰
 		if Count >= matInfo.count then
 			bMatEnoughFlag = 1			
 		end
@@ -431,7 +431,7 @@ function x335134_AbilityCheck( sceneId, selfId, recipeId )
 end
 
 ----------------------------------------------------------------------------------------
---	²ú³ö²úÆ·
+--	äº§å‡ºäº§å“
 ----------------------------------------------------------------------------------------
 function x335134_AbilityProduce( sceneId, selfId, recipeId )
 	-- PrintStr("AbilityProduce...")
@@ -440,7 +440,7 @@ function x335134_AbilityProduce( sceneId, selfId, recipeId )
 		return OR_ERROR
 	end
 
-	-- ÏûºÄ²ÄÁÏ
+	-- æ¶ˆè€—ææ–™
 	local i, matInfo, tblCount, bMatEnoughFlag, idx, MatSN, Count, DelCount
 
 	tblCount = getn( CompoundInfo.matTbl )
@@ -464,7 +464,7 @@ function x335134_AbilityProduce( sceneId, selfId, recipeId )
 		-- PrintStr("MatSN ="..MatSN)
 		Count = Count + LuaFnGetAvailableItemCount( sceneId, selfId, MatSN )
 
-		-- ÔÚÕâÀï½øĞĞÅĞ¶Ï£¬ÒÔ¼õÉÙÑ­»·´ÎÊı£¨ÌØ±ğÊÇµ±²ÄÁÏ³äÔ£Ê±£©
+		-- åœ¨è¿™é‡Œè¿›è¡Œåˆ¤æ–­ï¼Œä»¥å‡å°‘å¾ªç¯æ¬¡æ•°ï¼ˆç‰¹åˆ«æ˜¯å½“ææ–™å……è£•æ—¶ï¼‰
 		if Count >= matInfo.count then
 			bMatEnoughFlag = 1			
 		end
@@ -487,7 +487,7 @@ function x335134_AbilityProduce( sceneId, selfId, recipeId )
 				Count = Count - DelCount
 				-- PrintStr("Count ="..Count)
 
-				-- ÔÚÕâÀï½øĞĞÅĞ¶Ï£¬ÒÔ¼õÉÙÑ­»·´ÎÊı£¨ÌØ±ğÊÇµ±²ÄÁÏ³äÔ£Ê±£©
+				-- åœ¨è¿™é‡Œè¿›è¡Œåˆ¤æ–­ï¼Œä»¥å‡å°‘å¾ªç¯æ¬¡æ•°ï¼ˆç‰¹åˆ«æ˜¯å½“ææ–™å……è£•æ—¶ï¼‰
 				if Count < 1 then
 					bMatEnoughFlag = 2					
 				end
@@ -507,7 +507,7 @@ function x335134_AbilityProduce( sceneId, selfId, recipeId )
 		return OR_STUFF_LACK
 	end
 
-	local bagidx = LuaFnTryRecieveItem( sceneId, selfId, matInfo.Product, QUALITY_MUST_BE_CHANGE )	-- ·Å²»ÏÂ¾ÍÃ»ÓĞÁË							
+	local bagidx = LuaFnTryRecieveItem( sceneId, selfId, matInfo.Product, QUALITY_MUST_BE_CHANGE )	-- æ”¾ä¸ä¸‹å°±æ²¡æœ‰äº†							
 
 	if bagidx < 0 then
 		LuaFnAuditAbility(sceneId, selfId, CompoundInfo.abilityId, recipeId, 0)
@@ -519,25 +519,25 @@ function x335134_AbilityProduce( sceneId, selfId, recipeId )
 
 	LuaFnSendSpecificImpactToUnit( sceneId, selfId, selfId, selfId, x335134_g_ImpactID, 0 )
 
-	-- ¼ÇÂ¼Í³¼ÆĞÅÏ¢				-- ñÒÉÙÎ¢£¬102ÉñÆ÷¡£ ÕâĞĞ´úÂëÊÇ¼ÇÂ¼ÉñÆ÷ÈÕÖ¾¡£
+	-- è®°å½•ç»Ÿè®¡ä¿¡æ¯				-- è¤šå°‘å¾®ï¼Œ102ç¥å™¨ã€‚ è¿™è¡Œä»£ç æ˜¯è®°å½•ç¥å™¨æ—¥å¿—ã€‚
 	LuaFnAuditShenQi(sceneId, selfId, matInfo.Product)
 	local itemInfo = GetBagItemTransfer( sceneId, selfId, bagidx )
 
 	local playername = GetName(sceneId, selfId)
 	
-	-- ·¢ËÍÏµÍ³¹«¸æ				-- ñÒÉÙÎ¢£¬102ÉñÆ÷¡£Èç¹ûÊÇ102¼¶ÉñÆ÷£¬¹«¸æ·¢Éú
+	-- å‘é€ç³»ç»Ÿå…¬å‘Š				-- è¤šå°‘å¾®ï¼Œ102ç¥å™¨ã€‚å¦‚æœæ˜¯102çº§ç¥å™¨ï¼Œå…¬å‘Šå‘ç”Ÿ
 
 	local shenJie = matInfo.matList
 	local strText
 	if shenJie == 30505906 then
 		strText = format("#{DQSJ_20080512_09}#{_INFOMSG%s}#{DQSJ_20080512_10}#{_INFOUSR%s}#{DQSJ_20080512_11}", itemInfo, playername )	
 	else
-		strText = format("#{XYSB_92812}#{_INFOUSR%s}#P#{XYSB_92813}#{_INFOMSG%s}¡£", playername, itemInfo)	
+		strText = format("#{XYSB_92812}#{_INFOUSR%s}#P#{XYSB_92813}#{_INFOMSG%s}ã€‚", playername, itemInfo)	
 	end	
 
 	BroadMsgByChatPipe(sceneId,selfId, strText, 4)				 											
 
-	-- ·¢ËÍÏµÍ³¹«¸æ				-- ñÒÉÙÎ¢£¬102ÉñÆ÷¡£Èç¹ûÊÇ102¼¶ÉñÆ÷£¬¹«¸æ·¢Éú end
+	-- å‘é€ç³»ç»Ÿå…¬å‘Š				-- è¤šå°‘å¾®ï¼Œ102ç¥å™¨ã€‚å¦‚æœæ˜¯102çº§ç¥å™¨ï¼Œå…¬å‘Šå‘ç”Ÿ end
 
 	LuaFnSendAbilitySuccessMsg( sceneId, selfId, CompoundInfo.abilityId, recipeId, matInfo.Product )
 	LuaFnAuditAbility(sceneId, selfId, CompoundInfo.abilityId, recipeId, 1)

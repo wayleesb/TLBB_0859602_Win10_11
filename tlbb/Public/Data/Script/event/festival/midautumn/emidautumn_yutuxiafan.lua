@@ -1,56 +1,56 @@
--- ¶Ò»»ÓñÍÃÁåîõ
+-- å…‘æ¢ç‰å…”é“ƒé“›
 
--- ½Å±¾ºÅ
+-- è„šæœ¬å·
 x050017_g_ScriptId = 050017
 
-x050017_g_eventId_cancel = 0;		-- È¡Ïû
-x050017_g_eventId_redeem = 1;		-- ¶Ò»»
-x050017_g_eventId_redeem_5 = 2;		-- ¶Ò»»5¼¶
-x050017_g_eventId_redeem_45 = 3;	-- ¶Ò»»45¼¶
-x050017_g_eventId_redeem_55 = 4;	-- ¶Ò»»55¼¶
-x050017_g_eventId_redeem_65 = 5;	-- ¶Ò»»65¼¶
-x050017_g_eventId_about = 10;		-- ¹ØÓÚ
+x050017_g_eventId_cancel = 0;		-- å–æ¶ˆ
+x050017_g_eventId_redeem = 1;		-- å…‘æ¢
+x050017_g_eventId_redeem_5 = 2;		-- å…‘æ¢5çº§
+x050017_g_eventId_redeem_45 = 3;	-- å…‘æ¢45çº§
+x050017_g_eventId_redeem_55 = 4;	-- å…‘æ¢55çº§
+x050017_g_eventId_redeem_65 = 5;	-- å…‘æ¢65çº§
+x050017_g_eventId_about = 10;		-- å…³äº
 
---¶Ò»»ÁĞ±í
+--å…‘æ¢åˆ—è¡¨
 x050017_g_redeemList = {};
- x050017_g_redeemList[x050017_g_eventId_redeem_5] = {count=10, level=5, item=30505126, petName="ÓñÍÃ"}
-x050017_g_redeemList[x050017_g_eventId_redeem_45] = {count=45, level=45, item=30505127, petName="ğ©ÔÂÓñÍÃ"}
-x050017_g_redeemList[x050017_g_eventId_redeem_55] = {count=55, level=55, item=30505128, petName="ó¸¹¬ÓñÍÃ"}
-x050017_g_redeemList[x050017_g_eventId_redeem_65] = {count=65, level=65, item=30505129, petName="æÏ¶ğÓñÍÃ"}
+ x050017_g_redeemList[x050017_g_eventId_redeem_5] = {count=10, level=5, item=30505126, petName="ç‰å…”"}
+x050017_g_redeemList[x050017_g_eventId_redeem_45] = {count=45, level=45, item=30505127, petName="çš“æœˆç‰å…”"}
+x050017_g_redeemList[x050017_g_eventId_redeem_55] = {count=55, level=55, item=30505128, petName="èŸ¾å®«ç‰å…”"}
+x050017_g_redeemList[x050017_g_eventId_redeem_65] = {count=65, level=65, item=30505129, petName="å«¦å¨¥ç‰å…”"}
 
---ĞèÇóµÀ¾ß
+--éœ€æ±‚é“å…·
 x050017_g_redeemItemId = 30505125;
 
---»î¶¯Ê±¼ä
-x050017_g_StartDayTime = 8257   --»î¶¯¿ªÊ¼Ê±¼ä 2008-9-14,°üº¬µ±ÈÕ
-x050017_g_EndDayTime = 8304   --»î¶¯½áÊøÊ±¼ä 2008-10-31,°üº¬µ±ÈÕ
+--æ´»åŠ¨æ—¶é—´
+x050017_g_StartDayTime = 8257   --æ´»åŠ¨å¼€å§‹æ—¶é—´ 2008-9-14,åŒ…å«å½“æ—¥
+x050017_g_EndDayTime = 8304   --æ´»åŠ¨ç»“æŸæ—¶é—´ 2008-10-31,åŒ…å«å½“æ—¥
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x050017_OnEnumerate( sceneId, selfId, targetId )
 	local check = x050017_IsMidAutumnPeriod(sceneId, selfId);
 	if not check or check ~= 1 then
 		return
 	end
-	AddNumText(sceneId, x050017_g_ScriptId, "ÎÒÒª¶Ò»»ÓñÍÃ", 6, x050017_g_eventId_redeem);
-	--AddNumText(sceneId, x050017_g_ScriptId, "¹ØÓÚ¶Ò»»ÓñÍÃÁåîõ", 11, x050017_g_eventId_about);
+	AddNumText(sceneId, x050017_g_ScriptId, "æˆ‘è¦å…‘æ¢ç‰å…”", 6, x050017_g_eventId_redeem);
+	--AddNumText(sceneId, x050017_g_ScriptId, "å…³äºå…‘æ¢ç‰å…”é“ƒé“›", 11, x050017_g_eventId_about);
 end
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
-function x050017_OnDefaultEvent( sceneId, selfId, targetId )	--µã»÷¸ÃÈÎÎñºóÖ´ĞĞ´Ë½Å±¾
+function x050017_OnDefaultEvent( sceneId, selfId, targetId )	--ç‚¹å‡»è¯¥ä»»åŠ¡åæ‰§è¡Œæ­¤è„šæœ¬
 	local selEventId = GetNumText();
 	if selEventId then
 		if selEventId == x050017_g_eventId_redeem then
 			BeginEvent(sceneId);
 				AddText( sceneId, "#{YUTUXIAFAN_DB1}");
-				AddNumText(sceneId, x050017_g_ScriptId, "¶Ò»»Ğ¯´øµÈ¼¶5¼¶µÄÓñÍÃ", 6, x050017_g_eventId_redeem_5);
-				AddNumText(sceneId, x050017_g_ScriptId, "¶Ò»»Ğ¯´øµÈ¼¶45¼¶µÄğ©ÔÂÓñÍÃ", 6, x050017_g_eventId_redeem_45);
-				AddNumText(sceneId, x050017_g_ScriptId, "¶Ò»»Ğ¯´øµÈ¼¶55¼¶µÄó¸¹¬ÓñÍÃ", 6, x050017_g_eventId_redeem_55);
-				AddNumText(sceneId, x050017_g_ScriptId, "¶Ò»»Ğ¯´øµÈ¼¶65¼¶µÄæÏ¶ğÓñÍÃ", 6, x050017_g_eventId_redeem_65);
-				AddNumText(sceneId, x050017_g_ScriptId, "ÔİÊ±²»¶Ò»»ÓñÍÃ", 6, x050017_g_eventId_cancel);
+				AddNumText(sceneId, x050017_g_ScriptId, "å…‘æ¢æºå¸¦ç­‰çº§5çº§çš„ç‰å…”", 6, x050017_g_eventId_redeem_5);
+				AddNumText(sceneId, x050017_g_ScriptId, "å…‘æ¢æºå¸¦ç­‰çº§45çº§çš„çš“æœˆç‰å…”", 6, x050017_g_eventId_redeem_45);
+				AddNumText(sceneId, x050017_g_ScriptId, "å…‘æ¢æºå¸¦ç­‰çº§55çº§çš„èŸ¾å®«ç‰å…”", 6, x050017_g_eventId_redeem_55);
+				AddNumText(sceneId, x050017_g_ScriptId, "å…‘æ¢æºå¸¦ç­‰çº§65çº§çš„å«¦å¨¥ç‰å…”", 6, x050017_g_eventId_redeem_65);
+				AddNumText(sceneId, x050017_g_ScriptId, "æš‚æ—¶ä¸å…‘æ¢ç‰å…”", 6, x050017_g_eventId_cancel);
 			EndEvent(sceneId);
 			DispatchEventList(sceneId, selfId, targetId);
 			return 1;
@@ -60,14 +60,14 @@ function x050017_OnDefaultEvent( sceneId, selfId, targetId )	--µã»÷¸ÃÈÎÎñºóÖ´ĞĞ´
 			or selEventId == x050017_g_eventId_redeem_65 then
 			local redeemItem = x050017_g_redeemList[selEventId];
 			if not redeemItem then
-				x050017_NotifyBox(sceneId, selfId, targetId, "Î´¿ª·ÅµÀ¾ß£¬²»ÄÜ¶Ò»»£¡");
+				x050017_NotifyBox(sceneId, selfId, targetId, "æœªå¼€æ”¾é“å…·ï¼Œä¸èƒ½å…‘æ¢ï¼");
 				return 0;
 			end
 			
 			local redeemItemName = GetItemName(sceneId, x050017_g_redeemItemId);
 			local itemCount = LuaFnGetAvailableItemCount(sceneId, selfId, x050017_g_redeemItemId);
 			if not itemCount or itemCount < redeemItem.count then
-				x050017_NotifyBox(sceneId, selfId, targetId, "¶Ò»»"..GetItemName(sceneId, redeemItem.item).."ĞèÒª"..redeemItem.count.."¸ö"..redeemItemName.."£¬ÄúÉíÉÏµÄ"..redeemItemName.."²»¹»£¬²»ÄÜ¶Ò»»£¡");
+				x050017_NotifyBox(sceneId, selfId, targetId, "å…‘æ¢"..GetItemName(sceneId, redeemItem.item).."éœ€è¦"..redeemItem.count.."ä¸ª"..redeemItemName.."ï¼Œæ‚¨èº«ä¸Šçš„"..redeemItemName.."ä¸å¤Ÿï¼Œä¸èƒ½å…‘æ¢ï¼");
 				return 0;
 			end
 			
@@ -76,13 +76,13 @@ function x050017_OnDefaultEvent( sceneId, selfId, targetId )	--µã»÷¸ÃÈÎÎñºóÖ´ĞĞ´
 				addItemIndex = AddItem(sceneId, redeemItem.item, 1);
 			local ret = EndAddItem(sceneId, selfId);
 			if not ret or ret ~= 1 then
-				x050017_NotifyBox(sceneId, selfId, targetId, "¶Ô²»Æğ£¬ÄúµÄÎïÆ·À¸ÒÑ¾­Ã»ÓĞ¿Õ¼ä»òÕßÄãÕı´¦ÓÚÆ£ÀÍ×´Ì¬£¡");
+				x050017_NotifyBox(sceneId, selfId, targetId, "å¯¹ä¸èµ·ï¼Œæ‚¨çš„ç‰©å“æ å·²ç»æ²¡æœ‰ç©ºé—´æˆ–è€…ä½ æ­£å¤„äºç–²åŠ³çŠ¶æ€ï¼");
 				return 0;
 			end
 			
 			local delRet = LuaFnDelAvailableItem(sceneId, selfId, x050017_g_redeemItemId, redeemItem.count);
 			if not delRet or delRet ~= 1 then
-				x050017_NotifyBox(sceneId, selfId, targetId, "ÎŞ·¨¿Û³ı"..GetItemName(sceneId, redeemItem.item).."£¡");
+				x050017_NotifyBox(sceneId, selfId, targetId, "æ— æ³•æ‰£é™¤"..GetItemName(sceneId, redeemItem.item).."ï¼");
 				return 0;
 			end
 			
@@ -96,13 +96,13 @@ function x050017_OnDefaultEvent( sceneId, selfId, targetId )	--µã»÷¸ÃÈÎÎñºóÖ´ĞĞ´
 			
 			if itemTransfer then
 				if selEventId == x050017_g_eventId_redeem_45 then
-					msg = "#YÔÀ³£Ô²£º#P¸÷Î»¹ÛÖÚ£¬#W#{_INFOUSR"..GetName(sceneId, selfId).."}#l¼´½«ÓÃËû¶Ò»»µÄ#{_INFOMSG"..itemTransfer.."}#PÇë³öÎÒÃÇ¿É°®µÄ#Gğ©ÔÂÓñÍÃ#P£¬´ó¼Ò¾´ÇëÆÚ´ı°É£¡";
+					msg = "#Yå²³å¸¸åœ†ï¼š#På„ä½è§‚ä¼—ï¼Œ#W#{_INFOUSR"..GetName(sceneId, selfId).."}#lå³å°†ç”¨ä»–å…‘æ¢çš„#{_INFOMSG"..itemTransfer.."}#Pè¯·å‡ºæˆ‘ä»¬å¯çˆ±çš„#Gçš“æœˆç‰å…”#Pï¼Œå¤§å®¶æ•¬è¯·æœŸå¾…å§ï¼";
 				elseif selEventId == x050017_g_eventId_redeem_55 then
-					msg = "#YÔÀ³£Ô²£º#PÄï×Ó£¬¿ì³öÀ´¿´#W#{_INFOUSR"..GetName(sceneId, selfId).."}#lÓÖÓÃ#{_INFOMSG"..itemTransfer.."}ÕÙ»½#Gó¸¹¬ÓñÍÃ#PÁË£¡";
+					msg = "#Yå²³å¸¸åœ†ï¼š#På¨˜å­ï¼Œå¿«å‡ºæ¥çœ‹#W#{_INFOUSR"..GetName(sceneId, selfId).."}#låˆç”¨#{_INFOMSG"..itemTransfer.."}å¬å”¤#GèŸ¾å®«ç‰å…”#Päº†ï¼";
 				elseif selEventId == x050017_g_eventId_redeem_65 then
-					msg = "#YÔÀ³£Ô²£º#PÎÒµÄÀÏÌìÒ¯°¡£¡ÄÑµÀÊÇ´«ËµÖĞµÄÓñÍÃ×Ü¶¯Ô±²»³É£¬#W#{_INFOUSR"..GetName(sceneId, selfId).."}#lÒ²¶Ò»»#{_INFOMSG"..itemTransfer.."}ÕÙ»½#GæÏ¶ğÓñÍÃ#PßÖ£¡";
+					msg = "#Yå²³å¸¸åœ†ï¼š#Pæˆ‘çš„è€å¤©çˆ·å•Šï¼éš¾é“æ˜¯ä¼ è¯´ä¸­çš„ç‰å…”æ€»åŠ¨å‘˜ä¸æˆï¼Œ#W#{_INFOUSR"..GetName(sceneId, selfId).."}#lä¹Ÿå…‘æ¢#{_INFOMSG"..itemTransfer.."}å¬å”¤#Gå«¦å¨¥ç‰å…”#På’§ï¼";
 				else
-					msg = "#YÔÀ³£Ô²£º#P´òÀ×À²£¡ÏÂÓêÀ²£¡ÓñÍÃÓÖÏÂ·²À²£¡#W#{_INFOUSR"..GetName(sceneId, selfId).."}#lµÃµ½ÁË´«ËµÖĞµÄ#{_INFOMSG"..itemTransfer.."}£¬ÖÕÓÚ¿ÉÒÔÕÙ»½#GÓñÍÃ#PÀ²£¡";
+					msg = "#Yå²³å¸¸åœ†ï¼š#Pæ‰“é›·å•¦ï¼ä¸‹é›¨å•¦ï¼ç‰å…”åˆä¸‹å‡¡å•¦ï¼#W#{_INFOUSR"..GetName(sceneId, selfId).."}#lå¾—åˆ°äº†ä¼ è¯´ä¸­çš„#{_INFOMSG"..itemTransfer.."}ï¼Œç»ˆäºå¯ä»¥å¬å”¤#Gç‰å…”#På•¦ï¼";
 				end
 				
 				if msg then
@@ -131,7 +131,7 @@ function x050017_OnDefaultEvent( sceneId, selfId, targetId )	--µã»÷¸ÃÈÎÎñºóÖ´ĞĞ´
 end
 
 --**********************************
---¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+--å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x050017_NotifyBox( sceneId, selfId, targetId, msg )
 	BeginEvent( sceneId )
@@ -141,7 +141,7 @@ function x050017_NotifyBox( sceneId, selfId, targetId, msg )
 end
 
 --**********************************
---ĞÑÄ¿ĞÅÏ¢ÌáÊ¾
+--é†’ç›®ä¿¡æ¯æç¤º
 --**********************************
 function x050017_NotifyTips( sceneId, selfId, Tip )
 	BeginEvent( sceneId )
@@ -151,7 +151,7 @@ function x050017_NotifyTips( sceneId, selfId, Tip )
 end
 
 --**********************************
---»î¶¯ÊÇ·ñ¿ªÆô
+--æ´»åŠ¨æ˜¯å¦å¼€å¯
 --**********************************
 function x050017_IsMidAutumnPeriod(sceneId, selfId)
 	local curDay = GetDayTime();

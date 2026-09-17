@@ -1,36 +1,36 @@
---2007Ê¥µ®Ôªµ©»î¶¯....
---ĞÂÊÖ³é½±_Ï²´ÓÌì½µ»î¶¯....
+--2007åœ£è¯å…ƒæ—¦æ´»åŠ¨....
+--æ–°æ‰‹æŠ½å¥–_å–œä»å¤©é™æ´»åŠ¨....
 
---´ğÌâ½Å±¾....
+--ç­”é¢˜è„šæœ¬....
 
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x050021_g_ScriptId = 050021
 
---Ï²´ÓÌì½µÈÎÎñ½Å±¾ºÅ
+--å–œä»å¤©é™ä»»åŠ¡è„šæœ¬å·
 x050021_g_EventScriptId = 050022
 
---ÌâÄ¿ÊıÁ¿....
+--é¢˜ç›®æ•°é‡....
 x050021_g_NumQuestion	= 5
 
---ÌâÄ¿ÔÚÌâ¿âÖĞµÄ·ÖÀà....
+--é¢˜ç›®åœ¨é¢˜åº“ä¸­çš„åˆ†ç±»....
 x050021_g_QuestionType = 8
 
 --UICOMMAND
 x050021_g_UICommand = 20071224
 
-x050021_g_UIStart			= 1	--¿ªÊ¼´ğÌâ½çÃæ....
-x050021_g_UIQuestion	= 2	--ÏÔÊ¾ÌâÄ¿½çÃæ....
-x050021_g_UIWrong			= 3	--´ğ´í½çÃæ....
-x050021_g_UIEnd				= 4	--´ğÍêËùÓĞÌâÄ¿½çÃæ....
+x050021_g_UIStart			= 1	--å¼€å§‹ç­”é¢˜ç•Œé¢....
+x050021_g_UIQuestion	= 2	--æ˜¾ç¤ºé¢˜ç›®ç•Œé¢....
+x050021_g_UIWrong			= 3	--ç­”é”™ç•Œé¢....
+x050021_g_UIEnd				= 4	--ç­”å®Œæ‰€æœ‰é¢˜ç›®ç•Œé¢....
 
 
 --**********************************
---¸ø¿Í»§¶ËÏÔÊ¾´ğÌâ½çÃæ
+--ç»™å®¢æˆ·ç«¯æ˜¾ç¤ºç­”é¢˜ç•Œé¢
 --**********************************
 function x050021_ShowQuizUI( sceneId, selfId, targetId )
 
-	--°²È«¼ì²â....
+	--å®‰å…¨æ£€æµ‹....
 	local ret = CallScriptFunction( x050021_g_EventScriptId, "CheckCanDoQuiz", sceneId, selfId )
 	if 1 ~= ret then
 		return
@@ -38,7 +38,7 @@ function x050021_ShowQuizUI( sceneId, selfId, targetId )
 
 	BeginUICommand(sceneId)
 		UICommand_AddInt(sceneId,x050021_g_UIStart)
-		UICommand_AddString(sceneId,"#gFF0FA0Ï²´ÓÌì½µ")
+		UICommand_AddString(sceneId,"#gFF0FA0å–œä»å¤©é™")
 		UICommand_AddString(sceneId,"#{XSCJ_20071205_07}")
 		UICommand_AddInt(sceneId,targetId)
 	EndUICommand(sceneId)
@@ -47,17 +47,17 @@ function x050021_ShowQuizUI( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÌáÎÊ
+--æé—®
 --**********************************
 function x050021_AskQuestion( sceneId, selfId, Question_Sequence)
 
-	--°²È«¼ì²â....
+	--å®‰å…¨æ£€æµ‹....
 	local ret = CallScriptFunction( x050021_g_EventScriptId, "CheckCanDoQuiz", sceneId, selfId )
 	if 1 ~= ret then
 		return
 	end
 
-	--´òÍêÁËËùÓĞÌâ¾ÍÏÔÊ¾´ğÍêµÄ½çÃæ....
+	--æ‰“å®Œäº†æ‰€æœ‰é¢˜å°±æ˜¾ç¤ºç­”å®Œçš„ç•Œé¢....
 	if Question_Sequence > x050021_g_NumQuestion then
 		CallScriptFunction( x050021_g_EventScriptId, "OnPlayerFinishQuiz", sceneId, selfId )
 		BeginUICommand(sceneId)
@@ -68,16 +68,16 @@ function x050021_AskQuestion( sceneId, selfId, Question_Sequence)
 		return
 	end
 
-	--Ëæ»ú³öÒ»¸öÌâºÅ....
+	--éšæœºå‡ºä¸€ä¸ªé¢˜å·....
 	local wenti = GetRandomQuestionsIndex( x050021_g_QuestionType )
 
 	local con,opt0,opt1,opt2,opt3,opt4,opt5,key0,key1,key2,key3,key4,key5,sztype=GetQuestionsRecord(wenti)
 	if con=="" then
-		Msg2Player( sceneId,selfId,"Î´ÕÒµ½ÎÊÌâ",MSG2PLAYER_PARA)
+		Msg2Player( sceneId,selfId,"æœªæ‰¾åˆ°é—®é¢˜",MSG2PLAYER_PARA)
 	end
 
 	local key_position = {}
-	--°ÑËûÃÇÎ»ÖÃËæ»úµô
+	--æŠŠä»–ä»¬ä½ç½®éšæœºæ‰
 	local rand = random(3)
 	if rand == 1 then
 		key_position[0] = 1
@@ -124,11 +124,11 @@ function x050021_AskQuestion( sceneId, selfId, Question_Sequence)
 end
 
 --**********************************
---»Ø´ğ
+--å›ç­”
 --**********************************
 function x050021_AnswerQuestion( sceneId, selfId, Question, Answer1, Question_Sequence)
 
-	--°²È«¼ì²â....
+	--å®‰å…¨æ£€æµ‹....
 	local ret = CallScriptFunction( x050021_g_EventScriptId, "CheckCanDoQuiz", sceneId, selfId )
 	if 1 ~= ret then
 		return
@@ -145,18 +145,18 @@ function x050021_AnswerQuestion( sceneId, selfId, Question, Answer1, Question_Se
 	Answer_List[5] = key5;
 
 	if con=="" then
-		Msg2Player( sceneId,selfId,"Î´ÕÒµ½ÎÊÌâ",MSG2PLAYER_PARA)
+		Msg2Player( sceneId,selfId,"æœªæ‰¾åˆ°é—®é¢˜",MSG2PLAYER_PARA)
 	end
 
 	local asktime = GetMissionData(sceneId,selfId,MD_QUIZ_ASKTIME)
 	if Answer_List[Answer1-1] == 1 and LuaFnGetCurrentTime() - asktime < 305 then
 
-		--¸æËßËû´ğ¶ÔÁË....
+		--å‘Šè¯‰ä»–ç­”å¯¹äº†....
 		x050021_AskQuestion( sceneId, selfId, Question_Sequence + 1)
 
 	else
 
-		--¸æËßËû´ğ´íÁË....
+		--å‘Šè¯‰ä»–ç­”é”™äº†....
 		BeginEvent( sceneId )
 			AddText( sceneId, "#{XSCJ_20071205_11}" )
 		EndEvent( sceneId )
@@ -173,11 +173,11 @@ function x050021_AnswerQuestion( sceneId, selfId, Question, Answer1, Question_Se
 end
 
 --**********************************
---´ğÌâ³¬Ê±
+--ç­”é¢˜è¶…æ—¶
 --**********************************
 function x050021_OnOverTime( sceneId, selfId )
 
-	--°²È«¼ì²â....
+	--å®‰å…¨æ£€æµ‹....
 	local ret = CallScriptFunction( x050021_g_EventScriptId, "CheckCanDoQuiz", sceneId, selfId )
 	if 1 ~= ret then
 		return

@@ -1,23 +1,23 @@
 --MisDescBegin
 x232002_g_ScriptId	= 232002
-x232002_g_CopySceneName	= "Ë®ÀÎ"
+x232002_g_CopySceneName	= "æ°´ç‰¢"
 x232002_g_MissionId			= 1213
 x232002_g_MissionIdPre	= 1212
-x232002_g_Name					= "ºôÑÓÇì"
+x232002_g_Name					= "å‘¼å»¶åº†"
 x232002_g_IfMissionElite= 1
 x232002_g_MissionLevel	= 10000
 x232002_g_MissionKind		= 1
-x232002_g_MissionName			= "Ë®ÀÎ"
+x232002_g_MissionName			= "æ°´ç‰¢"
 x232002_g_MissionInfo			= "#{event_xunhuan_0006}"
-x232002_g_MissionTarget		= "  Ì«ºşË®Õ¯µÄºôÑÓÇì#{_INFOAIM67,77,4,ºôÑÓÇì}ÈÃÄãÉ±ËÀ10¸ö·¸ÈËÍ·Ä¿ºÍ50¸öĞ¡¹ÖÎï¡£"
-x232002_g_ContinueInfo		= "  ÄãÊÇ·ñÒÑ¾­É±ËÀ10¸öĞ×º·µÄ·¸ÈËÍ·Ä¿£¬ÒÔ¼°Öî¶àĞ¡¹ÖÎï£¿"
-x232002_g_MissionComplete	= "  Ë®ÀÎÖÕÓÚÊØ×¡ÁË£¬ÎÒÃÇÒÔºóÇ§Íò²»ÄÜµôÒÔÇáĞÄ¡£"
+x232002_g_MissionTarget		= "  å¤ªæ¹–æ°´å¯¨çš„å‘¼å»¶åº†#{_INFOAIM67,77,4,å‘¼å»¶åº†}è®©ä½ æ€æ­»10ä¸ªçŠ¯äººå¤´ç›®å’Œ50ä¸ªå°æ€ªç‰©ã€‚"
+x232002_g_ContinueInfo		= "  ä½ æ˜¯å¦å·²ç»æ€æ­»10ä¸ªå‡¶æ‚çš„çŠ¯äººå¤´ç›®ï¼Œä»¥åŠè¯¸å¤šå°æ€ªç‰©ï¼Ÿ"
+x232002_g_MissionComplete	= "  æ°´ç‰¢ç»ˆäºå®ˆä½äº†ï¼Œæˆ‘ä»¬ä»¥ååƒä¸‡ä¸èƒ½æ‰ä»¥è½»å¿ƒã€‚"
 x232002_g_MoneyBonus			= 1000
-x232002_g_IsMissionOkFail	= 0	--0ºÅ£ºµ±Ç°ÈÎÎñÊÇ·ñÍê³É(0Î´Íê³É£»1Íê³É)
+x232002_g_IsMissionOkFail	= 0	--0å·ï¼šå½“å‰ä»»åŠ¡æ˜¯å¦å®Œæˆ(0æœªå®Œæˆï¼›1å®Œæˆ)
 x232002_g_MissionRound		= 5	--Define MD_BAIMASI_HUAN from ScriptGlobal.lua
 x232002_g_DemandKill			= { {id=367,num=60} }
-x232002_g_Param_killcount	= 1	--1ºÅ£ºÉ±ËÀÈÎÎñ¹ÖµÄÊıÁ¿
-x232002_g_Param_sceneid		= 2	--2ºÅ£ºµ±Ç°¸±±¾ÈÎÎñµÄ³¡¾°ºÅ
-x232002_g_Param_teamid		= 3	--3ºÅ£º½Ó¸±±¾ÈÎÎñÊ±ºòµÄ¶ÓÎéºÅ
-x232002_g_Param_time			= 4	--4ºÅ£ºÍê³É¸±±¾ËùÓÃÊ±¼ä(µ¥Î»£ºÃë)
+x232002_g_Param_killcount	= 1	--1å·ï¼šæ€æ­»ä»»åŠ¡æ€ªçš„æ•°é‡
+x232002_g_Param_sceneid		= 2	--2å·ï¼šå½“å‰å‰¯æœ¬ä»»åŠ¡çš„åœºæ™¯å·
+x232002_g_Param_teamid		= 3	--3å·ï¼šæ¥å‰¯æœ¬ä»»åŠ¡æ—¶å€™çš„é˜Ÿä¼å·
+x232002_g_Param_time			= 4	--4å·ï¼šå®Œæˆå‰¯æœ¬æ‰€ç”¨æ—¶é—´(å•ä½ï¼šç§’)
 --MisDescEnd

@@ -1,18 +1,18 @@
---×°±¸°ó¶¨
---½Å±¾ºÅ
+--è£…å¤‡ç»‘å®š
+--è„šæœ¬å·
 x809266_g_ScriptId = 809266
 
---×°±¸°ó¶¨UI 1005
+--è£…å¤‡ç»‘å®šUI 1005
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x809266_OnEnumerate( sceneId, selfId, targetId )
 	
 end
 
 --**********************************
---×°±¸°ó¶¨
+--è£…å¤‡ç»‘å®š
 --**********************************
 function x809266_FinishBind( sceneId, selfId, itemIndex1, itemIndex2 )
 	local text = ""
@@ -20,17 +20,17 @@ function x809266_FinishBind( sceneId, selfId, itemIndex1, itemIndex2 )
 	
 	if ret ~= 0 then
 		BeginEvent(sceneId)
-		AddText(sceneId,"¸Ã×°±¸²»¿ÉÓÃ¡£");
+		AddText(sceneId,"è¯¥è£…å¤‡ä¸å¯ç”¨ã€‚");
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
 	end
 
-	-- ñÒÉÙÎ¢£¬2008.6.11¡£ÖØÂ¥½ä10422016£¬ÖØÂ¥Óñ10423024ÎŞ·¨Ãú¿Ì¡£
+	-- è¤šå°‘å¾®ï¼Œ2008.6.11ã€‚é‡æ¥¼æˆ’10422016ï¼Œé‡æ¥¼ç‰10423024æ— æ³•é“­åˆ»ã€‚
 	local itemTableIndex = LuaFnGetItemTableIndexByIndex( sceneId, selfId, itemIndex1 )
 	if itemTableIndex == 10422016 or itemTableIndex == 10423024 then
 		BeginEvent(sceneId)
-		AddText(sceneId,"¸Ã×°±¸²»¿É¿ÌÃú¡£");
+		AddText(sceneId,"è¯¥è£…å¤‡ä¸å¯åˆ»é“­ã€‚");
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
@@ -39,7 +39,7 @@ function x809266_FinishBind( sceneId, selfId, itemIndex1, itemIndex2 )
 	ret = LuaFnIsItemAvailable( sceneId, selfId, itemIndex2 )
 	if ret ~= 1 then
 		BeginEvent(sceneId)
-		AddText(sceneId,"Ëø¶¨·û²»¿ÉÓÃ¡£");
+		AddText(sceneId,"é”å®šç¬¦ä¸å¯ç”¨ã€‚");
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
@@ -49,18 +49,18 @@ function x809266_FinishBind( sceneId, selfId, itemIndex1, itemIndex2 )
 	local gem_index = LuaFnGetItemTableIndexByIndex( sceneId, selfId, itemIndex2 )
 	if equip_level < 50 then
 		if gem_index ~= 30900013 then
-			--µÍ¼¶Ëø¶¨·û
+			--ä½çº§é”å®šç¬¦
 			BeginEvent(sceneId)
-			AddText(sceneId,"×°±¸¿ÌÃúĞèÒªµÍ¼¶¿ÌÃú·û¡£");
+			AddText(sceneId,"è£…å¤‡åˆ»é“­éœ€è¦ä½çº§åˆ»é“­ç¬¦ã€‚");
 			EndEvent(sceneId)
 			DispatchMissionTips(sceneId,selfId)
 			return
 		end
 	else
 		if gem_index ~= 30900014 then
-			--¸ß¼¶Ëø¶¨·û
+			--é«˜çº§é”å®šç¬¦
 			BeginEvent(sceneId)
-			AddText(sceneId,"×°±¸¿ÌÃúĞèÒª¸ß¼¶¿ÌÃú·û¡£");
+			AddText(sceneId,"è£…å¤‡åˆ»é“­éœ€è¦é«˜çº§åˆ»é“­ç¬¦ã€‚");
 			EndEvent(sceneId)
 			DispatchMissionTips(sceneId,selfId)
 			return
@@ -77,7 +77,7 @@ function x809266_FinishBind( sceneId, selfId, itemIndex1, itemIndex2 )
 	end
 	
 	if HumanMoney < need_money then
-		text="¿ÌÃú¸Ã×°±¸ĞèÒª#{_EXCHG%d}£¬ÄúÉíÉÏµÄÏÖ½ğ²»×ã¡£"
+		text="åˆ»é“­è¯¥è£…å¤‡éœ€è¦#{_EXCHG%d}ï¼Œæ‚¨èº«ä¸Šçš„ç°é‡‘ä¸è¶³ã€‚"
 		text=format( text, need_money )
 		BeginEvent(sceneId)
 		AddText(sceneId,text);
@@ -86,11 +86,11 @@ function x809266_FinishBind( sceneId, selfId, itemIndex1, itemIndex2 )
 		return
 	end
 	
-	--¼ì²éÊÇ·ñÄÜ¹»Ëø¶¨
+	--æ£€æŸ¥æ˜¯å¦èƒ½å¤Ÿé”å®š
 	ret = LuaFnLockCheck( sceneId, selfId, itemIndex1, need_money )
 
-	if ret == 0 then --³É¹¦ÁË
-		text="×°±¸¿ÌÃú³É¹¦¡£"
+	if ret == 0 then --æˆåŠŸäº†
+		text="è£…å¤‡åˆ»é“­æˆåŠŸã€‚"
 		LuaFnEquipLock( sceneId, selfId, itemIndex1 )
 		LuaFnEraseItem( sceneId, selfId, itemIndex2 )
 		LuaFnCostMoneyWithPriority( sceneId, selfId, need_money )
@@ -101,7 +101,7 @@ function x809266_FinishBind( sceneId, selfId, itemIndex1, itemIndex2 )
 			szMsg		= format( "#W#{_INFOUSR%s}#{AQ_9}#W#{_INFOMSG%s}#{AQ_10}",
 									LuaFnGetName( sceneId, selfId ), szTranItm )
 									
-			--¹«¸æ¾«¼ò£¬ĞèÇóµÈ¼¶30ÒÔÏÂµÄ×°±¸£¬²»·¢Ãú¿Ì¹«¸æ						
+			--å…¬å‘Šç²¾ç®€ï¼Œéœ€æ±‚ç­‰çº§30ä»¥ä¸‹çš„è£…å¤‡ï¼Œä¸å‘é“­åˆ»å…¬å‘Š						
 			if (equip_level >= 30) then
 				AddGlobalCountNews( sceneId, szMsg )
 			end
@@ -110,15 +110,15 @@ function x809266_FinishBind( sceneId, selfId, itemIndex1, itemIndex2 )
 	end
 
 	if ret == -1 then
-		text="Î´Öª´íÎó¡£"
+		text="æœªçŸ¥é”™è¯¯ã€‚"
 	end
 	
 	if ret == -2 then
-		text="×°±¸²»¿ÉÓÃ¡£"
+		text="è£…å¤‡ä¸å¯ç”¨ã€‚"
 	end
 	
 	if ret == -3 then
-		text="×°±¸ÒÑ¾­¿ÌÃú¹ı¡£"
+		text="è£…å¤‡å·²ç»åˆ»é“­è¿‡ã€‚"
 	end
 
 	BeginEvent(sceneId)
@@ -130,7 +130,7 @@ end
 
 
 --**********************************
---×°±¸½â³ı°ó¶¨
+--è£…å¤‡è§£é™¤ç»‘å®š
 --**********************************
 function x809266_FinishUnBind( sceneId, selfId, itemIndex1, itemIndex2 )
 	local text = ""
@@ -138,7 +138,7 @@ function x809266_FinishUnBind( sceneId, selfId, itemIndex1, itemIndex2 )
 	
 	if ret ~= 0 then
 		BeginEvent(sceneId)
-		AddText(sceneId,"ÄúµÄ×°±¸Ã»ÓĞ¿ÌÃú£¬²»ĞèÒª½øĞĞ³ıÃú¡£");
+		AddText(sceneId,"æ‚¨çš„è£…å¤‡æ²¡æœ‰åˆ»é“­ï¼Œä¸éœ€è¦è¿›è¡Œé™¤é“­ã€‚");
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
@@ -147,7 +147,7 @@ function x809266_FinishUnBind( sceneId, selfId, itemIndex1, itemIndex2 )
 	ret = LuaFnIsItemAvailable( sceneId, selfId, itemIndex2 )
 	if ret ~= 1 then
 		BeginEvent(sceneId)
-		AddText(sceneId,"³ıÃú·û²»¿ÉÓÃ¡£");
+		AddText(sceneId,"é™¤é“­ç¬¦ä¸å¯ç”¨ã€‚");
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
@@ -158,7 +158,7 @@ function x809266_FinishUnBind( sceneId, selfId, itemIndex1, itemIndex2 )
 	local HumanMoney = LuaFnGetMoney( sceneId, selfId ) + GetMoneyJZ(sceneId, selfId);
 	
 	if HumanMoney < need_money then
-		text="³ıÃú¸Ã×°±¸ĞèÒª#{_EXCHG%d}£¬ÄúÉíÉÏµÄÏÖ½ğ²»×ã¡£"
+		text="é™¤é“­è¯¥è£…å¤‡éœ€è¦#{_EXCHG%d}ï¼Œæ‚¨èº«ä¸Šçš„ç°é‡‘ä¸è¶³ã€‚"
 		text=format( text, need_money )
 		BeginEvent(sceneId)
 		AddText(sceneId,text);
@@ -167,10 +167,10 @@ function x809266_FinishUnBind( sceneId, selfId, itemIndex1, itemIndex2 )
 		return
 	end
 	
-	--¼ì²éÊÇ·ñÄÜ¹»³ıÃú
+	--æ£€æŸ¥æ˜¯å¦èƒ½å¤Ÿé™¤é“­
 	ret = LuaFnUnLockCheck( sceneId, selfId, itemIndex1, need_money )
 
-	if ret == 0 then --³É¹¦ÁË
+	if ret == 0 then --æˆåŠŸäº†
 		LuaFnEquipUnLock( sceneId, selfId, itemIndex1 )
 		LuaFnEraseItem( sceneId, selfId, itemIndex2 )
 		LuaFnCostMoneyWithPriority( sceneId, selfId, need_money )
@@ -178,22 +178,22 @@ function x809266_FinishUnBind( sceneId, selfId, itemIndex1, itemIndex2 )
 		
 		szTranItm	= GetBagItemTransfer( sceneId, selfId, itemIndex1 )
 		if szTranItm ~= nil then
-			text		= format( "#{_INFOMSG%s}ÒÑ¾­Íê³É³ıÃú¡£",
+			text		= format( "#{_INFOMSG%s}å·²ç»å®Œæˆé™¤é“­ã€‚",
 									szTranItm )
 			--AddGlobalCountNews( sceneId, szMsg )
 		end
 	end
 
 	if ret == -1 then
-		text="Î´Öª´íÎó¡£"
+		text="æœªçŸ¥é”™è¯¯ã€‚"
 	end
 	
 	if ret == -2 then
-		text="×°±¸²»¿ÉÓÃ¡£"
+		text="è£…å¤‡ä¸å¯ç”¨ã€‚"
 	end
 	
 	if ret == -3 then
-		text="ÄúµÄ×°±¸Ã»ÓĞ¿ÌÃú£¬²»ĞèÒª½øĞĞ³ıÃú¡£"
+		text="æ‚¨çš„è£…å¤‡æ²¡æœ‰åˆ»é“­ï¼Œä¸éœ€è¦è¿›è¡Œé™¤é“­ã€‚"
 	end
 
 	BeginEvent(sceneId)

@@ -17,7 +17,7 @@ function MessageBox_Friend_OnEvent(event)
 			MessageBox_Friend_Text:Show();
 	    InvitePlayer.NAME = tostring( arg0 );
 	    InvitePlayer.GUID = tostring( arg1 );
-	    MessageBox_Friend_Text:SetText("Íæ¼Ò"..InvitePlayer.NAME.."ÇëÇóÄú¼ÓËû£¨Ëı£©ÎªºÃÓÑ");
+	    MessageBox_Friend_Text:SetText("ç©å®¶"..InvitePlayer.NAME.."è¯·æ±‚æ‚¨åŠ ä»–ï¼ˆå¥¹ï¼‰ä¸ºå¥½å‹");
 			this:Show();
 	end
 end

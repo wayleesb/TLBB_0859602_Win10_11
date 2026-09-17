@@ -1,25 +1,25 @@
---ÅÑÊ¦ÈÎÎñ
+--å›å¸ˆä»»åŠ¡
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x806006_g_ScriptId	= 806006
 
---ÅÑÊ¦
+--å›å¸ˆ
 x806006_g_BetrayMaster				= {}
 x806006_g_BetrayMaster["Id"]	= 1005
-x806006_g_BetrayMaster["Name"]= "ÎÒÏëÓëÊ¦¸µ½â³ı¹ØÏµ"	--modify by xindefeng
+x806006_g_BetrayMaster["Name"]= "æˆ‘æƒ³ä¸å¸ˆå‚…è§£é™¤å…³ç³»"	--modify by xindefeng
 
---ÌáÊ¾ĞÅÏ¢
+--æç¤ºä¿¡æ¯
 x806006_g_msg				=
 {
-	["gld"]= "  ½â³ıÊ¦Í½¹ØÏµĞèÒª½»ÄÉ#{_EXCHG%d}¡£",
-	["con"]= "  ÅÑÊ¦½«»á±»¿Û³ı#{_EXCHG%d}£¬ÄúÊÇ·ñÕæµÄÒªÅÑÊ¦£¿",
+	["gld"]= "  è§£é™¤å¸ˆå¾’å…³ç³»éœ€è¦äº¤çº³#{_EXCHG%d}ã€‚",
+	["con"]= "  å›å¸ˆå°†ä¼šè¢«æ‰£é™¤#{_EXCHG%d}ï¼Œæ‚¨æ˜¯å¦çœŸçš„è¦å›å¸ˆï¼Ÿ",
 }
 
---ÅÑÊ¦£¬¿Û³ı½ğÇ®
+--å›å¸ˆï¼Œæ‰£é™¤é‡‘é’±
 x806006_g_Gold			= 25000
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x806006_OnDefaultEvent( sceneId, selfId, targetId )
 	local	key	= GetNumText()
@@ -29,42 +29,42 @@ function x806006_OnDefaultEvent( sceneId, selfId, targetId )
 		str	= format( x806006_g_msg["con"], x806006_g_Gold )
 		BeginEvent( sceneId )
 			if LuaFnHaveMaster( sceneId, selfId ) == 0 then
-				--¼ì²éÊÇ·ñÒÑ¾­³ö¹ıÊ¦
-				if GetMissionFlag(sceneId, selfId, MF_ShiTu_ChuShi_Flag) == 1 then --±íÊ¾ÒÑ¾­³öÊ¦
-					AddText( sceneId, "  ÄúÒÑ¾­³öÊ¦ÁË£¬²»ÄÜÔÙÓĞÅÑÊ¦ĞĞÎª¡£" )
+				--æ£€æŸ¥æ˜¯å¦å·²ç»å‡ºè¿‡å¸ˆ
+				if GetMissionFlag(sceneId, selfId, MF_ShiTu_ChuShi_Flag) == 1 then --è¡¨ç¤ºå·²ç»å‡ºå¸ˆ
+					AddText( sceneId, "  æ‚¨å·²ç»å‡ºå¸ˆäº†ï¼Œä¸èƒ½å†æœ‰å›å¸ˆè¡Œä¸ºã€‚" )
 				else
-					AddText( sceneId, "  Äã»¹Ã»ÓĞ°İÊ¦£¡" )
+					AddText( sceneId, "  ä½ è¿˜æ²¡æœ‰æ‹œå¸ˆï¼" )
 				end
 			else
 				AddText( sceneId, str )
-				AddNumText( sceneId, x806006_g_ScriptId, "ÊÇ", 6, 1 )
-				AddNumText( sceneId, x806006_g_ScriptId, "·ñ", 6, 2 )	--add by xindefeng
+				AddNumText( sceneId, x806006_g_ScriptId, "æ˜¯", 6, 1 )
+				AddNumText( sceneId, x806006_g_ScriptId, "å¦", 6, 2 )	--add by xindefeng
 			end
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 
-	elseif key == 1 then	--È·¶¨ÓëÊ¦¸µ½â³ı¹ØÏµ
+	elseif key == 1 then	--ç¡®å®šä¸å¸ˆå‚…è§£é™¤å…³ç³»
 		if x806006_CheckAccept( sceneId, selfId, targetId ) > 0 then
 			x806006_OnAccept( sceneId, selfId, targetId )
 		end
-	elseif key == 2 then	--È¡ÏûÓëÊ¦¸µ½â³ı¹ØÏµ--add by xindefeng
-		--¹Ø±Õ½çÃæ
+	elseif key == 2 then	--å–æ¶ˆä¸å¸ˆå‚…è§£é™¤å…³ç³»--add by xindefeng
+		--å…³é—­ç•Œé¢
 		DispatchUICommand( sceneId, selfId, 1000 )
 	end
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x806006_OnEnumerate( sceneId, selfId, targetId )
 	AddNumText( sceneId, x806006_g_ScriptId, x806006_g_BetrayMaster["Name"], 6, -1 )
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x806006_CheckAccept( sceneId, selfId, targetId )
-	--¼ì²éÍ½µÜÉíÉÏ½ğÇ®
+	--æ£€æŸ¥å¾’å¼Ÿèº«ä¸Šé‡‘é’±
 	--if LuaFnGetMoney( sceneId, selfId ) < x806006_g_Gold then
 	--hzp 2008-12-9
 	local nMoneyJZ = GetMoneyJZ(sceneId, selfId);
@@ -80,7 +80,7 @@ function x806006_CheckAccept( sceneId, selfId, targetId )
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x806006_OnAccept( sceneId, selfId, targetId )
 	local MasterGUID = LuaFnGetMasterGUID( sceneId, selfId )
@@ -91,7 +91,7 @@ function x806006_OnAccept( sceneId, selfId, targetId )
 	-- [ QUFEI 2007-08-16 16:53 UPDATE BugID 23624 ]
 	if LuaFnHaveMaster( sceneId, selfId ) == 0 then
 		BeginEvent( sceneId )
-		AddText( sceneId, "  Äã»¹Ã»ÓĞ°İÊ¦£¡" )
+		AddText( sceneId, "  ä½ è¿˜æ²¡æœ‰æ‹œå¸ˆï¼" )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 		return
@@ -100,45 +100,45 @@ function x806006_OnAccept( sceneId, selfId, targetId )
 	local MasterName = LuaFnGetFriendName( sceneId, selfId, MasterGUID )
 	local selfName = LuaFnGetName( sceneId, selfId )
 
-	--¿Û³ıÉíÉÏ½ğÇ®
+	--æ‰£é™¤èº«ä¸Šé‡‘é’±
 	--LuaFnCostMoney( sceneId, selfId, x806006_g_Gold )
 	
 	--hzp 2008-12-9
 	local nMoneyJZ, nMoneyJB = LuaFnCostMoneyWithPriority( sceneId, selfId, x806006_g_Gold )
-	--Èç¹ûÖ»¿Û³ı½ğ±Ò
+	--å¦‚æœåªæ‰£é™¤é‡‘å¸
 	if nMoneyJZ == 0 then
-		str	= format( "½â³ıÊ¦Í½¹ØÏµ£¬¿Û³ı#{_MONEY%d}¡£", x806006_g_Gold )
+		str	= format( "è§£é™¤å¸ˆå¾’å…³ç³»ï¼Œæ‰£é™¤#{_MONEY%d}ã€‚", x806006_g_Gold )
 		Msg2Player( sceneId, selfId, str, MSG2PLAYER_PARA )
 	end
-	--Èç¹ûÖ»¿Û³ı½»×Ó
+	--å¦‚æœåªæ‰£é™¤äº¤å­
 	if nMoneyJB == 0 then
-		str	= format( "½â³ıÊ¦Í½¹ØÏµ£¬¿Û³ı#{_EXCHG%d}¡£", x806006_g_Gold )
+		str	= format( "è§£é™¤å¸ˆå¾’å…³ç³»ï¼Œæ‰£é™¤#{_EXCHG%d}ã€‚", x806006_g_Gold )
 		Msg2Player( sceneId, selfId, str, MSG2PLAYER_PARA )
 	end
-	--Èç¹û¼ÈÓĞ½»×ÓÓÖÓĞ½ğ±Ò
+	--å¦‚æœæ—¢æœ‰äº¤å­åˆæœ‰é‡‘å¸
 	if nMoneyJB ~= 0 and nMoneyJZ ~= 0 then
-		str	= format( "½â³ıÊ¦Í½¹ØÏµ£¬¿Û³ı#{_EXCHG%d}ºÍ".."#{_MONEY%d}¡£", nMoneyJZ, nMoneyJB )
+		str	= format( "è§£é™¤å¸ˆå¾’å…³ç³»ï¼Œæ‰£é™¤#{_EXCHG%d}å’Œ".."#{_MONEY%d}ã€‚", nMoneyJZ, nMoneyJB )
 		Msg2Player( sceneId, selfId, str, MSG2PLAYER_PARA )
 	end
-	x806006_MsgBox( sceneId, selfId, targetId, "  Äã½â³ıÁËºÍ"..MasterName.."µÄÊ¦Í½¹ØÏµ¡£" )
+	x806006_MsgBox( sceneId, selfId, targetId, "  ä½ è§£é™¤äº†å’Œ"..MasterName.."çš„å¸ˆå¾’å…³ç³»ã€‚" )
 
-	--·¢ÆÕÍ¨ÓÊ¼ş¸øÊ¦¸µ
-	LuaFnSendSystemMail( sceneId, MasterName, "ÄãµÄÍ½µÜ" .. selfName .. "ÎŞÒâÓÚ¼ÌĞøÔÚÄãÃÅÏÂ£¬ÒÑÓëÄãÍÑÀëÁËÊ¦Í½¹ØÏµ¡£" )
-	--LuaFnSendNormalMail( sceneId, selfId, MasterName, "ÄãµÄÍ½µÜ" .. selfName .. "ÎŞÒâÓÚ¼ÌĞøÔÚÄãÃÅÏÂ£¬ÒÑÓëÄãÍÑÀëÁËÊ¦Í½¹ØÏµ¡£" )
+	--å‘æ™®é€šé‚®ä»¶ç»™å¸ˆå‚…
+	LuaFnSendSystemMail( sceneId, MasterName, "ä½ çš„å¾’å¼Ÿ" .. selfName .. "æ— æ„äºç»§ç»­åœ¨ä½ é—¨ä¸‹ï¼Œå·²ä¸ä½ è„±ç¦»äº†å¸ˆå¾’å…³ç³»ã€‚" )
+	--LuaFnSendNormalMail( sceneId, selfId, MasterName, "ä½ çš„å¾’å¼Ÿ" .. selfName .. "æ— æ„äºç»§ç»­åœ¨ä½ é—¨ä¸‹ï¼Œå·²ä¸ä½ è„±ç¦»äº†å¸ˆå¾’å…³ç³»ã€‚" )
 	local MyGUID = LuaFnGetGUID( sceneId, selfId )
-	--·¢¿ÉÖ´ĞĞÓÊ¼ş¸øÊ¦¸µ
+	--å‘å¯æ‰§è¡Œé‚®ä»¶ç»™å¸ˆå‚…
 	LuaFnSendScriptMail( sceneId, MasterName, MAIL_BETRAYMASTER, MyGUID, 0, 0 )
 
-	--É¾³ıÍ½µÜ³ÆºÅ
+	--åˆ é™¤å¾’å¼Ÿç§°å·
 	AwardShiTuTitle( sceneId, selfId, "" )
 	DispatchAllTitle( sceneId, selfId )
 
-	--×îÖÕÖ´ĞĞÅÑÊ¦
+	--æœ€ç»ˆæ‰§è¡Œå›å¸ˆ
 	LuaFnBetrayMaster( sceneId, selfId )
 end
 
 --**********************************
---¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+--å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x806006_MsgBox( sceneId, selfId, targetId, msg )
 	BeginEvent( sceneId )

@@ -1,15 +1,15 @@
---´´½¨ÈË[ QUFEI 2008-04-30 10:27 UPDATE BugID 34171 ]
---½â¾öÁ÷Ê§ÂÊÒıµ¼ÈÎÎñÊÂ¼ş½Å±¾
---¶Ò»»ÃÅÅÉÌ××°
+--åˆ›å»ºäºº[ QUFEI 2008-04-30 10:27 UPDATE BugID 34171 ]
+--è§£å†³æµå¤±ç‡å¼•å¯¼ä»»åŠ¡äº‹ä»¶è„šæœ¬
+--å…‘æ¢é—¨æ´¾å¥—è£…
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x500617_g_ScriptId = 500617
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x500617_g_eventList={}
 
 x500617_g_EquipList={
--- 20¼¶±ğµÄ
+-- 20çº§åˆ«çš„
 { n = 2500, num = 1, id = {{10514001, 10515001},
 												   {10520011, 10521011},
 												   {10510021, 10511021},
@@ -20,7 +20,7 @@ x500617_g_EquipList={
 												   {10513061, 10514061},
 												   {10520071, 10521071}} },
 
--- 30¼¶±ğµÄ
+-- 30çº§åˆ«çš„
 { n = 2600, num = 1, id = {{10520002, 10521002, 10522002},
 												   {10510012, 10511012, 10512012},
 												   {10501002, 10514022, 10515022},
@@ -31,7 +31,7 @@ x500617_g_EquipList={
 												   {10520062, 10521062, 10522062},
 												   {10510072, 10511072, 10512072}} },
 
--- 40¼¶±ğµÄ
+-- 40çº§åˆ«çš„
 { n = 2700, num = 1, id = {{10514003, 10522003},
 												   {10520013, 10523013},
 												   {10512023, 10522023},
@@ -45,41 +45,41 @@ x500617_g_EquipList={
 
 
 x500617_g_LingPaiList={}
--- 1¼¶ĞÂÈËÁîÅÆ
-x500617_g_LingPaiList[2500]= {id=40004448,num=1,str="1¼¶ĞÂÈËÁîÅÆ"}
--- 2¼¶ĞÂÈËÁîÅÆ
-x500617_g_LingPaiList[2600]= {id=40004449,num=1,str="2¼¶ĞÂÈËÁîÅÆ"}
--- 3¼¶ĞÂÈËÁîÅÆ
-x500617_g_LingPaiList[2700]= {id=40004450,num=1,str="3¼¶ĞÂÈËÁîÅÆ"}
+-- 1çº§æ–°äººä»¤ç‰Œ
+x500617_g_LingPaiList[2500]= {id=40004448,num=1,str="1çº§æ–°äººä»¤ç‰Œ"}
+-- 2çº§æ–°äººä»¤ç‰Œ
+x500617_g_LingPaiList[2600]= {id=40004449,num=1,str="2çº§æ–°äººä»¤ç‰Œ"}
+-- 3çº§æ–°äººä»¤ç‰Œ
+x500617_g_LingPaiList[2700]= {id=40004450,num=1,str="3çº§æ–°äººä»¤ç‰Œ"}
 
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x500617_UpdateEventList( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
-		AddNumText( sceneId, x500617_g_ScriptId, "1¼¶ĞÂÈËÈ¨ÕÈ¶Ò»»20¼¶Ê¦ÃÅÌ×", 0, 2500 )
-		AddNumText( sceneId, x500617_g_ScriptId, "2¼¶ĞÂÈËÈ¨ÕÈ¶Ò»»30¼¶Ê¦ÃÅÌ×", 0, 2600 )
-		AddNumText( sceneId, x500617_g_ScriptId, "3¼¶ĞÂÈËÈ¨ÕÈ¶Ò»»40¼¶Ê¦ÃÅÌ×", 0, 2700 )
+		AddNumText( sceneId, x500617_g_ScriptId, "1çº§æ–°äººæƒæ–å…‘æ¢20çº§å¸ˆé—¨å¥—", 0, 2500 )
+		AddNumText( sceneId, x500617_g_ScriptId, "2çº§æ–°äººæƒæ–å…‘æ¢30çº§å¸ˆé—¨å¥—", 0, 2600 )
+		AddNumText( sceneId, x500617_g_ScriptId, "3çº§æ–°äººæƒæ–å…‘æ¢40çº§å¸ˆé—¨å¥—", 0, 2700 )
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 end
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x500617_OnDefaultEvent( sceneId, selfId,targetId )
 	x500617_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x500617_OnEventRequest( sceneId, selfId, targetId, eventId )
 	local nNumText = GetNumText()
 
 	if nNumText == 2500 or nNumText == 2600 or nNumText == 2700 then
-		-- ÊÇ·ñ¼ÓÈëÃÅÅÉ
+		-- æ˜¯å¦åŠ å…¥é—¨æ´¾
 		local nMenPai = GetMenPai( sceneId, selfId )
 		if nMenPai < 0 or nMenPai > 8 then
 			x500617_TalkInfo( sceneId, selfId, targetId, "#{YD_20080421_212}" )
@@ -89,7 +89,7 @@ function x500617_OnEventRequest( sceneId, selfId, targetId, eventId )
 			AddText(sceneId, "#{YD_20080421_215}")
 			
 			local szStr = "#{YD_20080421_216}" .. x500617_g_LingPaiList[nNumText].str 
-										.. "¡±".. tostring(x500617_g_LingPaiList[nNumText].num) .. "#{YD_20080421_217}"
+										.. "â€".. tostring(x500617_g_LingPaiList[nNumText].num) .. "#{YD_20080421_217}"
 			AddText(sceneId, szStr)
 
 			for i, item in x500617_g_EquipList do
@@ -106,15 +106,15 @@ function x500617_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---Ìá½»ÒÑ×öÍêµÄÈÎÎñ
+--æäº¤å·²åšå®Œçš„ä»»åŠ¡
 --**********************************
 function x500617_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, selectRadioId )
 
-	--´¦ÀíÌá½»ºóµÄÏÔÊ¾Çé¿ö
-	--ÎªÁË°²È«£¬ÕâÀïÒª×ĞÏ¸£¬²»ÄÜ³ö´í
+	--å¤„ç†æäº¤åçš„æ˜¾ç¤ºæƒ…å†µ
+	--ä¸ºäº†å®‰å…¨ï¼Œè¿™é‡Œè¦ä»”ç»†ï¼Œä¸èƒ½å‡ºé”™
 	local nItemIndex = -1
 	
-	-- ÊÇ·ñ¼ÓÈëÃÅÅÉ
+	-- æ˜¯å¦åŠ å…¥é—¨æ´¾
 	local nMenPai = GetMenPai( sceneId, selfId )
 	if nMenPai < 0 or nMenPai > 8 then
 		x500617_TalkInfo( sceneId, selfId, targetId, "#{YD_20080421_212}" )
@@ -134,7 +134,7 @@ function x500617_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 		return
 	end
 	
-	-- ¿´Íê¼ÒÊÇ²»ÊÇ¹»²ÄÁÏÌá½»
+	-- çœ‹å®Œå®¶æ˜¯ä¸æ˜¯å¤Ÿææ–™æäº¤
 	local nNumIdx = x500617_g_EquipList[nItemIndex].n
 	local bStoneOk = 0
 
@@ -148,13 +148,13 @@ function x500617_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 		return
 	end
 	
-	-- ¼ì²éÊÇ²»ÊÇÓĞ×ã¹»µÄÁîÅÆ¿ÉÒÔ¿Û³ı
+	-- æ£€æŸ¥æ˜¯ä¸æ˜¯æœ‰è¶³å¤Ÿçš„ä»¤ç‰Œå¯ä»¥æ‰£é™¤
 	if LuaFnGetAvailableItemCount(sceneId, selfId, x500617_g_LingPaiList[nNumIdx].id) < x500617_g_LingPaiList[nNumIdx].num then
 		x500617_NotifyTip( sceneId, selfId, "#{YD_20080421_219}" )
 		return		
 	end
 	
-	-- ¼ì²é±³°ü¿Õ¼ä
+	-- æ£€æŸ¥èƒŒåŒ…ç©ºé—´
 	BeginAddItem(sceneId)
 		AddItem(sceneId, selectRadioId, 1)
 	local bBagOk = EndAddItem(sceneId, selfId)
@@ -166,14 +166,14 @@ function x500617_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 	local nItemBagIndex = GetBagPosByItemSn(sceneId, selfId, x500617_g_LingPaiList[nNumIdx].id)
 	local szTransfer = GetBagItemTransfer(sceneId,selfId, nItemBagIndex)
 	
-	-- É¾³ıÏà¹ØµÄÁîÅÆ
+	-- åˆ é™¤ç›¸å…³çš„ä»¤ç‰Œ
 	local bDelOk = LuaFnDelAvailableItem(sceneId,selfId, x500617_g_LingPaiList[nNumIdx].id, x500617_g_LingPaiList[nNumIdx].num)
 	
 	if bDelOk < 1  then
 		x500617_NotifyTip( sceneId, selfId, "#{YD_20080421_220}" )
 		return
 	else
-		--¸øÓë½±Àø		
+		--ç»™ä¸å¥–åŠ±		
 		local nBagIndex = TryRecieveItem( sceneId, selfId, selectRadioId, 1 );
 		local itemInfo = GetBagItemTransfer( sceneId, selfId, nBagIndex )
 		
@@ -181,7 +181,7 @@ function x500617_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 		local strText = format("#{YD_224}#{_INFOUSR%s}#{YD_225}#{_INFOMSG%s}#{YD_226}#{_INFOMSG%s}#{YD_227}", GetName(sceneId, selfId), szTransfer, itemInfo )
 		BroadMsgByChatPipe(sceneId,selfId, strText, 4)
 		
-		--¶Ò»»³É¹¦£¬²¥·ÅÌØĞ§
+		--å…‘æ¢æˆåŠŸï¼Œæ’­æ”¾ç‰¹æ•ˆ
 		LuaFnSendSpecificImpactToUnit(sceneId,selfId,selfId,selfId,18,0)
 
 		return
@@ -190,7 +190,7 @@ function x500617_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 end
 
 --**********************************
---ÓëNPC¶Ô»°
+--ä¸NPCå¯¹è¯
 --**********************************
 function x500617_TalkInfo( sceneId, selfId, targetId, msg )
 
@@ -202,7 +202,7 @@ function x500617_TalkInfo( sceneId, selfId, targetId, msg )
 end
 
 --**********************************
---ĞÑÄ¿ÌáÊ¾
+--é†’ç›®æç¤º
 --**********************************
 function x500617_NotifyTip( sceneId, selfId, msg )
 

@@ -1,9 +1,9 @@
---Áõ½¡Ã÷
+--åˆ˜å¥æ˜
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x311002_g_scriptId = 311002
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x311002_g_eventList={}--250036
 
 x311002_g_eventDETime_1 = 0;
@@ -20,7 +20,7 @@ x311002_g_eventAddDETimeBegin = 200;
 
 x311002_g_NpcSceneId = 0
 
--- 2000Äê1ÔÂ3ÈÕÁè³¿0µãµÄÊ±¼ä,Ë«±¶¾­ÑéÊ±¼äµÄ»ù×¼
+-- 2000å¹´1æœˆ3æ—¥å‡Œæ™¨0ç‚¹çš„æ—¶é—´,åŒå€ç»éªŒæ—¶é—´çš„åŸºå‡†
 TIME_2000_01_03_	=		946828868
 
 
@@ -30,34 +30,34 @@ x311002_g_BuffPet_25 = 61
 x311002_g_BuffPet_2 = 53
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x311002_UpdateEventList( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
 
 		AddText(sceneId,"  #{LS_20080303}");
 		
-		AddNumText(sceneId, x311002_g_scriptId, "ÎÒÏëÁìÒ»Ğ¡Ê±Ë«±¶¾­ÑéÊ±¼ä", 6,x311002_g_eventDETime_1 )
-		AddNumText(sceneId, x311002_g_scriptId, "ÎÒÏëÁì¶şĞ¡Ê±Ë«±¶¾­ÑéÊ±¼ä", 6,x311002_g_eventDETime_2 )
-		AddNumText(sceneId, x311002_g_scriptId, "ÎÒÏëÁìËÄĞ¡Ê±Ë«±¶¾­ÑéÊ±¼ä", 6,x311002_g_eventDETime_4 )
-		AddNumText(sceneId, x311002_g_scriptId, "ÎÒÏë¶³½áË«±¶¾­ÑéÊ±¼ä", 6,x311002_g_eventDETime_Lock )
-		AddNumText(sceneId, x311002_g_scriptId, "ÎÒÏë½â¶³Ë«±¶¾­ÑéÊ±¼ä", 6,x311002_g_eventDETime_Unlock )
-		AddNumText(sceneId, x311002_g_scriptId, "ÎÒÏë²éÑ¯ÎÒ±¾ÖÜË«±¶¾­ÑéÊ±¼ä", 6,x311002_g_eventDETime_Ask )
-		AddNumText( sceneId, x311002_g_scriptId, "ÁìË«½éÉÜ", 11, 10 )
+		AddNumText(sceneId, x311002_g_scriptId, "æˆ‘æƒ³é¢†ä¸€å°æ—¶åŒå€ç»éªŒæ—¶é—´", 6,x311002_g_eventDETime_1 )
+		AddNumText(sceneId, x311002_g_scriptId, "æˆ‘æƒ³é¢†äºŒå°æ—¶åŒå€ç»éªŒæ—¶é—´", 6,x311002_g_eventDETime_2 )
+		AddNumText(sceneId, x311002_g_scriptId, "æˆ‘æƒ³é¢†å››å°æ—¶åŒå€ç»éªŒæ—¶é—´", 6,x311002_g_eventDETime_4 )
+		AddNumText(sceneId, x311002_g_scriptId, "æˆ‘æƒ³å†»ç»“åŒå€ç»éªŒæ—¶é—´", 6,x311002_g_eventDETime_Lock )
+		AddNumText(sceneId, x311002_g_scriptId, "æˆ‘æƒ³è§£å†»åŒå€ç»éªŒæ—¶é—´", 6,x311002_g_eventDETime_Unlock )
+		AddNumText(sceneId, x311002_g_scriptId, "æˆ‘æƒ³æŸ¥è¯¢æˆ‘æœ¬å‘¨åŒå€ç»éªŒæ—¶é—´", 6,x311002_g_eventDETime_Ask )
+		AddNumText( sceneId, x311002_g_scriptId, "é¢†åŒä»‹ç»", 11, 10 )
 			
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 end	
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x311002_OnDefaultEvent( sceneId, selfId, targetId )
 	x311002_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x311002_OnEventRequest( sceneId, selfId, targetId, eventId )
 	
@@ -69,19 +69,19 @@ function x311002_OnEventRequest( sceneId, selfId, targetId, eventId )
 			return
 	end
 
-	-- ÅĞ¶ÏÍæ¼ÒµÄµÈ¼¶£¬Ğ¡ÓÚ10¾Í·µ»Ø
+	-- åˆ¤æ–­ç©å®¶çš„ç­‰çº§ï¼Œå°äº10å°±è¿”å›
 	if GetLevel(sceneId, selfId) < 10  then
 		BeginEvent(sceneId)
-			AddText(sceneId,"  ÄãµÄµÈ¼¶»¹²»µ½10¼¶£¬»¹ÊÇÔÙÁ·Á·°É¡£")
+			AddText(sceneId,"  ä½ çš„ç­‰çº§è¿˜ä¸åˆ°10çº§ï¼Œè¿˜æ˜¯å†ç»ƒç»ƒå§ã€‚")
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 		return 
 	end
 	
-	-- ¼ì²âÊÇ²»ÊÇĞèÒª´ÓĞÂË¢ĞÂÊı¾İ
-	-- ÏÖÔÚÊ±¼ä
+	-- æ£€æµ‹æ˜¯ä¸æ˜¯éœ€è¦ä»æ–°åˆ·æ–°æ•°æ®
+	-- ç°åœ¨æ—¶é—´
 	local nCurTime = LuaFnGetCurrentTime()
-	-- ÉÏ´ÎË¢ĞÂÊı¾İµÄÊ±¼ä
+	-- ä¸Šæ¬¡åˆ·æ–°æ•°æ®çš„æ—¶é—´
 	local nPreTime = DEGetPreTime(sceneId, selfId)
 
 	if (nCurTime - nPreTime  >= 3600*24*7)  or
@@ -105,25 +105,25 @@ function x311002_OnEventRequest( sceneId, selfId, targetId, eventId )
 		
 	elseif GetNumText() == x311002_g_eventDETime_Lock	then
 		
-		-- ÏÈ¼ì²âÒ»ÏÂÊÇ²»ÊÇ¶³½á×´Ì¬£¬Èç¹ûÊÇ£¬¾Í·µ»Ø£¬²¢Ö±½ÓÌáÊ¾
+		-- å…ˆæ£€æµ‹ä¸€ä¸‹æ˜¯ä¸æ˜¯å†»ç»“çŠ¶æ€ï¼Œå¦‚æœæ˜¯ï¼Œå°±è¿”å›ï¼Œå¹¶ç›´æ¥æç¤º
 		if DEIsLock(sceneId, selfId) > 0   then
 			BeginEvent(sceneId)
-				AddText(sceneId,"  ÄãµÄË«±¶¾­ÑéÊ±¼äÒÑ¾­´¦ÓÚ¶³½á×´Ì¬ÁË¡£")
+				AddText(sceneId,"  ä½ çš„åŒå€ç»éªŒæ—¶é—´å·²ç»å¤„äºå†»ç»“çŠ¶æ€äº†ã€‚")
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,targetId)
 			return			
 		end
 	
-		-- ¶³½áµÄÊ±ºò£¬
+		-- å†»ç»“çš„æ—¶å€™ï¼Œ
 		local nCurHave = DEGetFreeTime(sceneId, selfId)
 		nCurHave = nCurHave + DEGetMoneyTime(sceneId, selfId)
 
-		-- ÏÈ¼ÆËãÏÂµ±Ç°Íæ¼ÒÉíÉÏÊ£ÏÂµÄÊ±¼ä
+		-- å…ˆè®¡ç®—ä¸‹å½“å‰ç©å®¶èº«ä¸Šå‰©ä¸‹çš„æ—¶é—´
 		local nTrueTime = nCurHave;
 		
 		if nTrueTime <= 0 then 
 			BeginEvent(sceneId)
-				AddText(sceneId,"  ÄãÏÖÔÚÃ»ÓĞÒÑÁìÈ¡µÄË«±¶Ê±¼ä°¡£¡£¿")
+				AddText(sceneId,"  ä½ ç°åœ¨æ²¡æœ‰å·²é¢†å–çš„åŒå€æ—¶é—´å•Šï¼ï¼Ÿ")
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,targetId)
 			
@@ -136,31 +136,31 @@ function x311002_OnEventRequest( sceneId, selfId, targetId, eventId )
 			UICommand_AddInt(sceneId,targetId);
 			UICommand_AddInt(sceneId,50)
 			UICommand_AddString(sceneId,"LockTime");
-			local str = format("Äãµ±Ç°ÓĞ%d·ÖÖÓµÄË«±¶Ê±¼ä£¬ÄãÈ·¶¨Òª¶³½áÂğ£¿",floor(nTrueTime/60) ) 
+			local str = format("ä½ å½“å‰æœ‰%dåˆ†é’Ÿçš„åŒå€æ—¶é—´ï¼Œä½ ç¡®å®šè¦å†»ç»“å—ï¼Ÿ",floor(nTrueTime/60) ) 
 			UICommand_AddString(sceneId,str);
 		EndUICommand(sceneId)
 		DispatchUICommand(sceneId,selfId, 24)		
 
 	elseif GetNumText() == x311002_g_eventDETime_Unlock	then
-		-- ½â¶³µÄÊ±ºò£¬
-		-- ÏÈÅĞ¶ÏÊÇ²»ÊÇÓĞË«±¶¾­ÑéÊ±¼ä¿ÉÒÔ½â³ı
+		-- è§£å†»çš„æ—¶å€™ï¼Œ
+		-- å…ˆåˆ¤æ–­æ˜¯ä¸æ˜¯æœ‰åŒå€ç»éªŒæ—¶é—´å¯ä»¥è§£é™¤
 		local bLock = DEIsLock(sceneId, selfId)
 		if bLock <= 0    then
 			BeginEvent(sceneId)
-				AddText(sceneId,"  ÄãÃ»ÓĞÔÚÎÒÕâÀï¶³½áË«±¶¾­ÑéÊ±¼ä°¡£¡£¿")
+				AddText(sceneId,"  ä½ æ²¡æœ‰åœ¨æˆ‘è¿™é‡Œå†»ç»“åŒå€ç»éªŒæ—¶é—´å•Šï¼ï¼Ÿ")
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,targetId)
 			return
 		end
 		
-		-- Èç¹ûÍæ¼ÒÉíÉÏÓĞÒ©Ë®µÄBUFF£¬ĞèÒª¸øÍæ¼ÒÒ»¸öÌáÊ¾
+		-- å¦‚æœç©å®¶èº«ä¸Šæœ‰è¯æ°´çš„BUFFï¼Œéœ€è¦ç»™ç©å®¶ä¸€ä¸ªæç¤º
 		if LuaFnHaveImpactOfSpecificDataIndex(sceneId, selfId, x311002_g_BuffPalyer_25) == 1   
 				or  LuaFnHaveImpactOfSpecificDataIndex(sceneId, selfId, x311002_g_BuffAll_15) == 1
 				then
 			BeginEvent(sceneId)
-				AddText(sceneId,"  ÄúÉíÉÏÒÑ¾­´æÔÚÁË¶à±¶¾­ÑéÊ±¼ä£¬ÊÇ·ñÈ·ÈÏ½â¶³£¿")
-				AddNumText(sceneId, x311002_g_scriptId, "È·ÈÏ½â¶³", 6,x311002_g_Do_Unlock )
-				AddNumText(sceneId, x311002_g_scriptId, "·ÅÆú½â¶³", 6,x311002_g_eventUpdateList )
+				AddText(sceneId,"  æ‚¨èº«ä¸Šå·²ç»å­˜åœ¨äº†å¤šå€ç»éªŒæ—¶é—´ï¼Œæ˜¯å¦ç¡®è®¤è§£å†»ï¼Ÿ")
+				AddNumText(sceneId, x311002_g_scriptId, "ç¡®è®¤è§£å†»", 6,x311002_g_Do_Unlock )
+				AddNumText(sceneId, x311002_g_scriptId, "æ”¾å¼ƒè§£å†»", 6,x311002_g_eventUpdateList )
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,targetId)
 			return
@@ -169,22 +169,22 @@ function x311002_OnEventRequest( sceneId, selfId, targetId, eventId )
 		DESetLock(sceneId, selfId, 0)
 		--DESetBeginTime(sceneId, selfId, nCurTime)
 		BeginEvent(sceneId)
-			AddText(sceneId,"  Äã¶³½áµÄË«±¶¾­ÑéÊ±¼äÒÑ¾­½â¶³ÁË¡£")
+			AddText(sceneId,"  ä½ å†»ç»“çš„åŒå€ç»éªŒæ—¶é—´å·²ç»è§£å†»äº†ã€‚")
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 
-		-- Í¬²½Êı¾İµ½¿Í»§¶Ë
+		-- åŒæ­¥æ•°æ®åˆ°å®¢æˆ·ç«¯
 		SendDoubleExpToClient(sceneId,selfId)
 	
 	elseif GetNumText() == x311002_g_Do_Unlock	then
 		DESetLock(sceneId, selfId, 0)
 		--DESetBeginTime(sceneId, selfId, nCurTime)
 		BeginEvent(sceneId)
-			AddText(sceneId,"  Äã¶³½áµÄË«±¶¾­ÑéÊ±¼äÒÑ¾­½â¶³ÁË¡£")
+			AddText(sceneId,"  ä½ å†»ç»“çš„åŒå€ç»éªŒæ—¶é—´å·²ç»è§£å†»äº†ã€‚")
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 
-		-- Í¬²½Êı¾İµ½¿Í»§¶Ë
+		-- åŒæ­¥æ•°æ®åˆ°å®¢æˆ·ç«¯
 		SendDoubleExpToClient(sceneId,selfId)
 	
 	elseif GetNumText() == x311002_g_Abandon_Unlock	then
@@ -196,9 +196,9 @@ function x311002_OnEventRequest( sceneId, selfId, targetId, eventId )
 	
 		BeginEvent(sceneId)
 			if nCount and nCount > 0 then
-				AddText(sceneId,"¿ÉÔÚÎÒÕâÀïÁìÈ¡µÄÄã±¾ÖÜµÄË«±¶¾­ÑéÊ±¼äÎª#R"..tostring(floor(nCount)).."Ğ¡Ê±#W£¬¿ìºÃºÃÀûÓÃ°É¡£")
+				AddText(sceneId,"å¯åœ¨æˆ‘è¿™é‡Œé¢†å–çš„ä½ æœ¬å‘¨çš„åŒå€ç»éªŒæ—¶é—´ä¸º#R"..tostring(floor(nCount)).."å°æ—¶#Wï¼Œå¿«å¥½å¥½åˆ©ç”¨å§ã€‚")
 			else
-				AddText(sceneId,"ÕæÊÇÒÅº¶£¬ÎÒÄÜÌá¹©Äã±¾ÖÜµÄË«±¶¾­ÑéÊ±¼äÎª#R0Ğ¡Ê±#WÁË¡£")
+				AddText(sceneId,"çœŸæ˜¯é—æ†¾ï¼Œæˆ‘èƒ½æä¾›ä½ æœ¬å‘¨çš„åŒå€ç»éªŒæ—¶é—´ä¸º#R0å°æ—¶#Wäº†ã€‚")
 			end
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
@@ -207,7 +207,7 @@ function x311002_OnEventRequest( sceneId, selfId, targetId, eventId )
 		x311002_UpdateEventList( sceneId, selfId,targetId )
 	
 	elseif GetNumText() >= x311002_g_eventAddDETimeBegin	then
-		--ÑéÖ¤²¢ÇÒÔö¼Ó
+		--éªŒè¯å¹¶ä¸”å¢åŠ 
 		local nPoint = GetNumText()-x311002_g_eventAddDETimeBegin;
 		
 		local nCount = DEGetCount(sceneId, selfId)
@@ -217,7 +217,7 @@ function x311002_OnEventRequest( sceneId, selfId, targetId, eventId )
 		
 		local nCurHave = DEGetFreeTime(sceneId, selfId)
 		nCurHave = nCurHave + DEGetMoneyTime(sceneId, selfId)
-		-- ÏÈ¼ÆËãÏÂµ±Ç°Íæ¼ÒÉíÉÏÊ£ÏÂµÄÊ±¼ä
+		-- å…ˆè®¡ç®—ä¸‹å½“å‰ç©å®¶èº«ä¸Šå‰©ä¸‹çš„æ—¶é—´
 		local nTrueTime = nCurHave;
 		
 		if nTrueTime < 0 then 
@@ -227,16 +227,16 @@ function x311002_OnEventRequest( sceneId, selfId, targetId, eventId )
 		WithDrawFreeDoubleExpTime(sceneId, selfId, nPoint, 0, 0 )
 		
 		BeginEvent(sceneId)
-			AddText(sceneId,"  ÄãÒÑ³É¹¦ÁìÈ¡ÁË#R".. nPoint .."Ğ¡Ê±#WµÄË«±¶¾­ÑéÊ±¼ä¡£ÏÖÔÚÄãÒ»¹²ÓµÓĞ#Y".. tostring(floor((nTrueTime + nPoint*3600)/60)) .. "·ÖÖÓ#WµÄË«±¶¾­ÑéÊ±¼ä")
+			AddText(sceneId,"  ä½ å·²æˆåŠŸé¢†å–äº†#R".. nPoint .."å°æ—¶#Wçš„åŒå€ç»éªŒæ—¶é—´ã€‚ç°åœ¨ä½ ä¸€å…±æ‹¥æœ‰#Y".. tostring(floor((nTrueTime + nPoint*3600)/60)) .. "åˆ†é’Ÿ#Wçš„åŒå€ç»éªŒæ—¶é—´")
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 
 		BeginEvent(sceneId)
-			AddText(sceneId,"  ÄãÒÑ³É¹¦ÁìÈ¡ÁË#R".. nPoint .."Ğ¡Ê±#WµÄË«±¶¾­ÑéÊ±¼ä¡£ÏÖÔÚÄãÒ»¹²ÓµÓĞ#Y".. tostring(floor((nTrueTime + nPoint*3600)/60)) .. "·ÖÖÓ#WµÄË«±¶¾­ÑéÊ±¼ä")
+			AddText(sceneId,"  ä½ å·²æˆåŠŸé¢†å–äº†#R".. nPoint .."å°æ—¶#Wçš„åŒå€ç»éªŒæ—¶é—´ã€‚ç°åœ¨ä½ ä¸€å…±æ‹¥æœ‰#Y".. tostring(floor((nTrueTime + nPoint*3600)/60)) .. "åˆ†é’Ÿ#Wçš„åŒå€ç»éªŒæ—¶é—´")
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		
-		-- Í¬²½Êı¾İµ½¿Í»§¶Ë
+		-- åŒæ­¥æ•°æ®åˆ°å®¢æˆ·ç«¯
 		SendDoubleExpToClient(sceneId,selfId)
 
 	end
@@ -248,19 +248,19 @@ function x311002_AddDETime(sceneId, selfId, targetId, nPoint, nCurTime, nPreTime
 		nCurHave = nCurHave + DEGetMoneyTime(sceneId, selfId)
 		
 		local nFreeTime = DEGetFreeTime(sceneId, selfId)
-		-- ÏÈ¼ÆËãÏÂµ±Ç°Íæ¼ÒÉíÉÏÊ£ÏÂµÄÊ±¼ä
+		-- å…ˆè®¡ç®—ä¸‹å½“å‰ç©å®¶èº«ä¸Šå‰©ä¸‹çš„æ—¶é—´
 		local nTrueTime = nCurHave;
 		
 		if nTrueTime < 0 then 
 			nTrueTime = 0
 		end
 		
-		-- ¿´»¹ÓĞÃ»ÓĞÊ±¼ä¿ÉÒÔÁìÈ¡
+		-- çœ‹è¿˜æœ‰æ²¡æœ‰æ—¶é—´å¯ä»¥é¢†å–
 		local nCount = DEGetCount(sceneId, selfId)
 		
 		if(nCount <= 0)   then
 			BeginEvent(sceneId)
-				AddText(sceneId,"  Äã±¾ÖÜ´ÓÎÒÕâÀï¿ÉÒÔÁìÈ¡µÄË«±¶¾­ÑéÊ±¼ä£¬ÒÑ¾­ÓÃÍêÁË¡£")
+				AddText(sceneId,"  ä½ æœ¬å‘¨ä»æˆ‘è¿™é‡Œå¯ä»¥é¢†å–çš„åŒå€ç»éªŒæ—¶é—´ï¼Œå·²ç»ç”¨å®Œäº†ã€‚")
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,targetId)
 			return 
@@ -268,34 +268,34 @@ function x311002_AddDETime(sceneId, selfId, targetId, nPoint, nCurTime, nPreTime
 		
 		if nCount < nPoint   then
 			BeginEvent(sceneId)
-				AddText(sceneId,"  ÄãÃ»ÓĞÕâÃ´¶àµÄÊ±¼ä¿ÉÒÔÁìÈ¡ÁË")
+				AddText(sceneId,"  ä½ æ²¡æœ‰è¿™ä¹ˆå¤šçš„æ—¶é—´å¯ä»¥é¢†å–äº†")
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,targetId)
 			return 
 		end
 		
-		-- ¿´ÉíÉÏÊÇ²»ÊÇÒÑ¾­ÓĞ±È½Ï¶àµÄÊ±¼äÁË£¬2Ğ¡Ê±
+		-- çœ‹èº«ä¸Šæ˜¯ä¸æ˜¯å·²ç»æœ‰æ¯”è¾ƒå¤šçš„æ—¶é—´äº†ï¼Œ2å°æ—¶
 		if nFreeTime >= 120*60   then
 			BeginEvent(sceneId)
-				AddText(sceneId,"  ÄãÔÚÈı´ó³ÇÊĞºÍ×Ô½¨³ÇÊĞÖĞ»ñµÃµÄË«±¶¾­ÑéÊ±¼äÒÑ¾­´ïµ½¿ÉÁìÈ¡µÄÉÏÏŞ")
+				AddText(sceneId,"  ä½ åœ¨ä¸‰å¤§åŸå¸‚å’Œè‡ªå»ºåŸå¸‚ä¸­è·å¾—çš„åŒå€ç»éªŒæ—¶é—´å·²ç»è¾¾åˆ°å¯é¢†å–çš„ä¸Šé™")
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,targetId)
 			return 
 		end
 		
-		-- ¼ì²âÍæ¼Ò²»ÄÜÓµÓĞ³¬¹ı4¸öĞ¡Ê±µÄÊ±¼ä
+		-- æ£€æµ‹ç©å®¶ä¸èƒ½æ‹¥æœ‰è¶…è¿‡4ä¸ªå°æ—¶çš„æ—¶é—´
 		if nFreeTime + nPoint*3600 > 3600*4   then
 			BeginEvent(sceneId)
-				AddText(sceneId,"  ÄãÔÚÈı´ó³ÇÊĞºÍ×Ô½¨³ÇÊĞÖĞ»ñµÃµÄË«±¶¾­ÑéÊ±¼äÒÑ¾­´ïµ½¿ÉÁìÈ¡µÄÉÏÏŞ")
+				AddText(sceneId,"  ä½ åœ¨ä¸‰å¤§åŸå¸‚å’Œè‡ªå»ºåŸå¸‚ä¸­è·å¾—çš„åŒå€ç»éªŒæ—¶é—´å·²ç»è¾¾åˆ°å¯é¢†å–çš„ä¸Šé™")
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,targetId)
 			return 
 		end
 		
-		-- ¿´ÉíÉÏÊÇ²»ÊÇÓĞ¶³½áÁËµÄÊ±¼ä
+		-- çœ‹èº«ä¸Šæ˜¯ä¸æ˜¯æœ‰å†»ç»“äº†çš„æ—¶é—´
 		if DEIsLock(sceneId,selfId)  > 0    then
 			BeginEvent(sceneId)
-				AddText(sceneId,"  Äã»¹ÓĞ¶³½áµÄË«±¶¾­ÑéÊ±¼ä£¬»¹ÊÇÏÈ½â¶³ÔÙÁìÈ¡ĞÂµÄË«±¶¾­ÑéÊ±¼ä°É¡£")
+				AddText(sceneId,"  ä½ è¿˜æœ‰å†»ç»“çš„åŒå€ç»éªŒæ—¶é—´ï¼Œè¿˜æ˜¯å…ˆè§£å†»å†é¢†å–æ–°çš„åŒå€ç»éªŒæ—¶é—´å§ã€‚")
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,targetId)
 			return 
@@ -303,27 +303,27 @@ function x311002_AddDETime(sceneId, selfId, targetId, nPoint, nCurTime, nPreTime
 	
 		BeginEvent(sceneId)
 			if (nTrueTime/60) > 0 then
-				AddText(sceneId,"Äã±¾ÖÜË«±¶¾­ÑéÊ±¼äÊ£Óà#R" .. tostring(floor(nCount)) .. "Ğ¡Ê±#W£¬µ±Ç°ÒÑÓĞË«±¶¾­ÑéÊ±¼ä#Y" .. tostring(floor(nTrueTime/60)) .. "·ÖÖÓ#W£¬ÄãÈ·ÈÏÒªÁìÈ¡#Y" .. tostring(floor(nPoint*60)) .. "·ÖÖÓ#WË«±¶¾­ÑéÊ±¼äÂğ£¿");
+				AddText(sceneId,"ä½ æœ¬å‘¨åŒå€ç»éªŒæ—¶é—´å‰©ä½™#R" .. tostring(floor(nCount)) .. "å°æ—¶#Wï¼Œå½“å‰å·²æœ‰åŒå€ç»éªŒæ—¶é—´#Y" .. tostring(floor(nTrueTime/60)) .. "åˆ†é’Ÿ#Wï¼Œä½ ç¡®è®¤è¦é¢†å–#Y" .. tostring(floor(nPoint*60)) .. "åˆ†é’Ÿ#WåŒå€ç»éªŒæ—¶é—´å—ï¼Ÿ");
 			else
-				AddText(sceneId,"Äã±¾ÖÜË«±¶¾­ÑéÊ±¼äÊ£Óà#R" .. tostring(floor(nCount)) .. "Ğ¡Ê±#W£¬ÄãÈ·ÈÏÒªÁìÈ¡#Y" .. tostring(floor(nPoint*60)) .. "·ÖÖÓ#WË«±¶¾­ÑéÊ±¼äÂğ£¿");
+				AddText(sceneId,"ä½ æœ¬å‘¨åŒå€ç»éªŒæ—¶é—´å‰©ä½™#R" .. tostring(floor(nCount)) .. "å°æ—¶#Wï¼Œä½ ç¡®è®¤è¦é¢†å–#Y" .. tostring(floor(nPoint*60)) .. "åˆ†é’Ÿ#WåŒå€ç»éªŒæ—¶é—´å—ï¼Ÿ");
 			end
 			
-			-- Èç¹ûÕâ¸öÊ±ºòÍæ¼ÒÉíÉÏÓĞË«±¶¾­ÑéÒ©Ë®Ğ§¹û£¬ĞèÒª¸øÍæ¼ÒÌáÊ¾
+			-- å¦‚æœè¿™ä¸ªæ—¶å€™ç©å®¶èº«ä¸Šæœ‰åŒå€ç»éªŒè¯æ°´æ•ˆæœï¼Œéœ€è¦ç»™ç©å®¶æç¤º
 			if LuaFnHaveImpactOfSpecificDataIndex(sceneId, selfId, x311002_g_BuffPalyer_25) == 1   
 					or  LuaFnHaveImpactOfSpecificDataIndex(sceneId, selfId, x311002_g_BuffAll_15) == 1
 					then
-				AddText(sceneId,"  #r  #RÇë×¢Òâ:ÄúÉíÉÏÒÑ¾­´æÔÚÁË¶à±¶¾­ÑéÊ±¼ä£¬ÊÇ·ñÈ·ÈÏÁìÈ¡£¿");
+				AddText(sceneId,"  #r  #Rè¯·æ³¨æ„:æ‚¨èº«ä¸Šå·²ç»å­˜åœ¨äº†å¤šå€ç»éªŒæ—¶é—´ï¼Œæ˜¯å¦ç¡®è®¤é¢†å–ï¼Ÿ");
 			end
 			
-			AddNumText(sceneId, x311002_g_scriptId, "ÊÇµÄ£¬ÎÒÒªÁìÈ¡¡£", -1,x311002_g_eventAddDETimeBegin+nPoint )
-			AddNumText(sceneId, x311002_g_scriptId, "²»ÁË£¬ÎÒµã´íÁË¡£", -1,x311002_g_eventUpdateList )
+			AddNumText(sceneId, x311002_g_scriptId, "æ˜¯çš„ï¼Œæˆ‘è¦é¢†å–ã€‚", -1,x311002_g_eventAddDETimeBegin+nPoint )
+			AddNumText(sceneId, x311002_g_scriptId, "ä¸äº†ï¼Œæˆ‘ç‚¹é”™äº†ã€‚", -1,x311002_g_eventUpdateList )
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 		
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x311002_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x311002_g_eventList do
@@ -334,10 +334,10 @@ function x311002_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x311002_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
-	--¾Ü¾øÖ®ºó£¬Òª·µ»ØNPCµÄÊÂ¼şÁĞ±í
+	--æ‹’ç»ä¹‹åï¼Œè¦è¿”å›NPCçš„äº‹ä»¶åˆ—è¡¨
 	for i, findId in x311002_g_eventList do
 		if missionScriptId == findId then
 			x311002_UpdateEventList( sceneId, selfId, targetId )
@@ -347,7 +347,7 @@ function x311002_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¼ÌĞø£¨ÒÑ¾­½ÓÁËÈÎÎñ£©
+--ç»§ç»­ï¼ˆå·²ç»æ¥äº†ä»»åŠ¡ï¼‰
 --**********************************
 function x311002_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x311002_g_eventList do
@@ -359,7 +359,7 @@ function x311002_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---Ìá½»ÒÑ×öÍêµÄÈÎÎñ
+--æäº¤å·²åšå®Œçš„ä»»åŠ¡
 --**********************************
 function x311002_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, selectRadioId )
 	for i, findId in x311002_g_eventList do
@@ -371,7 +371,7 @@ function x311002_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 end
 
 --**********************************
---ËÀÍöÊÂ¼ş
+--æ­»äº¡äº‹ä»¶
 --**********************************
 function x311002_OnDie( sceneId, selfId, killerId )
 
@@ -382,17 +382,17 @@ function x311002_LockTime( sceneId, selfId, targetId, nTime )
 		return 
 	end
 	
-	-- Ö»ÓĞÔÚ ÂåÑô£¬ËÕÖİ£¬´óÀí£¬Â¥À¼£¬ÊøºÓ¹ÅÕò Õâ¼¸¸ö³¡¾°ÄÜ¹»¶³½áË«±¶¾­Ñé
+	-- åªæœ‰åœ¨ æ´›é˜³ï¼Œè‹å·ï¼Œå¤§ç†ï¼Œæ¥¼å…°ï¼ŒæŸæ²³å¤é•‡ è¿™å‡ ä¸ªåœºæ™¯èƒ½å¤Ÿå†»ç»“åŒå€ç»éªŒ
 	if sceneId~=0 and sceneId~=1 and sceneId~=2 and sceneId~=186 and sceneId~=420 
 			and sceneId ~= 193 and sceneId ~= 418 and sceneId ~= 419 and sceneId ~= 518  then	 -- zchw
 		return
 	end
 
-	-- »ñµÃ·şÎñÆ÷¼ÇÂ¼µÄÊµ¼ÊµÄÕæÊµÊ±¼ä
+	-- è·å¾—æœåŠ¡å™¨è®°å½•çš„å®é™…çš„çœŸå®æ—¶é—´
 	local nCurTime = LuaFnGetCurrentTime()
 	local nCurHave = DEGetFreeTime(sceneId, selfId)
 	nCurHave = nCurHave + DEGetMoneyTime(sceneId, selfId)
-	-- ÏÈ¼ÆËãÏÂµ±Ç°Íæ¼ÒÉíÉÏÊ£ÏÂµÄÊ±¼ä
+	-- å…ˆè®¡ç®—ä¸‹å½“å‰ç©å®¶èº«ä¸Šå‰©ä¸‹çš„æ—¶é—´
 	local nTrueTime = nCurHave;
 	
 	if nTrueTime < 0 then 
@@ -403,16 +403,16 @@ function x311002_LockTime( sceneId, selfId, targetId, nTime )
 	--DESetFreeTime(sceneId, selfId, nTrueTime)
 	
 	BeginEvent(sceneId)
-		AddText(sceneId,"  ÒÑ¾­¶³½áÁË" .. tostring(floor(nTrueTime/60)) .. "·ÖÖÓË«±¶¾­ÑéÊ±¼ä")
+		AddText(sceneId,"  å·²ç»å†»ç»“äº†" .. tostring(floor(nTrueTime/60)) .. "åˆ†é’ŸåŒå€ç»éªŒæ—¶é—´")
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 
 	BeginEvent(sceneId)
-		AddText(sceneId,"  ÒÑ¾­¶³½áÁË" .. tostring(floor(nTrueTime/60)) .. "·ÖÖÓË«±¶¾­ÑéÊ±¼ä")
+		AddText(sceneId,"  å·²ç»å†»ç»“äº†" .. tostring(floor(nTrueTime/60)) .. "åˆ†é’ŸåŒå€ç»éªŒæ—¶é—´")
 	EndEvent(sceneId)
 	DispatchMissionTips(sceneId,selfId)
 
-	-- Í¬²½Êı¾İµ½¿Í»§¶Ë
+	-- åŒæ­¥æ•°æ®åˆ°å®¢æˆ·ç«¯
 	SendDoubleExpToClient(sceneId,selfId)
 
 end

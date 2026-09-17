@@ -1,33 +1,33 @@
---Ê¥»ğ´«µİNPC - ´«ËÍ
+--åœ£ç«ä¼ é€’NPC - ä¼ é€
 
-x050108_g_ScriptId = 050108; --½Å±¾ºÅ
-x050108_g_name	="µ¶Ò¢";
+x050108_g_ScriptId = 050108; --è„šæœ¬å·
+x050108_g_name	="åˆ€å°§";
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x050108_g_eventId_yes = 0;
 x050108_g_eventId_no = 1;
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x050108_OnDefaultEvent( sceneId, selfId, targetId )
 	x050108_UpdateEventList( sceneId, selfId, targetId );
 end
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x050108_UpdateEventList( sceneId, selfId, targetId )
 	BeginEvent(sceneId);
-		AddText( sceneId, "ÎÒ¿ÉÒÔ½«Äú´«ËÍ³öÈ¥£¬ÊÇ·ñÒª´«ËÍ£¿" );
-		AddNumText( sceneId, x050108_g_ScriptId, "È·¶¨", 9, x050108_g_eventId_yes);
-		AddNumText( sceneId, x050108_g_ScriptId, "È¡Ïû", 8, x050108_g_eventId_no);
+		AddText( sceneId, "æˆ‘å¯ä»¥å°†æ‚¨ä¼ é€å‡ºå»ï¼Œæ˜¯å¦è¦ä¼ é€ï¼Ÿ" );
+		AddNumText( sceneId, x050108_g_ScriptId, "ç¡®å®š", 9, x050108_g_eventId_yes);
+		AddNumText( sceneId, x050108_g_ScriptId, "å–æ¶ˆ", 8, x050108_g_eventId_no);
 	EndEvent(sceneId);
 	DispatchEventList(sceneId, selfId, targetId);
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x050108_OnEventRequest( sceneId, selfId, targetId, eventId )
 	local selectEventId	= GetNumText();
@@ -42,13 +42,13 @@ function x050108_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x050108_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x050108_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 end

@@ -1,5 +1,5 @@
 MGR_TXT
-;ÂåÑôNPC
+;æ´›é˜³NPC
 000000=\obj\luoyang\oluoyang_suzhe.lua
 000001=\obj\luoyang\oluoyang_caijing.lua
 000002=\obj\luoyang\oluoyang_caibian.lua
@@ -130,7 +130,7 @@ MGR_TXT
 000127=\obj\luoyang\oluoyang_xilaile.lua
 000128=\obj\luoyang\oluoyang_wanghan.lua
 000129=\obj\luoyang\oluoyang_longbatian.lua
-;Õâ¸öÎÄ¼ş½ö´æÓÚ·â²â°æ±¾£¬ÔÚÆäËû°æ±¾ÌáÊ¾ÕÒ²»µ½Õâ¸ö½Å±¾ÊôÓÚÕı³£ÏÖÏó£¬²»Òª×¢ÊÍÕâĞĞ£¬ÒÔÃâ³öÏÖÎÊÌâ
+;è¿™ä¸ªæ–‡ä»¶ä»…å­˜äºå°æµ‹ç‰ˆæœ¬ï¼Œåœ¨å…¶ä»–ç‰ˆæœ¬æç¤ºæ‰¾ä¸åˆ°è¿™ä¸ªè„šæœ¬å±äºæ­£å¸¸ç°è±¡ï¼Œä¸è¦æ³¨é‡Šè¿™è¡Œï¼Œä»¥å…å‡ºç°é—®é¢˜
 000130=\obj\luoyang\oluoyang_zhuyuanping.lua
 000131=\obj\luoyang\oluoyang_yanruyu.lua
 000132=\obj\luoyang\oluoyang_gongcaili.lua
@@ -149,7 +149,7 @@ MGR_TXT
 000152=\obj\luoyang\oluoyang_QiuBiTe.lua
 000153=\obj\luoyang\oluoyang_cuiwei.lua
 000154=\obj\luoyang\oluoyang_zhouran.lua
-;ËÕÖİNPC
+;è‹å·NPC
 001000=\obj\suzhou\osuzhou_wanganshi.lua
 001001=\obj\suzhou\osuzhou_ouyangxiu.lua
 001002=\obj\suzhou\osuzhou_sushi.lua
@@ -228,7 +228,7 @@ MGR_TXT
 001083=\obj\suzhou\osuzhou_yunsier.lua
 001084=\obj\suzhou\osuzhou_fanchuncui.lua
 001085=\obj\suzhou\osuzhou_weidashu.lua
-;Â¥À¼¹Å³Ç
+;æ¥¼å…°å¤åŸ
 001100=\obj\loulangucheng\oloulan_ainiwaer.lua
 001101=\obj\loulangucheng\oloulan_chengyaotie.lua
 001102=\obj\loulangucheng\oloulan_antuoao.lua
@@ -292,13 +292,13 @@ MGR_TXT
 001168=\obj\loulangucheng\oloulan_jinjiuling.lua
 001169=\obj\loulangucheng\oloulan_yupo.lua
 
-;´óÍğ
+;å¤§å®›
 001160=\obj\dawan\odawan_zhangpingwei.lua
 001161=\obj\dawan\odawan_sumao.lua
 001162=\obj\dawan\odawan_linzeng.lua
 001163=\obj\dawan\odawan_lansuoan.lua
 
-;ÊøºÓ
+;æŸæ²³
 001170=\obj\shuheguzhen\oshuhe_haba.lua
 001171=\obj\shuheguzhen\oshuhe_xuxiake.lua
 001172=\obj\shuheguzhen\oshuhe_limingyang.lua
@@ -348,7 +348,7 @@ MGR_TXT
 001216=\obj\shuheguzhen\oshuhe_wangmohan.lua
 001217=\obj\shuheguzhen\oshuhe_lvliugege.lua
 
-;»ªÉ½ÂÛ½£
+;åå±±è®ºå‰‘
 001230=\event\huashan\ehuashan_1.lua
 001231=\event\huashan\ehuashan_2.lua
 001232=\event\huashan\ehuashan_3.lua
@@ -356,7 +356,7 @@ MGR_TXT
 001234=\event\huashan\ehuashan_5.lua
 001235=\event\huashan\oMiJi.lua
 
-;´óÀíNPC
+;å¤§ç†NPC
 002000=\obj\dali\odali_wangshao.lua
 002001=\obj\dali\odali_shenkuo.lua
 002002=\obj\dali\odali_mifu.lua
@@ -451,7 +451,7 @@ MGR_TXT
 002092=\obj\dali\odali_liuzhongfu.lua
 002093=\obj\dali\odali_fanchunli.lua
 
-;áÔÉ½NPC
+;åµ©å±±NPC
 003001=\obj\songshan\osongshan_chaijin.lua
 003002=\obj\songshan\osongshan_xiaorang.lua
 003003=\obj\songshan\osongshan_lusong.lua
@@ -462,7 +462,7 @@ MGR_TXT
 003008=\obj\songshan\osongshan_suolin.lua
 003101=\obj\songshan\osongshan_shop.lua
 003111=\obj\songshan\osongshan_sign.lua
-;Ì«ºşNPC
+;å¤ªæ¹–NPC
 004001=\obj\taihu\otaihu_huyanqing.lua
 004002=\obj\taihu\otaihu_ligang.lua
 004003=\obj\taihu\otaihu_caochun.lua
@@ -474,7 +474,7 @@ MGR_TXT
 004009=\obj\taihu\otaihu_niyun.lua
 004101=\obj\taihu\otaihu_shop.lua
 004111=\obj\taihu\otaihu_sign.lua
-;¾µºşNPC
+;é•œæ¹–NPC
 005001=\obj\jinghu\ojinghu_ruanxingzhu.lua
 005002=\obj\jinghu\ojinghu_yahuan.lua
 005101=\obj\jinghu\ojinghu_shop.lua
@@ -488,7 +488,7 @@ MGR_TXT
 005118=\event\jinghu\ejinghu_Boss_2.lua
 005119=\event\jinghu\ejinghu_Boss_3.lua
 
-;ÎŞÁ¿É½NPC
+;æ— é‡å±±NPC
 006001=\obj\wuliang\owuliang_zhongling.lua
 006002=\obj\wuliang\owuliang_mawude.lua
 006003=\obj\wuliang\owuliang_zuozimu.lua
@@ -503,7 +503,7 @@ MGR_TXT
 006101=\obj\wuliang\owuliang_shop.lua
 006111=\obj\wuliang\owuliang_sign.lua
 
-;±í¸ñÈÎÎñ¶Î
+;è¡¨æ ¼ä»»åŠ¡æ®µ
 006666=\event\EventScript\event_shaguai.lua
 006667=\event\EventScript\event_lootitem.lua
 006668=\event\EventScript\event_songxin.lua
@@ -512,7 +512,7 @@ MGR_TXT
 006672=\event\EventScript\mod_event.lua
 006673=\event\EventScript\client_GiveRose.lua
 
-;½£¸óNPC
+;å‰‘é˜NPC
 007001=\obj\jiange\ojiange_jiangguizhi.lua
 007002=\obj\jiange\ojiange_jiangnan.lua
 007003=\obj\jiange\ojiange_jiangbei.lua
@@ -526,7 +526,7 @@ MGR_TXT
 ;zchw
 007112=\obj\jiange\ojiange_yingwuming.lua
 007113=\obj\jiange\ojiange_longjia.lua
-;¶Ø»ÍNPC
+;æ•¦ç…ŒNPC
 008001=\obj\dunhuang\odunhuang_yangwenguang.lua
 008002=\obj\dunhuang\odunhuang_zhaoxingde.lua
 008003=\obj\dunhuang\odunhuang_zhuwangli.lua
@@ -544,7 +544,7 @@ MGR_TXT
 008101=\obj\dunhuang\odunhuang_shop.lua
 008111=\obj\dunhuang\odunhuang_sign.lua
 008112=\obj\dunhuang\odunhuang_wangyan.lua
-;ÉÙÁÖNPC
+;å°‘æ—NPC
 009001=\obj\shaolin\oshaolin_yuangen.lua
 009002=\obj\shaolin\oshaolin_xuannan.lua
 009003=\obj\shaolin\oshaolin_xuanji.lua
@@ -569,10 +569,10 @@ MGR_TXT
 009033=\obj\shaolin\oshaolin_dizi_4.lua
 009034=\obj\shaolin\oshaolin_zhikeseng.lua
 
-;BOSSÈºÏà¹Ø½Å±¾
+;BOSSç¾¤ç›¸å…³è„šæœ¬
 009035=\obj\shaolin\oshaolin_xuanzheng.lua
 
-;Ø¤°ïNPC
+;ä¸å¸®NPC
 010000=\obj\gaibang\ogaibang_chenguyan.lua
 010001=\obj\gaibang\ogaibang_baishijing.lua
 010002=\obj\gaibang\ogaibang_foyin.lua
@@ -593,10 +593,10 @@ MGR_TXT
 010033=\obj\gaibang\ogaibang_dizi_4.lua
 010034=\obj\gaibang\ogaibang_zhikeqigai.lua
 
-;BOSSÈºÏà¹Ø½Å±¾
+;BOSSç¾¤ç›¸å…³è„šæœ¬
 010035=\obj\gaibang\ogaibang_ouyangguo.lua
 
-;Ã÷½ÌNPC
+;æ˜æ•™NPC
 011000=\obj\mingjiao\omingjiao_linshichang.lua
 011001=\obj\mingjiao\omingjiao_fangla.lua
 011002=\obj\mingjiao\omingjiao_fangbaihua.lua
@@ -617,10 +617,10 @@ MGR_TXT
 011033=\obj\mingjiao\omingjiao_dizi_4.lua
 011034=\obj\mingjiao\omingjiao_zhikehuwei.lua
 
-;BOSSÈºÏà¹Ø½Å±¾
+;BOSSç¾¤ç›¸å…³è„šæœ¬
 011035=\obj\mingjiao\omingjiao_shigang.lua
 
-;Îäµ±NPC
+;æ­¦å½“NPC
 012000=\obj\wudang\owudang_chengruoqing.lua
 012001=\obj\wudang\owudang_heyundaoren.lua
 012002=\obj\wudang\owudang_huangchang.lua
@@ -642,13 +642,13 @@ MGR_TXT
 012033=\obj\wudang\owudang_dizi_4.lua
 012034=\obj\wudang\owudang_zhikedaoren.lua
 
-;BOSSÈºÏà¹Ø½Å±¾
+;BOSSç¾¤ç›¸å…³è„šæœ¬
 012035=\obj\wudang\owudang_xiaotianyi.lua
 
-;Îäµ±NPC
+;æ­¦å½“NPC
 012066=\obj\wudang\owudang_jinchushanren.lua
 
-;ÌìÁúËÂNPC
+;å¤©é¾™å¯ºNPC
 013000=\obj\tianlong\otianlong_kurong.lua
 013001=\obj\tianlong\otianlong_benyin.lua
 013002=\obj\tianlong\otianlong_bencan.lua
@@ -676,10 +676,10 @@ MGR_TXT
 013033=\obj\tianlong\otianlong_dizi_4.lua
 013034=\obj\tianlong\otianlong_zhikeseng.lua
 
-;BOSSÈºÏà¹Ø½Å±¾
+;BOSSç¾¤ç›¸å…³è„šæœ¬
 013035=\obj\tianlong\otianlong_benming.lua
 
-;åĞÒ£Áè²¨¶´NPC
+;é€é¥å‡Œæ³¢æ´NPC
 014000=\obj\xiaoyao\oxiaoyao_suxinghe.lua
 014001=\obj\xiaoyao\oxiaoyao_kangguangling.lua
 014002=\obj\xiaoyao\oxiaoyao_fanbailing.lua
@@ -699,10 +699,10 @@ MGR_TXT
 014033=\obj\xiaoyao\oxiaoyao_dizi_4.lua
 014034=\obj\xiaoyao\oxiaoyao_zhikeshi.lua
 
-;BOSSÈºÏà¹Ø½Å±¾
+;BOSSç¾¤ç›¸å…³è„šæœ¬
 014035=\obj\xiaoyao\oxiaoyao_gongzhizichang.lua
 
-;¶ëáÒNPC
+;å³¨åµ‹NPC
 015000=\obj\emei\oemei_mengqingqing.lua
 015001=\obj\emei\oemei_lishierniang.lua
 015002=\obj\emei\oemei_hanyinxue.lua
@@ -724,10 +724,10 @@ MGR_TXT
 015033=\obj\emei\oemei_dizi_4.lua
 015034=\obj\emei\oemei_zhikeshi.lua
 
-;BOSSÈºÏà¹Ø½Å±¾
+;BOSSç¾¤ç›¸å…³è„šæœ¬
 015035=\obj\emei\oemei_liusanmei.lua
 
-;ĞÇËŞº£NPC
+;æ˜Ÿå®¿æµ·NPC
 016000=\obj\xingxiu\oxingxiu_dingchunqiu.lua
 016001=\obj\xingxiu\oxingxiu_hanshizhong.lua
 016002=\obj\xingxiu\oxingxiu_hongyu.lua
@@ -748,10 +748,10 @@ MGR_TXT
 016033=\obj\xingxiu\oxingxiu_dizi_4.lua
 016034=\obj\xingxiu\oxingxiu_zhikeshi.lua
 
-;BOSSÈºÏà¹Ø½Å±¾
+;BOSSç¾¤ç›¸å…³è„šæœ¬
 016035=\obj\xingxiu\oxingxiu_tianxuanzi.lua
 
-;ÌìÉ½NPC
+;å¤©å±±NPC
 017000=\obj\tianshan\otianshan_tianshantonglao.lua
 017001=\obj\tianshan\otianshan_meijian.lua
 017002=\obj\tianshan\otianshan_lanjian.lua
@@ -769,10 +769,10 @@ MGR_TXT
 017033=\obj\tianshan\otianshan_dizi_4.lua
 017034=\obj\tianshan\otianshan_zhikeshi.lua
 
-;BOSSÈºÏà¹Ø½Å±¾
+;BOSSç¾¤ç›¸å…³è„šæœ¬
 017035=\obj\tianshan\otianshan_dengpo.lua
 
-;ÑãÄÏNPC
+;é›å—NPC
 018000=\obj\yannan\oyannan_chongshiheng.lua
 018001=\obj\yannan\oyannan_koufeng.lua
 018002=\obj\yannan\oyannan_machengqian.lua
@@ -786,9 +786,9 @@ MGR_TXT
 018032=\obj\yannan\oyannan_chuansong_3.lua
 018101=\obj\yannan\oyannan_shop.lua
 018111=\obj\yannan\oyannan_sign.lua
-;Ä¦ÑÂ¶´NPC
+;æ‘©å´–æ´NPC
 018112=\obj\moyadong\omoyadong_moyuntian.lua
-;Ñã±±NPC
+;é›åŒ—NPC
 019000=\obj\yanbei\oyanbei_luping.lua
 019001=\obj\yanbei\oyanbei_miaoqing.lua
 019002=\obj\yanbei\oyanbei_quduan.lua
@@ -801,7 +801,7 @@ MGR_TXT
 019033=\obj\yanbei\oyanbei_mudao.lua
 019101=\obj\yanbei\oyanbei_shop.lua
 019111=\obj\yanbei\oyanbei_sign.lua
-;²İÔ­NPC
+;è‰åŸNPC
 020000=\obj\caoyuan\ocaoyuan_ruancheng.lua
 020001=\obj\caoyuan\ocaoyuan_ruanlaotaitai.lua
 020002=\obj\caoyuan\ocaoyuan_ruanshi.lua
@@ -817,7 +817,7 @@ MGR_TXT
 020032=\obj\caoyuan\ocaoyuan_chuansong_3.lua
 020101=\obj\caoyuan\ocaoyuan_shop.lua
 020111=\obj\caoyuan\ocaoyuan_sign.lua
-;ÁÉÎ÷NPC
+;è¾½è¥¿NPC
 021000=\obj\liaoxi\oliaoxi_batu.lua
 021001=\obj\liaoxi\oliaoxi_boerlun.lua
 021002=\obj\liaoxi\oliaoxi_boyan.lua
@@ -832,13 +832,13 @@ MGR_TXT
 021032=\obj\liaoxi\oliaoxi_chuansong_3.lua
 021101=\obj\liaoxi\oliaoxi_shop.lua
 021111=\obj\liaoxi\oliaoxi_sign.lua
-;Òø°¨Ñ©Ô­
+;é“¶çš‘é›ªåŸ
 021009=\obj\xueyuan\oliaoxi_zhouyou.lua
 021200=\obj\xueyuan\oxueyuan_ninglingge.lua
 021201=\obj\xueyuan\oxueyuan_bola.lua
 021202=\obj\xueyuan\oxueyuan_yuanping.lua
 021203=\obj\xueyuan\oxueyuan_doudou.lua
-;³¤°×É½npc
+;é•¿ç™½å±±npc
 022001=\obj\changbai\ochangbai_wanyaneguda.lua
 022002=\obj\changbai\ochangbai_wanyanyingge.lua
 022003=\obj\changbai\ochangbai_wanyanwuzhu.lua
@@ -855,7 +855,7 @@ MGR_TXT
 022032=\obj\changbai\ochangbai_chuansong_3.lua
 022101=\obj\changbai\ochangbai_shop.lua
 022111=\obj\changbai\ochangbai_sign.lua
-;»ÆÁú¸®NPC
+;é»„é¾™åºœNPC
 023001=\obj\huanglong\ohuanglong_tuobawen.lua
 023002=\obj\huanglong\ohuanglong_yuwensu.lua
 023003=\obj\huanglong\ohuanglong_xiyan.lua
@@ -868,7 +868,7 @@ MGR_TXT
 023032=\obj\huanglong\ohuanglong_chuansong_3.lua
 023101=\obj\huanglong\ohuanglong_shop.lua
 023111=\obj\huanglong\ohuanglong_sign.lua
-;¶ıº£NPC
+;æ´±æµ·NPC
 024001=\obj\erhai\oerhai_daorao.lua
 024002=\obj\erhai\oerhai_daolangxuan.lua
 024003=\obj\erhai\oerhai_daoyinluo.lua
@@ -880,7 +880,7 @@ MGR_TXT
 024032=\obj\erhai\oerhai_chuansong_3.lua
 024101=\obj\erhai\oerhai_shop.lua
 024111=\obj\erhai\oerhai_sign.lua
-;²ÔÉ½NPC
+;è‹å±±NPC
 025001=\obj\cangshan\ocangshan_shadu.lua
 025002=\obj\cangshan\ocangshan_shashang.lua
 025003=\obj\cangshan\ocangshan_shalu.lua
@@ -895,7 +895,7 @@ MGR_TXT
 025111=\obj\cangshan\ocangshan_sign.lua
 025112=\obj\cangshan\ocangshan_saxue.lua
 025113=\obj\cangshan\ocangshan_sunkun.lua
-;Ê¯ÁÖNPC
+;çŸ³æ—NPC
 026000=\obj\shilin\oshilin_zhengxuan.lua
 026001=\obj\shilin\oshilin_qinhongmian.lua
 026002=\obj\shilin\oshilin_liangapo.lua
@@ -910,7 +910,7 @@ MGR_TXT
 026032=\obj\shilin\oshilin_chuansong_3.lua
 026101=\obj\shilin\oshilin_shop.lua
 026111=\obj\shilin\oshilin_sign.lua
-;ÓñÏªNPC
+;ç‰æºªNPC
 027001=\obj\yuxi\oyuxi_suomula.lua
 027002=\obj\yuxi\oyuxi_gulula.lua
 027003=\obj\yuxi\oyuxi_luobo.lua
@@ -923,7 +923,7 @@ MGR_TXT
 027032=\obj\yuxi\oyuxi_chuansong_3.lua
 027101=\obj\yuxi\oyuxi_shop.lua
 027111=\obj\yuxi\oyuxi_sign.lua
-;ÄÏÚ¯NPC
+;å—è¯NPC
 028000=\obj\nanzhao\onanzhao_awa.lua
 028001=\obj\nanzhao\onanzhao_awang.lua
 028002=\obj\nanzhao\onanzhao_baijingwu.lua
@@ -935,7 +935,7 @@ MGR_TXT
 028032=\obj\nanzhao\onanzhao_chuansong_3.lua
 028101=\obj\nanzhao\onanzhao_shop.lua
 028111=\obj\nanzhao\onanzhao_sign.lua
-;Ãç½®npc
+;è‹—ç–†npc
 029001=\obj\miaojiang\omiaojiang_ayu.lua
 029002=\obj\miaojiang\omiaojiang_asong.lua
 029003=\obj\miaojiang\omiaojiang_shizhongyan.lua
@@ -947,7 +947,7 @@ MGR_TXT
 029032=\obj\miaojiang\omiaojiang_chuansong_3.lua
 029101=\obj\miaojiang\omiaojiang_shop.lua
 029111=\obj\miaojiang\omiaojiang_sign.lua
-;Î÷ºşNPC
+;è¥¿æ¹–NPC
 030000=\obj\xihu\oxihu_jindajian.lua
 030001=\obj\xihu\oxihu_mahan.lua
 030003=\obj\xihu\oxihu_sufei.lua
@@ -960,7 +960,7 @@ MGR_TXT
 030032=\obj\xihu\oxihu_chuansong_3.lua
 030101=\obj\xihu\oxihu_shop.lua
 030111=\obj\xihu\oxihu_sign.lua
-;ÁúÈªNPC
+;é¾™æ³‰NPC
 031001=\obj\longquan\oyanbei_wengbozhi.lua
 031002=\obj\longquan\oyanbei_wengshuzhi.lua
 031003=\obj\longquan\oyanbei_wengjizhi.lua
@@ -976,7 +976,7 @@ MGR_TXT
 031032=\obj\longquan\olongquan_chuansong_3.lua
 031101=\obj\longquan\olongquan_shop.lua
 031111=\obj\longquan\olongquan_sign.lua
-;ÎäÒÄNPC
+;æ­¦å¤·NPC
 032001=\obj\wuyi\owuyi_quyang.lua
 032002=\obj\wuyi\owuyi_ziwei.lua
 032003=\obj\wuyi\owuyi_shuixian.lua
@@ -989,7 +989,7 @@ MGR_TXT
 032101=\obj\wuyi\owuyi_shop.lua
 032111=\obj\wuyi\owuyi_sign.lua
 032112=\obj\wuyi\owuyi_wangchen.lua
-;Ã·ÁëNPC
+;æ¢…å²­NPC
 033001=\obj\meiling\omeiling_shenwansan.lua
 033002=\obj\meiling\omeiling_taiyanghua.lua
 033003=\obj\meiling\omeiling_jingji.lua
@@ -1006,7 +1006,7 @@ MGR_TXT
 033032=\obj\meiling\omeiling_chuansong_3.lua
 033101=\obj\meiling\omeiling_shop.lua
 033111=\obj\meiling\omeiling_sign.lua
-;ÄÏº£NPC
+;å—æµ·NPC
 034001=\obj\nanhai\onanhai_yeliufan.lua
 034002=\obj\nanhai\onanhai_dinglianyi.lua
 034003=\obj\nanhai\onanhai_yuezhongqiu.lua
@@ -1018,7 +1018,7 @@ MGR_TXT
 034032=\obj\nanhai\onanhai_chuansong_3.lua
 034101=\obj\nanhai\onanhai_shop.lua
 034111=\obj\nanhai\onanhai_sign.lua
-;ÇíÖİNPC
+;ç¼å·NPC
 035001=\obj\qiongzhou\oqiongzhou_youyou.lua
 035002=\obj\qiongzhou\oqiongzhou_yuanzijin.lua
 035003=\obj\qiongzhou\oqiongzhou_lingyici.lua
@@ -1032,7 +1032,7 @@ MGR_TXT
 035101=\obj\qiongzhou\oqiongzhou_shop.lua
 035111=\obj\qiongzhou\oqiongzhou_sign.lua
 
-;¾ÛÏÍ×¯2
+;èšè´¤åº„2
 036001=\obj\juqing_06\xiaofeng.lua
 036002=\obj\juqing_06\azhu.lua
 036003=\obj\juqing_06\xujinglei.lua
@@ -1044,15 +1044,15 @@ MGR_TXT
 036009=\obj\juqing_06\azhu_ly.lua
 036010=\obj\juqing_06\xumuhua.lua
 
-;Ñà×ÓÎë°×Ìì
+;ç‡•å­åç™½å¤©
 037001=\obj\juqing_04\duanyu.lua
 037002=\obj\juqing_04\wangyuyan.lua
 037003=\obj\juqing_04\murongfu.lua
-;ÊÂ¼şÇøÓòµÄ½Å±¾
+;äº‹ä»¶åŒºåŸŸçš„è„šæœ¬
 037004=\obj\juqing_04\battle.lua
 037005=\obj\juqing_04\laogu.lua
 
-;Ò»Æ·ÌÃ°×Ìì
+;ä¸€å“å ‚ç™½å¤©
 038001=\obj\juqing_12\xuzhu.lua
 038002=\obj\juqing_12\gongnv.lua
 038003=\obj\juqing_12\gongzhu.lua
@@ -1062,12 +1062,12 @@ MGR_TXT
 038007=\obj\juqing_12\murongfu.lua
 038008=\obj\juqing_12\yinghao.lua
 
-;±¦²Ø¶´Ò»ÖÁÎå²ã
+;å®è—æ´ä¸€è‡³äº”å±‚
 039001=\obj\baozangdong\obaozang_yaodian.lua
-;ÑàÍõ¹ÅÄ¹Ò»ÖÁ¾Å²ã
+;ç‡•ç‹å¤å¢“ä¸€è‡³ä¹å±‚
 040000=\obj\yanwanggumu\oyanwanggumu_guodihui.lua
 040001=\obj\yanwanggumu\oyanwanggumu_yanbieqiu.lua
-;ÑÎºş
+;ç›æ¹–
 041500=\obj\yanhu\oyanhu_cunmin.lua
 041501=\obj\yanhu\oyanhu_dingbolang.lua
 041502=\obj\yanhu\oyanhu_liruoshui.lua
@@ -1076,7 +1076,7 @@ MGR_TXT
 041505=\obj\yanhu\oyanhu_yuwenshi.lua
 041506=\obj\yanhu\oyanhu_zhengyang.lua
 
-;»ğÑæÉ½
+;ç«ç„°å±±
 042500=\obj\huoyanshan\ohuoyanshan_baiyingzhong.lua
 042501=\obj\huoyanshan\ohuoyanshan_hatusi.lua
 042502=\obj\huoyanshan\ohuoyanshan_ake.lua
@@ -1091,7 +1091,7 @@ MGR_TXT
 042511=\obj\huoyanshan\ohuoyanshan_cunmin.lua
 042512=\obj\huoyanshan\ohuoyanshan_suicong.lua
 042513=\obj\huoyanshan\ohuoyanshan_suiconghuokang.lua
-;¸ß²ı
+;é«˜æ˜Œ
 043500=\obj\gaochang\ogaochang_yuefeiying.lua
 043501=\obj\gaochang\ogaochang_mitiya.lua
 043502=\obj\gaochang\ogaochang_boximi.lua
@@ -1102,7 +1102,7 @@ MGR_TXT
 043507=\obj\gaochang\ogaochang_aisuer.lua
 043508=\obj\gaochang\ogaochang_zhongyuanshangren.lua
 
-;ËşÀïÄ¾
+;å¡”é‡Œæœ¨
 044500=\obj\talimu\otalimu_aerjin.lua
 044501=\obj\talimu\otalimu_luosha.lua
 044502=\obj\talimu\otalimu_tina.lua
@@ -1113,20 +1113,20 @@ MGR_TXT
 044507=\obj\talimu\otalimu_lande.lua
 044508=\obj\talimu\otalimu_cunmin.lua
 
-;µØ¹¬NPC  zchw
+;åœ°å®«NPC  zchw
 044600=\obj\digong\businessman.lua
 044601=\obj\digong\odigong_gaoshengtai.lua
 044602=\obj\digong\odigong_nuerhai.lua
 044603=\obj\digong\odigong_huipaolaozhe.lua
 044604=\obj\digong\odigong_chenzhanglao.lua
-;Õäçç
+;çç‘
 044000=\obj\zhenlong\ozhenlong_qisheng.lua
 
-;Â¥À¼Ñ°±¦NPC zchw
+;æ¥¼å…°å¯»å®NPC zchw
 044700=\obj\seektreasure\oseektreasure_jinjiumiao.lua
 
-;»î¶¯Ïà¹Ø½Å±¾
-;ÖĞÇïÏà¹Ø½Å±¾
+;æ´»åŠ¨ç›¸å…³è„šæœ¬
+;ä¸­ç§‹ç›¸å…³è„šæœ¬
 050001=\obj\suzhou\osuzhou_yuechangyuan.lua
 050002=\obj\festival\midautumn\omidautumn_sushi.lua
 050003=\obj\festival\midautumn\omidautumn_huangtingjian.lua
@@ -1138,19 +1138,19 @@ MGR_TXT
 050009=\event\festival\midautumn\emidautumn.lua
 050010=\event\festival\midautumn\emidautumn_fight.lua
 050011=\event\festival\midautumn\echuansong_bianguan.lua
-;Ôô±øÈëÇÖ
+;è´¼å…µå…¥ä¾µ
 050012=\obj\DynamicNPC\oDynamicNPC_ThiefSoldier.lua
 050013=\event\xunhuan\eDynamicNPC_ThiefSoldier.lua
 050014=\obj\DynamicNPC\oDynamicNPC_ThiefSoldier_JiangLi.lua
 050015=\event\xunhuan\eDynamicNPC_ThiefSoldier_JiangLi.lua
 050016=\obj\DynamicNPC\oDynamicNPC_ThiefSoldier_Generate.lua
-;ÖĞÇïÏà¹Ø½Å±¾
+;ä¸­ç§‹ç›¸å…³è„šæœ¬
 050017=\event\festival\midautumn\emidautumn_yutuxiafan.lua
 050018=\event\festival\midautumn\emidautumn_fangyianhua_zqkl.lua
 050019=\event\festival\midautumn\emidautumn_fangyianhua_gqkl.lua
 050020=\event\festival\midautumn\emidautumn_bianshenpie.lua
 050058=\event\festival\midautumn\emidautumn_yutuxiafan_boss.lua
-;07Ê¥µ®Ôªµ©»î¶¯Ïà¹Ø½Å±¾
+;07åœ£è¯å…ƒæ—¦æ´»åŠ¨ç›¸å…³è„šæœ¬
 050021=\event\festival\christmas07\quiz_XiCongTianJiang.lua
 050022=\event\festival\christmas07\eXiCongTianJiang.lua
 050023=\event\festival\christmas07\nightwatchgift.lua
@@ -1162,7 +1162,7 @@ MGR_TXT
 050029=\event\festival\christmas07\quiz_DaoJiShiDaTi.lua
 229024=\event\festival\christmas07\SuZhouZuoTong_QianXun.lua
 
-;07´º½Ú»î¶¯Ïà¹Ø½Å±¾
+;07æ˜¥èŠ‚æ´»åŠ¨ç›¸å…³è„šæœ¬
 050030=\event\festival\SpringFestival07\BossChunWanMain.lua
 050031=\event\festival\SpringFestival07\CWChapter01.lua
 050032=\event\festival\SpringFestival07\CWChapter02.lua
@@ -1193,7 +1193,7 @@ MGR_TXT
 050059=\event\festival\SpringFestival07\ShiMen_CaiJi.lua
 050061=\event\festival\SpringFestival07\ShiMen_CaiJi_Task.Lua
 
-;Á¬»·¸±±¾ÈÎÎñ
+;è¿ç¯å‰¯æœ¬ä»»åŠ¡
 050100=\event\xunhuan\boundary_between_song_and_liao.lua
 050101=\event\xunhuan\bamboo_forest.lua
 050102=\event\xunhuan\field_fastness.lua
@@ -1201,33 +1201,33 @@ MGR_TXT
 050104=\event\xunhuan\forest_exit.lua
 050105=\event\xunhuan\fastness_exit.lua
 050106=\event\xunhuan\relation_qianhongyu.lua
-;Ê¥»ğ´«µİ¸±±¾
+;åœ£ç«ä¼ é€’å‰¯æœ¬
 050107=\obj\zuqiuchang\ozuqiuchang_zhouwuwei.lua
 050108=\obj\paiqiuchang\opaiqiuchang_daoyao.lua
 050109=\obj\lanqiuchang\olanqiuchang_sufei.lua
-;Â¥À¼ĞÂÈı»·NPC
+;æ¥¼å…°æ–°ä¸‰ç¯NPC
 050110=\obj\loulangucheng\oloulan_heyue.lua
 050111=\obj\loulangucheng\oloulan_liudun.lua
 050112=\obj\dumuchang\odumuchang_rendaoqing.lua
-;ÄÉÁ¹NPC½Å±¾
+;çº³å‡‰NPCè„šæœ¬
 050200=\obj\xihu\oxihu_xueren.lua
 050201=\obj\xihu\oxihu_xiaofan.lua
 050202=\obj\xihu\oxihu_qunzhong.lua
 050203=\obj\xihu\oxihu_lingzhen.lua
-;ĞÂÈı»·¸±±¾ÈÎÎñ
+;æ–°ä¸‰ç¯å‰¯æœ¬ä»»åŠ¡
 050220=\event\xunhuan\xinsanhuan_1.lua
 050221=\event\xunhuan\xinsanhuan_2.lua
 050222=\event\xunhuan\xinsanhuan_3.lua
-;ËÀÍö³¡¾°NPC
+;æ­»äº¡åœºæ™¯NPC
 077001=\obj\siwang\osiwang_mengpo.lua
-;¼àÓüNPC
+;ç›‘ç‹±NPC
 077011=\obj\prison\oprison_jailer.lua
 
-;ĞşÎäµºNPC
+;ç„æ­¦å²›NPC
 112001=\obj\petisland\opetisland_guijia.lua
 112002=\obj\petisland\opetisland_shazhouleng.lua
 
-;¾ÛÏÍ×¯1
+;èšè´¤åº„1
 113001=\obj\juqing_05\xiaofeng.lua
 113002=\obj\juqing_05\xujinglei.lua
 113003=\obj\juqing_05\luren_1.lua
@@ -1236,26 +1236,26 @@ MGR_TXT
 113006=\obj\juqing_05\luren_4.lua
 113007=\obj\juqing_05\luoyang_area.lua
 
-;Ñà×ÓÎë1
+;ç‡•å­å1
 114001=\obj\juqing_03\duanyu.lua
 114002=\obj\juqing_03\wangyuyan.lua
 114003=\obj\juqing_03\azhu.lua
 114004=\obj\juqing_03\laogu.lua
 
-;Ò»Æ·ÌÃÒ¹¼ä
+;ä¸€å“å ‚å¤œé—´
 115001=\obj\juqing_11\xuzhu.lua
 115002=\obj\juqing_11\gongnv.lua
 115003=\obj\juqing_11\tianshantonglao.lua
 115004=\obj\juqing_11\liqiushui.lua
 115005=\obj\juqing_11\heliantieshu.lua
 
-;ÀŞ¹ÄÉ½°×Ìì
+;æ“‚é¼“å±±ç™½å¤©
 116001=\obj\juqing_09\xuzhu.lua
 116002=\obj\juqing_09\suxinghe.lua
 116003=\obj\juqing_09\dingchunqiu.lua
 116004=\obj\juqing_09\fanbailing.lua
 
-;ÀŞ¹ÄÉ½Ò¹¼ä
+;æ“‚é¼“å±±å¤œé—´
 117001=\obj\juqing_10\xuzhu.lua
 117002=\obj\juqing_10\suxinghe.lua
 117003=\obj\juqing_10\duanyanqing.lua
@@ -1283,7 +1283,7 @@ MGR_TXT
 117025=\obj\juqing_10\xuemuhua.lua
 117026=\obj\juqing_10\fanbeiling.lua
 
-;Íò½Ù¹È2
+;ä¸‡åŠ«è°·2
 118001=\obj\juqing_02\muren.lua
 118002=\obj\juqing_02\duanzhengchun.lua
 118003=\obj\juqing_02\duanzhengming.lua
@@ -1305,16 +1305,16 @@ MGR_TXT
 118019=\obj\juqing_02\zhongling.lua
 118020=\obj\juqing_02\duanyu.lua
 
-;Ö÷ÏßÊÂ¼ş
+;ä¸»çº¿äº‹ä»¶
 
-;Íò½Ù¹È1
+;ä¸‡åŠ«è°·1
 119001=\obj\juqing_01\muren.lua
 119002=\obj\juqing_01\zhongling.lua
 119003=\obj\juqing_01\shiren.lua
 119004=\obj\juqing_01\duanyanqing.lua
 119005=\obj\juqing_01\huahegen.lua
 
-;²ÔÃ£É½2
+;è‹èŒ«å±±2
 120001=\obj\juqing_08\xiaofeng.lua
 120002=\obj\juqing_08\azi.lua
 120003=\obj\juqing_08\huangdi.lua
@@ -1326,18 +1326,18 @@ MGR_TXT
 120009=\obj\juqing_08\area_1.lua
 120010=\obj\juqing_08\area_2.lua
 
-;²ÔÃ£É½1
+;è‹èŒ«å±±1
 121001=\obj\juqing_07\xiaofeng.lua
 121002=\obj\juqing_07\azi.lua
 121003=\obj\juqing_07\huangdi.lua
 121004=\obj\juqing_07\weibing.lua
 121005=\obj\juqing_07\yelvmoge.lua
-;Íò½Ù¹È
+;ä¸‡åŠ«è°·
 
-;²Ø¾­¸óNPC
+;è—ç»é˜NPC
 122001=\obj\cangjing\ocangjing_wuming.lua
 
-;»ªÉ½NPC
+;åå±±NPC
 125001=\obj\huashan\ohuashan_Npc_1.lua
 125002=\obj\huashan\ohuashan_Npc_2.lua
 125003=\obj\huashan\ohuashan_Npc_3.lua
@@ -1361,7 +1361,7 @@ MGR_TXT
 ;125017=\obj\huashan\ohuashan_xiaoyao_1.lua
 ;125018=\obj\huashan\ohuashan_xiaoyao_2.lua
 
-;¾º¼¼
+;ç«æŠ€
 125011=\obj\jingji\ojingji_Npc_1.lua
 125012=\obj\jingji\ojingji_Npc_2.lua
 125013=\obj\jingji\ojingji_Npc_3.lua
@@ -1370,16 +1370,16 @@ MGR_TXT
 125020=\event\jingji\ejingji_1.lua
 125021=\event\jingji\ejingji_2.lua
 
-;´ó±¦Ïä
+;å¤§å®ç®±
 125022=\event\jingji\ejingji_Box_1.lua
 
-;buff±¦Ïä
+;buffå®ç®±
 125023=\event\jingji\ejingji_Box_2.lua
 
-;Ê¯Í·Ïä×Ó
+;çŸ³å¤´ç®±å­
 125024=\event\jingji\ejingji_Box_3.lua
 
-;½á»éÀñÌÃ
+;ç»“å©šç¤¼å ‚
 155000=\obj\hunqing\ohunqing_xilaile.lua
 155001=\obj\hunqing\ohunqing_yuelao.lua
 155002=\obj\hunqing\ohunqing_yahuan.lua
@@ -1389,14 +1389,14 @@ MGR_TXT
 155007=\obj\hunqing\ohunqing_yizhang.lua
 155008=\obj\hunqing\ohunqing_lihua.lua
 
-;Ç®×¯
+;é’±åº„
 181000=\obj\qianzhuang\oqianzhuang_yuanbao.lua
 181001=\obj\qianzhuang\oqianzhuang_chuansong.lua
 181002=\obj\qianzhuang\oqianzhuang_remai.lua
 181003=\obj\qianzhuang\oqianzhuang_suishenyuanbao.lua
 181004=\obj\qianzhuang\oqianzhuang_moxun.lua
 
-;Íò½Ù¹È
+;ä¸‡åŠ«è°·
 200001=\event\juqing\wanjiegu_01.lua
 200002=\event\juqing\wanjiegu_02.lua
 200003=\event\juqing\wanjiegu_03.lua
@@ -1406,7 +1406,7 @@ MGR_TXT
 200007=\event\juqing\wanjiegu_07.lua
 200008=\event\juqing\wanjiegu_08.lua
 
-;Ñà×ÓÎë
+;ç‡•å­å
 200011=\event\juqing\yanziwu_01.lua
 200012=\event\juqing\yanziwu_02.lua
 200013=\event\juqing\yanziwu_03.lua
@@ -1415,7 +1415,7 @@ MGR_TXT
 200016=\event\juqing\yanziwu_06.lua
 200017=\event\juqing\yanziwu_07.lua
 
-;¾ÛÏÍ×¯
+;èšè´¤åº„
 200020=\event\juqing\juxianzhuang_01.lua
 200021=\event\juqing\juxianzhuang_02.lua
 200022=\event\juqing\juxianzhuang_03.lua
@@ -1424,7 +1424,7 @@ MGR_TXT
 200025=\event\juqing\juxianzhuang_06.lua
 200026=\event\juqing\juxianzhuang_07.lua
 
-;²ÔÃ£É½
+;è‹èŒ«å±±
 200030=\event\juqing\cangmangshan_01.lua
 200031=\event\juqing\cangmangshan_02.lua
 200032=\event\juqing\cangmangshan_03.lua
@@ -1435,7 +1435,7 @@ MGR_TXT
 200037=\event\juqing\cangmangshan_08.lua
 200038=\event\juqing\cangmangshan_09.lua
 
-;ÀŞ¹ÄÉ½
+;æ“‚é¼“å±±
 200040=\event\juqing\leigu_01.lua
 200041=\event\juqing\leigu_02.lua
 200042=\event\juqing\leigu_03.lua
@@ -1444,7 +1444,7 @@ MGR_TXT
 200045=\event\juqing\leigu_06.lua
 200046=\event\juqing\leigu_07.lua
 
-;Ò»Æ·ÌÃ
+;ä¸€å“å ‚
 200050=\event\juqing\yipin_01.lua
 200051=\event\juqing\yipin_02.lua
 200052=\event\juqing\yipin_03.lua
@@ -1454,10 +1454,10 @@ MGR_TXT
 200056=\event\juqing\yipin_07.lua
 200057=\event\juqing\yipin_08.lua
 
-;¾çÇéÅİÅİÊ¹ÓÃµÄº¯Êı½Ó¿Ú
+;å‰§æƒ…æ³¡æ³¡ä½¿ç”¨çš„å‡½æ•°æ¥å£
 200060=\event\juqing\paopao.lua
 
-;¾çÇéÖĞµÄËÍĞÅÈÎÎñ
+;å‰§æƒ…ä¸­çš„é€ä¿¡ä»»åŠ¡
 200080=\event\juqing\Delivery_01.lua
 200081=\event\juqing\Delivery_02.lua
 200082=\event\juqing\Delivery_04.lua
@@ -1478,12 +1478,12 @@ MGR_TXT
 200097=\event\juqing\Delivery_40.lua
 200098=\event\juqing\juqing_track.lua
 
-;¾çÇéÑ­»·ÈÎÎñµÄ½±ÀøÁìÈ¡
+;å‰§æƒ…å¾ªç¯ä»»åŠ¡çš„å¥–åŠ±é¢†å–
 200099=\event\juqing\juqing_award.lua
-;¾çÇéÑ­»·ÈÎÎñËµÃ÷
+;å‰§æƒ…å¾ªç¯ä»»åŠ¡è¯´æ˜
 200100=\event\juqing\juqing_shuoming.lua
 
-;Ö÷ÏßÊÂ¼ş
+;ä¸»çº¿äº‹ä»¶
 ;200001=\event\zhuxian\ezhuxian_0001.lua
 ;200101=\event\zhuxian\ezhuxian_0101.lua
 ;200102=\event\zhuxian\ezhuxian_0102.lua
@@ -1551,8 +1551,8 @@ MGR_TXT
 ;201901=\event\zhuxian\ezhuxian_1901.lua
 ;201902=\event\zhuxian\ezhuxian_1902.lua
 ;201911=\event\zhuxian\ezhuxian_1911.lua
-;Ö§ÏßÊÂ¼ş
-;´óÀí³ÇĞÂÊÖÖ¸µ¼ÈÎÎñ
+;æ”¯çº¿äº‹ä»¶
+;å¤§ç†åŸæ–°æ‰‹æŒ‡å¯¼ä»»åŠ¡
 210200=\event\dali\edali_zhidao_0200.lua
 210201=\event\dali\edali_zhidao_0201.lua
 210202=\event\dali\edali_zhidao_0202.lua
@@ -1605,10 +1605,10 @@ MGR_TXT
 210248=\event\dali\edali_LaborIsGlorious_2.lua
 210249=\event\dali\edali_LaborIsGlorious_3.lua
 
-;Ñ§Ï°ÃÅÅÉĞÂÊÖ¼¼ÄÜÒıµ¼ hzp 09-04-21
+;å­¦ä¹ é—¨æ´¾æ–°æ‰‹æŠ€èƒ½å¼•å¯¼ hzp 09-04-21
 210250=\event\dali\xinshoujineng.lua
 
-;´óÀí½»Í¨¹¤¾ßÊÂ¼ş½Å±¾£¨6¸ö£©
+;å¤§ç†äº¤é€šå·¥å…·äº‹ä»¶è„šæœ¬ï¼ˆ6ä¸ªï¼‰
 210281=\event\dali\edali_0281.lua
 210282=\event\dali\edali_0282.lua
 210283=\event\dali\edali_0283.lua
@@ -1617,43 +1617,43 @@ MGR_TXT
 210286=\event\dali\edali_0286.lua
 210287=\event\dali\edali_0287.lua
 210299=\event\dali\ride.lua
-;³¡¾°ÈÎÎñ
-;Î÷ºş ËÕ·ÉµÄÊÀ½ç
+;åœºæ™¯ä»»åŠ¡
+;è¥¿æ¹– è‹é£çš„ä¸–ç•Œ
 212100=\event\sceneevent\exihu_648.lua
-;Ñã±± ³ÏÒâµÄ¿¼Ñé
+;é›åŒ— è¯šæ„çš„è€ƒéªŒ
 212102=\event\sceneevent\eyanbei_536.lua
-;Ê¯ÁÖ ¾øÍûÖ®µØ
+;çŸ³æ— ç»æœ›ä¹‹åœ°
 212103=\event\sceneevent\eshilin_602.lua
-;Ê¯ÁÖ ¿ÉÅÂµÄÕæÏà
+;çŸ³æ— å¯æ€•çš„çœŸç›¸
 212104=\event\sceneevent\eshilin_608.lua
-;²İÔ­ ÓÂÆø
+;è‰åŸ å‹‡æ°”
 ;212105=\event\sceneevent\ecaoyuan_546.lua
-;²İÔ­ Áé»êµÄºô»½
+;è‰åŸ çµé­‚çš„å‘¼å”¤
 ;212106=\event\sceneevent\ecaoyuan_547.lua
-;ÁÉÎ÷ Çı¸ÏºÚ·ä
+;è¾½è¥¿ é©±èµ¶é»‘èœ‚
 212107=\event\sceneevent\eliaoxi_552.lua
-;ÁÉÎ÷ ÖØ½¨ÄÁ³¡
+;è¾½è¥¿ é‡å»ºç‰§åœº
 212108=\event\sceneevent\eliaoxi_554.lua
-;ÁúÈª ×îºóÒ»»÷ (É±¹Ö)
+;é¾™æ³‰ æœ€åä¸€å‡» (æ€æ€ª)
 212109=\event\sceneevent\elongquan_658.lua
-;³¤°Ù ×½ÃÔ²Ø£¨ºÍ¶à¸öNPC¶Ô»°£©
+;é•¿ç™¾ æ‰è¿·è—ï¼ˆå’Œå¤šä¸ªNPCå¯¹è¯ï¼‰
 212110=\event\sceneevent\echangbai_561.lua
-;ÓñÏª Ó¢ĞÛ¾ÈÃÀ
+;ç‰æºª è‹±é›„æ•‘ç¾
 212111=\event\sceneevent\eyuxi_618.lua
-;ÁÉÎ÷ ÓÂÊ¿µÄ¼ÒÊé
+;è¾½è¥¿ å‹‡å£«çš„å®¶ä¹¦
 212112=\event\sceneevent\eliaoxi_558.lua
-;Ã·Áë ×ï¿ı»öÊ×
+;æ¢…å²­ ç½ªé­ç¥¸é¦–
 212113=\event\sceneevent\emeiling_678.lua
-;ÄÏº£ µÚ¶ş¿éÑª¼£
+;å—æµ· ç¬¬äºŒå—è¡€è¿¹
 212114=\event\sceneevent\enaihai_688.lua
-;ÄÏº£ À×ÉñÇÅÖ®ÃÕ£¨£©
-;ÓÂ´³º®ÓñËş
+;å—æµ· é›·ç¥æ¡¥ä¹‹è°œï¼ˆï¼‰
+;å‹‡é—¯å¯’ç‰å¡”
 212115=\event\sceneevent\emiaojiang_639.lua
-;¶ëÃ¼ÅÉµÄ¼¼ÄÜÑ§Ï°ÈÎÎñ
+;å³¨çœ‰æ´¾çš„æŠ€èƒ½å­¦ä¹ ä»»åŠ¡
 212116=\event\emei\emei_skill_01.lua
 212117=\event\emei\emei_skill_02.lua
 212118=\event\emei\emei_skill_03.lua
-;30-60ÈÎÎñ
+;30-60ä»»åŠ¡
 212119=\event\sceneevent\longquan_929.lua
 212120=\event\sceneevent\yannan_926.lua
 212121=\event\sceneevent\cangshan_932.lua
@@ -1661,7 +1661,7 @@ MGR_TXT
 212123=\event\sceneevent\wuyi_938.lua
 212124=\event\sceneevent\shilin_940.lua
 212125=\event\sceneevent\caoyuan_943.lua
-;75Ó¢ĞÛÈÎÎñ
+;75è‹±é›„ä»»åŠ¡
 212126=\event\sceneevent\event.lua
 212127=\event\sceneevent\cangshan_area.lua
 212128=\event\sceneevent\hero_001.lua
@@ -1672,21 +1672,21 @@ MGR_TXT
 212133=\event\sceneevent\hero_006.lua
 212134=\event\sceneevent\hero_007.lua
 
-;ÉÙÁÖÅÉÈÎÎñ
+;å°‘æ—æ´¾ä»»åŠ¡
 212140=\event\shaolin\eshaolin_skill_01.lua
 212141=\event\shaolin\eshaolin_skill_02.lua
 212142=\event\shaolin\eshaolin_skill_03.lua
 212143=\event\shaolin\eshaolin_skill_04.lua
 212144=\event\shaolin\eshaolin_skill_05.lua
 
-;¶Ò»»ÎïÆ·
+;å…‘æ¢ç‰©å“
 212220=\event\yanbei\changeitem.lua
 212221=\event\jiange\exchangeitem.lua
 
 ;212110=\event\sceneevent\enanhai_687.lua
 
 
-;;áÔÉ½³¡¾°ÈÎÎñ
+;;åµ©å±±åœºæ™¯ä»»åŠ¡
 ;210300=\event\songshan\esongshan_0300.lua
 ;210301=\event\songshan\esongshan_0301.lua
 ;210302=\event\songshan\esongshan_0302.lua
@@ -1697,7 +1697,7 @@ MGR_TXT
 ;210307=\event\songshan\esongshan_0307.lua
 ;210308=\event\songshan\esongshan_0308.lua
 ;210309=\event\songshan\esongshan_0309.lua
-;;Ì«ºş³¡¾°ÈÎÎñ
+;;å¤ªæ¹–åœºæ™¯ä»»åŠ¡
 ;210400=\event\taihu\etaihu_0400.lua
 ;210401=\event\taihu\etaihu_0401.lua
 ;210402=\event\taihu\etaihu_0402.lua
@@ -1708,7 +1708,7 @@ MGR_TXT
 ;210407=\event\taihu\etaihu_0407.lua
 ;210408=\event\taihu\etaihu_0408.lua
 ;210409=\event\taihu\etaihu_0409.lua
-;;¾µºş³¡¾°ÈÎÎñ
+;;é•œæ¹–åœºæ™¯ä»»åŠ¡
 ;210500=\event\jinghu\ejinghu_0500.lua
 ;210501=\event\jinghu\ejinghu_0501.lua
 ;210502=\event\jinghu\ejinghu_0502.lua
@@ -1719,7 +1719,7 @@ MGR_TXT
 ;210507=\event\jinghu\ejinghu_0507.lua
 ;210508=\event\jinghu\ejinghu_0508.lua
 ;210509=\event\jinghu\ejinghu_0509.lua
-;;ÎŞÁ¿É½³¡¾°ÈÎÎñ
+;;æ— é‡å±±åœºæ™¯ä»»åŠ¡
 ;210600=\event\wuliang\wuliang_0600.lua
 ;210601=\event\wuliang\wuliang_0601.lua
 ;210602=\event\wuliang\wuliang_0602.lua
@@ -1730,7 +1730,7 @@ MGR_TXT
 ;210607=\event\wuliang\wuliang_0607.lua
 ;210608=\event\wuliang\wuliang_0608.lua
 ;210609=\event\wuliang\wuliang_0609.lua
-;;½£¸ó³¡¾°ÈÎÎñ
+;;å‰‘é˜åœºæ™¯ä»»åŠ¡
 ;210700=\event\jiange\ejiange_0700.lua
 ;210701=\event\jiange\ejiange_0701.lua
 ;210702=\event\jiange\ejiange_0702.lua
@@ -1741,7 +1741,7 @@ MGR_TXT
 ;210707=\event\jiange\ejiange_0707.lua
 ;210708=\event\jiange\ejiange_0708.lua
 ;210709=\event\jiange\ejiange_0709.lua
-;;¶Ø»Í³¡¾°ÈÎÎñ
+;;æ•¦ç…Œåœºæ™¯ä»»åŠ¡
 ;210800=\event\dunhuang\edunhuang_0800.lua
 ;210801=\event\dunhuang\edunhuang_0801.lua
 ;210802=\event\dunhuang\edunhuang_0802.lua
@@ -1752,7 +1752,7 @@ MGR_TXT
 ;210807=\event\dunhuang\edunhuang_0807.lua
 ;210808=\event\dunhuang\edunhuang_0808.lua
 ;210809=\event\dunhuang\edunhuang_0809.lua
-;;ÑãÄÏ³¡¾°ÈÎÎñ
+;;é›å—åœºæ™¯ä»»åŠ¡
 ;210900=\event\yannan\eyannan_0900.lua
 ;210901=\event\yannan\eyannan_0901.lua
 ;210902=\event\yannan\eyannan_0902.lua
@@ -1763,7 +1763,7 @@ MGR_TXT
 ;210907=\event\yannan\eyannan_0907.lua
 ;210908=\event\yannan\eyannan_0908.lua
 ;210909=\event\yannan\eyannan_0909.lua
-;;Ñã±±³¡¾°ÈÎÎñ
+;;é›åŒ—åœºæ™¯ä»»åŠ¡
 ;211000=\event\yanbei\eyanbei_1000.lua
 ;211001=\event\yanbei\eyanbei_1001.lua
 ;211002=\event\yanbei\eyanbei_1002.lua
@@ -1774,7 +1774,7 @@ MGR_TXT
 ;211007=\event\yanbei\eyanbei_1007.lua
 ;211008=\event\yanbei\eyanbei_1008.lua
 ;211009=\event\yanbei\eyanbei_1009.lua
-;;²İÔ­³¡¾°ÈÎÎñ
+;;è‰åŸåœºæ™¯ä»»åŠ¡
 ;211100=\event\caoyuan\ecaoyuan_1100.lua
 ;211101=\event\caoyuan\ecaoyuan_1101.lua
 ;211102=\event\caoyuan\ecaoyuan_1102.lua
@@ -1785,7 +1785,7 @@ MGR_TXT
 ;211107=\event\caoyuan\ecaoyuan_1107.lua
 ;211108=\event\caoyuan\ecaoyuan_1108.lua
 ;211109=\event\caoyuan\ecaoyuan_1109.lua
-;;ÁÉÎ÷³¡¾°ÈÎÎñ
+;;è¾½è¥¿åœºæ™¯ä»»åŠ¡
 ;211200=\event\liaoxi\eliaoxi_1200.lua
 ;211201=\event\liaoxi\eliaoxi_1201.lua
 ;211202=\event\liaoxi\eliaoxi_1202.lua
@@ -1796,7 +1796,7 @@ MGR_TXT
 ;211207=\event\liaoxi\eliaoxi_1207.lua
 ;211208=\event\liaoxi\eliaoxi_1208.lua
 ;211209=\event\liaoxi\eliaoxi_1209.lua
-;;³¤°×É½³¡¾°ÈÎÎñ
+;;é•¿ç™½å±±åœºæ™¯ä»»åŠ¡
 ;211300=\event\changbai\echangbai_1300.lua
 ;211301=\event\changbai\echangbai_1301.lua
 ;211302=\event\changbai\echangbai_1302.lua
@@ -1807,7 +1807,7 @@ MGR_TXT
 ;211307=\event\changbai\echangbai_1307.lua
 ;211308=\event\changbai\echangbai_1308.lua
 ;211309=\event\changbai\echangbai_1309.lua
-;;»ÆÁú¸®³¡¾°ÈÎÎñ
+;;é»„é¾™åºœåœºæ™¯ä»»åŠ¡
 ;211400=\event\huanglong\ehuanglong_1400.lua
 ;211401=\event\huanglong\ehuanglong_1401.lua
 ;211402=\event\huanglong\ehuanglong_1402.lua
@@ -1818,7 +1818,7 @@ MGR_TXT
 ;211407=\event\huanglong\ehuanglong_1407.lua
 ;211408=\event\huanglong\ehuanglong_1408.lua
 ;211409=\event\huanglong\ehuanglong_1409.lua
-;;¶ıº£³¡¾°ÈÎÎñ
+;;æ´±æµ·åœºæ™¯ä»»åŠ¡
 ;211500=\event\erhai\eerhai_1500.lua
 ;211501=\event\erhai\eerhai_1501.lua
 ;211502=\event\erhai\eerhai_1502.lua
@@ -1829,7 +1829,7 @@ MGR_TXT
 ;211507=\event\erhai\eerhai_1507.lua
 ;211508=\event\erhai\eerhai_1508.lua
 ;211509=\event\erhai\eerhai_1509.lua
-;;²ÔÉ½³¡¾°ÈÎÎñ
+;;è‹å±±åœºæ™¯ä»»åŠ¡
 ;211600=\event\cangshan\ecangshan_1600.lua
 ;211601=\event\cangshan\ecangshan_1601.lua
 ;211602=\event\cangshan\ecangshan_1602.lua
@@ -1840,7 +1840,7 @@ MGR_TXT
 ;211607=\event\cangshan\ecangshan_1607.lua
 ;211608=\event\cangshan\ecangshan_1608.lua
 ;211609=\event\cangshan\ecangshan_1609.lua
-;;Ê¯ÁÖ³¡¾°ÈÎÎñ
+;;çŸ³æ—åœºæ™¯ä»»åŠ¡
 ;211700=\event\shilin\eshilin_1700.lua
 ;211701=\event\shilin\eshilin_1701.lua
 ;211702=\event\shilin\eshilin_1702.lua
@@ -1851,7 +1851,7 @@ MGR_TXT
 ;211707=\event\shilin\eshilin_1707.lua
 ;211708=\event\shilin\eshilin_1708.lua
 ;211709=\event\shilin\eshilin_1709.lua
-;;ÓñÏª³¡¾°ÈÎÎñ
+;;ç‰æºªåœºæ™¯ä»»åŠ¡
 ;211800=\event\yuxi\eyuxi_1800.lua
 ;211801=\event\yuxi\eyuxi_1801.lua
 ;211802=\event\yuxi\eyuxi_1802.lua
@@ -1862,7 +1862,7 @@ MGR_TXT
 ;211807=\event\yuxi\eyuxi_1807.lua
 ;211808=\event\yuxi\eyuxi_1808.lua
 ;211809=\event\yuxi\eyuxi_1809.lua
-;;ÄÏÚ¯³¡¾°ÈÎÎñ
+;;å—è¯åœºæ™¯ä»»åŠ¡
 ;211900=\event\nanzhao\enanzhao_1900.lua
 ;211901=\event\nanzhao\enanzhao_1901.lua
 ;211902=\event\nanzhao\enanzhao_1902.lua
@@ -1873,7 +1873,7 @@ MGR_TXT
 ;211907=\event\nanzhao\enanzhao_1907.lua
 ;211908=\event\nanzhao\enanzhao_1908.lua
 ;211909=\event\nanzhao\enanzhao_1909.lua
-;;Ãç½®³¡¾°ÈÎÎñ
+;;è‹—ç–†åœºæ™¯ä»»åŠ¡
 ;212000=\event\miaojiang\miaojiang_2000.lua
 ;212001=\event\miaojiang\miaojiang_2001.lua
 ;212002=\event\miaojiang\miaojiang_2002.lua
@@ -1884,7 +1884,7 @@ MGR_TXT
 ;212007=\event\miaojiang\miaojiang_2007.lua
 ;212008=\event\miaojiang\miaojiang_2008.lua
 ;212009=\event\miaojiang\miaojiang_2009.lua
-;;Î÷ºş³¡¾°ÈÎÎñ
+;;è¥¿æ¹–åœºæ™¯ä»»åŠ¡
 ;212100=\event\xihu\exihu_2100.lua
 ;212101=\event\xihu\exihu_2101.lua
 ;212102=\event\xihu\exihu_2102.lua
@@ -1895,7 +1895,7 @@ MGR_TXT
 ;212107=\event\xihu\exihu_2107.lua
 ;212108=\event\xihu\exihu_2108.lua
 ;212109=\event\xihu\exihu_2109.lua
-;;ÁúÈª³¡¾°ÈÎÎñ
+;;é¾™æ³‰åœºæ™¯ä»»åŠ¡
 ;212200=\event\longquan\elongquan_2200.lua
 ;212201=\event\longquan\elongquan_2201.lua
 ;212202=\event\longquan\elongquan_2202.lua
@@ -1906,7 +1906,7 @@ MGR_TXT
 ;212207=\event\longquan\elongquan_2207.lua
 ;212208=\event\longquan\elongquan_2208.lua
 ;212209=\event\longquan\elongquan_2209.lua
-;;ÎäÒÄ³¡¾°ÈÎÎñ
+;;æ­¦å¤·åœºæ™¯ä»»åŠ¡
 ;212300=\event\wuyi\ewuyi_2300.lua
 ;212301=\event\wuyi\ewuyi_2301.lua
 ;212302=\event\wuyi\ewuyi_2302.lua
@@ -1917,7 +1917,7 @@ MGR_TXT
 ;212307=\event\wuyi\ewuyi_2307.lua
 ;212308=\event\wuyi\ewuyi_2308.lua
 ;212309=\event\wuyi\ewuyi_2309.lua
-;;Ã·Áë³¡¾°ÈÎÎñ
+;;æ¢…å²­åœºæ™¯ä»»åŠ¡
 ;212400=\event\meiling\emeiling_2400.lua
 ;212401=\event\meiling\emeiling_2401.lua
 ;212402=\event\meiling\emeiling_2402.lua
@@ -1928,7 +1928,7 @@ MGR_TXT
 ;212407=\event\meiling\emeiling_2407.lua
 ;212408=\event\meiling\emeiling_2408.lua
 ;212409=\event\meiling\emeiling_2409.lua
-;;ÄÏº£³¡¾°ÈÎÎñ
+;;å—æµ·åœºæ™¯ä»»åŠ¡
 ;212500=\event\nanhai\enanhai_2500.lua
 ;212501=\event\nanhai\enanhai_2501.lua
 ;212502=\event\nanhai\enanhai_2502.lua
@@ -1939,7 +1939,7 @@ MGR_TXT
 ;212507=\event\nanhai\enanhai_2507.lua
 ;212508=\event\nanhai\enanhai_2508.lua
 ;212509=\event\nanhai\enanhai_2509.lua
-;;ÇíÖİ³¡¾°ÈÎÎñ
+;;ç¼å·åœºæ™¯ä»»åŠ¡
 ;212600=\event\qiongzhou\eqiongzhou_2600.lua
 ;212601=\event\qiongzhou\eqiongzhou_2601.lua
 ;212602=\event\qiongzhou\eqiongzhou_2602.lua
@@ -1952,7 +1952,7 @@ MGR_TXT
 
 
 ;212609=\event\qiongzhou\eqiongzhou_2609.lua
-;Ê¦ÃÅÈÎÎñ(¸÷ÃÅÅÉµÄÊ¦ÃÅÑ­»·ÈÎÎñ)
+;å¸ˆé—¨ä»»åŠ¡(å„é—¨æ´¾çš„å¸ˆé—¨å¾ªç¯ä»»åŠ¡)
 220900=\event\shaolin\shimen_0900.lua
 220901=\event\shaolin\shimen_0901.lua
 221900=\event\gaibang\shimen_0900.lua
@@ -1975,7 +1975,7 @@ MGR_TXT
 228903=\event\tianshan\tianshan_skill_02.lua
 228904=\event\tianshan\tianshan_skill_03.lua
 
-;ÏÖÔÚÕæÕıÊ¹ÓÃµÄÊ¦ÃÅ½Å±¾
+;ç°åœ¨çœŸæ­£ä½¿ç”¨çš„å¸ˆé—¨è„šæœ¬
 229000=\event\shimen\event_shimen_shaolin.lua
 229001=\event\shimen\event_shimen_mingjiao.lua
 229002=\event\shimen\event_shimen_wudang.lua
@@ -1990,14 +1990,14 @@ MGR_TXT
 229011=\event\shimen\event_shimen_helpfinish.lua
 229012=\event\shimen\event_shimen_shop.lua
 229013=\event\shimen\event_shimen_fulfiltrickily.lua
-;³ÍĞ×´òÍ¼½Å±¾
+;æƒ©å‡¶æ‰“å›¾è„šæœ¬
 229020=\event\xunhuan\event_chengxiongdatu.lua
 229021=\event\xunhuan\event_diaorubaozang.lua
-;ÈÎÎñÁ´½Å±¾
+;ä»»åŠ¡é“¾è„šæœ¬
 229022=\event\xunhuan\event_renwulian.lua
 229023=\event\xunhuan\event_renwulian_fuben.lua
 
-;°×ÂíËÂÈÎÎñ(ÀàËÆÊ¦ÃÅµÄÑ­»·ÈÎÎñ)
+;ç™½é©¬å¯ºä»»åŠ¡(ç±»ä¼¼å¸ˆé—¨çš„å¾ªç¯ä»»åŠ¡)
 230000=\event\xunhuan\ebaimasi_230000.lua
 ;230001=\event\xunhuan\ebaimasi_230001.lua
 ;230002=\event\xunhuan\ebaimasi_230002.lua
@@ -2017,7 +2017,7 @@ MGR_TXT
 232001=\event\xunhuan\shuilao_11.lua
 232002=\event\xunhuan\shuilao_12.lua
 
-;ÂåÑô×½³èÈÎÎñ ×¢ÊÍ by zhangguoxin 090209
+;æ´›é˜³æ‰å® ä»»åŠ¡ æ³¨é‡Š by zhangguoxin 090209
 250000=\event\luoyang\eluoyang_50000.lua
 ;250001=\event\luoyang\eluoyang_50001.lua
 ;250002=\event\luoyang\eluoyang_50002.lua
@@ -2058,9 +2058,9 @@ MGR_TXT
 250037=\event\luoyang\eluoyang_50037.lua
 250038=\event\luoyang\eluoyang_50038.lua
 
-;ÂåÑôĞÂÊÖÕÒÈËÈÎÎñ
+;æ´›é˜³æ–°æ‰‹æ‰¾äººä»»åŠ¡
 250551=\event\luoyang\eluoyang_fasongtongzhi.lua
-;µÀ¾ß´¥·¢½Å±¾
+;é“å…·è§¦å‘è„šæœ¬
 300000=\obj\item\yongshidejiashu.lua
 300001=\obj\item\shaozi.lua
 300002=\obj\item\liudi.lua
@@ -2092,14 +2092,14 @@ MGR_TXT
 300025=\obj\item\huozhezi.lua
 300026=\obj\item\guajizhongjiezhe.lua
 
-;µÀ¾ß´¥·¢½Å±¾
+;é“å…·è§¦å‘è„šæœ¬
 300027=\obj\item\zhenshoudan.lua
 300028=\obj\item\rmb_huantongdan.lua
 300029=\obj\item\yirongdan.lua
 
 
 
-;Ê¦ÃÅµÀ¾ß
+;å¸ˆé—¨é“å…·
 300030=\obj\item\shaolin_saozhou.lua
 300031=\obj\item\gaibang_jiutan.lua
 300032=\obj\item\mingjiao_huoju.lua
@@ -2109,7 +2109,7 @@ MGR_TXT
 300036=\obj\item\emei_emeixianlu.lua
 300037=\obj\item\xingxiu_wuduchong.lua
 300038=\obj\item\tianshan_tianschishui.lua
-;Ë«±¶¾­ÑéÊ±¼äÒ©Ë®
+;åŒå€ç»éªŒæ—¶é—´è¯æ°´
 300039=\obj\item\DoubleTime_Player.lua
 300040=\obj\item\DoubleTime_Pet.lua
 300041=\obj\item\YaoDing.lua
@@ -2151,38 +2151,38 @@ MGR_TXT
 300080=\obj\item\NewPlayer20.lua
 300081=\obj\item\NewPlayer30.lua
 300082=\obj\item\NewPlayer40.lua
-;½­ºşÇ¬À¤´ü dengxx
+;æ±Ÿæ¹–ä¹¾å¤è¢‹ dengxx
 300083=\obj\item\UniverseBag.lua
-;ÕäÊŞ»¹Í¯µ¤[±ä»¯µ½Ä¿±êÕäÊŞÀàĞÍ]
+;çå…½è¿˜ç«¥ä¸¹[å˜åŒ–åˆ°ç›®æ ‡çå…½ç±»å‹]
 300100=\obj\item\huantongdan_4.lua
 300101=\obj\item\jiaoshijie_gift.lua
-;ºÃÓÑ´óÀñ°ü zchw
+;å¥½å‹å¤§ç¤¼åŒ… zchw
 300102=\obj\item\signature_gift.lua
 
-;Æ½ÅÑÈÎÎñ1ÁÙÊ±½Å±¾
+;å¹³å›ä»»åŠ¡1ä¸´æ—¶è„šæœ¬
 311000=\obj\luoyang\oluoyang_shumi.lua
 311001=\obj\luoyang\oluoyang_chenyongren.lua
 311002=\obj\luoyang\oluoyang_liujianming.lua
 311004=\event\pingpan\ezhaochen.lua
 311005=\event\pingpan\ezhaoliu.lua
-;äîÔËÈÎÎñ1ÁÙÊ±½Å±¾
+;æ¼•è¿ä»»åŠ¡1ä¸´æ—¶è„šæœ¬
 311006=\obj\luoyang\oluoyang_caoyunshi1.lua
 311007=\obj\luoyang\oluoyang_caoyunshi2.lua
 311008=\obj\luoyang\oluoyang_caoyunshi3.lua
 311009=\obj\luoyang\oluoyang_huoshang1.lua
 311010=\event\caoyun\ecaoyun.lua
-;äîÔËµÄboss½Å±¾
+;æ¼•è¿çš„bossè„šæœ¬
 311011=\obj\caoyun\ocaoyun_Boss.lua
 311012=\event\caoyun\ocaoyun_limiti.lua
-;ÖÇÁ¦ÎÊ´ğ½Å±¾
+;æ™ºåŠ›é—®ç­”è„šæœ¬
 311100=\event\quiz\equiz.lua
-;³èÎïÑ§Ï°¼¼ÄÜ
+;å® ç‰©å­¦ä¹ æŠ€èƒ½
 311111=\event\petskill\petskillstudy.lua
-;ÕäÊŞ¼¼ÄÜÉı¼¶
+;çå…½æŠ€èƒ½å‡çº§
 311112=\event\petskill\petskilllevelup.lua
-;×°±¸´ò¿×
+;è£…å¤‡æ‰“å­”
 311200=\event\stiletto\stiletto.lua
-;ÌØÊâ¹ÖÎïËÀÍöÊÂ¼ş
+;ç‰¹æ®Šæ€ªç‰©æ­»äº¡äº‹ä»¶
 320301=\obj\elite\osongshan_1_baby.lua
 320302=\obj\elite\osongshan_2_baby.lua
 320303=\obj\elite\osongshan_3_baby.lua
@@ -2456,7 +2456,7 @@ MGR_TXT
 327021=\obj\elite\ogaochang_3_baby.lua
 327022=\obj\elite\ogaochang_4_baby.lua
 327023=\obj\elite\ogaochang_5_baby.lua
-;ÆÕÍ¨ÎïÆ·Ê¹ÓÃ(ÎŞ¶ÔÓ¦Ğ§¹û,×Ô¶¨ÒåÎÄ¼şÃû)
+;æ™®é€šç‰©å“ä½¿ç”¨(æ— å¯¹åº”æ•ˆæœ,è‡ªå®šä¹‰æ–‡ä»¶å)
 330000=\obj\commonitem\item_common.lua
 330001=\obj\commonitem\tulingzhu.lua
 330002=\obj\commonitem\xueqiu.lua
@@ -2466,14 +2466,14 @@ MGR_TXT
 330021=\obj\commonitem\21.lua
 330058=\obj\commonitem\58.lua
 
-;ÆÕÍ¨ÎïÆ·Ê¹ÓÃ(´øĞ§¹û,Ğ§¹ûºÅ×÷Îª½Å±¾ÎÄ¼şÃû£¬½Å±¾±àºÅ£½33+½Å±¾ÎÄ¼şÃû)
+;æ™®é€šç‰©å“ä½¿ç”¨(å¸¦æ•ˆæœ,æ•ˆæœå·ä½œä¸ºè„šæœ¬æ–‡ä»¶åï¼Œè„šæœ¬ç¼–å·ï¼33+è„šæœ¬æ–‡ä»¶å)
 330067=\obj\commonitem\67.lua
 330068=\obj\commonitem\68.lua
 330069=\obj\commonitem\69.lua
 330070=\obj\commonitem\70.lua
 330071=\obj\commonitem\71.lua
 
-;ÆÕÍ¨ÎïÆ·Ê¹ÓÃ(ÎŞ¶ÔÓ¦Ğ§¹û,×Ô¶¨ÒåÎÄ¼şÃû)
+;æ™®é€šç‰©å“ä½¿ç”¨(æ— å¯¹åº”æ•ˆæœ,è‡ªå®šä¹‰æ–‡ä»¶å)
 330136=\obj\commonitem\136.lua
 331001=\obj\commonitem\obj_1.lua
 331002=\obj\commonitem\obj_2.lua
@@ -2501,10 +2501,10 @@ MGR_TXT
 331024=\obj\commonitem\obj_24.lua
 331025=\obj\commonitem\obj_25.lua
 
-;³¡¾°ÑÌ»¨¹æÔò
+;åœºæ™¯çƒŸèŠ±è§„åˆ™
 331026=\obj\commonitem\weather.lua
 
-;ÆÕÍ¨ÎïÆ·Ê¹ÓÃ(ÎŞ¶ÔÓ¦Ğ§¹û,×Ô¶¨ÒåÎÄ¼şÃû)
+;æ™®é€šç‰©å“ä½¿ç”¨(æ— å¯¹åº”æ•ˆæœ,è‡ªå®šä¹‰æ–‡ä»¶å)
 331032=\obj\commonitem\obj_32.lua
 331033=\obj\commonitem\obj_33.lua
 331034=\obj\commonitem\obj_34.lua
@@ -2550,7 +2550,7 @@ MGR_TXT
 331080=\obj\commonitem\obj_80.lua
 331081=\obj\commonitem\obj_81.lua
 
-;³¡¾°ÑÌ»¨¹æÔò
+;åœºæ™¯çƒŸèŠ±è§„åˆ™
 332000=\obj\commonitem\30505075.lua
 332001=\obj\commonitem\30505076.lua
 332002=\obj\commonitem\30505092.lua
@@ -3012,7 +3012,7 @@ MGR_TXT
 334242=\obj\commonitem\4242.lua
 334243=\obj\commonitem\4243.lua
 334244=\obj\commonitem\4244.lua
-;8¸öÃÅÅÉ¼õ¿¹Ò©
+;8ä¸ªé—¨æ´¾å‡æŠ—è¯
 334245=\obj\commonitem\4245.lua
 334246=\obj\commonitem\4246.lua
 334247=\obj\commonitem\4247.lua
@@ -3228,7 +3228,7 @@ MGR_TXT
 334999=\obj\commonitem\4999.lua
 
 
-;335000³èÎïÓÃ
+;335000å® ç‰©ç”¨
 335000=\event\petskill\petcommon.lua
 335001=\obj\commonitem\5001.lua
 335002=\obj\commonitem\5002.lua
@@ -3245,7 +3245,7 @@ MGR_TXT
 335013=\obj\commonitem\5013.lua
 335014=\obj\commonitem\5014.lua
 
-;Æï³Ë£¨ĞÂ£©
+;éª‘ä¹˜ï¼ˆæ–°ï¼‰
 335015=\obj\commonitem\5020.lua
 335016=\obj\commonitem\5021.lua
 335017=\obj\commonitem\5022.lua
@@ -3277,16 +3277,16 @@ MGR_TXT
 335043=\obj\commonitem\5048.lua
 335044=\obj\commonitem\5049.lua
 
-;µÀ¾ß´¥·¢½Å±¾
+;é“å…·è§¦å‘è„šæœ¬
 335133=\obj\item\jinbangtiming.lua
 335134=\obj\item\ShenQi_XueYuShenBing.lua
 335135=\obj\item\ZhuCai_XueYuShenBing.lua
 335136=\obj\item\YuRenBaoZhu.lua
 335137=\obj\commonitem\5000.lua
-;ÉÁ¹âµÄ¿óÊ¯
+;é—ªå…‰çš„çŸ¿çŸ³
 335138=\obj\item\FlareOre.lua
 335139=\obj\commonitem\obj_zongzi.lua
-;ÔÂÀÏºùÂ« zchw
+;æœˆè€è‘«èŠ¦ zchw
 335908=\obj\item\moon_hulu.lua
 335907=\obj\commonitem\5907.lua
 335801=\obj\commonitem\5801.lua
@@ -3294,13 +3294,13 @@ MGR_TXT
 335803=\obj\commonitem\5803.lua
 335804=\obj\commonitem\5804.lua
 335805=\obj\commonitem\petmanger.lua
-; zchw Ç©ÃûÂ¼ Çé±¨²¾
+; zchw ç­¾åå½• æƒ…æŠ¥ç°¿
 335806=\obj\item\SignatureList.lua
 335807=\obj\item\InfoBook.lua
 335808=\obj\item\kill_evil_sword.lua
 335809=\obj\item\PromisingSeed.lua
 
-;336000³èÎï¼¼ÄÜÊé
+;336000å® ç‰©æŠ€èƒ½ä¹¦
 ;336001=\obj\pet\6001.lua
 ;336002=\obj\pet\6002.lua
 ;336003=\obj\pet\6003.lua
@@ -3397,7 +3397,7 @@ MGR_TXT
 ;336094=\obj\pet\6094.lua
 ;336095=\obj\pet\6095.lua
 336096=\obj\pet\6096.lua
-;Êé¼®Ïà¹ØÎïÆ·½Å±¾
+;ä¹¦ç±ç›¸å…³ç‰©å“è„šæœ¬
 338000=\obj\book\skillbook.lua
 
 338501=\obj\commonitem\8501.lua
@@ -3409,7 +3409,7 @@ MGR_TXT
 338508=\obj\commonitem\8508.lua
 338509=\obj\commonitem\8509.lua
 
-;ĞÂÈı»·ÎïÆ·£¬Ğş·ğÖé(Ğş)(·ç)(¶¾)(µØ)(Ñæ)
+;æ–°ä¸‰ç¯ç‰©å“ï¼Œç„ä½›ç (ç„)(é£)(æ¯’)(åœ°)(ç„°)
 338510=\obj\commonitem\8510.lua
 338511=\obj\commonitem\8511.lua
 338512=\obj\commonitem\8512.lua
@@ -3418,7 +3418,7 @@ MGR_TXT
 
 340001=\obj\commonitem\340001.lua
 
-;´«ËÍµã
+;ä¼ é€ç‚¹
 400000=\event\chuansong\echuansong_luoyang_dunhuang.lua
 400001=\event\chuansong\echuansong_luoyang_songshan.lua
 400002=\event\chuansong\echuansong_luoyang_yannan.lua
@@ -3656,7 +3656,7 @@ MGR_TXT
 ;WTT
 400963=\event\chuansong\echuansong_to_shengshoushan.lua
 
-;¸±±¾Ê¹ÓÃ½Å±¾
+;å‰¯æœ¬ä½¿ç”¨è„šæœ¬
 401000=\event\fuben\efuben_1_zhenlong.lua
 401001=\event\fuben\efuben_1_zhenlong_huodong.lua
 401010=\event\fuben\efuben_2_murenxiang.lua
@@ -3678,7 +3678,7 @@ MGR_TXT
 402046=\event\fuben\efuben_piaomiao.lua
 402047=\event\fuben\efuben_bangzhan.lua
 
-;Ê¥ÊŞÉ½ Ò°Öí±©×ß»î¶¯
+;åœ£å…½å±± é‡çŒªæš´èµ°æ´»åŠ¨
 402100=\obj\huodong\huodong_yezhu.lua
 402101=\obj\huodong\huodong_yezhu_1.lua
 402102=\event\fuben\yezhu_protect.lua
@@ -3686,11 +3686,11 @@ MGR_TXT
 402104=\obj\huodong\huodong_yezhu_3.lua
 402105=\event\fuben\yezhu_catch.lua
 
-;»î¶¯ NPC
+;æ´»åŠ¨ NPC
 402106=\obj\huodong\oHanYuBed_NPC.lua
 
 
-;Ñà×ÓÎë´óÕ½
+;ç‡•å­åå¤§æˆ˜
 402240=\obj\yanziwu\huyanqing.lua
 402241=\obj\yanziwu\huyanzhuo.lua
 402242=\obj\yanziwu\yuelaosan.lua
@@ -3716,7 +3716,7 @@ MGR_TXT
 402261=\obj\yanziwu\yanziwu_area.lua
 402262=\obj\yanziwu\songbing.lua
 
-;Æ®Ãì·å
+;é£˜æ¸ºå³°
 402263=\event\piaomiaofeng\epiaomiaofeng.lua
 402264=\event\piaomiaofeng\ai_hadaba.lua
 402265=\event\piaomiaofeng\ai_sangtugong.lua
@@ -3731,7 +3731,7 @@ MGR_TXT
 402274=\obj\piaomiaofeng\oduanmuyuan.lua
 402275=\obj\piaomiaofeng\owulaodaloss.lua
 
-;Æ®Ãì·å_¼òµ¥°æ
+;é£˜æ¸ºå³°_ç®€å•ç‰ˆ
 402276=\event\piaomiaofengsmall\epiaomiaofeng_small.lua
 402277=\event\piaomiaofengsmall\ai_hadaba_small.lua
 402278=\event\piaomiaofengsmall\ai_sangtugong_small.lua
@@ -3747,7 +3747,7 @@ MGR_TXT
 402288=\obj\piaomiaofengsmall\owulaodaloss_small.lua
 
 402289=\event\piaomiaofengsmall\epmf_reset_count.lua
-;°ïÕ½¸±±¾
+;å¸®æˆ˜å‰¯æœ¬
 402290=\obj\bangzhan\tongqing.lua
 402291=\obj\bangzhan\shangguanbing.lua
 402292=\obj\bangzhan\shangguanxue.lua
@@ -3764,11 +3764,11 @@ MGR_TXT
 402303=\obj\bangzhan\chenxi.lua
 402304=\obj\bangzhan\jiantao.lua
 
-;çÎç¿·å³ÆºÅÈÎÎñ½Å±¾
+;ç¼¥ç¼ˆå³°ç§°å·ä»»åŠ¡è„šæœ¬
 402305=\event\piaomiaofeng\piaomiaofeng_title.lua
 
-;³¡¾°Ö¸Ê¾Æ÷Õ¼ÓÃ
-;ÂåÑôµÄÖ¸Ê¾
+;åœºæ™¯æŒ‡ç¤ºå™¨å ç”¨
+;æ´›é˜³çš„æŒ‡ç¤º
 500000=\event\signpost\luoyang.lua
 500001=\event\signpost\luoyang_sign_buyitem.lua
 500002=\event\signpost\luoyang_sign_yizhan.lua
@@ -3783,7 +3783,7 @@ MGR_TXT
 500011=\event\signpost\luoyang_sign_pkmanage.lua
 500012=\event\signpost\luoyang_sign_gem.lua
 500013=\event\signpost\luoyang_sign_teacherbrother.lua
-;ËÕÖİµÄÖ¸Ê¾
+;è‹å·çš„æŒ‡ç¤º
 500020=\event\signpost\suzhou.lua
 500021=\event\signpost\suzhou_sign_buyitem.lua
 500022=\event\signpost\suzhou_sign_gate.lua
@@ -3794,7 +3794,7 @@ MGR_TXT
 500027=\event\signpost\suzhou_sign_qianzhuang.lua
 500028=\event\signpost\suzhou_sign_zhuangbeiqianghua.lua
 500029=\event\signpost\suzhou_sign_quchushaqi.lua
-;´óÀíµÄÖ¸Ê¾
+;å¤§ç†çš„æŒ‡ç¤º
 500040=\event\signpost\dali.lua
 500041=\event\signpost\dali_sign_menpaichuansong.lua
 500042=\event\signpost\dali_sign_buyitem.lua
@@ -3805,32 +3805,32 @@ MGR_TXT
 500047=\event\signpost\dali_sign_mission.lua
 500048=\event\signpost\dali_sign_leitai.lua
 500049=\event\signpost\dali_sign_teacher.lua
-;ÉÙÁÖµÄÖ¸Ê¾
+;å°‘æ—çš„æŒ‡ç¤º
 500061=\event\signpost\shaolin_sign.lua
-;Ã÷½ÌµÄÖ¸Ê¾
+;æ˜æ•™çš„æŒ‡ç¤º
 500062=\event\signpost\mingjiao_sign.lua
-;Ø¤°ïµÄÖ¸Ê¾
+;ä¸å¸®çš„æŒ‡ç¤º
 500063=\event\signpost\gaibang_sign.lua
-;Îäµ±µÄÖ¸Ê¾
+;æ­¦å½“çš„æŒ‡ç¤º
 500064=\event\signpost\wudang_sign.lua
-;¶ëáÒµÄÖ¸Ê¾
+;å³¨åµ‹çš„æŒ‡ç¤º
 500065=\event\signpost\emei_sign.lua
-;ĞÇËŞµÄÖ¸Ê¾
+;æ˜Ÿå®¿çš„æŒ‡ç¤º
 500066=\event\signpost\tianlong_sign.lua
-;´óÀíµÄÖ¸Ê¾
+;å¤§ç†çš„æŒ‡ç¤º
 500067=\event\signpost\xingsu_sign.lua
-;ÌìÉ½µÄÖ¸Ê¾
+;å¤©å±±çš„æŒ‡ç¤º
 500068=\event\signpost\tianshan_sign.lua
-;åĞÒ£µÄÖ¸Ê¾
+;é€é¥çš„æŒ‡ç¤º
 500069=\event\signpost\xiaoyao_sign.lua
-;Ñ­»·ÈÎÎñ
+;å¾ªç¯ä»»åŠ¡
 500500=\event\xunhuan\exunhuan_500500.lua
 500501=\event\xunhuan\Mission_Necessary.lua
 ;	500502=\event\xunhuan\Mission_Necessary_Baimasi.lua
 500503=\event\xunhuan\ouyezi_XueYuShenBing.lua
 500504=\event\xunhuan\ouyezi_ShenQiChongZhu.lua
 
-;Òıµ¼ÈÎÎñ
+;å¼•å¯¼ä»»åŠ¡
 500600=\event\InductSeries\eMission_InductGroup01.lua
 500601=\event\InductSeries\eMission_ShengSiQiJu.lua
 500602=\event\InductSeries\eMission_TianShiHope_02.lua
@@ -3853,7 +3853,7 @@ MGR_TXT
 500619=\event\InductSeries\eMission_lixiankuizeng.lua
 500620=\event\InductSeries\eMission_ExchangeEquip.lua
 
-;¹ÖÎï½Å±¾(³èÎïµº³èĞÎ¹Ö)
+;æ€ªç‰©è„šæœ¬(å® ç‰©å²›å® å½¢æ€ª)
 501000=\obj\monster\petdropper.lua
 ;	501001=\obj\monster\petisland\opetisland_tuzi_5.lua
 ;	501002=\obj\monster\petisland\opetisland_ji_5.lua
@@ -3897,8 +3897,8 @@ MGR_TXT
 502003=\obj\monster\bingkang_boss.lua
 
 
-;°ï»á¼°³ÇÊĞ²¿·Ö
-;°ï»áÏµÍ³½Å±¾
+;å¸®ä¼šåŠåŸå¸‚éƒ¨åˆ†
+;å¸®ä¼šç³»ç»Ÿè„šæœ¬
 600000=\event\guild\guildoperation.lua
 600001=\event\city\ecity_mission.lua
 600002=\event\city\ecity_0100engineering.lua
@@ -3927,7 +3927,7 @@ MGR_TXT
 600025=\event\city\ecity_0502directprentice.lua
 600026=\event\city\ecity_0503savefamily.lua
 600027=\event\city\ecity_0504collectgems.lua
-;¹ú·ÀÈÎÎñ
+;å›½é˜²ä»»åŠ¡
 600030=\event\city\ecity_0600military.lua
 600031=\event\city\ecity_0601military.lua
 600032=\event\city\ecity_0602military.lua
@@ -3943,24 +3943,24 @@ MGR_TXT
 600042=\event\city\ecity_0802findcompound.lua
 600043=\event\city\ecity_0803findresearchstuff.lua
 600044=\event\city\ecity_0605beatback.lua
-;zchw ´òÌ½Çé±¨
+;zchw æ‰“æ¢æƒ…æŠ¥
 600045=\event\city\ecity_spy.lua
-;zchw °ïÅÉÊÕ¼¯
+;zchw å¸®æ´¾æ”¶é›†
 600046=\event\city\guild_collect.lua
 600047=\event\city\guild_collect_lishi.lua
 600048=\event\city\guild_collect_yanling.lua
 600049=\event\city\guild_collect_qiyelian.lua
-;°ïÕ½
+;å¸®æˆ˜
 600050=\event\guild\lingshi.lua
 600051=\event\guild\PowerUpTank.lua
 600052=\event\guild\ExchangeTank.lua
 
-°ï»áÍ¬ÃË
+å¸®ä¼šåŒç›Ÿ
 650000=\event\guildleague\guildleaguebase.lua
 
 
-;Åä·½
-;Éú»î¼¼ÄÜÖıÔì¹Ì¶¨Åä·½Ñ§Ï°Åä·½ÓÃ
+;é…æ–¹
+;ç”Ÿæ´»æŠ€èƒ½é“¸é€ å›ºå®šé…æ–¹å­¦ä¹ é…æ–¹ç”¨
 700001=\event\peifang\zhuzao\p_zhuzao_guitoudao.lua
 700002=\event\peifang\zhuzao\p_zhuzao_sutiedao.lua
 700003=\event\peifang\zhuzao\p_zhuzao_baodiandao.lua
@@ -4022,7 +4022,7 @@ MGR_TXT
 700059=\event\peifang\zhuzao\p_zhuzao_qinggulun.lua
 700060=\event\peifang\zhuzao\p_zhuzao_qijiebaohuan.lua
 
-;Éú»î¼¼ÄÜ·ìÈÒÅä·½Ñ§Ï°Åä·½ÓÃ
+;ç”Ÿæ´»æŠ€èƒ½ç¼çº«é…æ–¹å­¦ä¹ é…æ–¹ç”¨
 700061=\event\peifang\fengren\p_fengren_mao2.lua
 700062=\event\peifang\fengren\p_fengren_yi8.lua
 700063=\event\peifang\fengren\p_fengren_huwan6.lua
@@ -4096,7 +4096,7 @@ MGR_TXT
 700131=\event\peifang\fengren\p_fengren_huwan98.lua
 700132=\event\peifang\fengren\p_fengren_xie97.lua
 
-;Éú»î¼¼ÄÜ¹¤ÒÕ¹Ì¶¨Åä·½Ñ§Ï°Åä·½ÓÃ
+;ç”Ÿæ´»æŠ€èƒ½å·¥è‰ºå›ºå®šé…æ–¹å­¦ä¹ é…æ–¹ç”¨
 700133=\event\peifang\gongyi\p_gongyi_baihualian.lua
 700134=\event\peifang\gongyi\p_gongyi_songshijie.lua
 700135=\event\peifang\gongyi\p_gongyi_manaohufu.lua
@@ -4128,7 +4128,7 @@ MGR_TXT
 700161=\event\peifang\gongyi\p_gongyi_qianfo.lua
 700162=\event\peifang\gongyi\p_gongyi_banro.lua
 
-;Éú»î¼¼ÄÜÖÆÒ©¹Ì¶¨Åä·½Ñ§Ï°Åä·½ÓÃ
+;ç”Ÿæ´»æŠ€èƒ½åˆ¶è¯å›ºå®šé…æ–¹å­¦ä¹ é…æ–¹ç”¨
 700163=\event\peifang\zhiyao\p_zhiyao_chujizhiyao.lua
 700164=\event\peifang\zhiyao\p_zhiyao_zhongjizhiyao.lua
 700165=\event\peifang\zhiyao\p_zhiyao_gaojizhiyao.lua
@@ -4180,7 +4180,7 @@ MGR_TXT
 700211=\event\peifang\zhiyao\p_zhiyao_mingyisan.lua
 700212=\event\peifang\zhiyao\p_zhiyao_lingchusan.lua
 
-;Éú»î¼¼ÄÜÅëâ¿¹Ì¶¨Åä·½Ñ§Ï°Åä·½ÓÃ
+;ç”Ÿæ´»æŠ€èƒ½çƒ¹é¥ªå›ºå®šé…æ–¹å­¦ä¹ é…æ–¹ç”¨
 700213=\event\peifang\pengren\p_pengren_chujipengren.lua
 700214=\event\peifang\pengren\p_pengren_zhongjipengren.lua
 700215=\event\peifang\pengren\p_pengren_gaojipengren.lua
@@ -4203,7 +4203,7 @@ MGR_TXT
 700232=\event\peifang\pengren\p_pengren_yuxiangrousi.lua
 700233=\event\peifang\pengren\p_pengren_manhanquanxi.lua
 
-;ÃÅÅÉ¼¼ÄÜÅä·½
+;é—¨æ´¾æŠ€èƒ½é…æ–¹
 700234=\event\peifang\menpai\p_xiaoxuezhou.lua
 700235=\event\peifang\menpai\p_hongxuezhou.lua
 700236=\event\peifang\menpai\p_chixuezhou.lua
@@ -4367,8 +4367,8 @@ MGR_TXT
 700394=\event\peifang\menpai\p_jiantisheli.lua
 700395=\event\peifang\menpai\p_nuanyihuo.lua
 
-;Åä·½
-;Éú»î¼¼ÄÜÖıÔì¹Ì¶¨Åä·½Ñ§Ï°Åä·½ÓÃ
+;é…æ–¹
+;ç”Ÿæ´»æŠ€èƒ½é“¸é€ å›ºå®šé…æ–¹å­¦ä¹ é…æ–¹ç”¨
 700399=\event\peifang\zhuzao\p_zhuzao_blu_dao3.lua
 700400=\event\peifang\zhuzao\p_zhuzao_blu_dao7.lua
 700401=\event\peifang\zhuzao\p_zhuzao_blu_dao8.lua
@@ -4400,7 +4400,7 @@ MGR_TXT
 700427=\event\peifang\zhuzao\p_zhuzao_blu_huan9.lua
 700428=\event\peifang\zhuzao\p_zhuzao_blu_huan10.lua
 
-;Éú»î¼¼ÄÜ¹¤ÒÕ¹Ì¶¨Åä·½Ñ§Ï°Åä·½ÓÃ
+;ç”Ÿæ´»æŠ€èƒ½å·¥è‰ºå›ºå®šé…æ–¹å­¦ä¹ é…æ–¹ç”¨
 700429=\event\peifang\gongyi\p_gongyi_blu_38necklace.lua
 700430=\event\peifang\gongyi\p_gongyi_blu_48necklace.lua
 700431=\event\peifang\gongyi\p_gongyi_blu_58necklace.lua
@@ -4420,16 +4420,16 @@ MGR_TXT
 700445=\event\peifang\gongyi\p_gongyi_blu_82ring.lua
 700446=\event\peifang\gongyi\p_gongyi_blu_92ring.lua
 
-;Éú»î¼¼ÄÜÖÆÒ©ÆÕÍ¨Åä·½Ê¹ÓÃÅä·½ÖÆ×÷Ê±µ÷ÓÃ
+;ç”Ÿæ´»æŠ€èƒ½åˆ¶è¯æ™®é€šé…æ–¹ä½¿ç”¨é…æ–¹åˆ¶ä½œæ—¶è°ƒç”¨
 700900=\event\peifang\general_recipe.lua
 700901=\event\peifang\foodmat.lua
 ;700902=\event\peifang\g_zhiyao_zhongji.lua
 ;700903=\event\peifang\g_zhiyao_gaoji.lua
-;Éú»î¼¼ÄÜÅëâ¿ÆÕÍ¨Åä·½Ê¹ÓÃÅä·½ÖÆ×÷Ê±µ÷ÓÃ
+;ç”Ÿæ´»æŠ€èƒ½çƒ¹é¥ªæ™®é€šé…æ–¹ä½¿ç”¨é…æ–¹åˆ¶ä½œæ—¶è°ƒç”¨
 ;700904=\event\peifang\g_pengren_chuji.lua
 ;700905=\event\peifang\g_pengren_zhongji.lua
 ;700906=\event\peifang\g_pengren_gaoji.lua
-;Éú»î¼¼ÄÜ·ìÈÒÆÕÍ¨Åä·½Ê¹ÓÃÅä·½ÖÆ×÷Ê±µ÷ÓÃ
+;ç”Ÿæ´»æŠ€èƒ½ç¼çº«æ™®é€šé…æ–¹ä½¿ç”¨é…æ–¹åˆ¶ä½œæ—¶è°ƒç”¨
 700907=\event\peifang\useability\g_fengren_mao2_use.lua
 700908=\event\peifang\useability\g_fengren_yi8_use.lua
 700909=\event\peifang\useability\g_fengren_huwan6_use.lua
@@ -4484,12 +4484,12 @@ MGR_TXT
 700958=\event\peifang\useability\g_fengren_xie97_use.lua
 700959=\event\peifang\substuff.lua
 700960=\event\peifang\g_fengren_yifu.lua
-;Éú»î¼¼ÄÜÏà¹Ø
+;ç”Ÿæ´»æŠ€èƒ½ç›¸å…³
 701601=\obj\growpoint\cp_abilitylogic.lua
 701602=\event\liveabilityevent\gem_compound.lua
 701603=\event\liveabilityevent\pet_domestication.lua
 701604=\event\liveabilityevent\moneydisplay.lua
-;ÃÅÅÉÉú»î¼¼ÄÜ´ò¿ªÉÌµêµÄ½Å±¾
+;é—¨æ´¾ç”Ÿæ´»æŠ€èƒ½æ‰“å¼€å•†åº—çš„è„šæœ¬
 701605=\event\liveabilityevent\shop\eshop_kaiguang.lua
 701606=\event\liveabilityevent\shop\eshop_niangjiu.lua
 701607=\event\liveabilityevent\shop\eshop_shenghuoshu.lua
@@ -4500,13 +4500,13 @@ MGR_TXT
 701612=\event\liveabilityevent\shop\eshop_xuanbingshu.lua
 701613=\event\liveabilityevent\shop\eshop_zhigu.lua
 701614=\event\liveabilityevent\gem_embed.lua
-;³èÎïÏà¹ØÎïÆ·(702000_703000)
+;å® ç‰©ç›¸å…³ç‰©å“(702000_703000)
 702000=\obj\item\PetZiBuDan.lua
 702001=\obj\item\PetHuiChunDan.lua
 702002=\obj\item\PetZiBuDan2.lua
-;Éú³¤µã
+;ç”Ÿé•¿ç‚¹
 710000=\obj\growpoint\gp_caiji.lua
-;¿óÂöÉú³¤µã
+;çŸ¿è„‰ç”Ÿé•¿ç‚¹
 710001=\obj\growpoint\gp_caikuang_tongkuang.lua
 710002=\obj\growpoint\gp_caikuang_tiekuang.lua
 710003=\obj\growpoint\gp_caikuang_yinkuang.lua
@@ -4521,13 +4521,13 @@ MGR_TXT
 710012=\obj\growpoint\gp_caikuang_nvwokuang.lua
 710013=\obj\growpoint\gp_caikuang_kunshankuangyu.lua
 710014=\obj\growpoint\gp_caikuang_zhongshengkuang.lua
-;5ÖÖÁéÊ¯Éú³¤µã
+;5ç§çµçŸ³ç”Ÿé•¿ç‚¹
 710015=\obj\growpoint\gp_qinglongshi.lua
 710016=\obj\growpoint\gp_baihushi.lua
 710017=\obj\growpoint\gp_zhuqueshi.lua
 710018=\obj\growpoint\gp_xuanwushi.lua
 710019=\obj\growpoint\gp_pangushi.lua
-;²ÉÒ©Éú³¤µã
+;é‡‡è¯ç”Ÿé•¿ç‚¹
 710501=\obj\growpoint\gp_caiyao_honghua.lua
 710502=\obj\growpoint\gp_caiyao_qingye.lua
 710503=\obj\growpoint\gp_caiyao_yuanhu.lua
@@ -4559,7 +4559,7 @@ MGR_TXT
 710529=\obj\growpoint\gp_caiyao_lingli.lua
 710530=\obj\growpoint\gp_caiyao_lingzhi.lua
 710531=\obj\growpoint\gp_caiji_JingHu.lua
-;ÖÖÖ²Éú³¤µã
+;ç§æ¤ç”Ÿé•¿ç‚¹
 711000=\obj\growpoint\gp_zhongzhi1.lua
 711001=\obj\growpoint\gp_zhongzhi2.lua
 711002=\obj\growpoint\gp_zhongzhi3.lua
@@ -4632,7 +4632,7 @@ MGR_TXT
 711069=\obj\growpoint\gp_zhongzhi_jin1.lua
 711070=\obj\growpoint\gp_zhongzhi_jin2.lua
 711071=\obj\growpoint\gp_zhongzhi_jin3.lua
-;ÓãÈº
+;é±¼ç¾¤
 712000=\obj\growpoint\gp_diaoyu.lua
 712001=\obj\growpoint\gp_diaoyu_caoyu.lua
 712002=\obj\growpoint\gp_diaoyu_jiyu.lua
@@ -4666,7 +4666,7 @@ MGR_TXT
 712030=\obj\growpoint\gp_diaoyu_qiubaigui.lua
 712031=\obj\growpoint\gp_diaoyu_dieqiyu.lua
 712032=\obj\growpoint\gp_diaoyu_wenyaoyu.lua
-;´óÀíÒÔ¼°24¸öÒ°Íâ³¡¾°µôÎïÆ·Éú³¤µã(¸ù¾İÎÄµµ±¦ÏäÏµÍ³,Éú³¤µã¹æ»®)
+;å¤§ç†ä»¥åŠ24ä¸ªé‡å¤–åœºæ™¯æ‰ç‰©å“ç”Ÿé•¿ç‚¹(æ ¹æ®æ–‡æ¡£å®ç®±ç³»ç»Ÿ,ç”Ÿé•¿ç‚¹è§„åˆ’)
 712501=\obj\growpoint\gp_treasuredropper_dali.lua
 712502=\obj\growpoint\gp_treasuredropper_wuliang.lua
 712503=\obj\growpoint\gp_treasuredropper_jiange.lua
@@ -4702,12 +4702,12 @@ MGR_TXT
 ;zchw
 712533=\obj\growpoint\gp_treasuredropper_digong.lua
 712534=\obj\growpoint\gp_guild_collect.lua
-;Éú»î¼¼ÄÜÏà¹Ø
+;ç”Ÿæ´»æŠ€èƒ½ç›¸å…³
 713000=\obj\growpoint\gp_qugui_shuigang.lua
 713500=\event\peifang\ejinengshengji.lua
 713501=\event\peifang\eshiyongpeifang.lua
 713502=\event\peifang\emaipeifang.lua
-;Éú»î¼¼ÄÜÑ§Ï°
+;ç”Ÿæ´»æŠ€èƒ½å­¦ä¹ 
 713503=\event\liveabilityevent\estudy_zhiyao.lua
 713504=\event\liveabilityevent\estudy_xiangqian.lua
 713505=\event\liveabilityevent\estudy_zhuzao.lua
@@ -4738,7 +4738,7 @@ MGR_TXT
 713536=\event\liveabilityevent\estudy_daofa.lua
 713537=\event\liveabilityevent\estudy_liuyifenggu.lua
 713538=\event\liveabilityevent\estudy_cailiaojiagong.lua
-;Éú»î¼¼ÄÜÉı¼¶
+;ç”Ÿæ´»æŠ€èƒ½å‡çº§
 713550=\obj\growpoint\ezhongzhi_xuanzezhiwu.lua
 713551=\obj\growpoint\ezhongzhi_checkzhiwuvalid.lua
 713552=\obj\growpoint\ewabao_use.lua
@@ -4772,7 +4772,7 @@ MGR_TXT
 713594=\event\liveabilityevent\elevelup_lingxinshu.lua
 713595=\event\liveabilityevent\elevelup_daofa.lua
 713596=\event\liveabilityevent\elevelup_liuyifenggu.lua
-;Éú»î¼¼ÄÜnpc¶Ô»°
+;ç”Ÿæ´»æŠ€èƒ½npcå¯¹è¯
 713601=\event\liveabilityevent\edialog_pengren.lua
 713602=\event\liveabilityevent\edialog_zhiyao.lua
 713603=\event\liveabilityevent\edialog_xiangqian.lua
@@ -4794,14 +4794,14 @@ MGR_TXT
 713619=\event\liveabilityevent\edialog_qimendunjia.lua
 713620=\event\liveabilityevent\edialog_yaoli.lua
 713621=\event\liveabilityevent\edialog_yangshengfa.lua
-;³ÇÊĞÌØÓĞÉú»î¼¼ÄÜ
+;åŸå¸‚ç‰¹æœ‰ç”Ÿæ´»æŠ€èƒ½
 713622=\event\liveabilityevent\edialog_huoxue.lua
 713623=\event\liveabilityevent\edialog_yangqi.lua
 713624=\event\liveabilityevent\edialog_qiangshen.lua
 713625=\event\liveabilityevent\edialog_jianti.lua
 713626=\event\liveabilityevent\edialog_xueshen.lua
 713627=\event\liveabilityevent\edialog_suti.lua
-;PlatformÖÖÖ²ÅÆ¡¢·ÇÈËĞÎNPCµÈ(1)
+;Platformç§æ¤ç‰Œã€éäººå½¢NPCç­‰(1)
 714006=\obj\tianlong\otianlong_tongren_1.lua
 714007=\obj\tianlong\otianlong_tongren_2.lua
 714008=\obj\tianlong\otianlong_tongren_3.lua
@@ -4811,7 +4811,7 @@ MGR_TXT
 714012=\obj\tianlong\otianlong_xiuluo_3.lua
 714013=\obj\tianlong\otianlong_xiuluo_4.lua
 714014=\obj\dali\odali_gonggao.lua
-;ÂåÑôÖÖÖ²µ¾²İÈË
+;æ´›é˜³ç§æ¤ç¨»è‰äºº
 714021=\obj\zhongzhi\oluoyang_zhongzhipai1.lua
 714022=\obj\zhongzhi\oluoyang_zhongzhipai2.lua
 714023=\obj\zhongzhi\oluoyang_zhongzhipai3.lua
@@ -4848,7 +4848,7 @@ MGR_TXT
 714054=\obj\zhongzhi\oluoyang_zhongzhipai34.lua
 714055=\obj\zhongzhi\oluoyang_zhongzhipai35.lua
 714056=\obj\zhongzhi\oluoyang_zhongzhipai36.lua
-;´óÀíÖÖÖ²µ¾²İÈË
+;å¤§ç†ç§æ¤ç¨»è‰äºº
 714057=\obj\zhongzhi\odali_zhongzhipai1.lua
 714058=\obj\zhongzhi\odali_zhongzhipai2.lua
 714059=\obj\zhongzhi\odali_zhongzhipai3.lua
@@ -4885,7 +4885,7 @@ MGR_TXT
 714090=\obj\zhongzhi\odali_zhongzhipai34.lua
 714091=\obj\zhongzhi\odali_zhongzhipai35.lua
 714092=\obj\zhongzhi\odali_zhongzhipai36.lua
-;ËÕÖİÖÖÖ²µ¾²İÈË
+;è‹å·ç§æ¤ç¨»è‰äºº
 714093=\obj\zhongzhi\osuzhou_zhongzhipai1.lua
 714094=\obj\zhongzhi\osuzhou_zhongzhipai2.lua
 714095=\obj\zhongzhi\osuzhou_zhongzhipai3.lua
@@ -4922,10 +4922,10 @@ MGR_TXT
 714126=\obj\zhongzhi\osuzhou_zhongzhipai34.lua
 714127=\obj\zhongzhi\osuzhou_zhongzhipai35.lua
 714128=\obj\zhongzhi\osuzhou_zhongzhipai36.lua
-;ÊøºÓÖÖÖ²µ¾²İÈË zchw
+;æŸæ²³ç§æ¤ç¨»è‰äºº zchw
 714129=\obj\zhongzhi\oshuhe_zhongzhipai.lua
 
-;Â¥À¼ÖÖÖ²µ¾²İÈË
+;æ¥¼å…°ç§æ¤ç¨»è‰äºº
 714201=\obj\zhongzhi\oloulan_zhongzhipai1.lua
 ;714202=\obj\zhongzhi\oloulan_zhongzhipai2.lua
 ;714203=\obj\zhongzhi\oloulan_zhongzhipai3.lua
@@ -4937,7 +4937,7 @@ MGR_TXT
 ;714209=\obj\zhongzhi\oloulan_zhongzhipai9.lua
 ;714210=\obj\zhongzhi\oloulan_zhongzhipai10.lua
 
-;ÈÎÎñÓÃÉú³¤µã
+;ä»»åŠ¡ç”¨ç”Ÿé•¿ç‚¹
 715000=\obj\growpoint\gp_renwu_bailangdawangbaoxiang.lua
 715001=\obj\growpoint\gp_renwu_fenghuotai.lua
 715002=\obj\growpoint\gp_renwu_liupinyerenshen.lua
@@ -4972,7 +4972,7 @@ MGR_TXT
 715031=\obj\growpoint\gp_renwu_chengxiongdatu_baoxiang.lua
 
 777777=\debug_hook.lua
-;³ÌĞòÊ¹ÓÃ½Å±¾
+;ç¨‹åºä½¿ç”¨è„šæœ¬
 800003=\obj\merchandise\N_Merchandise.lua
 800004=\obj\merchandise\N_Merchandise_wuqi.lua
 800005=\obj\merchandise\N_Merchandise_zahuo.lua
@@ -4983,28 +4983,28 @@ MGR_TXT
 800010=\obj\merchandise\N_Merchandise_shoots.lua
 800011=\obj\merchandise\N_Merchandise_ring.lua
 
-;³èÎï·±Ö³
+;å® ç‰©ç¹æ®–
 800101=\event\petprocreate\PetProcreateRegister.lua
 800102=\event\petprocreate\PetProcreateTakeOut.lua
 
-;³èÎïºÏ³É
+;å® ç‰©åˆæˆ
 800103=\event\petcompound\petcompound.lua
 
-;³èÎïÎòĞÔÌáÉı
+;å® ç‰©æ‚Ÿæ€§æå‡
 800104=\event\petcompound\petsavvy.lua
 
-;ÕäÊŞ¹²ÓÃ½Å±¾½Ó¿Úº¯ÊıÎÄ¼ş
+;çå…½å…±ç”¨è„šæœ¬æ¥å£å‡½æ•°æ–‡ä»¶
 800105=\event\pet\petcommon.lua
 
-;³èÎïÎòĞÔÌáÉı
+;å® ç‰©æ‚Ÿæ€§æå‡
 800106=\event\petcompound\petsavvyggd.lua
 
-;ÕäÊŞÏ´µã
+;çå…½æ´—ç‚¹
 800107=\event\pet\pet_resetattrpt.lua
-;×ªĞÔµ¤
+;è½¬æ€§ä¸¹
 800108=\event\pet\pet_zhuanxingdian.lua
 
-;³ğÉ±
+;ä»‡æ€
 800110=\event\misc\clean_1_pkvalue.lua
 800111=\event\misc\clean_10_pkvalue.lua
 800112=\event\misc\clean_all_pkvalue.lua
@@ -5091,8 +5091,8 @@ MGR_TXT
 805046=\obj\city\protect_guild_monster_shangui.lua
 
 
-;ÆäËûÏµÍ³ÉèÖÃ½Å±¾
-;½á»é¡¢½á°İ¡¢½»ÓÑ
+;å…¶ä»–ç³»ç»Ÿè®¾ç½®è„šæœ¬
+;ç»“å©šã€ç»“æ‹œã€äº¤å‹
 806000=\event\relation\b_disengage.lua
 806001=\event\relation\b_swear.lua
 806002=\event\relation\b_unswear.lua
@@ -5115,12 +5115,12 @@ MGR_TXT
 806019=\event\relation\p_shituqingshen.lua
 806020=\event\relation\eshituzongdongyuan.lua
 
-;objectÒª°ó¶¨µÄÌØÓĞ½Å±¾
+;objectè¦ç»‘å®šçš„ç‰¹æœ‰è„šæœ¬
 807000=\obj\ObjectScript\object_chengxiongdatu_BossMonster.lua
 807001=\obj\ObjectScript\object_chengxiongdatu_CorpseMonster.lua
 807003=\obj\ObjectScript\object_BookThief.lua
 
-;»î¶¯
+;æ´»åŠ¨
 808000=\event\huodong\activity.lua
 808001=\event\huodong\emenpaiboss.lua
 808002=\event\huodong\edataosha_doing.lua
@@ -5131,7 +5131,7 @@ MGR_TXT
 808007=\event\huodong\elock.lua
 808008=\event\huodong\echangeusername.lua
 808009=\event\huodong\echangeguildname.lua
-;»é½äÉı¼¶ zchw
+;å©šæˆ’å‡çº§ zchw
 808010=\event\huodong\wedding_ring_upgrade.lua
 808015=\event\huodong\eTouximenpai_Generate.lua
 808016=\event\huodong\eTouximenpai_NPC_xiaoyao.lua
@@ -5159,9 +5159,9 @@ MGR_TXT
 ; zchw collect signature
 808038=\event\huodong\Collect_Signature.lua
 808039=\event\huodong\seek_treasure.lua
-;ñÒÉÙÎ¢£¬2008.6.3¡£¼«Æ·×°±¸·Å³ö£¬Ã¿Ê®·ÖÖÓË¢³öËªÓ°µÄ½Å±¾¡£
+;è¤šå°‘å¾®ï¼Œ2008.6.3ã€‚æå“è£…å¤‡æ”¾å‡ºï¼Œæ¯ååˆ†é’Ÿåˆ·å‡ºéœœå½±çš„è„šæœ¬ã€‚
 808040=\event\huodong\eShuangyingBoss.lua
-; zchw °ïÅÉÊÕ¼¯
+; zchw å¸®æ´¾æ”¶é›†
 808041=\event\huodong\activity_guild_collect.lua
 
 808058=\event\huodong\eexchange_longzhu.lua
@@ -5192,7 +5192,7 @@ MGR_TXT
 808091=\event\huodong\eActLaborDayCardPresent.lua
 ;added end
 
-;Ó­°ÂÔË»î¶¯Ïà¹Ø½Å±¾
+;è¿å¥¥è¿æ´»åŠ¨ç›¸å…³è„šæœ¬
 808080=\event\huodong\eLuoYang_GodFireTransfer.lua
 808081=\event\huodong\eSuZhou_GodFireTransfer.lua
 808082=\event\huodong\eDaLi_GodFireTransfer.lua
@@ -5204,10 +5204,10 @@ MGR_TXT
 808088=\obj\item\GodFireGroupAttackItem.lua
 808089=\obj\item\GodFireSpecialItem.lua
 
-;"ÎåÒ»ÁìÈ¡ÕĞÅÆ"»î¶¯Ïà¹Ø½Å±¾
+;"äº”ä¸€é¢†å–æ‹›ç‰Œ"æ´»åŠ¨ç›¸å…³è„šæœ¬
 808090=\event\huodong\eLingQuZhaoPai.lua
 
-;ĞÂÊ¥»ğ»î¶¯
+;æ–°åœ£ç«æ´»åŠ¨
 808093=\event\olympicgames\eGodFireTransfer_quiz.lua
 808094=\event\olympicgames\eGodFireTransfer_fuben.lua
 808095=\event\olympicgames\eGodFireTransfer_RanShao.lua
@@ -5222,32 +5222,32 @@ MGR_TXT
 808104=\event\olympicgames\eGodFireTransfer_GengQiang.lua
 808105=\event\olympicgames\eGodFireTransfer_YongHeng.lua
 
-;ÉÁµç¹·¹·»î¶¯
+;é—ªç”µç‹—ç‹—æ´»åŠ¨
 808106=\event\huodong\ePetIsland_Dog.lua
 
-;ĞÂÊ¥ÊŞÉ½»î¶¯
+;æ–°åœ£å…½å±±æ´»åŠ¨
 808120=\event\huodong\newshengshoushan.lua
 808121=\event\xinshengshoushan\entercopyScene.lua
-;zchw ÖØÎÂ»éÀñ
+;zchw é‡æ¸©å©šç¤¼
 808122=\event\huodong\reexperience_wedding.lua
-;Ìá¸ßÆå¾ÖĞİÏ¢ÊÒÀûÓÃÂÊÖ®ÕäççÖ®¹â
+;æé«˜æ£‹å±€ä¼‘æ¯å®¤åˆ©ç”¨ç‡ä¹‹çç‘ä¹‹å…‰
 808123=\event\huodong\zhenlongzhiguang.lua
-;ºÍĞ³¹â»·2009-3-26µ½2009-5-9Ö®¼äµÄ»î¶¯
+;å’Œè°å…‰ç¯2009-3-26åˆ°2009-5-9ä¹‹é—´çš„æ´»åŠ¨
 808124=\event\huodong\hexieguanghuan.lua
-;°Ù±äÁ³Æ×»î¶¯
+;ç™¾å˜è„¸è°±æ´»åŠ¨
 808125=\event\huodong\ebaibianlianpu.lua
-;ÎåÒ»»î¶¯
+;äº”ä¸€æ´»åŠ¨
 808126=\event\huodong\shenqidemalanhua.lua
 808127=\event\huodong\shenqidemalanhua_exchange.lua
 808128=\event\huodong\laodongzuikuaile.lua
 
-;½ÇÉ«´´½¨Ê±¼äÔÚ2009Äê3ÔÂ26ÈÕ£¬00£º00Ç°£¬ÇÒ½ÇÉ«µÈ¼¶¡Ü45¼¶Ê±£¬¶øÇÒÎ´ÁìÈ¡¹ıÇ¬À¤´ü£¬Ôò¿ÉÒÔ²Î¼Ó¸Ã»î¶¯
+;è§’è‰²åˆ›å»ºæ—¶é—´åœ¨2009å¹´3æœˆ26æ—¥ï¼Œ00ï¼š00å‰ï¼Œä¸”è§’è‰²ç­‰çº§â‰¤45çº§æ—¶ï¼Œè€Œä¸”æœªé¢†å–è¿‡ä¹¾å¤è¢‹ï¼Œåˆ™å¯ä»¥å‚åŠ è¯¥æ´»åŠ¨
 808129=\event\huodong\ebulingqiankundai.lua
 
-;¶ËÎç½Ú¿ìÀÖ
+;ç«¯åˆèŠ‚å¿«ä¹
 808130=\event\huodong\happyduanwujie.lua
 
-;×°±¸Ïà¹Ø½Å±¾
+;è£…å¤‡ç›¸å…³è„šæœ¬
 809261=\event\equip\judge_aptitude.lua
 809262=\event\equip\equip_enchance.lua
 809263=\event\equip\equip_levelup.lua
@@ -5256,7 +5256,7 @@ MGR_TXT
 809266=\event\equip\equip_bind.lua
 809267=\event\chuansong\echuansong_zeiying.lua
 
-;BOSSÈºÏà¹Ø½Å±¾
+;BOSSç¾¤ç›¸å…³è„šæœ¬
 810000=\event\bossgroup\bg_XuanWu.lua
 810001=\event\bossgroup\bg_CangShan.lua
 810002=\event\bossgroup\bg_WuYi.lua
@@ -5264,10 +5264,10 @@ MGR_TXT
 810100=\event\bossgroup\bg_BossAI_CreateMonster.lua
 810110=\event\bossgroup\bg_ShengShouShan.lua
 
-;»»ÌìÆø
+;æ¢å¤©æ°”
 820001=\event\weather\changeweather.lua
 
-;UIControl½çÃæ¿ØÖÆ½Å±¾
+;UIControlç•Œé¢æ§åˆ¶è„šæœ¬
 870001=\event\uicontrol\ui_onlogin.lua
 
 888888=\scene.lua
@@ -5279,10 +5279,10 @@ MGR_TXT
 888901=\event\misc\couplequestion.lua
 888902=\event\prize\yuanbaoshop.lua
 
-;¸øÌ¨ÍåÔ¤Áô
+;ç»™å°æ¹¾é¢„ç•™
 ;889000-889100
 889000=\obj\item\zhuandan.lua
-;45¼¶¹ÄÀøÌáÉıĞÄ·¨ÈÎÎñ
+;45çº§é¼“åŠ±æå‡å¿ƒæ³•ä»»åŠ¡
 890000=\event\tishengxinfa\zhaowuxufa.lua
 890001=\event\tishengxinfa\chaimulieshi.lua
 890002=\event\tishengxinfa\tongqiangtiebi.lua

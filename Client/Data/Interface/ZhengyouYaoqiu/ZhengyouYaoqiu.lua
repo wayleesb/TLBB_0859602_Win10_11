@@ -1,16 +1,16 @@
--- Õ÷ÓÑÆ½Ì¨ : Õ÷ÓÑÒªÇó£¬ cuiyinjie 2008.10.21
+-- å¾å‹å¹³å° : å¾å‹è¦æ±‚ï¼Œ cuiyinjie 2008.10.21
 
-local OPT_ADD = 0;  -- ·¢²¼ÐÅÏ¢
-local OPT_EDIT = 1; -- ¸ü¸ÄÐÅÏ¢
+local OPT_ADD = 0;  -- å‘å¸ƒä¿¡æ¯
+local OPT_EDIT = 1; -- æ›´æ”¹ä¿¡æ¯
 local g_CurStatus = OPT_EDIT;
 local g_FriendType = 1;
 
--- ´ËÌõ¼þºÍPlayerZhengyouPT.luaÀï¶¨ÒåÒ»ÖÂ£¬ÒªÍ¬Ê±¸ü¸Ä
+-- æ­¤æ¡ä»¶å’ŒPlayerZhengyouPT.luaé‡Œå®šä¹‰ä¸€è‡´ï¼Œè¦åŒæ—¶æ›´æ”¹
 local g_Conditions = {
-	MenPai = {"È«²¿", "ÉÙÁÖ", "Ã÷½Ì", "Ø¤°ï", "Îäµ±", "¶ëáÒ", "ÐÇËÞ", "ÌìÁú", "ÌìÉ½", "åÐÒ£"},
-	Level = {"ÈÎÒâ", "10¼¶ÒÔÏÂ", "10µ½20¼¶", "20µ½30¼¶", "30µ½40¼¶", "40µ½50¼¶", "50µ½60¼¶", "60µ½70¼¶", "70µ½80¼¶", "80µ½90¼¶", "90µ½100¼¶", "100¼¶ÒÔÉÏ"},
-	Sexy = {"²»ÏÞ", "ÄÐ", "Å®"},
-	Mudi = { {"ÈÎÒâ","°ïÅÉÊÕÈË","Ñ°ÕÒ°ïÅÉ",}, {"ÈÎÒâ","°ÝÊ¦","ÊÕÍ½",},}, 
+	MenPai = {"å…¨éƒ¨", "å°‘æž—", "æ˜Žæ•™", "ä¸å¸®", "æ­¦å½“", "å³¨åµ‹", "æ˜Ÿå®¿", "å¤©é¾™", "å¤©å±±", "é€é¥"},
+	Level = {"ä»»æ„", "10çº§ä»¥ä¸‹", "10åˆ°20çº§", "20åˆ°30çº§", "30åˆ°40çº§", "40åˆ°50çº§", "50åˆ°60çº§", "60åˆ°70çº§", "70åˆ°80çº§", "80åˆ°90çº§", "90åˆ°100çº§", "100çº§ä»¥ä¸Š"},
+	Sexy = {"ä¸é™", "ç”·", "å¥³"},
+	Mudi = { {"ä»»æ„","å¸®æ´¾æ”¶äºº","å¯»æ‰¾å¸®æ´¾",}, {"ä»»æ„","æ‹œå¸ˆ","æ”¶å¾’",},}, 
 }
 
 local g_Ctrls = {};
@@ -39,7 +39,7 @@ function ZhengyouYaoqiu_OnEvent(event)
 		end
 
 	elseif ("ZHENGYOUPT_NOTIFY_INPUT_YAOQIU" == event ) then
-	  ZhengyouYaoqiu_ShowWindow( arg0, arg2 );	-- arg1ÎÞÓÃ
+	  ZhengyouYaoqiu_ShowWindow( arg0, arg2 );	-- arg1æ— ç”¨
 	end
 end
 
@@ -57,7 +57,7 @@ function ZhengyouYaoqiu_SetControls()
 	};
 end
 
--- ³õÊ¼»¯¸÷¿Ø¼þ
+-- åˆå§‹åŒ–å„æŽ§ä»¶
 function ZhengyouYaoqiu_OnInitDialog()
 	--ComboBoxAddItem
 	local i = 1;
@@ -80,12 +80,12 @@ function ZhengyouYaoqiu_OnInitDialog()
 	ZhengyouYaoqiu_DragTitle:SetText("#{ZYPT_081103_064}");
 end
 
---Õ÷ÓÑÄ¿µÄ¸ù¾Ý°ÝÊ¦ºÍ°ïÅÉ¶ø²»Í¬£¬ÆäËüÎª¿Õ
+--å¾å‹ç›®çš„æ ¹æ®æ‹œå¸ˆå’Œå¸®æ´¾è€Œä¸åŒï¼Œå…¶å®ƒä¸ºç©º
 function ZhengyouYaoqiu_ResetMudiCombo()
    g_Ctrls.MudiCombo:ResetList();
    g_Ctrls.MudiCombo:SetText("");
    local i = 1;
-   if ( 2 == tonumber(g_FriendType) ) then -- À²°ï
+   if ( 2 == tonumber(g_FriendType) ) then -- å•¦å¸®
    		ZhengyouYaoqiu_Mudi:Show();
         ZhengyouYaoqiu_Text6:Show();
         for i = 1, table.getn(g_Conditions.Mudi[1]) do
@@ -104,7 +104,7 @@ function ZhengyouYaoqiu_ResetMudiCombo()
         ZhengyouYaoqiu_Text6:Hide();        
    end
 
-   	--±à¼­Ê±Òª±£³ÖÍæ¼ÒÏÖÓÐµÄÐèÇó
+   	--ç¼–è¾‘æ—¶è¦ä¿æŒçŽ©å®¶çŽ°æœ‰çš„éœ€æ±‚
    if (g_CurStatus == OPT_EDIT) then
    		local iLevelNeed, iMenpaiNeed, iSexyNeed, iZhengyouMudi = FindFriendDataPool:GetDetailInfo("CONDITION");
 
@@ -120,7 +120,7 @@ function ZhengyouYaoqiu_ResetMudiCombo()
    			iSexyNeed = 0;
    		end
 
-   		if ( 2 == tonumber(g_FriendType) ) then -- À²°ï
+   		if ( 2 == tonumber(g_FriendType) ) then -- å•¦å¸®
    			 if ((iZhengyouMudi - 1) >= 0 and (iZhengyouMudi - 1) <= table.getn(g_Conditions.Mudi[1])) then
         		g_Ctrls.MudiCombo:SetCurrentSelect(iZhengyouMudi - 1);
        		 else
@@ -165,9 +165,9 @@ function ZhengyouYaoqiu_ShowWindow(sOption, iFriendType)
 	ZhengyouYaoqiu_ResetMudiCombo(); 
 end
 
--- È·¶¨·¢²¼»ò¸ü¸Ä
+-- ç¡®å®šå‘å¸ƒæˆ–æ›´æ”¹
 function OnZhengyouYaoqiu_OkClicked()
-	-- ·¢²¼ÇëÇó
+	-- å‘å¸ƒè¯·æ±‚
 	local sLevel, iLevel =  g_Ctrls.LevelCombo:GetCurrentSelect();
 	local sMenpai, iMenpai = g_Ctrls.MenpaiCombo:GetCurrentSelect();
 	local sSexy, iSexy = g_Ctrls.SexyCombo:GetCurrentSelect();

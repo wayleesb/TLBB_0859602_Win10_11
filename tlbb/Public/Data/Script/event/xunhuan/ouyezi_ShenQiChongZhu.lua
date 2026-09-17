@@ -1,40 +1,40 @@
---´´½¨ÈË[ QUFEI 2007-09-27 13:10 UPDATE BugID 25452 ]
---ÉñÆ÷ÖØÖıºÍĞŞÀíÊÂ¼ş½Å±¾
+--åˆ›å»ºäºº[ QUFEI 2007-09-27 13:10 UPDATE BugID 25452 ]
+--ç¥å™¨é‡é“¸å’Œä¿®ç†äº‹ä»¶è„šæœ¬
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x500504_g_ScriptId	= 500504
 
---Ä¿±ênpc
-x500504_g_Name			= "Å·Ò±×Ó"
+--ç›®æ ‡npc
+x500504_g_Name			= "æ¬§å†¶å­"
 
---¿ØÖÆ½Å±¾
+--æ§åˆ¶è„šæœ¬
 x500504_g_ControlScript		= 001066
 
---ÈÎÎñºÅ
+--ä»»åŠ¡å·
 x500504_g_MissionId			= 420
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x500504_g_EventList	= {}
 
-x500504_g_ChongXinYeLianInfo			= "ÖØĞÂÒ±Á¶ÉñÆ÷"
+x500504_g_ChongXinYeLianInfo			= "é‡æ–°å†¶ç‚¼ç¥å™¨"
 
-x500504_g_Impact_ShenQi = 47						-- ÖØĞÂÒ±Á¶ÉñÆ÷³É¹¦Ê±µÄÌØĞ§ID
+x500504_g_Impact_ShenQi = 47						-- é‡æ–°å†¶ç‚¼ç¥å™¨æˆåŠŸæ—¶çš„ç‰¹æ•ˆID
 
-x500504_g_ItemBonus={{id=30505700,num=1,sqlvl=42},{id=30505701,num=1,sqlvl=52},{id=30505702,num=1,sqlvl=62},{id=30505703,num=1,sqlvl=72},{id=30505704,num=1,sqlvl=82},{id=30505705,num=1,sqlvl=92}}   -- ²ĞÈ±µÄÉñ½Ú
+x500504_g_ItemBonus={{id=30505700,num=1,sqlvl=42},{id=30505701,num=1,sqlvl=52},{id=30505702,num=1,sqlvl=62},{id=30505703,num=1,sqlvl=72},{id=30505704,num=1,sqlvl=82},{id=30505705,num=1,sqlvl=92}}   -- æ®‹ç¼ºçš„ç¥èŠ‚
 x500504_g_Item_ShenQi={{id01=10300000, id02=10300001, id03=10300002, id04=10300003, id05=10300004, id06=10300005}, 
 											 {id01=10302000, id02=10302001, id03=10302002, id04=10302003, id05=10302004, id06=10302005},
 											 {id01=10304000, id02=10304001, id03=10304002, id04=10304003, id05=10304004, id06=10304005},
-											 {id01=10305000, id02=10305001, id03=10305002, id04=10305003, id05=10305004, id06=10305005}}																			 	 -- ÉñÆ÷
+											 {id01=10305000, id02=10305001, id03=10305002, id04=10305003, id05=10305004, id06=10305005}}																			 	 -- ç¥å™¨
 
 --**********************************
---Èë¿Úº¯Êı
+--å…¥å£å‡½æ•°
 --**********************************
---µã»÷ºóÖ´ĞĞ´Ë½Å±¾
+--ç‚¹å‡»åæ‰§è¡Œæ­¤è„šæœ¬
 function x500504_OnDefaultEvent( sceneId, selfId, targetId )
 
-	--ÅĞ¶Ï¸ÃnpcÊÇ·ñÊÇ¶ÔÓ¦µÄnpc
+	--åˆ¤æ–­è¯¥npcæ˜¯å¦æ˜¯å¯¹åº”çš„npc
 	if LuaFnGetName( sceneId, targetId ) ~= x500504_g_Name then
-		x500504_NotifyTip( sceneId, selfId, "ÖØÖıÉñÆ÷Ê§°Ü" )			
+		x500504_NotifyTip( sceneId, selfId, "é‡é“¸ç¥å™¨å¤±è´¥" )			
 		MissionLog(sceneId, "[ShenBing]error: x500504_OnDefaultEvent..LuaFnGetName="..LuaFnGetName( sceneId, targetId ))
 		return 0
 	end
@@ -63,7 +63,7 @@ function x500504_OnDefaultEvent( sceneId, selfId, targetId )
 		
 	elseif key == 136 then
 		
-		--·¢ËÍÈÎÎñĞèÇóµÄĞÅÏ¢		
+		--å‘é€ä»»åŠ¡éœ€æ±‚çš„ä¿¡æ¯		
 		BeginEvent(sceneId)
 			AddText(sceneId, x500504_g_ChongXinYeLianInfo)
 			AddText(sceneId, "#{XYSB_20070928_005}")
@@ -76,11 +76,11 @@ function x500504_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x500504_OnEnumerate( sceneId, selfId, targetId )
 
-	--ÅĞ¶Ï¸ÃnpcÊÇ·ñÊÇ¶ÔÓ¦ÈÎÎñµÄnpc
+	--åˆ¤æ–­è¯¥npcæ˜¯å¦æ˜¯å¯¹åº”ä»»åŠ¡çš„npc
 	if LuaFnGetName( sceneId, targetId ) ~= x500504_g_Name then
 		return 0
 	end
@@ -92,7 +92,7 @@ function x500504_OnEnumerate( sceneId, selfId, targetId )
 end
 
 --**********************************
---ĞÑÄ¿ÌáÊ¾
+--é†’ç›®æç¤º
 --**********************************
 function x500504_NotifyTip( sceneId, selfId, msg )
 
@@ -104,14 +104,14 @@ function x500504_NotifyTip( sceneId, selfId, msg )
 end
 
 --**********************************
--- ÖØĞÂÒ±Á¶ÉñÆ÷
+-- é‡æ–°å†¶ç‚¼ç¥å™¨
 --**********************************
 function x500504_ChongXinYeLian( sceneId, selfId, targetId, ItemID, bagpos )	
 
-	--ÅĞ¶Ï¸ÃnpcÊÇ·ñÊÇ¶ÔÓ¦ÈÎÎñµÄnpc
+	--åˆ¤æ–­è¯¥npcæ˜¯å¦æ˜¯å¯¹åº”ä»»åŠ¡çš„npc
 	-- PrintStr(LuaFnGetName( sceneId, targetId ))
 	if LuaFnGetName( sceneId, targetId ) ~= x500504_g_Name then
-		x500504_NotifyTip( sceneId, selfId, "ÖØĞÂÒ±Á¶ÉñÆ÷Ê§°Ü" )					
+		x500504_NotifyTip( sceneId, selfId, "é‡æ–°å†¶ç‚¼ç¥å™¨å¤±è´¥" )					
 		MissionLog(sceneId, "[ShenBing]error: x500504_ChongXinYeLian..LuaFnGetName="..LuaFnGetName( sceneId, targetId ))
 		return 0
 	end
@@ -149,9 +149,9 @@ function x500504_ChongXinYeLian( sceneId, selfId, targetId, ItemID, bagpos )
 		ret = EndAddItem( sceneId, selfId )
 			
 		if ret > 0 then								
-			TryRecieveItem( sceneId, selfId, ItemBonusID, QUALITY_MUST_BE_CHANGE )	-- ·Å²»ÏÂ¾ÍÃ»ÓĞÁË
+			TryRecieveItem( sceneId, selfId, ItemBonusID, QUALITY_MUST_BE_CHANGE )	-- æ”¾ä¸ä¸‹å°±æ²¡æœ‰äº†
 			
-			local strMsg = "Äã»ñµÃÁË".."#{_ITEM"..(ItemBonusID).."}" -- ²ĞÈ±µÄÉñ½Ú			
+			local strMsg = "ä½ è·å¾—äº†".."#{_ITEM"..(ItemBonusID).."}" -- æ®‹ç¼ºçš„ç¥èŠ‚			
 			x500504_NotifyTip( sceneId, selfId, strMsg)
 		
 			local LogInfo	= format( "[ShenBing]Succeed: x500504_ChongXinYeLian( sceneId=%d, GUID=%0X ), ItemBonusID=%d",
@@ -163,8 +163,8 @@ function x500504_ChongXinYeLian( sceneId, selfId, targetId, ItemID, bagpos )
 			LuaFnSendSpecificImpactToUnit( sceneId, selfId, selfId, selfId, x500504_g_Impact_ShenQi, 0 )
 		
 			local EraseRet = EraseItem( sceneId, selfId, bagpos )							
-			if EraseRet < 0 then      --Èç¹ûÉ¾³ıÊ§°Ü,½«²»»á²úÉúÈÎºÎĞ§¹û
-			  local strMsg = "É¾³ıÎäÆ÷Ê§°Ü"
+			if EraseRet < 0 then      --å¦‚æœåˆ é™¤å¤±è´¥,å°†ä¸ä¼šäº§ç”Ÿä»»ä½•æ•ˆæœ
+			  local strMsg = "åˆ é™¤æ­¦å™¨å¤±è´¥"
 				x500504_NotifyTip( sceneId, selfId, strMsg)
 				return 0
 			end			
@@ -178,7 +178,7 @@ function x500504_ChongXinYeLian( sceneId, selfId, targetId, ItemID, bagpos )
 
 end
 
--- ÎäÆ÷Ìá½»ÊÂ¼ş
+-- æ­¦å™¨æäº¤äº‹ä»¶
 function x500504_OnMissionCheck( sceneId, selfId, npcid, scriptId, index1, index2, index3, petindex )
 
 	--PrintStr("OnMissionCheck...")
@@ -193,17 +193,17 @@ function x500504_OnMissionCheck( sceneId, selfId, npcid, scriptId, index1, index
 	MissionLog(sceneId, LogInfo)
 		
 	--***********************************************************
-	-- zchw ÖØÖıµÄÊ±ºò£¬Ö»ÓĞÉñÆ÷ÊÇ±ØĞëµÄ£¬ËùÒÔÖ»ĞèÒª¶Ôindex1×ö¼ì²é
+	-- zchw é‡é“¸çš„æ—¶å€™ï¼Œåªæœ‰ç¥å™¨æ˜¯å¿…é¡»çš„ï¼Œæ‰€ä»¥åªéœ€è¦å¯¹index1åšæ£€æŸ¥
 	if index1 >= 100 then
-		x500504_NotifyTip( sceneId, selfId, "#{XYSB_20070928_006}" )			-- ¡°Çë·ÅÈëÒ»°ÑÉñÆ÷¡±		
+		x500504_NotifyTip( sceneId, selfId, "#{XYSB_20070928_006}" )			-- â€œè¯·æ”¾å…¥ä¸€æŠŠç¥å™¨â€		
 		return 0;
 	end	
 	--***********************************************************
 	
-	-- ÖØĞÂÒ±Á¶ÉñÆ÷Ìá½»½çÃæ						
-	--ÅĞ¶Ï¸ÃnpcÊÇ·ñÊÇ¶ÔÓ¦µÄnpc
+	-- é‡æ–°å†¶ç‚¼ç¥å™¨æäº¤ç•Œé¢						
+	--åˆ¤æ–­è¯¥npcæ˜¯å¦æ˜¯å¯¹åº”çš„npc
 	if LuaFnGetName( sceneId, npcid ) ~= x500504_g_Name then
-		x500504_NotifyTip( sceneId, selfId, "ÖØĞÂÒ±Á¶ÉñÆ÷Ê§°Ü" )							
+		x500504_NotifyTip( sceneId, selfId, "é‡æ–°å†¶ç‚¼ç¥å™¨å¤±è´¥" )							
 		MissionLog(sceneId, "[ShenBing]error: x500504_OnMissionCheck..LuaFnGetName="..LuaFnGetName( sceneId, npcid ))
 		return 0
 	end
@@ -212,7 +212,7 @@ function x500504_OnMissionCheck( sceneId, selfId, npcid, scriptId, index1, index
 	local ItemLevel = 0	
 	local ItemID = 0	
 	
-	-- ñÒÉÙÎ¢£¬2008.5.30¡£102¼¶ÉñÆ÷²»ÄÜ¹»ÖØÖıÁË¡£ĞÑÄ¿ÌáÊ¾¡£
+	-- è¤šå°‘å¾®ï¼Œ2008.5.30ã€‚102çº§ç¥å™¨ä¸èƒ½å¤Ÿé‡é“¸äº†ã€‚é†’ç›®æç¤ºã€‚
 	ItemID = LuaFnGetItemTableIndexByIndex(sceneId, selfId, index1)
 	-- PrintStr(ItemID)
 	if ItemID == 10300100 or ItemID == 10300101 or ItemID == 10300102 
@@ -226,7 +226,7 @@ function x500504_OnMissionCheck( sceneId, selfId, npcid, scriptId, index1, index
 		 or ItemID == 10305200 or ItemID == 10305201 or ItemID == 10305202
 		then
 		
-		x500504_NotifyTip( sceneId, selfId, "102¼¶ÉñÆ÷²»ÄÜÖØÖı" )
+		x500504_NotifyTip( sceneId, selfId, "102çº§ç¥å™¨ä¸èƒ½é‡é“¸" )
 		return 0
 	end
 
@@ -258,7 +258,7 @@ function x500504_OnMissionCheck( sceneId, selfId, npcid, scriptId, index1, index
 					return 0
 			end
 			
-			-- ¼ì²âÌá½»µÄÊÇ²»ÊÇÉñÆ÷
+			-- æ£€æµ‹æäº¤çš„æ˜¯ä¸æ˜¯ç¥å™¨
 									
 			if (ItemID >= x500504_g_Item_ShenQi[1].id01 and ItemID <= x500504_g_Item_ShenQi[1].id06)
 				 or (ItemID >= x500504_g_Item_ShenQi[2].id01 and ItemID <= x500504_g_Item_ShenQi[2].id06)
@@ -278,17 +278,17 @@ function x500504_OnMissionCheck( sceneId, selfId, npcid, scriptId, index1, index
 		end
 	end
 				
-	x500504_NotifyTip( sceneId, selfId, "#{XYSB_20070928_006}" )			-- ¡°Çë·ÅÈëÒ»°ÑÉñÆ÷¡±		
+	x500504_NotifyTip( sceneId, selfId, "#{XYSB_20070928_006}" )			-- â€œè¯·æ”¾å…¥ä¸€æŠŠç¥å™¨â€		
 	return 0	
 			
 end
 
 --/////////////////////////////////////////////////////////////////////////////////////////////////////
---»ñÈ¡¾ßÌåitemµÄÏêÏ¸ĞÅÏ¢
+--è·å–å…·ä½“itemçš„è¯¦ç»†ä¿¡æ¯
 function x500504_GetItemDetailInfo(itemId)
 	local itemId, itemName, itemDesc = GetItemInfoByItemId(itemId)
 	if itemId == -1 then
-		local strText = format("%sÎïÆ·ÔÚ'EquipBase.txt'Ã»ÓĞÕÒµ½!!", itemName)		
+		local strText = format("%sç‰©å“åœ¨'EquipBase.txt'æ²¡æœ‰æ‰¾åˆ°!!", itemName)		
 	end
 	return itemId, itemName, itemDesc
 end	

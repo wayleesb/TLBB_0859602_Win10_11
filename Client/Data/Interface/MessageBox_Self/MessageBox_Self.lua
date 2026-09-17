@@ -1,7 +1,7 @@
 g_InitiativeClose = 0;
 local g_currentList = 0;
 local g_currentIndex = 0;
--- °ÚÌ¯µØ×âÌáÊ¾´°¿Ú£¬ÔÚÕâÀïÓĞ·¢ËÍ¸ø·şÎñÆ÷µÄÈ·¶¨¿ªÊ¼°ÚÌ¯µÄÏûÏ¢
+-- æ‘†æ‘Šåœ°ç§Ÿæç¤ºçª—å£ï¼Œåœ¨è¿™é‡Œæœ‰å‘é€ç»™æœåŠ¡å™¨çš„ç¡®å®šå¼€å§‹æ‘†æ‘Šçš„æ¶ˆæ¯
 local Recycle_Type = -1;
 local Recycle_CurSelectItem = -1
 local g_FrameInfo = -1;
@@ -9,64 +9,64 @@ local FrameInfoList = {
 	STALL_RENT_FRAME			= 1,
 	DISCARD_ITEM_FRAME			= 2,
 	CANNT_DISCARD_ITEM			= 3,
-	TEAM_ASKJOIN				= 4,	--ÓĞÈËÑûÇëÄã¼ÓÈë¶ÓÎé
-    TEAM_MEMBERINVERT			= 5,	--¶ÓÔ±ÑûÇëÄ³ÈË¼ÓÈë¶ÓÎéÇëÇóÄãÍ¬Òâ
-    TEAM_SOMEASK				= 6,	--Ä³ÈËÉêÇë¼ÓÈë¶ÓÎé
-    TEAM_FOLLOW		 			= 7,	--½øÈë×é¶Ó¸úËæÄ£Ê½
-    FRAME_AFFIRM_SHOW 			= 8,	--½øÈë·ÅÆúÈÎÎñÈ·ÈÏÄ£Ê½
-    GUILD_CREATE_CONFIRM		= 9, 	--°ï»á´´½¨È·ÈÏÄ£Ê½
-    SYSTEM_TIP_INFO 			= 10,	--ÏµÍ³ÌáÊ¾¶Ô»°¿òÄ£Ê½
-    GUILD_QUIT_CONFIRM 			= 11,	--°ï»áÍË³öÈ·ÈÏÄ£Ê½
-    GUILD_DESTORY_CONFIRM		= 12,	--°ï»áÉ¾³ıÈ·ÈÏÄ£Ê½
-    CALL_OF						= 13,	--À­ÈË
-    NET_CLOSE_MESSAGE			= 14,	--¶Ï¿ªÍøÂç
-    PET_FREE_CONFIRM			= 15,	--ÕäÊŞ·ÅÉúÈ·ÈÏ
-    CITY_CONFIRM				= 16,	--³ÇÊĞÏà¹ØÈ·ÈÏ
-    SAVE_STALL_INFO				= 17,	--±£´æ°ÚÌ¯ĞÅÏ¢
-    PET_SYNC_CONFIRM			= 18,	--ÕäÊŞ·±Ö³È·ÈÏ
-    QUIT_GAME					= 19,	--ÍË³öÓÎÏ·µÄÈ·ÈÏ
-    EQUIP_ITEM					= 20,	--×°±¸ÎïÆ·
-    YUANBAO_BUY_ITEM		= 21, --Ôª±¦ÉÌµê¹ºÂòÎïÆ·È·ÈÏ
-    CONFIRM_REMOVE_STALL	= 22,--È·ÈÏ³·Ì² add by zchw
-    PET_PROCREATE_PROMPT			= 23, -- ÕäÊŞ·±Ö³ÌáÊ¾ zchw
+	TEAM_ASKJOIN				= 4,	--æœ‰äººé‚€è¯·ä½ åŠ å…¥é˜Ÿä¼
+    TEAM_MEMBERINVERT			= 5,	--é˜Ÿå‘˜é‚€è¯·æŸäººåŠ å…¥é˜Ÿä¼è¯·æ±‚ä½ åŒæ„
+    TEAM_SOMEASK				= 6,	--æŸäººç”³è¯·åŠ å…¥é˜Ÿä¼
+    TEAM_FOLLOW		 			= 7,	--è¿›å…¥ç»„é˜Ÿè·Ÿéšæ¨¡å¼
+    FRAME_AFFIRM_SHOW 			= 8,	--è¿›å…¥æ”¾å¼ƒä»»åŠ¡ç¡®è®¤æ¨¡å¼
+    GUILD_CREATE_CONFIRM		= 9, 	--å¸®ä¼šåˆ›å»ºç¡®è®¤æ¨¡å¼
+    SYSTEM_TIP_INFO 			= 10,	--ç³»ç»Ÿæç¤ºå¯¹è¯æ¡†æ¨¡å¼
+    GUILD_QUIT_CONFIRM 			= 11,	--å¸®ä¼šé€€å‡ºç¡®è®¤æ¨¡å¼
+    GUILD_DESTORY_CONFIRM		= 12,	--å¸®ä¼šåˆ é™¤ç¡®è®¤æ¨¡å¼
+    CALL_OF						= 13,	--æ‹‰äºº
+    NET_CLOSE_MESSAGE			= 14,	--æ–­å¼€ç½‘ç»œ
+    PET_FREE_CONFIRM			= 15,	--çå…½æ”¾ç”Ÿç¡®è®¤
+    CITY_CONFIRM				= 16,	--åŸå¸‚ç›¸å…³ç¡®è®¤
+    SAVE_STALL_INFO				= 17,	--ä¿å­˜æ‘†æ‘Šä¿¡æ¯
+    PET_SYNC_CONFIRM			= 18,	--çå…½ç¹æ®–ç¡®è®¤
+    QUIT_GAME					= 19,	--é€€å‡ºæ¸¸æˆçš„ç¡®è®¤
+    EQUIP_ITEM					= 20,	--è£…å¤‡ç‰©å“
+    YUANBAO_BUY_ITEM		= 21, --å…ƒå®å•†åº—è´­ä¹°ç‰©å“ç¡®è®¤
+    CONFIRM_REMOVE_STALL	= 22,--ç¡®è®¤æ’¤æ»© add by zchw
+    PET_PROCREATE_PROMPT			= 23, -- çå…½ç¹æ®–æç¤º zchw
 
-	--Õâ¸ö24Ò»¶¨²»ÄÜ¸Ä£¬¸ÄÁË³ö´íµÄ£¡£¡£¡£¡£¡Chris
-	SERVER_CONTROL				= 24,	--Server¿ØÖÆµ¯³öµÄÌáÊ¾¿ò
-	DELETE_FRIEND_MESSAGE		= 25,	--È·¶¨É¾³ıºÃÓÑµÄÌáÊ¾¿ò
+	--è¿™ä¸ª24ä¸€å®šä¸èƒ½æ”¹ï¼Œæ”¹äº†å‡ºé”™çš„ï¼ï¼ï¼ï¼ï¼Chris
+	SERVER_CONTROL				= 24,	--Serveræ§åˆ¶å¼¹å‡ºçš„æç¤ºæ¡†
+	DELETE_FRIEND_MESSAGE		= 25,	--ç¡®å®šåˆ é™¤å¥½å‹çš„æç¤ºæ¡†
 
-    GEM_COMBINED_CONFIRM		= 88,	-- È·ÈÏ±¦Ê¯ºÏ³É
-   	ENCHASE_CONFIRM					= 99,	-- È·ÈÏÏâÇ¶
-   	ENCHASE_FOUR_CONFIRM		= 100,	-- add:lby20080527È·ÈÏ4ÏâÇ¶  
+    GEM_COMBINED_CONFIRM		= 88,	-- ç¡®è®¤å®çŸ³åˆæˆ
+   	ENCHASE_CONFIRM					= 99,	-- ç¡®è®¤é•¶åµŒ
+   	ENCHASE_FOUR_CONFIRM		= 100,	-- add:lby20080527ç¡®è®¤4é•¶åµŒ  
    	 	
-   	--CARVE_CONFIRM				= 102,	-- È·ÈÏµñ×Á
+   	--CARVE_CONFIRM				= 102,	-- ç¡®è®¤é›•ç¢
 
 
 
-    PS_RENAME_MESSAGE			= 116,	--¸ü¸ÄÍæ¼ÒÉÌµêµêÃû
-    PS_READ_MESSAGE				= 117,	--¸ü¸ÄÍæ¼ÒÉÌµê½éÉÜ£¨¹ã¸æ£©
-    PS_ADD_BASE_MONEY			= 118,	--³äÈë±¾½ğ
-    PS_ADD_GAIN_MONEY			= 119,	--³äÈëÓ¯Àû½ğ
-    PS_DEC_GAIN_MONEY			= 120,	--È¡³öÓ¯Àû½ğ
-    PS_ADD_STALL				= 121,	--Ôö¼Ó¹ñÌ¨
-    PS_DEL_STALL				= 122,	--¼õÉÙ¹ñÌ¨
-    PS_INFO_PANCHU				= 123,	--ÉÌµêÅÌ³ö
-    PS_INFO_PANRU				= 124,	--ÉÌµêÅÌÈë
-    PS_INFO_MODIFY_TYPE			= 125,	--¸ü¸ÄÉÌµêÀàĞÍ
-    FREEFORALL					= 201,	--FREEFORALL: ¸öÈË»ìÕ½
-    FREEFORTEAM					= 202,	--FREEFORTEAM£º ×é¶Ó»ìÕ½
-    FREEFORGUILD				= 203,	-- FREEFORGUILD£º°ïÅÉ»ìÕ½
+    PS_RENAME_MESSAGE			= 116,	--æ›´æ”¹ç©å®¶å•†åº—åº—å
+    PS_READ_MESSAGE				= 117,	--æ›´æ”¹ç©å®¶å•†åº—ä»‹ç»ï¼ˆå¹¿å‘Šï¼‰
+    PS_ADD_BASE_MONEY			= 118,	--å……å…¥æœ¬é‡‘
+    PS_ADD_GAIN_MONEY			= 119,	--å……å…¥ç›ˆåˆ©é‡‘
+    PS_DEC_GAIN_MONEY			= 120,	--å–å‡ºç›ˆåˆ©é‡‘
+    PS_ADD_STALL				= 121,	--å¢åŠ æŸœå°
+    PS_DEL_STALL				= 122,	--å‡å°‘æŸœå°
+    PS_INFO_PANCHU				= 123,	--å•†åº—ç›˜å‡º
+    PS_INFO_PANRU				= 124,	--å•†åº—ç›˜å…¥
+    PS_INFO_MODIFY_TYPE			= 125,	--æ›´æ”¹å•†åº—ç±»å‹
+    FREEFORALL					= 201,	--FREEFORALL: ä¸ªäººæ··æˆ˜
+    FREEFORTEAM					= 202,	--FREEFORTEAMï¼š ç»„é˜Ÿæ··æˆ˜
+    FREEFORGUILD				= 203,	-- FREEFORGUILDï¼šå¸®æ´¾æ··æˆ˜
     MAKESUREPVPCHALLENGE		= 204,
-    EXCHANGE_MONEY_OVERFLOW			= 205, --½»Ò×ºóÔö¼ÓÍæ¼ÒÊÇ·ñµ½´ïÇ®ÉÏÏŞµÄÅĞ¶¨
+    EXCHANGE_MONEY_OVERFLOW			= 205, --äº¤æ˜“åå¢åŠ ç©å®¶æ˜¯å¦åˆ°è¾¾é’±ä¸Šé™çš„åˆ¤å®š
 
-    GUILD_DEMIS_CONFIRM		= 206, 			--ìøÈÃÈ·ÈÏ
+    GUILD_DEMIS_CONFIRM		= 206, 			--ç¦…è®©ç¡®è®¤
 
-    CHANGEPROTECTTIME		= 207, 				--°²È«Ê±¼ä
-    COMMISION_BUY = 208, 							--¼ÄÊÛÉÌµê¹ºÂòÈ·ÈÏ
+    CHANGEPROTECTTIME		= 207, 				--å®‰å…¨æ—¶é—´
+    COMMISION_BUY = 208, 							--å¯„å”®å•†åº—è´­ä¹°ç¡®è®¤
 
     Player_Give_Rose		= 209,
-    RECYCLE_DEL_ITEM		=210, 				--È¡ÏûÊÕ¹ºÈ·ÈÏ
+    RECYCLE_DEL_ITEM		=210, 				--å–æ¶ˆæ”¶è´­ç¡®è®¤
 
-    OPEN_IS_SELL_TO_RECSHOP	= 211, 		--³öÊÛÎïÆ·È·ÈÏ
+    OPEN_IS_SELL_TO_RECSHOP	= 211, 		--å‡ºå”®ç‰©å“ç¡®è®¤
 
     CONFIRM_STENGTH = 212,
 
@@ -78,23 +78,23 @@ local FrameInfoList = {
 
     KICK_MEMBER_MSGBOX = 216,
     
-		SAFEBOX_LOCK_CONFIRM = 217,						--±£ÏÕÏäËø¶¨È·ÈÏ¿ò
-		SAFEBOX_UNLOCK_CONFIRM = 218,					--±£ÏÕÏä½âËøÈ·ÈÏ¿ò
+		SAFEBOX_LOCK_CONFIRM = 217,						--ä¿é™©ç®±é”å®šç¡®è®¤æ¡†
+		SAFEBOX_UNLOCK_CONFIRM = 218,					--ä¿é™©ç®±è§£é”ç¡®è®¤æ¡†
 		
-		LOCK_ITEM_CONFIRM_FRAME = 219,        --	¼ÓËøÈ·ÈÏ
-    GUILD_LEAGUE_QUIT_CONFIRM = 220,			--	ÍË³ö°ï»áÍ¬ÃËÈ·ÈÏ
-    GUILD_LEAGUE_CREATE_CONFIRM = 221,		--	´´½¨°ï»áÍ¬ÃËÈ·ÈÏ
-		PET_SKILL_STUDY_CONFIRM = 222,				--	³èÎïÑ§Ï°¼¼ÄÜÈ·ÈÏ
-		EXCHANGE_BANGGONG = 223,							--	¶Ò»»°ï¹±ÅÆÈ·ÈÏ
-		PUT_GUILDMONEY = 224,									--	°ï»á×Ê½ğ¾èÖú
-		TLZ_CONFIRM_SETPOS = 225,							--	È·ÈÏÍÁÁéÖéÖØĞÂ¶¨Î»
+		LOCK_ITEM_CONFIRM_FRAME = 219,        --	åŠ é”ç¡®è®¤
+    GUILD_LEAGUE_QUIT_CONFIRM = 220,			--	é€€å‡ºå¸®ä¼šåŒç›Ÿç¡®è®¤
+    GUILD_LEAGUE_CREATE_CONFIRM = 221,		--	åˆ›å»ºå¸®ä¼šåŒç›Ÿç¡®è®¤
+		PET_SKILL_STUDY_CONFIRM = 222,				--	å® ç‰©å­¦ä¹ æŠ€èƒ½ç¡®è®¤
+		EXCHANGE_BANGGONG = 223,							--	å…‘æ¢å¸®è´¡ç‰Œç¡®è®¤
+		PUT_GUILDMONEY = 224,									--	å¸®ä¼šèµ„é‡‘æåŠ©
+		TLZ_CONFIRM_SETPOS = 225,							--	ç¡®è®¤åœŸçµç é‡æ–°å®šä½
 
-		DISMISS_TEAM = 226,										--	½âÉ¢¶ÓÎé						WTT		20090212
-		DART_ADJUST = 227	-- °µÆ÷ÊôĞÔµ÷Õû   Vega 20090422
+		DISMISS_TEAM = 226,										--	è§£æ•£é˜Ÿä¼						WTT		20090212
+		DART_ADJUST = 227	-- æš—å™¨å±æ€§è°ƒæ•´   Vega 20090422
 };
 
 local PVPFLAG = { FREEFORALL = 201, FREEFORTEAM = 202, FREEFORGUILD = 203, MAKESUREPVPCHALLENGE = 204, ACCEPTDUEL = 205, DuelGUID = 0, DuelName = "" }
---FREEFORALL: ¸öÈË»ìÕ½ FREEFORTEAM£º ×é¶Ó»ìÕ½ FREEFORGUILD£º°ïÅÉ»ìÕ½
+--FREEFORALL: ä¸ªäººæ··æˆ˜ FREEFORTEAMï¼š ç»„é˜Ÿæ··æˆ˜ FREEFORGUILDï¼šå¸®æ´¾æ··æˆ˜
 
 --
 local g_szData;
@@ -110,13 +110,13 @@ local Server_Return_1 = 0;
 local Server_Return_2 = 0;
 local Server_Return_3 = 0;
 
-local g_CityData = {};						--ÓÉÓÚupvalueµÄÏŞÖÆ£¬³ÇÊĞºÍÕäÊŞºÏ³É¹²ÓÃÕâ¸öÊı¾İÇø
+local g_CityData = {};						--ç”±äºupvalueçš„é™åˆ¶ï¼ŒåŸå¸‚å’Œçå…½åˆæˆå…±ç”¨è¿™ä¸ªæ•°æ®åŒº
 
-local strMessageString = "";		--¶Ô»°¿ò×Ö·û
-local strMessageData   = 0;			--¶Ô»°¿òÀàĞÍ£¬ÓÃÓÚÌáÊ¾Ê²Ã´µÃ¶Ô»°¿ò
-local strMessageArgs = 0;				--°´Å¥²ÎÊı
-local strMessageType = "Normal";--°´Å¥·ç¸ñ
-local strMessageArgs_2 = 0			--°´Å¥²ÎÊı2
+local strMessageString = "";		--å¯¹è¯æ¡†å­—ç¬¦
+local strMessageData   = 0;			--å¯¹è¯æ¡†ç±»å‹ï¼Œç”¨äºæç¤ºä»€ä¹ˆå¾—å¯¹è¯æ¡†
+local strMessageArgs = 0;				--æŒ‰é’®å‚æ•°
+local strMessageType = "Normal";--æŒ‰é’®é£æ ¼
+local strMessageArgs_2 = 0			--æŒ‰é’®å‚æ•°2
 
 local GemCombinedData = {}
 
@@ -126,13 +126,13 @@ local SplitData = {}
 
 local CarveData = {}
 
-local CommisionBuyData = {}  --¼ÄÊÛÉÌµê¹ºÂòÈ·ÈÏ¿òµÄÊı¾İ
+local CommisionBuyData = {}  --å¯„å”®å•†åº—è´­ä¹°ç¡®è®¤æ¡†çš„æ•°æ®
 
 local MAX_OBJ_DISTANCE = 3.0;
 
 local Client_ItemIndex = -1
 
-local Dart_Data = {}			--°µÆ÷Êı¾İ
+local Dart_Data = {}			--æš—å™¨æ•°æ®
 
 function CancelLastOp(str)
 	if(this:IsVisible() and str ~= g_FrameInfo) then
@@ -157,20 +157,20 @@ function MessageBox_Self_PreLoad()
 
 	-- zchw fix Transfer bug
 	this:RegisterEvent("OBJECT_CARED_EVENT");
-	---- ÓĞÈËÑûÇëÄã¼ÓÈë¶ÓÎé
+	---- æœ‰äººé‚€è¯·ä½ åŠ å…¥é˜Ÿä¼
 	--this:RegisterEvent("SHOW_TEAM_YES_NO");
-	---- ¶ÓÔ±ÑûÇëÄ³ÈË¼ÓÈë¶ÓÎéÇëÄãÍ¬Òâ.
+	---- é˜Ÿå‘˜é‚€è¯·æŸäººåŠ å…¥é˜Ÿä¼è¯·ä½ åŒæ„.
 	--this:RegisterEvent("TEAM_MEMBER_INVITE");
-	---- Ä³ÈËÉêÇë¼ÓÈë¶ÓÎé.
+	---- æŸäººç”³è¯·åŠ å…¥é˜Ÿä¼.
 	--this:RegisterEvent("TEAM_APPLY");
-	---- ¶Ó³¤ÑûÇë½øÈë×é¶Ó¸úËæÄ£Ê½
+	---- é˜Ÿé•¿é‚€è¯·è¿›å…¥ç»„é˜Ÿè·Ÿéšæ¨¡å¼
 	--this:RegisterEvent("TEAM_FOLLOW_INVITE");
 
-	-- ´´½¨°ï»áÈ·ÈÏ
+	-- åˆ›å»ºå¸®ä¼šç¡®è®¤
 	this:RegisterEvent("GUILD_CREATE_CONFIRM");
-	-- É¾³ı°ï»áÈ·ÈÏ
+	-- åˆ é™¤å¸®ä¼šç¡®è®¤
 	this:RegisterEvent("GUILD_DESTORY_CONFIRM");
-	-- ÍË³ö°ï»áÈ·ÈÏ
+	-- é€€å‡ºå¸®ä¼šç¡®è®¤
 	this:RegisterEvent("GUILD_QUIT_CONFIRM");
 	this:RegisterEvent("GUILD_LEAGUE_QUIT_CONFIRM");
 	this:RegisterEvent("GUILD_LEAGUE_CREATE_CONFIRM");
@@ -192,7 +192,7 @@ function MessageBox_Self_PreLoad()
 
 	this:RegisterEvent( "GEM_COMBINED_CONFIRM" );
 	this:RegisterEvent( "ENCHASE_CONFIRM" );  
-	this:RegisterEvent( "ENCHASE_FOUR_CONFIRM" );-- add:lby20080527È·ÈÏ4ÏâÇ¶
+	this:RegisterEvent( "ENCHASE_FOUR_CONFIRM" );-- add:lby20080527ç¡®è®¤4é•¶åµŒ
 	
 	--this:RegisterEvent( "CARVE_CONFIRM" );
 	this:RegisterEvent( "EXCHANGE_MONEY_OVERFLOW" );
@@ -201,7 +201,7 @@ function MessageBox_Self_PreLoad()
 
 	this:RegisterEvent("CHANGEPROTECTTIME");
 	
-	this:RegisterEvent("CONFIRM_COMMISION_BUY"); --¼ÄÊÛÉÌµê¹ºÂòÈ·ÈÏ
+	this:RegisterEvent("CONFIRM_COMMISION_BUY"); --å¯„å”®å•†åº—è´­ä¹°ç¡®è®¤
 
 	this:RegisterEvent("PLAYER_GIVE_ROSE");
 
@@ -227,7 +227,7 @@ function MessageBox_Self_PreLoad()
 
 	this:RegisterEvent( "CHAR_RANAME_CONFIRM" );	
 
-	--µ±logon´ò¿ªµÄÊ±ºò£¬¹Ø±ÕËùÓĞMessageBox
+	--å½“logonæ‰“å¼€çš„æ—¶å€™ï¼Œå…³é—­æ‰€æœ‰MessageBox
 	this:RegisterEvent( "GAMELOGIN_OPEN_COUNT_INPUT" );
 
 	this:RegisterEvent( "CONFIRM_RE_IDENTIFY" );
@@ -238,22 +238,22 @@ function MessageBox_Self_PreLoad()
 	
 	this:RegisterEvent( "CLOSE_KICK_MEMBER_MSGBOX" );
 	
-	--±£ÏÕÏäËø¶¨È·ÈÏ¿ò
+	--ä¿é™©ç®±é”å®šç¡®è®¤æ¡†
 	this:RegisterEvent( "SAFEBOX_LOCK_CONFIRM" );
 
-	--±£ÏÕÏä½âËøÈ·ÈÏ¿ò
+	--ä¿é™©ç®±è§£é”ç¡®è®¤æ¡†
 	this:RegisterEvent( "SAFEBOX_UNLOCK_CONFIRM" );
 	
 	this:RegisterEvent( "CLOSE_SAFEBOX_CONFIRM" );
 	
-	--¼ÓËøÈ·ÈÏ
+	--åŠ é”ç¡®è®¤
 	this:RegisterEvent( "LOCK_ITEM_CONFIRM" );
 	this:RegisterEvent( "OPEN_PETSKILLSTUDY_MSGBOX" );
 	this:RegisterEvent( "CLOSE_PETSKILLSTUDY_MSGBOX" );
-	--ÍÁÁéÖé¶¨Î»È·ÈÏ
+	--åœŸçµç å®šä½ç¡®è®¤
 	this:RegisterEvent( "CONFIRM_SETPOS_TLZ" );
 	
-	-- µ¯³ö½âÉ¢¶ÓÎéµÄ¶ş´ÎÈ·ÈÏ´°¿Ú			add by WTT	20090212
+	-- å¼¹å‡ºè§£æ•£é˜Ÿä¼çš„äºŒæ¬¡ç¡®è®¤çª—å£			add by WTT	20090212
 	this:RegisterEvent( "OPNE_DISMISS_TEAM_MSGBOX" );
 
 	this:RegisterEvent("PACKAGE_ITEM_CHANGED");
@@ -298,16 +298,16 @@ function MessageBox_Self_OnEventEx(event)
 	elseif event == "YUANBAO_BUY_ITEM_CONFIRM" then
 		if(arg0 == "close") then
 			if(g_FrameInfo == FrameInfoList.YUANBAO_BUY_ITEM and this:IsVisible())then
-			--Èç¹ûÊÇ¹ØÓÚ¹ºÎïµ¯³öµÄ´°¿Ú£¬²Å¹Ø±Õ
+			--å¦‚æœæ˜¯å…³äºè´­ç‰©å¼¹å‡ºçš„çª—å£ï¼Œæ‰å…³é—­
 				g_CityData = {};
 				this:Hide();
 			end
 			return -1;
 		elseif(arg0 == "open") then
 			g_CityData = {};
-			g_CityData[1] = tonumber(arg2);	--ÔÚ»õ¼ÜµÄÎ»ÖÃ
-			g_CityData[2] = tonumber(arg3);	--ÔÚÉÌµêµÄÊÛ¼Û
-			g_CityData[3] = arg1;	--»õÎïÃû³Æ
+			g_CityData[1] = tonumber(arg2);	--åœ¨è´§æ¶çš„ä½ç½®
+			g_CityData[2] = tonumber(arg3);	--åœ¨å•†åº—çš„å”®ä»·
+			g_CityData[3] = arg1;	--è´§ç‰©åç§°
 			CancelLastOp(FrameInfoList.YUANBAO_BUY_ITEM);
 			g_FrameInfo = FrameInfoList.YUANBAO_BUY_ITEM;
 		end
@@ -316,19 +316,19 @@ function MessageBox_Self_OnEventEx(event)
 		g_CityData[2] = tonumber(arg1);
 		CancelLastOp(FrameInfoList.PET_SYNC_CONFIRM);
 		g_FrameInfo = FrameInfoList.PET_SYNC_CONFIRM;
-	--¼ÄÊÛÉÌµê¹ºÂòÈ·ÈÏÏûÏ¢
+	--å¯„å”®å•†åº—è´­ä¹°ç¡®è®¤æ¶ˆæ¯
 	elseif event == "CONFIRM_COMMISION_BUY" then
 		if(arg0 == "close") then
 			if(g_FrameInfo == FrameInfoList.COMMISION_BUY and this:IsVisible())then
-			--Èç¹ûÊÇ¼ÄÊÛÉÌµêÈ·ÈÏ¿ò£¬²Å¹Ø±Õ
+			--å¦‚æœæ˜¯å¯„å”®å•†åº—ç¡®è®¤æ¡†ï¼Œæ‰å…³é—­
 				CommisionBuyData = {};
 				this:Hide();
 			end
 			return -1;
 		elseif(arg0 == "open") then
 			CommisionBuyData = {};
-			CommisionBuyData[1] = arg1;	--ÎïÆ·Ãû³Æ
-			CommisionBuyData[2] = arg2;	--¼Û¸ñ
+			CommisionBuyData[1] = arg1;	--ç‰©å“åç§°
+			CommisionBuyData[2] = arg2;	--ä»·æ ¼
 			CancelLastOp(FrameInfoList.COMMISION_BUY);
 			g_FrameInfo = FrameInfoList.COMMISION_BUY;
 		end
@@ -349,7 +349,7 @@ function MessageBox_Self_OnEventEx(event)
 	end
 	if g_FrameInfo == FrameInfoList.QUIT_GAME   then
 		MessageBox_Self_DragTitle:SetText("#gFF0FA0");
-		local msg = "ÄúÈ·¶¨ÒªÀë¿ªÌìÁú°Ë²¿ÓÎÏ·ÊÀ½çÂğ£¿";
+		local msg = "æ‚¨ç¡®å®šè¦ç¦»å¼€å¤©é¾™å…«éƒ¨æ¸¸æˆä¸–ç•Œå—ï¼Ÿ";
 		MessageBox_Self_Text:SetText(msg);
 		MessageBox_Self_UpdateRect();
 		this:Show();
@@ -361,7 +361,7 @@ function MessageBox_Self_OnEventEx(event)
 		CancelLastOp(FrameInfoList.RECYCLE_DEL_ITEM);
 		g_FrameInfo = FrameInfoList.RECYCLE_DEL_ITEM;
 		MessageBox_Self_DragTitle:SetText("#gFF0FA0");
-		local msg = "ÄúÈ·¶¨ÒªÈ¡Ïû´Ë´ÎÊÕ¹ºÂğ£¿";
+		local msg = "æ‚¨ç¡®å®šè¦å–æ¶ˆæ­¤æ¬¡æ”¶è´­å—ï¼Ÿ";
 		MessageBox_Self_Text:SetText(msg);
 		MessageBox_Self_UpdateRect();
 		this:Show();
@@ -376,7 +376,7 @@ function MessageBox_Self_OnEventEx(event)
 		g_FrameInfo = FrameInfoList.OPEN_IS_SELL_TO_RECSHOP;
 		local name = PlayerShop:GetRecycleItem(Recycle_Shop_idx,3,"name");
 		MessageBox_Self_DragTitle:SetText("#gFF0FA0");
-		local msg = "#WÄúÒª³öÊÛµÄ²ÄÁÏÎª#G"..name.."#W£¬ÊıÁ¿Îª"..Recycle_Shop_Num.."#W,Ëù»ñ½ğÇ®Îª#Y#{_MONEY"..Recycle_Shop_AllPrice.."}";
+		local msg = "#Wæ‚¨è¦å‡ºå”®çš„ææ–™ä¸º#G"..name.."#Wï¼Œæ•°é‡ä¸º"..Recycle_Shop_Num.."#W,æ‰€è·é‡‘é’±ä¸º#Y#{_MONEY"..Recycle_Shop_AllPrice.."}";
 		MessageBox_Self_Text:SetText(msg);
 		MessageBox_Self_UpdateRect();
 		this:Show();
@@ -387,7 +387,7 @@ function MessageBox_Self_OnEventEx(event)
 		CancelLastOp(FrameInfoList.CONFIRM_STENGTH);
 		g_FrameInfo = FrameInfoList.CONFIRM_STENGTH;
 		MessageBox_Self_DragTitle:SetText("#gFF0FA0");
-		local msg = "Ç¿»¯Ê±½«ÓÅÏÈ¿Û³ıÎïÆ·À¸ÒÑ°ó¶¨µÄÇ¿»¯¾«»ª£¬Ç¿»¯ºóµÄ×°±¸Ò²½«ÓëÄú°ó¶¨£¬È·¶¨Òª¼ÌĞøÇ¿»¯Âğ£¿#rÌáÊ¾£ºÈç¹û²»Ïë½«Ç¿»¯ºóµÄ×°±¸°ó¶¨£¬Çë½«±³°üÖĞÒÑ°ó¶¨µÄÇ¿»¯¾«»ª·ÅÈë²Ö¿âÔÙÀ´Ç¿»¯¡£";
+		local msg = "å¼ºåŒ–æ—¶å°†ä¼˜å…ˆæ‰£é™¤ç‰©å“æ å·²ç»‘å®šçš„å¼ºåŒ–ç²¾åï¼Œå¼ºåŒ–åçš„è£…å¤‡ä¹Ÿå°†ä¸æ‚¨ç»‘å®šï¼Œç¡®å®šè¦ç»§ç»­å¼ºåŒ–å—ï¼Ÿ#ræç¤ºï¼šå¦‚æœä¸æƒ³å°†å¼ºåŒ–åçš„è£…å¤‡ç»‘å®šï¼Œè¯·å°†èƒŒåŒ…ä¸­å·²ç»‘å®šçš„å¼ºåŒ–ç²¾åæ”¾å…¥ä»“åº“å†æ¥å¼ºåŒ–ã€‚";
 		MessageBox_Self_Text:SetText(msg);
 		MessageBox_Self_UpdateRect();
 		this:Show();
@@ -395,9 +395,9 @@ function MessageBox_Self_OnEventEx(event)
 	
 	if ( event == "EXCHANGE_BANGGONG" ) then
 		BangGong_Value = tonumber(arg0);
-		ObjCaredID = tonumber(arg1); --ÕâÀï²»ĞèÒªÔÚÊ¹ÓÃGetNPCIDByServerIDÁË
+		ObjCaredID = tonumber(arg1); --è¿™é‡Œä¸éœ€è¦åœ¨ä½¿ç”¨GetNPCIDByServerIDäº†
 		if ObjCaredID ~= -1 then
-			--¿ªÊ¼¹ØĞÄNPC
+			--å¼€å§‹å…³å¿ƒNPC
 			this:CareObject(ObjCaredID, 1, "MsgBox");
 		end
 		local extravalue = math.floor(BangGong_Value*0.1)
@@ -412,9 +412,9 @@ function MessageBox_Self_OnEventEx(event)
 	
 	if ( event == "PUT_GUILDMONEY" ) then
 		GuildMoney_Value = tonumber(arg0);
-		ObjCaredID = tonumber(arg1); --ÕâÀï²»ĞèÒªÔÚÊ¹ÓÃGetNPCIDByServerIDÁË
+		ObjCaredID = tonumber(arg1); --è¿™é‡Œä¸éœ€è¦åœ¨ä½¿ç”¨GetNPCIDByServerIDäº†
 		if ObjCaredID ~= -1 then
-		--¿ªÊ¼¹ØĞÄNPC
+		--å¼€å§‹å…³å¿ƒNPC
 			this:CareObject(ObjCaredID, 1, "MsgBox");
 		end
 		local value = math.floor(GuildMoney_Value*0.9)
@@ -433,7 +433,7 @@ function MessageBox_Self_OnEventEx(event)
 		CancelLastOp(FrameInfoList.CONFIRM_RE_IDENTIFY);
 		g_FrameInfo = FrameInfoList.CONFIRM_RE_IDENTIFY;
 		MessageBox_Self_DragTitle:SetText("#gFF0FA0");
-		local msg = "ÖØĞÂ¼ø¶¨×°±¸×ÊÖÊÊ±½«ÓÅÏÈ¿Û³ıÎïÆ·À¸ÖĞÒÑ°ó¶¨µÄ½ğ¸ÕÉ°»ò½ğ¸Õï±£¬ÖØĞÂ¼ø¶¨×ÊÖÊºóµÄ×°±¸Ò²½«ÓëÄú°ó¶¨£¬È·¶¨Òª¼ÌĞø¼ø¶¨Âğ£¿#r#GÌáÊ¾£ºÈç¹û²»Ïë¼ø¶¨ºóµÄ×°±¸°ó¶¨£¬Çë½«±³°üÖĞÒÑ°ó¶¨µÄ½ğ¸ÕÉ°ºÍ½ğ¸Õï±·ÅÈë²Ö¿âÔÙÀ´¼ø¶¨¡£#W";
+		local msg = "é‡æ–°é‰´å®šè£…å¤‡èµ„è´¨æ—¶å°†ä¼˜å…ˆæ‰£é™¤ç‰©å“æ ä¸­å·²ç»‘å®šçš„é‡‘åˆšç ‚æˆ–é‡‘åˆšé”‰ï¼Œé‡æ–°é‰´å®šèµ„è´¨åçš„è£…å¤‡ä¹Ÿå°†ä¸æ‚¨ç»‘å®šï¼Œç¡®å®šè¦ç»§ç»­é‰´å®šå—ï¼Ÿ#r#Gæç¤ºï¼šå¦‚æœä¸æƒ³é‰´å®šåçš„è£…å¤‡ç»‘å®šï¼Œè¯·å°†èƒŒåŒ…ä¸­å·²ç»‘å®šçš„é‡‘åˆšç ‚å’Œé‡‘åˆšé”‰æ”¾å…¥ä»“åº“å†æ¥é‰´å®šã€‚#W";
 		MessageBox_Self_Text:SetText(msg);
 		MessageBox_Self_UpdateRect();
 		this:Show();
@@ -445,7 +445,7 @@ function MessageBox_Self_OnEventEx(event)
 		CancelLastOp(FrameInfoList.KICK_MEMBER_MSGBOX);
 		g_FrameInfo = FrameInfoList.KICK_MEMBER_MSGBOX;
 		MessageBox_Self_DragTitle:SetText("#gFF0FA0");
-		local msg = "ÄãÈ·¶¨Òª½«Íæ¼Ò#G"..Member_Name.."#W¿ª³ı³ö°ï»áÂğ£¿";
+		local msg = "ä½ ç¡®å®šè¦å°†ç©å®¶#G"..Member_Name.."#Wå¼€é™¤å‡ºå¸®ä¼šå—ï¼Ÿ";
 		MessageBox_Self_Text:SetText(msg);
 		MessageBox_Self_UpdateRect();
 		this:Show();
@@ -475,7 +475,7 @@ function MessageBox_Self_OnEvent(event)
 	end
 
 	if event == "EXCHANGE_MONEY_OVERFLOW" then
-		MessageBox_Self_Text:SetText( "#YÄúµÄÇ®ÒÑ¾­µ½´ïÉÏÏŞ£¬Çë¾¡¿ì´¦Àí£¬ÔÚ´ËÆÚ¼ä²»Òª×ö#RÏÂÏß»òÕß×ªÒÆ³¡¾°µÄ²Ù×÷£¬#Y·ñÔò»áÊ¹µÃ³¬³öÉÏÏŞµÄ½ğÇ®ÏûÊ§¡£" );
+		MessageBox_Self_Text:SetText( "#Yæ‚¨çš„é’±å·²ç»åˆ°è¾¾ä¸Šé™ï¼Œè¯·å°½å¿«å¤„ç†ï¼Œåœ¨æ­¤æœŸé—´ä¸è¦åš#Rä¸‹çº¿æˆ–è€…è½¬ç§»åœºæ™¯çš„æ“ä½œï¼Œ#Yå¦åˆ™ä¼šä½¿å¾—è¶…å‡ºä¸Šé™çš„é‡‘é’±æ¶ˆå¤±ã€‚" );
 		
 		MessageBox_Self_UpdateRect();
 		CancelLastOp(FrameInfoList.EXCHANGE_MONEY_OVERFLOW);
@@ -485,7 +485,7 @@ function MessageBox_Self_OnEvent(event)
 	end
 	if event == "GUILD_DEMIS_CONFIRM" then
 		local TargetName = tostring( arg0 );
-		MessageBox_Self_Text:SetText( "ÄãÈ·¶¨Òª½«°ïÖ÷µÄÖ°Î»ìøÈÃ¸ø"..TargetName.."Âğ£¿ìøºóÄãµÄÖ°Î»½«Îª¸±°ïÖ÷¡£" );		
+		MessageBox_Self_Text:SetText( "ä½ ç¡®å®šè¦å°†å¸®ä¸»çš„èŒä½ç¦…è®©ç»™"..TargetName.."å—ï¼Ÿç¦…åä½ çš„èŒä½å°†ä¸ºå‰¯å¸®ä¸»ã€‚" );		
 		MessageBox_Self_UpdateRect();	
 		CancelLastOp(FrameInfoList.GUILD_DEMIS_CONFIRM);
 		g_FrameInfo = FrameInfoList.GUILD_DEMIS_CONFIRM
@@ -493,7 +493,7 @@ function MessageBox_Self_OnEvent(event)
 	end
 
 	if event == "ENCHASE_CONFIRM" then
-		MessageBox_Self_Text:SetText( "Ã»ÓĞÌØÊâ²ÄÁÏ»áµ¼ÖÂÏâÇ¶Ê§°ÜÖ®ºó±¦Ê¯ÏûÊ§¡£ÄúÈ·¶¨Òª¼ÌĞøÏâÇ¶Âğ£¿" );
+		MessageBox_Self_Text:SetText( "æ²¡æœ‰ç‰¹æ®Šææ–™ä¼šå¯¼è‡´é•¶åµŒå¤±è´¥ä¹‹åå®çŸ³æ¶ˆå¤±ã€‚æ‚¨ç¡®å®šè¦ç»§ç»­é•¶åµŒå—ï¼Ÿ" );
 		EnchaseData[1] = tonumber( arg0 )
 		EnchaseData[2] = tonumber( arg1 )
 		EnchaseData[3] = tonumber( arg2 )
@@ -503,8 +503,8 @@ function MessageBox_Self_OnEvent(event)
 		this:Show();
 	end
 	
-	if event == "ENCHASE_FOUR_CONFIRM" then  -- add:lby20080527È·ÈÏ4ÏâÇ¶
-		MessageBox_Self_Text:SetText( "Ã»ÓĞÌØÊâ²ÄÁÏ»áµ¼ÖÂÏâÇ¶Ê§°ÜÖ®ºó±¦Ê¯ÏûÊ§¡£ÄúÈ·¶¨Òª¼ÌĞøÏâÇ¶Âğ£¿" );
+	if event == "ENCHASE_FOUR_CONFIRM" then  -- add:lby20080527ç¡®è®¤4é•¶åµŒ
+		MessageBox_Self_Text:SetText( "æ²¡æœ‰ç‰¹æ®Šææ–™ä¼šå¯¼è‡´é•¶åµŒå¤±è´¥ä¹‹åå®çŸ³æ¶ˆå¤±ã€‚æ‚¨ç¡®å®šè¦ç»§ç»­é•¶åµŒå—ï¼Ÿ" );
 		EnchaseData[1] = tonumber( arg0 )
 		EnchaseData[2] = tonumber( arg1 )
 		EnchaseData[3] = tonumber( arg2 )
@@ -514,15 +514,15 @@ function MessageBox_Self_OnEvent(event)
 		this:Show();
 	end
 
-	-- ´ò¿ªÕäÊŞ¼¼ÄÜÑ§Ï°µÄ¶ş´ÎÈ·ÈÏ½çÃæ
+	-- æ‰“å¼€çå…½æŠ€èƒ½å­¦ä¹ çš„äºŒæ¬¡ç¡®è®¤ç•Œé¢
 	if event == "OPEN_PETSKILLSTUDY_MSGBOX" then
-		MessageBox_Self_Text:SetText( "ÄãµÄÕäÊŞ¼´½«»ñµÃÁ½¸öÊÖ¶¯¼¼ÄÜ£¬Õâ¸ö²Ù×÷ĞèÒª»¨·Ñ#{_EXCHG990000}£¬ÄãÈ·¶¨Âğ£¿" );
+		MessageBox_Self_Text:SetText( "ä½ çš„çå…½å³å°†è·å¾—ä¸¤ä¸ªæ‰‹åŠ¨æŠ€èƒ½ï¼Œè¿™ä¸ªæ“ä½œéœ€è¦èŠ±è´¹#{_EXCHG990000}ï¼Œä½ ç¡®å®šå—ï¼Ÿ" );
 		CancelLastOp(FrameInfoList.PET_SKILL_STUDY_CONFIRM);
 		g_FrameInfo = FrameInfoList.PET_SKILL_STUDY_CONFIRM
 		this:Show();
 	end
 	
-	-- ¹Ø±ÕÕäÊŞ¼¼ÄÜÑ§Ï°µÄ¶ş´ÎÈ·ÈÏ½çÃæ
+	-- å…³é—­çå…½æŠ€èƒ½å­¦ä¹ çš„äºŒæ¬¡ç¡®è®¤ç•Œé¢
 	if(event == "CLOSE_PETSKILLSTUDY_MSGBOX" ) then
 		if(this:IsVisible() and  g_FrameInfo == FrameInfoList.PET_SKILL_STUDY_CONFIRM) then
 			CancelLastOp(-1);
@@ -532,7 +532,7 @@ function MessageBox_Self_OnEvent(event)
 	end
 	
 --	if event == "CARVE_CONFIRM" then
---		MessageBox_Self_Text:SetText( "×¢Òâ£¡#ÄúÒªµñ×ÁµÄ±¦Ê¯»òµñ×Á·ûÎªÒÑ°ó¶¨ÎïÆ·£¬µñ×ÁºóµÄ±¦Ê¯Ò²½«ÓëÄú°ó¶¨£¬È·ÈÏÒª¼ÌĞøµñ×ÁµÄ»°ÇëÔÙ´Îµã»÷µñ×Á°´Å¥¡£" );
+--		MessageBox_Self_Text:SetText( "æ³¨æ„ï¼#æ‚¨è¦é›•ç¢çš„å®çŸ³æˆ–é›•ç¢ç¬¦ä¸ºå·²ç»‘å®šç‰©å“ï¼Œé›•ç¢åçš„å®çŸ³ä¹Ÿå°†ä¸æ‚¨ç»‘å®šï¼Œç¡®è®¤è¦ç»§ç»­é›•ç¢çš„è¯è¯·å†æ¬¡ç‚¹å‡»é›•ç¢æŒ‰é’®ã€‚" );
 --		CarveData[1] = tostring( arg0 )
 --		CarveData[2] = tonumber( arg1 )
 --		CarveData[3] = tonumber( arg2 )
@@ -545,7 +545,7 @@ function MessageBox_Self_OnEvent(event)
 	
 	if(event == "OPEN_STALL_RENT_FRAME") then
 		CancelLastOp(FrameInfoList.STALL_RENT_FRAME);
-		--¼ÇÂ¼µ±Ç°Î»ÖÃ
+		--è®°å½•å½“å‰ä½ç½®
 		local xPos, yPos;
 		xPos, yPos = Player:GetPos();
 		Variable:SetVariable("AskBaiTanPosX", tostring(xPos), 1);
@@ -561,7 +561,7 @@ function MessageBox_Self_OnEvent(event)
 	    --AxTrace(0,0,"MSGBOX_MAKESUREPVPCHALLENGE");
 		CancelLastOp(FrameInfoList.MAKESUREPVPCHALLENGE);
 		g_FrameInfo = FrameInfoList.MAKESUREPVPCHALLENGE;
-	    MessageBox_Self_Text:SetText( "ÄúÈ·ÈÏÏò"..TargetName.."Ìá³öĞûÕ½Ã´£¿É±ËÀ¶Ô·½Ö®ºó»áÔö¼ÓÄúµÄÉ±ÆøÖµ£¬É±Æø¸ßÁËÈËÎïËÀÍöÊ±»áµ¼ÖÂ¶îÍâËğÊ§" );
+	    MessageBox_Self_Text:SetText( "æ‚¨ç¡®è®¤å‘"..TargetName.."æå‡ºå®£æˆ˜ä¹ˆï¼Ÿæ€æ­»å¯¹æ–¹ä¹‹åä¼šå¢åŠ æ‚¨çš„æ€æ°”å€¼ï¼Œæ€æ°”é«˜äº†äººç‰©æ­»äº¡æ—¶ä¼šå¯¼è‡´é¢å¤–æŸå¤±" );
 		MessageBox_Self_UpdateRect();
 		this:Show();
 
@@ -572,13 +572,13 @@ function MessageBox_Self_OnEvent(event)
 			CancelLastOp(FrameInfoList.FREEFORALL);
 		    --AxTrace(0,0,FrameInfoList.FREEFORALL);
 		    g_FrameInfo = FrameInfoList.FREEFORALL;
-		    ModeText = "´ËÄ£Ê½ÏÂ½«»á¹¥»÷³ı×Ô¼ºÖ®ÍâµÄËùÓĞÍæ¼Ò£¬ÇëÈ·ÈÏ¿ªÆô"
+		    ModeText = "æ­¤æ¨¡å¼ä¸‹å°†ä¼šæ”»å‡»é™¤è‡ªå·±ä¹‹å¤–çš„æ‰€æœ‰ç©å®¶ï¼Œè¯·ç¡®è®¤å¼€å¯"
 		end
 		if( 2 == Mode ) then
 			CancelLastOp(FrameInfoList.FREEFORTEAM);
 		    --AxTrace(0,0,FrameInfoList.FREEFORTEAM);
 		    g_FrameInfo = FrameInfoList.FREEFORTEAM;
-		    ModeText = "´ËÄ£Ê½ÏÂ½«»á¹¥»÷³ı¶ÓÓÑÖ®ÍâµÄËùÓĞÍæ¼Ò£¬ÇëÈ·ÈÏ¿ªÆô"
+		    ModeText = "æ­¤æ¨¡å¼ä¸‹å°†ä¼šæ”»å‡»é™¤é˜Ÿå‹ä¹‹å¤–çš„æ‰€æœ‰ç©å®¶ï¼Œè¯·ç¡®è®¤å¼€å¯"
 		end
 		if( 3 == Mode ) then
 			CancelLastOp(FrameInfoList.FREEFORGUILD)
@@ -598,7 +598,7 @@ function MessageBox_Self_OnEvent(event)
 	    PVPFLAG.DuelName = Name
 	    PVPFLAG.DuelGUID = GUID
 	    g_FrameInfo = PVPFLAG.ACCEPTDUEL;
-	    local MsgText = Name.."ÏòÄúÌá³ö¾ö¶·£¬ÄúÊÇ·ñÍ¬Òâ£¿×¢Òâ£ºÔÚ¾ö¶·ÖĞËÀÍö½«»áÓĞ³Í·£¡£"
+	    local MsgText = Name.."å‘æ‚¨æå‡ºå†³æ–—ï¼Œæ‚¨æ˜¯å¦åŒæ„ï¼Ÿæ³¨æ„ï¼šåœ¨å†³æ–—ä¸­æ­»äº¡å°†ä¼šæœ‰æƒ©ç½šã€‚"
 	    MessageBox_Self_Text:SetText( MsgText )
 		MessageBox_Self_UpdateRect();
 	    this:Show();
@@ -633,43 +633,43 @@ function MessageBox_Self_OnEvent(event)
 		g_FrameInfo = FrameInfoList.FRAME_AFFIRM_SHOW;
 
 
-	-- °ï»á³ÉÁ¢ĞèÍæ¼ÒÈ·ÈÏ
+	-- å¸®ä¼šæˆç«‹éœ€ç©å®¶ç¡®è®¤
 	elseif ( event == "GUILD_CREATE_CONFIRM" ) then
 		argCREATE_CONFIRM0 = arg0
 		CancelLastOp(FrameInfoList.GUILD_CREATE_CONFIRM);
 		g_FrameInfo = FrameInfoList.GUILD_CREATE_CONFIRM;
-		MessageBox_Self_Text:SetText("ÊÇÒª´´½¨" .. argCREATE_CONFIRM0 .. "Âğ?");
+		MessageBox_Self_Text:SetText("æ˜¯è¦åˆ›å»º" .. argCREATE_CONFIRM0 .. "å—?");
 		MessageBox_Self_UpdateRect();
 		this:Show();
 
-	-- °ï»áÉ¾³ıĞèÍæ¼ÒÈ·ÈÏ
+	-- å¸®ä¼šåˆ é™¤éœ€ç©å®¶ç¡®è®¤
 	elseif ( event == "GUILD_DESTORY_CONFIRM" ) then
 		argDESTORY_CONFIRM0 = arg0
 		CancelLastOp(FrameInfoList.GUILD_DESTORY_CONFIRM);
 		g_FrameInfo = FrameInfoList.GUILD_DESTORY_CONFIRM;
-		MessageBox_Self_Text:SetText("ÊÇÒªÉ¾³ı" .. argDESTORY_CONFIRM0 .. "Âğ?");
+		MessageBox_Self_Text:SetText("æ˜¯è¦åˆ é™¤" .. argDESTORY_CONFIRM0 .. "å—?");
 		MessageBox_Self_UpdateRect();
 		this:Show();
 
-	-- °ï»áÍË³öĞèÍæ¼ÒÈ·ÈÏ
+	-- å¸®ä¼šé€€å‡ºéœ€ç©å®¶ç¡®è®¤
 	elseif ( event == "GUILD_QUIT_CONFIRM" ) then
 		argQUIT_CONFIRM0 = arg0
 		CancelLastOp(FrameInfoList.GUILD_QUIT_CONFIRM);
 		g_FrameInfo = FrameInfoList.GUILD_QUIT_CONFIRM;
-		MessageBox_Self_Text:SetText("ÊÇÒªÍË³ö" .. argQUIT_CONFIRM0 .. "Âğ?");
+		MessageBox_Self_Text:SetText("æ˜¯è¦é€€å‡º" .. argQUIT_CONFIRM0 .. "å—?");
 		MessageBox_Self_UpdateRect();
 		this:Show();
 	
-	--°ï»áÍ¬ÃËÍË³öÈ·ÈÏ
+	--å¸®ä¼šåŒç›Ÿé€€å‡ºç¡®è®¤
 	elseif event == "GUILD_LEAGUE_QUIT_CONFIRM" then
 		argQUIT_LEAGUE_CONFIRM0 = arg0;
 		CancelLastOp(FrameInfoList.GUILD_LEAGUE_QUIT_CONFIRM);
 		g_FrameInfo = FrameInfoList.GUILD_LEAGUE_QUIT_CONFIRM
-		MessageBox_Self_Text:SetText( "ÄãÈ·¶¨ÒªÍË³ö"..argQUIT_LEAGUE_CONFIRM0.."Í¬ÃËÂğ£¿" );		
+		MessageBox_Self_Text:SetText( "ä½ ç¡®å®šè¦é€€å‡º"..argQUIT_LEAGUE_CONFIRM0.."åŒç›Ÿå—ï¼Ÿ" );		
 		MessageBox_Self_UpdateRect();	
 		this:Show();
 		
-	--°ï»áÍ¬ÃË´´½¨È·ÈÏ
+	--å¸®ä¼šåŒç›Ÿåˆ›å»ºç¡®è®¤
 	elseif event == "GUILD_LEAGUE_CREATE_CONFIRM" then
 		argCREATE_LEAGUE_CONFIRM0 = arg0;
 		argCREATE_LEAGUE_CONFIRM1 = arg1;
@@ -680,7 +680,7 @@ function MessageBox_Self_OnEvent(event)
 		this:Show();
 		
 
-	-- ·şÎñÆ÷¶ÏÁË
+	-- æœåŠ¡å™¨æ–­äº†
 	elseif ( event == "NET_CLOSE" ) then
 		argNET_CLOSE0 = arg0 
 		CancelLastOp(FrameInfoList.NET_CLOSE_MESSAGE);
@@ -711,21 +711,21 @@ function MessageBox_Self_OnEvent(event)
 			CancelLastOp(FrameInfoList.PS_READ_MESSAGE);
 			g_FrameInfo = FrameInfoList.PS_READ_MESSAGE;
 
-		elseif( arg0 == "immitbase" )		then -- ±¾½ğ
+		elseif( arg0 == "immitbase" )		then -- æœ¬é‡‘
 			g_szData = arg1;
 			g_nData  = tonumber(arg2);
 			g_nData1 = tonumber(arg3);
 			CancelLastOp(FrameInfoList.PS_ADD_BASE_MONEY);
 			g_FrameInfo = FrameInfoList.PS_ADD_BASE_MONEY;
 
-		elseif( arg0 == "immit" )				then -- Ó¯Àû½ğ´æÈë
+		elseif( arg0 == "immit" )				then -- ç›ˆåˆ©é‡‘å­˜å…¥
 			g_szData = arg1;
 			g_nData  = tonumber(arg2);
 			g_nData1 = tonumber(arg3);
 			CancelLastOp(FrameInfoList.PS_ADD_GAIN_MONEY);
 			g_FrameInfo = FrameInfoList.PS_ADD_GAIN_MONEY;
 
-		elseif( arg0 == "draw" )				then -- Ó¯Àû½ğÈ¡³ö
+		elseif( arg0 == "draw" )				then -- ç›ˆåˆ©é‡‘å–å‡º
 			g_szData = arg1;
 			g_nData  = tonumber(arg2);
 			g_nData1 = tonumber(arg3);
@@ -746,20 +746,20 @@ function MessageBox_Self_OnEvent(event)
 			g_FrameInfo = FrameInfoList.PS_DEL_STALL;
 			
 
-		elseif( arg0 == "sale" )     	then 	-- ÅÌ³ö
+		elseif( arg0 == "sale" )     	then 	-- ç›˜å‡º
 			g_szData = tonumber(arg2);
 			g_nData  = tonumber(arg3);
 			CancelLastOp(FrameInfoList.PS_INFO_PANCHU);
 			g_FrameInfo = FrameInfoList.PS_INFO_PANCHU;
 			
 
-		elseif( arg0 == "back" )     	then	-- È¡ÏûÅÌ³ö
+		elseif( arg0 == "back" )     	then	-- å–æ¶ˆç›˜å‡º
 			g_szData = tonumber(arg2);
 			g_nData  = tonumber(arg3);
 			CancelLastOp(FrameInfoList.PS_INFO_PANRU);
 			g_FrameInfo = FrameInfoList.PS_INFO_PANRU;
 
-		elseif( arg0 == "ps_type" )		then	-- ¸ü¸ÄÍæ¼ÒÉÌµêµÄ×ÓÀàÌáÊ¾ĞÅÏ¢
+		elseif( arg0 == "ps_type" )		then	-- æ›´æ”¹ç©å®¶å•†åº—çš„å­ç±»æç¤ºä¿¡æ¯
 			g_szData = tonumber(arg2);
 			g_nData  = tonumber(arg3);
 			CancelLastOp(FrameInfoList.PS_INFO_MODIFY_TYPE);
@@ -776,7 +776,7 @@ function MessageBox_Self_OnEvent(event)
 				local xx = Get_XParam_INT(1);
 				ObjCaredID = DataPool : GetNPCIDByServerID(xx);
 				if ObjCaredID ~= -1 then	
-					--¿ªÊ¼¹ØĞÄNPC
+					--å¼€å§‹å…³å¿ƒNPC
 					this:CareObject(ObjCaredID, 1, "MsgBox");
 				end
 		elseif tonumber(arg0) == 332207 then
@@ -802,7 +802,7 @@ function MessageBox_Self_OnEvent(event)
 		if(tonumber(arg0) ~= ObjCaredID) then
 			return;
 		end
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ı£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æœå’ŒNPCçš„è·ç¦»å¤§äºä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if(arg1 == "distance" and tonumber(arg2)>MAX_OBJ_DISTANCE or arg1=="destroy") then
 			if ObjCaredID ~= -1 then	
 				this:CareObject(ObjCaredID, 0, "MsgBox");
@@ -833,12 +833,12 @@ function MessageBox_Self_OnEvent(event)
 		g_ChangeTiemArg1 = tonumber(arg1);
 		CancelLastOp(FrameInfoList.CHANGEPROTECTTIME);
 		g_FrameInfo = FrameInfoList.CHANGEPROTECTTIME;
-		MessageBox_Self_DragTitle:SetText("#gFF0FA0°²È«Ê±¼ä");
+		MessageBox_Self_DragTitle:SetText("#gFF0FA0å®‰å…¨æ—¶é—´");
 		if(g_ChangeTiemArg0 == 0)then
-			MessageBox_Self_Text:SetText("Ò»µ©ÉèÖÃ°²È«Ê±¼ä£¬ÏÂ´ÎÉÏÏßÊ±ÔÚ°²È«Ê±¼äÄÚÎŞ·¨½øĞĞºÜ¶à²Ù×÷£¬Òò´ËÇëÄúºÏÀíÉèÖÃÄúµÄ°²È«Ê±¼ä¡£È·¶¨ÒªÉèÖÃÂğ£¿");
+			MessageBox_Self_Text:SetText("ä¸€æ—¦è®¾ç½®å®‰å…¨æ—¶é—´ï¼Œä¸‹æ¬¡ä¸Šçº¿æ—¶åœ¨å®‰å…¨æ—¶é—´å†…æ— æ³•è¿›è¡Œå¾ˆå¤šæ“ä½œï¼Œå› æ­¤è¯·æ‚¨åˆç†è®¾ç½®æ‚¨çš„å®‰å…¨æ—¶é—´ã€‚ç¡®å®šè¦è®¾ç½®å—ï¼Ÿ");
 		else
-			MessageBox_Self_Text:SetText("Ôö¼Ó°²È«Ê±¼äÄÜÊ¹ÄúµÄÕËºÅ¸ü°²È«£¬µ«ÄúÏÂ´ÎÉÏÏßÊ±ÔÚ°²È«Ê±¼äÄÚÒ²ÎŞ·¨½øĞĞºÜ¶à²Ù×÷£¬Òò´ËÇëÄúºÏÀíÉèÖÃÄúµÄ°²È«Ê±¼ä¡£ÄúÈ·ÈÏÒª¼ÌĞøÔö¼Ó°²È«Ê±¼äÂğ£¿");
-			--ÕÊºÅ  to  ÕËºÅ
+			MessageBox_Self_Text:SetText("å¢åŠ å®‰å…¨æ—¶é—´èƒ½ä½¿æ‚¨çš„è´¦å·æ›´å®‰å…¨ï¼Œä½†æ‚¨ä¸‹æ¬¡ä¸Šçº¿æ—¶åœ¨å®‰å…¨æ—¶é—´å†…ä¹Ÿæ— æ³•è¿›è¡Œå¾ˆå¤šæ“ä½œï¼Œå› æ­¤è¯·æ‚¨åˆç†è®¾ç½®æ‚¨çš„å®‰å…¨æ—¶é—´ã€‚æ‚¨ç¡®è®¤è¦ç»§ç»­å¢åŠ å®‰å…¨æ—¶é—´å—ï¼Ÿ");
+			--å¸å·  to  è´¦å·
 		end
 		MessageBox_Self_UpdateRect();
 		this:Show();
@@ -854,7 +854,7 @@ function MessageBox_Self_OnEvent(event)
 		end
 		CancelLastOp(FrameInfoList.Player_Give_Rose);
 		g_FrameInfo = FrameInfoList.Player_Give_Rose;
-		MessageBox_Self_Text:SetText("#cFFF263ÊÇ·ñËÍ#c00ff00999¶äÃµ¹å#cFFF263¸ø#c00ff00"..g_RoseArg0.."#cFFF263?");
+		MessageBox_Self_Text:SetText("#cFFF263æ˜¯å¦é€#c00ff00999æœµç«ç‘°#cFFF263ç»™#c00ff00"..g_RoseArg0.."#cFFF263?");
 		MessageBox_Self_UpdateRect();
 		this:Show();
 		return;
@@ -929,7 +929,7 @@ function MessageBox_Self_OnEvent(event)
 	
 	
 	
-	-- add:lby20080527È·ÈÏ4ÏâÇ¶ENCHASE_FOUR_CONFIRM
+	-- add:lby20080527ç¡®è®¤4é•¶åµŒENCHASE_FOUR_CONFIRM
 	if(event == "ENCHASE_CLOSE_MSGBOX" ) then
 		if(this:IsVisible() and  g_FrameInfo == FrameInfoList.ENCHASE_FOUR_CONFIRM) then
 			CancelLastOp(-1);
@@ -940,8 +940,8 @@ function MessageBox_Self_OnEvent(event)
 
 	if(event == "CHAR_RANAME_CONFIRM" ) then
 		g_arg_chrc = arg0;
-		MessageBox_Self_DragTitle:SetText("#gFF0FA0½ÇÉ«¸ÄÃû");
-		MessageBox_Self_Text:SetText("×¢Òâ£¬ÄúÖ»ÓĞÒ»´Î¸ÄÃûµÄ»ú»á¡£#rÄúÈ·ÈÏÒªĞŞ¸ÄÃû×ÖÎª#G"..g_arg_chrc.."#cFFF263Ã´£¿");	
+		MessageBox_Self_DragTitle:SetText("#gFF0FA0è§’è‰²æ”¹å");
+		MessageBox_Self_Text:SetText("æ³¨æ„ï¼Œæ‚¨åªæœ‰ä¸€æ¬¡æ”¹åçš„æœºä¼šã€‚#ræ‚¨ç¡®è®¤è¦ä¿®æ”¹åå­—ä¸º#G"..g_arg_chrc.."#cFFF263ä¹ˆï¼Ÿ");	
 		CancelLastOp(FrameInfoList.CHAR_RANAME_CONFIRM);
 		g_FrameInfo = FrameInfoList.CHAR_RANAME_CONFIRM
 		MessageBox_Self_UpdateRect();
@@ -951,8 +951,8 @@ function MessageBox_Self_OnEvent(event)
 	
 	if(event == "CITY_RANAME_CONFIRM" ) then
 		g_arg_circ = arg0;
-		MessageBox_Self_DragTitle:SetText("#gFF0FA0°ï»á¸ÄÃû");
-		MessageBox_Self_Text:SetText("×¢Òâ£¬ÄúÖ»ÓĞÒ»´Î¸ÄÃûµÄ»ú»á¡£#rÄúÈ·ÈÏÒªĞŞ¸Ä°ï»áÃûÎª#G"..g_arg_circ.."#cFFF263Ã´£¿");	
+		MessageBox_Self_DragTitle:SetText("#gFF0FA0å¸®ä¼šæ”¹å");
+		MessageBox_Self_Text:SetText("æ³¨æ„ï¼Œæ‚¨åªæœ‰ä¸€æ¬¡æ”¹åçš„æœºä¼šã€‚#ræ‚¨ç¡®è®¤è¦ä¿®æ”¹å¸®ä¼šåä¸º#G"..g_arg_circ.."#cFFF263ä¹ˆï¼Ÿ");	
 		CancelLastOp(FrameInfoList.CITY_RANAME_CONFIRM);
 		g_FrameInfo = FrameInfoList.CITY_RANAME_CONFIRM
 		MessageBox_Self_UpdateRect();
@@ -971,7 +971,7 @@ function MessageBox_Self_OnEvent(event)
 	if(event == "SAFEBOX_LOCK_CONFIRM") then
 		CancelLastOp(FrameInfoList.SAFEBOX_LOCK_CONFIRM);
 		g_FrameInfo = FrameInfoList.SAFEBOX_LOCK_CONFIRM;
-		MessageBox_Self_DragTitle:SetText("#gFF0FA0±£ÏÕÏäËø¶¨");
+		MessageBox_Self_DragTitle:SetText("#gFF0FA0ä¿é™©ç®±é”å®š");
 		MessageBox_Self_Text:SetText("#{YHBXX_20071220_10}");
 		MessageBox_Self_UpdateRect();
 		this:Show();
@@ -981,7 +981,7 @@ function MessageBox_Self_OnEvent(event)
 	if(event == "SAFEBOX_UNLOCK_CONFIRM") then
 		CancelLastOp(FrameInfoList.SAFEBOX_UNLOCK_CONFIRM);
 		g_FrameInfo = FrameInfoList.SAFEBOX_UNLOCK_CONFIRM;
-		MessageBox_Self_DragTitle:SetText("#gFF0FA0±£ÏÕÏä½âËø");
+		MessageBox_Self_DragTitle:SetText("#gFF0FA0ä¿é™©ç®±è§£é”");
 		MessageBox_Self_Text:SetText("#{YHBXX_20071220_07}");
 		MessageBox_Self_UpdateRect();
 		this:Show();
@@ -1000,7 +1000,7 @@ function MessageBox_Self_OnEvent(event)
 		Client_ItemIndex = itemIdx
 		
 		if (szSceneName ~= "") then
-			MessageBox_Self_Text:SetText("#{TLZ_081114_1}"..szSceneName.."£¨"..iPosX.."£¬"..iPosZ.."£©".."#{TLZ_081114_2}")
+			MessageBox_Self_Text:SetText("#{TLZ_081114_1}"..szSceneName.."ï¼ˆ"..iPosX.."ï¼Œ"..iPosZ.."ï¼‰".."#{TLZ_081114_2}")
 			MessageBox_Self_UpdateRect();
 			this:Show();
 		else
@@ -1011,13 +1011,13 @@ function MessageBox_Self_OnEvent(event)
 		
 	end
 	
-	-- µ¯³ö½âÉ¢¶ÓÎéµÄ¶ş´ÎÈ·ÈÏ´°¿Ú			add by WTT	20090212
+	-- å¼¹å‡ºè§£æ•£é˜Ÿä¼çš„äºŒæ¬¡ç¡®è®¤çª—å£			add by WTT	20090212
 	if (event == "OPNE_DISMISS_TEAM_MSGBOX")	then
-		MessageBox_Self_DragTitle:SetText("#gFF0FA0½âÉ¢¶ÓÎé");			-- ÉèÖÃ±êÌâ
-		MessageBox_Self_Text:SetText( "#{TeamDismiss_090912_1}" );	-- ÉèÖÃÄÚÈİ
+		MessageBox_Self_DragTitle:SetText("#gFF0FA0è§£æ•£é˜Ÿä¼");			-- è®¾ç½®æ ‡é¢˜
+		MessageBox_Self_Text:SetText( "#{TeamDismiss_090912_1}" );	-- è®¾ç½®å†…å®¹
 		CancelLastOp(FrameInfoList.DISMISS_TEAM);
 		g_FrameInfo = FrameInfoList.DISMISS_TEAM;
-		MessageBox_Self_UpdateRect();																-- »Ö¸´´°¿Ú´óĞ¡µ½³õÊ¼´óĞ¡
+		MessageBox_Self_UpdateRect();																-- æ¢å¤çª—å£å¤§å°åˆ°åˆå§‹å¤§å°
 		this:Show();
 		return;
 	end
@@ -1044,7 +1044,7 @@ function MessageBox_Update()
 	MessageBox_Self_OK_Button:Hide();
 	MessageBox_Self_Cancel_Button:Hide();
 	MessageBox_Self_Text:SetText( strMessageString );
-	MessageBox_Self_DragTitle:SetText("#gFF0FA0#gFF0FA0È· ÈÏ")
+	MessageBox_Self_DragTitle:SetText("#gFF0FA0#gFF0FA0ç¡® è®¤")
 	if( strMessageType == "Normal" ) then
 		MessageBox_Self_OK_Button:Show();
 		MessageBox_Self_Cancel_Button:Show();
@@ -1060,48 +1060,48 @@ function MessageBox_Update()
 end
 function MessageBox_Self_City_UpdateFrame()
 	--AxTrace(0,0,"MessageBox_Self_City_UpdateFrame:"..tostring(g_CityData[1]));
-	--È¡Ïûµ±Ç°½¨Éè½¨ÖşÎïµÄÈ·ÈÏĞÅÏ¢
+	--å–æ¶ˆå½“å‰å»ºè®¾å»ºç­‘ç‰©çš„ç¡®è®¤ä¿¡æ¯
 	if(g_CityData[1] == 0) then
-		MessageBox_Self_DragTitle:SetText("#gFF0FA0È¡Ïûµ±Ç°½¨Éè");
+		MessageBox_Self_DragTitle:SetText("#gFF0FA0å–æ¶ˆå½“å‰å»ºè®¾");
 		local szName, bLevel, bId = City:GetCityManageInfo("CurBuilding");
 		local szExist = City:GetBuildingInfo(bId, "exist");
-		if(tonumber(szExist) > 0) then szExist = "Éı¼¶"; else szExist = "ĞŞ½¨"; end
+		if(tonumber(szExist) > 0) then szExist = "å‡çº§"; else szExist = "ä¿®å»º"; end
 		local szCurPro = tostring(City:GetCityManageInfo("CurProgress"));
 		local szAttr = (City:GetBuildingInfo(bId, "condattrname"));
 
-		local msg = "±¾°ïÄ¿Ç°ÕıÔÚ"..szExist..szName.."ÖĞ£¬ÒÑ¾­Íê³ÉÁË½ø¶È"..szCurPro.."¡£ÖÕÖ¹ºó£¬";
-		msg = msg..szExist.."½«Ê§°Ü£¬ËùÓĞ½ø¶È½«Îª0£¬²»ÍË»¹ÈÎºÎ°ï×Ê½ğºÍ"..szAttr.."£¬ÄãÈ·¶¨ÒªÖÕÖ¹µ±Ç°µÄ";
-		msg = msg..szExist.."Âğ?";
+		local msg = "æœ¬å¸®ç›®å‰æ­£åœ¨"..szExist..szName.."ä¸­ï¼Œå·²ç»å®Œæˆäº†è¿›åº¦"..szCurPro.."ã€‚ç»ˆæ­¢åï¼Œ";
+		msg = msg..szExist.."å°†å¤±è´¥ï¼Œæ‰€æœ‰è¿›åº¦å°†ä¸º0ï¼Œä¸é€€è¿˜ä»»ä½•å¸®èµ„é‡‘å’Œ"..szAttr.."ï¼Œä½ ç¡®å®šè¦ç»ˆæ­¢å½“å‰çš„";
+		msg = msg..szExist.."å—?";
 		MessageBox_Self_Text:SetText(msg);
 		MessageBox_Self_UpdateRect();
 		this:Show();
-	--ÉêÇëÁìµØÈ·ÈÏĞÅÏ¢
+	--ç”³è¯·é¢†åœ°ç¡®è®¤ä¿¡æ¯
 	elseif(g_CityData[1] == 1) then
 		local szPortName = City:GetPortInfo(g_CityData[2], "Name");
-		MessageBox_Self_DragTitle:SetText("#gFF0FA0ÉêÇëÁìµØ");
-		--ÄãÈ·¶¨ÒªÉêÇëËùÔÚÓÚAAµÄ¡°BB¡±ÁìµØÂğ£¿ÕâÏîĞĞÎªĞèÒªÏûºÄ1000¸ö½ğ±Ò¡£
-		local msg = "#cFFF263ÄãÈ·¶¨ÒªÉêÇëËùÔÚÓÚ#cFE7E82"..tostring(szPortName).."#cFFF263µÄ#H"..g_CityData[3].."#cFFF263";
-		msg = msg.."ÁìµØÂğ£¿ÕâÏîĞĞÎªĞèÒªÏûºÄ1000#-14»òÕßÒ»¿é½¨³ÇÁîÅÆ¡£";
+		MessageBox_Self_DragTitle:SetText("#gFF0FA0ç”³è¯·é¢†åœ°");
+		--ä½ ç¡®å®šè¦ç”³è¯·æ‰€åœ¨äºAAçš„â€œBBâ€é¢†åœ°å—ï¼Ÿè¿™é¡¹è¡Œä¸ºéœ€è¦æ¶ˆè€—1000ä¸ªé‡‘å¸ã€‚
+		local msg = "#cFFF263ä½ ç¡®å®šè¦ç”³è¯·æ‰€åœ¨äº#cFE7E82"..tostring(szPortName).."#cFFF263çš„#H"..g_CityData[3].."#cFFF263";
+		msg = msg.."é¢†åœ°å—ï¼Ÿè¿™é¡¹è¡Œä¸ºéœ€è¦æ¶ˆè€—1000#-14æˆ–è€…ä¸€å—å»ºåŸä»¤ç‰Œã€‚";
 		MessageBox_Self_Text:SetText(msg);
 		MessageBox_Self_UpdateRect();
 		this:Show();
-	--ĞŞ½¨»òÉı¼¶½¨ÖşÎï
+	--ä¿®å»ºæˆ–å‡çº§å»ºç­‘ç‰©
 	elseif(g_CityData[1] == 2 or g_CityData[1] == 3) then
 		local szName, bLevel, bId = City:GetCityManageInfo("CurBuilding");
 		if(bLevel == -1 or bId == -1) then
 			local szExist = "";
 			if(g_CityData[1] == 2) then
-				MessageBox_Self_DragTitle:SetText("#gFF0FA0½¨ÉèĞÂ½¨Öş");
-				szExist = "ĞŞ½¨";
+				MessageBox_Self_DragTitle:SetText("#gFF0FA0å»ºè®¾æ–°å»ºç­‘");
+				szExist = "ä¿®å»º";
 			else
-				MessageBox_Self_DragTitle:SetText("#gFF0FA0Éı¼¶½¨Öş");
-				szExist = "Éı¼¶";
+				MessageBox_Self_DragTitle:SetText("#gFF0FA0å‡çº§å»ºç­‘");
+				szExist = "å‡çº§";
 			end
 
 			local szName = (City:GetBuildingInfo(g_CityData[2], "name"));
-			--½¨ÉèÌõ¼ş
+			--å»ºè®¾æ¡ä»¶
 			local cd = {City:GetBuildingInfo(g_CityData[2], "condition")};
-			--0.½ğÇ®
+			--0.é‡‘é’±
 			local money = cd[1];
 			local txt = "";
 			if(0 ~= tonumber(money)) then
@@ -1110,68 +1110,68 @@ function MessageBox_Self_City_UpdateFrame()
 				txt = txt.."0#-02";
 			end
 			money = txt;
-			--1.ÏûºÄÖµ
+			--1.æ¶ˆè€—å€¼
 			local szAttr = (City:GetBuildingInfo(g_CityData[2], "condattrname"));
 			local szAttrVal = tostring(cd[4]);
-			--2.ÈÎÎñÊı
+			--2.ä»»åŠ¡æ•°
 			local mn = tostring(cd[2]);
 
-			local msg = szExist..szName.."ĞèÒª°ï×Ê½ğ"..money.."£¬ÏûºÄ"..szAttr..szAttrVal;
-			msg = msg.."µã£¬Í¬Ê±·¢²¼ÈÎÎñ"..mn.."¸ö£¬ÄãÈ·¶¨Âğ?";
+			local msg = szExist..szName.."éœ€è¦å¸®èµ„é‡‘"..money.."ï¼Œæ¶ˆè€—"..szAttr..szAttrVal;
+			msg = msg.."ç‚¹ï¼ŒåŒæ—¶å‘å¸ƒä»»åŠ¡"..mn.."ä¸ªï¼Œä½ ç¡®å®šå—?";
 			MessageBox_Self_Text:SetText(msg);
 			MessageBox_Self_UpdateRect();
 			this:Show();
 		else
-			City:DoConfirm(0);	--È¡Ïûµ±Ç°½¨ÖşµÄÈ·ÈÏĞÅÏ¢
+			City:DoConfirm(0);	--å–æ¶ˆå½“å‰å»ºç­‘çš„ç¡®è®¤ä¿¡æ¯
 		end
-	--½µ¼¶»ò²ğ»Ù½¨ÖşÎï
+	--é™çº§æˆ–æ‹†æ¯å»ºç­‘ç‰©
 	elseif(g_CityData[1] == 4 or g_CityData[1] == 5) then
 		local szExist = "";
 		if(g_CityData[1] == 4) then
-			MessageBox_Self_DragTitle:SetText("#gFF0FA0½µ¼¶½¨Öş");
-			szExist = "½µ¼¶";
+			MessageBox_Self_DragTitle:SetText("#gFF0FA0é™çº§å»ºç­‘");
+			szExist = "é™çº§";
 		else
-			MessageBox_Self_DragTitle:SetText("#gFF0FA0²ğ»Ù½¨Öş");
-			szExist = "²ğ»Ù";
+			MessageBox_Self_DragTitle:SetText("#gFF0FA0æ‹†æ¯å»ºç­‘");
+			szExist = "æ‹†æ¯";
 		end
 
 		local szName = (City:GetBuildingInfo(g_CityData[2], "name"));
 		local szPreAttr = "";
 		_,szPreAttr = City:GetBuildingInfo(g_CityData[2], "condattrname");
-		local msg = szExist..szName.."½«»áÊ¹½¨Öş¹¦ÄÜÓë×÷ÓÃ¼õÉÙ£¬ÇÒ²»ÍË»¹ÈÎºÎ°ï×Ê½ğÓë";
-		msg = msg..szPreAttr.."£¬ÄãÈ·¶¨ÒªÕâÑù×öÂğ?";
+		local msg = szExist..szName.."å°†ä¼šä½¿å»ºç­‘åŠŸèƒ½ä¸ä½œç”¨å‡å°‘ï¼Œä¸”ä¸é€€è¿˜ä»»ä½•å¸®èµ„é‡‘ä¸";
+		msg = msg..szPreAttr.."ï¼Œä½ ç¡®å®šè¦è¿™æ ·åšå—?";
 		MessageBox_Self_Text:SetText(msg);
 		MessageBox_Self_UpdateRect();
 		this:Show();
-	--ĞŞ¸Ä³ÇÊĞ·´Õ¹Ç÷ÊÆÁùÂÊÖµ
+	--ä¿®æ”¹åŸå¸‚åå±•è¶‹åŠ¿å…­ç‡å€¼
 	elseif(g_CityData[1] == 6) then
-		MessageBox_Self_DragTitle:SetText("#gFF0FA0ĞŞ¸Ä·¢Õ¹·½Ïò");
-		local msg = "ĞŞ¸Ä·¢Õ¹·½Ïò½«»áÏûºÄ°ï»á×Ê½ğ50#-02£¬ÄãÈ·¶¨ÒªÕâÑù×öÂğ?"
+		MessageBox_Self_DragTitle:SetText("#gFF0FA0ä¿®æ”¹å‘å±•æ–¹å‘");
+		local msg = "ä¿®æ”¹å‘å±•æ–¹å‘å°†ä¼šæ¶ˆè€—å¸®ä¼šèµ„é‡‘50#-02ï¼Œä½ ç¡®å®šè¦è¿™æ ·åšå—?"
 		MessageBox_Self_Text:SetText(msg);
 		MessageBox_Self_UpdateRect();
 		this:Show();
-	--È¡ÏûÑĞ¾¿µÄÈ·ÈÏĞÅÏ¢
+	--å–æ¶ˆç ”ç©¶çš„ç¡®è®¤ä¿¡æ¯
 	elseif(g_CityData[1] == 7) then
 		local rName, _, rIdx = City:GetResearchInfo("CurResearch");
 		local szCurPro = tostring(City:GetResearchInfo("ResearchProcess"));
 
-		MessageBox_Self_DragTitle:SetText("#gFF0FA0ÖÕÖ¹ÑĞ¾¿");
-		local msg = "±¾°ïÄ¿Ç°ÕıÔÚÑĞ¾¿"..rName.."ÖĞ£¬ÒÑ¾­Íê³ÉÁË½ø¶È"..szCurPro.."¡£ÖÕÖ¹ºó£¬";
-		msg = msg.."ÑĞ¾¿½«Ê§°Ü£¬ËùÓĞ½ø¶È½«Îª0£¬²»ÍË»¹ÈÎºÎ°ï×Ê½ğºÍÊôĞÔÖµ£¬ÄãÈ·¶¨ÒªÖÕÖ¹µ±Ç°µÄÑĞ¾¿Âğ?";
+		MessageBox_Self_DragTitle:SetText("#gFF0FA0ç»ˆæ­¢ç ”ç©¶");
+		local msg = "æœ¬å¸®ç›®å‰æ­£åœ¨ç ”ç©¶"..rName.."ä¸­ï¼Œå·²ç»å®Œæˆäº†è¿›åº¦"..szCurPro.."ã€‚ç»ˆæ­¢åï¼Œ";
+		msg = msg.."ç ”ç©¶å°†å¤±è´¥ï¼Œæ‰€æœ‰è¿›åº¦å°†ä¸º0ï¼Œä¸é€€è¿˜ä»»ä½•å¸®èµ„é‡‘å’Œå±æ€§å€¼ï¼Œä½ ç¡®å®šè¦ç»ˆæ­¢å½“å‰çš„ç ”ç©¶å—?";
 		MessageBox_Self_Text:SetText(msg);
 		MessageBox_Self_UpdateRect();		
 		this:Show();
-	--¿ªÊ¼ÑĞ¾¿µÄÈ·ÈÏĞÅÏ¢
+	--å¼€å§‹ç ”ç©¶çš„ç¡®è®¤ä¿¡æ¯
 	elseif(g_CityData[1] == 8) then
 		local rName = City:GetResearchInfo("CurResearch");
 		if("" == rName) then
 			local bIdx = tonumber(g_CityData[2]);
 			local rIdx = tonumber(g_CityData[3]);
-			MessageBox_Self_DragTitle:SetText("#gFF0FA0ÑĞ¾¿Åä·½");
+			MessageBox_Self_DragTitle:SetText("#gFF0FA0ç ”ç©¶é…æ–¹");
 			local szResearchName = City:GetResearchInfo("ResearchName", bIdx, rIdx);
-			--½¨ÉèÌõ¼ş
+			--å»ºè®¾æ¡ä»¶
 			local cd = {City:GetResearchInfo("ResearchCondition", bIdx, rIdx)};
-			--0.½ğÇ®
+			--0.é‡‘é’±
 			local money = cd[1];
 			local txt = "";
 			if(0 ~= tonumber(money)) then
@@ -1180,35 +1180,35 @@ function MessageBox_Self_City_UpdateFrame()
 				txt = txt.."0#-02";
 			end
 			money = txt;
-			--1.ËùĞèÖµ
+			--1.æ‰€éœ€å€¼
 			local szAttr = City:GetResearchInfo("RCAttrName", bIdx, rIdx);
 			local szAttrVal = tostring(cd[4]);
-			--2.ÈÎÎñÊı
+			--2.ä»»åŠ¡æ•°
 			local mn = tostring(cd[2]);
-			local msg = "ÑĞ¾¿"..szResearchName.."ĞèÒª°ï×Ê½ğ"..money.."£¬ÏûºÄ";
-			msg = msg..szAttr..szAttrVal.."£¬Í¬Ê±·¢²¼ÈÎÎñ"..mn.."¸ö£¬ÄãÈ·¶¨Âğ?";
+			local msg = "ç ”ç©¶"..szResearchName.."éœ€è¦å¸®èµ„é‡‘"..money.."ï¼Œæ¶ˆè€—";
+			msg = msg..szAttr..szAttrVal.."ï¼ŒåŒæ—¶å‘å¸ƒä»»åŠ¡"..mn.."ä¸ªï¼Œä½ ç¡®å®šå—?";
 			MessageBox_Self_Text:SetText(msg);
 			MessageBox_Self_UpdateRect();
 			this:Show();
 		else
-			City:DoConfirm(7);	--È¡Ïûµ±Ç°ÑĞ¾¿µÄÈ·ÈÏĞÅÏ¢
+			City:DoConfirm(7);	--å–æ¶ˆå½“å‰ç ”ç©¶çš„ç¡®è®¤ä¿¡æ¯
 		end
-	--´´½¨ÉÌÒµÂ·ÏßµÄÈ·ÈÏĞÅÏ¢
+	--åˆ›å»ºå•†ä¸šè·¯çº¿çš„ç¡®è®¤ä¿¡æ¯
 	elseif(g_CityData[1] == 9) then
-		MessageBox_Self_DragTitle:SetText("#gFF0FA0´´½¨ÉÌÒµÂ·Ïß");
-		local msg = "´Ë²Ù×÷½«Óë±àºÅÎª"..tostring(g_CityData[2]).."µÄ°ï»á½¨Á¢ÉÌÏß£¬Ö»ÓĞË«·½»¥½¨ÉÌÏß£¬ÉÌÏß²Å»áÉúĞ§£¬ÄãÈ·¶¨Òª½¨Á¢Âğ?";
+		MessageBox_Self_DragTitle:SetText("#gFF0FA0åˆ›å»ºå•†ä¸šè·¯çº¿");
+		local msg = "æ­¤æ“ä½œå°†ä¸ç¼–å·ä¸º"..tostring(g_CityData[2]).."çš„å¸®ä¼šå»ºç«‹å•†çº¿ï¼Œåªæœ‰åŒæ–¹äº’å»ºå•†çº¿ï¼Œå•†çº¿æ‰ä¼šç”Ÿæ•ˆï¼Œä½ ç¡®å®šè¦å»ºç«‹å—?";
 		MessageBox_Self_Text:SetText(msg);
 		MessageBox_Self_UpdateRect();
 		this:Show();
-	--È¡ÏûÉÌÒµÂ·ÏßµÄÈ·ÈÏĞÅÏ¢
+	--å–æ¶ˆå•†ä¸šè·¯çº¿çš„ç¡®è®¤ä¿¡æ¯
 	elseif(g_CityData[1] == 10) then
-		MessageBox_Self_DragTitle:SetText("#gFF0FA0È¡ÏûÉÌÒµÂ·Ïß");
+		MessageBox_Self_DragTitle:SetText("#gFF0FA0å–æ¶ˆå•†ä¸šè·¯çº¿");
 		local dt = {City:GetCityRoadInfo("RoadDetail", g_CityData[2])};
 		local msg = "";
 		if(dt[4]) then
-			msg = "´Ë²Ù×÷½«Ê¹±¾°ïÓë¶Ô·½°ï»áµÄÉÌÒµĞĞÎªµ¥·½ÃæÖÕÖ¹£¬ÄãÈ·¶¨Òª¼ÌĞø½øĞĞ²Ù×÷Âğ?";
+			msg = "æ­¤æ“ä½œå°†ä½¿æœ¬å¸®ä¸å¯¹æ–¹å¸®ä¼šçš„å•†ä¸šè¡Œä¸ºå•æ–¹é¢ç»ˆæ­¢ï¼Œä½ ç¡®å®šè¦ç»§ç»­è¿›è¡Œæ“ä½œå—?";
 		else
-			msg = "´Ë²Ù×÷½«Ê¹±¾°ïÓë¶Ô·½°ï»á²»»áÔÙÓĞ»¥½¨ÉÌÏßµÄ¿ÉÄÜ£¬ÄãÈ·¶¨Òª¼ÌĞø½øĞĞ²Ù×÷Âğ?";
+			msg = "æ­¤æ“ä½œå°†ä½¿æœ¬å¸®ä¸å¯¹æ–¹å¸®ä¼šä¸ä¼šå†æœ‰äº’å»ºå•†çº¿çš„å¯èƒ½ï¼Œä½ ç¡®å®šè¦ç»§ç»­è¿›è¡Œæ“ä½œå—?";
 		end
 		MessageBox_Self_Text:SetText(msg);
 		MessageBox_Self_UpdateRect();
@@ -1266,33 +1266,33 @@ function MessageBox_Self_UpdateFrameEx()
 
 	if( g_FrameInfo==FrameInfoList.SAVE_STALL_INFO) then
 		
-		MessageBox_Self_DragTitle:SetText("#gFF0FA0±£´æÌ¯Î»ÉèÖÃ");
+		MessageBox_Self_DragTitle:SetText("#gFF0FA0ä¿å­˜æ‘Šä½è®¾ç½®");
 		local szInfo;
 		szInfo = "#{INTERFACE_XML_681}";
 		MessageBox_Self_Text:SetText(szInfo);
 		this:Show();
 	-- add by zchw
 	elseif (g_FrameInfo == FrameInfoList.CONFIRM_REMOVE_STALL) then
-		MessageBox_Self_DragTitle:SetText("#gFF0FA0ÊÕÌ¯");
+		MessageBox_Self_DragTitle:SetText("#gFF0FA0æ”¶æ‘Š");
 		local szInfo;
-		szInfo = "ÄãÕæµÄÒªÊÕÌ¯Âğ£¿";
+		szInfo = "ä½ çœŸçš„è¦æ”¶æ‘Šå—ï¼Ÿ";
 		MessageBox_Self_Text:SetText(szInfo);
 		this:Show();
 	-- zchw for pet procreate
 	elseif (g_FrameInfo == FrameInfoList.PET_PROCREATE_PROMPT) then
-		MessageBox_Self_DragTitle:SetText("#gFF0FA0×¢Òâ");
+		MessageBox_Self_DragTitle:SetText("#gFF0FA0æ³¨æ„");
 		MessageBox_Self_Text:SetText("#{PET_FANZHI_20080313_01}");
 		this:Show();
 	elseif(g_FrameInfo == FrameInfoList.YUANBAO_BUY_ITEM) then
-		MessageBox_Self_DragTitle:SetText("#gFF0FA0¹ºÂòÉÌÆ·");
+		MessageBox_Self_DragTitle:SetText("#gFF0FA0è´­ä¹°å•†å“");
 		local szInfo;
-		szInfo = "¹ºÂò"..g_CityData[3].."ĞèÒª»¨·Ñ"..tostring(g_CityData[2]).."¸öÔª±¦£¬ÄãÈ·ÈÏÂğ£¿";
+		szInfo = "è´­ä¹°"..g_CityData[3].."éœ€è¦èŠ±è´¹"..tostring(g_CityData[2]).."ä¸ªå…ƒå®ï¼Œä½ ç¡®è®¤å—ï¼Ÿ";
 		MessageBox_Self_Text:SetText(szInfo);
 		this:Show();
 	elseif(g_FrameInfo == FrameInfoList.COMMISION_BUY) then
-		MessageBox_Self_DragTitle:SetText("#gFF0FA0¹ºÂòÉÌÆ·");
+		MessageBox_Self_DragTitle:SetText("#gFF0FA0è´­ä¹°å•†å“");
 		local szInfo;
-		szInfo = "¹ºÂò"..CommisionBuyData[1].."ĞèÒª»¨·Ñ"..CommisionBuyData[2].."£¬ÄãÈ·ÈÏÂğ£¿";
+		szInfo = "è´­ä¹°"..CommisionBuyData[1].."éœ€è¦èŠ±è´¹"..CommisionBuyData[2].."ï¼Œä½ ç¡®è®¤å—ï¼Ÿ";
 		MessageBox_Self_Text:SetText(szInfo);
 		this:Show();
 		
@@ -1304,15 +1304,15 @@ end
 -- UpdateTitle
 --===============================================
 function UpdateTitle()
-    --ÒòÎªÔÚMessageBox_Self_UpdateFrameº¯ÊıÖĞ,"upvalue"ÑÏÖØ³¬Ô±,Ôö¼ÓÁËÕâ¸öº¯ÊıÓÃÀ´¸ü¸ÄmsgboxµÄ±êÌâ
+    --å› ä¸ºåœ¨MessageBox_Self_UpdateFrameå‡½æ•°ä¸­,"upvalue"ä¸¥é‡è¶…å‘˜,å¢åŠ äº†è¿™ä¸ªå‡½æ•°ç”¨æ¥æ›´æ”¹msgboxçš„æ ‡é¢˜
     if ( PVPFLAG.FREEFORALL == g_FrameInfo ) then
-        MessageBox_Self_DragTitle:SetText("#gFF0FA0¸ü¸ÄPKÄ£Ê½");
+        MessageBox_Self_DragTitle:SetText("#gFF0FA0æ›´æ”¹PKæ¨¡å¼");
     elseif ( PVPFLAG.FREEFORTEAM == g_FrameInfo ) then
-        MessageBox_Self_DragTitle:SetText("#gFF0FA0¸ü¸ÄPKÄ£Ê½");
+        MessageBox_Self_DragTitle:SetText("#gFF0FA0æ›´æ”¹PKæ¨¡å¼");
     elseif ( PVPFLAG.FREEFORGUILD == g_FrameInfo ) then
-        MessageBox_Self_DragTitle:SetText("#gFF0FA0¸ü¸ÄPKÄ£Ê½");
+        MessageBox_Self_DragTitle:SetText("#gFF0FA0æ›´æ”¹PKæ¨¡å¼");
     elseif ( PVPFLAG.MAKESUREPVPCHALLENGE == g_FrameInfo ) then
-		MessageBox_Self_DragTitle:SetText("#gFF0FA0ĞûÕ½È·ÈÏ");
+		MessageBox_Self_DragTitle:SetText("#gFF0FA0å®£æˆ˜ç¡®è®¤");
 	end
 	MessageBox_Self_UpdateRect();
 
@@ -1334,7 +1334,7 @@ function MessageBox_Self_UpdateFrame()
 	end
 
 	if(g_FrameInfo == FrameInfoList.STALL_RENT_FRAME) then
-		--ÌáÊ¾±¾µÄ·ÑÓÃ
+		--æç¤ºæœ¬çš„è´¹ç”¨
 		local nPosTax = StallSale:GetPosTax();
 		local nTradeTax = StallSale:GetTradeTax();
 
@@ -1356,7 +1356,7 @@ function MessageBox_Self_UpdateFrame()
 		end
 
 		local nCoinType = StallSale:GetStallType()
-		if (nCoinType == 1) then --Ôª±¦°ÚÌ¯
+		if (nCoinType == 1) then --å…ƒå®æ‘†æ‘Š
 			local szInfo = "#{YBBT_081031_1}".. szMoneyPosTax .."#{YBBT_081031_2}1#{YBBT_081031_3}";
 			MessageBox_Self_Text:SetText(szInfo);
 		else
@@ -1365,59 +1365,59 @@ function MessageBox_Self_UpdateFrame()
 		end
 
 	elseif(g_FrameInfo == FrameInfoList.DISCARD_ITEM_FRAME) then
-		--Í¨Öª½â³ıËø¶¨
-		MessageBox_Self_DragTitle:SetText("#gFF0FA0Ïú»ÙÎïÆ·");
-		local szStr = "ÄãÕæµÄÒªÏú»Ù".. argDISCARD_ITEM_FRAME0 .."?"
+		--é€šçŸ¥è§£é™¤é”å®š
+		MessageBox_Self_DragTitle:SetText("#gFF0FA0é”€æ¯ç‰©å“");
+		local szStr = "ä½ çœŸçš„è¦é”€æ¯".. argDISCARD_ITEM_FRAME0 .."?"
 		MessageBox_Self_Text:SetText(szStr);
 
 	elseif(g_FrameInfo == FrameInfoList.CANNT_DISCARD_ITEM) then
-		MessageBox_Self_DragTitle:SetText("#gFF0FA0Ïú»ÙÎïÆ·");
-		local szStr = argCANNT_DISCARD_ITEM0.."ÊÇÈÎÎñÎïÆ·£¬²»ÄÜÏú»Ù";
+		MessageBox_Self_DragTitle:SetText("#gFF0FA0é”€æ¯ç‰©å“");
+		local szStr = argCANNT_DISCARD_ITEM0.."æ˜¯ä»»åŠ¡ç‰©å“ï¼Œä¸èƒ½é”€æ¯";
 		MessageBox_Self_Text:SetText(szStr);
 		
 	elseif(g_FrameInfo == FrameInfoList.LOCK_ITEM_CONFIRM_FRAME) then
-		MessageBox_Self_DragTitle:SetText("#gFF0FA0¼ÓËø");
-		local szStr = "".."#cff0000×¢Òâ£¡#r#YÎªÁË±£»¤ÄúµÄ²Æ²ú°²È«£¬Ò»µ©ÎïÆ·»òÕäÊŞ³É¹¦±»¼ÓËø£¬ÔÙ´Î½âËøÔòĞèÒªµÈ´ı#G3Ìì#Y£¬ÄúÈ·¶¨Òª¼ÌĞø¼ÓËøÃ´£¿";
+		MessageBox_Self_DragTitle:SetText("#gFF0FA0åŠ é”");
+		local szStr = "".."#cff0000æ³¨æ„ï¼#r#Yä¸ºäº†ä¿æŠ¤æ‚¨çš„è´¢äº§å®‰å…¨ï¼Œä¸€æ—¦ç‰©å“æˆ–çå…½æˆåŠŸè¢«åŠ é”ï¼Œå†æ¬¡è§£é”åˆ™éœ€è¦ç­‰å¾…#G3å¤©#Yï¼Œæ‚¨ç¡®å®šè¦ç»§ç»­åŠ é”ä¹ˆï¼Ÿ";
 		MessageBox_Self_Text:SetText(szStr);
 
 	elseif(g_FrameInfo == FrameInfoList.FRAME_AFFIRM_SHOW) then
-		MessageBox_Self_DragTitle:SetText("#gFF0FA0·ÅÆúÈÎÎñ");
-		local szStr = "#cFFF263ÄãÕæµÄÒª·ÅÆú#RÈÎÎñ:"..argFRAME_AFFIRM_SHOW0.."#cFFF263Âğ£¿";
+		MessageBox_Self_DragTitle:SetText("#gFF0FA0æ”¾å¼ƒä»»åŠ¡");
+		local szStr = "#cFFF263ä½ çœŸçš„è¦æ”¾å¼ƒ#Rä»»åŠ¡:"..argFRAME_AFFIRM_SHOW0.."#cFFF263å—ï¼Ÿ";
 		MessageBox_Self_Text:SetText(szStr);
 
 	elseif(g_FrameInfo == FrameInfoList.GUILD_CREATE_CONFIRM) then
-		-- °ï»á³ÉÁ¢ĞèÍæ¼ÒÈ·ÈÏ
-		MessageBox_Self_DragTitle:SetText("#gFF0FA0°ï»á³ÉÁ¢");
-		local szStr = "ÄãÈ·ÈÏ´´½¨" .. argCREATE_CONFIRM0 .. "°ï»áÂğ£¿";
+		-- å¸®ä¼šæˆç«‹éœ€ç©å®¶ç¡®è®¤
+		MessageBox_Self_DragTitle:SetText("#gFF0FA0å¸®ä¼šæˆç«‹");
+		local szStr = "ä½ ç¡®è®¤åˆ›å»º" .. argCREATE_CONFIRM0 .. "å¸®ä¼šå—ï¼Ÿ";
 		MessageBox_Self_Text:SetText(szStr);
 	elseif(g_FrameInfo == FrameInfoList.GUILD_DESTORY_CONFIRM) then
-	  MessageBox_Self_DragTitle:SetText("#gFF0FA0°ï»á½âÉ¢");
-		local szStr = "ÄãÈ·ÈÏÉ¾³ı" .. argDESTORY_CONFIRM0 .. "°ï»áÂğ£¿";
+	  MessageBox_Self_DragTitle:SetText("#gFF0FA0å¸®ä¼šè§£æ•£");
+		local szStr = "ä½ ç¡®è®¤åˆ é™¤" .. argDESTORY_CONFIRM0 .. "å¸®ä¼šå—ï¼Ÿ";
 		MessageBox_Self_Text:SetText(szStr);
 	elseif(g_FrameInfo == FrameInfoList.GUILD_QUIT_CONFIRM) then
-		MessageBox_Self_DragTitle:SetText("#gFF0FA0°ï»áÍË³ö");
-		local szStr = "ÄãÈ·ÈÏÍË³ö" .. argQUIT_CONFIRM0 .. "°ï»áÂğ£¿";
+		MessageBox_Self_DragTitle:SetText("#gFF0FA0å¸®ä¼šé€€å‡º");
+		local szStr = "ä½ ç¡®è®¤é€€å‡º" .. argQUIT_CONFIRM0 .. "å¸®ä¼šå—ï¼Ÿ";
 		MessageBox_Self_Text:SetText(szStr);
 	elseif(g_FrameInfo == FrameInfoList.GUILD_LEAGUE_QUIT_CONFIRM) then
-		MessageBox_Self_DragTitle:SetText("#gFF0FA0Í¬ÃËÍË³ö");
-		local szStr = "ÄãÈ·ÈÏÍË³ö" .. argQUIT_LEAGUE_CONFIRM0 .. "Í¬ÃËÂğ£¿";
+		MessageBox_Self_DragTitle:SetText("#gFF0FA0åŒç›Ÿé€€å‡º");
+		local szStr = "ä½ ç¡®è®¤é€€å‡º" .. argQUIT_LEAGUE_CONFIRM0 .. "åŒç›Ÿå—ï¼Ÿ";
 		MessageBox_Self_Text:SetText(szStr);
 	elseif(g_FrameInfo == FrameInfoList.GUILD_LEAGUE_CREATE_CONFIRM) then
-		MessageBox_Self_DragTitle:SetText("#gFF0FA0Í¬ÃË´´½¨");
+		MessageBox_Self_DragTitle:SetText("#gFF0FA0åŒç›Ÿåˆ›å»º");
 		local szStr = "#{TM_20080331_09}#{_EXCHG1000000}#{TM_20080331_02}";
 		MessageBox_Self_Text:SetText(szStr);
 	elseif(g_FrameInfo == FrameInfoList.NET_CLOSE_MESSAGE) then
 		MessageBox_Self_Text:SetText(argNET_CLOSE0);
 	elseif(g_FrameInfo == FrameInfoList.PET_FREE_CONFIRM) then
-		MessageBox_Self_DragTitle:SetText("#gFF0FA0ÕäÊŞ·ÅÉú");
+		MessageBox_Self_DragTitle:SetText("#gFF0FA0çå…½æ”¾ç”Ÿ");
 		local petname = Pet:GetPetList_Appoint(Pet_Number) ;
 		local strname, pettype = Pet:GetName(Pet_Number);
-		local szStr = "ÊÇ·ñÈ·ÈÏ·ÅÉú["..petname.."]("..pettype..")?" ;
+		local szStr = "æ˜¯å¦ç¡®è®¤æ”¾ç”Ÿ["..petname.."]("..pettype..")?" ;
 		MessageBox_Self_Text:SetText(szStr);
 
 	elseif(g_FrameInfo == FrameInfoList.PS_RENAME_MESSAGE)  then
-		MessageBox_Self_DragTitle:SetText("#gFF0FA0ĞŞ¸ÄµêÃû");
-		--Íæ¼ÒÉÌµê¸üÃûĞèÒªµÄ½ğÇ®Êı×Ö
+		MessageBox_Self_DragTitle:SetText("#gFF0FA0ä¿®æ”¹åº—å");
+		--ç©å®¶å•†åº—æ›´åéœ€è¦çš„é‡‘é’±æ•°å­—
 		local nGoldCoin;
 		local nSilverCoin;
 		local nCopperCoin;
@@ -1435,14 +1435,14 @@ function MessageBox_Self_UpdateFrame()
 			szMoney = szMoney .. tostring(nCopperCoin) .. "#-04";
 		end
 
-		local szInfo = "ĞŞ¸ÄµêÃûĞèÒªÖ§¸¶ÅÆØÒ½ğ×Ö·Ñ2".."#-02".. "¡ÁÉÌÒµÖ¸Êı£¬µ±Ç°µÄÉÌÒµÖ¸ÊıÎª".. PlayerShop:GetCommercialFactor().."ĞèÒªÖ§¸¶"..szMoney.."£¬ÄãÈ·¶¨ÒªĞŞ¸ÄÂğ£¿"
+		local szInfo = "ä¿®æ”¹åº—åéœ€è¦æ”¯ä»˜ç‰ŒåŒ¾é‡‘å­—è´¹2".."#-02".. "Ã—å•†ä¸šæŒ‡æ•°ï¼Œå½“å‰çš„å•†ä¸šæŒ‡æ•°ä¸º".. PlayerShop:GetCommercialFactor().."éœ€è¦æ”¯ä»˜"..szMoney.."ï¼Œä½ ç¡®å®šè¦ä¿®æ”¹å—ï¼Ÿ"
 		MessageBox_Self_Text:SetText(szInfo);
 
 		this:Show()
 
 	elseif(g_FrameInfo == FrameInfoList.PS_READ_MESSAGE)    then
-		--Íæ¼ÒÉÌµê¸ü¸ü¸ÄÉÌµêËµÃ÷ĞèÒªµÄ½ğÇ®Êı×Ö
-		MessageBox_Self_DragTitle:SetText("#gFF0FA0ĞŞ¸ÄµêÆÌÃèÊö");
+		--ç©å®¶å•†åº—æ›´æ›´æ”¹å•†åº—è¯´æ˜éœ€è¦çš„é‡‘é’±æ•°å­—
+		MessageBox_Self_DragTitle:SetText("#gFF0FA0ä¿®æ”¹åº—é“ºæè¿°");
 		local nGoldCoin;
 		local nSilverCoin;
 		local nCopperCoin;
@@ -1460,13 +1460,13 @@ function MessageBox_Self_UpdateFrame()
 			szMoney = szMoney .. tostring(nCopperCoin) .. "#-04";
 		end
 
-		local szInfo = "ĞŞ¸ÄµêÃèÊöĞèÒªÖ§¸¶±ÊÄ«·Ñ".."50#-03".. "¡ÁÉÌÒµÖ¸Êı£¬µ±Ç°µÄÉÌÒµÖ¸ÊıÎª".. PlayerShop:GetCommercialFactor().."ĞèÒªÖ§¸¶"..szMoney.."£¬ÄãÈ·¶¨ÒªĞŞ¸ÄÂğ£¿"
+		local szInfo = "ä¿®æ”¹åº—æè¿°éœ€è¦æ”¯ä»˜ç¬”å¢¨è´¹".."50#-03".. "Ã—å•†ä¸šæŒ‡æ•°ï¼Œå½“å‰çš„å•†ä¸šæŒ‡æ•°ä¸º".. PlayerShop:GetCommercialFactor().."éœ€è¦æ”¯ä»˜"..szMoney.."ï¼Œä½ ç¡®å®šè¦ä¿®æ”¹å—ï¼Ÿ"
 		MessageBox_Self_Text:SetText(szInfo);
 
 		this:Show()
 
 	elseif(g_FrameInfo == FrameInfoList.PS_ADD_BASE_MONEY)    then
-		MessageBox_Self_DragTitle:SetText("#gFF0FA0³äÈë±¾½ğ");
+		MessageBox_Self_DragTitle:SetText("#gFF0FA0å……å…¥æœ¬é‡‘");
 		local nGoldCoin;
 		local nSilverCoin;
 		local nCopperCoin;
@@ -1497,12 +1497,12 @@ function MessageBox_Self_UpdateFrame()
 			szMoney1 = szMoney1 .. tostring(nCopperCoin) .. "#-04";
 		end
 
-		local szInfo = "Äã½«³äÈë" .. szMoney .. "£¬ÏµÍ³»¹½«ÊÕÈ¡Äã3%µÄÍ¶×ÊË°£¬Äã½«ĞèÒª¶îÍâÖ§¸¶" .. szMoney1 .. "£¬ÄãÈ·¶¨Òª³äÈëÂğ£¿";
+		local szInfo = "ä½ å°†å……å…¥" .. szMoney .. "ï¼Œç³»ç»Ÿè¿˜å°†æ”¶å–ä½ 3%çš„æŠ•èµ„ç¨ï¼Œä½ å°†éœ€è¦é¢å¤–æ”¯ä»˜" .. szMoney1 .. "ï¼Œä½ ç¡®å®šè¦å……å…¥å—ï¼Ÿ";
 
 		MessageBox_Self_Text:SetText(szInfo);
 
 	elseif(g_FrameInfo == FrameInfoList.PS_ADD_GAIN_MONEY)    then
-		MessageBox_Self_DragTitle:SetText("#gFF0FA0³äÈëÓ¯Àû½ğ");
+		MessageBox_Self_DragTitle:SetText("#gFF0FA0å……å…¥ç›ˆåˆ©é‡‘");
 		local nGoldCoin;
 		local nSilverCoin;
 		local nCopperCoin;
@@ -1533,7 +1533,7 @@ function MessageBox_Self_UpdateFrame()
 			szMoney1 = szMoney1 .. tostring(nCopperCoin) .. "#-04";
 		end
 
-		local szInfo = "Äã½«³äÈë" .. szMoney .. "£¬ÏµÍ³»¹½«ÊÕÈ¡Äã3%µÄÍ¶×ÊË°£¬Äã½«ĞèÒª¶îÍâÖ§¸¶" .. szMoney1 .. "£¬ÄãÈ·¶¨Òª³äÈëÂğ£¿";
+		local szInfo = "ä½ å°†å……å…¥" .. szMoney .. "ï¼Œç³»ç»Ÿè¿˜å°†æ”¶å–ä½ 3%çš„æŠ•èµ„ç¨ï¼Œä½ å°†éœ€è¦é¢å¤–æ”¯ä»˜" .. szMoney1 .. "ï¼Œä½ ç¡®å®šè¦å……å…¥å—ï¼Ÿ";
 
 		MessageBox_Self_Text:SetText(szInfo);
 
@@ -1550,7 +1550,7 @@ function MessageBox_Self_UpdateFrame()
 		MessageBox_Self_Text:SetText(Get_XParam_STR(1));
 
 	elseif(g_FrameInfo == FrameInfoList.PS_ADD_STALL)   then
-		MessageBox_Self_DragTitle:SetText("#gFF0FA0À©ÕÅ¹ñÌ¨");
+		MessageBox_Self_DragTitle:SetText("#gFF0FA0æ‰©å¼ æŸœå°");
 		local nGoldCoin;
 		local nSilverCoin;
 		local nCopperCoin;
@@ -1568,16 +1568,16 @@ function MessageBox_Self_UpdateFrame()
 			szMoney = szMoney .. tostring(nCopperCoin) .. "#-04";
 		end
 
-		local szInfo = "À©ÕÅ¹ñÌ¨ĞèÒªÖ§¸¶30#-02¡ÁÉÌÒµÖ¸Êı¡Á2¡Á103%£¬µ±Ç°µÄÉÌÒµÖ¸ÊıÎª".. PlayerShop:GetCommercialFactor() .."£¬ĞèÒªÖ§¸¶" .. szMoney .. "£¬ÄãÈ·¶¨ÒªÀ©ÕÅÂğ£¿"
+		local szInfo = "æ‰©å¼ æŸœå°éœ€è¦æ”¯ä»˜30#-02Ã—å•†ä¸šæŒ‡æ•°Ã—2Ã—103%ï¼Œå½“å‰çš„å•†ä¸šæŒ‡æ•°ä¸º".. PlayerShop:GetCommercialFactor() .."ï¼Œéœ€è¦æ”¯ä»˜" .. szMoney .. "ï¼Œä½ ç¡®å®šè¦æ‰©å¼ å—ï¼Ÿ"
 
 		MessageBox_Self_Text:SetText(szInfo);
 
 	elseif(g_FrameInfo == FrameInfoList.PS_DEL_STALL)   then
-		MessageBox_Self_DragTitle:SetText("#gFF0FA0Ëõ¼õ¹ñÌ¨");
-		MessageBox_Self_Text:SetText("Ëõ¼õ¹ñÌ¨ºó£¬Äú°Ú·Åµ½¹ñÌ¨ÖĞµÄ»õÎïÒ²½«±»ÏµÍ³»ØÊÕ¡£ÄúÈ·¶¨ÒªÕâÑù×öÂğ£¿");
+		MessageBox_Self_DragTitle:SetText("#gFF0FA0ç¼©å‡æŸœå°");
+		MessageBox_Self_Text:SetText("ç¼©å‡æŸœå°åï¼Œæ‚¨æ‘†æ”¾åˆ°æŸœå°ä¸­çš„è´§ç‰©ä¹Ÿå°†è¢«ç³»ç»Ÿå›æ”¶ã€‚æ‚¨ç¡®å®šè¦è¿™æ ·åšå—ï¼Ÿ");
 
 	elseif(g_FrameInfo == FrameInfoList.PS_INFO_PANCHU)  then
-		MessageBox_Self_DragTitle:SetText("#gFF0FA0ÅÌ³öµêÆÌ");
+		MessageBox_Self_DragTitle:SetText("#gFF0FA0ç›˜å‡ºåº—é“º");
 		local nGoldCoin;
 		local nSilverCoin;
 		local nCopperCoin;
@@ -1595,12 +1595,12 @@ function MessageBox_Self_UpdateFrame()
 			szMoney = szMoney .. tostring(nCopperCoin) .. "#-04";
 		end
 
-		local szInfo = "ÅÌ³öµêÆÌĞèÒªÖ§¸¶15#-02¡ÁÉÌÒµÖ¸Êı£¬µ±Ç°µÄÉÌÒµÖ¸ÊıÎª".. PlayerShop:GetCommercialFactor() .."£¬ĞèÒªÖ§¸¶" .. szMoney .. "£¬ÄãÈ·¶¨ÒªÅÌ³öµêÆÌÂğ£¿"
+		local szInfo = "ç›˜å‡ºåº—é“ºéœ€è¦æ”¯ä»˜15#-02Ã—å•†ä¸šæŒ‡æ•°ï¼Œå½“å‰çš„å•†ä¸šæŒ‡æ•°ä¸º".. PlayerShop:GetCommercialFactor() .."ï¼Œéœ€è¦æ”¯ä»˜" .. szMoney .. "ï¼Œä½ ç¡®å®šè¦ç›˜å‡ºåº—é“ºå—ï¼Ÿ"
 		MessageBox_Self_Text:SetText(szInfo);
 
-	elseif(g_FrameInfo == FrameInfoList.PS_INFO_PANRU)  then   --ÅÌÈë
+	elseif(g_FrameInfo == FrameInfoList.PS_INFO_PANRU)  then   --ç›˜å…¥
 
-		MessageBox_Self_DragTitle:SetText("#gFF0FA0ÅÌÈëµêÆÌ");
+		MessageBox_Self_DragTitle:SetText("#gFF0FA0ç›˜å…¥åº—é“º");
 		local nGoldCoin;
 		local nSilverCoin;
 		local nCopperCoin;
@@ -1618,12 +1618,12 @@ function MessageBox_Self_UpdateFrame()
 			szMoney = szMoney .. tostring(nCopperCoin) .. "#-04";
 		end
 
-		local szInfo = "È¡ÏûÅÌ³ö¹ñÌ¨ĞèÒªÖ§¸¶5#-02¡ÁÉÌÒµÖ¸Êı£¬µ±Ç°µÄÉÌÒµÖ¸ÊıÎª".. PlayerShop:GetCommercialFactor() .."£¬ĞèÒªÖ§¸¶" .. szMoney .. "£¬ÄãÈ·¶¨ÒªÅÌÈëµêÆÌÂğ£¿"
+		local szInfo = "å–æ¶ˆç›˜å‡ºæŸœå°éœ€è¦æ”¯ä»˜5#-02Ã—å•†ä¸šæŒ‡æ•°ï¼Œå½“å‰çš„å•†ä¸šæŒ‡æ•°ä¸º".. PlayerShop:GetCommercialFactor() .."ï¼Œéœ€è¦æ”¯ä»˜" .. szMoney .. "ï¼Œä½ ç¡®å®šè¦ç›˜å…¥åº—é“ºå—ï¼Ÿ"
 
 		MessageBox_Self_Text:SetText(szInfo);
 
 	elseif( g_FrameInfo == FrameInfoList.PS_INFO_MODIFY_TYPE ) then
-		MessageBox_Self_DragTitle:SetText("#gFF0FA0ĞŞ¸ÄµêÆÌÀàĞÍ");
+		MessageBox_Self_DragTitle:SetText("#gFF0FA0ä¿®æ”¹åº—é“ºç±»å‹");
 		local nGoldCoin;
 		local nSilverCoin;
 		local nCopperCoin;
@@ -1640,27 +1640,27 @@ function MessageBox_Self_UpdateFrame()
 			szMoney = szMoney .. tostring(nCopperCoin) .. "#-04";
 		end
 
-		local szInfo = "ĞŞ¸ÄµêÀàĞÍĞèÒªÖ§¸¶°áÔË·Ñ£º5#-02 ¡ÁÉÌÒµÖ¸Êı£¬µ±Ç°µÄÉÌÒµÖ¸ÊıÎª".. PlayerShop:GetCommercialFactor() .."£¬ĞèÒªÖ§¸¶" .. szMoney .. "£¬ÄãÈ·¶¨ÒªĞŞ¸ÄÂğ£¿"
+		local szInfo = "ä¿®æ”¹åº—ç±»å‹éœ€è¦æ”¯ä»˜æ¬è¿è´¹ï¼š5#-02 Ã—å•†ä¸šæŒ‡æ•°ï¼Œå½“å‰çš„å•†ä¸šæŒ‡æ•°ä¸º".. PlayerShop:GetCommercialFactor() .."ï¼Œéœ€è¦æ”¯ä»˜" .. szMoney .. "ï¼Œä½ ç¡®å®šè¦ä¿®æ”¹å—ï¼Ÿ"
 
 		MessageBox_Self_Text:SetText(szInfo);
 	elseif( g_FrameInfo == FrameInfoList.DELETE_FRIEND_MESSAGE ) then
-		MessageBox_Self_DragTitle:SetText("#gFF0FA0É¾³ıÈ·ÈÏ");
+		MessageBox_Self_DragTitle:SetText("#gFF0FA0åˆ é™¤ç¡®è®¤");
 		local szInfo;
 		local relationtype = DataPool:GetFriend(g_currentList,g_currentIndex, "RELATION_TYPE" )
 		if relationtype == 7 then
-			szInfo = "#cFFF263ÄãÈ·¶¨ÒªÉ¾³ı".."#R"..DataPool:GetFriend(g_currentList,g_currentIndex, "NAME"  ) .."#cFFF263".."Âğ£¿É¾³ıºó½«²»ÄÜÓë¶Ô·½½øĞĞÈÎºÎÊ¦Í½Ïà¹ØµÄ»î¶¯¡£";
+			szInfo = "#cFFF263ä½ ç¡®å®šè¦åˆ é™¤".."#R"..DataPool:GetFriend(g_currentList,g_currentIndex, "NAME"  ) .."#cFFF263".."å—ï¼Ÿåˆ é™¤åå°†ä¸èƒ½ä¸å¯¹æ–¹è¿›è¡Œä»»ä½•å¸ˆå¾’ç›¸å…³çš„æ´»åŠ¨ã€‚";
 		else
-			szInfo = "#cFFF263ÄãÈ·¶¨ÒªÉ¾³ı".."#R"..DataPool:GetFriend(g_currentList,g_currentIndex, "NAME"  ) .."#cFFF263".."Âğ£¿";
+			szInfo = "#cFFF263ä½ ç¡®å®šè¦åˆ é™¤".."#R"..DataPool:GetFriend(g_currentList,g_currentIndex, "NAME"  ) .."#cFFF263".."å—ï¼Ÿ";
 		end
 		MessageBox_Self_Text:SetText(szInfo);
 	elseif( g_FrameInfo == FrameInfoList.CITY_CONFIRM ) then
 		MessageBox_Self_City_UpdateFrame();
 	elseif( g_FrameInfo == FrameInfoList.PET_SYNC_CONFIRM ) then
-		MessageBox_Self_DragTitle:SetText("#gFF0FA0ÕäÊŞºÏ³É");
-		local msg = "ÄãÈ·¶¨½«ÕâÁ½Ö»ÕäÊŞºÏ³ÉÎªÒ»Ö»Âğ?";
+		MessageBox_Self_DragTitle:SetText("#gFF0FA0çå…½åˆæˆ");
+		local msg = "ä½ ç¡®å®šå°†è¿™ä¸¤åªçå…½åˆæˆä¸ºä¸€åªå—?";
 		MessageBox_Self_Text:SetText(msg);
 	elseif( g_FrameInfo == FrameInfoList.EXCHANGE_BANGGONG ) then
-		MessageBox_Self_DragTitle:SetText("#gFF0FA0°ï¹±ÅÆ¶Ò»»");
+		MessageBox_Self_DragTitle:SetText("#gFF0FA0å¸®è´¡ç‰Œå…‘æ¢");
 	elseif( g_FrameInfo == FrameInfoList.PUT_GUILDMONEY ) then
 		MessageBox_Self_DragTitle:SetText("#{BPZJ_0801014_020}");
 	end
@@ -1671,25 +1671,25 @@ function MessageBox_Self_UpdateFrame()
 end
 
 --===============================================
--- µã»÷È·¶¨£¨IDOK£©
+-- ç‚¹å‡»ç¡®å®šï¼ˆIDOKï¼‰
 --===============================================
 function MessageBox_Self_OK_Clicked_Ex()
     AxTrace( 0, 0, "MessageBox_OnOKClick" )
-	if( g_FrameInfo == FrameInfoList.FREEFORALL ) then --Í¬Òâ¿ªÆô¸öÈË»ìÕ½
+	if( g_FrameInfo == FrameInfoList.FREEFORALL ) then --åŒæ„å¼€å¯ä¸ªäººæ··æˆ˜
         AxTrace( 0, 0, "FrameInfoList.FREEFORALL" )
         Player:ChangePVPMode( 1 );
     end
-    if( g_FrameInfo == FrameInfoList.FREEFORTEAM ) then --Í¬Òâ¿ªÆô¶ÓÎé»ìÕ½
+    if( g_FrameInfo == FrameInfoList.FREEFORTEAM ) then --åŒæ„å¼€å¯é˜Ÿä¼æ··æˆ˜
         AxTrace( 0, 0, "FrameInfoList.FREEFORTEAM" )
         Player:ChangePVPMode( 3 );
     end
-    if( g_FrameInfo == FrameInfoList.FREEFORGUILD ) then  --Í¬Òâ¿ªÆô°ïÅÉ»ìÕ½
+    if( g_FrameInfo == FrameInfoList.FREEFORGUILD ) then  --åŒæ„å¼€å¯å¸®æ´¾æ··æˆ˜
         AxTrace( 0, 0, "FrameInfoList.FREEFORGUILD" )
         Player:ChangePVPMode( 4 );
     end
-    if( g_FrameInfo == FrameInfoList.MAKESUREPVPCHALLENGE ) then  --È·ÈÏĞûÕ½
+    if( g_FrameInfo == FrameInfoList.MAKESUREPVPCHALLENGE ) then  --ç¡®è®¤å®£æˆ˜
         AxTrace( 0, 0, "FrameInfoList.MAKESUREPVPCHALLENGE" )
-        Player:PVP_Challenge( 2 );     --2ÎªĞûÕ½È·ÈÏ¶Ô»°¿òÈ·ÈÏ
+        Player:PVP_Challenge( 2 );     --2ä¸ºå®£æˆ˜ç¡®è®¤å¯¹è¯æ¡†ç¡®è®¤
     end
     
     if(g_FrameInfo == FrameInfoList.CHANGEPROTECTTIME)then
@@ -1839,13 +1839,13 @@ function MessageBox_Self_OK_Clicked_Ex()
 end
 
 function MessageBox_OnOKClick()
-	if( strMessageData == "EquipBind" ) then -- °ó¶¨
+	if( strMessageData == "EquipBind" ) then -- ç»‘å®š
 		EquipItem( tonumber( strMessageArgs ),tonumber(strMessageArgs_2) );
 	end
 	this:Hide();
 end
 --===============================================
--- µã»÷È·¶¨£¨IDOK£©
+-- ç‚¹å‡»ç¡®å®šï¼ˆIDOKï¼‰
 --===============================================
 function MessageBox_Self_OK_Clicked()
 	
@@ -1887,14 +1887,14 @@ function MessageBox_Self_OK_Clicked()
 		return
 	end
 
--- add:lby20080527È·ÈÏ4ÏâÇ¶ENCHASE_FOUR_CONFIRM
+-- add:lby20080527ç¡®è®¤4é•¶åµŒENCHASE_FOUR_CONFIRM
 	if g_FrameInfo == FrameInfoList.ENCHASE_FOUR_CONFIRM then
 		LifeAbility : Do_Enchase_Four( EnchaseData[1], EnchaseData[2],EnchaseData[3], EnchaseData[4])
 		this:Hide()
 		return
 	end
 
-	-- ³èÎïÑ§Ï°¼¼ÄÜÈ·ÈÏ£ºÁ½¸öÊÖ¶¯¼¼ÄÜÑ§Ï°
+	-- å® ç‰©å­¦ä¹ æŠ€èƒ½ç¡®è®¤ï¼šä¸¤ä¸ªæ‰‹åŠ¨æŠ€èƒ½å­¦ä¹ 
 	if g_FrameInfo == FrameInfoList.PET_SKILL_STUDY_CONFIRM then
 		Pet:ConfirmPetSkillStudy()
 		this:Hide()
@@ -1915,24 +1915,24 @@ function MessageBox_Self_OK_Clicked()
 	
 
 	if(g_FrameInfo == FrameInfoList.STALL_RENT_FRAME) then
-		--Í¨Öª·şÎñÆ÷¾ö¶¨¿ªÊ¼ÔÚÕâÀï°ÚÌ¯
+		--é€šçŸ¥æœåŠ¡å™¨å†³å®šå¼€å§‹åœ¨è¿™é‡Œæ‘†æ‘Š
 		StallSale:AgreeBeginStall();
 
 	elseif(g_FrameInfo == FrameInfoList.DISCARD_ITEM_FRAME) then
-		--Í¨ÖªÏú»ÙÎïÆ·
+		--é€šçŸ¥é”€æ¯ç‰©å“
 		DiscardItem();
 
 	elseif(g_FrameInfo == FrameInfoList.CANNT_DISCARD_ITEM) then
-		--ÈÎÎñÎïÆ·²»ÄÜÏú»Ù
+		--ä»»åŠ¡ç‰©å“ä¸èƒ½é”€æ¯
 		g_InitiativeClose = 1;
 		this:Hide();
 	
 	elseif(g_FrameInfo == FrameInfoList.LOCK_ITEM_CONFIRM_FRAME) then
-		--Í¨Öª¼ÓËøÎïÆ·
+		--é€šçŸ¥åŠ é”ç‰©å“
 		LockAfterConfirm();
 
 	elseif(g_FrameInfo == FrameInfoList.FRAME_AFFIRM_SHOW) then
-		--·ÅÆúÈÎÎñ
+		--æ”¾å¼ƒä»»åŠ¡
 		if(Quest_Number > -1) then
 			QuestFrameMissionAbnegate(Quest_Number);
 		end
@@ -1941,15 +1941,15 @@ function MessageBox_Self_OK_Clicked()
 
 
 	elseif(g_FrameInfo == FrameInfoList.GUILD_CREATE_CONFIRM) then
-		-- °ï»á³ÉÁ¢ĞèÍæ¼ÒÈ·ÈÏ
+		-- å¸®ä¼šæˆç«‹éœ€ç©å®¶ç¡®è®¤
 		Guild:CreateGuildConfirm(1);
 		this:Hide();
 	elseif(g_FrameInfo == FrameInfoList.GUILD_DESTORY_CONFIRM) then
-		-- °ï»á³ÉÁ¢ĞèÍæ¼ÒÈ·ÈÏ
+		-- å¸®ä¼šæˆç«‹éœ€ç©å®¶ç¡®è®¤
 		Guild:CreateGuildConfirm(2);
 		this:Hide();
 	elseif(g_FrameInfo == FrameInfoList.GUILD_QUIT_CONFIRM) then
-		-- °ï»á³ÉÁ¢ĞèÍæ¼ÒÈ·ÈÏ
+		-- å¸®ä¼šæˆç«‹éœ€ç©å®¶ç¡®è®¤
 		Guild:CreateGuildConfirm(3);
 		this:Hide();
 
@@ -1962,11 +1962,11 @@ function MessageBox_Self_OK_Clicked()
 		this:Hide();
 
 	elseif(g_FrameInfo == FrameInfoList.PS_RENAME_MESSAGE)  then
-		--Íæ¼ÒÉÌµê¸üÃûĞèÒªµÄ½ğÇ®Êı×Ö
+		--ç©å®¶å•†åº—æ›´åéœ€è¦çš„é‡‘é’±æ•°å­—
 		PlayerShop:Modify("name_ok",g_szData);
 
 	elseif(g_FrameInfo == FrameInfoList.PS_READ_MESSAGE)    then
-		--Íæ¼ÒÉÌµê¸ü¸ü¸ÄÉÌµêËµÃ÷ĞèÒªµÄ½ğÇ®Êı×Ö
+		--ç©å®¶å•†åº—æ›´æ›´æ”¹å•†åº—è¯´æ˜éœ€è¦çš„é‡‘é’±æ•°å­—
 		PlayerShop:Modify("ad_ok",g_szData);
 
 	elseif(g_FrameInfo == FrameInfoList.PS_ADD_BASE_MONEY)    then
@@ -1993,7 +1993,7 @@ function MessageBox_Self_OK_Clicked()
 		return;
 	end
 	
-	-- È·ÈÏ½âÉ¢¶ÓÎé			add by WTT	20090212
+	-- ç¡®è®¤è§£æ•£é˜Ÿä¼			add by WTT	20090212
 	if g_FrameInfo == FrameInfoList.DISMISS_TEAM then
 		Player:ConfirmDismissTeam()
 		this:Hide()
@@ -2017,7 +2017,7 @@ function MessageBox_Self_PetSyn_OK_Clicked()
 	g_CityData = {};
 end
 --===============================================
--- ·ÅÆú°ÚÌ¯(IDCONCEL)
+-- æ”¾å¼ƒæ‘†æ‘Š(IDCONCEL)
 --===============================================
 function MessageBox_Self_Cancel_Clicked(bClick)
 	if( 1 == bClick ) then
@@ -2028,11 +2028,11 @@ function MessageBox_Self_Cancel_Clicked(bClick)
     end
 
 	if ( g_FrameInfo == FrameInfoList.DISCARD_ITEM_FRAME ) then
-		--Í¨Öª½â³ıËø¶¨
+		--é€šçŸ¥è§£é™¤é”å®š
 		DiscardItemCancelLocked();
 
     elseif ( g_FrameInfo == FrameInfoList.LOCK_ITEM_CONFIRM_FRAME ) then
-		--Í¨Öª½â³ı¼ÓËø
+		--é€šçŸ¥è§£é™¤åŠ é”
 		CancelLockAfterConfirm();
 
 	elseif ( g_FrameInfo == FrameInfoList.GUILD_CREATE_CONFIRM ) then
@@ -2097,15 +2097,15 @@ end
 
 function MessageBox_Self_ShowDart()
 	if (Dart_Data[1] >=1 and Dart_Data[1] <= 5) then
-		MessageBox_Self_Text:SetText( "#{FBSJ_090421_2}" ); --ÉñÒàÊ¯
+		MessageBox_Self_Text:SetText( "#{FBSJ_090421_2}" ); --ç¥äº¦çŸ³
 	elseif (Dart_Data[1] == 6) then
-		MessageBox_Self_Text:SetText( "#{FBSJ_090421_1}" ); --ÍüÎŞÊ¯
+		MessageBox_Self_Text:SetText( "#{FBSJ_090421_1}" ); --å¿˜æ— çŸ³
 	elseif (Dart_Data[1] == 7) then
-		MessageBox_Self_Text:SetText( "#{FBSJ_090421_5}" ); --°Ù´ãÉñÓñ
+		MessageBox_Self_Text:SetText( "#{FBSJ_090421_5}" ); --ç™¾æ·¬ç¥ç‰
 	elseif (Dart_Data[1] == 8) then
-		MessageBox_Self_Text:SetText( "#{FBSJ_090421_4}" ); --Ç§´ãÉñÓñ
+		MessageBox_Self_Text:SetText( "#{FBSJ_090421_4}" ); --åƒæ·¬ç¥ç‰
 	elseif (Dart_Data[1] == 9) then
-		MessageBox_Self_Text:SetText( "#{FBSJ_090421_3}" ); --Ô¡»ğÊ¯
+		MessageBox_Self_Text:SetText( "#{FBSJ_090421_3}" ); --æµ´ç«çŸ³
 	end
 	
 	MessageBox_Self_DragTitle:SetText("");
@@ -2119,14 +2119,14 @@ end
 
 function MessageBox_Self_AdjustDart()
 	if (Dart_Data[1] >=1 and Dart_Data[1] <= 5) then
-		DataPool:DarkAdjustAttr(Dart_Data[2], Dart_Data[1], 1);	--ÉñÒàÊ¯
+		DataPool:DarkAdjustAttr(Dart_Data[2], Dart_Data[1], 1);	--ç¥äº¦çŸ³
 	elseif (Dart_Data[1] == 6) then
-		DataPool:DarkAdjustSkill(Dart_Data[2] , 1);		--ÍüÎŞÊ¯
+		DataPool:DarkAdjustSkill(Dart_Data[2] , 1);		--å¿˜æ— çŸ³
 	elseif (Dart_Data[1] == 7) then
-		DataPool:DarkResetQuality(Dart_Data[2], 1, 1);    --°Ù´ãÉñÓñ
+		DataPool:DarkResetQuality(Dart_Data[2], 1, 1);    --ç™¾æ·¬ç¥ç‰
 	elseif (Dart_Data[1] == 8) then
-		DataPool:DarkResetQuality(Dart_Data[2], 2, 1);    --Ç§´ãÉñÓñ
+		DataPool:DarkResetQuality(Dart_Data[2], 2, 1);    --åƒæ·¬ç¥ç‰
 	elseif (Dart_Data[1] == 9) then
-		DataPool:DarkReset(Dart_Data[2], 1);		--Ô¡»ğÊ¯
+		DataPool:DarkReset(Dart_Data[2], 1);		--æµ´ç«çŸ³
 	end
 end

@@ -1,43 +1,43 @@
---ËÕÖİNPC
---Öì·æ
---ÆÕÍ¨
+--è‹å·NPC
+--æœ±é”‹
+--æ™®é€š
 
 x001069_g_ScriptId	= 001069
 
---²Ù×÷¼¯
+--æ“ä½œé›†
 x001069_g_Key				=
 {
-	["inf"]	= 1000,	--ÖÆÔì½éÉÜ
-	["ln"]	= 1,		--ÎÒÒªÑ§Ï°¾«Á¶Åä·½ - ¾«Á¶ - ÖıÔì
-	["zh"]	= 2,		--ÎÒÒªÑ§Ï°¾«ÖÆÅä·½ - ¾«ÖÆ - ·ìÈÒ
-	["gn"]	= 3,		--ÎÒÒªÑ§Ï°¾«¹¤Åä·½ - ¾«¹¤ - ¹¤ÒÕ
-	["sh"]	= 4,		--¾«¹¤Åä·½ÉÌµê
+	["inf"]	= 1000,	--åˆ¶é€ ä»‹ç»
+	["ln"]	= 1,		--æˆ‘è¦å­¦ä¹ ç²¾ç‚¼é…æ–¹ - ç²¾ç‚¼ - é“¸é€ 
+	["zh"]	= 2,		--æˆ‘è¦å­¦ä¹ ç²¾åˆ¶é…æ–¹ - ç²¾åˆ¶ - ç¼çº«
+	["gn"]	= 3,		--æˆ‘è¦å­¦ä¹ ç²¾å·¥é…æ–¹ - ç²¾å·¥ - å·¥è‰º
+	["sh"]	= 4,		--ç²¾å·¥é…æ–¹å•†åº—
 }
 
---ÉÌµê±àºÅ
+--å•†åº—ç¼–å·
 x001069_g_shoptableindex=196
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x001069_OnDefaultEvent( sceneId, selfId, targetId )
 
 	BeginEvent( sceneId )
-		AddText( sceneId, "    Ê®ÄêÄ¥Ò»½££¬ÎÒÖì·æ×ö³öÀ´µÄ¶«Î÷ÊÇÌìÏÂ×îºÃµÄ£¡" )
+		AddText( sceneId, "    åå¹´ç£¨ä¸€å‰‘ï¼Œæˆ‘æœ±é”‹åšå‡ºæ¥çš„ä¸œè¥¿æ˜¯å¤©ä¸‹æœ€å¥½çš„ï¼" )
 		if GetLevel( sceneId, selfId ) >= 10 then
-			AddNumText( sceneId, x001069_g_ScriptId, "ÎÒÒªÑ§Ï°¾«Á¶£¨¶ÍÔì£©Åä·½", 2, x001069_g_Key["ln"] )
-			AddNumText( sceneId, x001069_g_ScriptId, "ÎÒÒªÑ§Ï°¾«ÖÆ£¨·ìÈÒ£©Åä·½", 2, x001069_g_Key["zh"] )
-			AddNumText( sceneId, x001069_g_ScriptId, "ÎÒÒªÑ§Ï°¾«¹¤£¨¹¤ÒÕ£©Åä·½", 2, x001069_g_Key["gn"] )
-			AddNumText( sceneId, x001069_g_ScriptId, "¹ºÂò¾«¹¤Åä·½", 7, x001069_g_Key["sh"])
+			AddNumText( sceneId, x001069_g_ScriptId, "æˆ‘è¦å­¦ä¹ ç²¾ç‚¼ï¼ˆé”»é€ ï¼‰é…æ–¹", 2, x001069_g_Key["ln"] )
+			AddNumText( sceneId, x001069_g_ScriptId, "æˆ‘è¦å­¦ä¹ ç²¾åˆ¶ï¼ˆç¼çº«ï¼‰é…æ–¹", 2, x001069_g_Key["zh"] )
+			AddNumText( sceneId, x001069_g_ScriptId, "æˆ‘è¦å­¦ä¹ ç²¾å·¥ï¼ˆå·¥è‰ºï¼‰é…æ–¹", 2, x001069_g_Key["gn"] )
+			AddNumText( sceneId, x001069_g_ScriptId, "è´­ä¹°ç²¾å·¥é…æ–¹", 7, x001069_g_Key["sh"])
 		end
-		AddNumText( sceneId, x001069_g_ScriptId, "ÖÆÔì½éÉÜ", 11, x001069_g_Key["inf"] )
+		AddNumText( sceneId, x001069_g_ScriptId, "åˆ¶é€ ä»‹ç»", 11, x001069_g_Key["inf"] )
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, selfId, targetId )
 	
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x001069_OnEventRequest( sceneId, selfId, targetId, eventId )
 
@@ -53,7 +53,7 @@ function x001069_OnEventRequest( sceneId, selfId, targetId, eventId )
 		for i = 644, 703 do
 			SetPrescription( sceneId, selfId, i, 1 )
 		end
-		x001069_MsgBox( sceneId, selfId, targetId, "    ¹§Ï²ÄãÒÑ¾­Ñ§»áÁËËùÓĞµÄ¾«Á¶Åä·½¡£" )
+		x001069_MsgBox( sceneId, selfId, targetId, "    æ­å–œä½ å·²ç»å­¦ä¼šäº†æ‰€æœ‰çš„ç²¾ç‚¼é…æ–¹ã€‚" )
 
 	elseif key == x001069_g_Key["zh"] then
 		if QueryHumanAbilityLevel( sceneId, selfId, 47 ) ~= 1 then
@@ -65,7 +65,7 @@ function x001069_OnEventRequest( sceneId, selfId, targetId, eventId )
 		for i = 804, 883 do
 			SetPrescription( sceneId, selfId, i, 1 )
 		end
-		x001069_MsgBox( sceneId, selfId, targetId, "    ¹§Ï²ÄãÒÑ¾­Ñ§»áÁËËùÓĞµÄ¾«ÖÆÅä·½¡£" )
+		x001069_MsgBox( sceneId, selfId, targetId, "    æ­å–œä½ å·²ç»å­¦ä¼šäº†æ‰€æœ‰çš„ç²¾åˆ¶é…æ–¹ã€‚" )
 	
 	elseif key == x001069_g_Key["gn"] then
 		if QueryHumanAbilityLevel( sceneId, selfId, 48 ) ~= 1 then
@@ -79,7 +79,7 @@ function x001069_OnEventRequest( sceneId, selfId, targetId, eventId )
 			SetPrescription( sceneId, selfId, i, 1 )
 		end
  		
-		x001069_MsgBox( sceneId, selfId, targetId, "    ¹§Ï²ÄãÒÑ¾­Ñ§»áÁËËùÓĞµÄ¾«¹¤Åä·½¡£" )
+		x001069_MsgBox( sceneId, selfId, targetId, "    æ­å–œä½ å·²ç»å­¦ä¼šäº†æ‰€æœ‰çš„ç²¾å·¥é…æ–¹ã€‚" )
 	elseif key == x001069_g_Key["sh"] then
 		DispatchShopItem( sceneId, selfId, targetId, x001069_g_shoptableindex )
 	end

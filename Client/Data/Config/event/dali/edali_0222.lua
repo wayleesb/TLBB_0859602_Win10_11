@@ -1,26 +1,26 @@
 --MisDescBegin
 x210222_g_ScriptId = 210222
-x210222_g_CopySceneName="ºó»¨Ô°"
+x210222_g_CopySceneName="åèŠ±å›­"
 x210222_g_CopySceneMap = "newbie_2.nav"
 x210222_g_CopySceneMonster = "newbie_2_monster.ini"
 x210222_g_MissionId = 702
 x210222_g_MissionIdPre = 701
-x210222_g_Name = "½Ù·Ë"
+x210222_g_Name = "åŠ«åŒª"
 x210222_g_IfMissionElite = 1
 x210222_g_MissionKind = 13
 x210222_g_MissionLevel = 7
-x210222_g_MissionName="ºó»¨Ô°"
-x210222_g_MissionInfo="#{event_dali_0032}"  --ÈÎÎñÃèÊö
-x210222_g_MissionTarget="½øÈëºó»¨Ô°¡£"	--ÈÎÎñÄ¿±ê
-x210222_g_ContinueInfo="½øÈëºó»¨Ô°"	--Î´Íê³ÉÈÎÎñµÄnpc¶Ô»°
-x210222_g_MissionComplete="  ÈÎÎñÍê³É"	--Íê³ÉÈÎÎñnpcËµ»°µÄ»°
-x210222_g_SignPost = {x = 275, z = 50, tip = "»ÆÃ¼É®"}
-x210222_g_PetDataID=558	--ÈÎÎñ³èÎïµÄ±àºÅ
-x210222_g_Param_huan		=0	--0ºÅ£ºÒÑ¾­Íê³ÉµÄ»·Êı£¬ÔÚ½ÓÊÕÈÎÎñÊ±ºò¸³Öµ
-x210222_g_IsMissionOkFail	=1	--1ºÅ£ºµ±Ç°ÈÎÎñÊÇ·ñÍê³É(0Î´Íê³É£»1Íê³É)
-x210222_g_Param_sceneid		=2	--2ºÅ£ºµ±Ç°¸±±¾ÈÎÎñµÄ³¡¾°ºÅ
-x210222_g_Param_guid		=3	--3ºÅ£º½Ó¸±±¾ÈÎÎñÊ±ºòµÄÍæ¼ÒGUID
-x210222_g_Param_killcount	=4	--4ºÅ£ºÉ±ËÀÈÎÎñ¹ÖµÄÊıÁ¿
-x210222_g_Param_time		=5	--5ºÅ£ºÍê³É¸±±¾ËùÓÃÊ±¼ä(µ¥Î»£ºÃë)
+x210222_g_MissionName="åèŠ±å›­"
+x210222_g_MissionInfo="#{event_dali_0032}"  --ä»»åŠ¡æè¿°
+x210222_g_MissionTarget="è¿›å…¥åèŠ±å›­ã€‚"	--ä»»åŠ¡ç›®æ ‡
+x210222_g_ContinueInfo="è¿›å…¥åèŠ±å›­"	--æœªå®Œæˆä»»åŠ¡çš„npcå¯¹è¯
+x210222_g_MissionComplete="  ä»»åŠ¡å®Œæˆ"	--å®Œæˆä»»åŠ¡npcè¯´è¯çš„è¯
+x210222_g_SignPost = {x = 275, z = 50, tip = "é»„çœ‰åƒ§"}
+x210222_g_PetDataID=558	--ä»»åŠ¡å® ç‰©çš„ç¼–å·
+x210222_g_Param_huan		=0	--0å·ï¼šå·²ç»å®Œæˆçš„ç¯æ•°ï¼Œåœ¨æ¥æ”¶ä»»åŠ¡æ—¶å€™èµ‹å€¼
+x210222_g_IsMissionOkFail	=1	--1å·ï¼šå½“å‰ä»»åŠ¡æ˜¯å¦å®Œæˆ(0æœªå®Œæˆï¼›1å®Œæˆ)
+x210222_g_Param_sceneid		=2	--2å·ï¼šå½“å‰å‰¯æœ¬ä»»åŠ¡çš„åœºæ™¯å·
+x210222_g_Param_guid		=3	--3å·ï¼šæ¥å‰¯æœ¬ä»»åŠ¡æ—¶å€™çš„ç©å®¶GUID
+x210222_g_Param_killcount	=4	--4å·ï¼šæ€æ­»ä»»åŠ¡æ€ªçš„æ•°é‡
+x210222_g_Param_time		=5	--5å·ï¼šå®Œæˆå‰¯æœ¬æ‰€ç”¨æ—¶é—´(å•ä½ï¼šç§’)
 x210222_g_MoneyBonus=2
 --MisDescEnd

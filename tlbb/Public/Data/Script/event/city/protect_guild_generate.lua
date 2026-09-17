@@ -1,6 +1,6 @@
---±£»¤°ïÅÉ
+--ä¿æŠ¤å¸®æ´¾
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x805041_g_ScriptId	= 805041
 
 x805041_g_scenePosInfoList = {
@@ -100,7 +100,7 @@ function x805041_CollectIndex( PosList, IndexList, IndexListSize )
     
 end
 
-function x805041_GenObj( sceneId, PosList )     --Éú³ÉÉ½¹í¡¢É½Ñı
+function x805041_GenObj( sceneId, PosList )     --ç”Ÿæˆå±±é¬¼ã€å±±å¦–
     local PosIndex = {}
     local IndexList = {}
     
@@ -139,7 +139,7 @@ function x805041_GenObj( sceneId, PosList )     --Éú³ÉÉ½¹í¡¢É½Ñı
 end
 
 --**********************************
---ĞÄÌøº¯Êı
+--å¿ƒè·³å‡½æ•°
 --**********************************
 function x805041_OnTimer( sceneId, actId, uTime )
 	local	beginTime = GetActivityParam( sceneId, actId, x805041_g_TimeIndex )
@@ -164,7 +164,7 @@ function x805041_OnTimer( sceneId, actId, uTime )
 	then
 		local cityName = LuaFnCityGetNameBySceneId( sceneId )
 		local cityDefaultName = LuaFnCityGetDefaultNameBySceneId( sceneId )
-		AddGlobalCountNews( sceneId, "@*;SrvMsg;SCA:#P"..cityDefaultName.."¸æ¼±£¡°ï»á³ÇÊĞ"..cityName.."Ö®ÖĞÍ»È»³öÏÖÒ»ÈºÉ½ÉñÉ½¹í£¬Çë¸÷Î»µÜĞÖËÙ»Ø°ï»áËàÇåÀ´·¸Ö®µĞ¡£" )
+		AddGlobalCountNews( sceneId, "@*;SrvMsg;SCA:#P"..cityDefaultName.."å‘Šæ€¥ï¼å¸®ä¼šåŸå¸‚"..cityName.."ä¹‹ä¸­çªç„¶å‡ºç°ä¸€ç¾¤å±±ç¥å±±é¬¼ï¼Œè¯·å„ä½å¼Ÿå…„é€Ÿå›å¸®ä¼šè‚ƒæ¸…æ¥çŠ¯ä¹‹æ•Œã€‚" )
 		
 		noticeTick = noticeTick + 1
 	end
@@ -172,7 +172,7 @@ function x805041_OnTimer( sceneId, actId, uTime )
 	SetActivityParam( sceneId, actId, x805041_g_MonsterGroup, monsterGroup)
 	SetActivityParam( sceneId, actId, x805041_g_NoticeTick, noticeTick)
 	
-	--¼ì²â»î¶¯ÊÇ·ñ¹ıÆÚ
+	--æ£€æµ‹æ´»åŠ¨æ˜¯å¦è¿‡æœŸ
 	if CheckActiviyValidity( sceneId, actId ) == 0 then
 		StopOneActivity( sceneId, actId )
 
@@ -181,11 +181,11 @@ function x805041_OnTimer( sceneId, actId, uTime )
 end
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú 19-145-40 18-149-48
+--äº‹ä»¶äº¤äº’å…¥å£ 19-145-40 18-149-48
 --**********************************
 function x805041_OnDefaultEvent( sceneId, actId, param1, param2, param3, param4, param5 )
 
-	--²ÎÊıËµÃ÷£º³¡¾°ID£¬»î¶¯ID£¬Ê±¼ä¼ä¸ô ¹«¸æ
+	--å‚æ•°è¯´æ˜ï¼šåœºæ™¯IDï¼Œæ´»åŠ¨IDï¼Œæ—¶é—´é—´éš” å…¬å‘Š
 	StartOneActivity( sceneId, actId, 1, param1 )
 	
 	SetActivityParam(sceneId, actId, x805041_g_TimeIndex,  		LuaFnGetCurrentTime())

@@ -1,34 +1,34 @@
---ĞÇËŞNPC
---Ê©È«
---ÆÕÍ¨
+--æ˜Ÿå®¿NPC
+--æ–½å…¨
+--æ™®é€š
 
 x016007_g_scriptId = 016007
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x016007_OnDefaultEvent( sceneId, selfId,targetId )
 	x016007_g_MenPai = GetMenPai(sceneId, selfId)
 	if x016007_g_MenPai == 5 then
 		BeginEvent(sceneId)
 			AddText(sceneId,"#{XXJZ_081103_01}")
-			AddNumText(sceneId, x016007_g_scriptId, "Ñ§Ï°¼¼ÄÜ",12,0)
+			AddNumText(sceneId, x016007_g_scriptId, "å­¦ä¹ æŠ€èƒ½",12,0)
 			
-			AddNumText(sceneId, x016007_g_scriptId, "¹ØÓÚĞÄ·¨µÄ½éÉÜ",11,10)
+			AddNumText(sceneId, x016007_g_scriptId, "å…³äºå¿ƒæ³•çš„ä»‹ç»",11,10)
 			--AddNumText(sceneId, x016007_g_scriptId, "#{JZBZ_081031_02}",11,11)
 			
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 	else
 			BeginEvent(sceneId)
-			AddText(sceneId,"ÎÒÊÇÊ©È«")
+			AddText(sceneId,"æˆ‘æ˜¯æ–½å…¨")
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 	end
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x016007_OnEventRequest( sceneId, selfId, targetId, eventId )
 

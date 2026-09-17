@@ -1,10 +1,10 @@
 
---µ±¶ÔÏóÏûÊ§µÄÊ±ºò£¬×Ô¶¯¹Ø±ÕÕâ¸ö´°¿Ú
+--å½“å¯¹è±¡æ¶ˆå¤±çš„æ—¶å€™ï¼Œè‡ªåŠ¨å…³é—­è¿™ä¸ªçª—å£
 local objCared = -1;
 
 local g_MenuType = "";
 
---Í¬ÃË³ÉÔ±²Ëµ¥
+--åŒç›Ÿæˆå‘˜èœå•
 local g_LeagueMemberID = -1;
 
 local currentSelectChannal = "1";
@@ -51,7 +51,7 @@ function ContexMenu_OnEvent(event)
 			this:TransAllWindowText();
 			ContexMenuFrame_Close();
 			this:Show();
-			--¹ØĞÄNPC
+			--å…³å¿ƒNPC
 			objCared = tonumber(arg1);
 			this:CareObject(objCared, 1, "ContexMenu");
 
@@ -63,9 +63,9 @@ function ContexMenu_OnEvent(event)
 				OtherPlayer_InviteToGuild : Enable()
 			end
 
-		--	local menuItem = "ÑûÇëÈë°ï    "
+		--	local menuItem = "é‚€è¯·å…¥å¸®    "
 		--	if Player : GetData( "GUILD" ) == -1 then
-		--		menuItem = "#cefefefÑûÇëÈë°ï    "
+		--		menuItem = "#cefefefé‚€è¯·å…¥å¸®    "
 		--	end
 
 		--	OtherPlayer_InviteToGuild : SetText( menuItem )
@@ -76,12 +76,12 @@ function ContexMenu_OnEvent(event)
 
 		-------------------------------------------------------------------------------------------------------------------------
 		--
-		--  Èç¹ûÊÇ¶Ó³¤´ò¿ªµÄ²Ëµ¥
+		--  å¦‚æœæ˜¯é˜Ÿé•¿æ‰“å¼€çš„èœå•
 		--
 		if(arg0 == "Team_Leader") then
 			ContexMenuFrame_Close();
 			this:Show();
-			--¹ØĞÄNPC
+			--å…³å¿ƒNPC
 			objCared = tonumber(arg1);
 			this:CareObject(objCared, 1, "ContexMenu");
 			
@@ -93,7 +93,7 @@ function ContexMenu_OnEvent(event)
 				ContexMenu_TeamLeader:Show();
 			end
 			
-			AxTrace(0, 0, "¶Ó³¤²Ëµ¥ menu enter: " ..tostring( arg4 ) );
+			AxTrace(0, 0, "é˜Ÿé•¿èœå• menu enter: " ..tostring( arg4 ) );
 			currentSelectMember = tonumber( arg4 );
 
 			return;
@@ -101,12 +101,12 @@ function ContexMenu_OnEvent(event)
 
 		--------------------------------------------------------------------------------------------------------------------------
 		--
-		-- Èç¹ûÊÇÆäËû¶ÓÔ±´ò¿ªµÄ²Ëµ¥.
+		-- å¦‚æœæ˜¯å…¶ä»–é˜Ÿå‘˜æ‰“å¼€çš„èœå•.
 		--
 		if(arg0 == "Team_Member") then
 			ContexMenuFrame_Close();
 			this:Show();
-			--¹ØĞÄNPC
+			--å…³å¿ƒNPC
 			objCared = tonumber(arg1);
 			this:CareObject(objCared, 1, "ContexMenu");
 
@@ -123,18 +123,18 @@ function ContexMenu_OnEvent(event)
 		
 		--------------------------------------------------------------------------------------------------------------------------
 		--
-		-- Èç¹ûÊÇ¶ÓÔ±³öÕ½ÕäÊŞµÄÓÒ¼üµ¯³ö²Ëµ¥
+		-- å¦‚æœæ˜¯é˜Ÿå‘˜å‡ºæˆ˜çå…½çš„å³é”®å¼¹å‡ºèœå•
 		-- add by WTT
 		--
 		if(arg0 == "Team_Member_Pet") then
 			ContexMenuFrame_Close();
 			this:Show();
 			
-			--¹ØĞÄNPC
+			--å…³å¿ƒNPC
 			objCared = tonumber(arg1);
 			this:CareObject(objCared, 1, "ContexMenu");			
 
-			-- ÉèÖÃÎ»ÖÃ²¢ÏÔÊ¾
+			-- è®¾ç½®ä½ç½®å¹¶æ˜¾ç¤º
 			ContexMenu_MemberPetMenu:SetPopMenuPos(arg2, arg3);
 			ContexMenu_MemberPetMenu:Show();
 			
@@ -143,12 +143,12 @@ function ContexMenu_OnEvent(event)
 
 		--------------------------------------------------------------------------------------------------------------------------
 		--
-		-- ´ò¿ª×Ô¼º¶ÓÎé½çÃæ
+		-- æ‰“å¼€è‡ªå·±é˜Ÿä¼ç•Œé¢
 		--
 		if(arg0 == "player") then
 			ContexMenuFrame_Close();
 			this:Show();
-			--¹ØĞÄNPC
+			--å…³å¿ƒNPC
 			objCared = tonumber(arg1);
 			this:CareObject(objCared, 1, "ContexMenu");
 			
@@ -157,10 +157,10 @@ function ContexMenu_OnEvent(event)
 				Myself_DisbondRide:Disable();
 			elseif( tonumber( horse ) == 1 ) then
 				Myself_DisbondRide:Enable();
-				Myself_DisbondRide:SetText("ÑûÇëÍ¬Æï");
+				Myself_DisbondRide:SetText("é‚€è¯·åŒéª‘");
 			else
 				Myself_DisbondRide:Enable();
-				Myself_DisbondRide:SetText("È¡ÏûÍ¬Æï");
+				Myself_DisbondRide:SetText("å–æ¶ˆåŒéª‘");
 			end
 			
 			local Level = Player:GetData( "LEVEL" );
@@ -178,12 +178,12 @@ function ContexMenu_OnEvent(event)
 		
 	  --------------------------------------------------------------------------------------------------------------------------
 		--
-		-- ×Ô¼ºÓĞ¶ÓÎé, Ö»´ò¿ª°ÚÌ¯°´Å¥½çÃæ
+		-- è‡ªå·±æœ‰é˜Ÿä¼, åªæ‰“å¼€æ‘†æ‘ŠæŒ‰é’®ç•Œé¢
 		--
 		if(arg0 == "player_in_team") then
 			ContexMenuFrame_Close();
 			this:Show();
-			--¹ØĞÄNPC
+			--å…³å¿ƒNPC
 			objCared = tonumber(arg1);
 			this:CareObject(objCared, 1, "ContexMenu");
 			local horse =  GetRideStatic( 1 );
@@ -191,10 +191,10 @@ function ContexMenu_OnEvent(event)
 				Myself_InTeam_DisbondRide:Disable();
 			elseif( tonumber( horse ) == 1 ) then
 				Myself_InTeam_DisbondRide:Enable();
-				Myself_InTeam_DisbondRide:SetText("ÑûÇëÍ¬Æï");
+				Myself_InTeam_DisbondRide:SetText("é‚€è¯·åŒéª‘");
 			else
 				Myself_InTeam_DisbondRide:Enable();
-				Myself_InTeam_DisbondRide:SetText("È¡ÏûÍ¬Æï");
+				Myself_InTeam_DisbondRide:SetText("å–æ¶ˆåŒéª‘");
 			end
 		
 			local Level = Player:GetData( "LEVEL" );
@@ -212,12 +212,12 @@ function ContexMenu_OnEvent(event)
 		
 		--------------------------------------------------------------------------------------------------------------------------
 		--
-		-- µã»÷ÆäËû¶ÓÓÑÄ£ĞÍ, µ¯³öµÄ¶Ô»°¿ò
+		-- ç‚¹å‡»å…¶ä»–é˜Ÿå‹æ¨¡å‹, å¼¹å‡ºçš„å¯¹è¯æ¡†
 		--
 		if(arg0 == "other_team_member") then
 			ContexMenuFrame_Close();
 			this:Show();
-			--¹ØĞÄNPC
+			--å…³å¿ƒNPC
 			objCared = tonumber(arg1);
 			this:CareObject(objCared, 1, "ContexMenu");
 
@@ -227,10 +227,10 @@ function ContexMenu_OnEvent(event)
 				ContexMenu_Model_Open_Other_Invite_Ride:Disable();
 			elseif( tonumber( horse ) == 1 ) then
 				ContexMenu_Model_Open_Other_Invite_Ride:Enable();
-				ContexMenu_Model_Open_Other_Invite_Ride:SetText("ÑûÇëÍ¬Æï");
+				ContexMenu_Model_Open_Other_Invite_Ride:SetText("é‚€è¯·åŒéª‘");
 			else
 				ContexMenu_Model_Open_Other_Invite_Ride:Enable();
-				ContexMenu_Model_Open_Other_Invite_Ride:SetText("È¡ÏûÍ¬Æï");
+				ContexMenu_Model_Open_Other_Invite_Ride:SetText("å–æ¶ˆåŒéª‘");
 			end
 			
 			if Player : GetData( "GUILD" ) == -1 then
@@ -246,12 +246,12 @@ function ContexMenu_OnEvent(event)
 		
 		--------------------------------------------------------------------------------------------------------------------------
 		--
-		-- µã»÷·Ç×é¶ÓÍæ¼Òµ¯³öÀ´µÄ½çÃæ
+		-- ç‚¹å‡»éç»„é˜Ÿç©å®¶å¼¹å‡ºæ¥çš„ç•Œé¢
 		--
 		if(arg0 == "other_not_team_member") then
 			ContexMenuFrame_Close();
 			this:Show();
-			--¹ØĞÄNPC
+			--å…³å¿ƒNPC
 			objCared = tonumber(arg1);
 			this:CareObject(objCared, 1, "ContexMenu");
 
@@ -262,10 +262,10 @@ function ContexMenu_OnEvent(event)
 				ContexMenu_Model_Open_Other_Not_teammer_Invite_Ride:Disable();
 			elseif( tonumber( horse ) == 1 ) then
 				ContexMenu_Model_Open_Other_Not_teammer_Invite_Ride:Enable();
-				ContexMenu_Model_Open_Other_Not_teammer_Invite_Ride:SetText("ÑûÇëÍ¬Æï");
+				ContexMenu_Model_Open_Other_Not_teammer_Invite_Ride:SetText("é‚€è¯·åŒéª‘");
 			else
 				ContexMenu_Model_Open_Other_Not_teammer_Invite_Ride:Enable();
-				ContexMenu_Model_Open_Other_Not_teammer_Invite_Ride:SetText("È¡ÏûÍ¬Æï");
+				ContexMenu_Model_Open_Other_Not_teammer_Invite_Ride:SetText("å–æ¶ˆåŒéª‘");
 			end
 			
 			if Player : GetData( "GUILD" ) == -1 then
@@ -281,12 +281,12 @@ function ContexMenu_OnEvent(event)
 		
 		--------------------------------------------------------------------------------------------------------------------------
 		--
-		-- ·Ç×é¶ÓÍæ¼Ò, µã»÷×é¶ÓÍæ¼Ò, µ¯³öµÄ²Ëµ¥
+		-- éç»„é˜Ÿç©å®¶, ç‚¹å‡»ç»„é˜Ÿç©å®¶, å¼¹å‡ºçš„èœå•
 		--
 		if(arg0 == "other_team_member_me_not_teamer") then
 			ContexMenuFrame_Close();
 			this:Show();
-			--¹ØĞÄNPC
+			--å…³å¿ƒNPC
 			objCared = tonumber(arg1);
 			this:CareObject(objCared, 1, "ContexMenu");
 			local horse =  GetRideStatic( 0 );
@@ -295,10 +295,10 @@ function ContexMenu_OnEvent(event)
 				ContexMenu_Model_Open_Other_teammer_me_Ride:Disable();
 			elseif( tonumber( horse ) == 1 ) then
 				ContexMenu_Model_Open_Other_teammer_me_Ride:Enable();
-				ContexMenu_Model_Open_Other_teammer_me_Ride:SetText("ÑûÇëÍ¬Æï");
+				ContexMenu_Model_Open_Other_teammer_me_Ride:SetText("é‚€è¯·åŒéª‘");
 			else
 				ContexMenu_Model_Open_Other_teammer_me_Ride:Enable();
-				ContexMenu_Model_Open_Other_teammer_me_Ride:SetText("È¡ÏûÍ¬Æï");
+				ContexMenu_Model_Open_Other_teammer_me_Ride:SetText("å–æ¶ˆåŒéª‘");
 			end
 			
 			if Player : GetData( "GUILD" ) == -1 then
@@ -313,12 +313,12 @@ function ContexMenu_OnEvent(event)
 		
 		--------------------------------------------------------------------------------------------------------------------------
 		--
-		-- µã»÷ÁÄÌìÀïµÄÈËÎïÃû, µ¯³öµÄ²Ëµ¥
+		-- ç‚¹å‡»èŠå¤©é‡Œçš„äººç‰©å, å¼¹å‡ºçš„èœå•
 		--		
 		if(arg0 == "chat_private") then
 			ContexMenu_HideAll();
 			this:Show();
-			--¹ØĞÄNPC
+			--å…³å¿ƒNPC
 			g_MenuType = arg1;
 			if(tonumber(arg4)==1)then
 				ContexMenu_ChatBoard:Show();
@@ -333,13 +333,13 @@ function ContexMenu_OnEvent(event)
 
 		--------------------------------------------------------------------------------------------------------------------------
 		--
-		-- µã»÷Õ÷ÓÑÍ¶Æ±ÈËºó , µ¯³öµÄ²Ëµ¥
+		-- ç‚¹å‡»å¾å‹æŠ•ç¥¨äººå , å¼¹å‡ºçš„èœå•
 		--
 		if(arg0 == "findfrind_vote") then
 			ContexMenu_HideAll();
 			this:Show();
 			g_MenuType = arg1;
-			g_Voteinfo_index = tonumber(arg4);   --ÏÖÔÚÊÇµÚ¼¸Ìõ
+			g_Voteinfo_index = tonumber(arg4);   --ç°åœ¨æ˜¯ç¬¬å‡ æ¡
 			ContexMenu_FindFriend_VoteInfo:Show();
 			ContexMenu_FindFriend_VoteInfo:SetPopMenuPos(arg2,arg3);
 
@@ -348,14 +348,14 @@ function ContexMenu_OnEvent(event)
 
 		--------------------------------------------------------------------------------------------------------------------------
 		--
-		-- µã»÷ºÃÓÑÁĞ±íÀí
+		-- ç‚¹å‡»å¥½å‹åˆ—è¡¨ç†
 		--
 		if( arg0 == "friendmenu" ) then
 			currentSelectChannal = arg2;
 			currentIndex = arg3;
 			ContexMenuFrame_Close();
 			this:Show();
-			--¹ØĞÄNPC
+			--å…³å¿ƒNPC
 			objCared = tonumber(arg1);
 			this:CareObject(objCared, 1, "ContexMenu");
 
@@ -374,7 +374,7 @@ function ContexMenu_OnEvent(event)
 
 --------------------------------------------------------------------------------------------------------------------------
 		--
-		-- µã»÷ºÃÓÑÁĞ±íÀí
+		-- ç‚¹å‡»å¥½å‹åˆ—è¡¨ç†
 		--
 		if( arg0 == "groupingmenu" ) then
 			AxTrace( 0,0, "show groping menu" );
@@ -382,7 +382,7 @@ function ContexMenu_OnEvent(event)
 			currentIndex = arg3;
 			ContexMenuFrame_Close();
 			this:Show();
-			--¹ØĞÄNPC
+			--å…³å¿ƒNPC
 			objCared = tonumber(arg1);
 			this:CareObject(objCared, 1, "ContexMenu");
 
@@ -392,12 +392,12 @@ function ContexMenu_OnEvent(event)
 		end
 --------------------------------------------------------------------------------------------------------------------------
 		--
-		-- µØÍ¼ÉÏ×Ô¼º³èÎïµÄ²Ëµ¥
+		-- åœ°å›¾ä¸Šè‡ªå·±å® ç‰©çš„èœå•
 		--
 		if( arg0 == "my_pet" ) then
 			ContexMenuFrame_Close();
 			this:Show();
-			--¹ØĞÄNPC
+			--å…³å¿ƒNPC
 			objCared = tonumber(arg1);
 			this:CareObject(objCared, 1, "ContexMenu");
 
@@ -409,7 +409,7 @@ function ContexMenu_OnEvent(event)
 		if( arg0 == "my_pet_from_petframe" ) then
 			ContexMenuFrame_Close();
 			this:Show();
-			--¹ØĞÄNPC
+			--å…³å¿ƒNPC
 			objCared = tonumber(arg1);
 			this:CareObject(objCared, 1, "ContexMenu");
 
@@ -419,12 +419,12 @@ function ContexMenu_OnEvent(event)
 		end
 --------------------------------------------------------------------------------------------------------------------------
 		--
-		-- µØÍ¼ÉÏÆäËû³èÎïµÄ²Ëµ¥
+		-- åœ°å›¾ä¸Šå…¶ä»–å® ç‰©çš„èœå•
 		--
 		if( arg0 == "other_pet" ) then
 			ContexMenuFrame_Close();
 			this:Show();
-			--¹ØĞÄNPC
+			--å…³å¿ƒNPC
 			objCared = tonumber(arg1);
 			this:CareObject(objCared, 1, "ContexMenu");
 
@@ -434,12 +434,12 @@ function ContexMenu_OnEvent(event)
 		end		
 --------------------------------------------------------------------------------------------------------------------------
 		--
-		-- pkÄ£Ê½²Ëµ¥
+		-- pkæ¨¡å¼èœå•
 		--
 		if( arg0 == "PKmode" ) then
 			ContexMenuFrame_Close();
 			this:Show();
-			--¹ØĞÄNPC
+			--å…³å¿ƒNPC
 			--objCared = tonumber(arg1);
 			--this:CareObject(objCared, 1, "ContexMenu");
 			if(tonumber(arg1)==0)then
@@ -455,7 +455,7 @@ function ContexMenu_OnEvent(event)
 		end
 --------------------------------------------------------------------------------------------------------------------------
 		--
-		-- °ï»á³ÉÔ±
+		-- å¸®ä¼šæˆå‘˜
 		--
 		if( arg0 == "GUILDLIST" ) then
 			currentGuildListIndex = arg2;
@@ -470,14 +470,14 @@ function ContexMenu_OnEvent(event)
 				return;		
 			end
 			
-			--¹ØĞÄNPC
+			--å…³å¿ƒNPC
 			objCared = tonumber(arg1);
 			this:CareObject(objCared, 1, "ContexMenu");
 
 			return;
 		end
 		
-		--Í¬ÃË³ÉÔ±
+		--åŒç›Ÿæˆå‘˜
 		if arg0 == "GuildLeagueMember" then
 				g_LeagueMemberID = tonumber(arg1);
 				ContexMenuFrame_Close();
@@ -486,23 +486,23 @@ function ContexMenu_OnEvent(event)
 				ContexMenu_GuildLeagueMember:SetPopMenuPos(arg2,arg3);			
 		end
 --------------------------------------------------------------------------------------------------------------------------
-		--µ¯³öÓÒ¼ü²Ëµ¥For"¹ÙÔ±ÁĞ±í"
+		--å¼¹å‡ºå³é”®èœå•For"å®˜å‘˜åˆ—è¡¨"
 		--add by xindefeng
 		if( arg0 == "OfficialPopMenu" ) then
 			currentGuildListIndex = arg2
-			local type = tonumber(arg5)--Ñ¡ÔñÀàĞÍ
-			if(type == 0)  then	--×Ô¼º
+			local type = tonumber(arg5)--é€‰æ‹©ç±»å‹
+			if(type == 0)  then	--è‡ªå·±
 				return;
-			elseif(type == 1) then	--ÔÚÏß
+			elseif(type == 1) then	--åœ¨çº¿
 				ContexMenuFrame_Close();
 				this:Show();
 				ContexMenu_OfficialPopMenu:Show();
 				ContexMenu_OfficialPopMenu:SetPopMenuPos(arg3,arg4);
-			elseif(type == 2) then	--²»ÔÚÏß
+			elseif(type == 2) then	--ä¸åœ¨çº¿
 				return
 			end
 			
-			--¹ØĞÄNPC
+			--å…³å¿ƒNPC
 			objCared = tonumber(arg1);
 			this:CareObject(objCared, 1, "ContexMenu")
 
@@ -514,11 +514,11 @@ function ContexMenu_OnEvent(event)
 		if(tonumber(arg0) ~= objCared) then
 			return;
 		end
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ı£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æœå’ŒNPCçš„è·ç¦»å¤§äºä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if(arg1=="destroy") then
 			ContexMenuFrame_Close();
 
-			--È¡Ïû¹ØĞÄ
+			--å–æ¶ˆå…³å¿ƒ
 			this:CareObject(objCared, 0, "ContexMenu");
 		end
 	elseif(event == "HIDE_CONTEXMENU_SPEAKER")then
@@ -543,63 +543,63 @@ function ContexMenu_HideAll()
 	Menu_PVPMode:ClosePopMenu();
 	Menu_PVPMode_Before21:ClosePopMenu();
 
-	-- Òş²ØÆäËûÍæ¼Ò
+	-- éšè—å…¶ä»–ç©å®¶
 	ContexMenu_OtherPlayer:ClosePopMenu();
 
-	-- Òş²Ønpc
+	-- éšè—npc
 	ContexMenu_NPC:ClosePopMenu();
 
-	-- Òş²Ø¶Ó³¤²Ëµ¥
+	-- éšè—é˜Ÿé•¿èœå•
 	ContexMenu_TeamLeader:ClosePopMenu();
 
-	-- Òş²Ø¶ÓÓÑ
+	-- éšè—é˜Ÿå‹
 	ContexMenu_TeamMember:ClosePopMenu();
 
-	-- Òş²Ø×Ô½¨¶ÓÎé²Ëµ¥
+	-- éšè—è‡ªå»ºé˜Ÿä¼èœå•
 	ContexMenu_Self:ClosePopMenu();
 	
-	-- Òş²Ø×Ô¼ºÒÑ¾­ÔÚ¶ÓÎéÖĞ, ´ò¿ª°ÚÌ¯²Ëµ¥
+	-- éšè—è‡ªå·±å·²ç»åœ¨é˜Ÿä¼ä¸­, æ‰“å¼€æ‘†æ‘Šèœå•
 	ContexMenu_Self_In_Team:ClosePopMenu();
 	
-	-- Òş²ØÆäËû, ÒÑ¾­×é¶ÓÍæ¼Ò²Ëµ¥.
+	-- éšè—å…¶ä»–, å·²ç»ç»„é˜Ÿç©å®¶èœå•.
 	ContexMenu_Model_Open_Other:ClosePopMenu();
 	
-	-- Òş²Ø·Ç×é¶ÓÍæ¼Ò²Ëµ¥
+	-- éšè—éç»„é˜Ÿç©å®¶èœå•
 	ContexMenu_Model_Open_Other_Not_teammer:ClosePopMenu();
 	
-	-- Òş²Ø·Ç×é¶ÓÍæ¼ÒÉêÇë²Ëµ¥
+	-- éšè—éç»„é˜Ÿç©å®¶ç”³è¯·èœå•
 	ContexMenu_Model_Open_Other_teammer_me_not_teammer:ClosePopMenu();
 	
-	-- Òş²ØÁÄÌì´°¿Ú²Ëµ¥
+	-- éšè—èŠå¤©çª—å£èœå•
 	ContexMenu_ChatBoard:ClosePopMenu();
 	
 	ContexMenu_FriendMenu:ClosePopMenu();
 	ContexMenu_EnmeyListMenu:ClosePopMenu();
 	
-	-- Òş²Ø×é¶Ó½çÃæÉÏµÄ¶ÓÓÑÕäÊŞ°´Å¥ÓÒ¼ü²Ëµ¥
+	-- éšè—ç»„é˜Ÿç•Œé¢ä¸Šçš„é˜Ÿå‹çå…½æŒ‰é’®å³é”®èœå•
 	ContexMenu_MemberPetMenu:ClosePopMenu();
 	
-	-- Òş²Ø×Ô¼º³èÎï´°¿Ú²Ëµ¥
+	-- éšè—è‡ªå·±å® ç‰©çª—å£èœå•
 	ContexMenu_MyPetMenu:ClosePopMenu();
 	
-	-- Òş²ØÆäËû³èÎï´°¿Ú²Ëµ¥
+	-- éšè—å…¶ä»–å® ç‰©çª—å£èœå•
 	ContexMenu_OtherPetMenu:ClosePopMenu();
 	
-	-- Òş²Ø×é¶Ó¸úËæ²Ëµ¥¡£
+	-- éšè—ç»„é˜Ÿè·Ÿéšèœå•ã€‚
 	ContexMenu_TeamFollowLeader:ClosePopMenu();
 	
-	-- Òş²Ø¶ÓÓÑ.
+	-- éšè—é˜Ÿå‹.
 	ContexMenu_TeamFollowMember:ClosePopMenu();
 	
 	ContexMenu_BlackListMenu:ClosePopMenu();
 
 	ContexMenu_GroupingMenu:ClosePopMenu();
-	--°ïÅÉ
+	--å¸®æ´¾
 	ContexMenu_GuildList:ClosePopMenu();
-	--Í¬ÃË³ÉÔ±
+	--åŒç›Ÿæˆå‘˜
 	ContexMenu_GuildLeagueMember:ClosePopMenu();
 		
-	--¹ÙÔ±ÁĞ±íÓÒ¼ü²Ëµ¥--add by xindefeng
+	--å®˜å‘˜åˆ—è¡¨å³é”®èœå•--add by xindefeng
 	ContexMenu_OfficialPopMenu:ClosePopMenu();
 		
 	--new
@@ -628,19 +628,19 @@ function ContexMenu_OtherPlayer_Clicked(itemname)
 	ContexMenuFrame_Close();
 end
 
---½»Ò×
+--äº¤æ˜“
 function ContexMenu_Exchange_Clicked()
 	Exchange:SendExchangeApply();
 	ContexMenuFrame_Close();
 end
 
---¸úËæ
+--è·Ÿéš
 function ContexMenu_OtherPlayer_Follow_Clicked()
 	Target:Follow();
 	ContexMenuFrame_Close();
 end
 
--- ÑûÇëÈë°ï
+-- é‚€è¯·å…¥å¸®
 function ContexMenu_InviteToGuild_Clicked()
 	if Player : GetData( "GUILD" ) == -1 then
 		return
@@ -650,7 +650,7 @@ function ContexMenu_InviteToGuild_Clicked()
 	ContexMenuFrame_Close()
 end
 
---ËÍÃµ¹å»¨
+--é€ç«ç‘°èŠ±
 function ContexMenu_GiveRose_Clicked()
 	 ContexMenuFrame_Clicked();
 	 
@@ -674,7 +674,7 @@ end
 
 --*******************************************************************************************************************************
 --
--- ÉêÇë¼ÓÈë¶ÓÎé
+-- ç”³è¯·åŠ å…¥é˜Ÿä¼
 --
 --*******************************************************************************************************************************
 function ContexMenu_OtherPlayer_Apply_Clicked()
@@ -691,7 +691,7 @@ end
 
 --*******************************************************************************************************************************
 --
--- Àë¿ª¶ÓÎé
+-- ç¦»å¼€é˜Ÿä¼
 --
 --*******************************************************************************************************************************
 function ContexMenu_LeaveTeam_Clicked()
@@ -701,19 +701,19 @@ end
 
 --*******************************************************************************************************************************
 --
--- ½âÉ¢¶ÓÎé
+-- è§£æ•£é˜Ÿä¼
 --
 --*******************************************************************************************************************************
 function ContexMenu_DismissTeam_Clicked()
 
-	Player:OpenDismissTeamMsgbox();			-- ´ò¿ª½âÉ¢¶ÓÎéµÄ¶ş´ÎÈ·ÈÏ´°¿Ú			add by WTT	20090218	
+	Player:OpenDismissTeamMsgbox();			-- æ‰“å¼€è§£æ•£é˜Ÿä¼çš„äºŒæ¬¡ç¡®è®¤çª—å£			add by WTT	20090218	
 	ContexMenuFrame_Close();
 end
 
 
 --*******************************************************************************************************************************
 --
--- Ìß³öµ±Ç°Ñ¡ÖĞµÄ¶ÓÔ±.
+-- è¸¢å‡ºå½“å‰é€‰ä¸­çš„é˜Ÿå‘˜.
 --
 --*******************************************************************************************************************************
 function ContexMenu_KickTeamMember_Clicked()
@@ -725,7 +725,7 @@ end
 
 --*******************************************************************************************************************************
 --
--- ×Ô¼º´´½¨¶ÓÎé
+-- è‡ªå·±åˆ›å»ºé˜Ÿä¼
 --
 --*******************************************************************************************************************************
 function ContexMenu_SelfCreateTeam_Clicked()
@@ -736,7 +736,7 @@ end
 
 --*******************************************************************************************************************************
 --
--- ÌáÉıÎª¶Ó³¤
+-- æå‡ä¸ºé˜Ÿé•¿
 --
 --*******************************************************************************************************************************
 function ContexMenu_AppointLeader_Clicked()
@@ -747,7 +747,7 @@ end
 
 --*******************************************************************************************************************************
 --
--- È¡Ïû¸úËæ
+-- å–æ¶ˆè·Ÿéš
 --
 --*******************************************************************************************************************************
 function ContexMenu_StopFollow_Clicked()
@@ -757,7 +757,7 @@ end
 
 --*******************************************************************************************************************************
 --
--- °ÚÌ¯
+-- æ‘†æ‘Š
 --
 --*******************************************************************************************************************************
 function ContexMenu_StallSale_Clicked()
@@ -767,7 +767,7 @@ end
 
 --*******************************************************************************************************************************
 --
--- Ë½ÁÄ
+-- ç§èŠ
 --
 --*******************************************************************************************************************************
 
@@ -837,12 +837,12 @@ function send_detail()
 	Target:SendAskDetail();
 	ContexMenuFrame_Close();
 	
-	--»º´æÖ÷Ä¿±êĞÅÏ¢
+	--ç¼“å­˜ä¸»ç›®æ ‡ä¿¡æ¯
 	CacheMainTarget();
 end
 --*******************************************************************************************************************************
 --
---ºÃÓÑ
+--å¥½å‹
 --*******************************************************************************************************************************
 function ContexMenu_OnDelFriend()
 	DataPool:AskDelFriend( tonumber( currentSelectChannal ), tonumber( currentIndex ) );
@@ -851,7 +851,7 @@ function ContexMenu_OnDelFriend()
 end
 
 function ContexMenu_OnSendMail()
-	AxTrace( 0,0, "·¢ËÍÓÊ¼ş" );
+	AxTrace( 0,0, "å‘é€é‚®ä»¶" );
 	local name =  DataPool:GetFriend( tonumber( currentSelectChannal ), tonumber( currentIndex ), "NAME" );
 	DataPool:OpenMail( name );
 	
@@ -908,7 +908,7 @@ function ContexMenu_ThrowList( nGroup )
 		AxTrace( 0,0,"add current friend name = "..name );
 		
 		if( tonumber( nGroup )  == 5 ) then
-		    PushDebugMessage("ÔİÊ±ÎŞ·¨¼ÓÈëºÚÃûµ¥");
+		    PushDebugMessage("æš‚æ—¶æ— æ³•åŠ å…¥é»‘åå•");
 		end
 	else
 		DataPool:ThrowToList( tonumber( currentSelectChannal ), tonumber( currentIndex ), tonumber( nGroup ) );
@@ -924,7 +924,7 @@ function ContexMenu_OnPrivate()
 	ContexMenuFrame_Close();
 end
 
-------ºÃÓÑ½çÃæÓëÁÄÌì°åÖĞÑ¡Ôñ¸ÃÍæ¼Ò-----
+------å¥½å‹ç•Œé¢ä¸èŠå¤©æ¿ä¸­é€‰æ‹©è¯¥ç©å®¶-----
 function ContexMenu_OnSelectThePlayer()
   local szName = Talk:HandleMenuAction("Name");
   if(nil == szName) then
@@ -939,7 +939,7 @@ function ContexMenu_OnSelectThePlayer()
 	ContexMenuFrame_Close();
 end
 
----°ïÅÉ¹ÜÀíÖĞÑ¡Ôñ¸ÃÍæ¼Ò----
+---å¸®æ´¾ç®¡ç†ä¸­é€‰æ‹©è¯¥ç©å®¶----
 function ContexMenu_GuildList_OnSelectThePlayer()
   local szName = Guild:GetMembersInfo(tonumber(currentGuildListIndex), "Name");
  
@@ -1009,9 +1009,9 @@ function ContexMenu_GuildList_OnSendMail()
 	ContexMenuFrame_Close();
 end
 
---Í¬ÃË³ÉÔ±°ï»áÏêÏ¸ĞÅÏ¢´¦Àí
+--åŒç›Ÿæˆå‘˜å¸®ä¼šè¯¦ç»†ä¿¡æ¯å¤„ç†
 function ContexMenu_GuildLeagueMember_DetailInfo_Clicked()
-	Guild:AskAnyGuildDetailInfo(g_LeagueMemberID) --²éÑ¯Ö¸¶¨ID°ï»áÏêÏ¸ĞÅÏ¢
+	Guild:AskAnyGuildDetailInfo(g_LeagueMemberID) --æŸ¥è¯¢æŒ‡å®šIDå¸®ä¼šè¯¦ç»†ä¿¡æ¯
 	Guild:CloseKickGuildBox()
 	
 	ContexMenuFrame_Close();
@@ -1129,7 +1129,7 @@ function ContexMenu_PVP_Duel_Clicked()
 	ContexMenuFrame_Close();
 end
 function ContexMenu_PVP_Challenge_Clicked()
-	Player:PVP_Challenge( 1 );     --1Îªµ¯³öĞûÕ½È·ÈÏ¶Ô»°¿ò
+	Player:PVP_Challenge( 1 );     --1ä¸ºå¼¹å‡ºå®£æˆ˜ç¡®è®¤å¯¹è¯æ¡†
 	ContexMenuFrame_Close();
 end
 
@@ -1146,7 +1146,7 @@ function ContexMenu_OnPrivate_FromInc()
 	ContexMenuFrame_Close();
 end
 
---add:lby20071207ÃÔÓ°¸ú×ÙÁÄÌìĞÅÏ¢ÖĞ²éÕÒ28818
+--add:lby20071207è¿·å½±è·Ÿè¸ªèŠå¤©ä¿¡æ¯ä¸­æŸ¥æ‰¾28818
 function ContexMenu_ChatBoard_LookPos_Clicked()
 	ContexMenuFrame_Clicked();
 	local szName = Talk:HandleMenuAction("Name");
@@ -1165,35 +1165,35 @@ function ContexMenu_ChatBoard_LookPos_Clicked()
 	ContexMenuFrame_Close();
 end
 
-----add:lby20071207ÃÔÓ°¸ú×Ù¹ØÏµĞÅÏ¢ÖĞ²éÕÒ28818
+----add:lby20071207è¿·å½±è·Ÿè¸ªå…³ç³»ä¿¡æ¯ä¸­æŸ¥æ‰¾28818
 function ContexMenu_OnFriendInfoEx()
 	DataPool:LookupOtherParticularInfo( Friend:GetCurrentTeam(), Friend:GetCurrentSelect() );
 	ContexMenuFrame_Close();
 end
 
---"¹ÙÔ±ÁĞ±í":·¢ËÍÓÊ¼ş--add by xindefeng
+--"å®˜å‘˜åˆ—è¡¨":å‘é€é‚®ä»¶--add by xindefeng
 function ContexMenu_OfficialPopMenu_SendMail_Clicked()
-	ContexMenuFrame_Close()	--¹Øµô²Ëµ¥
+	ContexMenuFrame_Close()	--å…³æ‰èœå•
 
-	local szName = Guild:GetAnyGuildMembersInfo(tonumber(currentGuildListIndex), "Name")	--»ñÈ¡¶Ô·½Ãû×Ö
+	local szName = Guild:GetAnyGuildMembersInfo(tonumber(currentGuildListIndex), "Name")	--è·å–å¯¹æ–¹åå­—
 	if(nil ~= szName) then
 		DataPool:OpenMail(szName)
 	end
 end
 
---"¹ÙÔ±ÁĞ±í":Ë½ÁÄ--add by xindefeng
+--"å®˜å‘˜åˆ—è¡¨":ç§èŠ--add by xindefeng
 function ContexMenu_OfficialPopMenu_PrivateTalk_Clicked()
-	ContexMenuFrame_Close()	--¹Øµô²Ëµ¥
+	ContexMenuFrame_Close()	--å…³æ‰èœå•
 	
-	local szName = Guild:GetAnyGuildMembersInfo(tonumber(currentGuildListIndex), "Name")	--»ñÈ¡¶Ô·½Ãû×Ö
+	local szName = Guild:GetAnyGuildMembersInfo(tonumber(currentGuildListIndex), "Name")	--è·å–å¯¹æ–¹åå­—
 	Talk:ContexMenuTalk(szName)
 end
 
---"¹ÙÔ±ÁĞ±í":²é¿´ÏêÏ¸--add by xindefeng
+--"å®˜å‘˜åˆ—è¡¨":æŸ¥çœ‹è¯¦ç»†--add by xindefeng
 function ContexMenu_OfficialPopMenu_CheckInfo_Clicked()
-	ContexMenuFrame_Close()	--¹Øµô²Ëµ¥
+	ContexMenuFrame_Close()	--å…³æ‰èœå•
 	
-	local szName = Guild:GetAnyGuildMembersInfo(tonumber(currentGuildListIndex), "Name")	--»ñÈ¡¶Ô·½Ãû×Ö
+	local szName = Guild:GetAnyGuildMembersInfo(tonumber(currentGuildListIndex), "Name")	--è·å–å¯¹æ–¹åå­—
 	if(nil ~= szName) then
 		if(Friend:IsPlayerIsFriend(szName) == 1) then	
 			local nGroup,nIndex;
@@ -1206,29 +1206,29 @@ function ContexMenu_OfficialPopMenu_CheckInfo_Clicked()
 	end	
 end
 
---"¹ÙÔ±ÁĞ±í":¼ÓÎªºÃÓÑ--add by xindefeng
+--"å®˜å‘˜åˆ—è¡¨":åŠ ä¸ºå¥½å‹--add by xindefeng
 function ContexMenu_OfficialPopMenu_AddFriend_Clicked()
-	ContexMenuFrame_Close()	--¹Øµô²Ëµ¥
+	ContexMenuFrame_Close()	--å…³æ‰èœå•
 		
-	local szName = Guild:GetAnyGuildMembersInfo(tonumber(currentGuildListIndex), "Name")	--»ñÈ¡¶Ô·½Ãû×Ö
-	DataPool:AddFriend(ContexMenu_GetCurrentFriendTeam(), szName)	--¼ÓÎªºÃÓÑ
+	local szName = Guild:GetAnyGuildMembersInfo(tonumber(currentGuildListIndex), "Name")	--è·å–å¯¹æ–¹åå­—
+	DataPool:AddFriend(ContexMenu_GetCurrentFriendTeam(), szName)	--åŠ ä¸ºå¥½å‹
 end
 
---"¹ÙÔ±ÁĞ±í":ÑûÇëÈë¶Ó--add by xindefeng
+--"å®˜å‘˜åˆ—è¡¨":é‚€è¯·å…¥é˜Ÿ--add by xindefeng
 function ContexMenu_OfficialPopMenu_Invite_Clicked()
-	ContexMenuFrame_Close()	--¹Øµô²Ëµ¥
+	ContexMenuFrame_Close()	--å…³æ‰èœå•
 	
-	local szName = Guild:GetAnyGuildMembersInfo(tonumber(currentGuildListIndex), "Name")	--»ñÈ¡¶Ô·½Ãû×Ö
+	local szName = Guild:GetAnyGuildMembersInfo(tonumber(currentGuildListIndex), "Name")	--è·å–å¯¹æ–¹åå­—
 	if(nil ~= szName) then
 		Target:SendTeamRequest(szName);
 	end	
 end
 
---"¹ÙÔ±ÁĞ±í":ÉêÇëÈë¶Ó--add by xindefeng
+--"å®˜å‘˜åˆ—è¡¨":ç”³è¯·å…¥é˜Ÿ--add by xindefeng
 function ContexMenu_OfficialPopMenu_Apply_Clicked()
-	ContexMenuFrame_Close()	--¹Øµô²Ëµ¥
+	ContexMenuFrame_Close()	--å…³æ‰èœå•
 	
-	local szName = Guild:GetAnyGuildMembersInfo(tonumber(currentGuildListIndex), "Name")	--»ñÈ¡¶Ô·½Ãû×Ö
+	local szName = Guild:GetAnyGuildMembersInfo(tonumber(currentGuildListIndex), "Name")	--è·å–å¯¹æ–¹åå­—
 	if(nil ~= szName) then
 		Target:SendTeamApply(szName)
 	end

@@ -23,7 +23,7 @@ function PK_message_PK_Input_ID_OK_Clicked()
     local ID = PK_Input_ID:GetText()
 
     if( "" == ID ) then
-        ShowNotice( "输入ID不能为空" )
+        ShowNotice( "杈撳叆ID涓嶈兘涓虹┖" )
     else
         DuelByGuid_OKClicked( ID )
         this:Hide();
@@ -35,7 +35,7 @@ function PK_message_PK_Input_Name_OK_Clicked()
     local Name = PK_Input_Name:GetText()
 
     if( "" == Name ) then    
-        ShowNotice( "输入名字不能为空" )        
+        ShowNotice( "杈撳叆鍚嶅瓧涓嶈兘涓虹┖" )        
     else
         DuelByName_OKClicked( Name )
         this:Hide();   

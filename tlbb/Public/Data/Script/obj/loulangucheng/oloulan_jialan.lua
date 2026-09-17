@@ -1,21 +1,21 @@
---Â¥À¼NPC....
---È¾·¢....
+--æ¥¼å…°NPC....
+--æŸ“å‘....
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x001132_g_scriptId = 001132
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x001132_g_eventList = { 801011 }
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x001132_OnDefaultEvent( sceneId, selfId,targetId )
 
 	BeginEvent(sceneId)
 		AddText(sceneId,"#{LLGC_20080324_14}")
-		AddNumText( sceneId, x001132_g_scriptId, "ĞŞ¸Ä·¢É«½éÉÜ", 11, 1 )
-		AddNumText(sceneId,x001132_g_scriptId,"ĞŞ¸Ä·¢É«",6,2)
+		AddNumText( sceneId, x001132_g_scriptId, "ä¿®æ”¹å‘è‰²ä»‹ç»", 11, 1 )
+		AddNumText(sceneId,x001132_g_scriptId,"ä¿®æ”¹å‘è‰²",6,2)
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 
@@ -34,7 +34,7 @@ function x001132_OnEventRequest( sceneId, selfId, targetId, eventId )
 
 	elseif NumText == 2 then
 
-		-- ĞŞ¸Ä·¢É«
+		-- ä¿®æ”¹å‘è‰²
 		CallScriptFunction( 801011, "OnEnumerate",sceneId, selfId, targetId )
 
 	end

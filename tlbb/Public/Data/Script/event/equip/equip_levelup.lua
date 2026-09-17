@@ -1,11 +1,11 @@
---×°±¸Éı¼¶
---½Å±¾ºÅ
+--è£…å¤‡å‡çº§
+--è„šæœ¬å·
 x809263_g_ScriptId = 809263
 
---×°±¸Éı¼¶UI 1003
+--è£…å¤‡å‡çº§UI 1003
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x809263_OnEnumerate( sceneId, selfId, targetId )
 
@@ -13,13 +13,13 @@ end
 
 
 --**********************************
---×°±¸Éı¼¶
+--è£…å¤‡å‡çº§
 --**********************************
 function x809263_EquipLevelUp( sceneId, selfId, nItemIndex1, nItemIndex2)
 	ret = LuaFnIsItemAvailable( sceneId, selfId, nItemIndex1 )
 	if ret ~= 1 then
 		BeginEvent(sceneId)
-		AddText(sceneId,"¸Ã×°±¸²»¿ÉÓÃ¡£");
+		AddText(sceneId,"è¯¥è£…å¤‡ä¸å¯ç”¨ã€‚");
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
@@ -28,7 +28,7 @@ function x809263_EquipLevelUp( sceneId, selfId, nItemIndex1, nItemIndex2)
 	ret = LuaFnIsItemAvailable( sceneId, selfId, nItemIndex2 )
 	if ret ~= 1 then
 		BeginEvent(sceneId)
-		AddText(sceneId,"Éı¼¶±¦Ê¯²»¿ÉÓÃ¡£");
+		AddText(sceneId,"å‡çº§å®çŸ³ä¸å¯ç”¨ã€‚");
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
@@ -37,7 +37,7 @@ function x809263_EquipLevelUp( sceneId, selfId, nItemIndex1, nItemIndex2)
 	equip_level = GetBagItemLevel( sceneId, selfId, nItemIndex1 )
 	if equip_level < 60 then
 		BeginEvent(sceneId)
-		AddText(sceneId,"60¼¶ÒÔÏÂµÄ×°±¸²»ÄÜÉı¼¶¡£");
+		AddText(sceneId,"60çº§ä»¥ä¸‹çš„è£…å¤‡ä¸èƒ½å‡çº§ã€‚");
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
@@ -45,9 +45,9 @@ function x809263_EquipLevelUp( sceneId, selfId, nItemIndex1, nItemIndex2)
 	
 	gem_index = LuaFnGetItemTableIndexByIndex( sceneId, selfId, nItemIndex2 )
 	if gem_index ~= 30900008 then
-		--Éı¼¶±¦Ê¯
+		--å‡çº§å®çŸ³
 		BeginEvent(sceneId)
-		AddText(sceneId,"×°±¸Éı¼¶ĞèÒªÉı¼¶±¦Ê¯¡£");
+		AddText(sceneId,"è£…å¤‡å‡çº§éœ€è¦å‡çº§å®çŸ³ã€‚");
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
@@ -57,7 +57,7 @@ function x809263_EquipLevelUp( sceneId, selfId, nItemIndex1, nItemIndex2)
 	need_money = GetBagItemLevel( sceneId, selfId, nItemIndex1 ) * 20000
 	if money < need_money then
 		BeginEvent(sceneId)
-		AddText(sceneId,"½ğÇ®²»×ã¡£");
+		AddText(sceneId,"é‡‘é’±ä¸è¶³ã€‚");
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
@@ -66,7 +66,7 @@ function x809263_EquipLevelUp( sceneId, selfId, nItemIndex1, nItemIndex2)
 	ret = GetGemEmbededCount( sceneId, selfId, nItemIndex1 )
 	if ret ~= 0 then
 		BeginEvent(sceneId)
-		AddText(sceneId,"ÏâÇ¶±¦Ê¯µÄ×°±¸²»ÄÜÉı¼¶¡£");
+		AddText(sceneId,"é•¶åµŒå®çŸ³çš„è£…å¤‡ä¸èƒ½å‡çº§ã€‚");
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
@@ -74,42 +74,42 @@ function x809263_EquipLevelUp( sceneId, selfId, nItemIndex1, nItemIndex2)
 
 	ret, arg0 = LuaFnEquipLevelUp( sceneId, selfId, nItemIndex1, nItemIndex2 )
 	
-	local text="×°±¸Éı¼¶³É¹¦£¡"
+	local text="è£…å¤‡å‡çº§æˆåŠŸï¼"
 	if ret == 0 then
 		LuaFnEraseItem( sceneId, selfId, nItemIndex2 )
 		LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, 49, 0);
 		LuaFnCostMoney( sceneId, selfId, need_money )
 		if arg0 == 0 then
-			text="¹§Ï²£¡£¡×°±¸³É¹¦Éı¼¶£¬¿ì¿´¿´Éı¼¶¹ıºóµÄĞÂ×°±¸°É¡£"
+			text="æ­å–œï¼ï¼è£…å¤‡æˆåŠŸå‡çº§ï¼Œå¿«çœ‹çœ‹å‡çº§è¿‡åçš„æ–°è£…å¤‡å§ã€‚"
 		else
-			text="¹§Ï²£¡×°±¸³É¹¦Éı¼¶£¬µ«ÊÇÇ¿»¯µÈ¼¶¼õ1£¬ÏÖÔÚ×°±¸µÄÇ¿»¯µÈ¼¶Îª"..tostring(arg0)
+			text="æ­å–œï¼è£…å¤‡æˆåŠŸå‡çº§ï¼Œä½†æ˜¯å¼ºåŒ–ç­‰çº§å‡1ï¼Œç°åœ¨è£…å¤‡çš„å¼ºåŒ–ç­‰çº§ä¸º"..tostring(arg0)
 		end
 	end
 
 	if ret == -1 then
-		text="Î´Öª´íÎó¡£"
+		text="æœªçŸ¥é”™è¯¯ã€‚"
 	end
 
 	if ret == -2 then
-		text="×°±¸²»¿ÉÓÃ¡£"
+		text="è£…å¤‡ä¸å¯ç”¨ã€‚"
 	end
 	
 	if ret == -3 then
-		text="Éı¼¶±¦Ê¯²»¿ÉÓÃ¡£"
+		text="å‡çº§å®çŸ³ä¸å¯ç”¨ã€‚"
 	end
 
 	if ret == -6 then
-		text="Î´Öª´íÎó¡£"
+		text="æœªçŸ¥é”™è¯¯ã€‚"
 	end
 
 	if ret == -7 then
 		LuaFnEraseItem( sceneId, selfId, nItemIndex2 )
 		LuaFnCostMoney( sceneId, selfId, need_money )
-		text="Ì«²»×ßÔËÁË£¬ÄúµÄ×°±¸Éı¼¶Ê§°ÜÁË£¡"
+		text="å¤ªä¸èµ°è¿äº†ï¼Œæ‚¨çš„è£…å¤‡å‡çº§å¤±è´¥äº†ï¼"
 	end
 
 	if ret == -8 then
-		text="¸Ã×°±¸ÎŞ·¨Éı¼¶¡£"
+		text="è¯¥è£…å¤‡æ— æ³•å‡çº§ã€‚"
 	end
 
 	BeginEvent(sceneId)

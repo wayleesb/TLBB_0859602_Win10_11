@@ -1,17 +1,17 @@
---±¦ÊéÇÔÔô
+--å®ä¹¦çªƒè´¼
 
 x807003_g_scriptId=807003
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x807003_OnDefaultEvent( sceneId, selfId, targetId )
 
-	--ÅĞ¶ÏÊÇ·ñÄÜ¹»¼¤»î¸ÃnpcµÄÌõ¼ş
+	--åˆ¤æ–­æ˜¯å¦èƒ½å¤Ÿæ¿€æ´»è¯¥npcçš„æ¡ä»¶
 	
 	local npcLevel = GetCharacterLevel(sceneId, targetId)
 
-	--È¡µÃÍæ¼Ò¸½½üµÄ¶ÓÓÑÊıÁ¿£¨°üÀ¨×Ô¼º£©
+	--å–å¾—ç©å®¶é™„è¿‘çš„é˜Ÿå‹æ•°é‡ï¼ˆåŒ…æ‹¬è‡ªå·±ï¼‰
 	local nearteammembercount = GetNearTeamCount( sceneId, selfId )
 	if  nearteammembercount < 3 then	
 		BeginEvent(sceneId)
@@ -40,8 +40,8 @@ function x807003_OnDefaultEvent( sceneId, selfId, targetId )
 		return
 	end
 	
-	--¼¤»înpc
-	--ÉèÖÃ¶Ô¹ÖÎªµĞ¶ÔµÄ Ä¿Ç°ÊÇ28ºÅÊÇµĞ¶ÔµÄ£¬Èç¹ûÓĞÈË¸Ä±äÁËÏàÓ¦µÄÊÆÁ¦ÉùÍûÄÇÎÒ¾Í²ÒÁË£¡£¡:-(((
+	--æ¿€æ´»npc
+	--è®¾ç½®å¯¹æ€ªä¸ºæ•Œå¯¹çš„ ç›®å‰æ˜¯28å·æ˜¯æ•Œå¯¹çš„ï¼Œå¦‚æœæœ‰äººæ”¹å˜äº†ç›¸åº”çš„åŠ¿åŠ›å£°æœ›é‚£æˆ‘å°±æƒ¨äº†ï¼ï¼:-(((
 	SetUnitReputationID(sceneId, selfId, targetId, 28)
 
 end

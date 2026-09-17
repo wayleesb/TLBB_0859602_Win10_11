@@ -1,13 +1,13 @@
 local PS_BUTTON_NUM = 20;
 local PS_BUTTON = {};
 
--- ÏÂÁĞÁ½¸öÖµĞèÒª±£³ÖÍ¬²½£¨ÎïÆ·ID¡¢ÎïÆ·Î»ÖÃ£©
+-- ä¸‹åˆ—ä¸¤ä¸ªå€¼éœ€è¦ä¿æŒåŒæ­¥ï¼ˆç‰©å“IDã€ç‰©å“ä½ç½®ï¼‰
 local g_nCurSelectItemID = -1;
 local g_nCurSelectItem = -1;
 local g_nCurStallIndex = -1;
 local g_StallNum = 0;
 
---±êÖ¾µ±Ç°ÊÇÕäÊŞ½çÃæ»¹ÊÇÎïÆ·½çÃæ
+--æ ‡å¿—å½“å‰æ˜¯çå…½ç•Œé¢è¿˜æ˜¯ç‰©å“ç•Œé¢
 local STALL_NONE = 0
 local STALL_ITEM = 1;
 local STALL_PET  = 2;
@@ -82,7 +82,7 @@ function PS_Shop_OnEvent(event)
 		objCared = PlayerShop:GetNpcId();
 		this:CareObject(objCared, 1, "PS_Shop");	
 		
-		--ÇĞ»»ÊÇÕäÊŞ»¹ÊÇÎïÆ·
+		--åˆ‡æ¢æ˜¯çå…½è¿˜æ˜¯ç‰©å“
 		if( tonumber(arg1) == 1 ) then
 			g_CurStallObj = STALL_ITEM;
 			PS_Shop_PetList:Hide();
@@ -116,19 +116,19 @@ function PS_Shop_OnEvent(event)
 		if(tonumber(arg0) ~= objCared) then
 			return;
 		end
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ı£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æœå’ŒNPCçš„è·ç¦»å¤§äºä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if(arg1 == "distance" and tonumber(arg2)>MAX_OBJ_DISTANCE or arg1=="destroy") then
 			g_InitiativeClose = 1;
 			this:Hide();
 
-			--È¡Ïû¹ØĞÄ
+			--å–æ¶ˆå…³å¿ƒ
 			this:CareObject(objCared, 0, "PS_Shop");
 		end	
 	
 	elseif( event == "PS_CLOSE_ALL_SHOP" )    then
 		
 		this:Hide();
-		--È¡Ïû¹ØĞÄ
+		--å–æ¶ˆå…³å¿ƒ
 		this:CareObject(objCared, 0, "PS_Shop");
 	
 	end
@@ -140,23 +140,23 @@ end
 --===============================================
 function PS_Shop_UpdateFrame()
 	
-	--Í¨ÖªC ++
+	--é€šçŸ¥C ++
 	PlayerShop:SetCurSelectPage("other",g_nCurStallIndex-1);
 	
-	--µêÖ÷	--¸ÄÎª³¬Á´½Ó by wangdw 2008.05.27
+	--åº—ä¸»	--æ”¹ä¸ºè¶…é“¾æ¥ by wangdw 2008.05.27
 	local szName = PlayerShop:GetShopInfo("other","ownername");
-	PS_Shop_Master_Text:SetChatString("#YµêÖ÷:#{_INFOUSR" .. szName .. "}");
-	--PS_Shop_Master_Text:SetText("#YµêÖ÷:#{_INFOUSR" .. szName .. "}");
-	--µêÖ÷ID
+	PS_Shop_Master_Text:SetChatString("#Yåº—ä¸»:#{_INFOUSR" .. szName .. "}");
+	--PS_Shop_Master_Text:SetText("#Yåº—ä¸»:#{_INFOUSR" .. szName .. "}");
+	--åº—ä¸»ID
 	local szID = PlayerShop:GetShopInfo("other","ownerid");
 	PS_Shop_ID_Text:SetText("ID:" .. szID);
 	
-	--µêÃû
+	--åº—å
 	local szShopName = PlayerShop:GetShopInfo("other","shopname");
-	PS_Shop_Name_Text:SetText("µêÆÌÃû:" .. szShopName);
+	PS_Shop_Name_Text:SetText("åº—é“ºå:" .. szShopName);
 	PS_Shop_DragTitle:SetText("#gFF0FA0" ..szShopName);
 
-	--½çÃæ¿Ø¼şµÄÒ»Ğ©¸üĞÂ
+	--ç•Œé¢æ§ä»¶çš„ä¸€äº›æ›´æ–°
 	if( g_nCurStallIndex == 1 )  then
 		PS_Shop_Last:Disable();
 	else
@@ -170,16 +170,16 @@ function PS_Shop_UpdateFrame()
 	PS_Shop_PageNum:SetText( tostring(g_nCurStallIndex).."/".. tostring(g_StallNum));
 
 
-	--ÌáÊ¾Õâ¸ö¹ñÌ¨µ±Ç°µÄ×´Ì¬ÊÇOpen»¹ÊÇClose
+	--æç¤ºè¿™ä¸ªæŸœå°å½“å‰çš„çŠ¶æ€æ˜¯Openè¿˜æ˜¯Close
 	g_bCurStallOpen = PlayerShop:IsOpenStall("other",g_nCurStallIndex -1);
 	
 	if (g_bCurStallOpen == 2)  then 
-		PS_Shop_State:SetText("#G¿ªÕÅ");
+		PS_Shop_State:SetText("#Gå¼€å¼ ");
 	else
-		PS_Shop_State:SetText("#R´òìÈ");
+		PS_Shop_State:SetText("#Ræ‰“çƒŠ");
 	end
 
-	--ÄÜ¹»µã»÷µÄ1234567890
+	--èƒ½å¤Ÿç‚¹å‡»çš„1234567890
 	for i=1 ,PS_STALL_NUM  do
 		PS_STALL_BOTTON[i]:Disable();
 	end
@@ -194,9 +194,9 @@ function PS_Shop_UpdateFrame()
 		PS_Shop_UpdatePet();
 	end
 	
-	--ÏÔÊ¾Ñ¡ÖĞÄÚÈİµÄ¼Û¸ñ
+	--æ˜¾ç¤ºé€‰ä¸­å†…å®¹çš„ä»·æ ¼
 	if( g_CurStallObj == STALL_ITEM )then
-		--ÎïÆ·
+		--ç‰©å“
 		local nMoney = PlayerShop:GetObjPrice("other","item");
 		PS_Shop_TargetItem_Money:SetProperty("MoneyNumber", tostring(nMoney));
 		
@@ -208,7 +208,7 @@ function PS_Shop_UpdateFrame()
 		PS_Shop_Item_Num:SetText(szNum);
 		
 	else
-		--ÕäÊŞ
+		--çå…½
 		local nMoney = PlayerShop:GetObjPrice("other","pet");
 		PS_Shop_TargetItem_Money:SetProperty("MoneyNumber", tostring(nMoney));
 		
@@ -248,7 +248,7 @@ end
 --===============================================
 function PS_Shop_UpdateItem()
 	
-	--×¢Òâµ±Ç°»æÖÆµÄÊÇµÚg_nCurStallIndex¸ö¹ñÌ¨ÉÏµÄÎïÆ·
+	--æ³¨æ„å½“å‰ç»˜åˆ¶çš„æ˜¯ç¬¬g_nCurStallIndexä¸ªæŸœå°ä¸Šçš„ç‰©å“
 	g_nCurSelectItem = PlayerShop:GetSelectIndex("other");
 
 	for i=1, PS_BUTTON_NUM    do
@@ -274,7 +274,7 @@ function PS_Shop_UpdateItem()
 end
 
 --===============================================
--- Ñ¡ÔñÕäÊŞÁĞ±í
+-- é€‰æ‹©çå…½åˆ—è¡¨
 --===============================================
 function PS_Shop_PetList_Selected()
 
@@ -284,17 +284,17 @@ function PS_Shop_PetList_Selected()
 		return;
 	end
 	
-	--Í¨ÖªC£«£«
+	--é€šçŸ¥Cï¼‹ï¼‹
 	PlayerShop:SetCurSelectPetIndex("other",g_nCurStallIndex-1,g_PetIndex[nIndex]);
 	--PS_Shop_UpdateFrame();
 	
-	--Í¨Öª½çÃæË¢ĞÂ"Ãû³Æ"ºÍ"¼Û¸ñ"
-	-- ÏÔÊ¾ÏÖÔÚµÄÑ¡ÖĞµÄÎïÆ·»òÕßÊÇÕäÊŞµÄ¼Û¸ñ
-		--ÕäÊŞ
+	--é€šçŸ¥ç•Œé¢åˆ·æ–°"åç§°"å’Œ"ä»·æ ¼"
+	-- æ˜¾ç¤ºç°åœ¨çš„é€‰ä¸­çš„ç‰©å“æˆ–è€…æ˜¯çå…½çš„ä»·æ ¼
+		--çå…½
 	local nMoney = PlayerShop:GetObjPrice("other","pet");
-	--¼Û¸ñ
+	--ä»·æ ¼
 	PS_Shop_TargetItem_Money:SetProperty("MoneyNumber", tostring(nMoney));
-	--Ãû³Æ
+	--åç§°
 	local szPetName = PlayerShop:GetObjName("other","pet");
 	PS_Shop_TargetItem_Name:SetText(szPetName);
 		
@@ -302,7 +302,7 @@ function PS_Shop_PetList_Selected()
 end
 
 --===============================================
--- µã»÷¹ºÂò
+-- ç‚¹å‡»è´­ä¹°
 --===============================================
 function PS_Shop_BuyClick()
 	if( g_CurStallObj == STALL_ITEM )  then
@@ -312,7 +312,7 @@ function PS_Shop_BuyClick()
 		local nIndex = PS_Shop_PetList:GetFirstSelectItem();
 		
 		if( nIndex == -1 )  then 
-			PushDebugMessage("ÇëÏÈÑ¡ÖĞÒ»¸öÕäÊŞ¡£");
+			PushDebugMessage("è¯·å…ˆé€‰ä¸­ä¸€ä¸ªçå…½ã€‚");
 			return;
 		end
 		
@@ -322,20 +322,20 @@ function PS_Shop_BuyClick()
 end
 
 --===============================================
--- µã»÷Àë¿ª
+-- ç‚¹å‡»ç¦»å¼€
 --===============================================
 function PS_Shop_ExitClick()
 	this:Hide()
-	--È¡Ïû¹ØĞÄ
+	--å–æ¶ˆå…³å¿ƒ
 	this:CareObject(objCared, 0, "PS_Shop");
 	
-	--¹Ø±ÕÕäÊŞÁĞ±í½çÃæ
+	--å…³é—­çå…½åˆ—è¡¨ç•Œé¢
 	PlayerShop:CloseShop("other");
 
 end
 
 --===============================================
--- ÉÏÒ»¼ä
+-- ä¸Šä¸€é—´
 --===============================================
 function PS_Shop_Last_Click()
 	if(g_nCurStallIndex == 1) then
@@ -344,7 +344,7 @@ function PS_Shop_Last_Click()
 	
 	g_nCurStallIndex = g_nCurStallIndex - 1;
 
-	--Ïò·şÎñÆ÷ÇëÇóÊı¾İ
+	--å‘æœåŠ¡å™¨è¯·æ±‚æ•°æ®
 	PS_Shop_Last:Disable();	
 	PS_Shop_Next:Disable();
 	local i;
@@ -357,7 +357,7 @@ function PS_Shop_Last_Click()
 end
 
 --===============================================
--- ÏÂÒ»¼ä
+-- ä¸‹ä¸€é—´
 --===============================================
 function PS_Shop_Next_Click()
 	if(g_nCurStallIndex == g_StallNum) then
@@ -366,7 +366,7 @@ function PS_Shop_Next_Click()
 	
 	g_nCurStallIndex = g_nCurStallIndex + 1;
 
-	--Ïò·şÎñÆ÷ÇëÇóÊı¾İ
+	--å‘æœåŠ¡å™¨è¯·æ±‚æ•°æ®
 	PS_Shop_Last:Disable();	
 	PS_Shop_Next:Disable();
 	local i;
@@ -384,7 +384,7 @@ function PS_Shop_Page_Click(nIndex)
 
 	g_nCurStallIndex = nIndex;
 
-	--Ïò·şÎñÆ÷ÇëÇóÊı¾İ
+	--å‘æœåŠ¡å™¨è¯·æ±‚æ•°æ®
 	PS_Shop_Last:Disable();	
 	PS_Shop_Next:Disable();
 	local i;

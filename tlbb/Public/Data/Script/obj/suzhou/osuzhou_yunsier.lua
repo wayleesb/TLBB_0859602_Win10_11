@@ -1,47 +1,47 @@
---ÔÆË¼¶ù
+--äº‘æ€å„¿
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x001083_g_scriptId = 001083
 
---ÉÌµê±àºÅ
+--å•†åº—ç¼–å·
 x001083_g_shoptableindex=102
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
-x001083_g_eventList={400918, 400963}	--	È¥ĞşÎäµº¡¢È¥Ê¥ÊŞÉ½}	
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
+x001083_g_eventList={400918, 400963}	--	å»ç„æ­¦å²›ã€å»åœ£å…½å±±}	
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x001083_UpdateEventList( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
 	local  PlayerName=GetName(sceneId,selfId)
 	AddText(sceneId,"#{YXZ_80917_01}")
 	
-	--AddNumText( sceneId, x001083_g_scriptId, "Ãâ·ÑÎŞµĞ", 6, 10 )	--È¥³ıÃâ·ÑÎŞµĞ¹¦ÄÜ--del by Heanqi
+	--AddNumText( sceneId, x001083_g_scriptId, "å…è´¹æ— æ•Œ", 6, 10 )	--å»é™¤å…è´¹æ— æ•ŒåŠŸèƒ½--del by Heanqi
 	
 	for i, eventId in x001083_g_eventList do
 		CallScriptFunction( eventId, "OnEnumerate",sceneId, selfId, targetId )
 		
 	end
-	AddNumText(sceneId,x001083_g_scriptId,"¹ºÂò³èÎï¼¼ÄÜÊé",7,2)
---	AddNumText(sceneId,x001083_g_scriptId,"²éÑ¯ÕäÊŞ³É³¤ÂÊ",6,3)
---	AddNumText(sceneId,x001083_g_scriptId,"ÁéÊŞµ¤ºÏ³É",6,4)
+	AddNumText(sceneId,x001083_g_scriptId,"è´­ä¹°å® ç‰©æŠ€èƒ½ä¹¦",7,2)
+--	AddNumText(sceneId,x001083_g_scriptId,"æŸ¥è¯¢çå…½æˆé•¿ç‡",6,3)
+--	AddNumText(sceneId,x001083_g_scriptId,"çµå…½ä¸¹åˆæˆ",6,4)
 	AddNumText(sceneId,x001083_g_scriptId,"#{XXWD_8916_07}",11,5)
---	AddNumText(sceneId,x001083_g_scriptId,"ÁéÊŞµ¤ºÏ³É½éÉÜ",11,6)
---	AddNumText(sceneId,x001083_g_scriptId,"ÈçºÎ¸øÕäÊŞ¿ìËÙÉı¼¶",11,7)
+--	AddNumText(sceneId,x001083_g_scriptId,"çµå…½ä¸¹åˆæˆä»‹ç»",11,6)
+--	AddNumText(sceneId,x001083_g_scriptId,"å¦‚ä½•ç»™çå…½å¿«é€Ÿå‡çº§",11,7)
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 end
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x001083_OnDefaultEvent( sceneId, selfId,targetId )
 	x001083_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x001083_OnEventRequest( sceneId, selfId, targetId, eventId )
 	for i, findId in x001083_g_eventList do
@@ -55,21 +55,21 @@ function x001083_OnEventRequest( sceneId, selfId, targetId, eventId )
 		DispatchShopItem( sceneId, selfId,targetId, x001083_g_shoptableindex )
 --	elseif GetNumText() == 3 then
 --		BeginEvent( sceneId )
---		AddText( sceneId, "  ²éÑ¯ÕäÊŞµÄ³É³¤ÂÊ£¬²éÑ¯Ò»´ÎĞèÒªÊÕÈ¡#{_MONEY100}µÄ·ÑÓÃ¡£" )
---		AddNumText( sceneId, x001083_g_scriptId, "È·¶¨", -1, 4 )
+--		AddText( sceneId, "  æŸ¥è¯¢çå…½çš„æˆé•¿ç‡ï¼ŒæŸ¥è¯¢ä¸€æ¬¡éœ€è¦æ”¶å–#{_MONEY100}çš„è´¹ç”¨ã€‚" )
+--		AddNumText( sceneId, x001083_g_scriptId, "ç¡®å®š", -1, 4 )
 --		EndEvent( sceneId )
 --		DispatchEventList( sceneId, selfId, targetId )
 --	elseif GetNumText() == 4 then
 --		BeginUICommand( sceneId )
 --			UICommand_AddInt( sceneId, targetId )
---			UICommand_AddInt( sceneId, 6 )				--ÕäÊŞ²éÑ¯·ÖÖ§
+--			UICommand_AddInt( sceneId, 6 )				--çå…½æŸ¥è¯¢åˆ†æ”¯
 --		EndUICommand( sceneId )
---		DispatchUICommand( sceneId, selfId, 3 )	--µ÷ÓÃÕäÊŞ½çÃæ
-	elseif GetNumText() == 4 then --ÁéÊŞµ¤ºÏ³É
+--		DispatchUICommand( sceneId, selfId, 3 )	--è°ƒç”¨çå…½ç•Œé¢
+	elseif GetNumText() == 4 then --çµå…½ä¸¹åˆæˆ
 --		BeginUICommand( sceneId )
 --			UICommand_AddInt( sceneId, targetId )
 --		EndUICommand( sceneId )
---		DispatchUICommand( sceneId, selfId, 19824 )	--µ÷ÓÃÁéÊŞµ¤ºÏ³É½çÃæ
+--		DispatchUICommand( sceneId, selfId, 19824 )	--è°ƒç”¨çµå…½ä¸¹åˆæˆç•Œé¢
 	elseif GetNumText() == 5 then
 		BeginEvent( sceneId )
 		AddText( sceneId, "#{XXWD_8916_08}" )
@@ -88,7 +88,7 @@ function x001083_OnEventRequest( sceneId, selfId, targetId, eventId )
 	end
 	if GetNumText() == 10 then
 	    if eventId == x001083_g_scriptId then	
-			--LuaFnSendSpecificImpactToUnit( sceneId, selfId, selfId, selfId, 50, 0 )	--È¥³ıÃâ·ÑÎŞµĞ¹¦ÄÜ--del by Heanqi
+			--LuaFnSendSpecificImpactToUnit( sceneId, selfId, selfId, selfId, 50, 0 )	--å»é™¤å…è´¹æ— æ•ŒåŠŸèƒ½--del by Heanqi
 			return
 		end
 	end
@@ -96,7 +96,7 @@ function x001083_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x001083_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x001083_g_eventList do
@@ -111,10 +111,10 @@ function x001083_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x001083_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
-	--¾Ü¾øÖ®ºó£¬Òª·µ»ØNPCµÄÊÂ¼şÁĞ±í
+	--æ‹’ç»ä¹‹åï¼Œè¦è¿”å›NPCçš„äº‹ä»¶åˆ—è¡¨
 	for i, findId in x001083_g_eventList do
 		if missionScriptId == findId then
 			x001083_UpdateEventList( sceneId, selfId, targetId )
@@ -124,7 +124,7 @@ function x001083_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¼ÌĞø£¨ÒÑ¾­½ÓÁËÈÎÎñ£©
+--ç»§ç»­ï¼ˆå·²ç»æ¥äº†ä»»åŠ¡ï¼‰
 --**********************************
 function x001083_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x001083_g_eventList do
@@ -136,7 +136,7 @@ function x001083_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---Ìá½»ÒÑ×öÍêµÄÈÎÎñ
+--æäº¤å·²åšå®Œçš„ä»»åŠ¡
 --**********************************
 function x001083_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, selectRadioId )
 	for i, findId in x001083_g_eventList do
@@ -148,15 +148,15 @@ function x001083_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 end
 
 --**********************************
---ËÀÍöÊÂ¼ş
+--æ­»äº¡äº‹ä»¶
 --**********************************
 function x001083_OnDie( sceneId, selfId, killerId )
 end
 
 --**********************************
---Ìá½»ÕäÊŞ
+--æäº¤çå…½
 --**********************************
 function x001083_OnMissionCheck( sceneId, selfId, npcid, scriptId, index1, index2, index3, indexpet )
---×¢Òâ£¬ÕâÀïÕâÑùĞ´Ê¡ÂÔÁËÔÚeventlistÖĞËÑË÷scriptIdÕâÒ»²¿·Ö£¬¿ÉÄÜ»áÓĞÎÊÌâ
+--æ³¨æ„ï¼Œè¿™é‡Œè¿™æ ·å†™çœç•¥äº†åœ¨eventlistä¸­æœç´¢scriptIdè¿™ä¸€éƒ¨åˆ†ï¼Œå¯èƒ½ä¼šæœ‰é—®é¢˜
 			CallScriptFunction( scriptId, "OnMissionCheck", sceneId, selfId, npcid, scriptId, index1, index2, index3, indexpet )
 end

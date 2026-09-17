@@ -1,7 +1,7 @@
---»î¶¯¡ª¡ª
---Ê¥µ®½ÚÔªµ©»î¶¯-ÊÕ¼¯ÃÅÅÉµÀ¾ß»»½±Àø
+--æ´»åŠ¨â€”â€”
+--åœ£è¯èŠ‚å…ƒæ—¦æ´»åŠ¨-æ”¶é›†é—¨æ´¾é“å…·æ¢å¥–åŠ±
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x808071_g_ScriptId = 808071
 
 x808071_g_UICommand = 1999986
@@ -9,21 +9,21 @@ x808071_g_UICommand = 1999986
 x808071_g_BufferId = 8057
 
 x808071_g_GetXingYunDataParameter = {
-	                 1,              --ÊÇ·ñÓĞ×Ê¸ñ²Î¼Ó³é½±
-	                 2,              --ÊÇ·ñÓĞ×Ê¸ñ²Î¼Ó·ÉÁú³é½± 
-	                 3,              --·ÉÁú½±Àø
-	                 4,              --½±Àø1
-	                 5,              --½±Àø2
-	                 6,              --½±Àø3
+	                 1,              --æ˜¯å¦æœ‰èµ„æ ¼å‚åŠ æŠ½å¥–
+	                 2,              --æ˜¯å¦æœ‰èµ„æ ¼å‚åŠ é£é¾™æŠ½å¥– 
+	                 3,              --é£é¾™å¥–åŠ±
+	                 4,              --å¥–åŠ±1
+	                 5,              --å¥–åŠ±2
+	                 6,              --å¥–åŠ±3
 }
 
 x808071_g_DragonItem = {
-	                 20310103,              --´ó·ç×¦
-	                 20310104,              --´ó·çÒí 
-	                 20310105,              --´ó·çÑÀ
+	                 20310103,              --å¤§é£çˆª
+	                 20310104,              --å¤§é£ç¿¼ 
+	                 20310105,              --å¤§é£ç‰™
 }
 
---½±Àø¾­Ñé±í
+--å¥–åŠ±ç»éªŒè¡¨
 x808071_g_Exp = {
 
 	[20]=1274,[21]=1354,[22]=1434,[23]=1514,[24]=1594,
@@ -58,15 +58,15 @@ x808071_g_Exp = {
 			
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x808071_OnDefaultEvent( sceneId, selfId, targetId )
 
 	local NumText = GetNumText()
 
-	if NumText == 111 then  --²Î¼Ó³é½±
+	if NumText == 111 then  --å‚åŠ æŠ½å¥–
 	   x808071_JoinCampaign( sceneId, selfId, targetId )
-	elseif NumText == 112 then  --Áì½±
+	elseif NumText == 112 then  --é¢†å¥–
 	   x808071_CheckTime( sceneId, selfId )
 
 	   if(x808071_GetXingYunData( sceneId, selfId,x808071_g_GetXingYunDataParameter[1]) ~= 3
@@ -85,13 +85,13 @@ function x808071_OnDefaultEvent( sceneId, selfId, targetId )
 --	    local getgiftcount = x808071_GetGiftCount(sceneId, selfId) + 1
 --	    local str
 --	    if getgiftcount > 6 then
---	       str = "Äú½ñÌìµÄ¶Ò»»»ú»áÒÑ¾­È«²¿Ê¹ÓÃÍêÁË£¬ÇëÄúÃ÷ÌìÔÙÀ´¡££¨½ÚÈÕÆÚ¼äÃ¿ÈÕÓĞ6´Î¶Ò»»»ú»á£©"
+--	       str = "æ‚¨ä»Šå¤©çš„å…‘æ¢æœºä¼šå·²ç»å…¨éƒ¨ä½¿ç”¨å®Œäº†ï¼Œè¯·æ‚¨æ˜å¤©å†æ¥ã€‚ï¼ˆèŠ‚æ—¥æœŸé—´æ¯æ—¥æœ‰6æ¬¡å…‘æ¢æœºä¼šï¼‰"
 --	    else
---	       str = format("ÄúÈ·¶¨Ê¹ÓÃ9´óÃÅÅÉµÄ½ÚÈÕºØÌû½øĞĞ½ñÈÕµÚ%d´Î¶Ò»»Âğ£¿£¨½ÚÈÕÆÚ¼äÃ¿ÈÕÓĞ6´Î¶Ò»»»ú»á¡££©", getgiftcount);
+--	       str = format("æ‚¨ç¡®å®šä½¿ç”¨9å¤§é—¨æ´¾çš„èŠ‚æ—¥è´ºå¸–è¿›è¡Œä»Šæ—¥ç¬¬%dæ¬¡å…‘æ¢å—ï¼Ÿï¼ˆèŠ‚æ—¥æœŸé—´æ¯æ—¥æœ‰6æ¬¡å…‘æ¢æœºä¼šã€‚ï¼‰", getgiftcount);
 --			end
 --			AddText(sceneId, str);
---			AddNumText(sceneId, x808071_g_ScriptId,"È·¶¨", 8, 113);
---			AddNumText(sceneId, x808071_g_ScriptId,"È¡Ïû", 8, 114);
+--			AddNumText(sceneId, x808071_g_ScriptId,"ç¡®å®š", 8, 113);
+--			AddNumText(sceneId, x808071_g_ScriptId,"å–æ¶ˆ", 8, 114);
 --		EndEvent(sceneId)
 --		DispatchEventList(sceneId,selfId,targetId)
 	elseif NumText == 113 then
@@ -104,32 +104,32 @@ function x808071_OnDefaultEvent( sceneId, selfId, targetId )
 		if(x808071_GetXingYunData( sceneId, selfId,x808071_g_GetXingYunDataParameter[2]) == 0) then
 			return
 		end
-	  --¼ì²âÊÇ·ñ³é¹ı½±
+	  --æ£€æµ‹æ˜¯å¦æŠ½è¿‡å¥–
 	  if(x808071_GetXingYunData( sceneId, selfId,x808071_g_GetXingYunDataParameter[2]) == 2) then
 	    return
 	  end
 	  local DragonOdds = random(1,150)
   
 	  BeginEvent( sceneId )
-	  if(DragonOdds == 150) then  --³éÖĞ·ÉÁú
+	  if(DragonOdds == 150) then  --æŠ½ä¸­é£é¾™
 	     local PlayerName = GetName(sceneId,selfId)
 	     AddText( sceneId, "#{XYLP_20071222_16}" )
-	     --¹öÆÁ¹«¸æ
+	     --æ»šå±å…¬å‘Š
 	     local msg = format("@*;SrvMsg;SCA:#{XYLP_20071222_17}#{_INFOUSR%s}#{XYLP_20071222_18}",PlayerName)
 		   AddGlobalCountNews( sceneId, msg )
-		   --¸øÓë·ÉÁú²¢ÉèÖÃÎŞ·¨ÔÙ´Î³éÈ¡
+		   --ç»™ä¸é£é¾™å¹¶è®¾ç½®æ— æ³•å†æ¬¡æŠ½å–
 		   x808071_SetXingYunData(sceneId,selfId,-1,2,1,-1,-1,-1)
-		   --³éÈ¡·ÉÁúÍ³¼ÆÈÕÖ¾
+		   --æŠ½å–é£é¾™ç»Ÿè®¡æ—¥å¿—
 		   LuaFnAuditLuckyTurnTableDragon(sceneId, selfId, 6, 0);
 	  else
 	     AddText( sceneId, "#{XYLP_20071222_15}" )
-	     --¹Ø±Õ·ÉÁú°´Å¥
+	     --å…³é—­é£é¾™æŒ‰é’®
 		   x808071_SetXingYunData(sceneId,selfId,-1,0,-1,-1,-1,-1)
 	  end
 		EndEvent( sceneId )
 		DispatchEventList(sceneId,selfId,targetId)
-	elseif NumText == 115 then  --ÁìÈ¡·ÉÁú
-	  --Ã»ÓĞ½±Àø¿ÉÒÔÁìÈ¡
+	elseif NumText == 115 then  --é¢†å–é£é¾™
+	  --æ²¡æœ‰å¥–åŠ±å¯ä»¥é¢†å–
 	  if(x808071_GetXingYunData( sceneId, selfId,x808071_g_GetXingYunDataParameter[3]) ~= 1) then
 	    BeginEvent(sceneId)
 			  AddText( sceneId, "#{XYLP_20071222_19}" )
@@ -137,65 +137,65 @@ function x808071_OnDefaultEvent( sceneId, selfId, targetId )
 		  DispatchEventList(sceneId,selfId,targetId)
 	    return
 	  end
-	  --¼ì²â±³°üÊÇ·ñÓĞµØ·½....
+	  --æ£€æµ‹èƒŒåŒ…æ˜¯å¦æœ‰åœ°æ–¹....
 	  if LuaFnGetPropertyBagSpace( sceneId, selfId ) < 1 then
 		  BeginEvent(sceneId)
-			  AddText( sceneId, "ÄãµÄ±³°ü¿Õ¼ä²»×ã£¬ÎŞ·¨ÁìÈ¡½±Àø¡£" )
+			  AddText( sceneId, "ä½ çš„èƒŒåŒ…ç©ºé—´ä¸è¶³ï¼Œæ— æ³•é¢†å–å¥–åŠ±ã€‚" )
 		  EndEvent(sceneId)
 		  DispatchMissionTips(sceneId,selfId)
 		  return
 	  end
-	  x808071_GetItem(sceneId,selfId,7,targetId)  --·ÉÁú
-		--¹Ø±Õ³é·ÉÁúÑ¡Ïî£¬²¢Çå¿Õ·ÉÁú
+	  x808071_GetItem(sceneId,selfId,7,targetId)  --é£é¾™
+		--å…³é—­æŠ½é£é¾™é€‰é¡¹ï¼Œå¹¶æ¸…ç©ºé£é¾™
 	  x808071_SetXingYunData(sceneId,selfId,-1,0,0,-1,-1,-1)
-  elseif NumText == 116 then  --¶Ò»»·ÉÁú
+  elseif NumText == 116 then  --å…‘æ¢é£é¾™
     x808071_SwitchDragon( sceneId, selfId,targetId)  
 	end
 	
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x808071_OnEnumerate( sceneId, selfId, targetId )
-	AddNumText(sceneId, x808071_g_ScriptId, "ĞÒÔË¿ì»îÈı", 6, 111 )
-	AddNumText(sceneId, x808071_g_ScriptId, "ÁìÈ¡ĞÒÔË¿ì»îÈı½±Àø", 6, 112 )
-	AddNumText(sceneId, x808071_g_ScriptId, "ĞÒÔË¿ì»îÈı³é½±ËµÃ÷", 11, 113 )
+	AddNumText(sceneId, x808071_g_ScriptId, "å¹¸è¿å¿«æ´»ä¸‰", 6, 111 )
+	AddNumText(sceneId, x808071_g_ScriptId, "é¢†å–å¹¸è¿å¿«æ´»ä¸‰å¥–åŠ±", 6, 112 )
+	AddNumText(sceneId, x808071_g_ScriptId, "å¹¸è¿å¿«æ´»ä¸‰æŠ½å¥–è¯´æ˜", 11, 113 )
 
 	if(x808071_GetXingYunData( sceneId, selfId,x808071_g_GetXingYunDataParameter[2]) ~= 0) then
-	    AddNumText(sceneId, x808071_g_ScriptId,"¿ì»îÈı£º·ÉÁú£¡", 6, 114);
-  		AddNumText(sceneId, x808071_g_ScriptId,"ÁìÈ¡·ÉÁú", 6, 115);
+	    AddNumText(sceneId, x808071_g_ScriptId,"å¿«æ´»ä¸‰ï¼šé£é¾™ï¼", 6, 114);
+  		AddNumText(sceneId, x808071_g_ScriptId,"é¢†å–é£é¾™", 6, 115);
 	end
 	
-	AddNumText(sceneId, x808071_g_ScriptId, "¶Ò»»·ÉÁú", 6, 116 )
+	AddNumText(sceneId, x808071_g_ScriptId, "å…‘æ¢é£é¾™", 6, 116 )
 end
 
 --**********************************
---²Î¼Ó»î¶¯
+--å‚åŠ æ´»åŠ¨
 --**********************************
 function x808071_JoinCampaign( sceneId, selfId, targetId )
 
-  --Èç¹ûÍæ¼ÒµÈ¼¶Ğ¡ÓÚ20²»ÄÜ²Î¼Ó³é½±
+  --å¦‚æœç©å®¶ç­‰çº§å°äº20ä¸èƒ½å‚åŠ æŠ½å¥–
 	if	GetLevel( sceneId, selfId) < 20 then
 		BeginEvent(sceneId)
-			AddText( sceneId, "ÄãµÄµÈ¼¶²»×ã20¼¶£¬»¹²»ÄÜ²Î¼Ó¡°ĞÒÔË¿ì»îÈı¡±µÄ³é½±»î¶¯ÄØ£¡" )
+			AddText( sceneId, "ä½ çš„ç­‰çº§ä¸è¶³20çº§ï¼Œè¿˜ä¸èƒ½å‚åŠ â€œå¹¸è¿å¿«æ´»ä¸‰â€çš„æŠ½å¥–æ´»åŠ¨å‘¢ï¼" )
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 		return
 	end
 	
-	--Èç¹ûÍæ¼Ò½ñÌì²Î¼Ó¹ı³é½±
+	--å¦‚æœç©å®¶ä»Šå¤©å‚åŠ è¿‡æŠ½å¥–
 	x808071_CheckTime(sceneId, selfId)
 	local join = x808071_GetXingYunData( sceneId, selfId,x808071_g_GetXingYunDataParameter[1] )
 	if(join ~= 0) then
 	  BeginEvent(sceneId)
-			AddText( sceneId, "Äã½ñÌìÒÑ¾­²Î¼Ó¹ı¡°ĞÒÔË¿ì»îÈı¡±³é½±»î¶¯ÁË£¡ÇëÃ÷ÌìÔÙÀ´°É£¡" )
+			AddText( sceneId, "ä½ ä»Šå¤©å·²ç»å‚åŠ è¿‡â€œå¹¸è¿å¿«æ´»ä¸‰â€æŠ½å¥–æ´»åŠ¨äº†ï¼è¯·æ˜å¤©å†æ¥å§ï¼" )
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 		return
 	end
 	
-	--Èç¹ûÍæ¼ÒÓĞ¡°ĞÒÔË¿ì»îÈı¡±µÄBUFF
+	--å¦‚æœç©å®¶æœ‰â€œå¹¸è¿å¿«æ´»ä¸‰â€çš„BUFF
 	if LuaFnHaveImpactOfSpecificDataIndex( sceneId, selfId, x808071_g_BufferId ) == 1 then
 	   BeginEvent(sceneId)
 			 AddText( sceneId, "#{XYLP_20071222_08}" )
@@ -204,7 +204,7 @@ function x808071_JoinCampaign( sceneId, selfId, targetId )
 		 return
 	end
 
-	--·ûºÏÌõ¼ş·¢ËÍĞÅÏ¢¿Í»§¶Ë´ò¿ªĞÒÔËÂÖÅÌ³é½±½çÃæ
+	--ç¬¦åˆæ¡ä»¶å‘é€ä¿¡æ¯å®¢æˆ·ç«¯æ‰“å¼€å¹¸è¿è½®ç›˜æŠ½å¥–ç•Œé¢
 	BeginUICommand( sceneId )
 		UICommand_AddInt( sceneId, targetId )
 	EndUICommand( sceneId )
@@ -213,28 +213,28 @@ function x808071_JoinCampaign( sceneId, selfId, targetId )
 end
 
 --**********************************
---»ñµÃÕâ¸öÍæ¼Ò¹ØÓÚĞÒÔË³é½±µÄÊı¾İ
+--è·å¾—è¿™ä¸ªç©å®¶å…³äºå¹¸è¿æŠ½å¥–çš„æ•°æ®
 --**********************************
 function x808071_GetXingYunData( sceneId, selfId,index )
 	local temp = 0
 	local XingYunData = GetMissionData(sceneId,selfId,MD_XINGYUN_DATA)
 
-	local IsJoin = floor(XingYunData/100000)    --0 Ã»²Î¼Ó¹ı 1²Î¼Ó¹ı
+	local IsJoin = floor(XingYunData/100000)    --0 æ²¡å‚åŠ è¿‡ 1å‚åŠ è¿‡
 
 	temp = mod(XingYunData,100000)
-	local JoinDragon = floor(temp/10000)        --0 ²»¿ÉÒÔ²Î¼Ó 1 ¿ÉÒÔ²Î¼Ó
+	local JoinDragon = floor(temp/10000)        --0 ä¸å¯ä»¥å‚åŠ  1 å¯ä»¥å‚åŠ 
 
 	temp = mod(XingYunData,10000)
-	local DragonPrize = floor(temp/1000)        --0 Ã»ÓĞ·ÉÁú½±Àø 1 ÓĞ·ÉÁú½±Àø
+	local DragonPrize = floor(temp/1000)        --0 æ²¡æœ‰é£é¾™å¥–åŠ± 1 æœ‰é£é¾™å¥–åŠ±
 
 	temp = mod(XingYunData,1000)
 
-	local Prize1 = floor(temp/100)        -- ½±Àø1µÄ½±ÀøÀàĞÍ
+	local Prize1 = floor(temp/100)        -- å¥–åŠ±1çš„å¥–åŠ±ç±»å‹
 
 	temp = mod(XingYunData,100)
-	local Prize2 = floor(temp/10)        -- ½±Àø2µÄ½±ÀøÀàĞÍ
+	local Prize2 = floor(temp/10)        -- å¥–åŠ±2çš„å¥–åŠ±ç±»å‹
 
-	local Prize3 = mod(XingYunData,10)       -- ½±Àø3µÄ½±ÀøÀàĞÍ
+	local Prize3 = mod(XingYunData,10)       -- å¥–åŠ±3çš„å¥–åŠ±ç±»å‹
 
 	if(x808071_g_GetXingYunDataParameter[1] == index) then
 	  return IsJoin
@@ -254,7 +254,7 @@ function x808071_GetXingYunData( sceneId, selfId,index )
 
 end
 --**********************************
---´æ´¢Õâ¸öÍæ¼Ò¹ØÓÚĞÒÔË³é½±µÄÊı¾İ
+--å­˜å‚¨è¿™ä¸ªç©å®¶å…³äºå¹¸è¿æŠ½å¥–çš„æ•°æ®
 --**********************************
 function x808071_SetXingYunData(sceneId,selfId,IJoin,JDragon,DPrize,P1,P2,P3)
 
@@ -262,37 +262,37 @@ function x808071_SetXingYunData(sceneId,selfId,IJoin,JDragon,DPrize,P1,P2,P3)
 	if(IJoin == -1) then
 	  IsJoin = x808071_GetXingYunData( sceneId, selfId,x808071_g_GetXingYunDataParameter[1] )*100000
 	else
-	  IsJoin = IJoin*100000    --0 Ã»²Î¼Ó¹ı 1²Î¼Ó¹ı
+	  IsJoin = IJoin*100000    --0 æ²¡å‚åŠ è¿‡ 1å‚åŠ è¿‡
 	end
 
 	if(JDragon == -1) then
 	  JoinDragon = x808071_GetXingYunData( sceneId, selfId,x808071_g_GetXingYunDataParameter[2] )*10000
 	else
-	  JoinDragon = JDragon*10000        --0 ²»¿ÉÒÔ²Î¼Ó 1 ¿ÉÒÔ²Î¼Ó
+	  JoinDragon = JDragon*10000        --0 ä¸å¯ä»¥å‚åŠ  1 å¯ä»¥å‚åŠ 
 	end
 
   if(DPrize == -1) then
 	  DragonPrize = x808071_GetXingYunData( sceneId, selfId,x808071_g_GetXingYunDataParameter[3] )*1000
 	else
-	  DragonPrize = DPrize*1000        --0 Ã»ÓĞ·ÉÁú½±Àø 1 ÓĞ·ÉÁú½±Àø
+	  DragonPrize = DPrize*1000        --0 æ²¡æœ‰é£é¾™å¥–åŠ± 1 æœ‰é£é¾™å¥–åŠ±
 	end
 
 	if(P1 == -1) then
 	  Prize1 = x808071_GetXingYunData( sceneId, selfId,x808071_g_GetXingYunDataParameter[4] )*100
 	else
-	  Prize1 = P1*100        -- ½±Àø1µÄ½±ÀøÀàĞÍ
+	  Prize1 = P1*100        -- å¥–åŠ±1çš„å¥–åŠ±ç±»å‹
 	end
 
 	if(P2 == -1) then
 	  Prize2 = x808071_GetXingYunData( sceneId, selfId,x808071_g_GetXingYunDataParameter[5] )*10
 	else
-	  Prize2 = P2*10        -- ½±Àø2µÄ½±ÀøÀàĞÍ
+	  Prize2 = P2*10        -- å¥–åŠ±2çš„å¥–åŠ±ç±»å‹
 	end
 
 	if(P3 == -1) then
 	  Prize3 = x808071_GetXingYunData( sceneId, selfId,x808071_g_GetXingYunDataParameter[6] )
 	else
-	  Prize3 = P3       -- ½±Àø3µÄ½±ÀøÀàĞÍ
+	  Prize3 = P3       -- å¥–åŠ±3çš„å¥–åŠ±ç±»å‹
 	end
 
 	local val = IsJoin+JoinDragon+DragonPrize+Prize1+Prize2+Prize3
@@ -300,7 +300,7 @@ function x808071_SetXingYunData(sceneId,selfId,IJoin,JDragon,DPrize,P1,P2,P3)
 
 end
 --**********************************
---ÊÕµ½¿Í»§¶Ë·¢ËÍ¹ıÀ´µÄÑ¡Ôñ½øĞĞ´¦Àí(Õ¼²·)
+--æ”¶åˆ°å®¢æˆ·ç«¯å‘é€è¿‡æ¥çš„é€‰æ‹©è¿›è¡Œå¤„ç†(å åœ)
 --**********************************
 function x808071_OnAugury( sceneId, selfId, pos_ui )
 
@@ -309,20 +309,20 @@ function x808071_OnAugury( sceneId, selfId, pos_ui )
 
    local prizetype_1,prizetype_2,prizetype_3 = 0,0,0
 
-   if(IsJoin == 0) then       --Èç¹ûÃ»³é¹ı½±£¬ÄÇÃ´µÚÒ»´Î³é½±
+   if(IsJoin == 0) then       --å¦‚æœæ²¡æŠ½è¿‡å¥–ï¼Œé‚£ä¹ˆç¬¬ä¸€æ¬¡æŠ½å¥–
 
      prizetype_1 = x808071_OnPrize();
    
      prizetype_2 = x808071_OnPrize();
-     while(prizetype_2 == 5) do --³¬¼¶´ó½±µÄ¼¸ÂÊ±ØĞë±£Ö¤ÔÚ10%
+     while(prizetype_2 == 5) do --è¶…çº§å¤§å¥–çš„å‡ ç‡å¿…é¡»ä¿è¯åœ¨10%
         prizetype_2 = x808071_OnPrize();
      end
      
      prizetype_3 = x808071_OnPrize();
-     while(prizetype_3 == 5) do --³¬¼¶´ó½±µÄ¼¸ÂÊ±ØĞë±£Ö¤ÔÚ10%
+     while(prizetype_3 == 5) do --è¶…çº§å¤§å¥–çš„å‡ ç‡å¿…é¡»ä¿è¯åœ¨10%
         prizetype_3 = x808071_OnPrize();
      end
-     --Èç¹ûÍæ¼ÒÊ²Ã´½±Àø¶¼Ã»ÓĞ£¬¾ÍÒª¸øÒ»¸öĞ¡¾­Ñé½±Àø
+     --å¦‚æœç©å®¶ä»€ä¹ˆå¥–åŠ±éƒ½æ²¡æœ‰ï¼Œå°±è¦ç»™ä¸€ä¸ªå°ç»éªŒå¥–åŠ±
      if(prizetype_1 == 4 and prizetype_2 == 4 and prizetype_3 == 4) then
         local index = random(1,3)
         if(index == 1) then
@@ -334,10 +334,10 @@ function x808071_OnAugury( sceneId, selfId, pos_ui )
         end
      end
      
---     if(prizetype_1 == 5) then--³éÖĞ³¬¼¶´ó½±
---       JoinDragon = 0-- ¼´Ê¹³éÖĞ³¬¼¶´ó½±ÔİÊ±Ò²²»ĞèÒªÏÔÊ¾£¬µ«ÊÇ¿ÉÒÔ¼ÌĞø³é·ÉÁú
+--     if(prizetype_1 == 5) then--æŠ½ä¸­è¶…çº§å¤§å¥–
+--       JoinDragon = 0-- å³ä½¿æŠ½ä¸­è¶…çº§å¤§å¥–æš‚æ—¶ä¹Ÿä¸éœ€è¦æ˜¾ç¤ºï¼Œä½†æ˜¯å¯ä»¥ç»§ç»­æŠ½é£é¾™
 --       local DragonOdds= random(1,150)
---       if(DragonOdds == 150) then --³éÖĞ·ÉÁú
+--       if(DragonOdds == 150) then --æŠ½ä¸­é£é¾™
 --         DragonPrize = 1
 --       else
 --         DragonPrize = 0
@@ -346,69 +346,69 @@ function x808071_OnAugury( sceneId, selfId, pos_ui )
 --       JoinDragon = 0
 --       DragonPrize = 0       
 --     end
-     --´æ´¢³é½±½á¹û
+     --å­˜å‚¨æŠ½å¥–ç»“æœ
      x808071_SetXingYunData(sceneId,selfId,1,JoinDragon,DragonPrize,prizetype_1,prizetype_2,prizetype_3)
      --x808071_SetXingYunData(sceneId,selfId,1,0,0,5,3,3)
-     --ĞÒÔËÂÖÅÌÖĞ½±Í³¼ÆÈÕÖ¾
+     --å¹¸è¿è½®ç›˜ä¸­å¥–ç»Ÿè®¡æ—¥å¿—
      LuaFnAuditLuckyTurnTable(sceneId, selfId, prizetype_1, prizetype_2, prizetype_3);
-     --¸øÓèÍæ¼Ò¡°ĞÒÔË¿ì»îÈı¡±µÄBUFF
+     --ç»™äºˆç©å®¶â€œå¹¸è¿å¿«æ´»ä¸‰â€çš„BUFF
      LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, x808071_g_BufferId, 0)
-     --·¢ËÍÒ»¸ö½á¹û¸ø¿Í»§¶Ë
+     --å‘é€ä¸€ä¸ªç»“æœç»™å®¢æˆ·ç«¯
      BeginUICommand(sceneId)
-       UICommand_AddInt(sceneId,1)--µÚÒ»ÕÅÅÆ
+       UICommand_AddInt(sceneId,1)--ç¬¬ä¸€å¼ ç‰Œ
 		   UICommand_AddInt(sceneId,prizetype_1)
 	   EndUICommand(sceneId)
 	   DispatchUICommand(sceneId,selfId, x808071_g_UICommand)
 
-   elseif(IsJoin == 1) then       --Èç¹û³é¹ıµÚÒ»´Î½±£¬ÄÇÃ´²»ÔÙ³é½±£¬Ö»°ÑÏÂµÚ2´Î½á¹û·¢ËÍ¹ıÈ¥
+   elseif(IsJoin == 1) then       --å¦‚æœæŠ½è¿‡ç¬¬ä¸€æ¬¡å¥–ï¼Œé‚£ä¹ˆä¸å†æŠ½å¥–ï¼ŒåªæŠŠä¸‹ç¬¬2æ¬¡ç»“æœå‘é€è¿‡å»
 
      prizetype_2 = x808071_GetXingYunData( sceneId, selfId,x808071_g_GetXingYunDataParameter[5] )
-     --·¢ËÍµÚ¶ş¸ö½á¹û¸ø¿Í»§¶Ë
+     --å‘é€ç¬¬äºŒä¸ªç»“æœç»™å®¢æˆ·ç«¯
      BeginUICommand(sceneId)
-       UICommand_AddInt(sceneId,2)--µÚ¶şÕÅÅÆ
+       UICommand_AddInt(sceneId,2)--ç¬¬äºŒå¼ ç‰Œ
 		   UICommand_AddInt(sceneId,prizetype_2)
 	   EndUICommand(sceneId)
 	   DispatchUICommand(sceneId,selfId, x808071_g_UICommand)
-	   --¼ÇÂ¼µÚ¶ş´ÎÒÑ¾­·¢ËÍ
+	   --è®°å½•ç¬¬äºŒæ¬¡å·²ç»å‘é€
 	   x808071_SetXingYunData(sceneId,selfId,2,-1,-1,-1,-1,-1)
 
-   elseif(IsJoin == 2) then       --Èç¹û³é¹ıµÚ¶ş´Î½±£¬ÄÇÃ´²»ÔÙ³é½±£¬Ö»°ÑÏÂµÚ3´Î½á¹û·¢ËÍ¹ıÈ¥
+   elseif(IsJoin == 2) then       --å¦‚æœæŠ½è¿‡ç¬¬äºŒæ¬¡å¥–ï¼Œé‚£ä¹ˆä¸å†æŠ½å¥–ï¼ŒåªæŠŠä¸‹ç¬¬3æ¬¡ç»“æœå‘é€è¿‡å»
 
      prizetype_3 = x808071_GetXingYunData( sceneId, selfId,x808071_g_GetXingYunDataParameter[6] )
-     --·¢ËÍµÚÈı¸ö½á¹û¸ø¿Í»§¶Ë
+     --å‘é€ç¬¬ä¸‰ä¸ªç»“æœç»™å®¢æˆ·ç«¯
      BeginUICommand(sceneId)
-       UICommand_AddInt(sceneId,3)--µÚÈıÕÅÅÆ
+       UICommand_AddInt(sceneId,3)--ç¬¬ä¸‰å¼ ç‰Œ
 		   UICommand_AddInt(sceneId,prizetype_3)
 	   EndUICommand(sceneId)
 	   DispatchUICommand(sceneId,selfId, x808071_g_UICommand)
-	   --¼ÇÂ¼µÚÈı´ÎÒÑ¾­·¢ËÍ
+	   --è®°å½•ç¬¬ä¸‰æ¬¡å·²ç»å‘é€
 	   x808071_SetXingYunData(sceneId,selfId,3,-1,-1,-1,-1,-1)
    end   
    
 end
 
 --**********************************
---Ëæ»ú³é½±
+--éšæœºæŠ½å¥–
 --**********************************
 function x808071_OnPrize()
    local odds = random(1,100000)
    local prizetype = 0
-   if( odds >= 1 and odds <= 1000 ) then       --1000 ´ó¾­Ñé
+   if( odds >= 1 and odds <= 1000 ) then       --1000 å¤§ç»éªŒ
 	    prizetype = 1
-	 elseif( odds >= 1001 and odds <= 66540 ) then          --65540  Ğ¡¾­Ñé
+	 elseif( odds >= 1001 and odds <= 66540 ) then          --65540  å°ç»éªŒ
 	    prizetype = 2
-	 elseif( odds >= 66541 and odds <= 66990 ) then          --450    µÀ¾ß
+	 elseif( odds >= 66541 and odds <= 66990 ) then          --450    é“å…·
 	    prizetype = 3
-	 elseif( odds >= 66991 and odds <= 99990 ) then          --33000   ¿ÕÆø
+	 elseif( odds >= 66991 and odds <= 99990 ) then          --33000   ç©ºæ°”
 	    prizetype = 4
-	 elseif( odds >= 99991 and odds <= 100000 ) then          --10   ¿ì»îÈı
+	 elseif( odds >= 99991 and odds <= 100000 ) then          --10   å¿«æ´»ä¸‰
 	    prizetype = 5
 	 end
 	 return prizetype
 end
 
 --**********************************
---¼ì²âÊ±¼ä
+--æ£€æµ‹æ—¶é—´
 --**********************************
 function x808071_CheckTime( sceneId, selfId )
 	  
@@ -416,7 +416,7 @@ function x808071_CheckTime( sceneId, selfId )
 	local LastXingYunTime = GetMissionData(sceneId,selfId,MD_XINGYUN_TIME_INFO)
 
 	if td > LastXingYunTime then
-	    --Çå¿Õ³é½±½á¹û
+	    --æ¸…ç©ºæŠ½å¥–ç»“æœ
       x808071_SetXingYunData(sceneId,selfId,0,0,0,0,0,0)
 	    SetMissionData( sceneId, selfId, MD_XINGYUN_TIME_INFO, td )
 	end
@@ -424,7 +424,7 @@ function x808071_CheckTime( sceneId, selfId )
 end
 
 --**********************************
---ÁìÈ¥ÆÕÍ¨½±Àø
+--é¢†å»æ™®é€šå¥–åŠ±
 --**********************************
 function x808071_GivePlayerPrize( sceneId, selfId, targetId)
 
@@ -434,7 +434,7 @@ function x808071_GivePlayerPrize( sceneId, selfId, targetId)
 	  PrizeType[2] = x808071_GetXingYunData( sceneId, selfId,x808071_g_GetXingYunDataParameter[5] )
 	  PrizeType[3] = x808071_GetXingYunData( sceneId, selfId,x808071_g_GetXingYunDataParameter[6] )
 	  
-	  --¼ÆËãËùĞèµÄ¿Õ¼ä
+	  --è®¡ç®—æ‰€éœ€çš„ç©ºé—´
 	  local needspace = 0
 	  for i = 1,3 do
 	    if(PrizeType[i] == 3 or PrizeType[i] ==5) then
@@ -442,55 +442,55 @@ function x808071_GivePlayerPrize( sceneId, selfId, targetId)
 	    end
 	  end
 	  
-	  --¼ì²â±³°üÊÇ·ñÓĞµØ·½....
+	  --æ£€æµ‹èƒŒåŒ…æ˜¯å¦æœ‰åœ°æ–¹....
 	  if LuaFnGetPropertyBagSpace( sceneId, selfId ) < needspace then
 		  BeginEvent(sceneId)
-			  AddText( sceneId, "ÄãµÄ±³°ü¿Õ¼ä²»×ã£¬ÎŞ·¨ÁìÈ¡½±Àø¡£" )
+			  AddText( sceneId, "ä½ çš„èƒŒåŒ…ç©ºé—´ä¸è¶³ï¼Œæ— æ³•é¢†å–å¥–åŠ±ã€‚" )
 		  EndEvent(sceneId)
 		  DispatchMissionTips(sceneId,selfId)
 		  return
 	  end
 	 
-	  --Ãæ°å¶Ô»°½±ÀøÌáÊ¾
+	  --é¢æ¿å¯¹è¯å¥–åŠ±æç¤º
 	  BeginEvent(sceneId)
 			 AddText( sceneId, "#{XYLP_20071222_03}" )
 
-	  --¸øÓèÍæ¼Ò½±Àø
+	  --ç»™äºˆç©å®¶å¥–åŠ±
 	  for i = 1,3 do
 	    if(PrizeType[i] == 1) then
-	      AddText( sceneId, x808071_GetExp(sceneId,selfId,1))  --´ó¾­Ñé	     
+	      AddText( sceneId, x808071_GetExp(sceneId,selfId,1))  --å¤§ç»éªŒ	     
 	    elseif(PrizeType[i] == 2) then
-	      AddText( sceneId, x808071_GetExp(sceneId,selfId,2))--Ğ¡¾­Ñé
+	      AddText( sceneId, x808071_GetExp(sceneId,selfId,2))--å°ç»éªŒ
 	    elseif(PrizeType[i] == 3) then
-	      AddText( sceneId, x808071_GetItem(sceneId,selfId,3,targetId))--ÆÕÍ¨µÀ¾ß
-	      --elseif(PrizeType[i] == 4) then  --¿ÕÆø Ã»ÓĞ½±Àø
+	      AddText( sceneId, x808071_GetItem(sceneId,selfId,3,targetId))--æ™®é€šé“å…·
+	      --elseif(PrizeType[i] == 4) then  --ç©ºæ°” æ²¡æœ‰å¥–åŠ±
 	    elseif(PrizeType[i] == 5) then
 	      x808071_GetItem(sceneId,selfId,5,targetId)
-	      AddText( sceneId, "#GµÀ¾ß£º²Å×Ó¼ÑÈË")--¿ì»îÈı ³¬¼¶µÀ¾ß ²Å×Ó¼ÑÈË
+	      AddText( sceneId, "#Gé“å…·ï¼šæ‰å­ä½³äºº")--å¿«æ´»ä¸‰ è¶…çº§é“å…· æ‰å­ä½³äºº
 	    end	  
 	  end
 
 	  EndEvent(sceneId)
 	  DispatchEventList(sceneId,selfId,targetId)
 	  	  
-	  --Çå¿ÕÈı¸ö½±ÀøÊı¾İ
+	  --æ¸…ç©ºä¸‰ä¸ªå¥–åŠ±æ•°æ®
 	  x808071_SetXingYunData(sceneId,selfId,-1,-1,-1,0,0,0)
 end
 
 --**********************************
---µÃµ½¾­Ñé type´ú±í¾­ÑéÀàĞÍ
+--å¾—åˆ°ç»éªŒ typeä»£è¡¨ç»éªŒç±»å‹
 --**********************************
 function x808071_GetExp( sceneId, selfId, type, targetId )
 
    local str = ""
    local playerLevel = GetLevel(sceneId, selfId)
    local exp = x808071_g_Exp[playerLevel]
-   if(type == 1) then--´ó¾­Ñé
+   if(type == 1) then--å¤§ç»éªŒ
      exp = exp * 5
    end
    AddExp( sceneId,selfId,exp)
    
-   str = format( "#G¾­Ñé£º%d", exp )
+   str = format( "#Gç»éªŒï¼š%.0f", exp )
    
    return str
 --   BeginEvent( sceneId )
@@ -500,7 +500,7 @@ function x808071_GetExp( sceneId, selfId, type, targetId )
 end
 
 --**********************************
---µÃµ½ÎïÆ·
+--å¾—åˆ°ç‰©å“
 --**********************************
 function x808071_GetItem( sceneId, selfId, type, targetId )
   local ItemId = 0
@@ -508,24 +508,24 @@ function x808071_GetItem( sceneId, selfId, type, targetId )
   
   if(type == 3) then
     ItemId = x808071_RandomItem()
-    str = format( "#GµÀ¾ß£º#{_ITEM%d}", ItemId )
+    str = format( "#Gé“å…·ï¼š#{_ITEM%d}", ItemId )
   elseif(type == 5) then
-    ItemId = 10124048  -- ²Å×Ó¼ÑÈË
-    --str = format( "µÀ¾ß£º#{_ITEM%d}", ItemId )
+    ItemId = 10124048  -- æ‰å­ä½³äºº
+    --str = format( "é“å…·ï¼š#{_ITEM%d}", ItemId )
   elseif(type == 7) then
-    ItemId = 10141084  -- ·ÉÁú
-    str = format( "¹§Ï²Äú£¡ÄúÔÚ¡°ĞÒÔË¿ì»îÈı¡±µÄ³é½±»î¶¯ÖĞ¹²µÃµ½ÒÔÏÂ½±Àø£º#G#{_ITEM%d}", ItemId )
+    ItemId = 10141084  -- é£é¾™
+    str = format( "æ­å–œæ‚¨ï¼æ‚¨åœ¨â€œå¹¸è¿å¿«æ´»ä¸‰â€çš„æŠ½å¥–æ´»åŠ¨ä¸­å…±å¾—åˆ°ä»¥ä¸‹å¥–åŠ±ï¼š#G#{_ITEM%d}", ItemId )
   end
   
   local BagIndex = TryRecieveItem( sceneId, selfId, ItemId, QUALITY_MUST_BE_CHANGE )
   
-  --´ó·çÏµÁĞÎïÆ·ºÍÒ»¼¶ÊŞÀ¸²»°ó¶¨
+  --å¤§é£ç³»åˆ—ç‰©å“å’Œä¸€çº§å…½æ ä¸ç»‘å®š
   if(ItemId ~= x808071_g_DragonItem[1] and ItemId ~= x808071_g_DragonItem[2] 
   and ItemId ~= x808071_g_DragonItem[3] and ItemId ~=30509500) then
-  --°ó¶¨ÎïÆ·½±Àø
+  --ç»‘å®šç‰©å“å¥–åŠ±
   	local	bindidx	=	LuaFnItemBind(sceneId, selfId,BagIndex)
 		if bindidx ~= 1 then
-		  	local bindmsg = "°ó¶¨Ê§°Ü"													
+		  	local bindmsg = "ç»‘å®šå¤±è´¥"													
 		  	BeginEvent( sceneId )
 		    	AddText( sceneId, bindmsg )
 		  	EndEvent( sceneId )
@@ -533,29 +533,29 @@ function x808071_GetItem( sceneId, selfId, type, targetId )
 		end
 	end
 	
-	--»ñµÃÎïÆ·ĞÅÏ¢
+	--è·å¾—ç‰©å“ä¿¡æ¯
 	local ItemInfo = GetBagItemTransfer( sceneId, selfId, BagIndex )
 	  
 	if BagIndex ~= -1 then
 
 	  if(type == 5) then
-	    --·¢ËÍÏµÍ³¹«¸æ
+	    --å‘é€ç³»ç»Ÿå…¬å‘Š
       local PlayerName = GetName(sceneId,selfId)
-	    str = format( "#{XYLP_20071222_11}#{_INFOUSR%s}#{XYLP_20071222_12}#{_INFOMSG%s}#{XYLP_20071222_13}·ÉÁú×øÆï#{XYLP_20071222_14}", PlayerName,ItemInfo )
+	    str = format( "#{XYLP_20071222_11}#{_INFOUSR%s}#{XYLP_20071222_12}#{_INFOMSG%s}#{XYLP_20071222_13}é£é¾™åéª‘#{XYLP_20071222_14}", PlayerName,ItemInfo )
 	    BroadMsgByChatPipe( sceneId, selfId, str, 4 )
-	    --¿ªÆô³é·ÉÁúÑ¡Ïî
+	    --å¼€å¯æŠ½é£é¾™é€‰é¡¹
 	    x808071_SetXingYunData(sceneId,selfId,-1,1,-1,-1,-1,-1)
-	    --ÂíÉÏ¼ÓÉÏ°´Å¥£¬µ«ÊÇÎÒÈÏÎª²»ºÃ£¬ËùÒÔ×¢Ïúµô
+	    --é©¬ä¸ŠåŠ ä¸ŠæŒ‰é’®ï¼Œä½†æ˜¯æˆ‘è®¤ä¸ºä¸å¥½ï¼Œæ‰€ä»¥æ³¨é”€æ‰
 --	    BeginEvent(sceneId)
---	    AddText(sceneId,"  ´ÓÏÖÔÚ¿ªÊ¼£¬ÄãÖ»ĞíÌÛÎÒÒ»¸ö£¬Òª³èÎÒ£¬²»ĞíÆ­ÎÒ£¬´ğÓ¦ÎÒµÄÃ¿Ò»¼şÊÂÇé¶¼Òª×öµ½¡£")
---	    AddNumText(sceneId, x808071_g_ScriptId, "ĞÒÔË¿ì»îÈı", 6, 111 )
---	    AddNumText(sceneId, x808071_g_ScriptId, "ÁìÈ¡ĞÒÔË¿ì»îÈı½±Àø", 6, 112 )
---	    AddNumText(sceneId, x808071_g_ScriptId, "ĞÒÔË¿ì»îÈı³é½±ËµÃ÷", 6, 113 )
---	    AddNumText(sceneId, x808071_g_ScriptId,"¿ì»îÈı£º·ÉÁú£¡", 6, 114);
---  		AddNumText(sceneId, x808071_g_ScriptId,"ÁìÈ¡·ÉÁú", 6, 115);
+--	    AddText(sceneId,"  ä»ç°åœ¨å¼€å§‹ï¼Œä½ åªè®¸ç–¼æˆ‘ä¸€ä¸ªï¼Œè¦å® æˆ‘ï¼Œä¸è®¸éª—æˆ‘ï¼Œç­”åº”æˆ‘çš„æ¯ä¸€ä»¶äº‹æƒ…éƒ½è¦åšåˆ°ã€‚")
+--	    AddNumText(sceneId, x808071_g_ScriptId, "å¹¸è¿å¿«æ´»ä¸‰", 6, 111 )
+--	    AddNumText(sceneId, x808071_g_ScriptId, "é¢†å–å¹¸è¿å¿«æ´»ä¸‰å¥–åŠ±", 6, 112 )
+--	    AddNumText(sceneId, x808071_g_ScriptId, "å¹¸è¿å¿«æ´»ä¸‰æŠ½å¥–è¯´æ˜", 6, 113 )
+--	    AddNumText(sceneId, x808071_g_ScriptId,"å¿«æ´»ä¸‰ï¼šé£é¾™ï¼", 6, 114);
+--  		AddNumText(sceneId, x808071_g_ScriptId,"é¢†å–é£é¾™", 6, 115);
 --	    EndEvent(sceneId)
 --	    DispatchEventList(sceneId,selfId,targetId)      
-	  elseif (type == 3) then-- Ãæ°å¶Ô»°
+	  elseif (type == 3) then-- é¢æ¿å¯¹è¯
 	    local PlayerName = GetName(sceneId,selfId)
 	    local info = format( "#{XYLP_20080104_01}#{_INFOUSR%s}#{XYLP_20080104_02}#{_INFOMSG%s}#{XYLP_20080104_03}", PlayerName,ItemInfo )
 	    BroadMsgByChatPipe( sceneId, selfId, info, 4 )
@@ -565,7 +565,7 @@ function x808071_GetItem( sceneId, selfId, type, targetId )
 			  AddText( sceneId, str )
 		    EndEvent( sceneId )
 		  DispatchEventList(sceneId,selfId,targetId)
-		  --·¢ËÍÏµÍ³¹«¸æ
+		  --å‘é€ç³»ç»Ÿå…¬å‘Š
 		  local PlayerName = GetName(sceneId,selfId)
 	    str = format( "#{XYLP_20071222_21}#{_INFOUSR%s}#{XYLP_20071222_22}#{_INFOMSG%s}#{XYLP_20071222_23}", PlayerName,ItemInfo )
 	    BroadMsgByChatPipe( sceneId, selfId, str, 4 )
@@ -575,37 +575,37 @@ function x808071_GetItem( sceneId, selfId, type, targetId )
 end
 
 --**********************************
---Ëæ»ú»ñµÃÎïÆ·
+--éšæœºè·å¾—ç‰©å“
 --**********************************
 function x808071_RandomItem( )
   local ItemId = 0
   local randomval = random(1,50000)
 
-  if( randomval >= 1 and randomval <= 900 ) then       --ÕĞÅÆ£ºµ¶½£Õù·æ 9
+  if( randomval >= 1 and randomval <= 900 ) then       --æ‹›ç‰Œï¼šåˆ€å‰‘äº‰é”‹ 9
 	    ItemId = 30008022
-	 elseif( randomval >= 901 and randomval <= 1800 ) then          --ÕĞÅÆ£ºÌú¼×Í­±Ú 9
+	 elseif( randomval >= 901 and randomval <= 1800 ) then          --æ‹›ç‰Œï¼šé“ç”²é“œå£ 9
 	    ItemId = 30008023
-	 elseif( randomval >= 1801 and randomval <= 2700 ) then          --ÕĞÅÆ£ºÕäÇİÒìÊŞ  9
+	 elseif( randomval >= 1801 and randomval <= 2700 ) then          --æ‹›ç‰Œï¼šçç¦½å¼‚å…½  9
 	    ItemId = 30008024
-	 elseif( randomval >= 2701 and randomval <= 4685 ) then          --Âí°°  19.85
+	 elseif( randomval >= 2701 and randomval <= 4685 ) then          --é©¬é  19.85
 	    ItemId = 30008006
-	 elseif( randomval >= 4686 and randomval <= 6185 ) then          --ÇåĞÄµ¤	15
+	 elseif( randomval >= 4686 and randomval <= 6185 ) then          --æ¸…å¿ƒä¸¹	15
 	    ItemId = 30008018
-	 elseif( randomval >= 6186 and randomval <= 7185 ) then          --Ç¬À¤±­	10
+	 elseif( randomval >= 6186 and randomval <= 7185 ) then          --ä¹¾å¤æ¯	10
 	    ItemId = 30008033
-	 elseif( randomval >= 7186 and randomval <= 8185 ) then          --Ğ¡Áéµ¤	10
+	 elseif( randomval >= 7186 and randomval <= 8185 ) then          --å°çµä¸¹	10
 	    ItemId = 30008016
-	 elseif( randomval >= 8186 and randomval <= 9685 ) then          --Ììî¸Ç¿»¯¾«»ª	15
+	 elseif( randomval >= 8186 and randomval <= 9685 ) then          --å¤©ç½¡å¼ºåŒ–ç²¾å	15
 	    ItemId = 30900006
-	 elseif( randomval >= 9686 and randomval <= 9985 ) then          --Ò»¼¶ÊŞÀ¸	3
+	 elseif( randomval >= 9686 and randomval <= 9985 ) then          --ä¸€çº§å…½æ 	3
 	    ItemId = 30509500
-	 elseif( randomval >= 9986 and randomval <= 9990 ) then          --´ó·ç×¦	0.05
+	 elseif( randomval >= 9986 and randomval <= 9990 ) then          --å¤§é£çˆª	0.05
 	    ItemId = x808071_g_DragonItem[1]
-	 elseif( randomval >= 9991 and randomval <= 9995 ) then          --´ó·çÒí	0.05
+	 elseif( randomval >= 9991 and randomval <= 9995 ) then          --å¤§é£ç¿¼	0.05
 	    ItemId = x808071_g_DragonItem[2]
-	 elseif( randomval >= 9996 and randomval <= 10000 ) then          --´ó·çÑÀ	0.05
+	 elseif( randomval >= 9996 and randomval <= 10000 ) then          --å¤§é£ç‰™	0.05
 	    ItemId = x808071_g_DragonItem[3]
-	 elseif( randomval >= 10001 and randomval <= 50000 ) then         --¸ß¼¶»¹Í¯ÌìÊé dun.liu
+	 elseif( randomval >= 10001 and randomval <= 50000 ) then         --é«˜çº§è¿˜ç«¥å¤©ä¹¦ dun.liu
 	    ItemId = 30503019
 	 end
 	 return ItemId
@@ -613,15 +613,15 @@ function x808071_RandomItem( )
 end
 
 --**********************************
---¸øÓèÍæ¼ÒÌáÊ¾
+--ç»™äºˆç©å®¶æç¤º
 --**********************************
 function x808071_PlayerTip( sceneId, selfId, tip )
       
       BeginEvent(sceneId)
       if(tip == 1) then
-        AddText( sceneId, "ÁøÔÂºç£ºÄúµÄ½±»¹Ã»ÓĞ³éÍêÄØ£¡" )
+        AddText( sceneId, "æŸ³æœˆè™¹ï¼šæ‚¨çš„å¥–è¿˜æ²¡æœ‰æŠ½å®Œå‘¢ï¼" )
       else
-        AddText( sceneId, "ÁøÔÂºç£º¹§Ï²Äú£¡Äú½ñÌìµÄ¡°ĞÒÔË¿ì»îÈı¡±³é½±»î¶¯ÒÑ¾­Íê³É£¬ÇëÄúËæÊ±ÕÒÎÒÁìÈ¡½±Àø£¡" )
+        AddText( sceneId, "æŸ³æœˆè™¹ï¼šæ­å–œæ‚¨ï¼æ‚¨ä»Šå¤©çš„â€œå¹¸è¿å¿«æ´»ä¸‰â€æŠ½å¥–æ´»åŠ¨å·²ç»å®Œæˆï¼Œè¯·æ‚¨éšæ—¶æ‰¾æˆ‘é¢†å–å¥–åŠ±ï¼" )
       end      
 			  
 		  EndEvent(sceneId)
@@ -629,13 +629,13 @@ function x808071_PlayerTip( sceneId, selfId, tip )
 end
 
 --**********************************
---¶Ò»»·ÉÁú
+--å…‘æ¢é£é¾™
 --**********************************
 function x808071_SwitchDragon( sceneId, selfId,targetId)
       
-      local ZhuaCount = LuaFnGetAvailableItemCount(sceneId, selfId, x808071_g_DragonItem[1])   --´ó·ç×¦
-      local YiCount = LuaFnGetAvailableItemCount(sceneId, selfId, x808071_g_DragonItem[2])  --´ó·çÒí
-      local YaCount = LuaFnGetAvailableItemCount(sceneId, selfId, x808071_g_DragonItem[3])   --´ó·çÑÀ
+      local ZhuaCount = LuaFnGetAvailableItemCount(sceneId, selfId, x808071_g_DragonItem[1])   --å¤§é£çˆª
+      local YiCount = LuaFnGetAvailableItemCount(sceneId, selfId, x808071_g_DragonItem[2])  --å¤§é£ç¿¼
+      local YaCount = LuaFnGetAvailableItemCount(sceneId, selfId, x808071_g_DragonItem[3])   --å¤§é£ç‰™
       
       local result = 1
       if ZhuaCount < 2 then
@@ -648,38 +648,38 @@ function x808071_SwitchDragon( sceneId, selfId,targetId)
     	
     	if result == 0 then
 				BeginEvent(sceneId)
-					AddText( sceneId, "Èç¹ûÊÕ¼¯Æë2¿Å´ó·çÑÀ£¬2Ö»´ó·çÒíºÍ2¸ö´ó·ç×¦£¬ÎÒ¾ÍÄÜ°ïÄãÕÙ»½³ö·ÉÁú£º´ó·ç¡£ºÜ¿ÉÏ§£¬ÄúÏÖÔÚ»¹Ã»ÓĞÊÕ¼¯ÆëµÀ¾ß£¬ÎÒÒ²ÎŞÄÜÎªÁ¦ÁË¡£" )
+					AddText( sceneId, "å¦‚æœæ”¶é›†é½2é¢—å¤§é£ç‰™ï¼Œ2åªå¤§é£ç¿¼å’Œ2ä¸ªå¤§é£çˆªï¼Œæˆ‘å°±èƒ½å¸®ä½ å¬å”¤å‡ºé£é¾™ï¼šå¤§é£ã€‚å¾ˆå¯æƒœï¼Œæ‚¨ç°åœ¨è¿˜æ²¡æœ‰æ”¶é›†é½é“å…·ï¼Œæˆ‘ä¹Ÿæ— èƒ½ä¸ºåŠ›äº†ã€‚" )
 				EndEvent(sceneId)
 				DispatchEventList(sceneId,selfId,targetId)
 				return
 			end
 			
-			--¼ì²â±³°üÊÇ·ñÓĞµØ·½....
+			--æ£€æµ‹èƒŒåŒ…æ˜¯å¦æœ‰åœ°æ–¹....
 	  	if LuaFnGetPropertyBagSpace( sceneId, selfId ) < 1 then
 		  	BeginEvent(sceneId)
-			  	AddText( sceneId, "ÄãµÄ±³°ü¿Õ¼ä²»×ã£¬ÎŞ·¨ÁìÈ¡½±Àø¡£" )
+			  	AddText( sceneId, "ä½ çš„èƒŒåŒ…ç©ºé—´ä¸è¶³ï¼Œæ— æ³•é¢†å–å¥–åŠ±ã€‚" )
 		  	EndEvent(sceneId)
 		  	DispatchMissionTips(sceneId,selfId)
 		 	 return
 	  	end
 	  	
-	  	--ÊÇ·ñÉ¾³ıÊ§°Ü....
+	  	--æ˜¯å¦åˆ é™¤å¤±è´¥....
 			for i, v in x808071_g_DragonItem do
 	  		if LuaFnDelAvailableItem(sceneId, selfId, v, 2) == 0 then
 			 		BeginEvent(sceneId)
-			 			AddText( sceneId, "Èç¹ûÊÕ¼¯Æë2¿Å´ó·çÑÀ£¬2Ö»´ó·çÒíºÍ2¸ö´ó·ç×¦£¬ÎÒ¾ÍÄÜ°ïÄãÕÙ»½³ö·ÉÁú£º´ó·ç¡£ºÜ¿ÉÏ§£¬ÄúÏÖÔÚ»¹Ã»ÓĞÊÕ¼¯ÆëµÀ¾ß£¬ÎÒÒ²ÎŞÄÜÎªÁ¦ÁË¡£" )
+			 			AddText( sceneId, "å¦‚æœæ”¶é›†é½2é¢—å¤§é£ç‰™ï¼Œ2åªå¤§é£ç¿¼å’Œ2ä¸ªå¤§é£çˆªï¼Œæˆ‘å°±èƒ½å¸®ä½ å¬å”¤å‡ºé£é¾™ï¼šå¤§é£ã€‚å¾ˆå¯æƒœï¼Œæ‚¨ç°åœ¨è¿˜æ²¡æœ‰æ”¶é›†é½é“å…·ï¼Œæˆ‘ä¹Ÿæ— èƒ½ä¸ºåŠ›äº†ã€‚" )
 		   		EndEvent(sceneId)
 		   		DispatchMissionTips( sceneId, selfId )
 		   		return
 		 		end
 	 		end
 	 		
-	 		--¸øÓè·ÉÁú
+	 		--ç»™äºˆé£é¾™
 	 		local BagIndex = TryRecieveItem( sceneId, selfId, 10141084, QUALITY_MUST_BE_CHANGE )
-  		--°ó¶¨ÎïÆ·½±Àø
+  		--ç»‘å®šç‰©å“å¥–åŠ±
   		local	bindidx	=	LuaFnItemBind(sceneId, selfId,BagIndex)
 			if bindidx ~= 1 then
-		  		local bindmsg = "°ó¶¨Ê§°Ü"													
+		  		local bindmsg = "ç»‘å®šå¤±è´¥"													
 		  		BeginEvent( sceneId )
 		    		AddText( sceneId, bindmsg )
 		  		EndEvent( sceneId )
@@ -687,27 +687,27 @@ function x808071_SwitchDragon( sceneId, selfId,targetId)
 			end
 	
 	    local PlayerName = GetName(sceneId,selfId)
-			--»ñµÃÎïÆ·ĞÅÏ¢
+			--è·å¾—ç‰©å“ä¿¡æ¯
 			local ItemInfo = GetBagItemTransfer( sceneId, selfId, BagIndex )
 			
-			--¸÷ÖÖ¹«¸æ
+			--å„ç§å…¬å‘Š
 			if BagIndex ~= -1 then
       	BeginEvent( sceneId )
 					AddText( sceneId, "#{XYLP_20071222_16}" )
 		    
 		    
-		    --¹öÆÁ¹«¸æ1
+		    --æ»šå±å…¬å‘Š1
 	      local msg = format("@*;SrvMsg;SCA:#{XYLP_20071222_17}#{_INFOUSR%s}#{XYLP_20071222_18}",PlayerName)
 		    AddGlobalCountNews( sceneId, msg )
 		   
 		    
-		 		--·¢ËÍÏµÍ³¹«¸æ
+		 		--å‘é€ç³»ç»Ÿå…¬å‘Š
 		  	local PlayerName = GetName(sceneId,selfId)
 	    	str = format( "#{XYLP_20071222_21}#{_INFOUSR%s}#{XYLP_20071222_22}#{_INFOMSG%s}#{XYLP_20071222_23}", PlayerName,ItemInfo )
 	    	BroadMsgByChatPipe( sceneId, selfId, str, 4 )
 	    	
-	    	--¹öÆÁ¹«¸æ2
-	      local msg = format("@*;SrvMsg;SCL:#{XYLP_20071222_21}#{_INFOUSR%s}#{XYLP_20071222_22}·ÉÁú£º´ó·ç#{XYLP_20071222_23}",PlayerName)
+	    	--æ»šå±å…¬å‘Š2
+	      local msg = format("@*;SrvMsg;SCL:#{XYLP_20071222_21}#{_INFOUSR%s}#{XYLP_20071222_22}é£é¾™ï¼šå¤§é£#{XYLP_20071222_23}",PlayerName)
 		    AddGlobalCountNews( sceneId, msg )
 		    
 		    EndEvent( sceneId )
@@ -716,55 +716,55 @@ function x808071_SwitchDragon( sceneId, selfId,targetId)
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x808071_CheckAccept( sceneId, selfId )
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x808071_OnAccept( sceneId, selfId )
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x808071_OnAbandon( sceneId, selfId )
 end
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x808071_OnContinue( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x808071_CheckSubmit( sceneId, selfId )
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x808071_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 end
 
 --**********************************
---É±ËÀ¹ÖÎï»òÍæ¼Ò
+--æ€æ­»æ€ªç‰©æˆ–ç©å®¶
 --**********************************
 function x808071_OnKillObject( sceneId, selfId, objdataId ,objId )
 end
 
 --**********************************
---½øÈëÇøÓòÊÂ¼ş
+--è¿›å…¥åŒºåŸŸäº‹ä»¶
 --**********************************
 function x808071_OnEnterArea( sceneId, selfId, zoneId )
 end
 
 --**********************************
---µÀ¾ß¸Ä±ä
+--é“å…·æ”¹å˜
 --**********************************
 function x808071_OnItemChanged( sceneId, selfId, itemdataId )
 end

@@ -1,27 +1,27 @@
---ÂåÑôNPC
---µÒÎÄÔ¶
---ÆÕÍ¨
+--æ´›é˜³NPC
+--ç‹„æ–‡è¿œ
+--æ™®é€š
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x000083_g_scriptId = 000083
 
-x000083_g_missionName = "¸ü¸ÄÕóÓª"
+x000083_g_missionName = "æ›´æ”¹é˜µè¥"
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x000083_g_eventList={250503}
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x000083_UpdateEventList( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
 		local  PlayerName=GetName(sceneId,selfId)
-		AddText(sceneId,"  ±ÈÎä³¡ÉÏ£¬ÉúËÀÓÉÃü£¬Ç©ÁËÕâÉúËÀ×´£¬¾Í²»ÄÜ·´»ÚÁË£¬Äã¿É¿¼ÂÇÇå³şÁË£¡");
-		--Èç¹ûÍæ¼ÒÍê³É¹ıÕâ¸öÈÎÎñ
+		AddText(sceneId,"  æ¯”æ­¦åœºä¸Šï¼Œç”Ÿæ­»ç”±å‘½ï¼Œç­¾äº†è¿™ç”Ÿæ­»çŠ¶ï¼Œå°±ä¸èƒ½åæ‚”äº†ï¼Œä½ å¯è€ƒè™‘æ¸…æ¥šäº†ï¼");
+		--å¦‚æœç©å®¶å®Œæˆè¿‡è¿™ä¸ªä»»åŠ¡
 		if GetCurCamp (sceneId, selfId) == 1 then
-			AddNumText(sceneId, x000083_g_scriptId,"»Ø¸´³õÊ¼ÕóÓª",6,0);
-		--Âú×ãÈÎÎñ½ÓÊÕÌõ¼ş
+			AddNumText(sceneId, x000083_g_scriptId,"å›å¤åˆå§‹é˜µè¥",6,0);
+		--æ»¡è¶³ä»»åŠ¡æ¥æ”¶æ¡ä»¶
 		else
-			AddNumText(sceneId,x000083_g_scriptId,"ÉèÖÃPKÕóÓª",6,1);
+			AddNumText(sceneId,x000083_g_scriptId,"è®¾ç½®PKé˜µè¥",6,1);
 		end
 		for i, eventId in x000083_g_eventList do
 			CallScriptFunction( eventId, "OnEnumerate",sceneId, selfId, targetId )
@@ -32,26 +32,26 @@ end
 
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x000083_OnDefaultEvent( sceneId, selfId,targetId )
 	x000083_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x000083_OnEventRequest( sceneId, selfId, targetId, eventId )
 	if	GetNumText()==0	then
 			SetCurCamp (sceneId, selfId, 0)
 		BeginEvent(sceneId)
-  			AddText(sceneId,"ÄãÒÑ¾­»Ø¸´µ½³õÊ¼ÕóÓª¡£");
+  			AddText(sceneId,"ä½ å·²ç»å›å¤åˆ°åˆå§‹é˜µè¥ã€‚");
   		EndEvent(sceneId)
   		DispatchMissionTips(sceneId,selfId)
 	elseif	GetNumText()==1	then
 		SetCurCamp (sceneId, selfId, 1 )
 		BeginEvent(sceneId)
-	  		AddText(sceneId,"ÄãÒÑ¾­ÉèÖÃÎªPKÕóÓª¡£");
+	  		AddText(sceneId,"ä½ å·²ç»è®¾ç½®ä¸ºPKé˜µè¥ã€‚");
 		EndEvent(sceneId)
 	  	DispatchMissionTips(sceneId,selfId)
 	end
@@ -64,7 +64,7 @@ function x000083_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x000083_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x000083_g_eventList do
@@ -79,10 +79,10 @@ function x000083_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x000083_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
-	--¾Ü¾øÖ®ºó£¬Òª·µ»ØNPCµÄÊÂ¼şÁĞ±í
+	--æ‹’ç»ä¹‹åï¼Œè¦è¿”å›NPCçš„äº‹ä»¶åˆ—è¡¨
 	for i, findId in x000083_g_eventList do
 		if missionScriptId == findId then
 			x000083_UpdateEventList( sceneId, selfId, targetId )
@@ -92,7 +92,7 @@ function x000083_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¼ÌĞø£¨ÒÑ¾­½ÓÁËÈÎÎñ£©
+--ç»§ç»­ï¼ˆå·²ç»æ¥äº†ä»»åŠ¡ï¼‰
 --**********************************
 function x000083_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x000083_g_eventList do
@@ -104,7 +104,7 @@ function x000083_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---Ìá½»ÒÑ×öÍêµÄÈÎÎñ
+--æäº¤å·²åšå®Œçš„ä»»åŠ¡
 --**********************************
 function x000083_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, selectRadioId )
 	for i, findId in x000083_g_eventList do
@@ -116,7 +116,7 @@ function x000083_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 end
 
 --**********************************
---ËÀÍöÊÂ¼ş
+--æ­»äº¡äº‹ä»¶
 --**********************************
 function x000083_OnDie( sceneId, selfId, killerId )
 end

@@ -1,8 +1,8 @@
 
-local YuanbaoStall_DefPrice = 1; --Ôª±¦ÉÌÆ·¶¨¼Û
-local YuanbaoStall_RePrice = 2; --Ôª±¦ÉÌÆ·¸Ä¼Û
-local YuanbaoStall_PetPrice = 3;  --ÕäÊŞÉÏ¼Ü¶¨¼Û
-local YuanbaoStall_PetRePrice = 4;  --ÕäÊŞĞŞ¸Ä¼ÛÇ®
+local YuanbaoStall_DefPrice = 1; --å…ƒå®å•†å“å®šä»·
+local YuanbaoStall_RePrice = 2; --å…ƒå®å•†å“æ”¹ä»·
+local YuanbaoStall_PetPrice = 3;  --çå…½ä¸Šæ¶å®šä»·
+local YuanbaoStall_PetRePrice = 4;  --çå…½ä¿®æ”¹ä»·é’±
 
 
 local g_YuanbaoInputWindowType = YuanbaoStall_DefPrice;
@@ -34,19 +34,19 @@ function InputYuanbao_OnOpen(arg0)
 	
 	if ( arg0 == "price" ) then
 		InputYuanbao_Title:SetText("#{INTERFACE_XML_1182}");
-		InputYuanbao_Accept_Button:SetText("ÉÏ¼Ü");
+		InputYuanbao_Accept_Button:SetText("ä¸Šæ¶");
 		g_YuanbaoInputWindowType = YuanbaoStall_DefPrice;
 	elseif ( arg0 == "reprice" ) then
-		InputYuanbao_Accept_Button:SetText("¸ü¸Ä");
+		InputYuanbao_Accept_Button:SetText("æ›´æ”¹");
 		g_YuanbaoInputWindowType = YuanbaoStall_RePrice;
 		InputYuanbao_Title:SetText("#{INTERFACE_XML_1182}");
 	elseif (arg0 == "pet_price") then
 		InputYuanbao_Title:SetText("#{INTERFACE_XML_1182}");
-		InputYuanbao_Accept_Button:SetText("ÉÏ¼Ü");
+		InputYuanbao_Accept_Button:SetText("ä¸Šæ¶");
 		g_YuanbaoInputWindowType = YuanbaoStall_PetPrice;
 	elseif (arg0 == "pet_reprice") then
 		InputYuanbao_Title:SetText("#{INTERFACE_XML_1182}");
-		InputYuanbao_Accept_Button:SetText("¸ü¸Ä");
+		InputYuanbao_Accept_Button:SetText("æ›´æ”¹");
 		g_YuanbaoInputWindowType = YuanbaoStall_PetRePrice;
 	end
 	
@@ -61,7 +61,7 @@ end
 
 
 --===========================================================
--- È·¶¨ÊäÈëµÄ½ğÇ®
+-- ç¡®å®šè¾“å…¥çš„é‡‘é’±
 --===========================================================
 function InputYuanbao_OnOK()
 	local nYuanbao = InputYuanbao_EditBox:GetText();
@@ -76,7 +76,7 @@ function InputYuanbao_OnOK()
 		StallSale:ReferItemPrice(tonumber(nYuanbao));
 		
 	elseif( g_YuanbaoInputWindowType == YuanbaoStall_RePrice ) then
-		--´ÓÈ«¾Ö±äÁ¿ÖĞÈ¡³öÊı¾İ
+		--ä»å…¨å±€å˜é‡ä¸­å–å‡ºæ•°æ®
 
 		--PushDebugMessage("InputYuanbao_OnOK:ItemReprice: "..nYuanbao..", "..nStallItemID..", "..nStallItemIndex);
 		StallSale:ItemReprice(tonumber(nYuanbao),nStallItemID,nStallItemIndex);

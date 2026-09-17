@@ -1,17 +1,17 @@
 --MisDescBegin
 x600021_g_ScriptId = 600021
 x600021_g_MissionId = 1108
-x600021_g_Name = "ÄÂÒ×"
+x600021_g_Name = "ç©†æ˜“"
 x600021_g_MissionKind = 50
 x600021_g_MissionLevel = 10000
 x600021_g_IfMissionElite = 0
-x600021_g_IsMissionOkFail = 0							-- ÈÎÎñÍê³É±ê¼Ç
-x600021_g_MissionName = "ÊĞ¼¯ÈÎÎñ"
-x600021_g_MissionInfo = ""												--ÈÎÎñÃèÊö
-x600021_g_MissionTarget = "    ´Ó%nÄÇÀïÇÀ»Ø%i¡£"						--ÈÎÎñÄ¿±ê
-x600021_g_ContinueInfo = "    ÄãµÄÈÎÎñ»¹Ã»ÓĞÍê³ÉÃ´£¿"					--Î´Íê³ÉÈÎÎñµÄnpc¶Ô»°
-x600021_g_SubmitInfo = "    ÊÂÇé½øÕ¹µÃÈçºÎ£¿"							--Íê³ÉÎ´Ìá½»Ê±µÄnpc¶Ô»°
-x600021_g_MissionComplete = "    ¸ÉµÃ²»´í£¬ÉõºÃÉõºÃ¡£"					--Íê³ÉÈÎÎñnpcËµ»°µÄ»°
+x600021_g_IsMissionOkFail = 0							-- ä»»åŠ¡å®Œæˆæ ‡è®°
+x600021_g_MissionName = "å¸‚é›†ä»»åŠ¡"
+x600021_g_MissionInfo = ""												--ä»»åŠ¡æè¿°
+x600021_g_MissionTarget = "    ä»%né‚£é‡ŒæŠ¢å›%iã€‚"						--ä»»åŠ¡ç›®æ ‡
+x600021_g_ContinueInfo = "    ä½ çš„ä»»åŠ¡è¿˜æ²¡æœ‰å®Œæˆä¹ˆï¼Ÿ"					--æœªå®Œæˆä»»åŠ¡çš„npcå¯¹è¯
+x600021_g_SubmitInfo = "    äº‹æƒ…è¿›å±•å¾—å¦‚ä½•ï¼Ÿ"							--å®Œæˆæœªæäº¤æ—¶çš„npcå¯¹è¯
+x600021_g_MissionComplete = "    å¹²å¾—ä¸é”™ï¼Œç”šå¥½ç”šå¥½ã€‚"					--å®Œæˆä»»åŠ¡npcè¯´è¯çš„è¯
 x600021_g_Parameter_Item_AllRandom = { { id = 6, num = 7 } }
 x600021_g_StrForePart = 5
 x600021_g_MissionRound = 44

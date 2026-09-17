@@ -1,29 +1,29 @@
---»î¶¯¡ª¡ª
---ÎÂÖİÓÎÏ·ÍÆ¹ã¿¨Æ¬
+--æ´»åŠ¨â€”â€”
+--æ¸©å·æ¸¸æˆæ¨å¹¿å¡ç‰‡
 
 x808069_g_ScriptId = 808069
 
 function x808069_WenZhouCard(sceneId,selfId,targetId)
-	--ÊÇ·ñÒÑ¾­ÁìÈ¡¹ıÎÂÖİÍÆ¹ã½±Àø
+	--æ˜¯å¦å·²ç»é¢†å–è¿‡æ¸©å·æ¨å¹¿å¥–åŠ±
 	if GetMissionFlag( sceneId, selfId, MF_ActiveWenZhouCard ) == 1 then
-		x808069_NotifyFailBox( sceneId, selfId, targetId, "    ÄúÒÑ¾­ÁìÈ¡¹ı»î¶¯½±Àø£¬²»ÄÜÖØ¸´ÁìÈ¡¡£" )
+		x808069_NotifyFailBox( sceneId, selfId, targetId, "    æ‚¨å·²ç»é¢†å–è¿‡æ´»åŠ¨å¥–åŠ±ï¼Œä¸èƒ½é‡å¤é¢†å–ã€‚" )
 		return
 	end
 	
-	--ÊÇ·ñ´óÓÚ20¼¶
+	--æ˜¯å¦å¤§äº20çº§
 	--if GetLevel( sceneId, selfId ) < 20 then
-	--	x808069_NotifyFailBox( sceneId, selfId, targetId, "    ÇëÄúµÄµÈ¼¶³¬¹ı20¼¶ºóÔÙÀ´ÁìÈ¡»î¶¯½±Àø¡£" )
+	--	x808069_NotifyFailBox( sceneId, selfId, targetId, "    è¯·æ‚¨çš„ç­‰çº§è¶…è¿‡20çº§åå†æ¥é¢†å–æ´»åŠ¨å¥–åŠ±ã€‚" )
 	--	return
 	--end
 	
-	--¼ì²é±³°ü¿Õ¼ä
+	--æ£€æŸ¥èƒŒåŒ…ç©ºé—´
 	local FreeSpace = LuaFnGetPropertyBagSpace( sceneId, selfId )
 	if( FreeSpace < 1 ) then
-		x808069_NotifyFailBox( sceneId, selfId, targetId, "    ¶Ô²»Æğ£¬ÄúÃ»ÓĞ×ã¹»µÄÎïÆ·À¸¿Õ¼ä£¬ÇëÕûÀíºóÔÙÀ´ÁìÈ¡¡£" )
+		x808069_NotifyFailBox( sceneId, selfId, targetId, "    å¯¹ä¸èµ·ï¼Œæ‚¨æ²¡æœ‰è¶³å¤Ÿçš„ç‰©å“æ ç©ºé—´ï¼Œè¯·æ•´ç†åå†æ¥é¢†å–ã€‚" )
 		return
 	end
 
-	--´ò¿ªÊäÈë¿¨ºÅ½çÃæ
+	--æ‰“å¼€è¾“å…¥å¡å·ç•Œé¢
 	BeginUICommand( sceneId )
 		UICommand_AddInt( sceneId, targetId )
 	EndUICommand( sceneId )
@@ -31,7 +31,7 @@ function x808069_WenZhouCard(sceneId,selfId,targetId)
 end
 
 --**********************************
--- ¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+-- å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x808069_NotifyFailBox( sceneId, selfId, targetId, msg )
 	BeginEvent( sceneId )
@@ -41,14 +41,14 @@ function x808069_NotifyFailBox( sceneId, selfId, targetId, msg )
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x808069_OnEnumerate( sceneId, selfId, targetId )
-		AddNumText(sceneId, x808069_g_ScriptId, "ÁìÈ¡ÎÂÖİÍÆ¹ã½±Àø", 1, 1 )
+		AddNumText(sceneId, x808069_g_ScriptId, "é¢†å–æ¸©å·æ¨å¹¿å¥–åŠ±", 1, 1 )
 end
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x808069_OnDefaultEvent( sceneId, selfId, targetId )
 	local TextNum = GetNumText()

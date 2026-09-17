@@ -1,48 +1,48 @@
 
 --MisDescBegin
---½Å±¾ºÅ
+--è„šæœ¬å·
 x050061_g_ScriptId	= 050061
 
---½ÓÊÜÈÎÎñNPCÊôĞÔ
+--æ¥å—ä»»åŠ¡NPCå±æ€§
 x050061_g_Position_X=78
 x050061_g_Position_Z=95
 x050061_g_SceneID=12
-x050061_g_AccomplishNPC_Name="ÕÅÖĞĞĞ"
+x050061_g_AccomplishNPC_Name="å¼ ä¸­è¡Œ"
 
---µ±Ç°ÈÎÎñºÅ
+--å½“å‰ä»»åŠ¡å·
 x050061_g_MissionId			= 1150
---ÏÂÒ»¸öÈÎÎñµÄID
+--ä¸‹ä¸€ä¸ªä»»åŠ¡çš„ID
 x050061_g_MissionIdNext	= -1
---ÈÎÎñÄ¿±ênpc
+--ä»»åŠ¡ç›®æ ‡npc
 x050061_g_Name 					= ""
---ÈÎÎñ¹éÀà
+--ä»»åŠ¡å½’ç±»
 x050061_g_MissionKind			= 3
---ÈÎÎñµÈ¼¶
+--ä»»åŠ¡ç­‰çº§
 x050061_g_MissionLevel		= 10000
---ÊÇ·ñÊÇ¾«Ó¢ÈÎÎñ
+--æ˜¯å¦æ˜¯ç²¾è‹±ä»»åŠ¡
 x050061_g_IfMissionElite	= 0
---ÈÎÎñÊÇ·ñÒÑ¾­Íê³É
-x050061_g_IsMissionOkFail	= 0		--ÈÎÎñ²ÎÊıµÄµÚ0Î»
+--ä»»åŠ¡æ˜¯å¦å·²ç»å®Œæˆ
+x050061_g_IsMissionOkFail	= 0		--ä»»åŠ¡å‚æ•°çš„ç¬¬0ä½
 
 --x050059_g_MissionRound = 249
 
---ÊÇ·ñÏÔÊ¾ÈÎÎñÍê³É
+--æ˜¯å¦æ˜¾ç¤ºä»»åŠ¡å®Œæˆ
 x050061_g_AccomplishCircumstance = 0
 
---ÈÎÎñÎÄ±¾ÃèÊö
-x050061_g_MissionName			= "ÃÅÅÉÄê»õ´ó²É¹º"
---ÈÎÎñÃèÊö
+--ä»»åŠ¡æ–‡æœ¬æè¿°
+x050061_g_MissionName			= "é—¨æ´¾å¹´è´§å¤§é‡‡è´­"
+--ä»»åŠ¡æè¿°
 x050061_g_MissionInfo			= ""
---ÈÎÎñÄ¿±ê
+--ä»»åŠ¡ç›®æ ‡
 x050061_g_MissionTarget		= "%f"
---Î´Íê³ÉÈÎÎñµÄnpc¶Ô»°
+--æœªå®Œæˆä»»åŠ¡çš„npcå¯¹è¯
 x050061_g_ContinueInfo		= ""
---Íê³ÉÈÎÎñnpcËµµÄ»°
+--å®Œæˆä»»åŠ¡npcè¯´çš„è¯
 x050061_g_MissionComplete	= ""
---Ã¿´Î»î¶¯¿ÉÒÔÍê³ÉµÄ´ÎÊı
+--æ¯æ¬¡æ´»åŠ¨å¯ä»¥å®Œæˆçš„æ¬¡æ•°
 x050061_g_MaxRound	= 3
 
---ÓÃÀ´±£´æ×Ö·û´®¸ñÊ½»¯µÄÊı¾İ
+--ç”¨æ¥ä¿å­˜å­—ç¬¦ä¸²æ ¼å¼åŒ–çš„æ•°æ®
 x050061_g_FormatList = {
 								"#{SMCJ_081021_29}",
 								"#{SMCJ_081021_30}",
@@ -65,8 +65,8 @@ x050061_g_FormatList = {
 								}
 
 
--- ÈÎÎñÍê³ÉÇé¿ö,ÄÚÈİ¶¯Ì¬Ë¢ĞÂ,Õ¼ÓÃÈÎÎñ²ÎÊıµÄµÚ1,2Î»
-x050061_g_Custom	=  { {id="#YÈÎÎñµ±Ç°»·Êı",num=8}}
+-- ä»»åŠ¡å®Œæˆæƒ…å†µ,å†…å®¹åŠ¨æ€åˆ·æ–°,å ç”¨ä»»åŠ¡å‚æ•°çš„ç¬¬1,2ä½
+x050061_g_Custom	=  { {id="#Yä»»åŠ¡å½“å‰ç¯æ•°",num=8}}
 --MisDescEnd
 
 x050061_G_RefID = 050059
@@ -78,7 +78,7 @@ function x050061_GetStrIndexByStrValue(stringV)
 			return i-1
 		end
 	end
-	local strText = format("±ØĞë½«%s×¢²áµ½StrListÖĞ", stringV)
+	local strText = format("å¿…é¡»å°†%sæ³¨å†Œåˆ°StrListä¸­", stringV)
 	----PrintStr(strText)
 	return 0;
 end
@@ -96,7 +96,7 @@ function x050061_OnContinue( sceneId, selfId, targetId )
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x050061_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 	CallScriptFunction( x050061_G_RefID, "OnSubmit",sceneId, selfId, targetId, selectRadioId,x050061_g_MissionId,x050061_g_ScriptId)
@@ -107,14 +107,14 @@ function x050061_OnItemChanged( sceneId, selfId, itemdataId )
 end
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x050061_OnContinue( sceneId, selfId, targetId)
 	CallScriptFunction(x050061_G_RefID,"OnContinue",sceneId, selfId, targetId,x050061_g_MissionId,x050061_g_ScriptId)
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x050061_OnAbandon( sceneId, selfId)
 	CallScriptFunction(x050061_G_RefID,"OnAbandon",sceneId, selfId,x050061_g_MissionId)

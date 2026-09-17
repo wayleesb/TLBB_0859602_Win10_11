@@ -1,11 +1,11 @@
-;²»Ê±ÓÃ¸ß¼¶´ò»÷¹¥»÷
+;ä¸æ—¶ç”¨é«˜çº§æ‰“å‡»æ”»å‡»
 [common]
 [commonend]
 
-;×¢ÒâÎïÀí¹¥»÷¼¼ÄÜÓÅÏÈ¼¶Ó¦¸Ã±ÈÔ¶³Ì¼¼ÄÜÓÅÏÈ¼¶¸ß
+;æ³¨æ„ç‰©ç†æ”»å‡»æŠ€èƒ½ä¼˜å…ˆçº§åº”è¯¥æ¯”è¿œç¨‹æŠ€èƒ½ä¼˜å…ˆçº§é«˜
 [skill]
-0:if(AIS_IsCanSkill(0)=1){AIS_ToSkill(0);AIS_SetTimes(-1);AIS_SetPRI(35);};Èç¹ûÄÜÊ¹ÓÃ0ºÅ¼¼ÄÜÔòÊÍ·Å£¬´ÎÊý²»ÏÞ£¨ÆÕÍ¨¹¥»÷£©
-1:if(AIS_IsCanSkill(551)=1&AIS_Rand()<5&AIS_GetHP()<80){AIS_ToSkill(551);AIS_SetTimes(-1);AIS_SetPRI(40);};5£¥ÄÜÊ¹ÓÃ551ºÅ¼¼ÄÜÔòÊÍ·Å£¬´ÎÊý²»ÏÞ
+0:if(AIS_IsCanSkill(0)=1){AIS_ToSkill(0);AIS_SetTimes(-1);AIS_SetPRI(35);};å¦‚æžœèƒ½ä½¿ç”¨0å·æŠ€èƒ½åˆ™é‡Šæ”¾ï¼Œæ¬¡æ•°ä¸é™ï¼ˆæ™®é€šæ”»å‡»ï¼‰
+1:if(AIS_IsCanSkill(551)=1&AIS_Rand()<5&AIS_GetHP()<80){AIS_ToSkill(551);AIS_SetTimes(-1);AIS_SetPRI(40);};5ï¼…èƒ½ä½¿ç”¨551å·æŠ€èƒ½åˆ™é‡Šæ”¾ï¼Œæ¬¡æ•°ä¸é™
 [skillend]
 
 [beskill]

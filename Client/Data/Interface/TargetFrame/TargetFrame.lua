@@ -1,35 +1,35 @@
 
 local strMenPaiName ={
-						"ÉÙÁÖ",
-						"Ã÷½Ì",	
-						"Ø¤°ï",	
-						"Îäµ±",	
-						"¶ëáÒ",	
-						"ĞÇËŞ",	
-						"ÌìÁú",	
-						"ÌìÉ½",	
-						"åĞÒ£",
-						"ĞÂÊÖ",	
-						"´óËÎ",
-						"´óËÎ",
-						"´óËÎ",
-						"´óÁÉ",
-						"´óÁÉ",
-						"´óÀí",	
-						"Î÷ÏÄ",	
-						"·¬°î",	
-						"Ã§¸Ç",	
-						"ÒÅÃñ",	
-						"ÀÇÈË",	
-						"°×Ãç",	
-						"ºÚÃç",	
-						"ĞŞÂŞ",	
-						"Ô½Å®",
-						"Ô½ÄĞ",
-						"öùÉñ",	
-						"Ò°ÊŞ",	
-						"ÂÌÁÖ",	
-						"ÑıÄ§",};
+						"å°‘æ—",
+						"æ˜æ•™",	
+						"ä¸å¸®",	
+						"æ­¦å½“",	
+						"å³¨åµ‹",	
+						"æ˜Ÿå®¿",	
+						"å¤©é¾™",	
+						"å¤©å±±",	
+						"é€é¥",
+						"æ–°æ‰‹",	
+						"å¤§å®‹",
+						"å¤§å®‹",
+						"å¤§å®‹",
+						"å¤§è¾½",
+						"å¤§è¾½",
+						"å¤§ç†",	
+						"è¥¿å¤",	
+						"ç•ªé‚¦",	
+						"è½ç›–",	
+						"é—æ°‘",	
+						"ç‹¼äºº",	
+						"ç™½è‹—",	
+						"é»‘è‹—",	
+						"ä¿®ç½—",	
+						"è¶Šå¥³",
+						"è¶Šç”·",
+						"é³„ç¥",	
+						"é‡å…½",	
+						"ç»¿æ—",	
+						"å¦–é­”",};
 
 
 function TargetFrame_PreLoad()
@@ -50,7 +50,7 @@ function TargetFrame_OnEvent(event)
 
 	if ( event == "MAINTARGET_OPEN" ) then
 	
-		--AxTrace(0,0,"´ò¿ªmain target");
+		--AxTrace(0,0,"æ‰“å¼€main target");
 		TargetFrame_DataBack:Show();
 		TargetFrame_DataBack2:Hide();
 		TargetFrame_Update_Name_Team();
@@ -125,7 +125,7 @@ function TargetFrame_OnEvent(event)
 	
 	-------------------------------------------------------------------------------------------------
 	--
-	-- µ±targetÊÇ×Ô¼ºµÄÊ±ºòÎŞ·¨Ë¢ĞÂ¡£
+	-- å½“targetæ˜¯è‡ªå·±çš„æ—¶å€™æ— æ³•åˆ·æ–°ã€‚
 	--
 	
 	--if( (event == "UNIT_MP") and (arg0 == "target") and Target:IsPresent()) then
@@ -157,7 +157,7 @@ end
 function TargetFrame_Update_Name()
 	local txtColor="#cFFFFFF";
 --or Target:GetData("ISNPC") == 0
---ÒÔÇ°Íæ¼ÒÍ³Ò»ÏÔÊ¾Îª°×É«£¬¸ù¾İÈîÃ¶5ÔÂ27ÈÕÎÄµµ¸ü¸Ä£¬Íæ¼ÒºÍNPC×ßÍ¬Ò»¹æÔò¡£
+--ä»¥å‰ç©å®¶ç»Ÿä¸€æ˜¾ç¤ºä¸ºç™½è‰²ï¼Œæ ¹æ®é˜®æš5æœˆ27æ—¥æ–‡æ¡£æ›´æ”¹ï¼Œç©å®¶å’ŒNPCèµ°åŒä¸€è§„åˆ™ã€‚
 	if Target:GetData( "RELATIVE" ) == 2  then 
 		txtColor = "#W"
 	else
@@ -180,21 +180,21 @@ function TargetFrame_Update_Name()
 	AxTrace( 8,0,txtColor..Target:GetName() );
 	local szIcon = Target : GetData("PORTRAIT");
 	TargetFrame_Icon:SetProperty("Image", szIcon);
---Ìí¼ÓÅĞ¶ÏÄ¿±êÊôĞÔµÄÉè¼Æ
-	--¡°³è¡±¡°ÈË¡±¡°¿ş¡±¡°ÊŞ¡±¡°Ã§¡±¡°ĞŞ¡±¡°Ñı¡±
+--æ·»åŠ åˆ¤æ–­ç›®æ ‡å±æ€§çš„è®¾è®¡
+	--â€œå® â€â€œäººâ€â€œå‚€â€â€œå…½â€â€œè½â€â€œä¿®â€â€œå¦–â€
 	local nNpcType = Target:GetData( "TYPE" );
 	TargetFrame_TypeIcon:SetProperty( "SetCurrentImage", "TypeName"..tostring( nNpcType ) );
 	
-	--1.ÓÑºÃ
-	--2.ÖĞÁ¢
-	--3.ÕäÊŞ
-	--4.ÆÕÍ¨µĞÈË
-	--5.¾«Ó¢µĞÈË
-	--6.µĞ·½boss	
+	--1.å‹å¥½
+	--2.ä¸­ç«‹
+	--3.çå…½
+	--4.æ™®é€šæ•Œäºº
+	--5.ç²¾è‹±æ•Œäºº
+	--6.æ•Œæ–¹boss	
 	local nNpcRelation = Target:GetData( "RELATION" );
 	TargetFrame_TypeFrame:SetProperty( "SetCurrentImage", "TypeFrame"..tostring( nNpcRelation ) );
 	
-	--¸úĞÂÃÅÅÉ
+	--è·Ÿæ–°é—¨æ´¾
 	local nNpcReputation = Target:GetData( "MEMPAI" );
 	if( nNpcReputation == -1 ) then
 		TargetFrame_CampFrame1:Hide();
@@ -236,36 +236,36 @@ function TargetFrame_Update_Level()
 	local txtColor="#cFFFFFF";
 	local level =  Target:GetData( "LEVEL" ) - Player:GetData( "LEVEL" );
 	
-	AxTrace( 0,0, "µÈ¼¶²îÎª"..tostring( level ) );
---¸ù¾İÈîÃ¶5ÔÂ27ÈÕ²ß»®ÎÄµµĞŞ¸Ä
+	AxTrace( 0,0, "ç­‰çº§å·®ä¸º"..tostring( level ) );
+--æ ¹æ®é˜®æš5æœˆ27æ—¥ç­–åˆ’æ–‡æ¡£ä¿®æ”¹
 --	if( level > 12 ) then
 --		txtColor = "#R";
 --	elseif( level > 4 ) then
 --		txtColor = "#cff9000";
---		--ÒÔÇ°ÊÇc9ccf00£¬¸ù¾İÑîÒ«Ìá¹©µÄ.jpgĞŞ¸Ä
+--		--ä»¥å‰æ˜¯c9ccf00ï¼Œæ ¹æ®æ¨è€€æä¾›çš„.jpgä¿®æ”¹
 --	elseif( level > -4 ) then
 --		txtColor="#Y";
 --	elseif( level > -12 ) then
 --		txtColor="#G"
 --	else
 --		txtColor="#c4b4b4b";
---¸ù¾İÑîÒ«¿ÚÊöĞŞ¸Ä
+--æ ¹æ®æ¨è€€å£è¿°ä¿®æ”¹
 --		txtColor="#c240c0c";
 --	end
 
---¸ù¾İÈîÃ¶5ÔÂ27ÈÕ²ß»®ÎÄµµĞŞ¸ÄÈçÏÂ
+--æ ¹æ®é˜®æš5æœˆ27æ—¥ç­–åˆ’æ–‡æ¡£ä¿®æ”¹å¦‚ä¸‹
 	if( level > 5 ) then
 		txtColor = "#R";
 	elseif( level > 2 ) then
 		txtColor = "#cff9000";
-		--ÒÔÇ°ÊÇc9ccf00£¬¸ù¾İÑîÒ«Ìá¹©µÄ.jpgĞŞ¸Ä
+		--ä»¥å‰æ˜¯c9ccf00ï¼Œæ ¹æ®æ¨è€€æä¾›çš„.jpgä¿®æ”¹
 	elseif( level >= -2 ) then
 		txtColor="#Y";
 	elseif( level >= -5 ) then
 		txtColor="#W"
 	else
 --		txtColor="#c4b4b4b";
---¸ù¾İÑîÒ«¿ÚÊöĞŞ¸Ä
+--æ ¹æ®æ¨è€€å£è¿°ä¿®æ”¹
 		txtColor="#W";
 	end
 	
@@ -281,10 +281,10 @@ function TargetFrame_ArtLayout_Click()
 	ShowContexMenu("other_player");
 end
 
--- ÏÔÊ¾ÓÒ¼ü²Ëµ¥
+-- æ˜¾ç¤ºå³é”®èœå•
 function TargetFrame_Show_Menu_Func()
 
-	--AxTrace( 0,0, "Target ÓÒ¼ü²Ëµ¥!");
+	--AxTrace( 0,0, "Target å³é”®èœå•!");
 	OpenTargetMenu();
 end
 

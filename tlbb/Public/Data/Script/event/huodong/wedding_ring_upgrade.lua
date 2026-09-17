@@ -1,85 +1,85 @@
---½á»é½äÖ¸Éı¼¶
+--ç»“å©šæˆ’æŒ‡å‡çº§
 --Created by zchw
---ÂåÑô 
+--æ´›é˜³ 
 
---ÈÎÎñÃû
+--ä»»åŠ¡å
 --MisDescBegin
---½Å±¾ºÅ
+--è„šæœ¬å·
 x808010_g_ScriptId	= 808010
---½ÓÊÜÈÎÎñNPCÊôĞÔ
+--æ¥å—ä»»åŠ¡NPCå±æ€§
 x808010_g_Position_X=47.0185
 x808010_g_Position_Z=62.9575
 x808010_g_SceneID=0
-x808010_g_AccomplishNPC_Name="ÔÂÀÏ"
+x808010_g_AccomplishNPC_Name="æœˆè€"
 
---ÈÎÎñºÅ
+--ä»»åŠ¡å·
 x808010_g_MissionId			= 1144
 
---ÈÎÎñÄ¿±ênpc
-x808010_g_Name 					= "ÔÂÀÏ"
---ÈÎÎñ¹éÀà
+--ä»»åŠ¡ç›®æ ‡npc
+x808010_g_Name 					= "æœˆè€"
+--ä»»åŠ¡å½’ç±»
 x808010_g_MissionKind			= 11
---ÈÎÎñµÈ¼¶
+--ä»»åŠ¡ç­‰çº§
 x808010_g_MissionLevel		= 10000
---ÊÇ·ñÊÇ¾«Ó¢ÈÎÎñ
+--æ˜¯å¦æ˜¯ç²¾è‹±ä»»åŠ¡
 x808010_g_IfMissionElite	= 0
---ÈÎÎñÊÇ·ñÒÑ¾­Íê³É
-x808010_g_IsMissionOkFail	= 0		--ÈÎÎñ²ÎÊıµÄµÚ0Î»
+--ä»»åŠ¡æ˜¯å¦å·²ç»å®Œæˆ
+x808010_g_IsMissionOkFail	= 0		--ä»»åŠ¡å‚æ•°çš„ç¬¬0ä½
 
---ÈÎÎñÎÄ±¾ÃèÊö
-x808010_g_MissionName			= "ÓÀºã×ê½ä"
---ÈÎÎñÃèÊö
+--ä»»åŠ¡æ–‡æœ¬æè¿°
+x808010_g_MissionName			= "æ°¸æ’é’»æˆ’"
+--ä»»åŠ¡æè¿°
 x808010_g_MissionInfo			= ""
---ÈÎÎñÄ¿±ê
+--ä»»åŠ¡ç›®æ ‡
 x808010_g_MissionTarget		= "%f"
---Î´Íê³ÉÈÎÎñµÄnpc¶Ô»°
+--æœªå®Œæˆä»»åŠ¡çš„npcå¯¹è¯
 x808010_g_ContinueInfo		= ""
---Íê³ÉÈÎÎñnpcËµµÄ»°
+--å®Œæˆä»»åŠ¡npcè¯´çš„è¯
 x808010_g_MissionComplete	= ""
 
 x808010_g_StrForePart = 4
 
---ÓÃÀ´±£´æ×Ö·û´®¸ñÊ½»¯µÄÊı¾İ
-x808010_g_FormatList = {"Çë·òÆŞÁ½ÈË×é¶ÓÇ°Íù%s£¬%s£¬%s£¬ÓÃÔÂÀÏ¸øµÄºùÂ«ÊÕ¼¯Ò»Ğ©ÏÉÁéÖ®Æø»ØÀ´¡£",}
+--ç”¨æ¥ä¿å­˜å­—ç¬¦ä¸²æ ¼å¼åŒ–çš„æ•°æ®
+x808010_g_FormatList = {"è¯·å¤«å¦»ä¸¤äººç»„é˜Ÿå‰å¾€%sï¼Œ%sï¼Œ%sï¼Œç”¨æœˆè€ç»™çš„è‘«èŠ¦æ”¶é›†ä¸€äº›ä»™çµä¹‹æ°”å›æ¥ã€‚",}
 								
 x808010_g_StrList = {
-	"ÎŞÁ¿É½µÄ°×Ô³Ê¯Õó#{_INFOAIM53,264,6,}",
-	"½£¸óµÄ½£ÃÅµş´ä#{_INFOAIM130,135,7,}",
-	"¶Ø»ÍµÄå«º£Çó·ğ#{_INFOAIM260,260,8,}",
-	"¾µºşµÄÓñ´øÁÙ·ç#{_INFOAIM39,261,5,}",
-	"Ì«ºşµÄÎèé¿¸èÌ¨#{_INFOAIM160,252,4,}",
-	"áÔÉ½µÄ½­É½¶à½¿#{_INFOAIM275,85,3,}",
-	"Î÷ºşµÄÒ»Íû»¢ÅÜ#{_INFOAIM170,235,30,}",
-	"¶ıº£µÄ°Ùô´ÕùÁ÷#{_INFOAIM260,270,24,}",
-	"ÑãÄÏµÄ·ãÇÅÏ¦ÕÕ#{_INFOAIM150,250,18,}",
-	"ÁúÈªµÄ·ÉÁ÷Ö±ÏÂ#{_INFOAIM270,280,31,}",
-	"²ÔÉ½µÄËÆË®Äê»ª#{_INFOAIM258,73,25,}",
-	"Ñã±±µÄ±ÚÁ¢Ç§Øğ#{_INFOAIM283,179,19,}",
-	"ÎäÒÄµÄÑÌËø¶şÇÇ#{_INFOAIM54,182,32,}",
-	"Ê¯ÁÖµÄ·åÂÍÈë¾Û#{_INFOAIM195,53,26,}",
-	"²İÔ­µÄÀÇÍõÊ¯Õó#{_INFOAIM143,254,20,}",
-	"Ã·ÁëµÄÃ·Áë·ğ¹â#{_INFOAIM284,82,33,}",
-	"ÓñÏªµÄÇàÃ¼Èç¶¹#{_INFOAIM268,116,27,}",
-	"ÁÉÎ÷µÄ°½°üÏà»á#{_INFOAIM277,117,21,}",
-	"ÄÏº£µÄÌìÄÏÒ»Öù#{_INFOAIM61,225,34,}",
-	"»ÆÁú¸®µÄÌì³ØÑ©¾°#{_INFOAIM289,66,23,}",
+	"æ— é‡å±±çš„ç™½çŒ¿çŸ³é˜µ#{_INFOAIM53,264,6,}",
+	"å‰‘é˜çš„å‰‘é—¨å ç¿ #{_INFOAIM130,135,7,}",
+	"æ•¦ç…Œçš„ç€šæµ·æ±‚ä½›#{_INFOAIM260,260,8,}",
+	"é•œæ¹–çš„ç‰å¸¦ä¸´é£#{_INFOAIM39,261,5,}",
+	"å¤ªæ¹–çš„èˆæ¦­æ­Œå°#{_INFOAIM160,252,4,}",
+	"åµ©å±±çš„æ±Ÿå±±å¤šå¨‡#{_INFOAIM275,85,3,}",
+	"è¥¿æ¹–çš„ä¸€æœ›è™è·‘#{_INFOAIM170,235,30,}",
+	"æ´±æµ·çš„ç™¾èˆ¸äº‰æµ#{_INFOAIM260,270,24,}",
+	"é›å—çš„æ«æ¡¥å¤•ç…§#{_INFOAIM150,250,18,}",
+	"é¾™æ³‰çš„é£æµç›´ä¸‹#{_INFOAIM270,280,31,}",
+	"è‹å±±çš„ä¼¼æ°´å¹´å#{_INFOAIM258,73,25,}",
+	"é›åŒ—çš„å£ç«‹åƒä»#{_INFOAIM283,179,19,}",
+	"æ­¦å¤·çš„çƒŸé”äºŒä¹”#{_INFOAIM54,182,32,}",
+	"çŸ³æ—çš„å³°å³¦å…¥èš#{_INFOAIM195,53,26,}",
+	"è‰åŸçš„ç‹¼ç‹çŸ³é˜µ#{_INFOAIM143,254,20,}",
+	"æ¢…å²­çš„æ¢…å²­ä½›å…‰#{_INFOAIM284,82,33,}",
+	"ç‰æºªçš„é’çœ‰å¦‚è±†#{_INFOAIM268,116,27,}",
+	"è¾½è¥¿çš„æ•–åŒ…ç›¸ä¼š#{_INFOAIM277,117,21,}",
+	"å—æµ·çš„å¤©å—ä¸€æŸ±#{_INFOAIM61,225,34,}",
+	"é»„é¾™åºœçš„å¤©æ± é›ªæ™¯#{_INFOAIM289,66,23,}",
 }
 
 x808010_g_MaxRound	= 3
---¿ØÖÆ½Å±¾
+--æ§åˆ¶è„šæœ¬
 x808010_g_ControlScript		= 808010
 
---ÈÎÎñÍê³ÉÇé¿ö,ÄÚÈİ¶¯Ì¬Ë¢ĞÂ,·Ö±ğÕ¼ÓÃÈÎÎñ²ÎÊıµÄµÚ1Î»
-x808010_g_Custom	= { {id="ÒÑÊÕ¼¯ÏÉÁéÖ®Æø",num=3}}
+--ä»»åŠ¡å®Œæˆæƒ…å†µ,å†…å®¹åŠ¨æ€åˆ·æ–°,åˆ†åˆ«å ç”¨ä»»åŠ¡å‚æ•°çš„ç¬¬1ä½
+x808010_g_Custom	= { {id="å·²æ”¶é›†ä»™çµä¹‹æ°”",num=3}}
 --MisDescEnd
 
---¸øÓÀºã×ê½ä¿ÛÇ®
+--ç»™æ°¸æ’é’»æˆ’æ‰£é’±
 x808010_g_Price  	= 1000;
---Ó©»ğ³æID
+--è¤ç«è™«ID
 x808010_g_FlashInsect_id = 30501104;
---ÔÂ¹âºùÂ«ID
+--æœˆå…‰è‘«èŠ¦ID
 x808010_g_HuLu_id = 40004465;
---ÓÀºã×ê½äµÈ¼¶ID¶ÔÓ¦±í
+--æ°¸æ’é’»æˆ’ç­‰çº§IDå¯¹åº”è¡¨
 x808010_g_Level2RingId =
 {
 	[1] = {Lvl = 30, RingId = 10422125},
@@ -92,39 +92,39 @@ x808010_g_Level2RingId =
 	[8] = {Lvl = 115, RingId = 10422132},
 	[9] = {Lvl = 120, RingId = 10422132}, -- add by zchw TT:41264
 }
---ÓÀºã×ê½äÓë×£¸£½äÖ¸ID±í
+--æ°¸æ’é’»æˆ’ä¸ç¥ç¦æˆ’æŒ‡IDè¡¨
 x808010_g_RingId_Mapping =
 {
-	[1] = {10422125, 10422126, 10422127, 10422128, 10422129, 10422130, 10422131, 10422132}, 	--ÓÀºã×ê½ä
-	[2] = {10422133, 10422134, 10422135, 10422136, 10422137, 10422138, 10422139, 10422140},		--×£¸£½äÖ¸	
+	[1] = {10422125, 10422126, 10422127, 10422128, 10422129, 10422130, 10422131, 10422132}, 	--æ°¸æ’é’»æˆ’
+	[2] = {10422133, 10422134, 10422135, 10422136, 10422137, 10422138, 10422139, 10422140},		--ç¥ç¦æˆ’æŒ‡	
 }
 
---³¡¾°ĞÅÏ¢±í
+--åœºæ™¯ä¿¡æ¯è¡¨
 x808010_g_select_sceneId = 
 {
-	[1]=  {6, 	"ÎŞÁ¿É½µÄ°×Ô³Ê¯Õó", 	53,264, 612},
-	[2]=  {7, 	"½£¸óµÄ½£ÃÅµş´ä",   	130,135, 711},
-	[3]=  {8, 	"¶Ø»ÍµÄå«º£Çó·ğ",			260,260, 813},
-	[4]=  {5, 	"¾µºşµÄÓñ´øÁÙ·ç",			39,261, 513},
-	[5]=  {4, 	"Ì«ºşµÄÎèé¿¸èÌ¨",			160,252, 411},
-	[6]=  {3, 	"áÔÉ½µÄ½­É½¶à½¿",			275,85, 311},
-	[7]=  {30, 	"Î÷ºşµÄÒ»Íû»¢ÅÜ",     170,235, 3011},
-	[8]=  {24, 	"¶ıº£µÄ°Ùô´ÕùÁ÷",     260,270, 2411},
-	[9]=  {18, 	"ÑãÄÏµÄ·ãÇÅÏ¦ÕÕ",     150,250, 1811},
-	[10]= {31, 	"ÁúÈªµÄ·ÉÁ÷Ö±ÏÂ",     270,280, 3111},
-	[11]= {25, 	"²ÔÉ½µÄËÆË®Äê»ª",     258,73, 2513},
-	[12]= {19, 	"Ñã±±µÄ±ÚÁ¢Ç§Øğ",     283,179, 1912},
-	[13]= {32, 	"ÎäÒÄµÄÑÌËø¶şÇÇ",     54,182, 3211},
-	[14]= {26, 	"Ê¯ÁÖµÄ·åÂÍÈë¾Û",     195,53, 2614},
-	[15]= {20, 	"²İÔ­µÄÀÇÍõÊ¯Õó",     143,254, 2012},
-	[16]= {33, 	"Ã·ÁëµÄÃ·Áë·ğ¹â",     284,82, 3313},
-	[17]= {27, 	"ÓñÏªµÄÇàÃ¼Èç¶¹",     268,116, 2713},
-	[18]= {21, 	"ÁÉÎ÷µÄ°½°üÏà»á",     277,117, 2113},
-	[19]= {34, 	"ÄÏº£µÄÌìÄÏÒ»Öù",     61,225, 3411},
-	[20]= {23,	"»ÆÁú¸®µÄÌì³ØÑ©¾°",   289,66, 2313},
+	[1]=  {6, 	"æ— é‡å±±çš„ç™½çŒ¿çŸ³é˜µ", 	53,264, 612},
+	[2]=  {7, 	"å‰‘é˜çš„å‰‘é—¨å ç¿ ",   	130,135, 711},
+	[3]=  {8, 	"æ•¦ç…Œçš„ç€šæµ·æ±‚ä½›",			260,260, 813},
+	[4]=  {5, 	"é•œæ¹–çš„ç‰å¸¦ä¸´é£",			39,261, 513},
+	[5]=  {4, 	"å¤ªæ¹–çš„èˆæ¦­æ­Œå°",			160,252, 411},
+	[6]=  {3, 	"åµ©å±±çš„æ±Ÿå±±å¤šå¨‡",			275,85, 311},
+	[7]=  {30, 	"è¥¿æ¹–çš„ä¸€æœ›è™è·‘",     170,235, 3011},
+	[8]=  {24, 	"æ´±æµ·çš„ç™¾èˆ¸äº‰æµ",     260,270, 2411},
+	[9]=  {18, 	"é›å—çš„æ«æ¡¥å¤•ç…§",     150,250, 1811},
+	[10]= {31, 	"é¾™æ³‰çš„é£æµç›´ä¸‹",     270,280, 3111},
+	[11]= {25, 	"è‹å±±çš„ä¼¼æ°´å¹´å",     258,73, 2513},
+	[12]= {19, 	"é›åŒ—çš„å£ç«‹åƒä»",     283,179, 1912},
+	[13]= {32, 	"æ­¦å¤·çš„çƒŸé”äºŒä¹”",     54,182, 3211},
+	[14]= {26, 	"çŸ³æ—çš„å³°å³¦å…¥èš",     195,53, 2614},
+	[15]= {20, 	"è‰åŸçš„ç‹¼ç‹çŸ³é˜µ",     143,254, 2012},
+	[16]= {33, 	"æ¢…å²­çš„æ¢…å²­ä½›å…‰",     284,82, 3313},
+	[17]= {27, 	"ç‰æºªçš„é’çœ‰å¦‚è±†",     268,116, 2713},
+	[18]= {21, 	"è¾½è¥¿çš„æ•–åŒ…ç›¸ä¼š",     277,117, 2113},
+	[19]= {34, 	"å—æµ·çš„å¤©å—ä¸€æŸ±",     61,225, 3411},
+	[20]= {23,	"é»„é¾™åºœçš„å¤©æ± é›ªæ™¯",   289,66, 2313},
 }
 
---µÈ¼¶¶ÔÓ¦³¡¾°³éÈ¡Ô´ÊıÄ¿
+--ç­‰çº§å¯¹åº”åœºæ™¯æŠ½å–æºæ•°ç›®
 x808010_g_level_num =
 {
 	{min = 30, max = 49, num = 10},
@@ -133,38 +133,38 @@ x808010_g_level_num =
 	{min = 90, max = 120, num = 20},
 }
 
---ÕæĞÄÊ¯Id
+--çœŸå¿ƒçŸ³Id
 x808010_g_TrueLoveStone_id = 30700204;
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x808010_OnDefaultEvent( sceneId, selfId, targetId )
 	local numText = GetNumText();
-	--ÓÀºã×ê½ä
+	--æ°¸æ’é’»æˆ’
 	if numText == 1 then
 		x808010_OnClickTrueLoveRing(sceneId, selfId, targetId);
-	--ÓÀºã×ê½ä°ïÖú
+	--æ°¸æ’é’»æˆ’å¸®åŠ©
 	elseif numText == 2 then
 		x808010_ReturnDlg(sceneId, selfId, targetId, "#{YHJZ_081007_48}");
-	--ÁìÈ¡ÓÀºã×ê½ä
+	--é¢†å–æ°¸æ’é’»æˆ’
 	elseif numText == 11 then
 		x808010_GetTrueLoveRing(sceneId, selfId, targetId);
-	--Éı¼¶ÓÀºã×ê½ä
+	--å‡çº§æ°¸æ’é’»æˆ’
 	elseif numText == 12 then
 		x808010_UpgradeTrueLoveRing(sceneId, selfId, targetId);
-	--×£¸£ÓÀºã×ê½ä
+	--ç¥ç¦æ°¸æ’é’»æˆ’
 	elseif numText == 13 then
 	 	BeginEvent(sceneId)
 			AddText(sceneId, "#{YHJZ_081007_26}");
-			AddNumText(sceneId, x808010_g_ScriptId, "½ÓÊÜ", 6, 131);
-			AddNumText(sceneId, x808010_g_ScriptId, "·µ»Ø", 6, 132);
+			AddNumText(sceneId, x808010_g_ScriptId, "æ¥å—", 6, 131);
+			AddNumText(sceneId, x808010_g_ScriptId, "è¿”å›", 6, 132);
 		EndEvent()
 		DispatchEventList(sceneId, selfId, targetId);
-	--Íê³ÉÈÎÎñ£¬Ñ¡Ôñ"ÊÇµÄ"
+	--å®Œæˆä»»åŠ¡ï¼Œé€‰æ‹©"æ˜¯çš„"
 	elseif numText == 111 then
 		x808010_ConfirmSubmitMission(sceneId, selfId, targetId);
-	--È·¶¨ Éı¼¶×ê½ä
+	--ç¡®å®š å‡çº§é’»æˆ’
 	elseif numText == 333 then
 		x808010_ConfirmUpgrade(sceneId, selfId, targetId);
 	--nothing
@@ -173,20 +173,20 @@ function x808010_OnDefaultEvent( sceneId, selfId, targetId )
 		UICommand_AddInt( sceneId, targetId )
 		EndUICommand( sceneId )
 		DispatchUICommand( sceneId, selfId, 1000 )	
-	--½ÓÊÜ ×£¸£×ê½ä
+	--æ¥å— ç¥ç¦é’»æˆ’
 	elseif numText == 131 then
 		x808010_BlessRing(sceneId, selfId, targetId);		
-	--·µ»Ø ×£¸£×ê½ä
+	--è¿”å› ç¥ç¦é’»æˆ’
 	elseif numText == 132 then
 		x808010_ListOption(sceneId, selfId, targetId);
 	end
 end
 
 --**********************************
---·òÆŞ×é¶ÓÅĞ¶Ï
+--å¤«å¦»ç»„é˜Ÿåˆ¤æ–­
 --**********************************
 function x808010_IsCoupleMakeTeam(sceneId,selfId,type)
-	--1.ÊÇ·ñ×é¶Ó
+	--1.æ˜¯å¦ç»„é˜Ÿ
 	local teamId = GetTeamId(sceneId,selfId)
 	if teamId<0 then
 		if type == 1 then
@@ -197,7 +197,7 @@ function x808010_IsCoupleMakeTeam(sceneId,selfId,type)
 			return 0, "#{YHJZ_081007_27}";
 		end
 	end	
-	--2.ÊÇ·ñÁ©ÈË
+	--2.æ˜¯å¦ä¿©äºº
 	if GetTeamSize(sceneId,selfId)~=2 then
 		if type == 1 then
 			return 0, "#{YHJZ_081007_9}";
@@ -207,7 +207,7 @@ function x808010_IsCoupleMakeTeam(sceneId,selfId,type)
 			return 0, "#{YHJZ_081007_9}";
 		end
 	end	
-	--3.ÊÇ·ñÔÚ¸½½ü
+	--3.æ˜¯å¦åœ¨é™„è¿‘
 	if GetNearTeamCount(sceneId,selfId) ~= 2 then
 		if type == 1 then
 			return 0, "#{YHJZ_081007_9}";
@@ -217,7 +217,7 @@ function x808010_IsCoupleMakeTeam(sceneId,selfId,type)
 			return 0, "#{YHJZ_081007_28}";
 		end
 	end	
-	--4.ÊÇ·ñÊÇ·òÆŞ
+	--4.æ˜¯å¦æ˜¯å¤«å¦»
 	local tid1 = GetNearTeamMember(sceneId,selfId,0)
 	local tid2 = GetNearTeamMember(sceneId,selfId,1)
 	if LuaFnIsMarried(sceneId,selfId)<=0 then
@@ -244,42 +244,42 @@ function x808010_IsCoupleMakeTeam(sceneId,selfId,type)
 end
 
 --**********************************
---ÁĞ¾ÙÑ¡Ïî
+--åˆ—ä¸¾é€‰é¡¹
 --**********************************
 function x808010_ListOption(sceneId, selfId, targetId)
 	BeginEvent(sceneId)
 		AddText(sceneId, "#{YHJZ_081007_3}")
-		AddNumText(sceneId, x808010_g_ScriptId, "#{YHJZ_081007_4}", 1, 11); 			--ÎÒÒªÁìÈ¡ÓÀºã×ê½ä
-		AddNumText(sceneId, x808010_g_ScriptId, "#{YHJZ_081007_5}", 1, 12); 			--ÎÒÏëÉı¼¶ÓÀºã×ê½ä
-		AddNumText(sceneId, x808010_g_ScriptId, "#{YHJZ_081007_6}", 1, 13); 			--ÎÒÏë×£¸£ÓÀºã×ê½ä
-		AddNumText(sceneId, x808010_g_ScriptId, "#{YHJZ_081007_7}", 9, 14);	  		--ÎÒÃ»Ê²Ã´ÊÂ...
+		AddNumText(sceneId, x808010_g_ScriptId, "#{YHJZ_081007_4}", 1, 11); 			--æˆ‘è¦é¢†å–æ°¸æ’é’»æˆ’
+		AddNumText(sceneId, x808010_g_ScriptId, "#{YHJZ_081007_5}", 1, 12); 			--æˆ‘æƒ³å‡çº§æ°¸æ’é’»æˆ’
+		AddNumText(sceneId, x808010_g_ScriptId, "#{YHJZ_081007_6}", 1, 13); 			--æˆ‘æƒ³ç¥ç¦æ°¸æ’é’»æˆ’
+		AddNumText(sceneId, x808010_g_ScriptId, "#{YHJZ_081007_7}", 9, 14);	  		--æˆ‘æ²¡ä»€ä¹ˆäº‹...
 	EndEvent()
 	DispatchEventList(sceneId, selfId, targetId);
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x808010_OnEnumerate( sceneId, selfId, targetId )
-	AddNumText(sceneId, x808010_g_ScriptId, "#{YHJZ_081007_1}", 6, 1);				--ÓÀºã×ê½ä
-	AddNumText(sceneId, x808010_g_ScriptId, "#{YHJZ_081007_2}", 11, 2);				--¹ØÓÚÓÀºã×ê½ä
+	AddNumText(sceneId, x808010_g_ScriptId, "#{YHJZ_081007_1}", 6, 1);				--æ°¸æ’é’»æˆ’
+	AddNumText(sceneId, x808010_g_ScriptId, "#{YHJZ_081007_2}", 11, 2);				--å…³äºæ°¸æ’é’»æˆ’
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x808010_CheckAccept( sceneId, selfId, type )
-  if type == 1 then 		--ÁìÈ¡
-  	--µÈ¼¶´ïµ½30£¿
+  if type == 1 then 		--é¢†å–
+  	--ç­‰çº§è¾¾åˆ°30ï¼Ÿ
   	if GetLevel(sceneId, selfId) < 30 then
   		return 0, "#{YHJZ_081007_47}";
   	end
-		--·òÆŞ2ÈË×é¶Ó£¿
+		--å¤«å¦»2äººç»„é˜Ÿï¼Ÿ
 		local ret, msg = x808010_IsCoupleMakeTeam(sceneId, selfId, 1);
 		if ret == 0 then
 			return 0, msg;
 		end
-	 	--ÓĞÓÀºã×ê½ä or ×£¸£×ê½ä£¿
+	 	--æœ‰æ°¸æ’é’»æˆ’ or ç¥ç¦é’»æˆ’ï¼Ÿ
 	 	for i=1, 2 do
 	 		for j, subTab in x808010_g_RingId_Mapping[i] do
 		 		if LuaFnGetItemCount(sceneId, selfId, subTab) >= 1 then
@@ -287,31 +287,31 @@ function x808010_CheckAccept( sceneId, selfId, type )
 		 		end
 	 		end
 	 	end
-	 	--ÓĞ10Òø£¿
+	 	--æœ‰10é“¶ï¼Ÿ
 	 	if GetMoney(sceneId, selfId) < x808010_g_Price then
 	 		return 0, "#{YHJZ_081007_11}";
 	 	end
-	 	--±³°üµÀ¾ßÀ¸Âú£¿
+	 	--èƒŒåŒ…é“å…·æ æ»¡ï¼Ÿ
 	 	if LuaFnGetPropertyBagSpace(sceneId, selfId) < 1 then
 	 		return 0, "#{YHJZ_081007_12}"
 	 	end
-	 	--¼ì²âÍ¨¹ı
+	 	--æ£€æµ‹é€šè¿‡
 	 	return 1, "ok";
-	elseif type == 2 then  --Éı¼¶
-		--·òÆŞ2ÈË×é¶Ó£¿
+	elseif type == 2 then  --å‡çº§
+		--å¤«å¦»2äººç»„é˜Ÿï¼Ÿ
 		local ret, msg = x808010_IsCoupleMakeTeam(sceneId, selfId, 2);
 		if ret == 0 then
 			return 0, msg;
 		end	
-	 	--ÓĞ40Ö»Ó©»ğ³æ
+	 	--æœ‰40åªè¤ç«è™«
 	 	if LuaFnGetAvailableItemCount(sceneId, selfId, x808010_g_FlashInsect_id) < 40 then
 	 		return 0, "#{YHJZ_081007_16}";
 	 	end
-	 	--´ïµ½30¼¶£¿
+	 	--è¾¾åˆ°30çº§ï¼Ÿ
 	 	if GetLevel(sceneId, selfId) < 30 then
 	 		return 0, "#{YHJZ_081007_17}";
 	 	end
-	 	--×°±¸ÁËÓÀºã×ê½ä£¿
+	 	--è£…å¤‡äº†æ°¸æ’é’»æˆ’ï¼Ÿ
 	 	local ringCount = 0;
 	 	local ringAvailCount = 0;
 	 	local tempRingId = 0;
@@ -329,17 +329,17 @@ function x808010_CheckAccept( sceneId, selfId, type )
 	 		end
 	 	end
 
-	 	if ringCount < 1 then 							--ÎŞ½äÖ¸
+	 	if ringCount < 1 then 							--æ— æˆ’æŒ‡
 	 		return 0, "#{YHJZ_081007_19}";
 	 	end
-		if ringAvailCount < ringCount then	--×°±¸ÉÏ or Ëø¶¨ÁË
+		if ringAvailCount < ringCount then	--è£…å¤‡ä¸Š or é”å®šäº†
 			return 0, "#{YHJZ_081007_18}";
 		end		
-	 	--×ê½äÎ¨Ò»£¿
+	 	--é’»æˆ’å”¯ä¸€ï¼Ÿ
 		if ringAvailCount > 1 then
 			return 0, "#{YHJZ_081007_20}";
 		end
-	 	--»»ÈËÁË£¿
+	 	--æ¢äººäº†ï¼Ÿ
 	 	local bagPos = GetBagPosByItemSn(sceneId, selfId, tempRingId);
 	 	local _, name = LuaFnGetItemCreator(sceneId, selfId, bagPos);
 	 	local spouseGuid = LuaFnGetSpouseGUID(sceneId, selfId);
@@ -348,26 +348,26 @@ function x808010_CheckAccept( sceneId, selfId, type )
 	 	if name ~= spouseName then
 	 		return 0, "#{YHJZ_081007_21}";
 	 	end
-	 	--ÒÑÓĞ¸ÃµÈ¼¶½äÖ¸£¿
+	 	--å·²æœ‰è¯¥ç­‰çº§æˆ’æŒ‡ï¼Ÿ
 	 	local myLvl = GetLevel(sceneId, selfId);
 	 	local index = x808010_GetTblIdx(myLvl);
 	 	if tempIndex == index then
 	 		local msg = format("#{YHJZ_081007_22}%d#{YHJZ_081007_23}", x808010_g_Level2RingId[index+1].Lvl);
 	 		return 0, msg;
 	 	end
-	 	--±³°üµÀ¾ßÀ¸Âú£¿
+	 	--èƒŒåŒ…é“å…·æ æ»¡ï¼Ÿ
 	 	if LuaFnGetPropertyBagSpace(sceneId, selfId) < 1 then
 	 		return 0, "#{YHJZ_081007_24}";
 	 	end
-	 	--¼ì²âÍ¨¹ı
+	 	--æ£€æµ‹é€šè¿‡
 	 	return 1, "OK";
-	elseif type == 3 then		--×£¸£
-		--·òÆŞ×é¶Ó£¿
+	elseif type == 3 then		--ç¥ç¦
+		--å¤«å¦»ç»„é˜Ÿï¼Ÿ
 		local ret, msg = x808010_IsCoupleMakeTeam(sceneId, selfId, 3);
 		if ret == 0 then
 			return 0, msg;
 		end
-		--Íæ¼ÒÊÇ·ñÓĞÓÀºã½äÖ¸£¿
+		--ç©å®¶æ˜¯å¦æœ‰æ°¸æ’æˆ’æŒ‡ï¼Ÿ
 		local ret_Ring_id = 0;
 		local sum = 0;
 		local sumAvail = 0;
@@ -384,21 +384,21 @@ function x808010_CheckAccept( sceneId, selfId, type )
 		if sum == 0 then
 			return 0, "#{YHJZ_081007_29}"
 		end
-		--Åå´÷ ÉÏËø£¿
+		--ä½©æˆ´ ä¸Šé”ï¼Ÿ
 		if sum > sumAvail then
 			return 0, "#{YHJZ_081007_18}";
 		end
-		--Î¨Ò»£¿
+		--å”¯ä¸€ï¼Ÿ
 		if sumAvail > 1 then
 			return 0, "#{YHJZ_081007_20}";
 		end
-		--ÊÇ·ñ×£¸£¹ı£¿
+		--æ˜¯å¦ç¥ç¦è¿‡ï¼Ÿ
 		for i, Ring_Id in x808010_g_RingId_Mapping[2] do
 			if ret_Ring_id == Ring_Id then
 				return 0, "#{YHJZ_081103_1}";
 			end
 		end
-		--Íæ¼ÒÓĞÕæĞÄÊ¯£¿
+		--ç©å®¶æœ‰çœŸå¿ƒçŸ³ï¼Ÿ
 		if LuaFnGetAvailableItemCount(sceneId, selfId, x808010_g_TrueLoveStone_id) < 1 then
 			return 0, "#{YHJZ_081007_30}";
 		end
@@ -408,7 +408,7 @@ function x808010_CheckAccept( sceneId, selfId, type )
 end
 
 --**********************************
---È¡µÃÍæ¼ÒµÈ¼¶¶ÔÓ¦µ½x808010_g_Level2RingIdµÄË÷Òı
+--å–å¾—ç©å®¶ç­‰çº§å¯¹åº”åˆ°x808010_g_Level2RingIdçš„ç´¢å¼•
 --**********************************
 function x808010_GetTblIdx( level )
 	for i, record in x808010_g_Level2RingId do
@@ -420,25 +420,25 @@ function x808010_GetTblIdx( level )
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x808010_CheckSubmit( sceneId, selfId )
-	--·òÆŞ×é¶Ó ÔÚ¸½½ü 
+	--å¤«å¦»ç»„é˜Ÿ åœ¨é™„è¿‘ 
 	
-	--1.ÊÇ·ñ×é¶Ó
+	--1.æ˜¯å¦ç»„é˜Ÿ
 	local teamId = GetTeamId(sceneId,selfId)
 	if teamId<0 then
 		return 0, "#{YHJZ_081007_27}";
 	end	
-	--2.ÊÇ·ñÁ©ÈË
+	--2.æ˜¯å¦ä¿©äºº
 	if GetTeamSize(sceneId,selfId)~=2 then
 		return 0, "#{YHJZ_081007_27}";
 	end	
-	--3.ÊÇ·ñÔÚ¸½½ü
+	--3.æ˜¯å¦åœ¨é™„è¿‘
 	if GetNearTeamCount(sceneId,selfId) ~= 2 then
 		return 0, "#{YHJZ_081007_28}";
 	end	
-	--4.ÊÇ·ñÊÇ·òÆŞ
+	--4.æ˜¯å¦æ˜¯å¤«å¦»
 	local tid1 = GetNearTeamMember(sceneId,selfId,0)
 	local tid2 = GetNearTeamMember(sceneId,selfId,1)
 	if LuaFnIsMarried(sceneId,selfId)<=0 then
@@ -467,16 +467,16 @@ function x808010_CheckSubmit( sceneId, selfId )
 	 	end
 	end
 
- 	if ringCount < 1 then 							--ÎŞÓÀºã×ê½ä
+ 	if ringCount < 1 then 							--æ— æ°¸æ’é’»æˆ’
  		return 0, "#{YHJZ_081007_40}";
  	end
- 	if ringCount ~= 1 then 							--×ê½äÎ¨Ò»
+ 	if ringCount ~= 1 then 							--é’»æˆ’å”¯ä¸€
  		return 0, "#{YHJZ_081007_20}";
  	end
-	if ringAvailCount < ringCount then	--×°±¸ or Ëø¶¨
+	if ringAvailCount < ringCount then	--è£…å¤‡ or é”å®š
 		return 0, "#{YHJZ_081007_18}";
 	end		
- 	--»»ÈËÁË£¿
+ 	--æ¢äººäº†ï¼Ÿ
  	local bagPos = GetBagPosByItemSn(sceneId, selfId, tempRingId);
  	local _, name = LuaFnGetItemCreator(sceneId, selfId, bagPos);
  	local spouseGuid = LuaFnGetSpouseGUID(sceneId, selfId);
@@ -489,14 +489,14 @@ function x808010_CheckSubmit( sceneId, selfId )
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x808010_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 
 end
 
 --**********************************
---È·¶¨Íê³ÉÈÎÎñ
+--ç¡®å®šå®Œæˆä»»åŠ¡
 --**********************************
 function x808010_ConfirmSubmitMission(sceneId, selfId, targetId)
 	local ret, msg = x808010_CheckSubmit(sceneId, selfId);
@@ -505,13 +505,13 @@ function x808010_ConfirmSubmitMission(sceneId, selfId, targetId)
 		return 		
 	end
 	local bFlag = 0;
-	--×£¸£ ÌáÊ¾
+	--ç¥ç¦ æç¤º
 	for i, RingId in x808010_g_RingId_Mapping[2] do
 		if msg == RingId then
 			bFlag = 1;
 		end
 	end
-	--´ò¿× ¿ÌÃú Ç¿»¯ ÌáÊ¾
+	--æ‰“å­” åˆ»é“­ å¼ºåŒ– æç¤º
 	local bagPos = GetBagPosByItemSn(sceneId, selfId, msg);
 	if bagPos >= 0 then
 		if GetGemEmbededCount(sceneId, selfId, bagPos) > 0 or
@@ -534,7 +534,7 @@ function x808010_ConfirmSubmitMission(sceneId, selfId, targetId)
 end
 
 --**********************************
---·µ»Ø¶Ô»°
+--è¿”å›å¯¹è¯
 --**********************************
 function x808010_ReturnDlg(sceneId, selfId, targetId, msg)
 	BeginEvent(sceneId)
@@ -554,75 +554,75 @@ function x808010_Tips(sceneId, selfId, msg)
 end
 
 --**********************************
---ÁìÈ¡ÓÀºã×ê½ä
+--é¢†å–æ°¸æ’é’»æˆ’
 --**********************************
 function x808010_GetTrueLoveRing(sceneId, selfId, targetId)
 	local ret, msg = x808010_CheckAccept(sceneId, selfId, 1) ;
-	--¼ì²âÊ§°Ü
+	--æ£€æµ‹å¤±è´¥
 	if ret == 0 then
 		x808010_ReturnDlg(sceneId, selfId, targetId, msg);
 		return 		
 	end
-	--Í¨¹ı		
+	--é€šè¿‡		
 	if CostMoney(sceneId, selfId, x808010_g_Price) == -1 then
 		return
 	end
-	--¸øÓè³õ¼¶ÓÀºã½äÖ¸
+	--ç»™äºˆåˆçº§æ°¸æ’æˆ’æŒ‡
 	local bagPos = TryRecieveItem( sceneId, selfId, x808010_g_Level2RingId[1].RingId, QUALITY_MUST_BE_CHANGE);
 	if bagPos == -1 then
 		return
 	end
-	--¿ÌÃû×Ö
+	--åˆ»åå­—
 	local spouseGuid = LuaFnGetSpouseGUID(sceneId, selfId);
 	local spouseObjId = LuaFnGuid2ObjId(sceneId, spouseGuid);
 	local spouseName = GetName(sceneId, spouseObjId);
 	LuaFnSetItemCreator(sceneId, selfId, bagPos, spouseName);
-	--Í³¼Æ
+	--ç»Ÿè®¡
 	AuditUpgradeRing(sceneId, selfId, x808010_g_Level2RingId[1].RingId, 1);
- 	--ÌáÊ¾ĞÅÏ¢
+ 	--æç¤ºä¿¡æ¯
  	x808010_ReturnDlg(sceneId, selfId, targetId, "#{YHJZ_081007_13}"); 	
  	
 end
 
 --**********************************
---È·¶¨Éı¼¶ÓÀºã×ê½ä
+--ç¡®å®šå‡çº§æ°¸æ’é’»æˆ’
 --**********************************
 function x808010_ConfirmUpgrade(sceneId, selfId, targetId)
-	--ÔÙ´ÎÅĞ¶Ï
-	local ret, msg = x808010_CheckSubmit(sceneId, selfId); --³É¹¦·µ»Ø1£¬ ½äÖ¸id£» Ê§°Ü·µ»Ø0£¬ ÏûÏ¢
+	--å†æ¬¡åˆ¤æ–­
+	local ret, msg = x808010_CheckSubmit(sceneId, selfId); --æˆåŠŸè¿”å›1ï¼Œ æˆ’æŒ‡idï¼› å¤±è´¥è¿”å›0ï¼Œ æ¶ˆæ¯
 	if ret == 0 then
 		x808010_ReturnDlg(sceneId, selfId, targetId, msg);
 		return 		
 	end	
-	--¿Û³ıºùÂ«
+	--æ‰£é™¤è‘«èŠ¦
 	if LuaFnDelAvailableItem(sceneId, selfId, x808010_g_HuLu_id, 1) == 0 then
 		return
 	end
-	--¿Û³ı¾É½äÖ¸
+	--æ‰£é™¤æ—§æˆ’æŒ‡
 	LuaFnDelAvailableItem(sceneId, selfId, msg, 1);
-	--¸ù¾İÍæ¼ÒµÈ¼¶¼ÆËã½äÖ¸id	
+	--æ ¹æ®ç©å®¶ç­‰çº§è®¡ç®—æˆ’æŒ‡id	
 	local index = x808010_GetTblIdx( GetLevel(sceneId, selfId) )
 	if index == 0 then 
 		return
 	end
-	--µÃĞÂ½äÖ¸
+	--å¾—æ–°æˆ’æŒ‡
 	local bagPos = TryRecieveItem( sceneId, selfId, x808010_g_Level2RingId[index]["RingId"], QUALITY_MUST_BE_CHANGE);
-	--Ãú¿ÌÃû×Ö
+	--é“­åˆ»åå­—
 	local spouseGuid = LuaFnGetSpouseGUID(sceneId, selfId);
 	local spouseObjId = LuaFnGuid2ObjId(sceneId, spouseGuid);
 	local spouseName = GetName(sceneId, spouseObjId);
 	LuaFnSetItemCreator(sceneId, selfId, bagPos, spouseName);	
-	--É¾³ıÈÎÎñ
+	--åˆ é™¤ä»»åŠ¡
   if IsHaveMission(sceneId, selfId, x808010_g_MissionId) == 1 then  	
   	DelMission( sceneId, selfId, x808010_g_MissionId );
   end	
-  --Í³¼Æ
+  --ç»Ÿè®¡
   AuditUpgradeRing(sceneId, selfId, x808010_g_Level2RingId[index]["RingId"], 2);
-	--·µ»ØĞÅÏ¢
+	--è¿”å›ä¿¡æ¯
 	x808010_ReturnDlg(sceneId, selfId, targetId, "#{YHJZ_081007_42}");
 	--tips
 	x808010_Tips(sceneId, selfId, "#{YHJZ_081007_43}");
-	--²¥·Å¹«¸æ
+	--æ’­æ”¾å…¬å‘Š
 	local myName = GetName(sceneId, selfId);
 	local sTran	= GetBagItemTransfer( sceneId, selfId, bagPos );
 	local str = format("#{_INFOUSR%s}#{YHJZ_081007_44}#{_INFOUSR%s}#{YHJZ_081007_45}#{_INFOMSG%s}#{YHJZ_081007_46}", myName, spouseName, sTran);
@@ -630,7 +630,7 @@ function x808010_ConfirmUpgrade(sceneId, selfId, targetId)
 end
 
 --**********************************
---×£¸£×ê½ä
+--ç¥ç¦é’»æˆ’
 --**********************************
 function x808010_BlessRing(sceneId, selfId, targetId)
 	local ret, msg = x808010_CheckAccept(sceneId, selfId, 3);
@@ -638,18 +638,18 @@ function x808010_BlessRing(sceneId, selfId, targetId)
 		x808010_ReturnDlg(sceneId, selfId, targetId, msg);
 		return
 	end 
-	--Í¨¹ı¼ì²â£¬¿ÛÎïÆ·
-	if LuaFnDelAvailableItem(sceneId, selfId, msg, 1) == 0 then			--¼ì²é³É¹¦msg·µ»Ø½äÖ¸Id
-		x808010_Tips(sceneId, selfId, "¿Û³ıÓÀºã×ê½äÊ§°Ü£¡");
+	--é€šè¿‡æ£€æµ‹ï¼Œæ‰£ç‰©å“
+	if LuaFnDelAvailableItem(sceneId, selfId, msg, 1) == 0 then			--æ£€æŸ¥æˆåŠŸmsgè¿”å›æˆ’æŒ‡Id
+		x808010_Tips(sceneId, selfId, "æ‰£é™¤æ°¸æ’é’»æˆ’å¤±è´¥ï¼");
 	  return
 	end	
 	local stone_pos = GetBagPosByItemSn(sceneId, selfId, x808010_g_TrueLoveStone_id);
 	local stone_sTran	= GetBagItemTransfer( sceneId, selfId, stone_pos );
 	if LuaFnDelAvailableItem(sceneId, selfId, x808010_g_TrueLoveStone_id, 1) == 0 then
-		x808010_Tips(sceneId, selfId, "¿Û³ıÕæĞÄÊ¯Ê§°Ü£¡");
+		x808010_Tips(sceneId, selfId, "æ‰£é™¤çœŸå¿ƒçŸ³å¤±è´¥ï¼");
 	  return
 	end	
-	--¸ø×£¸£½äÖ¸
+	--ç»™ç¥ç¦æˆ’æŒ‡
 	local index = 0;
 	for i, subTab in x808010_g_RingId_Mapping[1] do
 		if subTab == msg then
@@ -662,23 +662,23 @@ function x808010_BlessRing(sceneId, selfId, targetId)
 	end
 	local bagPos = TryRecieveItem( sceneId, selfId, x808010_g_RingId_Mapping[2][index], QUALITY_MUST_BE_CHANGE);
 	if bagPos == -1 then
-		x808010_Tips(sceneId, selfId, "¸ø×£¸£½äÖ¸Ê§°Ü£¡");		
+		x808010_Tips(sceneId, selfId, "ç»™ç¥ç¦æˆ’æŒ‡å¤±è´¥ï¼");		
 		return
 	end
-	--¿ÌÃû×Ö
+	--åˆ»åå­—
 	local spouseGuid = LuaFnGetSpouseGUID(sceneId, selfId);
 	local spouseObjId = LuaFnGuid2ObjId(sceneId, spouseGuid);
 	local spouseName = GetName(sceneId, spouseObjId);
 	LuaFnSetItemCreator(sceneId, selfId, bagPos, spouseName);	
-	--Í³¼Æ
+	--ç»Ÿè®¡
 	AuditUpgradeRing(sceneId, selfId, x808010_g_RingId_Mapping[2][index], 3);	
-	x808010_Tips(sceneId, selfId, "×£¸£³É¹¦£¡");
+	x808010_Tips(sceneId, selfId, "ç¥ç¦æˆåŠŸï¼");
 
 	local blessRing_sTran	= GetBagItemTransfer( sceneId, selfId, bagPos );
 	local myName = GetName(sceneId, selfId);
 	local msg = format("#{_INFOUSR%s}#{JZSJ_1}#{_INFOMSG%s}#{JZSJ_2}#{_INFOMSG%s}#{JZSJ_3}", myName, stone_sTran, blessRing_sTran);
 	AddGlobalCountNews(sceneId, msg);
-	--¹Ø±Õ¶Ô»°¿ò	
+	--å…³é—­å¯¹è¯æ¡†	
 	BeginUICommand( sceneId )
 	UICommand_AddInt( sceneId, targetId )
 	EndUICommand( sceneId )
@@ -686,47 +686,47 @@ function x808010_BlessRing(sceneId, selfId, targetId)
 end
 
 --**********************************
---Éı¼¶ÓÀºã×ê½ä
+--å‡çº§æ°¸æ’é’»æˆ’
 --**********************************
 function x808010_UpgradeTrueLoveRing(sceneId, selfId, targetId)
  	local ret, msg = x808010_CheckAccept(sceneId, selfId, 2) ;
-	--¼ì²âÊ§°Ü
+	--æ£€æµ‹å¤±è´¥
 	if ret == 0 then
 		x808010_ReturnDlg(sceneId, selfId, targetId, msg);
 		return 		
 	end	 
-	--³¡¾°Ñ¡Ôñ
+	--åœºæ™¯é€‰æ‹©
 	local i, j, k = x808010_SelectScene( GetLevel(sceneId, selfId) );
 	if i == -1 then
-		x808010_ReturnDlg(sceneId, selfId, targetId, "³ö´íÀ²£¡");
+		x808010_ReturnDlg(sceneId, selfId, targetId, "å‡ºé”™å•¦ï¼");
 		return 		
 	end		
 	if IsMissionFull(sceneId, selfId) == 1 then
-		x808010_ReturnDlg(sceneId, selfId, targetId, "ÈÎÎñÒÑÂú£¡");
+		x808010_ReturnDlg(sceneId, selfId, targetId, "ä»»åŠ¡å·²æ»¡ï¼");
 		return
 	end
-	--Ìí¼ÓÈÎÎñ
+	--æ·»åŠ ä»»åŠ¡
 	AddMission( sceneId,selfId, x808010_g_MissionId, x808010_g_ScriptId, 0, 1, 0 );
-	--¼ÇÂ¼³¡¾°
+	--è®°å½•åœºæ™¯
 	local misIndex = GetMissionIndexByID(sceneId, selfId, x808010_g_MissionId);
 	
-	SetMissionByIndex(sceneId, selfId, misIndex, 4, 0);  --¶Áx808010_g_FormatListµÚÒ»ĞĞ
+	SetMissionByIndex(sceneId, selfId, misIndex, 4, 0);  --è¯»x808010_g_FormatListç¬¬ä¸€è¡Œ
 	
 	SetMissionByIndex(sceneId, selfId, misIndex, 5, i-1);
 	SetMissionByIndex(sceneId, selfId, misIndex, 6, j-1);
 	SetMissionByIndex(sceneId, selfId, misIndex, 7, k-1);
 	
-	--¿ÛÓ©»ğ³æ
+	--æ‰£è¤ç«è™«
 	LuaFnDelAvailableItem(sceneId, selfId, x808010_g_FlashInsect_id, 40);
-	--¸øºùÂ«
+	--ç»™è‘«èŠ¦
 	TryRecieveItem( sceneId, selfId, x808010_g_HuLu_id, QUALITY_MUST_BE_CHANGE);
-	--·µ»Ø¶Ô»°
-	local text = format("#{YHJZ_081007_25}%s£¬%s£¬%s", x808010_g_StrList[i], x808010_g_StrList[j], x808010_g_StrList[k]);
+	--è¿”å›å¯¹è¯
+	local text = format("#{YHJZ_081007_25}%sï¼Œ%sï¼Œ%s", x808010_g_StrList[i], x808010_g_StrList[j], x808010_g_StrList[k]);
 	x808010_ReturnDlg(sceneId, selfId, targetId, text);
 end
 
 --**********************************
---³¡¾°³éÈ¡
+--åœºæ™¯æŠ½å–
 --**********************************
 function x808010_SelectScene(level)
 	local num = 0;
@@ -739,14 +739,14 @@ function x808010_SelectScene(level)
 	local i = 0; 
 	local j = 0; 
 	local k = 0;
-	--Ã»ÕÒµ½µÈ¼¶¶ÔÓ¦µÄ³¡¾°Ô´ÊıÄ¿
+	--æ²¡æ‰¾åˆ°ç­‰çº§å¯¹åº”çš„åœºæ™¯æºæ•°ç›®
 	if num == 0 then
 		return -1, -1, -1;
 	end
-	--µÃµ½µÚÒ»¸ö³¡¾°
+	--å¾—åˆ°ç¬¬ä¸€ä¸ªåœºæ™¯
 	local temp = mod( floor(random(100000)), num )+1;
 	i = temp;
-	--µÃµ½µÚ¶ş¸ö³¡¾°
+	--å¾—åˆ°ç¬¬äºŒä¸ªåœºæ™¯
 	while 1 do
 		temp =  mod( floor(random(100000)), num )+1;
 		if temp ~= i then
@@ -754,7 +754,7 @@ function x808010_SelectScene(level)
 			break;
 		end
 	end
-	--µÃµ½µÚÈı¸ö³¡¾°
+	--å¾—åˆ°ç¬¬ä¸‰ä¸ªåœºæ™¯
 	while 1 do
 		temp =  mod( floor(random(100000)), num )+1;
 		if temp ~= i and temp ~= j then
@@ -766,7 +766,7 @@ function x808010_SelectScene(level)
 end
 
 --**********************************
---µã»÷ÓÀºã×ê½ä
+--ç‚¹å‡»æ°¸æ’é’»æˆ’
 --**********************************
 function x808010_OnClickTrueLoveRing(sceneId, selfId, targetId)
 	if IsHaveMission(sceneId, selfId, x808010_g_MissionId) == 1 then
@@ -777,8 +777,8 @@ function x808010_OnClickTrueLoveRing(sceneId, selfId, targetId)
 		else
 			BeginEvent(sceneId)
 				AddText(sceneId, "#{YHJZ_081007_37}")
-				AddNumText(sceneId, x808010_g_ScriptId, "#{YHJZ_081007_38}", 6, 111);	--ÊÇµÄ
-				AddNumText(sceneId, x808010_g_ScriptId, "#{YHJZ_081007_39}", 6, 222); --»¹Ã»×¼±¸ºÃ¡£¡£¡£
+				AddNumText(sceneId, x808010_g_ScriptId, "#{YHJZ_081007_38}", 6, 111);	--æ˜¯çš„
+				AddNumText(sceneId, x808010_g_ScriptId, "#{YHJZ_081007_39}", 6, 222); --è¿˜æ²¡å‡†å¤‡å¥½ã€‚ã€‚ã€‚
 			EndEvent()
 			DispatchEventList(sceneId, selfId, targetId);
 			return
@@ -789,33 +789,33 @@ function x808010_OnClickTrueLoveRing(sceneId, selfId, targetId)
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x808010_OnAbandon( sceneId, selfId )
   if IsHaveMission(sceneId, selfId, x808010_g_MissionId) == 1 then  	
-  	--¿Û³ıÔÂÀÏºùÂ«
+  	--æ‰£é™¤æœˆè€è‘«èŠ¦
   	local num = LuaFnGetItemCount(sceneId, selfId, x808010_g_HuLu_id);
   	local availNum = LuaFnGetAvailableItemCount(sceneId, selfId, x808010_g_HuLu_id)
   	if availNum < num then
-  		x808010_Tips(sceneId, selfId, "Çë¶ÔÔÂÀÏºùÂ«½âËø£¡")
+  		x808010_Tips(sceneId, selfId, "è¯·å¯¹æœˆè€è‘«èŠ¦è§£é”ï¼")
   		return
   	end
   	if availNum > 0 then
   		LuaFnDelAvailableItem(sceneId, selfId, x808010_g_HuLu_id, availNum);
   	end
-  	--É¾³ıÈÎÎñ
+  	--åˆ é™¤ä»»åŠ¡
   	DelMission( sceneId, selfId, x808010_g_MissionId );
   end
 end
 
 --**********************************
---É±ËÀ¹ÖÎï»òÍæ¼Ò
+--æ€æ­»æ€ªç‰©æˆ–ç©å®¶
 --**********************************
 function x808010_OnKillObject( sceneId, selfId, objdataId )
 end
 
 --**********************************
---½øÈëÇøÓòÊÂ¼ş
+--è¿›å…¥åŒºåŸŸäº‹ä»¶
 --**********************************
 function x808010_OnEnterArea( sceneId, selfId, zoneId )
 	
@@ -828,7 +828,7 @@ function x808010_OnEnterArea( sceneId, selfId, zoneId )
 	order[2] = GetMissionParam(sceneId, selfId, misIndex, 6)+1;
 	order[3] = GetMissionParam(sceneId, selfId, misIndex, 7)+1;
 	local bCompleted = GetMissionParam(sceneId, selfId, misIndex, 0);
-	local place1 = GetMissionParam(sceneId, selfId, misIndex, 2); --2,3²ÎÊıÓÃÓÚ¼ÇÂ¼ÊÕ¼¯¹ıÏÉÆøµÄ³¡¾°ºÅ
+	local place1 = GetMissionParam(sceneId, selfId, misIndex, 2); --2,3å‚æ•°ç”¨äºè®°å½•æ”¶é›†è¿‡ä»™æ°”çš„åœºæ™¯å·
 	local place2 = GetMissionParam(sceneId, selfId, misIndex, 3);
 	local bFlag = 0;	
 	for i=1, 3 do
@@ -846,21 +846,21 @@ function x808010_OnEnterArea( sceneId, selfId, zoneId )
 end
 
 --**********************************
---µÀ¾ß¸Ä±ä
+--é“å…·æ”¹å˜
 --**********************************
 function x808010_OnItemChanged( sceneId, selfId, itemdataId )
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x808010_OnAccept( sceneId, selfId )
-	--¼ÓÈëÈÎÎñµ½Íæ¼ÒÁĞ±í
+	--åŠ å…¥ä»»åŠ¡åˆ°ç©å®¶åˆ—è¡¨
 	AddMission( sceneId,selfId, x808010_g_MissionId, x808010_g_ScriptId, 0, 0, 0 )
 end
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x808010_OnContinue( sceneId, selfId, targetId )
 

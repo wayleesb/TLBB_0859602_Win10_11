@@ -1,22 +1,22 @@
---千年冰魄
+--鍗冨勾鍐伴瓌
 
---脚本编号
+--鑴氭湰缂栧彿
 x502002_g_ScriptId	= 502002
 
 --**********************************
 --Monster Timer
 --**********************************
 function x502002_OnCharacterTimer( sceneId, objId, dataId, uTime )
-	--全球公告
-	local str = "#P#{_BOSS9}又现身了！武夷的大地再次陷入极冰的恐怖之中！"
+	--鍏ㄧ悆鍏憡
+	local str = "#P#{_BOSS9}鍙堢幇韬簡锛佹澶风殑澶у湴鍐嶆闄峰叆鏋佸啺鐨勬亹鎬栦箣涓紒"
 	AddGlobalCountNews( sceneId, str )
 
-	--取消时钟
+	--鍙栨秷鏃堕挓
 	SetCharacterTimer( sceneId, objId, 0 )
 end
 
 --**********************************
---死亡事件
+--姝讳骸浜嬩欢
 --**********************************
 function x502002_OnDie( sceneId, objId, killerId )
 end

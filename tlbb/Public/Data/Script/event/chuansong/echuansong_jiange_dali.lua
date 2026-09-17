@@ -1,27 +1,27 @@
---Íæ¼Ò½øÈëÒ»¸ö area Ê±´¥·¢
+--ç©å®¶è¿›å…¥ä¸€ä¸ª area æ—¶è§¦å‘
 function x400019_OnEnterArea( sceneId, selfId )
 	--CallScriptFunction((400900), "TransferFunc",sceneId, selfId, 2,39,152)
-	if sceneId ==7 then    -- ½£¸ó1¾Íµ½´óÀí1
+	if sceneId ==7 then    -- å‰‘é˜1å°±åˆ°å¤§ç†1
 		CallScriptFunction((400900), "TransferFunc",sceneId, selfId, 2,39,152)
-	elseif sceneId ==75 then -- ½£¸ó2¾Íµ½´óÀí2
+	elseif sceneId ==75 then -- å‰‘é˜2å°±åˆ°å¤§ç†2
 		CallScriptFunction((400900), "TransferFunc",sceneId, selfId, 71,39,152)		
-	elseif sceneId ==76 then -- ½£¸ó3¾Íµ½´óÀí3
+	elseif sceneId ==76 then -- å‰‘é˜3å°±åˆ°å¤§ç†3
 		CallScriptFunction((400900), "TransferFunc",sceneId, selfId, 72,39,152)			
 	end
 
 end
 
---Íæ¼ÒÔÚÒ»¸ö area ´ôÁËÒ»¶ÎÊ±¼äÃ»×ßÔò¶¨Ê±´¥·¢
+--ç©å®¶åœ¨ä¸€ä¸ª area å‘†äº†ä¸€æ®µæ—¶é—´æ²¡èµ°åˆ™å®šæ—¶è§¦å‘
 function x400019_OnTimer( sceneId, selfId )
-	-- ºÁÃë£¬¿´ÔÚÕâ¸ö area Í£Áô¶à¾ÃÁË
+	-- æ¯«ç§’ï¼Œçœ‹åœ¨è¿™ä¸ª area åœç•™å¤šä¹…äº†
 	StandingTime = QueryAreaStandingTime( sceneId, selfId )
-	-- 5ÃëºóÈÔÎ´´«ËÍ
+	-- 5ç§’åä»æœªä¼ é€
 	if StandingTime >= 5000 then
 		x400019_OnEnterArea( sceneId, selfId )
 		ResetAreaStandingTime( sceneId, selfId, 0 )
 	end
 end
 
---Íæ¼ÒÀë¿ªÒ»¸ö area Ê±´¥·¢
+--ç©å®¶ç¦»å¼€ä¸€ä¸ª area æ—¶è§¦å‘
 function x400019_OnLeaveArea( sceneId, selfId )
 end

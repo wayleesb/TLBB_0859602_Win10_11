@@ -1,9 +1,9 @@
---»î¶¯¡ª¡ª
---ĞÂÀ¶¹â»·
+--æ´»åŠ¨â€”â€”
+--æ–°è“å…‰ç¯
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x808063_g_ScriptId = 808063
-x808063_g_BlueHalo_EndDayTime = 7262   --»î¶¯½áÊøÊ±¼ä 2007-9-20
+x808063_g_BlueHalo_EndDayTime = 7262   --æ´»åŠ¨ç»“æŸæ—¶é—´ 2007-9-20
 
 x808063_g_Impact = {
 
@@ -31,7 +31,7 @@ x808063_g_Impact = {
 
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x808063_OnDefaultEvent( sceneId, selfId, targetId )
 
@@ -50,14 +50,14 @@ function x808063_OnDefaultEvent( sceneId, selfId, targetId )
 		SetMissionData( sceneId, selfId, MD_BLUEHALO_DAYTIME, CurDayTime )
 
 		BeginEvent(sceneId)
-			AddText(sceneId,"    ÎªÁËÇì×£#c00ff00¡¶ÌìÁú°Ë²¿¡·#W×ÊÁÏÆ¬#c00ff00¡¶ÏÉÈËÖ¸Â·¡·#WµÄ·¢²¼£¬ĞÂÀ¶µçÄÔÌØ±ğÎªËùÓĞÌìÁúÍæ¼Ò×¼±¸ÁË#c00ff00ĞÂÀ¶¹â»·#W£¬´ÓÏÖÔÚÆğµ½9ÔÂ20ÈÕÎªÖ¹£¬ËùÓĞÍæ¼ÒÃ¿Ìì¶¼¿ÉÒÔÇ°À´ÁìÈ¡1´Î¹â»·¡£");
+			AddText(sceneId,"    ä¸ºäº†åº†ç¥#c00ff00ã€Šå¤©é¾™å…«éƒ¨ã€‹#Wèµ„æ–™ç‰‡#c00ff00ã€Šä»™äººæŒ‡è·¯ã€‹#Wçš„å‘å¸ƒï¼Œæ–°è“ç”µè„‘ç‰¹åˆ«ä¸ºæ‰€æœ‰å¤©é¾™ç©å®¶å‡†å¤‡äº†#c00ff00æ–°è“å…‰ç¯#Wï¼Œä»ç°åœ¨èµ·åˆ°9æœˆ20æ—¥ä¸ºæ­¢ï¼Œæ‰€æœ‰ç©å®¶æ¯å¤©éƒ½å¯ä»¥å‰æ¥é¢†å–1æ¬¡å…‰ç¯ã€‚");
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 		
 	else
 
 		BeginEvent(sceneId)
-			AddText(sceneId,"    ²»ºÃÒâË¼£¬Äã½ñÌìÒÑ¾­ÁìÈ¡¹ı#c00ff00ĞÂÀ¶¹â»·#WÁË¡£");
+			AddText(sceneId,"    ä¸å¥½æ„æ€ï¼Œä½ ä»Šå¤©å·²ç»é¢†å–è¿‡#c00ff00æ–°è“å…‰ç¯#Wäº†ã€‚");
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 
@@ -66,20 +66,20 @@ function x808063_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x808063_OnEnumerate( sceneId, selfId, targetId )
 
     local isTime = x808063_CheckRightTime()
 
     if 1 == isTime then
-			AddNumText(sceneId, x808063_g_ScriptId, "ĞÂÀ¶¹â»·", 1, 101 )
+			AddNumText(sceneId, x808063_g_ScriptId, "æ–°è“å…‰ç¯", 1, 101 )
     end
 
 end
 
 --**********************************
---¼ì²â»î¶¯ÊÇ·ñÒÑ½áÊø
+--æ£€æµ‹æ´»åŠ¨æ˜¯å¦å·²ç»“æŸ
 --**********************************
 function x808063_CheckRightTime()
 
@@ -94,7 +94,7 @@ function x808063_CheckRightTime()
 end
 
 --**********************************
---¸øÍæ¼Ò¼ÓÉÏĞÂÀ¶¹â»·buff
+--ç»™ç©å®¶åŠ ä¸Šæ–°è“å…‰ç¯buff
 --**********************************
 function x808063_AddBlueHalo( sceneId, selfId )
 
@@ -148,55 +148,55 @@ function x808063_AddBlueHalo( sceneId, selfId )
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x808063_CheckAccept( sceneId, selfId )
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x808063_OnAccept( sceneId, selfId )
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x808063_OnAbandon( sceneId, selfId )
 end
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x808063_OnContinue( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x808063_CheckSubmit( sceneId, selfId )
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x808063_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 end
 
 --**********************************
---É±ËÀ¹ÖÎï»òÍæ¼Ò
+--æ€æ­»æ€ªç‰©æˆ–ç©å®¶
 --**********************************
 function x808063_OnKillObject( sceneId, selfId, objdataId ,objId )
 end
 
 --**********************************
---½øÈëÇøÓòÊÂ¼ş
+--è¿›å…¥åŒºåŸŸäº‹ä»¶
 --**********************************
 function x808063_OnEnterArea( sceneId, selfId, zoneId )
 end
 
 --**********************************
---µÀ¾ß¸Ä±ä
+--é“å…·æ”¹å˜
 --**********************************
 function x808063_OnItemChanged( sceneId, selfId, itemdataId )
 end

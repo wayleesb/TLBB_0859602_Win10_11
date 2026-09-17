@@ -1,55 +1,55 @@
 -- 402247
--- Á¬åóËş 
+-- è¿å¼©å¡” 
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x402247_g_scriptId = 402247
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x402247_g_eventList={}
 
--- Ä¾²ÄID  (ÔİÊ±ÓÃ±ğµÄÎïÆ·´úÌæ)
+-- æœ¨æID  (æš‚æ—¶ç”¨åˆ«çš„ç‰©å“ä»£æ›¿)
 x402247_g_Item = 40004430
 
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x402247_UpdateEventList( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
-		--AddText(sceneId, "  ÎÒÊÇÁ¬åóËş£¬Çğ¹û²»¸øÎÒËµ»°¡£")		    				
+		--AddText(sceneId, "  æˆ‘æ˜¯è¿å¼©å¡”ï¼Œä¸˜æœä¸ç»™æˆ‘è¯´è¯ã€‚")		    				
 
 		if LuaFnGetCopySceneData_Param(sceneId, 8) >= 10  then
 		
 			local szName = GetName(sceneId, targetId)
-			if szName == "Ç°Á¬åóËş"  then
-				AddText(sceneId, "  Á¬åóËş£¬¿É×Ô¶¯¹¥»÷ÖÜÎ§ËùÓĞµÄµĞ·½Ä¿±ê¡£")
+			if szName == "å‰è¿å¼©å¡”"  then
+				AddText(sceneId, "  è¿å¼©å¡”ï¼Œå¯è‡ªåŠ¨æ”»å‡»å‘¨å›´æ‰€æœ‰çš„æ•Œæ–¹ç›®æ ‡ã€‚")
 				local nCount = LuaFnGetCopySceneData_Param(sceneId, 9)
 				if nCount < 5  then
-					local str = "ĞŞ¸´»¹ĞèÒª" .. 5-nCount .. "¸öÄ¾²Ä"
+					local str = "ä¿®å¤è¿˜éœ€è¦" .. 5-nCount .. "ä¸ªæœ¨æ"
 					AddNumText( sceneId, x402247_g_scriptId, str, 10 ,1 )
 				end
 				
-			elseif szName == "ºóÁ¬åóËş"  then
-				AddText(sceneId, "  Á¬åóËş£¬¿É×Ô¶¯¹¥»÷ÖÜÎ§ËùÓĞµÄµĞ·½Ä¿±ê¡£")
+			elseif szName == "åè¿å¼©å¡”"  then
+				AddText(sceneId, "  è¿å¼©å¡”ï¼Œå¯è‡ªåŠ¨æ”»å‡»å‘¨å›´æ‰€æœ‰çš„æ•Œæ–¹ç›®æ ‡ã€‚")
 				local nCount = LuaFnGetCopySceneData_Param(sceneId, 10)
 				if nCount < 5  then
-					local str = "ĞŞ¸´»¹ĞèÒª" .. 5-nCount .. "¸öÄ¾²Ä"
+					local str = "ä¿®å¤è¿˜éœ€è¦" .. 5-nCount .. "ä¸ªæœ¨æ"
 					AddNumText( sceneId, x402247_g_scriptId, str, 10 ,2 )
 				end
 				
-			elseif szName == "ÖÎÁÆËş"  then
-				AddText(sceneId, "  ÖÎÁÆËş£¬¿É×Ô¶¯»Ö¸´ÖÜÎ§ËùÓĞµÄÓÑ·½Ä¿±êµÄÑª¡£")
+			elseif szName == "æ²»ç–—å¡”"  then
+				AddText(sceneId, "  æ²»ç–—å¡”ï¼Œå¯è‡ªåŠ¨æ¢å¤å‘¨å›´æ‰€æœ‰çš„å‹æ–¹ç›®æ ‡çš„è¡€ã€‚")
 				local nCount = LuaFnGetCopySceneData_Param(sceneId, 11)
 				if nCount < 10  then
-					local str = "ĞŞ¸´»¹ĞèÒª" .. 10-nCount .. "¸öÄ¾²Ä"
+					local str = "ä¿®å¤è¿˜éœ€è¦" .. 10-nCount .. "ä¸ªæœ¨æ"
 					AddNumText( sceneId, x402247_g_scriptId, str, 10 ,3 )
 				end
 				
-			elseif szName == "ÊØÓùËş"  then
-				AddText(sceneId, "  ÊØÓùËş£¬¿É½µµÍÖÜÎ§ËùÓĞµÄµĞ·½Ä¿±êµÄ¹¥»÷¡£")
+			elseif szName == "å®ˆå¾¡å¡”"  then
+				AddText(sceneId, "  å®ˆå¾¡å¡”ï¼Œå¯é™ä½å‘¨å›´æ‰€æœ‰çš„æ•Œæ–¹ç›®æ ‡çš„æ”»å‡»ã€‚")
 				local nCount = LuaFnGetCopySceneData_Param(sceneId, 12)
 				if nCount < 5  then
-					local str = "ĞŞ¸´»¹ĞèÒª" .. 5-nCount .. "¸öÄ¾²Ä"
+					local str = "ä¿®å¤è¿˜éœ€è¦" .. 5-nCount .. "ä¸ªæœ¨æ"
 					AddNumText( sceneId, x402247_g_scriptId, str, 10 ,4 )
 				end
 				
@@ -64,14 +64,14 @@ function x402247_UpdateEventList( sceneId, selfId,targetId )
 end
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x402247_OnDefaultEvent( sceneId, selfId,targetId )
 	x402247_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x402247_OnEventRequest( sceneId, selfId, targetId, eventId )
 	
@@ -79,7 +79,7 @@ function x402247_OnEventRequest( sceneId, selfId, targetId, eventId )
 	if nNumText == 1  then
 		local nCount = LuaFnGetCopySceneData_Param(sceneId, 9)
 		nCount = 5 - nCount
-		-- ±³°üÖĞ¿ÉÒÔÉ¾³ıµÄ¡°Ä¾²Ä¡±µÄ×ÜÊı
+		-- èƒŒåŒ…ä¸­å¯ä»¥åˆ é™¤çš„â€œæœ¨æâ€çš„æ€»æ•°
 		local nItemCount = LuaFnGetAvailableItemCount(sceneId, selfId, x402247_g_Item) 
 		if nItemCount > nCount  then
 			nItemCount = nCount
@@ -96,7 +96,7 @@ function x402247_OnEventRequest( sceneId, selfId, targetId, eventId )
 	elseif nNumText == 2  then
 		local nCount = LuaFnGetCopySceneData_Param(sceneId, 10)
 		nCount = 5 - nCount
-		-- ±³°üÖĞ¿ÉÒÔÉ¾³ıµÄ¡°Ä¾²Ä¡±µÄ×ÜÊı
+		-- èƒŒåŒ…ä¸­å¯ä»¥åˆ é™¤çš„â€œæœ¨æâ€çš„æ€»æ•°
 		local nItemCount = LuaFnGetAvailableItemCount(sceneId, selfId, x402247_g_Item) 
 		if nItemCount > nCount  then
 			nItemCount = nCount
@@ -113,7 +113,7 @@ function x402247_OnEventRequest( sceneId, selfId, targetId, eventId )
 	elseif nNumText == 3  then
 		local nCount = LuaFnGetCopySceneData_Param(sceneId, 11)
 		nCount = 10 - nCount
-		-- ±³°üÖĞ¿ÉÒÔÉ¾³ıµÄ¡°Ä¾²Ä¡±µÄ×ÜÊı
+		-- èƒŒåŒ…ä¸­å¯ä»¥åˆ é™¤çš„â€œæœ¨æâ€çš„æ€»æ•°
 		local nItemCount = LuaFnGetAvailableItemCount(sceneId, selfId, x402247_g_Item) 
 		if nItemCount > nCount  then
 			nItemCount = nCount
@@ -130,7 +130,7 @@ function x402247_OnEventRequest( sceneId, selfId, targetId, eventId )
 	elseif nNumText == 4  then
 		local nCount = LuaFnGetCopySceneData_Param(sceneId, 12)
 		nCount = 5 - nCount
-		-- ±³°üÖĞ¿ÉÒÔÉ¾³ıµÄ¡°Ä¾²Ä¡±µÄ×ÜÊı
+		-- èƒŒåŒ…ä¸­å¯ä»¥åˆ é™¤çš„â€œæœ¨æâ€çš„æ€»æ•°
 		local nItemCount = LuaFnGetAvailableItemCount(sceneId, selfId, x402247_g_Item) 
 		if nItemCount > nCount  then
 			nItemCount = nCount
@@ -150,14 +150,14 @@ function x402247_OnEventRequest( sceneId, selfId, targetId, eventId )
 		
 		BeginEvent(sceneId)
 			local szName = GetName(sceneId, targetId)
-			if szName == "Ç°Á¬åóËş"  then
-				AddText(sceneId, "  Á¬åóËş£¬¿É×Ô¶¯¹¥»÷ÖÜÎ§ËùÓĞµÄµĞ·½Ä¿±ê¡£")
-			elseif szName == "ºóÁ¬åóËş"  then
-				AddText(sceneId, "  Á¬åóËş£¬¿É×Ô¶¯¹¥»÷ÖÜÎ§ËùÓĞµÄµĞ·½Ä¿±ê¡£")
-			elseif szName == "ÖÎÁÆËş"  then
-				AddText(sceneId, "  ÖÎÁÆËş£¬¿É×Ô¶¯»Ö¸´ÖÜÎ§ËùÓĞµÄÓÑ·½Ä¿±êµÄÑª¡£")
-			elseif szName == "ÊØÓùËş"  then
-				AddText(sceneId, "  ÊØÓùËş£¬¿É½µµÍÖÜÎ§ËùÓĞµÄµĞ·½Ä¿±êµÄ¹¥»÷¡£")
+			if szName == "å‰è¿å¼©å¡”"  then
+				AddText(sceneId, "  è¿å¼©å¡”ï¼Œå¯è‡ªåŠ¨æ”»å‡»å‘¨å›´æ‰€æœ‰çš„æ•Œæ–¹ç›®æ ‡ã€‚")
+			elseif szName == "åè¿å¼©å¡”"  then
+				AddText(sceneId, "  è¿å¼©å¡”ï¼Œå¯è‡ªåŠ¨æ”»å‡»å‘¨å›´æ‰€æœ‰çš„æ•Œæ–¹ç›®æ ‡ã€‚")
+			elseif szName == "æ²»ç–—å¡”"  then
+				AddText(sceneId, "  æ²»ç–—å¡”ï¼Œå¯è‡ªåŠ¨æ¢å¤å‘¨å›´æ‰€æœ‰çš„å‹æ–¹ç›®æ ‡çš„è¡€ã€‚")
+			elseif szName == "å®ˆå¾¡å¡”"  then
+				AddText(sceneId, "  å®ˆå¾¡å¡”ï¼Œå¯é™ä½å‘¨å›´æ‰€æœ‰çš„æ•Œæ–¹ç›®æ ‡çš„æ”»å‡»ã€‚")
 			end
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
@@ -172,7 +172,7 @@ function x402247_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x402247_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x402247_g_eventList do
@@ -187,10 +187,10 @@ function x402247_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x402247_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
-	--¾Ü¾øÖ®ºó£¬Òª·µ»ØNPCµÄÊÂ¼şÁĞ±í
+	--æ‹’ç»ä¹‹åï¼Œè¦è¿”å›NPCçš„äº‹ä»¶åˆ—è¡¨
 	for i, findId in x402247_g_eventList do
 		if missionScriptId == findId then
 			x402247_UpdateEventList( sceneId, selfId, targetId )
@@ -200,7 +200,7 @@ function x402247_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¼ÌĞø£¨ÒÑ¾­½ÓÁËÈÎÎñ£©
+--ç»§ç»­ï¼ˆå·²ç»æ¥äº†ä»»åŠ¡ï¼‰
 --**********************************
 function x402247_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x402247_g_eventList do
@@ -212,7 +212,7 @@ function x402247_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---Ìá½»ÒÑ×öÍêµÄÈÎÎñ
+--æäº¤å·²åšå®Œçš„ä»»åŠ¡
 --**********************************
 function x402247_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, selectRadioId )
 	for i, findId in x402247_g_eventList do
@@ -224,7 +224,7 @@ function x402247_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 end
 
 --**********************************
---ËÀÍöÊÂ¼ş
+--æ­»äº¡äº‹ä»¶
 --**********************************
 function x402247_OnDie( sceneId, selfId, killerId )
 

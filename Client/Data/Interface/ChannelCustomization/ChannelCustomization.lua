@@ -3,7 +3,7 @@ local CUSTOM_BUTTONS_NUM = 13;
 local g_Action = "";
 local g_lastProvince = -1;
 local g_lastCity = -1;
---ÏµÍ³¡¢Ë½ÁÄ¡¢¶ÓÎé¡¢°ï»á¡¢Í¬ÃË
+--ç³»ç»Ÿã€ç§èŠã€é˜Ÿä¼ã€å¸®ä¼šã€åŒç›Ÿ
 local g_ipRegionConfig = {4,5,2,7,13};
 
 function isInIpRegionConfig(idx)
@@ -30,15 +30,15 @@ function ChannelCustomization_OnLoad()
 	CUSTOM_BUTTONS[7] = ChannelCustomization_CorporateInfo;
 	CUSTOM_BUTTONS[2] = ChannelCustomization_TeamInfo;
 	CUSTOM_BUTTONS[9] = ChannelCustomization_SelfInfo;
-	CUSTOM_BUTTONS[5] = ChannelCustomization_SystemInfo;			--ÏµÍ³ÆµµÀ
-	CUSTOM_BUTTONS[6] = ChannelCustomization_SelfInfo;				--×Ô½¨ÆµµÀ£¨ÏÖÔÚÃ»ÓĞ¹¦ÄÜ£©
-	CUSTOM_BUTTONS[10] = ChannelCustomization_HelpInfo;				--°ïÖúÆµµÀ
+	CUSTOM_BUTTONS[5] = ChannelCustomization_SystemInfo;			--ç³»ç»Ÿé¢‘é“
+	CUSTOM_BUTTONS[6] = ChannelCustomization_SelfInfo;				--è‡ªå»ºé¢‘é“ï¼ˆç°åœ¨æ²¡æœ‰åŠŸèƒ½ï¼‰
+	CUSTOM_BUTTONS[10] = ChannelCustomization_HelpInfo;				--å¸®åŠ©é¢‘é“
 	CUSTOM_BUTTONS[11] = nil;
-	CUSTOM_BUTTONS[12] = ChannelCustomization_City;				--Í¬³ÇÁÄÌì
-	CUSTOM_BUTTONS[13] = ChannelCustomization_GuildLeagueInfo;				--Í¬ÃËÁÄÌì
+	CUSTOM_BUTTONS[12] = ChannelCustomization_City;				--åŒåŸèŠå¤©
+	CUSTOM_BUTTONS[13] = ChannelCustomization_GuildLeagueInfo;				--åŒç›ŸèŠå¤©
 
 
-	--Ìî³ä³ÇÊĞĞÅÏ¢
+	--å¡«å……åŸå¸‚ä¿¡æ¯
 	ChannelCustomization_ProvinceCity : ResetList();
 	local num = DataPool : GetProvincesNum();
 	if (num > 0) then
@@ -93,29 +93,29 @@ function ChatTabAction( act , strCfg , strName , pos)
 	CC_BUTTON_Enable(12);
 	g_Action = act;
 	--AxTrace(0, 0, "ChannelCustomization " .. act .. " " .. strCfg .. " " .. strName);	
-	-- ÉèÖÃ´°ÌåÃû³Æ
+	-- è®¾ç½®çª—ä½“åç§°
 	if ( g_Action == "create" ) then
-		ChannelCustomization_PageHeader_Text:SetText("#gFF0FA0×Ô¶¨Òå");
-		ChannelCustomization_Text1:SetText("×Ô¶¨ÒåÃû×Ö");
-		ChannelCustomization_Cancel:SetText("´´½¨");
-		ChannelCustomization_Destory:SetText("È¡Ïû");
+		ChannelCustomization_PageHeader_Text:SetText("#gFF0FA0è‡ªå®šä¹‰");
+		ChannelCustomization_Text1:SetText("è‡ªå®šä¹‰åå­—");
+		ChannelCustomization_Cancel:SetText("åˆ›å»º");
+		ChannelCustomization_Destory:SetText("å–æ¶ˆ");
 		ChannelCustomization_EditName:Show();
 		ChannelCustomization_EditName:CaptureInput();
 		ChannelCustomization_Accept:Hide();
 		ChannelCustomization_TxtName:Hide();
 		ChannelCustomization_EditName:SetText(strName);
 	elseif ( g_Action == "config" ) then
-		ChannelCustomization_PageHeader_Text:SetText("#gFF0FA0ÆµµÀÅäÖÃ");
-		ChannelCustomization_Text1:SetText("ÆµµÀÃû³Æ");
-		ChannelCustomization_Accept:SetText("È·¶¨");
-		ChannelCustomization_Cancel:SetText("È¡Ïû");
-		ChannelCustomization_Destory:SetText("É¾³ı");
+		ChannelCustomization_PageHeader_Text:SetText("#gFF0FA0é¢‘é“é…ç½®");
+		ChannelCustomization_Text1:SetText("é¢‘é“åç§°");
+		ChannelCustomization_Accept:SetText("ç¡®å®š");
+		ChannelCustomization_Cancel:SetText("å–æ¶ˆ");
+		ChannelCustomization_Destory:SetText("åˆ é™¤");
 		ChannelCustomization_EditName:Hide();
 		ChannelCustomization_TxtName:Show();
 		ChannelCustomization_Accept:Show();
 		ChannelCustomization_TxtName:SetText(strName);
 		
-		if(strName == "×Ô¼º") then
+		if(strName == "è‡ªå·±") then
 			ChannelCustomization_Destory:Hide();
 		else
 			ChannelCustomization_Destory:Show();
@@ -135,13 +135,13 @@ function ChatTabAction( act , strCfg , strName , pos)
 			local num = DataPool : GetCityNumFromOneProvinceId(pIdx);
 			num = tonumber(num);
 			if(cIdx < num and num) then
-				--µ½ÕâÀï£¬È·¶¨ÊÇÓĞĞ§µÄipRegion
+				--åˆ°è¿™é‡Œï¼Œç¡®å®šæ˜¯æœ‰æ•ˆçš„ipRegion
 				yes = 1;
 			end
 		end
 	end
 	
-	--Í¬³ÇÆµµÀ×öÌØÊâ´¦Àí,Èç¹ûÍ¬³ÇÆµµÀÑ¡ÖĞ
+	--åŒåŸé¢‘é“åšç‰¹æ®Šå¤„ç†,å¦‚æœåŒåŸé¢‘é“é€‰ä¸­
 	if(string.byte(strCfg,12) == 49 ) then
 		for i=1, 13 do
 			if i==12 then
@@ -199,7 +199,7 @@ function ChatTabAction( act , strCfg , strName , pos)
 	if(g_Action == "config" and curTab == 3) then
 		CC_BUTTON_Disable(12);
 	end
-	-- ÅäÖÃcheckbox
+	-- é…ç½®checkbox
 --	local i;
 --	for i=1, CUSTOM_BUTTONS_NUM do
 --		if(string.byte(strCfg, i) == 48) then -- 0
@@ -216,7 +216,7 @@ function ChatTabAction( act , strCfg , strName , pos)
 --		ChannelCustomization_ProvinceCity : Enable();
 --		ChannelCustomization_Province	  : Enable();
 --	end
-	-- ÏÔÊ¾´°Ìå
+	-- æ˜¾ç¤ºçª—ä½“
 	this:Show();
 end
 
@@ -275,7 +275,7 @@ function ChannelCustomization_Accept_Clicked()
 				_id = -1;
 			end
 			if(_id < 0)then
-				PushDebugMessage("ÇëÄúÑ¡ºÃÒ»¸ö³ÇÊĞÔÙÈ·¶¨Ê¹ÓÃÍ¬³ÇÆµµÀ£¡")
+				PushDebugMessage("è¯·æ‚¨é€‰å¥½ä¸€ä¸ªåŸå¸‚å†ç¡®å®šä½¿ç”¨åŒåŸé¢‘é“ï¼")
 				this : Hide()
 				return;
 			end
@@ -310,7 +310,7 @@ function ChannelCustomization_Cancel_Clicked()
 				_id = -1;
 			end
 			if(_id < 0)then
-				PushDebugMessage("ÇëÄúÑ¡ºÃÒ»¸ö³ÇÊĞÔÙÈ·¶¨Ê¹ÓÃÍ¬³ÇÆµµÀ£¡")
+				PushDebugMessage("è¯·æ‚¨é€‰å¥½ä¸€ä¸ªåŸå¸‚å†ç¡®å®šä½¿ç”¨åŒåŸé¢‘é“ï¼")
 				this : Hide()
 				return;
 			end
@@ -396,7 +396,7 @@ function ChannelCustomization_City_Click()
 			end
 		end
 
-		--Ä¬ÈÏÑ¡ÖĞ¡°»ğĞÇ¡±
+		--é»˜è®¤é€‰ä¸­â€œç«æ˜Ÿâ€
 		--ChannelCustomization_Province : SetCurrentSelect(0);
 	end
 end

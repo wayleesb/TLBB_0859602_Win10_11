@@ -1,14 +1,14 @@
---ÁÉ±ø
+--è¾½å…µ
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x020008_g_scriptId = 020008
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x020008_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
-		AddText(sceneId,"  ÀëÎÒÔ¶Ò»µã£¬ ËÎÈË²»ÅäºÍÎÒËµ»°¡£#r  Îá»ÊÍòËê£¡ ´óÁÉ±ØÊ¤£¡")
+		AddText(sceneId,"  ç¦»æˆ‘è¿œä¸€ç‚¹ï¼Œ å®‹äººä¸é…å’Œæˆ‘è¯´è¯ã€‚#r  å¾çš‡ä¸‡å²ï¼ å¤§è¾½å¿…èƒœï¼")
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 end

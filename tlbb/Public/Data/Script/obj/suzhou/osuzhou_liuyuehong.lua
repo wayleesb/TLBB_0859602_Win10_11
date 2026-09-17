@@ -1,18 +1,18 @@
---ËÕÖİNPC
---ÁøÔÂºç
---Ò»°ã
+--è‹å·NPC
+--æŸ³æœˆè™¹
+--ä¸€èˆ¬
 x001025_g_ScriptId = 1025
 
 x001025_g_ControlScript = 808071
 
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x001025_OnDefaultEvent( sceneId, selfId,targetId )
 
 	BeginEvent(sceneId)
-		AddText(sceneId,"  ´ÓÏÖÔÚ¿ªÊ¼£¬ÄãÖ»ĞíÌÛÎÒÒ»¸ö£¬Òª³èÎÒ£¬²»ĞíÆ­ÎÒ£¬´ğÓ¦ÎÒµÄÃ¿Ò»¼şÊÂÇé¶¼Òª×öµ½¡£")
+		AddText(sceneId,"  ä»ç°åœ¨å¼€å§‹ï¼Œä½ åªè®¸ç–¼æˆ‘ä¸€ä¸ªï¼Œè¦å® æˆ‘ï¼Œä¸è®¸éª—æˆ‘ï¼Œç­”åº”æˆ‘çš„æ¯ä¸€ä»¶äº‹æƒ…éƒ½è¦åšåˆ°ã€‚")
 		CallScriptFunction( x001025_g_ControlScript, "OnEnumerate",sceneId, selfId, targetId )
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)

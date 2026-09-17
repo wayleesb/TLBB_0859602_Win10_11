@@ -1,12 +1,12 @@
---¹ÅÄ¹Îå²ãNPC
---¹ùµ×»Ô
---5¼¶Åä·½ÉÌÈË
+--å¤å¢“äº”å±‚NPC
+--éƒ­åº•è¾‰
+--5çº§é…æ–¹å•†äºº
 
 x040000_g_scriptId = 040000
 x040000_g_shoptableindex = 148
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x040000_OnDefaultEvent( sceneId, selfId, targetId )
 	DispatchShopItem( sceneId, selfId, targetId, x040000_g_shoptableindex )

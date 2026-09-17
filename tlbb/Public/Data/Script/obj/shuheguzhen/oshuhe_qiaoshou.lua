@@ -1,14 +1,14 @@
---ÊøºÓ¹ÅÕòNPC....
---·ìÈÒ´óÊ¦....
+--æŸæ²³å¤é•‡NPC....
+--ç¼çº«å¤§å¸ˆ....
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x001199_g_ScriptId = 001199
 
---ËùÓµÓĞµÄÊÂ¼şIdÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶Idåˆ—è¡¨
 --estudy_fengren = 713506
 --elevelup_fengren = 713565
 --edialog_fengren = 713605
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x001199_g_eventList={713506,713565,713605}
 
 x001199_g_shoptableindex = 62
@@ -20,13 +20,13 @@ x001199_g_MsgInfo = { "#{SHGZ_0612_16}",
 										}
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x001199_UpdateEventList( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
 		local msgidx = random(getn(x001199_g_MsgInfo))
 		AddText(sceneId, x001199_g_MsgInfo[msgidx])
-		AddNumText( sceneId, x001199_g_ScriptId, "¹ºÂò´òÔìÍ¼", 7, 31 )          
+		AddNumText( sceneId, x001199_g_ScriptId, "è´­ä¹°æ‰“é€ å›¾", 7, 31 )          
 		AddNumText( sceneId, x001199_g_ScriptId, "#{INTERFACE_XML_1195}", 7, 32 )
 		for i, eventId in x001199_g_eventList do
 			CallScriptFunction( eventId, "OnEnumerate",sceneId, selfId, targetId )
@@ -36,14 +36,14 @@ function x001199_UpdateEventList( sceneId, selfId,targetId )
 end
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x001199_OnDefaultEvent( sceneId, selfId,targetId )
 	x001199_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x001199_OnEventRequest( sceneId, selfId, targetId, eventId )
 
@@ -65,7 +65,7 @@ function x001199_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x001199_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x001199_g_eventList do
@@ -80,10 +80,10 @@ function x001199_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x001199_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
-	--¾Ü¾øÖ®ºó£¬Òª·µ»ØNPCµÄÊÂ¼şÁĞ±í
+	--æ‹’ç»ä¹‹åï¼Œè¦è¿”å›NPCçš„äº‹ä»¶åˆ—è¡¨
 	for i, findId in x001199_g_eventList do
 		if missionScriptId == findId then
 			x001199_UpdateEventList( sceneId, selfId, targetId )
@@ -93,7 +93,7 @@ function x001199_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¼ÌĞø£¨ÒÑ¾­½ÓÁËÈÎÎñ£©
+--ç»§ç»­ï¼ˆå·²ç»æ¥äº†ä»»åŠ¡ï¼‰
 --**********************************
 function x001199_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x001199_g_eventList do
@@ -105,7 +105,7 @@ function x001199_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---Ìá½»ÒÑ×öÍêµÄÈÎÎñ
+--æäº¤å·²åšå®Œçš„ä»»åŠ¡
 --**********************************
 function x001199_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, selectRadioId )
 	for i, findId in x001199_g_eventList do

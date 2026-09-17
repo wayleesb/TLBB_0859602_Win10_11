@@ -1,27 +1,27 @@
---ĞÂµÄÔª±¦ÉÌµê
+--æ–°çš„å…ƒå®å•†åº—
 
 x888902_g_scriptId = 888902
---Ôª±¦ÉÌµêÁĞ±í ÒªÓë¿Í»§¶Ë½çÃæ¶ÔÓ¦
+--å…ƒå®å•†åº—åˆ—è¡¨ è¦ä¸å®¢æˆ·ç«¯ç•Œé¢å¯¹åº”
 x888902_g_shoplist = {}
-x888902_g_shoplist[1]	= {188, 189, 197}				--´óÂô³¡
-x888902_g_shoplist[2]	= {150, 178, 198, 193}		--±¦Ê¯ÉÌ³Ç,Ìí¼Ó"´óÀí±¦Ê¯Õ«--149",czf,2009.07.21
-x888902_g_shoplist[3]	= {194, 135, 152, 195}			--ÕäÊŞÉÌ³Ç
-x888902_g_shoplist[4]	= {136, 137, 144}				--ÄÏ±±ÔÓ»õ
-x888902_g_shoplist[5]	= {120, 181, 145, 182, 134}		--ĞÎÏó¹ã³¡
-x888902_g_shoplist[6]	= {190, 191, 192, 133}			--»¨ÎèÈË¼ä
-x888902_g_shoplist[7]	= {146}							--Îä¹¦ÃØ¼®
-x888902_g_shoplist[8]	= {156, 157, 158, 159, 160, 161, 162, 163}	--´òÔìÍ¼
-x888902_g_shoplist[9]	= {149, 150, 178, 198, 194, 136}			--ÎÒÒª¸üÇ¿´ó
-x888902_g_shoplist[10]	= {134, 120, 181, 145, 182}			--ÎÒÒª¸üÓĞ÷ÈÁ¦
-x888902_g_shoplist[11]	= {149, 150, 178, 193, 137}			--ÎÒÒª´òÔì¼«Æ·×°±¸
-x888902_g_shoplist[12]	= {194, 135, 152, 195}				--ÎÒÒª´òÔì¼«Æ·ÕäÊŞ
-x888902_g_shoplist[13]	= {134, 144}						--ÎÒÒªÒÆ¶¯µÄ¸ü¿ì
-x888902_g_shoplist[14]	= {191, 192, 133, 120, 134}			--ÎÒÒªÏò±ğÈË±í°×
-x888902_g_shoplist[15]	= {146, 135, 152}					--ÎÒÒªÑ§Ï°ĞÂ¼¼ÄÜ
+x888902_g_shoplist[1]	= {188, 189, 197}				--å¤§å–åœº
+x888902_g_shoplist[2]	= {150, 178, 198, 193}		--å®çŸ³å•†åŸ,æ·»åŠ "å¤§ç†å®çŸ³æ–‹--149",czf,2009.07.21
+x888902_g_shoplist[3]	= {194, 135, 152, 195}			--çå…½å•†åŸ
+x888902_g_shoplist[4]	= {136, 137, 144}				--å—åŒ—æ‚è´§
+x888902_g_shoplist[5]	= {120, 181, 145, 182, 134}		--å½¢è±¡å¹¿åœº
+x888902_g_shoplist[6]	= {190, 191, 192, 133}			--èŠ±èˆäººé—´
+x888902_g_shoplist[7]	= {146}							--æ­¦åŠŸç§˜ç±
+x888902_g_shoplist[8]	= {156, 157, 158, 159, 160, 161, 162, 163}	--æ‰“é€ å›¾
+x888902_g_shoplist[9]	= {149, 150, 178, 198, 194, 136}			--æˆ‘è¦æ›´å¼ºå¤§
+x888902_g_shoplist[10]	= {134, 120, 181, 145, 182}			--æˆ‘è¦æ›´æœ‰é­…åŠ›
+x888902_g_shoplist[11]	= {149, 150, 178, 193, 137}			--æˆ‘è¦æ‰“é€ æå“è£…å¤‡
+x888902_g_shoplist[12]	= {194, 135, 152, 195}				--æˆ‘è¦æ‰“é€ æå“çå…½
+x888902_g_shoplist[13]	= {134, 144}						--æˆ‘è¦ç§»åŠ¨çš„æ›´å¿«
+x888902_g_shoplist[14]	= {191, 192, 133, 120, 134}			--æˆ‘è¦å‘åˆ«äººè¡¨ç™½
+x888902_g_shoplist[15]	= {146, 135, 152}					--æˆ‘è¦å­¦ä¹ æ–°æŠ€èƒ½
 
 --**********************************
--- ¼ì²é´ËËæÉíNPCµÄ¹¦ÄÜ
--- opÊÇÇëÇóÀà±ğ£¬±ÈÈç1´ú±íÔª±¦Ïà¹ØµÄËæÉí²Ù×÷¡­¡­
+-- æ£€æŸ¥æ­¤éšèº«NPCçš„åŠŸèƒ½
+-- opæ˜¯è¯·æ±‚ç±»åˆ«ï¼Œæ¯”å¦‚1ä»£è¡¨å…ƒå®ç›¸å…³çš„éšèº«æ“ä½œâ€¦â€¦
 --**********************************
 function x888902_OpenYuanbaoShop( sceneId, selfId, targetId , shopA ,shopB )
 	local bCheck = x888902_YuanbaoShopCheckOp(sceneId,selfId);
@@ -39,12 +39,12 @@ function x888902_OpenYuanbaoShop( sceneId, selfId, targetId , shopA ,shopB )
 end
 
 function x888902_YuanbaoShopCheckOp(sceneId,selfId)
-	--µØ¸®
+	--åœ°åºœ
 	if sceneId == 77 then 
-		BroadMsgByChatPipe(sceneId, selfId, "@*;SrvMsg;DBD:µØ¸®Àï²»ÄÜÊ¹ÓÃËæÉí¹¦ÄÜ", 0);
+		BroadMsgByChatPipe(sceneId, selfId, "@*;SrvMsg;DBD:åœ°åºœé‡Œä¸èƒ½ä½¿ç”¨éšèº«åŠŸèƒ½", 0);
 		return 0
 	end
-	--×é¶Ó¸úËæ
+	--ç»„é˜Ÿè·Ÿéš
 	local selfHasTeamFlag = LuaFnHasTeam(sceneId, selfId);
 	if selfHasTeamFlag and selfHasTeamFlag == 1 then
 		local teamFollowFlag = IsTeamFollow(sceneId,selfId);
@@ -56,19 +56,19 @@ function x888902_YuanbaoShopCheckOp(sceneId,selfId)
 			return 0
 		end
 	end
-	--Ë«ÈËÆï³Ë
+	--åŒäººéª‘ä¹˜
 	local selfHasDRideFlag = LuaFnGetDRideFlag(sceneId, selfId);
 	if selfHasDRideFlag and selfHasDRideFlag == 1 then
 		local selfIsDRideMountOwner = LuaFnIsDRideMountOwner(sceneId, selfId);
 		if not selfIsDRideMountOwner or selfIsDRideMountOwner ~= 1 then
-			--´¦ÓÚË«ÈËÆï³Ë×´Ì¬£¬ÇÒÊÇ±»¶¯µÄ£¬½»¸øÖ÷¶¯·½À´´¦Àí
+			--å¤„äºåŒäººéª‘ä¹˜çŠ¶æ€ï¼Œä¸”æ˜¯è¢«åŠ¨çš„ï¼Œäº¤ç»™ä¸»åŠ¨æ–¹æ¥å¤„ç†
 			return 0
 		end
 	end
-	--15¼¶ÒÔÉÏ
+	--15çº§ä»¥ä¸Š
 	local level = GetLevel(sceneId,selfId);
 	if nil == level or level < 15 then
-		BroadMsgByChatPipe(sceneId, selfId, "@*;SrvMsg;DBD:´Ë¹¦ÄÜÖ»ÓĞµ±ÄúµÄµÈ¼¶´óÓÚµÈÓÚ15¼¶µÄÊ±ºò·½¿ÉÊ¹ÓÃ", 0);
+		BroadMsgByChatPipe(sceneId, selfId, "@*;SrvMsg;DBD:æ­¤åŠŸèƒ½åªæœ‰å½“æ‚¨çš„ç­‰çº§å¤§äºç­‰äº15çº§çš„æ—¶å€™æ–¹å¯ä½¿ç”¨", 0);
 		return 0
 	else
 

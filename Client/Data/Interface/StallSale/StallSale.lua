@@ -5,17 +5,17 @@ local g_DefaultPage = -1;
 local PAGE_ITEM  =0;
 local PAGE_PET   =1;
 
--- ÎïÆ·Ïà¹Ø
+-- ç‰©å“ç›¸å…³
 local STALL_BUTTONS_NUM = 20;
 local STALL_BUTTON = {};
 
-local g_nCurSelectItemID = -1;	--ÎïÆ·ID
-local g_nCurSelectItem = -1;		--ÎïÆ·Î»ÖÃ
+local g_nCurSelectItemID = -1;	--ç‰©å“ID
+local g_nCurSelectItem = -1;		--ç‰©å“ä½ç½®
 
---ÕäÊŞÏà¹Ø
-local MAX_PET_NUM  = 20;		--×î´óÉÏ¼ÜµÄÕäÊŞÊıÁ¿
-local g_nSelectPet = -1;		--µ±Ç°Ñ¡ÖĞµÄPet
-local g_nPetID = {};				--ÕäÊŞID±í
+--çå…½ç›¸å…³
+local MAX_PET_NUM  = 20;		--æœ€å¤§ä¸Šæ¶çš„çå…½æ•°é‡
+local g_nSelectPet = -1;		--å½“å‰é€‰ä¸­çš„Pet
+local g_nPetID = {};				--çå…½IDè¡¨
 
 --===============================================
 -- OnLoad()
@@ -29,7 +29,7 @@ function StallSale_PreLoad()
 	
 	this:RegisterEvent("UPDATE_STALL_ITEM_PRICE");
 	this:RegisterEvent("UPDATE_STALL_NAME");
-	--½øÈë³¡¾°£¬×Ô¶¯¹Ø±Õ
+	--è¿›å…¥åœºæ™¯ï¼Œè‡ªåŠ¨å…³é—­
 	this:RegisterEvent("CLOSE_STALL_SELL");
 	-- add by zchw
 	this:RegisterEvent("CLOSE_STALL_MESSAGE");
@@ -62,7 +62,7 @@ function StallSale_OnLoad()
 		g_nPetID[i] = -1;
 	end
 	
-	--ÔİÊ±ÆÁ±ÎÍÏ¶¯¹¦ÄÜ
+	--æš‚æ—¶å±è”½æ‹–åŠ¨åŠŸèƒ½
 	for i=1 ,STALL_BUTTONS_NUM     do
 		STALL_BUTTON[i]:SetProperty("DraggingEnabled","False");
 	end
@@ -73,15 +73,15 @@ end
 -- OnEvent()
 --===============================================
 function StallSale_StallInfo(event)
-	--ÌîĞ´Ì¯Î»Ãû×Ö
+	--å¡«å†™æ‘Šä½åå­—
 	StallSale_Name:SetText(StallSale:GetStallName());
-	--ÌîĞ´Ãû×Ö
-	StallSale_Master_Text:SetText("Ì¯Ö÷:" .. Player:GetName());
-	--ÌîĞ´×Ô¼ºµÄGUID
+	--å¡«å†™åå­—
+	StallSale_Master_Text:SetText("æ‘Šä¸»:" .. Player:GetName());
+	--å¡«å†™è‡ªå·±çš„GUID
 	StallSale_ID_Text:SetText( "ID:" .. StallSale:GetGuid());
-	--Çå³ı¼Û¸ñ
+	--æ¸…é™¤ä»·æ ¼
 	StallSale_TargetPrice_Money:SetProperty("MoneyNumber","");
-	--ÌîĞ´Ë°ÂÊ
+	--å¡«å†™ç¨ç‡
 	StallSale_Tax_Text:SetText(tostring(StallSale:GetTradeTax()).."%");
 end
 
@@ -104,23 +104,23 @@ function StallSale_OnEvent(event)
 		g_nCurSelectItem = -1;
 	
 	elseif(event == "UPDATE_STALL_ITEM_PRICE")   then
-		--»ñµÃĞŞ¸ÄµÚ¼¸¸ö£¬È»ºóĞŞ¸Ä¼Û¸ñ
+		--è·å¾—ä¿®æ”¹ç¬¬å‡ ä¸ªï¼Œç„¶åä¿®æ”¹ä»·æ ¼
 		StallSale_UpdateFrame();
 		StallSale_ViewSelectAndPrice();
 
 	elseif(event == "STALL_SALE_SELECT") then
 		--PushDebugMessage("STALL_SALE_SELECT");
 		StallSale_SelectUpdate();
-		--½«InputMoneyĞèÒªµÄÊı¾İ±£´æµ½È«¾ÖÊı¾İÇø
+		--å°†InputMoneyéœ€è¦çš„æ•°æ®ä¿å­˜åˆ°å…¨å±€æ•°æ®åŒº
 		SetGlobalInteger(g_nCurSelectItemID,"StallSale_ItemID");
 		SetGlobalInteger(g_nCurSelectItem,"StallSale_Item");
 
 	elseif(event == "OPEN_STALL_BUY") then
-		--ÊµÏÖÂòÂô½çÃæµÄ»¥³â
+		--å®ç°ä¹°å–ç•Œé¢çš„äº’æ–¥
 		this:Hide();
 		
 	elseif(event == "UPDATE_STALL_NAME")  then
-		--¸ü¸ÄÉÌµêÃû×Ö
+		--æ›´æ”¹å•†åº—åå­—
 		StallSale_Name:SetText(arg0);
 		StallSale:ModifStallName(StallSale_Name:GetText());
 		-- add by zchw
@@ -146,15 +146,15 @@ function StallSale_GetDefalutPage()
 end
 
 --===============================================
--- ³õÊ¼»¯°ÚÌ¯½çÃæ dun.liu 2008.10.23
+-- åˆå§‹åŒ–æ‘†æ‘Šç•Œé¢ dun.liu 2008.10.23
 --===============================================
 function StallSale_OnStallSaleOpen()
 	this:Show();
 	
-	--´ò¿ªÁôÑÔ°æ
+	--æ‰“å¼€ç•™è¨€ç‰ˆ
 	StallSale:OpenMessageSale();		
 	
-	--Çå¿ÕÑ¡Ôñ
+	--æ¸…ç©ºé€‰æ‹©
 	StallSale_ClearSelect();
 		
 	g_DefaultPage = StallSale_GetDefalutPage();
@@ -170,7 +170,7 @@ function StallSale_OnStallSaleOpen()
 
 	StallSale_StallInfo();
 		
-	-- ÌîÈëÄÚÈİ
+	-- å¡«å…¥å†…å®¹
 	StallSale_ChangePage(g_CurrentPage);
 	
 	
@@ -178,30 +178,30 @@ function StallSale_OnStallSaleOpen()
 	StallSale_TargetPrice_Yuanbao:Hide();
 	
 	local nCoinType = StallSale:GetStallType()
-	-- Èç¹ûÊÇ½ğ±Ò°ÚÌ¯
+	-- å¦‚æœæ˜¯é‡‘å¸æ‘†æ‘Š
 	if (nCoinType == 0) then
-		--PushDebugMessage("½ğ±Ò°ÚÌ¯");
+		--PushDebugMessage("é‡‘å¸æ‘†æ‘Š");
 		StallSale_TargetPrice:Show();
 		StallSale_Check_Pet:Show()
 		StallSale_Default_Page:Show()
 		StallSale_SetPage_Text:Show()
 		
 	elseif( nCoinType == 1 ) then
-		--PushDebugMessage("Ôª±¦°ÚÌ¯");
+		--PushDebugMessage("å…ƒå®æ‘†æ‘Š");
 		StallSale_TargetPrice_Yuanbao:Show();
 		StallSale_Check_Pet:Show()
 		StallSale_Default_Page:Show();
 		StallSale_SetPage_Text:Show();
-		StallSale_TargetPrice_Yuanbao:SetText("#cff99000 #WÔª±¦")
+		StallSale_TargetPrice_Yuanbao:SetText("#cff99000 #Wå…ƒå®")
 
 	else
-		PushDebugMessage("°ÚÌ¯ÀàĞÍ´íÎó");
+		PushDebugMessage("æ‘†æ‘Šç±»å‹é”™è¯¯");
 	end
 
 end
 
 --===============================================
--- Ñ¡ÖĞÎïÆ·
+-- é€‰ä¸­ç‰©å“
 --===============================================
 function StallSale_SelectUpdate()
 
@@ -215,7 +215,7 @@ function StallSale_SelectUpdate()
 end
 
 --===============================================
--- ÏÔÊ¾Ñ¡ÖĞµÄÎïÆ·£¨ÕäÊŞ£©£¬ºÍËûÃÇµÄ±ê¼Û
+-- æ˜¾ç¤ºé€‰ä¸­çš„ç‰©å“ï¼ˆçå…½ï¼‰ï¼Œå’Œä»–ä»¬çš„æ ‡ä»·
 --===============================================
 function StallSale_ViewSelectAndPrice()
 
@@ -249,22 +249,22 @@ function StallSale_ViewSelectAndPrice()
 		
 	elseif( nCoinType == 1 ) then
 		StallSale_SetTargetPrice(1, nMoney)
-		--StallSale2_TargetPrice_Yuanbao:SetText("#Y"..tostring(nMoney).." Ôª±¦");
+		--StallSale2_TargetPrice_Yuanbao:SetText("#Y"..tostring(nMoney).." å…ƒå®");
 
 		
 	else
-		PushDebugMessage("°ÚÌ¯ÀàĞÍ´íÎó");
+		PushDebugMessage("æ‘†æ‘Šç±»å‹é”™è¯¯");
 	end
 	
 end
 
 
 --===============================================
--- Ñ¡ÖĞÕäÊŞ
+-- é€‰ä¸­çå…½
 --===============================================
 function StallSale_PetList_Selected()
 	
-	--ĞèÒªÏÔÊ¾¼Û¸ñ
+	--éœ€è¦æ˜¾ç¤ºä»·æ ¼
 	g_nSelectPet = StallSale_PetList:GetFirstSelectItem();
 	
 	if( g_nSelectPet == -1 )  then 
@@ -304,7 +304,7 @@ function StallSale_UpdateFrame()
 end
 
 --===============================================
--- ÖØĞÂÃüÃûÌ¯Î»Ãû³Æ
+-- é‡æ–°å‘½åæ‘Šä½åç§°
 --===============================================
 function StallSaleRename_Clicked()
 
@@ -313,12 +313,12 @@ function StallSaleRename_Clicked()
 end
 
 --===============================================
--- ÖØĞÂÖ¸¶¨ÎïÆ·µÄ¼Û¸ñ£¨´ò¿ª¼Û¸ñÊäÈë¿ò£©
+-- é‡æ–°æŒ‡å®šç‰©å“çš„ä»·æ ¼ï¼ˆæ‰“å¼€ä»·æ ¼è¾“å…¥æ¡†ï¼‰
 --===============================================
 function StallSaleReprice_Clicked()
 
 	if (g_CurrentPage == PAGE_ITEM) then 
-		-- ĞèÒªÏÈÅĞ¶¨ÊÇ·ñÓĞÎïÆ·
+		-- éœ€è¦å…ˆåˆ¤å®šæ˜¯å¦æœ‰ç‰©å“
 		if(g_nCurSelectItemID~=-1) then
 			if(g_nCurSelectItem~=-1) then
 				StallSale:ModifItemPrice("item");
@@ -334,12 +334,12 @@ function StallSaleReprice_Clicked()
 end
 
 --===============================================
--- ÈÃÒ»¸öÎïÆ·(ÕäÊŞ)ÏÂ¼Ü
+-- è®©ä¸€ä¸ªç‰©å“(çå…½)ä¸‹æ¶
 --===============================================
 function StallSaleDelete_Clicked()
 	
 	if (g_CurrentPage == PAGE_ITEM) then 
-		-- ĞèÒªÏÈÅĞ¶¨ÊÇ·ñÓĞÎïÆ·
+		-- éœ€è¦å…ˆåˆ¤å®šæ˜¯å¦æœ‰ç‰©å“
 		if(g_nCurSelectItemID~=-1) then
 			if(g_nCurSelectItem~=-1) then
 				StallSale:DeleteItem("item",g_nCurSelectItemID);
@@ -355,7 +355,7 @@ function StallSaleDelete_Clicked()
 end
 
 --===============================================
--- ÊÕÌ¯×ßÈË
+-- æ”¶æ‘Šèµ°äºº
 --===============================================
 function StallSalePutUpTheShutters_Clicked()
 	--StallSale:CloseStall("ask");
@@ -365,14 +365,14 @@ function StallSalePutUpTheShutters_Clicked()
 end
 
 --===============================================
--- ´ò¿ªĞÅÏ¢½çÃæ
+-- æ‰“å¼€ä¿¡æ¯ç•Œé¢
 --===============================================
 function StallSale_Message_Clicked()
 	StallSale:OpenMessageSale();
 end
 
 --===============================================
--- ¹Ø±Õ°´Å¥
+-- å…³é—­æŒ‰é’®
 --===============================================
 function StallSale_Close_Clicked()
 	this:Hide();
@@ -383,7 +383,7 @@ function StallSale_Close_Clicked()
 end
 
 --===============================================
--- ÏÔÊ¾ÎïÆ·
+-- æ˜¾ç¤ºç‰©å“
 --===============================================
 function UpdateItem()
 	local nItemNum = GetActionNum("st_self");
@@ -398,7 +398,7 @@ function UpdateItem()
 end
 
 --===============================================
--- ÏÔÊ¾ÕäÊŞ
+-- æ˜¾ç¤ºçå…½
 --===============================================
 function UpdatePet()
 	StallSale_PetList:ClearListBox();
@@ -418,7 +418,7 @@ function UpdatePet()
 end
 
 --===============================================
--- »»Ò³
+-- æ¢é¡µ
 --===============================================
 function StallSale_ChangeTabIndex(nIndex)
 	--AxTrace(0,0,"StallSale_ChangeTabIndex begin\n");
@@ -432,7 +432,7 @@ function StallSale_ChangeTabIndex(nIndex)
 end
 
 --===============================================
--- »»Ò³Ë¢ĞÂ
+-- æ¢é¡µåˆ·æ–°
 --===============================================
 function StallSale_ChangePage(nPage)
 	--AxTrace(0,0,"StallSale_ChangePage begin\n");
@@ -461,7 +461,7 @@ function StallSale_ChangePage(nPage)
 end
 
 --===============================================
--- Ñ¡ÖĞÈ±Ê¡Ò³Ãæ
+-- é€‰ä¸­ç¼ºçœé¡µé¢
 --===============================================
 function StallSale_Default_Page_Clicked()
 
@@ -487,23 +487,23 @@ function StallSale_Default_Page_Clicked()
 end
 
 --===============================================
--- ÓÒ¼üÑ¡ÖĞ
+-- å³é”®é€‰ä¸­
 --===============================================
 function StallSale_PetList_RClick()
 
 	g_nSelectPet = StallSale_PetList:GetFirstSelectItem();
 	if(g_nSelectPet == -1)then
-		PushDebugMessage("ÇëÑ¡ÔñÒ»Ö»ÕäÊŞºóµã»÷²é¿´")
+		PushDebugMessage("è¯·é€‰æ‹©ä¸€åªçå…½åç‚¹å‡»æŸ¥çœ‹")
 		return;
 	end
 
-	--ÏÔÊ¾ÕäÊŞ
+	--æ˜¾ç¤ºçå…½
 	StallSale:ViewPetDesc("self",g_nPetID[g_nSelectPet]);
 
 end
 
 --===============================================
--- ÉèÖÃTabÑÕÉ«
+-- è®¾ç½®Tabé¢œè‰²
 --===============================================
 function StallSale_SetTabColor()
 	
@@ -511,22 +511,22 @@ function StallSale_SetTabColor()
 	local noselColor = "#e010101";
 
 	if( PAGE_ITEM == g_CurrentPage ) then
-		StallSale_Check_Item:SetText(selColor .. "ÎïÆ·");
-		StallSale_Check_Pet:SetText(noselColor .. "ÕäÊŞ");
+		StallSale_Check_Item:SetText(selColor .. "ç‰©å“");
+		StallSale_Check_Pet:SetText(noselColor .. "çå…½");
 	else
-		StallSale_Check_Item:SetText(noselColor .. "ÎïÆ·");
-		StallSale_Check_Pet:SetText(selColor .. "ÕäÊŞ");
+		StallSale_Check_Item:SetText(noselColor .. "ç‰©å“");
+		StallSale_Check_Pet:SetText(selColor .. "çå…½");
 	end
 
 end
 
 --===============================================
--- »Ö¸´Ñ¡ÖĞ×´Ì¬£¨Çå¿ÕÑ¡ÖĞ£©
+-- æ¢å¤é€‰ä¸­çŠ¶æ€ï¼ˆæ¸…ç©ºé€‰ä¸­ï¼‰
 --===============================================
 function StallSale_ClearSelect()
-	g_nSelectPet = -1;				--µ±Ç°Ñ¡ÖĞµÄPet
-	g_nCurSelectItemID = -1;	--ÎïÆ·ID
-	g_nCurSelectItem = -1;		--ÎïÆ·Î»ÖÃ
+	g_nSelectPet = -1;				--å½“å‰é€‰ä¸­çš„Pet
+	g_nCurSelectItemID = -1;	--ç‰©å“ID
+	g_nCurSelectItem = -1;		--ç‰©å“ä½ç½®
 end
 
 
@@ -537,10 +537,10 @@ function StallSale_SetTargetPrice(nCoinType, nMoney)
 	local nMoneyMid = 0;
 	local strMoney = "";
 	
-	-- Èç¹ûÊÇ½ğ±Ò°ÚÌ¯
+	-- å¦‚æœæ˜¯é‡‘å¸æ‘†æ‘Š
 	if (nCoinType == 0) then
 		StallSale_TargetPrice_Money:SetProperty("MoneyNumber",tostring(nMoney));
-			-- Ôª±¦°ÚÌ¯
+			-- å…ƒå®æ‘†æ‘Š
 	elseif( nCoinType == 1 ) then
 		if (nMoney <100 ) then
 			strMoney = string.format("#cff9900%s", nMoney);
@@ -572,8 +572,8 @@ function StallSale_SetTargetPrice(nCoinType, nMoney)
 			end
 			strMoney = string.format("#Y%d#W%s#cff9900%s", nMoneyBegin, strMid, strEnd);
 		end
-		StallSale_TargetPrice_Yuanbao:SetText("#Y"..strMoney.." #WÔª±¦");
+		StallSale_TargetPrice_Yuanbao:SetText("#Y"..strMoney.." #Wå…ƒå®");
 	else
-		PushDebugMessage("°ÚÌ¯ÀàĞÍ´íÎó");
+		PushDebugMessage("æ‘†æ‘Šç±»å‹é”™è¯¯");
 	end
 end

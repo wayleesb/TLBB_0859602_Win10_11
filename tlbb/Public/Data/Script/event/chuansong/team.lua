@@ -1,5 +1,5 @@
 
---´«ËÍº¯Êı
+--ä¼ é€å‡½æ•°
 x400900_g_scriptId=400900
 
 x400900_g_Impact_No_ChangeScene = 38
@@ -10,29 +10,29 @@ function x400900_TransferFunc( sceneId, selfId, newSceneId, posX, posY, minLevel
 	local humanList = {};
 	local humanCount = 0;
 	
-	--Ë«ÈËÆï³Ë×´Ì¬
+	--åŒäººéª‘ä¹˜çŠ¶æ€
 	local selfHasDRideFlag = LuaFnGetDRideFlag(sceneId, selfId);
 	if selfHasDRideFlag and selfHasDRideFlag == 1 then
 		local selfIsDRideMountOwner = LuaFnIsDRideMountOwner(sceneId, selfId);
 		if not selfIsDRideMountOwner or selfIsDRideMountOwner ~= 1 then
-			--´¦ÓÚË«ÈËÆï³Ë×´Ì¬£¬ÇÒÊÇ±»¶¯µÄ£¬½»¸øÖ÷¶¯·½À´´¦Àí
+			--å¤„äºåŒäººéª‘ä¹˜çŠ¶æ€ï¼Œä¸”æ˜¯è¢«åŠ¨çš„ï¼Œäº¤ç»™ä¸»åŠ¨æ–¹æ¥å¤„ç†
 			return
 		end
 	end
 	
-	--¶ÓÓÑ
+	--é˜Ÿå‹
 	local selfHasTeamFlag = LuaFnHasTeam(sceneId, selfId);
 	if selfHasTeamFlag and selfHasTeamFlag == 1 then
 		local teamFollowFlag = IsTeamFollow(sceneId,selfId);
 		local teamLeaderFlag = LuaFnIsTeamLeader(sceneId,selfId);
 		if not teamLeaderFlag or not teamFollowFlag then
-			--Î´Öª´íÎó
+			--æœªçŸ¥é”™è¯¯
 			return
 		end
 		
 		if teamLeaderFlag == 1 then
 			if teamFollowFlag == 1 then
-				--ÊÇ¶Ó³¤ÇÒÊÇ×é¶Ó¸úËæ×´Ì¬
+				--æ˜¯é˜Ÿé•¿ä¸”æ˜¯ç»„é˜Ÿè·ŸéšçŠ¶æ€
 				local followMemberCount = LuaFnGetFollowedMembersCount(sceneId, selfId);
 				local i;
 				local followMembers = {};
@@ -41,23 +41,23 @@ function x400900_TransferFunc( sceneId, selfId, newSceneId, posX, posY, minLevel
 					if followMembers[i] and followMembers[i] ~= -1 then
 						
 						if followMembers[i] ~= selfId and IsHaveMission(sceneId, followMembers[i], 4021) > 0 then
-							x400900_NotifyFailTips(sceneId, selfId, "Äú»¹ÓĞ¸úËæµÄ¶ÓÓÑ´¦ÓÚäîÔË×´Ì¬ÖĞ£¬ÎŞ·¨´«ËÍ¡£")
+							x400900_NotifyFailTips(sceneId, selfId, "æ‚¨è¿˜æœ‰è·Ÿéšçš„é˜Ÿå‹å¤„äºæ¼•è¿çŠ¶æ€ä¸­ï¼Œæ— æ³•ä¼ é€ã€‚")
 							return
 						end
 						
 						if followMembers[i] ~= selfId and GetItemCount(sceneId, followMembers[i], x400900_g_Yinpiao) >=1 then
-							x400900_NotifyFailTips(sceneId, selfId, "Äú»¹ÓĞ¸úËæµÄ¶ÓÓÑ´¦ÓÚÅÜÉÌ×´Ì¬ÖĞ£¬ÎŞ·¨´«ËÍ¡£")
+							x400900_NotifyFailTips(sceneId, selfId, "æ‚¨è¿˜æœ‰è·Ÿéšçš„é˜Ÿå‹å¤„äºè·‘å•†çŠ¶æ€ä¸­ï¼Œæ— æ³•ä¼ é€ã€‚")
 							return
 						end
 	
-						--Ë«ÈËÆï³Ë×´Ì¬
+						--åŒäººéª‘ä¹˜çŠ¶æ€
 						local memberHasDRideFlag = LuaFnGetDRideFlag(sceneId, followMembers[i]);
 						if memberHasDRideFlag and memberHasDRideFlag == 1 then
 							local memberIsDRideMountOwner = LuaFnIsDRideMountOwner(sceneId, followMembers[i]);
 							if memberIsDRideMountOwner and memberIsDRideMountOwner == 1 then
 							else
-								--Ë«ÈËÆï³ËÔõÃ´¿ÉÄÜÓë×é¶Ó¸úËæ²¢´æÄØ?
-								x400900_NotifyFailTips(sceneId, selfId, "Ë«ÈËÆï³Ë²»ÄÜÓë×é¶Ó¸úËæ²¢´æ¡£")
+								--åŒäººéª‘ä¹˜æ€ä¹ˆå¯èƒ½ä¸ç»„é˜Ÿè·Ÿéšå¹¶å­˜å‘¢?
+								x400900_NotifyFailTips(sceneId, selfId, "åŒäººéª‘ä¹˜ä¸èƒ½ä¸ç»„é˜Ÿè·Ÿéšå¹¶å­˜ã€‚")
 								return
 							end
 						end
@@ -65,18 +65,18 @@ function x400900_TransferFunc( sceneId, selfId, newSceneId, posX, posY, minLevel
 						humanCount = humanCount + 1;
 						humanList[humanCount] = followMembers[i];
 					else
-						x400900_NotifyFailTips(sceneId, selfId, "Äú»¹ÓĞ¸úËæµÄ¶ÓÓÑÃ»ÓĞµ½´ï±¾³¡¾°£¬ÔİÊ±²»ÄÜÀë¿ª¡£")
+						x400900_NotifyFailTips(sceneId, selfId, "æ‚¨è¿˜æœ‰è·Ÿéšçš„é˜Ÿå‹æ²¡æœ‰åˆ°è¾¾æœ¬åœºæ™¯ï¼Œæš‚æ—¶ä¸èƒ½ç¦»å¼€ã€‚")
 						return
 					end
 				end
 			else
-				--ÊÇ¶Ó³¤ÇÒ²»ÊÇ×é¶Ó¸úËæ×´Ì¬
+				--æ˜¯é˜Ÿé•¿ä¸”ä¸æ˜¯ç»„é˜Ÿè·ŸéšçŠ¶æ€
 				humanCount = humanCount + 1;
 				humanList[humanCount] = selfId;
 			end
 		else
 			if teamFollowFlag == 1 then
-				--²»ÊÇ¶Ó³¤ÇÒÊÇ×é¶Ó¸úËæ×´Ì¬£¬²»Àí»á£¬ÈÃ¶Ó³¤µÄÕâ¸öº¯ÊıÀ´´¦Àí
+				--ä¸æ˜¯é˜Ÿé•¿ä¸”æ˜¯ç»„é˜Ÿè·ŸéšçŠ¶æ€ï¼Œä¸ç†ä¼šï¼Œè®©é˜Ÿé•¿çš„è¿™ä¸ªå‡½æ•°æ¥å¤„ç†
 				return
 			end
 			humanCount = humanCount + 1;
@@ -87,7 +87,7 @@ function x400900_TransferFunc( sceneId, selfId, newSceneId, posX, posY, minLevel
 		humanList[humanCount] = selfId;
 	end
 	
-	--¸÷½ÇÉ«µÄË«ÈËÆï³Ë
+	--å„è§’è‰²çš„åŒäººéª‘ä¹˜
 	local saveHumanCount = humanCount;
 	local i;
 	for i = 1, saveHumanCount do
@@ -100,12 +100,12 @@ function x400900_TransferFunc( sceneId, selfId, newSceneId, posX, posY, minLevel
 				if drideTargetID and drideTargetID ~= -1 then
 					
 					if drideTargetID ~= selfId and IsHaveMission(sceneId, drideTargetID, 4021) > 0 then
-						x400900_NotifyFailTips(sceneId, selfId, "Äú»òÄúµÄ¸úËæ¶ÓÎéÖĞÓĞË«ÈËÆï³ËµÄ¶Ô·½´¦ÓÚäîÔË×´Ì¬ÖĞ£¬ÎŞ·¨´«ËÍ¡£")
+						x400900_NotifyFailTips(sceneId, selfId, "æ‚¨æˆ–æ‚¨çš„è·Ÿéšé˜Ÿä¼ä¸­æœ‰åŒäººéª‘ä¹˜çš„å¯¹æ–¹å¤„äºæ¼•è¿çŠ¶æ€ä¸­ï¼Œæ— æ³•ä¼ é€ã€‚")
 						return
 					end
 					
 					if drideTargetID ~= selfId and GetItemCount(sceneId, drideTargetID, x400900_g_Yinpiao) >=1 then
-						x400900_NotifyFailTips(sceneId, selfId, "Äú»òÄúµÄ¸úËæ¶ÓÎéÖĞÓĞË«ÈËÆï³ËµÄ¶Ô·½´¦ÓÚÅÜÉÌ×´Ì¬ÖĞ£¬ÎŞ·¨´«ËÍ¡£")
+						x400900_NotifyFailTips(sceneId, selfId, "æ‚¨æˆ–æ‚¨çš„è·Ÿéšé˜Ÿä¼ä¸­æœ‰åŒäººéª‘ä¹˜çš„å¯¹æ–¹å¤„äºè·‘å•†çŠ¶æ€ä¸­ï¼Œæ— æ³•ä¼ é€ã€‚")
 						return
 					end
 					
@@ -113,7 +113,7 @@ function x400900_TransferFunc( sceneId, selfId, newSceneId, posX, posY, minLevel
 					humanList[humanCount] = drideTargetID;
 				end
 			else
-				--Ç°ÃæµÄ¼ì²â³ö´íÁË
+				--å‰é¢çš„æ£€æµ‹å‡ºé”™äº†
 				return
 			end
 		end
@@ -148,13 +148,13 @@ end
 function x400900_TransferFuncFromNpc( sceneId, selfId, newSceneId, posX, posY, minLevel, maxLevel )
 	if IsHaveMission( sceneId, selfId, 4021 ) > 0 then
 		BeginEvent( sceneId )
-			local strText = "Äú´¦ÓÚäîÔË×´Ì¬ÖĞ£¬²»¿ÉÒÔÊ¹ÓÃ´«ËÍµÄ¹¦ÄÜ¡£"
+			local strText = "æ‚¨å¤„äºæ¼•è¿çŠ¶æ€ä¸­ï¼Œä¸å¯ä»¥ä½¿ç”¨ä¼ é€çš„åŠŸèƒ½ã€‚"
 			AddText( sceneId, strText )
 		EndEvent( sceneId )
 		DispatchMissionTips( sceneId, selfId )
 	elseif LuaFnHaveImpactOfSpecificDataIndex(sceneId, selfId, 113) == 1 then
 		BeginEvent( sceneId )
-			local strText = "Äú´¦ÓÚÅÜÉÌ×´Ì¬ÖĞ£¬²»¿ÉÒÔÊ¹ÓÃ´«ËÍµÄ¹¦ÄÜ¡£"
+			local strText = "æ‚¨å¤„äºè·‘å•†çŠ¶æ€ä¸­ï¼Œä¸å¯ä»¥ä½¿ç”¨ä¼ é€çš„åŠŸèƒ½ã€‚"
 			AddText( sceneId, strText )
 		EndEvent( sceneId )
 		DispatchMissionTips( sceneId, selfId )
@@ -164,7 +164,7 @@ function x400900_TransferFuncFromNpc( sceneId, selfId, newSceneId, posX, posY, m
 end
 
 --**********************************
--- ÆÁÄ»ÖĞ¼äĞÅÏ¢ÌáÊ¾
+-- å±å¹•ä¸­é—´ä¿¡æ¯æç¤º
 --**********************************
 function x400900_NotifyFailTips( sceneId, selfId, Tip )
 	BeginEvent( sceneId )
@@ -174,42 +174,42 @@ function x400900_NotifyFailTips( sceneId, selfId, Tip )
 end
 
 --**********************************
--- ¼¶±ğÏŞÖÆµÄ¼ì²â
+-- çº§åˆ«é™åˆ¶çš„æ£€æµ‹
 --**********************************
 function x400900_CheckChangeScene(sceneId, selfId, newSceneId, posX, posY, minLevel, maxLevel)
 	if not sceneId or not selfId or not newSceneId or not posX or not posY then
-		return 0, "ÎŞĞ§´«ËÍÇëÇó£¬ÎŞ·¨´«ËÍ¡£", "ÎŞĞ§´«ËÍÇëÇó£¬ÎŞ·¨´«ËÍ¡£";
+		return 0, "æ— æ•ˆä¼ é€è¯·æ±‚ï¼Œæ— æ³•ä¼ é€ã€‚", "æ— æ•ˆä¼ é€è¯·æ±‚ï¼Œæ— æ³•ä¼ é€ã€‚";
 	end
 
 	local selfLevel = LuaFnGetLevel(sceneId, selfId);
 	if not selfLevel then
-		return 0, "ÎŞĞ§´«ËÍÇëÇó£¬ÎŞ·¨´«ËÍ¡£", "ÎŞĞ§´«ËÍÇëÇó£¬ÎŞ·¨´«ËÍ¡£";
+		return 0, "æ— æ•ˆä¼ é€è¯·æ±‚ï¼Œæ— æ³•ä¼ é€ã€‚", "æ— æ•ˆä¼ é€è¯·æ±‚ï¼Œæ— æ³•ä¼ é€ã€‚";
 	end
 	
 	local livingFlag = LuaFnIsCharacterLiving(sceneId, selfId);
 	if not livingFlag or livingFlag ~= 1 then
-		return 0, "ÄãÒÑ¾­ËÀÍö£¬ÎŞ·¨´«ËÍ¡£", GetName(sceneId, selfId).."ÒÑ¾­ËÀÍö£¬ÎŞ·¨´«ËÍ¡£";
+		return 0, "ä½ å·²ç»æ­»äº¡ï¼Œæ— æ³•ä¼ é€ã€‚", GetName(sceneId, selfId).."å·²ç»æ­»äº¡ï¼Œæ— æ³•ä¼ é€ã€‚";
 	end
 	
 	if minLevel and selfLevel < minLevel then
-		return 0, "ÄãµÄ¼¶±ğ²»×ã"..tostring(minLevel).."£¬ÎŞ·¨´«ËÍ¡£", GetName(sceneId, selfId).."µÄ¼¶±ğ²»×ã"..tostring(minLevel).."£¬ÎŞ·¨´«ËÍ¡£"; 
+		return 0, "ä½ çš„çº§åˆ«ä¸è¶³"..tostring(minLevel).."ï¼Œæ— æ³•ä¼ é€ã€‚", GetName(sceneId, selfId).."çš„çº§åˆ«ä¸è¶³"..tostring(minLevel).."ï¼Œæ— æ³•ä¼ é€ã€‚"; 
 	end
 	
 	if maxLevel and selfLevel >= maxLevel then
-		return 0, "ÄãµÄ¼¶±ğ±ØĞèĞ¡ÓÚ"..tostring(maxLevel).."£¬²ÅÄÜ´«ËÍ¡£", GetName(sceneId, selfId).."µÄ¼¶±ğ±ØĞèĞ¡ÓÚ"..tostring(maxLevel).."£¬²ÅÄÜ´«ËÍ¡£";
+		return 0, "ä½ çš„çº§åˆ«å¿…éœ€å°äº"..tostring(maxLevel).."ï¼Œæ‰èƒ½ä¼ é€ã€‚", GetName(sceneId, selfId).."çš„çº§åˆ«å¿…éœ€å°äº"..tostring(maxLevel).."ï¼Œæ‰èƒ½ä¼ é€ã€‚";
 	end
 	
 	local changeSceneImpactCheck = LuaFnHaveImpactOfSpecificDataIndex(sceneId, selfId, x400900_g_Impact_No_ChangeScene);
 	if not changeSceneImpactCheck or changeSceneImpactCheck ~= 0 then
-		return 0, "ÄãÏÖÔÚ»¹²»ÄÜÀë¿ª¡£", GetName(sceneId, selfId).."ÏÖÔÚ»¹²»ÄÜÀë¿ª¡£";
+		return 0, "ä½ ç°åœ¨è¿˜ä¸èƒ½ç¦»å¼€ã€‚", GetName(sceneId, selfId).."ç°åœ¨è¿˜ä¸èƒ½ç¦»å¼€ã€‚";
 	end
 	
 	--if IsHaveMission(sceneId, selfId, 4021) > 0 then
-	--	return 0,"ÄãÕı´¦ÓÚäîÔË×´Ì¬ÖĞ£¬ÎŞ·¨´«ËÍ¡£", GetName(sceneId, selfId).."Õı´¦ÓÚäîÔË×´Ì¬ÖĞ£¬ÎŞ·¨´«ËÍ¡£";
+	--	return 0,"ä½ æ­£å¤„äºæ¼•è¿çŠ¶æ€ä¸­ï¼Œæ— æ³•ä¼ é€ã€‚", GetName(sceneId, selfId).."æ­£å¤„äºæ¼•è¿çŠ¶æ€ä¸­ï¼Œæ— æ³•ä¼ é€ã€‚";
 	--end
 	
 	--if GetItemCount(sceneId, selfId, x400900_g_Yinpiao) >=1 then
-	--	return 0, "ÄãÕı´¦ÓÚÅÜÉÌ×´Ì¬ÖĞ£¬ÎŞ·¨´«ËÍ¡£", GetName(sceneId, selfId).."Õı´¦ÓÚÅÜÉÌ×´Ì¬ÖĞ£¬ÎŞ·¨´«ËÍ¡£";
+	--	return 0, "ä½ æ­£å¤„äºè·‘å•†çŠ¶æ€ä¸­ï¼Œæ— æ³•ä¼ é€ã€‚", GetName(sceneId, selfId).."æ­£å¤„äºè·‘å•†çŠ¶æ€ä¸­ï¼Œæ— æ³•ä¼ é€ã€‚";
 	--end
 	
 	return 1, "", "";

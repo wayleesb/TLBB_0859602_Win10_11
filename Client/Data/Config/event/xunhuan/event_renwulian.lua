@@ -1,29 +1,29 @@
 --MisDescBegin
 x229022_g_scriptId = 229022
-x229022_g_Name	= "Íõ·òÈË"
+x229022_g_Name	= "ç‹å¤«äºº"
 x229022_g_MissionId = 1202
 x229022_g_MissionKind = 1
 x229022_g_MissionLevel = 10000
 x229022_g_IfMissionElite = 0
-x229022_g_IsMissionOkFail = 0		--±äÁ¿µÄµÚ0Î»
-x229022_g_MissionName="Á¬»·ÈÎÎñ"
-x229022_g_MissionInfo=""  --ÈÎÎñÃèÊö
+x229022_g_IsMissionOkFail = 0		--å˜é‡çš„ç¬¬0ä½
+x229022_g_MissionName="è¿ç¯ä»»åŠ¡"
+x229022_g_MissionInfo=""  --ä»»åŠ¡æè¿°
 x229022_g_MissionTarget = "%f"
-x229022_g_ContinueInfo="¸ÉµÃ²»´í"		--Î´Íê³ÉÈÎÎñµÄnpc¶Ô»°
-x229022_g_MissionComplete="àÅ, ÎÒÖªµÀÁË, Äã¸ÉµÃ²»´í"					--Íê³ÉÈÎÎñnpcËµ»°µÄ»°
+x229022_g_ContinueInfo="å¹²å¾—ä¸é”™"		--æœªå®Œæˆä»»åŠ¡çš„npcå¯¹è¯
+x229022_g_MissionComplete="å—¯, æˆ‘çŸ¥é“äº†, ä½ å¹²å¾—ä¸é”™"					--å®Œæˆä»»åŠ¡npcè¯´è¯çš„è¯
 x229022_g_FormatList = {
-"ÕÒµ½%n",
-"½«%iËÍ¸ø%n",
-"½«#Y%p#WËÍ¸ø%n#r  #GĞ¡ÌáÊ¾£ºÈç¹ûĞèÒª±äÒìÕäÊŞ£¬Ò²¿ÉÒÔÕÒÍ¬Àà¶ş´úÕäÊŞ´úÌæ¡£",
-"½ÌÑµ%n",
+"æ‰¾åˆ°%n",
+"å°†%ié€ç»™%n",
+"å°†#Y%p#Wé€ç»™%n#r  #Gå°æç¤ºï¼šå¦‚æœéœ€è¦å˜å¼‚çå…½ï¼Œä¹Ÿå¯ä»¥æ‰¾åŒç±»äºŒä»£çå…½ä»£æ›¿ã€‚",
+"æ•™è®­%n",
 }
 x229022_g_StrList = {
-"Ëû",
-"Ëı",
+"ä»–",
+"å¥¹",
 }
 x229022_g_StrForePart=4
 x229022_g_ItemForePart=6
-x229022_g_MissionRound	= 35		--¼ÇÂ¼Ñ­»·ÈÎÎñ±äÁ¿
+x229022_g_MissionRound	= 35		--è®°å½•å¾ªç¯ä»»åŠ¡å˜é‡
 x229022_g_MissionLimitTime = 1800000
 x229022_g_StopWatch_Pause_Flag = 57
 x229022_g_NpcIdIndicator={{key=1,npcIdIndex=5},{key=2,npcIdIndex=6},{key=3,npcIdIndex=5},{key=5,npcIdIndex=6}}

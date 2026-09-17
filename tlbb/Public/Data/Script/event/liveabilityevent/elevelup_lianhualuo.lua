@@ -1,44 +1,44 @@
---Á«»¨Âä¼¼ÄÜÉı¼¶
+--è²èŠ±è½æŠ€èƒ½å‡çº§
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x713590_g_ScriptId = 713590
 
---´Ënpc¿ÉÒÔÉıµ½µÄ×î¸ßµÈ¼¶
+--æ­¤npcå¯ä»¥å‡åˆ°çš„æœ€é«˜ç­‰çº§
 x713590_g_nMaxLevel = 100
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x713590_OnDefaultEvent( sceneId, selfId, targetId )
-	--Íæ¼Ò¼¼ÄÜµÄµÈ¼¶
+	--ç©å®¶æŠ€èƒ½çš„ç­‰çº§
 	AbilityLevel = QueryHumanAbilityLevel(sceneId, selfId, ABILITY_LIANHUALUO)
-	--Íæ¼Ò¼Ó¹¤¼¼ÄÜµÄÊìÁ·¶È
+	--ç©å®¶åŠ å·¥æŠ€èƒ½çš„ç†Ÿç»ƒåº¦
 	ExpPoint = GetAbilityExp(sceneId, selfId, ABILITY_LIANHUALUO)
-	--ÈÎÎñÅĞ¶Ï
+	--ä»»åŠ¡åˆ¤æ–­
 
-	--ÅĞ¶ÏÊÇ·ñÊÇØ¤°ïµÜ×Ó,²»ÊÇØ¤°ïµÜ×Ó²»ÄÜÑ§Ï°
+	--åˆ¤æ–­æ˜¯å¦æ˜¯ä¸å¸®å¼Ÿå­,ä¸æ˜¯ä¸å¸®å¼Ÿå­ä¸èƒ½å­¦ä¹ 
 		if GetMenPai(sceneId,selfId) ~= MP_GAIBANG then
 			BeginEvent(sceneId)
-        		AddText(sceneId,"Äã²»ÊÇ±¾ÅÉµÜ×Ó£¬ÎÒ²»ÄÜ½ÌÄã¡£");
+        		AddText(sceneId,"ä½ ä¸æ˜¯æœ¬æ´¾å¼Ÿå­ï¼Œæˆ‘ä¸èƒ½æ•™ä½ ã€‚");
         	EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,targetId)
 			return
 		end
-	--Èç¹û»¹Ã»ÓĞÑ§»á¸ÃÉú»î¼¼ÄÜ
+	--å¦‚æœè¿˜æ²¡æœ‰å­¦ä¼šè¯¥ç”Ÿæ´»æŠ€èƒ½
 	if AbilityLevel < 1	then
 		BeginEvent(sceneId)
-			strText = "Äã»¹Ã»ÓĞÑ§»áÁ«»¨Âä¼¼ÄÜ£¡"
+			strText = "ä½ è¿˜æ²¡æœ‰å­¦ä¼šè²èŠ±è½æŠ€èƒ½ï¼"
 			AddText(sceneId,strText)
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 		return
 	end
 
-	--Èç¹ûÉú»î¼¼ÄÜµÈ¼¶ÒÑ¾­³¬³ö¸ÃnpcËùÄÜ½ÌµÄ·¶Î§
+	--å¦‚æœç”Ÿæ´»æŠ€èƒ½ç­‰çº§å·²ç»è¶…å‡ºè¯¥npcæ‰€èƒ½æ•™çš„èŒƒå›´
 	if AbilityLevel >= x713590_g_nMaxLevel then
 		BeginEvent(sceneId)
-			--[ QUFEI 2007-07-17 15:26 ĞŞ¸Ä ]
-			strText = "Ä¿Ç°´Ë¼¼ÄÜÖ»ÄÜÑ§Ï°µ½100¼¶"
+			--[ QUFEI 2007-07-17 15:26 ä¿®æ”¹ ]
+			strText = "ç›®å‰æ­¤æŠ€èƒ½åªèƒ½å­¦ä¹ åˆ°100çº§"
 			AddText(sceneId,strText)
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
@@ -55,24 +55,24 @@ function x713590_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x713590_OnEnumerate( sceneId, selfId, targetId )
-		--Èç¹û²»µ½µÈ¼¶Ôò²»ÏÔÊ¾Ñ¡Ïî
+		--å¦‚æœä¸åˆ°ç­‰çº§åˆ™ä¸æ˜¾ç¤ºé€‰é¡¹
 		if 1 then
-			AddNumText(sceneId,x713590_g_ScriptId,"Éı¼¶Á«»¨Âä¼¼ÄÜ", 12, 1)
+			AddNumText(sceneId,x713590_g_ScriptId,"å‡çº§è²èŠ±è½æŠ€èƒ½", 12, 1)
 		end
 		return
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x713590_CheckAccept( sceneId, selfId )
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x713590_OnAccept( sceneId, selfId, ABILITY_LIANHUALUO )
 end

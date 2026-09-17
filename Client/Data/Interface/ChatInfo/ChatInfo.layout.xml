@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" ?>
+<?xml version="1.0" ?>
 <GUILayout>
     <Window Type="TLBB_MainFrame1" Name="ChatInfo_Frame">
         <Property Name="UnifiedPosition" Value="{{0.7809375,-232},{0.333333333,0}}" />

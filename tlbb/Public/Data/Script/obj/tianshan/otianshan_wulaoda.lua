@@ -1,67 +1,67 @@
---ÌìÉ½NPC
---ÎÚÀÏ´ó
---ÆÕÍ¨
+--å¤©å±±NPC
+--ä¹Œè€å¤§
+--æ™®é€š
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x017005_g_ScriptId = 017005
 
 x017005_g_xuanWuDaoId=400918 --[tx42913]
 
---ÃÅÅÉĞÅÏ¢(ÃÅÅÉÃû³Æ£¬SceneID£¬PosX£¬PosY£¬ÃÅÅÉID)
+--é—¨æ´¾ä¿¡æ¯(é—¨æ´¾åç§°ï¼ŒSceneIDï¼ŒPosXï¼ŒPosYï¼Œé—¨æ´¾ID)
 x017005_g_mpInfo		= {}
-x017005_g_mpInfo[0]	= { "ĞÇËŞ", 16,  96, 152, MP_XINGSU }
-x017005_g_mpInfo[1]	= { "åĞÒ£", 14,  67, 145, MP_XIAOYAO }
-x017005_g_mpInfo[2]	= { "ÉÙÁÖ",  9,  95, 137, MP_SHAOLIN }
-x017005_g_mpInfo[3]	= { "ÌìÉ½", 17,  95, 120, MP_TIANSHAN }
-x017005_g_mpInfo[4]	= { "ÌìÁú", 13,  96, 120, MP_DALI }
-x017005_g_mpInfo[5]	= { "¶ëáÒ", 15,  89, 144, MP_EMEI }
-x017005_g_mpInfo[6]	= { "Îäµ±", 12, 103, 140, MP_WUDANG }
-x017005_g_mpInfo[7]	= { "Ã÷½Ì", 11,  98, 167, MP_MINGJIAO }
-x017005_g_mpInfo[8]	= { "Ø¤°ï", 10,  91, 116, MP_GAIBANG }
+x017005_g_mpInfo[0]	= { "æ˜Ÿå®¿", 16,  96, 152, MP_XINGSU }
+x017005_g_mpInfo[1]	= { "é€é¥", 14,  67, 145, MP_XIAOYAO }
+x017005_g_mpInfo[2]	= { "å°‘æ—",  9,  95, 137, MP_SHAOLIN }
+x017005_g_mpInfo[3]	= { "å¤©å±±", 17,  95, 120, MP_TIANSHAN }
+x017005_g_mpInfo[4]	= { "å¤©é¾™", 13,  96, 120, MP_DALI }
+x017005_g_mpInfo[5]	= { "å³¨åµ‹", 15,  89, 144, MP_EMEI }
+x017005_g_mpInfo[6]	= { "æ­¦å½“", 12, 103, 140, MP_WUDANG }
+x017005_g_mpInfo[7]	= { "æ˜æ•™", 11,  98, 167, MP_MINGJIAO }
+x017005_g_mpInfo[8]	= { "ä¸å¸®", 10,  91, 116, MP_GAIBANG }
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x017005_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
 		AddText(sceneId,"#{MPXL_090113_01}")
 		if	GetLevel( sceneId, selfId)>=10  then	
-			AddNumText(sceneId,x017005_g_ScriptId,"ÂåÑô",9,0)
-			AddNumText(sceneId,x017005_g_ScriptId,"ËÕÖİ",9,1)
-			AddNumText( sceneId, x017005_g_ScriptId, "ÂåÑô - ¾ÅÖİÉÌ»á", 9, 3 )
-			AddNumText( sceneId, x017005_g_ScriptId, "ËÕÖİ - Ìú½³ÆÌ", 9, 4 )
+			AddNumText(sceneId,x017005_g_ScriptId,"æ´›é˜³",9,0)
+			AddNumText(sceneId,x017005_g_ScriptId,"è‹å·",9,1)
+			AddNumText( sceneId, x017005_g_ScriptId, "æ´›é˜³ - ä¹å·å•†ä¼š", 9, 3 )
+			AddNumText( sceneId, x017005_g_ScriptId, "è‹å· - é“åŒ é“º", 9, 4 )
 		end
 		
 		--add by WTT
 		if	GetLevel( sceneId, selfId)>=20  then	
-			AddNumText( sceneId, x017005_g_ScriptId, "ÊøºÓ¹ÅÕò", 9, 6 )
+			AddNumText( sceneId, x017005_g_ScriptId, "æŸæ²³å¤é•‡", 9, 6 )
 		end
 		
 		if	GetLevel( sceneId, selfId)>=75  then	
 			AddNumText( sceneId, x017005_g_ScriptId, "#{MPCSLL_80925_01}", 9, 5 )
 		end
-		AddNumText(sceneId,x017005_g_ScriptId,"´óÀí",9,2)		
+		AddNumText(sceneId,x017005_g_ScriptId,"å¤§ç†",9,2)		
 		
     --[tx42913]
     CallScriptFunction( x017005_g_xuanWuDaoId, "OnEnumerate",sceneId, selfId, targetId )
 		--[/tx42913]	
 		
-		AddNumText(sceneId,x017005_g_ScriptId,"´øÎÒÈ¥ÆäËûÃÅÅÉ°É",9,11)
+		AddNumText(sceneId,x017005_g_ScriptId,"å¸¦æˆ‘å»å…¶ä»–é—¨æ´¾å§",9,11)
 		
-		-- ÎÒÔõÑù²ÅÄÜÈ¥¶Ø»ÍºÍáÔÉ½
-		AddNumText( sceneId, x017005_g_ScriptId, "ÎÒÔõÑù²ÅÄÜÈ¥¶Ø»ÍºÍáÔÉ½", 11, 2000 )
+		-- æˆ‘æ€æ ·æ‰èƒ½å»æ•¦ç…Œå’Œåµ©å±±
+		AddNumText( sceneId, x017005_g_ScriptId, "æˆ‘æ€æ ·æ‰èƒ½å»æ•¦ç…Œå’Œåµ©å±±", 11, 2000 )
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x017005_OnEventRequest( sceneId, selfId, targetId, eventId )
 
 ------------------------------------------------------------------------------------------
 --[tx42913]
-	if eventId == x017005_g_xuanWuDaoId then --È¥ĞşÎäµº
+	if eventId == x017005_g_xuanWuDaoId then --å»ç„æ­¦å²›
 		CallScriptFunction( x017005_g_xuanWuDaoId, "OnDefaultEvent",sceneId, selfId, targetId )
 		return
 	end
@@ -80,7 +80,7 @@ function x017005_OnEventRequest( sceneId, selfId, targetId, eventId )
 		BeginEvent(sceneId)
 		    
 		    for i=0, 8 do
-				AddNumText( sceneId, x017005_g_ScriptId, "ÃÅÅÉ - "..x017005_g_mpInfo[i][1], 9, i+12 )
+				AddNumText( sceneId, x017005_g_ScriptId, "é—¨æ´¾ - "..x017005_g_mpInfo[i][1], 9, i+12 )
 			end			
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)	
@@ -90,10 +90,10 @@ function x017005_OnEventRequest( sceneId, selfId, targetId, eventId )
     num = GetNumText()
 
  	if num > 11 then
- 		-- ¼ì²âÍæ¼ÒÉíÉÏÊÇ²»ÊÇÓĞ113ºÅBUFF
+ 		-- æ£€æµ‹ç©å®¶èº«ä¸Šæ˜¯ä¸æ˜¯æœ‰113å·BUFF
 		if LuaFnHaveImpactOfSpecificDataIndex(sceneId, selfId, 113) == 1   then
 			BeginEvent( sceneId )
-				AddText( sceneId, "  ´¦ÓÚäîÔË£¬ÅÜÉÌ×´Ì¬ÊÇ²»ÄÜ´ÓÎÒÕâÀï´«ËÍµÄ" ) 
+				AddText( sceneId, "  å¤„äºæ¼•è¿ï¼Œè·‘å•†çŠ¶æ€æ˜¯ä¸èƒ½ä»æˆ‘è¿™é‡Œä¼ é€çš„" ) 
 			EndEvent( sceneId )
 			DispatchEventList( sceneId, selfId, targetId )
 			
@@ -120,12 +120,12 @@ function x017005_OnEventRequest( sceneId, selfId, targetId, eventId )
 	end
 	
 	--add by WTT
-	if GetNumText()== 6 then					--ÊøºÓ¹ÅÕò		
+	if GetNumText()== 6 then					--æŸæ²³å¤é•‡		
 		BeginUICommand(sceneId)
 			UICommand_AddInt(sceneId, x017005_g_ScriptId);			
 			UICommand_AddInt(sceneId, targetId);
 			UICommand_AddString(sceneId, "GotoShuHeGuZhen");
-			UICommand_AddString(sceneId, "ÊøºÓ¹ÅÕòÎª²»¼ÓÉ±Æø³¡¾°£¬Çë×¢Òâ°²È«¡£ÄãÈ·ÈÏÒª½øÈëÂğ£¿");
+			UICommand_AddString(sceneId, "æŸæ²³å¤é•‡ä¸ºä¸åŠ æ€æ°”åœºæ™¯ï¼Œè¯·æ³¨æ„å®‰å…¨ã€‚ä½ ç¡®è®¤è¦è¿›å…¥å—ï¼Ÿ");
 		EndUICommand(sceneId)
 		DispatchUICommand(sceneId,selfId, 24)
 		return

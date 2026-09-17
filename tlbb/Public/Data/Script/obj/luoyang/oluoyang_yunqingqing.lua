@@ -1,18 +1,18 @@
---ÂåÑôNPC
---ÔÆÇåÇå
---ÆÕÍ¨
+--æ´›é˜³NPC
+--äº‘æ¸…æ¸…
+--æ™®é€š
 
 x000120_g_shoptableindex=102
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x000120_OnDefaultEvent( sceneId, selfId,targetId )
 	DispatchShopItem( sceneId, selfId,targetId, x000120_g_shoptableindex )
 end
 
 --**********************************
---Ê±ÖÓº¯Êı
+--æ—¶é’Ÿå‡½æ•°
 --**********************************
 function x000120_OnCharacterTimer( sceneId, selfId, dataId, uTime )
 	local curX, curZ = GetWorldPos(sceneId, selfId)

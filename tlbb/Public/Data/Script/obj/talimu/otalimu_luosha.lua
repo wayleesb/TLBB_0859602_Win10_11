@@ -1,10 +1,10 @@
---塔里木NPC
---罗莎
+--濉旈噷鏈∟PC
+--缃楄帋
 
 x044501_g_ScriptId	= 044501
 
 --**********************************
---事件交互入口
+--浜嬩欢浜や簰鍏ュ彛
 --**********************************
 function x044501_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent( sceneId )

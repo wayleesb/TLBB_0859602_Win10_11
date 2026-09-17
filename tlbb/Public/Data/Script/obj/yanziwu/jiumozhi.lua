@@ -1,5 +1,5 @@
 -- 402248
--- ğ¯Ä¦ÖÇ
+-- é¸ æ‘©æ™º
 
 x402248_TBL = 
 {
@@ -13,36 +13,36 @@ BossBuff = 9999
 }
 
 function x402248_OnDie( sceneId, selfId, killerId )
-	--LuaFnNpcChat(sceneId, selfId, 0, "Ê®°ËÄêºó£¬Ò¯Ò¯ÎÒÓÖÊÇÒ»ÌõºÃºº£¡")
+	--LuaFnNpcChat(sceneId, selfId, 0, "åå…«å¹´åï¼Œçˆ·çˆ·æˆ‘åˆæ˜¯ä¸€æ¡å¥½æ±‰ï¼")
 	MonsterAI_SetIntParamByIndex(sceneId, selfId, x402248_TBL.IDX_TimerPrepare, 0)
 	MonsterAI_SetIntParamByIndex(sceneId, selfId, x402248_TBL.IDX_TimerInterval, 0)
 	MonsterAI_SetBoolParamByIndex(sceneId, selfId, x402248_TBL.IDX_FlagCombat, 0)
 
 	local szNpcName = GetName(sceneId, selfId)
 
-	if szNpcName == "Ò¦²®µ±"  then
-		LuaFnNpcChat(sceneId, selfId, 0, "Ê®°ËÄêºó£¬Ò¯Ò¯ÎÒÓÖÊÇÒ»ÌõºÃºº£¡")
-		x402248_ClearMonsterByName(sceneId, "ÇØ¼ÒÕ¯Ç×±ø")
-		x402248_TipAllHuman( sceneId, "Ò¦²®µ±±»´ò°Ü£¬ÆäÊÖÏÂ·×·×ËÄÉ¢ÌÓ´Ü¡£" )
+	if szNpcName == "å§šä¼¯å½“"  then
+		LuaFnNpcChat(sceneId, selfId, 0, "åå…«å¹´åï¼Œçˆ·çˆ·æˆ‘åˆæ˜¯ä¸€æ¡å¥½æ±‰ï¼")
+		x402248_ClearMonsterByName(sceneId, "ç§¦å®¶å¯¨äº²å…µ")
+		x402248_TipAllHuman( sceneId, "å§šä¼¯å½“è¢«æ‰“è´¥ï¼Œå…¶æ‰‹ä¸‹çº·çº·å››æ•£é€ƒçªœã€‚" )
 		
-	elseif szNpcName == "Ë¾ÂíÁÖ"  then
-		LuaFnNpcChat(sceneId, selfId, 0, "Ê®°ËÄêºó£¬Ò¯Ò¯ÎÒÓÖÊÇÒ»ÌõºÃºº£¡")
-		x402248_ClearMonsterByName(sceneId, "Çà³ÇÅÉµÜ×Ó")
-		x402248_TipAllHuman( sceneId, "Ë¾ÂíÁÖ±»´ò°Ü£¬ÆäÊÖÏÂ·×·×ËÄÉ¢ÌÓ´Ü¡£" )
+	elseif szNpcName == "å¸é©¬æ—"  then
+		LuaFnNpcChat(sceneId, selfId, 0, "åå…«å¹´åï¼Œçˆ·çˆ·æˆ‘åˆæ˜¯ä¸€æ¡å¥½æ±‰ï¼")
+		x402248_ClearMonsterByName(sceneId, "é’åŸæ´¾å¼Ÿå­")
+		x402248_TipAllHuman( sceneId, "å¸é©¬æ—è¢«æ‰“è´¥ï¼Œå…¶æ‰‹ä¸‹çº·çº·å››æ•£é€ƒçªœã€‚" )
 		
-	elseif szNpcName == "ğ¯Ä¦ÖÇ"  then
-		LuaFnNpcChat(sceneId, selfId, 0, "Ïë²»µ½ÖĞÔ­ÎäÁÖÎÔ»¢²ØÁú£¬¾¹ÓĞÈç´Ë¸ßÊÖ£¡")
-		x402248_ClearMonsterByName(sceneId, "ÍÂŞ¬À®Âï")
-		x402248_ClearMonsterByName(sceneId, "Ä¾ÈË¿şÀÜ")
-		x402248_TipAllHuman( sceneId, "ğ¯Ä¦ÖÇ±»´ò°Ü£¬ÆäÊÖÏÂ·×·×ËÄÉ¢ÌÓ´Ü¡£" )
+	elseif szNpcName == "é¸ æ‘©æ™º"  then
+		LuaFnNpcChat(sceneId, selfId, 0, "æƒ³ä¸åˆ°ä¸­åŸæ­¦æ—å§è™è—é¾™ï¼Œç«Ÿæœ‰å¦‚æ­¤é«˜æ‰‹ï¼")
+		x402248_ClearMonsterByName(sceneId, "åè•ƒå–‡å˜›")
+		x402248_ClearMonsterByName(sceneId, "æœ¨äººå‚€å„¡")
+		x402248_TipAllHuman( sceneId, "é¸ æ‘©æ™ºè¢«æ‰“è´¥ï¼Œå…¶æ‰‹ä¸‹çº·çº·å››æ•£é€ƒçªœã€‚" )
 		
 		if LuaFnGetCopySceneData_Param(sceneId, 8) == 12  then
 			LuaFnSetCopySceneData_Param(sceneId, 8, 14)
-			-- ¸ø¸±±¾ÄÚµÄÍæ¼ÒÒ»¸öÈÎÎñ³É¹¦»òÕßÊ§°ÜµÄÌáÊ¾
+			-- ç»™å‰¯æœ¬å†…çš„ç©å®¶ä¸€ä¸ªä»»åŠ¡æˆåŠŸæˆ–è€…å¤±è´¥çš„æç¤º
 		end
 	end
 	
-	-- ¼ì²âÄ¿Ç°µÄ¸±±¾½ø¶È
+	-- æ£€æµ‹ç›®å‰çš„å‰¯æœ¬è¿›åº¦
 
 end
 
@@ -67,7 +67,7 @@ function x402248_OnHeartBeat(sceneId, selfId, nTick)
 --						local posX, posZ = GetWorldPos(sceneId,nTarget)
 --						local fDir = 0.0
 --						LuaFnUnitUseSkill(sceneId, selfId, x402248_TBL.BossSkill, nTarget, posX, posZ, fDir)			
---						LuaFnNpcChat(sceneId, selfId, 0, "³¢³¢ä±Ñô½­ÉÏµÄÁÒÑæ°É£¡")
+--						LuaFnNpcChat(sceneId, selfId, 0, "å°å°æµ”é˜³æ±Ÿä¸Šçš„çƒˆç„°å§ï¼")
 --					end
 --				end
 --			end
@@ -84,7 +84,7 @@ end
 function x402248_OnKillCharacter(sceneId, selfId, targetId)
 --	if(-1~=targetId) then
 --		local szTarget = GetName(sceneId, targetId)		
---		LuaFnNpcChat(sceneId, selfId, 0, szTarget .. "£¬Äã¾ÍËãÔÙÀ÷º¦Ê®±¶£¬ÓöÉÏÒ¯Ò¯Ò²Ö»ÓĞËÀÂ·Ò»Ìõ£¡")
+--		LuaFnNpcChat(sceneId, selfId, 0, szTarget .. "ï¼Œä½ å°±ç®—å†å‰å®³åå€ï¼Œé‡ä¸Šçˆ·çˆ·ä¹Ÿåªæœ‰æ­»è·¯ä¸€æ¡ï¼")
 --	end
 end
 
@@ -105,7 +105,7 @@ end
 
 
 --**********************************
--- Çå³ı³¡¾°ÄÚµÄXX¹Ö
+-- æ¸…é™¤åœºæ™¯å†…çš„XXæ€ª
 --**********************************
 function x402248_ClearMonsterByName(sceneId, szName)
 	local nMonsterNum = GetMonsterCount(sceneId)
@@ -118,13 +118,13 @@ function x402248_ClearMonsterByName(sceneId, szName)
 end
 
 --**********************************
---ÌáÊ¾ËùÓĞ¸±±¾ÄÚÍæ¼Ò
+--æç¤ºæ‰€æœ‰å‰¯æœ¬å†…ç©å®¶
 --**********************************
 function x402248_TipAllHuman( sceneId, Str )
-	-- »ñµÃ³¡¾°ÀïÍ·µÄËùÓĞÈË
+	-- è·å¾—åœºæ™¯é‡Œå¤´çš„æ‰€æœ‰äºº
 	local nHumanNum = LuaFnGetCopyScene_HumanCount(sceneId)
 	
-	-- Ã»ÓĞÈËµÄ³¡¾°£¬Ê²Ã´¶¼²»×ö
+	-- æ²¡æœ‰äººçš„åœºæ™¯ï¼Œä»€ä¹ˆéƒ½ä¸åš
 	if nHumanNum < 1 then
 		return
 	end

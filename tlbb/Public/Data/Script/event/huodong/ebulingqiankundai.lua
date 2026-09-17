@@ -1,28 +1,28 @@
  
---²¹ÁìÇ¬À¤´ü
+--è¡¥é¢†ä¹¾å¤è¢‹
 ----------------
---½Å±¾ºÅ
+--è„šæœ¬å·
 x808129_g_ScriptId = 808129;
-x808129_g_PlayerSlow_LVH = 70;   --×î¸ßÁìÈ¡µÈ¼¶
-x808129_g_QianKunDaiBuLingLv1 = 30008059 --Ò»¼¶Ç¬À¤´ü
-x808129_g_QianKunDaiBuLing = 30504118  --²¹ÁìµÄ70¼¶Ç¬À¤´ü
+x808129_g_PlayerSlow_LVH = 70;   --æœ€é«˜é¢†å–ç­‰çº§
+x808129_g_QianKunDaiBuLingLv1 = 30008059 --ä¸€çº§ä¹¾å¤è¢‹
+x808129_g_QianKunDaiBuLing = 30504118  --è¡¥é¢†çš„70çº§ä¹¾å¤è¢‹
 
  
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x808129_OnDefaultEvent( sceneId, selfId, targetId )
 	local id = GetNumText();
 	if id == 1 then 
 		BeginEvent(sceneId)
 			AddText(sceneId, "#{XRLB_090417_02}");	
-			AddNumText(sceneId, x808129_g_ScriptId, "#{XRLB_090417_03}", 6, 2);		-- "ÁìÈ¡"
+			AddNumText(sceneId, x808129_g_ScriptId, "#{XRLB_090417_03}", 6, 2);		-- "é¢†å–"
 			EndEvent()
 		DispatchEventList(sceneId, selfId, targetId);
 
 	elseif id == 2 then
 
-		--·ÀÖ¹Íæ¼Ò²»Í¨¹ıµã»÷ÊÂ¼ş½øÈë
+		--é˜²æ­¢ç©å®¶ä¸é€šè¿‡ç‚¹å‡»äº‹ä»¶è¿›å…¥
 		local bCanSee = x808129_canSeeGainMenu(sceneId, selfId)
 		if ( bCanSee == 0  ) then
 			BeginEvent(sceneId)
@@ -32,7 +32,7 @@ function x808129_OnDefaultEvent( sceneId, selfId, targetId )
 			return 
 		end
 
-		--¼ì²é±³°ü¿Õ¼ä
+		--æ£€æŸ¥èƒŒåŒ…ç©ºé—´
 		BeginAddItem(sceneId)
 		AddItem(sceneId, x808129_g_QianKunDaiBuLing, 1)
 		local bBagOk = EndAddItem(sceneId, selfId)
@@ -41,7 +41,7 @@ function x808129_OnDefaultEvent( sceneId, selfId, targetId )
 			return
 		end
 
-		-- ²¹¸øÇ¬À¤´ü,Ğ¡ÓÚ70¼¶µÄ¸øÒ»¼¶´ü,´óÓÚµÈÓÚ70¼¶µÄ¸øÒ»¸ö70¼¶ÌØÊâ´ü
+		-- è¡¥ç»™ä¹¾å¤è¢‹,å°äº70çº§çš„ç»™ä¸€çº§è¢‹,å¤§äºç­‰äº70çº§çš„ç»™ä¸€ä¸ª70çº§ç‰¹æ®Šè¢‹
 		local nBagIndex = -1
 		if LuaFnGetLevel( sceneId, selfId ) < x808129_g_PlayerSlow_LVH then
 		  nBagIndex = TryRecieveItem( sceneId, selfId, x808129_g_QianKunDaiBuLingLv1, 1 );
@@ -53,11 +53,11 @@ function x808129_OnDefaultEvent( sceneId, selfId, targetId )
 		 return
 		end
 
-		--Ôö¼ÓÁìÈ¡±êÖ¾
+		--å¢åŠ é¢†å–æ ‡å¿—
 		SetMissionFlag(sceneId, selfId, MF_GetQianKunDai, 1)
 
 		local guid = LuaFnObjId2Guid(sceneId, selfId)
-		ScriptGlobal_AuditGeneralLog(LUAAUDIT_QIANKUNDAI_BULING_LEVEL1, guid)--ÕâÀï¸øµÄÊÇ70¼¶µÄ¶ø²»ÊÇÒ»¼¶µÄ, Ö»ÊÇÓÃµÄ´óÂ½µÄÕ¼Î».
+		ScriptGlobal_AuditGeneralLog(LUAAUDIT_QIANKUNDAI_BULING_LEVEL1, guid)--è¿™é‡Œç»™çš„æ˜¯70çº§çš„è€Œä¸æ˜¯ä¸€çº§çš„, åªæ˜¯ç”¨çš„å¤§é™†çš„å ä½.
 
 --		BeginEvent(sceneId)
 --			AddText(sceneId,"#{XRLB_090417_07}");
@@ -72,7 +72,7 @@ function x808129_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x808129_OnEnumerate( sceneId, selfId, targetId )
 
@@ -80,8 +80,8 @@ function x808129_OnEnumerate( sceneId, selfId, targetId )
 		return 0
 	end
 
-	-- "²¹Áì"
-  AddNumText(sceneId, x808129_g_ScriptId, "#{XRLB_090417_01}", 6, 1 ) --²¹Áì½­ºşÇ¬À¤´ü
+	-- "è¡¥é¢†"
+  AddNumText(sceneId, x808129_g_ScriptId, "#{XRLB_090417_01}", 6, 1 ) --è¡¥é¢†æ±Ÿæ¹–ä¹¾å¤è¢‹
 end
 
 function x808129_NotifyTips( sceneId, selfId, Tip )
@@ -99,7 +99,7 @@ function x808129_NotifyMsg( sceneId, selfId,  targetId, Msg )
 end
 
 --**********************************
---¸øĞÂÍæ¼Ò·¢ÓÊ¼ş
+--ç»™æ–°ç©å®¶å‘é‚®ä»¶
 --**********************************
 function x808129_OnPlayerLogin( sceneId, selfId )
 
@@ -110,16 +110,16 @@ function x808129_OnPlayerLogin( sceneId, selfId )
 end
 
 --**********************************
---ÅĞ¶ÏÍæ¼Ò´´½¨Ê±¼äÊÇ·ñÔÚ2009-03-26 00£º00£º00 Ç°  ¶øÇÒµÈ¼¶²»¸ßÓÚ45¼¶
+--åˆ¤æ–­ç©å®¶åˆ›å»ºæ—¶é—´æ˜¯å¦åœ¨2009-03-26 00ï¼š00ï¼š00 å‰  è€Œä¸”ç­‰çº§ä¸é«˜äº45çº§
 --**********************************
 function x808129_canSeeGainMenu( sceneId, selfId )
 
-	--¼ì²âµÈ¼¶
+	--æ£€æµ‹ç­‰çº§
 --  if LuaFnGetLevel( sceneId, selfId ) < x808129_g_PlayerSlow_LVH then
 --		return 0
 --  end
 
-  --¼ì²éÊÇ·ñÁì¹ıÁË
+  --æ£€æŸ¥æ˜¯å¦é¢†è¿‡äº†
   if GetMissionFlag(sceneId, selfId, MF_GetQianKunDai)==1 then
     return 0
   end

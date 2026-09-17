@@ -1,103 +1,103 @@
 -- 005116
--- ¾µºşBOSS
+-- é•œæ¹–BOSS
 
 x005116_g_PreTimeHour_1 = 0
 x005116_g_PreTimeHour_2 = 0
 x005116_g_PreTimeHour_3 = 0
 
 x005116_g_Boss ={
-								{x=141,z=96,	b1=885,b2=887,b3=889,n1="±±º£»ì½­Ğ¡Áú",n2="±±º£³ö¶´Ğ¡òÔ",n3="±±º£·­½­Ğ¡ò×"},
-								{x=250,z=98,	b1=885,b2=887,b3=889,n1="¶«º£»ì½­Ğ¡Áú",n2="¶«º£³ö¶´Ğ¡òÔ",n3="¶«º£·­½­Ğ¡ò×"},
+								{x=141,z=96,	b1=885,b2=887,b3=889,n1="åŒ—æµ·æ··æ±Ÿå°é¾™",n2="åŒ—æµ·å‡ºæ´å°è›Ÿ",n3="åŒ—æµ·ç¿»æ±Ÿå°èœƒ"},
+								{x=250,z=98,	b1=885,b2=887,b3=889,n1="ä¸œæµ·æ··æ±Ÿå°é¾™",n2="ä¸œæµ·å‡ºæ´å°è›Ÿ",n3="ä¸œæµ·ç¿»æ±Ÿå°èœƒ"},
 								
-								{x=206,z=253,	b1=885,b2=887,b3=889,n1="ÄÏº£»ì½­Ğ¡Áú",n2="ÄÏº£³ö¶´Ğ¡òÔ",n3="ÄÏº£·­½­Ğ¡ò×"},
-								{x=101,z=256,	b1=885,b2=887,b3=889,n1="Î÷º£»ì½­Ğ¡Áú",n2="Î÷º£³ö¶´Ğ¡òÔ",n3="Î÷º£·­½­Ğ¡ò×"},
+								{x=206,z=253,	b1=885,b2=887,b3=889,n1="å—æµ·æ··æ±Ÿå°é¾™",n2="å—æµ·å‡ºæ´å°è›Ÿ",n3="å—æµ·ç¿»æ±Ÿå°èœƒ"},
+								{x=101,z=256,	b1=885,b2=887,b3=889,n1="è¥¿æµ·æ··æ±Ÿå°é¾™",n2="è¥¿æµ·å‡ºæ´å°è›Ÿ",n3="è¥¿æµ·ç¿»æ±Ÿå°èœƒ"},
 								
-								{x=139,z=133,	b1=884,b2=886,b3=888,n1="»ì½­Áú",n2="³ö¶´òÔ",n3="·­½­ò×"}}
+								{x=139,z=133,	b1=884,b2=886,b3=888,n1="æ··æ±Ÿé¾™",n2="å‡ºæ´è›Ÿ",n3="ç¿»æ±Ÿèœƒ"}}
 
--- Ê¹ÓÃÒ»Ğ©±¾³¡¾°Î¨Ò»µÄÈ«¾Ö±äÁ¿À´±£´æÊı¾İ
+-- ä½¿ç”¨ä¸€äº›æœ¬åœºæ™¯å”¯ä¸€çš„å…¨å±€å˜é‡æ¥ä¿å­˜æ•°æ®
 
--- ÕâÀïµÄ¼ÆÊ±Æ÷ÔÚµÚÒ»Íæ¼Ò½øÈë±¾³¡¾°ºó×Ô¼ºÆô¶¯£¬ÓÀ²»¹Ø±Õ¡£
+-- è¿™é‡Œçš„è®¡æ—¶å™¨åœ¨ç¬¬ä¸€ç©å®¶è¿›å…¥æœ¬åœºæ™¯åè‡ªå·±å¯åŠ¨ï¼Œæ°¸ä¸å…³é—­ã€‚
 function x005116_OnSceneTimer(sceneId)
 
-	-- »ñµÃµ±Ç°Ê±¼ä
+	-- è·å¾—å½“å‰æ—¶é—´
 	--begin modified by zhangguoxin 090207
 	--local nHour = GetHourTime()
 	local nHour = GetQuarterTime()
 	--local temp = floor(nHour/100)*100
 	
-	-- Ö»ÓGÔÚ 10:00 4:00 Ö±½ÓµÄÕâ¶ÎÊ±¼äÄÚ²ÅÓG
+	-- åªè¦©åœ¨ 10:00 4:00 ç›´æ¥çš„è¿™æ®µæ—¶é—´å†…æ‰è¦©
 	--if nHour-temp>16 and nHour-temp<40    then
 	--	return
 	--end
 	
 	local nQuarter = mod(nHour,100);
-	-- Ö»ÓGÔÚ 10:00 4:00 Ö±½ÓµÄÕâ¶ÎÊ±¼äÄÚ²ÅÓG
+	-- åªè¦©åœ¨ 10:00 4:00 ç›´æ¥çš„è¿™æ®µæ—¶é—´å†…æ‰è¦©
 	if nQuarter > 16 and nQuarter < 40    then
 		return
 	end
 	--end modified by zhangguoxin 090207
 	
-	--¹ÖÎï·Ö²¼£ºË¢ĞÂÊ±¹²Ë¢³ö5×éBOSS£¬
-	--	µÚ45·ÖÖÓ£¬Á½×éBOSS£¬55¼¶´ø53Ğ¡µÜ³öÏÖ¡£()
-	--	50·ÖÖÓ£¬Á½×éBOSS£¬55¼¶´ø53Ğ¡µÜ³öÏÖ¡£	()
-	--	55·ÖÖÓ£¬Ò»×éBOSS£¬60¼¶´ø58Ğ¡µÜ³öÏÖ¡£	()
-	--	×îºóÒ»×éBOSS³öÏÖÊ±ÏµÍ³¹«¸æ¡£	
+	--æ€ªç‰©åˆ†å¸ƒï¼šåˆ·æ–°æ—¶å…±åˆ·å‡º5ç»„BOSSï¼Œ
+	--	ç¬¬45åˆ†é’Ÿï¼Œä¸¤ç»„BOSSï¼Œ55çº§å¸¦53å°å¼Ÿå‡ºç°ã€‚()
+	--	50åˆ†é’Ÿï¼Œä¸¤ç»„BOSSï¼Œ55çº§å¸¦53å°å¼Ÿå‡ºç°ã€‚	()
+	--	55åˆ†é’Ÿï¼Œä¸€ç»„BOSSï¼Œ60çº§å¸¦58å°å¼Ÿå‡ºç°ã€‚	()
+	--	æœ€åä¸€ç»„BOSSå‡ºç°æ—¶ç³»ç»Ÿå…¬å‘Šã€‚	
 	
-	-- µÚ45·ÖÖÓ£¬Ë¢µÚÒ»¶ÓBOSS
+	-- ç¬¬45åˆ†é’Ÿï¼Œåˆ·ç¬¬ä¸€é˜ŸBOSS
 	if GetMinute() >= 45 and GetMinute() < 50  then 
-		-- ±¾Ğ¡Ê±µÄÕâ×é¹ÖÒÑ¾­Ë¢¹ı
+		-- æœ¬å°æ—¶çš„è¿™ç»„æ€ªå·²ç»åˆ·è¿‡
 		if nHour == x005116_g_PreTimeHour_1  then
 			return
 		end
 		
-		-- ¼ÇÂ¼Õâ¸öÊ±¼äµã
+		-- è®°å½•è¿™ä¸ªæ—¶é—´ç‚¹
 		x005116_g_PreTimeHour_1 = nHour
 		
-		-- ¼ì²âÊÇ²»ÊÇÂú×ã´´½¨¹ÖµÄÌõ¼ş
-		-- ¼ì²â³¡¾°ÖĞ x005116_g_Boss[1].b1 ÊÇ²»ÊÇ»¹´æÔÚ£¬
-		-- ´æÔÚ¾Í²»×ö²Ù×÷£¬·ñÔòÇå³ıĞ¡¹ÖÈ»ºóË¢³öĞÂµÄÀ´
-		if x005116_IsHaveMonster( sceneId, "±±º£»ì½­Ğ¡Áú" ) == 0  then
+		-- æ£€æµ‹æ˜¯ä¸æ˜¯æ»¡è¶³åˆ›å»ºæ€ªçš„æ¡ä»¶
+		-- æ£€æµ‹åœºæ™¯ä¸­ x005116_g_Boss[1].b1 æ˜¯ä¸æ˜¯è¿˜å­˜åœ¨ï¼Œ
+		-- å­˜åœ¨å°±ä¸åšæ“ä½œï¼Œå¦åˆ™æ¸…é™¤å°æ€ªç„¶ååˆ·å‡ºæ–°çš„æ¥
+		if x005116_IsHaveMonster( sceneId, "åŒ—æµ·æ··æ±Ÿå°é¾™" ) == 0  then
 			x005116_UpDateMonster( sceneId, 1, 10 )
 		end
-		if x005116_IsHaveMonster( sceneId, "¶«º£»ì½­Ğ¡Áú" ) == 0  then
+		if x005116_IsHaveMonster( sceneId, "ä¸œæµ·æ··æ±Ÿå°é¾™" ) == 0  then
 			x005116_UpDateMonster( sceneId, 2, 11 )
 		end
 
 		
 	end
 	
-	-- 55·ÖÖÓ£¬Ë¢µÚ¶ş¶ÓBOSS
+	-- 55åˆ†é’Ÿï¼Œåˆ·ç¬¬äºŒé˜ŸBOSS
 	if GetMinute() >= 50 and GetMinute() < 55  then
-		-- ±¾Ğ¡Ê±µÄÕâ×é¹ÖÒÑ¾­Ë¢¹ı
+		-- æœ¬å°æ—¶çš„è¿™ç»„æ€ªå·²ç»åˆ·è¿‡
 		if nHour == x005116_g_PreTimeHour_2  then
 			return
 		end
 		
-		-- ¼ÇÂ¼Õâ¸öÊ±¼äµã
+		-- è®°å½•è¿™ä¸ªæ—¶é—´ç‚¹
 		x005116_g_PreTimeHour_2 = nHour
 		
-		-- ¼ì²âÊÇ²»ÊÇÂú×ã´´½¨¹ÖµÄÌõ¼ş
-		if x005116_IsHaveMonster( sceneId, "ÄÏº£»ì½­Ğ¡Áú" ) == 0  then
+		-- æ£€æµ‹æ˜¯ä¸æ˜¯æ»¡è¶³åˆ›å»ºæ€ªçš„æ¡ä»¶
+		if x005116_IsHaveMonster( sceneId, "å—æµ·æ··æ±Ÿå°é¾™" ) == 0  then
 			x005116_UpDateMonster( sceneId, 3, 12 )
 		end
-		if x005116_IsHaveMonster( sceneId, "Î÷º£»ì½­Ğ¡Áú" ) == 0  then
+		if x005116_IsHaveMonster( sceneId, "è¥¿æµ·æ··æ±Ÿå°é¾™" ) == 0  then
 			x005116_UpDateMonster( sceneId, 4, 13 )
 		end
 		
 	end
 	
-	-- 60·ÖÖÓ£¬Ë¢µÚÈı¶ÓBOSS
+	-- 60åˆ†é’Ÿï¼Œåˆ·ç¬¬ä¸‰é˜ŸBOSS
 	if GetMinute() >= 55 	then
-		-- ±¾Ğ¡Ê±µÄÕâ×é¹ÖÒÑ¾­Ë¢¹ı
+		-- æœ¬å°æ—¶çš„è¿™ç»„æ€ªå·²ç»åˆ·è¿‡
 		if nHour == x005116_g_PreTimeHour_3  then
 			return
 		end
 		
-		-- ¼ÇÂ¼Õâ¸öÊ±¼äµã
+		-- è®°å½•è¿™ä¸ªæ—¶é—´ç‚¹
 		x005116_g_PreTimeHour_3 = nHour
 		
-		-- ¼ì²âÊÇ²»ÊÇÂú×ã´´½¨¹ÖµÄÌõ¼ş
-		if x005116_IsHaveMonster( sceneId, "»ì½­Áú" ) == 0  then
+		-- æ£€æµ‹æ˜¯ä¸æ˜¯æ»¡è¶³åˆ›å»ºæ€ªçš„æ¡ä»¶
+		if x005116_IsHaveMonster( sceneId, "æ··æ±Ÿé¾™" ) == 0  then
 			x005116_UpDateMonster( sceneId, 5, 14 )
 		end
 	end
@@ -119,7 +119,7 @@ end
 
 function x005116_UpDateMonster( sceneId, nIndex, nGroupId )
 
-	-- ÏÈÇå³ıÕâ¸ö×éÀïÍ·µÄËùÓĞĞ¡¹Ö
+	-- å…ˆæ¸…é™¤è¿™ä¸ªç»„é‡Œå¤´çš„æ‰€æœ‰å°æ€ª
 	local nMonsterNum = GetMonsterCount(sceneId)
 	local bHaveMonster = 0
 	for i=0, nMonsterNum-1 do
@@ -137,28 +137,28 @@ function x005116_UpDateMonster( sceneId, nIndex, nGroupId )
 		end
 	end
 	
-	-- °Ñ¹ÖÈ«´´½¨³öÀ´
+	-- æŠŠæ€ªå…¨åˆ›å»ºå‡ºæ¥
 	local nMonId
 	nMonId = LuaFnCreateMonster(sceneId, x005116_g_Boss[nIndex].b1, x005116_g_Boss[nIndex].x, x005116_g_Boss[nIndex].z, 19, 197, 005117)
 	SetCharacterName(sceneId, nMonId, x005116_g_Boss[nIndex].n1)
 	SetMonsterGroupID(sceneId, nMonId, nGroupId)
-	SetCharacterTitle(sceneId, nMonId, "¾µºşÁù°Ô")
+	SetCharacterTitle(sceneId, nMonId, "é•œæ¹–å…­éœ¸")
 	
 	nMonId = LuaFnCreateMonster(sceneId, x005116_g_Boss[nIndex].b2, x005116_g_Boss[nIndex].x+2, x005116_g_Boss[nIndex].z, 19, 198, 005118)
 	SetCharacterName(sceneId, nMonId, x005116_g_Boss[nIndex].n2)
 	SetMonsterGroupID(sceneId, nMonId, nGroupId)
-	SetCharacterTitle(sceneId, nMonId, "¾µºşÁù°Ô")
+	SetCharacterTitle(sceneId, nMonId, "é•œæ¹–å…­éœ¸")
 	
 	nMonId = LuaFnCreateMonster(sceneId, x005116_g_Boss[nIndex].b3, x005116_g_Boss[nIndex].x-2, x005116_g_Boss[nIndex].z, 19, 199, 005119)
 	SetCharacterName(sceneId, nMonId, x005116_g_Boss[nIndex].n3)
 	SetMonsterGroupID(sceneId, nMonId, nGroupId)
-	SetCharacterTitle(sceneId, nMonId, "¾µºşÁù°Ô")
+	SetCharacterTitle(sceneId, nMonId, "é•œæ¹–å…­éœ¸")
 	
 	if nIndex == 5   then
-		--µ±ÄêºáĞĞä±Ñô½­µÄË®Ôô¡°»ì½­Áú¡±ÒÑ¾­´øÁì²¿ÏÂ³öÏÖÔÚ¾µºş£¡ÇëÌìÏÂÓ¢ĞÛËÙÈ¥½ËÃğ£¡
-		-- Ë¢×ÜBOSSµÄÊ±ºò£¬¸øÒ»¸öÊÀ½ç¹«¸æ
+		--å½“å¹´æ¨ªè¡Œæµ”é˜³æ±Ÿçš„æ°´è´¼â€œæ··æ±Ÿé¾™â€å·²ç»å¸¦é¢†éƒ¨ä¸‹å‡ºç°åœ¨é•œæ¹–ï¼è¯·å¤©ä¸‹è‹±é›„é€Ÿå»å‰¿ç­ï¼
+		-- åˆ·æ€»BOSSçš„æ—¶å€™ï¼Œç»™ä¸€ä¸ªä¸–ç•Œå…¬å‘Š
 		
-		local str = "#Pµ±ÄêºáĞĞä±Ñô½­µÄË®Ôô#{_BOSS14}#PÒÑ¾­´øÁì²¿ÏÂ³öÏÖÔÚ#G¾µºş#P£¡ÇëÌìÏÂÓ¢ĞÛËÙÈ¥½ËÃğ£¡"
+		local str = "#På½“å¹´æ¨ªè¡Œæµ”é˜³æ±Ÿçš„æ°´è´¼#{_BOSS14}#På·²ç»å¸¦é¢†éƒ¨ä¸‹å‡ºç°åœ¨#Gé•œæ¹–#Pï¼è¯·å¤©ä¸‹è‹±é›„é€Ÿå»å‰¿ç­ï¼"
 		BroadMsgByChatPipe(sceneId, -1, str, 4)
 	end
 	

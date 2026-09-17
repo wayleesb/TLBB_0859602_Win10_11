@@ -1,22 +1,22 @@
---ËÕË«
+--è‹åŒ
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x001059_g_scriptId 				= 001059
 x001059_g_shoptableindex	=	35
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x001059_OnDefaultEvent( sceneId, selfId,targetId )
 	AddText( sceneId, "#{QZG_80919_1}" )
-	AddNumText( sceneId, x001059_g_scriptId, "ÉÌÈË½éÉÜ", 11, 1 )
-	AddNumText( sceneId, x001059_g_scriptId, "´ò¿ªÉÌµê", 7, 2 )
+	AddNumText( sceneId, x001059_g_scriptId, "å•†äººä»‹ç»", 11, 1 )
+	AddNumText( sceneId, x001059_g_scriptId, "æ‰“å¼€å•†åº—", 7, 2 )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x001059_OnEventRequest( sceneId, selfId, targetId, eventId )
-	--ÌØ²úÉÌµê
+	--ç‰¹äº§å•†åº—
 	if GetNumText() == 1 then
 		BeginEvent(sceneId)
 			AddText( sceneId, "#{SHANGREN_JIESHAO_02}" )		
@@ -27,7 +27,7 @@ function x001059_OnEventRequest( sceneId, selfId, targetId, eventId )
 				DispatchShopItem( sceneId, selfId, targetId, x001059_g_shoptableindex )
 		else
 			BeginEvent(sceneId)
-				AddText( sceneId, "¸óÏÂ²¢ÎŞÉÌÈËÒøÆ±£¬ÄãÎÒ½»Ò×´ÓºÎÌ¸Æğ£¿" )		
+				AddText( sceneId, "é˜ä¸‹å¹¶æ— å•†äººé“¶ç¥¨ï¼Œä½ æˆ‘äº¤æ˜“ä»ä½•è°ˆèµ·ï¼Ÿ" )		
 			EndEvent(sceneId)
 			DispatchEventList( sceneId, selfId, targetId )
 		end

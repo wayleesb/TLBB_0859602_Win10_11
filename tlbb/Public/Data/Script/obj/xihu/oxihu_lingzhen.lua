@@ -1,21 +1,21 @@
---ÖĞÇïNPC
---ÁèÕñ
+--ä¸­ç§‹NPC
+--å‡ŒæŒ¯
 
 x050203_g_scriptId = 050203
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x050203_g_eventList={050018, 050019}
 
---»î¶¯Ê±¼ä
-x050203_g_StartDayTime = 8257   --»î¶¯¿ªÊ¼Ê±¼ä 2008-9-14,°üº¬µ±ÈÕ
-x050203_g_EndDayTime = 8282   --»î¶¯½áÊøÊ±¼ä 2008-10-09,°üº¬µ±ÈÕ
+--æ´»åŠ¨æ—¶é—´
+x050203_g_StartDayTime = 8257   --æ´»åŠ¨å¼€å§‹æ—¶é—´ 2008-9-14,åŒ…å«å½“æ—¥
+x050203_g_EndDayTime = 8282   --æ´»åŠ¨ç»“æŸæ—¶é—´ 2008-10-09,åŒ…å«å½“æ—¥
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x050203_UpdateEventList( sceneId, selfId, targetId )
 	BeginEvent(sceneId)
-		AddText( sceneId, "    ÕâÒ¹Î÷ºşµÄ¾°É«ÊµÔÚÊÇÆ¯ÁÁ£¡ÈôÊÇÔÚ×îÉÍĞÄÔÃÄ¿µÄÊ±¼äÀï£¬·ÅÄÇÃ´¼¸ÊøÃÀÀöµÄ½ÚÈÕÑÌ»¨¾Í¸üºÃÁË¡£" )
+		AddText( sceneId, "    è¿™å¤œè¥¿æ¹–çš„æ™¯è‰²å®åœ¨æ˜¯æ¼‚äº®ï¼è‹¥æ˜¯åœ¨æœ€èµå¿ƒæ‚¦ç›®çš„æ—¶é—´é‡Œï¼Œæ”¾é‚£ä¹ˆå‡ æŸç¾ä¸½çš„èŠ‚æ—¥çƒŸèŠ±å°±æ›´å¥½äº†ã€‚" )
 		if IsHaveMission(sceneId, selfId, 131) > 0 then
 			CallScriptFunction( 050018, "OnEnumerate",sceneId, selfId, targetId )
 		elseif IsHaveMission(sceneId, selfId, 132) > 0 then
@@ -31,21 +31,21 @@ function x050203_UpdateEventList( sceneId, selfId, targetId )
 		
 		local check = x050203_IsMidAutumnPeriod(sceneId, selfId);
 		if check and check == 1 then
-			AddNumText(sceneId, x050203_g_scriptId, "¹ØÓÚÉÍÔÂ·ÅÑÌ»¨", 11, 1);
+			AddNumText(sceneId, x050203_g_scriptId, "å…³äºèµæœˆæ”¾çƒŸèŠ±", 11, 1);
 		end
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 end
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x050203_OnDefaultEvent( sceneId, selfId,targetId )
 	x050203_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x050203_OnEventRequest( sceneId, selfId, targetId, eventId )
 	for i, findId in x050203_g_eventList do
@@ -66,7 +66,7 @@ function x050203_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x050203_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x050203_g_eventList do
@@ -81,10 +81,10 @@ function x050203_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x050203_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
-	--¾Ü¾øÖ®ºó£¬Òª·µ»ØNPCµÄÊÂ¼şÁĞ±í
+	--æ‹’ç»ä¹‹åï¼Œè¦è¿”å›NPCçš„äº‹ä»¶åˆ—è¡¨
 	for i, findId in x050203_g_eventList do
 		if missionScriptId == findId then
 			x050203_UpdateEventList( sceneId, selfId, targetId )
@@ -94,7 +94,7 @@ function x050203_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¼ÌĞø£¨ÒÑ¾­½ÓÁËÈÎÎñ£©
+--ç»§ç»­ï¼ˆå·²ç»æ¥äº†ä»»åŠ¡ï¼‰
 --**********************************
 function x050203_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x050203_g_eventList do
@@ -106,7 +106,7 @@ function x050203_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---Ìá½»ÒÑ×öÍêµÄÈÎÎñ
+--æäº¤å·²åšå®Œçš„ä»»åŠ¡
 --**********************************
 function x050203_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, selectRadioId )
 	for i, findId in x050203_g_eventList do
@@ -118,13 +118,13 @@ function x050203_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 end
 
 --**********************************
---ËÀÍöÊÂ¼ş
+--æ­»äº¡äº‹ä»¶
 --**********************************
 function x050203_OnDie( sceneId, selfId, killerId )
 end
 
 --**********************************
---»î¶¯ÊÇ·ñ¿ªÆô
+--æ´»åŠ¨æ˜¯å¦å¼€å¯
 --**********************************
 function x050203_IsMidAutumnPeriod(sceneId, selfId)
 	local curDay = GetDayTime();

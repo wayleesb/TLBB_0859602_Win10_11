@@ -1,4 +1,4 @@
--- Í¨ÓÃMessageBoxCommon added by dun.liu 2008.9.14
+-- é€šç”¨MessageBoxCommon added by dun.liu 2008.9.14
 
 local g_EnvName = "";
 local g_ScriptStringOK = "";
@@ -28,10 +28,10 @@ function MessageBoxCommon_OnEvent(event)
 		g_ScriptStringOK = arg3;
 		g_ScriptStringCancel = arg4;
 		
-		MessageBoxCommon_OK_Button:SetText("È·¶¨");
+		MessageBoxCommon_OK_Button:SetText("ç¡®å®š");
 		MessageBoxCommon_OK_Button:Show();
 		
-		MessageBoxCommon_Cancel_Button:SetText("È¡Ïû");
+		MessageBoxCommon_Cancel_Button:SetText("å–æ¶ˆ");
 		MessageBoxCommon_Cancel_Button:Show();
 		
 		MessageBoxCommon_UpdateRect();
@@ -49,13 +49,13 @@ end
 function MessageBoxCommon_Ok_Clicked()
 	this:Hide();
 	CallScriptString(g_EnvName, g_ScriptStringOK);
-	--ÔÚÕâÀïÒÑ¾­¸Ä±äÁËScriptEnv£¬²»ÒªÔÙ¼ÌĞøµ÷ÓÃMessageBoxÄÚ²¿º¯ÊıÁË
+	--åœ¨è¿™é‡Œå·²ç»æ”¹å˜äº†ScriptEnvï¼Œä¸è¦å†ç»§ç»­è°ƒç”¨MessageBoxå†…éƒ¨å‡½æ•°äº†
 end
 
 function MessageBoxCommon_Cancel_Clicked()
 	this:Hide();
 	CallScriptString(g_EnvName, g_ScriptStringCancel);
-	--ÔÚÕâÀïÒÑ¾­¸Ä±äÁËScriptEnv£¬²»ÒªÔÙ¼ÌĞøµ÷ÓÃMessageBoxÄÚ²¿º¯ÊıÁË
+	--åœ¨è¿™é‡Œå·²ç»æ”¹å˜äº†ScriptEnvï¼Œä¸è¦å†ç»§ç»­è°ƒç”¨MessageBoxå†…éƒ¨å‡½æ•°äº†
 end
 
 function MessageBoxCommon_Info_Clicked()

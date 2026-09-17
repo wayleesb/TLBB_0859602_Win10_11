@@ -1,12 +1,12 @@
---»î¶¯¡ª¡ª
---Ê¥µ®½ÚÔªµ©»î¶¯-ÊÕ¼¯ÃÅÅÉµÀ¾ß»»½±Àø
+--æ´»åŠ¨â€”â€”
+--åœ£è¯èŠ‚å…ƒæ—¦æ´»åŠ¨-æ”¶é›†é—¨æ´¾é“å…·æ¢å¥–åŠ±
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x050025_g_ScriptId = 050025
 
---x050025_g_EndDayTime = 7290   --»î¶¯½áÊøÊ±¼ä 2007-10-18
+--x050025_g_EndDayTime = 7290   --æ´»åŠ¨ç»“æŸæ—¶é—´ 2007-10-18
 
-x050025_g_FuJieId = 20310010			--·û½ÚID
+x050025_g_FuJieId = 20310010			--ç¬¦èŠ‚ID
 x050025_g_HeKaId = {
 	                 20310011,
 	                 20310017,
@@ -17,11 +17,11 @@ x050025_g_HeKaId = {
 	                 20310015,
 	                 20310016,
 	                 20310013,	
-}			                                   --ºØ¿¨ID
+}			                                   --è´ºå¡ID
 
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x050025_OnDefaultEvent( sceneId, selfId, targetId, menpaiId )
 
@@ -42,32 +42,32 @@ function x050025_OnDefaultEvent( sceneId, selfId, targetId, menpaiId )
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x050025_OnEnumerate( sceneId, selfId, targetId )
   
-  --¼ì²âÊ±¼äÊÇ·ñÕıÈ·
+  --æ£€æµ‹æ—¶é—´æ˜¯å¦æ­£ç¡®
 	local isTime = x050025_CheckRightTime()
 	if 1 ~= isTime then
 		return
 	end
 
-	AddNumText(sceneId, x050025_g_ScriptId, "¶Ò»»ÃÅÅÉ½ÚÈÕºØÌû", 6, 111 )
-	AddNumText(sceneId, x050025_g_ScriptId, "¹ØÓÚÃÅÅÉ½ÚÈÕºØÌû½éÉÜ", 11, 112 )													
+	AddNumText(sceneId, x050025_g_ScriptId, "å…‘æ¢é—¨æ´¾èŠ‚æ—¥è´ºå¸–", 6, 111 )
+	AddNumText(sceneId, x050025_g_ScriptId, "å…³äºé—¨æ´¾èŠ‚æ—¥è´ºå¸–ä»‹ç»", 11, 112 )													
 end
 
 --**********************************
---¼ì²â»î¶¯Ê±¼äÊÇ·ñÕıÈ·
+--æ£€æµ‹æ´»åŠ¨æ—¶é—´æ˜¯å¦æ­£ç¡®
 --**********************************
 function x050025_CheckRightTime()
 
-	local today = GetDayTime()						--µ±Ç°Ê±¼ä
-	--local firstDay = 7357								-- 2007Äê 12 ÔÂ 24 ÈÕ
-	--local lastDay = 8007								-- 2008Äê 1  ÔÂ 8  ÈÕ
-	local firstDay = 8357								-- 2008Äê 12 ÔÂ 23 ÈÕ
-	local lastDay = 9007								-- 2009Äê 1  ÔÂ 8  ÈÕ
+	local today = GetDayTime()						--å½“å‰æ—¶é—´
+	--local firstDay = 7357								-- 2007å¹´ 12 æœˆ 24 æ—¥
+	--local lastDay = 8007								-- 2008å¹´ 1  æœˆ 8  æ—¥
+	local firstDay = 8357								-- 2008å¹´ 12 æœˆ 23 æ—¥
+	local lastDay = 9007								-- 2009å¹´ 1  æœˆ 8  æ—¥
 	
-	-- 12 ÔÂ 31 ÈÕ 0 Ê± ~ 1 ÔÂ 7 ÈÕ 24 Ê±
+	-- 12 æœˆ 31 æ—¥ 0 æ—¶ ~ 1 æœˆ 7 æ—¥ 24 æ—¶
 	if today <= firstDay or today >= lastDay then
 		return 0
 	end
@@ -77,17 +77,17 @@ function x050025_CheckRightTime()
 end
 
 --**********************************
---¸øÍæ¼Ò½ÚÈÕºØÌû
+--ç»™ç©å®¶èŠ‚æ—¥è´ºå¸–
 --**********************************
 function x050025_GivePlayerFuJie( sceneId, selfId, targetId, menpaiId )
 
-	--¹Ø±Õ¶Ô»°´°¿Ú....
+	--å…³é—­å¯¹è¯çª—å£....
 	BeginUICommand( sceneId )
 		UICommand_AddInt( sceneId, targetId )
 	EndUICommand( sceneId )
 	DispatchUICommand( sceneId, selfId, 1000 )
 
-  --Èç¹ûÍæ¼Ò²»ÊÇ¸Ã±¾ÃÅÅÉµÄ²»Óè»»È¡ºØ¿¨
+  --å¦‚æœç©å®¶ä¸æ˜¯è¯¥æœ¬é—¨æ´¾çš„ä¸äºˆæ¢å–è´ºå¡
 	if menpaiId ~= GetMenPai( sceneId, selfId ) then 
 		BeginEvent(sceneId)
 			AddText( sceneId, "#{SDYD_081007_004}" )
@@ -96,7 +96,7 @@ function x050025_GivePlayerFuJie( sceneId, selfId, targetId, menpaiId )
 		return
 	end
 	
-	--Èç¹ûÍæ¼ÒµÈ¼¶Ğ¡ÓÚ25²»Óè»»È¡ºØ¿¨
+	--å¦‚æœç©å®¶ç­‰çº§å°äº25ä¸äºˆæ¢å–è´ºå¡
 	if	GetLevel( sceneId, selfId) < 25 then
 		BeginEvent(sceneId)
 			AddText( sceneId, "#{SDYD_081007_005}" )
@@ -105,7 +105,7 @@ function x050025_GivePlayerFuJie( sceneId, selfId, targetId, menpaiId )
 		return
 	end
 	
-	--·ñÓĞ1¸ö½ÚÈÕ·û½Ú....
+	--å¦æœ‰1ä¸ªèŠ‚æ—¥ç¬¦èŠ‚....
 	local itemCount = LuaFnGetAvailableItemCount(sceneId, selfId, x050025_g_FuJieId)
 	if itemCount < 1 then
 		BeginEvent(sceneId)
@@ -115,7 +115,7 @@ function x050025_GivePlayerFuJie( sceneId, selfId, targetId, menpaiId )
 		return
 	end
 	 
-	--¼ì²â²ÄÁÏ°üÊÇ·ñÓĞµØ·½....
+	--æ£€æµ‹ææ–™åŒ…æ˜¯å¦æœ‰åœ°æ–¹....
 	if LuaFnGetMaterialBagSpace( sceneId, selfId ) < 1 then
 		BeginEvent(sceneId)
 			AddText( sceneId, "#{SDYD_081007_007}" )
@@ -124,7 +124,7 @@ function x050025_GivePlayerFuJie( sceneId, selfId, targetId, menpaiId )
 		return
 	end
 	
-	--ÊÇ·ñÉ¾³ıÊ§°Ü....
+	--æ˜¯å¦åˆ é™¤å¤±è´¥....
 	if 0 == LuaFnDelAvailableItem(sceneId, selfId, x050025_g_FuJieId, 1) then
 		BeginEvent(sceneId)
 			AddText( sceneId, "#{SDYD_081007_006}" )
@@ -133,33 +133,33 @@ function x050025_GivePlayerFuJie( sceneId, selfId, targetId, menpaiId )
 		return
 	end
 	
-	--¸øÃÅÅÉºØÌû
+	--ç»™é—¨æ´¾è´ºå¸–
 	if menpaiId == MP_SHAOLIN then
-	   strtext = "Äú»ñµÃÉÙÁÖ½ÚÈÕºØÌûÒ»ÕÅ¡£"
+	   strtext = "æ‚¨è·å¾—å°‘æ—èŠ‚æ—¥è´ºå¸–ä¸€å¼ ã€‚"
 	   hekaid = x050025_g_HeKaId[1]
 	elseif menpaiId == MP_MINGJIAO then
-	   strtext = "Äú»ñµÃÃ÷½Ì½ÚÈÕºØÌûÒ»ÕÅ¡£"
+	   strtext = "æ‚¨è·å¾—æ˜æ•™èŠ‚æ—¥è´ºå¸–ä¸€å¼ ã€‚"
 	   hekaid = x050025_g_HeKaId[2]
 	elseif menpaiId == MP_GAIBANG then
-	   strtext = "Äú»ñµÃØ¤°ï½ÚÈÕºØÌûÒ»ÕÅ¡£"
+	   strtext = "æ‚¨è·å¾—ä¸å¸®èŠ‚æ—¥è´ºå¸–ä¸€å¼ ã€‚"
 	   hekaid = x050025_g_HeKaId[3]
 	elseif menpaiId == MP_WUDANG then
-	   strtext = "Äú»ñµÃÎäµ±½ÚÈÕºØÌûÒ»ÕÅ¡£"
+	   strtext = "æ‚¨è·å¾—æ­¦å½“èŠ‚æ—¥è´ºå¸–ä¸€å¼ ã€‚"
 	   hekaid = x050025_g_HeKaId[4]
 	elseif menpaiId == MP_EMEI then
-	   strtext = "Äú»ñµÃ¶ëÃ¼½ÚÈÕºØÌûÒ»ÕÅ¡£"
+	   strtext = "æ‚¨è·å¾—å³¨çœ‰èŠ‚æ—¥è´ºå¸–ä¸€å¼ ã€‚"
 	   hekaid = x050025_g_HeKaId[5]
 	elseif menpaiId == MP_XINGSU then
-	   strtext = "Äú»ñµÃĞÇËŞ½ÚÈÕºØÌûÒ»ÕÅ¡£"
+	   strtext = "æ‚¨è·å¾—æ˜Ÿå®¿èŠ‚æ—¥è´ºå¸–ä¸€å¼ ã€‚"
 	   hekaid = x050025_g_HeKaId[6]
 	elseif menpaiId == MP_DALI then
-	   strtext = "Äú»ñµÃÌìÁú½ÚÈÕºØÌûÒ»ÕÅ¡£"
+	   strtext = "æ‚¨è·å¾—å¤©é¾™èŠ‚æ—¥è´ºå¸–ä¸€å¼ ã€‚"
 	   hekaid = x050025_g_HeKaId[7]
 	elseif menpaiId == MP_TIANSHAN then
-	   strtext = "Äú»ñµÃÌìÉ½½ÚÈÕºØÌûÒ»ÕÅ¡£"
+	   strtext = "æ‚¨è·å¾—å¤©å±±èŠ‚æ—¥è´ºå¸–ä¸€å¼ ã€‚"
 	   hekaid = x050025_g_HeKaId[8]
 	elseif menpaiId == MP_XIAOYAO then
-	   strtext = "Äú»ñµÃåĞÒ£½ÚÈÕºØÌûÒ»ÕÅ¡£"
+	   strtext = "æ‚¨è·å¾—é€é¥èŠ‚æ—¥è´ºå¸–ä¸€å¼ ã€‚"
 	   hekaid = x050025_g_HeKaId[9]
 	end
 	
@@ -170,7 +170,7 @@ function x050025_GivePlayerFuJie( sceneId, selfId, targetId, menpaiId )
 		return
 	end
 	AddItemListToHuman(sceneId,selfId)
-	--ÈÕÖ¾Í³¼Æ
+	--æ—¥å¿—ç»Ÿè®¡
 	local guid = LuaFnObjId2Guid(sceneId,selfId)
 	local log = format("menpaiId=%d", menpaiId)
 	ScriptGlobal_AuditGeneralLog(LUAAUDIT_MPCARD_EXCHANGE, guid, log)
@@ -190,55 +190,55 @@ function x050025_GivePlayerFuJie( sceneId, selfId, targetId, menpaiId )
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x050025_CheckAccept( sceneId, selfId )
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x050025_OnAccept( sceneId, selfId )
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x050025_OnAbandon( sceneId, selfId )
 end
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x050025_OnContinue( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x050025_CheckSubmit( sceneId, selfId )
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x050025_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 end
 
 --**********************************
---É±ËÀ¹ÖÎï»òÍæ¼Ò
+--æ€æ­»æ€ªç‰©æˆ–ç©å®¶
 --**********************************
 function x050025_OnKillObject( sceneId, selfId, objdataId ,objId )
 end
 
 --**********************************
---½øÈëÇøÓòÊÂ¼ş
+--è¿›å…¥åŒºåŸŸäº‹ä»¶
 --**********************************
 function x050025_OnEnterArea( sceneId, selfId, zoneId )
 end
 
 --**********************************
---µÀ¾ß¸Ä±ä
+--é“å…·æ”¹å˜
 --**********************************
 function x050025_OnItemChanged( sceneId, selfId, itemdataId )
 end

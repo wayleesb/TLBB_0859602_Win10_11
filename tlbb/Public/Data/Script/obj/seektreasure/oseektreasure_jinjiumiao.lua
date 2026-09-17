@@ -1,39 +1,39 @@
---Â¥À¼Ñ°±¦ ´«ËÍNPC  
--- created by ×ó´ºÎ°
+--æ¥¼å…°å¯»å® ä¼ é€NPC  
+-- created by å·¦æ˜¥ä¼Ÿ
 
-x044700_g_ScriptId = 044700; --½Å±¾ºÅ
-x044700_g_name	="½ğ¾ÃÃî";
+x044700_g_ScriptId = 044700; --è„šæœ¬å·
+x044700_g_name	="é‡‘ä¹…å¦™";
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x044700_g_eventId_yes = 1;
 x044700_g_eventId_no = 0;
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x044700_OnDefaultEvent( sceneId, selfId, targetId )
 	x044700_UpdateEventList( sceneId, selfId, targetId );
 end
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x044700_UpdateEventList( sceneId, selfId, targetId )
 	BeginEvent(sceneId);
 		AddText( sceneId, "#{LLXB_8815_07}" );
-		AddText( sceneId, "ÕæµÄÒª³öÈ¥Âğ£¿");
-		AddNumText( sceneId, x044700_g_ScriptId, "È·¶¨", 9, x044700_g_eventId_yes);
-		AddNumText( sceneId, x044700_g_ScriptId, "È¡Ïû", 8, x044700_g_eventId_no);
+		AddText( sceneId, "çœŸçš„è¦å‡ºå»å—ï¼Ÿ");
+		AddNumText( sceneId, x044700_g_ScriptId, "ç¡®å®š", 9, x044700_g_eventId_yes);
+		AddNumText( sceneId, x044700_g_ScriptId, "å–æ¶ˆ", 8, x044700_g_eventId_no);
 	EndEvent(sceneId);
 	DispatchEventList(sceneId, selfId, targetId);
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x044700_OnEventRequest( sceneId, selfId, targetId, eventId )
 	if GetNumText() == x044700_g_eventId_yes then
-		CallScriptFunction((400900), "TransferFunc",sceneId, selfId, 186, 162, 77); -- Â¥À¼½ğ¾ÃÁé´¦
+		CallScriptFunction((400900), "TransferFunc",sceneId, selfId, 186, 162, 77); -- æ¥¼å…°é‡‘ä¹…çµå¤„
 	elseif GetNumText() == x044700_g_eventId_no then
 		BeginUICommand( sceneId )
 		UICommand_AddInt( sceneId, targetId )

@@ -1,5 +1,5 @@
 
---最多显示的效果数量
+--鏈�澶氭樉绀虹殑鏁堟灉鏁伴噺
 local MESSAGE_BALL_GUIDS = {0,0,0,0,0,0,0,0,0,0,0,0};
 local MESSAGE_BALL_BUTTONS = {};
 

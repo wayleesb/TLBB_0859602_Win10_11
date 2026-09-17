@@ -1,17 +1,17 @@
---ÖØÖÃçÎç¿·å¸±±¾ÌôÕ½´ÎÊý....
+--é‡ç½®ç¼¥ç¼ˆå³°å‰¯æœ¬æŒ‘æˆ˜æ¬¡æ•°....
 
---£¡£¡£¡×¢Òâ£¡£¡£¡
---ÖØÖÃ´ÎÊýºÍÈÕÆÚÊÇÊ¹ÓÃÒ»¸öINTÀ´±£´æµÄ....
---INTµÄµÍ2Î»±íÊ¾´ÎÊý....Òò´ËÃ¿Ìì×î¶àÖ»Ö§³ÖÖØÖÃ99´Î....
---²»¹ýÓÉÓÚÃ¿´ÎÏûºÄµÄÎïÆ·ÊýÁ¿ÊÇÉÏ´ÎµÄ2±¶....ËùÒÔµÚ99´ÎÐèÒªµÄÊýÁ¿ÊÇÌìÎÄÊý×Ö....2^99
+--ï¼ï¼ï¼æ³¨æ„ï¼ï¼ï¼
+--é‡ç½®æ¬¡æ•°å’Œæ—¥æœŸæ˜¯ä½¿ç”¨ä¸€ä¸ªINTæ¥ä¿å­˜çš„....
+--INTçš„ä½Ž2ä½è¡¨ç¤ºæ¬¡æ•°....å› æ­¤æ¯å¤©æœ€å¤šåªæ”¯æŒé‡ç½®99æ¬¡....
+--ä¸è¿‡ç”±äºŽæ¯æ¬¡æ¶ˆè€—çš„ç‰©å“æ•°é‡æ˜¯ä¸Šæ¬¡çš„2å€....æ‰€ä»¥ç¬¬99æ¬¡éœ€è¦çš„æ•°é‡æ˜¯å¤©æ–‡æ•°å­—....2^99
 
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x402289_g_ScriptId = 402289
 
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êý....
+--ä»»åŠ¡å…¥å£å‡½æ•°....
 --**********************************
 function x402289_OnDefaultEvent( sceneId, selfId, targetId )
 
@@ -43,7 +43,7 @@ function x402289_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÁÐ¾ÙÊÂ¼þ
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x402289_OnEnumerate( sceneId, selfId, targetId )
 
@@ -53,11 +53,11 @@ function x402289_OnEnumerate( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÅÐ¶ÏÊÇ·ñ¿ÉÒÔÔÙÕ½çÎç¿·å....
+--åˆ¤æ–­æ˜¯å¦å¯ä»¥å†æˆ˜ç¼¥ç¼ˆå³°....
 --**********************************
 function x402289_CheckCanReset( sceneId, selfId, targetId )
 
-	--»ñÈ¡½ñÌìÌôÕ½Ð¡çÎç¿µÄ´ÎÊý....
+	--èŽ·å–ä»Šå¤©æŒ‘æˆ˜å°ç¼¥ç¼ˆçš„æ¬¡æ•°....
 	local CurDayTime = GetDayTime()
 	local lastTime = GetMissionData( sceneId, selfId, MD_PIAOMIAOFENG_SMALL_LASTTIME )
 	local lastDayTime = floor( lastTime / 100 )
@@ -68,7 +68,7 @@ function x402289_CheckCanReset( sceneId, selfId, targetId )
 		lastDayCount = 0
 	end
 
-	--Èç¹û»¹Ã»ÌôÕ½¹ýÐ¡çÎç¿·å....Ôò²»ÐèÒªÖØÖÃ´ÎÊý....
+	--å¦‚æžœè¿˜æ²¡æŒ‘æˆ˜è¿‡å°ç¼¥ç¼ˆå³°....åˆ™ä¸éœ€è¦é‡ç½®æ¬¡æ•°....
 	if lastDayCount <= 0 then
 		BeginEvent(sceneId)
 			AddText(sceneId,"#{XPMCZ_81106_1}")
@@ -77,7 +77,7 @@ function x402289_CheckCanReset( sceneId, selfId, targetId )
 		return
 	end
 
-	--»ñÈ¡ ½ñÌìÖØÖÃÌôÕ½´ÎÊý µÄ´ÎÊý....
+	--èŽ·å– ä»Šå¤©é‡ç½®æŒ‘æˆ˜æ¬¡æ•° çš„æ¬¡æ•°....
 	local lastTime2 = GetMissionData( sceneId, selfId, MD_RESET_PMFSMALL_COUNT_LASTTIME )
 	local lastDayTime2 = floor( lastTime2 / 100 )
 	local lastDayCount2 = mod( lastTime2, 100 )
@@ -86,24 +86,24 @@ function x402289_CheckCanReset( sceneId, selfId, targetId )
 		lastDayCount2 = 0
 	end
 
-	--¶þ¼¶È·ÈÏ²Ëµ¥....
+	--äºŒçº§ç¡®è®¤èœå•....
 	local NeedNum = 2^lastDayCount2
 	local NeedNum2 = 2^(lastDayCount2+1)
 	BeginEvent(sceneId)
 		AddText( sceneId, "#{CZPMF_90212_1}"..NeedNum.."#{CZPMF_90212_2}"..NeedNum2.."#{CZPMF_90212_3}" )
-		AddNumText( sceneId, x402289_g_ScriptId, "È·¶¨", 8, 3 )
-		AddNumText( sceneId, x402289_g_ScriptId, "È¡Ïû", 8, 4 )
+		AddNumText( sceneId, x402289_g_ScriptId, "ç¡®å®š", 8, 3 )
+		AddNumText( sceneId, x402289_g_ScriptId, "å–æ¶ˆ", 8, 4 )
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 
 end
 
 --**********************************
---ÖØÖÃÐ¡çÎç¿·åÌôÕ½´ÎÊý....
+--é‡ç½®å°ç¼¥ç¼ˆå³°æŒ‘æˆ˜æ¬¡æ•°....
 --**********************************
 function x402289_ResetPMFCount( sceneId, selfId, targetId )
 
-	--»ñÈ¡½ñÌìÌôÕ½Ð¡çÎç¿µÄ´ÎÊý....
+	--èŽ·å–ä»Šå¤©æŒ‘æˆ˜å°ç¼¥ç¼ˆçš„æ¬¡æ•°....
 	local CurDayTime = GetDayTime()
 	local lastTime = GetMissionData( sceneId, selfId, MD_PIAOMIAOFENG_SMALL_LASTTIME )
 	local lastDayTime = floor( lastTime / 100 )
@@ -114,12 +114,12 @@ function x402289_ResetPMFCount( sceneId, selfId, targetId )
 		lastDayCount = 0
 	end
 
-	--Èç¹û»¹Ã»ÌôÕ½¹ýÐ¡çÎç¿·å....Ôò²»ÐèÒªÖØÖÃ´ÎÊý....
+	--å¦‚æžœè¿˜æ²¡æŒ‘æˆ˜è¿‡å°ç¼¥ç¼ˆå³°....åˆ™ä¸éœ€è¦é‡ç½®æ¬¡æ•°....
 	if lastDayCount <= 0 then
 		return
 	end
 
-	--»ñÈ¡ ½ñÌìÖØÖÃÌôÕ½´ÎÊý µÄ´ÎÊý....
+	--èŽ·å– ä»Šå¤©é‡ç½®æŒ‘æˆ˜æ¬¡æ•° çš„æ¬¡æ•°....
 	local lastTime2 = GetMissionData( sceneId, selfId, MD_RESET_PMFSMALL_COUNT_LASTTIME )
 	local lastDayTime2 = floor( lastTime2 / 100 )
 	local lastDayCount2 = mod( lastTime2, 100 )
@@ -128,7 +128,7 @@ function x402289_ResetPMFCount( sceneId, selfId, targetId )
 		lastDayCount2 = 0
 	end
 
-	--ÊÇ·ñÓÐ×ã¹»µÄÎïÆ·....
+	--æ˜¯å¦æœ‰è¶³å¤Ÿçš„ç‰©å“....
 	local NeedNum = 2^lastDayCount2
 	if LuaFnGetAvailableItemCount( sceneId, selfId, 30501170 ) < NeedNum then
 		BeginEvent(sceneId)
@@ -138,24 +138,24 @@ function x402289_ResetPMFCount( sceneId, selfId, targetId )
 		return
 	end
 
-	--¿ÛÎïÆ·....
+	--æ‰£ç‰©å“....
 	if 1 ~= LuaFnDelAvailableItem(sceneId, selfId, 30501170, NeedNum ) then
 		return
 	end
 
-	--ÖØÖÃÐ¡çÎç¿·åÌôÕ½´ÎÊý....
+	--é‡ç½®å°ç¼¥ç¼ˆå³°æŒ‘æˆ˜æ¬¡æ•°....
 	lastTime = lastDayTime * 100 + 0 --lastDayCount
 	SetMissionData( sceneId, selfId, MD_PIAOMIAOFENG_SMALL_LASTTIME, lastTime )
 
-	--ÉèÖÃ½ñÌìÖØÖÃ´ÎÊý....
+	--è®¾ç½®ä»Šå¤©é‡ç½®æ¬¡æ•°....
 	lastDayCount2 = lastDayCount2 + 1
 	lastTime2 = lastDayTime2 * 100 + lastDayCount2
 	SetMissionData( sceneId, selfId, MD_RESET_PMFSMALL_COUNT_LASTTIME, lastTime2 )
 
-	--Í³¼Æ....
+	--ç»Ÿè®¡....
 	LuaFnAuditResetPMFCountSmall( sceneId, selfId, lastDayCount2 )
 
-	--¹§Ï²ÄãÓÖ¿ÉÒÔÈ¥ÁË....
+	--æ­å–œä½ åˆå¯ä»¥åŽ»äº†....
 	BeginEvent(sceneId)
 		AddText(sceneId,"#{XPMCZ_81106_5}")
 	EndEvent(sceneId)

@@ -1,24 +1,24 @@
---´´½¨
+--åˆ›å»º
 
 -- scriptId = 715002
 function 		x715002_OnCreate(sceneId,growPointType,x,y)
 	
-	ItemCount = 1	-- ÎïÆ·ÊıÁ¿
-	Item0			=	40002097 --ÎïÆ·ITEM_TYPE ±àºÅ
-	ItemBoxEnterScene(x,y,growPointType,sceneId,QUALITY_MUST_BE_CHANGE,ItemCount,Item0)	--º¯Êıµ÷ÓÃ	
+	ItemCount = 1	-- ç‰©å“æ•°é‡
+	Item0			=	40002097 --ç‰©å“ITEM_TYPE ç¼–å·
+	ItemBoxEnterScene(x,y,growPointType,sceneId,QUALITY_MUST_BE_CHANGE,ItemCount,Item0)	--å‡½æ•°è°ƒç”¨	
 	
 end
 
---·µ»ØÀàĞÍ
--- 0 ±íÊ¾´ò¿ª³É¹¦
---´ò¿ªÇ°
---ÔÚCONFIG/ABILITY.TXTÎÄ¼şÖĞ
+--è¿”å›ç±»å‹
+-- 0 è¡¨ç¤ºæ‰“å¼€æˆåŠŸ
+--æ‰“å¼€å‰
+--åœ¨CONFIG/ABILITY.TXTæ–‡ä»¶ä¸­
 function	 x715002_OnOpen(sceneId,selfId,targetId)
 	--ABilityID		=	GetItemBoxRequireAbilityID(sceneId,targetId)
 	--AbilityLevel = QueryHumanAbilityLevel(sceneId,selfId,ABilityID)
 	if HaveItem (sceneId,selfId,40002097) > 0 then 
 		BeginEvent(sceneId)
-			strText = "ÒÑ¾­ÄÃµ½ÈË²ÎÁË,¿ìÈ¥½»ÈÎÎñ°É"
+			strText = "å·²ç»æ‹¿åˆ°äººå‚äº†,å¿«å»äº¤ä»»åŠ¡å§"
 			AddText(sceneId,strText);
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
@@ -33,12 +33,12 @@ function	 x715002_OnOpen(sceneId,selfId,targetId)
 	
 end
 
---»ØÊÕ
+--å›æ”¶
 function	 x715002_OnRecycle(sceneId,selfId,targetId)
  	return 1;
 end
 
---´ò¿ªºó
+--æ‰“å¼€å
 function	x715002_OnProcOver(sceneId,selfId,targetId)
 	return 0
 end

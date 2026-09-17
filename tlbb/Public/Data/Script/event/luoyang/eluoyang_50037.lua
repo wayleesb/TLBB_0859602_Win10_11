@@ -1,61 +1,61 @@
---°İÌìµØÈÎÎñ
+--æ‹œå¤©åœ°ä»»åŠ¡
 --MisDescBegin
---½Å±¾ºÅ
+--è„šæœ¬å·
 x250037_g_ScriptId = 250037
 
---ÈÎÎñºÅ
+--ä»»åŠ¡å·
 x250037_g_MissionId = 1021
 
---ÈÎÎñÄ¿±ênpc
-x250037_g_TargetNpcName	="Ï²À´ÀÖ"
+--ä»»åŠ¡ç›®æ ‡npc
+x250037_g_TargetNpcName	="å–œæ¥ä¹"
 
---ÈÎÎñ¹éÀà
+--ä»»åŠ¡å½’ç±»
 x250037_g_MissionKind = 3
 
---ÈÎÎñµÈ¼¶
+--ä»»åŠ¡ç­‰çº§
 x250037_g_MissionLevel = 1
 
---ÊÇ·ñÊÇ¾«Ó¢ÈÎÎñ
+--æ˜¯å¦æ˜¯ç²¾è‹±ä»»åŠ¡
 x250037_g_IfMissionElite = 0
 
---ÈÎÎñÏŞÊ±
-x250037_g_MissionLimitTime = 60 * 60 * 1000; --ºÁÃë
+--ä»»åŠ¡é™æ—¶
+x250037_g_MissionLimitTime = 60 * 60 * 1000; --æ¯«ç§’
 
---ÏÂÃæ¼¸ÏîÊÇ¶¯Ì¬ÏÔÊ¾µÄÄÚÈİ£¬ÓÃÓÚÔÚÈÎÎñÁĞ±íÖĞ¶¯Ì¬ÏÔÊ¾ÈÎÎñÇé¿ö**********************
+--ä¸‹é¢å‡ é¡¹æ˜¯åŠ¨æ€æ˜¾ç¤ºçš„å†…å®¹ï¼Œç”¨äºåœ¨ä»»åŠ¡åˆ—è¡¨ä¸­åŠ¨æ€æ˜¾ç¤ºä»»åŠ¡æƒ…å†µ**********************
 
---ÒÔÉÏÊÇ¶¯Ì¬**************************************************************
+--ä»¥ä¸Šæ˜¯åŠ¨æ€**************************************************************
 
---ÈÎÎñÎÄ±¾ÃèÊö
-x250037_g_MissionName="°İÌìµØ";
-x250037_g_MissionInfo="ÇëÕÒÂåÑô[177,94]µÄÏ²À´ÀÖ°²ÅÅ°İÌìµØ¡£";
-x250037_g_MissionTarget="    ÕÒÂåÑôÏ²À´ÀÖ#{_INFOAIM177,94,0,Ï²À´ÀÖ}°²ÅÅ°İÌìµØ¡£";		--ÈÎÎñÄ¿±ê
-x250037_g_ContinueInfo1="ÄãÃÇÀ´µÄÊµÔÚÌ«ÍíÁË£¬¼ªÊ±ÒÑ¹ı£¬ÎÒÒ²Ã»°ì·¨ÁË¡£";
-x250037_g_ContinueInfo2="ÕâÀïÒª²ß»®À´Ëµ£¬Ğ»Ğ»¡£";
-x250037_g_MissionComplete="ÄÇÈÃÎÒÃÇ¿ªÊ¼°É¡£";
+--ä»»åŠ¡æ–‡æœ¬æè¿°
+x250037_g_MissionName="æ‹œå¤©åœ°";
+x250037_g_MissionInfo="è¯·æ‰¾æ´›é˜³[177,94]çš„å–œæ¥ä¹å®‰æ’æ‹œå¤©åœ°ã€‚";
+x250037_g_MissionTarget="    æ‰¾æ´›é˜³å–œæ¥ä¹#{_INFOAIM177,94,0,å–œæ¥ä¹}å®‰æ’æ‹œå¤©åœ°ã€‚";		--ä»»åŠ¡ç›®æ ‡
+x250037_g_ContinueInfo1="ä½ ä»¬æ¥çš„å®åœ¨å¤ªæ™šäº†ï¼Œå‰æ—¶å·²è¿‡ï¼Œæˆ‘ä¹Ÿæ²¡åŠæ³•äº†ã€‚";
+x250037_g_ContinueInfo2="è¿™é‡Œè¦ç­–åˆ’æ¥è¯´ï¼Œè°¢è°¢ã€‚";
+x250037_g_MissionComplete="é‚£è®©æˆ‘ä»¬å¼€å§‹å§ã€‚";
 
---ÈÎÎñ½±Àø
+--ä»»åŠ¡å¥–åŠ±
 x250037_g_MoneyBonus = 0
 
 --MisDescEnd
 
-x250037_g_eventId_begin = 0;	--µã»÷°İÌìµØÈÎÎñµÄÊÂ¼ş
-x250037_g_eventId_start = 1;	--µã»÷¿ªÊ¼°İÌìµØµÄÊÂ¼ş
-x250037_g_eventId_close = 2;	--µã»÷µÈ»áÔÙ¿ªÊ¼µÄÊÂ¼ş
+x250037_g_eventId_begin = 0;	--ç‚¹å‡»æ‹œå¤©åœ°ä»»åŠ¡çš„äº‹ä»¶
+x250037_g_eventId_start = 1;	--ç‚¹å‡»å¼€å§‹æ‹œå¤©åœ°çš„äº‹ä»¶
+x250037_g_eventId_close = 2;	--ç‚¹å‡»ç­‰ä¼šå†å¼€å§‹çš„äº‹ä»¶
 
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
-function x250037_OnDefaultEvent(sceneId, selfId, targetId)	--µã»÷¸ÃÈÎÎñºóÖ´ĞĞ´Ë½Å±¾
+function x250037_OnDefaultEvent(sceneId, selfId, targetId)	--ç‚¹å‡»è¯¥ä»»åŠ¡åæ‰§è¡Œæ­¤è„šæœ¬
 	local selectEventId	= GetNumText();
 	
-	--µã»÷°İÌìµØÈÎÎñµÄÊÂ¼ş
+	--ç‚¹å‡»æ‹œå¤©åœ°ä»»åŠ¡çš„äº‹ä»¶
 	if x250037_g_eventId_begin == selectEventId then
 		x250037_OnBegin(sceneId, selfId, targetId);
-	--µã»÷¿ªÊ¼°İÌìµØµÄÊÂ¼ş
+	--ç‚¹å‡»å¼€å§‹æ‹œå¤©åœ°çš„äº‹ä»¶
 	elseif x250037_g_eventId_start == selectEventId then
 		x250037_OnStart(sceneId, selfId, targetId);
-	--µã»÷µÈ»áÔÙ¿ªÊ¼µÄÊÂ¼ş
+	--ç‚¹å‡»ç­‰ä¼šå†å¼€å§‹çš„äº‹ä»¶
 	elseif x250037_g_eventId_close == selectEventId then
 		BeginUICommand(sceneId);
 		EndUICommand(sceneId);
@@ -65,45 +65,45 @@ function x250037_OnDefaultEvent(sceneId, selfId, targetId)	--µã»÷¸ÃÈÎÎñºóÖ´ĞĞ´Ë½
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x250037_OnEnumerate(sceneId, selfId, targetId)
-    --Èç¹ûÒÑ½Ó´ËÈÎÎñ
+    --å¦‚æœå·²æ¥æ­¤ä»»åŠ¡
     if IsHaveMission(sceneId,selfId,x250037_g_MissionId) > 0 then
 		AddNumText(sceneId, x250037_g_ScriptId, x250037_g_MissionName, 3, x250037_g_eventId_begin);
     end
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x250037_CheckAccept(sceneId, selfId)
 	return 1;
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x250037_OnAccept(sceneId, selfId, marryLevel)
 
-	--¼ÓÈëÈÎÎñµ½Íæ¼ÒÁĞ±í
+	--åŠ å…¥ä»»åŠ¡åˆ°ç©å®¶åˆ—è¡¨
 	AddMission(sceneId, selfId, x250037_g_MissionId, x250037_g_ScriptId, 0, 0, 0);
-	misIndex = GetMissionIndexByID(sceneId, selfId, x250037_g_MissionId);			--µÃµ½ÈÎÎñµÄĞòÁĞºÅ
+	misIndex = GetMissionIndexByID(sceneId, selfId, x250037_g_MissionId);			--å¾—åˆ°ä»»åŠ¡çš„åºåˆ—å·
 	if misIndex and misIndex >= 0 then
 		StartMissionTimer(sceneId,selfId, x250037_g_MissionId);
-		SetMissionByIndex(sceneId,selfId,misIndex, 0, 1);						--¸ù¾İĞòÁĞºÅ°ÑÈÎÎñ±äÁ¿µÄµÚ0Î»ÖÃ0 (ÈÎÎñÍê³ÉÇé¿ö)
+		SetMissionByIndex(sceneId,selfId,misIndex, 0, 1);						--æ ¹æ®åºåˆ—å·æŠŠä»»åŠ¡å˜é‡çš„ç¬¬0ä½ç½®0 (ä»»åŠ¡å®Œæˆæƒ…å†µ)
 		SetMissionByIndex(sceneId,selfId,misIndex, 7, x250037_g_MissionLimitTime);
 		SetMissionByIndex(sceneId,selfId,misIndex, 2, marryLevel);
 		
-		Msg2Player(sceneId, selfId,"#Y½ÓÊÜÈÎÎñ£º"..x250037_g_MissionName.."",MSG2PLAYER_PARA);	--ÁÄÌì´°¿ÚÌáÊ¾
+		Msg2Player(sceneId, selfId,"#Yæ¥å—ä»»åŠ¡ï¼š"..x250037_g_MissionName.."",MSG2PLAYER_PARA);	--èŠå¤©çª—å£æç¤º
 	end
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x250037_OnAbandon(sceneId, selfId)
-	--É¾³ıÍæ¼ÒÈÎÎñÁĞ±íÖĞ¶ÔÓ¦µÄÈÎÎñ
+	--åˆ é™¤ç©å®¶ä»»åŠ¡åˆ—è¡¨ä¸­å¯¹åº”çš„ä»»åŠ¡
  	local checkMission = IsHaveMission(sceneId, selfId, x250037_g_MissionId);
 	if checkMission and checkMission == 1 then
 		DelMission(sceneId, selfId, x250037_g_MissionId);
@@ -111,44 +111,44 @@ function x250037_OnAbandon(sceneId, selfId)
 end
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x250037_OnContinue(sceneId, selfId, targetId)
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x250037_CheckSubmit(sceneId, selfId)
 	return 0;
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x250037_OnSubmit(sceneId, selfId, targetId,selectRadioId)
 end
 
 --**********************************
---É±ËÀ¹ÖÎï»òÍæ¼Ò
+--æ€æ­»æ€ªç‰©æˆ–ç©å®¶
 --**********************************
 function x250037_OnKillObject(sceneId, selfId, objdataId ,objId)
 end
 
 --**********************************
---½øÈëÇøÓòÊÂ¼ş
+--è¿›å…¥åŒºåŸŸäº‹ä»¶
 --**********************************
 function x250037_OnEnterArea(sceneId, selfId, zoneId)
 end
 
 --**********************************
---µÀ¾ß¸Ä±ä
+--é“å…·æ”¹å˜
 --**********************************
 function x250037_OnItemChanged(sceneId, selfId, itemdataId)
 end
 
 --**********************************
---¶¨Ê±ÊÂ¼ş
+--å®šæ—¶äº‹ä»¶
 --**********************************
 function x250037_OnTimer(sceneId,selfId)
 	local misIndex = GetMissionIndexByID(sceneId,selfId,x250037_g_MissionId);
@@ -167,7 +167,7 @@ function x250037_OnTimer(sceneId,selfId)
 end
 
 --**********************************
---µã»÷°İÌìµØÈÎÎñµÄÊÂ¼ş
+--ç‚¹å‡»æ‹œå¤©åœ°ä»»åŠ¡çš„äº‹ä»¶
 --**********************************
 function x250037_OnBegin(sceneId, selfId, targetId)
 	local misIndex = GetMissionIndexByID(sceneId,selfId,x250037_g_MissionId);
@@ -178,9 +178,9 @@ function x250037_OnBegin(sceneId, selfId, targetId)
 			DelMission(sceneId, selfId, x250037_g_MissionId);
 		else
 			BeginEvent(sceneId);
-				AddText(sceneId, "Ñ²ÓÎÒ²ÈÈÈÈÄÖÄÖµÄ½áÊøÁË£¬ÏÖÔÚ¸Ã¿ªÊ¼°İÌìµØÀ²¡£");
-				AddNumText(sceneId, x250037_g_ScriptId, "¶÷£¬ÏÖÔÚ¾Í¿ªÊ¼", 8, x250037_g_eventId_start);
-				AddNumText(sceneId, x250037_g_ScriptId, "ÎÒÃÇ»¹ÒªµÈÒ»»á¡­¡­", 8, x250037_g_eventId_close);
+				AddText(sceneId, "å·¡æ¸¸ä¹Ÿçƒ­çƒ­é—¹é—¹çš„ç»“æŸäº†ï¼Œç°åœ¨è¯¥å¼€å§‹æ‹œå¤©åœ°å•¦ã€‚");
+				AddNumText(sceneId, x250037_g_ScriptId, "æ©ï¼Œç°åœ¨å°±å¼€å§‹", 8, x250037_g_eventId_start);
+				AddNumText(sceneId, x250037_g_ScriptId, "æˆ‘ä»¬è¿˜è¦ç­‰ä¸€ä¼šâ€¦â€¦", 8, x250037_g_eventId_close);
 			EndEvent(sceneId);
 			DispatchEventList(sceneId, selfId, targetId);
 		end
@@ -188,7 +188,7 @@ function x250037_OnBegin(sceneId, selfId, targetId)
 end
 
 --**********************************
---µã»÷¿ªÊ¼°İÌìµØµÄÊÂ¼ş
+--ç‚¹å‡»å¼€å§‹æ‹œå¤©åœ°çš„äº‹ä»¶
 --**********************************
 function x250037_OnStart(sceneId, selfId, targetId)
 	local marryLevel = 0;
@@ -203,30 +203,30 @@ function x250037_OnStart(sceneId, selfId, targetId)
 			marryLevel = GetMissionParam(sceneId, selfId, misIndex, 2);
 		end
 	else
-		x250037_MessageBox(sceneId, selfId, targetId, "Î´ÕÒµ½°İÌìµØµÄÈÎÎñ¡£");
+		x250037_MessageBox(sceneId, selfId, targetId, "æœªæ‰¾åˆ°æ‹œå¤©åœ°çš„ä»»åŠ¡ã€‚");
 		return 0;
 	end
 		
-	local szMsg = "Èç¹ûÏë°İÌìµØ£¬ÇëÄĞÅ®Ë«·½2ÈË×é³ÉÒ»¶ÓÔÙÀ´ÕÒÎÒ¡£"
+	local szMsg = "å¦‚æœæƒ³æ‹œå¤©åœ°ï¼Œè¯·ç”·å¥³åŒæ–¹2äººç»„æˆä¸€é˜Ÿå†æ¥æ‰¾æˆ‘ã€‚"
 	if LuaFnHasTeam(sceneId, selfId) == 0 then
 		x250037_MessageBox(sceneId, selfId, targetId, szMsg);
 		return 0;
 	end
 	
-	szMsg = "¶ÓÎé±ØĞëÖ»ÄÜÓÉ·òÆŞË«·½×é³É£¬¶ÓÎéÖĞ²»ÄÜÓĞÆäËûÈËÔ±¡£"
+	szMsg = "é˜Ÿä¼å¿…é¡»åªèƒ½ç”±å¤«å¦»åŒæ–¹ç»„æˆï¼Œé˜Ÿä¼ä¸­ä¸èƒ½æœ‰å…¶ä»–äººå‘˜ã€‚"
 	if LuaFnGetTeamSize(sceneId, selfId) ~= 2 then
 		x250037_MessageBox(sceneId, selfId, targetId, szMsg);
 		return 0;
 	end
 
-	szMsg = "Ö»ÓĞ2ÈË¶¼×ßµ½ÎÒÉí±ß²Å¿ÉÒÔ¿ªÊ¼°İÌìµØ¡£"
+	szMsg = "åªæœ‰2äººéƒ½èµ°åˆ°æˆ‘èº«è¾¹æ‰å¯ä»¥å¼€å§‹æ‹œå¤©åœ°ã€‚"
 	local nearNum = GetNearTeamCount(sceneId, selfId);
 	if nearNum ~= 2 then
 		x250037_MessageBox(sceneId, selfId, targetId, szMsg);
 		return 0;
 	end
 
-	szMsg = "²»ÊÇ·òÆŞ²»ÄÜ¿ªÊ¼°İÌìµØ¡£"
+	szMsg = "ä¸æ˜¯å¤«å¦»ä¸èƒ½å¼€å§‹æ‹œå¤©åœ°ã€‚"
 	local maleId = -1;
 	local femaleId = -1;
 	for nearIndex = 0, nearNum - 1 do
@@ -259,7 +259,7 @@ function x250037_OnStart(sceneId, selfId, targetId)
 end
 
 --**********************************
---¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+--å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x250037_MessageBox(sceneId, selfId, targetId, msg)
 	BeginEvent(sceneId);

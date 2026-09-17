@@ -67,7 +67,7 @@ function City_Road_CareEventHandle(careId, op, distance)
 		if(tonumber(careId) ~= g_clientNpcId) then
 			return;
 		end
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ı£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æœå’ŒNPCçš„è·ç¦»å¤§äºä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if(op == "distance" and tonumber(distance)>MAX_OBJ_DISTANCE or op=="destroy") then
 			this:Hide();
 		end
@@ -77,21 +77,21 @@ function City_Road_Update()
 	local roadNum = City:GetCityRoadInfo("RoadNum");
 	for i = 1, roadNum do
 		local detailInfo = {City:GetCityRoadInfo("RoadDetail", i-1)};
-		--detailInfo[1]	°ï»áID
-		--detailInfo[2] °ï»áÃû³Æ
-		--detailInfo[3] ³ÇÊĞËùÔÚ
-		--detailInfo[4] ¶Ô·½ÊÇ·ñºÍ×Ô¼º½¨Á¢ÉÌÒµÂ·Ïß
+		--detailInfo[1]	å¸®ä¼šID
+		--detailInfo[2] å¸®ä¼šåç§°
+		--detailInfo[3] åŸå¸‚æ‰€åœ¨
+		--detailInfo[4] å¯¹æ–¹æ˜¯å¦å’Œè‡ªå·±å»ºç«‹å•†ä¸šè·¯çº¿
 		if(detailInfo[1] >= 0) then
 			if(detailInfo[4]) then
 				g_MembersCtl.list:AddNewItem(detailInfo[2],0,i-1);
 				g_MembersCtl.list:AddNewItem(tostring(detailInfo[1]),1,i-1);
 				g_MembersCtl.list:AddNewItem(detailInfo[3],2,i-1);
-				g_MembersCtl.list:SetRowTooltip(i-1, "ÒÑ»¥½¨ÉÌÏß");
+				g_MembersCtl.list:SetRowTooltip(i-1, "å·²äº’å»ºå•†çº¿");
 			else
 				g_MembersCtl.list:AddNewItem(detailInfo[2],0,i-1,g_GrayColor);
 				g_MembersCtl.list:AddNewItem(tostring(detailInfo[1]),1,i-1,g_GrayColor);
 				g_MembersCtl.list:AddNewItem(detailInfo[3],2,i-1,g_GrayColor);
-				g_MembersCtl.list:SetRowTooltip(i-1, "Î´»¥½¨ÉÌÏß");
+				g_MembersCtl.list:SetRowTooltip(i-1, "æœªäº’å»ºå•†çº¿");
 			end
 		end
 	end
@@ -107,9 +107,9 @@ function City_Road_SelectChanged()
 end
 
 function City_Road_Clicked(idx)
-	if(1 == idx) then	--½¨Á¢
+	if(1 == idx) then	--å»ºç«‹
 		City:DoCityRoad("create_show", g_clientNpcId);
-	elseif(2 == idx) then	--È¡Ïû
+	elseif(2 == idx) then	--å–æ¶ˆ
 		City:DoConfirm(10, g_selIdx);
 	end
 end

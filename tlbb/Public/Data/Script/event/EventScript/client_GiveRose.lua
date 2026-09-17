@@ -1,14 +1,14 @@
--- ±¦Ê¯ºÏ³É
+-- å®çŸ³åˆæˆ
 
--- ½Å±¾ºÅ
+-- è„šæœ¬å·
 x006673_g_scriptId = 006673
 
--- ½Å±¾Ãû³Æ
-x006673_g_scriptName = "ºÏ³É±¦Ê¯"
-x006673_g_Impact1 = 4918 --ÁÙÊ±Ğ´Õâ¸ö
+-- è„šæœ¬åç§°
+x006673_g_scriptName = "åˆæˆå®çŸ³"
+x006673_g_Impact1 = 4918 --ä¸´æ—¶å†™è¿™ä¸ª
 
 --**********************************************************************
--- ÈÎÎñÈë¿Úº¯Êı
+-- ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************************************************
 function x006673_OnDefaultEvent( sceneId, selfId, targetId )
 
@@ -19,7 +19,7 @@ function x006673_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************************************************
--- ÁĞ¾ÙÊÂ¼ş
+-- åˆ—ä¸¾äº‹ä»¶
 --**********************************************************************
 function x006673_OnEnumerate( sceneId, selfId, targetId )
 
@@ -47,11 +47,11 @@ local szName = GetName( sceneId, nObjID );
     
 	local nYaoDingCount = GetItemCount(sceneId, selfId, 30509011);
 	if nYaoDingCount <= 0 then
-		x006673_NotifyTip(sceneId, selfId, "ÄúÃ»ÓĞÃµ¹å£¬Çëµ½Ôª±¦ÉÌµê¹ºÂò¡£");
+		x006673_NotifyTip(sceneId, selfId, "æ‚¨æ²¡æœ‰ç«ç‘°ï¼Œè¯·åˆ°å…ƒå®å•†åº—è´­ä¹°ã€‚");
 		return 0;
 	end
 	
-	local msg = format("ÄúÊÇ·ñÒªËÍ#G999¶äÃµ¹å#Y¸ø#G%s#Y?", szName);
+	local msg = format("æ‚¨æ˜¯å¦è¦é€#G999æœµç«ç‘°#Yç»™#G%s#Y?", szName);
 	BeginUICommand(sceneId)
 		UICommand_AddInt(sceneId,x006673_g_scriptId);		
 		UICommand_AddInt(sceneId, nObjID);
@@ -67,7 +67,7 @@ end
 function x006673_DoUseItemReal( sceneId, selfId, param1, param2 )
 
 	local targetId = param1;
-	-- È·ÈÏËÍ»¨Ê±ÖØĞÂ¼ì²éË«ÏòºÃÓÑ£¬¹ØÏµÊ§Ğ§²»ÄÜ¿Û³ıµÀ¾ß¡£
+	-- ç¡®è®¤é€èŠ±æ—¶é‡æ–°æ£€æŸ¥åŒå‘å¥½å‹ï¼Œå…³ç³»å¤±æ•ˆä¸èƒ½æ‰£é™¤é“å…·ã€‚
 	if LuaFnIsFriend(sceneId, targetId, selfId) ~= 1 or
 	   LuaFnIsFriend(sceneId, selfId, targetId) ~= 1 then
 		LuaFnSendOResultToPlayer(sceneId, selfId, OR_INVALID_TARGET)
@@ -77,7 +77,7 @@ function x006673_DoUseItemReal( sceneId, selfId, param1, param2 )
 	local szNameTarget = GetName( sceneId, param1 );
 	local szNameSelf = GetName( sceneId, selfId );
 	if LuaFnGetPropertyBagSpace( sceneId, param1 ) < 1 then
-		x006673_NotifyTip( sceneId, selfId, "¶Ô·½±³°üÒÑÂú£¬ÎŞ·¨½ÓÊÜËÍ»¨!" )
+		x006673_NotifyTip( sceneId, selfId, "å¯¹æ–¹èƒŒåŒ…å·²æ»¡ï¼Œæ— æ³•æ¥å—é€èŠ±!" )
 		return 0
 	end
 	
@@ -85,7 +85,7 @@ function x006673_DoUseItemReal( sceneId, selfId, param1, param2 )
 	local szTransfer = GetBagItemTransfer(sceneId,selfId, nItemBagIndex);
 	local bRet = DelItem(sceneId, selfId, 30509011, 1);
 	if bRet <= 0 then
-		x006673_NotifyTip( sceneId, selfId, "É¾³ıµÀ¾ßÊ§°Ü£¬Çë¼ì²éÊÇ·ñËø¶¨£¡" )
+		x006673_NotifyTip( sceneId, selfId, "åˆ é™¤é“å…·å¤±è´¥ï¼Œè¯·æ£€æŸ¥æ˜¯å¦é”å®šï¼" )
 		return 0;
 	end
 	
@@ -98,14 +98,14 @@ function x006673_DoUseItemReal( sceneId, selfId, param1, param2 )
 			if nFriendPoint >= 9999 then
 			
 				BeginEvent(sceneId)
-					AddText(sceneId, "ÄãÓë¶Ô·½µÄºÃÓÑ¶ÈÒÑ¾­µ½´ïÉÏÏŞ¡£");
+					AddText(sceneId, "ä½ ä¸å¯¹æ–¹çš„å¥½å‹åº¦å·²ç»åˆ°è¾¾ä¸Šé™ã€‚");
 				EndEvent(sceneId)
 				DispatchMissionTips(sceneId,selfId)		
 				
 			else
 			
 				BeginEvent(sceneId)
-				AddText(sceneId, "ÄãÓë¶Ô·½µÄÓÑºÃ¶ÈÔö¼ÓÁË5000");
+				AddText(sceneId, "ä½ ä¸å¯¹æ–¹çš„å‹å¥½åº¦å¢åŠ äº†5000");
 				EndEvent(sceneId)
 				DispatchMissionTips(sceneId,selfId)
 				
@@ -115,7 +115,7 @@ function x006673_DoUseItemReal( sceneId, selfId, param1, param2 )
 			local	namSelf		= GetName( sceneId, selfId )
 			local	namTarget	= GetName( sceneId, targetId )
 			
-			--¸ø¶Ô·½ÓÃ¹âĞ§
+			--ç»™å¯¹æ–¹ç”¨å…‰æ•ˆ
 			--LuaFnSendSpecificImpactToUnit(sceneId, targetId, targetId, targetId, 18, 0);
 
 			
@@ -133,11 +133,11 @@ function x006673_DoUseItemReal( sceneId, selfId, param1, param2 )
 			AddGlobalCountNews( sceneId, message )
 			
 			
-			--½±Àø
+			--å¥–åŠ±
 			local	lstBounty	=
 			{
-				[0]	= { 10124021,	228, "Ãµ¹åÏÉ×Ó" },		--Å®×°
-				[1]	= { 10124020,	227, "ÇéÊ¥" },				--ÄĞ×°
+				[0]	= { 10124021,	228, "ç«ç‘°ä»™å­" },		--å¥³è£…
+				[1]	= { 10124020,	227, "æƒ…åœ£" },				--ç”·è£…
 			}
 			
 			local	untBounty
@@ -149,12 +149,12 @@ function x006673_DoUseItemReal( sceneId, selfId, param1, param2 )
 			end
 			
 			if TryRecieveItem( sceneId, selfId, untBounty[1], 1 ) >= 0 then
-				x006673_NotifyTip( sceneId, selfId, "ÄãµÃµ½ÁËÒ»¼ş"..GetItemName( sceneId, untBounty[1] ) )
+				x006673_NotifyTip( sceneId, selfId, "ä½ å¾—åˆ°äº†ä¸€ä»¶"..GetItemName( sceneId, untBounty[1] ) )
 			end
 			 
 			AwardTitle( sceneId, selfId, 8, untBounty[2] )
-			LuaFnDispatchAllTitle( sceneId, selfId )		--¸üĞÂËùÓĞ³ÆºÅµ½CLIENT
-			 x006673_NotifyTip( sceneId, selfId, "ÄãµÃµ½ÁË["..untBounty[3].."]³ÆºÅ¡£" )
+			LuaFnDispatchAllTitle( sceneId, selfId )		--æ›´æ–°æ‰€æœ‰ç§°å·åˆ°CLIENT
+			 x006673_NotifyTip( sceneId, selfId, "ä½ å¾—åˆ°äº†["..untBounty[3].."]ç§°å·ã€‚" )
 
 			 if GetSex( sceneId, targetId ) == 0 then
 			 	untBounty	= lstBounty[0]
@@ -162,11 +162,11 @@ function x006673_DoUseItemReal( sceneId, selfId, param1, param2 )
 			 	untBounty	= lstBounty[1]
 			 end
 			 if TryRecieveItem( sceneId, targetId, untBounty[1], 1 ) >= 0 then
-			 	x006673_NotifyTip( sceneId, targetId, "ÄãµÃµ½ÁËÒ»¼ş"..GetItemName( sceneId, untBounty[1] ) )
+			 	x006673_NotifyTip( sceneId, targetId, "ä½ å¾—åˆ°äº†ä¸€ä»¶"..GetItemName( sceneId, untBounty[1] ) )
 			 end
 			 AwardTitle( sceneId, targetId, 8, untBounty[2] )
-			 LuaFnDispatchAllTitle( sceneId, targetId )	--¸üĞÂËùÓĞ³ÆºÅµ½CLIENT
-			 x006673_NotifyTip( sceneId, targetId, "ÄãµÃµ½ÁË["..untBounty[3].."]³ÆºÅ¡£" )
+			 LuaFnDispatchAllTitle( sceneId, targetId )	--æ›´æ–°æ‰€æœ‰ç§°å·åˆ°CLIENT
+			 x006673_NotifyTip( sceneId, targetId, "ä½ å¾—åˆ°äº†["..untBounty[3].."]ç§°å·ã€‚" )
 	end
 	
 
@@ -174,7 +174,7 @@ end
 
 
 --**********************************
---ĞÑÄ¿ÌáÊ¾
+--é†’ç›®æç¤º
 --**********************************
 function x006673_NotifyTip( sceneId, selfId, msg )
 

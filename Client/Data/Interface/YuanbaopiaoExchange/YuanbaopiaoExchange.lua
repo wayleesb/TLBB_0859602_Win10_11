@@ -47,7 +47,7 @@ end
 function YuanbaopiaoExchange_Update()
 	YuanbaopiaoExchange_Moral_Value:SetProperty("DefaultEditBox", "True");
 	YuanbaopiaoExchange_Moral_Value:SetSelected( 0, -1 );
-	YuanbaopiaoExchange_Text1 : SetText("ÄúÉíÉÏÊ£ÓàµÄÔª±¦ÊıÁ¿£º"..tostring(Player:GetData("YUANBAO")))
+	YuanbaopiaoExchange_Text1 : SetText("æ‚¨èº«ä¸Šå‰©ä½™çš„å…ƒå®æ•°é‡ï¼š"..tostring(Player:GetData("YUANBAO")))
 end
 
 function YuanbaopiaoExchange_OK_Clicked()
@@ -58,18 +58,18 @@ function YuanbaopiaoExchange_OK_Clicked()
 	end
 	
 	if tonumber(str) > tonumber(Player:GetData("YUANBAO")) then
-		PushDebugMessage("ÄúÊäÈëµÄÔª±¦ÊıÁ¿´óÓÚÄúÓµÓĞµÄÔª±¦ÊıÁ¿¡£");
+		PushDebugMessage("æ‚¨è¾“å…¥çš„å…ƒå®æ•°é‡å¤§äºæ‚¨æ‹¥æœ‰çš„å…ƒå®æ•°é‡ã€‚");
 		return
 	end
 	
 	if tonumber(str) < 0 or tonumber(str) > 2000 then
-		PushDebugMessage("Ã¿ÕÅÔª±¦Æ±×î´óÃæ¶îÎª2000¡£");
+		PushDebugMessage("æ¯å¼ å…ƒå®ç¥¨æœ€å¤§é¢é¢ä¸º2000ã€‚");
 		return
 	end
 	
 	local ret = Player:YuanBaoToTicket(tonumber(str));
 	if(-1 == ret) then
-		PushDebugMessage("ÄúÊäÈëµÄÔª±¦ÊıÁ¿´íÎó¡£");
+		PushDebugMessage("æ‚¨è¾“å…¥çš„å…ƒå®æ•°é‡é”™è¯¯ã€‚");
 	else
 		YuanbaopiaoExchange_Close();
 	end
@@ -99,16 +99,16 @@ function YuanbaopiaoExchange_CareEventHandle(careId, op, distance)
 		if(tonumber(careId) ~= g_clientNpcId) then
 			return;
 		end
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ı£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æœå’ŒNPCçš„è·ç¦»å¤§äºä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if(op == "distance" and tonumber(distance)>MAX_OBJ_DISTANCE or op=="destroy") then
 			YuanbaopiaoExchange_Close();
 		end
 end
 
 --=========================================================
---¿ªÊ¼¹ØĞÄNPC£¬
---ÔÚ¿ªÊ¼¹ØĞÄÖ®Ç°ĞèÒªÏÈÈ·¶¨Õâ¸ö½çÃæÊÇ²»ÊÇÒÑ¾­ÓĞ¡°¹ØĞÄ¡±µÄNPC£¬
---Èç¹ûÓĞµÄ»°£¬ÏÈÈ¡ÏûÒÑ¾­ÓĞµÄ¡°¹ØĞÄ¡±
+--å¼€å§‹å…³å¿ƒNPCï¼Œ
+--åœ¨å¼€å§‹å…³å¿ƒä¹‹å‰éœ€è¦å…ˆç¡®å®šè¿™ä¸ªç•Œé¢æ˜¯ä¸æ˜¯å·²ç»æœ‰â€œå…³å¿ƒâ€çš„NPCï¼Œ
+--å¦‚æœæœ‰çš„è¯ï¼Œå…ˆå–æ¶ˆå·²ç»æœ‰çš„â€œå…³å¿ƒâ€
 --=========================================================
 function BeginCareObject_YuanbaopiaoExchange(objCaredId)
 
@@ -119,7 +119,7 @@ function BeginCareObject_YuanbaopiaoExchange(objCaredId)
 end
 
 --=========================================================
---Í£Ö¹¶ÔÄ³NPCµÄ¹ØĞÄ
+--åœæ­¢å¯¹æŸNPCçš„å…³å¿ƒ
 --=========================================================
 function StopCareObject_YuanbaopiaoExchange(objCaredId)
 	this:CareObject(objCaredId, 0, "YuanbaopiaoExchange");

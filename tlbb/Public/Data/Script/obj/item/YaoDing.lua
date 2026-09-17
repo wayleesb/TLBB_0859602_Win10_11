@@ -1,17 +1,17 @@
---Ò©¶¦ ÈÎÎñµÀ¾ß
+--è¯é¼ ä»»åŠ¡é“å…·
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x300041_g_scriptId = 300041
 
 
 --**********************************
---Ë¢ĞÂÊÂ¼ş
+--åˆ·æ–°äº‹ä»¶
 --**********************************
 function x300041_OnDefaultEvent( sceneId, selfId, BagIndex )
 	
 		local growPointType = 776;
 --		local ItemBoxId = ItemBoxEnterScene( 72, 55, growPointType, sceneId, 1,1, 30505075 )	
---		SetItemBoxMaxGrowTime(sceneId,ItemBoxId,5*1000)	--Éè¶¨»ØÊÕÊ±¼ä
+--		SetItemBoxMaxGrowTime(sceneId,ItemBoxId,5*1000)	--è®¾å®šå›æ”¶æ—¶é—´
 --		local itemBoxId = LuaFnItemBoxEnterSceneEx(sceneId, 72, 55, 775, 5*1000);
 --		AddItemToBox(sceneId, itemBoxId, QUALITY_MUST_BE_CHANGE, 1, 30505075);
 	
@@ -31,17 +31,17 @@ function x300041_OnDefaultEvent( sceneId, selfId, BagIndex )
 		return 0;
 	end
 	
-	--Éú³ÉµãÓĞĞ§
+	--ç”Ÿæˆç‚¹æœ‰æ•ˆ
 	local QianNianCaoGen = GetActivityParam( idSceneJingHu, actId, 1 );
 	if QianNianCaoGen <= 0 then
 		return 0;
 	end
-	--È·±£ Ã»ÓĞ Ò©¶¦
+	--ç¡®ä¿ æ²¡æœ‰ è¯é¼
 	local YaoDing_LianYao_Status = GetActivityParam( idSceneJingHu, actId, 2 );
 	if YaoDing_LianYao_Status ~= 1 then
 		return 0;
 	end
-	--ÊÇ·ñÎª ±¾ÈË
+	--æ˜¯å¦ä¸º æœ¬äºº
 	local idGUIDCur = LuaFnGetGUID(sceneId, selfId);	
 	local idGUIDSaved = GetActivityParam( idSceneJingHu, actId, 3 );
 	if idGUIDSaved < 0 then
@@ -57,8 +57,8 @@ function x300041_OnDefaultEvent( sceneId, selfId, BagIndex )
 	local nNow = floor( ( 60*15 - nDelta ) / 60 );
 	
 	local sMsg;
-	sMsg = format("Á¶Ò©µÄ½ø¶È: »¹Ê£Óà#c00ff00"..nNow.."·ÖÖÓ#cffffff¡£");
-	--ĞèÒªÔÚ´Ë´´½¨Ö¸¶¨µÄNPC
+	sMsg = format("ç‚¼è¯çš„è¿›åº¦: è¿˜å‰©ä½™#c00ff00"..nNow.."åˆ†é’Ÿ#cffffffã€‚");
+	--éœ€è¦åœ¨æ­¤åˆ›å»ºæŒ‡å®šçš„NPC
 	BeginEvent(sceneId)
 	
 		AddText(sceneId, sMsg);

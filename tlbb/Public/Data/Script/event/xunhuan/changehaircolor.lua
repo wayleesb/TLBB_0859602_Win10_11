@@ -1,20 +1,20 @@
---µ÷Õû·¢É«
---½Å±¾ºÅ
+--è°ƒæ•´å‘è‰²
+--è„šæœ¬å·
 x801011_g_ScriptId = 801011
 
---µ÷Õû·¢É«UI 22
+--è°ƒæ•´å‘è‰²UI 22
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x801011_OnEnumerate( sceneId, selfId, targetId )
-	-- µ÷ÊÔĞÅÏ¢
+	-- è°ƒè¯•ä¿¡æ¯
 	--BeginEvent(sceneId)
-	--	AddText(sceneId, "½øÈëµ÷Õû·¢É«½Å±¾");
+	--	AddText(sceneId, "è¿›å…¥è°ƒæ•´å‘è‰²è„šæœ¬");
 	--EndEvent(sceneId)
 	--DispatchMissionTips(sceneId,selfId)	
 
-	-- ÎªÊ²Ã´Òª NPC Ãû×Ö£¿
+	-- ä¸ºä»€ä¹ˆè¦ NPC åå­—ï¼Ÿ
 	local TransportNPCName=GetName(sceneId,targetId);
 
 	BeginUICommand(sceneId)
@@ -28,53 +28,53 @@ end
 
 
 --**********************************
---µ÷Õû·¢É«
+--è°ƒæ•´å‘è‰²
 --**********************************
 function x801011_FinishAdjust( sceneId, selfId, ColorValue)
-	-- È¾·¢¼Á
+	-- æŸ“å‘å‰‚
 	item = {20307001, 20307002} -- zchw
 
-	-- ¼ì²é¿ÉÓÃµÀ¾ß
+	-- æ£€æŸ¥å¯ç”¨é“å…·
 	itemCount = LuaFnGetAvailableItemCount ( sceneId, selfId, item[1] ); -- zchw
 	itemCount2 = LuaFnGetAvailableItemCount ( sceneId, selfId, item[2] ); 
 	if (itemCount < 1) and (itemCount2 < 1) then
 		BeginEvent(sceneId)
-			AddText(sceneId,"Ã»ÓĞ×ã¹»µÄÈ¾·¢¼Á¡£");
+			AddText(sceneId,"æ²¡æœ‰è¶³å¤Ÿçš„æŸ“å‘å‰‚ã€‚");
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
 	end
 	
-	-- ¼ì²é½ğÇ®
+	-- æ£€æŸ¥é‡‘é’±
 	local money = GetMoney(sceneId, selfId);
 	local moneyJZ = GetMoneyJZ(sceneId, selfId);
 	
 	if (money + moneyJZ) >= 50000 then
-		-- ¿Û³ı½»×ÓºÍ½ğÇ®	
+		-- æ‰£é™¤äº¤å­å’Œé‡‘é’±	
 		local costMoneyJZ, costMoney = LuaFnCostMoneyWithPriority (sceneId, selfId, 50000)
 		
-		-- Èç¹ûÈë¿Ú²ÎÊı´íÎó
+		-- å¦‚æœå…¥å£å‚æ•°é”™è¯¯
 		if costMoneyJZ == -1 then
 			return
 		end
 		
-		-- ½»×ÓºÍ½ğÇ®ÊıÄ¿×ã¶î¿Û³ı
+		-- äº¤å­å’Œé‡‘é’±æ•°ç›®è¶³é¢æ‰£é™¤
 		if (costMoneyJZ + costMoney == 50000) then		
-			-- ÏûºÄÎïÆ·
+			-- æ¶ˆè€—ç‰©å“
 			if (itemCount2 >= 1) then
-				ret = DelItem( sceneId, selfId, item[2], 1 ); -- zchw ÓÅÏÈÉ¾³ı°ó¶¨µÄÈ¾·¢¼Á
+				ret = DelItem( sceneId, selfId, item[2], 1 ); -- zchw ä¼˜å…ˆåˆ é™¤ç»‘å®šçš„æŸ“å‘å‰‚
 			else
 				ret = DelItem( sceneId, selfId, item[1], 1 );
 			end
 
-			-- ÉèÖÃĞÂ·¢É«
+			-- è®¾ç½®æ–°å‘è‰²
 			SetHumanHairColor( sceneId, selfId, ColorValue )
 			BeginEvent(sceneId)
-				AddText(sceneId,"È¾·¢³É¹¦¡£")
+				AddText(sceneId,"æŸ“å‘æˆåŠŸã€‚")
 			EndEvent(sceneId)
 			DispatchMissionTips(sceneId,selfId)
 			
-			-- ·¢ËÍ¹ã²¥
+			-- å‘é€å¹¿æ’­
 			local message;	
 			local randMessage = random(3);	
 			if randMessage == 1 then		
@@ -87,18 +87,18 @@ function x801011_FinishAdjust( sceneId, selfId, ColorValue)
 	
 			BroadMsgByChatPipe(sceneId, selfId, message, 4);
 
-		-- ½»×ÓºÍ½ğÇ®µÄÊıÄ¿²»×ã 50000
+		-- äº¤å­å’Œé‡‘é’±çš„æ•°ç›®ä¸è¶³ 50000
 		else
 			BeginEvent(sceneId)
-				AddText(sceneId,"½ğÇ®²»×ã¡£")
+				AddText(sceneId,"é‡‘é’±ä¸è¶³ã€‚")
 			EndEvent(sceneId)
 			DispatchMissionTips(sceneId,selfId)			
 			return		
 		end
-	-- Ç®Êı²»¹»£¬Ö±½Ó·µ»Ø
+	-- é’±æ•°ä¸å¤Ÿï¼Œç›´æ¥è¿”å›
 	else
 		BeginEvent(sceneId)
-			AddText(sceneId,"ÄúÉíÉÏĞ¯´øµÄ½ğÇ®²»×ã¡£")
+			AddText(sceneId,"æ‚¨èº«ä¸Šæºå¸¦çš„é‡‘é’±ä¸è¶³ã€‚")
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)			
 		return	

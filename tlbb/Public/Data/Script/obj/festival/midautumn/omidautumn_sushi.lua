@@ -1,16 +1,16 @@
--- ÖĞÇïNPC
--- ËÕéø
+-- ä¸­ç§‹NPC
+-- è‹è½¼
 
 x050002_g_scriptId = 050002
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x050002_g_eventList = { }
 
 x050002_g_ItemList = { 40004303, 40004304, 40004305 }
 x050002_g_MoonCakes = { 30103026, 30103027, 30103028, 30103029, 30103030, 30103031, 30103032, 30103033, 30103034, 30103035, 30103036, 30103037, }
-x050002_g_MoonCakeName = { "¶¹É³ÏÚÔÂ±ı", "Ãµ¹åÏÚÔÂ±ı", "ÔæÄàÏÚÔÂ±ı", "ÎåÈÊÏÚÔÂ±ı", "°Ù¹ûÏÚÔÂ±ı", "ÉÏËØÏÚÔÂ±ı", "»ğÍÈÏÚÔÂ±ı", "¾«ÃÀËÉ×ÓÏÚÔÂ±ı", "¾«ÃÀÜòÜßÏÚÔÂ±ı", "¾«ÃÀ»Æ¾«ÏÚÔÂ±ı", "¾«ÃÀÑ©Á«ÏÚÔÂ±ı", "¾«ÃÀ·äÃÛÏÚÔÂ±ı", }
+x050002_g_MoonCakeName = { "è±†æ²™é¦…æœˆé¥¼", "ç«ç‘°é¦…æœˆé¥¼", "æ£æ³¥é¦…æœˆé¥¼", "äº”ä»é¦…æœˆé¥¼", "ç™¾æœé¦…æœˆé¥¼", "ä¸Šç´ é¦…æœˆé¥¼", "ç«è…¿é¦…æœˆé¥¼", "ç²¾ç¾æ¾å­é¦…æœˆé¥¼", "ç²¾ç¾èŒ¯è‹“é¦…æœˆé¥¼", "ç²¾ç¾é»„ç²¾é¦…æœˆé¥¼", "ç²¾ç¾é›ªè²é¦…æœˆé¥¼", "ç²¾ç¾èœ‚èœœé¦…æœˆé¥¼", }
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x050002_UpdateEventList( sceneId, selfId, targetId )
 	local i, eventId
@@ -18,16 +18,16 @@ function x050002_UpdateEventList( sceneId, selfId, targetId )
 		CallScriptFunction( eventId, "OnEnumerate", sceneId, selfId, targetId )
 	end
 
-	AddNumText( sceneId, x050002_g_scriptId, "»»È¡ÖĞÇï¼ÑÊ³", -1, 1 )
+	AddNumText( sceneId, x050002_g_scriptId, "æ¢å–ä¸­ç§‹ä½³é£Ÿ", -1, 1 )
 end
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x050002_OnDefaultEvent( sceneId, selfId, targetId )
 	BeginEvent( sceneId )
-		local strText = "    Ã÷ÔÂ¼¸Ê±ÓĞ£¬°Ñ¾ÆÎÊÇàÌì¡£²»ÖªÌìÉÏ¹¬ãÚ£¬½ñÏ¦ÊÇºÎÄê¡£ÎÒÓû³Ë·ç¹éÈ¥£¬ÓÖ¿ÖÇíÂ¥ÓñÓî£¬¸ß´¦²»Ê¤º®¡£ÆğÎèÅªÇåÓ°£¬ºÎËÆÔÚÈË¼ä¡£×ªÖì¸ó£¬µÍç²»§£¬ÕÕÎŞÃß¡£²»Ó¦ÓĞºŞ£¬ºÎÊÂ³¤Ïò±ğÊ±Ô²¡£ÈËÓĞ±¯»¶ÀëºÏ£¬ÔÂÓĞÒõÇçÔ²È±£¬´ËÊÂ¹ÅÄÑÈ«¡£µ«Ô¸ÈË³¤¾Ã£¬Ç§Àï¹²æ¿¾ê¡£"
-		AddText( sceneId, "Ë®µ÷¸èÍ·" )
+		local strText = "    æ˜æœˆå‡ æ—¶æœ‰ï¼ŒæŠŠé…’é—®é’å¤©ã€‚ä¸çŸ¥å¤©ä¸Šå®«é˜™ï¼Œä»Šå¤•æ˜¯ä½•å¹´ã€‚æˆ‘æ¬²ä¹˜é£å½’å»ï¼Œåˆæç¼æ¥¼ç‰å®‡ï¼Œé«˜å¤„ä¸èƒœå¯’ã€‚èµ·èˆå¼„æ¸…å½±ï¼Œä½•ä¼¼åœ¨äººé—´ã€‚è½¬æœ±é˜ï¼Œä½ç»®æˆ·ï¼Œç…§æ— çœ ã€‚ä¸åº”æœ‰æ¨ï¼Œä½•äº‹é•¿å‘åˆ«æ—¶åœ†ã€‚äººæœ‰æ‚²æ¬¢ç¦»åˆï¼Œæœˆæœ‰é˜´æ™´åœ†ç¼ºï¼Œæ­¤äº‹å¤éš¾å…¨ã€‚ä½†æ„¿äººé•¿ä¹…ï¼Œåƒé‡Œå…±å©µå¨Ÿã€‚"
+		AddText( sceneId, "æ°´è°ƒæ­Œå¤´" )
 		AddText( sceneId, strText )
 		x050002_UpdateEventList( sceneId, selfId, targetId )
 	EndEvent( sceneId )
@@ -35,7 +35,7 @@ function x050002_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x050002_OnEventRequest( sceneId, selfId, targetId, eventId )
 	local i, findId
@@ -50,10 +50,10 @@ function x050002_OnEventRequest( sceneId, selfId, targetId, eventId )
 		local idx, itemId
 		for idx, itemId in x050002_g_ItemList do
 			if LuaFnGetAvailableItemCount( sceneId, selfId, itemId ) < 1 then
-				x050002_NotifyFailBox( sceneId, selfId, targetId, "    Òª»»È¡ÖĞ" ..
-					"Çï¼ÑÊ³£¬ĞèÒª¾«ÖÊÃæ·Û£¬ÓÅÖÊÏãÁÏ¡¢ÉÏºÃÕáÌÇ¸÷×ÔÒ»¸ö£¬" ..
-					"¿Éµ½ÂåÑô½ªÀğ£¨127£¬154£©£¬ËÕÖİ°üÊÀÈÙ£¨190£¬168£©£¬" ..
-					"´óÀí¶Å×ÓÌÚ£¨109£¬170£©´¦È¡µÃ¡£" )
+				x050002_NotifyFailBox( sceneId, selfId, targetId, "    è¦æ¢å–ä¸­" ..
+					"ç§‹ä½³é£Ÿï¼Œéœ€è¦ç²¾è´¨é¢ç²‰ï¼Œä¼˜è´¨é¦™æ–™ã€ä¸Šå¥½è”—ç³–å„è‡ªä¸€ä¸ªï¼Œ" ..
+					"å¯åˆ°æ´›é˜³å§œé²¤ï¼ˆ127ï¼Œ154ï¼‰ï¼Œè‹å·åŒ…ä¸–è£ï¼ˆ190ï¼Œ168ï¼‰ï¼Œ" ..
+					"å¤§ç†æœå­è…¾ï¼ˆ109ï¼Œ170ï¼‰å¤„å–å¾—ã€‚" )
 				return
 			end
 		end
@@ -67,24 +67,24 @@ function x050002_OnEventRequest( sceneId, selfId, targetId, eventId )
 			LuaFnDelAvailableItem( sceneId, selfId, itemId, 1 )
 		end
 
-		x050002_NotifyFailBox( sceneId, selfId, targetId, "    ÉõºÃÉõºÃ£¬ÖĞÇïÁ¼" ..
-			"³½£¬µ±ÒÔ´Ë±ıÔù¾ı£¬´Ë±ıÈçÖĞÇïÃ÷ÔÂĞÎ×´£¬ÇÔÒÔÎª³ÆÖ®ÎªÔÂ±ıÒÔÎªÉÆÒ²¡£" )
+		x050002_NotifyFailBox( sceneId, selfId, targetId, "    ç”šå¥½ç”šå¥½ï¼Œä¸­ç§‹è‰¯" ..
+			"è¾°ï¼Œå½“ä»¥æ­¤é¥¼èµ å›ï¼Œæ­¤é¥¼å¦‚ä¸­ç§‹æ˜æœˆå½¢çŠ¶ï¼Œçªƒä»¥ä¸ºç§°ä¹‹ä¸ºæœˆé¥¼ä»¥ä¸ºå–„ä¹Ÿã€‚" )
 
-		local strText = "Äã»ñµÃ" .. x050002_g_MoonCakeName[moonCakeId]
+		local strText = "ä½ è·å¾—" .. x050002_g_MoonCakeName[moonCakeId]
 
 		Msg2Player( sceneId, selfId, strText, MSG2PLAYER_PARA )
 		x050002_NotifyFailTips( sceneId, selfId, strText )
 
-		-- µ±Íæ¼Ò»ñµÃ¾«ÃÀµÄÔÂ±ı£¬»áÔÚÊÀ½ç·¢ÏµÍ³ÏûÏ¢¡£
-		strText = GetName( sceneId, selfId ) .. "ÔÚ»»È¡ÔÂ±ıÊ±£¬ĞÒÔËµÄµÃµ½ÁË" ..
-					x050002_g_MoonCakeName[moonCakeId] .. "¡£"
+		-- å½“ç©å®¶è·å¾—ç²¾ç¾çš„æœˆé¥¼ï¼Œä¼šåœ¨ä¸–ç•Œå‘ç³»ç»Ÿæ¶ˆæ¯ã€‚
+		strText = GetName( sceneId, selfId ) .. "åœ¨æ¢å–æœˆé¥¼æ—¶ï¼Œå¹¸è¿çš„å¾—åˆ°äº†" ..
+					x050002_g_MoonCakeName[moonCakeId] .. "ã€‚"
 		BroadMsgByChatPipe( sceneId, selfId, strText, 4 )
 		return
 	end
 end
 
 --**********************************
---¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+--å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x050002_NotifyFailBox( sceneId, selfId, targetId, msg )
 	BeginEvent( sceneId )
@@ -94,7 +94,7 @@ function x050002_NotifyFailBox( sceneId, selfId, targetId, msg )
 end
 
 --**********************************
---ĞÑÄ¿ĞÅÏ¢ÌáÊ¾
+--é†’ç›®ä¿¡æ¯æç¤º
 --**********************************
 function x050002_NotifyFailTips( sceneId, selfId, Tip )
 	BeginEvent( sceneId )

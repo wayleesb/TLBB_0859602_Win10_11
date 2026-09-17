@@ -1,5 +1,5 @@
 -- 402258
--- ÇØ¼ÒÕ¯Ç×±ø
+-- ç§¦å®¶å¯¨äº²å…µ
 
 x402258_g_KillMonsCount_Qincheng = 20
 x402258_g_KillMonsCount_Qinjia 	 = 21
@@ -7,7 +7,7 @@ x402258_g_KillMonsCount_Lama		 = 22
 
 function x402258_OnDie( sceneId, selfId, killerId )
 	
-	-- Ö»ÓĞÔÚğ¯Ä¦ÖÇËÀÍöÇ°É±ËÀµÄ²Å¼ÆËãÊıÁ¿
+	-- åªæœ‰åœ¨é¸ æ‘©æ™ºæ­»äº¡å‰æ€æ­»çš„æ‰è®¡ç®—æ•°é‡
 
 	local nCount = LuaFnGetCopySceneData_Param(sceneId, x402258_g_KillMonsCount_Qinjia)
 	if nCount<0  then

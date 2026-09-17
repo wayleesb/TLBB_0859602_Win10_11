@@ -1,5 +1,5 @@
 INT	INT	INT	INT
-index	classID£¨ºÍRecycleItemClass.txtÀïid¶ÔÓ¦£©	typeID£¨ºÍRecycleItemType.txtÀïtypeid¶ÔÓ¦£©	ÎïÆ·id(commonitem±íµÄid)
+index	classIDï¼ˆå’ŒRecycleItemClass.txté‡Œidå¯¹åº”ï¼‰	typeIDï¼ˆå’ŒRecycleItemType.txté‡Œtypeidå¯¹åº”ï¼‰	ç‰©å“id(commonitemè¡¨çš„id)
 0	1	1	20103001
 1	1	1	20103002
 2	1	1	20103003

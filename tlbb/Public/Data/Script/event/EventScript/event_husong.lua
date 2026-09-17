@@ -1,6 +1,6 @@
---»¤ËÍÈÎÎñ(ËùÓĞÕâÒ»ÀàĞÍ¶¼Ê¹ÓÃÕâ¸öLUA£¬ĞŞ¸ÄÇë×¢ÒâÍ¨ÓÃĞÔ)
+--æŠ¤é€ä»»åŠ¡(æ‰€æœ‰è¿™ä¸€ç±»å‹éƒ½ä½¿ç”¨è¿™ä¸ªLUAï¼Œä¿®æ”¹è¯·æ³¨æ„é€šç”¨æ€§)
 
---ÈÎÎñ¶Î·ÖÀàÁĞ±í_MissType	1.É±¹ÖÈÎÎñ	2.ËÍĞÅÈÎÎñ	3.Ì½Ë÷ÈÎÎñ	4.Ñ°ÎïÈÎÎñ	5.»¤ËÍÈÎÎñ
+--ä»»åŠ¡æ®µåˆ†ç±»åˆ—è¡¨_MissType	1.æ€æ€ªä»»åŠ¡	2.é€ä¿¡ä»»åŠ¡	3.æ¢ç´¢ä»»åŠ¡	4.å¯»ç‰©ä»»åŠ¡	5.æŠ¤é€ä»»åŠ¡
 x006671_g_MissionTypeList	=	{ {StartIdx = 1000000, EndIdx = 1009999, ScriptId = 006666},
 															{StartIdx = 1010000, EndIdx = 1019999, ScriptId = 006668},
 															{StartIdx = 1020000, EndIdx = 1029999, ScriptId = 006669},
@@ -32,51 +32,51 @@ function x006671_DisplayBonus(sceneId, missionIndex)
 	AddMoneyBonus( sceneId, awardMoney)
 end
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
-function x006671_OnDefaultEvent( sceneId, selfId, targetId, missionIndex )	--µã»÷¸ÃÈÎÎñºóÖ´ĞĞ´Ë½Å±¾
+function x006671_OnDefaultEvent( sceneId, selfId, targetId, missionIndex )	--ç‚¹å‡»è¯¥ä»»åŠ¡åæ‰§è¡Œæ­¤è„šæœ¬
 	local missionId = TGetMissionIdByIndex(missionIndex)
 	local missionName = TGetMissionName(missionIndex)
-	local misIndex = GetMissionIndexByID(sceneId, selfId, missionId)--µÃµ½ÈÎÎñÔÚ20¸öÈÎÎñÖĞµÄĞòÁĞºÅ
+	local misIndex = GetMissionIndexByID(sceneId, selfId, missionId)--å¾—åˆ°ä»»åŠ¡åœ¨20ä¸ªä»»åŠ¡ä¸­çš„åºåˆ—å·
 
 	local missionTarget, missionInfo, missionContinue, missionComplete = TGetMissionDesc(missionIndex)
 	
 	if IsHaveMission(sceneId,selfId,missionId) > 0 then
 		if GetNumText() == 3 then
-			--Èç¹ûÑ¡ÖĞµÄ¶ÔÏóÊÇÒª»¤ËÍµÄnpc
-			local x, z = GetWorldPos(sceneId,targetId)--¼ÇÂ¼npcµÄ×ø±ê
-			SetMissionByIndex(sceneId,selfId,misIndex,7,sceneId) --Ê¼ÖÕÒÔµ±Ç°³¡¾°Îª×¼
-			SetMissionByIndex(sceneId,selfId,misIndex,1,0) --Íê³ÉÇé¿ö
+			--å¦‚æœé€‰ä¸­çš„å¯¹è±¡æ˜¯è¦æŠ¤é€çš„npc
+			local x, z = GetWorldPos(sceneId,targetId)--è®°å½•npcçš„åæ ‡
+			SetMissionByIndex(sceneId,selfId,misIndex,7,sceneId) --å§‹ç»ˆä»¥å½“å‰åœºæ™¯ä¸ºå‡†
+			SetMissionByIndex(sceneId,selfId,misIndex,1,0) --å®Œæˆæƒ…å†µ
 			SetMissionByIndex(sceneId,selfId,misIndex,2,targetId)
 			SetMissionByIndex(sceneId,selfId,misIndex,3,x)
 			SetMissionByIndex(sceneId,selfId,misIndex,4,z)
 
       --*********************************************************************	
-      -- npcÓĞĞ§ĞÔ¼ì²é
+      -- npcæœ‰æ•ˆæ€§æ£€æŸ¥
    		local targetNpcScene, targetNpcName = TGetTargetNpcInfo(missionIndex)
 			local targetName = GetName(sceneId, targetId)
 			if targetNpcScene ~= sceneId 
 			 or targetNpcName ~= targetName then
-			 -- ¸Ãnpc²»ÊÇÒª²Ù×÷µÄnpc
+			 -- è¯¥npcä¸æ˜¯è¦æ“ä½œçš„npc
 			 return 0
 			end
-			-- »ñÈ¡ÉèÖÃÇ°µÄÊı¾İĞÅÏ¢
+			-- è·å–è®¾ç½®å‰çš„æ•°æ®ä¿¡æ¯
 			local oldAIType = GetNPCAIType(sceneId, targetId)
 			local oldUnitReputationId = GetUnitReputationID(sceneId, selfId, targetId)
-			-- ÉèÖÃnpcÑ²Âß¿ªÊ¼µÄÊı¾İ
-			local patrolPathIndex = TGetHusongPatrolPath(missionIndex)		-- µÃµ½»¤ËÍÑ²ÂßÂ·Ïß
-			SetUnitReputationID(sceneId, selfId, targetId, 0) --0ÎªĞÂÊÖÕóÓª,ºÍÍæ¼ÒÓÑºÃ
-			SetMonsterFightWithNpcFlag(sceneId, targetId, 1) --´ò¿ªÔÊĞí¹ÖÎïºÍ¹ÖÎï´ò¼ÜµÄ±ê¼Ç
+			-- è®¾ç½®npcå·¡é€»å¼€å§‹çš„æ•°æ®
+			local patrolPathIndex = TGetHusongPatrolPath(missionIndex)		-- å¾—åˆ°æŠ¤é€å·¡é€»è·¯çº¿
+			SetUnitReputationID(sceneId, selfId, targetId, 0) --0ä¸ºæ–°æ‰‹é˜µè¥,å’Œç©å®¶å‹å¥½
+			SetMonsterFightWithNpcFlag(sceneId, targetId, 1) --æ‰“å¼€å…è®¸æ€ªç‰©å’Œæ€ªç‰©æ‰“æ¶çš„æ ‡è®°
 			SetNPCAIType(sceneId, targetId, TGetHusongAIType(missionIndex))
 			SetPatrolId(sceneId, targetId, patrolPathIndex)
-		  --ÉèÖÃnpcÑ²Âß½áÊøµÄÊı¾İ
+		  --è®¾ç½®npcå·¡é€»ç»“æŸçš„æ•°æ®
       AddNpcPatrolEndPointOperator(sceneId,targetId,"AIS_SetPatrolID", -1) 
       AddNpcPatrolEndPointOperator(sceneId,targetId,"AIS_SetBaseAIType", 0, -1, oldAIType) 
       AddNpcPatrolEndPointOperator(sceneId,targetId,"AIS_SetReputationID_CodingRefix", oldUnitReputationId) 
       AddNpcPatrolEndPointOperator(sceneId,targetId,"AIS_SetMonsterFightWithNpcFlag", 0)
 			--*********************************************************************
 			
-			--Æô¶¯¸ÃÈÎÎñµÄÈÎÎñÊ±ÖÓÆ÷
+			--å¯åŠ¨è¯¥ä»»åŠ¡çš„ä»»åŠ¡æ—¶é’Ÿå™¨
 			StartMissionTimer(sceneId, selfId, missionId)
 			SetMissionEvent(sceneId, selfId, missionId, 5)
 			SetMissionEvent(sceneId, selfId, missionId, 6)
@@ -96,7 +96,7 @@ function x006671_OnDefaultEvent( sceneId, selfId, targetId, missionIndex )	--µã»
 		if distSqr > 2.0 then
 			BeginEvent(sceneId)
 				AddText(sceneId, missionName)
-				AddText(sceneId, "Ä¿±êÒÑ¾­±»ÆäËûÈË»¤ËÍ×ßÁË£¡")
+				AddText(sceneId, "ç›®æ ‡å·²ç»è¢«å…¶ä»–äººæŠ¤é€èµ°äº†ï¼")
 			EndEvent( )
 			DispatchEventList(sceneId, selfId, targetId)			
 		else	
@@ -111,14 +111,14 @@ function x006671_OnDefaultEvent( sceneId, selfId, targetId, missionIndex )	--µã»
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x006671_OnEnumerate( sceneId, selfId, targetId, missionIndex )
-	--Èç¹ûÍæ¼ÒÍê³É¹ıÕâ¸öÈÎÎñ
+	--å¦‚æœç©å®¶å®Œæˆè¿‡è¿™ä¸ªä»»åŠ¡
 	local missionId = TGetMissionIdByIndex(missionIndex)
 	local missionName = TGetMissionName(missionIndex)
 	
-	-- ÅĞ¶¨Íæ¼ÒµÄÌõ¼şÊÇ²»ÊÇ¹»½ÓÊÜÕâ¸öÈÎÎñ£¬Èç¹û¹»¾ÍÏÔÊ¾£¬²»¹»¾Í²»ÏÔÊ¾
+	-- åˆ¤å®šç©å®¶çš„æ¡ä»¶æ˜¯ä¸æ˜¯å¤Ÿæ¥å—è¿™ä¸ªä»»åŠ¡ï¼Œå¦‚æœå¤Ÿå°±æ˜¾ç¤ºï¼Œä¸å¤Ÿå°±ä¸æ˜¾ç¤º
 	local nLevel,nMis1,nMis2,nMis3 = TGetCheckInfo(missionIndex)
 	
 	
@@ -127,30 +127,30 @@ function x006671_OnEnumerate( sceneId, selfId, targetId, missionIndex )
 	end
 	
 	if nMis1 > 0   then
-		-- Èç¹ûÇ°ĞøÈÎÎñ1Ã»ÓĞÍê³É£¬¾Í·µ»Ø
+		-- å¦‚æœå‰ç»­ä»»åŠ¡1æ²¡æœ‰å®Œæˆï¼Œå°±è¿”å›
 		if IsMissionHaveDone(sceneId, selfId, nMis1) <= 0   then
 			return
 		end
 	end
 	
 	if nMis2 > 0   then
-		-- Èç¹ûÇ°ĞøÈÎÎñ2Ã»ÓĞÍê³É£¬¾Í·µ»Ø
+		-- å¦‚æœå‰ç»­ä»»åŠ¡2æ²¡æœ‰å®Œæˆï¼Œå°±è¿”å›
 		if IsMissionHaveDone(sceneId, selfId, nMis2) <= 0   then
 			return
 		end
 	end
 	
 	if nMis3 > 0   then
-		-- Èç¹ûÇ°ĞøÈÎÎñ3Ã»ÓĞÍê³É£¬¾Í·µ»Ø
+		-- å¦‚æœå‰ç»­ä»»åŠ¡3æ²¡æœ‰å®Œæˆï¼Œå°±è¿”å›
 		if IsMissionHaveDone(sceneId, selfId, nMis3) <= 0   then
 			return
 		end
 	end
 
-	-- Èç¹û±¾ÈÎÎñÒÑ¾­Íê³É£¬¾Í·µ»Ø
+	-- å¦‚æœæœ¬ä»»åŠ¡å·²ç»å®Œæˆï¼Œå°±è¿”å›
 	if IsMissionHaveDone(sceneId, selfId, missionId) > 0 then
    	return
-	--Âú×ãÈÎÎñ½ÓÊÕÌõ¼ş
+	--æ»¡è¶³ä»»åŠ¡æ¥æ”¶æ¡ä»¶
 	elseif IsHaveMission(sceneId, selfId, missionId) > 0 then
 		local completeNpcScene, completeNpcName = TGetCompleteNpcInfo(missionIndex)
 		if GetName(sceneId, targetId) == completeNpcName then
@@ -159,7 +159,7 @@ function x006671_OnEnumerate( sceneId, selfId, targetId, missionIndex )
 			--TEndEvent()	
 			TDispatchEventList(sceneId, selfId, targetId)
 		end
-	--Âú×ãÈÎÎñ½ÓÊÕÌõ¼ş
+	--æ»¡è¶³ä»»åŠ¡æ¥æ”¶æ¡ä»¶
   elseif x006671_CheckAccept(sceneId, selfId, missionIndex) > 0 then
   	local acceptNpcScene, acceptNpcName = TGetAcceptNpcInfo(missionIndex)
 		if GetName(sceneId, targetId) == acceptNpcName then
@@ -177,30 +177,30 @@ end
 --**********************************
 function x006671_OnLockedTarget( sceneId, selfId, targetId, missionIndex )
  	local missionId = TGetMissionIdByIndex(missionIndex)
-	local misIndex = GetMissionIndexByID(sceneId, selfId, missionId)--µÃµ½ÈÎÎñÔÚ20¸öÈÎÎñÖĞµÄĞòÁĞºÅ
+	local misIndex = GetMissionIndexByID(sceneId, selfId, missionId)--å¾—åˆ°ä»»åŠ¡åœ¨20ä¸ªä»»åŠ¡ä¸­çš„åºåˆ—å·
 	local missionName = TGetMissionName(missionIndex)
 	
 	local nscene1, name1 = TGetCompleteNpcInfo(missionIndex)
 	local nscene2, name2 = TGetTargetNpcInfo(missionIndex)
 	local targetName = GetName(sceneId, targetId)
 	if targetName == name1 then
-		--Èç¹ûÑ¡ÖĞµÄ¶ÔÏóÊÇ½»ÈÎÎñµÄnpc
+		--å¦‚æœé€‰ä¸­çš„å¯¹è±¡æ˜¯äº¤ä»»åŠ¡çš„npc
 		TAddNumText(sceneId, missionIndex, missionName,1,-1);
 	elseif targetName == name2 then
-		if GetMissionParam(sceneId, selfId, misIndex, 0) == 1 then --Èç¹ûÈÎÎñÒÑ¾­Íê³ÉÔòÖ±½Ó·µ»Ø
+		if GetMissionParam(sceneId, selfId, misIndex, 0) == 1 then --å¦‚æœä»»åŠ¡å·²ç»å®Œæˆåˆ™ç›´æ¥è¿”å›
 			return
 		end
 		if GetPatrolId(sceneId, targetId) ~= -1 then
 			return
 		end
 
-		--Èç¹ûÑ¡ÖĞµÄ¶ÔÏóÊÇÒª»¤ËÍµÄnpc
+		--å¦‚æœé€‰ä¸­çš„å¯¹è±¡æ˜¯è¦æŠ¤é€çš„npc
 		TAddNumText(sceneId, missionIndex, missionName,1,3);
 	end
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x006671_CheckAccept( sceneId, selfId, missionIndex )
 	local nLevel = LuaFnGetLevel(sceneId, selfId)
@@ -208,7 +208,7 @@ function x006671_CheckAccept( sceneId, selfId, missionIndex )
 
 	if nLevel < limitLevel then
 		--TBeginEvent(sceneId)
-			TAddText(sceneId, "ÄãµÄ½­ºşÔÄÀúÌ«µÍ£¬¿ÖÅÂ²»ÄÜÊ¤ÈÎ£¬´ı".. tostring(limitLevel) .."¼¶Ö®ºóÔÙÀ´ÕÒÎÒ°É")
+			TAddText(sceneId, "ä½ çš„æ±Ÿæ¹–é˜…å†å¤ªä½ï¼Œææ€•ä¸èƒ½èƒœä»»ï¼Œå¾…".. tostring(limitLevel) .."çº§ä¹‹åå†æ¥æ‰¾æˆ‘å§")
 		--TEndEvent()
 		TDispatchEventList(sceneId, selfId)
 		return 0
@@ -240,80 +240,80 @@ function x006671_CheckAccept( sceneId, selfId, missionIndex )
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x006671_OnAccept( sceneId, selfId, targetId, missionIndex )
 
 	local missionId = TGetMissionIdByIndex(missionIndex)
 	local missionName = TGetMissionName(missionIndex)
 
-	-- ¼ì²âÍæ¼ÒÊÇ²»ÊÇÒÑ¾­Íê³É¹ıÕâ¸öÈÎÎñ
+	-- æ£€æµ‹ç©å®¶æ˜¯ä¸æ˜¯å·²ç»å®Œæˆè¿‡è¿™ä¸ªä»»åŠ¡
 	if IsMissionHaveDone(sceneId, selfId, missionId) > 0   then
 		return
 	end
 
-	--¼ÓÈëÈÎÎñµ½Íæ¼ÒÁĞ±í
+	--åŠ å…¥ä»»åŠ¡åˆ°ç©å®¶åˆ—è¡¨
 	local ret = AddMission( sceneId,selfId, missionId, missionIndex, 0, 0, 0 )
 	
 	if ret <= 0 then
-		Msg2Player(  sceneId, selfId,"#YÄãµÄÈÎÎñÈÕÖ¾ÒÑ¾­ÂúÁË" , MSG2PLAYER_PARA )
+		Msg2Player(  sceneId, selfId,"#Yä½ çš„ä»»åŠ¡æ—¥å¿—å·²ç»æ»¡äº†" , MSG2PLAYER_PARA )
 		return
 	end
 	
-	--ÉèÖÃÈÎÎñ±äÁ¿±¦ÎïµÄ³¡¾°±àºÅºÍ×ø±êÎ»ÖÃ
-	local misIndex = GetMissionIndexByID(sceneId, selfId, missionId)--µÃµ½ÈÎÎñÔÚ20¸öÈÎÎñÖĞµÄĞòÁĞºÅ
-	SetMissionByIndex(sceneId,selfId,misIndex,0,0) --¸ù¾İĞòÁĞºÅ°ÑÈÎÎñ±äÁ¿µÄµÚÒ»Î»ÖÃ0	µÚÒ»Î»ÊÇÍê³É/Ê§°ÜÇé¿ö
-	SetMissionByIndex(sceneId,selfId,misIndex,1,0) --Ê¼ÖÕÒÔµ±Ç°³¡¾°Îª×¼
+	--è®¾ç½®ä»»åŠ¡å˜é‡å®ç‰©çš„åœºæ™¯ç¼–å·å’Œåæ ‡ä½ç½®
+	local misIndex = GetMissionIndexByID(sceneId, selfId, missionId)--å¾—åˆ°ä»»åŠ¡åœ¨20ä¸ªä»»åŠ¡ä¸­çš„åºåˆ—å·
+	SetMissionByIndex(sceneId,selfId,misIndex,0,0) --æ ¹æ®åºåˆ—å·æŠŠä»»åŠ¡å˜é‡çš„ç¬¬ä¸€ä½ç½®0	ç¬¬ä¸€ä½æ˜¯å®Œæˆ/å¤±è´¥æƒ…å†µ
+	SetMissionByIndex(sceneId,selfId,misIndex,1,0) --å§‹ç»ˆä»¥å½“å‰åœºæ™¯ä¸ºå‡†
 
 	local nscene1, name1 = TGetAcceptNpcInfo(missionIndex)
 	local nscene2, name2 = TGetCompleteNpcInfo(missionIndex)
 	local nscene3, name3 = TGetTargetNpcInfo(missionIndex)
-	-- Èç¹û½»ÈÎÎñµÄÈË²»ÊÇ½ÓÈÎÎñµÄÈË»òÒª»¤ËÍµÄÈË
+	-- å¦‚æœäº¤ä»»åŠ¡çš„äººä¸æ˜¯æ¥ä»»åŠ¡çš„äººæˆ–è¦æŠ¤é€çš„äºº
 	if name1 ~= name2  or name1 ~= name3 then
 		SetMissionEvent(sceneId, selfId, missionId, 4)
 	end	
 
 	if name1 == name3 then
-		local x, z = GetWorldPos(sceneId,targetId)--¼ÇÂ¼npcµÄ×ø±ê
-		SetMissionByIndex(sceneId,selfId,misIndex,7,sceneId) --Ê¼ÖÕÒÔµ±Ç°³¡¾°Îª×¼
+		local x, z = GetWorldPos(sceneId,targetId)--è®°å½•npcçš„åæ ‡
+		SetMissionByIndex(sceneId,selfId,misIndex,7,sceneId) --å§‹ç»ˆä»¥å½“å‰åœºæ™¯ä¸ºå‡†
 		SetMissionByIndex(sceneId,selfId,misIndex,2,targetId)
 		SetMissionByIndex(sceneId,selfId,misIndex,3,x)
 		SetMissionByIndex(sceneId,selfId,misIndex,4,z)
 		
     --*********************************************************************	
-    -- npcÓĞĞ§ĞÔ¼ì²é	
+    -- npcæœ‰æ•ˆæ€§æ£€æŸ¥	
 		local targetNpcScene, targetNpcName = TGetTargetNpcInfo(missionIndex)
 		local targetName = GetName(sceneId, targetId)
 		if targetNpcScene~= sceneId 
 		 or targetNpcName ~= targetName then
-		 -- ¸Ãnpc²»ÊÇÒª²Ù×÷µÄnpc
+		 -- è¯¥npcä¸æ˜¯è¦æ“ä½œçš„npc
 		 return 0
 		end
-		-- »ñÈ¡ÉèÖÃÇ°µÄÊı¾İĞÅÏ¢
+		-- è·å–è®¾ç½®å‰çš„æ•°æ®ä¿¡æ¯
 		local oldAIType = GetNPCAIType(sceneId, targetId)
 		local oldUnitReputationId = GetUnitReputationID(sceneId, selfId, targetId)
-		-- ÉèÖÃnpcÑ²Âß¿ªÊ¼µÄÊı¾İ
-		local patrolPathIndex = TGetHusongPatrolPath(missionIndex)		-- µÃµ½»¤ËÍÑ²ÂßÂ·Ïß
-		SetUnitReputationID(sceneId, selfId, targetId, 0) --0ÎªĞÂÊÖÕóÓª,ºÍÍæ¼ÒÓÑºÃ
-		SetMonsterFightWithNpcFlag(sceneId, targetId, 1) --´ò¿ªÔÊĞí¹ÖÎïºÍ¹ÖÎï´ò¼ÜµÄ±ê¼Ç
+		-- è®¾ç½®npcå·¡é€»å¼€å§‹çš„æ•°æ®
+		local patrolPathIndex = TGetHusongPatrolPath(missionIndex)		-- å¾—åˆ°æŠ¤é€å·¡é€»è·¯çº¿
+		SetUnitReputationID(sceneId, selfId, targetId, 0) --0ä¸ºæ–°æ‰‹é˜µè¥,å’Œç©å®¶å‹å¥½
+		SetMonsterFightWithNpcFlag(sceneId, targetId, 1) --æ‰“å¼€å…è®¸æ€ªç‰©å’Œæ€ªç‰©æ‰“æ¶çš„æ ‡è®°
 		SetNPCAIType(sceneId, targetId, TGetHusongAIType(missionIndex))
 		SetPatrolId(sceneId, targetId, patrolPathIndex)
-	  --ÉèÖÃnpcÑ²Âß½áÊøµÄÊı¾İ
+	  --è®¾ç½®npcå·¡é€»ç»“æŸçš„æ•°æ®
     AddNpcPatrolEndPointOperator(sceneId,targetId,"AIS_SetPatrolID", -1) 
     AddNpcPatrolEndPointOperator(sceneId,targetId,"AIS_SetBaseAIType", 0, -1, oldAIType) 
     AddNpcPatrolEndPointOperator(sceneId,targetId,"AIS_SetReputationID_CodingRefix", oldUnitReputationId) 
     AddNpcPatrolEndPointOperator(sceneId,targetId,"AIS_SetMonsterFightWithNpcFlag", 0)
 		--*********************************************************************
 	
-		--Æô¶¯¸ÃÈÎÎñµÄÈÎÎñÊ±ÖÓÆ÷
+		--å¯åŠ¨è¯¥ä»»åŠ¡çš„ä»»åŠ¡æ—¶é’Ÿå™¨
 		StartMissionTimer(sceneId, selfId, missionId)
 		SetMissionEvent(sceneId, selfId, missionId, 5)
 		SetMissionEvent(sceneId, selfId, missionId, 6)
 	end
 	
-	Msg2Player(  sceneId, selfId,"#Y½ÓÊÜÈÎÎñ" .. tostring(missionName), MSG2PLAYER_PARA )
+	Msg2Player(  sceneId, selfId,"#Yæ¥å—ä»»åŠ¡" .. tostring(missionName), MSG2PLAYER_PARA )
 	BeginEvent(sceneId)
-		strText = "#Y½ÓÊÜÈÎÎñ " .. tostring(missionName)
+		strText = "#Yæ¥å—ä»»åŠ¡ " .. tostring(missionName)
 		AddText(sceneId,strText);
 	EndEvent(sceneId)
 	DispatchMissionTips(sceneId,selfId)
@@ -321,19 +321,19 @@ function x006671_OnAccept( sceneId, selfId, targetId, missionIndex )
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x006671_OnAbandon( sceneId, selfId, missionIndex )
-  --½«»¤ËÍnpcË²ÒÆ»ØÔ­À´Î»ÖÃ
+  --å°†æŠ¤é€npcç¬ç§»å›åŸæ¥ä½ç½®
  	local missionId = TGetMissionIdByIndex(missionIndex)
-	local misIndex = GetMissionIndexByID(sceneId, selfId, missionId)--µÃµ½ÈÎÎñÔÚ20¸öÈÎÎñÖĞµÄĞòÁĞºÅ
+	local misIndex = GetMissionIndexByID(sceneId, selfId, missionId)--å¾—åˆ°ä»»åŠ¡åœ¨20ä¸ªä»»åŠ¡ä¸­çš„åºåˆ—å·
 	
 	local targetScene = GetMissionParam(sceneId, selfId, misIndex, 7)
 	local targetId = GetMissionParam(sceneId, selfId, misIndex, 2)
 	local x = GetMissionParam(sceneId, selfId, misIndex, 3)
 	local z = GetMissionParam(sceneId, selfId, misIndex, 4)
 	
-  --Í£Ö¹¸ÃÈÎÎñµÄÈÎÎñÊ±ÖÓÆ÷
+  --åœæ­¢è¯¥ä»»åŠ¡çš„ä»»åŠ¡æ—¶é’Ÿå™¨
   StopMissionTimer(sceneId, selfId, missionId)
   --ResetMissionEvent(sceneId, selfId, missionId, 4)
   --ResetMissionEvent(sceneId, selfId, missionId, 5)
@@ -344,7 +344,7 @@ function x006671_OnAbandon( sceneId, selfId, missionIndex )
 end
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x006671_OnContinue( sceneId, selfId, targetId, missionIndex )
 	local missionId = TGetMissionIdByIndex(missionIndex)
@@ -372,10 +372,10 @@ function x006671_OnContinue( sceneId, selfId, targetId, missionIndex )
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x006671_CheckSubmit( sceneId, selfId, missionIndex )
-	--ÓĞÕâ¸öÈÎÎñ²¢ÇÒÍê³É±êÖ¾ÒÑ¾­±»ÖÃÎ»
+	--æœ‰è¿™ä¸ªä»»åŠ¡å¹¶ä¸”å®Œæˆæ ‡å¿—å·²ç»è¢«ç½®ä½
 	local missionId = TGetMissionIdByIndex(missionIndex)
 	local missionName = TGetMissionName(missionIndex)
 	local misIndex = GetMissionIndexByID(sceneId,selfId,missionId)
@@ -390,10 +390,10 @@ function x006671_CheckSubmit( sceneId, selfId, missionIndex )
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x006671_OnSubmit( sceneId, selfId, targetId, selectRadioId, missionIndex )
-	-- ¼ì²âÊÇ²»ÊÇÂú×ãÍê³ÉÈÎÎñµÄÌõ¼ş
+	-- æ£€æµ‹æ˜¯ä¸æ˜¯æ»¡è¶³å®Œæˆä»»åŠ¡çš„æ¡ä»¶
 	local missionId = TGetMissionIdByIndex(missionIndex)
 	local missionName = TGetMissionName(missionIndex)
 	
@@ -439,24 +439,24 @@ function x006671_OnSubmit( sceneId, selfId, targetId, selectRadioId, missionInde
 				AddItemListToHuman(sceneId,selfId)
 			end
 			
-			--Ìí¼ÓÈÎÎñ½±Àø
+			--æ·»åŠ ä»»åŠ¡å¥–åŠ±
 			local awardMoney = TGetAwardMoney(missionIndex)
 			AddMoney(sceneId,selfId,awardMoney )
 			local awardExp = TGetAwardExp(missionIndex)
 			LuaFnAddExp( sceneId, selfId, awardExp)
 			
 			DelMission( sceneId,selfId, missionId )
-			--ÉèÖÃÈÎÎñÒÑ¾­±»Íê³É¹ı
+			--è®¾ç½®ä»»åŠ¡å·²ç»è¢«å®Œæˆè¿‡
 			MissionCom( sceneId,selfId, missionId )
 			
-			local strText = "#Y" .. missionName .. "ÈÎÎñÒÑÍê³É¡£"
+			local strText = "#Y" .. missionName .. "ä»»åŠ¡å·²å®Œæˆã€‚"
 			BeginEvent( sceneId )
 				AddText( sceneId, strText )
 			EndEvent( sceneId )
 			DispatchMissionTips( sceneId, selfId )
 			Msg2Player( sceneId, selfId, strText, MSG2PLAYER_PARA )
 
-			-- »ñµÃºóĞøÈÎÎñµÄIndex
+			-- è·å¾—åç»­ä»»åŠ¡çš„Index
 			local NextMissIndex = GetNextMissionIndex( missionIndex )
 
 			for i, MissType in x006671_g_MissionTypeList do
@@ -484,9 +484,9 @@ function x006671_OnSubmit( sceneId, selfId, targetId, selectRadioId, missionInde
 			end
 
 		else
-			--ÈÎÎñ½±ÀøÃ»ÓĞ¼Ó³É¹¦
+			--ä»»åŠ¡å¥–åŠ±æ²¡æœ‰åŠ æˆåŠŸ
 			BeginEvent(sceneId)
-				AddText(sceneId, "±³°üÒÑÂú,ÎŞ·¨Íê³ÉÈÎÎñ");
+				AddText(sceneId, "èƒŒåŒ…å·²æ»¡,æ— æ³•å®Œæˆä»»åŠ¡");
 			EndEvent(sceneId)
 			DispatchMissionTips(sceneId,selfId)
 		
@@ -495,15 +495,15 @@ function x006671_OnSubmit( sceneId, selfId, targetId, selectRadioId, missionInde
 end
 
 function x006671_OnHumanDie(sceneId, selfId, missionIndex)
-	--Ö÷½ÇËÀÍöÊ±Í¬ÑùÈÎÎñÊ§°Ü
+	--ä¸»è§’æ­»äº¡æ—¶åŒæ ·ä»»åŠ¡å¤±è´¥
 	local missionId = TGetMissionIdByIndex(missionIndex)
-	local misIndex = GetMissionIndexByID(sceneId, selfId, missionId)--µÃµ½ÈÎÎñÔÚ20¸öÈÎÎñÖĞµÄĞòÁĞºÅ
+	local misIndex = GetMissionIndexByID(sceneId, selfId, missionId)--å¾—åˆ°ä»»åŠ¡åœ¨20ä¸ªä»»åŠ¡ä¸­çš„åºåˆ—å·
 	local targetScene = GetMissionParam(sceneId, selfId, misIndex, 7)
 	local targetId = GetMissionParam(sceneId, selfId, misIndex, 2)
 	local x = GetMissionParam(sceneId, selfId, misIndex, 3)
 	local z = GetMissionParam(sceneId, selfId, misIndex, 4)
 
-  --Í£Ö¹¸ÃÈÎÎñµÄÈÎÎñÊ±ÖÓÆ÷
+  --åœæ­¢è¯¥ä»»åŠ¡çš„ä»»åŠ¡æ—¶é’Ÿå™¨
   StopMissionTimer(sceneId, selfId, missionId)
   SetMissionByIndex(sceneId, selfId, misIndex, 0, 2)
   ResetMissionEvent(sceneId, selfId, missionId, 4)
@@ -512,19 +512,19 @@ function x006671_OnHumanDie(sceneId, selfId, missionIndex)
   
 	local targetscene, targetname = TGetTargetNpcInfo(missionIndex)
   BeginEvent(sceneId)
-  	AddText(sceneId, "»¤ËÍ" .. targetname .. "Ê§°Ü")
+  	AddText(sceneId, "æŠ¤é€" .. targetname .. "å¤±è´¥")
   EndEvent()
   DispatchMissionTips(sceneId, selfId)
 
 end
 
 --**********************************
---¶¨Ê±ÊÂ¼ş
+--å®šæ—¶äº‹ä»¶
 --**********************************
 function x006671_OnTimer(sceneId,selfId,missionIndex)
 	local playerX, playerZ = GetWorldPos(sceneId, selfId)
 	local missionId = TGetMissionIdByIndex(missionIndex)
-	local misIndex = GetMissionIndexByID(sceneId, selfId, missionId)--µÃµ½ÈÎÎñÔÚ20¸öÈÎÎñÖĞµÄĞòÁĞºÅ
+	local misIndex = GetMissionIndexByID(sceneId, selfId, missionId)--å¾—åˆ°ä»»åŠ¡åœ¨20ä¸ªä»»åŠ¡ä¸­çš„åºåˆ—å·
 	local targetScene = GetMissionParam(sceneId, selfId, misIndex, 7)
 	local targetId = GetMissionParam(sceneId, selfId, misIndex, 2)
 	local targetX, targetZ = GetWorldPos(sceneId, targetId)
@@ -535,11 +535,11 @@ function x006671_OnTimer(sceneId,selfId,missionIndex)
 	local patrolPathIndex = TGetHusongPatrolPath(missionIndex)
 	local x, z = GetLastPatrolPoint(sceneId, patrolPathIndex)
 	
-	-- ´Ó»¤ËÍÈÎÎñ±íÖĞ»ñÈ¡ÕıÈ·µÄ»¤ËÍ¶ÔÏóĞÕÃû
+	-- ä»æŠ¤é€ä»»åŠ¡è¡¨ä¸­è·å–æ­£ç¡®çš„æŠ¤é€å¯¹è±¡å§“å
 	local targetscene, targetname = TGetTargetNpcInfo(missionIndex)
 
 	if sceneId ~= targetscene  then
-	  --Í£Ö¹¸ÃÈÎÎñµÄÈÎÎñÊ±ÖÓÆ÷
+	  --åœæ­¢è¯¥ä»»åŠ¡çš„ä»»åŠ¡æ—¶é’Ÿå™¨
 	  StopMissionTimer(sceneId, selfId, missionId)
 	  ResetMissionEvent(sceneId, selfId, missionId, 4)
 	  ResetMissionEvent(sceneId, selfId, missionId, 5)
@@ -547,7 +547,7 @@ function x006671_OnTimer(sceneId,selfId,missionIndex)
 	  SetMissionByIndex(sceneId, selfId, misIndex, 0, 2)
  		
 	  BeginEvent(sceneId)
-	  	AddText(sceneId, "»¤ËÍ" .. targetname .. "Ê§°Ü")
+	  	AddText(sceneId, "æŠ¤é€" .. targetname .. "å¤±è´¥")
 	  EndEvent()
 	  DispatchMissionTips(sceneId, selfId)
 		return
@@ -557,7 +557,7 @@ function x006671_OnTimer(sceneId,selfId,missionIndex)
 		
 	local distance2 = floor(sqrt((targetX-x)*(targetX-x)+(targetZ-z)*(targetZ-z)))
 	if distance2 <= 2 then
-		--Í£Ö¹¸ÃÈÎÎñµÄÈÎÎñÊ±ÖÓÆ÷
+		--åœæ­¢è¯¥ä»»åŠ¡çš„ä»»åŠ¡æ—¶é’Ÿå™¨
 	  StopMissionTimer(sceneId, selfId, missionId)
 	  --ResetMissionEvent(sceneId, selfId, missionId, 4)
 	  ResetMissionEvent(sceneId, selfId, missionId, 5)
@@ -566,22 +566,22 @@ function x006671_OnTimer(sceneId,selfId,missionIndex)
 	  SetMissionByIndex(sceneId, selfId, misIndex, 1, 1)
  		
 	  BeginEvent(sceneId)
-	  	AddText(sceneId, "»¤ËÍ" .. targetname .. "³É¹¦")
+	  	AddText(sceneId, "æŠ¤é€" .. targetname .. "æˆåŠŸ")
 	  EndEvent()
 	  DispatchMissionTips(sceneId, selfId)
 		return
 	end
 
 	local bfailed = 0
-	if isTargetObjLive <= 0  then --Èç¹û»¤ËÍµÄnpcËÀÍöÁËÔòÈÎÎñÊ§°Ü
+	if isTargetObjLive <= 0  then --å¦‚æœæŠ¤é€çš„npcæ­»äº¡äº†åˆ™ä»»åŠ¡å¤±è´¥
 		bfailed = 1
 	elseif sceneId ~= targetScene or distance > 20 then
-		--ÈÎÎñÊ§°Ü£¬½«ÆäË²ÒÆ»ØÔ­À´µÄÎ»ÖÃ
+		--ä»»åŠ¡å¤±è´¥ï¼Œå°†å…¶ç¬ç§»å›åŸæ¥çš„ä½ç½®
 		bfailed = 1
 	end
 	
 	if bfailed == 1 then
-	  --Í£Ö¹¸ÃÈÎÎñµÄÈÎÎñÊ±ÖÓÆ÷
+	  --åœæ­¢è¯¥ä»»åŠ¡çš„ä»»åŠ¡æ—¶é’Ÿå™¨
 	  StopMissionTimer(sceneId, selfId, missionId)
 	  ResetMissionEvent(sceneId, selfId, missionId, 4)
 	  ResetMissionEvent(sceneId, selfId, missionId, 5)
@@ -589,7 +589,7 @@ function x006671_OnTimer(sceneId,selfId,missionIndex)
 	  SetMissionByIndex(sceneId, selfId, misIndex, 0, 2)
 
  	  BeginEvent(sceneId)
-	  	AddText(sceneId, "»¤ËÍ" .. targetname .. "Ê§°Ü")
+	  	AddText(sceneId, "æŠ¤é€" .. targetname .. "å¤±è´¥")
 	  EndEvent()
 	  DispatchMissionTips(sceneId, selfId)
 	  

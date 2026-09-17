@@ -1,17 +1,17 @@
---ÂåÑôNPC
---´ŞÎ­
---ÆÕÍ¨
+--æ´›é˜³NPC
+--å´”è‹‡
+--æ™®é€š
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x000153_g_scriptId = 000153
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x000153_g_eventList={}
 
-x000153_g_SheepBuff = 31550											--±äÑòbuff
+x000153_g_SheepBuff = 31550											--å˜ç¾Šbuff
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x000153_UpdateEventList( sceneId, selfId, targetId )
 
@@ -28,14 +28,14 @@ function x000153_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x000153_OnDefaultEvent( sceneId, selfId,targetId )
 	x000153_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x000153_OnEventRequest( sceneId, selfId, targetId, eventId )
 
@@ -45,13 +45,13 @@ function x000153_OnEventRequest( sceneId, selfId, targetId, eventId )
 		if LuaFnHaveImpactOfSpecificDataIndex(sceneId, selfId, x000153_g_SheepBuff) == 1 then
 			LuaFnCancelSpecificImpact(sceneId,selfId,x000153_g_SheepBuff)
 			BeginEvent( sceneId )
-				AddText( sceneId, "  ÎÒÒÑ¾­¸øÄã±ä»ØÀ´ÁË£¬ÒÔºó¿ÉÒªºÃºÃ×öÈË¡£" )
+				AddText( sceneId, "  æˆ‘å·²ç»ç»™ä½ å˜å›æ¥äº†ï¼Œä»¥åå¯è¦å¥½å¥½åšäººã€‚" )
 			EndEvent( sceneId )
 			DispatchEventList( sceneId, selfId, targetId )
 		else
 			LuaFnCancelSpecificImpact(sceneId,selfId,x000153_g_SheepBuff)
 			BeginEvent( sceneId )
-				AddText( sceneId, "  Äã²¢Ã»ÓĞ±ä³ÉÑò°¡¡£" )
+				AddText( sceneId, "  ä½ å¹¶æ²¡æœ‰å˜æˆç¾Šå•Šã€‚" )
 			EndEvent( sceneId )
 			DispatchEventList( sceneId, selfId, targetId )
 		end
@@ -60,7 +60,7 @@ function x000153_OnEventRequest( sceneId, selfId, targetId, eventId )
 
 	for i, findId in x000153_g_eventList do
 		if eventId == findId then
-			CallScriptFunction( eventId, "OnDefaultEvent",sceneId, selfId, targetId, GetNumText() )	--GetNumText()ÊÇaddnumtextÖĞ×îºóµÄ±äÁ¿
+			CallScriptFunction( eventId, "OnDefaultEvent",sceneId, selfId, targetId, GetNumText() )	--GetNumText()æ˜¯addnumtextä¸­æœ€åçš„å˜é‡
 			return
 		end
 	end
@@ -68,7 +68,7 @@ function x000153_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x000153_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x000153_g_eventList do
@@ -83,10 +83,10 @@ function x000153_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x000153_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
-	--¾Ü¾øÖ®ºó£¬Òª·µ»ØNPCµÄÊÂ¼şÁĞ±í
+	--æ‹’ç»ä¹‹åï¼Œè¦è¿”å›NPCçš„äº‹ä»¶åˆ—è¡¨
 	for i, findId in x000153_g_eventList do
 		if missionScriptId == findId then
 			x000153_UpdateEventList( sceneId, selfId, targetId )
@@ -96,7 +96,7 @@ function x000153_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¼ÌĞø£¨ÒÑ¾­½ÓÁËÈÎÎñ£©
+--ç»§ç»­ï¼ˆå·²ç»æ¥äº†ä»»åŠ¡ï¼‰
 --**********************************
 function x000153_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x000153_g_eventList do
@@ -108,7 +108,7 @@ function x000153_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---Ìá½»ÒÑ×öÍêµÄÈÎÎñ
+--æäº¤å·²åšå®Œçš„ä»»åŠ¡
 --**********************************
 function x000153_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, selectRadioId )
 	for i, findId in x000153_g_eventList do

@@ -1,25 +1,25 @@
---Àë»éÈÎÎñ
+--ç¦»å©šä»»åŠ¡
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x806005_g_ScriptId		= 806005
 
---Àë»é
+--ç¦»å©š
 x806005_g_Unmarry						= {}
 x806005_g_Unmarry["Id"]			= 1001
-x806005_g_Unmarry["Name"]		= "Àë»é"
-x806005_g_Unmarry["Skills"]	= { {260,"Ò»¼¶·òÆŞ¼¼ÄÜ"}, {261,"¶ş¼¶·òÆŞ¼¼ÄÜ"}, {262,"Èı¼¶·òÆŞ¼¼ÄÜ"},
-												{263,"ËÄ¼¶·òÆŞ¼¼ÄÜ"}, {264,"Îå¼¶·òÆŞ¼¼ÄÜ"}, {265,"Áù¼¶·òÆŞ¼¼ÄÜ"},
-												{266,"Æß¼¶·òÆŞ¼¼ÄÜ"}, {267,"°Ë¼¶·òÆŞ¼¼ÄÜ"}, {268,"¾Å¼¶·òÆŞ¼¼ÄÜ"} }
+x806005_g_Unmarry["Name"]		= "ç¦»å©š"
+x806005_g_Unmarry["Skills"]	= { {260,"ä¸€çº§å¤«å¦»æŠ€èƒ½"}, {261,"äºŒçº§å¤«å¦»æŠ€èƒ½"}, {262,"ä¸‰çº§å¤«å¦»æŠ€èƒ½"},
+												{263,"å››çº§å¤«å¦»æŠ€èƒ½"}, {264,"äº”çº§å¤«å¦»æŠ€èƒ½"}, {265,"å…­çº§å¤«å¦»æŠ€èƒ½"},
+												{266,"ä¸ƒçº§å¤«å¦»æŠ€èƒ½"}, {267,"å…«çº§å¤«å¦»æŠ€èƒ½"}, {268,"ä¹çº§å¤«å¦»æŠ€èƒ½"} }
 
---ÌáÊ¾ĞÅÏ¢
+--æç¤ºä¿¡æ¯
 x806005_g_msg_unm					= {}
-x806005_g_msg_unm["tem"]	= "  Èç¹ûÏëÀë»é£¬ÇëÄĞÅ®Ë«·½2ÈË×é³ÉÒ»¶ÓÔÙÀ´ÕÒÎÒ¡£"
-x806005_g_msg_unm["mar"]	= "  ÄãÃÇ»¹Ã»½á»éÄØ£¿ÎªÉ¶ÒªÀë»éÄó£¿"
-x806005_g_msg_unm["gld"]	= "  ÄĞ·½ĞèÒªĞ¯´ø#{_EXCHG55555}²ÅÄÜÀë»é¡£"
-x806005_g_msg_unm["ner"]	= "  Ö»ÓĞ2ÈË¶¼×ßµ½ÎÒÉí±ß²Å¿ÉÒÔÀë»é¡£"
+x806005_g_msg_unm["tem"]	= "  å¦‚æœæƒ³ç¦»å©šï¼Œè¯·ç”·å¥³åŒæ–¹2äººç»„æˆä¸€é˜Ÿå†æ¥æ‰¾æˆ‘ã€‚"
+x806005_g_msg_unm["mar"]	= "  ä½ ä»¬è¿˜æ²¡ç»“å©šå‘¢ï¼Ÿä¸ºå•¥è¦ç¦»å©šæï¼Ÿ"
+x806005_g_msg_unm["gld"]	= "  ç”·æ–¹éœ€è¦æºå¸¦#{_EXCHG55555}æ‰èƒ½ç¦»å©šã€‚"
+x806005_g_msg_unm["ner"]	= "  åªæœ‰2äººéƒ½èµ°åˆ°æˆ‘èº«è¾¹æ‰å¯ä»¥ç¦»å©šã€‚"
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı ÇëÇóÀë»é
+--ä»»åŠ¡å…¥å£å‡½æ•° è¯·æ±‚ç¦»å©š
 --**********************************
 function x806005_OnDefaultEvent( sceneId, selfId, targetId )
 	local	tId, male, female	= x806005_CheckAccept( sceneId, selfId, targetId )
@@ -27,23 +27,23 @@ function x806005_OnDefaultEvent( sceneId, selfId, targetId )
 		return 0
 	end
 	
-	--Í¬ÒâÀë»é
+	--åŒæ„ç¦»å©š
 	if GetNumText() == 1 then
 		x806005_OnAccept( sceneId, male, female )
-		x806005_MessageBox( sceneId, tId, targetId, "  ¶Ô·½ÒÑ¾­½ÓÊÜÁËÄãµÄÀë»éÇëÇó¡£" )
+		x806005_MessageBox( sceneId, tId, targetId, "  å¯¹æ–¹å·²ç»æ¥å—äº†ä½ çš„ç¦»å©šè¯·æ±‚ã€‚" )
 		
-		--¹Ø±Õ½çÃæ		
+		--å…³é—­ç•Œé¢		
 		BeginUICommand( sceneId )
 		UICommand_AddInt( sceneId, targetId )
 		EndUICommand( sceneId )
 		DispatchUICommand( sceneId, selfId, 1000 )
 		return 1
 	end
-	--²»Í¬ÒâÀë»é
+	--ä¸åŒæ„ç¦»å©š
 	if GetNumText() == 2 then
-		x806005_MessageBox( sceneId, tId, targetId, "  ºÜÒÅº¶£¬¶Ô·½Ã»ÓĞÍ¬ÒâÄãµÄÇëÇó¡£" )
+		x806005_MessageBox( sceneId, tId, targetId, "  å¾ˆé—æ†¾ï¼Œå¯¹æ–¹æ²¡æœ‰åŒæ„ä½ çš„è¯·æ±‚ã€‚" )
 		
-		--¹Ø±Õ½çÃæ		
+		--å…³é—­ç•Œé¢		
 		BeginUICommand( sceneId )
 		UICommand_AddInt( sceneId, targetId )
 		EndUICommand( sceneId )
@@ -56,7 +56,7 @@ function x806005_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x806005_OnEnumerate( sceneId, selfId, targetId )
 	if LuaFnIsMarried( sceneId, selfId ) > 0 then
@@ -65,10 +65,10 @@ function x806005_OnEnumerate( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x806005_CheckAccept( sceneId, selfId, targetId )
-	--(1)µã»÷Õß×é¶Ó£¬²¢ÇÒ¶ÓÎéÖ»ÓĞ2¸öÈË
+	--(1)ç‚¹å‡»è€…ç»„é˜Ÿï¼Œå¹¶ä¸”é˜Ÿä¼åªæœ‰2ä¸ªäºº
 	if LuaFnHasTeam( sceneId, selfId ) == 0 then
 		x806005_MessageBox( sceneId, selfId, targetId, x806005_g_msg_unm["tem"] )
 		return 0, 0, 0
@@ -82,7 +82,7 @@ function x806005_CheckAccept( sceneId, selfId, targetId )
 		return 0, 0, 0
 	end
 
-	--(2)¶ÓÎéÖĞÊÇ·ñAÊÇBµÄ·ò¾ı£¬BÊÇAµÄÆŞ×Ó
+	--(2)é˜Ÿä¼ä¸­æ˜¯å¦Aæ˜¯Bçš„å¤«å›ï¼ŒBæ˜¯Açš„å¦»å­
 	local	selfSex	= LuaFnGetSex( sceneId, selfId )
 	local tId			= LuaFnGetTeamSceneMember( sceneId, selfId, 0 )
 	local tSex		= LuaFnGetSex( sceneId, tId )
@@ -99,13 +99,13 @@ function x806005_CheckAccept( sceneId, selfId, targetId )
 		female	= selfId
 	end
 	
-	--Á©ÈËÊÇ·òÆŞ
+	--ä¿©äººæ˜¯å¤«å¦»
 	if LuaFnIsSpouses( sceneId, male, female ) == 0 then
 		x806005_MessageBox( sceneId,selfId, targetId, x806005_g_msg_unm["mar"] )
 		return 0, 0, 0
 	end
 	
-	--½Å±¾ÊÇ·ñ¿ÉÒÔÕı³£Ö´ĞĞ
+	--è„šæœ¬æ˜¯å¦å¯ä»¥æ­£å¸¸æ‰§è¡Œ
 	if LuaFnIsCanDoScriptLogic( sceneId, male ) ~= 1 then
 		return 0, 0, 0
 	end
@@ -113,7 +113,7 @@ function x806005_CheckAccept( sceneId, selfId, targetId )
 		return 0, 0, 0
 	end
 
-	--(3)ÄĞ·½ÉíÉÏĞ¯´ø½ğÇ®ÊÇ·ñ´óÓÚµÈÓÚN=55555
+	--(3)ç”·æ–¹èº«ä¸Šæºå¸¦é‡‘é’±æ˜¯å¦å¤§äºç­‰äºN=55555
 	--hzp 2008-12-10
 		local nMoneyJZ = GetMoneyJZ(sceneId, male);
 		local nMoneyJB = LuaFnGetMoney(sceneId, male);
@@ -123,7 +123,7 @@ function x806005_CheckAccept( sceneId, selfId, targetId )
 		return 0, 0, 0
 	end
 	
-	--(4)AºÍB¾àÀëÊÇ·ñ²»´óÓÚ10Ã×
+	--(4)Aå’ŒBè·ç¦»æ˜¯å¦ä¸å¤§äº10ç±³
 	if IsInDist( sceneId, selfId, tId, 10 ) ~= 1 then
 		x806005_MessageBox( sceneId, selfId, targetId, x806005_g_msg_unm["ner"] )
 		return 0, 0, 0
@@ -133,53 +133,53 @@ function x806005_CheckAccept( sceneId, selfId, targetId )
 end
 
 --**********************************
---È·±£Ë«·½×ÔÔ¸Àë»é
+--ç¡®ä¿åŒæ–¹è‡ªæ„¿ç¦»å©š
 --**********************************
 function x806005_OnSubmit( sceneId, selfId, targetId, tId )
 	local	selfName	= LuaFnGetName( sceneId, selfId )
 	BeginEvent( sceneId )
-		AddText( sceneId, "  µÈ´ı¶Ô·½´ğ¸´¡£¡£¡£#r  Àë»éºó£¬·òÆŞË«·½µÄÓÑºÃ¶È½«½µÖÁ10£¬Í¬Ê±ËùÑ§µÄ·òÆŞ¼¼ÄÜ½«»áÈ«²¿Çå¿Õ¡£#r×¢Òâ£¬Àë»éĞèÒªÄĞ·½»¨·Ñ#{_EXCHG55555}" )
+		AddText( sceneId, "  ç­‰å¾…å¯¹æ–¹ç­”å¤ã€‚ã€‚ã€‚#r  ç¦»å©šåï¼Œå¤«å¦»åŒæ–¹çš„å‹å¥½åº¦å°†é™è‡³10ï¼ŒåŒæ—¶æ‰€å­¦çš„å¤«å¦»æŠ€èƒ½å°†ä¼šå…¨éƒ¨æ¸…ç©ºã€‚#ræ³¨æ„ï¼Œç¦»å©šéœ€è¦ç”·æ–¹èŠ±è´¹#{_EXCHG55555}" )
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, selfId, targetId )
 	BeginEvent( sceneId )
-		AddText( sceneId, "  ÄãÍ¬ÒâÓë"..selfName.."Àë»éÂğ£¿Àë»éºó£¬·òÆŞË«·½µÄÓÑºÃ¶È½«½µÖÁ10£¬Í¬Ê±ËùÑ§µÄ·òÆŞ¼¼ÄÜ½«»áÈ«²¿Çå¿Õ¡£#r×¢Òâ£¬Àë»éĞèÒªÄĞ·½»¨·Ñ#{_EXCHG55555}" )
-		AddNumText( sceneId, x806005_g_ScriptId, "ÊÇ", 6, 1 )		-- 9 + i ÖÆ¶¨¿Í»§¶ËÌØ¶¨µÄÍ¼±ê (Ñ¡ÏîÍ¼±êÎªÊı×ÖÏî)
-		AddNumText( sceneId, x806005_g_ScriptId, "·ñ", 8, 2 )		-- 9 + i ÖÆ¶¨¿Í»§¶ËÌØ¶¨µÄÍ¼±ê (Ñ¡ÏîÍ¼±êÎªÊı×ÖÏî)
+		AddText( sceneId, "  ä½ åŒæ„ä¸"..selfName.."ç¦»å©šå—ï¼Ÿç¦»å©šåï¼Œå¤«å¦»åŒæ–¹çš„å‹å¥½åº¦å°†é™è‡³10ï¼ŒåŒæ—¶æ‰€å­¦çš„å¤«å¦»æŠ€èƒ½å°†ä¼šå…¨éƒ¨æ¸…ç©ºã€‚#ræ³¨æ„ï¼Œç¦»å©šéœ€è¦ç”·æ–¹èŠ±è´¹#{_EXCHG55555}" )
+		AddNumText( sceneId, x806005_g_ScriptId, "æ˜¯", 6, 1 )		-- 9 + i åˆ¶å®šå®¢æˆ·ç«¯ç‰¹å®šçš„å›¾æ ‡ (é€‰é¡¹å›¾æ ‡ä¸ºæ•°å­—é¡¹)
+		AddNumText( sceneId, x806005_g_ScriptId, "å¦", 8, 2 )		-- 9 + i åˆ¶å®šå®¢æˆ·ç«¯ç‰¹å®šçš„å›¾æ ‡ (é€‰é¡¹å›¾æ ‡ä¸ºæ•°å­—é¡¹)
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, tId, targetId )
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x806005_OnAccept( sceneId, male, female )
-	--(1)¿Û³ıÄĞ·½ÉíÉÏ½ğÇ®55555
+	--(1)æ‰£é™¤ç”·æ–¹èº«ä¸Šé‡‘é’±55555
 	--LuaFnCostMoney( sceneId, male, 55555 )
 	LuaFnCostMoneyWithPriority(sceneId, male, 55555);	
 	
-	--(2)°ÑË«·½µÄºÃÓÑ¶È¶¼ÉèÖÃ³ÉN=X£¨10£©£¬XÎªÄÜ¹»¿´µ½¶Ô·½ÔÚÏßµÄ×îµÍÖµ
+	--(2)æŠŠåŒæ–¹çš„å¥½å‹åº¦éƒ½è®¾ç½®æˆN=Xï¼ˆ10ï¼‰ï¼ŒXä¸ºèƒ½å¤Ÿçœ‹åˆ°å¯¹æ–¹åœ¨çº¿çš„æœ€ä½å€¼
 	LuaFnSetFriendPoint( sceneId, male, female, 10 )
 	LuaFnSetFriendPoint( sceneId, female, male, 10 )
 	
-	--(3)É¾³ı³ÆºÅ
+	--(3)åˆ é™¤ç§°å·
 	LuaFnAwardSpouseTitle( sceneId, female, "" )
 	DispatchAllTitle( sceneId, female )
 	LuaFnAwardSpouseTitle( sceneId, male, "" )
 	DispatchAllTitle( sceneId, male )
 
-	--(4)ÁÄÌì´°¿Ú¸øÄĞ·½ÌáÊ¾
-	Msg2Player( sceneId, male, "Äã»Ö¸´µ¥ÉíÁË¡£", MSG2PLAYER_PARA )
---Msg2Player( sceneId, male, "ÒÑ¾­¹é»¹ÁË½á»é½äÖ¸¡£", MSG2PLAYER_PARA )
-	Msg2Player( sceneId, male, "Ê§È¥·òÆŞ³ÆºÅ¡£", MSG2PLAYER_PARA )
-	Msg2Player( sceneId, male, "Ê§È¥ËùÓĞ·òÆŞ¼¼ÄÜ¡£", MSG2PLAYER_PARA )
+	--(4)èŠå¤©çª—å£ç»™ç”·æ–¹æç¤º
+	Msg2Player( sceneId, male, "ä½ æ¢å¤å•èº«äº†ã€‚", MSG2PLAYER_PARA )
+--Msg2Player( sceneId, male, "å·²ç»å½’è¿˜äº†ç»“å©šæˆ’æŒ‡ã€‚", MSG2PLAYER_PARA )
+	Msg2Player( sceneId, male, "å¤±å»å¤«å¦»ç§°å·ã€‚", MSG2PLAYER_PARA )
+	Msg2Player( sceneId, male, "å¤±å»æ‰€æœ‰å¤«å¦»æŠ€èƒ½ã€‚", MSG2PLAYER_PARA )
 
-	--(5)ÁÄÌì´°¿Ú¸øÅ®·½ÌáÊ¾
-	Msg2Player( sceneId, female, "Äã»Ö¸´µ¥ÉíÁË¡£", MSG2PLAYER_PARA )
---Msg2Player( sceneId, female, "ÒÑ¾­¹é»¹ÁË½á»é½äÖ¸¡£", MSG2PLAYER_PARA )
-	Msg2Player( sceneId, female, "Ê§È¥·òÆŞ³ÆºÅ¡£", MSG2PLAYER_PARA )
-	Msg2Player( sceneId, female, "Ê§È¥ËùÓĞ·òÆŞ¼¼ÄÜ¡£", MSG2PLAYER_PARA )
+	--(5)èŠå¤©çª—å£ç»™å¥³æ–¹æç¤º
+	Msg2Player( sceneId, female, "ä½ æ¢å¤å•èº«äº†ã€‚", MSG2PLAYER_PARA )
+--Msg2Player( sceneId, female, "å·²ç»å½’è¿˜äº†ç»“å©šæˆ’æŒ‡ã€‚", MSG2PLAYER_PARA )
+	Msg2Player( sceneId, female, "å¤±å»å¤«å¦»ç§°å·ã€‚", MSG2PLAYER_PARA )
+	Msg2Player( sceneId, female, "å¤±å»æ‰€æœ‰å¤«å¦»æŠ€èƒ½ã€‚", MSG2PLAYER_PARA )
 	
-	--(6)É¾³ı·òÆŞ¼¼ÄÜ
+	--(6)åˆ é™¤å¤«å¦»æŠ€èƒ½
 	local skillId
 	for _, skillId in x806005_g_Unmarry["Skills"] do
 		DelSkill( sceneId, male, skillId[1] )
@@ -192,20 +192,20 @@ function x806005_OnAccept( sceneId, male, female )
 		DelSkill( sceneId, female, skillId )
 	end
 	
-	--É¾³ıĞÎÓ°²»Àë¼¼ÄÜ
+	--åˆ é™¤å½¢å½±ä¸ç¦»æŠ€èƒ½
 	for _, skillId in { 269,270,271,272,273 } do
 		DelSkill( sceneId, male, skillId )
 		DelSkill( sceneId, female, skillId )
 	end
 	
-	--(7)É¾³ı¶ÔÓ¦½á»éÊ±µÄÈÎÎñ
+	--(7)åˆ é™¤å¯¹åº”ç»“å©šæ—¶çš„ä»»åŠ¡
 	CallScriptFunction(250036, "OnAbandon", sceneId, male);
 	CallScriptFunction(250037, "OnAbandon", sceneId, male);
 	
 	CallScriptFunction(250036, "OnAbandon", sceneId, female);
 	CallScriptFunction(250037, "OnAbandon", sceneId, female);
 	
-	--ÖØÎÂ»éÀñ¼ÆÊıÇå0
+	--é‡æ¸©å©šç¤¼è®¡æ•°æ¸…0
 	SetMissionData( sceneId, male, MD_TW_REEXPERIENCE_WEDDING_TOTAL_COUNT, 0 )
 	SetMissionData( sceneId, female, MD_TW_REEXPERIENCE_WEDDING_TOTAL_COUNT, 0 )
 
@@ -213,7 +213,7 @@ function x806005_OnAccept( sceneId, male, female )
 end
 
 --**********************************
---¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+--å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x806005_MessageBox( sceneId, selfId, targetId, msg )
 	BeginEvent( sceneId )

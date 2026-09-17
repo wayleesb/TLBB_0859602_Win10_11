@@ -1,42 +1,42 @@
--- 2007Ê¥µ®Ôªµ©»î¶¯....
--- Ôªµ©µ¹¼ÆÊ±´ğÌâ»î¶¯....
--- ´´½¨ÈË[ QUFEI 2007-12-06 10:13 UPDATE BugID 27816 ]
+-- 2007åœ£è¯å…ƒæ—¦æ´»åŠ¨....
+-- å…ƒæ—¦å€’è®¡æ—¶ç­”é¢˜æ´»åŠ¨....
+-- åˆ›å»ºäºº[ QUFEI 2007-12-06 10:13 UPDATE BugID 27816 ]
 
--- ´ğÌâ½Å±¾....
+-- ç­”é¢˜è„šæœ¬....
 
 
--- ½Å±¾ºÅ
+-- è„šæœ¬å·
 x050029_g_ScriptId = 050029
 
---Ï²´ÓÌì½µÈÎÎñ½Å±¾ºÅ
+--å–œä»å¤©é™ä»»åŠ¡è„šæœ¬å·
 x050029_g_EventScriptId = 050028
 
---ÌâÄ¿ÊıÁ¿....
+--é¢˜ç›®æ•°é‡....
 x050029_g_NumQuestion	= 20
 
---ÌâÄ¿ÔÚÌâ¿âÖĞµÄ·ÖÀà....
+--é¢˜ç›®åœ¨é¢˜åº“ä¸­çš„åˆ†ç±»....
 x050029_g_QuestionType = 4
 
 --UICOMMAND
 x050029_g_UICommand = 271261215
 
-x050029_g_UIStart			= 1	--¿ªÊ¼´ğÌâ½çÃæ....
-x050029_g_UIQuestion	= 2	--ÏÔÊ¾ÌâÄ¿½çÃæ....
-x050029_g_UIWrong			= 3	--´ğ´í½çÃæ....
-x050029_g_UIEnd				= 4	--´ğÍêËùÓĞÌâÄ¿½çÃæ....
+x050029_g_UIStart			= 1	--å¼€å§‹ç­”é¢˜ç•Œé¢....
+x050029_g_UIQuestion	= 2	--æ˜¾ç¤ºé¢˜ç›®ç•Œé¢....
+x050029_g_UIWrong			= 3	--ç­”é”™ç•Œé¢....
+x050029_g_UIEnd				= 4	--ç­”å®Œæ‰€æœ‰é¢˜ç›®ç•Œé¢....
 
-x050029_g_Name     = "Ç®Áú"
+x050029_g_Name     = "é’±é¾™"
 x050029_g_LowLevel = 10
 
-x050029_g_StartDayTime						= 2008082010		-- »î¶¯¿ªÊ¼Ê±¼ä
-x050029_g_EndDayTime							= 2008082709		-- »î¶¯½áÊøÊ±¼ä
+x050029_g_StartDayTime						= 2008082010		-- æ´»åŠ¨å¼€å§‹æ—¶é—´
+x050029_g_EndDayTime							= 2008082709		-- æ´»åŠ¨ç»“æŸæ—¶é—´
 
 --**********************************
---¸ø¿Í»§¶ËÏÔÊ¾´ğÌâ½çÃæ
+--ç»™å®¢æˆ·ç«¯æ˜¾ç¤ºç­”é¢˜ç•Œé¢
 --**********************************
 function x050029_ShowQuizUI( sceneId, selfId, targetId )
 
-	--°²È«¼ì²â....
+	--å®‰å…¨æ£€æµ‹....
 	if x050029_AnswerTest( sceneId, selfId ) == 0 then
 		return 0
 	end
@@ -52,16 +52,16 @@ function x050029_ShowQuizUI( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÌáÎÊ
+--æé—®
 --**********************************
 function x050029_AskQuestion( sceneId, selfId, Question_Sequence)
 
-	--°²È«¼ì²â....
+	--å®‰å…¨æ£€æµ‹....
 	if x050029_AnswerTest( sceneId, selfId ) == 0 then
 		return 0
 	end
 
-	--´ğÍêËùÓĞÌâÊ±µÄ½çÃæ....
+	--ç­”å®Œæ‰€æœ‰é¢˜æ—¶çš„ç•Œé¢....
 	if Question_Sequence > x050029_g_NumQuestion then
 		CallScriptFunction( x050029_g_EventScriptId, "OnPlayerQuizFinish", sceneId, selfId )
 		BeginUICommand(sceneId)
@@ -72,7 +72,7 @@ function x050029_AskQuestion( sceneId, selfId, Question_Sequence)
 		return
 	end
 
-	--Ëæ»ú³öÒ»¸öÌâºÅ....
+	--éšæœºå‡ºä¸€ä¸ªé¢˜å·....
 	local wenti = GetRandomQuestionsIndex( x050029_g_QuestionType )
 
 	local con,opt0,opt1,opt2,opt3,opt4,opt5,key0,key1,key2,key3,key4,key5,sztype=GetQuestionsRecord(wenti)
@@ -81,7 +81,7 @@ function x050029_AskQuestion( sceneId, selfId, Question_Sequence)
 	end
 
 	local key_position = {}
-	--°ÑËûÃÇÎ»ÖÃËæ»úµô
+	--æŠŠä»–ä»¬ä½ç½®éšæœºæ‰
 	local rand = random(3)
 	if rand == 1 then
 		key_position[0] = 1
@@ -128,11 +128,11 @@ function x050029_AskQuestion( sceneId, selfId, Question_Sequence)
 end
 
 --**********************************
---»Ø´ğ
+--å›ç­”
 --**********************************
 function x050029_AnswerQuestion( sceneId, selfId, Question, Answer1, Question_Sequence)
 
-	--°²È«¼ì²â....
+	--å®‰å…¨æ£€æµ‹....
 	if x050029_AnswerTest( sceneId, selfId ) == 0 then
 		return 0
 	end
@@ -154,7 +154,7 @@ function x050029_AnswerQuestion( sceneId, selfId, Question, Answer1, Question_Se
 	local asktime = GetMissionData(sceneId,selfId,MD_QUIZ_ASKTIME)
 	if Answer_List[Answer1-1] == 1 and LuaFnGetCurrentTime() - asktime < 305 then
 
-		--¸æËßËû´ğ¶ÔÁË....
+		--å‘Šè¯‰ä»–ç­”å¯¹äº†....
 		x050029_AskQuestion( sceneId, selfId, Question_Sequence + 1)		
 		if Question_Sequence < 20 then
 			if Question_Sequence > 10 then
@@ -164,7 +164,7 @@ function x050029_AnswerQuestion( sceneId, selfId, Question, Answer1, Question_Se
 		end
 	else
 
-		--¸æËßËû´ğ´íÁË....
+		--å‘Šè¯‰ä»–ç­”é”™äº†....
 		BeginEvent( sceneId )
 			AddText( sceneId, "#{YUANDAN_DATIINFO_011}" )
 		EndEvent( sceneId )
@@ -182,11 +182,11 @@ function x050029_AnswerQuestion( sceneId, selfId, Question, Answer1, Question_Se
 end
 
 --**********************************
---´ğÌâ³¬Ê±
+--ç­”é¢˜è¶…æ—¶
 --**********************************
 function x050029_OnOverTime( sceneId, selfId )
 
-	--°²È«¼ì²â....
+	--å®‰å…¨æ£€æµ‹....
 	if x050029_AnswerTest( sceneId, selfId ) == 0 then
 		return 0
 	end
@@ -206,7 +206,7 @@ function x050029_OnOverTime( sceneId, selfId )
 end
 
 --**********************************
--- ´ğÌâÌõ¼ş¼ì²â
+-- ç­”é¢˜æ¡ä»¶æ£€æµ‹
 --**********************************
 function x050029_AnswerTest( sceneId, selfId )
 		
@@ -218,7 +218,7 @@ function x050029_AnswerTest( sceneId, selfId )
 	local nMonth = LuaFnGetThisMonth()
 	local nDay   = LuaFnGetDayOfThisMonth()
 	local curDayTime = nYear*10000+(nMonth+1)*100+nDay
-	local DayTime = GetMissionData( sceneId, selfId, MD_DAOJISHIDATI_YUANDAN_DAYTIME )				-- »ñµÃÉÏ´Î²Î¼Ó»î¶¯µÄÊ±¼ä
+	local DayTime = GetMissionData( sceneId, selfId, MD_DAOJISHIDATI_YUANDAN_DAYTIME )				-- è·å¾—ä¸Šæ¬¡å‚åŠ æ´»åŠ¨çš„æ—¶é—´
 	
 	if curDayTime == DayTime then		
 		return 0
@@ -227,7 +227,7 @@ function x050029_AnswerTest( sceneId, selfId )
 end
 
 --**********************************
---¼ì²â»î¶¯Ê±¼ä
+--æ£€æµ‹æ´»åŠ¨æ—¶é—´
 --**********************************
 function x050029_CheckHuoDongTime()
 

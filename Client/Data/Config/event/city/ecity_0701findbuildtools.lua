@@ -1,33 +1,33 @@
 --MisDescBegin
 x600036_g_ScriptId = 600036
 x600036_g_MissionId = 1111
-x600036_g_Name = "Ö£ÎŞÃû"
+x600036_g_Name = "éƒ‘æ— å"
 x600036_g_MissionLevel = 10000
 x600036_g_MissionKind = 50
 x600036_g_IfMissionElite = 0
-x600036_g_IsMissionOkFail			=0	--0 ÈÎÎñÍê³É±ê¼Ç
-x600036_g_MissionParam_SubId		=1	--1 ×ÓÈÎÎñ½Å±¾ºÅ´æ·ÅÎ»ÖÃ
-x600036_g_MissionParam_Phase		=2	--2 ½×¶ÎºÅ ´ËºÅÓÃÓÚÇø·Öµ±Ç°ÈÎÎñUIµÄÃèÊöĞÅÏ¢
-x600036_g_MissionParam_NpcId		=3	--3 ÈÎÎñ NPC µÄ NPCId ºÅ
-x600036_g_MissionParam_ItemId		=4	--4 ÈÎÎñÎïÆ·µÄ±àºÅ
-x600036_g_MissionParam_MonsterId	=5	--5 ÈÎÎñ Monster µÄ NPCId ºÅ
+x600036_g_IsMissionOkFail			=0	--0 ä»»åŠ¡å®Œæˆæ ‡è®°
+x600036_g_MissionParam_SubId		=1	--1 å­ä»»åŠ¡è„šæœ¬å·å­˜æ”¾ä½ç½®
+x600036_g_MissionParam_Phase		=2	--2 é˜¶æ®µå· æ­¤å·ç”¨äºåŒºåˆ†å½“å‰ä»»åŠ¡UIçš„æè¿°ä¿¡æ¯
+x600036_g_MissionParam_NpcId		=3	--3 ä»»åŠ¡ NPC çš„ NPCId å·
+x600036_g_MissionParam_ItemId		=4	--4 ä»»åŠ¡ç‰©å“çš„ç¼–å·
+x600036_g_MissionParam_MonsterId	=5	--5 ä»»åŠ¡ Monster çš„ NPCId å·
 x600036_g_MissionRound = 59
-x600036_g_MissionName = "½¨ÉèÈÎÎñ"
-x600036_g_MissionInfo = "³ÇÊĞÄÚÕş£­½¨ÉèÈÎÎñ"								--ÈÎÎñÃèÊö
-x600036_g_MissionTarget = "%f"												--ÈÎÎñÄ¿±ê
-x600036_g_ContinueInfo = "    ÄãµÄÈÎÎñ»¹Ã»ÓĞÍê³ÉÃ´£¿"						--Î´Íê³ÉÈÎÎñµÄnpc¶Ô»°
-x600036_g_SubmitInfo = "    ÊÂÇé½øÕ¹µÃÈçºÎ£¿"								--Íê³ÉÎ´Ìá½»Ê±µÄnpc¶Ô»°
-x600036_g_MissionComplete = "    ÉõºÃÉõºÃ£¬½¨ÖşµÄ½ø¶ÈÓÖ¼Ó¿ìÁË¡£"			--Íê³ÉÈÎÎñnpcËµ»°µÄ»°
+x600036_g_MissionName = "å»ºè®¾ä»»åŠ¡"
+x600036_g_MissionInfo = "åŸå¸‚å†…æ”¿ï¼å»ºè®¾ä»»åŠ¡"								--ä»»åŠ¡æè¿°
+x600036_g_MissionTarget = "%f"												--ä»»åŠ¡ç›®æ ‡
+x600036_g_ContinueInfo = "    ä½ çš„ä»»åŠ¡è¿˜æ²¡æœ‰å®Œæˆä¹ˆï¼Ÿ"						--æœªå®Œæˆä»»åŠ¡çš„npcå¯¹è¯
+x600036_g_SubmitInfo = "    äº‹æƒ…è¿›å±•å¾—å¦‚ä½•ï¼Ÿ"								--å®Œæˆæœªæäº¤æ—¶çš„npcå¯¹è¯
+x600036_g_MissionComplete = "    ç”šå¥½ç”šå¥½ï¼Œå»ºç­‘çš„è¿›åº¦åˆåŠ å¿«äº†ã€‚"			--å®Œæˆä»»åŠ¡npcè¯´è¯çš„è¯
 x600036_g_Parameter_Item_IDRandom = { { id = 4, num = 1 } }
 x600036_g_StrForePart = 2
 x600036_g_FormatList = {
 "",
-"    Ç°Íù%1n½èÈ¡%2i¡£",					-- 1
-"    ½«%2i½»»¹¸ø°ï»á´ó×Ü¹Ü¡£",			-- 2
-"    Ç°Íù%1n½èÈ¡%2i¡£",					-- 3
-"    Ç°Íù%1n½èÈ¡%2i¡£",					-- 4
-"    %3nÇÀ×ßÁË%2i£¬ĞèÒªÄãÈ¥¶á»ØÀ´¡£",	-- 5
-"    ½«%2i½»»¹¸ø°ï»á´ó×Ü¹Ü¡£",			-- 6
+"    å‰å¾€%1nå€Ÿå–%2iã€‚",					-- 1
+"    å°†%2iäº¤è¿˜ç»™å¸®ä¼šå¤§æ€»ç®¡ã€‚",			-- 2
+"    å‰å¾€%1nå€Ÿå–%2iã€‚",					-- 3
+"    å‰å¾€%1nå€Ÿå–%2iã€‚",					-- 4
+"    %3næŠ¢èµ°äº†%2iï¼Œéœ€è¦ä½ å»å¤ºå›æ¥ã€‚",	-- 5
+"    å°†%2iäº¤è¿˜ç»™å¸®ä¼šå¤§æ€»ç®¡ã€‚",			-- 6
 }
 x600036_g_CityMissionScript = 600001
 x600036_g_ConstructionScript = 600035

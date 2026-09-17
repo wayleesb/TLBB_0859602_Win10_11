@@ -1,9 +1,9 @@
 --MissionObjDel.lua
---Ïú»ÙÈÎÎñÎïÆ·¶Ô»°¿ò
+--é”€æ¯ä»»åŠ¡ç‰©å“å¯¹è¯æ¡†
 
-local	g_btnItem				--ÎïÆ·À¸
-local	g_txtItem				--ÎïÆ·ÃèÊö
-local	g_posItem	= -1	--ÎïÆ·ÔÚ±³°üÖĞµÄÎ»ÖÃ
+local	g_btnItem				--ç‰©å“æ 
+local	g_txtItem				--ç‰©å“æè¿°
+local	g_posItem	= -1	--ç‰©å“åœ¨èƒŒåŒ…ä¸­çš„ä½ç½®
 
 local	MAX_OBJ_DISTANCE	= 3.0
 local	g_objCared 				= -1
@@ -22,7 +22,7 @@ function MissionObjDel_OnLoad()
 end
 
 function MissionObjDel_OnEvent( event )
-	--´ò¿ª½çÃæ
+	--æ‰“å¼€ç•Œé¢
 	if( event == "UI_COMMAND" and tonumber(arg0) == 42 ) then
 		MissionObjDel_OnOpen()
 		
@@ -30,7 +30,7 @@ function MissionObjDel_OnEvent( event )
 		g_objCared	= DataPool : GetNPCIDByServerID( xx )
 		AxTrace( 0, 1, "xx="..xx .. " objCared="..g_objCared )
 		if g_objCared == -1 then
-				PushDebugMessage( "Server´«¹ıÀ´µÄÊı¾İÓĞÎÊÌâ¡£" )
+				PushDebugMessage( "Serverä¼ è¿‡æ¥çš„æ•°æ®æœ‰é—®é¢˜ã€‚" )
 				return
 		end
 
@@ -38,7 +38,7 @@ function MissionObjDel_OnEvent( event )
 		return
 	end
 
-	--ÎïÆ·ÍÏ×§µ½À¸ÄÚ
+	--ç‰©å“æ‹–æ‹½åˆ°æ å†…
 	if( event == "UPDATE_MISOBJDEL" ) then
 		AxTrace( 0, 1, "arg0="..arg0 )
 		if arg0 ~= nil then
@@ -48,19 +48,19 @@ function MissionObjDel_OnEvent( event )
 		return
 	end
 	
-	--¹ØĞÄNPC
+	--å…³å¿ƒNPC
 	if( event == "OBJECT_CARED_EVENT" and this:IsVisible() ) then
 		if( tonumber(arg0) ~= g_objCared ) then
 			return;
 		end
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ı£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æœå’ŒNPCçš„è·ç¦»å¤§äºä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if( arg1 == "distance" and tonumber(arg2) > MAX_OBJ_DISTANCE or arg1 == "destroy" ) then
 			MissionObjDel_OnClose()
 		end
 		return
 	end
 	
-	--±³°üÀïµÄÎïÆ··¢Éú±ä»¯
+	--èƒŒåŒ…é‡Œçš„ç‰©å“å‘ç”Ÿå˜åŒ–
 	if( event == "PACKAGE_ITEM_CHANGED" and this:IsVisible() ) then
 		if( arg0 ~= nil and -1 == tonumber(arg0) ) then
 			return
@@ -74,12 +74,12 @@ function MissionObjDel_OnEvent( event )
 	end
 end
 
---´ò¿ª½çÃæ
+--æ‰“å¼€ç•Œé¢
 function MissionObjDel_OnOpen()
 	this:Show()
 end
 
---¹Ø±Õ½çÃæ
+--å…³é—­ç•Œé¢
 function MissionObjDel_OnClose()
 	this:Hide()
 	
@@ -87,7 +87,7 @@ function MissionObjDel_OnClose()
 	g_objCared	= -1
 end
 
---Ïú»Ù°´Å¥
+--é”€æ¯æŒ‰é’®
 function MissionObjDel_OnDestroy()
 	if g_posItem ~= -1 then
 		Clear_XSCRIPT()
@@ -97,31 +97,31 @@ function MissionObjDel_OnDestroy()
 			Set_XSCRIPT_ParamCount( 1 )
 		Send_XSCRIPT()
 	else
-		PushDebugMessage( "Çë°ÑÒªÏú»ÙµÄÈÎÎñÎïÆ·ÍÏ¶¯µ½ÎïÆ·¿òÖĞ" )
+		PushDebugMessage( "è¯·æŠŠè¦é”€æ¯çš„ä»»åŠ¡ç‰©å“æ‹–åŠ¨åˆ°ç‰©å“æ¡†ä¸­" )
 	end
 end
 
---È¡Ïû°´Å¥
+--å–æ¶ˆæŒ‰é’®
 function MissionObjDel_OnCancel()
 	MissionObjDel_OnClose()
 end
 
---ÇåÀíÎïÆ·
+--æ¸…ç†ç‰©å“
 function MissionObjDel_Clear()
 	g_btnItem : SetActionItem( -1 );
-	g_txtItem : SetText( "ĞèÒªÏú»ÙµÄÈÎÎñÎïÆ·" )
+	g_txtItem : SetText( "éœ€è¦é”€æ¯çš„ä»»åŠ¡ç‰©å“" )
 	LifeAbility : Lock_Packet_Item( g_posItem, 0 )
 	g_posItem	= -1
 end
 
---Ë¢ĞÂÎïÆ·
+--åˆ·æ–°ç‰©å“
 function MissionObjDel_Update( pos_taskitem )
 	local	pos	= tonumber( pos_taskitem )
 	local	theAction	= EnumAction( pos, "packageitem" )
 	
 	if theAction:GetID() ~= 0 then
 		if LifeAbility : GetItem_Class( pos ) ~= 4 then
-			PushDebugMessage( "Ö»ÄÜÏú»ÙÈÎÎñÎïÆ·" )
+			PushDebugMessage( "åªèƒ½é”€æ¯ä»»åŠ¡ç‰©å“" )
 			return
 		end
 
@@ -131,7 +131,7 @@ function MissionObjDel_Update( pos_taskitem )
 			LifeAbility : Lock_Packet_Item( g_posItem, 0 )
 		end
 
-		--ÔÚ±³°üÖĞËø×¡Õâ¸öÎïÆ·
+		--åœ¨èƒŒåŒ…ä¸­é”ä½è¿™ä¸ªç‰©å“
 		g_posItem	= pos
 		LifeAbility : Lock_Packet_Item( g_posItem, 1 )
 
@@ -143,16 +143,16 @@ function MissionObjDel_Update( pos_taskitem )
 end
 
 --=========================================================
---¿ªÊ¼¹ØĞÄNPC£¬
---ÔÚ¿ªÊ¼¹ØĞÄÖ®Ç°ĞèÒªÏÈÈ·¶¨Õâ¸ö½çÃæÊÇ²»ÊÇÒÑ¾­ÓĞ¡°¹ØĞÄ¡±µÄNPC£¬
---Èç¹ûÓĞµÄ»°£¬ÏÈÈ¡ÏûÒÑ¾­ÓĞµÄ¡°¹ØĞÄ¡±
+--å¼€å§‹å…³å¿ƒNPCï¼Œ
+--åœ¨å¼€å§‹å…³å¿ƒä¹‹å‰éœ€è¦å…ˆç¡®å®šè¿™ä¸ªç•Œé¢æ˜¯ä¸æ˜¯å·²ç»æœ‰â€œå…³å¿ƒâ€çš„NPCï¼Œ
+--å¦‚æœæœ‰çš„è¯ï¼Œå…ˆå–æ¶ˆå·²ç»æœ‰çš„â€œå…³å¿ƒâ€
 --=========================================================
 function BeginCareObject_MisObjDel( objCaredId )
 	this:CareObject( objCaredId, 1, "MissionObjDel" )
 end
 
 --=========================================================
---Í£Ö¹¶ÔÄ³NPCµÄ¹ØĞÄ
+--åœæ­¢å¯¹æŸNPCçš„å…³å¿ƒ
 --=========================================================
 function StopCareObject_MisObjDel( objCaredId )
 	this:CareObject( objCaredId, 0, "MissionObjDel" )

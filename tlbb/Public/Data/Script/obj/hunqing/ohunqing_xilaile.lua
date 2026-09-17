@@ -1,16 +1,16 @@
---»éÇì¸±±¾NPC
---ÆÕÍ¨
+--å©šåº†å‰¯æœ¬NPC
+--æ™®é€š
 
-x155000_g_ScriptId = 155000			--½Å±¾ID--add by xindefeng
+x155000_g_ScriptId = 155000			--è„šæœ¬ID--add by xindefeng
 
-x155000_g_eventId_cancel = 0;		--ÎÒÃ»Ê²Ã´ÊÂÇé¡­¡­
-x155000_g_eventId_leave = 1;		--ÎÒÒªÔİÊ±³öÈ¥Ò»ÏÂ
-x155000_g_eventId_done = 2;			--¿ÉÒÔ¹Ø±ÕÀñÌÃÁË
-x155000_g_eventId_redeem = 3;		--ÇëÌû¶Ò»»ÀñÎï
+x155000_g_eventId_cancel = 0;		--æˆ‘æ²¡ä»€ä¹ˆäº‹æƒ…â€¦â€¦
+x155000_g_eventId_leave = 1;		--æˆ‘è¦æš‚æ—¶å‡ºå»ä¸€ä¸‹
+x155000_g_eventId_done = 2;			--å¯ä»¥å…³é—­ç¤¼å ‚äº†
+x155000_g_eventId_redeem = 3;		--è¯·å¸–å…‘æ¢ç¤¼ç‰©
 
-x155000_g_invitationDataId_level1  = 30303100;		-- ÆÕÍ¨ÇëÌûID
-x155000_g_invitationDataId_level2  = 30303101;		-- ¸ß¼¶ÇëÌûID
-x155000_g_invitationDataId_level3  = 30303102;		-- ºÀ»ªÇëÌûID
+x155000_g_invitationDataId_level1  = 30303100;		-- æ™®é€šè¯·å¸–ID
+x155000_g_invitationDataId_level2  = 30303101;		-- é«˜çº§è¯·å¸–ID
+x155000_g_invitationDataId_level3  = 30303102;		-- è±ªåè¯·å¸–ID
 
 x155000_g_gemList = {{id=50101001, rate=24},
 					{id=50101002, rate=24},
@@ -23,7 +23,7 @@ x155000_g_redeemList = {{id=x155000_g_invitationDataId_level3, gemRate=10, money
 						{id=x155000_g_invitationDataId_level1, gemRate=10, moneyRate=90, money=10000}}
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x155000_OnDefaultEvent(sceneId, selfId, targetId)
 	BeginEvent(sceneId);
@@ -44,27 +44,27 @@ function x155000_OnDefaultEvent(sceneId, selfId, targetId)
 			end
 		end
 		if bSelfWedding == 1 then
-			AddText(sceneId,"ÔõÃ´Ñù£¿»éÀñÒÑ¾­¾ÙĞĞÍêÁËÃ´£¿");
-			AddNumText(sceneId, x155000_g_eventId_done, "#G¿ÉÒÔ¹Ø±ÕÀñÌÃÁË¡£", -1, x155000_g_eventId_done);
+			AddText(sceneId,"æ€ä¹ˆæ ·ï¼Ÿå©šç¤¼å·²ç»ä¸¾è¡Œå®Œäº†ä¹ˆï¼Ÿ");
+			AddNumText(sceneId, x155000_g_eventId_done, "#Gå¯ä»¥å…³é—­ç¤¼å ‚äº†ã€‚", -1, x155000_g_eventId_done);
 		else
-			AddText(sceneId,"ÔõÃ´Ñù£¿²Î¼ÓÅóÓÑµÄ»éÀñºÜ¸ßĞË°É¡£×ßÖ®Ç°±ğÍü¼ÇÆ¾ÇëÌûÁìÀñÎïÅ¶£¬´í¹ıÁËÕâ´Î¿ÉÃ»·¨ÔÙÁìÀ²¡£");
-			AddNumText(sceneId, x155000_g_eventId_redeem, "ÇëÌû¶Ò»»ÀñÎï¡£", 6, x155000_g_eventId_redeem);
+			AddText(sceneId,"æ€ä¹ˆæ ·ï¼Ÿå‚åŠ æœ‹å‹çš„å©šç¤¼å¾ˆé«˜å…´å§ã€‚èµ°ä¹‹å‰åˆ«å¿˜è®°å‡­è¯·å¸–é¢†ç¤¼ç‰©å“¦ï¼Œé”™è¿‡äº†è¿™æ¬¡å¯æ²¡æ³•å†é¢†å•¦ã€‚");
+			AddNumText(sceneId, x155000_g_eventId_redeem, "è¯·å¸–å…‘æ¢ç¤¼ç‰©ã€‚", 6, x155000_g_eventId_redeem);
 		end
 		
-		-- Èç¹ûÕıÔÚ¹Ø±ÕÀñÌÃÔò²»ÄÜ¡°ÔİÊ±³öÈ¥¡±
+		-- å¦‚æœæ­£åœ¨å…³é—­ç¤¼å ‚åˆ™ä¸èƒ½â€œæš‚æ—¶å‡ºå»â€
 		local leaveFlag = LuaFnGetCopySceneData_Param(sceneId, 4);
 		if leaveFlag == 0 then
-			AddNumText(sceneId, x155000_g_eventId_leave, "ÎÒÒªÔİÊ±³öÈ¥Ò»ÏÂ¡£", 9, x155000_g_eventId_leave);
+			AddNumText(sceneId, x155000_g_eventId_leave, "æˆ‘è¦æš‚æ—¶å‡ºå»ä¸€ä¸‹ã€‚", 9, x155000_g_eventId_leave);
 		end
 		
-		AddNumText(sceneId, x155000_g_eventId_cancel, "ÎÒÃ»Ê²Ã´ÊÂÇé¡­¡­", -1, x155000_g_eventId_cancel);
+		AddNumText(sceneId, x155000_g_eventId_cancel, "æˆ‘æ²¡ä»€ä¹ˆäº‹æƒ…â€¦â€¦", -1, x155000_g_eventId_cancel);
 	EndEvent(sceneId);
 	DispatchEventList(sceneId,selfId,targetId);
 end
 
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x155000_OnEventRequest(sceneId, selfId, targetId, eventId)
 	if eventId == x155000_g_eventId_cancel then
@@ -73,28 +73,28 @@ function x155000_OnEventRequest(sceneId, selfId, targetId, eventId)
 		DispatchUICommand(sceneId, selfId, 1000);
 	elseif eventId == x155000_g_eventId_leave then
 		CallScriptFunction( 401030, "PlayerExit", sceneId, selfId);
-	elseif eventId == x155000_g_eventId_done then	--Ôö¼ÓÈ·ÈÏÒ³,·ÀÖ¹Íæ¼Òµã´íÁË--modify by xindefeng		
+	elseif eventId == x155000_g_eventId_done then	--å¢åŠ ç¡®è®¤é¡µ,é˜²æ­¢ç©å®¶ç‚¹é”™äº†--modify by xindefeng		
 		BeginEvent( sceneId )
-			AddText( sceneId, "    ÄúÈ·¶¨»éÀñ½áÊøÁËÂğ£¿Äú½«²»ÄÜÔÙ·µ»ØÀñÌÃÁË£¡" )
-			AddNumText(sceneId, x155000_g_ScriptId, "ÊÇµÄ£¬ÎÒÈ·¶¨»éÀñÒÑ¾­½áÊø¡£", 8, 100 )
-			AddNumText(sceneId, x155000_g_ScriptId, "ÎÒÃ»Ê²Ã´ÊÂÇé¡­¡­", 8, 101 )
+			AddText( sceneId, "    æ‚¨ç¡®å®šå©šç¤¼ç»“æŸäº†å—ï¼Ÿæ‚¨å°†ä¸èƒ½å†è¿”å›ç¤¼å ‚äº†ï¼" )
+			AddNumText(sceneId, x155000_g_ScriptId, "æ˜¯çš„ï¼Œæˆ‘ç¡®å®šå©šç¤¼å·²ç»ç»“æŸã€‚", 8, 100 )
+			AddNumText(sceneId, x155000_g_ScriptId, "æˆ‘æ²¡ä»€ä¹ˆäº‹æƒ…â€¦â€¦", 8, 101 )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 	elseif eventId == x155000_g_eventId_redeem then
 		x155000_Redeem(sceneId, selfId, targetId);	
 	end
 	
-	--Ê¹ÓÃNumTextÅĞ¶Ï	--add by xindefeng
+	--ä½¿ç”¨NumTextåˆ¤æ–­	--add by xindefeng
 	local NumText = GetNumText()	
-	if NumText == 100 then	--È·ÈÏ½áÊø,Àë¿ª¸±±¾
-		--¹Ø±Õ´°¿Ú
+	if NumText == 100 then	--ç¡®è®¤ç»“æŸ,ç¦»å¼€å‰¯æœ¬
+		--å…³é—­çª—å£
 		BeginUICommand( sceneId )			
 		EndUICommand( sceneId )
 		DispatchUICommand( sceneId, selfId, 1000 )		
 		
-		--Àë¿ª¸±±¾
+		--ç¦»å¼€å‰¯æœ¬
 		CallScriptFunction( 401030, "Close", sceneId, selfId)		
-	elseif NumText == 101	then	--µã´íÁË,¹Ø±Õ¶Ô»°´°¿Ú
+	elseif NumText == 101	then	--ç‚¹é”™äº†,å…³é—­å¯¹è¯çª—å£
 		BeginUICommand( sceneId )			
 		EndUICommand( sceneId )
 		DispatchUICommand( sceneId, selfId, 1000 )		
@@ -103,7 +103,7 @@ function x155000_OnEventRequest(sceneId, selfId, targetId, eventId)
 end
 
 --**********************************
---ÇëÌû¶Ò»»ÀñÎï
+--è¯·å¸–å…‘æ¢ç¤¼ç‰©
 --**********************************
 function x155000_Redeem(sceneId, selfId, targetId)
 	local selfGUID = LuaFnGetGUID(sceneId, selfId);
@@ -119,12 +119,12 @@ function x155000_Redeem(sceneId, selfId, targetId)
 		end
 		
 		if marryCharGUID_A and selfGUID == marryCharGUID_A then
-			x155000_MessageBox(sceneId, selfId, targetId, "¿ì°ÑÄãµÄÇëÌù·¢¸øÄãµÄÅóÓÑÀ´¶Ò»»ÀñÆ·°É£¡");
+			x155000_MessageBox(sceneId, selfId, targetId, "å¿«æŠŠä½ çš„è¯·è´´å‘ç»™ä½ çš„æœ‹å‹æ¥å…‘æ¢ç¤¼å“å§ï¼");
 			return 0;
 		end
 		
 		if marryCharGUID_B and selfGUID == marryCharGUID_B then
-			x155000_MessageBox(sceneId, selfId, targetId, "¿ì°ÑÄãµÄÇëÌù·¢¸øÄãµÄÅóÓÑÀ´¶Ò»»ÀñÆ·°É£¡");
+			x155000_MessageBox(sceneId, selfId, targetId, "å¿«æŠŠä½ çš„è¯·è´´å‘ç»™ä½ çš„æœ‹å‹æ¥å…‘æ¢ç¤¼å“å§ï¼");
 			return 0;
 		end
 	end
@@ -184,8 +184,8 @@ function x155000_Redeem(sceneId, selfId, targetId)
 										local gemTransfer = GetItemTransfer(sceneId, selfId, 0);
 										local gemName = GetItemName(sceneId, gemItem.id);
 										if selfName and itemCreatorName and gemName and gemTransfer then
-											BroadMsgByChatPipe(sceneId, selfId, "#W#{_INFOUSR"..selfName.."}#IÔÚ#W#{_INFOUSR"..itemCreatorName.."}#IµÄ»éÀñÖĞ£¬Æ¾½è×ÅÇëÌû¶Ò»»µ½ÁËÒ»¿Å#W#{_INFOMSG"..gemTransfer.."}#I¡£", 4);
-											x155000_MessageBox(sceneId, selfId, targetId, "Äã¶Ò»»µ½ÁËÒ»¿Å"..gemName.."¡£");
+											BroadMsgByChatPipe(sceneId, selfId, "#W#{_INFOUSR"..selfName.."}#Iåœ¨#W#{_INFOUSR"..itemCreatorName.."}#Içš„å©šç¤¼ä¸­ï¼Œå‡­å€Ÿç€è¯·å¸–å…‘æ¢åˆ°äº†ä¸€é¢—#W#{_INFOMSG"..gemTransfer.."}#Iã€‚", 4);
+											x155000_MessageBox(sceneId, selfId, targetId, "ä½ å…‘æ¢åˆ°äº†ä¸€é¢—"..gemName.."ã€‚");
 										end
 									end
 									break;
@@ -194,7 +194,7 @@ function x155000_Redeem(sceneId, selfId, targetId)
 							end
 						else
 							LuaFnAddMoney(sceneId, selfId, tempRedeemItem.money);
-							x155000_MessageBox(sceneId, selfId, targetId, "Äã¶Ò»»µ½ÁË#{_MONEY"..tempRedeemItem.money.."}¡£");
+							x155000_MessageBox(sceneId, selfId, targetId, "ä½ å…‘æ¢åˆ°äº†#{_MONEY"..tempRedeemItem.money.."}ã€‚");
 						end
 						break;
 					end
@@ -202,13 +202,13 @@ function x155000_Redeem(sceneId, selfId, targetId)
 			end
 		end
 	else
-		x155000_MessageBox(sceneId, selfId, targetId, "¶Ô²»Æğ£¬Äú²¢Ã»ÓĞ±¾³¡»éÀñµÄÇëÌû£¬Òò´ËÎŞ·¨¶Ò»»¡£");
+		x155000_MessageBox(sceneId, selfId, targetId, "å¯¹ä¸èµ·ï¼Œæ‚¨å¹¶æ²¡æœ‰æœ¬åœºå©šç¤¼çš„è¯·å¸–ï¼Œå› æ­¤æ— æ³•å…‘æ¢ã€‚");
 	end
 end
 
 
 --**********************************
---¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+--å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x155000_MessageBox(sceneId, selfId, targetId, msg)
 	BeginEvent(sceneId);

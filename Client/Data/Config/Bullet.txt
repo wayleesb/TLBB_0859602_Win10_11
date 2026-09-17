@@ -1,78 +1,78 @@
 INT	INT	INT	STRING	STRING	FLOAT	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING
-ID	¹ì¼£ÀàĞÍ	Ô¤Áô	×Óµ¯·ÉĞĞÌØĞ§ID	·ÉĞĞÒôĞ§ID	ËÙ¶È(m/s)	×Óµ¯±¬Õ¨ÌØĞ§ID	±¬Õ¨ÒôĞ§ID	»÷ÖĞÌØĞ§µÄ°ó¶¨µã	Ô¤Áô1	Ô¤Áô2	Ô¤Áô3	Ô¤Áô4	Ô¤Áô5	ÃèÊö
-1	0	0	npc_anqi_zd		15	npc_anqi_zdo		ÉíÌåÊÜ»÷µã						ÔÂÂäÎ÷É½
-2	0	0	g01_zd_huanpeiguihun		15	g01_zdo_huanpeiguihun		ÉíÌåÊÜ»÷µã						»·Åå¹é»ê
-3	2	0			15	g01_zdo_tiesuohengjiang	Skills\Wd\Wd_Èı»·Ì×ÔÂ.wav	ÉíÌåÊÜ»÷µã						ÌúË÷ºá½­
-6	1	0	g01_zd_baihongguanri		15	g01_zdo_baihongguanri		½ÅÏÂ¹âÈ¦µã						°×ºç¹áÈÕ
-7	0	0	g01_zd_dakuixing		15	all_bj07		ÉíÌåÊÜ»÷µã						´ó¿ıĞÇ
-8	0	0	g01_zd_danfengchaoyang		15	g01_dl_zdo_shaozejian		ÉíÌåÊÜ»÷µã						µ¤·ï³¯Ñô
-9	0	0	g01_zd_gaotanma		15	all_bj06		ÉíÌåÊÜ»÷µã						¸ßÌ½Âí
-10	0	0	g01_zd_haoyueqianli		15	g01_zdo_huanpeiguihun		ÉíÌåÊÜ»÷µã						ğ©ÔÂÇ§Àï
-11	0	0	g01_zd_huifengbiliu		15	g01_dl_zdo_yiyangzhi		ÉíÌåÊÜ»÷µã						»Ø·ç·÷Áø
-13	0	0	g01_zd_kuaihuosan		15	all_bj06		ÉíÌåÊÜ»÷µã						¿ì»îÈı
-14	1	0			15									À¿È¸Î²
-15	0	0	g01_zd_lanshadu		15	g01_zdo_lanshadu		ÉíÌåÊÜ»÷µã						À¶É°¶¾
-16	0	0	g01_zd_lvshuangbingzhi	Skills\Common\bullet_fly_by2.wav	15	all_bj04	Skills\Xy\Xy_äìÏæÒ¹Óê.wav	ÉíÌåÊÜ»÷µã						ÂÄËª±ùÖÁ
-18	0	0	g01_zd_sanhuantaoyue		15	all_bj06		ÉíÌåÊÜ»÷µã						Èı»·Ì×ÔÂ
-19	0	0	ÃØ¼®_xy_zd		15	ÃØ¼®_xy_zdo		ÉíÌåÊÜ»÷µã						öïÔ¾±±äé
-20	0	0	g01_zd_shaungfengguaner		15	g01_zdo_shuangfengguaner		ÉíÌåÊÜ»÷µã						Ë«·å¹à¶ú
-22	0	0	g01_zd_tuonidaishui		15	g01_zdo_tuonidaishui		ÉíÌåÊÜ»÷µã						ÍÏÄà´øË®
-23	0	0	g01_zd_wangyangxingtan		15	all_bj06		ÉíÌåÊÜ»÷µã						ÍûÑóĞËÌ¾
-24	0	0	g01_zd_xianrenzhilu		15	g01_zdo_xianrenzhilu		ÉíÌåÊÜ»÷µã						ÏÉÈËÖ¸Â·
-25	0	0	g01_zd_xiaokouchangkai		15	g01_zdo_xiaokouchangkai		ÉíÌåÊÜ»÷µã						Ğ¦¿Ú³£¿ª
-26	0	0	g01_zd_yanaimangmang		15	g01_zdo_shuangfengguaner		ÉíÌåÊÜ»÷µã						ÑÌö°Ã£Ã£
-27	0	0			0									Ò°Âí·Ö××
-28	2	0			15	g01_zdo_fushidu		½ÅÏÂ¹âÈ¦µã						¸¯Ê¬¶¾
-29	2	0			15	g01_zdo_eguangmanying		ÉíÌåÊÜ»÷µã						¶ñ¹áÂúÓ¯
-30	2	0			15	g01_zdo_lianzhufushidu		½ÅÏÂ¹âÈ¦µã						Á¬Öé¸¯Ê¬¶¾
-35	0	0	g01_zd_lvshuangbingzhi		15	npc_all_danbing_zdo	Skills\Common\ice_explode_1.wav	ÉíÌåÊÜ»÷µã						º®±ùÖä
-36	0	0	g01_zd_gaotanma		15	npc_all_danhuo_zdo	Skills\Common\fire_explode_1.wav	ÉíÌåÊÜ»÷µã						ÁÒ»ğÖä
-37	0	0	npc_all_dandu_zd		15	g01_zdo_jiuyinbaiguzhua	Skills\Common\poison_3.wav	ÉíÌåÊÜ»÷µã						Ñª¶¾Öä
-38	0	0	npc_all_danxuan_zd		15	npc_all_danxuan_zdo	Skills\Common\lighting_1.wav	ÉíÌåÊÜ»÷µã						ÅùÀ×Öä
-39	2	0			15	cw_zd_jibingningsha		ÉíÌåÊÜ»÷µã						¼«±ùÄıÉ±
-40	2	0			15	cw_zd_jiehuofensha		ÉíÌåÊÜ»÷µã						½Ù»ğ·ÙÉ±
-41	2	0			15	cw_zd_jiuleijisha		ÉíÌåÊÜ»÷µã						¾ÅÀ×»÷É±
-42	2	0			15	cw_zd_fudushisha		ÉíÌåÊÜ»÷µã						¸¯¶¾Ê´É±
-43	0	0	npc_yuancheng		15	all_bj06		ÉíÌåÊÜ»÷µã						NPCÔ¶³Ì
-80	0	0	g01_ts_zd_shengsifu		15	g01_ts_zdo_shengsifu		ÉíÌåÊÜ»÷µã						ÉúËÀ·û
-81	0	0	g01_wd_zd_pikongzhang		15	all_bj00030		ÉíÌåÊÜ»÷µã						Åü¿ÕÕÆ
-82	0	0	g01_wd_zd_tianmafeipu		15	g01_wd_zdo_tianmafeipu	Skills\Wd\Wd_ÌìÂí·ÉÆÙ_»÷ÖĞ.wav	ÉíÌåÊÜ»÷µã						ÌìÂí·ÉÆÙ
-83	0	0	g01_wd_zd_xianrenzhilu		15	g01_wd_zdo_xianrenzhilu		ÉíÌåÊÜ»÷µã						ÏÉÈËÖ¸Â·
-84	0	0	g01_wd_zd_rufengsibi		15	g01_wd_zdo_rufengsibi		ÉíÌåÊÜ»÷µã						ÓñÅ®´©Ëó
-85	0	0	g01_zd_jiuyinbaiguzhua		15	g01_em_zdo_jiuyinbaiguzhua		ÉíÌåÊÜ»÷µã						Î÷×ÓÅõĞÄ
-86	0	0	g01_em_zd_jindingmianzhang		15	g01_em_zdo_jindingmianzhang		ÉíÌåÊÜ»÷µã						ÕÏÑÛ·¨
-87	0	0			15	g01_em_zd_jiuyingshehun		ÉíÌåÊÜ»÷µã						¾ÅÓ°Éã»ê
-88	0	0	g01_xx_zd_bingcanzhang		15	g01_xx_zdo_bingcanzhang		ÉíÌåÊÜ»÷µã						±ù²ÏÕÆ
-89	0	0			15	g01_dl_zdo_yuqinguzong		ÉíÌåÊÜ»÷µã						½ğÓñÈ­
-90	0	0	g01_zd_kuaihuosan		15	g01_dl_zdo_kuxinzhi		ÉíÌåÊÜ»÷µã						Ñ©ÓµÀ¶¹Ø
-91	0	0	g01_xy_zd_lingyanshibagong	Skills\Common\bullet_fly_by1.wav	15	g01_xy_zdo_lingyanshibagong	Skills\Common\bullet_explode1.wav	ÉíÌåÊÜ»÷µã						ÏªÉ½ĞĞÂÃ
-92	0	0	a_y_wudang_zd		10	a_y_wudang_zdo	Skills\Wd\Wd_°ËØÔÕÆ_»÷ÖĞ.wav	ÉíÌåÊÜ»÷µã						°ËØÔÕÆ
-93	0	0	a_y_emei_zd		10	a_y_emei_zdo	Skills\Em\Em_õõ²õ°İÔÂ_»÷ÖĞ.wav	ÉíÌåÊÜ»÷µã						õõ²õ°İÔÂ
-94	0	0	a_y_xingxiu_zd		10	a_y_xingxiu_zdo	Skills\Xx\Xx_À¶É°ÊÖ_»÷ÖĞ.wav	ÉíÌåÊÜ»÷µã						À¶É°ÊÖ
-95	0	0	a_y_dali_zd		10	a_y_dali_zdo	Skills\Common\bullet_explode1.wav	ÉíÌåÊÜ»÷µã						ÕıÑôÊÖ
-96	0	0	a_y_xiaoyao_zd		10	a_y_xiaoyao_zdo	Skills\Weapon\sword_hit_light_4.wav	ÉíÌåÊÜ»÷µã						ÂäÓ¢½£
-97	0	0	g01_xy_zd_beimingshenquan	Skills\Common\bullet_fly_by4.wav	15	g01_xy_zdo_beimingshenquan	Skills\Xy\Xy_¾ªÌÎº§ÀË.wav	ÉíÌåÊÜ»÷µã						±±Ú¤ÉñÈ­
-98	0	0	g01_wd_zd_sanweizhenhuo		15	g01_wd_zdo_sanweizhenhuo		ÉíÌåÊÜ»÷µã						ÈıÎ¶Õæ»ğ
-99	0	0	g01_zd_yemafenzong		15	g01_dl_zdo_wanyuechaozong		ÉíÌåÊÜ»÷µã						ÍòÔÀ³¯×Ú
-100	0	0	g01_xy_sf_zd_¸ßÉ½ÁôË®		15	g01_xy_sf_zdo_¸ßÉ½ÁôË®		Í·¶¥×´Ì¬µã						¸ßÉ½Á÷Ë®
-101	0	0	g01_xy_sf_zd_»¨¿ª÷ãİ±		15	g01_xy_sf_zdo_»¨¿ª÷ãİ±		ÉíÌåÊÜ»÷µã						»¨¿ª÷ãİ±
-102	0	0	g01_xx_jq_zd_ĞşÚ¤ÉñÕÆ		15	g01_xx_jq_zdo_ĞşÚ¤ÉñÕÆ		ÉíÌåÊÜ»÷µã						ĞşÚ¤ÉñÕÆ
-103	0	0	g01_xx_sf_zd_»¯¹ÇÃàÕÆ		15	g01_xx_sf_zdo_»¯¹ÇÃàÕÆ		ÉíÌåÊÜ»÷µã						»¯¹ÇÃàÕÆ
-104	0	0	g01_wd_zd_yinyangjue	Skills\Common\item_flyby_1.wav	15	g01_wd_zdo_yinyangjue		ÉíÌåÊÜ»÷µã						À¿È¸Î²
-105	0	0	g01_xx_sf_zd_ÇàÉßÕÆ		15	g01_xx_zdo_qingshezhang		ÉíÌåÊÜ»÷µã						ÇàÉß¶¾ÕÆ
-106	0	0	g01_xx_jq_zt_¸òó¡¹¦		15	g01_xx_zdo_¸òó¡¹¦		ÉíÌåÊÜ»÷µã						¸òó¡¹¦
-107	0	0	g01_xy_sf_zd_¸ßÉ½ÁôË®		15	g01_xy_sf_zdo_¸ßÉ½ÁôË®		ÉíÌåÊÜ»÷µã						äìÏæÒ¹Óê
-108	0	0	ÃØ¼®_ts_zd		15	ÃØ¼®_ts_zdo		ÉíÌåÊÜ»÷µã						Í¬Éú¹²ËÀ
-109	0	0	ÃØ¼®_wd_zd		15	ÃØ¼®_wd_zdo		ÉíÌåÊÜ»÷µã						ÌìÍâ·ÉÏÉ
-110	0	0	ÃØ¼®_em_zd		15	ÃØ¼®_em_mj_zdo		ÉíÌåÊÜ»÷µã						¾ÅÒõ°×¹Ç×¦
-111	0	0	ÃØ¼®_xx_zd		15	ÃØ¼®_xx_zdo		ÉíÌåÊÜ»÷µã						»¯¹ÇÃàÕÆ
-112	0	0	cw_danbing_zd		15	cw_danbing_zdo		ÉíÌåÊÜ»÷µã						³è±ù
-113	0	0	cw_danhuo_zd		15	cw_danhuo_zdo		ÉíÌåÊÜ»÷µã						³è»ğ
-114	0	0	cw_danxuan_zd		15	cw_danxuan_zdo		ÉíÌåÊÜ»÷µã						³èĞş
-115	0	0	cw_dandu_zd		15	cw_dandu_zdo		ÉíÌåÊÜ»÷µã						³è¶¾
-116	0	0	ÌØĞ§Ñ©Çò		12	ÌØĞ§Ñ©Çò_zdo	Skills\interface\sound_jiaru.wav	ÉíÌåÊÜ»÷µã						Ñ©Çò
-117	0	0	ÂäÂí¼¼ÄÜ_zd		15	ÂäÂí¼¼ÄÜ_zdo		ÉíÌåÊÜ»÷µã						ÂäÂí¼¼
-118	0	0	go1_°®ÉñÖ®¼ı_zd_01		10	go1_°®ÉñÖ®¼ı_zdo_01		ÉíÌåÊÜ»÷µã						°®ÉñÖ®¼ı
-119	0	0	g01_zd_Õ¶Ñı½£01		10	g01_zdo_Õ¶Ñı½£01	Skills\Common\Zyj_±¬Õ¨À×µç.wav	ÉíÌåÊÜ»÷µã						Õ¶Ñı½£
-120	0	0	g01_°µÆ÷Í¶ÖÀ01		15	g01_zdo_°µÆ÷Í¶ÖÀ01		ÉíÌåÊÜ»÷µã						°µÆ÷Í¶ÖÀ
-121	0	0	g01_°µÆ÷´òÑ¨01		15	g01_zdo_°µÆ÷´òÑ¨01		ÉíÌåÊÜ»÷µã						°µÆ÷´òÑ¨
+ID	è½¨è¿¹ç±»å‹	é¢„ç•™	å­å¼¹é£è¡Œç‰¹æ•ˆID	é£è¡ŒéŸ³æ•ˆID	é€Ÿåº¦(m/s)	å­å¼¹çˆ†ç‚¸ç‰¹æ•ˆID	çˆ†ç‚¸éŸ³æ•ˆID	å‡»ä¸­ç‰¹æ•ˆçš„ç»‘å®šç‚¹	é¢„ç•™1	é¢„ç•™2	é¢„ç•™3	é¢„ç•™4	é¢„ç•™5	æè¿°
+1	0	0	npc_anqi_zd		15	npc_anqi_zdo		èº«ä½“å—å‡»ç‚¹						æœˆè½è¥¿å±±
+2	0	0	g01_zd_huanpeiguihun		15	g01_zdo_huanpeiguihun		èº«ä½“å—å‡»ç‚¹						ç¯ä½©å½’é­‚
+3	2	0			15	g01_zdo_tiesuohengjiang	Skills\Wd\Wd_ä¸‰ç¯å¥—æœˆ.wav	èº«ä½“å—å‡»ç‚¹						é“ç´¢æ¨ªæ±Ÿ
+6	1	0	g01_zd_baihongguanri		15	g01_zdo_baihongguanri		è„šä¸‹å…‰åœˆç‚¹						ç™½è™¹è´¯æ—¥
+7	0	0	g01_zd_dakuixing		15	all_bj07		èº«ä½“å—å‡»ç‚¹						å¤§é­æ˜Ÿ
+8	0	0	g01_zd_danfengchaoyang		15	g01_dl_zdo_shaozejian		èº«ä½“å—å‡»ç‚¹						ä¸¹å‡¤æœé˜³
+9	0	0	g01_zd_gaotanma		15	all_bj06		èº«ä½“å—å‡»ç‚¹						é«˜æ¢é©¬
+10	0	0	g01_zd_haoyueqianli		15	g01_zdo_huanpeiguihun		èº«ä½“å—å‡»ç‚¹						çš“æœˆåƒé‡Œ
+11	0	0	g01_zd_huifengbiliu		15	g01_dl_zdo_yiyangzhi		èº«ä½“å—å‡»ç‚¹						å›é£æ‹‚æŸ³
+13	0	0	g01_zd_kuaihuosan		15	all_bj06		èº«ä½“å—å‡»ç‚¹						å¿«æ´»ä¸‰
+14	1	0			15									æ½é›€å°¾
+15	0	0	g01_zd_lanshadu		15	g01_zdo_lanshadu		èº«ä½“å—å‡»ç‚¹						è“ç ‚æ¯’
+16	0	0	g01_zd_lvshuangbingzhi	Skills\Common\bullet_fly_by2.wav	15	all_bj04	Skills\Xy\Xy_æ½‡æ¹˜å¤œé›¨.wav	èº«ä½“å—å‡»ç‚¹						å±¥éœœå†°è‡³
+18	0	0	g01_zd_sanhuantaoyue		15	all_bj06		èº«ä½“å—å‡»ç‚¹						ä¸‰ç¯å¥—æœˆ
+19	0	0	ç§˜ç±_xy_zd		15	ç§˜ç±_xy_zdo		èº«ä½“å—å‡»ç‚¹						é²²è·ƒåŒ—æºŸ
+20	0	0	g01_zd_shaungfengguaner		15	g01_zdo_shuangfengguaner		èº«ä½“å—å‡»ç‚¹						åŒå³°çŒè€³
+22	0	0	g01_zd_tuonidaishui		15	g01_zdo_tuonidaishui		èº«ä½“å—å‡»ç‚¹						æ‹–æ³¥å¸¦æ°´
+23	0	0	g01_zd_wangyangxingtan		15	all_bj06		èº«ä½“å—å‡»ç‚¹						æœ›æ´‹å…´å¹
+24	0	0	g01_zd_xianrenzhilu		15	g01_zdo_xianrenzhilu		èº«ä½“å—å‡»ç‚¹						ä»™äººæŒ‡è·¯
+25	0	0	g01_zd_xiaokouchangkai		15	g01_zdo_xiaokouchangkai		èº«ä½“å—å‡»ç‚¹						ç¬‘å£å¸¸å¼€
+26	0	0	g01_zd_yanaimangmang		15	g01_zdo_shuangfengguaner		èº«ä½“å—å‡»ç‚¹						çƒŸéœ­èŒ«èŒ«
+27	0	0			0									é‡é©¬åˆ†é¬ƒ
+28	2	0			15	g01_zdo_fushidu		è„šä¸‹å…‰åœˆç‚¹						è…å°¸æ¯’
+29	2	0			15	g01_zdo_eguangmanying		èº«ä½“å—å‡»ç‚¹						æ¶è´¯æ»¡ç›ˆ
+30	2	0			15	g01_zdo_lianzhufushidu		è„šä¸‹å…‰åœˆç‚¹						è¿ç è…å°¸æ¯’
+35	0	0	g01_zd_lvshuangbingzhi		15	npc_all_danbing_zdo	Skills\Common\ice_explode_1.wav	èº«ä½“å—å‡»ç‚¹						å¯’å†°å’’
+36	0	0	g01_zd_gaotanma		15	npc_all_danhuo_zdo	Skills\Common\fire_explode_1.wav	èº«ä½“å—å‡»ç‚¹						çƒˆç«å’’
+37	0	0	npc_all_dandu_zd		15	g01_zdo_jiuyinbaiguzhua	Skills\Common\poison_3.wav	èº«ä½“å—å‡»ç‚¹						è¡€æ¯’å’’
+38	0	0	npc_all_danxuan_zd		15	npc_all_danxuan_zdo	Skills\Common\lighting_1.wav	èº«ä½“å—å‡»ç‚¹						éœ¹é›·å’’
+39	2	0			15	cw_zd_jibingningsha		èº«ä½“å—å‡»ç‚¹						æå†°å‡æ€
+40	2	0			15	cw_zd_jiehuofensha		èº«ä½“å—å‡»ç‚¹						åŠ«ç«ç„šæ€
+41	2	0			15	cw_zd_jiuleijisha		èº«ä½“å—å‡»ç‚¹						ä¹é›·å‡»æ€
+42	2	0			15	cw_zd_fudushisha		èº«ä½“å—å‡»ç‚¹						è…æ¯’èš€æ€
+43	0	0	npc_yuancheng		15	all_bj06		èº«ä½“å—å‡»ç‚¹						NPCè¿œç¨‹
+80	0	0	g01_ts_zd_shengsifu		15	g01_ts_zdo_shengsifu		èº«ä½“å—å‡»ç‚¹						ç”Ÿæ­»ç¬¦
+81	0	0	g01_wd_zd_pikongzhang		15	all_bj00030		èº«ä½“å—å‡»ç‚¹						åŠˆç©ºæŒ
+82	0	0	g01_wd_zd_tianmafeipu		15	g01_wd_zdo_tianmafeipu	Skills\Wd\Wd_å¤©é©¬é£ç€‘_å‡»ä¸­.wav	èº«ä½“å—å‡»ç‚¹						å¤©é©¬é£ç€‘
+83	0	0	g01_wd_zd_xianrenzhilu		15	g01_wd_zdo_xianrenzhilu		èº«ä½“å—å‡»ç‚¹						ä»™äººæŒ‡è·¯
+84	0	0	g01_wd_zd_rufengsibi		15	g01_wd_zdo_rufengsibi		èº«ä½“å—å‡»ç‚¹						ç‰å¥³ç©¿æ¢­
+85	0	0	g01_zd_jiuyinbaiguzhua		15	g01_em_zdo_jiuyinbaiguzhua		èº«ä½“å—å‡»ç‚¹						è¥¿å­æ§å¿ƒ
+86	0	0	g01_em_zd_jindingmianzhang		15	g01_em_zdo_jindingmianzhang		èº«ä½“å—å‡»ç‚¹						éšœçœ¼æ³•
+87	0	0			15	g01_em_zd_jiuyingshehun		èº«ä½“å—å‡»ç‚¹						ä¹å½±æ‘„é­‚
+88	0	0	g01_xx_zd_bingcanzhang		15	g01_xx_zdo_bingcanzhang		èº«ä½“å—å‡»ç‚¹						å†°èš•æŒ
+89	0	0			15	g01_dl_zdo_yuqinguzong		èº«ä½“å—å‡»ç‚¹						é‡‘ç‰æ‹³
+90	0	0	g01_zd_kuaihuosan		15	g01_dl_zdo_kuxinzhi		èº«ä½“å—å‡»ç‚¹						é›ªæ‹¥è“å…³
+91	0	0	g01_xy_zd_lingyanshibagong	Skills\Common\bullet_fly_by1.wav	15	g01_xy_zdo_lingyanshibagong	Skills\Common\bullet_explode1.wav	èº«ä½“å—å‡»ç‚¹						æºªå±±è¡Œæ—…
+92	0	0	a_y_wudang_zd		10	a_y_wudang_zdo	Skills\Wd\Wd_å…«å¦æŒ_å‡»ä¸­.wav	èº«ä½“å—å‡»ç‚¹						å…«å¦æŒ
+93	0	0	a_y_emei_zd		10	a_y_emei_zdo	Skills\Em\Em_è²‚è‰æ‹œæœˆ_å‡»ä¸­.wav	èº«ä½“å—å‡»ç‚¹						è²‚è‰æ‹œæœˆ
+94	0	0	a_y_xingxiu_zd		10	a_y_xingxiu_zdo	Skills\Xx\Xx_è“ç ‚æ‰‹_å‡»ä¸­.wav	èº«ä½“å—å‡»ç‚¹						è“ç ‚æ‰‹
+95	0	0	a_y_dali_zd		10	a_y_dali_zdo	Skills\Common\bullet_explode1.wav	èº«ä½“å—å‡»ç‚¹						æ­£é˜³æ‰‹
+96	0	0	a_y_xiaoyao_zd		10	a_y_xiaoyao_zdo	Skills\Weapon\sword_hit_light_4.wav	èº«ä½“å—å‡»ç‚¹						è½è‹±å‰‘
+97	0	0	g01_xy_zd_beimingshenquan	Skills\Common\bullet_fly_by4.wav	15	g01_xy_zdo_beimingshenquan	Skills\Xy\Xy_æƒŠæ¶›éª‡æµª.wav	èº«ä½“å—å‡»ç‚¹						åŒ—å†¥ç¥æ‹³
+98	0	0	g01_wd_zd_sanweizhenhuo		15	g01_wd_zdo_sanweizhenhuo		èº«ä½“å—å‡»ç‚¹						ä¸‰å‘³çœŸç«
+99	0	0	g01_zd_yemafenzong		15	g01_dl_zdo_wanyuechaozong		èº«ä½“å—å‡»ç‚¹						ä¸‡å²³æœå®—
+100	0	0	g01_xy_sf_zd_é«˜å±±ç•™æ°´		15	g01_xy_sf_zdo_é«˜å±±ç•™æ°´		å¤´é¡¶çŠ¶æ€ç‚¹						é«˜å±±æµæ°´
+101	0	0	g01_xy_sf_zd_èŠ±å¼€ç¸»è¼		15	g01_xy_sf_zdo_èŠ±å¼€ç¸»è¼		èº«ä½“å—å‡»ç‚¹						èŠ±å¼€ç¸»è¼
+102	0	0	g01_xx_jq_zd_ç„å†¥ç¥æŒ		15	g01_xx_jq_zdo_ç„å†¥ç¥æŒ		èº«ä½“å—å‡»ç‚¹						ç„å†¥ç¥æŒ
+103	0	0	g01_xx_sf_zd_åŒ–éª¨ç»µæŒ		15	g01_xx_sf_zdo_åŒ–éª¨ç»µæŒ		èº«ä½“å—å‡»ç‚¹						åŒ–éª¨ç»µæŒ
+104	0	0	g01_wd_zd_yinyangjue	Skills\Common\item_flyby_1.wav	15	g01_wd_zdo_yinyangjue		èº«ä½“å—å‡»ç‚¹						æ½é›€å°¾
+105	0	0	g01_xx_sf_zd_é’è›‡æŒ		15	g01_xx_zdo_qingshezhang		èº«ä½“å—å‡»ç‚¹						é’è›‡æ¯’æŒ
+106	0	0	g01_xx_jq_zt_è›¤èŸ†åŠŸ		15	g01_xx_zdo_è›¤èŸ†åŠŸ		èº«ä½“å—å‡»ç‚¹						è›¤èŸ†åŠŸ
+107	0	0	g01_xy_sf_zd_é«˜å±±ç•™æ°´		15	g01_xy_sf_zdo_é«˜å±±ç•™æ°´		èº«ä½“å—å‡»ç‚¹						æ½‡æ¹˜å¤œé›¨
+108	0	0	ç§˜ç±_ts_zd		15	ç§˜ç±_ts_zdo		èº«ä½“å—å‡»ç‚¹						åŒç”Ÿå…±æ­»
+109	0	0	ç§˜ç±_wd_zd		15	ç§˜ç±_wd_zdo		èº«ä½“å—å‡»ç‚¹						å¤©å¤–é£ä»™
+110	0	0	ç§˜ç±_em_zd		15	ç§˜ç±_em_mj_zdo		èº«ä½“å—å‡»ç‚¹						ä¹é˜´ç™½éª¨çˆª
+111	0	0	ç§˜ç±_xx_zd		15	ç§˜ç±_xx_zdo		èº«ä½“å—å‡»ç‚¹						åŒ–éª¨ç»µæŒ
+112	0	0	cw_danbing_zd		15	cw_danbing_zdo		èº«ä½“å—å‡»ç‚¹						å® å†°
+113	0	0	cw_danhuo_zd		15	cw_danhuo_zdo		èº«ä½“å—å‡»ç‚¹						å® ç«
+114	0	0	cw_danxuan_zd		15	cw_danxuan_zdo		èº«ä½“å—å‡»ç‚¹						å® ç„
+115	0	0	cw_dandu_zd		15	cw_dandu_zdo		èº«ä½“å—å‡»ç‚¹						å® æ¯’
+116	0	0	ç‰¹æ•ˆé›ªçƒ		12	ç‰¹æ•ˆé›ªçƒ_zdo	Skills\interface\sound_jiaru.wav	èº«ä½“å—å‡»ç‚¹						é›ªçƒ
+117	0	0	è½é©¬æŠ€èƒ½_zd		15	è½é©¬æŠ€èƒ½_zdo		èº«ä½“å—å‡»ç‚¹						è½é©¬æŠ€
+118	0	0	go1_çˆ±ç¥ä¹‹ç®­_zd_01		10	go1_çˆ±ç¥ä¹‹ç®­_zdo_01		èº«ä½“å—å‡»ç‚¹						çˆ±ç¥ä¹‹ç®­
+119	0	0	g01_zd_æ–©å¦–å‰‘01		10	g01_zdo_æ–©å¦–å‰‘01	Skills\Common\Zyj_çˆ†ç‚¸é›·ç”µ.wav	èº«ä½“å—å‡»ç‚¹						æ–©å¦–å‰‘
+120	0	0	g01_æš—å™¨æŠ•æ·01		15	g01_zdo_æš—å™¨æŠ•æ·01		èº«ä½“å—å‡»ç‚¹						æš—å™¨æŠ•æ·
+121	0	0	g01_æš—å™¨æ‰“ç©´01		15	g01_zdo_æš—å™¨æ‰“ç©´01		èº«ä½“å—å‡»ç‚¹						æš—å™¨æ‰“ç©´

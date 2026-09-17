@@ -1,16 +1,16 @@
---¶ËÎç½Ú¿ìÀÖ
+--ç«¯åˆèŠ‚å¿«ä¹
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x808130_g_ScriptId = 808130
 
 
 x808130_g_LabelsDay	= {start = 20090528, stop = 20090604, level = 10}
 
 
-x808130_g_MissionData = MD_DAY_TO_HAVE_DWJKL --ÁìÈ¡Ê±¼ä
+x808130_g_MissionData = MD_DAY_TO_HAVE_DWJKL --é¢†å–æ—¶é—´
 
 
---level±íÊ¾ÆğÊ¼µÈ¼¶£¬´óÓÚÕâ¸öµÈ¼¶¾Í¿ÉÒÔ»ñµÃºóÃæµÄBUFF
+--levelè¡¨ç¤ºèµ·å§‹ç­‰çº§ï¼Œå¤§äºè¿™ä¸ªç­‰çº§å°±å¯ä»¥è·å¾—åé¢çš„BUFF
 x808130_g_Impact = {
 		{level = 10,	buffId = 2966},		--10 -19
 		{level = 20,	buffId = 2955},		--20 -29
@@ -27,7 +27,7 @@ x808130_g_Impact = {
 
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x808130_OnDefaultEvent( sceneId, selfId, targetId )
 	local numText = GetNumText();
@@ -49,7 +49,7 @@ function x808130_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÇ·ñÄÜ²Î¼Ó»î¶¯
+--æ˜¯å¦èƒ½å‚åŠ æ´»åŠ¨
 --**********************************
 function x808130_IsQualidfied( sceneId, selfId )
 	local curDayTime = GetTime2Day()
@@ -60,7 +60,7 @@ function x808130_IsQualidfied( sceneId, selfId )
 end
 
 --**********************************
---ÊÇ·ñÒÑÁìÈ¡ÀñÎï
+--æ˜¯å¦å·²é¢†å–ç¤¼ç‰©
 --**********************************
 function x808130_HaveReceivedGift( sceneId, selfId )
 	local td = GetTime2Day()
@@ -75,7 +75,7 @@ function x808130_HaveReceivedGift( sceneId, selfId )
 end
 
 --**********************************
---ÉèÖÃÁìÈ¡ÀñÎï±ê¼Ç
+--è®¾ç½®é¢†å–ç¤¼ç‰©æ ‡è®°
 --**********************************
 function x808130_SetGiftFlag( sceneId, selfId )
 	local td = GetTime2Day()
@@ -83,11 +83,11 @@ function x808130_SetGiftFlag( sceneId, selfId )
 end
 
 --**********************************
---ÁìÈ¡ÀñÎï
+--é¢†å–ç¤¼ç‰©
 --**********************************
 function x808130_ReceiveGift( sceneId, selfId, targetId )
 	
-	--¼ì²éÊÇ·ñ¹ıÆÚ
+	--æ£€æŸ¥æ˜¯å¦è¿‡æœŸ
 	if x808130_IsQualidfied( sceneId, selfId ) == 0 then
 	 	BeginEvent(sceneId)
 			AddText(sceneId, "#{MLH_90408_6}")
@@ -96,7 +96,7 @@ function x808130_ReceiveGift( sceneId, selfId, targetId )
 		return
 	end
 	
-	--¼ì²éµÈ¼¶
+	--æ£€æŸ¥ç­‰çº§
 	local level = GetLevel( sceneId, selfId ) 
 	if level < x808130_g_LabelsDay.level then
 	 	BeginEvent(sceneId)
@@ -106,7 +106,7 @@ function x808130_ReceiveGift( sceneId, selfId, targetId )
 		return
 	end
 	
-	--¼ì²éÊÇ·ñÁì¹ı
+	--æ£€æŸ¥æ˜¯å¦é¢†è¿‡
 	if x808130_HaveReceivedGift( sceneId, selfId ) == 1 then
 	 	BeginEvent(sceneId)
 			AddText(sceneId, "#{LDKL_090408_4}")
@@ -115,10 +115,10 @@ function x808130_ReceiveGift( sceneId, selfId, targetId )
 		return
 	end
 
-	--·Å³öbuff
+	--æ”¾å‡ºbuff
 	local ret = x808130_AddHappyDuanwujie( sceneId, selfId )
 	
-	--·µ»ØNPC¶Ô»°
+	--è¿”å›NPCå¯¹è¯
 	if(1 == ret ) then
 		BeginEvent(sceneId)
 			AddText(sceneId, "#{DWJ_090511_05}")
@@ -129,7 +129,7 @@ function x808130_ReceiveGift( sceneId, selfId, targetId )
 end
 
 --**********************************
---¸øÍæ¼Ò¼ÓÉÏ¶ËÎç½Ú¿ìÀÖbuff
+--ç»™ç©å®¶åŠ ä¸Šç«¯åˆèŠ‚å¿«ä¹buff
 --**********************************
 function x808130_AddHappyDuanwujie( sceneId, selfId )
 
@@ -143,9 +143,9 @@ function x808130_AddHappyDuanwujie( sceneId, selfId )
 	end
 	if( buffId ~= -1 ) then
 		LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, buffId, 0)
-		--¸üĞÂÁìÈ¡±êÖ¾
+		--æ›´æ–°é¢†å–æ ‡å¿—
 		x808130_SetGiftFlag( sceneId, selfId )
-		--Í³¼Æ		
+		--ç»Ÿè®¡		
 		local guid = LuaFnObjId2Guid(sceneId, selfId)
 		ScriptGlobal_AuditGeneralLog(LUAAUDIT_LINGQU_DWJKL, guid)
 		return 1		
@@ -156,7 +156,7 @@ function x808130_AddHappyDuanwujie( sceneId, selfId )
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x808130_OnEnumerate( sceneId, selfId, targetId )
 	if x808130_IsQualidfied( sceneId, selfId ) == 1 then
@@ -166,21 +166,21 @@ end
 
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x808130_OnAccept( sceneId, selfId )
 
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x808130_OnAbandon( sceneId, selfId )
 
 end
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x808130_OnContinue( sceneId, selfId, targetId )
 
@@ -188,26 +188,26 @@ end
 
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x808130_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 
 end
 
 --**********************************
---É±ËÀ¹ÖÎï»òÍæ¼Ò
+--æ€æ­»æ€ªç‰©æˆ–ç©å®¶
 --**********************************
 function x808130_OnKillObject( sceneId, selfId, objdataId )
 end
 
 --**********************************
---½øÈëÇøÓòÊÂ¼ş
+--è¿›å…¥åŒºåŸŸäº‹ä»¶
 --**********************************
 function x808130_OnEnterZone( sceneId, selfId, zoneId )
 end
 
 --**********************************
---µÀ¾ß¸Ä±ä
+--é“å…·æ”¹å˜
 --**********************************
 function x808130_OnItemChanged( sceneId, selfId, itemdataId )
 end

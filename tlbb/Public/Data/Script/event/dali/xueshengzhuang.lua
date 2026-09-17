@@ -1,30 +1,30 @@
---ÕÒÈËÈÎÎñ
---ÕÔÌìÊ¦Ñ°ÕÒËï°ËÒ¯
+--æ‰¾äººä»»åŠ¡
+--èµµå¤©å¸ˆå¯»æ‰¾å­™å…«çˆ·
 --MisDescBegin
---½Å±¾ºÅ
+--è„šæœ¬å·
 x210246_g_ScriptId = 210246
 
---½ÓÊÜÈÎÎñNPCÊôĞÔ
+--æ¥å—ä»»åŠ¡NPCå±æ€§
 x210246_g_Position_X=172.7304
 x210246_g_Position_Z=146.4640
 x210246_g_SceneID=2
-x210246_g_Name	="Ëï°ËÒ¯"
+x210246_g_Name	="å­™å…«çˆ·"
 
---ÈÎÎñµÈ¼¶
+--ä»»åŠ¡ç­‰çº§
 x210246_g_LevelLimit = 10
 
---ÈÎÎñÃû
-x210246_g_MissionName="ÌìÌìÏòÉÏ"
-x210246_g_MissionNameTip="¹ØÓÚÌìÌìÏòÉÏ"
+--ä»»åŠ¡å
+x210246_g_MissionName="å¤©å¤©å‘ä¸Š"
+x210246_g_MissionNameTip="å…³äºå¤©å¤©å‘ä¸Š"
 x210246_g_starttime = 20080917
 x210246_g_endtime = 20080928
 
---¸øÓè²Å×Ó¼ÑÈËidºÍÊıÁ¿
+--ç»™äºˆæ‰å­ä½³äººidå’Œæ•°é‡
 x210246_g_ItemData = {nItemId = 10124122, nItemNum = 1}
 x210246_g_SpecificId = 49
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x210246_OnDefaultEvent( sceneId, selfId, targetId )
 
@@ -33,26 +33,26 @@ function x210246_OnDefaultEvent( sceneId, selfId, targetId )
 		local CurLevel = LuaFnGetLevel( sceneId, selfId )
 		local nBagNum = LuaFnGetPropertyBagSpace(sceneId, selfId)
 		local bHave = 0
-		if CurLevel < 10 then       --µÈ¼¶²»¹»10¼¶
+		if CurLevel < 10 then       --ç­‰çº§ä¸å¤Ÿ10çº§
 			x210246_Msg(sceneId, selfId, targetId, "#{TTXS_80821_01}")
 			return
 		end
 		
 		local bHave = GetMissionFlag(sceneId, selfId, MF_Xueshengzhuang_flag)
-		if bHave == 1 then      --ÒÑ¾­²Î¼Ó¹ıÁË
+		if bHave == 1 then      --å·²ç»å‚åŠ è¿‡äº†
 			x210246_Msg(sceneId, selfId, targetId, "#{TTXS_80821_02}")
 			return
 		end
 		
-		if nBagNum < 1 then         --µÀ¾ßÀ¸²»×ãÒ»¸ö
+		if nBagNum < 1 then         --é“å…·æ ä¸è¶³ä¸€ä¸ª
 			x210246_Msg(sceneId, selfId, targetId, "#{TTXS_80821_03}")
 			x210246_Tip(sceneId, selfId, "#{TTXS_80821_04}")
 			return
 		end
 		
 
-		--¸øÎïÆ·
-		BeginAddItem(sceneId)                --¸øÎïÆ·
+		--ç»™ç‰©å“
+		BeginAddItem(sceneId)                --ç»™ç‰©å“
 			AddItem(sceneId, x210246_g_ItemData.nItemId, x210246_g_ItemData.nItemNum)
 		local canAdd = EndAddItem(sceneId,selfId)						
 		if canAdd > 0 then
@@ -60,7 +60,7 @@ function x210246_OnDefaultEvent( sceneId, selfId, targetId )
 			SetMissionFlag(sceneId, selfId, MF_Xueshengzhuang_flag, 1)
 			x210246_Msg(sceneId, selfId, targetId, "#{TTXS_80821_05}")
 			x210246_Tip(sceneId, selfId, "#{TTXS_80821_06}")
-			--Ôö¼ÓÌØĞ§
+			--å¢åŠ ç‰¹æ•ˆ
 			LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, x210246_g_SpecificId, 0);
 			CreateXSzhuangAudit(sceneId, selfId, x210246_g_ItemData.nItemNum)
 		end
@@ -71,7 +71,7 @@ function x210246_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x210246_OnEnumerate( sceneId, selfId, targetId )
 
@@ -84,37 +84,37 @@ function x210246_OnEnumerate( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x210246_CheckAccept( sceneId, selfId )
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x210246_OnAccept( sceneId, selfId )
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x210246_OnAbandon( sceneId, selfId )
 end
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x210246_OnContinue( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x210246_CheckSubmit( sceneId, selfId )
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x210246_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 end

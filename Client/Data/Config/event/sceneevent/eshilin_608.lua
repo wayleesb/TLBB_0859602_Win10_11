@@ -4,15 +4,15 @@ x212104_g_MissionId = 608
 x212104_g_MissionKind = 37
 x212104_g_MissionLevel = 63
 x212104_g_IfMissionElite = 0
-x212104_g_IsMissionOkFail = 0		--±äÁ¿µÄµÚ0Î»
-x212104_g_DemandItem={{id=40002112,num=1}}		--±äÁ¿µÚ1Î»
-x212104_g_MissionName="¿ÉÅÂµÄÕæÏà"
+x212104_g_IsMissionOkFail = 0		--å˜é‡çš„ç¬¬0ä½
+x212104_g_DemandItem={{id=40002112,num=1}}		--å˜é‡ç¬¬1ä½
+x212104_g_MissionName="å¯æ€•çš„çœŸç›¸"
 x212104_g_MissionInfo="#{Lua_Shilin_005}"
-x212104_g_MissionTarget="  °Ñ#Y°¢Ö§µÄÍ·Â­#W½»¸ø#GÔ²ÔÂ´å#WµÄ´å³¤#RÖ£Ğş#W#{_INFOAIM182,163,26,Ö£Ğş}¡£"
-x212104_g_ContinueInfo="  ÄãÓĞÊ²Ã´ÊÂÂğ£¿"
-x212104_g_MissionComplete="  Õâ£¬ÕâÄÑµÀ¾ÍÊÇÙÈÊ¦ÉçÊ×ÁìµÄÍ·Â­£¿"
+x212104_g_MissionTarget="  æŠŠ#Yé˜¿æ”¯çš„å¤´é¢…#Wäº¤ç»™#Gåœ†æœˆæ‘#Wçš„æ‘é•¿#Réƒ‘ç„#W#{_INFOAIM182,163,26,éƒ‘ç„}ã€‚"
+x212104_g_ContinueInfo="  ä½ æœ‰ä»€ä¹ˆäº‹å—ï¼Ÿ"
+x212104_g_MissionComplete="  è¿™ï¼Œè¿™éš¾é“å°±æ˜¯åƒå¸ˆç¤¾é¦–é¢†çš„å¤´é¢…ï¼Ÿ"
 x212104_g_ItemID = 40002112
-x212104_g_Name = "Ö£Ğş"
+x212104_g_Name = "éƒ‘ç„"
 x212104_g_MoneyBonus=26900
 x212104_g_Exp = 22000
 x212104_g_RadioItemBonus={{id=10420070 ,num=1},{id=10422111,num=1}}

@@ -1,28 +1,28 @@
---ÕäÊŞ²¹³äÑªºÍ¿ìÀÖ¶È
+--çå…½è¡¥å……è¡€å’Œå¿«ä¹åº¦
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x701603_g_ScriptId	= 701603
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x701603_OnDefaultEvent( sceneId, selfId, targetId, ButtomNum )
-	--¼ÆËãÕäÊŞÊıÁ¿£¬Èç¹ûÊÇ0£¬Ôò¸ø³öÏàÓ¦ÌáÊ¾
+	--è®¡ç®—çå…½æ•°é‡ï¼Œå¦‚æœæ˜¯0ï¼Œåˆ™ç»™å‡ºç›¸åº”æç¤º
 	local PetNum		= LuaFnGetPetCount( sceneId, selfId )
 	local NpcName
 	if PetNum <= 0 then
 		local NpcName	= GetName( sceneId, targetId )
 		BeginEvent( sceneId )
-			AddText( sceneId, "  <"..NpcName.."´ÓÍ·µ½½Å×ĞÏ¸´òÁ¿ÁËÄã£¬Ïò×ó¿´ÁË¿´£¬ÓÖÏòÓÒ¿´ÁË¿´£¬È»ºóÏòÄãÉíºó¿´ÁË¿´£¬²[ÆğÑÛ¶ÔÄãËµ>#r  ÄãÄÄÀïÓĞ´øÕäÊŞÀ´£¿" )
+			AddText( sceneId, "  <"..NpcName.."ä»å¤´åˆ°è„šä»”ç»†æ‰“é‡äº†ä½ ï¼Œå‘å·¦çœ‹äº†çœ‹ï¼Œåˆå‘å³çœ‹äº†çœ‹ï¼Œç„¶åå‘ä½ èº«åçœ‹äº†çœ‹ï¼Œç‡èµ·çœ¼å¯¹ä½ è¯´>#r  ä½ å“ªé‡Œæœ‰å¸¦çå…½æ¥ï¼Ÿ" )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 		return
 	end
 
-	--»ñÈ¡³öÕ½ÕäÊŞµÄObjId
+	--è·å–å‡ºæˆ˜çå…½çš„ObjId
 	local	ObjId			= x701603_FightingPet( sceneId, selfId )
 	
-	--¼ÆËã¸øÕäÊŞÖÎÁÆĞèÒª¶àÉÙÇ®
+	--è®¡ç®—ç»™çå…½æ²»ç–—éœ€è¦å¤šå°‘é’±
 	local	MoneyCost	= 0
 	local i
 	for i=0, PetNum-1, 1 do
@@ -31,11 +31,11 @@ function x701603_OnDefaultEvent( sceneId, selfId, targetId, ButtomNum )
 
 	if MoneyCost == 0 then
 		BeginEvent( sceneId )
-			AddText(sceneId, "  ÄãµÄÕäÊŞºÜ½¡¿µ£¬²»ĞèÒªÖÎÁÆ¡£" )
+			AddText(sceneId, "  ä½ çš„çå…½å¾ˆå¥åº·ï¼Œä¸éœ€è¦æ²»ç–—ã€‚" )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 		
-		--È¡ÏûÖ¸¶¨Íæ¼ÒÉíÉÏµÄËùÓĞµĞ¶Ô¿ÉÇıÉ¢×¤ÁôĞ§¹û
+		--å–æ¶ˆæŒ‡å®šç©å®¶èº«ä¸Šçš„æ‰€æœ‰æ•Œå¯¹å¯é©±æ•£é©»ç•™æ•ˆæœ
 		if ObjId >= 0 then
 			LuaFnDispelAllHostileImpacts( sceneId, ObjId )
 		end
@@ -46,73 +46,73 @@ function x701603_OnDefaultEvent( sceneId, selfId, targetId, ButtomNum )
 	local PetID_H, PetID_L
 	if ButtomNum == PET_FULL then
 		BeginEvent( sceneId )
-			AddText( sceneId, "  ÄãĞèÒª»¨·Ñ#G#{_EXCHG"..MoneyCost.."}#W£¬È·¶¨Òª¸øÕäÊŞ»Ö¸´Ã´£¿" )
-			--È·¶¨¸øÕäÊŞ¼ÓÑª°´Å¥
-			AddNumText( sceneId, x701603_g_ScriptId, "ºÃµÄ", 6, PET_FULL_OK )
+			AddText( sceneId, "  ä½ éœ€è¦èŠ±è´¹#G#{_EXCHG"..MoneyCost.."}#Wï¼Œç¡®å®šè¦ç»™çå…½æ¢å¤ä¹ˆï¼Ÿ" )
+			--ç¡®å®šç»™çå…½åŠ è¡€æŒ‰é’®
+			AddNumText( sceneId, x701603_g_ScriptId, "å¥½çš„", 6, PET_FULL_OK )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 
 	elseif ButtomNum == PET_FULL_OK then
-		-- µÃµ½½»×ÓºÍ½ğÇ®ÊıÄ¿
+		-- å¾—åˆ°äº¤å­å’Œé‡‘é’±æ•°ç›®
 		local nMoneyJZ = GetMoneyJZ ( sceneId, selfId )
 		local nMoney = GetMoney ( sceneId, selfId )
 		
-		--¼ì²éÍæ¼ÒÊÇ·ñÓĞ×ã¹»µÄÏÖ½ğ
+		--æ£€æŸ¥ç©å®¶æ˜¯å¦æœ‰è¶³å¤Ÿçš„ç°é‡‘
 		if (nMoneyJZ + nMoney >= MoneyCost) then
 
-			--¿Û³ı½»×ÓºÍ½ğÇ®
+			--æ‰£é™¤äº¤å­å’Œé‡‘é’±
 			local moneyJZ, money = LuaFnCostMoneyWithPriority ( sceneId, selfId, MoneyCost )
 		
-			--ÕäÊŞ»ØÑª
+			--çå…½å›è¡€
 			for i=0, PetNum-1, 1 do
 				Pet_MaxHP	= LuaFnGetPet_MaxHP( sceneId, selfId, i )
 
-				--¸ù¾İÕäÊŞindexµÃµ½ÕäÊŞguid
+				--æ ¹æ®çå…½indexå¾—åˆ°çå…½guid
 				PetID_H, PetID_L = LuaFnGetPetGUID( sceneId, selfId, i )
-				--ÌáÉıHP
+				--æå‡HP
 				LuaFnSetPetHP( sceneId, selfId, PetID_H, PetID_L, Pet_MaxHP )
 			end
 			
-			--È¡ÏûÖ¸¶¨Íæ¼ÒÉíÉÏµÄËùÓĞµĞ¶Ô¿ÉÇıÉ¢×¤ÁôĞ§¹û
+			--å–æ¶ˆæŒ‡å®šç©å®¶èº«ä¸Šçš„æ‰€æœ‰æ•Œå¯¹å¯é©±æ•£é©»ç•™æ•ˆæœ
 			if ObjId >= 0 then
 				LuaFnDispelAllHostileImpacts( sceneId, ObjId )
 			end
 
-			--ÔÚnpcÁÄÌì´°¿ÚÍ¨ÖªÍæ¼Ò»¨·ÑÁË¶àÉÙÇ®£¬²¢¸æËßÍæ¼ÒÕäÊŞÒÑ¾­»Ö¸´ÁË
+			--åœ¨npcèŠå¤©çª—å£é€šçŸ¥ç©å®¶èŠ±è´¹äº†å¤šå°‘é’±ï¼Œå¹¶å‘Šè¯‰ç©å®¶çå…½å·²ç»æ¢å¤äº†
 			if (moneyJZ == MoneyCost) then
-				-- Ö»¿Û½»×Ó
+				-- åªæ‰£äº¤å­
 				BeginEvent( sceneId )
-					AddText( sceneId, "  Äã»¨·ÑÁË#G#{_EXCHG"..moneyJZ.."}#W£¬ÄãµÄÕäÊŞ¶¼»Ö¸´ºÃÁË¡£" )
+					AddText( sceneId, "  ä½ èŠ±è´¹äº†#G#{_EXCHG"..moneyJZ.."}#Wï¼Œä½ çš„çå…½éƒ½æ¢å¤å¥½äº†ã€‚" )
 				EndEvent( sceneId )
 				DispatchEventList( sceneId, selfId, targetId )
 
 			elseif (moneyJZ > 0) and (moneyJZ + money) == MoneyCost then
-				-- ¿Û³ı½»×ÓºÍ½ğÇ®
+				-- æ‰£é™¤äº¤å­å’Œé‡‘é’±
 				BeginEvent( sceneId )
-					AddText( sceneId, "  Äã»¨·ÑÁË#G#{_EXCHG"..moneyJZ.."}#W£¬" )
-					AddText( sceneId, "  Äã»¨·ÑÁË#G#{_MONEY"..money.."}#W¡£" )
-					AddText( sceneId, "  ÄãµÄÕäÊŞ¶¼»Ö¸´ºÃÁË¡£" )
+					AddText( sceneId, "  ä½ èŠ±è´¹äº†#G#{_EXCHG"..moneyJZ.."}#Wï¼Œ" )
+					AddText( sceneId, "  ä½ èŠ±è´¹äº†#G#{_MONEY"..money.."}#Wã€‚" )
+					AddText( sceneId, "  ä½ çš„çå…½éƒ½æ¢å¤å¥½äº†ã€‚" )
 				EndEvent( sceneId )
 				DispatchEventList( sceneId, selfId, targetId )
 
 			elseif (moneyJZ == 0) and ( money == MoneyCost) then
-				-- ¿Û³ı½ğÇ®
+				-- æ‰£é™¤é‡‘é’±
 				BeginEvent( sceneId )
-					AddText( sceneId, "  Äã»¨·ÑÁË#G#{_MONEY"..money.."}#W£¬ÄãµÄÕäÊŞ¶¼»Ö¸´ºÃÁË¡£" )
+					AddText( sceneId, "  ä½ èŠ±è´¹äº†#G#{_MONEY"..money.."}#Wï¼Œä½ çš„çå…½éƒ½æ¢å¤å¥½äº†ã€‚" )
 				EndEvent( sceneId )
 				DispatchEventList( sceneId, selfId, targetId )
 
 			else			
 				BeginEvent( sceneId )
-					AddText( sceneId, "  »Ö¸´Ê§°Ü¡£" )
+					AddText( sceneId, "  æ¢å¤å¤±è´¥ã€‚" )
 				EndEvent( sceneId )
 				DispatchEventList( sceneId, selfId, targetId )
 			end
 			
-		-- Ç®²»¹»
+		-- é’±ä¸å¤Ÿ
 		else
 			BeginEvent( sceneId )
-				AddText( sceneId, "  ÄãµÄ½ğÇ®²»×ã£¡" )
+				AddText( sceneId, "  ä½ çš„é‡‘é’±ä¸è¶³ï¼" )
 			EndEvent( sceneId )
 			DispatchMissionTips( sceneId, selfId )
 			return
@@ -122,31 +122,31 @@ function x701603_OnDefaultEvent( sceneId, selfId, targetId, ButtomNum )
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x701603_OnEnumerate( sceneId, selfId, targetId )
-	--Ìí¼Ó°´Å¥
-	AddNumText(sceneId,x701603_g_ScriptId,"¸øÕäÊŞ»Ö¸´ÆøÑª", 6,PET_FULL)	--ÕâÀïµÄPET_FULLÊÇÓÃÀ´±íÊ¾Õâ¸ö°´Å¥ÊÇµÚÒ»¸öÒ³ÃæµÄÏÔÊ¾°´Å¥£¬²»ÊÇÈ·¶¨»Ö¸´µÄ°´Å¥
+	--æ·»åŠ æŒ‰é’®
+	AddNumText(sceneId,x701603_g_ScriptId,"ç»™çå…½æ¢å¤æ°”è¡€", 6,PET_FULL)	--è¿™é‡Œçš„PET_FULLæ˜¯ç”¨æ¥è¡¨ç¤ºè¿™ä¸ªæŒ‰é’®æ˜¯ç¬¬ä¸€ä¸ªé¡µé¢çš„æ˜¾ç¤ºæŒ‰é’®ï¼Œä¸æ˜¯ç¡®å®šæ¢å¤çš„æŒ‰é’®
 	return
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x701603_CheckAccept( sceneId, selfId )
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x701603_OnAccept( sceneId, selfId, ABILITY_CAIKUANG )
 end
 
 --**********************************
---¼ÆËã»Ö¸´Ñª·ÑÓÃ
+--è®¡ç®—æ¢å¤è¡€è´¹ç”¨
 --**********************************
---µ¥Î»ÑªÑ±Ñø¼ÛÖµ£º0.025+n*0.0005£¨nÎªÕäÊŞµÈ¼¶£©
---µ¥Î»¿ìÀÖ¶È¼ÛÖµ£º0.373+0.44*n£¨nÎªÕäÊŞµÈ¼¶£©
+--å•ä½è¡€é©¯å…»ä»·å€¼ï¼š0.025+n*0.0005ï¼ˆnä¸ºçå…½ç­‰çº§ï¼‰
+--å•ä½å¿«ä¹åº¦ä»·å€¼ï¼š0.373+0.44*nï¼ˆnä¸ºçå…½ç­‰çº§ï¼‰
 function x701603_CalcMoney_hp( sceneId, selfId, index )
 	local lv			= LuaFnGetPet_Level( sceneId, selfId, index )
 	local	hp			= LuaFnGetPet_HP( sceneId, selfId, index )
@@ -163,7 +163,7 @@ function x701603_CalcMoney_hp( sceneId, selfId, index )
 end
 
 --**********************************
---»ñÈ¡³öÕ½ÕäÊŞµÄObjId
+--è·å–å‡ºæˆ˜çå…½çš„ObjId
 --**********************************
 function x701603_FightingPet( sceneId, selfId )
 	local	PetNum	= LuaFnGetPetCount( sceneId, selfId )
@@ -175,7 +175,7 @@ function x701603_FightingPet( sceneId, selfId )
 	end
 	
 	for i=0, PetNum-1, 1 do
-		--¸ù¾İÕäÊŞindexµÃµ½ÕäÊŞguid
+		--æ ¹æ®çå…½indexå¾—åˆ°çå…½guid
 		PetID_H, PetID_L = LuaFnGetPetGUID( sceneId, selfId, i )
 		objId	= LuaFnGetPetObjIdByGUID( sceneId, selfId, PetID_H, PetID_L )
 		

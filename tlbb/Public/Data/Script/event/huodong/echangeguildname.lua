@@ -1,20 +1,20 @@
---°ï»á¸üÃû
+--å¸®ä¼šæ›´å
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x808009_g_ScriptId	= 808009
 
 x808009_g_Key				=
 {
-	["ChgG"]					= 200,	--ÎÒÒª¸Ä°ï»áÃû×Ö
-	["ChgG_Y"]				= 201,	--ÎÒÒª¸Ä°ï»áÃû×Ö£¬È·ÈÏ
+	["ChgG"]					= 200,	--æˆ‘è¦æ”¹å¸®ä¼šåå­—
+	["ChgG_Y"]				= 201,	--æˆ‘è¦æ”¹å¸®ä¼šåå­—ï¼Œç¡®è®¤
 }
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x808009_OnDefaultEvent( sceneId, selfId, targetId )
 
-	--ÊÇ·ñ´¦ÓÚÎŞ·¨Ö´ĞĞÂß¼­µÄ×´Ì¬
+	--æ˜¯å¦å¤„äºæ— æ³•æ‰§è¡Œé€»è¾‘çš„çŠ¶æ€
 	if LuaFnIsCanDoScriptLogic( sceneId, selfId ) ~= 1 then
 		return 0
 	end
@@ -23,7 +23,7 @@ function x808009_OnDefaultEvent( sceneId, selfId, targetId )
 	if key == x808009_g_Key["ChgG"] then
 		BeginEvent( sceneId )
 			AddText( sceneId, "#{ChangeName_ChgG}" )
-			AddNumText( sceneId, x808009_g_ScriptId, "È·¶¨", 6, x808009_g_Key["ChgG_Y"] )
+			AddNumText( sceneId, x808009_g_ScriptId, "ç¡®å®š", 6, x808009_g_Key["ChgG_Y"] )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 	elseif key == x808009_g_Key["ChgG_Y"] then
@@ -38,36 +38,36 @@ function x808009_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x808009_OnEnumerate( sceneId, selfId, targetId )
 	
-	AddNumText( sceneId, x808009_g_ScriptId, "ÎÒÒª¸Ä°ï»áÃû×Ö", 6, x808009_g_Key["ChgG"] )
+	AddNumText( sceneId, x808009_g_ScriptId, "æˆ‘è¦æ”¹å¸®ä¼šåå­—", 6, x808009_g_Key["ChgG"] )
 
 end
 
 --**********************************
---ÊÇ·ñÓĞ×Ê¸ñÉêÇë°ï»á¸üÃû
+--æ˜¯å¦æœ‰èµ„æ ¼ç”³è¯·å¸®ä¼šæ›´å
 --**********************************
 function x808009_IsCanChangeGuildName( sceneId, selfId )
 
-	--ÊÇ·ñ´¦ÓÚÎŞ·¨Ö´ĞĞÂß¼­µÄ×´Ì¬
+	--æ˜¯å¦å¤„äºæ— æ³•æ‰§è¡Œé€»è¾‘çš„çŠ¶æ€
 	if LuaFnIsCanDoScriptLogic( sceneId, selfId ) ~= 1 then
 		return 0
 	end
 
 	if GetGuildLevel( sceneId, selfId ) < 0 then
-		x808009_MsgBox( sceneId, selfId, "Äú»¹Ã»ÓĞÉêÇë°ï»á" )
+		x808009_MsgBox( sceneId, selfId, "æ‚¨è¿˜æ²¡æœ‰ç”³è¯·å¸®ä¼š" )
 		return 0
 	end
 	if GetGuildPos( sceneId, selfId ) ~= GUILD_POSITION_CHIEFTAIN then
-		x808009_MsgBox( sceneId, selfId, "ĞèÒª°ïÖ÷²Å¿ÉÒÔĞŞ¸Ä°ï»áÃû×Ö" )
+		x808009_MsgBox( sceneId, selfId, "éœ€è¦å¸®ä¸»æ‰å¯ä»¥ä¿®æ”¹å¸®ä¼šåå­—" )
 		return 0
 	end
 	local	GuildName	= LuaFnGetGuildName( sceneId, selfId )
 	local	i, _			= strfind( GuildName, "*" )
 	if i == nil then
-		x808009_MsgBox( sceneId, selfId, "Äú²»ÊÇÒÆÃñÍæ¼Ò£¬»òÕßÄúÒÑ¾­ĞŞ¸Ä¹ıÃû×ÖÁË" )
+		x808009_MsgBox( sceneId, selfId, "æ‚¨ä¸æ˜¯ç§»æ°‘ç©å®¶ï¼Œæˆ–è€…æ‚¨å·²ç»ä¿®æ”¹è¿‡åå­—äº†" )
 		return 0
 	end
 	
@@ -76,7 +76,7 @@ function x808009_IsCanChangeGuildName( sceneId, selfId )
 end
 
 --**********************************
---°ï»áÉêÇë¸üÃûÇ°Ìõ¼ş¼ì²é
+--å¸®ä¼šç”³è¯·æ›´åå‰æ¡ä»¶æ£€æŸ¥
 --**********************************
 function x808009_CallBackChangeGuildNameBefore( sceneId, selfId )
 
@@ -89,41 +89,41 @@ function x808009_CallBackChangeGuildNameBefore( sceneId, selfId )
 end
 
 --**********************************
---°ï»áÉêÇë¸üÃûºó½á¹û·µ»Ø
+--å¸®ä¼šç”³è¯·æ›´ååç»“æœè¿”å›
 --**********************************
 function x808009_CallBackChangeGuildNameAfter( sceneId, selfId, nRetType )
 
-	--ÊÇ·ñ´¦ÓÚÎŞ·¨Ö´ĞĞÂß¼­µÄ×´Ì¬
+	--æ˜¯å¦å¤„äºæ— æ³•æ‰§è¡Œé€»è¾‘çš„çŠ¶æ€
 	if LuaFnIsCanDoScriptLogic( sceneId, selfId ) ~= 1 then
 		return 0
 	end
 
-	--¸üÃûÏûÏ¢·µ»ØÀàĞÍ
+	--æ›´åæ¶ˆæ¯è¿”å›ç±»å‹
 	--enum	CHANGE_NAME_RESULT
 	--{
-	--	CHGNAME_RE_OK					= 0 ,	// ¸üÃû³É¹¦
-	--	CHGNAME_RE_ERROR ,					// ¸üÃûÊ§°Ü
-	--	CHGNAME_RE_DBBUSY ,					// DBÑ¹Á¦¹ı´ó£¬ÇëÖØĞÂ³¢ÊÔ
-	--	CHGNAME_RE_NAMEERROR ,			// ²»¿É½ÓÊÜµÄĞÂÃû³Æ
-	--	CHGNAME_RE_REPEATED ,				// Ãû³ÆÖØ¸´
+	--	CHGNAME_RE_OK					= 0 ,	// æ›´åæˆåŠŸ
+	--	CHGNAME_RE_ERROR ,					// æ›´åå¤±è´¥
+	--	CHGNAME_RE_DBBUSY ,					// DBå‹åŠ›è¿‡å¤§ï¼Œè¯·é‡æ–°å°è¯•
+	--	CHGNAME_RE_NAMEERROR ,			// ä¸å¯æ¥å—çš„æ–°åç§°
+	--	CHGNAME_RE_REPEATED ,				// åç§°é‡å¤
 	--};
 	if nRetType == 1 then
-		x808009_MsgBox( sceneId, selfId, "¸üÃûÊ§°Ü" )
+		x808009_MsgBox( sceneId, selfId, "æ›´åå¤±è´¥" )
 	elseif nRetType == 2 then
-		x808009_MsgBox( sceneId, selfId, "DBÑ¹Á¦¹ı´ó£¬ÇëÖØĞÂ³¢ÊÔ" )
+		x808009_MsgBox( sceneId, selfId, "DBå‹åŠ›è¿‡å¤§ï¼Œè¯·é‡æ–°å°è¯•" )
 	elseif nRetType == 3 then
-		x808009_MsgBox( sceneId, selfId, "²»¿É½ÓÊÜµÄĞÂÃû³Æ" )
+		x808009_MsgBox( sceneId, selfId, "ä¸å¯æ¥å—çš„æ–°åç§°" )
 	elseif nRetType == 4 then
-		x808009_MsgBox( sceneId, selfId, "Ãû³ÆÖØ¸´" )
+		x808009_MsgBox( sceneId, selfId, "åç§°é‡å¤" )
 	else
-		x808009_MsgBox( sceneId, selfId, "¹§Ï²Äú£¬ÄúµÄ°ï»áÃû×ÖĞŞ¸Ä³É¹¦£¡" )
+		x808009_MsgBox( sceneId, selfId, "æ­å–œæ‚¨ï¼Œæ‚¨çš„å¸®ä¼šåå­—ä¿®æ”¹æˆåŠŸï¼" )
 	end
 	return 1
 
 end
 
 --**********************************
---ĞÑÄ¿ÌáÊ¾
+--é†’ç›®æç¤º
 --**********************************
 function x808009_MsgBox( sceneId, selfId, str )
 

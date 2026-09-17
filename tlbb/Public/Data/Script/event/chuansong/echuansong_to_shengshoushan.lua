@@ -1,32 +1,32 @@
 --created by WTT 2009.3.2
 
---ÊÂ¼ş£º´«ËÍµ½Ê¥ÊŞÉ½
+--äº‹ä»¶ï¼šä¼ é€åˆ°åœ£å…½å±±
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x400963_g_ScriptId = 400963
 
---ÈÎÎñÎÄ±¾ÃèÊö
-x400963_g_MissionName="#{QSSS_090302_1}"		-- È¥Ê¥ÊŞÉ½
-x400963_g_MissionInfo="´«ËÍµ½Ê¥ÊŞÉ½¡£"  		-- ÈÎÎñÃèÊö
-x400963_g_MissionTarget="´«ËÍµ½Ê¥ÊŞÉ½¡£"		-- ÈÎÎñÄ¿±ê
-x400963_g_ContinueInfo="´«ËÍµ½Ê¥ÊŞÉ½¡£"			-- Î´Íê³ÉÈÎÎñµÄnpc¶Ô»°
-x400963_g_MissionComplete="´«ËÍµ½Ê¥ÊŞÉ½¡£"	-- Íê³ÉÈÎÎñnpcËµ»°µÄ»°
+--ä»»åŠ¡æ–‡æœ¬æè¿°
+x400963_g_MissionName="#{QSSS_090302_1}"		-- å»åœ£å…½å±±
+x400963_g_MissionInfo="ä¼ é€åˆ°åœ£å…½å±±ã€‚"  		-- ä»»åŠ¡æè¿°
+x400963_g_MissionTarget="ä¼ é€åˆ°åœ£å…½å±±ã€‚"		-- ä»»åŠ¡ç›®æ ‡
+x400963_g_ContinueInfo="ä¼ é€åˆ°åœ£å…½å±±ã€‚"			-- æœªå®Œæˆä»»åŠ¡çš„npcå¯¹è¯
+x400963_g_MissionComplete="ä¼ é€åˆ°åœ£å…½å±±ã€‚"	-- å®Œæˆä»»åŠ¡npcè¯´è¯çš„è¯
 
 --**********************************
---Èë¿Úº¯Êı
+--å…¥å£å‡½æ•°
 --**********************************
-function x400963_OnDefaultEvent( sceneId, selfId, targetId )	--µã»÷¸ÃÈÎÎñºóÖ´ĞĞ´Ë½Å±¾
+function x400963_OnDefaultEvent( sceneId, selfId, targetId )	--ç‚¹å‡»è¯¥ä»»åŠ¡åæ‰§è¡Œæ­¤è„šæœ¬
 	
-	-- ¼ì²âÍæ¼ÒÉíÉÏÊÇ²»ÊÇÓĞ¡°ÒøÆ±¡±Õâ¸ö¶«Î÷£¬ÓĞ¾Í²»ÄÜÊ¹ÓÃÕâÀïµÄ¹¦ÄÜ
+	-- æ£€æµ‹ç©å®¶èº«ä¸Šæ˜¯ä¸æ˜¯æœ‰â€œé“¶ç¥¨â€è¿™ä¸ªä¸œè¥¿ï¼Œæœ‰å°±ä¸èƒ½ä½¿ç”¨è¿™é‡Œçš„åŠŸèƒ½
 	if GetItemCount(sceneId, selfId, 40002000) >= 1 then
 		BeginEvent( sceneId )
-			AddText( sceneId, "  ÄãÉíÉÏÓĞÒøÆ±£¬ÕıÔÚÅÜÉÌ£¡ÎÒ²»ÄÜ°ïÖúÄã¡£" )
+			AddText( sceneId, "  ä½ èº«ä¸Šæœ‰é“¶ç¥¨ï¼Œæ­£åœ¨è·‘å•†ï¼æˆ‘ä¸èƒ½å¸®åŠ©ä½ ã€‚" )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 		return
 	end
   
-	--äîÔËÏà¹Ø
+	--æ¼•è¿ç›¸å…³
 	if GetTeamId(sceneId,selfId)>=0 and 
 		IsTeamFollow(sceneId, selfId)==1 and
 		LuaFnIsTeamLeader(sceneId,selfId)==1 then
@@ -39,7 +39,7 @@ function x400963_OnDefaultEvent( sceneId, selfId, targetId )	--µã»÷¸ÃÈÎÎñºóÖ´ĞĞ´
 			end
 			if IsHaveMission(sceneId,mems[i],4021) > 0 then
 				BeginEvent( sceneId )
-					AddText( sceneId, "  Äã¶ÓÎé³ÉÔ±ÖĞÓĞÈËÓĞäîÔË»õ²ÕÔÚÉí£¬ÎÒÃÇæäÕ¾²»ÄÜÎªÄãÌá¹©´«ËÍ·şÎñ¡£" )
+					AddText( sceneId, "  ä½ é˜Ÿä¼æˆå‘˜ä¸­æœ‰äººæœ‰æ¼•è¿è´§èˆ±åœ¨èº«ï¼Œæˆ‘ä»¬é©¿ç«™ä¸èƒ½ä¸ºä½ æä¾›ä¼ é€æœåŠ¡ã€‚" )
 				EndEvent( sceneId )
 				DispatchEventList( sceneId, selfId, targetId )
 				return
@@ -49,25 +49,25 @@ function x400963_OnDefaultEvent( sceneId, selfId, targetId )	--µã»÷¸ÃÈÎÎñºóÖ´ĞĞ´
   
 	if IsHaveMission(sceneId,selfId,4021) > 0 then
 		BeginEvent( sceneId )
-			AddText( sceneId, "  ÄãÓĞäîÔË»õ²ÕÔÚÉí£¬ÎÒÃÇæäÕ¾²»ÄÜÎªÄãÌá¹©´«ËÍ·şÎñ¡£" )
+			AddText( sceneId, "  ä½ æœ‰æ¼•è¿è´§èˆ±åœ¨èº«ï¼Œæˆ‘ä»¬é©¿ç«™ä¸èƒ½ä¸ºä½ æä¾›ä¼ é€æœåŠ¡ã€‚" )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 		return
 	end
 	
-	-- ÒÔÉÏ¼ì²â¾ùÍ¨¹ı	
+	-- ä»¥ä¸Šæ£€æµ‹å‡é€šè¿‡	
 	BeginUICommand(sceneId)
 			UICommand_AddInt(sceneId, x400963_g_ScriptId);			
 			UICommand_AddInt(sceneId, targetId);
 			UICommand_AddString(sceneId, "GotoShengShouShan");
-			UICommand_AddString(sceneId, "#{QSSS_090302_2}");		-- ¡°Ê¥ÊŞÉ½Îª²»¼ÓÉ±Æø³¡¾°£¬Çë×¢Òâ°²È«¡£ÄãÈ·ÈÏÒª½øÈëÂğ£¿¡±
+			UICommand_AddString(sceneId, "#{QSSS_090302_2}");		-- â€œåœ£å…½å±±ä¸ºä¸åŠ æ€æ°”åœºæ™¯ï¼Œè¯·æ³¨æ„å®‰å…¨ã€‚ä½ ç¡®è®¤è¦è¿›å…¥å—ï¼Ÿâ€
 	EndUICommand(sceneId)
 	DispatchUICommand(sceneId,selfId, 24)
 	
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x400963_OnEnumerate( sceneId, selfId, targetId )
 	
@@ -76,7 +76,7 @@ function x400963_OnEnumerate( sceneId, selfId, targetId )
 end
 
 --**********************************
---´«ËÍÖÁÊ¥ÊŞÉ½
+--ä¼ é€è‡³åœ£å…½å±±
 --**********************************
 function x400963_GotoShengShouShan( sceneId, selfId, targetId )
 

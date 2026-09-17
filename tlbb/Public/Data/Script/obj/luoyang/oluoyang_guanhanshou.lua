@@ -1,26 +1,26 @@
---ÂåÑôNPC
---¹ØººÊÙ
---ÆÕÍ¨
+--æ´›é˜³NPC
+--å…³æ±‰å¯¿
+--æ™®é€š
 
 x000125_g_ScriptId	= 125
 
---²Ù×÷¼¯
+--æ“ä½œé›†
 x000125_g_Key				=
 {
-		["do"]					= 100,	--È·¶¨
-		["undo"]				= 101,	--È¡Ïû
-		["del"]					= 103,	--ÎÒ¾ö¶¨ÍË³ö½­ºş
-		["hlp"]					= 104,	--°ïÖú
+		["do"]					= 100,	--ç¡®å®š
+		["undo"]				= 101,	--å–æ¶ˆ
+		["del"]					= 103,	--æˆ‘å†³å®šé€€å‡ºæ±Ÿæ¹–
+		["hlp"]					= 104,	--å¸®åŠ©
 }
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x000125_OnDefaultEvent( sceneId, selfId, targetId )
 	BeginEvent( sceneId )
-		AddText( sceneId, "  ÎÒ×¨ÃÅÎª½­ºşÓ¢ĞÛÖ÷³Ö½ğÅèÏ´ÊÖµÄÒÇÊ½¡£Èç¹ûÄãÏëÒªÉ¾³ı½ÇÉ«£¬ÍË³ö½­ºş£¬¾Í¿ÉÒÔÀ´ÕÒÎÒ¡£" )
-		AddNumText( sceneId, x000125_g_ScriptId, "ÎÒÏëÉ¾³ı½ÇÉ«", -1, x000125_g_Key["do"] )
-		AddNumText( sceneId, x000125_g_ScriptId, "¹ØÓÚÉ¾³ı½ÇÉ«", 11, x000125_g_Key["hlp"] )
+		AddText( sceneId, "  æˆ‘ä¸“é—¨ä¸ºæ±Ÿæ¹–è‹±é›„ä¸»æŒé‡‘ç›†æ´—æ‰‹çš„ä»ªå¼ã€‚å¦‚æœä½ æƒ³è¦åˆ é™¤è§’è‰²ï¼Œé€€å‡ºæ±Ÿæ¹–ï¼Œå°±å¯ä»¥æ¥æ‰¾æˆ‘ã€‚" )
+		AddNumText( sceneId, x000125_g_ScriptId, "æˆ‘æƒ³åˆ é™¤è§’è‰²", -1, x000125_g_Key["do"] )
+		AddNumText( sceneId, x000125_g_ScriptId, "å…³äºåˆ é™¤è§’è‰²", 11, x000125_g_Key["hlp"] )
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, selfId, targetId )
 end
@@ -29,43 +29,43 @@ function x000125_OnEventRequest( sceneId, selfId, targetId, eventId )
 	local	key	= GetNumText()
 
 	if key == x000125_g_Key["do"] then
-		--1,		//ÇëÇó³É¹¦£¬¿ÉÒÔÉ¾³ı
-		--2,		//ÔÚ°ïÅÉÖĞ²»¿ÉÒÔ×ÔÉ±
-		--3,		//½á»é×´Ì¬
-		--4,		//ÎïÆ·ÉÏËø²»ÄÜÉ¾³ı
-		--5,		//ÓµÓĞÍæ¼ÒÉÌµê
-		--6,		//ÓµÓĞ½á°İĞÖµÜ
-		--7,		//ÓµÓĞÊ¦Í½¹ØÏµ
+		--1,		//è¯·æ±‚æˆåŠŸï¼Œå¯ä»¥åˆ é™¤
+		--2,		//åœ¨å¸®æ´¾ä¸­ä¸å¯ä»¥è‡ªæ€
+		--3,		//ç»“å©šçŠ¶æ€
+		--4,		//ç‰©å“ä¸Šé”ä¸èƒ½åˆ é™¤
+		--5,		//æ‹¥æœ‰ç©å®¶å•†åº—
+		--6,		//æ‹¥æœ‰ç»“æ‹œå…„å¼Ÿ
+		--7,		//æ‹¥æœ‰å¸ˆå¾’å…³ç³»
 		BeginEvent(sceneId)
 			local result = QueryDeleteCharState(sceneId,selfId)
 			if result == 1 then
-				AddText(sceneId,"  ½ğÅèÏ´ÊÖ£¬ÍË³ö½­ºş¡£")
-				AddNumText(sceneId,x000125_g_ScriptId,"ÎÒ¾ö¶¨ÍË³ö½­ºş",6,x000125_g_Key["del"])
+				AddText(sceneId,"  é‡‘ç›†æ´—æ‰‹ï¼Œé€€å‡ºæ±Ÿæ¹–ã€‚")
+				AddNumText(sceneId,x000125_g_ScriptId,"æˆ‘å†³å®šé€€å‡ºæ±Ÿæ¹–",6,x000125_g_Key["del"])
 			end
 			if result == 2 then
-				AddText(sceneId,"  Äã»¹ÔÚ°ïÅÉÖĞ£¬²»¿ÉÒÔÍËÒş½­ºş¡£")
+				AddText(sceneId,"  ä½ è¿˜åœ¨å¸®æ´¾ä¸­ï¼Œä¸å¯ä»¥é€€éšæ±Ÿæ¹–ã€‚")
 			end
 			if result == 3 then
-				AddText(sceneId,"  Äã»¹ÔÚ½á»é×´Ì¬£¬²»¿ÉÒÔÍËÒş½­ºş¡£")
+				AddText(sceneId,"  ä½ è¿˜åœ¨ç»“å©šçŠ¶æ€ï¼Œä¸å¯ä»¥é€€éšæ±Ÿæ¹–ã€‚")
 			end
 			if result == 4 then
-				AddText(sceneId,"  ÄãÓĞÎïÆ·ÒÑ¾­ÉÏËø£¬²»¿ÉÒÔÍËÒş½­ºş¡£")
+				AddText(sceneId,"  ä½ æœ‰ç‰©å“å·²ç»ä¸Šé”ï¼Œä¸å¯ä»¥é€€éšæ±Ÿæ¹–ã€‚")
 			end
 			if result == 5 then
-				AddText(sceneId,"  ÄãÓµÓĞÍæ¼ÒÉÌµê£¬²»¿ÉÒÔÍËÒş½­ºş¡£")
+				AddText(sceneId,"  ä½ æ‹¥æœ‰ç©å®¶å•†åº—ï¼Œä¸å¯ä»¥é€€éšæ±Ÿæ¹–ã€‚")
 			end
 			if result == 6 then
-				AddText(sceneId,"  ÄãÓµÓĞ½á°İĞÖµÜ£¬²»¿ÉÒÔÍËÒş½­ºş¡£")
+				AddText(sceneId,"  ä½ æ‹¥æœ‰ç»“æ‹œå…„å¼Ÿï¼Œä¸å¯ä»¥é€€éšæ±Ÿæ¹–ã€‚")
 			end
 			if result == 7 then
-				AddText(sceneId,"  ÄãÓµÓĞÊ¦Í½¹ØÏµ£¬²»¿ÉÒÔÍËÒş½­ºş¡£")
+				AddText(sceneId,"  ä½ æ‹¥æœ‰å¸ˆå¾’å…³ç³»ï¼Œä¸å¯ä»¥é€€éšæ±Ÿæ¹–ã€‚")
 			end
 			if result == 8 then
 					local lefttime = GetLeftDeleteTime(sceneId,selfId)-11
 					if lefttime > 0 then
-						AddText(sceneId,"  ÄãÍËÒş½­ºşµÄÊ±¼äÎ´µ½£¬»¹²î" ..lefttime.."Ìì¡£")
+						AddText(sceneId,"  ä½ é€€éšæ±Ÿæ¹–çš„æ—¶é—´æœªåˆ°ï¼Œè¿˜å·®" ..lefttime.."å¤©ã€‚")
 					else
-						AddText(sceneId,"  Äã»¹Ã»ÓĞÉêÇëÍËÒş½­ºş£¡");
+						AddText(sceneId,"  ä½ è¿˜æ²¡æœ‰ç”³è¯·é€€éšæ±Ÿæ¹–ï¼");
 					end
 			end
 		EndEvent(sceneId)
@@ -91,7 +91,7 @@ function x000125_OpenClientAcceptUI( sceneId, selfId, targetId, eventId )
 		UICommand_AddInt(sceneId,targetId);
 		UICommand_AddInt(sceneId,eventId)
 		UICommand_AddString(sceneId,"OnMsgAccept");
-		local str = format("ÄãÈ·¶¨ÒªÉ¾³ı½ÇÉ«Âğ£¿")
+		local str = format("ä½ ç¡®å®šè¦åˆ é™¤è§’è‰²å—ï¼Ÿ")
 		UICommand_AddString(sceneId,str);
 	EndUICommand(sceneId)
 	

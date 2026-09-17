@@ -1,5 +1,5 @@
---ÕäÊŞ·±Ö³
---½Å±¾ºÅ £¨¸Ä³ÉÕıÈ·½Å±¾ºÅ£©
+--çå…½ç¹æ®–
+--è„šæœ¬å· ï¼ˆæ”¹æˆæ­£ç¡®è„šæœ¬å·ï¼‰
 
 x800103_g_scriptId = 800103
 
@@ -9,5 +9,5 @@ function x800103_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 function x800103_OnEnumerate( sceneId, selfId, targetId )
---AddNumText(sceneId,x800103_g_scriptId,"Á¶ÊŞ",6,x800103_g_scriptId)
+--AddNumText(sceneId,x800103_g_scriptId,"ç‚¼å…½",6,x800103_g_scriptId)
 end

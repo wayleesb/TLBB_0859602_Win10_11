@@ -1,11 +1,11 @@
---³ÇÊĞNPC
---Îä¾ß
+--åŸå¸‚NPC
+--æ­¦å…·
 
 x805007_g_scriptId=805007
 x805007_g_BuildingID15 = 6
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x805007_OnDefaultEvent( sceneId, selfId,targetId )
 	
@@ -15,7 +15,7 @@ function x805007_OnDefaultEvent( sceneId, selfId,targetId )
 	
 	if(guildid ~= cityguildid) then
 		BeginEvent(sceneId)
-			strText = "    ·ÇÎÒ°ïÖÚ£¬Ò»ÇĞÉñ±øÀûÈĞË¡²»ÍâÂô¡£"
+			strText = "    éæˆ‘å¸®ä¼—ï¼Œä¸€åˆ‡ç¥å…µåˆ©åˆƒæ•ä¸å¤–å–ã€‚"
 			AddText(sceneId,strText)
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
@@ -23,17 +23,17 @@ function x805007_OnDefaultEvent( sceneId, selfId,targetId )
 	end
 	
 	BeginEvent(sceneId)
-		strText = "    ÎÒÊÇÎäÆ÷µêÕÆ¹ñ£¬±¦½£ÅäÓ¢ĞÛ£¬ÌìÏÂÃû±øÖîÊÂ£¬¶¼¿ÉÒÔÕÒÎÒ£¬×Ô¼ºÈËÂï¡£"
+		strText = "    æˆ‘æ˜¯æ­¦å™¨åº—æŒæŸœï¼Œå®å‰‘é…è‹±é›„ï¼Œå¤©ä¸‹åå…µè¯¸äº‹ï¼Œéƒ½å¯ä»¥æ‰¾æˆ‘ï¼Œè‡ªå·±äººå˜›ã€‚"
 		AddText(sceneId,strText)
-		AddNumText(sceneId,x805007_g_scriptId,"ÉñÃØÉÌµê",7,8)
-		AddNumText(sceneId,x805007_g_scriptId,"Î¯ÍĞ´òÔì",6,9)
-		AddNumText(sceneId,x805007_g_scriptId,"Îä¾ß·»½éÉÜ",11,7)
+		AddNumText(sceneId,x805007_g_scriptId,"ç¥ç§˜å•†åº—",7,8)
+		AddNumText(sceneId,x805007_g_scriptId,"å§”æ‰˜æ‰“é€ ",6,9)
+		AddNumText(sceneId,x805007_g_scriptId,"æ­¦å…·åŠä»‹ç»",11,7)
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x805007_OnEventRequest( sceneId, selfId, targetId, eventId )
 	if GetNumText() == 1 then
@@ -48,7 +48,7 @@ function x805007_OnEventRequest( sceneId, selfId, targetId, eventId )
 		CityBuildingChange(sceneId, selfId, x805007_g_BuildingID15, 4)
 	elseif GetNumText() == 6 then
 		BeginUICommand(sceneId)
-			UICommand_AddInt(sceneId,targetId) --µ÷ÓÃ³ÇÊĞÉÌµê½çÃæ
+			UICommand_AddInt(sceneId,targetId) --è°ƒç”¨åŸå¸‚å•†åº—ç•Œé¢
 			UICommand_AddInt(sceneId,x805007_g_BuildingID15)
 		EndUICommand(sceneId)
 		DispatchUICommand(sceneId,selfId, 104)
@@ -59,12 +59,12 @@ function x805007_OnEventRequest( sceneId, selfId, targetId, eventId )
 		DispatchEventList( sceneId, selfId, targetId )
 	elseif GetNumText() == 8 then
 		BeginEvent(sceneId)
-		AddText( sceneId, "Õâ¸ö¹¦ÄÜ¼´½«¿ª·Å" )		
+		AddText( sceneId, "è¿™ä¸ªåŠŸèƒ½å³å°†å¼€æ”¾" )		
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 	elseif GetNumText() == 9 then
 		BeginEvent(sceneId)
-		AddText( sceneId, "Õâ¸ö¹¦ÄÜ¼´½«¿ª·Å" )		
+		AddText( sceneId, "è¿™ä¸ªåŠŸèƒ½å³å°†å¼€æ”¾" )		
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 	end

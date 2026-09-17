@@ -1,38 +1,38 @@
---Éú³¤µã
---¶ÔÓ¦Éú»î¼¼ÄÜ£ºµöÓã	µöÓã¼¼ÄÜµÄ±àºÅ9
---öãÓã
---½Å±¾ºÅ712003
---öãÓã100%
---µÈ¼¶1
+--ç”Ÿé•¿ç‚¹
+--å¯¹åº”ç”Ÿæ´»æŠ€èƒ½ï¼šé’“é±¼	é’“é±¼æŠ€èƒ½çš„ç¼–å·9
+--é²¢é±¼
+--è„šæœ¬å·712003
+--é²¢é±¼100%
+--ç­‰çº§1
 
---Ã¿´Î´ò¿ª±Ø¶¨»ñµÃµÄ²úÆ·
+--æ¯æ¬¡æ‰“å¼€å¿…å®šè·å¾—çš„äº§å“
 x712003_g_MainItemId = 20102003
---¿ÉÄÜµÃµ½µÄ²úÆ·
+--å¯èƒ½å¾—åˆ°çš„äº§å“
 --g_SubItemId = 20304005
---ĞèÒª¼¼ÄÜId
+--éœ€è¦æŠ€èƒ½Id
 x712003_g_AbilityId = 9
---ĞèÒª¼¼ÄÜµÈ¼¶
+--éœ€è¦æŠ€èƒ½ç­‰çº§
 x712003_g_AbilityLevel = 3
 
 
 function 	x712003_OnCreate(sceneId,growPointType,x,y)
-	ItemCount = 0-- ÎïÆ·ÊıÁ¿
-	ItemBoxId = ItemBoxEnterScene(x,y,growPointType,sceneId,QUALITY_MUST_BE_CHANGE,ItemCount)	--º¯Êıµ÷ÓÃ
+	ItemCount = 0-- ç‰©å“æ•°é‡
+	ItemBoxId = ItemBoxEnterScene(x,y,growPointType,sceneId,QUALITY_MUST_BE_CHANGE,ItemCount)	--å‡½æ•°è°ƒç”¨
 end
 
 function	 x712003_OnOpen(sceneId,selfId,targetId)
-	--¼ì²éµöÓã¼¼ÄÜµÈ¼¶
+	--æ£€æŸ¥é’“é±¼æŠ€èƒ½ç­‰çº§
 	AbilityId		=	GetItemBoxRequireAbilityID(sceneId,targetId)
 	AbilityLevel = QueryHumanAbilityLevel(sceneId,selfId,AbilityId)
 	if AbilityLevel<x712003_g_AbilityLevel then
 		return OR_NO_LEVEL
 	end
 
-	--»ñµÃËæ»úÊı,ÉèÖÃÒ»´Îµöµ½ÓãµÄÊ±¼ä
-	x712003_g_FishTime = random(80000)+20000	--»ñµÃÒ»¸ö20-100ÃëÖ®¼äµÄËæ»úÊı
-	--x712003_g_FishTime = random(8000)+2000	--»ñµÃÒ»¸ö2-10ÃëÖ®¼äµÄËæ»úÊı
-	SetAbilityOperaTime(sceneId,selfId,x712003_g_FishTime)	--ÉèÖÃÒ»´Îµöµ½ÓãµÄÊ±¼ä
-	--SetAbilityOperaRobotTime(sceneId, selfId,g_totaltime)	--°ÑÀÛ¼ÆÊ±¼ä¸¶¸ø¡£¡£¡£
+	--è·å¾—éšæœºæ•°,è®¾ç½®ä¸€æ¬¡é’“åˆ°é±¼çš„æ—¶é—´
+	x712003_g_FishTime = random(80000)+20000	--è·å¾—ä¸€ä¸ª20-100ç§’ä¹‹é—´çš„éšæœºæ•°
+	--x712003_g_FishTime = random(8000)+2000	--è·å¾—ä¸€ä¸ª2-10ç§’ä¹‹é—´çš„éšæœºæ•°
+	SetAbilityOperaTime(sceneId,selfId,x712003_g_FishTime)	--è®¾ç½®ä¸€æ¬¡é’“åˆ°é±¼çš„æ—¶é—´
+	--SetAbilityOperaRobotTime(sceneId, selfId,g_totaltime)	--æŠŠç´¯è®¡æ—¶é—´ä»˜ç»™ã€‚ã€‚ã€‚
 	
 	return OR_OK
 
@@ -41,13 +41,13 @@ end
 function	x712003_OnProcOver(sceneId,selfId,targetId)
    
 	ret_1 = TryRecieveItem(sceneId,selfId,x712003_g_MainItemId,QUALITY_MUST_BE_CHANGE)
-	if ret_1 > 0 then					-->0±íÊ¾ÎïÆ·³É¹¦·ÅÈë±³°üÖĞ
-		Msg2Player(sceneId,selfId,"Äãµöµ½Ò»ÌõöãÓã¡£",MSG2PLAYER_PARA)
-		-- Ôö¼ÓÊìÁ·¶È
+	if ret_1 > 0 then					-->0è¡¨ç¤ºç‰©å“æˆåŠŸæ”¾å…¥èƒŒåŒ…ä¸­
+		Msg2Player(sceneId,selfId,"ä½ é’“åˆ°ä¸€æ¡é²¢é±¼ã€‚",MSG2PLAYER_PARA)
+		-- å¢åŠ ç†Ÿç»ƒåº¦
 		ABilityID	=	GetItemBoxRequireAbilityID(sceneId,targetId)
 		CallScriptFunction(ABILITYLOGIC_ID, "GainExperience", sceneId, selfId, ABilityID, x712003_g_AbilityLevel)
 	elseif ret_1 == -1 then
-		Msg2Player(sceneId,selfId,"±³°üÒÑÂú",MSG2PLAYER_PARA)
+		Msg2Player(sceneId,selfId,"èƒŒåŒ…å·²æ»¡",MSG2PLAYER_PARA)
 	end
 	return 0
 end

@@ -1,18 +1,18 @@
---Ê¯ÁÖ  ¿ÉÅÂµÄÕæÏà
+--çŸ³æ—  å¯æ€•çš„çœŸç›¸
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 
 x300018_g_scriptId = 300018
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x300018_g_eventList={212104}
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x300018_OnDefaultEvent( sceneId, selfId, BagIndex )
 	BeginEvent(sceneId)
-		AddText(sceneId, "¿ÉÅÂµÄÕæÏà")
+		AddText(sceneId, "å¯æ€•çš„çœŸç›¸")
 		for i, eventId in x300018_g_eventList do
 			CallScriptFunction( eventId, "OnEnumerate",sceneId, selfId, -1 )
 		end
@@ -21,22 +21,22 @@ function x300018_OnDefaultEvent( sceneId, selfId, BagIndex )
 end
 
 --**********************************
---Ë¢ĞÂÊÂ¼ş
+--åˆ·æ–°äº‹ä»¶
 --**********************************
 function x300018_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x300018_OnMissionAccept( sceneId, selfId, targetId )
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x300018_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
-	--¾Ü¾øÖ®ºó£¬Òª·µ»ØNPCµÄÊÂ¼şÁĞ±í
+	--æ‹’ç»ä¹‹åï¼Œè¦è¿”å›NPCçš„äº‹ä»¶åˆ—è¡¨
 	for i, findId in x300018_g_eventList do
 		if missionScriptId == findId then
 			x300018_OnDefaultEvent( sceneId, selfId, targetId )

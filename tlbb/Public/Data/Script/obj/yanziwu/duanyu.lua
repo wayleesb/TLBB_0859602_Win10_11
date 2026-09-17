@@ -1,5 +1,5 @@
 -- 402256
--- ¶ÎÓş
+-- æ®µèª‰
 
 x402256_TBL = {}
 x402256_TBL["IDX_TimerPrepare"] = 1
@@ -23,31 +23,31 @@ end
 
 function x402256_OnHeartBeat(sceneId, selfId, nTick)
 
-	-- µ±¶ÎÓşÑª¼õÉÙµÄÊ±ºò£¬¸Ä±ä¶ÎÓşµÄAi¡ª¡ªFile
+	-- å½“æ®µèª‰è¡€å‡å°‘çš„æ—¶å€™ï¼Œæ”¹å˜æ®µèª‰çš„Aiâ€”â€”File
 	if(1==LuaFnIsCharacterLiving(sceneId, selfId)) then
 		if(1==MonsterAI_GetBoolParamByIndex(sceneId, selfId, 1)) then
 			if GetHp(sceneId, selfId) <= GetMaxHp(sceneId, selfId) - 500 then
 				--if GetAIScriptID(sceneId, selfId) == 245  then
 					SetAIScriptID(sceneId, selfId, 246)
 					
-					-- ¸Ä±ä¶ÎÓş¼ÓØ©µÄÕóÓª
+					-- æ”¹å˜æ®µèª‰åŠ ä¸çš„é˜µè¥
 					local nMonsterNum = GetMonsterCount(sceneId)
 					for i=0, nMonsterNum-1 do
 						local nMonsterId = GetMonsterObjID(sceneId,i)
 						local szName = GetName(sceneId, nMonsterId)
-						if szName== "°ÍÌìÊ¯" or 
-							 szName== "·¶æè" or
-							 szName== "ñÒÍòÀï" or
-							 szName== "¹ÅóÆ³Ï" or
-							 szName== "¸µË¼¹é" or
-							 szName== "Öìµ¤³¼"     then
+						if szName== "å·´å¤©çŸ³" or 
+							 szName== "èŒƒéª…" or
+							 szName== "è¤šä¸‡é‡Œ" or
+							 szName== "å¤ç¬ƒè¯š" or
+							 szName== "å‚…æ€å½’" or
+							 szName== "æœ±ä¸¹è‡£"     then
 							 
 							if GetUnitCampID(sceneId,nMonsterId, nMonsterId) ~= 110  then
 								SetUnitCampID(sceneId,nMonsterId, nMonsterId, 110)
 								CallScriptFunction((200060), "Paopao",sceneId, 
 														szName, 
-														"Ñà×ÓÎë", 
-														"ĞİÉËÎÒ¼Ò¹«×Ó£¡")
+														"ç‡•å­å", 
+														"ä¼‘ä¼¤æˆ‘å®¶å…¬å­ï¼")
 							end
 						end
 					--end
@@ -71,7 +71,7 @@ end
 function x402256_OnKillCharacter(sceneId, selfId, targetId)
 --	if(-1~=targetId) then
 --		local szTarget = GetName(sceneId, targetId)		
---		LuaFnNpcChat(sceneId, selfId, 0, szTarget .. "£¬Äã¾ÍËãÔÙÀ÷º¦Ê®±¶£¬ÓöÉÏÒ¯Ò¯Ò²Ö»ÓĞËÀÂ·Ò»Ìõ£¡")
+--		LuaFnNpcChat(sceneId, selfId, 0, szTarget .. "ï¼Œä½ å°±ç®—å†å‰å®³åå€ï¼Œé‡ä¸Šçˆ·çˆ·ä¹Ÿåªæœ‰æ­»è·¯ä¸€æ¡ï¼")
 --	end
 end
 

@@ -1,16 +1,16 @@
--- ÂåÑô
---Ñ­»·ÈÎÎñÓë¸±±¾
---ÎÊÂ·½Å±¾
+-- æ´›é˜³
+--å¾ªç¯ä»»åŠ¡ä¸å‰¯æœ¬
+--é—®è·¯è„šæœ¬
 x500006_g_scriptId = 500006
 
--- ÎÊÂ·ÀàĞÍ type: 1 Îª¶ş¼¶²Ëµ¥, 2 ÎªÖ±½ÓÎÊÂ·
+-- é—®è·¯ç±»å‹ type: 1 ä¸ºäºŒçº§èœå•, 2 ä¸ºç›´æ¥é—®è·¯
 x500006_g_Signpost = {
-	{ type=2, name="ÂåÑôäîÔËÊ¹", x=228, y=175, tip="ÕÔÃ÷³Ï", desc="ÂåÑôäîÔËÊ¹ÕÔÃ÷³ÏÔÚ¶«ÊĞÄÏ¿ÚÂ·¶«µÄ´óÔºÀï¡£°´ÏÂTAB¼ü£¬µØÍ¼ÉÏ»áÓĞÉÁË¸µÄ±êÊ¶µÄ¡£", eventId=-1 },
-	{ type=2, name="ÕäççÆå¾Ö", x=271, y=88, tip="Íõ»ıĞ½", desc="ÕÒµ½ÂåÑô³ÇÄÚ¶«±±·½µÄÍõ¸®ÄÚµÄÆåÊ¥Íõ»ıĞ½£¨271£¬88£©¡£°´ÏÂTAB¼ü£¬µØÍ¼ÉÏ»áÓĞÉÁË¸µÄ±êÊ¶µÄ¡£", eventId=-1 },
+	{ type=2, name="æ´›é˜³æ¼•è¿ä½¿", x=228, y=175, tip="èµµæ˜è¯š", desc="æ´›é˜³æ¼•è¿ä½¿èµµæ˜è¯šåœ¨ä¸œå¸‚å—å£è·¯ä¸œçš„å¤§é™¢é‡Œã€‚æŒ‰ä¸‹TABé”®ï¼Œåœ°å›¾ä¸Šä¼šæœ‰é—ªçƒçš„æ ‡è¯†çš„ã€‚", eventId=-1 },
+	{ type=2, name="çç‘æ£‹å±€", x=271, y=88, tip="ç‹ç§¯è–ª", desc="æ‰¾åˆ°æ´›é˜³åŸå†…ä¸œåŒ—æ–¹çš„ç‹åºœå†…çš„æ£‹åœ£ç‹ç§¯è–ªï¼ˆ271ï¼Œ88ï¼‰ã€‚æŒ‰ä¸‹TABé”®ï¼Œåœ°å›¾ä¸Šä¼šæœ‰é—ªçƒçš„æ ‡è¯†çš„ã€‚", eventId=-1 },
 }
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x500006_OnEnumerate( sceneId, selfId, targetId )
 	for i, signpost in x500006_g_Signpost do
@@ -19,14 +19,14 @@ function x500006_OnEnumerate( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x500006_OnDefaultEvent( sceneId, selfId, targetId )
 	signpost = x500006_g_Signpost[GetNumText()]
 
 	if signpost.type == 1 then
 		BeginEvent(sceneId)
-			AddText(sceneId, signpost.name .. "£º")
+			AddText(sceneId, signpost.name .. "ï¼š")
 			CallScriptFunction( signpost.eventId, "OnEnumerate", sceneId, selfId, targetId )
 		EndEvent(sceneId)
 		DispatchEventList(sceneId, selfId, targetId)

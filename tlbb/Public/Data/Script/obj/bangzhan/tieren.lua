@@ -1,17 +1,17 @@
---°ïÕ½NPC B°ï
---ÌúÈĞ
---½Å±¾ºÅ
+--å¸®æˆ˜NPC Bå¸®
+--é“åˆƒ
+--è„šæœ¬å·
 
 x402300_g_ScriptId = 402300
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x402300_OnDefaultEvent( sceneId, selfId,targetId )
 	if CallScriptFunction(402047, "IsCommonBGuild", sceneId, selfId ) == 1 then
 		BeginEvent(sceneId)
 			AddText(sceneId,"#{BHXZ_081103_24}")
-			AddNumText(sceneId,x402300_g_ScriptId,"ÎÒÒªĞŞÀí×°±¸",6,1)
+			AddNumText(sceneId,x402300_g_ScriptId,"æˆ‘è¦ä¿®ç†è£…å¤‡",6,1)
 			AddNumText(sceneId, x402300_g_ScriptId,"#{INTERFACE_XML_1004}",6,2);
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
@@ -24,7 +24,7 @@ function x402300_OnDefaultEvent( sceneId, selfId,targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x402300_OnEventRequest( sceneId, selfId, targetId, eventId )
 	local key = GetNumText()

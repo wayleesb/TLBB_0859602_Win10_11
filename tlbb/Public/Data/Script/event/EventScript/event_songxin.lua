@@ -1,21 +1,21 @@
--- ËÍĞÅÈÎÎñ(ËùÓĞÕâÒ»ÀàĞÍ¶¼Ê¹ÓÃÕâ¸öLUA£¬ĞŞ¸ÄÇë×¢ÒâÍ¨ÓÃĞÔ)
+-- é€ä¿¡ä»»åŠ¡(æ‰€æœ‰è¿™ä¸€ç±»å‹éƒ½ä½¿ç”¨è¿™ä¸ªLUAï¼Œä¿®æ”¹è¯·æ³¨æ„é€šç”¨æ€§)
 
 MOD_EVENT = 006672
 
 x006668_g_duanyanqiId = 002016 --[tx43452]
 
-x006668_g_IsMissionOkFail = 0							-- ÈÎÎñÍê³É±ê¼Ç
-x006668_g_SongXinFlag = 1									-- ËÍĞÅÍê³É±ê¼Ç
+x006668_g_IsMissionOkFail = 0							-- ä»»åŠ¡å®Œæˆæ ‡è®°
+x006668_g_SongXinFlag = 1									-- é€ä¿¡å®Œæˆæ ‡è®°
 
--- °´ÕÕË³Ğò´æ´¢Ò»Ğ©Éæ¼°µ½¿Í»§¶ËÈÎÎñÄ¿±êÏÔÊ¾µÄ¶¯Ì¬ĞÅÏ¢
--- ¹æÔò£ºÔÚÈÎºÎÇé¿öÏÂ£¬Ã¿Ò»ÖÖ¿ÉÄÜËæ»úµÄÀàĞÍ×î¶àÖ»ÓĞÒ»¸öËæ»úÏî
--- ¼´Í¬Ê±×î¶àÖ»ÄÜÓµÓĞ 1 ¸öËæ»ú NPC£¨¹ÖÎï£©¡¢1 ¸öËæ»úÎïÆ·ºÍ 1 ¸öËæ»úÕäÊŞ
--- Î»ÖÃ°´ÕÕÓÅÏÈË³Ğò´æ´¢£¬ÀıÈçÈç¹ûÓĞËæ»ú NPC£¬ÔòËæ»ú NPC Õ¼¾İµÚÒ»¸öÈÎÎñÊı¾İ
--- ·ñÔòËæ»úÎïÆ·Õ¼¾İµÚÒ»¸öÈÎÎñÊı¾İ£¬ÒÀ´ËÀàÍÆ
--- ¸ÃÖµ×îºÃ²»ÒªĞŞ¸Ä£¬¼´Ê¹ÒªĞŞ¸ÄÒ²ÒªºÍ¿Í»§¶ËµÄ½âÎö²¿·Ö£¨SetTableMissionInfo£©Í¬Ê±ĞŞ¸Ä
+-- æŒ‰ç…§é¡ºåºå­˜å‚¨ä¸€äº›æ¶‰åŠåˆ°å®¢æˆ·ç«¯ä»»åŠ¡ç›®æ ‡æ˜¾ç¤ºçš„åŠ¨æ€ä¿¡æ¯
+-- è§„åˆ™ï¼šåœ¨ä»»ä½•æƒ…å†µä¸‹ï¼Œæ¯ä¸€ç§å¯èƒ½éšæœºçš„ç±»å‹æœ€å¤šåªæœ‰ä¸€ä¸ªéšæœºé¡¹
+-- å³åŒæ—¶æœ€å¤šåªèƒ½æ‹¥æœ‰ 1 ä¸ªéšæœº NPCï¼ˆæ€ªç‰©ï¼‰ã€1 ä¸ªéšæœºç‰©å“å’Œ 1 ä¸ªéšæœºçå…½
+-- ä½ç½®æŒ‰ç…§ä¼˜å…ˆé¡ºåºå­˜å‚¨ï¼Œä¾‹å¦‚å¦‚æœæœ‰éšæœº NPCï¼Œåˆ™éšæœº NPC å æ®ç¬¬ä¸€ä¸ªä»»åŠ¡æ•°æ®
+-- å¦åˆ™éšæœºç‰©å“å æ®ç¬¬ä¸€ä¸ªä»»åŠ¡æ•°æ®ï¼Œä¾æ­¤ç±»æ¨
+-- è¯¥å€¼æœ€å¥½ä¸è¦ä¿®æ”¹ï¼Œå³ä½¿è¦ä¿®æ”¹ä¹Ÿè¦å’Œå®¢æˆ·ç«¯çš„è§£æéƒ¨åˆ†ï¼ˆSetTableMissionInfoï¼‰åŒæ—¶ä¿®æ”¹
 x006668_g_StrForePart = 5
 
---ÈÎÎñ¶Î·ÖÀàÁĞ±í_MissType	1.É±¹ÖÈÎÎñ	2.ËÍĞÅÈÎÎñ	3.Ì½Ë÷ÈÎÎñ	4.Ñ°ÎïÈÎÎñ	5.»¤ËÍÈÎÎñ
+--ä»»åŠ¡æ®µåˆ†ç±»åˆ—è¡¨_MissType	1.æ€æ€ªä»»åŠ¡	2.é€ä¿¡ä»»åŠ¡	3.æ¢ç´¢ä»»åŠ¡	4.å¯»ç‰©ä»»åŠ¡	5.æŠ¤é€ä»»åŠ¡
 x006668_g_MissionTypeList	=	{ {StartIdx = 1000000, EndIdx = 1009999, ScriptId = 006666},
 															{StartIdx = 1010000, EndIdx = 1019999, ScriptId = 006668},
 															{StartIdx = 1020000, EndIdx = 1029999, ScriptId = 006669},
@@ -23,13 +23,13 @@ x006668_g_MissionTypeList	=	{ {StartIdx = 1000000, EndIdx = 1009999, ScriptId = 
 															{StartIdx = 1050000, EndIdx = 1059999, ScriptId = 006671} }
 
 --**********************************
--- »ñÈ¡¶¯Ì¬ÈÎÎñÄ¿±ê NPC µÄ´æ´¢Î»ÖÃ
--- Èç¹ûÊÇ¾²Ì¬ÈÎÎñÄ¿±ê NPC£¬Ôò·µ»Ø -1
+-- è·å–åŠ¨æ€ä»»åŠ¡ç›®æ ‡ NPC çš„å­˜å‚¨ä½ç½®
+-- å¦‚æœæ˜¯é™æ€ä»»åŠ¡ç›®æ ‡ NPCï¼Œåˆ™è¿”å› -1
 --**********************************
 function x006668_GetTNpcStoreLoc( sceneId, selfId, targetId, missionIndex )
 	local _, _, isTargetDynamic = TGetTargetNpcInfo( missionIndex )
 
-	if not isTargetDynamic or isTargetDynamic ~= 1 then					-- ¸Ã NPC ÊÇ¾²Ì¬ NPC
+	if not isTargetDynamic or isTargetDynamic ~= 1 then					-- è¯¥ NPC æ˜¯é™æ€ NPC
 		return -1
 	end
 
@@ -37,8 +37,8 @@ function x006668_GetTNpcStoreLoc( sceneId, selfId, targetId, missionIndex )
 end
 
 --**********************************
--- »ñÈ¡¶¯Ì¬ÈÎÎñÄ¿±ê NPC µÄ NPCID
--- Èç¹ûÊÇ¾²Ì¬ÈÎÎñÄ¿±ê NPC£¬Ôò·µ»Ø -1
+-- è·å–åŠ¨æ€ä»»åŠ¡ç›®æ ‡ NPC çš„ NPCID
+-- å¦‚æœæ˜¯é™æ€ä»»åŠ¡ç›®æ ‡ NPCï¼Œåˆ™è¿”å› -1
 --**********************************
 function x006668_GetTargetNpcId( sceneId, selfId, targetId, missionIndex )
 	local loc = x006668_GetTNpcStoreLoc( sceneId, selfId, targetId, missionIndex )
@@ -52,8 +52,8 @@ function x006668_GetTargetNpcId( sceneId, selfId, targetId, missionIndex )
 end
 
 --**********************************
--- »ñÈ¡¶¯Ì¬ÈÎÎñÎïÆ·µÄ ItemIndex
--- Èç¹ûÊÇ¾²Ì¬ÈÎÎñÎïÆ·£¬Ôò·µ»Ø -1
+-- è·å–åŠ¨æ€ä»»åŠ¡ç‰©å“çš„ ItemIndex
+-- å¦‚æœæ˜¯é™æ€ä»»åŠ¡ç‰©å“ï¼Œåˆ™è¿”å› -1
 --**********************************
 function x006668_GetTItemStoreLoc( sceneId, selfId, targetId, missionIndex )
 	local ItemCount, _, _, _, _, _, _, _, _, _, _, _, _, Item, Count, bGiveFlag = TGetSongXinInfo( missionIndex )
@@ -71,8 +71,8 @@ function x006668_GetTItemStoreLoc( sceneId, selfId, targetId, missionIndex )
 end
 
 --**********************************
--- »ñÈ¡¶¯Ì¬ÈÎÎñÎïÆ·µÄ ItemIndex
--- Èç¹ûÊÇ¾²Ì¬ÈÎÎñÎïÆ·£¬Ôò·µ»Ø -1
+-- è·å–åŠ¨æ€ä»»åŠ¡ç‰©å“çš„ ItemIndex
+-- å¦‚æœæ˜¯é™æ€ä»»åŠ¡ç‰©å“ï¼Œåˆ™è¿”å› -1
 --**********************************
 function x006668_GetTargetItemIndex( sceneId, selfId, targetId, missionIndex )
 	local loc = x006668_GetTItemStoreLoc( sceneId, selfId, targetId, missionIndex )
@@ -86,7 +86,7 @@ function x006668_GetTargetItemIndex( sceneId, selfId, targetId, missionIndex )
 end
 
 --**********************************
--- ¿Û³ıÈÎÎñÎïÆ·£¬³É¹¦·µ»Ø 1£¬Ê§°Ü·µ»Ø 0
+-- æ‰£é™¤ä»»åŠ¡ç‰©å“ï¼ŒæˆåŠŸè¿”å› 1ï¼Œå¤±è´¥è¿”å› 0
 --**********************************
 function x006668_TakeOutMissionItem( sceneId, selfId, missionIndex )
 	local ItemCount = 0
@@ -101,13 +101,13 @@ function x006668_TakeOutMissionItem( sceneId, selfId, missionIndex )
 		mi[4][1], mi[4][2], mi[4][3], mi[5][1], mi[5][2], mi[5][3] = TGetSongXinInfo( missionIndex )
 
 	if ItemCount > 0 then
-		-- mi[5][1], mi[5][2], mi[5][3] ÊÇËæ»úÎïÆ·Ïî
+		-- mi[5][1], mi[5][2], mi[5][3] æ˜¯éšæœºç‰©å“é¡¹
 		if mi[5][item] > 0 then
-			-- mi[5][item] µÄ×ª»»
+			-- mi[5][item] çš„è½¬æ¢
 			mi[5][item] = GetOneMissionItem( mi[5][item] )
 			tinsert( itemList, { mi[5][item], mi[5][count] } )
 			ItemCount = ItemCount - 1
-		end																-- ÒÔÏÂ¶ÁÈ¡¹Ì¶¨ÈÎÎñÎïÆ·
+		end																-- ä»¥ä¸‹è¯»å–å›ºå®šä»»åŠ¡ç‰©å“
 
 		for i = 1, ItemCount do
 			tinsert( itemList, { mi[i][item], mi[i][count] } )
@@ -132,28 +132,28 @@ function x006668_TakeOutMissionItem( sceneId, selfId, missionIndex )
 end
 
 --**********************************
--- ÈÎÎñÈë¿Úº¯Êı
+-- ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
-function x006668_OnDefaultEvent( sceneId, selfId, targetId, missionIndex )		-- µã»÷¸ÃÈÎÎñºóÖ´ĞĞ´Ë½Å±¾
+function x006668_OnDefaultEvent( sceneId, selfId, targetId, missionIndex )		-- ç‚¹å‡»è¯¥ä»»åŠ¡åæ‰§è¡Œæ­¤è„šæœ¬
 	local missionId = TGetMissionIdByIndex( missionIndex )
 	local missionName = TGetMissionName( missionIndex )
 	local _, missionInfo, missionContinue = TGetMissionDesc( missionIndex )
 	local npcId = -1
 	local itemIndex = -1
 
-	-- ·¢ËÍÈÎÎñĞèÇóµÄĞÅÏ¢
+	-- å‘é€ä»»åŠ¡éœ€æ±‚çš„ä¿¡æ¯
 	if IsHaveMission( sceneId, selfId, missionId ) > 0 then
 		local _, targetNPCName, isTargetDynamic, targetDuologue = TGetTargetNpcInfo( missionIndex )
 		local _, completeNpcName = TGetCompleteNpcInfo( missionIndex )
 		local szNpcName = GetName( sceneId, targetId )
 		local misIndex = GetMissionIndexByID( sceneId, selfId, missionId )
 
-		-- Èç¹ûÈÎÎñÄ¿±ê NPC ºÍÈÎÎñÍê³É NPC ²»ÊÇÍ¬Ò»¸öÈË
+		-- å¦‚æœä»»åŠ¡ç›®æ ‡ NPC å’Œä»»åŠ¡å®Œæˆ NPC ä¸æ˜¯åŒä¸€ä¸ªäºº
 		if targetNPCName ~= completeNpcName then
 			local bAchieveMission = 0
 
-			-- Èç¹ûµ±Ç° NPC ÊÇÈÎÎñÄ¿±ê NPC
-			if not isTargetDynamic or isTargetDynamic ~= 1 then			-- ¸Ã NPC ÊÇ¾²Ì¬ NPC
+			-- å¦‚æœå½“å‰ NPC æ˜¯ä»»åŠ¡ç›®æ ‡ NPC
+			if not isTargetDynamic or isTargetDynamic ~= 1 then			-- è¯¥ NPC æ˜¯é™æ€ NPC
 				if szNpcName == targetNPCName then
 					bAchieveMission = 1
 				end
@@ -165,11 +165,11 @@ function x006668_OnDefaultEvent( sceneId, selfId, targetId, missionIndex )		-- µ
 				end
 			end
 
-			-- ÔòÈÎÎñÍê³É£¬²¢ÏÔÊ¾ÈÎÎñÄ¿±ê NPC ¶Ô°×
+			-- åˆ™ä»»åŠ¡å®Œæˆï¼Œå¹¶æ˜¾ç¤ºä»»åŠ¡ç›®æ ‡ NPC å¯¹ç™½
 			if bAchieveMission == 1 then
-				-- Èç¹ûĞèÒªÈÎÎñÎïÆ·£¬²¢ÇÒÄÜ¹»É¾³ı£¬Ôò³É¹¦
+				-- å¦‚æœéœ€è¦ä»»åŠ¡ç‰©å“ï¼Œå¹¶ä¸”èƒ½å¤Ÿåˆ é™¤ï¼Œåˆ™æˆåŠŸ
 				if x006668_TakeOutMissionItem( sceneId, selfId, missionIndex ) == 1 then
-					-- ÏÔÊ¾Ä¿±ê NPC Ëæ»ú¶Ô»°
+					-- æ˜¾ç¤ºç›®æ ‡ NPC éšæœºå¯¹è¯
 					local strText = CallScriptFunction( MOD_EVENT, "GetRandomDuologue", sceneId, missionIndex, targetDuologue )
 					if strText ~= "" then
 						itemIndex = x006668_GetTargetItemIndex( sceneId, selfId, targetId, missionIndex )
@@ -191,7 +191,7 @@ function x006668_OnDefaultEvent( sceneId, selfId, targetId, missionIndex )		-- µ
 						 (missionIndex >= 1018530 and missionIndex <= 1018541) or
 						 (missionIndex >= 1018560 and missionIndex <= 1018566) then
 							BeginEvent( sceneId )
-								AddText( sceneId, "ÈÎÎñÄ¿±êÒÑ´ï³É£¡" )
+								AddText( sceneId, "ä»»åŠ¡ç›®æ ‡å·²è¾¾æˆï¼" )
 							EndEvent( sceneId )
 							DispatchMissionTips( sceneId, selfId )
 					end
@@ -202,19 +202,19 @@ function x006668_OnDefaultEvent( sceneId, selfId, targetId, missionIndex )		-- µ
 				end
 			end
 		elseif GetMissionParam( sceneId, selfId, misIndex, x006668_g_IsMissionOkFail ) ~= 1 then
-			-- Èç¹ûÈÎÎñÄ¿±ê NPC ºÍÈÎÎñÍê³É NPC ÊÇÍ¬Ò»¸öÈË£¬²¢ÇÒÕâ¸ö¼Ò»ï»¹Ã»ÓĞÍê³ÉÈÎÎñ
+			-- å¦‚æœä»»åŠ¡ç›®æ ‡ NPC å’Œä»»åŠ¡å®Œæˆ NPC æ˜¯åŒä¸€ä¸ªäººï¼Œå¹¶ä¸”è¿™ä¸ªå®¶ä¼™è¿˜æ²¡æœ‰å®Œæˆä»»åŠ¡
 			if x006668_TakeOutMissionItem( sceneId, selfId, missionIndex ) == 1 then
 				SetMissionByIndex( sceneId, selfId, misIndex, x006668_g_IsMissionOkFail, 1 )
 			end
 		end
 
-		-- Èç¹ûµ±Ç° NPC ÊÇÈÎÎñÍê³É NPC£¬Ôò°´ÕÕÔ­ÓĞÁ÷³ÌÏÔÊ¾ÈÎÎñ¶Ô°×ÒÔ¼°Ìá½»ÈÎÎñ
+		-- å¦‚æœå½“å‰ NPC æ˜¯ä»»åŠ¡å®Œæˆ NPCï¼Œåˆ™æŒ‰ç…§åŸæœ‰æµç¨‹æ˜¾ç¤ºä»»åŠ¡å¯¹ç™½ä»¥åŠæäº¤ä»»åŠ¡
 		if completeNpcName == szNpcName then
 			local bHaveContinue = TIsHaveContinue( missionIndex )
 
-			if bHaveContinue <= 0 then									-- Ö±½ÓÌøµ½Íê³É½çÃæ
+			if bHaveContinue <= 0 then									-- ç›´æ¥è·³åˆ°å®Œæˆç•Œé¢
 				x006668_OnContinue( sceneId, selfId, targetId, missionIndex )
-			else														-- ×ªµ½Continue½çÃæ
+			else														-- è½¬åˆ°Continueç•Œé¢
 				local bDone = x006668_CheckSubmit( sceneId, selfId, missionIndex )
 				npcId = x006668_GetTargetNpcId( sceneId, selfId, targetId, missionIndex )
 				itemIndex = x006668_GetTargetItemIndex( sceneId, selfId, targetId, missionIndex )
@@ -228,7 +228,7 @@ function x006668_OnDefaultEvent( sceneId, selfId, targetId, missionIndex )		-- µ
 		end
 	elseif CallScriptFunction( MOD_EVENT, "CheckAccept", sceneId, selfId, missionIndex ) > 0 then
 		local _, acceptNpcName = TGetAcceptNpcInfo( missionIndex )
-		if acceptNpcName == "" then										-- Ëæ»úÈÎÎñ£¬×Ô¶¯½ÓÈ¡
+		if acceptNpcName == "" then										-- éšæœºä»»åŠ¡ï¼Œè‡ªåŠ¨æ¥å–
 			if x006668_OnAccept( sceneId, selfId, targetId, missionIndex ) ~= 1 then
 				return
 			end
@@ -237,14 +237,14 @@ function x006668_OnDefaultEvent( sceneId, selfId, targetId, missionIndex )		-- µ
 			itemIndex = x006668_GetTargetItemIndex( sceneId, selfId, targetId, missionIndex )
 		end
 
-		--·¢ËÍÈÎÎñ½ÓÊÜÊ±ÏÔÊ¾µÄĞÅÏ¢
+		--å‘é€ä»»åŠ¡æ¥å—æ—¶æ˜¾ç¤ºçš„ä¿¡æ¯
 		BeginEvent( sceneId )
 			AddText( sceneId, missionName )
 			AddText( sceneId, CallScriptFunction( MOD_EVENT, "FormatDuologue", sceneId, selfId, missionInfo, npcId, itemIndex, "" ) )
 			CallScriptFunction( MOD_EVENT, "DisplayBonus", sceneId, missionIndex, selfId )
 		EndEvent( )
 
-		if acceptNpcName == "" then										-- Ëæ»úÈÎÎñ£¬×Ô¶¯½ÓÈ¡
+		if acceptNpcName == "" then										-- éšæœºä»»åŠ¡ï¼Œè‡ªåŠ¨æ¥å–
 			DispatchEventList( sceneId, selfId, targetId )
 		else
 			DispatchMissionInfo( sceneId, selfId, targetId, missionIndex, missionId )
@@ -253,14 +253,14 @@ function x006668_OnDefaultEvent( sceneId, selfId, targetId, missionIndex )		-- µ
 end
 
 --**********************************
--- ÁĞ¾ÙÊÂ¼ş
+-- åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x006668_OnEnumerate( sceneId, selfId, targetId, missionIndex )
 	CallScriptFunction( MOD_EVENT, "DoEnumerate", sceneId, selfId, targetId, missionIndex )
 end
 
 --**********************************
--- Ñ¡ÖĞ
+-- é€‰ä¸­
 --**********************************
 function x006668_OnLockedTarget( sceneId, selfId, targetId, missionIndex )
 	local targetNpcId = x006668_GetTargetNpcId( sceneId, selfId, targetId, missionIndex )
@@ -278,7 +278,7 @@ function x006668_OnLockedTarget( sceneId, selfId, targetId, missionIndex )
 		local missionId = TGetMissionIdByIndex( missionIndex )
 		local misIndex = GetMissionIndexByID( sceneId, selfId, missionId )
 		if completeNpcName ~= targetNPCName and GetMissionParam( sceneId, selfId, misIndex, x006668_g_IsMissionOkFail ) == 1 then
-			return															-- ÒÑ¾­Íê³ÉÁË¾Í²»ÔÙ¶Ô»°ÁË
+			return															-- å·²ç»å®Œæˆäº†å°±ä¸å†å¯¹è¯äº†
 		end
 		
 		--if completeNpcName == targetNPCName then
@@ -287,9 +287,9 @@ function x006668_OnLockedTarget( sceneId, selfId, targetId, missionIndex )
 	end
 
 	if szNpcName == targetNPCName or szNpcName == completeNpcName then
-		-- ÕÒ¶ÔÈË¿©
+		-- æ‰¾å¯¹äººå’¯
 		local missionName = TGetMissionName( missionIndex )
-		-- ÊÇ·ñÎªÑ­»·ÈÎÎñ
+		-- æ˜¯å¦ä¸ºå¾ªç¯ä»»åŠ¡
 		if TIsMissionRoundable( missionIndex ) == 1 then
 			TAddNumText( sceneId, missionIndex, missionName, 4, -1 )
 		else
@@ -300,14 +300,14 @@ function x006668_OnLockedTarget( sceneId, selfId, targetId, missionIndex )
 end
 
 --**********************************
--- ½ÓÊÜ£¬·µ»Ø 1 ±íÊ¾½ÓÈ¡³É¹¦£¬·ñÔò±íÊ¾Ê§°Ü
+-- æ¥å—ï¼Œè¿”å› 1 è¡¨ç¤ºæ¥å–æˆåŠŸï¼Œå¦åˆ™è¡¨ç¤ºå¤±è´¥
 --**********************************
 function x006668_OnAccept( sceneId, selfId, targetId, missionIndex )
 	local missionId = TGetMissionIdByIndex( missionIndex )
 	local missionName = TGetMissionName( missionIndex )
 	local ItemCount = 0
 
-	-- ¼ì²âÍæ¼ÒÊÇ²»ÊÇÒÑ¾­Íê³É¹ıÕâ¸öÈÎÎñ
+	-- æ£€æµ‹ç©å®¶æ˜¯ä¸æ˜¯å·²ç»å®Œæˆè¿‡è¿™ä¸ªä»»åŠ¡
 	if IsMissionHaveDone( sceneId, selfId, missionId ) > 0
 	 and TIsMissionRoundable( missionIndex ) ~= 1 then
 		return 0
@@ -319,9 +319,9 @@ function x006668_OnAccept( sceneId, selfId, targetId, missionIndex )
 
 	local strText
 
-	-- ¼ì²âÊÇ·ñÈÎÎñÒÑ¾­´ïµ½ 20 ¸ö£¬Èç¹ûµ½ÁË£¬Ôò²»ÄÜ½Ó
+	-- æ£€æµ‹æ˜¯å¦ä»»åŠ¡å·²ç»è¾¾åˆ° 20 ä¸ªï¼Œå¦‚æœåˆ°äº†ï¼Œåˆ™ä¸èƒ½æ¥
 	if GetMissionCount( sceneId, selfId ) >= 20 then
-		strText = "#YÄãµÄÈÎÎñÈÕÖ¾ÒÑ¾­ÂúÁË¡£"
+		strText = "#Yä½ çš„ä»»åŠ¡æ—¥å¿—å·²ç»æ»¡äº†ã€‚"
 		-- x006668_NotifyFailTips( sceneId, selfId, strText )
 		Msg2Player( sceneId, selfId, strText, MSG2PLAYER_PARA )
 		return 0
@@ -339,9 +339,9 @@ function x006668_OnAccept( sceneId, selfId, targetId, missionIndex )
 	if ItemCount > 0 then
 		BeginAddItem( sceneId )
 
-		-- mi[5][1], mi[5][2], mi[5][3] ÊÇËæ»úÎïÆ·Ïî
+		-- mi[5][1], mi[5][2], mi[5][3] æ˜¯éšæœºç‰©å“é¡¹
 		if mi[5][item] > 0 then
-			-- mi[5][item] µÄ×ª»»ÔÚÕâÀïÒ»¶¨Òª×ö£¬ÒòÎªÒÔºóÒªÓÃµ½
+			-- mi[5][item] çš„è½¬æ¢åœ¨è¿™é‡Œä¸€å®šè¦åšï¼Œå› ä¸ºä»¥åè¦ç”¨åˆ°
 			mi[5][item] = GetOneMissionItem( mi[5][item] )
 
 			if mi[5][bGiveFlag] > 0 then
@@ -350,7 +350,7 @@ function x006668_OnAccept( sceneId, selfId, targetId, missionIndex )
 			end
 
 			ItemCount = ItemCount - 1
-		end																-- ÒÔÏÂ¶ÁÈ¡¹Ì¶¨ÈÎÎñÎïÆ·
+		end																-- ä»¥ä¸‹è¯»å–å›ºå®šä»»åŠ¡ç‰©å“
 
 		for i = 1, ItemCount do
 			if mi[i][bGiveFlag] > 0 then
@@ -362,7 +362,7 @@ function x006668_OnAccept( sceneId, selfId, targetId, missionIndex )
 		if bAddItem > 0 then
 			local ret = EndAddItem( sceneId, selfId )
 			if ret <= 0 then
-				strText = "#YÄãµÄÈÎÎñ±³°üÒÑ¾­ÂúÁË¡£"
+				strText = "#Yä½ çš„ä»»åŠ¡èƒŒåŒ…å·²ç»æ»¡äº†ã€‚"
 				-- x006668_NotifyFailTips( sceneId, selfId, strText )
 				Msg2Player( sceneId, selfId, strText, MSG2PLAYER_PARA )
 				return 0
@@ -370,7 +370,7 @@ function x006668_OnAccept( sceneId, selfId, targetId, missionIndex )
 		end
 	end
 
-	local ret = AddMission( sceneId, selfId, missionId, missionIndex, 0, 0, 0 )	-- kill¡¢area¡¢item
+	local ret = AddMission( sceneId, selfId, missionId, missionIndex, 0, 0, 0 )	-- killã€areaã€item
 	if ret ~= 1 then
 		return 0
 	end
@@ -381,14 +381,14 @@ function x006668_OnAccept( sceneId, selfId, targetId, missionIndex )
 	local targetNpcStoreLocation, itemStoreLocation
 	local _, targetNPCName, isTargetDynamic = TGetTargetNpcInfo( missionIndex )
 
-	-- Èç¹ûµ±Ç° NPC ÊÇÈÎÎñÄ¿±ê NPC
+	-- å¦‚æœå½“å‰ NPC æ˜¯ä»»åŠ¡ç›®æ ‡ NPC
 	targetNpcStoreLocation = x006668_GetTNpcStoreLoc( sceneId, selfId, targetId, missionIndex )
-	if targetNpcStoreLocation ~= -1 then					-- ¸Ã NPC ÊÇ¶¯Ì¬ NPC
+	if targetNpcStoreLocation ~= -1 then					-- è¯¥ NPC æ˜¯åŠ¨æ€ NPC
 		local nNpcId, _, _, nScene, nPosX, nPosZ = GetOneMissionNpc( tonumber(targetNPCName) )
 		SetMissionByIndex( sceneId, selfId, misIndex, targetNpcStoreLocation, nNpcId )
 	end
 
-	-- Èç¹ûµ±Ç°ÈÎÎñÎïÆ·ÊÇ¶¯Ì¬
+	-- å¦‚æœå½“å‰ä»»åŠ¡ç‰©å“æ˜¯åŠ¨æ€
 	itemStoreLocation = x006668_GetTItemStoreLoc( sceneId, selfId, targetId, missionIndex )
 	if itemStoreLocation ~= -1 then
 		SetMissionByIndex( sceneId, selfId, misIndex, itemStoreLocation, mi[5][item] )
@@ -398,14 +398,14 @@ function x006668_OnAccept( sceneId, selfId, targetId, missionIndex )
 		AddItemListToHuman( sceneId, selfId )
 	end
 
-	strText = "#Y½ÓÊÜÈÎÎñ" .. missionName
+	strText = "#Yæ¥å—ä»»åŠ¡" .. missionName
 	-- x006668_NotifyFailTips( sceneId, selfId, strText )
 	Msg2Player( sceneId, selfId, strText, MSG2PLAYER_PARA )
 	return 1
 end
 
 --**********************************
--- ·ÅÆú
+-- æ”¾å¼ƒ
 --**********************************
 function x006668_OnAbandon( sceneId, selfId, missionIndex )
 	local missionId = TGetMissionIdByIndex( missionIndex )
@@ -413,20 +413,20 @@ function x006668_OnAbandon( sceneId, selfId, missionIndex )
 	local ItemCount = 0
 	local item, count, bGiveFlag = 1, 2, 3
 
-	-- É¾³ıÈÎÎñÎïÆ·
+	-- åˆ é™¤ä»»åŠ¡ç‰©å“
 	local mi = { { -1, 0, 0 }, { -1, 0, 0 }, { -1, 0, 0 }, { -1, 0, 0 }, { -1, 0, 0 }, }
 
 	ItemCount, mi[1][1], mi[1][2], mi[1][3], mi[2][1], mi[2][2], mi[2][3], mi[3][1], mi[3][2], mi[3][3],
 		mi[4][1], mi[4][2], mi[4][3], mi[5][1], mi[5][2], mi[5][3] = TGetSongXinInfo( missionIndex )
 
 	if ItemCount > 0 then
-		-- mi[5][1], mi[5][2], mi[5][3] ÊÇËæ»úÎïÆ·Ïî
+		-- mi[5][1], mi[5][2], mi[5][3] æ˜¯éšæœºç‰©å“é¡¹
 		if mi[5][item] > 0 then
-			-- mi[5][item] µÄ×ª»»
+			-- mi[5][item] çš„è½¬æ¢
 			mi[5][item] = GetOneMissionItem( mi[5][item] )
 			LuaFnDelAvailableItem( sceneId, selfId, mi[5][item], mi[5][count] )
 			ItemCount = ItemCount - 1
-		end																-- ÒÔÏÂ¶ÁÈ¡¹Ì¶¨ÈÎÎñÎïÆ·
+		end																-- ä»¥ä¸‹è¯»å–å›ºå®šä»»åŠ¡ç‰©å“
 
 		for i = 1, ItemCount do
 			if mi[i][item] > 0 then
@@ -435,18 +435,18 @@ function x006668_OnAbandon( sceneId, selfId, missionIndex )
 		end
 	end
 
-	-- ³Í·££¬¿Û³ı¹ØÏµÖµ
+	-- æƒ©ç½šï¼Œæ‰£é™¤å…³ç³»å€¼
 	CallScriptFunction( MOD_EVENT, "PunishRelationShip", sceneId, selfId, missionIndex )
 
-	-- ³Í·££¬Ò»¶ÎÊ±¼ä²»ÈÃ½ÓÈÎÎñ
+	-- æƒ©ç½šï¼Œä¸€æ®µæ—¶é—´ä¸è®©æ¥ä»»åŠ¡
 	CallScriptFunction( MOD_EVENT, "AcceptTimeLimit", sceneId, selfId, missionIndex )
 
-	-- É¾³ıÍæ¼ÒÈÎÎñÁĞ±íÖĞ¶ÔÓ¦µÄÈÎÎñ
+	-- åˆ é™¤ç©å®¶ä»»åŠ¡åˆ—è¡¨ä¸­å¯¹åº”çš„ä»»åŠ¡
 	DelMission( sceneId, selfId, missionId )
 end
 
 --**********************************
--- ¼ÌĞø
+-- ç»§ç»­
 --**********************************
 function x006668_OnContinue( sceneId, selfId, targetId, missionIndex )
 	local missionId = TGetMissionIdByIndex( missionIndex )
@@ -475,7 +475,7 @@ function x006668_OnContinue( sceneId, selfId, targetId, missionIndex )
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x006668_CheckSubmit( sceneId, selfId, missionIndex )
 	local missionId = TGetMissionIdByIndex( missionIndex )
@@ -490,10 +490,10 @@ function x006668_CheckSubmit( sceneId, selfId, missionIndex )
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x006668_OnSubmit( sceneId, selfId, targetId, selectRadioId, missionIndex )
-	-- ¼ì²âÊÇ²»ÊÇÂú×ãÍê³ÉÈÎÎñµÄÌõ¼ş
+	-- æ£€æµ‹æ˜¯ä¸æ˜¯æ»¡è¶³å®Œæˆä»»åŠ¡çš„æ¡ä»¶
 	local missionId = TGetMissionIdByIndex( missionIndex )
 	local missionName = TGetMissionName( missionIndex )
 
@@ -506,12 +506,12 @@ function x006668_OnSubmit( sceneId, selfId, targetId, selectRadioId, missionInde
 		local item, count = 1, 2
 		local mi = { { -1, 0 }, { -1, 0 }, { -1, 0 }, { -1, 0 }, { -1, 0 } }
 
-		-- ³¢ÊÔÔö¼Ó½±ÀøÎïÆ·
+		-- å°è¯•å¢åŠ å¥–åŠ±ç‰©å“
 		BeginAddItem( sceneId )
 		ItemCount, mi[1][1], mi[1][2], mi[2][1], mi[2][2], mi[3][1], mi[3][2],
 			mi[4][1], mi[4][2], mi[5][1], mi[5][2] = TGetAwardItem( missionIndex )
 
-		if ItemCount > 0 then											-- ¹Ì¶¨½±Àø
+		if ItemCount > 0 then											-- å›ºå®šå¥–åŠ±
 			for i = 1, ItemCount do
 				if mi[i][item] > 0 then
 					AddItem( sceneId, mi[i][item], mi[i][count] )
@@ -523,7 +523,7 @@ function x006668_OnSubmit( sceneId, selfId, targetId, selectRadioId, missionInde
 		ItemCount, mi[1][1], mi[1][2], mi[2][1], mi[2][2], mi[3][1], mi[3][2],
 			mi[4][1], mi[4][2], mi[5][1], mi[5][2] = TGetRadioItem( missionIndex )
 
-		if ItemCount > 0 then											-- Ñ¡Ôñ½±Àø
+		if ItemCount > 0 then											-- é€‰æ‹©å¥–åŠ±
 			for i = 1, ItemCount do
 				if mi[i][item] > 0 and mi[i][item] == selectRadioId then
 					AddItem( sceneId, mi[i][item], mi[i][count] )
@@ -536,7 +536,7 @@ function x006668_OnSubmit( sceneId, selfId, targetId, selectRadioId, missionInde
 		ItemCount, mi[1][1], mi[1][2], mi[2][1], mi[2][2], mi[3][1], mi[3][2],
 			mi[4][1], mi[4][2], mi[5][1], mi[5][2] = TGetHideItem( missionIndex )
 
-		if ItemCount > 0 then											-- Òş²Ø½±Àø
+		if ItemCount > 0 then											-- éšè—å¥–åŠ±
 			for i = 1, ItemCount do
 				if mi[i][item] > 0 then
 					AddItem( sceneId, mi[i][item], mi[i][count] )
@@ -551,7 +551,7 @@ function x006668_OnSubmit( sceneId, selfId, targetId, selectRadioId, missionInde
 		
 		local ret = EndAddItem( sceneId, selfId )
 		if ret <= 0 then
-			x006668_NotifyFailTips( sceneId, selfId, "±³°üÒÑÂú,ÎŞ·¨Íê³ÉÈÎÎñ" )
+			x006668_NotifyFailTips( sceneId, selfId, "èƒŒåŒ…å·²æ»¡,æ— æ³•å®Œæˆä»»åŠ¡" )
 			return
 		end
 
@@ -559,7 +559,7 @@ function x006668_OnSubmit( sceneId, selfId, targetId, selectRadioId, missionInde
 			AddItemListToHuman( sceneId, selfId )
 		end
 
-		-- Ìí¼ÓÈÎÎñ½±Àø
+		-- æ·»åŠ ä»»åŠ¡å¥–åŠ±
 		local awardMoney = TGetAwardMoney( missionIndex )
 		if awardMoney > 0 then
 			AddMoney( sceneId, selfId, awardMoney )
@@ -570,7 +570,7 @@ function x006668_OnSubmit( sceneId, selfId, targetId, selectRadioId, missionInde
 			LuaFnAddExp( sceneId, selfId, awardExp )
 		end
 
-		-- ½±Àø¹ØÏµÖµ
+		-- å¥–åŠ±å…³ç³»å€¼
 		CallScriptFunction( MOD_EVENT, "RewardRelationShip", sceneId, selfId, missionIndex, targetId )
 
 		local mdLocation, _, _ = TGetRelationShipAwardInfo( missionIndex );
@@ -583,17 +583,17 @@ function x006668_OnSubmit( sceneId, selfId, targetId, selectRadioId, missionInde
 		end
 
 		DelMission( sceneId, selfId, missionId )
-		-- ÉèÖÃÈÎÎñÒÑ¾­±»Íê³É¹ı
+		-- è®¾ç½®ä»»åŠ¡å·²ç»è¢«å®Œæˆè¿‡
 		MissionCom( sceneId, selfId, missionId )
 
-		local strText = "#Y" .. missionName .. "ÈÎÎñÒÑÍê³É¡£"
+		local strText = "#Y" .. missionName .. "ä»»åŠ¡å·²å®Œæˆã€‚"
 		x006668_NotifyFailTips( sceneId, selfId, strText )
 		Msg2Player( sceneId, selfId, strText, MSG2PLAYER_PARA )
 
 		LuaFnSendSpecificImpactToUnit( sceneId, selfId, selfId, selfId, 18, 0 )
 		CallScriptFunction( SCENE_SCRIPT_ID, "PlaySoundEffect", sceneId, selfId, 66 )
 		
-		-- »ñµÃºóĞøÈÎÎñµÄIndex
+		-- è·å¾—åç»­ä»»åŠ¡çš„Index
 		local NextMissIndex = GetNextMissionIndex( missionIndex )
 
 		for i, MissType in x006668_g_MissionTypeList do
@@ -624,21 +624,21 @@ function x006668_OnSubmit( sceneId, selfId, targetId, selectRadioId, missionInde
 end
 
 --**********************************
---É±ËÀ¹ÖÎï»òÍæ¼Ò
+--æ€æ­»æ€ªç‰©æˆ–ç©å®¶
 --**********************************
-function x006668_OnKillObject( sceneId, selfId, objdataId, objId, missionIndex )	-- ²ÎÊıÒâË¼£º³¡¾°ºÅ¡¢Íæ¼ÒobjId¡¢¹ÖÎï±íÎ»ÖÃºÅ¡¢¹ÖÎïobjId
+function x006668_OnKillObject( sceneId, selfId, objdataId, objId, missionIndex )	-- å‚æ•°æ„æ€ï¼šåœºæ™¯å·ã€ç©å®¶objIdã€æ€ªç‰©è¡¨ä½ç½®å·ã€æ€ªç‰©objId
 
 end
 
 --**********************************
---µÀ¾ß¸Ä±ä
+--é“å…·æ”¹å˜
 --**********************************
 function x006668_OnItemChanged( sceneId, selfId, itemdataId )
 
 end
 
 --**********************************
--- ¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+-- å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x006668_NotifyFailBox( sceneId, selfId, targetId, msg )
 	BeginEvent( sceneId )
@@ -648,7 +648,7 @@ function x006668_NotifyFailBox( sceneId, selfId, targetId, msg )
 end
 
 --**********************************
--- ÆÁÄ»ÖĞ¼äĞÅÏ¢ÌáÊ¾
+-- å±å¹•ä¸­é—´ä¿¡æ¯æç¤º
 --**********************************
 function x006668_NotifyFailTips( sceneId, selfId, Tip )
 	BeginEvent( sceneId )

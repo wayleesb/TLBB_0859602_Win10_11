@@ -1,15 +1,15 @@
--- ÕäÊŞÏ´µã
+-- çå…½æ´—ç‚¹
 
--- ½Å±¾ºÅ
+-- è„šæœ¬å·
 x800107_g_ScriptId = 800107;
 
-x800107_g_resetptItemDataID = 30503021;	--Á¶ÊŞµ¤
+x800107_g_resetptItemDataID = 30503021;	--ç‚¼å…½ä¸¹
 
 --**********************************
--- ÈÎÎñÈë¿Úº¯Êı
+-- ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x800107_OnDefaultEvent(sceneId, selfId, targetId)
-	--ÕäÊŞÏ´µã
+	--çå…½æ´—ç‚¹
 	BeginUICommand(sceneId);
 		UICommand_AddInt(sceneId, targetId);
 	EndUICommand(sceneId);
@@ -17,14 +17,14 @@ function x800107_OnDefaultEvent(sceneId, selfId, targetId)
 end
 
 --**********************************
--- ÁĞ¾ÙÊÂ¼ş
+-- åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x800107_OnEnumerate(sceneId, selfId, targetId)
-	AddNumText(sceneId, x800107_g_ScriptId, "ÕäÊŞÏ´µã" , 6, -1);
+	AddNumText(sceneId, x800107_g_ScriptId, "çå…½æ´—ç‚¹" , 6, -1);
 end
 
 --**********************************
--- ÕäÊŞÏ´µã
+-- çå…½æ´—ç‚¹
 --**********************************
 function x800107_ResetPetAttrPt(sceneId, selfId, petGUID_H, petGUID_L, itemPos)
 	if not sceneId or not selfId or not petGUID_H or not petGUID_L or not itemPos then
@@ -33,7 +33,7 @@ function x800107_ResetPetAttrPt(sceneId, selfId, petGUID_H, petGUID_L, itemPos)
 	
 	local checkPet = LuaFnIsPetAvailableByGUID(sceneId, selfId, petGUID_H, petGUID_L);
 	if not checkPet or checkPet ~= 1 then
-		x800107_ShowTips(sceneId, selfId, "²»ÄÜ¶Ô³öÕ½»òËø¶¨µÄÕäÊŞ½øĞĞ²Ù×÷¡£");
+		x800107_ShowTips(sceneId, selfId, "ä¸èƒ½å¯¹å‡ºæˆ˜æˆ–é”å®šçš„çå…½è¿›è¡Œæ“ä½œã€‚");
 		return 0;
 	end
 
@@ -42,22 +42,22 @@ function x800107_ResetPetAttrPt(sceneId, selfId, petGUID_H, petGUID_L, itemPos)
 		return 0;
 	end
 
-	--¢Ü ÌØÊâµÀ¾ßÀ¸ÖĞÓĞ¡°Á¶ÊŞµ¤¡±	ĞèÒª¡°Á¶ÊŞµ¤¡±
+	--â‘£ ç‰¹æ®Šé“å…·æ ä¸­æœ‰â€œç‚¼å…½ä¸¹â€	éœ€è¦â€œç‚¼å…½ä¸¹â€
 	local itemDataID = GetItemTableIndexByIndex(sceneId, selfId, itemPos);
 	if not itemDataID or itemDataID ~= x800107_g_resetptItemDataID then
-		x800107_ShowTips(sceneId, selfId, "ĞèÒªÁ¶ÊŞµ¤¡£");
+		x800107_ShowTips(sceneId, selfId, "éœ€è¦ç‚¼å…½ä¸¹ã€‚");
 		return 0;
 	end
 	
 	local itemAvailable = LuaFnIsItemAvailable(sceneId, selfId, itemPos);
 	if not itemAvailable or itemAvailable ~= 1 then
-		x800107_ShowTips(sceneId, selfId, "²»ÄÜ²Ù×÷±»Ëø¶¨µÄÁ¶ÊŞµ¤¡£");
+		x800107_ShowTips(sceneId, selfId, "ä¸èƒ½æ“ä½œè¢«é”å®šçš„ç‚¼å…½ä¸¹ã€‚");
 		return 0;
 	end
 	
 	local eraseRet = LuaFnEraseItem(sceneId, selfId, itemPos);
 	if not eraseRet or eraseRet ~= 1 then
-		x800107_ShowTips(sceneId, selfId, "²Ù×÷Á¶ÊŞµ¤Ê§°Ü¡£");
+		x800107_ShowTips(sceneId, selfId, "æ“ä½œç‚¼å…½ä¸¹å¤±è´¥ã€‚");
 		return 0;
 	end
 
@@ -65,13 +65,13 @@ function x800107_ResetPetAttrPt(sceneId, selfId, petGUID_H, petGUID_L, itemPos)
 	if not ret or ret ~= 1 then
 		return 0;
 	end
-	x800107_ShowTips(sceneId, selfId, "ÕäÊŞÏ´µã³É¹¦£¡");
+	x800107_ShowTips(sceneId, selfId, "çå…½æ´—ç‚¹æˆåŠŸï¼");
 	LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, 18, 0);
 	return 1;
 end
 
 --**********************************
--- ÌáÊ¾ĞÅÏ¢
+-- æç¤ºä¿¡æ¯
 --**********************************
 function x800107_ShowTips(sceneId, selfId, tipMsg)
 	BeginEvent(sceneId);

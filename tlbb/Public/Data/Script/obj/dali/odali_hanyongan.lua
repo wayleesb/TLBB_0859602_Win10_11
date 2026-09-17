@@ -1,17 +1,17 @@
---´óÀíNPC
---º«ÓÀ°²
---ÆÕÍ¨
+--å¤§ç†NPC
+--éŸ©æ°¸å®‰
+--æ™®é€š
 
 x002029_g_shoptableindex_1=8
 
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x002029_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
-		AddText(sceneId,"  ÎÒÕâ¼Òµ±ÆÌÊÇ´óÀí³Ç×î´óµÄµ±ÆÌ¡£")
-		--AddNumText(sceneId,g_scriptId,"¹ºÂòÆÕÍ¨²ÄÁÏ",7,0)
+		AddText(sceneId,"  æˆ‘è¿™å®¶å½“é“ºæ˜¯å¤§ç†åŸæœ€å¤§çš„å½“é“ºã€‚")
+		--AddNumText(sceneId,g_scriptId,"è´­ä¹°æ™®é€šææ–™",7,0)
 		EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 end

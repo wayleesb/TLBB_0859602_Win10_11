@@ -34,7 +34,7 @@ function YuanbaoExchange_OnEvent(event)
 			YuanbaoExchange_Moral_Value:SetProperty("DefaultEditBox", "True");
 			YuanbaoExchange_Moral_Value:SetSelected( 0, -1 );
 			g_Point = Get_XParam_INT(0)/1000;
-			YuanbaoExchange_Text1 : SetText("ÄúÄ¿Ç°ÕË»§ÉÏ»¹Ê£ÓàµãÊı£º"..g_Point)
+			YuanbaoExchange_Text1 : SetText("æ‚¨ç›®å‰è´¦æˆ·ä¸Šè¿˜å‰©ä½™ç‚¹æ•°ï¼š"..g_Point)
 			YuanbaoExchange_Max:Enable()
 			YuanbaoExchange_OK:Enable()
 			YuanbaoExchange_Moral_Value:Enable();
@@ -61,8 +61,8 @@ end
 function YuanbaoExchange_Update()
 	Exchange_Rate = Get_XParam_INT(1)/1000
 	
-	YuanbaoExchange_Text1 : SetText("#cff0000#bÊ£ÓàµãÊıÕıÔÚ²éÑ¯ÖĞ£¬ÇëÉÔºò¡­¡­")
-	YuanbaoExchange_Text3 : SetText("ĞèÒª»¨·ÑµãÊı£º0")
+	YuanbaoExchange_Text1 : SetText("#cff0000#bå‰©ä½™ç‚¹æ•°æ­£åœ¨æŸ¥è¯¢ä¸­ï¼Œè¯·ç¨å€™â€¦â€¦")
+	YuanbaoExchange_Text3 : SetText("éœ€è¦èŠ±è´¹ç‚¹æ•°ï¼š0")
 	
 end
 
@@ -72,17 +72,17 @@ function YuanbaoExchange_OK_Clicked()
 	--AxTrace(0,0,"YuanbaoExchange_OK_Clicked 1 "..tostring(str));
 
 	if str == nil or str == "" then
-		YuanbaoExchange_Text3 : SetText("ĞèÒª»¨·ÑµãÊı£º0")
-		PushDebugMessage("ÇëÊäÈëÒª¶Ò»»µÄÔª±¦Êı¶î")
+		YuanbaoExchange_Text3 : SetText("éœ€è¦èŠ±è´¹ç‚¹æ•°ï¼š0")
+		PushDebugMessage("è¯·è¾“å…¥è¦å…‘æ¢çš„å…ƒå®æ•°é¢")
 		return
 	end
 	
 	if tonumber(str) > 10000 then
-		PushDebugMessage("Ã¿´Î¶Ò»»µÄÔª±¦ÊıÁ¿×î¶àÎª10000µã£¬ÇëÊäÈëĞ¡ÓÚµÈÓÚ10000µãµÄÊı×Ö¡£")
+		PushDebugMessage("æ¯æ¬¡å…‘æ¢çš„å…ƒå®æ•°é‡æœ€å¤šä¸º10000ç‚¹ï¼Œè¯·è¾“å…¥å°äºç­‰äº10000ç‚¹çš„æ•°å­—ã€‚")
 		return
 	end
 	if( tonumber(str) <= 0 ) then
-		PushDebugMessage("Ã¿´Î¶Ò»»µÄÔª±¦ÊıÁ¿×îÉÙÎª1µã£¬ÇëÊäÈë´óÓÚµÈÓÚ1µãµÄÊı×Ö¡£")
+		PushDebugMessage("æ¯æ¬¡å…‘æ¢çš„å…ƒå®æ•°é‡æœ€å°‘ä¸º1ç‚¹ï¼Œè¯·è¾“å…¥å¤§äºç­‰äº1ç‚¹çš„æ•°å­—ã€‚")
 		return
 	end
 	
@@ -122,16 +122,16 @@ function YuanbaoExchange_CareEventHandle(careId, op, distance)
 		if(tonumber(careId) ~= g_clientNpcId) then
 			return;
 		end
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ı£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æœå’ŒNPCçš„è·ç¦»å¤§äºä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if(op == "distance" and tonumber(distance)>MAX_OBJ_DISTANCE or op=="destroy") then
 			YuanbaoExchange_Close();
 		end
 end
 
 --=========================================================
---¿ªÊ¼¹ØĞÄNPC£¬
---ÔÚ¿ªÊ¼¹ØĞÄÖ®Ç°ĞèÒªÏÈÈ·¶¨Õâ¸ö½çÃæÊÇ²»ÊÇÒÑ¾­ÓĞ¡°¹ØĞÄ¡±µÄNPC£¬
---Èç¹ûÓĞµÄ»°£¬ÏÈÈ¡ÏûÒÑ¾­ÓĞµÄ¡°¹ØĞÄ¡±
+--å¼€å§‹å…³å¿ƒNPCï¼Œ
+--åœ¨å¼€å§‹å…³å¿ƒä¹‹å‰éœ€è¦å…ˆç¡®å®šè¿™ä¸ªç•Œé¢æ˜¯ä¸æ˜¯å·²ç»æœ‰â€œå…³å¿ƒâ€çš„NPCï¼Œ
+--å¦‚æœæœ‰çš„è¯ï¼Œå…ˆå–æ¶ˆå·²ç»æœ‰çš„â€œå…³å¿ƒâ€
 --=========================================================
 function BeginCareObject_YuanbaoExchange(objCaredId)
 
@@ -142,7 +142,7 @@ function BeginCareObject_YuanbaoExchange(objCaredId)
 end
 
 --=========================================================
---Í£Ö¹¶ÔÄ³NPCµÄ¹ØĞÄ
+--åœæ­¢å¯¹æŸNPCçš„å…³å¿ƒ
 --=========================================================
 function StopCareObject_YuanbaoExchange(objCaredId)
 	this:CareObject(objCaredId, 0, "YuanbaoExchange");
@@ -163,7 +163,7 @@ function YuanbaoExchange_Count_Change()
 	end
 	str = tostring( strNumber );
 	YuanbaoExchange_Moral_Value:SetTextOriginal( str );
-	YuanbaoExchange_Text3 : SetText("ĞèÒª»¨·ÑµãÊı£º"..tostring( Exchange_Rate * strNumber ) )
+	YuanbaoExchange_Text3 : SetText("éœ€è¦èŠ±è´¹ç‚¹æ•°ï¼š"..tostring( Exchange_Rate * strNumber ) )
 end
 
 function YuanbaoExchange_Max_Clicked()

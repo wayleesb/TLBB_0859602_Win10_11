@@ -1,11 +1,11 @@
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x400942_g_Transport = 400900
 
---Íæ¼Ò½øÈëÒ»¸ö area Ê±´¥·¢
+--ç©å®¶è¿›å…¥ä¸€ä¸ª area æ—¶è§¦å‘
 function x400942_OnEnterArea( sceneId, selfId )
         if GetLevel( sceneId, selfId ) < 90 then 
 		BeginEvent( sceneId )
-			AddText( sceneId, "  ³ÇÍâ·Ç³£Î£ÏÕ£¬¶øÄãµÄµÈ¼¶ÉĞ²»×ã90¼¶£¬ÎªÁËÄãµÄ°²È«×ÅÏë£¬¶ÍÁ¶Ğ©Ê±ÈÕÔÙ³ö³Ç°É¡£" )
+			AddText( sceneId, "  åŸå¤–éå¸¸å±é™©ï¼Œè€Œä½ çš„ç­‰çº§å°šä¸è¶³90çº§ï¼Œä¸ºäº†ä½ çš„å®‰å…¨ç€æƒ³ï¼Œé”»ç‚¼äº›æ—¶æ—¥å†å‡ºåŸå§ã€‚" )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, -1 )
 	else 
@@ -14,17 +14,17 @@ function x400942_OnEnterArea( sceneId, selfId )
 	
 end
 
---Íæ¼ÒÔÚÒ»¸ö area ´ôÁËÒ»¶ÎÊ±¼äÃ»×ßÔò¶¨Ê±´¥·¢
+--ç©å®¶åœ¨ä¸€ä¸ª area å‘†äº†ä¸€æ®µæ—¶é—´æ²¡èµ°åˆ™å®šæ—¶è§¦å‘
 function x400942_OnTimer( sceneId, selfId )
-	-- ºÁÃë£¬¿´ÔÚÕâ¸ö area Í£Áô¶à¾ÃÁË
+	-- æ¯«ç§’ï¼Œçœ‹åœ¨è¿™ä¸ª area åœç•™å¤šä¹…äº†
 	StandingTime = QueryAreaStandingTime( sceneId, selfId )
-	-- 5ÃëºóÈÔÎ´´«ËÍ
+	-- 5ç§’åä»æœªä¼ é€
 	if StandingTime >= 5000 then
 		x400942_OnEnterArea( sceneId, selfId )
 		ResetAreaStandingTime( sceneId, selfId, 0 )
 	end
 end
 
---Íæ¼ÒÀë¿ªÒ»¸ö area Ê±´¥·¢
+--ç©å®¶ç¦»å¼€ä¸€ä¸ª area æ—¶è§¦å‘
 function x400942_OnLeaveArea( sceneId, selfId )
 end

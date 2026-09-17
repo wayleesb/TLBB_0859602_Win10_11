@@ -1,20 +1,20 @@
-;É½Ô½¼ÀË¾£¬¼ûµ½ÈË¾ÍÆËÉÏÀ´¿³£¬Èç¹ûµĞÈËÈËÊı´óÓÚ1ÈË,Ôò¶ÔÆäÖĞÒ»¸öÍæ¼ÒÊ¹ÓÃÊ¯»¯£¨567£©£¬ÑªÉÙÓÚ50%Ê±ÖÎÁÆ(582)×Ô¼º,ÊÜµ¥´ÎÉËº¦½Ï´óÊ±ÕÙ»½¶ÓÓÑ,Ò»¶¨¼¸ÂÊÊ¹ÓÃ¾»»¯(583)
+;å±±è¶Šç¥­å¸ï¼Œè§åˆ°äººå°±æ‰‘ä¸Šæ¥ç ï¼Œå¦‚æœæ•Œäººäººæ•°å¤§äº1äºº,åˆ™å¯¹å…¶ä¸­ä¸€ä¸ªç©å®¶ä½¿ç”¨çŸ³åŒ–ï¼ˆ567ï¼‰ï¼Œè¡€å°‘äº50%æ—¶æ²»ç–—(582)è‡ªå·±,å—å•æ¬¡ä¼¤å®³è¾ƒå¤§æ—¶å¬å”¤é˜Ÿå‹,ä¸€å®šå‡ ç‡ä½¿ç”¨å‡€åŒ–(583)
 [common]
 [commonend]
 
-;×¢ÒâÎïÀí¹¥»÷¼¼ÄÜÓÅÏÈ¼¶Ó¦¸Ã±ÈÔ¶³Ì¼¼ÄÜÓÅÏÈ¼¶¸ß
+;æ³¨æ„ç‰©ç†æ”»å‡»æŠ€èƒ½ä¼˜å…ˆçº§åº”è¯¥æ¯”è¿œç¨‹æŠ€èƒ½ä¼˜å…ˆçº§é«˜
 [skill]
-0:if(AIS_IsCanSkill(0)=1){AIS_ToSkill(0);AIS_SetTimes(-1);AIS_SetPRI(30);};Èç¹ûÄÜÊ¹ÓÃ0ºÅ¼¼ÄÜÔòÊÍ·Å£¬´ÎÊı²»ÏŞ£¨ÆÕÍ¨¹¥»÷£©
-1:if(AIS_GetAIState()=SATTACK&AIS_GetEnemyNum()>1&AIS_IsCanSkill(567)=1){AIS_ToSkill(567);AIS_SetTimes(1);AIS_SetPRI(34);};µĞÈË¶àÓÚ1ÈËÔòÊÍ·Å567ºÅ¼¼ÄÜ£¬´ÎÊı1
-2:if(AIS_GetHP()<50&AIS_IsCanSkill(582)=1){AIS_ToSkill(582);AIS_SetTimes(1);AIS_SetPRI(35);};ÑªÉÙÓÚ50%Ê±ÖÎÁÆ(582)×Ô¼º
-3:if(AIS_GetAIState()=SATTACK&AIS_Rand()<10&AIS_IsCanSkill(583)=1){AIS_ToSkill(583);AIS_SetTimes(3);AIS_SetPRI(32);};ÔÚ¹¥»÷×´Ì¬10%µÄ»úÂÊÊÍ·Å583ºÅ¼¼ÄÜ¾»»¯×Ô¼º£¬´ÎÊı1
+0:if(AIS_IsCanSkill(0)=1){AIS_ToSkill(0);AIS_SetTimes(-1);AIS_SetPRI(30);};å¦‚æœèƒ½ä½¿ç”¨0å·æŠ€èƒ½åˆ™é‡Šæ”¾ï¼Œæ¬¡æ•°ä¸é™ï¼ˆæ™®é€šæ”»å‡»ï¼‰
+1:if(AIS_GetAIState()=SATTACK&AIS_GetEnemyNum()>1&AIS_IsCanSkill(567)=1){AIS_ToSkill(567);AIS_SetTimes(1);AIS_SetPRI(34);};æ•Œäººå¤šäº1äººåˆ™é‡Šæ”¾567å·æŠ€èƒ½ï¼Œæ¬¡æ•°1
+2:if(AIS_GetHP()<50&AIS_IsCanSkill(582)=1){AIS_ToSkill(582);AIS_SetTimes(1);AIS_SetPRI(35);};è¡€å°‘äº50%æ—¶æ²»ç–—(582)è‡ªå·±
+3:if(AIS_GetAIState()=SATTACK&AIS_Rand()<10&AIS_IsCanSkill(583)=1){AIS_ToSkill(583);AIS_SetTimes(3);AIS_SetPRI(32);};åœ¨æ”»å‡»çŠ¶æ€10%çš„æœºç‡é‡Šæ”¾583å·æŠ€èƒ½å‡€åŒ–è‡ªå·±ï¼Œæ¬¡æ•°1
 [skillend]
 
 [beskill]
 [beskillend]
 
 [damage]
-0:if(AIS_GetSingleDamage()>20){AIS_ToSummon(0,3);AIS_SetTimes(1);AIS_SetPRI(30);};ÊÜµ½µ¥´ÎÉËº¦´óÓÚ20%µÄÊ±ºòÕÙ»½ÇøÓòÄÚµÄ¶ÓÓÑ
+0:if(AIS_GetSingleDamage()>20){AIS_ToSummon(0,3);AIS_SetTimes(1);AIS_SetPRI(30);};å—åˆ°å•æ¬¡ä¼¤å®³å¤§äº20%çš„æ—¶å€™å¬å”¤åŒºåŸŸå†…çš„é˜Ÿå‹
 [damageend]
 
 [dead]

@@ -1,10 +1,10 @@
---¶Ô»°ÊÂ¼ş npc°×Ó±Ã÷
+--å¯¹è¯äº‹ä»¶ npcç™½é¢–æ˜
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x713621_g_ScriptId = 713621
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x713621_OnDefaultEvent( sceneId, selfId, targetId)
 	dialog = "#{event_liveabilityevent_0030}"
@@ -15,20 +15,20 @@ function x713621_OnDefaultEvent( sceneId, selfId, targetId)
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x713621_OnEnumerate( sceneId, selfId, targetId )
-		AddNumText(sceneId,x713621_g_ScriptId,"ÎÒÏëÁË½âÑøÉú·¨",11,-1)
+		AddNumText(sceneId,x713621_g_ScriptId,"æˆ‘æƒ³äº†è§£å…»ç”Ÿæ³•",11,-1)
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x713621_CheckAccept( sceneId, selfId )
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x713621_OnAccept( sceneId, selfId, AbilityId )
 end

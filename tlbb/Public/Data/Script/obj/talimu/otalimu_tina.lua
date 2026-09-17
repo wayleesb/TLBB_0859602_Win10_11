@@ -1,10 +1,10 @@
---塔里木NPC
---缇娜
+--濉旈噷鏈∟PC
+--缂囧
 
 x044502_g_ScriptId	= 044502
 
 --**********************************
---事件交互入口
+--浜嬩欢浜や簰鍏ュ彛
 --**********************************
 function x044502_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent( sceneId )

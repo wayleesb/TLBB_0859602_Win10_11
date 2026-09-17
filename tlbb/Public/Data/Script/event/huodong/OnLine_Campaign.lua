@@ -1,12 +1,12 @@
---»î¶¯¡ª¡ª
---Ê¥µ®½ÚÔªµ©»î¶¯-ÊÕ¼¯ÃÅÅÉµÀ¾ß»»½±Àø
+--æ´»åŠ¨â€”â€”
+--åœ£è¯èŠ‚å…ƒæ—¦æ´»åŠ¨-æ”¶é›†é—¨æ´¾é“å…·æ¢å¥–åŠ±
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x889050_g_ScriptId = 889050
 
 x889050_g_BufferId = 20001
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x889050_OnDefaultEvent( sceneId, selfId, targetId )
 
@@ -18,22 +18,22 @@ function x889050_OnDefaultEvent( sceneId, selfId, targetId )
 	local NumText = GetNumText()
 	if NumText == 111 then
 		BeginEvent(sceneId)
-			AddText(sceneId,"    ÇØ»ÊÕ½Éñ£¬¿ÉÖúÄã¹¦Á¦´óÔö¡£´ÓÏÖÔÚ¿ªÊ¼£¬·²µÈ¼¶#G¡İ30#W¼¶µÄÍæ¼Ò¶¼¿ÉÒÔÔÚÎÒÕâÀïÁìÈ¡#GÇØ»ÊÕ½ÉñBUFF#W£¬¸ÃBUFF¿ÉÒÔÌáÉıÄúµÄ¹¥»÷ÄÜÁ¦àŞ£¡ÄúÈ·¶¨ÒªÁìÈ¡Âğ£¿")
-			AddNumText( sceneId, x889050_g_ScriptId, "È·¶¨", 8, 113 )
-			AddNumText( sceneId, x889050_g_ScriptId, "È¡Ïû", 8, 114 )
+			AddText(sceneId,"    ç§¦çš‡æˆ˜ç¥ï¼Œå¯åŠ©ä½ åŠŸåŠ›å¤§å¢ã€‚ä»ç°åœ¨å¼€å§‹ï¼Œå‡¡ç­‰çº§#Gâ‰¥30#Wçº§çš„ç©å®¶éƒ½å¯ä»¥åœ¨æˆ‘è¿™é‡Œé¢†å–#Gç§¦çš‡æˆ˜ç¥BUFF#Wï¼Œè¯¥BUFFå¯ä»¥æå‡æ‚¨çš„æ”»å‡»èƒ½åŠ›å™¢ï¼æ‚¨ç¡®å®šè¦é¢†å–å—ï¼Ÿ")
+			AddNumText( sceneId, x889050_g_ScriptId, "ç¡®å®š", 8, 113 )
+			AddNumText( sceneId, x889050_g_ScriptId, "å–æ¶ˆ", 8, 114 )
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 	  
 	elseif NumText == 112 then
 		BeginEvent(sceneId)
-			AddText(sceneId, "#YÇØ»ÊÕ½Éñ£¬ÖúÄã¹¦Á¦´óÔö¡£#r #r#W    ·²µÈ¼¶#G¡İ30#W¼¶µÄÍæ¼Ò¶¼¿ÉÒÔÔÚÎÒÕâÀïÁìÈ¡#GÇØ»ÊÕ½ÉñBUFF#W£¬¸ÃBUFF¿ÉÊ¹ÄÚÍâ¹¥ÔöÇ¿#W£¬³ÖĞøÊ±¼äÎª#G12Ğ¡Ê±#W£¬½ÇÉ«ËÀÍöºóBUFF²»ÏûÊ§£¬ÏÂÏßºó³ÖĞø¼ÆÊ±¡£")
+			AddText(sceneId, "#Yç§¦çš‡æˆ˜ç¥ï¼ŒåŠ©ä½ åŠŸåŠ›å¤§å¢ã€‚#r #r#W    å‡¡ç­‰çº§#Gâ‰¥30#Wçº§çš„ç©å®¶éƒ½å¯ä»¥åœ¨æˆ‘è¿™é‡Œé¢†å–#Gç§¦çš‡æˆ˜ç¥BUFF#Wï¼Œè¯¥BUFFå¯ä½¿å†…å¤–æ”»å¢å¼º#Wï¼ŒæŒç»­æ—¶é—´ä¸º#G12å°æ—¶#Wï¼Œè§’è‰²æ­»äº¡åBUFFä¸æ¶ˆå¤±ï¼Œä¸‹çº¿åæŒç»­è®¡æ—¶ã€‚")
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 	elseif NumText == 113	then
-		--È·¶¨
+		--ç¡®å®š
 		x889050_GiveBuff( sceneId, selfId, targetId )
 	elseif NumText == 114	then
-		--È¡Ïû
+		--å–æ¶ˆ
 		BeginUICommand(sceneId)
 		EndUICommand(sceneId)
 		DispatchUICommand(sceneId,selfId, 1000)
@@ -41,119 +41,119 @@ function x889050_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x889050_OnEnumerate( sceneId, selfId, targetId )
   
-  --¼ì²âÊ±¼äÊÇ·ñÕıÈ·
+  --æ£€æµ‹æ—¶é—´æ˜¯å¦æ­£ç¡®
 	local isTime = x889050_CheckRightTime()
 	if 1 ~= isTime then
 		return
 	end
 
-	AddNumText(sceneId, x889050_g_ScriptId, "ÇØ»ÊÕ½Éñ»î¶¯", 6, 111 )
-	AddNumText(sceneId, x889050_g_ScriptId, "¹ØÓÚÇØ»ÊÕ½Éñ»î¶¯", 11, 112 )													
+	AddNumText(sceneId, x889050_g_ScriptId, "ç§¦çš‡æˆ˜ç¥æ´»åŠ¨", 6, 111 )
+	AddNumText(sceneId, x889050_g_ScriptId, "å…³äºç§¦çš‡æˆ˜ç¥æ´»åŠ¨", 11, 112 )													
 end
 
 --**********************************
---¼ì²â»î¶¯Ê±¼äÊÇ·ñÕıÈ·
+--æ£€æµ‹æ´»åŠ¨æ—¶é—´æ˜¯å¦æ­£ç¡®
 --**********************************
 function x889050_CheckRightTime()
 
---Ò»Ö±¿ªÆô¸Ã»î¶¯
+--ä¸€ç›´å¼€å¯è¯¥æ´»åŠ¨
 	return 1
 
 end
 
 --**********************************
---¸øÍæ¼Ò½ÚÈÕºØÌû
+--ç»™ç©å®¶èŠ‚æ—¥è´ºå¸–
 --**********************************
 function x889050_GiveBuff( sceneId, selfId, targetId )
 
-	--¹Ø±Õ¶Ô»°´°¿Ú....
+	--å…³é—­å¯¹è¯çª—å£....
 	BeginUICommand( sceneId )
 		UICommand_AddInt( sceneId, targetId )
 	EndUICommand( sceneId )
 	DispatchUICommand( sceneId, selfId, 1000 )
 	
-	--Èç¹ûÍæ¼ÒµÈ¼¶Ğ¡ÓÚ30²»Óè»»È¡ºØ¿¨
+	--å¦‚æœç©å®¶ç­‰çº§å°äº30ä¸äºˆæ¢å–è´ºå¡
 	if	GetLevel( sceneId, selfId) < 30 then
 		BeginEvent(sceneId)
-			AddText( sceneId, "¶Ô²»Æğ£¬ÄúµÄµÈ¼¶Î´´ïµ½30¼¶£¬²»ÄÜÁìÈ¡ÇØ»ÊÕ½ÉñBUFF¡£" )
+			AddText( sceneId, "å¯¹ä¸èµ·ï¼Œæ‚¨çš„ç­‰çº§æœªè¾¾åˆ°30çº§ï¼Œä¸èƒ½é¢†å–ç§¦çš‡æˆ˜ç¥BUFFã€‚" )
 		EndEvent(sceneId)
 		DispatchMissionTips( sceneId, selfId )
 		return
 	end
 	
-	--Èç¹ûÍæ¼ÒÓĞ»î¶¯µÄBUFF
+	--å¦‚æœç©å®¶æœ‰æ´»åŠ¨çš„BUFF
 	if LuaFnHaveImpactOfSpecificDataIndex( sceneId, selfId, x889050_g_BufferId ) == 1 then
 		BeginEvent(sceneId)
-			 AddText( sceneId, "ÄúÒÑ¾­ÁìÈ¡¹ıÇØ»ÊÕ½ÉñBUFF£¬ÇëÔÚBUFFĞ§¹û½áÊøºóÔÙĞĞÁìÈ¡¡£" )
+			 AddText( sceneId, "æ‚¨å·²ç»é¢†å–è¿‡ç§¦çš‡æˆ˜ç¥BUFFï¼Œè¯·åœ¨BUFFæ•ˆæœç»“æŸåå†è¡Œé¢†å–ã€‚" )
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 		return
 	end	
 	
-	--¸øÓèÍæ¼Ò»î¶¯BUFF
+	--ç»™äºˆç©å®¶æ´»åŠ¨BUFF
 	LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, x889050_g_BufferId, 0)	
    
 	BeginEvent(sceneId)
-			AddText( sceneId, "¹§Ï²Äú£¬³É¹¦ÁìÈ¡µ½ÇØ»ÊÕ½ÉñBuff¡£" )
+			AddText( sceneId, "æ­å–œæ‚¨ï¼ŒæˆåŠŸé¢†å–åˆ°ç§¦çš‡æˆ˜ç¥Buffã€‚" )
 	EndEvent(sceneId)
 	DispatchMissionTips( sceneId, selfId )
 
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x889050_CheckAccept( sceneId, selfId )
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x889050_OnAccept( sceneId, selfId )
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x889050_OnAbandon( sceneId, selfId )
 end
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x889050_OnContinue( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x889050_CheckSubmit( sceneId, selfId )
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x889050_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 end
 
 --**********************************
---É±ËÀ¹ÖÎï»òÍæ¼Ò
+--æ€æ­»æ€ªç‰©æˆ–ç©å®¶
 --**********************************
 function x889050_OnKillObject( sceneId, selfId, objdataId ,objId )
 end
 
 --**********************************
---½øÈëÇøÓòÊÂ¼ş
+--è¿›å…¥åŒºåŸŸäº‹ä»¶
 --**********************************
 function x889050_OnEnterArea( sceneId, selfId, zoneId )
 end
 
 --**********************************
---µÀ¾ß¸Ä±ä
+--é“å…·æ”¹å˜
 --**********************************
 function x889050_OnItemChanged( sceneId, selfId, itemdataId )
 end

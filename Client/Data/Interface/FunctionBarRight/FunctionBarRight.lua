@@ -27,7 +27,7 @@ end
 function FunctionBarRight_OnEvent(event)
 	if ( event == "PLAYER_ENTERING_WORLD" ) then
 		this:Show();
-		-- ÏÔÊ¾¾­Ñé
+		-- æ˜¾ç¤ºç»éªŒ
 	elseif( event == "CHANGE_BAR" and arg0 == "main") then
 		if( tonumber(arg1) > 40 and tonumber(arg1) <50 )  then
 			--AxTrace(0,0,"arg1= ".. arg1 .. "arg2 =" .. arg2)
@@ -70,7 +70,7 @@ function FunctionBarRight_Clicked(nIndex)
 		
 		RIGHTBAR_BUTTONS[nIndex]:DoAction();
 	else
-		PushDebugMessage("Äã²»ÄÜÕâÃ´×ö¡£")
+		PushDebugMessage("ä½ ä¸èƒ½è¿™ä¹ˆåšã€‚")
 		return;
 	end
 end

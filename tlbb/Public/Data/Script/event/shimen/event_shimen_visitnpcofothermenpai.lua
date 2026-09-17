@@ -1,124 +1,124 @@
- --Ê¦ÃÅÈÎÎñ
+ --å¸ˆé—¨ä»»åŠ¡
 
 --MisDescBegin
---½Å±¾ºÅ
+--è„šæœ¬å·
 x229010_g_ScriptId = 229010
 
---ÈÎÎñºÅ
+--ä»»åŠ¡å·
 x229010_g_MissionId = 1060
 
---ÈÎÎñ¹éÀà
+--ä»»åŠ¡å½’ç±»
 x229010_g_MissionKind = 2
 
---ÈÎÎñµÈ¼¶
+--ä»»åŠ¡ç­‰çº§
 x229010_g_MissionLevel = 10000
 
---ÊÇ·ñÊÇ¾«Ó¢ÈÎÎñ
+--æ˜¯å¦æ˜¯ç²¾è‹±ä»»åŠ¡
 x229010_g_IfMissionElite = 0
 
---ÏÂÃæ¼¸ÏîÊÇ¶¯Ì¬ÏÔÊ¾µÄÄÚÈİ£¬ÓÃÓÚÔÚÈÎÎñÁĞ±íÖĞ¶¯Ì¬ÏÔÊ¾ÈÎÎñÇé¿ö**********************
---ÈÎÎñÊÇ·ñÒÑ¾­Íê³É
-x229010_g_IsMissionOkFail = 0		--±äÁ¿µÄµÚ0Î»
+--ä¸‹é¢å‡ é¡¹æ˜¯åŠ¨æ€æ˜¾ç¤ºçš„å†…å®¹ï¼Œç”¨äºåœ¨ä»»åŠ¡åˆ—è¡¨ä¸­åŠ¨æ€æ˜¾ç¤ºä»»åŠ¡æƒ…å†µ**********************
+--ä»»åŠ¡æ˜¯å¦å·²ç»å®Œæˆ
+x229010_g_IsMissionOkFail = 0		--å˜é‡çš„ç¬¬0ä½
 
---ÒÔÉÏÊÇ¶¯Ì¬**************************************************************
+--ä»¥ä¸Šæ˜¯åŠ¨æ€**************************************************************
 
---ÈÎÎñ±äÁ¿µÚÒ»Î»ÓÃÀ´´æ´¢Ëæ»úµÃµ½µÄ½Å±¾ºÅ
+--ä»»åŠ¡å˜é‡ç¬¬ä¸€ä½ç”¨æ¥å­˜å‚¨éšæœºå¾—åˆ°çš„è„šæœ¬å·
 
---ÈÎÎñÎÄ±¾ÃèÊö
-x229010_g_MissionName="Ê¦ÃÅÈÎÎñ"
-x229010_g_MissionInfo=""  --ÈÎÎñÃèÊö
-x229010_g_MissionTarget = "²»´í... ... ÄãÒ»Ö±Îª±¾ÃÅµÄ·¢Ñï¹â´óÔÚ¾¡ĞÄ¾¡Á¦µÄ×ö×Å¹¤×÷£¬ÎÒÔÙ¶îÍâ¸øÄãÒ»¸öÈÎÎñ°É£¬#G%s#W¸Õ¸øÎÒ·É¸ë´«Êé£¬ËµËûÃÇĞèÒª°ïÃ¦£¬ÄãÈ¥ÕÒÒ»ÏÂ#G%s#WµÄ#Y%s#W£¬Ëû£¨Ëı£©»á°²ÅÅÄãµÄÈÎÎñµÄ¡£#r#{SMRW_090206_01}"
-x229010_g_ContinueInfo="¸ÉµÃ²»´í"		--Î´Íê³ÉÈÎÎñµÄnpc¶Ô»°
-x229010_g_MissionComplete="ÎÒ½»¸øÄãµÄÊÂÇéÒÑ¾­×öÍêÁËÂğ£¿"					--Íê³ÉÈÎÎñnpcËµ»°µÄ»°
+--ä»»åŠ¡æ–‡æœ¬æè¿°
+x229010_g_MissionName="å¸ˆé—¨ä»»åŠ¡"
+x229010_g_MissionInfo=""  --ä»»åŠ¡æè¿°
+x229010_g_MissionTarget = "ä¸é”™... ... ä½ ä¸€ç›´ä¸ºæœ¬é—¨çš„å‘æ‰¬å…‰å¤§åœ¨å°½å¿ƒå°½åŠ›çš„åšç€å·¥ä½œï¼Œæˆ‘å†é¢å¤–ç»™ä½ ä¸€ä¸ªä»»åŠ¡å§ï¼Œ#G%s#Wåˆšç»™æˆ‘é£é¸½ä¼ ä¹¦ï¼Œè¯´ä»–ä»¬éœ€è¦å¸®å¿™ï¼Œä½ å»æ‰¾ä¸€ä¸‹#G%s#Wçš„#Y%s#Wï¼Œä»–ï¼ˆå¥¹ï¼‰ä¼šå®‰æ’ä½ çš„ä»»åŠ¡çš„ã€‚#r#{SMRW_090206_01}"
+x229010_g_ContinueInfo="å¹²å¾—ä¸é”™"		--æœªå®Œæˆä»»åŠ¡çš„npcå¯¹è¯
+x229010_g_MissionComplete="æˆ‘äº¤ç»™ä½ çš„äº‹æƒ…å·²ç»åšå®Œäº†å—ï¼Ÿ"					--å®Œæˆä»»åŠ¡npcè¯´è¯çš„è¯
 x229010_g_MissionRound=17
 
 x229010_g_DoubleExp = 48
 x229010_g_AccomplishCircumstance = 1
 
---¸ñÊ½×Ö·û´®ÖĞµÄË÷Òı, ±íÊ¾´Ó4¿ªÊ¼,ºó¶àÉÙÎ»ÊÓSetMissionByIndex(...)µÄ¶àÉÙ¶ø¶¨
+--æ ¼å¼å­—ç¬¦ä¸²ä¸­çš„ç´¢å¼•, è¡¨ç¤ºä»4å¼€å§‹,åå¤šå°‘ä½è§†SetMissionByIndex(...)çš„å¤šå°‘è€Œå®š
 x229010_g_StrForePart=4
 
 x229010_g_StrList = {
-						"Ğş³Î#{_INFOAIM61,61,9,Ğş³Î}",
-						"ËşÁÖ¸±±¾",
-						"±¾Ïà#{_INFOAIM35,86,13,±¾Ïà}",
-						"ÃÏÇàÇà#{_INFOAIM96,73,15,ÃÏÇàÇà}",
-						"·ğÓ¡#{_INFOAIM41,144,10,·ğÓ¡}",
-						"·½À°#{_INFOAIM89,56,11,·½À°}",
-						"¾Õ½£#{_INFOAIM99,45,17,¾Õ½£}",
-						"ÁÖÁéËØ#{_INFOAIM58,73,12,ÁÖÁéËØ}",
-						"·ë°¢Èı#{_INFOAIM62,68,14,·ë°¢Èı}",
-						"ºìÓñ#{_INFOAIM128,78,16,ºìÓñ}", 
-						"Ëşµ×¸±±¾",
-						"ÌÒ»¨Õó¸±±¾",
-						"¾Æ½Ñ¸±±¾",
-						"¹âÃ÷¶´¸±±¾",
-						"ÕÛÃ··å¸±±¾",
-						"ÁéĞÔ·å¸±",
-						"¹Èµ×¸±±¾",
-						"ÎåÉñ¶´¸±±¾", 
-						"ÉÙÁÖ",
-						"ÌìÁú",
-						"¶ëáÒ",
-						"Ø¤°ï",
-						"Ã÷½Ì",
-						"ÌìÉ½",
-						"Îäµ±",
-						"åĞÒ£",
-						"ĞÇËŞ",
+						"ç„æ¾„#{_INFOAIM61,61,9,ç„æ¾„}",
+						"å¡”æ—å‰¯æœ¬",
+						"æœ¬ç›¸#{_INFOAIM35,86,13,æœ¬ç›¸}",
+						"å­Ÿé’é’#{_INFOAIM96,73,15,å­Ÿé’é’}",
+						"ä½›å°#{_INFOAIM41,144,10,ä½›å°}",
+						"æ–¹è…Š#{_INFOAIM89,56,11,æ–¹è…Š}",
+						"èŠå‰‘#{_INFOAIM99,45,17,èŠå‰‘}",
+						"æ—çµç´ #{_INFOAIM58,73,12,æ—çµç´ }",
+						"å†¯é˜¿ä¸‰#{_INFOAIM62,68,14,å†¯é˜¿ä¸‰}",
+						"çº¢ç‰#{_INFOAIM128,78,16,çº¢ç‰}", 
+						"å¡”åº•å‰¯æœ¬",
+						"æ¡ƒèŠ±é˜µå‰¯æœ¬",
+						"é…’çª–å‰¯æœ¬",
+						"å…‰æ˜æ´å‰¯æœ¬",
+						"æŠ˜æ¢…å³°å‰¯æœ¬",
+						"çµæ€§å³°å‰¯",
+						"è°·åº•å‰¯æœ¬",
+						"äº”ç¥æ´å‰¯æœ¬", 
+						"å°‘æ—",
+						"å¤©é¾™",
+						"å³¨åµ‹",
+						"ä¸å¸®",
+						"æ˜æ•™",
+						"å¤©å±±",
+						"æ­¦å½“",
+						"é€é¥",
+						"æ˜Ÿå®¿",
 						}
 						
 --MisDescEnd
 
 --add by xindefeng
---x229010_GetStrIndexByStrValue(),x229010_GetStrValueByStrIndex()º¯ÊıÊ¹ÓÃx229010_g_StrListÀ´²éÕÒIndexºÍNPCÃû×Ö,¶ø¼ÓÉÏ×Ô¶¯Ñ°Â·ĞÅÏ¢ºó,ÎŞ·¨ÕÒµ½ÕıÈ·Index,Òò´Ë½¨Á¢
---´Ë±í¸øx229010_GetStrIndexByStrValue(),x229010_GetStrValueByStrIndex()Ê¹ÓÃÀ´ÕÒµ½ÕıÈ·IndexºÍNPCÃû×Ö
+--x229010_GetStrIndexByStrValue(),x229010_GetStrValueByStrIndex()å‡½æ•°ä½¿ç”¨x229010_g_StrListæ¥æŸ¥æ‰¾Indexå’ŒNPCåå­—,è€ŒåŠ ä¸Šè‡ªåŠ¨å¯»è·¯ä¿¡æ¯å,æ— æ³•æ‰¾åˆ°æ­£ç¡®Index,å› æ­¤å»ºç«‹
+--æ­¤è¡¨ç»™x229010_GetStrIndexByStrValue(),x229010_GetStrValueByStrIndex()ä½¿ç”¨æ¥æ‰¾åˆ°æ­£ç¡®Indexå’ŒNPCåå­—
 x229010_g_StrList2 = {
-						"Ğş³Î",
-						"ËşÁÖ¸±±¾",
-						"±¾Ïà",
-						"ÃÏÇàÇà",
-						"·ğÓ¡",
-						"·½À°",
-						"¾Õ½£",
-						"ÁÖÁéËØ",
-						"·ë°¢Èı",
-						"ºìÓñ",
-						"Ëşµ×¸±±¾",
-						"ÌÒ»¨Õó¸±±¾",
-						"¾Æ½Ñ¸±±¾",
-						"¹âÃ÷¶´¸±±¾",
-						"ÕÛÃ··å¸±±¾",
-						"ÁéĞÔ·å¸±",
-						"¹Èµ×¸±±¾",
-						"ÎåÉñ¶´¸±±¾", 
-						"ÉÙÁÖ",
-						"ÌìÁú",
-						"¶ëáÒ",
-						"Ø¤°ï",
-						"Ã÷½Ì",
-						"ÌìÉ½",
-						"Îäµ±",
-						"åĞÒ£",
-						"ĞÇËŞ",
+						"ç„æ¾„",
+						"å¡”æ—å‰¯æœ¬",
+						"æœ¬ç›¸",
+						"å­Ÿé’é’",
+						"ä½›å°",
+						"æ–¹è…Š",
+						"èŠå‰‘",
+						"æ—çµç´ ",
+						"å†¯é˜¿ä¸‰",
+						"çº¢ç‰",
+						"å¡”åº•å‰¯æœ¬",
+						"æ¡ƒèŠ±é˜µå‰¯æœ¬",
+						"é…’çª–å‰¯æœ¬",
+						"å…‰æ˜æ´å‰¯æœ¬",
+						"æŠ˜æ¢…å³°å‰¯æœ¬",
+						"çµæ€§å³°å‰¯",
+						"è°·åº•å‰¯æœ¬",
+						"äº”ç¥æ´å‰¯æœ¬", 
+						"å°‘æ—",
+						"å¤©é¾™",
+						"å³¨åµ‹",
+						"ä¸å¸®",
+						"æ˜æ•™",
+						"å¤©å±±",
+						"æ­¦å½“",
+						"é€é¥",
+						"æ˜Ÿå®¿",
 						}
 						
 --/////////////////////////////////////////////////////////////////////////////////////////////////////
             
---×ÓÈÎÎñµÄÀàĞÍ´úºÅ¶¨Òå
+--å­ä»»åŠ¡çš„ç±»å‹ä»£å·å®šä¹‰
 x229010_g_SubMissionTypeEnum = {XunWu=1, SongXin=2, DingDianYinDao=3, FuBenZhanDou=4, BuZhuo=5, ShouJi=6, KaiGuang=7, otherMenpaiFuben=8}
 
---¸±±¾ÁĞ±í
+--å‰¯æœ¬åˆ—è¡¨
 x229010_g_FuBen_List = {
-								{menpainame="ÉÙÁÖ", menpai=MP_SHAOLIN  , NpcName="Ğş³Î", scene=9, posx=61, posz=61, FubenName="ËşÁÖ¸±±¾"},
-								{menpainame="ÌìÁú", menpai=MP_DALI     , NpcName="±¾Ïà", scene=13, posx=35, posz=86, FubenName="Ëşµ×¸±±¾"},
-								{menpainame="¶ëáÒ", menpai=MP_EMEI     , NpcName="ÃÏÇàÇà", scene=15, posx=96, posz=73, FubenName="ÌÒ»¨Õó¸±±¾"},
-								{menpainame="Ø¤°ï", menpai=MP_GAIBANG  , NpcName="·ğÓ¡", scene=10, posx=41, posz=144, FubenName="¾Æ½Ñ¸±±¾"},
-								{menpainame="Ã÷½Ì", menpai=MP_MINGJIAO , NpcName="·½À°", scene=11, posx=89, posz=56, FubenName="¹âÃ÷¶´¸±±¾"},
-								{menpainame="ÌìÉ½", menpai=MP_TIANSHAN , NpcName="¾Õ½£", scene=17, posx=99, posz=45, FubenName="ÕÛÃ··å¸±±¾"},
-								{menpainame="Îäµ±", menpai=MP_WUDANG   , NpcName="ÁÖÁéËØ", scene=12, posx=58, posz=73, FubenName="ÁéĞÔ·å¸±±¾"},
-								{menpainame="åĞÒ£", menpai=MP_XIAOYAO  , NpcName="·ë°¢Èı", scene=14, posx=62, posz=68, FubenName="¹Èµ×¸±±¾"},
-								{menpainame="ĞÇËŞ", menpai=MP_XINGSU   , NpcName="ºìÓñ", scene=16, posx=128, posz=78, FubenName="ÎåÉñ¶´¸±±¾"},
+								{menpainame="å°‘æ—", menpai=MP_SHAOLIN  , NpcName="ç„æ¾„", scene=9, posx=61, posz=61, FubenName="å¡”æ—å‰¯æœ¬"},
+								{menpainame="å¤©é¾™", menpai=MP_DALI     , NpcName="æœ¬ç›¸", scene=13, posx=35, posz=86, FubenName="å¡”åº•å‰¯æœ¬"},
+								{menpainame="å³¨åµ‹", menpai=MP_EMEI     , NpcName="å­Ÿé’é’", scene=15, posx=96, posz=73, FubenName="æ¡ƒèŠ±é˜µå‰¯æœ¬"},
+								{menpainame="ä¸å¸®", menpai=MP_GAIBANG  , NpcName="ä½›å°", scene=10, posx=41, posz=144, FubenName="é…’çª–å‰¯æœ¬"},
+								{menpainame="æ˜æ•™", menpai=MP_MINGJIAO , NpcName="æ–¹è…Š", scene=11, posx=89, posz=56, FubenName="å…‰æ˜æ´å‰¯æœ¬"},
+								{menpainame="å¤©å±±", menpai=MP_TIANSHAN , NpcName="èŠå‰‘", scene=17, posx=99, posz=45, FubenName="æŠ˜æ¢…å³°å‰¯æœ¬"},
+								{menpainame="æ­¦å½“", menpai=MP_WUDANG   , NpcName="æ—çµç´ ", scene=12, posx=58, posz=73, FubenName="çµæ€§å³°å‰¯æœ¬"},
+								{menpainame="é€é¥", menpai=MP_XIAOYAO  , NpcName="å†¯é˜¿ä¸‰", scene=14, posx=62, posz=68, FubenName="è°·åº•å‰¯æœ¬"},
+								{menpainame="æ˜Ÿå®¿", menpai=MP_XINGSU   , NpcName="çº¢ç‰", scene=16, posx=128, posz=78, FubenName="äº”ç¥æ´å‰¯æœ¬"},
 							}
 	
 --changed by xindefeng                								
@@ -128,13 +128,13 @@ function x229010_GetStrIndexByStrValue(stringV)
 			return i-1
 		end
 	end
-	local strText = format("±ØĞë½«%s×¢²áµ½StrListÖĞ", stringV)
+	local strText = format("å¿…é¡»å°†%sæ³¨å†Œåˆ°StrListä¸­", stringV)
 	--PrintStr(strText)
 	return 0;
 end
 
 --changed by xindefeng
---±»x229000_IsFubenMission(),x229000_SetFubenMissionSucc()µ÷ÓÃ
+--è¢«x229000_IsFubenMission(),x229000_SetFubenMissionSucc()è°ƒç”¨
 function x229010_GetStrValueByStrIndex(sceneId, index)
 	if index+1 >= 1 and index+1 <= getn(x229010_g_StrList2) then
 		return x229010_g_StrList2[index+1]	
@@ -162,10 +162,10 @@ function x229010_AddOtherMenpaiFubenMission(sceneId, selfId, missionId, targetId
 	local posx = x229010_g_FuBen_List[index].posx
 	local posz = x229010_g_FuBen_List[index].posz
 	
-	--Ôö¼Ó½ÓÊÕÈÎÎñµÄ±ØÒªÅĞ¶Ï
+	--å¢åŠ æ¥æ”¶ä»»åŠ¡çš„å¿…è¦åˆ¤æ–­
 	CallScriptFunction( 500501, "CheckAccept_Necessary", sceneId, selfId)
 	
-	--¼ÓÈëÈÎÎñµ½Íæ¼ÒÁĞ±í
+	--åŠ å…¥ä»»åŠ¡åˆ°ç©å®¶åˆ—è¡¨
 	local bAdd = AddMission( sceneId,selfId, missionId, x229010_g_ScriptId, 0, 0, 0 )
 	if bAdd < 1 then
 		return
@@ -175,20 +175,20 @@ function x229010_AddOtherMenpaiFubenMission(sceneId, selfId, missionId, targetId
 	local NpcNameIndex = x229010_GetStrIndexByStrValue(npcName)
 	local MenpaiNameIndex = x229010_GetStrIndexByStrValue(menpaiName)
 	
-	--µÃµ½ÈÎÎñÔÚ20¸öÈÎÎñÖĞµÄĞòÁĞºÅ
+	--å¾—åˆ°ä»»åŠ¡åœ¨20ä¸ªä»»åŠ¡ä¸­çš„åºåˆ—å·
 	local misIndex = GetMissionIndexByID(sceneId,selfId,missionId)
 		
-	SetMissionByIndex(sceneId, selfId, misIndex, 0, 0) --ÉèÖÃÈÎÎñÊÇ·ñÍê³É£¨Î´Íê³É£©
+	SetMissionByIndex(sceneId, selfId, misIndex, 0, 0) --è®¾ç½®ä»»åŠ¡æ˜¯å¦å®Œæˆï¼ˆæœªå®Œæˆï¼‰
 	SetMissionByIndex(sceneId, selfId, misIndex, 1, x229010_g_SubMissionTypeEnum.otherMenpaiFuben)
 	
 	SetMissionByIndex(sceneId, selfId, misIndex, x229010_g_StrForePart, MenpaiNameIndex)
 	SetMissionByIndex(sceneId, selfId, misIndex, x229010_g_StrForePart+1, MenpaiNameIndex)
 	SetMissionByIndex(sceneId, selfId, misIndex, x229010_g_StrForePart+2, NpcNameIndex)
 	
-	Msg2Player(  sceneId, selfId,"#Y½ÓÊÜÈÎÎñ£ºÊ¦ÃÅÈÎÎñ", MSG2PLAYER_PARA )
+	Msg2Player(  sceneId, selfId,"#Yæ¥å—ä»»åŠ¡ï¼šå¸ˆé—¨ä»»åŠ¡", MSG2PLAYER_PARA )
 	CallScriptFunction( SCENE_SCRIPT_ID, "AskTheWay", sceneId, selfId, nSceneId, posx, posz, npcName)
 
-	local strMissionTarget = format("²»´í... ... ÄãÒ»Ö±Îª±¾ÃÅµÄ·¢Ñï¹â´óÔÚ¾¡ĞÄ¾¡Á¦µÄ×ö×Å¹¤×÷£¬ÎÒÔÙ¶îÍâ¸øÄãÒ»¸öÈÎÎñ°É£¬%s¸Õ¸øÎÒ·É¸ë´«Êé£¬ËµËûÃÇĞèÒª°ïÃ¦£¬ÄãÈ¥ÕÒÒ»ÏÂ%sµÄ%s£¬Ëû»á°²ÅÅÄãµÄÈÎÎñµÄ¡£",
+	local strMissionTarget = format("ä¸é”™... ... ä½ ä¸€ç›´ä¸ºæœ¬é—¨çš„å‘æ‰¬å…‰å¤§åœ¨å°½å¿ƒå°½åŠ›çš„åšç€å·¥ä½œï¼Œæˆ‘å†é¢å¤–ç»™ä½ ä¸€ä¸ªä»»åŠ¡å§ï¼Œ%såˆšç»™æˆ‘é£é¸½ä¼ ä¹¦ï¼Œè¯´ä»–ä»¬éœ€è¦å¸®å¿™ï¼Œä½ å»æ‰¾ä¸€ä¸‹%sçš„%sï¼Œä»–ä¼šå®‰æ’ä½ çš„ä»»åŠ¡çš„ã€‚",
 			menpaiName, menpaiName, npcName)
 			
 	BeginEvent(sceneId)
@@ -196,7 +196,7 @@ function x229010_AddOtherMenpaiFubenMission(sceneId, selfId, missionId, targetId
 	EndEvent()
 	DispatchEventList(sceneId, selfId, targetId)	
 	
-	--µÃµ½»·Êı
+	--å¾—åˆ°ç¯æ•°
 	local round = GetMissionData(sceneId,selfId,MD_SHIMEN_HUAN)
 
 	round = round + 1
@@ -210,23 +210,23 @@ function x229010_AddOtherMenpaiFubenMission(sceneId, selfId, missionId, targetId
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x229010_OnEnumerate( sceneId, selfId, targetId )
 	return
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x229010_OnAbandon( sceneId, selfId )
 	local shimenMissionIdList = {1080, 1090, 1065, 1070, 1060, 1100, 1075, 1085, 1095}
 	for i, v in shimenMissionIdList do
 		if IsHaveMission(sceneId,selfId,v) > 0	 then
-			--É¾³ıÍæ¼ÒÈÎÎñÁĞ±íÖĞ¶ÔÓ¦µÄÈÎÎñ
+			--åˆ é™¤ç©å®¶ä»»åŠ¡åˆ—è¡¨ä¸­å¯¹åº”çš„ä»»åŠ¡
 	  	DelMission( sceneId, selfId, v )
-	  	SetMissionData(sceneId,selfId,MD_SHIMEN_HUAN,0)	--»·ÊıÇå0
- 			--µ÷ÓÃÍ¨ÓÃ·ÅÆú½Ó¿Ú
+	  	SetMissionData(sceneId,selfId,MD_SHIMEN_HUAN,0)	--ç¯æ•°æ¸…0
+ 			--è°ƒç”¨é€šç”¨æ”¾å¼ƒæ¥å£
 			------------------------------------------------------------------
 		  CallScriptFunction( 500501, "Abandon_Necessary", sceneId, selfId )
 			-------------------------------------------------------------------

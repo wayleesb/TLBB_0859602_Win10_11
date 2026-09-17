@@ -2,40 +2,40 @@
 
 ------------------------------------------------------------------------------------------------------
 --
--- È«¾Ö±äÁ¿Çø
+-- å…¨å±€å˜é‡åŒº
 --
 --
-local g_iYesNoType = -1;	-- yes-no ¶Ô»°¿òÀàĞÍ
-													-- -1 -- ÆÕÍ¨ĞÅÏ¢ÌáÊ¾
-													-- 0 - ÍË³öÓÎÏ·
-													-- 1 - É¾³ı½ÇÉ«
-													-- 2 - ¸ü»»ÕÊºÅ
-													-- 3 - ¶Ï¿ªÍøÂç
-													-- 4 - È·ÈÏÊÇ·ñÉ¾³ı10¼¶ÒÔÉÏÍæ¼Ò
-													-- 5 - 7ÌìÄÚÌáĞÑÉ¾³ı10¼¶ÒÔÉÏÍæ¼Ò
-													-- 6 - 7Ììºó£¬14ÌìÄÚÌáĞÑÉ¾³ı10¼¶ÒÔÉÏÍæ¼Ò
-													-- 7 - ÊÇ·ñÉ¾³ı10¼¶ÒÔÏÂÍæ¼Ò
-													-- 8 É¾³ıÍæ¼Ò
-													-- 9 ÊÇ·ñ×¢²á
+local g_iYesNoType = -1;	-- yes-no å¯¹è¯æ¡†ç±»å‹
+													-- -1 -- æ™®é€šä¿¡æ¯æç¤º
+													-- 0 - é€€å‡ºæ¸¸æˆ
+													-- 1 - åˆ é™¤è§’è‰²
+													-- 2 - æ›´æ¢å¸å·
+													-- 3 - æ–­å¼€ç½‘ç»œ
+													-- 4 - ç¡®è®¤æ˜¯å¦åˆ é™¤10çº§ä»¥ä¸Šç©å®¶
+													-- 5 - 7å¤©å†…æé†’åˆ é™¤10çº§ä»¥ä¸Šç©å®¶
+													-- 6 - 7å¤©åï¼Œ14å¤©å†…æé†’åˆ é™¤10çº§ä»¥ä¸Šç©å®¶
+													-- 7 - æ˜¯å¦åˆ é™¤10çº§ä»¥ä¸‹ç©å®¶
+													-- 8 åˆ é™¤ç©å®¶
+													-- 9 æ˜¯å¦æ³¨å†Œ
 local g_strMessageData;
 
 local g_bagIndex = -1
--- ×¢²áonLoadÊÂ¼ş
+-- æ³¨å†ŒonLoadäº‹ä»¶
 function LoginSelectServerQuest_PreLoad()
 	
-	-- ´ò¿ª½çÃæ
+	-- æ‰“å¼€ç•Œé¢
 	this:RegisterEvent("GAMELOGIN_SHOW_SYSTEM_INFO");
 	
-	-- ¹Ø±Õ½çÃæ
+	-- å…³é—­ç•Œé¢
 	this:RegisterEvent("GAMELOGIN_CLOSE_SYSTEM_INFO");
 	
 	
-	-- µã»÷È·¶¨°´Å¥¹Ø±ÕÍøÂç
+	-- ç‚¹å‡»ç¡®å®šæŒ‰é’®å…³é—­ç½‘ç»œ
 	this:RegisterEvent("GAMELOGIN_SHOW_SYSTEM_INFO_CLOSE_NET");   
 
-	-- ÏÔÊ¾²»´ø°´Å¥µÄĞÅÏ¢
+	-- æ˜¾ç¤ºä¸å¸¦æŒ‰é’®çš„ä¿¡æ¯
 	this:RegisterEvent("GAMELOGIN_SHOW_SYSTEM_INFO_NO_BUTTON");   
-	-- ÏÔÊ¾yes-noĞÅÏ¢
+	-- æ˜¾ç¤ºyes-noä¿¡æ¯
 	this:RegisterEvent("GAMELOGIN_SYSTEM_INFO_YESNO");   
 	this:RegisterEvent("GAMELOGIN_SYSTEM_INFO_OK");   
 	this:RegisterEvent("GAMELOGIN_SYSTEM_INFO_CANCEL"); 
@@ -46,7 +46,7 @@ end
 
 function LoginSelectServerQuest_OnLoad()
 	
-	-- ÉèÖÃ×ÜÊÇÔÚ×îÉÏ²ãÏÔÊ¾
+	-- è®¾ç½®æ€»æ˜¯åœ¨æœ€ä¸Šå±‚æ˜¾ç¤º
 	SelectServerQuest_Frame_sub:SetProperty("AlwaysOnTop", "True");
 	
 	-- 
@@ -79,13 +79,13 @@ function LoginSelectServerQuest_OnEvent(event)
 	if( event == "GAMELOGIN_SHOW_SYSTEM_INFO" ) then
 	
 		g_iYesNoType = -1;
-		--AxTrace( 0,0, "ÏÔÊ¾ÏµÍ³ĞÅÏ¢");
+		--AxTrace( 0,0, "æ˜¾ç¤ºç³»ç»Ÿä¿¡æ¯");
 		if( arg1 ~= "WAITFORQUIT" ) then
 			SelectServerQuest_InfoWindow:SetText(arg0);
 			LoginSelectUpdateRect();
 		end
 		SelectServerQuest_Button1:Show();
-		SelectServerQuest_Button1:SetText("¹Ø±Õ");
+		SelectServerQuest_Button1:SetText("å…³é—­");
 		SelectServerQuest_Button1:Enable()
 		
 		if( arg1 == "USERONLINE" ) then
@@ -111,21 +111,21 @@ function LoginSelectServerQuest_OnEvent(event)
 		    if(arg3~=nil and tonumber(arg3)~=nil)then
 			if(tonumber(arg3)>0)then
 				SelectServerQuest_Time_Text : SetProperty("Timer",tostring(10));
-				SelectServerQuest_InfoWindow:SetText("10ÃëºóÍË³öÓÎÏ·£¡");
+				SelectServerQuest_InfoWindow:SetText("10ç§’åé€€å‡ºæ¸¸æˆï¼");
 				LoginSelectUpdateRect();
 				
 			else
 				SelectServerQuest_Time_Text : SetProperty("Timer",tostring(3));
-				SelectServerQuest_InfoWindow:SetText("3ÃëºóÍË³öÓÎÏ·£¡");
+				SelectServerQuest_InfoWindow:SetText("3ç§’åé€€å‡ºæ¸¸æˆï¼");
 				LoginSelectUpdateRect();
 			end
 		    else
 			 SelectServerQuest_Time_Text : SetProperty("Timer",tostring(3));
-			 SelectServerQuest_InfoWindow:SetText("3ÃëºóÍË³öÓÎÏ·£¡");
+			 SelectServerQuest_InfoWindow:SetText("3ç§’åé€€å‡ºæ¸¸æˆï¼");
 			LoginSelectUpdateRect();
 		    end
 		    SelectServerQuest_Time_Text : Show()
-		    SelectServerQuest_Button1:SetText("È¡Ïû");
+		    SelectServerQuest_Button1:SetText("å–æ¶ˆ");
 		    SelectServerQuest_Button1:Show();
 		    SelectServerQuest_Button1:Enable()
 		    TimerArg = arg1;
@@ -155,13 +155,13 @@ function LoginSelectServerQuest_OnEvent(event)
 	--AxTrace( 0,0, "event yes no");
 	if( event == "GAMELOGIN_SYSTEM_INFO_YESNO") then
 		
-		--AxTrace( 0,0, "ÏÔÊ¾yes no");
+		--AxTrace( 0,0, "æ˜¾ç¤ºyes no");
 		SelectServerQuest_InfoWindow:SetText(arg0);
 		LoginSelectUpdateRect();
 		g_iYesNoType = tonumber(arg1);
 		
-		SelectServerQuest_Button1:SetText("È·¶¨");
-		SelectServerQuest_Button2:SetText("È¡Ïû");
+		SelectServerQuest_Button1:SetText("ç¡®å®š");
+		SelectServerQuest_Button2:SetText("å–æ¶ˆ");
 		SelectServerQuest_Button2:Show();
 		SelectServerQuest_Button1:Show();
 		this:Show();
@@ -192,9 +192,9 @@ function LoginSelectServerQuest_OnEvent(event)
 		SelectServerQuest_InfoWindow:SetText(arg0);
 		LoginSelectUpdateRect();
 		if g_iYesNoType == 0 then
-			SelectServerQuest_Button1:SetText("¹Ø±Õ");
+			SelectServerQuest_Button1:SetText("å…³é—­");
 		else
-			SelectServerQuest_Button1:SetText("È·¶¨");
+			SelectServerQuest_Button1:SetText("ç¡®å®š");
 		end
 		this:Show();
 		SelectServerQuest_Button1:Show();
@@ -206,7 +206,7 @@ function LoginSelectServerQuest_OnEvent(event)
 		g_iYesNoType = tonumber(arg1);
 		SelectServerQuest_InfoWindow:SetText(arg0);
 		LoginSelectUpdateRect();
-		SelectServerQuest_Button1:SetText("È¡Ïû");
+		SelectServerQuest_Button1:SetText("å–æ¶ˆ");
 		this:Show();
 		SelectServerQuest_Button2:Hide();
 		return;
@@ -216,7 +216,7 @@ function LoginSelectServerQuest_OnEvent(event)
 		g_iYesNoType = tonumber(arg1);
 		SelectServerQuest_InfoWindow:SetText(arg0);
 		LoginSelectUpdateRect();
-		SelectServerQuest_Button1:SetText("¹Ø±Õ");
+		SelectServerQuest_Button1:SetText("å…³é—­");
 		this:Show();
 		SelectServerQuest_Button1:Show();
 		SelectServerQuest_Button2:Hide();
@@ -227,37 +227,37 @@ function LoginSelectServerQuest_OnEvent(event)
 	
 	if( event == "GAMELOGIN_SHOW_SYSTEM_INFO_CLOSE_NET") then
 		
-		--AxTrace( 0,0, "ĞèÒª¹Ø±ÕÍøÂç.");
+		--AxTrace( 0,0, "éœ€è¦å…³é—­ç½‘ç»œ.");
 		g_iYesNoType = 3;
 		SelectServerQuest_InfoWindow:SetText(arg0);
 		LoginSelectUpdateRect();
 		SelectServerQuest_Button1:Show();
-		SelectServerQuest_Button1:SetText("¹Ø±Õ");
+		SelectServerQuest_Button1:SetText("å…³é—­");
 		this:Show();
 		return;
 	end
 	
-	-- ÑªÔ¡Éñ±ø¡ª¡ªÉñÆ÷ÖıÔì
+	-- è¡€æµ´ç¥å…µâ€”â€”ç¥å™¨é“¸é€ 
 	if ( event == "UI_COMMAND" and tonumber(arg0) == 13906) then
 		g_iYesNoType = -1;
 		SelectServerQuest_InfoWindow:SetText("#cFFF263#{XYSB_080925_001}");
 		LoginSelectUpdateRect();
 
 		SelectServerQuest_Button1:Show();
-		SelectServerQuest_Button1:SetText("¹Ø±Õ");
+		SelectServerQuest_Button1:SetText("å…³é—­");
 		SelectServerQuest_Button1:Enable()
 		
 		this:Show();
 	end
 	
-	-- ÑªÔ¡Éñ±ø¡ª¡ªÉñÆ÷ÖØÖı
+	-- è¡€æµ´ç¥å…µâ€”â€”ç¥å™¨é‡é“¸
 	if ( event == "UI_COMMAND" and tonumber(arg0) == 12032203) then
 		g_iYesNoType = -1;
-		SelectServerQuest_InfoWindow:SetText("#cFFF263ÖØĞÂÒ±Á¶ºóÉñÆ÷½«±»Ïú»Ù£¬¸½ÓÚÉñÆ÷µÄÇ¿»¯Óë±¦Ê¯Ò²»áËæÖ®ÏûÊ§¡£");
+		SelectServerQuest_InfoWindow:SetText("#cFFF263é‡æ–°å†¶ç‚¼åç¥å™¨å°†è¢«é”€æ¯ï¼Œé™„äºç¥å™¨çš„å¼ºåŒ–ä¸å®çŸ³ä¹Ÿä¼šéšä¹‹æ¶ˆå¤±ã€‚");
 		LoginSelectUpdateRect();
 
 		SelectServerQuest_Button1:Show();
-		SelectServerQuest_Button1:SetText("¹Ø±Õ");
+		SelectServerQuest_Button1:SetText("å…³é—­");
 		SelectServerQuest_Button1:Enable()
 		
 		this:Show();
@@ -284,15 +284,15 @@ function LoginSelectServerQuest_OnEvent(event)
 		
 		LoginSelectUpdateRect();
 		
-		SelectServerQuest_Button1:SetText("È·¶¨");
-		SelectServerQuest_Button2:SetText("È¡Ïû");
+		SelectServerQuest_Button1:SetText("ç¡®å®š");
+		SelectServerQuest_Button2:SetText("å–æ¶ˆ");
 		SelectServerQuest_Button2:Show();
 		SelectServerQuest_Button1:Show();
 		this:Show();
 		
 	end
 	
-	--ÌìÔª½ğµ¤ hzp
+	--å¤©å…ƒé‡‘ä¸¹ hzp
 	if( event == "UI_COMMAND" and tonumber(arg0) == 332004) then
 		g_iYesNoType = 13;
 		g_bagIndex = Get_XParam_INT( 0 )
@@ -300,8 +300,8 @@ function LoginSelectServerQuest_OnEvent(event)
 		
 		LoginSelectUpdateRect();
 		
-		SelectServerQuest_Button1:SetText("È·¶¨");
-		SelectServerQuest_Button2:SetText("È¡Ïû");
+		SelectServerQuest_Button1:SetText("ç¡®å®š");
+		SelectServerQuest_Button2:SetText("å–æ¶ˆ");
 		SelectServerQuest_Button2:Show();
 		SelectServerQuest_Button1:Show();
 		this:Show();
@@ -314,17 +314,17 @@ end
 
 -------------------------------------------------------------
 --
--- °´Å¥1 µã»÷ÊÂ¼ş
+-- æŒ‰é’®1 ç‚¹å‡»äº‹ä»¶
 --
 function SelectServerQuest_Bn1Click()
--- 0 - ÍË³öÓÎÏ·
--- 4 - È·ÈÏÊÇ·ñÉ¾³ı10¼¶ÒÔÉÏÍæ¼Ò
--- 5 - 7ÌìÄÚÌáĞÑÉ¾³ı10¼¶ÒÔÉÏÍæ¼Ò
--- 6 - 7Ììºó£¬14ÌìÄÚÌáĞÑÉ¾³ı10¼¶ÒÔÉÏÍæ¼Ò
--- 7 - ÊÇ·ñÉ¾³ı10¼¶ÒÔÏÂÍæ¼Ò
--- 8 - ´óÓÚ10¼¶µÃÌáÊ¾
+-- 0 - é€€å‡ºæ¸¸æˆ
+-- 4 - ç¡®è®¤æ˜¯å¦åˆ é™¤10çº§ä»¥ä¸Šç©å®¶
+-- 5 - 7å¤©å†…æé†’åˆ é™¤10çº§ä»¥ä¸Šç©å®¶
+-- 6 - 7å¤©åï¼Œ14å¤©å†…æé†’åˆ é™¤10çº§ä»¥ä¸Šç©å®¶
+-- 7 - æ˜¯å¦åˆ é™¤10çº§ä»¥ä¸‹ç©å®¶
+-- 8 - å¤§äº10çº§å¾—æç¤º
 	if( -1 == g_iYesNoType and 1 == g_bIsQuitMsgBox) then
-		CancelQuitWait(); --È¡ÏûÍË³ö
+		CancelQuitWait(); --å–æ¶ˆé€€å‡º
 	end
 	if(0 == g_iYesNoType) then		
 		QuitApplication("quit");
@@ -335,7 +335,7 @@ function SelectServerQuest_Bn1Click()
 		GameProduceLogin:CloseNetConnect();
 	elseif( 4 == g_iYesNoType ) then
 			local strInfo;
-		  strInfo ="ÄúµÄ½ÇÉ«²»ÄÜÂíÉÏÉ¾³ı£¬ÇëÔÚ3ÌìÒÔºó14ÌìÒÔÄÚµÇÂ¼ÓÎÏ·£¬µ½ÂåÑô£¨268£¬46£©ÕÒµ½¹ØººÊÙ»òÕßµ½´óÀí£¨80£¬136£©ÕÒµ½ÖÜ²ÖÈ·ÈÏ£¬¼´¿ÉÓÀ¾ÃÉ¾³ı¡£È·ÈÏÉ¾³ıÊ±½ÇÉ«²»ÄÜ´¦ÓÚÓĞ°ï»á¡¢½á»é¡¢½á°İ¡¢Ê¦Í½¡¢¿ªµê×´Ì¬£¬·ñÔòÉ¾³ı½«±»È¡Ïû¡£³¬¹ı14ÌìÃ»ÓĞÔÙ´ÎÉ¾³ıÔòÉ¾³ı²Ù×÷ÎŞĞ§¡£"
+		  strInfo ="æ‚¨çš„è§’è‰²ä¸èƒ½é©¬ä¸Šåˆ é™¤ï¼Œè¯·åœ¨3å¤©ä»¥å14å¤©ä»¥å†…ç™»å½•æ¸¸æˆï¼Œåˆ°æ´›é˜³ï¼ˆ268ï¼Œ46ï¼‰æ‰¾åˆ°å…³æ±‰å¯¿æˆ–è€…åˆ°å¤§ç†ï¼ˆ80ï¼Œ136ï¼‰æ‰¾åˆ°å‘¨ä»“ç¡®è®¤ï¼Œå³å¯æ°¸ä¹…åˆ é™¤ã€‚ç¡®è®¤åˆ é™¤æ—¶è§’è‰²ä¸èƒ½å¤„äºæœ‰å¸®ä¼šã€ç»“å©šã€ç»“æ‹œã€å¸ˆå¾’ã€å¼€åº—çŠ¶æ€ï¼Œå¦åˆ™åˆ é™¤å°†è¢«å–æ¶ˆã€‚è¶…è¿‡14å¤©æ²¡æœ‰å†æ¬¡åˆ é™¤åˆ™åˆ é™¤æ“ä½œæ— æ•ˆã€‚"
 			GameProduceLogin:ShowMessageBox( strInfo, "OK", "8" );
 	elseif( 5 == g_iYesNoType ) then
 	elseif( 6 == g_iYesNoType ) then
@@ -346,7 +346,7 @@ function SelectServerQuest_Bn1Click()
 	elseif( 9 == g_iYesNoType ) then
 		GameProduceLogin:LoginPlayer( 1 );
 	elseif( 10 == g_iYesNoType ) then
-		AxTrace( 0,0, "ÊÇ·ñ¼¤»î_µã»÷ÁËOK");
+		AxTrace( 0,0, "æ˜¯å¦æ¿€æ´»_ç‚¹å‡»äº†OK");
 	elseif(11 == g_iYesNoType) then
 		GameProduceLogin:CheckAccountNoMibao();
 	elseif(12 == g_iYesNoType) then
@@ -371,7 +371,7 @@ end
 
 -------------------------------------------------------------
 --
--- °´Å¥2 µã»÷ÊÂ¼ş
+-- æŒ‰é’®2 ç‚¹å‡»äº‹ä»¶
 --
 function SelectServerQuest_Bn2Click()
 
@@ -380,7 +380,7 @@ function SelectServerQuest_Bn2Click()
 	elseif( 9 == g_iYesNoType ) then
 		GameProduceLogin:PassportButNotReg();
 	elseif( 10 == g_iYesNoType ) then
-		AxTrace( 0,0, "ÊÇ·ñ¼¤»î_µã»÷ÁËNO");	
+		AxTrace( 0,0, "æ˜¯å¦æ¿€æ´»_ç‚¹å‡»äº†NO");	
 	end
 	
 	this:Hide();

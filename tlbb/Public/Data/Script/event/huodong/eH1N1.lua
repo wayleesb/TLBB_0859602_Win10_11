@@ -1,39 +1,39 @@
 --=======================================================
---	Ïã¸Û¡¢Ì¨ÍåH1N1»î¶¯, zhangqiang
+--	é¦™æ¸¯ã€å°æ¹¾H1N1æ´»åŠ¨, zhangqiang
 --=======================================================
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x889061_g_scriptId = 889061
 
---»î¶¯NPC
-x889061_g_NpcName = "Ëï°ËÒ¯"
+--æ´»åŠ¨NPC
+x889061_g_NpcName = "å­™å…«çˆ·"
 
---ÖØÂ¥Óñ¶Ò»»NPC
-x889061_g_RewardNpcName = "ÁºÊ¦³É"
+--é‡æ¥¼çŽ‰å…‘æ¢NPC
+x889061_g_RewardNpcName = "æ¢å¸ˆæˆ"
 
---»î¶¯µÈ¼¶ÏÞÖÆ
+--æ´»åŠ¨ç­‰çº§é™åˆ¶
 x889061_g_LevelLimit = 30
 
---»î¶¯Ã¿Ìì×î¶à²Î¼Ó´ÎÊý
+--æ´»åŠ¨æ¯å¤©æœ€å¤šå‚åŠ æ¬¡æ•°
 x889061_g_MaxDayCount = 4
 
---ÖØÂ¥ÓñID
+--é‡æ¥¼çŽ‰ID
 x889061_g_RewardId = 10423024
 
---³à×Ó°®ÐÄ£¬ÃØÖÆÁ¼Ò©
+--èµ¤å­çˆ±å¿ƒï¼Œç§˜åˆ¶è‰¯è¯
 x889061_g_DonateItemList = { 30504111, 30504112 }
 
---ÎåÐÐÁîÅÆ
+--äº”è¡Œä»¤ç‰Œ
 x889061_g_LingpaiList = { 20600010, 20600011, 20600012, 20600013, 20600014 }
 
---»î¶¯½±ÀøÀàÐÍ£¬¸ÅÂÊ»ùÊýÎª1000000
-x889061_g_RewardTypeList =	{	{ Min = 1, Max = 50000, Type = 20600011 },		--ÎåÐÐÁîÅÆ(Ä¾)
-					{ Min = 50001, Max = 52500, Type = 20600012 },		--ÎåÐÐÁîÅÆ(Ë®)
-					{ Min = 52501, Max = 55000, Type = 20600013 },		--ÎåÐÐÁîÅÆ(»ð)
-					{ Min = 55001, Max = 55500, Type = 20600014 },		--ÎåÐÐÁîÅÆ(ÍÁ)
-					{ Min = 55501, Max = 55625, Type = 20600010 },		--ÎåÐÐÁîÅÆ(½ð)
-					{ Min = 55626, Max = 655625, Type = 0 },		--¾­Ñé
-					{ Min = 655626, Max = 1000000, Type = 1 }		--¾­Ñé+½ðÇ®
+--æ´»åŠ¨å¥–åŠ±ç±»åž‹ï¼Œæ¦‚çŽ‡åŸºæ•°ä¸º1000000
+x889061_g_RewardTypeList =	{	{ Min = 1, Max = 50000, Type = 20600011 },		--äº”è¡Œä»¤ç‰Œ(æœ¨)
+					{ Min = 50001, Max = 52500, Type = 20600012 },		--äº”è¡Œä»¤ç‰Œ(æ°´)
+					{ Min = 52501, Max = 55000, Type = 20600013 },		--äº”è¡Œä»¤ç‰Œ(ç«)
+					{ Min = 55001, Max = 55500, Type = 20600014 },		--äº”è¡Œä»¤ç‰Œ(åœŸ)
+					{ Min = 55501, Max = 55625, Type = 20600010 },		--äº”è¡Œä»¤ç‰Œ(é‡‘)
+					{ Min = 55626, Max = 655625, Type = 0 },		--ç»éªŒ
+					{ Min = 655626, Max = 1000000, Type = 1 }		--ç»éªŒ+é‡‘é’±
 				}
 
 
@@ -69,33 +69,33 @@ x889061_g_ExpTbl = {
 
 
 --==================================
---ÊÂ¼þ½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --==================================
 function x889061_OnDefaultEvent( sceneId, selfId, targetId )
 	
-	--°®ÐÄ¾ÈÖú»î¶¯
+	--çˆ±å¿ƒæ•‘åŠ©æ´»åŠ¨
 	if GetNumText() == 1 and LuaFnGetName( sceneId, targetId ) == x889061_g_NpcName then
 		BeginEvent( sceneId )
-			AddText( sceneId, "    ½ðÄ¾Ë®»ðÍÁ£¬ÊÇÎªÎåÐÐ¡£ÈôÊÇ»ã¾ÛÁËÎåÐÐµÄÉñÁ¦£¬±ã¿É¸£ÔóÌìÏÂ¡£#r    ÎÒÕýÎª³¯Í¢ÊÕ¼¯¾ßÓÐÎåÐÐÉñÁ¦µÄ#YÎåÐÐÁîÅÆ#W£¬ÈôÊÇÄã´øÀ´ÁË#GÎåÃ¶²»Í¬#WµÄ#YÎåÐÐÁîÅÆ#W£¬³¯Í¢»áÒÔ#YÖØÂ¥Óñ#WÓëÄã½»»»¡£#r    #YÎåÐÐÁîÅÆ#W°üÀ¨#YÎåÐÐÁîÅÆ(½ð)#W¡¢#YÎåÐÐÁîÅÆ(Ä¾)#W¡¢#YÎåÐÐÁîÅÆ(Ë®)#W¡¢#YÎåÐÐÁîÅÆ(»ð)#W¡¢#YÎåÐÐÁîÅÆ(ÍÁ)#W¡£#r    È¥#G´óÀí£¨172£¬147£©#RËï°ËÒ¯#W´¦²Î¼Ó#G°®ÐÄ¾ÈÖú»î¶¯#W£¬½«»áÓÐ¼¸ÂÊ»ñµÃ¸÷ÖÖ#YÎåÐÐÁîÅÆ#W¡£" )
-			AddNumText( sceneId, x889061_g_scriptId, "¾èÏ×°®ÐÄºÍÁ¼Ò©", 6, 5 )
-			AddNumText( sceneId, x889061_g_scriptId, "ÎÒÔÙÏëÏë¡­¡­", 6, 6 )
+			AddText( sceneId, "    é‡‘æœ¨æ°´ç«åœŸï¼Œæ˜¯ä¸ºäº”è¡Œã€‚è‹¥æ˜¯æ±‡èšäº†äº”è¡Œçš„ç¥žåŠ›ï¼Œä¾¿å¯ç¦æ³½å¤©ä¸‹ã€‚#r    æˆ‘æ­£ä¸ºæœå»·æ”¶é›†å…·æœ‰äº”è¡Œç¥žåŠ›çš„#Yäº”è¡Œä»¤ç‰Œ#Wï¼Œè‹¥æ˜¯ä½ å¸¦æ¥äº†#Gäº”æžšä¸åŒ#Wçš„#Yäº”è¡Œä»¤ç‰Œ#Wï¼Œæœå»·ä¼šä»¥#Yé‡æ¥¼çŽ‰#Wä¸Žä½ äº¤æ¢ã€‚#r    #Yäº”è¡Œä»¤ç‰Œ#WåŒ…æ‹¬#Yäº”è¡Œä»¤ç‰Œ(é‡‘)#Wã€#Yäº”è¡Œä»¤ç‰Œ(æœ¨)#Wã€#Yäº”è¡Œä»¤ç‰Œ(æ°´)#Wã€#Yäº”è¡Œä»¤ç‰Œ(ç«)#Wã€#Yäº”è¡Œä»¤ç‰Œ(åœŸ)#Wã€‚#r    åŽ»#Gå¤§ç†ï¼ˆ172ï¼Œ147ï¼‰#Rå­™å…«çˆ·#Wå¤„å‚åŠ #Gçˆ±å¿ƒæ•‘åŠ©æ´»åŠ¨#Wï¼Œå°†ä¼šæœ‰å‡ çŽ‡èŽ·å¾—å„ç§#Yäº”è¡Œä»¤ç‰Œ#Wã€‚" )
+			AddNumText( sceneId, x889061_g_scriptId, "æçŒ®çˆ±å¿ƒå’Œè‰¯è¯", 6, 5 )
+			AddNumText( sceneId, x889061_g_scriptId, "æˆ‘å†æƒ³æƒ³â€¦â€¦", 6, 6 )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 	end
 	
-	--¹ØÓÚ°®ÐÄ¾ÈÖú»î¶¯
+	--å…³äºŽçˆ±å¿ƒæ•‘åŠ©æ´»åŠ¨
 	if GetNumText() == 2 and LuaFnGetName( sceneId, targetId ) == x889061_g_NpcName then
 		BeginEvent( sceneId )						
-			AddText( sceneId, "    ÔÚÕâ¼²²¡ËÁÅ°µÄÈÕ×ÓÀï£¬ÈÃÎÒÃÇÍòÖÚÍ¬ÐÄ£¬Ð¯ÊÖ¶Ô¿¹²¡Ä§µÄÇÖÏ®£¬ÎªÃÀºÃµÄÉú»î¶øÕ½°É£¡ËùÓÐ#G30¼¶ÒÔÉÏ#WµÄÓ¢ÐÛ¶¼¿ÉÒÔÔÚÎÒÕâÀï²Î¼Ó#G°®ÐÄ¾ÈÖú»î¶¯#W£¬¹±Ï×Äã×Ô¼ºµÄÒ»·ÝÁ¦Á¿£¬ÈÃÎÒÃÇ½¡¿µ³£ÔÚ£¡ÐÒ¸£³¤Ïí£¡#r    ²Î¼Ó°®ÐÄ¾ÈÖú»î¶¯ÐèÒªÄã¾èÏ×Ò»·Ý#Y³à×Ó°®ÐÄ#WºÍÒ»·Ý#YÃØÖÆÁ¼Ò©#W¡£#Y³à×Ó°®ÐÄ#W¿ÉÒÔÍ¨¹ý²Î¼ÓÒÔÏÂ»î¶¯»ñµÃ£º#GÕäççÆå¾Ö#W¡¢#GÂ¥À¼Ñ°±¦#W¡¢#GÔô±øÈëÇÖ#W¡¢#GÍµÏ®ÃÅÅÉ#W¡£#YÃØÖÆÁ¼Ò©#WÔÚ#G³õÕ½çÎç¿·å¸±±¾#WºÍ#GÌôÕ½Ñà×ÓÎë¸±±¾#WÖÐÓÐ¼¸ÂÊ»ñµÃ£¬Ò²¿ÉÒÔÖ±½ÓÔÚ#GÔª±¦ÉÌµê#W¹ºÂò¡£#r    µ±È»£¬²Î¼Ó°®ÐÄ¾ÈÖú»î¶¯ºóµÄ½±ÀøÒ²ÊÇ·áºñµÄ¡£Äã½«ÓÐ¿ÉÄÜ»ñµÃ´óÁ¿µÄ#G¾­Ñé#W¡¢#G½ðÇ®#W»ò#YÎåÐÐÁîÅÆ#W¡£#YÎåÐÐÁîÅÆ·Ö#G½ð#W¡¢#GÄ¾#W¡¢#GË®#W¡¢#G»ð#W¡¢#GÍÁ#WÎåÖÖ£¬¼¯ÆëËùÓÐÎåÖÖÁîÅÆ£¬ÄÜ¹»È¥#GËÕÖÝ£¨170£¬138£©ÁºÊ¦³É´¦¶Ò»»Ï¡ÊÀÕä±¦#YÖØÂ¥Óñ#WÒ»¿é¡£" )
+			AddText( sceneId, "    åœ¨è¿™ç–¾ç—…è‚†è™çš„æ—¥å­é‡Œï¼Œè®©æˆ‘ä»¬ä¸‡ä¼—åŒå¿ƒï¼Œæºæ‰‹å¯¹æŠ—ç—…é­”çš„ä¾µè¢­ï¼Œä¸ºç¾Žå¥½çš„ç”Ÿæ´»è€Œæˆ˜å§ï¼æ‰€æœ‰#G30çº§ä»¥ä¸Š#Wçš„è‹±é›„éƒ½å¯ä»¥åœ¨æˆ‘è¿™é‡Œå‚åŠ #Gçˆ±å¿ƒæ•‘åŠ©æ´»åŠ¨#Wï¼Œè´¡çŒ®ä½ è‡ªå·±çš„ä¸€ä»½åŠ›é‡ï¼Œè®©æˆ‘ä»¬å¥åº·å¸¸åœ¨ï¼å¹¸ç¦é•¿äº«ï¼#r    å‚åŠ çˆ±å¿ƒæ•‘åŠ©æ´»åŠ¨éœ€è¦ä½ æçŒ®ä¸€ä»½#Yèµ¤å­çˆ±å¿ƒ#Wå’Œä¸€ä»½#Yç§˜åˆ¶è‰¯è¯#Wã€‚#Yèµ¤å­çˆ±å¿ƒ#Wå¯ä»¥é€šè¿‡å‚åŠ ä»¥ä¸‹æ´»åŠ¨èŽ·å¾—ï¼š#Gçç‘æ£‹å±€#Wã€#Gæ¥¼å…°å¯»å®#Wã€#Gè´¼å…µå…¥ä¾µ#Wã€#Gå·è¢­é—¨æ´¾#Wã€‚#Yç§˜åˆ¶è‰¯è¯#Wåœ¨#Gåˆæˆ˜ç¼¥ç¼ˆå³°å‰¯æœ¬#Wå’Œ#GæŒ‘æˆ˜ç‡•å­åžå‰¯æœ¬#Wä¸­æœ‰å‡ çŽ‡èŽ·å¾—ï¼Œä¹Ÿå¯ä»¥ç›´æŽ¥åœ¨#Gå…ƒå®å•†åº—#Wè´­ä¹°ã€‚#r    å½“ç„¶ï¼Œå‚åŠ çˆ±å¿ƒæ•‘åŠ©æ´»åŠ¨åŽçš„å¥–åŠ±ä¹Ÿæ˜¯ä¸°åŽšçš„ã€‚ä½ å°†æœ‰å¯èƒ½èŽ·å¾—å¤§é‡çš„#Gç»éªŒ#Wã€#Gé‡‘é’±#Wæˆ–#Yäº”è¡Œä»¤ç‰Œ#Wã€‚#Yäº”è¡Œä»¤ç‰Œåˆ†#Gé‡‘#Wã€#Gæœ¨#Wã€#Gæ°´#Wã€#Gç«#Wã€#GåœŸ#Wäº”ç§ï¼Œé›†é½æ‰€æœ‰äº”ç§ä»¤ç‰Œï¼Œèƒ½å¤ŸåŽ»#Gè‹å·žï¼ˆ170ï¼Œ138ï¼‰æ¢å¸ˆæˆå¤„å…‘æ¢ç¨€ä¸–çå®#Yé‡æ¥¼çŽ‰#Wä¸€å—ã€‚" )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 		return
 	end
 	
-	--ÎåÐÐÉñÁ¦
+	--äº”è¡Œç¥žåŠ›
 	if GetNumText() == 3 and LuaFnGetName( sceneId, targetId ) == x889061_g_RewardNpcName then
 		BeginEvent( sceneId )	
-			AddText( sceneId, "    ½ðÄ¾Ë®»ðÍÁ£¬ÊÇÎªÎåÐÐ¡£ÈôÊÇ»ã¾ÛÁËÎåÐÐµÄÉñÁ¦£¬±ã¿É¸£ÔóÌìÏÂ¡£#r    ÎÒÕýÎª³¯Í¢ÊÕ¼¯¾ßÓÐÎåÐÐÉñÁ¦µÄ#YÎåÐÐÁîÅÆ#W£¬ÈôÊÇÄã´øÀ´ÁË#GÎåÃ¶²»Í¬#WµÄ#YÎåÐÐÁîÅÆ#W£¬³¯Í¢»áÒÔ#YÖØÂ¥Óñ#WÓëÄã½»»»¡£#r    #YÎåÐÐÁîÅÆ#W°üÀ¨#YÎåÐÐÁîÅÆ(½ð)#W¡¢#YÎåÐÐÁîÅÆ(Ä¾)#W¡¢#YÎåÐÐÁîÅÆ(Ë®)#W¡¢#YÎåÐÐÁîÅÆ(»ð)#W¡¢#YÎåÐÐÁîÅÆ(ÍÁ)#W¡£" )
+			AddText( sceneId, "    é‡‘æœ¨æ°´ç«åœŸï¼Œæ˜¯ä¸ºäº”è¡Œã€‚è‹¥æ˜¯æ±‡èšäº†äº”è¡Œçš„ç¥žåŠ›ï¼Œä¾¿å¯ç¦æ³½å¤©ä¸‹ã€‚#r    æˆ‘æ­£ä¸ºæœå»·æ”¶é›†å…·æœ‰äº”è¡Œç¥žåŠ›çš„#Yäº”è¡Œä»¤ç‰Œ#Wï¼Œè‹¥æ˜¯ä½ å¸¦æ¥äº†#Gäº”æžšä¸åŒ#Wçš„#Yäº”è¡Œä»¤ç‰Œ#Wï¼Œæœå»·ä¼šä»¥#Yé‡æ¥¼çŽ‰#Wä¸Žä½ äº¤æ¢ã€‚#r    #Yäº”è¡Œä»¤ç‰Œ#WåŒ…æ‹¬#Yäº”è¡Œä»¤ç‰Œ(é‡‘)#Wã€#Yäº”è¡Œä»¤ç‰Œ(æœ¨)#Wã€#Yäº”è¡Œä»¤ç‰Œ(æ°´)#Wã€#Yäº”è¡Œä»¤ç‰Œ(ç«)#Wã€#Yäº”è¡Œä»¤ç‰Œ(åœŸ)#Wã€‚" )
 			AddItemBonus( sceneId, x889061_g_RewardId, 1 )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
@@ -103,21 +103,21 @@ function x889061_OnDefaultEvent( sceneId, selfId, targetId )
 		return
 	end
 
-	--¹ØÓÚÎåÐÐÉñÁ¦
+	--å…³äºŽäº”è¡Œç¥žåŠ›
 	if GetNumText() == 4 and LuaFnGetName( sceneId, targetId ) == x889061_g_RewardNpcName then
 		BeginEvent( sceneId )						
-			AddText( sceneId, "    ½ðÄ¾Ë®»ðÍÁ£¬ÊÇÎªÎåÐÐ¡£ÈôÊÇ»ã¾ÛÁËÎåÐÐµÄÉñÁ¦£¬±ã¿É¸£ÔóÌìÏÂ¡£#r    ÎÒÕýÎª³¯Í¢ÊÕ¼¯¾ßÓÐÎåÐÐÉñÁ¦µÄ#YÎåÐÐÁîÅÆ#W£¬ÈôÊÇÄã´øÀ´ÁË#GÎåÃ¶²»Í¬#WµÄ#YÎåÐÐÁîÅÆ#W£¬³¯Í¢»áÒÔ#YÖØÂ¥Óñ#WÓëÄã½»»»¡£#r    #YÎåÐÐÁîÅÆ#W°üÀ¨#YÎåÐÐÁîÅÆ(½ð)#W¡¢#YÎåÐÐÁîÅÆ(Ä¾)#W¡¢#YÎåÐÐÁîÅÆ(Ë®)#W¡¢#YÎåÐÐÁîÅÆ(»ð)#W¡¢#YÎåÐÐÁîÅÆ(ÍÁ)#W¡£#r    È¥#G´óÀí£¨172£¬147£©#RËï°ËÒ¯#W´¦²Î¼Ó#G°®ÐÄ¾ÈÖú»î¶¯#W£¬½«»áÓÐ¼¸ÂÊ»ñµÃ¸÷ÖÖ#YÎåÐÐÁîÅÆ#W¡£" )
+			AddText( sceneId, "    é‡‘æœ¨æ°´ç«åœŸï¼Œæ˜¯ä¸ºäº”è¡Œã€‚è‹¥æ˜¯æ±‡èšäº†äº”è¡Œçš„ç¥žåŠ›ï¼Œä¾¿å¯ç¦æ³½å¤©ä¸‹ã€‚#r    æˆ‘æ­£ä¸ºæœå»·æ”¶é›†å…·æœ‰äº”è¡Œç¥žåŠ›çš„#Yäº”è¡Œä»¤ç‰Œ#Wï¼Œè‹¥æ˜¯ä½ å¸¦æ¥äº†#Gäº”æžšä¸åŒ#Wçš„#Yäº”è¡Œä»¤ç‰Œ#Wï¼Œæœå»·ä¼šä»¥#Yé‡æ¥¼çŽ‰#Wä¸Žä½ äº¤æ¢ã€‚#r    #Yäº”è¡Œä»¤ç‰Œ#WåŒ…æ‹¬#Yäº”è¡Œä»¤ç‰Œ(é‡‘)#Wã€#Yäº”è¡Œä»¤ç‰Œ(æœ¨)#Wã€#Yäº”è¡Œä»¤ç‰Œ(æ°´)#Wã€#Yäº”è¡Œä»¤ç‰Œ(ç«)#Wã€#Yäº”è¡Œä»¤ç‰Œ(åœŸ)#Wã€‚#r    åŽ»#Gå¤§ç†ï¼ˆ172ï¼Œ147ï¼‰#Rå­™å…«çˆ·#Wå¤„å‚åŠ #Gçˆ±å¿ƒæ•‘åŠ©æ´»åŠ¨#Wï¼Œå°†ä¼šæœ‰å‡ çŽ‡èŽ·å¾—å„ç§#Yäº”è¡Œä»¤ç‰Œ#Wã€‚" )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 		return
 	end
 
-	--¾èÏ×
+	--æçŒ®
 	if GetNumText() == 5 and LuaFnGetName( sceneId, targetId ) == x889061_g_NpcName then
 		x889061_Donate( sceneId, selfId, targetId )
 	end
 
-	--Àë¿ª
+	--ç¦»å¼€
 	if GetNumText() == 6 and LuaFnGetName( sceneId, targetId ) == x889061_g_NpcName then
 		BeginUICommand( sceneId )
 		EndUICommand( sceneId )
@@ -128,26 +128,26 @@ end
 
 
 --==================================
---ÁÐ¾ÙÊÂ¼þ
+--åˆ—ä¸¾äº‹ä»¶
 --==================================
 function x889061_OnEnumerate( sceneId, selfId, targetId )
 
 	if GetName( sceneId, targetId ) == x889061_g_NpcName then
 
-		AddNumText( sceneId, x889061_g_scriptId, "°®ÐÄ¾ÈÖú»î¶¯", 6, 1 )
-		AddNumText( sceneId, x889061_g_scriptId, "¹ØÓÚ°®ÐÄ¾ÈÖú»î¶¯", 11, 2 )
+		AddNumText( sceneId, x889061_g_scriptId, "çˆ±å¿ƒæ•‘åŠ©æ´»åŠ¨", 6, 1 )
+		AddNumText( sceneId, x889061_g_scriptId, "å…³äºŽçˆ±å¿ƒæ•‘åŠ©æ´»åŠ¨", 11, 2 )
 	
 	elseif GetName( sceneId, targetId ) == x889061_g_RewardNpcName then
 	
-		AddNumText( sceneId, x889061_g_scriptId, "#GÎåÐÐÉñÁ¦", 6, 3 )
-		AddNumText( sceneId, x889061_g_scriptId, "#GÎåÐÐÉñÁ¦½éÉÜ", 11, 4 )
+		AddNumText( sceneId, x889061_g_scriptId, "#Gäº”è¡Œç¥žåŠ›", 6, 3 )
+		AddNumText( sceneId, x889061_g_scriptId, "#Gäº”è¡Œç¥žåŠ›ä»‹ç»", 11, 4 )
 	
 	end
 
 end
 
 --==================================
---ÐÑÄ¿ÌáÊ¾
+--é†’ç›®æç¤º
 --==================================
 function x889061_NotifyTip( sceneId, selfId, msg )
 	BeginEvent( sceneId )
@@ -157,7 +157,7 @@ function x889061_NotifyTip( sceneId, selfId, msg )
 end
 
 --==================================
---¶Ò»»ÖØÂ¥Óñ
+--å…‘æ¢é‡æ¥¼çŽ‰
 --==================================
 function x889061_OnSubmit( sceneId, selfId, targetId )
 
@@ -165,18 +165,18 @@ function x889061_OnSubmit( sceneId, selfId, targetId )
 		return
 	end
 	
-	--¼ì²éÊÇ·ñÓÐÎå¸ö²»Í¬µÄÎåÐÐÁîÅÆ
+	--æ£€æŸ¥æ˜¯å¦æœ‰äº”ä¸ªä¸åŒçš„äº”è¡Œä»¤ç‰Œ
 	for i = 1, getn( x889061_g_LingpaiList ) do
 		if HaveItemInBag( sceneId, selfId, x889061_g_LingpaiList[i] ) == -1 then
 			BeginEvent( sceneId )						
-				AddText( sceneId, "    ¶Ò»»#YÖØÂ¥Óñ#WÐèÒª#GÎåÃ¶²»Í¬#WµÄ#YÎåÐÐÁîÅÆ#W£¬Çë¼¯Æë#GÎåÃ¶#YÎåÐÐÁîÅÆ#WÖ®ºóÔÙÀ´ÕÒÎÒ¡£" )
+				AddText( sceneId, "    å…‘æ¢#Yé‡æ¥¼çŽ‰#Wéœ€è¦#Gäº”æžšä¸åŒ#Wçš„#Yäº”è¡Œä»¤ç‰Œ#Wï¼Œè¯·é›†é½#Gäº”æžš#Yäº”è¡Œä»¤ç‰Œ#Wä¹‹åŽå†æ¥æ‰¾æˆ‘ã€‚" )
 			EndEvent( sceneId )
 			DispatchEventList( sceneId, selfId, targetId )
 			return
 		end
 	end
 
-	--¼ì²éÊÇ·ñËø¶¨
+	--æ£€æŸ¥æ˜¯å¦é”å®š
 	for i =  1, getn( x889061_g_LingpaiList ) do
 		if LuaFnGetAvailableItemCount( sceneId, selfId, x889061_g_LingpaiList[i] ) < 1 then
 			x889061_NotifyTip( sceneId, selfId, "#{Item_Locked}" )
@@ -184,16 +184,16 @@ function x889061_OnSubmit( sceneId, selfId, targetId )
 		end
 	end
 
-	--¼ì²é²ÄÁÏÀ¸¿Õ¼ä
+	--æ£€æŸ¥ææ–™æ ç©ºé—´
 	if LuaFnGetPropertyBagSpace( sceneId, selfId ) == 0 then
 		BeginEvent( sceneId )						
-			AddText( sceneId, "    Çë½«#GµÀ¾ßÀ¸#WÁô³öÒ»¸ö#G¿ÕÎ»#W£¬·ñÔòÎÒ#GÎÞ·¨#W½«#YÖØÂ¥Óñ#W¸øÄã¡£" )
+			AddText( sceneId, "    è¯·å°†#Gé“å…·æ #Wç•™å‡ºä¸€ä¸ª#Gç©ºä½#Wï¼Œå¦åˆ™æˆ‘#Gæ— æ³•#Wå°†#Yé‡æ¥¼çŽ‰#Wç»™ä½ ã€‚" )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 		return
 	end
 	
-	--¿Û³ýµÀ¾ß
+	--æ‰£é™¤é“å…·
 	for i =  1, getn( x889061_g_LingpaiList ) do
 		if LuaFnDelAvailableItem( sceneId, selfId, x889061_g_LingpaiList[i], 1 ) ~= 1 then
 			x889061_NotifyTip( sceneId, selfId, "#{DeleteItemFailed}" )
@@ -203,30 +203,30 @@ function x889061_OnSubmit( sceneId, selfId, targetId )
 	
 
 
-	--ÊÍ·ÅÖØÂ¥Óñ
+	--é‡Šæ”¾é‡æ¥¼çŽ‰
 	local nBagIndex = TryRecieveItem( sceneId, selfId, x889061_g_RewardId, 0 )
 	if nBagIndex ~= -1 then
-		--NPC¶Ô»°¸æÖª³É¹¦
+		--NPCå¯¹è¯å‘ŠçŸ¥æˆåŠŸ
 		BeginEvent( sceneId )						
-			AddText( sceneId, "    ¸ÐÐ»ÄãÎª³¯Í¢×ö³öµÄ¹±Ï×£¬Õâ#YÖØÂ¥Óñ#WÇëÊÕºÃ¡£" )
+			AddText( sceneId, "    æ„Ÿè°¢ä½ ä¸ºæœå»·åšå‡ºçš„è´¡çŒ®ï¼Œè¿™#Yé‡æ¥¼çŽ‰#Wè¯·æ”¶å¥½ã€‚" )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 		
-		--ÄãµÃµ½ÁË£ºÖØÂ¥Óñ
-		x889061_NotifyTip( sceneId, selfId, "µÃµ½ÎïÆ·£ºÖØÂ¥Óñ" )
+		--ä½ å¾—åˆ°äº†ï¼šé‡æ¥¼çŽ‰
+		x889061_NotifyTip( sceneId, selfId, "å¾—åˆ°ç‰©å“ï¼šé‡æ¥¼çŽ‰" )
 
-		--·¢¹«¸æ
+		--å‘å…¬å‘Š
 		local szTranItm = GetBagItemTransfer( sceneId, selfId, nBagIndex )
 		if szTranItm ~= nil then
-			local szMsg = format( "#W#{_INFOUSR%s}#PÊÕ¼¯µ½ÁËÈ«²¿#GÎåÃ¶#YÎåÐÐÁîÅÆ#P£¬ÔÚ#GËÕÖÝ£¨170£¬138£©#YÁºÊ¦³É#P´¦¶Ò»»µ½ÁËÉñÆ÷#W#{_INFOMSG%s}#P£¡",
+			local szMsg = format( "#W#{_INFOUSR%s}#Pæ”¶é›†åˆ°äº†å…¨éƒ¨#Gäº”æžš#Yäº”è¡Œä»¤ç‰Œ#Pï¼Œåœ¨#Gè‹å·žï¼ˆ170ï¼Œ138ï¼‰#Yæ¢å¸ˆæˆ#På¤„å…‘æ¢åˆ°äº†ç¥žå™¨#W#{_INFOMSG%s}#Pï¼",
 					LuaFnGetName( sceneId, selfId ),  szTranItm )
 			AddGlobalCountNews( sceneId, szMsg )
 		end
 
-		--²¥·ÅÌØÐ§
+		--æ’­æ”¾ç‰¹æ•ˆ
 		LuaFnSendSpecificImpactToUnit( sceneId, selfId, selfId, selfId, 49, 0 )
 
-		--¼ÇÂ¼ÈÕÖ¾
+		--è®°å½•æ—¥å¿—
 		local guid = LuaFnObjId2Guid( sceneId, selfId )
 		if guid ~= nil then
 			local szLog = format( "SceneId=%d", sceneId )
@@ -239,20 +239,20 @@ function x889061_OnSubmit( sceneId, selfId, targetId )
 end
 
 --==================================
---¾èÏ×°®ÐÄºÍÁ¼Ò©
+--æçŒ®çˆ±å¿ƒå’Œè‰¯è¯
 --==================================
 function x889061_Donate( sceneId, selfId, targetId )
 	
-	--¼ì²éÍæ¼ÒµÈ¼¶
+	--æ£€æŸ¥çŽ©å®¶ç­‰çº§
 	if GetLevel( sceneId, selfId ) < x889061_g_LevelLimit then
 		BeginEvent( sceneId )						
-			AddText( sceneId, "    Äã»¹Î´´ïµ½30¼¶¡£ÇëÓÚ´ïµ½30¼¶Ö®ºóÔÙÀ´¡£" )
+			AddText( sceneId, "    ä½ è¿˜æœªè¾¾åˆ°30çº§ã€‚è¯·äºŽè¾¾åˆ°30çº§ä¹‹åŽå†æ¥ã€‚" )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 		return
 	end
 
-	--¼ì²éµ±Ìì²Î¼Ó»î¶¯´ÎÊý
+	--æ£€æŸ¥å½“å¤©å‚åŠ æ´»åŠ¨æ¬¡æ•°
 	local nDayCount = GetMissionData( sceneId, selfId, MD_HK_TW_DAY_H1N1_COUNT )
 	local nLastDay = GetHighWord( nDayCount )
 	local nCount = GetLowWord( nDayCount )
@@ -261,24 +261,24 @@ function x889061_Donate( sceneId, selfId, targetId )
 		return
 	elseif nLastDay == nToday and nCount >= x889061_g_MaxDayCount then
 		BeginEvent( sceneId )						
-			AddText( sceneId, "    °®ÐÄ¾ÈÖú»î¶¯Ã¿ÌìÖ»ÄÜ²Î¼Ó4´Î£¬ÇëÃ÷ÌìÔÙÀ´¡£" )
+			AddText( sceneId, "    çˆ±å¿ƒæ•‘åŠ©æ´»åŠ¨æ¯å¤©åªèƒ½å‚åŠ 4æ¬¡ï¼Œè¯·æ˜Žå¤©å†æ¥ã€‚" )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 		return
 	end
 
-	--¼ì²éµÀ¾ßÊÇ·ñ´æÔÚ
+	--æ£€æŸ¥é“å…·æ˜¯å¦å­˜åœ¨
 	for i = 1, getn( x889061_g_DonateItemList ) do
 		if HaveItemInBag( sceneId, selfId, x889061_g_DonateItemList[i] ) == -1 then
 			BeginEvent( sceneId )						
-				AddText( sceneId, "    ÄãÐèÒªÍ¬Ê±ÓµÓÐ#Y³à×Ó°®ÐÄ#WºÍ#YÃØÖÆÁ¼Ò©#WÅ¶¡£#r    #Y³à×Ó°®ÐÄ#W¿ÉÒÔÔÚ#GÕäççÆå¾Ö#W¡¢#GÂ¥À¼Ñ°±¦#W¡¢#GÔô±øÈëÇÖ#WºÍ#GÍµÏ®ÃÅÅÉ#WÖÐ»ñµÃ¡£#YÃØÖÆÁ¼Ò©#W¿ÉÒÔÔÚ#G³õÕ½çÎç¿·å#WºÍ#GÌôÕ½Ñà×ÓÎë#WÖÐ»ñµÃ£¬Ò²¿ÉÒÔÔÚ#GÔª±¦ÉÌµê#W¹ºÂò¡£#r    ²Î¼Ó°®ÐÄ¾ÈÖú»î¶¯½«ÓÐ¿ÉÄÜ»ñµÃ´óÁ¿µÄ#G¾­Ñé#W¡¢#G½ðÇ®#W»ò#YÎåÐÐÁîÅÆ#W¡£" )
+				AddText( sceneId, "    ä½ éœ€è¦åŒæ—¶æ‹¥æœ‰#Yèµ¤å­çˆ±å¿ƒ#Wå’Œ#Yç§˜åˆ¶è‰¯è¯#Wå“¦ã€‚#r    #Yèµ¤å­çˆ±å¿ƒ#Wå¯ä»¥åœ¨#Gçç‘æ£‹å±€#Wã€#Gæ¥¼å…°å¯»å®#Wã€#Gè´¼å…µå…¥ä¾µ#Wå’Œ#Gå·è¢­é—¨æ´¾#Wä¸­èŽ·å¾—ã€‚#Yç§˜åˆ¶è‰¯è¯#Wå¯ä»¥åœ¨#Gåˆæˆ˜ç¼¥ç¼ˆå³°#Wå’Œ#GæŒ‘æˆ˜ç‡•å­åž#Wä¸­èŽ·å¾—ï¼Œä¹Ÿå¯ä»¥åœ¨#Gå…ƒå®å•†åº—#Wè´­ä¹°ã€‚#r    å‚åŠ çˆ±å¿ƒæ•‘åŠ©æ´»åŠ¨å°†æœ‰å¯èƒ½èŽ·å¾—å¤§é‡çš„#Gç»éªŒ#Wã€#Gé‡‘é’±#Wæˆ–#Yäº”è¡Œä»¤ç‰Œ#Wã€‚" )
 			EndEvent( sceneId )
 			DispatchEventList( sceneId, selfId, targetId )
 			return
 		end
 	end
 
-	--¼ì²éµÀ¾ßÊÇ·ñ¼ÓËø
+	--æ£€æŸ¥é“å…·æ˜¯å¦åŠ é”
 	for i =  1, getn( x889061_g_DonateItemList ) do
 		if LuaFnGetAvailableItemCount( sceneId, selfId, x889061_g_DonateItemList[i] ) < 1 then
 			x889061_NotifyTip( sceneId, selfId, "#{Item_Locked}" )
@@ -286,18 +286,18 @@ function x889061_Donate( sceneId, selfId, targetId )
 		end
 	end
 	
-	--¼ì²é²ÄÁÏÀ¸¿Õ¼ä
+	--æ£€æŸ¥ææ–™æ ç©ºé—´
 	if LuaFnGetMaterialBagSpace( sceneId, selfId ) == 0 then
-		x889061_NotifyTip( sceneId, selfId, "±³°üµÄ²ÄÁÏÀ¸È±ÉÙ¿Õ¼ä£¬ÇëÖÁÉÙÌÚ³öÒ»¸ö¿Õ¼ä¡£" )
+		x889061_NotifyTip( sceneId, selfId, "èƒŒåŒ…çš„ææ–™æ ç¼ºå°‘ç©ºé—´ï¼Œè¯·è‡³å°‘è…¾å‡ºä¸€ä¸ªç©ºé—´ã€‚" )
 		return
 	end
 	
-	--¹Ø±Õ½çÃæ
+	--å…³é—­ç•Œé¢
 	BeginUICommand( sceneId )
 	EndUICommand( sceneId )
 	DispatchUICommand( sceneId, selfId, 1000 )
 
-	--¿Û³ýµÀ¾ß
+	--æ‰£é™¤é“å…·
 	for i =  1, getn( x889061_g_DonateItemList ) do
 		if LuaFnDelAvailableItem( sceneId, selfId, x889061_g_DonateItemList[i], 1 ) ~= 1 then
 			x889061_NotifyTip( sceneId, selfId, "#{DeleteItemFailed}" )
@@ -305,41 +305,41 @@ function x889061_Donate( sceneId, selfId, targetId )
 		end
 	end
 
-	--¸ø½±Àø
+	--ç»™å¥–åŠ±
 	local nRand = random( 1000000 )
 	for i =  1, getn( x889061_g_RewardTypeList ) do
 		
 		if nRand >= x889061_g_RewardTypeList[i].Min and nRand <= x889061_g_RewardTypeList[i].Max then
 			
-			if x889061_g_RewardTypeList[i].Type == 0 then		--¾­Ñé
+			if x889061_g_RewardTypeList[i].Type == 0 then		--ç»éªŒ
 				local CurLevel = LuaFnGetLevel( sceneId, selfId )
 				local CurExp = x889061_g_ExpTbl[CurLevel]
 				LuaFnAddExp( sceneId, selfId, CurExp * 50 )
 			
-			elseif x889061_g_RewardTypeList[i].Type == 1 then	--¾­Ñé+½ðÇ®
+			elseif x889061_g_RewardTypeList[i].Type == 1 then	--ç»éªŒ+é‡‘é’±
 				local CurLevel = LuaFnGetLevel( sceneId, selfId )
 				local CurExp = x889061_g_ExpTbl[CurLevel]
 				LuaFnAddExp( sceneId, selfId, CurExp * 25 )
 				AddMoney( sceneId, selfId, 100000 )
 			
-			else							--ÎåÐÐÁîÅÆ
+			else							--äº”è¡Œä»¤ç‰Œ
 				local nItemId = x889061_g_RewardTypeList[i].Type
 				local nBagIndex = TryRecieveItem( sceneId, selfId, nItemId, 0 )
 				if nBagIndex ~= -1 then
-					if nItemId == 20600011 then		--°ó¶¨Ä¾ÁîÅÆ
+					if nItemId == 20600011 then		--ç»‘å®šæœ¨ä»¤ç‰Œ
 						LuaFnItemBind( sceneId, selfId, nBagIndex )
 					end
 					
-					x889061_NotifyTip( sceneId, selfId, "Äã»ñµÃÁË" .. GetItemName( sceneId, nItemId ) )
-					--·¢¹«¸æ
+					x889061_NotifyTip( sceneId, selfId, "ä½ èŽ·å¾—äº†" .. GetItemName( sceneId, nItemId ) )
+					--å‘å…¬å‘Š
 					local szTranItm = GetBagItemTransfer( sceneId, selfId, nBagIndex )
 					if szTranItm ~= nil then
-						local szMsg = format( "#W#{_INFOUSR%s}#P´óÏÀÎÞË½µØ·îÏ×³ö#Y³à×Ó°®ÐÄ#PºÍ#YÃØÖÆÁ¼Ò©#P£¬#G´óÀí£¨172£¬147£©#YËï°ËÒ¯#P´óÊÜ¸Ð¶¯£¬ÔùÓèÆäÒ»Ã¶#W#{_INFOMSG%s}#P£¬°®ÐÄµÄ¸¶³ö¹ûÈ»»ñµÃÁË·áºñµÄ»Ø±¨£¡",
+						local szMsg = format( "#W#{_INFOUSR%s}#På¤§ä¾ æ— ç§åœ°å¥‰çŒ®å‡º#Yèµ¤å­çˆ±å¿ƒ#På’Œ#Yç§˜åˆ¶è‰¯è¯#Pï¼Œ#Gå¤§ç†ï¼ˆ172ï¼Œ147ï¼‰#Yå­™å…«çˆ·#På¤§å—æ„ŸåŠ¨ï¼Œèµ äºˆå…¶ä¸€æžš#W#{_INFOMSG%s}#Pï¼Œçˆ±å¿ƒçš„ä»˜å‡ºæžœç„¶èŽ·å¾—äº†ä¸°åŽšçš„å›žæŠ¥ï¼",
 								LuaFnGetName( sceneId, selfId ),  szTranItm )
 						AddGlobalCountNews( sceneId, szMsg )
 					end
 
-					--¼ÇÂ¼ÈÕÖ¾
+					--è®°å½•æ—¥å¿—
 					local guid = LuaFnObjId2Guid( sceneId, selfId )
 					if guid ~= nil then
 						local szLog = format( "SceneId=%d,LingpaiID=%d", sceneId, nItemId )
@@ -350,10 +350,10 @@ function x889061_Donate( sceneId, selfId, targetId )
 				end
 			end
 			
-			--²¥·ÅÌØÐ§
+			--æ’­æ”¾ç‰¹æ•ˆ
 			LuaFnSendSpecificImpactToUnit( sceneId, selfId, selfId, selfId, 49, 0 )
 
-			--¸üÐÂ»î¶¯²Î¼Ó´ÎÊý
+			--æ›´æ–°æ´»åŠ¨å‚åŠ æ¬¡æ•°
 			local nData = 0
 			if nLastDay ~= nToday then
 				nData = SetHighWord( nData, nToday )

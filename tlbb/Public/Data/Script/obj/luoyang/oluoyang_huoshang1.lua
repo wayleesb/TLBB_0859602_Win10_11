@@ -1,8 +1,8 @@
---ÂåÑôNPC
---»õÉÌ
---äîÔËÑ­»·ÈÎÎñ
+--æ´›é˜³NPC
+--è´§å•†
+--æ¼•è¿å¾ªç¯ä»»åŠ¡
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x311009_g_scriptId = 311009
 
 Step = 600
@@ -168,7 +168,7 @@ x311009_g_Monger_Region[12] = {
 	[9]={x=125,y=218},
 	}
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x311009_OnDefaultEvent( sceneId, selfId,targetId )
 	if	PRE_TIME == nil then
@@ -191,23 +191,23 @@ function x311009_OnDefaultEvent( sceneId, selfId,targetId )
 
 	if x311009_g_Monger_Region[World_Time+1].Scene_Id ~= sceneId then
 		BeginEvent(sceneId)
-			AddText(sceneId,"  ²»ºÃÒâË¼£¬ÎÒÏÖÔÚ²»ÄÜÎªÄãÌá¹©·şÎñ¡£")
+			AddText(sceneId,"  ä¸å¥½æ„æ€ï¼Œæˆ‘ç°åœ¨ä¸èƒ½ä¸ºä½ æä¾›æœåŠ¡ã€‚")
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 		return
 	end
 
 	BeginEvent(sceneId)
-	AddText(sceneId,"  ÄãºÃ£¬ÎÒÊÇÕâÀïµÄäî»õ¾­ÏúÉÌ¡£")
+	AddText(sceneId,"  ä½ å¥½ï¼Œæˆ‘æ˜¯è¿™é‡Œçš„æ¼•è´§ç»é”€å•†ã€‚")
 
 	if IsHaveMission(sceneId,selfId,4021) > 0 then
 	
 		if	EVENT_NOW == 1 then
-			AddNumText(sceneId,x311009_g_scriptId,"½øÈëºÚÊĞ",7,255)
+			AddNumText(sceneId,x311009_g_scriptId,"è¿›å…¥é»‘å¸‚",7,255)
 		elseif	EVENT_NOW == 2 then
-			AddNumText(sceneId,x311009_g_scriptId,"°ïÃ¦ºåÌ§Îï¼Û",6,EVENT_NOW)
+			AddNumText(sceneId,x311009_g_scriptId,"å¸®å¿™å“„æŠ¬ç‰©ä»·",6,EVENT_NOW)
 		elseif	EVENT_NOW == 3 then
-			AddNumText(sceneId,x311009_g_scriptId,"°ïÃ¦´òÑ¹ÊĞ³¡",6,EVENT_NOW)
+			AddNumText(sceneId,x311009_g_scriptId,"å¸®å¿™æ‰“å‹å¸‚åœº",6,EVENT_NOW)
 		end
 
 	end
@@ -216,7 +216,7 @@ function x311009_OnDefaultEvent( sceneId, selfId,targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x311009_OnEventRequest( sceneId, selfId, targetId, eventId )
 	local NumText = GetNumText()
@@ -246,6 +246,6 @@ function x311009_OnCharacterTimer( sceneId, selfId, dataId, uTime )
 --	PrintNum(rrr)
 --	PrintStr("World_Time="..World_Time)
 	SetPos( sceneId, selfId, Coordinate[rrr].x,Coordinate[rrr].y)
---	PrintStr("ÎÒ·Éµ½"..Coordinate[rrr].x.." "..Coordinate[rrr].y.."È¥ÁË£¡ÔÚ"..sceneId.."³¡¾°")
+--	PrintStr("æˆ‘é£åˆ°"..Coordinate[rrr].x.." "..Coordinate[rrr].y.."å»äº†ï¼åœ¨"..sceneId.."åœºæ™¯")
 end
 

@@ -1,9 +1,9 @@
 -- 212221
--- ¶Ò»»ÎïÆ·
+-- å…‘æ¢ç‰©å“
 x212221_g_scriptId = 212221
 
 x212221_g_Stone = {
-									{level=75, id=20310004, id2=20310005, num=60}, --20310004ÇØ»ÊÖé 20310005°ó¶¨ÇØ»ÊÖé
+									{level=75, id=20310004, id2=20310005, num=60}, --20310004ç§¦çš‡ç  20310005ç»‘å®šç§¦çš‡ç 
 									{level=85, id=20310004, id2=20310005, num=90},
 
 									}
@@ -11,16 +11,16 @@ x212221_g_Stone = {
 
 
 x212221_g_Item = {
-									{level=750,id=10412080},{level=750,id=10413083},{level=750,id=10422121},{level=750,id=10423046}, --75ÄÚ¹¦Ì××°
-									{level=751,id=10412082},{level=751,id=10413085},{level=751,id=10422123},{level=751,id=10423048}, --75Íâ¹¦Ì××°
-									{level=850,id=10412081},{level=850,id=10413084},{level=850,id=10422122},{level=850,id=10423047}, --85ÄÚ¹¦Ì××°				
-									{level=851,id=10412083},{level=851,id=10413086},{level=851,id=10422124},{level=851,id=10423049}, --85Íâ¹¦Ì××°		
+									{level=750,id=10412080},{level=750,id=10413083},{level=750,id=10422121},{level=750,id=10423046}, --75å†…åŠŸå¥—è£…
+									{level=751,id=10412082},{level=751,id=10413085},{level=751,id=10422123},{level=751,id=10423048}, --75å¤–åŠŸå¥—è£…
+									{level=850,id=10412081},{level=850,id=10413084},{level=850,id=10422122},{level=850,id=10423047}, --85å†…åŠŸå¥—è£…				
+									{level=851,id=10412083},{level=851,id=10413086},{level=851,id=10422124},{level=851,id=10423049}, --85å¤–åŠŸå¥—è£…		
 								 }
 
 
 --MisDescEnd
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x212221_OnDefaultEvent( sceneId, selfId, targetId )
 	local nNum = GetNumText()
@@ -44,52 +44,52 @@ function x212221_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x212221_OnEnumerate( sceneId, selfId, targetId )
-	AddNumText( sceneId, x212221_g_scriptId, "¶Ò»»75¼¶ÄÚ¹¦Ì××°", 6, 750 )
-	AddNumText( sceneId, x212221_g_scriptId, "¶Ò»»75¼¶Íâ¹¦Ì××°", 6, 751 )
-	AddNumText( sceneId, x212221_g_scriptId, "¶Ò»»85¼¶ÄÚ¹¦Ì××°", 6, 850 )	
-	AddNumText( sceneId, x212221_g_scriptId, "¶Ò»»85¼¶Íâ¹¦Ì××°", 6, 851 )
+	AddNumText( sceneId, x212221_g_scriptId, "å…‘æ¢75çº§å†…åŠŸå¥—è£…", 6, 750 )
+	AddNumText( sceneId, x212221_g_scriptId, "å…‘æ¢75çº§å¤–åŠŸå¥—è£…", 6, 751 )
+	AddNumText( sceneId, x212221_g_scriptId, "å…‘æ¢85çº§å†…åŠŸå¥—è£…", 6, 850 )	
+	AddNumText( sceneId, x212221_g_scriptId, "å…‘æ¢85çº§å¤–åŠŸå¥—è£…", 6, 851 )
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x212221_CheckAccept( sceneId, selfId )
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x212221_OnAccept( sceneId, selfId )
 
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x212221_OnAbandon( sceneId, selfId )
 end
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x212221_OnContinue( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x212221_CheckSubmit( sceneId, selfId )
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x212221_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 	
-	-- ¼ì²â´«¹ıÀ´µÄÕâ¸öÖµÊÇ²»ÊÇÓĞĞ§µÄ
+	-- æ£€æµ‹ä¼ è¿‡æ¥çš„è¿™ä¸ªå€¼æ˜¯ä¸æ˜¯æœ‰æ•ˆçš„
 	local logNum1 = 0
 	local item
 	local stone
@@ -105,24 +105,24 @@ function x212221_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 		end
 	end
 	
-	-- Ìá½»µÄÎïÆ·²»¶ÔÓ¦£¬Ö±½Ó·µ»Ø£¬²»×ö´¦Àí
+	-- æäº¤çš„ç‰©å“ä¸å¯¹åº”ï¼Œç›´æ¥è¿”å›ï¼Œä¸åšå¤„ç†
 	if bHaveItem == 0  then
 		return
 	end
 	
 	for i, temp1 in x212221_g_Stone do
-		if (10*temp1.level == item.level) or ((10*temp1.level+1 == item.level)) then --ÓĞµã¹Ö£¬Ö»ÓĞÕâÑùÁË£¬ÒòÎªlua²»ÄÜÕû³ı¡£
+		if (10*temp1.level == item.level) or ((10*temp1.level+1 == item.level)) then --æœ‰ç‚¹æ€ªï¼Œåªæœ‰è¿™æ ·äº†ï¼Œå› ä¸ºluaä¸èƒ½æ•´é™¤ã€‚
 			stone = temp1
 			bHaveStone = 1
 		end
 	end
 	
-	-- ÕÒ²»µ½¶ÔÓ¦µÄÊ¯Í·£¬Ö±½Ó·µ»Ø
+	-- æ‰¾ä¸åˆ°å¯¹åº”çš„çŸ³å¤´ï¼Œç›´æ¥è¿”å›
 	if bHaveStone == 0    then
 		return
 	end
 	
-	-- 1£¬¼ì²âÍæ¼ÒÉíÉÏÊÇ²»ÊÇÓĞÎ»ÖÃÄÜ¹»·ÅÏÂÎïÆ·
+	-- 1ï¼Œæ£€æµ‹ç©å®¶èº«ä¸Šæ˜¯ä¸æ˜¯æœ‰ä½ç½®èƒ½å¤Ÿæ”¾ä¸‹ç‰©å“
 	BeginAddItem(sceneId)
 		AddItem( sceneId, item.id, 1 )
 	local ret = EndAddItem(sceneId,selfId)
@@ -131,18 +131,18 @@ function x212221_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 		return
 	end
 	
-	-- 2£¬¼ÆËãÊ¯Í·ÊıÁ¿
+	-- 2ï¼Œè®¡ç®—çŸ³å¤´æ•°é‡
 	local selfStoneCount = GetItemCount(sceneId,selfId, stone.id) + GetItemCount(sceneId, selfId, stone.id2);
 	if stone.num > selfStoneCount   then
 		BeginEvent(sceneId)
-			strText = format("¶Ô²»Æğ£¬ÇØ»ÊÖéÊıÁ¿±ØĞë´ïµ½%s¸ö", tostring(stone.num))
+			strText = format("å¯¹ä¸èµ·ï¼Œç§¦çš‡ç æ•°é‡å¿…é¡»è¾¾åˆ°%sä¸ª", tostring(stone.num))
 			AddText(sceneId,strText);
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return		
 	end
 	
-	-- 3£¬¼ì²â±³°üÖĞ£¬Èç¹ûÓĞÊ¯Í·ÉÏËø£¬¾Í²»ÈÃÖ´ĞĞÏÂÈ¥
+	-- 3ï¼Œæ£€æµ‹èƒŒåŒ…ä¸­ï¼Œå¦‚æœæœ‰çŸ³å¤´ä¸Šé”ï¼Œå°±ä¸è®©æ‰§è¡Œä¸‹å»
 	local availableStone = LuaFnGetAvailableItemCount( sceneId, selfId, stone.id ) + LuaFnGetAvailableItemCount( sceneId, selfId, stone.id2 );
 	if availableStone < stone.num  then
 		BeginEvent(sceneId)
@@ -153,21 +153,21 @@ function x212221_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 		return
 	end	
 	
-	-- 4£¬É¾³ıÎïÆ· ÓÅÏÈÉ¾³ı°ó¶¨µÄ
+	-- 4ï¼Œåˆ é™¤ç‰©å“ ä¼˜å…ˆåˆ é™¤ç»‘å®šçš„
 	local bindNum = LuaFnGetAvailableItemCount(sceneId, selfId, stone.id2);
-	if (bindNum >= stone.num) then --°ó¶¨µÄÊ¯Í·×ã¹»
+	if (bindNum >= stone.num) then --ç»‘å®šçš„çŸ³å¤´è¶³å¤Ÿ
 		if LuaFnDelAvailableItem(sceneId, selfId, stone.id2, stone.num) == 0 then
 			BeginEvent(sceneId)
-				strText = "É¾³ıÎïÆ·Ê§°Ü£¡";
+				strText = "åˆ é™¤ç‰©å“å¤±è´¥ï¼";
 				AddText(sceneId,strText);
 			EndEvent(sceneId)
 			DispatchMissionTips(sceneId,selfId)
 			return
 		end
-	else --²»¹»
+	else --ä¸å¤Ÿ
 		if (LuaFnDelAvailableItem(sceneId, selfId, stone.id2, bindNum) == 0) or (LuaFnDelAvailableItem(sceneId, selfId, stone.id, stone.num-bindNum) == 0) then
 			BeginEvent(sceneId)
-				strText = "É¾³ıÎïÆ·Ê§°Ü£¡";
+				strText = "åˆ é™¤ç‰©å“å¤±è´¥ï¼";
 				AddText(sceneId,strText);
 			EndEvent(sceneId)
 			DispatchMissionTips(sceneId,selfId)
@@ -175,36 +175,36 @@ function x212221_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 		end
 	end
 	logNum1 = stone.num;
-	-- ¸ø½±Àø
+	-- ç»™å¥–åŠ±
 	AddItemListToHuman(sceneId,selfId)
-	-- ¼ÇÂ¼Log
+	-- è®°å½•Log
 	LuaFnAuditYanXuanYuExchange(sceneId, selfId, stone.id, logNum1, item.id)
 	
-	--¶Ò»»³É¹¦£¬²¥·ÅÌØĞ§
+	--å…‘æ¢æˆåŠŸï¼Œæ’­æ”¾ç‰¹æ•ˆ
 	LuaFnSendSpecificImpactToUnit(sceneId,selfId,selfId,selfId,18,0)
 	
-	-- ·¢ÊÀ½ç¹«¸æ
+	-- å‘ä¸–ç•Œå…¬å‘Š
 	local szItem = GetItemTransfer(sceneId,selfId,0)
 
-  message = format("#W#{_INFOUSR%s}#P³É¹¦°ï#YÙøÎŞÃû#P´Ó#GÇØ»ÊµØ¹¬#PÖĞÇÀ¾È³ö%s¿Å#YÇØ»ÊÖé#P£¬ÙøÎŞÃûÎª±íÊ¾¸Ğ¼¤£¬½«×æ´«µÄ#Y#{_INFOMSG%s}#PÒ»¸öÏàÔù¡£", 
+  message = format("#W#{_INFOUSR%s}#PæˆåŠŸå¸®#Yå¬´æ— å#Pä»#Gç§¦çš‡åœ°å®«#Pä¸­æŠ¢æ•‘å‡º%sé¢—#Yç§¦çš‡ç #Pï¼Œå¬´æ— åä¸ºè¡¨ç¤ºæ„Ÿæ¿€ï¼Œå°†ç¥–ä¼ çš„#Y#{_INFOMSG%s}#Pä¸€ä¸ªç›¸èµ ã€‚", 
    										GetName(sceneId, selfId), tostring(stone.num),  szItem);
 	AddGlobalCountNews( sceneId, message )	
 end
 
 --**********************************
---É±ËÀ¹ÖÎï»òÍæ¼Ò
+--æ€æ­»æ€ªç‰©æˆ–ç©å®¶
 --**********************************
 function x212221_OnKillObject( sceneId, selfId, objdataId ,objId )
 end
 
 --**********************************
---½øÈëÇøÓòÊÂ¼ş
+--è¿›å…¥åŒºåŸŸäº‹ä»¶
 --**********************************
 function x212221_OnEnterArea( sceneId, selfId, zoneId )
 end
 
 --**********************************
---µÀ¾ß¸Ä±ä
+--é“å…·æ”¹å˜
 --**********************************
 function x212221_OnItemChanged( sceneId, selfId, itemdataId )
 end

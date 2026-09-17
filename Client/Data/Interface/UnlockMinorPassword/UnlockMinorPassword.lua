@@ -1,9 +1,9 @@
-g_InputPassword_CurrectOperate = 0;  --1Îªpk×´Ì¬ÇĞ»»ĞèÒªµÄÊäÈë´°¿Ú. 2Îª´ò¿ªÒøĞĞÊ±ºòĞèÒªµÄÊä³ö´°¿Ú
-g_InputPassword_PKModeWant = 0;  --1Îªpk×´Ì¬ÇĞ»»ĞèÒªµÄÊäÈë´°¿Ú.
+g_InputPassword_CurrectOperate = 0;  --1ä¸ºpkçŠ¶æ€åˆ‡æ¢éœ€è¦çš„è¾“å…¥çª—å£. 2ä¸ºæ‰“å¼€é“¶è¡Œæ—¶å€™éœ€è¦çš„è¾“å‡ºçª—å£
+g_InputPassword_PKModeWant = 0;  --1ä¸ºpkçŠ¶æ€åˆ‡æ¢éœ€è¦çš„è¾“å…¥çª—å£.
 
 function UnlockMinorPassword_PreLoad()
 	
-	-- ´ò¿ª½çÃæ
+	-- æ‰“å¼€ç•Œé¢
 --	this:RegisterEvent("MINORPASSWORD_OPEN_UNLOCK_PASSWORD_DLG");
 --	this:RegisterEvent("OPENINPUTPASSWORD_PKVERIFY");
 --	this:RegisterEvent("OPENINPUTPASSWORD_BANKVERIFY");
@@ -42,8 +42,8 @@ function UnlockMinorPassword_OnEvent(event)
 		UnLockMinorPassword_ChangeMinorPassword:Hide()
 		g_InputPassword_CurrectOperate = 1
 		
-		UnLockMinorPassword_Frame_Title:SetText( "#{UITEXT_INPUTMINORPW}" )   --( "ÊäÈë¶ş¼¶ÃÜÂë" )
-		UnLockMinorPassword_WarningText:SetText( "#{UITEXT_PKNEEDPW}" )   --( "ÇĞ»»PKÄ£Ê½µÄÊ±ºòĞèÒªÊäÈë¶ş¼¶ÃÜÂë" )
+		UnLockMinorPassword_Frame_Title:SetText( "#{UITEXT_INPUTMINORPW}" )   --( "è¾“å…¥äºŒçº§å¯†ç " )
+		UnLockMinorPassword_WarningText:SetText( "#{UITEXT_PKNEEDPW}" )   --( "åˆ‡æ¢PKæ¨¡å¼çš„æ—¶å€™éœ€è¦è¾“å…¥äºŒçº§å¯†ç " )
 		OpenWindow( "SoftKeyBoard" );
 		SetSoftKeyAim( "UnLockMinorPassword_MinorPasswordEditBox" );
 		
@@ -57,8 +57,8 @@ function UnlockMinorPassword_OnEvent(event)
 		UnLockMinorPassword_ChangeMinorPassword:Hide()
 		g_InputPassword_CurrectOperate = 2
 		
-		UnLockMinorPassword_Frame_Title:SetText( "#{UITEXT_INPUTMINORPW}" )   --( "ÊäÈë¶ş¼¶ÃÜÂë" )
-		UnLockMinorPassword_WarningText:SetText( "#{UITEXT_BANKNEEDPW}" )   --( "´ò¿ªÒøĞĞĞèÒªÊäÈë¶ş¼¶ÃÜÂë" )
+		UnLockMinorPassword_Frame_Title:SetText( "#{UITEXT_INPUTMINORPW}" )   --( "è¾“å…¥äºŒçº§å¯†ç " )
+		UnLockMinorPassword_WarningText:SetText( "#{UITEXT_BANKNEEDPW}" )   --( "æ‰“å¼€é“¶è¡Œéœ€è¦è¾“å…¥äºŒçº§å¯†ç " )
 		OpenWindow( "SoftKeyBoard" );
 		SetSoftKeyAim( "UnLockMinorPassword_MinorPasswordEditBox" );
 		
@@ -73,11 +73,11 @@ end
 
 ----------------------------------------------------------------------------------------------------
 --
--- ĞŞ¸ÄÃÜÂë¡£
+-- ä¿®æ”¹å¯†ç ã€‚
 --
 function UnLockMinorPassword_ChangePassword_OnClick()
 
-	-- ´ò¿ª¸ü¸ÄÃÜÂë¶Ô»°¿ò¡£
+	-- æ‰“å¼€æ›´æ”¹å¯†ç å¯¹è¯æ¡†ã€‚
 	OpenChangeMinorPasswordDlg();
 	UnLockMinorPassword_Close();
 end
@@ -85,21 +85,21 @@ end
 
 ----------------------------------------------------------------------------------------------------
 --
--- µã»÷È·¶¨°´Å¥¡£
+-- ç‚¹å‡»ç¡®å®šæŒ‰é’®ã€‚
 --
 function UnLockMinorPassword_OK()
     if( 2 == g_InputPassword_CurrectOperate ) then
         local strPassword = UnLockMinorPassword_MinorPasswordEditBox:GetText();
         local iLen = string.len(strPassword);
 		if(iLen < 4) then
-			ShowSystemTipInfo( "#{UITEXT_PWTOOSHORT}" )   --("ÃÜÂë²»ÄÜÉÙÓÚ4¸ö×Ö·û£¡");
+			ShowSystemTipInfo( "#{UITEXT_PWTOOSHORT}" )   --("å¯†ç ä¸èƒ½å°‘äº4ä¸ªå­—ç¬¦ï¼");
 			return;
 		end
 		
 		BankAcquireListWithPW( strPassword )
 		
 		--Player:ChangePVPModeWithPassword( g_InputPassword_PKModeWant, strPassword )
-        -- Òş²Ø´°¿Ú.
+        -- éšè—çª—å£.
 	   UnLockMinorPassword_Close();
         return
     end
@@ -109,12 +109,12 @@ function UnLockMinorPassword_OK()
         local strPassword = UnLockMinorPassword_MinorPasswordEditBox:GetText();
         local iLen = string.len(strPassword);
 		if(iLen < 4) then
-			ShowSystemTipInfo( "#{UITEXT_PWTOOSHORT}" )   --("ÃÜÂë²»ÄÜÉÙÓÚ4¸ö×Ö·û£¡");
+			ShowSystemTipInfo( "#{UITEXT_PWTOOSHORT}" )   --("å¯†ç ä¸èƒ½å°‘äº4ä¸ªå­—ç¬¦ï¼");
 			return;
 		end
 		
 		Player:ChangePVPModeWithPassword( g_InputPassword_PKModeWant, strPassword )
-        -- Òş²Ø´°¿Ú.
+        -- éšè—çª—å£.
 	     UnLockMinorPassword_Close();
         return
     end
@@ -123,14 +123,14 @@ function UnLockMinorPassword_OK()
 	local iLen = string.len(strPassword);
 	if(iLen < 4) then
 	
-		ShowSystemTipInfo("ÃÜÂë²»ÄÜÉÙÓÚ4¸ö×Ö·û£¡");
+		ShowSystemTipInfo("å¯†ç ä¸èƒ½å°‘äº4ä¸ªå­—ç¬¦ï¼");
 		return;
 	end;
 	
-	-- ½âËøÃÜÂë¡£
+	-- è§£é”å¯†ç ã€‚
 	UnLockMinorPassword(strPassword);
 	
-	-- Òş²Ø´°¿Ú.
+	-- éšè—çª—å£.
 	UnLockMinorPassword_Close();
 
 end;
@@ -138,14 +138,14 @@ end;
 
 ----------------------------------------------------------------------------------------------------
 --
--- Ç¿ÖÆ½â³ı
+-- å¼ºåˆ¶è§£é™¤
 --
 function UnLockMinorPassword_ForceUnLock_OnClick()
 
-	-- Ç¿ÖÆ½Ó´¥ÃÜÂë
+	-- å¼ºåˆ¶æ¥è§¦å¯†ç 
 	ForceUnLockMinorPassword();
 	
-	-- Òş²Ø´°¿Ú.
+	-- éšè—çª—å£.
 	UnLockMinorPassword_Close();
 end;
 
@@ -153,14 +153,14 @@ end;
 
 ----------------------------------------------------------------------------------------------------
 --
--- ÍË³ö
+-- é€€å‡º
 --
 function UnLockMinorPassword_Cancel()
 
-	-- ´ò¿ªÃÜÂëÉèÖÃ°´Å¥
+	-- æ‰“å¼€å¯†ç è®¾ç½®æŒ‰é’®
 	--OpenSetMinorPasswordDlg();
 	
-	-- Òş²Ø´°¿Ú.
+	-- éšè—çª—å£.
 	UnLockMinorPassword_Close();
 		
 end;
@@ -170,7 +170,7 @@ function UnLockMinorPassword_Frame_OnHiden()
 end
 
 function UnLockMinorPassword_Close()
-		-- Òş²Ø´°¿Ú.
+		-- éšè—çª—å£.
 	
 	this:Hide();
 end

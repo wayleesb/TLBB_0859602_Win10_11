@@ -1,19 +1,19 @@
---Ê¹ÓÃÅä·½µÄ½Å±¾
+--ä½¿ç”¨é…æ–¹çš„è„šæœ¬
 
--- ñÒÉÙÎ¢ 2008.5.20 
--- ĞŞ¸Ä£¬Ìí¼Ó102¼¶ÉñÆ÷¡£
+-- è¤šå°‘å¾® 2008.5.20 
+-- ä¿®æ”¹ï¼Œæ·»åŠ 102çº§ç¥å™¨ã€‚
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x713501_g_scriptId = 713501
 
 x713501_g_RecipeItems = {}
 
--- ItemTable ºÅÎªË÷Òı
+-- ItemTable å·ä¸ºç´¢å¼•
 
--- abilityId: Éú³¤µã¶ÔÓ¦¼¼ÄÜ
--- recipeId: Ñ§Ï°µÄ¶ÔÓ¦Åä·½ºÅ
--- needLevel: Ñ§Ï°´ËÅä·½ĞèÒªµÄÏàÓ¦Éú»î¼¼ÄÜ¼¶±ğ
--- specialEffectID: ÌØĞ§ºÅ
+-- abilityId: ç”Ÿé•¿ç‚¹å¯¹åº”æŠ€èƒ½
+-- recipeId: å­¦ä¹ çš„å¯¹åº”é…æ–¹å·
+-- needLevel: å­¦ä¹ æ­¤é…æ–¹éœ€è¦çš„ç›¸åº”ç”Ÿæ´»æŠ€èƒ½çº§åˆ«
+-- specialEffectID: ç‰¹æ•ˆå·
 x713501_g_RecipeItems[	30307177	] = { abilityId = 	ABILITY_GPS	, recipeId =	510	, needLevel =	1	, specialEffectID =	18}
 x713501_g_RecipeItems[	30307178	] = { abilityId = 	ABILITY_GPS	, recipeId =	511	, needLevel =	1	, specialEffectID =	18}
 x713501_g_RecipeItems[	30307179	] = { abilityId = 	ABILITY_GPS	, recipeId =	512	, needLevel =	1	, specialEffectID =	18}
@@ -29,7 +29,7 @@ x713501_g_RecipeItems[	30302401	] = { abilityId = 	ABILITY_ZHUZAO	, recipeId =	4
 x713501_g_RecipeItems[	30302402	] = { abilityId = 	ABILITY_ZHUZAO	, recipeId =	421	, needLevel =	1	, specialEffectID =	18}
 x713501_g_RecipeItems[	30302403	] = { abilityId = 	ABILITY_ZHUZAO	, recipeId =	422	, needLevel =	1	, specialEffectID =	18}
 
--- ñÒÉÙÎ¢ 2008.5.20¡£ 102¼¶ÉñÆ÷ÖıÔìÍ¼Ñù¡£
+-- è¤šå°‘å¾® 2008.5.20ã€‚ 102çº§ç¥å™¨é“¸é€ å›¾æ ·ã€‚
 x713501_g_RecipeItems[	30302500	] = { abilityId = 	ABILITY_ZHUZAO	, recipeId =	980	, needLevel =	1	, specialEffectID =	18}
 x713501_g_RecipeItems[	30302501	] = { abilityId = 	ABILITY_ZHUZAO	, recipeId =	981	, needLevel =	1	, specialEffectID =	18}
 x713501_g_RecipeItems[	30302502	] = { abilityId = 	ABILITY_ZHUZAO	, recipeId =	982	, needLevel =	1	, specialEffectID =	18}
@@ -693,20 +693,20 @@ x713501_g_RecipeItems[	30307190	] = { abilityId = 14, recipeId =	540	, needLevel
 x713501_g_RecipeItems[	30302572	] = { abilityId = ABILITY_ZHUZAO, recipeId =	1076	, needLevel =	1	, specialEffectID =	18	} -- zchw
 
 --**********************************
--- Í¨ÓÃ²¿·Ö£ºÊ¹ÓÃÅä·½£¬·µ»Ø 1 ±íÊ¾Ñ§»á
+-- é€šç”¨éƒ¨åˆ†ï¼šä½¿ç”¨é…æ–¹ï¼Œè¿”å› 1 è¡¨ç¤ºå­¦ä¼š
 --**********************************
 function x713501_ReadRecipe( sceneId, selfId, recipeIndex )
 	local RecipeFlag = IsPrescrLearned( sceneId, selfId, recipeIndex )
 
 	if RecipeFlag < 1 then
-	-- Ã»ÓĞÑ§»á
+	-- æ²¡æœ‰å­¦ä¼š
 		SetPrescription( sceneId, selfId, recipeIndex, 1 )
-		Msg2Player( sceneId, selfId, "ÄãÑ§»áÒ»ÏîĞÂµÄÅä·½", MSG2PLAYER_PARA )
+		Msg2Player( sceneId, selfId, "ä½ å­¦ä¼šä¸€é¡¹æ–°çš„é…æ–¹", MSG2PLAYER_PARA )
 		return 1
 	else
-	-- ÒÑÑ§»á
-	-- Ä¿Ç° SetPrescription ÊÇ¸öË«¿ª¹Ø£¬Ñ§»áÁËÔÙµ÷ÓÃ»á·ÅÆú£¬µ«ÊÇ²»´İ»ÙÅä·½ÊµÌå¡£²âÊÔÊ¹ÓÃ
-		Msg2Player( sceneId, selfId, "¸ÃÅä·½ÒÑÑ§»á", MSG2PLAYER_PARA )
+	-- å·²å­¦ä¼š
+	-- ç›®å‰ SetPrescription æ˜¯ä¸ªåŒå¼€å…³ï¼Œå­¦ä¼šäº†å†è°ƒç”¨ä¼šæ”¾å¼ƒï¼Œä½†æ˜¯ä¸æ‘§æ¯é…æ–¹å®ä½“ã€‚æµ‹è¯•ä½¿ç”¨
+		Msg2Player( sceneId, selfId, "è¯¥é…æ–¹å·²å­¦ä¼š", MSG2PLAYER_PARA )
 		return 0
 	end
 
@@ -714,29 +714,29 @@ function x713501_ReadRecipe( sceneId, selfId, recipeIndex )
 end
 
 --**********************************
--- ·µ»Ø1£º¼¼ÄÜÀàËÆµÄÎïÆ·£¬¿ÉÒÔ¼ÌĞøÀàËÆ¼¼ÄÜµÄÖ´ĞĞ£»·µ»Ø0£ºÖ´ĞĞ OnDefaultEvent¡£
+-- è¿”å›1ï¼šæŠ€èƒ½ç±»ä¼¼çš„ç‰©å“ï¼Œå¯ä»¥ç»§ç»­ç±»ä¼¼æŠ€èƒ½çš„æ‰§è¡Œï¼›è¿”å›0ï¼šæ‰§è¡Œ OnDefaultEventã€‚
 --**********************************
 function x713501_IsSkillLikeScript( sceneId, selfId )
 	return 1
 end
 
 --**********************************
--- ·µ»Ø1£ºÒÑ¾­È¡Ïû¶ÔÓ¦Ğ§¹û£¬²»ÔÙÖ´ĞĞºóĞø²Ù×÷£»·µ»Ø0£ºÃ»ÓĞ¼ì²âµ½Ïà¹ØĞ§¹û£¬¼ÌĞøÖ´ĞĞ¡£
+-- è¿”å›1ï¼šå·²ç»å–æ¶ˆå¯¹åº”æ•ˆæœï¼Œä¸å†æ‰§è¡Œåç»­æ“ä½œï¼›è¿”å›0ï¼šæ²¡æœ‰æ£€æµ‹åˆ°ç›¸å…³æ•ˆæœï¼Œç»§ç»­æ‰§è¡Œã€‚
 --**********************************
 function x713501_CancelImpacts( sceneId, selfId )
 	return 0
 end
 
 --**********************************
--- Ìõ¼ş¼ì²âÈë¿Ú£º·µ»Ø1£ºÌõ¼ş¼ì²âÍ¨¹ı£¬¿ÉÒÔ¼ÌĞøÖ´ĞĞ£»·µ»Ø0£ºÌõ¼ş¼ì²âÊ§°Ü£¬ÖĞ¶ÏºóĞøÖ´ĞĞ¡£
+-- æ¡ä»¶æ£€æµ‹å…¥å£ï¼šè¿”å›1ï¼šæ¡ä»¶æ£€æµ‹é€šè¿‡ï¼Œå¯ä»¥ç»§ç»­æ‰§è¡Œï¼›è¿”å›0ï¼šæ¡ä»¶æ£€æµ‹å¤±è´¥ï¼Œä¸­æ–­åç»­æ‰§è¡Œã€‚
 --**********************************
 function x713501_OnConditionCheck( sceneId, selfId )
-	-- Ğ£ÑéÊ¹ÓÃµÄÎïÆ·
+	-- æ ¡éªŒä½¿ç”¨çš„ç‰©å“
 	if LuaFnVerifyUsedItem( sceneId, selfId ) ~= 1 then
 		return 0
 	end
 
-	-- ÕÒµ½Åä·½ÌõÄ¿
+	-- æ‰¾åˆ°é…æ–¹æ¡ç›®
 	local itemTblIndex = LuaFnGetItemIndexOfUsedItem( sceneId, selfId )
 	local recipeItem = x713501_g_RecipeItems[itemTblIndex]
 	if not recipeItem then
@@ -744,14 +744,14 @@ function x713501_OnConditionCheck( sceneId, selfId )
 	end
 
 	local AbilityLevel = QueryHumanAbilityLevel( sceneId, selfId, recipeItem.abilityId )
-	--Èç¹û¼¼ÄÜ²»¹»Ê¹ÓÃÒªÇó
+	--å¦‚æœæŠ€èƒ½ä¸å¤Ÿä½¿ç”¨è¦æ±‚
 	if AbilityLevel < recipeItem.needLevel then
-		x713501_NotifyFailTips( sceneId, selfId, "¼¼ÄÜµÈ¼¶²»×ã" )
+		x713501_NotifyFailTips( sceneId, selfId, "æŠ€èƒ½ç­‰çº§ä¸è¶³" )
 		return 0
 	end
 
 	if LuaFnIsPrescrLearned( sceneId, selfId, recipeItem.recipeId ) > 0 then
-		x713501_NotifyFailTips( sceneId, selfId, "Õâ¸öÅä·½ÒÑ¾­Ñ§»áÁË" )
+		x713501_NotifyFailTips( sceneId, selfId, "è¿™ä¸ªé…æ–¹å·²ç»å­¦ä¼šäº†" )
 		return 0
 	end
 
@@ -759,8 +759,8 @@ function x713501_OnConditionCheck( sceneId, selfId )
 end
 
 --**********************************
---ÏûºÄ¼ì²â¼°´¦ÀíÈë¿Ú£¬¸ºÔğÏûºÄµÄ¼ì²âºÍÖ´ĞĞ£º
---·µ»Ø1£ºÏûºÄ´¦ÀíÍ¨¹ı£¬¿ÉÒÔ¼ÌĞøÖ´ĞĞ£»·µ»Ø0£ºÏûºÄ¼ì²âÊ§°Ü£¬ÖĞ¶ÏºóĞøÖ´ĞĞ¡£
+--æ¶ˆè€—æ£€æµ‹åŠå¤„ç†å…¥å£ï¼Œè´Ÿè´£æ¶ˆè€—çš„æ£€æµ‹å’Œæ‰§è¡Œï¼š
+--è¿”å›1ï¼šæ¶ˆè€—å¤„ç†é€šè¿‡ï¼Œå¯ä»¥ç»§ç»­æ‰§è¡Œï¼›è¿”å›0ï¼šæ¶ˆè€—æ£€æµ‹å¤±è´¥ï¼Œä¸­æ–­åç»­æ‰§è¡Œã€‚
 --**********************************
 function x713501_OnDeplete( sceneId, selfId )
 	if LuaFnDepletingUsedItem( sceneId, selfId ) > 0 then
@@ -771,38 +771,38 @@ function x713501_OnDeplete( sceneId, selfId )
 end
 
 --**********************************
---Ö»»áÖ´ĞĞÒ»´ÎÈë¿Ú£º
---¾ÛÆøºÍË²·¢¼¼ÄÜ»áÔÚÏûºÄÍê³Éºóµ÷ÓÃÕâ¸ö½Ó¿Ú£¨¾ÛÆø½áÊø²¢ÇÒ¸÷ÖÖÌõ¼ş¶¼Âú×ãµÄÊ±ºò£©£¬¶øÒıµ¼
---¼¼ÄÜÒ²»áÔÚÏûºÄÍê³Éºóµ÷ÓÃÕâ¸ö½Ó¿Ú£¨¼¼ÄÜµÄÒ»¿ªÊ¼£¬ÏûºÄ³É¹¦Ö´ĞĞÖ®ºó£©¡£
---·µ»Ø1£º´¦Àí³É¹¦£»·µ»Ø0£º´¦ÀíÊ§°Ü¡£
---×¢£ºÕâÀïÊÇ¼¼ÄÜÉúĞ§Ò»´ÎµÄÈë¿Ú
+--åªä¼šæ‰§è¡Œä¸€æ¬¡å…¥å£ï¼š
+--èšæ°”å’Œç¬å‘æŠ€èƒ½ä¼šåœ¨æ¶ˆè€—å®Œæˆåè°ƒç”¨è¿™ä¸ªæ¥å£ï¼ˆèšæ°”ç»“æŸå¹¶ä¸”å„ç§æ¡ä»¶éƒ½æ»¡è¶³çš„æ—¶å€™ï¼‰ï¼Œè€Œå¼•å¯¼
+--æŠ€èƒ½ä¹Ÿä¼šåœ¨æ¶ˆè€—å®Œæˆåè°ƒç”¨è¿™ä¸ªæ¥å£ï¼ˆæŠ€èƒ½çš„ä¸€å¼€å§‹ï¼Œæ¶ˆè€—æˆåŠŸæ‰§è¡Œä¹‹åï¼‰ã€‚
+--è¿”å›1ï¼šå¤„ç†æˆåŠŸï¼›è¿”å›0ï¼šå¤„ç†å¤±è´¥ã€‚
+--æ³¨ï¼šè¿™é‡Œæ˜¯æŠ€èƒ½ç”Ÿæ•ˆä¸€æ¬¡çš„å…¥å£
 --**********************************
 function x713501_OnActivateOnce( sceneId, selfId )
-	-- ÕÒµ½Åä·½ÌõÄ¿
+	-- æ‰¾åˆ°é…æ–¹æ¡ç›®
 	local itemTblIndex = LuaFnGetItemIndexOfUsedItem( sceneId, selfId )
 	local recipeItem = x713501_g_RecipeItems[itemTblIndex]
 	if not recipeItem then
 		return 0
 	end
 
-	-- µ÷ÓÃÍ¨ÓÃÅä·½Ñ§Ï°
+	-- è°ƒç”¨é€šç”¨é…æ–¹å­¦ä¹ 
 	x713501_ReadRecipe( sceneId, selfId, recipeItem.recipeId )
 	LuaFnSendSpecificImpactToUnit( sceneId, selfId, selfId, selfId, recipeItem.specialEffectID, 0 )
 	return 1
 end
 
 --**********************************
---Òıµ¼ĞÄÌø´¦ÀíÈë¿Ú£º
---Òıµ¼¼¼ÄÜ»áÔÚÃ¿´ÎĞÄÌø½áÊøÊ±µ÷ÓÃÕâ¸ö½Ó¿Ú¡£
---·µ»Ø£º1¼ÌĞøÏÂ´ÎĞÄÌø£»0£ºÖĞ¶ÏÒıµ¼¡£
---×¢£ºÕâÀïÊÇ¼¼ÄÜĞÄÌøÊ±ÉúĞ§µÄÈë¿Ú
+--å¼•å¯¼å¿ƒè·³å¤„ç†å…¥å£ï¼š
+--å¼•å¯¼æŠ€èƒ½ä¼šåœ¨æ¯æ¬¡å¿ƒè·³ç»“æŸæ—¶è°ƒç”¨è¿™ä¸ªæ¥å£ã€‚
+--è¿”å›ï¼š1ç»§ç»­ä¸‹æ¬¡å¿ƒè·³ï¼›0ï¼šä¸­æ–­å¼•å¯¼ã€‚
+--æ³¨ï¼šè¿™é‡Œæ˜¯æŠ€èƒ½å¿ƒè·³æ—¶ç”Ÿæ•ˆçš„å…¥å£
 --**********************************
 function x713501_OnActivateEachTick( sceneId, selfId )
 	return 1
 end
 
 --**********************************
--- ĞÑÄ¿Ê§°ÜÌáÊ¾
+-- é†’ç›®å¤±è´¥æç¤º
 --**********************************
 function x713501_NotifyFailTips( sceneId, selfId, Tip )
 	BeginEvent( sceneId )

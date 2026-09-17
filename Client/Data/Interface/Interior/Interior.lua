@@ -1,5 +1,5 @@
 --UI COMMAND ID 100
---UI COMMAND ID 103 ÔÝÊ±²âÊÔ½«´óÆìÐÞ¸Ä·ÅÔÚÕâÀï
+--UI COMMAND ID 103 æš‚æ—¶æµ‹è¯•å°†å¤§æ——ä¿®æ”¹æ”¾åœ¨è¿™é‡Œ
 local g_clientNpcId = -1;
 local MAX_OBJ_DISTANCE = 3.0;
 local g_MembersCtl = {};
@@ -14,12 +14,12 @@ function Interior_PreLoad()
 end
 
 function Interior_OnLoad()
-	g_NeedVal[0] = "¹¤ÒµÖµ£º"
-	g_NeedVal[1] = "Å©ÒµÖµ£º"
-	g_NeedVal[2] = "ÉÌÒµÖµ£º"
-	g_NeedVal[3] = "¹ú·ÀÖµ£º"
-	g_NeedVal[4] = "¿Æ¼¼Öµ£º"
-	g_NeedVal[5] = "À©ÕÅÖµ£º"
+	g_NeedVal[0] = "å·¥ä¸šå€¼ï¼š"
+	g_NeedVal[1] = "å†œä¸šå€¼ï¼š"
+	g_NeedVal[2] = "å•†ä¸šå€¼ï¼š"
+	g_NeedVal[3] = "å›½é˜²å€¼ï¼š"
+	g_NeedVal[4] = "ç§‘æŠ€å€¼ï¼š"
+	g_NeedVal[5] = "æ‰©å¼ å€¼ï¼š"
 end
   
 function Interior_OnEvent(event)
@@ -44,29 +44,29 @@ function City_Manage_SetCtl()
 	g_MembersCtl = {
 									--Left
 									guildname = 		{txt = "",							ctl = Interior_Text1},
-									mainbuilding = 	{txt = "µÈ¼¶£º",				ctl = Interior_Text2},
+									mainbuilding = 	{txt = "ç­‰çº§ï¼š",				ctl = Interior_Text2},
 									
-									guildmoney = 		{txt = "°ï»á×Ê½ð£º",		ctl = Interior_Text3},
+									guildmoney = 		{txt = "å¸®ä¼šèµ„é‡‘ï¼š",		ctl = Interior_Text3},
 									degree = {
-																	{txt = "¹¤ÒµÖµ£º",			ctl = Interior_Text4},
-																	{txt = "Å©ÒµÖµ£º",			ctl = Interior_Text5},
-																	{txt = "ÉÌÒµÖµ£º",			ctl = Interior_Text6},
-																	{txt = "¹ú·ÀÖµ£º",			ctl = Interior_Text7},
-																	{txt = "¿Æ¼¼Öµ£º",			ctl = Interior_Text8},
-																	{txt = "À©ÕÅÖµ£º",			ctl = Interior_Text9},
+																	{txt = "å·¥ä¸šå€¼ï¼š",			ctl = Interior_Text4},
+																	{txt = "å†œä¸šå€¼ï¼š",			ctl = Interior_Text5},
+																	{txt = "å•†ä¸šå€¼ï¼š",			ctl = Interior_Text6},
+																	{txt = "å›½é˜²å€¼ï¼š",			ctl = Interior_Text7},
+																	{txt = "ç§‘æŠ€å€¼ï¼š",			ctl = Interior_Text8},
+																	{txt = "æ‰©å¼ å€¼ï¼š",			ctl = Interior_Text9},
 													 },
 									
-									curbuilding = 	{txt = "µ±Ç°½¨Éè£º",		ctl = Interior_Text10},
-									progress = 			{txt = "½¨Éè½ø¶È£º",		ctl = Interior_Text11},
+									curbuilding = 	{txt = "å½“å‰å»ºè®¾ï¼š",		ctl = Interior_Text10},
+									progress = 			{txt = "å»ºè®¾è¿›åº¦ï¼š",		ctl = Interior_Text11},
 									                
 									--Right         
 									buildinglist = 	Interior_Info,
 									                
 									--RightBottom   
-									needmsg = 			{txt = "½¨Éè£º",				ctl = Interior_Text12},
-									needmoney = 		{txt = "×Ê½ð£º",				ctl = Interior_Text13},
+									needmsg = 			{txt = "å»ºè®¾ï¼š",				ctl = Interior_Text12},
+									needmoney = 		{txt = "èµ„é‡‘ï¼š",				ctl = Interior_Text13},
 									needval = 			{txt = "",							ctl = Interior_Text14},
-									needmission =  	{txt = "ÈÎÎñ£º",				ctl = Interior_Text15},
+									needmission =  	{txt = "ä»»åŠ¡ï¼š",				ctl = Interior_Text15},
 								 };
 end
 
@@ -95,16 +95,16 @@ end
 
 function City_Manage_Update()
 	local k;
-	--°ï»áÃû³Æ
+	--å¸®ä¼šåç§°
 	local txt = g_MembersCtl.guildname.txt..City:GetCityManageInfo("GuildName");
 	txt = txt.."("..tostring(City:GetCityManageInfo("GuildId"))..")";
 	g_MembersCtl.guildname.ctl:SetText(txt);
-	--Ö÷Òª½¨Öþ
+	--ä¸»è¦å»ºç­‘
 	local bName, bLevel = City:GetCityManageInfo("MainBuilding");
 	txt = g_MembersCtl.mainbuilding.txt..bName;
 	txt = txt.."("..tostring(bLevel+1)..")";
 	g_MembersCtl.mainbuilding.ctl:SetText(txt);
-	--°ï»á×Ê½ð
+	--å¸®ä¼šèµ„é‡‘
 	local money = City:GetCityManageInfo("GuildMoney");
 	txt = g_MembersCtl.guildmoney.txt;
 	if(0 ~= tonumber(money)) then
@@ -115,7 +115,7 @@ function City_Manage_Update()
 	--AxTrace(0,0,"City_Manage guildmoney:"..txt);
 	g_MembersCtl.guildmoney.ctl:SetText(txt);
 	--City:GetCityManageInfo("GuildLevel")
-	--°ï»ádegree
+	--å¸®ä¼šdegree
 	local de = {City:GetCityManageInfo("GuildDegree")};
 	local deNum = table.getn(de);
 	if(deNum > table.getn(g_MembersCtl.degree)) then deNum = table.getn(g_MembersCtl.degree); end
@@ -124,7 +124,7 @@ function City_Manage_Update()
 		txt = txt..tostring(de[k]);
 		g_MembersCtl.degree[k].ctl:SetText(txt);
 	end
-	--µ±Ç°½¨Éè½¨Öþ
+	--å½“å‰å»ºè®¾å»ºç­‘
 	bName, bLevel, _idx = City:GetCityManageInfo("CurBuilding");
 	if( -1 == bLevel ) then
 	else
@@ -132,13 +132,13 @@ function City_Manage_Update()
 		txt = g_MembersCtl.curbuilding.txt..bName;
 		txt = txt.."("..tostring(showLevel)..")";
 		g_MembersCtl.curbuilding.ctl:SetText(txt);
-		--µ±Ç°½¨Öþ½ø¶È
+		--å½“å‰å»ºç­‘è¿›åº¦
 		local curPro,maxPro = City:GetCityManageInfo("CurProgress");
 		txt = g_MembersCtl.progress.txt..tostring(curPro);
 		txt = txt.."/"..tostring(maxPro);
 		g_MembersCtl.progress.ctl:SetText(txt);
 	end
-	--ËùÓÐ½¨ÖþÎïÌí¼Óµ½ÁÐ±í
+	--æ‰€æœ‰å»ºç­‘ç‰©æ·»åŠ åˆ°åˆ—è¡¨
 	local bd = {City:GetCityManageInfo("BuildingList")};
 	local listIdx = 0;
 	local bdidx = 0;
@@ -150,7 +150,7 @@ function City_Manage_Update()
 			if(bd[k+2] > 0) then
 				g_MembersCtl.buildinglist:AddNewItem(bDisplayLevel,1,listIdx);
 			else
-				g_MembersCtl.buildinglist:AddNewItem("Î´½¨",1,listIdx);
+				g_MembersCtl.buildinglist:AddNewItem("æœªå»º",1,listIdx);
 				--AxTrace(0,0,"default not exist building:"..tostring(bdidx));
 			end
 			g_MembersCtl.buildinglist:SetRowUserData(listIdx, bdidx);
@@ -159,20 +159,20 @@ function City_Manage_Update()
 		end
 		bdidx = bdidx + 1;
 	end
-	--½¨ÉèÏûÏ¢
+	--å»ºè®¾æ¶ˆæ¯
 	g_MembersCtl.needmsg.ctl:SetText(g_MembersCtl.needmsg.txt);
-	--½¨Éè½ðÇ®
+	--å»ºè®¾é‡‘é’±
 	g_MembersCtl.needmoney.ctl:SetText(g_MembersCtl.needmoney.txt.."0#-02");
-	--½¨ÉèÏûºÄÖµ
+	--å»ºè®¾æ¶ˆè€—å€¼
 	g_MembersCtl.needval.ctl:SetText(g_MembersCtl.needval.txt);
-	--½¨ÉèÈÎÎñÊý
+	--å»ºè®¾ä»»åŠ¡æ•°
 	g_MembersCtl.needmission.ctl:SetText(g_MembersCtl.needmission.txt);
 end
 
 function City_Manage_SelectChanged()
 	local listidx = g_MembersCtl.buildinglist:GetSelectItem();
 	g_selIdx = g_MembersCtl.buildinglist:GetRowUserData(listidx);
-	--½¨ÉèÏûÏ¢
+	--å»ºè®¾æ¶ˆæ¯
 	local bName, bNextName = City:GetBuildingInfo(g_selIdx, "name");
 	local bExist = City:GetBuildingInfo(g_selIdx, "exist");
 	local txt = g_MembersCtl.needmsg.txt;
@@ -182,21 +182,21 @@ function City_Manage_SelectChanged()
 		if(bExist > 0) then
 		txt = txt..tostring(bName).."->"..tostring(bNextName);
 		else
-			txt = txt.."Î´½¨->"..tostring(bNextName);
+			txt = txt.."æœªå»º->"..tostring(bNextName);
 		end
 	end
 	g_MembersCtl.needmsg.ctl:SetText(txt);
-	--½¨ÉèÌõ¼þ
+	--å»ºè®¾æ¡ä»¶
 	local cd = {City:GetBuildingInfo(g_selIdx, "condition")};
 	if(cd[1] == -2) then
-		--Ã»ÓÐ½¨ÖþÌõ¼þµÄ£¬Çå¿ÕÏÔÊ¾
+		--æ²¡æœ‰å»ºç­‘æ¡ä»¶çš„ï¼Œæ¸…ç©ºæ˜¾ç¤º
 		g_MembersCtl.needmsg.ctl:SetText("");
 		g_MembersCtl.needmoney.ctl:SetText("");
 		g_MembersCtl.needval.ctl:SetText("");
 		g_MembersCtl.needmission.ctl:SetText("");
 		return; 
 	end
-	--0.½ðÇ®
+	--0.é‡‘é’±
 	local money = cd[1];
 	txt = g_MembersCtl.needmoney.txt;
 	if(0 ~= tonumber(money)) then
@@ -205,12 +205,12 @@ function City_Manage_SelectChanged()
 		txt = txt.."0#-02";
 	end
 	g_MembersCtl.needmoney.ctl:SetText(txt);
-	--1.ÏûºÄÖµ
+	--1.æ¶ˆè€—å€¼
 	local nt,nv = cd[3], cd[4];
 	txt = g_MembersCtl.needval.txt..tostring(City_Manage_GetNeedTxt(nt));
-	txt = txt.."£º"..tostring(nv);
+	txt = txt.."ï¼š"..tostring(nv);
 	g_MembersCtl.needval.ctl:SetText(txt);
-	--2.ÈÎÎñÊý
+	--2.ä»»åŠ¡æ•°
 	local mn = cd[2];
 	txt = g_MembersCtl.needmission.txt..tostring(mn);
 	g_MembersCtl.needmission.ctl:SetText(txt);
@@ -218,17 +218,17 @@ end
 
 function City_Manage_GetNeedTxt(nt)
 	if( tonumber(nt) == 0 ) then
-		return "¹¤ÒµÖµ";
+		return "å·¥ä¸šå€¼";
 	elseif( tonumber(nt) == 1 ) then
-		return "Å©ÒµÖµ";
+		return "å†œä¸šå€¼";
 	elseif( tonumber(nt) == 2 ) then
-		return "ÉÌÒµÖµ";
+		return "å•†ä¸šå€¼";
 	elseif( tonumber(nt) == 3 ) then
-		return "¹ú·ÀÖµ";
+		return "å›½é˜²å€¼";
 	elseif( tonumber(nt) == 4 ) then
-		return "¿Æ¼¼Öµ";
+		return "ç§‘æŠ€å€¼";
 	elseif( tonumber(nt) == 5 ) then
-		return "À©ÕÅÖµ";
+		return "æ‰©å¼ å€¼";
 	else
 		return "";
 	end
@@ -246,7 +246,7 @@ function City_Manage_CareEventHandle(careId, op, distance)
 		if(tonumber(careId) ~= g_clientNpcId) then
 			return;
 		end
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ý£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æžœå’ŒNPCçš„è·ç¦»å¤§äºŽä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if(op == "distance" and tonumber(distance)>MAX_OBJ_DISTANCE or op=="destroy") then
 			City_Manage_Hide();
 		end
@@ -254,20 +254,20 @@ end
 
 function City_Manage_DoBuilding(act)
 	if(tonumber(g_selIdx) < 0) then 
-		PushDebugMessage("ÇëÏÈÑ¡ÔñÒ»ÖÖ½¨Öþ¡£"); 
+		PushDebugMessage("è¯·å…ˆé€‰æ‹©ä¸€ç§å»ºç­‘ã€‚"); 
 		return;
 	end
 
-	--2 ÐÞ½¨È·ÈÏ
-	--3 Éý¼¶È·ÈÏ
-	--4 ½µ¼¶È·ÈÏ
-	--5 ²ð»ÙÈ·ÈÏ
+	--2 ä¿®å»ºç¡®è®¤
+	--3 å‡çº§ç¡®è®¤
+	--4 é™çº§ç¡®è®¤
+	--5 æ‹†æ¯ç¡®è®¤
 	local actC = {2,3,4,5};
 	City:DoConfirm(actC[tonumber(act)], tonumber(g_selIdx));
 end
 
 function City_Manage_Is_Hide_Idx(idx)
-	--Ä¿Ç°²»ÏÔÊ¾µÄ½¨ÖþÎïÀàÐÍ£¬¶ÔÓ¦enum BUILDING_TYPE
+	--ç›®å‰ä¸æ˜¾ç¤ºçš„å»ºç­‘ç‰©ç±»åž‹ï¼Œå¯¹åº”enum BUILDING_TYPE
 	local tHide = {8,12,14,16,17};
 	local i = 1;
 	while i <= table.getn(tHide) do
@@ -278,7 +278,7 @@ function City_Manage_Is_Hide_Idx(idx)
 end
 
 function City_Manage_Get_Display_Level(idx,idxlv)
-	--È±Ê¡µÄÎ´½¨ÉèµÄ½¨ÖþÎï¼¶±ðÏÔÊ¾Ê±²»+1 ¶ÔÓ¦enum BUILDING_TYPE
+	--ç¼ºçœçš„æœªå»ºè®¾çš„å»ºç­‘ç‰©çº§åˆ«æ˜¾ç¤ºæ—¶ä¸+1 å¯¹åº”enum BUILDING_TYPE
 	local tNoCreate = {2,4,6,10};
 	local i = 1;
 	while i <= table.getn(tNoCreate) do

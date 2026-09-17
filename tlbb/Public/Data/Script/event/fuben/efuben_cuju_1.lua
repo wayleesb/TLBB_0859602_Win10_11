@@ -1,9 +1,9 @@
---»î¶¯µÄÈ±Ê¡½Å±¾
+--æ´»åŠ¨çš„ç¼ºçœè„šæœ¬
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x402042_g_ScriptId	= 402042
 
-x402042_g_NotifyDay = --09Äê¿ª·ÅÈÕ
+x402042_g_NotifyDay = --09å¹´å¼€æ”¾æ—¥
 {
 	20090103,
 	20090131,
@@ -20,15 +20,15 @@ x402042_g_NotifyDay = --09Äê¿ª·ÅÈÕ
 }
 
 --**********************************
---½Å±¾Èë¿Úº¯Êı
+--è„šæœ¬å…¥å£å‡½æ•°
 --**********************************
 function x402042_OnDefaultEvent( sceneId, actId, iNoticeType, param2, param3, param4, param5 )
 	
-	-- Õâ¸ö»î¶¯Ö»ÔÚÃ¿ÔÂµÄµÚÒ»ºÍµÚÈı¸öÖÜÁù¿ªÆô£¬
+	-- è¿™ä¸ªæ´»åŠ¨åªåœ¨æ¯æœˆçš„ç¬¬ä¸€å’Œç¬¬ä¸‰ä¸ªå‘¨å…­å¼€å¯ï¼Œ
 	local nToday = GetTime2Day();
 	for i, item in x402042_g_NotifyDay do
 		if item == nToday then
-			--²ÎÊıËµÃ÷£º³¡¾°ID£¬»î¶¯ID£¬Ê±¼ä¼ä¸ô£¬¹«¸æÀàĞÍ£¨¿ÉÒÔ²»´«£¬Ä¬ÈÏÆÕÍ¨¹«¸æÀàĞÍ£©
+			--å‚æ•°è¯´æ˜ï¼šåœºæ™¯IDï¼Œæ´»åŠ¨IDï¼Œæ—¶é—´é—´éš”ï¼Œå…¬å‘Šç±»å‹ï¼ˆå¯ä»¥ä¸ä¼ ï¼Œé»˜è®¤æ™®é€šå…¬å‘Šç±»å‹ï¼‰
 			StartOneActivity( sceneId, actId, floor(60*1000), iNoticeType )	
 		end
 	end
@@ -36,11 +36,11 @@ function x402042_OnDefaultEvent( sceneId, actId, iNoticeType, param2, param3, pa
 end
 
 --**********************************
---ĞÄÌøº¯Êı
+--å¿ƒè·³å‡½æ•°
 --**********************************
 function x402042_OnTimer( sceneId, actId, uTime )
 
-	--¼ì²â»î¶¯ÊÇ·ñ¹ıÆÚ
+	--æ£€æµ‹æ´»åŠ¨æ˜¯å¦è¿‡æœŸ
 	if CheckActiviyValidity( sceneId, actId ) == 0 then
 		StopOneActivity( sceneId, actId )
 	end

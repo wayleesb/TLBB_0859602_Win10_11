@@ -1,7 +1,7 @@
--- Õ÷ÓÑÆ½Ì¨ : Í¶Æ±£¬ cuiyinjie 2008.10.21
-local g_total_Page = 1; --¹²ÓĞ¶àÉÙÒ³
-local g_curr_Page = 1  --µ±Ç°ÔÚÄÇÒ»Ò³
-local MAX_INFO_PETPAGE = 10  --Ã¿Ò³10ÌõĞÅÏ¢
+-- å¾å‹å¹³å° : æŠ•ç¥¨ï¼Œ cuiyinjie 2008.10.21
+local g_total_Page = 1; --å…±æœ‰å¤šå°‘é¡µ
+local g_curr_Page = 1  --å½“å‰åœ¨é‚£ä¸€é¡µ
+local MAX_INFO_PETPAGE = 10  --æ¯é¡µ10æ¡ä¿¡æ¯
 
 function VotedPlayer_PreLoad()
 	this:RegisterEvent("OPEN_WINDOW");
@@ -40,9 +40,9 @@ function VotedPlayer_UpdateVoteInfo()
 	AxTrace(0, 0, "nPos"..tostring(nPos)..",nTotalVoteNum:"..tostring(nTotalVoteNum));
 	while nPos < nTotalVoteNum and nPos < nStartPos + 10 do
 		local nVotedName, nOnlineFlag = FindFriendDataPool:GetVoteInfoByPos(nPos);
-		local namecolor = "#cC4B299";				-- ²»ÔÚÏßÍæ¼ÒµÄÓÃ»§ÃûÏÔÊ¾ÑÕÉ«
+		local namecolor = "#cC4B299";				-- ä¸åœ¨çº¿ç©å®¶çš„ç”¨æˆ·åæ˜¾ç¤ºé¢œè‰²
 		if(nOnlineFlag == 1) then
-			namecolor = "#W";									-- ÔÚÏßÍæ¼ÒµÄÓÃ»§ÃûÏÔÊ¾ÑÕÉ«
+			namecolor = "#W";									-- åœ¨çº¿ç©å®¶çš„ç”¨æˆ·åæ˜¾ç¤ºé¢œè‰²
 		end
 
 		VotedPlayer_List:AddItem( "", nInListPos, "FFFFFFFF", 4 );
@@ -104,7 +104,7 @@ function VotedPlayer_PlayerSelect(arg0)
 		local szName, nOnlineFlag = FindFriendDataPool:GetVoteInfoByPos(nIndex);
 		local player = Player:GetName();   
 		if(szName == player) then
-			--PushDebugMessage("¶Ô²»Æğ£¬ÕâÊÇÄú×Ô¼ºÍ¶µÄÆ±¡£");
+			--PushDebugMessage("å¯¹ä¸èµ·ï¼Œè¿™æ˜¯æ‚¨è‡ªå·±æŠ•çš„ç¥¨ã€‚");
 			return;
 		end
 		if (szName ~= nil) then
@@ -118,12 +118,12 @@ function VotedPlayer_OpenMenu()
 	AxTrace(0,0,"Index is:"..tostring(nIndex));
 	local szName, nOnlineFlag = FindFriendDataPool:GetVoteInfoByPos(nIndex);
 	if (nOnlineFlag ~= 1) then
-		--PushDebugMessage("¶Ô²»Æğ£¬Íæ¼Ò "..szName.." Ä¿Ç°²»ÔÚÏß£¡");
+		--PushDebugMessage("å¯¹ä¸èµ·ï¼Œç©å®¶ "..szName.." ç›®å‰ä¸åœ¨çº¿ï¼");
 		return;
 	end
 	local player = Player:GetName();   
 	if(szName == player) then
-		--PushDebugMessage("¶Ô²»Æğ£¬ÕâÊÇÄú×Ô¼ºÍ¶µÄÆ±¡£");
+		--PushDebugMessage("å¯¹ä¸èµ·ï¼Œè¿™æ˜¯æ‚¨è‡ªå·±æŠ•çš„ç¥¨ã€‚");
 		return;
 	end
 	FindFriendDataPool:ContexMenuForVoteInfo(nIndex);

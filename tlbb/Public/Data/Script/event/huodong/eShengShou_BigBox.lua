@@ -1,13 +1,13 @@
---Ê¥ÊŞÉ½±¦ÏäÕù¶á
---´ó±¦ÏäNPC½»»¥½Å±¾
+--åœ£å…½å±±å®ç®±äº‰å¤º
+--å¤§å®ç®±NPCäº¤äº’è„šæœ¬
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x808067_g_ScriptId	= 808067
 
---Ê¥ÊŞÉ½±¦ÏäÕù¶á»î¶¯½Å±¾
+--åœ£å…½å±±å®ç®±äº‰å¤ºæ´»åŠ¨è„šæœ¬
 x808067_g_ActivityScriptId	= 808066
 
---ÊÜÏŞbuff....
+--å—é™buff....
 x808067_g_LimitiBuff = {
 
 			50,
@@ -21,12 +21,12 @@ x808067_g_LimitiBuff = {
 
 
 --**********************************
---ÌØÊâ½»»¥:Ìõ¼şÅĞ¶Ï
+--ç‰¹æ®Šäº¤äº’:æ¡ä»¶åˆ¤æ–­
 --**********************************
 function x808067_OnActivateConditionCheck( sceneId, selfId, activatorId )
 
-	local strText = "µ±Ç°×´Ì¬ÎŞ·¨¿ªÆô"
-	--ÎŞµĞ×´Ì¬ÎŞ·¨¿ªÆô±¦Ïä....
+	local strText = "å½“å‰çŠ¶æ€æ— æ³•å¼€å¯"
+	--æ— æ•ŒçŠ¶æ€æ— æ³•å¼€å¯å®ç®±....
 	if LuaFnIsUnbreakable(sceneId,activatorId) ~= 0 then
 		BeginEvent(sceneId)
 		 		AddText(sceneId,strText)
@@ -35,7 +35,7 @@ function x808067_OnActivateConditionCheck( sceneId, selfId, activatorId )
 		return 0
 	end
 
-	--ÒşÉí×´Ì¬ÎŞ·¨¿ªÆô±¦Ïä....
+	--éšèº«çŠ¶æ€æ— æ³•å¼€å¯å®ç®±....
 	if LuaFnIsConceal(sceneId,activatorId) ~= 0 then
 		BeginEvent(sceneId)
 		 		AddText(sceneId,strText)
@@ -44,7 +44,7 @@ function x808067_OnActivateConditionCheck( sceneId, selfId, activatorId )
 		return 0
 	end
 
-	--ÊÜÏŞbuffÎŞ·¨¿ªÆô....
+	--å—é™buffæ— æ³•å¼€å¯....
 	for i, impactId in x808067_g_LimitiBuff do
 		if LuaFnHaveImpactOfSpecificDataIndex(sceneId, activatorId, impactId) == 1 then
 			BeginEvent(sceneId)
@@ -55,21 +55,21 @@ function x808067_OnActivateConditionCheck( sceneId, selfId, activatorId )
 		end
 	end
 
-	--¼ì²â±³°üÊÇ·ñÓĞµØ·½....
+	--æ£€æµ‹èƒŒåŒ…æ˜¯å¦æœ‰åœ°æ–¹....
 	if LuaFnGetPropertyBagSpace( sceneId, activatorId ) < 1 then
 		BeginEvent(sceneId)
-			AddText( sceneId, "±³°ü¿Õ¼ä²»×ã" )
+			AddText( sceneId, "èƒŒåŒ…ç©ºé—´ä¸è¶³" )
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,activatorId)
 		return 0
 	end
 
-	--¼ì²âÊÇ·ñ¿ÉÒÔ¿ª´ó±¦Ïä....
+	--æ£€æµ‹æ˜¯å¦å¯ä»¥å¼€å¤§å®ç®±....
 	local bRet, PlayerName = CallScriptFunction( x808067_g_ActivityScriptId, "CheckOpenBigBox", sceneId, activatorId )
 
 	if bRet == 0 then
 		BeginEvent(sceneId)
-		 		AddText(sceneId,"±¦ÎïÒÑ¾­±»ÈËÇÀ×ßÁË");
+		 		AddText(sceneId,"å®ç‰©å·²ç»è¢«äººæŠ¢èµ°äº†");
 		 	EndEvent(sceneId)
 		DispatchMissionTips(sceneId,activatorId)
 		return 0
@@ -77,7 +77,7 @@ function x808067_OnActivateConditionCheck( sceneId, selfId, activatorId )
 
 	if bRet == -1 then
 		BeginEvent(sceneId)
-		 		AddText(sceneId, PlayerName.."ÕıÔÚ´ò¿ª±¦Ïä£¬ÄúÔİÊ±ÎŞ·¨²Ù×÷");
+		 		AddText(sceneId, PlayerName.."æ­£åœ¨æ‰“å¼€å®ç®±ï¼Œæ‚¨æš‚æ—¶æ— æ³•æ“ä½œ");
 		 	EndEvent(sceneId)
 		DispatchMissionTips(sceneId,activatorId)
 		return 0
@@ -88,14 +88,14 @@ function x808067_OnActivateConditionCheck( sceneId, selfId, activatorId )
 end
 
 --**********************************
---ÌØÊâ½»»¥:ÏûºÄºÍ¿Û³ı´¦Àí
+--ç‰¹æ®Šäº¤äº’:æ¶ˆè€—å’Œæ‰£é™¤å¤„ç†
 --**********************************
 function x808067_OnActivateDeplete( sceneId, selfId, activatorId )
 	return 1
 end
 
 --**********************************
---ÌØÊâ½»»¥:¾ÛÆøÀà³É¹¦ÉúĞ§´¦Àí
+--ç‰¹æ®Šäº¤äº’:èšæ°”ç±»æˆåŠŸç”Ÿæ•ˆå¤„ç†
 --**********************************
 function x808067_OnActivateEffectOnce( sceneId, selfId, activatorId )
 	CallScriptFunction( x808067_g_ActivityScriptId, "OnBigBoxOpen", sceneId, selfId, activatorId )
@@ -103,28 +103,28 @@ function x808067_OnActivateEffectOnce( sceneId, selfId, activatorId )
 end
 
 --**********************************
---ÌØÊâ½»»¥:Òıµ¼ÀàÃ¿Ê±¼ä¼ä¸ôÉúĞ§´¦Àí
+--ç‰¹æ®Šäº¤äº’:å¼•å¯¼ç±»æ¯æ—¶é—´é—´éš”ç”Ÿæ•ˆå¤„ç†
 --**********************************
 function x808067_OnActivateEffectEachTick( sceneId, selfId, activatorId )
 	return 1
 end
 
 --**********************************
---ÌØÊâ½»»¥:½»»¥¿ªÊ¼Ê±µÄÌØÊâ´¦Àí
+--ç‰¹æ®Šäº¤äº’:äº¤äº’å¼€å§‹æ—¶çš„ç‰¹æ®Šå¤„ç†
 --**********************************
 function x808067_OnActivateActionStart( sceneId, selfId, activatorId )
 		return 1
 end
 
 --**********************************
---ÌØÊâ½»»¥:½»»¥³·ÏûÊ±µÄÌØÊâ´¦Àí
+--ç‰¹æ®Šäº¤äº’:äº¤äº’æ’¤æ¶ˆæ—¶çš„ç‰¹æ®Šå¤„ç†
 --**********************************
 function x808067_OnActivateCancel( sceneId, selfId, activatorId )
 	return 0
 end
 
 --**********************************
---ÌØÊâ½»»¥:½»»¥ÖĞ¶ÏÊ±µÄÌØÊâ´¦Àí
+--ç‰¹æ®Šäº¤äº’:äº¤äº’ä¸­æ–­æ—¶çš„ç‰¹æ®Šå¤„ç†
 --**********************************
 function x808067_OnActivateInterrupt( sceneId, selfId, activatorId )
 	CallScriptFunction( x808067_g_ActivityScriptId, "OnCancelOpen", sceneId )

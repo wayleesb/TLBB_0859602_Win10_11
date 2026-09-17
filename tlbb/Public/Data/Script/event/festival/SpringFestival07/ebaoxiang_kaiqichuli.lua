@@ -1,17 +1,17 @@
---ÄêÊŞbossµôÂä±¦ÏäÉú³¤µã
---ÎŞµĞbuff
+--å¹´å…½bossæ‰è½å®ç®±ç”Ÿé•¿ç‚¹
+--æ— æ•Œbuff
 x050052_g_impactID = 54
 x050052_strErrorNotice = "#{NSBS_20071228_10}"
 
 x050052_g_strNotice0 = "#{NSBS_20071228_16}"
 x050052_g_strNotice1 = "#{NSBS_20071228_17}"
---»î¶¯Ê±¼ä
-x050052_g_StartDayTime = 8030   --»î¶¯½áÊøÊ±¼ä 2008-1-31
-x050052_g_EndDayTime = 8044   --»î¶¯½áÊøÊ±¼ä 2008-2-14
+--æ´»åŠ¨æ—¶é—´
+x050052_g_StartDayTime = 8030   --æ´»åŠ¨ç»“æŸæ—¶é—´ 2008-1-31
+x050052_g_EndDayTime = 8044   --æ´»åŠ¨ç»“æŸæ—¶é—´ 2008-2-14
 
 function x050052_OnRecycle(sceneId,selfId,targetId)
 	
-	--1.Í¨ÖªÄêÊŞboss½Å±¾¼ÌĞøµôÂä±¦Ïä
+	--1.é€šçŸ¥å¹´å…½bossè„šæœ¬ç»§ç»­æ‰è½å®ç®±
 	CallScriptFunction( 050051, "DropNianShouBox", sceneId)
 	
 
@@ -38,12 +38,12 @@ function x050052_OnOpen(sceneId,selfId,targetId)
 end
 
 function x050052_OnProcOver(sceneId,selfId,targetId)
-		--2.¸ø¿ªÆôÕß¼ÓÌØĞ§
+		--2.ç»™å¼€å¯è€…åŠ ç‰¹æ•ˆ
 	LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, x050052_g_impactID, 0)
 end
 
 --**********************************
---¼ì²â»î¶¯ÊÇ·ñÒÑ½áÊø
+--æ£€æµ‹æ´»åŠ¨æ˜¯å¦å·²ç»“æŸ
 --**********************************
 function x050052_CheckRightTime()
 
@@ -57,7 +57,7 @@ function x050052_CheckRightTime()
 end
 
 --**********************************
--- Íæ¼ÒÔÚÕ¨ÄêÊŞÖĞÊ°È¡±¦ÏäÖĞÎïÆ·Ê±»Øµ÷±¾½Ó¿Ú
+-- ç©å®¶åœ¨ç‚¸å¹´å…½ä¸­æ‹¾å–å®ç®±ä¸­ç‰©å“æ—¶å›è°ƒæœ¬æ¥å£
 --**********************************
 function x050052_OnPlayerPickUpItemInNianShou( sceneId, selfId, itemId, bagidx )
 
@@ -66,7 +66,7 @@ function x050052_OnPlayerPickUpItemInNianShou( sceneId, selfId, itemId, bagidx )
 		return
 	end
 	
-	--¹«¸æ....
+	--å…¬å‘Š....
 	if itemId == 30505107 or itemId == 30501159 or itemId ==30501160 or itemId == 10141105 or itemId == 10141106 or itemId == 10141107 or itemId == 10141108 or itemId == 10141109  or itemId == 10141110 then
 
 		local playerName = GetName(sceneId, selfId)
@@ -75,7 +75,7 @@ function x050052_OnPlayerPickUpItemInNianShou( sceneId, selfId, itemId, bagidx )
 		local str1 = format( "#{_INFOMSG%s}", transfer)
 		
 		local message = str..x050052_g_strNotice0..str1..x050052_g_strNotice1
-		--format("#{_INFOUSR%s}#PÏòÄêÊŞÈÓ³öÒ»´®±ŞÅÚ£¬àèàèÅ¾Å¾Ò»Õó±¬Õ¨Ö®ºó£¬ÄêÊŞÈÓÏÂÒ»¸ö#{_INFOMSG%s}#PºóÂä»Ä¶øÌÓ£¡", playerName, transfer )
+		--format("#{_INFOUSR%s}#På‘å¹´å…½æ‰”å‡ºä¸€ä¸²é­ç‚®ï¼Œå™¼å™¼å•ªå•ªä¸€é˜µçˆ†ç‚¸ä¹‹åï¼Œå¹´å…½æ‰”ä¸‹ä¸€ä¸ª#{_INFOMSG%s}#Påè½è’è€Œé€ƒï¼", playerName, transfer )
 		BroadMsgByChatPipe(sceneId, selfId, message, 4)
 
 	end

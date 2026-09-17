@@ -1,11 +1,11 @@
---Éú³¤µã½Å±¾£¬ÓóÍ·2
---½Å±¾ºÅ
+--ç”Ÿé•¿ç‚¹è„šæœ¬ï¼ŒèŠ‹å¤´2
+--è„šæœ¬å·
 --g_ScriptId = 711034
 
---´ËÉú³¤µã±àºÅ
+--æ­¤ç”Ÿé•¿ç‚¹ç¼–å·
 x711034_g_GpId = 535
 
---ÏÂÒ»¸öÉú³¤µãµÄ±àºÅ
+--ä¸‹ä¸€ä¸ªç”Ÿé•¿ç‚¹çš„ç¼–å·
 x711034_g_GpIdNext = 536
 
 function	 x711034_OnRecycle(sceneId,selfId,targetId)
@@ -13,22 +13,22 @@ function	 x711034_OnRecycle(sceneId,selfId,targetId)
 	itemBoxZ = GetItemBoxWorldPosZ(sceneId,targetId)
 	ItemBoxId = ItemBoxEnterScene(itemBoxX,itemBoxZ,x711034_g_GpIdNext,sceneId,QUALITY_MUST_BE_CHANGE,1,20104012)
 	
-	--µÃµ½Éú³¤µãµÄÖ÷ÈËID
-	ItemBoxOwnerGUID = GetItemBoxOwner(sceneId, targetId)		--²ÎÊýÊÇSceneID£¬ItemBoxID
-	--¸øItemBoxÉè¶¨Ö÷ÈË
+	--å¾—åˆ°ç”Ÿé•¿ç‚¹çš„ä¸»äººID
+	ItemBoxOwnerGUID = GetItemBoxOwner(sceneId, targetId)		--å‚æ•°æ˜¯SceneIDï¼ŒItemBoxID
+	--ç»™ItemBoxè®¾å®šä¸»äºº
 	SetItemBoxOwner(sceneId,ItemBoxId,ItemBoxOwnerGUID)
-	SetItemBoxPickOwnerTime(sceneId,ItemBoxId,600000)	--Éè¶¨°ó¶¨Ê±¼ä
-	EnableItemBoxPickOwnerTime(sceneId,ItemBoxId)		--±£»¤Ê±¼ä¿ªÊ¼¼ÆÊ±
+	SetItemBoxPickOwnerTime(sceneId,ItemBoxId,600000)	--è®¾å®šç»‘å®šæ—¶é—´
+	EnableItemBoxPickOwnerTime(sceneId,ItemBoxId)		--ä¿æŠ¤æ—¶é—´å¼€å§‹è®¡æ—¶
 
-	SetItemBoxMaxGrowTime(sceneId,ItemBoxId,600000)	--Éè¶¨»ØÊÕÊ±¼ä
+	SetItemBoxMaxGrowTime(sceneId,ItemBoxId,600000)	--è®¾å®šå›žæ”¶æ—¶é—´
 
-	--È¡µÃÉú³¤µãµÄ×ø±ê
+	--å–å¾—ç”Ÿé•¿ç‚¹çš„åæ ‡
 	GP_X = GetItemBoxWorldPosX(sceneId,targetId)
 	GP_Z = GetItemBoxWorldPosZ(sceneId,targetId)
-	--ÏÂÈ¡Õû
+	--ä¸‹å–æ•´
 	GP_X = floor(GP_X)
 	GP_Z = floor(GP_Z)
-	--ÅÐ¶ÏÖÖÖ²ÅÆµÄÎ»ÖÃÔÚÄÄ¸öÖÖÖ²ÅÆ¹ÜÏ½µÄ·¶Î§ÄÚ
+	--åˆ¤æ–­ç§æ¤ç‰Œçš„ä½ç½®åœ¨å“ªä¸ªç§æ¤ç‰Œç®¡è¾–çš„èŒƒå›´å†…
 	local num = 0
 	for i, findid in PLANTNPC_ADDRESS do
 		if	(GP_X >= findid.X_MIN)  and (GP_Z >= findid.Z_MIN) and (GP_X <= findid.X_MAX)  and (GP_Z <= findid.Z_MAX) and (sceneId == findid.Scene) then
@@ -37,16 +37,16 @@ function	 x711034_OnRecycle(sceneId,selfId,targetId)
 		end
 	end
 	
-	--Èç¹ûÕÒ²»µ½ÕýÈ·µÄÎ»ÖÃÔò·µ»Ø
+	--å¦‚æžœæ‰¾ä¸åˆ°æ­£ç¡®çš„ä½ç½®åˆ™è¿”å›ž
 	if num == 0 then
 		return
 	end
 
-	--ÅÐ¶ÏÖÖÖ²ÅÆÊÇ·ñÊÇ8£¬Èç¹ûÊÇ8ÔòÍ¨ÖªÍæ¼Ò
+	--åˆ¤æ–­ç§æ¤ç‰Œæ˜¯å¦æ˜¯8ï¼Œå¦‚æžœæ˜¯8åˆ™é€šçŸ¥çŽ©å®¶
 	if PLANTFLAG[num] == 8 then
-		LuaFnSendMailToGUID(sceneId,ItemBoxOwnerGUID,"ÄãÖÖÖ²µÄÖ²ÎïÒÑ¾­³ÉÊìÁË£¬ÇëÔÚ10·ÖÖÓÄÚÊÕ»ñ¡£")
+		LuaFnSendMailToGUID(sceneId,ItemBoxOwnerGUID,"ä½ ç§æ¤çš„æ¤ç‰©å·²ç»æˆç†Ÿäº†ï¼Œè¯·åœ¨10åˆ†é’Ÿå†…æ”¶èŽ·ã€‚")
 	end
-	--ÕÒµ½ÕýÈ·µÄ±àºÅ£¬°ÑÖÖÖ²ÅÆ-1
+	--æ‰¾åˆ°æ­£ç¡®çš„ç¼–å·ï¼ŒæŠŠç§æ¤ç‰Œ-1
 	PLANTFLAG[num] = PLANTFLAG[num] - 1
 
 	return 1

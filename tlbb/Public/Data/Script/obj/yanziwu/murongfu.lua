@@ -1,5 +1,5 @@
 -- 402254
--- Ä½Èİ¸´
+-- æ…•å®¹å¤
 
 x402254_TBL = 
 {
@@ -12,51 +12,51 @@ SkillInterval = 60000,
 BossBuff = 9998
 }
 
--- ÍõÓïÑÔ¿ªÊ¼µãÃûµÄ¿ª¹Ø
+-- ç‹è¯­è¨€å¼€å§‹ç‚¹åçš„å¼€å…³
 x402254_g_bWangyuyanSpeak = 24
 x402254_g_DuanAndWangFlag = 29
 
 --**********************************
--- ×Ô¼ºËÀÍö
+-- è‡ªå·±æ­»äº¡
 --**********************************
 function x402254_OnDie( sceneId, selfId, killerId )
 
-	LuaFnNpcChat(sceneId, selfId, 0, "ÄÑµÀÎÒ´óÑàµÄ¸´¹ú°ÔÒµ£¬ÖÕ¾¿Ö»ÊÇ»ÆÁ»Ò»ÃÎ£¿")
+	LuaFnNpcChat(sceneId, selfId, 0, "éš¾é“æˆ‘å¤§ç‡•çš„å¤å›½éœ¸ä¸šï¼Œç»ˆç©¶åªæ˜¯é»„ç²±ä¸€æ¢¦ï¼Ÿ")
 
 	MonsterAI_SetIntParamByIndex(sceneId, selfId, x402254_TBL.IDX_TimerPrepare, 0)
 	MonsterAI_SetIntParamByIndex(sceneId, selfId, x402254_TBL.IDX_TimerInterval, 0)
 	MonsterAI_SetBoolParamByIndex(sceneId, selfId, x402254_TBL.IDX_FlagCombat, 0)
 
-	-- Í£Ö¹µãÃû
+	-- åœæ­¢ç‚¹å
 	LuaFnSetCopySceneData_Param(sceneId, x402254_g_bWangyuyanSpeak, 0)
 	
 	LuaFnSetCopySceneData_Param(sceneId, x402254_g_DuanAndWangFlag, 0)
 	
-	-- É¾³ı¶ÎÓşÓïæÌµÈÈË
-	CallScriptFunction((401040), "ClearMonsterByName",sceneId, "ÍõÓïæÌ")
-	CallScriptFunction((401040), "ClearMonsterByName",sceneId, "¶ÎÓş")
-	CallScriptFunction((401040), "ClearMonsterByName",sceneId, "°ÍÌìÊ¯")
-	CallScriptFunction((401040), "ClearMonsterByName",sceneId, "·¶æè")
-	CallScriptFunction((401040), "ClearMonsterByName",sceneId, "ñÒÍòÀï")
-	CallScriptFunction((401040), "ClearMonsterByName",sceneId, "¹ÅóÆ³Ï")
-	CallScriptFunction((401040), "ClearMonsterByName",sceneId, "¸µË¼¹é")
-	CallScriptFunction((401040), "ClearMonsterByName",sceneId, "Öìµ¤³¼")
+	-- åˆ é™¤æ®µèª‰è¯­å«£ç­‰äºº
+	CallScriptFunction((401040), "ClearMonsterByName",sceneId, "ç‹è¯­å«£")
+	CallScriptFunction((401040), "ClearMonsterByName",sceneId, "æ®µèª‰")
+	CallScriptFunction((401040), "ClearMonsterByName",sceneId, "å·´å¤©çŸ³")
+	CallScriptFunction((401040), "ClearMonsterByName",sceneId, "èŒƒéª…")
+	CallScriptFunction((401040), "ClearMonsterByName",sceneId, "è¤šä¸‡é‡Œ")
+	CallScriptFunction((401040), "ClearMonsterByName",sceneId, "å¤ç¬ƒè¯š")
+	CallScriptFunction((401040), "ClearMonsterByName",sceneId, "å‚…æ€å½’")
+	CallScriptFunction((401040), "ClearMonsterByName",sceneId, "æœ±ä¸¹è‡£")
 	
-	x402254_TipAllHuman( sceneId, "Ä½Èİ¸´ÒÑ±»´ò°Ü£¬ÌÖ·¥Ñà×ÓÎë³É¹¦£¬Çë´Ó³ö¿Ú»Øµ½Ì«ºş¡£" )
+	x402254_TipAllHuman( sceneId, "æ…•å®¹å¤å·²è¢«æ‰“è´¥ï¼Œè®¨ä¼ç‡•å­åæˆåŠŸï¼Œè¯·ä»å‡ºå£å›åˆ°å¤ªæ¹–ã€‚" )
 	
 	--LuaFnDeleteMonster(sceneId, selfId)
 	
-	-- ·¢ÊÀ½ç¹«¸æ
---#w¡¾¶Ó³¤Ãû¡¿#PÓë#{_BOSS0}µ¥Ìô£¬È´°µÊ¹¶ÓÓÑÔÚÆäÉíºóÔÒ°å×©¡¢Ê¹°í×Ó¡¢ÇÃÃÆ¹÷¡¢È÷Ê¯»Ò¡­¡­ÎŞËù²»ÓÃ£¬ÖÕÓÚ½«#{_BOSS0}´òµÃ´ó°Ü£¬Âä»Ä¶øÌÓ£¬Ò»¾Ù¹¥ÏÂÁËÑà×ÓÎë¡£
---#w¡¾¶Ó³¤Ãû¡¿#PÂÊÁì¶ÓÓÑÓë#{_BOSS0}º¨Õ½°ëÈÕ£¬ºö¶øÁìÎòµ½ÎäÑ§µÄÕæÚĞ£¬¶ÙÊ±Îä¹¦±©ÕÇ£¬#{_BOSS0}µÖµĞ²»¹ı£¬Ö»µÃÂä»Ä¶øÌÓ£¬Ñà×ÓÎëËìÏİ¡£
---#w¡¾¶Ó³¤Ãû¡¿#PÔÚÑà×ÓÎëµ÷±øÇ²½«£¬ÔË³ïá¡á¢£¬ÔÚÊ¹ÓÃÁËÂ÷Ìì¹ıº££¬°µ¶È³Â²ÖµÈÈıÊ®Áù¼ÆÖ®ºó£¬´òµÃ#{_BOSS0}Ö»µÃÊ¹ÓÃµÚÈıÊ®Æß¼ÆÌÓÖ®Ø²Ø²ÁË¡£
+	-- å‘ä¸–ç•Œå…¬å‘Š
+--#wã€é˜Ÿé•¿åã€‘#Pä¸#{_BOSS0}å•æŒ‘ï¼Œå´æš—ä½¿é˜Ÿå‹åœ¨å…¶èº«åç ¸æ¿ç –ã€ä½¿ç»Šå­ã€æ•²é—·æ£ã€æ´’çŸ³ç°â€¦â€¦æ— æ‰€ä¸ç”¨ï¼Œç»ˆäºå°†#{_BOSS0}æ‰“å¾—å¤§è´¥ï¼Œè½è’è€Œé€ƒï¼Œä¸€ä¸¾æ”»ä¸‹äº†ç‡•å­åã€‚
+--#wã€é˜Ÿé•¿åã€‘#Pç‡é¢†é˜Ÿå‹ä¸#{_BOSS0}é…£æˆ˜åŠæ—¥ï¼Œå¿½è€Œé¢†æ‚Ÿåˆ°æ­¦å­¦çš„çœŸè°›ï¼Œé¡¿æ—¶æ­¦åŠŸæš´æ¶¨ï¼Œ#{_BOSS0}æŠµæ•Œä¸è¿‡ï¼Œåªå¾—è½è’è€Œé€ƒï¼Œç‡•å­åé‚é™·ã€‚
+--#wã€é˜Ÿé•¿åã€‘#Påœ¨ç‡•å­åè°ƒå…µé£å°†ï¼Œè¿ç­¹å¸·å¹„ï¼Œåœ¨ä½¿ç”¨äº†ç’å¤©è¿‡æµ·ï¼Œæš—åº¦é™ˆä»“ç­‰ä¸‰åå…­è®¡ä¹‹åï¼Œæ‰“å¾—#{_BOSS0}åªå¾—ä½¿ç”¨ç¬¬ä¸‰åä¸ƒè®¡é€ƒä¹‹å¤­å¤­äº†ã€‚
 	
 	local playerID = killerId
 	local objType = GetCharacterType( sceneId, killerId )
 	if objType == 3 then
 		playerID = GetPetCreator( sceneId, killerId )
 	end
-		--Èç¹û×éÁË¶ÓÔò»ñÈ¡¶Ó³¤µÄID....
+		--å¦‚æœç»„äº†é˜Ÿåˆ™è·å–é˜Ÿé•¿çš„ID....
 	local nLeaderId = GetTeamLeader(sceneId, playerID)
 	if nLeaderId < 1   then
 		nLeaderId = playerID
@@ -64,11 +64,11 @@ function x402254_OnDie( sceneId, selfId, killerId )
 	local str = ""
 	local ran = random(3)
 	if ran == 1  then
-		str = format("#W#{_INFOUSR%s}#PÓë#{_BOSS0}µ¥Ìô£¬È´°µÊ¹¶ÓÓÑÔÚÆäÉíºóÔÒ°å×©¡¢Ê¹°í×Ó¡¢ÇÃÃÆ¹÷¡¢È÷Ê¯»Ò¡­¡­ÎŞËù²»ÓÃ£¬ÖÕÓÚ½«#{_BOSS0}´òµÃ´ó°Ü£¬Âä»Ä¶øÌÓ£¬Ò»¾Ù¹¥ÏÂÁËÑà×ÓÎë¡£", GetName(sceneId,nLeaderId))
+		str = format("#W#{_INFOUSR%s}#Pä¸#{_BOSS0}å•æŒ‘ï¼Œå´æš—ä½¿é˜Ÿå‹åœ¨å…¶èº«åç ¸æ¿ç –ã€ä½¿ç»Šå­ã€æ•²é—·æ£ã€æ´’çŸ³ç°â€¦â€¦æ— æ‰€ä¸ç”¨ï¼Œç»ˆäºå°†#{_BOSS0}æ‰“å¾—å¤§è´¥ï¼Œè½è’è€Œé€ƒï¼Œä¸€ä¸¾æ”»ä¸‹äº†ç‡•å­åã€‚", GetName(sceneId,nLeaderId))
 	elseif ran == 2  then
-		str = format("#W#{_INFOUSR%s}#PÂÊÁì¶ÓÓÑÓë#{_BOSS0}º¨Õ½°ëÈÕ£¬ºö¶øÁìÎòµ½ÎäÑ§µÄÕæÚĞ£¬¶ÙÊ±Îä¹¦±©ÕÇ£¬#{_BOSS0}µÖµĞ²»¹ı£¬Ö»µÃÂä»Ä¶øÌÓ£¬Ñà×ÓÎëËìÏİ¡£", GetName(sceneId,nLeaderId))
+		str = format("#W#{_INFOUSR%s}#Pç‡é¢†é˜Ÿå‹ä¸#{_BOSS0}é…£æˆ˜åŠæ—¥ï¼Œå¿½è€Œé¢†æ‚Ÿåˆ°æ­¦å­¦çš„çœŸè°›ï¼Œé¡¿æ—¶æ­¦åŠŸæš´æ¶¨ï¼Œ#{_BOSS0}æŠµæ•Œä¸è¿‡ï¼Œåªå¾—è½è’è€Œé€ƒï¼Œç‡•å­åé‚é™·ã€‚", GetName(sceneId,nLeaderId))
 	else
-		str = format("#W#{_INFOUSR%s}#PÔÚÑà×ÓÎëµ÷±øÇ²½«£¬ÔË³ïá¡á¢£¬ÔÚÊ¹ÓÃÁËÂ÷Ìì¹ıº££¬°µ¶É³Â²ÖµÈÈıÊ®Áù¼ÆÖ®ºó£¬´òµÃ#{_BOSS0}Ö»µÃÊ¹ÓÃµÚÈıÊ®Æß¼ÆÌÓÖ®Ø²Ø²ÁË¡£", GetName(sceneId,nLeaderId))
+		str = format("#W#{_INFOUSR%s}#Påœ¨ç‡•å­åè°ƒå…µé£å°†ï¼Œè¿ç­¹å¸·å¹„ï¼Œåœ¨ä½¿ç”¨äº†ç’å¤©è¿‡æµ·ï¼Œæš—æ¸¡é™ˆä»“ç­‰ä¸‰åå…­è®¡ä¹‹åï¼Œæ‰“å¾—#{_BOSS0}åªå¾—ä½¿ç”¨ç¬¬ä¸‰åä¸ƒè®¡é€ƒä¹‹å¤­å¤­äº†ã€‚", GetName(sceneId,nLeaderId))
 	end
 	
 	BroadMsgByChatPipe(sceneId, nLeaderId, str, 4)
@@ -77,15 +77,15 @@ function x402254_OnDie( sceneId, selfId, killerId )
 end
 
 --**********************************
--- ĞÄÌø
+-- å¿ƒè·³
 --**********************************
 function x402254_OnHeartBeat(sceneId, selfId, nTick)
 
-	-- µ±Ä½Èİ¸´ÑªÁ¿µôµ½50%µÄÊ±ºò£¬ÈÃ ÍõÓïæÌ µãÃû£¬Í¬Ê±¶ÎÓşÑğ¹¥
+	-- å½“æ…•å®¹å¤è¡€é‡æ‰åˆ°50%çš„æ—¶å€™ï¼Œè®© ç‹è¯­å«£ ç‚¹åï¼ŒåŒæ—¶æ®µèª‰ä½¯æ”»
 	if(1==LuaFnIsCharacterLiving(sceneId, selfId)) then
 		if(1==MonsterAI_GetBoolParamByIndex(sceneId, selfId, x402254_TBL.IDX_FlagCombat)) then
 			--PrintNum(1)
-			-- Èç¹û Ä½Èİ¸´ ÑªÉÙÓÚ¶àÉÙ£¬¾ÍÔõÃ´Ñù×Ó
+			-- å¦‚æœ æ…•å®¹å¤ è¡€å°‘äºå¤šå°‘ï¼Œå°±æ€ä¹ˆæ ·å­
 			if LuaFnGetCopySceneData_Param(sceneId, x402254_g_bWangyuyanSpeak) == 0  then
 				if GetHp(sceneId, selfId)*2 <= GetMaxHp(sceneId, selfId) then
 					LuaFnSetCopySceneData_Param(sceneId, x402254_g_bWangyuyanSpeak, 1)
@@ -116,7 +116,7 @@ function x402254_OnHeartBeat(sceneId, selfId, nTick)
 --						local posX, posZ = GetWorldPos(sceneId,nTarget)
 --						local fDir = 0.0
 --						LuaFnUnitUseSkill(sceneId, selfId, x402254_TBL.BossSkill, nTarget, posX, posZ, fDir)			
---						LuaFnNpcChat(sceneId, selfId, 0, "³¢³¢ä±Ñô½­ÉÏµÄÁÒÑæ°É£¡")
+--						LuaFnNpcChat(sceneId, selfId, 0, "å°å°æµ”é˜³æ±Ÿä¸Šçš„çƒˆç„°å§ï¼")
 --					end
 --				end
 --			end
@@ -125,7 +125,7 @@ function x402254_OnHeartBeat(sceneId, selfId, nTick)
 end
 
 --**********************************
--- ³õÊ¼»¯
+-- åˆå§‹åŒ–
 --**********************************
 function x402254_OnInit(sceneId, selfId)
 	MonsterAI_SetIntParamByIndex(sceneId, selfId, x402254_TBL.IDX_TimerPrepare, 0)
@@ -134,69 +134,69 @@ function x402254_OnInit(sceneId, selfId)
 end
 
 --**********************************
--- É±ËÀÍæ¼Ò
+-- æ€æ­»ç©å®¶
 --**********************************
 function x402254_OnKillCharacter(sceneId, selfId, targetId)
 --	if(-1~=targetId) then
 --		local szTarget = GetName(sceneId, targetId)
---		LuaFnNpcChat(sceneId, selfId, 0, szTarget .. "£¬Äã¾ÍËãÔÙÀ÷º¦Ê®±¶£¬ÓöÉÏÒ¯Ò¯Ò²Ö»ÓĞËÀÂ·Ò»Ìõ£¡")
+--		LuaFnNpcChat(sceneId, selfId, 0, szTarget .. "ï¼Œä½ å°±ç®—å†å‰å®³åå€ï¼Œé‡ä¸Šçˆ·çˆ·ä¹Ÿåªæœ‰æ­»è·¯ä¸€æ¡ï¼")
 --	end
 end
 
 --**********************************
--- ½øÈëÕ½¶·
+-- è¿›å…¥æˆ˜æ–—
 --**********************************
 function x402254_OnEnterCombat(sceneId, selfId, enmeyId)
 	if(0<x402254_TBL.BossBuff) then
 		LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, x402254_TBL.BossBuff, 0)
 	end
 	
-	-- ½øÈëÕ½¶·×´Ì¬£¬
-	LuaFnNpcChat(sceneId, selfId, 0, "ÎŞÃûÊó±²£¬°²¸Ò»µÎÒ¸´¹ú´ó¼Æ£¡ÕæÊÇÕÒËÀ£¡")
+	-- è¿›å…¥æˆ˜æ–—çŠ¶æ€ï¼Œ
+	LuaFnNpcChat(sceneId, selfId, 0, "æ— åé¼ è¾ˆï¼Œå®‰æ•¢åæˆ‘å¤å›½å¤§è®¡ï¼çœŸæ˜¯æ‰¾æ­»ï¼")
 	
 	MonsterAI_SetIntParamByIndex(sceneId, selfId, x402254_TBL.IDX_TimerPrepare, x402254_TBL.PrepareTime)
 	MonsterAI_SetIntParamByIndex(sceneId, selfId, x402254_TBL.IDX_TimerInterval, 0)
 	MonsterAI_SetBoolParamByIndex(sceneId, selfId, x402254_TBL.IDX_FlagCombat, 1)
 	
-	CallScriptFunction((200060), "Paopao",sceneId, "¶ÎÓş", "Ñà×ÓÎë", "Íõ¹ÃÄï£¬Äã¿´ÕâÀï±øÂíĞ×ÏÕ£¬²»ÈçÎÒ»¤×ÅÄãÏÈ×ßºÃÂğ£¿")
-	CallScriptFunction((200060), "Paopao",sceneId, "ÍõÓïæÌ", "Ñà×ÓÎë", "±í¸ç²»×ß£¬ÎÒÒ²²»»á×ßµÄ£¬ÎÒÒªÁôÏÂÀ´°ï±í¸ç¡£")
+	CallScriptFunction((200060), "Paopao",sceneId, "æ®µèª‰", "ç‡•å­å", "ç‹å§‘å¨˜ï¼Œä½ çœ‹è¿™é‡Œå…µé©¬å‡¶é™©ï¼Œä¸å¦‚æˆ‘æŠ¤ç€ä½ å…ˆèµ°å¥½å—ï¼Ÿ")
+	CallScriptFunction((200060), "Paopao",sceneId, "ç‹è¯­å«£", "ç‡•å­å", "è¡¨å“¥ä¸èµ°ï¼Œæˆ‘ä¹Ÿä¸ä¼šèµ°çš„ï¼Œæˆ‘è¦ç•™ä¸‹æ¥å¸®è¡¨å“¥ã€‚")
 
 end
 
 --**********************************
--- ÍÑÀëÕ½¶·
+-- è„±ç¦»æˆ˜æ–—
 --**********************************
 function x402254_OnLeaveCombat(sceneId, selfId)
 	MonsterAI_SetIntParamByIndex(sceneId, selfId, x402254_TBL.IDX_TimerPrepare, 0)
 	MonsterAI_SetIntParamByIndex(sceneId, selfId, x402254_TBL.IDX_TimerInterval, 0)
 	MonsterAI_SetBoolParamByIndex(sceneId, selfId, x402254_TBL.IDX_FlagCombat, 0)
 
-	-- É¾³ı¶ÎÓşÓïæÌµÈÈË
-	CallScriptFunction((401040), "ClearMonsterByName",sceneId, "ÍõÓïæÌ")
-	CallScriptFunction((401040), "ClearMonsterByName",sceneId, "¶ÎÓş")
-	CallScriptFunction((401040), "ClearMonsterByName",sceneId, "°ÍÌìÊ¯")
-	CallScriptFunction((401040), "ClearMonsterByName",sceneId, "·¶æè")
-	CallScriptFunction((401040), "ClearMonsterByName",sceneId, "ñÒÍòÀï")
-	CallScriptFunction((401040), "ClearMonsterByName",sceneId, "¹ÅóÆ³Ï")
-	CallScriptFunction((401040), "ClearMonsterByName",sceneId, "¸µË¼¹é")
-	CallScriptFunction((401040), "ClearMonsterByName",sceneId, "Öìµ¤³¼")
+	-- åˆ é™¤æ®µèª‰è¯­å«£ç­‰äºº
+	CallScriptFunction((401040), "ClearMonsterByName",sceneId, "ç‹è¯­å«£")
+	CallScriptFunction((401040), "ClearMonsterByName",sceneId, "æ®µèª‰")
+	CallScriptFunction((401040), "ClearMonsterByName",sceneId, "å·´å¤©çŸ³")
+	CallScriptFunction((401040), "ClearMonsterByName",sceneId, "èŒƒéª…")
+	CallScriptFunction((401040), "ClearMonsterByName",sceneId, "è¤šä¸‡é‡Œ")
+	CallScriptFunction((401040), "ClearMonsterByName",sceneId, "å¤ç¬ƒè¯š")
+	CallScriptFunction((401040), "ClearMonsterByName",sceneId, "å‚…æ€å½’")
+	CallScriptFunction((401040), "ClearMonsterByName",sceneId, "æœ±ä¸¹è‡£")
 
-	-- ´ÓĞÂÔÚ³¡¾°ÖĞÉú³ÉÕâĞ©Npc
+	-- ä»æ–°åœ¨åœºæ™¯ä¸­ç”Ÿæˆè¿™äº›Npc
 	CallScriptFunction((401040), "CreateMonster_11",sceneId)
 
-	-- Í£Ö¹µãÃû
+	-- åœæ­¢ç‚¹å
 	LuaFnSetCopySceneData_Param(sceneId, x402254_g_bWangyuyanSpeak, 0)
 	LuaFnSetCopySceneData_Param(sceneId, x402254_g_DuanAndWangFlag, 0)
 end
 
 --**********************************
---ÌáÊ¾ËùÓĞ¸±±¾ÄÚÍæ¼Ò
+--æç¤ºæ‰€æœ‰å‰¯æœ¬å†…ç©å®¶
 --**********************************
 function x402254_TipAllHuman( sceneId, Str )
-	-- »ñµÃ³¡¾°ÀïÍ·µÄËùÓĞÈË
+	-- è·å¾—åœºæ™¯é‡Œå¤´çš„æ‰€æœ‰äºº
 	local nHumanNum = LuaFnGetCopyScene_HumanCount(sceneId)
 	
-	-- Ã»ÓĞÈËµÄ³¡¾°£¬Ê²Ã´¶¼²»×ö
+	-- æ²¡æœ‰äººçš„åœºæ™¯ï¼Œä»€ä¹ˆéƒ½ä¸åš
 	if nHumanNum < 1 then
 		return
 	end

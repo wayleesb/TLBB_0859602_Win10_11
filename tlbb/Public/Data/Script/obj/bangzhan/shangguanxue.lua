@@ -1,21 +1,21 @@
---°ïÕ½¸±±¾NPC B°ï
---ÉÏ¹ÙÑ©
---ÆÕÍ¨
+--å¸®æˆ˜å‰¯æœ¬NPC Bå¸®
+--ä¸Šå®˜é›ª
+--æ™®é€š
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x402292_g_scriptId = 402292
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x402292_g_eventList={600050,600052}
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x402292_UpdateEventList( sceneId, selfId, targetId )
 	if CallScriptFunction(402047, "IsCommonBGuild", sceneId, selfId ) == 1 then
 		BeginEvent(sceneId)
 			AddText(sceneId,"#{BHXZ_081103_109}")
-			--AddNumText(sceneId,x402292_g_scriptId,"ÖÎÁÆ",6,0)
+			--AddNumText(sceneId,x402292_g_scriptId,"æ²»ç–—",6,0)
 		EndEvent(sceneId)
 		for i, eventId in x402292_g_eventList do
 			CallScriptFunction( eventId, "OnEnumerate",sceneId, selfId, targetId )
@@ -31,14 +31,14 @@ function x402292_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x402292_OnDefaultEvent( sceneId, selfId,targetId )
 	x402292_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x402292_OnEventRequest( sceneId, selfId, targetId, eventId )
 
@@ -50,7 +50,7 @@ function x402292_OnEventRequest( sceneId, selfId, targetId, eventId )
 
 	for i, findId in x402292_g_eventList do
 		if eventId == findId then
-			CallScriptFunction( eventId, "OnDefaultEvent",sceneId, selfId, targetId, GetNumText() )	--GetNumText()ÊÇaddnumtextÖĞ×îºóµÄ±äÁ¿
+			CallScriptFunction( eventId, "OnDefaultEvent",sceneId, selfId, targetId, GetNumText() )	--GetNumText()æ˜¯addnumtextä¸­æœ€åçš„å˜é‡
 			return
 		end
 	end
@@ -58,7 +58,7 @@ function x402292_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x402292_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x402292_g_eventList do
@@ -73,10 +73,10 @@ function x402292_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x402292_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
-	--¾Ü¾øÖ®ºó£¬Òª·µ»ØNPCµÄÊÂ¼şÁĞ±í
+	--æ‹’ç»ä¹‹åï¼Œè¦è¿”å›NPCçš„äº‹ä»¶åˆ—è¡¨
 	for i, findId in x402292_g_eventList do
 		if missionScriptId == findId then
 			x402292_UpdateEventList( sceneId, selfId, targetId )
@@ -86,7 +86,7 @@ function x402292_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¼ÌĞø£¨ÒÑ¾­½ÓÁËÈÎÎñ£©
+--ç»§ç»­ï¼ˆå·²ç»æ¥äº†ä»»åŠ¡ï¼‰
 --**********************************
 function x402292_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x402292_g_eventList do
@@ -98,7 +98,7 @@ function x402292_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---Ìá½»ÒÑ×öÍêµÄÈÎÎñ
+--æäº¤å·²åšå®Œçš„ä»»åŠ¡
 --**********************************
 function x402292_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, selectRadioId )
 	for i, findId in x402292_g_eventList do

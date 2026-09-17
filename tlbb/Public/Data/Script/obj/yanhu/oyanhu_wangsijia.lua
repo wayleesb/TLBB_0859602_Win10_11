@@ -1,10 +1,10 @@
---盐湖NPC
---王思佳
+--鐩愭箹NPC
+--鐜嬫�濅匠
 
 x041503_g_ScriptId	= 041503
 
 --**********************************
---事件交互入口
+--浜嬩欢浜や簰鍏ュ彛
 --**********************************
 function x041503_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent( sceneId )

@@ -1,92 +1,92 @@
---Õ÷ÓÑÆ½Ì¨£¬Õ÷ÓÑÍæ¼ÒÁĞ±í cuiyinjie 2008.10.20
--- ÁĞ±íÇëÇó¹ı³Ì£º lua½Å±¾·¢ËÍÇëÇóµÄÀàĞÍÓëÒ³£¬ ·şÎñÆ÷·µ»Øºó¿Í»§¶Ëpushevent¸æËßlua£¬luaÈ»ºóÈ¡ÊıÁ¿ÔÙÒ»ÌõÌõÈ¡ĞÅÏ¢ÏÔÊ¾ÔÚÁĞ±í
--- ĞŞ¸Ä£º	WTT	2009-3-27	Èç¹ûÊÇ²éÑ¯ÈËÆøĞÅÏ¢ÁĞ±í£¬¿Í»§¶ËÖ»ĞèÏò·şÎñÆ÷·¢ËÍÇëÇóÒ³£¬¶ø²»Ğè·¢ËÍÇëÇóÀàĞÍ£¬·şÎñÆ÷·µ»ØÈËÆøÁĞ±íĞÅÏ¢¡£
---											Ä¿Ç°ÈËÆøÁĞ±íĞÅÏ¢×î¶àÏÔÊ¾1Ò³£¨20Ìõ£©												
--- ÆµµÀÀàĞÍºÍĞÔ±ğ¶¨Òå
-local g_Genders = { "Å®", "ÄĞ" };
-local g_Channels = {"#{ZYPT_081103_008}", "#{ZYPT_081103_009}", "#{ZYPT_081103_010}", "#{ZYPT_081103_011}",}; --{"ÀÉ²ÅÅ®Ã²", "À­°ï½á»ï", "°İÊ¦Ñ°Í½", "Òå½á½ğÀ¼"};
-local g_TypesDesc = {"ÀÉ²ÅÅ®Ã²", "À­°ï½á»ï", "°İÊ¦Ñ°Í½", "Òå½á½ğÀ¼"};   --·¢ÓÊ¼şÊ±ÎŞ·¨×ªÒå
-local g_MenPaiName = {"ÉÙÁÖ", "Ã÷½Ì", "Ø¤°ï", "Îäµ±", "¶ëáÒ", "ĞÇËŞ", "ÌìÁú", "ÌìÉ½", "åĞÒ£", "ÎŞÃÅÅÉ"};
-local g_MarryDesc = {"Î´»é", "ÒÑ»é"};
---local g_ZhengyouMudi = { {"ÈÎÒâ","°ïÅÉÊÕÈË","Ñ°ÕÒ°ïÅÉ",}, {"ÈÎÒâ","°İÊ¦","ÊÕÍ½",},};
+--å¾å‹å¹³å°ï¼Œå¾å‹ç©å®¶åˆ—è¡¨ cuiyinjie 2008.10.20
+-- åˆ—è¡¨è¯·æ±‚è¿‡ç¨‹ï¼š luaè„šæœ¬å‘é€è¯·æ±‚çš„ç±»å‹ä¸é¡µï¼Œ æœåŠ¡å™¨è¿”å›åå®¢æˆ·ç«¯pusheventå‘Šè¯‰luaï¼Œluaç„¶åå–æ•°é‡å†ä¸€æ¡æ¡å–ä¿¡æ¯æ˜¾ç¤ºåœ¨åˆ—è¡¨
+-- ä¿®æ”¹ï¼š	WTT	2009-3-27	å¦‚æœæ˜¯æŸ¥è¯¢äººæ°”ä¿¡æ¯åˆ—è¡¨ï¼Œå®¢æˆ·ç«¯åªéœ€å‘æœåŠ¡å™¨å‘é€è¯·æ±‚é¡µï¼Œè€Œä¸éœ€å‘é€è¯·æ±‚ç±»å‹ï¼ŒæœåŠ¡å™¨è¿”å›äººæ°”åˆ—è¡¨ä¿¡æ¯ã€‚
+--											ç›®å‰äººæ°”åˆ—è¡¨ä¿¡æ¯æœ€å¤šæ˜¾ç¤º1é¡µï¼ˆ20æ¡ï¼‰												
+-- é¢‘é“ç±»å‹å’Œæ€§åˆ«å®šä¹‰
+local g_Genders = { "å¥³", "ç”·" };
+local g_Channels = {"#{ZYPT_081103_008}", "#{ZYPT_081103_009}", "#{ZYPT_081103_010}", "#{ZYPT_081103_011}",}; --{"éƒæ‰å¥³è²Œ", "æ‹‰å¸®ç»“ä¼™", "æ‹œå¸ˆå¯»å¾’", "ä¹‰ç»“é‡‘å…°"};
+local g_TypesDesc = {"éƒæ‰å¥³è²Œ", "æ‹‰å¸®ç»“ä¼™", "æ‹œå¸ˆå¯»å¾’", "ä¹‰ç»“é‡‘å…°"};   --å‘é‚®ä»¶æ—¶æ— æ³•è½¬ä¹‰
+local g_MenPaiName = {"å°‘æ—", "æ˜æ•™", "ä¸å¸®", "æ­¦å½“", "å³¨åµ‹", "æ˜Ÿå®¿", "å¤©é¾™", "å¤©å±±", "é€é¥", "æ— é—¨æ´¾"};
+local g_MarryDesc = {"æœªå©š", "å·²å©š"};
+--local g_ZhengyouMudi = { {"ä»»æ„","å¸®æ´¾æ”¶äºº","å¯»æ‰¾å¸®æ´¾",}, {"ä»»æ„","æ‹œå¸ˆ","æ”¶å¾’",},};
 
--- ´ËÌõ¼şºÍÕ÷ÓÑÒªÇóÀï¶¨ÒåÒ»ÖÂ£¬ÒªÍ¬Ê±¸ü¸Ä,¼ÇµÃÏÂ±ê¼Ó1
+-- æ­¤æ¡ä»¶å’Œå¾å‹è¦æ±‚é‡Œå®šä¹‰ä¸€è‡´ï¼Œè¦åŒæ—¶æ›´æ”¹,è®°å¾—ä¸‹æ ‡åŠ 1
 local g_Conditions = {
-	MenPai = {"È«²¿", "ÉÙÁÖ", "Ã÷½Ì", "Ø¤°ï", "Îäµ±", "¶ëáÒ", "ĞÇËŞ", "ÌìÁú", "ÌìÉ½", "åĞÒ£"},
-	Level = {"ÈÎÒâ", "10¼¶ÒÔÏÂ", "10µ½20¼¶", "20µ½30¼¶", "30µ½40¼¶", "40µ½50¼¶", "50µ½60¼¶", "60µ½70¼¶", "70µ½80¼¶", "80µ½90¼¶", "90µ½100¼¶", "100¼¶ÒÔÉÏ"},
-	Sexy = {"²»ÏŞ", "ÄĞ", "Å®"},
-	Mudi = { {"ÈÎÒâ","°ïÅÉÊÕÈË","Ñ°ÕÒ°ïÅÉ",}, {"ÈÎÒâ","°İÊ¦","ÊÕÍ½",},}, 
+	MenPai = {"å…¨éƒ¨", "å°‘æ—", "æ˜æ•™", "ä¸å¸®", "æ­¦å½“", "å³¨åµ‹", "æ˜Ÿå®¿", "å¤©é¾™", "å¤©å±±", "é€é¥"},
+	Level = {"ä»»æ„", "10çº§ä»¥ä¸‹", "10åˆ°20çº§", "20åˆ°30çº§", "30åˆ°40çº§", "40åˆ°50çº§", "50åˆ°60çº§", "60åˆ°70çº§", "70åˆ°80çº§", "80åˆ°90çº§", "90åˆ°100çº§", "100çº§ä»¥ä¸Š"},
+	Sexy = {"ä¸é™", "ç”·", "å¥³"},
+	Mudi = { {"ä»»æ„","å¸®æ´¾æ”¶äºº","å¯»æ‰¾å¸®æ´¾",}, {"ä»»æ„","æ‹œå¸ˆ","æ”¶å¾’",},}, 
 };
 
--- ÉÔµÈµã»÷µÄÌáÊ¾
-local g_strWaitClickTipText = "#{ZYPT_081127_2}"; --"²»¿ÉÁ¬Ğøµã»÷£¬ÇëÉÔµÈÆ¬¿ÌºóÔÙµã»÷¡£";
+-- ç¨ç­‰ç‚¹å‡»çš„æç¤º
+local g_strWaitClickTipText = "#{ZYPT_081127_2}"; --"ä¸å¯è¿ç»­ç‚¹å‡»ï¼Œè¯·ç¨ç­‰ç‰‡åˆ»åå†ç‚¹å‡»ã€‚";
 
--- µ±Ç°ÆµµÀÀà±ğÓëÒ³Âë
+-- å½“å‰é¢‘é“ç±»åˆ«ä¸é¡µç 
 local g_totalPlayerCount = 1
-local g_curChannel = 6					-- Ä¬ÈÏÏÔÊ¾¡°×îÍúÈËÆø¡±ÆµµÀ
-local g_curPageIndex = 1				-- Ä¬ÈÏÏÔÊ¾µÚ1Ò³
-local g_totalPageCount = 1			-- ĞÅÏ¢ÁĞ±íµÄ×ÜÒ³Êı
-local	g_totalVotePageCount = 1	-- ÈËÆøĞÅÏ¢ÁĞ±íµÄ×ÜÒ³Êı
+local g_curChannel = 6					-- é»˜è®¤æ˜¾ç¤ºâ€œæœ€æ—ºäººæ°”â€é¢‘é“
+local g_curPageIndex = 1				-- é»˜è®¤æ˜¾ç¤ºç¬¬1é¡µ
+local g_totalPageCount = 1			-- ä¿¡æ¯åˆ—è¡¨çš„æ€»é¡µæ•°
+local	g_totalVotePageCount = 1	-- äººæ°”ä¿¡æ¯åˆ—è¡¨çš„æ€»é¡µæ•°
 
--- ÆµµÀ×ÜÊı
+-- é¢‘é“æ€»æ•°
 local g_totalChannelCount = 7
 
--- µ±Ç°Íæ¼Ò¹ÜÀíµÄÕ÷ÓÑÀàĞÍ
+-- å½“å‰ç©å®¶ç®¡ç†çš„å¾å‹ç±»å‹
 local g_curZhengyouType = 1; 
 
--- µ±Ç°²éÑ¯½á¹ûÀàĞÍ£¬ÓÃÓÚÏÔÊ¾ÌáÊ¾ĞÅÏ¢ 
+-- å½“å‰æŸ¥è¯¢ç»“æœç±»å‹ï¼Œç”¨äºæ˜¾ç¤ºæç¤ºä¿¡æ¯ 
 local g_curSearchResultType = -1; 
 
-local MAXPAGECOUNT 			= 200;				-- ĞÅÏ¢ÁĞ±í×î¶à200Ò³
-local MAXVOTEPAGECOUNT	= 1;					-- ÈËÆøĞÅÏ¢ÁĞ±í×î¶à1Ò³¡¢20Ìõ£¨ÒÔºó¿ÉÄÜ»áÀ©³äÖÁ5Ò³¡¢100Ìõ£©
-local MAXCOUNTPERPAGE 	= 20;					-- Ã¿Ò³×î¶àÏÔÊ¾20Ìõ
-local LEVEL_LIMIT 			= 10;					-- 10¼¶ÒÔÏÂÎŞ·¨´ò¿ª
+local MAXPAGECOUNT 			= 200;				-- ä¿¡æ¯åˆ—è¡¨æœ€å¤š200é¡µ
+local MAXVOTEPAGECOUNT	= 1;					-- äººæ°”ä¿¡æ¯åˆ—è¡¨æœ€å¤š1é¡µã€20æ¡ï¼ˆä»¥åå¯èƒ½ä¼šæ‰©å……è‡³5é¡µã€100æ¡ï¼‰
+local MAXCOUNTPERPAGE 	= 20;					-- æ¯é¡µæœ€å¤šæ˜¾ç¤º20æ¡
+local LEVEL_LIMIT 			= 10;					-- 10çº§ä»¥ä¸‹æ— æ³•æ‰“å¼€
 
--- Ö´ĞĞ²éÑ¯ºÍ¾ßÌå²Ù×÷µÄÀàĞÍ
-local OPT_VOTE					= 1;					-- Í¶Æ±
-local OPT_VIEWVOTE			= 2;					-- ²é¿´
-local OPT_CHECK_EDIT		= 3;					-- ¸ü¸ÄÒªÇó
-local OPT_CHECK_FABU    = 4;					-- ·¢²¼
-local OPT_CHECK_CHEXIAO = 5;					-- ³·Ïú
-local OPT_CHECK_GUANLI  = 6;					-- ¹ÜÀí
+-- æ‰§è¡ŒæŸ¥è¯¢å’Œå…·ä½“æ“ä½œçš„ç±»å‹
+local OPT_VOTE					= 1;					-- æŠ•ç¥¨
+local OPT_VIEWVOTE			= 2;					-- æŸ¥çœ‹
+local OPT_CHECK_EDIT		= 3;					-- æ›´æ”¹è¦æ±‚
+local OPT_CHECK_FABU    = 4;					-- å‘å¸ƒ
+local OPT_CHECK_CHEXIAO = 5;					-- æ’¤é”€
+local OPT_CHECK_GUANLI  = 6;					-- ç®¡ç†
 
--- ½çÃæ¿Ø¼ş
+-- ç•Œé¢æ§ä»¶
 local BtnPageUpDown = {};
 local g_Ctrls = {};
 
--- ÀäÈ´Ê±¼äÏà¹Ø 
+-- å†·å´æ—¶é—´ç›¸å…³ 
 local g_iLastTime = 0;
 
-local g_Timers = {0, 0, 0, 0, 0}; -- ÀäÈ´Ê±¼ä·Ö×é
-local TIMER_TAB = 1;							-- tabÒ³     timerµÄË÷ÒıÖµ
-local TIMER_SEARCH = 2;						-- ²éÕÒ
-local TIMER_UPDATE = 3;						-- Ë¢ĞÂ
-local TIMER_COMMONBTN = 4;				-- Ò»°ã°´Å¥
+local g_Timers = {0, 0, 0, 0, 0}; -- å†·å´æ—¶é—´åˆ†ç»„
+local TIMER_TAB = 1;							-- tabé¡µ     timerçš„ç´¢å¼•å€¼
+local TIMER_SEARCH = 2;						-- æŸ¥æ‰¾
+local TIMER_UPDATE = 3;						-- åˆ·æ–°
+local TIMER_COMMONBTN = 4;				-- ä¸€èˆ¬æŒ‰é’®
 
-local MIN_TABTIME = 3; --°´tabµÄÊ±¼ä 
+local MIN_TABTIME = 3; --æŒ‰tabçš„æ—¶é—´ 
 local MIN_SEARCHTIME = 10; 
-local MIN_BTNTIME = 3; --µã¹¦ÄÜ°´Å¥µÄ¼ä¸ô £¨Ãë£© 
+local MIN_BTNTIME = 3; --ç‚¹åŠŸèƒ½æŒ‰é’®çš„é—´éš” ï¼ˆç§’ï¼‰ 
 local MIN_UPDATETIME = 3;
 
 function PlayerZhengyouPT_PreLoad()
-	this:RegisterEvent("OPEN_WINDOW");														-- ´ò¿ªÕ÷ÓÑÆ½Ì¨Ö÷´°¿Ú
-	this:RegisterEvent("UPDATE_FINDFRIEND_LIST");									-- ¸üĞÂĞÅÏ¢ÁĞ±í£¨ÆÕÍ¨ or ÈËÆø£©×ÜÌõÊı£¬µ±Ç°Ò³ÌõÊı
-	this:RegisterEvent("ZHENGYOUPT_RESPONSE_PLAYERDETAILINFO");  	-- ÏÔÊ¾Ï¸½ÚĞÅÏ¢
-	this:RegisterEvent("ZHENGYOUPT_RESPONSE_QUERYRESULT");				-- Ö´ĞĞ²Ù×÷µÄ·´À¡´¦Àí
-	this:RegisterEvent("ZHENGYOUPT_FOCUSROW");										-- Ñ¡ÖĞÄÄÒ»ĞĞ¡¢ÄÄÒ»Ò³
-	this:RegisterEvent("ZHENGYOUPT_RESPONSE_SEARCHPLAYERLIST");  	-- ²éÑ¯½á¹û
+	this:RegisterEvent("OPEN_WINDOW");														-- æ‰“å¼€å¾å‹å¹³å°ä¸»çª—å£
+	this:RegisterEvent("UPDATE_FINDFRIEND_LIST");									-- æ›´æ–°ä¿¡æ¯åˆ—è¡¨ï¼ˆæ™®é€š or äººæ°”ï¼‰æ€»æ¡æ•°ï¼Œå½“å‰é¡µæ¡æ•°
+	this:RegisterEvent("ZHENGYOUPT_RESPONSE_PLAYERDETAILINFO");  	-- æ˜¾ç¤ºç»†èŠ‚ä¿¡æ¯
+	this:RegisterEvent("ZHENGYOUPT_RESPONSE_QUERYRESULT");				-- æ‰§è¡Œæ“ä½œçš„åé¦ˆå¤„ç†
+	this:RegisterEvent("ZHENGYOUPT_FOCUSROW");										-- é€‰ä¸­å“ªä¸€è¡Œã€å“ªä¸€é¡µ
+	this:RegisterEvent("ZHENGYOUPT_RESPONSE_SEARCHPLAYERLIST");  	-- æŸ¥è¯¢ç»“æœ
 end
 
--- ÏÔÊ¾ĞÅÏ¢µÄ·¢²¼ÆµµÀÀàĞÍ
+-- æ˜¾ç¤ºä¿¡æ¯çš„å‘å¸ƒé¢‘é“ç±»å‹
 function PlayerZhengyouPT_GetTypeName(eType)
 	if PlayerZhengyouPT_IsRealType(eType) then
 		return g_Channels[eType];
 	end
 	
 	if (eType == 6) then
-		return "#{ZYPT_081103_108}"		-- "×îÍúÈËÆø"
+		return "#{ZYPT_081103_108}"		-- "æœ€æ—ºäººæ°”"
 	else		
-		return "#{ZYPT_081103_007}"		-- ¡°È«²¿¡±ºÍ¡°²éÑ¯½á¹û¡±¾ù·µ»Ø¡°È«²¿¡±
+		return "#{ZYPT_081103_007}"		-- â€œå…¨éƒ¨â€å’Œâ€œæŸ¥è¯¢ç»“æœâ€å‡è¿”å›â€œå…¨éƒ¨â€
 	end
 end
 
@@ -113,7 +113,7 @@ function PlayerZhengyouPT_GetMenpaiName(iMenpai)
 	return "";
 end
 
--- È¡µÃÃÅÅÉĞèÇóÃèÊö
+-- å–å¾—é—¨æ´¾éœ€æ±‚æè¿°
 function  PlayerZhengyouPT_GetMenpaiNeedDesc(iRet)
 	local sDesc = g_Conditions.MenPai[iRet + 1];
 	if ( nil ~= sDesc ) then
@@ -123,7 +123,7 @@ function  PlayerZhengyouPT_GetMenpaiNeedDesc(iRet)
 	end
 end
 
--- È¡µÃĞÔ±ğĞèÇóÃèÊö
+-- å–å¾—æ€§åˆ«éœ€æ±‚æè¿°
 function  PlayerZhengyouPT_GetSexyNeedDesc(iRet)
 	local sDesc = g_Conditions.Sexy[iRet + 1];
 	if ( nil ~= sDesc ) then
@@ -133,7 +133,7 @@ function  PlayerZhengyouPT_GetSexyNeedDesc(iRet)
 	end
 end
 
--- È¡µÃµÈ¼¶ĞèÇóÃèÊö
+-- å–å¾—ç­‰çº§éœ€æ±‚æè¿°
 function  PlayerZhengyouPT_GetLevelNeedDesc(iRet)
 	local sDesc = g_Conditions.Level[iRet + 1];
 	if ( nil ~= sDesc ) then
@@ -143,8 +143,8 @@ function  PlayerZhengyouPT_GetLevelNeedDesc(iRet)
 	end
 end
 
--- Õ÷ÓÑÄ¿µÄÃèÊö
--- ÊäÈë£ºÕ÷ÓÑÀàĞÍ£¬Ä¿µÄ 
+-- å¾å‹ç›®çš„æè¿°
+-- è¾“å…¥ï¼šå¾å‹ç±»å‹ï¼Œç›®çš„ 
 function  PlayerZhengyouPT_GetZhengyouMudiDesc(iAdtype, iMudi)
     local iIdx = 0;
     if ( 2 == tonumber(iAdtype) ) then 
@@ -157,13 +157,13 @@ function  PlayerZhengyouPT_GetZhengyouMudiDesc(iAdtype, iMudi)
        iMudi = iMudi - 4;
     else
        PlayerZhengyouPT_Text4:Hide();
-       return "Õ÷ÓÑ½»¼Ê";
+       return "å¾å‹äº¤é™…";
     end
 	local sDesc = g_Conditions.Mudi[iIdx][iMudi + 1];
 	if ( nil ~= sDesc ) then
 	    return sDesc;
 	else
-	    return "Õ÷ÓÑ½»¼Ê";
+	    return "å¾å‹äº¤é™…";
 	end
 end 
 
@@ -171,22 +171,22 @@ end
 function PlayerZhengyouPT_OnLoad()
 	BtnPageUpDown = {PlayerZhengyouPT_PageUp, PlayerZhengyouPT_PageDown};
 	g_Ctrls = {
-		TxtName 	= PlayerZhengyouPT_Info2,     -- ¸öÈËĞÅÏ¢
+		TxtName 	= PlayerZhengyouPT_Info2,     -- ä¸ªäººä¿¡æ¯
 		TxtSexy 	= PlayerZhengyouPT_Info3,
 		TxtLevel 	= PlayerZhengyouPT_Info4,
 		TxtMenpai 	= PlayerZhengyouPT_Info5,
         
 		TxtBangpai 	= PlayerZhengyouPT_Info6,
 		TxtMarry 	= PlayerZhengyouPT_Info7,
-		TxtFabuTime	= PlayerZhengyouPT_Info8,   -- ·¢²¼Ê±¼ä
-		TxtShyuTime = PlayerZhengyouPT_Info9,   -- Ê£ÓàÊ±¼ä
+		TxtFabuTime	= PlayerZhengyouPT_Info8,   -- å‘å¸ƒæ—¶é—´
+		TxtShyuTime = PlayerZhengyouPT_Info9,   -- å‰©ä½™æ—¶é—´
         
-		TxtSexyNeed   = PlayerZhengyouPT_Text1,   -- ¸öÈËÒªÇó
+		TxtSexyNeed   = PlayerZhengyouPT_Text1,   -- ä¸ªäººè¦æ±‚
 		TxtLevelNeed  = PlayerZhengyouPT_Text2,
 		TxtMenpaiNeed = PlayerZhengyouPT_Text3,
 		TxtZhengyouMudi = PlayerZhengyouPT_Text4,
 		
-		TxtRenqi1     = PlayerZhengyouPT_Info_1,  -- ÈËÆøÏÔÊ¾
+		TxtRenqi1     = PlayerZhengyouPT_Info_1,  -- äººæ°”æ˜¾ç¤º
 		TxtRenqi2     = PlayerZhengyouPT_Info_2,
 		TxtRenqi3     = PlayerZhengyouPT_Info_3,
 		TxtRenqi4     = PlayerZhengyouPT_Info_4,
@@ -195,37 +195,37 @@ function PlayerZhengyouPT_OnLoad()
 		
 		BtnChangeInfo = PlayerZhengyouPT_Change,
 		
-		TabSearch	  = PlayerZhengyouPT_Tab6,		-- ²éÑ¯½á¹û
+		TabSearch	  = PlayerZhengyouPT_Tab6,		-- æŸ¥è¯¢ç»“æœ
 		
 		TxtVoteFull	  = PlayerZhengyouPT_Info12,
 		
 		TxtSearchResultTip = PlayerZhengyouPT_ResultInfo,
 		
 		Tabs		  = {
-						 PlayerZhengyouPT_Tab1,					-- È«²¿
-						 PlayerZhengyouPT_Tab2,					-- ÀÉ²ÅÅ®Ã²
-						 PlayerZhengyouPT_Tab3,					-- À­°ï½á»ï
-						 PlayerZhengyouPT_Tab4,					-- °İÊ¦Ñ°Í½
-						 PlayerZhengyouPT_Tab5,					-- Òå½á½ğÀ¼
-						 PlayerZhengyouPT_Tab6,					-- ²éÑ¯½á¹û
-						 PlayerZhengyouPT_Tab7,					-- ×îÍúÈËÆø
+						 PlayerZhengyouPT_Tab1,					-- å…¨éƒ¨
+						 PlayerZhengyouPT_Tab2,					-- éƒæ‰å¥³è²Œ
+						 PlayerZhengyouPT_Tab3,					-- æ‹‰å¸®ç»“ä¼™
+						 PlayerZhengyouPT_Tab4,					-- æ‹œå¸ˆå¯»å¾’
+						 PlayerZhengyouPT_Tab5,					-- ä¹‰ç»“é‡‘å…°
+						 PlayerZhengyouPT_Tab6,					-- æŸ¥è¯¢ç»“æœ
+						 PlayerZhengyouPT_Tab7,					-- æœ€æ—ºäººæ°”
 						 },
 	};
     
-	g_Ctrls.TxtVoteFull:Hide(); --Í¶Æ±ÒÑÂúĞÅÏ¢ÒªÒş²Ø 
+	g_Ctrls.TxtVoteFull:Hide(); --æŠ•ç¥¨å·²æ»¡ä¿¡æ¯è¦éšè— 
 	PlayerZhengyouPT_PageHeader:SetText("#{ZYPT_081103_006}");
 end
 
--- Í¨Öª½Å±¾È¥¿Í»§¶ËÈ¡ÏêÏ¸ĞÅÏ¢
+-- é€šçŸ¥è„šæœ¬å»å®¢æˆ·ç«¯å–è¯¦ç»†ä¿¡æ¯
 function PlayerZhengyouPT_NotifyPlayerDetailInfo(sResult, sMyInfo, sType)
 	if ( "ok" ~= sResult ) then
-		-- Ã»ÓĞÕı³£·µ»ØÏ¸½ÚĞÅÏ¢ÔòĞèÇå¿ÕÏÔÊ¾
+		-- æ²¡æœ‰æ­£å¸¸è¿”å›ç»†èŠ‚ä¿¡æ¯åˆ™éœ€æ¸…ç©ºæ˜¾ç¤º
 		PlayerZhengyouPT_CleanDetailInfo();
-		PushDebugMessage("¶Ô²»Æğ£¬ÎŞ´ËÍæ¼ÒĞÅÏ¢");    -- µ÷ÊÔĞÅÏ¢£¬Ó¦¸Ã²»»áÖ´ĞĞµ½
+		PushDebugMessage("å¯¹ä¸èµ·ï¼Œæ— æ­¤ç©å®¶ä¿¡æ¯");    -- è°ƒè¯•ä¿¡æ¯ï¼Œåº”è¯¥ä¸ä¼šæ‰§è¡Œåˆ°
 		return;
 	end
 
-	-- Èç¹ûÊÇÍæ¼Ò×Ô¼º·¢²¼µÄĞÅÏ¢£¬ÔòÏÔÊ¾¡°¸ü¸Ä¡±°´Å¥£¬·ñÔòÒş²Ø¡£
+	-- å¦‚æœæ˜¯ç©å®¶è‡ªå·±å‘å¸ƒçš„ä¿¡æ¯ï¼Œåˆ™æ˜¾ç¤ºâ€œæ›´æ”¹â€æŒ‰é’®ï¼Œå¦åˆ™éšè—ã€‚
 	if ( "myinfo" == sMyInfo ) then
 		g_curZhengyouType = tonumber(sType);
 		g_Ctrls.BtnChangeInfo:Show();
@@ -247,12 +247,12 @@ function PlayerZhengyouPT_NotifyPlayerDetailInfo(sResult, sMyInfo, sType)
 	g_Ctrls.TxtMenpai:SetText( "#{ZYPT_081103_026}" .. PlayerZhengyouPT_GetMenpaiName(iMenpai) );
 	g_Ctrls.TxtBangpai:SetText( "#{ZYPT_081103_028}" .. FindFriendDataPool:GetDetailInfo("GUILD") );
 	g_Ctrls.TxtFabuTime:SetText( "#{ZYPT_081103_029}" .. sFabuTime );
-	g_Ctrls.TxtShyuTime:SetText( "#{ZYPT_081103_030}" .. sSpareTime .."Ìì");
+	g_Ctrls.TxtShyuTime:SetText( "#{ZYPT_081103_030}" .. sSpareTime .."å¤©");
 	
 	g_Ctrls.TxtSexyNeed:SetText( "#{ZYPT_081103_035}" .. PlayerZhengyouPT_GetSexyNeedDesc(iSexyNeed) );
 	g_Ctrls.TxtLevelNeed:SetText( "#{ZYPT_081103_036}" .. PlayerZhengyouPT_GetLevelNeedDesc(iLevelNeed) );
 	g_Ctrls.TxtMenpaiNeed:SetText( "#{ZYPT_081103_037}" .. PlayerZhengyouPT_GetMenpaiNeedDesc(iMenpaiNeed) );
-	g_Ctrls.TxtZhengyouMudi:SetText( "Ä¿µÄ£º" .. PlayerZhengyouPT_GetZhengyouMudiDesc(sType, iZhengyouMudi) );
+	g_Ctrls.TxtZhengyouMudi:SetText( "ç›®çš„ï¼š" .. PlayerZhengyouPT_GetZhengyouMudiDesc(sType, iZhengyouMudi) );
     
 	g_Ctrls.TxtRenqi1:SetText( tostring(iRenqi1) );
 	g_Ctrls.TxtRenqi2:SetText( tostring(iRenqi2) );
@@ -260,7 +260,7 @@ function PlayerZhengyouPT_NotifyPlayerDetailInfo(sResult, sMyInfo, sType)
 	g_Ctrls.TxtRenqi4:SetText( tostring(iRenqi4) );
 end
 
--- Çå¿ÕÕ÷ÓÑ´°¿ÚÓÒ²à¿Ø¼şÏÔÊ¾µÄÄÚÈİ
+-- æ¸…ç©ºå¾å‹çª—å£å³ä¾§æ§ä»¶æ˜¾ç¤ºçš„å†…å®¹
 function  PlayerZhengyouPT_CleanDetailInfo()
 	g_Ctrls.TxtName:SetText( "#{ZYPT_081103_024}" );
 	g_Ctrls.TxtSexy:SetText( "#{ZYPT_081103_035}" );
@@ -289,7 +289,7 @@ function PlayerZhengyouPT_OnEvent(event)
 
 	if(event == "OPEN_WINDOW") then		
 		if( arg0 == "PlayerZhengyouPTWindow") then
-			--Èç¹ûÒÑ¾­ÏÔÊ¾¾ÍÓ¦¸Ã¹Øµô
+			--å¦‚æœå·²ç»æ˜¾ç¤ºå°±åº”è¯¥å…³æ‰
 			if ( this:IsVisible() ) then
 			   this:Hide();
 			   return;
@@ -309,7 +309,7 @@ function PlayerZhengyouPT_OnEvent(event)
 
 	elseif (event == "ZHENGYOUPT_RESPONSE_QUERYRESULT") then
 		--PushDebugMessage ("sOptType = "..arg0..", sRet = "..arg1..", eType = "..arg2..", iReserve = "..arg3)
-	  PlayerZhengyouPT_OnQueryResponse(arg0, arg1, arg2, arg3);			-- Ö´ĞĞ²Ù×÷µÄ·´À¡´¦Àí
+	  PlayerZhengyouPT_OnQueryResponse(arg0, arg1, arg2, arg3);			-- æ‰§è¡Œæ“ä½œçš„åé¦ˆå¤„ç†
 
 	elseif ("ZHENGYOUPT_RESPONSE_PLAYERDETAILINFO" 	== event) then
 		--PushDebugMessage ("sResult = "..arg0..", sMyInfo = "..arg1..", sType = "..arg2)
@@ -317,115 +317,115 @@ function PlayerZhengyouPT_OnEvent(event)
 
 	elseif ("ZHENGYOUPT_FOCUSROW" == event) then
 		--PushDebugMessage ("iRowIndex = "..arg0..", iPageNo = "..arg1)
-	  PlayerZhengyouPT_SetFocusRowAndPageNo(arg0, arg1);						-- Ñ¡ÖĞĞĞºÅ¡¢Ò³ºÅ
+	  PlayerZhengyouPT_SetFocusRowAndPageNo(arg0, arg1);						-- é€‰ä¸­è¡Œå·ã€é¡µå·
 
 	elseif ("ZHENGYOUPT_RESPONSE_SEARCHPLAYERLIST" == event ) then
 		--PushDebugMessage ("sRet = "..arg0..", eType = "..arg2)
-		PlayerZhengyouPT_OnSearchPlayerResponse(arg0, arg2); 					-- µÚ3¸ö²ÎÊı±íÊ¾ÀàĞÍ£¬ÎªintÖµ
+		PlayerZhengyouPT_OnSearchPlayerResponse(arg0, arg2); 					-- ç¬¬3ä¸ªå‚æ•°è¡¨ç¤ºç±»å‹ï¼Œä¸ºintå€¼
 	end
 
 end
 
--- ³õÊ¼»¯Íæ¼ÒÕ÷ÓÑÆ½Ì¨´°¿Ú
+-- åˆå§‹åŒ–ç©å®¶å¾å‹å¹³å°çª—å£
 function InitAndShowZhengyouWindow()
 	PlayerZhengyouPT_UpdateBtnStatus();
-	PlayerZhengyouPT_CleanPlayerList(); --ĞèÒªÏÈÇå³ıÁĞ±í£¬·ÀÖ¹ÏÔÊ¾ÎŞÓÃµÄ
-	PlayerZhengyouPT_SetCurrentTab(6);	-- Ä¬ÈÏÑ¡ÖĞ¡°×îÍúÈËÆø¡±ÆµµÀ
+	PlayerZhengyouPT_CleanPlayerList(); --éœ€è¦å…ˆæ¸…é™¤åˆ—è¡¨ï¼Œé˜²æ­¢æ˜¾ç¤ºæ— ç”¨çš„
+	PlayerZhengyouPT_SetCurrentTab(6);	-- é»˜è®¤é€‰ä¸­â€œæœ€æ—ºäººæ°”â€é¢‘é“
 	this:Show();
 
-	-- ´Ë´¦ÇëÇóÏÔÊ¾¡°×îÍúÈËÆø¡±ÀàĞÍµÄÁĞ±í
-	RequestFindFriendList(g_curChannel, g_curPageIndex); -- 6ÀàĞÍ£¬µÚ1Ò³	
+	-- æ­¤å¤„è¯·æ±‚æ˜¾ç¤ºâ€œæœ€æ—ºäººæ°”â€ç±»å‹çš„åˆ—è¡¨
+	RequestFindFriendList(g_curChannel, g_curPageIndex); -- 6ç±»å‹ï¼Œç¬¬1é¡µ	
 end
 
---¸üĞÂÍæ¼ÒÁĞ±í
+--æ›´æ–°ç©å®¶åˆ—è¡¨
 function PlayerZhengyouPT_UpdateFriendList(iTotal, iTotalOfCurPage)
 	--PushDebugMessage("UpdateFriendList : CurrentChannel = "..g_curChannel)
 
 	PlayerZhengyouPT_CleanPlayerList();
 
-	--¸ù¾İ´ËÀàĞÍÍæ¼Ò×ÜÊı¼ÆËãÒ³Êı
+	--æ ¹æ®æ­¤ç±»å‹ç©å®¶æ€»æ•°è®¡ç®—é¡µæ•°
 	g_totalPlayerCount = iTotal;
 	
-	-- ÆäËûÆµµÀÒ³Êı
+	-- å…¶ä»–é¢‘é“é¡µæ•°
 	if (math.mod(g_totalPlayerCount, MAXCOUNTPERPAGE) ~= 0 ) then
 		g_totalPageCount = math.floor(g_totalPlayerCount / MAXCOUNTPERPAGE) + 1;
 	else
 		g_totalPageCount = math.floor(g_totalPlayerCount / MAXCOUNTPERPAGE);
 	end
 	
-	-- ÆäËûÆµµÀ×î¶àÏÔÊ¾µÄÒ³Êı
+	-- å…¶ä»–é¢‘é“æœ€å¤šæ˜¾ç¤ºçš„é¡µæ•°
 	if(g_totalPageCount > MAXPAGECOUNT) then
 		g_totalPageCount = MAXPAGECOUNT;
 	end
 
-	-- ÈËÆøÆµµÀÒ³Êı
+	-- äººæ°”é¢‘é“é¡µæ•°
 	if (math.mod(g_totalPlayerCount, MAXCOUNTPERPAGE) ~= 0 ) then
 		g_totalVotePageCount = math.floor(g_totalPlayerCount / MAXCOUNTPERPAGE) + 1;
 	else
 		g_totalVotePageCount = math.floor(g_totalPlayerCount / MAXCOUNTPERPAGE);
 	end
 	
-	-- ÈËÆøÆµµÀ×î¶àÏÔÊ¾µÄÒ³Êı	
+	-- äººæ°”é¢‘é“æœ€å¤šæ˜¾ç¤ºçš„é¡µæ•°	
 	if(g_totalVotePageCount > MAXVOTEPAGECOUNT) then
 		g_totalVotePageCount = MAXVOTEPAGECOUNT;
 	end
 
-	-- È¡µÃµ±Ç°Ò³ÃæÍæ¼ÒµÄÊıÄ¿
+	-- å–å¾—å½“å‰é¡µé¢ç©å®¶çš„æ•°ç›®
 	local playercount = iTotalOfCurPage;
 	local i = 0;
 	for i = 0, playercount -1 do
 		local iGuid, strName, iGender, iRenqi, iType, iLevel;
 		if (g_curChannel ~= 6) then			
-			-- Èç¹û²»ÊÇ¡°×îÍúÈËÆø¡±ÆµµÀ£¬°´·¢²¼Ê±¼äµÄÏÈºóÀ´ÏÔÊ¾
+			-- å¦‚æœä¸æ˜¯â€œæœ€æ—ºäººæ°”â€é¢‘é“ï¼ŒæŒ‰å‘å¸ƒæ—¶é—´çš„å…ˆåæ¥æ˜¾ç¤º
 			iGuid, strName, iGender, iRenqi, iType, iLevel = PlayerZhengyouPT_GetPlayerSimpleInfo(i);
 		else
-			-- ¡°ÈËÆø×îÍú¡±ÆµµÀ£¬°´ÕÕÈËÆøµÄ¸ßµÍË³ĞòÀ´ÏÔÊ¾
+			-- â€œäººæ°”æœ€æ—ºâ€é¢‘é“ï¼ŒæŒ‰ç…§äººæ°”çš„é«˜ä½é¡ºåºæ¥æ˜¾ç¤º
 			iGuid, strName, iGender, iRenqi, iType, iLevel = PlayerZhengyouPT_GetPlayerSimpleVoteInfoByPos(i);			
 		end
 			
-		-- µÚ1ÁĞ£ºĞÕÃû
+		-- ç¬¬1åˆ—ï¼šå§“å
 		PlayerZhengyouPT_List:AddNewItem(strName, 0, i);
 		
-		-- µÚ2ÁĞ£ºÀàĞÍ or µÈ¼¶
+		-- ç¬¬2åˆ—ï¼šç±»å‹ or ç­‰çº§
 		if ( 0 == g_curChannel or 5 == g_curChannel or 6 == g_curChannel) then
-			-- È«²¿¡¢²éÑ¯½á¹û¡¢×îÍúÈËÆøÆµµÀÀïÏÔÊ¾ÀàĞÍ
+			-- å…¨éƒ¨ã€æŸ¥è¯¢ç»“æœã€æœ€æ—ºäººæ°”é¢‘é“é‡Œæ˜¾ç¤ºç±»å‹
 		  PlayerZhengyouPT_List:AddNewItem(PlayerZhengyouPT_GetTypeName(iType), 1, i);
 		else
-			-- ¾ßÌåÀàĞÍÀïÏÔÊ¾µÈ¼¶
+			-- å…·ä½“ç±»å‹é‡Œæ˜¾ç¤ºç­‰çº§
 		  PlayerZhengyouPT_List:AddNewItem(iLevel, 1, i);			
 		end
 		
-		-- µÚ3ÁĞ£ºĞÔ±ğ
+		-- ç¬¬3åˆ—ï¼šæ€§åˆ«
 		PlayerZhengyouPT_List:AddNewItem(PlayerZhengyouPT_GetGenderDesc(iGender), 2, i);
 
-		-- µÚ4ÁĞ£ºÈËÆø(ÈËÆøµÄÆ±ÊıÊÇ¡°Âú×ãÒªÇó¡±¡¢¡°Ìõ¼ş²»´í¡±¡¢¡°ÒªÇóÌ«¸ß¡±¡¢¡°ÎÒÃ»ĞËÈ¤¡±Õâ4ÏîµÄ×ÜÆ±Êı)
-		-- ¸ù¾İÈËÆø¼Ó±ê¼Ç
+		-- ç¬¬4åˆ—ï¼šäººæ°”(äººæ°”çš„ç¥¨æ•°æ˜¯â€œæ»¡è¶³è¦æ±‚â€ã€â€œæ¡ä»¶ä¸é”™â€ã€â€œè¦æ±‚å¤ªé«˜â€ã€â€œæˆ‘æ²¡å…´è¶£â€è¿™4é¡¹çš„æ€»ç¥¨æ•°)
+		-- æ ¹æ®äººæ°”åŠ æ ‡è®°
 		local strRenqi;
 		if (iRenqi >= 80) then
-			strRenqi = tostring(iRenqi) .. "" .. "#cff0000£¨Âú£©";
+			strRenqi = tostring(iRenqi) .. "" .. "#cff0000ï¼ˆæ»¡ï¼‰";
 		elseif ( iRenqi >= 60 ) then
-			strRenqi = tostring(iRenqi) .. "" .. "#cff6633£¨ÈÈ£©";
+			strRenqi = tostring(iRenqi) .. "" .. "#cff6633ï¼ˆçƒ­ï¼‰";
 		else
 			strRenqi = tostring(iRenqi);
 		end
 		PlayerZhengyouPT_List:AddNewItem(strRenqi, 3, i);
 	end	
 	
-	-- ¸üĞÂÏÂÃæµÄº¯ÊıÖĞÖ¸¶¨µÄ¼¸¸ö°´Å¥×´Ì¬
+	-- æ›´æ–°ä¸‹é¢çš„å‡½æ•°ä¸­æŒ‡å®šçš„å‡ ä¸ªæŒ‰é’®çŠ¶æ€
 	PlayerZhengyouPT_UpdateBtnStatus();
 end
 
--- µÃµ½µ±Ç°Ò³ÉÏµÚiIdx¸öÍæ¼ÒµÄÏÔÊ¾ĞÅÏ¢£¨°´·¢²¼Ê±¼äÏÈºóÅÅÁĞ£©
+-- å¾—åˆ°å½“å‰é¡µä¸Šç¬¬iIdxä¸ªç©å®¶çš„æ˜¾ç¤ºä¿¡æ¯ï¼ˆæŒ‰å‘å¸ƒæ—¶é—´å…ˆåæ’åˆ—ï¼‰
 function PlayerZhengyouPT_GetPlayerSimpleInfo(iIdx)	
 	return FindFriendDataPool:GetSimpleInfoByPos(iIdx);	
 end
 
--- µÃµ½µ±Ç°Ò³ÉÏµÚiIdx¸öÍæ¼ÒµÄÏÔÊ¾ĞÅÏ¢£¨°´Í¶Æ±ÊıÄ¿¶àÉÙÅÅÁĞ£©
+-- å¾—åˆ°å½“å‰é¡µä¸Šç¬¬iIdxä¸ªç©å®¶çš„æ˜¾ç¤ºä¿¡æ¯ï¼ˆæŒ‰æŠ•ç¥¨æ•°ç›®å¤šå°‘æ’åˆ—ï¼‰
 function PlayerZhengyouPT_GetPlayerSimpleVoteInfoByPos(iIdx)
 	return FindFriendDataPool:GetSimpleVoteInfoByPos(iIdx);	
 end
 
--- ·­Ò³
+-- ç¿»é¡µ
 function OnPlayerZhengyouPT_PageUpClicked()
 	if not PlayerZhengyouPT_PassTime(TIMER_COMMONBTN, MIN_BTNTIME) then
 		PushDebugMessage(g_strWaitClickTipText);
@@ -438,7 +438,7 @@ function OnPlayerZhengyouPT_PageUpClicked()
 		g_curPageIndex = 1;
 	end
 	
-	RequestFindFriendList(g_curChannel, g_curPageIndex);	-- ÇëÇóµ±Ç°ÆµµÀ¡¢µ±Ç°Ò³µÄĞÅÏ¢ÁĞ±í
+	RequestFindFriendList(g_curChannel, g_curPageIndex);	-- è¯·æ±‚å½“å‰é¢‘é“ã€å½“å‰é¡µçš„ä¿¡æ¯åˆ—è¡¨
 end
 
 function OnPlayerZhengyouPT_PageDownClicked()
@@ -450,32 +450,32 @@ function OnPlayerZhengyouPT_PageDownClicked()
 	g_curPageIndex = g_curPageIndex + 1;
 	PlayerZhengyouPT_UpdateBtnStatus();
 	
-	RequestFindFriendList(g_curChannel, g_curPageIndex);	-- ÇëÇóµ±Ç°ÆµµÀ¡¢µ±Ç°Ò³µÄĞÅÏ¢ÁĞ±í
+	RequestFindFriendList(g_curChannel, g_curPageIndex);	-- è¯·æ±‚å½“å‰é¢‘é“ã€å½“å‰é¡µçš„ä¿¡æ¯åˆ—è¡¨
 end
 
--- ¸üĞÂ¡°Ê×Ò³¡±¡¢¡°Ä©Ò³¡±¡¢¡°Ç°Ò»Ò³¡±¡¢¡°ºóÒ»Ò³¡±Õâ4¸ö°´Å¥ºÍÒ³ÂëÏÔÊ¾µÄ×´Ì¬
+-- æ›´æ–°â€œé¦–é¡µâ€ã€â€œæœ«é¡µâ€ã€â€œå‰ä¸€é¡µâ€ã€â€œåä¸€é¡µâ€è¿™4ä¸ªæŒ‰é’®å’Œé¡µç æ˜¾ç¤ºçš„çŠ¶æ€
 function PlayerZhengyouPT_UpdateBtnStatus()
-	-- ÈËÆøÆµµÀ
+	-- äººæ°”é¢‘é“
 	if (g_curChannel == 6) then
-		-- µ±Ç°µÚ1Ò³£º½ûÓÃ¡°Ç°Ò»Ò³¡±¡¢¡°Ê×Ò³¡±
+		-- å½“å‰ç¬¬1é¡µï¼šç¦ç”¨â€œå‰ä¸€é¡µâ€ã€â€œé¦–é¡µâ€
 		if( g_curPageIndex <= 1 ) then
 			BtnPageUpDown[1]:Disable();
 			PlayerZhengyouPT_FirstPage:Disable();
 		end
   	
-		-- µ±Ç°×îºóÒ»Ò³£º½ûÓÃ¡°ºóÒ»Ò³¡±¡¢¡°Ä©Ò³¡±
+		-- å½“å‰æœ€åä¸€é¡µï¼šç¦ç”¨â€œåä¸€é¡µâ€ã€â€œæœ«é¡µâ€
 		if( g_curPageIndex >= g_totalVotePageCount ) then
 			BtnPageUpDown[2]:Disable();
 			PlayerZhengyouPT_LastPage:Disable();
 		end
   	
-		-- µ±Ç°²»ÊÇµÚ1Ò³£º¼¤»î¡°Ç°Ò»Ò³¡±¡¢¡°Ê×Ò³¡±
+		-- å½“å‰ä¸æ˜¯ç¬¬1é¡µï¼šæ¿€æ´»â€œå‰ä¸€é¡µâ€ã€â€œé¦–é¡µâ€
 		if (g_curPageIndex > 1 ) then 
 			BtnPageUpDown[1]:Enable(); 
 			PlayerZhengyouPT_FirstPage:Enable();
 		end
   	
-		-- µ±Ç°²»ÊÇ×îºóÒ»Ò³£º¼¤»î¡°ºóÒ»Ò³¡±¡¢¡°Ä©Ò³¡±
+		-- å½“å‰ä¸æ˜¯æœ€åä¸€é¡µï¼šæ¿€æ´»â€œåä¸€é¡µâ€ã€â€œæœ«é¡µâ€
 		if (g_curPageIndex < g_totalVotePageCount ) then 
 			BtnPageUpDown[2]:Enable(); 
 			PlayerZhengyouPT_LastPage:Enable();
@@ -486,33 +486,33 @@ function PlayerZhengyouPT_UpdateBtnStatus()
 			curPage = g_totalVotePageCount;
 		end
   	
-		-- ¸üĞÂAmount¿Ø¼şÏÔÊ¾µÄ¡°µ±Ç°Ò³/ËùÓĞÒ³¡±
+		-- æ›´æ–°Amountæ§ä»¶æ˜¾ç¤ºçš„â€œå½“å‰é¡µ/æ‰€æœ‰é¡µâ€
 		PlayerZhengyouPT_Amount:SetText(curPage.."/"..g_totalVotePageCount);
 		
-		-- ¸üĞÂGotoEditBox¿Ø¼şÏÔÊ¾µÄĞèÒªÇ°ÍùµÄÒ³Âë
+		-- æ›´æ–°GotoEditBoxæ§ä»¶æ˜¾ç¤ºçš„éœ€è¦å‰å¾€çš„é¡µç 
 		PlayerZhengyouPT_GotoEditBox:SetText(tostring(g_curPageIndex));
 
-	-- ÆäËûÆµµÀ
+	-- å…¶ä»–é¢‘é“
 	else	
-		-- µ±Ç°µÚ1Ò³£º½ûÓÃ¡°Ç°Ò»Ò³¡±¡¢¡°Ê×Ò³¡±
+		-- å½“å‰ç¬¬1é¡µï¼šç¦ç”¨â€œå‰ä¸€é¡µâ€ã€â€œé¦–é¡µâ€
 		if( g_curPageIndex <= 1 ) then
 			BtnPageUpDown[1]:Disable();
 			PlayerZhengyouPT_FirstPage:Disable();
 		end
   	
-		-- µ±Ç°×îºóÒ»Ò³£º½ûÓÃ¡°ºóÒ»Ò³¡±¡¢¡°Ä©Ò³¡±
+		-- å½“å‰æœ€åä¸€é¡µï¼šç¦ç”¨â€œåä¸€é¡µâ€ã€â€œæœ«é¡µâ€
 		if( g_curPageIndex >= g_totalPageCount ) then
 			BtnPageUpDown[2]:Disable();
 			PlayerZhengyouPT_LastPage:Disable();
 		end
   	
-		-- µ±Ç°²»ÊÇµÚ1Ò³£º¼¤»î¡°Ç°Ò»Ò³¡±¡¢¡°Ê×Ò³¡±
+		-- å½“å‰ä¸æ˜¯ç¬¬1é¡µï¼šæ¿€æ´»â€œå‰ä¸€é¡µâ€ã€â€œé¦–é¡µâ€
 		if (g_curPageIndex > 1 ) then 
 			BtnPageUpDown[1]:Enable(); 
 			PlayerZhengyouPT_FirstPage:Enable();
 		end
   	
-		-- µ±Ç°²»ÊÇ×îºóÒ»Ò³£º¼¤»î¡°ºóÒ»Ò³¡±¡¢¡°Ä©Ò³¡±
+		-- å½“å‰ä¸æ˜¯æœ€åä¸€é¡µï¼šæ¿€æ´»â€œåä¸€é¡µâ€ã€â€œæœ«é¡µâ€
 		if (g_curPageIndex < g_totalPageCount ) then 
 			BtnPageUpDown[2]:Enable(); 
 			PlayerZhengyouPT_LastPage:Enable();
@@ -523,10 +523,10 @@ function PlayerZhengyouPT_UpdateBtnStatus()
 			curPage = g_totalPageCount;
 		end
   	
-		-- ¸üĞÂAmount¿Ø¼şÏÔÊ¾µÄ¡°µ±Ç°Ò³/ËùÓĞÒ³¡±
+		-- æ›´æ–°Amountæ§ä»¶æ˜¾ç¤ºçš„â€œå½“å‰é¡µ/æ‰€æœ‰é¡µâ€
 		PlayerZhengyouPT_Amount:SetText(curPage.."/"..g_totalPageCount);
 		
-		-- ¸üĞÂGotoEditBox¿Ø¼şÏÔÊ¾µÄĞèÒªÇ°ÍùµÄÒ³Âë
+		-- æ›´æ–°GotoEditBoxæ§ä»¶æ˜¾ç¤ºçš„éœ€è¦å‰å¾€çš„é¡µç 
 		PlayerZhengyouPT_GotoEditBox:SetText(tostring(g_curPageIndex));
 	end
 end
@@ -541,17 +541,17 @@ function PlayerZhengyouPT_PassTime(iIdx, iSeconds)
    end
 end 
 
--- Ñ¡Ôñ²»Í¬µÄ±êÇ©µÄÏÔÊ¾ ,  ´Ë´¦Ó¦ÑÓÊ±£¬·ÀÖ¹Á¬Ğøµã»÷
+-- é€‰æ‹©ä¸åŒçš„æ ‡ç­¾çš„æ˜¾ç¤º ,  æ­¤å¤„åº”å»¶æ—¶ï¼Œé˜²æ­¢è¿ç»­ç‚¹å‡»
 function PlayerZhengyouPT_ChannalChange(iChannel)
-	-- µã»÷µ±Ç°Ñ¡ÖĞµÄ±êÇ©Ó¦¸ÃÎŞ²Ù×÷
+	-- ç‚¹å‡»å½“å‰é€‰ä¸­çš„æ ‡ç­¾åº”è¯¥æ— æ“ä½œ
 	if (g_curChannel == iChannel) then
 		return;
 	end
 
-	-- ²»ÄÜ¹ıÆµÇĞ»»±êÇ©
+	-- ä¸èƒ½è¿‡é¢‘åˆ‡æ¢æ ‡ç­¾
 	if not PlayerZhengyouPT_PassTime(TIMER_TAB, MIN_TABTIME) then
 		--PlayerZhengyouPT_SetCurrentTab(g_curChannel);
-		-- Ñ¡ÖĞµ±Ç°ÆµµÀ
+		-- é€‰ä¸­å½“å‰é¢‘é“
 		g_Ctrls.Tabs[g_curChannel + 1]:SetCheck(1);
 		PushDebugMessage(g_strWaitClickTipText);
 		return
@@ -559,7 +559,7 @@ function PlayerZhengyouPT_ChannalChange(iChannel)
 	
 	PlayerZhengyouPT_CleanPlayerList();
 	
-	-- µãµ½²éÑ¯tabÊ±Ó¦Çå³ıÁĞ±íµ«²»Ìá½»ÇëÇó
+	-- ç‚¹åˆ°æŸ¥è¯¢tabæ—¶åº”æ¸…é™¤åˆ—è¡¨ä½†ä¸æäº¤è¯·æ±‚
 	--if ( 5 == iChannel ) then
 	   --return;
 	--end 
@@ -569,34 +569,34 @@ function PlayerZhengyouPT_ChannalChange(iChannel)
 	g_totalPageCount 	= 0;
 	g_totalVotePageCount = 0;
 	
-	PlayerZhengyouPT_UpdateBtnStatus(); --·ÀÖ¹µãµ½¿ÕÒ³Ê±°´Å¥Ã»±ä»Ò
+	PlayerZhengyouPT_UpdateBtnStatus(); --é˜²æ­¢ç‚¹åˆ°ç©ºé¡µæ—¶æŒ‰é’®æ²¡å˜ç°
 	
 	PlayerZhengyouPT_SetCurrentTab(iChannel);
 	
-	RequestFindFriendList(g_curChannel, g_curPageIndex);	-- ÇëÇóµ±Ç°ÆµµÀ¡¢µ±Ç°Ò³µÄĞÅÏ¢ÁĞ±í
+	RequestFindFriendList(g_curChannel, g_curPageIndex);	-- è¯·æ±‚å½“å‰é¢‘é“ã€å½“å‰é¡µçš„ä¿¡æ¯åˆ—è¡¨
 end
 
--- È«²¿µÄ×´Ì¬ÏÂ´ò¿ª¡°·¢²¼¡±ĞÅÏ¢½çÃæ£¬ÔÚ¾ßÌåÀàĞÍ±êÇ©ÏÂ´ò¿ªÌõ¼şÉè¶¨½çÃæ
+-- å…¨éƒ¨çš„çŠ¶æ€ä¸‹æ‰“å¼€â€œå‘å¸ƒâ€ä¿¡æ¯ç•Œé¢ï¼Œåœ¨å…·ä½“ç±»å‹æ ‡ç­¾ä¸‹æ‰“å¼€æ¡ä»¶è®¾å®šç•Œé¢
 function OnPlayerZhengyouPT_FabuClicked()
 	local level = Player:GetData("LEVEL");
 	if level < LEVEL_LIMIT then
-		PushDebugMessage("¶Ô²»Æğ£¬±ØĞëµÈ¼¶´ïµ½" .. LEVEL_LIMIT .. "¼¶²Å¿ÉÒÔ·¢²¼" .. PlayerZhengyouPT_GetTypeName(g_curChannel) .. "ĞÅÏ¢¡£");
+		PushDebugMessage("å¯¹ä¸èµ·ï¼Œå¿…é¡»ç­‰çº§è¾¾åˆ°" .. LEVEL_LIMIT .. "çº§æ‰å¯ä»¥å‘å¸ƒ" .. PlayerZhengyouPT_GetTypeName(g_curChannel) .. "ä¿¡æ¯ã€‚");
 		return;
 	end
-	-- Ñ¡ÔñÁË¾ßÌåÀàĞÍÔòÖ±½Ó²éÑ¯ÊÇ·ñÂú×ã·¢²¼Ìõ¼ş£¬·ñÔò´ò¿ªÀàĞÍÑ¡Ôñ½çÃæ
+	-- é€‰æ‹©äº†å…·ä½“ç±»å‹åˆ™ç›´æ¥æŸ¥è¯¢æ˜¯å¦æ»¡è¶³å‘å¸ƒæ¡ä»¶ï¼Œå¦åˆ™æ‰“å¼€ç±»å‹é€‰æ‹©ç•Œé¢
 	if ( not PlayerZhengyouPT_SendCheckRequest(g_curChannel, OPT_CHECK_FABU) ) then
-		OpenWindow("ZhengyouInfoFabu_fabu"); --Ã»Ñ¡Ôñ¾ßÌå·¢²¼ÀàĞÍ		
+		OpenWindow("ZhengyouInfoFabu_fabu"); --æ²¡é€‰æ‹©å…·ä½“å‘å¸ƒç±»å‹		
 	end
 end
 
--- È«²¿µÄ×´Ì¬ÏÂ´ò¿ª¡°³·Ïú¡±ĞÅÏ¢½çÃæ£¬ÔÚ¾ßÌåÀàĞÍ±êÇ©ÏÂ´ò¿ªÌõ¼şÉè¶¨½çÃæ
+-- å…¨éƒ¨çš„çŠ¶æ€ä¸‹æ‰“å¼€â€œæ’¤é”€â€ä¿¡æ¯ç•Œé¢ï¼Œåœ¨å…·ä½“ç±»å‹æ ‡ç­¾ä¸‹æ‰“å¼€æ¡ä»¶è®¾å®šç•Œé¢
 function OnPlayerZhengyouPT_ChexiaoClicked()
 	if ( not PlayerZhengyouPT_SendCheckRequest(g_curChannel, OPT_CHECK_CHEXIAO) ) then
-		OpenWindow("ZhengyouInfoFabu_chexiao");	--Ã»Ñ¡Ôñ¾ßÌå·¢²¼ÀàĞÍ		
+		OpenWindow("ZhengyouInfoFabu_chexiao");	--æ²¡é€‰æ‹©å…·ä½“å‘å¸ƒç±»å‹		
 	end
 end
 
--- È«²¿µÄ×´Ì¬ÏÂ´ò¿ª¡°¹ÜÀí¡±ĞÅÏ¢½çÃæ£¬ÔÚ¾ßÌåÀàĞÍ±êÇ©ÏÂ´ò¿ªÌõ¼şÉè¶¨½çÃæ
+-- å…¨éƒ¨çš„çŠ¶æ€ä¸‹æ‰“å¼€â€œç®¡ç†â€ä¿¡æ¯ç•Œé¢ï¼Œåœ¨å…·ä½“ç±»å‹æ ‡ç­¾ä¸‹æ‰“å¼€æ¡ä»¶è®¾å®šç•Œé¢
 function OnPlayerZhengyouPT_GuanliClicked()
 	if not PlayerZhengyouPT_PassTime(TIMER_COMMONBTN, MIN_BTNTIME) then
 		PushDebugMessage(g_strWaitClickTipText);
@@ -604,24 +604,24 @@ function OnPlayerZhengyouPT_GuanliClicked()
 	end
 	
 	if ( not PlayerZhengyouPT_SendCheckRequest(g_curChannel, OPT_CHECK_GUANLI) ) then
-		OpenWindow("ZhengyouInfoFabu_guanli");	--Ã»Ñ¡Ôñ¾ßÌå·¢²¼ÀàĞÍ		
+		OpenWindow("ZhengyouInfoFabu_guanli");	--æ²¡é€‰æ‹©å…·ä½“å‘å¸ƒç±»å‹		
 	end
 end
 
--- Ö´ĞĞ·¢²¼¡¢³·Ïú»ò¹ÜÀíµÄÇëÇó
--- eType : Õ÷ÓÑÀàĞÍ
--- opt   : Ö´ĞĞµÄÇëÇóÀàĞÍ£º·¢²¼, ³·Ïú ,¹ÜÀí
+-- æ‰§è¡Œå‘å¸ƒã€æ’¤é”€æˆ–ç®¡ç†çš„è¯·æ±‚
+-- eType : å¾å‹ç±»å‹
+-- opt   : æ‰§è¡Œçš„è¯·æ±‚ç±»å‹ï¼šå‘å¸ƒ, æ’¤é”€ ,ç®¡ç†
 function PlayerZhengyouPT_SendCheckRequest(eType, opt)
 	if (not PlayerZhengyouPT_IsRealType(eType) ) then
 	    return false;
 	end
 	
-	-- ·¢ËÍ¾ßÌå²éÑ¯ÇëÇó
+	-- å‘é€å…·ä½“æŸ¥è¯¢è¯·æ±‚
 	FindFriendQuery(opt, eType, g_curChannel);
 	return true;
 end
 
--- Íæ¼ÒÈ·ÈÏÒª³·Ïú
+-- ç©å®¶ç¡®è®¤è¦æ’¤é”€
 function PlayerZhengyouPT_MessageChexiaoOK(eType)
 	RequestDeleteFindFriendInfo(tonumber(eType), g_curChannel);
 end
@@ -630,36 +630,36 @@ function PlayerZhengyouPT_MessageChexiaoCancel()
 
 end
 
--- Ö´ĞĞ²Ù×÷µÄ·´À¡´¦Àí 
+-- æ‰§è¡Œæ“ä½œçš„åé¦ˆå¤„ç† 
 function PlayerZhengyouPT_OnQueryResponse(sOptType, sRet, eType, iReserve)
 	local iType = tonumber(eType);
 	if ( nil == iType ) then
-	    PushDebugMessage("Õ÷ÓÑ²Ù×÷·µ»ØÁË´íÎóĞÅÏ¢");
+	    PushDebugMessage("å¾å‹æ“ä½œè¿”å›äº†é”™è¯¯ä¿¡æ¯");
 	    return;
 	end
 
-	-- ¹ÜÀí
+	-- ç®¡ç†
 	if ( "check_guanli" == sOptType ) then
 	    if ( "ok" == sRet ) then
-				-- ¶¨Î»µ½¹ÜÀíµÄÏàÓ¦ÀàĞÍ±êÇ©
+				-- å®šä½åˆ°ç®¡ç†çš„ç›¸åº”ç±»å‹æ ‡ç­¾
 				PlayerZhengyouPT_SetCurrentTab(iType); 
 	    elseif ( "noinfo" == sRet ) then
 	      PushDebugMessage("#{ZYPT_081103_068}" .. PlayerZhengyouPT_GetTypeName(iType) .. "#{ZYPT_081103_073}");
 	    end
 
-	-- ÊÇ·ñ¿ÉÒÔ³·Ïú
+	-- æ˜¯å¦å¯ä»¥æ’¤é”€
 	elseif ( "check_chexiao" == sOptType ) then
-	    if ("sure"  == sRet ) then -- ÒªÇóÈ·ÈÏÉ¾³ı
+	    if ("sure"  == sRet ) then -- è¦æ±‚ç¡®è®¤åˆ é™¤
 	      MessageBoxCommon("#{ZYPT_081103_101}", "#{ZYPT_081103_070}" .. PlayerZhengyouPT_GetTypeName(iType) .. "#{ZYPT_081103_071}",
 				"PlayerZhengyouPT", "MessageChexiaoOK(" .. iType .. ")", "MessageChexiaoCancel()");
 	    elseif ("noinfo" == sRet) then
 	      PushDebugMessage("#{ZYPT_081103_068}" .. PlayerZhengyouPT_GetTypeName(iType) .. "#{ZYPT_081103_069}");
 	    end
 
-	-- ÊÇ·ñ¿ÉÒÔ·¢²¼
+	-- æ˜¯å¦å¯ä»¥å‘å¸ƒ
 	elseif ( "check_fabu" == sOptType ) then
 	    if ( "ok" == sRet) then
-	      --PushDebugMessage("ÌáÊ¾·¢²¼Ìõ¼ş");
+	      --PushDebugMessage("æç¤ºå‘å¸ƒæ¡ä»¶");
 	    elseif ( "in24hours" == sRet ) then
 	      PushDebugMessage("#{ZYPT_081103_060}" .. PlayerZhengyouPT_GetTypeName(iType) .. "#{ZYPT_081103_061}");
 	    elseif ( "exist" == sRet ) then
@@ -668,50 +668,50 @@ function PlayerZhengyouPT_OnQueryResponse(sOptType, sRet, eType, iReserve)
 	      PushDebugMessage("#{ZYPT_081103_062}" .. PlayerZhengyouPT_GetTypeName(iType) .. "#{ZYPT_081103_063}");
 	    end
 
-	-- ·¢²¼
+	-- å‘å¸ƒ
 	elseif ( "fabu" == sOptType ) then
 		if ( "ok" == sRet ) then
-		  PushDebugMessage("#{ZYPT_081103_106}" .. PlayerZhengyouPT_GetTypeName(iType) .. "#{ZYPT_081103_107}");    -- ·¢²¼³É¹¦µÄÌáÊ¾ 
-		  -- ·¢²¼ºó£¬ÇĞ»»µ½·¢²¼ÀàĞÍ¶ÔÓ¦µÄÆµµÀ
+		  PushDebugMessage("#{ZYPT_081103_106}" .. PlayerZhengyouPT_GetTypeName(iType) .. "#{ZYPT_081103_107}");    -- å‘å¸ƒæˆåŠŸçš„æç¤º 
+		  -- å‘å¸ƒåï¼Œåˆ‡æ¢åˆ°å‘å¸ƒç±»å‹å¯¹åº”çš„é¢‘é“
 		  PlayerZhengyouPT_SetCurrentTab(iType);
 		end
 
-	-- ²é¿´
+	-- æŸ¥çœ‹
 	elseif ("view_vote" == sOptType) then
 		if ( "noinfo" == sRet ) then 
-		  PushDebugMessage("¶Ô²»Æğ£¬ÄúÒªÍ¶Æ±µÄĞÅÏ¢²»´æÔÚ¡£");		-- Ó¦¸Ã²»»áÖ´ĞĞµ½ÕâÀï
+		  PushDebugMessage("å¯¹ä¸èµ·ï¼Œæ‚¨è¦æŠ•ç¥¨çš„ä¿¡æ¯ä¸å­˜åœ¨ã€‚");		-- åº”è¯¥ä¸ä¼šæ‰§è¡Œåˆ°è¿™é‡Œ
 		end
 
-	-- Í¶Æ±
+	-- æŠ•ç¥¨
   elseif ("vote" == sOptType) then
     if ("done" == sRet) then
-      PushDebugMessage("#{ZYPT_081103_080}"); --("¶Ô²»Æğ£¬ÄúÒÑ¾­¶Ô±¾ÌõĞÅÏ¢Í¶¹ıÆ±ÁË£¬ÎŞĞèÔÙ´ÎÍ¶Æ±¡£");
+      PushDebugMessage("#{ZYPT_081103_080}"); --("å¯¹ä¸èµ·ï¼Œæ‚¨å·²ç»å¯¹æœ¬æ¡ä¿¡æ¯æŠ•è¿‡ç¥¨äº†ï¼Œæ— éœ€å†æ¬¡æŠ•ç¥¨ã€‚");
     elseif("full" == sRet) then
-      PushDebugMessage("#{ZYPT_081103_079}"); --("¶Ô²»Æğ£¬±¾ÌõĞÅÏ¢Í¶Æ±ÈËÊıÒÑÂú£¬ÎŞ·¨½øĞĞÍ¶Æ±¡£");
+      PushDebugMessage("#{ZYPT_081103_079}"); --("å¯¹ä¸èµ·ï¼Œæœ¬æ¡ä¿¡æ¯æŠ•ç¥¨äººæ•°å·²æ»¡ï¼Œæ— æ³•è¿›è¡ŒæŠ•ç¥¨ã€‚");
 		elseif("ok" == sRet) then
-		  -- Èç¹ûÊÇÔÚ²éÑ¯½á¹ûÆµµÀ£¬ÇĞtabºÍ¸øÌáÊ¾
-		  -- ×¢Òâ£º×îÍúÈËÆøÆµµÀ²»ÇĞTab£¬Í¶Æ±ºóÈÔÏÔÊ¾×îÍúÈËÆøÒ³Ãæ£¡£¡£¡
+		  -- å¦‚æœæ˜¯åœ¨æŸ¥è¯¢ç»“æœé¢‘é“ï¼Œåˆ‡tabå’Œç»™æç¤º
+		  -- æ³¨æ„ï¼šæœ€æ—ºäººæ°”é¢‘é“ä¸åˆ‡Tabï¼ŒæŠ•ç¥¨åä»æ˜¾ç¤ºæœ€æ—ºäººæ°”é¡µé¢ï¼ï¼ï¼
       if (g_curChannel == 5) then
-        PlayerZhengyouPT_SetCurrentTab(iType); 		-- Èç¹ûÊÇÔÚ²éÑ¯½á¹ûÆµµÀ£¬Í¶Æ±Íê³Éºó£¬ÇĞ»»µ½Í¶Æ±ÀàĞÍ¶ÔÓ¦µÄÆµµÀ
+        PlayerZhengyouPT_SetCurrentTab(iType); 		-- å¦‚æœæ˜¯åœ¨æŸ¥è¯¢ç»“æœé¢‘é“ï¼ŒæŠ•ç¥¨å®Œæˆåï¼Œåˆ‡æ¢åˆ°æŠ•ç¥¨ç±»å‹å¯¹åº”çš„é¢‘é“
       end		    
-		  local sVoteOkTip = string.format("ÄúÒÑ¾­³É¹¦Í¶Æ±¸ø%s", FindFriendDataPool:GetDetailInfo("NAME") );
+		  local sVoteOkTip = string.format("æ‚¨å·²ç»æˆåŠŸæŠ•ç¥¨ç»™%s", FindFriendDataPool:GetDetailInfo("NAME") );
 		  PushDebugMessage( sVoteOkTip );
     end
 
-  -- ³·Ïú
+  -- æ’¤é”€
   elseif ("delete" == sOptType) then
 	  if( "ok" == sRet ) then
-	  	-- ³·Ïúºó£¬ÇĞ»»µ½·¢²¼ÀàĞÍ¶ÔÓ¦µÄÆµµÀ
+	  	-- æ’¤é”€åï¼Œåˆ‡æ¢åˆ°å‘å¸ƒç±»å‹å¯¹åº”çš„é¢‘é“
     	PlayerZhengyouPT_SetCurrentTab(iType);
-	    PushDebugMessage("Äú³É¹¦³·ÏúÁË" .. PlayerZhengyouPT_GetTypeName(iType) .. "#{ZYPT_081103_107}");
+	    PushDebugMessage("æ‚¨æˆåŠŸæ’¤é”€äº†" .. PlayerZhengyouPT_GetTypeName(iType) .. "#{ZYPT_081103_107}");
 	  end
 
-	-- ¸ü¸ÄÕ÷ÓÑÒªÇó
+	-- æ›´æ”¹å¾å‹è¦æ±‚
 	elseif ("editcondition" == sOptType ) then
 		if( "ok" == sRet ) then
-			-- ¸ü¸ÄÕ÷ÓÑÒªÇóºó£¬ÇĞ»»µ½·¢²¼ÀàĞÍ¶ÔÓ¦µÄÆµµÀ
+			-- æ›´æ”¹å¾å‹è¦æ±‚åï¼Œåˆ‡æ¢åˆ°å‘å¸ƒç±»å‹å¯¹åº”çš„é¢‘é“
     	PlayerZhengyouPT_SetCurrentTab(iType);
-	    PushDebugMessage("ĞŞ¸ÄĞÅÏ¢³É¹¦");
+	    PushDebugMessage("ä¿®æ”¹ä¿¡æ¯æˆåŠŸ");
 	  end
 	end
 
@@ -719,32 +719,32 @@ end
 
 
 	--*****************************************
-	--CEGUIÓĞÒ»´¦Ğ´µÄ²»ºÏÀíµÄµØ·½(Bug?)....µ¼ÖÂ¶àÁĞÁĞ±íÉèÖÃÊôĞÔÊ±»á³öÏÖÒ»Ğ©´íÎó....
-	--¾ßÌåÎª£º
-	--ÔÚXMLÖĞ¸ø¶àÁĞÁĞ±íÅäÖÃÁËColumnsSizable=True....¾Í»áÉèÖÃ¸Ã¿Ø¼şµÄColumnsSizable=True....»¹»áÉèÖÃÆäËùÓĞÁĞµÄColumnsSizable=True....
-	--ÓĞĞ©¶àÁĞÁĞ±íÈç±¾´°¿ÚµÄĞèÒªÔÚ½Å±¾ÖĞ¶¯Ì¬µÄ²åÈëÁĞ....ÕâÊ±XMLÖĞÅäÖÃµÄColumnsSizable=TrueÖ»»áÉèÖÃ¸Ã¿Ø¼şµÄColumnsSizable=True....²»»áÉèÖÃÁĞµÄColumnsSizable=True(ÒòÎªµ±Ê±Ò»¸öÁĞ¶¼Ã»ÓĞ)....
-	--Òò´ËÔÚ½Å±¾ÖĞ¶¯Ì¬²åÈëÁĞºóÁĞµÄColumnsSizableÒòÎªÃ»±»ÉèÖÃ¹ı¾Í²»ÊÇTrue....
-	--Èç¹ûÏëÔÚ¶¯Ì¬²åÈëÁĞºóÔÚ½Å±¾ÀïÔÙÖØĞÂ¸ø¶àÁĞÁĞ±íÉèÖÃColumnsSizable=TrueÒ²²»ĞĞ....
-	--ÒòÎªÉèÖÃ¸ÃÊôĞÔµÄÖµÊ±»áÅĞ¶ÏÊÇ·ñÓëµ±Ç°¸ÃÊôĞÔµÄÖµÒ»Ñù....Èç¹ûÒ»Ñù¾ÍÖ±½Ó·µ»Ø....¶ø¸Ã¿Ø¼şµÄColumnsSizableÔÚ³õÊ¼»¯XMLµÄÊ±ºò±»Éè³ÉTrueÁËËùÒÔ»áÖ±½Ó·µ»Ø....Ò²¾Í²»»á¸øËüµÄÁĞÉèÖÃ¸ÃÊôĞÔ....
-	--Òò´ËÈç¹ûÏë¶¯Ì¬²åÈëÁĞ¾ÍĞèÒªÔÚ¶¯Ì¬²åÈëºóÔÙÉèÖÃºÍÁĞÓĞ¹ØµÄÊôĞÔ....Í¬Ê±ÔÚXMLÖĞ²»ÄÜ¶ÔºÍÁĞÓĞ¹ØµÄÊôĞÔ½øĞĞÉèÖÃ....
+	--CEGUIæœ‰ä¸€å¤„å†™çš„ä¸åˆç†çš„åœ°æ–¹(Bug?)....å¯¼è‡´å¤šåˆ—åˆ—è¡¨è®¾ç½®å±æ€§æ—¶ä¼šå‡ºç°ä¸€äº›é”™è¯¯....
+	--å…·ä½“ä¸ºï¼š
+	--åœ¨XMLä¸­ç»™å¤šåˆ—åˆ—è¡¨é…ç½®äº†ColumnsSizable=True....å°±ä¼šè®¾ç½®è¯¥æ§ä»¶çš„ColumnsSizable=True....è¿˜ä¼šè®¾ç½®å…¶æ‰€æœ‰åˆ—çš„ColumnsSizable=True....
+	--æœ‰äº›å¤šåˆ—åˆ—è¡¨å¦‚æœ¬çª—å£çš„éœ€è¦åœ¨è„šæœ¬ä¸­åŠ¨æ€çš„æ’å…¥åˆ—....è¿™æ—¶XMLä¸­é…ç½®çš„ColumnsSizable=Trueåªä¼šè®¾ç½®è¯¥æ§ä»¶çš„ColumnsSizable=True....ä¸ä¼šè®¾ç½®åˆ—çš„ColumnsSizable=True(å› ä¸ºå½“æ—¶ä¸€ä¸ªåˆ—éƒ½æ²¡æœ‰)....
+	--å› æ­¤åœ¨è„šæœ¬ä¸­åŠ¨æ€æ’å…¥åˆ—ååˆ—çš„ColumnsSizableå› ä¸ºæ²¡è¢«è®¾ç½®è¿‡å°±ä¸æ˜¯True....
+	--å¦‚æœæƒ³åœ¨åŠ¨æ€æ’å…¥åˆ—ååœ¨è„šæœ¬é‡Œå†é‡æ–°ç»™å¤šåˆ—åˆ—è¡¨è®¾ç½®ColumnsSizable=Trueä¹Ÿä¸è¡Œ....
+	--å› ä¸ºè®¾ç½®è¯¥å±æ€§çš„å€¼æ—¶ä¼šåˆ¤æ–­æ˜¯å¦ä¸å½“å‰è¯¥å±æ€§çš„å€¼ä¸€æ ·....å¦‚æœä¸€æ ·å°±ç›´æ¥è¿”å›....è€Œè¯¥æ§ä»¶çš„ColumnsSizableåœ¨åˆå§‹åŒ–XMLçš„æ—¶å€™è¢«è®¾æˆTrueäº†æ‰€ä»¥ä¼šç›´æ¥è¿”å›....ä¹Ÿå°±ä¸ä¼šç»™å®ƒçš„åˆ—è®¾ç½®è¯¥å±æ€§....
+	--å› æ­¤å¦‚æœæƒ³åŠ¨æ€æ’å…¥åˆ—å°±éœ€è¦åœ¨åŠ¨æ€æ’å…¥åå†è®¾ç½®å’Œåˆ—æœ‰å…³çš„å±æ€§....åŒæ—¶åœ¨XMLä¸­ä¸èƒ½å¯¹å’Œåˆ—æœ‰å…³çš„å±æ€§è¿›è¡Œè®¾ç½®....
 	--*****************************************
 	
-	-- ×¢£º ÉÏ±ßµÄ½âÊÍÒı×ÔAutoSearch.lua, ´Ë´¦³¢ÊÔÔÚ½Å±¾ÀïÏÈÉèÖÃ³É×Ô¼ºÒªÉèÖÃ³ÉµÄÊôĞÔÖµµÄÏà·´Öµ£¬ÔÙÉèÖÃ³ÉÄ¿±êÖµ£¬Ö¤Ã÷ÊÇ¿ÉĞĞµÄ¡£ by cuiyinjie 2008-10-29 
-  -- ×¢ÒâÒªÏÈµ÷ÓÃ´Ëº¯ÊıÔÙÍùlistctrlÀï²åÈë£¬·ñÔò»áÉ¾µô1ÁĞµÄĞÅÏ¢¡£ 
--- ¼¤»îÖ¸¶¨µÄ±êÇ© 
+	-- æ³¨ï¼š ä¸Šè¾¹çš„è§£é‡Šå¼•è‡ªAutoSearch.lua, æ­¤å¤„å°è¯•åœ¨è„šæœ¬é‡Œå…ˆè®¾ç½®æˆè‡ªå·±è¦è®¾ç½®æˆçš„å±æ€§å€¼çš„ç›¸åå€¼ï¼Œå†è®¾ç½®æˆç›®æ ‡å€¼ï¼Œè¯æ˜æ˜¯å¯è¡Œçš„ã€‚ by cuiyinjie 2008-10-29 
+  -- æ³¨æ„è¦å…ˆè°ƒç”¨æ­¤å‡½æ•°å†å¾€listctrlé‡Œæ’å…¥ï¼Œå¦åˆ™ä¼šåˆ æ‰1åˆ—çš„ä¿¡æ¯ã€‚ 
+-- æ¿€æ´»æŒ‡å®šçš„æ ‡ç­¾ 
 function PlayerZhengyouPT_SetCurrentTab(iTab)
-	local sText = "#{ZYPT_081103_014}"; --"ÀàĞÍ";
+	local sText = "#{ZYPT_081103_014}"; --"ç±»å‹";
 
-	-- ÆµµÀÀàĞÍÎª1¡¢2¡¢3¡¢4Ê±ÏÔÊ¾¡°µÈ¼¶¡±£¬0¡¢5¡¢6Ê±ÏÔÊ¾¡°ÀàĞÍ¡±¡£
+	-- é¢‘é“ç±»å‹ä¸º1ã€2ã€3ã€4æ—¶æ˜¾ç¤ºâ€œç­‰çº§â€ï¼Œ0ã€5ã€6æ—¶æ˜¾ç¤ºâ€œç±»å‹â€ã€‚
 	if ( iTab > 0 and iTab < 5 ) then
-		sText = "µÈ¼¶";	
+		sText = "ç­‰çº§";	
 	end
    
 	g_Ctrls.CtrlList:SetProperty("ColumnsSizable", "True");
 	g_Ctrls.CtrlList:SetProperty("ColumnsMovable", "True");
 	g_Ctrls.CtrlList:SetProperty("ColumnsAdjust", "False");
    
-	PlayerZhengyouPT_CleanPlayerList(); --ÏÈÇåµô£¬·ÀÖ¹ĞÂÊı¾İ»ØÀ´Íí³öÏÖ¿ÕÁĞ
+	PlayerZhengyouPT_CleanPlayerList(); --å…ˆæ¸…æ‰ï¼Œé˜²æ­¢æ–°æ•°æ®å›æ¥æ™šå‡ºç°ç©ºåˆ—
 	g_Ctrls.CtrlList:RemoveColumnByPos(1);
 	g_Ctrls.CtrlList:InsertColumn(sText, 1, 0.23, 1);
 	
@@ -753,7 +753,7 @@ function PlayerZhengyouPT_SetCurrentTab(iTab)
 	g_Ctrls.CtrlList:SetProperty("ColumnsAdjust", "True");
    
 	if ( iTab >= 0 and iTab < g_totalChannelCount ) then
-		-- Ñ¡ÖĞµ±Ç°ÆµµÀ
+		-- é€‰ä¸­å½“å‰é¢‘é“
     g_Ctrls.Tabs[iTab + 1]:SetCheck(1);
     g_curChannel = iTab;
   end
@@ -761,14 +761,14 @@ function PlayerZhengyouPT_SetCurrentTab(iTab)
 	PlayerZhengyouPT_UpdateSearchTip();	
 end
 
--- ÊÇ·ñ¾ßÌåÀàĞÍ
+-- æ˜¯å¦å…·ä½“ç±»å‹
 function PlayerZhengyouPT_IsRealType(eType)
   local iType = tonumber(eType);
 	if ( nil == iType ) then
-	  PushDebugMessage("Õ÷ÓÑ²Ù×÷·µ»ØÁË´íÎóĞÅÏ¢");
+	  PushDebugMessage("å¾å‹æ“ä½œè¿”å›äº†é”™è¯¯ä¿¡æ¯");
 	end
 	
-	-- ÆµµÀÀàĞÍÎª1¡¢2¡¢3¡¢4ÎªºÏ·¨£¬0¡ª¡ª¡°È«²¿¡±¡¢5¡ª¡ª¡°²éÑ¯½á¹û¡±¡¢6¡ª¡ª¡°×îÍúÈËÆø¡±²»ÊôÓÚ¾ßÌåµÄÆµµÀÀàĞÍ
+	-- é¢‘é“ç±»å‹ä¸º1ã€2ã€3ã€4ä¸ºåˆæ³•ï¼Œ0â€”â€”â€œå…¨éƒ¨â€ã€5â€”â€”â€œæŸ¥è¯¢ç»“æœâ€ã€6â€”â€”â€œæœ€æ—ºäººæ°”â€ä¸å±äºå…·ä½“çš„é¢‘é“ç±»å‹
   if ( iType > 0 and iType < 5 ) then
     return true;
   end
@@ -776,21 +776,21 @@ function PlayerZhengyouPT_IsRealType(eType)
   return false;
 end
 
--- ÁĞ±íÖĞÑ¡ÔñÄ³Ò»ĞĞµÄÏàÓ¦º¯Êı
+-- åˆ—è¡¨ä¸­é€‰æ‹©æŸä¸€è¡Œçš„ç›¸åº”å‡½æ•°
 function PlayerZhengyouPT_List_OnSelectionChanged()
-	local nSel = PlayerZhengyouPT_List:GetSelectItem();	-- µ±Ç°Ñ¡ÔñµÄĞĞºÅ
-	local nSearchTab = g_Ctrls.TabSearch:GetCheck();		-- ÊÇ·ñÊÇ²éÑ¯ÆµµÀ	
+	local nSel = PlayerZhengyouPT_List:GetSelectItem();	-- å½“å‰é€‰æ‹©çš„è¡Œå·
+	local nSearchTab = g_Ctrls.TabSearch:GetCheck();		-- æ˜¯å¦æ˜¯æŸ¥è¯¢é¢‘é“	
 	
 	if ( nSel < 0 ) then
 		return;
 	else
-		-- Èç¹ûÊÇÈËÆøÆµµÀ£¬Ôò´Ó°´ÈËÆøÅÅÁĞµÄÈËÆøĞÅÏ¢ÁĞ±íÖĞÇëÇóÊı¾İ¡£
-		-- ÆäËûÆµµÀÔò´Ó°´Ê±¼äÅÅÁĞµÄÔ­Ê¼Êı¾İÁĞ±íÖĞÇëÇóÊı¾İ¡£
-		RequestFindFriendDetailInfo(nSel, nSearchTab, g_curChannel);	 -- µ÷ÓÃc++µÄº¯Êı,ÒªÇø·ÖÊÇ·ñÔÚ²éÕÒ½á¹ûÀïÑ¡Ôñ£¬¿Í»§¶ËÒª´Ó²»Í¬µÄ½á¹û³ØÀï·µ»Ø½á¹û
+		-- å¦‚æœæ˜¯äººæ°”é¢‘é“ï¼Œåˆ™ä»æŒ‰äººæ°”æ’åˆ—çš„äººæ°”ä¿¡æ¯åˆ—è¡¨ä¸­è¯·æ±‚æ•°æ®ã€‚
+		-- å…¶ä»–é¢‘é“åˆ™ä»æŒ‰æ—¶é—´æ’åˆ—çš„åŸå§‹æ•°æ®åˆ—è¡¨ä¸­è¯·æ±‚æ•°æ®ã€‚
+		RequestFindFriendDetailInfo(nSel, nSearchTab, g_curChannel);	 -- è°ƒç”¨c++çš„å‡½æ•°,è¦åŒºåˆ†æ˜¯å¦åœ¨æŸ¥æ‰¾ç»“æœé‡Œé€‰æ‹©ï¼Œå®¢æˆ·ç«¯è¦ä»ä¸åŒçš„ç»“æœæ± é‡Œè¿”å›ç»“æœ
 	end
 end
 
--- ÉèÖÃÑ¡ÖĞĞĞºÍµ±Ç°Ò³ºÅ 
+-- è®¾ç½®é€‰ä¸­è¡Œå’Œå½“å‰é¡µå· 
 function PlayerZhengyouPT_SetFocusRowAndPageNo(iRowIndex, iPageNo)
 	local iRow = tonumber(iRowIndex);
 	if (PlayerZhengyouPT_List:GetItemCount() > iRow) then
@@ -805,7 +805,7 @@ function PlayerZhengyouPT_CleanPlayerList()
 	PlayerZhengyouPT_CleanDetailInfo();
 end
 
--- ´ò¿ª¡°²éÕÒ¡±Ìõ¼ş½çÃæ
+-- æ‰“å¼€â€œæŸ¥æ‰¾â€æ¡ä»¶ç•Œé¢
 function OnPlayerZhengyouPT_ChazhaoClicked()
 	
 	if not PlayerZhengyouPT_PassTime(TIMER_SEARCH, MIN_SEARCHTIME) then
@@ -816,7 +816,7 @@ function OnPlayerZhengyouPT_ChazhaoClicked()
 	OpenWindow("ZhengyouSearch" .. g_curChannel);
 end
 
--- ´ò¿ªÍ¶Æ±²é¿´½çÃæ
+-- æ‰“å¼€æŠ•ç¥¨æŸ¥çœ‹ç•Œé¢
 function OnPlayerZhengyouPT_Chakan1Clicked(iVoteViewId)
 	if not PlayerZhengyouPT_PassTime(TIMER_TAB, MIN_TABTIME) then
 		PushDebugMessage(g_strWaitClickTipText);
@@ -838,10 +838,10 @@ function OnPlayerZhengyouPT_Chakan1Clicked(iVoteViewId)
 	RequestVoteFindFriendInfo( OPT_VIEWVOTE, nRowIndex, iVoteViewId , nSearchTab);
 end
 
--- Í¶Æ±
+-- æŠ•ç¥¨
 -- iSel : 0 ~ 3 
 function PlayerZhengyouPT_Toupiao(iSel)
-	-- ÉÔµÈµã»÷µÄÌáÊ¾
+	-- ç¨ç­‰ç‚¹å‡»çš„æç¤º
 	if not PlayerZhengyouPT_PassTime(TIMER_COMMONBTN, MIN_TABTIME) then
 		PushDebugMessage(g_strWaitClickTipText);
 		return
@@ -850,7 +850,7 @@ function PlayerZhengyouPT_Toupiao(iSel)
 	local szName = FindFriendDataPool:GetDetailInfo("NAME");
 	local player = Player:GetName();
 	if(szName == player) then
-		PushDebugMessage(" ²»ÄÜ¸ø×Ô¼ºÍ¶Æ±¡£");
+		PushDebugMessage(" ä¸èƒ½ç»™è‡ªå·±æŠ•ç¥¨ã€‚");
 		return;
 	end
 		
@@ -858,7 +858,7 @@ function PlayerZhengyouPT_Toupiao(iSel)
 		return;
 	end
 
-	-- ·¢ËÍÍ¶Æ±ÇëÇó 
+	-- å‘é€æŠ•ç¥¨è¯·æ±‚ 
 	local  nRowIndex =  PlayerZhengyouPT_List:GetSelectItem();
 	if (nRowIndex < 0 ) then 
 		return; 
@@ -869,7 +869,7 @@ function PlayerZhengyouPT_Toupiao(iSel)
 	RequestVoteFindFriendInfo( OPT_VOTE, nRowIndex, iSel , nSearchTab);
 end
 
--- ¸ü¸ÄÍæ¼ÒÕ÷ÓÑÒªÇó 
+-- æ›´æ”¹ç©å®¶å¾å‹è¦æ±‚ 
 function PlayerZhengyouPT_Change_OnClick()
 	if not PlayerZhengyouPT_PassTime(TIMER_COMMONBTN, MIN_TABTIME) then
 		PushDebugMessage(g_strWaitClickTipText);
@@ -879,27 +879,27 @@ function PlayerZhengyouPT_Change_OnClick()
 	FindFriendQuery(OPT_CHECK_EDIT, g_curZhengyouType, g_curChannel);
 end
 
--- ²éÑ¯½á¹ûµÄ´¦Àí
+-- æŸ¥è¯¢ç»“æœçš„å¤„ç†
 function PlayerZhengyouPT_OnSearchPlayerResponse(sRet, eType)
    local iType = tonumber(eType);
    if ( "ok" ==  sRet ) then
-      g_Ctrls.TxtSearchResultTip:SetText(PlayerZhengyouPT_GetTypeName(iType) .. "#{ZYPT_081103_012}");   -- ×¢Òâ£¬Ö»ÓĞ·µ»ØokÊ±²ÅÄÜ¸üĞÂ²éÑ¯½á¹ûÌáÊ¾
-      --g_Ctrls.TabSearch:SetCheck(1); --Ñ¡ÖĞ²éÕÒ½á¹û±êÇ©
+      g_Ctrls.TxtSearchResultTip:SetText(PlayerZhengyouPT_GetTypeName(iType) .. "#{ZYPT_081103_012}");   -- æ³¨æ„ï¼Œåªæœ‰è¿”å›okæ—¶æ‰èƒ½æ›´æ–°æŸ¥è¯¢ç»“æœæç¤º
+      --g_Ctrls.TabSearch:SetCheck(1); --é€‰ä¸­æŸ¥æ‰¾ç»“æœæ ‡ç­¾
    		PlayerZhengyouPT_CleanPlayerList();
    		g_curChannel 		= 5;
    		g_curPageIndex   = 1;
-	    g_totalPageCount = 1;												-- Ö»ÏÔÊ¾1Ò³
+	    g_totalPageCount = 1;												-- åªæ˜¾ç¤º1é¡µ
 	    g_totalVotePageCount = 1;
-	    PlayerZhengyouPT_SetCurrentTab(5); 					-- Ñ¡ÖĞ²éÕÒ½á¹û±êÇ©
+	    PlayerZhengyouPT_SetCurrentTab(5); 					-- é€‰ä¸­æŸ¥æ‰¾ç»“æœæ ‡ç­¾
       PlayerZhengyouPT_ShowSearchPlayerResult();
       PlayerZhengyouPT_UpdateBtnStatus();
       PlayerZhengyouPT_UpdateSearchTip();
    elseif( "noinfo" == sRet ) then
-      PushDebugMessage("Ã»ÓĞÕÒµ½·ûºÏÌõ¼şµÄÍæ¼Ò¡£");
+      PushDebugMessage("æ²¡æœ‰æ‰¾åˆ°ç¬¦åˆæ¡ä»¶çš„ç©å®¶ã€‚");
    end
 end
 
--- ÏÔÊ¾²éÕÒÍæ¼Ò½á¹û 
+-- æ˜¾ç¤ºæŸ¥æ‰¾ç©å®¶ç»“æœ 
 function PlayerZhengyouPT_ShowSearchPlayerResult()
   local iCount = FindFriendDataPool:GetSearchRetInfoNum();
   local i = 0;
@@ -912,7 +912,7 @@ function PlayerZhengyouPT_ShowSearchPlayerResult()
 	end
 end
 
--- ²é¿´Íæ¼Ò×ÊÁÏ
+-- æŸ¥çœ‹ç©å®¶èµ„æ–™
 function PlayerZhengyouPT_View_OnClick()
 
    local nSel = PlayerZhengyouPT_List:GetSelectItem();
@@ -920,11 +920,11 @@ function PlayerZhengyouPT_View_OnClick()
 		return;
    end
    
-    -- ¹Ø±ÕËùÓĞÒÑ¾­´ò¿ªµÄ¶ş¼¶Õ÷ÓÑ½çÃæ
+    -- å…³é—­æ‰€æœ‰å·²ç»æ‰“å¼€çš„äºŒçº§å¾å‹ç•Œé¢
     CloseWindow("VotedPlayer");
     PlayerZhengyouPT_CloseOtherWindow();
    
-	-- ¸ù¾İÍæ¼ÒÃû×ÖÀ´È¡×ÊÁÏ 
+	-- æ ¹æ®ç©å®¶åå­—æ¥å–èµ„æ–™ 
     local szName = FindFriendDataPool:GetDetailInfo("NAME"); 
 	if(nil ~= szName) then
 		if( Friend:IsPlayerIsFriend( szName ) == 1 ) then
@@ -949,64 +949,64 @@ function PlayerZhengyouPT_CloseOtherWindow()
    end
 end
 
--- ½áÊ¶Íæ¼Ò
+-- ç»“è¯†ç©å®¶
 function PlayerZhengyouPT_Jieshi_OnClick()
-     --¶Ô²»Æğ£¬Äú²»ÄÜºÍ×Ô¼º½áÊ¶¡£
-     --Äú¸Õ¸ÕÒÑ¾­ºÍ¸ÃÍæ¼Ò½áÊ¶¹ıÁË£¬ÇëÔÚÁÙÊ±ºÃÓÑÁĞ±íÖĞ²éÕÒ¡£
-     --¸ÃÍæ¼ÒÒÑ¾­ÔÚÄúµÄ³ğÈËÁĞ±íÖĞ£¬ÎŞ·¨½áÊ¶¡£
-     --¸ÃÍæ¼ÒÒÑ¾­ÔÚÄúµÄºÃÓÑÁĞ±íÖĞ£¬ÇëÔÚºÃÓÑÁĞ±íÖĞ²éÕÒ¡£
-     --¸ÃÍæ¼ÒÒÑ¾­ÔÚÄúµÄÁÙÊ±ºÃÓÑÁĞ±íÖĞ£¬ÇëÔÚÁÙÊ±ºÃÓÑÁĞ±íÖĞ²éÕÒ¡£
-     --½áÊ¶³É¹¦£¬ÄúÒÑ¾­½«¸ÃÍæ¼Ò¼ÓÈëÁÙÊ±ºÃÓÑÁĞ±í¡£
-     --Íæ¼ÒXXX¿´µ½ÁËÄú·¢²¼µÄÕ÷»éĞÅÏ¢£¬ÏëÓëÄú½áÊ¶£¬ÒÑ¾­ÔÚÄúµÄÁÙÊ±ºÃÓÑÁĞ±íÖĞ¡£
+     --å¯¹ä¸èµ·ï¼Œæ‚¨ä¸èƒ½å’Œè‡ªå·±ç»“è¯†ã€‚
+     --æ‚¨åˆšåˆšå·²ç»å’Œè¯¥ç©å®¶ç»“è¯†è¿‡äº†ï¼Œè¯·åœ¨ä¸´æ—¶å¥½å‹åˆ—è¡¨ä¸­æŸ¥æ‰¾ã€‚
+     --è¯¥ç©å®¶å·²ç»åœ¨æ‚¨çš„ä»‡äººåˆ—è¡¨ä¸­ï¼Œæ— æ³•ç»“è¯†ã€‚
+     --è¯¥ç©å®¶å·²ç»åœ¨æ‚¨çš„å¥½å‹åˆ—è¡¨ä¸­ï¼Œè¯·åœ¨å¥½å‹åˆ—è¡¨ä¸­æŸ¥æ‰¾ã€‚
+     --è¯¥ç©å®¶å·²ç»åœ¨æ‚¨çš„ä¸´æ—¶å¥½å‹åˆ—è¡¨ä¸­ï¼Œè¯·åœ¨ä¸´æ—¶å¥½å‹åˆ—è¡¨ä¸­æŸ¥æ‰¾ã€‚
+     --ç»“è¯†æˆåŠŸï¼Œæ‚¨å·²ç»å°†è¯¥ç©å®¶åŠ å…¥ä¸´æ—¶å¥½å‹åˆ—è¡¨ã€‚
+     --ç©å®¶XXXçœ‹åˆ°äº†æ‚¨å‘å¸ƒçš„å¾å©šä¿¡æ¯ï¼Œæƒ³ä¸æ‚¨ç»“è¯†ï¼Œå·²ç»åœ¨æ‚¨çš„ä¸´æ—¶å¥½å‹åˆ—è¡¨ä¸­ã€‚
      
         local nSel = PlayerZhengyouPT_List:GetSelectItem();
    		if ( nSel < 0 ) then
-			return;      --Èç¹ûÃ»ÓĞÑ¡ÖĞµÄÓÃ»§£¬²»ÄÜ½áÊ¶
+			return;      --å¦‚æœæ²¡æœ‰é€‰ä¸­çš„ç”¨æˆ·ï¼Œä¸èƒ½ç»“è¯†
   		end
-     -- Ê×ÏÈÅĞ¶ÏÊÇ·ñ×Ô¼º     
+     -- é¦–å…ˆåˆ¤æ–­æ˜¯å¦è‡ªå·±     
      	local owner = FindFriendDataPool:GetDetailInfo("NAME"); 
 		local player = Player:GetName();
 		if(owner == player) then
-			PushDebugMessage("#{ZYPT_081103_046}"); --("¶Ô²»Æğ£¬Äú²»ÄÜºÍ×Ô¼º½áÊ¶¡£");
+			PushDebugMessage("#{ZYPT_081103_046}"); --("å¯¹ä¸èµ·ï¼Œæ‚¨ä¸èƒ½å’Œè‡ªå·±ç»“è¯†ã€‚");
 			return;
 		end
-	 --  ÅĞ¶ÏÊÇ·ñ³ğÈË 
-	 	local currentList = 6; -- ³ğÈË 
+	 --  åˆ¤æ–­æ˜¯å¦ä»‡äºº 
+	 	local currentList = 6; -- ä»‡äºº 
 	 	local friendnumber = DataPool:GetFriendNumber( tonumber( currentList ) );
 	 	local index = 0;
 	 	while index < friendnumber  do
 	 		local name =  DataPool:GetFriend( currentList, tonumber( index ), "NAME" );	
 	 		if (name == owner) then
-	 		    PushDebugMessage("#{ZYPT_081103_048}"); --("¸ÃÍæ¼ÒÒÑ¾­ÔÚÄúµÄ³ğÈËÁĞ±íÖĞ£¬ÎŞ·¨½áÊ¶¡£");
+	 		    PushDebugMessage("#{ZYPT_081103_048}"); --("è¯¥ç©å®¶å·²ç»åœ¨æ‚¨çš„ä»‡äººåˆ—è¡¨ä¸­ï¼Œæ— æ³•ç»“è¯†ã€‚");
 	 			return;
 	 		end
 	 		index = index + 1;
 	    end
-	--  ÅĞ¶ÏÊÇ·ñºÚÃûµ¥
-	 	local currentList = 5; -- ºÚÃûµ¥ 
+	--  åˆ¤æ–­æ˜¯å¦é»‘åå•
+	 	local currentList = 5; -- é»‘åå• 
 	 	local friendnumber = DataPool:GetFriendNumber( tonumber( currentList ) );
 	 	local index = 0;
 	 	while index < friendnumber  do
 	 		local name =  DataPool:GetFriend( currentList, tonumber( index ), "NAME" );	
 	 		if (name == owner) then
-	 		    PushDebugMessage("¸ÃÍæ¼ÒÒÑ¾­ÔÚÄúµÄºÚÃûµ¥ÖĞ£¬ÎŞ·¨½áÊ¶¡£");
+	 		    PushDebugMessage("è¯¥ç©å®¶å·²ç»åœ¨æ‚¨çš„é»‘åå•ä¸­ï¼Œæ— æ³•ç»“è¯†ã€‚");
 	 			return;
 	 		end
 	 		index = index + 1;
 	    end
-	-- ÅĞ¶ÏÊÇ·ñÔÚÁÙÊ±ºÃÓÑÁĞ±í 
+	-- åˆ¤æ–­æ˜¯å¦åœ¨ä¸´æ—¶å¥½å‹åˆ—è¡¨ 
 	    currentList = 8; -- temp friend 
 	 	friendnumber = DataPool:GetFriendNumber( tonumber( currentList ) );
 	 	index = 0;
 	 	while index < friendnumber  do
 	 		local name =  DataPool:GetFriend( currentList, tonumber( index ), "NAME" );	
 	 		if (name == owner) then
-	 		    PushDebugMessage("#{ZYPT_081103_050}"); --("¸ÃÍæ¼ÒÒÑ¾­ÔÚÄúµÄÁÙÊ±ºÃÓÑÁĞ±íÖĞ£¬ÇëÔÚÁÙÊ±ºÃÓÑÁĞ±íÖĞ²éÕÒ¡£");
+	 		    PushDebugMessage("#{ZYPT_081103_050}"); --("è¯¥ç©å®¶å·²ç»åœ¨æ‚¨çš„ä¸´æ—¶å¥½å‹åˆ—è¡¨ä¸­ï¼Œè¯·åœ¨ä¸´æ—¶å¥½å‹åˆ—è¡¨ä¸­æŸ¥æ‰¾ã€‚");
 	 			return;
 	 		end
 	 		index = index + 1;
 	    end
-	-- ÅĞ¶ÏÊÇ·ñºÃÓÑ
+	-- åˆ¤æ–­æ˜¯å¦å¥½å‹
 	local iTmp = 1;
 	for iTmp = 1, 4 do
 	   	currentList = iTmp; -- friend 
@@ -1015,51 +1015,51 @@ function PlayerZhengyouPT_Jieshi_OnClick()
 	 	while index < friendnumber  do
 	 		local name =  DataPool:GetFriend( currentList, tonumber( index ), "NAME" );	
 	 		if (name == owner) then
-	 		    PushDebugMessage("#{ZYPT_081103_049}"); --("¸ÃÍæ¼ÒÒÑ¾­ÔÚÄúµÄºÃÓÑÁĞ±íÖĞ£¬ÇëÔÚºÃÓÑÁĞ±íÖĞ²éÕÒ¡£");
+	 		    PushDebugMessage("#{ZYPT_081103_049}"); --("è¯¥ç©å®¶å·²ç»åœ¨æ‚¨çš„å¥½å‹åˆ—è¡¨ä¸­ï¼Œè¯·åœ¨å¥½å‹åˆ—è¡¨ä¸­æŸ¥æ‰¾ã€‚");
 	 			return;
 	 		end
 	 		index = index + 1;
 	    end
 	end
-		-- °Ñ¶Ô·½¼ÓÈë×Ô¼ºÁÙÊ±ºÃÓÑÁĞ±í
+		-- æŠŠå¯¹æ–¹åŠ å…¥è‡ªå·±ä¸´æ—¶å¥½å‹åˆ—è¡¨
 		DataPool:AddFriend(8, owner);
-		PushDebugMessage("#{ZYPT_081103_051}"); --½áÊ¶³É¹¦£¬ÄúÒÑ¾­½«¸ÃÍæ¼Ò¼ÓÈëÁÙÊ±ºÃÓÑÁĞ±í¡£
-	-- ·¢ËÍÓÊ¼ş 
+		PushDebugMessage("#{ZYPT_081103_051}"); --ç»“è¯†æˆåŠŸï¼Œæ‚¨å·²ç»å°†è¯¥ç©å®¶åŠ å…¥ä¸´æ—¶å¥½å‹åˆ—è¡¨ã€‚
+	-- å‘é€é‚®ä»¶ 
 	    local iAdType = FindFriendDataPool:GetDetailInfo("ADTYPE");
 		local sType = g_TypesDesc[iAdType];
 		if ( nil == sType ) then sType = ""; end
 		
-		DataPool:OpenMail( owner,"ÄúºÃ£¬ÎÒ¿´µ½ÁËÄú·¢²¼µÄ" .. sType .. "Õ÷ÓÑĞÅÏ¢£¬ÏëÓëÄú½áÊ¶!" );
+		DataPool:OpenMail( owner,"æ‚¨å¥½ï¼Œæˆ‘çœ‹åˆ°äº†æ‚¨å‘å¸ƒçš„" .. sType .. "å¾å‹ä¿¡æ¯ï¼Œæƒ³ä¸æ‚¨ç»“è¯†!" );
 	  
 end 
 
--- ÔÚÇĞ»»±êÇ©Ê±´¦Àí²éÑ¯½á¹ûºÍÍæ¼ÒÁĞ±í´°¿Ú´óĞ¡
+-- åœ¨åˆ‡æ¢æ ‡ç­¾æ—¶å¤„ç†æŸ¥è¯¢ç»“æœå’Œç©å®¶åˆ—è¡¨çª—å£å¤§å°
 function  PlayerZhengyouPT_UpdateSearchTip()
-	-- ÎŞÌáÊ¾Ê±Íæ¼ÒÁĞ±ítop = 23, height = 272  
+	-- æ— æç¤ºæ—¶ç©å®¶åˆ—è¡¨top = 23, height = 272  
 	-- <Property Name="UnifiedPosition" Value="{{0.000000,1.000000},{0.000000,23.000000}" />
 	-- <Property Name="AbsoluteSize" Value="w:442 h:272" />
-	-- ÓĞÌáÊ¾Ê±
+	-- æœ‰æç¤ºæ—¶
 	--<Property Name="UnifiedPosition" Value="{{0.000000,1.000000},{0.000000,47.000000}" />
 	--<Property Name="AbsoluteSize" Value="w:442 h:248" />
-	if ( 5 == g_curChannel ) then				-- ¡°²éÑ¯½á¹û¡±ÆµµÀÁĞ±í´°¿ÚµÄ´óĞ¡
+	if ( 5 == g_curChannel ) then				-- â€œæŸ¥è¯¢ç»“æœâ€é¢‘é“åˆ—è¡¨çª—å£çš„å¤§å°
 		--PlayerZhengyouPT_Result:Show();
 		g_Ctrls.CtrlList:SetProperty("UnifiedPosition", "{{0.000000,1.000000},{0.000000,47.000000}");
 		g_Ctrls.CtrlList:SetProperty("AbsoluteSize", "w:442 h:248");
-	else																-- ÆäËûÆµµÀÁĞ±í´°¿ÚµÄ´óĞ¡
+	else																-- å…¶ä»–é¢‘é“åˆ—è¡¨çª—å£çš„å¤§å°
 		--PlayerZhengyouPT_Result:Hide();
 		g_Ctrls.CtrlList:SetProperty("UnifiedPosition", "{{0.000000,1.000000},{0.000000,23.000000}");
 		g_Ctrls.CtrlList:SetProperty("AbsoluteSize", "w:442 h:272");
 	end
 end
 
--- Ë¢ĞÂ
+-- åˆ·æ–°
 function OnPlayerZhengyouPT_RefreshClicked()
 	if not PlayerZhengyouPT_PassTime(TIMER_UPDATE, MIN_UPDATETIME) then
 		PushDebugMessage(g_strWaitClickTipText);
 		return
 	end
 	
-	if (g_curChannel == 5) then      --²éÕÒ½á¹ûÖĞ²»ÈÃË¢ĞÂ
+	if (g_curChannel == 5) then      --æŸ¥æ‰¾ç»“æœä¸­ä¸è®©åˆ·æ–°
 		return;
 	end
 
@@ -1068,10 +1068,10 @@ function OnPlayerZhengyouPT_RefreshClicked()
 		g_curPageIndex = 1;
 	end
 
-	RequestFindFriendList(g_curChannel, g_curPageIndex);	-- ÇëÇóµ±Ç°ÆµµÀ¡¢µ±Ç°Ò³µÄĞÅÏ¢ÁĞ±í
+	RequestFindFriendList(g_curChannel, g_curPageIndex);	-- è¯·æ±‚å½“å‰é¢‘é“ã€å½“å‰é¡µçš„ä¿¡æ¯åˆ—è¡¨
 end
 
--- Ç°Íù
+-- å‰å¾€
 function OnPlayerZhengyouPT_GotoClicked()
 	if not PlayerZhengyouPT_PassTime(TIMER_COMMONBTN, MIN_TABTIME) then
 		PushDebugMessage(g_strWaitClickTipText);
@@ -1080,27 +1080,27 @@ function OnPlayerZhengyouPT_GotoClicked()
 	
 	local nPage = PlayerZhengyouPT_GotoEditBox:GetText();
 	if(nPage~=nil and tonumber(nPage)~=nil) then
-		if (g_curChannel == 6) then															-- ÈËÆøÆµµÀ
+		if (g_curChannel == 6) then															-- äººæ°”é¢‘é“
 			if (tonumber(nPage)>g_totalVotePageCount or tonumber(nPage) < 1) then
-				PushDebugMessage("ÇëÊäÈëÕıÈ·µÄÒ³Êı¡£")
+				PushDebugMessage("è¯·è¾“å…¥æ­£ç¡®çš„é¡µæ•°ã€‚")
 			else
 				g_curPageIndex = tonumber(nPage);
 				PlayerZhengyouPT_UpdateBtnStatus();
-				RequestFindFriendList(g_curChannel, g_curPageIndex);	-- ÇëÇóµ±Ç°ÆµµÀ¡¢µ±Ç°Ò³µÄĞÅÏ¢ÁĞ±í
+				RequestFindFriendList(g_curChannel, g_curPageIndex);	-- è¯·æ±‚å½“å‰é¢‘é“ã€å½“å‰é¡µçš„ä¿¡æ¯åˆ—è¡¨
 			end
-		else																										-- ÆäËûÆµµÀ
+		else																										-- å…¶ä»–é¢‘é“
 			if (tonumber(nPage)>g_totalPageCount or tonumber(nPage) < 1) then
-				PushDebugMessage("ÇëÊäÈëÕıÈ·µÄÒ³Êı¡£")
+				PushDebugMessage("è¯·è¾“å…¥æ­£ç¡®çš„é¡µæ•°ã€‚")
 			else
 				g_curPageIndex = tonumber(nPage);
 				PlayerZhengyouPT_UpdateBtnStatus();
-				RequestFindFriendList(g_curChannel, g_curPageIndex);	-- ÇëÇóµ±Ç°ÆµµÀ¡¢µ±Ç°Ò³µÄĞÅÏ¢ÁĞ±í
+				RequestFindFriendList(g_curChannel, g_curPageIndex);	-- è¯·æ±‚å½“å‰é¢‘é“ã€å½“å‰é¡µçš„ä¿¡æ¯åˆ—è¡¨
 			end
 		end		
 	end	
 end
 
--- Ê×Ò³
+-- é¦–é¡µ
 function OnPlayerZhengyouPT_FirstPageClicked()
 	if not PlayerZhengyouPT_PassTime(TIMER_UPDATE, MIN_TABTIME) then
 		PushDebugMessage(g_strWaitClickTipText);
@@ -1109,10 +1109,10 @@ function OnPlayerZhengyouPT_FirstPageClicked()
 
 	g_curPageIndex = 1;
 	PlayerZhengyouPT_UpdateBtnStatus();
-	RequestFindFriendList(g_curChannel, g_curPageIndex);	-- ÇëÇóµ±Ç°ÆµµÀ¡¢µ±Ç°Ò³µÄĞÅÏ¢ÁĞ±í
+	RequestFindFriendList(g_curChannel, g_curPageIndex);	-- è¯·æ±‚å½“å‰é¢‘é“ã€å½“å‰é¡µçš„ä¿¡æ¯åˆ—è¡¨
 end
 
--- Ä©Ò³
+-- æœ«é¡µ
 function OnPlayerZhengyouPT_LastPageClicked()
 	if not PlayerZhengyouPT_PassTime(TIMER_UPDATE, MIN_TABTIME) then
 		PushDebugMessage(g_strWaitClickTipText);
@@ -1120,22 +1120,22 @@ function OnPlayerZhengyouPT_LastPageClicked()
 	end
 	
 	if (g_curChannel == 6) then
-		g_curPageIndex = g_totalVotePageCount;							-- ÈËÆøÆµµÀ
+		g_curPageIndex = g_totalVotePageCount;							-- äººæ°”é¢‘é“
 	else
-		g_curPageIndex = g_totalPageCount;									-- ÆäËûÆµµÀ
+		g_curPageIndex = g_totalPageCount;									-- å…¶ä»–é¢‘é“
 	end
 	
 	PlayerZhengyouPT_UpdateBtnStatus();
-	RequestFindFriendList(g_curChannel, g_curPageIndex);	-- ÇëÇóµ±Ç°ÆµµÀ¡¢µ±Ç°Ò³µÄĞÅÏ¢ÁĞ±í
+	RequestFindFriendList(g_curChannel, g_curPageIndex);	-- è¯·æ±‚å½“å‰é¢‘é“ã€å½“å‰é¡µçš„ä¿¡æ¯åˆ—è¡¨
 end
 
--- ¹Ø±Õ
+-- å…³é—­
 function OnPlayerZhengyouPT_CloseClicked()
 	this:Hide();
 	
-	-- »Ö¸´Ä¬ÈÏÑ¡ÖĞÆµµÀÎª¡°×îÍúÈËÆø¡±¡¢µÚ1Ò³
+	-- æ¢å¤é»˜è®¤é€‰ä¸­é¢‘é“ä¸ºâ€œæœ€æ—ºäººæ°”â€ã€ç¬¬1é¡µ
 	g_curChannel = 6;	
 	g_curPageIndex = 1;
-	-- Çå¿ÕÕ÷ÓÑÆ½Ì¨´°¿ÚÓÒ²à¿Ø¼şÏÔÊ¾µÄÄÚÈİ¡£
+	-- æ¸…ç©ºå¾å‹å¹³å°çª—å£å³ä¾§æ§ä»¶æ˜¾ç¤ºçš„å†…å®¹ã€‚
 	PlayerZhengyouPT_CleanDetailInfo();
 end

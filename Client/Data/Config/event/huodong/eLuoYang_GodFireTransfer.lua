@@ -3,20 +3,20 @@ x808080_g_ScriptId	= 808080
 x808080_g_Position_X=228.3477
 x808080_g_Position_Z=175.7796
 x808080_g_SceneID=0
-x808080_g_AccomplishNPC_Name="ÕÔÃ÷³Ï"
+x808080_g_AccomplishNPC_Name="èµµæ˜è¯š"
 x808080_g_MissionId			= 1000
 x808080_g_MissionIdNext	= 1000
-x808080_g_Name 					= "ÕÔÃ÷³Ï"
+x808080_g_Name 					= "èµµæ˜è¯š"
 x808080_g_MissionKind			= 13
 x808080_g_MissionLevel		= 20
 x808080_g_IfMissionElite	= 0
-x808080_g_IsMissionOkFail	= 0		--ÈÎÎñ²ÎÊıµÄµÚ0Î»
-x808080_g_MissionName			= "¹êÍÃÈüÅÜÈÎÎñ"
+x808080_g_IsMissionOkFail	= 0		--ä»»åŠ¡å‚æ•°çš„ç¬¬0ä½
+x808080_g_MissionName			= "é¾Ÿå…”èµ›è·‘ä»»åŠ¡"
 x808080_g_MissionInfo			= "#{GodFire_Info_001}"
 x808080_g_MissionTarget		= "#{GodFire_Info_004}"
 x808080_g_ContinueInfo		= "#{GodFire_Info_007}"
 x808080_g_MissionComplete	= "#{GodFire_Info_008}"
 x808080_g_MaxRound	= 3
 x808080_g_ControlScript		= 001066
-x808080_g_Custom	= { {id="ÒÑÓëÂåÑôµÄÕÔÃ÷³Ï¶Ô»°",num=1}, {id="ÒÑÓëËÕÖİµÄÂ½Ê¿ï£¶Ô»°",num=1}, {id="ÒÑÓë´óÀíµÄÍõÈôÓí¶Ô»°",num=1}, {id="ÒÑµãÈ¼È«²¿¿×Ã÷µÆ",num=24} }
+x808080_g_Custom	= { {id="å·²ä¸æ´›é˜³çš„èµµæ˜è¯šå¯¹è¯",num=1}, {id="å·²ä¸è‹å·çš„é™†å£«é“®å¯¹è¯",num=1}, {id="å·²ä¸å¤§ç†çš„ç‹è‹¥ç¦¹å¯¹è¯",num=1}, {id="å·²ç‚¹ç‡ƒå…¨éƒ¨å­”æ˜ç¯",num=24} }
 --MisDescEnd

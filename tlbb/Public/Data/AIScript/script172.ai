@@ -1,14 +1,14 @@
-;¼ûµ½ÈË¾ÍÆËÉÏÀ´¿³£¬¿ªÊ¼¾ÍÊ¹ÓÃÊ¯·ô£¨585£©Ôö¼Ó·ÀÓù£¬Èç¹ûÍæ¼ÒÈËÊý>2£¬Ôò¶ÔÆäÖÐÒ»¸öÊ¹ÓÃÊ¯»¯£¨567£©£¬Ê¹ÓÃÅÅÉ½µ¹º££¨592£©Èº¹¥£¬ÑªÉÙÓÚ10%»áÊ¹ÓÃÒ»´ÎÖÎÁÆ£¨582£©¼ÓÑª
+;è§åˆ°äººå°±æ‰‘ä¸Šæ¥ç ï¼Œå¼€å§‹å°±ä½¿ç”¨çŸ³è‚¤ï¼ˆ585ï¼‰å¢žåŠ é˜²å¾¡ï¼Œå¦‚æžœçŽ©å®¶äººæ•°>2ï¼Œåˆ™å¯¹å…¶ä¸­ä¸€ä¸ªä½¿ç”¨çŸ³åŒ–ï¼ˆ567ï¼‰ï¼Œä½¿ç”¨æŽ’å±±å€’æµ·ï¼ˆ592ï¼‰ç¾¤æ”»ï¼Œè¡€å°‘äºŽ10%ä¼šä½¿ç”¨ä¸€æ¬¡æ²»ç–—ï¼ˆ582ï¼‰åŠ è¡€
 [common]
 [commonend]
 
-;×¢ÒâÎïÀí¹¥»÷¼¼ÄÜÓÅÏÈ¼¶Ó¦¸Ã±ÈÔ¶³Ì¼¼ÄÜÓÅÏÈ¼¶¸ß
+;æ³¨æ„ç‰©ç†æ”»å‡»æŠ€èƒ½ä¼˜å…ˆçº§åº”è¯¥æ¯”è¿œç¨‹æŠ€èƒ½ä¼˜å…ˆçº§é«˜
 [skill]
-0:if(AIS_IsCanSkill(0)=1){AIS_ToSkill(0);AIS_SetTimes(-1);AIS_SetPRI(30);};Èç¹ûÄÜÊ¹ÓÃ0ºÅ¼¼ÄÜÔòÊÍ·Å£¬´ÎÊý²»ÏÞ£¨ÆÕÍ¨¹¥»÷£©
-1:if(AIS_GetAIState()=SATTACK&AIS_IsCanSkill(585)=1){AIS_ToSkill(585);AIS_SetTimes(1);AIS_SetPRI(42);};¿ªÊ¼¾ÍÊ¹ÓÃÊ¯·ô£¨585£©Ôö¼Ó·ÀÓù
-2:if(AIS_GetAIState()=SATTACK&AIS_IsCanSkill(592)=1&AIS_Rand()<10&AIS_GetHP()<50){AIS_ToSkill(592);AIS_SetTimes(5);AIS_SetPRI(35);};ÔÚ¹¥»÷×´Ì¬ÊÍ·ÅÅÅÉ½µ¹º££¨592£©
-3:if(AIS_GetAIState()=SATTACK&AIS_GetEnemyNum()>2&AIS_IsCanSkill(567)=1&AIS_Rand()<20){AIS_ToSkill(567);AIS_SetTimes(5);AIS_SetPRI(36);};µÐÈË¶àÓÚ2ÈËÔòÊÍ·ÅÊ¯»¯567
-4:if(AIS_GetAIState()=SATTACK&AIS_GetHP()<10&AIS_IsCanSkill(582)=1){AIS_ToSkill(582);AIS_SetTimes(1);AIS_SetPRI(40);};ÑªÉÙÓÚ10%µÄÇé¿öÏÂÊÍ·Å582ºÅ¼¼ÄÜÖÎÁÆ×Ô¼º£¬´ÎÊý1
+0:if(AIS_IsCanSkill(0)=1){AIS_ToSkill(0);AIS_SetTimes(-1);AIS_SetPRI(30);};å¦‚æžœèƒ½ä½¿ç”¨0å·æŠ€èƒ½åˆ™é‡Šæ”¾ï¼Œæ¬¡æ•°ä¸é™ï¼ˆæ™®é€šæ”»å‡»ï¼‰
+1:if(AIS_GetAIState()=SATTACK&AIS_IsCanSkill(585)=1){AIS_ToSkill(585);AIS_SetTimes(1);AIS_SetPRI(42);};å¼€å§‹å°±ä½¿ç”¨çŸ³è‚¤ï¼ˆ585ï¼‰å¢žåŠ é˜²å¾¡
+2:if(AIS_GetAIState()=SATTACK&AIS_IsCanSkill(592)=1&AIS_Rand()<10&AIS_GetHP()<50){AIS_ToSkill(592);AIS_SetTimes(5);AIS_SetPRI(35);};åœ¨æ”»å‡»çŠ¶æ€é‡Šæ”¾æŽ’å±±å€’æµ·ï¼ˆ592ï¼‰
+3:if(AIS_GetAIState()=SATTACK&AIS_GetEnemyNum()>2&AIS_IsCanSkill(567)=1&AIS_Rand()<20){AIS_ToSkill(567);AIS_SetTimes(5);AIS_SetPRI(36);};æ•Œäººå¤šäºŽ2äººåˆ™é‡Šæ”¾çŸ³åŒ–567
+4:if(AIS_GetAIState()=SATTACK&AIS_GetHP()<10&AIS_IsCanSkill(582)=1){AIS_ToSkill(582);AIS_SetTimes(1);AIS_SetPRI(40);};è¡€å°‘äºŽ10%çš„æƒ…å†µä¸‹é‡Šæ”¾582å·æŠ€èƒ½æ²»ç–—è‡ªå·±ï¼Œæ¬¡æ•°1
 [skillend]
 
 [beskill]

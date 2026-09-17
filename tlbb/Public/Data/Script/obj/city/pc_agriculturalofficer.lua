@@ -1,17 +1,17 @@
---³ÇÊĞNPC
---Ã×²Ö
+--åŸå¸‚NPC
+--ç±³ä»“
 
 x805014_g_scriptId = 805014
 x805014_g_BuildingID8 = 7
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x805014_g_eventList = { 600007 }
 
--- ÈÎÎñ¼¯ÊÂ¼ş ID ÁĞ±í£¬ÕâÀàÊÂ¼ş°üº¬×ÓÊÂ¼ş
+-- ä»»åŠ¡é›†äº‹ä»¶ ID åˆ—è¡¨ï¼Œè¿™ç±»äº‹ä»¶åŒ…å«å­äº‹ä»¶
 x805014_g_eventSetList = { 600007 }
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x805014_UpdateEventList( sceneId, selfId, targetId )
 	local i = 1
@@ -22,34 +22,34 @@ function x805014_UpdateEventList( sceneId, selfId, targetId )
 
 	BeginEvent( sceneId )
 		if Humanguildid == cityguildid then
-			AddText( sceneId, "    °ï»áÇ¿´óÔÚºõÅ©Ò²£¬ÓĞÊ²Ã´ĞèÒªÎÒ°ïÄãµÄÃ´£¿" )
+			AddText( sceneId, "    å¸®ä¼šå¼ºå¤§åœ¨ä¹å†œä¹Ÿï¼Œæœ‰ä»€ä¹ˆéœ€è¦æˆ‘å¸®ä½ çš„ä¹ˆï¼Ÿ" )
 			for i, eventId in x805014_g_eventList do
 				CallScriptFunction( eventId, "OnEnumerate", sceneId, selfId, targetId )
 			end
-			AddNumText( sceneId, x805014_g_scriptId, "·¢Õ¹ÈÎÎñ½éÉÜ", 11, 1 )
-			AddNumText( sceneId, x805014_g_scriptId, "¼Óºñ³ÇÇ½", 6, 3 )
-			AddNumText( sceneId, x805014_g_scriptId, "Ã×²Ö½éÉÜ", 11, 2 )
-			AddNumText( sceneId, x805014_g_scriptId, "»»È¡±ùÕòÎ÷¹Ï", 6, 4 )
-			AddNumText( sceneId, x805014_g_scriptId, "±ùÕòÎ÷¹Ï½éÉÜ", 11, 5 )
+			AddNumText( sceneId, x805014_g_scriptId, "å‘å±•ä»»åŠ¡ä»‹ç»", 11, 1 )
+			AddNumText( sceneId, x805014_g_scriptId, "åŠ åšåŸå¢™", 6, 3 )
+			AddNumText( sceneId, x805014_g_scriptId, "ç±³ä»“ä»‹ç»", 11, 2 )
+			AddNumText( sceneId, x805014_g_scriptId, "æ¢å–å†°é•‡è¥¿ç“œ", 6, 4 )
+			AddNumText( sceneId, x805014_g_scriptId, "å†°é•‡è¥¿ç“œä»‹ç»", 11, 5 )
 
-			--life Ìí¼ÓÕâ¸ö½¨ÖşÎïµÄÏàÓ¦Éú»î¼¼ÄÜÑ¡Ïî
+			--life æ·»åŠ è¿™ä¸ªå»ºç­‘ç‰©çš„ç›¸åº”ç”Ÿæ´»æŠ€èƒ½é€‰é¡¹
 			CallScriptFunction( CITY_BUILDING_ABILITY_SCRIPT, "AddCityLifeAbilityOpt",sceneId, selfId, x805014_g_scriptId,x805014_g_BuildingID8,888)
 		else
-			AddText( sceneId, "    ¸óÏÂ²»ÊÇ±¾°ï³ÉÔ±£¬ÃæÉúµÄ½ô°¡£¡" )
+			AddText( sceneId, "    é˜ä¸‹ä¸æ˜¯æœ¬å¸®æˆå‘˜ï¼Œé¢ç”Ÿçš„ç´§å•Šï¼" )
 		end
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x805014_OnDefaultEvent( sceneId, selfId, targetId )
 	x805014_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
--- ÅĞ¶ÏÄ³¸öÊÂ¼şÊÇ·ñ¿ÉÒÔÍ¨¹ı´Ë NPC Ö´ĞĞ
+-- åˆ¤æ–­æŸä¸ªäº‹ä»¶æ˜¯å¦å¯ä»¥é€šè¿‡æ­¤ NPC æ‰§è¡Œ
 --**********************************
 function x805014_IsValidEvent( sceneId, selfId, eventId )
 	local i = 1
@@ -76,13 +76,13 @@ function x805014_IsValidEvent( sceneId, selfId, eventId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x805014_OnEventRequest( sceneId, selfId, targetId, eventId )
 	if x805014_IsValidEvent( sceneId, selfId, eventId ) == 1 then
 		CallScriptFunction( eventId, "OnDefaultEvent", sceneId, selfId, targetId )
 		return
-	--life ´¦ÀíÕâ¸ö½¨ÖşÎïµÄÏàÓ¦Éú»î¼¼ÄÜÑ¡Ïî
+	--life å¤„ç†è¿™ä¸ªå»ºç­‘ç‰©çš„ç›¸åº”ç”Ÿæ´»æŠ€èƒ½é€‰é¡¹
 	elseif eventId ~= x805014_g_scriptId then
 		CallScriptFunction( CITY_BUILDING_ABILITY_SCRIPT, "OnDefaultEvent",sceneId, selfId, targetId, eventId, x805014_g_scriptId, x805014_g_BuildingID8 )
 		return
@@ -99,41 +99,41 @@ function x805014_OnEventRequest( sceneId, selfId, targetId, eventId )
 		DispatchEventList( sceneId, selfId, targetId )
 	elseif GetNumText() == 3 then
 		BeginEvent(sceneId)
-			AddText( sceneId, "Õâ¸ö¹¦ÄÜ¼´½«¿ª·Å" )
+			AddText( sceneId, "è¿™ä¸ªåŠŸèƒ½å³å°†å¼€æ”¾" )
 		EndEvent(sceneId)
 		DispatchEventList( sceneId, selfId, targetId )
 	elseif GetNumText() == 888 then
 		BeginEvent(sceneId)
-		--life Ìí¼ÓÕâ¸ö½¨ÖşÎïµÄÏàÓ¦Éú»î¼¼ÄÜÑ¡Ïî
+		--life æ·»åŠ è¿™ä¸ªå»ºç­‘ç‰©çš„ç›¸åº”ç”Ÿæ´»æŠ€èƒ½é€‰é¡¹
 		CallScriptFunction( CITY_BUILDING_ABILITY_SCRIPT, "OnEnumerate",sceneId, selfId, targetId, x805014_g_BuildingID8 )
 		EndEvent(sceneId)
 		DispatchEventList( sceneId, selfId, targetId )
 	elseif GetNumText() == 4 then
-		--È·ÈÏÊÇ·ñ»»È¡±ùÕòÎ÷¹Ï
+		--ç¡®è®¤æ˜¯å¦æ¢å–å†°é•‡è¥¿ç“œ
 		BeginEvent(sceneId)
 			AddText( sceneId, "#{BGHXG_JS}" )
-			AddText( sceneId, "ÄúÈ·ÈÏÒªÓÃ9µã°ï¹±»»È¡±ùÕòÎ÷¹ÏÂğ£¿" )
-			AddNumText( sceneId, x805014_g_scriptId, "È·ÈÏ", 6, 16 )
-			AddNumText( sceneId, x805014_g_scriptId, "È¡Ïû", 8, 17 )
+			AddText( sceneId, "æ‚¨ç¡®è®¤è¦ç”¨9ç‚¹å¸®è´¡æ¢å–å†°é•‡è¥¿ç“œå—ï¼Ÿ" )
+			AddNumText( sceneId, x805014_g_scriptId, "ç¡®è®¤", 6, 16 )
+			AddNumText( sceneId, x805014_g_scriptId, "å–æ¶ˆ", 8, 17 )
 		EndEvent(sceneId)
 		DispatchEventList( sceneId, selfId, targetId )
 	elseif GetNumText() == 5 then
-		--±ùÕòÎ÷¹Ï½éÉÜ
+		--å†°é•‡è¥¿ç“œä»‹ç»
 		BeginEvent(sceneId)
 			AddText( sceneId, "#{BGHXG_JS}" )
 		EndEvent(sceneId)
 		DispatchEventList( sceneId, selfId, targetId )
 	elseif GetNumText() == 16 then
-		--È·ÈÏ»»Î÷¹Ï
+		--ç¡®è®¤æ¢è¥¿ç“œ
 		x805014_BingZhenXiGua(sceneId, selfId, targetId);
 	elseif GetNumText() == 17 then
-		--È¡Ïû»»Î÷¹Ï
+		--å–æ¶ˆæ¢è¥¿ç“œ
 		x805014_OnDefaultEvent( sceneId, selfId, targetId )
 	end
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x805014_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 	if x805014_IsValidEvent( sceneId, selfId, missionScriptId ) == 1 then
@@ -141,9 +141,9 @@ function x805014_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 		if ret > 0 then
 			CallScriptFunction( missionScriptId, "OnAccept", sceneId, selfId, targetId )
 		elseif ret == -1 then
-			x805014_NotifyFailTips( sceneId, selfId, "ÄãÏÖÔÚ²»ÄÜÁìÈ¡Õâ¸öÈÎÎñ" )
+			x805014_NotifyFailTips( sceneId, selfId, "ä½ ç°åœ¨ä¸èƒ½é¢†å–è¿™ä¸ªä»»åŠ¡" )
 		elseif ret == -2 then
-			x805014_NotifyFailTips( sceneId, selfId, "ÎŞ·¨½ÓÊÜ¸ü¶àÈÎÎñ" )
+			x805014_NotifyFailTips( sceneId, selfId, "æ— æ³•æ¥å—æ›´å¤šä»»åŠ¡" )
 		end
 
 		return
@@ -151,7 +151,7 @@ function x805014_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x805014_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 	if x805014_IsValidEvent( sceneId, selfId, missionScriptId ) == 1 then
@@ -161,7 +161,7 @@ function x805014_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¼ÌĞø£¨ÒÑ¾­½ÓÁËÈÎÎñ£©
+--ç»§ç»­ï¼ˆå·²ç»æ¥äº†ä»»åŠ¡ï¼‰
 --**********************************
 function x805014_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 	if x805014_IsValidEvent( sceneId, selfId, missionScriptId ) == 1 then
@@ -171,7 +171,7 @@ function x805014_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---Ìá½»ÒÑ×öÍêµÄÈÎÎñ
+--æäº¤å·²åšå®Œçš„ä»»åŠ¡
 --**********************************
 function x805014_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, selectRadioId )
 	if x805014_IsValidEvent( sceneId, selfId, missionScriptId ) == 1 then
@@ -181,7 +181,7 @@ function x805014_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 end
 
 --**********************************
---ËÀÍöÊÂ¼ş
+--æ­»äº¡äº‹ä»¶
 --**********************************
 function x805014_OnDie( sceneId, selfId, killerId )
 end
@@ -194,14 +194,14 @@ function x805014_NotifyFailTips( sceneId, selfId, Tip )
 end
 
 --**********************************
---»»È¡±ùÕòÎ÷¹Ï
+--æ¢å–å†°é•‡è¥¿ç“œ
 --**********************************
 function x805014_BingZhenXiGua(sceneId, selfId, targetId)
 	local humanGuildId 	= GetHumanGuildID(sceneId,selfId)
 	local cityGuildId 	= GetCityGuildID(sceneId, selfId, sceneId)
 	if not humanGuildId or not cityGuildId or humanGuildId ~= cityGuildId then
 		BeginEvent(sceneId)
-			AddText( sceneId, "Ö»ÓĞ±¾°ï³ÉÔ±²ÅÄÜ»»È¡¡£" )
+			AddText( sceneId, "åªæœ‰æœ¬å¸®æˆå‘˜æ‰èƒ½æ¢å–ã€‚" )
 		EndEvent(sceneId)
 		DispatchEventList( sceneId, selfId, targetId )
 		return 0;
@@ -210,7 +210,7 @@ function x805014_BingZhenXiGua(sceneId, selfId, targetId)
 	local guildPoint = CityGetAttr(sceneId, selfId, 6);
 	if not guildPoint or guildPoint < 9 then
 		BeginEvent(sceneId)
-			AddText( sceneId, "ÄãµÄ°ï¹±²»×ã9µã£¬ÎŞ·¨»»È¡¡£" )
+			AddText( sceneId, "ä½ çš„å¸®è´¡ä¸è¶³9ç‚¹ï¼Œæ— æ³•æ¢å–ã€‚" )
 		EndEvent(sceneId)
 		DispatchEventList( sceneId, selfId, targetId )
 		return 0;
@@ -221,7 +221,7 @@ function x805014_BingZhenXiGua(sceneId, selfId, targetId)
 	local ret = LuaFnEndAddItem(sceneId, selfId);
 	if not ret or 1 ~= ret then
 		BeginEvent(sceneId)
-			AddText(sceneId, "ÄãÏÖÔÚÎŞ·¨»ñµÃÎïÆ·£¬Çë¼ì²é±³°ü¡£");
+			AddText(sceneId, "ä½ ç°åœ¨æ— æ³•è·å¾—ç‰©å“ï¼Œè¯·æ£€æŸ¥èƒŒåŒ…ã€‚");
 		EndEvent(sceneId)
 		DispatchEventList( sceneId, selfId, targetId )
 		return 0;
@@ -230,18 +230,18 @@ function x805014_BingZhenXiGua(sceneId, selfId, targetId)
 	ret = CityChangeAttr(sceneId, selfId, 6, -9);
 	if not ret or ret ~= 1 then
 		BeginEvent(sceneId)
-			AddText(sceneId, "²Ù×÷Ê§°Ü£¬ÇëÖØÊÔ¡£");
+			AddText(sceneId, "æ“ä½œå¤±è´¥ï¼Œè¯·é‡è¯•ã€‚");
 		EndEvent(sceneId)
 		DispatchEventList( sceneId, selfId, targetId )
 		return 0;
 	end
 	
 	AddItemListToHuman(sceneId,selfId);
-	x805014_NotifyFailTips(sceneId, selfId, "Äã»ñµÃÁËÒ»¸ö±ùÕòÎ÷¹Ï¡£");
+	x805014_NotifyFailTips(sceneId, selfId, "ä½ è·å¾—äº†ä¸€ä¸ªå†°é•‡è¥¿ç“œã€‚");
 	
 	local szTransferItem = GetItemTransfer(sceneId, selfId, 0);
 	local selfName = LuaFnGetName(sceneId, selfId);
-	local strChatMessage = "#{_INFOUSR"..selfName.."}#PÀÖºÇºÇµÄ´Ó#GÖìÊÀÓÑ[129£¬100]#PÊÖÀï½Ó¹ıÒ»È¿#Y#{_INFOMSG" .. szTransferItem .. "}#P£¬³ÔÉÏÒ»¿ÚÕæÊÇ´ÓÍ·¶¥Á¹µ½½Åµ×°å°¡£¡";
+	local strChatMessage = "#{_INFOUSR"..selfName.."}#Pä¹å‘µå‘µçš„ä»#Gæœ±ä¸–å‹[129ï¼Œ100]#Pæ‰‹é‡Œæ¥è¿‡ä¸€ç“¤#Y#{_INFOMSG" .. szTransferItem .. "}#Pï¼Œåƒä¸Šä¸€å£çœŸæ˜¯ä»å¤´é¡¶å‡‰åˆ°è„šåº•æ¿å•Šï¼";
 	BroadMsgByChatPipe(sceneId, selfId, "@*;SrvMsg;GLD:"..strChatMessage, 6);
 	x805014_OnDefaultEvent( sceneId, selfId, targetId )
 end

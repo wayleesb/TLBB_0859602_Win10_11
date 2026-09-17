@@ -1,5 +1,5 @@
---ÊøºÓ¹ÅÕòNPC....
---±¦Ê¯¹¤½³....
+--æŸæ²³å¤é•‡NPC....
+--å®çŸ³å·¥åŒ ....
 
 x001194_g_scriptId = 001194
 
@@ -10,22 +10,22 @@ x001194_g_MsgInfo = { "#{SHGZ_0612_13}",
 										}
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x001194_OnDefaultEvent( sceneId, selfId, targetId )
 	BeginEvent( sceneId )
 
 		local msgidx = random(getn(x001194_g_MsgInfo))
 		AddText( sceneId, x001194_g_MsgInfo[msgidx] )
-		AddNumText( sceneId, x001194_g_scriptId, "±¦Ê¯Ïà¹Ø½éÉÜ", 11, 0 )
-		AddNumText( sceneId, x001194_g_scriptId, "²ÄÁÏºÏ³É½éÉÜ", 11, 20 ) -- add by cuiyinjie 20081021
-		AddNumText( sceneId, x001194_g_scriptId, "±¦Ê¯ºÏ³É", 6, 1 )
-		AddNumText( sceneId, x001194_g_scriptId, "×°±¸´ò¿×", 6, 2 )
-		AddNumText( sceneId, x001194_g_scriptId, "±¦Ê¯Õª³ı", 6, 3 )
-		AddNumText( sceneId, x001194_g_scriptId, "²ÄÁÏºÏ³É", 6, 4 )
-		AddNumText( sceneId, x001194_g_scriptId, "±¦Ê¯ÏâÇ¶", 6, 5 )
-		AddNumText( sceneId, x001194_g_scriptId, "±¦Ê¯µñ×Á", 6, 6 )
-		AddNumText( sceneId, x001194_g_scriptId, "±¦Ê¯ÈÛÁ¶", 6, 7 )
+		AddNumText( sceneId, x001194_g_scriptId, "å®çŸ³ç›¸å…³ä»‹ç»", 11, 0 )
+		AddNumText( sceneId, x001194_g_scriptId, "ææ–™åˆæˆä»‹ç»", 11, 20 ) -- add by cuiyinjie 20081021
+		AddNumText( sceneId, x001194_g_scriptId, "å®çŸ³åˆæˆ", 6, 1 )
+		AddNumText( sceneId, x001194_g_scriptId, "è£…å¤‡æ‰“å­”", 6, 2 )
+		AddNumText( sceneId, x001194_g_scriptId, "å®çŸ³æ‘˜é™¤", 6, 3 )
+		AddNumText( sceneId, x001194_g_scriptId, "ææ–™åˆæˆ", 6, 4 )
+		AddNumText( sceneId, x001194_g_scriptId, "å®çŸ³é•¶åµŒ", 6, 5 )
+		AddNumText( sceneId, x001194_g_scriptId, "å®çŸ³é›•ç¢", 6, 6 )
+		AddNumText( sceneId, x001194_g_scriptId, "å®çŸ³ç†”ç‚¼", 6, 7 )
 
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
@@ -33,7 +33,7 @@ end
 
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x001194_OnEventRequest( sceneId, selfId, targetId, eventId )
 
@@ -42,14 +42,14 @@ function x001194_OnEventRequest( sceneId, selfId, targetId, eventId )
 			
 				AddText(sceneId,"#{function_help_103}#r")
 			
-				AddNumText(sceneId, x001194_g_scriptId,"×°±¸´ò¿×½éÉÜ",11,8);
-				AddNumText(sceneId, x001194_g_scriptId,"±¦Ê¯ºÏ³É½éÉÜ",11,9);
-				AddNumText(sceneId, x001194_g_scriptId,"±¦Ê¯ÏâÇ¶½éÉÜ",11,10);
-				AddNumText(sceneId, x001194_g_scriptId,"±¦Ê¯Õª³ı½éÉÜ",11,11);
---				AddNumText(sceneId, x001194_g_scriptId,"×°±¸ĞŞÀí½éÉÜ",11,12);
-				AddNumText(sceneId, x001194_g_scriptId,"±¦Ê¯µñ×Á½éÉÜ",11,13);
-				AddNumText(sceneId, x001194_g_scriptId,"±¦Ê¯ÈÛÁ¶½éÉÜ",11,14);
-				AddNumText(sceneId, x001194_g_scriptId,"Ê¤Àû±¦Ê¯½éÉÜ",11,15);
+				AddNumText(sceneId, x001194_g_scriptId,"è£…å¤‡æ‰“å­”ä»‹ç»",11,8);
+				AddNumText(sceneId, x001194_g_scriptId,"å®çŸ³åˆæˆä»‹ç»",11,9);
+				AddNumText(sceneId, x001194_g_scriptId,"å®çŸ³é•¶åµŒä»‹ç»",11,10);
+				AddNumText(sceneId, x001194_g_scriptId,"å®çŸ³æ‘˜é™¤ä»‹ç»",11,11);
+--				AddNumText(sceneId, x001194_g_scriptId,"è£…å¤‡ä¿®ç†ä»‹ç»",11,12);
+				AddNumText(sceneId, x001194_g_scriptId,"å®çŸ³é›•ç¢ä»‹ç»",11,13);
+				AddNumText(sceneId, x001194_g_scriptId,"å®çŸ³ç†”ç‚¼ä»‹ç»",11,14);
+				AddNumText(sceneId, x001194_g_scriptId,"èƒœåˆ©å®çŸ³ä»‹ç»",11,15);
 
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,targetId)
@@ -57,12 +57,12 @@ function x001194_OnEventRequest( sceneId, selfId, targetId, eventId )
 		end
 		
 		-- addstart 2008-10-21 add by cuiyinjie
-		if GetNumText() == 20 then  -- add by cuiyinjie ²ÄÁÏºÏ³É½éÉÜ
+		if GetNumText() == 20 then  -- add by cuiyinjie ææ–™åˆæˆä»‹ç»
 			BeginEvent(sceneId)			
 				AddText(sceneId,"#{SJSJ_081021_002}#r")
-				AddNumText(sceneId, x001194_g_scriptId,"¾«ÌúµÄ²Ù×÷½éÉÜ",11,21);
-				AddNumText(sceneId, x001194_g_scriptId,"ÃØÒøµÄ²Ù×÷½éÉÜ",11,22);
-				AddNumText(sceneId, x001194_g_scriptId,"ÃŞ²¼µÄ²Ù×÷½éÉÜ",11,23);					
+				AddNumText(sceneId, x001194_g_scriptId,"ç²¾é“çš„æ“ä½œä»‹ç»",11,21);
+				AddNumText(sceneId, x001194_g_scriptId,"ç§˜é“¶çš„æ“ä½œä»‹ç»",11,22);
+				AddNumText(sceneId, x001194_g_scriptId,"æ£‰å¸ƒçš„æ“ä½œä»‹ç»",11,23);					
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,targetId)
 			return

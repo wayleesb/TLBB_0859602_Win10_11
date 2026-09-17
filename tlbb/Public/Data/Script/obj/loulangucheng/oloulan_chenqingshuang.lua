@@ -1,15 +1,15 @@
---Â¥À¼NPC....
---çÎç¿·å½ÓÒıÊ¹....
+--æ¥¼å…°NPC....
+--ç¼¥ç¼ˆå³°æ¥å¼•ä½¿....
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x001159_g_ScriptId = 001159
 
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x001159_g_eventList={402276,402263,402289,402305}
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x001159_UpdateEventList( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
@@ -22,14 +22,14 @@ function x001159_UpdateEventList( sceneId, selfId,targetId )
 end
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x001159_OnDefaultEvent( sceneId, selfId,targetId )
 	x001159_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x001159_OnEventRequest( sceneId, selfId, targetId, eventId )
 	for i, findId in x001159_g_eventList do

@@ -1,81 +1,81 @@
 
--- ĞŞ¸Ä[ñÒÉÙÎ¢ 2008.5.29 Ìí¼Ó,Ä§±øÌì½«,¼«Æ·×°±¸·Å³ö¡£]
+-- ä¿®æ”¹[è¤šå°‘å¾® 2008.5.29 æ·»åŠ ,é­”å…µå¤©å°†,æå“è£…å¤‡æ”¾å‡ºã€‚]
 
--- 001067 Ì××°¶Ò»»NPC
+-- 001067 å¥—è£…å…‘æ¢NPC
 
--- ÁºÊ¦³É
+-- æ¢å¸ˆæˆ
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x001067_g_ScriptId = 001067
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x001067_g_eventList={889058, 889061}
 
---½â¾öÁ÷Ê§ÂÊ¶Ò»»ÃÅÅÉÌ××°ÊÂ¼ş½Å±¾
+--è§£å†³æµå¤±ç‡å…‘æ¢é—¨æ´¾å¥—è£…äº‹ä»¶è„šæœ¬
 x001067_g_MenPaiTaoScriptId = 500617
 
 x001067_g_EquipList={	
---       ÒÂ·ş£­£­£­£­£­£­£­£­Ñü´ø£­£­£­£­£­£­£­£­îø¼×£­£­£­£­£­
+--       è¡£æœï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼è…°å¸¦ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼é“ ç”²ï¼ï¼ï¼ï¼ï¼
 {n=1100,id=10413007},{n=1200,id=10421007},{n=1300,id=10412007},{n=1400,id=10411007},
 {n=1100,id=10413001},{n=1200,id=10421001},{n=1300,id=10412001},{n=1400,id=10411001},
 
--- 30¼¶±ğµÄ
+-- 30çº§åˆ«çš„
 {n=2100,id=10413008},{n=2200,id=10421008},{n=2300,id=10412008},{n=2400,id=10411008},
 {n=2100,id=10413002},{n=2200,id=10421002},{n=2300,id=10412002},{n=2400,id=10411002},
 
--- 40¼¶±ğµÄ
+-- 40çº§åˆ«çš„
 {n=3100,id=10413009},{n=3200,id=10421009},{n=3300,id=10412009},{n=3400,id=10411009},{n=3500,id=10414024},
 {n=3100,id=10413003},{n=3200,id=10421003},{n=3300,id=10412003},{n=3400,id=10411003},{n=3500,id=10414020},
 
--- 50¼¶±ğµÄ
+-- 50çº§åˆ«çš„
 {n=4100,id=10413010},{n=4200,id=10421010},{n=4300,id=10412010},{n=4400,id=10411010},{n=4500,id=10414025},
 {n=4100,id=10413004},{n=4200,id=10421004},{n=4300,id=10412004},{n=4400,id=10411004},{n=4500,id=10414021},
 
--- 60¼¶±ğµÄ
+-- 60çº§åˆ«çš„
 {n=5100,id=10413011},{n=5200,id=10421011},{n=5300,id=10412011},{n=5400,id=10411011},{n=5500,id=10414026},{n=5600,id=10415018},
 {n=5100,id=10413005},{n=5200,id=10421005},{n=5300,id=10412005},{n=5400,id=10411005},{n=5500,id=10414022},{n=5600,id=10415016},
 
--- 70¼¶±ğµÄ
+-- 70çº§åˆ«çš„
 {n=6100,id=10413012},{n=6200,id=10421012},{n=6300,id=10412012},{n=6400,id=10411012},{n=6500,id=10414027},{n=6600,id=10415019},
 {n=6100,id=10413006},{n=6200,id=10421006},{n=6300,id=10412006},{n=6400,id=10411006},{n=6500,id=10414023},{n=6600,id=10415017},
--- 80¼¶±ğµÄ
+-- 80çº§åˆ«çš„
 {n=7100,id=10413017},{n=7200,id=10421014},{n=7300,id=10412017},{n=7400,id=10411014},{n=7500,id=10414028},{n=7600,id=10415020},
 {n=7100,id=10413018},{n=7200,id=10421015},{n=7300,id=10412018},{n=7400,id=10411015},{n=7500,id=10414029},{n=7600,id=10415021},
--- 90¼¶±ğµÄ
+-- 90çº§åˆ«çš„
 {n=8100,id=10413019},{n=8200,id=10421016},{n=8300,id=10412019},{n=8400,id=10411016},{n=8500,id=10414030},{n=8600,id=10415022},
 {n=8100,id=10413020},{n=8200,id=10421017},{n=8300,id=10412020},{n=8400,id=10411017},{n=8500,id=10414031},{n=8600,id=10415023},
 
--- ñÒÉÙÎ¢£¬2008.5.29¡£¼«Æ·×°±¸·Å³ö¡£Á½¸ö×°±¸£º10422016--ÖØÂ¥½ä	10423024--ÖØÂ¥Óñ
+-- è¤šå°‘å¾®ï¼Œ2008.5.29ã€‚æå“è£…å¤‡æ”¾å‡ºã€‚ä¸¤ä¸ªè£…å¤‡ï¼š10422016--é‡æ¥¼æˆ’	10423024--é‡æ¥¼ç‰
 {n=9100,id=10422016},
 {n=9100,id=10423024},
 }
 
 x001067_g_StoneList={
--- 1¼¶Ê¯Í·
-{n=1,id=20309010,num=6,str="1¼¶ÍòÁéÊ¯"},
--- 2¼¶Ê¯Í·
-{n=2,id=20309011,num=8,str="2¼¶ÍòÁéÊ¯"},
--- 3¼¶Ê¯Í·
-{n=3,id=20309012,num=10,str="3¼¶ÍòÁéÊ¯"},
--- 4¼¶Ê¯Í·
-{n=4,id=20309013,num=12,str="4¼¶ÍòÁéÊ¯"},
--- 5¼¶Ê¯Í·
-{n=5,id=20309014,num=14,str="5¼¶ÍòÁéÊ¯"},
--- 6¼¶Ê¯Í·
-{n=6,id=20309015,num=16,str="6¼¶ÍòÁéÊ¯"},
---80,90¼¶ ×°±¸ ĞèÒªµÄÊ¯Í·
-{n=7,id=20309016,num=32,str="7¼¶ÍòÁéÊ¯"},
-{n=8,id=20309017,num=48,str="8¼¶ÍòÁéÊ¯"},	--ÓÉ64¸ÄÎª48	--modify by xindefeng
+-- 1çº§çŸ³å¤´
+{n=1,id=20309010,num=6,str="1çº§ä¸‡çµçŸ³"},
+-- 2çº§çŸ³å¤´
+{n=2,id=20309011,num=8,str="2çº§ä¸‡çµçŸ³"},
+-- 3çº§çŸ³å¤´
+{n=3,id=20309012,num=10,str="3çº§ä¸‡çµçŸ³"},
+-- 4çº§çŸ³å¤´
+{n=4,id=20309013,num=12,str="4çº§ä¸‡çµçŸ³"},
+-- 5çº§çŸ³å¤´
+{n=5,id=20309014,num=14,str="5çº§ä¸‡çµçŸ³"},
+-- 6çº§çŸ³å¤´
+{n=6,id=20309015,num=16,str="6çº§ä¸‡çµçŸ³"},
+--80,90çº§ è£…å¤‡ éœ€è¦çš„çŸ³å¤´
+{n=7,id=20309016,num=32,str="7çº§ä¸‡çµçŸ³"},
+{n=8,id=20309017,num=48,str="8çº§ä¸‡çµçŸ³"},	--ç”±64æ”¹ä¸º48	--modify by xindefeng
 
--- ñÒÉÙÎ¢£¬2008.5.29¡£¼«Æ·×°±¸·Å³ö¡£Á½¸ö¶Ò»»ĞèÒªµÄÎïÆ·£º20310101--ÖØÂ¥Ö®Àá	20310102--ÖØÂ¥Ö®Ã¢
-{n=9,id=20310101,num=1,str="ÖØÂ¥Ö®Àá"},
-{n=10,id=20310102,num=1,str="ÖØÂ¥Ö®Ã¢"},
+-- è¤šå°‘å¾®ï¼Œ2008.5.29ã€‚æå“è£…å¤‡æ”¾å‡ºã€‚ä¸¤ä¸ªå…‘æ¢éœ€è¦çš„ç‰©å“ï¼š20310101--é‡æ¥¼ä¹‹æ³ª	20310102--é‡æ¥¼ä¹‹èŠ’
+{n=9,id=20310101,num=1,str="é‡æ¥¼ä¹‹æ³ª"},
+{n=10,id=20310102,num=1,str="é‡æ¥¼ä¹‹èŠ’"},
 
 }
 
-x001067_g_Stone2ID = 20309018 --ĞÂÔö¶ş¼¶ÍòÁéÊ¯(°ó¶¨) 
+x001067_g_Stone2ID = 20309018 --æ–°å¢äºŒçº§ä¸‡çµçŸ³(ç»‘å®š) 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x001067_UpdateEventList( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
@@ -84,37 +84,37 @@ function x001067_UpdateEventList( sceneId, selfId,targetId )
 			CallScriptFunction( eventId, "OnEnumerate",sceneId, selfId, targetId )
 		end
 		
-		AddNumText( sceneId, x001067_g_MenPaiTaoScriptId, "¶Ò»»Ê¦ÃÅÌ××°", 6, 846 )
+		AddNumText( sceneId, x001067_g_MenPaiTaoScriptId, "å…‘æ¢å¸ˆé—¨å¥—è£…", 6, 846 )
 		
-		AddNumText( sceneId, x001067_g_ScriptId, "¶Ò»»18¼¶Ì××°", 6, 1000 )
-		AddNumText( sceneId, x001067_g_ScriptId, "¶Ò»»30¼¶Ì××°", 6, 2000 )
-		AddNumText( sceneId, x001067_g_ScriptId, "¶Ò»»40¼¶Ì××°", 6, 3000 )
-		AddNumText( sceneId, x001067_g_ScriptId, "¶Ò»»50¼¶Ì××°", 6, 4000 )
-		AddNumText( sceneId, x001067_g_ScriptId, "¶Ò»»60¼¶Ì××°", 6, 5000 )
-		AddNumText( sceneId, x001067_g_ScriptId, "¶Ò»»70¼¶Ì××°", 6, 6000 )
-		AddNumText( sceneId, x001067_g_ScriptId, "¶Ò»»80¼¶Ì××°", 6, 7000 )
-		AddNumText( sceneId, x001067_g_ScriptId, "¶Ò»»90¼¶Ì××°", 6, 8000 )
+		AddNumText( sceneId, x001067_g_ScriptId, "å…‘æ¢18çº§å¥—è£…", 6, 1000 )
+		AddNumText( sceneId, x001067_g_ScriptId, "å…‘æ¢30çº§å¥—è£…", 6, 2000 )
+		AddNumText( sceneId, x001067_g_ScriptId, "å…‘æ¢40çº§å¥—è£…", 6, 3000 )
+		AddNumText( sceneId, x001067_g_ScriptId, "å…‘æ¢50çº§å¥—è£…", 6, 4000 )
+		AddNumText( sceneId, x001067_g_ScriptId, "å…‘æ¢60çº§å¥—è£…", 6, 5000 )
+		AddNumText( sceneId, x001067_g_ScriptId, "å…‘æ¢70çº§å¥—è£…", 6, 6000 )
+		AddNumText( sceneId, x001067_g_ScriptId, "å…‘æ¢80çº§å¥—è£…", 6, 7000 )
+		AddNumText( sceneId, x001067_g_ScriptId, "å…‘æ¢90çº§å¥—è£…", 6, 8000 )
 
-		AddNumText( sceneId, x001067_g_ScriptId, "Ä§±øÌì½µ½éÉÜ", 11, 10000 )		
-		-- ñÒÉÙÎ¢£¬2008.5.29¡£¼«Æ·×°±¸·Å³ö¡£
-		AddNumText( sceneId, x001067_g_ScriptId, "Ä§±øÌì½µ", 6, 9000 )
+		AddNumText( sceneId, x001067_g_ScriptId, "é­”å…µå¤©é™ä»‹ç»", 11, 10000 )		
+		-- è¤šå°‘å¾®ï¼Œ2008.5.29ã€‚æå“è£…å¤‡æ”¾å‡ºã€‚
+		AddNumText( sceneId, x001067_g_ScriptId, "é­”å…µå¤©é™", 6, 9000 )
 
 		
-		AddNumText( sceneId, x001067_g_ScriptId, "Àë¿ª¡­¡­", 0, 0 )
+		AddNumText( sceneId, x001067_g_ScriptId, "ç¦»å¼€â€¦â€¦", 0, 0 )
 
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 end
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x001067_OnDefaultEvent( sceneId, selfId,targetId )
 	x001067_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x001067_OnEventRequest( sceneId, selfId, targetId, eventId )
 	local nNumText = GetNumText()
@@ -137,7 +137,7 @@ function x001067_OnEventRequest( sceneId, selfId, targetId, eventId )
 	end
 	
 	if nNumText == 0  then
-		-- ¹Ø±Õ´°¿Ú
+		-- å…³é—­çª—å£
 		BeginUICommand(sceneId)
 		EndUICommand(sceneId)
 		DispatchUICommand(sceneId,selfId, 1000)
@@ -147,17 +147,17 @@ function x001067_OnEventRequest( sceneId, selfId, targetId, eventId )
 	if nNumText == 1000 or nNumText == 2000 or nNumText == 3000 or nNumText == 4000 or nNumText == 5000 or nNumText == 6000 or nNumText == 7000 or nNumText == 8000  then
 		BeginEvent(sceneId)
 			AddText(sceneId, "  #{JPZB_0610_02}")
-			AddNumText(sceneId, x001067_g_ScriptId, "¶Ò»»ÒÂ·ş", 0, nNumText+100)
-			AddNumText(sceneId, x001067_g_ScriptId, "¶Ò»»Ñü´ø", 0, nNumText+200)
-			AddNumText(sceneId, x001067_g_ScriptId, "¶Ò»»ÊÖÌ×", 0, nNumText+300)
-			AddNumText(sceneId, x001067_g_ScriptId, "¶Ò»»Ğ¬×Ó", 0, nNumText+400)
+			AddNumText(sceneId, x001067_g_ScriptId, "å…‘æ¢è¡£æœ", 0, nNumText+100)
+			AddNumText(sceneId, x001067_g_ScriptId, "å…‘æ¢è…°å¸¦", 0, nNumText+200)
+			AddNumText(sceneId, x001067_g_ScriptId, "å…‘æ¢æ‰‹å¥—", 0, nNumText+300)
+			AddNumText(sceneId, x001067_g_ScriptId, "å…‘æ¢é‹å­", 0, nNumText+400)
 			if nNumText > 2000  then
-				AddNumText(sceneId, x001067_g_ScriptId, "¶Ò»»»¤Íó", 0, nNumText+500)
+				AddNumText(sceneId, x001067_g_ScriptId, "å…‘æ¢æŠ¤è…•", 0, nNumText+500)
 				if nNumText > 4000  then
-					AddNumText(sceneId, x001067_g_ScriptId, "¶Ò»»³Ä¼ç", 0, nNumText+600)
+					AddNumText(sceneId, x001067_g_ScriptId, "å…‘æ¢è¡¬è‚©", 0, nNumText+600)
 				end
 			end
-			AddNumText( sceneId, x001067_g_ScriptId, "Àë¿ª¡­¡­", 0, 0 )
+			AddNumText( sceneId, x001067_g_ScriptId, "ç¦»å¼€â€¦â€¦", 0, 0 )
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 		return
@@ -194,7 +194,7 @@ function x001067_OnEventRequest( sceneId, selfId, targetId, eventId )
 			end
 			
 			local szStr = "  #{JPZB_0610_04}" .. x001067_g_StoneList[nLevel].str 
-										.. "¡±¡°".. tostring(x001067_g_StoneList[nLevel].num) .. "#{JPZB_0610_05}"
+										.. "â€â€œ".. tostring(x001067_g_StoneList[nLevel].num) .. "#{JPZB_0610_05}"
 			AddText(sceneId, szStr)
 			
 			for i, item in x001067_g_EquipList do
@@ -208,7 +208,7 @@ function x001067_OnEventRequest( sceneId, selfId, targetId, eventId )
 		
 	end
 		
-	-- ñÒÉÙÎ¢£¬2008.5.29¡£¼«Æ·×°±¸·Å³ö¡£Ìí¼ÓÁ½¸ö°´Å¥µÄ´¦ÀíÊÂ¼ş
+	-- è¤šå°‘å¾®ï¼Œ2008.5.29ã€‚æå“è£…å¤‡æ”¾å‡ºã€‚æ·»åŠ ä¸¤ä¸ªæŒ‰é’®çš„å¤„ç†äº‹ä»¶
 	if nNumText == 9000 then
 		BeginEvent(sceneId)	
 				local szStr = "  #{JPZB_0610_06}"
@@ -222,7 +222,7 @@ function x001067_OnEventRequest( sceneId, selfId, targetId, eventId )
 		DispatchEventList(sceneId,selfId,targetId)
 		DispatchMissionContinueInfo(sceneId,selfId,targetId, x001067_g_ScriptId, 0)
 	end
-	-- Ä§±øÌì½µ½éÉÜ
+	-- é­”å…µå¤©é™ä»‹ç»
 	if nNumText == 10000 then
 		BeginEvent(sceneId)	
 			AddText( sceneId, "#{JPZB_20080523_01}" )
@@ -233,7 +233,7 @@ function x001067_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x001067_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x001067_g_eventList do
@@ -257,10 +257,10 @@ function x001067_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x001067_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
-	--¾Ü¾øÖ®ºó£¬Òª·µ»ØNPCµÄÊÂ¼şÁĞ±í
+	--æ‹’ç»ä¹‹åï¼Œè¦è¿”å›NPCçš„äº‹ä»¶åˆ—è¡¨
 	for i, findId in x001067_g_eventList do
 		if missionScriptId == findId then
 			x001067_UpdateEventList( sceneId, selfId, targetId )
@@ -276,7 +276,7 @@ function x001067_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¼ÌĞø£¨ÒÑ¾­½ÓÁËÈÎÎñ£©
+--ç»§ç»­ï¼ˆå·²ç»æ¥äº†ä»»åŠ¡ï¼‰
 --**********************************
 function x001067_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x001067_g_eventList do
@@ -294,7 +294,7 @@ function x001067_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---Ìá½»ÒÑ×öÍêµÄÈÎÎñ
+--æäº¤å·²åšå®Œçš„ä»»åŠ¡
 --**********************************
 function x001067_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, selectRadioId )
 
@@ -305,8 +305,8 @@ function x001067_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 		end
 	end
 	
-	--´¦ÀíÌá½»ºóµÄÏÔÊ¾Çé¿ö
-	--ÎªÁË°²È«£¬ÕâÀïÒª×ĞÏ¸£¬²»ÄÜ³ö´í
+	--å¤„ç†æäº¤åçš„æ˜¾ç¤ºæƒ…å†µ
+	--ä¸ºäº†å®‰å…¨ï¼Œè¿™é‡Œè¦ä»”ç»†ï¼Œä¸èƒ½å‡ºé”™
 	local nItemIndex = -1
 	
 	if missionScriptId == x001067_g_MenPaiTaoScriptId then
@@ -324,7 +324,7 @@ function x001067_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 		return
 	end
 	
-	-- ¿´Íê¼ÒÊÇ²»ÊÇ¹»²ÄÁÏÌá½»
+	-- çœ‹å®Œå®¶æ˜¯ä¸æ˜¯å¤Ÿææ–™æäº¤
 	local nLevel = 0
 	if x001067_g_EquipList[nItemIndex].n > 1000 then
 		nLevel = 1
@@ -351,7 +351,7 @@ function x001067_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 		nLevel = 8
 	end
 	
-	-- ñÒÉÙÎ¢£¬2008.5.29¡£¼«Æ·×°±¸·Å³ö¡£
+	-- è¤šå°‘å¾®ï¼Œ2008.5.29ã€‚æå“è£…å¤‡æ”¾å‡ºã€‚
 	if x001067_g_EquipList[nItemIndex].n == 9100 then
 		if selectRadioId == 10422016 then
 			nLevel = 9
@@ -366,7 +366,7 @@ function x001067_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 	if GetItemCount(sceneId, selfId, x001067_g_StoneList[nLevel].id) >= x001067_g_StoneList[nLevel].num  then
 		bStoneOk = 1
 	end
-	--ĞÂÔö¶ş¼¶ÍòÁéÊ¯¼ì²â
+	--æ–°å¢äºŒçº§ä¸‡çµçŸ³æ£€æµ‹
   if nLevel == 2 then 
 	  if GetItemCount(sceneId, selfId, x001067_g_StoneList[nLevel].id) + GetItemCount(sceneId, selfId, x001067_g_Stone2ID)>= x001067_g_StoneList[nLevel].num  then
 			bStoneOk = 1
@@ -388,7 +388,7 @@ function x001067_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 		return
 	end
 	
-	-- ¼ì²éÊÇ²»ÊÇÓĞ×ã¹»µÄÊ¯Í·¿ÉÒÔ¿Û³ı
+	-- æ£€æŸ¥æ˜¯ä¸æ˜¯æœ‰è¶³å¤Ÿçš„çŸ³å¤´å¯ä»¥æ‰£é™¤
 	local StoneCount = LuaFnGetAvailableItemCount(sceneId, selfId, x001067_g_StoneList[nLevel].id)
 	local Stone2Count = LuaFnGetAvailableItemCount(sceneId, selfId, x001067_g_Stone2ID)
 	
@@ -396,7 +396,7 @@ function x001067_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 	   (nLevel ~= 2 and StoneCount < x001067_g_StoneList[nLevel].num) then
 	    
 		BeginEvent(sceneId)
-			-- ñÒÉÙÎ¢£¬2008.5.29¡£¼«Æ·×°±¸·Å³ö¡£
+			-- è¤šå°‘å¾®ï¼Œ2008.5.29ã€‚æå“è£…å¤‡æ”¾å‡ºã€‚
 			if nLevel == 9 then
 				strText = "#{JPZB_0610_07}"
 			elseif nLevel == 10 then 
@@ -412,7 +412,7 @@ function x001067_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 		
 	end
 	
-	-- ¼ì²é±³°ü¿Õ¼ä
+	-- æ£€æŸ¥èƒŒåŒ…ç©ºé—´
 	BeginAddItem(sceneId)
 		AddItem(sceneId, selectRadioId, 1)
 	local bBagOk = EndAddItem(sceneId, selfId)
@@ -429,10 +429,10 @@ function x001067_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 	
 	local nItemBagIndexStone = 0  
  
-   --Ôö¼Ó¶ş¼¶°ó¶¨ÍòÁéÊ¯ÅĞ¶Ï
+   --å¢åŠ äºŒçº§ç»‘å®šä¸‡çµçŸ³åˆ¤æ–­
 	if  nLevel == 2 then
      nItemBagIndexStone = GetBagPosByItemSn(sceneId, selfId, x001067_g_Stone2ID)
-     if nItemBagIndexStone == -1 then --Ã»ÓĞ¶ş¼¶°ó¶¨ÍòÁéÊ¯
+     if nItemBagIndexStone == -1 then --æ²¡æœ‰äºŒçº§ç»‘å®šä¸‡çµçŸ³
      	 nItemBagIndexStone = GetBagPosByItemSn(sceneId, selfId, x001067_g_StoneList[nLevel].id)
      end
   else 
@@ -445,8 +445,8 @@ function x001067_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
   end
 	
 	local bDelOk = 0
-	-- É¾³ıÏà¹ØµÄÊ¯Í·
-	if nLevel == 2 and Stone2Count > 0 then --ÓÅÏÈ¿Û³ı°ó¶¨µÄÍòÁéÊ¯
+	-- åˆ é™¤ç›¸å…³çš„çŸ³å¤´
+	if nLevel == 2 and Stone2Count > 0 then --ä¼˜å…ˆæ‰£é™¤ç»‘å®šçš„ä¸‡çµçŸ³
 		if Stone2Count >= x001067_g_StoneList[nLevel].num then
 			bDelOk = LuaFnDelAvailableItem(sceneId,selfId, x001067_g_Stone2ID, x001067_g_StoneList[nLevel].num)
 		else 
@@ -465,12 +465,12 @@ function x001067_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 		DispatchMissionTips(sceneId,selfId)
 		return
 	else
-		--¸øÍê¼Ò¶«Î÷£¬Íê³É
+		--ç»™å®Œå®¶ä¸œè¥¿ï¼Œå®Œæˆ
 		-- AddItemListToHuman(sceneId,selfId)
 		--
 		local nBagIndex = TryRecieveItem( sceneId, selfId, x001067_g_EquipList[nItemIndex].id, 1 );
 		
-		-- ñÒÉÙÎ¢£¬2008.5.29¡£¼«Æ·×°±¸·Å³ö¡£ÕâÁ½¸ö¼«Æ·×°±¸ÎŞ·¨´ò¿×£¬Ç¿ÖÆ¿ÌÃú
+		-- è¤šå°‘å¾®ï¼Œ2008.5.29ã€‚æå“è£…å¤‡æ”¾å‡ºã€‚è¿™ä¸¤ä¸ªæå“è£…å¤‡æ— æ³•æ‰“å­”ï¼Œå¼ºåˆ¶åˆ»é“­
 		-- LuaFnEquipLock( sceneId, selfId, nBagIndex )
 		
 		BeginEvent(sceneId)
@@ -490,10 +490,10 @@ function x001067_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 		elseif randMessage == 2 then
 			message = format("#W#{_INFOUSR%s}#W#{WLS_03}#Y%d#W#{WLS_04}#{_INFOMSG%s}#{WLS_05}#{_INFOMSG%s}#{WLS_06}#{_INFOMSG%s}#{WLS_07}", LuaFnGetName(sceneId, selfId), x001067_g_StoneList[nLevel].num, szTransferStone, szTransferStone, szTransferEquip);
 		else
-			message = format("#W#{WLS_00}#Y%d#I¿Å#W#{_INFOMSG%s}#IÓÉÖÔµÄÔŞµÀ£º¡°#W#{_INFOUSR%s}#{WLS_01}#{_INFOMSG%s}#{WLS_02}", x001067_g_StoneList[nLevel].num, szTransferStone, LuaFnGetName(sceneId, selfId), szTransferEquip);
+			message = format("#W#{WLS_00}#Y%d#Ié¢—#W#{_INFOMSG%s}#Iç”±è¡·çš„èµé“ï¼šâ€œ#W#{_INFOUSR%s}#{WLS_01}#{_INFOMSG%s}#{WLS_02}", x001067_g_StoneList[nLevel].num, szTransferStone, LuaFnGetName(sceneId, selfId), szTransferEquip);
 		end
 		
-		-- ñÒÉÙÎ¢£¬2008.5.29¡£¼«Æ·×°±¸·Å³ö¡£
+		-- è¤šå°‘å¾®ï¼Œ2008.5.29ã€‚æå“è£…å¤‡æ”¾å‡ºã€‚
 		if nLevel == 9 then
 			message = format("#I#{_INFOUSR%s}#{JPZB_0610_14}#Y#{_INFOMSG%s}#{JPZB_0610_15}", GetName(sceneId, selfId), szTransferEquip);
 		end
@@ -503,7 +503,7 @@ function x001067_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 		
 		BroadMsgByChatPipe(sceneId, selfId, message, 4);
 		
-		--¶Ò»»³É¹¦£¬²¥·ÅÌØĞ§
+		--å…‘æ¢æˆåŠŸï¼Œæ’­æ”¾ç‰¹æ•ˆ
 		LuaFnSendSpecificImpactToUnit(sceneId,selfId,selfId,selfId,18,0)
 		
 		return
@@ -518,7 +518,7 @@ function x001067_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 end
 
 --**********************************
---ËÀÍöÊÂ¼ş
+--æ­»äº¡äº‹ä»¶
 --**********************************
 function x001067_OnDie( sceneId, selfId, killerId )
 end

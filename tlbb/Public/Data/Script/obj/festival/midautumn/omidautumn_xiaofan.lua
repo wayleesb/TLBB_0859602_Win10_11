@@ -1,23 +1,23 @@
--- ÖĞÇïNPC
--- Ğ¡··
+-- ä¸­ç§‹NPC
+-- å°è´©
 
 x050007_g_scriptId = 050007
 
 x050007_g_shoptableindex = 9
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x050007_OnDefaultEvent( sceneId, selfId, targetId )
 	BeginEvent( sceneId )
-		AddText( sceneId, "    ÕâÎ»´óÏÀ£¬À´Âò¸öÀñ»¨ÍæÍæ°É£¡" )
-		AddNumText( sceneId, x050007_g_scriptId, "¹ºÂòÖĞÇïÀñ»¨", -1, 1 )
+		AddText( sceneId, "    è¿™ä½å¤§ä¾ ï¼Œæ¥ä¹°ä¸ªç¤¼èŠ±ç©ç©å§ï¼" )
+		AddNumText( sceneId, x050007_g_scriptId, "è´­ä¹°ä¸­ç§‹ç¤¼èŠ±", -1, 1 )
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x050007_OnEventRequest( sceneId, selfId, targetId, eventId )
 	if GetNumText() == 1 then

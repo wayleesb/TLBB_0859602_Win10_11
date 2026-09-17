@@ -1,18 +1,18 @@
 --MisDescBegin
 x212109_g_ScriptId = 212109
 x212109_g_MissionId = 658
-x212109_g_Name	="°¢Çà"
+x212109_g_Name	="é˜¿é’"
 x212109_g_MissionKind = 42
 x212109_g_MissionLevel = 38
 x212109_g_IfMissionElite = 0
-x212109_g_MissionName="×îºóÒ»»÷"
+x212109_g_MissionName="æœ€åä¸€å‡»"
 x212109_g_MissionInfo="#{Lua_Longquan_0001}"
-x212109_g_MissionTarget="#GÁúÈª¶ÏÇÅ#WµÄ#R°¢Çà#W#{_INFOAIM51,115,31,°¢Çà}ÒªÇóÄãÉ±ËÀ#RÍ¨Ìì#W¡£#RÍ¨Ìì#W#{_INFOAIM48,51,31,-1}¾­³£ÔÚ#G¹éÔÆÍ¤#W¸½½ü³öÏÖ¡£"		
-x212109_g_ContinueInfo="  ÄãÒÑ¾­É±ËÀÍ¨ÌìÁËÂğ£¿"
-x212109_g_MissionComplete="  Ò»ÇĞ¶¼½áÊøÁËÂğ£¿ÊÇ·ñ£¬ÎÒºÍÖÙÖ®Ö®¼äÒ²¸ÃÓĞ¸öÁË¶ÏÁË¡­¡­"		
+x212109_g_MissionTarget="#Gé¾™æ³‰æ–­æ¡¥#Wçš„#Ré˜¿é’#W#{_INFOAIM51,115,31,é˜¿é’}è¦æ±‚ä½ æ€æ­»#Ré€šå¤©#Wã€‚#Ré€šå¤©#W#{_INFOAIM48,51,31,-1}ç»å¸¸åœ¨#Gå½’äº‘äº­#Wé™„è¿‘å‡ºç°ã€‚"		
+x212109_g_ContinueInfo="  ä½ å·²ç»æ€æ­»é€šå¤©äº†å—ï¼Ÿ"
+x212109_g_MissionComplete="  ä¸€åˆ‡éƒ½ç»“æŸäº†å—ï¼Ÿæ˜¯å¦ï¼Œæˆ‘å’Œä»²ä¹‹ä¹‹é—´ä¹Ÿè¯¥æœ‰ä¸ªäº†æ–­äº†â€¦â€¦"		
 x212109_g_MoneyBonus=4000
 x212109_g_exp=20000
 x212109_g_RadioItemBonus={{id=10421066 ,num=1},{id=10411073,num=1},{id=10410067,num=1}}
-x212109_g_Custom	= { {id="ÒÑÉ±ËÀÍ¨Ìì",num=1} }
-x212109_g_IsMissionOkFail = 0		--±äÁ¿µÄµÚ0Î»
+x212109_g_Custom	= { {id="å·²æ€æ­»é€šå¤©",num=1} }
+x212109_g_IsMissionOkFail = 0		--å˜é‡çš„ç¬¬0ä½
 --MisDescEnd

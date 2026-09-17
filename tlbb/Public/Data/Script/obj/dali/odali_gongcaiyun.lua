@@ -1,9 +1,9 @@
---¹¨²ÊÔÆ
+--é¾šå½©äº‘
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x002089_g_scriptId = 002089
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x002089_g_eventList={ 808036, 
 					  808035, 
 					  808058, 
@@ -22,11 +22,11 @@ x002089_g_eventList={ 808036,
 					  808038,    -- zchw signature
 					  889052,
 					  889053,
-					  808129,    -- ²¹ÁìÇ¬À¤´ü
+					  808129,    -- è¡¥é¢†ä¹¾å¤è¢‹
 					}
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x002089_UpdateEventList( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
@@ -41,14 +41,14 @@ function x002089_UpdateEventList( sceneId, selfId,targetId )
 end
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x002089_OnDefaultEvent( sceneId, selfId,targetId )
 	x002089_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x002089_OnEventRequest( sceneId, selfId, targetId, eventId )
 	for i, findId in x002089_g_eventList do
@@ -60,35 +60,35 @@ function x002089_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x002089_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x002089_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 
 end
 
 --**********************************
---¼ÌĞø£¨ÒÑ¾­½ÓÁËÈÎÎñ£©
+--ç»§ç»­ï¼ˆå·²ç»æ¥äº†ä»»åŠ¡ï¼‰
 --**********************************
 function x002089_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 
 end
 
 --**********************************
---Ìá½»ÒÑ×öÍêµÄÈÎÎñ
+--æäº¤å·²åšå®Œçš„ä»»åŠ¡
 --**********************************
 function x002089_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, selectRadioId )
 
 end
 
 --**********************************
---ËÀÍöÊÂ¼ş
+--æ­»äº¡äº‹ä»¶
 --**********************************
 function x002089_OnDie( sceneId, selfId, killerId )
 end

@@ -8,7 +8,7 @@ local Need_Item_Count = 0
 local Bore_Count=0
 local objCared = -1;
 local MAX_OBJ_DISTANCE = 3.0;
-local STILE_TYPE = -1 --´ò¿×ÀàĞÍ£¬1µã½ğ£¬2º®Óñ
+local STILE_TYPE = -1 --æ‰“å­”ç±»å‹ï¼Œ1ç‚¹é‡‘ï¼Œ2å¯’ç‰
 
 local x311200_Stiletto_four_ID = {
 																	
@@ -17,25 +17,25 @@ local x311200_Stiletto_four_ID = {
 																	10521093,10521094,10521095,10521096,10521097,10521098,10522090,10522091,10522092,10522093,
 																	10522094,10522095,10522096,10522097,10522098,10523090,10523091,10523092,10523093,10523094,
 																	10523095,10523096,10523097,10523098,10514090,
-																	-- ñÒÉÙÎ¢£¬2008.6.12¡£Ìí¼Ó102ÉñÆ÷¼«ÏŞ´ò¿×
+																	-- è¤šå°‘å¾®ï¼Œ2008.6.12ã€‚æ·»åŠ 102ç¥å™¨æé™æ‰“å­”
 																	10300100,10300101,10300102, 10301100,10301101,10301102, 10301200,10301201,10301202, 
 																	10302100,10302101,10302102, 10303100,10303101,10303102, 10303200,10303201,10303202,
 																	10304100,10304101,10304102, 10305100,10305101,10305102, 10305200,10305201,10305202,
 																	10422016,10423024,
-																	--ºú¿­£¬2008.8.29¡£¾É100Ì×£¨Îå¼şÌ×£©¼°ĞÂ96Ì×¿ª·Å¼«ÏŞ´ò¿×
+																	--èƒ¡å‡¯ï¼Œ2008.8.29ã€‚æ—§100å¥—ï¼ˆäº”ä»¶å¥—ï¼‰åŠæ–°96å¥—å¼€æ”¾æé™æ‰“å­”
 																	10510009,10510019,10510029,10510039,10510049,10510059,10510069,10510079,10510089,10511009,
 																	10511019,10511029,10511039,10511049,10511059,10511069,10511079,10511089,10512009,10512019,
 																	10512029,10512039,10512049,10512059,10512069,10512079,10512089,10513009,10513019,10513029,
 																	10513039,10513049,10513059,10513069,10513079,10513089,10511096,10512092,10520092,10522101,
 																	10523101,10511097,10512093,10520093,10522102,10523102,10511098,10512094,10520094,10522103,
 																	10523103,10511099,10512095,10520095,10522104,10523104,
-																	--ºú¿­£¬2008.9.18¡£90¼¶ÒÔÉÏ£¨º¬90£©Éú»î¼¼ÄÜ²ú³öµÄ½äÖ¸£¬»¤·û£¬¼ç¿ª·Å¼«ÏŞ´ò¿×
+																	--èƒ¡å‡¯ï¼Œ2008.9.18ã€‚90çº§ä»¥ä¸Šï¼ˆå«90ï¼‰ç”Ÿæ´»æŠ€èƒ½äº§å‡ºçš„æˆ’æŒ‡ï¼ŒæŠ¤ç¬¦ï¼Œè‚©å¼€æ”¾æé™æ‰“å­”
 																	10215020,10222020,10223020,10222035,10222036,10223035,10223036,
-																	--ºú¿­£¬2008.11.11¡£90¼¶ÒÔÉÏ£¨º¬90£©ÊÖ¹¤×°±¸¿ª·Å¼«ÏŞ´ò¿×£¨Ğ¬£¬Ñü´ø£¬»¤Íó£¬ÊÖÌ×£¬Í·¿ø£¬ÎäÆ÷£¬»¤¼×£¬ÏîÁ´£©
+																	--èƒ¡å‡¯ï¼Œ2008.11.11ã€‚90çº§ä»¥ä¸Šï¼ˆå«90ï¼‰æ‰‹å·¥è£…å¤‡å¼€æ”¾æé™æ‰“å­”ï¼ˆé‹ï¼Œè…°å¸¦ï¼ŒæŠ¤è…•ï¼Œæ‰‹å¥—ï¼Œå¤´ç›”ï¼Œæ­¦å™¨ï¼ŒæŠ¤ç”²ï¼Œé¡¹é“¾ï¼‰
 																	10200019,10200020,10201019,10201020,10202019,10202020,10203019,10203020,10204019,10204020,
 																	10205019,10205020,10210020,10210040,10210060,10213020,10213040,10213060,10212020,10212040,
 																	10212060,10211020,10211040,10211060,10214020,10221020,10220020,
-																	--zchw£¬2008-11-17  TT£º41140 90ÃÅÅÉÌ×£¬92¼¶ÉñÆ÷¿ª·ÅµÚËÄ¿×
+																	--zchwï¼Œ2008-11-17  TTï¼š41140 90é—¨æ´¾å¥—ï¼Œ92çº§ç¥å™¨å¼€æ”¾ç¬¬å››å­”
 																	10510008,10510038,10510068,
 																	10511018,10511028,10511048,10511058,10511078,10511088,10512008,10512038,
 																	10512068,10513008,10513018,10513028,10513038,10513048,10513058,10513068,
@@ -43,7 +43,7 @@ local x311200_Stiletto_four_ID = {
 																	10520058,10520078,10520088,10521028,10521058,10521088,10522018,10522048,
 																	10522078,10552008,10552038,10552068,10553008,10553018,10553038,10553048,
 																	10553068,10553078,
-																	--zchw 2008-11-26 TT£º41771
+																	--zchw 2008-11-26 TTï¼š41771
 																	10410026, 10410027, 10410034, 10410035, 10423025, 10423026,
 																	--houzhifang 2008-12-22: dark
 																	10150001,10150002,
@@ -98,7 +98,7 @@ function Stiletto_Four_OnEvent(event)
 			objCared = DataPool : GetNPCIDByServerID(xx);
 			AxTrace(0,1,"xx="..xx .. " objCared="..objCared)
 			if objCared == -1 then
-					PushDebugMessage("server´«¹ıÀ´µÄÊı¾İÓĞÎÊÌâ¡£");
+					PushDebugMessage("serverä¼ è¿‡æ¥çš„æ•°æ®æœ‰é—®é¢˜ã€‚");
 					return;
 			end
 			BeginCareObject_Stiletto_Four(objCared)
@@ -107,10 +107,10 @@ function Stiletto_Four_OnEvent(event)
 			return;
 		end
 		
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ı£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æœå’ŒNPCçš„è·ç¦»å¤§äºä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if(arg1 == "distance" and tonumber(arg2)>MAX_OBJ_DISTANCE or arg1=="destroy") then
 			
-			--È¡Ïû¹ØĞÄ
+			--å–æ¶ˆå…³å¿ƒ
 			Stiletto_Four_Cancel_Clicked()
 		end
 
@@ -181,7 +181,7 @@ function Stiletto_Four_Update(pos1,pos0)
 	pos_ui		 = tonumber(pos1)
 
 	local theAction = EnumAction(pos_packet, "packageitem");
-	if pos_ui == 1 then  --·ÅÈëÎïÆ·Ê±
+	if pos_ui == 1 then  --æ”¾å…¥ç‰©å“æ—¶
 		if theAction:GetID() ~= 0 then
 			
 			local Bore_Count1 = 0;
@@ -233,7 +233,7 @@ function Stiletto_Four_Update(pos1,pos0)
 			Need_Item_Count = Need_Item_Count1
 			Bore_Count = Bore_Count1
 				
-			--ÈÃÖ®Ç°µÄ¶«Î÷±äÁÁ
+			--è®©ä¹‹å‰çš„ä¸œè¥¿å˜äº®
 			if EQUIP_QUALITY ~= -1 then
 				LifeAbility : Lock_Packet_Item(EQUIP_QUALITY,0);
 				Stiletto_Four_Money : SetProperty("MoneyNumber", "");
@@ -252,9 +252,9 @@ function Stiletto_Four_Update(pos1,pos0)
 			return;
 		end
 		Stiletto_Four_Money : SetProperty("MoneyNumber", tostring(Need_Money));
-		Stiletto_Four_State : SetText("µ±Ç°°¼²ÛÊı:"..Bore_Count..";¿ÉÒÔÔö¼Ó°¼²ÛÊı:"..tostring(4-Bore_Count))
+		Stiletto_Four_State : SetText("å½“å‰å‡¹æ§½æ•°:"..Bore_Count..";å¯ä»¥å¢åŠ å‡¹æ§½æ•°:"..tostring(4-Bore_Count))
 		
-	elseif pos_ui == 2 then --µã½ğÖ®¼å»òº®Óñ¾«´â
+	elseif pos_ui == 2 then --ç‚¹é‡‘ä¹‹ç…æˆ–å¯’ç‰ç²¾ç²¹
 		
 		--local Item_Class = PlayerPackage : GetItemSubTableIndex(pos_packet,0)
 	--	local Item_Quality = PlayerPackage : GetItemSubTableIndex(pos_packet,1)
@@ -271,17 +271,17 @@ function Stiletto_Four_Update(pos1,pos0)
 			local itemindex = PlayerPackage : GetItemTableIndex(pos_packet)
 						
 			if STILE_TYPE == 1 then
-				if itemindex ~= 20109101 then  --add:lby 20080523Ö»ÄÜ·ÅÈëµã½ğÖ®¼ı
+				if itemindex ~= 20109101 then  --add:lby 20080523åªèƒ½æ”¾å…¥ç‚¹é‡‘ä¹‹ç®­
 	 				PushDebugMessage("#{XQC_20080509_05}")
 	 				return
 	  		end
 			elseif STILE_TYPE == 2 then
-				if itemindex ~= 20310111 then  --add:hukai Ö»ÄÜ·ÅÈëº®Óñ¾«´â
+				if itemindex ~= 20310111 then  --add:hukai åªèƒ½æ”¾å…¥å¯’ç‰ç²¾ç²¹
 	 				PushDebugMessage("#{JCDK_80905_05}")
 	 				return
 	  		end
 			else
-				PushDebugMessage("´íÎóµÄÏûºÄÀàĞÍ¡£"..STILE_TYPE)
+				PushDebugMessage("é”™è¯¯çš„æ¶ˆè€—ç±»å‹ã€‚"..STILE_TYPE)
 	 			return
 			end
 	  
@@ -289,7 +289,7 @@ function Stiletto_Four_Update(pos1,pos0)
 			if MATERIAL_QUALITY ~= -1 then
 				LifeAbility : Lock_Packet_Item(MATERIAL_QUALITY,0);
 			end
-			--ÈÃÖ®Ç°µÄ¶«Î÷±äÁÁ
+			--è®©ä¹‹å‰çš„ä¸œè¥¿å˜äº®
 			MATERIAL_QUALITY = pos_packet;
 			LifeAbility : Lock_Packet_Item(MATERIAL_QUALITY,1);
 		else
@@ -304,7 +304,7 @@ end
 
 function Stiletto_Four_Buttons_Clicked()
 	if MATERIAL_QUALITY == -1 then
-		PushDebugMessage("Çë·ÅÈë´ò¿×²ÄÁÏ")
+		PushDebugMessage("è¯·æ”¾å…¥æ‰“å­”ææ–™")
 		return
 	end
 	if EQUIP_QUALITY ~= -1 then
@@ -342,7 +342,7 @@ function Stiletto_Four_Buttons_Clicked()
 end
 
 function Stiletto_Four_Close()
-	--²¢ÉèÖÃ£¬ÈÃ±³°üÀïµÄÎ»ÖÃ±äÁÁ
+	--å¹¶è®¾ç½®ï¼Œè®©èƒŒåŒ…é‡Œçš„ä½ç½®å˜äº®
 	this:Hide();
 	Stiletto_Four_Clear();
 	StopCareObject_Stiletto_Four(objCared)
@@ -354,9 +354,9 @@ function Stiletto_Four_Cancel_Clicked()
 end
 
 --=========================================================
---¿ªÊ¼¹ØĞÄNPC£¬
---ÔÚ¿ªÊ¼¹ØĞÄÖ®Ç°ĞèÒªÏÈÈ·¶¨Õâ¸ö½çÃæÊÇ²»ÊÇÒÑ¾­ÓĞ¡°¹ØĞÄ¡±µÄNPC£¬
---Èç¹ûÓĞµÄ»°£¬ÏÈÈ¡ÏûÒÑ¾­ÓĞµÄ¡°¹ØĞÄ¡±
+--å¼€å§‹å…³å¿ƒNPCï¼Œ
+--åœ¨å¼€å§‹å…³å¿ƒä¹‹å‰éœ€è¦å…ˆç¡®å®šè¿™ä¸ªç•Œé¢æ˜¯ä¸æ˜¯å·²ç»æœ‰â€œå…³å¿ƒâ€çš„NPCï¼Œ
+--å¦‚æœæœ‰çš„è¯ï¼Œå…ˆå–æ¶ˆå·²ç»æœ‰çš„â€œå…³å¿ƒâ€
 --=========================================================
 function BeginCareObject_Stiletto_Four(objCaredId)
 
@@ -366,7 +366,7 @@ function BeginCareObject_Stiletto_Four(objCaredId)
 end
 
 --=========================================================
---Í£Ö¹¶ÔÄ³NPCµÄ¹ØĞÄ
+--åœæ­¢å¯¹æŸNPCçš„å…³å¿ƒ
 --=========================================================
 function StopCareObject_Stiletto_Four(objCaredId)
 	this:CareObject(objCaredId, 0, "Stiletto_Four");

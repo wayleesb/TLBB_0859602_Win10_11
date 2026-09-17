@@ -1,24 +1,24 @@
---ÂåÑôNPC
---³Â·òÖ®
---ÆÕÍ¨
+--æ´›é˜³NPC
+--é™ˆå¤«ä¹‹
+--æ™®é€š
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x000112_g_scriptId = 000112
 
---Ä¿±êNPC
-x000112_g_name	="³Â·òÖ®"
+--ç›®æ ‡NPC
+x000112_g_name	="é™ˆå¤«ä¹‹"
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í {½á°İ£¬½â³ı½á°İ,Ç¿ÖÆ½â³ı½á°İ}
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨ {ç»“æ‹œï¼Œè§£é™¤ç»“æ‹œ,å¼ºåˆ¶è§£é™¤ç»“æ‹œ}
 x000112_g_RelationEventList={806001,806002,806000}
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x000112_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
-		AddText(sceneId,"  ÏëºÍ±ğÈË½á°İÂğ£¿ÎÒ¿ÉÒÔ¸øÄãÃÇĞ´½ğÀ¼Æ×¡£")
+		AddText(sceneId,"  æƒ³å’Œåˆ«äººç»“æ‹œå—ï¼Ÿæˆ‘å¯ä»¥ç»™ä½ ä»¬å†™é‡‘å…°è°±ã€‚")
 		
-		AddNumText( sceneId, x000112_g_scriptId, "½á°İ½éÉÜ", 11, 10 )
+		AddNumText( sceneId, x000112_g_scriptId, "ç»“æ‹œä»‹ç»", 11, 10 )
 		
 		for i, eventId in x000112_g_RelationEventList do
 			CallScriptFunction( eventId, "OnEnumerate", sceneId, selfId, targetId )
@@ -28,7 +28,7 @@ function x000112_OnDefaultEvent( sceneId, selfId,targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x000112_OnEventRequest( sceneId, selfId, targetId, eventId )
 
@@ -54,7 +54,7 @@ function x000112_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x000112_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 	local i
@@ -68,12 +68,12 @@ function x000112_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x000112_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 	local i
 	local findId
-	--¾Ü¾øÖ®ºó£¬Òª·µ»ØNPCµÄÊÂ¼şÁĞ±í
+	--æ‹’ç»ä¹‹åï¼Œè¦è¿”å›NPCçš„äº‹ä»¶åˆ—è¡¨
 	for i, findId in x000112_g_RelationEventList do
 		if missionScriptId == findId then
 			x000112_UpdateEventList( sceneId, selfId, targetId )

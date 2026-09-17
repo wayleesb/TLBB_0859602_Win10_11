@@ -1,13 +1,13 @@
---»ğÑæÉ½NPC
---¹şÍ¼Ë¹
---´«ËÍµ½¶Ø»Í
+--ç«ç„°å±±NPC
+--å“ˆå›¾æ–¯
+--ä¼ é€åˆ°æ•¦ç…Œ
 
 x042501_g_ScriptId	= 042501
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x042501_g_Transport = 400900
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x042501_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent( sceneId )
@@ -17,7 +17,7 @@ function x042501_OnDefaultEvent( sceneId, selfId,targetId )
 	DispatchEventList( sceneId, selfId, targetId )
 end
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x042501_OnEventRequest( sceneId, selfId, targetId, eventId )
 	CallScriptFunction((x042501_g_Transport), "TransferFunc",sceneId, selfId, 8, 80, 116, 90, 1000)

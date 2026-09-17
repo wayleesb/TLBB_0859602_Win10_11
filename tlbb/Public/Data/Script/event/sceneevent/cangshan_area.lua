@@ -1,25 +1,25 @@
---²ÔÉ½ ÀÇÑ¨´óÓª Ì½Ë÷ÀàÈÎÎñ
+--è‹å±± ç‹¼ç©´å¤§è¥ æŽ¢ç´¢ç±»ä»»åŠ¡
 --212127
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x212127_g_scriptId = 212127
 
---ÈÎÎñºÅ
+--ä»»åŠ¡å·
 x212127_g_MissionId = 932
 
 --**********************************
---ÊÂ¼þÁÐ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x212127_OnEnterArea(sceneId, selfId)
-	--¼ì²âÍæ¼ÒÊÇ²»ÊÇÓÐÕâ¸öÈÎÎñ£¬
+	--æ£€æµ‹çŽ©å®¶æ˜¯ä¸æ˜¯æœ‰è¿™ä¸ªä»»åŠ¡ï¼Œ
 	if( IsHaveMission(sceneId,selfId,x212127_g_MissionId) > 0)  then
 		local misIndex = GetMissionIndexByID(sceneId,selfId,x212127_g_MissionId)
 		if GetMissionParam(sceneId, selfId, misIndex, 0) < 1  then
 			SetMissionByIndex( sceneId, selfId, misIndex, 0, 1)
 			SetMissionByIndex( sceneId, selfId, misIndex, 1, 1)
-			-- Í¨Öª¿Í»§¶Ë
+			-- é€šçŸ¥å®¢æˆ·ç«¯
      	BeginEvent(sceneId)
-				local strText = format("ÒÑÌ½Ë÷ÀÇÑ¨´óÓª:1/1")
+				local strText = format("å·²æŽ¢ç´¢ç‹¼ç©´å¤§è¥:1/1")
 				AddText(sceneId, strText)
 		  EndEvent(sceneId)
 	  	DispatchMissionTips(sceneId,selfId)
@@ -28,7 +28,7 @@ function x212127_OnEnterArea(sceneId, selfId)
 end
 
 --**********************************
---ÊÂ¼þÁÐ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x212127_OnLeaveArea(sceneId, selfId)
 	

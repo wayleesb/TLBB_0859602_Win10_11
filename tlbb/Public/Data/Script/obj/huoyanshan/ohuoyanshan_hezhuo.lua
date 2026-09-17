@@ -1,11 +1,11 @@
---火焰山NPC
---和卓
---任务
+--鐏劙灞盢PC
+--鍜屽崜
+--浠诲姟
 
 x042508_g_ScriptId	= 042508
 
 --**********************************
---事件交互入口
+--浜嬩欢浜や簰鍏ュ彛
 --**********************************
 function x042508_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent( sceneId )

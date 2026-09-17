@@ -1,55 +1,55 @@
 
---ÃÅÅÉÒıµ¼ÈÎÎñ
+--é—¨æ´¾å¼•å¯¼ä»»åŠ¡
 
 --MisDescBegin
---½Å±¾ºÅ
+--è„šæœ¬å·
 x210239_g_ScriptId = 210239
 
---½ÓÊÜÈÎÎñNPCÊôĞÔ
+--æ¥å—ä»»åŠ¡NPCå±æ€§
 x210239_g_Position_X=160.0895
 x210239_g_Position_Z=156.9309
 x210239_g_SceneID=2
-x210239_g_AccomplishNPC_Name="ÕÔÌìÊ¦"
+x210239_g_AccomplishNPC_Name="èµµå¤©å¸ˆ"
 
---ÈÎÎñºÅ
+--ä»»åŠ¡å·
 x210239_g_MissionId = 719
---Ç°ÖÃÈÎÎñID
+--å‰ç½®ä»»åŠ¡ID
 x210239_g_MissionIdPer = 718
 
---Ä¿±êNPC
-x210239_g_Name	="ÕÔÌìÊ¦"
+--ç›®æ ‡NPC
+x210239_g_Name	="èµµå¤©å¸ˆ"
 
---ÈÎÎñ¹éÀà
+--ä»»åŠ¡å½’ç±»
 x210239_g_MissionKind = 13
 
---ÈÎÎñµÈ¼¶
+--ä»»åŠ¡ç­‰çº§
 x210239_g_MissionLevel = 10
 
---ÊÇ·ñÊÇ¾«Ó¢ÈÎÎñ
+--æ˜¯å¦æ˜¯ç²¾è‹±ä»»åŠ¡
 x210239_g_IfMissionElite = 0
 
---ÈÎÎñÃû
-x210239_g_MissionName="ÃûÃÅÕıÅÉ"
---ÈÎÎñÃèÊö
+--ä»»åŠ¡å
+x210239_g_MissionName="åé—¨æ­£æ´¾"
+--ä»»åŠ¡æè¿°
 x210239_g_MissionInfo  = ""
-x210239_g_MissionInfo1 = "    $N£¬ÄãÖÕÓÚÀ´ÁË¡£#r    ²»´í²»´í£¬ÄãÏÖÔÚµÄ¸ù»ùÒÑ¾­´òµÃÏàµ±ÔúÊµ£¬È¥¾Å´óÃÅÅÉÑ§Ï°¸ßÉîÎä¹¦ÒÑ¾­ÊÇË³Àí³ÉÕÂÖ®ÊÂÁË¡£"
-x210239_g_MissionInfo2 = "    ¶Ô£¬ÄãÃ»ÓĞÌı´í£¬¾ÍÊÇ´«ËµÖĞµÄ¾Å´óÃÅÅÉ¡£ĞÇËŞÅÉÊÇÎ÷Óò´ó×Ú£¬ÌìÉ½ÅÉÊÇÎ÷±±Ææİâ£¬ÌìÁúÅÉÊÇÌìÄÏÖ§Öù£¬åĞÒ£ÅÉÉñ³ö¹íÃ»£¬¶ëáÒÅÉÍò·ğ³¯×Ú£¬Îäµ±ÅÉµÀ¹ÇÏÉ·ç£¬Ã÷½ÌÊÇÌìÏÂµÚÒ»´ó½Ì£¬Ø¤°ïÊÇÌìÏÂµÚÒ»´ó°ï£¬ÉÙÁÖÅÉ¸üÊÇÌìÏÂÎäÁÖµÄÌ©É½±±¶·¡£"
-x210239_g_MissionInfo3 = "    ÎŞÂÛÄã°İÈëÁËÄÄÒ»¸öÃÅÅÉ£¬¶¼ÊÇÌ¤ÉÏÁËÒ»Ìõ½ğ¹â´óµÀ°¡£¬ÎÒÃÇÀÏ¸ç¶ù¼¸¸öÁ³ÉÏ¶¼ÓĞ¹â°¡¡£"
-x210239_g_MissionInfo4 = "    ÕâÑù°É£¬ÄãÈ¥ÕÒ¾Å´óÃÅÅÉµÄÊÕÂ¼ÈËÁÄÁÄ£¬ÌıËûÃÇ½²½²¸÷´óÃÅÅÉµÄÌØÉ«£¬È»ºóÑ¡ÔñÒ»¸öÃÅÅÉ¼ÓÈë¡£µÈÄã³ÉÎªÁË¾Å´óÃÅÅÉµÄµÜ×Ó£¬ÄãÔÙÀ´ÕÒÎÒ£¬ÎÒÃÇ»á¸øÄã¿ªÒ»¸öÇì¹¦ÑçµÄ¡£"
+x210239_g_MissionInfo1 = "    $Nï¼Œä½ ç»ˆäºæ¥äº†ã€‚#r    ä¸é”™ä¸é”™ï¼Œä½ ç°åœ¨çš„æ ¹åŸºå·²ç»æ‰“å¾—ç›¸å½“æ‰å®ï¼Œå»ä¹å¤§é—¨æ´¾å­¦ä¹ é«˜æ·±æ­¦åŠŸå·²ç»æ˜¯é¡ºç†æˆç« ä¹‹äº‹äº†ã€‚"
+x210239_g_MissionInfo2 = "    å¯¹ï¼Œä½ æ²¡æœ‰å¬é”™ï¼Œå°±æ˜¯ä¼ è¯´ä¸­çš„ä¹å¤§é—¨æ´¾ã€‚æ˜Ÿå®¿æ´¾æ˜¯è¥¿åŸŸå¤§å®—ï¼Œå¤©å±±æ´¾æ˜¯è¥¿åŒ—å¥‡è‘©ï¼Œå¤©é¾™æ´¾æ˜¯å¤©å—æ”¯æŸ±ï¼Œé€é¥æ´¾ç¥å‡ºé¬¼æ²¡ï¼Œå³¨åµ‹æ´¾ä¸‡ä½›æœå®—ï¼Œæ­¦å½“æ´¾é“éª¨ä»™é£ï¼Œæ˜æ•™æ˜¯å¤©ä¸‹ç¬¬ä¸€å¤§æ•™ï¼Œä¸å¸®æ˜¯å¤©ä¸‹ç¬¬ä¸€å¤§å¸®ï¼Œå°‘æ—æ´¾æ›´æ˜¯å¤©ä¸‹æ­¦æ—çš„æ³°å±±åŒ—æ–—ã€‚"
+x210239_g_MissionInfo3 = "    æ— è®ºä½ æ‹œå…¥äº†å“ªä¸€ä¸ªé—¨æ´¾ï¼Œéƒ½æ˜¯è¸ä¸Šäº†ä¸€æ¡é‡‘å…‰å¤§é“å•Šï¼Œæˆ‘ä»¬è€å“¥å„¿å‡ ä¸ªè„¸ä¸Šéƒ½æœ‰å…‰å•Šã€‚"
+x210239_g_MissionInfo4 = "    è¿™æ ·å§ï¼Œä½ å»æ‰¾ä¹å¤§é—¨æ´¾çš„æ”¶å½•äººèŠèŠï¼Œå¬ä»–ä»¬è®²è®²å„å¤§é—¨æ´¾çš„ç‰¹è‰²ï¼Œç„¶åé€‰æ‹©ä¸€ä¸ªé—¨æ´¾åŠ å…¥ã€‚ç­‰ä½ æˆä¸ºäº†ä¹å¤§é—¨æ´¾çš„å¼Ÿå­ï¼Œä½ å†æ¥æ‰¾æˆ‘ï¼Œæˆ‘ä»¬ä¼šç»™ä½ å¼€ä¸€ä¸ªåº†åŠŸå®´çš„ã€‚"
 
---ÈÎÎñÄ¿±ê
+--ä»»åŠ¡ç›®æ ‡
 x210239_g_MissionTarget="#{MIS_dali_ZTS_001}"
---Î´Íê³ÉÈÎÎñµÄnpc¶Ô»°
-x210239_g_ContinueInfo="    ÒÑ¾­³ÉÎª¾Å´óÃÅÅÉµÄµÜ×ÓÁËÂğ£¿"
---Ìá½»Ê±npcµÄ»°
-x210239_g_MissionComplete="    ¿´À´ÄãÒÑ¾­Ñ¡ºÃÁËÕıÈ·µÄÈËÉúµÀÂ·£¬Ïò×ÅÎ´À´±¼ÅÜ°É£¡"
+--æœªå®Œæˆä»»åŠ¡çš„npcå¯¹è¯
+x210239_g_ContinueInfo="    å·²ç»æˆä¸ºä¹å¤§é—¨æ´¾çš„å¼Ÿå­äº†å—ï¼Ÿ"
+--æäº¤æ—¶npcçš„è¯
+x210239_g_MissionComplete="    çœ‹æ¥ä½ å·²ç»é€‰å¥½äº†æ­£ç¡®çš„äººç”Ÿé“è·¯ï¼Œå‘ç€æœªæ¥å¥”è·‘å§ï¼"
 
 
 x210239_g_ItemBonus={}
 
 
-x210239_g_IsMissionOkFail = 0		--±äÁ¿µÄµÚ0Î»
-x210239_g_Custom	= { {id="ÒÑ¼ÓÈëÃÅÅÉ",num=1} }--±äÁ¿µÄµÚ1Î»
+x210239_g_IsMissionOkFail = 0		--å˜é‡çš„ç¬¬0ä½
+x210239_g_Custom	= { {id="å·²åŠ å…¥é—¨æ´¾",num=1} }--å˜é‡çš„ç¬¬1ä½
 
 --x210239_g_MenpaiArray = {}
 
@@ -57,9 +57,9 @@ x210239_g_Custom	= { {id="ÒÑ¼ÓÈëÃÅÅÉ",num=1} }--±äÁ¿µÄµÚ1Î»
 --MisDescEnd
 
 
---È¡µÃ´ËÃÅÅÉÅÅĞòÓ¦µÃµÄ¾­ÑéÖµ¡£
+--å–å¾—æ­¤é—¨æ´¾æ’åºåº”å¾—çš„ç»éªŒå€¼ã€‚
 function x210239_GetExpByMenpaiIndex( MenPaiIndex )
-    --¸ù¾İÃÅÅÉµÄÅÅÃû£¬»ñµÃÓ¦µÃµÄ¾­ÑéÖµ¡£
+    --æ ¹æ®é—¨æ´¾çš„æ’åï¼Œè·å¾—åº”å¾—çš„ç»éªŒå€¼ã€‚
 
     local ReturnVal = 0
 
@@ -96,29 +96,29 @@ function x210239_GetExpByMenpaiIndex( MenPaiIndex )
 end
 
 
---0ÉÙÁÖ 1Ã÷½Ì 2Ø¤°ï 3Îäµ± 4¶ëáÒ 5ĞÇËŞ 6ÌìÁú 7ÌìÉ½ 8ÏûÒ£
---¸ù¾İÃÅÅÉIDÈ¡µÃÃÅÅÉÃû³Æ£¨ºº×Ö£©
+--0å°‘æ— 1æ˜æ•™ 2ä¸å¸® 3æ­¦å½“ 4å³¨åµ‹ 5æ˜Ÿå®¿ 6å¤©é¾™ 7å¤©å±± 8æ¶ˆé¥
+--æ ¹æ®é—¨æ´¾IDå–å¾—é—¨æ´¾åç§°ï¼ˆæ±‰å­—ï¼‰
 function x210239_GetMenpaiName( Menpai)
-    local Name = "ÎŞÃÅÅÉ"
+    local Name = "æ— é—¨æ´¾"
 
     if( 0 == Menpai ) then
-         Name = "ÉÙÁÖÅÉ"
+         Name = "å°‘æ—æ´¾"
     elseif( 1 == Menpai ) then
-         Name = "Ã÷½Ì"
+         Name = "æ˜æ•™"
     elseif( 2 == Menpai ) then
-         Name = "Ø¤°ï"
+         Name = "ä¸å¸®"
     elseif( 3 == Menpai ) then
-         Name = "Îäµ±ÅÉ"
+         Name = "æ­¦å½“æ´¾"
     elseif( 4 == Menpai ) then
-         Name = "¶ëáÒÅÉ"
+         Name = "å³¨åµ‹æ´¾"
     elseif( 5 == Menpai ) then
-         Name = "ĞÇËŞÅÉ"
+         Name = "æ˜Ÿå®¿æ´¾"
     elseif( 6 == Menpai ) then
-         Name = "ÌìÁúÅÉ"
+         Name = "å¤©é¾™æ´¾"
     elseif( 7 == Menpai ) then
-         Name = "ÌìÉ½ÅÉ"
+         Name = "å¤©å±±æ´¾"
     elseif( 8 == Menpai ) then
-         Name = "åĞÒ£ÅÉ"
+         Name = "é€é¥æ´¾"
     end
 
     return Name
@@ -153,10 +153,10 @@ function x210239_MenpaiSort()
 
 end
 
---±£´æÃÅÅÉÅÅÁĞ£¬Ê¹ÓÃÈÎÎñÊı¾İµÚ3,4,5,6,7
+--ä¿å­˜é—¨æ´¾æ’åˆ—ï¼Œä½¿ç”¨ä»»åŠ¡æ•°æ®ç¬¬3,4,5,6,7
 function x210239_SaveMenpaiArray( sceneId, selfId, MenpaiArray )
-    --0ÉÙÁÖ 1Ã÷½Ì 2Ø¤°ï 3Îäµ± 4¶ëáÒ 5ĞÇËŞ 6ÌìÁú 7ÌìÉ½ 8åĞÒ£
-		--Ê¹ÓÃÈÎÎñÊı¾İ3,4,5,6,7ÓÃÀ´´æ·ÅÃÅÅÉÅÅÃû¡£
+    --0å°‘æ— 1æ˜æ•™ 2ä¸å¸® 3æ­¦å½“ 4å³¨åµ‹ 5æ˜Ÿå®¿ 6å¤©é¾™ 7å¤©å±± 8é€é¥
+		--ä½¿ç”¨ä»»åŠ¡æ•°æ®3,4,5,6,7ç”¨æ¥å­˜æ”¾é—¨æ´¾æ’åã€‚
 
     local MixDWORD = 0
     local CurMenpai
@@ -164,39 +164,39 @@ function x210239_SaveMenpaiArray( sceneId, selfId, MenpaiArray )
 
     MixDWORD = SetHighWord( MixDWORD, MenpaiArray[ 1 ] )
     MixDWORD = SetLowWord ( MixDWORD, MenpaiArray[ 2 ] )
-    SetMissionByIndex( sceneId, selfId, misIndex, 3, MixDWORD)   --ÈËÊı×î¶àÃÅÅÉ£¬·ÅÔÚÈÎÎñÊı¾İµÚ3¸öÊı¾İµÄ¸ß16Î»£¬µÚ¶ş·ÅÔÚµÚ3¸öÊı¾İµÄµÍ16Î»
+    SetMissionByIndex( sceneId, selfId, misIndex, 3, MixDWORD)   --äººæ•°æœ€å¤šé—¨æ´¾ï¼Œæ”¾åœ¨ä»»åŠ¡æ•°æ®ç¬¬3ä¸ªæ•°æ®çš„é«˜16ä½ï¼Œç¬¬äºŒæ”¾åœ¨ç¬¬3ä¸ªæ•°æ®çš„ä½16ä½
 
     MixDWORD = SetHighWord( MixDWORD, MenpaiArray[ 3 ] )
     MixDWORD = SetLowWord ( MixDWORD, MenpaiArray[ 4 ] )
-    SetMissionByIndex( sceneId, selfId, misIndex, 4, MixDWORD)   --ÈËÊıµÚÈıÃÅÅÉ£¬·ÅÔÚÈÎÎñÊı¾İµÚ4¸öÊı¾İµÄ¸ß16Î»£¬µÚËÄ·ÅÔÚµÚ4¸öÊı¾İµÄµÍ16Î»
+    SetMissionByIndex( sceneId, selfId, misIndex, 4, MixDWORD)   --äººæ•°ç¬¬ä¸‰é—¨æ´¾ï¼Œæ”¾åœ¨ä»»åŠ¡æ•°æ®ç¬¬4ä¸ªæ•°æ®çš„é«˜16ä½ï¼Œç¬¬å››æ”¾åœ¨ç¬¬4ä¸ªæ•°æ®çš„ä½16ä½
 
     MixDWORD = SetHighWord( MixDWORD, MenpaiArray[ 5 ] )
     MixDWORD = SetLowWord ( MixDWORD, MenpaiArray[ 6 ] )
-    SetMissionByIndex( sceneId, selfId, misIndex, 5, MixDWORD)   --ÈËÊıµÚÎåÃÅÅÉ£¬·ÅÔÚÈÎÎñÊı¾İµÚ5¸öÊı¾İµÄ¸ß16Î»£¬µÚÁù·ÅÔÚµÚ5¸öÊı¾İµÄµÍ16Î»
+    SetMissionByIndex( sceneId, selfId, misIndex, 5, MixDWORD)   --äººæ•°ç¬¬äº”é—¨æ´¾ï¼Œæ”¾åœ¨ä»»åŠ¡æ•°æ®ç¬¬5ä¸ªæ•°æ®çš„é«˜16ä½ï¼Œç¬¬å…­æ”¾åœ¨ç¬¬5ä¸ªæ•°æ®çš„ä½16ä½
 
     MixDWORD = SetHighWord( MixDWORD, MenpaiArray[ 7 ] )
     MixDWORD = SetLowWord ( MixDWORD, MenpaiArray[ 8 ] )
-    SetMissionByIndex( sceneId, selfId, misIndex, 6, MixDWORD)   --ÈËÊıµÚÆßÃÅÅÉ£¬·ÅÔÚÈÎÎñÊı¾İµÚ6¸öÊı¾İµÄ¸ß16Î»£¬µÚ°Ë·ÅÔÚµÚ6¸öÊı¾İµÄµÍ16Î»
+    SetMissionByIndex( sceneId, selfId, misIndex, 6, MixDWORD)   --äººæ•°ç¬¬ä¸ƒé—¨æ´¾ï¼Œæ”¾åœ¨ä»»åŠ¡æ•°æ®ç¬¬6ä¸ªæ•°æ®çš„é«˜16ä½ï¼Œç¬¬å…«æ”¾åœ¨ç¬¬6ä¸ªæ•°æ®çš„ä½16ä½
 
     MixDWORD = SetHighWord( MixDWORD, MenpaiArray[ 9 ] )
     MixDWORD = SetLowWord ( MixDWORD, 0 )
-    SetMissionByIndex( sceneId, selfId, misIndex, 7, MixDWORD)   --ÈËÊıµÚ¾ÅÃÅÅÉ£¬·ÅÔÚÈÎÎñÊı¾İµÚ7¸öÊı¾İµÄ¸ß16Î»£¬µÍ16Î»ÖÃ0
+    SetMissionByIndex( sceneId, selfId, misIndex, 7, MixDWORD)   --äººæ•°ç¬¬ä¹é—¨æ´¾ï¼Œæ”¾åœ¨ä»»åŠ¡æ•°æ®ç¬¬7ä¸ªæ•°æ®çš„é«˜16ä½ï¼Œä½16ä½ç½®0
 
 end
 
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x210239_OnDefaultEvent( sceneId, selfId, targetId )
 
    --x210239_GetMenpaiIndex( 9 )
-  --Èç¹ûÍæ¼ÒÍê³É¹ıÕâ¸öÈÎÎñ
+  --å¦‚æœç©å®¶å®Œæˆè¿‡è¿™ä¸ªä»»åŠ¡
   if (IsMissionHaveDone(sceneId,selfId,x210239_g_MissionId) > 0 ) then
     return
 
 	elseif( IsHaveMission(sceneId,selfId,x210239_g_MissionId) > 0)  then
-		--·¢ËÍÈÎÎñĞèÇóµÄĞÅÏ¢
+		--å‘é€ä»»åŠ¡éœ€æ±‚çš„ä¿¡æ¯
 		BeginEvent(sceneId)
 			AddText(sceneId, x210239_g_MissionName)
 			AddText(sceneId, x210239_g_ContinueInfo)
@@ -204,9 +204,9 @@ function x210239_OnDefaultEvent( sceneId, selfId, targetId )
 		local bDone = x210239_CheckSubmit( sceneId, selfId )
 		DispatchMissionDemandInfo(sceneId,selfId,targetId,x210239_g_ScriptId,x210239_g_MissionId,bDone)
 
-	--Âú×ãÈÎÎñ½ÓÊÕÌõ¼ş
+	--æ»¡è¶³ä»»åŠ¡æ¥æ”¶æ¡ä»¶
   elseif x210239_CheckAccept(sceneId,selfId) > 0 then
-		--·¢ËÍÈÎÎñ½ÓÊÜÊ±ÏÔÊ¾µÄĞÅÏ¢
+		--å‘é€ä»»åŠ¡æ¥å—æ—¶æ˜¾ç¤ºçš„ä¿¡æ¯
 		local MenpaiArray = x210239_MenpaiSort()
 
 		BeginEvent(sceneId)
@@ -223,14 +223,14 @@ function x210239_OnDefaultEvent( sceneId, selfId, targetId )
 			    if( i <= 5 ) then
 			        local MenpaiName = x210239_GetMenpaiName( MenpaiArray[ i ] )
 			        local MenpaiExp  = x210239_GetExpByMenpaiIndex( i - 1 )
-			        local Str = "    Èç¹ûÄã¼ÓÈë" ..MenpaiName.. "£¬Äã½«µÃµ½"..MenpaiExp.."µã¾­Ñé½±Àø"
+			        local Str = "    å¦‚æœä½ åŠ å…¥" ..MenpaiName.. "ï¼Œä½ å°†å¾—åˆ°"..MenpaiExp.."ç‚¹ç»éªŒå¥–åŠ±"
 			        MixStr1 = MixStr1..Str.."#r"
 			    end
 
 			    if( i>5 and i<=9 ) then
 			        local MenpaiName = x210239_GetMenpaiName( MenpaiArray[ i ] )
 			        local MenpaiExp  = x210239_GetExpByMenpaiIndex( i - 1 )
-			        local Str = "    Èç¹ûÄã¼ÓÈë" ..MenpaiName.. "£¬Äã½«µÃµ½"..MenpaiExp.."µã¾­Ñé½±Àø"
+			        local Str = "    å¦‚æœä½ åŠ å…¥" ..MenpaiName.. "ï¼Œä½ å°†å¾—åˆ°"..MenpaiExp.."ç‚¹ç»éªŒå¥–åŠ±"
 			        MixStr2 = MixStr2..Str.."#r"
 			    end
 
@@ -257,29 +257,29 @@ function x210239_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 
---Ö±½Ó½ÓÊÜÈÎÎñ£¬Ã»ÓĞ¾­¹ı½çÃæµã»÷
+--ç›´æ¥æ¥å—ä»»åŠ¡ï¼Œæ²¡æœ‰ç»è¿‡ç•Œé¢ç‚¹å‡»
 function x210239_DirectAccept( sceneId, selfId, MenpaiArray )
-	--Èç¹ûÍæ¼ÒÍê³É¹ıÕâ¸öÈÎÎñ
+	--å¦‚æœç©å®¶å®Œæˆè¿‡è¿™ä¸ªä»»åŠ¡
 	if IsMissionHaveDone(sceneId,selfId,x210239_g_MissionId) > 0 then
 		return
 	end
 
-	-- ¼ÓÈëÈÎÎñµ½Íæ¼ÒÁĞ±í
+	-- åŠ å…¥ä»»åŠ¡åˆ°ç©å®¶åˆ—è¡¨
 	local ret = AddMission( sceneId,selfId, x210239_g_MissionId, x210239_g_ScriptId, 1, 0, 0 )
 	if ret <= 0 then
-		Msg2Player(  sceneId, selfId,"#YÄãµÄÈÎÎñÈÕÖ¾ÒÑ¾­ÂúÁË" , MSG2PLAYER_PARA )
+		Msg2Player(  sceneId, selfId,"#Yä½ çš„ä»»åŠ¡æ—¥å¿—å·²ç»æ»¡äº†" , MSG2PLAYER_PARA )
 		return
 	end
 
-	Msg2Player(  sceneId, selfId,"½ÓÊÜÈÎÎñ:#Y" .. x210239_g_MissionName, MSG2PLAYER_PARA )
+	Msg2Player(  sceneId, selfId,"æ¥å—ä»»åŠ¡:#Y" .. x210239_g_MissionName, MSG2PLAYER_PARA )
 
 
 	local misIndex = GetMissionIndexByID(sceneId,selfId,719)
 	local Menpai = LuaFnGetMenPai( sceneId, selfId )
 
   if( Menpai >= 0 and Menpai < 9 ) then
-		  SetMissionByIndex( sceneId, selfId, misIndex, 1, 1)    --ÈÎÎñ×·×ÙÇé¿ö±êÖ¾ 1/1
-	    SetMissionByIndex( sceneId, selfId, misIndex, 0, 1)    --ÈÎÎñÍê³ÉÇé¿ö
+		  SetMissionByIndex( sceneId, selfId, misIndex, 1, 1)    --ä»»åŠ¡è¿½è¸ªæƒ…å†µæ ‡å¿— 1/1
+	    SetMissionByIndex( sceneId, selfId, misIndex, 0, 1)    --ä»»åŠ¡å®Œæˆæƒ…å†µ
   end
 
   x210239_SaveMenpaiArray( sceneId, selfId, MenpaiArray )
@@ -289,14 +289,14 @@ end
 
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x210239_OnEnumerate( sceneId, selfId, targetId )
 
-	--Èç¹ûÍæ¼ÒÍê³É¹ıÕâ¸öÈÎÎñ
+	--å¦‚æœç©å®¶å®Œæˆè¿‡è¿™ä¸ªä»»åŠ¡
 	if IsMissionHaveDone(sceneId,selfId,x210239_g_MissionId) > 0 then
 		return
-	--Èç¹ûÒÑ½Ó´ËÈÎÎñ
+	--å¦‚æœå·²æ¥æ­¤ä»»åŠ¡
 	elseif IsHaveMission(sceneId,selfId,x210239_g_MissionId) > 0 then
 
 	    local bDone = x210239_CheckSubmit( sceneId, selfId )
@@ -306,18 +306,18 @@ function x210239_OnEnumerate( sceneId, selfId, targetId )
 	        AddNumText(sceneId, x210239_g_ScriptId, x210239_g_MissionName, 1, -1);
 	    end
 
-	--Âú×ãÈÎÎñ½ÓÊÕÌõ¼ş
+	--æ»¡è¶³ä»»åŠ¡æ¥æ”¶æ¡ä»¶
 	elseif x210239_CheckAccept(sceneId,selfId) > 0 then
 		AddNumText(sceneId, x210239_g_ScriptId, x210239_g_MissionName, 1, -1);
 	end
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x210239_CheckAccept( sceneId, selfId )
 
-	--ÒªÇóÍê³ÉµÄÇ°ĞøÈÎÎñ
+	--è¦æ±‚å®Œæˆçš„å‰ç»­ä»»åŠ¡
 	if IsMissionHaveDone(sceneId,selfId,x210239_g_MissionIdPer) <= 0 then
 		return 0
 	end
@@ -326,50 +326,50 @@ function x210239_CheckAccept( sceneId, selfId )
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x210239_OnAccept( sceneId, selfId )
-	--Èç¹ûÍæ¼ÒÍê³É¹ıÕâ¸öÈÎÎñ
+	--å¦‚æœç©å®¶å®Œæˆè¿‡è¿™ä¸ªä»»åŠ¡
 	if IsMissionHaveDone(sceneId,selfId,x210239_g_MissionId) > 0 then
 		return
 	end
 
-	-- ¼ÓÈëÈÎÎñµ½Íæ¼ÒÁĞ±í
+	-- åŠ å…¥ä»»åŠ¡åˆ°ç©å®¶åˆ—è¡¨
 	local ret = AddMission( sceneId,selfId, x210239_g_MissionId, x210239_g_ScriptId, 1, 0, 0 )
 	if ret <= 0 then
-		Msg2Player(  sceneId, selfId,"#YÄãµÄÈÎÎñÈÕÖ¾ÒÑ¾­ÂúÁË" , MSG2PLAYER_PARA )
+		Msg2Player(  sceneId, selfId,"#Yä½ çš„ä»»åŠ¡æ—¥å¿—å·²ç»æ»¡äº†" , MSG2PLAYER_PARA )
 		return
 	end
 
-	--ÉèÖÃÈÎÎñ±äÁ¿±¦ÎïµÄ³¡¾°±àºÅºÍ×ø±êÎ»ÖÃ
-	--local misIndex = GetMissionIndexByID(sceneId, selfId, x210239_g_MissionId)--µÃµ½ÈÎÎñÔÚ20¸öÈÎÎñÖĞµÄĞòÁĞºÅ
-	--SetMissionByIndex(sceneId,selfId,misIndex,0,0)					--¸ù¾İĞòÁĞºÅ°ÑÈÎÎñ±äÁ¿µÄµÚÒ»Î»ÖÃ0	µÚÒ»Î»ÊÇÍê³É/Ê§°ÜÇé¿ö
+	--è®¾ç½®ä»»åŠ¡å˜é‡å®ç‰©çš„åœºæ™¯ç¼–å·å’Œåæ ‡ä½ç½®
+	--local misIndex = GetMissionIndexByID(sceneId, selfId, x210239_g_MissionId)--å¾—åˆ°ä»»åŠ¡åœ¨20ä¸ªä»»åŠ¡ä¸­çš„åºåˆ—å·
+	--SetMissionByIndex(sceneId,selfId,misIndex,0,0)					--æ ¹æ®åºåˆ—å·æŠŠä»»åŠ¡å˜é‡çš„ç¬¬ä¸€ä½ç½®0	ç¬¬ä¸€ä½æ˜¯å®Œæˆ/å¤±è´¥æƒ…å†µ
 
-	Msg2Player(  sceneId, selfId,"½ÓÊÜÈÎÎñ:#Y" .. x210239_g_MissionName, MSG2PLAYER_PARA )
+	Msg2Player(  sceneId, selfId,"æ¥å—ä»»åŠ¡:#Y" .. x210239_g_MissionName, MSG2PLAYER_PARA )
 
 
 	misIndex = GetMissionIndexByID(sceneId,selfId,719)
 	local Menpai = LuaFnGetMenPai( sceneId, selfId )
   if( Menpai >= 0 and Menpai < 9 ) then
-		  SetMissionByIndex( sceneId, selfId, misIndex, 1, 1)    --ÈÎÎñ×·×ÙÇé¿ö±êÖ¾ 1/1
-	    SetMissionByIndex( sceneId, selfId, misIndex, 0, 1)    --ÈÎÎñÍê³ÉÇé¿ö
+		  SetMissionByIndex( sceneId, selfId, misIndex, 1, 1)    --ä»»åŠ¡è¿½è¸ªæƒ…å†µæ ‡å¿— 1/1
+	    SetMissionByIndex( sceneId, selfId, misIndex, 0, 1)    --ä»»åŠ¡å®Œæˆæƒ…å†µ
   end
 
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x210239_OnAbandon( sceneId, selfId )
-	--É¾³ıÍæ¼ÒÈÎÎñÁĞ±íÖĞ¶ÔÓ¦µÄÈÎÎñ
+	--åˆ é™¤ç©å®¶ä»»åŠ¡åˆ—è¡¨ä¸­å¯¹åº”çš„ä»»åŠ¡
 	DelMission( sceneId, selfId, x210239_g_MissionId )
 end
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x210239_OnContinue( sceneId, selfId, targetId )
-	--Ìá½»ÈÎÎñÊ±µÄËµÃ÷ĞÅÏ¢
+	--æäº¤ä»»åŠ¡æ—¶çš„è¯´æ˜ä¿¡æ¯
 	BeginEvent(sceneId)
 		AddText(sceneId,x210239_g_MissionName)
 		AddText(sceneId,x210239_g_MissionComplete)
@@ -382,7 +382,7 @@ function x210239_OnContinue( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x210239_CheckSubmit( sceneId, selfId )
 
@@ -402,7 +402,7 @@ end
 
 
 --***********************************************
---°´ÕÕÍæ¼ÒÃÅÅÉºÍ´æÔÚÈÎÎñÊı¾İÖĞµÄÃÅÅÉÅÅĞò¼ÆËã¾­Ñé
+--æŒ‰ç…§ç©å®¶é—¨æ´¾å’Œå­˜åœ¨ä»»åŠ¡æ•°æ®ä¸­çš„é—¨æ´¾æ’åºè®¡ç®—ç»éªŒ
 --***********************************************
 function x210239_CalculatePlayerExp( sceneId, selfId )
     local Exp = 0
@@ -459,16 +459,16 @@ function x210239_CalculatePlayerExp( sceneId, selfId )
     return Exp
 end
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x210239_OnSubmit( sceneId, selfId, targetId, selectRadioId )
-		-- °²È«ĞÔ¼ì²â
-		-- 1¡¢¼ì²âÍæ¼ÒÊÇ²»ÊÇÓĞÕâ¸öÈÎÎñ
+		-- å®‰å…¨æ€§æ£€æµ‹
+		-- 1ã€æ£€æµ‹ç©å®¶æ˜¯ä¸æ˜¯æœ‰è¿™ä¸ªä»»åŠ¡
 		if IsHaveMission(sceneId,selfId,x210239_g_MissionId) <= 0 then
 			return
 		end
 
-		-- 2¡¢Íê³ÉÈÎÎñµÄÇé¿ö¼ì²â
+		-- 2ã€å®Œæˆä»»åŠ¡çš„æƒ…å†µæ£€æµ‹
 		if x210239_CheckSubmit(sceneId, selfId) <= 0    then
 			return
 		end
@@ -476,11 +476,11 @@ function x210239_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 		local nPlayerExp = x210239_CalculatePlayerExp( sceneId, selfId )
 
 
-		-- ½ğÇ®ºÍ¾­Ñé
+		-- é‡‘é’±å’Œç»éªŒ
 		LuaFnAddExp( sceneId, selfId, nPlayerExp)
 
 		DelMission( sceneId,selfId, x210239_g_MissionId )
-		--ÉèÖÃÈÎÎñÒÑ¾­±»Íê³É¹ı
+		--è®¾ç½®ä»»åŠ¡å·²ç»è¢«å®Œæˆè¿‡
 		MissionCom( sceneId,selfId, x210239_g_MissionId )
 
 		local MenpaiID = LuaFnGetMenPai( sceneId, selfId )
@@ -491,16 +491,16 @@ function x210239_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 
     local strSex = ""
     if PlayerSex == 0 then
-        strSex = "Ëı"
+        strSex = "å¥¹"
     else
-        strSex = "Ëû"
+        strSex = "ä»–"
     end
 
-    local SysStr = "#YÕÔÌìÊ¦´óº°£ºËÄ´óÉÆÈËµÄÅóÓÑ#{_INFOUSR"..PlayerName .."}ÒÑ¾­³ÉÎªÁË"..MenpaiName.."µÄµÜ×Ó£¬ÀÏ¸ç¶ù¼¸¸ö£¬Ò»ÆğÀ´×£ºØ"..strSex.."°É£¡#W"
+    local SysStr = "#Yèµµå¤©å¸ˆå¤§å–Šï¼šå››å¤§å–„äººçš„æœ‹å‹#{_INFOUSR"..PlayerName .."}å·²ç»æˆä¸ºäº†"..MenpaiName.."çš„å¼Ÿå­ï¼Œè€å“¥å„¿å‡ ä¸ªï¼Œä¸€èµ·æ¥ç¥è´º"..strSex.."å§ï¼#W"
 
-    --local SysStr = "#YÕÔÌìÊ¦´óº°£ºËÄ´óÉÆÈËµÄÅóÓÑ$NÒÑ¾­³ÉÎªÁË"..MenpaiName.."µÄµÜ×Ó£¬ÀÏ¸ç¶ù¼¸¸ö£¬Ò»ÆğÀ´×£ºØËû°É£¡#W"
+    --local SysStr = "#Yèµµå¤©å¸ˆå¤§å–Šï¼šå››å¤§å–„äººçš„æœ‹å‹$Nå·²ç»æˆä¸ºäº†"..MenpaiName.."çš„å¼Ÿå­ï¼Œè€å“¥å„¿å‡ ä¸ªï¼Œä¸€èµ·æ¥ç¥è´ºä»–å§ï¼#W"
     
-    if IsPermitAreetAddMenpai()==1 then --modi:lby20071107ĞÂÊÖ¼ÓÈëÃÅÅÉÊÇ·ñÍ¨ÖªÍæ¼Ò
+    if IsPermitAreetAddMenpai()==1 then --modi:lby20071107æ–°æ‰‹åŠ å…¥é—¨æ´¾æ˜¯å¦é€šçŸ¥ç©å®¶
     	BroadMsgByChatPipe( sceneId, selfId, SysStr, 4 )
 		end
 
@@ -508,20 +508,20 @@ function x210239_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 end
 
 --**********************************
---É±ËÀ¹ÖÎï»òÍæ¼Ò
+--æ€æ­»æ€ªç‰©æˆ–ç©å®¶
 --**********************************
 function x210239_OnKillObject( sceneId, selfId, objdataId ,objId )
 
 end
 
 --**********************************
---½øÈëÇøÓòÊÂ¼ş
+--è¿›å…¥åŒºåŸŸäº‹ä»¶
 --**********************************
 function x210239_OnEnterArea( sceneId, selfId, zoneId )
 end
 
 --**********************************
---µÀ¾ß¸Ä±ä
+--é“å…·æ”¹å˜
 --**********************************
 function x210239_OnItemChanged( sceneId, selfId, itemdataId )
 end

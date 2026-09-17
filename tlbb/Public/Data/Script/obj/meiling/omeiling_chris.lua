@@ -1,19 +1,19 @@
---Ã·ÁëNPC
---¿ËÀïË¹µÙ°²
---ÆÕÍ¨
+--æ¢…å²­NPC
+--å…‹é‡Œæ–¯è’‚å®‰
+--æ™®é€š
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x033011_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
-		AddText(sceneId,"  Ç×°®µÄÅóÓÑ£¡¿ìÀ´°ï°ïÎÒ°¡£¡")
+		AddText(sceneId,"  äº²çˆ±çš„æœ‹å‹ï¼å¿«æ¥å¸®å¸®æˆ‘å•Šï¼")
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 end
 
 --**********************************
---ËÀÍöÊÂ¼ş
+--æ­»äº¡äº‹ä»¶
 --**********************************
 function x033011_OnDie( sceneId, selfId, killerId )
 end

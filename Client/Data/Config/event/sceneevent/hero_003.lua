@@ -3,18 +3,18 @@ x212130_g_ScriptId = 212130
 x212130_g_Position_X=267
 x212130_g_Position_Z=116
 x212130_g_SceneID=1
-x212130_g_AccomplishNPC_Name="Íõ°²Ê¯"
+x212130_g_AccomplishNPC_Name="ç‹å®‰çŸ³"
 x212130_g_MissionId = 252
-x212130_g_Name	="Íõ°²Ê¯"
+x212130_g_Name	="ç‹å®‰çŸ³"
 x212130_g_MissionKind = 55
 x212130_g_MissionLevel = 75
 x212130_g_IfMissionElite = 0
-x212130_g_MissionName="ÌìÏÂÓ¢ĞÛË­µĞÊÖ"
+x212130_g_MissionName="å¤©ä¸‹è‹±é›„è°æ•Œæ‰‹"
 x212130_g_MissionInfo="#{Mis_75_desc_003}"
-x212130_g_MissionTarget="    ÔÚËÕÖİ³ÇÕÒµ½Íõ°²Ê¯#{_INFOAIM267,116,1,Íõ°²Ê¯}¡£"
-x212130_g_MissionComplete="  ¹ú¸»±øÇ¿£¬°ÙĞÕ°²¾ÓÀÖÒµÊÇÎÒÒ»ÉúµÄÙíÔ¸¡£ºÍÕâ¸öÀíÏë±ÈÆğÀ´£¬¸öÈËµÄÈÙÈèµÃÊ§»¹ËãµÃÁËÊ²Ã´ÄØ£¡"
+x212130_g_MissionTarget="    åœ¨è‹å·åŸæ‰¾åˆ°ç‹å®‰çŸ³#{_INFOAIM267,116,1,ç‹å®‰çŸ³}ã€‚"
+x212130_g_MissionComplete="  å›½å¯Œå…µå¼ºï¼Œç™¾å§“å®‰å±…ä¹ä¸šæ˜¯æˆ‘ä¸€ç”Ÿçš„å¤™æ„¿ã€‚å’Œè¿™ä¸ªç†æƒ³æ¯”èµ·æ¥ï¼Œä¸ªäººçš„è£è¾±å¾—å¤±è¿˜ç®—å¾—äº†ä»€ä¹ˆå‘¢ï¼"
 x212130_g_MoneyBonus=5000
 x212130_g_exp=50000
-x212130_g_Custom	= { {id="ÒÑÕÒµ½Íõ°²Ê¯",num=1} }
+x212130_g_Custom	= { {id="å·²æ‰¾åˆ°ç‹å®‰çŸ³",num=1} }
 x212130_g_IsMissionOkFail = 0
 --MisDescEnd

@@ -1,15 +1,15 @@
---ÎŞÁ¿µÜ×Ó
+--æ— é‡å¼Ÿå­
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x006007_g_scriptId = 006007
 
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x006007_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
-		AddText(sceneId,"  ÎŞÁ¿ÅÉÕıÔÚ#G½£ºş¹¬#W¾ÙĞĞÎåÄêÒ»¶ÈµÄ±ÈÎä¶·½£¡£")
+		AddText(sceneId,"  æ— é‡æ´¾æ­£åœ¨#Gå‰‘æ¹–å®«#Wä¸¾è¡Œäº”å¹´ä¸€åº¦çš„æ¯”æ­¦æ–—å‰‘ã€‚")
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 end

@@ -1,16 +1,16 @@
--- ³ÇÊĞÄÚÕşÈÎÎñÖ÷ÊÂ¼ş½Å±¾
--- ½Å±¾ºÅ
+-- åŸå¸‚å†…æ”¿ä»»åŠ¡ä¸»äº‹ä»¶è„šæœ¬
+-- è„šæœ¬å·
 x600001_g_ScriptId = 600001
 
--- »·ÊıÉÏÏŞ
+-- ç¯æ•°ä¸Šé™
 x600001_g_MaxRound = 10
 
--- ²¿·ÖÈÎÎñ²ÎÊı
-x600001_g_IsMissionOkFail = 0						-- ÈÎÎñÍê³É±ê¼Ç
-x600001_g_MissionParam_SubId = 1					-- ×ÓÈÎÎñ½Å±¾ºÅ´æ·ÅÎ»ÖÃ
+-- éƒ¨åˆ†ä»»åŠ¡å‚æ•°
+x600001_g_IsMissionOkFail = 0						-- ä»»åŠ¡å®Œæˆæ ‡è®°
+x600001_g_MissionParam_SubId = 1					-- å­ä»»åŠ¡è„šæœ¬å·å­˜æ”¾ä½ç½®
 x600001_g_TransScript = 400900
 
--- Ã¿ÌìÍæ¼ÒÄÜ×öµÄ×î¶àµÄ°ïÅÉÈÎÎñ´ÎÊı
+-- æ¯å¤©ç©å®¶èƒ½åšçš„æœ€å¤šçš„å¸®æ´¾ä»»åŠ¡æ¬¡æ•°
 x600001_g_CountLimiti = 50
 x600001_TIME_2000_01_03_ = 946828868
 x600001_g_SpecBonus = {
@@ -26,9 +26,9 @@ x600001_g_SpecBonus = {
 	5,
 }
 
-x600001_g_HighRate_Param = 0.8;			-- °´70¼¶Íæ¼ÒµÄ10%µ÷³É8%
-x600001_g_LowRate_Param = 0.875;		-- °´70¼¶Íæ¼ÒµÄ40%µ÷³É35%
---µÍ¼¶ÈÛÁ¶·û
+x600001_g_HighRate_Param = 0.8;			-- æŒ‰70çº§ç©å®¶çš„10%è°ƒæˆ8%
+x600001_g_LowRate_Param = 0.875;		-- æŒ‰70çº§ç©å®¶çš„40%è°ƒæˆ35%
+--ä½çº§ç†”ç‚¼ç¬¦
 x600001_g_GemMeltingLowRandTbl = {
   [50] = 3428,[51] = 3457,[52] = 3485,[53] = 3514,[54] = 3542,
   [55] = 3571,[56] = 3600,[57] = 3628,[58] = 3657,[59] = 3685,
@@ -53,7 +53,7 @@ x600001_g_GemMeltingLowRandTbl = {
   [150] = 6285,
 }
 
---¸ß¼¶ÈÛÁ¶·û
+--é«˜çº§ç†”ç‚¼ç¬¦
 x600001_g_GemMeltingHighRandTbl = {
   [50] = 857,[51] = 864,[52] = 871,[53] = 878,[54] = 885,
   [55] = 892,[56] = 900,[57] = 907,[58] = 914,[59] = 921,
@@ -80,39 +80,39 @@ x600001_g_GemMeltingHighRandTbl = {
 
 
 
--- ÈÎÎñ½±Àø
+-- ä»»åŠ¡å¥–åŠ±
 
 --**********************************
--- ±»ÈÎÎñÈë¿Úº¯Êıµ÷ÓÃ
+-- è¢«ä»»åŠ¡å…¥å£å‡½æ•°è°ƒç”¨
 --**********************************
 function x600001_DoDefaultEvent( sceneId, selfId, targetId, missionId, subMissionScriptId )
-	-- Èç¹ûÍæ¼ÒÒÑ¾­½ÓÁË¸ÃÈÎÎñ
+	-- å¦‚æœç©å®¶å·²ç»æ¥äº†è¯¥ä»»åŠ¡
 	if IsHaveMission( sceneId, selfId, missionId ) > 0 then
 		local misIndex = GetMissionIndexByID( sceneId, selfId, missionId )
 		subMissionScriptId = GetMissionParam( sceneId, selfId, misIndex, x600001_g_MissionParam_SubId )
 
 		CallScriptFunction( subMissionScriptId, "OnDefaultEvent", sceneId, selfId, targetId )
 	else
-		-- Èç¹ûÊÇÆ£ÀÍ×´Ì¬
+		-- å¦‚æœæ˜¯ç–²åŠ³çŠ¶æ€
 		local efsRet = LuaFnIsExceedingFatigueState( sceneId, selfId );
 		if not efsRet or efsRet == 1 then
-			x600001_NotifyFailTips( sceneId, selfId, "Æ£ÀÍ×´Ì¬ÏÂ²»ÄÜ½ÓÊÜÈÎÎñ¡£" )
+			x600001_NotifyFailTips( sceneId, selfId, "ç–²åŠ³çŠ¶æ€ä¸‹ä¸èƒ½æ¥å—ä»»åŠ¡ã€‚" )
 			return
 		end
 
-		-- Èç¹ûÎ´½Ó¸ÃÈÎÎñ
+		-- å¦‚æœæœªæ¥è¯¥ä»»åŠ¡
 		if LuaFnGetTaskItemBagSpace( sceneId, selfId ) < 1 then
-			x600001_NotifyFailTips( sceneId, selfId, "´ËÈÎÎñĞèÒªÖÁÉÙÒ»¸ñÈÎÎñÎïÆ·¿Õ¼ä" )
+			x600001_NotifyFailTips( sceneId, selfId, "æ­¤ä»»åŠ¡éœ€è¦è‡³å°‘ä¸€æ ¼ä»»åŠ¡ç‰©å“ç©ºé—´" )
 			return
 		end
 
-		-- È¡µÃÍæ¼Ò¸½½üµÄ¶ÓÓÑÊıÁ¿£¨°üÀ¨×Ô¼º£©
+		-- å–å¾—ç©å®¶é™„è¿‘çš„é˜Ÿå‹æ•°é‡ï¼ˆåŒ…æ‹¬è‡ªå·±ï¼‰
 		local i = 0
 		local mems = { selfId }
 		local nearteammembercount = 1
 
 		-- if LuaFnHasTeam( sceneId, selfId ) ~= 0 then
-		--	if LuaFnIsTeamLeader( sceneId, selfId ) ~= 0 then					-- ÊÇ¶Ó³¤
+		--	if LuaFnIsTeamLeader( sceneId, selfId ) ~= 0 then					-- æ˜¯é˜Ÿé•¿
 		--		nearteammembercount = GetNearTeamCount( sceneId, selfId )
 		--		for i=0, nearteammembercount-1 do
 		--			mems[i+1] = GetNearTeamMember(sceneId, selfId, i)
@@ -127,24 +127,24 @@ function x600001_DoDefaultEvent( sceneId, selfId, targetId, missionId, subMissio
 end
 
 --**********************************
--- ¹©¼ì²â½ÓÊÜÌõ¼şµÄÈÎÎñº¯Êıµ÷ÓÃ
+-- ä¾›æ£€æµ‹æ¥å—æ¡ä»¶çš„ä»»åŠ¡å‡½æ•°è°ƒç”¨
 --**********************************
 function x600001_DoCheckAccept( sceneId, selfId, missionId, timeParam )
-	-- ÒÑ¾­½Ó¹ıÔò²»·ûºÏÌõ¼ş
+	-- å·²ç»æ¥è¿‡åˆ™ä¸ç¬¦åˆæ¡ä»¶
 	if IsHaveMission( sceneId, selfId, missionId ) > 0 then
 		return 0
 	end
 
-	-- ¼ì²âÊÇ·ñÈÎÎñÒÑ¾­´ïµ½ 20 ¸ö£¬Èç¹ûµ½ÁË£¬Ôò²»ÄÜ½Ó
+	-- æ£€æµ‹æ˜¯å¦ä»»åŠ¡å·²ç»è¾¾åˆ° 20 ä¸ªï¼Œå¦‚æœåˆ°äº†ï¼Œåˆ™ä¸èƒ½æ¥
 	if GetMissionCount( sceneId, selfId ) >= 20 then
 		return -2
 	end
 
-	-- ¼ì²âÍæ¼ÒÊÇ·ñ·ûºÏ½ÓÊÜÈÎÎñµÄÌõ¼ş
+	-- æ£€æµ‹ç©å®¶æ˜¯å¦ç¬¦åˆæ¥å—ä»»åŠ¡çš„æ¡ä»¶
 	--begin modified by zhangguoxin 090207
-	local iTime = GetMissionData( sceneId, selfId, timeParam )					-- ÉÏÒ»´Î·ÅÆúÈÎÎñµÄÊ±¼ä(Ò»¿ÌÖÖ)
-	--local CurTime = GetHourTime()												-- µ±Ç°Ê±¼ä(Ò»¿ÌÖÓ)
-	local CurTime = GetQuarterTime()												-- µ±Ç°Ê±¼ä(Ò»¿ÌÖÓ)
+	local iTime = GetMissionData( sceneId, selfId, timeParam )					-- ä¸Šä¸€æ¬¡æ”¾å¼ƒä»»åŠ¡çš„æ—¶é—´(ä¸€åˆ»ç§)
+	--local CurTime = GetHourTime()												-- å½“å‰æ—¶é—´(ä¸€åˆ»é’Ÿ)
+	local CurTime = GetQuarterTime()												-- å½“å‰æ—¶é—´(ä¸€åˆ»é’Ÿ)
 	--end modified by zhangguoxin 090207
 	if iTime == CurTime then
 		return -1
@@ -154,42 +154,42 @@ function x600001_DoCheckAccept( sceneId, selfId, missionId, timeParam )
 end
 
 --**********************************
--- ½ÓÊÜ£¬½ö¹©×ÓÈÎÎñµ÷ÓÃÉèÖÃ¹«¹²²ÎÊı
+-- æ¥å—ï¼Œä»…ä¾›å­ä»»åŠ¡è°ƒç”¨è®¾ç½®å…¬å…±å‚æ•°
 --**********************************
 function x600001_DoAccept( sceneId, selfId, scriptId, missionId, roundParam )
-	--¼ÓÈëÈÎÎñµ½Íæ¼ÒÁĞ±í
-	local misIndex = GetMissionIndexByID( sceneId, selfId, missionId )				-- µÃµ½ÈÎÎñµÄĞòÁĞºÅ
-	SetMissionByIndex( sceneId, selfId, misIndex, x600001_g_IsMissionOkFail, 0 )	-- ¸ù¾İĞòÁĞºÅ°ÑÈÎÎñ±äÁ¿µÄµÚ0Î»ÖÃ0 (ÈÎÎñÍê³ÉÇé¿ö)
-	SetMissionByIndex( sceneId, selfId, misIndex, x600001_g_MissionParam_SubId, scriptId )	-- ¸ù¾İĞòÁĞºÅ°ÑÈÎÎñ±äÁ¿µÄµÚ1Î»ÖÃÎªÈÎÎñ½Å±¾ºÅ
+	--åŠ å…¥ä»»åŠ¡åˆ°ç©å®¶åˆ—è¡¨
+	local misIndex = GetMissionIndexByID( sceneId, selfId, missionId )				-- å¾—åˆ°ä»»åŠ¡çš„åºåˆ—å·
+	SetMissionByIndex( sceneId, selfId, misIndex, x600001_g_IsMissionOkFail, 0 )	-- æ ¹æ®åºåˆ—å·æŠŠä»»åŠ¡å˜é‡çš„ç¬¬0ä½ç½®0 (ä»»åŠ¡å®Œæˆæƒ…å†µ)
+	SetMissionByIndex( sceneId, selfId, misIndex, x600001_g_MissionParam_SubId, scriptId )	-- æ ¹æ®åºåˆ—å·æŠŠä»»åŠ¡å˜é‡çš„ç¬¬1ä½ç½®ä¸ºä»»åŠ¡è„šæœ¬å·
 
-	--µÃµ½»·Êı
+	--å¾—åˆ°ç¯æ•°
 	local MissionRound = GetMissionData( sceneId, selfId, roundParam )
-	--»·ÊıÔö¼Ó1
+	--ç¯æ•°å¢åŠ 1
 	MissionRound = mod( MissionRound, x600001_g_MaxRound )
 	SetMissionData( sceneId, selfId, roundParam, MissionRound + 1 )
 end
 
 --**********************************
--- ·ÅÆú£¬½ö¹©×ÓÈÎÎñµ÷ÓÃ
+-- æ”¾å¼ƒï¼Œä»…ä¾›å­ä»»åŠ¡è°ƒç”¨
 --**********************************
 function x600001_DoAbandon( sceneId, selfId, missionId, timeParam, roundParam )
 	DelMission( sceneId, selfId, missionId )
 	--begin modified by zhangguoxin 090207
-	--local CurTime = GetHourTime()													-- µ±Ç°Ê±¼ä
-	local CurTime = GetQuarterTime()													-- µ±Ç°Ê±¼ä
+	--local CurTime = GetHourTime()													-- å½“å‰æ—¶é—´
+	local CurTime = GetQuarterTime()													-- å½“å‰æ—¶é—´
 	--begin modified by zhangguoxin 090207
-	-- ÉèÖÃ·ÅÆúÑ­»·ÈÎÎñµÄÊ±¼ä
+	-- è®¾ç½®æ”¾å¼ƒå¾ªç¯ä»»åŠ¡çš„æ—¶é—´
 	SetMissionData( sceneId, selfId, timeParam, CurTime )
-	-- Çå»·Êı
+	-- æ¸…ç¯æ•°
 	SetMissionData( sceneId, selfId, roundParam, 0 )
 end
 
 --**********************************
--- ·ÅÆúËùÓĞ³ÇÊĞÈÎÎñ
+-- æ”¾å¼ƒæ‰€æœ‰åŸå¸‚ä»»åŠ¡
 --**********************************
 function x600001_AbandonCityMissions( sceneId, selfId )
-	local missionList1 = { 1112 }	-- ÓÅÏÈ¼¶×î¸ßµÄ
-	local missionList2 = { 1105, 1106, 1107, 1108, 1110, 1109, 1111, 1113, 1140, 1141, 1142 }	-- ´ÎÓÅÏÈ¼¶µÄ
+	local missionList1 = { 1112 }	-- ä¼˜å…ˆçº§æœ€é«˜çš„
+	local missionList2 = { 1105, 1106, 1107, 1108, 1110, 1109, 1111, 1113, 1140, 1141, 1142 }	-- æ¬¡ä¼˜å…ˆçº§çš„
 
 	local scriptId = -1
 
@@ -209,14 +209,14 @@ function x600001_AbandonCityMissions( sceneId, selfId )
 end
 
 --**********************************
--- ¹©ÈÎÎñº¯Êıµ÷ÓÃ¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+-- ä¾›ä»»åŠ¡å‡½æ•°è°ƒç”¨æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x600001_DoCheckSubmit( sceneId, selfId, missionId )
 	if IsHaveMission( sceneId, selfId, missionId ) <= 0 then
 		return 0
 	end
 
-	local misIndex = GetMissionIndexByID( sceneId, selfId, missionId )				-- µÃµ½ÈÎÎñµÄĞòÁĞºÅ
+	local misIndex = GetMissionIndexByID( sceneId, selfId, missionId )				-- å¾—åˆ°ä»»åŠ¡çš„åºåˆ—å·
 	if GetMissionParam( sceneId, selfId, misIndex, x600001_g_IsMissionOkFail ) == 1 then
 		return 1
 	end
@@ -225,23 +225,23 @@ function x600001_DoCheckSubmit( sceneId, selfId, missionId )
 end
 
 --**********************************
--- Ìá½»£¬½ö¹©×ÓÈÎÎñµ÷ÓÃ
+-- æäº¤ï¼Œä»…ä¾›å­ä»»åŠ¡è°ƒç”¨
 --**********************************
 function x600001_DoSubmit( sceneId, selfId, missionId, roundParam )
 	DelMission( sceneId, selfId, missionId )
 
-	local MissionName = {}															-- ÈÎÎñÃû³Æ±í
-	MissionName[MD_CITY_ENGINEERING_ROUND] = "¹¤³Ì"									-- ¹¤³Ì
-	MissionName[MD_CITY_DEVELOPMENT_ROUND] = "·¢Õ¹"									-- ·¢Õ¹
-	MissionName[MD_CITY_SCITECH_ROUND] = "¿Æ¼¼"		   								-- ¿Æ¼¼
-	MissionName[MD_CITY_MARKET_ROUND] = "ÊĞ¼¯"		   								-- ÊĞ¼¯
-	MissionName[MD_CITY_EXPAND_ROUND] = "À©ÕÅ"		   								-- À©ÕÅ
-	MissionName[MD_CITY_MILITARY_ROUND] = "¹ú·À"									-- ¹ú·À
+	local MissionName = {}															-- ä»»åŠ¡åç§°è¡¨
+	MissionName[MD_CITY_ENGINEERING_ROUND] = "å·¥ç¨‹"									-- å·¥ç¨‹
+	MissionName[MD_CITY_DEVELOPMENT_ROUND] = "å‘å±•"									-- å‘å±•
+	MissionName[MD_CITY_SCITECH_ROUND] = "ç§‘æŠ€"		   								-- ç§‘æŠ€
+	MissionName[MD_CITY_MARKET_ROUND] = "å¸‚é›†"		   								-- å¸‚é›†
+	MissionName[MD_CITY_EXPAND_ROUND] = "æ‰©å¼ "		   								-- æ‰©å¼ 
+	MissionName[MD_CITY_MILITARY_ROUND] = "å›½é˜²"									-- å›½é˜²
 	
 	if MissionName[roundParam] then
-		--µÃµ½»·Êı
+		--å¾—åˆ°ç¯æ•°
 		local MissionRound = GetMissionData( sceneId, selfId, roundParam )
-		--½ñÌìµÄ×Ü»·Êı
+		--ä»Šå¤©çš„æ€»ç¯æ•°
 		local nCount = GetMissionData(sceneId, selfId, MD_GUILD_MIS_COUNT_TODAY)+1
 		local nNowTime = LuaFnGetCurrentTime()
 		local nPreTime = GetMissionData(sceneId, selfId, MD_PRE_GUILD_MIS_TIME)
@@ -251,15 +251,15 @@ function x600001_DoSubmit( sceneId, selfId, missionId, roundParam )
 			nCount = 1
 		end
 		BeginEvent( sceneId )
-			AddText( sceneId, "#{BHRW_081124_01}"..MissionName[roundParam].."ÈÎÎñ"..MissionRound.."#{BHRW_081124_02}"..nCount.."/"..x600001_g_CountLimiti.."#{BHRW_081124_03}")
+			AddText( sceneId, "#{BHRW_081124_01}"..MissionName[roundParam].."ä»»åŠ¡"..MissionRound.."#{BHRW_081124_02}"..nCount.."/"..x600001_g_CountLimiti.."#{BHRW_081124_03}")
 		EndEvent( sceneId )
 		DispatchMissionTips( sceneId, selfId )
 	end
 
-	--µÃµ½»·Êı
+	--å¾—åˆ°ç¯æ•°
 	local MissionRound = GetMissionData( sceneId, selfId, roundParam )
 	if MissionName[roundParam] and x600001_g_MaxRound <= MissionRound then
-		local str = format( "@*;SrvMsg;GLD:#Y¾­¹ı#{_INFOUSR%s}#YµÄ²»Ğ¸Å¬Á¦£¬ÖÕÓÚÁ¬ĞøÍê³ÉÁË#R%d#YÂÖ%sÈÎÎñ¡£",
+		local str = format( "@*;SrvMsg;GLD:#Yç»è¿‡#{_INFOUSR%s}#Yçš„ä¸æ‡ˆåŠªåŠ›ï¼Œç»ˆäºè¿ç»­å®Œæˆäº†#R%d#Yè½®%sä»»åŠ¡ã€‚",
 			GetName( sceneId, selfId ), x600001_g_MaxRound, MissionName[roundParam] )
 
 		BroadMsgByChatPipe( sceneId, selfId, str, 6 )
@@ -267,43 +267,43 @@ function x600001_DoSubmit( sceneId, selfId, missionId, roundParam )
 end
 
 --**********************************
--- »Ø³Ç£¬Ö»ÓĞ³ÇÊĞÈÎÎñ¸±±¾¿ÉÒÔµ÷ÓÃ´Ë½Ó¿Ú
+-- å›åŸï¼Œåªæœ‰åŸå¸‚ä»»åŠ¡å‰¯æœ¬å¯ä»¥è°ƒç”¨æ­¤æ¥å£
 --**********************************
 function x600001_BackToCity( sceneId, selfId, missionId, xPos, zPos )
-	if IsHaveMission( sceneId, selfId, missionId ) > 0 then							--Èç¹û½øÈë¸±±¾Ç°É¾³ıÈÎÎñ£¬ÔòÖ±½Ó´«ËÍ»Ø
+	if IsHaveMission( sceneId, selfId, missionId ) > 0 then							--å¦‚æœè¿›å…¥å‰¯æœ¬å‰åˆ é™¤ä»»åŠ¡ï¼Œåˆ™ç›´æ¥ä¼ é€å›
 		local misIndex = GetMissionIndexByID( sceneId, selfId, missionId )
 		if GetMissionParam( sceneId, selfId, misIndex, x600001_g_IsMissionOkFail ) ~= 1 then
-			x600001_NotifyFailTips( sceneId, selfId, "ÈÎÎñÊ§°Ü£¡" )
-			SetMissionByIndex( sceneId, selfId, misIndex, x600001_g_IsMissionOkFail, 2 )	--ÉèÖÃÈÎÎñÊı¾İ
+			x600001_NotifyFailTips( sceneId, selfId, "ä»»åŠ¡å¤±è´¥ï¼" )
+			SetMissionByIndex( sceneId, selfId, misIndex, x600001_g_IsMissionOkFail, 2 )	--è®¾ç½®ä»»åŠ¡æ•°æ®
 		end
 	end
 
-	local oldsceneId = LuaFnGetCopySceneData_Param( sceneId, 3 )					--È¡µÃ¸±±¾Èë¿Ú³¡¾°ºÅ
+	local oldsceneId = LuaFnGetCopySceneData_Param( sceneId, 3 )					--å–å¾—å‰¯æœ¬å…¥å£åœºæ™¯å·
 	CallScriptFunction( x600001_g_TransScript, "TransferFunc", sceneId, selfId, oldsceneId, xPos, zPos )
 end
 
 --**********************************
--- ¾­Ñé½±ÀøÖµ¼ÆËã
--- Ëã·¨£ºµ±Ç°ÈÎÎñÖÖÀà±ÈÀı*(Íæ¼ÒµÈ¼¶^±ÈÀı)*»·Êı+»ùÊı
+-- ç»éªŒå¥–åŠ±å€¼è®¡ç®—
+-- ç®—æ³•ï¼šå½“å‰ä»»åŠ¡ç§ç±»æ¯”ä¾‹*(ç©å®¶ç­‰çº§^æ¯”ä¾‹)*ç¯æ•°+åŸºæ•°
 --**********************************
 function x600001_CalcExpBonus( sceneId, selfId, roundParam )
-	local MissionTypeInfo = {}														-- ÈÎÎñÖÖÀà±ÈÀıÁĞ±í
-	MissionTypeInfo[MD_CITY_ENGINEERING_ROUND] = 1									-- ¹¤³Ì
-	MissionTypeInfo[MD_CITY_DEVELOPMENT_ROUND] = 1									-- ·¢Õ¹
-	MissionTypeInfo[MD_CITY_SCITECH_ROUND] = 1      								-- ¿Æ¼¼
-	MissionTypeInfo[MD_CITY_MARKET_ROUND] = 1       								-- ÊĞ¼¯
-	MissionTypeInfo[MD_CITY_EXPAND_ROUND] = 1       								-- À©ÕÅ
-	MissionTypeInfo[MD_CITY_CONSTRUCT_ROUND] = 1    								-- ½¨Éè
-	MissionTypeInfo[MD_CITY_RESEARCH_ROUND] = 1     								-- ÑĞ¾¿
-	MissionTypeInfo[MD_CITY_MILITARY_ROUND] = 1										-- ¹ú·À
+	local MissionTypeInfo = {}														-- ä»»åŠ¡ç§ç±»æ¯”ä¾‹åˆ—è¡¨
+	MissionTypeInfo[MD_CITY_ENGINEERING_ROUND] = 1									-- å·¥ç¨‹
+	MissionTypeInfo[MD_CITY_DEVELOPMENT_ROUND] = 1									-- å‘å±•
+	MissionTypeInfo[MD_CITY_SCITECH_ROUND] = 1      								-- ç§‘æŠ€
+	MissionTypeInfo[MD_CITY_MARKET_ROUND] = 1       								-- å¸‚é›†
+	MissionTypeInfo[MD_CITY_EXPAND_ROUND] = 1       								-- æ‰©å¼ 
+	MissionTypeInfo[MD_CITY_CONSTRUCT_ROUND] = 1    								-- å»ºè®¾
+	MissionTypeInfo[MD_CITY_RESEARCH_ROUND] = 1     								-- ç ”ç©¶
+	MissionTypeInfo[MD_CITY_MILITARY_ROUND] = 1										-- å›½é˜²
 
-	local TypeScale = MissionTypeInfo[roundParam]									-- µ±Ç°ÈÎÎñÖÖÀà±ÈÀı
-	if not TypeScale then															-- ·Ç·¨ÈÎÎñÀàĞÍ
+	local TypeScale = MissionTypeInfo[roundParam]									-- å½“å‰ä»»åŠ¡ç§ç±»æ¯”ä¾‹
+	if not TypeScale then															-- éæ³•ä»»åŠ¡ç±»å‹
 		return 0
 	end
 	
-	--ºÏ·¨ĞÔ¼ì²é
-	--»·Êı
+	--åˆæ³•æ€§æ£€æŸ¥
+	--ç¯æ•°
 	local MissionRound	= GetMissionData( sceneId, selfId, roundParam )
 	local	LogInfo
 	if MissionRound <= 0 or MissionRound > x600001_g_MaxRound then
@@ -316,15 +316,15 @@ function x600001_CalcExpBonus( sceneId, selfId, roundParam )
 		return 0
 	end
 
-	local Level = GetLevel( sceneId, selfId )										-- Íæ¼ÒµÈ¼¶
-	local l_Exp = 1.75																-- ±ÈÀı
-	local MissionRound = GetMissionData( sceneId, selfId, roundParam )				-- »·Êı
-	local BaseExp = 0																-- »ùÊı
+	local Level = GetLevel( sceneId, selfId )										-- ç©å®¶ç­‰çº§
+	local l_Exp = 1.75																-- æ¯”ä¾‹
+	local MissionRound = GetMissionData( sceneId, selfId, roundParam )				-- ç¯æ•°
+	local BaseExp = 0																-- åŸºæ•°
 
-	local Exp = TypeScale * ( Level ^ l_Exp ) * MissionRound + BaseExp				-- µÈ¼¶ + »·Êıº¯Êı£¬ÊÜ¾­Ñéµ÷½Ú³£ÊıµÄÓ°Ïì
+	local Exp = TypeScale * ( Level ^ l_Exp ) * MissionRound + BaseExp				-- ç­‰çº§ + ç¯æ•°å‡½æ•°ï¼Œå—ç»éªŒè°ƒèŠ‚å¸¸æ•°çš„å½±å“
 
 --	local citySceneId = CityGetSelfCityID( sceneId, selfId )
---	if CityGetMaintainStatus( sceneId, selfId, citySceneId ) == 3 then				-- ¸ßÎ¬»¤×´Ì¬
+--	if CityGetMaintainStatus( sceneId, selfId, citySceneId ) == 3 then				-- é«˜ç»´æŠ¤çŠ¶æ€
 --		Exp = Exp / 2
 --	end
 
@@ -334,13 +334,13 @@ function x600001_CalcExpBonus( sceneId, selfId, roundParam )
 end
 
 --**********************************
--- °ï»á¹±Ï×¼ÆËã
+-- å¸®ä¼šè´¡çŒ®è®¡ç®—
 --**********************************
 function x600001_CalcContribBonus( sceneId, selfId, roundParam )
 	local MissionRound = GetMissionData( sceneId, selfId, roundParam )
 
 	if MissionRound > 0 then
-		--Ë¥¼õÏµÊı
+		--è¡°å‡ç³»æ•°
 		local l_ContribBonus = 1
 		local ContribBonus = 0
 
@@ -353,13 +353,13 @@ function x600001_CalcContribBonus( sceneId, selfId, roundParam )
 end
 
 --**********************************
--- ×¨Òµ½±ÀøÖµ¼ÆËã
+-- ä¸“ä¸šå¥–åŠ±å€¼è®¡ç®—
 --**********************************
 function x600001_CalcSpecBonus( sceneId, selfId, roundParam )
 	local MissionRound = GetMissionData( sceneId, selfId, roundParam )
 
 	if MissionRound >= 5 then
-		--Ë¥¼õÏµÊı
+		--è¡°å‡ç³»æ•°
 		local l_SpecBonus = 1
 		local SpecBonus = 0
 
@@ -379,42 +379,42 @@ function x600001_CalcSpecBonus( sceneId, selfId, roundParam )
 end
 
 --**********************************
--- Ëæ»ú½±ÀøÎïÆ·
+-- éšæœºå¥–åŠ±ç‰©å“
 --**********************************
 function x600001_RandomItemAward( sceneId, selfId, roundParam, missionItemIdx )
 	local MissionRound = GetMissionData( sceneId, selfId, roundParam )
 
-	if MissionRound >= x600001_g_MaxRound then												-- ¶¥¼¶ÓĞ½±ÎïÆ·¼¸ÂÊ
-		if random(100) > 2 then													-- ¼¸ÂÊ 2%
+	if MissionRound >= x600001_g_MaxRound then												-- é¡¶çº§æœ‰å¥–ç‰©å“å‡ ç‡
+		if random(100) > 2 then													-- å‡ ç‡ 2%
 			return
 		end
 
 		local itemSN, itemName, itemDesc, bBroadCast = GetOneMissionBonusItem( missionItemIdx )
 		if itemSN > -1 then
-			local bagpos = TryRecieveItem( sceneId, selfId, itemSN, QUALITY_MUST_BE_CHANGE )	-- ·Å²»ÏÂ¾ÍÃ»ÓĞÁË
+			local bagpos = TryRecieveItem( sceneId, selfId, itemSN, QUALITY_MUST_BE_CHANGE )	-- æ”¾ä¸ä¸‹å°±æ²¡æœ‰äº†
 			if bagpos and bagpos ~= -1 then
-				local MissionName = {}															-- ÈÎÎñÃû³Æ±í
-				MissionName[MD_CITY_ENGINEERING_ROUND] = "¹¤³Ì"									-- ¹¤³Ì
-				MissionName[MD_CITY_DEVELOPMENT_ROUND] = "·¢Õ¹"									-- ·¢Õ¹
-				MissionName[MD_CITY_SCITECH_ROUND] = "¿Æ¼¼"		   								-- ¿Æ¼¼
-				MissionName[MD_CITY_MARKET_ROUND] = "ÊĞ¼¯"		   								-- ÊĞ¼¯
-				MissionName[MD_CITY_EXPAND_ROUND] = "À©ÕÅ"		   								-- À©ÕÅ
-				MissionName[MD_CITY_MILITARY_ROUND] = "¹ú·À"									-- ¹ú·À
+				local MissionName = {}															-- ä»»åŠ¡åç§°è¡¨
+				MissionName[MD_CITY_ENGINEERING_ROUND] = "å·¥ç¨‹"									-- å·¥ç¨‹
+				MissionName[MD_CITY_DEVELOPMENT_ROUND] = "å‘å±•"									-- å‘å±•
+				MissionName[MD_CITY_SCITECH_ROUND] = "ç§‘æŠ€"		   								-- ç§‘æŠ€
+				MissionName[MD_CITY_MARKET_ROUND] = "å¸‚é›†"		   								-- å¸‚é›†
+				MissionName[MD_CITY_EXPAND_ROUND] = "æ‰©å¼ "		   								-- æ‰©å¼ 
+				MissionName[MD_CITY_MILITARY_ROUND] = "å›½é˜²"									-- å›½é˜²
 
-				--µÃµ½»·Êı
+				--å¾—åˆ°ç¯æ•°
 				if MissionName[roundParam] then
 					local PlayerGender = GetSex( sceneId, selfId )
 					local rank
 
 					if PlayerGender == 0 then
-						rank = "Ëı"
+						rank = "å¥¹"
 					else
-						rank = "Ëû"
+						rank = "ä»–"
 					end
 
 					local itemInfo = GetBagItemTransfer( sceneId, selfId, bagpos )
 
-					local str = format( "@*;SrvMsg;GLD:#Y#{_INFOUSR%s}#cffff00Í¨¹ı²»Ğ¸Å¬Á¦£¬ÖÕÓÚÍê³ÉÁË10»·%sÈÎÎñ£¬×÷Îª¶îÍâµÄ½±Àø£¬%s»ñµÃÁË#{_INFOMSG%s}¡£",
+					local str = format( "@*;SrvMsg;GLD:#Y#{_INFOUSR%s}#cffff00é€šè¿‡ä¸æ‡ˆåŠªåŠ›ï¼Œç»ˆäºå®Œæˆäº†10ç¯%sä»»åŠ¡ï¼Œä½œä¸ºé¢å¤–çš„å¥–åŠ±ï¼Œ%sè·å¾—äº†#{_INFOMSG%s}ã€‚",
 						GetName( sceneId, selfId ), MissionName[roundParam], rank, itemInfo )
 
 					BroadMsgByChatPipe( sceneId, selfId, str, 6 )
@@ -425,14 +425,14 @@ function x600001_RandomItemAward( sceneId, selfId, roundParam, missionItemIdx )
 end
 
 --**********************************
--- Ëæ»ú»ñµÃÈÛÁ¶·û
+-- éšæœºè·å¾—ç†”ç‚¼ç¬¦
 --**********************************
 function x600001_RandomItemMeltingAward( sceneId, selfId, roundParam )
 	local MissionRound = GetMissionData( sceneId, selfId, roundParam )
 
-	if MissionRound >= x600001_g_MaxRound then												-- ¶¥¼¶ÓĞ½±ÎïÆ·¼¸ÂÊ
+	if MissionRound >= x600001_g_MaxRound then												-- é¡¶çº§æœ‰å¥–ç‰©å“å‡ ç‡
 	
-		local iPlayerLv = GetLevel(sceneId,selfId)											-- ÅĞ¶ÏÍæ¼ÒµÈ¼¶
+		local iPlayerLv = GetLevel(sceneId,selfId)											-- åˆ¤æ–­ç©å®¶ç­‰çº§
 		if (iPlayerLv < 50) or (iPlayerLv > 150) then
 			return
 		end
@@ -442,32 +442,32 @@ function x600001_RandomItemMeltingAward( sceneId, selfId, roundParam )
 		local rateLow = x600001_g_GemMeltingLowRandTbl[iPlayerLv] * x600001_g_LowRate_Param;
 		local itemSN = -1
 			
-		if (rand < rateHigh) then																				-- Ëæ»úµ½¸ß¼¶ÈÛÁ¶·û
+		if (rand < rateHigh) then																				-- éšæœºåˆ°é«˜çº§ç†”ç‚¼ç¬¦
 				itemSN = 30900057
 		else
-				if (rand < rateLow) then																		-- Ëæ»úµ½µÍ¼¶ÈÛÁ¶·û
+				if (rand < rateLow) then																		-- éšæœºåˆ°ä½çº§ç†”ç‚¼ç¬¦
 					itemSN = 30900056 
 				else
-					return																										-- É¶¶¼Ã»Ëæ»úµ½
+					return																										-- å•¥éƒ½æ²¡éšæœºåˆ°
 				end
 		end
 		
 		if itemSN > -1 then
-			local bagpos = TryRecieveItem( sceneId, selfId, itemSN, QUALITY_MUST_BE_CHANGE )	-- ·Å²»ÏÂ¾ÍÃ»ÓĞÁË
+			local bagpos = TryRecieveItem( sceneId, selfId, itemSN, QUALITY_MUST_BE_CHANGE )	-- æ”¾ä¸ä¸‹å°±æ²¡æœ‰äº†
 			if bagpos and bagpos ~= -1 then
-				local MissionName = {}															-- ÈÎÎñÃû³Æ±í
-				MissionName[MD_CITY_ENGINEERING_ROUND] = "¹¤³ÌÈÎÎñ"									-- ¹¤³Ì
-				MissionName[MD_CITY_DEVELOPMENT_ROUND] = "·¢Õ¹ÈÎÎñ"									-- ·¢Õ¹
-				MissionName[MD_CITY_SCITECH_ROUND] = "¿Æ¼¼ÈÎÎñ"		   								-- ¿Æ¼¼
-				MissionName[MD_CITY_MARKET_ROUND] = "ÊĞ¼¯ÈÎÎñ"		   								-- ÊĞ¼¯
-				MissionName[MD_CITY_EXPAND_ROUND] = "À©ÕÅÈÎÎñ"		   								-- À©ÕÅ
-				MissionName[MD_CITY_MILITARY_ROUND] = "¹ú·ÀÈÎÎñ"									-- ¹ú·À
+				local MissionName = {}															-- ä»»åŠ¡åç§°è¡¨
+				MissionName[MD_CITY_ENGINEERING_ROUND] = "å·¥ç¨‹ä»»åŠ¡"									-- å·¥ç¨‹
+				MissionName[MD_CITY_DEVELOPMENT_ROUND] = "å‘å±•ä»»åŠ¡"									-- å‘å±•
+				MissionName[MD_CITY_SCITECH_ROUND] = "ç§‘æŠ€ä»»åŠ¡"		   								-- ç§‘æŠ€
+				MissionName[MD_CITY_MARKET_ROUND] = "å¸‚é›†ä»»åŠ¡"		   								-- å¸‚é›†
+				MissionName[MD_CITY_EXPAND_ROUND] = "æ‰©å¼ ä»»åŠ¡"		   								-- æ‰©å¼ 
+				MissionName[MD_CITY_MILITARY_ROUND] = "å›½é˜²ä»»åŠ¡"									-- å›½é˜²
 
-				--µÃµ½»·Êı
+				--å¾—åˆ°ç¯æ•°
 				if MissionName[roundParam] then
 					local itemInfo = GetBagItemTransfer( sceneId, selfId, bagpos )
 					
-					if (itemSN == 30900057) then	--¸ß¼¶¹«¸æ
+					if (itemSN == 30900057) then	--é«˜çº§å…¬å‘Š
 						x600001_NotifyFailTips(sceneId, selfId,"#{JKBS_081021_025}" )
 						
 						local str = format( "#{_INFOUSR%s}#{JKBS_081021_026}#G%s#{JKBS_081021_027}#{_INFOMSG%s}#{JKBS_081021_028}",
@@ -476,7 +476,7 @@ function x600001_RandomItemMeltingAward( sceneId, selfId, roundParam )
 						BroadMsgByChatPipe( sceneId, selfId, str, 4 )
 					end
 					
-					if (itemSN == 30900056) then	--µÍ¼¶¹«¸æ
+					if (itemSN == 30900056) then	--ä½çº§å…¬å‘Š
 						x600001_NotifyFailTips(sceneId, selfId,"#{JKBS_081021_024}" )
 						
 						local str = format( "@*;SrvMsg;GLD:#Y#{_INFOUSR%s}#{JKBS_081027_029}#G%s#{JKBS_081027_030}#{_INFOMSG%s}#{JKBS_081027_031}",
@@ -498,14 +498,14 @@ function x600001_NotifyFailTips( sceneId, selfId, Tip )
 end
 
 --**********************************
--- Ëæ»ú½±ÀøÎïÆ·
+-- éšæœºå¥–åŠ±ç‰©å“
 --**********************************
 function x600001_CanDoMisToDay(sceneId, selfId)
 	local nCount = GetMissionData(sceneId, selfId, MD_GUILD_MIS_COUNT_TODAY)
 	local nNowTime = LuaFnGetCurrentTime()
 	local nPreTime = GetMissionData(sceneId, selfId, MD_PRE_GUILD_MIS_TIME)
 
-	-- Èç¹ûÒÑ¾­¾­¹ıÁË1Ìì
+	-- å¦‚æœå·²ç»ç»è¿‡äº†1å¤©
 	if (nNowTime-nPreTime > 60*60*24) or
 	 				(floor((nNowTime-x600001_TIME_2000_01_03_)/(3600*24)) ~= floor((nPreTime-x600001_TIME_2000_01_03_)/(3600*24)))   then
 		nCount = 0
@@ -516,7 +516,7 @@ function x600001_CanDoMisToDay(sceneId, selfId)
 
 	if nCount >= x600001_g_CountLimiti  then
 		BeginEvent( sceneId )
-			AddText( sceneId, "  ¶Ô²»Æğ£¬Äú½ñÌìµÄÈÎÎñÒÑ¾­ÀÛ¼ÆÍê³ÉÁË50´Î£¬Ïë±ØÒ»¶¨ºÜÀÛÁË£¬»¹ÊÇÈ¥ĞİÏ¢Ò»»á¶ùÃ÷ÌìÔÙÀ´ÕÒÎÒ°É¡£" )
+			AddText( sceneId, "  å¯¹ä¸èµ·ï¼Œæ‚¨ä»Šå¤©çš„ä»»åŠ¡å·²ç»ç´¯è®¡å®Œæˆäº†50æ¬¡ï¼Œæƒ³å¿…ä¸€å®šå¾ˆç´¯äº†ï¼Œè¿˜æ˜¯å»ä¼‘æ¯ä¸€ä¼šå„¿æ˜å¤©å†æ¥æ‰¾æˆ‘å§ã€‚" )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, selfId )
 		return 0
@@ -526,7 +526,7 @@ function x600001_CanDoMisToDay(sceneId, selfId)
 end
 
 --**********************************
--- Íæ¼ÒÍê³ÉÒ»´ÎÈÎÎñºó£¬¶¼¼ÇÂ¼Ò»ÏÂ´ÎÊıºÍÊ±¼ä
+-- ç©å®¶å®Œæˆä¸€æ¬¡ä»»åŠ¡åï¼Œéƒ½è®°å½•ä¸€ä¸‹æ¬¡æ•°å’Œæ—¶é—´
 --**********************************
 function x600001_MissionComplete(sceneId, selfId)
 	local nCount = GetMissionData(sceneId, selfId, MD_GUILD_MIS_COUNT_TODAY)
@@ -541,7 +541,7 @@ function x600001_MissionComplete(sceneId, selfId)
 	SetMissionData(sceneId, selfId, MD_GUILD_MIS_COUNT_TODAY, nCount+1)
 	SetMissionData(sceneId, selfId, MD_PRE_GUILD_MIS_TIME, nNowTime)
 	
-	if (nCount+1 == 50) then		--50»·ÈÎÎñ¹«¸æ
+	if (nCount+1 == 50) then		--50ç¯ä»»åŠ¡å…¬å‘Š
 			local str = format( "@*;SrvMsg;GLD:#Y#{_INFOUSR%s}#{BHRW_081029_01}",GetName( sceneId, selfId ))
 			BroadMsgByChatPipe( sceneId, selfId, str, 6 )
 	end

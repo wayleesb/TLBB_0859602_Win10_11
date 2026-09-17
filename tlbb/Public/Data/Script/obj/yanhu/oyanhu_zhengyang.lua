@@ -1,10 +1,10 @@
---盐湖NPC
---郑杨
+--鐩愭箹NPC
+--閮戞潹
 
 x041506_g_ScriptId	= 041506
 
 --**********************************
---事件交互入口
+--浜嬩欢浜や簰鍏ュ彛
 --**********************************
 function x041506_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent( sceneId )

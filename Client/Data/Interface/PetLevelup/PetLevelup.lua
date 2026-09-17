@@ -42,7 +42,7 @@ end
 function PetLevelup_OnEvent(event)
 
 	if(event == "UI_COMMAND" and tonumber(arg0) == 19823) then
-		if this : IsVisible() then									-- Èç¹û½çÃæ¿ª×Å£¬Ôò²»´¦Àí
+		if this : IsVisible() then									-- å¦‚æœç•Œé¢å¼€ç€ï¼Œåˆ™ä¸å¤„ç†
 			return
 		end
 		PetLevelup_Clear()
@@ -53,7 +53,7 @@ function PetLevelup_OnEvent(event)
 		local npcObjId = Get_XParam_INT(0)
 		g_clientNpcId = DataPool : GetNPCIDByServerID(npcObjId)
 		if g_clientNpcId == -1 then
-			PushDebugMessage("Î´·¢ÏÖ NPC")
+			PushDebugMessage("æœªå‘ç° NPC")
 			PetLevelup_Hide()
 			return
 		end
@@ -66,7 +66,7 @@ function PetLevelup_OnEvent(event)
 			return;
 		end
 		
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ı£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æœå’ŒNPCçš„è·ç¦»å¤§äºä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if arg1 == "distance" and tonumber(arg2) > MAX_OBJ_DISTANCE or arg1=="destroy" then
 			PetLevelup_Hide()
 		end
@@ -76,7 +76,7 @@ function PetLevelup_OnEvent(event)
 			return;
 		end
 		
-		if g_selectgood == tonumber(arg0) then --ÒÑÑ¡ÖĞÎïÆ·²¢ÇÒ¸üĞÂµÄÎïÆ·ÊÇµ±Ç°Ñ¡ÖĞµÄÎïÆ·
+		if g_selectgood == tonumber(arg0) then --å·²é€‰ä¸­ç‰©å“å¹¶ä¸”æ›´æ–°çš„ç‰©å“æ˜¯å½“å‰é€‰ä¸­çš„ç‰©å“
 			--PushDebugMessage("PACKAGE_ITEM_CHANGED in if  "..tonumber(arg0))
 			PetLevelup_UpdateGoods(tonumber(arg0))
 		end
@@ -86,9 +86,9 @@ function PetLevelup_OnEvent(event)
 		end
 		
 		local type = tonumber(arg0)
-		if type == 1 then --ÍÏ¶¯µ½ÎïÆ·À¸
+		if type == 1 then --æ‹–åŠ¨åˆ°ç‰©å“æ 
 			PetLevelup_UpdateGoods(tonumber(arg1))
-		elseif type == 2 then --ÍÏ¶¯µ½¼¼ÄÜÀ¸£¬²»Ê¹ÓÃPetLevelup_Skill_ClickedÊÇÒòÎªË÷Òı¼ÆËã·½Ê½²»Ò»Ñù
+		elseif type == 2 then --æ‹–åŠ¨åˆ°æŠ€èƒ½æ ï¼Œä¸ä½¿ç”¨PetLevelup_Skill_Clickedæ˜¯å› ä¸ºç´¢å¼•è®¡ç®—æ–¹å¼ä¸ä¸€æ ·
 			PetLevelup_Skill_Drag(tonumber(arg1))
 		end
 		
@@ -105,7 +105,7 @@ function PetLevelup_OnEvent(event)
 end
 
 function PetLevelup_CancelGoods()
-	g_ConsumeGoodsID = -1 --Ñ¡ÎïÆ·µÄÊ±ºòÉèÖÃÁËÕâÁ½¸öÖµ£¬ËùÒÔÈ¡ÏûÎïÆ·µÄÊ±ºòÇå¿ÕÕâÁ½¸öÖµ
+	g_ConsumeGoodsID = -1 --é€‰ç‰©å“çš„æ—¶å€™è®¾ç½®äº†è¿™ä¸¤ä¸ªå€¼ï¼Œæ‰€ä»¥å–æ¶ˆç‰©å“çš„æ—¶å€™æ¸…ç©ºè¿™ä¸¤ä¸ªå€¼
 	g_ConsumeMoney = -1
 	
 	PetLevelup_Skill01:SetActionItem(-1);
@@ -154,7 +154,7 @@ function PetLevelup_Selected(selectindex)
 	end
 	
 --	if PlayerPackage:IsPetLock(selectindex) == 1 then
---		PushDebugMessage("ÕäÊŞÒÑ¼ÓËø")
+--		PushDebugMessage("çå…½å·²åŠ é”")
 --		return
 --	end
 	
@@ -181,20 +181,20 @@ function PetLevelup_Selected(selectindex)
 end
 
 function PetLevelup_Modle_TurnLeft(start)
-	--Ïò×óĞı×ª¿ªÊ¼
+	--å‘å·¦æ—‹è½¬å¼€å§‹
 	if(start == 1) then
 		PetLevelup_PetModel:RotateBegin(-0.3);
-	--Ïò×óĞı×ª½áÊø
+	--å‘å·¦æ—‹è½¬ç»“æŸ
 	else
 		PetLevelup_PetModel:RotateEnd();
 	end
 end
 
 function PetLevelup_Modle_TurnRight(start)
-	--ÏòÓÒĞı×ª¿ªÊ¼
+	--å‘å³æ—‹è½¬å¼€å§‹
 	if(start == 1) then
 		PetLevelup_PetModel:RotateBegin(0.3);
-	--ÏòÓÒĞı×ª½áÊø
+	--å‘å³æ—‹è½¬ç»“æŸ
 	else
 		PetLevelup_PetModel:RotateEnd();
 	end
@@ -209,7 +209,7 @@ function PetLevelup_Skill_Clicked(nSkillIndex)
 	local i=1;
 	local k=1;
 
-	while i <= PETSKILL_BUTTONS_NUM do --ÖĞ¼ä¿ÉÄÜÓĞ¿ÕµÄ¼¼ÄÜ£¬¶øÏÔÊ¾µÄÊ±ºòÊÇÍùÇ°ÈûµÄ£¬ËùÒÔÒªÕÒµ½ÏÔÊ¾µÄ¼¼ÄÜ¶ÔÓ¦µÄÊµ¼ÊÎ»ÖÃ
+	while i <= PETSKILL_BUTTONS_NUM do --ä¸­é—´å¯èƒ½æœ‰ç©ºçš„æŠ€èƒ½ï¼Œè€Œæ˜¾ç¤ºçš„æ—¶å€™æ˜¯å¾€å‰å¡çš„ï¼Œæ‰€ä»¥è¦æ‰¾åˆ°æ˜¾ç¤ºçš„æŠ€èƒ½å¯¹åº”çš„å®é™…ä½ç½®
 		local theSkillAction = Pet:EnumPetSkill( g_selectindex, i-1, "petskill");
 		if theSkillAction:GetID() ~= 0 then
 			if k == nSkillIndex then
@@ -227,7 +227,7 @@ function PetLevelup_Skill_Clicked(nSkillIndex)
 
 end
 
---Õâ¸öº¯Êı¸úÇ°Ãæ²»Ò»ÑùµÄµØ·½ÊÇ¼¼ÄÜË÷ÒıÊÇÍæ¼ÒÉíÉÏÊµ¼ÊË÷Òı£¬¶ø²»ÊÇÍ¼±êË÷Òı£¬ËùÒÔĞèÒªĞÂĞ´Ò»¸öº¯Êı
+--è¿™ä¸ªå‡½æ•°è·Ÿå‰é¢ä¸ä¸€æ ·çš„åœ°æ–¹æ˜¯æŠ€èƒ½ç´¢å¼•æ˜¯ç©å®¶èº«ä¸Šå®é™…ç´¢å¼•ï¼Œè€Œä¸æ˜¯å›¾æ ‡ç´¢å¼•ï¼Œæ‰€ä»¥éœ€è¦æ–°å†™ä¸€ä¸ªå‡½æ•°
 function PetLevelup_Skill_Drag(nSkillIndex)
 
 	if( -1 == selectindex ) then
@@ -247,13 +247,13 @@ function PetLevelup_UpdateGoods(nGoodsIndex)
 	if theAction:GetID() ~= 0 then
 		local goodsID = PlayerPackage : GetItemTableIndex( nGoodsIndex )
 		
-		--ÊÇ·ñ¼ÓËø....
+		--æ˜¯å¦åŠ é”....
 		if PlayerPackage:IsLock(nGoodsIndex) == 1 then
 			PushDebugMessage("#{Item_Locked}")
 			return
 		end
 		
-		--ÊÇ·ñÑ¡¼¼ÄÜ
+		--æ˜¯å¦é€‰æŠ€èƒ½
 		if g_selectskill == -1 then
 			PushDebugMessage("#{JNHC_81015_06}")
 			return
@@ -262,7 +262,7 @@ function PetLevelup_UpdateGoods(nGoodsIndex)
 		local skillID = Pet:GetSkillIDbyIndex(g_selectindex,g_selectskill)
 		local WantGoodsID,WantMoney = Pet:GetPetSkillLevelupInfo(skillID)
 		
-		--¼¼ÄÜÊÇ·ñ¿ÉÒÔÉı¼¶
+		--æŠ€èƒ½æ˜¯å¦å¯ä»¥å‡çº§
 		if WantGoodsID == -1 or WantMoney == -1 then
 			PushDebugMessage("#{JNHC_81015_03}")
 			return
@@ -277,7 +277,7 @@ function PetLevelup_UpdateGoods(nGoodsIndex)
 		g_ConsumeMoney = WantMoney
 		PetLevelup_Money:SetProperty("MoneyNumber", tostring(g_ConsumeMoney))
 		
-		--Èç¹ûÇ°ÃæÑ¡ÁËÎïÆ·£¬ÔòÈÃÖ®Ç°µÄ¶«Î÷±äÁÁ
+		--å¦‚æœå‰é¢é€‰äº†ç‰©å“ï¼Œåˆ™è®©ä¹‹å‰çš„ä¸œè¥¿å˜äº®
 		if g_selectgood ~= -1 then
 			LifeAbility : Lock_Packet_Item(g_selectgood,0);
 		end
@@ -292,33 +292,33 @@ function PetLevelup_UpdateGoods(nGoodsIndex)
 end
 
 function PetLevelup_Btn_Click(nIndex)
-	if nIndex == 1 then --È¡ÏûÎïÆ·
+	if nIndex == 1 then --å–æ¶ˆç‰©å“
 		PetLevelup_CancelGoods()
-	elseif nIndex == 2 then	--È¡Ïû¼¼ÄÜ
+	elseif nIndex == 2 then	--å–æ¶ˆæŠ€èƒ½
 		PetLevelup_CancelSkill()
 	end
 end
 
 function PetLevelup_Do()
-	--ÊÇ·ñÑ¡ÕäÊŞ
+	--æ˜¯å¦é€‰çå…½
 	if g_selectindex == -1 then
 		PushDebugMessage("#{JNHC_81015_05}")
 		return
 	end
 	
-	--ÊÇ·ñÑ¡¼¼ÄÜ
+	--æ˜¯å¦é€‰æŠ€èƒ½
 	if g_selectskill == -1 then
 		PushDebugMessage("#{JNHC_81015_06}")
 		return
 	end
 	
-	--ÊÇ·ñÑ¡ÁéÊŞµ¤ÎïÆ·
+	--æ˜¯å¦é€‰çµå…½ä¸¹ç‰©å“
 	if g_selectgood == -1 or g_ConsumeGoodsID == -1 or g_ConsumeMoney == -1 or g_ConsumeGoodsID ~= PlayerPackage:GetItemTableIndex(g_selectgood) then
 		PushDebugMessage("#{JNHC_81015_07}")
 		return
 	end
 	
-	--ÊÇ·ñ½ğÇ®×ã¹»
+	--æ˜¯å¦é‡‘é’±è¶³å¤Ÿ
 	if Player:GetData("MONEY")+Player:GetData("MONEY_JZ") < g_ConsumeMoney then
 		PushDebugMessage("#{JNHC_81015_08}")
 		return

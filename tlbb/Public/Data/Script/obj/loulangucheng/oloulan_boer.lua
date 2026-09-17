@@ -1,22 +1,22 @@
---Â¥À¼NPC....
---Ò©µêÀÏ°å....
+--æ¥¼å…°NPC....
+--è¯åº—è€æ¿....
 
 x001116_g_scriptId = 001116
 x001116_g_shoptableindex = 179
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x001116_OnDefaultEvent( sceneId, selfId, targetId )
 	BeginEvent( sceneId )
 		AddText( sceneId, "#{LLGC_20080324_02}" )
-		AddNumText( sceneId, x001116_g_scriptId, "¿´¿´ÄãÂôµÄ¶«Î÷", 7, 0 )
+		AddNumText( sceneId, x001116_g_scriptId, "çœ‹çœ‹ä½ å–çš„ä¸œè¥¿", 7, 0 )
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x001116_OnEventRequest( sceneId, selfId, targetId, eventId )
 	if GetNumText() == 0 then

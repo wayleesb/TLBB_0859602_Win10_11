@@ -1,6 +1,6 @@
 function 	x713000_OnCreate(sceneId,growPointType,x,y)
-	ItemCount = 0-- 物品数量
-	ItemBoxID = ItemBoxEnterScene(x,y,growPointType,sceneId,QUALITY_MUST_BE_CHANGE,ItemCount)	--函数调用
+	ItemCount = 0-- 鐗╁搧鏁伴噺
+	ItemBoxID = ItemBoxEnterScene(x,y,growPointType,sceneId,QUALITY_MUST_BE_CHANGE,ItemCount)	--鍑芥暟璋冪敤
 end
 
 

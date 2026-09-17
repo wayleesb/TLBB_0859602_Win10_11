@@ -1,60 +1,60 @@
--- ÍÁ¶İÖé
+-- åœŸéç 
 -- 300056
--- ÎïÆ·¿ÉÒÔÊ¹ÓÃ10´Î
--- µÚÒ»´ÎÊ¹ÓÃ¡°¶¨Î»·µ»Øµã¡±
--- ÒÔºóÃ¿´ÎÊ¹ÓÃ¿ÛÒ»´Î£¬¿ÛÍê¾ÍÉ¾³ıÎïÆ·£¬Ë²ÒÆµ½·µ»Øµã
+-- ç‰©å“å¯ä»¥ä½¿ç”¨10æ¬¡
+-- ç¬¬ä¸€æ¬¡ä½¿ç”¨â€œå®šä½è¿”å›ç‚¹â€
+-- ä»¥åæ¯æ¬¡ä½¿ç”¨æ‰£ä¸€æ¬¡ï¼Œæ‰£å®Œå°±åˆ é™¤ç‰©å“ï¼Œç¬ç§»åˆ°è¿”å›ç‚¹
 
 x300056_g_scriptId = 300056
 x300056_g_ItemId = 30008030
 
 
---ÒøÆ±
+--é“¶ç¥¨
 x300056_g_Yinpiao = 40002000
 
--- ÏŞÖÆÊ¹ÓÃ´«ËÍ¹¦ÄÜµÄ³¡¾°
+-- é™åˆ¶ä½¿ç”¨ä¼ é€åŠŸèƒ½çš„åœºæ™¯
 x300056_g_NoChuangsongScn=
 {
-	151		-- ¼àÓü
+	151		-- ç›‘ç‹±
 }
 
--- ÏŞÖÆÊ¹ÓÃÍÁ¶İÖé¶¨Î»µÄ³¡¾°
+-- é™åˆ¶ä½¿ç”¨åœŸéç å®šä½çš„åœºæ™¯
 x300056_g_UselessScn=
 {
-	125,	-- »ªÉ½
-	414	  -- ¾º¼¼³¡	
+	125,	-- åå±±
+	414	  -- ç«æŠ€åœº	
 }
 
 
---½ûÖ¹´«ËÍµ½Ä³Ğ©³¡¾°µÄµÈ¼¶ÏŞÖÆ....
+--ç¦æ­¢ä¼ é€åˆ°æŸäº›åœºæ™¯çš„ç­‰çº§é™åˆ¶....
 x300056_g_LimitTransScene =
 {
-	{423,90},	--»ğÑæÉ½
-	{519,90},	--»ğÑæ¹È
-	{424,90},	--¸ß²ı
-	{520,90},	--¸ß²ıÃÔ¹¬
-	{425,90},	--ËşÀïÄ¾
-	{427,90},	--Ëş¿ËÀ­Âê¸É
-	{186,75},	--Â¥À¼
-	{431,90}, --´óÍğ
-	{432,90}  --º¹ÑªÁë
+	{423,90},	--ç«ç„°å±±
+	{519,90},	--ç«ç„°è°·
+	{424,90},	--é«˜æ˜Œ
+	{520,90},	--é«˜æ˜Œè¿·å®«
+	{425,90},	--å¡”é‡Œæœ¨
+	{427,90},	--å¡”å…‹æ‹‰ç›å¹²
+	{186,75},	--æ¥¼å…°
+	{431,90}, --å¤§å®›
+	{432,90}  --æ±—è¡€å²­
 }
 
-x300056_g_Impact_NotTransportList = { 5929 } -- ½ûÖ¹´«ËÍµÄImpact
-x300056_g_TalkInfo_NotTransportList = { "#{GodFire_Info_062}" } -- ½ûÖ¹´«ËÍµÄImpactÌáÊ¾ĞÅÏ¢
+x300056_g_Impact_NotTransportList = { 5929 } -- ç¦æ­¢ä¼ é€çš„Impact
+x300056_g_TalkInfo_NotTransportList = { "#{GodFire_Info_062}" } -- ç¦æ­¢ä¼ é€çš„Impactæç¤ºä¿¡æ¯
 
 --**********************************
--- ÊÂ¼ş½»»¥Èë¿Ú
+-- äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x300056_OnDefaultEvent( sceneId, selfId, nItemIndex )
 	
 end
 
 function x300056_IsSkillLikeScript( sceneId, selfId )
-	return 1	 --Õâ¸ö½Å±¾ĞèÒª¶¯×÷Ö§³Ö
+	return 1	 --è¿™ä¸ªè„šæœ¬éœ€è¦åŠ¨ä½œæ”¯æŒ
 end
 
 function x300056_CancelImpacts( sceneId, selfId )
-	return 0	 --²»ĞèÒªÕâ¸ö½Ó¿Ú£¬µ«Òª±£Áô¿Õº¯Êı,²¢ÇÒÊ¼ÖÕ·µ»Ø0¡£
+	return 0	 --ä¸éœ€è¦è¿™ä¸ªæ¥å£ï¼Œä½†è¦ä¿ç•™ç©ºå‡½æ•°,å¹¶ä¸”å§‹ç»ˆè¿”å›0ã€‚
 end
 
 function x300056_OnDeplete( sceneId, selfId )
@@ -68,17 +68,17 @@ function x300056_OnConditionCheck( sceneId, selfId , idid)
 
 	local	bagId	= LuaFnGetBagIndexOfUsedItem( sceneId, selfId )
 	
-	-- ÅĞ¶ÏÕâ¸öÎïÆ·ÊÇ²»ÊÇÒÑ¾­¶¨Î»
+	-- åˆ¤æ–­è¿™ä¸ªç‰©å“æ˜¯ä¸æ˜¯å·²ç»å®šä½
 	if GetItemTableIndexByIndex(sceneId, selfId, bagId) ~= x300056_g_ItemId  then
 		return 0
 	end
 	
-	--¼ì²âÎïÆ·ÊÇ·ñ¼ÓËø
+	--æ£€æµ‹ç‰©å“æ˜¯å¦åŠ é”
 	if LuaFnLockCheck( sceneId, selfId, bagId, 0 ) < 0 then
 		return 0
 	end
 
-	--¼ì²âImpact×´Ì¬×¤ÁôĞ§¹û
+	--æ£€æµ‹ImpactçŠ¶æ€é©»ç•™æ•ˆæœ
 	for i, ImpactId in x300056_g_Impact_NotTransportList do
 		if LuaFnHaveImpactOfSpecificDataIndex(sceneId, selfId, ImpactId) ~= 0 then
 			BeginEvent(sceneId)			
@@ -89,8 +89,8 @@ function x300056_OnConditionCheck( sceneId, selfId , idid)
 		end
 	end
 
-	-- 1£¬¼ì²âÕâ¸öÎïÆ·ÊÇ²»ÊÇÓĞ¼ÇÂ¼µÄÊı¾İÁË£¬
-	-- ĞèÒª¼ÇÂ¼µÄÊı¾İÊÇ£¬Ê¹ÓÃ´ÎÊı£¬¶¨Î»³¡¾°Id£¬ÒÑ¾­×ø±ê
+	-- 1ï¼Œæ£€æµ‹è¿™ä¸ªç‰©å“æ˜¯ä¸æ˜¯æœ‰è®°å½•çš„æ•°æ®äº†ï¼Œ
+	-- éœ€è¦è®°å½•çš„æ•°æ®æ˜¯ï¼Œä½¿ç”¨æ¬¡æ•°ï¼Œå®šä½åœºæ™¯Idï¼Œå·²ç»åæ ‡
 	local nUseCount	= GetBagItemParam(sceneId, selfId, bagId, 0, 2)
 	local x	= GetBagItemParam(sceneId, selfId, bagId, 4, 2)
 	local z	= GetBagItemParam(sceneId, selfId, bagId, 8, 2)
@@ -99,14 +99,14 @@ function x300056_OnConditionCheck( sceneId, selfId , idid)
 	local nCount = nUseCount - nTarSceneId*100
 	
 	if nUseCount==0 and x==0 and z==0  then
-		x300056_MsgBox( sceneId, selfId, "ÄãµÄÍÁ¶İÖéÉĞÎ´¶¨Î»£¡" )
+		x300056_MsgBox( sceneId, selfId, "ä½ çš„åœŸéç å°šæœªå®šä½ï¼" )
 		return 0
 	end
 
-	--¼ì²âÄ¿±ê³¡¾°ÊÇ·ñÏŞÖÆµÈ¼¶....
+	--æ£€æµ‹ç›®æ ‡åœºæ™¯æ˜¯å¦é™åˆ¶ç­‰çº§....
 	for _, tmp in x300056_g_LimitTransScene do
 		if ( (tmp[1] == nTarSceneId) and (GetLevel(sceneId, selfId) < tmp[2]) ) then
-			local szMsg = format("´Ë³¡¾°ĞèÒª%d¼¶ÒÔÉÏ·½¿ÉÈëÄÚ", tmp[2])
+			local szMsg = format("æ­¤åœºæ™¯éœ€è¦%dçº§ä»¥ä¸Šæ–¹å¯å…¥å†…", tmp[2])
 			x300056_MsgBox( sceneId, selfId, szMsg)
 			return 0
 		end
@@ -120,49 +120,49 @@ end
 --**********************************
 function x300056_CallMe( sceneId, selfId, nItemIndex, PlayerGuid)	
 	
-	-- ¼ì²âÕâ¸öÍæ¼ÒÊÇ²»ÊÇÄÜ¹»Ê¹ÓÃÍÁ¶İÖé¶¨Î»
-	--ÅĞ¶Ïµ±Ç°×´Ì¬ÊÇ·ñ¿ÉÊ¹ÓÃ¶¨Î»·û
+	-- æ£€æµ‹è¿™ä¸ªç©å®¶æ˜¯ä¸æ˜¯èƒ½å¤Ÿä½¿ç”¨åœŸéç å®šä½
+	--åˆ¤æ–­å½“å‰çŠ¶æ€æ˜¯å¦å¯ä½¿ç”¨å®šä½ç¬¦
 	if IsHaveMission( sceneId, selfId, 4021 ) > 0 then
-		x300056_MsgBox( sceneId, selfId, "Äú´¦ÓÚ²»ÔÊĞí´«ËÍµÄ×´Ì¬£¬²»ÄÜÊ¹ÓÃÍÁ¶İÖé´«ËÍ£¡" )
+		x300056_MsgBox( sceneId, selfId, "æ‚¨å¤„äºä¸å…è®¸ä¼ é€çš„çŠ¶æ€ï¼Œä¸èƒ½ä½¿ç”¨åœŸéç ä¼ é€ï¼" )
 		return 0
 	end
 
-	--¼ì²âÍæ¼ÒÉíÉÏÊÇ²»ÊÇÓĞ¡°ÒøÆ±¡±Õâ¸ö¶«Î÷£¬ÓĞ¾Í²»ÄÜÊ¹ÓÃÕâÀïµÄ¹¦ÄÜ
+	--æ£€æµ‹ç©å®¶èº«ä¸Šæ˜¯ä¸æ˜¯æœ‰â€œé“¶ç¥¨â€è¿™ä¸ªä¸œè¥¿ï¼Œæœ‰å°±ä¸èƒ½ä½¿ç”¨è¿™é‡Œçš„åŠŸèƒ½
 	if GetItemCount(sceneId, selfId, x300056_g_Yinpiao) >= 1  then
-		x300056_MsgBox(sceneId, selfId, "Äú´¦ÓÚ²»ÔÊĞí´«ËÍµÄ×´Ì¬£¬²»ÄÜÊ¹ÓÃÍÁ¶İÖé´«ËÍ£¡")
+		x300056_MsgBox(sceneId, selfId, "æ‚¨å¤„äºä¸å…è®¸ä¼ é€çš„çŠ¶æ€ï¼Œä¸èƒ½ä½¿ç”¨åœŸéç ä¼ é€ï¼")
 		return 0
 	end
 	
-	--¼ì²âÍæ¼ÒÊÇ²»ÊÇ´¦ÓÚ²»ÔÊĞí´«ËÍµÄ³¡¾°£¬±ÈÈç¼àÓü
+	--æ£€æµ‹ç©å®¶æ˜¯ä¸æ˜¯å¤„äºä¸å…è®¸ä¼ é€çš„åœºæ™¯ï¼Œæ¯”å¦‚ç›‘ç‹±
 	for _, tmp in x300056_g_NoChuangsongScn do
 		if tmp == sceneId then
-			x300056_MsgBox( sceneId, selfId, "´Ë³¡¾°ÄÚ²»ÄÜÊ¹ÓÃÍÁ¶İÖé´«ËÍ£¡" )
+			x300056_MsgBox( sceneId, selfId, "æ­¤åœºæ™¯å†…ä¸èƒ½ä½¿ç”¨åœŸéç ä¼ é€ï¼" )
 			return 0
 		end
 	end
 	
-	-- ¼ì²âÍæ¼ÒÊÇ²»ÊÇ´¦ÓÚ°ÚÌ¯×´Ì¬£¬
+	-- æ£€æµ‹ç©å®¶æ˜¯ä¸æ˜¯å¤„äºæ‘†æ‘ŠçŠ¶æ€ï¼Œ
 	if LuaFnIsStalling(sceneId, selfId) == 1  then
-		x300056_MsgBox( sceneId, selfId, "°ÚÌ¯×´Ì¬ÏÂ£¬²»ÄÜÊ¹ÓÃÍÁ¶İÖé´«ËÍ£¡" )
+		x300056_MsgBox( sceneId, selfId, "æ‘†æ‘ŠçŠ¶æ€ä¸‹ï¼Œä¸èƒ½ä½¿ç”¨åœŸéç ä¼ é€ï¼" )
 		return 0
 	end
 	
-	-- ´¦ÓÚ×é¶Ó¸úËæ×´Ì¬ÏÂ£¬²»ÄÜ´«ËÍ
+	-- å¤„äºç»„é˜Ÿè·ŸéšçŠ¶æ€ä¸‹ï¼Œä¸èƒ½ä¼ é€
 	if IsTeamFollow(sceneId, selfId) == 1  then
-		x300056_MsgBox( sceneId, selfId, "Äã´¦ÓÚ×é¶Ó¸úËæ×´Ì¬£¬²»ÄÜÊ¹ÓÃÍÁ¶İÖé´«ËÍ£¡" )
+		x300056_MsgBox( sceneId, selfId, "ä½ å¤„äºç»„é˜Ÿè·ŸéšçŠ¶æ€ï¼Œä¸èƒ½ä½¿ç”¨åœŸéç ä¼ é€ï¼" )
 		return 0
 	end
 	
 	-- [ QUFEI 2007-08-23 20:50 UPDATE BugID 23699 ]
-	-- ´¦ÓÚÊ¹ÓÃ½»Í¨¹¤¾ß×´Ì¬ÏÂ£¬²»ÄÜ´«ËÍ
+	-- å¤„äºä½¿ç”¨äº¤é€šå·¥å…·çŠ¶æ€ä¸‹ï¼Œä¸èƒ½ä¼ é€
 	local	inbus = LuaFnGetBusPassengerIDIsInBus(sceneId, selfId)
 	-- PrintNum(inbus)
 	if inbus == 1 then
-		x300056_MsgBox( sceneId, selfId, "Äú´¦ÓÚÎŞ·¨Ê¹ÓÃ´«ËÍµÄÇé¿öÏÂ£¬ÎŞ·¨Ê¹ÓÃ´«ËÍµÀ¾ß£¡" )
+		x300056_MsgBox( sceneId, selfId, "æ‚¨å¤„äºæ— æ³•ä½¿ç”¨ä¼ é€çš„æƒ…å†µä¸‹ï¼Œæ— æ³•ä½¿ç”¨ä¼ é€é“å…·ï¼" )
 		return 0
 	end
 	
-	--¼ì²âImpact×´Ì¬×¤ÁôĞ§¹û
+	--æ£€æµ‹ImpactçŠ¶æ€é©»ç•™æ•ˆæœ
 	for i, ImpactId in x300056_g_Impact_NotTransportList do
 		if LuaFnHaveImpactOfSpecificDataIndex(sceneId, selfId, ImpactId) ~= 0 then
 			BeginEvent(sceneId)			
@@ -173,16 +173,16 @@ function x300056_CallMe( sceneId, selfId, nItemIndex, PlayerGuid)
 		end
 	end
 	
-	-- ¿´PlayerGuid ÊÇ²»ÊÇ¶ÓÎéÖĞµÄÈË£¬È»ºóÔÙ¿´Ê±¼äÊÇ²»ÊÇ¹ıÆÚ£¬±ğµÄÒ²Ã»ÓĞÊ²Ã´ÄÜ¼ì²éµÄÁË
+	-- çœ‹PlayerGuid æ˜¯ä¸æ˜¯é˜Ÿä¼ä¸­çš„äººï¼Œç„¶åå†çœ‹æ—¶é—´æ˜¯ä¸æ˜¯è¿‡æœŸï¼Œåˆ«çš„ä¹Ÿæ²¡æœ‰ä»€ä¹ˆèƒ½æ£€æŸ¥çš„äº†
 	local Time = GetMissionData(sceneId,selfId,MD_TDZ_TIME)
 	local nTarSceneId = GetMissionData(sceneId,selfId,MD_TDZ_SCENE)
 	local x = GetMissionData(sceneId,selfId,MD_TDZ_X)
 	local z = GetMissionData(sceneId,selfId,MD_TDZ_Y)
 	
-	--¼ì²âÄ¿±ê³¡¾°ÊÇ·ñÏŞÖÆµÈ¼¶....
+	--æ£€æµ‹ç›®æ ‡åœºæ™¯æ˜¯å¦é™åˆ¶ç­‰çº§....
 	for _, tmp in x300056_g_LimitTransScene do
 		if ( (tmp[1] == nTarSceneId) and (GetLevel(sceneId, selfId) < tmp[2]) ) then
-			local szMsg = format("´Ë³¡¾°ĞèÒª%d¼¶ÒÔÉÏ·½¿ÉÈëÄÚ", tmp[2])
+			local szMsg = format("æ­¤åœºæ™¯éœ€è¦%dçº§ä»¥ä¸Šæ–¹å¯å…¥å†…", tmp[2])
 			x300056_MsgBox( sceneId, selfId, szMsg)
 			return 0
 		end
@@ -200,16 +200,16 @@ function x300056_CallMe( sceneId, selfId, nItemIndex, PlayerGuid)
 end
 
 --**********************************
--- Íæ¼Ò×Ô¼ºÊ¹ÓÃÎïÆ·
+-- ç©å®¶è‡ªå·±ä½¿ç”¨ç‰©å“
 --**********************************
 function x300056_UseItem( sceneId, selfId, nType, nItemIndex )
 	
 	if GetLevel(sceneId, selfId)<10  then
-		x300056_MsgBox( sceneId, selfId, "µÈ¼¶²»¹»" )
+		x300056_MsgBox( sceneId, selfId, "ç­‰çº§ä¸å¤Ÿ" )
 		return
 	end
 	
-	-- ·µ»Ø²ÎÊı£¬¶¨Î»0£¬´«ËÍ1
+	-- è¿”å›å‚æ•°ï¼Œå®šä½0ï¼Œä¼ é€1
 	if nType == 0  then
 		x300056_SetPosition( sceneId, selfId, nItemIndex )
 		
@@ -232,7 +232,7 @@ function x300056_OnActivateOnce( sceneId, selfId )
 	
 	x300056_PlayerGoto( sceneId, selfId, bagId )
 
-	--	-- ĞÂµÄĞŞ¸Ä£¬ÔÚÕâÀïµ¯³ö¶Ô»°¿òÌáÎÊÍæ¼ÒÊÇ×ö´«ËÍ»¹ÊÇ¶¨Î»¡£=======
+	--	-- æ–°çš„ä¿®æ”¹ï¼Œåœ¨è¿™é‡Œå¼¹å‡ºå¯¹è¯æ¡†æé—®ç©å®¶æ˜¯åšä¼ é€è¿˜æ˜¯å®šä½ã€‚=======
 	--	local	nItemIndex	= LuaFnGetBagIndexOfUsedItem( sceneId, selfId )
 	--
 	--	BeginUICommand(sceneId)
@@ -255,39 +255,39 @@ function x300056_MsgBox( sceneId, selfId, msg )
 end
 
 --**********************************
--- Íæ¼ÒÊ¹ÓÃÎïÆ· ¶¨Î»
+-- ç©å®¶ä½¿ç”¨ç‰©å“ å®šä½
 --**********************************
 function x300056_SetPosition( sceneId, selfId, nItemIndex )
 
 	if LuaFnGetSceneType( sceneId ) == 1 or LuaFnGetSceneType( sceneId ) == 4 then
-		x300056_MsgBox( sceneId, selfId, "¸±±¾»ò°ï»á³ÇÊĞÄÚ²»ÄÜÊ¹ÓÃÍÁ¶İÖé¶¨Î»£¡" )
+		x300056_MsgBox( sceneId, selfId, "å‰¯æœ¬æˆ–å¸®ä¼šåŸå¸‚å†…ä¸èƒ½ä½¿ç”¨åœŸéç å®šä½ï¼" )
 		return 0
 	end
 	for _, tmp in x300056_g_UselessScn do
 		if tmp == sceneId then
-			x300056_MsgBox( sceneId, selfId, "´Ë³¡¾°ÄÚÎŞ·¨Ê¹ÓÃÍÁ¶İÖé¶¨Î»£¡" )
+			x300056_MsgBox( sceneId, selfId, "æ­¤åœºæ™¯å†…æ— æ³•ä½¿ç”¨åœŸéç å®šä½ï¼" )
 			return 0
 		end
 	end
 
-	-- 0£¬ÎïÆ·°²È«ĞÔ¼ì²é
-	-- ÏÈ¼ì²âÕâ¸ö nItemIndex µÄÎïÆ·ÊÇ²»ÊÇºÍµ±Ç°µÄ¶ÔÓ¦£¬
+	-- 0ï¼Œç‰©å“å®‰å…¨æ€§æ£€æŸ¥
+	-- å…ˆæ£€æµ‹è¿™ä¸ª nItemIndex çš„ç‰©å“æ˜¯ä¸æ˜¯å’Œå½“å‰çš„å¯¹åº”ï¼Œ
 	if GetItemTableIndexByIndex(sceneId, selfId, nItemIndex) ~= x300056_g_ItemId  then
 		BeginEvent(sceneId)
-			AddText(sceneId,"  ±³°üÄÚ²¿´íÎó")
+			AddText(sceneId,"  èƒŒåŒ…å†…éƒ¨é”™è¯¯")
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
 	end
 	
-	--¼ì²âÎïÆ·ÊÇ·ñ¼ÓËø
+	--æ£€æµ‹ç‰©å“æ˜¯å¦åŠ é”
 	if LuaFnLockCheck( sceneId, selfId, nItemIndex, 0 ) < 0 then
-		x300056_MsgBox( sceneId, selfId, "´ËÎïÆ·ÒÑ±»Ëø¶¨£¡" )
+		x300056_MsgBox( sceneId, selfId, "æ­¤ç‰©å“å·²è¢«é”å®šï¼" )
 		return 0
 	end
 
-	-- 1£¬¼ì²âÕâ¸öÎïÆ·ÊÇ²»ÊÇÓĞ¼ÇÂ¼µÄÊı¾İÁË£¬
-	-- ĞèÒª¼ÇÂ¼µÄÊı¾İÊÇ£¬Ê¹ÓÃ´ÎÊı£¬¶¨Î»³¡¾°Id£¬ÒÑ¾­×ø±ê
+	-- 1ï¼Œæ£€æµ‹è¿™ä¸ªç‰©å“æ˜¯ä¸æ˜¯æœ‰è®°å½•çš„æ•°æ®äº†ï¼Œ
+	-- éœ€è¦è®°å½•çš„æ•°æ®æ˜¯ï¼Œä½¿ç”¨æ¬¡æ•°ï¼Œå®šä½åœºæ™¯Idï¼Œå·²ç»åæ ‡
 	local nUseCount	= GetBagItemParam(sceneId, selfId, nItemIndex, 0, 2)
 	local x	= GetBagItemParam(sceneId, selfId, nItemIndex, 4, 2)
 	local z	= GetBagItemParam(sceneId, selfId, nItemIndex, 8, 2)
@@ -299,8 +299,8 @@ function x300056_SetPosition( sceneId, selfId, nItemIndex )
 		nCount = 10
 	end 
 	
-	-- Ò»¸öĞÂµÄÃ»ÓĞ¶¨Î»¹ıµÄÎïÆ·
-	-- ¼ÇÂ¼ÏÂµ±Ç°³¡¾°ºÍÎ»ÖÃ£¬ÉèÖÃÊ¹ÓÃ´ÎÊıÎª10
+	-- ä¸€ä¸ªæ–°çš„æ²¡æœ‰å®šä½è¿‡çš„ç‰©å“
+	-- è®°å½•ä¸‹å½“å‰åœºæ™¯å’Œä½ç½®ï¼Œè®¾ç½®ä½¿ç”¨æ¬¡æ•°ä¸º10
 	local x
 	local z
 	x,z = GetWorldPos(sceneId, selfId)
@@ -311,66 +311,66 @@ function x300056_SetPosition( sceneId, selfId, nItemIndex )
 	LuaFnRefreshItemInfo( sceneId, selfId, nItemIndex )
 	
 	BeginEvent(sceneId)
-		AddText(sceneId,"ÄãµÄÍÁ¶İÖé¶¨Î»³É¹¦¡£")
+		AddText(sceneId,"ä½ çš„åœŸéç å®šä½æˆåŠŸã€‚")
 	EndEvent(sceneId)
 	DispatchMissionTips(sceneId,selfId)
 	
 end
 
 --**********************************
--- Íæ¼Ò×Ô¼ºµÄ´«ËÍ
+-- ç©å®¶è‡ªå·±çš„ä¼ é€
 --**********************************
 function x300056_PlayerGoto( sceneId, selfId, nItemIndex )
 	
-	-- 0£¬ÎïÆ·°²È«ĞÔ¼ì²é
-	-- ÏÈ¼ì²âÕâ¸ö nItemIndex µÄÎïÆ·ÊÇ²»ÊÇºÍµ±Ç°µÄ¶ÔÓ¦£¬
+	-- 0ï¼Œç‰©å“å®‰å…¨æ€§æ£€æŸ¥
+	-- å…ˆæ£€æµ‹è¿™ä¸ª nItemIndex çš„ç‰©å“æ˜¯ä¸æ˜¯å’Œå½“å‰çš„å¯¹åº”ï¼Œ
 	if GetItemTableIndexByIndex(sceneId, selfId, nItemIndex) ~= x300056_g_ItemId  then
 		BeginEvent(sceneId)
-			AddText(sceneId,"  ±³°üÄÚ²¿´íÎó")
+			AddText(sceneId,"  èƒŒåŒ…å†…éƒ¨é”™è¯¯")
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
 	end
 
-	-- ´¦ÓÚ×é¶Ó¸úËæ×´Ì¬ÏÂ£¬²»ÄÜ´«ËÍ
+	-- å¤„äºç»„é˜Ÿè·ŸéšçŠ¶æ€ä¸‹ï¼Œä¸èƒ½ä¼ é€
 	if IsTeamFollow(sceneId, selfId) == 1  then
-		x300056_MsgBox( sceneId, selfId, "Äã´¦ÓÚ×é¶Ó¸úËæ×´Ì¬£¬²»ÄÜÊ¹ÓÃÍÁ¶İÖé´«ËÍ£¡" )
+		x300056_MsgBox( sceneId, selfId, "ä½ å¤„äºç»„é˜Ÿè·ŸéšçŠ¶æ€ï¼Œä¸èƒ½ä½¿ç”¨åœŸéç ä¼ é€ï¼" )
 		return 0
 	end
 	
-	--ÅĞ¶Ïµ±Ç°×´Ì¬ÊÇ·ñ¿ÉÊ¹ÓÃ¶¨Î»·û
+	--åˆ¤æ–­å½“å‰çŠ¶æ€æ˜¯å¦å¯ä½¿ç”¨å®šä½ç¬¦
 	if IsHaveMission( sceneId, selfId, 4021 ) > 0 then
-		x300056_MsgBox( sceneId, selfId, "Äú´¦ÓÚ²»ÔÊĞí´«ËÍµÄ×´Ì¬£¬²»ÄÜÊ¹ÓÃÍÁ¶İÖé´«ËÍ£¡" )
+		x300056_MsgBox( sceneId, selfId, "æ‚¨å¤„äºä¸å…è®¸ä¼ é€çš„çŠ¶æ€ï¼Œä¸èƒ½ä½¿ç”¨åœŸéç ä¼ é€ï¼" )
 		return 0
 	end
 
-	--¼ì²âÎïÆ·ÊÇ·ñ¼ÓËø
+	--æ£€æµ‹ç‰©å“æ˜¯å¦åŠ é”
 	if LuaFnLockCheck( sceneId, selfId, nItemIndex, 0 ) < 0 then
-		x300056_MsgBox( sceneId, selfId, "´ËÎïÆ·ÒÑ±»Ëø¶¨£¡" )
+		x300056_MsgBox( sceneId, selfId, "æ­¤ç‰©å“å·²è¢«é”å®šï¼" )
 		return 0
 	end
 
-	--¼ì²âÍæ¼ÒÉíÉÏÊÇ²»ÊÇÓĞ¡°ÒøÆ±¡±Õâ¸ö¶«Î÷£¬ÓĞ¾Í²»ÄÜÊ¹ÓÃÕâÀïµÄ¹¦ÄÜ
+	--æ£€æµ‹ç©å®¶èº«ä¸Šæ˜¯ä¸æ˜¯æœ‰â€œé“¶ç¥¨â€è¿™ä¸ªä¸œè¥¿ï¼Œæœ‰å°±ä¸èƒ½ä½¿ç”¨è¿™é‡Œçš„åŠŸèƒ½
 	if GetItemCount(sceneId, selfId, x300056_g_Yinpiao) >= 1  then
-		x300056_MsgBox(sceneId, selfId, "Äú´¦ÓÚ²»ÔÊĞí´«ËÍµÄ×´Ì¬£¬²»ÄÜÊ¹ÓÃÍÁ¶İÖé´«ËÍ£¡")
+		x300056_MsgBox(sceneId, selfId, "æ‚¨å¤„äºä¸å…è®¸ä¼ é€çš„çŠ¶æ€ï¼Œä¸èƒ½ä½¿ç”¨åœŸéç ä¼ é€ï¼")
 		return 0
 	end
 	
-	--¼ì²âÍæ¼ÒÊÇ²»ÊÇ´¦ÓÚ²»ÔÊĞí´«ËÍµÄ³¡¾°£¬±ÈÈç¼àÓü
+	--æ£€æµ‹ç©å®¶æ˜¯ä¸æ˜¯å¤„äºä¸å…è®¸ä¼ é€çš„åœºæ™¯ï¼Œæ¯”å¦‚ç›‘ç‹±
 	for _, tmp in x300056_g_NoChuangsongScn do
 		if tmp == sceneId then
-			x300056_MsgBox( sceneId, selfId, "´Ë³¡¾°ÄÚ²»ÄÜÊ¹ÓÃÍÁ¶İÖé´«ËÍ£¡" )
+			x300056_MsgBox( sceneId, selfId, "æ­¤åœºæ™¯å†…ä¸èƒ½ä½¿ç”¨åœŸéç ä¼ é€ï¼" )
 			return 0
 		end
 	end
 	
-	-- ¼ì²âÍæ¼ÒÊÇ²»ÊÇ´¦ÓÚ°ÚÌ¯×´Ì¬£¬
+	-- æ£€æµ‹ç©å®¶æ˜¯ä¸æ˜¯å¤„äºæ‘†æ‘ŠçŠ¶æ€ï¼Œ
 	if LuaFnIsStalling(sceneId, selfId) == 1  then
-		x300056_MsgBox( sceneId, selfId, "°ÚÌ¯×´Ì¬ÏÂ£¬²»ÄÜÊ¹ÓÃÍÁ¶İÖé´«ËÍ£¡" )
+		x300056_MsgBox( sceneId, selfId, "æ‘†æ‘ŠçŠ¶æ€ä¸‹ï¼Œä¸èƒ½ä½¿ç”¨åœŸéç ä¼ é€ï¼" )
 		return 0
 	end
 	
-	--¼ì²âImpact×´Ì¬×¤ÁôĞ§¹û
+	--æ£€æµ‹ImpactçŠ¶æ€é©»ç•™æ•ˆæœ
 	for i, ImpactId in x300056_g_Impact_NotTransportList do
 		if LuaFnHaveImpactOfSpecificDataIndex(sceneId, selfId, ImpactId) ~= 0 then
 			BeginEvent(sceneId)			
@@ -381,43 +381,43 @@ function x300056_PlayerGoto( sceneId, selfId, nItemIndex )
 		end
 	end
 	
-	-- 1£¬¼ì²âÕâ¸öÎïÆ·ÊÇ²»ÊÇÓĞ¼ÇÂ¼µÄÊı¾İÁË£¬
-	-- ĞèÒª¼ÇÂ¼µÄÊı¾İÊÇ£¬Ê¹ÓÃ´ÎÊı£¬¶¨Î»³¡¾°Id£¬ÒÔ¼°×ø±ê
+	-- 1ï¼Œæ£€æµ‹è¿™ä¸ªç‰©å“æ˜¯ä¸æ˜¯æœ‰è®°å½•çš„æ•°æ®äº†ï¼Œ
+	-- éœ€è¦è®°å½•çš„æ•°æ®æ˜¯ï¼Œä½¿ç”¨æ¬¡æ•°ï¼Œå®šä½åœºæ™¯Idï¼Œä»¥åŠåæ ‡
 	local nUseCount	= GetBagItemParam(sceneId, selfId, nItemIndex, 0, 2)
 	
-	-- Ö´ĞĞ´«ËÍ
+	-- æ‰§è¡Œä¼ é€
 	local nTarSceneId = floor(nUseCount/100)
 	local nCount = nUseCount - nTarSceneId*100
 	local nPointX		= GetBagItemParam(sceneId, selfId, nItemIndex, 4, 2)
 	local nPointZ		= GetBagItemParam(sceneId, selfId, nItemIndex, 8, 2)
 	
 	if nCount==0 and nPointX==0 and nPointZ==0  then
-		x300056_MsgBox( sceneId, selfId, "Õâ¸öÍÁ¶İÖéÉĞÎ´¶¨Î»£¬²»ÄÜÖ´ĞĞ´«ËÍ¡£" )
+		x300056_MsgBox( sceneId, selfId, "è¿™ä¸ªåœŸéç å°šæœªå®šä½ï¼Œä¸èƒ½æ‰§è¡Œä¼ é€ã€‚" )
 		return
 	end
 	
-	-- ¼ì²éÄ¿±ê³¡¾°ÊÇ²»ÊÇÄÜ¹»µ½´ï
+	-- æ£€æŸ¥ç›®æ ‡åœºæ™¯æ˜¯ä¸æ˜¯èƒ½å¤Ÿåˆ°è¾¾
 	if sceneId ~= nTarSceneId then
 		if IsCanNewWorld( sceneId, selfId, nTarSceneId, nPointX, nPointZ ) ~= 1 then
-			x300056_MsgBox( sceneId, selfId, "²»ÄÜ´«ËÍµ½Ä¿±ê³¡¾°¡£" )
+			x300056_MsgBox( sceneId, selfId, "ä¸èƒ½ä¼ é€åˆ°ç›®æ ‡åœºæ™¯ã€‚" )
 			return 0
 		end
 	end
 	
 	local ret = 0
 	if nCount > 1  then
-		-- ÎïÆ·¿ÉÒÔ¼ÌĞøÏûºÄ
+		-- ç‰©å“å¯ä»¥ç»§ç»­æ¶ˆè€—
 		SetBagItemParam( sceneId, selfId, nItemIndex, 0, 2, nTarSceneId*100+(nCount-1) )
 		LuaFnRefreshItemInfo( sceneId, selfId, nItemIndex )
 		ret = 1
 		
 	elseif nCount <= 1  then
-		-- É¾³ıÎïÆ·
+		-- åˆ é™¤ç‰©å“
 		ret = EraseItem(sceneId, selfId, nItemIndex)
 	end
 	
 	if ret == 1  then
-		-- »ñµÃÍæ¼Ò¶ÓÎéÖĞÔÚ¸½½üµÄ¶ÓÔ±
+		-- è·å¾—ç©å®¶é˜Ÿä¼ä¸­åœ¨é™„è¿‘çš„é˜Ÿå‘˜
 		local nTeamCount = GetNearTeamCount(sceneId,selfId)
 		local selfGuid = LuaFnGetGUID(sceneId,selfId)
 		
@@ -427,8 +427,8 @@ function x300056_PlayerGoto( sceneId, selfId, nItemIndex )
 			for i=0, nTeamCount-1  do
 				local nPlayerId = GetNearTeamMember(sceneId,selfId, i)
 				if nPlayerId ~= selfId  then
-					-- ¸øÕâ¸öÍæ¼Ò·¢ËÍÒ»¸ö´«ËÍÑûÇë
-					local str = "ÄãµÄ¶ÓÓÑ" .. GetName(sceneId, selfId) .. "Ê¹ÓÃÁËÍÁ¶İÖé£¬»Øµ½ÁË¡¾" .. nTarSceneName .. "¡¿£¬ÄãÊÇ·ñÒ²Òª¸ú×ÅÒ»Æğ´«ËÍ£¿×¢Òâ£º³¬¹ı20ÃëÈÔÎ´×ö¾ö¶¨½«È¡Ïû´«ËÍ¡£"
+					-- ç»™è¿™ä¸ªç©å®¶å‘é€ä¸€ä¸ªä¼ é€é‚€è¯·
+					local str = "ä½ çš„é˜Ÿå‹" .. GetName(sceneId, selfId) .. "ä½¿ç”¨äº†åœŸéç ï¼Œå›åˆ°äº†ã€" .. nTarSceneName .. "ã€‘ï¼Œä½ æ˜¯å¦ä¹Ÿè¦è·Ÿç€ä¸€èµ·ä¼ é€ï¼Ÿæ³¨æ„ï¼šè¶…è¿‡20ç§’ä»æœªåšå†³å®šå°†å–æ¶ˆä¼ é€ã€‚"
 					BeginUICommand(sceneId)
 						UICommand_AddInt(sceneId,x300056_g_scriptId);
 						UICommand_AddInt(sceneId,nItemIndex)
@@ -438,7 +438,7 @@ function x300056_PlayerGoto( sceneId, selfId, nItemIndex )
 					EndUICommand(sceneId)
 					DispatchUICommand(sceneId,nPlayerId, 1009)
 					
-					-- Í¬Ê±°ÑÕâĞ©ÖØÒªÊı¾İ¼ÇÂ¼µ½MissionDataÖĞ
+					-- åŒæ—¶æŠŠè¿™äº›é‡è¦æ•°æ®è®°å½•åˆ°MissionDataä¸­
 					SetMissionData(sceneId,nPlayerId,MD_TDZ_TIME,LuaFnGetCurrentTime())
 					SetMissionData(sceneId,nPlayerId,MD_TDZ_SCENE,nTarSceneId)
 					SetMissionData(sceneId,nPlayerId,MD_TDZ_X,nPointX)
@@ -447,7 +447,7 @@ function x300056_PlayerGoto( sceneId, selfId, nItemIndex )
 			end
 		end
 		
-		-- ´«ËÍ×Ô¼º
+		-- ä¼ é€è‡ªå·±
 		CallScriptFunction((400900), "TransferFunc",sceneId, selfId, nTarSceneId, nPointX, nPointZ)
 	end
 

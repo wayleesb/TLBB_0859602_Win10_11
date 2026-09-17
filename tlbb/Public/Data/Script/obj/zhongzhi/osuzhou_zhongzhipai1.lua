@@ -1,42 +1,42 @@
---ËÕÖİ
---ÖÖÖ²ÅÆ1
+--è‹å·
+--ç§æ¤ç‰Œ1
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x714093_g_ScriptId = 714093
 
 event_xuanzezhiwu = 713550
 
---Ö²Îï²úÆ·±àºÅÁĞ±í
+--æ¤ç‰©äº§å“ç¼–å·åˆ—è¡¨
 x714093_g_eventList={20104001,20104002,20104005,20104008,20104009,20104010,
-			20105001,20105003,20105006,20105009,20105010} --Ö²ÎïµÄ±àºÅ,²»ÊÇscriptId
+			20105001,20105003,20105006,20105009,20105010} --æ¤ç‰©çš„ç¼–å·,ä¸æ˜¯scriptId
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x714093_OnDefaultEvent( sceneId, selfId,targetId )
 	--PLANTFLAG[1] =0
 	--PLANTFLAG[2] =0
 	AbilityLevel = QueryHumanAbilityLevel( sceneId, selfId, ABILITY_ZHONGZHI)
-	--Èç¹ûÍæ¼Ò²»»áÖÖÖ²¼¼ÄÜ
+	--å¦‚æœç©å®¶ä¸ä¼šç§æ¤æŠ€èƒ½
 	if AbilityLevel == 0	then
 		BeginEvent(sceneId)
-			AddText(sceneId, "ÄãÏÈÈ¥Ñ§Ï°ÖÖÖ²¼¼ÄÜ°É")
+			AddText(sceneId, "ä½ å…ˆå»å­¦ä¹ ç§æ¤æŠ€èƒ½å§")
 		EndEvent(sceneId)
 		DispatchEventList(sceneId, selfId, targetId)
 		return
 	end
-	--Èç¹ûÍæ¼Ò»áÖÖÖ²¼¼ÄÜ
+	--å¦‚æœç©å®¶ä¼šç§æ¤æŠ€èƒ½
 	if AbilityLevel ~= 0	then
 		BeginEvent(sceneId)
-			AddText(sceneId, "Ã¿ÖÖ×÷Îï¶¼¿ÉÒÔ·ÖÎªÍí²úºÍÔç²úÁ½ÖÖ£¬Ôç²úµÄ³ÉÊìÆÚ´ó¸ÅÎª5·ÖÖÓ£¬Íí²úµÄ´ó¸ÅÎª70·ÖÖÓ×óÓÒ£¬µ«ÊÇµ¥´ÎÊÕ»ñ½Ï¶à¡£ÄúÒªÑ¡ÔñÖÖÖ²ÄÄÖÖ×÷Îï£¿")
-			AddNumText(sceneId, x714093_g_ScriptId, "ÖÖÖ²Ôç²úÖ²Îï",6,254)
-			AddNumText(sceneId, x714093_g_ScriptId, "ÖÖÖ²Íí²úÖ²Îï",6,255)
+			AddText(sceneId, "æ¯ç§ä½œç‰©éƒ½å¯ä»¥åˆ†ä¸ºæ™šäº§å’Œæ—©äº§ä¸¤ç§ï¼Œæ—©äº§çš„æˆç†ŸæœŸå¤§æ¦‚ä¸º5åˆ†é’Ÿï¼Œæ™šäº§çš„å¤§æ¦‚ä¸º70åˆ†é’Ÿå·¦å³ï¼Œä½†æ˜¯å•æ¬¡æ”¶è·è¾ƒå¤šã€‚æ‚¨è¦é€‰æ‹©ç§æ¤å“ªç§ä½œç‰©ï¼Ÿ")
+			AddNumText(sceneId, x714093_g_ScriptId, "ç§æ¤æ—©äº§æ¤ç‰©",6,254)
+			AddNumText(sceneId, x714093_g_ScriptId, "ç§æ¤æ™šäº§æ¤ç‰©",6,255)
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 	end
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x714093_OnEventRequest( sceneId, selfId, targetId, eventId )
 	local name_Index
@@ -44,13 +44,13 @@ function x714093_OnEventRequest( sceneId, selfId, targetId, eventId )
 
 	if NumText == 254 or NumText == 255 then
 		BeginEvent(sceneId)
-			AddText(sceneId, "ÇëÑ¡ÔñÄãÒªÖÖµÄÖ²Îï")
-			--Í¨¹ıx714093_g_eventListºÍscriptglobalÖĞµÄÖ²ÎïÁĞ±í¶Ô±È£¬²¢¸ù¾İÍæ¼ÒÖÖÖ²¼¼ÄÜµÈ¼¶À´ÏÔÊ¾ÏàÓ¦Ö²Îï
-			for i, eventId in x714093_g_eventList do	--±éÀúÕâ¸öµ¾²İÈË¿ÉÒÔÖÖÖ²µÄÖ²ÎïÁĞ±í
-				for j,g_ZhiWuId in V_ZHONGZHI_ID do		--±éÀúscriptglobalÖĞµÄËùÓĞÖ²ÎïÁĞ±í
+			AddText(sceneId, "è¯·é€‰æ‹©ä½ è¦ç§çš„æ¤ç‰©")
+			--é€šè¿‡x714093_g_eventListå’Œscriptglobalä¸­çš„æ¤ç‰©åˆ—è¡¨å¯¹æ¯”ï¼Œå¹¶æ ¹æ®ç©å®¶ç§æ¤æŠ€èƒ½ç­‰çº§æ¥æ˜¾ç¤ºç›¸åº”æ¤ç‰©
+			for i, eventId in x714093_g_eventList do	--éå†è¿™ä¸ªç¨»è‰äººå¯ä»¥ç§æ¤çš„æ¤ç‰©åˆ—è¡¨
+				for j,g_ZhiWuId in V_ZHONGZHI_ID do		--éå†scriptglobalä¸­çš„æ‰€æœ‰æ¤ç‰©åˆ—è¡¨
 					if eventId == g_ZhiWuId then
 						AbilityLevel = QueryHumanAbilityLevel( sceneId, selfId, ABILITY_ZHONGZHI)
-						if AbilityLevel >= V_ZHONGZHI_NEEDLEVEL[j] then --Èç¹ûÍæ¼ÒÖÖÖ²¼¼ÄÜµÈ¼¶>=¸ÃÖ²ÎïÒªÇó¼¼ÄÜµÈ¼¶]
+						if AbilityLevel >= V_ZHONGZHI_NEEDLEVEL[j] then --å¦‚æœç©å®¶ç§æ¤æŠ€èƒ½ç­‰çº§>=è¯¥æ¤ç‰©è¦æ±‚æŠ€èƒ½ç­‰çº§]
 							
 							if NumText == 254 then
 								name_Index = j								
@@ -58,7 +58,7 @@ function x714093_OnEventRequest( sceneId, selfId, targetId, eventId )
 								name_Index = j + getn(V_ZHONGZHI_NAME)/2
 							end
 
-							AddNumText(sceneId, x714093_g_ScriptId, V_ZHONGZHI_NAME[name_Index].."("..V_ZHONGZHI_NEEDLEVEL[j].."¼¶)",6,name_Index)
+							AddNumText(sceneId, x714093_g_ScriptId, V_ZHONGZHI_NAME[name_Index].."("..V_ZHONGZHI_NEEDLEVEL[j].."çº§)",6,name_Index)
 							break
 						end
 					end
@@ -80,7 +80,7 @@ function x714093_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ£¨ÔİÊ±½èÓÃÈÎÎñ½Ó¿Ú£©
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡ï¼ˆæš‚æ—¶å€Ÿç”¨ä»»åŠ¡æ¥å£ï¼‰
 --**********************************
 function x714093_OnMissionSubmit( sceneId, selfId, targetId, scriptId )
 	for i, findId in x714093_g_eventList do
@@ -96,7 +96,7 @@ function x714093_OnMissionSubmit( sceneId, selfId, targetId, scriptId )
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x714093_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x714093_g_eventList do

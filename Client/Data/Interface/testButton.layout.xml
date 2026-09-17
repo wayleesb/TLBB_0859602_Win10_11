@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" ?>
+<?xml version="1.0" ?>
 <GUILayout>
     <Window Type="DefaultWindow" Name="Test_Backgournd">
         <Property Name="Size" Value="w:1 h:1" />

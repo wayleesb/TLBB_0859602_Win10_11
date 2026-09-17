@@ -1,37 +1,37 @@
---ÂåÑôNPC
---·¶´¿ÈÊ
---½¨Á¢°ï»á
---½Å±¾ºÅ
+--æ´›é˜³NPC
+--èŒƒçº¯ä»
+--å»ºç«‹å¸®ä¼š
+--è„šæœ¬å·
 x000030_g_scriptId = 000030
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x000030_g_eventList={600000}
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x000030_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
-		AddText(sceneId,"  ÏëÒª´´½¨°ï»á¾ÍÀ´ÕÒÎÒ°É£¡")
+		AddText(sceneId,"  æƒ³è¦åˆ›å»ºå¸®ä¼šå°±æ¥æ‰¾æˆ‘å§ï¼")
 	
-	AddNumText( sceneId, x000030_g_scriptId, "°ï»áÓëÁìµØ½éÉÜ", 11, 10 )
+	AddNumText( sceneId, x000030_g_scriptId, "å¸®ä¼šä¸é¢†åœ°ä»‹ç»", 11, 10 )
 	
-		AddNumText(sceneId,x000030_g_scriptId,"²é¿´°ï»áÁĞ±í",6,2)	
+		AddNumText(sceneId,x000030_g_scriptId,"æŸ¥çœ‹å¸®ä¼šåˆ—è¡¨",6,2)	
 		if IsShutout( sceneId, selfId, ONOFF_T_GUILD ) == 0 then
-			AddNumText(sceneId,x000030_g_scriptId,"´´½¨°ï»á",6,1)
+			AddNumText(sceneId,x000030_g_scriptId,"åˆ›å»ºå¸®ä¼š",6,1)
 		end
-		AddNumText(sceneId,x000030_g_scriptId,"¹ÜÀí°ï»á»áÔ±ĞÅÏ¢",6,3)
-		AddNumText(sceneId,x000030_g_scriptId,"²é¿´±¾°ïÏêÏ¸×ÊÑ¶",6,4)
+		AddNumText(sceneId,x000030_g_scriptId,"ç®¡ç†å¸®ä¼šä¼šå‘˜ä¿¡æ¯",6,3)
+		AddNumText(sceneId,x000030_g_scriptId,"æŸ¥çœ‹æœ¬å¸®è¯¦ç»†èµ„è®¯",6,4)
 		if(GetHumanGuildID(sceneId, selfId) ~= -1) then
 			if IsShutout( sceneId, selfId, ONOFF_T_CITY ) == 0 then
-				AddNumText(sceneId,x000030_g_scriptId,"ÉêÇë³ÇÊĞ",6,5)
+				AddNumText(sceneId,x000030_g_scriptId,"ç”³è¯·åŸå¸‚",6,5)
 			end
 			if(CityGetSelfCityID(sceneId, selfId) ~= -1) then
-				AddNumText(sceneId,x000030_g_scriptId,"½øÈë±¾°ï³ÇÊĞ",9,6)
+				AddNumText(sceneId,x000030_g_scriptId,"è¿›å…¥æœ¬å¸®åŸå¸‚",9,6)
 			end
 		end
-		AddNumText(sceneId,x000030_g_scriptId,"¹ØÓÚ°ïÅÉ·±ÈÙ¶È",11,11)
-		AddNumText(sceneId,x000030_g_scriptId,"Í¬ÃË½éÉÜ",11,12)
+		AddNumText(sceneId,x000030_g_scriptId,"å…³äºå¸®æ´¾ç¹è£åº¦",11,11)
+		AddNumText(sceneId,x000030_g_scriptId,"åŒç›Ÿä»‹ç»",11,12)
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 end

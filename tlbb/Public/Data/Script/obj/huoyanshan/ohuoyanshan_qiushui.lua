@@ -1,11 +1,11 @@
---火焰山NPC
---邱水
---任务
+--鐏劙灞盢PC
+--閭辨按
+--浠诲姟
 
 x042503_g_ScriptId	= 042503
 
 --**********************************
---事件交互入口
+--浜嬩欢浜や簰鍏ュ彛
 --**********************************
 function x042503_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent( sceneId )

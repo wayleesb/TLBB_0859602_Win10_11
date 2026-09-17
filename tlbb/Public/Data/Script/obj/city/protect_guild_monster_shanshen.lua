@@ -1,5 +1,5 @@
 -- 805045
--- É½Éñboss
+-- å±±ç¥boss
 
 
 x805045_IDX_BossFightingState	= 20
@@ -13,15 +13,15 @@ x805045_SKILL_TBL =
 				IDX_State			= 4,	
 				BossSkill			= 1101,
 				AlarmTime 			= 0,
-				SkillCondition		= 0,						--0:cooldownµ½¾ÍÊÍ·Å	1:ÑªÁ¿Ìõ¼ş
+				SkillCondition		= 0,						--0:cooldownåˆ°å°±é‡Šæ”¾	1:è¡€é‡æ¡ä»¶
 				SkilCoolDown		= 20000,
-				SkillBlood			= 0,						--ÑªÁ¿µÍÓÚ¸ÃÖµÊ±ÊÍ·Å
-				TargetType			= 1,						--0:µ±Ç°target  1:Ëæ»úÍæ¼Ò
-				TargetCord			= 0,						--0:µ±Ç°target	1:×Ô¼º
-				MsgAlarmType		= 0,						--0:NpcËµ»°		1:³¡¾°ÌáÊ¾
+				SkillBlood			= 0,						--è¡€é‡ä½äºè¯¥å€¼æ—¶é‡Šæ”¾
+				TargetType			= 1,						--0:å½“å‰target  1:éšæœºç©å®¶
+				TargetCord			= 0,						--0:å½“å‰target	1:è‡ªå·±
+				MsgAlarmType		= 0,						--0:Npcè¯´è¯		1:åœºæ™¯æç¤º
 				MsgAlarm			= "",
-				MsgFire				= "%s,ñöÌıÉ½ÉñµÄÕÙ»½°É",
-				BuffList			= {154, 5945, 5946}				--buffĞ§¹û
+				MsgFire				= "%s,è†å¬å±±ç¥çš„å¬å”¤å§",
+				BuffList			= {154, 5945, 5946}				--buffæ•ˆæœ
 			},
 		
 	[2]	=	{
@@ -31,13 +31,13 @@ x805045_SKILL_TBL =
 				IDX_State			= 8,	
 				BossSkill			= 1102,
 				AlarmTime 			= 1000,
-				SkillCondition		= 0,						--0:cooldownµ½¾ÍÊÍ·Å	1:ÑªÁ¿Ìõ¼ş
+				SkillCondition		= 0,						--0:cooldownåˆ°å°±é‡Šæ”¾	1:è¡€é‡æ¡ä»¶
 				SkilCoolDown		= 25000,
-				SkillBlood			= 0,						--ÑªÁ¿µÍÓÚ¸ÃÖµÊ±ÊÍ·Å
-				TargetType			= 0,						--0:µ±Ç°target  1:Ëæ»úÍæ¼Ò
-				TargetCord			= 1,						--0:µ±Ç°target	1:×Ô¼º
-				MsgAlarmType		= 0,						--0:NpcËµ»°		1:³¡¾°ÌáÊ¾
-				MsgAlarm			= "¸ĞÊÜÉ½ÉñµÄ·ßÅ­°É",
+				SkillBlood			= 0,						--è¡€é‡ä½äºè¯¥å€¼æ—¶é‡Šæ”¾
+				TargetType			= 0,						--0:å½“å‰target  1:éšæœºç©å®¶
+				TargetCord			= 1,						--0:å½“å‰target	1:è‡ªå·±
+				MsgAlarmType		= 0,						--0:Npcè¯´è¯		1:åœºæ™¯æç¤º
+				MsgAlarm			= "æ„Ÿå—å±±ç¥çš„æ„¤æ€’å§",
 				MsgFire				= ""
 			},
 
@@ -48,13 +48,13 @@ x805045_SKILL_TBL =
 				IDX_State			= 12,	
 				BossSkill			= 1103,
 				AlarmTime 			= 1000,
-				SkillCondition		= 1,						--0:cooldownµ½¾ÍÊÍ·Å	1:ÑªÁ¿Ìõ¼ş
+				SkillCondition		= 1,						--0:cooldownåˆ°å°±é‡Šæ”¾	1:è¡€é‡æ¡ä»¶
 				SkilCoolDown		= 0,
-				SkillBlood			= 50,						--ÑªÁ¿µÍÓÚ¸ÃÖµÊ±ÊÍ·Å
-				TargetType			= 0,						--0:µ±Ç°target  1:Ëæ»úÍæ¼Ò
-				TargetCord			= 2,						--0:µ±Ç°target	1:×Ô¼º	2:ÕÙ»½¼¼ÄÜ
-				MsgAlarmType		= 0,						--0:NpcËµ»°		1:³¡¾°ÌáÊ¾
-				MsgAlarm			= "ÎÒ²»ÊÇÒ»¸öÈËÔÚÕ½¶·£¬·²ÈË",
+				SkillBlood			= 50,						--è¡€é‡ä½äºè¯¥å€¼æ—¶é‡Šæ”¾
+				TargetType			= 0,						--0:å½“å‰target  1:éšæœºç©å®¶
+				TargetCord			= 2,						--0:å½“å‰target	1:è‡ªå·±	2:å¬å”¤æŠ€èƒ½
+				MsgAlarmType		= 0,						--0:Npcè¯´è¯		1:åœºæ™¯æç¤º
+				MsgAlarm			= "æˆ‘ä¸æ˜¯ä¸€ä¸ªäººåœ¨æˆ˜æ–—ï¼Œå‡¡äºº",
 				MsgFire				= ""
 			},
 		
@@ -62,7 +62,7 @@ x805045_SKILL_TBL =
 
 
 
---¹ÖÎïÁĞ±í
+--æ€ªç‰©åˆ—è¡¨
 x805045_g_monster_list = {
 	[1]={
 			StageId=1,
@@ -73,24 +73,24 @@ x805045_g_monster_list = {
 }
 
 
---¸±±¾Êı¾İË÷Òı¶ÔÕÕ
+--å‰¯æœ¬æ•°æ®ç´¢å¼•å¯¹ç…§
 x805045_g_keySD					= {}
-x805045_g_keySD["typ"]			= 0		--ÉèÖÃ¸±±¾ÀàĞÍ
-x805045_g_keySD["spt"]			= 1		--ÉèÖÃ¸±±¾³¡¾°ÊÂ¼ş½Å±¾ºÅ
-x805045_g_keySD["tim"]			= 2		--ÉèÖÃ¶¨Ê±Æ÷µ÷ÓÃ´ÎÊı
-x805045_g_keySD["currStage"]	= 3		--ÉèÖÃ¶¨Ê±Æ÷µ÷ÓÃ´ÎÊı
-x805045_g_keySD["scn"]			= 4		--ÉèÖÃ¸±±¾Èë¿Ú³¡¾°ºÅ, ³õÊ¼»¯
-x805045_g_keySD["cls"]			= 5		--ÉèÖÃ¸±±¾¹Ø±Õ±êÖ¾, 0¿ª·Å£¬1¹Ø±Õ
-x805045_g_keySD["dwn"]			= 6		--ÉèÖÃÀë¿ªµ¹¼ÆÊ±´ÎÊı
-x805045_g_keySD["tem"]			= 7		--±£´æ¶ÓÎéºÅ
-x805045_g_keySD["x"]			= 8			--ÈËÎïÔÚÈë¿Ú³¡¾°ÖĞµÄxÎ»ÖÃ
-x805045_g_keySD["z"]			= 9			--ÈËÎïÔÚÈë¿Ú³¡¾°ÖĞµÄzÎ»ÖÃ
-x805045_g_keySD["killMonsterNum"]	= 10		--É±ËÀ¹ÖÎïÊıÁ¿
-x805045_g_keySD["genMonsterNum"]	= 11			--Éú³É¹ÖÎïÊıÁ¿
-x805045_g_keySD["playerLevel"]	= 12		--¼ÇÂ¼µ±Ç°¸±±¾µÄ¼¶±ğ
+x805045_g_keySD["typ"]			= 0		--è®¾ç½®å‰¯æœ¬ç±»å‹
+x805045_g_keySD["spt"]			= 1		--è®¾ç½®å‰¯æœ¬åœºæ™¯äº‹ä»¶è„šæœ¬å·
+x805045_g_keySD["tim"]			= 2		--è®¾ç½®å®šæ—¶å™¨è°ƒç”¨æ¬¡æ•°
+x805045_g_keySD["currStage"]	= 3		--è®¾ç½®å®šæ—¶å™¨è°ƒç”¨æ¬¡æ•°
+x805045_g_keySD["scn"]			= 4		--è®¾ç½®å‰¯æœ¬å…¥å£åœºæ™¯å·, åˆå§‹åŒ–
+x805045_g_keySD["cls"]			= 5		--è®¾ç½®å‰¯æœ¬å…³é—­æ ‡å¿—, 0å¼€æ”¾ï¼Œ1å…³é—­
+x805045_g_keySD["dwn"]			= 6		--è®¾ç½®ç¦»å¼€å€’è®¡æ—¶æ¬¡æ•°
+x805045_g_keySD["tem"]			= 7		--ä¿å­˜é˜Ÿä¼å·
+x805045_g_keySD["x"]			= 8			--äººç‰©åœ¨å…¥å£åœºæ™¯ä¸­çš„xä½ç½®
+x805045_g_keySD["z"]			= 9			--äººç‰©åœ¨å…¥å£åœºæ™¯ä¸­çš„zä½ç½®
+x805045_g_keySD["killMonsterNum"]	= 10		--æ€æ­»æ€ªç‰©æ•°é‡
+x805045_g_keySD["genMonsterNum"]	= 11			--ç”Ÿæˆæ€ªç‰©æ•°é‡
+x805045_g_keySD["playerLevel"]	= 12		--è®°å½•å½“å‰å‰¯æœ¬çš„çº§åˆ«
 
 --**********************************
--- ×Ô¼ºËÀÍö
+-- è‡ªå·±æ­»äº¡
 --**********************************
 function x805045_OnDie( sceneId, selfId, killerId )
 
@@ -98,10 +98,10 @@ function x805045_OnDie( sceneId, selfId, killerId )
 	killNum = killNum + 1
 	LuaFnSetCopySceneData_Param( sceneId, x805045_g_keySD["killMonsterNum"], killNum )	
 	
-	--È«Çò¹«¸æ
+	--å…¨çƒå…¬å‘Š
 	local	nam_ply	= GetName( sceneId, killerId )
 	
-	--É±ËÀ¹ÖÎïµÄÊÇ³èÎïÔò»ñÈ¡ÆäÖ÷ÈËµÄÃû×Ö....
+	--æ€æ­»æ€ªç‰©çš„æ˜¯å® ç‰©åˆ™è·å–å…¶ä¸»äººçš„åå­—....
 	local playerID = killerId
 	local objType = GetCharacterType( sceneId, killerId )
 	if objType == 3 then
@@ -109,7 +109,7 @@ function x805045_OnDie( sceneId, selfId, killerId )
 		nam_ply = GetName( sceneId, playerID )
 	end
 	
-	--Èç¹ûÍæ¼Ò×é¶ÓÁËÔò»ñÈ¡¶Ó³¤µÄÃû×Ö....
+	--å¦‚æœç©å®¶ç»„é˜Ÿäº†åˆ™è·å–é˜Ÿé•¿çš„åå­—....
 	local leaderID = GetTeamLeader( sceneId, playerID )
 	if leaderID ~= -1 then
 		nam_ply = GetName( sceneId, leaderID )
@@ -119,13 +119,13 @@ function x805045_OnDie( sceneId, selfId, killerId )
 	local cityName = LuaFnCityGetNameBySceneId( sceneId )
 
 	local message;
-	message = format("#cff99cc#{_INFOUSR%s}Ãæ¶ÔÇ¿µĞ£¬ÂÊÁì¶ÓÎéÕ¹¿ªÁË¼è¿à×¿¾øµÄ%s±£ÎÀÕ½£¬É½ÉñËğ±øÕÛ½«£¬ÎŞ·¨¹¥¿Ë£¬×îºóÖÕÓÚ·ÅÆúÁË´İ»Ù³ÇÊĞµÄ¼Æ»®¡£", nam_ply, cityName );
+	message = format("#cff99cc#{_INFOUSR%s}é¢å¯¹å¼ºæ•Œï¼Œç‡é¢†é˜Ÿä¼å±•å¼€äº†è‰°è‹¦å“ç»çš„%sä¿å«æˆ˜ï¼Œå±±ç¥æŸå…µæŠ˜å°†ï¼Œæ— æ³•æ”»å…‹ï¼Œæœ€åç»ˆäºæ”¾å¼ƒäº†æ‘§æ¯åŸå¸‚çš„è®¡åˆ’ã€‚", nam_ply, cityName );
 	BroadMsgByChatPipe(sceneId, selfId, message, 4);
 
 end
 
 --**********************************
--- ĞÄÌø
+-- å¿ƒè·³
 --**********************************
 function x805045_OnHeartBeat(sceneId, selfId, nTick)
 	if(1==LuaFnIsCharacterLiving(sceneId, selfId)  and MonsterAI_GetIntParamByIndex(sceneId, selfId, x805045_IDX_BossFightingState)==1 ) then
@@ -230,7 +230,7 @@ function x805045_OnHeartBeat(sceneId, selfId, nTick)
 end
 
 --**********************************
--- ³õÊ¼»¯
+-- åˆå§‹åŒ–
 --**********************************
 function x805045_OnInit(sceneId, selfId)
 	local i = 0;
@@ -245,38 +245,38 @@ function x805045_OnInit(sceneId, selfId)
 	genNum = genNum + 1
 	LuaFnSetCopySceneData_Param( sceneId, x805045_g_keySD["genMonsterNum"], genNum )
 	
-	LuaFnNpcChat(sceneId, selfId, 1, "É½ÉñµÄÍşÑÏ£¡ÆñÈİÃ°·¸£¡")
+	LuaFnNpcChat(sceneId, selfId, 1, "å±±ç¥çš„å¨ä¸¥ï¼å²‚å®¹å†’çŠ¯ï¼")
 end
 
 --**********************************
--- É±ËÀÍæ¼Ò
+-- æ€æ­»ç©å®¶
 --**********************************
 function x805045_OnKillCharacter(sceneId, selfId, targetId)
 
 end
 
 --**********************************
--- ½øÈëÕ½¶·
+-- è¿›å…¥æˆ˜æ–—
 --**********************************
 function x805045_OnEnterCombat(sceneId, selfId, enmeyId)
 	MonsterAI_SetIntParamByIndex(sceneId, selfId, x805045_IDX_BossFightingState, 1)
 end
 
 --**********************************
--- ÍÑÀëÕ½¶·
+-- è„±ç¦»æˆ˜æ–—
 --**********************************
 function x805045_OnLeaveCombat(sceneId, selfId)
 	MonsterAI_SetIntParamByIndex(sceneId, selfId, x805045_IDX_BossFightingState, 0)
 end
 
 --**********************************
---ÌáÊ¾ËùÓĞ¸±±¾ÄÚÍæ¼Ò
+--æç¤ºæ‰€æœ‰å‰¯æœ¬å†…ç©å®¶
 --**********************************
 function x805045_TipAllHuman( sceneId, Str )
-	-- »ñµÃ³¡¾°ÀïÍ·µÄËùÓĞÈË
+	-- è·å¾—åœºæ™¯é‡Œå¤´çš„æ‰€æœ‰äºº
 	local nHumanNum = LuaFnGetCopyScene_HumanCount(sceneId)
 	
-	-- Ã»ÓĞÈËµÄ³¡¾°£¬Ê²Ã´¶¼²»×ö
+	-- æ²¡æœ‰äººçš„åœºæ™¯ï¼Œä»€ä¹ˆéƒ½ä¸åš
 	if nHumanNum < 1 then
 		return
 	end
@@ -309,12 +309,12 @@ function x805045_GenObj( sceneId, listid, x, z )
     end
 end
 
---Ëæ»úÑ¡ÔñÒ»¸öÍæ¼Ò
+--éšæœºé€‰æ‹©ä¸€ä¸ªç©å®¶
 function x805045_RandPlayer( sceneId )
-	-- »ñµÃ³¡¾°ÀïÍ·µÄËùÓĞÈË
+	-- è·å¾—åœºæ™¯é‡Œå¤´çš„æ‰€æœ‰äºº
 	local nHumanNum = LuaFnGetCopyScene_HumanCount(sceneId)
 	
-	-- Ã»ÓĞÈËµÄ³¡¾°
+	-- æ²¡æœ‰äººçš„åœºæ™¯
 	if nHumanNum < 1 then
 		return -1
 	end
@@ -334,7 +334,7 @@ function x805045_RandPlayer( sceneId )
 	local rPlayerIndex = random( nHumanAliveNum )
 	
 	local ind = 0
-	local round = 2 * nHumanNum  --×î´óÑ­»·Êı
+	local round = 2 * nHumanNum  --æœ€å¤§å¾ªç¯æ•°
 	while round > 0 do
 		local PlayerId = LuaFnGetCopyScene_HumanObjId( sceneId, ind )
 		if LuaFnIsCharacterLiving( sceneId, PlayerId) == 1 and LuaFnIsObjValid( sceneId, PlayerId ) == 1 and LuaFnIsCanDoScriptLogic( sceneId, PlayerId ) == 1 then
@@ -359,7 +359,7 @@ end
 
 
 --**********************************
--- Í¨ÓÃ´´½¨¹ÖÎïº¯Êı
+-- é€šç”¨åˆ›å»ºæ€ªç‰©å‡½æ•°
 --**********************************
 function x805045_CreateNpc(sceneId, NpcId, x, y, Ai, AiFile, Script)
 	local PlayerLevel = LuaFnGetCopySceneData_Param( sceneId, x805045_g_keySD["playerLevel"])
@@ -392,11 +392,11 @@ function x805045_CreateNpc(sceneId, NpcId, x, y, Ai, AiFile, Script)
 	local nMonsterId = LuaFnCreateMonster(sceneId, nNpcId, x, y, Ai, AiFile, Script)
 	SetLevel(sceneId, nMonsterId, PlayerLevel)
 	
-	-- ¿´ÓĞÃ»ÓĞÉèÖÃ³ÆºÅ£¬ÓĞ¾Í¼Ó³ÆºÅ
+	-- çœ‹æœ‰æ²¡æœ‰è®¾ç½®ç§°å·ï¼Œæœ‰å°±åŠ ç§°å·
 	--x805042_SetNpcTitle(sceneId, nMonsterId)
 	local strNpcName = GetName(sceneId, nNpcId )
-	if (strNpcName == "´óÉ½¹í") or (strNpcName == "É½Éñ") then
-			SetCharacterTitle(sceneId, nNpcId, "¡°Ê¯Í·¹ÖÈË¡±")
+	if (strNpcName == "å¤§å±±é¬¼") or (strNpcName == "å±±ç¥") then
+			SetCharacterTitle(sceneId, nNpcId, "â€œçŸ³å¤´æ€ªäººâ€")
 	end
 	
 	return nMonsterId

@@ -1,22 +1,22 @@
---ËÕÖİNPC 
---Å·Ò±×Ó
---ÆÕÍ¨
+--è‹å·NPC 
+--æ¬§å†¶å­
+--æ™®é€š
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x001066_g_ScriptId = 001066
-x001066_g_ShenBingScriptId = 500503			-- ÑªÓûÉñ±øÈÎÎñ½Å±¾
-x001066_g_ChongZhuScriptId = 500504			-- ÉñÆ÷ÖıÔìºÍĞŞÀí½Å±¾
-x001066_g_Name			= "Å·Ò±×Ó"
+x001066_g_ShenBingScriptId = 500503			-- è¡€æ¬²ç¥å…µä»»åŠ¡è„šæœ¬
+x001066_g_ChongZhuScriptId = 500504			-- ç¥å™¨é“¸é€ å’Œä¿®ç†è„šæœ¬
+x001066_g_Name			= "æ¬§å†¶å­"
 
 x001066_g_eventList={}
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x001066_UpdateEventList( sceneId, selfId,targetId )
 end
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x001066_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent( sceneId )
@@ -27,42 +27,42 @@ function x001066_OnDefaultEvent( sceneId, selfId,targetId )
 		end
 		
 		if LuaFnGetName( sceneId, targetId ) == x001066_g_Name then
-			AddNumText(sceneId,x001066_g_ScriptId,"ÑªÔ¡Éñ±ø",3,105)
+			AddNumText(sceneId,x001066_g_ScriptId,"è¡€æµ´ç¥å…µ",3,105)
 		end
-		AddNumText(sceneId,x001066_g_ScriptId,"×°±¸×ÊÖÊ¼ø¶¨",6,4)
-		AddNumText(sceneId,x001066_g_ScriptId,"×°±¸Ç¿»¯",6,5)
-		--AddNumText(sceneId,x001066_g_ScriptId,"ÌáÉı×°±¸µÈ¼¶",6,6)
-		--AddNumText(sceneId,x001066_g_ScriptId,"×°±¸¸Ä±äÍâĞÎ",6,7)
+		AddNumText(sceneId,x001066_g_ScriptId,"è£…å¤‡èµ„è´¨é‰´å®š",6,4)
+		AddNumText(sceneId,x001066_g_ScriptId,"è£…å¤‡å¼ºåŒ–",6,5)
+		--AddNumText(sceneId,x001066_g_ScriptId,"æå‡è£…å¤‡ç­‰çº§",6,6)
+		--AddNumText(sceneId,x001066_g_ScriptId,"è£…å¤‡æ”¹å˜å¤–å½¢",6,7)
 
-		AddNumText(sceneId,x001066_g_ScriptId,"Ôö¼Ó¿ÉĞŞÀí´ÎÊı",6,8)
-		AddNumText(sceneId,x001066_g_ScriptId,"×°±¸¿ÌÃú",6,9)
-		AddNumText(sceneId,x001066_g_ScriptId,"×°±¸³ıÃú",6,22)
-		AddNumText(sceneId,x001066_g_ScriptId,"ÖØĞÂ¼ø¶¨×°±¸×ÊÖÊ",6,19)
+		AddNumText(sceneId,x001066_g_ScriptId,"å¢åŠ å¯ä¿®ç†æ¬¡æ•°",6,8)
+		AddNumText(sceneId,x001066_g_ScriptId,"è£…å¤‡åˆ»é“­",6,9)
+		AddNumText(sceneId,x001066_g_ScriptId,"è£…å¤‡é™¤é“­",6,22)
+		AddNumText(sceneId,x001066_g_ScriptId,"é‡æ–°é‰´å®šè£…å¤‡èµ„è´¨",6,19)
 		if LuaFnGetName( sceneId, targetId ) == x001066_g_Name then
-			AddNumText(sceneId,x001066_g_ScriptId,"ÉñÆ÷ÖıÔì",11,106)
+			AddNumText(sceneId,x001066_g_ScriptId,"ç¥å™¨é“¸é€ ",11,106)
 		end
 		
-		AddNumText( sceneId, x001066_g_ScriptId, "×°±¸¼ÓÇ¿Ïà¹Ø½éÉÜ", 11, 10 )
+		AddNumText( sceneId, x001066_g_ScriptId, "è£…å¤‡åŠ å¼ºç›¸å…³ä»‹ç»", 11, 10 )
 		
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x001066_OnEventRequest( sceneId, selfId, targetId, eventId )
 
----------------------------½éÉÜ-------------------------------------------------
+---------------------------ä»‹ç»-------------------------------------------------
 		if GetNumText() == 10 then
 			BeginEvent(sceneId)	
 				AddText(sceneId,"#{function_help_055}#r")
 				
-				AddNumText(sceneId, x001066_g_ScriptId,"×°±¸¿ÌÃú½éÉÜ",11,11);
-				AddNumText(sceneId, x001066_g_ScriptId,"×°±¸Ç¿»¯½éÉÜ",11,12);
-				AddNumText(sceneId, x001066_g_ScriptId,"×°±¸×ÊÖÊ¼ø¶¨½éÉÜ",11,13);
-				--AddNumText(sceneId, x001066_g_ScriptId,"¸Ä±ä×°±¸ÍâĞÎ½éÉÜ",11,14);				
-				AddNumText(sceneId, x001066_g_ScriptId,"ÖØĞÂ¼ø¶¨×°±¸×ÊÖÊ½éÉÜ",11,29);
+				AddNumText(sceneId, x001066_g_ScriptId,"è£…å¤‡åˆ»é“­ä»‹ç»",11,11);
+				AddNumText(sceneId, x001066_g_ScriptId,"è£…å¤‡å¼ºåŒ–ä»‹ç»",11,12);
+				AddNumText(sceneId, x001066_g_ScriptId,"è£…å¤‡èµ„è´¨é‰´å®šä»‹ç»",11,13);
+				--AddNumText(sceneId, x001066_g_ScriptId,"æ”¹å˜è£…å¤‡å¤–å½¢ä»‹ç»",11,14);				
+				AddNumText(sceneId, x001066_g_ScriptId,"é‡æ–°é‰´å®šè£…å¤‡èµ„è´¨ä»‹ç»",11,29);
 
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,targetId)
@@ -107,7 +107,7 @@ function x001066_OnEventRequest( sceneId, selfId, targetId, eventId )
 		
 		--------------------------------------------------------------------------
 		
-		-- ×°±¸×ÊÖÊ¼ø¶¨
+		-- è£…å¤‡èµ„è´¨é‰´å®š
 		if GetNumText() == 4 then
 			BeginUICommand( sceneId )
 			UICommand_AddInt( sceneId, targetId )
@@ -116,7 +116,7 @@ function x001066_OnEventRequest( sceneId, selfId, targetId, eventId )
 			return
 		end
 
-		-- ×°±¸Ç¿»¯
+		-- è£…å¤‡å¼ºåŒ–
 		if	GetNumText()==5	then
 
 			BeginUICommand(sceneId)
@@ -147,7 +147,7 @@ function x001066_OnEventRequest( sceneId, selfId, targetId, eventId )
 
 		end
 
-		-- Ôö¼Ó¿ÉĞŞÀí´ÎÊı
+		-- å¢åŠ å¯ä¿®ç†æ¬¡æ•°
 		if	GetNumText()==8	then
 
 			BeginUICommand(sceneId)
@@ -158,7 +158,7 @@ function x001066_OnEventRequest( sceneId, selfId, targetId, eventId )
 
 		end
 
-		-- ×°±¸¿ÌÃú
+		-- è£…å¤‡åˆ»é“­
 		if	GetNumText()==9	then
 
 			BeginUICommand(sceneId)
@@ -169,7 +169,7 @@ function x001066_OnEventRequest( sceneId, selfId, targetId, eventId )
 
 		end
 		
-		-- ×°±¸³ıÃú
+		-- è£…å¤‡é™¤é“­
 		if	GetNumText()==22	then
 
 			BeginUICommand(sceneId)
@@ -180,7 +180,7 @@ function x001066_OnEventRequest( sceneId, selfId, targetId, eventId )
 
 		end
 		
-		-- ÖØĞÂ¼ø¶¨×°±¸×ÊÖÊ
+		-- é‡æ–°é‰´å®šè£…å¤‡èµ„è´¨
 		if	GetNumText()==19	then
 
 			BeginUICommand(sceneId)
@@ -191,7 +191,7 @@ function x001066_OnEventRequest( sceneId, selfId, targetId, eventId )
 
 		end
 		
-		-- ÑªÔ¡Éñ±ø
+		-- è¡€æµ´ç¥å…µ
 		if GetNumText() == 105 then
 			BeginEvent(sceneId)						
 				AddText(sceneId,"#{XYSB_20070928_001}")				
@@ -230,7 +230,7 @@ function x001066_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x001066_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 
@@ -253,11 +253,11 @@ function x001066_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x001066_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 	
-	--¾Ü¾øÖ®ºó£¬Òª·µ»ØNPCµÄÊÂ¼şÁĞ±í
+	--æ‹’ç»ä¹‹åï¼Œè¦è¿”å›NPCçš„äº‹ä»¶åˆ—è¡¨
 	
 	if missionScriptId == x001066_g_ShenBingScriptId then
 		x001066_UpdateEventList( sceneId, selfId, targetId )
@@ -267,7 +267,7 @@ function x001066_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¼ÌĞø£¨ÒÑ¾­½ÓÁËÈÎÎñ£©
+--ç»§ç»­ï¼ˆå·²ç»æ¥äº†ä»»åŠ¡ï¼‰
 --**********************************
 function x001066_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 	
@@ -279,7 +279,7 @@ function x001066_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---Ìá½»ÒÑ×öÍêµÄÈÎÎñ
+--æäº¤å·²åšå®Œçš„ä»»åŠ¡
 --**********************************
 function x001066_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, selectRadioId )
 	
@@ -291,13 +291,13 @@ function x001066_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 end
 
 --**********************************
---ËÀÍöÊÂ¼ş
+--æ­»äº¡äº‹ä»¶
 --**********************************
 function x001066_OnDie( sceneId, selfId, killerId )
 end
 
 --**********************************
---Ìá½»ÎïÆ·
+--æäº¤ç‰©å“
 --**********************************
 function x001066_OnMissionCheck( sceneId, selfId, npcid, scriptId, index1, index2, index3, indexpet )
 	

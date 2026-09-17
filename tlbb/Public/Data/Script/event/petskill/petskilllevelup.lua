@@ -1,11 +1,11 @@
--- ÕäÊŞ¼¼ÄÜÉı¼¶
+-- çå…½æŠ€èƒ½å‡çº§
 
--- ½Å±¾ºÅ
+-- è„šæœ¬å·
 x311112_g_ScriptId = 311112;
-x311112_g_NumText_Main = 1					-- ½ÓÈÎÎñµÄÑ¡Ïî
+x311112_g_NumText_Main = 1					-- æ¥ä»»åŠ¡çš„é€‰é¡¹
 
 --**********************************
--- ÈÎÎñÈë¿Úº¯Êı
+-- ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x311112_OnDefaultEvent(sceneId, selfId, targetId)
 	local numText = GetNumText()
@@ -15,20 +15,20 @@ function x311112_OnDefaultEvent(sceneId, selfId, targetId)
 		BeginUICommand( sceneId )
 			UICommand_AddInt( sceneId, targetId )
 		EndUICommand( sceneId )
-		DispatchUICommand( sceneId, selfId, 19823 )	--µ÷ÓÃÕäÊŞ¼¼ÄÜÉı¼¶½çÃæ
+		DispatchUICommand( sceneId, selfId, 19823 )	--è°ƒç”¨çå…½æŠ€èƒ½å‡çº§ç•Œé¢
 	end
 	
 end
 
 --**********************************
--- ÁĞ¾ÙÊÂ¼ş
+-- åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x311112_OnEnumerate(sceneId, selfId, targetId)
-	AddNumText(sceneId, x311112_g_ScriptId, "ÕäÊŞ¼¼ÄÜÉı¼¶" , 6, x311112_g_NumText_Main);
+	AddNumText(sceneId, x311112_g_ScriptId, "çå…½æŠ€èƒ½å‡çº§" , 6, x311112_g_NumText_Main);
 end
 
 --**********************************
---ÕäÊŞÉı³¬¼¶¼¼ÄÜ
+--çå…½å‡è¶…çº§æŠ€èƒ½
 --**********************************
 function x311112_PetSkillLevelup( sceneId, selfId, petHid, petLid, skillindex, ItemIndexInBag )
 	local checkAvailable = LuaFnIsPetAvailableByGUIDNoPW(sceneId, selfId, petHid, petLid);
@@ -39,9 +39,9 @@ function x311112_PetSkillLevelup( sceneId, selfId, petHid, petLid, skillindex, I
 			return
 		end
 		
-		local itemid = LuaFnGetItemTableIndexByIndex(sceneId, selfId, ItemIndexInBag) --»ñÈ¡ÎïÆ·ID
+		local itemid = LuaFnGetItemTableIndexByIndex(sceneId, selfId, ItemIndexInBag) --è·å–ç‰©å“ID
 		local ItemInfo = GetBagItemTransfer(sceneId, selfId, ItemIndexInBag)
-		if itemid ~= ConsumeGoodsID then --Èç¹ûConsumeGoodsIDÎª0ËµÃ÷¿ÉÄÜÊÇ²ß»®Íü¼ÇÅäÏûºÄÎïÆ·IDÁË£¬Ò²²»ÄÜÍ¨¹ı
+		if itemid ~= ConsumeGoodsID then --å¦‚æœConsumeGoodsIDä¸º0è¯´æ˜å¯èƒ½æ˜¯ç­–åˆ’å¿˜è®°é…æ¶ˆè€—ç‰©å“IDäº†ï¼Œä¹Ÿä¸èƒ½é€šè¿‡
 			x311112_NotifyFailTips(sceneId, selfId, "#{JNHC_81015_04}")
 			return
 		end
@@ -53,29 +53,29 @@ function x311112_PetSkillLevelup( sceneId, selfId, petHid, petLid, skillindex, I
 			return
 		end
 		
-		--¿Û³ı½ğÇ®
+		--æ‰£é™¤é‡‘é’±
 		if ConsumeMoney > 0 then
 			local jz, jb = LuaFnCostMoneyWithPriority(sceneId, selfId, ConsumeMoney)
 			if jz == -1 then
-				x311112_NotifyFailTips(sceneId, selfId, "¿Û³ı½ğÇ®Ê§°Ü£¡")
+				x311112_NotifyFailTips(sceneId, selfId, "æ‰£é™¤é‡‘é’±å¤±è´¥ï¼")
 				return
 			end
 		end
 		
-		--ÏûºÄÎïÆ·
+		--æ¶ˆè€—ç‰©å“
 		if EraseItem(sceneId, selfId, ItemIndexInBag) ~= 1 then
-			x311112_NotifyFailTips(sceneId, selfId, "¿Û³ıÎïÆ·Ê§°Ü£¡")
+			x311112_NotifyFailTips(sceneId, selfId, "æ‰£é™¤ç‰©å“å¤±è´¥ï¼")
 			return
 		end
 		
 		LuaFnPetSkillUp(sceneId, selfId, petHid, petLid, skillindex, SkillLevelUpID)
-		x311112_NotifyFailTips(sceneId, selfId, "Éı¼¶³É¹¦£¡")
+		x311112_NotifyFailTips(sceneId, selfId, "å‡çº§æˆåŠŸï¼")
 		AuditPetSkillLevelUpAndCompound(sceneId, selfId, 1, ConsumeGoodsID)
 		LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, 18, 0)
 		
 		if IsBroadCast == 1 then
 			local szPetTrans = GetPetTransString(sceneId, selfId, petHid, petLid)
-			local message = format("#H#{_INFOUSR%s}#{J_09}#{_INFOMSG%s}#{J_10}#{_INFOMSG%s}#{J_11}#G%s#P£¡",LuaFnGetName(sceneId, selfId),szPetTrans,ItemInfo,GetSkillName(SkillLevelUpID))--[tx43999]
+			local message = format("#H#{_INFOUSR%s}#{J_09}#{_INFOMSG%s}#{J_10}#{_INFOMSG%s}#{J_11}#G%s#Pï¼",LuaFnGetName(sceneId, selfId),szPetTrans,ItemInfo,GetSkillName(SkillLevelUpID))--[tx43999]
 			BroadMsgByChatPipe(sceneId, selfId, message, 4);
 		end
 		
@@ -85,20 +85,20 @@ function x311112_PetSkillLevelup( sceneId, selfId, petHid, petLid, skillindex, I
 end
 
 --**********************************
---ÁéÊŞµ¤ºÏ³É¹¦ÄÜ
+--çµå…½ä¸¹åˆæˆåŠŸèƒ½
 --**********************************
 function x311112_PetMedicineHC( sceneId, selfId, ItemIndex1, ItemIndex2, ItemIndex3, ItemIndex4, ItemIndex5)
 	if not ItemIndex1 or not ItemIndex2 or not ItemIndex3 or not ItemIndex4 or not ItemIndex5 then
 		return
 	end
 	
-	-- ²»ÔÊĞíÓĞÖØ¸´µÄItemIndex1³öÏÖ added by dun.liu 2009.2.5
+	-- ä¸å…è®¸æœ‰é‡å¤çš„ItemIndex1å‡ºç° added by dun.liu 2009.2.5
 	if ScriptGlobal_IsUniqueNumberTable({ItemIndex1, ItemIndex2, ItemIndex3, ItemIndex4, ItemIndex5}) == 0 then
 		return
 	end
 	
 	local itemindex = {}
-	local itemid = LuaFnGetItemTableIndexByIndex(sceneId, selfId, ItemIndex1) --»ñÈ¡ÎïÆ·ID
+	local itemid = LuaFnGetItemTableIndexByIndex(sceneId, selfId, ItemIndex1) --è·å–ç‰©å“ID
 	local afteritemID,money = GetPetMedicineHCTbl(sceneId, itemid)
 	itemindex[1] = ItemIndex1
 	itemindex[2] = ItemIndex2
@@ -107,19 +107,19 @@ function x311112_PetMedicineHC( sceneId, selfId, ItemIndex1, ItemIndex2, ItemInd
 	itemindex[5] = ItemIndex5
 	--PrintStr(" itemid "..itemid.." afteritemID "..afteritemID.." money "..money)
 	
-	--±íÀïÃæÃ»ÓĞµÄ¾Í²»ÊÇÁéÊŞµ¤
+	--è¡¨é‡Œé¢æ²¡æœ‰çš„å°±ä¸æ˜¯çµå…½ä¸¹
 	if not afteritemID or not money or afteritemID == -100 then
 		x311112_NotifyFailTips(sceneId, selfId, "#{JNHC_81015_13}")
 		return
 	end
 	
-	--±íÀïÃæÓĞµ«ÊÇºÏ³ÉºóIDÊÇ-1µÄ±íÊ¾Ôİ²»¿ª·ÅµÄ£¬Ä¿Ç°ºÏ³É×î¸ß¿ª·Åµ½2¼¶ºÏ3¼¶
+	--è¡¨é‡Œé¢æœ‰ä½†æ˜¯åˆæˆåIDæ˜¯-1çš„è¡¨ç¤ºæš‚ä¸å¼€æ”¾çš„ï¼Œç›®å‰åˆæˆæœ€é«˜å¼€æ”¾åˆ°2çº§åˆ3çº§
 	if afteritemID == -1 then
 		x311112_NotifyFailTips(sceneId, selfId, "#{JNHC_81015_14}")
 		return
 	end
 	
-	--ÊÇ·ñÍ¬ÖÖÀàĞÍ²¢ÇÒµÈ¼¶ÏàÍ¬µÄÁéÊŞµ¤
+	--æ˜¯å¦åŒç§ç±»å‹å¹¶ä¸”ç­‰çº§ç›¸åŒçš„çµå…½ä¸¹
 	for i = 2, 5 do
 		if LuaFnGetItemTableIndexByIndex(sceneId, selfId, itemindex[i]) ~= itemid then
 			x311112_NotifyFailTips(sceneId, selfId, "#{JNHC_81015_15}")
@@ -127,52 +127,52 @@ function x311112_PetMedicineHC( sceneId, selfId, ItemIndex1, ItemIndex2, ItemInd
 		end
 	end
 	
-	--ÊÇ·ñ½ğÇ®×ã¹»£¬Îª0ËµÃ÷ÊÇÃ»ÓĞ½ğÇ®ÒªÇó
+	--æ˜¯å¦é‡‘é’±è¶³å¤Ÿï¼Œä¸º0è¯´æ˜æ˜¯æ²¡æœ‰é‡‘é’±è¦æ±‚
 	local havemoney = GetMoney(sceneId, selfId)
 	local haveJiaoZi = GetMoneyJZ(sceneId, selfId)
 	if money > 0 and havemoney+haveJiaoZi < money then
-		x311112_NotifyFailTips(sceneId, selfId, "#{JNHC_81015_18}#{_EXCHG"..money.."}¡£")
+		x311112_NotifyFailTips(sceneId, selfId, "#{JNHC_81015_18}#{_EXCHG"..money.."}ã€‚")
 		return
 	end
 	
-	--¿Û³ı½ğÇ®£¬Îª0ËµÃ÷ÊÇÃ»ÓĞ½ğÇ®ÒªÇó
+	--æ‰£é™¤é‡‘é’±ï¼Œä¸º0è¯´æ˜æ˜¯æ²¡æœ‰é‡‘é’±è¦æ±‚
 	if money > 0 then
 		local jz, jb = LuaFnCostMoneyWithPriority(sceneId, selfId, money)
 		if jz == -1 then
-			x311112_NotifyFailTips(sceneId, selfId, "¿Û³ı½ğÇ®Ê§°Ü£¡")
+			x311112_NotifyFailTips(sceneId, selfId, "æ‰£é™¤é‡‘é’±å¤±è´¥ï¼")
 			return
 		end
 	end
 	
 	local needBind = 0
-	--¿Û³ıÎïÆ·
+	--æ‰£é™¤ç‰©å“
 	for i = 1, 5 do
 		if LuaFnGetItemBindStatus( sceneId, selfId, itemindex[i] ) == 1 then
 			needBind = 1
 		end
 		--LuaFnItemBind( sceneId, selfId, itemindex[i] )
 		if LuaFnEraseItem(sceneId, selfId, itemindex[i]) ~= 1 then
-			x311112_NotifyFailTips(sceneId, selfId, "¿Û³ıÎïÆ·Ê§°Ü£¡")
+			x311112_NotifyFailTips(sceneId, selfId, "æ‰£é™¤ç‰©å“å¤±è´¥ï¼")
 			return
 		end
 	end
 	
-	--¸øÎïÆ·
+	--ç»™ç‰©å“
 	local BagIndex = TryRecieveItem( sceneId, selfId, afteritemID, QUALITY_MUST_BE_CHANGE )
 	if BagIndex ~= -1 then
 		if needBind == 1 then
 			LuaFnItemBind( sceneId, selfId, BagIndex )
 		end
-		x311112_NotifyFailTips(sceneId, selfId, "ºÏ³É³É¹¦£¡")
+		x311112_NotifyFailTips(sceneId, selfId, "åˆæˆæˆåŠŸï¼")
 		AuditPetSkillLevelUpAndCompound(sceneId, selfId, 2, afteritemID)
 		LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, 49, 0)
-		LuaFnSendAbilitySuccessMsg( sceneId, selfId, -1, -1, afteritemID )		-- ÌáÊ¾Éú³ÉÎï
+		LuaFnSendAbilitySuccessMsg( sceneId, selfId, -1, -1, afteritemID )		-- æç¤ºç”Ÿæˆç‰©
 	end
 	
 end
 
 --**********************************
--- ÆÁÄ»ÖĞ¼äĞÅÏ¢ÌáÊ¾
+-- å±å¹•ä¸­é—´ä¿¡æ¯æç¤º
 --**********************************
 function x311112_NotifyFailTips( sceneId, selfId, Tip )
 	BeginEvent( sceneId )

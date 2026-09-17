@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" ?>
+<?xml version="1.0" ?>
 <GUILayout>
     <Window Type="TLBB_MainFrame2" Name="TextEditor_Frame">
         <Property Name="UnifiedSize" Value="{{0,162},{0.0,120}}" />

@@ -10,7 +10,7 @@ local g_nCurStallIndex = -1;
 local g_StallNum = 0;
 local g_bCurStallOpen = 0;
 
---±êÖ¾µ±Ç°ÊÇÕäÊŞ½çÃæ»¹ÊÇÎïÆ·½çÃæ
+--æ ‡å¿—å½“å‰æ˜¯çå…½ç•Œé¢è¿˜æ˜¯ç‰©å“ç•Œé¢
 local STALL_NONE = 0
 local STALL_ITEM = 1;
 local STALL_PET  = 2;
@@ -20,7 +20,7 @@ local g_SaleOuting = 0;
  
 local g_PetIndex  = {};
 
---±êÖ¾×Ô¼ºÉí·İ£¨µêÖ÷»¹ÊÇ»ï¼Æ£©
+--æ ‡å¿—è‡ªå·±èº«ä»½ï¼ˆåº—ä¸»è¿˜æ˜¯ä¼™è®¡ï¼‰
 g_SelfPlace  = "";
 
 local objCared = -1;
@@ -97,10 +97,10 @@ function PS_ShopMag_OnEvent(event)
 		PS_ShopMag_FriendID:SetText( "" );
 
 
-		--²éÑ¯ÊÇ²»ÊÇ´¦ÓÚÅÌ³ö×´Ì¬
+		--æŸ¥è¯¢æ˜¯ä¸æ˜¯å¤„äºç›˜å‡ºçŠ¶æ€
 		g_SaleOuting = PlayerShop:IsSaleOut("self");
 
-		--ÇĞ»»ÊÇÕäÊŞ»¹ÊÇÎïÆ·
+		--åˆ‡æ¢æ˜¯çå…½è¿˜æ˜¯ç‰©å“
 		if( tonumber(arg1) == 1 ) then
 			g_CurStallObj = STALL_ITEM;
 			PS_ShopMag_PetList:Hide();
@@ -120,34 +120,34 @@ function PS_ShopMag_OnEvent(event)
 		
 		PS_ShopMag_UpdateFrame();
 		
-	--¸üÃûÉÌµê
+	--æ›´åå•†åº—
 	elseif(event == "PS_SHOP_RENAME")      then
-		--µêÃû
+		--åº—å
 		local szShopName = PS_ShopMag_MerchantName:GetText();
 		PS_ShopMag_MerchantName:SetText(szShopName);
 		PS_ShopMag_PageHeader:SetText("#gFF0FA0"..szShopName);
 		
 		
-	--¸üĞÂÉÌµê
+	--æ›´æ–°å•†åº—
 	elseif(event == "PS_UPDATE_MY_SHOP")      then
 		if(this:IsVisible() == false)  then
 			return;
 		end
 		
-		--²éÑ¯ÊÇ²»ÊÇ´¦ÓÚÅÌ³ö×´Ì¬
+		--æŸ¥è¯¢æ˜¯ä¸æ˜¯å¤„äºç›˜å‡ºçŠ¶æ€
 		g_SaleOuting = PlayerShop:IsSaleOut("self");
 		PlayerShop:ClearSelectPos("self");
 		g_StallNum = PlayerShop:GetStallNum("self");
 		PS_ShopMag_UpdateFrame();
 		
 	elseif(event == "PS_SELF_ITEM_CHANGED")   then
-		--²éÑ¯ÊÇ²»ÊÇ´¦ÓÚÅÌ³ö×´Ì¬
+		--æŸ¥è¯¢æ˜¯ä¸æ˜¯å¤„äºç›˜å‡ºçŠ¶æ€
 		g_SaleOuting = PlayerShop:IsSaleOut("self");
 		PS_ShopMag_UpdateFrame();
 		
-	--Ñ¡ÖĞÎïÆ·µÄ²Ù×÷
+	--é€‰ä¸­ç‰©å“çš„æ“ä½œ
 	elseif(event == "PS_SELF_SELECT")   then
-		--²éÑ¯ÊÇ²»ÊÇ´¦ÓÚÅÌ³ö×´Ì¬
+		--æŸ¥è¯¢æ˜¯ä¸æ˜¯å¤„äºç›˜å‡ºçŠ¶æ€
 		g_SaleOuting = PlayerShop:IsSaleOut("self");
 		g_nCurSelectItem = PlayerShop:GetSelectIndex("self");
 		PS_ShopMag_UpdateFrame();
@@ -155,9 +155,9 @@ function PS_ShopMag_OnEvent(event)
 		local nOnSale = PlayerShop:IsSelectOnSale("item");
 	 	
 	 	if nOnSale == 0  then
-	 		PS_ShopMag_DownStall:SetText("ÉÏ¼Ü");
+	 		PS_ShopMag_DownStall:SetText("ä¸Šæ¶");
 	 	else
-	 		PS_ShopMag_DownStall:SetText("ÏÂ¼Ü");
+	 		PS_ShopMag_DownStall:SetText("ä¸‹æ¶");
 	 	end
 
 	elseif( event == "OBJECT_CARED_EVENT" )  then
@@ -165,26 +165,26 @@ function PS_ShopMag_OnEvent(event)
 			return;
 		end
 		
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ı£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æœå’ŒNPCçš„è·ç¦»å¤§äºä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if(arg1 == "distance" and tonumber(arg2)>MAX_OBJ_DISTANCE or arg1=="destroy") then
 			g_InitiativeClose = 1;
 			this:Hide();
 
-			--È¡Ïû¹ØĞÄ
+			--å–æ¶ˆå…³å¿ƒ
 			this:CareObject(objCared, 0, "PS_ShopMag");
 		end	
 		
 	elseif( event == "PS_CLOSE_ALL_SHOP" )    then
 		this:Hide();
 		
-		--È¡Ïû¹ØĞÄ
+		--å–æ¶ˆå…³å¿ƒ
 		this:CareObject(objCared, 0, "PS_ShopMag");
 		
 	elseif( event == "UI_COMMAND" )    then
 	    if( tonumber(arg0) == 19810222 ) then
     	    this:Hide();
 		
-		    --È¡Ïû¹ØĞÄ
+		    --å–æ¶ˆå…³å¿ƒ
 		    this:CareObject(objCared, 0, "PS_ShopMag");
     	end
 	 	
@@ -192,7 +192,7 @@ function PS_ShopMag_OnEvent(event)
 end
 
 --===============================================
--- Ñ¡ÖĞÕäÊŞµÄ²Ù×÷
+-- é€‰ä¸­çå…½çš„æ“ä½œ
 --===============================================
 function PS_ShopMag_PetList_Selected()
 	
@@ -206,16 +206,16 @@ function PS_ShopMag_PetList_Selected()
 	local nOnSale = PlayerShop:IsSelectOnSale("pet",g_PetIndex[nIndex]);
 
  	if nOnSale == 0  then
- 		PS_ShopMag_DownStall:SetText("ÉÏ¼Ü");
+ 		PS_ShopMag_DownStall:SetText("ä¸Šæ¶");
  	else
- 		PS_ShopMag_DownStall:SetText("ÏÂ¼Ü");
+ 		PS_ShopMag_DownStall:SetText("ä¸‹æ¶");
  	end
  	
- 	--Í¨ÖªC£«£«
+ 	--é€šçŸ¥Cï¼‹ï¼‹
 	PlayerShop:SetCurSelectPetIndex("self",g_nCurStallIndex-1,g_PetIndex[nIndex]);
 	
-	--Í¨Öª½çÃæË¢ĞÂ"Ãû³Æ"ºÍ"¼Û¸ñ"
-	-- ÏÔÊ¾ÏÖÔÚµÄÑ¡ÖĞµÄÎïÆ·»òÕßÊÇÕäÊŞµÄ¼Û¸ñ
+	--é€šçŸ¥ç•Œé¢åˆ·æ–°"åç§°"å’Œ"ä»·æ ¼"
+	-- æ˜¾ç¤ºç°åœ¨çš„é€‰ä¸­çš„ç‰©å“æˆ–è€…æ˜¯çå…½çš„ä»·æ ¼
 	if( g_CurStallObj == STALL_PET )then
 		local nMoney = PlayerShop:GetObjPrice("self","pet");
 		PS_ShopMag_PriceTag:SetProperty("MoneyNumber", tostring(nMoney));
@@ -237,50 +237,50 @@ function PS_ShopMag_UpdateFrame()
 		return;
 	end
 	
-	--µêÖ÷  --¸ÄÎª³¬Á´½Ó by wangdw
+	--åº—ä¸»  --æ”¹ä¸ºè¶…é“¾æ¥ by wangdw
 	local szName = PlayerShop:GetShopInfo("self","ownername");
-	PS_ShopMag_Shopkeeper_Name:SetChatString("#YµêÖ÷:#{_INFOUSR".. szName .. "}");
+	PS_ShopMag_Shopkeeper_Name:SetChatString("#Yåº—ä¸»:#{_INFOUSR".. szName .. "}");
 	
-	--µêÖ÷ID
+	--åº—ä¸»ID
 	local szID = PlayerShop:GetShopInfo("self","ownerid");
-	PS_ShopMag_Shopkeeper_ID:SetText("µêÖ÷ID: ".. szID);
+	PS_ShopMag_Shopkeeper_ID:SetText("åº—ä¸»ID: ".. szID);
 	
-	--µêÃû
+	--åº—å
 	local szShopName = PlayerShop:GetShopInfo("self","shopname");
 	PS_ShopMag_MerchantName:SetText(szShopName);
 	PS_ShopMag_PageHeader:SetText("#gFF0FA0"..szShopName);
 
-	--ÃèÊö
+	--æè¿°
 	local szShopDesc = PlayerShop:GetShopInfo("self","desc");
 	PS_ShopMag_Bewrite:SetText(szShopDesc);
 	
-	--µêÖ÷±¾½ğ
+	--åº—ä¸»æœ¬é‡‘
 	local nBaseMoney = PlayerShop:GetMoney("base","self");
 	PS_ShopMag_ShopCorpus:SetProperty("MoneyNumber", tostring(nBaseMoney));
 	
-	--Ó¯Àû×Ê½ğ
+	--ç›ˆåˆ©èµ„é‡‘
 	local nProfitMoney = PlayerShop:GetMoney("profit","self");
 	PS_ShopMag_ShopProfit:SetProperty("MoneyNumber", tostring(nProfitMoney));
 	
-	--ÉÌÒµÖ¸Êı
+	--å•†ä¸šæŒ‡æ•°
 	local szCommercialFactor = PlayerShop:GetCommercialFactor();
-	PS_ShopMag_CommerceExponential:SetText("ÉÌÒµÖ¸Êı:" .. szCommercialFactor);
+	PS_ShopMag_CommerceExponential:SetText("å•†ä¸šæŒ‡æ•°:" .. szCommercialFactor);
 	
-	--À©½¨ºÍËõ¼õ
+	--æ‰©å»ºå’Œç¼©å‡
 	PS_ShopMag_Curtail:Enable();
 	PS_ShopMag_Continuation:Enable();
 	if ( g_StallNum == 1 )   then
-		PS_ShopMag_Curtail:Disable();					--Ëõ¼õ
+		PS_ShopMag_Curtail:Disable();					--ç¼©å‡
 	end
 	
 	if(g_StallNum == 10)  then
-		PS_ShopMag_Continuation:Disable();			--À©½¨
+		PS_ShopMag_Continuation:Disable();			--æ‰©å»º
 	end
 	
-	--Í¨ÖªC£«£«
+	--é€šçŸ¥Cï¼‹ï¼‹
 	PlayerShop:SetCurSelectPage("self",g_nCurStallIndex-1);
 	
-	--Ë¢ĞÂ½çÃæÏà¹Ø¿Ø¼ş
+	--åˆ·æ–°ç•Œé¢ç›¸å…³æ§ä»¶
 	if( g_nCurStallIndex == 1 )  then
 		PS_ShopMag_Last:Disable();
 	else
@@ -307,20 +307,20 @@ function PS_ShopMag_UpdateFrame()
 		PS_ShopMag_UpdatePet();
 	end
 	
-	--ÌáÊ¾Õâ¸ö¹ñÌ¨µ±Ç°µÄ×´Ì¬ÊÇOpen»¹ÊÇClose
+	--æç¤ºè¿™ä¸ªæŸœå°å½“å‰çš„çŠ¶æ€æ˜¯Openè¿˜æ˜¯Close
 	g_bCurStallOpen = PlayerShop:IsOpenStall("self",g_nCurStallIndex -1);
 	
 	if (g_bCurStallOpen == 2)  then 
-		PS_ShopMag_Open:SetText("´òìÈ");
+		PS_ShopMag_Open:SetText("æ‰“çƒŠ");
 		PS_ShopMag_DownStall:Enable();
-		PS_ShopMag_Stall_State:SetText("µ±Ç°¹ñÌ¨×´Ì¬:#G¿ªÕÅ");
+		PS_ShopMag_Stall_State:SetText("å½“å‰æŸœå°çŠ¶æ€:#Gå¼€å¼ ");
 	else
-		PS_ShopMag_Open:SetText("¿ªÕÅ");
+		PS_ShopMag_Open:SetText("å¼€å¼ ");
 		PS_ShopMag_DownStall:Disable();
-		PS_ShopMag_Stall_State:SetText("µ±Ç°¹ñÌ¨×´Ì¬:#R´òìÈ");
+		PS_ShopMag_Stall_State:SetText("å½“å‰æŸœå°çŠ¶æ€:#Ræ‰“çƒŠ");
 	end
 	
-	-- ÏÔÊ¾ÏÖÔÚµÄÑ¡ÖĞµÄÎïÆ·»òÕßÊÇÕäÊŞµÄ¼Û¸ñ
+	-- æ˜¾ç¤ºç°åœ¨çš„é€‰ä¸­çš„ç‰©å“æˆ–è€…æ˜¯çå…½çš„ä»·æ ¼
 	if( g_CurStallObj == STALL_ITEM )then
 		local nMoney = PlayerShop:GetObjPrice("self","item");
 		PS_ShopMag_PriceTag:SetProperty("MoneyNumber", tostring(nMoney));
@@ -337,7 +337,7 @@ function PS_ShopMag_UpdateFrame()
 	
 	PS_ShopMag_ShowHide_Windows();
 
-	--ºÏ»ïÈË¹ÜÀí²¿·Ö
+	--åˆä¼™äººç®¡ç†éƒ¨åˆ†
 	PS_ShopMag_FriendList:ClearListBox();
 	local nNum = PlayerShop:GetFriendNum();
 	for i=0 ,nNum-1  do
@@ -350,68 +350,68 @@ function PS_ShopMag_UpdateFrame()
 end
 
 --===============================================
--- ¸üĞÂÎïÆ·,ÏÈShowËùÓĞµÄWindow£¬È»ºó¸ù¾İĞèÒªHideÏà¹Ø
+-- æ›´æ–°ç‰©å“,å…ˆShowæ‰€æœ‰çš„Windowï¼Œç„¶åæ ¹æ®éœ€è¦Hideç›¸å…³
 --===============================================
 function PS_ShopMag_ShowHide_Windows()
 
-	PS_ShopMag_NameAmend:Show();			-- ĞŞ¸ÄµêÃû
-	PS_ShopMag_BewriteAmend:Show();		-- ĞŞ¸ÄÉÌµêËµÃ÷
-	PS_ShopMag_SortAmend:Show();			-- ĞŞ¸Ä×ÓÀà
+	PS_ShopMag_NameAmend:Show();			-- ä¿®æ”¹åº—å
+	PS_ShopMag_BewriteAmend:Show();		-- ä¿®æ”¹å•†åº—è¯´æ˜
+	PS_ShopMag_SortAmend:Show();			-- ä¿®æ”¹å­ç±»
 
-	PS_ShopMag_DrawMoney:Show();			-- Ö§È¡
+	PS_ShopMag_DrawMoney:Show();			-- æ”¯å–
 	
-	PS_ShopMag_AccountBook:Show();		-- ÕË±¾
-	PS_ShopMag_Open:Show();						-- ¿ªÕÅ
-	PS_ShopMag_DownStall:Show();			-- ÉÏ(ÏÂ)¼Ü
-	PS_ShopMag_TakeBack:Show();				-- È¡»Ø
-	PS_ShopMag_DisposeOf:Show();			-- ÅÌ³ö
-	PS_ShopMag_Curtail:Show();				-- Ëõ¼õ
-	PS_ShopMag_Continuation:Show();		-- À©½¨
+	PS_ShopMag_AccountBook:Show();		-- è´¦æœ¬
+	PS_ShopMag_Open:Show();						-- å¼€å¼ 
+	PS_ShopMag_DownStall:Show();			-- ä¸Š(ä¸‹)æ¶
+	PS_ShopMag_TakeBack:Show();				-- å–å›
+	PS_ShopMag_DisposeOf:Show();			-- ç›˜å‡º
+	PS_ShopMag_Curtail:Show();				-- ç¼©å‡
+	PS_ShopMag_Continuation:Show();		-- æ‰©å»º
 	
-	PS_ShopMag_Add:Show();						-- Ìí¼ÓºÏ×÷»ï°é
-	PS_ShopMag_FriendID:Show();				-- Íæ¼ÒIDÊäÈë¿ò
-	PS_ShopMag_Del:Show();						-- É¾³ıºÏ×÷»ï°é
-	PS_ShopMag_ViewLog:Show();				-- ²é¿´»ï°é¼ÇÂ¼
+	PS_ShopMag_Add:Show();						-- æ·»åŠ åˆä½œä¼™ä¼´
+	PS_ShopMag_FriendID:Show();				-- ç©å®¶IDè¾“å…¥æ¡†
+	PS_ShopMag_Del:Show();						-- åˆ é™¤åˆä½œä¼™ä¼´
+	PS_ShopMag_ViewLog:Show();				-- æŸ¥çœ‹ä¼™ä¼´è®°å½•
 	if( g_CurStallObj == STALL_ITEM ) then
 			PS_ShopMag_OpenRecycleShop_Btn:Show();
 	else
 			PS_ShopMag_OpenRecycleShop_Btn:Hide();
 	end
-	--PS_ShopMag_OpenRecycleShop_Btn:Show();			--ÊÕ¹º
-	if( g_SaleOuting == 1) then --´¦ÓÚÅÌ³ö×´Ì¬
-		PS_ShopMag_DisposeOf:SetText("»Ø¹º");
-		--ÖÃ»Ò²»ÄÜÊ¹ÓÃµÄ¹¦ÄÜ						
-		PS_ShopMag_SortAmend:Hide();		-- ĞŞ¸Ä×ÓÀà
-		PS_ShopMag_Open:Hide();         -- ¿ªÕÅ
-		PS_ShopMag_DownStall:Hide();    -- ÉÏ(ÏÂ)¼Ü
-		PS_ShopMag_TakeBack:Hide();     -- È¡»Ø
-		PS_ShopMag_NameAmend:Hide();    -- ĞŞ¸ÄµêÃû
-		PS_ShopMag_BewriteAmend:Hide(); -- ĞŞ¸ÄÉÌµêËµÃ÷
-		PS_ShopMag_DrawMoney:Hide();    -- Ö§È¡
-		PS_ShopMag_AccountBook:Hide();	-- ÕË±¾
-		PS_ShopMag_Curtail:Hide();			-- Ëõ¼õ
-		PS_ShopMag_Continuation:Hide();	-- À©½¨
+	--PS_ShopMag_OpenRecycleShop_Btn:Show();			--æ”¶è´­
+	if( g_SaleOuting == 1) then --å¤„äºç›˜å‡ºçŠ¶æ€
+		PS_ShopMag_DisposeOf:SetText("å›è´­");
+		--ç½®ç°ä¸èƒ½ä½¿ç”¨çš„åŠŸèƒ½						
+		PS_ShopMag_SortAmend:Hide();		-- ä¿®æ”¹å­ç±»
+		PS_ShopMag_Open:Hide();         -- å¼€å¼ 
+		PS_ShopMag_DownStall:Hide();    -- ä¸Š(ä¸‹)æ¶
+		PS_ShopMag_TakeBack:Hide();     -- å–å›
+		PS_ShopMag_NameAmend:Hide();    -- ä¿®æ”¹åº—å
+		PS_ShopMag_BewriteAmend:Hide(); -- ä¿®æ”¹å•†åº—è¯´æ˜
+		PS_ShopMag_DrawMoney:Hide();    -- æ”¯å–
+		PS_ShopMag_AccountBook:Hide();	-- è´¦æœ¬
+		PS_ShopMag_Curtail:Hide();			-- ç¼©å‡
+		PS_ShopMag_Continuation:Hide();	-- æ‰©å»º
 		
-		--µêÃû
+		--åº—å
 		local szShopName = PlayerShop:GetShopInfo("self","shopname");
-		szShopName = szShopName .. "(ÅÌ³öÖĞ)"
+		szShopName = szShopName .. "(ç›˜å‡ºä¸­)"
 		PS_ShopMag_PageHeader:SetText("#gFF0FA0"..szShopName);
 		
-		--ÎïÆ·½«²»ÄÜÍÏ¶¯
+		--ç‰©å“å°†ä¸èƒ½æ‹–åŠ¨
 		for i=1 , 20   do
 			PS_BUTTON[i]:SetProperty("DraggingEnabled", "False");
 		end
 		
-		PS_ShopMag_OpenRecycleShop_Btn:Hide();	--ÊÕ¹º
+		PS_ShopMag_OpenRecycleShop_Btn:Hide();	--æ”¶è´­
 	else
-		PS_ShopMag_DisposeOf:SetText("ÅÌ³ö");
-		--»Ø¸´ÎïÆ·µÄÍÏ¶¯
+		PS_ShopMag_DisposeOf:SetText("ç›˜å‡º");
+		--å›å¤ç‰©å“çš„æ‹–åŠ¨
 		for i=1 , 20   do
 			PS_BUTTON[i]:SetProperty("DraggingEnabled", "True");
 		end
 	end
 
-	-- »ñµÃ×Ô¼ºµÄÉí·İ
+	-- è·å¾—è‡ªå·±çš„èº«ä»½
 	g_SelfPlace = PlayerShop:GetSelfPlace();
 	if(g_SelfPlace ~= "boss")   then
 		PS_ShopMag_NameAmend:Hide();
@@ -427,29 +427,29 @@ function PS_ShopMag_ShowHide_Windows()
 	end
 
 end
---ÊÕ¹º°´Å¥
+--æ”¶è´­æŒ‰é’®
 function PS_ShopMag_OpenRecycleShop_Click()
 	local SelfPlace = PlayerShop:GetSelfPlace();
 	PlayerShop:OpenRecycleShopDLG(SelfPlace);
 end
 
 --===============================================
--- ¸üĞÂÎïÆ·
+-- æ›´æ–°ç‰©å“
 --===============================================
 function PS_ShopMag_UpdateItem()
 
-	-- ¸üĞÂ×ÓÀàÁĞ±í
+	-- æ›´æ–°å­ç±»åˆ—è¡¨
 	PS_ShopMag_SelectSort:ResetList();
-	PS_ShopMag_SelectSort:ComboBoxAddItem("ÎïÆ·µê",0);
-	PS_ShopMag_SelectSort:ComboBoxAddItem("±¦Ê¯µê",1);
-	PS_ShopMag_SelectSort:ComboBoxAddItem("ÎäÆ÷µê",2);
-	PS_ShopMag_SelectSort:ComboBoxAddItem("»¤¼×µê",3);
-	PS_ShopMag_SelectSort:ComboBoxAddItem("²ÄÁÏµê",4);
+	PS_ShopMag_SelectSort:ComboBoxAddItem("ç‰©å“åº—",0);
+	PS_ShopMag_SelectSort:ComboBoxAddItem("å®çŸ³åº—",1);
+	PS_ShopMag_SelectSort:ComboBoxAddItem("æ­¦å™¨åº—",2);
+	PS_ShopMag_SelectSort:ComboBoxAddItem("æŠ¤ç”²åº—",3);
+	PS_ShopMag_SelectSort:ComboBoxAddItem("ææ–™åº—",4);
 
-	--ÉÌµê×ÓÀà
+	--å•†åº—å­ç±»
 	local nShopSubType = PlayerShop:GetCurShopType("self");
 	PS_ShopMag_SelectSort:SetCurrentSelect(nShopSubType - 1);
-	-- ×¢Òâµ±Ç°»æÖÆµÄÊÇµÚg_nCurStallIndex¸ö¹ñÌ¨ÉÏµÄÎïÆ·
+	-- æ³¨æ„å½“å‰ç»˜åˆ¶çš„æ˜¯ç¬¬g_nCurStallIndexä¸ªæŸœå°ä¸Šçš„ç‰©å“
 	g_nCurSelectItem = PlayerShop:GetSelectIndex("self");
 	
 	for i=1, PS_BUTTON_NUM    do
@@ -470,15 +470,15 @@ function PS_ShopMag_UpdateItem()
 end
 
 --===============================================
--- ¸üĞÂÕäÊŞÁĞ±í
+-- æ›´æ–°çå…½åˆ—è¡¨
 --===============================================
 function PS_ShopMag_UpdatePet()
 
-	-- ¸üĞÂ×ÓÀàÁĞ±í
+	-- æ›´æ–°å­ç±»åˆ—è¡¨
 	PS_ShopMag_SelectSort:ResetList();
-	PS_ShopMag_SelectSort:ComboBoxAddItem("ÕäÊŞµê",0);
+	PS_ShopMag_SelectSort:ComboBoxAddItem("çå…½åº—",0);
 
-	--ÉÌµê×ÓÀà
+	--å•†åº—å­ç±»
 	local nShopSubType = PlayerShop:GetCurShopType("self");
 	PS_ShopMag_SelectSort:SetCurrentSelect(nShopSubType - 6);
 	
@@ -489,7 +489,7 @@ function PS_ShopMag_UpdatePet()
 		local szPetName,bOnSale,szType = PlayerShop:EnumPet("self",g_nCurStallIndex -1, i-1);
 		if (szPetName ~= "")   then
 			if(bOnSale ~= 0)  then
-				-- ºìÉ«±íÊ¾ÏÖÔÚµÄÎïÆ·ÊÇ´¦ÓÚÉÏ¼ÜµÄ×´Ì¬
+				-- çº¢è‰²è¡¨ç¤ºç°åœ¨çš„ç‰©å“æ˜¯å¤„äºä¸Šæ¶çš„çŠ¶æ€
 				szPetName = "#c808080" .. szPetName;
 			end
 			PS_ShopMag_PetList:AddItem(szPetName .. "#cffff00 (" .. szType .. ")", PetInListIndex);
@@ -501,18 +501,18 @@ function PS_ShopMag_UpdatePet()
 end
 
 --===============================================
--- È¡»Ø
+-- å–å›
 --===============================================
 function PS_ShopMag_Retake_Click()
 	
 	if( g_CurStallObj == STALL_ITEM )    then
 		PlayerShop:RetackItem("item");
 	else
-		--¼ì²âÊÇ²»ÊÇÓĞÕäÊŞ±»Ñ¡ÖĞ
+		--æ£€æµ‹æ˜¯ä¸æ˜¯æœ‰çå…½è¢«é€‰ä¸­
 		local nIndex = PS_ShopMag_PetList:GetFirstSelectItem();
 		
 		if(nIndex == -1)  then
-			PushDebugMessage("ÇëÏÈÑ¡ÖĞÒ»¸öÕäÊŞ¡£")
+			PushDebugMessage("è¯·å…ˆé€‰ä¸­ä¸€ä¸ªçå…½ã€‚")
 			return;
 		end
 		
@@ -521,12 +521,12 @@ function PS_ShopMag_Retake_Click()
 end
 
 --===============================================
--- ÉÏ¼Ü(ÏÂ¼Ü)
+-- ä¸Šæ¶(ä¸‹æ¶)
 --===============================================
 function PS_ShopMag_UpDownStall_Click()
 
 	if( g_CurStallObj == STALL_ITEM )     then
-		if(PS_ShopMag_DownStall:GetText() == "ÉÏ¼Ü")  then
+		if(PS_ShopMag_DownStall:GetText() == "ä¸Šæ¶")  then
 			PlayerShop:InputMoney("ps_upitem");
 		else
 			PlayerShop:DownSale("item");
@@ -534,14 +534,14 @@ function PS_ShopMag_UpDownStall_Click()
 		
 	elseif( g_CurStallObj == STALL_PET )  then
 		
-		--¼ì²âÊÇ²»ÊÇÓĞÕäÊŞ±»Ñ¡ÖĞ
+		--æ£€æµ‹æ˜¯ä¸æ˜¯æœ‰çå…½è¢«é€‰ä¸­
 		local nIndex = PS_ShopMag_PetList:GetFirstSelectItem();
 		
 		if(nIndex == -1)  then
 			return;
 		end
 		
-		if(PS_ShopMag_DownStall:GetText() == "ÉÏ¼Ü")  then
+		if(PS_ShopMag_DownStall:GetText() == "ä¸Šæ¶")  then
 			PlayerShop:InputMoney("ps_uppet");
 		else
 			PlayerShop:DownSale("pet");
@@ -551,7 +551,7 @@ function PS_ShopMag_UpDownStall_Click()
 end
 
 --===============================================
--- ÉÏÒ»¼ä
+-- ä¸Šä¸€é—´
 --===============================================
 function PS_ShopMag_Last_Click()
 	if(g_nCurStallIndex == 1) then
@@ -560,7 +560,7 @@ function PS_ShopMag_Last_Click()
 	
 	g_nCurStallIndex = g_nCurStallIndex - 1;
 	
-	--Ïò·şÎñÆ÷ÇëÇóÊı¾İ
+	--å‘æœåŠ¡å™¨è¯·æ±‚æ•°æ®
 	PS_ShopMag_Last:Disable();
 	PS_ShopMag_Next:Disable();
 	local i;
@@ -573,7 +573,7 @@ function PS_ShopMag_Last_Click()
 end
 
 --===============================================
--- ÏÂÒ»¼ä
+-- ä¸‹ä¸€é—´
 --===============================================
 function PS_ShopMag_Next_Click()
 	if(g_nCurStallIndex == g_StallNum) then
@@ -582,7 +582,7 @@ function PS_ShopMag_Next_Click()
 	
 	g_nCurStallIndex = g_nCurStallIndex + 1;
 	
-	--Ïò·şÎñÆ÷ÇëÇóÊı¾İ
+	--å‘æœåŠ¡å™¨è¯·æ±‚æ•°æ®
 	PS_ShopMag_Last:Disable();
 	PS_ShopMag_Next:Disable();
 	local i;
@@ -599,7 +599,7 @@ end
 function PS_ShopMag_Page_Click(nIndex)
 	g_nCurStallIndex = nIndex;
 
-	--Ïò·şÎñÆ÷ÇëÇóÊı¾İ
+	--å‘æœåŠ¡å™¨è¯·æ±‚æ•°æ®
 	PS_ShopMag_Last:Disable();
 	PS_ShopMag_Next:Disable();
 	local i;
@@ -611,28 +611,28 @@ function PS_ShopMag_Page_Click(nIndex)
 end
 
 --===============================================
--- ³åÈë±¾½ğ
+-- å†²å…¥æœ¬é‡‘
 --===============================================
 function PS_ShopMag_ImmitCorpus_Click()
 	PlayerShop:InputMoney("immitbase");
 end
 
 --===============================================
--- ³åÈë
+-- å†²å…¥
 --===============================================
 function PS_ShopMag_Immit_Click()
 	PlayerShop:InputMoney("immit");
 end
 
 --===============================================
--- Ö§È¡
+-- æ”¯å–
 --===============================================
 function PS_ShopMag_DrawMoney_Click()
 	PlayerShop:InputMoney("draw");
 end
 
 --===============================================
--- ¿ªÕÅ(´òìÈ)           "PS_ShopMag_Open"
+-- å¼€å¼ (æ‰“çƒŠ)           "PS_ShopMag_Open"
 --===============================================
 function PS_ShopMag_OpenCloseStall_Click()
 	if(g_nCurStallIndex ~= -1)  then
@@ -646,7 +646,7 @@ function PS_ShopMag_OpenCloseStall_Click()
 end
 
 --===============================================
--- ĞŞ¸Ä¹ã¸æÓïÑÔ
+-- ä¿®æ”¹å¹¿å‘Šè¯­è¨€
 --===============================================
 function PS_ShopMag_ModifyShopAD()
 
@@ -656,7 +656,7 @@ function PS_ShopMag_ModifyShopAD()
 end
 
 --===============================================
--- ĞŞ¸ÄÉÌµêÃû³Æ
+-- ä¿®æ”¹å•†åº—åç§°
 --===============================================
 function PS_ShopMag_ModifyShopName()
 
@@ -666,7 +666,7 @@ function PS_ShopMag_ModifyShopName()
 end
 
 --===============================================
--- ÓÒ¼üÑ¡ÖĞÕäÊŞ£¨²é¿´ÕäÊŞ£©
+-- å³é”®é€‰ä¸­çå…½ï¼ˆæŸ¥çœ‹çå…½ï¼‰
 --===============================================
 function PS_ShopMag_PetList_RClick()
 	local nIndex = PS_ShopMag_PetList:GetFirstSelectItem();
@@ -679,7 +679,7 @@ function PS_ShopMag_PetList_RClick()
 end
 
 --===============================================
--- ÅÌ³ö(ÅÌ»Ø)
+-- ç›˜å‡º(ç›˜å›)
 --===============================================
 function PS_ShopMag_DisposeOf_Click()
 	
@@ -691,21 +691,21 @@ function PS_ShopMag_DisposeOf_Click()
 end
 
 --===============================================
--- ÊÇ·ñ´¦ÓÚÅÌ³ö×´Ì¬µÄ½çÃæ¸üĞÂ£¬1=ÅÌ³ö×´Ì¬£¬
+-- æ˜¯å¦å¤„äºç›˜å‡ºçŠ¶æ€çš„ç•Œé¢æ›´æ–°ï¼Œ1=ç›˜å‡ºçŠ¶æ€ï¼Œ
 --===============================================
 function PS_ShopMag_Close()
 	PlayerShop:CloseShop("self");
 end
 
 --===============================================
--- ´ò¿ª¹Ø±ÕÕË±¾
+-- æ‰“å¼€å…³é—­è´¦æœ¬
 --===============================================
 function PS_ShopMag_AccountBook_Clicked()
 	PlayerShop:OpenMessage("exchange",0);
 end
 
 --===============================================
--- É¾³ıºÏ×÷»ï°é
+-- åˆ é™¤åˆä½œä¼™ä¼´
 --===============================================
 function PS_ShopMag_Del_Click()
 
@@ -719,35 +719,35 @@ function PS_ShopMag_Del_Click()
 end
 
 --===============================================
--- ²é¿´»ï°é¼ÇÂ¼
+-- æŸ¥çœ‹ä¼™ä¼´è®°å½•
 --===============================================
 function PS_ShopMag_ViewLog_Click()
 	PlayerShop:OpenMessage("manager",0);
 end
 
 --===============================================
--- Ìí¼ÓºÏ×÷»ï°é
+-- æ·»åŠ åˆä½œä¼™ä¼´
 --===============================================
 function PS_ShopMag_Add_Click()
 	PlayerShop:DealFriend("add", PS_ShopMag_FriendID:GetText());
 end
 
 --===============================================
--- Ñ¡ÖĞºÏ»ïÈË
+-- é€‰ä¸­åˆä¼™äºº
 --===============================================
 function PS_ShopMag_FriendList_Selected()
 	
 end
 
 --===============================================
--- Ëõ¼õ
+-- ç¼©å‡
 --===============================================
 function PS_ShopMag_Curtail_Click()
 	PlayerShop:ChangeShopNum("del");
 end
 
 --===============================================
--- À©½¨
+-- æ‰©å»º
 --===============================================
 function PS_ShopMag_Continuation_Click()
 	PlayerShop:ChangeShopNum("add");
@@ -761,29 +761,29 @@ function PS_ShopMag_SelectSort_Selected()
 	end
 	
 	if(g_lastIndex ~= nIndex)then
-		--¹Ø±Õµ¯³ö¿ò
+		--å…³é—­å¼¹å‡ºæ¡†
 		PlayerShop:CloseChangeTypeMsgBox();
 	end
 end
 --===============================================
--- ĞŞ¸ÄÉÌµêÀàĞÍ
+-- ä¿®æ”¹å•†åº—ç±»å‹
 --===============================================
 function PS_ShopMag_SortAmend_Click()
 	local szName, nIndex = PS_ShopMag_SelectSort:GetCurrentSelect();
 	if(nIndex == -1)then
-		PushDebugMessage("ÄúÑ¡ÔñÁËÒ»¸öÎŞĞ§Öµ£¬ÇëÖØĞÂÑ¡Ôñ");
+		PushDebugMessage("æ‚¨é€‰æ‹©äº†ä¸€ä¸ªæ— æ•ˆå€¼ï¼Œè¯·é‡æ–°é€‰æ‹©");
 		return;
 	end
 	if( g_CurStallObj == STALL_ITEM )     then
 		local nShopSubType = PlayerShop:GetCurShopType("self");		
 		if(nIndex+1 == nShopSubType)then
-			PushDebugMessage("ÇëÑ¡ÔñÒ»¸ö²»Í¬µÄÉÌµêÀàĞÍÔÙĞŞ¸Ä!");
+			PushDebugMessage("è¯·é€‰æ‹©ä¸€ä¸ªä¸åŒçš„å•†åº—ç±»å‹å†ä¿®æ”¹!");
 			return;
 		end
 		g_lastIndex = nIndex;
 		PlayerShop:ModifySubType("ps_type", nIndex+1);
 	else
-		PushDebugMessage("ÇëÑ¡ÔñÒ»¸ö²»Í¬µÄÉÌµêÀàĞÍÔÙĞŞ¸Ä!");
+		PushDebugMessage("è¯·é€‰æ‹©ä¸€ä¸ªä¸åŒçš„å•†åº—ç±»å‹å†ä¿®æ”¹!");
 		return;		
 	end	
 end
@@ -792,7 +792,7 @@ end
 -- OnHiden
 --===============================================
 function PS_ShopMag_Frame_OnHiden()
-	-- Í¨ÖªÏà¹ØµÄ½çÃæ¹Ø±Õ£¬(PetList,PS_Input,)
+	-- é€šçŸ¥ç›¸å…³çš„ç•Œé¢å…³é—­ï¼Œ(PetList,PS_Input,)
 	PlayerShop:CloseShopMag();
 end
 

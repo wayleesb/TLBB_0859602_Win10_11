@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" ?>
+<?xml version="1.0" ?>
 <GUILayout>
 	<Window Type="TLBB_MainFrame5" Name="XingYun_Frame">
 		<Property Name="UnifiedPosition" Value="{{0.000000,210.000000},{0.150000,56.649998}" />

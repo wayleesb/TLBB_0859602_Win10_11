@@ -47,7 +47,7 @@ function SelectHairColor_OnEvent(event)
 			objCared = DataPool : GetNPCIDByServerID(xx);
 			AxTrace(0,1,"xx="..xx .. " objCared="..objCared)
 			if objCared == -1 then
-				PushDebugMessage("server´«¹ıÀ´µÄÊı¾İÓĞÎÊÌâ");
+				PushDebugMessage("serverä¼ è¿‡æ¥çš„æ•°æ®æœ‰é—®é¢˜");
 				return;
 			end
 
@@ -74,10 +74,10 @@ function SelectHairColor_OnEvent(event)
 			return;
 		end
 		
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ı£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æœå’ŒNPCçš„è·ç¦»å¤§äºä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if(arg1 == "distance" and tonumber(arg2)>MAX_OBJ_DISTANCE or arg1=="destroy") then
 
-			--È¡Ïû¹ØĞÄ
+			--å–æ¶ˆå…³å¿ƒ
 			SelectHairColor_Cancel_Clicked();
 		end			
 	end
@@ -96,11 +96,11 @@ function SelectHairColor_OnShown()
 	g_Original_Red,g_Original_Green,g_Original_Blue,g_Original_Alpha = DataPool : Get_MyHairColor();
 	
 	if (name == nil) then 
-		PushDebugMessage("ÎïÆ·ºÅ´íÎó£¡×ÊÔ´µÄÎÊÌâ£¬Ö¸¸ø²ß»®¡£");
+		PushDebugMessage("ç‰©å“å·é”™è¯¯ï¼èµ„æºçš„é—®é¢˜ï¼ŒæŒ‡ç»™ç­–åˆ’ã€‚");
 		return;
 	end
 	
-	SelectHairColor_WarningText : SetText("ĞèÒª"..name .. ": 1#rĞèÒª½ğÇ®: #{_EXCHG"..CostMoney.."}#rÇëÍ¨¹ıÍÏ×§»òÕßÊäÈëÊıÖµµÄ·½Ê½Ñ¡ÔñÍ··¢µÄÑÕÉ«£¬ÑÕÉ«µÄÁÁ¶È²»ÄÜ³¬¹ı126£¬Èç¹ûËùÑ¡ÑÕÉ«ÁÁ¶È³¬¹ı126£¬ÁÁ¶È½«»á±»½µµÍ£¬Ã¿´ÎÏûºÄÒ»¸öÈ¾·¢¼Á£¬Ñ¡ÔñºÃÒÔºóÇëµã»÷¡°È·¶¨¡±°´Å¥¡£");
+	SelectHairColor_WarningText : SetText("éœ€è¦"..name .. ": 1#réœ€è¦é‡‘é’±: #{_EXCHG"..CostMoney.."}#rè¯·é€šè¿‡æ‹–æ‹½æˆ–è€…è¾“å…¥æ•°å€¼çš„æ–¹å¼é€‰æ‹©å¤´å‘çš„é¢œè‰²ï¼Œé¢œè‰²çš„äº®åº¦ä¸èƒ½è¶…è¿‡126ï¼Œå¦‚æœæ‰€é€‰é¢œè‰²äº®åº¦è¶…è¿‡126ï¼Œäº®åº¦å°†ä¼šè¢«é™ä½ï¼Œæ¯æ¬¡æ¶ˆè€—ä¸€ä¸ªæŸ“å‘å‰‚ï¼Œé€‰æ‹©å¥½ä»¥åè¯·ç‚¹å‡»â€œç¡®å®šâ€æŒ‰é’®ã€‚");
 
 	nRed = g_Original_Red;
 	nGreen = g_Original_Green;
@@ -141,50 +141,50 @@ function SelectHairColor_Update()
 end
 
 --==================================
---È·ÈÏ
+--ç¡®è®¤
 --==================================
 function SelectHairColor_OK_Clicked()
 
 	local color_r,color_g,color_b,color_a,Ogre_Color = DataPool:Change_RectifyColor(nRed,nGreen,nBlue,nAlpha);
 	
-	-- ¼ì²éµÀ¾ß
+	-- æ£€æŸ¥é“å…·
 	if (DataPool:GetPlayerMission_ItemCountNow(ItemID[1]) < 1) and (DataPool:GetPlayerMission_ItemCountNow(ItemID[2]) < 1) then -- zchw
-		PushDebugMessage("Ã»ÓĞ×ã¹»µÄÈ¾·¢¼Á")
+		PushDebugMessage("æ²¡æœ‰è¶³å¤Ÿçš„æŸ“å‘å‰‚")
 		SelectHairColor_Cancel_Clicked();
 		return;
 	end
 
-	-- µÃµ½Íæ¼ÒµÄ½ğ±ÒºÍ½»×ÓÊıÄ¿
+	-- å¾—åˆ°ç©å®¶çš„é‡‘å¸å’Œäº¤å­æ•°ç›®
 	local nMoney = Player:GetData("MONEY")
 	local nMoneyJZ = Player:GetData("MONEY_JZ")
 	
 	if (nMoney + nMoneyJZ) < 50000 then
-		PushDebugMessage("½ğÇ®²»×ã");
+		PushDebugMessage("é‡‘é’±ä¸è¶³");
 		SelectHairColor_Cancel_Clicked();
 		return
 	end
 
-	-- µÃµ½Ñ¡Ôñ·¢É«µÄÁÁ¶È
+	-- å¾—åˆ°é€‰æ‹©å‘è‰²çš„äº®åº¦
 	local Luminance = SelectHairColor_Brightness_NumericalValue:GetText()
 	if(Luminance ~= nil and tonumber(Luminance) > 126 ) then
-		PushDebugMessage("·¢É«ÁÁ¶È²»ÄÜ´óÓÚ126")
+		PushDebugMessage("å‘è‰²äº®åº¦ä¸èƒ½å¤§äº126")
 		
-		-- µ÷ÊÔĞÅÏ¢
+		-- è°ƒè¯•ä¿¡æ¯
 		--PushDebugMessage ("nRed = "..nRed..", nGreen = "..nGreen..", nBlue = "..nBlue)
 		--PushDebugMessage ("color_r = "..color_r..", color_g = "..color_g..", color_b = "..color_b)
 		return;   	
 	end
 
-	-- µ÷ÊÔĞÅÏ¢
+	-- è°ƒè¯•ä¿¡æ¯
 	--PushDebugMessage ("nRed = "..nRed..", nGreen = "..nGreen..", nBlue = "..nBlue)
 	--PushDebugMessage ("color_r = "..color_r..", color_g = "..color_g..", color_b = "..color_b)
 		
-	-- Èç¹ûÑ¡ÔñµÄ·¢É«ÁÁ¶È²»³¬¹ı126£¨´ËÊ±£¬(color_r,color_g,color_b) = (-1,-1,-1)£©
+	-- å¦‚æœé€‰æ‹©çš„å‘è‰²äº®åº¦ä¸è¶…è¿‡126ï¼ˆæ­¤æ—¶ï¼Œ(color_r,color_g,color_b) = (-1,-1,-1)ï¼‰
 	if( tonumber(color_r) < 0 ) then
 
-		-- Ã»ÓĞ¸ü¸Ä·¢É«
+		-- æ²¡æœ‰æ›´æ”¹å‘è‰²
 		if(nRed == g_Original_Red and nGreen == g_Original_Green and nBlue == g_Original_Blue) then
-			PushDebugMessage("ÇëÑ¡ÔñÒ»ÖÖĞÂ·¢É«¡£")
+			PushDebugMessage("è¯·é€‰æ‹©ä¸€ç§æ–°å‘è‰²ã€‚")
 			return;
 		end
 		
@@ -203,7 +203,7 @@ function SelectHairColor_OK_Clicked()
 		nBlue = color_b;
 		nAlpha = color_a;
 		SelectHairColor_Update();
-		PushDebugMessage("·¢É«ÁÁ¶È²»ÄÜ´óÓÚ126")
+		PushDebugMessage("å‘è‰²äº®åº¦ä¸èƒ½å¤§äº126")
 		
 	end
 	
@@ -216,15 +216,15 @@ end
 
 ----------------------------------------------------------------------------------
 --
--- Ğı×ªÈËÎïÍ·ÏñÄ£ĞÍ£¨Ïò×ó)
+-- æ—‹è½¬äººç‰©å¤´åƒæ¨¡å‹ï¼ˆå‘å·¦)
 --
 function Player_Hair_Color_Modle_TurnLeft(start)
 	local mouse_button = CEArg:GetValue("MouseButton");
 	if(mouse_button == "LeftButton") then
-		--Ïò×óĞı×ª¿ªÊ¼
+		--å‘å·¦æ—‹è½¬å¼€å§‹
 		if(start == 1) then
 			SelectHairColor_Model:RotateBegin(-0.3);
-		--Ïò×óĞı×ª½áÊø
+		--å‘å·¦æ—‹è½¬ç»“æŸ
 		else
 			SelectHairColor_Model:RotateEnd();
 		end
@@ -233,15 +233,15 @@ end
 
 ----------------------------------------------------------------------------------
 --
---Ğı×ªÈËÎïÍ·ÏñÄ£ĞÍ£¨ÏòÓÒ)
+--æ—‹è½¬äººç‰©å¤´åƒæ¨¡å‹ï¼ˆå‘å³)
 --
 function Player_Hair_Color_Modle_TurnRight(start)
 	local mouse_button = CEArg:GetValue("MouseButton");
 	if(mouse_button == "LeftButton") then
-		--ÏòÓÒĞı×ª¿ªÊ¼
+		--å‘å³æ—‹è½¬å¼€å§‹
 		if(start == 1) then
 			SelectHairColor_Model:RotateBegin(0.3);
-		--ÏòÓÒĞı×ª½áÊø
+		--å‘å³æ—‹è½¬ç»“æŸ
 		else
 			SelectHairColor_Model:RotateEnd();
 		end
@@ -450,9 +450,9 @@ end
 
 
 --=========================================================
---¿ªÊ¼¹ØĞÄNPC£¬
---ÔÚ¿ªÊ¼¹ØĞÄÖ®Ç°ĞèÒªÏÈÈ·¶¨Õâ¸ö½çÃæÊÇ²»ÊÇÒÑ¾­ÓĞ¡°¹ØĞÄ¡±µÄNPC£¬
---Èç¹ûÓĞµÄ»°£¬ÏÈÈ¡ÏûÒÑ¾­ÓĞµÄ¡°¹ØĞÄ¡±
+--å¼€å§‹å…³å¿ƒNPCï¼Œ
+--åœ¨å¼€å§‹å…³å¿ƒä¹‹å‰éœ€è¦å…ˆç¡®å®šè¿™ä¸ªç•Œé¢æ˜¯ä¸æ˜¯å·²ç»æœ‰â€œå…³å¿ƒâ€çš„NPCï¼Œ
+--å¦‚æœæœ‰çš„è¯ï¼Œå…ˆå–æ¶ˆå·²ç»æœ‰çš„â€œå…³å¿ƒâ€
 --=========================================================
 function BeginCareObject_SelectHairColor(objCaredId)
 
@@ -463,7 +463,7 @@ function BeginCareObject_SelectHairColor(objCaredId)
 end
 
 --=========================================================
---Í£Ö¹¶ÔÄ³NPCµÄ¹ØĞÄ
+--åœæ­¢å¯¹æŸNPCçš„å…³å¿ƒ
 --=========================================================
 function StopCareObject_SelectHairColor(objCaredId)
 	this:CareObject(objCaredId, 0, "SelectHairColor");

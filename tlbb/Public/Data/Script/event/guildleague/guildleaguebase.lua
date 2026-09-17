@@ -1,17 +1,17 @@
---帮会同盟基础功能
+--甯細鍚岀洘鍩虹鍔熻兘
 
 x650000_g_ScriptId = 650000;
 
 function x650000_OnDefaultEvent( sceneId, selfId, targetId )
 	local num = GetNumText()
 	if num == 1 then
-		--查看同盟列表
+		--鏌ョ湅鍚岀洘鍒楄〃
 		BeginUICommand(sceneId)
 			UICommand_AddInt(sceneId,targetId)
 		EndUICommand(sceneId)
 		DispatchUICommand(sceneId,selfId, 1206)
 	elseif num == 2 then
-		--创建同盟
+		--鍒涘缓鍚岀洘
 		if GetGuildPos(sceneId,selfId) ~= GUILD_POSITION_CHIEFTAIN then		
 			BeginEvent(sceneId)
 				AddText(sceneId,"#{TM_20080311_01}")
@@ -29,7 +29,7 @@ function x650000_OnDefaultEvent( sceneId, selfId, targetId )
 			DispatchUICommand(sceneId,selfId, 1207)
 		end
 	elseif num == 3 then
-		--查看同盟信息
+		--鏌ョ湅鍚岀洘淇℃伅
 		if LuaFnGetHumanGuildLeagueID( sceneId, selfId ) >= 0 then
 			BeginUICommand(sceneId)
 				UICommand_AddInt(sceneId,targetId)
@@ -50,8 +50,8 @@ function x650000_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 function x650000_OnEnumerate( sceneId, selfId, targetId )
-	AddNumText(sceneId, x650000_g_ScriptId, "查看同盟列表", 6, 1 )
-	AddNumText(sceneId, x650000_g_ScriptId, "创建同盟", 6, 2 )
-	AddNumText(sceneId, x650000_g_ScriptId, "查看本盟详细资讯", 6, 3 )
-	AddNumText(sceneId, x650000_g_ScriptId, "同盟介绍", 11, 4 )
+	AddNumText(sceneId, x650000_g_ScriptId, "鏌ョ湅鍚岀洘鍒楄〃", 6, 1 )
+	AddNumText(sceneId, x650000_g_ScriptId, "鍒涘缓鍚岀洘", 6, 2 )
+	AddNumText(sceneId, x650000_g_ScriptId, "鏌ョ湅鏈洘璇︾粏璧勮", 6, 3 )
+	AddNumText(sceneId, x650000_g_ScriptId, "鍚岀洘浠嬬粛", 11, 4 )
 end

@@ -1,18 +1,18 @@
---Ä¾ÍñÇå
+--æœ¨å©‰æ¸…
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x002010_g_scriptId = 002010
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x002010_g_eventList={200099,200100}
 --x002010_g_eventList={201402,201501,201812,201911}
 x002010_g_lifeeventList={713506,713565,713605}
 
 x002010_g_RSMissionId = 101
-x002010_g_ActivateMissionId = 8			-- ¼¤»îÌõ¼ş
-x002010_g_SongXinScriptId = 006668		-- ËÍĞÅ
-x002010_g_ShaGuaiScriptId = 006666		-- É±¹Ö
-x002010_g_XunWuScriptId = 006667		-- Ñ°Îï
+x002010_g_ActivateMissionId = 8			-- æ¿€æ´»æ¡ä»¶
+x002010_g_SongXinScriptId = 006668		-- é€ä¿¡
+x002010_g_ShaGuaiScriptId = 006666		-- æ€æ€ª
+x002010_g_XunWuScriptId = 006667		-- å¯»ç‰©
 
 x002010_g_RoundStorytelling = {
 		[0] = { misIndex = { 1038036 }, script = x002010_g_XunWuScriptId },
@@ -48,7 +48,7 @@ x002010_g_awardItems = {
 	[3] = { odds = 50, itemIdxs = { [30] = 10410020, [40] = 10410021, [50] = 10410022, [60] = 10410023, [70] = 10410024, [80] = 10410025, [90] = 10410026, [100] = 10410027 } },
 	[4] = { odds = 50, itemIdxs = { [30] = 10410028, [40] = 10410029, [50] = 10410030, [60] = 10410031, [70] = 10410032, [80] = 10410033, [90] = 10410034, [100] = 10410035 } }}
 
---Ğ¡°×ÍÃ¶ú¶äÊı¾İ±í....µÚ50»·Ê±ĞèÒª¸ÄËÍĞ¡°×ÍÃ¶ú¶ä....
+--å°ç™½å…”è€³æœµæ•°æ®è¡¨....ç¬¬50ç¯æ—¶éœ€è¦æ”¹é€å°ç™½å…”è€³æœµ....
 x002010_g_awardItemsNew = {
 
 	[1] = { odds = 50, itemIdxs = { [30] = 10410082, [40] = 10410083, [50] = 10410084, [60] = 10410085, [70] = 10410086, [80] = 10410087, [90] = 10410088, [100] = 10410089 } },
@@ -57,28 +57,28 @@ x002010_g_awardItemsNew = {
 }
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x002010_UpdateEventList( sceneId, selfId, targetId )
   local PlayerName = GetName( sceneId, selfId )
 	local PlayerSex = GetSex( sceneId, selfId )
 	if PlayerSex == 0 then
-		PlayerSex = "¹ÃÄï"
+		PlayerSex = "å§‘å¨˜"
 	else
-		PlayerSex = "ÉÙÏÀ"
+		PlayerSex = "å°‘ä¾ "
 	end
 
 	BeginEvent( sceneId )
-		AddText( sceneId, "  " .. PlayerName .. PlayerSex .. "£¬ÕæÏÛÄ½ÄãÕâÑùÌìÂíĞĞ¿ÕµÄ£¬ÎÒÔÚÕâ´óÀí³ÇÀïµÈ°¡µÈ°¡£¬ÒÑ¾­ĞÄ·³ÆøÔêÁË¡£" )
+		AddText( sceneId, "  " .. PlayerName .. PlayerSex .. "ï¼ŒçœŸç¾¡æ…•ä½ è¿™æ ·å¤©é©¬è¡Œç©ºçš„ï¼Œæˆ‘åœ¨è¿™å¤§ç†åŸé‡Œç­‰å•Šç­‰å•Šï¼Œå·²ç»å¿ƒçƒ¦æ°”èºäº†ã€‚" )
 
 		local missionIndex = GetScriptIDByMissionID( sceneId, selfId, x002010_g_RSMissionId )
 		if missionIndex ~= -1 then
 			local missionName = TGetMissionName( missionIndex )
-			if missionName ~= "Ä¾ÍñÇåÈÎÎñ" and IsMissionHaveDone( sceneId, selfId, x002010_g_ActivateMissionId ) > 0 then
-				AddNumText( sceneId, x002010_g_scriptId, "Ä¾ÍñÇåÈÎÎñ", 3, 1 )
+			if missionName ~= "æœ¨å©‰æ¸…ä»»åŠ¡" and IsMissionHaveDone( sceneId, selfId, x002010_g_ActivateMissionId ) > 0 then
+				AddNumText( sceneId, x002010_g_scriptId, "æœ¨å©‰æ¸…ä»»åŠ¡", 3, 1 )
 			end
 		elseif IsMissionHaveDone( sceneId, selfId, x002010_g_ActivateMissionId ) > 0 then
-			AddNumText( sceneId, x002010_g_scriptId, "Ä¾ÍñÇåÈÎÎñ", 3, 1 )
+			AddNumText( sceneId, x002010_g_scriptId, "æœ¨å©‰æ¸…ä»»åŠ¡", 3, 1 )
 		end
 
 		for _, eventId in x002010_g_eventList do
@@ -97,14 +97,14 @@ function x002010_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x002010_OnDefaultEvent( sceneId, selfId, targetId )
 	x002010_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x002010_OnEventRequest( sceneId, selfId, targetId, eventId )
 	for _, findId in x002010_g_eventList do
@@ -122,41 +122,41 @@ function x002010_OnEventRequest( sceneId, selfId, targetId, eventId )
 	end
 
 	local num = GetNumText()
-	if num == 1 then										-- Ä¾ÍñÇåÈÎÎñ
+	if num == 1 then										-- æœ¨å©‰æ¸…ä»»åŠ¡
 		if IsHaveMission( sceneId, selfId, x002010_g_RSMissionId ) > 0 then
-			x002010_NotifyFailBox( sceneId, selfId, targetId, "    Å¶£¬ÄãÒÑÓĞÆäËûÓ¢ĞÛµÄ¹ØÏµÈÎÎñ£¨¾çÇéÑ­»·ÈÎÎñ£©ÉĞÎ´Íê³É£¬ÇëÍê³ÉÖ®ºóÔÙÀ´ÕÒÎÒ°É¡£" )
+			x002010_NotifyFailBox( sceneId, selfId, targetId, "    å“¦ï¼Œä½ å·²æœ‰å…¶ä»–è‹±é›„çš„å…³ç³»ä»»åŠ¡ï¼ˆå‰§æƒ…å¾ªç¯ä»»åŠ¡ï¼‰å°šæœªå®Œæˆï¼Œè¯·å®Œæˆä¹‹åå†æ¥æ‰¾æˆ‘å§ã€‚" )
 			return
 		end
 		
-		-- ¼ì²âÊÇ·ñÂú×ãÈÎÎñ¼¤»îÌõ¼ş
+		-- æ£€æµ‹æ˜¯å¦æ»¡è¶³ä»»åŠ¡æ¿€æ´»æ¡ä»¶
 		if IsMissionHaveDone( sceneId, selfId, x002010_g_ActivateMissionId ) <= 0 then
 			return 0
 		end
 		
-		--¿´ÏÂ½ñÌìµÄÄ¾ÍëÇåÈÎÎñÊÇ²»ÊÇ×öÍê50´ÎÁË
+		--çœ‹ä¸‹ä»Šå¤©çš„æœ¨ç¢—æ¸…ä»»åŠ¡æ˜¯ä¸æ˜¯åšå®Œ50æ¬¡äº†
 		--begin modified by zhangguoxin 090208
 		local nDayCount = GetMissionData(sceneId, selfId, MD_JQXH_MUWANQING_LIMITI)
 		local nCount = 		floor(nDayCount/100000)
 		local nTime = 		mod(nDayCount,100000)
-		--local nDayTime = 	floor(nTime/100)	--ÉÏÒ»´Î½»ÈÎÎñµÄÊ±¼ä(ÌìÊı)
-		local nDayTime = 	nTime								--ÉÏÒ»´Î½»ÈÎÎñµÄÊ±¼ä(ÌìÊı)
+		--local nDayTime = 	floor(nTime/100)	--ä¸Šä¸€æ¬¡äº¤ä»»åŠ¡çš„æ—¶é—´(å¤©æ•°)
+		local nDayTime = 	nTime								--ä¸Šä¸€æ¬¡äº¤ä»»åŠ¡çš„æ—¶é—´(å¤©æ•°)
 		
-		--local CurTime = GetHourTime()				--µ±Ç°Ê±¼ä
-		local CurTime = GetDayTime()					--µ±Ç°Ê±¼ä
-		--local CurDaytime = floor(CurTime/100)	--µ±Ç°Ê±¼ä(Ìì)
-		local CurDaytime = CurTime							--µ±Ç°Ê±¼ä(Ìì)
+		--local CurTime = GetHourTime()				--å½“å‰æ—¶é—´
+		local CurTime = GetDayTime()					--å½“å‰æ—¶é—´
+		--local CurDaytime = floor(CurTime/100)	--å½“å‰æ—¶é—´(å¤©)
+		local CurDaytime = CurTime							--å½“å‰æ—¶é—´(å¤©)
 		--end modified by zhangguoxin 090208
 
-		if nDayTime == CurDaytime  then -- µ±Ìì
+		if nDayTime == CurDaytime  then -- å½“å¤©
 			if nCount >= 50  then
 				BeginEvent( sceneId )
-					AddText( sceneId, "  ½ñÌìÒÑ¾­Âé·³ÄãÌ«¶àµÄÊÂÇéÁË£¬ÊµÔÚÊÇ¹ıÒâ²»È¥£¬Ã÷ÌìÔÙÂé·³Äã°É£¡" )
+					AddText( sceneId, "  ä»Šå¤©å·²ç»éº»çƒ¦ä½ å¤ªå¤šçš„äº‹æƒ…äº†ï¼Œå®åœ¨æ˜¯è¿‡æ„ä¸å»ï¼Œæ˜å¤©å†éº»çƒ¦ä½ å§ï¼" )
 				EndEvent( sceneId )
 				DispatchEventList( sceneId, selfId, targetId )
 				return
 			end
 			
-		else		-- ĞÂµÄÒ»Ìì
+		else		-- æ–°çš„ä¸€å¤©
 			SetMissionData(sceneId, selfId, MD_JQXH_MUWANQING_LIMITI, 0)
 		end
 
@@ -164,7 +164,7 @@ function x002010_OnEventRequest( sceneId, selfId, targetId, eventId )
 		local relation = GetMissionData(sceneId, selfId, MD_RELATION_MUWANQING)
 		local playerlevel = GetLevel( sceneId, selfId )
 		
-		-- µÈ¼¶ÉÏÏŞ´¦Àí
+		-- ç­‰çº§ä¸Šé™å¤„ç†
 		if playerlevel >= 100 then
 			playerlevel = 90
 		end
@@ -236,7 +236,7 @@ function x002010_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x002010_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 	for _, findId in x002010_g_eventList do
@@ -252,10 +252,10 @@ function x002010_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x002010_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
-	--¾Ü¾øÖ®ºó£¬Òª·µ»ØNPCµÄÊÂ¼şÁĞ±í
+	--æ‹’ç»ä¹‹åï¼Œè¦è¿”å›NPCçš„äº‹ä»¶åˆ—è¡¨
 	for _, findId in x002010_g_eventList do
 		if missionScriptId == findId then
 			x002010_UpdateEventList( sceneId, selfId, targetId )
@@ -265,7 +265,7 @@ function x002010_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¼ÌĞø£¨ÒÑ¾­½ÓÁËÈÎÎñ£©
+--ç»§ç»­ï¼ˆå·²ç»æ¥äº†ä»»åŠ¡ï¼‰
 --**********************************
 function x002010_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 	for _, findId in x002010_g_eventList do
@@ -277,7 +277,7 @@ function x002010_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---Ìá½»ÒÑ×öÍêµÄÈÎÎñ
+--æäº¤å·²åšå®Œçš„ä»»åŠ¡
 --**********************************
 function x002010_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, selectRadioId )
 	for _, findId in x002010_g_eventList do
@@ -289,15 +289,15 @@ function x002010_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 end
 
 --**********************************
---ËÀÍöÊÂ¼ş
+--æ­»äº¡äº‹ä»¶
 --**********************************
 function x002010_OnDie( sceneId, selfId, killerId )
 end
 
 --**********************************
---Ñ­»·ÈÎÎñÌá½»µÄÊÂ¼ş
---²»È«£¬ÒªÓÃÊ±×¢Òâ
---ÏÖÖ»ÓĞÑ°Îï£¬É±¹Ö£¬ËÍĞÅÈıÖÖÖ§³Ö
+--å¾ªç¯ä»»åŠ¡æäº¤çš„äº‹ä»¶
+--ä¸å…¨ï¼Œè¦ç”¨æ—¶æ³¨æ„
+--ç°åªæœ‰å¯»ç‰©ï¼Œæ€æ€ªï¼Œé€ä¿¡ä¸‰ç§æ”¯æŒ
 --**********************************
 function x002010_OnModEvent_Submit(sceneId, selfId, targetId, missionIndex)
 	
@@ -335,7 +335,7 @@ function x002010_OnModEvent_Submit(sceneId, selfId, targetId, missionIndex)
 		return 0;
 	end
 
-	--Èç¹ûÊÇµÚ50»·(µÚÒ»´Î¸ø)....ÔòËÍÍæ¼ÒÒ»¸öĞ¡°×ÍÃ¶ú¶ä....·ñÔò¾ÍËÍÆÕÍ¨ÍÃ¶ú¶ä....
+	--å¦‚æœæ˜¯ç¬¬50ç¯(ç¬¬ä¸€æ¬¡ç»™)....åˆ™é€ç©å®¶ä¸€ä¸ªå°ç™½å…”è€³æœµ....å¦åˆ™å°±é€æ™®é€šå…”è€³æœµ....
 	if count == 50 then
 		x002010_GiveSmallRabbitEar( sceneId, selfId )
 	else
@@ -346,7 +346,7 @@ function x002010_OnModEvent_Submit(sceneId, selfId, targetId, missionIndex)
 end
 
 --**********************************
--- ¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+-- å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x002010_NotifyFailBox( sceneId, selfId, targetId, msg )
 	BeginEvent( sceneId )
@@ -358,15 +358,15 @@ end
 function x002010_NotifyMessage(sceneId, selfId,targetId )		
 		local nDayCount = GetMissionData(sceneId, selfId, MD_JQXH_MUWANQING_LIMITI)
 		local nCount = 		floor(nDayCount/100000)
-		--Èç¹ûÃ¿Íê³É10´Î·¢²¼³¡¾°ÏûÏ¢
+		--å¦‚æœæ¯å®Œæˆ10æ¬¡å‘å¸ƒåœºæ™¯æ¶ˆæ¯
 		if(nCount == 10 or nCount == 20 or nCount == 30 or nCount == 40 )	then
-				local msg = format("#B[%s]£º#W#{_INFOUSR%s} #{MWQ_090217_07}", GetSceneName(sceneId), GetName(sceneId, selfId))
+				local msg = format("#B[%s]ï¼š#W#{_INFOUSR%s} #{MWQ_090217_07}", GetSceneName(sceneId), GetName(sceneId, selfId))
 				LuaFnNpcChat(sceneId, targetId, 1, msg)		
 		end
 end
 
 --**********************************
--- ËÍÆÕÍ¨ÍÃ¶ú¶ä....
+-- é€æ™®é€šå…”è€³æœµ....
 --**********************************
 function x002010_GiveRabbitEar( sceneId, selfId )
 
@@ -435,7 +435,7 @@ function x002010_GiveRabbitEar( sceneId, selfId )
 end
 
 --**********************************
--- ËÍĞ¡°×ÍÃ¶ú¶ä....
+-- é€å°ç™½å…”è€³æœµ....
 --**********************************
 function x002010_GiveSmallRabbitEar( sceneId, selfId )
 
@@ -504,7 +504,7 @@ function x002010_GiveSmallRabbitEar( sceneId, selfId )
 end
 
 --**********************************
---Ìá½»ÎïÆ·
+--æäº¤ç‰©å“
 --**********************************
 function x002010_OnMissionCheck( sceneId, selfId, targetId, scriptId, index1, index2, index3, indexpet, missionIndex )
 	

@@ -1,29 +1,29 @@
---NPC ºú¿­ B°ï
+--NPC èƒ¡å‡¯ Bå¸®
 
-x402297_g_ScriptId = 402297; --½Å±¾ºÅ
-x402297_g_name	="ºú¿­";
+x402297_g_ScriptId = 402297; --è„šæœ¬å·
+x402297_g_name	="èƒ¡å‡¯";
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x402297_g_eventId_yes = 0;
 x402297_g_eventId_no = 1;
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x402297_OnDefaultEvent( sceneId, selfId, targetId )
 	x402297_UpdateEventList( sceneId, selfId, targetId );
 end
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x402297_UpdateEventList( sceneId, selfId, targetId )
 
 	if CallScriptFunction(402047, "IsCommonBGuild", sceneId, selfId ) == 1 then
 		BeginEvent(sceneId);
 			AddText( sceneId, "#{BHXZ_081103_21}" );
-			AddNumText( sceneId, x402297_g_ScriptId, "È·¶¨", 9, x402297_g_eventId_yes);
-			AddNumText( sceneId, x402297_g_ScriptId, "È¡Ïû", 8, x402297_g_eventId_no);
+			AddNumText( sceneId, x402297_g_ScriptId, "ç¡®å®š", 9, x402297_g_eventId_yes);
+			AddNumText( sceneId, x402297_g_ScriptId, "å–æ¶ˆ", 8, x402297_g_eventId_no);
 		EndEvent(sceneId);
 		DispatchEventList(sceneId, selfId, targetId);
 	else
@@ -36,14 +36,14 @@ function x402297_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x402297_OnEventRequest( sceneId, selfId, targetId, eventId )
 	local selectEventId	= GetNumText();
 	
 	if selectEventId and CallScriptFunction(402047, "IsCommonBGuild", sceneId, selfId ) == 1 then
 		if selectEventId == x402297_g_eventId_yes then
-			--ÓĞÕ½³µbuff²»ÄÜ´«ËÍ
+			--æœ‰æˆ˜è½¦buffä¸èƒ½ä¼ é€
 			if CallScriptFunction(402047, "HaveTankBuff", sceneId, selfId) == 0 then
 				CallScriptFunction(402047, "Exit", sceneId, selfId)
 			else
@@ -62,13 +62,13 @@ function x402297_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x402297_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x402297_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 end

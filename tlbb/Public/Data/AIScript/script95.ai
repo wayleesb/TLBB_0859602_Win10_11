@@ -1,13 +1,13 @@
-;���˹֣�ƽʱԶ�̹�����һ��ʼ�Ͷ�����ͷ����˼���(620)����������
+;糟运怪，平时远程攻击，一开始就对玩家释放漕运减速(620)，不会逃跑
 [common]
 [commonend]
-;�������ű���ϵ���ܣ���ϵ�ش󣬳�chris�⣬������������ģ��������Ը���
-;ע�����������������ȼ�Ӧ�ñ�Զ�̼������ȼ���
+;与其他脚本联系紧密，关系重大，除chris外，其他人请勿更改，否则后果自负。
+;注意物理攻击技能优先级应该比远程技能优先级高
 [skill]
-0:if(AIS_IsCanSkill(0)=1){AIS_ToSkill(0);AIS_SetTimes(-1);AIS_SetPRI(80);};�����ʹ��0�ż������ͷţ��������ޣ���ͨ������
-1:if(AIS_IsCanSkill(552)=1){AIS_ToSkill(552);AIS_SetTimes(-1);AIS_SetPRI(70);};�����ʹ��552�ż������ͷţ��������ޣ�Զ�̹�����
-2:if(AIS_IsCanSkill(620)=1&AIS_Rand()<30){AIS_ToSkill(620);AIS_SetTimes(1);AIS_SetPRI(84);};�ͷ�620�ż��ܣ�����1(���˼���(NPC))
-;�������ű���ϵ���ܣ���ϵ�ش󣬳�chris�⣬������������ģ��������Ը���
+0:if(AIS_IsCanSkill(0)=1){AIS_ToSkill(0);AIS_SetTimes(-1);AIS_SetPRI(80);};如果能使用0号技能则释放，次数不限（普通攻击）
+1:if(AIS_IsCanSkill(552)=1){AIS_ToSkill(552);AIS_SetTimes(-1);AIS_SetPRI(70);};如果能使用552号技能则释放，次数不限（远程攻击）
+2:if(AIS_IsCanSkill(620)=1&AIS_Rand()<30){AIS_ToSkill(620);AIS_SetTimes(1);AIS_SetPRI(84);};释放620号技能，次数1(漕运减速(NPC))
+;与其他脚本联系紧密，关系重大，除chris外，其他人请勿更改，否则后果自负。
 [skillend]
 
 [beskill]

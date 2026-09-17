@@ -1,20 +1,20 @@
 --MisDescBegin
 x600018_g_ScriptId = 600018
 x600018_g_MissionId = 1108
-x600018_g_Name = "ÄÂÒ×"
+x600018_g_Name = "ç©†æ˜“"
 x600018_g_MissionKind = 50
 x600018_g_MissionLevel = 10000
 x600018_g_IfMissionElite = 0
-x600018_g_IsMissionOkFail = 0							-- ÈÎÎñÍê³É±ê¼Ç
-x600018_g_MissionName = "ÊĞ¼¯ÈÎÎñ"
-x600018_g_MissionInfo = ""			--ÈÎÎñÃèÊö
-x600018_g_MissionTarget = "    Ñ°ÕÒ%i£¬½»¸ø°ï»á³ÇÊĞµÄÄÂÒ× ( 46, 91 )¡£"	--ÈÎÎñÄ¿±ê
-x600018_g_ContinueInfo = "    ÄãµÄÈÎÎñ»¹Ã»ÓĞÍê³ÉÃ´£¿"					--Î´Íê³ÉÈÎÎñµÄnpc¶Ô»°
-x600018_g_SubmitInfo = "    ÊÂÇé½øÕ¹µÃÈçºÎ£¿"							--Íê³ÉÎ´Ìá½»Ê±µÄnpc¶Ô»°
-x600018_g_MissionComplete = "    ¸ÉµÃ²»´í£¬ÉõºÃÉõºÃ¡£"					--Íê³ÉÈÎÎñnpcËµ»°µÄ»°
+x600018_g_IsMissionOkFail = 0							-- ä»»åŠ¡å®Œæˆæ ‡è®°
+x600018_g_MissionName = "å¸‚é›†ä»»åŠ¡"
+x600018_g_MissionInfo = ""			--ä»»åŠ¡æè¿°
+x600018_g_MissionTarget = "    å¯»æ‰¾%iï¼Œäº¤ç»™å¸®ä¼šåŸå¸‚çš„ç©†æ˜“ ( 46, 91 )ã€‚"	--ä»»åŠ¡ç›®æ ‡
+x600018_g_ContinueInfo = "    ä½ çš„ä»»åŠ¡è¿˜æ²¡æœ‰å®Œæˆä¹ˆï¼Ÿ"					--æœªå®Œæˆä»»åŠ¡çš„npcå¯¹è¯
+x600018_g_SubmitInfo = "    äº‹æƒ…è¿›å±•å¾—å¦‚ä½•ï¼Ÿ"							--å®Œæˆæœªæäº¤æ—¶çš„npcå¯¹è¯
+x600018_g_MissionComplete = "    å¹²å¾—ä¸é”™ï¼Œç”šå¥½ç”šå¥½ã€‚"					--å®Œæˆä»»åŠ¡npcè¯´è¯çš„è¯
 x600018_g_Parameter_Item_IDRandom = { { id = 5, num = 1 } }
 x600018_g_StrForePart = 5
-x600018_g_Offset = 14													-- Suppose to 14, ±íÀïµÚ¼¸¸öÎïÆ·ÁĞµÄÆ«ÒÆÁ¿
+x600018_g_Offset = 14													-- Suppose to 14, è¡¨é‡Œç¬¬å‡ ä¸ªç‰©å“åˆ—çš„åç§»é‡
 x600018_g_MissionRound = 44
 x600018_g_CityMissionScript = 600001
 x600018_g_MarketScript = 600017

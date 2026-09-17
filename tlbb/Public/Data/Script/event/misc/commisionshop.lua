@@ -1,83 +1,83 @@
--- ¼ÄÊÛÉÌµê
--- ½Å±¾ºÅ
+-- å¯„å”®å•†åº—
+-- è„šæœ¬å·
 
-x800116_g_ScriptId = 800116  -- ´úÂëÖĞÒ²Ê¹ÓÃÕâ¸ö±àºÅÁË¡£ÑÏ½ûĞŞ¸Ä
+x800116_g_ScriptId = 800116  -- ä»£ç ä¸­ä¹Ÿä½¿ç”¨è¿™ä¸ªç¼–å·äº†ã€‚ä¸¥ç¦ä¿®æ”¹
 
--- ¼ÄÊÛÉÌµêUI 19850424
+-- å¯„å”®å•†åº—UI 19850424
 
--- ¼ÄÊÛÉÌµêĞÅÏ¢
+-- å¯„å”®å•†åº—ä¿¡æ¯
 x800116_g_CShopInfo = {
-	-- 0 ºÅÉÌµê£¬ÕâÑùµÄ»°×îºÃ²»Òª³öÏÖÁ½¸ö Server Ò»¸ö ShopID µÄÏÖÏó£¬·ñÔò»¹Òª¸ÄÕâ¸öÊı¾İ½á¹¹
+	-- 0 å·å•†åº—ï¼Œè¿™æ ·çš„è¯æœ€å¥½ä¸è¦å‡ºç°ä¸¤ä¸ª Server ä¸€ä¸ª ShopID çš„ç°è±¡ï¼Œå¦åˆ™è¿˜è¦æ”¹è¿™ä¸ªæ•°æ®ç»“æ„
 	[0] = {
-		name = "#GÂåÑô£¨160£¬181£©#RÍ¡Í¡",
+		name = "#Gæ´›é˜³ï¼ˆ160ï¼Œ181ï¼‰#Ræ±€æ±€",
 		type = {
-			-- Ôª±¦
+			-- å…ƒå®
 			[0] = {
-				name = "Ôª±¦",
-				sellFmtValueStr = "#G%dµãÔª±¦#l",
+				name = "å…ƒå®",
+				sellFmtValueStr = "#G%dç‚¹å…ƒå®#l",
 				sellFmtPriceStr = "#G#{_MONEY%d}#l",
-				sellInfo = "#GÎÒÒª¹ºÂòÔª±¦#l",
-				buyFmtValueStr = "%dµãÔª±¦",
+				sellInfo = "#Gæˆ‘è¦è´­ä¹°å…ƒå®#l",
+				buyFmtValueStr = "%dç‚¹å…ƒå®",
 				buyFmtPriceStr = "#{_MONEY%d}",
 			},
-			-- ½ğÇ®
+			-- é‡‘é’±
 			[1] = {
-				name = "½ğ±Ò",
+				name = "é‡‘å¸",
 				sellFmtValueStr = "#G#{_MONEY%d}#l",
-				sellFmtPriceStr = "#G%dµãÔª±¦#l",
-				sellInfo = "#GÎÒÒª¹ºÂò½ğ±Ò#l",
+				sellFmtPriceStr = "#G%dç‚¹å…ƒå®#l",
+				sellInfo = "#Gæˆ‘è¦è´­ä¹°é‡‘å¸#l",
 				buyFmtValueStr = "#{_MONEY%d}",
-				buyFmtPriceStr = "%dµãÔª±¦",
+				buyFmtPriceStr = "%dç‚¹å…ƒå®",
 			}
 		}
 	},
-	-- 1 ºÅÉÌµê£¬ÕâÑùµÄ»°×îºÃ²»Òª³öÏÖÁ½¸ö Server Ò»¸ö ShopID µÄÏÖÏó£¬·ñÔò»¹Òª¸ÄÕâ¸öÊı¾İ½á¹¹
+	-- 1 å·å•†åº—ï¼Œè¿™æ ·çš„è¯æœ€å¥½ä¸è¦å‡ºç°ä¸¤ä¸ª Server ä¸€ä¸ª ShopID çš„ç°è±¡ï¼Œå¦åˆ™è¿˜è¦æ”¹è¿™ä¸ªæ•°æ®ç»“æ„
 	[1] = {
-		name = "#GÂåÑô£¨158£¬181£©#R¶¬¶¬",
+		name = "#Gæ´›é˜³ï¼ˆ158ï¼Œ181ï¼‰#Rå†¬å†¬",
 		type = {
-			-- Ôª±¦
+			-- å…ƒå®
 			[0] = {
-				name = "Ôª±¦",
-				sellFmtValueStr = "#G%dµãÔª±¦#l",
+				name = "å…ƒå®",
+				sellFmtValueStr = "#G%dç‚¹å…ƒå®#l",
 				sellFmtPriceStr = "#G#{_MONEY%d}#l",
-				sellInfo = "#GÎÒÒª¹ºÂòÔª±¦#l",
-				buyFmtValueStr = "%dµãÔª±¦",
+				sellInfo = "#Gæˆ‘è¦è´­ä¹°å…ƒå®#l",
+				buyFmtValueStr = "%dç‚¹å…ƒå®",
 				buyFmtPriceStr = "#{_MONEY%d}",
 			},
-			-- ½ğÇ®
+			-- é‡‘é’±
 			[1] = {
-				name = "½ğ±Ò",
+				name = "é‡‘å¸",
 				sellFmtValueStr = "#G#{_MONEY%d}#l",
-				sellFmtPriceStr = "#G%dµãÔª±¦#l",
-				sellInfo = "#GÎÒÒª¹ºÂò½ğ±Ò#l",
+				sellFmtPriceStr = "#G%dç‚¹å…ƒå®#l",
+				sellInfo = "#Gæˆ‘è¦è´­ä¹°é‡‘å¸#l",
 				buyFmtValueStr = "#{_MONEY%d}",
-				buyFmtPriceStr = "%dµãÔª±¦",
+				buyFmtPriceStr = "%dç‚¹å…ƒå®",
 			}
 		}
 	}
 }
 
 --**********************************
--- ÁĞ¾ÙÊÂ¼ş
+-- åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x800116_OnEnumerate( sceneId, selfId, targetId )
---AddNumText( sceneId, x800116_g_ScriptId, "ÎÒÏë¹ºÂò½ğ±Ò", 5, 1 )       --Del by Houzf in 20080811 because of TT 37697
-	AddNumText( sceneId, x800116_g_ScriptId, "ÎÒÏë¹ºÂòÔª±¦", 5, 2 )
+--AddNumText( sceneId, x800116_g_ScriptId, "æˆ‘æƒ³è´­ä¹°é‡‘å¸", 5, 1 )       --Del by Houzf in 20080811 because of TT 37697
+	AddNumText( sceneId, x800116_g_ScriptId, "æˆ‘æƒ³è´­ä¹°å…ƒå®", 5, 2 )
 	if IsShutout( sceneId, selfId, ONOFF_T_CSHOP ) == 0 then
 		if GetConfigInfo( sceneId, "IsCloseYuanBaoSell" ) ~= 1 then
-			AddNumText( sceneId, x800116_g_ScriptId, "ÎÒÏë¼ÄÊÛÔª±¦", 5, 3 )
+			AddNumText( sceneId, x800116_g_ScriptId, "æˆ‘æƒ³å¯„å”®å…ƒå®", 5, 3 )
 		end
 	--	if GetConfigInfo( sceneId, "IsCloseGoldCoinSell" ) ~= 1 then       --Del byHouzf in 20080818
-	--		AddNumText( sceneId, x800116_g_ScriptId, "ÎÒÏë¼ÄÊÛ½ğ±Ò", 5, 4 )
+	--		AddNumText( sceneId, x800116_g_ScriptId, "æˆ‘æƒ³å¯„å”®é‡‘å¸", 5, 4 )
 	--	end
 	end
-	AddNumText( sceneId, x800116_g_ScriptId, "ÊÕÈ¡Ôª±¦»ò½ğ±Ò", 5, 6 )
-	AddNumText( sceneId, x800116_g_ScriptId, "ÊÕÈ¡½éÉÜ", 11, 7 )
-	AddNumText( sceneId, x800116_g_ScriptId, "¼ÄÊÛ½éÉÜ", 11, 5 )
+	AddNumText( sceneId, x800116_g_ScriptId, "æ”¶å–å…ƒå®æˆ–é‡‘å¸", 5, 6 )
+	AddNumText( sceneId, x800116_g_ScriptId, "æ”¶å–ä»‹ç»", 11, 7 )
+	AddNumText( sceneId, x800116_g_ScriptId, "å¯„å”®ä»‹ç»", 11, 5 )
 end
 
 --**********************************
--- ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+-- äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x800116_OnDefaultEvent( sceneId, selfId, targetId, eventId )
 
@@ -121,7 +121,7 @@ function x800116_OnDefaultEvent( sceneId, selfId, targetId, eventId )
 		DispatchUICommand( sceneId, selfId, 19850424 )		
 	else
 		BeginEvent( sceneId )
-			AddText( sceneId, "ÄúµÄÃû×ÖÖĞº¬ÓĞ¡°*¡±£¬ĞèÒªÏÈ¸ÄÃû²ÅÄÜÕı³£Ê¹ÓÃ¼ÄÊÛ¹¦ÄÜ¡£" )
+			AddText( sceneId, "æ‚¨çš„åå­—ä¸­å«æœ‰â€œ*â€ï¼Œéœ€è¦å…ˆæ”¹åæ‰èƒ½æ­£å¸¸ä½¿ç”¨å¯„å”®åŠŸèƒ½ã€‚" )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 	end
@@ -130,14 +130,14 @@ function x800116_OnDefaultEvent( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
--- ´ò¿ªÄ³¸öÉÌµê
+-- æ‰“å¼€æŸä¸ªå•†åº—
 --**********************************
 function x800116_OpenShop( sceneId, selfId, targetId, Grade )
 	GetCommisionShop( sceneId, selfId, targetId, Grade )
 end
 
 --**********************************
--- ¹ºÈë
+-- è´­å…¥
 --**********************************
 function x800116_Buy( sceneId, selfId, targetId, Grade, SerialNumber )
 	local ret, shopId, type, value, price, seller = CommisionShopBuy( sceneId, selfId, targetId, Grade, SerialNumber )
@@ -149,7 +149,7 @@ function x800116_Buy( sceneId, selfId, targetId, Grade, SerialNumber )
 			local strGUID = LuaFnGetGUID( sceneId, selfId )
 			local len = strlen(strGUID)
 			strGUID = strsub( strGUID, len-3 )
-			local str = format( "#IÄ³ÈË[ID:****%s]ÔÚ#R%s#I´¦»¨·ÑÁË#Y%s#I¹ºÂòÁË#Y%s#I¡£",
+			local str = format( "#IæŸäºº[ID:****%s]åœ¨#R%s#Iå¤„èŠ±è´¹äº†#Y%s#Iè´­ä¹°äº†#Y%s#Iã€‚",
 				strGUID,
 				nameInfo,
 				typeInfo.buyFmtPriceStr,
@@ -158,7 +158,7 @@ function x800116_Buy( sceneId, selfId, targetId, Grade, SerialNumber )
 			str = format( str, price, value )
 			BroadMsgByChatPipe( sceneId, selfId, str, 4 )
 			
-			local sellstr = format("Äú¼ÄÊÛµÄ%sÒÑ#Y³É¹¦ÊÛ³ö#W£¬ÇëÕÒµ½¼ÄÊÛNPCÑ¡Ôñ¡°ÊÕÈ¡Ôª±¦»ò½ğ±Ò¡±¼´¿É»ñµÃÄúµÄÔª±¦»ò½ğ±Ò¡£#r#G×¢Òâ£ºÎªÁË±£ÕÏÄúµÄ²Æ²ú°²È«£¬Çë¾¡Á¿ÔÚÒ»ÖÜÄÚÁìÈ¡ÄúµÄÔª±¦ºÍ½ğ±Ò£¬Èç¹ûÄúÒ»ÖÜºóÈÔÃ»ÓĞÁìÈ¡µÄ»°£¬Ôª±¦»ò½ğ±Ò¿ÉÄÜ»á¶ªÊ§¡£",
+			local sellstr = format("æ‚¨å¯„å”®çš„%så·²#YæˆåŠŸå”®å‡º#Wï¼Œè¯·æ‰¾åˆ°å¯„å”®NPCé€‰æ‹©â€œæ”¶å–å…ƒå®æˆ–é‡‘å¸â€å³å¯è·å¾—æ‚¨çš„å…ƒå®æˆ–é‡‘å¸ã€‚#r#Gæ³¨æ„ï¼šä¸ºäº†ä¿éšœæ‚¨çš„è´¢äº§å®‰å…¨ï¼Œè¯·å°½é‡åœ¨ä¸€å‘¨å†…é¢†å–æ‚¨çš„å…ƒå®å’Œé‡‘å¸ï¼Œå¦‚æœæ‚¨ä¸€å‘¨åä»æ²¡æœ‰é¢†å–çš„è¯ï¼Œå…ƒå®æˆ–é‡‘å¸å¯èƒ½ä¼šä¸¢å¤±ã€‚",
 			  typeInfo.buyFmtValueStr)
 			sellstr = format( sellstr, value)
 			LuaFnSendSystemMail(sceneId,seller,sellstr)
@@ -167,7 +167,7 @@ function x800116_Buy( sceneId, selfId, targetId, Grade, SerialNumber )
 end
 
 --**********************************
--- ¼ÄÊÛ
+-- å¯„å”®
 --**********************************
 function x800116_Sell( sceneId, selfId, targetId, Grade, Price )
 	local ret, shopId, type, value, price = CommisionShopSell( sceneId, selfId, targetId, Grade, Price )
@@ -179,7 +179,7 @@ function x800116_Sell( sceneId, selfId, targetId, Grade, Price )
 			local strGUID = LuaFnGetGUID( sceneId, selfId )
 			local len = strlen(strGUID)
 			strGUID = strsub( strGUID, len-3 )
-			local str = format( "#IÄ³ÈË[ID:****%s]ÔÚ#R%s#I´¦¼ÄÊÛÁË#Y%s£¬#IÊÛ¼Û#Y%s£¬#IÓĞÒâ¹ºÂòµÄÍæ¼ÒÇë¸Ï»Ø#GÂåÑô#I°É¡£",
+			local str = format( "#IæŸäºº[ID:****%s]åœ¨#R%s#Iå¤„å¯„å”®äº†#Y%sï¼Œ#Iå”®ä»·#Y%sï¼Œ#Iæœ‰æ„è´­ä¹°çš„ç©å®¶è¯·èµ¶å›#Gæ´›é˜³#Iå§ã€‚",
 				strGUID,
 				nameInfo,
 				typeInfo.buyFmtValueStr,
@@ -199,7 +199,7 @@ function x800116_TimeOutCommission(sceneId,shopId,itemserial)
 		if x800116_g_CShopInfo[shopId] and x800116_g_CShopInfo[shopId].type[type] then
 			local typeInfo = x800116_g_CShopInfo[shopId].type[type]
 			
-			local sellstr = format("Äú¼ÄÊÛµÄ%s#YÃ»ÓĞÊÛ³ö#W£¬ÇëÕÒµ½¼ÄÊÛNPCÑ¡Ôñ¡°ÊÕÈ¡Ôª±¦»ò½ğ±Ò¡±¼´¿É»ñµÃÄúµÄÔª±¦»ò½ğ±Ò¡£#r#G×¢Òâ£ºÎªÁË±£ÕÏÄúµÄ²Æ²ú°²È«£¬Çë¾¡Á¿ÔÚÒ»ÖÜÄÚÁìÈ¡ÄúµÄÔª±¦ºÍ½ğ±Ò£¬Èç¹ûÄúÒ»ÖÜºóÈÔÃ»ÓĞÁìÈ¡µÄ»°£¬Ôª±¦»ò½ğ±Ò¿ÉÄÜ»á¶ªÊ§¡£",
+			local sellstr = format("æ‚¨å¯„å”®çš„%s#Yæ²¡æœ‰å”®å‡º#Wï¼Œè¯·æ‰¾åˆ°å¯„å”®NPCé€‰æ‹©â€œæ”¶å–å…ƒå®æˆ–é‡‘å¸â€å³å¯è·å¾—æ‚¨çš„å…ƒå®æˆ–é‡‘å¸ã€‚#r#Gæ³¨æ„ï¼šä¸ºäº†ä¿éšœæ‚¨çš„è´¢äº§å®‰å…¨ï¼Œè¯·å°½é‡åœ¨ä¸€å‘¨å†…é¢†å–æ‚¨çš„å…ƒå®å’Œé‡‘å¸ï¼Œå¦‚æœæ‚¨ä¸€å‘¨åä»æ²¡æœ‰é¢†å–çš„è¯ï¼Œå…ƒå®æˆ–é‡‘å¸å¯èƒ½ä¼šä¸¢å¤±ã€‚",
 			  typeInfo.buyFmtValueStr)
 			sellstr = format( sellstr, value)
 			LuaFnSendSystemMail(sceneId,seller,sellstr)

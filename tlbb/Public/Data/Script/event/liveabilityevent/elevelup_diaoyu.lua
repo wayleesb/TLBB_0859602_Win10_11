@@ -1,39 +1,39 @@
---µöÓã¼¼ÄÜÉı¼¶
+--é’“é±¼æŠ€èƒ½å‡çº§
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x713569_g_ScriptId = 713569
 
---´Ënpc¿ÉÒÔÉıµ½µÄ×î¸ßµÈ¼¶
+--æ­¤npcå¯ä»¥å‡åˆ°çš„æœ€é«˜ç­‰çº§
 x713569_g_MaxLevel = 5
 
-----¼¼ÄÜ±àºÅ
+----æŠ€èƒ½ç¼–å·
 x713569_g_AbilityID = ABILITY_DIAOYU
 
---¼¼ÄÜÃû³Æ
-x713569_g_AbilityName = "µöÓã"
+--æŠ€èƒ½åç§°
+x713569_g_AbilityName = "é’“é±¼"
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x713569_OnDefaultEvent( sceneId, selfId, targetId, nNum, npcScriptId, bid )
-	--Íæ¼Ò¼¼ÄÜµÄµÈ¼¶
+	--ç©å®¶æŠ€èƒ½çš„ç­‰çº§
 	AbilityLevel = QueryHumanAbilityLevel(sceneId, selfId, x713569_g_AbilityID)
-	--Íæ¼Ò¼Ó¹¤¼¼ÄÜµÄÊìÁ·¶È
+	--ç©å®¶åŠ å·¥æŠ€èƒ½çš„ç†Ÿç»ƒåº¦
 	ExpPoint = GetAbilityExp(sceneId, selfId, x713569_g_AbilityID)
-	--ÈÎÎñÅĞ¶Ï
+	--ä»»åŠ¡åˆ¤æ–­
 
-	--Èç¹û»¹Ã»ÓĞÑ§»á¸ÃÉú»î¼¼ÄÜ
+	--å¦‚æœè¿˜æ²¡æœ‰å­¦ä¼šè¯¥ç”Ÿæ´»æŠ€èƒ½
 	if AbilityLevel < 1	then
 		BeginEvent(sceneId)
-			strText = "Äã»¹Ã»ÓĞÑ§»á"..x713569_g_AbilityName.."¼¼ÄÜ£¡"
+			strText = "ä½ è¿˜æ²¡æœ‰å­¦ä¼š"..x713569_g_AbilityName.."æŠ€èƒ½ï¼"
 			AddText(sceneId,strText)
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 		return
 	end
-	--Èç¹ûÊÇÔÚ³ÇÊĞÖĞÉı¼¶
+	--å¦‚æœæ˜¯åœ¨åŸå¸‚ä¸­å‡çº§
 	if bid then
-		--¼ì²é³ÇÊĞÊÇ·ñ´¦ÓÚµÍÎ¬»¤×´Ì¬
+		--æ£€æŸ¥åŸå¸‚æ˜¯å¦å¤„äºä½ç»´æŠ¤çŠ¶æ€
 		if CallScriptFunction( CITY_BUILDING_ABILITY_SCRIPT, "CheckCityStatus",sceneId, selfId,targetId) < 0 then
 			return
 		end
@@ -43,10 +43,10 @@ function x713569_OnDefaultEvent( sceneId, selfId, targetId, nNum, npcScriptId, b
 		end
 		return
 	end
-	--Èç¹ûÉú»î¼¼ÄÜµÈ¼¶ÒÑ¾­³¬³ö¸ÃnpcËùÄÜ½ÌµÄ·¶Î§
+	--å¦‚æœç”Ÿæ´»æŠ€èƒ½ç­‰çº§å·²ç»è¶…å‡ºè¯¥npcæ‰€èƒ½æ•™çš„èŒƒå›´
 	if AbilityLevel >= x713569_g_MaxLevel then
 		BeginEvent(sceneId)
-			strText = "ÎÒÖ»ÄÜ½ÌÄã1-5¼¶µÄ"..x713569_g_AbilityName.."¼¼ÄÜ,Çëµ½°ïÅÉÖĞÑ§Ï°¸ü¸ß¼¶µÄ"..x713569_g_AbilityName.."."
+			strText = "æˆ‘åªèƒ½æ•™ä½ 1-5çº§çš„"..x713569_g_AbilityName.."æŠ€èƒ½,è¯·åˆ°å¸®æ´¾ä¸­å­¦ä¹ æ›´é«˜çº§çš„"..x713569_g_AbilityName.."."
 			AddText(sceneId,strText)
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
@@ -62,35 +62,35 @@ function x713569_OnDefaultEvent( sceneId, selfId, targetId, nNum, npcScriptId, b
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x713569_OnEnumerate( sceneId, selfId, targetId, bid )
 		if bid then
 			local ret = CallScriptFunction( CITY_BUILDING_ABILITY_SCRIPT, "OnCityCheck",sceneId, selfId, x713569_g_AbilityID, bid, 6)
-			if ret > 0 then AddNumText(sceneId,x713569_g_ScriptId,"Éı¼¶"..x713569_g_AbilityName.."¼¼ÄÜ", 12, 1) end
+			if ret > 0 then AddNumText(sceneId,x713569_g_ScriptId,"å‡çº§"..x713569_g_AbilityName.."æŠ€èƒ½", 12, 1) end
 			return
 		end
-		--Èç¹û²»µ½µÈ¼¶Ôò²»ÏÔÊ¾Ñ¡Ïî
+		--å¦‚æœä¸åˆ°ç­‰çº§åˆ™ä¸æ˜¾ç¤ºé€‰é¡¹
 		--old
 		--if GetLevel(sceneId,selfId) >= LEVELUP_ABILITY_DIAOYU[1].HumanLevelLimit then
-		--	AddNumText(sceneId,x713569_g_ScriptId,"Éı¼¶"..x713569_g_AbilityName.."¼¼ÄÜ", 12, 1)
+		--	AddNumText(sceneId,x713569_g_ScriptId,"å‡çº§"..x713569_g_AbilityName.."æŠ€èƒ½", 12, 1)
 		--end
 		--new
 		local ret, demandMoney, demandExp, limitAbilityExp, limitAbilityExpShow, currentLevelAbilityExpTop, limitLevel = LuaFnGetAbilityLevelUpConfig(ABILITY_DIAOYU, 1);
 		if ret and ret == 1 and 1 then
-			AddNumText(sceneId,x713569_g_ScriptId,"Éı¼¶"..x713569_g_AbilityName.."¼¼ÄÜ", 12, 1)
+			AddNumText(sceneId,x713569_g_ScriptId,"å‡çº§"..x713569_g_AbilityName.."æŠ€èƒ½", 12, 1)
 		end
 		return
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x713569_CheckAccept( sceneId, selfId )
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x713569_OnAccept( sceneId, selfId, x713569_g_AbilityID )
 end

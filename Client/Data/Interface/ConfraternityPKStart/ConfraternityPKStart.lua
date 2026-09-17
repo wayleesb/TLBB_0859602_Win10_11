@@ -31,7 +31,7 @@ end
 function ConfraternityPKStart_Accept_BtnClick()
 	local guid = ConfraternityPKStart_Input:GetText();
 	if(tonumber(guid)==nil)then
-		PushDebugMessage("°ï»áid²»ÄÜÎª¿Õ£¡");
+		PushDebugMessage("å¸®ä¼šidä¸èƒ½ä¸ºç©ºï¼");
 		return;
 	end
 	City:SendAddEnemyMsg(tonumber(guid));

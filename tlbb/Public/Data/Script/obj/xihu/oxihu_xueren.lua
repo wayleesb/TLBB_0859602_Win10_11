@@ -1,14 +1,14 @@
--- 中秋NPC
--- 雪人
+-- 涓NPC
+-- 闆汉
 
 x050200_g_scriptId = 050200
 
 --**********************************
---事件交互入口
+--浜嬩欢浜や簰鍏ュ彛
 --**********************************
 function x050200_OnDefaultEvent( sceneId, selfId, targetId )
 	BeginEvent( sceneId )
-		AddText( sceneId, "    我……我是个雪人哎！" )
+		AddText( sceneId, "    鎴戔�︹�︽垜鏄釜闆汉鍝庯紒" )
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, selfId, targetId )
 end

@@ -1,36 +1,36 @@
---Éú³¤µã
---ÂúÔÂ
---½Å±¾ºÅ715006
---ÂúÔÂ100%
---µÈ¼¶1
+--ç”Ÿé•¿ç‚¹
+--æ»¡æœˆ
+--è„šæœ¬å·715006
+--æ»¡æœˆ100%
+--ç­‰çº§1
 
---Ã¿´Î´ò¿ª±Ø¶¨»ñµÃµÄ²úÆ·
+--æ¯æ¬¡æ‰“å¼€å¿…å®šè·å¾—çš„äº§å“
 x715006_g_MainItemId = 40003003
 
---Éú³Éº¯Êı¿ªÊ¼************************************************************************
---Ã¿¸öItemBoxÖĞ×î¶à10¸öÎïÆ·
+--ç”Ÿæˆå‡½æ•°å¼€å§‹************************************************************************
+--æ¯ä¸ªItemBoxä¸­æœ€å¤š10ä¸ªç‰©å“
 function 		x715006_OnCreate(sceneId,growPointType,x,y)
-	--·ÅÈëItemBoxÍ¬Ê±·ÅÈëÒ»¸öÎïÆ·
-	targetId  = ItemBoxEnterScene(x,y,growPointType,sceneId,QUALITY_MUST_BE_CHANGE,1,x715006_g_MainItemId)	--Ã¿¸öÉú³¤µã×îÉÙÄÜµÃµ½Ò»¸öÎïÆ·,ÕâÀïÖ±½Ó·ÅÈëitemboxÖĞÒ»¸ö
-	--»ñµÃ1~3µÄËæ»úÊı,Èç¹ûÊÇ1Ôò²»ĞèÒª·ÅÈë,Èç¹û¶àÓà1ÔÙÓÃAddItemToBoxÔö¼ÓÎïÆ·
+	--æ”¾å…¥ItemBoxåŒæ—¶æ”¾å…¥ä¸€ä¸ªç‰©å“
+	targetId  = ItemBoxEnterScene(x,y,growPointType,sceneId,QUALITY_MUST_BE_CHANGE,1,x715006_g_MainItemId)	--æ¯ä¸ªç”Ÿé•¿ç‚¹æœ€å°‘èƒ½å¾—åˆ°ä¸€ä¸ªç‰©å“,è¿™é‡Œç›´æ¥æ”¾å…¥itemboxä¸­ä¸€ä¸ª
+	--è·å¾—1~3çš„éšæœºæ•°,å¦‚æœæ˜¯1åˆ™ä¸éœ€è¦æ”¾å…¥,å¦‚æœå¤šä½™1å†ç”¨AddItemToBoxå¢åŠ ç‰©å“
 	--ItemCount = random(1,3)
 	--if ItemCount ~= 1 then
 	--	for i=1, (ItemCount - 1) do
 			AddItemToBox(sceneId,targetId,QUALITY_MUST_BE_CHANGE,1,x715006_g_MainItemId)
 	--	end
 	--end
-	--·ÅÈë´ÎÒª²úÆ·
+	--æ”¾å…¥æ¬¡è¦äº§å“
 	--if random(1,100) == 1 then
 	--	AddItemToBox(sceneId,targetId,QUALITY_MUST_BE_CHANGE,1,g_SubItemId)
 	--end	
 end
---Éú³Éº¯Êı½áÊø**********************************************************************
+--ç”Ÿæˆå‡½æ•°ç»“æŸ**********************************************************************
 
 
---´ò¿ªÇ°º¯Êı¿ªÊ¼&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+--æ‰“å¼€å‰å‡½æ•°å¼€å§‹&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 function	 x715006_OnOpen(sceneId,selfId,targetId)
---·µ»ØÀàĞÍ
--- 0 ±íÊ¾´ò¿ª³É¹¦
+--è¿”å›ç±»å‹
+-- 0 è¡¨ç¤ºæ‰“å¼€æˆåŠŸ
 	--ABilityID		=	GetItemBoxRequireAbilityID(sceneId,targetId)
 	--AbilityLevel = QueryHumanAbilityLevel(sceneId,selfId,ABilityID)
 	
@@ -41,15 +41,15 @@ function	 x715006_OnOpen(sceneId,selfId,targetId)
 		return OR_OK
 	--	end
 end
---´ò¿ªÇ°º¯Êı½áÊø&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+--æ‰“å¼€å‰å‡½æ•°ç»“æŸ&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
 
---»ØÊÕº¯Êı¿ªÊ¼########################################################################
+--å›æ”¶å‡½æ•°å¼€å§‹########################################################################
 function	 x715006_OnRecycle(sceneId,selfId,targetId)
-	  --È¡µÃµ±Ç°ÊìÁ·¶È
+	  --å–å¾—å½“å‰ç†Ÿç»ƒåº¦
 		--ABilityID	=	GetItemBoxRequireAbilityID(sceneId,targetId)
 		--AbilityExp	=	GetAbilityExp(sceneId, selfId, ABilityID)
-		--ÅĞ¶ÏÒÔÏÖÔÚµÄµÈ¼¶ÊÇ·ñÓ¦¸ÃÔö¼ÓÊìÁ·¶È
+		--åˆ¤æ–­ä»¥ç°åœ¨çš„ç­‰çº§æ˜¯å¦åº”è¯¥å¢åŠ ç†Ÿç»ƒåº¦
 		--AbilityLevel	=	QueryHumanAbilityLevel(sceneId,selfId,ABilityID)
 		--if AbilityLevel - g_AbilityLevel <= 5 then
 		--	ExpPlus = 1
@@ -58,7 +58,7 @@ function	 x715006_OnRecycle(sceneId,selfId,targetId)
 		--else
 		--	ExpPlus = 0
 		--end
-		--ÅĞ¶Ïµ±Ç°ÊìÁ·¶È¼ÓÉÏÒªÔö¼ÓµÄÊìÁ·¶ÈºóÊÇ·ñ³¬¹ı±¾µÈ¼¶ÊìÁ·¶ÈÉÏÏŞ
+		--åˆ¤æ–­å½“å‰ç†Ÿç»ƒåº¦åŠ ä¸Šè¦å¢åŠ çš„ç†Ÿç»ƒåº¦åæ˜¯å¦è¶…è¿‡æœ¬ç­‰çº§ç†Ÿç»ƒåº¦ä¸Šé™
 		--old
 		--if (AbilityExp + ExpPlus) >= LEVELUP_ABILITY_PENGREN[AbilityLevel].AbilityExpLimitTop then
 		--new
@@ -68,24 +68,24 @@ function	 x715006_OnRecycle(sceneId,selfId,targetId)
 		--else
 		--	AbilityExp = AbilityExp + ExpPlus
 		--end
-		--Ôö¼ÓÊìÁ·¶È
+		--å¢åŠ ç†Ÿç»ƒåº¦
 		--SetAbilityExp(sceneId, selfId, ABilityID, AbilityExp)
-		--Í¨ÖªÍæ¼ÒÊìÁ·¶ÈÔö¼ÓÁË
+		--é€šçŸ¥ç©å®¶ç†Ÿç»ƒåº¦å¢åŠ äº†
 		--AbilityExp	=	GetAbilityExp(sceneId, selfId, ABilityID)
-		--Msg2Player(sceneId,selfId,"ÊìÁ·¶ÈÌáÉıµ½"..AbilityExp,MSG2PLAYER_PARA)
+		--Msg2Player(sceneId,selfId,"ç†Ÿç»ƒåº¦æå‡åˆ°"..AbilityExp,MSG2PLAYER_PARA)
 		
-		--·µ»Ø1£¬Éú³¤µã»ØÊÕ
+		--è¿”å›1ï¼Œç”Ÿé•¿ç‚¹å›æ”¶
 		return 1
 end
---»ØÊÕº¯Êı½áÊø########################################################################
+--å›æ”¶å‡½æ•°ç»“æŸ########################################################################
 
 
 
---´ò¿ªºóº¯Êı¿ªÊ¼@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+--æ‰“å¼€åå‡½æ•°å¼€å§‹@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 function	x715006_OnProcOver(sceneId,selfId,targetId)
 	return 0
 end
---´ò¿ªºóº¯Êı½áÊø@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+--æ‰“å¼€åå‡½æ•°ç»“æŸ@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 function x715006_OnTickCreateFinish( sceneId, growPointType, tickCount )
 end

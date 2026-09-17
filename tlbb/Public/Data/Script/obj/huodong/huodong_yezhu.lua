@@ -1,5 +1,5 @@
 -- 402100
--- Ò°Öí±©×ß»î¶¯
+-- é‡ŽçŒªæš´èµ°æ´»åŠ¨
 x402100_g_NpcID = {3730,3740,3750,3760,3770}
 
 x402100_g_NpcPos_1 = {	{x=182,y=214},{x=150,y=227},{x=217,y=141},
@@ -25,26 +25,26 @@ x402100_g_NpcPos_3 = {	{x=60 ,y=96	},{x=213,y=35	},{x=108,y=77	},
 x402100_g_TimeTickIndex = 0
 
 --**********************************
---ÊÂ¼þ½»»¥Èë¿Ú 19-145-40 18-149-48
+--äº‹ä»¶äº¤äº’å…¥å£ 19-145-40 18-149-48
 --**********************************
 function x402100_OnDefaultEvent( sceneId, actId, param1, param2, param3, param4, param5 )
 
 	StartOneActivity( sceneId, actId, floor(900000))
 	SetActivityParam( sceneId, actId, x402100_g_TimeTickIndex, 0)
 
-	-- ´´½¨µÚÒ»Åú»î¶¯Npc
+	-- åˆ›å»ºç¬¬ä¸€æ‰¹æ´»åŠ¨Npc
 	for i, v in x402100_g_NpcPos_1  do
-		-- Ëæ»úÒ»¸öNpc
+		-- éšæœºä¸€ä¸ªNpc
 		local nIndex = random(1,5)
 		local MonsterId = LuaFnCreateMonster( sceneId, x402100_g_NpcID[nIndex], v.x, v.y, 3, -1, 402101 )
-		SetCharacterTitle(sceneId, MonsterId, "ÁéÊÞ")
+		SetCharacterTitle(sceneId, MonsterId, "çµå…½")
 		SetCharacterDieTime(sceneId, MonsterId, 5*1000*60*60)
 	end
 
 end
 
 --**********************************
---ÐÄÌøº¯Êý
+--å¿ƒè·³å‡½æ•°
 --**********************************
 function x402100_OnTimer( sceneId, actId, uTime )
 	
@@ -54,20 +54,20 @@ function x402100_OnTimer( sceneId, actId, uTime )
 	
 	if TickTime == 1  then
 		for i, v in x402100_g_NpcPos_2  do
-			-- Ëæ»úÒ»¸öNpc
+			-- éšæœºä¸€ä¸ªNpc
 			local nIndex = random(1,5)
 			local MonsterId = LuaFnCreateMonster( sceneId, x402100_g_NpcID[nIndex], v.x, v.y, 3, -1, 402101 )
-			SetCharacterTitle(sceneId, MonsterId, "ÁéÊÞ")
+			SetCharacterTitle(sceneId, MonsterId, "çµå…½")
 			SetCharacterDieTime(sceneId, MonsterId, 5*1000*60*60)
 		end
 	end
 	
 	if TickTime == 2  then
 		for i, v in x402100_g_NpcPos_3  do
-			-- Ëæ»úÒ»¸öNpc
+			-- éšæœºä¸€ä¸ªNpc
 			local nIndex = random(1,5)
 			local MonsterId = LuaFnCreateMonster( sceneId, x402100_g_NpcID[nIndex], v.x, v.y, 3, -1, 402101 )
-			SetCharacterTitle(sceneId, MonsterId, "ÁéÊÞ")
+			SetCharacterTitle(sceneId, MonsterId, "çµå…½")
 			SetCharacterDieTime(sceneId, MonsterId, 5*1000*60*60)
 		end
 	end

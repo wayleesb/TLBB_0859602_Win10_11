@@ -1,5 +1,5 @@
---Ñã±±NPC
---³ÇÊĞ´«ËÍÈË1
+--é›åŒ—NPC
+--åŸå¸‚ä¼ é€äºº1
 x019030_g_scriptId=019030
 
 x019030_g_city0 = 206
@@ -9,7 +9,7 @@ x019030_g_city3 = 616
 
 --**********************************
 
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 
 --**********************************
 
@@ -23,12 +23,12 @@ function x019030_OnDefaultEvent( sceneId, selfId,targetId )
 
 	BeginEvent(sceneId)
 
-		AddText(sceneId,"ÓĞÊ²Ã´ÎÒ¿ÉÒÔ°ïÄãµÄÂğ£¿")
+		AddText(sceneId,"æœ‰ä»€ä¹ˆæˆ‘å¯ä»¥å¸®ä½ çš„å—ï¼Ÿ")
 		
-		if(strCity0Name ~= "") then AddNumText(sceneId,x019030_g_scriptId,"³ÇÊĞ1  "..strCity0Name,9,0) end
-		if(strCity1Name ~= "") then AddNumText(sceneId,x019030_g_scriptId,"³ÇÊĞ2  "..strCity1Name,9,1) end
-		if(strCity2Name ~= "") then AddNumText(sceneId,x019030_g_scriptId,"³ÇÊĞ3  "..strCity2Name,9,2) end
-		if(strCity3Name ~= "") then AddNumText(sceneId,x019030_g_scriptId,"³ÇÊĞ4  "..strCity3Name,9,3) end
+		if(strCity0Name ~= "") then AddNumText(sceneId,x019030_g_scriptId,"åŸå¸‚1  "..strCity0Name,9,0) end
+		if(strCity1Name ~= "") then AddNumText(sceneId,x019030_g_scriptId,"åŸå¸‚2  "..strCity1Name,9,1) end
+		if(strCity2Name ~= "") then AddNumText(sceneId,x019030_g_scriptId,"åŸå¸‚3  "..strCity2Name,9,2) end
+		if(strCity3Name ~= "") then AddNumText(sceneId,x019030_g_scriptId,"åŸå¸‚4  "..strCity3Name,9,3) end
 
 	EndEvent(sceneId)
 
@@ -38,7 +38,7 @@ end
 
 --**********************************
 
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 
 --**********************************
 

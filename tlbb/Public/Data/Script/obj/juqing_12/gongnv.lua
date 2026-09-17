@@ -1,15 +1,15 @@
 --038002
 
--- ÂÌÒÂ¹¬Å® 038002
+-- ç»¿è¡£å®«å¥³ 038002
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x038002_g_ScriptId = 038002
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x038002_g_eventList={200053, 200055}
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x038002_UpdateEventList( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
@@ -20,11 +20,11 @@ function x038002_UpdateEventList( sceneId, selfId,targetId )
 	end
 	EndEvent(sceneId)
 	
-	-- Èç¹ûÍæ¼ÒÒÑ¾­Íê³ÉÁËÈÎÎñ¡°»·Åå¿Õ¹éÔÂÒ¹»ê¡±£¬
-	-- x200053_g_MissionIdÎª43
+	-- å¦‚æœç©å®¶å·²ç»å®Œæˆäº†ä»»åŠ¡â€œç¯ä½©ç©ºå½’æœˆå¤œé­‚â€ï¼Œ
+	-- x200053_g_MissionIdä¸º43
 	if (IsMissionHaveDone(sceneId,selfId,43) > 0 ) then
 		if LuaFnGetCopySceneData_Param(sceneId, 30) == 0 then
-			AddNumText( sceneId, x038002_g_ScriptId, "¾Æ°ÕÎÊ¾ıÈıÓï", 10, 999 )
+			AddNumText( sceneId, x038002_g_ScriptId, "é…’ç½¢é—®å›ä¸‰è¯­", 10, 999 )
 			--LuaFnSetCopySceneData_Param(sceneId, 30, 1)
 		end
 		DispatchEventList(sceneId,selfId,targetId)
@@ -32,25 +32,25 @@ function x038002_UpdateEventList( sceneId, selfId,targetId )
 end
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x038002_OnDefaultEvent( sceneId, selfId,targetId )
 	x038002_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x038002_OnEventRequest( sceneId, selfId, targetId, eventId )
 	if GetNumText() == 999 then
-		--¿ªÊ¼¾çÇé
-		LuaFnSetCopySceneData_Param(sceneId, 8, 1) --¿ØÖÆËµ»°
-		LuaFnSetCopySceneData_Param(sceneId, 9, GetGameTime(sceneId, selfId))	--Ê±¼ä
+		--å¼€å§‹å‰§æƒ…
+		LuaFnSetCopySceneData_Param(sceneId, 8, 1) --æ§åˆ¶è¯´è¯
+		LuaFnSetCopySceneData_Param(sceneId, 9, GetGameTime(sceneId, selfId))	--æ—¶é—´
 
 		LuaFnSetCopySceneData_Param(sceneId, 30, 1)
 		
     BeginEvent(sceneId)
-		AddText(sceneId,"»¶Ó­ÄãµÄµ½À´!")
+		AddText(sceneId,"æ¬¢è¿ä½ çš„åˆ°æ¥!")
     EndEvent( )
     DispatchEventList(sceneId,selfId,targetId)
 		
@@ -66,7 +66,7 @@ function x038002_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x038002_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x038002_g_eventList do
@@ -81,10 +81,10 @@ function x038002_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x038002_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
-	--¾Ü¾øÖ®ºó£¬Òª·µ»ØNPCµÄÊÂ¼şÁĞ±í
+	--æ‹’ç»ä¹‹åï¼Œè¦è¿”å›NPCçš„äº‹ä»¶åˆ—è¡¨
 	for i, findId in x038002_g_eventList do
 		if missionScriptId == findId then
 			x038002_UpdateEventList( sceneId, selfId, targetId )
@@ -94,7 +94,7 @@ function x038002_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¼ÌĞø£¨ÒÑ¾­½ÓÁËÈÎÎñ£©
+--ç»§ç»­ï¼ˆå·²ç»æ¥äº†ä»»åŠ¡ï¼‰
 --**********************************
 function x038002_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x038002_g_eventList do
@@ -106,7 +106,7 @@ function x038002_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---Ìá½»ÒÑ×öÍêµÄÈÎÎñ
+--æäº¤å·²åšå®Œçš„ä»»åŠ¡
 --**********************************
 function x038002_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, selectRadioId )
 	for i, findId in x038002_g_eventList do
@@ -118,7 +118,7 @@ function x038002_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 end
 
 --**********************************
---ËÀÍöÊÂ¼ş
+--æ­»äº¡äº‹ä»¶
 --**********************************
 function x038002_OnDie( sceneId, selfId, killerId )
 end

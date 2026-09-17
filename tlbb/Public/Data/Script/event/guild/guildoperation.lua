@@ -1,4 +1,4 @@
---°ï»áÏà¹ØUI 30£¬31,103
+--å¸®ä¼šç›¸å…³UI 30ï¼Œ31,103
 
 x600000_g_ScriptId = 600000;
 x600000_g_Yinpiao = 40002000
@@ -8,10 +8,10 @@ function x600000_OnEnumerate( sceneId, selfId, targetId, sel )
 		GuildCreate(sceneId, selfId, targetId);
 	elseif( sel == 2 ) then
 		BeginUICommand(sceneId)
-			UICommand_AddInt(sceneId,targetId) --µ÷ÓÃ³ÇÊĞÈë¿Ú×é½çÃæ
+			UICommand_AddInt(sceneId,targetId) --è°ƒç”¨åŸå¸‚å…¥å£ç»„ç•Œé¢
 		EndUICommand(sceneId)
 		DispatchUICommand(sceneId,selfId, 103)
-		--ÏÈÈÃ¿Í»§¶Ë¼ÇÂ¼NPCĞÅÏ¢ÔÙÏÔÊ¾´°¿Ú
+		--å…ˆè®©å®¢æˆ·ç«¯è®°å½•NPCä¿¡æ¯å†æ˜¾ç¤ºçª—å£
 		CityApply(sceneId, selfId)
 		GuildList(sceneId, selfId, targetId);
 	elseif( sel == 3 ) then
@@ -28,32 +28,32 @@ function x600000_OnEnumerate( sceneId, selfId, targetId, sel )
 		local ret = CheckPlayerCanApplyCity(sceneId, selfId);
 		if ret==1 then 
 			BeginUICommand(sceneId)
-				UICommand_AddInt(sceneId,targetId) --µ÷ÓÃ³ÇÊĞÈë¿Ú×é½çÃæ
+				UICommand_AddInt(sceneId,targetId) --è°ƒç”¨åŸå¸‚å…¥å£ç»„ç•Œé¢
 			EndUICommand(sceneId)
 			DispatchUICommand(sceneId,selfId, 101)
-			--ÏÈÈÃ¿Í»§¶Ë¼ÇÂ¼NPCĞÅÏ¢ÔÙÏÔÊ¾´°¿Ú
+			--å…ˆè®©å®¢æˆ·ç«¯è®°å½•NPCä¿¡æ¯å†æ˜¾ç¤ºçª—å£
 			CityApply(sceneId, selfId)
 		elseif ret==-1 then
 			BeginEvent(sceneId)
-				AddText(sceneId,"ÄúµÄ°ï»áÒÑ¾­Õ¼ÓĞ³ÇÊĞÁË£¡")
+				AddText(sceneId,"æ‚¨çš„å¸®ä¼šå·²ç»å æœ‰åŸå¸‚äº†ï¼")
 			EndEvent(sceneId)
 			DispatchMissionTips(sceneId,selfId)
 		end
 	elseif( sel == 6 ) then
-		--ÊÇ·ñÔÚäîÔË
+		--æ˜¯å¦åœ¨æ¼•è¿
 		local haveImpact = LuaFnHaveImpactOfSpecificDataIndex(sceneId, selfId, 113)
 		if haveImpact == 1 then
 				BeginEvent(sceneId)
-					strText = "¶Ô²»Æğ,ÄúÏÖÔÚ´¦ÓÚÔËÊä×´Ì¬¡£"
+					strText = "å¯¹ä¸èµ·,æ‚¨ç°åœ¨å¤„äºè¿è¾“çŠ¶æ€ã€‚"
 					AddText(sceneId,strText);
 				EndEvent(sceneId)
 				DispatchMissionTips(sceneId,selfId)
 				return
 		end
-		-- ¼ì²âÍæ¼ÒÉíÉÏÊÇ²»ÊÇÓĞ¡°ÒøÆ±¡±Õâ¸ö¶«Î÷£¬ÓĞ¾Í²»ÄÜÊ¹ÓÃÕâÀïµÄ¹¦ÄÜ
+		-- æ£€æµ‹ç©å®¶èº«ä¸Šæ˜¯ä¸æ˜¯æœ‰â€œé“¶ç¥¨â€è¿™ä¸ªä¸œè¥¿ï¼Œæœ‰å°±ä¸èƒ½ä½¿ç”¨è¿™é‡Œçš„åŠŸèƒ½
 		if GetItemCount(sceneId, selfId, x600000_g_Yinpiao)>=1  then
 			BeginEvent( sceneId )
-				AddText( sceneId, "  ÄãÉíÉÏÓĞÒøÆ±£¬ÕıÔÚÅÜÉÌ£¡ÎÒ²»ÄÜ°ïÖúÄã¡£" )
+				AddText( sceneId, "  ä½ èº«ä¸Šæœ‰é“¶ç¥¨ï¼Œæ­£åœ¨è·‘å•†ï¼æˆ‘ä¸èƒ½å¸®åŠ©ä½ ã€‚" )
 			EndEvent( sceneId )
 			DispatchEventList( sceneId, selfId, targetId )
 			return

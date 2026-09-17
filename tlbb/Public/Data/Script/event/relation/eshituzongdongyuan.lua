@@ -1,4 +1,4 @@
--- ¶á±¦Ê¦Í½Á·
+-- å¤ºå®å¸ˆå¾’ç»ƒ
 
 x806020_g_ScriptId = 806020
 
@@ -43,9 +43,9 @@ x806020_g_Prize_List = 	{
 						}       
 						        
 x806020_g_Prize_List_long = 	{--zchw
-						 	{id=30309713, count=1, rand=500 , 	bind = 0}, --ÌÆ×°Êó
-						 	{id=30309716, count=1, rand=200  , 	bind = 0}, --ÌÆ×°Êó
-						 	{id=30309717, count=1, rand=100  , 	bind = 0}, --ÌÆ×°Êó
+						 	{id=30309713, count=1, rand=500 , 	bind = 0}, --å”è£…é¼ 
+						 	{id=30309716, count=1, rand=200  , 	bind = 0}, --å”è£…é¼ 
+						 	{id=30309717, count=1, rand=100  , 	bind = 0}, --å”è£…é¼ 
 						 	{id=30900006, count=1, rand=860 , 	bind = 1},
 						 	{id=30008034, count=1, rand=200 , 	bind = 1},
 						 	{id=30900045, count=1, rand=100 , 	bind = 1},
@@ -79,26 +79,26 @@ x806020_g_Prize_List_long = 	{--zchw
 						}       
                                 
 x806020_g_Prize_List_30_master =	{
-										--type 0:ÎïÆ·    1:¾­Ñé
+										--type 0:ç‰©å“    1:ç»éªŒ
 										{type=0, value=20310106 },
 										{type=0, value=20310107 },
 										{type=1, value=300000 },	
 									}
 									
 x806020_g_Prize_List_30_prentice =	{
-										--type 0:ÎïÆ·    1:¾­Ñé
+										--type 0:ç‰©å“    1:ç»éªŒ
 										{type=0, value=30008027 },	
 									}
 									
 x806020_g_Prize_List_45_master =	{
-										--type 0:ÎïÆ·    1:¾­Ñé
+										--type 0:ç‰©å“    1:ç»éªŒ
 										{type=0, value=20310106 },
 										{type=0, value=20310107 },
 										{type=1, value=300000 },	
 									}
 									
 x806020_g_Prize_List_45_prentice =	{
-										--type 0:ÎïÆ·    1:¾­Ñé
+										--type 0:ç‰©å“    1:ç»éªŒ
 										{type=0, value=31000006 },	
 									}									
 							
@@ -140,7 +140,7 @@ function x806020_OnPlayerLogin( sceneId, selfId )
 end
 
 --**********************************
---Íæ¼ÒÉı¼¶Ê±»Øµ÷´Ëº¯Êı
+--ç©å®¶å‡çº§æ—¶å›è°ƒæ­¤å‡½æ•°
 --**********************************
 function x806020_OnPlayerLevelUp( sceneId, selfId )
 
@@ -175,20 +175,20 @@ end
 
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x806020_OnDefaultEvent( sceneId, selfId, targetId )
 
 	if x806020_IsValidateTime_Change() ==0 then
-		x806020_NotifyMsg( sceneId, selfId, targetId,  "ÔİÎŞ¶Ò½±»î¶¯" )
+		x806020_NotifyMsg( sceneId, selfId, targetId,  "æš‚æ— å…‘å¥–æ´»åŠ¨" )
 	end
 	
 	if(GetNumText() == 1) then
 		BeginEvent(sceneId)
 			AddText(sceneId, "#{STZDY_20080513_19}")
-			AddNumText( sceneId, x806020_g_ScriptId, "²Î¼Ó³é½±", 6, 3 )
-			AddNumText( sceneId, x806020_g_ScriptId, "ÁìÈ¡Ê¦Í½Éı¼¶ÀÖ½±Æ·", 6, 4 )
-			AddNumText( sceneId, x806020_g_ScriptId, "¶Ò»»¶á±¦Ê¦Í½Á·BUFF", 6, 5 )
+			AddNumText( sceneId, x806020_g_ScriptId, "å‚åŠ æŠ½å¥–", 6, 3 )
+			AddNumText( sceneId, x806020_g_ScriptId, "é¢†å–å¸ˆå¾’å‡çº§ä¹å¥–å“", 6, 4 )
+			AddNumText( sceneId, x806020_g_ScriptId, "å…‘æ¢å¤ºå®å¸ˆå¾’ç»ƒBUFF", 6, 5 )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 	elseif (GetNumText() == 2) then
@@ -197,7 +197,7 @@ function x806020_OnDefaultEvent( sceneId, selfId, targetId )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 	elseif (GetNumText() == 3) then
-		--µÈ¼¶10
+		--ç­‰çº§10
 		local level = GetLevel( sceneId, selfId )
 		if level < 10 then
 			BeginEvent(sceneId)
@@ -207,7 +207,7 @@ function x806020_OnDefaultEvent( sceneId, selfId, targetId )
 			return
 		end
 		
-		--Ã¿Ìì1´ÎÏŞÖÆ
+		--æ¯å¤©1æ¬¡é™åˆ¶
 		local dayCount = GetMissionData( sceneId, selfId, MD_SHITUZONGDONGYUAN_PRIZE_COUNT )
 		local curDayTime = GetTime2Day()
 		if curDayTime == floor( dayCount / 100) then
@@ -221,7 +221,7 @@ function x806020_OnDefaultEvent( sceneId, selfId, targetId )
 		end 
 		
 		
-		--¼ì²éĞèÇóÎïÆ·
+		--æ£€æŸ¥éœ€æ±‚ç‰©å“
 		local i
 		for i=1, getn(x806020_g_Need_Item_List) do
 			if LuaFnGetAvailableItemCount(sceneId, selfId, x806020_g_Need_Item_List[i]) < 1 then
@@ -234,7 +234,7 @@ function x806020_OnDefaultEvent( sceneId, selfId, targetId )
 		end
 		
 		
-		--³é½±
+		--æŠ½å¥–
 		local prizeList
 		if x806020_IsValidateTime_Change() == 1 then
 			prizeList = x806020_g_Prize_List
@@ -259,18 +259,18 @@ function x806020_OnDefaultEvent( sceneId, selfId, targetId )
 		
 		for i=1, getn(prizeList) do
 			if randIndex <= prizeList[i].rand then
-				--µÀ¾ßÀ¸ÒÑÂú
+				--é“å…·æ å·²æ»¡
 				if LuaFnGetPropertyBagSpace( sceneId, selfId ) < prizeList[i].count then
 					x806020_NotifyTips(sceneId, selfId, "#{STZDY_20080513_24}")
 					return
 				end
 		
-				--¿ªÊ¼Ìí¼Ó½±Àø
+				--å¼€å§‹æ·»åŠ å¥–åŠ±
 				LuaFnBeginAddItem( sceneId )
 				LuaFnAddItem( sceneId, prizeList[i].id, prizeList[i].count)
 				local ret = LuaFnEndAddItem( sceneId, selfId )
 				if 1 == ret then
-					--¿Û³ıÎïÆ·
+					--æ‰£é™¤ç‰©å“
 					for i=1, getn(x806020_g_Need_Item_List) do
 						if LuaFnDelAvailableItem(sceneId, selfId, x806020_g_Need_Item_List[i], 1) ~= 1 then
 							BeginEvent(sceneId)
@@ -327,23 +327,23 @@ function x806020_OnDefaultEvent( sceneId, selfId, targetId )
 	elseif (GetNumText() == 4) then
 		BeginEvent(sceneId)
 			AddText(sceneId, "#{STZDY_20080513_28}")
-			AddNumText( sceneId, x806020_g_ScriptId, "ÁìÈ¡30¼¶½±Àø", 6, 6 )
-			AddNumText( sceneId, x806020_g_ScriptId, "ÁìÈ¡45¼¶½±Àø", 6, 7 )
-			AddNumText( sceneId, x806020_g_ScriptId, "ÔÙ¼û", 6, 8 )
+			AddNumText( sceneId, x806020_g_ScriptId, "é¢†å–30çº§å¥–åŠ±", 6, 6 )
+			AddNumText( sceneId, x806020_g_ScriptId, "é¢†å–45çº§å¥–åŠ±", 6, 7 )
+			AddNumText( sceneId, x806020_g_ScriptId, "å†è§", 6, 8 )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 	elseif (GetNumText() == 5) then
 		BeginEvent(sceneId)
 			AddText(sceneId, "#{STZDY_20080513_43}")
-			AddNumText( sceneId, x806020_g_ScriptId, "½øĞĞ¶Ò»»", 6, 9 )
-			AddNumText( sceneId, x806020_g_ScriptId, "»¹Ã»×¼±¸ºÃ", 6, 8 )
+			AddNumText( sceneId, x806020_g_ScriptId, "è¿›è¡Œå…‘æ¢", 6, 9 )
+			AddNumText( sceneId, x806020_g_ScriptId, "è¿˜æ²¡å‡†å¤‡å¥½", 6, 8 )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 	elseif (GetNumText() == 6) or (GetNumText() == 7) then
 		local sNotifyMsg = "#{STZDY_20080513_31}"
 		local sNotifyTips = "#{STZDY_20080513_32}"
 		
-		if GetMissionFlag( sceneId, selfId, MF_ShiTu_ChuShi_Flag ) == 1 then --±íÊ¾ÒÑ¾­³öÊ¦
+		if GetMissionFlag( sceneId, selfId, MF_ShiTu_ChuShi_Flag ) == 1 then --è¡¨ç¤ºå·²ç»å‡ºå¸ˆ
 			if GetNumText() == 6 then
 				sNotifyMsg = "#{STZDY_20080513_29}"
 				sNotifyTips = "#{STZDY_20080513_30}"
@@ -359,14 +359,14 @@ function x806020_OnDefaultEvent( sceneId, selfId, targetId )
 	        return
 	    end
 	    
-	    -- ×é¶ÓÖĞÖ»ÓĞÁ½¸öÈË
+	    -- ç»„é˜Ÿä¸­åªæœ‰ä¸¤ä¸ªäºº
 	    if LuaFnGetTeamSize( sceneId, selfId ) ~= 2 then
 			x806020_NotifyMsg( sceneId, selfId, targetId,  sNotifyMsg )
 	        x806020_NotifyTips( sceneId, selfId, sNotifyTips )								
 	        return
 		end 
 		
-		-- ×é¶ÓÖĞµÄÁ½¸öÈË±ØĞë¶¼ÔÚ¸½½ü
+		-- ç»„é˜Ÿä¸­çš„ä¸¤ä¸ªäººå¿…é¡»éƒ½åœ¨é™„è¿‘
 	    local	numMem	= GetNearTeamCount( sceneId, selfId )
 	    if numMem ~= LuaFnGetTeamSize( sceneId, selfId ) then                
 			x806020_NotifyMsg( sceneId, selfId, targetId,  sNotifyMsg )
@@ -376,7 +376,7 @@ function x806020_OnDefaultEvent( sceneId, selfId, targetId )
 	    
 	    local otherId = LuaFnGetTeamSceneMember( sceneId, selfId, 0 )     
     
-    	-- ÁìÈ¡ÕßÊÇ·ñÎªÊ¦Í½
+    	-- é¢†å–è€…æ˜¯å¦ä¸ºå¸ˆå¾’
 	    if LuaFnIsMasterEver(sceneId, selfId, otherId) ~= 1 and LuaFnIsMasterEver(sceneId, otherId, selfId) ~= 1 then
 			x806020_NotifyMsg( sceneId, selfId, targetId,  sNotifyMsg )
 	        x806020_NotifyTips( sceneId, selfId, sNotifyTips )								
@@ -384,7 +384,7 @@ function x806020_OnDefaultEvent( sceneId, selfId, targetId )
 	    end
 	    
 	    if LuaFnIsMasterEver(sceneId, otherId, selfId) == 1 then
-	    	--ÎÒÊÇÊ¦¸µ
+	    	--æˆ‘æ˜¯å¸ˆå‚…
 	    	if GetMissionFlag( sceneId, otherId, MF_ShiTu_ChuShi_Flag ) == 1 then
 	    		sNotifyMsg = "#{STZDY_20080513_41}"
 				sNotifyTips = "#{STZDY_20080513_42}"
@@ -393,7 +393,7 @@ function x806020_OnDefaultEvent( sceneId, selfId, targetId )
 				sNotifyTips = "#{STZDY_20080513_32}"
 	    	end
 	    elseif LuaFnIsMasterEver(sceneId, selfId, otherId ) == 1 then
-	    	--ÎÒÊÇÍ½µÜ
+	    	--æˆ‘æ˜¯å¾’å¼Ÿ
 	    	if GetMissionFlag( sceneId, selfId, MF_ShiTu_ChuShi_Flag ) == 1 then
 	    		sNotifyMsg = "#{STZDY_20080513_41}"
 				sNotifyTips = "#{STZDY_20080513_42}"
@@ -429,8 +429,8 @@ function x806020_OnDefaultEvent( sceneId, selfId, targetId )
 			strAwardLevel = 30
 		elseif GetNumText() == 7 then
 			levelReq = 45
-			strTip = "Í½µÜÉıÖÁ45¼¶²ÅÄÜÁìÈ¡½±ÀøÅ¶£¡"
-			strMsg = "Í½µÜ±ØĞëÉıÖÁ45¼¶²ÅÄÜÁìÈ¡£¡"
+			strTip = "å¾’å¼Ÿå‡è‡³45çº§æ‰èƒ½é¢†å–å¥–åŠ±å“¦ï¼"
+			strMsg = "å¾’å¼Ÿå¿…é¡»å‡è‡³45çº§æ‰èƒ½é¢†å–ï¼"
 			prizeList_master = x806020_g_Prize_List_45_master
 			prizeList_prentice = x806020_g_Prize_List_45_prentice
 			MF_master = MF_ShiTuHelp_45_master
@@ -439,7 +439,7 @@ function x806020_OnDefaultEvent( sceneId, selfId, targetId )
 		end
 	    
 	    if LuaFnIsMasterEver(sceneId, otherId, selfId) == 1 then
-	    	--Ê¦¸µ
+	    	--å¸ˆå‚…
 	    	if GetLevel(sceneId, otherId) < levelReq then
 	    		x806020_NotifyMsg( sceneId, selfId, targetId,  strTip )
 		        x806020_NotifyTips( sceneId, selfId, strMsg )			
@@ -454,7 +454,7 @@ function x806020_OnDefaultEvent( sceneId, selfId, targetId )
 	    	end
 	    	
 	    	
-	    	--½±Àø
+	    	--å¥–åŠ±
 	    	if ( x806020_GivePrize( sceneId, selfId, prizeList_master) == 0 ) then
 	    		x806020_NotifyMsg( sceneId, selfId, targetId,  "#{STZDY_20080513_36}" )
 	        	x806020_NotifyTips( sceneId, selfId, "#{STZDY_20080513_37}" )			
@@ -468,7 +468,7 @@ function x806020_OnDefaultEvent( sceneId, selfId, targetId )
 			x806020_NotifyMsg( sceneId, selfId, targetId,  "#{STZDY_20080513_38}")
 	    	
 	    elseif LuaFnIsMasterEver(sceneId, selfId, otherId ) == 1 then
-	    	--Í½µÜ
+	    	--å¾’å¼Ÿ
 	    	if GetLevel(sceneId, selfId) < levelReq then
 	    		x806020_NotifyMsg( sceneId, selfId, targetId,  strTip )
 		        x806020_NotifyTips( sceneId, selfId, strMsg )			
@@ -482,7 +482,7 @@ function x806020_OnDefaultEvent( sceneId, selfId, targetId )
 	        	return    
 	    	end
 	    	
-	    	--½±Àø
+	    	--å¥–åŠ±
 	    	if( x806020_GivePrize( sceneId, selfId, prizeList_prentice) == 0 ) then
 	    		x806020_NotifyMsg( sceneId, selfId, targetId,  "#{STL_0623_01}" )
 	        	x806020_NotifyTips( sceneId, selfId, "#{STZDY_20080513_37}" )			
@@ -504,19 +504,19 @@ function x806020_OnDefaultEvent( sceneId, selfId, targetId )
 		return
 	elseif (GetNumText() == 9) then
 		
-		--¼ì²éĞèÇóÎïÆ·
+		--æ£€æŸ¥éœ€æ±‚ç‰©å“
 		local i
 		for i=1, getn(x806020_g_Need_Item_List) do
 			if LuaFnGetAvailableItemCount(sceneId, selfId, x806020_g_Need_Item_List[i]) > 0 then				
-				--¿Û³ıÎïÆ·
+				--æ‰£é™¤ç‰©å“
 				if LuaFnDelAvailableItem(sceneId, selfId, x806020_g_Need_Item_List[i], 1) == 1 then
-					--¼Óbuff
+					--åŠ buff
 					local buffId = x806020_g_Impact_List[ random( getn(x806020_g_Impact_List) ) ]
 					LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, buffId, 0);
 					
 					AuditShiTuZongDongYuan( sceneId, selfId, " GetAward_Buff")
 					
-					x806020_NotifyMsg( sceneId, selfId, targetId,  "¶Ò»»³É¹¦¡£" )
+					x806020_NotifyMsg( sceneId, selfId, targetId,  "å…‘æ¢æˆåŠŸã€‚" )
 					
 					return
 				end
@@ -531,7 +531,7 @@ function x806020_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x806020_OnEnumerate( sceneId, selfId, targetId )
 
@@ -539,8 +539,8 @@ function x806020_OnEnumerate( sceneId, selfId, targetId )
 		return
 	end
 	
-	AddNumText( sceneId, x806020_g_ScriptId, "¶á±¦Ê¦Í½Á·»î¶¯", 6, 1 )
-	AddNumText( sceneId, x806020_g_ScriptId, "¶á±¦Ê¦Í½Á·»î¶¯°ïÖú", 11, 2 )
+	AddNumText( sceneId, x806020_g_ScriptId, "å¤ºå®å¸ˆå¾’ç»ƒæ´»åŠ¨", 6, 1 )
+	AddNumText( sceneId, x806020_g_ScriptId, "å¤ºå®å¸ˆå¾’ç»ƒæ´»åŠ¨å¸®åŠ©", 11, 2 )
 
 end
 
@@ -563,7 +563,7 @@ end
 function x806020_GivePrize( sceneId, selfId, pList)
 	local i
 	
-	--Ìí¼ÓÎïÆ·
+	--æ·»åŠ ç‰©å“
 	LuaFnBeginAddItem( sceneId )
 	for i=1, getn(pList) do
 		if pList[i].type == 0 then
@@ -577,7 +577,7 @@ function x806020_GivePrize( sceneId, selfId, pList)
 		return 0
 	end
 	
-	--Ìí¼Ó¾­Ñé
+	--æ·»åŠ ç»éªŒ
 	for i=1, getn(pList) do
 		if pList[i].type == 1 then
 			AddExp( sceneId, selfId, pList[i].value )

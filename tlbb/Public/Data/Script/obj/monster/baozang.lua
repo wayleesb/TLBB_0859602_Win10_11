@@ -1,6 +1,6 @@
---±¦²Ø¶´¹ÖÎï½Å±¾
+--å®è—æ´žæ€ªç‰©è„šæœ¬
 
---½Å±¾±àºÅ
+--è„šæœ¬ç¼–å·
 x502000_g_ScriptId	= 502000
 
 
@@ -17,10 +17,10 @@ end
 
 function x502000_OnRespawn( sceneId, selfId, targetId )
 
-	--²ÝÔ­BOSS
+	--è‰åŽŸBOSS
 	if sceneId == 20 then	
 		message = format("#{CaoYuan_Boss_00}" );		
-		--È«Çò¹«¸æ
+		--å…¨çƒå…¬å‘Š
 		AddGlobalCountNews( sceneId, message )	
 	end
 	
@@ -42,38 +42,38 @@ function x502000_OnDie( sceneId, objId, killerId )
 	local	namMonster= LuaFnGetName( sceneId, objId )
 	local	namScene	= GetSceneName( sceneId )
 
-	if namMonster == "»¤±¦ÉñÊÞ" then
+	if namMonster == "æŠ¤å®ç¥žå…½" then
 		namMonster = "#{_BOSS22}"
-	elseif namMonster == "Ä¾Í°²®" then
+	elseif namMonster == "æœ¨æ¡¶ä¼¯" then
 		namMonster = "#{_BOSS23}"
-	elseif namMonster == "¹í½£" then
+	elseif namMonster == "é¬¼å‰‘" then
 		namMonster = "#{_BOSS30}"
-	elseif namMonster == "ÑÒÄ§" then
+	elseif namMonster == "å²©é­”" then
 		namMonster = "#{_BOSS31}"
-	elseif namMonster == "¶¾Ë¿Ö©ÖëÍõ" then
+	elseif namMonster == "æ¯’ä¸èœ˜è››çŽ‹" then
 		namMonster = "#{_BOSS32}"
-	elseif namMonster == "²øË¿Ö©ÖëÍõ" then
+	elseif namMonster == "ç¼ ä¸èœ˜è››çŽ‹" then
 		namMonster = "#{_BOSS33}"
-	elseif namMonster == "·üµØÄ§" then
+	elseif namMonster == "ä¼åœ°é­”" then
 		namMonster = "#{_BOSS35}"
-	elseif namMonster == "°×µÛµÄÒõÓ°" then
+	elseif namMonster == "ç™½å¸çš„é˜´å½±" then
 		namMonster = "#{_BOSS36}"
-	elseif namMonster == "°×µÛ" then
+	elseif namMonster == "ç™½å¸" then
 		namMonster = "#{_BOSS37}"
-	elseif namMonster == "Ú¤½«" then
+	elseif namMonster == "å†¥å°†" then
 		namMonster = "#{_BOSS38}"
-	elseif namMonster == "ÑªÒû¿ñµ¶" then
+	elseif namMonster == "è¡€é¥®ç‹‚åˆ€" then
 		namMonster = "#{_BOSS39}"
-	elseif namMonster == "³àÏö" then
+	elseif namMonster == "èµ¤éœ„" then
 		namMonster = "#{_BOSS40}"
-	elseif namMonster == "³àÏö»ð»ê" then
+	elseif namMonster == "èµ¤éœ„ç«é­‚" then
 		namMonster = "#{_BOSS41}"
-	elseif namMonster == "´ºÈýÊ®Äï" then
+	elseif namMonster == "æ˜¥ä¸‰åå¨˜" then
 		namMonster = "#{_BOSS34}"
 	end
 
 
-	--Ò©¶¦ ±»´òËéºó
+	--è¯é¼Ž è¢«æ‰“ç¢ŽåŽ
 	if sceneId == 5 then
 	
 		local sceneId = 5;
@@ -87,13 +87,13 @@ function x502000_OnDie( sceneId, objId, killerId )
 --		AddItemToBox(sceneId, itemBoxId, QUALITY_MUST_BE_CHANGE, 1, 40004414);
 		local growPointType = 775;
 		local ItemBoxId = ItemBoxEnterScene( x, y, growPointType, sceneId, QUALITY_MUST_BE_CHANGE,1, 40004414 )	
-		SetItemBoxMaxGrowTime(sceneId,ItemBoxId,30*60*1000)	--Éè¶¨»ØÊÕÊ±¼ä
+		SetItemBoxMaxGrowTime(sceneId,ItemBoxId,30*60*1000)	--è®¾å®šå›žæ”¶æ—¶é—´
 		
-		local message = format("½­ºþ´«ÎÅ£¬ÒòÕù¶áÁéÒ©µÄ½­ºþÈËÊ¿¹ý¶à£¬µ¼ÖÂÁ¶ÖÆ´ó»¹µ¤µÄÒ©¶¦ËéÁÑ£¬Ò©²ÄÓÖ»Øµ½ÁËÆä³öÉúµÄµØ·½£¬Çë¸÷Î»×ÐÏ¸Ñ°ÕÒ¡£" );	
+		local message = format("æ±Ÿæ¹–ä¼ é—»ï¼Œå› äº‰å¤ºçµè¯çš„æ±Ÿæ¹–äººå£«è¿‡å¤šï¼Œå¯¼è‡´ç‚¼åˆ¶å¤§è¿˜ä¸¹çš„è¯é¼Žç¢Žè£‚ï¼Œè¯æåˆå›žåˆ°äº†å…¶å‡ºç”Ÿçš„åœ°æ–¹ï¼Œè¯·å„ä½ä»”ç»†å¯»æ‰¾ã€‚" );	
 		AddGlobalCountNews( sceneId, message )
 		
-		--Í³¼ÆÐÅÏ¢
-		LuaFnAuditHDXianCaoZhengDuo(sceneId, killerId, "Ò©¶¦ËéÁÑ");
+		--ç»Ÿè®¡ä¿¡æ¯
+		LuaFnAuditHDXianCaoZhengDuo(sceneId, killerId, "è¯é¼Žç¢Žè£‚");
 
 		local actId = 36;
 		
@@ -117,7 +117,7 @@ function x502000_OnDie( sceneId, objId, killerId )
 		SetActivityParam( sceneId, actId, 8, 0 );
 	end
 
-	--²ÝÔ­BOSS
+	--è‰åŽŸBOSS
 	if sceneId == 20 then
 	
 		local randMessage = random(3);
@@ -130,31 +130,31 @@ function x502000_OnDie( sceneId, objId, killerId )
 			message = format("#{_INFOUSR%s}#P#{CaoYuan_Boss_04}", namHuman );
 		end
 		
-		--È«Çò¹«¸æ
+		--å…¨çƒå…¬å‘Š
 		AddGlobalCountNews( sceneId, message )
 
 	
 	end
 	
 	local message;	
-	---±¦²Ø¶´1-4²ã
+	---å®è—æ´ž1-4å±‚
 	if sceneId == 123 or sceneId == 126 or sceneId == 148 or sceneId == 149 then
 	
 		local randMessage = random(3);
 
 		if randMessage == 1 then
-	   		message = format("#G%s#PµÄ#Y%s#P#{BroadMsg_YanWangGuMu_00}#W#{_INFOUSR%s}#P#{BroadMsg_YanWangGuMu_01}#Y%s#P#{BroadMsg_YanWangGuMu_02}", namScene, namMonster, namHuman, namMonster );
+	   		message = format("#G%s#Pçš„#Y%s#P#{BroadMsg_YanWangGuMu_00}#W#{_INFOUSR%s}#P#{BroadMsg_YanWangGuMu_01}#Y%s#P#{BroadMsg_YanWangGuMu_02}", namScene, namMonster, namHuman, namMonster );
 		elseif randMessage == 2 then		
 			message = format("#Y%s#P#{BroadMsg_YanWangGuMu_03}#G%s#P#{BroadMsg_YanWangGuMu_04}#W#{_INFOUSR%s}#P#{BroadMsg_YanWangGuMu_05}", namMonster, namScene, namHuman );
 		else		
 			message = format("#G%s#P#{BroadMsg_06}#W#{_INFOUSR%s}#P#{BroadMsg_07}#Y%s#P#{BroadMsg_08}#Y%s#P#{BroadMsg_09}#W#{_INFOUSR%s}#P#{BroadMsg_10}",namScene, namHuman, namMonster, namMonster, namHuman );
 		end
 		--PrintStr(message)
-		--È«Çò¹«¸æ
+		--å…¨çƒå…¬å‘Š
 		AddGlobalCountNews( sceneId, message )
 	
 	end
-	---±¦²Ø¶´Îå²ã	
+	---å®è—æ´žäº”å±‚	
 	if sceneId == 150 then
 		
 		local randMessage = random(3);
@@ -167,25 +167,25 @@ function x502000_OnDie( sceneId, objId, killerId )
 			message = format("#{BaoZang_MuBoTong_3}#W#{_INFOUSR%s}#P#{BaoZang_MuBoTong_4}#{_INFOUSR%s}#{BaoZang_MuBoTong_5}", namHuman, namHuman );
 		end
 		--PrintStr(message)
-		--È«Çò¹«¸æ
+		--å…¨çƒå…¬å‘Š
 		AddGlobalCountNews( sceneId, message )
 
 	end
 	
-	---ÑàÍõ¹ÅÄ¹
+	---ç‡•çŽ‹å¤å¢“
 	if sceneId >= 159 and sceneId <= 167 then
 	
 		local randMessage = random(3);
 				
 		if randMessage == 1 then
-	   		message = format("#{_INFOUSR%s}#PÓë#Y%s#PÔÚ#G%s#P#{BroadMsg_15}#Y%s#P#{BroadMsg_16}", namHuman, namMonster, namScene, namMonster);
+	   		message = format("#{_INFOUSR%s}#Pä¸Ž#Y%s#Påœ¨#G%s#P#{BroadMsg_15}#Y%s#P#{BroadMsg_16}", namHuman, namMonster, namScene, namMonster);
 		elseif randMessage == 2 then		
-			message = format("#{_INFOUSR%s}#PÔÚ#G%s#P#{BroadMsg_11}#Y%s¡£", namHuman, namScene, namMonster);
+			message = format("#{_INFOUSR%s}#Påœ¨#G%s#P#{BroadMsg_11}#Y%sã€‚", namHuman, namScene, namMonster);
 		else
 			message = format("%s#P#{BroadMsg_12}#G%s#P#{BroadMsg_13}#W#{_INFOUSR%s}#P#{BroadMsg_14}", namMonster, namScene, namHuman);
 		end
 		
-		--È«Çò¹«¸æ
+		--å…¨çƒå…¬å‘Š
 		AddGlobalCountNews( sceneId, message )
 	
 	end

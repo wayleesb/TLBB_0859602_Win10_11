@@ -1,14 +1,14 @@
---ĞŞ×°±¸
+--ä¿®è£…å¤‡
 --805027
 -- [ QUFEI 2007-10-15 15:31 UPDATE BugID 26358 ]
--- ÏûºÄÎïÆ·¶ÔÓ¦±í
-x805027_g_NeedItemBonus={{sqid01=10300000, sqid02=10302000, sqid03=10304000, sqid04=10305000, sfid={ 30505800, 30505801, 30505802, 30505803, 30505804, 30505805, 30505806 }},		-- ñÒÉÙÎ¢£¬2008.5.30¡£Ìí¼Ó30505806ĞÂÃ§Éñ·û7¼¶¿ÉÒÔĞŞÀíµÍ¼¶±ğÉñÆ÷
+-- æ¶ˆè€—ç‰©å“å¯¹åº”è¡¨
+x805027_g_NeedItemBonus={{sqid01=10300000, sqid02=10302000, sqid03=10304000, sqid04=10305000, sfid={ 30505800, 30505801, 30505802, 30505803, 30505804, 30505805, 30505806 }},		-- è¤šå°‘å¾®ï¼Œ2008.5.30ã€‚æ·»åŠ 30505806æ–°è½ç¥ç¬¦7çº§å¯ä»¥ä¿®ç†ä½çº§åˆ«ç¥å™¨
 												 {sqid01=10300001, sqid02=10302001, sqid03=10304001, sqid04=10305001, sfid={ 30505801, 30505802, 30505803, 30505804, 30505805, 30505806 }},
 												 {sqid01=10300002, sqid02=10302002, sqid03=10304002, sqid04=10305002, sfid={ 30505802, 30505803, 30505804, 30505805, 30505806 }},
 												 {sqid01=10300003, sqid02=10302003, sqid03=10304003, sqid04=10305003, sfid={ 30505803, 30505804, 30505805, 30505806 }},
 												 {sqid01=10300004, sqid02=10302004, sqid03=10304004, sqid04=10305004, sfid={ 30505804, 30505805, 30505806 }},
 												 {sqid01=10300005, sqid02=10302005, sqid03=10304005, sqid04=10305005, sfid={ 30505805, 30505806 }},
-												 {sqid01=10300100, sqid02=10300100, sqid03=10300100, sqid04=10300100, sfid={30505806}},		-- ñÒÉÙÎ¢
+												 {sqid01=10300100, sqid02=10300100, sqid03=10300100, sqid04=10300100, sfid={30505806}},		-- è¤šå°‘å¾®
 												 {sqid01=10300101, sqid02=10300101, sqid03=10300101, sqid04=10300101, sfid={30505806}},
 												 {sqid01=10300102, sqid02=10300102, sqid03=10300102, sqid04=10300102, sfid={30505806}},
 												 {sqid01=10301100, sqid02=10301100, sqid03=10301100, sqid04=10301100, sfid={30505806}},
@@ -42,13 +42,13 @@ x805027_g_SHENQI_END = 10399999
 x805027_g_ZHUCAI_INDEX = 0
 x805027_g_Impact_Complete_Repair = 150
 
--- Éñ²ÄÏûºÄµÄÊıÁ¿
+-- ç¥ææ¶ˆè€—çš„æ•°é‡
 x805027_g_ShenCaiCount	= 1
 
 function x805027_OnEquipRepair( sceneId, selfId, itemId)
---Ò»Ğ©Ìõ¼şÅĞ¶Ï
---ĞŞÀí
---Íê³É	
+--ä¸€äº›æ¡ä»¶åˆ¤æ–­
+--ä¿®ç†
+--å®Œæˆ	
 	
 	
 	local price = 0
@@ -71,7 +71,7 @@ function x805027_OnEquipRepair( sceneId, selfId, itemId)
 						
 
 		if type(cailiaoList) ~= "table" or cailiaoList[1] == nil then
-			local strNotice = "¸Ã×°±¸²»Ö§³ÖÔÚÕâÀïĞŞÀí¡£"
+			local strNotice = "è¯¥è£…å¤‡ä¸æ”¯æŒåœ¨è¿™é‡Œä¿®ç†ã€‚"
 			BeginEvent(sceneId)
 			AddText(sceneId, strNotice)
 			EndEvent(sceneId)
@@ -95,7 +95,7 @@ function x805027_OnEquipRepair( sceneId, selfId, itemId)
 		
 		if ItemCount < 1 then
 			BeginEvent(sceneId)
-			local strNotice = "ÄãÈ±ÉÙÖÁÉÙ".."#{_ITEM"..(cailiaoList[1]).."}"
+			local strNotice = "ä½ ç¼ºå°‘è‡³å°‘".."#{_ITEM"..(cailiaoList[1]).."}"
 			AddText(sceneId, strNotice)
 			EndEvent(sceneId)
 			DispatchMissionTips(sceneId,selfId)
@@ -110,7 +110,7 @@ function x805027_OnEquipRepair( sceneId, selfId, itemId)
 
 	if price < 0 then
 		BeginEvent(sceneId)
-		AddText(sceneId,"ÄúµÄ×°±¸µÈ¼¶×ÊÁÏ´íÎó£¬Ä¿Ç°ÎŞ·¨ĞŞÀí")
+		AddText(sceneId,"æ‚¨çš„è£…å¤‡ç­‰çº§èµ„æ–™é”™è¯¯ï¼Œç›®å‰æ— æ³•ä¿®ç†")
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
@@ -122,41 +122,41 @@ function x805027_OnEquipRepair( sceneId, selfId, itemId)
 	ret = DoHighRepair( sceneId, selfId, itemId, price)
 	if ret == -1 then
 		BeginEvent(sceneId)
-		AddText(sceneId,"¸Ã×°±¸ÎŞ·¨ÔÙ´ÎĞŞÀí¡£")
+		AddText(sceneId,"è¯¥è£…å¤‡æ— æ³•å†æ¬¡ä¿®ç†ã€‚")
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
-		Msg2Player(sceneId,selfId,"¸Ã×°±¸ÎŞ·¨ÔÙ´ÎĞŞÀí¡£", 8)
+		Msg2Player(sceneId,selfId,"è¯¥è£…å¤‡æ— æ³•å†æ¬¡ä¿®ç†ã€‚", 8)
 	elseif ret == -2 then
 		BeginEvent(sceneId)
-		AddText(sceneId,"ÄãµÄÒøÁ½²»ÄÜÖ§¸¶ĞŞÀí·ÑÓÃ¡£")
+		AddText(sceneId,"ä½ çš„é“¶ä¸¤ä¸èƒ½æ”¯ä»˜ä¿®ç†è´¹ç”¨ã€‚")
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
-		Msg2Player(sceneId,selfId,"#RÄãµÄÒøÁ½²»ÄÜÖ§¸¶ĞŞÀí·ÑÓÃ¡£", 8)
+		Msg2Player(sceneId,selfId,"#Rä½ çš„é“¶ä¸¤ä¸èƒ½æ”¯ä»˜ä¿®ç†è´¹ç”¨ã€‚", 8)
 	elseif ret == -4 then
 		BeginEvent(sceneId)
-		AddText(sceneId,"ĞŞÀíÊ§°Ü£¬ÄúµÄ×°±¸¿ÉĞŞÀí´ÎÊı£­1¡£")
+		AddText(sceneId,"ä¿®ç†å¤±è´¥ï¼Œæ‚¨çš„è£…å¤‡å¯ä¿®ç†æ¬¡æ•°ï¼1ã€‚")
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
-		Msg2Player(sceneId,selfId,"ĞŞÀíÊ§°Ü£¬ÄúµÄ×°±¸¿ÉĞŞÀí´ÎÊı#R£­1¡£", 8)
+		Msg2Player(sceneId,selfId,"ä¿®ç†å¤±è´¥ï¼Œæ‚¨çš„è£…å¤‡å¯ä¿®ç†æ¬¡æ•°#Rï¼1ã€‚", 8)
 	elseif ret == -5 then
 		BeginEvent(sceneId)
-		AddText(sceneId,"ĞŞÀí¹ı³ÌÖĞ³öÏÖÎ´Öª´íÎó¡£")
+		AddText(sceneId,"ä¿®ç†è¿‡ç¨‹ä¸­å‡ºç°æœªçŸ¥é”™è¯¯ã€‚")
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
-		Msg2Player(sceneId,selfId,"ĞŞÀí¹ı³ÌÖĞ³öÏÖÎ´Öª´íÎó¡£", 8)
+		Msg2Player(sceneId,selfId,"ä¿®ç†è¿‡ç¨‹ä¸­å‡ºç°æœªçŸ¥é”™è¯¯ã€‚", 8)
 	elseif ret == -6 then
 		BeginEvent(sceneId)
-		AddText(sceneId,"ÎïÆ·Ã»ÓĞËğº¦£¬²»ÓÃĞŞÀí¡£")
+		AddText(sceneId,"ç‰©å“æ²¡æœ‰æŸå®³ï¼Œä¸ç”¨ä¿®ç†ã€‚")
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
-		Msg2Player(sceneId,selfId,"ÎïÆ·Ã»ÓĞËğº¦£¬²»ÓÃĞŞÀí¡£", 8)
+		Msg2Player(sceneId,selfId,"ç‰©å“æ²¡æœ‰æŸå®³ï¼Œä¸ç”¨ä¿®ç†ã€‚", 8)
 	elseif ret == 0 then
 		
 		if x805027_g_ZHUCAI_INDEX ~= 0 then
 			local bagbegin = GetBasicBagStartPos(sceneId, selfId)
 			local bagend   = GetBasicBagEndPos(sceneId, selfId)
 			local ItemEX
-			-- »ñµÃµ±Ç°¿ÉÒÔÏûºÄµÄµÚÒ»¸öÉñ²ÄÔÚ±³°üÖĞµÄÎ»ÖÃ	
+			-- è·å¾—å½“å‰å¯ä»¥æ¶ˆè€—çš„ç¬¬ä¸€ä¸ªç¥æåœ¨èƒŒåŒ…ä¸­çš„ä½ç½®	
 			local scbagpos = -1
 			for i=bagbegin, bagend do
 				if LuaFnIsItemAvailable( sceneId, selfId, i ) == 1 then
@@ -170,7 +170,7 @@ function x805027_OnEquipRepair( sceneId, selfId, itemId)
 						
 			if scbagpos == -1 then
 				BeginEvent(sceneId)
-				local strNotice = "ÄãÈ±ÉÙ".."#{_ITEM"..(x805027_g_ZHUCAI_INDEX).."}"
+				local strNotice = "ä½ ç¼ºå°‘".."#{_ITEM"..(x805027_g_ZHUCAI_INDEX).."}"
 				AddText(sceneId, strNotice)
 				EndEvent(sceneId)
 				DispatchMissionTips(sceneId,selfId)
@@ -182,10 +182,10 @@ function x805027_OnEquipRepair( sceneId, selfId, itemId)
 			
 			if res == 0 then
 				BeginEvent(sceneId)
-				AddText(sceneId,"ĞŞÀí¹ı³ÌÖĞ³öÏÖÎ´Öª´íÎó¡£")
+				AddText(sceneId,"ä¿®ç†è¿‡ç¨‹ä¸­å‡ºç°æœªçŸ¥é”™è¯¯ã€‚")
 				EndEvent(sceneId)
 				DispatchMissionTips(sceneId,selfId)
-				Msg2Player(sceneId,selfId,"ĞŞÀí¹ı³ÌÖĞ³öÏÖÎ´Öª´íÎó¡£", 8)
+				Msg2Player(sceneId,selfId,"ä¿®ç†è¿‡ç¨‹ä¸­å‡ºç°æœªçŸ¥é”™è¯¯ã€‚", 8)
 			end
 			
 		end
@@ -193,14 +193,14 @@ function x805027_OnEquipRepair( sceneId, selfId, itemId)
 		LuaFnSendSpecificImpactToUnit( sceneId, selfId, selfId, selfId, x805027_g_Impact_Complete_Repair, 0 )
 			
 		BeginEvent(sceneId)
-		AddText(sceneId,"ĞŞÀí³É¹¦¡£")
+		AddText(sceneId,"ä¿®ç†æˆåŠŸã€‚")
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
-		Msg2Player(sceneId,selfId,"#GĞŞÀí³É¹¦¡£", 8)
+		Msg2Player(sceneId,selfId,"#Gä¿®ç†æˆåŠŸã€‚", 8)
 	end	
 end
 
---¼ÆËãĞŞÀí¼Û¸ñ
+--è®¡ç®—ä¿®ç†ä»·æ ¼
 function x805027_CalRepairPrice( sceneId, selfId, itemId,targetId)
 	
 	local price = GetHighRepairPrice(sceneId, selfId, itemId)

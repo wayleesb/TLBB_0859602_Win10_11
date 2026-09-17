@@ -2,17 +2,17 @@
 x210227_g_ScriptId = 210227
 x210227_g_MissionId = 707
 x210227_g_MissionIdPre = 706
-x210227_g_Name	="¶ÎÑÓÇì"
+x210227_g_Name	="æ®µå»¶åº†"
 x210227_g_MissionKind = 13
 x210227_g_MissionLevel = 8
 x210227_g_IfMissionElite = 0
-x210227_g_IsMissionOkFail = 0		--±äÁ¿µÄµÚ0Î»
-x210227_g_MissionName="ËÍ²¼ÒÂ"
+x210227_g_IsMissionOkFail = 0		--å˜é‡çš„ç¬¬0ä½
+x210227_g_MissionName="é€å¸ƒè¡£"
 x210227_g_MissionInfo="#{event_dali_0038}"
 x210227_g_MissionTarget="#{event_dali_0039}"
-x210227_g_ContinueInfo="  [ÄãÒÑ¾­°Ñ#Y²¼ÒÂ#WËÍµ½#RĞ¡ÆòØ¤#WÊÖÖĞÁËÂğ£¿]"
-x210227_g_MissionComplete="  [àÅ£¬¿´À´ÄãÕâ¸öÄêÇáÈËºÜ²»¼òµ¥°¡¡£]"
-x210227_g_SignPost = {x = 199, z = 256, tip = "Ğ¡ÆòØ¤"}
-x210227_g_Custom	= { {id="¸øĞ¡ÆòØ¤ËÍ²¼ÒÂ£¡",num=1} }
+x210227_g_ContinueInfo="  [ä½ å·²ç»æŠŠ#Yå¸ƒè¡£#Wé€åˆ°#Rå°ä¹ä¸#Wæ‰‹ä¸­äº†å—ï¼Ÿ]"
+x210227_g_MissionComplete="  [å—¯ï¼Œçœ‹æ¥ä½ è¿™ä¸ªå¹´è½»äººå¾ˆä¸ç®€å•å•Šã€‚]"
+x210227_g_SignPost = {x = 199, z = 256, tip = "å°ä¹ä¸"}
+x210227_g_Custom	= { {id="ç»™å°ä¹ä¸é€å¸ƒè¡£ï¼",num=1} }
 x210227_g_MoneyBonus=100
 --MisDescEnd

@@ -1,29 +1,29 @@
---ĞÂÊ¥»ğ´«µİ....
---´ò¹Ö¸±±¾....
+--æ–°åœ£ç«ä¼ é€’....
+--æ‰“æ€ªå‰¯æœ¬....
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x808094_g_ScriptId = 808094
 
-x808094_g_CopySceneType = FUBEN_GODFIRE	--¸±±¾ÀàĞÍ£¬¶¨ÒåÔÚScriptGlobal.luaÀïÃæ
+x808094_g_CopySceneType = FUBEN_GODFIRE	--å‰¯æœ¬ç±»å‹ï¼Œå®šä¹‰åœ¨ScriptGlobal.luaé‡Œé¢
 
-x808094_g_TickTime		= 5			--»Øµ÷½Å±¾µÄÊ±ÖÓÊ±¼ä£¨µ¥Î»£ºÃë/´Î£©
-x808094_g_NoUserTime	= 300		--¸±±¾ÖĞÃ»ÓĞÈËºó¿ÉÒÔ¼ÌĞø±£´æµÄÊ±¼ä£¨µ¥Î»£ºÃë£©
-x808094_g_Fuben_X			= 65		--½øÈë¸±±¾µÄÎ»ÖÃX
-x808094_g_Fuben_Z			= 65		--½øÈë¸±±¾µÄÎ»ÖÃZ
+x808094_g_TickTime		= 5			--å›è°ƒè„šæœ¬çš„æ—¶é’Ÿæ—¶é—´ï¼ˆå•ä½ï¼šç§’/æ¬¡ï¼‰
+x808094_g_NoUserTime	= 300		--å‰¯æœ¬ä¸­æ²¡æœ‰äººåå¯ä»¥ç»§ç»­ä¿å­˜çš„æ—¶é—´ï¼ˆå•ä½ï¼šç§’ï¼‰
+x808094_g_Fuben_X			= 65		--è¿›å…¥å‰¯æœ¬çš„ä½ç½®X
+x808094_g_Fuben_Z			= 65		--è¿›å…¥å‰¯æœ¬çš„ä½ç½®Z
 
 
---¹ÖÎïË¢µã....
+--æ€ªç‰©åˆ·ç‚¹....
 x808094_g_SmallMonsterPos ={ {x=48,z=50},{x=48,z=38},{x=59,z=50},{x=48,z=62},{x=37,z=50} }
 x808094_g_BossMonsterPos ={ x=48, z=50 }
 
---¸±±¾Êı¾İ±í....
+--å‰¯æœ¬æ•°æ®è¡¨....
 x808094_g_FubenDataTbl ={ }
 
 x808094_g_FubenDataTbl[1] =
 {
 
-	NPCName = "ËÕ·É", MissionId = 1002,
-	MonsterName = "ÀºÇò", BossName = "Ğ¡ÇÇÇÇ", BossTitle = "¡°¿ÕÖĞ·ÉÈË¡±", FubenName = "½øÈëÀºÇò³¡",
+	NPCName = "è‹é£", MissionId = 1002,
+	MonsterName = "ç¯®çƒ", BossName = "å°ä¹”ä¹”", BossTitle = "â€œç©ºä¸­é£äººâ€", FubenName = "è¿›å…¥ç¯®çƒåœº",
 	MapFile = "lanqiuchang.nav", AreaFile = "lanqiuchang_area.ini", MonsterFile = "lanqiuchang_monster.ini",
 
 	SmallMonsterId =
@@ -43,8 +43,8 @@ x808094_g_FubenDataTbl[1] =
 x808094_g_FubenDataTbl[2] =
 {
 
-	NPCName = "µ¶Ò¢", MissionId = 1006,
-	MonsterName = "ÅÅÇò", BossName = "Ğ¡ÈïÈï", BossTitle = "¡°²£Á§ÃÀÈË¡±", FubenName = "½øÈëÅÅÇò³¡",
+	NPCName = "åˆ€å°§", MissionId = 1006,
+	MonsterName = "æ’çƒ", BossName = "å°è•Šè•Š", BossTitle = "â€œç»ç’ƒç¾äººâ€", FubenName = "è¿›å…¥æ’çƒåœº",
 	MapFile = "paiqiuchang.nav", AreaFile = "paiqiuchang_area.ini", MonsterFile = "paiqiuchang_monster.ini",
 
 	SmallMonsterId =
@@ -64,8 +64,8 @@ x808094_g_FubenDataTbl[2] =
 x808094_g_FubenDataTbl[3] =
 {
 
-	NPCName = "ÖÜÎŞÎ·", MissionId = 1010,
-	MonsterName = "×ãÇò", BossName = "Ğ¡ÆëÆë", BossTitle = "¡°ÅÌÇò´óÊ¦¡±", FubenName = "½øÈë×ãÇò³¡",
+	NPCName = "å‘¨æ— ç•", MissionId = 1010,
+	MonsterName = "è¶³çƒ", BossName = "å°é½é½", BossTitle = "â€œç›˜çƒå¤§å¸ˆâ€", FubenName = "è¿›å…¥è¶³çƒåœº",
 	MapFile = "zuqiuchang.nav", AreaFile = "zuqiuchang_area.ini", MonsterFile = "zuqiuchang_monster.ini",
 
 	SmallMonsterId =
@@ -84,7 +84,7 @@ x808094_g_FubenDataTbl[3] =
 
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı....
+--ä»»åŠ¡å…¥å£å‡½æ•°....
 --**********************************
 function x808094_OnDefaultEvent( sceneId, selfId, targetId )
 
@@ -99,7 +99,7 @@ function x808094_OnDefaultEvent( sceneId, selfId, targetId )
 		return
 	end
 
-	--¼ì²âÊÇ·ñ¿ÉÒÔ½øÈë¸±±¾....
+	--æ£€æµ‹æ˜¯å¦å¯ä»¥è¿›å…¥å‰¯æœ¬....
 	local ret, msg = x808094_CheckCanEnter( sceneId, selfId, targetId, NumText )
 	if 1 ~= ret then
 		BeginEvent(sceneId)
@@ -109,7 +109,7 @@ function x808094_OnDefaultEvent( sceneId, selfId, targetId )
 		return
 	end
 
-	--½¨Á¢¸±±¾....
+	--å»ºç«‹å‰¯æœ¬....
 	BeginEvent(sceneId)
 		AddText(sceneId,"#{XSHCD_20080418_059}")
 	EndEvent(sceneId)
@@ -120,7 +120,7 @@ function x808094_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş....
+--åˆ—ä¸¾äº‹ä»¶....
 --**********************************
 function x808094_OnEnumerate( sceneId, selfId, targetId )
 
@@ -142,32 +142,32 @@ function x808094_OnEnumerate( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔ½øÈë´Ë¸±±¾....
+--æ£€æµ‹æ˜¯å¦å¯ä»¥è¿›å…¥æ­¤å‰¯æœ¬....
 --**********************************
 function x808094_CheckCanEnter( sceneId, selfId, targetId, fubenType )
 
-	--ÊÇ·ñÓĞ¶ÓÎé....
+	--æ˜¯å¦æœ‰é˜Ÿä¼....
 	if LuaFnHasTeam(sceneId,selfId) ~= 1 then
 		return 0, "#{XSHCD_20080418_053}"
 	end
 
-	--ÊÇ²»ÊÇ¶Ó³¤....
+	--æ˜¯ä¸æ˜¯é˜Ÿé•¿....
 	if GetTeamLeader(sceneId,selfId) ~= selfId then
 		return 0, "#{XSHCD_20080418_054}"
 	end
 
-	--ÈËÊıÊÇ·ñ¹»....
+	--äººæ•°æ˜¯å¦å¤Ÿ....
 	if GetTeamSize(sceneId,selfId) < 3  then
 		return 0, "#{XSHCD_20080418_055}"
 	end
 
-	--ÊÇ·ñ¶¼ÔÚ¸½½ü....
+	--æ˜¯å¦éƒ½åœ¨é™„è¿‘....
 	local NearTeamSize = GetNearTeamCount(sceneId,selfId)
 	if GetTeamSize(sceneId,selfId) ~= NearTeamSize then
 		return 0, "#{XSHCD_20080418_056}"
 	end
 
-	--¼ì²âÊÇ²»ÊÇ´ó¼Ò¶¼ÓĞÈÎÎñ....
+	--æ£€æµ‹æ˜¯ä¸æ˜¯å¤§å®¶éƒ½æœ‰ä»»åŠ¡....
 	local CopySceneData = x808094_g_FubenDataTbl[ fubenType ]
 	for i=0, NearTeamSize-1 do
 
@@ -189,13 +189,13 @@ function x808094_CheckCanEnter( sceneId, selfId, targetId, fubenType )
 end
 
 --**********************************
---´´½¨¸±±¾....
+--åˆ›å»ºå‰¯æœ¬....
 --**********************************
 function x808094_MakeCopyScene( sceneId, selfId, fubenType )
 
 	local fubenData = x808094_g_FubenDataTbl[ fubenType ]
 
-	--¼ÆËã¸±±¾ÖĞ¹ÖµÄµÈ¼¶....
+	--è®¡ç®—å‰¯æœ¬ä¸­æ€ªçš„ç­‰çº§....
 	local mylevel = 0
 	local memId
 	local tempMemlevel = 0
@@ -220,7 +220,7 @@ function x808094_MakeCopyScene( sceneId, selfId, fubenType )
 		mylevel = GetLevel(sceneId, selfId)
 	end
 
-	--¼ÆËãµÈ¼¶¶Î....
+	--è®¡ç®—ç­‰çº§æ®µ....
 	local PlayerMaxLevel = GetHumanMaxLevelLimit()
 	local iniLevel
 	if mylevel < 10 then
@@ -265,12 +265,12 @@ function x808094_MakeCopyScene( sceneId, selfId, fubenType )
 		bossId = bossIdTbl[iniLevel]
 	end
 
-	LuaFnSetCopySceneData_Param(sceneId, 8, monsterId )	--Ğ¡¹ÖID....
+	LuaFnSetCopySceneData_Param(sceneId, 8, monsterId )	--å°æ€ªID....
 	LuaFnSetCopySceneData_Param(sceneId, 9, bossId )		--BOSSID....
-	LuaFnSetCopySceneData_Param(sceneId, 10, mylevel )	--¸±±¾×ÔÊÊÓ¦µÈ¼¶....
-	LuaFnSetCopySceneData_Param(sceneId, 11, 0 )				--É±¹ÖÊı....
+	LuaFnSetCopySceneData_Param(sceneId, 10, mylevel )	--å‰¯æœ¬è‡ªé€‚åº”ç­‰çº§....
+	LuaFnSetCopySceneData_Param(sceneId, 11, 0 )				--æ€æ€ªæ•°....
 	LuaFnSetCopySceneData_Param(sceneId, 12, 0 )				--step....
-	LuaFnSetCopySceneData_Param(sceneId, 13, fubenType )--¸±±¾ÀàĞÍ....
+	LuaFnSetCopySceneData_Param(sceneId, 13, fubenType )--å‰¯æœ¬ç±»å‹....
 
 	LuaFnSetSceneLoad_Area( sceneId, fubenData.AreaFile )
 	LuaFnSetSceneLoad_Monster( sceneId, fubenData.MonsterFile )
@@ -278,9 +278,9 @@ function x808094_MakeCopyScene( sceneId, selfId, fubenType )
 	local bRetSceneID = LuaFnCreateCopyScene(sceneId)
 	BeginEvent(sceneId)
 		if bRetSceneID>0 then
-			AddText(sceneId,"¸±±¾´´½¨³É¹¦£¡");
+			AddText(sceneId,"å‰¯æœ¬åˆ›å»ºæˆåŠŸï¼");
 		else
-			AddText(sceneId,"¸±±¾ÊıÁ¿ÒÑ´ïÉÏÏŞ£¬ÇëÉÔºòÔÙÊÔ£¡");
+			AddText(sceneId,"å‰¯æœ¬æ•°é‡å·²è¾¾ä¸Šé™ï¼Œè¯·ç¨å€™å†è¯•ï¼");
 		end
 	EndEvent(sceneId)
 	DispatchMissionTips(sceneId,selfId)
@@ -288,16 +288,16 @@ function x808094_MakeCopyScene( sceneId, selfId, fubenType )
 end
 
 --**********************************
---¸±±¾ÊÂ¼ş....
+--å‰¯æœ¬äº‹ä»¶....
 --**********************************
 function x808094_OnCopySceneReady( sceneId, destsceneId )
 
-	--½øÈë¸±±¾µÄ¹æÔò
-	-- 1£¬Èç¹ûÕâ¸öÍæ¼ÒÃ»ÓĞ×é¶Ó£¬¾Í´«ËÍÕâ¸öÍæ¼Ò×Ô¼º½øÈë¸±±¾
-	-- 2, Èç¹ûÍæ¼ÒÓĞ¶ÓÎé£¬µ«ÊÇÍæ¼Ò²»ÊÇ¶Ó³¤£¬¾Í´«ËÍ×Ô¼º½øÈë¸±±¾
-	-- 3£¬Èç¹ûÍæ¼ÒÓĞ¶ÓÎé£¬²¢ÇÒÕâ¸öÍæ¼ÒÊÇ¶Ó³¤£¬¾Í´«ËÍ×Ô¼ººÍ¸½½ü¶ÓÓÑÒ»Æğ½øÈ¥
+	--è¿›å…¥å‰¯æœ¬çš„è§„åˆ™
+	-- 1ï¼Œå¦‚æœè¿™ä¸ªç©å®¶æ²¡æœ‰ç»„é˜Ÿï¼Œå°±ä¼ é€è¿™ä¸ªç©å®¶è‡ªå·±è¿›å…¥å‰¯æœ¬
+	-- 2, å¦‚æœç©å®¶æœ‰é˜Ÿä¼ï¼Œä½†æ˜¯ç©å®¶ä¸æ˜¯é˜Ÿé•¿ï¼Œå°±ä¼ é€è‡ªå·±è¿›å…¥å‰¯æœ¬
+	-- 3ï¼Œå¦‚æœç©å®¶æœ‰é˜Ÿä¼ï¼Œå¹¶ä¸”è¿™ä¸ªç©å®¶æ˜¯é˜Ÿé•¿ï¼Œå°±ä¼ é€è‡ªå·±å’Œé™„è¿‘é˜Ÿå‹ä¸€èµ·è¿›å»
 
-	LuaFnSetCopySceneData_Param(destsceneId, 3, sceneId) --ÉèÖÃ¸±±¾Èë¿Ú³¡¾°ºÅ
+	LuaFnSetCopySceneData_Param(destsceneId, 3, sceneId) --è®¾ç½®å‰¯æœ¬å…¥å£åœºæ™¯å·
 	leaderguid  = LuaFnGetCopySceneData_TeamLeader(destsceneId)
 	leaderObjId = LuaFnGuid2ObjId(sceneId,leaderguid)
 
@@ -323,21 +323,21 @@ function x808094_OnCopySceneReady( sceneId, destsceneId )
 end
 
 --**********************************
---¸±±¾³¡¾°¶¨Ê±Æ÷ÊÂ¼ş....
+--å‰¯æœ¬åœºæ™¯å®šæ—¶å™¨äº‹ä»¶....
 --**********************************
 function x808094_OnCopySceneTimer( sceneId, nowTime )
 
 	local nStep = LuaFnGetCopySceneData_Param(sceneId, 12 )
 
-	--Èç¹û¸Õ¿ªÊ¼ÔòË¢Ğ¡¹Ö....
+	--å¦‚æœåˆšå¼€å§‹åˆ™åˆ·å°æ€ª....
 	if nStep == 0 then
 		x808094_CreateSmallMonster( sceneId )
-		LuaFnSetCopySceneData_Param(sceneId, 12, 1 )	--Ôö¼ÓnStep....
+		LuaFnSetCopySceneData_Param(sceneId, 12, 1 )	--å¢åŠ nStep....
 	end
 
-	--Èç¹ûÉ±ËÀÁËBOSSÔòµ¹¼ÆÊ±¹Ø±Õ....
+	--å¦‚æœæ€æ­»äº†BOSSåˆ™å€’è®¡æ—¶å…³é—­....
 	if nStep == 2 then
-		x808094_TipAllHuman( sceneId, "¸±±¾½«ÔÚ30Ãëºó¹Ø±Õ" )
+		x808094_TipAllHuman( sceneId, "å‰¯æœ¬å°†åœ¨30ç§’åå…³é—­" )
 		LuaFnSetCopySceneData_Param(sceneId, 12, 3 )
 	end
 
@@ -346,7 +346,7 @@ function x808094_OnCopySceneTimer( sceneId, nowTime )
 	end
 
 	if nStep == 4 then
-		x808094_TipAllHuman( sceneId, "¸±±¾½«ÔÚ20Ãëºó¹Ø±Õ" )
+		x808094_TipAllHuman( sceneId, "å‰¯æœ¬å°†åœ¨20ç§’åå…³é—­" )
 		LuaFnSetCopySceneData_Param(sceneId, 12, 5 )
 	end
 
@@ -355,16 +355,16 @@ function x808094_OnCopySceneTimer( sceneId, nowTime )
 	end
 
 	if nStep == 6 then
-		x808094_TipAllHuman( sceneId, "¸±±¾½«ÔÚ10Ãëºó¹Ø±Õ" )
+		x808094_TipAllHuman( sceneId, "å‰¯æœ¬å°†åœ¨10ç§’åå…³é—­" )
 		LuaFnSetCopySceneData_Param(sceneId, 12, 7 )
 	end
 
 	if nStep == 7 then
-		x808094_TipAllHuman( sceneId, "¸±±¾½«ÔÚ5Ãëºó¹Ø±Õ" )
+		x808094_TipAllHuman( sceneId, "å‰¯æœ¬å°†åœ¨5ç§’åå…³é—­" )
 		LuaFnSetCopySceneData_Param(sceneId, 12, 8 )
 	end
 
-	--Ê±¼äµ½ÁËÌßÈË....
+	--æ—¶é—´åˆ°äº†è¸¢äºº....
 	if nStep == 8 then
 		local nHumanNum = LuaFnGetCopyScene_HumanCount(sceneId)
 		local oldSceneId = LuaFnGetCopySceneData_Param( sceneId, 3 )
@@ -382,7 +382,7 @@ function x808094_OnCopySceneTimer( sceneId, nowTime )
 end
 
 --**********************************
---¹ÖÎïËÀÍö....
+--æ€ªç‰©æ­»äº¡....
 --**********************************
 function x808094_OnDie( sceneId, objId, killerId )
 
@@ -395,22 +395,22 @@ function x808094_OnDie( sceneId, objId, killerId )
 	local fubenData = x808094_g_FubenDataTbl[ fubenType ]
 
 
-	--Èç¹ûÉ±ËÀµÄÊÇĞ¡¹ÖÔòÔö¼Ó¼ÆÊı....
+	--å¦‚æœæ€æ­»çš„æ˜¯å°æ€ªåˆ™å¢åŠ è®¡æ•°....
 	if szName == fubenData.MonsterName then
 
-		--ÉèÖÃ¸±±¾¼ÆÊı....
+		--è®¾ç½®å‰¯æœ¬è®¡æ•°....
 		local nKillNum = LuaFnGetCopySceneData_Param( sceneId, 11 )
 		nKillNum = nKillNum + 1
-		local str = "ÒÑ»÷°Ü"..szName.."£º"..nKillNum .."/5"
+		local str = "å·²å‡»è´¥"..szName.."ï¼š"..nKillNum .."/5"
 		x808094_TipAllHuman( sceneId, str )
 		LuaFnSetCopySceneData_Param( sceneId, 11, nKillNum )
 
-		--Èç¹ûÉ±¹»ÁËÔò´´½¨´óBOSS....
+		--å¦‚æœæ€å¤Ÿäº†åˆ™åˆ›å»ºå¤§BOSS....
 		if nKillNum == getn(x808094_g_SmallMonsterPos) then
 			x808094_CreateBossMonster( sceneId )
 		end
 
-		--ÎªËùÓĞÈËÉèÖÃÈÎÎñ¼ÆÊı....
+		--ä¸ºæ‰€æœ‰äººè®¾ç½®ä»»åŠ¡è®¡æ•°....
 		local nHumanNum = LuaFnGetCopyScene_HumanCount(sceneId)
 		for i=0, nHumanNum-1  do
 			local PlayerId = LuaFnGetCopyScene_HumanObjId(sceneId, i)
@@ -423,16 +423,16 @@ function x808094_OnDie( sceneId, objId, killerId )
 		end
 
 
-	--Èç¹ûÉ±ËÀµÄÊÇBOSSÔò¹Ø±Õ¸±±¾....
+	--å¦‚æœæ€æ­»çš„æ˜¯BOSSåˆ™å…³é—­å‰¯æœ¬....
 	elseif szName == fubenData.BossName then
 
-		--¹Ø±Õ¸±±¾....
+		--å…³é—­å‰¯æœ¬....
 		LuaFnSetCopySceneData_Param(sceneId, 12, 2 )
 
-		local str = "ÒÑ»÷°Ü"..szName
+		local str = "å·²å‡»è´¥"..szName
 		x808094_TipAllHuman( sceneId, str )
 
-		--ÎªËùÓĞÈËÉèÖÃÈÎÎñ¼ÆÊı....
+		--ä¸ºæ‰€æœ‰äººè®¾ç½®ä»»åŠ¡è®¡æ•°....
 		local nHumanNum = LuaFnGetCopyScene_HumanCount(sceneId)
 		for i=0, nHumanNum-1  do
 			local PlayerId = LuaFnGetCopyScene_HumanObjId(sceneId, i)
@@ -450,11 +450,11 @@ function x808094_OnDie( sceneId, objId, killerId )
 end
 
 --**********************************
---ÓĞÍæ¼Ò½øÈë¸±±¾ÊÂ¼ş....
+--æœ‰ç©å®¶è¿›å…¥å‰¯æœ¬äº‹ä»¶....
 --**********************************
 function x808094_OnPlayerEnter( sceneId, selfId )
 
-	--ÉèÖÃÈÎÎñÍê³É....
+	--è®¾ç½®ä»»åŠ¡å®Œæˆ....
 	local fubenType = LuaFnGetCopySceneData_Param( sceneId, 13 )
 	if fubenType~=1 and fubenType~=2 and fubenType~=3 then
 		return
@@ -466,20 +466,20 @@ function x808094_OnPlayerEnter( sceneId, selfId )
 		SetMissionByIndex( sceneId, selfId, misIndex, 0, 1 )
 	end
 
-	--ÉèÖÃËÀÍöÊÂ¼ş....
+	--è®¾ç½®æ­»äº¡äº‹ä»¶....
 	SetPlayerDefaultReliveInfo( sceneId, selfId, "%10", -1, "0", sceneId, x808094_g_Fuben_X, x808094_g_Fuben_Z )
 
 end
 
 --**********************************
---ÓĞÍæ¼ÒÔÚ¸±±¾ÖĞËÀÍöÊÂ¼ş....
+--æœ‰ç©å®¶åœ¨å‰¯æœ¬ä¸­æ­»äº¡äº‹ä»¶....
 --**********************************
 function x808094_OnHumanDie( sceneId, selfId, killerId )
 	
 end
 
 --**********************************
---ÌáÊ¾ËùÓĞ¸±±¾ÄÚÍæ¼Ò....
+--æç¤ºæ‰€æœ‰å‰¯æœ¬å†…ç©å®¶....
 --**********************************
 function x808094_TipAllHuman( sceneId, Str )
 
@@ -497,7 +497,7 @@ function x808094_TipAllHuman( sceneId, Str )
 end
 
 --**********************************
---´´½¨Ğ¡¹Ö....
+--åˆ›å»ºå°æ€ª....
 --**********************************
 function x808094_CreateSmallMonster( sceneId )
 
@@ -519,7 +519,7 @@ function x808094_CreateSmallMonster( sceneId )
 end
 
 --**********************************
---´´½¨BOSS....
+--åˆ›å»ºBOSS....
 --**********************************
 function x808094_CreateBossMonster( sceneId )
 

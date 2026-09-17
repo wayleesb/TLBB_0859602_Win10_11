@@ -45,11 +45,11 @@ function Carriage_OnEvent(event)
 			return;
 		end
 
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ı£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æœå’ŒNPCçš„è·ç¦»å¤§äºä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if(arg1 == "distance" and tonumber(arg2)>MAX_OBJ_DISTANCE or arg1=="destroy") then
 			this:Hide();
 
-			--È¡Ïû¹ØĞÄ
+			--å–æ¶ˆå…³å¿ƒ
 			StopCareObject_Carriage(objCared);
 		end
 	end
@@ -109,11 +109,11 @@ function Carriage_Quest_Shown()
 		Carriage_Freight_Sell_1_Info : SetText("")
 		Carriage_Freight_Sell_2_Info : SetText("")
 		
-		Carriage_Info1:SetText("¹ÙÆ±Óà¶î:")
+		Carriage_Info1:SetText("å®˜ç¥¨ä½™é¢:")
 		Carriage_Balance:SetProperty("MoneyNumber","");
-		--Carriage_Info2:SetText("äîÔË»·Êı:")
-		Carriage_Info3:SetText("´òÑ¹ÊĞ³¡Ê±»ú:")
-		Carriage_Info4:SetText("ºåÌ§ÊĞ¼ÛÊ±»ú:")
+		--Carriage_Info2:SetText("æ¼•è¿ç¯æ•°:")
+		Carriage_Info3:SetText("æ‰“å‹å¸‚åœºæ—¶æœº:")
+		Carriage_Info4:SetText("å“„æŠ¬å¸‚ä»·æ—¶æœº:")
 
 		this:Show();
 		Carriage_Before_NPC = Get_XParam_INT(1);
@@ -138,7 +138,7 @@ function Carriage_Quest_Shown()
 		objCared = DataPool : GetNPCIDByServerID(xx);
 		AxTrace(0,1,"xx="..xx .. " objCared="..objCared)
 		if objCared == -1 then
-				PushDebugMessage("server´«¹ıÀ´µÄÊı¾İÓĞÎÊÌâ¡£");
+				PushDebugMessage("serverä¼ è¿‡æ¥çš„æ•°æ®æœ‰é—®é¢˜ã€‚");
 				return;
 		end
 		BeginCareObject_Carriage(objCared)
@@ -158,7 +158,7 @@ function Carriage_Quest_Shown()
 		objCared = DataPool : GetNPCIDByServerID(xx);
 		AxTrace(0,1,"xx="..xx .. " objCared="..objCared)
 		if objCared == -1 then
-				PushDebugMessage("server´«¹ıÀ´µÄÊı¾İÓĞÎÊÌâ¡£");
+				PushDebugMessage("serverä¼ è¿‡æ¥çš„æ•°æ®æœ‰é—®é¢˜ã€‚");
 				return;
 		end
 		BeginCareObject_Carriage(objCared)
@@ -168,10 +168,10 @@ function Carriage_Quest_Shown()
 		AxTrace(0,6,"UI_Detail="..UI_Detail);
 		
 		if UI_Detail == 1 then
-			PushDebugMessage("ÄãÒÑ¾­ÓĞ¹ÙÆ±ÔÚÉíÁË£¬»¹²»¿ìÈ¥ÔËËÍ»õÎï£¡");
+			PushDebugMessage("ä½ å·²ç»æœ‰å®˜ç¥¨åœ¨èº«äº†ï¼Œè¿˜ä¸å¿«å»è¿é€è´§ç‰©ï¼");
 
 		elseif UI_Detail == 2 then
-			PushDebugMessage("¸øÄã¹ÙÆ±£¬ÏÖÔÚÄã¾ÍÊÇ´óËÎÃñ¼ääîÔËÊ¹ÁË¡£");
+			PushDebugMessage("ç»™ä½ å®˜ç¥¨ï¼Œç°åœ¨ä½ å°±æ˜¯å¤§å®‹æ°‘é—´æ¼•è¿ä½¿äº†ã€‚");
 			Carriage_Draw : Hide();
 			Carriage_Redeem : Show();
 	
@@ -183,16 +183,16 @@ function Carriage_Quest_Shown()
 			Send_XSCRIPT();
 				
 		elseif UI_Detail == 3 then
-			PushDebugMessage("ÎÒÂíÉÏ¸øÄã¶Ò»»¹ÙÆ±¡£");
+			PushDebugMessage("æˆ‘é©¬ä¸Šç»™ä½ å…‘æ¢å®˜ç¥¨ã€‚");
 				
 		elseif UI_Detail == 4 then
-			PushDebugMessage("ÄãÃ»ÓĞ¹ÙÆ±£¬ÊÇ²»ÄÜ½øĞĞ¶Ò»»µÄ¡£");
+			PushDebugMessage("ä½ æ²¡æœ‰å®˜ç¥¨ï¼Œæ˜¯ä¸èƒ½è¿›è¡Œå…‘æ¢çš„ã€‚");
 				
 		elseif UI_Detail == 5 then
-			PushDebugMessage("ÄãÈ¥¶Ò»»¹ÙÆ±°É£¬±¾´Î½»Ò×ÒÑ¾­³¬ÏŞ¡£");
+			PushDebugMessage("ä½ å»å…‘æ¢å®˜ç¥¨å§ï¼Œæœ¬æ¬¡äº¤æ˜“å·²ç»è¶…é™ã€‚");
 				
 		elseif UI_Detail == 6 then
-			PushDebugMessage("Äã°Ñ¹ÙÆ±Åª¶ªÁË°É£¡");
+			PushDebugMessage("ä½ æŠŠå®˜ç¥¨å¼„ä¸¢äº†å§ï¼");
 		
 		elseif UI_Detail == 7 then
 			
@@ -200,14 +200,14 @@ function Carriage_Quest_Shown()
 			local cargo_name;
 			
 			if cargo == 1 then
-				cargo_name = "ÑÎ"
+				cargo_name = "ç›"
 			elseif cargo == 2 then
-				cargo_name = "Ìú"
+				cargo_name = "é“"
 			elseif cargo == 3 then
-				cargo_name = "Ã×"
+				cargo_name = "ç±³"
 			end
 			
-			PushDebugMessage("ÄãµÄ"..cargo_name.."²ÕÒÑÂú£¡");
+			PushDebugMessage("ä½ çš„"..cargo_name.."èˆ±å·²æ»¡ï¼");
 			
 		elseif UI_Detail == 8 then
 			
@@ -215,24 +215,24 @@ function Carriage_Quest_Shown()
 			local cargo_name;
 			
 			if cargo == 1 then
-				cargo_name = "ÑÎ"
+				cargo_name = "ç›"
 			elseif cargo == 2 then
-				cargo_name = "Ìú"
+				cargo_name = "é“"
 			elseif cargo == 3 then
-				cargo_name = "Ã×"
+				cargo_name = "ç±³"
 			end
-			PushDebugMessage("ÄãÃ»ÓĞ"..cargo_name.."£¡");
+			PushDebugMessage("ä½ æ²¡æœ‰"..cargo_name.."ï¼");
 			
 		elseif UI_Detail == 9 then
 			
 			local time_caoyun = Get_XParam_INT(2);
-			PushDebugMessage("ÀäÈ´Ê±¼äÎ´µ½£¡");
+			PushDebugMessage("å†·å´æ—¶é—´æœªåˆ°ï¼");
 			local Time_Str1 = math.floor(time_caoyun/60);
 			local Time_Str2 = time_caoyun - Time_Str1*60;
-			PushDebugMessage(" " .. math.floor(Time_Str1) .. "·Ö" ..	math.floor(Time_Str2) .."Ãëºó£¬²Å¿ÉÔÙ´ÎÊ¹ÓÃ¸Ã¼¼ÄÜ")
+			PushDebugMessage(" " .. math.floor(Time_Str1) .. "åˆ†" ..	math.floor(Time_Str2) .."ç§’åï¼Œæ‰å¯å†æ¬¡ä½¿ç”¨è¯¥æŠ€èƒ½")
 			
 		elseif UI_Detail == 10 then
-			PushDebugMessage("½ñÌìÊÇ×òÌìµÄÃ÷Ìì£¡");
+			PushDebugMessage("ä»Šå¤©æ˜¯æ˜¨å¤©çš„æ˜å¤©ï¼");
 			
 		elseif UI_Detail == 11 then
 			Refresh_My_Freight()
@@ -243,10 +243,10 @@ function Carriage_Quest_Shown()
 			return
 
 		elseif UI_Detail == 13 then
-			PushDebugMessage("ÄãµÄÈÈÏúÀäÈ´Ê±¼ä½áÊøÁË£¡");
+			PushDebugMessage("ä½ çš„çƒ­é”€å†·å´æ—¶é—´ç»“æŸäº†ï¼");
 			
 		elseif UI_Detail == 14 then
-			PushDebugMessage("ÄãµÄÉ±¼ÛÀäÈ´Ê±¼ä½áÊøÁË£¡");
+			PushDebugMessage("ä½ çš„æ€ä»·å†·å´æ—¶é—´ç»“æŸäº†ï¼");
 
 		end
 				
@@ -277,9 +277,9 @@ function Carriage_Quest_GuanPiao_Show()
 			if CD_Time_Buy < 1 then
 				CD_Time_Buy = 1;
 			end
-			CD_Time_Buy = tostring(math.floor(CD_Time_Buy)).."·Ö";
+			CD_Time_Buy = tostring(math.floor(CD_Time_Buy)).."åˆ†";
 		else
-			CD_Time_Buy = "ÏÖÔÚ¼´¿É"
+			CD_Time_Buy = "ç°åœ¨å³å¯"
 		end
 		Carriage_Down : Disable();
 		
@@ -288,9 +288,9 @@ function Carriage_Quest_GuanPiao_Show()
 			if CD_Time_Sell < 1 then
 				CD_Time_Sell = 1;
 			end
-			CD_Time_Sell = tostring(math.floor(CD_Time_Sell)).."·Ö";
+			CD_Time_Sell = tostring(math.floor(CD_Time_Sell)).."åˆ†";
 		else
-			CD_Time_Sell = "ÏÖÔÚ¼´¿É"
+			CD_Time_Sell = "ç°åœ¨å³å¯"
 		end
 		Carriage_Up : Disable();
 		
@@ -322,13 +322,13 @@ function Carriage_Quest_GuanPiao_Show()
 		Carriage_Freight_Sell_1_Info : SetText("")
 		Carriage_Freight_Sell_2_Info : SetText("")
 		
-		--Carriage_Info2:SetText("äîÔË»·Êı:"..tostring(circle).."»·");
-		Carriage_Info3:SetText("´òÑ¹ÊĞ³¡Ê±»ú:"..CD_Time_Buy)
-		Carriage_Info4:SetText("ºåÌ§ÊĞ¼ÛÊ±»ú:"..CD_Time_Sell)
+		--Carriage_Info2:SetText("æ¼•è¿ç¯æ•°:"..tostring(circle).."ç¯");
+		Carriage_Info3:SetText("æ‰“å‹å¸‚åœºæ—¶æœº:"..CD_Time_Buy)
+		Carriage_Info4:SetText("å“„æŠ¬å¸‚ä»·æ—¶æœº:"..CD_Time_Sell)
 --		Carriage_Enchiridion_Bak : Show();
 		local my_level = Player:GetData( "LEVEL" );
 		Carriage_Enchiridion : Show();
-		Carriage_Enchiridion : SetText("ÈÎÎñ¼¶±ğ:"..my_level.."#r½ñÌìäîÔËµÄ´ÎÊı:"..Get_XParam_INT(6));
+		Carriage_Enchiridion : SetText("ä»»åŠ¡çº§åˆ«:"..my_level.."#rä»Šå¤©æ¼•è¿çš„æ¬¡æ•°:"..Get_XParam_INT(6));
 	
 		Carriage_FreightGroup2_Frame : Hide();
 		Carriage_FreightGroup1_Frame : Hide()
@@ -370,10 +370,10 @@ function Carriage_Trade_Shown()
 end
 
 function Carriage_Trade_Update()
---1¾ÍÊÇÂôÑÎ£¬ÂòÌú¡¢Ã×µÄ
---2¾ÍÊÇÂôÌú£¬ÂòÑÎ¡¢Ã×µÄ
---3¾ÍÊÇÂôÃ×£¬ÂòÑÎ¡¢ÌúµÄ
---4¾ÍÊÇ»õÉÌ£¬É¶¶¼ÂôµÄ
+--1å°±æ˜¯å–ç›ï¼Œä¹°é“ã€ç±³çš„
+--2å°±æ˜¯å–é“ï¼Œä¹°ç›ã€ç±³çš„
+--3å°±æ˜¯å–ç±³ï¼Œä¹°ç›ã€é“çš„
+--4å°±æ˜¯è´§å•†ï¼Œå•¥éƒ½å–çš„
 	local misIndex = mission_index;
 
 	AxTrace(0,1,"Carriage_Trade_Update mission_index="..mission_index)
@@ -393,10 +393,10 @@ function Carriage_Trade_Update()
 		if CD_Time_Buy < 1 then
 			CD_Time_Buy = 1;
 		end
-		CD_Time_Buy = tostring(math.floor(CD_Time_Buy)).."·ÖÖÓºó";
+		CD_Time_Buy = tostring(math.floor(CD_Time_Buy)).."åˆ†é’Ÿå";
 		Carriage_Down : Disable();
 	else
-		CD_Time_Buy = "ÏÖÔÚ¼´¿É"
+		CD_Time_Buy = "ç°åœ¨å³å¯"
 		Carriage_Down : Enable();
 	end
 	
@@ -405,10 +405,10 @@ function Carriage_Trade_Update()
 		if CD_Time_Sell < 1 then
 			CD_Time_Sell = 1;
 		end
-		CD_Time_Sell = tostring(math.floor(CD_Time_Sell)).."·ÖÖÓºó";
+		CD_Time_Sell = tostring(math.floor(CD_Time_Sell)).."åˆ†é’Ÿå";
 		Carriage_Up : Disable();
 	else
-		CD_Time_Sell = "ÏÖÔÚ¼´¿É"
+		CD_Time_Sell = "ç°åœ¨å³å¯"
 		Carriage_Up : Enable();
 	end
 	local Balance = DataPool:GetPlayerMission_Variable(misIndex,5)
@@ -420,8 +420,8 @@ function Carriage_Trade_Update()
 		Carriage_Background_Facia:SetProperty("Image", "set:Carriage4 image:Carriage4_LuoYang");
 		Carriage_Freight_Buy_1_2:Hide();
 		Carriage_Freight_Buy_1_1:Show();
-		Carriage_Freight_Buy_1_1:SetToolTip("ÑÎ£¬²ú×ÔÂåÑô#rµã»÷ÂòÈë#rµ±Ç°¼Û¸ñ: #{_EXCHG"..Get_XParam_INT(2).."}");
-		Carriage_Freight_Buy_1_Info : SetText("ÑÎ")
+		Carriage_Freight_Buy_1_1:SetToolTip("ç›ï¼Œäº§è‡ªæ´›é˜³#rç‚¹å‡»ä¹°å…¥#rå½“å‰ä»·æ ¼: #{_EXCHG"..Get_XParam_INT(2).."}");
+		Carriage_Freight_Buy_1_Info : SetText("ç›")
 		Carriage_Money_Buy_1:SetProperty("MoneyNumber", tostring(Get_XParam_INT(2)));
 		Carriage_Money_Buy_1:Show();
 			
@@ -431,15 +431,15 @@ function Carriage_Trade_Update()
 			
 		Carriage_Freight_Sell_1_1:Hide();
 --			Carriage_Freight_Sell_1_2:Show();
---			Carriage_Freight_Sell_1_2:SetToolTip("Ìú£¬²ú×Ô´óÀí#rµã»÷Âô³ö#rµ±Ç°¼Û¸ñ: #{_MONEY"..Get_XParam_INT(3).."}");
-		Carriage_Freight_Sell_1_Info:SetText("Ìú")
+--			Carriage_Freight_Sell_1_2:SetToolTip("é“ï¼Œäº§è‡ªå¤§ç†#rç‚¹å‡»å–å‡º#rå½“å‰ä»·æ ¼: #{_MONEY"..Get_XParam_INT(3).."}");
+		Carriage_Freight_Sell_1_Info:SetText("é“")
 		Carriage_Money_Sell_1:Show();
 		Carriage_Money_Sell_1:SetProperty("MoneyNumber", tostring(Get_XParam_INT(3)));
 			
 		Carriage_Freight_Sell_2_2:Hide();
 --			Carriage_Freight_Sell_2_3:Show();
---			Carriage_Freight_Sell_2_3:SetToolTip("Ã×£¬²ú×ÔËÕÖİ#rµã»÷Âô³ö#rµ±Ç°¼Û¸ñ: #{_MONEY"..Get_XParam_INT(3).."}");
-		Carriage_Freight_Sell_2_Info : SetText("Ã×")
+--			Carriage_Freight_Sell_2_3:SetToolTip("ç±³ï¼Œäº§è‡ªè‹å·#rç‚¹å‡»å–å‡º#rå½“å‰ä»·æ ¼: #{_MONEY"..Get_XParam_INT(3).."}");
+		Carriage_Freight_Sell_2_Info : SetText("ç±³")
 		Carriage_Money_Sell_2:Show();
 		Carriage_Money_Sell_2:SetProperty("MoneyNumber", tostring(Get_XParam_INT(3)));
 		Sell_Price = Get_XParam_INT(3);
@@ -452,8 +452,8 @@ function Carriage_Trade_Update()
 		Carriage_Background_Facia:SetProperty("Image", "set:Carriage4 image:Carriage4_Dali");
 		Carriage_Freight_Buy_1_1:Hide();
 		Carriage_Freight_Buy_1_2:Show();
-		Carriage_Freight_Buy_1_2:SetToolTip("Ìú£¬²ú×Ô´óÀí#rµã»÷ÂòÈë#rµ±Ç°¼Û¸ñ: #{_EXCHG"..Get_XParam_INT(2).."}");
-		Carriage_Freight_Buy_1_Info : SetText("Ìú")
+		Carriage_Freight_Buy_1_2:SetToolTip("é“ï¼Œäº§è‡ªå¤§ç†#rç‚¹å‡»ä¹°å…¥#rå½“å‰ä»·æ ¼: #{_EXCHG"..Get_XParam_INT(2).."}");
+		Carriage_Freight_Buy_1_Info : SetText("é“")
 		Carriage_Money_Buy_1:SetProperty("MoneyNumber", tostring(Get_XParam_INT(2)));
 		Carriage_Money_Buy_1:Show();
 			
@@ -464,15 +464,15 @@ function Carriage_Trade_Update()
 			
 		Carriage_Freight_Sell_1_2:Hide();
 --			Carriage_Freight_Sell_1_1:Show();
---			Carriage_Freight_Sell_1_1:SetToolTip("ÑÎ£¬²ú×ÔÂåÑô#rµã»÷Âô³ö#rµ±Ç°¼Û¸ñ: #{_MONEY"..Get_XParam_INT(3).."}");
-		Carriage_Freight_Sell_1_Info : SetText("ÑÎ")
+--			Carriage_Freight_Sell_1_1:SetToolTip("ç›ï¼Œäº§è‡ªæ´›é˜³#rç‚¹å‡»å–å‡º#rå½“å‰ä»·æ ¼: #{_MONEY"..Get_XParam_INT(3).."}");
+		Carriage_Freight_Sell_1_Info : SetText("ç›")
 		Carriage_Money_Sell_1:Show()
 		Carriage_Money_Sell_1:SetProperty("MoneyNumber", tostring(Get_XParam_INT(3)));
 			
 		Carriage_Freight_Sell_2_2:Hide();
 --			Carriage_Freight_Sell_2_3:Show();
---			Carriage_Freight_Sell_2_3:SetToolTip("Ã×£¬²ú×ÔËÕÖİ#rµã»÷Âô³ö#rµ±Ç°¼Û¸ñ: #{_MONEY"..Get_XParam_INT(3).."}");
-		Carriage_Freight_Sell_2_Info : SetText("Ã×")
+--			Carriage_Freight_Sell_2_3:SetToolTip("ç±³ï¼Œäº§è‡ªè‹å·#rç‚¹å‡»å–å‡º#rå½“å‰ä»·æ ¼: #{_MONEY"..Get_XParam_INT(3).."}");
+		Carriage_Freight_Sell_2_Info : SetText("ç±³")
 		Carriage_Money_Sell_2:Show();
 		Carriage_Money_Sell_2:SetProperty("MoneyNumber", tostring(Get_XParam_INT(3)));
 		Sell_Price = Get_XParam_INT(3);
@@ -485,8 +485,8 @@ function Carriage_Trade_Update()
 		Carriage_Background_Facia:SetProperty("Image", "set:Carriage4 image:Carriage4_Suzhou");
 		Carriage_Freight_Buy_2_2:Hide();
 		Carriage_Freight_Buy_2_3:Show();
-		Carriage_Freight_Buy_2_3:SetToolTip("Ã×£¬²ú×ÔËÕÖİ#rµã»÷ÂòÈë#rµ±Ç°¼Û¸ñ: #{_EXCHG"..Get_XParam_INT(2).."}");
-		Carriage_Freight_Buy_2_Info : SetText("Ã×")
+		Carriage_Freight_Buy_2_3:SetToolTip("ç±³ï¼Œäº§è‡ªè‹å·#rç‚¹å‡»ä¹°å…¥#rå½“å‰ä»·æ ¼: #{_EXCHG"..Get_XParam_INT(2).."}");
+		Carriage_Freight_Buy_2_Info : SetText("ç±³")
 		Carriage_Money_Buy_2:SetProperty("MoneyNumber", tostring(Get_XParam_INT(2)));
 		Carriage_Money_Buy_2:Show();
 			
@@ -497,15 +497,15 @@ function Carriage_Trade_Update()
 			
 		Carriage_Freight_Sell_1_2:Hide();
 --			Carriage_Freight_Sell_1_1:Show();
---			Carriage_Freight_Sell_1_1:SetToolTip("ÑÎ£¬²ú×ÔÂåÑô#rµã»÷Âô³ö#rµ±Ç°¼Û¸ñ: #{_MONEY"..Get_XParam_INT(3).."}");
-		Carriage_Freight_Sell_1_Info : SetText("ÑÎ")
+--			Carriage_Freight_Sell_1_1:SetToolTip("ç›ï¼Œäº§è‡ªæ´›é˜³#rç‚¹å‡»å–å‡º#rå½“å‰ä»·æ ¼: #{_MONEY"..Get_XParam_INT(3).."}");
+		Carriage_Freight_Sell_1_Info : SetText("ç›")
 		Carriage_Money_Sell_1:Show()
 		Carriage_Money_Sell_1:SetProperty("MoneyNumber", tostring(Get_XParam_INT(3)));
 			
 		Carriage_Freight_Sell_2_3:Hide();
 --			Carriage_Freight_Sell_2_2:Show();
---			Carriage_Freight_Sell_2_2:SetToolTip("Ìú£¬²ú×Ô´óÀí#rµã»÷Âô³ö#rµ±Ç°¼Û¸ñ: #{_MONEY"..Get_XParam_INT(3).."}");
-		Carriage_Freight_Sell_2_Info : SetText("Ìú")
+--			Carriage_Freight_Sell_2_2:SetToolTip("é“ï¼Œäº§è‡ªå¤§ç†#rç‚¹å‡»å–å‡º#rå½“å‰ä»·æ ¼: #{_MONEY"..Get_XParam_INT(3).."}");
+		Carriage_Freight_Sell_2_Info : SetText("é“")
 		Carriage_Money_Sell_2:Show();
 		Carriage_Money_Sell_2:SetProperty("MoneyNumber", tostring(Get_XParam_INT(3)));
 		Sell_Price = Get_XParam_INT(3);
@@ -532,16 +532,16 @@ function Carriage_Trade_Update()
 			Carriage_Freight_Sell_1_1:Hide();
 			Carriage_Freight_Sell_1_2:Hide();
 --				Carriage_Freight_Sell_1_2:Show();
---				Carriage_Freight_Sell_1_2:SetToolTip("Ìú£¬²ú×Ô´óÀí#rµã»÷Âô³ö#rµ±Ç°¼Û¸ñ: #{_MONEY"..Get_XParam_INT(3).."}");
-			Carriage_Freight_Sell_1_Info : SetText("Ìú")
+--				Carriage_Freight_Sell_1_2:SetToolTip("é“ï¼Œäº§è‡ªå¤§ç†#rç‚¹å‡»å–å‡º#rå½“å‰ä»·æ ¼: #{_MONEY"..Get_XParam_INT(3).."}");
+			Carriage_Freight_Sell_1_Info : SetText("é“")
 			Carriage_Money_Sell_1:Show()
 			Carriage_Money_Sell_1:SetProperty("MoneyNumber", tostring(Get_XParam_INT(3)));
 				
 			Carriage_Freight_Sell_2_3:Hide();
 			Carriage_Freight_Sell_2_2:Hide();
 --				Carriage_Freight_Sell_2_3:Show();
---				Carriage_Freight_Sell_2_3:SetToolTip("Ã×£¬²ú×ÔËÕÖİ#rµã»÷Âô³ö#rµ±Ç°¼Û¸ñ: #{_MONEY"..Get_XParam_INT(3).."}");
-			Carriage_Freight_Sell_2_Info : SetText("Ã×")
+--				Carriage_Freight_Sell_2_3:SetToolTip("ç±³ï¼Œäº§è‡ªè‹å·#rç‚¹å‡»å–å‡º#rå½“å‰ä»·æ ¼: #{_MONEY"..Get_XParam_INT(3).."}");
+			Carriage_Freight_Sell_2_Info : SetText("ç±³")
 			Carriage_Money_Sell_2:Show();
 			Carriage_Money_Sell_2:SetProperty("MoneyNumber", tostring(Get_XParam_INT(3)));
 			Sell_Price = Get_XParam_INT(3);
@@ -564,16 +564,16 @@ function Carriage_Trade_Update()
 			Carriage_Freight_Sell_1_2:Hide();
 			Carriage_Freight_Sell_1_1:Hide();
 --				Carriage_Freight_Sell_1_1:Show();
---				Carriage_Freight_Sell_1_1:SetToolTip("ÑÎ£¬²ú×ÔÂåÑô#rµã»÷Âô³ö#rµ±Ç°¼Û¸ñ: #{_MONEY"..Get_XParam_INT(3).."}");
-			Carriage_Freight_Sell_1_Info : SetText("ÑÎ")
+--				Carriage_Freight_Sell_1_1:SetToolTip("ç›ï¼Œäº§è‡ªæ´›é˜³#rç‚¹å‡»å–å‡º#rå½“å‰ä»·æ ¼: #{_MONEY"..Get_XParam_INT(3).."}");
+			Carriage_Freight_Sell_1_Info : SetText("ç›")
 			Carriage_Money_Sell_1:Show()
 			Carriage_Money_Sell_1:SetProperty("MoneyNumber", tostring(Get_XParam_INT(3)));
 				
 			Carriage_Freight_Sell_2_2:Hide();
 			Carriage_Freight_Sell_2_3:Hide();
 --				Carriage_Freight_Sell_2_3:Show();
---				Carriage_Freight_Sell_2_3:SetToolTip("Ã×£¬²ú×ÔËÕÖİ#rµã»÷Âô³ö#rµ±Ç°¼Û¸ñ: #{_MONEY"..Get_XParam_INT(3).."}");
-			Carriage_Freight_Sell_2_Info : SetText("Ã×")
+--				Carriage_Freight_Sell_2_3:SetToolTip("ç±³ï¼Œäº§è‡ªè‹å·#rç‚¹å‡»å–å‡º#rå½“å‰ä»·æ ¼: #{_MONEY"..Get_XParam_INT(3).."}");
+			Carriage_Freight_Sell_2_Info : SetText("ç±³")
 			Carriage_Money_Sell_2:Show();
 			Carriage_Money_Sell_2:SetProperty("MoneyNumber", tostring(Get_XParam_INT(3)));
 			Sell_Price = Get_XParam_INT(3);
@@ -596,16 +596,16 @@ function Carriage_Trade_Update()
 			Carriage_Freight_Sell_1_2:Hide();
 			Carriage_Freight_Sell_1_1:Hide();
 --				Carriage_Freight_Sell_1_1:Show();
---				Carriage_Freight_Sell_1_1:SetToolTip("ÑÎ£¬²ú×ÔÂåÑô#rµã»÷Âô³ö#rµ±Ç°¼Û¸ñ: #{_MONEY"..Get_XParam_INT(3).."}");
-			Carriage_Freight_Sell_1_Info : SetText("ÑÎ")
+--				Carriage_Freight_Sell_1_1:SetToolTip("ç›ï¼Œäº§è‡ªæ´›é˜³#rç‚¹å‡»å–å‡º#rå½“å‰ä»·æ ¼: #{_MONEY"..Get_XParam_INT(3).."}");
+			Carriage_Freight_Sell_1_Info : SetText("ç›")
 			Carriage_Money_Sell_1:Show()
 			Carriage_Money_Sell_1:SetProperty("MoneyNumber", tostring(Get_XParam_INT(3)));
 				
 			Carriage_Freight_Sell_2_3:Hide();
 			Carriage_Freight_Sell_2_2:Hide();
 --				Carriage_Freight_Sell_2_2:Show();
---				Carriage_Freight_Sell_2_2:SetToolTip("Ìú£¬²ú×Ô´óÀí#rµã»÷Âô³ö#rµ±Ç°¼Û¸ñ: #{_MONEY"..Get_XParam_INT(3).."}");
-			Carriage_Freight_Sell_2_Info : SetText("Ìú")
+--				Carriage_Freight_Sell_2_2:SetToolTip("é“ï¼Œäº§è‡ªå¤§ç†#rç‚¹å‡»å–å‡º#rå½“å‰ä»·æ ¼: #{_MONEY"..Get_XParam_INT(3).."}");
+			Carriage_Freight_Sell_2_Info : SetText("é“")
 			Carriage_Money_Sell_2:Show();
 			Carriage_Money_Sell_2:SetProperty("MoneyNumber", tostring(Get_XParam_INT(3)));
 			Sell_Price = Get_XParam_INT(3);
@@ -617,11 +617,11 @@ function Carriage_Trade_Update()
 
 	end
 
-	Carriage_Info1:SetText("¹ÙÆ±Óà¶î:")
+	Carriage_Info1:SetText("å®˜ç¥¨ä½™é¢:")
 	Carriage_Balance:SetProperty("MoneyNumber",tostring(Balance));
-	--Carriage_Info2:SetText("äîÔË»·Êı:"..Round.."»·")
-	Carriage_Info3:SetText("´òÑ¹ÊĞ³¡Ê±»ú:"..CD_Time_Buy)
-	Carriage_Info4:SetText("ºåÌ§ÊĞ¼ÛÊ±»ú:"..CD_Time_Sell)
+	--Carriage_Info2:SetText("æ¼•è¿ç¯æ•°:"..Round.."ç¯")
+	Carriage_Info3:SetText("æ‰“å‹å¸‚åœºæ—¶æœº:"..CD_Time_Buy)
+	Carriage_Info4:SetText("å“„æŠ¬å¸‚ä»·æ—¶æœº:"..CD_Time_Sell)
 		
 	Carriage_Freight_Sell_1_1:Hide();
 	Carriage_Freight_Sell_1_2:Hide();
@@ -646,10 +646,10 @@ function Carriage_Trade_Update_Price(misIndex,nPrice_UpOrDown)
 			if CD_Time_Buy < 1 then
 				CD_Time_Buy = 1;
 			end
-			CD_Time_Buy = tostring(math.floor(CD_Time_Buy)).."·ÖÖÓºó";
+			CD_Time_Buy = tostring(math.floor(CD_Time_Buy)).."åˆ†é’Ÿå";
 			Carriage_Down : Disable();
 		else
-			CD_Time_Buy = "ÏÖÔÚ¼´¿É"
+			CD_Time_Buy = "ç°åœ¨å³å¯"
 			Carriage_Down : Enable();
 		end
 		
@@ -658,23 +658,23 @@ function Carriage_Trade_Update_Price(misIndex,nPrice_UpOrDown)
 			if CD_Time_Sell < 1 then
 				CD_Time_Sell = 1;
 			end
-			CD_Time_Sell = tostring(math.floor(CD_Time_Sell)).."·ÖÖÓºó";
+			CD_Time_Sell = tostring(math.floor(CD_Time_Sell)).."åˆ†é’Ÿå";
 			Carriage_Up : Disable();
 		else
-			CD_Time_Sell = "ÏÖÔÚ¼´¿É"
+			CD_Time_Sell = "ç°åœ¨å³å¯"
 			Carriage_Up : Enable();
 		end
 		if nTransNPC == 1 or nTransNPC == 2 or nTransNPC == 3 then
-			Carriage_Info3:SetText("´òÑ¹ÊĞ³¡Ê±»ú:"..CD_Time_Buy)
-			Carriage_Info4:SetText("ºåÌ§ÊĞ¼ÛÊ±»ú:"..CD_Time_Sell)
+			Carriage_Info3:SetText("æ‰“å‹å¸‚åœºæ—¶æœº:"..CD_Time_Buy)
+			Carriage_Info4:SetText("å“„æŠ¬å¸‚ä»·æ—¶æœº:"..CD_Time_Sell)
 			if nPrice_UpOrDown == Price_Up then
 
 				Price = DataPool:GetPlayerMission_Variable(misIndex,Price_Up)
 				
-				Carriage_Freight_Sell_1_1:SetToolTip("¼Û¸ñ:"..Price);
-				Carriage_Freight_Sell_1_2:SetToolTip("¼Û¸ñ:"..Price);
-				Carriage_Freight_Sell_2_2:SetToolTip("¼Û¸ñ:"..Price);
-				Carriage_Freight_Sell_2_3:SetToolTip("¼Û¸ñ:"..Price);
+				Carriage_Freight_Sell_1_1:SetToolTip("ä»·æ ¼:"..Price);
+				Carriage_Freight_Sell_1_2:SetToolTip("ä»·æ ¼:"..Price);
+				Carriage_Freight_Sell_2_2:SetToolTip("ä»·æ ¼:"..Price);
+				Carriage_Freight_Sell_2_3:SetToolTip("ä»·æ ¼:"..Price);
 				Carriage_Money_Sell_1:Show()
 				Carriage_Money_Sell_2:Show()
 				Carriage_Money_Sell_1:SetProperty("MoneyNumber", tostring(Price));
@@ -683,11 +683,11 @@ function Carriage_Trade_Update_Price(misIndex,nPrice_UpOrDown)
 				Sell_Price = Price;
 
 --				if nTransNPC == 1 then
---					Carriage_Freight_Buy_1_1:SetToolTip("ÑÎ£¬²ú×ÔÂåÑô#rµã»÷ÂòÈë#rµ±Ç°¼Û¸ñ:"..Price);
+--					Carriage_Freight_Buy_1_1:SetToolTip("ç›ï¼Œäº§è‡ªæ´›é˜³#rç‚¹å‡»ä¹°å…¥#rå½“å‰ä»·æ ¼:"..Price);
 --				elseif nTransNPC == 2 then
---					Carriage_Freight_Buy_1_2:SetToolTip("Ìú£¬²ú×Ô´óÀí#rµã»÷ÂòÈë#rµ±Ç°¼Û¸ñ:"..Price);
+--					Carriage_Freight_Buy_1_2:SetToolTip("é“ï¼Œäº§è‡ªå¤§ç†#rç‚¹å‡»ä¹°å…¥#rå½“å‰ä»·æ ¼:"..Price);
 --				elseif nTransNPC == 3 then
---					Carriage_Freight_Buy_2_3:SetToolTip("Ã×£¬²ú×ÔËÕÖİ#rµã»÷ÂòÈë#rµ±Ç°¼Û¸ñ:"..Price);
+--					Carriage_Freight_Buy_2_3:SetToolTip("ç±³ï¼Œäº§è‡ªè‹å·#rç‚¹å‡»ä¹°å…¥#rå½“å‰ä»·æ ¼:"..Price);
 --				end
 
 			elseif nPrice_UpOrDown == Price_Down then
@@ -695,11 +695,11 @@ function Carriage_Trade_Update_Price(misIndex,nPrice_UpOrDown)
 				Price = DataPool:GetPlayerMission_Variable(misIndex,Price_Down)
 	
 				if nTransNPC == 1 then
-					Carriage_Freight_Buy_1_1:SetToolTip("ÑÎ£¬²ú×ÔÂåÑô#rµã»÷ÂòÈë#rµ±Ç°¼Û¸ñ: #{_EXCHG"..Price.."}");
+					Carriage_Freight_Buy_1_1:SetToolTip("ç›ï¼Œäº§è‡ªæ´›é˜³#rç‚¹å‡»ä¹°å…¥#rå½“å‰ä»·æ ¼: #{_EXCHG"..Price.."}");
 				elseif nTransNPC == 2 then
-					Carriage_Freight_Buy_1_2:SetToolTip("Ìú£¬²ú×Ô´óÀí#rµã»÷ÂòÈë#rµ±Ç°¼Û¸ñ: #{_EXCHG"..Price.."}");
+					Carriage_Freight_Buy_1_2:SetToolTip("é“ï¼Œäº§è‡ªå¤§ç†#rç‚¹å‡»ä¹°å…¥#rå½“å‰ä»·æ ¼: #{_EXCHG"..Price.."}");
 				elseif nTransNPC == 3 then
-					Carriage_Freight_Buy_2_3:SetToolTip("Ã×£¬²ú×ÔËÕÖİ#rµã»÷ÂòÈë#rµ±Ç°¼Û¸ñ: #{_EXCHG"..Price.."}");
+					Carriage_Freight_Buy_2_3:SetToolTip("ç±³ï¼Œäº§è‡ªè‹å·#rç‚¹å‡»ä¹°å…¥#rå½“å‰ä»·æ ¼: #{_EXCHG"..Price.."}");
 				end
 				
 				if nTransNPC == 3 then
@@ -715,10 +715,10 @@ function Carriage_Trade_Update_Price(misIndex,nPrice_UpOrDown)
 
 				Price = DataPool:GetPlayerMission_Variable(misIndex,0)
 				
-				Carriage_Freight_Sell_1_1:SetToolTip("¼Û¸ñ:"..Price);
-				Carriage_Freight_Sell_1_2:SetToolTip("¼Û¸ñ:"..Price);
-				Carriage_Freight_Sell_2_2:SetToolTip("¼Û¸ñ:"..Price);
-				Carriage_Freight_Sell_2_3:SetToolTip("¼Û¸ñ:"..Price);
+				Carriage_Freight_Sell_1_1:SetToolTip("ä»·æ ¼:"..Price);
+				Carriage_Freight_Sell_1_2:SetToolTip("ä»·æ ¼:"..Price);
+				Carriage_Freight_Sell_2_2:SetToolTip("ä»·æ ¼:"..Price);
+				Carriage_Freight_Sell_2_3:SetToolTip("ä»·æ ¼:"..Price);
 				Carriage_Money_Sell_1:Show()
 				Carriage_Money_Sell_2:Show()
 				Carriage_Money_Sell_1:SetProperty("MoneyNumber", tostring(Price));
@@ -726,8 +726,8 @@ function Carriage_Trade_Update_Price(misIndex,nPrice_UpOrDown)
 				
 				Sell_Price = Price;
 				
-				Carriage_Info3:SetText("´òÑ¹ÊĞ³¡Ê±»ú:"..CD_Time_Buy)
-				Carriage_Info4:SetText("ºåÌ§ÊĞ¼ÛÊ±»ú:"..CD_Time_Sell)
+				Carriage_Info3:SetText("æ‰“å‹å¸‚åœºæ—¶æœº:"..CD_Time_Buy)
+				Carriage_Info4:SetText("å“„æŠ¬å¸‚ä»·æ—¶æœº:"..CD_Time_Sell)
 
 			end
 		end
@@ -769,16 +769,16 @@ function Carriage_Action_Clicked(nIndex)
 	local Send_Msg;
 	local Text_Goods = {}
 	
-	Text_Goods[1] = "ÑÎ"
-	Text_Goods[2] = "Ìú"
-	Text_Goods[3] = "Ã×"
+	Text_Goods[1] = "ç›"
+	Text_Goods[2] = "é“"
+	Text_Goods[3] = "ç±³"
 	
 	if nIndex < 1 then
 		return ;
 	end
 	
 	if Current == 100 then
-		PushDebugMessage("²»ÄÜÍ¨¹ı»õ²Õ½øĞĞ¸Ã²Ù×÷£¡")
+		PushDebugMessage("ä¸èƒ½é€šè¿‡è´§èˆ±è¿›è¡Œè¯¥æ“ä½œï¼")
 		return;
 	end
 
@@ -790,11 +790,11 @@ function Carriage_Action_Clicked(nIndex)
 	if nIndex>= 10 then
 		if (nIndex / 10) == nTransNPC then
 			
-			PushDebugMessage("´Ë´¦²»ÊÕ¹º"..Text_Goods[nTransNPC]);
+			PushDebugMessage("æ­¤å¤„ä¸æ”¶è´­"..Text_Goods[nTransNPC]);
 			return ;
 		end
 	end
---ÒÔÏÂÊÇÒ»¶ÎÕä¹óµÄ´úÂë£¬ÏëÁËºÃ¾Ã²Å¸ã³öÀ´µÄ£¬ Çë²»ÒªÉ¾³ı¡£
+--ä»¥ä¸‹æ˜¯ä¸€æ®µçè´µçš„ä»£ç ï¼Œæƒ³äº†å¥½ä¹…æ‰æå‡ºæ¥çš„ï¼Œ è¯·ä¸è¦åˆ é™¤ã€‚
 --	if nTransNPC == 2 then
 --			if nIndex == 1 then
 --		 		Send_Msg = 2;
@@ -853,7 +853,7 @@ function Convert_Writ()
 		local Cargo = DataPool:GetPlayerMission_Variable(mission_index,2)
 		
 		if Cargo > 0 then
-			PushDebugMessage("Çå²Õºó²ÅÄÜ¶Ò»»¹ÙÆ±¡£")
+			PushDebugMessage("æ¸…èˆ±åæ‰èƒ½å…‘æ¢å®˜ç¥¨ã€‚")
 			return
 		end
 --	if Current == 3 then
@@ -879,7 +879,7 @@ function Refresh_My_Freight()
 		Carriage_Freight5:Hide();
 	else
 		Carriage_Freight5:Show();
-		Carriage_Freight5:SetToolTip("ÑÎ£¬²ú×ÔÂåÑô#rµã»÷Âô³ö#rµ±Ç°¼Û¸ñ: #{_EXCHG"..Sell_Price.."}");
+		Carriage_Freight5:SetToolTip("ç›ï¼Œäº§è‡ªæ´›é˜³#rç‚¹å‡»å–å‡º#rå½“å‰ä»·æ ¼: #{_EXCHG"..Sell_Price.."}");
 	end
 		
 	Cargo_Standard = 10
@@ -887,7 +887,7 @@ function Refresh_My_Freight()
 		Carriage_Freight6:Hide();
 	else
 		Carriage_Freight6:Show();
-		Carriage_Freight6:SetToolTip("Ìú£¬²ú×Ô´óÀí#rµã»÷Âô³ö#rµ±Ç°¼Û¸ñ: #{_EXCHG"..Sell_Price.."}");
+		Carriage_Freight6:SetToolTip("é“ï¼Œäº§è‡ªå¤§ç†#rç‚¹å‡»å–å‡º#rå½“å‰ä»·æ ¼: #{_EXCHG"..Sell_Price.."}");
 	end
 		
 	Cargo_Standard = 1
@@ -895,23 +895,23 @@ function Refresh_My_Freight()
 		Carriage_Freight7:Hide();
 	else
 		Carriage_Freight7:Show();
-		Carriage_Freight7:SetToolTip("Ã×£¬²ú×ÔËÕÖİ#rµã»÷Âô³ö#rµ±Ç°¼Û¸ñ: #{_EXCHG"..Sell_Price.."}");
+		Carriage_Freight7:SetToolTip("ç±³ï¼Œäº§è‡ªè‹å·#rç‚¹å‡»å–å‡º#rå½“å‰ä»·æ ¼: #{_EXCHG"..Sell_Price.."}");
 	end
 	
-	Carriage_Info1:SetText("¹ÙÆ±Óà¶î:")
+	Carriage_Info1:SetText("å®˜ç¥¨ä½™é¢:")
 	Carriage_Balance:SetProperty("MoneyNumber",tostring(Balance));
 	local Round = DataPool:GetPlayerMission_DataRound(Caoyun_Circle);
 
-	--Carriage_Info2:SetText("äîÔË»·Êı:"..Round.."»·")
+	--Carriage_Info2:SetText("æ¼•è¿ç¯æ•°:"..Round.."ç¯")
 	this:Show();
 
 end
 
 
 --=========================================================
---¿ªÊ¼¹ØĞÄNPC£¬
---ÔÚ¿ªÊ¼¹ØĞÄÖ®Ç°ĞèÒªÏÈÈ·¶¨Õâ¸ö½çÃæÊÇ²»ÊÇÒÑ¾­ÓĞ¡°¹ØĞÄ¡±µÄNPC£¬
---Èç¹ûÓĞµÄ»°£¬ÏÈÈ¡ÏûÒÑ¾­ÓĞµÄ¡°¹ØĞÄ¡±
+--å¼€å§‹å…³å¿ƒNPCï¼Œ
+--åœ¨å¼€å§‹å…³å¿ƒä¹‹å‰éœ€è¦å…ˆç¡®å®šè¿™ä¸ªç•Œé¢æ˜¯ä¸æ˜¯å·²ç»æœ‰â€œå…³å¿ƒâ€çš„NPCï¼Œ
+--å¦‚æœæœ‰çš„è¯ï¼Œå…ˆå–æ¶ˆå·²ç»æœ‰çš„â€œå…³å¿ƒâ€
 --=========================================================
 function BeginCareObject_Carriage(objCaredId)
 
@@ -922,7 +922,7 @@ function BeginCareObject_Carriage(objCaredId)
 end
 
 --=========================================================
---Í£Ö¹¶ÔÄ³NPCµÄ¹ØĞÄ
+--åœæ­¢å¯¹æŸNPCçš„å…³å¿ƒ
 --=========================================================
 function StopCareObject_Carriage(objCaredId)
 	this:CareObject(objCaredId, 0, "Carriage");
@@ -932,12 +932,12 @@ end
 
 function Close_Carriage()
 	this:Hide();
-	--È¡Ïû¹ØĞÄ
+	--å–æ¶ˆå…³å¿ƒ
 	StopCareObject_Carriage(objCared);
 end
 
 function Abandon_Carriage()
-	DataPool:Mission_Abnegate_Special_Quest_Popup(311010,"äîÔË");
+	DataPool:Mission_Abnegate_Special_Quest_Popup(311010,"æ¼•è¿");
 	this:Hide();
 end
 

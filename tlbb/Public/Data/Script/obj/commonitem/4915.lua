@@ -1,70 +1,70 @@
---ע�⣺
+--注意：
 
---��Ʒ���ܵ��߼�ֻ��ʹ�û������ܺͽű���ʵ��
+--物品技能的逻辑只能使用基础技能和脚本来实现
 
 
---�ű�:
+--脚本:
 
---�����ǽű�����:
+--以下是脚本样例:
 
 
 --4915.lua
 ------------------------------------------------------------------------------------------
---һ����Ʒ��Ĭ�Ͻű�
+--一般物品的默认脚本
 
---�ű���
-x334915_g_scriptId = 334915 --��ʱд���,�����õ�ʱ��һ��Ҫ��.
+--脚本号
+x334915_g_scriptId = 334915 --临时写这个,真正用的时候一定要改.
 
---��Ҫ�ĵȼ�
+--需要的等级
 x334915_g_levelRequire = 1
---AE��Χ�뾶
+--AE范围半径
 x334915_g_radiusAE = 3.0
---AE��Ŀ���ϵ���
-x334915_g_standFlag = 1 -- 2:���ѣ� 1���Ѿ��� -1���о�
---AEӰ����Ŀ����
-x334915_g_effectCount = 4 -- -1:������
---Ч����ID
-x334915_g_Impact1 = 4915 --��ʱд���
-x334915_g_Impact2 = -1 --����
+--AE的目标关系标记
+x334915_g_standFlag = 1 -- 2:队友， 1：友军， -1：敌军
+--AE影响数目限制
+x334915_g_effectCount = 4 -- -1:不限制
+--效果的ID
+x334915_g_Impact1 = 4915 --临时写这个
+x334915_g_Impact2 = -1 --不用
 
 --**********************************
---�¼��������
+--事件交互入口
 --**********************************
 function x334915_OnDefaultEvent( sceneId, selfId, bagIndex )
--- ����Ҫ����ӿڣ���Ҫ�����պ���
+-- 不需要这个接口，但要保留空函数
 end
 
 --**********************************
---�����Ʒ��ʹ�ù����Ƿ������ڼ��ܣ�
---ϵͳ����ִ�п�ʼʱ�����������ķ���ֵ���������ʧ������Ժ�������Ƽ��ܵ�ִ�С�
---����1���������Ƶ���Ʒ�����Լ������Ƽ��ܵ�ִ�У�����0�����Ժ���Ĳ�����
+--这个物品的使用过程是否类似于技能：
+--系统会在执行开始时检测这个函数的返回值，如果返回失败则忽略后面的类似技能的执行。
+--返回1：技能类似的物品，可以继续类似技能的执行；返回0：忽略后面的操作。
 --**********************************
 function x334915_IsSkillLikeScript( sceneId, selfId)
-	return 1; --����ű���Ҫ����֧��
+	return 1; --这个脚本需要动作支持
 end
 
 --**********************************
---ֱ��ȡ��Ч����
---ϵͳ��ֱ�ӵ�������ӿڣ���������������ķ���ֵȷ���Ժ�������Ƿ�ִ�С�
---����1���Ѿ�ȡ����ӦЧ��������ִ�к�������������0��û�м�⵽���Ч��������ִ�С�
+--直接取消效果：
+--系统会直接调用这个接口，并根据这个函数的返回值确定以后的流程是否执行。
+--返回1：已经取消对应效果，不再执行后续操作；返回0：没有检测到相关效果，继续执行。
 --**********************************
 function x334915_CancelImpacts( sceneId, selfId )
-	return 0; --����Ҫ����ӿڣ���Ҫ�����պ���,����ʼ�շ���0��
+	return 0; --不需要这个接口，但要保留空函数,并且始终返回0。
 end
 
 --**********************************
---���������ڣ�
---ϵͳ���ڼ��ܼ���ʱ����������ӿڣ���������������ķ���ֵȷ���Ժ�������Ƿ�ִ�С�
---����1���������ͨ�������Լ���ִ�У�����0���������ʧ�ܣ��жϺ���ִ�С�
+--条件检测入口：
+--系统会在技能检测的时间点调用这个接口，并根据这个函数的返回值确定以后的流程是否执行。
+--返回1：条件检测通过，可以继续执行；返回0：条件检测失败，中断后续执行。
 --**********************************
 function x334915_OnConditionCheck( sceneId, selfId )
-	--У��ʹ�õ���Ʒ
+	--校验使用的物品
 	if(1~=LuaFnVerifyUsedItem(sceneId, selfId)) then
 		return 0
 	end
 	local targetId = LuaFnGetTargetObjID(sceneId, selfId)
 	if(0<=targetId) then
-		-- Ŀ��������Ѿ��ļ��
+		-- 目标必须是友军的检测
 		if LuaFnIsFriend(sceneId, targetId, selfId) ~= 1 then
 			LuaFnSendOResultToPlayer(sceneId, selfId, OR_INVALID_TARGET)
 			return 0;
@@ -83,17 +83,17 @@ function x334915_OnConditionCheck( sceneId, selfId )
       return 0;                                            
     end 
        
-		-- Ŀ������ǵо��ļ��
+		-- 目标必须是敌军的检测
 --		if(1~=LuaFnUnitIsEnemy(sceneId, selfId, targetId)) then
 --			LuaFnSendOResultToPlayer(sceneId, selfId, OR_INVALID_TARGET)
 --			return 0;
 --		end
-		-- Ŀ������Ƕ��ѵļ��
+		-- 目标必须是队友的检测
 --		if(1~=LuaFnUnitIsPartner(sceneId, selfId, targetId)) then
 --			LuaFnSendOResultToPlayer(sceneId, selfId, OR_INVALID_TARGET)
 --			return 0;
 --		end
-		-- Ŀ�꼶��ļ��
+		-- 目标级别的检测
 --		if(g_LevelRequire<=LuaFnGetLevel(sceneId, targetId)) then
 --			LuaFnSendOResultToPlayer(sceneId, selfId, OR_INVALID_TARGET)
 --			return 0;
@@ -105,14 +105,14 @@ function x334915_OnConditionCheck( sceneId, selfId )
 
 	end
 	
-	return 1; --����Ҫ�κ�����������ʼ�շ���1��
+	return 1; --不需要任何条件，并且始终返回1。
 end
 
 --**********************************
---���ļ�⼰������ڣ�
---ϵͳ���ڼ������ĵ�ʱ����������ӿڣ���������������ķ���ֵȷ���Ժ�������Ƿ�ִ�С�
---����1�����Ĵ���ͨ�������Լ���ִ�У�����0�����ļ��ʧ�ܣ��жϺ���ִ�С�
---ע�⣺�ⲻ�⸺�����ĵļ��Ҳ�������ĵ�ִ�С�
+--消耗检测及处理入口：
+--系统会在技能消耗的时间点调用这个接口，并根据这个函数的返回值确定以后的流程是否执行。
+--返回1：消耗处理通过，可以继续执行；返回0：消耗检测失败，中断后续执行。
+--注意：这不光负责消耗的检测也负责消耗的执行。
 --**********************************
 function x334915_OnDeplete( sceneId, selfId )
 	if(LuaFnDepletingUsedItem(sceneId, selfId)) then
@@ -122,41 +122,41 @@ function x334915_OnDeplete( sceneId, selfId )
 end
 
 --**********************************
---ֻ��ִ��һ����ڣ�
---������˲�����ܻ���������ɺ��������ӿڣ������������Ҹ��������������ʱ�򣩣�������
---����Ҳ����������ɺ��������ӿڣ����ܵ�һ��ʼ�����ĳɹ�ִ��֮�󣩡�
---����1�������ɹ�������0������ʧ�ܡ�
---ע�������Ǽ�����Чһ�ε����
+--只会执行一次入口：
+--聚气和瞬发技能会在消耗完成后调用这个接口（聚气结束并且各种条件都满足的时候），而引导
+--技能也会在消耗完成后调用这个接口（技能的一开始，消耗成功执行之后）。
+--返回1：处理成功；返回0：处理失败。
+--注：这里是技能生效一次的入口
 --**********************************
 function x334915_OnActivateOnce( sceneId, selfId )
 	if(-1~=x334915_g_Impact1) then
-		--���Լ���Ч��
+		--给自己加效果
 --		LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, x334915_g_Impact1, 0);
-		--��Ŀ���Ч��
+		--给目标加效果
 		local targetId = LuaFnGetTargetObjID(sceneId, selfId)
 		if(0<=targetId) then
 			if LuaFnIsFriend(sceneId, targetId, selfId) > 0 then
 				LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, targetId, x334915_g_Impact1, 0);
 				
 				BeginEvent(sceneId)
-			    AddText(sceneId, "����Է����Ѻö�������5");
+			    AddText(sceneId, "你与对方的友好度增加了5");
 			  EndEvent(sceneId)
 			  DispatchMissionTips(sceneId,selfId)
 			  
 			  local	namSelf		= GetName( sceneId, selfId )
 			  local	namTarget	= GetName( sceneId, targetId )
-				local	str	= format( "#B#{_INFOUSR"..namSelf.."}#cffffff���ְ�#W[1��õ��]#cffffff�͵�#B#{_INFOUSR"..namTarget.."}#cffffff���У�����ؿ���#B#{_INFOUSR"..namTarget.."}#cffffff��" )
+				local	str	= format( "#B#{_INFOUSR"..namSelf.."}#cffffff亲手把#W[1朵玫瑰]#cffffff送到#B#{_INFOUSR"..namTarget.."}#cffffff手中，深情地看着#B#{_INFOUSR"..namTarget.."}#cffffff。" )
 --			  AddGlobalCountNews( sceneId, str )
 			  
 			end
 		end
-		--�Լ���ΧAE
+		--自己周围AE
 --		local posX,posZ = LuaFnGetUnitPosition(sceneId, selfId)
 --		LuaFnSendImpactAroundPosition(sceneId, selfID, posX, posZ, x334915_g_radiusAE, x334915_g_standFlag, x334915_g_levelRequire, x334915_g_effectCount, x334915_g_Impact1, 0)
-		--ָ���ص���ΧAE
+		--指定地点周围AE
 --		local posX,posZ = LuaFnGetTargetPosition(sceneId, selfId)
 --		LuaFnSendImpactAroundPosition(sceneId, selfID, posX, posZ, x334915_g_radiusAE, x334915_g_standFlag, x334915_g_levelRequire, x334915_g_effectCount, x334915_g_Impact1, 0)
-		--Ŀ�������ΧAE
+		--目标个体周围AE
 --		local targetId = LuaFnGetTargetObjID(sceneId, selfId)
 --		if(0<=targetId) then
 --			local posX,posZ = LuaFnGetUnitPosition(sceneId, targetId)
@@ -169,11 +169,11 @@ function x334915_OnActivateOnce( sceneId, selfId )
 end
 
 --**********************************
---��������������ڣ�
---�������ܻ���ÿ����������ʱ��������ӿڡ�
---���أ�1�����´�������0���ж�������
---ע�������Ǽ�����Чһ�ε����
+--引导心跳处理入口：
+--引导技能会在每次心跳结束时调用这个接口。
+--返回：1继续下次心跳；0：中断引导。
+--注：这里是技能生效一次的入口
 --**********************************
 function x334915_OnActivateEachTick( sceneId, selfId)
-	return 1; --���������Խű�, ֻ�����պ���.
+	return 1; --不是引导性脚本, 只保留空函数.
 end

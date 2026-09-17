@@ -9,7 +9,7 @@ function FangDaohao_OnLoad()
 end
 
 function FangDaohao_OnEvent(event)
-	--PushDebugMessage("server´«¹ıÀ´µÄÊı¾İÓĞÎÊÌâ¡£");
+	--PushDebugMessage("serverä¼ è¿‡æ¥çš„æ•°æ®æœ‰é—®é¢˜ã€‚");
 	if ( event == "OPENDLG_FANGDAOHAO") then
 		this:Show();
 	elseif( event == "CLOSEDLG_FANGDAOHAO" ) then

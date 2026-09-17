@@ -1,11 +1,11 @@
---ÕäÊŞ·±Ö³(È¡ÕäÊŞ)
---½Å±¾ºÅ £¨¸Ä³ÉÕıÈ·½Å±¾ºÅ£©
+--çå…½ç¹æ®–(å–çå…½)
+--è„šæœ¬å· ï¼ˆæ”¹æˆæ­£ç¡®è„šæœ¬å·ï¼‰
 
 x800102_g_scriptId = 800102
 
 function x800102_OnDefaultEvent( sceneId, selfId, targetId )
 
-	--»ñÈ¡Íæ¼Òµ±Ç°µÄÕäÊŞ·±Ö³ĞÅÏ¢
+	--è·å–ç©å®¶å½“å‰çš„çå…½ç¹æ®–ä¿¡æ¯
 	local checkRet	= LuaFnCheckPetProcreateTakeOut( sceneId, selfId )
 	if checkRet == 1 then
 		LuaFnPetProcreateTakeOut( sceneId, selfId )
@@ -15,16 +15,16 @@ end
 
 function x800102_OnEnumerate( sceneId, selfId, targetId )
 
-	--£¨1£©·±Ö³½ø³ÌÖĞ£¬ÏÔÊ¾·±Ö³½ø¶È
-	--		ÄãµÄÕäÊŞAAAÓëBBBµÄÕäÊŞCCCÕıÔÚ¿ìÀÖµÄæÒÏ·£¬ÔÙ¹ıD·ÖÖÓ£¬¾ÍÄÜ´ø×Å¶ş´úÕäÊŞ»Øµ½ÄãÉí±ß¡£
-	--£¨2£©·±Ö³³É¹¦ºó£¬ÁìÈ¡×ÓÕäÊŞ
-	AddNumText( sceneId, x800102_g_scriptId, "È¡³öÍê³É·±Ö³µÄÕäÊŞ", 6, x800102_g_scriptId )
+	--ï¼ˆ1ï¼‰ç¹æ®–è¿›ç¨‹ä¸­ï¼Œæ˜¾ç¤ºç¹æ®–è¿›åº¦
+	--		ä½ çš„çå…½AAAä¸BBBçš„çå…½CCCæ­£åœ¨å¿«ä¹çš„å¬‰æˆï¼Œå†è¿‡Dåˆ†é’Ÿï¼Œå°±èƒ½å¸¦ç€äºŒä»£çå…½å›åˆ°ä½ èº«è¾¹ã€‚
+	--ï¼ˆ2ï¼‰ç¹æ®–æˆåŠŸåï¼Œé¢†å–å­çå…½
+	AddNumText( sceneId, x800102_g_scriptId, "å–å‡ºå®Œæˆç¹æ®–çš„çå…½", 6, x800102_g_scriptId )
 
 end
 
---È¡³ö·±Ö³ÕäÊŞ¡¼Lybin Oct.24 2006¡½
---´Ëº¯Êı»áÔÚServer½ÓÊÕµ½WGPetProcreateQuestTakeOutResultÏûÏ¢°üºó£¬±»¶¯Ö´ĞĞ
---ÇëÎğÉÃ×ÔĞŞ¸Ä
+--å–å‡ºç¹æ®–çå…½ã€–Lybin Oct.24 2006ã€—
+--æ­¤å‡½æ•°ä¼šåœ¨Serveræ¥æ”¶åˆ°WGPetProcreateQuestTakeOutResultæ¶ˆæ¯åŒ…åï¼Œè¢«åŠ¨æ‰§è¡Œ
+--è¯·å‹¿æ“…è‡ªä¿®æ”¹
 --function x800102_OnTakeOut( sceneId, selfId )
 --
 --	local	checkRet	= LuaFnCheckPetProcreateTakeOut( sceneId, selfId )

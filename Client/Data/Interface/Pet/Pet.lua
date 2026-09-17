@@ -23,11 +23,11 @@ local PET_FIGHT= 0;
 local PET_CURRENT_SELECT = 0;
 local PET_AITYPE = {};
 local Changed_Name_Flag = 0;
---			// ´´½¨ÕäÊŞ(¼´·Å³ö) 0
---			// ÊÕ»ØÕäÊŞ					1
---			// Ïú»ÙÕäÊŞ(¼´·ÅÉú)	2
---			// ²¶×½ÕäÊŞ					3
---			¿ÉÒÔÔÚ±»·Å³öºó£¬Í¨¹ıÏûÏ¢£¬¸Ä±ä¸ÃÕäÊŞÔÚlistboxÖĞµÄÃû×ÖµÄÑÕÉ«¡£
+--			// åˆ›å»ºçå…½(å³æ”¾å‡º) 0
+--			// æ”¶å›çå…½					1
+--			// é”€æ¯çå…½(å³æ”¾ç”Ÿ)	2
+--			// æ•æ‰çå…½					3
+--			å¯ä»¥åœ¨è¢«æ”¾å‡ºåï¼Œé€šè¿‡æ¶ˆæ¯ï¼Œæ”¹å˜è¯¥çå…½åœ¨listboxä¸­çš„åå­—çš„é¢œè‰²ã€‚
 local PET_TAB_TEXT = {};
 local PET_ORIGINAL_NAME = "";
 
@@ -56,21 +56,21 @@ function Pet_OnLoad()
 	PETSKILL_BUTTONS[11] = Pet_Skill11;
 	PETSKILL_BUTTONS[12] = Pet_Skill12
 ;
-	PET_AITYPE[0] = "µ¨Ğ¡";
-	PET_AITYPE[1] = "½÷É÷";
-	PET_AITYPE[2] = "ÖÒ³Ï";
-	PET_AITYPE[3] = "¾«Ã÷";
-	PET_AITYPE[4] = "ÓÂÃÍ";
+	PET_AITYPE[0] = "èƒ†å°";
+	PET_AITYPE[1] = "è°¨æ…";
+	PET_AITYPE[2] = "å¿ è¯š";
+	PET_AITYPE[3] = "ç²¾æ˜";
+	PET_AITYPE[4] = "å‹‡çŒ›";
 	
 	PET_TAB_TEXT = {
-		[0] = "×°±¸",
-		"×ÊÁÏ",
-		"ÕäÊŞ",
-		"Æï³Ë",
-		"ÆäËû",
+		[0] = "è£…å¤‡",
+		"èµ„æ–™",
+		"çå…½",
+		"éª‘ä¹˜",
+		"å…¶ä»–",
 	};
 
-	Pet_chenghao:SetText("³ÆºÅ");
+	Pet_chenghao:SetText("ç§°å·");
 end
 
 function Pet_OnEvent(event)
@@ -119,7 +119,7 @@ function Pet_OnEvent(event)
 	elseif(event == "UPDATE_PET_EXTRANUM" or event == "UNIT_LEVEL")then
 		local nPetCount = Pet:GetPet_Count()
 		local nMaxPetCount = GetMyCurMaxPetCount()
-		Pet_List_Text:SetText("ÕäÊŞÁĞ±í "..nPetCount.."/"..nMaxPetCount)
+		Pet_List_Text:SetText("çå…½åˆ—è¡¨ "..nPetCount.."/"..nMaxPetCount)
 	end
 	
 end
@@ -131,7 +131,7 @@ function Pet_HandleAccKey(op)
 			return;
 		end
 		
-		--Ä£ÄâÊÕµ½ÁËÒ»¸ö´ò¿ªÕäÊŞ½çÃæµÄÊÂ¼ş¡£
+		--æ¨¡æ‹Ÿæ”¶åˆ°äº†ä¸€ä¸ªæ‰“å¼€çå…½ç•Œé¢çš„äº‹ä»¶ã€‚
 		arg0 = "-1";
 		Pet_OnEvent("TOGLE_PET_PAGE");
 	end
@@ -204,7 +204,7 @@ function Pet_Page_Clear()
 	Pet_PetName : Disable();
 	Pet_Type : SetText("");
 	
-	Pet_PageHeader : SetText( "#gFF0FA0ÕäÊŞ" );
+	Pet_PageHeader : SetText( "#gFF0FA0çå…½" );
 	Pet_ConsortID : SetText( "" );
 	Pet_PetID : SetText( "" );
 	Pet_Sex : SetText("");
@@ -264,10 +264,10 @@ function Pet_Page_Clear()
 	Pet_NeedLevel:SetText( "" );
 	Pet_Jian : Hide();
 	
-	--ÉèÖÃÕäÊŞÊıÁ¿ĞÅÏ¢--add by xindefeng
+	--è®¾ç½®çå…½æ•°é‡ä¿¡æ¯--add by xindefeng
 	local nPetCount = Pet:GetPet_Count()
 	local nMaxPetCount = GetMyCurMaxPetCount()
-	Pet_List_Text:SetText("ÕäÊŞÁĞ±í "..nPetCount.."/"..nMaxPetCount)	
+	Pet_List_Text:SetText("çå…½åˆ—è¡¨ "..nPetCount.."/"..nMaxPetCount)	
 end
 
 function Pet_ListBox_Selected()
@@ -336,7 +336,7 @@ function Pet_Update_NotVisible()
 			end
 		end
 	end
-	--ÓĞÑ¡ÖĞ¶ÔÏóµÄ£¬²Å½øĞĞÑ¡ÖĞ²Ù×÷¡£
+	--æœ‰é€‰ä¸­å¯¹è±¡çš„ï¼Œæ‰è¿›è¡Œé€‰ä¸­æ“ä½œã€‚
 	if bSelect == 1 then
 		--do nothing
 	else
@@ -373,7 +373,7 @@ function Pet_Update()
 				firSel = i-1;
 			end
 			szPetName = Pet : GetPetList_Appoint(i-1);
-			AxTrace(0,1,"µÚ"..i.."Ö»½Ğ"..szPetName);
+			AxTrace(0,1,"ç¬¬"..i.."åªå«"..szPetName);
 			
 			if(Pet : GetIsFighting(i-1)) then
 				Pet_List : AddItem(szPetName, i-1,"FF0A9605");
@@ -383,13 +383,13 @@ function Pet_Update()
 			if( i-1 == PET_CURRENT_SELECT) then
 				bSelect = 1;
 			end
-			--ÕâÀï±ØĞëÓĞÕâÃ´2¾ä£¬Òª²»»á³ö´í¡£
+			--è¿™é‡Œå¿…é¡»æœ‰è¿™ä¹ˆ2å¥ï¼Œè¦ä¸ä¼šå‡ºé”™ã€‚
 			Pet_DisableAddButton();
 			Pet_DisableSubButton();
 		end
 	end
 	local tcount = 0;
-	--ÓĞÑ¡ÖĞ¶ÔÏóµÄ£¬²Å½øĞĞÑ¡ÖĞ²Ù×÷¡£
+	--æœ‰é€‰ä¸­å¯¹è±¡çš„ï¼Œæ‰è¿›è¡Œé€‰ä¸­æ“ä½œã€‚
 	if bSelect == 1 then
 		Pet_List : SetItemSelectByItemID(PET_CURRENT_SELECT);
 		Pet_FakeObject : SetFakeObject( "" );
@@ -432,7 +432,7 @@ function Pet_Update()
 	else
 		strNeedLevelColor="#c00FF00";
 	end
-	strNeedLevel = strNeedLevelColor..tostring( nTakeLevel ).."¼¶#W¿ÉĞ¯´ø";
+	strNeedLevel = strNeedLevelColor..tostring( nTakeLevel ).."çº§#Wå¯æºå¸¦";
 	Pet_NeedLevel:SetText( strNeedLevel );
 	
 end
@@ -473,7 +473,7 @@ function Pet_Show_Appoint(nIndex)
  	
 	local strAI;
 	if(strName>4 or strName <0) then
-		strAI = "´íÎó";
+		strAI = "é”™è¯¯";
 	else
 		strAI =	PET_AITYPE[strName];
 	end
@@ -482,7 +482,7 @@ function Pet_Show_Appoint(nIndex)
  	strName,strName2 = Pet:GetName(nIndex);
 	local nEra, strTypeName = Pet:GetPetTypeName(nIndex);
  	if( 1 == nEra ) then
- 	    strName2 = "¶ş´ú"..strTypeName
+ 	    strName2 = "äºŒä»£"..strTypeName
  	end
  	
  
@@ -496,7 +496,7 @@ function Pet_Show_Appoint(nIndex)
 	 	local nUnlockElapsedTime = PlayerPackage:GetPUnlockElapsedTime_Pet(nIndex);
 	 	if( nUnlockElapsedTime ==0) then
 	 		Pet_lock : SetProperty("Image","set:UIIcons image:Icon_Lock");
-	 		Pet_lock : SetToolTip ("ÒÑ¼ÓËø");
+	 		Pet_lock : SetToolTip ("å·²åŠ é”");
 	 	else
 	 		local strLeftTime = g_GetUnlockingStr(nUnlockElapsedTime);		
 	 		Pet_lock : SetProperty("Image","set:CommonFrame6 image:NewLock");
@@ -520,19 +520,19 @@ function Pet_Show_Appoint(nIndex)
 --	Pet_PageHeader : SetText( strAI .. strName2 );
 
 	strName,strName2,sex = Pet : GetID(nIndex);
-	Pet_PetID : SetText( "ÕäÊŞID:"..strName2 );
+	Pet_PetID : SetText( "çå…½ID:"..strName2 );
 	AxTrace(0,0,"GetID="..strName .. strName2);
 	
 	strName = Pet : GetConsort(nIndex);
 	if(strName == "00000000") then
 		strName = "";
 	end;
-	Pet_ConsortID : SetText( "ÅäÅ¼ID:"..strName );
+	Pet_ConsortID : SetText( "é…å¶ID:"..strName );
 		
 	if(sex == 1) then 
-		strName = "ĞÛĞÔ";
+		strName = "é›„æ€§";
 	else
-		strName = "´ÆĞÔ";
+		strName = "é›Œæ€§";
 	end
 
 	Pet_Sex : SetText( strName );
@@ -545,105 +545,105 @@ function Pet_Show_Appoint(nIndex)
 	else
 		strNeedLevelColor="#c00FF00";
 	end
-	strNeedLevel = strNeedLevelColor..tostring( nTakeLevel ).."¼¶#W¿ÉĞ¯´ø";
+	strNeedLevel = strNeedLevelColor..tostring( nTakeLevel ).."çº§#Wå¯æºå¸¦";
 	Pet_NeedLevel:SetText( strNeedLevel );
 	strName = Pet : GetNaturalLife(nIndex);
 --	strName2 = Pet:	GetMaxLife(nIndex);
-	Pet_Life : SetText( "ÊÙÃü:"..strName );
+	Pet_Life : SetText( "å¯¿å‘½:"..strName );
 	
 --	strName = Pet : GetLoyalgGade(nIndex);
 --	Pet_LoyalgGade : SetText( strName );
 	
 --	strName = Pet : GetBasic(nIndex);
---	Pet_GenGu : SetText( "¸ù¹Ç:"..strName );
+--	Pet_GenGu : SetText( "æ ¹éª¨:"..strName );
 
 	strName = Pet : GetLevel(nIndex);
-	Pet_Level : SetText( "µÈ¼¶:"..strName );
+	Pet_Level : SetText( "ç­‰çº§:"..strName );
 	
 --	strName = Pet : GetType(nIndex);
---	Pet_Type : SetText( "µÚ".. tostring(strName).."´ú" );
+--	Pet_Type : SetText( "ç¬¬".. tostring(strName).."ä»£" );
 
 	strName = Pet : GetHappy(nIndex);
-	Pet_Happy : SetText( "¿ìÀÖ:"..strName );
+	Pet_Happy : SetText( "å¿«ä¹:"..strName );
 
 	strName = Pet : GetSavvy(nIndex);
-	Pet_WuXing : SetText( "ÎòĞÔ:"..strName );
+	Pet_WuXing : SetText( "æ‚Ÿæ€§:"..strName );
 	
 	local WuXingVal = tonumber(strName);
-	strName = Pet : GetStrAptitude(nIndex);
+	strName = string.format("%.0f", Pet : GetStrAptitude(nIndex));
 	if(WuXingTbl[WuXingVal])then
 		strName = (WuXingTbl[WuXingVal].color)..strName..ShowColor.."(+"..(WuXingTbl[WuXingVal].per)..")";
 	end
 	Pet_StrAptitude : SetText( strName );
 
-	strName = Pet : GetPFAptitude(nIndex);
+	strName = string.format("%.0f", Pet : GetPFAptitude(nIndex));
 	if(WuXingTbl[WuXingVal])then
 		strName = (WuXingTbl[WuXingVal].color)..strName..ShowColor.."(+"..(WuXingTbl[WuXingVal].per)..")";
 	end
 	Pet_PhysicalStrengthAptitude : SetText( strName );
 	
-	strName = Pet : GetDexAptitude(nIndex);
+	strName = string.format("%.0f", Pet : GetDexAptitude(nIndex));
 	if(WuXingTbl[WuXingVal])then
 		strName = (WuXingTbl[WuXingVal].color)..strName..ShowColor.."(+"..(WuXingTbl[WuXingVal].per)..")";
 	end
 	Pet_DexterityAptitude : SetText( strName );
 	
-	strName = Pet : GetIntAptitude(nIndex);
+	strName = string.format("%.0f", Pet : GetIntAptitude(nIndex));
 	if(WuXingTbl[WuXingVal])then
 		strName = (WuXingTbl[WuXingVal].color)..strName..ShowColor.."(+"..(WuXingTbl[WuXingVal].per)..")";
 	end
 	Pet_NimbusAptitude : SetText( strName );
 	
-	strName = Pet : GetStaAptitude(nIndex);
+	strName = string.format("%.0f", Pet : GetStaAptitude(nIndex));
 	if(WuXingTbl[WuXingVal])then
 		strName = (WuXingTbl[WuXingVal].color)..strName..ShowColor.."(+"..(WuXingTbl[WuXingVal].per)..")";
 	end
 	Pet_StabilityAptitude : SetText( strName );
 	
 	strName,strName2 = Pet : GetExp(nIndex);
-	Pet_Exp : SetText( "¾­Ñé:"..strName .."/"..strName2);
---yyËµ£¬²»¿Õ¸ñ	
-	strName = Pet : GetHP(nIndex);
-	strName2 = Pet:	GetMaxHP(nIndex);
-	Pet_Blood : SetText( "Ñª:"..strName .."/".. strName2);
---	strName = Pet : GetMP(nIndex);
---	strName2 = Pet:	GetMaxMP(nIndex);
+	Pet_Exp : SetText( "ç»éªŒ:"..string.format("%.0f/%.0f", strName, strName2));
+--yyè¯´ï¼Œä¸ç©ºæ ¼	
+	strName = string.format("%.0f", Pet : GetHP(nIndex));
+	strName2 = string.format("%.0f", Pet:	GetMaxHP(nIndex));
+	Pet_Blood : SetText( "è¡€:"..strName .."/".. strName2);
+--	strName = string.format("%.0f", Pet : GetMP(nIndex));
+--	strName2 = string.format("%.0f", Pet:	GetMaxMP(nIndex));
 --	Pet_MP : SetText( strName .." / ".. strName2);
 	
-	strName = Pet : GetStr(nIndex);
-	Pet_Str : SetText( tonumber(strName) + PETATTR[1] );
+	strName = string.format("%.0f", Pet : GetStr(nIndex));
+	Pet_Str : SetText( string.format("%.0f", tonumber(strName) + PETATTR[1]) );
 --	Pet_Str : SetProperty("TextColours","tl:FFEFEFEF tr:FFEFEFEF bl:FFEFEFEF br:FFEFEFEF");
 	
-	strName = Pet : GetInt(nIndex);
-	Pet_Nimbus : SetText( tonumber(strName) + PETATTR[2] );
+	strName = string.format("%.0f", Pet : GetInt(nIndex));
+	Pet_Nimbus : SetText( string.format("%.0f", tonumber(strName) + PETATTR[2]) );
 --	Pet_Nimbus : SetProperty("TextColours","tl:FFEFEFEF tr:FFEFEFEF bl:FFEFEFEF br:FFEFEFEF");
 	
-	strName = Pet : GetDex(nIndex);
-	Pet_Dexterity : SetText( tonumber(strName) + PETATTR[3] );
+	strName = string.format("%.0f", Pet : GetDex(nIndex));
+	Pet_Dexterity : SetText( string.format("%.0f", tonumber(strName) + PETATTR[3]) );
 --	Pet_Dexterity : SetProperty("TextColours","tl:FFEFEFEF tr:FFEFEFEF bl:FFEFEFEF br:FFEFEFEF");
 	
-	strName = Pet : GetPF(nIndex);
-	Pet_PhysicalStrength : SetText( tonumber(strName) + PETATTR[4] );
+	strName = string.format("%.0f", Pet : GetPF(nIndex));
+	Pet_PhysicalStrength : SetText( string.format("%.0f", tonumber(strName) + PETATTR[4]) );
 --	Pet_PhysicalStrength : SetProperty("TextColours","tl:FFEFEFEF tr:FFEFEFEF bl:FFEFEFEF br:FFEFEFEF");
 	
-	strName = Pet : GetSta(nIndex);
-	Pet_Stability : SetText( tonumber(strName) + PETATTR[5] );
+	strName = string.format("%.0f", Pet : GetSta(nIndex));
+	Pet_Stability : SetText( string.format("%.0f", tonumber(strName) + PETATTR[5]) );
 --	Pet_Stability : SetProperty("TextColours","tl:FFEFEFEF tr:FFEFEFEF bl:FFEFEFEF br:FFEFEFEF");
 	
 	strName = Pet : GetBasic(nIndex);
-	Pet_GenGu : SetText( "¸ù¹Ç:"..tonumber(strName) );
+	Pet_GenGu : SetText( "æ ¹éª¨:"..tonumber(strName) );
 
-	Pet_CriticalAttack : SetText( Pet:GetCriticalAttack(nIndex)  );
-	Pet_CriticalDefence : SetText(Pet:GetCriticalDefence(nIndex) )
+	Pet_CriticalAttack : SetText( string.format("%.0f", Pet:GetCriticalAttack(nIndex)) );
+	Pet_CriticalDefence : SetText( string.format("%.0f", Pet:GetCriticalDefence(nIndex)) )
 
-	strName = Pet : GetPotential(nIndex);
+	strName = string.format("%.0f", Pet : GetPotential(nIndex));
 	strName2 = tonumber(strName);
 	local Sum_Attr = 0;
 	for i=1,PET_ATTR_COUNT do
 		Sum_Attr = Sum_Attr + PETATTR[i];
 	end
 	strName2 = strName2 - Sum_Attr;
-	--³öÏÖÕâÖÖÇé¿öÊÇ
+	--å‡ºç°è¿™ç§æƒ…å†µæ˜¯
 	if(strName2 < 0) then
 	 strName2 = 0 
 	 for i=1,PET_ATTR_COUNT do
@@ -654,20 +654,20 @@ function Pet_Show_Appoint(nIndex)
 	AxTrace(2,1,"Sum_Attr="..Sum_Attr)
 	AxTrace(2,1,"strName2="..strName2)
 	AxTrace(2,1,"PET_POTREMAIN="..PET_POTREMAIN)
-	Pet_Potential : SetText( strName2 ); 
+	Pet_Potential : SetText( string.format("%.0f", strName2) ); 
 --	Pet_Potential : SetProperty("TextColours","tl:FFEFEFEF tr:FFEFEFEF bl:FFEFEFEF br:FFEFEFEF");
 	Pet_Refresh_ADDSUB_Button();
 	
-	strName = Pet : GetPhysicsAttack(nIndex);
+	strName = string.format("%.0f", Pet : GetPhysicsAttack(nIndex));
 	Pet_PhysicsAttack : SetText( strName );
 	
-	strName = Pet : GetMagicAttack(nIndex);
+	strName = string.format("%.0f", Pet : GetMagicAttack(nIndex));
 	Pet_MagicAttack : SetText( strName );
 	
-	strName = Pet : GetPhysicsRecovery(nIndex);
+	strName = string.format("%.0f", Pet : GetPhysicsRecovery(nIndex));
 	Pet_PhysicsRecovery : SetText( strName );
 	
-	strName = Pet : GetMagicRecovery (nIndex);
+	strName = string.format("%.0f", Pet : GetMagicRecovery (nIndex));
 	Pet_MagicRecovery : SetText( strName );
 
 	strName = Pet : GetGrowRate(nIndex);
@@ -679,24 +679,24 @@ function Pet_Show_Appoint(nIndex)
 	Pet_Growth : SetToolTip("#{INTERFACE_XML_986}")
 	Pet_Type : SetToolTip("#{INTERFACE_XML_857}")
 	-----------------------------------------
-	Pet_Growth : SetText("#GÎ´Öª")
+	Pet_Growth : SetText("#GæœªçŸ¥")
 	local nGrowLevel = Pet : GetPetGrowLevel(nIndex,tonumber(strName));
-	local strTbl = {"ÆÕÍ¨","ÓÅĞã","½Ü³ö","×¿Ô½","ÍêÃÀ"};
+	local strTbl = {"æ™®é€š","ä¼˜ç§€","æ°å‡º","å“è¶Š","å®Œç¾"};
 	
 	if(nGrowLevel >= 0) then
-		nGrowLevel = nGrowLevel + 1;	--cÀïÊÇ´Ó0¿ªÊ¼µÄÃ¶¾Ù
+		nGrowLevel = nGrowLevel + 1;	--cé‡Œæ˜¯ä»0å¼€å§‹çš„æšä¸¾
 		local nGrowRate = Pet : GetGrowRate(nIndex);
 		if(strTbl[nGrowLevel]) then
 			Pet_Growth : SetText("#G"..strTbl[nGrowLevel]..nGrowRate)
 		end
 	end
 
-	--ÉÁ±ÜÂÊ
-	strName = Pet : GetMiss(nIndex);
+	--é—ªé¿ç‡
+	strName = string.format("%.0f", Pet : GetMiss(nIndex));
 	Pet_Miss : SetText( strName );
 
-	--ÃüÖĞÂÊ
-	strName = Pet : GetShootProbability(nIndex);
+	--å‘½ä¸­ç‡
+	strName = string.format("%.0f", Pet : GetShootProbability(nIndex));
 	Pet_ShootProbability : SetText( strName );
 	
 	strName,strIcon = Pet : GetAttackTrait(nIndex);
@@ -734,32 +734,32 @@ function Pet_Show_Appoint(nIndex)
 	if(Pet : GetIsFighting(nIndex)) then
 		Pet_Campaign : Hide();
 		Pet_Rest : Show();
-		AxTrace(0,0,"Ñ¼×Ó¿ÉĞİÏ¢");
+		AxTrace(0,0,"é¸­å­å¯ä¼‘æ¯");
 	else
 		Pet_Rest : Hide();
 		Pet_Campaign : Show();
-		AxTrace(0,0,"Ñ¼×Ó¿ÉÕ½¶·");
+		AxTrace(0,0,"é¸­å­å¯æˆ˜æ–—");
 	end
 	
 	local food = Pet : GetFoodType(nIndex);
 	strName = "";
 	AxTrace(0,1,"food="..food);
 	if(food >= 1000) then
-		strName = strName .. "Èâ";
+		strName = strName .. "è‚‰";
 		food = food - 1000;
 		if food > 0 then
 			strName = strName .. ",";
 		end
 	end
 	if(food >= 100) then
-		strName = strName .. "²İ";
+		strName = strName .. "è‰";
 		food = food - 100;
 		if food > 0 then
 			strName = strName .. ",";
 		end
 	end
 	if(food >= 10) then
-		strName = strName .. "³æ";
+		strName = strName .. "è™«";
 		food = food - 10;
 		if food > 0 then
 			strName = strName .. ",";
@@ -767,7 +767,7 @@ function Pet_Show_Appoint(nIndex)
 	end
 	
 	if(food >= 1) then
-		strName = strName .. "¹È";
+		strName = strName .. "è°·";
 	end
 	PetFood_Type : Show();
 	PetFood_Type : SetToolTip( strName );
@@ -940,7 +940,7 @@ function Pet_Accept_Clicked()
 		return;
 	end
 	--if(PlayerPackage:IsPetLock(PETNUM) == 1)    then
-	--	PushDebugMessage("ÕäÊŞÒÑ¼ÓËø")
+	--	PushDebugMessage("çå…½å·²åŠ é”")
 	--	for i=1,PET_ATTR_COUNT do
 	--		PETATTR[i] = 0;
 	--	end
@@ -983,17 +983,17 @@ end
 
 function Pet_Free_Clicked()
 	if(Pet : GetIsFighting(PETNUM)) then
-		--´ËÎªBUG 3921ÖĞÑîæÃµÄÔ­»°£¬ÔÚ²ß»®°¸ÖĞ²¢Ã»ÓĞ¸ÃĞèÇó¡£
-		--µ«ÏîÄ¿½ô¼±£¬Ã»Ê±¼äÈ·ÈÏ£¬ËùÒÔ¾ÍÒÔBUGÏµÍ³Îª×¼¡£
-		PushDebugMessage("ÕäÊŞÕıÔÚ³öÕ½£¬²»ÄÜ±»·ÅÉú")
+		--æ­¤ä¸ºBUG 3921ä¸­æ¨å©·çš„åŸè¯ï¼Œåœ¨ç­–åˆ’æ¡ˆä¸­å¹¶æ²¡æœ‰è¯¥éœ€æ±‚ã€‚
+		--ä½†é¡¹ç›®ç´§æ€¥ï¼Œæ²¡æ—¶é—´ç¡®è®¤ï¼Œæ‰€ä»¥å°±ä»¥BUGç³»ç»Ÿä¸ºå‡†ã€‚
+		PushDebugMessage("çå…½æ­£åœ¨å‡ºæˆ˜ï¼Œä¸èƒ½è¢«æ”¾ç”Ÿ")
 		return;
 	end
 	if(PlayerPackage:IsPetLock(PETNUM) == 1)    then
-		PushDebugMessage("ÕäÊŞÒÑ¼ÓËø")
+		PushDebugMessage("çå…½å·²åŠ é”")
 		return;
 	end
 	if Pet:GetPetLocation(PETNUM) ~= -1 then
-		PushDebugMessage("ÕäÊŞÕıÔÚ½øĞĞÆäËû²Ù×÷£¬²»ÄÜ·ÅÉú¡£")
+		PushDebugMessage("çå…½æ­£åœ¨è¿›è¡Œå…¶ä»–æ“ä½œï¼Œä¸èƒ½æ”¾ç”Ÿã€‚")
 		return;
 	end
 	Pet	:	Free_Confirm(PETNUM);
@@ -1017,8 +1017,8 @@ function Pet_AmendName_Clicked()
 	end
 	strName = Pet_PetName : GetText()
 	Changed_Name_Flag = 0;
-	AxTrace(0,1,"string.len(strName)="..string.len(strName));
-	if(string.len(strName) < 2  or string.len(strName) > 12 ) then
+	AxTrace(0,1,"UTF8Length(strName)="..UTF8Length(strName));
+	if(UTF8Length(strName) < 2  or UTF8Length(strName) > 12 ) then
 		Pet_Update();
 		return;
 	end
@@ -1026,7 +1026,7 @@ function Pet_AmendName_Clicked()
 end
 
 function Pet_Skill_Button_Clicked(nIndex)
---½«À´Ö÷¶¯¼¼ÄÜºÍ±»¶¯¼¼ÄÜ£¬¿ÉÒÔÔÚ±íÀï²éµ½¡£
+--å°†æ¥ä¸»åŠ¨æŠ€èƒ½å’Œè¢«åŠ¨æŠ€èƒ½ï¼Œå¯ä»¥åœ¨è¡¨é‡ŒæŸ¥åˆ°ã€‚
 	if(nIndex < 3) then
 		
 	end
@@ -1046,13 +1046,13 @@ end
 
 ----------------------------------------------------------------------------------
 --
--- Ğı×ªÕäÊŞÄ£ĞÍ£¨Ïò×ó)
+-- æ—‹è½¬çå…½æ¨¡å‹ï¼ˆå‘å·¦)
 --
 function Pet_Modle_TurnLeft(start)
-	--Ïò×óĞı×ª¿ªÊ¼
+	--å‘å·¦æ—‹è½¬å¼€å§‹
 	if(start == 1 and CEArg:GetValue("MouseButton")=="LeftButton") then
 		Pet_FakeObject:RotateBegin(-0.3);
-	--Ïò×óĞı×ª½áÊø
+	--å‘å·¦æ—‹è½¬ç»“æŸ
 	else
 		Pet_FakeObject:RotateEnd();
 	end
@@ -1060,13 +1060,13 @@ end
 
 ----------------------------------------------------------------------------------
 --
---Ğı×ªÕäÊŞÄ£ĞÍ£¨ÏòÓÒ)
+--æ—‹è½¬çå…½æ¨¡å‹ï¼ˆå‘å³)
 --
 function Pet_Modle_TurnRight(start)
-	--ÏòÓÒĞı×ª¿ªÊ¼
+	--å‘å³æ—‹è½¬å¼€å§‹
 	if(start == 1 and CEArg:GetValue("MouseButton")=="LeftButton") then
 		Pet_FakeObject:RotateBegin(0.3);
-	--ÏòÓÒĞı×ª½áÊø
+	--å‘å³æ—‹è½¬ç»“æŸ
 	else
 		Pet_FakeObject:RotateEnd();
 	end
@@ -1097,7 +1097,7 @@ function Pet_Skill_Clicked(nSkillIndex)
 	
 	if Pet : GetSkillPassive(PETNUM,nSkillIndex-1) == 0 then
 
-		PushDebugMessage("Çë½«¸Ã¼¼ÄÜÍÏ×§µ½¼¼ÄÜ¿ì½İÀ¸Ê¹ÓÃ ¡£");
+		PushDebugMessage("è¯·å°†è¯¥æŠ€èƒ½æ‹–æ‹½åˆ°æŠ€èƒ½å¿«æ·æ ä½¿ç”¨ ã€‚");
 	
 	end
 
@@ -1227,7 +1227,7 @@ function Pet_Other_Info_Page_Switch()
 	Pet_OtherInfo : SetCheck(0);
 end
 
---´ò¿ª×Ô¼ºµÄ×ÊÁÏÒ³Ãæ
+--æ‰“å¼€è‡ªå·±çš„èµ„æ–™é¡µé¢
 function Pet_SelfData_Switch()
 	Variable:SetVariable("SelfUnionPos", Pet_Frame:GetProperty("UnifiedPosition"), 1);
 
@@ -1258,16 +1258,16 @@ function Pet_Jian_Clicked()
 end
 
 
---»ñÈ¡Íæ¼Òµ±Ç°µÈ¼¶×î´óĞ¯´øÊıÁ¿(ÒÔºóÔö¼ÓÊŞÀ¸ºóÒª·Ï³ı,¶ø²ÉÓÃĞÂµÄ·½·¨)-add by xindefeng
+--è·å–ç©å®¶å½“å‰ç­‰çº§æœ€å¤§æºå¸¦æ•°é‡(ä»¥åå¢åŠ å…½æ åè¦åºŸé™¤,è€Œé‡‡ç”¨æ–°çš„æ–¹æ³•)-add by xindefeng
 function GetMyCurMaxPetCount()
-	local mylevel = Player:GetData("LEVEL") --»ñÈ¡Íæ¼ÒµÈ¼¶
+	local mylevel = Player:GetData("LEVEL") --è·å–ç©å®¶ç­‰çº§
 	if mylevel == nil or type(mylevel) ~= "number" then
 		return 2;
 	end 
-	local MaxCount = 0	--Ğ¯´øÉÏÏŞ
+	local MaxCount = 0	--æºå¸¦ä¸Šé™
 	
 	if mylevel < 21 then
-		MaxCount = 2	--Ò»¿ªÊ¼¾ÍĞ¯´øÉÏÏŞ¾ÍÊÇ2
+		MaxCount = 2	--ä¸€å¼€å§‹å°±æºå¸¦ä¸Šé™å°±æ˜¯2
 	elseif mylevel < 41 then
 		MaxCount = 3
 	elseif mylevel < 61 then

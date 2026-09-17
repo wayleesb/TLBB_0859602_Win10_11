@@ -2,7 +2,9 @@
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
+-- 在创建存储过程之前固定当前库默认字符集，参数和局部文字变量会继承它。
+ALTER DATABASE CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -16,9 +18,9 @@ CREATE TABLE `t_schema_version` (
   `version` int(10) unsigned NOT NULL,
   `description` varchar(255) NOT NULL,
   PRIMARY KEY (`version`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 INSERT INTO `t_schema_version` (`version`, `description`)
-VALUES (2, '64-bit Unix time and shared-memory layout');
+VALUES (6, '64-bit combat attributes; dark equipment stored in creator');
 
 --
 -- Table structure for table `t_ability`
@@ -26,7 +28,7 @@ VALUES (2, '64-bit Unix time and shared-memory layout');
 
 DROP TABLE IF EXISTS `t_ability`;
 SET @saved_cs_client     = @@character_set_client;
-SET character_set_client = utf8;
+SET character_set_client = utf8mb4;
 CREATE TABLE `t_ability` (
   `aid` bigint(20) NOT NULL auto_increment,
   `charguid` int(11) NOT NULL,
@@ -37,7 +39,7 @@ CREATE TABLE `t_ability` (
   `isvalid` int(11) default '1',
   PRIMARY KEY  (`aid`),
   KEY `Index_ab_charguid` (`charguid`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 SET character_set_client = @saved_cs_client;
 
 --
@@ -55,12 +57,12 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `t_char`;
 SET @saved_cs_client     = @@character_set_client;
-SET character_set_client = utf8;
+SET character_set_client = utf8mb4;
 CREATE TABLE `t_char` (
   `aid` bigint(20) NOT NULL auto_increment,
-  `accname` varchar(50) character set latin1 collate latin1_bin NOT NULL,
+  `accname` varchar(50) character set utf8mb4 collate utf8mb4_bin NOT NULL,
   `charguid` int(11) NOT NULL,
-  `charname` varchar(50) character set latin1 collate latin1_bin NOT NULL,
+  `charname` varchar(50) character set utf8mb4 collate utf8mb4_bin NOT NULL,
   `title` varchar(50) NOT NULL,
   `pw` varchar(15) NOT NULL,
   `sex` smallint(6) NOT NULL,
@@ -72,15 +74,15 @@ CREATE TABLE `t_char` (
   `xpos` int(11) NOT NULL,
   `zpos` int(11) NOT NULL,
   `menpai` smallint(6) NOT NULL,
-  `hp` int(11) NOT NULL,
-  `mp` int(11) NOT NULL,
+  `hp` bigint NOT NULL,
+  `mp` bigint NOT NULL,
   `strikepoint` smallint(6) NOT NULL,
-  `str` int(11) NOT NULL,
-  `spr` int(11) NOT NULL,
-  `con` int(11) NOT NULL,
-  `ipr` int(11) NOT NULL,
-  `dex` int(11) NOT NULL,
-  `points` int(11) NOT NULL,
+  `str` bigint NOT NULL,
+  `spr` bigint NOT NULL,
+  `con` bigint NOT NULL,
+  `ipr` bigint NOT NULL,
+  `dex` bigint NOT NULL,
+  `points` bigint NOT NULL,
   `logouttime` bigint(20) NOT NULL,
   `logintime` bigint(20) NOT NULL,
   `createtime` bigint(20) NOT NULL,
@@ -90,7 +92,7 @@ CREATE TABLE `t_char` (
   `facemodel` int(11) NOT NULL,
   `vmoney` int(11) NOT NULL,
   `isvalid` smallint(6) NOT NULL,
-  `exp` int(11) NOT NULL,
+  `exp` bigint NOT NULL,
   `pres` text NOT NULL,
   `mdata` text,
   `mflag` text,
@@ -126,7 +128,7 @@ CREATE TABLE `t_char` (
   `pkvalue` int(11) default '0',
   `otime` int(11) default '0',
   `deltime` int(11) default '0',
-  `expinfo` varchar(200) default '0',
+  `expinfo` varchar(200) default '',
   `savetime` int(11) default '0',
   `crc32` int(11) default '0',
   `pvpinfo` text,
@@ -144,7 +146,7 @@ CREATE TABLE `t_char` (
   KEY `Index_char_accname` (`accname`),
   KEY `Index_char_level` (`level`,`exp`),
   KEY `Index_char_yuanbao` (`yuanbao`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 SET character_set_client = @saved_cs_client;
 
 --
@@ -162,7 +164,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `t_charextra`;
 SET @saved_cs_client     = @@character_set_client;
-SET character_set_client = utf8;
+SET character_set_client = utf8mb4;
 CREATE TABLE `t_charextra` (
   `charguid` int(11) NOT NULL,
   `dbversion` int(11) NOT NULL default '0',
@@ -177,7 +179,7 @@ CREATE TABLE `t_charextra` (
   `leagueid` int(11) NOT NULL default '-1',
   `moneyjz` int(11) NOT NULL default '0',
   PRIMARY KEY  (`charguid`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 SET character_set_client = @saved_cs_client;
 
 --
@@ -195,7 +197,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `t_city`;
 SET @saved_cs_client     = @@character_set_client;
-SET character_set_client = utf8;
+SET character_set_client = utf8mb4;
 CREATE TABLE `t_city` (
   `aid` bigint(20) NOT NULL auto_increment,
   `poolid` int(11) NOT NULL,
@@ -203,7 +205,7 @@ CREATE TABLE `t_city` (
   `isvalid` int(11) NOT NULL,
   PRIMARY KEY  (`aid`),
   KEY `Index_city_poolid` (`poolid`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 SET character_set_client = @saved_cs_client;
 
 --
@@ -221,7 +223,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `t_city_building`;
 SET @saved_cs_client     = @@character_set_client;
-SET character_set_client = utf8;
+SET character_set_client = utf8mb4;
 CREATE TABLE `t_city_building` (
   `aid` bigint(20) NOT NULL auto_increment,
   `poolid` int(11) NOT NULL default '0',
@@ -238,7 +240,7 @@ CREATE TABLE `t_city_building` (
   `isvalid` int(11) NOT NULL default '0',
   PRIMARY KEY  (`aid`),
   UNIQUE KEY `Index_citybd_poolid` (`poolid`,`bdtype`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 SET character_set_client = @saved_cs_client;
 
 --
@@ -256,7 +258,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `t_city_info`;
 SET @saved_cs_client     = @@character_set_client;
-SET character_set_client = utf8;
+SET character_set_client = utf8mb4;
 CREATE TABLE `t_city_info` (
   `aid` bigint(20) NOT NULL auto_increment,
   `poolid` int(11) NOT NULL,
@@ -287,7 +289,7 @@ CREATE TABLE `t_city_info` (
   `isvalid` int(11) NOT NULL default '0',
   PRIMARY KEY  (`aid`),
   KEY `Index_cityinfo_pooid` (`poolid`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 SET character_set_client = @saved_cs_client;
 
 --
@@ -305,7 +307,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `t_city_new`;
 SET @saved_cs_client     = @@character_set_client;
-SET character_set_client = utf8;
+SET character_set_client = utf8mb4;
 CREATE TABLE `t_city_new` (
   `poolid` int(11) NOT NULL,
   `guildid` int(11) NOT NULL default '-1',
@@ -335,7 +337,7 @@ CREATE TABLE `t_city_new` (
   `foundtime` bigint(20) NOT NULL default '0',
   `isvalid` int(11) NOT NULL default '0',
   PRIMARY KEY  (`poolid`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 SET character_set_client = @saved_cs_client;
 
 --
@@ -353,7 +355,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `t_crc32`;
 SET @saved_cs_client     = @@character_set_client;
-SET character_set_client = utf8;
+SET character_set_client = utf8mb4;
 CREATE TABLE `t_crc32` (
   `aid` bigint(20) NOT NULL auto_increment,
   `charguid` int(11) NOT NULL,
@@ -364,7 +366,7 @@ CREATE TABLE `t_crc32` (
   `server` int(11) NOT NULL,
   PRIMARY KEY  (`aid`),
   KEY `Index_crc_charguid` (`charguid`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 SET character_set_client = @saved_cs_client;
 
 --
@@ -382,7 +384,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `t_cshop`;
 SET @saved_cs_client     = @@character_set_client;
-SET character_set_client = utf8;
+SET character_set_client = utf8mb4;
 CREATE TABLE `t_cshop` (
   `aid` bigint(20) NOT NULL auto_increment,
   `worldid` int(11) NOT NULL,
@@ -392,7 +394,7 @@ CREATE TABLE `t_cshop` (
   `cshopid` int(11) NOT NULL default '-1',
   PRIMARY KEY  (`aid`),
   UNIQUE KEY `Index_cshop_PoolId` (`worldid`,`serverid`,`poolid`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 SET character_set_client = @saved_cs_client;
 
 --
@@ -410,14 +412,14 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `t_cshopitem`;
 SET @saved_cs_client     = @@character_set_client;
-SET character_set_client = utf8;
+SET character_set_client = utf8mb4;
 CREATE TABLE `t_cshopitem` (
   `aid` bigint(20) NOT NULL auto_increment,
   `cshopid` int(11) NOT NULL,
   `cshoppos` int(11) NOT NULL,
   `serial` int(11) NOT NULL default '0',
   `charguid` int(11) NOT NULL,
-  `charname` varchar(50) character set latin1 collate latin1_bin NOT NULL,
+  `charname` varchar(50) character set utf8mb4 collate utf8mb4_bin NOT NULL,
   `gtype` smallint(6) NOT NULL,
   `gvalue` int(11) NOT NULL default '0',
   `svalue` int(11) NOT NULL default '0',
@@ -426,7 +428,7 @@ CREATE TABLE `t_cshopitem` (
   `isvalid` int(11) NOT NULL default '0',
   PRIMARY KEY  (`aid`),
   UNIQUE KEY `Index_cshopitem_cshopid` (`cshopid`,`cshoppos`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 SET character_set_client = @saved_cs_client;
 
 --
@@ -444,7 +446,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `t_findfriendad`;
 SET @saved_cs_client     = @@character_set_client;
-SET character_set_client = utf8;
+SET character_set_client = utf8mb4;
 CREATE TABLE `t_findfriendad` (
   `aid` bigint(20) NOT NULL auto_increment,
   `poolid` int(11) NOT NULL,
@@ -462,7 +464,7 @@ CREATE TABLE `t_findfriendad` (
   `isvalid` int(11) NOT NULL default '0',
   PRIMARY KEY  (`aid`),
   KEY `Index_pcre_pindex` (`poolid`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 SET character_set_client = @saved_cs_client;
 
 --
@@ -480,14 +482,14 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `t_general_set`;
 SET @saved_cs_client     = @@character_set_client;
-SET character_set_client = utf8;
+SET character_set_client = utf8mb4;
 CREATE TABLE `t_general_set` (
   `aid` bigint(20) NOT NULL auto_increment,
   `sKey` varchar(50) NOT NULL,
   `nVal` int(11) default '0',
   PRIMARY KEY  (`aid`),
   UNIQUE KEY `Index_general_set_Index` (`sKey`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
 SET character_set_client = @saved_cs_client;
 
 --
@@ -506,12 +508,12 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `t_global`;
 SET @saved_cs_client     = @@character_set_client;
-SET character_set_client = utf8;
+SET character_set_client = utf8mb4;
 CREATE TABLE `t_global` (
   `poolid` int(11) NOT NULL,
   `data1` int(11) NOT NULL,
   PRIMARY KEY  (`poolid`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 SET character_set_client = @saved_cs_client;
 
 --
@@ -529,7 +531,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `t_guild`;
 SET @saved_cs_client     = @@character_set_client;
-SET character_set_client = utf8;
+SET character_set_client = utf8mb4;
 CREATE TABLE `t_guild` (
   `aid` bigint(20) NOT NULL auto_increment,
   `guildid` int(11) NOT NULL,
@@ -567,7 +569,7 @@ CREATE TABLE `t_guild` (
   `lqltime` bigint(20) NOT NULL default '0',
   PRIMARY KEY  (`aid`),
   UNIQUE KEY `Index_guild_gguild` (`guildid`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 SET character_set_client = @saved_cs_client;
 
 --
@@ -585,7 +587,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `t_guild_new`;
 SET @saved_cs_client     = @@character_set_client;
-SET character_set_client = utf8;
+SET character_set_client = utf8mb4;
 CREATE TABLE `t_guild_new` (
   `guildid` int(11) NOT NULL,
   `guilddesc` varchar(150) NOT NULL,
@@ -635,7 +637,7 @@ CREATE TABLE `t_guild_new` (
   `week_fal2` int(11) NOT NULL default '0',
   `week_fal3` int(11) NOT NULL default '0',
   PRIMARY KEY  (`guildid`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 SET character_set_client = @saved_cs_client;
 
 --
@@ -653,7 +655,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `t_guild_user`;
 SET @saved_cs_client     = @@character_set_client;
-SET character_set_client = utf8;
+SET character_set_client = utf8mb4;
 CREATE TABLE `t_guild_user` (
   `aid` bigint(20) NOT NULL auto_increment,
   `guildid` int(11) NOT NULL,
@@ -676,7 +678,7 @@ CREATE TABLE `t_guild_user` (
   `lastdowntime` bigint(20) NOT NULL,
   PRIMARY KEY  (`aid`),
   UNIQUE KEY `Index_gusr_guildpos` (`guildid`,`pos`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 SET character_set_client = @saved_cs_client;
 
 --
@@ -694,7 +696,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `t_impact`;
 SET @saved_cs_client     = @@character_set_client;
-SET character_set_client = utf8;
+SET character_set_client = utf8mb4;
 CREATE TABLE `t_impact` (
   `aid` bigint(20) NOT NULL auto_increment,
   `charguid` int(11) NOT NULL,
@@ -702,7 +704,7 @@ CREATE TABLE `t_impact` (
   `dbversion` int(11) default '0',
   PRIMARY KEY  (`aid`),
   KEY `Index_impact_charguid` (`charguid`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 SET character_set_client = @saved_cs_client;
 
 --
@@ -720,7 +722,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `t_iteminfo`;
 SET @saved_cs_client     = @@character_set_client;
-SET character_set_client = utf8;
+SET character_set_client = utf8mb4;
 CREATE TABLE `t_iteminfo` (
   `aid` bigint(20) NOT NULL auto_increment,
   `charguid` int(11) NOT NULL,
@@ -746,7 +748,7 @@ CREATE TABLE `t_iteminfo` (
   `p15` int(11) default '0',
   `p16` int(11) default '0',
   `p17` int(11) default '0',
-  `creator` varchar(60) default '0',
+  `creator` varchar(110) default '0',
   `isvalid` smallint(6) NOT NULL default '1',
   `dbversion` int(11) default '0',
   `fixattr` varchar(200) NOT NULL,
@@ -757,7 +759,7 @@ CREATE TABLE `t_iteminfo` (
   UNIQUE KEY `Index_it_charguid` (`charguid`,`pos`),
   KEY `Index_it_itemguid` (`guid`,`world`,`server`),
   KEY `Index_iteminfo_itemtype` (`itemtype`,`isvalid`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 SET character_set_client = @saved_cs_client;
 
 --
@@ -775,7 +777,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `t_itemkey`;
 SET @saved_cs_client     = @@character_set_client;
-SET character_set_client = utf8;
+SET character_set_client = utf8mb4;
 CREATE TABLE `t_itemkey` (
   `aid` bigint(20) NOT NULL auto_increment,
   `sid` int(11) NOT NULL,
@@ -783,7 +785,7 @@ CREATE TABLE `t_itemkey` (
   `serial` int(11) NOT NULL,
   PRIMARY KEY  (`aid`),
   KEY `Index_itk_sid` (`sid`)
-) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=utf8mb4;
 SET character_set_client = @saved_cs_client;
 
 --
@@ -802,7 +804,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `t_league`;
 SET @saved_cs_client     = @@character_set_client;
-SET character_set_client = utf8;
+SET character_set_client = utf8mb4;
 CREATE TABLE `t_league` (
   `leagueid` int(11) NOT NULL,
   `leaguename` varchar(40) NOT NULL,
@@ -814,7 +816,7 @@ CREATE TABLE `t_league` (
   `applynum` int(11) NOT NULL,
   `isvalid` int(11) NOT NULL default '0',
   PRIMARY KEY  (`leagueid`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 SET character_set_client = @saved_cs_client;
 
 --
@@ -832,14 +834,14 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `t_league_apply`;
 SET @saved_cs_client     = @@character_set_client;
-SET character_set_client = utf8;
+SET character_set_client = utf8mb4;
 CREATE TABLE `t_league_apply` (
   `leagueid` int(11) NOT NULL,
   `applypos` int(11) NOT NULL,
   `applyguildid` int(11) NOT NULL,
   `isvalid` int(11) NOT NULL default '0',
   UNIQUE KEY `Index_league_apply_id` (`leagueid`,`applypos`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 SET character_set_client = @saved_cs_client;
 
 --
@@ -857,7 +859,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `t_league_usr`;
 SET @saved_cs_client     = @@character_set_client;
-SET character_set_client = utf8;
+SET character_set_client = utf8mb4;
 CREATE TABLE `t_league_usr` (
   `leagueid` int(11) NOT NULL,
   `guildpos` int(11) NOT NULL,
@@ -865,7 +867,7 @@ CREATE TABLE `t_league_usr` (
   `jointime` bigint(20) NOT NULL,
   `isvalid` int(11) NOT NULL default '0',
   UNIQUE KEY `Index_league_usr_id` (`leagueid`,`guildpos`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 SET character_set_client = @saved_cs_client;
 
 --
@@ -883,7 +885,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `t_mail`;
 SET @saved_cs_client     = @@character_set_client;
-SET character_set_client = utf8;
+SET character_set_client = utf8mb4;
 CREATE TABLE `t_mail` (
   `aid` bigint(20) NOT NULL auto_increment,
   `sender` varchar(50) NOT NULL,
@@ -894,7 +896,7 @@ CREATE TABLE `t_mail` (
   `isvalid` int(11) NOT NULL default '0',
   PRIMARY KEY  (`aid`),
   UNIQUE KEY `Index_mail_mail` (`pindex`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 SET character_set_client = @saved_cs_client;
 
 --
@@ -912,7 +914,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `t_mission`;
 SET @saved_cs_client     = @@character_set_client;
-SET character_set_client = utf8;
+SET character_set_client = utf8mb4;
 CREATE TABLE `t_mission` (
   `aid` bigint(20) NOT NULL auto_increment,
   `charguid` int(11) NOT NULL,
@@ -931,7 +933,7 @@ CREATE TABLE `t_mission` (
   `isvalid` int(11) default '1',
   PRIMARY KEY  (`aid`),
   KEY `Index_mi_charguid` (`charguid`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 SET character_set_client = @saved_cs_client;
 
 --
@@ -949,7 +951,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `t_pet`;
 SET @saved_cs_client     = @@character_set_client;
-SET character_set_client = utf8;
+SET character_set_client = utf8mb4;
 CREATE TABLE `t_pet` (
   `aid` bigint(20) NOT NULL auto_increment,
   `charguid` int(11) NOT NULL,
@@ -963,26 +965,26 @@ CREATE TABLE `t_pet` (
   `atttype` int(11) NOT NULL,
   `aitype` int(11) NOT NULL,
   `camp` varchar(30) NOT NULL,
-  `hp` int(11) NOT NULL,
-  `mp` int(11) NOT NULL,
+  `hp` bigint NOT NULL,
+  `mp` bigint NOT NULL,
   `life` int(11) NOT NULL,
   `pettype` smallint(6) NOT NULL,
   `genera` smallint(6) NOT NULL,
   `enjoy` smallint(6) NOT NULL,
-  `strper` int(11) NOT NULL,
-  `conper` int(11) NOT NULL,
-  `dexper` int(11) NOT NULL,
-  `sprper` int(11) NOT NULL,
-  `iprper` int(11) NOT NULL,
+  `strper` bigint NOT NULL,
+  `conper` bigint NOT NULL,
+  `dexper` bigint NOT NULL,
+  `sprper` bigint NOT NULL,
+  `iprper` bigint NOT NULL,
   `gengu` int(11) NOT NULL,
   `growrate` int(11) NOT NULL,
-  `repoint` int(11) NOT NULL,
-  `exp` int(11) NOT NULL,
-  `str` int(11) NOT NULL,
-  `con` int(11) NOT NULL,
-  `dex` int(11) NOT NULL,
-  `spr` int(11) NOT NULL,
-  `ipr` int(11) NOT NULL,
+  `repoint` bigint NOT NULL,
+  `exp` bigint NOT NULL,
+  `str` bigint NOT NULL,
+  `con` bigint NOT NULL,
+  `dex` bigint NOT NULL,
+  `spr` bigint NOT NULL,
+  `ipr` bigint NOT NULL,
   `skill` varchar(200) NOT NULL,
   `dbversion` int(11) default '0',
   `flags` int(11) default NULL,
@@ -999,7 +1001,7 @@ CREATE TABLE `t_pet` (
   `dataversion` int(11) NOT NULL default '0',
   PRIMARY KEY  (`aid`),
   KEY `Index_Pet_Charguid` (`charguid`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 SET character_set_client = @saved_cs_client;
 
 --
@@ -1017,16 +1019,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `t_petcreate`;
 SET @saved_cs_client     = @@character_set_client;
-SET character_set_client = utf8;
+SET character_set_client = utf8mb4;
 CREATE TABLE `t_petcreate` (
   `aid` bigint(20) NOT NULL auto_increment,
   `pindex` int(11) NOT NULL,
   `pairdata` text NOT NULL,
   `isvalid` int(11) NOT NULL,
-  `dataversion` int(11) NOT NULL default '0',
+  `dataversion` int(11) NOT NULL default '4',
   PRIMARY KEY  (`aid`),
   KEY `Index_pcre_pindex` (`pindex`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 SET character_set_client = @saved_cs_client;
 
 --
@@ -1044,7 +1046,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `t_pshop`;
 SET @saved_cs_client     = @@character_set_client;
-SET character_set_client = utf8;
+SET character_set_client = utf8mb4;
 CREATE TABLE `t_pshop` (
   `aid` bigint(20) NOT NULL auto_increment,
   `sid` int(11) NOT NULL,
@@ -1056,7 +1058,7 @@ CREATE TABLE `t_pshop` (
   `basemoney` int(11) NOT NULL,
   `createtime` bigint(20) NOT NULL,
   `shopname` varchar(50) NOT NULL,
-  `shopdesc` varchar(50) NOT NULL,
+  `shopdesc` varchar(84) NOT NULL,
   `ownername` varchar(50) NOT NULL,
   `ownerguid` int(11) NOT NULL,
   `isopen` int(11) NOT NULL,
@@ -1070,13 +1072,13 @@ CREATE TABLE `t_pshop` (
   `subtype` int(11) NOT NULL,
   `profit` int(11) NOT NULL,
   `buyinfo` longtext NOT NULL,
-  `dataversion` int(11) NOT NULL default '0',
+  `dataversion` int(11) NOT NULL default '4',
   `freeze` smallint(6) NOT NULL default '0',
   PRIMARY KEY  (`aid`),
   KEY `Index_pshop_shopguid` (`shopguid`),
   KEY `Index_pshop_sidpid` (`sid`,`poolid`),
   KEY `Index_pshop_ownerguid` (`ownerguid`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 SET character_set_client = @saved_cs_client;
 
 --
@@ -1094,7 +1096,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `t_pshop_new`;
 SET @saved_cs_client     = @@character_set_client;
-SET character_set_client = utf8;
+SET character_set_client = utf8mb4;
 CREATE TABLE `t_pshop_new` (
   `aid` bigint(20) NOT NULL auto_increment,
   `sid` int(11) NOT NULL,
@@ -1106,7 +1108,7 @@ CREATE TABLE `t_pshop_new` (
   `basemoney` int(11) NOT NULL,
   `createtime` bigint(20) NOT NULL,
   `shopname` varchar(50) NOT NULL,
-  `shopdesc` varchar(50) NOT NULL,
+  `shopdesc` varchar(84) NOT NULL,
   `ownername` varchar(50) NOT NULL,
   `ownerguid` int(11) NOT NULL,
   `isopen` int(11) NOT NULL,
@@ -1118,7 +1120,7 @@ CREATE TABLE `t_pshop_new` (
   `partnum` int(11) NOT NULL,
   `subtype` int(11) NOT NULL,
   `profit` int(11) NOT NULL,
-  `dataversion` int(11) NOT NULL default '0',
+  `dataversion` int(11) NOT NULL default '4',
   `freeze` smallint(6) NOT NULL default '0',
   `buydesc` varchar(80) NOT NULL,
   `buyreserve` varchar(50) NOT NULL,
@@ -1126,7 +1128,7 @@ CREATE TABLE `t_pshop_new` (
   KEY `Index_pshop_new_shopguid` (`shopguid`),
   KEY `Index_pshop_new_sidpid` (`sid`,`poolid`),
   KEY `Index_pshop_new_ownerguid` (`ownerguid`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 SET character_set_client = @saved_cs_client;
 
 --
@@ -1144,7 +1146,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `t_pshop_stall`;
 SET @saved_cs_client     = @@character_set_client;
-SET character_set_client = utf8;
+SET character_set_client = utf8mb4;
 CREATE TABLE `t_pshop_stall` (
   `aid` bigint(20) NOT NULL auto_increment,
   `shopguid` varchar(50) NOT NULL,
@@ -1156,7 +1158,7 @@ CREATE TABLE `t_pshop_stall` (
   `Buy_StlRsv` varchar(50) NOT NULL,
   PRIMARY KEY  (`aid`),
   UNIQUE KEY `Index_pshop_stall_ShpStlIndex` (`shopguid`,`stallid`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 SET character_set_client = @saved_cs_client;
 
 --
@@ -1174,7 +1176,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `t_pshop_stall_buy`;
 SET @saved_cs_client     = @@character_set_client;
-SET character_set_client = utf8;
+SET character_set_client = utf8mb4;
 CREATE TABLE `t_pshop_stall_buy` (
   `aid` bigint(20) NOT NULL auto_increment,
   `shopguid` varchar(50) NOT NULL,
@@ -1207,7 +1209,7 @@ CREATE TABLE `t_pshop_stall_buy` (
   `Itm_p15` int(11) default '0',
   `Itm_p16` int(11) default '0',
   `Itm_p17` int(11) default '0',
-  `Itm_creator` varchar(60) default '0',
+  `Itm_creator` varchar(110) default '0',
   `Itm_isvalid` smallint(6) NOT NULL default '1',
   `Itm_dbversion` int(11) default '0',
   `Itm_fixattr` varchar(200) NOT NULL,
@@ -1216,7 +1218,7 @@ CREATE TABLE `t_pshop_stall_buy` (
   `Itm_maxgemid` int(11) NOT NULL default '-1',
   PRIMARY KEY  (`aid`),
   UNIQUE KEY `Index_pshop_stall_buy_ShpStlUntIndex` (`shopguid`,`stallid`,`stallunitid`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 SET character_set_client = @saved_cs_client;
 
 --
@@ -1234,7 +1236,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `t_pshop_stall_itm`;
 SET @saved_cs_client     = @@character_set_client;
-SET character_set_client = utf8;
+SET character_set_client = utf8mb4;
 CREATE TABLE `t_pshop_stall_itm` (
   `aid` bigint(20) NOT NULL auto_increment,
   `shopguid` varchar(50) NOT NULL,
@@ -1265,7 +1267,7 @@ CREATE TABLE `t_pshop_stall_itm` (
   `Itm_p15` int(11) default '0',
   `Itm_p16` int(11) default '0',
   `Itm_p17` int(11) default '0',
-  `Itm_creator` varchar(60) default '0',
+  `Itm_creator` varchar(110) default '0',
   `Itm_isvalid` smallint(6) NOT NULL default '1',
   `Itm_dbversion` int(11) default '0',
   `Itm_fixattr` varchar(200) NOT NULL,
@@ -1274,7 +1276,7 @@ CREATE TABLE `t_pshop_stall_itm` (
   `Itm_maxgemid` int(11) NOT NULL default '-1',
   PRIMARY KEY  (`aid`),
   UNIQUE KEY `Index_pshop_stall_itm_ShpStlUntIndex` (`shopguid`,`stallid`,`stallunitid`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 SET character_set_client = @saved_cs_client;
 
 --
@@ -1292,7 +1294,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `t_pshop_stall_pet`;
 SET @saved_cs_client     = @@character_set_client;
-SET character_set_client = utf8;
+SET character_set_client = utf8mb4;
 CREATE TABLE `t_pshop_stall_pet` (
   `aid` bigint(20) NOT NULL auto_increment,
   `shopguid` varchar(50) NOT NULL,
@@ -1311,26 +1313,26 @@ CREATE TABLE `t_pshop_stall_pet` (
   `Pet_atttype` int(11) NOT NULL,
   `Pet_aitype` int(11) NOT NULL,
   `Pet_camp` varchar(30) NOT NULL,
-  `Pet_hp` int(11) NOT NULL,
-  `Pet_mp` int(11) NOT NULL,
+  `Pet_hp` bigint NOT NULL,
+  `Pet_mp` bigint NOT NULL,
   `Pet_life` int(11) NOT NULL,
   `Pet_pettype` smallint(6) NOT NULL,
   `Pet_genera` smallint(6) NOT NULL,
   `Pet_enjoy` smallint(6) NOT NULL,
-  `Pet_strper` int(11) NOT NULL,
-  `Pet_conper` int(11) NOT NULL,
-  `Pet_dexper` int(11) NOT NULL,
-  `Pet_sprper` int(11) NOT NULL,
-  `Pet_iprper` int(11) NOT NULL,
+  `Pet_strper` bigint NOT NULL,
+  `Pet_conper` bigint NOT NULL,
+  `Pet_dexper` bigint NOT NULL,
+  `Pet_sprper` bigint NOT NULL,
+  `Pet_iprper` bigint NOT NULL,
   `Pet_gengu` int(11) NOT NULL,
   `Pet_growrate` int(11) NOT NULL,
-  `Pet_repoint` int(11) NOT NULL,
-  `Pet_exp` int(11) NOT NULL,
-  `Pet_str` int(11) NOT NULL,
-  `Pet_con` int(11) NOT NULL,
-  `Pet_dex` int(11) NOT NULL,
-  `Pet_spr` int(11) NOT NULL,
-  `Pet_ipr` int(11) NOT NULL,
+  `Pet_repoint` bigint NOT NULL,
+  `Pet_exp` bigint NOT NULL,
+  `Pet_str` bigint NOT NULL,
+  `Pet_con` bigint NOT NULL,
+  `Pet_dex` bigint NOT NULL,
+  `Pet_spr` bigint NOT NULL,
+  `Pet_ipr` bigint NOT NULL,
   `Pet_skill` varchar(200) NOT NULL,
   `Pet_dbversion` int(11) default '0',
   `Pet_flags` int(11) default NULL,
@@ -1346,7 +1348,7 @@ CREATE TABLE `t_pshop_stall_pet` (
   `Pet_us_reserve` int(11) NOT NULL default '0',
   PRIMARY KEY  (`aid`),
   UNIQUE KEY `Index_pshop_stall_pet_ShpStlUntIndex` (`shopguid`,`stallid`,`stallunitid`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 SET character_set_client = @saved_cs_client;
 
 --
@@ -1364,7 +1366,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `t_relation`;
 SET @saved_cs_client     = @@character_set_client;
-SET character_set_client = utf8;
+SET character_set_client = utf8mb4;
 CREATE TABLE `t_relation` (
   `aid` bigint(20) NOT NULL auto_increment,
   `charguid` int(11) NOT NULL,
@@ -1377,7 +1379,7 @@ CREATE TABLE `t_relation` (
   `dbversion` int(11) default '0',
   PRIMARY KEY  (`aid`),
   KEY `Index_re_charguid` (`charguid`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 SET character_set_client = @saved_cs_client;
 
 --
@@ -1395,7 +1397,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `t_skill`;
 SET @saved_cs_client     = @@character_set_client;
-SET character_set_client = utf8;
+SET character_set_client = utf8mb4;
 CREATE TABLE `t_skill` (
   `aid` bigint(20) NOT NULL auto_increment,
   `charguid` int(11) NOT NULL,
@@ -1405,7 +1407,7 @@ CREATE TABLE `t_skill` (
   `isvalid` int(11) default NULL,
   PRIMARY KEY  (`aid`),
   KEY `Index_sk_charguid` (`charguid`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 SET character_set_client = @saved_cs_client;
 
 --
@@ -1423,11 +1425,11 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `t_var`;
 SET @saved_cs_client     = @@character_set_client;
-SET character_set_client = utf8;
+SET character_set_client = utf8mb4;
 CREATE TABLE `t_var` (
   `maxcharguid` int(11) NOT NULL,
   PRIMARY KEY  (`maxcharguid`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 SET character_set_client = @saved_cs_client;
 
 --
@@ -1446,18 +1448,18 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `t_xfallexp`;
 SET @saved_cs_client     = @@character_set_client;
-SET character_set_client = utf8;
+SET character_set_client = utf8mb4;
 CREATE TABLE `t_xfallexp` (
   `xflv` int(11) NOT NULL,
-  `id1all` int(11) NOT NULL,
-  `id2all` int(11) NOT NULL,
-  `id3all` int(11) NOT NULL,
-  `id4all` int(11) NOT NULL,
-  `id5all` int(11) NOT NULL,
-  `id6all` int(11) NOT NULL,
-  `id7all` int(11) NOT NULL,
+  `id1all` bigint NOT NULL,
+  `id2all` bigint NOT NULL,
+  `id3all` bigint NOT NULL,
+  `id4all` bigint NOT NULL,
+  `id5all` bigint NOT NULL,
+  `id6all` bigint NOT NULL,
+  `id7all` bigint NOT NULL,
   PRIMARY KEY  (`xflv`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 SET character_set_client = @saved_cs_client;
 
 --
@@ -1476,7 +1478,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `t_xinfa`;
 SET @saved_cs_client     = @@character_set_client;
-SET character_set_client = utf8;
+SET character_set_client = utf8mb4;
 CREATE TABLE `t_xinfa` (
   `aid` bigint(20) NOT NULL auto_increment,
   `charguid` int(11) NOT NULL,
@@ -1485,7 +1487,7 @@ CREATE TABLE `t_xinfa` (
   `dbversion` int(11) default '0',
   PRIMARY KEY  (`aid`),
   KEY `Index_xinfa_charguid` (`charguid`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 SET character_set_client = @saved_cs_client;
 
 --
@@ -2738,7 +2740,7 @@ pp16                  int,
 pp17                  int,
 pisvalid              smallint,
 pdbversion            int,
-pcreator              varchar(60),
+pcreator              varchar(110),
 pvar                  varchar(40))
 begin
 declare rguid      int;
@@ -2962,7 +2964,7 @@ pbasemoney            int,
 pprofit               int,
 pcreatetime           bigint,
 pshopname             varchar(50),
-pshopdesc             varchar(50),
+pshopdesc             varchar(84),
 pownername            varchar(50),
 pownerguid            int,
 pisopen               int,
@@ -3063,7 +3065,7 @@ pbasemoney            int,
 pprofit               int,
 pcreatetime           bigint,
 pshopname             varchar(50),
-pshopdesc             varchar(50),
+pshopdesc             varchar(84),
 pownername            varchar(50),
 pownerguid            int,
 pisopen               int,
@@ -3230,7 +3232,7 @@ pItm_p14              int,
 pItm_p15              int,
 pItm_p16              int,
 pItm_p17              int,
-pItm_creator          varchar(60),
+pItm_creator          varchar(110),
 pItm_var              varchar(40),
 pItm_visualid         int,
 pItm_maxgemid         int)
@@ -3378,7 +3380,7 @@ pItm_p14              int,
 pItm_p15              int,
 pItm_p16              int,
 pItm_p17              int,
-pItm_creator          varchar(60),
+pItm_creator          varchar(110),
 pItm_var              varchar(40),
 pItm_visualid         int,
 pItm_maxgemid         int)
@@ -3508,26 +3510,26 @@ pPet_needlevel        int,
 pPet_atttype          int,
 pPet_aitype           int,
 pPet_camp             varchar(30),
-pPet_hp               int,
-pPet_mp               int,
+pPet_hp               bigint,
+pPet_mp               bigint,
 pPet_life             int,
 pPet_pettype          smallint,
 pPet_genera           smallint,
 pPet_enjoy            smallint,
-pPet_strper           int,
-pPet_conper           int,
-pPet_dexper           int,
-pPet_sprper           int,
-pPet_iprper           int,
+pPet_strper           bigint,
+pPet_conper           bigint,
+pPet_dexper           bigint,
+pPet_sprper           bigint,
+pPet_iprper           bigint,
 pPet_gengu            int,
 pPet_growrate         int,
-pPet_repoint          int,
-pPet_exp              int,
-pPet_str              int,
-pPet_con              int,
-pPet_dex              int,
-pPet_spr              int,
-pPet_ipr              int,
+pPet_repoint          bigint,
+pPet_exp              bigint,
+pPet_str              bigint,
+pPet_con              bigint,
+pPet_dex              bigint,
+pPet_spr              bigint,
+pPet_ipr              bigint,
 pPet_skill            varchar(200),
 pPet_pwflag           int,
 pPet_pclvl            int,

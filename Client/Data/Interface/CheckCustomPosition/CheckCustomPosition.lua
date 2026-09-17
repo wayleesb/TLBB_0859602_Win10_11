@@ -1,24 +1,24 @@
 -------------------------------------------------------
---"²é¿´×Ô¶¨Òå°ï»áÖ°Î»"½çÃæ½Å±¾
+--"æŸ¥çœ‹è‡ªå®šä¹‰å¸®ä¼šèŒä½"ç•Œé¢è„šæœ¬
 --create by xindefeng
 -------------------------------------------------------
 
-local g_CustomPosition = nil	--ĞèÒªÓÃµ½µÄ¿Ø¼ş±í
+local g_CustomPosition = nil	--éœ€è¦ç”¨åˆ°çš„æ§ä»¶è¡¨
 
---±ê×¼°ï»áÖ°Î»Ãû³Æ
+--æ ‡å‡†å¸®ä¼šèŒä½åç§°
 local g_StdPositionName = {
-	"°ïÖ÷",			--9
-	"¸±°ïÖ÷",		--8
-	"ÄÚÎñÊ¹",		--7
-	"¹¤ÎñÊ¹",		--6
-	"ºë»¯Ê¹",		--5
-	"ÉÌÈË",			--4
-	"¾«Ó¢",			--3
-	"°ïÖÚ"			--2
+	"å¸®ä¸»",			--9
+	"å‰¯å¸®ä¸»",		--8
+	"å†…åŠ¡ä½¿",		--7
+	"å·¥åŠ¡ä½¿",		--6
+	"å¼˜åŒ–ä½¿",		--5
+	"å•†äºº",			--4
+	"ç²¾è‹±",			--3
+	"å¸®ä¼—"			--2
 }
 
 
---ÊÂ¼ş×¢²á
+--äº‹ä»¶æ³¨å†Œ
 function CheckCustomPosition_PreLoad()
 	this:RegisterEvent("GUILD_CHECK_CUSTOMPOSITION")
 	this:RegisterEvent("GUILD_FORCE_CLOSE")	
@@ -27,10 +27,10 @@ end
 function CheckCustomPosition_OnLoad()	
 end
 
---ÊÂ¼şÏìÓ¦
+--äº‹ä»¶å“åº”
 function CheckCustomPosition_OnEvent(event)	
 	if( event == "GUILD_CHECK_CUSTOMPOSITION" ) then
-		CheckCustomPosition_SetCtls()	--ÉèÖÃ¿Ø¼ş
+		CheckCustomPosition_SetCtls()	--è®¾ç½®æ§ä»¶
 				
 		CheckCustomPosition_Update()
 		CheckCustomPosition_Show()
@@ -39,7 +39,7 @@ function CheckCustomPosition_OnEvent(event)
 	end
 end
 
---ÉèÖÃ¿Ø¼ş±í
+--è®¾ç½®æ§ä»¶è¡¨
 function CheckCustomPosition_SetCtls()
 	g_CustomPosition = {
 												CheckCustomPosition_CurPos1,
@@ -54,13 +54,13 @@ function CheckCustomPosition_SetCtls()
 end
 
 
---Ë¢ĞÂ½çÃæÏÔÊ¾µÄÊı¾İ
+--åˆ·æ–°ç•Œé¢æ˜¾ç¤ºçš„æ•°æ®
 function CheckCustomPosition_Update()
 	local szMsg = nil
 	
-	CheckCustomPosition_Title:SetText("#gFF0FA0×Ô¶¨ÒåÖ°Î»Ãû³Æ")
+	CheckCustomPosition_Title:SetText("#gFF0FA0è‡ªå®šä¹‰èŒä½åç§°")
 	
-	--ÏÔÊ¾µ±Ç°"×Ô¶¨ÒåÖ°Î»Ãû³Æ"
+	--æ˜¾ç¤ºå½“å‰"è‡ªå®šä¹‰èŒä½åç§°"
 	for i=1,8 do
 		szMsg = Guild:GetCurCustomPositionName(10-i)
 		if((szMsg == "") or (szMsg == g_StdPositionName[i]))then
@@ -69,19 +69,19 @@ function CheckCustomPosition_Update()
 			szMsg = szMsg.."("..g_StdPositionName[i]..")"			
 		end
 		
-		--ÉèÖÃµ±Ç°×Ô¶¨ÒåÖ°Î»Ãû³Æ
+		--è®¾ç½®å½“å‰è‡ªå®šä¹‰èŒä½åç§°
 		g_CustomPosition[i]:SetText(szMsg)
 		
 	end
 end
 
---´ò¿ª½çÃæ
+--æ‰“å¼€ç•Œé¢
 function CheckCustomPosition_Show()	
 	this:Show()
 end
 
---È·¶¨
+--ç¡®å®š
 function CheckCustomPosition_Ok()	
-	--¹Ø±Õ´°¿Ú
+	--å…³é—­çª—å£
 	this:Hide()	
 end

@@ -1,19 +1,19 @@
---Ì«ºşNPC
---Ôì·´¶ñÔô
---ÆÕÍ¨
+--å¤ªæ¹–NPC
+--é€ åæ¶è´¼
+--æ™®é€š
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x808037_g_ScriptId	= 808037
 
 ----------------------------------------------------
 --
 x808037_LingYao								= {}
-x808037_LingYao["status"]					= 0		--»î¶¯×´Ì¬£¬0 Ã»ÓĞÆô¶¯£¬1£¬Æô¶¯
-x808037_LingYao["QianNianCaoGen"]			= 1		--ÊÇ·ñÒÑ¾­³öÉú¾µºşÇ§Äê²İ
-x808037_LingYao["YaoDing_LianYao_Status"]	= 2		-- Ò©¶¦ Á¶Ò©×´Ì¬£¬0Ã»ÓĞÒ©¶¦£¬ 1 Éú³ÉÒ©¶¦(¿É¹¥»÷)£¬2 Éú³ÉÒ©¶¦£¨¿É¶Ô»°£©
-x808037_LingYao["SelfID"]					= 3		-- ¼ÇÂ¼ µ±Ç° Á¶Ò©Íæ¼Ò µÄID
-x808037_LingYao["YaoDing_LianYao_Time"]		= 4		-- Éú³ÉÒ©¶¦(¿É¹¥»÷) µÄÊ±¼ä£¬ ĞèÒªÔÚONTIMER Àï¸ù¾İ ´ËÊ±¼ä½øĞĞ¹«¸æ
-x808037_LingYao["MonsterID"]				= 5		--Ò©¶¦(¿É¹¥»÷) µÄ ID 
+x808037_LingYao["status"]					= 0		--æ´»åŠ¨çŠ¶æ€ï¼Œ0 æ²¡æœ‰å¯åŠ¨ï¼Œ1ï¼Œå¯åŠ¨
+x808037_LingYao["QianNianCaoGen"]			= 1		--æ˜¯å¦å·²ç»å‡ºç”Ÿé•œæ¹–åƒå¹´è‰
+x808037_LingYao["YaoDing_LianYao_Status"]	= 2		-- è¯é¼ ç‚¼è¯çŠ¶æ€ï¼Œ0æ²¡æœ‰è¯é¼ï¼Œ 1 ç”Ÿæˆè¯é¼(å¯æ”»å‡»)ï¼Œ2 ç”Ÿæˆè¯é¼ï¼ˆå¯å¯¹è¯ï¼‰
+x808037_LingYao["SelfID"]					= 3		-- è®°å½• å½“å‰ ç‚¼è¯ç©å®¶ çš„ID
+x808037_LingYao["YaoDing_LianYao_Time"]		= 4		-- ç”Ÿæˆè¯é¼(å¯æ”»å‡») çš„æ—¶é—´ï¼Œ éœ€è¦åœ¨ONTIMER é‡Œæ ¹æ® æ­¤æ—¶é—´è¿›è¡Œå…¬å‘Š
+x808037_LingYao["MonsterID"]				= 5		--è¯é¼(å¯æ”»å‡») çš„ ID 
 x808037_LingYao["BroardFlag5"]				= 6		--
 x808037_LingYao["BroardFlag10"]				= 7		--
 x808037_LingYao["BroardFlag15"]				= 8		--
@@ -27,7 +27,7 @@ x808037_GrowPoint =
 }
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú 19-145-40 18-149-48
+--äº‹ä»¶äº¤äº’å…¥å£ 19-145-40 18-149-48
 --**********************************
 function x808037_OnDefaultEvent( sceneId, actId, param1, param2, param3, param4, param5 )
 
@@ -50,15 +50,15 @@ end
 
 
 --**********************************
---ĞÄÌøº¯Êı
+--å¿ƒè·³å‡½æ•°
 --**********************************
 function x808037_OnTimer( sceneId, actId, uTime )
 
 	--begin modified by zhangguoxin 090207
-	--local CurTime = GetHourTime()		--µ±Ç°Ê±¼ä
-	--local CurDaytime = floor(CurTime/100)	--µ±Ç°Ê±¼ä(Ìì)
-	--local CurQuarterTime = mod(CurTime,100)	--µ±Ç°Ê±¼ä(¿Ì)
-	local CurQuarterTime = mod(GetQuarterTime(),100);				--µ±Ç°Ê±¼ä(¿Ì)
+	--local CurTime = GetHourTime()		--å½“å‰æ—¶é—´
+	--local CurDaytime = floor(CurTime/100)	--å½“å‰æ—¶é—´(å¤©)
+	--local CurQuarterTime = mod(CurTime,100)	--å½“å‰æ—¶é—´(åˆ»)
+	local CurQuarterTime = mod(GetQuarterTime(),100);				--å½“å‰æ—¶é—´(åˆ»)
 	--end modified by zhangguoxin 090207
 	local nCurTime = LuaFnGetCurrentTime();
 	
@@ -94,7 +94,7 @@ function x808037_OnTimer( sceneId, actId, uTime )
 			LuaFnDeleteMonster( sceneId, idMonster);
 	
 			local MonsterId = LuaFnCreateMonster( sceneId, 881, nPlayerX, nPlayerZ, 3, 0, 5112 ); 
-		-- ÔİÊ±ÏÈÓÃÔô±ø ´úÌæ
+		-- æš‚æ—¶å…ˆç”¨è´¼å…µ ä»£æ›¿
 		--	local MonsterId = LuaFnCreateMonster( sceneId, 473, nPlayerX, nPlayerZ, 3, 0, 808038) 
 			
 			SetUnitReputationID( sceneId, MonsterId, MonsterId, 0 );
@@ -123,7 +123,7 @@ end
 
 
 --**********************************
---»î¶¯½áÊø
+--æ´»åŠ¨ç»“æŸ
 --**********************************
 function x808037_OnActivityEnd( sceneId, actId )
 

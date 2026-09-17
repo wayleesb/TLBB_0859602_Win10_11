@@ -1,70 +1,70 @@
---ÕÒÈËÈÎÎñ
---ÕÔÌìÊ¦Ñ°ÕÒÆÑÁ¼
+--æ‰¾äººä»»åŠ¡
+--èµµå¤©å¸ˆå¯»æ‰¾è’²è‰¯
 --MisDescBegin
---½Å±¾ºÅ
+--è„šæœ¬å·
 x210200_g_ScriptId = 210200
 
---½ÓÊÜÈÎÎñNPCÊôĞÔ
+--æ¥å—ä»»åŠ¡NPCå±æ€§
 x210200_g_Position_X=216.6208
 x210200_g_Position_Z=133.6347
 x210200_g_SceneID=2
-x210200_g_AccomplishNPC_Name="ÆÑÁ¼"
+x210200_g_AccomplishNPC_Name="è’²è‰¯"
 
---ÈÎÎñºÅ
+--ä»»åŠ¡å·
 x210200_g_MissionId = 440
 
---ÉÏÒ»¸öÈÎÎñµÄID
+--ä¸Šä¸€ä¸ªä»»åŠ¡çš„ID
 --g_MissionIdPre = 
 
---Ä¿±êNPC
-x210200_g_Name	="ÆÑÁ¼"
+--ç›®æ ‡NPC
+x210200_g_Name	="è’²è‰¯"
 
---ÈÎÎñ¹éÀà
+--ä»»åŠ¡å½’ç±»
 x210200_g_MissionKind = 13
 
---ÈÎÎñµÈ¼¶
+--ä»»åŠ¡ç­‰çº§
 x210200_g_MissionLevel = 1
 
---ÊÇ·ñÊÇ¾«Ó¢ÈÎÎñ
+--æ˜¯å¦æ˜¯ç²¾è‹±ä»»åŠ¡
 x210200_g_IfMissionElite = 0
 
---ÈÎÎñÃû
-x210200_g_MissionName="µÚÒ»°ÑÎäÆ÷"
-x210200_g_MissionInfo_1="  Õâ²»ÊÇ#R"
-x210200_g_MissionInfo_2="#{event_dali_0001}" --Ó¦ÎÒÃÇÕòÄÏÍõµÄÑûÇëÇ°À´²Î¼ÓÎäÁÖ´ó»á¡£
+--ä»»åŠ¡å
+x210200_g_MissionName="ç¬¬ä¸€æŠŠæ­¦å™¨"
+x210200_g_MissionInfo_1="  è¿™ä¸æ˜¯#R"
+x210200_g_MissionInfo_2="#{event_dali_0001}" --åº”æˆ‘ä»¬é•‡å—ç‹çš„é‚€è¯·å‰æ¥å‚åŠ æ­¦æ—å¤§ä¼šã€‚
 x210200_g_MissionTarget="#{xinshou_001}"
 x210200_g_MissionComplete="#{event_dali_0002}"
 x210200_g_MoneyBonus=1
-x210200_g_SignPost = {x = 216, z = 135, tip = "ÆÑÁ¼"}
+x210200_g_SignPost = {x = 216, z = 135, tip = "è’²è‰¯"}
 
 x210200_g_ItemBonus={id=30101001, num=10}
 x210200_g_RadioItemBonus={{id=10101000 ,num=1},{id=10102000,num=1},{id=10104000,num=1},{id=10103000,num=1}}
 
-x210200_g_Custom	= { {id="ÒÑÕÒµ½ÆÑÁ¼",num=1} }
-x210200_g_IsMissionOkFail = 1		--±äÁ¿µÄµÚ0Î»
+x210200_g_Custom	= { {id="å·²æ‰¾åˆ°è’²è‰¯",num=1} }
+x210200_g_IsMissionOkFail = 1		--å˜é‡çš„ç¬¬0ä½
 
 --MisDescEnd
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x210200_OnDefaultEvent( sceneId, selfId, targetId )
-    --Èç¹ûÍæ¼ÒÍê³É¹ıÕâ¸öÈÎÎñ
+    --å¦‚æœç©å®¶å®Œæˆè¿‡è¿™ä¸ªä»»åŠ¡
     if (IsMissionHaveDone(sceneId,selfId,x210200_g_MissionId) > 0 ) then
     	return
 	elseif( IsHaveMission(sceneId,selfId,x210200_g_MissionId) > 0)  then
 		if GetName(sceneId,targetId) == x210200_g_Name then
 			x210200_OnContinue( sceneId, selfId, targetId )
 		end
-    --Âú×ãÈÎÎñ½ÓÊÕÌõ¼ş
+    --æ»¡è¶³ä»»åŠ¡æ¥æ”¶æ¡ä»¶
     elseif x210200_CheckAccept(sceneId,selfId) > 0 then
 		if GetName(sceneId,targetId) ~= x210200_g_Name then
-			--·¢ËÍÈÎÎñ½ÓÊÜÊ±ÏÔÊ¾µÄĞÅÏ¢
+			--å‘é€ä»»åŠ¡æ¥å—æ—¶æ˜¾ç¤ºçš„ä¿¡æ¯
 				local  PlayerName=GetName(sceneId,selfId)	
 	            local  PlayerSex=GetSex(sceneId,selfId)
 	            if PlayerSex == 0 then
-		            PlayerSex = "¹ÃÄï"
+		            PlayerSex = "å§‘å¨˜"
 	            else
-		            PlayerSex = "ÉÙÏÀ"
+		            PlayerSex = "å°‘ä¾ "
 	            end
 			BeginEvent(sceneId)
 				AddText(sceneId,x210200_g_MissionName)
@@ -85,18 +85,18 @@ function x210200_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x210200_OnEnumerate( sceneId, selfId, targetId )
-	--Èç¹ûÍæ¼ÒÍê³É¹ıÕâ¸öÈÎÎñ
+	--å¦‚æœç©å®¶å®Œæˆè¿‡è¿™ä¸ªä»»åŠ¡
 	if IsMissionHaveDone(sceneId,selfId,x210200_g_MissionId) > 0 then
 		return 
-	--Èç¹ûÒÑ½Ó´ËÈÎÎñ
+	--å¦‚æœå·²æ¥æ­¤ä»»åŠ¡
 	elseif IsHaveMission(sceneId,selfId,x210200_g_MissionId) > 0 then
 		if GetName(sceneId,targetId) == x210200_g_Name then
 			AddNumText(sceneId, x210200_g_ScriptId,x210200_g_MissionName,2,-1);
 		end
-	--Âú×ãÈÎÎñ½ÓÊÕÌõ¼ş
+	--æ»¡è¶³ä»»åŠ¡æ¥æ”¶æ¡ä»¶
 	elseif x210200_CheckAccept(sceneId,selfId) > 0 then
 		if GetName(sceneId,targetId) ~= x210200_g_Name then
 			AddNumText(sceneId,x210200_g_ScriptId,x210200_g_MissionName,1,-1);
@@ -105,10 +105,10 @@ function x210200_OnEnumerate( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x210200_CheckAccept( sceneId, selfId )
-	--ĞèÒª1¼¶²ÅÄÜ½Ó
+	--éœ€è¦1çº§æ‰èƒ½æ¥
 	if GetLevel( sceneId, selfId ) >= 1 then
 		return 1
 	else
@@ -117,15 +117,15 @@ function x210200_CheckAccept( sceneId, selfId )
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x210200_OnAccept( sceneId, selfId )
-	--¼ÓÈëÈÎÎñµ½Íæ¼ÒÁĞ±í
+	--åŠ å…¥ä»»åŠ¡åˆ°ç©å®¶åˆ—è¡¨
 	AddMission( sceneId,selfId, x210200_g_MissionId, x210200_g_ScriptId, 0, 0, 0 )
-	Msg2Player(  sceneId, selfId,"#Y½ÓÊÜÈÎÎñ£ºµÚÒ»°ÑÎäÆ÷",MSG2PLAYER_PARA )
+	Msg2Player(  sceneId, selfId,"#Yæ¥å—ä»»åŠ¡ï¼šç¬¬ä¸€æŠŠæ­¦å™¨",MSG2PLAYER_PARA )
 	CallScriptFunction( SCENE_SCRIPT_ID, "AskTheWay", sceneId, selfId, sceneId, x210200_g_SignPost.x, x210200_g_SignPost.z, x210200_g_SignPost.tip )
 
-	-- ÉèÖÃÈÎÎñÍê³É±êÖ¾
+	-- è®¾ç½®ä»»åŠ¡å®Œæˆæ ‡å¿—
 	local misIndex = GetMissionIndexByID(sceneId,selfId,x210200_g_MissionId)
 	SetMissionByIndex( sceneId, selfId, misIndex, 0, 1)
 	SetMissionByIndex( sceneId, selfId, misIndex, 1, 1)
@@ -133,19 +133,19 @@ function x210200_OnAccept( sceneId, selfId )
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x210200_OnAbandon( sceneId, selfId )
-	--É¾³ıÍæ¼ÒÈÎÎñÁĞ±íÖĞ¶ÔÓ¦µÄÈÎÎñ
+	--åˆ é™¤ç©å®¶ä»»åŠ¡åˆ—è¡¨ä¸­å¯¹åº”çš„ä»»åŠ¡
     DelMission( sceneId, selfId, x210200_g_MissionId )
 	CallScriptFunction( SCENE_SCRIPT_ID, "DelSignpost", sceneId, selfId, sceneId, x210200_g_SignPost.tip )
 end
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x210200_OnContinue( sceneId, selfId, targetId )
-	--Ìá½»ÈÎÎñÊ±µÄËµÃ÷ĞÅÏ¢
+	--æäº¤ä»»åŠ¡æ—¶çš„è¯´æ˜ä¿¡æ¯
     BeginEvent(sceneId)
 		AddText(sceneId,x210200_g_MissionName)
 		AddText(sceneId,x210200_g_MissionComplete)
@@ -160,7 +160,7 @@ function x210200_OnContinue( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x210200_CheckSubmit( sceneId, selfId )
 	local bRet = CallScriptFunction( SCENE_SCRIPT_ID, "CheckSubmit", sceneId, selfId, x210200_g_MissionId )
@@ -172,7 +172,7 @@ function x210200_CheckSubmit( sceneId, selfId )
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x210200_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 	if x210200_CheckSubmit( sceneId, selfId, selectRadioId ) == 1 then
@@ -185,7 +185,7 @@ function x210200_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 			AddItem( sceneId,30101001, 10 )
 			
 		ret = EndAddItem(sceneId,selfId)
-		--Ìí¼ÓÈÎÎñ½±Àø
+		--æ·»åŠ ä»»åŠ¡å¥–åŠ±
 		if ret > 0 then
 			AddMoney(sceneId,selfId,x210200_g_MoneyBonus );
 			LuaFnAddExp( sceneId, selfId, 10)
@@ -193,18 +193,18 @@ function x210200_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 			ret = DelMission( sceneId, selfId, x210200_g_MissionId )
 			if ret > 0 then
 				MissionCom( sceneId, selfId, x210200_g_MissionId )
-				--¿Û³ıÈÎÎñÎïÆ·
+				--æ‰£é™¤ä»»åŠ¡ç‰©å“
 				--for i, item in g_DemandItem do
 				--	DelItem( sceneId, selfId, item.id, item.num )
 				--end
 				AddItemListToHuman(sceneId,selfId)
-				Msg2Player(  sceneId, selfId,"#YÍê³ÉÈÎÎñ£ºµÚÒ»°ÑÎäÆ÷",MSG2PLAYER_PARA )
+				Msg2Player(  sceneId, selfId,"#Yå®Œæˆä»»åŠ¡ï¼šç¬¬ä¸€æŠŠæ­¦å™¨",MSG2PLAYER_PARA )
 				CallScriptFunction( 210201, "OnDefaultEvent",sceneId, selfId, targetId)
 			end
 		else
-			--ÈÎÎñ½±ÀøÃ»ÓĞ¼Ó³É¹¦
+			--ä»»åŠ¡å¥–åŠ±æ²¡æœ‰åŠ æˆåŠŸ
 			BeginEvent(sceneId)
-				strText = "±³°üÒÑÂú,ÎŞ·¨Íê³ÉÈÎÎñ"
+				strText = "èƒŒåŒ…å·²æ»¡,æ— æ³•å®Œæˆä»»åŠ¡"
 				AddText(sceneId,strText);
 			EndEvent(sceneId)
 			DispatchMissionTips(sceneId,selfId)
@@ -213,19 +213,19 @@ function x210200_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 end
 
 --**********************************
---É±ËÀ¹ÖÎï»òÍæ¼Ò
+--æ€æ­»æ€ªç‰©æˆ–ç©å®¶
 --**********************************
 function x210200_OnKillObject( sceneId, selfId, objdataId )
 end
 
 --**********************************
---½øÈëÇøÓòÊÂ¼ş
+--è¿›å…¥åŒºåŸŸäº‹ä»¶
 --**********************************
 function x210200_OnEnterZone( sceneId, selfId, zoneId )
 end
 
 --**********************************
---µÀ¾ß¸Ä±ä
+--é“å…·æ”¹å˜
 --**********************************
 function x210200_OnItemChanged( sceneId, selfId, itemdataId )
 end

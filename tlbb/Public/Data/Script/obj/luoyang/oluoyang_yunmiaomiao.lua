@@ -1,33 +1,33 @@
---ÂåÑôNPC
---ÔÆÃìÃì
---ÆÕÍ¨
+--æ´›é˜³NPC
+--äº‘æ¸ºæ¸º
+--æ™®é€š
 
 x000101_g_scriptId = 000101
 
 x000101_g_shoptableindex=17
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
-x000101_g_eventList={800107}  --del 311112  ÕäÊŞ¼¼ÄÜÉı¼¶
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
+x000101_g_eventList={800107}  --del 311112  çå…½æŠ€èƒ½å‡çº§
 
 x000101_g_miscEventId = 311111;
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x000101_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
 		AddText(sceneId,"#{OBJ_luoyang_0026}")
 		
-		AddNumText( sceneId, x000101_g_scriptId, "ÕäÊŞÏà¹Ø½éÉÜ", 11, 10 )
+		AddNumText( sceneId, x000101_g_scriptId, "çå…½ç›¸å…³ä»‹ç»", 11, 10 )
 		
-		AddNumText(sceneId,x000101_g_scriptId,"¹ºÂòÕäÊŞÓÃÆ·",7,0)
-		AddNumText(sceneId,x000101_g_scriptId,"ÕäÊŞ¼¼ÄÜÑ§Ï°",6,1)
-		AddNumText(sceneId,x000101_g_scriptId,"»¹Í¯",6,2)
-		AddNumText(sceneId,x000101_g_scriptId,"ÑÓ³¤ÊÙÃü",6,3)
-		AddNumText(sceneId,x000101_g_scriptId,"Ñ±Ñø",6,4)
-		--AddNumText(sceneId,x000101_g_scriptId,"·¢²¼Õ÷ÓÑĞÅÏ¢",6,5)
-		--AddNumText(sceneId,x000101_g_scriptId,"Õ÷ÓÑ",6,6)
-		--AddNumText(sceneId,x000101_g_scriptId,"²éÑ¯·±Ö³µÄÕäÊŞ",6,7)
+		AddNumText(sceneId,x000101_g_scriptId,"è´­ä¹°çå…½ç”¨å“",7,0)
+		AddNumText(sceneId,x000101_g_scriptId,"çå…½æŠ€èƒ½å­¦ä¹ ",6,1)
+		AddNumText(sceneId,x000101_g_scriptId,"è¿˜ç«¥",6,2)
+		AddNumText(sceneId,x000101_g_scriptId,"å»¶é•¿å¯¿å‘½",6,3)
+		AddNumText(sceneId,x000101_g_scriptId,"é©¯å…»",6,4)
+		--AddNumText(sceneId,x000101_g_scriptId,"å‘å¸ƒå¾å‹ä¿¡æ¯",6,5)
+		--AddNumText(sceneId,x000101_g_scriptId,"å¾å‹",6,6)
+		--AddNumText(sceneId,x000101_g_scriptId,"æŸ¥è¯¢ç¹æ®–çš„çå…½",6,7)
 		for i, eventId in x000101_g_eventList do
 			CallScriptFunction( eventId, "OnEnumerate",sceneId, selfId, targetId)
 		end
@@ -37,19 +37,19 @@ function x000101_OnDefaultEvent( sceneId, selfId,targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x000101_OnEventRequest( sceneId, selfId, targetId, eventId )
    
----------------------------½éÉÜ-------------------------------------------------
+---------------------------ä»‹ç»-------------------------------------------------
 	if eventId == x000101_g_scriptId then
 		if GetNumText() == 10 then
 			BeginEvent(sceneId)	
 				AddText(sceneId,"#{function_help_056}#r")
 				
-				AddNumText(sceneId, x000101_g_scriptId,"ÕäÊŞ·±Ö³½éÉÜ",11,11);
-				AddNumText(sceneId, x000101_g_scriptId,"ÕäÊŞ¼¼ÄÜÑ§Ï°½éÉÜ",11,12);			
---				AddNumText(sceneId, x000101_g_scriptId,"ÕäÊŞ¼¼ÄÜÉı¼¶",11,13);
+				AddNumText(sceneId, x000101_g_scriptId,"çå…½ç¹æ®–ä»‹ç»",11,11);
+				AddNumText(sceneId, x000101_g_scriptId,"çå…½æŠ€èƒ½å­¦ä¹ ä»‹ç»",11,12);			
+--				AddNumText(sceneId, x000101_g_scriptId,"çå…½æŠ€èƒ½å‡çº§",11,13);
 					
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,targetId)
@@ -77,7 +77,7 @@ function x000101_OnEventRequest( sceneId, selfId, targetId, eventId )
 --			DispatchEventList(sceneId,selfId,targetId)
 			return
 		end
----------------------------½éÉÜ-------------------------------------------------		
+---------------------------ä»‹ç»-------------------------------------------------		
 		if	GetNumText() == 0	then
 			DispatchShopItem( sceneId, selfId,targetId, x000101_g_shoptableindex )
 		elseif GetNumText() <= 6 then

@@ -1,11 +1,11 @@
---2007Ê¥µ®Ôªµ©»î¶¯....
---Ê¥µ®ÊØÒ¹»î¶¯....
+--2007åœ£è¯å…ƒæ—¦æ´»åŠ¨....
+--åœ£è¯å®ˆå¤œæ´»åŠ¨....
 
---É¢ÂäÑ©¶Ñ½Å±¾....
---ÓÃÓÚÔÚ»î¶¯ÆÚ¼ä....Ã¿ÌìË«ÊıµãÊ±ÔÚÂåÑôËæ»úÉ¢ÂäÑ©¶Ñ....
+--æ•£è½é›ªå †è„šæœ¬....
+--ç”¨äºåœ¨æ´»åŠ¨æœŸé—´....æ¯å¤©åŒæ•°ç‚¹æ—¶åœ¨æ´›é˜³éšæœºæ•£è½é›ªå †....
 
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x050024_g_ScriptId	= 050024
 
 x050024_g_PosTbl = {
@@ -67,27 +67,27 @@ x050024_g_IDXLastGiveTime	= 0
 
 
 --**********************************
---½Å±¾Èë¿Úº¯Êı
+--è„šæœ¬å…¥å£å‡½æ•°
 --**********************************
 function x050024_OnDefaultEvent( sceneId, actId, iNoticeType, param2, param3, param4, param5 )
 
-	--¼ì²âÊÇ·ñÊÇ»î¶¯Ê±¼ä....
+	--æ£€æµ‹æ˜¯å¦æ˜¯æ´»åŠ¨æ—¶é—´....
 	if 0 == x050024_CheckActivityTime() then
 		return
 	end
 
-	--¿ªÆô»î¶¯....
+	--å¼€å¯æ´»åŠ¨....
 	StartOneActivity( sceneId, actId, 5*60*1000, iNoticeType )
 	SetActivityParam( sceneId, actId, x050024_g_IDXLastGiveTime, 0 )
 
 end
 
 --**********************************
---ĞÄÌøº¯Êı
+--å¿ƒè·³å‡½æ•°
 --**********************************
 function x050024_OnTimer( sceneId, actId, uTime )
 
-	--¼ì²â»î¶¯ÊÇ·ñ¹ıÆÚ....
+	--æ£€æµ‹æ´»åŠ¨æ˜¯å¦è¿‡æœŸ....
 	if CheckActiviyValidity( sceneId, actId ) == 0 then
 		StopOneActivity( sceneId, actId )
 		return
@@ -97,7 +97,7 @@ function x050024_OnTimer( sceneId, actId, uTime )
 	--local CurHourTime = GetHourTime()
 	local CurHourTime = GetQuarterTime()
 
-	--ÌØÀı: 2007-12-24 10:00 Ö®Ç°²»ÔÊĞíÉ¢ÂäÑ©¶Ñ....
+	--ç‰¹ä¾‹: 2007-12-24 10:00 ä¹‹å‰ä¸å…è®¸æ•£è½é›ªå †....
 	
 	--if 2008 == LuaFnGetThisYear() and CurHourTime < 72340 then
 	if 2008 == LuaFnGetThisYear() and CurHourTime < 835840 then
@@ -105,7 +105,7 @@ function x050024_OnTimer( sceneId, actId, uTime )
 	end
 	--begin modified by zhangguoxin 090207
 
-	--Ã¿Ë«ÊıµãÉ¢ÂäÑ©¶Ñ....
+	--æ¯åŒæ•°ç‚¹æ•£è½é›ªå †....
 	local QTime = mod(CurHourTime,100)
 	if mod(QTime,8) ~= 0 then
 		return
@@ -120,7 +120,7 @@ function x050024_OnTimer( sceneId, actId, uTime )
 end
 
 --**********************************
---¼ì²âµ±Ç°ÊÇ·ñÊÇ»î¶¯Ê±¼ä
+--æ£€æµ‹å½“å‰æ˜¯å¦æ˜¯æ´»åŠ¨æ—¶é—´
 --**********************************
 function x050024_CheckActivityTime()
 
@@ -136,7 +136,7 @@ function x050024_CheckActivityTime()
 end
 
 --**********************************
---É¢ÂäÑ©¶Ñ
+--æ•£è½é›ªå †
 --**********************************
 function x050024_GiveXueDui( sceneId )
 

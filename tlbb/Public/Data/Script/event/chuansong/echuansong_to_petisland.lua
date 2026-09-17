@@ -1,31 +1,31 @@
---ÊÂ¼þ
---´«ËÍµ½ÕäÊÞµº
+--äº‹ä»¶
+--ä¼ é€åˆ°çå…½å²›
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x400918_g_ScriptId = 400918
 
---ÈÎÎñÎÄ±¾ÃèÊö
-x400918_g_MissionName="È¥ÐþÎäµº"
-x400918_g_MissionInfo="´«ËÍµ½ÕäÊÞµº¡£"  --ÈÎÎñÃèÊö
-x400918_g_MissionTarget="´«ËÍµ½ÕäÊÞµº¡£"		--ÈÎÎñÄ¿±ê
-x400918_g_ContinueInfo="´«ËÍµ½ÕäÊÞµº¡£"		--Î´Íê³ÉÈÎÎñµÄnpc¶Ô»°
-x400918_g_MissionComplete="´«ËÍµ½ÕäÊÞµº¡£"					--Íê³ÉÈÎÎñnpcËµ»°µÄ»°
+--ä»»åŠ¡æ–‡æœ¬æè¿°
+x400918_g_MissionName="åŽ»çŽ„æ­¦å²›"
+x400918_g_MissionInfo="ä¼ é€åˆ°çå…½å²›ã€‚"  --ä»»åŠ¡æè¿°
+x400918_g_MissionTarget="ä¼ é€åˆ°çå…½å²›ã€‚"		--ä»»åŠ¡ç›®æ ‡
+x400918_g_ContinueInfo="ä¼ é€åˆ°çå…½å²›ã€‚"		--æœªå®Œæˆä»»åŠ¡çš„npcå¯¹è¯
+x400918_g_MissionComplete="ä¼ é€åˆ°çå…½å²›ã€‚"					--å®Œæˆä»»åŠ¡npcè¯´è¯çš„è¯
 
 --**********************************
---Èë¿Úº¯Êý
+--å…¥å£å‡½æ•°
 --**********************************
-function x400918_OnDefaultEvent( sceneId, selfId, targetId )	--µã»÷¸ÃÈÎÎñºóÖ´ÐÐ´Ë½Å±¾
+function x400918_OnDefaultEvent( sceneId, selfId, targetId )	--ç‚¹å‡»è¯¥ä»»åŠ¡åŽæ‰§è¡Œæ­¤è„šæœ¬
 
-	-- ¼ì²âÍæ¼ÒÉíÉÏÊÇ²»ÊÇÓÐ¡°ÒøÆ±¡±Õâ¸ö¶«Î÷£¬ÓÐ¾Í²»ÄÜÊ¹ÓÃÕâÀïµÄ¹¦ÄÜ
+	-- æ£€æµ‹çŽ©å®¶èº«ä¸Šæ˜¯ä¸æ˜¯æœ‰â€œé“¶ç¥¨â€è¿™ä¸ªä¸œè¥¿ï¼Œæœ‰å°±ä¸èƒ½ä½¿ç”¨è¿™é‡Œçš„åŠŸèƒ½
 	if GetItemCount(sceneId, selfId, 40002000) >= 1 then
 		BeginEvent( sceneId )
-			AddText( sceneId, "  ÄãÉíÉÏÓÐÒøÆ±£¬ÕýÔÚÅÜÉÌ£¡ÎÒ²»ÄÜ°ïÖúÄã¡£" )
+			AddText( sceneId, "  ä½ èº«ä¸Šæœ‰é“¶ç¥¨ï¼Œæ­£åœ¨è·‘å•†ï¼æˆ‘ä¸èƒ½å¸®åŠ©ä½ ã€‚" )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 		return
 	end
 
-	--äîÔËÏà¹Ø
+	--æ¼•è¿ç›¸å…³
 	if GetTeamId(sceneId,selfId)>=0 and 
 		IsTeamFollow(sceneId, selfId)==1 and
 		LuaFnIsTeamLeader(sceneId,selfId)==1 then
@@ -38,7 +38,7 @@ function x400918_OnDefaultEvent( sceneId, selfId, targetId )	--µã»÷¸ÃÈÎÎñºóÖ´ÐÐ´
 			end
 			if IsHaveMission(sceneId,mems[i],4021) > 0 then
 				BeginEvent( sceneId )
-					AddText( sceneId, "  Äã¶ÓÎé³ÉÔ±ÖÐÓÐÈËÓÐäîÔË»õ²ÕÔÚÉí£¬ÎÒÃÇæäÕ¾²»ÄÜÎªÄãÌá¹©´«ËÍ·þÎñ¡£" )
+					AddText( sceneId, "  ä½ é˜Ÿä¼æˆå‘˜ä¸­æœ‰äººæœ‰æ¼•è¿è´§èˆ±åœ¨èº«ï¼Œæˆ‘ä»¬é©¿ç«™ä¸èƒ½ä¸ºä½ æä¾›ä¼ é€æœåŠ¡ã€‚" )
 				EndEvent( sceneId )
 				DispatchEventList( sceneId, selfId, targetId )
 				return
@@ -48,7 +48,7 @@ function x400918_OnDefaultEvent( sceneId, selfId, targetId )	--µã»÷¸ÃÈÎÎñºóÖ´ÐÐ´
 
 	if IsHaveMission(sceneId,selfId,4021) > 0 then
 		BeginEvent( sceneId )
-			AddText( sceneId, "  ÄãÓÐäîÔË»õ²ÕÔÚÉí£¬ÎÒÃÇæäÕ¾²»ÄÜÎªÄãÌá¹©´«ËÍ·þÎñ¡£" )
+			AddText( sceneId, "  ä½ æœ‰æ¼•è¿è´§èˆ±åœ¨èº«ï¼Œæˆ‘ä»¬é©¿ç«™ä¸èƒ½ä¸ºä½ æä¾›ä¼ é€æœåŠ¡ã€‚" )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 		return
@@ -59,10 +59,10 @@ function x400918_OnDefaultEvent( sceneId, selfId, targetId )	--µã»÷¸ÃÈÎÎñºóÖ´ÐÐ´
 end
 
 --**********************************
---ÁÐ¾ÙÊÂ¼þ
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x400918_OnEnumerate( sceneId, selfId, targetId )
-	--µÈ¼¶´ïµ½10¼¶¾ÍÏÔÊ¾´«ËÍÑ¡Ïî
+	--ç­‰çº§è¾¾åˆ°10çº§å°±æ˜¾ç¤ºä¼ é€é€‰é¡¹
 	if GetLevel( sceneId, selfId ) >= 10 then
 		AddNumText(sceneId,x400918_g_ScriptId,x400918_g_MissionName, 9, -1)
 	else

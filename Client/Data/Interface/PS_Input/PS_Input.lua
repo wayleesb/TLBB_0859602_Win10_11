@@ -29,7 +29,7 @@ end
 function PS_Input_OnEvent(event)
 
 	if(event == "PS_INPUT_MONEY") then
-		--Íæ¼ÒÉÌµê³åÈë±¾½ğ
+		--ç©å®¶å•†åº—å†²å…¥æœ¬é‡‘
 		if (arg0 == "immitbase") then
 			this:Show();
 			objCared = PlayerShop:GetNpcId();
@@ -43,24 +43,24 @@ function PS_Input_OnEvent(event)
 			local nMoney3;
 			nBaseMoney,nMoney1,nMoney2,nMoney3 = PlayerShop:GetMoney("base","self");
 
-			PS_Input_DragTitle:SetText("#gFF0FA0³äÈë±¾½ğ");
-			PS_Input_Accept:SetText("³äÈë");
-			PS_Input_Warning:SetText("³äÈë±¾½ğ×îµÍÊıÎª10#-02#rµ±Ç°±¾½ğ»ù´¡Îª".. tostring(nMoney1) .."#-02" .. tostring(nMoney2) .. "#-03" .. tostring(nMoney3) .. "#-04");
+			PS_Input_DragTitle:SetText("#gFF0FA0å……å…¥æœ¬é‡‘");
+			PS_Input_Accept:SetText("å……å…¥");
+			PS_Input_Warning:SetText("å……å…¥æœ¬é‡‘æœ€ä½æ•°ä¸º10#-02#rå½“å‰æœ¬é‡‘åŸºç¡€ä¸º".. tostring(nMoney1) .."#-02" .. tostring(nMoney2) .. "#-03" .. tostring(nMoney3) .. "#-04");
 			PS_Input_CurrentlyPrincipal:SetProperty("MoneyNumber", tostring(nBaseMoney));
-			PS_Input_Text1:SetText("Çë³äÈë±¾½ğ£º");
-			PS_Input_Text2:SetText("µ±Ç°±¾½ğ£º");
+			PS_Input_Text1:SetText("è¯·å……å…¥æœ¬é‡‘ï¼š");
+			PS_Input_Text2:SetText("å½“å‰æœ¬é‡‘ï¼š");
 			
 			PS_Input_Gold:SetProperty("DefaultEditBox", "True");
 			
-		--Íæ¼ÒÉÌµê³åÈë
+		--ç©å®¶å•†åº—å†²å…¥
 		elseif (arg0 == "immit") then
 			this:Show();
 			objCared = PlayerShop:GetNpcId();
 			this:CareObject(objCared, 1, "PS_Input");	
 
 			g_nSaveOrGetMoney = PS_IMMIT;
-			PS_Input_DragTitle:SetText("#gFF0FA0³äÈëÓ¯Àû×Ê½ğ");
-			PS_Input_Accept:SetText("³äÈë");
+			PS_Input_DragTitle:SetText("#gFF0FA0å……å…¥ç›ˆåˆ©èµ„é‡‘");
+			PS_Input_Accept:SetText("å……å…¥");
 			PS_Input_CurrentlyPrincipal:SetProperty("MoneyNumber", tostring(PlayerShop:GetMoney("profit","self")));
 			
 			local nBaseMoney;
@@ -70,28 +70,28 @@ function PS_Input_OnEvent(event)
 			nBaseMoney,nMoney1,nMoney2,nMoney3 = PlayerShop:GetMoney("input_profit","self");
 			local szCom = PlayerShop:GetCommercialFactor()
 
-			local szInfo = "³äÈëÓ¯Àû×Ê½ğ×îµÍÊı²»µÃĞ¡ÓÚ±¾½ğ»ù´¡Öµ£º±¾½ğ»ù´¡£º30" .. "#-02" .. "*ÉÌÒµÖ¸Êı*¹ñÌ¨Êı£¬µ±Ç°µÄÉÌÒµÖ¸ÊıÎª".. szCom .. "£¬ÄãÖÁÉÙÒª³äÈë".. tostring(nMoney1) .."#-02" .. tostring(nMoney2) .. "#-03" .. tostring(nMoney3) .. "#-04";
+			local szInfo = "å……å…¥ç›ˆåˆ©èµ„é‡‘æœ€ä½æ•°ä¸å¾—å°äºæœ¬é‡‘åŸºç¡€å€¼ï¼šæœ¬é‡‘åŸºç¡€ï¼š30" .. "#-02" .. "*å•†ä¸šæŒ‡æ•°*æŸœå°æ•°ï¼Œå½“å‰çš„å•†ä¸šæŒ‡æ•°ä¸º".. szCom .. "ï¼Œä½ è‡³å°‘è¦å……å…¥".. tostring(nMoney1) .."#-02" .. tostring(nMoney2) .. "#-03" .. tostring(nMoney3) .. "#-04";
 			PS_Input_Warning:SetText(szInfo);
 			
-			PS_Input_Text1:SetText("Çë³äÈëÓ¯Àû×Ê½ğ£º");
-			PS_Input_Text2:SetText("µ±Ç°Ó¯Àû×Ê½ğ£º");
+			PS_Input_Text1:SetText("è¯·å……å…¥ç›ˆåˆ©èµ„é‡‘ï¼š");
+			PS_Input_Text2:SetText("å½“å‰ç›ˆåˆ©èµ„é‡‘ï¼š");
 
 			PS_Input_Gold:SetProperty("DefaultEditBox", "True");
 
-		--Íæ¼ÒÉÌµêÈ¡³ö
+		--ç©å®¶å•†åº—å–å‡º
 		elseif (arg0 == "draw") then
 			this:Show();
 			objCared = PlayerShop:GetNpcId();
 			this:CareObject(objCared, 1, "PS_Input");	
 
 			g_nSaveOrGetMoney = PS_DRAW;
-			PS_Input_DragTitle:SetText("#gFF0FA0Ö§È¡Ó¯Àû×Ê½ğ");
-			PS_Input_Accept:SetText("Ö§È¡");
+			PS_Input_DragTitle:SetText("#gFF0FA0æ”¯å–ç›ˆåˆ©èµ„é‡‘");
+			PS_Input_Accept:SetText("æ”¯å–");
 
 			PS_Input_Warning:SetText("#{SHOPTIPS_090205_2}");--[tx44221]
 
-			PS_Input_Text1:SetText("ÒªÖ§È¡Ó¯Àû×Ê½ğ£º");
-			PS_Input_Text2:SetText("µ±Ç°Ó¯Àû×Ê½ğ£º");
+			PS_Input_Text1:SetText("è¦æ”¯å–ç›ˆåˆ©èµ„é‡‘ï¼š");
+			PS_Input_Text2:SetText("å½“å‰ç›ˆåˆ©èµ„é‡‘ï¼š");
 
 			PS_Input_Gold:SetProperty("DefaultEditBox", "True");
 			PS_Input_CurrentlyPrincipal:SetProperty("MoneyNumber", tostring(PlayerShop:GetMoney("profit","self")));
@@ -106,12 +106,12 @@ function PS_Input_OnEvent(event)
 			return;
 		end
 		
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ı£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æœå’ŒNPCçš„è·ç¦»å¤§äºä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if(arg1 == "distance" and tonumber(arg2)>MAX_OBJ_DISTANCE or arg1=="destroy") then
 			g_InitiativeClose = 1;
 			this:Hide();
 
-			--È¡Ïû¹ØĞÄ
+			--å–æ¶ˆå…³å¿ƒ
 			this:CareObject(objCared, 0, "PS_Input");
 		end	
 	
@@ -119,7 +119,7 @@ function PS_Input_OnEvent(event)
 	
 		if( this:IsVisible() )   then
 			this:Hide();
-			--È¡Ïû¹ØĞÄ
+			--å–æ¶ˆå…³å¿ƒ
 			this:CareObject(objCared, 0, "PS_Input");
 		end
 		
@@ -135,18 +135,18 @@ function PS_Input_Accept_Clicked()
 	local szSilver = PS_Input_Silver:GetText();
 	local szCopperCoin = PS_Input_CopperCoin:GetText();
 	
-	--ÔÚ³ÌĞòÀïÍ·ÔÙ¼ì²âÊäÈë×Ö·ûµÄÓĞĞ§ĞÔºÍÊıÖµ
+	--åœ¨ç¨‹åºé‡Œå¤´å†æ£€æµ‹è¾“å…¥å­—ç¬¦çš„æœ‰æ•ˆæ€§å’Œæ•°å€¼
 	local bAvailability,nMoney = Bank:GetInputMoney(szGold,szSilver,szCopperCoin);
 	if(bAvailability == true) then
 	
 		if( g_nSaveOrGetMoney == PS_IMMITBASE ) then
-			--³äÈë±¾½ğ
+			--å……å…¥æœ¬é‡‘
 			local szResult;
 			local nResult;
 			szResult,nResult= PlayerShop:DealMoney("immitbase",nMoney)
 			if( szResult == "ok" )   then
 				this:Hide();
-				--È¡Ïû¹ØĞÄ
+				--å–æ¶ˆå…³å¿ƒ
 				this:CareObject(objCared, 0, "PS_Input");
 
 				PlayerShop:ApplyMoney("immitbase",nMoney);
@@ -156,7 +156,7 @@ function PS_Input_Accept_Clicked()
 
 			elseif(szResult == "more" )  then
 				this:Hide();
-				--È¡Ïû¹ØĞÄ
+				--å–æ¶ˆå…³å¿ƒ
 				this:CareObject(objCared, 0, "PS_Input");
 
 				PlayerShop:ApplyMoney("immitbase",nResult);
@@ -164,14 +164,14 @@ function PS_Input_Accept_Clicked()
 			end
 		
 		elseif( g_nSaveOrGetMoney == PS_IMMIT ) then
-			--³äÈë
+			--å……å…¥
 			local szResult;
 			local nResult;
 			szResult,nResult= PlayerShop:DealMoney("immit",nMoney);
 			
 			if( szResult == "ok" )   then
 				this:Hide();
-				--È¡Ïû¹ØĞÄ
+				--å–æ¶ˆå…³å¿ƒ
 				this:CareObject(objCared, 0, "PS_Input");
 
 				PlayerShop:ApplyMoney("immit",nMoney);
@@ -181,7 +181,7 @@ function PS_Input_Accept_Clicked()
 			
 			elseif(szResult == "more" )  then
 				this:Hide();
-				--È¡Ïû¹ØĞÄ
+				--å–æ¶ˆå…³å¿ƒ
 				this:CareObject(objCared, 0, "PS_Input");
 
 				PlayerShop:ApplyMoney("immit",nResult);
@@ -189,10 +189,10 @@ function PS_Input_Accept_Clicked()
 			end
 		
 		elseif( g_nSaveOrGetMoney == PS_DRAW ) then
-			--Ö§È¡
+			--æ”¯å–
 			PlayerShop:ApplyMoney("draw_ok",nMoney);
 			this:Hide();
-			--È¡Ïû¹ØĞÄ
+			--å–æ¶ˆå…³å¿ƒ
 			this:CareObject(objCared, 0, "PS_Input");
 			
 		end
@@ -204,7 +204,7 @@ end
 --===============================================
 function PS_Input_Cancel_Clicked()
 	this:Hide();
-	--È¡Ïû¹ØĞÄ
+	--å–æ¶ˆå…³å¿ƒ
 	this:CareObject(objCared, 0, "PS_Input");
 end
 

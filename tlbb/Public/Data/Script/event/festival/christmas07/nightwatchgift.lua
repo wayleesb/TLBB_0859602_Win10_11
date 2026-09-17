@@ -1,24 +1,24 @@
---2007Ê¥µ®Ôªµ©»î¶¯....
---Ê¥µ®ÊØÒ¹»î¶¯....
+--2007åœ£è¯å…ƒæ—¦æ´»åŠ¨....
+--åœ£è¯å®ˆå¤œæ´»åŠ¨....
 
---»î¶¯½Å±¾....
+--æ´»åŠ¨è„šæœ¬....
 
---±¾»î¶¯ĞèÒª±£Ö¤·şÎñÆ÷ÖØÆôºóÑ©ÈËÈÔÈ»´æÔÚ....²¢ÇÒÊÇÕıÈ·´óĞ¡µÄÑ©ÈË....
---ActivityNotice.txtÖĞÅäÖÃÁËÔÚ»î¶¯Ê±¼äÄÚ·şÎñÆ÷ÖØÆôÒ²»áµ÷ÓÃ±¾½Å±¾À´Æô¶¯»î¶¯....
+--æœ¬æ´»åŠ¨éœ€è¦ä¿è¯æœåŠ¡å™¨é‡å¯åé›ªäººä»ç„¶å­˜åœ¨....å¹¶ä¸”æ˜¯æ­£ç¡®å¤§å°çš„é›ªäºº....
+--ActivityNotice.txtä¸­é…ç½®äº†åœ¨æ´»åŠ¨æ—¶é—´å†…æœåŠ¡å™¨é‡å¯ä¹Ÿä¼šè°ƒç”¨æœ¬è„šæœ¬æ¥å¯åŠ¨æ´»åŠ¨....
 
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x050023_g_ScriptId	= 050023
 
---Ñ©ÈËNPC½Å±¾....
+--é›ªäººNPCè„šæœ¬....
 x050023_g_SnowManScriptId	= 050027
 
---Ñ©ÈË×ø±ê....
+--é›ªäººåæ ‡....
 x050023_g_SnowManX = 160
 x050023_g_SnowManY = 114
 
 x050023_g_SnowEndTime = 73100
---Ñ©ÈË×ÊÔ´±í....
+--é›ªäººèµ„æºè¡¨....
 x050023_g_SnowMan = {
 --begin modified by zhangguoxin 090207
 	--[1]  = { ID = 3870, HourTime = 72348, BallCount = -1   },
@@ -50,7 +50,7 @@ x050023_g_SnowMan = {
 --end modified by zhangguoxin 090207
 } 
   
---É¢Âä±¦Ïä×ø±ê±í....
+--æ•£è½å®ç®±åæ ‡è¡¨....
 x050023_g_ItemBoxPos = {
   
 {162,114},{164,114},{166,114},{168,114},{169,111},
@@ -66,10 +66,10 @@ x050023_g_ItemBoxPos = {
 
 }
 
---É¢Âä±¦ÏäÎïÆ·µôÂä±í....(odds×ÜºÍÎª100000)
+--æ•£è½å®ç®±ç‰©å“æ‰è½è¡¨....(oddsæ€»å’Œä¸º100000)
 x050023_g_ItemBoxDrop = {
 
-	--À¬»ø....
+	--åƒåœ¾....
 	{ itemId = 30002003, odds = 3000  },
 	{ itemId = 30002004, odds = 3000  },
 	{ itemId = 30002005, odds = 3000  },
@@ -84,19 +84,19 @@ x050023_g_ItemBoxDrop = {
 	{ itemId = 20309012, odds = 4000  },
 	{ itemId = 20309013, odds = 4000  },
 
-	--µÍ¼¶Ã±×Ó....
+	--ä½çº§å¸½å­....
 	{ itemId = 10410098, odds = 400   },
 	{ itemId = 10410099, odds = 1000  },
 	{ itemId = 10410100, odds = 1600  },
 	{ itemId = 10410101, odds = 2000  },
 
-	--¸ß¼¶ÍòÁé....
+	--é«˜çº§ä¸‡çµ....
 	{ itemId = 20309014, odds = 3000  },
 	{ itemId = 20309015, odds = 3000  },
 	{ itemId = 20309016, odds = 3000  },
 	{ itemId = 20309017, odds = 4000  },
 
-	--¸ß¼¶Ã±×Ó....
+	--é«˜çº§å¸½å­....
 	{ itemId = 10410102, odds = 3000  },
 	{ itemId = 10410103, odds = 4000  },
 	{ itemId = 10410104, odds = 5000  },
@@ -104,7 +104,7 @@ x050023_g_ItemBoxDrop = {
 	{ itemId = 10410106, odds = 4000  },
 	{ itemId = 10410107, odds = 2050  },
 
-	--±¦Ê¯....
+	--å®çŸ³....
 	{ itemId = 50101001, odds = 950   },
 	{ itemId = 50101002, odds = 950   },
 	{ itemId = 50102001, odds = 950   },
@@ -129,37 +129,37 @@ x050023_g_ItemBoxDrop = {
 
 }
 
-x050023_g_IDXSnowManID			= 0	--µ±Ç°Ñ©ÈËµÄ³¡¾°ID....
-x050023_g_IDXSnowManState		= 1	--Ñ©ÈËµ±Ç°µÄ×´Ì¬....(0ÎŞĞ§ 1~12²»Í¬´óĞ¡µÄÑ©ÈË 13·¢½±Æ·µÄÑ©ÈË)
-x050023_g_IDXBallCount			= 2	--Ñ©ÈË±»Ñ©ÇòÔÒµ½µÄ´ÎÊı....
-x050023_g_IDXLastSpeakTime	= 3	--Ñ©ÈËÉÏ´Îº°»°Ê±¼ä....(»î¶¯ÆÚ¼äÑ©ÈËÃ¿µ½Õûµã30min»áº°»°)
+x050023_g_IDXSnowManID			= 0	--å½“å‰é›ªäººçš„åœºæ™¯ID....
+x050023_g_IDXSnowManState		= 1	--é›ªäººå½“å‰çš„çŠ¶æ€....(0æ— æ•ˆ 1~12ä¸åŒå¤§å°çš„é›ªäºº 13å‘å¥–å“çš„é›ªäºº)
+x050023_g_IDXBallCount			= 2	--é›ªäººè¢«é›ªçƒç ¸åˆ°çš„æ¬¡æ•°....
+x050023_g_IDXLastSpeakTime	= 3	--é›ªäººä¸Šæ¬¡å–Šè¯æ—¶é—´....(æ´»åŠ¨æœŸé—´é›ªäººæ¯åˆ°æ•´ç‚¹30minä¼šå–Šè¯)
 
 
 --**********************************
---½Å±¾Èë¿Úº¯Êı
+--è„šæœ¬å…¥å£å‡½æ•°
 --**********************************
 function x050023_OnDefaultEvent( sceneId, actId, iNoticeType, param2, param3, param4, param5 )
 
 	MissionLog(sceneId, "[07SHOUYE]: ActivityStart")
 
-	--¿ªÆô»î¶¯....
+	--å¼€å¯æ´»åŠ¨....
 	StartOneActivity( sceneId, actId, 60000, iNoticeType )
 
-	--ÖØÖÃ»î¶¯×´Ì¬....
+	--é‡ç½®æ´»åŠ¨çŠ¶æ€....
 	x050023_ResetActivityState( sceneId, actId )
 
 end
 
 --**********************************
---ĞÄÌøº¯Êı
+--å¿ƒè·³å‡½æ•°
 --**********************************
 function x050023_OnTimer( sceneId, actId, uTime )
 
-	--»ñÈ¡µ±Ç°Ñ©ÈË×´Ì¬....
+	--è·å–å½“å‰é›ªäººçŠ¶æ€....
 	local MstID = GetActivityParam( sceneId, actId, x050023_g_IDXSnowManID )
 	local CurState = GetActivityParam( sceneId, actId, x050023_g_IDXSnowManState )
 
-	--´íÎó´¦Àí....
+	--é”™è¯¯å¤„ç†....
 	if CurState < 1 or CurState > 13 then
 		StopOneActivity( sceneId, actId )
 		MissionLog(sceneId, "[07SHOUYE]: ActivityExit Error1")
@@ -172,9 +172,9 @@ function x050023_OnTimer( sceneId, actId, uTime )
 		return
 	end
 
-	--¼ì²â»î¶¯ÊÇ·ñ¹ıÆÚ....
+	--æ£€æµ‹æ´»åŠ¨æ˜¯å¦è¿‡æœŸ....
 	if CheckActiviyValidity( sceneId, actId ) == 0 then
-		MonsterTalk(sceneId, -1, "ÂåÑô", "#P[Ñ©ÈË]#W£ºÇ×°®µÄÅóÓÑÃÇ£¬ÎÒµÄÀñÎï·¢·ÅÍêÁË£¬ÔÛÃÇÃ÷ÄêÊ¥µ®ÔÙ¼û£¡")
+		MonsterTalk(sceneId, -1, "æ´›é˜³", "#P[é›ªäºº]#Wï¼šäº²çˆ±çš„æœ‹å‹ä»¬ï¼Œæˆ‘çš„ç¤¼ç‰©å‘æ”¾å®Œäº†ï¼Œå’±ä»¬æ˜å¹´åœ£è¯å†è§ï¼")
 		SetCharacterDieTime(sceneId, MstID, 6000 )
 		StopOneActivity( sceneId, actId )
 		MissionLog(sceneId, "[07SHOUYE]: ActivityExit Normal")
@@ -185,27 +185,27 @@ function x050023_OnTimer( sceneId, actId, uTime )
 	--local CurHourTime = GetHourTime()
 	local CurHourTime = GetQuarterTime()
 	
-	--24ÈÕ24µãÒÔÇ°....Ñ©ÈËÃ¿¸öÕûµã¹ı30·ÖÖÓÔÚ³¡¾°ÄÚº°Ò»´Î»°....
+	--24æ—¥24ç‚¹ä»¥å‰....é›ªäººæ¯ä¸ªæ•´ç‚¹è¿‡30åˆ†é’Ÿåœ¨åœºæ™¯å†…å–Šä¸€æ¬¡è¯....
 	local QTime = mod(CurHourTime,100)
 	
 	if CurHourTime < 835900 and mod(QTime,4) == 2 then --zchw
 		local LastSpeakTime = GetActivityParam( sceneId, actId, x050023_g_IDXLastSpeakTime )
 		if CurHourTime > LastSpeakTime then
-			MonsterTalk(sceneId, -1, "ÂåÑô", "#P[Ñ©ÈË]#W£º¶Ñ£¡¶Ñ£¡¶Ñ¸ö´óÑ©ÈË£¡´ó¼ÒÆëĞÄĞ­Á¦À´ÂåÑô£¨160£¬114£©¶ÑÑ©ÈË°¡£¬ÌıËµÎçÒ¹¶Ô×ÅÑ©ÈËĞíÔ¸ÕæµÄ¿ÉÒÔÊµÏÖÄØ£¡")
+			MonsterTalk(sceneId, -1, "æ´›é˜³", "#P[é›ªäºº]#Wï¼šå †ï¼å †ï¼å †ä¸ªå¤§é›ªäººï¼å¤§å®¶é½å¿ƒååŠ›æ¥æ´›é˜³ï¼ˆ160ï¼Œ114ï¼‰å †é›ªäººå•Šï¼Œå¬è¯´åˆå¤œå¯¹ç€é›ªäººè®¸æ„¿çœŸçš„å¯ä»¥å®ç°å‘¢ï¼")
 			SetActivityParam( sceneId, actId, x050023_g_IDXLastSpeakTime, CurHourTime )
 		end
 		return
 	end
 
-	--24ÈÕ24µãÒÔÇ°....Ñ©ÈËÃ¿¸öÕûµã²î5·ÖÖÓÔÚ³¡¾°ÄÚº°Ò»´Î»°....
+	--24æ—¥24ç‚¹ä»¥å‰....é›ªäººæ¯ä¸ªæ•´ç‚¹å·®5åˆ†é’Ÿåœ¨åœºæ™¯å†…å–Šä¸€æ¬¡è¯....
 	if CurHourTime < 835900 and GetMinute() == 54 then	--zchw
-			MonsterTalk(sceneId, -1, "ÂåÑô", "#P[Ñ©ÈË]#W£ºÎÒÂíÉÏ¾ÍÒª³¤´óÁË£¬´ó¼Ò¿ì¸ÏÀ´ÓëÎÒÒ»Í¬Çì×£°É£¬ºÜ¶àÀñÆ·ÔÚµÈ×ÅÄãÃÇÅ¶£¡")
+			MonsterTalk(sceneId, -1, "æ´›é˜³", "#P[é›ªäºº]#Wï¼šæˆ‘é©¬ä¸Šå°±è¦é•¿å¤§äº†ï¼Œå¤§å®¶å¿«èµ¶æ¥ä¸æˆ‘ä¸€åŒåº†ç¥å§ï¼Œå¾ˆå¤šç¤¼å“åœ¨ç­‰ç€ä½ ä»¬å“¦ï¼")
 		return
 	end
 	
-	--Ñ©ÈË±ä´óµÄ´¦Àí....
+	--é›ªäººå˜å¤§çš„å¤„ç†....
 	if CurState < 13 then
-		--Èç¹ûÊ±¼äµ½ÁËÔò±ä´ó....
+		--å¦‚æœæ—¶é—´åˆ°äº†åˆ™å˜å¤§....
 		if CurHourTime >= x050023_g_SnowMan[CurState+1].HourTime then
 			x050023_MakeBigSnowMan( sceneId, actId, MstID, CurState+1 )
 		end
@@ -215,11 +215,11 @@ function x050023_OnTimer( sceneId, actId, uTime )
 end
 
 --**********************************
---¼ì²âµ±Ç°ÊÇ·ñÊÇ»î¶¯Ê±¼ä
+--æ£€æµ‹å½“å‰æ˜¯å¦æ˜¯æ´»åŠ¨æ—¶é—´
 --**********************************
 function x050023_CheckActivityTime( sceneId )
-	--2009Äê12ÔÂ25ÈÕ2Ê± ÒÔºóÎª·Ç»î¶¯Ê±¼ä....
-	--·Ç»î¶¯Ê±¼ä²»ÔÊĞíË¢³öÑ©ÈË....
+	--2009å¹´12æœˆ25æ—¥2æ—¶ ä»¥åä¸ºéæ´»åŠ¨æ—¶é—´....
+	--éæ´»åŠ¨æ—¶é—´ä¸å…è®¸åˆ·å‡ºé›ªäºº....
 	--begin modified by zhangguoxin 090207
 	--if 2008 == LuaFnGetThisYear() and GetHourTime() < 72408 then
 	if 2008 == LuaFnGetThisYear() and GetQuarterTime() < 835908 then
@@ -230,29 +230,29 @@ function x050023_CheckActivityTime( sceneId )
 end
 
 --**********************************
---ÖØÖÃ»î¶¯×´Ì¬
+--é‡ç½®æ´»åŠ¨çŠ¶æ€
 --**********************************
 function x050023_ResetActivityState( sceneId, actId )
 
 	MissionLog(sceneId, "[07SHOUYE]: ResetActivity")
 
-	--µ±»î¶¯Æô¶¯Ê±»áµ÷ÓÃ±¾º¯ÊıÀ´ÖØÖÃ»î¶¯×´Ì¬....
-	--·şÎñÆ÷ÖØÆôÊ±Ò²»áµ÷ÓÃ±¾º¯ÊıÀ´ÖØÖÃ»î¶¯×´Ì¬....
+	--å½“æ´»åŠ¨å¯åŠ¨æ—¶ä¼šè°ƒç”¨æœ¬å‡½æ•°æ¥é‡ç½®æ´»åŠ¨çŠ¶æ€....
+	--æœåŠ¡å™¨é‡å¯æ—¶ä¹Ÿä¼šè°ƒç”¨æœ¬å‡½æ•°æ¥é‡ç½®æ´»åŠ¨çŠ¶æ€....
 
-	--ÖØÖÃ»î¶¯²ÎÊı....
+	--é‡ç½®æ´»åŠ¨å‚æ•°....
 	SetActivityParam( sceneId, actId, x050023_g_IDXSnowManID, -1 )
 	SetActivityParam( sceneId, actId, x050023_g_IDXSnowManState, 0 )
 	SetActivityParam( sceneId, actId, x050023_g_IDXBallCount, 0 )
 	SetActivityParam( sceneId, actId, x050023_g_IDXLastSpeakTime, 0 )
 
-	--·Ç»î¶¯Ê±¼äÔò²»Ë¢³öÑ©ÈË....
+	--éæ´»åŠ¨æ—¶é—´åˆ™ä¸åˆ·å‡ºé›ªäºº....
 	if 0 == x050023_CheckActivityTime( sceneId ) then
 		MissionLog(sceneId, "[07SHOUYE]: ResetActivity Failed WrongTime")
 		StopOneActivity( sceneId, actId )
 		return
 	end
 
-	--¸ù¾İÊ±¼ä»ñµÃµ±Ç°Òª´´½¨µÄÑ©ÈËÊı¾İ....
+	--æ ¹æ®æ—¶é—´è·å¾—å½“å‰è¦åˆ›å»ºçš„é›ªäººæ•°æ®....
 	local CurState = 0
 	--begin modified by zhangguoxin 090207
 	--local CurHourTime = GetHourTime()
@@ -264,19 +264,19 @@ function x050023_ResetActivityState( sceneId, actId )
 		end
 	end
 
-	--ÖØ½¨Ñ©ÈË....
+	--é‡å»ºé›ªäºº....
 	local MstID = -1
 
 	if 0 == CurState then
-		--Èİ´í´¦Àí....ServerµÄÊ±¼ä¿ÉÄÜ»¹Ã»µ½»î¶¯Ê±¼ä....
+		--å®¹é”™å¤„ç†....Serverçš„æ—¶é—´å¯èƒ½è¿˜æ²¡åˆ°æ´»åŠ¨æ—¶é—´....
 		CurState = 1
 	end
 
-	--´´½¨Ñ©ÈË....
+	--åˆ›å»ºé›ªäºº....
 	MstID = LuaFnCreateMonster(sceneId, x050023_g_SnowMan[CurState].ID, x050023_g_SnowManX, x050023_g_SnowManY, 3, 0, x050023_g_SnowManScriptId )
 	LuaFnSendSpecificImpactToUnit(sceneId, MstID, MstID, MstID, 10488, 0)
 	AddGlobalCountNews(sceneId, "#{SDSY_081212_01}"); --zchw
-	--ÉèÖÃ»î¶¯²ÎÊı....
+	--è®¾ç½®æ´»åŠ¨å‚æ•°....
 	SetActivityParam( sceneId, actId, x050023_g_IDXSnowManID, MstID )
 	SetActivityParam( sceneId, actId, x050023_g_IDXSnowManState, CurState )
 
@@ -285,37 +285,37 @@ function x050023_ResetActivityState( sceneId, actId )
 end
 
 --**********************************
---½«Ñ©ÈË±ä´ó
+--å°†é›ªäººå˜å¤§
 --**********************************
 function x050023_MakeBigSnowMan( sceneId, actId, MstID, CurState )
 
 	MissionLog(sceneId, "[07SHOUYE]: x050023_MakeBigSnowMan CurState="..CurState)
 
-	--É¾¾ÉµÄ....
+	--åˆ æ—§çš„....
 	LuaFnDeleteMonster(sceneId, MstID)
 
-	--½¨Á¢ĞÂµÄ....
+	--å»ºç«‹æ–°çš„....
 	local MstID = -1
 	MstID = LuaFnCreateMonster(sceneId, x050023_g_SnowMan[CurState].ID, x050023_g_SnowManX, x050023_g_SnowManY, 3, 0, x050023_g_SnowManScriptId )
 	LuaFnSendSpecificImpactToUnit(sceneId, MstID, MstID, MstID, 10488, 0)
 
-	--±ä´óÌØĞ§....
+	--å˜å¤§ç‰¹æ•ˆ....
 	LuaFnSendSpecificImpactToUnit(sceneId, MstID, MstID, MstID, 10487, 0)
 
-	--É¢Âä±¦Ïä....
+	--æ•£è½å®ç®±....
 	x050023_GiveItemBox( sceneId )
 
-	--¹«¸æ....
-	MonsterTalk(sceneId, -1, "ÂåÑô", "#P[Ñ©ÈË]#W£º¹ş¹ş£¬ÈğÑ©Õ×·áÄê°¡¡£Õâ50¸ö±¦Ïä¾¡¹ÜÄÃÈ¥°É£¬Ò»»á»¹ÓĞ¸üºÃµÄ¶«Î÷ËÍ¸ø´ó¼Ò£¬×£´ó¼ÒÊ¥µ®¿ìÀÖ£¡")
+	--å…¬å‘Š....
+	MonsterTalk(sceneId, -1, "æ´›é˜³", "#P[é›ªäºº]#Wï¼šå“ˆå“ˆï¼Œç‘é›ªå…†ä¸°å¹´å•Šã€‚è¿™50ä¸ªå®ç®±å°½ç®¡æ‹¿å»å§ï¼Œä¸€ä¼šè¿˜æœ‰æ›´å¥½çš„ä¸œè¥¿é€ç»™å¤§å®¶ï¼Œç¥å¤§å®¶åœ£è¯å¿«ä¹ï¼")
 
-	--ÉèÖÃ»î¶¯²ÎÊı....
+	--è®¾ç½®æ´»åŠ¨å‚æ•°....
 	SetActivityParam( sceneId, actId, x050023_g_IDXSnowManID, MstID )
 	SetActivityParam( sceneId, actId, x050023_g_IDXSnowManState, CurState )
 
 end
 
 --**********************************
---É¢Âä±¦Ïä
+--æ•£è½å®ç®±
 --**********************************
 function x050023_GiveItemBox( sceneId )
 
@@ -324,16 +324,16 @@ function x050023_GiveItemBox( sceneId )
 	local randValue = 0
 	local index = 1
 	for _, box in x050023_g_ItemBoxPos do
-		--zchw 1/60¼¸ÂÊÕäÊŞµ°£¬»¶ÀÖÖí
+		--zchw 1/60å‡ ç‡çå…½è›‹ï¼Œæ¬¢ä¹çŒª
 		local rdm = random(0, 6000);
 		if rdm < 100 then
 		
-			local BoxId = ItemBoxEnterScene( box[1], box[2], 779, sceneId, QUALITY_MUST_BE_CHANGE, 1, 30309683 ) --ÕäÊŞµ°£ºµ±ìè£¨95¼¶£©
-			SetItemBoxMaxGrowTime( sceneId, BoxId, 1200000 )	--20·ÖÖÓÉúÃüÆÚ....		
+			local BoxId = ItemBoxEnterScene( box[1], box[2], 779, sceneId, QUALITY_MUST_BE_CHANGE, 1, 30309683 ) --çå…½è›‹ï¼šå½“æ‰ˆï¼ˆ95çº§ï¼‰
+			SetItemBoxMaxGrowTime( sceneId, BoxId, 1200000 )	--20åˆ†é’Ÿç”Ÿå‘½æœŸ....		
 			
 		else
 		
-			--Ëæ»ú³öµÚÒ»¸öÎïÆ·....
+			--éšæœºå‡ºç¬¬ä¸€ä¸ªç‰©å“....
 			randValue = random(0, 99999);
 			for i, item in x050023_g_ItemBoxDrop do
 				if item.odds >= randValue then
@@ -347,9 +347,9 @@ function x050023_GiveItemBox( sceneId )
 				break
 			end
 			BoxId = ItemBoxEnterScene( box[1], box[2], 779, sceneId, QUALITY_MUST_BE_CHANGE, 1, DropItemId )
-			SetItemBoxMaxGrowTime( sceneId, BoxId, 1200000 )	--20·ÖÖÓÉúÃüÆÚ....
+			SetItemBoxMaxGrowTime( sceneId, BoxId, 1200000 )	--20åˆ†é’Ÿç”Ÿå‘½æœŸ....
 	
-			--Ö®Ç°Ã»ÓĞËæ»ú³öÊ¥µ®Ã±ºÍ±¦Ê¯²Å»á¸øµÚ¶ş¸öÎïÆ·....
+			--ä¹‹å‰æ²¡æœ‰éšæœºå‡ºåœ£è¯å¸½å’Œå®çŸ³æ‰ä¼šç»™ç¬¬äºŒä¸ªç‰©å“....
 			if ( index < 13 ) or ( index >= 18 and index <= 21 )then
 				randValue = random(0, 99999);
 				for _, item in x050023_g_ItemBoxDrop do
@@ -370,23 +370,23 @@ function x050023_GiveItemBox( sceneId )
 end
 
 --**********************************
---±»Ñ©Çò»÷ÖĞÊÂ¼ş
+--è¢«é›ªçƒå‡»ä¸­äº‹ä»¶
 --**********************************
 function x050023_CanThrowSnowBall( sceneId, playerId, targetId )
 
-	local actId = 88	--ÌØÀıÓÃ·¨....ÆäËûÈË²»ÒªÑ§....
+	local actId = 88	--ç‰¹ä¾‹ç”¨æ³•....å…¶ä»–äººä¸è¦å­¦....
 
-	--»î¶¯ÊÇ·ñÒÑ¾­ÎŞĞ§....
+	--æ´»åŠ¨æ˜¯å¦å·²ç»æ— æ•ˆ....
 	if CheckActiviyValidity( sceneId, actId ) == 0 then
 		return 0
 	end
 
-	--»ñÈ¡µ±Ç°Ñ©ÈË×´Ì¬....
+	--è·å–å½“å‰é›ªäººçŠ¶æ€....
 	local MstID = GetActivityParam( sceneId, actId, x050023_g_IDXSnowManID )
 	local CurState = GetActivityParam( sceneId, actId, x050023_g_IDXSnowManState )
 	local BallCount = GetActivityParam( sceneId, actId, x050023_g_IDXBallCount )
 
-	--´íÎó´¦Àí....
+	--é”™è¯¯å¤„ç†....
 	if CurState < 1 or CurState > 13 then
 		return 0
 	end
@@ -395,7 +395,7 @@ function x050023_CanThrowSnowBall( sceneId, playerId, targetId )
 		return 0
 	end
 
-	--´òµÄÊÇ·ñÊÇÑ©ÈË....
+	--æ‰“çš„æ˜¯å¦æ˜¯é›ªäºº....
 	if targetId ~= MstID then
 		return 0
 	end
@@ -405,23 +405,23 @@ function x050023_CanThrowSnowBall( sceneId, playerId, targetId )
 end
 
 --**********************************
---±»Ñ©Çò»÷ÖĞÊÂ¼ş
+--è¢«é›ªçƒå‡»ä¸­äº‹ä»¶
 --**********************************
 function x050023_OnHitBySnowBall( sceneId, playerId, targetId )
 
-	local actId = 88	--ÌØÀıÓÃ·¨....ÆäËûÈË²»ÒªÑ§....
+	local actId = 88	--ç‰¹ä¾‹ç”¨æ³•....å…¶ä»–äººä¸è¦å­¦....
 
-	--»î¶¯ÊÇ·ñÒÑ¾­ÎŞĞ§....
+	--æ´»åŠ¨æ˜¯å¦å·²ç»æ— æ•ˆ....
 	if CheckActiviyValidity( sceneId, actId ) == 0 then
 		return 0
 	end
 
-	--»ñÈ¡µ±Ç°Ñ©ÈË×´Ì¬....
+	--è·å–å½“å‰é›ªäººçŠ¶æ€....
 	local MstID = GetActivityParam( sceneId, actId, x050023_g_IDXSnowManID )
 	local CurState = GetActivityParam( sceneId, actId, x050023_g_IDXSnowManState )
 	local BallCount = GetActivityParam( sceneId, actId, x050023_g_IDXBallCount )
 
-	--´íÎó´¦Àí....
+	--é”™è¯¯å¤„ç†....
 	if CurState < 1 or CurState > 13 then
 		return 0
 	end
@@ -430,24 +430,24 @@ function x050023_OnHitBySnowBall( sceneId, playerId, targetId )
 		return 0
 	end
 
-	--´òµÄÊÇ·ñÊÇÑ©ÈË....
+	--æ‰“çš„æ˜¯å¦æ˜¯é›ªäºº....
 	if targetId ~= MstID then
 		return 0
 	end
 
 	if CurState >= 1 and CurState <= 12 then
 
-		--Ôö¼Ó¼ÆÊı....
+		--å¢åŠ è®¡æ•°....
 		BallCount = BallCount + 1
 		SetActivityParam( sceneId, actId, x050023_g_IDXBallCount, BallCount )
 
-		--»¹²î50,30,10¸öÇòµÄÊ±ºòº°»°....
+		--è¿˜å·®50,30,10ä¸ªçƒçš„æ—¶å€™å–Šè¯....
 		local NeedCount = x050023_g_SnowMan[CurState+1].BallCount - BallCount
 		if NeedCount == 50 or NeedCount == 30 or NeedCount == 10 then
-			MonsterTalk(sceneId, -1, "ÂåÑô", "#P[Ñ©ÈË]#W£º»¹²î"..NeedCount.."¸öÑ©Çò¶Ñµ½ÎÒÉíÉÏÎÒ¾Í¿ÉÒÔ³¤´óÁË£¬´ó¼ÒÅ¬°ÑÁ¦°¡£¬½±Æ·ÔÚÏòÄãÃÇÕĞÊÖ£¡")
+			MonsterTalk(sceneId, -1, "æ´›é˜³", "#P[é›ªäºº]#Wï¼šè¿˜å·®"..NeedCount.."ä¸ªé›ªçƒå †åˆ°æˆ‘èº«ä¸Šæˆ‘å°±å¯ä»¥é•¿å¤§äº†ï¼Œå¤§å®¶åŠªæŠŠåŠ›å•Šï¼Œå¥–å“åœ¨å‘ä½ ä»¬æ‹›æ‰‹ï¼")
 		end
 
-		--´¦ÀíÑ©ÈË±ä´ó....
+		--å¤„ç†é›ªäººå˜å¤§....
 		if BallCount >= x050023_g_SnowMan[CurState+1].BallCount then
 			x050023_MakeBigSnowMan( sceneId, actId, MstID, CurState+1 )
 		end
@@ -459,23 +459,23 @@ function x050023_OnHitBySnowBall( sceneId, playerId, targetId )
 end
 
 --**********************************
---»ñµÃÀëÏÂ´Î±ä´ó»¹²î¶àÉÙ¸öÑ©Çò....
+--è·å¾—ç¦»ä¸‹æ¬¡å˜å¤§è¿˜å·®å¤šå°‘ä¸ªé›ªçƒ....
 --**********************************
 function x050023_GetNeedBallCount( sceneId )
 
-	local actId = 88	--ÌØÀıÓÃ·¨....ÆäËûÈË²»ÒªÑ§....
+	local actId = 88	--ç‰¹ä¾‹ç”¨æ³•....å…¶ä»–äººä¸è¦å­¦....
 
-	--»î¶¯ÊÇ·ñÒÑ¾­ÎŞĞ§....
+	--æ´»åŠ¨æ˜¯å¦å·²ç»æ— æ•ˆ....
 	if CheckActiviyValidity( sceneId, actId ) == 0 then
 		return -1
 	end
 
-	--»ñÈ¡µ±Ç°Ñ©ÈË×´Ì¬....
+	--è·å–å½“å‰é›ªäººçŠ¶æ€....
 	local MstID = GetActivityParam( sceneId, actId, x050023_g_IDXSnowManID )
 	local CurState = GetActivityParam( sceneId, actId, x050023_g_IDXSnowManState )
 	local BallCount = GetActivityParam( sceneId, actId, x050023_g_IDXBallCount )
 
-	--´íÎó´¦Àí....
+	--é”™è¯¯å¤„ç†....
 	if CurState < 1 or CurState > 13 then
 		return -1
 	end
@@ -494,27 +494,27 @@ function x050023_GetNeedBallCount( sceneId )
 end
 
 --**********************************
---Íæ¼ÒÔÚÂåÑôÊ°È¡ÎïÆ·µÄ»Øµ÷º¯Êı....
+--ç©å®¶åœ¨æ´›é˜³æ‹¾å–ç‰©å“çš„å›è°ƒå‡½æ•°....
 --**********************************
 function x050023_OnPlayerPickUpItemInLuoyang( sceneId, selfId, itemId, bagidx )
 
-	--·Ç»î¶¯Ê±¼äÔò²»¹«¸æ....
+	--éæ´»åŠ¨æ—¶é—´åˆ™ä¸å…¬å‘Š....
 	if 0 == x050023_CheckActivityTime( sceneId ) then
 		return 0
 	end
 
 	local IsBoxItem = 0
 	local ItemCount = getn(x050023_g_ItemBoxDrop)
-	for i = 22, ItemCount do --ÍòÁéÊ¯²»¹«¸æ zchw
+	for i = 22, ItemCount do --ä¸‡çµçŸ³ä¸å…¬å‘Š zchw
 		if x050023_g_ItemBoxDrop[i].itemId == itemId then
 			IsBoxItem = 1
 			break
 		end
 	end
-	--ÕäÊŞµ°£ºµ±ìè£¨95¼¶£© ¹«¸æ 30309683 zchw
+	--çå…½è›‹ï¼šå½“æ‰ˆï¼ˆ95çº§ï¼‰ å…¬å‘Š 30309683 zchw
 	if itemId == 30309683 then
 		IsBoxItem = 1;
-		--ÈÕÖ¾Í³¼Æ
+		--æ—¥å¿—ç»Ÿè®¡
 		local guid = LuaFnObjId2Guid(sceneId, selfId)
 		local log = format("itemId=%d", itemId)
 		ScriptGlobal_AuditGeneralLog(LUAAUDIT_SNOW, guid, log)
@@ -524,17 +524,17 @@ function x050023_OnPlayerPickUpItemInLuoyang( sceneId, selfId, itemId, bagidx )
 		return 0
 	end
 
-	--¹«¸æ....
+	--å…¬å‘Š....
 	local playerName = GetName(sceneId, selfId)
 	local transfer = GetBagItemTransfer(sceneId,selfId,bagidx)
 	local rand = random(3)
 	local message
 	if rand == 1 then
-		message = format("#PÌì½µÈğÑ©£¬Ï²ÊÂÓ¯ÃÅ¡£#{_INFOUSR%s}#PËæ±ãÔÚÂåÑô´ó½ÖÉÏ×ßÂ·¶¼ÄÜ±»#{_INFOMSG%s}#PÔÒÖĞ£¬ÕæÊÇºèÔËµ±Í·£¬µ²Ò²µ²²»×¡°¡¡£", playerName, transfer )
+		message = format("#På¤©é™ç‘é›ªï¼Œå–œäº‹ç›ˆé—¨ã€‚#{_INFOUSR%s}#Péšä¾¿åœ¨æ´›é˜³å¤§è¡—ä¸Šèµ°è·¯éƒ½èƒ½è¢«#{_INFOMSG%s}#Pç ¸ä¸­ï¼ŒçœŸæ˜¯é¸¿è¿å½“å¤´ï¼ŒæŒ¡ä¹ŸæŒ¡ä¸ä½å•Šã€‚", playerName, transfer )
 	elseif rand == 2 then
-		message = format("#P±±·ç´µ£¬Ñ©»¨Æ®£¬ÂåÑôÉÏ¿ÕÏÂ²Æ±¦¡£#{_INFOUSR%s}#Pµ±³¡¾ªĞÑ¹ıÀ´£¬ÊÖ½Å¿ìËÙµÄ¼ñÆğÒ»¸ö#{_INFOMSG%s}#PºóµÍµ÷µÄ×ªÉí¶øÈ¥¡£", playerName, transfer )
+		message = format("#PåŒ—é£å¹ï¼Œé›ªèŠ±é£˜ï¼Œæ´›é˜³ä¸Šç©ºä¸‹è´¢å®ã€‚#{_INFOUSR%s}#På½“åœºæƒŠé†’è¿‡æ¥ï¼Œæ‰‹è„šå¿«é€Ÿçš„æ¡èµ·ä¸€ä¸ª#{_INFOMSG%s}#Påä½è°ƒçš„è½¬èº«è€Œå»ã€‚", playerName, transfer )
 	else
-		message = format("#PÑ©ÈËºÃ£¬Ñ©ÈËÃî£¬Ñ©ÈËÉ¢ÂäµÄ±¦±´ßÉßÉ½Ğ£¡#{_INFOUSR%s}#PÕıÅõ×Å¼ñÀ´µÄ#{_INFOMSG%s}#P¶×ÔÚÂåÑô½Ö±ßÉµºÇºÇµÄĞ¦¡£", playerName, transfer )
+		message = format("#Pé›ªäººå¥½ï¼Œé›ªäººå¦™ï¼Œé›ªäººæ•£è½çš„å®è´å‘±å‘±å«ï¼#{_INFOUSR%s}#Pæ­£æ§ç€æ¡æ¥çš„#{_INFOMSG%s}#Pè¹²åœ¨æ´›é˜³è¡—è¾¹å‚»å‘µå‘µçš„ç¬‘ã€‚", playerName, transfer )
 	end
 	BroadMsgByChatPipe(sceneId, selfId, message, 4)
 

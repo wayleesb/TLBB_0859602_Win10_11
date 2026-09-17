@@ -1,18 +1,18 @@
---±£»¤°ïÅÉ×¤µØ
---ÆÕÍ¨
+--ä¿æŠ¤å¸®æ´¾é©»åœ°
+--æ™®é€š
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x805040_g_ScriptId	= 805040
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x805040_g_EventList	= { 805042 }
 
 
---½ÓÈ¡ÈÎÎñµÄ×îµÍµÈ¼¶
+--æ¥å–ä»»åŠ¡çš„æœ€ä½ç­‰çº§
 x805040_g_minLevel			= 20
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x805040_UpdateEventList( sceneId, selfId, targetId )
 
@@ -22,7 +22,7 @@ function x805040_UpdateEventList( sceneId, selfId, targetId )
 	if Humanguildid ~= cityguildid then
 		BeginEvent( sceneId )
 			AddText( sceneId, "#{SYDH_81016_01}" )
-			AddNumText( sceneId, 805042, "¹ØÓÚ±£»¤°ï»á" ,11 ,2)
+			AddNumText( sceneId, 805042, "å…³äºä¿æŠ¤å¸®ä¼š" ,11 ,2)
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 		return
@@ -33,14 +33,14 @@ function x805040_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x805040_OnDefaultEvent( sceneId, selfId, targetId )
 	x805040_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x805040_OnEventRequest( sceneId, selfId, targetId, eventId )
 
@@ -54,7 +54,7 @@ function x805040_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x805040_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 
@@ -68,11 +68,11 @@ function x805040_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x805040_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 
-	--¾Ü¾øÖ®ºó£¬Òª·µ»ØNPCµÄÊÂ¼şÁĞ±í
+	--æ‹’ç»ä¹‹åï¼Œè¦è¿”å›NPCçš„äº‹ä»¶åˆ—è¡¨
 	for i, findId in x805040_g_EventList do
 		if missionScriptId == findId then
 			x805040_UpdateEventList( sceneId, selfId, targetId )
@@ -83,7 +83,7 @@ function x805040_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¼ÌĞø£¨ÒÑ¾­½ÓÁËÈÎÎñ£©
+--ç»§ç»­ï¼ˆå·²ç»æ¥äº†ä»»åŠ¡ï¼‰
 --**********************************
 function x805040_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 
@@ -97,7 +97,7 @@ function x805040_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---Ìá½»ÒÑ×öÍêµÄÈÎÎñ
+--æäº¤å·²åšå®Œçš„ä»»åŠ¡
 --**********************************
 function x805040_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, selectRadioId )
 
@@ -111,7 +111,7 @@ function x805040_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 end
 
 --**********************************
---ËÀÍöÊÂ¼ş
+--æ­»äº¡äº‹ä»¶
 --**********************************
 function x805040_OnDie( sceneId, selfId, killerId )
 end

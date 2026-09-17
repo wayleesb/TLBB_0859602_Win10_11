@@ -1,16 +1,16 @@
---»î¶¯¡ª¡ª
---ºÍĞ³¹â»·£¨²Î¿¼À¶ĞÂ¹â»·£©
+--æ´»åŠ¨â€”â€”
+--å’Œè°å…‰ç¯ï¼ˆå‚è€ƒè“æ–°å…‰ç¯ï¼‰
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x808124_g_ScriptId = 808124
 
- --»î¶¯¿ªÊ¼Ê±¼ä 2009-1-19
+ --æ´»åŠ¨å¼€å§‹æ—¶é—´ 2009-1-19
 x808124_g_HeXieGuangHuan_BeginDayTime = 20090119  
 
---»î¶¯½áÊøÊ±¼ä 2009-2-26
+--æ´»åŠ¨ç»“æŸæ—¶é—´ 2009-2-26
 x808124_g_HeXieGuangHuan_EndDayTime = 20090226   
 
---level±íÊ¾ÆğÊ¼µÈ¼¶£¬´óÓÚÕâ¸öµÈ¼¶¾Í¿ÉÒÔ»ñµÃºóÃæµÄBUFF
+--levelè¡¨ç¤ºèµ·å§‹ç­‰çº§ï¼Œå¤§äºè¿™ä¸ªç­‰çº§å°±å¯ä»¥è·å¾—åé¢çš„BUFF
 x808124_g_Impact = {
 		{level = 0,	buffId = 186},			--1-10	
 		{level = 10,	buffId = 187},		--11-20
@@ -28,7 +28,7 @@ x808124_g_Impact = {
 
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x808124_OnDefaultEvent( sceneId, selfId, targetId )
 
@@ -39,21 +39,21 @@ function x808124_OnDefaultEvent( sceneId, selfId, targetId )
 
 	local opt = GetNumText();
 	
-	if( 1 == opt ) then				--µã»÷¡°ºÍĞ³¹â»·¡±
+	if( 1 == opt ) then				--ç‚¹å‡»â€œå’Œè°å…‰ç¯â€
 		BeginEvent(sceneId)
 			AddText(sceneId, "#{HXGH_90105_3}");
 			AddNumText(sceneId, x808124_g_ScriptId, "#{HXGH_90105_4}", 8, 11 )
 		EndEvent()
 		DispatchEventList(sceneId, selfId, targetId)
-	elseif( 11 == opt ) then	--µã»÷¡°ÊÇ¡±
-		local lastDate = GetMissionData( sceneId, selfId, MD_HEXIE_GUANGHUAN_DATE )	--ÉÏÒ»´ÎÁìÈ¡ÈÕÆÚ
+	elseif( 11 == opt ) then	--ç‚¹å‡»â€œæ˜¯â€
+		local lastDate = GetMissionData( sceneId, selfId, MD_HEXIE_GUANGHUAN_DATE )	--ä¸Šä¸€æ¬¡é¢†å–æ—¥æœŸ
 		local curDate = GetTime2Day()
 
 		if curDate > lastDate then
 			if IsPilferLockFlag( sceneId, selfId ) <= 0 then
-				return	--°²È«Ê±¼äÄÚ²»ÈÃ²Ù×÷
+				return	--å®‰å…¨æ—¶é—´å†…ä¸è®©æ“ä½œ
 			else
-				--¿ÉÒÔÁìÈ¡£¬ÏÈÉèÖÃÁìÈ¡±ê¼ÇÔÙ¼ÓBUFF
+				--å¯ä»¥é¢†å–ï¼Œå…ˆè®¾ç½®é¢†å–æ ‡è®°å†åŠ BUFF
 				SetMissionData( sceneId, selfId, MD_HEXIE_GUANGHUAN_DATE, curDate )
 				x808124_AddHeXieGuangHuan( sceneId, selfId )
 		
@@ -63,7 +63,7 @@ function x808124_OnDefaultEvent( sceneId, selfId, targetId )
 				DispatchEventList(sceneId,selfId,targetId)
 			end
 		else
-			--±¾ÈÕÒÑ¾­ÁìÈ¡¹ıÁË
+			--æœ¬æ—¥å·²ç»é¢†å–è¿‡äº†
 			BeginEvent(sceneId)
 				AddText(sceneId,"#{HXGH_90105_6}");
 			EndEvent(sceneId)
@@ -73,7 +73,7 @@ function x808124_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x808124_OnEnumerate( sceneId, selfId, targetId )
 
@@ -85,7 +85,7 @@ function x808124_OnEnumerate( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²â»î¶¯ÊÇ·ñÒÑ½áÊø
+--æ£€æµ‹æ´»åŠ¨æ˜¯å¦å·²ç»“æŸ
 --**********************************
 function x808124_CheckRightTime()
 
@@ -102,7 +102,7 @@ function x808124_CheckRightTime()
 end
 
 --**********************************
---¸øÍæ¼Ò¼ÓÉÏºÍĞ³¹â»·buff
+--ç»™ç©å®¶åŠ ä¸Šå’Œè°å…‰ç¯buff
 --**********************************
 function x808124_AddHeXieGuangHuan( sceneId, selfId )
 
@@ -122,21 +122,21 @@ function x808124_AddHeXieGuangHuan( sceneId, selfId )
 end
 
 --**********************************
---ÉÏÏß
+--ä¸Šçº¿
 --**********************************
 function x808124_OnPlayerLogin( sceneId, selfId )
-	--¼ì²é»î¶¯Ê±¼ä
+	--æ£€æŸ¥æ´»åŠ¨æ—¶é—´
 	local isTime = x808124_CheckRightTime()
 	if 1 ~= isTime then
 		return
 	end
 
-	local lastMailDate = GetMissionData( sceneId, selfId, MD_HEXIE_GUANGHUAN_MAIL_DATE )	--ÉÏÒ»´ÎÁìÈ¡ÈÕÆÚ
+	local lastMailDate = GetMissionData( sceneId, selfId, MD_HEXIE_GUANGHUAN_MAIL_DATE )	--ä¸Šä¸€æ¬¡é¢†å–æ—¥æœŸ
 	local curMailDate = GetTime2Day()
 
 	if curMailDate > lastMailDate then
-		--½ñÈÕ»¹Î´·¢¹ıÏµÍ³ÓÊ¼ş
-		--ÏÈ±ê¼Ç×î½ü·¢ÓÊ¼şÈÕÆÚÎª½ñÈÕ
+		--ä»Šæ—¥è¿˜æœªå‘è¿‡ç³»ç»Ÿé‚®ä»¶
+		--å…ˆæ ‡è®°æœ€è¿‘å‘é‚®ä»¶æ—¥æœŸä¸ºä»Šæ—¥
 		SetMissionData( sceneId, selfId, MD_HEXIE_GUANGHUAN_MAIL_DATE, curMailDate )
 		
 		LuaFnSendSystemMail( sceneId, GetName( sceneId, selfId ), "#{HXGH_90105_8}" )
@@ -145,55 +145,55 @@ function x808124_OnPlayerLogin( sceneId, selfId )
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x808124_CheckAccept( sceneId, selfId )
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x808124_OnAccept( sceneId, selfId )
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x808124_OnAbandon( sceneId, selfId )
 end
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x808124_OnContinue( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x808124_CheckSubmit( sceneId, selfId )
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x808124_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 end
 
 --**********************************
---É±ËÀ¹ÖÎï»òÍæ¼Ò
+--æ€æ­»æ€ªç‰©æˆ–ç©å®¶
 --**********************************
 function x808124_OnKillObject( sceneId, selfId, objdataId ,objId )
 end
 
 --**********************************
---½øÈëÇøÓòÊÂ¼ş
+--è¿›å…¥åŒºåŸŸäº‹ä»¶
 --**********************************
 function x808124_OnEnterArea( sceneId, selfId, zoneId )
 end
 
 --**********************************
---µÀ¾ß¸Ä±ä
+--é“å…·æ”¹å˜
 --**********************************
 function x808124_OnItemChanged( sceneId, selfId, itemdataId )
 end

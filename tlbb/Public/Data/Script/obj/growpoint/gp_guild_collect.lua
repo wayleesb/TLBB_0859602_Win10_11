@@ -1,27 +1,27 @@
---Éú³¤µã
+--ç”Ÿé•¿ç‚¹
 --Created by zchw
---½Å±¾ºÅ712534
+--è„šæœ¬å·712534
 
---Ã¿´Î´ò¿ª±Ø¶¨»ñµÃµÄ²úÆ·
+--æ¯æ¬¡æ‰“å¼€å¿…å®šè·å¾—çš„äº§å“
 
 x712534_g_NumOdds =
 {
-	{num = 1, odd = 85},		--1¸öµÄ¼¸ÂÊ
-	{num = 2, odd = 10},		--2¸öµÄ¼¸ÂÊ
-	{num = 3, odd = 5},			--3¸öµÄ¼¸ÂÊ
+	{num = 1, odd = 85},		--1ä¸ªçš„å‡ ç‡
+	{num = 2, odd = 10},		--2ä¸ªçš„å‡ ç‡
+	{num = 3, odd = 5},			--3ä¸ªçš„å‡ ç‡
 }
---ÈÎÎñ¿ªÆôÊ±¼ä
+--ä»»åŠ¡å¼€å¯æ—¶é—´
 x712534_g_weekDay			= 0;
 x712534_g_StartTime 	= 1900;
 x712534_g_EndTime 		= 2000;
 
 x712534_g_GPInfo = {};
-x712534_g_GPInfo[791] = { name = "ÀùÊ¯", misId = 1140, itemId = 40004464}
-x712534_g_GPInfo[792] = { name = "Ñãôá", misId = 1141, itemId = 40004462}
-x712534_g_GPInfo[793] = { name = "ÆßÒ¶Á«", misId = 1142, itemId = 40004463}
+x712534_g_GPInfo[791] = { name = "ç ¾çŸ³", misId = 1140, itemId = 40004464}
+x712534_g_GPInfo[792] = { name = "é›ç¿", misId = 1141, itemId = 40004462}
+x712534_g_GPInfo[793] = { name = "ä¸ƒå¶è²", misId = 1142, itemId = 40004463}
 
---Éú³Éº¯Êı¿ªÊ¼************************************************************************
---Ã¿¸öItemBoxÖĞ×î¶à10¸öÎïÆ·
+--ç”Ÿæˆå‡½æ•°å¼€å§‹************************************************************************
+--æ¯ä¸ªItemBoxä¸­æœ€å¤š10ä¸ªç‰©å“
 function	x712534_OnCreate(sceneId,growPointType,x,y)
 
 	local item_id = x712534_g_GPInfo[growPointType].itemId
@@ -43,10 +43,10 @@ function	x712534_OnCreate(sceneId,growPointType,x,y)
 	end
 	
 end
---Éú³Éº¯Êı½áÊø**********************************************************************
+--ç”Ÿæˆå‡½æ•°ç»“æŸ**********************************************************************
 
 
---´ò¿ªÇ°º¯Êı¿ªÊ¼&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+--æ‰“å¼€å‰å‡½æ•°å¼€å§‹&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 function	x712534_OnOpen(sceneId,selfId,targetId)
 	local growPointType = LuaFnGetItemBoxGrowPointType( sceneId, targetId );
 	local misId = x712534_g_GPInfo[growPointType].misId;
@@ -55,13 +55,13 @@ function	x712534_OnOpen(sceneId,selfId,targetId)
 		x712534_Tips(sceneId, selfId, msg);
 		return -29; 
 	end 
-	--Ê±¼äÒ»ÖÂ£¿
+	--æ—¶é—´ä¸€è‡´ï¼Ÿ
 	local misIndex = GetMissionIndexByID(sceneId, selfId, misId);
 	if GetMissionParam(sceneId, selfId, misIndex, 2) ~= GetWeekTime() then
 		x712534_Tips(sceneId, selfId, "#{BHSJ_081014_18}");
 		return -29;	
 	end
-	--»î¶¯ÆÚÄÚ£¿
+	--æ´»åŠ¨æœŸå†…ï¼Ÿ
 	local time = GetHour()*100 + GetMinute(); 
 	if GetTodayWeek() ~= x712534_g_weekDay  then
 		x712534_Tips(sceneId, selfId, "#{BHSJ_081014_11}");
@@ -73,19 +73,19 @@ function	x712534_OnOpen(sceneId,selfId,targetId)
 		x712534_Tips(sceneId, selfId, "#{BHSJ_081014_18}");
 		return -29;
 	end
-	--ÈÎÎñÍê³É£¿
+	--ä»»åŠ¡å®Œæˆï¼Ÿ
 	if GetMissionParam(sceneId, selfId, misIndex, 0) == 1 then
 		x712534_Tips(sceneId, selfId, "#{BHSJ_081014_17}");
 		return -29;			
 	end
 	return 0; --OR_OK
 end
---´ò¿ªÇ°º¯Êı½áÊø&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+--æ‰“å¼€å‰å‡½æ•°ç»“æŸ&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
 
---»ØÊÕº¯Êı¿ªÊ¼########################################################################
+--å›æ”¶å‡½æ•°å¼€å§‹########################################################################
 function	x712534_OnRecycle(sceneId,selfId,targetId)
-	--·µ»Ø1£¬Éú³¤µã»ØÊÕ
+	--è¿”å›1ï¼Œç”Ÿé•¿ç‚¹å›æ”¶
 	local growPointType = LuaFnGetItemBoxGrowPointType( sceneId, targetId );
 	local misId = x712534_g_GPInfo[growPointType].misId;
 	local count = LuaFnGetItemCount(sceneId, selfId, x712534_g_GPInfo[growPointType].itemId);
@@ -97,15 +97,15 @@ function	x712534_OnRecycle(sceneId,selfId,targetId)
 	end
 	return 1
 end
---»ØÊÕº¯Êı½áÊø########################################################################
+--å›æ”¶å‡½æ•°ç»“æŸ########################################################################
 
 
 
---´ò¿ªºóº¯Êı¿ªÊ¼@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+--æ‰“å¼€åå‡½æ•°å¼€å§‹@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 function	x712534_OnProcOver(sceneId,selfId,targetId)
 	return 0
 end
---´ò¿ªºóº¯Êı½áÊø@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+--æ‰“å¼€åå‡½æ•°ç»“æŸ@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 function x712534_OnTickCreateFinish( sceneId, growPointType, tickCount )
 end

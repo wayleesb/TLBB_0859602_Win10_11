@@ -1,23 +1,23 @@
 --*********************************************************************
 
 -- Author	: liudun
--- Desc		: Í¨ÓÃ³é½±Á÷³Ì£¬Í³Ò»ÎÂÖİ£¬Íø¾Û£¬ĞÒÔËĞÇ³é½±¹¦ÄÜ
+-- Desc		: é€šç”¨æŠ½å¥–æµç¨‹ï¼Œç»Ÿä¸€æ¸©å·ï¼Œç½‘èšï¼Œå¹¸è¿æ˜ŸæŠ½å¥–åŠŸèƒ½
 -- ScriptID	: 808078
 -- Date		: 2008/03/15
 
 --*********************************************************************
 
 x808078_g_ScriptId						= 808078
-x808078_g_CommonPrize_Active			= 0			--Ä¬ÈÏ¹Ø±Õ
+x808078_g_CommonPrize_Active			= 0			--é»˜è®¤å…³é—­
 
 x808078_g_ActiveStartTime				= 7168	--20070618
 --x808078_g_ActiveEndTime				= 7198	--20070718
 
 function x808078_CommonCard(sceneId,selfId,targetId)	
-	--´ò¿ªÊäÈë¿¨ºÅ½çÃæ
+	--æ‰“å¼€è¾“å…¥å¡å·ç•Œé¢
 	--if GetLevel(sceneId, selfId) > 30 then
 		--BeginEvent(sceneId)
-			--AddText(sceneId, "ÄúµÄµÈ¼¶¹ı¸ß£¬ÎŞ·¨¼¤»î²Æ¸»¿¨£¡")
+			--AddText(sceneId, "æ‚¨çš„ç­‰çº§è¿‡é«˜ï¼Œæ— æ³•æ¿€æ´»è´¢å¯Œå¡ï¼")
 		--EndEvent()
 		--DispatchEventList( sceneId, selfId, targetId )
 		--return 
@@ -29,7 +29,7 @@ function x808078_CommonCard(sceneId,selfId,targetId)
 end
 
 --**********************************
--- ¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+-- å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x808078_NotifyFailBox( sceneId, selfId, targetId, msg )
 	BeginEvent( sceneId )
@@ -39,19 +39,19 @@ function x808078_NotifyFailBox( sceneId, selfId, targetId, msg )
 end
 
 --**********************************
---¼ì²é»î¶¯Ê±¼ä
+--æ£€æŸ¥æ´»åŠ¨æ—¶é—´
 --**********************************
 --function x808078_CheckRightTime()
 --	local DayTime = GetDayTime()
 --	PrintNum(DayTime)
 --	if DayTime < x808078_g_ActiveStartTime then
 --		x808078_g_CommonPrize_Active = 0
---		return 0    --´ËÇ°·Ç»î¶¯Ê±¼ä
+--		return 0    --æ­¤å‰éæ´»åŠ¨æ—¶é—´
 --	end
 
 --	if DayTime > x808078_g_ActiveEndTime then
 --		x808078_g_CommonPrize_Active = 0
---		return 0    --´Ëºó»î¶¯ÒÑ¾­½áÊø
+--		return 0    --æ­¤åæ´»åŠ¨å·²ç»ç»“æŸ
 --	end
 
 --	x808078_g_CommonPrize_Active = 1
@@ -59,15 +59,15 @@ end
 --	end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x808078_OnEnumerate( sceneId, selfId, targetId )
     --x808078_CheckRightTime()
-	AddNumText(sceneId, x808078_g_ScriptId, "ÁìÈ¡ÌìÁúÎïÆ·¿¨½±Àø", 1, 1 )
+	AddNumText(sceneId, x808078_g_ScriptId, "é¢†å–å¤©é¾™ç‰©å“å¡å¥–åŠ±", 1, 1 )
 end
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x808078_OnDefaultEvent( sceneId, selfId, targetId )
 	local TextNum = GetNumText()

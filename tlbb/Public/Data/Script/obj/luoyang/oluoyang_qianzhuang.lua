@@ -1,40 +1,43 @@
---Ç®×¯½Å±¾
+--é’±åº„è„šæœ¬
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x000076_g_scriptId = 000076
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 --g_eventList={211105,211106,211108}	
 
---¹ºÂò4¸ö´æ´¢Ïä»¨·ÑµÄÇ®
---Ä¬ÈÏÓĞ20¸ö¸ñ×Ó£¬´ËÊ±¹ºÂòÏÂÒ»¸öĞèÒª»¨·Ñ50000£¨½»×Ó+½ğ±Ò£©
-x000076_g_Box	 = {{Capacity=20,Cost=50000},
-			{Capacity=40,Cost=100000},
-			--{Capacity=60,Cost=200000},
-			--{Capacity=80,Cost=400000}
-	    }
+-- åˆå§‹å¼€æ”¾äºŒåæ ¼ï¼ŒæŒ‰äº¤å­ä¼˜å…ˆè§„åˆ™é€ç®±è´­ä¹°è‡³å…«ç®±ã€‚
+x000076_g_Box = {
+    {Capacity=20, Cost=50000},
+    {Capacity=40, Cost=100000},
+    {Capacity=60, Cost=200000},
+    {Capacity=80, Cost=400000},
+    {Capacity=100, Cost=600000},
+    {Capacity=120, Cost=800000},
+    {Capacity=140, Cost=1000000}
+}
 
--- Íæ¼ÒÉíÉÏÄ¬ÈÏµÄ½»×ÓºÍ½ğ±ÒÊıÄ¿    
+-- ç©å®¶èº«ä¸Šé»˜è®¤çš„äº¤å­å’Œé‡‘å¸æ•°ç›®    
 x000076_g_MoneyJZ = 0
 x000076_g_Money = 0
 
---npcµã»÷Ä¬ÈÏº¯Êı£¬ÕâÀïÓÃÀ´ÏÔÊ¾¶Ô»°ÎÄ×ÖºÍ¹¦ÄÜ°´Å¥
+--npcç‚¹å‡»é»˜è®¤å‡½æ•°ï¼Œè¿™é‡Œç”¨æ¥æ˜¾ç¤ºå¯¹è¯æ–‡å­—å’ŒåŠŸèƒ½æŒ‰é’®
 function x000076_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
 
-		--Ìí¼Ó´ò¿ªÒøĞĞ½çÃæµÄ°´Å¥
-		AddNumText(sceneId, 7, "´ò¿ªÒøĞĞ",5,-1)
-		--µÃµ½µ±Ç°ÒøĞĞµÄ´æ´¢¸ñÊı
+		--æ·»åŠ æ‰“å¼€é“¶è¡Œç•Œé¢çš„æŒ‰é’®
+		AddNumText(sceneId, 7, "æ‰“å¼€é“¶è¡Œ",5,-1)
+		--å¾—åˆ°å½“å‰é“¶è¡Œçš„å­˜å‚¨æ ¼æ•°
 		local CurrentRentIndex = GetBankRentIndex(sceneId, selfId)
-		--²éÕÒ´æ´¢ÏäĞòºÅ
+		--æŸ¥æ‰¾å­˜å‚¨ç®±åºå·
 		local	BoxNum = x000076_FindBoxNum( sceneId, selfId,targetId,CurrentRentIndex )
 		if BoxNum ~= 0 then
-			AddNumText(sceneId, x000076_g_Box[BoxNum].Capacity, "¹ºÂòĞÂµÄ´¢ÎïÏä", 5, -1)
+			AddNumText(sceneId, x000076_g_Box[BoxNum].Capacity, "è´­ä¹°æ–°çš„å‚¨ç‰©ç®±", 5, -1)
 		end
 
-		--´ò¿ª±£ÏÕÏä
-		AddNumText(sceneId, 101, "´ò¿ª±£ÏÕÏä",5,-1)
-		AddNumText(sceneId, 102, "¹ØÓÚ±£ÏÕÏä",11,3)
+		--æ‰“å¼€ä¿é™©ç®±
+		AddNumText(sceneId, 101, "æ‰“å¼€ä¿é™©ç®±",5,-1)
+		AddNumText(sceneId, 102, "å…³äºä¿é™©ç®±",11,3)
 		AddNumText( sceneId, x000076_g_scriptId, "#{JZBZ_081031_02}", 11, 4)
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
@@ -44,7 +47,7 @@ end
 function x000076_OnEventRequest( sceneId, selfId, targetId, eventId )
 	if GetNumText() == -1 then
 			if LuaFnGetLevel( sceneId, selfId ) < 11 then
-				x000076_MsgBox( sceneId, selfId, "Ê¹ÓÃ²Ö¿âµÈ¼¶ĞèÒª11¼¶£¬Äã»¹ÊÇ´ïµ½ºóÔÙÀ´ÕÒÎÒ°É!" )
+				x000076_MsgBox( sceneId, selfId, "ä½¿ç”¨ä»“åº“ç­‰çº§éœ€è¦11çº§ï¼Œä½ è¿˜æ˜¯è¾¾åˆ°åå†æ¥æ‰¾æˆ‘å§!" )
 				return
 			end
 	elseif GetNumText() == 4 then
@@ -55,32 +58,39 @@ function x000076_OnEventRequest( sceneId, selfId, targetId, eventId )
 		return
 	end
 
-	--´ò¿ªÒøĞĞ
+	--æ‰“å¼€é“¶è¡Œ
 	if eventId == 7 then
 		BankBegin(sceneId, selfId, targetId)	
-	--¹ºÂòĞÂµÄ´¢ÎïÏä
+	--è´­ä¹°æ–°çš„å‚¨ç‰©ç®±
 	elseif eventId == 8 then
-		--µÃµ½µ±Ç°ÒøĞĞµÄ´æ´¢¸ñÊı
+		--å¾—åˆ°å½“å‰é“¶è¡Œçš„å­˜å‚¨æ ¼æ•°
 		local CurrentRentIndex = GetBankRentIndex(sceneId, selfId)
-		--²éÕÒ´æ´¢ÏäĞòºÅ
+		--æŸ¥æ‰¾å­˜å‚¨ç®±åºå·
 		local	BoxNum = x000076_FindBoxNum( sceneId, selfId, targetId, CurrentRentIndex )
+        if BoxNum == 0 or LuaFnGetLevel(sceneId, selfId) < 11 then
+            return
+        end
          
-    -- µÃµ½½ğ±ÒºÍ½»×ÓµÄÊıÄ¿
+    -- å¾—åˆ°é‡‘å¸å’Œäº¤å­çš„æ•°ç›®
     x000076_g_MoneyJZ = GetMoneyJZ ( sceneId, selfId )
     x000076_g_Money = GetMoney ( sceneId, selfId )
 		
-		-- Èç¹û½ğÇ®ÊıÄ¿³ä×ã
+		-- å¦‚æœé‡‘é’±æ•°ç›®å……è¶³
 		if (x000076_g_MoneyJZ + x000076_g_Money) >= x000076_g_Box[BoxNum].Cost then
-			-- Ê¹ÓÃ´øÓÅÏÈ¼¶µÄ½ğÇ®ÏûºÄº¯Êı
-			LuaFnCostMoneyWithPriority (sceneId,selfId,x000076_g_Box[BoxNum].Cost)
+			-- ä½¿ç”¨å¸¦ä¼˜å…ˆçº§çš„é‡‘é’±æ¶ˆè€—å‡½æ•°
+			local paidJZ, paidMoney = LuaFnCostMoneyWithPriority(sceneId, selfId, x000076_g_Box[BoxNum].Cost)
+            -- æ‰£æ¬¾æ¥å£å¯èƒ½å› æ“ä½œé”æ‹’ç»ï¼›ä»…å®é™…æ‰£æ¬¾æˆåŠŸåå¼€æ”¾ç®±å­ã€‚
+            if not paidMoney or paidJZ + paidMoney ~= x000076_g_Box[BoxNum].Cost then
+                return
+            end
 			
-			-- Ôö¼Ó´æ´¢Ïä²¢ÌáÊ¾
+			-- å¢åŠ å­˜å‚¨ç®±å¹¶æç¤º
 			x000076_EnableBankBox( sceneId, selfId, targetId, BoxNum )
-			-- ´ò¿ªÒøĞĞ½çÃæ
+			-- æ‰“å¼€é“¶è¡Œç•Œé¢
   		BankBegin(sceneId, selfId, targetId)
   	
 		else
-			x000076_MsgBox( sceneId, selfId, "ÄãĞ¯´øµÄ½ğÇ®²»×ã¡£"  )
+			x000076_MsgBox( sceneId, selfId, "ä½ æºå¸¦çš„é‡‘é’±ä¸è¶³ã€‚"  )
 		end
 
 	elseif eventId == 101 then
@@ -93,37 +103,40 @@ function x000076_OnEventRequest( sceneId, selfId, targetId, eventId )
 		DispatchEventList( sceneId, selfId, targetId )
 
 	else
-		--µÃµ½µ±Ç°ÒøĞĞµÄ´æ´¢¸ñÊı
+		--å¾—åˆ°å½“å‰é“¶è¡Œçš„å­˜å‚¨æ ¼æ•°
 		local CurrentRentIndex = GetBankRentIndex(sceneId, selfId)
-		--²éÕÒ´æ´¢ÏäĞòºÅ
+		--æŸ¥æ‰¾å­˜å‚¨ç®±åºå·
 		local	BoxNum = x000076_FindBoxNum( sceneId, selfId,targetId,CurrentRentIndex )
+        if BoxNum == 0 or eventId ~= x000076_g_Box[BoxNum].Capacity then
+            return
+        end
 		
 		BeginUICommand(sceneId)
 			UICommand_AddInt(sceneId,x000076_g_scriptId)
 			UICommand_AddInt(sceneId,targetId)
 			UICommand_AddInt(sceneId,8)
 			UICommand_AddString(sceneId,"OnEventRequest")
-			UICommand_AddString(sceneId,"Èç¹ûÒª¹ºÂòĞÂµÄ´¢ÎïÏä£¬ĞèÒª»¨·Ñ#{_EXCHG"..x000076_g_Box[BoxNum].Cost.."}¡£#rÄãÈ·¶¨Òª¹ºÂòÂğ£¿")			
+			UICommand_AddString(sceneId,"å¦‚æœè¦è´­ä¹°æ–°çš„å‚¨ç‰©ç®±ï¼Œéœ€è¦èŠ±è´¹#{_EXCHG"..x000076_g_Box[BoxNum].Cost.."}ã€‚#rä½ ç¡®å®šè¦è´­ä¹°å—ï¼Ÿ")			
 		EndUICommand(sceneId)
-		DispatchUICommand(sceneId,selfId, 24)		--ÒøĞĞÕâÀïµÄÑ¯ÎÊ´°¿ÚÕâÀï±ØĞëÌîĞ´24
+		DispatchUICommand(sceneId,selfId, 24)		--é“¶è¡Œè¿™é‡Œçš„è¯¢é—®çª—å£è¿™é‡Œå¿…é¡»å¡«å†™24
 	end
 
 end
 
---×Ô¶¨Òåº¯Êı£¬¸ø³öĞòºÅ£¬´ò¿ªµÚ Num+1 ĞòºÅ¸ö´æ´¢Ïä
+--è‡ªå®šä¹‰å‡½æ•°ï¼Œç»™å‡ºåºå·ï¼Œæ‰“å¼€ç¬¬ Num+1 åºå·ä¸ªå­˜å‚¨ç®±
 function x000076_EnableBankBox( sceneId, selfId, targetId, Num )
 	
-	-- ĞèÒª»¨·Ñ½ğÇ®µÄÏÔÊ¾
+	-- éœ€è¦èŠ±è´¹é‡‘é’±çš„æ˜¾ç¤º
 	x000076_MoneyChange ( sceneId, selfId, targetId, x000076_g_Box[Num].Cost, x000076_g_Money, x000076_g_MoneyJZ )
 
-	-- ¼¤»î´¢ÎïÏä
+	-- æ¿€æ´»å‚¨ç‰©ç®±
 	EnableBankRentIndex(sceneId, selfId, Num+1)
 
 end
 
---×Ô¶¨Òåº¯Êı£¬¸ø³öÈİÁ¿,·µ»ØĞòºÅ
+--è‡ªå®šä¹‰å‡½æ•°ï¼Œç»™å‡ºå®¹é‡,è¿”å›åºå·
 function x000076_FindBoxNum( sceneId, selfId,targetId,Capacity )
-	--µÃµ½´¢Îï¹ñĞòºÅ
+	--å¾—åˆ°å‚¨ç‰©æŸœåºå·
 	for i, findBox in x000076_g_Box do
 		if findBox.Capacity == Capacity then
 			return i
@@ -133,60 +146,60 @@ function x000076_FindBoxNum( sceneId, selfId,targetId,Capacity )
 	return 0
 end
 
--- ´òÓ¡¹ºÂò´¢ÎïÏäºóµÄÆÁÄ»ÌáÊ¾ĞÅÏ¢
--- ÕâÀïµÄÇ°ÌáÌõ¼şÊÇ£ºMoney + MoneyJZ >= Cost
--- Èë¿Ú²ÎÊı£º	Cost		--	¹ºÂò´¢ÎïÏäµÄ¼Û¸ñ
---						Money		--	¹ºÂò´¢ÎïÏäÇ°Íæ¼ÒÓµÓĞµÄ½ğÇ®ÊıÄ¿
---						MoneyJZ	--	¹ºÂò´¢ÎïÏäÇ°Íæ¼ÒÓµÓĞµÄ½»×ÓÊıÄ¿
+-- æ‰“å°è´­ä¹°å‚¨ç‰©ç®±åçš„å±å¹•æç¤ºä¿¡æ¯
+-- è¿™é‡Œçš„å‰ææ¡ä»¶æ˜¯ï¼šMoney + MoneyJZ >= Cost
+-- å…¥å£å‚æ•°ï¼š	Cost		--	è´­ä¹°å‚¨ç‰©ç®±çš„ä»·æ ¼
+--						Money		--	è´­ä¹°å‚¨ç‰©ç®±å‰ç©å®¶æ‹¥æœ‰çš„é‡‘é’±æ•°ç›®
+--						MoneyJZ	--	è´­ä¹°å‚¨ç‰©ç®±å‰ç©å®¶æ‹¥æœ‰çš„äº¤å­æ•°ç›®
 function x000076_MoneyChange ( sceneId, selfId, targetId, Cost, Money, MoneyJZ )
 
-	-- ¹ºÂò´¢ÎïÏäµÄ»¨·Ñ   
+	-- è´­ä¹°å‚¨ç‰©ç®±çš„èŠ±è´¹   
   local nCost = Cost
   local nMoney = 0
   local nMoneyJZ = 0
   
-	-- ½»×ÓÊıÄ¿³ä×ã
+	-- äº¤å­æ•°ç›®å……è¶³
 	if (MoneyJZ >= Cost) then
 		nMoneyJZ = Cost
 		nMoney = 0
 		
-		x000076_MsgBox( sceneId, selfId, "Äã»¨·ÑÁË #{_EXCHG"..nMoneyJZ.."}£¬µÃµ½ÁËÒ»¸öĞÂµÄ´¢ÎïÏä¡£" )
+		x000076_MsgBox( sceneId, selfId, "ä½ èŠ±è´¹äº† #{_EXCHG"..nMoneyJZ.."}ï¼Œå¾—åˆ°äº†ä¸€ä¸ªæ–°çš„å‚¨ç‰©ç®±ã€‚" )
 		
-	-- ½»×Ó²»×ã£¬µ«ÊÇ ½»×Ó+½ğ±Ò ÊıÄ¿³ä×ã
+	-- äº¤å­ä¸è¶³ï¼Œä½†æ˜¯ äº¤å­+é‡‘å¸ æ•°ç›®å……è¶³
 	elseif (MoneyJZ > 0) and (Money > 0) and (MoneyJZ + Money) >= Cost then
 		nMoneyJZ = MoneyJZ
 		nMoney = Cost - MoneyJZ
 		
-		x000076_MsgBox ( sceneId, selfId, "Äã»¨·ÑÁË #{_EXCHG"..nMoneyJZ.."}" )
-		x000076_MsgBox ( sceneId, selfId, "Äã»¨·ÑÁË #{_MONEY"..nMoney.."}"  )
-		x000076_MsgBox ( sceneId, selfId, "ÄãµÃµ½ÁËÒ»¸öĞÂµÄ´¢ÎïÏä¡£" )
+		x000076_MsgBox ( sceneId, selfId, "ä½ èŠ±è´¹äº† #{_EXCHG"..nMoneyJZ.."}" )
+		x000076_MsgBox ( sceneId, selfId, "ä½ èŠ±è´¹äº† #{_MONEY"..nMoney.."}"  )
+		x000076_MsgBox ( sceneId, selfId, "ä½ å¾—åˆ°äº†ä¸€ä¸ªæ–°çš„å‚¨ç‰©ç®±ã€‚" )
 		
-	-- Ã»ÓĞ½»×Ó£¬Ö»ÓĞ½ğ±Ò
+	-- æ²¡æœ‰äº¤å­ï¼Œåªæœ‰é‡‘å¸
 	elseif (MoneyJZ == 0) and (Money >= Cost) then
 		nMoneyJZ = 0
 		nMoney = Cost
 		
-		x000076_MsgBox ( sceneId, selfId, "Äã»¨·ÑÁË #{_MONEY"..nMoney.."}£¬µÃµ½ÁËÒ»¸öĞÂµÄ´¢ÎïÏä¡£" )
+		x000076_MsgBox ( sceneId, selfId, "ä½ èŠ±è´¹äº† #{_MONEY"..nMoney.."}ï¼Œå¾—åˆ°äº†ä¸€ä¸ªæ–°çš„å‚¨ç‰©ç®±ã€‚" )
 		
 	else
 		nMoneyJZ = 0
 		nMoney = 0
 		
-		-- Í¼±ê×ªÒå·û£º
-		-- ½ğ½»×Ó£º	#-14
-		-- Òø½»×Ó£º	#-15
-		-- Í­½»×Ó£º	#-16
-		-- ½ğ±Ò£º		#-02
-		-- Òø±Ò£º		#-03
-		-- Í­±Ò£º		#-04
-		x000076_MsgBox ( sceneId, selfId, nMoneyJZ.."#-16£¬"..nMoney.."#-04" )
+		-- å›¾æ ‡è½¬ä¹‰ç¬¦ï¼š
+		-- é‡‘äº¤å­ï¼š	#-14
+		-- é“¶äº¤å­ï¼š	#-15
+		-- é“œäº¤å­ï¼š	#-16
+		-- é‡‘å¸ï¼š		#-02
+		-- é“¶å¸ï¼š		#-03
+		-- é“œå¸ï¼š		#-04
+		x000076_MsgBox ( sceneId, selfId, nMoneyJZ.."#-16ï¼Œ"..nMoney.."#-04" )
  
 	end
 		
 	return
 end
 
---×Ô¶¨Òåº¯Êı£¬ÆÁÄ»ÏûÏ¢ÌáÊ¾£¨Ö»ÄÜÏÔÊ¾Ò»ĞĞ£¬²»ÄÜÓÃ#r»»ĞĞ£¬ÈçĞèÏÔÊ¾¶àĞĞĞè·Ö´Îµ÷ÓÃ¡££©
+--è‡ªå®šä¹‰å‡½æ•°ï¼Œå±å¹•æ¶ˆæ¯æç¤ºï¼ˆåªèƒ½æ˜¾ç¤ºä¸€è¡Œï¼Œä¸èƒ½ç”¨#ræ¢è¡Œï¼Œå¦‚éœ€æ˜¾ç¤ºå¤šè¡Œéœ€åˆ†æ¬¡è°ƒç”¨ã€‚ï¼‰
 function x000076_MsgBox( sceneId, selfId, msg )
 	BeginEvent( sceneId )
 		AddText( sceneId, msg )

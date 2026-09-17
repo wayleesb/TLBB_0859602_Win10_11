@@ -1,25 +1,25 @@
---ÊøºÓ¹ÅÕòNPC
---ĞìÏ¼¿Í
---ÆÕÍ¨
+--æŸæ²³å¤é•‡NPC
+--å¾éœå®¢
+--æ™®é€š
 
 x001171_g_ScriptId	= 001171
 
 x001171_g_Yinpiao = 40002000
 
-x001171_g_Impact_NotTransportList = { 5929, 5944 } -- ½ûÖ¹´«ËÍµÄImpact
-x001171_g_TalkInfo_NotTransportList = { "#{GodFire_Info_062}", "#{XSHCD_20080418_099}" } -- ½ûÖ¹´«ËÍµÄImpactÌáÊ¾ĞÅÏ¢
+x001171_g_Impact_NotTransportList = { 5929, 5944 } -- ç¦æ­¢ä¼ é€çš„Impact
+x001171_g_TalkInfo_NotTransportList = { "#{GodFire_Info_062}", "#{XSHCD_20080418_099}" } -- ç¦æ­¢ä¼ é€çš„Impactæç¤ºä¿¡æ¯
 
---ÃÅÅÉĞÅÏ¢(ÃÅÅÉÃû³Æ£¬SceneID£¬PosX£¬PosY£¬ÃÅÅÉID)
+--é—¨æ´¾ä¿¡æ¯(é—¨æ´¾åç§°ï¼ŒSceneIDï¼ŒPosXï¼ŒPosYï¼Œé—¨æ´¾ID)
 x001171_g_mpInfo		= {}
-x001171_g_mpInfo[0]	= { "ĞÇËŞ", 16,  96, 152, MP_XINGSU }
-x001171_g_mpInfo[1]	= { "åĞÒ£", 14,  67, 145, MP_XIAOYAO }
-x001171_g_mpInfo[2]	= { "ÉÙÁÖ",  9,  96, 127, MP_SHAOLIN }
-x001171_g_mpInfo[3]	= { "ÌìÉ½", 17,  95, 120, MP_TIANSHAN }
-x001171_g_mpInfo[4]	= { "ÌìÁú", 13,  96, 120, MP_DALI }
-x001171_g_mpInfo[5]	= { "¶ëáÒ", 15,  89, 139, MP_EMEI }
-x001171_g_mpInfo[6]	= { "Îäµ±", 12, 103, 140, MP_WUDANG }
-x001171_g_mpInfo[7]	= { "Ã÷½Ì", 11,  98, 167, MP_MINGJIAO }
-x001171_g_mpInfo[8]	= { "Ø¤°ï", 10,  91, 116, MP_GAIBANG }
+x001171_g_mpInfo[0]	= { "æ˜Ÿå®¿", 16,  96, 152, MP_XINGSU }
+x001171_g_mpInfo[1]	= { "é€é¥", 14,  67, 145, MP_XIAOYAO }
+x001171_g_mpInfo[2]	= { "å°‘æ—",  9,  96, 127, MP_SHAOLIN }
+x001171_g_mpInfo[3]	= { "å¤©å±±", 17,  95, 120, MP_TIANSHAN }
+x001171_g_mpInfo[4]	= { "å¤©é¾™", 13,  96, 120, MP_DALI }
+x001171_g_mpInfo[5]	= { "å³¨åµ‹", 15,  89, 139, MP_EMEI }
+x001171_g_mpInfo[6]	= { "æ­¦å½“", 12, 103, 140, MP_WUDANG }
+x001171_g_mpInfo[7]	= { "æ˜æ•™", 11,  98, 167, MP_MINGJIAO }
+x001171_g_mpInfo[8]	= { "ä¸å¸®", 10,  91, 116, MP_GAIBANG }
 
 x001171_g_MsgInfo = { "#{SHGZ_001}",
 											"#{SHGZ_0620_01}",
@@ -28,14 +28,14 @@ x001171_g_MsgInfo = { "#{SHGZ_001}",
 										}
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x001171_OnDefaultEvent( sceneId, selfId, targetId )
 
-	-- ¼ì²âÍæ¼ÒÉíÉÏÊÇ²»ÊÇÓĞ¡°ÒøÆ±¡±Õâ¸ö¶«Î÷£¬ÓĞ¾Í²»ÄÜÊ¹ÓÃÕâÀïµÄ¹¦ÄÜ
+	-- æ£€æµ‹ç©å®¶èº«ä¸Šæ˜¯ä¸æ˜¯æœ‰â€œé“¶ç¥¨â€è¿™ä¸ªä¸œè¥¿ï¼Œæœ‰å°±ä¸èƒ½ä½¿ç”¨è¿™é‡Œçš„åŠŸèƒ½
 	if GetItemCount(sceneId, selfId, x001171_g_Yinpiao)>=1  then
 		BeginEvent( sceneId )
-			AddText( sceneId, "  ÄãÉíÉÏÓĞÒøÆ±£¬ÕıÔÚÅÜÉÌ£¡ÎÒ²»ÄÜ°ïÖúÄã¡£" )
+			AddText( sceneId, "  ä½ èº«ä¸Šæœ‰é“¶ç¥¨ï¼Œæ­£åœ¨è·‘å•†ï¼æˆ‘ä¸èƒ½å¸®åŠ©ä½ ã€‚" )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 		return
@@ -45,25 +45,25 @@ function x001171_OnDefaultEvent( sceneId, selfId, targetId )
 	
 		local msgidx = random(getn(x001171_g_MsgInfo))
 		AddText( sceneId, x001171_g_MsgInfo[msgidx] )
-		AddNumText( sceneId, x001171_g_ScriptId, "·µ»ØÃÅÅÉ", 9, 1000 )
-		AddNumText( sceneId, x001171_g_ScriptId, "³ÇÊĞ - ÂåÑô", 9, 1001 )
-		AddNumText( sceneId, x001171_g_ScriptId, "³ÇÊĞ - ËÕÖİ", 9, 1002 )
-		AddNumText( sceneId, x001171_g_ScriptId, "³ÇÊĞ - ´óÀí", 9, 1003 )
-		AddNumText( sceneId, x001171_g_ScriptId, "³ÇÊĞ - ÂåÑô - ¾ÅÖİÉÌ»á", 9, 1006 )
-		AddNumText( sceneId, x001171_g_ScriptId, "³ÇÊĞ - ËÕÖİ - Ìú½³ÆÌ", 9, 1007 )
-		AddNumText( sceneId, x001171_g_ScriptId, "³ÇÊĞ - Â¥À¼", 9, 1008 )
+		AddNumText( sceneId, x001171_g_ScriptId, "è¿”å›é—¨æ´¾", 9, 1000 )
+		AddNumText( sceneId, x001171_g_ScriptId, "åŸå¸‚ - æ´›é˜³", 9, 1001 )
+		AddNumText( sceneId, x001171_g_ScriptId, "åŸå¸‚ - è‹å·", 9, 1002 )
+		AddNumText( sceneId, x001171_g_ScriptId, "åŸå¸‚ - å¤§ç†", 9, 1003 )
+		AddNumText( sceneId, x001171_g_ScriptId, "åŸå¸‚ - æ´›é˜³ - ä¹å·å•†ä¼š", 9, 1006 )
+		AddNumText( sceneId, x001171_g_ScriptId, "åŸå¸‚ - è‹å· - é“åŒ é“º", 9, 1007 )
+		AddNumText( sceneId, x001171_g_ScriptId, "åŸå¸‚ - æ¥¼å…°", 9, 1008 )
 		
-		AddNumText( sceneId, x001171_g_ScriptId, "´øÎÒÈ¥ÆäËüÃÅÅÉ", 9, 1011 )
+		AddNumText( sceneId, x001171_g_ScriptId, "å¸¦æˆ‘å»å…¶å®ƒé—¨æ´¾", 9, 1011 )
 
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x001171_OnEventRequest( sceneId, selfId, targetId, eventId )
-	--¶ÓÎéÏà¹Ø
+	--é˜Ÿä¼ç›¸å…³
 	if GetTeamId(sceneId,selfId)>=0 and 
 		IsTeamFollow(sceneId, selfId)==1 and
 		LuaFnIsTeamLeader(sceneId,selfId)==1 then
@@ -75,19 +75,19 @@ function x001171_OnEventRequest( sceneId, selfId, targetId, eventId )
 				return
 			end
 			if IsHaveMission(sceneId,mems[i],4021) > 0 then
-				x001171_MsgBox( sceneId, selfId, targetId, "  Äã¶ÓÎé³ÉÔ±ÖĞÓĞÈËÓĞäîÔË»õ²ÕÔÚÉí£¬ÎÒÃÇæäÕ¾²»ÄÜÎªÄãÌá¹©´«ËÍ·şÎñ¡£" )
+				x001171_MsgBox( sceneId, selfId, targetId, "  ä½ é˜Ÿä¼æˆå‘˜ä¸­æœ‰äººæœ‰æ¼•è¿è´§èˆ±åœ¨èº«ï¼Œæˆ‘ä»¬é©¿ç«™ä¸èƒ½ä¸ºä½ æä¾›ä¼ é€æœåŠ¡ã€‚" )
 				return
 			end
 		end
 	end
 
-	--äîÔËÏà¹Ø
+	--æ¼•è¿ç›¸å…³
 	if IsHaveMission(sceneId,selfId,4021) > 0 then
-		x001171_MsgBox( sceneId, selfId, targetId, "  ÄãÓĞäîÔË»õ²ÕÔÚÉí£¬ÎÒÃÇæäÕ¾²»ÄÜÎªÄãÌá¹©´«ËÍ·şÎñ¡£" )
+		x001171_MsgBox( sceneId, selfId, targetId, "  ä½ æœ‰æ¼•è¿è´§èˆ±åœ¨èº«ï¼Œæˆ‘ä»¬é©¿ç«™ä¸èƒ½ä¸ºä½ æä¾›ä¼ é€æœåŠ¡ã€‚" )
 		return
 	end
 	
-	--¼ì²âImpact×´Ì¬×¤ÁôĞ§¹û
+	--æ£€æµ‹ImpactçŠ¶æ€é©»ç•™æ•ˆæœ
 	for i, ImpactId in x001171_g_Impact_NotTransportList do
 		if LuaFnHaveImpactOfSpecificDataIndex(sceneId, selfId, ImpactId) ~= 0 then
 			x001171_MsgBox( sceneId, selfId, targetId, x001171_g_TalkInfo_NotTransportList[i] )			
@@ -95,14 +95,14 @@ function x001171_OnEventRequest( sceneId, selfId, targetId, eventId )
 		end
 	end
 	
-	--Ë³Àû´«ËÍ
+	--é¡ºåˆ©ä¼ é€
 	local	arg	= GetNumText()
 
 	local	mp
 	local	id	= LuaFnGetMenPai( sceneId, selfId )
-	if arg == 1000 then		--·µ»ØÃÅÅÉ
+	if arg == 1000 then		--è¿”å›é—¨æ´¾
 		if id < 0 or id >= 9 then
-			x001171_MsgBox( sceneId, selfId, targetId, "  Äã»¹Ã»ÓĞ¼ÓÈëÈÎºÎÃÅÅÉ£¡" )
+			x001171_MsgBox( sceneId, selfId, targetId, "  ä½ è¿˜æ²¡æœ‰åŠ å…¥ä»»ä½•é—¨æ´¾ï¼" )
 		else
 			mp	= x001171_GetMPInfo( id )
 			if mp ~= nil then
@@ -112,30 +112,30 @@ function x001171_OnEventRequest( sceneId, selfId, targetId, eventId )
 		return
 	end
 	
-	if arg == 1001 then		--ÂåÑô
+	if arg == 1001 then		--æ´›é˜³
 		CallScriptFunction( (400900), "TransferFunc", sceneId, selfId, 0, 132, 183, 20 )
 		return
 	end
-	if arg == 1002 then		--ËÕÖİ
+	if arg == 1002 then		--è‹å·
 		CallScriptFunction( (400900), "TransferFunc", sceneId, selfId, 1, 114, 162, 20 )
 		return
 	end
 	
-	if arg == 1003 then		--´óÀí
+	if arg == 1003 then		--å¤§ç†
 		CallScriptFunction( (400900), "TransferFunc", sceneId, selfId, 2, 241, 141, 20 )
 		return
 	end
 	
-	if arg == 1006 then		--ÂåÑôÉÌ»á
+	if arg == 1006 then		--æ´›é˜³å•†ä¼š
 		CallScriptFunction( (400900), "TransferFunc", sceneId, selfId, 0, 234, 132, 20 )
 		return
 	end
-	if arg == 1007 then		--ËÕÖİÌú½³ÆÌ
+	if arg == 1007 then		--è‹å·é“åŒ é“º
 		CallScriptFunction( (400900), "TransferFunc", sceneId, selfId, 1, 235, 132, 20 )
 		return
 	end
 	
-	if arg == 1008 then		--Â¥À¼
+	if arg == 1008 then		--æ¥¼å…°
 		CallScriptFunction( (400900), "TransferFunc", sceneId, selfId, 186, 288, 136, 75 )
 		return
 	end
@@ -143,7 +143,7 @@ function x001171_OnEventRequest( sceneId, selfId, targetId, eventId )
 	if arg == 1011 then		
 		BeginEvent( sceneId )
 			for i, mp in x001171_g_mpInfo do
-				AddNumText( sceneId, x001171_g_ScriptId, "ÃÅÅÉ - "..mp[1], 9, i )
+				AddNumText( sceneId, x001171_g_ScriptId, "é—¨æ´¾ - "..mp[1], 9, i )
 			end
 			
 		EndEvent( sceneId )
@@ -153,7 +153,7 @@ function x001171_OnEventRequest( sceneId, selfId, targetId, eventId )
 	end
 	
 	
-	--ÃÅÅÉ....
+	--é—¨æ´¾....
 	for i, mp in x001171_g_mpInfo do
 		if arg == i then
 			CallScriptFunction( (400900), "TransferFunc", sceneId, selfId, mp[2], mp[3], mp[4] )
@@ -163,7 +163,7 @@ function x001171_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+--å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x001171_MsgBox( sceneId, selfId, targetId, msg )
 	BeginEvent( sceneId )
@@ -172,7 +172,7 @@ function x001171_MsgBox( sceneId, selfId, targetId, msg )
 	DispatchEventList( sceneId, selfId, targetId )
 end
 --**********************************
---¸ù¾İÃÅÅÉID»ñÈ¡ÃÅÅÉĞÅÏ¢
+--æ ¹æ®é—¨æ´¾IDè·å–é—¨æ´¾ä¿¡æ¯
 --**********************************
 function x001171_GetMPInfo( mpID )
 	local	mp

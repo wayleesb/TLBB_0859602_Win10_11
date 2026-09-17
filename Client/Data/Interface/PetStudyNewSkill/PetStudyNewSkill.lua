@@ -5,9 +5,9 @@ local PETSKILL_BUTTONS = {};
 local g_serverNpcId = -1;
 local g_clientNpcId = -1;
 
-local g_selidx = -1;					--µ±Ç°Ñ¡ÔñµÄÕäÊŞË÷Òı
-local g_selfrm = ""					--Ñ¡ÖĞµÄ¼¼ÄÜÊéÀ´Ô´
-local g_pidx = -1					--Ñ¡ÖĞµÄ¼¼ÄÜÊé¶ÔÓ¦±³°üÄÚË÷Òı
+local g_selidx = -1;					--å½“å‰é€‰æ‹©çš„çå…½ç´¢å¼•
+local g_selfrm = ""					--é€‰ä¸­çš„æŠ€èƒ½ä¹¦æ¥æº
+local g_pidx = -1					--é€‰ä¸­çš„æŠ€èƒ½ä¹¦å¯¹åº”èƒŒåŒ…å†…ç´¢å¼•
 local g_petSkillStudyMoreMoney = 990000
 
 function PetStudyNewSkill_PreLoad()
@@ -73,7 +73,7 @@ function PetStudyNewSkill_OnUICommand()
 	PetStudyNewSkill_Show();	
 
 end
---Ñ¡ÔñÕäÊŞ
+--é€‰æ‹©çå…½
 function PetStudyNewSkill_Selected(selidx)
 	if( -1 == selidx ) then
 		return;
@@ -83,7 +83,7 @@ function PetStudyNewSkill_Selected(selidx)
 	Pet:SetStudyNewSkillModel(selidx);
 	PetStudyNewSkill_PetModel:SetFakeObject( "My_PetStudyNewSkill" );
 
-	--Èç¹ûµ±Ç°ÊéºÍ³è¶¼Ñ¡ºÃÁË....Ôò¼ÆËãÊÇ·ñÊÇ¿ªĞÂµÄÊÖ¶¯¼¼ÄÜ¸ñ....Èç¹ûÊÇÔò¶àÊÕÇ®....
+	--å¦‚æœå½“å‰ä¹¦å’Œå® éƒ½é€‰å¥½äº†....åˆ™è®¡ç®—æ˜¯å¦æ˜¯å¼€æ–°çš„æ‰‹åŠ¨æŠ€èƒ½æ ¼....å¦‚æœæ˜¯åˆ™å¤šæ”¶é’±....
 	if( g_sleidx ~= selidx and g_pidx ~= -1) then
 		if Pet:CheckPetSkillStudyMoreMoneyMode( selidx , g_pidx ) == 1 then
 			PetStudyNewSkill_Money:SetProperty( "MoneyNumber", g_petSkillStudyMoreMoney );
@@ -111,11 +111,11 @@ function PetStudyNewSkill_Selected(selidx)
 		end
 	end
 	
-	g_selidx = selidx;	--ÒÑ¾­Ñ¡ºÃÁËÕäÊŞ
+	g_selidx = selidx;	--å·²ç»é€‰å¥½äº†çå…½
 
 	Pet:ClosePetSkillStudyMsgBox()
 end
---¸üĞÂ½çÃæ
+--æ›´æ–°ç•Œé¢
 function PetStudyNewSkill_Update(aidxs, pidxs)
 	
 	local aidx = tonumber(aidxs);
@@ -125,12 +125,12 @@ function PetStudyNewSkill_Update(aidxs, pidxs)
 		return;
 	end
 	
-	--½â³ıÔ­À´±»Ëø¶¨µÄÎïÆ·
+	--è§£é™¤åŸæ¥è¢«é”å®šçš„ç‰©å“
 	if("package" == g_selfrm) then
 		Pet:SkillStudyUnlock(g_pidx);
 	end
 	
-	--ÉèÖÃĞÂµÄÎïÆ·
+	--è®¾ç½®æ–°çš„ç‰©å“
 	local action = EnumAction(pidx, "packageitem");
 	if(action:GetID() ~= 0) then
 		PetStudyNewSkill_Skill1:SetActionItem(action:GetID());
@@ -138,8 +138,8 @@ function PetStudyNewSkill_Update(aidxs, pidxs)
 		g_pidx = pidx;
 	end
 	
-	--ÕäÊŞ´ò¼¼ÄÜÊé....
-	--Èç¹ûµ±Ç°ÊéºÍ³è¶¼Ñ¡ºÃÁË....Ôò¼ÆËãÊÇ·ñÊÇ¿ªĞÂµÄÊÖ¶¯¼¼ÄÜ¸ñ....Èç¹ûÊÇÔò¶àÊÕÇ®....
+	--çå…½æ‰“æŠ€èƒ½ä¹¦....
+	--å¦‚æœå½“å‰ä¹¦å’Œå® éƒ½é€‰å¥½äº†....åˆ™è®¡ç®—æ˜¯å¦æ˜¯å¼€æ–°çš„æ‰‹åŠ¨æŠ€èƒ½æ ¼....å¦‚æœæ˜¯åˆ™å¤šæ”¶é’±....
 	if g_selidx ~= -1 and action:GetID() ~= 0 then
 		if Pet:CheckPetSkillStudyMoreMoneyMode( g_selidx, pidx ) == 1 then
 			PetStudyNewSkill_Money:SetProperty( "MoneyNumber", g_petSkillStudyMoreMoney );
@@ -153,7 +153,7 @@ function PetStudyNewSkill_Update(aidxs, pidxs)
 	Pet:ClosePetSkillStudyMsgBox()
 
 end
---¹Ø±Õ
+--å…³é—­
 function PetStudyNewSkill_Hide()
 	
 	Pet:ClosePetSkillStudyMsgBox()
@@ -167,85 +167,85 @@ function PetStudyNewSkill_Hide()
 	g_selfrm = ""
 	g_pidx = -1
 end
---×óĞı×ª
+--å·¦æ—‹è½¬
 function PetStudyNewSkill_Modle_TurnLeft(start)
-	--Ïò×óĞı×ª¿ªÊ¼
+	--å‘å·¦æ—‹è½¬å¼€å§‹
 	if(start == 1) then
 		PetStudyNewSkill_PetModel:RotateBegin(-0.3);
-	--Ïò×óĞı×ª½áÊø
+	--å‘å·¦æ—‹è½¬ç»“æŸ
 	else
 		PetStudyNewSkill_PetModel:RotateEnd();
 	end
 
 end
---ÓÒĞı×ª
+--å³æ—‹è½¬
 function PetStudyNewSkill_Modle_TurnRight(start)
-	--ÏòÓÒĞı×ª¿ªÊ¼
+	--å‘å³æ—‹è½¬å¼€å§‹
 	if(start == 1) then
 		PetStudyNewSkill_PetModel:RotateBegin(0.3);
-	--ÏòÓÒĞı×ª½áÊø
+	--å‘å³æ—‹è½¬ç»“æŸ
 	else
 		PetStudyNewSkill_PetModel:RotateEnd();
 	end
 end
---¼¼ÄÜÊéÀ¸µã»÷
+--æŠ€èƒ½ä¹¦æ ç‚¹å‡»
 function PetStudyNewSkill_Btn_Click(aidx)
 
 end
 
---µã»÷È·¶¨
+--ç‚¹å‡»ç¡®å®š
 function PetStudyNewSkill_Do()
 	
 	if (-1 == g_selidx) then
-		PushDebugMessage("ÇëÑ¡ÔñÕäÊŞ¡£");
+		PushDebugMessage("è¯·é€‰æ‹©çå…½ã€‚");
 		return;
 	end
 	
 	if(-1 == g_pidx) then		
-		PushDebugMessage("ĞèÒª¼¼ÄÜÊé¡£");
+		PushDebugMessage("éœ€è¦æŠ€èƒ½ä¹¦ã€‚");
 		return;
 	end
 
-	local pM = Player:GetData("MONEY") + Player:GetData("MONEY_JZ");	--½»×ÓÆÕ¼° Vega
+	local pM = Player:GetData("MONEY") + Player:GetData("MONEY_JZ");	--äº¤å­æ™®åŠ Vega
 	local nM = tonumber(PetStudyNewSkill_Money:GetProperty("MoneyNumber"));
 	if( pM < nM) then
-		PushDebugMessage("½ğÇ®²»¹»£¬ÎŞ·¨Ñ§Ï°¼¼ÄÜ");
+		PushDebugMessage("é‡‘é’±ä¸å¤Ÿï¼Œæ— æ³•å­¦ä¹ æŠ€èƒ½");
 		return;
 	end
 	
-	-- Èç¹ûÊÇÑ§Ï°Á½¸ö²»Í¬ÀàµÄÊÖ¶¯¼¼ÄÜ
+	-- å¦‚æœæ˜¯å­¦ä¹ ä¸¤ä¸ªä¸åŒç±»çš„æ‰‹åŠ¨æŠ€èƒ½
 	if Pet:CheckPetSkillStudyMoreMoneyMode( g_selidx, g_pidx ) == 1 then
-		Pet:OpenPetSkillStudyMsgBox()	-- Í¨Öª¿Í»§¶Ëµ÷ÓÃ MessageBox_Self ½çÃæ
+		Pet:OpenPetSkillStudyMsgBox()	-- é€šçŸ¥å®¢æˆ·ç«¯è°ƒç”¨ MessageBox_Self ç•Œé¢
 		return
 	else
 		Pet:SkillStudy_Do( 1, g_selidx , g_pidx);			
-		g_stduySkill = true;	--ÒÑ¾­Ñ§¹ı¼¼ÄÜ			
+		g_stduySkill = true;	--å·²ç»å­¦è¿‡æŠ€èƒ½			
 	end
 end
---ÕäÊŞ¼¼ÄÜÑ§Ï°£ºÁ½¸ö²»Í¬ÀàÊÖ¶¯¼¼ÄÜÈ·ÈÏ¡°Ñ§Ï°¡±£¨¸ÃÊÂ¼şÔÚ MessageBox_Self ½çÃæÖĞµÄ PET_SKILL_STUDY_CONFIRM ÊÂ¼şÖĞ´¥·¢£©
+--çå…½æŠ€èƒ½å­¦ä¹ ï¼šä¸¤ä¸ªä¸åŒç±»æ‰‹åŠ¨æŠ€èƒ½ç¡®è®¤â€œå­¦ä¹ â€ï¼ˆè¯¥äº‹ä»¶åœ¨ MessageBox_Self ç•Œé¢ä¸­çš„ PET_SKILL_STUDY_CONFIRM äº‹ä»¶ä¸­è§¦å‘ï¼‰
 function PetStudyNewSkill_ConfirmPetStudyNewSkill()
 	
 	if (-1 == g_selidx) then
 		PushDebugMessage(g_selidx)
-		PushDebugMessage("ÇëÑ¡ÔñÕäÊŞ¡£")
+		PushDebugMessage("è¯·é€‰æ‹©çå…½ã€‚")
 		return
 	end
 	
 	if(-1 == g_pidx) then
-		PushDebugMessage("ĞèÒª¼¼ÄÜÊé¡£")
+		PushDebugMessage("éœ€è¦æŠ€èƒ½ä¹¦ã€‚")
 		return
 	end
 	
-	local pM = Player:GetData("MONEY") + Player:GetData("MONEY_JZ")   --½»×ÓÆÕ¼° Vega
+	local pM = Player:GetData("MONEY") + Player:GetData("MONEY_JZ")   --äº¤å­æ™®åŠ Vega
 	local nM = tonumber(PetStudyNewSkill_Money:GetProperty("MoneyNumber"))
 	if pM < nM then
-		PushDebugMessage("½ğÇ®²»¹»£¬ÎŞ·¨Ñ§Ï°¼¼ÄÜ")
+		PushDebugMessage("é‡‘é’±ä¸å¤Ÿï¼Œæ— æ³•å­¦ä¹ æŠ€èƒ½")
 		return
 	end
 
 	Pet:SkillStudy_Do( 1, g_selidx, g_pidx )
 
-	g_stduySkill = true;	--ÒÑ¾­Ñ§¹ı¼¼ÄÜ
+	g_stduySkill = true;	--å·²ç»å­¦è¿‡æŠ€èƒ½
 
 end
 
@@ -297,11 +297,11 @@ function PetStudyNewSkill_Show()
 
 	Pet:ClosePetSkillStudyMsgBox()
 	this:Show();
-	Pet:ShowPetList(1);		-- ´ò¿ªÕäÊŞÁĞ±í
+	Pet:ShowPetList(1);		-- æ‰“å¼€çå…½åˆ—è¡¨
 end
 
 
---´°¿ÚÒş²ØÇ°ÏÈ½«±³°üÖĞ±»Ëø¶¨µÄÎïÆ·½âËø
+--çª—å£éšè—å‰å…ˆå°†èƒŒåŒ…ä¸­è¢«é”å®šçš„ç‰©å“è§£é”
 function PetStudyNewSkill_Unlock()
 	if("package" == g_selfrm) then
 		Pet:SkillStudyUnlock(g_pidx);
@@ -320,7 +320,7 @@ function PetStudyNewSkill_CareEventHandle(careId, op, distance)
 		if(tonumber(careId) ~= g_clientNpcId) then
 			return;
 		end
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ı£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æœå’ŒNPCçš„è·ç¦»å¤§äºä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if(op == "distance" and tonumber(distance)>MAX_OBJ_DISTANCE or op=="destroy") then
 			PetStudyNewSkill_Hide();
 		end

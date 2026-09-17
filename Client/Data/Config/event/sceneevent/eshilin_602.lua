@@ -1,16 +1,16 @@
 --MisDescBegin
 x212103_g_ScriptId = 212103
 x212103_g_MissionId = 602
-x212103_g_Name	="Ô²ÔÂ´å´å³¤Ö£Ğş" 
+x212103_g_Name	="åœ†æœˆæ‘æ‘é•¿éƒ‘ç„" 
 x212103_g_MissionKind = 37
 x212103_g_MissionLevel = 55
 x212103_g_IfMissionElite = 0
-x212103_g_IsMissionOkFail = 0		--±äÁ¿µÄµÚ0Î»
-x212103_g_MissionName="¾øÍûÖ®µØ"
+x212103_g_IsMissionOkFail = 0		--å˜é‡çš„ç¬¬0ä½
+x212103_g_MissionName="ç»æœ›ä¹‹åœ°"
 x212103_g_MissionInfo="#{Lua_Shilin_001}"
-x212103_g_MissionTarget="ÌıÖ£Ğş#{_INFOAIM182,163,26,Ö£Ğş}½²ËûµÄ¹ÊÊÂ¡£"
+x212103_g_MissionTarget="å¬éƒ‘ç„#{_INFOAIM182,163,26,éƒ‘ç„}è®²ä»–çš„æ•…äº‹ã€‚"
 x212103_g_ContinueInfo="....."
-x212103_g_MissionComplete="ÎÒµÄ¹ÊÊÂ½²ÍêÁË£¬ÄãºÃºÃ¿¼ÂÇÒ»ÏÂ°É¡£"
+x212103_g_MissionComplete="æˆ‘çš„æ•…äº‹è®²å®Œäº†ï¼Œä½ å¥½å¥½è€ƒè™‘ä¸€ä¸‹å§ã€‚"
 x212103_g_MoneyBonus=21000
 x212103_g_Exp = 6000
 --MisDescEnd

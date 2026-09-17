@@ -1,19 +1,19 @@
---ËÕÖİNPC
---ÀîÀÖÊ©
---ÆÕÍ¨
+--è‹å·NPC
+--æä¹æ–½
+--æ™®é€š
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x001055_g_ScriptId = 001055
 
 x001055_g_shoptableindex=104
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x001055_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
-		AddText(sceneId,"  ÔÚÎÒÕâÀïÄã¿ÉÓÃÉÆ¶ñÖµ»»È¡´òÔìÍ¼Óë¼ø¶¨·û¡£")
-		AddNumText(sceneId,x001055_g_ScriptId,"ÉÆ¶ñÖµ»»´òÔìÍ¼Óë¼ø¶¨·û",7,0)
+		AddText(sceneId,"  åœ¨æˆ‘è¿™é‡Œä½ å¯ç”¨å–„æ¶å€¼æ¢å–æ‰“é€ å›¾ä¸é‰´å®šç¬¦ã€‚")
+		AddNumText(sceneId,x001055_g_ScriptId,"å–„æ¶å€¼æ¢æ‰“é€ å›¾ä¸é‰´å®šç¬¦",7,0)
 		EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 end

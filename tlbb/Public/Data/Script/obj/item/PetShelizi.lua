@@ -1,10 +1,10 @@
---ÕäÊÞÉáÀû×Ó
+--çå…½èˆåˆ©å­
 
 x300077_g_scriptId = 300077
 x300077_g_bagIndex = -1	
 x300077_g_hugeExp = 1500000
 --**********************************
---ÊÂ¼þ½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x300077_OnDefaultEvent( sceneId, selfId, bagIndex )
 
@@ -64,12 +64,12 @@ function x300077_OnDefaultEvent( sceneId, selfId, bagIndex )
 end
 
 --**********************************
---Õâ¸öÎïÆ·µÄÊ¹ÓÃ¹ý³ÌÊÇ·ñÀàËÆÓÚ¼¼ÄÜ£º
---ÏµÍ³»áÔÚÖ´ÐÐ¿ªÊ¼Ê±¼ì²âÕâ¸öº¯ÊýµÄ·µ»ØÖµ£¬Èç¹û·µ»ØÊ§°ÜÔòºöÂÔºóÃæµÄÀàËÆ¼¼ÄÜµÄÖ´ÐÐ¡£
---·µ»Ø1£º¼¼ÄÜÀàËÆµÄÎïÆ·£¬¿ÉÒÔ¼ÌÐøÀàËÆ¼¼ÄÜµÄÖ´ÐÐ£»·µ»Ø0£ººöÂÔºóÃæµÄ²Ù×÷¡£
+--è¿™ä¸ªç‰©å“çš„ä½¿ç”¨è¿‡ç¨‹æ˜¯å¦ç±»ä¼¼äºŽæŠ€èƒ½ï¼š
+--ç³»ç»Ÿä¼šåœ¨æ‰§è¡Œå¼€å§‹æ—¶æ£€æµ‹è¿™ä¸ªå‡½æ•°çš„è¿”å›žå€¼ï¼Œå¦‚æžœè¿”å›žå¤±è´¥åˆ™å¿½ç•¥åŽé¢çš„ç±»ä¼¼æŠ€èƒ½çš„æ‰§è¡Œã€‚
+--è¿”å›ž1ï¼šæŠ€èƒ½ç±»ä¼¼çš„ç‰©å“ï¼Œå¯ä»¥ç»§ç»­ç±»ä¼¼æŠ€èƒ½çš„æ‰§è¡Œï¼›è¿”å›ž0ï¼šå¿½ç•¥åŽé¢çš„æ“ä½œã€‚
 --**********************************
 function x300077_IsSkillLikeScript( sceneId, selfId)
-	return 0; --Õâ¸ö½Å±¾ÐèÒª¶¯×÷Ö§³Ö
+	return 0; --è¿™ä¸ªè„šæœ¬éœ€è¦åŠ¨ä½œæ”¯æŒ
 end
 
 function x300077_UseShelizi(sceneId, selfId , bagIndex)
@@ -96,7 +96,7 @@ function x300077_UseShelizi(sceneId, selfId , bagIndex)
 	if EraseItem(sceneId, selfId, bagIndex) > 0 then
 		
 		PetAddExp(sceneId, selfId,slzExp)
-		local str = format("#{ZSKSSJ_081126_3}%d#{ZSKSSJ_081126_4}" ,slzExp )
+		local str = format("#{ZSKSSJ_081126_3}%.0f#{ZSKSSJ_081126_4}" ,slzExp )
 		BeginEvent(sceneId)
 			AddText(sceneId,str)
 		EndEvent(sceneId)
@@ -105,7 +105,7 @@ function x300077_UseShelizi(sceneId, selfId , bagIndex)
 		if slzExp > x300077_g_hugeExp then
 			local PetName = LuaFnGetPetTransferByGUID(sceneId, selfId ,PetGuidH , PetGuidL)
 			local PlayerName = GetName(sceneId, selfId)
-			local strText = format("#{_INFOUSR%s}#{ZSD_1}#{_INFOMSG%s}#{ZSD_2}#{_INFOMSG%s}#{ZSD_3}%d#{ZSD_4}" ,PlayerName,itemInfo,PetName,slzExp)
+			local strText = format("#{_INFOUSR%s}#{ZSD_1}#{_INFOMSG%s}#{ZSD_2}#{_INFOMSG%s}#{ZSD_3}%.0f#{ZSD_4}" ,PlayerName,itemInfo,PetName,slzExp)
 			AddGlobalCountNews( sceneId, strText)
 		end
 	end

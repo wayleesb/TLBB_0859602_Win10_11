@@ -1,19 +1,19 @@
---ĞÂĞşÎäµº»î¶¯µÄÆô¶¯½Å±¾
+--æ–°ç„æ­¦å²›æ´»åŠ¨çš„å¯åŠ¨è„šæœ¬
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x808120_g_ScriptId	= 808120
 
---ĞèÒªË¢³öµÄ10Ö»À×÷ëNPC£¬10Ö»³û·ïNPCµÄÊı¾İ±í....
+--éœ€è¦åˆ·å‡ºçš„10åªé›·éºŸNPCï¼Œ10åªé›å‡¤NPCçš„æ•°æ®è¡¨....
 x808120_g_BossData = {
 
-	-- ID						BOSSµÄ monster id
-	-- AIType				BOSSµÄAIType....
-	-- AIScriptID	BOSSµÄAIScriptID....
-	-- ScriptID			BOSSµÄ½Å±¾ID....
-	-- NeedCreateNum		¶àÉÙ¸ö....
+	-- ID						BOSSçš„ monster id
+	-- AIType				BOSSçš„AIType....
+	-- AIScriptID	BOSSçš„AIScriptID....
+	-- ScriptID			BOSSçš„è„šæœ¬ID....
+	-- NeedCreateNum		å¤šå°‘ä¸ª....
 
-	{ ID=13288, AIType=3, AIScriptID=-1, ScriptID=808121, NeedCreateNum=10, LifeTime=29*60*1000, Title = "Ç§ÄêÆæÊŞ"},   ----À×÷ë
-	{ ID=13289, AIType=3, AIScriptID=-1, ScriptID=808121, NeedCreateNum=10, LifeTime=29*60*1000, Title = "Ç§ÄêÆæÊŞ" },
+	{ ID=13288, AIType=3, AIScriptID=-1, ScriptID=808121, NeedCreateNum=10, LifeTime=29*60*1000, Title = "åƒå¹´å¥‡å…½"},   ----é›·éºŸ
+	{ ID=13289, AIType=3, AIScriptID=-1, ScriptID=808121, NeedCreateNum=10, LifeTime=29*60*1000, Title = "åƒå¹´å¥‡å…½" },
 }
 
 x808120_g_beginTime1 = 21*60 + 15
@@ -29,10 +29,10 @@ x808120_g_type3 = 188   --19:00
 x808120_g_type4 = 172   --21:45
 
 
---Ë¢³ö¹ÖµÄNPC×ø±êËæ»ú×ø±ê--13:30 and 18£º30
+--åˆ·å‡ºæ€ªçš„NPCåæ ‡éšæœºåæ ‡--13:30 and 18ï¼š30
 x808120_g_BossPosData = {
-  --posX Ëæ»úµãµÄX×ø±ê 
-  --posY Ëæ»úµãµÄY×ø±ê 
+  --posX éšæœºç‚¹çš„Xåæ ‡ 
+  --posY éšæœºç‚¹çš„Yåæ ‡ 
 
   {posX = 186, posZ = 143},
   {posX = 136, posZ = 127},
@@ -57,10 +57,10 @@ x808120_g_BossPosData = {
 }
 
 
---Ë¢³ö¹ÖµÄNPC×ø±êËæ»ú×ø±ê---µÚ¶şÅú  19:00 and 21:45
+--åˆ·å‡ºæ€ªçš„NPCåæ ‡éšæœºåæ ‡---ç¬¬äºŒæ‰¹  19:00 and 21:45
 x808120_g_BossPosData2 = {
-  --posX Ëæ»úµãµÄX×ø±ê 
-  --posY Ëæ»úµãµÄY×ø±ê 
+  --posX éšæœºç‚¹çš„Xåæ ‡ 
+  --posY éšæœºç‚¹çš„Yåæ ‡ 
 
   {posX = 99, posZ = 197},
   {posX = 38, posZ = 219},
@@ -85,7 +85,7 @@ x808120_g_BossPosData2 = {
 }
 
 --**********************************
---½Å±¾Èë¿Úº¯Êı
+--è„šæœ¬å…¥å£å‡½æ•°
 --**********************************
 function x808120_OnDefaultEvent( sceneId, actId, iNoticeType, param2, param3, param4, param5 )
 
@@ -127,23 +127,23 @@ function x808120_OnDefaultEvent( sceneId, actId, iNoticeType, param2, param3, pa
 end
 
 --**********************************
---ĞÄÌøº¯Êı
+--å¿ƒè·³å‡½æ•°
 --**********************************
 function x808120_OnTimer( sceneId, actId, uTime )
 
-	--¼ì²â»î¶¯ÊÇ·ñ¹ıÆÚ
+	--æ£€æµ‹æ´»åŠ¨æ˜¯å¦è¿‡æœŸ
 	--if CheckActiviyValidity( sceneId, actId ) == 0 then
 	--	StopOneActivity( sceneId, actId )
 	--end
 
 end
 
---·µ»ØÖµ£º
---0£º²»ÊÇ»î¶¯Ê±¼ä
---1£º21£º15·Öµ½21£º44»î¶¯
---2£º21£º45µ½22£º14
---3£º13£º30µ½13£º59
---ºóÀ´µ÷Õû»î¶¯Ê±¼äÃ»ÓĞ¼ÌĞø¸üĞÂ±¾º¯Êı£¬ËùÒÔÈç¹ûÊ¹ÓÃÇëÏÈ¼ì²éÕıÈ·
+--è¿”å›å€¼ï¼š
+--0ï¼šä¸æ˜¯æ´»åŠ¨æ—¶é—´
+--1ï¼š21ï¼š15åˆ†åˆ°21ï¼š44æ´»åŠ¨
+--2ï¼š21ï¼š45åˆ°22ï¼š14
+--3ï¼š13ï¼š30åˆ°13ï¼š59
+--åæ¥è°ƒæ•´æ´»åŠ¨æ—¶é—´æ²¡æœ‰ç»§ç»­æ›´æ–°æœ¬å‡½æ•°ï¼Œæ‰€ä»¥å¦‚æœä½¿ç”¨è¯·å…ˆæ£€æŸ¥æ­£ç¡®
 function x808120_IsActivityOpen(sceneId)
 	local nHour = GetHour();
 	local nMinute = GetMinute();

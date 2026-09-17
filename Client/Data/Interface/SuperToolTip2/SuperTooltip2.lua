@@ -60,7 +60,7 @@ end
 
 function SuperTooltip2_Update()
 		g_NeedClickHide = 0;
-		-- ÏÈÇå¿ÕÒÔÇ°ÏÔÊ¾µÄÎÄ×Ö
+		-- å…ˆæ¸…ç©ºä»¥å‰æ˜¾ç¤ºçš„æ–‡å­—
 		SuperTooltip2_ClearText();
 		
 		if(SuperTooltips2:IsTransferItem()) then
@@ -77,53 +77,53 @@ function SuperTooltip2_Update()
 		local nYuanbaotrade = SuperTooltips2:GetYuanbaoTradeFlag();
 		
 		----------------------------------------------------------------------
-		--ÏÔÊ¾¾²Ì¬Í·
+		--æ˜¾ç¤ºé™æ€å¤´
 		local toDisplay = "SuperTooltip2_PageHeader";
 		
-		--¼ÓÉÏÀàÐÍÃèÊö
+		--åŠ ä¸Šç±»åž‹æè¿°
 		if( typeDesc ~= nil) then 
 			toDisplay = toDisplay .. ";SuperTooltip2_ShortDesc";
 		end
 		
-		--±¦Ê¯²¿·Ö
+		--å®çŸ³éƒ¨åˆ†
 		if( type(nGemHoleCounts) == "number" and nGemHoleCounts>0 ) then 
 			toDisplay = toDisplay .. ";SuperTooltip2_GemPart";
 		end
 		
-		--Ôª±¦½»Ò×
+		--å…ƒå®äº¤æ˜“
 		if (nYuanbaotrade == 1) then
 			toDisplay = toDisplay .. ";SuperTooltip2_StaticPart_Yuanbaojiaoyi";
-			SuperTooltip2_StaticPart_Yuanbaojiaoyi:SetText("#c00ff00Ôª±¦½»Ò×");
+			SuperTooltip2_StaticPart_Yuanbaojiaoyi:SetText("#c00ff00å…ƒå®äº¤æ˜“");
 		end
 
-		--½ðÇ®1
+		--é‡‘é’±1
 		if( nMoney1 ~= nil) then 
 			toDisplay = toDisplay .. ";SuperTooltip2_MoneyPart";
 		end
 
-		--½ðÇ®2
+		--é‡‘é’±2
 		if(nMoney2 ~= nil) then 
 			toDisplay = toDisplay .. ";SuperTooltip2_MoneyPart2";
 		end
 
-		--ÊôÐÔ
+		--å±žæ€§
 		if(szPropertys ~= nil) then 
 			toDisplay = toDisplay .. ";SuperTooltip2_Property";
 		end
 
-		--×÷Õß
+		--ä½œè€…
 		if(szAuthor ~= nil) then 
 			toDisplay = toDisplay .. ";SuperTooltip2_Manufacturer_Frame";
 		end
 
-		--ÏêÏ¸½âÊÍ
+		--è¯¦ç»†è§£é‡Š
 		toDisplay = toDisplay .. ";SuperTooltip2_Explain";
 
-		--ÏÔÊ¾×é¼þÄÚÈÝ
+		--æ˜¾ç¤ºç»„ä»¶å†…å®¹
 		_SuperTooltip2_:SetProperty("PageElements", toDisplay);
 		
 		----------------------------------------------------------------------
-		--ÏÔÊ¾ÐÂµÄÄÚÈÝ
+		--æ˜¾ç¤ºæ–°çš„å†…å®¹
 		SuperTooltip2_StaticPart_Title:SetText(SuperTooltips2:GetTitle());
 		SuperTooltip2_StaticPart_Item1:SetText(SuperTooltips2:GetDesc1());
 		SuperTooltip2_StaticPart_Item2:SetText(SuperTooltips2:GetDesc2());
@@ -133,13 +133,13 @@ function SuperTooltip2_Update()
 		local IsProtectd	=SuperTooltips2:GetDesc5();
 		if(StrongLevel~="" and tonumber(StrongLevel)>0) then
 			
-			SuperTooltip2_StaticPart_Item4:SetText("#c0FFFFFÇ¿»¯: +"..SuperTooltips2:GetDesc4());
+			SuperTooltip2_StaticPart_Item4:SetText("#c0FFFFFå¼ºåŒ–: +"..SuperTooltips2:GetDesc4());
 		end;
 		--SuperTooltip_StaticPart_Item5:SetText(SuperTooltips:GetDesc5());
 		SuperTooltip2_StaticPart_Icon:SetImage(SuperTooltips2:GetIconName());
 		SuperTooltip2_ShortDesc_Text:SetText(typeDesc);
 
-		--tongxi modify ÏÔÊ¾ÐÇÐÇ		
+		--tongxi modify æ˜¾ç¤ºæ˜Ÿæ˜Ÿ		
 		local qual =SuperTooltips2:GetEquipQual();
 		if(type(qual) == "number" and tonumber(qual)>0)then
 			local starNum	=	tonumber(qual);
@@ -227,7 +227,7 @@ end
 
 -------------------------------------------------------------------------------------------------------------------------------
 --
--- Çå¿ÕÏÔÊ¾ÎÄ±¾
+-- æ¸…ç©ºæ˜¾ç¤ºæ–‡æœ¬
 --
 function SuperTooltip2_ClearText()
 		SuperTooltip2_StaticPart_Title:SetText("");

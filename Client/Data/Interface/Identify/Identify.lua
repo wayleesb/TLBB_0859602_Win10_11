@@ -1,5 +1,5 @@
---0 ¼ø¶¨×°±¸×ÊÖÊ
---1 ÖØĞÂ¼ø¶¨×°±¸×ÊÖÊ
+--0 é‰´å®šè£…å¤‡èµ„è´¨
+--1 é‡æ–°é‰´å®šè£…å¤‡èµ„è´¨
 local Current = 0;
 local Identify_Item = -1
 local objCared = -1;
@@ -35,9 +35,9 @@ function Identify_OnEvent(event)
 				Identify_Info2:SetText( "#{INTERFACE_XML_506}" );
 			elseif tonumber(arg0) == 112233 then
 				Current = 1;
-				Identify_Title:SetText( "#gFF0FA0ÖØĞÂ¼ø¶¨×°±¸×ÊÖÊ" );
+				Identify_Title:SetText( "#gFF0FA0é‡æ–°é‰´å®šè£…å¤‡èµ„è´¨" );
 				Identify_Info:SetText( "#{INTERFACE_XML_987}" );
-				Identify_Info2:SetText( "Çë½«×°±¸ÍÏÈë´Ë¿ò" );
+				Identify_Info2:SetText( "è¯·å°†è£…å¤‡æ‹–å…¥æ­¤æ¡†" );
 			else
 				return;
 			end
@@ -52,7 +52,7 @@ function Identify_OnEvent(event)
 			objCared = DataPool : GetNPCIDByServerID(xx);
 			AxTrace(0,1,"xx="..xx .. " objCared="..objCared)
 			if objCared == -1 then
-					PushDebugMessage("server´«¹ıÀ´µÄÊı¾İÓĞÎÊÌâ¡£");
+					PushDebugMessage("serverä¼ è¿‡æ¥çš„æ•°æ®æœ‰é—®é¢˜ã€‚");
 					return;
 			end
 			local playerMoney = Player:GetData("MONEY");
@@ -82,10 +82,10 @@ function Identify_OnEvent(event)
 			return;
 		end
 		
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ı£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æœå’ŒNPCçš„è·ç¦»å¤§äºä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if(arg1 == "distance" and tonumber(arg2)>MAX_OBJ_DISTANCE or arg1=="destroy") then
 			
-			--È¡Ïû¹ØĞÄ
+			--å–æ¶ˆå…³å¿ƒ
 			Identify_Close()
 		end
 	elseif ( event == "PACKAGE_ITEM_CHANGED" and this:IsVisible() ) then
@@ -97,7 +97,7 @@ function Identify_OnEvent(event)
 			return;
 		end
 
-		if( arg0~= nil and Current~=1) then	--ÖØĞÂ¼ø¶¨×°±¸×ÊÖÊ²»ÓÃÒÆ³ı×°±¸....ÈÃÍæ¼ÒÒ»Ö±Ë¢....
+		if( arg0~= nil and Current~=1) then	--é‡æ–°é‰´å®šè£…å¤‡èµ„è´¨ä¸ç”¨ç§»é™¤è£…å¤‡....è®©ç©å®¶ä¸€ç›´åˆ·....
 			if (Identify_Item == tonumber(arg0) ) then
 				Identify_Resume_Equip_Gem(1)			
 			end
@@ -111,7 +111,7 @@ function Identify_OnEvent(event)
 			--end
 			if(tonumber(arg0) and PlayerPackage:GetItemTableIndex(tonumber(arg0)) == Tb_idx) then
 				if(PlayerPackage:IsLock(tonumber(arg0)) == 1) then
-					--pushÊÂ¼ş¸Éµômsgbox
+					--pushäº‹ä»¶å¹²æ‰msgbox
 					LifeAbility:CloseReIdentifyMsgBox();
 					return;
 				end
@@ -136,7 +136,7 @@ function Identify_Clear()
 		Identify_Object:SetActionItem(-1);
 		LifeAbility : Lock_Packet_Item(Identify_Item,0);
 		Identify_Item = -1
-		--pushÊÂ¼ş¸Éµômsgbox
+		--pushäº‹ä»¶å¹²æ‰msgbox
 		LifeAbility:CloseReIdentifyMsgBox();
 		Identify_DemandMoney : SetProperty("MoneyNumber", 0);
 	end
@@ -152,14 +152,14 @@ function Identify_Update(Item_index)
 			local EquipPoint = LifeAbility : Get_Equip_Point(index)
 			if EquipPoint == -1 or EquipPoint == 8 or EquipPoint == 9 or EquipPoint == 10 then
 				if EquipPoint ~= -1 then
-					PushDebugMessage("²»ÄÜ·ÅÈëÕâÖÖ×°±¸¡£")
+					PushDebugMessage("ä¸èƒ½æ”¾å…¥è¿™ç§è£…å¤‡ã€‚")
 				end
 				return
 			end
 			if Identify_Item ~= -1 then
 				LifeAbility : Lock_Packet_Item(Identify_Item,0);
 			end
-			--pushÊÂ¼ş¸Éµômsgbox
+			--pushäº‹ä»¶å¹²æ‰msgbox
 			LifeAbility:CloseReIdentifyMsgBox();
 			Identify_Object:SetActionItem(theAction:GetID());
 			LifeAbility : Lock_Packet_Item(index,1);
@@ -206,15 +206,15 @@ function Identify_Update(Item_index)
 			Identify_Object:SetActionItem(-1);			
 			LifeAbility : Lock_Packet_Item(Identify_Item,0);		
 			Identify_Item = -1;
-			--pushÊÂ¼ş¸Éµômsgbox
+			--pushäº‹ä»¶å¹²æ‰msgbox
 			LifeAbility:CloseReIdentifyMsgBox();
 	end
 	
 end
-local EB_FREE_BIND = 0;				-- ÎŞ°ó¶¨ÏŞÖÆ
-local EB_BINDED = 1;				-- ÒÑ¾­°ó¶¨
-local	EB_GETUP_BIND =2			-- Ê°È¡°ó¶¨
-local	EB_EQUIP_BIND =3			-- ×°±¸°ó¶¨
+local EB_FREE_BIND = 0;				-- æ— ç»‘å®šé™åˆ¶
+local EB_BINDED = 1;				-- å·²ç»ç»‘å®š
+local	EB_GETUP_BIND =2			-- æ‹¾å–ç»‘å®š
+local	EB_EQUIP_BIND =3			-- è£…å¤‡ç»‘å®š
 function Identify_Buttons_Clicked()
 	if Identify_Item ~= -1 and PlayerPackage : GetItemTableIndex( Identify_Item ) ~= -1 then
 		
@@ -229,12 +229,12 @@ function Identify_Buttons_Clicked()
 			local index,BindState = PlayerPackage:FindFirstBindedItemIdxByIDTable(tonumber(Tb_idx));
 			local index2,BindState2 = PlayerPackage:FindFirstBindedItemIdxByIDTable(tonumber(jingangcuo_id));
 			if(index == -1 and index2 == -1)then
-				local str = "È±ÉÙ#{_ITEM"..Tb_idx.."}»ò#{_ITEM"..jingangcuo_id.."}£¬»òÕßËüÃÇ±»¼ÓËø¡£";
+				local str = "ç¼ºå°‘#{_ITEM"..Tb_idx.."}æˆ–#{_ITEM"..jingangcuo_id.."}ï¼Œæˆ–è€…å®ƒä»¬è¢«åŠ é”ã€‚";
 				PushDebugMessage(str);
 				return
 			end
 			if(BindState == EB_BINDED or BindState2 == EB_BINDED)then
-				--Èç¹ûÒÑ°ó¶¨
+				--å¦‚æœå·²ç»‘å®š
 				local tmp = PlayerPackage:GetItemBindStatusByIndex(Identify_Item);
 				if(tmp == EB_BINDED)then
 					Clear_XSCRIPT();
@@ -257,7 +257,7 @@ function Identify_Buttons_Clicked()
 		end
 
 	else
-		PushDebugMessage("Çë·ÅÈëÒª¼ø¶¨×ÊÖÊµÄ×°±¸¡£")
+		PushDebugMessage("è¯·æ”¾å…¥è¦é‰´å®šèµ„è´¨çš„è£…å¤‡ã€‚")
 	end
 end
 
@@ -277,9 +277,9 @@ function Identify_OnHiden()
 end
 
 --=========================================================
---¿ªÊ¼¹ØĞÄNPC£¬
---ÔÚ¿ªÊ¼¹ØĞÄÖ®Ç°ĞèÒªÏÈÈ·¶¨Õâ¸ö½çÃæÊÇ²»ÊÇÒÑ¾­ÓĞ¡°¹ØĞÄ¡±µÄNPC£¬
---Èç¹ûÓĞµÄ»°£¬ÏÈÈ¡ÏûÒÑ¾­ÓĞµÄ¡°¹ØĞÄ¡±
+--å¼€å§‹å…³å¿ƒNPCï¼Œ
+--åœ¨å¼€å§‹å…³å¿ƒä¹‹å‰éœ€è¦å…ˆç¡®å®šè¿™ä¸ªç•Œé¢æ˜¯ä¸æ˜¯å·²ç»æœ‰â€œå…³å¿ƒâ€çš„NPCï¼Œ
+--å¦‚æœæœ‰çš„è¯ï¼Œå…ˆå–æ¶ˆå·²ç»æœ‰çš„â€œå…³å¿ƒâ€
 --=========================================================
 function BeginCareObject_Identify(objCaredId)
 
@@ -290,7 +290,7 @@ function BeginCareObject_Identify(objCaredId)
 end
 
 --=========================================================
---Í£Ö¹¶ÔÄ³NPCµÄ¹ØĞÄ
+--åœæ­¢å¯¹æŸNPCçš„å…³å¿ƒ
 --=========================================================
 function StopCareObject_Identify(objCaredId)
 	this:CareObject(objCaredId, 0, "Identify");
@@ -307,7 +307,7 @@ function Identify_Resume_Equip_Gem(nIndex)
 				Identify_Object : SetActionItem(-1);
 				Identify_Item	= -1;
 				Identify_DemandMoney : SetProperty("MoneyNumber", 0);
-				--pushÊÂ¼ş¸Éµômsgbox
+				--pushäº‹ä»¶å¹²æ‰msgbox
 				LifeAbility:CloseReIdentifyMsgBox();
 			end
 		end

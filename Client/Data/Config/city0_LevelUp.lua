@@ -2,21 +2,21 @@
 x805020_g_ScriptId = 805020
 x805020_g_MissionId = 442
 x805020_g_MissionIdPre = 441
-x805020_g_Name	="°ï»á´ó×Ü¹Ü"
+x805020_g_Name	="å¸®ä¼šå¤§æ€»ç®¡"
 x805020_g_ItemId = 30101001
 x805020_g_ItemNeedNum = 1
 x805020_g_MissionKind = 13
 x805020_g_MissionLevel = 1
 x805020_g_IfMissionElite = 0
-x805020_g_IsMissionOkFail = 0		--±äÁ¿µÄµÚ0Î»
-x805020_g_DemandItem={{id=30101001,num=1}}		--±äÁ¿µÚ1Î»
-x805020_g_MissionName="Éı¼¶½¨Öş"
+x805020_g_IsMissionOkFail = 0		--å˜é‡çš„ç¬¬0ä½
+x805020_g_DemandItem={{id=30101001,num=1}}		--å˜é‡ç¬¬1ä½
+x805020_g_MissionName="å‡çº§å»ºç­‘"
 x805020_g_MissionInfo_1="  #R"
 x805020_g_MissionInfo_2="#{city0_levelup_0001}"
-x805020_g_MissionTarget="¸ø°ï»á´ó×Ü¹Ü5¸ö½ğ±Ò"
-x805020_g_MissionContinue="ÄãÓĞ5¸ö½ğ±ÒÁËÂğ£¿"
-x805020_g_MissionComplete="  àÅ£¬×öµÃ²»´í¡£¿´À´ÄãºÜÓĞÇ®Âğ¡£"
+x805020_g_MissionTarget="ç»™å¸®ä¼šå¤§æ€»ç®¡5ä¸ªé‡‘å¸"
+x805020_g_MissionContinue="ä½ æœ‰5ä¸ªé‡‘å¸äº†å—ï¼Ÿ"
+x805020_g_MissionComplete="  å—¯ï¼Œåšå¾—ä¸é”™ã€‚çœ‹æ¥ä½ å¾ˆæœ‰é’±å—ã€‚"
 x805020_g_MoneyBonus=0
-x805020_g_SignPost = {x = 109, z = 167, tip = "°ï»á´ó×Ü¹Ü"}
+x805020_g_SignPost = {x = 109, z = 167, tip = "å¸®ä¼šå¤§æ€»ç®¡"}
 x805020_g_ItemBonus={{id=30304001,num=1}}
 --MisDescEnd

@@ -1,43 +1,43 @@
---NPC ¸±±¾ÍâĞİÏ¢ÊÒ ´«ËÍNPC ½£èº
+--NPC å‰¯æœ¬å¤–ä¼‘æ¯å®¤ ä¼ é€NPC å‰‘éŸ¬
 
-x402304_g_ScriptId = 402304; --½Å±¾ºÅ
-x402304_g_name	="½£èº";
+x402304_g_ScriptId = 402304; --è„šæœ¬å·
+x402304_g_name	="å‰‘éŸ¬";
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x402304_g_eventId_yes = 0;
 x402304_g_eventId_no = 1;
 
-x402304_g_Exit_SceneID = 0 --´«³ö³¡¾°ID
-x402304_g_Win_X = 160 --»ñÊ¤·½³ö¿Ú
+x402304_g_Exit_SceneID = 0 --ä¼ å‡ºåœºæ™¯ID
+x402304_g_Win_X = 160 --è·èƒœæ–¹å‡ºå£
 x402304_g_Win_Z = 106
-x402304_g_Fail_X = 61 --Ê§°Ü·½³ö¿Ú
+x402304_g_Fail_X = 61 --å¤±è´¥æ–¹å‡ºå£
 x402304_g_Fail_Z = 134
 
-x402304_g_SheepBuff = 31550											--±äÑòbuff
+x402304_g_SheepBuff = 31550											--å˜ç¾Šbuff
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x402304_OnDefaultEvent( sceneId, selfId, targetId )
 	x402304_UpdateEventList( sceneId, selfId, targetId );
 end
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x402304_UpdateEventList( sceneId, selfId, targetId )
 
 	BeginEvent(sceneId);
 		AddText( sceneId, "#{BHXZ_081210_158}" );
 		AddNumText( sceneId, x402304_g_ScriptId, "#{BHXZ_081210_159}", 4, x402304_g_eventId_yes);
-		--AddNumText( sceneId, x402304_g_ScriptId, "È¡Ïû", 8, x402304_g_eventId_no);
+		--AddNumText( sceneId, x402304_g_ScriptId, "å–æ¶ˆ", 8, x402304_g_eventId_no);
 	EndEvent(sceneId);
 	DispatchEventList(sceneId, selfId, targetId);
 	
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x402304_OnEventRequest( sceneId, selfId, targetId, eventId )
 	local selectEventId	= GetNumText();
@@ -60,13 +60,13 @@ function x402304_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x402304_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x402304_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 end

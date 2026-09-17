@@ -1,13 +1,13 @@
---µØ¹¬ÉÌÈË
+--åœ°å®«å•†äºº
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x044600_g_ScriptId = 044600
 
---ÉÌµê±àºÅ
+--å•†åº—ç¼–å·
 x044600_g_shoptableindex = 187
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x044600_OnDefaultEvent( sceneId, selfId,targetId )
 	DispatchShopItem( sceneId, selfId,targetId, x044600_g_shoptableindex )

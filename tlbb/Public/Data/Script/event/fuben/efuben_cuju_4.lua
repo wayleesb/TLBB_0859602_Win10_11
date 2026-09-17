@@ -1,36 +1,36 @@
 x402045_g_KillNum = 30
 
 --**********************************
--- ×ãÇòËÀÍö
+-- è¶³çƒæ­»äº¡
 --**********************************
 function x402045_OnDie(sceneId, objId, killerId)
 	
 	local szName = GetName(sceneId, objId)
 
-	if szName == "Ë«Ë«Ñà"  or
-			szName == "Ô§Ñì¹Õ"  or
-			szName == "ÔÆÍâÆ®"  or
-			szName == "ÂúÌìĞÇ"  or
+	if szName == "åŒåŒç‡•"  or
+			szName == "é¸³é¸¯æ‹"  or
+			szName == "äº‘å¤–é£˜"  or
+			szName == "æ»¡å¤©æ˜Ÿ"  or
 			
-			szName == "Ë«Ë«ÑàÑà"  or
-			szName == "Ô§Ñì¹Õ¹Õ"  or
-			szName == "ÔÆÍâÆ®Æ®"     then
+			szName == "åŒåŒç‡•ç‡•"  or
+			szName == "é¸³é¸¯æ‹æ‹"  or
+			szName == "äº‘å¤–é£˜é£˜"     then
 			
 		local nKillNum = LuaFnGetCopySceneData_Param(sceneId, x402045_g_KillNum)
 		nKillNum = nKillNum + 1
-		local str = "ÒÑÉ±ËÀ×ãÇò£º" .. tostring(nKillNum) .. "/149"
+		local str = "å·²æ€æ­»è¶³çƒï¼š" .. tostring(nKillNum) .. "/149"
 		x402045_TipAllHuman(sceneId, str)
 		LuaFnSetCopySceneData_Param(sceneId, x402045_g_KillNum, nKillNum)
 	end
 end
 
 --**********************************
---ÌáÊ¾ËùÓĞ¸±±¾ÄÚÍæ¼Ò
+--æç¤ºæ‰€æœ‰å‰¯æœ¬å†…ç©å®¶
 --**********************************
 function x402045_TipAllHuman( sceneId, Str )
-	-- »ñµÃ³¡¾°ÀïÍ·µÄËùÓĞÈË
+	-- è·å¾—åœºæ™¯é‡Œå¤´çš„æ‰€æœ‰äºº
 	local nHumanNum = LuaFnGetCopyScene_HumanCount(sceneId)
-	-- Ã»ÓĞÈËµÄ³¡¾°£¬Ê²Ã´¶¼²»×ö
+	-- æ²¡æœ‰äººçš„åœºæ™¯ï¼Œä»€ä¹ˆéƒ½ä¸åš
 	if nHumanNum < 1 then
 		return
 	end

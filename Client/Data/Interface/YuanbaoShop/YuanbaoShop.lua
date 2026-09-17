@@ -15,9 +15,9 @@ local lastSelect = 0
 local maxChildShop = 8
 local isCareObj = 0
 
---´æ´¢Ëæ»úÅÅĞòµÄË÷ÒıÖµ
+--å­˜å‚¨éšæœºæ’åºçš„ç´¢å¼•å€¼
 local	g_tOrderPool	= {};
---µ±Ç°ÉÌµêµÄÉÌÆ·ÊıÁ¿
+--å½“å‰å•†åº—çš„å•†å“æ•°é‡
 local	g_nTotalNum		= 0;
 
 function YuanbaoShop_PreLoad()
@@ -90,61 +90,61 @@ function YuanbaoShop_OnLoad()
 	GOOD_BAD[16] =     YuanbaoShop_ItemInfo16_GB;
 	GOOD_BAD[17] =     YuanbaoShop_ItemInfo17_GB;
 	GOOD_BAD[18] =     YuanbaoShop_ItemInfo18_GB;
-	--´óÂô³¡
+	--å¤§å–åœº
 	SHOP_LIST_A[1] = {btn = YuanbaoShop_Button1 , shoplist = {}}
-	SHOP_LIST_A[1].shoplist[1] = "#{YBSD_081225_019}"   --"ĞÂÆ·ÉÏ¼Ü";
-	SHOP_LIST_A[1].shoplist[2] = "#{YBSD_081225_020}"   --"ÈÈÂôÉÌµê";
-	SHOP_LIST_A[1].shoplist[3] = "#{YBSD_081225_021}"   --"ÌØ¼ÛÉÌÆ·";
+	SHOP_LIST_A[1].shoplist[1] = "#{YBSD_081225_019}"   --"æ–°å“ä¸Šæ¶";
+	SHOP_LIST_A[1].shoplist[2] = "#{YBSD_081225_020}"   --"çƒ­å–å•†åº—";
+	SHOP_LIST_A[1].shoplist[3] = "#{YBSD_081225_021}"   --"ç‰¹ä»·å•†å“";
 
-	--±¦Ê¯ÉÌ³Ç
+	--å®çŸ³å•†åŸ
 	SHOP_LIST_A[2] = {btn = YuanbaoShop_Button2 , shoplist = {}}
-	--SHOP_LIST_A[2].shoplist[1] = "#{YBSD_081225_022}"	--"´óÀí±¦Ê¯Õ«";
-	SHOP_LIST_A[2].shoplist[1] = "#{YBSD_081225_023}"	--"ËÕÖİ±¦Ê¯Õ«";
-	SHOP_LIST_A[2].shoplist[2] = "#{YBSD_081225_024}"	--"ÂåÑô±¦Ê¯Õ«";
-	SHOP_LIST_A[2].shoplist[3] = "#{YBSD_081225_025}"	--"±¦Ê¯¾«»ªµê";
-	SHOP_LIST_A[2].shoplist[4] = "#{YBSD_081225_026}"	--"±¦Ê¯¼Ó¹¤·»";
+	--SHOP_LIST_A[2].shoplist[1] = "#{YBSD_081225_022}"	--"å¤§ç†å®çŸ³æ–‹";
+	SHOP_LIST_A[2].shoplist[1] = "#{YBSD_081225_023}"	--"è‹å·å®çŸ³æ–‹";
+	SHOP_LIST_A[2].shoplist[2] = "#{YBSD_081225_024}"	--"æ´›é˜³å®çŸ³æ–‹";
+	SHOP_LIST_A[2].shoplist[3] = "#{YBSD_081225_025}"	--"å®çŸ³ç²¾ååº—";
+	SHOP_LIST_A[2].shoplist[4] = "#{YBSD_081225_026}"	--"å®çŸ³åŠ å·¥åŠ";
 
-	--ÕäÊŞÉÌ³Ç
+	--çå…½å•†åŸ
 	SHOP_LIST_A[3] = {btn = YuanbaoShop_Button3 , shoplist = {}}
-	SHOP_LIST_A[3].shoplist[1] = "#{YBSD_081225_027}"	--"Ï¡ÓĞÕäÊŞ¹İ";
-	SHOP_LIST_A[3].shoplist[2] = "#{YBSD_081225_028}"	--"ÆÕÍ¨¼¼ÄÜ¹İ";
-	SHOP_LIST_A[3].shoplist[3] = "#{YBSD_081225_029}"	--"¸ß¼¶¼¼ÄÜ¹İ";
-	SHOP_LIST_A[3].shoplist[4] = "#{YBSD_081225_030}"	--"ÕäÊŞÁéÒ©·»";
-	--ÄÏ±±ÔÓ»õ
+	SHOP_LIST_A[3].shoplist[1] = "#{YBSD_081225_027}"	--"ç¨€æœ‰çå…½é¦†";
+	SHOP_LIST_A[3].shoplist[2] = "#{YBSD_081225_028}"	--"æ™®é€šæŠ€èƒ½é¦†";
+	SHOP_LIST_A[3].shoplist[3] = "#{YBSD_081225_029}"	--"é«˜çº§æŠ€èƒ½é¦†";
+	SHOP_LIST_A[3].shoplist[4] = "#{YBSD_081225_030}"	--"çå…½çµè¯åŠ";
+	--å—åŒ—æ‚è´§
 	SHOP_LIST_A[4] = {btn = YuanbaoShop_Button4 , shoplist = {}}
-	SHOP_LIST_A[4].shoplist[1] = "#{YBSD_081225_091}"	--"ÏÉµ¤ÁéÒ©";
-	SHOP_LIST_A[4].shoplist[2] = "#{YBSD_081225_031}"	--"ÆæÕäÒì±¦";
-	SHOP_LIST_A[4].shoplist[3] = "#{YBSD_081225_032}"	--"ÈıÇåÉñ·û";
+	SHOP_LIST_A[4].shoplist[1] = "#{YBSD_081225_091}"	--"ä»™ä¸¹çµè¯";
+	SHOP_LIST_A[4].shoplist[2] = "#{YBSD_081225_031}"	--"å¥‡çå¼‚å®";
+	SHOP_LIST_A[4].shoplist[3] = "#{YBSD_081225_032}"	--"ä¸‰æ¸…ç¥ç¬¦";
 
-	--ĞÎÏó¹ã³¡
+	--å½¢è±¡å¹¿åœº
 	SHOP_LIST_A[5] = {btn = YuanbaoShop_Button5 , shoplist = {}}
-	SHOP_LIST_A[5].shoplist[1] = "#{YBSD_081225_033}"	--"Ã×À¼Ê±×°µê";
-	SHOP_LIST_A[5].shoplist[2] = "#{YBSD_081225_034}"	--"ÈçÒâ±äÉíÕ«";
-	SHOP_LIST_A[5].shoplist[3] = "#{YBSD_081225_035}"	--"ÌìÑï·¢ÒÕ¹İ";
-	SHOP_LIST_A[5].shoplist[4] = "#{YBSD_081225_036}"	--"À¼ÓêÃÀÈİ·»";
-	SHOP_LIST_A[5].shoplist[5] = "#{YBSD_081225_037}"	--"×øÆïÉÌ³Ç";
+	SHOP_LIST_A[5].shoplist[1] = "#{YBSD_081225_033}"	--"ç±³å…°æ—¶è£…åº—";
+	SHOP_LIST_A[5].shoplist[2] = "#{YBSD_081225_034}"	--"å¦‚æ„å˜èº«æ–‹";
+	SHOP_LIST_A[5].shoplist[3] = "#{YBSD_081225_035}"	--"å¤©æ‰¬å‘è‰ºé¦†";
+	SHOP_LIST_A[5].shoplist[4] = "#{YBSD_081225_036}"	--"å…°é›¨ç¾å®¹åŠ";
+	SHOP_LIST_A[5].shoplist[5] = "#{YBSD_081225_037}"	--"åéª‘å•†åŸ";
 
-	--»¨ÎèÈË¼ä
+	--èŠ±èˆäººé—´
 	SHOP_LIST_A[6] = {btn = YuanbaoShop_Button6 , shoplist = {}}
-	SHOP_LIST_A[6].shoplist[1] = "#{YBSD_081225_038}"	--"´«Í³ÑÌ»¨";
-	SHOP_LIST_A[6].shoplist[2] = "#{YBSD_081225_039}"	--"¸öĞÔÑÌ»¨";
-	SHOP_LIST_A[6].shoplist[3] = "#{YBSD_081225_040}"	--"È«³¡¾°ÑÌ»¨";
-	SHOP_LIST_A[6].shoplist[4] = "#{YBSD_081225_041}"	--"ÏÊ»¨";
+	SHOP_LIST_A[6].shoplist[1] = "#{YBSD_081225_038}"	--"ä¼ ç»ŸçƒŸèŠ±";
+	SHOP_LIST_A[6].shoplist[2] = "#{YBSD_081225_039}"	--"ä¸ªæ€§çƒŸèŠ±";
+	SHOP_LIST_A[6].shoplist[3] = "#{YBSD_081225_040}"	--"å…¨åœºæ™¯çƒŸèŠ±";
+	SHOP_LIST_A[6].shoplist[4] = "#{YBSD_081225_041}"	--"é²œèŠ±";
 
-	--Îä¹¦ÃØ¼®
+	--æ­¦åŠŸç§˜ç±
 	SHOP_LIST_A[7] = {btn = YuanbaoShop_Button7 , shoplist = {}}
-	SHOP_LIST_A[7].shoplist[1] = "#{YBSD_081225_042}"	--"»¹Ê©Ë®¸ó";
-	--´òÔìÍ¼
+	SHOP_LIST_A[7].shoplist[1] = "#{YBSD_081225_042}"	--"è¿˜æ–½æ°´é˜";
+	--æ‰“é€ å›¾
 	SHOP_LIST_A[8] = {btn = YuanbaoShop_Button8 , shoplist = {}}
-	SHOP_LIST_A[8].shoplist[1] = "#{YBSD_081225_043}"	--"µ¶¸«ºÍÇ¹°ô";
-	SHOP_LIST_A[8].shoplist[2] = "#{YBSD_081225_044}"	--"µ¥¶ÌºÍË«¶Ì";
-	SHOP_LIST_A[8].shoplist[3] = "#{YBSD_081225_045}"	--"ÉÈºÍ»·";
-	SHOP_LIST_A[8].shoplist[4] = "#{YBSD_081225_096}"	--"ÒÂ·şºÍÃ±×Ó";
-	SHOP_LIST_A[8].shoplist[5] = "#{YBSD_081225_046}"	--"ÊÖÌ×ºÍĞ¬×Ó";
-	SHOP_LIST_A[8].shoplist[6] = "#{YBSD_081225_047}"	--"»¤ÍóºÍ»¤¼ç";
-	SHOP_LIST_A[8].shoplist[7] = "#{YBSD_081225_048}"	--"Ñü´øºÍÏîÁ´";
-	SHOP_LIST_A[8].shoplist[8] = "#{YBSD_081225_049}"	--"½äÖ¸ºÍ»¤·û";
-	--¶ş¼¶ÉÌµê
+	SHOP_LIST_A[8].shoplist[1] = "#{YBSD_081225_043}"	--"åˆ€æ–§å’Œæªæ£’";
+	SHOP_LIST_A[8].shoplist[2] = "#{YBSD_081225_044}"	--"å•çŸ­å’ŒåŒçŸ­";
+	SHOP_LIST_A[8].shoplist[3] = "#{YBSD_081225_045}"	--"æ‰‡å’Œç¯";
+	SHOP_LIST_A[8].shoplist[4] = "#{YBSD_081225_096}"	--"è¡£æœå’Œå¸½å­";
+	SHOP_LIST_A[8].shoplist[5] = "#{YBSD_081225_046}"	--"æ‰‹å¥—å’Œé‹å­";
+	SHOP_LIST_A[8].shoplist[6] = "#{YBSD_081225_047}"	--"æŠ¤è…•å’ŒæŠ¤è‚©";
+	SHOP_LIST_A[8].shoplist[7] = "#{YBSD_081225_048}"	--"è…°å¸¦å’Œé¡¹é“¾";
+	SHOP_LIST_A[8].shoplist[8] = "#{YBSD_081225_049}"	--"æˆ’æŒ‡å’ŒæŠ¤ç¬¦";
+	--äºŒçº§å•†åº—
 	SHOP_LIST_B[1] = YuanbaoShop_Button01
 	SHOP_LIST_B[2] = YuanbaoShop_Button02
 	SHOP_LIST_B[3] = YuanbaoShop_Button03
@@ -166,59 +166,59 @@ function YuanbaoShop_OnLoad()
 		SHOP_LIST_B[i]:Hide()
 	end
 
-	--ÎÒÒª¸üÇ¿´ó
+	--æˆ‘è¦æ›´å¼ºå¤§
 	SHOP_SEARCH_LIST[1] = {}
-	SHOP_SEARCH_LIST[1][1] = "#{YBSD_081225_023}"	--"ËÕÖİ±¦Ê¯Õ«";
-	SHOP_SEARCH_LIST[1][2] = "#{YBSD_081225_024}"	--"ÂåÑô±¦Ê¯Õ«";
-	SHOP_SEARCH_LIST[1][3] = "#{YBSD_081225_025}"	--"±¦Ê¯¾«»ªµê";
-	SHOP_SEARCH_LIST[1][4] = "#{YBSD_081225_027}"	--"Ï¡ÓĞÕäÊŞ¹İ";
-	SHOP_SEARCH_LIST[1][5] = "#{YBSD_081225_091}"	--"ÏÉµ¤ÁéÒ©";
-	--ÎÒÒª¸üÓĞ÷ÈÁ¦
+	SHOP_SEARCH_LIST[1][1] = "#{YBSD_081225_023}"	--"è‹å·å®çŸ³æ–‹";
+	SHOP_SEARCH_LIST[1][2] = "#{YBSD_081225_024}"	--"æ´›é˜³å®çŸ³æ–‹";
+	SHOP_SEARCH_LIST[1][3] = "#{YBSD_081225_025}"	--"å®çŸ³ç²¾ååº—";
+	SHOP_SEARCH_LIST[1][4] = "#{YBSD_081225_027}"	--"ç¨€æœ‰çå…½é¦†";
+	SHOP_SEARCH_LIST[1][5] = "#{YBSD_081225_091}"	--"ä»™ä¸¹çµè¯";
+	--æˆ‘è¦æ›´æœ‰é­…åŠ›
 	SHOP_SEARCH_LIST[2] = {}
-	SHOP_SEARCH_LIST[2][1] = "#{YBSD_081225_037}"	--"×øÆïÉÌ³Ç";
-	SHOP_SEARCH_LIST[2][2] = "#{YBSD_081225_033}"	--"Ã×À¼Ê±×°µê";
-	SHOP_SEARCH_LIST[2][3] = "#{YBSD_081225_034}"	--"ÈçÒâ±äÉíÕ«";
-	SHOP_SEARCH_LIST[2][4] = "#{YBSD_081225_035}"	--"ÌìÑï·¢ÒÕ¹İ";
-	SHOP_SEARCH_LIST[2][5] = "#{YBSD_081225_036}"	--"À¼ÓêÃÀÈİ·»";
-	--ÎÒÒª´òÔì¼«Æ·×°±¸
+	SHOP_SEARCH_LIST[2][1] = "#{YBSD_081225_037}"	--"åéª‘å•†åŸ";
+	SHOP_SEARCH_LIST[2][2] = "#{YBSD_081225_033}"	--"ç±³å…°æ—¶è£…åº—";
+	SHOP_SEARCH_LIST[2][3] = "#{YBSD_081225_034}"	--"å¦‚æ„å˜èº«æ–‹";
+	SHOP_SEARCH_LIST[2][4] = "#{YBSD_081225_035}"	--"å¤©æ‰¬å‘è‰ºé¦†";
+	SHOP_SEARCH_LIST[2][5] = "#{YBSD_081225_036}"	--"å…°é›¨ç¾å®¹åŠ";
+	--æˆ‘è¦æ‰“é€ æå“è£…å¤‡
 	SHOP_SEARCH_LIST[3] = {}
---	SHOP_SEARCH_LIST[3][1] = "#{YBSD_081225_022}"	--"´óÀí±¦Ê¯Õ«";
-	SHOP_SEARCH_LIST[3][1] = "#{YBSD_081225_023}"	--"ËÕÖİ±¦Ê¯Õ«";
-	SHOP_SEARCH_LIST[3][2] = "#{YBSD_081225_024}"	--"ÂåÑô±¦Ê¯Õ«";
-	SHOP_SEARCH_LIST[3][3] = "#{YBSD_081225_026}"	--"±¦Ê¯¼Ó¹¤·»";
-	SHOP_SEARCH_LIST[3][4] = "#{YBSD_081225_031}"	--"ÆæÕäÒì±¦";
-	--ÎÒÒª´òÔì¼«Æ·ÕäÊŞ
+--	SHOP_SEARCH_LIST[3][1] = "#{YBSD_081225_022}"	--"å¤§ç†å®çŸ³æ–‹";
+	SHOP_SEARCH_LIST[3][1] = "#{YBSD_081225_023}"	--"è‹å·å®çŸ³æ–‹";
+	SHOP_SEARCH_LIST[3][2] = "#{YBSD_081225_024}"	--"æ´›é˜³å®çŸ³æ–‹";
+	SHOP_SEARCH_LIST[3][3] = "#{YBSD_081225_026}"	--"å®çŸ³åŠ å·¥åŠ";
+	SHOP_SEARCH_LIST[3][4] = "#{YBSD_081225_031}"	--"å¥‡çå¼‚å®";
+	--æˆ‘è¦æ‰“é€ æå“çå…½
 	SHOP_SEARCH_LIST[4] = {}
-	SHOP_SEARCH_LIST[4][1] = "#{YBSD_081225_027}"	--"Ï¡ÓĞÕäÊŞ¹İ";
-	SHOP_SEARCH_LIST[4][2] = "#{YBSD_081225_028}"	--"ÆÕÍ¨¼¼ÄÜ¹İ";
-	SHOP_SEARCH_LIST[4][3] = "#{YBSD_081225_029}"	--"¸ß¼¶¼¼ÄÜ¹İ";
-	SHOP_SEARCH_LIST[4][4] = "#{YBSD_081225_030}"	--"ÕäÊŞÁéÒ©·»";
+	SHOP_SEARCH_LIST[4][1] = "#{YBSD_081225_027}"	--"ç¨€æœ‰çå…½é¦†";
+	SHOP_SEARCH_LIST[4][2] = "#{YBSD_081225_028}"	--"æ™®é€šæŠ€èƒ½é¦†";
+	SHOP_SEARCH_LIST[4][3] = "#{YBSD_081225_029}"	--"é«˜çº§æŠ€èƒ½é¦†";
+	SHOP_SEARCH_LIST[4][4] = "#{YBSD_081225_030}"	--"çå…½çµè¯åŠ";
 	
-	--ÎÒÒªÒÆ¶¯µÄ¸ü¿ì
+	--æˆ‘è¦ç§»åŠ¨çš„æ›´å¿«
 	SHOP_SEARCH_LIST[5] = {}
-	SHOP_SEARCH_LIST[5][1] = "#{YBSD_081225_037}"	--"×øÆïÉÌ³Ç";
-	SHOP_SEARCH_LIST[5][2] = "#{YBSD_081225_032}"	--"ÈıÇåÉñ·û";
-	--ÎÒÒªÏò±ğÈË±í°×
+	SHOP_SEARCH_LIST[5][1] = "#{YBSD_081225_037}"	--"åéª‘å•†åŸ";
+	SHOP_SEARCH_LIST[5][2] = "#{YBSD_081225_032}"	--"ä¸‰æ¸…ç¥ç¬¦";
+	--æˆ‘è¦å‘åˆ«äººè¡¨ç™½
 	SHOP_SEARCH_LIST[6] = {}
-	SHOP_SEARCH_LIST[6][1] = "#{YBSD_081225_039}"	--"¸öĞÔÑÌ»¨";
-	SHOP_SEARCH_LIST[6][2] = "#{YBSD_081225_040}"	--"È«³¡¾°ÑÌ»¨";
-	SHOP_SEARCH_LIST[6][3] = "#{YBSD_081225_041}"	--"ÏÊ»¨";
-	SHOP_SEARCH_LIST[6][4] = "#{YBSD_081225_033}"	--"Ã×À¼Ê±×°µê";
-	SHOP_SEARCH_LIST[6][5] = "#{YBSD_081225_037}"	--"×øÆïÉÌ³Ç";
-	--ÎÒÒªÑ§Ï°ĞÂ¼¼ÄÜ
+	SHOP_SEARCH_LIST[6][1] = "#{YBSD_081225_039}"	--"ä¸ªæ€§çƒŸèŠ±";
+	SHOP_SEARCH_LIST[6][2] = "#{YBSD_081225_040}"	--"å…¨åœºæ™¯çƒŸèŠ±";
+	SHOP_SEARCH_LIST[6][3] = "#{YBSD_081225_041}"	--"é²œèŠ±";
+	SHOP_SEARCH_LIST[6][4] = "#{YBSD_081225_033}"	--"ç±³å…°æ—¶è£…åº—";
+	SHOP_SEARCH_LIST[6][5] = "#{YBSD_081225_037}"	--"åéª‘å•†åŸ";
+	--æˆ‘è¦å­¦ä¹ æ–°æŠ€èƒ½
 	SHOP_SEARCH_LIST[7] = {}
-	SHOP_SEARCH_LIST[7][1] = "#{YBSD_081225_042}"	--"»¹Ê©Ë®¸ó";
-	SHOP_SEARCH_LIST[7][2] = "#{YBSD_081225_028}"	--"ÆÕÍ¨¼¼ÄÜ¹İ";
-	SHOP_SEARCH_LIST[7][3] = "#{YBSD_081225_029}"	--"¸ß¼¶¼¼ÄÜ¹İ";
+	SHOP_SEARCH_LIST[7][1] = "#{YBSD_081225_042}"	--"è¿˜æ–½æ°´é˜";
+	SHOP_SEARCH_LIST[7][2] = "#{YBSD_081225_028}"	--"æ™®é€šæŠ€èƒ½é¦†";
+	SHOP_SEARCH_LIST[7][3] = "#{YBSD_081225_029}"	--"é«˜çº§æŠ€èƒ½é¦†";
 	
 
-	YuanbaoShop_SearchMode:AddTextItem("#{YBSD_081225_055}" ,1)	--ÎÒÒª¸üÇ¿´ó
-	YuanbaoShop_SearchMode:AddTextItem("#{YBSD_081225_056}" ,2)	--"ÎÒÒª¸üÓĞ÷ÈÁ¦"
-	YuanbaoShop_SearchMode:AddTextItem("#{YBSD_081225_057}" ,3)	--"ÎÒÒª´òÔì¼«Æ·×°±¸"
-	YuanbaoShop_SearchMode:AddTextItem("#{YBSD_081225_058}",4)	--"ÎÒÒª´òÔì¼«Æ·ÕäÊŞ"
-	YuanbaoShop_SearchMode:AddTextItem("#{YBSD_081225_059}",5)	--"ÎÒÒªÒÆ¶¯µÄ¸ü¿ì"
-	YuanbaoShop_SearchMode:AddTextItem("#{YBSD_081225_060}",6)	--"ÎÒÒªÏò±ğÈË±í°×"
-	YuanbaoShop_SearchMode:AddTextItem("#{YBSD_081225_061}",7)	--"ÎÒÒªÑ§Ï°ĞÂ¼¼ÄÜ"
+	YuanbaoShop_SearchMode:AddTextItem("#{YBSD_081225_055}" ,1)	--æˆ‘è¦æ›´å¼ºå¤§
+	YuanbaoShop_SearchMode:AddTextItem("#{YBSD_081225_056}" ,2)	--"æˆ‘è¦æ›´æœ‰é­…åŠ›"
+	YuanbaoShop_SearchMode:AddTextItem("#{YBSD_081225_057}" ,3)	--"æˆ‘è¦æ‰“é€ æå“è£…å¤‡"
+	YuanbaoShop_SearchMode:AddTextItem("#{YBSD_081225_058}",4)	--"æˆ‘è¦æ‰“é€ æå“çå…½"
+	YuanbaoShop_SearchMode:AddTextItem("#{YBSD_081225_059}",5)	--"æˆ‘è¦ç§»åŠ¨çš„æ›´å¿«"
+	YuanbaoShop_SearchMode:AddTextItem("#{YBSD_081225_060}",6)	--"æˆ‘è¦å‘åˆ«äººè¡¨ç™½"
+	YuanbaoShop_SearchMode:AddTextItem("#{YBSD_081225_061}",7)	--"æˆ‘è¦å­¦ä¹ æ–°æŠ€èƒ½"
 
 end
 
@@ -243,7 +243,7 @@ function YuanbaoShop_OnEvent(event)
 			OpenWindow("Packet")
 		end
 		
-		--¹ØĞÄÉÌÈËObj
+		--å…³å¿ƒå•†äººObj
 		objCared = NpcShop:GetNpcId();
 		this:CareObject(objCared, 1, "YuanbaoShop");
 		
@@ -281,7 +281,7 @@ function YuanbaoShop_OnEvent(event)
 	end
 end
 --==================
---´ò¿ªÉÌµê
+--æ‰“å¼€å•†åº—
 function YuanbaoShop_Show()
 	if lastA < 1 or lastA > maxChildShop then
 		lastA = 1;
@@ -303,7 +303,7 @@ function YuanbaoShop_Show()
 	UpdateShopItem( lastA , lastB )
 end
 --===============================
---Ë¢ĞÂÒ»Ò³
+--åˆ·æ–°ä¸€é¡µ
 function YuanbaoShop_UpdatePage(thePage)
 	
 	YuanbaoShop_Text2:SetText ("#{YBSD_081225_068}"..tostring(Player:GetData("YUANBAO")))
@@ -318,7 +318,7 @@ function YuanbaoShop_UpdatePage(thePage)
 		YuanbaoShop_Order();
 	end
 		
-	-- ¼ÆËã×ÜÒ³Êı
+	-- è®¡ç®—æ€»é¡µæ•°
 	local	nTotalPage;
 	if( g_nTotalNum < 1 ) then
 		nTotalPage	= 1;
@@ -331,8 +331,8 @@ function YuanbaoShop_UpdatePage(thePage)
 	if(thePage < 1 or thePage > nTotalPage) then 
 		return;	
 	end
-	--HEQUIP_DRESS		=16,	//Ê±×°                   
-	--HEQUIP_RIDER		=8,	//Æï³Ë	
+	--HEQUIP_DRESS		=16,	//æ—¶è£…                   
+	--HEQUIP_RIDER		=8,	//éª‘ä¹˜	
 	local bHaveRide=0;
 	
 	nPageNum = thePage;
@@ -406,7 +406,7 @@ function YuanbaoShop_UpdatePage(thePage)
 		YuanbaoShop_CurrentlyPage:SetText(tostring(nPageNum) .. "/" .. tostring(nTotalPage) );
 	end
 end
---µã»÷Ò»¼¶±êÇ©
+--ç‚¹å‡»ä¸€çº§æ ‡ç­¾
 function YuanbaoShop_UpdateList(nIndex)
 	if nIndex <1 or nIndex > 8 or nIndex == lastA then
 		return
@@ -427,7 +427,7 @@ function YuanbaoShop_UpdateList(nIndex)
 
 	UpdateShopItem( lastA ,lastB )
 end
---µã»÷µêÆÌ
+--ç‚¹å‡»åº—é“º
 function YuanbaoShop_UpdateShop(nIndex)
 	if nIndex <1 or nIndex > maxChildShop or nIndex == lastB then
 		return
@@ -443,7 +443,7 @@ function YuanbaoShop_UpdateShop(nIndex)
 		UpdateShopItem( 1 , 1)
 	end
 end
---²éÕÒ
+--æŸ¥æ‰¾
 function YuanbaoShop_BeginSearch()
 
 	local str , nIndex = YuanbaoShop_SearchMode:GetCurrentSelect()
@@ -471,7 +471,7 @@ function YuanbaoShop_BeginSearch()
 
 	UpdateShopItem( nIndex+8 , 1 )
 end
---ÊÔ´©
+--è¯•ç©¿
 function YuanbaoShop_OpenFitting()
 	if IsIdleLogic() ~= 1 and IsMoveLogic() ~= 1 then
 		SetNotifyTip("#{YBSD_081225_100}");
@@ -487,7 +487,7 @@ function YuanbaoShop_OpenFitting()
 	MouseCmd_ShopFittingSet();
 	SetNotifyTip("#{YBSD_081225_099}");
 end
---ÇëÇóÉÌµêĞÅÏ¢
+--è¯·æ±‚å•†åº—ä¿¡æ¯
 function UpdateShopItem( shopA , shopB)
 	Clear_XSCRIPT();
 		Set_XSCRIPT_Function_Name("OpenYuanbaoShop");
@@ -550,7 +550,7 @@ function YuanbaoShop_Close()
 	this:Hide();	
 end
 
---Ëæ»úÅÅĞò
+--éšæœºæ’åº
 function YuanbaoShop_Order()
 	local	max		= g_nTotalNum;
 	local oldt	= {};
@@ -572,7 +572,7 @@ function YuanbaoShop_Order()
 	end
 end
 
---È·ÈÏ°´Å¥
+--ç¡®è®¤æŒ‰é’®
 function YuanbaoShop_querengoumai_Clicked()
 	if(NpcShop:GetBuyDirectly() == 0)then
 --		YuanbaoShop_querengoumai:SetCheck(0);
@@ -583,21 +583,21 @@ function YuanbaoShop_querengoumai_Clicked()
 	end
 end
 
---¿ìËÙ³äÖµ
+--å¿«é€Ÿå……å€¼
 function YuanbaoShop_web_Clicked()
 	GameProduceLogin:OpenURL("http://sde.game.sohu.com")
 end
---Ä¿Â¼ºÍ²éÕÒËµÃ÷
+--ç›®å½•å’ŒæŸ¥æ‰¾è¯´æ˜
 function YuanbaoShop_Dis_Clicked()
 	OpenYBShopReference("#{YBSD_081225_070}")
 end
---Ôª±¦ÉÌµêÊ¹ÓÃËµÃ÷
+--å…ƒå®å•†åº—ä½¿ç”¨è¯´æ˜
 function YuanbaoShop_Dis2_Clicked()
 	OpenYBShopReference("#{YBSD_081225_098}")
 end
 
 
---¹ö¶¯ĞÅÏ¢Ë³ĞòËæ»úÅÅÁĞ
+--æ»šåŠ¨ä¿¡æ¯é¡ºåºéšæœºæ’åˆ—
 function YubanbaoShop_ADRandom()
 	YuanbaoShop_ScrollInfo_Frame:ClearInfo()
 	

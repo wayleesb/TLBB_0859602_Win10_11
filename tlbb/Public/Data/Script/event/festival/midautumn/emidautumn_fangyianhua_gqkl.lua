@@ -1,44 +1,44 @@
---Ò¹Î÷ºş ÃÀÀöµÄÒ¹Î÷ºş ÖĞÇï¿ìÀÖ
+--å¤œè¥¿æ¹– ç¾ä¸½çš„å¤œè¥¿æ¹– ä¸­ç§‹å¿«ä¹
 --050019
 
 --MisDescBegin
---½Å±¾ºÅ
+--è„šæœ¬å·
 x050019_g_ScriptId = 050019
 
---ÈÎÎñºÅ
+--ä»»åŠ¡å·
 x050019_g_MissionId = 132
 
---Ä¿±êNPC
-x050019_g_Name	="ÁèÕñ"
+--ç›®æ ‡NPC
+x050019_g_Name	="å‡ŒæŒ¯"
 
---ÈÎÎñ¹éÀà
+--ä»»åŠ¡å½’ç±»
 x050019_g_MissionKind = 3
 
---ÈÎÎñµÈ¼¶
+--ä»»åŠ¡ç­‰çº§
 x050019_g_MissionLevel = 10
 
---ÊÇ·ñÊÇ¾«Ó¢ÈÎÎñ
+--æ˜¯å¦æ˜¯ç²¾è‹±ä»»åŠ¡
 x050019_g_IfMissionElite = 0
 
---ÈÎÎñÃû
+--ä»»åŠ¡å
 x050019_g_MissionName="#{ZQSY_2007912_001}"
 x050019_g_MissionInfo="#{ZQSY_2007912_002}"
 x050019_g_MissionTarget="#{ZQSY_2007912_003}"
 x050019_g_MissionContinue="#{ZQSY_2007912_004}"
 x050019_g_MissionComplete="#{ZQSY_2007912_005}"
 
-x050019_g_Custom	= { {id="ÒÑÈ¼·Å¹úÇì¿ìÀÖ",num=1} }
+x050019_g_Custom	= { {id="å·²ç‡ƒæ”¾å›½åº†å¿«ä¹",num=1} }
 x050019_g_IsMissionOkFail = 0
 --MisDescEnd
 
 x050019_g_MissionId_mutex = 131;
 
---»î¶¯Ê±¼ä
-x050019_g_StartDayTime = 8257   --»î¶¯¿ªÊ¼Ê±¼ä 2008-9-14,°üº¬µ±ÈÕ
-x050019_g_EndDayTime = 8282   --»î¶¯½áÊøÊ±¼ä 2008-10-09,°üº¬µ±ÈÕ
+--æ´»åŠ¨æ—¶é—´
+x050019_g_StartDayTime = 8257   --æ´»åŠ¨å¼€å§‹æ—¶é—´ 2008-9-14,åŒ…å«å½“æ—¥
+x050019_g_EndDayTime = 8282   --æ´»åŠ¨ç»“æŸæ—¶é—´ 2008-10-09,åŒ…å«å½“æ—¥
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x050019_OnDefaultEvent( sceneId, selfId, targetId )
 	if IsHaveMission(sceneId, selfId, x050019_g_MissionId) > 0 then
@@ -64,7 +64,7 @@ function x050019_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x050019_OnEnumerate( sceneId, selfId, targetId )
 	if IsHaveMission(sceneId, selfId, x050019_g_MissionId) > 0 then
@@ -75,15 +75,15 @@ function x050019_OnEnumerate( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x050019_CheckAccept( sceneId, selfId )
-	-- µÈ¼¶¼ì²â
+	-- ç­‰çº§æ£€æµ‹
 	if GetLevel(sceneId, selfId) < x050019_g_MissionLevel then
 		return 0;
 	end
 	
-	--ÒÑ¾­ÓĞÁË
+	--å·²ç»æœ‰äº†
 	if IsHaveMission(sceneId, selfId, x050019_g_MissionId) > 0
 	 or IsHaveMission(sceneId, selfId, x050019_g_MissionId_mutex) > 0 then
 		return 0;
@@ -97,7 +97,7 @@ function x050019_CheckAccept( sceneId, selfId )
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x050019_OnAccept( sceneId, selfId, targetId )
 	if x050019_CheckAccept(sceneId, selfId) < 1   then
@@ -110,13 +110,13 @@ function x050019_OnAccept( sceneId, selfId, targetId )
 
 	local ret = AddMission( sceneId,selfId, x050019_g_MissionId, x050019_g_ScriptId, 0, 0, 0 )
 	if ret <= 0 then
-		Msg2Player(sceneId, selfId, "#YÄãµÄÈÎÎñÈÕÖ¾ÒÑ¾­ÂúÁË", MSG2PLAYER_PARA);
+		Msg2Player(sceneId, selfId, "#Yä½ çš„ä»»åŠ¡æ—¥å¿—å·²ç»æ»¡äº†", MSG2PLAYER_PARA);
 		return
 	end
 
-	Msg2Player(sceneId, selfId, "#Y½ÓÊÜÈÎÎñ£º"..x050019_g_MissionName.."¡£", MSG2PLAYER_PARA);
+	Msg2Player(sceneId, selfId, "#Yæ¥å—ä»»åŠ¡ï¼š"..x050019_g_MissionName.."ã€‚", MSG2PLAYER_PARA);
 
-	-- ÈÎÎñ±äÁ¿
+	-- ä»»åŠ¡å˜é‡
 	local misIndex = GetMissionIndexByID(sceneId, selfId, x050019_g_MissionId);
 	SetMissionByIndex( sceneId, selfId, misIndex, 0, 0)
 end
@@ -125,18 +125,18 @@ function x050019_OnSceneTimer(sceneId, selfId)
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x050019_OnAbandon( sceneId, selfId )
-	--É¾³ıÍæ¼ÒÈÎÎñÁĞ±íÖĞ¶ÔÓ¦µÄÈÎÎñ
+	--åˆ é™¤ç©å®¶ä»»åŠ¡åˆ—è¡¨ä¸­å¯¹åº”çš„ä»»åŠ¡
   DelMission(sceneId, selfId, x050019_g_MissionId);
 end
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x050019_OnContinue( sceneId, selfId, targetId )
-	--Ìá½»ÈÎÎñÊ±µÄËµÃ÷ĞÅÏ¢
+	--æäº¤ä»»åŠ¡æ—¶çš„è¯´æ˜ä¿¡æ¯
   BeginEvent(sceneId)
 	AddText(sceneId,x050019_g_MissionName)
 	AddText(sceneId,x050019_g_MissionComplete)
@@ -145,7 +145,7 @@ function x050019_OnContinue( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x050019_CheckSubmit( sceneId, selfId )
 	if IsHaveMission(sceneId, selfId, x050019_g_MissionId) <= 0 then
@@ -166,11 +166,11 @@ function x050019_CheckSubmit( sceneId, selfId )
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x050019_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 	if x050019_CheckSubmit( sceneId, selfId, selectRadioId ) == 1 then
-		--Ìí¼ÓÈÎÎñ½±Àø
+		--æ·»åŠ ä»»åŠ¡å¥–åŠ±
 		local level = GetLevel(sceneId, selfId);
 		local k = 80;
 		local b = -326;
@@ -181,9 +181,9 @@ function x050019_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 		end
 		DelMission( sceneId, selfId, x050019_g_MissionId )
 		MissionCom( sceneId, selfId, x050019_g_MissionId )
-		Msg2Player( sceneId, selfId,"#YÍê³ÉÈÎÎñ£º"..x050019_g_MissionName.."¡£",MSG2PLAYER_PARA )
+		Msg2Player( sceneId, selfId,"#Yå®Œæˆä»»åŠ¡ï¼š"..x050019_g_MissionName.."ã€‚",MSG2PLAYER_PARA )
 	
-		--¸üĞÂ½ñÌì½ÓÁË¼¸´ÎÈÎÎñ
+		--æ›´æ–°ä»Šå¤©æ¥äº†å‡ æ¬¡ä»»åŠ¡
 		local misData = GetMissionData(sceneId, selfId, MD_SHANG_YUE_FANG_YIAN_HUA);
 		if misData then
 			local lastDay = floor(misData / 1000);
@@ -205,25 +205,25 @@ function x050019_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 end
 
 --**********************************
---É±ËÀ¹ÖÎï»òÍæ¼Ò
+--æ€æ­»æ€ªç‰©æˆ–ç©å®¶
 --**********************************
 function x050019_OnKillObject( sceneId, selfId, objdataId )
 end
 
 --**********************************
---½øÈëÇøÓòÊÂ¼ş
+--è¿›å…¥åŒºåŸŸäº‹ä»¶
 --**********************************
 function x050019_OnEnterZone( sceneId, selfId, zoneId )
 end
 
 --**********************************
---µÀ¾ß¸Ä±ä
+--é“å…·æ”¹å˜
 --**********************************
 function x050019_OnItemChanged( sceneId, selfId, itemdataId )
 end
 
 --**********************************
---µÀ¾ßÊ¹ÓÃ
+--é“å…·ä½¿ç”¨
 --**********************************
 function x050019_OnItemUsed( sceneId, selfId, itemdataId )
 	if not itemdataId or itemdataId ~= 30505124 then
@@ -252,13 +252,13 @@ function x050019_OnItemUsed( sceneId, selfId, itemdataId )
 			SetMissionByIndex(sceneId, selfId, misIndex, 0, 1);
 			SetMissionByIndex(sceneId, selfId, misIndex, 1, 1);
 			
-			x050019_NotifyTips(sceneId, selfId, "ÈÎÎñÒÑÍê³É");
+			x050019_NotifyTips(sceneId, selfId, "ä»»åŠ¡å·²å®Œæˆ");
 		end
 	end
 end
 
 --**********************************
---¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+--å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x050019_NotifyBox( sceneId, selfId, targetId, msg )
 	BeginEvent( sceneId )
@@ -268,7 +268,7 @@ function x050019_NotifyBox( sceneId, selfId, targetId, msg )
 end
 
 --**********************************
---ĞÑÄ¿ĞÅÏ¢ÌáÊ¾
+--é†’ç›®ä¿¡æ¯æç¤º
 --**********************************
 function x050019_NotifyTips( sceneId, selfId, Tip )
 	BeginEvent( sceneId )
@@ -278,7 +278,7 @@ function x050019_NotifyTips( sceneId, selfId, Tip )
 end
 
 --**********************************
---½ñÌìÊÇ·ñÒÑ¾­×ö¹»´ÎÊı
+--ä»Šå¤©æ˜¯å¦å·²ç»åšå¤Ÿæ¬¡æ•°
 --**********************************
 function x050019_AcceptCountCheck(sceneId, selfId)
 	local misData = GetMissionData(sceneId, selfId, MD_SHANG_YUE_FANG_YIAN_HUA);
@@ -299,7 +299,7 @@ function x050019_AcceptCountCheck(sceneId, selfId)
 end
 
 --**********************************
---Ê±¼äµÄ¼ì²â
+--æ—¶é—´çš„æ£€æµ‹
 --**********************************
 function x050019_TimeCheck(sceneId, selfId)
 	local curDay = GetDayTime();

@@ -1,10 +1,10 @@
---¶Ô»°ÊÂ¼ş ²É¿ónpcÑ¦Í­´¸
+--å¯¹è¯äº‹ä»¶ é‡‡çŸ¿npcè–›é“œé”¤
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x713607_g_ScriptId = 713607
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x713607_OnDefaultEvent( sceneId, selfId, targetId )
 	dialog = "#{event_liveabilityevent_0007}"
@@ -15,20 +15,20 @@ function x713607_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x713607_OnEnumerate( sceneId, selfId, targetId )
-		AddNumText(sceneId,x713607_g_ScriptId,"ÎÒÏëÁË½â²É¿ó",11,-1)
+		AddNumText(sceneId,x713607_g_ScriptId,"æˆ‘æƒ³äº†è§£é‡‡çŸ¿",11,-1)
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x713607_CheckAccept( sceneId, selfId )
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x713607_OnAccept( sceneId, selfId, AbilityId )
 end

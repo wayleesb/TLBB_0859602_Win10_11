@@ -52,45 +52,45 @@ function GameSetup_UpdateFrame()
 
 	local n1,n2,n3,n4,n5,n6,n7,n8,n9,f10,n11,n12,n13,n14,n15 = SystemSetup:GameGetData();
 	
-	GameSetup_Item1						:SetCheck(n1);					-- ¾Ü¾øËùÓĞĞÅ¼ş
-	GameSetup_Item2						:SetCheck(n2);					-- ¾Ü¾ø¼ÓÎÒºÃÓÑ
-	GameSetup_Item3						:SetCheck(n3);					-- ¾Ü¾øÄ¬ÈÏÉúĞÅ¼ş
-	GameSetup_Item4						:SetCheck(n4);					-- ¾Ü¾ø½»Ò×
-	GameSetup_Item5						:SetCheck(n5);					-- ¾Ü¾ø¶ÓÎéÑûÇë
-	GameSetup_Item6						:SetCheck(n6);					-- ¹Ø±Õµ±Ç°ÅİÅİ¿ò
-	GameSetup_Item7						:SetCheck(n7);					-- ¾Ü¾ø²é¿´ÅäÅ¼
-	GameSetup_Item8						:SetCheck(n8);					-- ½ÇÉ«ÏÔÊ¾Ã±×Ó
-	GameSetup_Item9						:SetCheck(n9);					-- ·ÇÁÄÌìÄ£Ê½
-	GameSetup_ChatBkg_Slider	:SetPosition(f10);			-- ÁÄÌì±³¾°Í¸Ã÷¶È
-	GameSetup_Item11					:SetCheck(n11);					-- ¹Ø±Õ¿ì½İÀ¸ÌáÊ¾
-	GameSetup_Lock						:SetCheck(n12);					-- Ëø¶¨¿ì½İÀ¸
-	GameSetup_Scene						:SetCheck(n13);					-- ¿ìËÙÇĞ»»³¡¾°
-	GameSetup_ChatItem				:SetCheck(n15);					-- ¿ì½İ¼ü²é¿´Á´½Ó
+	GameSetup_Item1						:SetCheck(n1);					-- æ‹’ç»æ‰€æœ‰ä¿¡ä»¶
+	GameSetup_Item2						:SetCheck(n2);					-- æ‹’ç»åŠ æˆ‘å¥½å‹
+	GameSetup_Item3						:SetCheck(n3);					-- æ‹’ç»é»˜è®¤ç”Ÿä¿¡ä»¶
+	GameSetup_Item4						:SetCheck(n4);					-- æ‹’ç»äº¤æ˜“
+	GameSetup_Item5						:SetCheck(n5);					-- æ‹’ç»é˜Ÿä¼é‚€è¯·
+	GameSetup_Item6						:SetCheck(n6);					-- å…³é—­å½“å‰æ³¡æ³¡æ¡†
+	GameSetup_Item7						:SetCheck(n7);					-- æ‹’ç»æŸ¥çœ‹é…å¶
+	GameSetup_Item8						:SetCheck(n8);					-- è§’è‰²æ˜¾ç¤ºå¸½å­
+	GameSetup_Item9						:SetCheck(n9);					-- éèŠå¤©æ¨¡å¼
+	GameSetup_ChatBkg_Slider	:SetPosition(f10);			-- èŠå¤©èƒŒæ™¯é€æ˜åº¦
+	GameSetup_Item11					:SetCheck(n11);					-- å…³é—­å¿«æ·æ æç¤º
+	GameSetup_Lock						:SetCheck(n12);					-- é”å®šå¿«æ·æ 
+	GameSetup_Scene						:SetCheck(n13);					-- å¿«é€Ÿåˆ‡æ¢åœºæ™¯
+	GameSetup_ChatItem				:SetCheck(n15);					-- å¿«æ·é”®æŸ¥çœ‹é“¾æ¥
 
 end
 
 --===============================================
 -- GameSetup_Accept
--- È·¶¨
+-- ç¡®å®š
 --===============================================
 function GameSetup_Accept_Clicked()
 
 	local n1,n2,n3,n4,n5,n6,n7,n8,n9,f10,n11,n12,n13,n14,n15 = SystemSetup:GameGetData();
 
-	n1 = GameSetup_Item1:GetCheck();									-- ¾Ü¾øËùÓĞĞÅ¼ş
-	n2 = GameSetup_Item2:GetCheck();                  -- ¾Ü¾ø¼ÓÎÒºÃÓÑ       
-	n3 = GameSetup_Item3:GetCheck();                  -- ¾Ü¾øÄ¬ÈÏÉúĞÅ¼ş     
-	n4 = GameSetup_Item4:GetCheck();                  -- ¾Ü¾ø½»Ò×           
-	n5 = GameSetup_Item5:GetCheck();                  -- ¾Ü¾ø¶ÓÎéÑûÇë       
-	n6 = GameSetup_Item6:GetCheck();                  -- ¹Ø±Õµ±Ç°ÅİÅİ¿ò     
-	n7 = GameSetup_Item7:GetCheck();                  -- ¾Ü¾ø²é¿´ÅäÅ¼       
-	n8 = GameSetup_Item8:GetCheck();                  -- ½ÇÉ«ÏÔÊ¾Ã±×Ó       
-	n9 = GameSetup_Item9:GetCheck();                  -- ·ÇÁÄÌìÄ£Ê½
-	f10 = GameSetup_ChatBkg_Slider:GetPosition();     -- ÁÄÌì±³¾°Í¸Ã÷¶È
-	n11 = GameSetup_Item11:GetCheck();                -- ¹Ø±Õ¿ì½İÀ¸ÌáÊ¾  
-	n12 = GameSetup_Lock:GetCheck();                  -- Ëø¶¨¿ì½İÀ¸         
-	n13 = GameSetup_Scene:GetCheck();                 -- ¿ìËÙÇĞ»»³¡¾°       
-	n15 = GameSetup_ChatItem:GetCheck();              -- ¿ì½İ¼ü²é¿´Á´½Ó     
+	n1 = GameSetup_Item1:GetCheck();									-- æ‹’ç»æ‰€æœ‰ä¿¡ä»¶
+	n2 = GameSetup_Item2:GetCheck();                  -- æ‹’ç»åŠ æˆ‘å¥½å‹       
+	n3 = GameSetup_Item3:GetCheck();                  -- æ‹’ç»é»˜è®¤ç”Ÿä¿¡ä»¶     
+	n4 = GameSetup_Item4:GetCheck();                  -- æ‹’ç»äº¤æ˜“           
+	n5 = GameSetup_Item5:GetCheck();                  -- æ‹’ç»é˜Ÿä¼é‚€è¯·       
+	n6 = GameSetup_Item6:GetCheck();                  -- å…³é—­å½“å‰æ³¡æ³¡æ¡†     
+	n7 = GameSetup_Item7:GetCheck();                  -- æ‹’ç»æŸ¥çœ‹é…å¶       
+	n8 = GameSetup_Item8:GetCheck();                  -- è§’è‰²æ˜¾ç¤ºå¸½å­       
+	n9 = GameSetup_Item9:GetCheck();                  -- éèŠå¤©æ¨¡å¼
+	f10 = GameSetup_ChatBkg_Slider:GetPosition();     -- èŠå¤©èƒŒæ™¯é€æ˜åº¦
+	n11 = GameSetup_Item11:GetCheck();                -- å…³é—­å¿«æ·æ æç¤º  
+	n12 = GameSetup_Lock:GetCheck();                  -- é”å®šå¿«æ·æ          
+	n13 = GameSetup_Scene:GetCheck();                 -- å¿«é€Ÿåˆ‡æ¢åœºæ™¯       
+	n15 = GameSetup_ChatItem:GetCheck();              -- å¿«æ·é”®æŸ¥çœ‹é“¾æ¥     
 
 	SystemSetup:SaveGameSetup ( n1,n2,n3,n4,n5,n6,n7,n8,n9,tonumber(f10),n11,n12,n13,n14,n15 );
 	
@@ -101,7 +101,7 @@ end
 
 --===============================================
 -- GameSetup_Cancel
--- È¡Ïû
+-- å–æ¶ˆ
 --===============================================
 function GameSetup_Cancel_Clicked()
 
@@ -113,30 +113,30 @@ end
 
 --===============================================
 -- GameSetup_DefaultSetting
--- »Ö¸´Ä¬ÈÏ
+-- æ¢å¤é»˜è®¤
 --===============================================
 function GameSetup_Default_Clicked()
 
-	GameSetup_Item1						:SetCheck(0);							-- ¾Ü¾øËùÓĞĞÅ¼ş
-	GameSetup_Item2						:SetCheck(0);             -- ¾Ü¾ø¼ÓÎÒºÃÓÑ
-	GameSetup_Item3						:SetCheck(0);             -- ¾Ü¾øÄ¬ÈÏÉúĞÅ¼ş
-	GameSetup_Item4						:SetCheck(0);             -- ¾Ü¾ø½»Ò×
-	GameSetup_Item5						:SetCheck(0);             -- ¾Ü¾ø¶ÓÎéÑûÇë
-	GameSetup_Item6						:SetCheck(0);             -- ¹Ø±Õµ±Ç°ÅİÅİ¿ò
-	GameSetup_Item7						:SetCheck(0);             -- ¾Ü¾ø²é¿´ÅäÅ¼
-	GameSetup_Item8						:SetCheck(0);             -- ½ÇÉ«ÏÔÊ¾Ã±×Ó
-	GameSetup_Item9						:SetCheck(0);             -- ·ÇÁÄÌìÄ£Ê½
-	GameSetup_ChatBkg_Slider	:SetPosition(1);       		-- ÁÄÌì±³¾°Í¸Ã÷¶È
-	GameSetup_Item11					:SetCheck(1);							-- ¹Ø±Õ¿ì½İÀ¸ÌáÊ¾
-	GameSetup_Lock						:SetCheck(0);             -- Ëø¶¨¿ì½İÀ¸
-	GameSetup_Scene						:SetCheck(1);             -- ¿ìËÙÇĞ»»³¡¾°
-	GameSetup_ChatItem				:SetCheck(0);             -- ¿ì½İ¼ü²é¿´Á´½Ó
+	GameSetup_Item1						:SetCheck(0);							-- æ‹’ç»æ‰€æœ‰ä¿¡ä»¶
+	GameSetup_Item2						:SetCheck(0);             -- æ‹’ç»åŠ æˆ‘å¥½å‹
+	GameSetup_Item3						:SetCheck(0);             -- æ‹’ç»é»˜è®¤ç”Ÿä¿¡ä»¶
+	GameSetup_Item4						:SetCheck(0);             -- æ‹’ç»äº¤æ˜“
+	GameSetup_Item5						:SetCheck(0);             -- æ‹’ç»é˜Ÿä¼é‚€è¯·
+	GameSetup_Item6						:SetCheck(0);             -- å…³é—­å½“å‰æ³¡æ³¡æ¡†
+	GameSetup_Item7						:SetCheck(0);             -- æ‹’ç»æŸ¥çœ‹é…å¶
+	GameSetup_Item8						:SetCheck(0);             -- è§’è‰²æ˜¾ç¤ºå¸½å­
+	GameSetup_Item9						:SetCheck(0);             -- éèŠå¤©æ¨¡å¼
+	GameSetup_ChatBkg_Slider	:SetPosition(1);       		-- èŠå¤©èƒŒæ™¯é€æ˜åº¦
+	GameSetup_Item11					:SetCheck(1);							-- å…³é—­å¿«æ·æ æç¤º
+	GameSetup_Lock						:SetCheck(0);             -- é”å®šå¿«æ·æ 
+	GameSetup_Scene						:SetCheck(1);             -- å¿«é€Ÿåˆ‡æ¢åœºæ™¯
+	GameSetup_ChatItem				:SetCheck(0);             -- å¿«æ·é”®æŸ¥çœ‹é“¾æ¥
 
 end
 
 --===============================================
 -- GameSetup_ChatBkg_Slider
--- ÉèÖÃÁÄÌì±³¾°Í¸Ã÷¶È
+-- è®¾ç½®èŠå¤©èƒŒæ™¯é€æ˜åº¦
 --===============================================
 function GameSetup_ChatBkg_Change()
 	local pos = GameSetup_ChatBkg_Slider:GetPosition();

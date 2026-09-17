@@ -11,17 +11,17 @@ local PlayerMaxRage = 100;
 
 local StrikePoint = 0;
 
-local iMouseInPos = 0;	-- 0 :¿Õ°×´¦
-												-- 1 : ÔÚÑªÌõ´¦
-												-- 2 : ÔÚ·¨Á¦Ìõ´¦
-                        -- 3 : ÔÚÅ­ÆøÌõ´¦
+local iMouseInPos = 0;	-- 0 :ç©ºç™½å¤„
+												-- 1 : åœ¨è¡€æ¡å¤„
+												-- 2 : åœ¨æ³•åŠ›æ¡å¤„
+                        -- 3 : åœ¨æ€’æ°”æ¡å¤„
 local DoubleHit = {}
 
-local PetFlashTime = 10*1000			--ÕäÊŞ°´Å¥ÉÁË¸Ê±¼ä10ÃëÖÓ£¬µ¥Î»ÊÇºÁÃë£¬ËùÒÔ³ËÒÔ1000×ª»»ÎªÃë
-local HuoDongTime  = 30*1000      --»î¶¯°´Å¥ÉÁË¸Ê±¼ä30ÃëÖÓ
+local PetFlashTime = 10*1000			--çå…½æŒ‰é’®é—ªçƒæ—¶é—´10ç§’é’Ÿï¼Œå•ä½æ˜¯æ¯«ç§’ï¼Œæ‰€ä»¥ä¹˜ä»¥1000è½¬æ¢ä¸ºç§’
+local HuoDongTime  = 30*1000      --æ´»åŠ¨æŒ‰é’®é—ªçƒæ—¶é—´30ç§’é’Ÿ
 
 
-local LEVEL_LIMIT = 10;						--10¼¶ÒÔÏÂÎŞ·¨´ò¿ª
+local LEVEL_LIMIT = 10;						--10çº§ä»¥ä¸‹æ— æ³•æ‰“å¼€
 
 --OnLoad
 
@@ -32,7 +32,7 @@ function PlayerFrame_PreLoad()
 	this:RegisterEvent("UNIT_MANA");
 	this:RegisterEvent("UNIT_HP_PERCENT");
 	this:RegisterEvent("UNIT_MP_PERCENT");
-	this:RegisterEvent("UNIT_RAGE");			-- ×¢²áÅ­Æø
+	this:RegisterEvent("UNIT_RAGE");			-- æ³¨å†Œæ€’æ°”
 	
 	this:RegisterEvent("UNIT_MAX_HP");
 	this:RegisterEvent("UNIT_MP");
@@ -66,7 +66,7 @@ function PlayerFrame_OnLoad()
 	PlayerFrame_Captain:Hide();
 	PlayerFrame_ZhengShouZhenYouFlash:Hide();
 	PlayerFrame_UpdateBtnFlash:Hide();
-	--Ó¦¸Ã²ß»®Ğ´µ½×ÖµäºÍxml²¼¾ÖÎÄ¼şÀï PlayerFrame_ZhenShouZhengYou:SetToolTip("´ò¿ªÕ÷ÓÑ½»»¥½çÃæ");
+	--åº”è¯¥ç­–åˆ’å†™åˆ°å­—å…¸å’Œxmlå¸ƒå±€æ–‡ä»¶é‡Œ PlayerFrame_ZhenShouZhengYou:SetToolTip("æ‰“å¼€å¾å‹äº¤äº’ç•Œé¢");
 	PlayerFrame_ZhenShouZhengYou:SetToolTip("#{ZYPT_081103_001}");
 	
 end
@@ -83,10 +83,10 @@ function PlayerFrame_OnEvent(event)
 		--PlayerFrame_SP_Text:SetClippedByParent(0);
 		
 		PlayerFrame_Update();
-		-- ¸üĞÂÍ·ÏñĞÅÏ¢.
+		-- æ›´æ–°å¤´åƒä¿¡æ¯.
 		
 		--AxTrace( 0,0, "enter word!");
-		--AxTrace( 0,0, "¸üĞÂÍ·Ïñ");
+		--AxTrace( 0,0, "æ›´æ–°å¤´åƒ");
 		PlayerFrame_Update_Image();
 		return;
 	end
@@ -156,8 +156,8 @@ function PlayerFrame_OnEvent(event)
 		return;
 	end
 	
-	--AxTrace( 0,0, "¿ªÊ¼µÃµ½Í·Ïñ");
-	-- Í·ÏñĞÅÏ¢¸Ä±ä
+	--AxTrace( 0,0, "å¼€å§‹å¾—åˆ°å¤´åƒ");
+	-- å¤´åƒä¿¡æ¯æ”¹å˜
 	if( (event == "UNIT_FACE_IMAGE") and (arg0 == "player") ) then
 	
 		--AxTrace( 0,0, "UNIT_FACE_IMAGE");
@@ -195,7 +195,7 @@ function PlayerFrame_UpdateBtnOnClicked()
 end
 
 function PlayerFrame_Flash_PetFriend( who )
-	--who == 0 ¿ªÊ¼ÉÁË¸ £¬·ñÔòÍ£Ö¹ÉÁË¸
+	--who == 0 å¼€å§‹é—ªçƒ ï¼Œå¦åˆ™åœæ­¢é—ªçƒ
 	if( who == 0 ) then
 		PlayerFrame_ZhengShouZhenYouFlash:Show();
 	else
@@ -218,7 +218,7 @@ function PlayerFrame_Update()
 	
 		PlayerMaxHP = 1;
 	end;
-	PlayerFrame_HP:SetProgress(PlayerHP, PlayerMaxHP);
+	PlayerFrame_HP:SetProgress(PlayerMaxHP > 0 and math.min(1, math.max(0, PlayerHP / PlayerMaxHP)) or 0, 1);
 	if( PlayerHP / PlayerMaxHP > FlashPoint ) then
 		PlayerFrame_Mask:Hide();
 		PlayerFrame_HP_Flash:Play( false );
@@ -236,10 +236,10 @@ function PlayerFrame_Update()
 	
 		PlayerMaxMP = 1;
 	end;	
-	PlayerFrame_MP:SetProgress(PlayerMP, PlayerMaxMP);
+	PlayerFrame_MP:SetProgress(PlayerMaxMP > 0 and math.min(1, math.max(0, PlayerMP / PlayerMaxMP)) or 0, 1);
 	
-	--AxTrace( 0,0, "ÏÔÊ¾Å­Æø"..tostring(PlayerRage));
-	-- ÏÔÊ¾Å­Æø
+	--AxTrace( 0,0, "æ˜¾ç¤ºæ€’æ°”"..tostring(PlayerRage));
+	-- æ˜¾ç¤ºæ€’æ°”
 	PlayerRage = Player:GetData( "RAGE" );
   PlayerMaxRage = Player:GetData( "MAXRAGE" );
   if(0 == PlayerMaxRage) then
@@ -249,7 +249,7 @@ function PlayerFrame_Update()
  	PlayerFrame_SP:SetProgress(PlayerRage, PlayerMaxRage);
 	
 	--AxTrace( 0,0, "4");
-	-- ÏÔÊ¾Ãû×Ö
+	-- æ˜¾ç¤ºåå­—
 	local strName = Player:GetName();
 	
 	strName = "#cDED784"..strName;
@@ -274,7 +274,7 @@ function PlayerFrame_Update()
 	
 	
 	--AxTrace( 0,0, "7");
-	--ÏÔÊ¾µÈ¼¶
+	--æ˜¾ç¤ºç­‰çº§
 	local nNumber = Player:GetData( "LEVEL" );
 	PlayerFrame_Level:SetText("#cDED784"..tostring(nNumber));
 	
@@ -282,7 +282,7 @@ function PlayerFrame_Update()
 	
 end
 
---ÓÃ»§µ¥»÷ÁËÕ÷ÓÑÆ½Ì¨µÄ°´Å¥ modified by dun.liu
+--ç”¨æˆ·å•å‡»äº†å¾å‹å¹³å°çš„æŒ‰é’® modified by dun.liu
 function PlayerFrame_HitZhengShou()
 	local level = Player:GetData("LEVEL");
 	if level < LEVEL_LIMIT then
@@ -290,11 +290,11 @@ function PlayerFrame_HitZhengShou()
 		return;
 	end
 	OpenWindow("ZhengyouWindow")
-	RequestServerNoteLog(0);      --Ïòserver·¢ËÍÇëÇó£¬¼ÇÂ¼Ò»ÌõÈÕÖ¾
+	RequestServerNoteLog(0);      --å‘serverå‘é€è¯·æ±‚ï¼Œè®°å½•ä¸€æ¡æ—¥å¿—
 end
 
 function PlayerFrame_HP_Text_MouseEnter()
-	PlayerFrame_HP_Text:SetText( tostring( PlayerHP ) .. "/" .. tostring( PlayerMaxHP) );
+	PlayerFrame_HP_Text:SetText( string.format("%.0f", PlayerHP) .. "/" .. string.format("%.0f", PlayerMaxHP) );
 	iMouseInPos = 1;
 end
 
@@ -305,7 +305,7 @@ end
 
 function PlayerFrame_MP_Text_MouseEnter()
 	
-	PlayerFrame_MP_Text:SetText( tostring( PlayerMP ) .. "/" .. tostring( PlayerMaxMP) );
+	PlayerFrame_MP_Text:SetText( string.format("%.0f", PlayerMP) .. "/" .. string.format("%.0f", PlayerMaxMP) );
 	iMouseInPos = 2;
 end
 
@@ -330,29 +330,29 @@ function PlayerFrame_Update_Image()
 
 	local strFaceImage = Player:GetData( "PORTRAIT" );
 	
-	--AxTrace( 0,0, "Í·ÏñĞÅÏ¢!" .. tostring(strFaceImage));
-	-- ÉèÖÃÍ·ÏñĞÅÏ¢
+	--AxTrace( 0,0, "å¤´åƒä¿¡æ¯!" .. tostring(strFaceImage));
+	-- è®¾ç½®å¤´åƒä¿¡æ¯
 	PlayerFrame_Icon:SetProperty("Image", tostring(strFaceImage));
 	PlayerFrame_Icon_Action:SetProperty("NormalImage", tostring(strFaceImage));
 	PlayerFrame_Icon_Action:SetProperty("HoverImage", tostring(strFaceImage));
 	PlayerFrame_Icon_Action:SetProperty("PushedImage", tostring(strFaceImage));
 end
 
--- ÓÒ¼ü²Ëµ¥
+-- å³é”®èœå•
 function PlayerFrame_Show_Menu_Func()
 
-	--AxTrace( 0,0, "Player ÓÒ¼ü²Ëµ¥!");
+	--AxTrace( 0,0, "Player å³é”®èœå•!");
 	--OpenTargetMenu();
 	Player:ShowMySelfContexMenu();
 end
 
--- ×ó¼üÑ¡ÖĞ×Ô¼º
+-- å·¦é”®é€‰ä¸­è‡ªå·±
 function PlayerFrame_SelectMyselfAsTarget()
 	Player:SelectMyselfAsTarget();
 	
 end
 function PlayerFrame_ShowTooltip( type )
-	local strTooltip = "Ñª:"..tostring( PlayerHP ) .. "/" .. tostring( PlayerMaxHP).."#r".."Æø:"..tostring( PlayerMP ) .. "/" .. tostring( PlayerMaxMP).."#r".."Å­:"..tostring( PlayerRage ) .. "/" .. tostring( 1000);
+	local strTooltip = "è¡€:"..string.format("%.0f", PlayerHP) .. "/" .. string.format("%.0f", PlayerMaxHP).."#r".."æ°”:"..string.format("%.0f", PlayerMP) .. "/" .. string.format("%.0f", PlayerMaxMP).."#r".."æ€’:"..tostring( PlayerRage ) .. "/" .. tostring( 1000);
 	if( type == 1 )	then
 		PlayerFrame_HP:SetToolTip( strTooltip );
 	elseif( type == 2 ) then

@@ -1,12 +1,12 @@
--- ±¦Ê¯ÏâÇ¶
+-- å®çŸ³é•¶åµŒ
 
--- ½Å±¾ºÅ
+-- è„šæœ¬å·
 x701614_g_scriptId = 701614
 
--- Ó²ĞÔÉè¶¨µÄ×°±¸×î´ó¿ÉÏâÇ¶±¦Ê¯Êı
+-- ç¡¬æ€§è®¾å®šçš„è£…å¤‡æœ€å¤§å¯é•¶åµŒå®çŸ³æ•°
 x701614_g_MaxEquipGemCount = 3
 
--- ×°±¸ÔÊĞíÏâÇ¶µÄ±¦Ê¯ÀàĞÍ±í
+-- è£…å¤‡å…è®¸é•¶åµŒçš„å®çŸ³ç±»å‹è¡¨
 x701614_g_EquipGemTable = {}
 x701614_g_EquipGemTable[HEQUIP_WEAPON] = { 1, 2, 3, 4, 21 }
 x701614_g_EquipGemTable[HEQUIP_CAP] = { 11, 12, 13, 14 }
@@ -23,7 +23,7 @@ x701614_g_EquipGemTable[HEQUIP_WRIST] = {1, 2, 3, 4, 21  }
 x701614_g_EquipGemTable[HEQUIP_SHOULDER] = { 11, 12, 13, 14 }
 x701614_g_EquipGemTable[HEQUIP_DARK] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21 }
 
--- ÏâÇ¶²»Í¬µÈ¼¶±¦Ê¯µÄ½ğÇ®ÏûºÄ±í
+-- é•¶åµŒä¸åŒç­‰çº§å®çŸ³çš„é‡‘é’±æ¶ˆè€—è¡¨
 x701614_g_EquipGemCost = {}
 x701614_g_EquipGemCost[1] = 5000
 x701614_g_EquipGemCost[2] = 6000
@@ -35,10 +35,10 @@ x701614_g_EquipGemCost[7] = 11000
 x701614_g_EquipGemCost[8] = 12000
 x701614_g_EquipGemCost[9] = 13000
 
--- ±¦Ê¯ÏâÇ¶·û±í
+-- å®çŸ³é•¶åµŒç¬¦è¡¨
 x701614_g_AssisMat = { { idx = 30900009, odds = 50 }, { idx = 30900010, odds = 100 } }
 
--- ±¦Ê¯Ç¿»¯·û
+-- å®çŸ³å¼ºåŒ–ç¬¦
 x701614_g_FastenMat = 30900011
 
 x701614_GemEmbed_four_ID = {
@@ -47,19 +47,19 @@ x701614_GemEmbed_four_ID = {
 													}		
 
 --**********************************************************************
--- ÈÎÎñÈë¿Úº¯Êı
+-- ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************************************************
 function x701614_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************************************************
--- ÁĞ¾ÙÊÂ¼ş
+-- åˆ—ä¸¾äº‹ä»¶
 --**********************************************************************
 function x701614_OnEnumerate( sceneId, selfId, targetId )
 end
 
 --**********************************************************************
--- ÅĞ¶ÏÊÇ·ñ±¦Ê¯
+-- åˆ¤æ–­æ˜¯å¦å®çŸ³
 --**********************************************************************
 function x701614_IsGem( itemIndex )
 	if floor( itemIndex / 10000000 ) == 5 then
@@ -70,12 +70,12 @@ function x701614_IsGem( itemIndex )
 end
 
 --**********************************************************************
--- ½øĞĞ±¦Ê¯ÏâÇ¶
--- ³ÌĞòÖĞµ÷ÓÃ
+-- è¿›è¡Œå®çŸ³é•¶åµŒ
+-- ç¨‹åºä¸­è°ƒç”¨
 --**********************************************************************
 function x701614_GemEmbed( sceneId, selfId, GemBagIndex, EquipBagIndex, MatBagIndex1, MatBagIndex2 )
 	local gemIdx, equipIdx, matIdx1, matIdx2 = -1, -1, -1, -1
-	local odds = 25														-- ³É¹¦ÂÊ
+	local odds = 25														-- æˆåŠŸç‡
 	local szTransferItem = ""
 	local	GemIsBind = 0;
 	local EquipIsBind = 0;
@@ -89,7 +89,7 @@ function x701614_GemEmbed( sceneId, selfId, GemBagIndex, EquipBagIndex, MatBagIn
 	end
 	
 	local itemTableIndex = LuaFnGetItemTableIndexByIndex( sceneId, selfId, EquipBagIndex )
-	-- ñÒÉÙÎ¢£¬2008.7.1¡£ÖØÂ¥½ä¡¢ÖØÂ¥ÓñµÄ»úÖÆĞŞ¸Ä£º1¡¢¿ÉÒÔ´ò¿×£»2¡¢¿ÉÒÔÏâÇ¶±¦Ê¯£¬µ«Ö»ÄÜÏâÇ¶²»°ó¶¨µÄ±¦Ê¯
+	-- è¤šå°‘å¾®ï¼Œ2008.7.1ã€‚é‡æ¥¼æˆ’ã€é‡æ¥¼ç‰çš„æœºåˆ¶ä¿®æ”¹ï¼š1ã€å¯ä»¥æ‰“å­”ï¼›2ã€å¯ä»¥é•¶åµŒå®çŸ³ï¼Œä½†åªèƒ½é•¶åµŒä¸ç»‘å®šçš„å®çŸ³
 	if(GemIsBind == 1) then
 	  	if(itemTableIndex == 10422016 or itemTableIndex == 10423024) then
 	  		return OR_STUFF_LACK
@@ -113,8 +113,8 @@ function x701614_GemEmbed( sceneId, selfId, GemBagIndex, EquipBagIndex, MatBagIn
 	end
 	
 	
-	-- ÅĞ¶Ï±¦Ê¯ºÏ·¨ĞÔ
-	if LuaFnIsItemAvailable( sceneId, selfId, GemBagIndex ) < 1 then	-- Ê¹ÓÃÓĞÎÊÌâµÄÎïÆ·ÔòÍË³öÁ÷³Ì
+	-- åˆ¤æ–­å®çŸ³åˆæ³•æ€§
+	if LuaFnIsItemAvailable( sceneId, selfId, GemBagIndex ) < 1 then	-- ä½¿ç”¨æœ‰é—®é¢˜çš„ç‰©å“åˆ™é€€å‡ºæµç¨‹
 		return OR_STUFF_LACK
 	else
 		gemIdx = LuaFnGetItemTableIndexByIndex( sceneId, selfId, GemBagIndex )
@@ -124,20 +124,20 @@ function x701614_GemEmbed( sceneId, selfId, GemBagIndex, EquipBagIndex, MatBagIn
 		end
 	end
 
-	-- ÅĞ¶Ï×°±¸ºÏ·¨ĞÔ
+	-- åˆ¤æ–­è£…å¤‡åˆæ³•æ€§
 	local equipType = LuaFnGetBagEquipType( sceneId, selfId, EquipBagIndex )
 	if LuaFnIsItemLocked( sceneId, selfId, EquipBagIndex ) ~= 0
-	or equipType == -1 then												-- Ê¹ÓÃÓĞÎÊÌâµÄÎïÆ·ÔòÍË³öÁ÷³Ì
+	or equipType == -1 then												-- ä½¿ç”¨æœ‰é—®é¢˜çš„ç‰©å“åˆ™é€€å‡ºæµç¨‹
 		return OR_STUFF_LACK
 	else
 		equipIdx = LuaFnGetItemTableIndexByIndex( sceneId, selfId, EquipBagIndex )
 	end
 	
-	-- ÅĞ¶ÏÊÇ·ñ»¹¿ÉÒÔÏâÇ¶¸ü¶à±¦Ê¯
+	-- åˆ¤æ–­æ˜¯å¦è¿˜å¯ä»¥é•¶åµŒæ›´å¤šå®çŸ³
 	local equipMaxGemCount = GetBagGemCount( sceneId, selfId, EquipBagIndex )
 	local equipEmbededGemCount = GetGemEmbededCount( sceneId, selfId, EquipBagIndex )
 
-	--modi:lbyÊÇ·ñ¿ÉÒÔÏâÇ¶
+	--modi:lbyæ˜¯å¦å¯ä»¥é•¶åµŒ
 	if equipMaxGemCount > equipEmbededGemCount and equipEmbededGemCount >= x701614_g_MaxEquipGemCount then
 
 		return OR_GEM_EMBED_LACK
@@ -149,20 +149,20 @@ function x701614_GemEmbed( sceneId, selfId, GemBagIndex, EquipBagIndex, MatBagIn
 
 	
 	
-	-- ÅĞ¶ÏºÍ×°±¸ÉÏµÄÏÖÓĞ±¦Ê¯ÊÇ·ñÓĞ³åÍ»
+	-- åˆ¤æ–­å’Œè£…å¤‡ä¸Šçš„ç°æœ‰å®çŸ³æ˜¯å¦æœ‰å†²çª
 	local gemEmbededIdx = -1
 	local gemType = LuaFnGetItemType( gemIdx )
 	for i = 0, equipMaxGemCount - 1 do
 		gemEmbededIdx = GetGemEmbededType( sceneId, selfId, EquipBagIndex, i )
 		if gemEmbededIdx ~= -1 then
-			-- ¶Ô±ÈÁ½¿Å±¦Ê¯µÄÀàĞÍ£¨±¦Ê¯´óÀà£©
+			-- å¯¹æ¯”ä¸¤é¢—å®çŸ³çš„ç±»å‹ï¼ˆå®çŸ³å¤§ç±»ï¼‰
 			if gemType == LuaFnGetItemType( gemEmbededIdx ) then
 				return OR_GEM_CONFLICT
 			end
 		end
 	end
 
-	-- ÅĞ¶Ï±¦Ê¯ºÍ×°±¸µÄÆ¥ÅäĞÔ
+	-- åˆ¤æ–­å®çŸ³å’Œè£…å¤‡çš„åŒ¹é…æ€§
 	if not x701614_g_EquipGemTable[equipType] then
 		return OR_GEM_NOT_FIT_EQUIP
 	end
@@ -179,7 +179,7 @@ function x701614_GemEmbed( sceneId, selfId, GemBagIndex, EquipBagIndex, MatBagIn
 		return OR_GEM_NOT_FIT_EQUIP
 	end
 
-	-- ÅĞ¶Ï¸¨Öú²ÄÁÏµÄÓĞĞ§ĞÔ
+	-- åˆ¤æ–­è¾…åŠ©ææ–™çš„æœ‰æ•ˆæ€§
 	if MatBagIndex1 == -1 or LuaFnIsItemAvailable( sceneId, selfId, MatBagIndex1 ) < 1 then
 		MatBagIndex1 = -1
 	else
@@ -193,13 +193,13 @@ function x701614_GemEmbed( sceneId, selfId, GemBagIndex, EquipBagIndex, MatBagIn
 			end
 		end
 
-		if findFlag == 0 then													-- Õâ¸ö¶«Î÷²»ÊÇÏâÇ¶·û
+		if findFlag == 0 then													-- è¿™ä¸ªä¸œè¥¿ä¸æ˜¯é•¶åµŒç¬¦
 			MatBagIndex1 = -1
 			matIdx1 = -1
 		end
 	end
 	
-	-- ±ØĞëÏâÇ¶·û
+	-- å¿…é¡»é•¶åµŒç¬¦
 	if MatBagIndex1 == -1 then
 		return OR_GEM_NEED_STUFF
 	end
@@ -209,24 +209,24 @@ function x701614_GemEmbed( sceneId, selfId, GemBagIndex, EquipBagIndex, MatBagIn
 	else
 		matIdx2 = LuaFnGetItemTableIndexByIndex( sceneId, selfId, MatBagIndex2 )
 
-		if matIdx2 ~= x701614_g_FastenMat then											-- Õâ¸ö¶«Î÷²»ÊÇÇ¿»¯·û
+		if matIdx2 ~= x701614_g_FastenMat then											-- è¿™ä¸ªä¸œè¥¿ä¸æ˜¯å¼ºåŒ–ç¬¦
 			MatBagIndex2 = -1
 			matIdx2 = -1
 		end
 	end
 
-	-- ÅĞ¶Ï½ğÇ®ÊıÁ¿
+	-- åˆ¤æ–­é‡‘é’±æ•°é‡
 	local gemQual = GetItemQuality( gemIdx )
 	local cost = x701614_g_EquipGemCost[gemQual]
 	if not cost then
 		cost = 0
 	end
 
-	-- µÚÒ»¸ö¿×Ô­¼Û£¬ÏâÇ¶µÚ¶ş¸ö¿×ÊÕ·Ñ¡Á2£¬ÏâÇ¶µÚÈı¸ö¿×ÊÕ·Ñ¡Á3
+	-- ç¬¬ä¸€ä¸ªå­”åŸä»·ï¼Œé•¶åµŒç¬¬äºŒä¸ªå­”æ”¶è´¹Ã—2ï¼Œé•¶åµŒç¬¬ä¸‰ä¸ªå­”æ”¶è´¹Ã—3
 	cost = cost * ( equipEmbededGemCount + 1 )
 
-	-- °´ÕÕ¹æÔò½øĞĞÏûºÄ
-	-- ²»¹Ü³É¹¦Ê§°Ü¶¼ÏûºÄ½ğÇ®¡¢ÌØÊâ²ÄÁÏ
+	-- æŒ‰ç…§è§„åˆ™è¿›è¡Œæ¶ˆè€—
+	-- ä¸ç®¡æˆåŠŸå¤±è´¥éƒ½æ¶ˆè€—é‡‘é’±ã€ç‰¹æ®Šææ–™
 	if GetMoney(sceneId, selfId) + GetMoneyJZ(sceneId, selfId) < cost then
 		return OR_NOTENOUGH_MONEY
 	end
@@ -243,7 +243,7 @@ function x701614_GemEmbed( sceneId, selfId, GemBagIndex, EquipBagIndex, MatBagIn
 		LuaFnEraseItem( sceneId, selfId, MatBagIndex2 )
 	end
 
-	-- Èç¹û³É¹¦
+	-- å¦‚æœæˆåŠŸ
 	local randRet = LuaFnGemEmbedRandom();
 	if odds >= randRet then
 		local ret = GemEnchasing( sceneId, selfId, GemBagIndex, EquipBagIndex )
@@ -259,15 +259,15 @@ function x701614_GemEmbed( sceneId, selfId, GemBagIndex, EquipBagIndex, MatBagIn
 			local name = GetName( sceneId, selfId )
 
 			local szTransferEquip = GetBagItemTransfer( sceneId, selfId, EquipBagIndex )
-			local message = format("#W#{_INFOUSR%s}#HÏò#W#{_INFOMSG%s}#HÏâÇ¶ÁËÒ»¿Å#W#{_INFOMSG%s}#H£¬´ó·ùµÄÌáÉıÁË×°±¸µÄÄÜÁ¦¡£", name, szTransferEquip, szTransferItem);
+			local message = format("#W#{_INFOUSR%s}#Hå‘#W#{_INFOMSG%s}#Hé•¶åµŒäº†ä¸€é¢—#W#{_INFOMSG%s}#Hï¼Œå¤§å¹…çš„æå‡äº†è£…å¤‡çš„èƒ½åŠ›ã€‚", name, szTransferEquip, szTransferItem);
 			
-			--¹«¸æ¾«¼ò£¬Ğ¡ÓÚ3¼¶µÄ±¦Ê¯ÏâÇ¶²»·¢¹«¸æÏûÏ¢
+			--å…¬å‘Šç²¾ç®€ï¼Œå°äº3çº§çš„å®çŸ³é•¶åµŒä¸å‘å…¬å‘Šæ¶ˆæ¯
 			if (gemQual >= 3) then
 				BroadMsgByChatPipe( sceneId, selfId, message, 4 )
 			end
 
-			--[ÖØ¸´ÌáÊ¾]
-			--x701614_MsgBox( sceneId, selfId, "#Y¹§Ï²Äã£¬ÏâÇ¶³É¹¦£¡" )
+			--[é‡å¤æç¤º]
+			--x701614_MsgBox( sceneId, selfId, "#Yæ­å–œä½ ï¼Œé•¶åµŒæˆåŠŸï¼" )
 			--Add Log
 			LogInfo	= format( "[EMBED]: sceneId=%d, GUID=%0X, bSuc=%d, idOldGem=%d, idEqp=%d, idMat0=%d, idMat1=%d, idNewGem=%d",
 				sceneId,
@@ -280,13 +280,13 @@ function x701614_GemEmbed( sceneId, selfId, GemBagIndex, EquipBagIndex, MatBagIn
 				gemIdx )
 			WriteDebugLog( sceneId, selfId, LogInfo )
 		end
-	-- Èç¹ûÊ§°Ü
+	-- å¦‚æœå¤±è´¥
 	else
-		-- Èç¹ûÍæ¼ÒÓĞ±¦Ê¯Ç¿»¯·û£¬ÏâÇ¶Ê§°ÜÖ®ºó±¦Ê¯½«»á½µM=1¼¶£¬Îª0¾ÍÏûÊ§¡£
+		-- å¦‚æœç©å®¶æœ‰å®çŸ³å¼ºåŒ–ç¬¦ï¼Œé•¶åµŒå¤±è´¥ä¹‹åå®çŸ³å°†ä¼šé™M=1çº§ï¼Œä¸º0å°±æ¶ˆå¤±ã€‚
 		local qualDec			= 1
 		local	gemIdx_new	= -1
 
-		-- Èç¹ûÍæ¼ÒÃ»ÓĞ±¦Ê¯Ç¿»¯·û£¬ÄÇÃ´ÏâÇ¶Ê§°ÜÖ®ºó±¦Ê¯½«»á½µN=2¼¶£¬Îª0¾ÍÏûÊ§¡£
+		-- å¦‚æœç©å®¶æ²¡æœ‰å®çŸ³å¼ºåŒ–ç¬¦ï¼Œé‚£ä¹ˆé•¶åµŒå¤±è´¥ä¹‹åå®çŸ³å°†ä¼šé™N=2çº§ï¼Œä¸º0å°±æ¶ˆå¤±ã€‚
 		if MatBagIndex2 == -1 then
 			qualDec = qualDec + 1
 		end
@@ -299,9 +299,9 @@ function x701614_GemEmbed( sceneId, selfId, GemBagIndex, EquipBagIndex, MatBagIn
 			if(GemIsBind == 1 or CharmIsBind == 1 or OddsIsBind == 1) then
 				LuaFnItemBind(sceneId, selfId, GemBagIndex)
 			end
-			x701614_MsgBox( sceneId, selfId, "#YºÜÒÅº¶£¬ÏâÇ¶Ê§°Ü£¬±¦Ê¯½µÁË"..qualDec.."¼¶£¡" )
+			x701614_MsgBox( sceneId, selfId, "#Yå¾ˆé—æ†¾ï¼Œé•¶åµŒå¤±è´¥ï¼Œå®çŸ³é™äº†"..qualDec.."çº§ï¼" )
 		else
-			x701614_MsgBox( sceneId, selfId, "#YºÜÒÅº¶£¬ÏâÇ¶Ê§°Ü£¬±¦Ê¯Ëğ»µ£¡" )
+			x701614_MsgBox( sceneId, selfId, "#Yå¾ˆé—æ†¾ï¼Œé•¶åµŒå¤±è´¥ï¼Œå®çŸ³æŸåï¼" )
 		end
 		--Add Log
 		LogInfo	= format( "[EMBED]: sceneId=%d, GUID=%0X, bSuc=%d, idOldGem=%d, idEqp=%d, idMat0=%d, idMat1=%d, idNewGem=%d",
@@ -322,21 +322,21 @@ function x701614_GemEmbed( sceneId, selfId, GemBagIndex, EquipBagIndex, MatBagIn
 		return OR_FAILURE
 	end
 
-	-- °´ÕÕ³É¹¦ÂÊ½øĞĞºÏ³É
+	-- æŒ‰ç…§æˆåŠŸç‡è¿›è¡Œåˆæˆ
 	return OR_OK
 end
 
 --**********************************
---ĞÅÏ¢ÌáÊ¾
+--ä¿¡æ¯æç¤º
 --**********************************
 function x701614_MsgBox( sceneId, selfId, str )
 
-	--ĞÑÄ¿ÌáÊ¾
+	--é†’ç›®æç¤º
 	BeginEvent( sceneId )
 		AddText( sceneId, str )
 	EndEvent( sceneId )
 	DispatchMissionTips( sceneId, selfId )
-	--ÆµµÀÌáÊ¾
+	--é¢‘é“æç¤º
 	Msg2Player( sceneId, selfId, str, MSG2PLAYER_PARA )
 
 end
@@ -344,12 +344,12 @@ end
 
 																						
 --**********************************************************************
--- ½øĞĞµÚËÄ¸ö±¦Ê¯ÏâÇ¶
--- ³ÌĞòÖĞµ÷ÓÃ
+-- è¿›è¡Œç¬¬å››ä¸ªå®çŸ³é•¶åµŒ
+-- ç¨‹åºä¸­è°ƒç”¨
 --**********************************************************************
 function x701614_GemEmbed_Four( sceneId, selfId, GemBagIndex, EquipBagIndex, MatBagIndex1, MatBagIndex2 )
 	local gemIdx, equipIdx, matIdx1, matIdx2 = -1, -1, -1, -1
-	local odds = 25														-- ³É¹¦ÂÊ
+	local odds = 25														-- æˆåŠŸç‡
 	local szTransferItem = ""
 	local	GemIsBind = 0;
 	local EquipIsBind = 0;
@@ -363,7 +363,7 @@ function x701614_GemEmbed_Four( sceneId, selfId, GemBagIndex, EquipBagIndex, Mat
 	end
 	
 	local itemTableIndex = LuaFnGetItemTableIndexByIndex( sceneId, selfId, EquipBagIndex )
-	-- ñÒÉÙÎ¢£¬2008.7.1¡£ÖØÂ¥½ä¡¢ÖØÂ¥ÓñµÄ»úÖÆĞŞ¸Ä£º1¡¢¿ÉÒÔ´ò¿×£»2¡¢¿ÉÒÔÏâÇ¶±¦Ê¯£¬µ«Ö»ÄÜÏâÇ¶²»°ó¶¨µÄ±¦Ê¯
+	-- è¤šå°‘å¾®ï¼Œ2008.7.1ã€‚é‡æ¥¼æˆ’ã€é‡æ¥¼ç‰çš„æœºåˆ¶ä¿®æ”¹ï¼š1ã€å¯ä»¥æ‰“å­”ï¼›2ã€å¯ä»¥é•¶åµŒå®çŸ³ï¼Œä½†åªèƒ½é•¶åµŒä¸ç»‘å®šçš„å®çŸ³
 	if(GemIsBind == 1) then
 	  	if(itemTableIndex == 10422016 or itemTableIndex == 10423024) then
 	  		return OR_STUFF_LACK
@@ -387,8 +387,8 @@ function x701614_GemEmbed_Four( sceneId, selfId, GemBagIndex, EquipBagIndex, Mat
 	end
 	
 	
-	-- ÅĞ¶Ï±¦Ê¯ºÏ·¨ĞÔ
-	if LuaFnIsItemAvailable( sceneId, selfId, GemBagIndex ) < 1 then	-- Ê¹ÓÃÓĞÎÊÌâµÄÎïÆ·ÔòÍË³öÁ÷³Ì
+	-- åˆ¤æ–­å®çŸ³åˆæ³•æ€§
+	if LuaFnIsItemAvailable( sceneId, selfId, GemBagIndex ) < 1 then	-- ä½¿ç”¨æœ‰é—®é¢˜çš„ç‰©å“åˆ™é€€å‡ºæµç¨‹
 		return OR_STUFF_LACK
 	else
 		gemIdx = LuaFnGetItemTableIndexByIndex( sceneId, selfId, GemBagIndex )
@@ -400,35 +400,35 @@ function x701614_GemEmbed_Four( sceneId, selfId, GemBagIndex, EquipBagIndex, Mat
 		
 	end
 
-	-- ÅĞ¶Ï×°±¸ºÏ·¨ĞÔ
+	-- åˆ¤æ–­è£…å¤‡åˆæ³•æ€§
 	local equipType = LuaFnGetBagEquipType( sceneId, selfId, EquipBagIndex )
 	
-	if LuaFnIsItemLocked( sceneId, selfId, EquipBagIndex ) ~= 0	or equipType == -1 then												-- Ê¹ÓÃÓĞÎÊÌâµÄÎïÆ·ÔòÍË³öÁ÷³Ì
+	if LuaFnIsItemLocked( sceneId, selfId, EquipBagIndex ) ~= 0	or equipType == -1 then												-- ä½¿ç”¨æœ‰é—®é¢˜çš„ç‰©å“åˆ™é€€å‡ºæµç¨‹
 		return OR_STUFF_LACK
 	else
 		equipIdx = LuaFnGetItemTableIndexByIndex( sceneId, selfId, EquipBagIndex )
 	end
 	
-	-- ÅĞ¶ÏÊÇ·ñ»¹¿ÉÒÔÏâÇ¶¸ü¶à±¦Ê¯
+	-- åˆ¤æ–­æ˜¯å¦è¿˜å¯ä»¥é•¶åµŒæ›´å¤šå®çŸ³
 	local equipMaxGemCount = GetBagGemCount( sceneId, selfId, EquipBagIndex )
 	local equipEmbededGemCount = GetGemEmbededCount( sceneId, selfId, EquipBagIndex )
 
 
-	if equipMaxGemCount < 4 then --´ò¿×Êı²»ÄÜĞ¡ÓÚ4¸ö
+	if equipMaxGemCount < 4 then --æ‰“å­”æ•°ä¸èƒ½å°äº4ä¸ª
 		return OR_GEM_NO_FOUR_SLOT
 	end 
 		
-	if equipEmbededGemCount > 3 then --ÏâÇ¶±¦Ê¯²»ÄÜ´óÓÚ3
+	if equipEmbededGemCount > 3 then --é•¶åµŒå®çŸ³ä¸èƒ½å¤§äº3
 		return OR_GEM_ENCHASE_FOUR
 	end
 		
-	if equipEmbededGemCount < 3 then --ÏâÇ¶±¦Ê¯²»ÄÜĞ¡ÓÚ3
+	if equipEmbededGemCount < 3 then --é•¶åµŒå®çŸ³ä¸èƒ½å°äº3
 		return OR_GEM_MUST_ENCHASE_THREE
 	end
 	
 
 	
-	-- Èç¹ûÊÇÑª¾«Ê¯»òÕßºì±¦Ê¯£¬Ôò·ÅÈëÊ§°Ü
+	-- å¦‚æœæ˜¯è¡€ç²¾çŸ³æˆ–è€…çº¢å®çŸ³ï¼Œåˆ™æ”¾å…¥å¤±è´¥
 	for i, Data in x701614_GemEmbed_four_ID do
 		if x701614_GemEmbed_four_ID[i] == gemIdx then
 				
@@ -441,7 +441,7 @@ function x701614_GemEmbed_Four( sceneId, selfId, GemBagIndex, EquipBagIndex, Mat
 	end
 	 
 	
-	-- ÅĞ¶Ï±¦Ê¯ºÍ×°±¸µÄÆ¥ÅäĞÔ
+	-- åˆ¤æ–­å®çŸ³å’Œè£…å¤‡çš„åŒ¹é…æ€§
 	if not x701614_g_EquipGemTable[equipType] then
 		return OR_GEM_NOT_FIT_EQUIP
 	end
@@ -463,7 +463,7 @@ function x701614_GemEmbed_Four( sceneId, selfId, GemBagIndex, EquipBagIndex, Mat
 
 
 	
-	-- ÅĞ¶Ï¸¨Öú²ÄÁÏµÄÓĞĞ§ĞÔ
+	-- åˆ¤æ–­è¾…åŠ©ææ–™çš„æœ‰æ•ˆæ€§
 	if MatBagIndex1 == -1 or LuaFnIsItemAvailable( sceneId, selfId, MatBagIndex1 ) < 1 then
 		MatBagIndex1 = -1
 	else
@@ -477,13 +477,13 @@ function x701614_GemEmbed_Four( sceneId, selfId, GemBagIndex, EquipBagIndex, Mat
 			end
 		end
 
-		if findFlag == 0 then													-- Õâ¸ö¶«Î÷²»ÊÇÏâÇ¶·û
+		if findFlag == 0 then													-- è¿™ä¸ªä¸œè¥¿ä¸æ˜¯é•¶åµŒç¬¦
 			MatBagIndex1 = -1
 			matIdx1 = -1
 		end
 	end
 	
-	-- ±ØĞëÏâÇ¶·û
+	-- å¿…é¡»é•¶åµŒç¬¦
 	if MatBagIndex1 == -1 then
 		return OR_GEM_NEED_STUFF
 	end
@@ -493,29 +493,29 @@ function x701614_GemEmbed_Four( sceneId, selfId, GemBagIndex, EquipBagIndex, Mat
 	else
 		matIdx2 = LuaFnGetItemTableIndexByIndex( sceneId, selfId, MatBagIndex2 )
 
-		if matIdx2 ~= x701614_g_FastenMat then											-- Õâ¸ö¶«Î÷²»ÊÇÇ¿»¯·û
+		if matIdx2 ~= x701614_g_FastenMat then											-- è¿™ä¸ªä¸œè¥¿ä¸æ˜¯å¼ºåŒ–ç¬¦
 			MatBagIndex2 = -1
 			matIdx2 = -1
 		end
 	end
 
-	-- ÅĞ¶Ï½ğÇ®ÊıÁ¿
+	-- åˆ¤æ–­é‡‘é’±æ•°é‡
 	local gemQual = GetItemQuality( gemIdx )
 	local cost = x701614_g_EquipGemCost[gemQual]
 	if not cost then
 		cost = 0
 	end
 
-	-- µÚÒ»¸ö¿×Ô­¼Û£¬ÏâÇ¶µÚ¶ş¸ö¿×ÊÕ·Ñ¡Á2£¬ÏâÇ¶µÚÈı¸ö¿×ÊÕ·Ñ¡Á3
+	-- ç¬¬ä¸€ä¸ªå­”åŸä»·ï¼Œé•¶åµŒç¬¬äºŒä¸ªå­”æ”¶è´¹Ã—2ï¼Œé•¶åµŒç¬¬ä¸‰ä¸ªå­”æ”¶è´¹Ã—3
 	cost = cost * ( equipEmbededGemCount + 1 )
 
-	local PlayerMoney = GetMoney( sceneId, selfId ) +  GetMoneyJZ(sceneId, selfId)  --½»×ÓÆÕ¼° Vega
+	local PlayerMoney = GetMoney( sceneId, selfId ) +  GetMoneyJZ(sceneId, selfId)  --äº¤å­æ™®åŠ Vega
 	if PlayerMoney < cost then
 		return OR_NOTENOUGH_MONEY
 	end
-	-- °´ÕÕ¹æÔò½øĞĞÏûºÄ
-	-- ²»¹Ü³É¹¦Ê§°Ü¶¼ÏûºÄ½ğÇ®¡¢ÌØÊâ²ÄÁÏ
-	local ret = LuaFnCostMoneyWithPriority( sceneId, selfId, cost )      --½»×ÓÆÕ¼° Vega
+	-- æŒ‰ç…§è§„åˆ™è¿›è¡Œæ¶ˆè€—
+	-- ä¸ç®¡æˆåŠŸå¤±è´¥éƒ½æ¶ˆè€—é‡‘é’±ã€ç‰¹æ®Šææ–™
+	local ret = LuaFnCostMoneyWithPriority( sceneId, selfId, cost )      --äº¤å­æ™®åŠ Vega
 	if ret < 0 then
 		return OR_NOTENOUGH_MONEY
 	end
@@ -528,7 +528,7 @@ function x701614_GemEmbed_Four( sceneId, selfId, GemBagIndex, EquipBagIndex, Mat
 		LuaFnEraseItem( sceneId, selfId, MatBagIndex2 )
 	end
 
-	-- Èç¹û³É¹¦
+	-- å¦‚æœæˆåŠŸ
 	local randRet = LuaFnGemEmbedRandom();
 	if odds >= randRet then
 		local ret = GemEnchasing( sceneId, selfId, GemBagIndex, EquipBagIndex )
@@ -544,11 +544,11 @@ function x701614_GemEmbed_Four( sceneId, selfId, GemBagIndex, EquipBagIndex, Mat
 			local name = GetName( sceneId, selfId )
 
 			local szTransferEquip = GetBagItemTransfer( sceneId, selfId, EquipBagIndex )
-			local message = format("#W#{_INFOUSR%s}#HÏò#W#{_INFOMSG%s}#HÏâÇ¶ÁËÒ»¿Å#W#{_INFOMSG%s}#H£¬´ó·ùµÄÌáÉıÁË×°±¸µÄÄÜÁ¦¡£", name, szTransferEquip, szTransferItem);
+			local message = format("#W#{_INFOUSR%s}#Hå‘#W#{_INFOMSG%s}#Hé•¶åµŒäº†ä¸€é¢—#W#{_INFOMSG%s}#Hï¼Œå¤§å¹…çš„æå‡äº†è£…å¤‡çš„èƒ½åŠ›ã€‚", name, szTransferEquip, szTransferItem);
 			BroadMsgByChatPipe( sceneId, selfId, message, 4 )
 
-			--[ÖØ¸´ÌáÊ¾]
-			--x701614_MsgBox( sceneId, selfId, "#Y¹§Ï²Äã£¬ÏâÇ¶³É¹¦£¡" )
+			--[é‡å¤æç¤º]
+			--x701614_MsgBox( sceneId, selfId, "#Yæ­å–œä½ ï¼Œé•¶åµŒæˆåŠŸï¼" )
 			--Add Log
 			LogInfo	= format( "[EMBED]: sceneId=%d, GUID=%0X, bSuc=%d, idOldGem=%d, idEqp=%d, idMat0=%d, idMat1=%d, idNewGem=%d",
 				sceneId,
@@ -561,13 +561,13 @@ function x701614_GemEmbed_Four( sceneId, selfId, GemBagIndex, EquipBagIndex, Mat
 				gemIdx )
 			WriteDebugLog( sceneId, selfId, LogInfo )
 		end
-	-- Èç¹ûÊ§°Ü
+	-- å¦‚æœå¤±è´¥
 	else
-		-- Èç¹ûÍæ¼ÒÓĞ±¦Ê¯Ç¿»¯·û£¬ÏâÇ¶Ê§°ÜÖ®ºó±¦Ê¯½«»á½µM=1¼¶£¬Îª0¾ÍÏûÊ§¡£
+		-- å¦‚æœç©å®¶æœ‰å®çŸ³å¼ºåŒ–ç¬¦ï¼Œé•¶åµŒå¤±è´¥ä¹‹åå®çŸ³å°†ä¼šé™M=1çº§ï¼Œä¸º0å°±æ¶ˆå¤±ã€‚
 		local qualDec			= 1
 		local	gemIdx_new	= -1
 
-		-- Èç¹ûÍæ¼ÒÃ»ÓĞ±¦Ê¯Ç¿»¯·û£¬ÄÇÃ´ÏâÇ¶Ê§°ÜÖ®ºó±¦Ê¯½«»á½µN=2¼¶£¬Îª0¾ÍÏûÊ§¡£
+		-- å¦‚æœç©å®¶æ²¡æœ‰å®çŸ³å¼ºåŒ–ç¬¦ï¼Œé‚£ä¹ˆé•¶åµŒå¤±è´¥ä¹‹åå®çŸ³å°†ä¼šé™N=2çº§ï¼Œä¸º0å°±æ¶ˆå¤±ã€‚
 		if MatBagIndex2 == -1 then
 			qualDec = qualDec + 1
 		end
@@ -580,9 +580,9 @@ function x701614_GemEmbed_Four( sceneId, selfId, GemBagIndex, EquipBagIndex, Mat
 			if(GemIsBind == 1 or CharmIsBind == 1 or OddsIsBind == 1) then
 				LuaFnItemBind(sceneId, selfId, GemBagIndex)
 			end
-			x701614_MsgBox( sceneId, selfId, "#YºÜÒÅº¶£¬ÏâÇ¶Ê§°Ü£¬±¦Ê¯½µÁË"..qualDec.."¼¶£¡" )
+			x701614_MsgBox( sceneId, selfId, "#Yå¾ˆé—æ†¾ï¼Œé•¶åµŒå¤±è´¥ï¼Œå®çŸ³é™äº†"..qualDec.."çº§ï¼" )
 		else
-			x701614_MsgBox( sceneId, selfId, "#YºÜÒÅº¶£¬ÏâÇ¶Ê§°Ü£¬±¦Ê¯Ëğ»µ£¡" )
+			x701614_MsgBox( sceneId, selfId, "#Yå¾ˆé—æ†¾ï¼Œé•¶åµŒå¤±è´¥ï¼Œå®çŸ³æŸåï¼" )
 		end
 		--Add Log
 		LogInfo	= format( "[EMBED]: sceneId=%d, GUID=%0X, bSuc=%d, idOldGem=%d, idEqp=%d, idMat0=%d, idMat1=%d, idNewGem=%d",
@@ -603,6 +603,6 @@ function x701614_GemEmbed_Four( sceneId, selfId, GemBagIndex, EquipBagIndex, Mat
 		return OR_FAILURE
 	end
 
-	-- °´ÕÕ³É¹¦ÂÊ½øĞĞºÏ³É
+	-- æŒ‰ç…§æˆåŠŸç‡è¿›è¡Œåˆæˆ
 	return OR_OK
 end

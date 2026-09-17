@@ -3,8 +3,8 @@ local g_MembersCtl = {};
 local g_clientNpcId = -1;
 local MAX_OBJ_DISTANCE = 3.0;
 
-local g_CurPage = 1;			--µ±Ç°ÔÚµÚ¼¸Ò³
-local g_TotalPage = 1;		--×î´óÒ³Êı
+local g_CurPage = 1;			--å½“å‰åœ¨ç¬¬å‡ é¡µ
+local g_TotalPage = 1;		--æœ€å¤§é¡µæ•°
 
 function CityShop_PreLoad()
 	this:RegisterEvent("UI_COMMAND");
@@ -14,7 +14,7 @@ function CityShop_PreLoad()
 end
 
 function CityShop_OnLoad()
-	--Òş²ØÎŞÓÃµÄ¿Ø¼ş
+	--éšè—æ— ç”¨çš„æ§ä»¶
 	CityShop_Repair:Hide();
 	CityShop_AllRepair:Hide();
 	
@@ -59,7 +59,7 @@ function City_Shop_CareEventHandle(careId, op, distance)
 		if(tonumber(careId) ~= g_clientNpcId) then
 			return;
 		end
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ı£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æœå’ŒNPCçš„è·ç¦»å¤§äºä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if(op == "distance" and tonumber(distance)>MAX_OBJ_DISTANCE or op=="destroy") then
 			this:Hide();
 		end
@@ -120,10 +120,10 @@ function City_Shop_DownPage()
 end
 
 function City_Shop_NextPage(dir)
-	if(g_CurPage == 1 and dir < 0) then return; end --ÒÑ¾­ÊÇµÚÒ»Ò³
+	if(g_CurPage == 1 and dir < 0) then return; end --å·²ç»æ˜¯ç¬¬ä¸€é¡µ
 	local newPage = g_CurPage+dir;
 	local newAction = (City:EnumCityShop((newPage-1)*12+1));
-	if(newAction:GetID() == 0) then return; end --ĞÂÒ³µÄµÚÒ»¸öÎ»ÖÃÉÏ¾ÍÃ»ÓĞÑĞ¾¿ÏîÄ¿
+	if(newAction:GetID() == 0) then return; end --æ–°é¡µçš„ç¬¬ä¸€ä¸ªä½ç½®ä¸Šå°±æ²¡æœ‰ç ”ç©¶é¡¹ç›®
 	
 	g_CurPage = newPage;	
 	City_Shop_Update_CurPage();
@@ -144,10 +144,10 @@ end
 function City_Shop_Act_Set(i)
 	local theAction, isSoldOut = City:EnumCityShop((g_CurPage-1)*12+(tonumber(i)));
 		if theAction:GetID() ~= 0 then
-			--ÉèÖÃActionItem
+			--è®¾ç½®ActionItem
 			g_MembersCtl[i].act:SetActionItem(theAction:GetID());
 
-			--ÉèÖÃÊÇ·ñÒÑ¾­ÊÛÍê
+			--è®¾ç½®æ˜¯å¦å·²ç»å”®å®Œ
 			--if(isSoldOut < 0) then
 			--	g_MembersCtl[i].act:Bright();
 			--elseif(isSoldOut > 0) then
@@ -157,21 +157,21 @@ function City_Shop_Act_Set(i)
 			g_MembersCtl[i].act:Show();
 			
 		if(City_Shop_Is_TicketPrice_Idx(City:GetCityShopInfo(0, "bid")) > 0) then
-			--ÉèÖÃÉÌÆ±½ğÇ®
+			--è®¾ç½®å•†ç¥¨é‡‘é’±
 			local money = City:GetCityShopInfo((g_CurPage-1)*12+(tonumber(i)), "tprice");
 			g_MembersCtl[i].money:SetProperty("MoneyNumber", tostring(money));
 			g_MembersCtl[i].money:Show();
 			
-			g_MembersCtl[i].txt:SetText("ÉÌÆ±½ğÇ®");
+			g_MembersCtl[i].txt:SetText("å•†ç¥¨é‡‘é’±");
 			g_MembersCtl[i].txt:Show();
 		else
-			--ÉèÖÃ½ğÇ®
+			--è®¾ç½®é‡‘é’±
 			local money = City:GetCityShopInfo((g_CurPage-1)*12+(tonumber(i)), "price");
 			g_MembersCtl[i].money:SetProperty("MoneyNumber", tostring(money));
 			g_MembersCtl[i].money:Show();
-			--ÉèÖÃ°ï¹±
+			--è®¾ç½®å¸®è´¡
 			local contribute = City:GetCityShopInfo((g_CurPage-1)*12+(tonumber(i)), "contribute");
-			g_MembersCtl[i].txt:SetText("°ï¹±£º"..tostring(contribute));
+			g_MembersCtl[i].txt:SetText("å¸®è´¡ï¼š"..tostring(contribute));
 			g_MembersCtl[i].txt:Show();
 		end
 		else
@@ -214,7 +214,7 @@ function City_Shop_Act_Clicked(idx)
 end
 
 function City_Shop_Is_TicketPrice_Idx(bid)
-	--Ä¿Ç°ÏûºÄÉÌÆ±½ğÇ®µÄ½¨ÖşÎïÀàĞÍ£¬¶ÔÓ¦enum BUILDING_TYPE
+	--ç›®å‰æ¶ˆè€—å•†ç¥¨é‡‘é’±çš„å»ºç­‘ç‰©ç±»å‹ï¼Œå¯¹åº”enum BUILDING_TYPE
 	local tTicket = {3};
 	local i = 1;
 	while i <= table.getn(tTicket) do

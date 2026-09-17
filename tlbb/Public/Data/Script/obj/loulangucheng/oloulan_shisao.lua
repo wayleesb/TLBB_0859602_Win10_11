@@ -1,6 +1,6 @@
 --NPC
---Ê¯É©
---Åä·½ÉÌÆ·
+--çŸ³å«‚
+--é…æ–¹å•†å“
 
 x001157_g_scriptId = 001157
 x001157_g_shoptableindex = 184
@@ -10,62 +10,62 @@ x001157_g_JewelryID = 30501173
 x001157_g_FractionSegmentID = 30501172
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x001157_OnDefaultEvent( sceneId, selfId, targetId )
 	BeginEvent( sceneId )
-		AddText( sceneId, "  ÎÒÓÎÀúÌìÏÂ£¬²ÅÊÕ¼¯µ½ÕâĞ©Åä·½£¡" )
+		AddText( sceneId, "  æˆ‘æ¸¸å†å¤©ä¸‹ï¼Œæ‰æ”¶é›†åˆ°è¿™äº›é…æ–¹ï¼" )
 --**********************************
---NPC¶Ô°×
+--NPCå¯¹ç™½
 --**********************************
-		AddNumText( sceneId, x001157_g_scriptId, "¿´¿´ÄãÂôµÄ¶«Î÷", 7, 0 )
-		--AddNumText( sceneId, x001157_g_scriptId, "#{SJHC_081106_01}", 6, 1 )--´òËéÉñ½Ú
-		--AddNumText( sceneId, x001157_g_scriptId, "#{SJHC_081106_02}", 6, 2 )--ºÏ³ÉÉñ½Ú
-		AddNumText( sceneId, x001157_g_scriptId, "º®ÓñºÏ³É", 6, 14 )
-		--AddNumText( sceneId, x001157_g_scriptId, "#{SJHC_081106_03}", 11, 16 )--´òËéÉñ½Ú°ïÖú
-		--AddNumText( sceneId, x001157_g_scriptId, "#{SJHC_081106_04}", 11, 17 )--ºÏ³ÉÉñ½Ú°ïÖú
-		AddNumText( sceneId, x001157_g_scriptId, "º®ÓñºÏ³É½éÉÜ", 11, 15 )
+		AddNumText( sceneId, x001157_g_scriptId, "çœ‹çœ‹ä½ å–çš„ä¸œè¥¿", 7, 0 )
+		--AddNumText( sceneId, x001157_g_scriptId, "#{SJHC_081106_01}", 6, 1 )--æ‰“ç¢ç¥èŠ‚
+		--AddNumText( sceneId, x001157_g_scriptId, "#{SJHC_081106_02}", 6, 2 )--åˆæˆç¥èŠ‚
+		AddNumText( sceneId, x001157_g_scriptId, "å¯’ç‰åˆæˆ", 6, 14 )
+		--AddNumText( sceneId, x001157_g_scriptId, "#{SJHC_081106_03}", 11, 16 )--æ‰“ç¢ç¥èŠ‚å¸®åŠ©
+		--AddNumText( sceneId, x001157_g_scriptId, "#{SJHC_081106_04}", 11, 17 )--åˆæˆç¥èŠ‚å¸®åŠ©
+		AddNumText( sceneId, x001157_g_scriptId, "å¯’ç‰åˆæˆä»‹ç»", 11, 15 )
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x001157_OnEventRequest( sceneId, selfId, targetId, eventId )
 	if GetNumText() == 0 then
 		DispatchShopItem( sceneId, selfId, targetId, x001157_g_shoptableindex )
 	end
 	
-	--´òËéÉñ½Ú½çÃæ
+	--æ‰“ç¢ç¥èŠ‚ç•Œé¢
 	--if GetNumText() == 1 then
 		--BeginEvent(sceneId)						
 			--AddText(sceneId,"#{SJHC_081106_05}")
-			--AddNumText(sceneId, x001157_g_scriptId, "È·¶¨", 8, 3 )
-			--AddNumText(sceneId, x001157_g_scriptId, "È¡Ïû", 8, 4 )
+			--AddNumText(sceneId, x001157_g_scriptId, "ç¡®å®š", 8, 3 )
+			--AddNumText(sceneId, x001157_g_scriptId, "å–æ¶ˆ", 8, 4 )
 		--EndEvent(sceneId)
 		--DispatchEventList(sceneId,selfId,targetId)
 		--return
 	--end
 	
-	--ºÏ³ÉÉñ½Ú½çÃæ
+	--åˆæˆç¥èŠ‚ç•Œé¢
 	--if GetNumText() == 2 then
 		--BeginEvent(sceneId)						
 			--AddText(sceneId,"#{SJHC_081106_09}")
-			--AddNumText(sceneId, x001157_g_scriptId, "È·¶¨", 8, 5 )
-			--AddNumText(sceneId, x001157_g_scriptId, "È¡Ïû", 8, 4 )
+			--AddNumText(sceneId, x001157_g_scriptId, "ç¡®å®š", 8, 5 )
+			--AddNumText(sceneId, x001157_g_scriptId, "å–æ¶ˆ", 8, 4 )
 		--EndEvent(sceneId)
 		--DispatchEventList(sceneId,selfId,targetId)
 		--return
 	--end
 	
-	--´òËéÉñ½ÚÈ·¶¨
+	--æ‰“ç¢ç¥èŠ‚ç¡®å®š
 --	if GetNumText() == 3 then
 		--x001157_FractionSegment( sceneId, selfId, targetId )
 		--return
 	--end
 	
-	--È¡Ïû
+	--å–æ¶ˆ
 	--if GetNumText() == 4 then
 	--	BeginUICommand( sceneId )
 		--	UICommand_AddInt( sceneId, targetId )
@@ -74,7 +74,7 @@ function x001157_OnEventRequest( sceneId, selfId, targetId, eventId )
 		--return
 	--end
 	
-	--ºÏ³ÉÉñ½ÚÈ·¶¨
+	--åˆæˆç¥èŠ‚ç¡®å®š
 	--if GetNumText() == 5 then
 		--x001157_ComposeSegment( sceneId, selfId, targetId )
 		--return
@@ -96,13 +96,13 @@ function x001157_OnEventRequest( sceneId, selfId, targetId, eventId )
 		return
 	end
 	
-	--´òËéÉñ½Ú°ïÖú
+	--æ‰“ç¢ç¥èŠ‚å¸®åŠ©
 	--if GetNumText() == 16 then
 	--	x001157_NotifyFailBox( sceneId, selfId, targetId, "#{SJHC_081106_15}" )
 	--	return
 	--end	
 	
-	--ºÏ³ÉÉñ½Ú°ïÖú
+	--åˆæˆç¥èŠ‚å¸®åŠ©
 	--if GetNumText() == 17 then
 		--x001157_NotifyFailBox( sceneId, selfId, targetId, "#{SJHC_081106_16}" )
 	--	return
@@ -111,30 +111,30 @@ function x001157_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---´òËéÉñ½Ú
+--æ‰“ç¢ç¥èŠ‚
 --**********************************
 function x001157_FractionSegment( sceneId, selfId, targetId )
 	
-	--ÊÇ·ñÓĞÉñ½Ú
+	--æ˜¯å¦æœ‰ç¥èŠ‚
 	if LuaFnGetAvailableItemCount( sceneId, selfId, x001157_g_SegmentID ) <= 0 then
 		x001157_NotifyFailBox( sceneId, selfId, targetId, "#{SJHC_081106_06}" )
 		return
 	end
 	
-	--ÊÇ·ñÓĞÌìçáÖé
+	--æ˜¯å¦æœ‰å¤©ç‘ç 
 	if LuaFnGetAvailableItemCount( sceneId, selfId, x001157_g_JewelryID ) <= 0 then
 		x001157_NotifyFailBox( sceneId, selfId, targetId, "#{SJHC_081106_07}" )
 		return
 	end
 	
-	--ÉíÉÏµÀ¾ßÀ¸ÊıÁ¿
+	--èº«ä¸Šé“å…·æ æ•°é‡
 	if LuaFnGetPropertyBagSpace( sceneId, selfId ) < 1 then
 		x001157_NotifyFailBox( sceneId, selfId, targetId, "    #{STZDY_20080513_23}" )
 		x001157_NotifyFailTips( sceneId, selfId, "#{STZDY_20080513_23}" )
 		return
 	end
 	
-	--ÕÒÒ»¸öÉñ½ÚµÄÎïÆ·Á´½Ó£¬¿É²Î¿¼city0_building5.lua 606~613
+	--æ‰¾ä¸€ä¸ªç¥èŠ‚çš„ç‰©å“é“¾æ¥ï¼Œå¯å‚è€ƒcity0_building5.lua 606~613
 	local SegmentInfo = ""
 	local JewelryInfo = ""
 	local MaxEquipIndex = LuaFnGetMaterialStartBagPos(sceneId, selfId)
@@ -144,7 +144,7 @@ function x001157_FractionSegment( sceneId, selfId, targetId )
 			break
 		end
 	end
-	--ÕÒÒ»¸öÌìçáÖéµÄÎïÆ·Á´½Ó
+	--æ‰¾ä¸€ä¸ªå¤©ç‘ç çš„ç‰©å“é“¾æ¥
 	for i = 0, MaxEquipIndex - 1 do
 		if LuaFnGetItemTableIndexByIndex( sceneId, selfId, i ) == x001157_g_JewelryID then
 			JewelryInfo = GetBagItemTransfer( sceneId, selfId, i )
@@ -152,14 +152,14 @@ function x001157_FractionSegment( sceneId, selfId, targetId )
 		end
 	end
 	
-	--¿Û³ıÎïÆ·
+	--æ‰£é™¤ç‰©å“
 	if LuaFnDelAvailableItem( sceneId, selfId, x001157_g_SegmentID, 1 ) ~= 1 or
 		LuaFnDelAvailableItem( sceneId, selfId, x001157_g_JewelryID, 1 ) ~= 1 then
-		x001157_NotifyFailBox( sceneId, selfId, targetId, "    ¿Û³ıÎïÆ·Ê§°Ü£¡" )
+		x001157_NotifyFailBox( sceneId, selfId, targetId, "    æ‰£é™¤ç‰©å“å¤±è´¥ï¼" )
 		return
 	end
 	
-	--¸øÎïÆ·
+	--ç»™ç‰©å“
 	local FractionSegmentIndex = TryRecieveItem( sceneId, selfId, x001157_g_FractionSegmentID, QUALITY_MUST_BE_CHANGE )
 	if FractionSegmentIndex == -1 then
 		x001157_NotifyFailBox( sceneId, selfId, targetId, "    #{STZDY_20080513_23}" )
@@ -176,24 +176,24 @@ function x001157_FractionSegment( sceneId, selfId, targetId )
 end
 
 --**********************************
---ºÏ³ÉÉñ½Ú
+--åˆæˆç¥èŠ‚
 --**********************************
 function x001157_ComposeSegment( sceneId, selfId, targetId )
 	
-	--ÊÇ·ñÓĞÉñ½ÚËéÆ¬
+	--æ˜¯å¦æœ‰ç¥èŠ‚ç¢ç‰‡
 	if LuaFnGetAvailableItemCount( sceneId, selfId, x001157_g_FractionSegmentID ) < 5 then
 		x001157_NotifyFailBox( sceneId, selfId, targetId, "#{SJHC_081106_10}" )
 		return
 	end
 	
-	--ÉíÉÏµÀ¾ßÀ¸ÊıÁ¿
+	--èº«ä¸Šé“å…·æ æ•°é‡
 	if LuaFnGetPropertyBagSpace( sceneId, selfId ) < 1 then
 		x001157_NotifyFailBox( sceneId, selfId, targetId, "    #{STZDY_20080513_23}" )
 		x001157_NotifyFailTips( sceneId, selfId, "#{STZDY_20080513_23}" )
 		return
 	end
 	
-	--ÕÒÒ»¸öËéÆ¬µÄÎïÆ·Á´½Ó£¬¿É²Î¿¼city0_building5.lua 606~613
+	--æ‰¾ä¸€ä¸ªç¢ç‰‡çš„ç‰©å“é“¾æ¥ï¼Œå¯å‚è€ƒcity0_building5.lua 606~613
 	local FractionSegmentInfo = ""
 	local MaxEquipIndex = LuaFnGetMaterialStartBagPos(sceneId, selfId)
 	for i = 0, MaxEquipIndex - 1 do
@@ -203,13 +203,13 @@ function x001157_ComposeSegment( sceneId, selfId, targetId )
 		end
 	end
 	
-	--¿Û³ıÎïÆ·
+	--æ‰£é™¤ç‰©å“
 	if LuaFnDelAvailableItem( sceneId, selfId, x001157_g_FractionSegmentID, 5 ) ~= 1 then
-		x001157_NotifyFailBox( sceneId, selfId, targetId, "    ¿Û³ıÎïÆ·Ê§°Ü£¡" )
+		x001157_NotifyFailBox( sceneId, selfId, targetId, "    æ‰£é™¤ç‰©å“å¤±è´¥ï¼" )
 		return
 	end
 	
-	--¸øÎïÆ·
+	--ç»™ç‰©å“
 	local BagIndex = TryRecieveItem( sceneId, selfId, x001157_g_SegmentID, QUALITY_MUST_BE_CHANGE )
 	if BagIndex == -1 then
 		x001157_NotifyFailBox( sceneId, selfId, targetId, "    #{STZDY_20080513_23}" )
@@ -226,7 +226,7 @@ function x001157_ComposeSegment( sceneId, selfId, targetId )
 end
 
 --**********************************
--- ¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+-- å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x001157_NotifyFailBox( sceneId, selfId, targetId, msg )
 	BeginEvent( sceneId )
@@ -236,7 +236,7 @@ function x001157_NotifyFailBox( sceneId, selfId, targetId, msg )
 end
 
 --**********************************
--- ÆÁÄ»ÖĞ¼äĞÅÏ¢ÌáÊ¾
+-- å±å¹•ä¸­é—´ä¿¡æ¯æç¤º
 --**********************************
 function x001157_NotifyFailTips( sceneId, selfId, Tip )
 	BeginEvent( sceneId )

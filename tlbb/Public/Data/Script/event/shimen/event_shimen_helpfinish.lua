@@ -1,12 +1,12 @@
---Í¬ÃÅÏàÖú
---»¨·ÑÒ»Ğ©ÃÅÅÉ¹±Ï×À´Ö±½ÓÍê³ÉÒ»»·Ê¦ÃÅÈÎÎñ....
+--åŒé—¨ç›¸åŠ©
+--èŠ±è´¹ä¸€äº›é—¨æ´¾è´¡çŒ®æ¥ç›´æ¥å®Œæˆä¸€ç¯å¸ˆé—¨ä»»åŠ¡....
 
 x229011_g_scriptId = 229011
 
 
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x229011_OnDefaultEvent( sceneId, selfId, targetId, menpaiId, numTextId )
 
@@ -15,13 +15,13 @@ function x229011_OnDefaultEvent( sceneId, selfId, targetId, menpaiId, numTextId 
 		BeginEvent( sceneId )
 
 			if IsHaveMission(sceneId,selfId,MENPAI_SHIMEN_MISID[menpaiId+1]) <= 0 then
-				AddText( sceneId, "ÄãºÃÏñÃ»ÓĞ½ÓÊÜÊ¦ÃÅÈÎÎñ°¡¡£")
+				AddText( sceneId, "ä½ å¥½åƒæ²¡æœ‰æ¥å—å¸ˆé—¨ä»»åŠ¡å•Šã€‚")
 			else
-				local strText = "  ¹âÒ«Ê¦ÃÅ£¬ÈËÈËÓĞÔğ£¡Ã¿ÈÕĞÁÇÚ×öÊ¦ÃÅÈÎÎñµÄµÜ×ÓÎÒÃÇ»á¸øÓè·áºñµÄ½±ÀøµÄ£¬µ±È»£¬¶Ô×öÊ¦ÃÅÈÎÎñÅöµ½À§ÄÑµÄµÜ×ÓÎÒÃÇÒ²»áÇãÁ¦Ğ­ÖúµÄ¡£#r  ÄãÈ·¶¨ÒªÏûºÄ#G%dµã#WÊ¦ÃÅ¹±Ï×¶È£¬ÈÃÆäËûÍ¬ÃÅÊ¦ĞÖºÍÊ¦½ã°ïÄãÍê³Éµ±Ç°Ê¦ÃÅÈÎÎñÂğ£¿"
+				local strText = "  å…‰è€€å¸ˆé—¨ï¼Œäººäººæœ‰è´£ï¼æ¯æ—¥è¾›å‹¤åšå¸ˆé—¨ä»»åŠ¡çš„å¼Ÿå­æˆ‘ä»¬ä¼šç»™äºˆä¸°åšçš„å¥–åŠ±çš„ï¼Œå½“ç„¶ï¼Œå¯¹åšå¸ˆé—¨ä»»åŠ¡ç¢°åˆ°å›°éš¾çš„å¼Ÿå­æˆ‘ä»¬ä¹Ÿä¼šå€¾åŠ›ååŠ©çš„ã€‚#r  ä½ ç¡®å®šè¦æ¶ˆè€—#G%dç‚¹#Wå¸ˆé—¨è´¡çŒ®åº¦ï¼Œè®©å…¶ä»–åŒé—¨å¸ˆå…„å’Œå¸ˆå§å¸®ä½ å®Œæˆå½“å‰å¸ˆé—¨ä»»åŠ¡å—ï¼Ÿ"
 				strText = format( strText, x229011_GetHelpFinishNeed( sceneId, selfId ) )
 				AddText( sceneId, strText )
-				AddNumText( sceneId, x229011_g_scriptId, "È·¶¨", 6, 2 )
-				AddNumText( sceneId, x229011_g_scriptId, "Àë¿ª", 8, 3 )
+				AddNumText( sceneId, x229011_g_scriptId, "ç¡®å®š", 6, 2 )
+				AddNumText( sceneId, x229011_g_scriptId, "ç¦»å¼€", 8, 3 )
 			end
 
 		EndEvent( sceneId )
@@ -33,7 +33,7 @@ function x229011_OnDefaultEvent( sceneId, selfId, targetId, menpaiId, numTextId 
 
 	elseif numTextId == 3 then
 
-		--¹Ø±Õ¶Ô»°´°¿Ú....
+		--å…³é—­å¯¹è¯çª—å£....
 		BeginUICommand(sceneId)
 		EndUICommand(sceneId)
 		DispatchUICommand(sceneId,selfId, 1000)
@@ -43,26 +43,26 @@ function x229011_OnDefaultEvent( sceneId, selfId, targetId, menpaiId, numTextId 
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x229011_OnEnumerate( sceneId, selfId, targetId, menpaiId )
 
-	--Èç¹ûÍæ¼Ò²»ÊÇ¸Ã±¾ÃÅÅÉµÄ¾Í²»ÏÔÊ¾....
+	--å¦‚æœç©å®¶ä¸æ˜¯è¯¥æœ¬é—¨æ´¾çš„å°±ä¸æ˜¾ç¤º....
 	if menpaiId == GetMenPai( sceneId, selfId ) then
-		AddNumText( sceneId, x229011_g_scriptId, "Í¬ÃÅÏàÖú", 6, 1 );
+		AddNumText( sceneId, x229011_g_scriptId, "åŒé—¨ç›¸åŠ©", 6, 1 );
 	end
 
 end
 
 --**********************************
---¼ÆËãÍ¬ÃÅÏàÖúËùĞèµÄÃÅÅÉ¹±Ï×....
+--è®¡ç®—åŒé—¨ç›¸åŠ©æ‰€éœ€çš„é—¨æ´¾è´¡çŒ®....
 --**********************************
 function x229011_GetHelpFinishNeed( sceneId, selfId )
 
-	--Í¬ÃÅÏàÖúËùĞè¹±Ï×¶È=Íê³É20»·µÄ¹±Ï×¶È * 80%
+	--åŒé—¨ç›¸åŠ©æ‰€éœ€è´¡çŒ®åº¦=å®Œæˆ20ç¯çš„è´¡çŒ®åº¦ * 80%
 	
-	--Ã¿»·Êµ¼Ê½±Àø¹±Ï×¶È=£¨Íæ¼ÒµÈ¼¶-»ù´¡µÈ¼¶£©* µÈ¼¶Ó°Ïì²ÎÊı + »ù´¡¹±Ï×¶È
-	--Íê³É20»·µÄ¹±Ï×¶È=£¨Íæ¼ÒµÈ¼¶-»ù´¡µÈ¼¶£©* µÈ¼¶Ó°Ïì²ÎÊı * 20 + 20»·»ù´¡¹±Ï×¶È×ÜºÍ(=40)
+	--æ¯ç¯å®é™…å¥–åŠ±è´¡çŒ®åº¦=ï¼ˆç©å®¶ç­‰çº§-åŸºç¡€ç­‰çº§ï¼‰* ç­‰çº§å½±å“å‚æ•° + åŸºç¡€è´¡çŒ®åº¦
+	--å®Œæˆ20ç¯çš„è´¡çŒ®åº¦=ï¼ˆç©å®¶ç­‰çº§-åŸºç¡€ç­‰çº§ï¼‰* ç­‰çº§å½±å“å‚æ•° * 20 + 20ç¯åŸºç¡€è´¡çŒ®åº¦æ€»å’Œ(=40)
 	
 	local level = GetLevel(sceneId, selfId)
 	local need = (level - 10) * 0.05 * 20 + 40
@@ -74,7 +74,7 @@ function x229011_GetHelpFinishNeed( sceneId, selfId )
 end
 
 --**********************************
---¼ì²â²¢¿Û³ıÍ¬ÃÅÏàÖúËùĞèµÄÃÅÅÉ¹±Ï×....
+--æ£€æµ‹å¹¶æ‰£é™¤åŒé—¨ç›¸åŠ©æ‰€éœ€çš„é—¨æ´¾è´¡çŒ®....
 --**********************************
 function x229011_CheckAndDepleteHelpFinishMenPaiPoint( sceneId, selfId, targetId )
 
@@ -83,7 +83,7 @@ function x229011_CheckAndDepleteHelpFinishMenPaiPoint( sceneId, selfId, targetId
 
 	if menpaiPoint < needPoint then
 		BeginEvent(sceneId)
-			AddText( sceneId, "  ÄãºÃÏñÃ»ÓĞ×ã¹»µÄÊ¦ÃÅ¹±Ï×¶È£¬¶àÎªÊ¦ÃÅ×öĞ©¹±Ï×£¬ÕâÑùÆäËûÍ¬ÃÅÒ²»áÈ«Á¦°ïÖúÄãµÄ¡£" )
+			AddText( sceneId, "  ä½ å¥½åƒæ²¡æœ‰è¶³å¤Ÿçš„å¸ˆé—¨è´¡çŒ®åº¦ï¼Œå¤šä¸ºå¸ˆé—¨åšäº›è´¡çŒ®ï¼Œè¿™æ ·å…¶ä»–åŒé—¨ä¹Ÿä¼šå…¨åŠ›å¸®åŠ©ä½ çš„ã€‚" )
 		EndEvent(sceneId)
 		DispatchEventList( sceneId, selfId, targetId )
 		return 0

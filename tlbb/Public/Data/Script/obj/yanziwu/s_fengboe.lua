@@ -1,5 +1,5 @@
 -- 402253
--- ·ç²¨¶ñ
+-- é£æ³¢æ¶
 
 x402253_TBL = 
 {
@@ -16,20 +16,20 @@ x402253_g_BuffId = 10175
 
 function x402253_OnDie( sceneId, selfId, killerId )
 
-	-- ×Ô¼ºËÀÍöµÄÊ±ºò£¬ÈÃ×Ô¼ºµÄĞÖµÜ¿ñ±©
+	-- è‡ªå·±æ­»äº¡çš„æ—¶å€™ï¼Œè®©è‡ªå·±çš„å…„å¼Ÿç‹‚æš´
 	local nNpcNum = GetMonsterCount(sceneId)
 	for i=0, nNpcNum-1 do
 		local nNpcId = GetMonsterObjID(sceneId,i)
-		if GetName(sceneId, nNpcId)  == "¹«Ò±¸É" or
-			 GetName(sceneId, nNpcId)  == "µË°Ù´¨" or
-			 GetName(sceneId, nNpcId)  == "°ü²»Í¬" or
-			 GetName(sceneId, nNpcId)  == "·ç²¨¶ñ"   then
+		if GetName(sceneId, nNpcId)  == "å…¬å†¶å¹²" or
+			 GetName(sceneId, nNpcId)  == "é‚“ç™¾å·" or
+			 GetName(sceneId, nNpcId)  == "åŒ…ä¸åŒ" or
+			 GetName(sceneId, nNpcId)  == "é£æ³¢æ¶"   then
 			
 			if selfId~= nNpcId  then
-				-- Ìí¼Ó¿ñ±©buff 
+				-- æ·»åŠ ç‹‚æš´buff 
 				if GetHp(sceneId, nNpcId) > 100  then
 					LuaFnSendSpecificImpactToUnit(sceneId, nNpcId, nNpcId, nNpcId, x402253_g_BuffId, 0 )
-					CallScriptFunction((200060), "Paopao",sceneId, GetName(sceneId, nNpcId), "Ñà×ÓÎë", "²»ÇóÍ¬ÄêÍ¬ÔÂÍ¬ÈÕÉú£¬µ«ÇóÍ¬ÄêÍ¬ÔÂÍ¬ÈÕËÀ£¡")
+					CallScriptFunction((200060), "Paopao",sceneId, GetName(sceneId, nNpcId), "ç‡•å­å", "ä¸æ±‚åŒå¹´åŒæœˆåŒæ—¥ç”Ÿï¼Œä½†æ±‚åŒå¹´åŒæœˆåŒæ—¥æ­»ï¼")
 				end
 			end
 			
@@ -62,7 +62,7 @@ function x402253_OnHeartBeat(sceneId, selfId, nTick)
 --						local posX, posZ = GetWorldPos(sceneId,nTarget)
 --						local fDir = 0.0
 --						LuaFnUnitUseSkill(sceneId, selfId, x402253_TBL.BossSkill, nTarget, posX, posZ, fDir)			
---						LuaFnNpcChat(sceneId, selfId, 0, "³¢³¢ä±Ñô½­ÉÏµÄÁÒÑæ°É£¡")
+--						LuaFnNpcChat(sceneId, selfId, 0, "å°å°æµ”é˜³æ±Ÿä¸Šçš„çƒˆç„°å§ï¼")
 --					end
 --				end
 --			end
@@ -79,7 +79,7 @@ end
 function x402253_OnKillCharacter(sceneId, selfId, targetId)
 --	if(-1~=targetId) then
 --		local szTarget = GetName(sceneId, targetId)		
---		LuaFnNpcChat(sceneId, selfId, 0, szTarget .. "£¬Äã¾ÍËãÔÙÀ÷º¦Ê®±¶£¬ÓöÉÏÒ¯Ò¯Ò²Ö»ÓĞËÀÂ·Ò»Ìõ£¡")
+--		LuaFnNpcChat(sceneId, selfId, 0, szTarget .. "ï¼Œä½ å°±ç®—å†å‰å®³åå€ï¼Œé‡ä¸Šçˆ·çˆ·ä¹Ÿåªæœ‰æ­»è·¯ä¸€æ¡ï¼")
 --	end
 end
 

@@ -1,5 +1,5 @@
 
---最多显示的效果数量
+--鏈�澶氭樉绀虹殑鏁堟灉鏁伴噺
 local IMPACT_NUM = 12;
 
 local IMPACT_DESC = {};

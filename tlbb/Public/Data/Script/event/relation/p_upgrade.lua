@@ -1,45 +1,45 @@
---Ê¦µÂµÈ¼¶Éı¼¶ÈÎÎñ
+--å¸ˆå¾·ç­‰çº§å‡çº§ä»»åŠ¡
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x806015_g_ScriptId = 806015
 
---ÊÂ¼ş
+--äº‹ä»¶
 x806015_g_Update					= {}
 x806015_g_Update["id"]		= 1000
 x806015_g_Update["wu"]		= 1001
 x806015_g_Update["uw"]		= 1002
 
---ÌáÊ¾ĞÅÏ¢
+--æç¤ºä¿¡æ¯
 x806015_g_msg					= {}
-x806015_g_msg["up"]	= "ÎÒÒªÌáÉıÎÒµÄÊ¦µÂµÈ¼¶"
-x806015_g_msg["un"]	= "  ÄãµÄÊ¦µÂµÈ¼¶ÒÑ´ï×î¸ß£¬ÎŞ·¨ÌáÉı¡£"
-x806015_g_msg["nv"]	= "  ÄãµÄÉÆ¶ñÖµ²»×ã£¬ÎŞ·¨ÌáÉı¡£"
-x806015_g_msg["uc"]	= "  ÌáÉıµ½AÒªÓÃBµãÉÆ¶ñÖµ¡£"
-x806015_g_msg["wu"]	= "ÎÒÒªÌáÉıÎÒµÄÊ¦µÂµÈ¼¶"
-x806015_g_msg["uw"]	= "ÎÒ»¹ÊÇ²»ÏëÌáÉıÁË"
-x806015_g_msg["ul"]	= "  Ö»ÓĞµÈ¼¶´óÓÚ20¼¶²ÅÓĞ×Ê¸ñÉêÇëÊ¦¸µ³ÆºÅ¡£"
+x806015_g_msg["up"]	= "æˆ‘è¦æå‡æˆ‘çš„å¸ˆå¾·ç­‰çº§"
+x806015_g_msg["un"]	= "  ä½ çš„å¸ˆå¾·ç­‰çº§å·²è¾¾æœ€é«˜ï¼Œæ— æ³•æå‡ã€‚"
+x806015_g_msg["nv"]	= "  ä½ çš„å–„æ¶å€¼ä¸è¶³ï¼Œæ— æ³•æå‡ã€‚"
+x806015_g_msg["uc"]	= "  æå‡åˆ°Aè¦ç”¨Bç‚¹å–„æ¶å€¼ã€‚"
+x806015_g_msg["wu"]	= "æˆ‘è¦æå‡æˆ‘çš„å¸ˆå¾·ç­‰çº§"
+x806015_g_msg["uw"]	= "æˆ‘è¿˜æ˜¯ä¸æƒ³æå‡äº†"
+x806015_g_msg["ul"]	= "  åªæœ‰ç­‰çº§å¤§äº20çº§æ‰æœ‰èµ„æ ¼ç”³è¯·å¸ˆå‚…ç§°å·ã€‚"
 
 x806015_g_Title		={}
-x806015_g_Title[1] = "³õ¼¶Ê¦¸µ"
-x806015_g_Title[2] = "ÖĞ¼¶Ê¦¸µ"
-x806015_g_Title[3] = "¸ß¼¶Ê¦¸µ"
-x806015_g_Title[4] = "Ò»´úÃûÊ¦"
+x806015_g_Title[1] = "åˆçº§å¸ˆå‚…"
+x806015_g_Title[2] = "ä¸­çº§å¸ˆå‚…"
+x806015_g_Title[3] = "é«˜çº§å¸ˆå‚…"
+x806015_g_Title[4] = "ä¸€ä»£åå¸ˆ"
 
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı ÇëÇóÊÕÍ½
+--ä»»åŠ¡å…¥å£å‡½æ•° è¯·æ±‚æ”¶å¾’
 --**********************************
 function x806015_OnDefaultEvent( sceneId, selfId, targetId )
 	local	key	= GetNumText()
 	
-	--Éı¼¶È·ÈÏ
+	--å‡çº§ç¡®è®¤
 	if key == x806015_g_Update["id"] then
 		x806015_Upgrade( sceneId, selfId, targetId )
 		return 0
 	end
 	
 
-	--Í¬ÒâÉı¼¶
+	--åŒæ„å‡çº§
 	if key == x806015_g_Update["wu"] then
 		if x806015_DoUpgrade( sceneId, selfId, targetId ) == 0 then
 			return 0
@@ -50,13 +50,13 @@ function x806015_OnDefaultEvent( sceneId, selfId, targetId )
 		--EndUICommand( sceneId )
 		--DispatchUICommand( sceneId, selfId, 1000 )
 
-		local msg = "ÄúµÄÊ¦µÂµÈ¼¶ÌáÉıµ½" .. tostring( LuaFnGetmasterLevel( sceneId, selfId ) .. "¼¶¡£" )
+		local msg = "æ‚¨çš„å¸ˆå¾·ç­‰çº§æå‡åˆ°" .. tostring( LuaFnGetmasterLevel( sceneId, selfId ) .. "çº§ã€‚" )
 		x806015_MessageBox( sceneId, selfId, targetId, "  "..msg )
 		Msg2Player( sceneId, selfId, msg, MSG2PLAYER_PARA )
 		return 0
 	end
 	
-	--²»Í¬ÒâÉı¼¶
+	--ä¸åŒæ„å‡çº§
 	if key == x806015_g_Update["uw"] then
 		BeginUICommand( sceneId )
 		UICommand_AddInt( sceneId, targetId )
@@ -66,7 +66,7 @@ function x806015_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x806015_OnEnumerate( sceneId, selfId, targetId )
 
@@ -74,32 +74,32 @@ function x806015_OnEnumerate( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x806015_CheckAccept( sceneId, selfId, targetId )
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x806015_OnAccept( sceneId, selfId, targetId )
 	x806015_OnConfirm( sceneId, selfId, targetId )
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x806015_OnSubmit( sceneId, selfId, targetId, tId )
 end
 
 --**********************************
---¾Ü¾ø
+--æ‹’ç»
 --**********************************
 function x806015_OnCancel( sceneId, selfId, targetId )
 end
 
 --**********************************
---¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+--å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x806015_MessageBox( sceneId, selfId, targetId, msg )
 	BeginEvent( sceneId )
@@ -109,7 +109,7 @@ function x806015_MessageBox( sceneId, selfId, targetId, msg )
 end
 
 --**********************************
---ÌáÉıÊ¦µÂµÈ¼¶È·ÈÏ¶Ô»°¿ò
+--æå‡å¸ˆå¾·ç­‰çº§ç¡®è®¤å¯¹è¯æ¡†
 --**********************************
 function x806015_Upgrade( sceneId, selfId, targetId )
 	local HumanLevel = LuaFnGetLevel( sceneId, selfId )
@@ -120,13 +120,13 @@ function x806015_Upgrade( sceneId, selfId, targetId )
 		return 0
 	end
 	
-	--¼ì²éÊÇ·ñÒÑ¾­Éı¼¶µ½×î´óÁË
+	--æ£€æŸ¥æ˜¯å¦å·²ç»å‡çº§åˆ°æœ€å¤§äº†
 	if level >= 4 then
 		x806015_MessageBox( sceneId, selfId, targetId, x806015_g_msg["un"] )
 		return 0
 	end
 	
-	--¼ÆËãĞèÒªµÄÉÆ¶ñÖµ
+	--è®¡ç®—éœ€è¦çš„å–„æ¶å€¼
 	local exp = 0
 	
 	if level == 0 and HumanLevel < 60 then
@@ -139,7 +139,7 @@ function x806015_Upgrade( sceneId, selfId, targetId )
 		exp = 50000
 	end
 	
-	local text = "  ½«Ê¦µÂµÈ¼¶ÌáÉıµ½" .. tostring( level + 1 ) .. "¼¶£¬»áÏûºÄÉÆ¶ñÖµ" .. tostring( exp ) .. "µã¡£"
+	local text = "  å°†å¸ˆå¾·ç­‰çº§æå‡åˆ°" .. tostring( level + 1 ) .. "çº§ï¼Œä¼šæ¶ˆè€—å–„æ¶å€¼" .. tostring( exp ) .. "ç‚¹ã€‚"
 	BeginEvent( sceneId )
 		AddText( sceneId, text )
 		AddNumText( sceneId, x806015_g_ScriptId, x806015_g_msg["wu"], 6, x806015_g_Update["wu"] )
@@ -159,7 +159,7 @@ function x806015_DoUpgrade( sceneId, selfId, targetId )
 		return 0
 	end
 	
-	--¼ÆËãĞèÒªµÄÉÆ¶ñÖµ
+	--è®¡ç®—éœ€è¦çš„å–„æ¶å€¼
 	local exp = 0
 	if level == 0 and HumanLevel < 60 then
 		exp = 500
@@ -171,33 +171,33 @@ function x806015_DoUpgrade( sceneId, selfId, targetId )
 		exp = 50000
 	end
 	
-	--¼ì²éÉÆ¶ñÖµ
+	--æ£€æŸ¥å–„æ¶å€¼
 	local gbvalue = LuaFnGetHumanGoodBadValue( sceneId, selfId )
 	if gbvalue < exp then
-		local msg = "  ÄúµÄÉÆ¶ñÖµ²»×ã£¬ÄúÄ¿Ç°µÄÉÆ¶ñÖµÎª" .. tostring( gbvalue ) .. "¡£"
+		local msg = "  æ‚¨çš„å–„æ¶å€¼ä¸è¶³ï¼Œæ‚¨ç›®å‰çš„å–„æ¶å€¼ä¸º" .. tostring( gbvalue ) .. "ã€‚"
 		x806015_MessageBox( sceneId, selfId, targetId, msg )
 		return 0
 	end
 	
-	--ÌáÉıÊ¦µÂµÈ¼¶
+	--æå‡å¸ˆå¾·ç­‰çº§
 	level = level + 1
 	LuaFnSetmasterLevel( sceneId, selfId, level )
 	
-	--¿Û³ıÉÆ¶ñÖµ
+	--æ‰£é™¤å–„æ¶å€¼
 	gbvalue = gbvalue - exp
 	LuaFnSetHumanGoodBadValue( sceneId, selfId, gbvalue )
 	
-	--ĞŞ¸ÄÊ¦µÂµÈ¼¶Ïà¹Ø³ÆºÅ
+	--ä¿®æ”¹å¸ˆå¾·ç­‰çº§ç›¸å…³ç§°å·
 	AwardMasterTitle( sceneId, selfId, x806015_g_Title[level] )
 	DispatchAllTitle( sceneId, selfId )
 	SetCurTitle( sceneId, selfId, 27, 0 )
 
-	--È«Çò¹«¸æ
+	--å…¨çƒå…¬å‘Š
 	local	nam	= GetName( sceneId, selfId )
-	local	str	= format( "#I¹§Ï²#W#{_INFOUSR%s}#I³É¹¦»ñµÃ#G%s#IµÄ³ÆºÅ£¬ÏÖÔÚ¿ÉÒÔÊÕÆäËûÍæ¼ÒÎªÍ½ÁË¡£", nam, x806015_g_Title[level] )
+	local	str	= format( "#Iæ­å–œ#W#{_INFOUSR%s}#IæˆåŠŸè·å¾—#G%s#Içš„ç§°å·ï¼Œç°åœ¨å¯ä»¥æ”¶å…¶ä»–ç©å®¶ä¸ºå¾’äº†ã€‚", nam, x806015_g_Title[level] )
 	AddGlobalCountNews( sceneId, str )
 	
-	--ÌØĞ§ÓëÒôĞ§
+	--ç‰¹æ•ˆä¸éŸ³æ•ˆ
 	LuaFnSendSpecificImpactToUnit( sceneId, selfId, selfId, selfId, 18, 0 )
 
 	return level

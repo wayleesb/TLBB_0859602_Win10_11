@@ -2,8 +2,8 @@
 
 local g_clientNpcId = -1;
 
-local g_MedicineHCID = -1;	--ºÏ³ÉµÄÁéÊÞµ¤ID
-local g_ConsumeMoney = -1;	--ÐèÒªµÄ½ðÇ®
+local g_MedicineHCID = -1;	--åˆæˆçš„çµå…½ä¸¹ID
+local g_ConsumeMoney = -1;	--éœ€è¦çš„é‡‘é’±
 local g_NotifyBind = 1;
 local PetMedicineHC_BTN = {};
 
@@ -14,12 +14,12 @@ function PetMedicineHC_PreLoad()
 	this:RegisterEvent("UNIT_MONEY");
 	this:RegisterEvent("MONEYJZ_CHANGE");
 	this:RegisterEvent("PETMEDICINEHC");
-	this:RegisterEvent("RESUME_ENCHASE_GEM") --ÖªµÀÎªÊ²Ã´ÒªÕâ¸öÏûÏ¢Âð£¬ÒòÎª´ÓºÏ³É¿òÍÏ¶¯µ½±³°ü¶¼ÊÇ×ßÌØÊâÂß¼­£¬´ÓClientLibµ½GameÀïÃæµÄGxx±àºÅ¶¼ºÜ¶ñÐÄ£¬ö»öº
+	this:RegisterEvent("RESUME_ENCHASE_GEM") --çŸ¥é“ä¸ºä»€ä¹ˆè¦è¿™ä¸ªæ¶ˆæ¯å—ï¼Œå› ä¸ºä»Žåˆæˆæ¡†æ‹–åŠ¨åˆ°èƒŒåŒ…éƒ½æ˜¯èµ°ç‰¹æ®Šé€»è¾‘ï¼Œä»ŽClientLibåˆ°Gameé‡Œé¢çš„Gxxç¼–å·éƒ½å¾ˆæ¶å¿ƒï¼Œé¾Œé¾Š
 	
 end
 
 function PetMedicineHC_OnLoad()
-	PetMedicineHC_BTN[1] = {PetMedicineHC_Space1, -1}; --{¿Ø¼þÃû,ÎïÆ·Ë÷ÒýÖµ}
+	PetMedicineHC_BTN[1] = {PetMedicineHC_Space1, -1}; --{æŽ§ä»¶å,ç‰©å“ç´¢å¼•å€¼}
 	PetMedicineHC_BTN[2] = {PetMedicineHC_Space2, -1};
 	PetMedicineHC_BTN[3] = {PetMedicineHC_Space3, -1};
 	PetMedicineHC_BTN[4] = {PetMedicineHC_Space4, -1};
@@ -29,7 +29,7 @@ end
 function PetMedicineHC_OnEvent(event)
 
 	if(event == "UI_COMMAND" and tonumber(arg0) == 19824) then
-		if this : IsVisible() then									-- Èç¹û½çÃæ¿ª×Å£¬Ôò²»´¦Àí
+		if this : IsVisible() then									-- å¦‚æžœç•Œé¢å¼€ç€ï¼Œåˆ™ä¸å¤„ç†
 			return
 		end
 		PetMedicineHC_Clear()
@@ -38,7 +38,7 @@ function PetMedicineHC_OnEvent(event)
 		local npcObjId = Get_XParam_INT(0)
 		g_clientNpcId = DataPool : GetNPCIDByServerID(npcObjId)
 		if g_clientNpcId == -1 then
-			PushDebugMessage("Î´·¢ÏÖ NPC")
+			PushDebugMessage("æœªå‘çŽ° NPC")
 			PetMedicineHC_Close()
 			return
 		end
@@ -49,7 +49,7 @@ function PetMedicineHC_OnEvent(event)
 			return;
 		end
 		
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ý£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æžœå’ŒNPCçš„è·ç¦»å¤§äºŽä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if arg1 == "distance" and tonumber(arg2) > MAX_OBJ_DISTANCE or arg1=="destroy" then
 			PetMedicineHC_Close()
 		end
@@ -65,7 +65,7 @@ function PetMedicineHC_OnEvent(event)
 	elseif (event == "MONEYJZ_CHANGE" and this:IsVisible()) then
 		PetMedicineHC_SelfJiaozi:SetProperty("MoneyNumber", tostring(Player:GetData("MONEY_JZ")))
 	elseif event == "RESUME_ENCHASE_GEM" and this:IsVisible() then
-		--67~71Ö®¼ä
+		--67~71ä¹‹é—´
 		PetMedicineHC_CancelGoods(tonumber(arg0)-66)
 	end
 
@@ -79,7 +79,7 @@ end
 
 function PetMedicineHC_UpdateGoods(nUIPos, nGoodsIndex)
 	
-	--ÊÇ·ñ¼ÓËø....
+	--æ˜¯å¦åŠ é”....
 	if PlayerPackage:IsLock(nGoodsIndex) == 1 then
 		PushDebugMessage("#{Item_Locked}")
 		return
@@ -87,12 +87,12 @@ function PetMedicineHC_UpdateGoods(nUIPos, nGoodsIndex)
 	
 	local goodsID = PlayerPackage : GetItemTableIndex( nGoodsIndex )
 	
-	if g_MedicineHCID ~= -1 and g_MedicineHCID ~= goodsID then --Ç°ÃæÒÑ¾­Ñ¡ÁËÒ»¸öÎïÆ·
+	if g_MedicineHCID ~= -1 and g_MedicineHCID ~= goodsID then --å‰é¢å·²ç»é€‰äº†ä¸€ä¸ªç‰©å“
 		PushDebugMessage("#{JNHC_81015_15}")
 		return
 	end
 	
-	if nUIPos == 0 then --×Ô¶¯Ñ°ÕÒÒ»¸ö¿ÕµÄÎ»ÖÃ
+	if nUIPos == 0 then --è‡ªåŠ¨å¯»æ‰¾ä¸€ä¸ªç©ºçš„ä½ç½®
 		for i = 1, 5 do
 			if PetMedicineHC_BTN[i][2] == -1 then
 				nUIPos = i
@@ -100,7 +100,7 @@ function PetMedicineHC_UpdateGoods(nUIPos, nGoodsIndex)
 			end
 		end
 		
-		if nUIPos == 0 then--Ã»ÕÒµ½ËµÃ÷·ÅÂúÁË
+		if nUIPos == 0 then--æ²¡æ‰¾åˆ°è¯´æ˜Žæ”¾æ»¡äº†
 			return
 		end
 	end
@@ -110,21 +110,21 @@ function PetMedicineHC_UpdateGoods(nUIPos, nGoodsIndex)
 	end
 	
 	local AfterMedicineHC,Money = Pet:GetPetPetMedicineHC(goodsID)
-	--±íÀïÃæÃ»ÓÐµÄ¾Í²»ÊÇÁéÊÞµ¤
-	if not AfterMedicineHC or not Money or AfterMedicineHC == -100 or Money == -100 then --100ÊÇ³ÌÐòÀïÃæÐ´µÄ·µ»ØÖµ£¬Çø·ÖÓÚ±íÀïÃæÌîµÄ-1
+	--è¡¨é‡Œé¢æ²¡æœ‰çš„å°±ä¸æ˜¯çµå…½ä¸¹
+	if not AfterMedicineHC or not Money or AfterMedicineHC == -100 or Money == -100 then --100æ˜¯ç¨‹åºé‡Œé¢å†™çš„è¿”å›žå€¼ï¼ŒåŒºåˆ†äºŽè¡¨é‡Œé¢å¡«çš„-1
 		PushDebugMessage("#{JNHC_81015_13}")
 		return
 	end
 	
-	--±íÀïÃæÓÐµ«ÊÇºÏ³ÉºóIDÊÇ-1µÄ±íÊ¾ÔÝ²»¿ª·ÅµÄ£¬Ä¿Ç°ºÏ³É×î¸ß¿ª·Åµ½2¼¶ºÏ3¼¶
+	--è¡¨é‡Œé¢æœ‰ä½†æ˜¯åˆæˆåŽIDæ˜¯-1çš„è¡¨ç¤ºæš‚ä¸å¼€æ”¾çš„ï¼Œç›®å‰åˆæˆæœ€é«˜å¼€æ”¾åˆ°2çº§åˆ3çº§
 	if AfterMedicineHC == -1 or Money == -1 then
 		PushDebugMessage("#{JNHC_81015_14}")
 		return
 	end
 	
-	--ÏÈÈ¡ÏûÇ°Ãæ·ÅÈëµÄÎïÆ·µÄÐ§¹û
+	--å…ˆå–æ¶ˆå‰é¢æ”¾å…¥çš„ç‰©å“çš„æ•ˆæžœ
 	PetMedicineHC_CancelGoods(nUIPos)
-	--·ÅÈëÐÂÎïÆ·
+	--æ”¾å…¥æ–°ç‰©å“
 	g_MedicineHCID = goodsID
 	g_ConsumeMoney = Money
 	
@@ -139,16 +139,16 @@ function PetMedicineHC_UpdateGoods(nUIPos, nGoodsIndex)
 	
 	--PushDebugMessage("btn "..PetMedicineHC_BTN[nUIPos][2])
 	
-	--ÊÇ·ñ·Å×îºóÒ»¸ö
+	--æ˜¯å¦æ”¾æœ€åŽä¸€ä¸ª
 	for i = 1, 5 do
 		if PetMedicineHC_BTN[i][2] == -1 then
 			return
 		end
 	end
 	
-	PetMedicineHC_NeedMoney:SetProperty("MoneyNumber", tostring(g_ConsumeMoney))--ÉèÖÃÐèÒª½ðÇ®¿òÊýÖµ
+	PetMedicineHC_NeedMoney:SetProperty("MoneyNumber", tostring(g_ConsumeMoney))--è®¾ç½®éœ€è¦é‡‘é’±æ¡†æ•°å€¼
 	PetMedicineHC_OK:Enable()
-	PetMedicineHC_SuccessValue:SetText("#cFF0000³É¹¦ÂÊ 100£¥")
+	PetMedicineHC_SuccessValue:SetText("#cFF0000æˆåŠŸçŽ‡ 100ï¼…")
 	g_NotifyBind = 1
 end
 
@@ -158,13 +158,13 @@ end
 
 function PetMedicineHC_CancelGoods(nGoodsIndex)
 	if nGoodsIndex >=1 and nGoodsIndex <= 5 then
-		PetMedicineHC_BTN[nGoodsIndex][1]:SetActionItem(-1) --Çå³ý½çÃæ
+		PetMedicineHC_BTN[nGoodsIndex][1]:SetActionItem(-1) --æ¸…é™¤ç•Œé¢
 		if PetMedicineHC_BTN[nGoodsIndex][2] ~= -1 then
 			LifeAbility : Lock_Packet_Item(PetMedicineHC_BTN[nGoodsIndex][2],0);
 		end
-		PetMedicineHC_BTN[nGoodsIndex][2] = -1							--Çå³ý¶ÔÓ¦ÎïÆ·Ë÷Òý
+		PetMedicineHC_BTN[nGoodsIndex][2] = -1							--æ¸…é™¤å¯¹åº”ç‰©å“ç´¢å¼•
 		
-		--ËùÓÐ½çÃæ¶¼Çå³ýÁË£¬ÔòÉèÖÃ°´Å¥²»¿ÉÓÃ
+		--æ‰€æœ‰ç•Œé¢éƒ½æ¸…é™¤äº†ï¼Œåˆ™è®¾ç½®æŒ‰é’®ä¸å¯ç”¨
 		local isfindempty = 0
 		for i = 1, 5 do
 			if PetMedicineHC_BTN[i][2] == -1 then
@@ -177,7 +177,7 @@ function PetMedicineHC_CancelGoods(nGoodsIndex)
 			g_MedicineHCID = -1;
 			g_ConsumeMoney = -1
 			PetMedicineHC_OK:Disable()
-			PetMedicineHC_SuccessValue:SetText("ÎÞ·¨ºÏ³É")
+			PetMedicineHC_SuccessValue:SetText("æ— æ³•åˆæˆ")
 		end
 		
 	end
@@ -196,7 +196,7 @@ function PetMedicineHC_Clear()
 	PetMedicineHC_SelfMoney:SetProperty("MoneyNumber", "")
 	PetMedicineHC_SelfJiaozi:SetProperty("MoneyNumber", "")
 	PetMedicineHC_NeedMoney:SetProperty("MoneyNumber", "")
-	--PetMedicineHC_SuccessValue:SetText("ÎÞ·¨ºÏ³É")
+	--PetMedicineHC_SuccessValue:SetText("æ— æ³•åˆæˆ")
 end
 
 function PetMedicineHC_Close()
@@ -216,7 +216,7 @@ function PetMedicineHC_OK_Clicked()
 		return
 	end
 	
-	--¼ì²âÎïÆ·Ë÷Òý£¬¼ì²â°ó¶¨×´Ì¬
+	--æ£€æµ‹ç‰©å“ç´¢å¼•ï¼Œæ£€æµ‹ç»‘å®šçŠ¶æ€
 	local bHaveBind = 0
 	for i = 1, 5 do
 		if PetMedicineHC_BTN[i][2] == -1 then
@@ -227,13 +227,13 @@ function PetMedicineHC_OK_Clicked()
 		end
 	end
 	
-	--ÊÇ·ñ½ðÇ®×ã¹»
+	--æ˜¯å¦é‡‘é’±è¶³å¤Ÿ
 	if Player:GetData("MONEY")+Player:GetData("MONEY_JZ") < g_ConsumeMoney then
-		PushDebugMessage("#{JNHC_81015_18}#{_EXCHG"..g_ConsumeMoney.."}¡£")
+		PushDebugMessage("#{JNHC_81015_18}#{_EXCHG"..g_ConsumeMoney.."}ã€‚")
 		return
 	end
 	
-	--Èç¹ûÓÐ°ó¶¨µÄÔòÐèÒªÌáÊ¾
+	--å¦‚æžœæœ‰ç»‘å®šçš„åˆ™éœ€è¦æç¤º
 	if bHaveBind == 1 and g_NotifyBind == 1 then
 		GameProduceLogin:ShowMessageBox("#{JNHC_81015_19}","OK", "-1")
 		g_NotifyBind = 0
@@ -249,7 +249,7 @@ function PetMedicineHC_OK_Clicked()
 		Set_XSCRIPT_ParamCount(5);
 	Send_XSCRIPT();
 	
-	--ºÏ³É½çÃæ²»¹Ø±Õ
+	--åˆæˆç•Œé¢ä¸å…³é—­
 	PetMedicineHC_Clear()
 	PetMedicineHC_OnShow()
 	

@@ -1,22 +1,22 @@
 
 local Relation_NpcInfo1 ={
-						 	{id=1,name="Ïô·å",index=99,head="set:CommonNPCHeader12 image:CommonNPCHeader12_2"},
-							{id=2,name="¶ÎÓş",index=95,head="set:CommonNPCHeader12 image:CommonNPCHeader12_3"},
-							{id=3,name="ĞéÖñ",index=102,head="set:CommonNPCHeader12 image:CommonNPCHeader12_1"},
+						 	{id=1,name="è§å³°",index=99,head="set:CommonNPCHeader12 image:CommonNPCHeader12_2"},
+							{id=2,name="æ®µèª‰",index=95,head="set:CommonNPCHeader12 image:CommonNPCHeader12_3"},
+							{id=3,name="è™šç«¹",index=102,head="set:CommonNPCHeader12 image:CommonNPCHeader12_1"},
 						}
 local Relation_NpcInfo2 ={
-						 	{id=1,name="Ä¾ÍñÇå",index=92,head="set:CommonNPCHeader12 image:CommonNPCHeader12_9"},
-							{id=2,name="ÖÓÁé",index=93,head="set:CommonNPCHeader12 image:CommonNPCHeader12_13"},
-							{id=3,name="°¢Öì",index=96,head="set:CommonNPCHeader12 image:CommonNPCHeader12_11"},
-							{id=4,name="ÍõÓïæÌ",index=98,head="set:CommonNPCHeader12 image:CommonNPCHeader12_8"},
-							{id=5,name="°¢±Ì",index=97,head="set:CommonNPCHeader12 image:CommonNPCHeader12_12"},
-							{id=6,name="°¢×Ï",index=100,head="set:CommonNPCHeader12 image:CommonNPCHeader12_10"},
-							{id=7,name="Òø´¨¹«Ö÷",index=104,head="set:CommonNPCHeader12 image:CommonNPCHeader12_7"},
+						 	{id=1,name="æœ¨å©‰æ¸…",index=92,head="set:CommonNPCHeader12 image:CommonNPCHeader12_9"},
+							{id=2,name="é’Ÿçµ",index=93,head="set:CommonNPCHeader12 image:CommonNPCHeader12_13"},
+							{id=3,name="é˜¿æœ±",index=96,head="set:CommonNPCHeader12 image:CommonNPCHeader12_11"},
+							{id=4,name="ç‹è¯­å«£",index=98,head="set:CommonNPCHeader12 image:CommonNPCHeader12_8"},
+							{id=5,name="é˜¿ç¢§",index=97,head="set:CommonNPCHeader12 image:CommonNPCHeader12_12"},
+							{id=6,name="é˜¿ç´«",index=100,head="set:CommonNPCHeader12 image:CommonNPCHeader12_10"},
+							{id=7,name="é“¶å·å…¬ä¸»",index=104,head="set:CommonNPCHeader12 image:CommonNPCHeader12_7"},
 						}
 local Relation_NpcInfo3 ={
-						 	{id=1,name="¶ÎÑÓÇì",index=94,head="set:CommonNPCHeader12 image:CommonNPCHeader12_4"},
-							{id=2,name="ğ¯Ä¦ÖÇ",index=103,head="set:CommonNPCHeader12 image:CommonNPCHeader12_6"},
-							{id=3,name="Ä½Èİ¸´",index=101,head="set:CommonNPCHeader12 image:CommonNPCHeader12_5"},
+						 	{id=1,name="æ®µå»¶åº†",index=94,head="set:CommonNPCHeader12 image:CommonNPCHeader12_4"},
+							{id=2,name="é¸ æ‘©æ™º",index=103,head="set:CommonNPCHeader12 image:CommonNPCHeader12_6"},
+							{id=3,name="æ…•å®¹å¤",index=101,head="set:CommonNPCHeader12 image:CommonNPCHeader12_5"},
 						}
 
 local Relation_NpcInfoNumber = { 3, 7, 3, };
@@ -134,31 +134,31 @@ function Relation_Update()
 		curIndex = Relation_CurrentPage * Relation_NumPerPage + i;
 		AxTrace( 1, 0, "curIndex ="..tostring( curIndex ) );
 		nRelationPoint = DataPool:GetPlayerMission_DataRound(CurrentNpcInfo[ curIndex ].index);
---ÉèÖÃÈÎÎñÃû×Ö		
+--è®¾ç½®ä»»åŠ¡åå­—		
 		RELATION_NPC_NAME[i]:SetText( CurrentNpcInfo[ curIndex ].name );
---ÕâÀïÉèÖÃÈÎÎñÍ·Ïñ
+--è¿™é‡Œè®¾ç½®ä»»åŠ¡å¤´åƒ
 		RELATION_NPC_HEAD[i]:SetProperty("Image",CurrentNpcInfo[ curIndex ].head);
 		RELATION_NPC_PROGRESS1[ i ]:Hide();
 		RELATION_NPC_PROGRESS2[ i ]:Hide();
 		RELATION_NPC_PROGRESS3[ i ]:Hide();
 		if nRelationPoint<=999  then
-			RELATION_NPC_CURRENT[i]:SetText( "Ò»ÃæÖ®½»(" .. tostring(nRelationPoint) .. "/999)" );
+			RELATION_NPC_CURRENT[i]:SetText( "ä¸€é¢ä¹‹äº¤(" .. tostring(nRelationPoint) .. "/999)" );
 			RELATION_NPC_PROGRESS1[i]:Show();
 			RELATION_NPC_PROGRESS1[i]:SetProgress( nRelationPoint,999 );
 		elseif nRelationPoint<=1999  then
-			RELATION_NPC_CURRENT[i]:SetText( "¾ı×ÓÖ®½»(" .. tostring(nRelationPoint) .. "/1999)" );
+			RELATION_NPC_CURRENT[i]:SetText( "å›å­ä¹‹äº¤(" .. tostring(nRelationPoint) .. "/1999)" );
 			RELATION_NPC_PROGRESS2[i]:Show();
 			RELATION_NPC_PROGRESS2[i]:SetProgress( (nRelationPoint - 999 ) , 1000 );
 		elseif nRelationPoint<=3999  then
-			RELATION_NPC_CURRENT[i]:SetText( "ÄªÄæÖ®½»(" .. tostring(nRelationPoint) .. "/3999)" );
+			RELATION_NPC_CURRENT[i]:SetText( "è«é€†ä¹‹äº¤(" .. tostring(nRelationPoint) .. "/3999)" );
 			RELATION_NPC_PROGRESS3[i]:Show();
 			RELATION_NPC_PROGRESS3[i]:SetProgress( (nRelationPoint - 1999 ) , 2000 );
 		elseif nRelationPoint<=6499  then
-			RELATION_NPC_CURRENT[i]:SetText( "°Ë°İÖ®½»(" .. tostring(nRelationPoint) .. "/6499)" );
+			RELATION_NPC_CURRENT[i]:SetText( "å…«æ‹œä¹‹äº¤(" .. tostring(nRelationPoint) .. "/6499)" );
 			RELATION_NPC_PROGRESS3[i]:Show();
 			RELATION_NPC_PROGRESS3[i]:SetProgress( (nRelationPoint - 3999 ) , 2500 );
 		elseif nRelationPoint<=9999  then
-			RELATION_NPC_CURRENT[i]:SetText( "ØØ¾±Ö®½»(" .. tostring(nRelationPoint) .. "/9999)" );
+			RELATION_NPC_CURRENT[i]:SetText( "åˆé¢ˆä¹‹äº¤(" .. tostring(nRelationPoint) .. "/9999)" );
 			RELATION_NPC_PROGRESS3[i]:Show();
 			RELATION_NPC_PROGRESS3[i]:SetProgress( (nRelationPoint - 6499 ) , 3500 );
 		end

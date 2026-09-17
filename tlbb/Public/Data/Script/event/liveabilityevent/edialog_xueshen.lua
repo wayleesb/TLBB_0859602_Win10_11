@@ -1,30 +1,30 @@
---Éú»î¼¼ÄÜ
---ĞŞÉí
+--ç”Ÿæ´»æŠ€èƒ½
+--ä¿®èº«
 
---2006-9-18 17:05 (Õâ¸öÎÄ¼ş´æÔÚµÄÒâÒåÊÇÎªÁË¼æÈİ¡¢¼°À©Õ¹£¬ËùÓĞÕæÕıµÄÅĞ¶Ï£¬¶¼ÔÚecity_lifeskillstudy.luaÖĞÊµÏÖ)
+--2006-9-18 17:05 (è¿™ä¸ªæ–‡ä»¶å­˜åœ¨çš„æ„ä¹‰æ˜¯ä¸ºäº†å…¼å®¹ã€åŠæ‰©å±•ï¼Œæ‰€æœ‰çœŸæ­£çš„åˆ¤æ–­ï¼Œéƒ½åœ¨ecity_lifeskillstudy.luaä¸­å®ç°)
 x713626_g_ScriptId 		= 713626
-x713626_g_AbilityName	= "ĞŞÉí"
+x713626_g_AbilityName	= "ä¿®èº«"
 x713626_g_AbilityID		= ABILITY_XIUSHEN
 
--- ´¦ÀíÍæ¼ÒËù×öµÄÑ¡Ôñ
+-- å¤„ç†ç©å®¶æ‰€åšçš„é€‰æ‹©
 function x713626_OnDefaultEvent( sceneId, selfId, targetId, nNum, npcScriptId, bid )
 	if bid then
-		if 0 == nNum then	--Ñ§Ï°
+		if 0 == nNum then	--å­¦ä¹ 
 			if CallScriptFunction( CITY_BUILDING_ABILITY_SCRIPT, "CheckCityStatus",sceneId, selfId,targetId) < 0 then
 				return
 			end
 			BeginEvent(sceneId)
 			local lv,money,con
 			lv,money,con = CallScriptFunction( CITY_BUILDING_ABILITY_SCRIPT, "OnCityAction",sceneId, selfId, targetId, x713626_g_AbilityID, bid, 4)
-			local studyMsg = format("Èç¹ûÄã´ïµ½%d¼¶²¢ÇÒ¿Ï»¨·Ñ#{_EXCHG%d}ºÍ%dµã°ï¹±¾Í¿ÉÒÔÑ§»áĞŞÉí¼¼ÄÜ¡£Äã¾ö¶¨Ñ§Ï°Ã´£¿", lv, money, con)
+			local studyMsg = format("å¦‚æœä½ è¾¾åˆ°%dçº§å¹¶ä¸”è‚¯èŠ±è´¹#{_EXCHG%d}å’Œ%dç‚¹å¸®è´¡å°±å¯ä»¥å­¦ä¼šä¿®èº«æŠ€èƒ½ã€‚ä½ å†³å®šå­¦ä¹ ä¹ˆï¼Ÿ", lv, money, con)
 			AddText(sceneId,studyMsg)
-			--È·¶¨Ñ§Ï°°´Å¥
-					AddNumText(sceneId,x713626_g_ScriptId,"ÎÒÈ·¶¨ÒªÑ§Ï°", 6, 3)
-			--È¡ÏûÑ§Ï°°´Å¥
-					AddNumText(sceneId,x713626_g_ScriptId,"ÎÒÖ»ÊÇÀ´¿´¿´", 8, 4)
+			--ç¡®å®šå­¦ä¹ æŒ‰é’®
+					AddNumText(sceneId,x713626_g_ScriptId,"æˆ‘ç¡®å®šè¦å­¦ä¹ ", 6, 3)
+			--å–æ¶ˆå­¦ä¹ æŒ‰é’®
+					AddNumText(sceneId,x713626_g_ScriptId,"æˆ‘åªæ˜¯æ¥çœ‹çœ‹", 8, 4)
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,targetId)
-		elseif 1 == nNum then	--Éı¼¶
+		elseif 1 == nNum then	--å‡çº§
 			if CallScriptFunction( CITY_BUILDING_ABILITY_SCRIPT, "CheckCityStatus",sceneId, selfId,targetId) < 0 then
 				return
 			end
@@ -32,44 +32,44 @@ function x713626_OnDefaultEvent( sceneId, selfId, targetId, nNum, npcScriptId, b
 			if ret > 0 then
 				CallScriptFunction( CITY_BUILDING_ABILITY_SCRIPT, "OnCityAction",sceneId, selfId, targetId, x713626_g_AbilityID, bid, 2)
 			end
-		elseif 2 == nNum then	--ÁË½â
+		elseif 2 == nNum then	--äº†è§£
 			local dialog = "#{event_liveabilityevent_0035}"
 			BeginEvent(sceneId)
 				AddText(sceneId, dialog)
 			EndEvent(sceneId)
 			DispatchEventList(sceneId, selfId, targetId)
-		elseif 3 == nNum then	--È·¶¨Ñ§Ï°
+		elseif 3 == nNum then	--ç¡®å®šå­¦ä¹ 
 			local ret = CallScriptFunction( CITY_BUILDING_ABILITY_SCRIPT, "OnCityCheck",sceneId, selfId, x713626_g_AbilityID, bid, 1)
 			if ret > 0 then
 				CallScriptFunction( CITY_BUILDING_ABILITY_SCRIPT, "OnCityAction",sceneId, selfId, targetId, x713626_g_AbilityID, bid, 1)
 			end
-		elseif 4 <= nNum then	--Ö»À´¿´¿´
+		elseif 4 <= nNum then	--åªæ¥çœ‹çœ‹
 			CallScriptFunction( npcScriptId, "OnDefaultEvent",sceneId, selfId, targetId )
 		end
 	else
-		-- Ä¿Ç°ĞŞÉí¼¼ÄÜ±ØĞëÔÚ³ÇÊĞÀï²ÅÄÜÑ§Ï°¡¢Éı¼¶¡¢ÁË½â
+		-- ç›®å‰ä¿®èº«æŠ€èƒ½å¿…é¡»åœ¨åŸå¸‚é‡Œæ‰èƒ½å­¦ä¹ ã€å‡çº§ã€äº†è§£
 	end
 end
 
--- ÁĞ¾ÙÑ¡Ïî
--- nNum == 1 Ñ§Ï°
--- nNum == 2 Éı¼¶
--- nNum == 3 ÁË½â
+-- åˆ—ä¸¾é€‰é¡¹
+-- nNum == 1 å­¦ä¹ 
+-- nNum == 2 å‡çº§
+-- nNum == 3 äº†è§£
 function x713626_OnEnumerate( sceneId, selfId, targetId, bid, nNum)
 	if bid then
 		if 1 == nNum then
 			local ret = CallScriptFunction( CITY_BUILDING_ABILITY_SCRIPT, "OnCityCheck",sceneId, selfId, x713626_g_AbilityID, bid, 5)
-			if ret > 0 then AddNumText(sceneId,x713626_g_ScriptId,"Ñ§Ï°"..x713626_g_AbilityName.."¼¼ÄÜ", 12, 0) end
+			if ret > 0 then AddNumText(sceneId,x713626_g_ScriptId,"å­¦ä¹ "..x713626_g_AbilityName.."æŠ€èƒ½", 12, 0) end
 			return
 		elseif 2 == nNum then
 			local ret = CallScriptFunction( CITY_BUILDING_ABILITY_SCRIPT, "OnCityCheck",sceneId, selfId, x713626_g_AbilityID, bid, 6)
-			if ret > 0 then AddNumText(sceneId,x713626_g_ScriptId,"Éı¼¶"..x713626_g_AbilityName.."¼¼ÄÜ", 12, 1) end
+			if ret > 0 then AddNumText(sceneId,x713626_g_ScriptId,"å‡çº§"..x713626_g_AbilityName.."æŠ€èƒ½", 12, 1) end
 			return
 		elseif 3 == nNum then
-			AddNumText(sceneId,x713626_g_ScriptId,"ÎÒÏëÁË½âĞŞÉí",11,2)
-			AddNumText(sceneId,x713626_g_ScriptId,"·µ»Ø",8,5)
+			AddNumText(sceneId,x713626_g_ScriptId,"æˆ‘æƒ³äº†è§£ä¿®èº«",11,2)
+			AddNumText(sceneId,x713626_g_ScriptId,"è¿”å›",8,5)
 		end
 	else
-		-- Ä¿Ç°ĞŞÉí¼¼ÄÜ±ØĞëÔÚ³ÇÊĞÀï²ÅÄÜÑ§Ï°¡¢Éı¼¶¡¢ÁË½â
+		-- ç›®å‰ä¿®èº«æŠ€èƒ½å¿…é¡»åœ¨åŸå¸‚é‡Œæ‰èƒ½å­¦ä¹ ã€å‡çº§ã€äº†è§£
 	end
 end

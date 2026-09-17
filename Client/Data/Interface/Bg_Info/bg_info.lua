@@ -37,8 +37,8 @@ function bg_info_OnEvent(event)
        local StdW = 1024
        local StdH = 768
        
-       if( Rate == 0.75 ) then    -- 4:3ÆÁ
-           if( h > StdH ) then   --±£³ÖÍ¼Æ¬¾ÓÖĞ
+       if( Rate == 0.75 ) then    -- 4:3å±
+           if( h > StdH ) then   --ä¿æŒå›¾ç‰‡å±…ä¸­
                local offsetY = ( h - StdH ) / 2
                local offsetX = ( w - StdW ) / 2
                
@@ -47,7 +47,7 @@ function bg_info_OnEvent(event)
                               
                Width = StdW
                Heigh = StdH
-           else                 --·ñÔò°´¸ßÀ´¼ÆËãËõ·Å±ÈÀı
+           else                 --å¦åˆ™æŒ‰é«˜æ¥è®¡ç®—ç¼©æ”¾æ¯”ä¾‹
                local hRate = h / StdH
                Width = StdW * hRate
                Heigh = StdH * hRate
@@ -59,8 +59,8 @@ function bg_info_OnEvent(event)
            --Heigh = h
            --PosX = 0
            --PosY = 0
-       elseif( Rate < 0.75 ) then              --¿íÆÁ
-           if( h > StdH ) then   --±£³ÖÍ¼Æ¬¾ÓÖĞ
+       elseif( Rate < 0.75 ) then              --å®½å±
+           if( h > StdH ) then   --ä¿æŒå›¾ç‰‡å±…ä¸­
                local offsetY = ( h - StdH ) / 2
                local offsetX = ( w - StdW ) / 2
                
@@ -69,7 +69,7 @@ function bg_info_OnEvent(event)
                               
                Width = StdW
                Heigh = StdH
-           else                 --·ñÔò°´¸ßÀ´¼ÆËãËõ·Å±ÈÀı
+           else                 --å¦åˆ™æŒ‰é«˜æ¥è®¡ç®—ç¼©æ”¾æ¯”ä¾‹
                local hRate = h / StdH
                Width = StdW * hRate
                Heigh = StdH * hRate
@@ -77,8 +77,8 @@ function bg_info_OnEvent(event)
                PosY = 0
                
            end
-       elseif( Rate > 0.75 ) then              --Õ­ÆÁ(Ã²ËÆÒ»°ãÇé¿öÏÂ²»»á³öÏÖ)
-           if( w > StdW ) then   --±£³ÖÍ¼Æ¬¾ÓÖĞ
+       elseif( Rate > 0.75 ) then              --çª„å±(è²Œä¼¼ä¸€èˆ¬æƒ…å†µä¸‹ä¸ä¼šå‡ºç°)
+           if( w > StdW ) then   --ä¿æŒå›¾ç‰‡å±…ä¸­
                local offsetY = ( h - StdH ) / 2
                local offsetX = ( w - StdW ) / 2
                

@@ -1,43 +1,43 @@
---Ëï°ËÒ¯
+--å­™å…«çˆ·
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x002032_g_scriptId = 002032
 
 
 x002032_g_DuanWuJieDay	= {start = 20090528, stop1 = 20090604, level = 30}
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x002032_g_eventList={210210,210211,210212,889050,210246,808130,808124,889061}
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x002032_UpdateEventList( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
 	local  PlayerName=GetName(sceneId,selfId)	
 	local  PlayerSex=GetSex(sceneId,selfId)
 	if PlayerSex == 0 then
-		PlayerSex = "ÃÃÃÃ"
+		PlayerSex = "å¦¹å¦¹"
 	else
-		PlayerSex = "ĞÖµÜ"
+		PlayerSex = "å…„å¼Ÿ"
 	end
 	AddText(sceneId,"  "..PlayerName..PlayerSex.."#{OBJ_dali_0014}")
 	for i, eventId in x002032_g_eventList do
 		CallScriptFunction( eventId, "OnEnumerate",sceneId, selfId, targetId )
 	end
-	x002032_Help_Duanwujie( sceneId, selfId, targetId )--¶ËÎç½Ú»î¶¯£¬ÒÔºóÈ¥µô	
+	x002032_Help_Duanwujie( sceneId, selfId, targetId )--ç«¯åˆèŠ‚æ´»åŠ¨ï¼Œä»¥åå»æ‰	
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 end
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x002032_OnDefaultEvent( sceneId, selfId,targetId )
 	x002032_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x002032_OnEventRequest( sceneId, selfId, targetId, eventId )
 	for i, findId in x002032_g_eventList do
@@ -46,11 +46,11 @@ function x002032_OnEventRequest( sceneId, selfId, targetId, eventId )
 			return
 		end
 	end
-	x002032_SubHelp_Duanwujie( sceneId, selfId, targetId )--¶ËÎç½Ú»î¶¯£¬ÒÔºóÈ¥µô	
+	x002032_SubHelp_Duanwujie( sceneId, selfId, targetId )--ç«¯åˆèŠ‚æ´»åŠ¨ï¼Œä»¥åå»æ‰	
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x002032_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x002032_g_eventList do
@@ -65,10 +65,10 @@ function x002032_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x002032_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
-	--¾Ü¾øÖ®ºó£¬Òª·µ»ØNPCµÄÊÂ¼şÁĞ±í
+	--æ‹’ç»ä¹‹åï¼Œè¦è¿”å›NPCçš„äº‹ä»¶åˆ—è¡¨
 	for i, findId in x002032_g_eventList do
 		if missionScriptId == findId then
 			x002032_UpdateEventList( sceneId, selfId, targetId )
@@ -78,7 +78,7 @@ function x002032_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¼ÌĞø£¨ÒÑ¾­½ÓÁËÈÎÎñ£©
+--ç»§ç»­ï¼ˆå·²ç»æ¥äº†ä»»åŠ¡ï¼‰
 --**********************************
 function x002032_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x002032_g_eventList do
@@ -90,7 +90,7 @@ function x002032_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---Ìá½»ÒÑ×öÍêµÄÈÎÎñ
+--æäº¤å·²åšå®Œçš„ä»»åŠ¡
 --**********************************
 function x002032_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, selectRadioId )
 	for i, findId in x002032_g_eventList do
@@ -102,11 +102,11 @@ function x002032_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 end
 
 --**********************************
---ËÀÍöÊÂ¼ş
+--æ­»äº¡äº‹ä»¶
 --**********************************
 function x002032_OnDie( sceneId, selfId, killerId )
 end
---¶ËÎç½Ú»î¶¯µÄ°ïÖú£¨»î¶¯¹ıºóÓ¦È¥µô£©
+--ç«¯åˆèŠ‚æ´»åŠ¨çš„å¸®åŠ©ï¼ˆæ´»åŠ¨è¿‡ååº”å»æ‰ï¼‰
 --**********************************
 function x002032_Help_Duanwujie( sceneId, selfId, targetId )
 	local curDayTime = GetTime2Day()
@@ -116,7 +116,7 @@ function x002032_Help_Duanwujie( sceneId, selfId, targetId )
 end
 
 --**********************************
---¶ËÎç½Ú»î¶¯×Ó»î¶¯µÄ°ïÖú£¨»î¶¯¹ıºóÓ¦È¥µô£©
+--ç«¯åˆèŠ‚æ´»åŠ¨å­æ´»åŠ¨çš„å¸®åŠ©ï¼ˆæ´»åŠ¨è¿‡ååº”å»æ‰ï¼‰
 --**********************************
 function x002032_SubHelp_Duanwujie( sceneId, selfId, targetId )
 	local numText = GetNumText();

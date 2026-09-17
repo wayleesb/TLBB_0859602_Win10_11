@@ -166,9 +166,9 @@ function CommonSkill_Update()
 	
 	--PushDebugMessage("sumcommon:"..tostring(nSumCommonSkill)..",index:"..tostring(Begin_Index)..",page:"..tostring(Current_Page)..",sumskill:"..tostring(nSumSkill))
 	
-	--bug30290£¬alan£¬2007-12-26
-	--Ç°ÃæµÄ´úÂëÔÚÆÕÍ¨¼¼ÄÜµÚÒ»Ò³Ìí¼ÓÁËÕäÊŞ³öÕ½ÓëÕäÊŞĞİÏ¢Á½¸ö¼¼ÄÜ£¬ÕâÑùÏàµ±ÓÚÆÕÍ¨¼¼ÄÜµÄ×ÜÊıÊµ¼ÊÉÏ¶àÁË2¸ö
-	--ÔÚÅĞ¶ÏÊÇ·ñÔÊĞí·­Ò³°´Å¥Ê±Ò²ĞèÒª¿¼ÂÇÕâ¶à³öÀ´µÄ2¸ö¼¼ÄÜ
+	--bug30290ï¼Œalanï¼Œ2007-12-26
+	--å‰é¢çš„ä»£ç åœ¨æ™®é€šæŠ€èƒ½ç¬¬ä¸€é¡µæ·»åŠ äº†çå…½å‡ºæˆ˜ä¸çå…½ä¼‘æ¯ä¸¤ä¸ªæŠ€èƒ½ï¼Œè¿™æ ·ç›¸å½“äºæ™®é€šæŠ€èƒ½çš„æ€»æ•°å®é™…ä¸Šå¤šäº†2ä¸ª
+	--åœ¨åˆ¤æ–­æ˜¯å¦å…è®¸ç¿»é¡µæŒ‰é’®æ—¶ä¹Ÿéœ€è¦è€ƒè™‘è¿™å¤šå‡ºæ¥çš„2ä¸ªæŠ€èƒ½
 	--if (Current_Page+1)*COMMON_BUTTONS_NUM <= nSumCommonSkill then
 	if (Current_Page+1)*COMMON_BUTTONS_NUM < nSumCommonSkill+2 then
 		CommonSkill_PageDown : Enable();
@@ -229,10 +229,10 @@ function CommonSkill_Buttons_Clicked(nIndex)
 		local thisAction;
 		if(nIndex ==1 )then
 			thisAction = Pet:GetPetFightAction();
-			strExplan = "#{Action_Pet_Fight_Exp}"; --"#c54FF00£¨ÍÏÖÁ¿ì½İÀ¸ÖĞÊ¹ÓÃ£©#r#cFFFFFFÔËÆøÊ±¼ä£º2.5Ãë#rÕÙ»½µ±Ç°Ñ¡ÔñµÄÕäÊŞ³öÕ½£¬ĞèÒªÕäÊŞ¿ìÀÖÔÚ60ÒÔÉÏ¡£"
+			strExplan = "#{Action_Pet_Fight_Exp}"; --"#c54FF00ï¼ˆæ‹–è‡³å¿«æ·æ ä¸­ä½¿ç”¨ï¼‰#r#cFFFFFFè¿æ°”æ—¶é—´ï¼š2.5ç§’#rå¬å”¤å½“å‰é€‰æ‹©çš„çå…½å‡ºæˆ˜ï¼Œéœ€è¦çå…½å¿«ä¹åœ¨60ä»¥ä¸Šã€‚"
 		else
 			thisAction = Pet:GetPetRelaxAction();
-			strExplan = "#{Action_Pet_Relex_Exp}";--"#c54FF00£¨ÍÏÖÁ¿ì½İÀ¸ÖĞÊ¹ÓÃ£©#r#cFFFFFFÔËÆøÊ±¼ä£º2.5Ãë#rÕÙ»½µ±Ç°Ñ¡ÔñµÄÕäÊŞ³öÕ½£¬ĞèÒªÕäÊŞ¿ìÀÖÔÚ60ÒÔÉÏ¡£"
+			strExplan = "#{Action_Pet_Relex_Exp}";--"#c54FF00ï¼ˆæ‹–è‡³å¿«æ·æ ä¸­ä½¿ç”¨ï¼‰#r#cFFFFFFè¿æ°”æ—¶é—´ï¼š2.5ç§’#rå¬å”¤å½“å‰é€‰æ‹©çš„çå…½å‡ºæˆ˜ï¼Œéœ€è¦çå…½å¿«ä¹åœ¨60ä»¥ä¸Šã€‚"
 		end
 		strName = thisAction:GetName();
 		CommonSkill_Target_Skill_Name : SetText( strName );
@@ -292,7 +292,7 @@ function Common_Action_Page_Switch()
 		CommonSkill_ActionSkill : SetCheck(0);
 		CommonSkill_LifeSkill : SetCheck(0);
 		CommonSkill_CommonlySkill : SetCheck(1);
-		PushDebugMessage("Äã»¹Ã»ÓĞ°İÈëÃÅÅÉ¡£");
+		PushDebugMessage("ä½ è¿˜æ²¡æœ‰æ‹œå…¥é—¨æ´¾ã€‚");
 		return; 
 	end;
 	OpenSkillBook();
@@ -322,9 +322,9 @@ function CommonSkill_SetTabColor()
 							};
 
 	local TAB_TEXT = {
-		[0] = "ÆÕÍ¨",
-		"ÃÅÅÉ",
-		"Éú»î",
+		[0] = "æ™®é€š",
+		"é—¨æ´¾",
+		"ç”Ÿæ´»",
 	};
 	
 	tab[0]:SetText(selColor..TAB_TEXT[0]);

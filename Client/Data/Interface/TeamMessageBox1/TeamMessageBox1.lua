@@ -10,21 +10,21 @@ local g_ShowText = {};
 --===============================================
 function TeamMessageBox1_PreLoad()
 
-	-- ¶ÓÔ±ÑûÇëÄ³ÈË¼ÓÈë¶ÓÎéÇëÄãÍ¬Òâ.
+	-- é˜Ÿå‘˜é‚€è¯·æŸäººåŠ å…¥é˜Ÿä¼è¯·ä½ åŒæ„.
 	this:RegisterEvent("TEAM_MEMBER_INVITE");
 	
 end
 
 function TeamMessageBox1_OnLoad()
 	
-	-- ¶Ô»°¿ò
+	-- å¯¹è¯æ¡†
 	g_Frame[1] = TeamMessageBox1_Frame;
 	g_Frame[2] = TeamMessageBox2_Frame;
 	g_Frame[3] = TeamMessageBox3_Frame;
 	g_Frame[4] = TeamMessageBox4_Frame;
 	g_Frame[5] = TeamMessageBox5_Frame;
 	
-	-- ÏÔÊ¾ÎÄ×Ö
+	-- æ˜¾ç¤ºæ–‡å­—
 	g_ShowText[1] = TeamMessageBox1_Text;
 	g_ShowText[2] = TeamMessageBox2_Text;
 	g_ShowText[3] = TeamMessageBox3_Text;
@@ -41,7 +41,7 @@ end
 --===============================================
 function TeamMessageBox1_OnEvent(event)
 
-	-- ¶ÓÔ±ÑûÇëÄ³ÈË¼ÓÈë¶ÓÎéÇëÄãÍ¬Òâ
+	-- é˜Ÿå‘˜é‚€è¯·æŸäººåŠ å…¥é˜Ÿä¼è¯·ä½ åŒæ„
 	if ( event == "TEAM_MEMBER_INVITE" ) then
 		TeamMessageBox_Show_Message(arg0, arg1, arg2, arg3, arg4);
 	end;	
@@ -59,7 +59,7 @@ function TeamMessageBox1_UpdateFrame()
 end
 
 --===============================================
--- µã»÷È·¶¨£¨IDOK£©
+-- ç‚¹å‡»ç¡®å®šï¼ˆIDOKï¼‰
 --===============================================
 function TeamMessageBox1_OK_Clicked()
 	
@@ -72,7 +72,7 @@ end
 --===============================================
 function TeamMessageBox1_Cancel_Clicked()
 	
-	--´¦ÀíÓĞÈËÑûÇëÄã¼ÓÈë¶ÓÎé
+	--å¤„ç†æœ‰äººé‚€è¯·ä½ åŠ å…¥é˜Ÿä¼
 		Player:SendRejectJoinTeam_TeamMemberInvite(1);
 	g_Frame[1]:Hide();
 	
@@ -81,7 +81,7 @@ end
 
 
 --===============================================
--- µã»÷È·¶¨£¨IDOK£©
+-- ç‚¹å‡»ç¡®å®šï¼ˆIDOKï¼‰
 --===============================================
 function TeamMessageBox2_OK_Clicked()
 	
@@ -94,7 +94,7 @@ end
 --===============================================
 function TeamMessageBox2_Cancel_Clicked()
 	
-	--´¦ÀíÓĞÈËÑûÇëÄã¼ÓÈë¶ÓÎé
+	--å¤„ç†æœ‰äººé‚€è¯·ä½ åŠ å…¥é˜Ÿä¼
 		Player:SendRejectJoinTeam_TeamMemberInvite(2);
 	g_Frame[2]:Hide();
 	
@@ -105,7 +105,7 @@ end
 
 
 --===============================================
--- µã»÷È·¶¨£¨IDOK£©
+-- ç‚¹å‡»ç¡®å®šï¼ˆIDOKï¼‰
 --===============================================
 function TeamMessageBox3_OK_Clicked()
 	
@@ -118,7 +118,7 @@ end
 --===============================================
 function TeamMessageBox3_Cancel_Clicked()
 	
-	--´¦ÀíÓĞÈËÑûÇëÄã¼ÓÈë¶ÓÎé
+	--å¤„ç†æœ‰äººé‚€è¯·ä½ åŠ å…¥é˜Ÿä¼
 		Player:SendRejectJoinTeam_TeamMemberInvite(3);
 	g_Frame[3]:Hide();
 	
@@ -130,7 +130,7 @@ end
 
 
 --===============================================
--- µã»÷È·¶¨£¨IDOK£©
+-- ç‚¹å‡»ç¡®å®šï¼ˆIDOKï¼‰
 --===============================================
 function TeamMessageBox4_OK_Clicked()
 	
@@ -143,7 +143,7 @@ end
 --===============================================
 function TeamMessageBox4_Cancel_Clicked()
 	
-	--´¦ÀíÓĞÈËÑûÇëÄã¼ÓÈë¶ÓÎé
+	--å¤„ç†æœ‰äººé‚€è¯·ä½ åŠ å…¥é˜Ÿä¼
 		Player:SendRejectJoinTeam_TeamMemberInvite(4);
 	g_Frame[4]:Hide();
 	
@@ -156,7 +156,7 @@ end
 
 
 --===============================================
--- µã»÷È·¶¨£¨IDOK£©
+-- ç‚¹å‡»ç¡®å®šï¼ˆIDOKï¼‰
 --===============================================
 function TeamMessageBox5_OK_Clicked()
 	
@@ -169,7 +169,7 @@ end
 --===============================================
 function TeamMessageBox5_Cancel_Clicked()
 	
-	--´¦ÀíÓĞÈËÑûÇëÄã¼ÓÈë¶ÓÎé
+	--å¤„ç†æœ‰äººé‚€è¯·ä½ åŠ å…¥é˜Ÿä¼
 		Player:SendRejectJoinTeam_TeamMemberInvite(5);
 	g_Frame[5]:Hide();
 	
@@ -184,34 +184,34 @@ function TeamMessageBox_Show_Message(strInviter, strDesName, strDesLevel,strDest
 	local strMenPai
 	
 	if(0 == menpai) then
-		strMenPai = "ÉÙÁÖ";
+		strMenPai = "å°‘æ—";
 			
 		elseif(1 == menpai) then
-			strMenPai = "Ã÷½Ì";
+			strMenPai = "æ˜æ•™";
 			
 		elseif(2 == menpai) then
-			strMenPai = "Ø¤°ï";
+			strMenPai = "ä¸å¸®";
 			
 		elseif(3 == menpai) then
-			strMenPai = "Îäµ±";
+			strMenPai = "æ­¦å½“";
 		
 		elseif(4 == menpai) then
-			strMenPai = "¶ëáÒ";
+			strMenPai = "å³¨åµ‹";
 		
 		elseif(5 == menpai) then
-			strMenPai = "ĞÇËŞ";
+			strMenPai = "æ˜Ÿå®¿";
 		
 		elseif(6 == menpai) then
-			strMenPai = "ÌìÁú";
+			strMenPai = "å¤©é¾™";
 		
 		elseif(7 == menpai) then
-			strMenPai = "ÌìÉ½";
+			strMenPai = "å¤©å±±";
 		
 		elseif(8 == menpai) then
-			strMenPai = "åĞÒ£";
+			strMenPai = "é€é¥";
 		
 	else
-		strMenPai = "ÎŞÃÅÅÉ";
+		strMenPai = "æ— é—¨æ´¾";
 	end	
 	
 	
@@ -224,6 +224,6 @@ function TeamMessageBox_Show_Message(strInviter, strDesName, strDesLevel,strDest
 	g_Frame[indexMess]:Show();
 	
 	local strShowInfo ="";
-	strShowInfo ="#R" ..strInviter.. "#cfff263ÑûÇë#R" .. strDesName .. "#G["..strDesLevel.."¼¶"..strMenPai.."]#cfff263¼ÓÈë¶ÓÎé£¬Í¬ÒâÂğ£¿";
+	strShowInfo ="#R" ..strInviter.. "#cfff263é‚€è¯·#R" .. strDesName .. "#G["..strDesLevel.."çº§"..strMenPai.."]#cfff263åŠ å…¥é˜Ÿä¼ï¼ŒåŒæ„å—ï¼Ÿ";
 	g_ShowText[indexMess]:SetText(strShowInfo);
 end

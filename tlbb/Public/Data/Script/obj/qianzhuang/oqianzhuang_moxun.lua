@@ -1,34 +1,34 @@
---Ç®×¯NPC
---ÄªÑ°
---ÆÕÍ¨
+--é’±åº„NPC
+--è«å¯»
+--æ™®é€š
 
 x181004_g_ScriptId	= 181004
 
 
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x181004_OnDefaultEvent( sceneId, selfId, targetId )
 
 	BeginEvent( sceneId )
-		AddText( sceneId, "    ÕäÆæ²ÄÁÏ£¬¸÷ÖÖ´òÔìÍ¼£¬¿Í¹ÙÇëËæ±ãÌôÑ¡£¡" )
-		AddNumText( sceneId, x181004_g_ScriptId, "´òÔìÍ¼", 2, 1 )
-		AddNumText( sceneId, x181004_g_ScriptId, "Ôª±¦½éÉÜ", 11, 2 )
+		AddText( sceneId, "    çå¥‡ææ–™ï¼Œå„ç§æ‰“é€ å›¾ï¼Œå®¢å®˜è¯·éšä¾¿æŒ‘é€‰ï¼" )
+		AddNumText( sceneId, x181004_g_ScriptId, "æ‰“é€ å›¾", 2, 1 )
+		AddNumText( sceneId, x181004_g_ScriptId, "å…ƒå®ä»‹ç»", 11, 2 )
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, selfId, targetId )
 	
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x181004_OnEventRequest( sceneId, selfId, targetId, eventId )
 
 	local	key	= GetNumText()
 	
 	if key == 1 then
-	--ĞÂµÄÔª±¦ÉÌµê
+	--æ–°çš„å…ƒå®å•†åº—
 		BeginUICommand( sceneId )
 			UICommand_AddInt( sceneId, targetId )
 			UICommand_AddInt( sceneId, 8)
@@ -45,7 +45,7 @@ function x181004_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---Õ¹¿ªÉÌµê
+--å±•å¼€å•†åº—
 --**********************************
 function x181004_OnOpenShop( sceneId, selfId, targetId, lstShop )
 
@@ -53,7 +53,7 @@ function x181004_OnOpenShop( sceneId, selfId, targetId, lstShop )
 --		for i = 1, getn( lstShop ) do
 --			AddNumText( sceneId, x181004_g_ScriptId, lstShop[i].name, 7, lstShop[i].key )
 --		end
---		AddNumText( sceneId, x181004_g_ScriptId, "·µ»ØÉÏÒ»Ò³", -1, x181004_g_Key["bak"] )
+--		AddNumText( sceneId, x181004_g_ScriptId, "è¿”å›ä¸Šä¸€é¡µ", -1, x181004_g_Key["bak"] )
 --	EndEvent( sceneId )
 --	DispatchEventList( sceneId, selfId, targetId )
 

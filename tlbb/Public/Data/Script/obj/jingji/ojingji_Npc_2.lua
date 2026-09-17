@@ -1,44 +1,44 @@
 -- 125012
--- ¸´»îÉè¶¨
+-- å¤æ´»è®¾å®š
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x125012_g_scriptId = 125012
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x125012_g_eventList={}
 
 x125012_g_Position = {
-				{x=143,z=151,name="·¶ÖÓÀë"},
-				{x=28, z=152,name="Ê¯ÊÀ³ç"},
-				{x=149,z=80,name="µË¶¨Í¨"},
-				{x=36, z=49,name="ÁºÍò¼½"},
+				{x=143,z=151,name="èŒƒé’Ÿç¦»"},
+				{x=28, z=152,name="çŸ³ä¸–å´‡"},
+				{x=149,z=80,name="é‚“å®šé€š"},
+				{x=36, z=49,name="æ¢ä¸‡å†€"},
 }
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x125012_UpdateEventList( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
-		AddText(sceneId,"ÄãÒª°ÑÄãµÄ¸´»îµãÉèÖÃµ½ÎÒÕâÀïÂğ£¿");
+		AddText(sceneId,"ä½ è¦æŠŠä½ çš„å¤æ´»ç‚¹è®¾ç½®åˆ°æˆ‘è¿™é‡Œå—ï¼Ÿ");
 		for i, eventId in x125012_g_eventList do
 			CallScriptFunction( eventId, "OnEnumerate",sceneId, selfId, targetId )
 		end
 		
-		AddNumText( sceneId, x125012_g_scriptId, "°ÑÎÒµÄ¸´»îµãÉèÔÚÕâÀï" ,9 ,1  )
+		AddNumText( sceneId, x125012_g_scriptId, "æŠŠæˆ‘çš„å¤æ´»ç‚¹è®¾åœ¨è¿™é‡Œ" ,9 ,1  )
 		
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 end
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x125012_OnDefaultEvent( sceneId, selfId,targetId )
 	x125012_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x125012_OnEventRequest( sceneId, selfId, targetId, eventId )
 	if GetNumText()==1  then
@@ -59,11 +59,11 @@ function x125012_OnEventRequest( sceneId, selfId, targetId, eventId )
 						125020 )
 					
 		BeginEvent(sceneId)
-			AddText(sceneId,"ÄãµÄ¸´»îµãÒÑ¾­ÉèÖÃÔÚÎÒÕâÀïÁË¡£");
+			AddText(sceneId,"ä½ çš„å¤æ´»ç‚¹å·²ç»è®¾ç½®åœ¨æˆ‘è¿™é‡Œäº†ã€‚");
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 		
-		-- ¸øÒ»¸öÌØĞ§
+		-- ç»™ä¸€ä¸ªç‰¹æ•ˆ
 		LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, 
 										selfId, 152, 100 )
 		
@@ -78,7 +78,7 @@ function x125012_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x125012_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x125012_g_eventList do
@@ -93,10 +93,10 @@ function x125012_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x125012_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
-	--¾Ü¾øÖ®ºó£¬Òª·µ»ØNPCµÄÊÂ¼şÁĞ±í
+	--æ‹’ç»ä¹‹åï¼Œè¦è¿”å›NPCçš„äº‹ä»¶åˆ—è¡¨
 	for i, findId in x125012_g_eventList do
 		if missionScriptId == findId then
 			x125012_UpdateEventList( sceneId, selfId, targetId )
@@ -106,7 +106,7 @@ function x125012_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¼ÌĞø£¨ÒÑ¾­½ÓÁËÈÎÎñ£©
+--ç»§ç»­ï¼ˆå·²ç»æ¥äº†ä»»åŠ¡ï¼‰
 --**********************************
 function x125012_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x125012_g_eventList do
@@ -118,7 +118,7 @@ function x125012_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---Ìá½»ÒÑ×öÍêµÄÈÎÎñ
+--æäº¤å·²åšå®Œçš„ä»»åŠ¡
 --**********************************
 function x125012_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, selectRadioId )
 	for i, findId in x125012_g_eventList do
@@ -130,7 +130,7 @@ function x125012_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 end
 
 --**********************************
---ËÀÍöÊÂ¼ş
+--æ­»äº¡äº‹ä»¶
 --**********************************
 function x125012_OnDie( sceneId, selfId, killerId )
 end

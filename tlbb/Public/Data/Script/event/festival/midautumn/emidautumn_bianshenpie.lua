@@ -1,26 +1,26 @@
---»î¶¯¡ª¡ª
---ÖĞÇï»î¶¯-ÍÅÔ²»¶ÇìÔÂ±ı»î¶¯
+--æ´»åŠ¨â€”â€”
+--ä¸­ç§‹æ´»åŠ¨-å›¢åœ†æ¬¢åº†æœˆé¥¼æ´»åŠ¨
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x050020_g_ScriptId = 050020
 
---x050020_g_EndDayTime = 7290   --»î¶¯½áÊøÊ±¼ä 2007-10-18
-x050020_g_EndDayTime = 8304   --»î¶¯½áÊøÊ±¼ä 2008-10-31,°üº¬µ±ÈÕ
+--x050020_g_EndDayTime = 7290   --æ´»åŠ¨ç»“æŸæ—¶é—´ 2007-10-18
+x050020_g_EndDayTime = 8304   --æ´»åŠ¨ç»“æŸæ—¶é—´ 2008-10-31,åŒ…å«å½“æ—¥
 
-x050020_g_PingFengSn = 40004428			--ÆÁ·çID
-x050020_g_BianShenPieSn = 30505132	--Ò×Èİµ¤ÔÂ±ıID
+x050020_g_PingFengSn = 40004428			--å±é£ID
+x050020_g_BianShenPieSn = 30505132	--æ˜“å®¹ä¸¹æœˆé¥¼ID
 
 x050020_g_strBianShenPieInfo = "#{ZHONGQIUBIANSHEN_001}"
 x050020_g_strGongGaoInfo = {
 
-	"#YÔÀ³£Ô²#P´óĞ¦µÀ£º#W#{_INFOUSR%s}#PÓ¢ĞÛ£¬ÕâÈı¸ö#{_INFOMSG%s}#P¶à°ëÊÇ´Ó#YÓà¶¾#PÊÖÖĞ¶áÀ´µÄ°É£¿ÎÒ²»»áÊ³ÑÔ£¬Õâ¿Å#{_INFOMSG%s}#P¾ÍÊÇÄãµÄÁË£¡",
-	"#YÔÀ³£Ô²#P´ó¾ª£º#W#{_INFOUSR%s}#P£¬Äã¾¹È»ÕæµÄ´Ó#YºìĞÜÍõ#PÊÖÖĞ¶áÀ´ÕâÈı¿é#{_INFOMSG%s}#P£¡Õâ¿Å#{_INFOMSG%s}#PËµÊ²Ã´Ò²µÃÊÕÏÂÁË£¡",
-	"#YÔÀ³£Ô²#P¿´×Å#W#{_INFOUSR%s}#P´Ó#Y¸ğÈÙ#PÊÖÖĞ¶áÀ´µÄÈı¿é#{_INFOMSG%s}#PĞÀÏ²Èô¿ñ£¬ÄÃ³öÒ»¿Å#{_INFOMSG%s}#P×÷Îª³êĞ»¡£",
+	"#Yå²³å¸¸åœ†#På¤§ç¬‘é“ï¼š#W#{_INFOUSR%s}#Pè‹±é›„ï¼Œè¿™ä¸‰ä¸ª#{_INFOMSG%s}#På¤šåŠæ˜¯ä»#Yä½™æ¯’#Pæ‰‹ä¸­å¤ºæ¥çš„å§ï¼Ÿæˆ‘ä¸ä¼šé£Ÿè¨€ï¼Œè¿™é¢—#{_INFOMSG%s}#På°±æ˜¯ä½ çš„äº†ï¼",
+	"#Yå²³å¸¸åœ†#På¤§æƒŠï¼š#W#{_INFOUSR%s}#Pï¼Œä½ ç«Ÿç„¶çœŸçš„ä»#Yçº¢ç†Šç‹#Pæ‰‹ä¸­å¤ºæ¥è¿™ä¸‰å—#{_INFOMSG%s}#Pï¼è¿™é¢—#{_INFOMSG%s}#Pè¯´ä»€ä¹ˆä¹Ÿå¾—æ”¶ä¸‹äº†ï¼",
+	"#Yå²³å¸¸åœ†#Pçœ‹ç€#W#{_INFOUSR%s}#Pä»#Yè‘›è£#Pæ‰‹ä¸­å¤ºæ¥çš„ä¸‰å—#{_INFOMSG%s}#Pæ¬£å–œè‹¥ç‹‚ï¼Œæ‹¿å‡ºä¸€é¢—#{_INFOMSG%s}#Pä½œä¸ºé…¬è°¢ã€‚",
 
 }
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x050020_OnDefaultEvent( sceneId, selfId, targetId )
 
@@ -35,13 +35,13 @@ function x050020_OnDefaultEvent( sceneId, selfId, targetId )
 
 		BeginEvent(sceneId)
 			AddText(sceneId, x050020_g_strBianShenPieInfo)
-			AddNumText(sceneId, x050020_g_ScriptId, "»»È¡", 6, 201 )
+			AddNumText(sceneId, x050020_g_ScriptId, "æ¢å–", 6, 201 )
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 
 	elseif NumText == 201 then
 
-		--ÁìÒ×Èİµ¤ÔÂ±ı....
+		--é¢†æ˜“å®¹ä¸¹æœˆé¥¼....
 		x050020_GivePlayerPie( sceneId, selfId, targetId )
 	elseif NumText == 102 then
 	
@@ -55,7 +55,7 @@ function x050020_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x050020_OnEnumerate( sceneId, selfId, targetId )
 
@@ -64,11 +64,11 @@ function x050020_OnEnumerate( sceneId, selfId, targetId )
 		return
 	end
 
-	AddNumText(sceneId, x050020_g_ScriptId, "ÎÒÒª±äÉí³ÉÔÂ±ı", 6, 101 )													
+	AddNumText(sceneId, x050020_g_ScriptId, "æˆ‘è¦å˜èº«æˆæœˆé¥¼", 6, 101 )													
 end
 
 --**********************************
---¼ì²â»î¶¯ÊÇ·ñÒÑ½áÊø
+--æ£€æµ‹æ´»åŠ¨æ˜¯å¦å·²ç»“æŸ
 --**********************************
 function x050020_CheckRightTime()
 
@@ -82,64 +82,64 @@ function x050020_CheckRightTime()
 end
 
 --**********************************
---¸øÍæ¼ÒÒ×Èİµ¤ÔÂ±ı
+--ç»™ç©å®¶æ˜“å®¹ä¸¹æœˆé¥¼
 --**********************************
 function x050020_GivePlayerPie( sceneId, selfId, targetId )
 
-	--¹Ø±Õ¶Ô»°´°¿Ú....
+	--å…³é—­å¯¹è¯çª—å£....
 	BeginUICommand( sceneId )
 		UICommand_AddInt( sceneId, targetId )
 	EndUICommand( sceneId )
 	DispatchUICommand( sceneId, selfId, 1000 )
 
-	--ÊÇ·ñÓĞ3¸ö....
+	--æ˜¯å¦æœ‰3ä¸ª....
 	local itemCount = LuaFnGetAvailableItemCount(sceneId, selfId, x050020_g_PingFengSn)
 	if itemCount < 3 then
 		BeginEvent(sceneId)
-			AddText( sceneId, "ÈÎÎñµÀ¾ß²»×ã£¬ÎŞ·¨»»È¡" )
+			AddText( sceneId, "ä»»åŠ¡é“å…·ä¸è¶³ï¼Œæ— æ³•æ¢å–" )
 		EndEvent(sceneId)
 		DispatchMissionTips( sceneId, selfId )
 		return
 	end
 	
-	--É¾³ıÇ°»ñÈ¡ÆÁ·çµÄTransfer....
+	--åˆ é™¤å‰è·å–å±é£çš„Transfer....
 	local pingFengPos = GetItemBagPos( sceneId, selfId, x050020_g_PingFengSn, 0 )
 	if pingFengPos < 0 then
 		BeginEvent(sceneId)
-			AddText( sceneId, "ÈÎÎñµÀ¾ß²»×ã£¬ÎŞ·¨»»È¡" )
+			AddText( sceneId, "ä»»åŠ¡é“å…·ä¸è¶³ï¼Œæ— æ³•æ¢å–" )
 		EndEvent(sceneId)
 		DispatchMissionTips( sceneId, selfId )
 	end
 	local pingFengTransfer = GetBagItemTransfer(sceneId,selfId,pingFengPos)
 
-	--¼ì²â±³°üÊÇ·ñÓĞµØ·½....
+	--æ£€æµ‹èƒŒåŒ…æ˜¯å¦æœ‰åœ°æ–¹....
 	if LuaFnGetPropertyBagSpace( sceneId, selfId ) < 1 then
 		BeginEvent(sceneId)
-			AddText( sceneId, "±³°ü¿Õ¼ä²»×ã" )
+			AddText( sceneId, "èƒŒåŒ…ç©ºé—´ä¸è¶³" )
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
 	end
 
-	--ÊÇ·ñÉ¾³ıÊ§°Ü....
+	--æ˜¯å¦åˆ é™¤å¤±è´¥....
 	if 0 == DelItem(sceneId, selfId, x050020_g_PingFengSn, 3) then
 		BeginEvent(sceneId)
-			AddText( sceneId, "ÈÎÎñµÀ¾ß²»×ã£¬ÎŞ·¨»»È¡" )
+			AddText( sceneId, "ä»»åŠ¡é“å…·ä¸è¶³ï¼Œæ— æ³•æ¢å–" )
 		EndEvent(sceneId)
 		DispatchMissionTips( sceneId, selfId )
 		return
 	end
 
-	--¸øÎïÆ·²¢¹«¸æ....
+	--ç»™ç‰©å“å¹¶å…¬å‘Š....
 	local BagIndex = TryRecieveItem( sceneId, selfId, x050020_g_BianShenPieSn, QUALITY_MUST_BE_CHANGE )
 	if BagIndex ~= -1 then
 
 		BeginEvent( sceneId )
-			AddText( sceneId, "Äã»»µÃÁËÒ»¸öÒ×Èİµ¤£ºÔÂ±ı" )
+			AddText( sceneId, "ä½ æ¢å¾—äº†ä¸€ä¸ªæ˜“å®¹ä¸¹ï¼šæœˆé¥¼" )
 		EndEvent( sceneId )
 		DispatchMissionTips( sceneId, selfId )
 
-		--ÊÀ½ç¹«¸æ....
+		--ä¸–ç•Œå…¬å‘Š....
 		local ItemTransfer = GetBagItemTransfer(sceneId,selfId,BagIndex)
 		local PlayerName = GetName(sceneId, selfId)
 		local nMsgIndex = random(3)
@@ -158,55 +158,55 @@ function x050020_GivePlayerPie( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x050020_CheckAccept( sceneId, selfId )
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x050020_OnAccept( sceneId, selfId )
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x050020_OnAbandon( sceneId, selfId )
 end
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x050020_OnContinue( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x050020_CheckSubmit( sceneId, selfId )
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x050020_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 end
 
 --**********************************
---É±ËÀ¹ÖÎï»òÍæ¼Ò
+--æ€æ­»æ€ªç‰©æˆ–ç©å®¶
 --**********************************
 function x050020_OnKillObject( sceneId, selfId, objdataId ,objId )
 end
 
 --**********************************
---½øÈëÇøÓòÊÂ¼ş
+--è¿›å…¥åŒºåŸŸäº‹ä»¶
 --**********************************
 function x050020_OnEnterArea( sceneId, selfId, zoneId )
 end
 
 --**********************************
---µÀ¾ß¸Ä±ä
+--é“å…·æ”¹å˜
 --**********************************
 function x050020_OnItemChanged( sceneId, selfId, itemdataId )
 end

@@ -30,7 +30,7 @@ function Recycle_InputBox_OnEvent(event)
 end
 
 --===============================================
--- 确定
+-- 纭畾
 --===============================================
 function Recycle_InputBox_EventOK()
 	if g_Type <=0 or g_Type>2 then
@@ -38,7 +38,7 @@ function Recycle_InputBox_EventOK()
 	end
 	local strMood = Recycle_InputBox_Input:GetText();
 	if( strMood == "" ) then 
-		PushDebugMessage("广告词不能为空！");
+		PushDebugMessage("骞垮憡璇嶄笉鑳戒负绌猴紒");
 		return;
 	end
 	PlayerShop:SendSetRecycleShopADMsg(g_Type, strMood );
@@ -46,14 +46,14 @@ function Recycle_InputBox_EventOK()
 end
 
 --===============================================
--- 取消
+-- 鍙栨秷
 --===============================================
 function Recycle_InputBox_EventCancel()
 	this:Hide();
 end
 
 --===============================================
--- 关闭自动执行
+-- 鍏抽棴鑷姩鎵ц
 --===============================================
 function Recycle_InputBox_OnHiden()
 	Recycle_InputBox_Input:SetProperty("DefaultEditBox", "False");

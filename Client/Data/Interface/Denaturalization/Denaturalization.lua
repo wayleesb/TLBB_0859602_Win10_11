@@ -2,17 +2,17 @@ local xx = nil;
 function Denaturalization_PreLoad()
 	this:RegisterEvent("UI_COMMAND");
 	
-	this:RegisterEvent("UNIT_DEF_COLD");				--·ÀÓùÊôĞÔ
+	this:RegisterEvent("UNIT_DEF_COLD");				--é˜²å¾¡å±æ€§
 	this:RegisterEvent("UNIT_DEF_FIRE");
 	this:RegisterEvent("UNIT_DEF_LIGHT");
 	this:RegisterEvent("UNIT_DEF_POSION");
 
-	this:RegisterEvent("UNIT_RESISTOTHER_COLD");			--¼õ¿¹ÊôĞÔ
+	this:RegisterEvent("UNIT_RESISTOTHER_COLD");			--å‡æŠ—å±æ€§
 	this:RegisterEvent("UNIT_RESISTOTHER_FIRE");
 	this:RegisterEvent("UNIT_RESISTOTHER_LIGHT");
 	this:RegisterEvent("UNIT_RESISTOTHER_POSION");
 		
-	this:RegisterEvent("UNIT_ATT_COLD");				--¹¥»÷ÊôĞÔ
+	this:RegisterEvent("UNIT_ATT_COLD");				--æ”»å‡»å±æ€§
 	this:RegisterEvent("UNIT_ATT_FIRE");
 	this:RegisterEvent("UNIT_ATT_LIGHT");
 	this:RegisterEvent("UNIT_ATT_POSION");
@@ -59,16 +59,16 @@ function Denaturalization_OnEvent(event)
 	elseif(event == "UNIT_RESISTOTHER_POSION" and arg0 == "player") then
 		Denaturalization_SetStateTooltip();	
 		
-	--±ù¹¥»÷
+	--å†°æ”»å‡»
 	elseif(event == "UNIT_ATT_COLD" and arg0 == "player") then
 		Denaturalization_SetStateTooltip();	
-	--»ğ¹¥»÷
+	--ç«æ”»å‡»
 	elseif(event == "UNIT_ATT_FIRE" and arg0 == "player") then
 		Denaturalization_SetStateTooltip();
-	--µç¹¥»÷
+	--ç”µæ”»å‡»
 	elseif(event == "UNIT_ATT_LIGHT" and arg0 == "player") then
 		Denaturalization_SetStateTooltip();
-	--¶¾¹¥»÷
+	--æ¯’æ”»å‡»
 	elseif(event == "UNIT_ATT_POSION" and arg0 == "player") then
 		Denaturalization_SetStateTooltip();
 		
@@ -77,11 +77,11 @@ end
 
 ---------------------------------------------------------------------------------
 --
--- ÉèÖÃ×´Ì¬tooltip
+-- è®¾ç½®çŠ¶æ€tooltip
 --
 function Denaturalization_SetStateTooltip()
 
-	-- µÃµ½×´Ì¬ÊôĞÔ
+	-- å¾—åˆ°çŠ¶æ€å±æ€§
 	local iIceDefine  		= Player:GetData( "DEFENCECOLD" );
 	local iFireDefine 		= Player:GetData( "DEFENCEFIRE" );
 	local iThunderDefine	= Player:GetData( "DEFENCELIGHT" );
@@ -97,15 +97,15 @@ function Denaturalization_SetStateTooltip()
 	local iThunderResistOther	= Player:GetData( "RESISTOTHERLIGHT" );
 	local iPoisonResistOther= Player:GetData( "RESISTOTHERPOISON" );
 	
-	Denaturalization_IceFastness:SetToolTip("±ù¹¥:"..tostring(iIceAttack).."#r±ù¿¹:"..tostring(iIceDefine).."#r¼õ±ù¿¹:"..tostring(iIceResistOther) );
-	Denaturalization_FireFastness:SetToolTip("»ğ¹¥:"..tostring(iFireAttack).."#r»ğ¿¹:"..tostring(iFireDefine).."#r¼õ»ğ¿¹:"..tostring(iFireResistOther) );
-	Denaturalization_ThunderFastness:SetToolTip("Ğş¹¥:"..tostring(iThunderAttack).."#rĞş¿¹:"..tostring(iThunderDefine).."#r¼õĞş¿¹:"..tostring(iThunderResistOther) );
-	Denaturalization_PoisonFastness:SetToolTip("¶¾¹¥:"..tostring(iPoisonAttack).."#r¶¾¿¹:"..tostring(iPoisonDefine).."#r¼õ¶¾¿¹:"..tostring(iPoisonResistOther) );
+	Denaturalization_IceFastness:SetToolTip("å†°æ”»:"..tostring(iIceAttack).."#rå†°æŠ—:"..tostring(iIceDefine).."#rå‡å†°æŠ—:"..tostring(iIceResistOther) );
+	Denaturalization_FireFastness:SetToolTip("ç«æ”»:"..tostring(iFireAttack).."#rç«æŠ—:"..tostring(iFireDefine).."#rå‡ç«æŠ—:"..tostring(iFireResistOther) );
+	Denaturalization_ThunderFastness:SetToolTip("ç„æ”»:"..tostring(iThunderAttack).."#rç„æŠ—:"..tostring(iThunderDefine).."#rå‡ç„æŠ—:"..tostring(iThunderResistOther) );
+	Denaturalization_PoisonFastness:SetToolTip("æ¯’æ”»:"..tostring(iPoisonAttack).."#ræ¯’æŠ—:"..tostring(iPoisonDefine).."#rå‡æ¯’æŠ—:"..tostring(iPoisonResistOther) );
 		
 end
 
 ---------------------------------------------------------------------------------
---Çå¿ÕÊı¾İ
+--æ¸…ç©ºæ•°æ®
 --
 function Denaturalization_CleanData()
 	Denaturalization_FakeObject:SetFakeObject("");	
@@ -126,18 +126,18 @@ function Denaturalization_OnShow()
 	Denaturalization_SetStateTooltip();
 
 	local nNumber = Player:GetData( "LEVEL" );
-	Denaturalization_Level : SetText(nNumber.."¼¶")
+	Denaturalization_Level : SetText(nNumber.."çº§")
 end
 
 ----------------------------------------------------------------------------------
 --
--- Ñ¡×°Íæ¼ÒÄ£ĞÍ£¨Ïò×ó)
+-- é€‰è£…ç©å®¶æ¨¡å‹ï¼ˆå‘å·¦)
 --
 function Denaturalization_Modle_TurnLeft(start)
-	--Ïò×óĞı×ª¿ªÊ¼
+	--å‘å·¦æ—‹è½¬å¼€å§‹
 	if(start == 1 and CEArg:GetValue("MouseButton")=="LeftButton") then
 		Denaturalization_FakeObject:RotateBegin(-0.3);
-	--Ïò×óĞı×ª½áÊø
+	--å‘å·¦æ—‹è½¬ç»“æŸ
 	else
 		Denaturalization_FakeObject:RotateEnd();
 	end
@@ -145,13 +145,13 @@ end
 
 ----------------------------------------------------------------------------------
 --
--- Ñ¡×°Íæ¼ÒÄ£ĞÍ£¨ÏòÓÒ)
+-- é€‰è£…ç©å®¶æ¨¡å‹ï¼ˆå‘å³)
 --
 function Denaturalization_Modle_TurnRight(start)
-	--ÏòÓÒĞı×ª¿ªÊ¼
+	--å‘å³æ—‹è½¬å¼€å§‹
 	if(start == 1 and CEArg:GetValue("MouseButton")=="LeftButton") then
 		Denaturalization_FakeObject:RotateBegin(0.3);
-	--ÏòÓÒĞı×ª½áÊø
+	--å‘å³æ—‹è½¬ç»“æŸ
 	else
 		Denaturalization_FakeObject:RotateEnd();
 	end
@@ -163,7 +163,7 @@ end
 
 function DoDenaturalization()
 	if(this : IsVisible()) then
-		PushDebugMessage("²Ù×÷Òì³££¡");
+		PushDebugMessage("æ“ä½œå¼‚å¸¸ï¼");
 		this:Hide();
 		return;
 	end
@@ -171,37 +171,37 @@ function DoDenaturalization()
 
 	local isCan = Player : CheckIfCanDena(30900048);
 	if(isCan == -1) then
-		PushDebugMessage("²Ù×÷Òì³££¡");
+		PushDebugMessage("æ“ä½œå¼‚å¸¸ï¼");
 		return;
 	end
 	
-	--µ¯³öÈ·ÈÏ¿ò
+	--å¼¹å‡ºç¡®è®¤æ¡†
 	
 	
 	if(isCan == 5)then
-		PushDebugMessage("ÄúÈ±ÉÙÎïÆ·×ªĞÔµ¤£¬»òÕßÄúµÄ×ªĞÔµ¤ÒÑ¼ÓËø¡£")
+		PushDebugMessage("æ‚¨ç¼ºå°‘ç‰©å“è½¬æ€§ä¸¹ï¼Œæˆ–è€…æ‚¨çš„è½¬æ€§ä¸¹å·²åŠ é”ã€‚")
 		return;
 	end
 	if(isCan == 1)then
-		PushDebugMessage("Æï³Ë×´Ì¬ÏÂ²»ÄÜ½øĞĞ×ªĞÔ²Ù×÷£¡")
+		PushDebugMessage("éª‘ä¹˜çŠ¶æ€ä¸‹ä¸èƒ½è¿›è¡Œè½¬æ€§æ“ä½œï¼")
 		return;
 	end
 	if(isCan == 2)then
-		PushDebugMessage("°ÚÌ¯×´Ì¬ÏÂ²»ÄÜ½øĞĞ×ªĞÔ²Ù×÷£¡")
+		PushDebugMessage("æ‘†æ‘ŠçŠ¶æ€ä¸‹ä¸èƒ½è¿›è¡Œè½¬æ€§æ“ä½œï¼")
 		return;
 	end
 	if(isCan == 3)then
-		PushDebugMessage("ÊÔ´©£¬ÊÔÆï×´Ì¬ÏÂ²»ÄÜ½øĞĞ×ªĞÔ²Ù×÷£¡")
+		PushDebugMessage("è¯•ç©¿ï¼Œè¯•éª‘çŠ¶æ€ä¸‹ä¸èƒ½è¿›è¡Œè½¬æ€§æ“ä½œï¼")
 		return;
 	end
 
 	if(isCan == 4)then
-		PushDebugMessage("×é¶Ó×´Ì¬ÏÂ²»ÄÜ½øĞĞ×ªĞÔ²Ù×÷£¡")
+		PushDebugMessage("ç»„é˜ŸçŠ¶æ€ä¸‹ä¸èƒ½è¿›è¡Œè½¬æ€§æ“ä½œï¼")
 		return;
 	end
-	--È¡µÃ±äĞÔÊı¾İ
+	--å–å¾—å˜æ€§æ•°æ®
 	local sex,hairColor,hairModle,faceModle,nFaceId = Player : GetDenaAttr();
-	--µ÷º¯ÊıÈ¥Ò²
+	--è°ƒå‡½æ•°å»ä¹Ÿ
 	Clear_XSCRIPT();
 		Set_XSCRIPT_Function_Name("OnZhuanXingConfirm");
 		Set_XSCRIPT_ScriptID(0147);
@@ -216,14 +216,14 @@ function DoDenaturalization()
 end
 
 function Denaturalization_OK_Click()
-	--ÇëÇóÈ·ÈÏ½çÃæ
+	--è¯·æ±‚ç¡®è®¤ç•Œé¢
 	Clear_XSCRIPT();
 		Set_XSCRIPT_ScriptID(0147);
 		Set_XSCRIPT_Function_Name("OnZhuanXingRequest");
 		Set_XSCRIPT_Parameter(0,tonumber(xx));
 		Set_XSCRIPT_ParamCount(1);
 	Send_XSCRIPT();
-	--±£´æ±äĞÔÊı¾İ
+	--ä¿å­˜å˜æ€§æ•°æ®
 	Player : SaveDenaAttr();
 	this:Hide();
 end

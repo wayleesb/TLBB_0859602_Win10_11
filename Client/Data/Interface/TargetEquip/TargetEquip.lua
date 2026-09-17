@@ -1,41 +1,41 @@
--- Êı¾İ³ØÖĞ¶¨ÒåµÄ×°±¸Êı¾İ.
---HEQUIP_WEAPON		=0,		//ÎäÆ÷	WEAPON
---HEQUIP_CAP			=1,		//Ã±×Ó	DEFENCE
---HEQUIP_ARMOR		=2,		//ÒÂ·ş	DEFENCE
---HEQUIP_CUFF			=3,		//ÊÖÌ×	DEFENCE
---HEQUIP_BOOT			=4,		//Ğ¬	DEFENCE
---HEQUIP_SASH			=5,		//Ñü´ø	ADORN
---HEQUIP_RING			=6,		//½ä×Ó	ADORN
---HEQUIP_NECKLACE	=7,		//ÏîÁ´	ADORN
---HEQUIP_DARK		=8,		//Æï³Ë----ÒÑĞŞ¸ÄÎª°µÆ÷by houzhifang
---HEQUIP_BAG			=9,		//ĞĞÄÒ                            »¤·û
---HEQUIP_BOX			=10,	//Ïä¸ñ
---HEQUIP_RING_2		=11,	//µÚ¶ş¸ö½äÖ¸	ADORN
---HEQUIP_CHARM		=12,	//»¤·û	            ADORN
---HEQUIP_CHARM_2		=13,	//µÚ¶ş¸ö»¤·û	    ADORN
---HEQUIP_WRIST		=14,	//»¤Íó	DEFENCE
---HEQUIP_SHOULDER		=15,	//»¤¼ç	DEFENCE
---HEQUIP_DRESS		=16,	//Ê±×°
+-- æ•°æ®æ± ä¸­å®šä¹‰çš„è£…å¤‡æ•°æ®.
+--HEQUIP_WEAPON		=0,		//æ­¦å™¨	WEAPON
+--HEQUIP_CAP			=1,		//å¸½å­	DEFENCE
+--HEQUIP_ARMOR		=2,		//è¡£æœ	DEFENCE
+--HEQUIP_CUFF			=3,		//æ‰‹å¥—	DEFENCE
+--HEQUIP_BOOT			=4,		//é‹	DEFENCE
+--HEQUIP_SASH			=5,		//è…°å¸¦	ADORN
+--HEQUIP_RING			=6,		//æˆ’å­	ADORN
+--HEQUIP_NECKLACE	=7,		//é¡¹é“¾	ADORN
+--HEQUIP_DARK		=8,		//éª‘ä¹˜----å·²ä¿®æ”¹ä¸ºæš—å™¨by houzhifang
+--HEQUIP_BAG			=9,		//è¡Œå›Š                            æŠ¤ç¬¦
+--HEQUIP_BOX			=10,	//ç®±æ ¼
+--HEQUIP_RING_2		=11,	//ç¬¬äºŒä¸ªæˆ’æŒ‡	ADORN
+--HEQUIP_CHARM		=12,	//æŠ¤ç¬¦	            ADORN
+--HEQUIP_CHARM_2		=13,	//ç¬¬äºŒä¸ªæŠ¤ç¬¦	    ADORN
+--HEQUIP_WRIST		=14,	//æŠ¤è…•	DEFENCE
+--HEQUIP_SHOULDER		=15,	//æŠ¤è‚©	DEFENCE
+--HEQUIP_DRESS		=16,	//æ—¶è£…
 
 
 --------------------------------------------------------------------------------
--- ×°±¸°´Å¥Êı¾İ¶¨Òå
+-- è£…å¤‡æŒ‰é’®æ•°æ®å®šä¹‰
 --
-local  g_WEAPON;		--ÎäÆ÷
-local  g_ARMOR;			--ÒÂ·ş
-local  g_CAP;			--Ã±×Ó
-local  g_CUFF;			--»¤Íó
-local  g_BOOT;			--Ğ¬
-local  g_RING;			--½ä×Ó
-local  g_SASH;			--Ñü´ø
-local  g_NECKLACE;		--ÏîÁ´
-local  g_Dark;			--×øÆï---ÒÑĞŞ¸ÄÎª°µÆ÷
-local  g_Charm;			-- »¤·û
-local  g_Charm2;		-- »¤·û2
-local  g_Shoulder;		-- »¤¼ç
-local  g_Glove;			-- ÊÖÌ×
-local  g_Ring2;			-- ½äÖ¸2
-local  g_FashionDress;	-- Ê±×°
+local  g_WEAPON;		--æ­¦å™¨
+local  g_ARMOR;			--è¡£æœ
+local  g_CAP;			--å¸½å­
+local  g_CUFF;			--æŠ¤è…•
+local  g_BOOT;			--é‹
+local  g_RING;			--æˆ’å­
+local  g_SASH;			--è…°å¸¦
+local  g_NECKLACE;		--é¡¹é“¾
+local  g_Dark;			--åéª‘---å·²ä¿®æ”¹ä¸ºæš—å™¨
+local  g_Charm;			-- æŠ¤ç¬¦
+local  g_Charm2;		-- æŠ¤ç¬¦2
+local  g_Shoulder;		-- æŠ¤è‚©
+local  g_Glove;			-- æ‰‹å¥—
+local  g_Ring2;			-- æˆ’æŒ‡2
+local  g_FashionDress;	-- æ—¶è£…
 
 local g_Cur_Name = "";
 local g_objCared = -1;
@@ -45,7 +45,7 @@ local TARGETEQUIP_TAB_TEXT = {};
 
 function TargetEquip_PreLoad()
 
-	-- ´ò¿ª½çÃæ
+	-- æ‰“å¼€ç•Œé¢
 	this:RegisterEvent("MAINTARGET_CHANGED");
 	this:RegisterEvent("OTHERPLAYER_UPDATE_EQUIP");
 	this:RegisterEvent("PLAYER_LEAVE_WORLD");
@@ -56,29 +56,29 @@ end
 
 function TargetEquip_OnLoad()
 
-	-- action buttion °´Å¥
-	g_WEAPON		= TargetEquip_Equip11;		--ÎäÆ÷
-	g_ARMOR			= TargetEquip_Equip12;		--ÒÂ·ş
-	g_CAP			= TargetEquip_Equip1;		--Ã±×Ó
-	g_CUFF			= TargetEquip_Equip8;		--»¤Íó
-	g_BOOT			= TargetEquip_Equip4;		--Ğ¬
-	g_RING			= TargetEquip_Equip6;		--½ä×Ó
-	g_SASH			= TargetEquip_Equip7;		--Ñü´ø
-	g_NECKLACE		= TargetEquip_Equip13;		--ÏîÁ´
-	g_Dark			= TargetEquip_Equip14;		--×øÆï
-	g_Charm			= TargetEquip_Equip9;		-- »¤·û
-	g_Charm2		= TargetEquip_Equip10;		-- »¤·û2
-	g_Shoulder		= TargetEquip_Equip3;		-- »¤¼ç
-	g_Glove			= TargetEquip_Equip2;		-- ÊÖÌ×
-	g_Ring2			= TargetEquip_Equip5;		-- ½äÖ¸2
-	g_FashionDress	= TargetEquip_Equip15;		-- Ê±×°
+	-- action buttion æŒ‰é’®
+	g_WEAPON		= TargetEquip_Equip11;		--æ­¦å™¨
+	g_ARMOR			= TargetEquip_Equip12;		--è¡£æœ
+	g_CAP			= TargetEquip_Equip1;		--å¸½å­
+	g_CUFF			= TargetEquip_Equip8;		--æŠ¤è…•
+	g_BOOT			= TargetEquip_Equip4;		--é‹
+	g_RING			= TargetEquip_Equip6;		--æˆ’å­
+	g_SASH			= TargetEquip_Equip7;		--è…°å¸¦
+	g_NECKLACE		= TargetEquip_Equip13;		--é¡¹é“¾
+	g_Dark			= TargetEquip_Equip14;		--åéª‘
+	g_Charm			= TargetEquip_Equip9;		-- æŠ¤ç¬¦
+	g_Charm2		= TargetEquip_Equip10;		-- æŠ¤ç¬¦2
+	g_Shoulder		= TargetEquip_Equip3;		-- æŠ¤è‚©
+	g_Glove			= TargetEquip_Equip2;		-- æ‰‹å¥—
+	g_Ring2			= TargetEquip_Equip5;		-- æˆ’æŒ‡2
+	g_FashionDress	= TargetEquip_Equip15;		-- æ—¶è£…
 
 	TARGETEQUIP_TAB_TEXT = {
-		[0] = "×°±¸",
-		"×ÊÁÏ",
-		"²©¿Í",
-		"ÕäÊŞ",
-		"Æï³Ë",
+		[0] = "è£…å¤‡",
+		"èµ„æ–™",
+		"åšå®¢",
+		"çå…½",
+		"éª‘ä¹˜",
 	};
 end
 function TargetEquip_SetTabColor(idx)
@@ -117,7 +117,7 @@ function TargetEquip_OnEvent(event)
 		return;
 	end
 
-	-- ×°±¸±ä»¯Ê±Ë¢ĞÂ×°±¸.
+	-- è£…å¤‡å˜åŒ–æ—¶åˆ·æ–°è£…å¤‡.
 	if("OTHERPLAYER_UPDATE_EQUIP" == event) then
 
 		if (not CachedTarget:IsPresent(1)) then
@@ -125,13 +125,13 @@ function TargetEquip_OnEvent(event)
 		end
 
 		if (not CachedTarget:CanGetTargetEquip()) then
-			PushDebugMessage ("#{JSCK_90507_1}")				-- ¾àÀë¸ÃÍæ¼ÒÌ«Ô¶£¬ÎŞ·¨²é¿´×ÊÁÏ¡£
+			PushDebugMessage ("#{JSCK_90507_1}")				-- è·ç¦»è¯¥ç©å®¶å¤ªè¿œï¼Œæ— æ³•æŸ¥çœ‹èµ„æ–™ã€‚
 			return
 		end
 		
 		g_objCared = CachedTarget:GetData("NPCID", 1)
 		if (type(g_objCared) ~="number") then
-			PushDebugMessage ("#{JSCK_90507_1}")				-- ¾àÀë¸ÃÍæ¼ÒÌ«Ô¶£¬ÎŞ·¨²é¿´×ÊÁÏ¡£
+			PushDebugMessage ("#{JSCK_90507_1}")				-- è·ç¦»è¯¥ç©å®¶å¤ªè¿œï¼Œæ— æ³•æŸ¥çœ‹èµ„æ–™ã€‚
 			return
 		end
 
@@ -147,7 +147,7 @@ function TargetEquip_OnEvent(event)
 		CachedTarget:TargetEquip_ChangeModel();
 		TargetEquip_FakeObject:SetFakeObject("Target");
 
-		-- ¿ªÊ¼¹ØĞÄOBJ
+		-- å¼€å§‹å…³å¿ƒOBJ
 		TargetEquip_BeginCareObject(g_objCared);
 		TargetEquip_OnUpdateShow();
 		TargetEquip_RefreshEquip();
@@ -165,7 +165,7 @@ function TargetEquip_OnEvent(event)
 			return;
 		end
 
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ı£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æœå’ŒNPCçš„è·ç¦»å¤§äºä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if( arg1=="destroy") then
 			TargetEquip_CloseUI();
 			return;
@@ -175,98 +175,98 @@ function TargetEquip_OnEvent(event)
 
 end
 
--- ¸üĞÂÖ÷½Ç»ù±¾ĞÅÏ¢
+-- æ›´æ–°ä¸»è§’åŸºæœ¬ä¿¡æ¯
 function TargetEquip_OnUpdateShow()
 
 	local nNumber = 0;
 	local nMaxnumber = 0;
 	local strName = "";
 
-	-- µÃµ½Ãû×Ö
+	-- å¾—åˆ°åå­—
   strName = CachedTarget:GetData("NAME", 1);
   g_Cur_Name = strName;
   TargetEquip_PageHeader:SetText("#gFF0FA0" .. strName );
 
-	-- µÃµ½³ÆºÅ
+	-- å¾—åˆ°ç§°å·
 	strName = CachedTarget:GetData("TITLE", 1)
 	TargetEquip_Agname:SetText( ""..strName );
 	
-	-- µÃµ½°ïÅÉ
+	-- å¾—åˆ°å¸®æ´¾
 	strName = CachedTarget:GetData("GUILD", 1)
 	TargetEquip_Confraternity:SetText( ""..strName );
 	
-	-- µÃµ½µÈ¼¶
+	-- å¾—åˆ°ç­‰çº§
 	nNumber = CachedTarget:GetData("LEVEL", 1);
-	TargetEquip_Level:SetText("µÈ¼¶:" .. tostring( nNumber ));
+	TargetEquip_Level:SetText("ç­‰çº§:" .. tostring( nNumber ));
 
-	-- µÃµ½ÅäÅ¼ĞÅÏ¢
+	-- å¾—åˆ°é…å¶ä¿¡æ¯
 	local szConsort = SystemSetup:GetPrivateInfo("other","Consort");
 	TargetEquip_Spouse:SetText(szConsort);
 
-	-- ÃÅÅÉ
+	-- é—¨æ´¾
 	local menpai = CachedTarget:GetData("MEMPAI",1);
 	local strMenpai = "";
 
-	-- µÃµ½ÃÅÅÉÃû³Æ.
+	-- å¾—åˆ°é—¨æ´¾åç§°.
 	if(0 == menpai) then
-		strMenpai = "ÉÙÁÖ";
+		strMenpai = "å°‘æ—";
 
 	elseif(1 == menpai) then
-		strMenpai = "Ã÷½Ì";
+		strMenpai = "æ˜æ•™";
 
 	elseif(2 == menpai) then
-		strMenpai = "Ø¤°ï";
+		strMenpai = "ä¸å¸®";
 
 	elseif(3 == menpai) then
-		strMenpai = "Îäµ±";
+		strMenpai = "æ­¦å½“";
 
 	elseif(4 == menpai) then
-		strMenpai = "¶ëáÒ";
+		strMenpai = "å³¨åµ‹";
 
 	elseif(5 == menpai) then
-		strMenpai = "ĞÇËŞ";
+		strMenpai = "æ˜Ÿå®¿";
 
 	elseif(6 == menpai) then
-		strMenpai = "ÌìÁú";
+		strMenpai = "å¤©é¾™";
 
 	elseif(7 == menpai) then
-		strMenpai = "ÌìÉ½";
+		strMenpai = "å¤©å±±";
 
 	elseif(8 == menpai) then
-		strMenpai = "åĞÒ£";
+		strMenpai = "é€é¥";
 
 	elseif(9 == menpai) then
-		strMenpai = "ÎŞÃÅÅÉ";
+		strMenpai = "æ— é—¨æ´¾";
 	end
 
-	-- ÉèÖÃÏÔÊ¾µÄÃÅÅÉ.
-	TargetEquip_MenPai:SetText("ÃÅÅÉ:" .. strMenpai);
+	-- è®¾ç½®æ˜¾ç¤ºçš„é—¨æ´¾.
+	TargetEquip_MenPai:SetText("é—¨æ´¾:" .. strMenpai);
 
-	-- ¸öÈËËµÃ÷
+	-- ä¸ªäººè¯´æ˜
 	local szLuck = SystemSetup:GetPrivateInfo("other","luck");
 	TargetEquip_Message:SetText(szLuck);
 
 end
 
--- Ë¢ĞÂ×°±¸
+-- åˆ·æ–°è£…å¤‡
 function TargetEquip_RefreshEquip()
 
-	--  Çå¿Õ°´Å¥ÏÔÊ¾Í¼±ê
-	g_WEAPON:SetActionItem(-1);			--ÎäÆ÷
-	g_CAP:SetActionItem(-1);				--Ã±×Ó
-	g_ARMOR:SetActionItem(-1);			--¿ø¼×
-	g_CUFF:SetActionItem(-1);				--»¤Íó
-	g_BOOT:SetActionItem(-1);				--Ğ¬
-	g_SASH:SetActionItem(-1);				--Ñü´ø
-	g_RING:SetActionItem(-1);				--½ä×Ó
-	g_NECKLACE:SetActionItem(-1);		--ÏîÁ´
-	g_Dark:SetActionItem(-1);				--×øÆï
-	g_Charm:SetActionItem(-1);			-- »¤·û
-	g_Charm2:SetActionItem(-1);			-- »¤·û2
-	g_Shoulder:SetActionItem(-1);		-- »¤¼ç
-	g_Glove:SetActionItem(-1);			-- ÊÖÌ×
-	g_Ring2:SetActionItem(-1);			-- ½äÖ¸2
-	g_FashionDress:SetActionItem(-1);		-- Ê±×°
+	--  æ¸…ç©ºæŒ‰é’®æ˜¾ç¤ºå›¾æ ‡
+	g_WEAPON:SetActionItem(-1);			--æ­¦å™¨
+	g_CAP:SetActionItem(-1);				--å¸½å­
+	g_ARMOR:SetActionItem(-1);			--ç›”ç”²
+	g_CUFF:SetActionItem(-1);				--æŠ¤è…•
+	g_BOOT:SetActionItem(-1);				--é‹
+	g_SASH:SetActionItem(-1);				--è…°å¸¦
+	g_RING:SetActionItem(-1);				--æˆ’å­
+	g_NECKLACE:SetActionItem(-1);		--é¡¹é“¾
+	g_Dark:SetActionItem(-1);				--åéª‘
+	g_Charm:SetActionItem(-1);			-- æŠ¤ç¬¦
+	g_Charm2:SetActionItem(-1);			-- æŠ¤ç¬¦2
+	g_Shoulder:SetActionItem(-1);		-- æŠ¤è‚©
+	g_Glove:SetActionItem(-1);			-- æ‰‹å¥—
+	g_Ring2:SetActionItem(-1);			-- æˆ’æŒ‡2
+	g_FashionDress:SetActionItem(-1);		-- æ—¶è£…
 
 	local ActionWeapon 		= EnumAction(0, "targetequip");
 	local ActionCap    		= EnumAction(1, "targetequip");
@@ -276,7 +276,7 @@ function TargetEquip_RefreshEquip()
 	local ActionSash   		= EnumAction(5, "targetequip");
 	local ActionRing    	= EnumAction(6, "targetequip");
 	local ActionNecklace	= EnumAction(7, "targetequip");
-	local ActionDark		= EnumAction(17, "targetequip");    --ĞŞ¸ÄÎª°µÆ÷  by houzhifang
+	local ActionDark		= EnumAction(17, "targetequip");    --ä¿®æ”¹ä¸ºæš—å™¨  by houzhifang
 	local ActionRing2		= EnumAction(11, "targetequip");
 	local ActionCharm		= EnumAction(12, "targetequip");
 	local ActionCharm2		= EnumAction(13, "targetequip");
@@ -284,34 +284,34 @@ function TargetEquip_RefreshEquip()
 	local ActionShoulder	= EnumAction(15, "targetequip");
 	local ActionDress		= EnumAction(16, "targetequip");
 
-	-- ÏÔÊ¾ÈËÉíÉÏµÄÎäÆ÷×°±¸
-	g_WEAPON:SetActionItem(ActionWeapon:GetID());			--ÎäÆ÷
-	g_CAP:SetActionItem(ActionCap:GetID());						--Ã±×Ó
-	g_ARMOR:SetActionItem(ActionArmor:GetID());				--¿ø¼×
-	g_CUFF:SetActionItem(ActionCuff:GetID());					--»¤Íó
-	g_BOOT:SetActionItem(ActionBoot:GetID());					--Ğ¬
-	g_SASH:SetActionItem(ActionSash:GetID());					--Ñü´ø
-	g_RING:SetActionItem(ActionRing:GetID());					--½ä×Ó
-	g_NECKLACE:SetActionItem(ActionNecklace:GetID());	--ÏîÁ´
-	g_Dark:SetActionItem(ActionDark:GetID());					--×øÆï
-	g_Charm:SetActionItem(ActionCharm:GetID());				-- »¤·û
-	g_Charm2:SetActionItem(ActionCharm2:GetID());			-- »¤·û2
-	g_Shoulder:SetActionItem(ActionShoulder:GetID());	-- »¤¼ç
-	g_Glove:SetActionItem(ActionGlove:GetID());				-- ÊÖÌ×
-	g_Ring2:SetActionItem(ActionRing2:GetID());				-- ½äÖ¸2
-	g_FashionDress:SetActionItem(ActionDress:GetID());-- Ê±×°
+	-- æ˜¾ç¤ºäººèº«ä¸Šçš„æ­¦å™¨è£…å¤‡
+	g_WEAPON:SetActionItem(ActionWeapon:GetID());			--æ­¦å™¨
+	g_CAP:SetActionItem(ActionCap:GetID());						--å¸½å­
+	g_ARMOR:SetActionItem(ActionArmor:GetID());				--ç›”ç”²
+	g_CUFF:SetActionItem(ActionCuff:GetID());					--æŠ¤è…•
+	g_BOOT:SetActionItem(ActionBoot:GetID());					--é‹
+	g_SASH:SetActionItem(ActionSash:GetID());					--è…°å¸¦
+	g_RING:SetActionItem(ActionRing:GetID());					--æˆ’å­
+	g_NECKLACE:SetActionItem(ActionNecklace:GetID());	--é¡¹é“¾
+	g_Dark:SetActionItem(ActionDark:GetID());					--åéª‘
+	g_Charm:SetActionItem(ActionCharm:GetID());				-- æŠ¤ç¬¦
+	g_Charm2:SetActionItem(ActionCharm2:GetID());			-- æŠ¤ç¬¦2
+	g_Shoulder:SetActionItem(ActionShoulder:GetID());	-- æŠ¤è‚©
+	g_Glove:SetActionItem(ActionGlove:GetID());				-- æ‰‹å¥—
+	g_Ring2:SetActionItem(ActionRing2:GetID());				-- æˆ’æŒ‡2
+	g_FashionDress:SetActionItem(ActionDress:GetID());-- æ—¶è£…
 
 end
 
 ----------------------------------------------------------------------------------
 --
--- Ğı×ªÍæ¼ÒÄ£ĞÍ£¨Ïò×ó)
+-- æ—‹è½¬ç©å®¶æ¨¡å‹ï¼ˆå‘å·¦)
 --
 function TargetEquip_Modle_TurnLeft(start)
-	--Ïò×óĞı×ª¿ªÊ¼
+	--å‘å·¦æ—‹è½¬å¼€å§‹
 	if(start == 1 and CEArg:GetValue("MouseButton")=="LeftButton") then
 		TargetEquip_FakeObject:RotateBegin(-0.3);
-	--Ïò×óĞı×ª½áÊø
+	--å‘å·¦æ—‹è½¬ç»“æŸ
 	else
 		TargetEquip_FakeObject:RotateEnd();
 	end
@@ -319,13 +319,13 @@ end
 
 ----------------------------------------------------------------------------------
 --
--- Ğı×ªÍæ¼ÒÄ£ĞÍ£¨ÏòÓÒ)
+-- æ—‹è½¬ç©å®¶æ¨¡å‹ï¼ˆå‘å³)
 --
 function TargetEquip_Modle_TurnRight(start)
-	--ÏòÓÒĞı×ª¿ªÊ¼
+	--å‘å³æ—‹è½¬å¼€å§‹
 	if(start == 1 and CEArg:GetValue("MouseButton")=="LeftButton") then
 		TargetEquip_FakeObject:RotateBegin(0.3);
-	--ÏòÓÒĞı×ª½áÊø
+	--å‘å³æ—‹è½¬ç»“æŸ
 	else
 		TargetEquip_FakeObject:RotateEnd();
 	end
@@ -333,21 +333,21 @@ end
 
 ----------------------------------------------------------------------------------------
 --
--- ¹Ø±Õ½çÃæ
+-- å…³é—­ç•Œé¢
 --
 
 function TargetEquip_CloseUI()
 
 	this:Hide();
 
-	-- È¡Ïû¹ØĞÄOBJ
+	-- å–æ¶ˆå…³å¿ƒOBJ
 	TargetEquip_StopCareObject(g_objCared);
 	
-	-- Çå¿ÕFakeModel´°¿Ú
+	-- æ¸…ç©ºFakeModelçª—å£
 	TargetEquip_FakeObject:SetFakeObject("");
 	CachedTarget:TargetEquip_DestroyUIModel();
 	
-	-- Çå¿Õ½ÇÉ«ĞÅÏ¢ºÍ×°±¸Í¼±ê
+	-- æ¸…ç©ºè§’è‰²ä¿¡æ¯å’Œè£…å¤‡å›¾æ ‡
 	TargetEquip_ClearPlayerInfo();
 	TargetEquip_ClearEquipItem();
 
@@ -355,57 +355,57 @@ end
 
 ----------------------------------------------------------------------------------------
 --
--- Çå¿Õ×°±¸½çÃæÖĞµÄ½ÇÉ«ĞÅÏ¢
+-- æ¸…ç©ºè£…å¤‡ç•Œé¢ä¸­çš„è§’è‰²ä¿¡æ¯
 --
 function TargetEquip_ClearPlayerInfo()
 	
 	TargetEquip_PageHeader:SetText("");
 	TargetEquip_Agname:SetText("");
 	TargetEquip_Confraternity:SetText("");
-	TargetEquip_Level:SetText("µÈ¼¶:");	
+	TargetEquip_Level:SetText("ç­‰çº§:");	
 	TargetEquip_Spouse:SetText("");
-	TargetEquip_MenPai:SetText("ÃÅÅÉ:");
+	TargetEquip_MenPai:SetText("é—¨æ´¾:");
 	TargetEquip_Message:SetText("");
 
 end
 
 ----------------------------------------------------------------------------------------
 --
---  Çå¿Õ×°±¸½çÃæÖĞµÄ×°±¸Í¼±ê
+--  æ¸…ç©ºè£…å¤‡ç•Œé¢ä¸­çš„è£…å¤‡å›¾æ ‡
 --
 function TargetEquip_ClearEquipItem()
 
-	--  Çå¿Õ°´Å¥ÏÔÊ¾Í¼±ê
-	g_WEAPON:SetActionItem(-1);			--ÎäÆ÷
-	g_CAP:SetActionItem(-1);				--Ã±×Ó
-	g_ARMOR:SetActionItem(-1);			--¿ø¼×
-	g_CUFF:SetActionItem(-1);				--»¤Íó
-	g_BOOT:SetActionItem(-1);				--Ğ¬
-	g_SASH:SetActionItem(-1);				--Ñü´ø
-	g_RING:SetActionItem(-1);				--½ä×Ó
-	g_NECKLACE:SetActionItem(-1);		--ÏîÁ´
-	g_Dark:SetActionItem(-1);			--×øÆï
-	g_Charm:SetActionItem(-1);		-- »¤·û
-	g_Charm2:SetActionItem(-1);		-- »¤·û2
-	g_Shoulder:SetActionItem(-1);		-- »¤¼ç
-	g_Glove:SetActionItem(-1);		-- ÊÖÌ×
-	g_Ring2:SetActionItem(-1);		-- ½äÖ¸2
-	g_FashionDress:SetActionItem(-1);		-- Ê±×°
+	--  æ¸…ç©ºæŒ‰é’®æ˜¾ç¤ºå›¾æ ‡
+	g_WEAPON:SetActionItem(-1);			--æ­¦å™¨
+	g_CAP:SetActionItem(-1);				--å¸½å­
+	g_ARMOR:SetActionItem(-1);			--ç›”ç”²
+	g_CUFF:SetActionItem(-1);				--æŠ¤è…•
+	g_BOOT:SetActionItem(-1);				--é‹
+	g_SASH:SetActionItem(-1);				--è…°å¸¦
+	g_RING:SetActionItem(-1);				--æˆ’å­
+	g_NECKLACE:SetActionItem(-1);		--é¡¹é“¾
+	g_Dark:SetActionItem(-1);			--åéª‘
+	g_Charm:SetActionItem(-1);		-- æŠ¤ç¬¦
+	g_Charm2:SetActionItem(-1);		-- æŠ¤ç¬¦2
+	g_Shoulder:SetActionItem(-1);		-- æŠ¤è‚©
+	g_Glove:SetActionItem(-1);		-- æ‰‹å¥—
+	g_Ring2:SetActionItem(-1);		-- æˆ’æŒ‡2
+	g_FashionDress:SetActionItem(-1);		-- æ—¶è£…
 
 end
 
 ----------------------------------------------------------------------------------------
 --
--- ´ò¿ªÍæ¼ÒĞÅÏ¢½çÃæ
+-- æ‰“å¼€ç©å®¶ä¿¡æ¯ç•Œé¢
 --
--- ×ÊÁÏ
+-- èµ„æ–™
 --
 function TargetEquip_TargetData_Down()
 	Variable:SetVariable("OtherUnionPos", TargetEquip_Frame:GetProperty("UnifiedPosition"), 1);
 	SystemSetup:OpenPrivatePage("other")
 end
 --
--- ²©¿Í
+-- åšå®¢
 --
 function TargetEquip_TargetBlog_Down()
 	Variable:SetVariable("OtherUnionPos", TargetEquip_Frame:GetProperty("UnifiedPosition"), 1);
@@ -415,14 +415,14 @@ function TargetEquip_TargetBlog_Down()
 	Blog:OpenBlogPage(strAccount,strCharName,false);
 end
 --
--- ÕäÊŞ
+-- çå…½
 --
 function TargetEquip_OtherPet_Down()
 	Variable:SetVariable("OtherUnionPos", TargetEquip_Frame:GetProperty("UnifiedPosition"), 1);
 	SystemSetup:OpenPetFrame("other");
 end
 --
--- Æï³Ë
+-- éª‘ä¹˜
 --
 function TargetEquip_OtherRide_Down()
 	Variable:SetVariable("OtherUnionPos", TargetEquip_Frame:GetProperty("UnifiedPosition"), 1);
@@ -431,7 +431,7 @@ end
 
 ----------------------------------------------------------------------------------------
 --
--- ¡°Ë½ÁÄ¡±°´Å¥µÄÏìÓ¦º¯Êı
+-- â€œç§èŠâ€æŒ‰é’®çš„å“åº”å‡½æ•°
 --
 function Set_To_Private()
 
@@ -441,7 +441,7 @@ end
 
 ----------------------------------------------------------------------------------------
 --
--- ¡°¼ÓÎªºÃÓÑ¡±°´Å¥µÄÏìÓ¦º¯Êı
+-- â€œåŠ ä¸ºå¥½å‹â€æŒ‰é’®çš„å“åº”å‡½æ•°
 --
 function Set_To_Friend()
 
@@ -450,9 +450,9 @@ function Set_To_Friend()
 end
 
 --=========================================================
---¿ªÊ¼¹ØĞÄOBJ
---ÔÚ¿ªÊ¼¹ØĞÄÖ®Ç°ĞèÒªÏÈÈ·¶¨Õâ¸ö½çÃæÊÇ²»ÊÇÒÑ¾­ÓĞ¡°¹ØĞÄ¡±µÄOBJ£¬
---Èç¹ûÓĞµÄ»°£¬ÏÈÈ¡ÏûÒÑ¾­ÓĞµÄ¡°¹ØĞÄ¡±
+--å¼€å§‹å…³å¿ƒOBJ
+--åœ¨å¼€å§‹å…³å¿ƒä¹‹å‰éœ€è¦å…ˆç¡®å®šè¿™ä¸ªç•Œé¢æ˜¯ä¸æ˜¯å·²ç»æœ‰â€œå…³å¿ƒâ€çš„OBJï¼Œ
+--å¦‚æœæœ‰çš„è¯ï¼Œå…ˆå–æ¶ˆå·²ç»æœ‰çš„â€œå…³å¿ƒâ€
 --=========================================================
 function TargetEquip_BeginCareObject(objCaredId)
 
@@ -466,7 +466,7 @@ function TargetEquip_BeginCareObject(objCaredId)
 end
 
 --=========================================================
---Í£Ö¹¶ÔÄ³OBJµÄ¹ØĞÄ
+--åœæ­¢å¯¹æŸOBJçš„å…³å¿ƒ
 --=========================================================
 function TargetEquip_StopCareObject(objCaredId)
 	

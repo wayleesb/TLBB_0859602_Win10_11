@@ -1,34 +1,34 @@
---Â¥À¼NPC
---æäÕ¾....
+--æ¥¼å…°NPC
+--é©¿ç«™....
 
 x001100_g_ScriptId	= 001100
 
---ÃÅÅÉĞÅÏ¢(ÃÅÅÉÃû³Æ£¬SceneID£¬PosX£¬PosY£¬ÃÅÅÉID)
+--é—¨æ´¾ä¿¡æ¯(é—¨æ´¾åç§°ï¼ŒSceneIDï¼ŒPosXï¼ŒPosYï¼Œé—¨æ´¾ID)
 x001100_g_mpInfo		= {}
-x001100_g_mpInfo[0]	= { "ĞÇËŞ", 16,  96, 152, MP_XINGSU }
-x001100_g_mpInfo[1]	= { "åĞÒ£", 14,  67, 145, MP_XIAOYAO }
-x001100_g_mpInfo[2]	= { "ÉÙÁÖ",  9,  96, 127, MP_SHAOLIN }
-x001100_g_mpInfo[3]	= { "ÌìÉ½", 17,  95, 120, MP_TIANSHAN }
-x001100_g_mpInfo[4]	= { "ÌìÁú", 13,  96, 120, MP_DALI }
-x001100_g_mpInfo[5]	= { "¶ëáÒ", 15,  89, 139, MP_EMEI }
-x001100_g_mpInfo[6]	= { "Îäµ±", 12, 103, 140, MP_WUDANG }
-x001100_g_mpInfo[7]	= { "Ã÷½Ì", 11,  98, 167, MP_MINGJIAO }
-x001100_g_mpInfo[8]	= { "Ø¤°ï", 10,  91, 116, MP_GAIBANG }
+x001100_g_mpInfo[0]	= { "æ˜Ÿå®¿", 16,  96, 152, MP_XINGSU }
+x001100_g_mpInfo[1]	= { "é€é¥", 14,  67, 145, MP_XIAOYAO }
+x001100_g_mpInfo[2]	= { "å°‘æ—",  9,  96, 127, MP_SHAOLIN }
+x001100_g_mpInfo[3]	= { "å¤©å±±", 17,  95, 120, MP_TIANSHAN }
+x001100_g_mpInfo[4]	= { "å¤©é¾™", 13,  96, 120, MP_DALI }
+x001100_g_mpInfo[5]	= { "å³¨åµ‹", 15,  89, 139, MP_EMEI }
+x001100_g_mpInfo[6]	= { "æ­¦å½“", 12, 103, 140, MP_WUDANG }
+x001100_g_mpInfo[7]	= { "æ˜æ•™", 11,  98, 167, MP_MINGJIAO }
+x001100_g_mpInfo[8]	= { "ä¸å¸®", 10,  91, 116, MP_GAIBANG }
 
 x001100_g_Yinpiao = 40002000 
 
-x001100_g_Impact_NotTransportList = { 5929, 5944 } -- ½ûÖ¹´«ËÍµÄImpact
-x001100_g_TalkInfo_NotTransportList = { "#{GodFire_Info_062}", "#{XSHCD_20080418_099}" } -- ½ûÖ¹´«ËÍµÄImpactÌáÊ¾ĞÅÏ¢
+x001100_g_Impact_NotTransportList = { 5929, 5944 } -- ç¦æ­¢ä¼ é€çš„Impact
+x001100_g_TalkInfo_NotTransportList = { "#{GodFire_Info_062}", "#{XSHCD_20080418_099}" } -- ç¦æ­¢ä¼ é€çš„Impactæç¤ºä¿¡æ¯
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x001100_OnDefaultEvent( sceneId, selfId,targetId )
 	
-	-- ¼ì²âÍæ¼ÒÉíÉÏÊÇ²»ÊÇÓĞ¡°ÒøÆ±¡±Õâ¸ö¶«Î÷£¬ÓĞ¾Í²»ÄÜÊ¹ÓÃÕâÀïµÄ¹¦ÄÜ
+	-- æ£€æµ‹ç©å®¶èº«ä¸Šæ˜¯ä¸æ˜¯æœ‰â€œé“¶ç¥¨â€è¿™ä¸ªä¸œè¥¿ï¼Œæœ‰å°±ä¸èƒ½ä½¿ç”¨è¿™é‡Œçš„åŠŸèƒ½
 	if GetItemCount(sceneId, selfId, x001100_g_Yinpiao)>=1  then
 		BeginEvent( sceneId )
-			AddText( sceneId, "  ÄãÉíÉÏÓĞÒøÆ±£¬ÕıÔÚÅÜÉÌ£¡ÎÒ²»ÄÜ°ïÖúÄã¡£" )
+			AddText( sceneId, "  ä½ èº«ä¸Šæœ‰é“¶ç¥¨ï¼Œæ­£åœ¨è·‘å•†ï¼æˆ‘ä¸èƒ½å¸®åŠ©ä½ ã€‚" )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 		return
@@ -40,18 +40,18 @@ function x001100_OnDefaultEvent( sceneId, selfId,targetId )
 
 		AddText( sceneId, "#{loulan_yizhan_20080329}")
 		 
-		AddNumText( sceneId, x001100_g_ScriptId, "·µ»ØÃÅÅÉ", 9, 1000 )
-		AddNumText( sceneId, x001100_g_ScriptId, "³ÇÊĞ - ÂåÑô", 9, 1001 )
-		AddNumText( sceneId, x001100_g_ScriptId, "³ÇÊĞ - ÂåÑô - ¾ÅÖİÉÌ»á", 9, 1002 )
-		AddNumText( sceneId, x001100_g_ScriptId, "³ÇÊĞ - ËÕÖİ", 9, 1003 )
-		AddNumText( sceneId, x001100_g_ScriptId, "³ÇÊĞ - ËÕÖİ - Ìú½³ÆÌ", 9, 1004 )
-		AddNumText( sceneId, x001100_g_ScriptId, "³ÇÊĞ - ´óÀí", 9, 1005 )
-		AddNumText( sceneId, x001100_g_ScriptId, "³ÇÊĞ - ÊøºÓ¹ÅÕò", 9, 1016 )
+		AddNumText( sceneId, x001100_g_ScriptId, "è¿”å›é—¨æ´¾", 9, 1000 )
+		AddNumText( sceneId, x001100_g_ScriptId, "åŸå¸‚ - æ´›é˜³", 9, 1001 )
+		AddNumText( sceneId, x001100_g_ScriptId, "åŸå¸‚ - æ´›é˜³ - ä¹å·å•†ä¼š", 9, 1002 )
+		AddNumText( sceneId, x001100_g_ScriptId, "åŸå¸‚ - è‹å·", 9, 1003 )
+		AddNumText( sceneId, x001100_g_ScriptId, "åŸå¸‚ - è‹å· - é“åŒ é“º", 9, 1004 )
+		AddNumText( sceneId, x001100_g_ScriptId, "åŸå¸‚ - å¤§ç†", 9, 1005 )
+		AddNumText( sceneId, x001100_g_ScriptId, "åŸå¸‚ - æŸæ²³å¤é•‡", 9, 1016 )
 		 
-		AddNumText( sceneId, x001100_g_ScriptId, "´øÎÒÈ¥ÆäËüÃÅÅÉ", 9, 1011 )
+		AddNumText( sceneId, x001100_g_ScriptId, "å¸¦æˆ‘å»å…¶å®ƒé—¨æ´¾", 9, 1011 )
 		
 		--for i, mp in x001100_g_mpInfo do
-			--AddNumText( sceneId, x001100_g_ScriptId, "ÃÅÅÉ - "..mp[1], 9, i )
+			--AddNumText( sceneId, x001100_g_ScriptId, "é—¨æ´¾ - "..mp[1], 9, i )
 		--end
 
 	
@@ -62,11 +62,11 @@ function x001100_OnDefaultEvent( sceneId, selfId,targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x001100_OnEventRequest( sceneId, selfId, targetId, eventId )
 
-	--äîÔË½ûÖ¹´«ËÍ....
+	--æ¼•è¿ç¦æ­¢ä¼ é€....
 	if GetTeamId(sceneId,selfId)>=0 and 
 		IsTeamFollow(sceneId, selfId)==1 and
 		LuaFnIsTeamLeader(sceneId,selfId)==1 then
@@ -78,18 +78,18 @@ function x001100_OnEventRequest( sceneId, selfId, targetId, eventId )
 				return
 			end
 			if IsHaveMission(sceneId,mems[i],4021) > 0 then
-				x001100_MsgBox( sceneId, selfId, targetId, "  Äã¶ÓÎé³ÉÔ±ÖĞÓĞÈËÓĞäîÔË»õ²ÕÔÚÉí£¬ÎÒÃÇæäÕ¾²»ÄÜÎªÄãÌá¹©´«ËÍ·şÎñ¡£" )
+				x001100_MsgBox( sceneId, selfId, targetId, "  ä½ é˜Ÿä¼æˆå‘˜ä¸­æœ‰äººæœ‰æ¼•è¿è´§èˆ±åœ¨èº«ï¼Œæˆ‘ä»¬é©¿ç«™ä¸èƒ½ä¸ºä½ æä¾›ä¼ é€æœåŠ¡ã€‚" )
 				return
 			end
 		end
 	end
 
 	if IsHaveMission(sceneId,selfId,4021) > 0 then
-		x001100_MsgBox( sceneId, selfId, targetId, "  ÄãÓĞäîÔË»õ²ÕÔÚÉí£¬ÎÒÃÇæäÕ¾²»ÄÜÎªÄãÌá¹©´«ËÍ·şÎñ¡£" )
+		x001100_MsgBox( sceneId, selfId, targetId, "  ä½ æœ‰æ¼•è¿è´§èˆ±åœ¨èº«ï¼Œæˆ‘ä»¬é©¿ç«™ä¸èƒ½ä¸ºä½ æä¾›ä¼ é€æœåŠ¡ã€‚" )
 		return
 	end
 
-	--¼ì²âImpact×´Ì¬×¤ÁôĞ§¹û
+	--æ£€æµ‹ImpactçŠ¶æ€é©»ç•™æ•ˆæœ
 	for i, ImpactId in x001100_g_Impact_NotTransportList do
 		if LuaFnHaveImpactOfSpecificDataIndex(sceneId, selfId, ImpactId) ~= 0 then
 			x001100_MsgBox( sceneId, selfId, targetId, x001100_g_TalkInfo_NotTransportList[i] )			
@@ -98,14 +98,14 @@ function x001100_OnEventRequest( sceneId, selfId, targetId, eventId )
 	end
 
 	
-	--·µ»ØÃÅÅÉ....
+	--è¿”å›é—¨æ´¾....
 	local	arg	= GetNumText()
 	local	mp
 	local	i		= 0
 	local	id	= LuaFnGetMenPai( sceneId, selfId )
-	if arg == 1000 then		--·µ»ØÃÅÅÉ
+	if arg == 1000 then		--è¿”å›é—¨æ´¾
 		if id < 0 or id >= 9 then
-			x001100_MsgBox( sceneId, selfId, targetId, "  Äã»¹Ã»ÓĞ¼ÓÈëÈÎºÎÃÅÅÉ£¡" )
+			x001100_MsgBox( sceneId, selfId, targetId, "  ä½ è¿˜æ²¡æœ‰åŠ å…¥ä»»ä½•é—¨æ´¾ï¼" )
 		else
 			mp	= x001100_GetMPInfo( id )
 			if mp ~= nil then
@@ -115,31 +115,31 @@ function x001100_OnEventRequest( sceneId, selfId, targetId, eventId )
 		return
 	end
 
-	--ÂåÑô....
+	--æ´›é˜³....
 	if arg == 1001 then
 		CallScriptFunction( (400900), "TransferFunc", sceneId, selfId, 0, 132, 183 )
 		return
 	end
 
-	--ÂåÑô¾ÅÖİ....
+	--æ´›é˜³ä¹å·....
 	if arg == 1002 then
 		CallScriptFunction( (400900), "TransferFunc", sceneId, selfId, 0, 234, 132 )
 		return
 	end
 
-	--ËÕÖİ....
+	--è‹å·....
 	if arg == 1003 then
 		CallScriptFunction( (400900), "TransferFunc", sceneId, selfId, 1, 114,162 )
 		return
 	end
 
-	--ËÕÖİÌú½³....
+	--è‹å·é“åŒ ....
 	if arg == 1004 then
 		CallScriptFunction( (400900), "TransferFunc", sceneId, selfId, 1, 235, 132 )
 		return
 	end
 
-	--´óÀí....
+	--å¤§ç†....
 	if arg == 1005 then
 		CallScriptFunction( (400900), "TransferFunc", sceneId, selfId, 2, 241, 141 )
 		return
@@ -148,7 +148,7 @@ function x001100_OnEventRequest( sceneId, selfId, targetId, eventId )
 	if arg == 1011 then		
 		BeginEvent( sceneId )
 			for i, mp in x001100_g_mpInfo do
-				AddNumText( sceneId, x001100_g_ScriptId, "ÃÅÅÉ - "..mp[1], 9, i )
+				AddNumText( sceneId, x001100_g_ScriptId, "é—¨æ´¾ - "..mp[1], 9, i )
 			end
 			
 		EndEvent( sceneId )
@@ -157,20 +157,20 @@ function x001100_OnEventRequest( sceneId, selfId, targetId, eventId )
 		return
 	end
 	
-	if arg == 1016 then		--ÊøºÓ¹ÅÕò
+	if arg == 1016 then		--æŸæ²³å¤é•‡
 			-- add by zchw
 		BeginUICommand(sceneId)
 			UICommand_AddInt(sceneId, x001100_g_ScriptId);
 			-- zchw fix Transfer bug
 			UICommand_AddInt(sceneId, targetId);
 			UICommand_AddString(sceneId, "GotoShuHeGuZhen");
-			UICommand_AddString(sceneId, "ÊøºÓ¹ÅÕòÎª²»¼ÓÉ±Æø³¡¾°£¬Çë×¢Òâ°²È«¡£ÄãÈ·ÈÏÒª½øÈëÂğ£¿");
+			UICommand_AddString(sceneId, "æŸæ²³å¤é•‡ä¸ºä¸åŠ æ€æ°”åœºæ™¯ï¼Œè¯·æ³¨æ„å®‰å…¨ã€‚ä½ ç¡®è®¤è¦è¿›å…¥å—ï¼Ÿ");
 		EndUICommand(sceneId)
 		DispatchUICommand(sceneId,selfId, 24)
 		return
 	end
 	
-	--ÃÅÅÉ....
+	--é—¨æ´¾....
 	for i, mp in x001100_g_mpInfo do
 		if arg == i then
 			CallScriptFunction( (400900), "TransferFunc", sceneId, selfId, mp[2], mp[3], mp[4] )
@@ -185,7 +185,7 @@ function x001100_GotoShuHeGuZhen( sceneId, selfId, targetId )
 	return
 end
 --**********************************
---¸ù¾İÃÅÅÉID»ñÈ¡ÃÅÅÉĞÅÏ¢
+--æ ¹æ®é—¨æ´¾IDè·å–é—¨æ´¾ä¿¡æ¯
 --**********************************
 function x001100_GetMPInfo( mpID )
 	local	mp
@@ -199,7 +199,7 @@ function x001100_GetMPInfo( mpID )
 end
 
 --**********************************
---¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+--å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x001100_MsgBox( sceneId, selfId, targetId, msg )
 	BeginEvent( sceneId )

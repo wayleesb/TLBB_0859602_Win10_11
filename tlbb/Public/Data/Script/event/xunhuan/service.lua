@@ -1,16 +1,16 @@
---ĞŞ×°±¸
+--ä¿®è£…å¤‡
 
 function x801015_OnService( sceneId, selfId, itemId, platformType )
---Ò»Ğ©Ìõ¼şÅĞ¶Ï
---ĞŞÀí
---Íê³É
+--ä¸€äº›æ¡ä»¶åˆ¤æ–­
+--ä¿®ç†
+--å®Œæˆ
 	local tArray = {}
 	tArray[1] = {0}
 	tArray[2] = {1,2,3,4,5,14,15}
 	tArray[3] = {6,7,11,12,13}
 	
-	local tArray_Text = {"ÖıÔìÌ¨Ö»ÄÜĞŞÀíÎäÆ÷¡£","·ìÈÒÌ¨Ö»ÄÜĞŞÀí·À¾ß¡£","¹¤ÒÕÌ¨Ö»ÄÜĞŞÀíÊÎÆ·¡£"}
-	local tArray_Ability = {"ÖıÔì","·ìÈÒ","¹¤ÒÕ"}
+	local tArray_Text = {"é“¸é€ å°åªèƒ½ä¿®ç†æ­¦å™¨ã€‚","ç¼çº«å°åªèƒ½ä¿®ç†é˜²å…·ã€‚","å·¥è‰ºå°åªèƒ½ä¿®ç†é¥°å“ã€‚"}
+	local tArray_Ability = {"é“¸é€ ","ç¼çº«","å·¥è‰º"}
 	local nLevel =GetBagItemLevel(sceneId, selfId,itemId)
 	local EquipType = LuaFnGetBagEquipType(sceneId, selfId, itemId)
 	local find = 0
@@ -31,7 +31,7 @@ function x801015_OnService( sceneId, selfId, itemId, platformType )
 	
 	if nLevel < 40 then
 		BeginEvent(sceneId)
-		AddText(sceneId,"Ö»ÄÜĞŞÀíĞèÇóµÈ¼¶>=40¼¶µÄ×°±¸")
+		AddText(sceneId,"åªèƒ½ä¿®ç†éœ€æ±‚ç­‰çº§>=40çº§çš„è£…å¤‡")
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
@@ -40,40 +40,40 @@ function x801015_OnService( sceneId, selfId, itemId, platformType )
 
 	if ret == -1 then
 		BeginEvent(sceneId)
-		AddText(sceneId,"¸Ã×°±¸ÎŞ·¨ÔÙ´ÎĞŞÀí")
+		AddText(sceneId,"è¯¥è£…å¤‡æ— æ³•å†æ¬¡ä¿®ç†")
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 	elseif ret == -2 then
 		BeginEvent(sceneId)
-		AddText(sceneId,"ÄãµÄ"..tArray_Ability[platformType].."¼¼ÄÜµÈ¼¶²»×ã")
+		AddText(sceneId,"ä½ çš„"..tArray_Ability[platformType].."æŠ€èƒ½ç­‰çº§ä¸è¶³")
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 	elseif ret == -3 then
 		BeginEvent(sceneId)
-		AddText(sceneId,"Ã»ÓĞ×ã¹»µÄ»îÁ¦")
+		AddText(sceneId,"æ²¡æœ‰è¶³å¤Ÿçš„æ´»åŠ›")
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 	elseif ret == -4 then
 		BeginEvent(sceneId)
-		AddText(sceneId,"ºÜ²»ĞÒ£¬ÔÚĞŞ¸´¹ı³ÌÖĞ£¬ÓÉÓÚÄãÔËÆø²»ºÃ£¬Ê¹Õâ¼ş#{_ITEM"..LuaFnGetItemTableIndexByIndex(sceneId,selfId,itemId).."}ÊÜÁËĞ©ĞíÄ¥Ëğ¡£")
+		AddText(sceneId,"å¾ˆä¸å¹¸ï¼Œåœ¨ä¿®å¤è¿‡ç¨‹ä¸­ï¼Œç”±äºä½ è¿æ°”ä¸å¥½ï¼Œä½¿è¿™ä»¶#{_ITEM"..LuaFnGetItemTableIndexByIndex(sceneId,selfId,itemId).."}å—äº†äº›è®¸ç£¨æŸã€‚")
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,-1)
 	elseif ret == -5 then
 		BeginEvent(sceneId)
-		AddText(sceneId,"ĞŞÀí¹ı³ÌÖĞ³öÏÖÎ´Öª´íÎó")
+		AddText(sceneId,"ä¿®ç†è¿‡ç¨‹ä¸­å‡ºç°æœªçŸ¥é”™è¯¯")
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 	elseif ret == -6 then
 		BeginEvent(sceneId)
-		AddText(sceneId,"ÎïÆ·Ã»ÓĞËğº¦£¬²»ÓÃĞŞÀí")
+		AddText(sceneId,"ç‰©å“æ²¡æœ‰æŸå®³ï¼Œä¸ç”¨ä¿®ç†")
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 	elseif ret == 0 then
 		BeginEvent(sceneId)
-		AddText(sceneId,"¾­¹ıÄã¾«ĞÄµÄĞŞ¸´£¬Õâ¼ş#{_ITEM"..LuaFnGetItemTableIndexByIndex(sceneId,selfId,itemId).."}ÒÑ¾­ĞŞºÃÁË¡£")
+		AddText(sceneId,"ç»è¿‡ä½ ç²¾å¿ƒçš„ä¿®å¤ï¼Œè¿™ä»¶#{_ITEM"..LuaFnGetItemTableIndexByIndex(sceneId,selfId,itemId).."}å·²ç»ä¿®å¥½äº†ã€‚")
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,-1)
-		Msg2Player(  sceneId, selfId,"ÏûºÄ"..floor(nLevel/10+5).."»îÁ¦",MSG2PLAYER_PARA )
+		Msg2Player(  sceneId, selfId,"æ¶ˆè€—"..floor(nLevel/10+5).."æ´»åŠ›",MSG2PLAYER_PARA )
 	end
 	
 end

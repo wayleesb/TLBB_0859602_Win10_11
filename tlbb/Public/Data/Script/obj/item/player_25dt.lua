@@ -1,6 +1,6 @@
--- ÈËÎï2.5¾­ÑéÊ±¼äÒ©Ë®
+-- äººç‰©2.5ç»éªŒæ—¶é—´è¯æ°´
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x300046_g_scriptId = 300046
 x300046_g_ItemId = 30008014
 x300046_g_BuffId = 60
@@ -11,27 +11,27 @@ x300046_g_BuffPet_25 = 61
 x300046_g_BuffPet_2 = 53
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x300046_OnDefaultEvent( sceneId, selfId, nItemIndex )
 
-	-- Èç¹ûÓĞ×Ô¼º£¬¾Í²»ÈÃÔÙ³Ô
+	-- å¦‚æœæœ‰è‡ªå·±ï¼Œå°±ä¸è®©å†åƒ
 	if LuaFnHaveImpactOfSpecificDataIndex(sceneId, selfId, x300046_g_BuffPalyer_25) == 1   then
 		BeginEvent(sceneId)
-			AddText(sceneId,"ÄãÒÑ¾­Ê¹ÓÃÁË¶à±¶¾­ÑéÒ©Îï£¬ÇëÔÚĞ§¹ûÏûÊ§ºóÔÙÊ¹ÓÃ¡£")
+			AddText(sceneId,"ä½ å·²ç»ä½¿ç”¨äº†å¤šå€ç»éªŒè¯ç‰©ï¼Œè¯·åœ¨æ•ˆæœæ¶ˆå¤±åå†ä½¿ç”¨ã€‚")
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
 	end
 
-	-- Èç¹ûÍæ¼ÒÉíÉÏÓĞ Ë«±¶¾­ÑéÊ±¼ä  £¬ÌáÊ¾Íæ¼ÒÒª²»Òª³Ô
+	-- å¦‚æœç©å®¶èº«ä¸Šæœ‰ åŒå€ç»éªŒæ—¶é—´  ï¼Œæç¤ºç©å®¶è¦ä¸è¦åƒ
 	local nCurHaveTime = DEGetMoneyTime(sceneId, selfId)
 	if nCurHaveTime > 0  and  DEIsLock(sceneId, selfId)~=1  then
 		BeginUICommand(sceneId)
 			UICommand_AddInt(sceneId,x300046_g_scriptId);
 			UICommand_AddInt(sceneId,nItemIndex)
 			UICommand_AddString(sceneId,"EatMe");
-			UICommand_AddString(sceneId,"ÄúÉíÉÏÒÑ¾­´æÔÚÁË¶à±¶¾­ÑéÊ±¼ä£¬ÊÇ·ñÈ·ÈÏÊ¹ÓÃ£¿");
+			UICommand_AddString(sceneId,"æ‚¨èº«ä¸Šå·²ç»å­˜åœ¨äº†å¤šå€ç»éªŒæ—¶é—´ï¼Œæ˜¯å¦ç¡®è®¤ä½¿ç”¨ï¼Ÿ");
 		EndUICommand(sceneId)
 		DispatchUICommand(sceneId,selfId, 24)
 		return
@@ -42,7 +42,7 @@ function x300046_OnDefaultEvent( sceneId, selfId, nItemIndex )
 			UICommand_AddInt(sceneId,x300046_g_scriptId);
 			UICommand_AddInt(sceneId,nItemIndex)
 			UICommand_AddString(sceneId,"EatMe");
-			UICommand_AddString(sceneId,"ÄúÉíÉÏÒÑ¾­´æÔÚÁË¶à±¶¾­ÑéÊ±¼ä£¬ÊÇ·ñÈ·ÈÏÌæ»»£¿");
+			UICommand_AddString(sceneId,"æ‚¨èº«ä¸Šå·²ç»å­˜åœ¨äº†å¤šå€ç»éªŒæ—¶é—´ï¼Œæ˜¯å¦ç¡®è®¤æ›¿æ¢ï¼Ÿ");
 		EndUICommand(sceneId)
 		DispatchUICommand(sceneId,selfId, 24)
 		return
@@ -65,28 +65,28 @@ end
 -- 
 --**********************************
 function x300046_UseItem( sceneId, selfId, nItemIndex)
-	-- ÏÈ¼ì²âÕâ¸ö nItemIndex µÄÎïÆ·ÊÇ²»ÊÇºÍµ±Ç°µÄ¶ÔÓ¦£¬
+	-- å…ˆæ£€æµ‹è¿™ä¸ª nItemIndex çš„ç‰©å“æ˜¯ä¸æ˜¯å’Œå½“å‰çš„å¯¹åº”ï¼Œ
 	if GetItemTableIndexByIndex(sceneId, selfId, nItemIndex) ~= x300046_g_ItemId  then
 		BeginEvent(sceneId)
-			AddText(sceneId,"  ±³°üÄÚ²¿´íÎó")
+			AddText(sceneId,"  èƒŒåŒ…å†…éƒ¨é”™è¯¯")
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
 	end
 
-	-- ¿ÛÒ»¸öÒ©
+	-- æ‰£ä¸€ä¸ªè¯
 	local ret = EraseItem(sceneId, selfId, nItemIndex)
 
 	if ret == 1   then
 		LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, x300046_g_BuffId, 100 )
 		BeginEvent(sceneId)
-			AddText(sceneId,"ÄúÔö¼ÓÁËÒ»¸öĞ¡Ê±µÄÈËÎï2.5¾­ÑéÊ±¼ä¡£")
+			AddText(sceneId,"æ‚¨å¢åŠ äº†ä¸€ä¸ªå°æ—¶çš„äººç‰©2.5ç»éªŒæ—¶é—´ã€‚")
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		
 	else
 		BeginEvent(sceneId)
-			AddText(sceneId,"ÎïÆ·²»ÄÜÊ¹ÓÃ")
+			AddText(sceneId,"ç‰©å“ä¸èƒ½ä½¿ç”¨")
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		

@@ -1,47 +1,47 @@
---åĞÒ£NPC
---ÎâÁì¾ü
---ÆÕÍ¨
+--é€é¥NPC
+--å´é¢†å†›
+--æ™®é€š
 
  x014004_g_ScriptId=014004
---447	ÆïÊõ£º»¢
---448	ÆïÊõ£º»ÆæôÂí
---449	ÆïÊõ£ºÂæÍÕ
---450	ÆïÊõ£ºº×
---451	ÆïÊõ£ºÇà·ï
---452	ÆïÊõ£ºêóÅ£
---453	ÆïÊõ£ºÂ¹
---454	ÆïÊõ£ºµñ
---455	ÆïÊõ£º»ÒÀÇ
---456	ÆïÊõ£º°×»¢
---457	ÆïÊõ£ºÇà°×æõÂí
---458	ÆïÊõ£º°×ÂæÍÕ
---459	ÆïÊõ£º½ğÒíº×
---460	ÆïÊõ£ººì°×·ï
---461	ÆïÊõ£º°×êóÅ£
---462	ÆïÊõ£º°×Â¹
---463	ÆïÊõ£º°×µñ
---464	ÆïÊõ£º°×ÀÇ
+--447	éª‘æœ¯ï¼šè™
+--448	éª‘æœ¯ï¼šé»„éª é©¬
+--449	éª‘æœ¯ï¼šéª†é©¼
+--450	éª‘æœ¯ï¼šé¹¤
+--451	éª‘æœ¯ï¼šé’å‡¤
+--452	éª‘æœ¯ï¼šç‰¦ç‰›
+--453	éª‘æœ¯ï¼šé¹¿
+--454	éª‘æœ¯ï¼šé›•
+--455	éª‘æœ¯ï¼šç°ç‹¼
+--456	éª‘æœ¯ï¼šç™½è™
+--457	éª‘æœ¯ï¼šé’ç™½éª¢é©¬
+--458	éª‘æœ¯ï¼šç™½éª†é©¼
+--459	éª‘æœ¯ï¼šé‡‘ç¿¼é¹¤
+--460	éª‘æœ¯ï¼šçº¢ç™½å‡¤
+--461	éª‘æœ¯ï¼šç™½ç‰¦ç‰›
+--462	éª‘æœ¯ï¼šç™½é¹¿
+--463	éª‘æœ¯ï¼šç™½é›•
+--464	éª‘æœ¯ï¼šç™½ç‹¼
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function  x014004_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
-		AddText(sceneId,"ÎÒ¿ÉÒÔ½ÌåĞÒ£µÜ×Ó¼İÔ¦ÉñÂ¹µÄÄÜÁ¦¡£")
+		AddText(sceneId,"æˆ‘å¯ä»¥æ•™é€é¥å¼Ÿå­é©¾é©­ç¥é¹¿çš„èƒ½åŠ›ã€‚")
 		if	GetMenPai( sceneId, selfId) == 8 then
 			if	(0==LuaFnHaveSpecificEquitation(  sceneId, selfId, 453))	then
-				AddNumText(sceneId, x014004_g_ScriptId,"Ñ§Ï°ÆïÊõ£ºÂ¹",12,40)
+				AddNumText(sceneId, x014004_g_ScriptId,"å­¦ä¹ éª‘æœ¯ï¼šé¹¿",12,40)
 			end
 			if	(0==LuaFnHaveSpecificEquitation(  sceneId, selfId, 462))	then
-				AddNumText(sceneId, x014004_g_ScriptId,"Ñ§Ï°ÆïÊõ£º°×Â¹",12,60)
+				AddNumText(sceneId, x014004_g_ScriptId,"å­¦ä¹ éª‘æœ¯ï¼šç™½é¹¿",12,60)
 			end
 		end
-		AddNumText( sceneId, x014004_g_ScriptId, "ÆïÊõ½éÉÜ", 11, 100 )
+		AddNumText( sceneId, x014004_g_ScriptId, "éª‘æœ¯ä»‹ç»", 11, 100 )
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function  x014004_OnEventRequest( sceneId, selfId, targetId, eventId )
 	if GetNumText() == 100 then
@@ -55,8 +55,8 @@ function  x014004_OnEventRequest( sceneId, selfId, targetId, eventId )
   if GetNumText() == 40 then
 		BeginEvent( sceneId )
 			AddText( sceneId, "#{XXQS_09}" )
-			AddNumText(sceneId, x014004_g_ScriptId,"ÊÇ",-1,0)
-      AddNumText(sceneId, x014004_g_ScriptId,"·ñ",-1,999)			
+			AddNumText(sceneId, x014004_g_ScriptId,"æ˜¯",-1,0)
+      AddNumText(sceneId, x014004_g_ScriptId,"å¦",-1,999)			
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 		return
@@ -65,8 +65,8 @@ function  x014004_OnEventRequest( sceneId, selfId, targetId, eventId )
 	if GetNumText() == 60 then
 		BeginEvent( sceneId )
 			AddText( sceneId, "#{XXQS_10}" )
-			AddNumText(sceneId, x014004_g_ScriptId,"ÊÇ",-1,1)
-      AddNumText(sceneId, x014004_g_ScriptId,"·ñ",-1,999)			
+			AddNumText(sceneId, x014004_g_ScriptId,"æ˜¯",-1,1)
+      AddNumText(sceneId, x014004_g_ScriptId,"å¦",-1,999)			
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 		return

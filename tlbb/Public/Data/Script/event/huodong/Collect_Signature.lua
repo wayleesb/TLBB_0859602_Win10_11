@@ -1,57 +1,57 @@
---Creator ×ó´ºÎ°
---ÊÕ¼¯Ç©Ãû
+--Creator å·¦æ˜¥ä¼Ÿ
+--æ”¶é›†ç­¾å
 ----------------
 --MisDescBegin
---½Å±¾ºÅ
+--è„šæœ¬å·
 x808038_g_ScriptId = 808038;
---½ÓÊÜÈÎÎñNPCÊôĞÔ
+--æ¥å—ä»»åŠ¡NPCå±æ€§
 x808038_g_Position_X=170.5004
 x808038_g_Position_Z=122.5593
 
-x808038_g_AccomplishNPC_Name="¹¨²ÊÔÆ"
+x808038_g_AccomplishNPC_Name="é¾šå½©äº‘"
 
---ÈÎÎñºÅ
+--ä»»åŠ¡å·
 x808038_g_MissionId = 1130;
 
---ÈÎÎñÄ¿±ênpc
-x808038_g_Name 					= "¹¨²ÊÔÆ"
---ÈÎÎñ¹éÀà
-x808038_g_MissionKind			= 13 --´óÀí
---ÈÎÎñµÈ¼¶
+--ä»»åŠ¡ç›®æ ‡npc
+x808038_g_Name 					= "é¾šå½©äº‘"
+--ä»»åŠ¡å½’ç±»
+x808038_g_MissionKind			= 13 --å¤§ç†
+--ä»»åŠ¡ç­‰çº§
 x808038_g_MissionLevel		= 10000
---ÊÇ·ñÊÇ¾«Ó¢ÈÎÎñ
+--æ˜¯å¦æ˜¯ç²¾è‹±ä»»åŠ¡
 x808038_g_IfMissionElite	= 0
---ÈÎÎñÊÇ·ñÒÑ¾­Íê³É
-x808038_g_IsMissionOkFail	= 0		--ÈÎÎñ²ÎÊıµÄµÚ0Î»
+--ä»»åŠ¡æ˜¯å¦å·²ç»å®Œæˆ
+x808038_g_IsMissionOkFail	= 0		--ä»»åŠ¡å‚æ•°çš„ç¬¬0ä½
 
---ÈÎÎñÎÄ±¾ÃèÊö
-x808038_g_MissionName			= "ÊÕ¼¯Ç©Ãû"
---ÈÎÎñÃèÊö
-x808038_g_MissionInfo			= "ÊÕ¼¯15¸öºÃÓÑÇ©Ãû£¬µ½¹¨²ÊÔÆ´¦ÁìÈ¡½±Àø£¡"
---ÈÎÎñÄ¿±ê
+--ä»»åŠ¡æ–‡æœ¬æè¿°
+x808038_g_MissionName			= "æ”¶é›†ç­¾å"
+--ä»»åŠ¡æè¿°
+x808038_g_MissionInfo			= "æ”¶é›†15ä¸ªå¥½å‹ç­¾åï¼Œåˆ°é¾šå½©äº‘å¤„é¢†å–å¥–åŠ±ï¼"
+--ä»»åŠ¡ç›®æ ‡
 x808038_g_MissionTarget		= "#{SJQM_8825_20}"
---Î´Íê³ÉÈÎÎñµÄnpc¶Ô»°
-x808038_g_ContinueInfo		= "¿´À´Äã»¹Ã»ÓĞÍê³É°¡£¡"
---Íê³ÉÈÎÎñnpcËµµÄ»°
-x808038_g_MissionComplete	= "×öµÄºÜºÃ£¡"
+--æœªå®Œæˆä»»åŠ¡çš„npcå¯¹è¯
+x808038_g_ContinueInfo		= "çœ‹æ¥ä½ è¿˜æ²¡æœ‰å®Œæˆå•Šï¼"
+--å®Œæˆä»»åŠ¡npcè¯´çš„è¯
+x808038_g_MissionComplete	= "åšçš„å¾ˆå¥½ï¼"
 
-x808038_g_city 				 	= 1		 --ÈÎÎñ²ÎÊıµÄµÚ1Î»
+x808038_g_city 				 	= 1		 --ä»»åŠ¡å‚æ•°çš„ç¬¬1ä½
 
--- ÈÎÎñÍê³ÉÇé¿ö,ÄÚÈİ¶¯Ì¬Ë¢ĞÂ,Õ¼ÓÃÈÎÎñ²ÎÊıµÄµÚ1Î»
+-- ä»»åŠ¡å®Œæˆæƒ…å†µ,å†…å®¹åŠ¨æ€åˆ·æ–°,å ç”¨ä»»åŠ¡å‚æ•°çš„ç¬¬1ä½
 
-x808038_g_Custom	= { {id="ÒÑ¾­ÊÕ¼¯ºÃÓÑÇ©Ãû",num=15} }
+x808038_g_Custom	= { {id="å·²ç»æ”¶é›†å¥½å‹ç­¾å",num=15} }
 --MisDescEnd
 ----------------
 
---Ç©ÃûÂ¼µÀ¾ßID
+--ç­¾åå½•é“å…·ID
 x808038_g_SignatureList_id = 40004451; 
---Ç©ÃûµÀ¾ßID
+--ç­¾åé“å…·ID
 x808038_g_Signature_id = 40004452; 
---½±Àø´óÀñ°üID
+--å¥–åŠ±å¤§ç¤¼åŒ…ID
 x808038_g_Gift_id = 30008052; 
---¶Ò»»½±ÀøÌØĞ§ID
+--å…‘æ¢å¥–åŠ±ç‰¹æ•ˆID
 x808038_g_Impact_id = 47;
---¾­Ñé½±ÀøÖµ
+--ç»éªŒå¥–åŠ±å€¼
 x808038_g_Exp_Prize = 
 {
 18308,19336,20337,21344,22392,23412,24437,25505,26543,27624,  										-- 10->19
@@ -72,126 +72,126 @@ x808038_g_Exp_Prize =
 }
  
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x808038_OnDefaultEvent( sceneId, selfId, targetId )
 	local id = GetNumText();
 	if id == 1 then 
 		BeginEvent(sceneId)
 			AddText(sceneId, "#{SJQM_8815_02}");	
-			AddNumText(sceneId, x808038_g_ScriptId, "²Î¼ÓÊÕ¼¯Ç©Ãû»î¶¯", 6, 3);
-			AddNumText(sceneId, x808038_g_ScriptId, "¶Ò»»½±Àø", 6, 4);
+			AddNumText(sceneId, x808038_g_ScriptId, "å‚åŠ æ”¶é›†ç­¾åæ´»åŠ¨", 6, 3);
+			AddNumText(sceneId, x808038_g_ScriptId, "å…‘æ¢å¥–åŠ±", 6, 4);
 			EndEvent()
 		DispatchEventList(sceneId, selfId, targetId);
-	elseif id == 2 then --°ïÖú
+	elseif id == 2 then --å¸®åŠ©
 		BeginEvent(sceneId)
 			AddText(sceneId, "#{SJQM_8815_08}");
 		EndEvent()
 		DispatchEventList(sceneId, selfId, targetId);
-	elseif id == 3 then --²Î¼Ó»î¶¯
-		-- µÈ¼¶>10?
+	elseif id == 3 then --å‚åŠ æ´»åŠ¨
+		-- ç­‰çº§>10?
 		local lvl = GetLevel(sceneId, selfId);
 		if lvl < 10 then
 			x808038_ReturnMsg(sceneId, selfId, targetId, "#{SJQM_8815_03}");
 			return
 		end
-		-- ÒÑ½ÓÇ©ÃûÈÎÎñ£¿
+		-- å·²æ¥ç­¾åä»»åŠ¡ï¼Ÿ
 		if IsHaveMission(sceneId, selfId, x808038_g_MissionId) > 0 then
 			x808038_ReturnMsg(sceneId, selfId, targetId, "#{SJQM_8815_04}");
 			return		
 		end
-		-- ÈÎÎñÒÑÂú£¿
+		-- ä»»åŠ¡å·²æ»¡ï¼Ÿ
 		if IsMissionFull(sceneId, selfId) == 1 then
 			x808038_ReturnMsg(sceneId, selfId, targetId, "#{SJQM_8815_05}");
 			return			
 		end
-		-- ±³°üÈÎÎñÀ¸ÓĞ¿Õ¼ä£¿
+		-- èƒŒåŒ…ä»»åŠ¡æ æœ‰ç©ºé—´ï¼Ÿ
 		if LuaFnGetTaskItemBagSpace(sceneId, selfId) == 0 then
 			x808038_ReturnMsg(sceneId, selfId, targetId, "#{SJQM_8815_06}");
 			return		
 		end
-		-- ÊÕµ½ÈÎÎñ
+		-- æ”¶åˆ°ä»»åŠ¡
 		local ret = AddMission( sceneId,selfId, x808038_g_MissionId, x808038_g_ScriptId, 0, 0, 0 );
 		if ret < 1 then
 			return
 		end	
-		-- Ìõ¼şÂú×ã£¬¸øÇ©ÃûÂ¼µÀ¾ß
+		-- æ¡ä»¶æ»¡è¶³ï¼Œç»™ç­¾åå½•é“å…·
 		ret = TryRecieveItem( sceneId, selfId, x808038_g_SignatureList_id, QUALITY_MUST_BE_CHANGE);
 		if ret == -1 then
-			return  -- ¸øµÀ¾ßÊ§°Ü	
+			return  -- ç»™é“å…·å¤±è´¥	
 		end	
-		--ÈÕÖ¾
+		--æ—¥å¿—
 		AuditJoinCollectSignature(sceneId, selfId);
-		-- ·µ»ØĞÅÏ¢
+		-- è¿”å›ä¿¡æ¯
 		BeginEvent(sceneId, selfId)
 			AddText(sceneId, "#{SJQM_8815_07}");
 		EndEvent()
 		DispatchEventList(sceneId, selfId, targetId);	
 	elseif id == 4 then
-		-- ±¾ÖÜ¶Ò½±¹ı£¿
+		-- æœ¬å‘¨å…‘å¥–è¿‡ï¼Ÿ
 		local weekTime = GetWeekTime();
 		local diJiTian = GetTodayWeek();
-		if diJiTian == 0 then  -- ĞÇÆÚÒ»×÷ÎªÒ»ÖÜ¿ªÊ¼
+		if diJiTian == 0 then  -- æ˜ŸæœŸä¸€ä½œä¸ºä¸€å‘¨å¼€å§‹
 			weekTime = weekTime - 1;
 		end
 		if GetMissionData(sceneId, selfId, MD_SIGNATURE_GETPRIZE_TIME) == weekTime then
 			x808038_ReturnMsg(sceneId, selfId, targetId, "#{SJQM_8815_16}");
 			return					
 		end
-		-- ²Î¼Ó»î¶¯ÁËÂğ£¿
+		-- å‚åŠ æ´»åŠ¨äº†å—ï¼Ÿ
 		if IsHaveMission(sceneId, selfId, x808038_g_MissionId) == 0 then
 			x808038_ReturnMsg(sceneId, selfId, targetId, "#{SJQM_8815_17}");
 			return		
 		end
-		-- ¹»15¸öÇ©Ãû£¿¡¢
+		-- å¤Ÿ15ä¸ªç­¾åï¼Ÿã€
 		if GetItemCount(sceneId, selfId, x808038_g_Signature_id) < 15 then
 		  x808038_ReturnMsg(sceneId, selfId, targetId, "#{SJQM_8815_18}");
 		  return
 		end
-		-- ÉÏËø£¿
+		-- ä¸Šé”ï¼Ÿ
 		if LuaFnGetAvailableItemCount(sceneId, selfId, x808038_g_Signature_id) < 15 then
 		  x808038_ReturnMsg(sceneId, selfId, targetId, "#{ResultText_158}");
 		  return			
 		end
-		-- ±³°üµÀ¾ßÀ¸ÓĞ¿Õ¼ä£¿
+		-- èƒŒåŒ…é“å…·æ æœ‰ç©ºé—´ï¼Ÿ
 		if LuaFnGetPropertyBagSpace(sceneId, selfId) == 0 then
 			x808038_ReturnMsg(sceneId, selfId, targetId, "#{SJQM_8819_20}");
 			return		
 		end
-		--¿Û³ıÇ©Ãû
+		--æ‰£é™¤ç­¾å
 		if LuaFnDelAvailableItem(sceneId, selfId, x808038_g_Signature_id, 15) == 0 then
-			x808038_ShowMsg(sceneId, selfId, "¿Û³ıÇ©ÃûÊ§°Ü£¡");
+			x808038_ShowMsg(sceneId, selfId, "æ‰£é™¤ç­¾åå¤±è´¥ï¼");
 		  return
 		end
-		--¿Û³ıÇ©Ãû²¾
+		--æ‰£é™¤ç­¾åç°¿
 		if LuaFnDelAvailableItem(sceneId, selfId, x808038_g_SignatureList_id, 1) == 0 then
-			x808038_ShowMsg(sceneId, selfId, "¿Û³ıÇ©ÃûÂ¼Ê§°Ü£¡");
+			x808038_ShowMsg(sceneId, selfId, "æ‰£é™¤ç­¾åå½•å¤±è´¥ï¼");
 		  return
 		end		
-		-- ½±Àø¾­Ñé
+		-- å¥–åŠ±ç»éªŒ
 		local lvl = GetLevel(sceneId, selfId);
 		if lvl > 9 and lvl < 119 then
 			LuaFnAddExp(sceneId, selfId, x808038_g_Exp_Prize[lvl-9]);
 		end
-		-- ¸ø´óÀñ°ü
+		-- ç»™å¤§ç¤¼åŒ…
 		ret = TryRecieveItem( sceneId, selfId, x808038_g_Gift_id, QUALITY_MUST_BE_CHANGE);
 		if ret == -1 then
-			x808038_ShowMsg(sceneId, selfId, "½±ÀøÊ§°Ü£¡");		
-			return  -- µÀ¾ßÊ§°Ü	
+			x808038_ShowMsg(sceneId, selfId, "å¥–åŠ±å¤±è´¥ï¼");		
+			return  -- é“å…·å¤±è´¥	
 		end
-		-- ²¥·ÅÌØĞ§
+		-- æ’­æ”¾ç‰¹æ•ˆ
 		LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, x808038_g_Impact_id, 0);
-		-- ÉèÖÃ¶Ò½±Ê±¼ä
+		-- è®¾ç½®å…‘å¥–æ—¶é—´
 		SetMissionData(sceneId, selfId, MD_SIGNATURE_GETPRIZE_TIME, weekTime);
-		-- É¾³ıÈÎÎñ
+		-- åˆ é™¤ä»»åŠ¡
 		DelMission(sceneId, selfId, x808038_g_MissionId);
 
-		-- ·µ»ØÏûÏ¢
+		-- è¿”å›æ¶ˆæ¯
 		BeginEvent(sceneId)
 			AddText(sceneId, "#{SJQM_8815_19}");
 		EndEvent()
 		DispatchEventList(sceneId, selfId, targetId);
-		-- ¹ã²¥
+		-- å¹¿æ’­
 		local playerName = GetName(sceneId, selfId);
 		if playerName ~= nil then
 			str = format("#{_INFOUSR%s}#{SJQM_8815_01}", playerName); 
@@ -201,15 +201,15 @@ function x808038_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x808038_OnEnumerate( sceneId, selfId, targetId )	
-	AddNumText(sceneId, x808038_g_ScriptId, "ÊÕ¼¯Ç©Ãû»î¶¯", 6, 1);
-	AddNumText(sceneId, x808038_g_ScriptId, "ÊÕ¼¯Ç©Ãû»î¶¯°ïÖú", 0, 2);
+	AddNumText(sceneId, x808038_g_ScriptId, "æ”¶é›†ç­¾åæ´»åŠ¨", 6, 1);
+	AddNumText(sceneId, x808038_g_ScriptId, "æ”¶é›†ç­¾åæ´»åŠ¨å¸®åŠ©", 0, 2);
 end
 
 --**********************************
---·ÅÆú£¬½ö¹©×ÓÈÎÎñµ÷ÓÃ
+--æ”¾å¼ƒï¼Œä»…ä¾›å­ä»»åŠ¡è°ƒç”¨
 --**********************************
 function x808038_OnAbandon( sceneId, selfId )
 	local itemNum = LuaFnGetAvailableItemCount(sceneId, selfId, x808038_g_SignatureList_id);
@@ -227,7 +227,7 @@ function x808038_OnAbandon( sceneId, selfId )
 end
 
 --**********************************
---ĞÅÏ¢ÌáÊ¾
+--ä¿¡æ¯æç¤º
 --**********************************
 function x808038_ShowMsg( sceneId, selfId, msg )
 	BeginEvent(sceneId)
@@ -237,7 +237,7 @@ function x808038_ShowMsg( sceneId, selfId, msg )
 end
 
 --**********************************
---NPC·µ»ØÏûÏ¢
+--NPCè¿”å›æ¶ˆæ¯
 --**********************************
 
 function x808038_ReturnMsg(sceneId, selfId, targetId, msg)

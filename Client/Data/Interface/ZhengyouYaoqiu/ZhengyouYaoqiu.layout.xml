@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" ?>
+<?xml version="1.0" ?>
 <GUILayout>
   <Window Type="TLBB_MainFrame1" Name="ZhengyouYaoqiu_Frame">
     <Property Name="AbsolutePosition" Value="x:101.000000 y:104.000000" />

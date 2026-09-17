@@ -1,16 +1,16 @@
---´óÀíNPC
---»ÆÄÉ¸£
---ÆÕÍ¨
+--å¤§ç†NPC
+--é»„çº³ç¦
+--æ™®é€š
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x002087_g_ScriptId	= 002087
 
---ÈÎÎñºÅ
+--ä»»åŠ¡å·
 x002087_g_MoneyId = MF_BUCHANG_MONEY
 x002087_g_StoneId = MF_BUCHANG_STONE
 x002087_g_EquipId = MF_BUCHANG_EQUIP
 
---¸÷¸öÃÅÅÉ×°±¸ÁĞ±í
+--å„ä¸ªé—¨æ´¾è£…å¤‡åˆ—è¡¨
 x002087_g_equipInfo = {}
 x002087_g_equipInfo[0]	= {MP_XINGSU,10433240,10440540,10441540,10442540,10443540,10444540,10445540,10450054,10451054,10452054,10453054}
 x002087_g_equipInfo[1]	= {MP_XIAOYAO,10434140,10440740,10441740,10442740,10443740,10444740,10445740,10450074,10451074,10452074,10453074}
@@ -22,156 +22,156 @@ x002087_g_equipInfo[6]	= {MP_WUDANG,10432140,10440440,10441440,10442440,10443440
 x002087_g_equipInfo[7]	= {MP_MINGJIAO,10430140,10440140,10441140,10442140,10443140,10444140,10445140,10450014,10451014,10452014,10453014}
 x002087_g_equipInfo[8]	= {MP_GAIBANG,10431240,10440240,10441240,10442240,10443240,10444240,10445240,10450024,10451024,10452024,10453024}
 
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x002087_OnDefaultEvent( sceneId, selfId, targetId )
-	--Ê×ÏÈÓ¦¸ÃÅĞ¶ÏÊÇ·ñÓ¦¸Ã¸øÓè²¹³¥
-	--Ïà¹ØµÄ´úÂë
-	--ÏÔÊ¾²¹³¥ÁĞ±í
-	--15ºÅ¿ªÊ¼£¬21ºÅ½áÊø
+	--é¦–å…ˆåº”è¯¥åˆ¤æ–­æ˜¯å¦åº”è¯¥ç»™äºˆè¡¥å¿
+	--ç›¸å…³çš„ä»£ç 
+	--æ˜¾ç¤ºè¡¥å¿åˆ—è¡¨
+	--15å·å¼€å§‹ï¼Œ21å·ç»“æŸ
 	local day = GetDayTime()
 	if day >= 7019 then
-		x002087_MsgBox( sceneId, selfId, targetId, "ÈÎÎñÊ±¼äÒÑ¹ı" )
+		x002087_MsgBox( sceneId, selfId, targetId, "ä»»åŠ¡æ—¶é—´å·²è¿‡" )
 		return
 	end
 	BeginEvent( sceneId )
-		AddText( sceneId, "  ¸ĞĞ»´ó¼ÒÒ»Ö±ÒÔÀ´¶ÔÌìÁú°Ë²¿µÄÖ§³Ö£¬ÒòÎª²âÊÔĞÂµÄÓÎÏ·ÏµÍ³µÄĞèÒª£¬±ØĞëÒª½øĞĞÇåµµ´¦Àí¡£Òò´Ë¶ÔÒòÇåµµ¸ø´ó¼Ò´øÀ´µÄ²»±ã£¬Éî±íÇ¸Òâ¡£ÎÒ¸ø´ó¼Ò´øÀ´ÁËÒ»Ğ©ÀñÎï£¬»¹ÇëĞ¦ÄÉ¡£" )
-		AddNumText( sceneId, x002087_g_ScriptId, "ÌáÉıÎÒµÄµÈ¼¶µ½10¼¶", 6, 0 )
-		AddNumText( sceneId, x002087_g_ScriptId, "ÌáÉıÎÒµÄµÈ¼¶µ½40¼¶", 6, 1 )
-		AddNumText( sceneId, x002087_g_ScriptId, "¸øÎÒ40¼¶µÄ×°±¸Ò»Ì×", 6, 2 )
-		AddNumText( sceneId, x002087_g_ScriptId, "ÎÒÒÑ¾­40ÁË£¬¸øÎÒ±¦Ê¯", 6, 3 )
-		AddNumText( sceneId, x002087_g_ScriptId, "ÎÒÒÑ¾­40ÁË£¬¸øÎÒ½ğÇ®", 6, 4 )
+		AddText( sceneId, "  æ„Ÿè°¢å¤§å®¶ä¸€ç›´ä»¥æ¥å¯¹å¤©é¾™å…«éƒ¨çš„æ”¯æŒï¼Œå› ä¸ºæµ‹è¯•æ–°çš„æ¸¸æˆç³»ç»Ÿçš„éœ€è¦ï¼Œå¿…é¡»è¦è¿›è¡Œæ¸…æ¡£å¤„ç†ã€‚å› æ­¤å¯¹å› æ¸…æ¡£ç»™å¤§å®¶å¸¦æ¥çš„ä¸ä¾¿ï¼Œæ·±è¡¨æ­‰æ„ã€‚æˆ‘ç»™å¤§å®¶å¸¦æ¥äº†ä¸€äº›ç¤¼ç‰©ï¼Œè¿˜è¯·ç¬‘çº³ã€‚" )
+		AddNumText( sceneId, x002087_g_ScriptId, "æå‡æˆ‘çš„ç­‰çº§åˆ°10çº§", 6, 0 )
+		AddNumText( sceneId, x002087_g_ScriptId, "æå‡æˆ‘çš„ç­‰çº§åˆ°40çº§", 6, 1 )
+		AddNumText( sceneId, x002087_g_ScriptId, "ç»™æˆ‘40çº§çš„è£…å¤‡ä¸€å¥—", 6, 2 )
+		AddNumText( sceneId, x002087_g_ScriptId, "æˆ‘å·²ç»40äº†ï¼Œç»™æˆ‘å®çŸ³", 6, 3 )
+		AddNumText( sceneId, x002087_g_ScriptId, "æˆ‘å·²ç»40äº†ï¼Œç»™æˆ‘é‡‘é’±", 6, 4 )
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, selfId, targetId )
 end
 
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x002087_OnStoneEvent( sceneId, selfId, targetId )
-	--Ê×ÏÈÓ¦¸ÃÅĞ¶ÏÊÇ·ñÓ¦¸Ã¸øÓè²¹³¥
-	--Ïà¹ØµÄ´úÂë
-	--ÏÔÊ¾²¹³¥ÁĞ±í
+	--é¦–å…ˆåº”è¯¥åˆ¤æ–­æ˜¯å¦åº”è¯¥ç»™äºˆè¡¥å¿
+	--ç›¸å…³çš„ä»£ç 
+	--æ˜¾ç¤ºè¡¥å¿åˆ—è¡¨
 	BeginEvent( sceneId )
-		AddText( sceneId, "  ÄúÏëÁìÈ¡Ê²Ã´±¦Ê¯£¿Ö»ÄÜÁìÈ¡ÒÔÏÂÁ½ÖÖ±¦Ê¯µ±ÖĞµÄÒ»ÖÖ" )
-		AddNumText( sceneId, x002087_g_ScriptId, "Ã¨ÑÛÊ¯", 6, 5 )
-		AddNumText( sceneId, x002087_g_ScriptId, "»¢ÑÛÊ¯", 6, 6 )
+		AddText( sceneId, "  æ‚¨æƒ³é¢†å–ä»€ä¹ˆå®çŸ³ï¼Ÿåªèƒ½é¢†å–ä»¥ä¸‹ä¸¤ç§å®çŸ³å½“ä¸­çš„ä¸€ç§" )
+		AddNumText( sceneId, x002087_g_ScriptId, "çŒ«çœ¼çŸ³", 6, 5 )
+		AddNumText( sceneId, x002087_g_ScriptId, "è™çœ¼çŸ³", 6, 6 )
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x002087_OnEventRequest( sceneId, selfId, targetId, eventId )
-	--È¡µÃÁĞ±íºÅ
+	--å–å¾—åˆ—è¡¨å·
 	local	arg	= GetNumText()
 	local	id	= LuaFnGetMenPai( sceneId, selfId )
-	if arg == 0 then		--µã»÷ÁË10¼¶Ñ¡Ïî
-	--ÅĞ¶ÏÊÇ·ñ´óÓÚ10¼¶
-		if GetLevel( sceneId, selfId ) >= 10 then --´óÓÚµÈÓÚ10¼¶
-			x002087_MsgBox( sceneId, selfId, targetId, "  ÄúµÄµÈ¼¶ÒÑ¾­´óÓÚµÈÓÚ10¼¶£¬ÎŞ·¨ÌáÉıÄúµÄµÈ¼¶" )
+	if arg == 0 then		--ç‚¹å‡»äº†10çº§é€‰é¡¹
+	--åˆ¤æ–­æ˜¯å¦å¤§äº10çº§
+		if GetLevel( sceneId, selfId ) >= 10 then --å¤§äºç­‰äº10çº§
+			x002087_MsgBox( sceneId, selfId, targetId, "  æ‚¨çš„ç­‰çº§å·²ç»å¤§äºç­‰äº10çº§ï¼Œæ— æ³•æå‡æ‚¨çš„ç­‰çº§" )
 			return
-		else --ÉèÖÃµÈ¼¶Îª10¼¶
+		else --è®¾ç½®ç­‰çº§ä¸º10çº§
 			LuaFnHumanLevelUp(sceneId, selfId,10,0)
-			x002087_MsgBox( sceneId, selfId, targetId, "¹§Ï²ÄúÉıµ½10¼¶£¬ÄúÀÏÈË¼ÒĞÁ¿àÁË" )
+			x002087_MsgBox( sceneId, selfId, targetId, "æ­å–œæ‚¨å‡åˆ°10çº§ï¼Œæ‚¨è€äººå®¶è¾›è‹¦äº†" )
 			return
 		end
-	elseif arg == 1 then--µã»÷ÁË40¼¶Ñ¡Ïî
-		--ÅĞ¶ÏÊÇ·ñ´óÓÚ40¼¶
-		if GetLevel( sceneId, selfId ) >= 40 then --´óÓÚµÈÓÚ40¼¶
-			x002087_MsgBox( sceneId, selfId, targetId, "  ÄúµÄµÈ¼¶ÒÑ¾­´óÓÚµÈÓÚ40¼¶£¬ÎŞ·¨ÌáÉıÄúµÄµÈ¼¶" )
+	elseif arg == 1 then--ç‚¹å‡»äº†40çº§é€‰é¡¹
+		--åˆ¤æ–­æ˜¯å¦å¤§äº40çº§
+		if GetLevel( sceneId, selfId ) >= 40 then --å¤§äºç­‰äº40çº§
+			x002087_MsgBox( sceneId, selfId, targetId, "  æ‚¨çš„ç­‰çº§å·²ç»å¤§äºç­‰äº40çº§ï¼Œæ— æ³•æå‡æ‚¨çš„ç­‰çº§" )
 			return
-		elseif id < 0 or id >= 9 then --ÅĞ¶ÏÊÇ·ñ¼ÓÈëÃÅÅÉ
-				x002087_MsgBox( sceneId, selfId, targetId, "  ÇëÏÈ¼ÓÈëÃÅÅÉ£¬¿ÉÒÔÏÈÌáÉı×Ô¼ºµÄµÈ¼¶µ½10¼¶ÔÙ¼ÓÈëÃÅÅÉ" )
+		elseif id < 0 or id >= 9 then --åˆ¤æ–­æ˜¯å¦åŠ å…¥é—¨æ´¾
+				x002087_MsgBox( sceneId, selfId, targetId, "  è¯·å…ˆåŠ å…¥é—¨æ´¾ï¼Œå¯ä»¥å…ˆæå‡è‡ªå·±çš„ç­‰çº§åˆ°10çº§å†åŠ å…¥é—¨æ´¾" )
 				return
 		else
 			LuaFnHumanLevelUp(sceneId, selfId,40,40)
-			x002087_MsgBox( sceneId, selfId, targetId, "¹§Ï²ÄúÉıµ½40¼¶£¬ÄúÀÏÈË¼ÒĞÁ¿àÁË" )
+			x002087_MsgBox( sceneId, selfId, targetId, "æ­å–œæ‚¨å‡åˆ°40çº§ï¼Œæ‚¨è€äººå®¶è¾›è‹¦äº†" )
 			return
 		end
-	elseif arg == 2 then--Íæ¼ÒÒª×°±¸
-		--ÅĞ¶ÏÊÇ·ñĞ¡ÓÚ40¼¶
+	elseif arg == 2 then--ç©å®¶è¦è£…å¤‡
+		--åˆ¤æ–­æ˜¯å¦å°äº40çº§
 		if GetMissionFlag(sceneId,selfId,x002087_g_EquipId)==1 then
-			x002087_MsgBox( sceneId, selfId, targetId, " ÎÒÀÏÍ·×Ó»¹Ã»ºıÍ¿£¬Äã²»ÊÇÒÑ¾­Áì¹ıÁËÃ´£¿" )
+			x002087_MsgBox( sceneId, selfId, targetId, " æˆ‘è€å¤´å­è¿˜æ²¡ç³Šæ¶‚ï¼Œä½ ä¸æ˜¯å·²ç»é¢†è¿‡äº†ä¹ˆï¼Ÿ" )
 			return			
-		elseif GetLevel( sceneId, selfId ) < 40 then --Ğ¡ÓÚ40¼¶
-			x002087_MsgBox( sceneId, selfId, targetId, " Ö»ÓĞµÈ¼¶µ½´ï40¼¶Ö®ºó£¬²ÅÄÜÁìÈ¡²¹³¥µÄ×°±¸" )
+		elseif GetLevel( sceneId, selfId ) < 40 then --å°äº40çº§
+			x002087_MsgBox( sceneId, selfId, targetId, " åªæœ‰ç­‰çº§åˆ°è¾¾40çº§ä¹‹åï¼Œæ‰èƒ½é¢†å–è¡¥å¿çš„è£…å¤‡" )
 			return
-		elseif id < 0 or id >= 9 then --ÅĞ¶ÏÊÇ·ñ¼ÓÈëÃÅÅÉ
-				x002087_MsgBox( sceneId, selfId, targetId, "  ÇëÏÈ¼ÓÈëÃÅÅÉ£¬¿ÉÒÔÏÈÌáÉı×Ô¼ºµÄµÈ¼¶µ½10¼¶ÔÙ¼ÓÈëÃÅÅÉ" )
+		elseif id < 0 or id >= 9 then --åˆ¤æ–­æ˜¯å¦åŠ å…¥é—¨æ´¾
+				x002087_MsgBox( sceneId, selfId, targetId, "  è¯·å…ˆåŠ å…¥é—¨æ´¾ï¼Œå¯ä»¥å…ˆæå‡è‡ªå·±çš„ç­‰çº§åˆ°10çº§å†åŠ å…¥é—¨æ´¾" )
 				return
-		else --ÊÇ·ñÓĞ13¸ö¿Õ¸ñ
-			if LuaFnGetPropertyBagSpace(sceneId, selfId) < 11  then --Ã»ÓĞ¿Õ¸ñ
-				x002087_MsgBox( sceneId, selfId, targetId, "	40¼¶µÄÒ»Ì××°±¸Ò»¹²ÓĞ11¼ş£¬ÄúµÄ±³°ü¿Õ¼ä²»×ã11£¬ÇëÕûÀíÍê±ÏÖ®ºóÔÙÀ´ÕÒÎÒ" )
+		else --æ˜¯å¦æœ‰13ä¸ªç©ºæ ¼
+			if LuaFnGetPropertyBagSpace(sceneId, selfId) < 11  then --æ²¡æœ‰ç©ºæ ¼
+				x002087_MsgBox( sceneId, selfId, targetId, "	40çº§çš„ä¸€å¥—è£…å¤‡ä¸€å…±æœ‰11ä»¶ï¼Œæ‚¨çš„èƒŒåŒ…ç©ºé—´ä¸è¶³11ï¼Œè¯·æ•´ç†å®Œæ¯•ä¹‹åå†æ¥æ‰¾æˆ‘" )
 				return
 			else 
-				--°´ÕÕÃÅÅÉ¸øÍæ¼Ò×°±¸
+				--æŒ‰ç…§é—¨æ´¾ç»™ç©å®¶è£…å¤‡
 				x002087_GiveEquip( sceneId, selfId, targetId, id)
-				x002087_MsgBox( sceneId, selfId, targetId, "¸øÄúÀÏÈË¼ÒµÄ×°±¸Äú»¹ÂúÒâ²»£¿" )
+				x002087_MsgBox( sceneId, selfId, targetId, "ç»™æ‚¨è€äººå®¶çš„è£…å¤‡æ‚¨è¿˜æ»¡æ„ä¸ï¼Ÿ" )
 				SetMissionFlag( sceneId, selfId, x002087_g_EquipId, 1 )
 				return
 			end
 		end
-	elseif arg == 3 then--Íæ¼ÒÒª±¦Ê¯
+	elseif arg == 3 then--ç©å®¶è¦å®çŸ³
 		if GetMissionFlag(sceneId,selfId,x002087_g_StoneId)==1 then
-			x002087_MsgBox( sceneId, selfId, targetId, " ÎÒÀÏÍ·×Ó»¹Ã»ºıÍ¿£¬Äã²»ÊÇÒÑ¾­Áì¹ıÁËÃ´£¿" )
+			x002087_MsgBox( sceneId, selfId, targetId, " æˆ‘è€å¤´å­è¿˜æ²¡ç³Šæ¶‚ï¼Œä½ ä¸æ˜¯å·²ç»é¢†è¿‡äº†ä¹ˆï¼Ÿ" )
 			return			
-		--ÅĞ¶ÏÊÇ·ñĞ¡ÓÚ40¼¶
-		elseif GetLevel( sceneId, selfId ) < 40 then --Ğ¡ÓÚ40¼¶
-			x002087_MsgBox( sceneId, selfId, targetId, " Ö»ÓĞµÈ¼¶µ½´ï40¼¶Ö®ºó£¬²ÅÄÜÁìÈ¡²¹³¥µÄ±¦Ê¯" )
+		--åˆ¤æ–­æ˜¯å¦å°äº40çº§
+		elseif GetLevel( sceneId, selfId ) < 40 then --å°äº40çº§
+			x002087_MsgBox( sceneId, selfId, targetId, " åªæœ‰ç­‰çº§åˆ°è¾¾40çº§ä¹‹åï¼Œæ‰èƒ½é¢†å–è¡¥å¿çš„å®çŸ³" )
 			return
-		else --¸ø³ö±¦Ê¯ÁĞ±í
+		else --ç»™å‡ºå®çŸ³åˆ—è¡¨
 			x002087_OnStoneEvent( sceneId, selfId, targetId )
 			return
 		end
-	elseif arg == 4 then--Íæ¼ÒÒªÇ®
-		--ÅĞ¶ÏÊÇ·ñĞ¡ÓÚ40¼¶
+	elseif arg == 4 then--ç©å®¶è¦é’±
+		--åˆ¤æ–­æ˜¯å¦å°äº40çº§
 		if GetMissionFlag(sceneId,selfId,x002087_g_MoneyId)==1 then
-			x002087_MsgBox( sceneId, selfId, targetId, " ÎÒÀÏÍ·×Ó»¹Ã»ºıÍ¿£¬Äã²»ÊÇÒÑ¾­Áì¹ıÁËÃ´£¿" )
+			x002087_MsgBox( sceneId, selfId, targetId, " æˆ‘è€å¤´å­è¿˜æ²¡ç³Šæ¶‚ï¼Œä½ ä¸æ˜¯å·²ç»é¢†è¿‡äº†ä¹ˆï¼Ÿ" )
 			return	
-		elseif GetLevel( sceneId, selfId ) < 40 then --Ğ¡ÓÚ40¼¶
-			x002087_MsgBox( sceneId, selfId, targetId, " Ö»ÓĞµÈ¼¶µ½´ï40¼¶Ö®ºó£¬²ÅÄÜÁìÈ¡²¹³¥µÄ½ğ±Ò" )
+		elseif GetLevel( sceneId, selfId ) < 40 then --å°äº40çº§
+			x002087_MsgBox( sceneId, selfId, targetId, " åªæœ‰ç­‰çº§åˆ°è¾¾40çº§ä¹‹åï¼Œæ‰èƒ½é¢†å–è¡¥å¿çš„é‡‘å¸" )
 			return
-		else --¸ø³ö±¦Ê¯ÁĞ±í
-			if LuaFnAddMoney(sceneId, selfId,1000000) == -1  then --¸øÇ®Ê§°Ü¸ÃÈçºÎ×ö£¿
-				--¼ÓÇ®Ê§°Ü
+		else --ç»™å‡ºå®çŸ³åˆ—è¡¨
+			if LuaFnAddMoney(sceneId, selfId,1000000) == -1  then --ç»™é’±å¤±è´¥è¯¥å¦‚ä½•åšï¼Ÿ
+				--åŠ é’±å¤±è´¥
 				return
 			else
-				x002087_MsgBox( sceneId, selfId, targetId, "Äú¿ÉÕæÌ°ĞÄ£¬°ÑÎÒµÄÑøÀÏ·Ñ¶¼ÄÃ×ßÁË" )
+				x002087_MsgBox( sceneId, selfId, targetId, "æ‚¨å¯çœŸè´ªå¿ƒï¼ŒæŠŠæˆ‘çš„å…»è€è´¹éƒ½æ‹¿èµ°äº†" )
 				SetMissionFlag( sceneId, selfId, x002087_g_MoneyId, 1 )
 				return
 			end
 		end		
-	elseif arg == 5 then--Íæ¼ÒÒªÃ¨ÑÛÊ¯
-		--ÅĞ¶ÏÊÇ·ñÒÑ¾­ÄÃ¹ıÃ¨ÑÛÊ¯
-		if GetLevel( sceneId, selfId ) < 40 then --Ğ¡ÓÚ40¼¶
-			x002087_MsgBox( sceneId, selfId, targetId, " Ö»ÓĞµÈ¼¶µ½´ï40¼¶Ö®ºó£¬²ÅÄÜÁìÈ¡²¹³¥µÄ½ğ±Ò" )
+	elseif arg == 5 then--ç©å®¶è¦çŒ«çœ¼çŸ³
+		--åˆ¤æ–­æ˜¯å¦å·²ç»æ‹¿è¿‡çŒ«çœ¼çŸ³
+		if GetLevel( sceneId, selfId ) < 40 then --å°äº40çº§
+			x002087_MsgBox( sceneId, selfId, targetId, " åªæœ‰ç­‰çº§åˆ°è¾¾40çº§ä¹‹åï¼Œæ‰èƒ½é¢†å–è¡¥å¿çš„é‡‘å¸" )
 			return
-		else --¸øÍæ¼ÒÃ¨ÑÛÊ¯
-			if LuaFnGetMaterialBagSpace(sceneId, selfId) < 20  then --Ã»ÓĞ¿Õ¸ñ
-				x002087_MsgBox( sceneId, selfId, targetId, " ½±ÀøµÄ±¦Ê¯Îª20¸ö£¬ÄúµÄ±³°ü¿Õ¼ä²»×ã£¬ÇëÕûÀí±³°üÖ®ºóÔÙÀ´ÕÒÎÒ" )
+		else --ç»™ç©å®¶çŒ«çœ¼çŸ³
+			if LuaFnGetMaterialBagSpace(sceneId, selfId) < 20  then --æ²¡æœ‰ç©ºæ ¼
+				x002087_MsgBox( sceneId, selfId, targetId, " å¥–åŠ±çš„å®çŸ³ä¸º20ä¸ªï¼Œæ‚¨çš„èƒŒåŒ…ç©ºé—´ä¸è¶³ï¼Œè¯·æ•´ç†èƒŒåŒ…ä¹‹åå†æ¥æ‰¾æˆ‘" )
 				return
 			else 		
-				--¸øÍæ¼Ò20¸öÃ¨ÑÛÊ¯
+				--ç»™ç©å®¶20ä¸ªçŒ«çœ¼çŸ³
 				x002087_GiveStone( sceneId, selfId, targetId, 0)
-				x002087_MsgBox( sceneId, selfId, targetId, "20¸ö±¦Ê¯£¬Ë¬ÁË°ÉÄú" )
+				x002087_MsgBox( sceneId, selfId, targetId, "20ä¸ªå®çŸ³ï¼Œçˆ½äº†å§æ‚¨" )
 				SetMissionFlag( sceneId, selfId, x002087_g_StoneId, 1 )
 				return
 			end
 		end
-	elseif arg == 6 then--Íæ¼ÒÒª»¢ÑÛÊ¯
-		--ÅĞ¶ÏÊÇ·ñÒÑ¾­ÄÃ¹ı»¢ÑÛÊ¯
-		if GetLevel( sceneId, selfId ) < 40 then --Ğ¡ÓÚ40¼¶
-			x002087_MsgBox( sceneId, selfId, targetId, " Ö»ÓĞµÈ¼¶µ½´ï40¼¶Ö®ºó£¬²ÅÄÜÁìÈ¡²¹³¥µÄ½ğ±Ò" )
+	elseif arg == 6 then--ç©å®¶è¦è™çœ¼çŸ³
+		--åˆ¤æ–­æ˜¯å¦å·²ç»æ‹¿è¿‡è™çœ¼çŸ³
+		if GetLevel( sceneId, selfId ) < 40 then --å°äº40çº§
+			x002087_MsgBox( sceneId, selfId, targetId, " åªæœ‰ç­‰çº§åˆ°è¾¾40çº§ä¹‹åï¼Œæ‰èƒ½é¢†å–è¡¥å¿çš„é‡‘å¸" )
 			return
-		else --¸øÍæ¼Ò»¢ÑÛÊ¯
-			if LuaFnGetMaterialBagSpace(sceneId, selfId) < 20  then --Ã»ÓĞ¿Õ¸ñ
-				x002087_MsgBox( sceneId, selfId, targetId, " ½±ÀøµÄ±¦Ê¯Îª20¸ö£¬ÄúµÄ±³°ü¿Õ¼ä²»×ã£¬ÇëÕûÀí±³°üÖ®ºóÔÙÀ´ÕÒÎÒ" )
+		else --ç»™ç©å®¶è™çœ¼çŸ³
+			if LuaFnGetMaterialBagSpace(sceneId, selfId) < 20  then --æ²¡æœ‰ç©ºæ ¼
+				x002087_MsgBox( sceneId, selfId, targetId, " å¥–åŠ±çš„å®çŸ³ä¸º20ä¸ªï¼Œæ‚¨çš„èƒŒåŒ…ç©ºé—´ä¸è¶³ï¼Œè¯·æ•´ç†èƒŒåŒ…ä¹‹åå†æ¥æ‰¾æˆ‘" )
 				return
 			else
-				--¸øÍæ¼Ò20¸ö»¢ÑÛÊ¯
+				--ç»™ç©å®¶20ä¸ªè™çœ¼çŸ³
 				x002087_GiveStone( sceneId, selfId, targetId, 1)
-				x002087_MsgBox( sceneId, selfId, targetId, "20¸ö±¦Ê¯£¬Ë¬ÁË°ÉÄú" )
+				x002087_MsgBox( sceneId, selfId, targetId, "20ä¸ªå®çŸ³ï¼Œçˆ½äº†å§æ‚¨" )
 				SetMissionFlag( sceneId, selfId, x002087_g_StoneId, 1 )
 				return
 			end
@@ -182,7 +182,7 @@ end
 		
 		
 --**********************************
---¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+--å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x002087_MsgBox( sceneId, selfId, targetId, msg )
 	BeginEvent( sceneId )
@@ -192,12 +192,12 @@ function x002087_MsgBox( sceneId, selfId, targetId, msg )
 end
 
 --**********************************
---¸ø×°±¸
+--ç»™è£…å¤‡
 --**********************************
 --function x002087_GiveEquip( sceneId, selfId,menpai )
 function x002087_GiveEquip( sceneId, selfId, targetId, menpai )
 
-	--È¡µÃ×°±¸ĞÅÏ¢
+	--å–å¾—è£…å¤‡ä¿¡æ¯
 	local mp =  x002087_GetEquipInfo( menpai )
 	if mp ~= nil then
 		for i=2,12 do
@@ -206,18 +206,18 @@ function x002087_GiveEquip( sceneId, selfId, targetId, menpai )
 			local ret = EndAddItem(sceneId,selfId)
 			if ret > 0 then
 				AddItemListToHuman(sceneId,selfId)
-				--Msg2Player(sceneId, selfId,"#YÍê³ÉÈÎÎñ£ºµÚÒ»°ÑÎäÆ÷",MSG2PLAYER_PARA )
+				--Msg2Player(sceneId, selfId,"#Yå®Œæˆä»»åŠ¡ï¼šç¬¬ä¸€æŠŠæ­¦å™¨",MSG2PLAYER_PARA )
 			end
 		end
 	end
 end
 
 --**********************************
---¸ø±¦Ê¯,0 Ã¨ÑÛÊ¯£¬1 »¢ÑÛÊ¯
+--ç»™å®çŸ³,0 çŒ«çœ¼çŸ³ï¼Œ1 è™çœ¼çŸ³
 --**********************************
 --function x002087_GiveStone( sceneId, selfId,kind )
 function x002087_GiveStone( sceneId, selfId, targetId, kind )
-	--¸øÃ¨ÑÛÊ¯
+	--ç»™çŒ«çœ¼çŸ³
 	if kind == 0 then
 		for i=1,20 do
 			BeginAddItem(sceneId)
@@ -228,7 +228,7 @@ function x002087_GiveStone( sceneId, selfId, targetId, kind )
 			end
 		end
 	end
-	--¸ø»¢ÑÛÊ¯
+	--ç»™è™çœ¼çŸ³
 	if kind == 1 then
 		for i=1,20 do
 			BeginAddItem(sceneId)
@@ -242,7 +242,7 @@ function x002087_GiveStone( sceneId, selfId, targetId, kind )
 end
 
 --**********************************
---È¡µÃËùÊôÃÅÅÉ×°±¸ĞÅÏ¢
+--å–å¾—æ‰€å±é—¨æ´¾è£…å¤‡ä¿¡æ¯
 --**********************************
 function x002087_GetEquipInfo( mpID )
 	local mp

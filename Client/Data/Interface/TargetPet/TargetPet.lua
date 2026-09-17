@@ -40,11 +40,11 @@ function TargetPet_OnLoad()
 	TARGETPETSKILL_BUTTONS[11] = TargetPet_Skill11;
 	TARGETPETSKILL_BUTTONS[12] = TargetPet_Skill12;
 
-	PET_AITYPE[0] = "µ¨Ğ¡";
-	PET_AITYPE[1] = "½÷É÷";
-	PET_AITYPE[2] = "ÖÒ³Ï";
-	PET_AITYPE[3] = "¾«Ã÷";
-	PET_AITYPE[4] = "ÓÂÃÍ";
+	PET_AITYPE[0] = "èƒ†å°";
+	PET_AITYPE[1] = "è°¨æ…";
+	PET_AITYPE[2] = "å¿ è¯š";
+	PET_AITYPE[3] = "ç²¾æ˜";
+	PET_AITYPE[4] = "å‹‡çŒ›";
 end
 
 function TargetPet_OnEvent(event)
@@ -67,7 +67,7 @@ function TargetPet_OnEvent(event)
 		TargetPet_Update();
 		this:Show();
 	
-	--½»Ò×¹ı³ÌÖĞµÄÕäÊŞÏÔÊ¾	
+	--äº¤æ˜“è¿‡ç¨‹ä¸­çš„çå…½æ˜¾ç¤º	
 	elseif (event == "VIEW_EXCHANGE_PET")  then
 		if(IsWindowShow("OtherPet")) then
 			CloseWindow("OtherPet", true);
@@ -178,7 +178,7 @@ function TargetPet_Update()
  	
 	local strAI,strIcon;
 	if(strName>4 or strName <0) then
-		strAI = "´íÎóµÄ";
+		strAI = "é”™è¯¯çš„";
 	else
 		strAI =	PET_AITYPE[strName];
 	end
@@ -186,138 +186,138 @@ function TargetPet_Update()
  	strName,strName2 = TargetPet:GetName();
 	local nEra, strTypeName = TargetPet:GetPetTypeName(nIndex);
  	if( 1 == nEra ) then
- 	    strName2 = "¶ş´ú"..strTypeName
+ 	    strName2 = "äºŒä»£"..strTypeName
  	end
 	TargetPet_PetName : SetText( strName );
 	TargetPet_PageHeader : SetText( "#gFF0FA0"..strName2 );
 	TargetPet_Type : SetText("#gFF8E92"..strAI)
 
 	strName,strName2,sex = TargetPet : GetID();
-	TargetPet_TargetPetID : SetText( "ÕäÊŞID:"..strName2 );
+	TargetPet_TargetPetID : SetText( "çå…½ID:"..strName2 );
 	AxTrace(0,0,"GetID="..strName .. strName2);
 	
 	strName = TargetPet : GetConsort();
 	if tonumber(strName) == 0 then
-		TargetPet_ConsortID : SetText( "ÉĞÎŞÅäÅ¼" );
+		TargetPet_ConsortID : SetText( "å°šæ— é…å¶" );
 	else
-		TargetPet_ConsortID : SetText( "ÅäÅ¼ID:".. strName );
+		TargetPet_ConsortID : SetText( "é…å¶ID:".. strName );
 	end
 	
 		
 	if(sex == 1) then 
-		strName = "ĞÛĞÔ";
+		strName = "é›„æ€§";
 	else
-		strName = "´ÆĞÔ";
+		strName = "é›Œæ€§";
 	end
 
 	TargetPet_Sex : SetText( strName );
 	
 	strName = TargetPet : GetNaturalLife();
-	TargetPet_Life : SetText( "ÊÙÃü:"..strName );
+	TargetPet_Life : SetText( "å¯¿å‘½:"..strName );
 
 	strName = TargetPet : GetLevel();
-	TargetPet_Level : SetText( "µÈ¼¶:"..strName.."¼¶" );
+	TargetPet_Level : SetText( "ç­‰çº§:"..strName.."çº§" );
 	
 	strName = TargetPet : GetHappy();
-	TargetPet_Happy : SetText( "¿ìÀÖ:"..strName );
+	TargetPet_Happy : SetText( "å¿«ä¹:"..strName );
 	
 	strName = TargetPet : GetBasic();
-	TargetPet_GenGu : SetText( "¸ù¹Ç:"..strName );
+	TargetPet_GenGu : SetText( "æ ¹éª¨:"..strName );
 	
 	strName = TargetPet : GetSavvy();
 	AxTrace(0,0,"targetpet savvy="..strName)
-	TargetPet_WuXing : SetText( "ÎòĞÔ:".. strName);
+	TargetPet_WuXing : SetText( "æ‚Ÿæ€§:".. strName);
 	
 	local WuXingVal = tonumber(strName);
-	strName = TargetPet : GetStrAptitude();
+	strName = string.format("%.0f", TargetPet : GetStrAptitude());
 	if(WuXingTbl[WuXingVal])then
 		strName = (WuXingTbl[WuXingVal].color)..strName..ShowColor.."(+"..(WuXingTbl[WuXingVal].per)..")";
 	end
 	TargetPet_StrAptitude : SetText( strName );
 
-	strName = TargetPet : GetPFAptitude(nIndex);
+	strName = string.format("%.0f", TargetPet : GetPFAptitude(nIndex));
 	if(WuXingTbl[WuXingVal])then
 		strName = (WuXingTbl[WuXingVal].color)..strName..ShowColor.."(+"..(WuXingTbl[WuXingVal].per)..")";
 	end
 	TargetPet_PhysicalStrengthAptitude : SetText( strName );
 	
-	strName = TargetPet : GetDexAptitude();
+	strName = string.format("%.0f", TargetPet : GetDexAptitude());
 	if(WuXingTbl[WuXingVal])then
 		strName = (WuXingTbl[WuXingVal].color)..strName..ShowColor.."(+"..(WuXingTbl[WuXingVal].per)..")";
 	end
 	TargetPet_DexterityAptitude : SetText( strName );
 	
-	strName = TargetPet : GetIntAptitude();
+	strName = string.format("%.0f", TargetPet : GetIntAptitude());
 	if(WuXingTbl[WuXingVal])then
 		strName = (WuXingTbl[WuXingVal].color)..strName..ShowColor.."(+"..(WuXingTbl[WuXingVal].per)..")";
 	end
 	TargetPet_NimbusAptitude : SetText( strName );
 	
-	strName = TargetPet : GetStaAptitude();
+	strName = string.format("%.0f", TargetPet : GetStaAptitude());
 	if(WuXingTbl[WuXingVal])then
 		strName = (WuXingTbl[WuXingVal].color)..strName..ShowColor.."(+"..(WuXingTbl[WuXingVal].per)..")";
 	end
 	TargetPet_StabilityAptitude : SetText( strName );
 	
 	strName = TargetPet : GetExp();
-	TargetPet_Exp : SetText( "¾­Ñé:"..strName );
+	TargetPet_Exp : SetText( "ç»éªŒ:"..strName );
 	
-	strName = TargetPet : GetHP(nIndex);
-	strName2 = TargetPet:	GetMaxHP(nIndex);
-	TargetPet_Blood : SetText( "Ñª:"..strName .." / ".. strName2);
+	strName = string.format("%.0f", TargetPet : GetHP(nIndex));
+	strName2 = string.format("%.0f", TargetPet:	GetMaxHP(nIndex));
+	TargetPet_Blood : SetText( "è¡€:"..strName .." / ".. strName2);
 
-	strName = TargetPet : GetStr();
+	strName = string.format("%.0f", TargetPet : GetStr());
 	TargetPet_Str : SetText( strName );
 	TargetPet_Str : SetProperty("TextColours","tl:FFEFEFEF tr:FFEFEFEF bl:FFEFEFEF br:FFEFEFEF");
 	
-	strName = TargetPet : GetInt();
-	TargetPet_Nimbus : SetText( tonumber(strName) );
+	strName = string.format("%.0f", TargetPet : GetInt());
+	TargetPet_Nimbus : SetText( string.format("%.0f", tonumber(strName)) );
 	TargetPet_Nimbus : SetProperty("TextColours","tl:FFEFEFEF tr:FFEFEFEF bl:FFEFEFEF br:FFEFEFEF");
 	
-	strName = TargetPet : GetDex();
-	TargetPet_Dexterity : SetText( tonumber(strName) );
+	strName = string.format("%.0f", TargetPet : GetDex());
+	TargetPet_Dexterity : SetText( string.format("%.0f", tonumber(strName)) );
 	TargetPet_Dexterity : SetProperty("TextColours","tl:FFEFEFEF tr:FFEFEFEF bl:FFEFEFEF br:FFEFEFEF");
 	
-	strName = TargetPet : GetPF();
-	TargetPet_PhysicalStrength : SetText( tonumber(strName) );
+	strName = string.format("%.0f", TargetPet : GetPF());
+	TargetPet_PhysicalStrength : SetText( string.format("%.0f", tonumber(strName)) );
 	TargetPet_PhysicalStrength : SetProperty("TextColours","tl:FFEFEFEF tr:FFEFEFEF bl:FFEFEFEF br:FFEFEFEF");
 	
-	strName = TargetPet : GetSta();
-	TargetPet_Stability : SetText( tonumber(strName) );
+	strName = string.format("%.0f", TargetPet : GetSta());
+	TargetPet_Stability : SetText( string.format("%.0f", tonumber(strName)) );
 	TargetPet_Stability : SetProperty("TextColours","tl:FFEFEFEF tr:FFEFEFEF bl:FFEFEFEF br:FFEFEFEF");
 	
 --	strName = TargetPet : GetBasic();
 --	TargetPet_Basic : SetText( tonumber(strName) );
 
-	strName = TargetPet : GetCriticalAttack();
-	TargetPet_CriticalAttack : SetText( tonumber(strName) );
+	strName = string.format("%.0f", TargetPet : GetCriticalAttack());
+	TargetPet_CriticalAttack : SetText( string.format("%.0f", tonumber(strName)) );
 
-	strName = TargetPet : GetCriticalDefence();
-	TargetPet_CriticalDefence : SetText( tonumber(strName) );
+	strName = string.format("%.0f", TargetPet : GetCriticalDefence());
+	TargetPet_CriticalDefence : SetText( string.format("%.0f", tonumber(strName)) );
 
-	strName = TargetPet : GetPotential();
+	strName = string.format("%.0f", TargetPet : GetPotential());
 	strName2 = tonumber(strName);
-	TargetPet_Potential : SetText( strName2 );
+	TargetPet_Potential : SetText( string.format("%.0f", strName2) );
 	TargetPet_Potential : SetProperty("TextColours","tl:FFEFEFEF tr:FFEFEFEF bl:FFEFEFEF br:FFEFEFEF");
 
-	strName = TargetPet : GetPhysicsAttack();
+	strName = string.format("%.0f", TargetPet : GetPhysicsAttack());
 	TargetPet_PhysicsAttack : SetText( strName );
 	
-	strName = TargetPet : GetMagicAttack();
+	strName = string.format("%.0f", TargetPet : GetMagicAttack());
 	TargetPet_MagicAttack : SetText( strName );
 	
-	strName = TargetPet : GetPhysicsRecovery();
+	strName = string.format("%.0f", TargetPet : GetPhysicsRecovery());
 	TargetPet_PhysicsRecovery : SetText( strName );
 	
-	strName = TargetPet : GetMagicRecovery ();
+	strName = string.format("%.0f", TargetPet : GetMagicRecovery ());
 	TargetPet_MagicRecovery : SetText( strName );
 
-	--ÉÁ±ÜÂÊ
-	strName = TargetPet : GetMiss();
+	--é—ªé¿ç‡
+	strName = string.format("%.0f", TargetPet : GetMiss());
 	TargetPet_Miss : SetText( strName );
 
-	--ÃüÖĞÂÊ
-	strName = TargetPet : GetShootProbability();
+	--å‘½ä¸­ç‡
+	strName = string.format("%.0f", TargetPet : GetShootProbability());
 	TargetPet_ShootProbability : SetText( strName );
 	
 	local SumPetSkill = GetActionNum("petskill");
@@ -340,17 +340,17 @@ function TargetPet_Update()
 	else
 		strNeedLevelColor="#c00FF00";
 	end
-	strNeedLevel = strNeedLevelColor..tostring( nTakeLevel ).."¼¶#W¿ÉĞ¯´ø";
+	strNeedLevel = strNeedLevelColor..tostring( nTakeLevel ).."çº§#Wå¯æºå¸¦";
 
 	TargetPet_NeedLevel : SetText(strNeedLevel)
 
 	strName = TargetPet : GetGrowRate();
-	TargetPet_Growth : SetText("#GÎ´Öª")
+	TargetPet_Growth : SetText("#GæœªçŸ¥")
 	local nGrowLevel = TargetPet : GetPetGrowLevel(tonumber(strName));
-	local strTbl = {"ÆÕÍ¨","ÓÅĞã","½Ü³ö","×¿Ô½","ÍêÃÀ"};
+	local strTbl = {"æ™®é€š","ä¼˜ç§€","æ°å‡º","å“è¶Š","å®Œç¾"};
 	
 	if(nGrowLevel >= 0) then
-		nGrowLevel = nGrowLevel + 1;	--cÀïÊÇ´Ó0¿ªÊ¼µÄÃ¶¾Ù
+		nGrowLevel = nGrowLevel + 1;	--cé‡Œæ˜¯ä»0å¼€å§‹çš„æšä¸¾
 		local nGrowRate = TargetPet : GetGrowRate();
 		if(strTbl[nGrowLevel]) then
 			TargetPet_Growth : SetText("#G"..strTbl[nGrowLevel]..nGrowRate)
@@ -361,21 +361,21 @@ function TargetPet_Update()
 	strName = "";
 	AxTrace(0,1,"food="..food);
 	if(food >= 1000) then
-		strName = strName .. "Èâ";
+		strName = strName .. "è‚‰";
 		food = food - 1000;
 		if food > 0 then
 			strName = strName .. ",";
 		end
 	end
 	if(food >= 100) then
-		strName = strName .. "²İ";
+		strName = strName .. "è‰";
 		food = food - 100;
 		if food > 0 then
 			strName = strName .. ",";
 		end
 	end
 	if(food >= 10) then
-		strName = strName .. "³æ";
+		strName = strName .. "è™«";
 		food = food - 10;
 		if food > 0 then
 			strName = strName .. ",";
@@ -383,7 +383,7 @@ function TargetPet_Update()
 	end
 	
 	if(food >= 1) then
-		strName = strName .. "¹È";
+		strName = strName .. "è°·";
 	end
 	TargetPetFood_Type : Show();
 	TargetPetFood_Type : SetToolTip( strName );
@@ -401,7 +401,7 @@ function TargetPet_Update()
 end
 
 function TargetPet_Skill_Button_Clicked(nIndex)
---½«À´Ö÷¶¯¼¼ÄÜºÍ±»¶¯¼¼ÄÜ£¬¿ÉÒÔÔÚ±íÀï²éµ½¡£
+--å°†æ¥ä¸»åŠ¨æŠ€èƒ½å’Œè¢«åŠ¨æŠ€èƒ½ï¼Œå¯ä»¥åœ¨è¡¨é‡ŒæŸ¥åˆ°ã€‚
 --	if(nIndex < 3) then
 		
 --	end
@@ -421,16 +421,16 @@ end
 
 ----------------------------------------------------------------------------------
 --
--- Ğı×ªÕäÊŞÄ£ĞÍ£¨Ïò×ó)
+-- æ—‹è½¬çå…½æ¨¡å‹ï¼ˆå‘å·¦)
 --
 function TargetPet_Modle_TurnLeft(start)
-	--Ïò×óĞı×ª¿ªÊ¼
+	--å‘å·¦æ—‹è½¬å¼€å§‹
 	local mouse_button = CEArg:GetValue("MouseButton");
 	if(mouse_button == "LeftButton") then
-		--Ïò×óĞı×ª¿ªÊ¼
+		--å‘å·¦æ—‹è½¬å¼€å§‹
 		if(start == 1) then
 			TargetPet_FakeObject:RotateBegin(-0.3);
-		--Ïò×óĞı×ª½áÊø
+		--å‘å·¦æ—‹è½¬ç»“æŸ
 		else
 			TargetPet_FakeObject:RotateEnd();
 		end
@@ -439,16 +439,16 @@ end
 
 ----------------------------------------------------------------------------------
 --
---Ğı×ªÕäÊŞÄ£ĞÍ£¨ÏòÓÒ)
+--æ—‹è½¬çå…½æ¨¡å‹ï¼ˆå‘å³)
 --
 function TargetPet_Modle_TurnRight(start)
-	--ÏòÓÒĞı×ª¿ªÊ¼
+	--å‘å³æ—‹è½¬å¼€å§‹
 	local mouse_button = CEArg:GetValue("MouseButton");
 	if(mouse_button == "LeftButton") then
-		--ÏòÓÒĞı×ª¿ªÊ¼
+		--å‘å³æ—‹è½¬å¼€å§‹
 		if(start == 1) then
 			TargetPet_FakeObject:RotateBegin(0.3);
-		--ÏòÓÒĞı×ª½áÊø
+		--å‘å³æ—‹è½¬ç»“æŸ
 		else
 			TargetPet_FakeObject:RotateEnd();
 		end

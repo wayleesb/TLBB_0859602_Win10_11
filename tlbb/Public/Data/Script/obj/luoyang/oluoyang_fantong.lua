@@ -1,31 +1,31 @@
---ÂåÑôNPC
---·¶Í³
---·¹µêÀÏ°å
+--æ´›é˜³NPC
+--èŒƒç»Ÿ
+--é¥­åº—è€æ¿
 
 x000059_g_ShopTabId	= 15
 
 x000059_g_ScriptId	= 000059
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x000059_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
-		AddText(sceneId,"  À´³¢³¢ÜøÕäÂ¥µÄÂåÑôË®Ï¯°É£¬°üÄã³ÔÁËÖ®ºóÔÙÒ²²»ÏëÀë¿ªÂåÑô¡£")
-		AddNumText(sceneId,x000059_g_ScriptId,"¹ºÂòÊ³Îï",7,0)
---		AddNumText(sceneId,x000059_g_ScriptId,"¾«Á¦´ò¹¤",6,1)
---		AddNumText(sceneId,x000059_g_ScriptId,"»îÁ¦´ò¹¤",6,2)
+		AddText(sceneId,"  æ¥å°å°èŒ—çæ¥¼çš„æ´›é˜³æ°´å¸­å§ï¼ŒåŒ…ä½ åƒäº†ä¹‹åå†ä¹Ÿä¸æƒ³ç¦»å¼€æ´›é˜³ã€‚")
+		AddNumText(sceneId,x000059_g_ScriptId,"è´­ä¹°é£Ÿç‰©",7,0)
+--		AddNumText(sceneId,x000059_g_ScriptId,"ç²¾åŠ›æ‰“å·¥",6,1)
+--		AddNumText(sceneId,x000059_g_ScriptId,"æ´»åŠ›æ‰“å·¥",6,2)
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x000059_OnEventRequest( sceneId, selfId, targetId, eventId )
 	local	key	= GetNumText()
-	local	ene	= GetHumanEnergy( sceneId, selfId )	--¾«Á¦
-	local	vig	= GetHumanVigor( sceneId, selfId )	--»îÁ¦
+	local	ene	= GetHumanEnergy( sceneId, selfId )	--ç²¾åŠ›
+	local	vig	= GetHumanVigor( sceneId, selfId )	--æ´»åŠ›
 	
 	if key == 0 then
 		DispatchShopItem( sceneId, selfId, targetId, x000059_g_ShopTabId )
@@ -34,23 +34,23 @@ function x000059_OnEventRequest( sceneId, selfId, targetId, eventId )
 		if ene >= 40 then
 			SetHumanEnergy( sceneId, selfId, ene-40 )
 			AddMoney( sceneId, selfId, 3000 )
-			x000059_MsgBox( sceneId, selfId, "Äã´ò¹¤ÏûºÄ40¾«Á¦,»ñµÃ30¸öÒø±Ò" );
+			x000059_MsgBox( sceneId, selfId, "ä½ æ‰“å·¥æ¶ˆè€—40ç²¾åŠ›,è·å¾—30ä¸ªé“¶å¸" );
 		else
-			x000059_MsgBox( sceneId, selfId, "ÄãµÄ¾«Á¦²»×ã40µã,ÀÏ°å²»ĞèÒªÄã´ò¹¤" );
+			x000059_MsgBox( sceneId, selfId, "ä½ çš„ç²¾åŠ›ä¸è¶³40ç‚¹,è€æ¿ä¸éœ€è¦ä½ æ‰“å·¥" );
 		end
 	elseif key == 2 then
 		if vig >= 40 then
 			SetHumanVigor( sceneId, selfId, vig-40 )
 			AddMoney( sceneId, selfId, 3000 )
-			x000059_MsgBox( sceneId, selfId, "Äã´ò¹¤ÏûºÄ40»îÁ¦,»ñµÃ30¸öÒø±Ò" );
+			x000059_MsgBox( sceneId, selfId, "ä½ æ‰“å·¥æ¶ˆè€—40æ´»åŠ›,è·å¾—30ä¸ªé“¶å¸" );
 		else
-			x000059_MsgBox( sceneId, selfId, "ÄãµÄ»îÁ¦²»×ã40µã,ÀÏ°å²»ĞèÒªÄã´ò¹¤" );
+			x000059_MsgBox( sceneId, selfId, "ä½ çš„æ´»åŠ›ä¸è¶³40ç‚¹,è€æ¿ä¸éœ€è¦ä½ æ‰“å·¥" );
 		end
 	end
 end
 
 --**********************************
---ÏûÏ¢ÌáÊ¾
+--æ¶ˆæ¯æç¤º
 --**********************************
 function x000059_MsgBox( sceneId, selfId, msg )
 	BeginEvent( sceneId )

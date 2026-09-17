@@ -5,23 +5,23 @@ x228903_g_PreMissionId = 946
 x228903_g_Position_X = 262
 x228903_g_Position_Z = 46
 x228903_g_SceneID = 18
-x228903_g_AccomplishNPC_Name = "ÖÖÊÀºâ"
-x228903_g_Name = "ÖÖÊÀºâ"
+x228903_g_AccomplishNPC_Name = "ç§ä¸–è¡¡"
+x228903_g_Name = "ç§ä¸–è¡¡"
 x228903_g_MissionLevel = 30
 x228903_g_MissionKind = 28
 x228903_g_IfMissionElite = 0
-x228903_g_IsMissionOkFail			=0	--0 ÈÎÎñÍê³É±ê¼Ç
-x228903_g_DemandKill				= { { id = 540, num = 1 }, { id = 541, num = 4 } }		--±äÁ¿µÚ1Î»
-x228903_g_Param_QinNumber			=1	--1 ĞèÒªÉ±ËÀÇØ²®¹âÊıÁ¿
-x228903_g_Param_LubaNumber			=2	--2 ĞèÒªÏûÃğµÄÇØ¼ÒÕ¯Â·°ÔÊıÁ¿
-x228903_g_MonsterList				= { [x228903_g_Param_QinNumber] = { "ÇØ²®¹â", 1 }, [x228903_g_Param_LubaNumber] = { "ÇØ¼ÒÕ¯Â·°Ô", 4 } }
-x228903_g_Param_sceneid				=3	--3ºÅ£ºµ±Ç°¸±±¾ÈÎÎñµÄ³¡¾°ºÅ
-x228903_g_Param_teamid				=4	--4ºÅ£º½Ó¸±±¾ÈÎÎñÊ±ºòµÄ¶ÓÎéºÅ
-x228903_g_MissionName = "¾ÍµØÕı·¨"
-x228903_g_MissionInfo = "#{TIANSHAN_SKILL_03}"													--ÈÎÎñÃèÊö
-x228903_g_MissionTarget = "    #GÑãÃÅ¹Ø#WµÄ#RÖÖÊÀºâ#W#{_INFOAIM263,46,18,ÖÖÊÀºâ}ÒªÄãÔÚÑãÃÅ¹ØÌ«ÊØ¸®ÖĞÉ±ËÀÇØ²®¹âºÍËÄÃûÇØ¼ÒÕ¯Â·°Ô¡£"		--ÈÎÎñÄ¿±ê
-x228903_g_ContinueInfo = "#{TIANSHAN_SKILL_04}"								--Î´Íê³ÉÈÎÎñµÄnpc¶Ô»°
-x228903_g_MissionComplete = "#{TIANSHAN_SKILL_05}"							--Íê³ÉÈÎÎñnpcËµ»°µÄ»°
+x228903_g_IsMissionOkFail			=0	--0 ä»»åŠ¡å®Œæˆæ ‡è®°
+x228903_g_DemandKill				= { { id = 540, num = 1 }, { id = 541, num = 4 } }		--å˜é‡ç¬¬1ä½
+x228903_g_Param_QinNumber			=1	--1 éœ€è¦æ€æ­»ç§¦ä¼¯å…‰æ•°é‡
+x228903_g_Param_LubaNumber			=2	--2 éœ€è¦æ¶ˆç­çš„ç§¦å®¶å¯¨è·¯éœ¸æ•°é‡
+x228903_g_MonsterList				= { [x228903_g_Param_QinNumber] = { "ç§¦ä¼¯å…‰", 1 }, [x228903_g_Param_LubaNumber] = { "ç§¦å®¶å¯¨è·¯éœ¸", 4 } }
+x228903_g_Param_sceneid				=3	--3å·ï¼šå½“å‰å‰¯æœ¬ä»»åŠ¡çš„åœºæ™¯å·
+x228903_g_Param_teamid				=4	--4å·ï¼šæ¥å‰¯æœ¬ä»»åŠ¡æ—¶å€™çš„é˜Ÿä¼å·
+x228903_g_MissionName = "å°±åœ°æ­£æ³•"
+x228903_g_MissionInfo = "#{TIANSHAN_SKILL_03}"													--ä»»åŠ¡æè¿°
+x228903_g_MissionTarget = "    #Gé›é—¨å…³#Wçš„#Rç§ä¸–è¡¡#W#{_INFOAIM263,46,18,ç§ä¸–è¡¡}è¦ä½ åœ¨é›é—¨å…³å¤ªå®ˆåºœä¸­æ€æ­»ç§¦ä¼¯å…‰å’Œå››åç§¦å®¶å¯¨è·¯éœ¸ã€‚"		--ä»»åŠ¡ç›®æ ‡
+x228903_g_ContinueInfo = "#{TIANSHAN_SKILL_04}"								--æœªå®Œæˆä»»åŠ¡çš„npcå¯¹è¯
+x228903_g_MissionComplete = "#{TIANSHAN_SKILL_05}"							--å®Œæˆä»»åŠ¡npcè¯´è¯çš„è¯
 x228903_g_MoneyBonus = 1000
 x228903_g_exp = 2000
 --MisDescEnd

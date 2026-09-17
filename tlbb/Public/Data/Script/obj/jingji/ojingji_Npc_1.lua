@@ -1,16 +1,16 @@
 -- 125011
--- ÉñÒ½
+-- ç¥åŒ»
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x125011_g_scriptId = 125011
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x125011_g_eventList={}
 
 x125011_g_shoptableindex = 14
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x125011_OnDefaultEvent( sceneId, selfId, targetId )
 	DispatchShopItem( sceneId, selfId,targetId, x125011_g_shoptableindex )

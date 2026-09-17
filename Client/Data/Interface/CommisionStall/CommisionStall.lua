@@ -15,7 +15,7 @@ function CommisionStall_PreLoad()
 	this:RegisterEvent("UNIT_MONEY");
 	this:RegisterEvent("UPDATE_YUANBAO");	
 	this:RegisterEvent("OPEN_EXCHANGE_FRAME");
-	this:RegisterEvent("COMMISION_BUY_CONFRIMED");	--¹ºÂòÈ·ÈÏ¿òµÄÈ·ÈÏÏûÏ¢
+	this:RegisterEvent("COMMISION_BUY_CONFRIMED");	--è´­ä¹°ç¡®è®¤æ¡†çš„ç¡®è®¤æ¶ˆæ¯
 	
 end
 
@@ -44,7 +44,7 @@ function CommisionStall_OnLoad()
 	STALL_BUTTON[18]	= CommisionStall_Item18;
 	STALL_BUTTON[19]	= CommisionStall_Item19;
 	STALL_BUTTON[20]	= CommisionStall_Item20;
-	--ÔİÊ±ÆÁ±ÎÍÏ¶¯¹¦ÄÜ
+	--æš‚æ—¶å±è”½æ‹–åŠ¨åŠŸèƒ½
 	for i=1 ,g_ABCount     do
 		STALL_BUTTON[i]:SetProperty("DraggingEnabled","False");
 	end
@@ -83,7 +83,7 @@ function CommisionStall_OnEvent(event)
 	end
 	if (event == "UPDATE_YUANBAO") then
 		if(g_Type == 2)then
-			CommisionStall_Cash_Yuanbao:SetText("Ôª±¦:"..tostring(Player:GetData("YUANBAO")).." ");
+			CommisionStall_Cash_Yuanbao:SetText("å…ƒå®:"..tostring(Player:GetData("YUANBAO")).." ");
 		end
 	end
 	if (event == "OPEN_EXCHANGE_FRAME") then
@@ -100,12 +100,12 @@ function CommisionStall_InitDlg(type)
 	CommisionStall_ItemType2:Enable();
 	CommisionStall_ItemType3:Enable();
 	if(type == 1)then
-		--Ôª±¦ÉÌµê
-		CommisionStall_Name_Text:SetText("ÇëÑ¡ÔñÄúÏë¹ºÂòµÄÔª±¦ÀàĞÍ");
-		CommisionStall_ItemType1:SetText("50µã");
-		CommisionStall_ItemType2:SetText("200µã");
-		CommisionStall_ItemType3:SetText("500µã");
-		CommisionStall_Cash:SetText("ÓµÓĞ½ğÇ®");
+		--å…ƒå®å•†åº—
+		CommisionStall_Name_Text:SetText("è¯·é€‰æ‹©æ‚¨æƒ³è´­ä¹°çš„å…ƒå®ç±»å‹");
+		CommisionStall_ItemType1:SetText("50ç‚¹");
+		CommisionStall_ItemType2:SetText("200ç‚¹");
+		CommisionStall_ItemType3:SetText("500ç‚¹");
+		CommisionStall_Cash:SetText("æ‹¥æœ‰é‡‘é’±");
 		CommisionStall_TargetPrice_Yuanbao:Hide();
 		CommisionStall_TargetPrice_Money:Show();
 		CommisionStall_Cash_Yuanbao:Hide();
@@ -117,18 +117,18 @@ function CommisionStall_InitDlg(type)
 	else
 		
 		
-		CommisionStall_Name_Text:SetText("ÇëÑ¡ÔñÄúÏë¹ºÂòµÄ½ğÆ±ÀàĞÍ");
-		CommisionStall_ItemType1:SetText("10½ğ");
-		CommisionStall_ItemType2:SetText("50½ğ");
-		CommisionStall_ItemType3:SetText("150½ğ");
-		CommisionStall_Cash:SetText("ÓµÓĞÔª±¦");
+		CommisionStall_Name_Text:SetText("è¯·é€‰æ‹©æ‚¨æƒ³è´­ä¹°çš„é‡‘ç¥¨ç±»å‹");
+		CommisionStall_ItemType1:SetText("10é‡‘");
+		CommisionStall_ItemType2:SetText("50é‡‘");
+		CommisionStall_ItemType3:SetText("150é‡‘");
+		CommisionStall_Cash:SetText("æ‹¥æœ‰å…ƒå®");
 		CommisionStall_TargetPrice_Yuanbao:Show();
 		CommisionStall_TargetPrice_Money:Hide();
 		CommisionStall_Cash_Yuanbao:Show();
 		CommisionStall_Cash_Money:Hide();
 		Need_Money = 0;
-		CommisionStall_Cash_Yuanbao:SetText("Ôª±¦:"..tostring(Player:GetData("YUANBAO")).." ");
-		--CommisionStall_TargetPrice_Yuanbao:SetText("Ôª±¦:"..tostring(Player:GetData("YUANBAO")));
+		CommisionStall_Cash_Yuanbao:SetText("å…ƒå®:"..tostring(Player:GetData("YUANBAO")).." ");
+		--CommisionStall_TargetPrice_Yuanbao:SetText("å…ƒå®:"..tostring(Player:GetData("YUANBAO")));
 		
 	end
 	g_CurSel = -1;
@@ -151,7 +151,7 @@ function CommisionStall_Buy_Clicked()
 		return
 	end
 	if(g_CurSel<0 or g_CurSel>=20)then
-		PushDebugMessage("ÇëÑ¡ÔñÒª¹ºÂòµÄÎïÆ·£¡")
+		PushDebugMessage("è¯·é€‰æ‹©è¦è´­ä¹°çš„ç‰©å“ï¼")
 		return
 	end
 
@@ -159,13 +159,13 @@ function CommisionStall_Buy_Clicked()
 	local name = CommisionShop:EnumItem(tonumber(g_Type-1),tonumber(g_CurSel),"name");
 	local strPrice
 	if(g_Type == 1)then
-		--Ôª±¦µê
+		--å…ƒå®åº—
 		strPrice = "#{_MONEY"..tostring(price).."}"
 	else
-		strPrice = tostring(price).."µãÔª±¦"
+		strPrice = tostring(price).."ç‚¹å…ƒå®"
 	end
 	
-	--²»Ö±½Ó¹ºÂò....¶øÊÇ´ò¿ª¹ºÂòÈ·ÈÏ¿ò....
+	--ä¸ç›´æ¥è´­ä¹°....è€Œæ˜¯æ‰“å¼€è´­ä¹°ç¡®è®¤æ¡†....
 	CommisionShop:OpenBuyConfrim( name, strPrice );
 
 end
@@ -176,25 +176,25 @@ function CommisionStall_FinishBuy()
 		return
 	end
 	if(g_CurSel<0 or g_CurSel>=20)then
-		PushDebugMessage("ÇëÑ¡ÔñÒª¹ºÂòµÄÎïÆ·£¡")
+		PushDebugMessage("è¯·é€‰æ‹©è¦è´­ä¹°çš„ç‰©å“ï¼")
 		return
 	end
 	local price = CommisionShop:EnumItem(tonumber(g_Type-1),tonumber(g_CurSel),"price");
 	if(g_Type == 1)then
-		--Ôª±¦µê
+		--å…ƒå®åº—
 		if(Player:GetData("MONEY") < tonumber(price))then
-			PushDebugMessage("½ğÇ®²»×ã£¡")
+			PushDebugMessage("é‡‘é’±ä¸è¶³ï¼")
 			return
 		end
 	else
 		if(Player:GetData("YUANBAO") <  tonumber(price))then
-			PushDebugMessage("Ôª±¦²»×ã£¡")
+			PushDebugMessage("å…ƒå®ä¸è¶³ï¼")
 			return
 		end
 	end
 	
 	local Sailer = CommisionShop:EnumItem(tonumber(g_Type-1),tonumber(g_CurSel),"serial");
-	--ÅĞ¶Ïok£¬buy
+	--åˆ¤æ–­okï¼Œbuy
 	Clear_XSCRIPT();
 		Set_XSCRIPT_Function_Name("Buy");
 		Set_XSCRIPT_ScriptID(800116);
@@ -206,7 +206,7 @@ function CommisionStall_FinishBuy()
 end
 
 function CommisionStall_Close_Clicked()
-	--¹Ø±Õ¹ºÂòÈ·ÈÏ¿ò
+	--å…³é—­è´­ä¹°ç¡®è®¤æ¡†
 	CommisionShop:CloseBuyConfrim();
 	this:Hide();
 end
@@ -250,7 +250,7 @@ function CommisionStall_Item_Click(idx)
 		STALL_BUTTON[g_CurSel+1]:SetPushed(0);
 	end
 	
-	--¼ì²âÊó±êµã»÷µÄ¸ñ×ÓÊÇ·ñÓĞÎïÆ·....
+	--æ£€æµ‹é¼ æ ‡ç‚¹å‡»çš„æ ¼å­æ˜¯å¦æœ‰ç‰©å“....
 	local theAction = CommisionShop:EnumAction(idx-1);
 	if not theAction or theAction:GetID() == 0 then
 		g_CurSel = -1;
@@ -262,7 +262,7 @@ function CommisionStall_Item_Click(idx)
 	local price = CommisionShop:EnumItem(tonumber(g_Type-1),tonumber(g_CurSel),"price");
 	if(tonumber(g_Type) == 2)then
 		
-		CommisionStall_TargetPrice_Yuanbao:SetText("Ôª±¦:"..price.." ");
+		CommisionStall_TargetPrice_Yuanbao:SetText("å…ƒå®:"..price.." ");
 	else
 		CommisionStall_TargetPrice_Money:SetProperty("MoneyNumber",tonumber(price));
 	end

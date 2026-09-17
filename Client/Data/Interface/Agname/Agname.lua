@@ -19,10 +19,10 @@ function Agname_OnEvent(event)
 end
 
 function Agname_UpdateFrame()
-	--Çå¿Õ
+	--æ¸…ç©º
 	Agname_Listbox:ClearListBox();
 
-	--¼ÓÈëËùÓĞ³ÆºÅÃû
+	--åŠ å…¥æ‰€æœ‰ç§°å·å
 	local nAgnameNum = Player:GetAgnameNum();
 	
 	local i;
@@ -32,7 +32,7 @@ function Agname_UpdateFrame()
 		Agname_Listbox:AddItem(szAgnameName, i);	
 	end
 
-	--µ±Ç°ÏÔÊ¾³ÆºÅ
+	--å½“å‰æ˜¾ç¤ºç§°å·
 	Agname_Currently:SetText( "" .. Player:GetCurrentAgname() );
 	Agname_Explain:SetText( "" );
 end
@@ -46,7 +46,7 @@ function AgnameListBox_Selected()
 		return;
 	end
 	
-	--ÉèÖÃµ±Ç°³ÆºÅµÄ½âÊÍ
+	--è®¾ç½®å½“å‰ç§°å·çš„è§£é‡Š
 	Agname_Explain:SetText( Player:EnumAgname(nSelIndex-1, "desc") );
 
 end
@@ -65,6 +65,6 @@ end
 
 function Agname_HideTitle_Clicked()
 
-	Agname_Currently:SetText( "µ±Ç°³ÆºÅ:");
+	Agname_Currently:SetText( "å½“å‰ç§°å·:");
 	Player:SetNullAgname();
 end

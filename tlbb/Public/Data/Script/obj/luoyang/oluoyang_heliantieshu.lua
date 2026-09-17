@@ -1,18 +1,18 @@
---ÂåÑôNPC
---ºÕÁ¬ÌúÊ÷
---ÆÕÍ¨
+--æ´›é˜³NPC
+--èµ«è¿é“æ ‘
+--æ™®é€š
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x000033_g_scriptId = 000033
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x000033_g_eventList={200052, 200053, 200095, 200096, 200099, 200100}--200050,200054
 
 x000033_g_RSMissionId = 101
-x000033_g_ActivateMissionId = 45			-- ¼¤»îÌõ¼ş
-x000033_g_SongXinScriptId = 006668		-- ËÍĞÅ
-x000033_g_ShaGuaiScriptId = 006666		-- É±¹Ö
-x000033_g_XunWuScriptId = 006667			-- Ñ°Îï
+x000033_g_ActivateMissionId = 45			-- æ¿€æ´»æ¡ä»¶
+x000033_g_SongXinScriptId = 006668		-- é€ä¿¡
+x000033_g_ShaGuaiScriptId = 006666		-- æ€æ€ª
+x000033_g_XunWuScriptId = 006667			-- å¯»ç‰©
 
 x000033_g_RoundStorytelling = {
 		[0] = { misIndex = { 1039350 }, script = x000033_g_XunWuScriptId },
@@ -33,29 +33,29 @@ x000033_g_ShaGuaiMissionList = {
 			
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x000033_UpdateEventList( sceneId, selfId,targetId )
 		
 	local PlayerName = GetName( sceneId, selfId )
 	local PlayerSex = GetSex( sceneId, selfId )
 	if PlayerSex == 0 then
-		PlayerSex = "¹ÃÄï"
+		PlayerSex = "å§‘å¨˜"
 	else
-		PlayerSex = "ÉÙÏÀ"
+		PlayerSex = "å°‘ä¾ "
 	end
 
 	BeginEvent( sceneId )
-		AddText(sceneId,"  Õâ´Îõí¾Ï´ó»áÀ´µÄÈËÕæ¶à£¬´óËÎ³¯Ã¿Äê¾Ù°ì´ó»á£¬ÄÑµÀÕæµÄÊÇÎªÁËÇĞ´èõí¾Ï¼¼ÒÕÂğ£¿")
+		AddText(sceneId,"  è¿™æ¬¡è¹´é å¤§ä¼šæ¥çš„äººçœŸå¤šï¼Œå¤§å®‹æœæ¯å¹´ä¸¾åŠå¤§ä¼šï¼Œéš¾é“çœŸçš„æ˜¯ä¸ºäº†åˆ‡ç£‹è¹´é æŠ€è‰ºå—ï¼Ÿ")
 
 		local missionIndex = GetScriptIDByMissionID( sceneId, selfId, x000033_g_RSMissionId )
 		if missionIndex ~= -1 then
 			local missionName = TGetMissionName( missionIndex )
-			if missionName ~= "Òø´¨¹«Ö÷ÈÎÎñ" and IsMissionHaveDone( sceneId, selfId, x000033_g_ActivateMissionId ) > 0 then
-				AddNumText( sceneId, x000033_g_scriptId, "Òø´¨¹«Ö÷ÈÎÎñ", 3, 1 )
+			if missionName ~= "é“¶å·å…¬ä¸»ä»»åŠ¡" and IsMissionHaveDone( sceneId, selfId, x000033_g_ActivateMissionId ) > 0 then
+				AddNumText( sceneId, x000033_g_scriptId, "é“¶å·å…¬ä¸»ä»»åŠ¡", 3, 1 )
 			end
 		elseif IsMissionHaveDone( sceneId, selfId, x000033_g_ActivateMissionId ) > 0 then
-			AddNumText( sceneId, x000033_g_scriptId, "Òø´¨¹«Ö÷ÈÎÎñ", 3, 1 )
+			AddNumText( sceneId, x000033_g_scriptId, "é“¶å·å…¬ä¸»ä»»åŠ¡", 3, 1 )
 		end
 
 		for i, eventId in x000033_g_eventList do
@@ -68,14 +68,14 @@ function x000033_UpdateEventList( sceneId, selfId,targetId )
 end
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x000033_OnDefaultEvent( sceneId, selfId,targetId )
 	x000033_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x000033_OnEventRequest( sceneId, selfId, targetId, eventId )
 	for i, findId in x000033_g_eventList do
@@ -86,41 +86,41 @@ function x000033_OnEventRequest( sceneId, selfId, targetId, eventId )
 	end
 		
 	local num = GetNumText()
-	if num == 1 then										-- Òø´¨¹«Ö÷ÈÎÎñ
+	if num == 1 then										-- é“¶å·å…¬ä¸»ä»»åŠ¡
 		if IsHaveMission( sceneId, selfId, x000033_g_RSMissionId ) > 0 then
-			x000033_NotifyFailBox( sceneId, selfId, targetId, "    Å¶£¬ÄãÒÑÓĞÆäËûÓ¢ĞÛµÄ¹ØÏµÈÎÎñ£¨¾çÇéÑ­»·ÈÎÎñ£©ÉĞÎ´Íê³É£¬ÇëÍê³ÉÖ®ºóÔÙÀ´ÕÒÎÒ°É¡£" )
+			x000033_NotifyFailBox( sceneId, selfId, targetId, "    å“¦ï¼Œä½ å·²æœ‰å…¶ä»–è‹±é›„çš„å…³ç³»ä»»åŠ¡ï¼ˆå‰§æƒ…å¾ªç¯ä»»åŠ¡ï¼‰å°šæœªå®Œæˆï¼Œè¯·å®Œæˆä¹‹åå†æ¥æ‰¾æˆ‘å§ã€‚" )
 			return
 		end
 		
-		-- ¼ì²âÊÇ·ñÂú×ãÈÎÎñ¼¤»îÌõ¼ş
+		-- æ£€æµ‹æ˜¯å¦æ»¡è¶³ä»»åŠ¡æ¿€æ´»æ¡ä»¶
 		if IsMissionHaveDone( sceneId, selfId, x000033_g_ActivateMissionId ) <= 0 then
 			return 0
 		end
 		
-		--¿´ÏÂ½ñÌìµÄÒø´¨¹«Ö÷ÈÎÎñÊÇ²»ÊÇ×öÍê50´ÎÁË
+		--çœ‹ä¸‹ä»Šå¤©çš„é“¶å·å…¬ä¸»ä»»åŠ¡æ˜¯ä¸æ˜¯åšå®Œ50æ¬¡äº†
 		--begin modified by zhangguoxin 090208
 		local nDayCount = GetMissionData(sceneId, selfId, MD_JQXH_YINCHUAN_LIMITI)
 		local nCount = 		floor(nDayCount/100000)
 		local nTime = 		mod(nDayCount,100000)
-		--local nDayTime = 	floor(nTime/100)	--ÉÏÒ»´Î½»ÈÎÎñµÄÊ±¼ä(ÌìÊı)
-		local nDayTime = 	nTime								--ÉÏÒ»´Î½»ÈÎÎñµÄÊ±¼ä(ÌìÊı)
+		--local nDayTime = 	floor(nTime/100)	--ä¸Šä¸€æ¬¡äº¤ä»»åŠ¡çš„æ—¶é—´(å¤©æ•°)
+		local nDayTime = 	nTime								--ä¸Šä¸€æ¬¡äº¤ä»»åŠ¡çš„æ—¶é—´(å¤©æ•°)
 		
-		--local CurTime = GetHourTime()				--µ±Ç°Ê±¼ä
-		local CurTime = GetDayTime()					--µ±Ç°Ê±¼ä
-		--local CurDaytime = floor(CurTime/100)	--µ±Ç°Ê±¼ä(Ìì)
-		local CurDaytime = CurTime							--µ±Ç°Ê±¼ä(Ìì)
+		--local CurTime = GetHourTime()				--å½“å‰æ—¶é—´
+		local CurTime = GetDayTime()					--å½“å‰æ—¶é—´
+		--local CurDaytime = floor(CurTime/100)	--å½“å‰æ—¶é—´(å¤©)
+		local CurDaytime = CurTime							--å½“å‰æ—¶é—´(å¤©)
 		--end modified by zhangguoxin 090208
 		
-		if nDayTime == CurDaytime  then -- µ±Ìì
+		if nDayTime == CurDaytime  then -- å½“å¤©
 			if nCount >= 50  then
 				BeginEvent( sceneId )
-					AddText( sceneId, "  ½ñÌìÒÑ¾­Âé·³ÄãÌ«¶àµÄÊÂÇéÁË£¬ÊµÔÚÊÇ¹ıÒâ²»È¥£¬Ã÷ÌìÔÙÂé·³Äã°É£¡" )
+					AddText( sceneId, "  ä»Šå¤©å·²ç»éº»çƒ¦ä½ å¤ªå¤šçš„äº‹æƒ…äº†ï¼Œå®åœ¨æ˜¯è¿‡æ„ä¸å»ï¼Œæ˜å¤©å†éº»çƒ¦ä½ å§ï¼" )
 				EndEvent( sceneId )
 				DispatchEventList( sceneId, selfId, targetId )
 				return
 			end
 			
-		else		-- ĞÂµÄÒ»Ìì
+		else		-- æ–°çš„ä¸€å¤©
 			SetMissionData(sceneId, selfId, MD_JQXH_YINCHUAN_LIMITI, 0)
 		end
 
@@ -128,7 +128,7 @@ function x000033_OnEventRequest( sceneId, selfId, targetId, eventId )
 		local relation = GetMissionData(sceneId, selfId, MD_RELATION_YINCHUAN)
 		local playerlevel = GetLevel( sceneId, selfId )
 		
-		-- µÈ¼¶ÉÏÏŞ´¦Àí
+		-- ç­‰çº§ä¸Šé™å¤„ç†
 		if playerlevel >= 100 then
 			playerlevel = 90
 		end
@@ -136,7 +136,7 @@ function x000033_OnEventRequest( sceneId, selfId, targetId, eventId )
 		playerlevel = floor( playerlevel / 10 ) * 10
 		local randtype = random(100)
 		
-		-- ËÍĞÅÈÎÎñ
+		-- é€ä¿¡ä»»åŠ¡
 		if randtype <= 60 then
 			if playerlevel == 70 then
 				mission = x000033_g_SongXinMissionList[0];
@@ -145,7 +145,7 @@ function x000033_OnEventRequest( sceneId, selfId, targetId, eventId )
 			elseif playerlevel == 90 then
 				mission = x000033_g_SongXinMissionList[2];			
 			end
-		-- É±¹ÖÈÎÎñ
+		-- æ€æ€ªä»»åŠ¡
 		elseif randtype <= 95 then
 			if playerlevel == 70 then
 				mission = x000033_g_ShaGuaiMissionList[0];
@@ -154,7 +154,7 @@ function x000033_OnEventRequest( sceneId, selfId, targetId, eventId )
 			elseif playerlevel == 90 then
 				mission = x000033_g_ShaGuaiMissionList[2];			
 			end
-		-- Ñ°ÎïÈÎÎñ
+		-- å¯»ç‰©ä»»åŠ¡
 		elseif randtype <= 100 then
 			if relation <= 999 then
 				mission = x000033_g_RoundStorytelling[0];
@@ -177,7 +177,7 @@ function x000033_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x000033_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x000033_g_eventList do
@@ -192,10 +192,10 @@ function x000033_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x000033_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
-	--¾Ü¾øÖ®ºó£¬Òª·µ»ØNPCµÄÊÂ¼şÁĞ±í
+	--æ‹’ç»ä¹‹åï¼Œè¦è¿”å›NPCçš„äº‹ä»¶åˆ—è¡¨
 	for i, findId in x000033_g_eventList do
 		if missionScriptId == findId then
 			x000033_UpdateEventList( sceneId, selfId, targetId )
@@ -205,7 +205,7 @@ function x000033_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¼ÌĞø£¨ÒÑ¾­½ÓÁËÈÎÎñ£©
+--ç»§ç»­ï¼ˆå·²ç»æ¥äº†ä»»åŠ¡ï¼‰
 --**********************************
 function x000033_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x000033_g_eventList do
@@ -217,7 +217,7 @@ function x000033_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---Ìá½»ÒÑ×öÍêµÄÈÎÎñ
+--æäº¤å·²åšå®Œçš„ä»»åŠ¡
 --**********************************
 function x000033_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, selectRadioId )
 	for i, findId in x000033_g_eventList do
@@ -229,13 +229,13 @@ function x000033_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 end
 
 --**********************************
---ËÀÍöÊÂ¼ş
+--æ­»äº¡äº‹ä»¶
 --**********************************
 function x000033_OnDie( sceneId, selfId, killerId )
 end
 
 --**********************************
--- ¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+-- å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x000033_NotifyFailBox( sceneId, selfId, targetId, msg )
 	BeginEvent( sceneId )
@@ -245,7 +245,7 @@ function x000033_NotifyFailBox( sceneId, selfId, targetId, msg )
 end
 
 --**********************************
---Ìá½»ÎïÆ·
+--æäº¤ç‰©å“
 --**********************************
 function x000033_OnMissionCheck( sceneId, selfId, targetId, scriptId, index1, index2, index3, indexpet, missionIndex )
 	

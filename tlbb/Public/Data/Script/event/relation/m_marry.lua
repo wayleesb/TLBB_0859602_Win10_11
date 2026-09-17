@@ -1,99 +1,99 @@
---½á»éÈÎÎñ
+--ç»“å©šä»»åŠ¡
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x806003_g_ScriptId		= 806003
 
-x806003_g_eventId_marry = 0;				-- ÎÒÏë½á»éµÄÊÂ¼şID
-x806003_g_eventId_selectLevel1 = 1;			-- Ñ¡ÔñÒ»°ã¹æÄ£»éÀñµÄÊÂ¼şID
-x806003_g_eventId_selectLevel2 = 2;			-- Ñ¡ÔñÖĞµÈ¹æÄ£»éÀñµÄÊÂ¼şID
-x806003_g_eventId_selectLevel3 = 3;			-- Ñ¡ÔñºÀ»ª¹æÄ£»éÀñµÄÊÂ¼şID
-x806003_g_eventId_selectLevelCancel = 4;	-- È¡ÏûÑ¡Ôñ»éÀñ¹æÄ£µÄÊÂ¼şID
-x806003_g_eventId_selfAcceptLevel1 = 5;		-- ×ÔÒÑÈ·¶¨ÁËÑ¡ÔñÒ»°ã¹æÄ£»éÀñ
-x806003_g_eventId_selfAcceptLevel2 = 6;		-- ×ÔÒÑÈ·¶¨ÁËÑ¡ÔñÖĞµÈ¹æÄ£»éÀñ
-x806003_g_eventId_selfAcceptLevel3 = 7;		-- ×ÔÒÑÈ·¶¨ÁËÑ¡ÔñºÀ»ª¹æÄ£»éÀñ
-x806003_g_eventId_selfCancelLevel = 8;		-- ×ÔÒÑÈ¡ÏûÁËÑ¡Ôñ»éÀñ¹æÄ£
-x806003_g_eventId_targetAcceptLevel1 = 9;	-- ¶Ô·½È·¶¨ÁËÑ¡ÔñÒ»°ã¹æÄ£»éÀñ
-x806003_g_eventId_targetAcceptLevel2 = 10;	-- ¶Ô·½È·¶¨ÁËÑ¡ÔñÖĞµÈ¹æÄ£»éÀñ
-x806003_g_eventId_targetAcceptLevel3 = 11;	-- ¶Ô·½È·¶¨ÁËÑ¡ÔñºÀ»ª¹æÄ£»éÀñ
-x806003_g_eventId_targetCancelLevel = 12;	-- ¶Ô·½È¡ÏûÁËÑ¡Ôñ»éÀñ¹æÄ£
-x806003_g_eventId_end = 13;					-- ½áÊøÓï
+x806003_g_eventId_marry = 0;				-- æˆ‘æƒ³ç»“å©šçš„äº‹ä»¶ID
+x806003_g_eventId_selectLevel1 = 1;			-- é€‰æ‹©ä¸€èˆ¬è§„æ¨¡å©šç¤¼çš„äº‹ä»¶ID
+x806003_g_eventId_selectLevel2 = 2;			-- é€‰æ‹©ä¸­ç­‰è§„æ¨¡å©šç¤¼çš„äº‹ä»¶ID
+x806003_g_eventId_selectLevel3 = 3;			-- é€‰æ‹©è±ªåè§„æ¨¡å©šç¤¼çš„äº‹ä»¶ID
+x806003_g_eventId_selectLevelCancel = 4;	-- å–æ¶ˆé€‰æ‹©å©šç¤¼è§„æ¨¡çš„äº‹ä»¶ID
+x806003_g_eventId_selfAcceptLevel1 = 5;		-- è‡ªå·²ç¡®å®šäº†é€‰æ‹©ä¸€èˆ¬è§„æ¨¡å©šç¤¼
+x806003_g_eventId_selfAcceptLevel2 = 6;		-- è‡ªå·²ç¡®å®šäº†é€‰æ‹©ä¸­ç­‰è§„æ¨¡å©šç¤¼
+x806003_g_eventId_selfAcceptLevel3 = 7;		-- è‡ªå·²ç¡®å®šäº†é€‰æ‹©è±ªåè§„æ¨¡å©šç¤¼
+x806003_g_eventId_selfCancelLevel = 8;		-- è‡ªå·²å–æ¶ˆäº†é€‰æ‹©å©šç¤¼è§„æ¨¡
+x806003_g_eventId_targetAcceptLevel1 = 9;	-- å¯¹æ–¹ç¡®å®šäº†é€‰æ‹©ä¸€èˆ¬è§„æ¨¡å©šç¤¼
+x806003_g_eventId_targetAcceptLevel2 = 10;	-- å¯¹æ–¹ç¡®å®šäº†é€‰æ‹©ä¸­ç­‰è§„æ¨¡å©šç¤¼
+x806003_g_eventId_targetAcceptLevel3 = 11;	-- å¯¹æ–¹ç¡®å®šäº†é€‰æ‹©è±ªåè§„æ¨¡å©šç¤¼
+x806003_g_eventId_targetCancelLevel = 12;	-- å¯¹æ–¹å–æ¶ˆäº†é€‰æ‹©å©šç¤¼è§„æ¨¡
+x806003_g_eventId_end = 13;					-- ç»“æŸè¯­
 
-x806003_g_ticketItemId = 30505079;			-- ¸ß¼¶»éÀñÈ¯ID
-x806003_g_ticketItemId2 = 30505106;			-- ÖĞ¼¶»éÀñÈ¯ID
+x806003_g_ticketItemId = 30505079;			-- é«˜çº§å©šç¤¼åˆ¸ID
+x806003_g_ticketItemId2 = 30505106;			-- ä¸­çº§å©šç¤¼åˆ¸ID
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı ÇëÇó½á»é
+--ä»»åŠ¡å…¥å£å‡½æ•° è¯·æ±‚ç»“å©š
 --**********************************
 function x806003_OnDefaultEvent(sceneId, selfId, targetId)
 	local selectEventId	= GetNumText();
 
-	--ÎÒÏë½á»éµÄÊÂ¼ş
+	--æˆ‘æƒ³ç»“å©šçš„äº‹ä»¶
 	if x806003_g_eventId_marry == selectEventId then
 		local canMarry = x806003_CheckOpenMarryLevelUI(sceneId, selfId, targetId);
 		if canMarry == 1 then
 			x806003_OpenMarryLevelUI(sceneId, selfId, targetId);
 		end
-	--Ñ¡Ôñ»éÀñ¹æÄ£µÄÊÂ¼ş
+	--é€‰æ‹©å©šç¤¼è§„æ¨¡çš„äº‹ä»¶
 	elseif x806003_g_eventId_selectLevel1 == selectEventId or x806003_g_eventId_selectLevel2 == selectEventId or x806003_g_eventId_selectLevel3 == selectEventId then
 	
 		local marryLevel = 0;
-		--ÖĞµÈ
+		--ä¸­ç­‰
 		if x806003_g_eventId_selectLevel2 == selectEventId then
 			marryLevel  = 1;
-		--ºÀ»ª
+		--è±ªå
 		elseif x806003_g_eventId_selectLevel3 == selectEventId then
 			marryLevel  = 2;
 		end
 	
 		x806003_SelfCheckSelectMarryLevel(sceneId, selfId, targetId, marryLevel);
 		
-	--È¡ÏûÑ¡Ôñ»éÀñ¹æÄ£µÄÊÂ¼ş
+	--å–æ¶ˆé€‰æ‹©å©šç¤¼è§„æ¨¡çš„äº‹ä»¶
 	elseif x806003_g_eventId_selectLevelCancel == selectEventId then
 		BeginUICommand(sceneId);
 		EndUICommand(sceneId);
 		DispatchUICommand(sceneId, selfId, 1000);
 		
-	--×ÔÒÑÈ·ÈÏÁËÑ¡Ôñ
+	--è‡ªå·²ç¡®è®¤äº†é€‰æ‹©
 	elseif x806003_g_eventId_selfAcceptLevel1 == selectEventId or x806003_g_eventId_selfAcceptLevel2 == selectEventId or x806003_g_eventId_selfAcceptLevel3 == selectEventId then
 	
 		local marryLevel = 0;
-		--ÖĞµÈ
+		--ä¸­ç­‰
 		if x806003_g_eventId_selfAcceptLevel2 == selectEventId then
 			marryLevel  = 1;
-		--ºÀ»ª
+		--è±ªå
 		elseif x806003_g_eventId_selfAcceptLevel3 == selectEventId then
 			marryLevel  = 2;
 		end
 		
 		x806003_OnSelfAcceptSelectMarryLevel(sceneId, selfId, targetId, marryLevel);
 	
-	--×ÔÒÑÈ¡ÏûÁËÑ¡Ôñ»éÀñ¹æÄ£
+	--è‡ªå·²å–æ¶ˆäº†é€‰æ‹©å©šç¤¼è§„æ¨¡
 	elseif x806003_g_eventId_selfCancelLevel == selectEventId then
 		local canMarry = x806003_CheckOpenMarryLevelUI(sceneId, selfId, targetId);
 		if canMarry == 1 then
 			x806003_OpenMarryLevelUI(sceneId, selfId, targetId);
 		end
 		
-	--¶Ô·½È·ÈÏÁËÑ¡Ôñ
+	--å¯¹æ–¹ç¡®è®¤äº†é€‰æ‹©
 	elseif x806003_g_eventId_targetAcceptLevel1 == selectEventId or x806003_g_eventId_targetAcceptLevel2 == selectEventId or x806003_g_eventId_targetAcceptLevel3 == selectEventId then
 	
 		local marryLevel = 0;
-		--ÖĞµÈ
+		--ä¸­ç­‰
 		if x806003_g_eventId_targetAcceptLevel2 == selectEventId then
 			marryLevel  = 1;
-		--ºÀ»ª
+		--è±ªå
 		elseif x806003_g_eventId_targetAcceptLevel3 == selectEventId then
 			marryLevel  = 2;
 		end
 		
 		x806003_OnTargetAcceptSelectMarryLevel(sceneId, selfId, targetId, marryLevel);
 	
-	--¶Ô·½È¡ÏûÁËÑ¡Ôñ»éÀñ¹æÄ£
+	--å¯¹æ–¹å–æ¶ˆäº†é€‰æ‹©å©šç¤¼è§„æ¨¡
 	elseif x806003_g_eventId_targetCancelLevel == selectEventId then
 	
 		x806003_OnTargetCancelSelectMarryLevel(sceneId, selfId, targetId);
 	
-	--½áÊøÓï
+	--ç»“æŸè¯­
 	elseif x806003_g_eventId_end == selectEventId then
 		BeginUICommand(sceneId);
 		EndUICommand(sceneId);
@@ -102,14 +102,14 @@ function x806003_OnDefaultEvent(sceneId, selfId, targetId)
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x806003_OnEnumerate(sceneId, selfId, targetId)
-	AddNumText(sceneId, x806003_g_ScriptId, "ÎÒÏë½á»é", 10, x806003_g_eventId_marry);
+	AddNumText(sceneId, x806003_g_ScriptId, "æˆ‘æƒ³ç»“å©š", 10, x806003_g_eventId_marry);
 end
 
 --**********************************
---¼ì²âÊÇ·ñÂú×ãÓÚ½á»éµÄÌõ¼ş
+--æ£€æµ‹æ˜¯å¦æ»¡è¶³äºç»“å©šçš„æ¡ä»¶
 --**********************************
 function x806003_CheckOpenMarryLevelUI(sceneId, selfId, targetId)
 	local ret, maleId, femaleId = x806003_CheckMarry(sceneId, selfId, targetId, 0, 1);
@@ -117,24 +117,24 @@ function x806003_CheckOpenMarryLevelUI(sceneId, selfId, targetId)
 end
 
 --**********************************
--- »éÀñ¹æÄ£µÄÑ¡ÔñÒ³Ãæ
+-- å©šç¤¼è§„æ¨¡çš„é€‰æ‹©é¡µé¢
 --**********************************
 function x806003_OpenMarryLevelUI(sceneId, selfId, targetId)
 	BeginEvent(sceneId);
 		local moneyLevel0 = x806003_CalcNeedMoney(0);
 		local moneyLevel1 = x806003_CalcNeedMoney(1);
 		local moneyLevel2 = x806003_CalcNeedMoney(2);
-		AddText(sceneId, "#{yuelao_jiehun}#rÒ»°ã¹æÄ£µÄ»éÀñ£¬ĞèÒª»¨·Ñ#{_EXCHG"..moneyLevel0.."}£»ÖĞµÈ¹æÄ£µÄ»éÀñ£¬ĞèÒª»¨·Ñ#{_EXCHG"..moneyLevel1.."}¡£ºÀ»ª¹æÄ£µÄ»éÀñ£¬ĞèÒª»¨·Ñ#{_EXCHG"..moneyLevel2.."}¡£");
-		AddNumText(sceneId, x806003_g_ScriptId, "Ò»°ã¹æÄ£µÄ»éÀñ", 6, x806003_g_eventId_selectLevel1);
-		AddNumText(sceneId, x806003_g_ScriptId, "ÖĞµÈ¹æÄ£µÄ»éÀñ", 6, x806003_g_eventId_selectLevel2);
-		AddNumText(sceneId, x806003_g_ScriptId, "ºÀ»ª¹æÄ£µÄ»éÀñ", 6, x806003_g_eventId_selectLevel3);
-		AddNumText(sceneId, x806003_g_ScriptId, "ÎÒÔİÊ±²»×¼±¸½á»é¡­¡­", 8, x806003_g_eventId_selectLevelCancel);
+		AddText(sceneId, "#{yuelao_jiehun}#rä¸€èˆ¬è§„æ¨¡çš„å©šç¤¼ï¼Œéœ€è¦èŠ±è´¹#{_EXCHG"..moneyLevel0.."}ï¼›ä¸­ç­‰è§„æ¨¡çš„å©šç¤¼ï¼Œéœ€è¦èŠ±è´¹#{_EXCHG"..moneyLevel1.."}ã€‚è±ªåè§„æ¨¡çš„å©šç¤¼ï¼Œéœ€è¦èŠ±è´¹#{_EXCHG"..moneyLevel2.."}ã€‚");
+		AddNumText(sceneId, x806003_g_ScriptId, "ä¸€èˆ¬è§„æ¨¡çš„å©šç¤¼", 6, x806003_g_eventId_selectLevel1);
+		AddNumText(sceneId, x806003_g_ScriptId, "ä¸­ç­‰è§„æ¨¡çš„å©šç¤¼", 6, x806003_g_eventId_selectLevel2);
+		AddNumText(sceneId, x806003_g_ScriptId, "è±ªåè§„æ¨¡çš„å©šç¤¼", 6, x806003_g_eventId_selectLevel3);
+		AddNumText(sceneId, x806003_g_ScriptId, "æˆ‘æš‚æ—¶ä¸å‡†å¤‡ç»“å©šâ€¦â€¦", 8, x806003_g_eventId_selectLevelCancel);
 	EndEvent(sceneId);
 	DispatchEventList(sceneId, selfId, targetId);
 end
 
 --**********************************
--- ×ÔÒÑÈ·ÈÏÑ¡ÔñµÄÒ³Ãæ
+-- è‡ªå·²ç¡®è®¤é€‰æ‹©çš„é¡µé¢
 --**********************************
 function x806003_SelfCheckSelectMarryLevel(sceneId, selfId, targetId, marryLevel)
 	
@@ -142,9 +142,9 @@ function x806003_SelfCheckSelectMarryLevel(sceneId, selfId, targetId, marryLevel
 
 	BeginEvent(sceneId);
 		if marryLevel == 2 then
-			AddText(sceneId, "ÄãÑ¡ÔñÁË"..x806003_GetMarryLevelName(marryLevel).."£¬Í¬Ê±Äã½«ÒªÖ§¸¶#Y"..GetItemName(sceneId, x806003_g_ticketItemId).."#W»ò#{_EXCHG"..x806003_CalcNeedMoney(marryLevel).."}£¬#rÄãÃÇÊÇ·ñÒÑ¾­¾ö¶¨ºÃ½á»é£¬²¢ÇÒÔÚ½ÓÏÂÀ´µÄÉú»îÖĞ£¬²»Àë²»ÆúÄØ£¿");
+			AddText(sceneId, "ä½ é€‰æ‹©äº†"..x806003_GetMarryLevelName(marryLevel).."ï¼ŒåŒæ—¶ä½ å°†è¦æ”¯ä»˜#Y"..GetItemName(sceneId, x806003_g_ticketItemId).."#Wæˆ–#{_EXCHG"..x806003_CalcNeedMoney(marryLevel).."}ï¼Œ#rä½ ä»¬æ˜¯å¦å·²ç»å†³å®šå¥½ç»“å©šï¼Œå¹¶ä¸”åœ¨æ¥ä¸‹æ¥çš„ç”Ÿæ´»ä¸­ï¼Œä¸ç¦»ä¸å¼ƒå‘¢ï¼Ÿ");
 		else
-			AddText(sceneId, "ÄãÑ¡ÔñÁË"..x806003_GetMarryLevelName(marryLevel).."£¬Í¬Ê±Äã½«ÒªÖ§¸¶#Y"..GetItemName(sceneId, x806003_g_ticketItemId).."#W»ò#Y"..GetItemName(sceneId, x806003_g_ticketItemId2).."#W»ò#{_EXCHG"..x806003_CalcNeedMoney(marryLevel).."}£¬#rÄãÃÇÊÇ·ñÒÑ¾­¾ö¶¨ºÃ½á»é£¬²¢ÇÒÔÚ½ÓÏÂÀ´µÄÉú»îÖĞ£¬²»Àë²»ÆúÄØ£¿");
+			AddText(sceneId, "ä½ é€‰æ‹©äº†"..x806003_GetMarryLevelName(marryLevel).."ï¼ŒåŒæ—¶ä½ å°†è¦æ”¯ä»˜#Y"..GetItemName(sceneId, x806003_g_ticketItemId).."#Wæˆ–#Y"..GetItemName(sceneId, x806003_g_ticketItemId2).."#Wæˆ–#{_EXCHG"..x806003_CalcNeedMoney(marryLevel).."}ï¼Œ#rä½ ä»¬æ˜¯å¦å·²ç»å†³å®šå¥½ç»“å©šï¼Œå¹¶ä¸”åœ¨æ¥ä¸‹æ¥çš„ç”Ÿæ´»ä¸­ï¼Œä¸ç¦»ä¸å¼ƒå‘¢ï¼Ÿ");
 		end
 		local tempAcceptEventID = x806003_g_eventId_selfAcceptLevel1;
 		if marryLevel == 1 then
@@ -152,15 +152,15 @@ function x806003_SelfCheckSelectMarryLevel(sceneId, selfId, targetId, marryLevel
 		elseif marryLevel == 2 then
 			tempAcceptEventID = x806003_g_eventId_selfAcceptLevel3;
 		end		
-		AddNumText(sceneId, x806003_g_ScriptId, "È·ÈÏ", 6, tempAcceptEventID);
-		AddNumText(sceneId, x806003_g_ScriptId, "È¡Ïû", 8, x806003_g_eventId_selfCancelLevel);
+		AddNumText(sceneId, x806003_g_ScriptId, "ç¡®è®¤", 6, tempAcceptEventID);
+		AddNumText(sceneId, x806003_g_ScriptId, "å–æ¶ˆ", 8, x806003_g_eventId_selfCancelLevel);
 	EndEvent(sceneId);
 	DispatchEventList(sceneId, selfId, targetId);
 	
 end
 
 --**********************************
--- ×ÔÒÑÒÑ¾­È·ÈÏÁËÄãµÄÑ¡ÔñµÄÊÂ¼ş
+-- è‡ªå·²å·²ç»ç¡®è®¤äº†ä½ çš„é€‰æ‹©çš„äº‹ä»¶
 --**********************************
 function x806003_OnSelfAcceptSelectMarryLevel(sceneId, selfId, targetId, marryLevel)
 
@@ -173,13 +173,13 @@ function x806003_OnSelfAcceptSelectMarryLevel(sceneId, selfId, targetId, marryLe
 		
 		x806003_TargetCheckSelectMarryLevel(sceneId, selfId, targetId, marryLevel);
 		
-		x806003_MessageBox(sceneId, selfId, targetId, "µÈ´ı¶Ô·½È·¶¨¡­¡­");
+		x806003_MessageBox(sceneId, selfId, targetId, "ç­‰å¾…å¯¹æ–¹ç¡®å®šâ€¦â€¦");
 		
 	end
 end
 
 --**********************************
--- ¶Ô·½È·ÈÏÑ¡ÔñµÄÒ³Ãæ
+-- å¯¹æ–¹ç¡®è®¤é€‰æ‹©çš„é¡µé¢
 --**********************************
 function x806003_TargetCheckSelectMarryLevel(sceneId, selfId, targetId, marryLevel)
 
@@ -191,9 +191,9 @@ function x806003_TargetCheckSelectMarryLevel(sceneId, selfId, targetId, marryLev
 		
 		BeginEvent(sceneId);
 			if marryLevel == 2 then
-				AddText(sceneId, "¶Ô·½Ñ¡ÔñÁË"..x806003_GetMarryLevelName(marryLevel).."£¬Í¬Ê±¶Ô·½½«ÒªÖ§¸¶#Y"..GetItemName(sceneId, x806003_g_ticketItemId).."#W»ò#{_EXCHG"..x806003_CalcNeedMoney(marryLevel).."}£¬#rÄãÃÇÊÇ·ñÒÑ¾­¾ö¶¨ºÃ½á»é£¬²¢ÇÒÔÚ½ÓÏÂÀ´µÄÉú»îÖĞ£¬²»Àë²»ÆúÄØ£¿");
+				AddText(sceneId, "å¯¹æ–¹é€‰æ‹©äº†"..x806003_GetMarryLevelName(marryLevel).."ï¼ŒåŒæ—¶å¯¹æ–¹å°†è¦æ”¯ä»˜#Y"..GetItemName(sceneId, x806003_g_ticketItemId).."#Wæˆ–#{_EXCHG"..x806003_CalcNeedMoney(marryLevel).."}ï¼Œ#rä½ ä»¬æ˜¯å¦å·²ç»å†³å®šå¥½ç»“å©šï¼Œå¹¶ä¸”åœ¨æ¥ä¸‹æ¥çš„ç”Ÿæ´»ä¸­ï¼Œä¸ç¦»ä¸å¼ƒå‘¢ï¼Ÿ");
 			else
-				AddText(sceneId, "¶Ô·½Ñ¡ÔñÁË"..x806003_GetMarryLevelName(marryLevel).."£¬Í¬Ê±¶Ô·½½«ÒªÖ§¸¶#Y"..GetItemName(sceneId, x806003_g_ticketItemId).."#W»ò#Y"..GetItemName(sceneId, x806003_g_ticketItemId2).."#W»ò#{_EXCHG"..x806003_CalcNeedMoney(marryLevel).."}£¬#rÄãÃÇÊÇ·ñÒÑ¾­¾ö¶¨ºÃ½á»é£¬²¢ÇÒÔÚ½ÓÏÂÀ´µÄÉú»îÖĞ£¬²»Àë²»ÆúÄØ£¿");
+				AddText(sceneId, "å¯¹æ–¹é€‰æ‹©äº†"..x806003_GetMarryLevelName(marryLevel).."ï¼ŒåŒæ—¶å¯¹æ–¹å°†è¦æ”¯ä»˜#Y"..GetItemName(sceneId, x806003_g_ticketItemId).."#Wæˆ–#Y"..GetItemName(sceneId, x806003_g_ticketItemId2).."#Wæˆ–#{_EXCHG"..x806003_CalcNeedMoney(marryLevel).."}ï¼Œ#rä½ ä»¬æ˜¯å¦å·²ç»å†³å®šå¥½ç»“å©šï¼Œå¹¶ä¸”åœ¨æ¥ä¸‹æ¥çš„ç”Ÿæ´»ä¸­ï¼Œä¸ç¦»ä¸å¼ƒå‘¢ï¼Ÿ");
 			end
 			local tempAcceptEventID = x806003_g_eventId_targetAcceptLevel1;
 			if marryLevel == 1 then
@@ -201,15 +201,15 @@ function x806003_TargetCheckSelectMarryLevel(sceneId, selfId, targetId, marryLev
 			elseif marryLevel == 2 then
 				tempAcceptEventID = x806003_g_eventId_targetAcceptLevel3;
 			end
-			AddNumText(sceneId, x806003_g_ScriptId, "È·ÈÏ", 6, tempAcceptEventID);
-			AddNumText(sceneId, x806003_g_ScriptId, "È¡Ïû", 8, x806003_g_eventId_targetCancelLevel);
+			AddNumText(sceneId, x806003_g_ScriptId, "ç¡®è®¤", 6, tempAcceptEventID);
+			AddNumText(sceneId, x806003_g_ScriptId, "å–æ¶ˆ", 8, x806003_g_eventId_targetCancelLevel);
 		EndEvent(sceneId);
 		DispatchEventList(sceneId, marryTargetId, targetId);
 	end
 end
 
 --**********************************
--- ¶Ô·½ÒÑ¾­È·ÈÏÁËÄãµÄÑ¡ÔñµÄÊÂ¼ş
+-- å¯¹æ–¹å·²ç»ç¡®è®¤äº†ä½ çš„é€‰æ‹©çš„äº‹ä»¶
 --**********************************
 function x806003_OnTargetAcceptSelectMarryLevel(sceneId, selfId, targetId, marryLevel)
 
@@ -217,7 +217,7 @@ function x806003_OnTargetAcceptSelectMarryLevel(sceneId, selfId, targetId, marry
 	
 	if marryTargetId ~= -1 then
 	
-		--´ËÊ±µÄself=¶Ô·½
+		--æ­¤æ—¶çš„self=å¯¹æ–¹
 		marryTargetGUID = LuaFnGetGUID(sceneId, marryTargetId);
 		LuaFnSetHumanMarryInfo(sceneId, selfId, marryTargetGUID, 1);
 
@@ -230,49 +230,49 @@ function x806003_OnTargetAcceptSelectMarryLevel(sceneId, selfId, targetId, marry
 end
 
 --**********************************
--- ¶Ô·½ÒÑ¾­È¡ÏûÁËÄãµÄÑ¡ÔñµÄÊÂ¼ş
+-- å¯¹æ–¹å·²ç»å–æ¶ˆäº†ä½ çš„é€‰æ‹©çš„äº‹ä»¶
 --**********************************
 function x806003_OnTargetCancelSelectMarryLevel(sceneId, selfId, targetId, marryLevel)
 
-	--¹Ø±Õ×ÔÒÑµÄ´°¿Ú
+	--å…³é—­è‡ªå·²çš„çª—å£
 	BeginUICommand(sceneId);
 	EndUICommand(sceneId);
 	DispatchUICommand(sceneId, selfId, 1000);
 	
-	--ÌáÊ¾ĞÅÏ¢¸ø¶Ô·½
+	--æç¤ºä¿¡æ¯ç»™å¯¹æ–¹
 	local marryTargetId = x806003_GetMarryTargetId(sceneId, selfId, 0, targetId);
 	
 	if marryTargetId ~= -1 then
 	
-		x806003_MessageBox(sceneId, marryTargetId, targetId, "¶Ô·½¾Ü¾øÁËÄã£¡");
+		x806003_MessageBox(sceneId, marryTargetId, targetId, "å¯¹æ–¹æ‹’ç»äº†ä½ ï¼");
 		
 	end
 end
 
 --**********************************
--- ÅĞ¶ÏÊÇ·ñ¿ÉÒÔ½á»é
+-- åˆ¤æ–­æ˜¯å¦å¯ä»¥ç»“å©š
 --**********************************
 function x806003_CheckMarry(sceneId, selfId, targetId, marryLevel, isCheckOpenMarryLevelUI)
-	local szMsg = "Èç¹ûÏëÒª½á»éµÄ»°£¬±ØĞëÄĞÅ®Ë«·½Ò»Æğ×é¶ÓÖ®ºóÔÙÀ´ÕÒÎÒ¡£"
+	local szMsg = "å¦‚æœæƒ³è¦ç»“å©šçš„è¯ï¼Œå¿…é¡»ç”·å¥³åŒæ–¹ä¸€èµ·ç»„é˜Ÿä¹‹åå†æ¥æ‰¾æˆ‘ã€‚"
 	if LuaFnHasTeam(sceneId, selfId) == 0 then
 		x806003_MessageBox(sceneId, selfId, targetId, szMsg);
 		return 0, -1, -1;
 	end
 	
-	szMsg = "½á»é×é¶ÓµÄ¶ÓÎé±ØĞëÖ»ÄÜÓÉÄĞÅ®Ë«·½×é³É£¬¶ÓÎéÖĞ²»ÄÜÓĞÆäËûÈËÔ±¡£"
+	szMsg = "ç»“å©šç»„é˜Ÿçš„é˜Ÿä¼å¿…é¡»åªèƒ½ç”±ç”·å¥³åŒæ–¹ç»„æˆï¼Œé˜Ÿä¼ä¸­ä¸èƒ½æœ‰å…¶ä»–äººå‘˜ã€‚"
 	if LuaFnGetTeamSize(sceneId, selfId) ~= 2 then
 		x806003_MessageBox(sceneId, selfId, targetId, szMsg);
 		return 0, -1, -1;
 	end
 
-	szMsg = "Ö»ÓĞÁ½ÈË¾ù×ßµ½ÎÒÉí±ßÖ®ºó²ÅÄÜ½á»é¡£"
+	szMsg = "åªæœ‰ä¸¤äººå‡èµ°åˆ°æˆ‘èº«è¾¹ä¹‹åæ‰èƒ½ç»“å©šã€‚"
 	local nearNum = GetNearTeamCount(sceneId, selfId);
 	if nearNum ~= 2 then
 		x806003_MessageBox(sceneId, selfId, targetId, szMsg);
 		return 0, -1, -1;
 	end
 
-	szMsg = "±ØĞëË«·½ÎªÒìĞÔ²Å¿ÉÒÔ½á»é¡£"
+	szMsg = "å¿…é¡»åŒæ–¹ä¸ºå¼‚æ€§æ‰å¯ä»¥ç»“å©šã€‚"
 	local maleId = -1;
 	local femaleId = -1;
 	local marryTargetId = -1;
@@ -294,19 +294,19 @@ function x806003_CheckMarry(sceneId, selfId, targetId, marryLevel, isCheckOpenMa
 		return 0, -1, -1;
 	end
 
-	szMsg = "½á»éÊ±ÄĞ·½ĞèÒª´ïµ½35¼¶£¬Å®·½ĞèÒª´ïµ½20¼¶¡£"
+	szMsg = "ç»“å©šæ—¶ç”·æ–¹éœ€è¦è¾¾åˆ°35çº§ï¼Œå¥³æ–¹éœ€è¦è¾¾åˆ°20çº§ã€‚"
 	if LuaFnGetLevel(sceneId, maleId) < 35 or LuaFnGetLevel(sceneId, femaleId) < 20 then
 		x806003_MessageBox(sceneId, selfId, targetId, szMsg);
 		return 0, -1, -1;
 	end
 
-	szMsg = "±ØĞëË«·½¾ùÎªÎ´»é²ÅÄÜ½á»é¡£"
+	szMsg = "å¿…é¡»åŒæ–¹å‡ä¸ºæœªå©šæ‰èƒ½ç»“å©šã€‚"
 	if LuaFnIsMarried(sceneId, maleId) > 0 or LuaFnIsMarried(sceneId, femaleId) > 0 then
 		x806003_MessageBox(sceneId, selfId, targetId, szMsg);
 		return 0, -1, -1;
 	end
 
-	szMsg = "Èç¹ûĞèÒª½á»é£¬Ë«·½µÄÓÑºÃ¶È±ØĞëµ½´ï1000¡£"
+	szMsg = "å¦‚æœéœ€è¦ç»“å©šï¼ŒåŒæ–¹çš„å‹å¥½åº¦å¿…é¡»åˆ°è¾¾1000ã€‚"
 	if LuaFnIsFriend(sceneId, maleId, femaleId) ~= 1 or LuaFnIsFriend(sceneId, femaleId, maleId) ~= 1 then
 		x806003_MessageBox(sceneId, selfId, targetId, szMsg);
 		return 0, -1, -1;
@@ -317,13 +317,13 @@ function x806003_CheckMarry(sceneId, selfId, targetId, marryLevel, isCheckOpenMa
 		return 0, -1, -1;
 	end
 
-	szMsg = "ÄãÃÇÊÇÊ¦Í½£¬ÔõÃ´¿ÉÒÔ½á»éÄØ£¿"
+	szMsg = "ä½ ä»¬æ˜¯å¸ˆå¾’ï¼Œæ€ä¹ˆå¯ä»¥ç»“å©šå‘¢ï¼Ÿ"
 	if LuaFnIsMaster(sceneId, maleId, femaleId) == 1 or LuaFnIsMaster(sceneId, femaleId, maleId) == 1 then
 		x806003_MessageBox(sceneId, selfId, targetId, szMsg);
 		return 0, -1, -1;
 	end
 
-	szMsg = "ÒÑ¾­½á°İµÄË«·½ÊÇ²»ÄÜ½á»éµÄ¡£"
+	szMsg = "å·²ç»ç»“æ‹œçš„åŒæ–¹æ˜¯ä¸èƒ½ç»“å©šçš„ã€‚"
 	if LuaFnIsBrother(sceneId, maleId, femaleId) == 1 or LuaFnIsBrother(sceneId, femaleId, maleId) == 1 then
 		x806003_MessageBox(sceneId, selfId, targetId, szMsg);
 		return 0, -1, -1;
@@ -349,8 +349,8 @@ function x806003_CheckMarry(sceneId, selfId, targetId, marryLevel, isCheckOpenMa
 	if ticketItemPos and ticketItemPos > -1 then
 		local checkRet = LuaFnIsItemAvailable(sceneId, selfId, ticketItemPos);
 		if not checkRet or checkRet ~= 1 then
-			x806003_MessageBox(sceneId, selfId, targetId, "ÄãµÄ#Y"..GetItemName(sceneId, selectTicketItemId).."#W±»Ëø¶¨ÁË£¬ËùÒÔÏÖÔÚ»¹²»ÄÜ½»¸øÎÒ¡£");
-			x806003_MessageBox(sceneId, marryTargetId, targetId, "¶Ô·½µÄ#Y"..GetItemName(sceneId, selectTicketItemId).."#W±»Ëø¶¨ÁË£¬ËùÒÔÏÖÔÚ»¹²»ÄÜ½»¸øÎÒ¡£");
+			x806003_MessageBox(sceneId, selfId, targetId, "ä½ çš„#Y"..GetItemName(sceneId, selectTicketItemId).."#Wè¢«é”å®šäº†ï¼Œæ‰€ä»¥ç°åœ¨è¿˜ä¸èƒ½äº¤ç»™æˆ‘ã€‚");
+			x806003_MessageBox(sceneId, marryTargetId, targetId, "å¯¹æ–¹çš„#Y"..GetItemName(sceneId, selectTicketItemId).."#Wè¢«é”å®šäº†ï¼Œæ‰€ä»¥ç°åœ¨è¿˜ä¸èƒ½äº¤ç»™æˆ‘ã€‚");
 			return 0, -1, -1;
 		end
 	else
@@ -361,15 +361,15 @@ function x806003_CheckMarry(sceneId, selfId, targetId, marryLevel, isCheckOpenMa
 		local needMoney = x806003_CalcNeedMoney(marryLevel);
 		if nMoneyJZ and nMoneyJB and nMoneySelf and needMoney and nMoneySelf >= needMoney then
 		else
-			szMsg = "¶Ô²»Æğ£¬ÄãÉíÉÏµÄ½ğÇ®²»×ã¡£"
+			szMsg = "å¯¹ä¸èµ·ï¼Œä½ èº«ä¸Šçš„é‡‘é’±ä¸è¶³ã€‚"
 			x806003_MessageBox(sceneId, selfId, targetId, szMsg);
-			szMsg = "¶Ô²»Æğ£¬¶Ô·½ÉíÉÏµÄ½ğÇ®²»×ã¡£"
+			szMsg = "å¯¹ä¸èµ·ï¼Œå¯¹æ–¹èº«ä¸Šçš„é‡‘é’±ä¸è¶³ã€‚"
 			x806003_MessageBox(sceneId, marryTargetId, targetId, szMsg);
 			return 0, -1, -1;
 		end
 	end
 	
-	szMsg = "ÎïÆ·±³°ü¿Õ¼äÒÑÂú£¬ÎŞ·¨·ÅÖÃ½á»é½äÖ¸£¬Çë¼ì²éË«·½µÄ±³°ü¡£"
+	szMsg = "ç‰©å“èƒŒåŒ…ç©ºé—´å·²æ»¡ï¼Œæ— æ³•æ”¾ç½®ç»“å©šæˆ’æŒ‡ï¼Œè¯·æ£€æŸ¥åŒæ–¹çš„èƒŒåŒ…ã€‚"
 	local maleProSpace = LuaFnGetPropertyBagSpace(sceneId, maleId);
 	local femaleProSpace = LuaFnGetPropertyBagSpace(sceneId, femaleId);
 	if maleProSpace < 1 or femaleProSpace < 1 then
@@ -380,14 +380,14 @@ function x806003_CheckMarry(sceneId, selfId, targetId, marryLevel, isCheckOpenMa
 	
 	local selfTaskCount = GetMissionCount(sceneId, selfId);
 	if selfTaskCount >= 20 then
-		szMsg = "ÈÎÎñ¼ÇÂ¼ÒÑÂú£¬ÎŞ·¨»ñÈ¡ĞÂÈÎÎñ¡£"
+		szMsg = "ä»»åŠ¡è®°å½•å·²æ»¡ï¼Œæ— æ³•è·å–æ–°ä»»åŠ¡ã€‚"
 		x806003_MessageBox(sceneId, selfId, targetId, szMsg);
-		szMsg = "¶Ô·½ÈÎÎñ¼ÇÂ¼ÒÑÂú£¬ÎŞ·¨»ñÈ¡ĞÂÈÎÎñ¡£"
+		szMsg = "å¯¹æ–¹ä»»åŠ¡è®°å½•å·²æ»¡ï¼Œæ— æ³•è·å–æ–°ä»»åŠ¡ã€‚"
 		x806003_MessageBox(sceneId, marryTargetId, targetId, szMsg);
 		return 0, -1, -1;
 	end
 	
-	szMsg = "Ë«·½²¢Ã»ÓĞÍêÈ«Í¬Òâ½á»é¡£"
+	szMsg = "åŒæ–¹å¹¶æ²¡æœ‰å®Œå…¨åŒæ„ç»“å©šã€‚"
 	local maleGUID = LuaFnGetGUID(sceneId, maleId);
 	local femaleGUID = LuaFnGetGUID(sceneId, femaleId);
 	local maleIsAccept, maleTargetGUID = LuaFnGetHumanMarryInfo(sceneId, maleId);
@@ -408,7 +408,7 @@ function x806003_CheckMarry(sceneId, selfId, targetId, marryLevel, isCheckOpenMa
 end
 
 --**********************************
--- ´¦Àí½á»é
+-- å¤„ç†ç»“å©š
 --**********************************
 function x806003_DoMarry(sceneId, selfId, targetId, marryLevel, maleId, femaleId)
 	if LuaFnHasTeam(sceneId, selfId) == 0 then
@@ -440,7 +440,7 @@ function x806003_DoMarry(sceneId, selfId, targetId, marryLevel, maleId, femaleId
 		return 0;
 	end
 
-	--¿ÛÇ®
+	--æ‰£é’±
 	local ticketItemPos = -1;
 	local selectTicketItemId = -1;
 	if marryLevel == 2 then
@@ -482,17 +482,17 @@ function x806003_DoMarry(sceneId, selfId, targetId, marryLevel, maleId, femaleId
 		LuaFnCostMoneyWithPriority(sceneId, selfId, needMoney);	
 	end
 
-	--Ôö¼Ó³ÆºÅ
+	--å¢åŠ ç§°å·
 	local maleName = LuaFnGetName(sceneId, maleId);
 	local femaleName = LuaFnGetName(sceneId, femaleId);
 
-	LuaFnAwardSpouseTitle(sceneId, femaleId, maleName .. "µÄÄï×Ó");
+	LuaFnAwardSpouseTitle(sceneId, femaleId, maleName .. "çš„å¨˜å­");
 	DispatchAllTitle(sceneId, femaleId);
 
-	LuaFnAwardSpouseTitle(sceneId, maleId, femaleName .. "µÄ·ò¾ı");
+	LuaFnAwardSpouseTitle(sceneId, maleId, femaleName .. "çš„å¤«å›");
 	DispatchAllTitle(sceneId, maleId);
 
-	--·¢½äÖ¸
+	--å‘æˆ’æŒ‡
 	local pos;
 	local ringItemId = x806003_GetRingByMarryLevel(marryLevel);
 	pos	= TryRecieveItem(sceneId, maleId, ringItemId, 1);
@@ -505,57 +505,57 @@ function x806003_DoMarry(sceneId, selfId, targetId, marryLevel, maleId, femaleId
 		LuaFnSetItemCreator(sceneId, femaleId, pos, maleName);
 	end
 	
-	--ÖØÎÂ»éÀñ¼ÆÊıÇå0
+	--é‡æ¸©å©šç¤¼è®¡æ•°æ¸…0
 	SetMissionData( sceneId, maleId, MD_TW_REEXPERIENCE_WEDDING_TOTAL_COUNT, 0 )
 	SetMissionData( sceneId, femaleId, MD_TW_REEXPERIENCE_WEDDING_TOTAL_COUNT, 0 )
 	
-	--ÕıÊ½½á»é
+	--æ­£å¼ç»“å©š
 	LuaFnMarry(sceneId, maleId, femaleId, marryLevel);
 	
-	--¼ÓÈëĞÂÈÎÎñ
+	--åŠ å…¥æ–°ä»»åŠ¡
 	CallScriptFunction( 250036, "OnAccept", sceneId, selfId, marryLevel);
 
-	--ÁÄÌì´°¿Ú¸øÄĞ·½ÌáÊ¾
-	--Msg2Player(sceneId, maleId, "¹§Ï²ÄãºÍ"..femaleName.."½áÎª·òÆŞ£¡", MSG2PLAYER_PARA);
-	Msg2Player(sceneId, maleId, "Äú»ñµÃÁË³ÆºÅ'"..femaleName.."µÄ·ò¾ı'¡£", MSG2PLAYER_PARA);
+	--èŠå¤©çª—å£ç»™ç”·æ–¹æç¤º
+	--Msg2Player(sceneId, maleId, "æ­å–œä½ å’Œ"..femaleName.."ç»“ä¸ºå¤«å¦»ï¼", MSG2PLAYER_PARA);
+	Msg2Player(sceneId, maleId, "æ‚¨è·å¾—äº†ç§°å·'"..femaleName.."çš„å¤«å›'ã€‚", MSG2PLAYER_PARA);
 
-	--ÁÄÌì´°¿Ú¸øÅ®·½ÌáÊ¾
-	--Msg2Player(sceneId, femaleId, "¹§Ï²ÄãºÍ"..maleName.."½áÎª·òÆŞ£¡", MSG2PLAYER_PARA);
-	Msg2Player(sceneId, femaleId, "Äú»ñµÃÁË³ÆºÅ'"..maleName.."µÄÄï×Ó'¡£", MSG2PLAYER_PARA);
+	--èŠå¤©çª—å£ç»™å¥³æ–¹æç¤º
+	--Msg2Player(sceneId, femaleId, "æ­å–œä½ å’Œ"..maleName.."ç»“ä¸ºå¤«å¦»ï¼", MSG2PLAYER_PARA);
+	Msg2Player(sceneId, femaleId, "æ‚¨è·å¾—äº†ç§°å·'"..maleName.."çš„å¨˜å­'ã€‚", MSG2PLAYER_PARA);
 	
 	local ringItemName = GetItemName(sceneId, ringItemId);
 	if ringItemName then
-		Msg2Player(sceneId, maleId, "Äú»ñµÃÁË"..ringItemName.."¡£", MSG2PLAYER_PARA );
-		Msg2Player(sceneId, femaleId, "Äú»ñµÃÁË"..ringItemName.."¡£", MSG2PLAYER_PARA);
+		Msg2Player(sceneId, maleId, "æ‚¨è·å¾—äº†"..ringItemName.."ã€‚", MSG2PLAYER_PARA );
+		Msg2Player(sceneId, femaleId, "æ‚¨è·å¾—äº†"..ringItemName.."ã€‚", MSG2PLAYER_PARA);
 	end
 	
-	--ÊÀ½ç¹«¸æ
-	local strChatMessage = "#b#cff99ff¹§Ï²#W#{_INFOUSR"..maleName.."}#b#cff99ffºÍ#W#{_INFOUSR"..femaleName.."}#b#cff99ffÏ²½áÁ¬Àí£¬×£Ô¸ËûÃÇ°×Í·ÙÉÀÏ¡¢±ÈÒíË«·É¡¢Ò»ÉúĞÒ¸£¡£";
+	--ä¸–ç•Œå…¬å‘Š
+	local strChatMessage = "#b#cff99ffæ­å–œ#W#{_INFOUSR"..maleName.."}#b#cff99ffå’Œ#W#{_INFOUSR"..femaleName.."}#b#cff99ffå–œç»“è¿ç†ï¼Œç¥æ„¿ä»–ä»¬ç™½å¤´å•è€ã€æ¯”ç¿¼åŒé£ã€ä¸€ç”Ÿå¹¸ç¦ã€‚";
 	BroadMsgByChatPipe(sceneId, selfId, "@*;SrvMsg;AUC:"..strChatMessage, 4);
 	
-	--·Ö±ğ·¢EMAIL¸øÄĞÅ®Ë«·½ÉÏÃæµÄËùÓĞºÃÓÑ
+	--åˆ†åˆ«å‘EMAILç»™ç”·å¥³åŒæ–¹ä¸Šé¢çš„æ‰€æœ‰å¥½å‹
 	local maleGuid = LuaFnGetGUID(sceneId, maleId);
 	local femaleGuid = LuaFnGetGUID(sceneId, femaleId);
-	LuaFnSendMailToAllFriend( sceneId, maleId, "ÎÒÇ×°®µÄÅóÓÑ£¬ÎÒÒÑºÍ" .. femaleName .. "Ï²½áÁ¼Ôµ£¬×£¸£ÎÒÃÇ°É£¡", 1, femaleGuid )
-	LuaFnSendMailToAllFriend( sceneId, femaleId, "ÎÒÇ×°®µÄÅóÓÑ£¬ÎÒÒÑºÍ" .. maleName .. "Ï²½áÁ¼Ôµ£¬×£¸£ÎÒÃÇ°É£¡", 1, maleGuid )
+	LuaFnSendMailToAllFriend( sceneId, maleId, "æˆ‘äº²çˆ±çš„æœ‹å‹ï¼Œæˆ‘å·²å’Œ" .. femaleName .. "å–œç»“è‰¯ç¼˜ï¼Œç¥ç¦æˆ‘ä»¬å§ï¼", 1, femaleGuid )
+	LuaFnSendMailToAllFriend( sceneId, femaleId, "æˆ‘äº²çˆ±çš„æœ‹å‹ï¼Œæˆ‘å·²å’Œ" .. maleName .. "å–œç»“è‰¯ç¼˜ï¼Œç¥ç¦æˆ‘ä»¬å§ï¼", 1, maleGuid )
 
-	--½áÊøÓï
-	local endMsg = "¹§Ï²ÄãÃÇÏ²½áÁ¬Àí£¬½ÓÏÂÀ´ÇëÕÒÂåÑô£¨177£¬94£©µÄÏ²À´ÀÖ°²ÅÅ»¨³µÑ²ÓÎ£¬²»¹ıÏ²À´ÀÖ¸ºÔğÕû¸öÂåÑôµÄÏ²ÊÂ£¬Ã¿ÌìÌØ±ğÃ¦£¬ËùÒÔÄãÃÇÒ»¶¨ÒªÔÚÒ»¸öĞ¡Ê±Ö®ºóÕÒµ½Ëû¡£·ñÔò¹ıÁËÕâ¸öÆÚÏŞ¿É¾ÍÃ»°ì·¨ÁË¡£";
+	--ç»“æŸè¯­
+	local endMsg = "æ­å–œä½ ä»¬å–œç»“è¿ç†ï¼Œæ¥ä¸‹æ¥è¯·æ‰¾æ´›é˜³ï¼ˆ177ï¼Œ94ï¼‰çš„å–œæ¥ä¹å®‰æ’èŠ±è½¦å·¡æ¸¸ï¼Œä¸è¿‡å–œæ¥ä¹è´Ÿè´£æ•´ä¸ªæ´›é˜³çš„å–œäº‹ï¼Œæ¯å¤©ç‰¹åˆ«å¿™ï¼Œæ‰€ä»¥ä½ ä»¬ä¸€å®šè¦åœ¨ä¸€ä¸ªå°æ—¶ä¹‹åæ‰¾åˆ°ä»–ã€‚å¦åˆ™è¿‡äº†è¿™ä¸ªæœŸé™å¯å°±æ²¡åŠæ³•äº†ã€‚";
 	BeginEvent(sceneId);
 		AddText(sceneId, endMsg);
-		AddNumText(sceneId, x806003_g_ScriptId, "Ğ»Ğ»¡­¡­", 8, x806003_g_eventId_end);
+		AddNumText(sceneId, x806003_g_ScriptId, "è°¢è°¢â€¦â€¦", 8, x806003_g_eventId_end);
 	EndEvent(sceneId);
 	DispatchEventList(sceneId, maleId, targetId);
 	
 	BeginEvent(sceneId);
 		AddText(sceneId, endMsg);
-		AddNumText(sceneId, x806003_g_ScriptId, "Ğ»Ğ»¡­¡­", 8, x806003_g_eventId_end);
+		AddNumText(sceneId, x806003_g_ScriptId, "è°¢è°¢â€¦â€¦", 8, x806003_g_eventId_end);
 	EndEvent(sceneId);
 	DispatchEventList(sceneId, femaleId, targetId);
 end
 
 --**********************************
---¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+--å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x806003_MessageBox(sceneId, selfId, targetId, msg)
 	BeginEvent(sceneId);
@@ -565,7 +565,7 @@ function x806003_MessageBox(sceneId, selfId, targetId, msg)
 end
 
 --**********************************
---¼ÆËã»éÀñ¶ÔÓ¦µÄÇ®Êı
+--è®¡ç®—å©šç¤¼å¯¹åº”çš„é’±æ•°
 --**********************************
 function x806003_CalcNeedMoney(marryLevel)
 	if marryLevel == 1 then
@@ -578,20 +578,20 @@ function x806003_CalcNeedMoney(marryLevel)
 end
 
 --**********************************
---µÃ»éÀñµÈ¼¶¶ÔÓ¦µÄÃû³Æ
+--å¾—å©šç¤¼ç­‰çº§å¯¹åº”çš„åç§°
 --**********************************
 function x806003_GetMarryLevelName(marryLevel)
 	if marryLevel == 1 then
-		return "ÖĞµÈ¹æÄ£»éÀñ";
+		return "ä¸­ç­‰è§„æ¨¡å©šç¤¼";
 	elseif marryLevel == 2 then
-		return "ºÀ»ª¹æÄ£»éÀñ";
+		return "è±ªåè§„æ¨¡å©šç¤¼";
 	else
-		return "Ò»°ã¹æÄ£»éÀñ";
+		return "ä¸€èˆ¬è§„æ¨¡å©šç¤¼";
 	end
 end
 
 --**********************************
---µÃ»éÀñµÈ¼¶¶ÔÓ¦µÄ½äÖ¸µÄID
+--å¾—å©šç¤¼ç­‰çº§å¯¹åº”çš„æˆ’æŒ‡çš„ID
 --**********************************
 function x806003_GetRingByMarryLevel(marryLevel)
 	if marryLevel == 1 then
@@ -604,13 +604,13 @@ function x806003_GetRingByMarryLevel(marryLevel)
 end
 
 --**********************************
---µÃ¶Ô·½µÄobjId
+--å¾—å¯¹æ–¹çš„objId
 --**********************************
 function x806003_GetMarryTargetId(sceneId, selfId, showMessage, targetId)
 
 	local marryTargetId = -1;
 	
-	local szMsg = "Èç¹ûÏëÒª½á»éµÄ»°£¬±ØĞëÄĞÅ®Ë«·½Ò»Æğ×é¶ÓÖ®ºóÔÙÀ´ÕÒÎÒ¡£"
+	local szMsg = "å¦‚æœæƒ³è¦ç»“å©šçš„è¯ï¼Œå¿…é¡»ç”·å¥³åŒæ–¹ä¸€èµ·ç»„é˜Ÿä¹‹åå†æ¥æ‰¾æˆ‘ã€‚"
 	if LuaFnHasTeam(sceneId, selfId) == 0 then
 		if showMessage and showMessage == 1 then
 			x806003_MessageBox(sceneId, selfId, targetId, szMsg);
@@ -618,7 +618,7 @@ function x806003_GetMarryTargetId(sceneId, selfId, showMessage, targetId)
 		return -1;
 	end
 	
-	szMsg = "½á»é×é¶ÓµÄ¶ÓÎé±ØĞëÖ»ÄÜÓÉÄĞÅ®Ë«·½×é³É£¬¶ÓÎéÖĞ²»ÄÜÓĞÆäËûÈËÔ±¡£"
+	szMsg = "ç»“å©šç»„é˜Ÿçš„é˜Ÿä¼å¿…é¡»åªèƒ½ç”±ç”·å¥³åŒæ–¹ç»„æˆï¼Œé˜Ÿä¼ä¸­ä¸èƒ½æœ‰å…¶ä»–äººå‘˜ã€‚"
 	if LuaFnGetTeamSize(sceneId, selfId) ~= 2 then
 		if showMessage and showMessage == 1 then
 			x806003_MessageBox(sceneId, selfId, targetId, szMsg);
@@ -626,7 +626,7 @@ function x806003_GetMarryTargetId(sceneId, selfId, showMessage, targetId)
 		return -1;
 	end
 
-	szMsg = "Ö»ÓĞÁ½ÈË¾ù×ßµ½ÎÒÉí±ßÖ®ºó²ÅÄÜ½á»é¡£"
+	szMsg = "åªæœ‰ä¸¤äººå‡èµ°åˆ°æˆ‘èº«è¾¹ä¹‹åæ‰èƒ½ç»“å©šã€‚"
 	local nearNum = GetNearTeamCount(sceneId, selfId);
 	if nearNum ~= 2 then
 		if showMessage and showMessage == 1 then

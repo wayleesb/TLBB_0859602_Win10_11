@@ -1,49 +1,49 @@
 --------------------------------------------------------------------------------
--- ×°±¸°´Å¥Êı¾İ¶¨Òå
+-- è£…å¤‡æŒ‰é’®æ•°æ®å®šä¹‰
 --
-local  g_BAG;			--ĞĞÄÒ
-local  g_BOX;			--¸ñÏä
+local  g_BAG;			--è¡Œå›Š
+local  g_BOX;			--æ ¼ç®±
 
---Ê¦µÂÏà¹ØToolTipÄÚÈİ	--add by xindefeng
+--å¸ˆå¾·ç›¸å…³ToolTipå†…å®¹	--add by xindefeng
 local g_ShiDeTbl = {
-											[0] = {"ÎŞ#r", "0#r", 0},
-											[1] = {"³õ¼¶Ê¦¸µ#r", "2#r", 30},
-											[2] = {"ÖĞ¼¶Ê¦¸µ#r", "3#r", 35},
-											[3] = {"¸ß¼¶Ê¦¸µ#r", "5#r", 50},
-											[4] = {"Ò»´úÃûÊ¦#r", "8#r", 70}
+											[0] = {"æ— #r", "0#r", 0},
+											[1] = {"åˆçº§å¸ˆå‚…#r", "2#r", 30},
+											[2] = {"ä¸­çº§å¸ˆå‚…#r", "3#r", 35},
+											[3] = {"é«˜çº§å¸ˆå‚…#r", "5#r", 50},
+											[4] = {"ä¸€ä»£åå¸ˆ#r", "8#r", 70}
 										}
 
 function OtherInfo_PreLoad()
 	
-	-- ´ò¿ª½çÃæ
+	-- æ‰“å¼€ç•Œé¢
 	this:RegisterEvent("OPEN_OTHER_INFO");
 	
-	--Àë¿ª³¡¾°£¬×Ô¶¯¹Ø±Õ
+	--ç¦»å¼€åœºæ™¯ï¼Œè‡ªåŠ¨å…³é—­
 	this:RegisterEvent("PLAYER_LEAVE_WORLD");
 	this:RegisterEvent("UPDATE_DOUBLE_EXP");
 	
-	--¸üĞÂ×°±¸
+	--æ›´æ–°è£…å¤‡
 	this:RegisterEvent("REFRESH_EQUIP1");
 	
-	-- ÈÎÎñÊı¾İ·¢Éú±ä»¯
+	-- ä»»åŠ¡æ•°æ®å‘ç”Ÿå˜åŒ–
 	this:RegisterEvent("UPDATE_MISSION_DATA");
 		
-	--Íæ¼ÒÊ¹ÓÃÊŞÀ¸--add by xindefeng
+	--ç©å®¶ä½¿ç”¨å…½æ --add by xindefeng
 	this:RegisterEvent("UPDATE_PET_EXTRANUM");
 	
 end
 
 function OtherInfo_OnLoad()
 
-	g_BAG = OtherInfo_Packet1_Skill1; --ĞĞÄÒ
-	g_BOX = OtherInfo_Packet2_Skill1; --ĞĞÄÒ
+	g_BAG = OtherInfo_Packet1_Skill1; --è¡Œå›Š
+	g_BOX = OtherInfo_Packet2_Skill1; --è¡Œå›Š
 	
 	OTHERINFO_TAB_TEXT = {
-		[0] = "×°±¸",
-		"×ÊÁÏ",
-		"ÕäÊŞ",
-		"Æï³Ë",
-		"ÆäËû",
+		[0] = "è£…å¤‡",
+		"èµ„æ–™",
+		"çå…½",
+		"éª‘ä¹˜",
+		"å…¶ä»–",
 	};
 end
 
@@ -58,7 +58,7 @@ OtherInfo_SetTabColor(4);
 			return;
 		end
 		
-		-- Ö´ĞĞ·şÎñÆ÷½Å±¾£¬ÇëÇó¸üĞÂ´ò½ÙÊı¾İ
+		-- æ‰§è¡ŒæœåŠ¡å™¨è„šæœ¬ï¼Œè¯·æ±‚æ›´æ–°æ‰“åŠ«æ•°æ®
 		Clear_XSCRIPT();
 			Set_XSCRIPT_Function_Name("UpdataDacoityData");
 			Set_XSCRIPT_ScriptID(311012);
@@ -76,7 +76,7 @@ OtherInfo_SetTabColor(4);
 	
 	if( event == "UPDATE_DOUBLE_EXP") then
 		local str = SystemSetup:GetDoubleExp( "count" )
-		OtherInfo_6 : SetText(str.."Ğ¡Ê±")	
+		OtherInfo_6 : SetText(str.."å°æ—¶")	
 		local str1 = SystemSetup:GetDoubleExp( "juqing" )
 		OtherInfo_7 : SetText(str1 .. "")	
 		return;
@@ -90,7 +90,7 @@ OtherInfo_SetTabColor(4);
 		OtherInfo_OnShow();
 	end
 	
-	--´¦ÀíÊŞÀ¸ÊÂ¼ş--add by xindefeng
+	--å¤„ç†å…½æ äº‹ä»¶--add by xindefeng
 	if(event == "UPDATE_PET_EXTRANUM") then
 		if(this:IsVisible()) then			
 			OtherInfo_OnShow()			
@@ -101,26 +101,26 @@ OtherInfo_SetTabColor(4);
 end
 
 function Equip_RefreshEquip1()
-	--  Çå¿Õ°´Å¥ÏÔÊ¾Í¼±ê
-	g_BAG:SetActionItem(-1);			--ĞĞÄÒ
-	g_BOX:SetActionItem(-1);			--¸ñÏä
+	--  æ¸…ç©ºæŒ‰é’®æ˜¾ç¤ºå›¾æ ‡
+	g_BAG:SetActionItem(-1);			--è¡Œå›Š
+	g_BOX:SetActionItem(-1);			--æ ¼ç®±
 	
 	local ActionBag 		= EnumAction(9 , "equip");
 	local ActionBox 		= EnumAction(10, "equip");
 	
-	-- ÏÔÊ¾ÈËÉíÉÏµÄÎäÆ÷×°±¸
-	g_BAG:SetActionItem(ActionBag:GetID());			--ĞĞÄÒ
-	g_BOX:SetActionItem(ActionBox:GetID());			--¸ñÏä 
+	-- æ˜¾ç¤ºäººèº«ä¸Šçš„æ­¦å™¨è£…å¤‡
+	g_BAG:SetActionItem(ActionBag:GetID());			--è¡Œå›Š
+	g_BOX:SetActionItem(ActionBox:GetID());			--æ ¼ç®± 
 end
 
--- ĞĞÄÒµã»÷ÊÂ¼ş
+-- è¡Œå›Šç‚¹å‡»äº‹ä»¶
 function SelfEquip_Bag_Click()
-	g_BAG:DoSubAction();	--ĞĞÄÒ
+	g_BAG:DoSubAction();	--è¡Œå›Š
 end
 
--- ¸ñÏäµã»÷ÊÂ¼ş
+-- æ ¼ç®±ç‚¹å‡»äº‹ä»¶
 function SelfEquip_Box_Click()
-	g_BOX:DoSubAction();	--¸ñÏä
+	g_BOX:DoSubAction();	--æ ¼ç®±
 end
 
 function OtherInfo_OnShow()
@@ -133,7 +133,7 @@ function OtherInfo_OnShow()
 	
 	str = Player : GetData("GOODBADVALUE");
 	OtherInfo_1 : SetText(str)
-	SetOtherInfo_1_Tooltip()	--ÉèÖÃÆäToolTips	-- add by xindefeng	
+	SetOtherInfo_1_Tooltip()	--è®¾ç½®å…¶ToolTips	-- add by xindefeng	
 
 	str = Player : GetData("PKVALUE");
 	OtherInfo_2 : SetText(str)
@@ -150,7 +150,7 @@ function OtherInfo_OnShow()
 	elseif masterLvl == 4 then
 		availRecruitNum = 8;
 	end
-	OtherInfo_9_Text:SetText("ÊÕÍ½ÊıÁ¿:");
+	OtherInfo_9_Text:SetText("æ”¶å¾’æ•°é‡:");
 	OtherInfo_9:SetText(prenticeNum.."/"..availRecruitNum);
 --	str = Player : GetData("MORALPOINT");
 --	OtherInfo_3 : SetText(str)
@@ -159,14 +159,14 @@ function OtherInfo_OnShow()
 	OtherInfo_4 : SetText(str)
 	
 	str = SystemSetup:GetDoubleExp( "count" )
-	OtherInfo_6 : SetText(str.."Ğ¡Ê±")	
+	OtherInfo_6 : SetText(str.."å°æ—¶")	
 	str = Guild:GetGuildContri();
 	OtherInfo_5 : SetText(str);
 	
 	local nCount = DataPool:GetPlayerMission_DataRound(150)
 	OtherInfo_3:SetText(tostring(nCount))
 		
-	OtherInfo_8:SetText(tonumber(Player:GetData("PET_EXTRANUM")))	--ÏÔÊ¾ÊŞÀ¸¿Õ¼ä--add by xindefeng
+	OtherInfo_8:SetText(tonumber(Player:GetData("PET_EXTRANUM")))	--æ˜¾ç¤ºå…½æ ç©ºé—´--add by xindefeng
 		
 	OtherInfo_10 : SetText(Player : GetData("HONOR"));
 end
@@ -212,7 +212,7 @@ function OtherInfo_SelfEquip_Page_Switch()
 	OtherInfo_SetTabColor(4);
 end
 
---´ò¿ª×Ô¼ºµÄ×ÊÁÏÒ³Ãæ
+--æ‰“å¼€è‡ªå·±çš„èµ„æ–™é¡µé¢
 function OtherInfo_SelfData_Switch()
 	Variable:SetVariable("SelfUnionPos", OtherInfo_Frame:GetProperty("UnifiedPosition"), 1);
 	SystemSetup:OpenPrivatePage("self");
@@ -256,26 +256,26 @@ function OtherInfo_OnOpenGruidClick()
 	Guild:ToggleGuildDetailInfo();
 end
 
--- ´ò¿ª¹ØÏµ½çÃæ
+-- æ‰“å¼€å…³ç³»ç•Œé¢
 function OtherInfo_OpenGuanXi_Click()
 	OpenWindow( "Relation" );
 	AxTrace( 0,0, "Open Window Relation" );
 end
 
---ÉèÖÃotherinfo_1µÄtooltip	--add by xindefeng
+--è®¾ç½®otherinfo_1çš„tooltip	--add by xindefeng
 function SetOtherInfo_1_Tooltip()
-	local MasterLevel = Player:GetData("MASTERLEVEL")	--»ñÈ¡Ê¦µÂµÈ¼¶	
+	local MasterLevel = Player:GetData("MASTERLEVEL")	--è·å–å¸ˆå¾·ç­‰çº§	
 	if(MasterLevel < 0)then
 		return
 	end
 	
-	local ShanEValue = Player:GetData("GOODBADVALUE")						--»ñÈ¡ÉÆ¶ñÖµ	
-	local TuDiCount = Player:GetData("PRENTICCOUNT")						--»ñÈ¡Í½µÜÊıÁ¿
-	local TuDiSupplyExp = Player:GetData("PRENTICSUPPLYEXP")		--»ñÈ¡µ±Ç°Í½µÜ¹±Ï×µÄ¾­ÑéÖµ
-	local ShanEExp = ShanEValue * (g_ShiDeTbl[MasterLevel][3])	--¼ÆËãÓëÉÆ¶ñÖµ¹Ò¹³¿ÉÒÔÁìÈ¡µÄ¾­ÑéÖµ
-	local TrueExp = ((TuDiSupplyExp < ShanEExp) and TuDiSupplyExp) or ShanEExp	--»ñÈ¡¶şÕß×îĞ¡Öµ	
+	local ShanEValue = Player:GetData("GOODBADVALUE")						--è·å–å–„æ¶å€¼	
+	local TuDiCount = Player:GetData("PRENTICCOUNT")						--è·å–å¾’å¼Ÿæ•°é‡
+	local TuDiSupplyExp = Player:GetData("PRENTICSUPPLYEXP")		--è·å–å½“å‰å¾’å¼Ÿè´¡çŒ®çš„ç»éªŒå€¼
+	local ShanEExp = ShanEValue * (g_ShiDeTbl[MasterLevel][3])	--è®¡ç®—ä¸å–„æ¶å€¼æŒ‚é’©å¯ä»¥é¢†å–çš„ç»éªŒå€¼
+	local TrueExp = ((TuDiSupplyExp < ShanEExp) and TuDiSupplyExp) or ShanEExp	--è·å–äºŒè€…æœ€å°å€¼	
 	
-	local str =	"Ê¦¸µµÈ¼¶£º"..g_ShiDeTbl[MasterLevel][1].."µÜ×ÓÊıÄ¿£º"..TuDiCount.."/"..g_ShiDeTbl[MasterLevel][2].."¿É¶Ò»»¾­Ñé£º"..TrueExp
+	local str =	"å¸ˆå‚…ç­‰çº§ï¼š"..g_ShiDeTbl[MasterLevel][1].."å¼Ÿå­æ•°ç›®ï¼š"..TuDiCount.."/"..g_ShiDeTbl[MasterLevel][2].."å¯å…‘æ¢ç»éªŒï¼š"..TrueExp
 	
 	OtherInfo_1:SetToolTip(str)
 end

@@ -1,59 +1,59 @@
---ÎŞÁ¿É½ ÄêÊŞBOSSÈºË¢ĞÂ½Å±¾
+--æ— é‡å±± å¹´å…½BOSSç¾¤åˆ·æ–°è„šæœ¬
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x050050_g_ScriptId	= 050050
 
---ÎŞµĞbuffid£¬ÏÖÈ±ÉÙ?????
+--æ— æ•Œbuffidï¼Œç°ç¼ºå°‘?????
 x050050_g_Wudibuff = 10489
 
---Ë¢ĞÂ·½Ê½Îª:
---¼¤»î´Ë½Å±¾Ê±¶¨µãË¢³ö10¸öBOSS....
+--åˆ·æ–°æ–¹å¼ä¸º:
+--æ¿€æ´»æ­¤è„šæœ¬æ—¶å®šç‚¹åˆ·å‡º10ä¸ªBOSS....
 
---ĞèÒªË¢³öµÄBOSSµÄÊı¾İ±í....
---BOSSµÄMonsterID²»ÄÜÖØ¸´....ÔÚ³¡¾°ÖĞÍ¬Ò»Ê±¿ÌÍ¬Ò»¸öMonsterIDµÄ¹ÖÖ»ÄÜ´æÔÚÒ»¸ö....ÓĞÁË¾Í²»Ë¢ÁË....
+--éœ€è¦åˆ·å‡ºçš„BOSSçš„æ•°æ®è¡¨....
+--BOSSçš„MonsterIDä¸èƒ½é‡å¤....åœ¨åœºæ™¯ä¸­åŒä¸€æ—¶åˆ»åŒä¸€ä¸ªMonsterIDçš„æ€ªåªèƒ½å­˜åœ¨ä¸€ä¸ª....æœ‰äº†å°±ä¸åˆ·äº†....
 x050050_g_BossData = {
 
-	-- ID						BOSSµÄ monster id
-	-- PosX					×ø±ê
-	-- PosY					×ø±ê
-	-- BaseAI				BOSSµÄBaseAI....
-	-- ExtAIScript	BOSSµÄÀ©Õ¹AI....
-	-- ScriptID			BOSSµÄ½Å±¾ID....
-	-- NeedCreate		¶¼Ìî1....
+	-- ID						BOSSçš„ monster id
+	-- PosX					åæ ‡
+	-- PosY					åæ ‡
+	-- BaseAI				BOSSçš„BaseAI....
+	-- ExtAIScript	BOSSçš„æ‰©å±•AI....
+	-- ScriptID			BOSSçš„è„šæœ¬ID....
+	-- NeedCreate		éƒ½å¡«1....
 
 	{ ID=11355, PosX=154,  PosY=53, BaseAI=0, ExtAIScript=260, ScriptID=050051, NeedCreate=1 },
 }
 
---»î¶¯Ê±¼ä
-x050050_g_StartDayTime = 8030   --»î¶¯½áÊøÊ±¼ä 2008-1-31
-x050050_g_EndDayTime = 8044   --»î¶¯½áÊøÊ±¼ä 2008-2-14
+--æ´»åŠ¨æ—¶é—´
+x050050_g_StartDayTime = 8030   --æ´»åŠ¨ç»“æŸæ—¶é—´ 2008-1-31
+x050050_g_EndDayTime = 8044   --æ´»åŠ¨ç»“æŸæ—¶é—´ 2008-2-14
 
 --**********************************
---½Å±¾Èë¿Úº¯Êı
+--è„šæœ¬å…¥å£å‡½æ•°
 --**********************************
 function x050050_OnDefaultEvent( sceneId, actId, iNoticeType, param2, param3, param4, param5 )
-	--¼ì²éÊ±¼ä
+	--æ£€æŸ¥æ—¶é—´
 	local isTime = x050050_CheckRightTime()
 	if 1 ~= isTime then
 		return
 	end
 	
-	--¿ªÆô»î¶¯....
+	--å¼€å¯æ´»åŠ¨....
 	StartOneActivity( sceneId, actId, 180*1000, iNoticeType )
 
-	--BOSSÊı¾İ±íÎª¿Õ¾Í²»Ë¢BOSS....
+	--BOSSæ•°æ®è¡¨ä¸ºç©ºå°±ä¸åˆ·BOSS....
 	if getn(x050050_g_BossData) < 1 then
 		return
 	end
 
 	CallScriptFunction( 050053, "ClearDromItemFlag", sceneId)
 
-	--ÖØÖÃBossÖØ½¨×´Ì¬....
+	--é‡ç½®Bossé‡å»ºçŠ¶æ€....
 	for _, Data in x050050_g_BossData do
 		Data.NeedCreate = 1
 	end
 
-	--±éÀú³¡¾°ÖĞËùÓĞµÄ¹Ö....¸üĞÂBOSSÖØ½¨×´Ì¬....
+	--éå†åœºæ™¯ä¸­æ‰€æœ‰çš„æ€ª....æ›´æ–°BOSSé‡å»ºçŠ¶æ€....
 	local nMonsterNum = GetMonsterCount(sceneId)
 	for i=0, nMonsterNum-1 do
 		local MonsterId = GetMonsterObjID(sceneId,i)
@@ -61,7 +61,7 @@ function x050050_OnDefaultEvent( sceneId, actId, iNoticeType, param2, param3, pa
 		x050050_CurSceneHaveMonster( sceneId, MosDataID )
 	end
 
-	--ÖØ½¨ĞèÒªÖØ½¨µÄBOSS....
+	--é‡å»ºéœ€è¦é‡å»ºçš„BOSS....
 	for _, BossData in x050050_g_BossData do
 		if BossData.NeedCreate == 1 then
 			local npcobjid = LuaFnCreateMonster(sceneId, BossData.ID, BossData.PosX, BossData.PosY, BossData.BaseAI, BossData.ExtAIScript, BossData.ScriptID )
@@ -72,11 +72,11 @@ function x050050_OnDefaultEvent( sceneId, actId, iNoticeType, param2, param3, pa
 end
 
 --**********************************
---ĞÄÌøº¯Êı
+--å¿ƒè·³å‡½æ•°
 --**********************************
 function x050050_OnTimer( sceneId, actId, uTime )
 
-	--¼ì²â»î¶¯ÊÇ·ñ¹ıÆÚ
+	--æ£€æµ‹æ´»åŠ¨æ˜¯å¦è¿‡æœŸ
 	if CheckActiviyValidity( sceneId, actId ) == 0 then
 		StopOneActivity( sceneId, actId )
 	end
@@ -84,7 +84,7 @@ function x050050_OnTimer( sceneId, actId, uTime )
 end
 
 --**********************************
---ÓÃÓÚ¸üĞÂÖØ½¨×´Ì¬....
+--ç”¨äºæ›´æ–°é‡å»ºçŠ¶æ€....
 --**********************************
 function x050050_CurSceneHaveMonster( sceneId, DataID )
 
@@ -98,7 +98,7 @@ function x050050_CurSceneHaveMonster( sceneId, DataID )
 end
 
 --**********************************
---¼ì²â»î¶¯ÊÇ·ñÒÑ½áÊø
+--æ£€æµ‹æ´»åŠ¨æ˜¯å¦å·²ç»“æŸ
 --**********************************
 function x050050_CheckRightTime()
 

@@ -1,17 +1,17 @@
---Ã´∫˛NPC
---‘Ï∑¥∂Ò‘Ù
---∆’Õ®
+--Â§™ÊπñNPC
+--ÈÄ†ÂèçÊÅ∂Ë¥º
+--ÊôÆÈÄö
 
---Ω≈±æ∫≈
+--ËÑöÊú¨Âè∑
 x050016_g_ScriptId	= 050016
 
---À˘”µ”–µƒ ¬º˛ID¡–±Ì
+--ÊâÄÊã•ÊúâÁöÑ‰∫ã‰ª∂IDÂàóË°®
 x050016_g_EventList	= { 050013 }
---Ω”»°»ŒŒÒµƒ◊ÓµÕµ»º∂
+--Êé•Âèñ‰ªªÂä°ÁöÑÊúÄ‰ΩéÁ≠âÁ∫ß
 x050016_g_minLevel			= 20
 
 x050016_g_scenePosInfoList = {
-	{sceneId=18, sceneName="—„ƒœ", minL=30, maxL=45,  posList={
+	{sceneId=18, sceneName="ÈõÅÂçó", minL=30, maxL=45,  posList={
 																						{x=49, z=49, r=10},{x=70, z=50, r=10},{x=50, z=70, r=10},{x=47, z=89, r=10},
 																						{x=54, z=110, r=10},{x=40, z=130, r=10},{x=42, z=159, r=10},{x=70, z=119, r=10},
 																						{x=70, z=140, r=10},{x=85, z=171, r=10},{x=90, z=229, r=10},{x=79, z=249, r=10},
@@ -24,7 +24,7 @@ x050016_g_scenePosInfoList = {
 																						{x=205, z=47, r=10},{x=149, z=48, r=10},{x=170, z=80, r=10},{x=192, z=132, r=10},
 																					}
 	},
-	{sceneId=6, sceneName="Œﬁ¡ø…Ω", minL=30, maxL=45,  posList={
+	{sceneId=6, sceneName="Êó†ÈáèÂ±±", minL=30, maxL=45,  posList={
 																						{x=44, z=77, r=10},{x=50, z=110, r=10},{x=50, z=130, r=10},{x=50, z=150, r=10},
 																						{x=60, z=170, r=10},{x=60, z=190, r=10},{x=50, z=210, r=10},{x=50, z=230, r=10},
 																						{x=50, z=250, r=10},{x=50, z=270, r=10},{x=70, z=270, r=10},{x=70, z=250, r=10},
@@ -40,7 +40,7 @@ x050016_g_scenePosInfoList = {
 																						{x=170, z=50, r=10},{x=189, z=59, r=10},{x=260, z=80, r=10},{x=126, z=209, r=10},
 																						}
 	},
-  {sceneId=7, sceneName="Ω£∏Û", minL=30, maxL=45,  posList={
+  {sceneId=7, sceneName="ÂâëÈòÅ", minL=30, maxL=45,  posList={
 																					  {x=47, z=272, r=10},{x=89, z=269, r=10},{x=69, z=250, r=10},{x=50, z=240, r=10},
 																					  {x=50, z=199, r=10},{x=48, z=179, r=10},{x=50, z=150, r=10},{x=50, z=130, r=10},
 																					  {x=60, z=130, r=10},{x=50, z=50, r=10},{x=90, z=50, r=10},{x=150, z=70, r=10},
@@ -57,7 +57,7 @@ x050016_g_scenePosInfoList = {
 																						}
 	},
 	
-	{sceneId=19, sceneName="—„±±", minL=46, maxL=60,  posList={
+	{sceneId=19, sceneName="ÈõÅÂåó", minL=46, maxL=60,  posList={
 																						{x=50, z=70, r=10},{x=50, z=90, r=10},{x=50, z=110, r=10},{x=50, z=130, r=10},
 																						{x=50, z=150, r=10},{x=50, z=170, r=10},{x=50, z=190, r=10},{x=46, z=208, r=10},
 																						{x=120, z=229, r=10},{x=160, z=240, r=10},{x=152, z=253, r=10},{x=160, z=255, r=10},
@@ -78,7 +78,7 @@ x050016_g_scenePosInfoList = {
 																						{x=100, z=190, r=10},{x=110, z=220, r=10},
 																					}
 	},
-	{sceneId=20, sceneName="≤›‘≠", minL=61, maxL=75,  posList={
+	{sceneId=20, sceneName="ËçâÂéü", minL=61, maxL=75,  posList={
 																						{x=50, z=50, r=10},{x=70, z=50, r=10},{x=80, z=50, r=10},{x=120, z=50, r=10},
 																						{x=120, z=70, r=10},{x=130, z=60, r=10},{x=130, z=70, r=10},{x=110, z=70, r=10},
 																						{x=110, z=90, r=10},{x=100, z=90, r=10},{x=130, z=90, r=10},{x=130, z=110, r=10},
@@ -109,7 +109,7 @@ x050016_g_scenePosInfoList = {
 																						{x=260, z=220, r=10},{x=260, z=200, r=10},{x=280, z=220, r=10},{x=280, z=230, r=10},
 																					}
 	},
-	{sceneId=21, sceneName="¡…Œ˜", minL=76, maxL=90,  posList={
+	{sceneId=21, sceneName="ËæΩË•ø", minL=76, maxL=90,  posList={
 																						{x=60, z=50, r=10},{x=50, z=70, r=10},{x=50, z=90, r=10},{x=50, z=110, r=10},
 																						{x=60, z=120, r=10},{x=60, z=140, r=10},{x=50, z=160, r=10},{x=50, z=180, r=10},
 																						{x=50, z=190, r=10},{x=70, z=190, r=10},{x=70, z=170, r=10},{x=70, z=150, r=10},
@@ -141,7 +141,7 @@ x050016_g_scenePosInfoList = {
 																						{x=260, z=260, r=10},{x=250, z=270, r=10},{x=270, z=210, x=10},
 																					}
 	},
-	{sceneId=22, sceneName="≥§∞◊…Ω", minL=91, maxL=100,posList={
+	{sceneId=22, sceneName="ÈïøÁôΩÂ±±", minL=91, maxL=100,posList={
 																						{x=50, z=50, r=10},{x=48, z=69, r=10},{x=43, z=79, r=6},{x=43, z=90, r=6},
 																						{x=68, z=104, r=7},{x=44, z=128, r=6},{x=50, z=170, r=10},{x=50, z=190, r=10},
 																						{x=50, z=210, r=10},{x=50, z=220, r=10},{x=70, z=210, r=10},{x=70, z=190, r=10},
@@ -159,7 +159,7 @@ x050016_g_scenePosInfoList = {
 																						{x=45, z=70, r=10},
 																					}
 	},
-	{sceneId=23, sceneName="ª∆¡˙∏Æ", minL=100, maxL=105, posList={
+	{sceneId=23, sceneName="ÈªÑÈæôÂ∫ú", minL=100, maxL=105, posList={
 																						{x=40, z=70, r=10},{x=40, z=80, r=10},{x=60, z=70, r=10},{x=80, z=70, r=10},
 																						{x=80, z=50, r=10},{x=110, z=70, r=10},{x=120, z=80, r=10},{x=120, z=90, r=10},
 																						{x=73, z=80, r=10},{x=50, z=130, r=10},{x=70, z=130, r=10},{x=70, z=150, r=10},
@@ -183,7 +183,7 @@ x050016_g_scenePosInfoList = {
 																						{x=150, z=140, r=10},{x=160, z=160, r=10},{x=41, z=269, r=10},
 																					}
 	},
-	{sceneId=24, sceneName="∂˝∫£", minL=30, maxL=40,	posList={
+	{sceneId=24, sceneName="Ê¥±Êµ∑", minL=30, maxL=40,	posList={
 																						{x=60, z=70, r=10},{x=60, z=90, r=10},{x=60, z=110, r=10},{x=45, z=95, r=10},
 																						{x=60, z=130, r=10},{x=60, z=150, r=10},{x=50, z=170, r=10},{x=60, z=170, r=10},
 																						{x=40, z=190, r=10},{x=50, z=190, r=10},{x=50, z=260, r=10},{x=44, z=277, r=10},
@@ -213,7 +213,7 @@ x050016_g_scenePosInfoList = {
 																						{x=250, z=220, r=10},{x=260, z=230, r=10},
 																					}
 	},
-	{sceneId=25, sceneName="≤‘…Ω", minL=41, maxL=55,posList={
+	{sceneId=25, sceneName="ËãçÂ±±", minL=41, maxL=55,posList={
 																						{x=50, z=60, r=10},{x=50, z=80, r=10},{x=50, z=100, r=10},{x=50, z=120, r=10},
 																						{x=40, z=160, r=10},{x=40, z=180, r=10},{x=40, z=230, r=10},{x=40, z=250, r=10},
 																						{x=40, z=270, r=10},{x=60, z=270, r=10},{x=60, z=250, r=10},{x=60, z=230, r=10},
@@ -236,7 +236,7 @@ x050016_g_scenePosInfoList = {
 																						{x=90, z=134, r=5},{x=120, z=51, r=10},{x=150, z=80, r=10},{x=240, z=260, r=10},
 																					}
 	},
-	{sceneId=26, sceneName=" Ø¡÷", minL=56, maxL=70,posList={
+	{sceneId=26, sceneName="Áü≥Êûó", minL=56, maxL=70,posList={
 																						{x=50, z=50, r=7},{x=50, z=100, r=7},{x=45, z=125, r=5},{x=45, z=155, r=6},
 																						{x=60, z=199, r=10},{x=60, z=240, r=10},{x=60, z=270, r=10},{x=43, z=272, r=5},
 																						{x=90, z=270, r=10},{x=105, z=244, r=5},{x=130, z=240, r=5},{x=150, z=270, r=10},
@@ -253,7 +253,7 @@ x050016_g_scenePosInfoList = {
 																						{x=50, z=171, r=5},{x=190, z=128, r=5},{x=216, z=150, r=7},{x=202, z=48, r=5},
 																					}
 	},
-	{sceneId=27, sceneName="”Òœ™", minL=71, maxL=85,	posList={
+	{sceneId=27, sceneName="ÁéâÊ∫™", minL=71, maxL=85,	posList={
 																						{x=48, z=53, r=7},{x=80, z=50, r=8},{x=80, z=76, r=7},{x=48, z=101, r=7},
 																						{x=45, z=131, r=5},{x=46, z=160, r=5},{x=80, z=190, r=10},{x=58, z=200, r=6},
 																						{x=60, z=240, r=10},{x=39, z=246, r=10},{x=70, z=270, r=10},{x=70, z=270, r=10},
@@ -266,7 +266,7 @@ x050016_g_scenePosInfoList = {
 																						{x=235, z=118, r=5},{x=200, z=200, r=6},{x=185, z=217, r=5},{x=150, z=249, r=10},
 																					}
 	},
-	{sceneId=28, sceneName="ƒœ⁄Ø", minL=86, maxL=100,	posList={
+	{sceneId=28, sceneName="ÂçóËØè", minL=86, maxL=100,	posList={
 																						{x=89.97, z=49.88, r=10},{x=84.48, z=48.99, r=10},{x=82.22, z=60.08, r=10},
 																						{x=71.64, z=70.7, r=10},{x=159.65, z=120.50, r=10},{x=186.25, z=118.28, r=10},
 																						{x=195.76, z=107.61, r=10},{x=195.23, z=79.65, r=10},{x=160.14, z=130.37, r=10},
@@ -284,7 +284,7 @@ x050016_g_scenePosInfoList = {
 																						{x=150, z=260, r=10},{x=170, z=260, r=10},{x=190, z=260, r=10},
 																					}
 	},
-	{sceneId=29, sceneName="√ÁΩÆ", minL=96, maxL=100,	posList={
+	{sceneId=29, sceneName="ËãóÁñÜ", minL=96, maxL=100,	posList={
 																						{x=40, z=40, r=10},{x=60, z=40, r=10},{x=80, z=40, r=10},{x=100, z=40, r=10},
 																						{x=40, z=60, r=10},{x=60, z=60, r=10},{x=100, z=60, r=10},{x=170, z=50, r=10},
 																						{x=186, z=50, r=10},{x=150, z=70, r=10},{x=170, z=70, r=10},{x=190, z=70, r=10},
@@ -300,7 +300,7 @@ x050016_g_scenePosInfoList = {
 																						{x=140, z=210, r=10},{x=120, z=210, r=10},{x=130, z=220, r=10},{x=150, z=220, r=10},
 																					}
 	},
-	{sceneId=30, sceneName="Œ˜∫˛", minL=30, maxL=35,	posList={
+	{sceneId=30, sceneName="Ë•øÊπñ", minL=30, maxL=35,	posList={
 																						{x=68, z=50, r=10},{x=70, z=70, r=10},{x=90, z=70, r=10},{x=60, z=90, r=10},
 																						{x=80, z=90, r=10},{x=100, z=90, r=10},{x=155, z=58, r=10},{x=110, z=100, r=10},
 																						{x=120, z=110, r=10},{x=120, z=130, r=10},{x=140, z=120, r=10},{x=160, z=120, r=10},
@@ -321,7 +321,7 @@ x050016_g_scenePosInfoList = {
 																						{x=110, z=200, r=10},{x=110, z=220, r=10},{x=120, z=230, r=10},{x=101, z=220, r=10},
 																					}
 	},
-	{sceneId=31, sceneName="¡˙»™", minL=36, maxL=50,	posList={
+	{sceneId=31, sceneName="ÈæôÊ≥â", minL=36, maxL=50,	posList={
 																						{x=63, z=40, r=10},{x=74.9, z=40.55, r=10},{x=50, z=60, r=10},{x=70, z=60, r=10},
 																						{x=90, z=60, r=10},{x=57, z=80, r=10},{x=75, z=80, r=10},{x=90, z=77, r=10},
 																						{x=60, z=100, r=10},{x=80, z=100, r=10},{x=50, z=130, r=10},{x=70, z=120, r=10},
@@ -352,7 +352,7 @@ x050016_g_scenePosInfoList = {
 																						{x=45, z=270, r=10},
 																					}
 	},
-	{sceneId=32, sceneName="Œ‰“ƒ", minL=51, maxL=65,	posList={
+	{sceneId=32, sceneName="Ê≠¶Â§∑", minL=51, maxL=65,	posList={
 																						{x=50, z=60, r=6},{x=50, z=80, r=10},{x=70, z=80, r=10},{x=60, z=100, r=10},
 																						{x=100, z=90, r=10},{x=110, z=70, r=10},{x=110, z=50, r=10},{x=125, z=55, r=5},
 																						{x=150, z=50, r=10},{x=190, z=50, r=5},{x=210, z=50, r=5},{x=160, z=80, r=10},
@@ -381,7 +381,7 @@ x050016_g_scenePosInfoList = {
 																						{x=56.36, z=220.77, r=5},
 																					}
 	},
-	{sceneId=33, sceneName="√∑¡Î", minL=66, maxL=80,	posList={
+	{sceneId=33, sceneName="Ê¢ÖÂ≤≠", minL=66, maxL=80,	posList={
 																						{x=110, z=40, r=10},{x=130, z=40, r=6},{x=150, z=40, r=5},{x=167.67, z=41.85, r=5},
 																						{x=50, z=60, r=10},{x=70, z=60, r=10},{x=90, z=60, r=10},{x=110, z=60, r=10},
 																						{x=130, z=60, r=10},{x=150, z=60, r=7},{x=40, z=80, r=7},{x=60, z=80, r=10},
@@ -412,7 +412,7 @@ x050016_g_scenePosInfoList = {
 																						{x=70, z=270, r=10},{x=90, z=280, r=10},{x=44, z=242, r=10},
 																					}
 	},
-	{sceneId=34, sceneName="ƒœ∫£", minL=81, maxL=95,	posList={
+	{sceneId=34, sceneName="ÂçóÊµ∑", minL=81, maxL=95,	posList={
 																						{x=50, z=40, r=10},{x=70, z=40, r=6},{x=90, z=40, r=6},{x=110, z=40, r=10},
 																						{x=130, z=40, r=10},{x=150, z=40, r=10},{x=160, z=60, r=10},{x=140, z=60, r=10},
 																						{x=120, z=60, r=10},{x=170, z=80, r=7},{x=150, z=80, r=7},{x=140, z=100, r=10},
@@ -438,7 +438,7 @@ x050016_g_scenePosInfoList = {
 																						{x=152, z=270, r=5},
 																					}
 	},
-	{sceneId=35, sceneName="«Ì÷›", minL=91, maxL=100,	posList={
+	{sceneId=35, sceneName="ÁêºÂ∑û", minL=91, maxL=100,	posList={
 																						{x=56, z=46, r=5},{x=90, z=45, r=10},{x=110, z=50, r=10},{x=110, z=60, r=6},
 																						{x=140, z=60, r=5},{x=170, z=50, r=10},{x=190, z=60, r=10},{x=174, z=63, r=10},
 																						{x=200, z=80, r=10},{x=220, z=50, r=7},{x=260, z=60, r=10},{x=240, z=60, r=10},
@@ -457,7 +457,7 @@ x050016_g_scenePosInfoList = {
 																						{x=130, z=82, r=10},{x=143, z=80, r=10},{x=165, z=100, r=5},
 																					}
 	},
-	{sceneId=8, sceneName="∂ÿªÕ", minL=20, maxL=25,	posList={
+	{sceneId=8, sceneName="Êï¶ÁÖå", minL=20, maxL=25,	posList={
 																						{x=60, z=50, r=10},{x=70, z=90, r=10},{x=50, z=110, r=10},{x=90, z=110, r=10},
 																						{x=90, z=130, r=10},{x=70, z=140, r=10},{x=90, z=150, r=10},{x=110, z=150, r=10},
 																						{x=110, z=170, r=10},{x=90, z=170, r=10},{x=120, z=180, r=10},{x=70, z=170, r=10},
@@ -473,7 +473,7 @@ x050016_g_scenePosInfoList = {
 																						{x=173, z=277, r=5},
 																					}
 	},
-	{sceneId=5, sceneName="æµ∫˛", minL=20, maxL=25,	posList={
+	{sceneId=5, sceneName="ÈïúÊπñ", minL=20, maxL=25,	posList={
 																						{x=76, z=46, r=6},{x=100, z=40, r=6},{x=142, z=47, r=5},{x=200, z=50, r=10},
 																						{x=200, z=60, r=10},{x=233, z=45, r=5},{x=250, z=47, r=8},{x=266, z=45, r=6},
 																						{x=278, z=77, r=5},{x=240, z=90, r=6},{x=250, z=100, r=10},{x=277, z=102, r=5},
@@ -490,7 +490,7 @@ x050016_g_scenePosInfoList = {
 																						{x=38, z=232, r=10},{x=72, z=258, r=4},{x=45, z=275, r=7},{x=63, z=277, r=5},
 																					}
 	},
-	{sceneId=3, sceneName="·‘…Ω", minL=20, maxL=30,	posList={
+	{sceneId=3, sceneName="Âµ©Â±±", minL=20, maxL=30,	posList={
 																						{x=50, z=50, r=10},{x=60, z=50, r=10},{x=50, z=60, r=10},{x=60, z=60, r=10},
 																						{x=50, z=70, r=10},{x=70, z=70, r=10},{x=90, z=70, r=10},{x=50, z=90, r=10},
 																						{x=70, z=90, r=10},{x=90, z=90, r=10},{x=110, z=90, r=10},{x=60, z=110, r=10},
@@ -514,7 +514,7 @@ x050016_g_scenePosInfoList = {
 																						{x=89, z=196, r=10},
 																					}
 	},
-	{sceneId=4, sceneName="Ã´∫˛", minL=20, maxL=30,	posList={
+	{sceneId=4, sceneName="Â§™Êπñ", minL=20, maxL=30,	posList={
 																						{x=107, z=55, r=6},{x=122, z=55, r=6},{x=130, z=70, r=7},{x=103, z=78, r=6},{x=160, z=50, r=10},
 																						{x=170, z=56, r=10},{x=220, z=60, r=8},{x=236, z=63, r=8},{x=275, z=73, r=6},{x=184, z=48, r=5},
 																						{x=197, z=46, r=5},{x=110, z=100, r=7},{x=130, z=100, r=10},{x=110, z=110, r=10},{x=130, z=110, r=10},
@@ -557,7 +557,7 @@ function x050016_GetValidIndex( PosList, IndexList )
         if  0 == bInList  then
             i = 50
         end
-        i = i + 1      --Œ™∑¿÷πÀ¿—≠ª∑,µ± i≥¨π˝50 ±,Ω´ÕÀ≥ˆ—≠ª∑
+        i = i + 1      --‰∏∫Èò≤Ê≠¢Ê≠ªÂæ™ÁéØ,ÂΩì iË∂ÖËøá50Êó∂,Â∞ÜÈÄÄÂá∫Âæ™ÁéØ
     end
     
     IndexList[ IndexListSize + 1 ] = Data
@@ -572,7 +572,7 @@ function x050016_CollectIndex( PosList, IndexList, IndexListSize )
     
 end
 
-function x050016_GenObj( sceneId, PosList )     --≤˙…˙‘Ù±¯NPC
+function x050016_GenObj( sceneId, PosList )     --‰∫ßÁîüË¥ºÂÖµNPC
     local PosIndex = {}
     local IndexList = {}
     
@@ -600,21 +600,21 @@ function x050016_GenObj( sceneId, PosList )     --≤˙…˙‘Ù±¯NPC
 end
 
 --**********************************
---–ƒÃ¯∫Ø ˝
+--ÂøÉË∑≥ÂáΩÊï∞
 --**********************************
 function x050016_OnTimer( sceneId, actId, uTime )
-	--ºÏ≤‚ªÓ∂Ø «∑Òπ˝∆⁄
+	--Ê£ÄÊµãÊ¥ªÂä®ÊòØÂê¶ËøáÊúü
 	if CheckActiviyValidity( sceneId, actId ) == 0 then
 		StopOneActivity( sceneId, actId )
 	end
 end
 
 --**********************************
--- ¬º˛Ωªª•»Îø⁄ 19-145-40 18-149-48
+--‰∫ã‰ª∂‰∫§‰∫íÂÖ•Âè£ 19-145-40 18-149-48
 --**********************************
 function x050016_OnDefaultEvent( sceneId, actId, param1, param2, param3, param4, param5 )
 
-            --≤Œ ˝Àµ√˜£∫≥°æ∞ID£¨ªÓ∂ØID£¨ ±º‰º‰∏Ù π´∏Ê
+            --ÂèÇÊï∞ËØ¥ÊòéÔºöÂú∫ÊôØIDÔºåÊ¥ªÂä®IDÔºåÊó∂Èó¥Èó¥Èöî ÂÖ¨Âëä
 	        StartOneActivity( sceneId, actId, floor(60*1000), param1 )
 	        
 			for i, v in x050016_g_scenePosInfoList do
@@ -625,7 +625,7 @@ function x050016_OnDefaultEvent( sceneId, actId, param1, param2, param3, param4,
 					--	while j<30 do
 							
 					--		local index = random(getn(v.posList))							
-					--		local strText = format( "µ±«∞sceneid: %d, %d-%d,%d", sceneId, v.sceneId, v.posList[index].x, v.posList[index].z)
+					--		local strText = format( "ÂΩìÂâçsceneid: %d, %d-%d,%d", sceneId, v.sceneId, v.posList[index].x, v.posList[index].z)
 							
 					--		local this_x,this_z = x050016_Random_Nativity(v.posList[index].x, v.posList[index].z, v.posList[index].r)
 					--		MonsterId = LuaFnCreateMonster( sceneId, 473, this_x, this_z, 3, -1, 50012 )
@@ -656,7 +656,7 @@ end
 
 
 --**********************************
--- ¬º˛¡–±Ì—°÷–“ªœÓ
+--‰∫ã‰ª∂ÂàóË°®ÈÄâ‰∏≠‰∏ÄÈ°π
 --**********************************
 function x050016_OnEventRequest( sceneId, selfId, targetId, eventId )
 
@@ -670,7 +670,7 @@ function x050016_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---Ω” ‹¥ÀNPCµƒ»ŒŒÒ
+--Êé•ÂèóÊ≠§NPCÁöÑ‰ªªÂä°
 --**********************************
 function x050016_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 
@@ -684,11 +684,11 @@ function x050016_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---æ‹æ¯¥ÀNPCµƒ»ŒŒÒ
+--ÊãíÁªùÊ≠§NPCÁöÑ‰ªªÂä°
 --**********************************
 function x050016_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 
-	--æ‹æ¯÷Æ∫Û£¨“™∑µªÿNPCµƒ ¬º˛¡–±Ì
+	--ÊãíÁªù‰πãÂêéÔºåË¶ÅËøîÂõûNPCÁöÑ‰∫ã‰ª∂ÂàóË°®
 	for i, findId in x050016_g_EventList do
 		if missionScriptId == findId then
 			x050016_UpdateEventList( sceneId, selfId, targetId )
@@ -699,7 +699,7 @@ function x050016_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---ºÃ–¯£®“—æ≠Ω”¡À»ŒŒÒ£©
+--ÁªßÁª≠ÔºàÂ∑≤ÁªèÊé•‰∫Ü‰ªªÂä°Ôºâ
 --**********************************
 function x050016_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 
@@ -713,7 +713,7 @@ function x050016_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---Ã·Ωª“—◊ˆÕÍµƒ»ŒŒÒ
+--Êèê‰∫§Â∑≤ÂÅöÂÆåÁöÑ‰ªªÂä°
 --**********************************
 function x050016_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, selectRadioId )
 
@@ -727,7 +727,7 @@ function x050016_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 end
 
 --**********************************
---À¿Õˆ ¬º˛
+--Ê≠ª‰∫°‰∫ã‰ª∂
 --**********************************
 function x050016_OnDie( sceneId, selfId, killerId )
 end

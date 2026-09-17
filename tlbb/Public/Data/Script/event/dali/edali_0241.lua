@@ -1,26 +1,26 @@
---ÃÅÅÉÖ¸Òı
+--é—¨æ´¾æŒ‡å¼•
 
 --MisDescBegin
---½Å±¾ºÅ
+--è„šæœ¬å·
 x210241_g_ScriptId	= 210241
 --MisDescEnd
 
---ÃÅÅÉĞÅÏ¢£ºÃÅÅÉÃû³Æ£¬ÌØÉ«ÃèÊö£¬NumText£¬½ÓÒıÈË×ø±ê£¬½ÓÒıÈËÃû³Æ
+--é—¨æ´¾ä¿¡æ¯ï¼šé—¨æ´¾åç§°ï¼Œç‰¹è‰²æè¿°ï¼ŒNumTextï¼Œæ¥å¼•äººåæ ‡ï¼Œæ¥å¼•äººåç§°
 x210241_g_MPInfo		=
 {
-	{ nam="ÉÙÁÖÅÉ", des="#{event_dali_mp_sl}", key=1020, x=187, z=122, npc="»ÛÒ×"			},
-	{ nam="Ã÷½Ì",   des="#{event_dali_mp_mj}", key=1021, x=130, z=121, npc="Ê¯±¦"			},
-	{ nam="Ø¤°ï",   des="#{event_dali_mp_gb}", key=1022, x=126, z=135, npc="¼òÄş"			},
-	{ nam="Îäµ±ÅÉ", des="#{event_dali_mp_wd}", key=1023, x=134, z=120, npc="º£·ç×Ó"		},
-	{ nam="¶ëáÒÅÉ", des="#{event_dali_mp_em}", key=1024, x=192, z=129, npc="Â·ÈıÄï"		},
-	{ nam="ĞÇËŞÅÉ", des="#{event_dali_mp_xx}", key=1025, x=134, z=120, npc="º£·ç×Ó"		},
-	{ nam="ÌìÁúÅÉ", des="#{event_dali_mp_tl}", key=1026, x=189, z=124, npc="ÆÆÌ°"			},
-	{ nam="ÌìÉ½ÅÉ", des="#{event_dali_mp_ts}", key=1027, x=131, z=124, npc="³ÌÇàËª"		},
-	{ nam="åĞÒ£ÅÉ", des="#{event_dali_mp_xy}", key=1028, x=188, z=133, npc="å£Ì¨×ÓÓğ"	},
+	{ nam="å°‘æ—æ´¾", des="#{event_dali_mp_sl}", key=1020, x=187, z=122, npc="æ…§æ˜“"			},
+	{ nam="æ˜æ•™",   des="#{event_dali_mp_mj}", key=1021, x=130, z=121, npc="çŸ³å®"			},
+	{ nam="ä¸å¸®",   des="#{event_dali_mp_gb}", key=1022, x=126, z=135, npc="ç®€å®"			},
+	{ nam="æ­¦å½“æ´¾", des="#{event_dali_mp_wd}", key=1023, x=134, z=120, npc="æµ·é£å­"		},
+	{ nam="å³¨åµ‹æ´¾", des="#{event_dali_mp_em}", key=1024, x=192, z=129, npc="è·¯ä¸‰å¨˜"		},
+	{ nam="æ˜Ÿå®¿æ´¾", des="#{event_dali_mp_xx}", key=1025, x=134, z=120, npc="æµ·é£å­"		},
+	{ nam="å¤©é¾™æ´¾", des="#{event_dali_mp_tl}", key=1026, x=189, z=124, npc="ç ´è´ª"			},
+	{ nam="å¤©å±±æ´¾", des="#{event_dali_mp_ts}", key=1027, x=131, z=124, npc="ç¨‹é’éœœ"		},
+	{ nam="é€é¥æ´¾", des="#{event_dali_mp_xy}", key=1028, x=188, z=133, npc="æ¾¹å°å­ç¾½"	},
 }
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x210241_OnDefaultEvent( sceneId, selfId, targetId )
   
@@ -49,66 +49,66 @@ function x210241_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x210241_OnEnumerate( sceneId, selfId, targetId )
 
 	if GetLevel( sceneId, selfId ) >= 10 and GetMenPai( sceneId, selfId ) == MP_WUMENPAI then
-		AddNumText( sceneId, x210241_g_ScriptId, "ÎÒÈçºÎ²ÅÄÜÈ¥¾Å´óÃÅÅÉ", 11, 1010 )
+		AddNumText( sceneId, x210241_g_ScriptId, "æˆ‘å¦‚ä½•æ‰èƒ½å»ä¹å¤§é—¨æ´¾", 11, 1010 )
 	end
 
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x210241_CheckAccept( sceneId, selfId )
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x210241_OnAccept( sceneId, selfId )
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x210241_OnAbandon( sceneId, selfId )
 end
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x210241_OnContinue( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x210241_CheckSubmit( sceneId, selfId )
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x210241_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 end
 
 --**********************************
---É±ËÀ¹ÖÎï»òÍæ¼Ò
+--æ€æ­»æ€ªç‰©æˆ–ç©å®¶
 --**********************************
 function x210241_OnKillObject( sceneId, selfId, objdataId ,objId )
 end
 
 --**********************************
---½øÈëÇøÓòÊÂ¼ş
+--è¿›å…¥åŒºåŸŸäº‹ä»¶
 --**********************************
 function x210241_OnEnterArea( sceneId, selfId, zoneId )
 end
 
 --**********************************
---µÀ¾ß¸Ä±ä
+--é“å…·æ”¹å˜
 --**********************************
 function x210241_OnItemChanged( sceneId, selfId, itemdataId )
 end

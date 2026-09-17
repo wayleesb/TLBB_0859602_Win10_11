@@ -1,5 +1,5 @@
 -- 402259
--- Ä¾ÈË¿şÀÜ
+-- æœ¨äººå‚€å„¡
 
 x402259_g_KillMonsCount_Qincheng = 20
 x402259_g_KillMonsCount_Qinjia 	 = 21
@@ -16,9 +16,9 @@ function x402259_OnDie( sceneId, selfId, killerId )
 	
 	local nEffectId = 10191
 	
-	LuaFnNpcChat(sceneId, selfId, 0, "ÎÒÒª±¬Õ¨À²£¡")
+	LuaFnNpcChat(sceneId, selfId, 0, "æˆ‘è¦çˆ†ç‚¸å•¦ï¼")
 
-	-- ²¥·ÅÒ»¸ö±¬Õ¨ÌØĞ§£¬ÔÚÄ¾ÈËµÄÎ»ÖÃ
+	-- æ’­æ”¾ä¸€ä¸ªçˆ†ç‚¸ç‰¹æ•ˆï¼Œåœ¨æœ¨äººçš„ä½ç½®
 	local x
 	local z
 	x,z = GetWorldPos(sceneId,selfId)
@@ -40,10 +40,10 @@ function x402259_OnDie( sceneId, selfId, killerId )
 		end
 	end
 	
-	-- Íæ¼ÒÒ²ÒªÊÜµ½Õâ¸öÉËº¦
+	-- ç©å®¶ä¹Ÿè¦å—åˆ°è¿™ä¸ªä¼¤å®³
 	local nHumanNum = LuaFnGetCopyScene_HumanCount(sceneId)
 	
-	-- Ã»ÓĞÈËµÄ³¡¾°£¬Ê²Ã´¶¼²»×ö
+	-- æ²¡æœ‰äººçš„åœºæ™¯ï¼Œä»€ä¹ˆéƒ½ä¸åš
 	if nHumanNum < 1 then
 		return
 	end

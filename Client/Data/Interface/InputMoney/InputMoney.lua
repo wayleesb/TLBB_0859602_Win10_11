@@ -17,7 +17,7 @@ local PS_TRANSFER				= 13;
 local SAFEBOX_GET_MONEY = 14;
 local SAFEBOX_SAVE_MONEY= 15;
 
---ĞŞ¸ÄÌ¯Î»ÎïÆ·¼Û¸ñĞèÒªµÄ
+--ä¿®æ”¹æ‘Šä½ç‰©å“ä»·æ ¼éœ€è¦çš„
 local nStallItemID = -1;
 local nStallItemIndex = -1;
 
@@ -50,102 +50,102 @@ function InputMoney_OnEvent(event)
 			
 			
 			g_nSaveOrGetMoney = GET_MONEY;
-			InputMoney_Title:SetText("#gFF0FA0È¡  Ç®");
-			InputMoney_Accept_Button:SetText("È·¶¨");
+			InputMoney_Title:SetText("#gFF0FA0å–  é’±");
+			InputMoney_Accept_Button:SetText("ç¡®å®š");
 			
 		elseif (arg0 == "save") then
 			this:TogleShow();
 			
 			g_nSaveOrGetMoney = SAVE_MONEY;
-			InputMoney_Title:SetText("#gFF0FA0´æ  Ç®");
-			InputMoney_Accept_Button:SetText("È·¶¨");
+			InputMoney_Title:SetText("#gFF0FA0å­˜  é’±");
+			InputMoney_Accept_Button:SetText("ç¡®å®š");
 			
 		elseif (arg0 == "exch") then
 			this:TogleShow();
 		
 			g_nSaveOrGetMoney = EXCHANGE_MONEY;
-			InputMoney_Title:SetText("#gFF0FA0ÊäÈë½»Ò×½ğÇ®");
-			InputMoney_Accept_Button:SetText("È·¶¨");
+			InputMoney_Title:SetText("#gFF0FA0è¾“å…¥äº¤æ˜“é‡‘é’±");
+			InputMoney_Accept_Button:SetText("ç¡®å®š");
 			
 		elseif (arg0 == "get_safebox") then
 			this:TogleShow();
 		
 			g_nSaveOrGetMoney = SAFEBOX_GET_MONEY;
-			InputMoney_Title:SetText("#gFF0FA0ÊäÈëÈ¡Ç®µÄÊıÁ¿");
-			InputMoney_Accept_Button:SetText("È·¶¨");
+			InputMoney_Title:SetText("#gFF0FA0è¾“å…¥å–é’±çš„æ•°é‡");
+			InputMoney_Accept_Button:SetText("ç¡®å®š");
 		
 		elseif (arg0 == "save_safebox") then
 			this:TogleShow();
 		
 			g_nSaveOrGetMoney = SAFEBOX_SAVE_MONEY;
-			InputMoney_Title:SetText("#gFF0FA0ÊäÈë´æÇ®µÄÊıÁ¿");
-			InputMoney_Accept_Button:SetText("È·¶¨");
+			InputMoney_Title:SetText("#gFF0FA0è¾“å…¥å­˜é’±çš„æ•°é‡");
+			InputMoney_Accept_Button:SetText("ç¡®å®š");
 		
 		elseif (arg0 == "price") then
 			this:Show();
 			
 			g_nSaveOrGetMoney = STALLSALE_PRICE;
-			InputMoney_Title:SetText("#gFF0FA0ÉÌÆ·±¨¼Û");
-			InputMoney_Accept_Button:SetText("ÉÏ¼Ü");
+			InputMoney_Title:SetText("#gFF0FA0å•†å“æŠ¥ä»·");
+			InputMoney_Accept_Button:SetText("ä¸Šæ¶");
 			
 		elseif (arg0 == "reprice") then
 			this:TogleShow();
 			
 			g_nSaveOrGetMoney = STALLSALE_REPRICE;
-			InputMoney_Title:SetText("#gFF0FA0ĞŞ¸Ä±¨¼Û");
-			InputMoney_Accept_Button:SetText("¸ü¸Ä");
+			InputMoney_Title:SetText("#gFF0FA0ä¿®æ”¹æŠ¥ä»·");
+			InputMoney_Accept_Button:SetText("æ›´æ”¹");
 			
-		--Íæ¼ÒÉÌµêÉÏ¼Ü(ÎïÆ·)
+		--ç©å®¶å•†åº—ä¸Šæ¶(ç‰©å“)
 		elseif (arg0 == "ps_upitem" ) then
 			this:Show();
 			g_nSaveOrGetMoney = PS_PRICE_ITEM;
-			InputMoney_Title:SetText("#gFF0FA0ÉÌÆ·¼Û¸ñ");
-			InputMoney_Accept_Button:SetText("ÉÏ¼Ü");
+			InputMoney_Title:SetText("#gFF0FA0å•†å“ä»·æ ¼");
+			InputMoney_Accept_Button:SetText("ä¸Šæ¶");
 			
 		elseif (arg0 == "ps_uppet" ) then
 			this:Show();
 			g_nSaveOrGetMoney = PS_PRICE_PET;
-			InputMoney_Title:SetText("#gFF0FA0ÕäÊŞ¼Û¸ñ");
-			InputMoney_Accept_Button:SetText("ÉÏ¼Ü");
+			InputMoney_Title:SetText("#gFF0FA0çå…½ä»·æ ¼");
+			InputMoney_Accept_Button:SetText("ä¸Šæ¶");
 		
---		--Íæ¼ÒÉÌµê³åÈë±¾½ğ
+--		--ç©å®¶å•†åº—å†²å…¥æœ¬é‡‘
 --		elseif (arg0 == "immitbase") then
 --			this:Show();
 --			g_nSaveOrGetMoney = PS_IMMITBASE;
---			InputMoney_Title:SetText("#gFF0FA0³äÈë±¾½ğ");
---			InputMoney_Accept_Button:SetText("È·¶¨");
+--			InputMoney_Title:SetText("#gFF0FA0å……å…¥æœ¬é‡‘");
+--			InputMoney_Accept_Button:SetText("ç¡®å®š");
 --		
---		--Íæ¼ÒÉÌµê³åÈë
+--		--ç©å®¶å•†åº—å†²å…¥
 --		elseif (arg0 == "immit") then
 --			this:Show();
 --			g_nSaveOrGetMoney = PS_IMMIT;
---			InputMoney_Title:SetText("#gFF0FA0³äÈë");
---			InputMoney_Accept_Button:SetText("È·¶¨");
+--			InputMoney_Title:SetText("#gFF0FA0å……å…¥");
+--			InputMoney_Accept_Button:SetText("ç¡®å®š");
 --		
---		--Íæ¼ÒÉÌµêÈ¡³ö
+--		--ç©å®¶å•†åº—å–å‡º
 --		elseif (arg0 == "draw") then
 --			this:Show();
 --			g_nSaveOrGetMoney = PS_DRAW;
---			InputMoney_Title:SetText("#gFF0FA0Ö§È¡");
---			InputMoney_Accept_Button:SetText("È·¶¨");
+--			InputMoney_Title:SetText("#gFF0FA0æ”¯å–");
+--			InputMoney_Accept_Button:SetText("ç¡®å®š");
 			
 		elseif (arg0 == "st_pet") then
 			this:Show();
 			g_nSaveOrGetMoney = STALL_PET_UP;
-			InputMoney_Title:SetText("#gFF0FA0ÕäÊŞ¼Û¸ñ");
-			InputMoney_Accept_Button:SetText("ÉÏ¼Ü");
+			InputMoney_Title:SetText("#gFF0FA0çå…½ä»·æ ¼");
+			InputMoney_Accept_Button:SetText("ä¸Šæ¶");
 		
 		elseif (arg0 == "petrepice") then
 			this:Show();
 			g_nSaveOrGetMoney = STALL_PRICE_PET;
-			InputMoney_Title:SetText("#gFF0FA0ÕäÊŞ¼Û¸ñ");
-			InputMoney_Accept_Button:SetText("È·¶¨");
+			InputMoney_Title:SetText("#gFF0FA0çå…½ä»·æ ¼");
+			InputMoney_Accept_Button:SetText("ç¡®å®š");
 			
 		elseif (arg0 == "transfershop") then
 			this:Show();
 			g_nSaveOrGetMoney = PS_TRANSFER;
-			InputMoney_Title:SetText("#gFF0FA0ÊäÈëÉÌµê¶¨¼Û");
-			InputMoney_Accept_Button:SetText("È·¶¨");
+			InputMoney_Title:SetText("#gFF0FA0è¾“å…¥å•†åº—å®šä»·");
+			InputMoney_Accept_Button:SetText("ç¡®å®š");
 			
 		end
 		
@@ -213,7 +213,7 @@ function InputMoney_OnEvent(event)
 		if( (this:IsVisible() == true) and (g_nSaveOrGetMoney ~= GET_MONEY) and (g_nSaveOrGetMoney ~= SAVE_MONEY) )  then 
 			InputMoney_Gold:SetProperty("DefaultEditBox", "True");
 			
-			--È·¶¨Õâ¸ö´°¿ÚµÄ·ÅÖÃÎ»ÖÃ
+			--ç¡®å®šè¿™ä¸ªçª—å£çš„æ”¾ç½®ä½ç½®
 			--local nPosX ;
 			--local nPosY ;
 			--nPosX,nPosY = GetCurMousePos();
@@ -231,7 +231,7 @@ end
 
 
 --===============================================
--- ÊäÈë½ğÇ®ºóÈ·¶¨
+-- è¾“å…¥é‡‘é’±åç¡®å®š
 --===============================================
 function InputMoneyAccept_Clicked()
 
@@ -239,46 +239,46 @@ function InputMoneyAccept_Clicked()
 	local szSilver = InputMoney_Silver:GetText();
 	local szCopperCoin = InputMoney_CopperCoin:GetText();
 	
-	--ÔÚ³ÌĞòÀïÍ·ÔÙ¼ì²âÊäÈë×Ö·ûµÄÓĞĞ§ĞÔºÍÊıÖµ
+	--åœ¨ç¨‹åºé‡Œå¤´å†æ£€æµ‹è¾“å…¥å­—ç¬¦çš„æœ‰æ•ˆæ€§å’Œæ•°å€¼
 	local bAvailability,nMoney = Bank:GetInputMoney(szGold,szSilver,szCopperCoin);
 	
-	--???Ê²Ã´Çé¿öÏÂÊ§°ÜĞèÒªÔÙ¶¨
+	--???ä»€ä¹ˆæƒ…å†µä¸‹å¤±è´¥éœ€è¦å†å®š
 	if(bAvailability == true) then
 		
 		if( g_nSaveOrGetMoney == SAVE_MONEY ) then
-			--Ö´ĞĞ´æÇ®²Ù×÷
+			--æ‰§è¡Œå­˜é’±æ“ä½œ
 			Bank:SaveMoneyToBank(nMoney);
 			this:Hide();
 			
 		elseif( g_nSaveOrGetMoney == GET_MONEY ) then
-			--Ö´ĞĞÈ¡Ç®²Ù×÷
+			--æ‰§è¡Œå–é’±æ“ä½œ
 			Bank:GetMoneyFromBank(nMoney);
 			this:Hide();
 			
 		elseif( g_nSaveOrGetMoney == EXCHANGE_MONEY ) then
-			--Ö´ĞĞExchangÖĞµÄ½ğÇ®µÄÊäÈë
+			--æ‰§è¡ŒExchangä¸­çš„é‡‘é’±çš„è¾“å…¥
 			Exchange:GetMoneyFromInput(nMoney);
 			this:Hide();
 			
 		elseif( g_nSaveOrGetMoney == SAFEBOX_GET_MONEY ) then
-			--Ö´ĞĞ±£ÏÕÏäÖĞµÄ½ğÇ®µÄÊäÈë
+			--æ‰§è¡Œä¿é™©ç®±ä¸­çš„é‡‘é’±çš„è¾“å…¥
 			SafeBox("realgetmoney", nMoney);
 			this:Hide();
 			
 		elseif( g_nSaveOrGetMoney == SAFEBOX_SAVE_MONEY ) then
-			--Ö´ĞĞ±£ÏÕÏäÖĞµÄ½ğÇ®µÄÊäÈë
+			--æ‰§è¡Œä¿é™©ç®±ä¸­çš„é‡‘é’±çš„è¾“å…¥
 			SafeBox("realsavemoney", nMoney);
 			this:Hide();
 			
 		elseif( g_nSaveOrGetMoney == STALLSALE_PRICE ) then
-			--Ö´ĞĞStallSaleÖĞµÄÉÌÆ·±ê¼Û(Ìá½»ÉÌÆ·¼Û¸ñ)
+			--æ‰§è¡ŒStallSaleä¸­çš„å•†å“æ ‡ä»·(æäº¤å•†å“ä»·æ ¼)
 			StallSale:ReferItemPrice(nMoney);
 			this:Hide();
 			
 		elseif( g_nSaveOrGetMoney == STALLSALE_REPRICE ) then
-			--Ö´ĞĞStallSaleÖĞµÄÉÌÆ·¸ü¸Ä¼Û¸ñ
+			--æ‰§è¡ŒStallSaleä¸­çš„å•†å“æ›´æ”¹ä»·æ ¼
 
-			--´ÓÈ«¾Ö±äÁ¿ÖĞÈ¡³öÊı¾İ
+			--ä»å…¨å±€å˜é‡ä¸­å–å‡ºæ•°æ®
 			nStallItemID		= GetGlobalInteger("StallSale_ItemID");
 			nStallItemIndex = GetGlobalInteger("StallSale_Item");
 
@@ -286,27 +286,27 @@ function InputMoneyAccept_Clicked()
 			this:Hide();
 			
 		elseif( g_nSaveOrGetMoney == PS_PRICE_ITEM ) then
-			--Ö´ĞĞÍæ¼ÒÉÌµêµÄ¼Û¸ñÊäÈë(ÎïÆ·)
+			--æ‰§è¡Œç©å®¶å•†åº—çš„ä»·æ ¼è¾“å…¥(ç‰©å“)
 			PlayerShop:UpStall("item",nMoney);
 			this:Hide();
 			
 --		elseif( g_nSaveOrGetMoney == PS_IMMITBASE ) then
---			--³äÈë±¾½ğ
+--			--å……å…¥æœ¬é‡‘
 --			PlayerShop:DealMoney("immitbase",nMoney);
 --			this:Hide();
 --		
 --		elseif( g_nSaveOrGetMoney == PS_IMMIT ) then
---			--³äÈë
+--			--å……å…¥
 --			PlayerShop:DealMoney("immit",nMoney);
 --			this:Hide();
 --		
 --		elseif( g_nSaveOrGetMoney == PS_DRAW ) then
---			--Ö§È¡
+--			--æ”¯å–
 --			PlayerShop:DealMoney("draw",nMoney);
 --			this:Hide();
 			
 		elseif( g_nSaveOrGetMoney == STALL_PET_UP ) then
-			--ÕäÊŞÉÏ¼Ü
+			--çå…½ä¸Šæ¶
 			StallSale:PetUpStall(nMoney);
 			this:Hide();
 			
@@ -315,18 +315,18 @@ function InputMoneyAccept_Clicked()
 			this:Hide();
 		
 		elseif( g_nSaveOrGetMoney == PS_PRICE_PET ) then
-			--Ö´ĞĞÍæ¼ÒÉÌµêµÄ¼Û¸ñÊäÈë(ÕäÊŞ)
+			--æ‰§è¡Œç©å®¶å•†åº—çš„ä»·æ ¼è¾“å…¥(çå…½)
 			PlayerShop:UpStall("pet",nMoney);
 			this:Hide();
 			
 		elseif( g_nSaveOrGetMoney == PS_TRANSFER )  then
-			--³ö¼ÛÅÌµê
+			--å‡ºä»·ç›˜åº—
 			-- add by zchw
 			if (tonumber(nMoney) > 100000000) then
 				InputMoney_Gold:SetText("");
 				InputMoney_Silver:SetText("");
 				InputMoney_CopperCoin:SetText("");
-				PushDebugMessage("ÅÌ³öÉÌµê¼Û¸ñ²»ÄÜ³¬¹ı10000½ğ£¬ÇëÖØĞÂÊäÈë");
+				PushDebugMessage("ç›˜å‡ºå•†åº—ä»·æ ¼ä¸èƒ½è¶…è¿‡10000é‡‘ï¼Œè¯·é‡æ–°è¾“å…¥");
 				return;
 			end
 			PlayerShop:Transfer("info", "sale", nMoney);
@@ -339,7 +339,7 @@ end
 
 
 --===============================================
--- È¡Ïû
+-- å–æ¶ˆ
 --===============================================
 function InputMoneyRefuse_Clicked()
 	StallSale:UnlockSelItem();
@@ -351,7 +351,7 @@ end
 
 
 --===============================================
--- ÊäÈë¸Ä±ä
+-- è¾“å…¥æ”¹å˜
 --===============================================
 function InputMoney_ChangeMoney()
 	

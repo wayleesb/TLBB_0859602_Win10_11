@@ -40,13 +40,13 @@ function Fangdao_DBUpdateLeftSafeTime(time)
 	    local iSec = math.mod( iTime, 60 )
 	    local strTime = "";
 	    if(iHor > 0)then
-		strTime = strTime..iHor.."Ð¡Ê±";
+		strTime = strTime..iHor.."å°æ—¶";
 	    end
 	    if(iMin > 0)then
-		strTime = strTime..iMin.."·ÖÖÓ";
+		strTime = strTime..iMin.."åˆ†é’Ÿ";
 	    end
 	    if(iSec > 0)then
-		strTime = strTime..iSec.."Ãë";
+		strTime = strTime..iSec.."ç§’";
 	    end
 	    Fangdao_CurrentTime:SetText("#{FDH_090112_06}#cFFFF00"..strTime);
 end
@@ -90,10 +90,10 @@ function Fangdao_InitDlg()
 	
 	local isSetMinorPwd = IsMinorPwdSetup();
 	if(tonumber(isSetMinorPwd) == 1) then
-		Fangdao_ErjimimaShezhi:SetText("ÒÑÉèÖÃ")
+		Fangdao_ErjimimaShezhi:SetText("å·²è®¾ç½®")
 		Fangdao_ErjimimaShezhi:Disable()
 	else
-		Fangdao_ErjimimaShezhi:SetText("Î´ÉèÖÃ")
+		Fangdao_ErjimimaShezhi:SetText("æœªè®¾ç½®")
 		Fangdao_ErjimimaShezhi:Enable()
 	end
 

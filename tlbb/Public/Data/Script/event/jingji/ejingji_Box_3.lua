@@ -1,18 +1,18 @@
--- 125024 ±¦Ïä
--- »ñÈ¡buffµÄ±¦Ïä
+-- 125024 å®ç®±
+-- è·å–buffçš„å®ç®±
 
 x125024_g_scriptId = 125024
 
 --**********************************
---ÌØÊâ½»»¥:Ìõ¼şÅĞ¶Ï
+--ç‰¹æ®Šäº¤äº’:æ¡ä»¶åˆ¤æ–­
 --**********************************
 function x125024_OnActivateConditionCheck( sceneId, selfId, activatorId )
-	-- ÏŞÖÆÉíÉÏµÄbuff
+	-- é™åˆ¶èº«ä¸Šçš„buff
 	local bOk = CallScriptFunction((125022), "IsCanOpenBox",sceneId,activatorId )
 
 	if bOk == 0  then
 	  BeginEvent(sceneId)
-	    AddText(sceneId,"ÄãÏÖÔÚ²»ÄÜ¿ªÆôÕâ¸ö±¦Ïä¡£");
+	    AddText(sceneId,"ä½ ç°åœ¨ä¸èƒ½å¼€å¯è¿™ä¸ªå®ç®±ã€‚");
 	  EndEvent(sceneId)
 	  DispatchMissionTips(sceneId,activatorId,selfId)
 		
@@ -20,7 +20,7 @@ function x125024_OnActivateConditionCheck( sceneId, selfId, activatorId )
 	
 	if GetUnitCampID(sceneId, activatorId, activatorId) < 10   then
     BeginEvent(sceneId)
-      AddText(sceneId,"ÄãÏÖÔÚµÄÕ½¶·ÕóÓª²»ÕıÈ·£¬²»ÄÜ¿ªÆô±¦Ïä¡£");
+      AddText(sceneId,"ä½ ç°åœ¨çš„æˆ˜æ–—é˜µè¥ä¸æ­£ç¡®ï¼Œä¸èƒ½å¼€å¯å®ç®±ã€‚");
     EndEvent(sceneId)
     DispatchMissionTips(sceneId,activatorId,selfId)
 		bOk = 0
@@ -30,34 +30,34 @@ function x125024_OnActivateConditionCheck( sceneId, selfId, activatorId )
 end
 
 --**********************************
---ÌØÊâ½»»¥:ÏûºÄºÍ¿Û³ı´¦Àí
+--ç‰¹æ®Šäº¤äº’:æ¶ˆè€—å’Œæ‰£é™¤å¤„ç†
 --**********************************
 function x125024_OnActivateDeplete( sceneId, selfId, activatorId )
 	return 1
 end
 
 --**********************************
---ÌØÊâ½»»¥:¾ÛÆøÀà³É¹¦ÉúĞ§´¦Àí
+--ç‰¹æ®Šäº¤äº’:èšæ°”ç±»æˆåŠŸç”Ÿæ•ˆå¤„ç†
 --**********************************
 function x125024_OnActivateEffectOnce( sceneId, selfId, activatorId )
 	
-	-- °´ÕÕÕâ¸öNpcµÄĞÕÃû¸øÍæ¼Ò+buff£¬
-	-- selfId == ±¦ÏäId
-	-- activatorId == ¿ªÆôÈËId
+	-- æŒ‰ç…§è¿™ä¸ªNpcçš„å§“åç»™ç©å®¶+buffï¼Œ
+	-- selfId == å®ç®±Id
+	-- activatorId == å¼€å¯äººId
 	
 	local x
 	local z
 	x,z = GetWorldPos(sceneId, selfId)
 	LuaFnDeleteMonster(sceneId, selfId)
 	
-	-- ¸ø¿ªÆô³É¹¦µÄÍæ¼ÒÒ»¸öµôÂä°ü
+	-- ç»™å¼€å¯æˆåŠŸçš„ç©å®¶ä¸€ä¸ªæ‰è½åŒ…
 	local nItemId = 40004434
 
 	local nBoxId = DropBoxEnterScene(	x,z,sceneId )
 	if nBoxId > -1  then
 		AddItemToBox(sceneId,nBoxId,QUALITY_CREATE_BY_BOSS,1,nItemId)
 
-		-- °ÑÕâ¸öµôÂä°ó¶¨¸øÖÆ¶¨Íæ¼Ò
+		-- æŠŠè¿™ä¸ªæ‰è½ç»‘å®šç»™åˆ¶å®šç©å®¶
 		SetItemBoxOwner(sceneId, nBoxId, LuaFnGetGUID(sceneId,activatorId))
 	end
 	
@@ -65,28 +65,28 @@ function x125024_OnActivateEffectOnce( sceneId, selfId, activatorId )
 end
 
 --**********************************
---ÌØÊâ½»»¥:Òıµ¼ÀàÃ¿Ê±¼ä¼ä¸ôÉúĞ§´¦Àí
+--ç‰¹æ®Šäº¤äº’:å¼•å¯¼ç±»æ¯æ—¶é—´é—´éš”ç”Ÿæ•ˆå¤„ç†
 --**********************************
 function x125024_OnActivateEffectEachTick( sceneId, selfId, activatorId )
 	return 1
 end
 
 --**********************************
---ÌØÊâ½»»¥:½»»¥¿ªÊ¼Ê±µÄÌØÊâ´¦Àí
+--ç‰¹æ®Šäº¤äº’:äº¤äº’å¼€å§‹æ—¶çš„ç‰¹æ®Šå¤„ç†
 --**********************************
 function x125024_OnActivateActionStart( sceneId, selfId, activatorId )
 	return 1
 end
 
 --**********************************
---ÌØÊâ½»»¥:½»»¥³·ÏûÊ±µÄÌØÊâ´¦Àí
+--ç‰¹æ®Šäº¤äº’:äº¤äº’æ’¤æ¶ˆæ—¶çš„ç‰¹æ®Šå¤„ç†
 --**********************************
 function x125024_OnActivateCancel( sceneId, selfId, activatorId )
 	return 0
 end
 
 --**********************************
---ÌØÊâ½»»¥:½»»¥ÖĞ¶ÏÊ±µÄÌØÊâ´¦Àí
+--ç‰¹æ®Šäº¤äº’:äº¤äº’ä¸­æ–­æ—¶çš„ç‰¹æ®Šå¤„ç†
 --**********************************
 function x125024_OnActivateInterrupt( sceneId, selfId, activatorId )
 	return 0

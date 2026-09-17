@@ -1,4 +1,4 @@
---ÁìCD-KEY¡¢²éÑ¯µãÊı¡¢¹ºÂòÔª±¦
+--é¢†CD-KEYã€æŸ¥è¯¢ç‚¹æ•°ã€è´­ä¹°å…ƒå®
 
 x888899_g_scriptId = PRIZE_SCRIPT_ID
 
@@ -26,74 +26,74 @@ x888899_g_prizeGems = {
 };
 
 --**********************************
--- ¼ì²é CDKey
+-- æ£€æŸ¥ CDKey
 --**********************************
 function x888899_AskCDKey( sceneId, selfId )
-	GetCharPrize( sceneId, selfId, 1, 980,0,0 )					--ÁìCD-KEY (980ÊÇCD-KEYÔÚBillingµÄÎïÆ·ÀàĞÍ)
+	GetCharPrize( sceneId, selfId, 1, 980,0,0 )					--é¢†CD-KEY (980æ˜¯CD-KEYåœ¨Billingçš„ç‰©å“ç±»å‹)
 end
 
 --**********************************
--- ¼ì²é ²Æ¸»¿¨
+-- æ£€æŸ¥ è´¢å¯Œå¡
 --**********************************
 function x888899_AskNewUserCard( sceneId, selfId, card, op)
-	NewUserCard( sceneId, selfId, card, op)									--Áì²Æ¸»¿¨/ÌåÓı¾º²Â¿¨ (cardÊÇ¿¨ºÅ×Ö·û´®)
+	NewUserCard( sceneId, selfId, card, op)									--é¢†è´¢å¯Œå¡/ä½“è‚²ç«çŒœå¡ (cardæ˜¯å¡å·å­—ç¬¦ä¸²)
 end
 
 --**********************************
--- ¹ºÂò Ôª±¦
+-- è´­ä¹° å…ƒå®
 --**********************************
 function x888899_AskYuanBao( sceneId, selfId, nYuanBao, nPoint )
-	GetCharPrize(sceneId,selfId,3,999,nYuanBao,nPoint);	--ÂònYuanBao¸ö¹²nPointµãµÄÔª±¦
+	GetCharPrize(sceneId,selfId,3,999,nYuanBao,nPoint);	--ä¹°nYuanBaoä¸ªå…±nPointç‚¹çš„å…ƒå®
 end
 
 --**********************************
--- ²éÑ¯ µãÊı
+-- æŸ¥è¯¢ ç‚¹æ•°
 --**********************************
 function x888899_AskPoint( sceneId, selfId )
-	GetCharPrize(sceneId,selfId,2,0,0,0);								--²éÑ¯ÈËÎïµãÊı
+	GetCharPrize(sceneId,selfId,2,0,0,0);								--æŸ¥è¯¢äººç‰©ç‚¹æ•°
 end
 
 --**********************************
--- ³é½±
+-- æŠ½å¥–
 --**********************************
 function x888899_AskPrize( sceneId, selfId )
-	GetCharPrize(sceneId,selfId,6,0,0,0);								--ÏÈ²éÑ¯ÈËÎï½±Æ·
+	GetCharPrize(sceneId,selfId,6,0,0,0);								--å…ˆæŸ¥è¯¢äººç‰©å¥–å“
 end
 
 --**********************************
--- ¼ì²é CDKey µÄ·µ»Ø»Øµ÷º¯Êı
--- ntype Çë²Î¿¼ enum PRIZE_TYPE_ENUM
+-- æ£€æŸ¥ CDKey çš„è¿”å›å›è°ƒå‡½æ•°
+-- ntype è¯·å‚è€ƒ enum PRIZE_TYPE_ENUM
 --**********************************
 function x888899_PrizeRet( sceneId, selfId, ntype, nserial, num )
---	ÁíÍâ£¬ÕâÀïÃ»ÓĞ targetId£¬²»ÖªµÀĞ´ -1 »á²»»áÓĞÎÊÌâ
+--	å¦å¤–ï¼Œè¿™é‡Œæ²¡æœ‰ targetIdï¼Œä¸çŸ¥é“å†™ -1 ä¼šä¸ä¼šæœ‰é—®é¢˜
 	local targetId = -1
 
 	--CD-KEY
 	if( 1 == ntype ) then
 		SetMissionFlag( sceneId, selfId, MF_GetAwardFlag, 1 )
-		x888899_NotifyFailBox( sceneId, selfId, targetId, "    ÄãÒÑ¾­³É¹¦¼¤»îÄãµÄÁì½±Ìõ¼ş£¬Äã¿ÉÒÔµ½ÎÒÕâÀïÀ´ÁìÈ¡½±ÀøÎïÆ·¡£" )
-	--²Æ¸»¿¨
+		x888899_NotifyFailBox( sceneId, selfId, targetId, "    ä½ å·²ç»æˆåŠŸæ¿€æ´»ä½ çš„é¢†å¥–æ¡ä»¶ï¼Œä½ å¯ä»¥åˆ°æˆ‘è¿™é‡Œæ¥é¢†å–å¥–åŠ±ç‰©å“ã€‚" )
+	--è´¢å¯Œå¡
 	elseif( 3 == ntype ) then
 		SetMissionFlag( sceneId, selfId, MF_ActiveNewUserCard, 1 )
-		x888899_NotifyFailBox( sceneId, selfId, targetId, "    ¹§Ï²£¡ÄãÒÑ¾­³É¹¦Æô¶¯²Æ¸»¿¨£¬µ½´ïÒ»¶¨µÈ¼¶Ö®ºó¿ÉÒÔµ½´óÀí¶¼´óË¬£¨157,164£©´¦ÁìÈ¡½±Àø¡£" )
-	--Ôùµã
+		x888899_NotifyFailBox( sceneId, selfId, targetId, "    æ­å–œï¼ä½ å·²ç»æˆåŠŸå¯åŠ¨è´¢å¯Œå¡ï¼Œåˆ°è¾¾ä¸€å®šç­‰çº§ä¹‹åå¯ä»¥åˆ°å¤§ç†éƒ½å¤§çˆ½ï¼ˆ157,164ï¼‰å¤„é¢†å–å¥–åŠ±ã€‚" )
+	--èµ ç‚¹
 	elseif( 4 == ntype ) then
 		ZengDian(sceneId,selfId,-1,1,nserial*num)
-	--ÎïÆ·
+	--ç‰©å“
 	elseif( 5 == ntype ) then
 		LuaFnBeginAddItem( sceneId )
 			LuaFnAddItem( sceneId, nserial, num)
 		local ret = LuaFnEndAddItem( sceneId, selfId )
 		if 1 == ret then
 			AddItemListToHuman(sceneId,selfId)
-			--ÉñµÑÒ»¸öÍæ¼ÒÖ»ÄÜ²Î¼ÓÒ»´Î»î¶¯
+			--ç¥ç¬›ä¸€ä¸ªç©å®¶åªèƒ½å‚åŠ ä¸€æ¬¡æ´»åŠ¨
 			if( nserial == 30309052 ) then
 				SetMissionFlag( sceneId, selfId, MF_ActiveWenZhouCard, 1 )
-				BroadMsgByChatPipe(sceneId, selfId, "@*;SrvMsg;DBD:¹§Ï²Äú³É¹¦ÁìÈ¡ÁË»î¶¯½±Àø£¬Çë²éÊÕ", 0);
+				BroadMsgByChatPipe(sceneId, selfId, "@*;SrvMsg;DBD:æ­å–œæ‚¨æˆåŠŸé¢†å–äº†æ´»åŠ¨å¥–åŠ±ï¼Œè¯·æŸ¥æ”¶", 0);
 			end
-			x888899_NotifyFailBox( sceneId, selfId, targetId, "ÎïÆ·»»È¡³É¹¦£¡¸ĞĞ»Äú¶Ô¡¶ÌìÁú°Ë²¿¡·µÄÖ§³Ö£¡" )
+			x888899_NotifyFailBox( sceneId, selfId, targetId, "ç‰©å“æ¢å–æˆåŠŸï¼æ„Ÿè°¢æ‚¨å¯¹ã€Šå¤©é¾™å…«éƒ¨ã€‹çš„æ”¯æŒï¼" )
 		end
-	--ÌåÓı¾º²Â¿¨
+	--ä½“è‚²ç«çŒœå¡
 	elseif( 6 == ntype ) then
 		local prizeItem = x888899_GetSportsPrize()
 		if prizeItem then
@@ -103,11 +103,11 @@ function x888899_PrizeRet( sceneId, selfId, ntype, nserial, num )
 			if 1 == ret then
 				AddItemListToHuman(sceneId,selfId)
 				SetMissionFlag( sceneId, selfId, MF_ActiveSportsCard, 1 )
-				--x888899_NotifyFailBox( sceneId, selfId, targetId, "    ¹§Ï²Äú³É¹¦ÁìÈ¡ÁË»î¶¯½±Àø£¬Çë²éÊÕ¡£" )
-				BroadMsgByChatPipe(sceneId, selfId, "@*;SrvMsg;DBD:¹§Ï²Äú³É¹¦ÁìÈ¡ÁË»î¶¯½±Àø£¬Çë²éÊÕ", 0);
+				--x888899_NotifyFailBox( sceneId, selfId, targetId, "    æ­å–œæ‚¨æˆåŠŸé¢†å–äº†æ´»åŠ¨å¥–åŠ±ï¼Œè¯·æŸ¥æ”¶ã€‚" )
+				BroadMsgByChatPipe(sceneId, selfId, "@*;SrvMsg;DBD:æ­å–œæ‚¨æˆåŠŸé¢†å–äº†æ´»åŠ¨å¥–åŠ±ï¼Œè¯·æŸ¥æ”¶", 0);
 			end
 		end
-	--Íø¾Û»î¶¯¿¨
+	--ç½‘èšæ´»åŠ¨å¡
 	elseif( 7 == ntype ) then
 		LuaFnBeginAddItem( sceneId )
 		LuaFnAddItem( sceneId, 30505108, 1 )
@@ -115,51 +115,51 @@ function x888899_PrizeRet( sceneId, selfId, ntype, nserial, num )
 		if 1 == ret then
 			AddItemListToHuman( sceneId, selfId )
 			SetMissionFlag( sceneId, selfId, MF_ActiveJuCard, 1 )
-			BroadMsgByChatPipe(sceneId, selfId, "@*;SrvMsg;DBD:¹§Ï²Äú³É¹¦ÁìÈ¡ÁË»î¶¯½±Àø£¬Çë²éÊÕ", 0);
+			BroadMsgByChatPipe(sceneId, selfId, "@*;SrvMsg;DBD:æ­å–œæ‚¨æˆåŠŸé¢†å–äº†æ´»åŠ¨å¥–åŠ±ï¼Œè¯·æŸ¥æ”¶", 0);
 		end
 		
 	elseif( 8 == ntype ) then	
 		SetMissionFlag( sceneId, selfId, MF_ActiveNewUserCard666, 1 )
-		x888899_NotifyFailBox( sceneId, selfId, targetId, "    ¹§Ï²£¡ÄãÒÑ¾­³É¹¦Æô¶¯³¬¼¶´óÁ¦¿¨£¬µ½´ïÒ»¶¨µÈ¼¶Ö®ºó¿ÉÒÔµ½´óÀí¶¼´óË¬£¨157,164£©´¦ÁìÈ¡½±Àø¡£" )
+		x888899_NotifyFailBox( sceneId, selfId, targetId, "    æ­å–œï¼ä½ å·²ç»æˆåŠŸå¯åŠ¨è¶…çº§å¤§åŠ›å¡ï¼Œåˆ°è¾¾ä¸€å®šç­‰çº§ä¹‹åå¯ä»¥åˆ°å¤§ç†éƒ½å¤§çˆ½ï¼ˆ157,164ï¼‰å¤„é¢†å–å¥–åŠ±ã€‚" )
 	end
 
 	return
 end
 
 --**********************************
--- ³é½±³É¹¦ºó¸øÍæ¼ÒÌáÊ¾ĞÅÏ¢
+-- æŠ½å¥–æˆåŠŸåç»™ç©å®¶æç¤ºä¿¡æ¯
 --**********************************
 function x888899_PrizeRetEnd( sceneId, selfId, retId )
 	if retId and retId == 15 then
-		x888899_NotifyFailBox( sceneId, selfId, -1, "    ¹§Ï²Äú³É¹¦ÁìÈ¡ÁË»î¶¯½±Àø£¬Çë²éÊÕ¡£" )
+		x888899_NotifyFailBox( sceneId, selfId, -1, "    æ­å–œæ‚¨æˆåŠŸé¢†å–äº†æ´»åŠ¨å¥–åŠ±ï¼Œè¯·æŸ¥æ”¶ã€‚" )
 	elseif( retId == 12 ) then
-	  x888899_NotifyFailBox( sceneId, selfId, -1, "    ¹§Ï²Äú³É¹¦ÁìÈ¡ÁË»î¶¯½±Àø£¬Çë²éÊÕ¡£" )
+	  x888899_NotifyFailBox( sceneId, selfId, -1, "    æ­å–œæ‚¨æˆåŠŸé¢†å–äº†æ´»åŠ¨å¥–åŠ±ï¼Œè¯·æŸ¥æ”¶ã€‚" )
 	end
 end
 
 --**********************************
--- ĞÂÊÖ¿¨»òÌåÓı³é½±¿¨¼ì²é
+-- æ–°æ‰‹å¡æˆ–ä½“è‚²æŠ½å¥–å¡æ£€æŸ¥
 --**********************************
 function x888899_OpenCard(sceneId,selfId,card)
 	if nil == card then return end
 	--PrintStr(card)
 	local targetId = -1
 	local firstbyte = strbyte(card)
-	--'k' ÌåÓı¿¨
+	--'k' ä½“è‚²å¡
 	if 107 == firstbyte then
 		if GetMissionFlag( sceneId, selfId, MF_ActiveSportsCard ) == 1 then
-			x888899_NotifyFailBox( sceneId, selfId, targetId, "    ÄãÒÑ¾­ÁìÈ¡¹ı»î¶¯½±Àø£¬²»ÄÜÖØ¸´ÁìÈ¡¡£" )
+			x888899_NotifyFailBox( sceneId, selfId, targetId, "    ä½ å·²ç»é¢†å–è¿‡æ´»åŠ¨å¥–åŠ±ï¼Œä¸èƒ½é‡å¤é¢†å–ã€‚" )
 			return
 		end
-	--'t' ĞÂÊÖ¿¨
+	--'t' æ–°æ‰‹å¡
 	elseif 116 == firstbyte or 115 == firstbyte then
 		if GetMissionFlag( sceneId, selfId, MF_ActiveNewUserCard ) == 1 then
-			x888899_NotifyFailBox( sceneId, selfId, targetId, "    ÄãÒÑ¾­¼¤»î¹ı²Æ¸»¿¨£¬ÎŞ·¨ÔÙ´Î¼¤»îÁìÈ¡Ìõ¼ş¡£" )
+			x888899_NotifyFailBox( sceneId, selfId, targetId, "    ä½ å·²ç»æ¿€æ´»è¿‡è´¢å¯Œå¡ï¼Œæ— æ³•å†æ¬¡æ¿€æ´»é¢†å–æ¡ä»¶ã€‚" )
 			return
 		end
 	elseif 99 == firstbyte then
 		if GetMissionFlag( sceneId, selfId, MF_ActiveNewUserCard666 ) == 1 then
-			x888899_NotifyFailBox( sceneId, selfId, targetId, "    ÄãÒÑ¾­Æô¶¯¹ı³¬¼¶´óÁ¦¿¨£¬ÎŞ·¨ÔÙ´ÎÆô¶¯ÁìÈ¡Ìõ¼ş¡£" )
+			x888899_NotifyFailBox( sceneId, selfId, targetId, "    ä½ å·²ç»å¯åŠ¨è¿‡è¶…çº§å¤§åŠ›å¡ï¼Œæ— æ³•å†æ¬¡å¯åŠ¨é¢†å–æ¡ä»¶ã€‚" )
 			return
 		end
 	end
@@ -172,7 +172,7 @@ function x888899_OpenCard(sceneId,selfId,card)
 	-----------------------------
 	--TT:46541 zchw	
 	if numcheck == nil then
-		x888899_NotifyFailBox( sceneId, selfId, targetId, "    ¿¨ºÅÊäÈë´íÎó£¡" )
+		x888899_NotifyFailBox( sceneId, selfId, targetId, "    å¡å·è¾“å…¥é”™è¯¯ï¼" )
 		return		
 	end
 	------------------------------
@@ -180,7 +180,7 @@ function x888899_OpenCard(sceneId,selfId,card)
 	if header == 113 or header == 81 then
 		if numcheck >= 20  and numcheck <= 1250 then
 			if GetLevel(sceneId, selfId) > 30 then
-				x888899_NotifyFailBox( sceneId, selfId, targetId, "    ÄúµÄµÈ¼¶¹ı¸ß£¬ÎŞ·¨Æô¶¯²Æ¸»¿¨£¡" )
+				x888899_NotifyFailBox( sceneId, selfId, targetId, "    æ‚¨çš„ç­‰çº§è¿‡é«˜ï¼Œæ— æ³•å¯åŠ¨è´¢å¯Œå¡ï¼" )
 				return
 			end
 		end
@@ -190,7 +190,7 @@ function x888899_OpenCard(sceneId,selfId,card)
 	if header == 109 or header == 77 then
 		if numcheck >= 0  and numcheck <= 0560 then
 			if GetLevel(sceneId, selfId) > 30 then
-				x888899_NotifyFailBox( sceneId, selfId, targetId, "    ÄúµÄµÈ¼¶¹ı¸ß£¬ÎŞ·¨Æô¶¯²Æ¸»¿¨£¡" )
+				x888899_NotifyFailBox( sceneId, selfId, targetId, "    æ‚¨çš„ç­‰çº§è¿‡é«˜ï¼Œæ— æ³•å¯åŠ¨è´¢å¯Œå¡ï¼" )
 				return
 			end
 		end
@@ -200,12 +200,12 @@ function x888899_OpenCard(sceneId,selfId,card)
 end
 
 --**********************************
--- ¹ºÂò Ôª±¦ µÄ·µ»Ø»Øµ÷º¯Êı
--- ntype Çë²Î¿¼ enum PRIZE_TYPE_ENUM
--- 1 ´ú±í OPT_YUANBAO_ADD Ôö¼ÓÔª±¦
+-- è´­ä¹° å…ƒå® çš„è¿”å›å›è°ƒå‡½æ•°
+-- ntype è¯·å‚è€ƒ enum PRIZE_TYPE_ENUM
+-- 1 ä»£è¡¨ OPT_YUANBAO_ADD å¢åŠ å…ƒå®
 --**********************************
 function x888899_BuyRet( sceneId, selfId, ntype, nYuanBao, nLeftPoint )
---	ÁíÍâ£¬ÕâÀïÃ»ÓĞ targetId£¬²»ÖªµÀĞ´ -1 »á²»»áÓĞÎÊÌâ
+--	å¦å¤–ï¼Œè¿™é‡Œæ²¡æœ‰ targetIdï¼Œä¸çŸ¥é“å†™ -1 ä¼šä¸ä¼šæœ‰é—®é¢˜
 	local targetId = -1
 
 	if( 2 == ntype ) then
@@ -213,19 +213,19 @@ function x888899_BuyRet( sceneId, selfId, ntype, nYuanBao, nLeftPoint )
 		BuyYuanBaoCount(sceneId,selfId,targetId,1,nYuanBao)
 		x888899_NotifyLeftPoint(sceneId,selfId,nLeftPoint)
 		
-		--¸ø¿Í»§¶ËÌáÊ¾ĞÅÏ¢
+		--ç»™å®¢æˆ·ç«¯æç¤ºä¿¡æ¯
 		local strText = ""
 		BeginEvent(sceneId)
-			strText = "Äú³É¹¦µÄ¶Ò»»ÁË"..tostring(nYuanBao).."µãÔª±¦¡£"
+			strText = "æ‚¨æˆåŠŸçš„å…‘æ¢äº†"..tostring(nYuanBao).."ç‚¹å…ƒå®ã€‚"
 			AddText(sceneId,strText)
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		
 		LuaFnMsg2Player( sceneId, selfId,strText,MSG2PLAYER_PARA)
 		
-		--´óÓÚµÈÓÚ1200Ôª±¦¸øÉñÃØ²ÊÍà
+		--å¤§äºç­‰äº1200å…ƒå®ç»™ç¥ç§˜å½©è¢œ
 		local curTime = GetHourTime()
-	--»î¶¯Ê±¼ä1ÔÂ21ÈÕ¡ª¡ª2ÔÂ26ÈÕ
+	--æ´»åŠ¨æ—¶é—´1æœˆ21æ—¥â€”â€”2æœˆ26æ—¥
 	--if (curTime>75100 and curTime<78750) then
 		if (nYuanBao and nYuanBao >=1200) then
 			local BagIndex = TryRecieveItem( sceneId, selfId, 30504085, QUALITY_MUST_BE_CHANGE )
@@ -237,13 +237,13 @@ function x888899_BuyRet( sceneId, selfId, ntype, nYuanBao, nLeftPoint )
 				LuaFnItemBind(sceneId, selfId,BagIndex)
 				
 				BeginEvent(sceneId);
-					AddText(sceneId, "¹§Ï²Äú»ñÔù¼ÎÄê»ª×ªµ°£¬Çë²éÊÕ¡£");
+					AddText(sceneId, "æ­å–œæ‚¨è·èµ å˜‰å¹´åè½¬è›‹ï¼Œè¯·æŸ¥æ”¶ã€‚");
 				EndEvent(sceneId);
 				DispatchMissionTips(sceneId, selfId);
 		end
 	--end	
 
-		--200+Ôª±¦¸ø3¼¶ºì±¦Ê¯-°ó¶¨
+		--200+å…ƒå®ç»™3çº§çº¢å®çŸ³-ç»‘å®š
 		
 		if nYuanBao and nYuanBao >= 200 then
 			local countPrize = GetMissionData(sceneId, selfId, MD_YUANBAO_PRIZE_GEM_COUNT);
@@ -258,7 +258,7 @@ function x888899_BuyRet( sceneId, selfId, ntype, nYuanBao, nLeftPoint )
 					SetMissionData(sceneId, selfId, MD_YUANBAO_PRIZE_GEM_COUNT, countPrize + 1);
 				
 				BeginEvent(sceneId);
-					AddText(sceneId, "¹§Ï²Äú»ñÔù±¦Ê¯Ò»¿Å£¬Çë²éÊÕ¡£");
+					AddText(sceneId, "æ­å–œæ‚¨è·èµ å®çŸ³ä¸€é¢—ï¼Œè¯·æŸ¥æ”¶ã€‚");
 				EndEvent(sceneId);
 				DispatchMissionTips(sceneId, selfId);
 			end
@@ -267,8 +267,8 @@ function x888899_BuyRet( sceneId, selfId, ntype, nYuanBao, nLeftPoint )
 	return	
 
 --		local randidx = random(100)
---		¶Ò»»Ôª±¦¸ø±¦Ê¯
--- 		Ö»ÓĞ50%µÄ¼¸ÂÊ»ñµÃ±¦Ê¯
+--		å…‘æ¢å…ƒå®ç»™å®çŸ³
+-- 		åªæœ‰50%çš„å‡ ç‡è·å¾—å®çŸ³
 --		if nYuanBao and nYuanBao >= 600 then
 --			local countPrize = GetMissionData(sceneId, selfId, MD_YUANBAO_PRIZE_GEM_COUNT);
 --			if countPrize and countPrize == 0 then
@@ -287,12 +287,12 @@ function x888899_BuyRet( sceneId, selfId, ntype, nYuanBao, nLeftPoint )
 --						
 --						LuaFnAddItemListToHuman(sceneId, selfId);
 --						BeginEvent(sceneId);
---							AddText(sceneId, "¹§Ï²Äú»ñÔù±¦Ê¯Ò»¿Å£¬Çë²éÊÕ¡£");
+--							AddText(sceneId, "æ­å–œæ‚¨è·èµ å®çŸ³ä¸€é¢—ï¼Œè¯·æŸ¥æ”¶ã€‚");
 --						EndEvent(sceneId);
 --						DispatchMissionTips(sceneId, selfId);
 --					else
 --						BeginEvent(sceneId);
---							AddText(sceneId, "¶Ô²»Æğ£¬ÄúµÄ±³°üÃ»ÓĞ×ã¹»¿Õ¼äÈİÄÉÔùËÍµÄ±¦Ê¯¡£");
+--							AddText(sceneId, "å¯¹ä¸èµ·ï¼Œæ‚¨çš„èƒŒåŒ…æ²¡æœ‰è¶³å¤Ÿç©ºé—´å®¹çº³èµ é€çš„å®çŸ³ã€‚");
 --						EndEvent(sceneId);
 --						DispatchMissionTips(sceneId, selfId);
 --					end
@@ -304,60 +304,60 @@ function x888899_BuyRet( sceneId, selfId, ntype, nYuanBao, nLeftPoint )
 end
 
 --**********************************
--- ²éÑ¯µãÊı µÄ·µ»Ø»Øµ÷º¯Êı
+-- æŸ¥è¯¢ç‚¹æ•° çš„è¿”å›å›è°ƒå‡½æ•°
 --**********************************
 function x888899_PointRet( sceneId, selfId, nLeftPoint )
 	x888899_NotifyLeftPoint(sceneId,selfId,nLeftPoint)
 end
 
 --**********************************
--- ¼ì²é½±Æ· ¿ªÊ¼µÄ»Øµ÷º¯Êı
+-- æ£€æŸ¥å¥–å“ å¼€å§‹çš„å›è°ƒå‡½æ•°
 --**********************************
 function x888899_CheckRetBegin(sceneId,selfId)
 	LuaFnBeginAddItem( sceneId )
 end
 --**********************************
--- ¼ì²é½±Æ· Ìí¼Ó¼ì²éÎïÆ·µÄ»Øµ÷º¯Êı
+-- æ£€æŸ¥å¥–å“ æ·»åŠ æ£€æŸ¥ç‰©å“çš„å›è°ƒå‡½æ•°
 --**********************************
 function x888899_CheckAddItem(sceneId,selfId,itemid,num)
 	LuaFnAddItem( sceneId, itemid, num)
 end
 
 --**********************************
--- ¼ì²é½±Æ· ½áÊøµÄ»Øµ÷º¯Êı
+-- æ£€æŸ¥å¥–å“ ç»“æŸçš„å›è°ƒå‡½æ•°
 --**********************************
 function x888899_CheckRetEnd(sceneId,selfId)
 	local ret = LuaFnEndAddItem( sceneId, selfId )
 	if 1 == ret then
-		--¼ì²é³É¹¦£¬¿ªÊ¼³é½±
-		x888899_NotifyFailBox( sceneId, selfId, -1, "    ¼ì²é³É¹¦£¬ÇëÉÔµÈ¡­¡­ÕıÔÚÁìÈ¡½±Æ·¡£" )
-		GetCharPrize(sceneId,selfId,4,0,0,0);		--²éÑ¯ÈËÎïÏÖÔÚÓµÓĞµÄ½±Æ·
+		--æ£€æŸ¥æˆåŠŸï¼Œå¼€å§‹æŠ½å¥–
+		x888899_NotifyFailBox( sceneId, selfId, -1, "    æ£€æŸ¥æˆåŠŸï¼Œè¯·ç¨ç­‰â€¦â€¦æ­£åœ¨é¢†å–å¥–å“ã€‚" )
+		GetCharPrize(sceneId,selfId,4,0,0,0);		--æŸ¥è¯¢äººç‰©ç°åœ¨æ‹¥æœ‰çš„å¥–å“
 	else
-		x888899_NotifyFailBox( sceneId, selfId, -1, "    ¶Ô²»Æğ£¬ÄúÃ»ÓĞ×ã¹»µÄÎïÆ·À¸¿Õ¼ä£¬ÇëÕûÀíºóÔÙÀ´ÁìÈ¡¡£" )
+		x888899_NotifyFailBox( sceneId, selfId, -1, "    å¯¹ä¸èµ·ï¼Œæ‚¨æ²¡æœ‰è¶³å¤Ÿçš„ç‰©å“æ ç©ºé—´ï¼Œè¯·æ•´ç†åå†æ¥é¢†å–ã€‚" )
 	end
 end
 
 --**********************************
--- ¿¨Æ¬¼ì²é½±Æ· ½áÊøµÄ»Øµ÷º¯Êı
+-- å¡ç‰‡æ£€æŸ¥å¥–å“ ç»“æŸçš„å›è°ƒå‡½æ•°
 --**********************************
 function x888899_CardCheckRetEnd(sceneId,selfId)
 	local ret = LuaFnEndAddItem( sceneId, selfId )
 	if 1 == ret then
-		--¼ì²é³É¹¦£¬¿ªÊ¼¿ª¿¨
-		x888899_NotifyFailBox( sceneId, selfId, -1, "    ¼ì²é³É¹¦£¬ÇëÉÔµÈ¡­¡­ÕıÔÚÁìÈ¡½±Æ·¡£" )
+		--æ£€æŸ¥æˆåŠŸï¼Œå¼€å§‹å¼€å¡
+		x888899_NotifyFailBox( sceneId, selfId, -1, "    æ£€æŸ¥æˆåŠŸï¼Œè¯·ç¨ç­‰â€¦â€¦æ­£åœ¨é¢†å–å¥–å“ã€‚" )
 		x888899_AskNewUserCard( sceneId, selfId, "MagicString", 1);
 	else
-		x888899_NotifyFailBox( sceneId, selfId, -1, "    ¶Ô²»Æğ£¬ÄúÃ»ÓĞ×ã¹»µÄÎïÆ·À¸¿Õ¼ä£¬ÇëÕûÀíºóÔÙÀ´ÁìÈ¡¡£" )
+		x888899_NotifyFailBox( sceneId, selfId, -1, "    å¯¹ä¸èµ·ï¼Œæ‚¨æ²¡æœ‰è¶³å¤Ÿçš„ç‰©å“æ ç©ºé—´ï¼Œè¯·æ•´ç†åå†æ¥é¢†å–ã€‚" )
 	end
 end
 --**********************************
--- ¿¨Æ¬¼ì²é½±Æ· ½áÊøµÄ»Øµ÷º¯Êı,¶ÔÌìÊ¹Àñ°ü·Å³ö×öÌØÊâÈÕÖ¾ By Vega 20090121
+-- å¡ç‰‡æ£€æŸ¥å¥–å“ ç»“æŸçš„å›è°ƒå‡½æ•°,å¯¹å¤©ä½¿ç¤¼åŒ…æ”¾å‡ºåšç‰¹æ®Šæ—¥å¿— By Vega 20090121
 --**********************************
 function x888899_CardCheckRetEndTSLB(sceneId,selfId)
 	local ret = LuaFnEndAddItem( sceneId, selfId )
 	if 1 == ret then
-		--¼ì²é³É¹¦£¬¿ªÊ¼¿ª¿¨
-		x888899_NotifyFailBox( sceneId, selfId, -1, "    ¼ì²é³É¹¦£¬ÇëÉÔµÈ¡­¡­ÕıÔÚÁìÈ¡½±Æ·¡£" )
+		--æ£€æŸ¥æˆåŠŸï¼Œå¼€å§‹å¼€å¡
+		x888899_NotifyFailBox( sceneId, selfId, -1, "    æ£€æŸ¥æˆåŠŸï¼Œè¯·ç¨ç­‰â€¦â€¦æ­£åœ¨é¢†å–å¥–å“ã€‚" )
 		x888899_AskNewUserCard( sceneId, selfId, "MagicString", 1);
 
 		local guid = LuaFnObjId2Guid(sceneId, selfId);
@@ -367,64 +367,64 @@ function x888899_CardCheckRetEndTSLB(sceneId,selfId)
 			ScriptGlobal_AuditGeneralLog(LUAAUDIT_TSLBOUT, guid);
 		end
 	else
-		x888899_NotifyFailBox( sceneId, selfId, -1, "    ¶Ô²»Æğ£¬ÄúÃ»ÓĞ×ã¹»µÄÎïÆ·À¸¿Õ¼ä£¬ÇëÕûÀíºóÔÙÀ´ÁìÈ¡¡£" )
+		x888899_NotifyFailBox( sceneId, selfId, -1, "    å¯¹ä¸èµ·ï¼Œæ‚¨æ²¡æœ‰è¶³å¤Ÿçš„ç‰©å“æ ç©ºé—´ï¼Œè¯·æ•´ç†åå†æ¥é¢†å–ã€‚" )
 	end
 end
 
 --**********************************
--- ¼ì²é CDKey µÄ³ö´í·µ»Ø»Øµ÷º¯Êı
+-- æ£€æŸ¥ CDKey çš„å‡ºé”™è¿”å›å›è°ƒå‡½æ•°
 --**********************************
 function x888899_PrizeRetErr( sceneId, selfId, retId )
 --enum	UserPrizeResult
 --{
---	UPR_SUCCESS,							//³é½±ĞÅÏ¢³É¹¦
---	UPR_ASKPOINT_SUCCESS,			//²éÑ¯µãÊı³É¹¦
---	UPR_ASKBUY_SUCCESS,				//¹ºÂò³É¹¦
+--	UPR_SUCCESS,							//æŠ½å¥–ä¿¡æ¯æˆåŠŸ
+--	UPR_ASKPOINT_SUCCESS,			//æŸ¥è¯¢ç‚¹æ•°æˆåŠŸ
+--	UPR_ASKBUY_SUCCESS,				//è´­ä¹°æˆåŠŸ
 --
---	UPR_ERR_NO_PRIZE,					//Ã»ÓĞÖĞ½±
---	UPR_ERR_PRE_REQUEST,			//ÕıÔÚ´¦ÀíÉÏ´ÎµÄÇëÇóĞÅÏ¢
---	UPR_ERR_PRIZE_BUSY,				//µÈ´ı´¦ÀíµÄÁì½±ĞÅÏ¢¹ı¶à
---	UPR_ERR_TIME_OUT,					//´¦ÀíÁì½±ĞÅÏ¢³¬Ê±
---	UPR_ERR_EXPIRE_PRIZE,			//½±Æ·¹ıÆÚ
---	UPR_ERR_CANT_NOW,					//ÏÖÔÚ²»ÄÜ´¦Àí³é½±ÇëÇó
---	UPR_ERR_NOENOUGH_POINT,		//µãÊı²»×ã
---	UPR_ERR_GOODSCODE_ERR,		//ÎïÆ·´úÂë´íÎó
---	UPR_ERR_ALREADYGET_PRIZE,	//ÒÑ¾­Áì½±
---	UPR_NEWUSERCARD_SUCCESS,	//²Æ¸»¿¨³É¹¦
---	UPR_ERR_WRONGCARDNUMBER,	//¿¨ºÅ´íÎó
---	UPR_ERR_OTHERUSERUSE,		//ÆäËûÈËÒÑ¾­Ê¹ÓÃ
+--	UPR_ERR_NO_PRIZE,					//æ²¡æœ‰ä¸­å¥–
+--	UPR_ERR_PRE_REQUEST,			//æ­£åœ¨å¤„ç†ä¸Šæ¬¡çš„è¯·æ±‚ä¿¡æ¯
+--	UPR_ERR_PRIZE_BUSY,				//ç­‰å¾…å¤„ç†çš„é¢†å¥–ä¿¡æ¯è¿‡å¤š
+--	UPR_ERR_TIME_OUT,					//å¤„ç†é¢†å¥–ä¿¡æ¯è¶…æ—¶
+--	UPR_ERR_EXPIRE_PRIZE,			//å¥–å“è¿‡æœŸ
+--	UPR_ERR_CANT_NOW,					//ç°åœ¨ä¸èƒ½å¤„ç†æŠ½å¥–è¯·æ±‚
+--	UPR_ERR_NOENOUGH_POINT,		//ç‚¹æ•°ä¸è¶³
+--	UPR_ERR_GOODSCODE_ERR,		//ç‰©å“ä»£ç é”™è¯¯
+--	UPR_ERR_ALREADYGET_PRIZE,	//å·²ç»é¢†å¥–
+--	UPR_NEWUSERCARD_SUCCESS,	//è´¢å¯Œå¡æˆåŠŸ
+--	UPR_ERR_WRONGCARDNUMBER,	//å¡å·é”™è¯¯
+--	UPR_ERR_OTHERUSERUSE,		//å…¶ä»–äººå·²ç»ä½¿ç”¨
 --	};
 	local targetId = -1
 
-	if retId == 3 then								-- Ã»ÓĞ CD-Key
-		x888899_NotifyFailBox( sceneId, selfId, targetId, "    ÄãµÄCDKÃ»ÓĞ¼¤»î£¬ÇëÄúµÇÂ½http://tl.gameone.com/²é¿´¡£" )
+	if retId == 3 then								-- æ²¡æœ‰ CD-Key
+		x888899_NotifyFailBox( sceneId, selfId, targetId, "    ä½ çš„CDKæ²¡æœ‰æ¿€æ´»ï¼Œè¯·æ‚¨ç™»é™†http://tl.gameone.com/æŸ¥çœ‹ã€‚" )
 	elseif retId == 4 then
-		x888899_NotifyFailBox( sceneId, selfId, targetId, "    ÕıÔÚ´¦ÀíÖĞ£¬ÇëÉÔºò¡£" )
+		x888899_NotifyFailBox( sceneId, selfId, targetId, "    æ­£åœ¨å¤„ç†ä¸­ï¼Œè¯·ç¨å€™ã€‚" )
 	elseif retId == 5 then
-		x888899_NotifyFailBox( sceneId, selfId, targetId, "    ÏµÍ³Ã¦£¬ÇëÉÔºòÔÙÖØÊÔ¡£" )
+		x888899_NotifyFailBox( sceneId, selfId, targetId, "    ç³»ç»Ÿå¿™ï¼Œè¯·ç¨å€™å†é‡è¯•ã€‚" )
 	elseif retId == 6 then
-		x888899_NotifyFailBox( sceneId, selfId, targetId, "    ´¦Àí³¬Ê±£¬ÇëÉÔºòÖØÊÔ¡£" )
+		x888899_NotifyFailBox( sceneId, selfId, targetId, "    å¤„ç†è¶…æ—¶ï¼Œè¯·ç¨å€™é‡è¯•ã€‚" )
 	elseif retId == 9 then
-		x888899_NotifyFailBox( sceneId, selfId, targetId, "    ÄãµÄµãÊı²»×ã¡£" )
+		x888899_NotifyFailBox( sceneId, selfId, targetId, "    ä½ çš„ç‚¹æ•°ä¸è¶³ã€‚" )
 	elseif retId == 11 then
-		x888899_NotifyFailBox( sceneId, selfId, targetId, "    ÄãµÄÕÊºÅÒÑ¾­ÁìÈ¡¹ı½±Àø£¬ÎŞ·¨ÔÙ´ÎÆô¶¯ÁìÈ¡Ìõ¼ş¡£" )  --ÕÊºÅ  to  ÕËºÅ
+		x888899_NotifyFailBox( sceneId, selfId, targetId, "    ä½ çš„å¸å·å·²ç»é¢†å–è¿‡å¥–åŠ±ï¼Œæ— æ³•å†æ¬¡å¯åŠ¨é¢†å–æ¡ä»¶ã€‚" )  --å¸å·  to  è´¦å·
 	elseif retId == 13 then
-		x888899_NotifyFailBox( sceneId, selfId, targetId, "    ¶Ô²»Æğ£¬ÄãÊäÈëµÄ¿¨ĞòÁĞºÅÎªÎŞĞ§ĞòÁĞºÅ£¬ÇëÈ·ÈÏÖ®ºóÔÙ´ÎÊäÈë¡£" )
+		x888899_NotifyFailBox( sceneId, selfId, targetId, "    å¯¹ä¸èµ·ï¼Œä½ è¾“å…¥çš„å¡åºåˆ—å·ä¸ºæ— æ•ˆåºåˆ—å·ï¼Œè¯·ç¡®è®¤ä¹‹åå†æ¬¡è¾“å…¥ã€‚" )
 	elseif retId == 14 then
-		x888899_NotifyFailBox( sceneId, selfId, targetId, "    ÄãµÄ¿¨ĞòÁĞºÅÒÑ¾­±»Ê¹ÓÃ¹ı£¬ÇëÈ·ÈÏ¡£" )
+		x888899_NotifyFailBox( sceneId, selfId, targetId, "    ä½ çš„å¡åºåˆ—å·å·²ç»è¢«ä½¿ç”¨è¿‡ï¼Œè¯·ç¡®è®¤ã€‚" )
 	elseif retId == 16 then
-		x888899_NotifyFailBox( sceneId, selfId, targetId, "    ±¾·şÎñÆ÷Î´¿ªÍ¨³é½±¹¦ÄÜ£¬ÇëÈ·ÈÏ¡£" )
+		x888899_NotifyFailBox( sceneId, selfId, targetId, "    æœ¬æœåŠ¡å™¨æœªå¼€é€šæŠ½å¥–åŠŸèƒ½ï¼Œè¯·ç¡®è®¤ã€‚" )
 	elseif retId == 17 then
-		x888899_NotifyFailBox( sceneId, selfId, targetId, "    ´ËÓÃ»§ÒÑ¾­¹ı10¼¶£¬²»ÄÜÔÙÊ¹ÓÃ²Æ¸»¿¨¡£" )
+		x888899_NotifyFailBox( sceneId, selfId, targetId, "    æ­¤ç”¨æˆ·å·²ç»è¿‡10çº§ï¼Œä¸èƒ½å†ä½¿ç”¨è´¢å¯Œå¡ã€‚" )
 	elseif retId == 20 then
-		x888899_NotifyFailBox( sceneId, selfId, targetId, "    ¶Ô²»Æğ£¬Äúµ±Ç°Ã»ÓĞ¿ÉÁìÈ¡µÄ½±Àø¡£" )
+		x888899_NotifyFailBox( sceneId, selfId, targetId, "    å¯¹ä¸èµ·ï¼Œæ‚¨å½“å‰æ²¡æœ‰å¯é¢†å–çš„å¥–åŠ±ã€‚" )
 	else
-		x888899_NotifyFailBox( sceneId, selfId, targetId, "    ´¦Àí¹ÊÕÏ£¬ÇëÉÔºòÔÙÊÔ£¬ÈçÎŞ·¨³É¹¦²Ù×÷ÇëÁªÏµ¿Í·şÈËÔ±½øĞĞ´¦Àí¡£" )
+		x888899_NotifyFailBox( sceneId, selfId, targetId, "    å¤„ç†æ•…éšœï¼Œè¯·ç¨å€™å†è¯•ï¼Œå¦‚æ— æ³•æˆåŠŸæ“ä½œè¯·è”ç³»å®¢æœäººå‘˜è¿›è¡Œå¤„ç†ã€‚" )
 	end
 end
 
 --**********************************
--- ¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+-- å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x888899_NotifyFailBox( sceneId, selfId, targetId, msg )
 	BeginEvent( sceneId )
@@ -434,7 +434,7 @@ function x888899_NotifyFailBox( sceneId, selfId, targetId, msg )
 end
 
 --**********************************
--- Í¨Öª¿Í»§¶ËÊ£ÓàµãÊı
+-- é€šçŸ¥å®¢æˆ·ç«¯å‰©ä½™ç‚¹æ•°
 --**********************************
 function x888899_NotifyLeftPoint(sceneId,selfId,nLeftPoint)
 	BeginUICommand( sceneId )
@@ -444,7 +444,7 @@ function x888899_NotifyLeftPoint(sceneId,selfId,nLeftPoint)
 end
 
 --**********************************
--- ÌåÓı¾º²Â¿¨Ëæ»ú»ñµÃ½±Æ·
+-- ä½“è‚²ç«çŒœå¡éšæœºè·å¾—å¥–å“
 --**********************************
 function x888899_GetSportsPrize()
 	local total = getn(SPORTS_CARD_PRIZE)

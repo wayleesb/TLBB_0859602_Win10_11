@@ -3,20 +3,20 @@ x212132_g_ScriptId = 212132
 x212132_g_Position_X=207
 x212132_g_Position_Z=212
 x212132_g_SceneID=0
-x212132_g_AccomplishNPC_Name="Ë¾Âí¹â"
+x212132_g_AccomplishNPC_Name="å¸é©¬å…‰"
 x212132_g_MissionId = 254
 x212132_g_PreMissionId = 349
-x212132_g_Name	="Ë¾Âí¹â"
+x212132_g_Name	="å¸é©¬å…‰"
 x212132_g_MissionKind = 55
 x212132_g_MissionLevel = 75
 x212132_g_IfMissionElite = 0
-x212132_g_MissionName="¼ÅÄ¯¸ßÊÖ"
+x212132_g_MissionName="å¯‚å¯é«˜æ‰‹"
 x212132_g_MissionInfo="#{Mis_Hero_songxin_02}"
-x212132_g_MissionTarget="    ÔÚÂåÑô³ÇÕÒµ½Ë¾Âí¹â#{_INFOAIM207,212,0,Ë¾Âí¹â}¡£"
-x212132_g_MissionComplete="  ÄãµÄ½»¼ÊºÍÃûÎ»¶¼ÒÑ¾­¶À²½½­ºş£¬¾àÀëÓ¢ĞÛµÄ³ÆºÅÒ²Ô½À´Ô½½üÁË¡£"
+x212132_g_MissionTarget="    åœ¨æ´›é˜³åŸæ‰¾åˆ°å¸é©¬å…‰#{_INFOAIM207,212,0,å¸é©¬å…‰}ã€‚"
+x212132_g_MissionComplete="  ä½ çš„äº¤é™…å’Œåä½éƒ½å·²ç»ç‹¬æ­¥æ±Ÿæ¹–ï¼Œè·ç¦»è‹±é›„çš„ç§°å·ä¹Ÿè¶Šæ¥è¶Šè¿‘äº†ã€‚"
 x212132_g_MoneyBonus=50000
 x212132_g_exp=700000
-x212132_g_Custom	= { {id="ÒÑÕÒµ½Ë¾Âí¹â",num=1} }
+x212132_g_Custom	= { {id="å·²æ‰¾åˆ°å¸é©¬å…‰",num=1} }
 x212132_g_IsMissionOkFail = 0
 x212132_g_RadioItemBonus={{id=10510047 ,num=1},{id=10515027,num=1}}
 --MisDescEnd

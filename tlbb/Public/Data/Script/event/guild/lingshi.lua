@@ -1,39 +1,39 @@
--- ÁéÊ¯µÄÊÕ¼¯ºÍ²éÑ¯ÊıÁ¿
+-- çµçŸ³çš„æ”¶é›†å’ŒæŸ¥è¯¢æ•°é‡
 
 --************************************************************************
 --MisDescBegin
 
--- ½Å±¾ºÅ
+-- è„šæœ¬å·
 x600050_g_ScriptId = 600050
 
--- ÈÎÎñÄ¿±ê NPC
-x600050_g_Name = "ÉÏ¹Ù±ù"
-x600050_g_Name2 = "ÉÏ¹ÙÑ©"
+-- ä»»åŠ¡ç›®æ ‡ NPC
+x600050_g_Name = "ä¸Šå®˜å†°"
+x600050_g_Name2 = "ä¸Šå®˜é›ª"
 
---°ïÕ½Êı¾İË÷Òı£¬¶ÔÓ¦³ÌĞòÖĞµÄ enum GUILDWAR_INT_ARRAY
+--å¸®æˆ˜æ•°æ®ç´¢å¼•ï¼Œå¯¹åº”ç¨‹åºä¸­çš„ enum GUILDWAR_INT_ARRAY
 x600050_g_A_LingShiIndex = 2
 x600050_g_B_LingShiIndex = 7
 
---¸öÈË»ı·ÖÊı¾İË÷Òı£¬¶ÔÓ¦³ÌĞòenum GUILDWAR_INT_INDEX
-x600050_g_Human_ResourceNumIndex = 4					--¸öÈË½»ÄÉ×ÊÔ´¸öÊıË÷Òı
+--ä¸ªäººç§¯åˆ†æ•°æ®ç´¢å¼•ï¼Œå¯¹åº”ç¨‹åºenum GUILDWAR_INT_INDEX
+x600050_g_Human_ResourceNumIndex = 4					--ä¸ªäººäº¤çº³èµ„æºä¸ªæ•°ç´¢å¼•
 
 
-x600050_g_LingShi = {"ÇàÁúÊ¯","°×»¢Ê¯","ÖìÈ¸Ê¯","ĞşÎäÊ¯","ÅÌ¹ÅÊ¯"}		--ÁéÊ¯Ãû×Ö
-x600050_g_LingShiID = {30900051,30900052,30900053,30900054,30900055}	--ÁéÊ¯ID
+x600050_g_LingShi = {"é’é¾™çŸ³","ç™½è™çŸ³","æœ±é›€çŸ³","ç„æ­¦çŸ³","ç›˜å¤çŸ³"}		--çµçŸ³åå­—
+x600050_g_LingShiID = {30900051,30900052,30900053,30900054,30900055}	--çµçŸ³ID
 
---°ïÕ½¸±±¾½Å±¾
+--å¸®æˆ˜å‰¯æœ¬è„šæœ¬
 x600050_g_BangzhanScriptId	= 402047
 
-x600050_g_GuildPoint_LingShi = 1						--»ı·Ö¹æÔòË÷Òı£¬±íGuildWarPoint.txtµÄID
+x600050_g_GuildPoint_LingShi = 1						--ç§¯åˆ†è§„åˆ™ç´¢å¼•ï¼Œè¡¨GuildWarPoint.txtçš„ID
 
 --MisDescEnd
 --************************************************************************
 
 --**********************************
--- ÈÎÎñÈë¿Úº¯Êı
+-- ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
-function x600050_OnDefaultEvent( sceneId, selfId, targetId )	-- µã»÷¸ÃÈÎÎñºóÖ´ĞĞ´Ë½Å±¾
---	if GetName( sceneId, targetId ) ~= x600050_g_Name then		-- ÅĞ¶Ï¸ÃnpcÊÇ·ñÊÇ¶ÔÓ¦ÈÎÎñµÄnpc
+function x600050_OnDefaultEvent( sceneId, selfId, targetId )	-- ç‚¹å‡»è¯¥ä»»åŠ¡åæ‰§è¡Œæ­¤è„šæœ¬
+--	if GetName( sceneId, targetId ) ~= x600050_g_Name then		-- åˆ¤æ–­è¯¥npcæ˜¯å¦æ˜¯å¯¹åº”ä»»åŠ¡çš„npc
 --		return
 --	end
 
@@ -42,15 +42,15 @@ function x600050_OnDefaultEvent( sceneId, selfId, targetId )	-- µã»÷¸ÃÈÎÎñºóÖ´ĞĞ
 	if numText == 1 then
 		BeginEvent(sceneId)
 			AddText(sceneId,"#{BHXZ_081103_39}")
-			AddNumText(sceneId, x600050_g_ScriptId, "È·¶¨", 8, 3 )
-			AddNumText(sceneId, x600050_g_ScriptId, "È¡Ïû", 8, 4 )
+			AddNumText(sceneId, x600050_g_ScriptId, "ç¡®å®š", 8, 3 )
+			AddNumText(sceneId, x600050_g_ScriptId, "å–æ¶ˆ", 8, 4 )
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 	elseif numText == 2 then
 		BeginEvent(sceneId)
 			AddText(sceneId,"#{BHXZ_081103_63}")
-			AddNumText(sceneId, x600050_g_ScriptId, "È·¶¨", 8, 5 )
-			AddNumText(sceneId, x600050_g_ScriptId, "È¡Ïû", 8, 6 )
+			AddNumText(sceneId, x600050_g_ScriptId, "ç¡®å®š", 8, 5 )
+			AddNumText(sceneId, x600050_g_ScriptId, "å–æ¶ˆ", 8, 6 )
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 	elseif numText == 3 then
@@ -71,37 +71,37 @@ function x600050_OnDefaultEvent( sceneId, selfId, targetId )	-- µã»÷¸ÃÈÎÎñºóÖ´ĞĞ
 end
 
 --**********************************
--- ÁĞ¾ÙÊÂ¼ş
+-- åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x600050_OnEnumerate( sceneId, selfId, targetId )
---	if GetName( sceneId, targetId ) ~= x600050_g_Name then		--ÅĞ¶Ï¸ÃnpcÊÇ·ñÊÇ¶ÔÓ¦ÈÎÎñµÄnpc
+--	if GetName( sceneId, targetId ) ~= x600050_g_Name then		--åˆ¤æ–­è¯¥npcæ˜¯å¦æ˜¯å¯¹åº”ä»»åŠ¡çš„npc
 --		return
 --	end
 	
-	AddNumText( sceneId, x600050_g_ScriptId, "#{BHXZ_081103_38}", 4, 1 ) --½»ÄÉÁéÊ¯
-	AddNumText( sceneId, x600050_g_ScriptId, "#{BHXZ_081103_62}", 4, 2 )	--²é¿´ÁéÊ¯¸öÊı
+	AddNumText( sceneId, x600050_g_ScriptId, "#{BHXZ_081103_38}", 4, 1 ) --äº¤çº³çµçŸ³
+	AddNumText( sceneId, x600050_g_ScriptId, "#{BHXZ_081103_62}", 4, 2 )	--æŸ¥çœ‹çµçŸ³ä¸ªæ•°
 end
 
 --**********************************
--- ²éÑ¯ÁéÊ¯ÊıÁ¿
+-- æŸ¥è¯¢çµçŸ³æ•°é‡
 --**********************************
 function x600050_QueryLingshi( sceneId, selfId, targetId )
 
-	--ÊÇ·ñÊÇ¸±±¾
+	--æ˜¯å¦æ˜¯å‰¯æœ¬
 	local sceneType = LuaFnGetSceneType( sceneId )
 	if sceneType ~= 1 then
 		x600050_NotifyFailBox( sceneId, selfId, targetId, "#{BHXZ_081103_78}" )
 		return
 	end
 
-	--ÊÇ·ñÊÇËùĞèÒªµÄ¸±±¾
+	--æ˜¯å¦æ˜¯æ‰€éœ€è¦çš„å‰¯æœ¬
 	local fubentype = LuaFnGetCopySceneData_Param( sceneId, 0 )
 	if fubentype ~= FUBEN_BANGZHAN then
 		x600050_NotifyFailBox( sceneId, selfId, targetId, "#{BHXZ_081103_78}" )
 		return
 	end
 	
-	--ÊÇ·ñ¿ªÊ¼°ïÕ½»ı·Ö
+	--æ˜¯å¦å¼€å§‹å¸®æˆ˜ç§¯åˆ†
 	if LuaFnGetCopySceneData_Param( sceneId, 7 ) == 0 then
 		x600050_NotifyFailBox( sceneId, selfId, targetId, "#{BHXZ_081103_157}" )
 		return
@@ -115,7 +115,7 @@ function x600050_QueryLingshi( sceneId, selfId, targetId )
 		
 		for i = 1, getn( x600050_g_LingShi ) do
 			local num = GetGuildIntNum( sceneId, humanguildid, x600050_g_A_LingShiIndex+i-1 )
-			msg = msg.."#r"..x600050_g_LingShi[i].."£º"..num
+			msg = msg.."#r"..x600050_g_LingShi[i].."ï¼š"..num
 		end
 		
 		x600050_NotifyFailBox( sceneId, selfId, targetId, msg )
@@ -124,7 +124,7 @@ function x600050_QueryLingshi( sceneId, selfId, targetId )
 		
 		for i = 1, getn( x600050_g_LingShi ) do
 			local num = GetGuildIntNum( sceneId, humanguildid, x600050_g_B_LingShiIndex+i-1 )
-			msg = msg.."#r"..x600050_g_LingShi[i].."£º"..num
+			msg = msg.."#r"..x600050_g_LingShi[i].."ï¼š"..num
 		end
 		
 		x600050_NotifyFailBox( sceneId, selfId, targetId, msg )
@@ -133,25 +133,25 @@ function x600050_QueryLingshi( sceneId, selfId, targetId )
 end
 
 --**********************************
--- ½ÓÊÕÁéÊ¯ÊıÁ¿
+-- æ¥æ”¶çµçŸ³æ•°é‡
 --**********************************
 function x600050_AcceptLingshi( sceneId, selfId, targetId )
 
-	--ÊÇ·ñÊÇ¸±±¾
+	--æ˜¯å¦æ˜¯å‰¯æœ¬
 	local sceneType = LuaFnGetSceneType( sceneId )
 	if sceneType ~= 1 then
 		x600050_NotifyFailBox( sceneId, selfId, targetId, "#{BHXZ_081103_78}" )
 		return
 	end
 
-	--ÊÇ·ñÊÇËùĞèÒªµÄ¸±±¾
+	--æ˜¯å¦æ˜¯æ‰€éœ€è¦çš„å‰¯æœ¬
 	local fubentype = LuaFnGetCopySceneData_Param( sceneId, 0 )
 	if fubentype ~= FUBEN_BANGZHAN then
 		x600050_NotifyFailBox( sceneId, selfId, targetId, "#{BHXZ_081103_78}" )
 		return
 	end
 	
-	--ÊÇ·ñ¿ªÊ¼°ïÕ½»ı·Ö
+	--æ˜¯å¦å¼€å§‹å¸®æˆ˜ç§¯åˆ†
 	if LuaFnGetCopySceneData_Param( sceneId, 7 ) == 0 then
 		x600050_NotifyFailBox( sceneId, selfId, targetId, "#{BHXZ_081103_37}" )
 		return
@@ -161,7 +161,7 @@ function x600050_AcceptLingshi( sceneId, selfId, targetId )
 	local humanguildid = GetHumanGuildID(sceneId, selfId)
 	local LingShiPerPoint = GetGuildWarPoint(sceneId, x600050_g_GuildPoint_LingShi)
 	
-	if name == x600050_g_Name then --A°ï
+	if name == x600050_g_Name then --Aå¸®
 		local msg = ""
 		local point = 0
 		local totalnum = 0
@@ -169,14 +169,14 @@ function x600050_AcceptLingshi( sceneId, selfId, targetId )
 		
 		for i = 1, getn( x600050_g_LingShiID ) do
 			local num = LuaFnGetAvailableItemCount( sceneId, selfId, x600050_g_LingShiID[i] )
-			local alreadynum = GetGuildIntNum( sceneId, humanguildid, x600050_g_A_LingShiIndex+i-1 ) --ÒÑÓĞÊıÁ¿
-			if num > 0 and alreadynum ~= -1 then --²»µÈÓÚ-1µÄÅĞ¶Ï¿ÉÒÔÅĞ¶Ï³öÍæ¼ÒÔÚÕıÈ·µÄ°ïÅÉÖĞ
+			local alreadynum = GetGuildIntNum( sceneId, humanguildid, x600050_g_A_LingShiIndex+i-1 ) --å·²æœ‰æ•°é‡
+			if num > 0 and alreadynum ~= -1 then --ä¸ç­‰äº-1çš„åˆ¤æ–­å¯ä»¥åˆ¤æ–­å‡ºç©å®¶åœ¨æ­£ç¡®çš„å¸®æ´¾ä¸­
 				if LuaFnDelAvailableItem( sceneId, selfId, x600050_g_LingShiID[i], num ) > 0 then
 					point = point + num*LingShiPerPoint
 					totalnum = totalnum + num
 					NumPerType[i] = num
 					SetGuildIntNum( sceneId, humanguildid, x600050_g_A_LingShiIndex+i-1, num+alreadynum )
-					msg = msg.."#r"..x600050_g_LingShi[i].."£º"..num
+					msg = msg.."#r"..x600050_g_LingShi[i].."ï¼š"..num
 				end
 			end
 		end
@@ -184,9 +184,9 @@ function x600050_AcceptLingshi( sceneId, selfId, targetId )
 		if point > 0 then
 			x600050_NotifyFailBox( sceneId, selfId, targetId, "#{BHXZ_081103_141}"..msg )
 			
-			--Ôö¼Ó»ı·Ö
+			--å¢åŠ ç§¯åˆ†
 			CallScriptFunction( x600050_g_BangzhanScriptId, "AddAGuildPoint", sceneId, selfId, humanguildid, point )
---			--Ôö¼Ó°ï¹±£¬Ã¿5¸öÁéÊ¯Ôö¼ÓÒ»µã°ï¹±
+--			--å¢åŠ å¸®è´¡ï¼Œæ¯5ä¸ªçµçŸ³å¢åŠ ä¸€ç‚¹å¸®è´¡
 --			local alreadyResource = GetHumanGuildInt( sceneId, selfId, x600050_g_Human_ResourceNumIndex )
 --			local alreadymod = mod(alreadyResource, 5)
 --			local addbanggong = floor((alreadymod+totalnum) / 5)
@@ -194,16 +194,16 @@ function x600050_AcceptLingshi( sceneId, selfId, targetId )
 --				CityChangeAttr( sceneId, selfId, GUILD_CONTRIB_POINT, addbanggong )
 --			end
 			Msg2Player(sceneId, selfId, "#{BHXZ_081103_142}"..totalnum.."#{BHXZ_081103_143}" , MSG2PLAYER_PARA)
-			--Ôö¼Ó¸öÈË»ı·Ö
+			--å¢åŠ ä¸ªäººç§¯åˆ†
 			CallScriptFunction( x600050_g_BangzhanScriptId, "AddHumanGuildArrayInt", sceneId, selfId, x600050_g_Human_ResourceNumIndex, totalnum )
-			--Í³¼ÆÈÕÖ¾
+			--ç»Ÿè®¡æ—¥å¿—
 			local guid = LuaFnObjId2Guid(sceneId, selfId)
 			local log = format("qinglong=%d,baihu=%d,zhuque=%d,xuanwu=%d,pangu=%d,total=%d", NumPerType[1], NumPerType[2], NumPerType[3], NumPerType[4], NumPerType[5], totalnum)
 			ScriptGlobal_AuditGeneralLog(LUAAUDIT_BANGZHAN_RESOURCE, guid, log)
 		else
 			x600050_NotifyFailBox( sceneId, selfId, targetId, "#{BHXZ_081103_144}" )
 		end
-	elseif name == x600050_g_Name2 then --B°ï
+	elseif name == x600050_g_Name2 then --Bå¸®
 		local msg = ""
 		local point = 0
 		local totalnum = 0
@@ -211,14 +211,14 @@ function x600050_AcceptLingshi( sceneId, selfId, targetId )
 		
 		for i = 1, getn( x600050_g_LingShiID ) do
 			local num = LuaFnGetAvailableItemCount( sceneId, selfId, x600050_g_LingShiID[i] )
-			local alreadynum = GetGuildIntNum( sceneId, humanguildid, x600050_g_B_LingShiIndex+i-1 ) --ÒÑÓĞÊıÁ¿
-			if num > 0 and alreadynum ~= -1 then --²»µÈÓÚ-1µÄÅĞ¶Ï¿ÉÒÔÅĞ¶Ï³öÍæ¼ÒÔÚÕıÈ·µÄ°ïÅÉÖĞ
+			local alreadynum = GetGuildIntNum( sceneId, humanguildid, x600050_g_B_LingShiIndex+i-1 ) --å·²æœ‰æ•°é‡
+			if num > 0 and alreadynum ~= -1 then --ä¸ç­‰äº-1çš„åˆ¤æ–­å¯ä»¥åˆ¤æ–­å‡ºç©å®¶åœ¨æ­£ç¡®çš„å¸®æ´¾ä¸­
 				if LuaFnDelAvailableItem( sceneId, selfId, x600050_g_LingShiID[i], num ) > 0 then
 					point = point + num*LingShiPerPoint
 					totalnum = totalnum + num
 					NumPerType[i] = num
 					SetGuildIntNum( sceneId, humanguildid, x600050_g_B_LingShiIndex+i-1, num+alreadynum )
-					msg = msg.."#r"..x600050_g_LingShi[i].."£º"..num
+					msg = msg.."#r"..x600050_g_LingShi[i].."ï¼š"..num
 				end
 			end
 		end
@@ -226,9 +226,9 @@ function x600050_AcceptLingshi( sceneId, selfId, targetId )
 		if point > 0 then
 			x600050_NotifyFailBox( sceneId, selfId, targetId, "#{BHXZ_081103_141}"..msg )
 			
-			--Ôö¼Ó»ı·Ö
+			--å¢åŠ ç§¯åˆ†
 			CallScriptFunction( x600050_g_BangzhanScriptId, "AddBGuildPoint", sceneId, selfId, humanguildid, point )
---			--Ôö¼Ó°ï¹±£¬Ã¿5¸öÁéÊ¯Ôö¼ÓÒ»µã°ï¹±
+--			--å¢åŠ å¸®è´¡ï¼Œæ¯5ä¸ªçµçŸ³å¢åŠ ä¸€ç‚¹å¸®è´¡
 --			local alreadyResource = GetHumanGuildInt( sceneId, selfId, x600050_g_Human_ResourceNumIndex )
 --			local alreadymod = mod(alreadyResource, 5)
 --			local addbanggong = floor((alreadymod+totalnum) / 5)
@@ -236,9 +236,9 @@ function x600050_AcceptLingshi( sceneId, selfId, targetId )
 --				CityChangeAttr( sceneId, selfId, GUILD_CONTRIB_POINT, addbanggong )
 --			end
 			Msg2Player(sceneId, selfId, "#{BHXZ_081103_142}"..totalnum.."#{BHXZ_081103_143}" , MSG2PLAYER_PARA)
-			--Ôö¼Ó¸öÈË»ı·Ö
+			--å¢åŠ ä¸ªäººç§¯åˆ†
 			CallScriptFunction( x600050_g_BangzhanScriptId, "AddHumanGuildArrayInt", sceneId, selfId, x600050_g_Human_ResourceNumIndex, totalnum )
-			--Í³¼ÆÈÕÖ¾
+			--ç»Ÿè®¡æ—¥å¿—
 			local guid = LuaFnObjId2Guid(sceneId, selfId)
 			local log = format("qinglong=%d,baihu=%d,zhuque=%d,xuanwu=%d,pangu=%d,total=%d", NumPerType[1], NumPerType[2], NumPerType[3], NumPerType[4], NumPerType[5], totalnum)
 			ScriptGlobal_AuditGeneralLog(LUAAUDIT_BANGZHAN_RESOURCE, guid, log)
@@ -250,50 +250,50 @@ function x600050_AcceptLingshi( sceneId, selfId, targetId )
 end
 
 --**********************************
--- ¼ì²â½ÓÊÜÌõ¼ş
+-- æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x600050_CheckAccept( sceneId, selfId, targetId )
 	return 1
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x600050_OnAccept( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x600050_OnContinue( sceneId, selfId, targetId )
 --	BeginEvent( sceneId )
 --		AddText( sceneId, x600050_g_MissionName )
---		AddText( sceneId, "good ¼ÌĞø" )
+--		AddText( sceneId, "good ç»§ç»­" )
 --	EndEvent( )
 --	DispatchMissionContinueInfo( sceneId, selfId, targetId, x600050_g_ScriptId, x600050_g_MissionId )
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x600050_OnAbandon( sceneId, selfId )
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x600050_CheckSubmit( sceneId, selfId )
 	return 1
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x600050_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 end
 
 --**********************************
--- ¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+-- å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x600050_NotifyFailBox( sceneId, selfId, targetId, msg )
 	BeginEvent( sceneId )
@@ -303,7 +303,7 @@ function x600050_NotifyFailBox( sceneId, selfId, targetId, msg )
 end
 
 --**********************************
--- ÆÁÄ»ÖĞ¼äĞÅÏ¢ÌáÊ¾
+-- å±å¹•ä¸­é—´ä¿¡æ¯æç¤º
 --**********************************
 function x600050_NotifyFailTips( sceneId, selfId, Tip )
 	BeginEvent( sceneId )

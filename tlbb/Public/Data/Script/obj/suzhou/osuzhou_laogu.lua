@@ -1,20 +1,20 @@
---Î÷ºşNPC
---ÀÏ¹Ë
---ÆÕÍ¨
+--è¥¿æ¹–NPC
+--è€é¡¾
+--æ™®é€š
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x001062_g_scriptId = 001062
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x001062_g_eventList={200011,200014}
 
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x001062_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
-		AddText(sceneId,"  ÑØÕâÌõÂ·Ò»Ö±×ß¾ÍÄÜµ½Ñà×ÓÎë¡£")
+		AddText(sceneId,"  æ²¿è¿™æ¡è·¯ä¸€ç›´èµ°å°±èƒ½åˆ°ç‡•å­åã€‚")
 
 		for i, eventId in x001062_g_eventList do
 			CallScriptFunction( eventId, "OnEnumerate",sceneId, selfId, targetId )
@@ -24,7 +24,7 @@ function x001062_OnDefaultEvent( sceneId, selfId,targetId )
 end
 
 --**********************************
--- Ñ¡ÖĞÒ»Ïî
+-- é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x001062_OnEventRequest( sceneId, selfId, targetId, eventId )
 	for i, findId in x001062_g_eventList do

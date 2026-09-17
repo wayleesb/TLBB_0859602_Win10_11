@@ -26,13 +26,13 @@ end
 function ConfraternityPK_InitDlg()
 	if(g_ListType == 0) then
 		ConfraternityPK_DragTitle:SetText("#{ConfraternityPK_XML_1}")
-		ConfraternityPK_LookupButton:SetText("#{ConfraternityPK_XML_4}"); --查看本帮迎战列表
-		ConfraternityPK_List_Text:SetText("#{ConfraternityPK_XML_2}"); --本帮当前宣战列表
+		ConfraternityPK_LookupButton:SetText("#{ConfraternityPK_XML_4}"); --鏌ョ湅鏈府杩庢垬鍒楄〃
+		ConfraternityPK_List_Text:SetText("#{ConfraternityPK_XML_2}"); --鏈府褰撳墠瀹ｆ垬鍒楄〃
 		ConfraternityPK_StartBtn:Show();
 	else
 		ConfraternityPK_DragTitle:SetText("#{ConfraternityPK_XML_10}")
-		ConfraternityPK_LookupButton:SetText("#{ConfraternityPK_XML_5}") --返回宣战列表
-		ConfraternityPK_List_Text:SetText("#{ConfraternityPK_XML_11}"); --本帮当前应战列表
+		ConfraternityPK_LookupButton:SetText("#{ConfraternityPK_XML_5}") --杩斿洖瀹ｆ垬鍒楄〃
+		ConfraternityPK_List_Text:SetText("#{ConfraternityPK_XML_11}"); --鏈府褰撳墠搴旀垬鍒楄〃
 		ConfraternityPK_StartBtn:Hide();
 	end
 	

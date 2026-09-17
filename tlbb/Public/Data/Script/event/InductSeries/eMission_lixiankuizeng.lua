@@ -1,22 +1,22 @@
 --modified by roadangel
---ÀëÏßÀ¡Ôù
+--ç¦»çº¿é¦ˆèµ 
 
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x500619_g_ScriptId		= 500619
 
---Ä¿±êÈÎÎñNPCÊôĞÔ
+--ç›®æ ‡ä»»åŠ¡NPCå±æ€§
 x500619_g_Position_X	= 160.2399
 x500619_g_Position_Z 	= 134.1486
 x500619_g_SceneID			= 0
-x500619_g_AccomplishNPC_Name 	= "ÖÜÌìÊ¦"
+x500619_g_AccomplishNPC_Name 	= "å‘¨å¤©å¸ˆ"
 
-x500619_g_givegift_diffday 		= 10        --³¬¹ı10Ìì¸øÀ¡Ôù
-x500619_g_givegift_levellimit = 30     		--30¼¶£¨°üÀ¨30¼¶£©²ÅÄÜ½Ó
-x500619_g_exppool_max					= 80000000	--¾­Ñé³Ø×î´ó¾­ÑéÖµ
+x500619_g_givegift_diffday 		= 10        --è¶…è¿‡10å¤©ç»™é¦ˆèµ 
+x500619_g_givegift_levellimit = 30     		--30çº§ï¼ˆåŒ…æ‹¬30çº§ï¼‰æ‰èƒ½æ¥
+x500619_g_exppool_max					= 80000000	--ç»éªŒæ± æœ€å¤§ç»éªŒå€¼
 
 
---º®Óñ´²Ã¿ÈıÊ®Ãë¸øµÄ¾­Ñé£¬ÕâÀï¸øµÄ¾­ÑéÎª°ëĞ¡Ê±º®Óñ´²¾­Ñé*2*£¨N-10£©,NÎªÀëÏßÌìÊı[10--366]
+--å¯’ç‰åºŠæ¯ä¸‰åç§’ç»™çš„ç»éªŒï¼Œè¿™é‡Œç»™çš„ç»éªŒä¸ºåŠå°æ—¶å¯’ç‰åºŠç»éªŒ*2*ï¼ˆN-10ï¼‰,Nä¸ºç¦»çº¿å¤©æ•°[10--366]
 x500619_g_ExpTbl = {
 
 	[30]=765,[31]=787,[32]=810,[33]=832,[34]=855,
@@ -47,13 +47,13 @@ x500619_g_ExpTbl = {
 
 }
 
---¸øÓè½±ÀøµÄÎïÆ·idºÍÊıÁ¿
+--ç»™äºˆå¥–åŠ±çš„ç‰©å“idå’Œæ•°é‡
 x500619_g_giftData = { nGiftId = 30505214, nGiftNum = 1 }
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
---µã»÷¸ÃÈÎÎñºóÖ´ĞĞ´Ë½Å±¾
+--ç‚¹å‡»è¯¥ä»»åŠ¡åæ‰§è¡Œæ­¤è„šæœ¬
 function x500619_OnDefaultEvent( sceneId, selfId, targetId )
 	
 	if x500619_CheckActiveDay() == 0 then
@@ -62,10 +62,10 @@ function x500619_OnDefaultEvent( sceneId, selfId, targetId )
 	
 	if GetNumText() == 1 then
 		local nCanGiftUnline = GetMissionData(sceneId, selfId, MD_GIFT_OUTLINE)
-		if nCanGiftUnline == 1 then  --¿ÉÒÔÁìÈ¡ÌìÁéµ¤
+		if nCanGiftUnline == 1 then  --å¯ä»¥é¢†å–å¤©çµä¸¹
 			
 			BeginEvent( sceneId )
-			AddText(sceneId, "ÔÙÕ½½­ºş\n")
+			AddText(sceneId, "å†æˆ˜æ±Ÿæ¹–\n")
 			local szName = GetName(sceneId, selfId)	
 			AddText(sceneId, "#{LXJY_80818_02}"..szName.."#{LXJY_80818_03}")
 			AddItemBonus( sceneId, x500619_g_giftData.nGiftId, x500619_g_giftData.nGiftNum )
@@ -79,9 +79,9 @@ function x500619_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
-function x500619_OnEnumerate( sceneId, selfId, targetId )            --¸ù¾İÊÇ·ñÁì¹ıÁËÀ´ÅĞ¶ÏÊÇ·ñÏÔÊ¾¸Ã¶Ô»°
+function x500619_OnEnumerate( sceneId, selfId, targetId )            --æ ¹æ®æ˜¯å¦é¢†è¿‡äº†æ¥åˆ¤æ–­æ˜¯å¦æ˜¾ç¤ºè¯¥å¯¹è¯
 
 	if x500619_CheckActiveDay() == 0 then
 		return
@@ -90,31 +90,31 @@ function x500619_OnEnumerate( sceneId, selfId, targetId )            --¸ù¾İÊÇ·ñÁ
 	local nCanGiftUnline = GetMissionData(sceneId, selfId, MD_GIFT_OUTLINE)
 	local nPoolExp 	= GetMissionData(sceneId, selfId, MD_LIXIAN_POOLEXP);
 	if (nPoolExp > 0 or nCanGiftUnline == 1) then
-		AddNumText( sceneId, x500619_g_ScriptId, "#GÔÙÕ½½­ºş", 6, 1 )
+		AddNumText( sceneId, x500619_g_ScriptId, "#Gå†æˆ˜æ±Ÿæ¹–", 6, 1 )
 	end
 	
 end
 
 --**********************************
---Ìá½»£¬½ö¹©×ÓÈÎÎñµ÷ÓÃ
+--æäº¤ï¼Œä»…ä¾›å­ä»»åŠ¡è°ƒç”¨
 --**********************************
 function x500619_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 	
 	local nCanGiftUnline = GetMissionData(sceneId, selfId, MD_GIFT_OUTLINE)
-	if nCanGiftUnline == 1 then  --¿ÉÒÔÁìÈ¡ÌìÁéµ¤
-		BeginAddItem(sceneId)                --¸øÎïÆ·
+	if nCanGiftUnline == 1 then  --å¯ä»¥é¢†å–å¤©çµä¸¹
+		BeginAddItem(sceneId)                --ç»™ç‰©å“
 			AddItem(sceneId, x500619_g_giftData.nGiftId, x500619_g_giftData.nGiftNum)
 		local canAdd = EndAddItem(sceneId,selfId)	
-		if canAdd > 0 then									--±³°üÓĞ¿Õ¼ä
+		if canAdd > 0 then									--èƒŒåŒ…æœ‰ç©ºé—´
 			x500619_SetGiveFlag(sceneId, selfId, 0)   
-			for count=1, x500619_g_giftData.nGiftNum do       --°ó¶¨ÎïÆ·
+			for count=1, x500619_g_giftData.nGiftNum do       --ç»‘å®šç‰©å“
 				bagPos = TryRecieveItem( sceneId, selfId, x500619_g_giftData.nGiftId, QUALITY_MUST_BE_CHANGE )
 				LuaFnItemBind( sceneId, selfId, bagPos )
 			end
-			--Í³¼Æ¸øÎïÆ·ÊıÁ¿
+			--ç»Ÿè®¡ç»™ç‰©å“æ•°é‡
 			AddOutlineGiftLog(sceneId, selfId, 2, x500619_g_giftData.nGiftId, x500619_g_giftData.nGiftNum )
 	
-			--¸ø¾­Ñé
+			--ç»™ç»éªŒ
 			x500619_GiveExpNum( sceneId, selfId, targetId )
 		else
 			BeginEvent( sceneId )
@@ -127,14 +127,14 @@ end
 
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x500619_OnContinue( sceneId, selfId, targetId )
 
 end
 
 --**********************************
---ÉèÖÃÊÇ·ñÂú×ãÀëÏßÀ¡ÔùµÄ±êÖ¾µ÷ÓÃº¯Êı
+--è®¾ç½®æ˜¯å¦æ»¡è¶³ç¦»çº¿é¦ˆèµ çš„æ ‡å¿—è°ƒç”¨å‡½æ•°
 --**********************************
 function x500619_CheckUnlineGift( sceneId, selfId )
 
@@ -146,40 +146,40 @@ function x500619_CheckUnlineGift( sceneId, selfId )
 	local nDiffDay= GetLoginDiffTime( sceneId, selfId)
 	local CurLevel = LuaFnGetLevel( sceneId, selfId )
 	
-	--Íæ¼ÒÃ¿´ÎµÇÂ½¶¼»á×ßÕâÀï£¬ÕâÀïºÜ¹Ø¼ü£¬ÒòÎª¾ö¶¨×ÅÊÇ·ñÄÜÁìÀ¡Ôù
+	--ç©å®¶æ¯æ¬¡ç™»é™†éƒ½ä¼šèµ°è¿™é‡Œï¼Œè¿™é‡Œå¾ˆå…³é”®ï¼Œå› ä¸ºå†³å®šç€æ˜¯å¦èƒ½é¢†é¦ˆèµ 
 	if (nDiffDay > x500619_g_givegift_diffday and CurLevel >= x500619_g_givegift_levellimit) then
 		x500619_CalcGiveExpNum( sceneId, selfId );
 		x500619_SetGiveFlag(sceneId, selfId, 1);
-		LuaFnSendSystemMail( sceneId, GetName(sceneId, selfId), "#{LXJY_80818_01}" )   -- ·¢ÓÊ¼ş
+		LuaFnSendSystemMail( sceneId, GetName(sceneId, selfId), "#{LXJY_80818_01}" )   -- å‘é‚®ä»¶
 	else
 		local nCurPoolExp = GetMissionData( sceneId, selfId, MD_LIXIAN_POOLEXP );
 		if( nCurPoolExp > 0 ) then
-			LuaFnSendSystemMail( sceneId, GetName(sceneId, selfId), "#{LXJY_90226_04}" )	-- ·¢ÓÊ¼ş
+			LuaFnSendSystemMail( sceneId, GetName(sceneId, selfId), "#{LXJY_90226_04}" )	-- å‘é‚®ä»¶
 		end
 		x500619_SetGiveFlag(sceneId, selfId, 0)
 	end
 	
 end
 
---¼ÆËã¸øÓè¾­Ñé³ØµÄ¾­ÑéÖµ
+--è®¡ç®—ç»™äºˆç»éªŒæ± çš„ç»éªŒå€¼
 function x500619_CalcGiveExpNum( sceneId, selfId )
 	
-	--µÈ¼¶
+	--ç­‰çº§
 	local CurLevel = LuaFnGetLevel( sceneId, selfId )
 	if (CurLevel < 30 or CurLevel > 150) then
 		return 
 	end
 
-	--ÌìÊı
+	--å¤©æ•°
 	local nDiffDay = GetLoginDiffTime( sceneId, selfId)
-	if nDiffDay <= x500619_g_givegift_diffday then    --²»Âú10Ìì£¬²»¸ø¾­Ñé
+	if nDiffDay <= x500619_g_givegift_diffday then    --ä¸æ»¡10å¤©ï¼Œä¸ç»™ç»éªŒ
 		return 
 	elseif nDiffDay > 366 then
-		nDiffDay = 366                                --³¬¹ı366Ìì£¬°´366ÌìËã
+		nDiffDay = 366                                --è¶…è¿‡366å¤©ï¼ŒæŒ‰366å¤©ç®—
 	end
 
-	--¾­Ñé¼ÆËã¹«Ê½£ºC*2*(N-1) CÎª°ëĞ¡Ê±º®Óñ´²¾­Ñé£¬NÎªÀëÏßÌìÊı
-	local ExpInHan = x500619_g_ExpTbl[CurLevel] * 60   --30Ãëº®Óñ´²¾­Ñé*60 = 30·ÖÖÓº®Óñ´²¾­Ñé
+	--ç»éªŒè®¡ç®—å…¬å¼ï¼šC*2*(N-1) Cä¸ºåŠå°æ—¶å¯’ç‰åºŠç»éªŒï¼ŒNä¸ºç¦»çº¿å¤©æ•°
+	local ExpInHan = x500619_g_ExpTbl[CurLevel] * 60   --30ç§’å¯’ç‰åºŠç»éªŒ*60 = 30åˆ†é’Ÿå¯’ç‰åºŠç»éªŒ
 	
 	local nGiveReady = 0
 	if CurLevel >= 90 then
@@ -189,7 +189,7 @@ function x500619_CalcGiveExpNum( sceneId, selfId )
 	end
 	
 	local CurExp = GetExp( sceneId, selfId )
-	--²»ÄÜ³¬¹ıÉÏÏŞ¾­Ñé
+	--ä¸èƒ½è¶…è¿‡ä¸Šé™ç»éªŒ
 	local nFullExp = GetFullExp( sceneId, selfId )
 	if nGiveReady > nFullExp then
 		nGiveReady = nFullExp 
@@ -206,7 +206,7 @@ function x500619_CalcGiveExpNum( sceneId, selfId )
 
 end
 
---¸ù¾İ¾­Ñé³ØÄÚÊı¾İ¸øÍæ¼Ò¾­Ñé
+--æ ¹æ®ç»éªŒæ± å†…æ•°æ®ç»™ç©å®¶ç»éªŒ
 function x500619_GiveExpNum( sceneId, selfId, targetId )
 
 	local nPoolExp 	= GetMissionData( sceneId, selfId, MD_LIXIAN_POOLEXP )
@@ -228,12 +228,12 @@ function x500619_GiveExpNum( sceneId, selfId, targetId )
 			end	
 		
 			SetMissionData(sceneId, selfId, MD_LIXIAN_POOLEXP, nPoolExp)
-			AddExpMore(sceneId, selfId, nGiveExp);    --¸ø¾­Ñé 
+			AddExpMore(sceneId, selfId, nGiveExp);    --ç»™ç»éªŒ 
 			AddOutlineGiftLog(sceneId, selfId, 1, 0, nGiveExp)
 		end
 					
 		BeginEvent( sceneId )
-		AddText(sceneId, "ÔÙÕ½½­ºş\n")
+		AddText(sceneId, "å†æˆ˜æ±Ÿæ¹–\n")
 		local szName = GetName(sceneId, selfId)	
 		AddText(sceneId, "#{LXJY_80818_02}"..szName.."#{LXJY_80818_03}")
 		AddText(sceneId, "#{LXJY_90226_01}")	
@@ -243,11 +243,11 @@ function x500619_GiveExpNum( sceneId, selfId, targetId )
 		nGiveExp = nPoolExp
 		--PrintStr(nGiveExp);	
 		SetMissionData(sceneId, selfId, MD_LIXIAN_POOLEXP, 0)
-		AddExpMore(sceneId, selfId, nGiveExp)    --¸ø¾­Ñé 
+		AddExpMore(sceneId, selfId, nGiveExp)    --ç»™ç»éªŒ 
 		AddOutlineGiftLog(sceneId, selfId, 1, 1, nGiveExp)
 				
 		BeginEvent( sceneId )
-		AddText(sceneId, "ÔÙÕ½½­ºş\n")
+		AddText(sceneId, "å†æˆ˜æ±Ÿæ¹–\n")
 		local szName = GetName(sceneId, selfId)	
 		AddText(sceneId, "#{LXJY_80818_02}"..szName.."#{LXJY_80818_03}")
 		AddText(sceneId, "#{LXJY_90226_03}")	
@@ -255,10 +255,10 @@ function x500619_GiveExpNum( sceneId, selfId, targetId )
 		DispatchEventList( sceneId, selfId, targetId )
 	end
 end
---MD_GIFT_OUTLINEÒâÒå:
---0:²»ÈÃÁìÀëÏßÀ¡Ôù
---1ÁìÀëÏßÀ¡Ôù£¬¾­ÑéºÍÎïÆ·
---2ÁìÀëÏßÀ¡Ôù£¬ÒÑÁì¹ı¾­Ñé£¬Ã»Áì¹ıÎïÆ·
+--MD_GIFT_OUTLINEæ„ä¹‰:
+--0:ä¸è®©é¢†ç¦»çº¿é¦ˆèµ 
+--1é¢†ç¦»çº¿é¦ˆèµ ï¼Œç»éªŒå’Œç‰©å“
+--2é¢†ç¦»çº¿é¦ˆèµ ï¼Œå·²é¢†è¿‡ç»éªŒï¼Œæ²¡é¢†è¿‡ç‰©å“
 function x500619_SetGiveFlag(sceneId, selfId, nFlag)
 
 	if (nFlag == 1 or nFlag == 2) then

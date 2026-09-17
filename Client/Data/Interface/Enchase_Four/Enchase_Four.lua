@@ -6,9 +6,9 @@ local objCared = -1;
 local MAX_OBJ_DISTANCE = 3.0;
 local LastBaoshi = -1;
 local LastZhuangbei = -1;
-local LastCharm = -1;            --×îºóÒ»´ÎÏâÇ¶·û
-local LastOdds = -1;             --×îºóÒ»´Î¼¸ÂÊÖ®Öé
-local SuccRate = 25;						 --ÏâÇ¶µÄ³É¹¦ÂÊ
+local LastCharm = -1;            --æœ€åä¸€æ¬¡é•¶åµŒç¬¦
+local LastOdds = -1;             --æœ€åä¸€æ¬¡å‡ ç‡ä¹‹ç 
+local SuccRate = 25;						 --é•¶åµŒçš„æˆåŠŸç‡
 
 
 local g_Object = -1;
@@ -32,7 +32,7 @@ function Enchase_Four_PreLoad()
 	--this:RegisterEvent("DISABLE_ENCHASE_ALL_GEM");
 	this:RegisterEvent("RESUME_ENCHASE_GEM");
 	this:RegisterEvent("CLOSE_SYNTHESIZE_ENCHASE");
-	this:RegisterEvent("MONEYJZ_CHANGE")		--½»×ÓÆÕ¼° Vega
+	this:RegisterEvent("MONEYJZ_CHANGE")		--äº¤å­æ™®åŠ Vega
 
 end
 
@@ -88,10 +88,10 @@ function Enchase_Four_OnEvent(event)
 			return;
 		end
 		
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ı£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æœå’ŒNPCçš„è·ç¦»å¤§äºä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if(arg1 == "distance" and tonumber(arg2)>MAX_OBJ_DISTANCE or arg1=="destroy") then
 			
-			--È¡Ïû¹ØĞÄ
+			--å–æ¶ˆå…³å¿ƒ
 			Enchase_Four_Cancel_Clicked()
 		end
 
@@ -109,7 +109,7 @@ function Enchase_Four_OnEvent(event)
 		objCared = DataPool : GetNPCIDByServerID(xx);
 		AxTrace(0,1,"xx="..xx .. " objCared="..objCared)
 		if objCared == -1 then
-				PushDebugMessage("server´«¹ıÀ´µÄÊı¾İÓĞÎÊÌâ¡£");
+				PushDebugMessage("serverä¼ è¿‡æ¥çš„æ•°æ®æœ‰é—®é¢˜ã€‚");
 				return;
 		end
 		BeginCareObject_Enchase_Four(objCared)
@@ -118,7 +118,7 @@ function Enchase_Four_OnEvent(event)
 	elseif ( event == "UPDATE_COMPOSE_GEM" and this:IsVisible() ) then
 		Enchase_Four_Update(arg0,arg1);
 	elseif ( event == "PACKAGE_ITEM_CHANGED" and this:IsVisible() ) then
-    --ÓĞÈÎºÎ¶«Î÷¸Ä±ä¶¼ÒªÖØÖÃ
+    --æœ‰ä»»ä½•ä¸œè¥¿æ”¹å˜éƒ½è¦é‡ç½®
     LastZhuangbei = -1;
 	  LastBaoshi = -1;
 	  LastCharm = -1;
@@ -161,7 +161,7 @@ function Enchase_Four_OnEvent(event)
 	elseif (event == "UNIT_MONEY" and this:IsVisible()) then
 		Enchase_Four_CurrentlyMoney:SetProperty("MoneyNumber", tostring(Player:GetData("MONEY")));
 	elseif (event == "MONEYJZ_CHANGE" and this:IsVisible()) then
-		Enchase_Four_CurrentlyJiaozi:SetProperty("MoneyNumber", tostring(Player:GetData("MONEY_JZ")));   --½»×ÓÆÕ¼° Vega
+		Enchase_Four_CurrentlyJiaozi:SetProperty("MoneyNumber", tostring(Player:GetData("MONEY_JZ")));   --äº¤å­æ™®åŠ Vega
 	end
 
 end
@@ -202,7 +202,7 @@ function Enchase_Four_Update(UI_index,Item_index)
 	local theAction = EnumAction(i_index, "packageitem");
 
 	Enchase_Four_CurrentlyMoney:SetProperty("MoneyNumber", tostring(Player:GetData("MONEY")));
-	Enchase_Four_CurrentlyJiaozi:SetProperty("MoneyNumber", tostring(Player:GetData("MONEY_JZ")));       --½»×ÓÆÕ¼° Vega
+	Enchase_Four_CurrentlyJiaozi:SetProperty("MoneyNumber", tostring(Player:GetData("MONEY_JZ")));       --äº¤å­æ™®åŠ Vega
 	
 	if theAction:GetID() ~= 0 then
 						
@@ -212,7 +212,7 @@ function Enchase_Four_Update(UI_index,Item_index)
 				local EquipPoint = LifeAbility : Get_Equip_Point(i_index)
 				if EquipPoint == -1 or EquipPoint == 8 or EquipPoint == 9 or EquipPoint == 10 or EquipPoint == 16 then
 					if EquipPoint ~= -1 then
-						PushDebugMessage("²»ÄÜ·ÅÈëÕâÖÖ×°±¸¡£")
+						PushDebugMessage("ä¸èƒ½æ”¾å…¥è¿™ç§è£…å¤‡ã€‚")
 					end
 					return
 				end
@@ -266,7 +266,7 @@ function Enchase_Four_Update(UI_index,Item_index)
 						return
 					end
 					if not EquipGemTable[EquipPoint] then
-						PushDebugMessage("´Ë×°±¸ÎŞ·¨ÏâÇ¶¡£")
+						PushDebugMessage("æ­¤è£…å¤‡æ— æ³•é•¶åµŒã€‚")
 						return
 					end
 				
@@ -279,7 +279,7 @@ function Enchase_Four_Update(UI_index,Item_index)
 					end
 					
 					if passFlag == 0 then
-						PushDebugMessage("´ËÖÖ±¦Ê¯²»ÄÜÏâÇ¶ÔÚÕâÀà×°±¸ÉÏ¡£")
+						PushDebugMessage("æ­¤ç§å®çŸ³ä¸èƒ½é•¶åµŒåœ¨è¿™ç±»è£…å¤‡ä¸Šã€‚")
 						return
 					end
 								
@@ -318,12 +318,12 @@ function Enchase_Four_Update(UI_index,Item_index)
 				local gem_type  = LifeAbility : Get_Gem_Level(i_index,2);
 				local EquipPoint = LifeAbility : Get_Equip_Point(GEM_QUALITY_FOUR[1])
 				if(tonumber(EquipPoint)== INVALID_ID) then
-					PushDebugMessage("ÇëÏÈ·ÅÈëÒªÏâÇ¶µÄ×°±¸£¡")
+					PushDebugMessage("è¯·å…ˆæ”¾å…¥è¦é•¶åµŒçš„è£…å¤‡ï¼")
 					Enchase_Four_Resume_Gem(25)
 					return;
 				end
 				if not EquipGemTable[EquipPoint] then
-					PushDebugMessage("´Ë×°±¸ÎŞ·¨ÏâÇ¶¡£")
+					PushDebugMessage("æ­¤è£…å¤‡æ— æ³•é•¶åµŒã€‚")
 					Enchase_Four_Resume_Gem(25)
 					return
 				end
@@ -337,7 +337,7 @@ function Enchase_Four_Update(UI_index,Item_index)
 				end
 					
 				if passFlag == 0 then
-					PushDebugMessage("´ËÖÖ±¦Ê¯²»ÄÜÏâÇ¶ÔÚÕâÀà×°±¸ÉÏ¡£")
+					PushDebugMessage("æ­¤ç§å®çŸ³ä¸èƒ½é•¶åµŒåœ¨è¿™ç±»è£…å¤‡ä¸Šã€‚")
 					return
 				end
 			
@@ -378,11 +378,11 @@ function Enchase_Four_Update(UI_index,Item_index)
 				GEM_QUALITY_FOUR[u_index] = i_index
 			elseif u_index == 3 then
 				if PlayerPackage : GetItemTableIndex( i_index ) == 30900009 then
-					Enchase_Four_Explain : SetText("#cFF0000³É¹¦ÂÊ:50%")
+					Enchase_Four_Explain : SetText("#cFF0000æˆåŠŸç‡:50%")
 				elseif PlayerPackage : GetItemTableIndex( i_index ) == 30900010 then
-					Enchase_Four_Explain : SetText("#cFF0000³É¹¦ÂÊ:75%")
+					Enchase_Four_Explain : SetText("#cFF0000æˆåŠŸç‡:75%")
 				else
-					PushDebugMessage("ÕâÀï±ØĞë·ÅÈë#{_ITEM30900009}»òÕß#{_ITEM30900010}¡£")
+					PushDebugMessage("è¿™é‡Œå¿…é¡»æ”¾å…¥#{_ITEM30900009}æˆ–è€…#{_ITEM30900010}ã€‚")
 					return
 				end
 				if GEM_QUALITY_FOUR[u_index] ~= -1 then
@@ -393,7 +393,7 @@ function Enchase_Four_Update(UI_index,Item_index)
 				GEM_QUALITY_FOUR[u_index] = i_index
 			elseif u_index == 4 then
 				if PlayerPackage : GetItemTableIndex( i_index ) ~= 30900011 then
-					PushDebugMessage("ÕâÀï±ØĞë·ÅÈë#{_ITEM30900011}¡£")
+					PushDebugMessage("è¿™é‡Œå¿…é¡»æ”¾å…¥#{_ITEM30900011}ã€‚")
 					return
 				end
 				if GEM_QUALITY_FOUR[u_index] ~= -1 then
@@ -423,7 +423,7 @@ function Enchase_Four_Buttons_Clicked()
 
 	if(LastZhuangbei ~= GEM_QUALITY_FOUR[1] or LastBaoshi ~=	GEM_QUALITY_FOUR[2]
 	    or LastCharm ~= GEM_QUALITY_FOUR[3] or LastOdds ~= GEM_QUALITY_FOUR[4]) then
-	--×°±¸ ±¦Ê¯ ÏâÇ¶·û ¼¸ÂÊÖ®Öé ±äÁË
+	--è£…å¤‡ å®çŸ³ é•¶åµŒç¬¦ å‡ ç‡ä¹‹ç  å˜äº†
 	  LastZhuangbei = GEM_QUALITY_FOUR[1];
 	  LastBaoshi = GEM_QUALITY_FOUR[2];
 	  LastCharm = GEM_QUALITY_FOUR[3];
@@ -451,24 +451,24 @@ function Enchase_Four_Buttons_Clicked()
 	  end
 	  
 		local equipTableIndex = PlayerPackage : GetItemTableIndex( GEM_QUALITY_FOUR[1] )
-		-- ñÒÉÙÎ¢£¬2008.7.1¡£ÖØÂ¥½ä¡¢ÖØÂ¥ÓñµÄ»úÖÆĞŞ¸Ä£º1¡¢¿ÉÒÔ´ò¿×£»2¡¢¿ÉÒÔÏâÇ¶±¦Ê¯£¬µ«Ö»ÄÜÏâÇ¶²»°ó¶¨µÄ±¦Ê¯
+		-- è¤šå°‘å¾®ï¼Œ2008.7.1ã€‚é‡æ¥¼æˆ’ã€é‡æ¥¼ç‰çš„æœºåˆ¶ä¿®æ”¹ï¼š1ã€å¯ä»¥æ‰“å­”ï¼›2ã€å¯ä»¥é•¶åµŒå®çŸ³ï¼Œä½†åªèƒ½é•¶åµŒä¸ç»‘å®šçš„å®çŸ³
 		if(BaoshiBind == 1) then
 	  	if(equipTableIndex == 10422016 or equipTableIndex == 10423024) then
-	  		PushDebugMessage("Õâ¼ş×°±¸²»ÄÜÏâÇ¶ÒÑ¾­°ó¶¨µÄ±¦Ê¯¡£");
+	  		PushDebugMessage("è¿™ä»¶è£…å¤‡ä¸èƒ½é•¶åµŒå·²ç»ç»‘å®šçš„å®çŸ³ã€‚");
 				return
 	  	end
 		end
 
 		if(BaoshiBind == 1 or CharmBind == 1 or OddsBind ==1) then
-		--Èç¹û ±¦Ê¯ ÏâÇ¶·û ¼¸ÂÊÖ®Öé ÈÎÒâÒ»ÏîÊÇ°ó¶¨µÄ
+		--å¦‚æœ å®çŸ³ é•¶åµŒç¬¦ å‡ ç‡ä¹‹ç  ä»»æ„ä¸€é¡¹æ˜¯ç»‘å®šçš„
 			
 			if(ZhuangbeiBind == 1) then
-			--Èç¹û×°±¸ÊÇ°ó¶¨µÄ
+			--å¦‚æœè£…å¤‡æ˜¯ç»‘å®šçš„
 			
 				ShowSystemInfo("GEM_ENCHASE_001");
 					return;
 			elseif(ZhuangbeiBind == 0) then
-			--Èç¹û×°±¸ÊÇ²»°ó¶¨µÄ
+			--å¦‚æœè£…å¤‡æ˜¯ä¸ç»‘å®šçš„
 			 		ShowSystemInfo("GEM_ENCHASE_002");
 					return;
 			end
@@ -478,12 +478,12 @@ function Enchase_Four_Buttons_Clicked()
 	end
 		
 	if GEM_QUALITY_FOUR[1] == -1 then
-		PushDebugMessage("Çë·ÅÈëÒªÏâÇ¶±¦Ê¯µÄ×°±¸¡£")
+		PushDebugMessage("è¯·æ”¾å…¥è¦é•¶åµŒå®çŸ³çš„è£…å¤‡ã€‚")
 		return
 	end
 	
 	if GEM_QUALITY_FOUR[2] == -1 then
-		PushDebugMessage("Çë·ÅÈëÒªÏâÇ¶µÄ±¦Ê¯¡£")
+		PushDebugMessage("è¯·æ”¾å…¥è¦é•¶åµŒçš„å®çŸ³ã€‚")
 		return
 	end
 	
@@ -492,7 +492,7 @@ function Enchase_Four_Buttons_Clicked()
 	if GEM_QUALITY_FOUR[3] ~= -1 then 
 		Item_3 = PlayerPackage : GetItemTableIndex( GEM_QUALITY_FOUR[3] )
 	else
-		PushDebugMessage("Çë·ÅÈë±¦Ê¯ÏâÇ¶·û¡£")
+		PushDebugMessage("è¯·æ”¾å…¥å®çŸ³é•¶åµŒç¬¦ã€‚")
 		return
 	end
 	
@@ -527,9 +527,9 @@ function Enchase_Four_OnHidden()
 	return
 end
 --=========================================================
---¿ªÊ¼¹ØĞÄNPC£¬
---ÔÚ¿ªÊ¼¹ØĞÄÖ®Ç°ĞèÒªÏÈÈ·¶¨Õâ¸ö½çÃæÊÇ²»ÊÇÒÑ¾­ÓĞ¡°¹ØĞÄ¡±µÄNPC£¬
---Èç¹ûÓĞµÄ»°£¬ÏÈÈ¡ÏûÒÑ¾­ÓĞµÄ¡°¹ØĞÄ¡±
+--å¼€å§‹å…³å¿ƒNPCï¼Œ
+--åœ¨å¼€å§‹å…³å¿ƒä¹‹å‰éœ€è¦å…ˆç¡®å®šè¿™ä¸ªç•Œé¢æ˜¯ä¸æ˜¯å·²ç»æœ‰â€œå…³å¿ƒâ€çš„NPCï¼Œ
+--å¦‚æœæœ‰çš„è¯ï¼Œå…ˆå–æ¶ˆå·²ç»æœ‰çš„â€œå…³å¿ƒâ€
 --=========================================================
 function BeginCareObject_Enchase_Four(objCaredId)
 
@@ -540,7 +540,7 @@ function BeginCareObject_Enchase_Four(objCaredId)
 end
 
 --=========================================================
---Í£Ö¹¶ÔÄ³NPCµÄ¹ØĞÄ
+--åœæ­¢å¯¹æŸNPCçš„å…³å¿ƒ
 --=========================================================
 function StopCareObject_Enchase_Four(objCaredId)
 	this:CareObject(objCaredId, 0, "Enchase_Four");
@@ -573,14 +573,14 @@ function Enchase_Four_Resume_Gem(nIndex)
 end
 
 function Update_Four_Rate()
-	Enchase_Four_Explain : SetText("#cFF0000³É¹¦ÂÊ:25%")
+	Enchase_Four_Explain : SetText("#cFF0000æˆåŠŸç‡:25%")
 	SuccRate = 25;
 	if GEM_QUALITY_FOUR[3] ~= -1 then
 		if PlayerPackage : GetItemTableIndex( GEM_QUALITY_FOUR[3] ) == 30900009 then
-			Enchase_Four_Explain : SetText("#cFF0000³É¹¦ÂÊ:50%")
+			Enchase_Four_Explain : SetText("#cFF0000æˆåŠŸç‡:50%")
 			SuccRate = 50;
 		elseif PlayerPackage : GetItemTableIndex( GEM_QUALITY_FOUR[3] ) == 30900010 then
-			Enchase_Four_Explain : SetText("#cFF0000³É¹¦ÂÊ:100%")
+			Enchase_Four_Explain : SetText("#cFF0000æˆåŠŸç‡:100%")
 			SuccRate = 100;
 		end
 	end

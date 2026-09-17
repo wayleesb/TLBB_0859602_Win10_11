@@ -1,22 +1,22 @@
--- Ç¿ÖÆ½â³ı½á°İÈÎÎñ
+-- å¼ºåˆ¶è§£é™¤ç»“æ‹œä»»åŠ¡
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x806000_g_scriptId = 806000
 
---ÌáÊ¾ĞÅÏ¢
+--æç¤ºä¿¡æ¯
 x806000_g_msg_swear					= {}
-x806000_g_msg_swear["uns"]	= "½â³ı½á°İ"
-x806000_g_msg_swear["cas"]	= " Ã»ÓĞ½á°İ¹ı£¬Òò´ËÎŞ·¨½â³ı½á°İ¹ØÏµ¡£"
-x806000_g_msg_swear["unc"]	= " ½â³ı½á°İ¹ØÏµºó£¬½«»áÓë½á°İµÄÍæ¼ÒºÃÓÑ¶È½µµÍµ½500£¬ÇëÎÊÊÇ·ñÒª½â³ı½á°İ¹ØÏµ¡£"
+x806000_g_msg_swear["uns"]	= "è§£é™¤ç»“æ‹œ"
+x806000_g_msg_swear["cas"]	= " æ²¡æœ‰ç»“æ‹œè¿‡ï¼Œå› æ­¤æ— æ³•è§£é™¤ç»“æ‹œå…³ç³»ã€‚"
+x806000_g_msg_swear["unc"]	= " è§£é™¤ç»“æ‹œå…³ç³»åï¼Œå°†ä¼šä¸ç»“æ‹œçš„ç©å®¶å¥½å‹åº¦é™ä½åˆ°500ï¼Œè¯·é—®æ˜¯å¦è¦è§£é™¤ç»“æ‹œå…³ç³»ã€‚"
 
 --Key for AddNumText
 x806000_g_key					= {}
-x806000_g_key["uns"]	= 10000	--½â³ı½á°İ
-x806000_g_key["all"]	= 20000	--Í¬Òâ½â³ı½á°İ
-x806000_g_key["una"]	= 30000	--È¡Ïû½â³ı½á°İ
+x806000_g_key["uns"]	= 10000	--è§£é™¤ç»“æ‹œ
+x806000_g_key["all"]	= 20000	--åŒæ„è§£é™¤ç»“æ‹œ
+x806000_g_key["una"]	= 30000	--å–æ¶ˆè§£é™¤ç»“æ‹œ
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x806000_OnEnumerate( sceneId, selfId, targetId )
 	AddNumText( sceneId, x806000_g_scriptId, x806000_g_msg_swear["uns"], 6, x806000_g_key["uns"] )
@@ -24,12 +24,12 @@ end
 
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x806000_OnDefaultEvent( sceneId, selfId, targetId )
 	local	key	= GetNumText()
 
-	--½â³ı½á°İ
+	--è§£é™¤ç»“æ‹œ
 	if key == x806000_g_key["uns"] then
 		if x806000_CheckAccept( sceneId, selfId, targetId ) == 0 then
 			return 0
@@ -38,7 +38,7 @@ function x806000_OnDefaultEvent( sceneId, selfId, targetId )
 		return 1
 	end
 
-	--Í¬Òâ½â³ı
+	--åŒæ„è§£é™¤
 	if key == x806000_g_key["all"] then
 		x806000_DoUnswear( sceneId, selfId, targetId )
 
@@ -49,7 +49,7 @@ function x806000_OnDefaultEvent( sceneId, selfId, targetId )
 		return 1
 	end
 
-	--È¡Ïû½â³ı
+	--å–æ¶ˆè§£é™¤
 	if key == x806000_g_key["una"] then
 		BeginUICommand( sceneId )
 		UICommand_AddInt( sceneId, targetId )
@@ -60,7 +60,7 @@ function x806000_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x806000_CheckAccept( sceneId, selfId, targetId )
 	local BrotherNum = LuaFnIsSweared(sceneId, selfId)
@@ -71,19 +71,19 @@ function x806000_CheckAccept( sceneId, selfId, targetId )
 end
 
 --**********************************
---È·ÈÏ´°¿Ú
+--ç¡®è®¤çª—å£
 --**********************************
 function x806000_OnSubmit( sceneId, selfId, targetId )
 	BeginEvent( sceneId )
 		AddText( sceneId, x806000_g_msg_swear["unc"] )
-		AddNumText( sceneId, x806000_g_scriptId, "È·¶¨", 6, x806000_g_key["all"] )
-		AddNumText( sceneId, x806000_g_scriptId, "È¡Ïû", 8, x806000_g_key["una"] )
+		AddNumText( sceneId, x806000_g_scriptId, "ç¡®å®š", 6, x806000_g_key["all"] )
+		AddNumText( sceneId, x806000_g_scriptId, "å–æ¶ˆ", 8, x806000_g_key["una"] )
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+--å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x806000_MessageBox( sceneId, selfId, targetId, msg )
 	BeginEvent( sceneId )
@@ -94,7 +94,7 @@ end
 
 
 --**********************************
---Ç¿ÖÆ½â³ı½á°İ
+--å¼ºåˆ¶è§£é™¤ç»“æ‹œ
 --**********************************
 function x806000_DoUnswear( sceneId, selfId, targetId )
 	local BrotherNum = LuaFnIsSweared(sceneId, selfId)
@@ -102,16 +102,16 @@ function x806000_DoUnswear( sceneId, selfId, targetId )
 	local selfGuid = LuaFnGetGUID( sceneId, selfId )
 	local AllDismiss = 0
 	
-	--Èç¹ûÍÅÌåÖĞÖ»ÓĞÁ½¸öÈË£¬ÔòÈ«²¿½âÉ¢
+	--å¦‚æœå›¢ä½“ä¸­åªæœ‰ä¸¤ä¸ªäººï¼Œåˆ™å…¨éƒ¨è§£æ•£
 	if BrotherNum == 1 then
 		AllDismiss = 1
 	end
 	
-	--É¾³ı³ÆºÅ
+	--åˆ é™¤ç§°å·
 	AwardJieBaiTitle( sceneId, selfId, "" )
 	DispatchAllTitle( sceneId, selfId )
 	
-	--´¢´æºÃÓÑµÄGUID
+	--å‚¨å­˜å¥½å‹çš„GUID
 	local i = 0
 	local BrotherGuid = {}
 	while i < BrotherNum do
@@ -119,27 +119,27 @@ function x806000_DoUnswear( sceneId, selfId, targetId )
 		i = i + 1
 	end
 
-	--ÖğÒ»µÄ½â³ı½á°İ¹ØÏµ	
+	--é€ä¸€çš„è§£é™¤ç»“æ‹œå…³ç³»	
 	i = 0
 	while i < BrotherNum do
 		local theGUID = BrotherGuid[i]
 		if theGUID ~= nil then
 
-			--½µµÍÓÑºÃ¶Èµ½500
+			--é™ä½å‹å¥½åº¦åˆ°500
 			local FriendPoint = LuaFnGetFriendPointByGUID( sceneId, selfId, theGUID )
 			if FriendPoint > 500 then
 				LuaFnSetFriendPointByGUID( sceneId, selfId, theGUID, 500 )
 			end
 
-			--È¡Ïû½á°İ
+			--å–æ¶ˆç»“æ‹œ
 			LuaFnUnswear( sceneId, selfId, theGUID )
 
-			--·¢ËÍÆÕÍ¨ÓÊ¼ş
+			--å‘é€æ™®é€šé‚®ä»¶
 			local FriendName = LuaFnGetFriendName( sceneId, selfId, theGUID )
-			LuaFnSendSystemMail( sceneId, FriendName, selfName .. "ÒÑ¾­ÓëÄú½â³ıÁË½á°İ¹ØÏµ¡£" )
-			--LuaFnSendNormalMail( sceneId, selfId, FriendName, selfName .. "ÒÑ¾­ÓëÄú½â³ıÁË½á°İ¹ØÏµ¡£" )
+			LuaFnSendSystemMail( sceneId, FriendName, selfName .. "å·²ç»ä¸æ‚¨è§£é™¤äº†ç»“æ‹œå…³ç³»ã€‚" )
+			--LuaFnSendNormalMail( sceneId, selfId, FriendName, selfName .. "å·²ç»ä¸æ‚¨è§£é™¤äº†ç»“æ‹œå…³ç³»ã€‚" )
 
-			--·¢ËÍ¿ÉÖ´ĞĞÓÊ¼ş
+			--å‘é€å¯æ‰§è¡Œé‚®ä»¶
 			LuaFnSendScriptMail( sceneId, FriendName, MAIL_UNSWEAR, selfGuid, AllDismiss, 0 )
 
 		end

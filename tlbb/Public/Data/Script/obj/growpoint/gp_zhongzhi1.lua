@@ -1,15 +1,15 @@
---Éú³¤µã½Å±¾£¬Ó×ÃçÏµÁĞ
+--ç”Ÿé•¿ç‚¹è„šæœ¬ï¼Œå¹¼è‹—ç³»åˆ—
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 --g_ScriptId = 711000
 
--- Éú³¤µãĞÅÏ¢
+-- ç”Ÿé•¿ç‚¹ä¿¡æ¯
 x711000_g_GPInfo = {}
 
--- Éú³¤µãÀàĞÍºÅÎªË÷ÒıºÅ
+-- ç”Ÿé•¿ç‚¹ç±»å‹å·ä¸ºç´¢å¼•å·
 
--- NextGeneration: ¸ÃÉú³¤µã»ØÊÕºó³¤³öµÄĞÂÉú³¤µãµÄÀàĞÍ
--- RecycleDuration: »ØÊÕÊ±¼ä
+-- NextGeneration: è¯¥ç”Ÿé•¿ç‚¹å›æ”¶åé•¿å‡ºçš„æ–°ç”Ÿé•¿ç‚¹çš„ç±»å‹
+-- RecycleDuration: å›æ”¶æ—¶é—´
 
 x711000_g_GPInfo[	501	] = { NextGeneration =	502	, RecycleDuration =	255000	}
 x711000_g_GPInfo[	504	] = { NextGeneration =	505	, RecycleDuration =	255000	}
@@ -73,11 +73,11 @@ function x711000_OnRecycle( sceneId, selfId, targetId )
 	local itemBoxZ = GetItemBoxWorldPosZ( sceneId, targetId )
 	local ItemBoxId = ItemBoxEnterScene( itemBoxX, itemBoxZ, GPInfo.NextGeneration, sceneId, QUALITY_MUST_BE_CHANGE,0 )
 
-	--µÃµ½Éú³¤µãµÄÖ÷ÈËGUID
-	local ItemBoxOwnerGUID = GetItemBoxOwner( sceneId, targetId )				--²ÎÊıÊÇSceneID£¬ItemBoxID
-	--¸øItemBoxÉè¶¨Ö÷ÈË
+	--å¾—åˆ°ç”Ÿé•¿ç‚¹çš„ä¸»äººGUID
+	local ItemBoxOwnerGUID = GetItemBoxOwner( sceneId, targetId )				--å‚æ•°æ˜¯SceneIDï¼ŒItemBoxID
+	--ç»™ItemBoxè®¾å®šä¸»äºº
 	SetItemBoxOwner( sceneId, ItemBoxId, ItemBoxOwnerGUID )
 
-	SetItemBoxMaxGrowTime( sceneId, ItemBoxId, GPInfo.RecycleDuration )			--Éè¶¨»ØÊÕÊ±¼ä
+	SetItemBoxMaxGrowTime( sceneId, ItemBoxId, GPInfo.RecycleDuration )			--è®¾å®šå›æ”¶æ—¶é—´
 	return 1
 end

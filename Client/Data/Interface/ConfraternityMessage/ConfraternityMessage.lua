@@ -1,14 +1,14 @@
 -- ConfraternityMessage.lua
--- °ï»áÁôÑÔ½çÃæ
+-- å¸®ä¼šç•™è¨€ç•Œé¢
 
-local currentChoose = -1											-- 1£ºÈ·ÈÏ¿ò£»2£ºÊäÈë¿ò£»3£º²é¿´¿ò
-local waitLeaveWordUpdate = 0                 -- ÊÇ·ñÕıÔÚµÈ´ıLeaveWord¸üĞÂ
+local currentChoose = -1											-- 1ï¼šç¡®è®¤æ¡†ï¼›2ï¼šè¾“å…¥æ¡†ï¼›3ï¼šæŸ¥çœ‹æ¡†
+local waitLeaveWordUpdate = 0                 -- æ˜¯å¦æ­£åœ¨ç­‰å¾…LeaveWordæ›´æ–°
 
-local moneyCosts = 1000												-- ÁôÑÔÏûºÄ
+local moneyCosts = 1000												-- ç•™è¨€æ¶ˆè€—
 
 function ConfraternityMessage_PreLoad()
 	this : RegisterEvent( "UI_COMMAND" )
-	this : RegisterEvent( "GUILD_LEAVE_WORD" )						-- °ï»áÁôÑÔ
+	this : RegisterEvent( "GUILD_LEAVE_WORD" )						-- å¸®ä¼šç•™è¨€
 end
 
 function ConfraternityMessage_OnLoad()
@@ -16,8 +16,8 @@ function ConfraternityMessage_OnLoad()
 end
 
 function ConfraternityMessage_OnEvent(event)
-	if event == "UI_COMMAND" and tonumber( arg0 ) == 19840424 then	-- ´ò¿ª½çÃæ
-		if this : IsVisible() then									-- Èç¹û½çÃæ¿ª×Å£¬Ôò²»´¦Àí
+	if event == "UI_COMMAND" and tonumber( arg0 ) == 19840424 then	-- æ‰“å¼€ç•Œé¢
+		if this : IsVisible() then									-- å¦‚æœç•Œé¢å¼€ç€ï¼Œåˆ™ä¸å¤„ç†
 			return
 		end
 
@@ -27,7 +27,7 @@ function ConfraternityMessage_OnEvent(event)
 		return
 	end
 
-	if event == "GUILD_LEAVE_WORD" and this : IsVisible() then		-- °ï»áÁôÑÔ
+	if event == "GUILD_LEAVE_WORD" and this : IsVisible() then		-- å¸®ä¼šç•™è¨€
 		if currentChoose == 2 then
 			return
 		end
@@ -37,18 +37,18 @@ function ConfraternityMessage_OnEvent(event)
 		return
 	end
 	
-	--×¼±¸´ò¿ª²é¿´ÁôÑÔ½çÃæ....²»Ö±½Ó´ò¿ªÊÇÒòÎª¿Í»§¶ËÖĞµÄLeaveWord¿ÉÄÜ²»ÊÇ×îĞÂµÄ....
-	--Óë°ï»á×Ü¹Ü¶Ô»°Ñ¡²é¿´ÁôÑÔÊ±»áÏòworldÇëÇó×îĞÂµÄLeaveWord....µÈ×îĞÂµÄLeaveWord¹ıÀ´ºó»á·¢ËÍUI_COMMAND 19841121....µ½Ê±ºòÔÙÏÔÊ¾ÁôÑÔ´°¿Ú....
+	--å‡†å¤‡æ‰“å¼€æŸ¥çœ‹ç•™è¨€ç•Œé¢....ä¸ç›´æ¥æ‰“å¼€æ˜¯å› ä¸ºå®¢æˆ·ç«¯ä¸­çš„LeaveWordå¯èƒ½ä¸æ˜¯æœ€æ–°çš„....
+	--ä¸å¸®ä¼šæ€»ç®¡å¯¹è¯é€‰æŸ¥çœ‹ç•™è¨€æ—¶ä¼šå‘worldè¯·æ±‚æœ€æ–°çš„LeaveWord....ç­‰æœ€æ–°çš„LeaveWordè¿‡æ¥åä¼šå‘é€UI_COMMAND 19841121....åˆ°æ—¶å€™å†æ˜¾ç¤ºç•™è¨€çª—å£....
 	if event == "UI_COMMAND" and tonumber( arg0 ) == 19841120 then
 		
-		--ÉèÖÃµ±Ç°×´Ì¬ÎªµÈ´ıLeaveWord¸üĞÂ....
+		--è®¾ç½®å½“å‰çŠ¶æ€ä¸ºç­‰å¾…LeaveWordæ›´æ–°....
 		waitLeaveWordUpdate = 1
-		--ÏòWorldÇëÇó°ï»áÁôÑÔ(¸üĞÂ±¾µØ°ï»áÁôÑÔ)....
+		--å‘Worldè¯·æ±‚å¸®ä¼šç•™è¨€(æ›´æ–°æœ¬åœ°å¸®ä¼šç•™è¨€)....
 		Guild : AskGuildLeaveWord()
 
 	end
 
-	--LeaveWordÒÑ¾­¸üĞÂ....Èç¹ûµ±Ç°×´Ì¬ÎªµÈ´ıLeaveWord¸üĞÂÔò´ò¿ª²é¿´ÁôÑÔ½çÃæ....
+	--LeaveWordå·²ç»æ›´æ–°....å¦‚æœå½“å‰çŠ¶æ€ä¸ºç­‰å¾…LeaveWordæ›´æ–°åˆ™æ‰“å¼€æŸ¥çœ‹ç•™è¨€ç•Œé¢....
 	if event == "UI_COMMAND" and tonumber( arg0 ) == 19841121 then
 
 		if waitLeaveWordUpdate == 1 then
@@ -67,20 +67,20 @@ function ConfraternityMessage_RefreshWindow()
 
 	local str = ""
 
-	if currentChoose == 1 then										-- 1£ºÈ·ÈÏ¿ò£»2£ºÊäÈë¿ò¡££»3£º²é¿´¿ò
+	if currentChoose == 1 then										-- 1ï¼šç¡®è®¤æ¡†ï¼›2ï¼šè¾“å…¥æ¡†ã€‚ï¼›3ï¼šæŸ¥çœ‹æ¡†
 		ConfraternityMessage_Title : SetText( "#{INTERFACE_XML_55}" )
 		ConfraternityMessage_EditInfo : Hide()
 		ConfraternityMessage_Set : Hide()
 		ConfraternityMessage_WarningText : SetText( "#{INTERFACE_XML_820}" )
 		ConfraternityMessage_WarningText : Show()
 		ConfraternityMessage_Ok : Show()
-	elseif currentChoose == 2 then									-- 1£ºÈ·ÈÏ¿ò£»2£ºÊäÈë¿ò¡££»3£º²é¿´¿ò
+	elseif currentChoose == 2 then									-- 1ï¼šç¡®è®¤æ¡†ï¼›2ï¼šè¾“å…¥æ¡†ã€‚ï¼›3ï¼šæŸ¥çœ‹æ¡†
 		ConfraternityMessage_Title : SetText( "#{INTERFACE_XML_55}" )
 		ConfraternityMessage_WarningText : Hide()
 		ConfraternityMessage_Ok : Hide()
 		ConfraternityMessage_EditInfo : Show()
 		ConfraternityMessage_Set : Show()
-	elseif currentChoose == 3 then									-- 1£ºÈ·ÈÏ¿ò£»2£ºÊäÈë¿ò¡££»3£º²é¿´¿ò
+	elseif currentChoose == 3 then									-- 1ï¼šç¡®è®¤æ¡†ï¼›2ï¼šè¾“å…¥æ¡†ã€‚ï¼›3ï¼šæŸ¥çœ‹æ¡†
 		ConfraternityMessage_Title : SetText( "#{INTERFACE_XML_972}" )
 		str = Guild : GetGuildLeaveWord();
 		ConfraternityMessage_WarningText : SetText( str )
@@ -93,16 +93,16 @@ function ConfraternityMessage_RefreshWindow()
 end
 
 function ConfraternityMessage_OK_Clicked()
-	if currentChoose == 1 then										-- 1£ºÈ·ÈÏ¿ò£»2£ºÊäÈë¿ò¡££»3£º²é¿´¿ò
-		-- ÄúµÄ½ğÇ®²»×ã£¬ÇëÈ·ÈÏ
+	if currentChoose == 1 then										-- 1ï¼šç¡®è®¤æ¡†ï¼›2ï¼šè¾“å…¥æ¡†ã€‚ï¼›3ï¼šæŸ¥çœ‹æ¡†
+		-- æ‚¨çš„é‡‘é’±ä¸è¶³ï¼Œè¯·ç¡®è®¤
 		if (Player : GetData( "MONEY" ) + Player : GetData( "MONEY_JZ" ) )< moneyCosts then
-			PushDebugMessage( "ÄãµÄ½ğÇ®ËÆºõ²»×ãÒÔÖ§¸¶°¡¡£" )
+			PushDebugMessage( "ä½ çš„é‡‘é’±ä¼¼ä¹ä¸è¶³ä»¥æ”¯ä»˜å•Šã€‚" )
 		else
-			-- Í¬ÒâÖ§¸¶
+			-- åŒæ„æ”¯ä»˜
 			Guild : ModifyGuildLeaveWord( 1 )
 			return
 		end
-	elseif currentChoose == 2 then									-- 1£ºÈ·ÈÏ¿ò£»2£ºÊäÈë¿ò¡££»3£º²é¿´¿ò
+	elseif currentChoose == 2 then									-- 1ï¼šç¡®è®¤æ¡†ï¼›2ï¼šè¾“å…¥æ¡†ã€‚ï¼›3ï¼šæŸ¥çœ‹æ¡†
 		local ret = Guild : ModifyGuildLeaveWord( ConfraternityMessage_EditInfo : GetText() )
 		if ret == false then
 			return

@@ -1,14 +1,14 @@
---Ê¹ÓÃÅä·½µÄ½Å±¾
+--ä½¿ç”¨é…æ–¹çš„è„šæœ¬
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x338000_g_scriptId = 338000
 
 x338000_g_SkillBooks = {}
 
--- ItemTable ºÅÎªË÷Òı
+-- ItemTable å·ä¸ºç´¢å¼•
 
--- type: ÊéµÄÀàĞÍ£¬1 ±íÊ¾ĞÄ·¨£¬2 ±íÊ¾¼¼ÄÜ
--- menpaiId: Ñ§Ï°µÄ¶ÔÓ¦Åä·½ºÅ
+-- type: ä¹¦çš„ç±»å‹ï¼Œ1 è¡¨ç¤ºå¿ƒæ³•ï¼Œ2 è¡¨ç¤ºæŠ€èƒ½
+-- menpaiId: å­¦ä¹ çš„å¯¹åº”é…æ–¹å·
 -- MP_SHAOLIN	= 0
 -- MP_MINGJIAO	= 1
 -- MP_GAIBANG	= 2
@@ -20,14 +20,14 @@ x338000_g_SkillBooks = {}
 -- MP_XIAOYAO	= 8
 -- MP_WUMENPAI	= 9
 
--- needLevel: ÑĞ¶Á´ËÊéĞèÒªµÄÏàÓ¦ÈËÎï¼¶±ğ£¬ -1 ±íÊ¾Ã»ÓĞÒªÇó
--- needXinfa: ÑĞ¶Á´ËÊéĞèÒªµÄÏàÓ¦ĞÄ·¨£¬ -1 ±íÊ¾Ã»ÓĞÒªÇó
--- needXinfaLevel: ÑĞ¶Á´ËÊéĞèÒªÏàÓ¦ĞÄ·¨µÄµÈ¼¶£¬ -1 ±íÊ¾Ã»ÓĞÒªÇó
--- specialEffectID: ÌØĞ§ºÅ
+-- needLevel: ç ”è¯»æ­¤ä¹¦éœ€è¦çš„ç›¸åº”äººç‰©çº§åˆ«ï¼Œ -1 è¡¨ç¤ºæ²¡æœ‰è¦æ±‚
+-- needXinfa: ç ”è¯»æ­¤ä¹¦éœ€è¦çš„ç›¸åº”å¿ƒæ³•ï¼Œ -1 è¡¨ç¤ºæ²¡æœ‰è¦æ±‚
+-- needXinfaLevel: ç ”è¯»æ­¤ä¹¦éœ€è¦ç›¸åº”å¿ƒæ³•çš„ç­‰çº§ï¼Œ -1 è¡¨ç¤ºæ²¡æœ‰è¦æ±‚
+-- specialEffectID: ç‰¹æ•ˆå·
 
--- ÃÅÅÉÃû³Æ #{_MENPAI" .. menpaiid .. "}
--- ÎïÆ·Ãû³Æ #{_ITEM" .. itemid .. "}
--- ĞÄ·¨Ãû³Æ #{_XINFA" .. xinfaid .. "}
+-- é—¨æ´¾åç§° #{_MENPAI" .. menpaiid .. "}
+-- ç‰©å“åç§° #{_ITEM" .. itemid .. "}
+-- å¿ƒæ³•åç§° #{_XINFA" .. xinfaid .. "}
 x338000_g_SkillBooks[30308002] = { type = 1, id = 55, menpaiId = MP_SHAOLIN, needLevel = 35, needXinfa = -1, needXinfaLevel = 1, specialEffectID = 18 }
 x338000_g_SkillBooks[30308003] = { type = 1, id = 56, menpaiId = MP_MINGJIAO, needLevel = 35, needXinfa = -1, needXinfaLevel = 1, specialEffectID = 18 }
 x338000_g_SkillBooks[30308004] = { type = 1, id = 57, menpaiId = MP_GAIBANG, needLevel = 35, needXinfa = -1, needXinfaLevel = 1, specialEffectID = 18 }
@@ -60,76 +60,76 @@ x338000_g_SkillBooks[30308070] = { type = 2, id = 334, menpaiId = MP_MINGJIAO, n
 x338000_g_SkillBooks[30308071] = { type = 2, id = 515, menpaiId = MP_TIANSHAN, needLevel = 45, needXinfa = 62, needXinfaLevel = 1, specialEffectID = 18 }
 
 x338000_g_TypeNames = {}
-x338000_g_TypeNames[1] = "ÃØ¼®"
-x338000_g_TypeNames[2] = "Òª¾÷"
+x338000_g_TypeNames[1] = "ç§˜ç±"
+x338000_g_TypeNames[2] = "è¦è¯€"
 
 --**********************************
--- ·µ»Ø1£º¼¼ÄÜÀàËÆµÄÎïÆ·£¬¿ÉÒÔ¼ÌĞøÀàËÆ¼¼ÄÜµÄÖ´ĞĞ£»·µ»Ø0£ºÖ´ĞĞ OnDefaultEvent¡£
+-- è¿”å›1ï¼šæŠ€èƒ½ç±»ä¼¼çš„ç‰©å“ï¼Œå¯ä»¥ç»§ç»­ç±»ä¼¼æŠ€èƒ½çš„æ‰§è¡Œï¼›è¿”å›0ï¼šæ‰§è¡Œ OnDefaultEventã€‚
 --**********************************
 function x338000_IsSkillLikeScript( sceneId, selfId )
 	return 1
 end
 
 --**********************************
--- ·µ»Ø1£ºÒÑ¾­È¡Ïû¶ÔÓ¦Ğ§¹û£¬²»ÔÙÖ´ĞĞºóĞø²Ù×÷£»·µ»Ø0£ºÃ»ÓĞ¼ì²âµ½Ïà¹ØĞ§¹û£¬¼ÌĞøÖ´ĞĞ¡£
+-- è¿”å›1ï¼šå·²ç»å–æ¶ˆå¯¹åº”æ•ˆæœï¼Œä¸å†æ‰§è¡Œåç»­æ“ä½œï¼›è¿”å›0ï¼šæ²¡æœ‰æ£€æµ‹åˆ°ç›¸å…³æ•ˆæœï¼Œç»§ç»­æ‰§è¡Œã€‚
 --**********************************
 function x338000_CancelImpacts( sceneId, selfId )
 	return 0
 end
 
 --**********************************
--- Ìõ¼ş¼ì²âÈë¿Ú£º·µ»Ø1£ºÌõ¼ş¼ì²âÍ¨¹ı£¬¿ÉÒÔ¼ÌĞøÖ´ĞĞ£»·µ»Ø0£ºÌõ¼ş¼ì²âÊ§°Ü£¬ÖĞ¶ÏºóĞøÖ´ĞĞ¡£
+-- æ¡ä»¶æ£€æµ‹å…¥å£ï¼šè¿”å›1ï¼šæ¡ä»¶æ£€æµ‹é€šè¿‡ï¼Œå¯ä»¥ç»§ç»­æ‰§è¡Œï¼›è¿”å›0ï¼šæ¡ä»¶æ£€æµ‹å¤±è´¥ï¼Œä¸­æ–­åç»­æ‰§è¡Œã€‚
 --**********************************
 function x338000_OnConditionCheck( sceneId, selfId )
-	-- Ğ£ÑéÊ¹ÓÃµÄÎïÆ·
+	-- æ ¡éªŒä½¿ç”¨çš„ç‰©å“
 	if LuaFnVerifyUsedItem( sceneId, selfId ) ~= 1 then
 		return 0
 	end
 
-	-- ÕÒµ½ÏàÓ¦ÌõÄ¿
+	-- æ‰¾åˆ°ç›¸åº”æ¡ç›®
 	local itemTblIndex = LuaFnGetItemIndexOfUsedItem( sceneId, selfId )
 	local skillBook = x338000_g_SkillBooks[itemTblIndex]
 	if not skillBook then
 		return 0
 	end
 
-	-- Èç¹ûÃÅÅÉ²»ÏàÍ¬
+	-- å¦‚æœé—¨æ´¾ä¸ç›¸åŒ
 	local menpai = GetMenPai( sceneId, selfId )
 	if -1~=skillBook.menpaiId then
 	 if menpai ~= skillBook.menpaiId then
-		 x338000_NotifyFailTips( sceneId, selfId, "Äã²»ÊÇ#{_MENPAI" .. skillBook.menpaiId .. "}µÜ×Ó£¬²»ÄÜÑ§Ï°¸Ã" .. x338000_g_TypeNames[skillBook.type] .. "¡£" )
+		 x338000_NotifyFailTips( sceneId, selfId, "ä½ ä¸æ˜¯#{_MENPAI" .. skillBook.menpaiId .. "}å¼Ÿå­ï¼Œä¸èƒ½å­¦ä¹ è¯¥" .. x338000_g_TypeNames[skillBook.type] .. "ã€‚" )
 		 return 0
 	 end
 	end
 
 	if GetLevel( sceneId, selfId ) < skillBook.needLevel then
-		x338000_NotifyFailTips( sceneId, selfId, "Äã»¹²»ÄÜÑ§Ï°¸Ã" .. x338000_g_TypeNames[skillBook.type] .. "¡£" )
+		x338000_NotifyFailTips( sceneId, selfId, "ä½ è¿˜ä¸èƒ½å­¦ä¹ è¯¥" .. x338000_g_TypeNames[skillBook.type] .. "ã€‚" )
 		return 0
 	end
 
 	if skillBook.needXinfa ~= -1 then
 		local xinfaLevel = HaveXinFa( sceneId, selfId, skillBook.needXinfa )
 		if xinfaLevel < 1 then
-			x338000_NotifyFailTips( sceneId, selfId, "ĞèÒªĞÄ·¨£º#{_XINFA" .. skillBook.needXinfa .. "}¡£" )
+			x338000_NotifyFailTips( sceneId, selfId, "éœ€è¦å¿ƒæ³•ï¼š#{_XINFA" .. skillBook.needXinfa .. "}ã€‚" )
 			return 0
 		end
 
 		if xinfaLevel < skillBook.needXinfaLevel then
-			-- ĞèÒª²âÊÔÕâ¸öµØ·½£¬¿çĞĞ¶øÇÒÃ»ÓĞ·ÖºÅ
-			x338000_NotifyFailTips( sceneId, selfId, "ĞèÒªĞÄ·¨£º#{_XINFA" .. skillBook.needXinfa .. "} "
-				.. skillBook.needXinfaLevel .. " ¼¶£¬µ±Ç° " .. xinfaLevel .. " ¼¶¡£" )
+			-- éœ€è¦æµ‹è¯•è¿™ä¸ªåœ°æ–¹ï¼Œè·¨è¡Œè€Œä¸”æ²¡æœ‰åˆ†å·
+			x338000_NotifyFailTips( sceneId, selfId, "éœ€è¦å¿ƒæ³•ï¼š#{_XINFA" .. skillBook.needXinfa .. "} "
+				.. skillBook.needXinfaLevel .. " çº§ï¼Œå½“å‰ " .. xinfaLevel .. " çº§ã€‚" )
 			return 0
 		end
 	end
 
-	if skillBook.type == 1 then					-- ĞÄ·¨
+	if skillBook.type == 1 then					-- å¿ƒæ³•
 		if HaveXinFa( sceneId, selfId, skillBook.id ) > 0 then
-			x338000_NotifyFailTips( sceneId, selfId, "ÄãÒÑ¾­Ñ§»áÁË¸ÃĞÄ·¨¡£" )
+			x338000_NotifyFailTips( sceneId, selfId, "ä½ å·²ç»å­¦ä¼šäº†è¯¥å¿ƒæ³•ã€‚" )
 			return 0
 		end
-	elseif skillBook.type == 2 then				-- Òª¾÷
+	elseif skillBook.type == 2 then				-- è¦è¯€
 		if HaveSkill( sceneId, selfId, skillBook.id ) == 1 then
-			x338000_NotifyFailTips( sceneId, selfId, "ÄãÒÑ¾­Ñ§»áÁË¸Ã¼¼ÄÜ¡£" )
+			x338000_NotifyFailTips( sceneId, selfId, "ä½ å·²ç»å­¦ä¼šäº†è¯¥æŠ€èƒ½ã€‚" )
 			return 0
 		end
 	end
@@ -138,8 +138,8 @@ function x338000_OnConditionCheck( sceneId, selfId )
 end
 
 --**********************************
---ÏûºÄ¼ì²â¼°´¦ÀíÈë¿Ú£¬¸ºÔğÏûºÄµÄ¼ì²âºÍÖ´ĞĞ£º
---·µ»Ø1£ºÏûºÄ´¦ÀíÍ¨¹ı£¬¿ÉÒÔ¼ÌĞøÖ´ĞĞ£»·µ»Ø0£ºÏûºÄ¼ì²âÊ§°Ü£¬ÖĞ¶ÏºóĞøÖ´ĞĞ¡£
+--æ¶ˆè€—æ£€æµ‹åŠå¤„ç†å…¥å£ï¼Œè´Ÿè´£æ¶ˆè€—çš„æ£€æµ‹å’Œæ‰§è¡Œï¼š
+--è¿”å›1ï¼šæ¶ˆè€—å¤„ç†é€šè¿‡ï¼Œå¯ä»¥ç»§ç»­æ‰§è¡Œï¼›è¿”å›0ï¼šæ¶ˆè€—æ£€æµ‹å¤±è´¥ï¼Œä¸­æ–­åç»­æ‰§è¡Œã€‚
 --**********************************
 function x338000_OnDeplete( sceneId, selfId )
 	if LuaFnDepletingUsedItem( sceneId, selfId ) > 0 then
@@ -150,31 +150,31 @@ function x338000_OnDeplete( sceneId, selfId )
 end
 
 --**********************************
---Ö»»áÖ´ĞĞÒ»´ÎÈë¿Ú£º
---¾ÛÆøºÍË²·¢¼¼ÄÜ»áÔÚÏûºÄÍê³Éºóµ÷ÓÃÕâ¸ö½Ó¿Ú£¨¾ÛÆø½áÊø²¢ÇÒ¸÷ÖÖÌõ¼ş¶¼Âú×ãµÄÊ±ºò£©£¬¶øÒıµ¼
---¼¼ÄÜÒ²»áÔÚÏûºÄÍê³Éºóµ÷ÓÃÕâ¸ö½Ó¿Ú£¨¼¼ÄÜµÄÒ»¿ªÊ¼£¬ÏûºÄ³É¹¦Ö´ĞĞÖ®ºó£©¡£
---·µ»Ø1£º´¦Àí³É¹¦£»·µ»Ø0£º´¦ÀíÊ§°Ü¡£
---×¢£ºÕâÀïÊÇ¼¼ÄÜÉúĞ§Ò»´ÎµÄÈë¿Ú
+--åªä¼šæ‰§è¡Œä¸€æ¬¡å…¥å£ï¼š
+--èšæ°”å’Œç¬å‘æŠ€èƒ½ä¼šåœ¨æ¶ˆè€—å®Œæˆåè°ƒç”¨è¿™ä¸ªæ¥å£ï¼ˆèšæ°”ç»“æŸå¹¶ä¸”å„ç§æ¡ä»¶éƒ½æ»¡è¶³çš„æ—¶å€™ï¼‰ï¼Œè€Œå¼•å¯¼
+--æŠ€èƒ½ä¹Ÿä¼šåœ¨æ¶ˆè€—å®Œæˆåè°ƒç”¨è¿™ä¸ªæ¥å£ï¼ˆæŠ€èƒ½çš„ä¸€å¼€å§‹ï¼Œæ¶ˆè€—æˆåŠŸæ‰§è¡Œä¹‹åï¼‰ã€‚
+--è¿”å›1ï¼šå¤„ç†æˆåŠŸï¼›è¿”å›0ï¼šå¤„ç†å¤±è´¥ã€‚
+--æ³¨ï¼šè¿™é‡Œæ˜¯æŠ€èƒ½ç”Ÿæ•ˆä¸€æ¬¡çš„å…¥å£
 --**********************************
 function x338000_OnActivateOnce( sceneId, selfId )
-	-- ÕÒµ½ÏàÓ¦ÌõÄ¿
+	-- æ‰¾åˆ°ç›¸åº”æ¡ç›®
 	local itemTblIndex = LuaFnGetItemIndexOfUsedItem( sceneId, selfId )
 	local skillBook = x338000_g_SkillBooks[itemTblIndex]
 	if not skillBook then
 		return 0
 	end
 
-	-- Ñ§Ï°
-	if skillBook.type == 1 then					-- ĞÄ·¨
+	-- å­¦ä¹ 
+	if skillBook.type == 1 then					-- å¿ƒæ³•
 		if HaveXinFa( sceneId, selfId, skillBook.id ) > 0 then
-			x338000_NotifyFailTips( sceneId, selfId, "ÄãÒÑ¾­Ñ§»áÁË¸ÃĞÄ·¨¡£" )
+			x338000_NotifyFailTips( sceneId, selfId, "ä½ å·²ç»å­¦ä¼šäº†è¯¥å¿ƒæ³•ã€‚" )
 			return 0
 		else
 			AddXinFa( sceneId, selfId, skillBook.id )
 		end
-	elseif skillBook.type == 2 then				-- Òª¾÷
+	elseif skillBook.type == 2 then				-- è¦è¯€
 		if HaveSkill( sceneId, selfId, skillBook.id ) == 1 then
-			x338000_NotifyFailTips( sceneId, selfId, "ÄãÒÑ¾­Ñ§»áÁË¸Ã¼¼ÄÜ¡£" )
+			x338000_NotifyFailTips( sceneId, selfId, "ä½ å·²ç»å­¦ä¼šäº†è¯¥æŠ€èƒ½ã€‚" )
 			return 0
 		else
 			AddSkill( sceneId, selfId, skillBook.id )
@@ -186,17 +186,17 @@ function x338000_OnActivateOnce( sceneId, selfId )
 end
 
 --**********************************
---Òıµ¼ĞÄÌø´¦ÀíÈë¿Ú£º
---Òıµ¼¼¼ÄÜ»áÔÚÃ¿´ÎĞÄÌø½áÊøÊ±µ÷ÓÃÕâ¸ö½Ó¿Ú¡£
---·µ»Ø£º1¼ÌĞøÏÂ´ÎĞÄÌø£»0£ºÖĞ¶ÏÒıµ¼¡£
---×¢£ºÕâÀïÊÇ¼¼ÄÜĞÄÌøÊ±ÉúĞ§µÄÈë¿Ú
+--å¼•å¯¼å¿ƒè·³å¤„ç†å…¥å£ï¼š
+--å¼•å¯¼æŠ€èƒ½ä¼šåœ¨æ¯æ¬¡å¿ƒè·³ç»“æŸæ—¶è°ƒç”¨è¿™ä¸ªæ¥å£ã€‚
+--è¿”å›ï¼š1ç»§ç»­ä¸‹æ¬¡å¿ƒè·³ï¼›0ï¼šä¸­æ–­å¼•å¯¼ã€‚
+--æ³¨ï¼šè¿™é‡Œæ˜¯æŠ€èƒ½å¿ƒè·³æ—¶ç”Ÿæ•ˆçš„å…¥å£
 --**********************************
 function x338000_OnActivateEachTick( sceneId, selfId )
 	return 1
 end
 
 --**********************************
--- ĞÑÄ¿Ê§°ÜÌáÊ¾
+-- é†’ç›®å¤±è´¥æç¤º
 --**********************************
 function x338000_NotifyFailTips( sceneId, selfId, Tip )
 	BeginEvent( sceneId )

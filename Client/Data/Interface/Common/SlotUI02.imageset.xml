@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<Imageset Name="SlotUI02" Imagefile="Common/tga_SlotUI02.dds" AutoScaled="false">
+
+  	<Image Name="YHYT_BankON_Hover" XPos="180" YPos="0" Width="36" Height="36" />
+    <Image Name="YHYT_BankON_Normal" XPos="180" YPos="36" Width="36" Height="36" />
+    <Image Name="YHYT_BankON_Select" XPos="216" YPos="0" Width="36" Height="36" />
+    <Image Name="YHYT_BankON_Disabled" XPos="216" YPos="36" Width="36" Height="36" />
+	<Image Name="YHYT_BankOff_Hover" XPos="0" YPos="220" Width="36" Height="36" />
+    <Image Name="YHYT_BankOff_Normal" XPos="36" YPos="220" Width="36" Height="36" />
+    <Image Name="YHYT_BankOff_Select" XPos="72" YPos="220" Width="36" Height="36" />
+    <Image Name="YHYT_BankOff_Disabled" XPos="108" YPos="220" Width="36" Height="36" />
+</Imageset>

@@ -23,12 +23,12 @@ function InputMood_OnEvent(event)
 end
 
 --===============================================
--- 确定
+-- 纭畾
 --===============================================
 function InputMood_EventOK()
 	local strMood = InputMood_Input:GetText();
 	if( strMood == "" ) then 
-		PushDebugMessage("心情不能为空");
+		PushDebugMessage("蹇冩儏涓嶈兘涓虹┖");
 		return;
 	end
 	DataPool:SetMood( strMood );
@@ -36,14 +36,14 @@ function InputMood_EventOK()
 end
 
 --===============================================
--- 取消
+-- 鍙栨秷
 --===============================================
 function InputMood_EventCancel()
 	this:Hide();
 end
 
 --===============================================
--- 关闭自动执行
+-- 鍏抽棴鑷姩鎵ц
 --===============================================
 function InputMood_OnHiden()
 	InputMood_Input:SetProperty("DefaultEditBox", "False");

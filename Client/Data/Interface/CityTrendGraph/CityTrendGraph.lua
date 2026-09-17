@@ -33,14 +33,14 @@ end
 
 function City_Trend_SetCtl()
 	g_MembersCtl =	{
-										CityTrendGraph_Numerical1,		--¹¤ÒµÂÊ
-										CityTrendGraph_Numerical4,		--Å©ÒµÂÊ
-										CityTrendGraph_Numerical6,		--ÉÌÒµÂÊ
-										CityTrendGraph_Numerical2,		--¹ú·ÀÂÊ
-										CityTrendGraph_Numerical5,		--¿Æ¼¼ÂÊ
-										CityTrendGraph_Numerical3,		--À©ÕÅÂÊ
+										CityTrendGraph_Numerical1,		--å·¥ä¸šç‡
+										CityTrendGraph_Numerical4,		--å†œä¸šç‡
+										CityTrendGraph_Numerical6,		--å•†ä¸šç‡
+										CityTrendGraph_Numerical2,		--å›½é˜²ç‡
+										CityTrendGraph_Numerical5,		--ç§‘æŠ€ç‡
+										CityTrendGraph_Numerical3,		--æ‰©å¼ ç‡
 										
-										plus = CityTrendGraph_Text14,	--Ê£ÓàµãÊı
+										plus = CityTrendGraph_Text14,	--å‰©ä½™ç‚¹æ•°
 										
 										addbtn =	{
 																CityTrendGraph_Addition_Button1,
@@ -66,7 +66,7 @@ function City_Trend_SetBtnState()
 	local k;
 	local btnNum = table.getn(g_MembersCtl.addbtn);
 	
-	--Ê£ÓàµãÊı
+	--å‰©ä½™ç‚¹æ•°
 	if(0 >= tonumber(g_MembersCtl.plus:GetText())) then
 		for k = 1, btnNum do
 			g_MembersCtl.decbtn[k]:Enable();
@@ -79,7 +79,7 @@ function City_Trend_SetBtnState()
 		end
 	end
 	
-	--ÖğÏîµ÷Õû
+	--é€é¡¹è°ƒæ•´
 	for k = 1, btnNum do
 		if(tonumber(g_MembersCtl[k]:GetText()) <= 10) then
 			g_MembersCtl.decbtn[k]:Disable();
@@ -172,7 +172,7 @@ function City_Trend_CareEventHandle(careId, op, distance)
 		if(tonumber(careId) ~= g_clientNpcId) then
 			return;
 		end
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ı£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æœå’ŒNPCçš„è·ç¦»å¤§äºä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if(op == "distance" and tonumber(distance)>MAX_OBJ_DISTANCE or op=="destroy") then
 			this:Hide();
 		end

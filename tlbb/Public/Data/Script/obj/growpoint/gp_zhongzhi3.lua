@@ -1,15 +1,15 @@
---Éú³¤µã½Å±¾£¬¹ûÊµÏµÁĞ
+--ç”Ÿé•¿ç‚¹è„šæœ¬ï¼Œæœå®ç³»åˆ—
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 --g_ScriptId = 711002
 
--- Éú³¤µãĞÅÏ¢
+-- ç”Ÿé•¿ç‚¹ä¿¡æ¯
 x711002_g_GPInfo = {}
 
--- Éú³¤µãÀàĞÍºÅÎªË÷ÒıºÅ
+-- ç”Ÿé•¿ç‚¹ç±»å‹å·ä¸ºç´¢å¼•å·
 
--- abilityId: Éú³¤µã¶ÔÓ¦¼¼ÄÜ
--- needLevel: Ñ§Ï°´ËÅä·½ĞèÒªµÄÏàÓ¦Éú»î¼¼ÄÜ¼¶±ğ
+-- abilityId: ç”Ÿé•¿ç‚¹å¯¹åº”æŠ€èƒ½
+-- needLevel: å­¦ä¹ æ­¤é…æ–¹éœ€è¦çš„ç›¸åº”ç”Ÿæ´»æŠ€èƒ½çº§åˆ«
 
 x711002_g_GPInfo[	503	] = { abilityId = ABILITY_ZHONGZHI, needLevel =	1	}
 x711002_g_GPInfo[	506	] = { abilityId = ABILITY_ZHONGZHI, needLevel =	2	}
@@ -69,17 +69,17 @@ function x711002_OnOpen( sceneId, selfId, targetId )
 		return 1
 	end
 
-	--µÃµ½Éú³¤µãµÄÖ÷ÈËGUID
-	local ItemBoxOwnerGUID = GetItemBoxOwner( sceneId, targetId )		--²ÎÊıÊÇSceneID£¬ItemBoxID
+	--å¾—åˆ°ç”Ÿé•¿ç‚¹çš„ä¸»äººGUID
+	local ItemBoxOwnerGUID = GetItemBoxOwner( sceneId, targetId )		--å‚æ•°æ˜¯SceneIDï¼ŒItemBoxID
 
-	--µÃµ½µã»÷Éú³¤µãµÄÍæ¼ÒµÄguid
+	--å¾—åˆ°ç‚¹å‡»ç”Ÿé•¿ç‚¹çš„ç©å®¶çš„guid
 	local PlayerGuid = GetHumanGUID( sceneId, selfId )
 	if ItemBoxOwnerGUID ~= PlayerGuid then
-	  	x711002_NotifyFailTips( sceneId, selfId, "Ëæ±ãÊÕ¸î±ğÈËÖÖµÄ×¯¼Ú¿É²»ĞĞßÏ£¡" )
+	  	x711002_NotifyFailTips( sceneId, selfId, "éšä¾¿æ”¶å‰²åˆ«äººç§çš„åº„ç¨¼å¯ä¸è¡Œå‘¦ï¼" )
 		return OR_INVALID_TARGET_POS
 	end
 
-	--µÃµ½¼¼ÄÜµÈ¼¶
+	--å¾—åˆ°æŠ€èƒ½ç­‰çº§
 	local AbilityLevel = QueryHumanAbilityLevel( sceneId, selfId, GPInfo.abilityId )
 	if AbilityLevel >= GPInfo.needLevel then
 		return OR_OK
@@ -99,15 +99,15 @@ function x711002_OnRecycle( sceneId, selfId, targetId )
 		return 1
 	end
 
-	--È¡µÃÉú³¤µãµÄ×ø±ê
+	--å–å¾—ç”Ÿé•¿ç‚¹çš„åæ ‡
 	local GP_X = GetItemBoxWorldPosX( sceneId, targetId )
 	local GP_Z = GetItemBoxWorldPosZ( sceneId, targetId )
 
-	--ÏÂÈ¡Õû
+	--ä¸‹å–æ•´
 	GP_X = floor( GP_X )
 	GP_Z = floor( GP_Z )
 
-	--ÅĞ¶ÏÖÖÖ²ÅÆµÄÎ»ÖÃÔÚÄÄ¸öÖÖÖ²ÅÆ¹ÜÏ½µÄ·¶Î§ÄÚ
+	--åˆ¤æ–­ç§æ¤ç‰Œçš„ä½ç½®åœ¨å“ªä¸ªç§æ¤ç‰Œç®¡è¾–çš„èŒƒå›´å†…
 	local num = 0
 	local i = 0
 	for i, findid in PLANTNPC_ADDRESS do
@@ -121,12 +121,12 @@ function x711002_OnRecycle( sceneId, selfId, targetId )
 		end
 	end
 
-	--Èç¹ûÕÒ²»µ½ÕıÈ·µÄÎ»ÖÃÔò·µ»Ø
+	--å¦‚æœæ‰¾ä¸åˆ°æ­£ç¡®çš„ä½ç½®åˆ™è¿”å›
 	if num == 0 then
 		return 1
 	end
 
-	--ÕÒµ½ÕıÈ·µÄ±àºÅ£¬°ÑÖÖÖ²ÅÆ-1
+	--æ‰¾åˆ°æ­£ç¡®çš„ç¼–å·ï¼ŒæŠŠç§æ¤ç‰Œ-1
 	PLANTFLAG[num] = PLANTFLAG[num] - 1
 
 	return 1

@@ -24,7 +24,7 @@ function AntiRobot_OnEvent(event)
 		AntiRobot_StopWatch:SetProperty("Timer", "60");
 		AntiRobot_Accept:SetProperty("Disabled", "True");
 
-		--¼¤»îÒş²ØÊäÈë¿ò£¬Ê¹»Ø³µ¼ü¿ÉÒÔÈ·ÈÏ´ğ°¸
+		--æ¿€æ´»éšè—è¾“å…¥æ¡†ï¼Œä½¿å›è½¦é”®å¯ä»¥ç¡®è®¤ç­”æ¡ˆ
 		AntiRobot_EnterBox:SetText("");
 		AntiRobot_EnterBox:SetProperty("DefaultEditBox", "True");
 
@@ -33,7 +33,7 @@ function AntiRobot_OnEvent(event)
 		g_AnswerButton[2]:SetProperty("Selected", "False");
 		g_AnswerButton[3]:SetProperty("Selected", "False");
 
-		--¼ÆËãËæ¼´Î»ÖÃ£¬×óÉÏ½Ç»òÕßÓÒÏÂ½Ç
+		--è®¡ç®—éšå³ä½ç½®ï¼Œå·¦ä¸Šè§’æˆ–è€…å³ä¸‹è§’
 		local x_Left=math.random()/4.0;
 		local y_Top=math.random()/4.0;
 		
@@ -49,7 +49,7 @@ function AntiRobot_SelAnswer(selIndex)
 		return;
 	end
 	
-	--È¡ÏûÔ­À´µÄÑ¡ÖĞ
+	--å–æ¶ˆåŸæ¥çš„é€‰ä¸­
 	if(g_nUselSeld >=0 and g_nUselSeld<4) then
 		g_AnswerButton[g_nUselSeld]:SetProperty("Selected", "False");
 	end
@@ -62,7 +62,7 @@ function AntiRobot_SelAnswer(selIndex)
 end
 
 function AntiRobot_Commit()
-	--Î´Ñ¡ÖĞ´ğ°¸Ê±(ÀıÈç°´»Ø³µ)²»Ìá½»
+	--æœªé€‰ä¸­ç­”æ¡ˆæ—¶(ä¾‹å¦‚æŒ‰å›è½¦)ä¸æäº¤
 	if(g_nUselSeld<0 or g_nUselSeld >= 4) then
 		return;
 	end
@@ -72,7 +72,7 @@ function AntiRobot_Commit()
 end
 
 function AntiRobot_OnClose()
-	--¹Ø±ÕÊ±ÊÍ·ÅÒş²ØÊäÈë¿òµÄ¼üÅÌ½¹µã
+	--å…³é—­æ—¶é‡Šæ”¾éšè—è¾“å…¥æ¡†çš„é”®ç›˜ç„¦ç‚¹
 	AntiRobot_EnterBox:SetProperty("DefaultEditBox", "False");
 	if(g_nUselSeld<0 or g_nUselSeld >= 4) then
 		DataPool:SelCaptchaAnswer(-1);

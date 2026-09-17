@@ -1,32 +1,32 @@
---ÈÈÂôÔª±¦ NPC
---×¢Òâ±¾½Å±¾º¬ÓĞËæÉíÔª±¦Ïà¹Ø¹¦ÄÜ£¬ÇëÒ»¶¨²ÎÕÕÏÖÓĞµÄÀı×Ó½øĞĞĞŞ¸Ä¡£
+--çƒ­å–å…ƒå® NPC
+--æ³¨æ„æœ¬è„šæœ¬å«æœ‰éšèº«å…ƒå®ç›¸å…³åŠŸèƒ½ï¼Œè¯·ä¸€å®šå‚ç…§ç°æœ‰çš„ä¾‹å­è¿›è¡Œä¿®æ”¹ã€‚
 
 x181002_g_scriptId 	= 181002
 x181002_g_buyrate 	= 0.5
 
-x181002_g_shoptableindex=151 --ÒÑ¾­·ÏÆúÁË£¬ÏÖÔÚÓÃ188ºÍ189
-x181002_g_goodact		= 1		--ÈÈÂôÔª±¦ÉÌµê
-x181002_g_YuanBaoIntro	= 18	--Ôª±¦½éÉÜ
+x181002_g_shoptableindex=151 --å·²ç»åºŸå¼ƒäº†ï¼Œç°åœ¨ç”¨188å’Œ189
+x181002_g_goodact		= 1		--çƒ­å–å…ƒå®å•†åº—
+x181002_g_YuanBaoIntro	= 18	--å…ƒå®ä»‹ç»
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x181002_OnDefaultEvent( sceneId, selfId, targetId )
 	BeginEvent( sceneId )
-		strText = "    ¿ìÀ´¿´Ò»¿´À²£¬È«³Ç×î³©ÏúµÄÉÌÆ·£¬×î±ãÒËµÄ¼Û¸ñ£¬¿Í¹ÙÄú¸Ï½ôÌô¼¸¼ş°É£¬¾ø¶Ô³¬Öµ£¬°üÄúÂò»ØÈ¥ºó½ñÒ¹×öÃÎ¶¼»áĞ¦ÄØ~"
+		strText = "    å¿«æ¥çœ‹ä¸€çœ‹å•¦ï¼Œå…¨åŸæœ€ç•…é”€çš„å•†å“ï¼Œæœ€ä¾¿å®œçš„ä»·æ ¼ï¼Œå®¢å®˜æ‚¨èµ¶ç´§æŒ‘å‡ ä»¶å§ï¼Œç»å¯¹è¶…å€¼ï¼ŒåŒ…æ‚¨ä¹°å›å»åä»Šå¤œåšæ¢¦éƒ½ä¼šç¬‘å‘¢~"
 		AddText( sceneId, strText )
-		AddNumText( sceneId, x181002_g_scriptId, "¹ºÂòÈÈÂôÉÌÆ·", 7, x181002_g_goodact)
-		AddNumText( sceneId, x181002_g_scriptId, "Ôª±¦½éÉÜ", 11, x181002_g_YuanBaoIntro)
+		AddNumText( sceneId, x181002_g_scriptId, "è´­ä¹°çƒ­å–å•†å“", 7, x181002_g_goodact)
+		AddNumText( sceneId, x181002_g_scriptId, "å…ƒå®ä»‹ç»", 11, x181002_g_YuanBaoIntro)
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x181002_OnEventRequest( sceneId, selfId, targetId, eventId )
 	if GetNumText() == x181002_g_goodact then
-	--ĞÂµÄÔª±¦ÉÌµê
+	--æ–°çš„å…ƒå®å•†åº—
 		BeginUICommand( sceneId )
 			UICommand_AddInt( sceneId, targetId )
 			UICommand_AddInt( sceneId, 1)
@@ -42,7 +42,7 @@ function x181002_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---°´ĞèÀ´µ¯³öÉÌµê£¬·ÖÎªËæÉíÉÌµêºÍNPCÉÌµê
+--æŒ‰éœ€æ¥å¼¹å‡ºå•†åº—ï¼Œåˆ†ä¸ºéšèº«å•†åº—å’ŒNPCå•†åº—
 --**********************************
 function x181002_NewDispatchShopItem(sceneId,selfId,targetId,shopId)
 	if targetId >= 0 then

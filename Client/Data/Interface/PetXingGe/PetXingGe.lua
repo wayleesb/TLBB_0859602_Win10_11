@@ -10,10 +10,10 @@ local CareNpcID = -1
 --===============================================
 function PetXingGe_PreLoad()
 	this : RegisterEvent( "UI_COMMAND" )
-	this : RegisterEvent( "REPLY_MISSION_PET" )						-- Íæ¼Ò´ÓÁĞ±íÑ¡¶¨Ò»Ö»ÕäÊŞ
-	this : RegisterEvent( "UPDATE_PET_PAGE" )						-- Íæ¼ÒÉíÉÏµÄÕäÊŞÊı¾İ·¢Éú±ä»¯£¬°üÀ¨Ôö¼ÓÒ»Ö»ÕäÊŞ
-	this : RegisterEvent( "DELETE_PET" )							-- Íæ¼ÒÉíÉÏ¼õÉÙÒ»Ö»ÕäÊŞ
-	this : RegisterEvent( "OBJECT_CARED_EVENT" )					-- ¹ØĞÄ NPC µÄ´æÔÚºÍ·¶Î§
+	this : RegisterEvent( "REPLY_MISSION_PET" )						-- ç©å®¶ä»åˆ—è¡¨é€‰å®šä¸€åªçå…½
+	this : RegisterEvent( "UPDATE_PET_PAGE" )						-- ç©å®¶èº«ä¸Šçš„çå…½æ•°æ®å‘ç”Ÿå˜åŒ–ï¼ŒåŒ…æ‹¬å¢åŠ ä¸€åªçå…½
+	this : RegisterEvent( "DELETE_PET" )							-- ç©å®¶èº«ä¸Šå‡å°‘ä¸€åªçå…½
+	this : RegisterEvent( "OBJECT_CARED_EVENT" )					-- å…³å¿ƒ NPC çš„å­˜åœ¨å’ŒèŒƒå›´
 	this : RegisterEvent("UNIT_MONEY");
 end
 
@@ -40,13 +40,13 @@ function PetXingGe_OnEvent(event)
 		--AxTrace( 3, 3, "REPLY_MISSION_PET" )
 		PetXingGe_OnSelectPet( tonumber( arg0 ) )
 
-	elseif event == "OBJECT_CARED_EVENT" and this : IsVisible() then	-- ¹ØĞÄ NPC µÄ´æÔÚºÍ·¶Î§
+	elseif event == "OBJECT_CARED_EVENT" and this : IsVisible() then	-- å…³å¿ƒ NPC çš„å­˜åœ¨å’ŒèŒƒå›´
 		Pet : ShowPetList( 0 )
 		if tonumber( arg0 ) ~= CareNpcID then
 			return
 		end
 
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ı£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æœå’ŒNPCçš„è·ç¦»å¤§äºä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		local MAX_OBJ_DISTANCE = 3.0
 		if arg1 == "distance" and tonumber( arg2 ) > MAX_OBJ_DISTANCE or arg1 == "destroy" then
 			PetXingGe_Cancel_Clicked()
@@ -77,13 +77,13 @@ function PetXingGe_OnSelectPet( PetIndex )
 	--AxTrace( 3, 3, "PetXingGe_OnSelectPet"..(Guid_Pet_H)..(Guid_Pet_L) )
 	
 	PetXingGe_Pet1_Text : SetText( SelectPetName )
-	-- ¸øÕäÊŞÉÏËø
+	-- ç»™çå…½ä¸Šé”
 	Pet : SetPetLocation( PetIndex, 3 )
 				
 end
 
 function PetXingGe_SelectPet_Clicked()
-	-- ¹ØÒ»ÏÂÔÙ¿ª£¬Çå¿ÕÊı¾İ
+	-- å…³ä¸€ä¸‹å†å¼€ï¼Œæ¸…ç©ºæ•°æ®
 	Pet : ShowPetList( 0 )
 	Pet : ShowPetList( 1 )
 end
@@ -111,9 +111,9 @@ function PetXingGe_OnHidden()
 end
 
 --=========================================================
---¿ªÊ¼¹ØĞÄNPC£¬
---ÔÚ¿ªÊ¼¹ØĞÄÖ®Ç°ĞèÒªÏÈÈ·¶¨Õâ¸ö½çÃæÊÇ²»ÊÇÒÑ¾­ÓĞ¡°¹ØĞÄ¡±µÄNPC£¬
---Èç¹ûÓĞµÄ»°£¬ÏÈÈ¡ÏûÒÑ¾­ÓĞµÄ¡°¹ØĞÄ¡±
+--å¼€å§‹å…³å¿ƒNPCï¼Œ
+--åœ¨å¼€å§‹å…³å¿ƒä¹‹å‰éœ€è¦å…ˆç¡®å®šè¿™ä¸ªç•Œé¢æ˜¯ä¸æ˜¯å·²ç»æœ‰â€œå…³å¿ƒâ€çš„NPCï¼Œ
+--å¦‚æœæœ‰çš„è¯ï¼Œå…ˆå–æ¶ˆå·²ç»æœ‰çš„â€œå…³å¿ƒâ€
 --=========================================================
 function PetXingGe_BeginCareObject( objCaredId )
 	CareNpcID = DataPool : GetNPCIDByServerID( objCaredId )
@@ -126,7 +126,7 @@ function PetXingGe_BeginCareObject( objCaredId )
 end
 
 --=========================================================
---Í£Ö¹¶ÔÄ³NPCµÄ¹ØĞÄ
+--åœæ­¢å¯¹æŸNPCçš„å…³å¿ƒ
 --=========================================================
 function PetXingGe_StopCareObject()
 	this : CareObject( CareNpcID, 0, "PetXingGe" )

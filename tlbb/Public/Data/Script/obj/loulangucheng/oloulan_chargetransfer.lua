@@ -1,71 +1,71 @@
--- created by ×ó´ºÎ°
+-- created by å·¦æ˜¥ä¼Ÿ
 
-x400959_g_ScriptId = 400959; --½Å±¾ºÅ
-x400959_g_name	="³µ´«¸£";
+x400959_g_ScriptId = 400959; --è„šæœ¬å·
+x400959_g_name	="è½¦ä¼ ç¦";
 
---´«ËÍÄ¿±ê
+--ä¼ é€ç›®æ ‡
 x400959_g_transfer_target =
 {
-	[1] = {x = 120, z = 200, scene_num = 0}, 		--ÂåÑô
-	[2] = {x = 235, z = 156, scene_num = 1}, 		--ËÕÖİ
-	[3] = {x = 246, z = 106, scene_num = 2}, 		--´óÀí
-	[4] = {x = 206, z = 266, scene_num = 34}, 	--ÄÏº£
-	[5] = {x = 186, z = 43, scene_num = 28},		--ÄÏÚ¯
-	[6] = {x = 158, z = 113, scene_num = 22}, 	--³¤°×É½
+	[1] = {x = 120, z = 200, scene_num = 0}, 		--æ´›é˜³
+	[2] = {x = 235, z = 156, scene_num = 1}, 		--è‹å·
+	[3] = {x = 246, z = 106, scene_num = 2}, 		--å¤§ç†
+	[4] = {x = 206, z = 266, scene_num = 34}, 	--å—æµ·
+	[5] = {x = 186, z = 43, scene_num = 28},		--å—è¯
+	[6] = {x = 158, z = 113, scene_num = 22}, 	--é•¿ç™½å±±
 }
 
--- ÊÕ·Ñ½ğ¶î
-x400959_g_transfer_cost = 5000; -- 50Òø½»×Ó
+-- æ”¶è´¹é‡‘é¢
+x400959_g_transfer_cost = 5000; -- 50é“¶äº¤å­
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x400959_OnDefaultEvent( sceneId, selfId, targetId )
 	x400959_UpdateEventList( sceneId, selfId, targetId );
 end
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x400959_UpdateEventList( sceneId, selfId, targetId )
 	BeginEvent(sceneId);
 		AddText( sceneId, "#{SFCS_80828_01}" );
-		AddNumText(sceneId, x400959_g_ScriptId, "ÂåÑô", 9, 1);
-		AddNumText(sceneId, x400959_g_ScriptId, "ËÕÖİ", 9, 2);
-		AddNumText(sceneId, x400959_g_ScriptId, "´óÀí", 9, 3);
-		AddNumText(sceneId, x400959_g_ScriptId, "ÄÏº£", 9, 4);
-		AddNumText(sceneId, x400959_g_ScriptId, "ÄÏÚ¯", 9, 5);
-		AddNumText(sceneId, x400959_g_ScriptId, "³¤°×É½", 9, 6);
+		AddNumText(sceneId, x400959_g_ScriptId, "æ´›é˜³", 9, 1);
+		AddNumText(sceneId, x400959_g_ScriptId, "è‹å·", 9, 2);
+		AddNumText(sceneId, x400959_g_ScriptId, "å¤§ç†", 9, 3);
+		AddNumText(sceneId, x400959_g_ScriptId, "å—æµ·", 9, 4);
+		AddNumText(sceneId, x400959_g_ScriptId, "å—è¯", 9, 5);
+		AddNumText(sceneId, x400959_g_ScriptId, "é•¿ç™½å±±", 9, 6);
 	EndEvent()
 	DispatchEventList(sceneId, selfId, targetId);
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x400959_OnEventRequest( sceneId, selfId, targetId, eventId )
-	--ÅÜÉÌÏà¹Ø
+	--è·‘å•†ç›¸å…³
 	if GetItemCount(sceneId, selfId, 40002000)>=1  then
 		BeginEvent( sceneId )
-			AddText( sceneId, "  ÄãÉíÉÏÓĞÒøÆ±£¬ÕıÔÚÅÜÉÌ£¡ÎÒ²»ÄÜ°ïÖúÄã¡£" )
+			AddText( sceneId, "  ä½ èº«ä¸Šæœ‰é“¶ç¥¨ï¼Œæ­£åœ¨è·‘å•†ï¼æˆ‘ä¸èƒ½å¸®åŠ©ä½ ã€‚" )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 		return
 	end
-	--¶ÓÎéÏà¹Ø
+	--é˜Ÿä¼ç›¸å…³
 	if GetTeamId(sceneId,selfId)>=0 and 
 		IsTeamFollow(sceneId, selfId)==1 and
 		LuaFnIsTeamLeader(sceneId,selfId)==1 then
 		BeginEvent( sceneId )
-			AddText( sceneId, "  ·Ç³£±§Ç¸£¬ÓÉÓÚÂ·Í¾Ì«¹ıÒ£Ô¶£¬ÎÒÃÇÕâÀïÔËÊäÄÜÁ¦ÓĞÏŞ£¬ËùÒÔ²»½ÓÊÜ×é¶Ó´«ËÍ£¬ÇëÄúÀë¿ª¶ÓÎéµ¥¶ÀÇ°À´°É£¡" )
+			AddText( sceneId, "  éå¸¸æŠ±æ­‰ï¼Œç”±äºè·¯é€”å¤ªè¿‡é¥è¿œï¼Œæˆ‘ä»¬è¿™é‡Œè¿è¾“èƒ½åŠ›æœ‰é™ï¼Œæ‰€ä»¥ä¸æ¥å—ç»„é˜Ÿä¼ é€ï¼Œè¯·æ‚¨ç¦»å¼€é˜Ÿä¼å•ç‹¬å‰æ¥å§ï¼" )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 		return
 	end
-	--äîÔËÏà¹Ø
+	--æ¼•è¿ç›¸å…³
 	if IsHaveMission(sceneId,selfId,4021) > 0 then
 		BeginEvent(sceneId)
-			AddText(sceneId, "  ÄãÓĞäîÔË»õ²ÕÔÚÉí£¬ÎÒÃÇæäÕ¾²»ÄÜÎªÄãÌá¹©´«ËÍ·şÎñ¡£")
+			AddText(sceneId, "  ä½ æœ‰æ¼•è¿è´§èˆ±åœ¨èº«ï¼Œæˆ‘ä»¬é©¿ç«™ä¸èƒ½ä¸ºä½ æä¾›ä¼ é€æœåŠ¡ã€‚")
 		EndEvent()
 		DispatchEventList(sceneId, selfId, targetId)
 		return
@@ -74,22 +74,22 @@ function x400959_OnEventRequest( sceneId, selfId, targetId, eventId )
 	local id = GetNumText();
 	if id >=1 and id <= 6 then
 		BeginEvent(sceneId)
-			--"±¾´Î´«ËÍÊÕÈ¡50Òø½»×Ó£¬ÄãÒª´«ËÍÂğ£¿"
+			--"æœ¬æ¬¡ä¼ é€æ”¶å–50é“¶äº¤å­ï¼Œä½ è¦ä¼ é€å—ï¼Ÿ"
 			AddText(sceneId, "#{FFCS_081210_1}")
 			if id == 1 then	
-				AddNumText(sceneId, x400959_g_ScriptId, "È·¶¨", 0, 11);
+				AddNumText(sceneId, x400959_g_ScriptId, "ç¡®å®š", 0, 11);
 			elseif id == 2 then
-				AddNumText(sceneId, x400959_g_ScriptId, "È·¶¨", 0, 21);
+				AddNumText(sceneId, x400959_g_ScriptId, "ç¡®å®š", 0, 21);
 			elseif id == 3 then
-				AddNumText(sceneId, x400959_g_ScriptId, "È·¶¨", 0, 31);
+				AddNumText(sceneId, x400959_g_ScriptId, "ç¡®å®š", 0, 31);
 			elseif id == 4 then
-				AddNumText(sceneId, x400959_g_ScriptId, "È·¶¨", 0, 41);
+				AddNumText(sceneId, x400959_g_ScriptId, "ç¡®å®š", 0, 41);
 			elseif id == 5 then
-				AddNumText(sceneId, x400959_g_ScriptId, "È·¶¨", 0, 51);
+				AddNumText(sceneId, x400959_g_ScriptId, "ç¡®å®š", 0, 51);
 			elseif id == 6 then
-				AddNumText(sceneId, x400959_g_ScriptId, "È·¶¨", 0, 61);
+				AddNumText(sceneId, x400959_g_ScriptId, "ç¡®å®š", 0, 61);
 			end
-			AddNumText(sceneId, x400959_g_ScriptId, "È¡Ïû", 0, 100);
+			AddNumText(sceneId, x400959_g_ScriptId, "å–æ¶ˆ", 0, 100);
 		EndEvent()
 		DispatchEventList(sceneId, selfId, targetId);
 	elseif id == 100 then
@@ -106,26 +106,26 @@ function x400959_OnEventRequest( sceneId, selfId, targetId, eventId )
 		local nMoneyJZ = GetMoneyJZ (sceneId, selfId)
 		local nMoney = GetMoney (sceneId, selfId)
 
-		--Ç®¹»Âğ£¿
+		--é’±å¤Ÿå—ï¼Ÿ
 		if (nMoneyJZ + nMoney) >= x400959_g_transfer_cost then 
 				
-			-- ÊÕ·Ñ
-			-- Ê¹ÓÃ´øÓÅÏÈ¼¶µÄ½ğÇ®ÏûºÄº¯Êı
+			-- æ”¶è´¹
+			-- ä½¿ç”¨å¸¦ä¼˜å…ˆçº§çš„é‡‘é’±æ¶ˆè€—å‡½æ•°
 			if LuaFnCostMoneyWithPriority (sceneId, selfId, x400959_g_transfer_cost) == -1 then
 				BeginEvent(sceneId)
-					AddText(sceneId, "ÊÕ·ÑÊ§°Ü£¡");
+					AddText(sceneId, "æ”¶è´¹å¤±è´¥ï¼");
 				EndEvent()
 				DispatchMissionTips(sceneId, selfId)
 				return
 			else
-				-- ´«ËÍ
+				-- ä¼ é€
 				CallScriptFunction((400900), "TransferFunc",sceneId, selfId, scene_num, pos_x, pos_z); 
 			end
 
-		-- Ç®²»¹»
+		-- é’±ä¸å¤Ÿ
 		else
 			BeginEvent(sceneId)
-				AddText(sceneId, "½ğÇ®²»×ã");
+				AddText(sceneId, "é‡‘é’±ä¸è¶³");
 			EndEvent()
 			DispatchEventList(sceneId, selfId, targetId)
 			return

@@ -24,7 +24,7 @@ end
 function FriendSearch_OnLoad()
 
 
-	FriendSearch_SearchMode:ComboBoxAddItem("√˚◊÷",0);
+	FriendSearch_SearchMode:ComboBoxAddItem("ÂêçÂ≠ó",0);
 	FriendSearch_SearchMode:ComboBoxAddItem("ID",1);
 	FriendSearch_SearchMode:SetCurrentSelect( 0 );
 	local str,index = FriendSearch_SearchMode:GetCurrentSelect();
@@ -32,32 +32,32 @@ function FriendSearch_OnLoad()
 	FriendSearch_Module2_CheckBox1:SetCheck( 0 );
 	FriendSearch_Module2_CheckBox2:SetCheck( 0 );
 	
-	FriendSearch_MenPai:ComboBoxAddItem("»´≤ø",-3 );
-	FriendSearch_MenPai:ComboBoxAddItem("»Œ“‚",-2 );
-	FriendSearch_MenPai:ComboBoxAddItem("Œﬁ√≈≈…", -1 ) ;
-	FriendSearch_MenPai:ComboBoxAddItem("…Ÿ¡÷", 0 );
-	FriendSearch_MenPai:ComboBoxAddItem("√˜ΩÃ", 1 );
-	FriendSearch_MenPai:ComboBoxAddItem("ÿ§∞Ô", 2 );
-	FriendSearch_MenPai:ComboBoxAddItem("Œ‰µ±", 3 );
-	FriendSearch_MenPai:ComboBoxAddItem("∂Î·“", 4 );
-	FriendSearch_MenPai:ComboBoxAddItem("–«Àﬁ", 5 );
-	FriendSearch_MenPai:ComboBoxAddItem("ÃÏ¡˙", 6 );
-	FriendSearch_MenPai:ComboBoxAddItem("ÃÏ…Ω", 7 );
-	FriendSearch_MenPai:ComboBoxAddItem("Â–“£", 8 ) ;
+	FriendSearch_MenPai:ComboBoxAddItem("ÂÖ®ÈÉ®",-3 );
+	FriendSearch_MenPai:ComboBoxAddItem("‰ªªÊÑè",-2 );
+	FriendSearch_MenPai:ComboBoxAddItem("Êó†Èó®Ê¥æ", -1 ) ;
+	FriendSearch_MenPai:ComboBoxAddItem("Â∞ëÊûó", 0 );
+	FriendSearch_MenPai:ComboBoxAddItem("ÊòéÊïô", 1 );
+	FriendSearch_MenPai:ComboBoxAddItem("‰∏êÂ∏Æ", 2 );
+	FriendSearch_MenPai:ComboBoxAddItem("Ê≠¶ÂΩì", 3 );
+	FriendSearch_MenPai:ComboBoxAddItem("Â≥®Âµã", 4 );
+	FriendSearch_MenPai:ComboBoxAddItem("ÊòüÂÆø", 5 );
+	FriendSearch_MenPai:ComboBoxAddItem("Â§©Èæô", 6 );
+	FriendSearch_MenPai:ComboBoxAddItem("Â§©Â±±", 7 );
+	FriendSearch_MenPai:ComboBoxAddItem("ÈÄçÈÅ•", 8 ) ;
 	FriendSearch_MenPai:SetCurrentSelect( 0 );
 
 	
-	FriendSearch_Confraternity:ComboBoxAddItem("»´≤ø",-3 );
-	FriendSearch_Confraternity:ComboBoxAddItem("»Œ“‚",-2 );
-	FriendSearch_Confraternity:ComboBoxAddItem("Œﬁ∞Ô≈…",-1 );
+	FriendSearch_Confraternity:ComboBoxAddItem("ÂÖ®ÈÉ®",-3 );
+	FriendSearch_Confraternity:ComboBoxAddItem("‰ªªÊÑè",-2 );
+	FriendSearch_Confraternity:ComboBoxAddItem("Êó†Â∏ÆÊ¥æ",-1 );
 	FriendSearch_Confraternity:SetCurrentSelect( 0 );
 
-	FriendSearch_Sexy:ComboBoxAddItem("≤ªœﬁ",-1 );
-	FriendSearch_Sexy:ComboBoxAddItem( "≈Æ", 0 );
-	FriendSearch_Sexy:ComboBoxAddItem( "ƒ–", 1 );
+	FriendSearch_Sexy:ComboBoxAddItem("‰∏çÈôê",-1 );
+	FriendSearch_Sexy:ComboBoxAddItem( "Â•≥", 0 );
+	FriendSearch_Sexy:ComboBoxAddItem( "Áî∑", 1 );
 	FriendSearch_Sexy:SetCurrentSelect( 0 );
 
-	FriendSearch_Level:ComboBoxAddItem("»Œ“‚",-1 );
+	FriendSearch_Level:ComboBoxAddItem("‰ªªÊÑè",-1 );
 	FriendSearch_Level:ComboBoxAddItem( "1 - 10", 0 );
 	FriendSearch_Level:ComboBoxAddItem( "11 - 20", 1 );
 	FriendSearch_Level:ComboBoxAddItem( "21 - 30", 2 );
@@ -117,16 +117,16 @@ function FriendSearch_UpdateCurrentPage()
 		FriendSearch_Info:AddNewItem( namecolor..name, 0, i );
 		FriendSearch_Info:AddNewItem( namecolor..id, 1, i );
 		if( bOnline ) then
-			FriendSearch_Info:AddNewItem( namecolor.."‘⁄œﬂ", 2, i );
+			FriendSearch_Info:AddNewItem( namecolor.."Âú®Á∫ø", 2, i );
 		else
-			FriendSearch_Info:AddNewItem( namecolor.."¿Îœﬂ", 2, i );
+			FriendSearch_Info:AddNewItem( namecolor.."Á¶ªÁ∫ø", 2, i );
 		end
 		FriendSearch_Info:AddNewItem( namecolor..tostring( nLevel ), 3, i );
 		
 		if( tonumber( nSex ) == 0 ) then
-			FriendSearch_Info:AddNewItem( namecolor.."≈Æ", 4, i );
+			FriendSearch_Info:AddNewItem( namecolor.."Â•≥", 4, i );
 		else
-			FriendSearch_Info:AddNewItem( namecolor.."ƒ–", 4, i );
+			FriendSearch_Info:AddNewItem( namecolor.."Áî∑", 4, i );
 		end
 		FriendSearch_Info:AddNewItem( namecolor..strMenpai, 5, i );
 		FriendSearch_Info:AddNewItem( namecolor..strBangpai, 6, i );

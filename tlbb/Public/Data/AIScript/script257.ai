@@ -1,10 +1,10 @@
-;Ê¥ÊÞÉ½±©×ßÒ°Öí(·ÀÓù)£º½øÈëÕ½¶·ºóÊÍ·Åº©ºñ£¨1020£©
+;åœ£å…½å±±æš´èµ°é‡ŽçŒª(é˜²å¾¡)ï¼šè¿›å…¥æˆ˜æ–—åŽé‡Šæ”¾æ†¨åŽšï¼ˆ1020ï¼‰
 [common]
 [commonend]
 
 [skill]
-0:if(AIS_IsCanSkill(0)=1){AIS_ToSkill(0);AIS_SetTimes(-1);AIS_SetPRI(30);};Èç¹ûÄÜÊ¹ÓÃ0ºÅ¼¼ÄÜ£¨ÆÕÍ¨¹¥»÷£©ÔòÊÍ·Å£¬´ÎÊý²»ÏÞ
-1:if(AIS_GetAIState()=SATTACK&AIS_IsCanSkill(1020)=1){AIS_ToSkill(1020);AIS_SetTimes(1);AIS_SetPRI(31);};½øÈëÕ½¶·ºóÊÍ·Å1020ºÅ¼¼ÄÜ£¨º©ºñ£©£¬´ÎÊý1´Î
+0:if(AIS_IsCanSkill(0)=1){AIS_ToSkill(0);AIS_SetTimes(-1);AIS_SetPRI(30);};å¦‚æžœèƒ½ä½¿ç”¨0å·æŠ€èƒ½ï¼ˆæ™®é€šæ”»å‡»ï¼‰åˆ™é‡Šæ”¾ï¼Œæ¬¡æ•°ä¸é™
+1:if(AIS_GetAIState()=SATTACK&AIS_IsCanSkill(1020)=1){AIS_ToSkill(1020);AIS_SetTimes(1);AIS_SetPRI(31);};è¿›å…¥æˆ˜æ–—åŽé‡Šæ”¾1020å·æŠ€èƒ½ï¼ˆæ†¨åŽšï¼‰ï¼Œæ¬¡æ•°1æ¬¡
 [skillend]
 
 [beskill]

@@ -1,20 +1,20 @@
---ÂåÑôNPC
---Èğ¸£Ïé
---ÆÕÍ¨
+--æ´›é˜³NPC
+--ç‘ç¦ç¥¥
+--æ™®é€š
 
---Ò©µê
+--è¯åº—
 
 x000099_g_scriptId = 000099
 
 x000099_g_shoptableindex=16
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x000099_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent( sceneId )
-		AddText( sceneId, "  ÖÚÈËÎõÎõ£¬½ÔÎªÀûÀ´£¬ÖÚÈËÈÁÈÁ£¬½ÔÎªÀûÍù¡£" )
-		AddNumText( sceneId, x000099_g_scriptId, "ÂòÂôÔÓ»õ", 7, 1 )
+		AddText( sceneId, "  ä¼—äººç†™ç†™ï¼Œçš†ä¸ºåˆ©æ¥ï¼Œä¼—äººæ”˜æ”˜ï¼Œçš†ä¸ºåˆ©å¾€ã€‚" )
+		AddNumText( sceneId, x000099_g_scriptId, "ä¹°å–æ‚è´§", 7, 1 )
 			--for i, eventId in x000099_g_eventList do
 				--	CallScriptFunction( eventId, "OnEnumerate",sceneId, selfId, targetId)
 			--end
@@ -23,7 +23,7 @@ function x000099_OnDefaultEvent( sceneId, selfId,targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x000099_OnEventRequest( sceneId, selfId, targetId, eventId )
 	if GetNumText() == 1	then

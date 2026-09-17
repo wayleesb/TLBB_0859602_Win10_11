@@ -1,11 +1,11 @@
---楼兰NPC....
---首饰店老板....
+--妤煎叞NPC....
+--棣栭グ搴楄�佹澘....
 
 x001117_g_scriptId = 001117
 x001117_g_shoptableindex = 13
 
 --**********************************
---事件交互入口
+--浜嬩欢浜や簰鍏ュ彛
 --**********************************
 function x001117_OnDefaultEvent( sceneId, selfId, targetId )
 	DispatchShopItem( sceneId, selfId, targetId, x001117_g_shoptableindex )

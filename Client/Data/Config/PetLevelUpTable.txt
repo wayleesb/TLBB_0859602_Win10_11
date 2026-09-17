@@ -1,4 +1,4 @@
-INT	INT
+INT	STRING
 珍兽等级	升级经验
 1	45
 2	162

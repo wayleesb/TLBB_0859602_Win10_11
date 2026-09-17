@@ -1,21 +1,21 @@
 --MisDescBegin
 x805042_g_ScriptId	= 805042
-x805042_g_CopySceneName	= "±£»¤°ïÅÉ×¤µØ"
+x805042_g_CopySceneName	= "ä¿æŠ¤å¸®æ´¾é©»åœ°"
 x805042_g_MissionId			= 1120
 x805042_g_MissionIdPre	= 0
-x805042_g_Name					= "±£»¤°ïÅÉ×¤µØ"
+x805042_g_Name					= "ä¿æŠ¤å¸®æ´¾é©»åœ°"
 x805042_g_IfMissionElite= 0
 x805042_g_MissionLevel	= 10000
 x805042_g_MissionKind		= 1
-x805042_g_MissionName			= "±£»¤°ïÅÉ×¤µØ"
+x805042_g_MissionName			= "ä¿æŠ¤å¸®æ´¾é©»åœ°"
 x805042_g_MissionInfo			= "  "
-x805042_g_MissionTarget		= "  É±ËÀËùÓĞµÄ¹ÖÎï¼´¿ÉÍê³ÉÈÎÎñ¡£"
+x805042_g_MissionTarget		= "  æ€æ­»æ‰€æœ‰çš„æ€ªç‰©å³å¯å®Œæˆä»»åŠ¡ã€‚"
 x805042_g_ContinueInfo		= "  "
 x805042_g_MissionComplete	= "  "
-x805042_g_Param_IsMissionOkFail	= 0						--0ºÅ£ºµ±Ç°ÈÎÎñÊÇ·ñÍê³É(0Î´Íê³É£»1Íê³É)
-x805042_g_Param_killmonstercount	= 1					--1ºÅ£ºÉ±ËÀÈÎÎñĞ¡¹ÖµÄÊıÁ¿
-x805042_g_Param_killbosscount	= 2							--2ºÅ£ºÉ±ËÀÈÎÎñboss¹ÖµÄÊıÁ¿
-x805042_g_Param_sceneid		= 3									--3ºÅ£ºµ±Ç°¸±±¾ÈÎÎñµÄ³¡¾°ºÅ
-x805042_g_Param_teamid		= 4									--4ºÅ£º½Ó¸±±¾ÈÎÎñÊ±ºòµÄ¶ÓÎéºÅ
-x805042_g_Param_time			= 5									--5ºÅ£ºÍê³É¸±±¾ËùÓÃÊ±¼ä(µ¥Î»£ºÃë)
+x805042_g_Param_IsMissionOkFail	= 0						--0å·ï¼šå½“å‰ä»»åŠ¡æ˜¯å¦å®Œæˆ(0æœªå®Œæˆï¼›1å®Œæˆ)
+x805042_g_Param_killmonstercount	= 1					--1å·ï¼šæ€æ­»ä»»åŠ¡å°æ€ªçš„æ•°é‡
+x805042_g_Param_killbosscount	= 2							--2å·ï¼šæ€æ­»ä»»åŠ¡bossæ€ªçš„æ•°é‡
+x805042_g_Param_sceneid		= 3									--3å·ï¼šå½“å‰å‰¯æœ¬ä»»åŠ¡çš„åœºæ™¯å·
+x805042_g_Param_teamid		= 4									--4å·ï¼šæ¥å‰¯æœ¬ä»»åŠ¡æ—¶å€™çš„é˜Ÿä¼å·
+x805042_g_Param_time			= 5									--5å·ï¼šå®Œæˆå‰¯æœ¬æ‰€ç”¨æ—¶é—´(å•ä½ï¼šç§’)
 --MisDescEnd

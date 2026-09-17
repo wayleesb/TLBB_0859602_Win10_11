@@ -1,7 +1,7 @@
---ÊøºÓ¹ÅÕòNPC....
---ÎäÆ÷Ïà¹Ø¹¦ÄÜ....
+--æŸæ²³å¤é•‡NPC....
+--æ­¦å™¨ç›¸å…³åŠŸèƒ½....
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x001178_g_ScriptId = 001178
 x001178_g_MsgInfo = { "#{SHGZ_0612_04}",
 											"#{SHGZ_0620_10}",
@@ -10,7 +10,7 @@ x001178_g_MsgInfo = { "#{SHGZ_0612_04}",
 										}
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x001178_OnDefaultEvent( sceneId, selfId, targetId )
 
@@ -18,15 +18,15 @@ function x001178_OnDefaultEvent( sceneId, selfId, targetId )
 	BeginEvent( sceneId )
 		local msgidx = random(getn(x001178_g_MsgInfo))
 		AddText( sceneId, x001178_g_MsgInfo[msgidx] )
-		AddNumText( sceneId, x001178_g_ScriptId, "×°±¸×ÊÖÊ¼ø¶¨", 6, 1 )
-		AddNumText( sceneId, x001178_g_ScriptId, "×°±¸×ÊÖÊ¼ø¶¨½éÉÜ", 11, 3 )
+		AddNumText( sceneId, x001178_g_ScriptId, "è£…å¤‡èµ„è´¨é‰´å®š", 6, 1 )
+		AddNumText( sceneId, x001178_g_ScriptId, "è£…å¤‡èµ„è´¨é‰´å®šä»‹ç»", 11, 3 )
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x001178_OnEventRequest( sceneId, selfId, targetId, eventId )
 

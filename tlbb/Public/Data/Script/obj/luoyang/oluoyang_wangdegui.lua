@@ -1,30 +1,30 @@
---ÂåÑôNPC
---ÍõµÂ¹ó
---ÆÕÍ¨
+--æ´›é˜³NPC
+--ç‹å¾·è´µ
+--æ™®é€š
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x000050_g_ScriptId			= 000050
 
---ÎäÆ÷µê
+--æ­¦å™¨åº—
 x000050_g_shoptableindex= 11
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x000050_OnDefaultEvent( sceneId, selfId, targetId )
 	BeginEvent( sceneId )
-	AddText( sceneId, "  À´¿´¿´°É£¬ÎÒÕâÀïµÄ±øÆ÷¶¼ÊÇÂåÑô³Ç×îºÃµÄ¡£" )
-	AddNumText( sceneId, x000050_g_ScriptId, "¹ºÂò±øÆ÷", 7, 100 )
-	AddNumText( sceneId, x000050_g_ScriptId, "×ÊÖÊ¼ø¶¨", 6, 101 )
-	AddNumText( sceneId, x000050_g_ScriptId, "ÖØĞÂ¼ø¶¨×°±¸×ÊÖÊ", 6, 102 )
-	AddNumText( sceneId, x000050_g_ScriptId, "×°±¸×ÊÖÊ¼ø¶¨½éÉÜ", 11, 105 )
-	AddNumText( sceneId, x000050_g_ScriptId, "ÖØĞÂ¼ø¶¨×°±¸×ÊÖÊ½éÉÜ", 11, 106 )
+	AddText( sceneId, "  æ¥çœ‹çœ‹å§ï¼Œæˆ‘è¿™é‡Œçš„å…µå™¨éƒ½æ˜¯æ´›é˜³åŸæœ€å¥½çš„ã€‚" )
+	AddNumText( sceneId, x000050_g_ScriptId, "è´­ä¹°å…µå™¨", 7, 100 )
+	AddNumText( sceneId, x000050_g_ScriptId, "èµ„è´¨é‰´å®š", 6, 101 )
+	AddNumText( sceneId, x000050_g_ScriptId, "é‡æ–°é‰´å®šè£…å¤‡èµ„è´¨", 6, 102 )
+	AddNumText( sceneId, x000050_g_ScriptId, "è£…å¤‡èµ„è´¨é‰´å®šä»‹ç»", 11, 105 )
+	AddNumText( sceneId, x000050_g_ScriptId, "é‡æ–°é‰´å®šè£…å¤‡èµ„è´¨ä»‹ç»", 11, 106 )
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x000050_OnEventRequest( sceneId, selfId, targetId, eventId )
 

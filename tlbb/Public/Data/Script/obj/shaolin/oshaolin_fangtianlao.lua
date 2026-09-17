@@ -1,17 +1,17 @@
---·½ÐþÀÍ
+--æ–¹çŽ„åŠ³
 
---ÈÎÎñºÅ
+--ä»»åŠ¡å·
 x009016_g_MissionId = 1060
 
 x009016_g_scriptId=009016
 
-function x009016_OnDefaultEvent( sceneId, selfId, targetId )	--µã»÷¸ÃÈÎÎñºóÖ´ÐÐ´Ë½Å±¾
+function x009016_OnDefaultEvent( sceneId, selfId, targetId )	--ç‚¹å‡»è¯¥ä»»åŠ¡åŽæ‰§è¡Œæ­¤è„šæœ¬
 	misIndex = GetMissionIndexByID(sceneId,selfId,x009016_g_MissionId)
 	BeginEvent(sceneId)
-		AddText(sceneId,"  ×î½ü×Ü¸Ð¾õ¹ÇÖÊÊèËÉ¡£")
+		AddText(sceneId,"  æœ€è¿‘æ€»æ„Ÿè§‰éª¨è´¨ç–æ¾ã€‚")
 		if	IsHaveMission(sceneId,selfId,x009016_g_MissionId) > 0	 then
 			if	GetMissionParam( sceneId, selfId, misIndex,0) < 1  and  GetMissionParam( sceneId, selfId, misIndex,3) == 2 then
-				AddNumText(sceneId,x009016_g_scriptId,"¸øÄã×³¹ÇÉáÀû",8,0)
+				AddNumText(sceneId,x009016_g_scriptId,"ç»™ä½ å£®éª¨èˆåˆ©",8,0)
 			end
 		end
 	EndEvent( )
@@ -25,16 +25,16 @@ function x009016_OnEventRequest( sceneId, selfId, targetId, eventId )
 			DelItem (  sceneId, selfId, 30202022, 1)	
 			SetMissionByIndex( sceneId, selfId, misIndex, 0, 1)
 			BeginEvent(sceneId)
-				AddText(sceneId,"Ð»Ð»ÄãµÄ×³¹ÇÉáÀû")
+				AddText(sceneId,"è°¢è°¢ä½ çš„å£®éª¨èˆåˆ©")
 			EndEvent( )
 			DispatchEventList(sceneId,selfId,targetId)
 			BeginEvent(sceneId)
-				AddText(sceneId,"ÈÎÎñÍê³É£¡")
+				AddText(sceneId,"ä»»åŠ¡å®Œæˆï¼")
 			EndEvent( )
 			DispatchMissionTips(sceneId,selfId)
 		else
 			BeginEvent(sceneId)
-				AddText(sceneId,"×³¹ÇÉáÀû£¿ÔÚÄÄÀï£¿")
+				AddText(sceneId,"å£®éª¨èˆåˆ©ï¼Ÿåœ¨å“ªé‡Œï¼Ÿ")
 			EndEvent( )
 			DispatchEventList(sceneId,selfId,targetId)
 		end

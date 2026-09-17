@@ -1,56 +1,56 @@
--- 200035 ËÄÃæ³ş¸è
+-- 200035 å››é¢æ¥šæ­Œ
 
---Ò®ÂÉºé»ù ÈÃÍæ¼ÒºÍ ¶Ô»°£¬ ÔÚÍê³ÉÈÎÎñµÄÊ±ºò£¬»áÓĞ¾çÇé£¨¶Ô»°¾çÇé£©
---ÔË³ïá¡á¢  »Ø²ÔÃ£É½ÕÒÒ®ÂÉºé»ù£¬°ÑÒ®ÂÉÓà¶ÃµÄ×÷Õ½¼Æ»®¸æËßËû¡£
+--è€¶å¾‹æ´ªåŸº è®©ç©å®¶å’Œ å¯¹è¯ï¼Œ åœ¨å®Œæˆä»»åŠ¡çš„æ—¶å€™ï¼Œä¼šæœ‰å‰§æƒ…ï¼ˆå¯¹è¯å‰§æƒ…ï¼‰
+--è¿ç­¹å¸·å¹„  å›è‹èŒ«å±±æ‰¾è€¶å¾‹æ´ªåŸºï¼ŒæŠŠè€¶å¾‹ä½™ç¹çš„ä½œæˆ˜è®¡åˆ’å‘Šè¯‰ä»–ã€‚
 
 --************************************************************************
 --MisDescBegin
---½Å±¾ºÅ
+--è„šæœ¬å·
 x200035_g_ScriptId = 200035
 
---ÈÎÎñºÅ
+--ä»»åŠ¡å·
 x200035_g_MissionId = 30
 
---Ç°ĞøÈÎÎñºÅ
+--å‰ç»­ä»»åŠ¡å·
 x200035_g_PreMissionId = 29
 
---Ä¿±êNPC
-x200035_g_Name = "Ïô·å"
+--ç›®æ ‡NPC
+x200035_g_Name = "è§å³°"
 
---ÊÇ·ñÊÇ¾«Ó¢ÈÎÎñ
+--æ˜¯å¦æ˜¯ç²¾è‹±ä»»åŠ¡
 x200035_g_IfMissionElite = 1
 
---ÈÎÎñµÈ¼¶
+--ä»»åŠ¡ç­‰çº§
 x200035_g_MissionLevel = 50
 
---ÈÎÎñ¹éÀà
+--ä»»åŠ¡å½’ç±»
 x200035_g_MissionKind = 52
 
---ÈÎÎñÎÄ±¾ÃèÊö
-x200035_g_MissionName="ËÄÃæ³ş¸è"
+--ä»»åŠ¡æ–‡æœ¬æè¿°
+x200035_g_MissionName="å››é¢æ¥šæ­Œ"
 x200035_g_MissionInfo="#{Mis_juqing_0030}"
-x200035_g_MissionTarget="#{Mis_juqing_Tar_0030}"	--ÈÎÎñÄ¿±ê
-x200035_g_MissionComplete="  Àë¿ª£¿²»¿ÉÄÜ£¡ÎÒÊÇ²»»á×ßµÄ£¬ÎÒºÍÒåĞÖÒå½á½ğÀ¼Ö®Ê±£¬¶ÔÌìÃËÊÄ£¬ÓĞ¸£Í¬Ïí£¬ÓĞÄÑÍ¬µ±£¬ÔÚÕâÎ£»ú¹ØÍ·ÆúËûÓë²»¹Ë£¬ÎÒÏô·åÊÇ¾ø¶Ô²»»á×öµÄ¡£"	--Íê³ÉÈÎÎñnpcËµ»°µÄ»°
+x200035_g_MissionTarget="#{Mis_juqing_Tar_0030}"	--ä»»åŠ¡ç›®æ ‡
+x200035_g_MissionComplete="  ç¦»å¼€ï¼Ÿä¸å¯èƒ½ï¼æˆ‘æ˜¯ä¸ä¼šèµ°çš„ï¼Œæˆ‘å’Œä¹‰å…„ä¹‰ç»“é‡‘å…°ä¹‹æ—¶ï¼Œå¯¹å¤©ç›Ÿèª“ï¼Œæœ‰ç¦åŒäº«ï¼Œæœ‰éš¾åŒå½“ï¼Œåœ¨è¿™å±æœºå…³å¤´å¼ƒä»–ä¸ä¸é¡¾ï¼Œæˆ‘è§å³°æ˜¯ç»å¯¹ä¸ä¼šåšçš„ã€‚"	--å®Œæˆä»»åŠ¡npcè¯´è¯çš„è¯
 
 x200035_g_MoneyBonus=1800
 x200035_g_exp=1440
 
-x200035_g_Custom	= { {id="ÒÑÕÒµ½Ïô·å",num=1} }
+x200035_g_Custom	= { {id="å·²æ‰¾åˆ°è§å³°",num=1} }
 --MisDescEnd
 --************************************************************************
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x200035_OnDefaultEvent( sceneId, selfId, targetId )
-	--Èç¹ûÍæ¼ÒÍê³É¹ıÕâ¸öÈÎÎñ
+	--å¦‚æœç©å®¶å®Œæˆè¿‡è¿™ä¸ªä»»åŠ¡
 	if (IsMissionHaveDone(sceneId,selfId,x200035_g_MissionId) > 0 ) then
 		return
 	elseif( IsHaveMission(sceneId,selfId,x200035_g_MissionId) > 0)  then
-		-- ¼ì²âÊÇ²»ÊÇÔÚ¸±±¾£¬ÔÙ¼ì²âÊÇ²»ÊÇ£¬Èç¹ûÊÇ¾Í¿ÉÒÔÖ±Íê³ÉÈÎÎñ£¬^_^
+		-- æ£€æµ‹æ˜¯ä¸æ˜¯åœ¨å‰¯æœ¬ï¼Œå†æ£€æµ‹æ˜¯ä¸æ˜¯ï¼Œå¦‚æœæ˜¯å°±å¯ä»¥ç›´å®Œæˆä»»åŠ¡ï¼Œ^_^
 		local sceneType = LuaFnGetSceneType(sceneId) 
-		if sceneType == 1 then --³¡¾°ÀàĞÍÊÇ¸±±¾
-			-- ¼ì²âÏÂÃû×Ö£¬°²È«µãµã
+		if sceneType == 1 then --åœºæ™¯ç±»å‹æ˜¯å‰¯æœ¬
+			-- æ£€æµ‹ä¸‹åå­—ï¼Œå®‰å…¨ç‚¹ç‚¹
 			if GetName(sceneId, targetId) == x200035_g_Name  then
 		    BeginEvent(sceneId)
 				AddText(sceneId,x200035_g_MissionName)
@@ -61,9 +61,9 @@ function x200035_OnDefaultEvent( sceneId, selfId, targetId )
 			end
 		end
 	
-	--Âú×ãÈÎÎñ½ÓÊÕÌõ¼ş
+	--æ»¡è¶³ä»»åŠ¡æ¥æ”¶æ¡ä»¶
 	elseif x200035_CheckAccept(sceneId, selfId, targetId) > 0 then
-		--·¢ËÍÈÎÎñ½ÓÊÜÊ±ÏÔÊ¾µÄĞÅÏ¢
+		--å‘é€ä»»åŠ¡æ¥å—æ—¶æ˜¾ç¤ºçš„ä¿¡æ¯
 		BeginEvent(sceneId)
 		AddText(sceneId,x200035_g_MissionName)
 		AddText(sceneId,x200035_g_MissionInfo)
@@ -77,21 +77,21 @@ function x200035_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x200035_OnEnumerate( sceneId, selfId, targetId )
 
-	--Èç¹ûÍæ¼ÒÍê³É¹ıÕâ¸öÈÎÎñ
+	--å¦‚æœç©å®¶å®Œæˆè¿‡è¿™ä¸ªä»»åŠ¡
 	if IsMissionHaveDone(sceneId,selfId,x200035_g_MissionId) > 0 then
 		return 
-	--Èç¹ûÒÑ½Ó´ËÈÎÎñ
+	--å¦‚æœå·²æ¥æ­¤ä»»åŠ¡
 	elseif IsHaveMission(sceneId,selfId,x200035_g_MissionId) > 0 then
-		--ĞèÒªÔÚ¸±±¾²Å¿ÉÒÔ
+		--éœ€è¦åœ¨å‰¯æœ¬æ‰å¯ä»¥
 		if GetName(sceneId, targetId) == x200035_g_Name    then
 			AddNumText(sceneId, x200035_g_ScriptId,x200035_g_MissionName,2,-1);
 		end
 		
-	--Âú×ãÈÎÎñ½ÓÊÕÌõ¼ş
+	--æ»¡è¶³ä»»åŠ¡æ¥æ”¶æ¡ä»¶
 	elseif x200035_CheckAccept(sceneId,selfId,targetId) > 0 then	
 		AddNumText(sceneId,x200035_g_ScriptId,x200035_g_MissionName,1,-1);
 	end
@@ -99,11 +99,11 @@ function x200035_OnEnumerate( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x200035_CheckAccept( sceneId, selfId, targetId )
-	--ÅĞ¶¨Ìõ¼ş
-	--1£¬Ç°ĞøÈÎÎñÍê³É
+	--åˆ¤å®šæ¡ä»¶
+	--1ï¼Œå‰ç»­ä»»åŠ¡å®Œæˆ
 	if IsMissionHaveDone(sceneId,selfId,x200035_g_PreMissionId) < 1 then
 		return 0
 	end
@@ -111,13 +111,13 @@ function x200035_CheckAccept( sceneId, selfId, targetId )
 		return 0
 	end
 	
-	--2£¬µÈ¼¶´ïµ½50
+	--2ï¼Œç­‰çº§è¾¾åˆ°50
 	if GetLevel(sceneId, selfId) < x200035_g_MissionLevel   then
 		return 0
 	end
 	
-	--¼ì²âÊÇ²»ÊÇ»ÊµÛ
-	if GetName(sceneId, targetId) ~= "Ò®ÂÉºé»ù"    then
+	--æ£€æµ‹æ˜¯ä¸æ˜¯çš‡å¸
+	if GetName(sceneId, targetId) ~= "è€¶å¾‹æ´ªåŸº"    then
 		return 0
 	end
 	
@@ -126,7 +126,7 @@ end
 
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x200035_OnAccept( sceneId, selfId, targetId )
 
@@ -134,56 +134,56 @@ function x200035_OnAccept( sceneId, selfId, targetId )
 		return 0
 	end
 	
-	--¼ÓÈëÈÎÎñµ½Íæ¼ÒÁĞ±í
+	--åŠ å…¥ä»»åŠ¡åˆ°ç©å®¶åˆ—è¡¨
 	local ret = AddMission( sceneId,selfId, x200035_g_MissionId, x200035_g_ScriptId, 0, 0, 0 )
 	if ret <= 0 then
-		Msg2Player(  sceneId, selfId,"#YÄãµÄÈÎÎñÈÕÖ¾ÒÑ¾­ÂúÁË" , MSG2PLAYER_PARA )
+		Msg2Player(  sceneId, selfId,"#Yä½ çš„ä»»åŠ¡æ—¥å¿—å·²ç»æ»¡äº†" , MSG2PLAYER_PARA )
 		return
 	end
-	Msg2Player(  sceneId, selfId,"#Y½ÓÊÜÈÎÎñ£ºËÄÃæ³ş¸è",MSG2PLAYER_PARA )
+	Msg2Player(  sceneId, selfId,"#Yæ¥å—ä»»åŠ¡ï¼šå››é¢æ¥šæ­Œ",MSG2PLAYER_PARA )
 
-	-- ÕâÀïÓĞº°»°µÄ¾çÇé£¬ĞèÒªÌí¼Ó
+	-- è¿™é‡Œæœ‰å–Šè¯çš„å‰§æƒ…ï¼Œéœ€è¦æ·»åŠ 
 	local misIndex = GetMissionIndexByID(sceneId,selfId,x200035_g_MissionId)
 	SetMissionByIndex( sceneId, selfId, misIndex, 0, 1)
 
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x200035_OnAbandon( sceneId, selfId )
   DelMission( sceneId, selfId, x200035_g_MissionId )
 end
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x200035_OnContinue( sceneId, selfId, targetId )
 	
 end	
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x200035_CheckSubmit( sceneId, selfId, selectRadioId )
 	
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x200035_OnSubmit( sceneId, selfId, targetId, selectRadioId )
-	-- ¿ÉÒÔÌá½»µÄÌõ¼şÅĞ¶¨
-	-- 1£¬ÓĞÕâ¸öÈÎÎñ£¬
+	-- å¯ä»¥æäº¤çš„æ¡ä»¶åˆ¤å®š
+	-- 1ï¼Œæœ‰è¿™ä¸ªä»»åŠ¡ï¼Œ
 	if( IsHaveMission(sceneId,selfId,x200035_g_MissionId) > 0)  then
 		AddMoney(sceneId,selfId,x200035_g_MoneyBonus );
 		LuaFnAddExp( sceneId, selfId,x200035_g_exp)
 		DelMission( sceneId,selfId,  x200035_g_MissionId )
-		--ÉèÖÃÈÎÎñÒÑ¾­±»Íê³É¹ı
+		--è®¾ç½®ä»»åŠ¡å·²ç»è¢«å®Œæˆè¿‡
 		MissionCom( sceneId,selfId,  x200035_g_MissionId )
-		Msg2Player(  sceneId, selfId,"#YÍê³ÉÈÎÎñ£ºËÄÃæ³ş¸è",MSG2PLAYER_PARA )
+		Msg2Player(  sceneId, selfId,"#Yå®Œæˆä»»åŠ¡ï¼šå››é¢æ¥šæ­Œ",MSG2PLAYER_PARA )
 		
-		-- µÚÒ»¶Î¾çÇé£¬³şÍõº°»°ºó£¬°´ÕÕÂ·Ïß×ß¡£
+		-- ç¬¬ä¸€æ®µå‰§æƒ…ï¼Œæ¥šç‹å–Šè¯åï¼ŒæŒ‰ç…§è·¯çº¿èµ°ã€‚
 		if LuaFnGetCopySceneData_Param(sceneId, 8) < 1  then
 			LuaFnSetCopySceneData_Param(sceneId, 8, 1)
 			LuaFnSetCopySceneData_Param(sceneId, 10, 1)
@@ -193,28 +193,28 @@ function x200035_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 end
 
 --**********************************
---¶¨Ê±ÊÂ¼ş
+--å®šæ—¶äº‹ä»¶
 --**********************************
 function x200035_OnTimer(sceneId,selfId)
 
 end
 
 --**********************************
---É±ËÀ¹ÖÎï»òÍæ¼Ò
+--æ€æ­»æ€ªç‰©æˆ–ç©å®¶
 --**********************************
 function x200035_OnKillObject( sceneId, selfId, objdataId, objId )
 
 end
 
 --**********************************
---½øÈëÇøÓòÊÂ¼ş
+--è¿›å…¥åŒºåŸŸäº‹ä»¶
 --**********************************
 function x200035_OnEnterZone( sceneId, selfId, zoneId )
 	
 end
 
 --**********************************
---µÀ¾ß¸Ä±ä
+--é“å…·æ”¹å˜
 --**********************************
 function x200035_OnItemChanged( sceneId, selfId, itemdataId )
 	

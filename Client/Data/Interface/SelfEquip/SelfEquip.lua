@@ -1,82 +1,82 @@
--- Êı¾İ³ØÖĞ¶¨ÒåµÄ×°±¸Êı¾İ.
---HEQUIP_WEAPON		=0,		//ÎäÆ÷	WEAPON
---HEQUIP_CAP			=1,		//Ã±×Ó	DEFENCE
---HEQUIP_ARMOR		=2,		//ÒÂ·ş	DEFENCE
---HEQUIP_CUFF			=3,		//»¤Íó	DEFENCE
---HEQUIP_BOOT			=4,		//Ğ¬	DEFENCE
---HEQUIP_SASH			=5,		//Ñü´ø	ADORN
---HEQUIP_RING			=6,		//½äÖ¸	ADORN
---HEQUIP_NECKLACE	=7,		//ÏîÁ´	ADORN
---HEQUIP_RIDER		=8,		//°µÆ÷	ADORN
---HEQUIP_BAG			=9,		//ĞĞÄÒ
---HEQUIP_BOX			=10,	//Ïä¸ñ
---HEQUIP_RING_2		=11,	//µÚ¶ş¸ö½äÖ¸	ADORN
---HEQUIP_CHARM		=12,	//»¤·û				ADORN
---HEQUIP_CHARM_2	=13,	//µÚ¶ş¸ö»¤·û	ADORN
---HEQUIP_WRIST		=14,	//»¤Íó				ADORN
---HEQUIP_SHOULDER	=15,	//»¤¼ç				DEFENCE
---HEQUIP_DRESS		=16,	//Ê±×°				DEFENCE
---HEQUIP_RESERVE	=17,	//Ô¤Áô1
---HEQUIP_RESERVE_2=18,	//Ô¤Áô2
+-- æ•°æ®æ± ä¸­å®šä¹‰çš„è£…å¤‡æ•°æ®.
+--HEQUIP_WEAPON		=0,		//æ­¦å™¨	WEAPON
+--HEQUIP_CAP			=1,		//å¸½å­	DEFENCE
+--HEQUIP_ARMOR		=2,		//è¡£æœ	DEFENCE
+--HEQUIP_CUFF			=3,		//æŠ¤è…•	DEFENCE
+--HEQUIP_BOOT			=4,		//é‹	DEFENCE
+--HEQUIP_SASH			=5,		//è…°å¸¦	ADORN
+--HEQUIP_RING			=6,		//æˆ’æŒ‡	ADORN
+--HEQUIP_NECKLACE	=7,		//é¡¹é“¾	ADORN
+--HEQUIP_RIDER		=8,		//æš—å™¨	ADORN
+--HEQUIP_BAG			=9,		//è¡Œå›Š
+--HEQUIP_BOX			=10,	//ç®±æ ¼
+--HEQUIP_RING_2		=11,	//ç¬¬äºŒä¸ªæˆ’æŒ‡	ADORN
+--HEQUIP_CHARM		=12,	//æŠ¤ç¬¦				ADORN
+--HEQUIP_CHARM_2	=13,	//ç¬¬äºŒä¸ªæŠ¤ç¬¦	ADORN
+--HEQUIP_WRIST		=14,	//æŠ¤è…•				ADORN
+--HEQUIP_SHOULDER	=15,	//æŠ¤è‚©				DEFENCE
+--HEQUIP_DRESS		=16,	//æ—¶è£…				DEFENCE
+--HEQUIP_RESERVE	=17,	//é¢„ç•™1
+--HEQUIP_RESERVE_2=18,	//é¢„ç•™2
 
 
 --------------------------------------------------------------------------------
--- ×°±¸°´Å¥Êı¾İ¶¨Òå
+-- è£…å¤‡æŒ‰é’®æ•°æ®å®šä¹‰
 --
-local  g_WEAPON;		--ÎäÆ÷
-local  g_ARMOR;			--ÒÂ·ş
-local  g_CAP;				--Ã±×Ó 
-local  g_CUFF;			--ÊÖÌ×
-local  g_BOOT;			--Ğ¬
-local  g_RING;			--½äÖ¸
-local  g_SASH;			--Ñü´ø
-local  g_NECKLACE;	--ÏîÁ´
-local  g_Dark;			--°µÆ÷
-local  g_RING_2;		--½äÖ¸2
-local  g_CHARM;			--»¤·û
-local  g_CHARM_2;		--»¤·û2
-local  g_WRIST;			--»¤Íó
-local  g_SHOULDER;	--»¤¼ç
-local  g_DRESS;			--Ê±×°
+local  g_WEAPON;		--æ­¦å™¨
+local  g_ARMOR;			--è¡£æœ
+local  g_CAP;				--å¸½å­ 
+local  g_CUFF;			--æ‰‹å¥—
+local  g_BOOT;			--é‹
+local  g_RING;			--æˆ’æŒ‡
+local  g_SASH;			--è…°å¸¦
+local  g_NECKLACE;	--é¡¹é“¾
+local  g_Dark;			--æš—å™¨
+local  g_RING_2;		--æˆ’æŒ‡2
+local  g_CHARM;			--æŠ¤ç¬¦
+local  g_CHARM_2;		--æŠ¤ç¬¦2
+local  g_WRIST;			--æŠ¤è…•
+local  g_SHOULDER;	--æŠ¤è‚©
+local  g_DRESS;			--æ—¶è£…
 
 local  g_EquipMask ={}
 ---------------------------------------------------------------------------------
--- µãÊı¶¨Òå
+-- ç‚¹æ•°å®šä¹‰
 --
 
-local g_RemainPoint 			= 0;	-- Ê£ÓàµãÊı
-local g_CurExperience 	  = 0;	-- µ±Ç°Ê£Óà¾­Ñé
-local g_RequireExperience = 0;  -- Éı¼¶ËùĞè¾­Ñé
+local g_RemainPoint 			= 0;	-- å‰©ä½™ç‚¹æ•°
+local g_CurExperience 	  = 0;	-- å½“å‰å‰©ä½™ç»éªŒ
+local g_RequireExperience = 0;  -- å‡çº§æ‰€éœ€ç»éªŒ
 
-local g_AddStr = 0;					-- ·ÖÅäÔÚÁ¦Á¿ÉÏµÄÊ£ÓàµãÊı.
-local g_AddSpr = 0;					-- ·ÖÅäÔÚÁéÆøÉÏµÄÊ£ÓàµãÊı.
-local g_AddCon = 0;					-- ·ÖÅäÔÚÌåÖÊÉÏµÄÊ£ÓàµãÊı.
-local g_AddInt = 0;					-- ·ÖÅäÔÚ¶¨Á¦ÉÏµÄÊ£ÓàµãÊı.
-local g_AddDex = 0;					-- ·ÖÅäÔÚÉí·¨ÉÏµÄÊ£ÓàµãÊı.
+local g_AddStr = 0;					-- åˆ†é…åœ¨åŠ›é‡ä¸Šçš„å‰©ä½™ç‚¹æ•°.
+local g_AddSpr = 0;					-- åˆ†é…åœ¨çµæ°”ä¸Šçš„å‰©ä½™ç‚¹æ•°.
+local g_AddCon = 0;					-- åˆ†é…åœ¨ä½“è´¨ä¸Šçš„å‰©ä½™ç‚¹æ•°.
+local g_AddInt = 0;					-- åˆ†é…åœ¨å®šåŠ›ä¸Šçš„å‰©ä½™ç‚¹æ•°.
+local g_AddDex = 0;					-- åˆ†é…åœ¨èº«æ³•ä¸Šçš„å‰©ä½™ç‚¹æ•°.
 
-local g_CurRemainPoint = 0;				-- ·ÖÅäºóµÄÊ£ÓàµãÊı
+local g_CurRemainPoint = 0;				-- åˆ†é…åçš„å‰©ä½™ç‚¹æ•°
 
--- ÊÇ·ñ´ò¿ª³ÆºÅ½çÃæ
+-- æ˜¯å¦æ‰“å¼€ç§°å·ç•Œé¢
 local g_bOpenTitleDlg = 0;
 local SELFEQUIP_TAB_TEXT = {};
-local LEVEL_MAX_ENABLE =149;	--×î´óÔÊĞíµÈ¼¶
+local LEVEL_MAX_ENABLE =149;	--æœ€å¤§å…è®¸ç­‰çº§
 
 function SelfEquip_PreLoad()
 	
-	-- ´ò¿ª½çÃæ
+	-- æ‰“å¼€ç•Œé¢
 	this:RegisterEvent("OPEN_EQUIP");
 	
-	--Àë¿ª³¡¾°£¬×Ô¶¯¹Ø±Õ
+	--ç¦»å¼€åœºæ™¯ï¼Œè‡ªåŠ¨å…³é—­
 	this:RegisterEvent("PLAYER_LEAVE_WORLD");
 	
-	-- ¸üĞÂ×°±¸
+	-- æ›´æ–°è£…å¤‡
 	this:RegisterEvent("REFRESH_EQUIP");
 	
 	this:RegisterEvent("UNIT_HP");
 	this:RegisterEvent("UNIT_MAX_HP");
 	this:RegisterEvent("UNIT_MP");
 	this:RegisterEvent("UNIT_MAX_MP");
-	this:RegisterEvent("UNIT_RAGE");			-- ×¢²áÅ­Æø
+	this:RegisterEvent("UNIT_RAGE");			-- æ³¨å†Œæ€’æ°”
 
 
 	this:RegisterEvent("UNIT_EXP");
@@ -97,32 +97,32 @@ function SelfEquip_PreLoad()
 	this:RegisterEvent("UNIT_MISS");
 	this:RegisterEvent("UNIT_CRITICAL_ATTACK");
 	this:RegisterEvent("UNIT_CRITICAL_DEFENCE");
-	this:RegisterEvent("CUR_TITLE_CHANGED"); 		--µ±Ç°³ÆºÅ¸Ä±ä
+	this:RegisterEvent("CUR_TITLE_CHANGED"); 		--å½“å‰ç§°å·æ”¹å˜
 	
-	this:RegisterEvent("UNIT_DEF_COLD");				--·ÀÓùÊôĞÔ
+	this:RegisterEvent("UNIT_DEF_COLD");				--é˜²å¾¡å±æ€§
 	this:RegisterEvent("UNIT_DEF_FIRE");
 	this:RegisterEvent("UNIT_DEF_LIGHT");
 	this:RegisterEvent("UNIT_DEF_POSION"); 		
 	this:RegisterEvent("UNIT_MENPAI");
 		
-	this:RegisterEvent("UNIT_ATT_COLD");				--¹¥»÷ÊôĞÔ
+	this:RegisterEvent("UNIT_ATT_COLD");				--æ”»å‡»å±æ€§
 	this:RegisterEvent("UNIT_ATT_FIRE");
 	this:RegisterEvent("UNIT_ATT_LIGHT");
 	this:RegisterEvent("UNIT_ATT_POSION");
 		
-	this:RegisterEvent("UNIT_RESISTOTHER_COLD");			--¼õ¿¹ÊôĞÔ
+	this:RegisterEvent("UNIT_RESISTOTHER_COLD");			--å‡æŠ—å±æ€§
 	this:RegisterEvent("UNIT_RESISTOTHER_FIRE");
 	this:RegisterEvent("UNIT_RESISTOTHER_LIGHT");
 	this:RegisterEvent("UNIT_RESISTOTHER_POSION");
 	
-	this:RegisterEvent("UNIT_VIGOR");		-- ×¢²á»îÁ¦Öµ
-	this:RegisterEvent("UNIT_ENERGY");	-- ×¢²á¾«Á¦Öµ
+	this:RegisterEvent("UNIT_VIGOR");		-- æ³¨å†Œæ´»åŠ›å€¼
+	this:RegisterEvent("UNIT_ENERGY");	-- æ³¨å†Œç²¾åŠ›å€¼
 	
 	
-	this:RegisterEvent("GUILD_SHOW_MYGUILDNAME"); --°ï»áĞÅÏ¢¸üĞÂ
+	this:RegisterEvent("GUILD_SHOW_MYGUILDNAME"); --å¸®ä¼šä¿¡æ¯æ›´æ–°
 	
 	
-	-- ÊÖ¶¯µ÷ÕûµãÊı³É¹¦
+	-- æ‰‹åŠ¨è°ƒæ•´ç‚¹æ•°æˆåŠŸ
 	this:RegisterEvent("MANUAL_ATTR_SUCCESS_EQUIP");	
 
 	this:RegisterEvent("UPDATE_DUR");	
@@ -132,22 +132,22 @@ end
 
 function SelfEquip_OnLoad()
 	
-	-- action buttion °´Å¥
-	g_WEAPON   = SelfEquip_11;		--ÎäÆ÷
-	g_ARMOR    = SelfEquip_12;		--ÒÂ·ş
-	g_CAP      = SelfEquip_1;		--Ã±×Ó 
-	g_CUFF     = SelfEquip_4;		--ÊÖÌ×
-	g_BOOT     = SelfEquip_6;		--Ğ¬
-	g_RING     = SelfEquip_7;		--½äÖ¸
-	g_SASH     = SelfEquip_5;		--Ñü´ø
-	g_NECKLACE = SelfEquip_13;		--ÏîÁ´
-	g_Dark	   = SelfEquip_14;		--°µÆ÷
-	g_RING_2	 = SelfEquip_8;		--½äÖ¸2
-	g_CHARM		 = SelfEquip_9;		--»¤·û 
-	g_CHARM_2	 = SelfEquip_10;		--»¤·û2	
-	g_WRIST		 = SelfEquip_3;		--»¤Íó 		
-	g_SHOULDER = SelfEquip_2;		--»¤¼ç  
-	g_DRESS		 = SelfEquip_15;		--Ê±×° 		
+	-- action buttion æŒ‰é’®
+	g_WEAPON   = SelfEquip_11;		--æ­¦å™¨
+	g_ARMOR    = SelfEquip_12;		--è¡£æœ
+	g_CAP      = SelfEquip_1;		--å¸½å­ 
+	g_CUFF     = SelfEquip_4;		--æ‰‹å¥—
+	g_BOOT     = SelfEquip_6;		--é‹
+	g_RING     = SelfEquip_7;		--æˆ’æŒ‡
+	g_SASH     = SelfEquip_5;		--è…°å¸¦
+	g_NECKLACE = SelfEquip_13;		--é¡¹é“¾
+	g_Dark	   = SelfEquip_14;		--æš—å™¨
+	g_RING_2	 = SelfEquip_8;		--æˆ’æŒ‡2
+	g_CHARM		 = SelfEquip_9;		--æŠ¤ç¬¦ 
+	g_CHARM_2	 = SelfEquip_10;		--æŠ¤ç¬¦2	
+	g_WRIST		 = SelfEquip_3;		--æŠ¤è…• 		
+	g_SHOULDER = SelfEquip_2;		--æŠ¤è‚©  
+	g_DRESS		 = SelfEquip_15;		--æ—¶è£… 		
 	
 	g_EquipMask[0]	= SelfEquip_11_Mask;
 	g_EquipMask[2]	= SelfEquip_12_Mask;
@@ -167,18 +167,18 @@ function SelfEquip_OnLoad()
 
 
 	SELFEQUIP_TAB_TEXT = {
-		[0] = "×°±¸",
-		"×ÊÁÏ",
-		"ÕäÊŞ",
-		"Æï³Ë",
-		"ÆäËû",
+		[0] = "è£…å¤‡",
+		"èµ„æ–™",
+		"çå…½",
+		"éª‘ä¹˜",
+		"å…¶ä»–",
 	};
 end
 
 -- OnEvent
 function SelfEquip_OnEvent(event)
 
-	-- ÏÔÊ¾tooltip
+	-- æ˜¾ç¤ºtooltip
 	SelfEquip_SetStateTooltip();
 
 	if ( event == "OPEN_EQUIP" ) then
@@ -199,15 +199,15 @@ function SelfEquip_OnEvent(event)
 		Equip_OnUpdateShow();
 		Equip_RefreshEquip();
 		
-		--ÔÚ´ò¿ªµÄÊ±ºò£¬½«ÊôĞÔÒ³µÄÈ±Ê¡Ò³½øĞĞµ÷Õû
+		--åœ¨æ‰“å¼€çš„æ—¶å€™ï¼Œå°†å±æ€§é¡µçš„ç¼ºçœé¡µè¿›è¡Œè°ƒæ•´
 		SelfEquip_SelfEquip:SetCheck(1);
 		SelfEquip_SelfData:SetCheck(0);
 		SelfEquip_Pet:SetCheck(0);
 		
-		-- ÏÔÊ¾¾«Á¦
+		-- æ˜¾ç¤ºç²¾åŠ›
 		SelfEquip_ShowVigor();
 		
-		-- ÏÔÊ¾»îÁ¦
+		-- æ˜¾ç¤ºæ´»åŠ›
 		SelfEquip_ShowEnergy();
 		SelfEquip_SetTabColor(0);
 	end
@@ -227,7 +227,7 @@ function SelfEquip_OnEvent(event)
 		return;
 	end
 --]]
-	-- ×°±¸±ä»¯Ê±Ë¢ĞÂ×°±¸.
+	-- è£…å¤‡å˜åŒ–æ—¶åˆ·æ–°è£…å¤‡.
 	if("REFRESH_EQUIP" == event) then 
 		
 		Equip_RefreshEquip();
@@ -236,39 +236,39 @@ function SelfEquip_OnEvent(event)
 	
 	if("MANUAL_ATTR_SUCCESS_EQUIP" == event) then
 	
-		-- ·ÖÅäÊôĞÔ³É¹¦.
+		-- åˆ†é…å±æ€§æˆåŠŸ.
 		SelfEquip_ManualAttr_Success();
-		--AxTrace( 0,0, "even  ·ÖÅäµãÊı³É¹¦ ====  "..tostring(event));
+		--AxTrace( 0,0, "even  åˆ†é…ç‚¹æ•°æˆåŠŸ ====  "..tostring(event));
 		
-		-- ÉèÖÃÊÖ¶¯µ÷½ÚµãÊı°´Å¥µÄ×´Ì¬.
+		-- è®¾ç½®æ‰‹åŠ¨è°ƒèŠ‚ç‚¹æ•°æŒ‰é’®çš„çŠ¶æ€.
 		SetAcceptButtonState();
 		
 		Equip_OnUpdateShow();
 		return;
 	end
 	
-	--ÒÔÏÂÊÂ¼şÏŞÓÚ´°¿Ú´ò¿ªÊ±
+	--ä»¥ä¸‹äº‹ä»¶é™äºçª—å£æ‰“å¼€æ—¶
 	if(this:IsVisible()) then
 		
 		local nNumber=0;
 		local nMaxnumber=0;
 		local strName;
 		--AxTrace( 0,0, "even ===="..tostring(event));
-		-- µÈ¼¶
+		-- ç­‰çº§
 		if ((event == "UNIT_LEVEL" or event == "UNIT_MAX_EXP") and arg0 == "player") then
 			--nNumber = Player:GetData( "LEVEL" );
 			--SelfEquip_Level:SetText( "Level " .. tostring( nNumber ) );
 			--nNumber = Player:GetData("NEEDEXP");
 			--SelfEquip_Exp1:SetText( tostring( nNumber ) );
-			-- Ë¢ĞÂËùÓĞĞÅÏ¢
+			-- åˆ·æ–°æ‰€æœ‰ä¿¡æ¯
 			Equip_OnUpdateShow();
 			
-		-- Ñª
+		-- è¡€
 		elseif((event == "UNIT_HP" or event == "UNIT_MAX_HP")  and arg0 == "player") then
 			nNumber = Player:GetData("HP");
 			nMaxnumber = Player:GetData( "MAXHP" );
 			
-			local strHpText = tostring( nNumber ).."/"..tostring( nMaxnumber );
+			local strHpText = string.format("%.0f", nNumber).."/"..string.format("%.0f", nMaxnumber);
 			strHpText = "#cFAFFA4"..strHpText;  
 			SelfEquip_HP:SetText( strHpText );
 		-- mana
@@ -276,29 +276,29 @@ function SelfEquip_OnEvent(event)
 			nNumber = Player:GetData( "MP" );
 			nMaxnumber = Player:GetData( "MAXMP" );
 			
-			local strMpText = tostring( nNumber ).."/"..tostring( nMaxnumber ) ;
+			local strMpText = string.format("%.0f", nNumber).."/"..string.format("%.0f", nMaxnumber) ;
 			strMpText = "#cFAFFA4"..strMpText;  
 			SelfEquip_MP:SetText( strMpText );
 			
-		-- Å­Æø
+		-- æ€’æ°”
 		elseif((event == "UNIT_RAGE" )  and arg0 == "player") then
-			-- Å­Æø
+			-- æ€’æ°”
 		  nNumber = Player:GetData("RAGE");
 		  nMaxnumber = Player:GetData("MAXRAGE");
 		  
 		  local strRageText = tostring( nNumber ).."/"..tostring( nMaxnumber );
 		  strRageText = "#cFAFFA4"..strRageText;  
 			SelfEquip_SP:SetText(strRageText );
-		--¾­ÑéÖµ
+		--ç»éªŒå€¼
 		elseif(event == "UNIT_EXP" and arg0 == "player") then
 			nNumber = Player:GetData("EXP");
-			SelfEquip_Exp2:SetText( "#cC8B88E"..tostring( nNumber ) );
+			SelfEquip_Exp2:SetText( "#cC8B88E"..string.format("%.0f", nNumber) );
 		
-			-- µÃµ½Éı¼¶ĞèÒªµÄ¾­Ñé
+			-- å¾—åˆ°å‡çº§éœ€è¦çš„ç»éªŒ
 			g_RequireExperience = Player:GetData("NEEDEXP");
-			SelfEquip_Exp1:SetText( "#cC8B88E"..tostring( g_RequireExperience ) );
+			SelfEquip_Exp1:SetText( "#cC8B88E"..string.format("%.0f", g_RequireExperience) );
 			
-			-- ¸ù¾İ¾­Ñé½ûÖ¹»òÕß´ò¿ªÉı¼¶
+			-- æ ¹æ®ç»éªŒç¦æ­¢æˆ–è€…æ‰“å¼€å‡çº§
 			if(nNumber >= g_RequireExperience and tonumber(Player:GetData("LEVEL"))<LEVEL_MAX_ENABLE) then
 			
 				SelfEquip_UpLevel:Enable();
@@ -311,32 +311,32 @@ function SelfEquip_OnEvent(event)
 		--STR
 		elseif(event == "UNIT_STR" and arg0 == "player") then
 			nNumber = Player:GetData("STR");
-			SelfEquip_Str:SetText( tostring( nNumber ) );
+			SelfEquip_Str:SetText( string.format("%.0f", nNumber) );
 		
 		--SPR
 		elseif(event == "UNIT_SPR" and arg0 == "player") then
 			nNumber = Player:GetData("SPR");
-			SelfEquip_Nimbus:SetText( tostring( nNumber ) );
+			SelfEquip_Nimbus:SetText( string.format("%.0f", nNumber) );
 
 		--CON
 		elseif(event == "UNIT_CON" and arg0 == "player") then
 			nNumber = Player:GetData("CON");
-			SelfEquip_PhysicalStrength:SetText( tostring( nNumber ) );
+			SelfEquip_PhysicalStrength:SetText( string.format("%.0f", nNumber) );
 
 		--INT
 		elseif(event == "UNIT_INT" and arg0 == "player") then
 			nNumber = Player:GetData("INT");
-			SelfEquip_Stability:SetText( tostring( nNumber ) );
+			SelfEquip_Stability:SetText( string.format("%.0f", nNumber) );
 
 		--DEX
 		elseif(event == "UNIT_DEX" and arg0 == "player") then
 			nNumber = Player:GetData("DEX");
-			SelfEquip_Footwork:SetText( tostring( nNumber ) );
+			SelfEquip_Footwork:SetText( string.format("%.0f", nNumber) );
 
 		--POINT_REMAIN
 		elseif(event == "POINT_REMAIN" and arg0 == "player") then
 			nNumber = Player:GetData("POINT_REMAIN");
-			SelfEquip_Potential:SetText( tostring( nNumber ) );
+			SelfEquip_Potential:SetText( string.format("%.0f", nNumber) );
 			g_CurRemainPoint = nNumber;
 			g_RemainPoint    = nNumber;
 			
@@ -345,35 +345,35 @@ function SelfEquip_OnEvent(event)
 				EanblePointAddButtion();
 			end
 			
-			-- ÉèÖÃÊÖ¶¯µ÷½ÚµãÊı°´Å¥µÄ×´Ì¬.
+			-- è®¾ç½®æ‰‹åŠ¨è°ƒèŠ‚ç‚¹æ•°æŒ‰é’®çš„çŠ¶æ€.
 			SetAcceptButtonState();
 	
 		--ATT_PHYSICS
 		elseif(event == "UNIT_ATT_PHYSICS" and arg0 == "player") then
 			nNumber = Player:GetData("ATT_PHYSICS");
-			SelfEquip_Perporty1:SetText( tostring( nNumber ) );
+			SelfEquip_Perporty1:SetText( string.format("%.0f", nNumber) );
 
 		--DEF_PHYSICS
 		elseif(event == "UNIT_DEF_PHYSICS" and arg0 == "player") then
 			nNumber = Player:GetData("DEF_PHYSICS");
-			if nNumber > 999999 then --Îª°ïÕ½ĞŞ¸ÄµÄ modified by hukai
+			if nNumber > 999999 then --ä¸ºå¸®æˆ˜ä¿®æ”¹çš„ modified by hukai
 				SelfEquip_Perporty3:SetText( "??????" );
 			else
-				SelfEquip_Perporty3:SetText( tostring( nNumber ) );
+				SelfEquip_Perporty3:SetText( string.format("%.0f", nNumber) );
 			end
 
 		--ATT_MAGIC
 		elseif(event == "UNIT_ATT_MAGIC" and arg0 == "player") then
 			nNumber = Player:GetData("ATT_MAGIC");
-			SelfEquip_Perporty2:SetText( tostring( nNumber ) );
+			SelfEquip_Perporty2:SetText( string.format("%.0f", nNumber) );
 
 		--DEF_MAGIC
 		elseif(event == "UNIT_DEF_MAGIC" and arg0 == "player") then
 			nNumber = Player:GetData("DEF_MAGIC");
-			if nNumber > 999999 then --Îª°ïÕ½ĞŞ¸ÄµÄ modified by hukai
+			if nNumber > 999999 then --ä¸ºå¸®æˆ˜ä¿®æ”¹çš„ modified by hukai
 				SelfEquip_Perporty4:SetText( "??????" );
 			else
-				SelfEquip_Perporty4:SetText( tostring( nNumber ) );
+				SelfEquip_Perporty4:SetText( string.format("%.0f", nNumber) );
 			end
 
 		--UNIT_HUIXINFANGYU
@@ -384,65 +384,65 @@ function SelfEquip_OnEvent(event)
 		--UNIT_MISS
 		elseif(event == "UNIT_MISS" and arg0 == "player") then
 			nNumber = Player:GetData("MISS");
-			SelfEquip_Perporty6:SetText( tostring( nNumber ) );
+			SelfEquip_Perporty6:SetText( string.format("%.0f", nNumber) );
 
 		--UNIT_HIT
 		elseif(event == "UNIT_HIT" and arg0 == "player") then
 			nNumber = Player:GetData("HIT");
-			SelfEquip_Perporty7:SetText( tostring( nNumber ) );
+			SelfEquip_Perporty7:SetText( string.format("%.0f", nNumber) );
 
 		--UNIT_CRITICAL_ATTACK
 		elseif(event == "UNIT_CRITICAL_ATTACK" and arg0 == "player") then
 			nNumber = Player:GetData("CRITICALATTACK");
-			SelfEquip_Perporty8:SetText( tostring( nNumber ) );
+			SelfEquip_Perporty8:SetText( string.format("%.0f", nNumber) );
 
 		--UNIT_CRITICAL_DEFENCE
 		elseif(event == "UNIT_CRITICAL_DEFENCE" and arg0 == "player") then
 			nNumber = Player:GetData("CRITICALDEFENCE");
-			SelfEquip_Perporty9:SetText( tostring( nNumber ) );
+			SelfEquip_Perporty9:SetText( string.format("%.0f", nNumber) );
 
-		--±ù·ÀÓù
+		--å†°é˜²å¾¡
 		elseif(event == "UNIT_DEF_COLD" and arg0 == "player") then
 			SelfEquip_SetStateTooltip();	
 			
-		--»ğ·ÀÓù
+		--ç«é˜²å¾¡
 		elseif(event == "UNIT_DEF_FIRE" and arg0 == "player") then
 			SelfEquip_SetStateTooltip();
 			
-		--µç·ÀÓù
+		--ç”µé˜²å¾¡
 		elseif(event == "UNIT_DEF_LIGHT" and arg0 == "player") then
 			SelfEquip_SetStateTooltip();
 			
-		--¶¾·ÀÓù
+		--æ¯’é˜²å¾¡
 		elseif(event == "UNIT_DEF_POSION" and arg0 == "player") then
 			SelfEquip_SetStateTooltip();
 				
-		--¼õ±ù¿¹
+		--å‡å†°æŠ—
 		elseif(event == "UNIT_RESISTOTHER_COLD" and arg0 == "player") then
 			SelfEquip_SetStateTooltip();	
 			
-		--¼õ»ğ¿¹
+		--å‡ç«æŠ—
 		elseif(event == "UNIT_RESISTOTHER_FIRE" and arg0 == "player") then
 			SelfEquip_SetStateTooltip();
 			
-		--¼õµç¿¹
+		--å‡ç”µæŠ—
 		elseif(event == "UNIT_RESISTOTHER_LIGHT" and arg0 == "player") then
 			SelfEquip_SetStateTooltip();
 			
-		--¼õ¶¾¿¹
+		--å‡æ¯’æŠ—
 		elseif(event == "UNIT_RESISTOTHER_POSION" and arg0 == "player") then
 			SelfEquip_SetStateTooltip();
 		
-		--±ù¹¥»÷
+		--å†°æ”»å‡»
 		elseif(event == "UNIT_ATT_COLD" and arg0 == "player") then
 			SelfEquip_SetStateTooltip();	
-		--»ğ¹¥»÷
+		--ç«æ”»å‡»
 		elseif(event == "UNIT_ATT_FIRE" and arg0 == "player") then
 			SelfEquip_SetStateTooltip();
-		--µç¹¥»÷
+		--ç”µæ”»å‡»
 		elseif(event == "UNIT_ATT_LIGHT" and arg0 == "player") then
 			SelfEquip_SetStateTooltip();
-		--¶¾¹¥»÷
+		--æ¯’æ”»å‡»
 		elseif(event == "UNIT_ATT_POSION" and arg0 == "player") then
 			SelfEquip_SetStateTooltip();
 				
@@ -457,7 +457,7 @@ function SelfEquip_OnEvent(event)
 			SelfEquip_UpdateMask();
 		else
 			
-			-- ²»ÒªÄ¬ÈÏµÄÇé¿öÏÂµ÷ÓÃÕâ¸öº¯Êı£¬ »áÔì³ÉÊôĞÔµãÊıÄªÃûÆäÃîµÄË¢ĞÂ¡£
+			-- ä¸è¦é»˜è®¤çš„æƒ…å†µä¸‹è°ƒç”¨è¿™ä¸ªå‡½æ•°ï¼Œ ä¼šé€ æˆå±æ€§ç‚¹æ•°è«åå…¶å¦™çš„åˆ·æ–°ã€‚
 			-- 2006-3-23
 			--Equip_OnUpdateShow();
 		end;
@@ -470,33 +470,33 @@ function SelfEquip_OnEvent(event)
 		return;
 	end
 
-	-- ÆäËüÊÂ¼ş¶¼¸üĞÂÈËÎïµÄ»ù±¾ĞÅÏ¢.
+	-- å…¶å®ƒäº‹ä»¶éƒ½æ›´æ–°äººç‰©çš„åŸºæœ¬ä¿¡æ¯.
 	--Equip_OnUpdateShow();
 		
 end
 
--- ¸üĞÂÖ÷½Ç»ù±¾ĞÅÏ¢
+-- æ›´æ–°ä¸»è§’åŸºæœ¬ä¿¡æ¯
 function Equip_OnUpdateShow()
 	
 	
 		
-	g_RemainPoint 			= 0;	-- Ê£ÓàµãÊı
-	g_CurExperience 	  = 0;	-- µ±Ç°Ê£Óà¾­Ñé
-	g_RequireExperience = 0;  -- Éı¼¶ËùĞè¾­Ñé
+	g_RemainPoint 			= 0;	-- å‰©ä½™ç‚¹æ•°
+	g_CurExperience 	  = 0;	-- å½“å‰å‰©ä½™ç»éªŒ
+	g_RequireExperience = 0;  -- å‡çº§æ‰€éœ€ç»éªŒ
 
-	g_AddStr = 0;					-- ·ÖÅäÔÚÁ¦Á¿ÉÏµÄÊ£ÓàµãÊı.
-	g_AddSpr = 0;					-- ·ÖÅäÔÚÁéÆøÉÏµÄÊ£ÓàµãÊı.
-	g_AddCon = 0;					-- ·ÖÅäÔÚÌåÖÊÉÏµÄÊ£ÓàµãÊı.
-	g_AddInt = 0;					-- ·ÖÅäÔÚ¶¨Á¦ÉÏµÄÊ£ÓàµãÊı.
-	g_AddDex = 0;					-- ·ÖÅäÔÚÉí·¨ÉÏµÄÊ£ÓàµãÊı.
-	g_CurRemainPoint = 0;	-- ·ÖÅäºóµÄÊ£ÓàµãÊı
+	g_AddStr = 0;					-- åˆ†é…åœ¨åŠ›é‡ä¸Šçš„å‰©ä½™ç‚¹æ•°.
+	g_AddSpr = 0;					-- åˆ†é…åœ¨çµæ°”ä¸Šçš„å‰©ä½™ç‚¹æ•°.
+	g_AddCon = 0;					-- åˆ†é…åœ¨ä½“è´¨ä¸Šçš„å‰©ä½™ç‚¹æ•°.
+	g_AddInt = 0;					-- åˆ†é…åœ¨å®šåŠ›ä¸Šçš„å‰©ä½™ç‚¹æ•°.
+	g_AddDex = 0;					-- åˆ†é…åœ¨èº«æ³•ä¸Šçš„å‰©ä½™ç‚¹æ•°.
+	g_CurRemainPoint = 0;	-- åˆ†é…åçš„å‰©ä½™ç‚¹æ•°
 	
 	
 	local nNumber=0;
 	local nMaxnumber=0;
 	local strName;
 	
-	-- ½ûÖ¹Ôö¼ÓÇ±ÄÜ°´Å¥.
+	-- ç¦æ­¢å¢åŠ æ½œèƒ½æŒ‰é’®.
 	Equip_Addition_Button1:Disable();
 	Equip_Decrease_Button1:Disable();
 	
@@ -512,52 +512,52 @@ function Equip_OnUpdateShow()
 	Equip_Addition_Button5:Disable();
 	Equip_Decrease_Button5:Disable();
 	
-	-- ÔÊĞí°´Å¥
+	-- å…è®¸æŒ‰é’®
 	-- SelfEquip_Accept:Enalbe();
 	
-	-- ½ûÖ¹Ôö¼Ó°´Å¥
+	-- ç¦æ­¢å¢åŠ æŒ‰é’®
 	-- SelfEquip_Accept:Disable();
 	
-	-- µÃµ½×Ô¼ºµÄÃû×Ö
+	-- å¾—åˆ°è‡ªå·±çš„åå­—
   strName = Player:GetName();
 	SelfEquip_PageHeader:SetText("#gFF0FA0".. strName );
 	
-	-- µÃµ½ÑªÖµ	
+	-- å¾—åˆ°è¡€å€¼	
 	nNumber = Player:GetData("HP");
 	nMaxnumber = Player:GetData( "MAXHP" );
-	local HPText = tostring( nNumber ).."/"..tostring( nMaxnumber );
+	local HPText = string.format("%.0f", nNumber).."/"..string.format("%.0f", nMaxnumber);
 	HPText = "#cFAFFA4"..HPText;  
 	SelfEquip_HP:SetText( HPText );
 		
 
-	-- µÃµ½Ä§·¨Öµ
+	-- å¾—åˆ°é­”æ³•å€¼
 	nNumber = Player:GetData( "MP" );
 	nMaxnumber = Player:GetData( "MAXMP" );
 	
-	local MPText = tostring( nNumber ).."/"..tostring( nMaxnumber );
+	local MPText = string.format("%.0f", nNumber).."/"..string.format("%.0f", nMaxnumber);
 	MPText = "#cFAFFA4"..MPText;  
 	SelfEquip_MP:SetText( MPText );
 
-	-- Å­Æø
+	-- æ€’æ°”
   nNumber = Player:GetData("RAGE");
   nMaxnumber = Player:GetData("MAXRAGE");
   local RageText = tostring( nNumber ).."/"..tostring( nMaxnumber );
   RageText = "#cFAFFA4"..RageText;  
  	SelfEquip_SP:SetText( RageText );
 
-	-- µÃµ½µ±Ç°¾­Ñé
+	-- å¾—åˆ°å½“å‰ç»éªŒ
 	g_CurExperience = Player:GetData("EXP");
-	local CurExpText = tostring( g_CurExperience );
+	local CurExpText = string.format("%.0f", g_CurExperience);
 	CurExpText = "#cC8B88E"..CurExpText;  
 	SelfEquip_Exp2:SetText( CurExpText );
 	
-	-- µÃµ½Éı¼¶ĞèÒªµÄ¾­Ñé
+	-- å¾—åˆ°å‡çº§éœ€è¦çš„ç»éªŒ
 	g_RequireExperience = Player:GetData("NEEDEXP");
-	local NeedExpText =  tostring( g_RequireExperience );
+	local NeedExpText =  string.format("%.0f", g_RequireExperience);
 	NeedExpText = "#cC8B88E"..NeedExpText;  
 	SelfEquip_Exp1:SetText( NeedExpText );
 	
-	-- ¸ù¾İ¾­Ñé½ûÖ¹»òÕß´ò¿ªÉı¼¶
+	-- æ ¹æ®ç»éªŒç¦æ­¢æˆ–è€…æ‰“å¼€å‡çº§
 	if(g_CurExperience >= g_RequireExperience) then
 	
 		SelfEquip_UpLevel:Enable();
@@ -566,47 +566,47 @@ function Equip_OnUpdateShow()
 		SelfEquip_UpLevel:Disable();
 	end
 	
-	-- µÃµ½µÈ¼¶
+	-- å¾—åˆ°ç­‰çº§
 	nNumber = Player:GetData( "LEVEL" );
-	local LevelText = tostring( nNumber ).." ¼¶";
+	local LevelText = tostring( nNumber ).." çº§";
 	LevelText = "#cC8B88E"..LevelText;  
 	SelfEquip_Level:SetText( LevelText );
 	
-	-- Èç¹ûµÈ¼¶´óÓÚÄ³Öµ½ûÖ¹°´Å¥.
+	-- å¦‚æœç­‰çº§å¤§äºæŸå€¼ç¦æ­¢æŒ‰é’®.
 	if( LEVEL_MAX_ENABLE <= nNumber ) then
 		SelfEquip_UpLevel:Disable();
 	end
   
-  -- Á¦Á¿
+  -- åŠ›é‡
   nNumber = Player:GetData("STR");
-  local StrText = tostring( nNumber );
+  local StrText = string.format("%.0f", nNumber);
   --StrText = "#DED784"..StrText;  
 	SelfEquip_Str:SetText( StrText );
 	
-	-- ÁéÆø
+	-- çµæ°”
   nNumber = Player:GetData("SPR");
-  local SprText = tostring( nNumber );
+  local SprText = string.format("%.0f", nNumber);
   --SprText = "#DED784"..SprText;  
 	SelfEquip_Nimbus:SetText( SprText );
 		
-	-- ÌåÖÊ
+	-- ä½“è´¨
 	nNumber = Player:GetData("CON");
-	local ConText = tostring( nNumber );
+	local ConText = string.format("%.0f", nNumber);
 	SelfEquip_PhysicalStrength:SetText( ConText );
 		 
 	
-	-- ¶¨Á¦
+	-- å®šåŠ›
 	nNumber = Player:GetData("INT");
-	SelfEquip_Stability:SetText( tostring( nNumber ) );
+	SelfEquip_Stability:SetText( string.format("%.0f", nNumber) );
 	
-	-- Éí·¨
+	-- èº«æ³•
 	nNumber = Player:GetData("DEX");
-	SelfEquip_Footwork:SetText( tostring( nNumber ) );
+	SelfEquip_Footwork:SetText( string.format("%.0f", nNumber) );
 	
-	-- Ê£ÓàµãÊı
+	-- å‰©ä½™ç‚¹æ•°
 	g_RemainPoint = Player:GetData("POINT_REMAIN");
-	SelfEquip_Potential:SetText( tostring( g_RemainPoint ) );
-	--AxTrace( 0,0, "µÃµ½Ê£ÓàµãÊı"..tostring( g_RemainPoint ));
+	SelfEquip_Potential:SetText( string.format("%.0f", g_RemainPoint) );
+	--AxTrace( 0,0, "å¾—åˆ°å‰©ä½™ç‚¹æ•°"..tostring( g_RemainPoint ));
 	g_CurRemainPoint = g_RemainPoint;
 	
 	if(g_CurRemainPoint > 0) then
@@ -620,122 +620,122 @@ function Equip_OnUpdateShow()
 	end;
 
 	
-	-- ÎïÀí¹¥»÷
+	-- ç‰©ç†æ”»å‡»
 	nNumber = Player:GetData("ATT_PHYSICS");
-	SelfEquip_Perporty1:SetText( tostring( nNumber ) );
+	SelfEquip_Perporty1:SetText( string.format("%.0f", nNumber) );
 	
-	-- ÎïÀí·ÀÓù
+	-- ç‰©ç†é˜²å¾¡
 	nNumber = Player:GetData("DEF_PHYSICS");
-	if nNumber > 999999 then --Îª°ïÕ½ĞŞ¸ÄµÄ modified by hukai
+	if nNumber > 999999 then --ä¸ºå¸®æˆ˜ä¿®æ”¹çš„ modified by hukai
 		SelfEquip_Perporty3:SetText( "??????" );
 	else
-		SelfEquip_Perporty3:SetText( tostring( nNumber ) );
+		SelfEquip_Perporty3:SetText( string.format("%.0f", nNumber) );
 	end
 	
-	-- Ä§·¨¹¥»÷
+	-- é­”æ³•æ”»å‡»
 	nNumber = Player:GetData("ATT_MAGIC");
-	SelfEquip_Perporty2:SetText( tostring( nNumber ) );
+	SelfEquip_Perporty2:SetText( string.format("%.0f", nNumber) );
 	
-	-- Ä§·¨·ÀÓù
+	-- é­”æ³•é˜²å¾¡
 	nNumber = Player:GetData("DEF_MAGIC");
-	if nNumber > 999999 then --Îª°ïÕ½ĞŞ¸ÄµÄ modified by hukai
+	if nNumber > 999999 then --ä¸ºå¸®æˆ˜ä¿®æ”¹çš„ modified by hukai
 		SelfEquip_Perporty4:SetText( "??????" );
 	else
-		SelfEquip_Perporty4:SetText( tostring( nNumber ) );
+		SelfEquip_Perporty4:SetText( string.format("%.0f", nNumber) );
 	end
 	
-	-- ÉÁ±ÜÂÊ
+	-- é—ªé¿ç‡
 	nNumber = Player:GetData("MISS");
-	SelfEquip_Perporty6:SetText( tostring( nNumber ) );
+	SelfEquip_Perporty6:SetText( string.format("%.0f", nNumber) );
 	
-	-- ÃüÖĞÂÊ
+	-- å‘½ä¸­ç‡
 	nNumber = Player:GetData("HIT");
-	SelfEquip_Perporty7:SetText( tostring( nNumber ) );
+	SelfEquip_Perporty7:SetText( string.format("%.0f", nNumber) );
 	
-	-- »áĞÄ¹¥»÷
+	-- ä¼šå¿ƒæ”»å‡»
 	nNumber = Player:GetData("CRITICALATTACK");
-	SelfEquip_Perporty8:SetText( tostring( nNumber ) );
+	SelfEquip_Perporty8:SetText( string.format("%.0f", nNumber) );
 
-	-- »áĞÄ·ÀÓù
+	-- ä¼šå¿ƒé˜²å¾¡
 	nNumber = Player:GetData("CRITICALDEFENCE");
-	SelfEquip_Perporty9:SetText( tostring( nNumber ) );
+	SelfEquip_Perporty9:SetText( string.format("%.0f", nNumber) );
 
-	-- »îÁ¦
+	-- æ´»åŠ›
 	SelfEquip_ShowVigor();
 	
-	-- ¾«Á¦
+	-- ç²¾åŠ›
 	SelfEquip_ShowEnergy();
 	
-	-- ÃÅÅÉ
+	-- é—¨æ´¾
 	local menpai = Player:GetData("MEMPAI");
 	local strName = "";
 	
-	-- µÃµ½ÃÅÅÉÃû³Æ.
+	-- å¾—åˆ°é—¨æ´¾åç§°.
 	if(0 == menpai) then
-		strName = "ÉÙÁÖ";
+		strName = "å°‘æ—";
 		
 	elseif(1 == menpai) then
-		strName = "Ã÷½Ì";
+		strName = "æ˜æ•™";
 		
 	elseif(2 == menpai) then
-		strName = "Ø¤°ï";
+		strName = "ä¸å¸®";
 		
 	elseif(3 == menpai) then
-		strName = "Îäµ±";
+		strName = "æ­¦å½“";
 	
 	elseif(4 == menpai) then
-		strName = "¶ëáÒ";
+		strName = "å³¨åµ‹";
 	
 	elseif(5 == menpai) then
-		strName = "ĞÇËŞ";
+		strName = "æ˜Ÿå®¿";
 	
 	elseif(6 == menpai) then
-		strName = "ÌìÁú";
+		strName = "å¤©é¾™";
 	
 	elseif(7 == menpai) then
-		strName = "ÌìÉ½";
+		strName = "å¤©å±±";
 	
 	elseif(8 == menpai) then
-		strName = "åĞÒ£";
+		strName = "é€é¥";
 	
 	elseif(9 == menpai) then
-		strName = "ÎŞÃÅÅÉ";
+		strName = "æ— é—¨æ´¾";
 	end
 	
-	-- ÉèÖÃÏÔÊ¾µÄÃÅÅÉ.
+	-- è®¾ç½®æ˜¾ç¤ºçš„é—¨æ´¾.
 	SelfEquip_MenPai:SetText(strName);
 	
-	-- ÉèÖÃ°ï»áÏÔÊ¾
+	-- è®¾ç½®å¸®ä¼šæ˜¾ç¤º
 --	GetGuildTitle();
 	
-	-- µÃµ½³ÆºÅ
+	-- å¾—åˆ°ç§°å·
 --	GetCurTitle();
 	
-	-- ÉèÖÃÊÖ¶¯µ÷½ÚµãÊı°´Å¥µÄ×´Ì¬.
+	-- è®¾ç½®æ‰‹åŠ¨è°ƒèŠ‚ç‚¹æ•°æŒ‰é’®çš„çŠ¶æ€.
 	SetAcceptButtonState();
 	
 end
 
--- Ë¢ĞÂ×°±¸
+-- åˆ·æ–°è£…å¤‡
 function Equip_RefreshEquip()
 	
 	
-	--  Çå¿Õ°´Å¥ÏÔÊ¾Í¼±ê
-	g_WEAPON:SetActionItem(-1);			--ÎäÆ÷
-	g_CAP:SetActionItem(-1);				--Ã±×Ó 
-	g_ARMOR:SetActionItem(-1);			--¿ø¼×
-	g_CUFF:SetActionItem(-1);				--ÊÖÌ×
-	g_BOOT:SetActionItem(-1);				--Ğ¬
-	g_SASH:SetActionItem(-1);				--Ñü´ø
-	g_RING:SetActionItem(-1);				--½äÖ¸
-	g_NECKLACE:SetActionItem(-1);		--ÏîÁ´
-	g_Dark:SetActionItem(-1);			--°µÆ÷
-	g_RING_2:SetActionItem(-1);			--½äÖ¸2	  
-	g_CHARM:SetActionItem(-1);			--»¤·û		
-	g_CHARM_2:SetActionItem(-1);		--»¤·û2
-	g_WRIST:SetActionItem(-1);			--»¤Íó	
-	g_SHOULDER:SetActionItem(-1);		--»¤¼ç
-	g_DRESS:SetActionItem(-1);			--Ê±×°	
+	--  æ¸…ç©ºæŒ‰é’®æ˜¾ç¤ºå›¾æ ‡
+	g_WEAPON:SetActionItem(-1);			--æ­¦å™¨
+	g_CAP:SetActionItem(-1);				--å¸½å­ 
+	g_ARMOR:SetActionItem(-1);			--ç›”ç”²
+	g_CUFF:SetActionItem(-1);				--æ‰‹å¥—
+	g_BOOT:SetActionItem(-1);				--é‹
+	g_SASH:SetActionItem(-1);				--è…°å¸¦
+	g_RING:SetActionItem(-1);				--æˆ’æŒ‡
+	g_NECKLACE:SetActionItem(-1);		--é¡¹é“¾
+	g_Dark:SetActionItem(-1);			--æš—å™¨
+	g_RING_2:SetActionItem(-1);			--æˆ’æŒ‡2	  
+	g_CHARM:SetActionItem(-1);			--æŠ¤ç¬¦		
+	g_CHARM_2:SetActionItem(-1);		--æŠ¤ç¬¦2
+	g_WRIST:SetActionItem(-1);			--æŠ¤è…•	
+	g_SHOULDER:SetActionItem(-1);		--æŠ¤è‚©
+	g_DRESS:SetActionItem(-1);			--æ—¶è£…	
 	
 	local ActionWeapon 		= EnumAction(0, "equip");
 	local ActionCap    		= EnumAction(1, "equip");
@@ -753,22 +753,22 @@ function Equip_RefreshEquip()
 	local ActionShoulder  = EnumAction(15, "equip");
 	local ActionDress   	= EnumAction(16, "equip");
 
-	-- ÏÔÊ¾ÈËÉíÉÏµÄÎäÆ÷×°±¸
-	g_WEAPON:SetActionItem(ActionWeapon:GetID());			--ÎäÆ÷
-	g_CAP:SetActionItem(ActionCap:GetID());						--Ã±×Ó 
-	g_ARMOR:SetActionItem(ActionArmor:GetID());				--¿ø¼×
-	g_CUFF:SetActionItem(ActionCuff:GetID());					--»¤Íó
-	g_BOOT:SetActionItem(ActionBoot:GetID());					--Ğ¬
-	g_SASH:SetActionItem(ActionSash:GetID());					--Ñü´ø
-	g_RING:SetActionItem(ActionRing:GetID());					--½ä×Ó
-	g_NECKLACE:SetActionItem(ActionNecklace:GetID());	--ÏîÁ´
-	g_Dark:SetActionItem(ActionMount:GetID());				--°µÆ÷
-	g_RING_2:SetActionItem(ActionRing_2:GetID());			--½äÖ¸2	  
-	g_CHARM:SetActionItem(ActionCharm:GetID());			--»¤·û		
-	g_CHARM_2:SetActionItem(ActionCharm_2:GetID());		--»¤·û2
-	g_WRIST:SetActionItem(ActionWrist:GetID());			--»¤Íó	
-	g_SHOULDER:SetActionItem(ActionShoulder:GetID());		--»¤¼ç
-	g_DRESS:SetActionItem(ActionDress:GetID());			--Ê±×°	
+	-- æ˜¾ç¤ºäººèº«ä¸Šçš„æ­¦å™¨è£…å¤‡
+	g_WEAPON:SetActionItem(ActionWeapon:GetID());			--æ­¦å™¨
+	g_CAP:SetActionItem(ActionCap:GetID());						--å¸½å­ 
+	g_ARMOR:SetActionItem(ActionArmor:GetID());				--ç›”ç”²
+	g_CUFF:SetActionItem(ActionCuff:GetID());					--æŠ¤è…•
+	g_BOOT:SetActionItem(ActionBoot:GetID());					--é‹
+	g_SASH:SetActionItem(ActionSash:GetID());					--è…°å¸¦
+	g_RING:SetActionItem(ActionRing:GetID());					--æˆ’å­
+	g_NECKLACE:SetActionItem(ActionNecklace:GetID());	--é¡¹é“¾
+	g_Dark:SetActionItem(ActionMount:GetID());				--æš—å™¨
+	g_RING_2:SetActionItem(ActionRing_2:GetID());			--æˆ’æŒ‡2	  
+	g_CHARM:SetActionItem(ActionCharm:GetID());			--æŠ¤ç¬¦		
+	g_CHARM_2:SetActionItem(ActionCharm_2:GetID());		--æŠ¤ç¬¦2
+	g_WRIST:SetActionItem(ActionWrist:GetID());			--æŠ¤è…•	
+	g_SHOULDER:SetActionItem(ActionShoulder:GetID());		--æŠ¤è‚©
+	g_DRESS:SetActionItem(ActionDress:GetID());			--æ—¶è£…	
 	
 	local IsDisplay = SystemSetup:Get_Display_Dress();
 	if IsDisplay == 1 then
@@ -787,102 +787,102 @@ function SelfEquip_Equip_Click( nTypeIn,buttonIn )
 	local button = tonumber( buttonIn );
 	if( nType == 11 ) then
 		if( button == 1 ) then
-			g_WEAPON:DoAction();	--ÎäÆ÷
+			g_WEAPON:DoAction();	--æ­¦å™¨
 		else
-			g_WEAPON:DoSubAction();	--ÎäÆ÷
+			g_WEAPON:DoSubAction();	--æ­¦å™¨
 		end
 	elseif( nType == 12 ) then
 		if( button == 1 ) then
-			g_ARMOR:DoAction();	--ÒÂ·ş
+			g_ARMOR:DoAction();	--è¡£æœ
 		else
-			g_ARMOR:DoSubAction();	--ÒÂ·ş
+			g_ARMOR:DoSubAction();	--è¡£æœ
 		end
 	elseif( nType == 1 ) then
 		if( button == 1 ) then
-			g_CAP:DoAction();	--Ã±×Ó
+			g_CAP:DoAction();	--å¸½å­
 		else
-			g_CAP:DoSubAction();	--Ã±×Ó
+			g_CAP:DoSubAction();	--å¸½å­
 		end
 	elseif( nType == 4 ) then
 		if( button == 1 ) then
-			g_CUFF:DoAction();	--ÊÖÌ×
+			g_CUFF:DoAction();	--æ‰‹å¥—
 		else
-			g_CUFF:DoSubAction();	--ÊÖÌ×
+			g_CUFF:DoSubAction();	--æ‰‹å¥—
 		end		
 	elseif( nType == 6 ) then
 		if( button == 1 ) then
-			g_BOOT:DoAction();	--Ğ¬
+			g_BOOT:DoAction();	--é‹
 		else
-			g_BOOT:DoSubAction();	--Ğ¬
+			g_BOOT:DoSubAction();	--é‹
 		end
 	elseif( nType == 7 ) then
 		if( button == 1 ) then
-			g_RING:DoAction();	--½äÖ¸
+			g_RING:DoAction();	--æˆ’æŒ‡
 		else
-			g_RING:DoSubAction();	--½äÖ¸
+			g_RING:DoSubAction();	--æˆ’æŒ‡
 		end
 	elseif( nType == 5 ) then
 		if( button == 1 ) then
-			g_SASH:DoAction();	--Ñü´ø
+			g_SASH:DoAction();	--è…°å¸¦
 		else
-			g_SASH:DoSubAction();	--Ñü´ø
+			g_SASH:DoSubAction();	--è…°å¸¦
 		end
 	elseif( nType == 13) then
 		if( button == 1 ) then
-			g_NECKLACE:DoAction();	--ÏîÁ´
+			g_NECKLACE:DoAction();	--é¡¹é“¾
 		else
-			g_NECKLACE:DoSubAction();	--ÏîÁ´
+			g_NECKLACE:DoSubAction();	--é¡¹é“¾
 		end
 	elseif( nType == 14 ) then
 		if( button == 1 ) then
-			g_Dark:DoAction();	--°µÆ÷
+			g_Dark:DoAction();	--æš—å™¨
 		else
-			g_Dark:DoSubAction();	--°µÆ÷
+			g_Dark:DoSubAction();	--æš—å™¨
 		end
 	elseif( nType == 2 ) then
 		if( button == 1 ) then
-			g_SHOULDER:DoAction();	--»¤¼ç
+			g_SHOULDER:DoAction();	--æŠ¤è‚©
 		else
-			g_SHOULDER:DoSubAction();	--»¤¼ç
+			g_SHOULDER:DoSubAction();	--æŠ¤è‚©
 		end
 	elseif( nType == 3 ) then
 		if( button == 1 ) then
-			g_WRIST:DoAction();	--»¤Íó
+			g_WRIST:DoAction();	--æŠ¤è…•
 		else
-			g_WRIST:DoSubAction();	--»¤Íó
+			g_WRIST:DoSubAction();	--æŠ¤è…•
 		end
 	elseif( nType == 8 ) then
 		if( button == 1 ) then
-			g_RING_2:DoAction();	--½äÖ¸2
+			g_RING_2:DoAction();	--æˆ’æŒ‡2
 		else
-			g_RING_2:DoSubAction();	--½äÖ¸
+			g_RING_2:DoSubAction();	--æˆ’æŒ‡
 		end
 	elseif( nType == 9 ) then
 		if( button == 1 ) then
-			g_CHARM:DoAction();	--»¤·û
+			g_CHARM:DoAction();	--æŠ¤ç¬¦
 		else
-			g_CHARM:DoSubAction();	--»¤·û
+			g_CHARM:DoSubAction();	--æŠ¤ç¬¦
 		end
 	elseif( nType == 10 ) then
 		if( button == 1 ) then
-			g_CHARM_2:DoAction();	--»¤·û2
+			g_CHARM_2:DoAction();	--æŠ¤ç¬¦2
 		else
-			g_CHARM_2:DoSubAction();	--»¤·û2
+			g_CHARM_2:DoSubAction();	--æŠ¤ç¬¦2
 		end		
 	elseif( nType == 15 ) then
 		if( button == 1 ) then
-			g_DRESS:DoAction();	--Ê±×°
+			g_DRESS:DoAction();	--æ—¶è£…
 		else
-			g_DRESS:DoSubAction();	--Ê±×°
+			g_DRESS:DoSubAction();	--æ—¶è£…
 		end
 	end
 end
 
 
 ----------------------------------------------------------------------------
--- Á¦Á¿µãÊı°´Å¥
+-- åŠ›é‡ç‚¹æ•°æŒ‰é’®
 --
--- ¼õÉÙÁ¦Á¿µãÊı°´Å¥
+-- å‡å°‘åŠ›é‡ç‚¹æ•°æŒ‰é’®
 function SelfEquip_Dec1_Click()
 	
 	g_CurRemainPoint = g_CurRemainPoint + 1;
@@ -896,18 +896,18 @@ function SelfEquip_Dec1_Click()
 		Equip_Decrease_Button1:Disable();
 	end
 	
-	-- ÏÔÊ¾µ±Ç°Ê£ÓàµÄµãÊı
+	-- æ˜¾ç¤ºå½“å‰å‰©ä½™çš„ç‚¹æ•°
 	ShowCurRemainPoint();
 	
-	-- ÉèÖÃÊ£ÓàµãÊı°´Å¥×´Ì¬
+	-- è®¾ç½®å‰©ä½™ç‚¹æ•°æŒ‰é’®çŠ¶æ€
 	SetAcceptButtonState();
 	
-	-- ÏÔÊ¾Á¦Á¿
+	-- æ˜¾ç¤ºåŠ›é‡
 	ShowCurStr();
 	
 end
 
--- Ôö¼ÓÁ¦Á¿µãÊı°´Å¥
+-- å¢åŠ åŠ›é‡ç‚¹æ•°æŒ‰é’®
 function SelfEquip_Add1_Click()
 
 	g_AddStr = g_AddStr + 1;
@@ -921,22 +921,22 @@ function SelfEquip_Add1_Click()
 		DisablePointAddButtion();
 	end
 	
-	-- ÏÔÊ¾µ±Ç°Ê£ÓàµÄµãÊı
+	-- æ˜¾ç¤ºå½“å‰å‰©ä½™çš„ç‚¹æ•°
 	ShowCurRemainPoint();
 	
-	-- ÉèÖÃÊ£ÓàµãÊı°´Å¥×´Ì¬
+	-- è®¾ç½®å‰©ä½™ç‚¹æ•°æŒ‰é’®çŠ¶æ€
 	SetAcceptButtonState();
 	
-	-- ÏÔÊ¾Á¦Á¿
+	-- æ˜¾ç¤ºåŠ›é‡
 	ShowCurStr();
 	
 end
 
 
 -----------------------------------------------------------------------------
--- ÁéÆøµãÊı°´Å¥
+-- çµæ°”ç‚¹æ•°æŒ‰é’®
 --
--- ¼õÉÙÁéÆøµãÊı°´Å¥
+-- å‡å°‘çµæ°”ç‚¹æ•°æŒ‰é’®
 function SelfEquip_Dec2_Click()
 		
 	g_CurRemainPoint = g_CurRemainPoint + 1;
@@ -951,18 +951,18 @@ function SelfEquip_Dec2_Click()
 		Equip_Decrease_Button2:Disable();
 	end
 	
-	-- ÏÔÊ¾µ±Ç°Ê£ÓàµÄµãÊı
+	-- æ˜¾ç¤ºå½“å‰å‰©ä½™çš„ç‚¹æ•°
 	ShowCurRemainPoint();
 	
-	-- ÉèÖÃÊ£ÓàµãÊı°´Å¥×´Ì¬
+	-- è®¾ç½®å‰©ä½™ç‚¹æ•°æŒ‰é’®çŠ¶æ€
 	SetAcceptButtonState();
 	
-	-- ÏÔÊ¾ÁéÆø
+	-- æ˜¾ç¤ºçµæ°”
 	ShowCurSpr();
 	
 end
 
--- Ôö¼ÓÁéÆøµãÊı°´Å¥
+-- å¢åŠ çµæ°”ç‚¹æ•°æŒ‰é’®
 function SelfEquip_Add2_Click()
 	
 	g_AddSpr = g_AddSpr + 1;
@@ -976,22 +976,22 @@ function SelfEquip_Add2_Click()
 		DisablePointAddButtion();
 	end
 	
-	-- ÏÔÊ¾µ±Ç°Ê£ÓàµÄµãÊı
+	-- æ˜¾ç¤ºå½“å‰å‰©ä½™çš„ç‚¹æ•°
 	ShowCurRemainPoint();
 	
-	-- ÉèÖÃÊ£ÓàµãÊı°´Å¥×´Ì¬
+	-- è®¾ç½®å‰©ä½™ç‚¹æ•°æŒ‰é’®çŠ¶æ€
 	SetAcceptButtonState();
 	
-	-- ÏÔÊ¾ÁéÆø
+	-- æ˜¾ç¤ºçµæ°”
 	ShowCurSpr();
 	
 end
 
 
 -----------------------------------------------------------------------------
--- ÌåÖÊµãÊı°´Å¥
+-- ä½“è´¨ç‚¹æ•°æŒ‰é’®
 --
--- ¼õÉÙÌåÖÊµãÊı°´Å¥
+-- å‡å°‘ä½“è´¨ç‚¹æ•°æŒ‰é’®
 function SelfEquip_Dec3_Click()
 
 	g_CurRemainPoint = g_CurRemainPoint + 1;
@@ -1006,19 +1006,19 @@ function SelfEquip_Dec3_Click()
 		Equip_Decrease_Button3:Disable();
 	end
 	
-	-- ÏÔÊ¾µ±Ç°Ê£ÓàµÄµãÊı
+	-- æ˜¾ç¤ºå½“å‰å‰©ä½™çš„ç‚¹æ•°
 	ShowCurRemainPoint();
 	
-	-- ÉèÖÃÊ£ÓàµãÊı°´Å¥×´Ì¬
+	-- è®¾ç½®å‰©ä½™ç‚¹æ•°æŒ‰é’®çŠ¶æ€
 	SetAcceptButtonState();
 	
-	-- ÏÔÊ¾ÌåÖÊ
+	-- æ˜¾ç¤ºä½“è´¨
 	ShowCurCon();
 	
 	
 end
 
--- Ôö¼ÓÌåÖÊµãÊı°´Å¥
+-- å¢åŠ ä½“è´¨ç‚¹æ•°æŒ‰é’®
 function SelfEquip_Add3_Click()
 
 	g_AddCon = g_AddCon + 1;
@@ -1032,22 +1032,22 @@ function SelfEquip_Add3_Click()
 		DisablePointAddButtion();
 	end
 	
-	-- ÏÔÊ¾µ±Ç°Ê£ÓàµÄµãÊı
+	-- æ˜¾ç¤ºå½“å‰å‰©ä½™çš„ç‚¹æ•°
 	ShowCurRemainPoint();
 	
-	-- ÉèÖÃÊ£ÓàµãÊı°´Å¥×´Ì¬
+	-- è®¾ç½®å‰©ä½™ç‚¹æ•°æŒ‰é’®çŠ¶æ€
 	SetAcceptButtonState();
 	
-	-- ÏÔÊ¾ÌåÖÊ
+	-- æ˜¾ç¤ºä½“è´¨
 	ShowCurCon();
 	
 end
 
 
 -------------------------------------------------------------------------------
--- ¶¨Á¦µãÊı°´Å¥
+-- å®šåŠ›ç‚¹æ•°æŒ‰é’®
 --
--- ¼õÉÙ¶¨Á¦µãÊı°´Å¥
+-- å‡å°‘å®šåŠ›ç‚¹æ•°æŒ‰é’®
 function SelfEquip_Dec4_Click()
 
 	g_CurRemainPoint = g_CurRemainPoint + 1;
@@ -1062,18 +1062,18 @@ function SelfEquip_Dec4_Click()
 		Equip_Decrease_Button4:Disable();
 	end
 	
-	-- ÏÔÊ¾µ±Ç°Ê£ÓàµÄµãÊı
+	-- æ˜¾ç¤ºå½“å‰å‰©ä½™çš„ç‚¹æ•°
 	ShowCurRemainPoint();
 	
-	-- ÉèÖÃÊ£ÓàµãÊı°´Å¥×´Ì¬
+	-- è®¾ç½®å‰©ä½™ç‚¹æ•°æŒ‰é’®çŠ¶æ€
 	SetAcceptButtonState();
 	
-	-- ÏÔÊ¾¶¨Á¦
+	-- æ˜¾ç¤ºå®šåŠ›
 	ShowCurInt();
 	
 end
 
--- Ôö¼Ó¶¨Á¦µãÊı°´Å¥
+-- å¢åŠ å®šåŠ›ç‚¹æ•°æŒ‰é’®
 function SelfEquip_Add4_Click()
 
 	g_AddInt = g_AddInt + 1;
@@ -1088,13 +1088,13 @@ function SelfEquip_Add4_Click()
 		DisablePointAddButtion();
 	end
 	
-	-- ÏÔÊ¾µ±Ç°Ê£ÓàµÄµãÊı
+	-- æ˜¾ç¤ºå½“å‰å‰©ä½™çš„ç‚¹æ•°
 	ShowCurRemainPoint();
 	
-	-- ÉèÖÃÊ£ÓàµãÊı°´Å¥×´Ì¬
+	-- è®¾ç½®å‰©ä½™ç‚¹æ•°æŒ‰é’®çŠ¶æ€
 	SetAcceptButtonState();
 	
-	-- ÏÔÊ¾¶¨Á¦
+	-- æ˜¾ç¤ºå®šåŠ›
 	ShowCurInt();
 	
 end
@@ -1102,9 +1102,9 @@ end
 
 
 --------------------------------------------------------------------------------
--- Éí·¨µãÊı°´Å¥
+-- èº«æ³•ç‚¹æ•°æŒ‰é’®
 --
--- ¼õÉÙÉí·¨µãÊı°´Å¥
+-- å‡å°‘èº«æ³•ç‚¹æ•°æŒ‰é’®
 function SelfEquip_Dec5_Click()
 		
 	g_CurRemainPoint = g_CurRemainPoint + 1;
@@ -1119,18 +1119,18 @@ function SelfEquip_Dec5_Click()
 		Equip_Decrease_Button5:Disable();
 	end
 	
-	-- ÏÔÊ¾µ±Ç°Ê£ÓàµÄµãÊı
+	-- æ˜¾ç¤ºå½“å‰å‰©ä½™çš„ç‚¹æ•°
 	ShowCurRemainPoint();
 	
-	-- ÉèÖÃÊ£ÓàµãÊı°´Å¥×´Ì¬
+	-- è®¾ç½®å‰©ä½™ç‚¹æ•°æŒ‰é’®çŠ¶æ€
 	SetAcceptButtonState();
 	
-	-- ÏÔÊ¾Éí·¨
+	-- æ˜¾ç¤ºèº«æ³•
 	ShowCurDex();
 	
 end
 
--- Ôö¼ÓÉí·¨µãÊı°´Å¥
+-- å¢åŠ èº«æ³•ç‚¹æ•°æŒ‰é’®
 function SelfEquip_Add5_Click()
 	
 	g_AddDex = g_AddDex + 1;
@@ -1145,20 +1145,20 @@ function SelfEquip_Add5_Click()
 		DisablePointAddButtion();
 	end
 	
-	-- ÏÔÊ¾µ±Ç°Ê£ÓàµÄµãÊı
+	-- æ˜¾ç¤ºå½“å‰å‰©ä½™çš„ç‚¹æ•°
 	ShowCurRemainPoint();
 	
-	-- ÉèÖÃÊ£ÓàµãÊı°´Å¥×´Ì¬
+	-- è®¾ç½®å‰©ä½™ç‚¹æ•°æŒ‰é’®çŠ¶æ€
 	SetAcceptButtonState();
 	
-	-- ÏÔÊ¾Éí·¨
+	-- æ˜¾ç¤ºèº«æ³•
 	ShowCurDex();
 	
 end
 
 --------------------------------------------------------------------------------
 --
--- ´ò¿ªËùÓĞµÄµãÊıÔö¼Ó°´Å¥
+-- æ‰“å¼€æ‰€æœ‰çš„ç‚¹æ•°å¢åŠ æŒ‰é’®
 --
 function EanbleAskAttrBn(bEnable)
 
@@ -1171,7 +1171,7 @@ end
 
 --------------------------------------------------------------------------------
 --
--- ´ò¿ªËùÓĞµÄµãÊıÔö¼Ó°´Å¥
+-- æ‰“å¼€æ‰€æœ‰çš„ç‚¹æ•°å¢åŠ æŒ‰é’®
 --
 function EanblePointAddButtion()
 
@@ -1185,7 +1185,7 @@ end
 
 --------------------------------------------------------------------------------
 --
--- ½ûÖ¹ËùÓĞµÄµãÊıÔö¼Ó°´Å¥
+-- ç¦æ­¢æ‰€æœ‰çš„ç‚¹æ•°å¢åŠ æŒ‰é’®
 --
 function DisablePointAddButtion()
 
@@ -1199,7 +1199,7 @@ end
 
 --------------------------------------------------------------------------------
 --
--- ´ò¿ªËùÓĞµÄµãÊıÔö¼Ó°´Å¥
+-- æ‰“å¼€æ‰€æœ‰çš„ç‚¹æ•°å¢åŠ æŒ‰é’®
 --
 function EanblePointDecButtion()
 
@@ -1213,7 +1213,7 @@ end
 
 --------------------------------------------------------------------------------
 --
--- ½ûÖ¹ËùÓĞµÄµãÊıÔö¼Ó°´Å¥
+-- ç¦æ­¢æ‰€æœ‰çš„ç‚¹æ•°å¢åŠ æŒ‰é’®
 --
 function DisablePointDecButtion()
 
@@ -1227,61 +1227,61 @@ end
 
 ---------------------------------------------------------------------------------
 -- 
--- ÏÔÊ¾µ±Ç°µÄÇ±ÄÜ
+-- æ˜¾ç¤ºå½“å‰çš„æ½œèƒ½
 --
 function ShowCurRemainPoint()
 
-	SelfEquip_Potential:SetText( tostring( g_CurRemainPoint ) );
+	SelfEquip_Potential:SetText( string.format("%.0f", g_CurRemainPoint) );
 
 end
 
 ---------------------------------------------------------------------------------
 -- 
--- ÏÔÊ¾Á¦Á¿
+-- æ˜¾ç¤ºåŠ›é‡
 --
 function ShowCurStr()
 
-	SelfEquip_Str:SetText( tostring( g_AddStr + Player:GetData("STR") ) );
+	SelfEquip_Str:SetText( string.format("%.0f", g_AddStr + Player:GetData("STR") ) );
 
 end
 
 ---------------------------------------------------------------------------------
 -- 
--- ÏÔÊ¾ÁéÆø
+-- æ˜¾ç¤ºçµæ°”
 --
 function ShowCurSpr()
 
-	SelfEquip_Nimbus:SetText( tostring( g_AddSpr + Player:GetData("SPR"))  );
+	SelfEquip_Nimbus:SetText( string.format("%.0f", g_AddSpr + Player:GetData("SPR"))  );
 
 end
 
 ---------------------------------------------------------------------------------
 -- 
--- ÏÔÊ¾ÌåÖÊ
+-- æ˜¾ç¤ºä½“è´¨
 --
 function ShowCurCon()
 
-	SelfEquip_PhysicalStrength:SetText( tostring( g_AddCon + Player:GetData("CON"))  );
+	SelfEquip_PhysicalStrength:SetText( string.format("%.0f", g_AddCon + Player:GetData("CON"))  );
 
 end
 
 ---------------------------------------------------------------------------------
 -- 
--- ÏÔÊ¾¶¨Á¦
+-- æ˜¾ç¤ºå®šåŠ›
 --
 function ShowCurInt()
 
-	SelfEquip_Stability:SetText( tostring( g_AddInt + Player:GetData("INT"))  );
+	SelfEquip_Stability:SetText( string.format("%.0f", g_AddInt + Player:GetData("INT"))  );
 
 end
 
 ---------------------------------------------------------------------------------
 -- 
--- ÏÔÊ¾Éí·¨
+-- æ˜¾ç¤ºèº«æ³•
 --
 function ShowCurDex()
 
-	SelfEquip_Footwork:SetText( tostring( g_AddDex + Player:GetData("DEX"))  );
+	SelfEquip_Footwork:SetText( string.format("%.0f", g_AddDex + Player:GetData("DEX"))  );
 
 end
 
@@ -1289,7 +1289,7 @@ end
 
 ---------------------------------------------------------------------------------
 --
--- ½ûÖ¹, ´ò¿ªÉêÇëÇ±ÄÜ°´Å¥Ç±ÄÜ°´Å¥
+-- ç¦æ­¢, æ‰“å¼€ç”³è¯·æ½œèƒ½æŒ‰é’®æ½œèƒ½æŒ‰é’®
 --
 function SetAcceptButtonState()
 
@@ -1306,15 +1306,15 @@ end
 
 ---------------------------------------------------------------------------------
 --
--- ÉêÇëÔö¼ÓÇ±ÄÜ
+-- ç”³è¯·å¢åŠ æ½œèƒ½
 --
 function SelfEquip_Accept_Click()
 
-	-- ·¢ËÍ¸ü¸ÄÊôĞÔÇëÇó.
+	-- å‘é€æ›´æ”¹å±æ€§è¯·æ±‚.
 	Player:SendAskManualAttr(g_AddStr, g_AddSpr, g_AddCon, g_AddInt, g_AddDex);
-	--AxTrace( 0,0, "Ç±ÄÜµãÊı"..tostring( g_AddStr ).."\n"..tostring( g_AddSpr ).."\n"..tostring( g_AddCon ).."\n"..tostring( g_AddInt ).."\n"..tostring(g_AddDex));
+	--AxTrace( 0,0, "æ½œèƒ½ç‚¹æ•°"..tostring( g_AddStr ).."\n"..tostring( g_AddSpr ).."\n"..tostring( g_AddCon ).."\n"..tostring( g_AddInt ).."\n"..tostring(g_AddDex));
 	
-	-- ²âÊÔÊ¹ÓÃ, Ïò·şÎñÆ÷Òª×°±¸µÄÏêÏ¸ĞÅÏ¢
+	-- æµ‹è¯•ä½¿ç”¨, å‘æœåŠ¡å™¨è¦è£…å¤‡çš„è¯¦ç»†ä¿¡æ¯
 	--AskEquipDetial();
 			
 end
@@ -1322,20 +1322,20 @@ end
 
 ---------------------------------------------------------------------------------
 --
--- ÊÖ¶¯µ÷Õû³É¹¦
+-- æ‰‹åŠ¨è°ƒæ•´æˆåŠŸ
 --
 function SelfEquip_ManualAttr_Success()
 	
-	g_AddStr = 0;					-- ·ÖÅäÔÚÁ¦Á¿ÉÏµÄÊ£ÓàµãÊı.
-	g_AddSpr = 0;					-- ·ÖÅäÔÚÁéÆøÉÏµÄÊ£ÓàµãÊı.
-	g_AddCon = 0;					-- ·ÖÅäÔÚÌåÖÊÉÏµÄÊ£ÓàµãÊı.
-	g_AddInt = 0;					-- ·ÖÅäÔÚ¶¨Á¦ÉÏµÄÊ£ÓàµãÊı.
-	g_AddDex = 0;					-- ·ÖÅäÔÚÉí·¨ÉÏµÄÊ£ÓàµãÊı.
+	g_AddStr = 0;					-- åˆ†é…åœ¨åŠ›é‡ä¸Šçš„å‰©ä½™ç‚¹æ•°.
+	g_AddSpr = 0;					-- åˆ†é…åœ¨çµæ°”ä¸Šçš„å‰©ä½™ç‚¹æ•°.
+	g_AddCon = 0;					-- åˆ†é…åœ¨ä½“è´¨ä¸Šçš„å‰©ä½™ç‚¹æ•°.
+	g_AddInt = 0;					-- åˆ†é…åœ¨å®šåŠ›ä¸Šçš„å‰©ä½™ç‚¹æ•°.
+	g_AddDex = 0;					-- åˆ†é…åœ¨èº«æ³•ä¸Šçš„å‰©ä½™ç‚¹æ•°.
 	
-	-- ½ûÖ¹ËùÓĞ¼õÉÙµãÊı°´Å¥
+	-- ç¦æ­¢æ‰€æœ‰å‡å°‘ç‚¹æ•°æŒ‰é’®
 	DisablePointDecButtion();
 	
-	-- Ê£ÓàÃ»ÓĞ·ÖÅäµÄµãÊı
+	-- å‰©ä½™æ²¡æœ‰åˆ†é…çš„ç‚¹æ•°
 	g_RemainPoint = g_CurRemainPoint;
 	if(g_CurRemainPoint > 0) then
 	
@@ -1347,24 +1347,24 @@ end
 
 ---------------------------------------------------------------------------------
 --
--- µã»÷³ÆºÅ°´Å¥
+-- ç‚¹å‡»ç§°å·æŒ‰é’®
 --
 function TitleButton_Click()
 
 	g_bOpenTitleDlg = 1;
-	-- ´ò¿ª³ÆºÅ½çÃæ
+	-- æ‰“å¼€ç§°å·ç•Œé¢
 	OpenTitleList();
-	--AxTrace( 0,0, "´ò¿ª³ÆºÅ½çÃæ");
+	--AxTrace( 0,0, "æ‰“å¼€ç§°å·ç•Œé¢");
 	
 end
 
 ----------------------------------------------------------------------------------
 --
--- µã»÷°ï»á°´Å¥
+-- ç‚¹å‡»å¸®ä¼šæŒ‰é’®
 --
 function OpenConfraternity_click()
 	
-	-- ´ò¿ª»ò¹Ø±Õ°ï»á½çÃæ.
+	-- æ‰“å¼€æˆ–å…³é—­å¸®ä¼šç•Œé¢.
 	--Guild:AskGuildDetailInfo();
 	Guild:ToggleGuildDetailInfo();
 end
@@ -1372,12 +1372,12 @@ end
 
 ----------------------------------------------------------------------------------
 --
--- µÃµ½µ±Ç°µÄtitle
+-- å¾—åˆ°å½“å‰çš„title
 --
 --[[
 function GetCurTitle()
 	
-	-- µÃµ½µ±Ç°µÄ³ÆºÅ.
+	-- å¾—åˆ°å½“å‰çš„ç§°å·.
 	local strCurTitle = Player:GetCurTitle();
 	SelfEquip_Agname:SetText(strCurTitle);
 
@@ -1395,13 +1395,13 @@ end
 --]]
 ----------------------------------------------------------------------------------
 --
--- Ñ¡×°Íæ¼ÒÄ£ĞÍ£¨Ïò×ó)
+-- é€‰è£…ç©å®¶æ¨¡å‹ï¼ˆå‘å·¦)
 --
 function SelfEquip_Modle_TurnLeft(start)
-	--Ïò×óĞı×ª¿ªÊ¼
+	--å‘å·¦æ—‹è½¬å¼€å§‹
 	if(start == 1 and CEArg:GetValue("MouseButton")=="LeftButton") then
 		SelfEquip_FakeObject:RotateBegin(-0.3);
-	--Ïò×óĞı×ª½áÊø
+	--å‘å·¦æ—‹è½¬ç»“æŸ
 	else
 		SelfEquip_FakeObject:RotateEnd();
 	end
@@ -1409,13 +1409,13 @@ end
 
 ----------------------------------------------------------------------------------
 --
--- Ñ¡×°Íæ¼ÒÄ£ĞÍ£¨ÏòÓÒ)
+-- é€‰è£…ç©å®¶æ¨¡å‹ï¼ˆå‘å³)
 --
 function SelfEquip_Modle_TurnRight(start)
-	--ÏòÓÒĞı×ª¿ªÊ¼
+	--å‘å³æ—‹è½¬å¼€å§‹
 	if(start == 1 and CEArg:GetValue("MouseButton")=="LeftButton") then
 		SelfEquip_FakeObject:RotateBegin(0.3);
-	--ÏòÓÒĞı×ª½áÊø
+	--å‘å³æ—‹è½¬ç»“æŸ
 	else
 		SelfEquip_FakeObject:RotateEnd();
 	end
@@ -1423,12 +1423,12 @@ end
 
 ---------------------------------------------------------------------------------
 --
--- ÉèÖÃ×´Ì¬tooltip
+-- è®¾ç½®çŠ¶æ€tooltip
 --
 function SelfEquip_SetStateTooltip()
 	
 
-	-- µÃµ½×´Ì¬ÊôĞÔ
+	-- å¾—åˆ°çŠ¶æ€å±æ€§
 	local iIceDefine  		= Player:GetData( "DEFENCECOLD" );
 	local iFireDefine 		= Player:GetData( "DEFENCEFIRE" );
 	local iThunderDefine	= Player:GetData( "DEFENCELIGHT" );
@@ -1444,23 +1444,23 @@ function SelfEquip_SetStateTooltip()
 	local iThunderResistOther	= Player:GetData( "RESISTOTHERLIGHT" );
 	local iPoisonResistOther= Player:GetData( "RESISTOTHERPOISON" );
 	
-	SelfEquip_IceFastness:SetToolTip("±ù¹¥:"..tostring(iIceAttack).."#r±ù¿¹:"..tostring(iIceDefine).."#r¼õ±ù¿¹:"..tostring(iIceResistOther) );
-	SelfEquip_FireFastness:SetToolTip("»ğ¹¥:"..tostring(iFireAttack).."#r»ğ¿¹:"..tostring(iFireDefine).."#r¼õ»ğ¿¹:"..tostring(iFireResistOther) );
-	SelfEquip_ThunderFastness:SetToolTip("Ğş¹¥:"..tostring(iThunderAttack).."#rĞş¿¹:"..tostring(iThunderDefine).."#r¼õĞş¿¹:"..tostring(iThunderResistOther) );
-	SelfEquip_PoisonFastness:SetToolTip("¶¾¹¥:"..tostring(iPoisonAttack).."#r¶¾¿¹:"..tostring(iPoisonDefine).."#r¼õ¶¾¿¹:"..tostring(iPoisonResistOther) );
+	SelfEquip_IceFastness:SetToolTip("å†°æ”»:"..string.format("%.0f", iIceAttack).."#rå†°æŠ—:"..string.format("%.0f", iIceDefine).."#rå‡å†°æŠ—:"..string.format("%.0f", iIceResistOther) );
+	SelfEquip_FireFastness:SetToolTip("ç«æ”»:"..string.format("%.0f", iFireAttack).."#rç«æŠ—:"..string.format("%.0f", iFireDefine).."#rå‡ç«æŠ—:"..string.format("%.0f", iFireResistOther) );
+	SelfEquip_ThunderFastness:SetToolTip("ç„æ”»:"..string.format("%.0f", iThunderAttack).."#rç„æŠ—:"..string.format("%.0f", iThunderDefine).."#rå‡ç„æŠ—:"..string.format("%.0f", iThunderResistOther) );
+	SelfEquip_PoisonFastness:SetToolTip("æ¯’æ”»:"..string.format("%.0f", iPoisonAttack).."#ræ¯’æŠ—:"..string.format("%.0f", iPoisonDefine).."#rå‡æ¯’æŠ—:"..string.format("%.0f", iPoisonResistOther) );
 		
 end
 
 
 ---------------------------------------------------------------------------------
 --
--- ÏÔÊ¾»îÁ¦
+-- æ˜¾ç¤ºæ´»åŠ›
 --
 function SelfEquip_ShowVigor()
 	-- 
 	
-	--this:RegisterEvent("UNIT_VIGOR");		-- ×¢²á»îÁ¦Öµ
-	--this:RegisterEvent("UNIT_ENERGY");	-- ×¢²á¾«Á¦Öµ
+	--this:RegisterEvent("UNIT_VIGOR");		-- æ³¨å†Œæ´»åŠ›å€¼
+	--this:RegisterEvent("UNIT_ENERGY");	-- æ³¨å†Œç²¾åŠ›å€¼
 	local iVigor = Player:GetData("VIGOR");
 	local iVigorMax = Player:GetData("MAXVIGOR");
 	local VigorText = tostring(iVigor).."/"..tostring(iVigorMax);
@@ -1470,7 +1470,7 @@ end
 
 ---------------------------------------------------------------------------------
 --
--- ÏÔÊ¾»îÁ¦
+-- æ˜¾ç¤ºæ´»åŠ›
 --
 function SelfEquip_ShowEnergy()
 	-- 
@@ -1486,12 +1486,12 @@ end
 
 ----------------------------------------------------------------------------------------
 --
--- ¹Ø±Õ½çÃæ
+-- å…³é—­ç•Œé¢
 --
 
 function SelfEquip_CloseUI()
 
-	-- ´ò¿ª»òÕß¹Ø±Õ³ÆºÅ½çÃæ
+	-- æ‰“å¼€æˆ–è€…å…³é—­ç§°å·ç•Œé¢
 	CloseTitleList();
 	SelfEquip_FakeObject:SetFakeObject("");	
 	SelfEquip_Close();
@@ -1505,7 +1505,7 @@ function Pet_Page_Switch()
 	SelfEquip_SetTabColor(0);
 end
 
---´ò¿ª×Ô¼ºµÄ×ÊÁÏÒ³Ãæ
+--æ‰“å¼€è‡ªå·±çš„èµ„æ–™é¡µé¢
 function Pet_Page_SelfData()
 	Variable:SetVariable("SelfUnionPos", SelfEquip_Frame:GetProperty("UnifiedPosition"), 1);
 	SystemSetup:OpenPrivatePage("self");
@@ -1620,11 +1620,11 @@ function SelfEquip_AskLevelup()
     
     local strMasterName = GetMasterName()
     
-    if "" ~= strMasterName then   --¿Õ´®±íÊ¾ÔÚºÃÓÑÁĞ±íÖĞÃ»ÓĞÕÒµ½Ê¦¸¸Ãû×Ö,ôßÃ»ÓĞÊ¦¸¸
+    if "" ~= strMasterName then   --ç©ºä¸²è¡¨ç¤ºåœ¨å¥½å‹åˆ—è¡¨ä¸­æ²¡æœ‰æ‰¾åˆ°å¸ˆçˆ¶åå­—,æš¨æ²¡æœ‰å¸ˆçˆ¶
         local ListSize = table.getn( EvaluateLevelList )
 		for i = 1, ListSize do
 			if EvaluateLevelList[ i ] == ( PlayerLevel+1 ) and PlayerLevel < 45 then
-				--´ò¿ªÆÀ¼Û½çÃæ
+				--æ‰“å¼€è¯„ä»·ç•Œé¢
 				
 				AskEvaluateAndLevelup()
 				return

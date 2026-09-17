@@ -1,30 +1,30 @@
---ĞşÎäµºBOSS°ó¶¨
+--ç„æ­¦å²›BOSSç»‘å®š
 
---½Å±¾±àºÅ
+--è„šæœ¬ç¼–å·
 x501999_g_ScriptId	= 501999
 
 --**********************************
 --Monster Timer
 --**********************************
 function x501999_OnCharacterTimer( sceneId, objId, dataId, uTime )
-	--È«Çò¹«¸æ
+	--å…¨çƒå…¬å‘Š
 
-	str	= format( "#GĞşÎäµº#PÉÏµÄĞ×ÊŞ#{_BOSS49}#PÒÑ¾­³öÏÖ£¬Çë¸÷Î»´óÏÀËÙÍùĞşÎäµºÊÕ·ü£¬ÒÔ·ÀÆäÎ£º¦°ÙĞÕ¡£" )
+	str	= format( "#Gç„æ­¦å²›#Pä¸Šçš„å‡¶å…½#{_BOSS49}#På·²ç»å‡ºç°ï¼Œè¯·å„ä½å¤§ä¾ é€Ÿå¾€ç„æ­¦å²›æ”¶ä¼ï¼Œä»¥é˜²å…¶å±å®³ç™¾å§“ã€‚" )
 	AddGlobalCountNews( sceneId, str )
 
-	--È¡ÏûÊ±ÖÓ
+	--å–æ¶ˆæ—¶é’Ÿ
 	SetCharacterTimer( sceneId, objId, 0 )
 end
 
 --**********************************
---ËÀÍöÊÂ¼ş
+--æ­»äº¡äº‹ä»¶
 --**********************************
 function x501999_OnDie( sceneId, objId, killerId )
 
-	--È«Çò¹«¸æ
+	--å…¨çƒå…¬å‘Š
 	local	nam_ply	= GetName( sceneId, killerId )
 	
-	--É±ËÀ¹ÖÎïµÄÊÇ³èÎïÔò»ñÈ¡ÆäÖ÷ÈËµÄÃû×Ö....
+	--æ€æ­»æ€ªç‰©çš„æ˜¯å® ç‰©åˆ™è·å–å…¶ä¸»äººçš„åå­—....
 	local playerID = killerId
 	local objType = GetCharacterType( sceneId, killerId )
 	if objType == 3 then
@@ -32,14 +32,14 @@ function x501999_OnDie( sceneId, objId, killerId )
 		nam_ply = GetName( sceneId, playerID )
 	end
 	
-	--Èç¹ûÍæ¼Ò×é¶ÓÁËÔò»ñÈ¡¶Ó³¤µÄÃû×Ö....
+	--å¦‚æœç©å®¶ç»„é˜Ÿäº†åˆ™è·å–é˜Ÿé•¿çš„åå­—....
 	local leaderID = GetTeamLeader( sceneId, playerID )
 	if leaderID ~= -1 then
 		nam_ply = GetName( sceneId, leaderID )
 	end
 	
 	if nam_ply ~= nil then
-		str	= format( "#P¾­¹ı#W#{_INFOUSR%s}#PºÍÆä¶ÓÎéµÄÒ»·¬¿àÕ½£¬#{_BOSS49}#PÖÕÓÚ±»´ò°ÜÁË¡£", nam_ply )
+		str	= format( "#Pç»è¿‡#W#{_INFOUSR%s}#På’Œå…¶é˜Ÿä¼çš„ä¸€ç•ªè‹¦æˆ˜ï¼Œ#{_BOSS49}#Pç»ˆäºè¢«æ‰“è´¥äº†ã€‚", nam_ply )
 		AddGlobalCountNews( sceneId, str )
 	end
 	

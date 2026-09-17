@@ -28,7 +28,7 @@ function LifeSkillsStudy_OnEvent(event)
 	if(event == "TOGLE_ABILITY_STUDY") then
 		this:Show();
 		
-		--ÉèÖÃ¹ØĞÄNPC
+		--è®¾ç½®å…³å¿ƒNPC
 		objCared = LifeAbility:GetNpcId();
 		this:CareObject(objCared, 1, "AbilityStudy");
 	
@@ -39,12 +39,12 @@ function LifeSkillsStudy_OnEvent(event)
 		if(tonumber(arg0) ~= objCared) then
 			return;
 		end
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ı£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æœå’ŒNPCçš„è·ç¦»å¤§äºä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if(arg1 == "distance" and tonumber(arg2)>MAX_OBJ_DISTANCE or arg1=="destroy") then
 			this:Hide();
 			Bank:Close();
 
-			--È¡Ïû¹ØĞÄ
+			--å–æ¶ˆå…³å¿ƒ
 			this:CareObject(objCared, 0, "AbilityStudy");
 		end
 		
@@ -61,7 +61,7 @@ function LifeSkillsStudy_OnEvent(event)
 		
 	elseif(event == "UNIT_EXP" and this:IsVisible()) then
 		local nExpNow = Player:GetData("EXP");
-		LifeSkillsStudy_CurrentlyExp_Character_Text:SetText("µ±Ç°¾­Ñé:" .. tostring(nExpNow));
+		LifeSkillsStudy_CurrentlyExp_Character_Text:SetText("å½“å‰ç»éªŒ:" .. string.format("%.0f", nExpNow));
 		
 	end
 	
@@ -72,35 +72,35 @@ end
 --===============================================
 function LifeSkillsStudy_UpdateFrame()
 
-	--¼¼ÄÜID
+	--æŠ€èƒ½ID
 	g_nAbilityID = AbilityTeacher:GetAbilityID();
 	
 	
-	--µ±Ç°µÄ½ğÇ®
+	--å½“å‰çš„é‡‘é’±
 	local nMoneyNow = Player:GetData("MONEY");
 	LifeSkillsStudy_Currently_Money:SetProperty("MoneyNumber", tostring(nMoneyNow));
 	
-	--µ±Ç°µÄ½»×Ó
+	--å½“å‰çš„äº¤å­
 	LifeSkillsStudy_Currently_Jiaozi:SetProperty("MoneyNumber", tostring(Player:GetData("MONEY_JZ")));
 
-	--ĞèÒªµÄ½ğÇ®
+	--éœ€è¦çš„é‡‘é’±
 	nMoneyNow,nGold,nSilverCoin,nCopperCoin = AbilityTeacher:GetNeedMoney();
 	LifeSkillsStudy_Demand_Money:SetProperty("MoneyNumber", tostring(nMoneyNow));
 
-	--µ±Ç°µÄ¾­Ñé
+	--å½“å‰çš„ç»éªŒ
 	local nExpNow = Player:GetData("EXP");
-	LifeSkillsStudy_CurrentlyExp_Character_Text:SetText("µ±Ç°¾­Ñé:" .. tostring(nExpNow));
+	LifeSkillsStudy_CurrentlyExp_Character_Text:SetText("å½“å‰ç»éªŒ:" .. string.format("%.0f", nExpNow));
 	
-	--ĞèÒªµÄ¾­Ñé
+	--éœ€è¦çš„ç»éªŒ
 	local nNeedExp = AbilityTeacher:GetNeedExp();
-	LifeSkillsStudy_DemandExp_Character_Text:SetText("ËùĞè¾­Ñé:" .. tostring(nNeedExp));
+	LifeSkillsStudy_DemandExp_Character_Text:SetText("æ‰€éœ€ç»éªŒ:" .. string.format("%.0f", nNeedExp));
 
 	ActionSkillsStudy_UpdateAbility(g_nAbilityID);
 end
 
 
 --===============================================
--- ¸üĞÂÉú»î¼¼ÄÜ
+-- æ›´æ–°ç”Ÿæ´»æŠ€èƒ½
 --===============================================
 function ActionSkillsStudy_UpdateAbility(nAbilityID)
 
@@ -116,15 +116,15 @@ function ActionSkillsStudy_UpdateAbility(nAbilityID)
 			else
 				LifeSkillsStudy_Icon:SetActionItem(theAction:GetID());
 				
-				-- Éú»î¼¼ÄÜÃû×Ö
+				-- ç”Ÿæ´»æŠ€èƒ½åå­—
 				local szName = theAction:GetName();
-				-- Éú»î¼¼ÄÜµÄµÈ¼¶
+				-- ç”Ÿæ´»æŠ€èƒ½çš„ç­‰çº§
 				local nLevel = Player:GetAbilityInfo(nAbilityID, "level");
-				-- Éú»î¼¼ÄÜµÄ×î´óµÈ¼¶
+				-- ç”Ÿæ´»æŠ€èƒ½çš„æœ€å¤§ç­‰çº§
 				local nMaxLevel = Player:GetAbilityInfo(nAbilityID, "maxlevel");
-				-- Éú»î¼¼ÄÜÊìÁ·¶È
+				-- ç”Ÿæ´»æŠ€èƒ½ç†Ÿç»ƒåº¦
 				local nSkillExp = Player:GetAbilityInfo(nAbilityID, "skillexp");
-				-- Éú»î¼¼ÄÜ½âÊÍ
+				-- ç”Ÿæ´»æŠ€èƒ½è§£é‡Š
 				local szExplain = Player:GetAbilityInfo(nAbilityID, "explain");			
 				
 				local nNeedLevel    = AbilityTeacher:GetNeedLevel();
@@ -133,9 +133,9 @@ function ActionSkillsStudy_UpdateAbility(nAbilityID)
 				local nNeedSkillExp = AbilityTeacher:GetNeedSkillExp();
 				
 				LifeSkillsStudy_SkillName:SetText(szName);
-				LifeSkillsStudy_SkillLevel:SetText("¼¼ÄÜµÈ¼¶:".. tostring(nLevel).."/"..tostring(nMaxLevel));
-				LifeSkillsStudy_skilledDegree:SetText("µ±Ç°ÊìÁ·¶È:"..tostring(nSkillExp) .. "/" .. tostring(nNeedSkillExp) );
-				LifeSkillsStudy_PlayerLevel:SetText("Íæ¼ÒµÈ¼¶ÒªÇó:" .. tostring(nNeedLevel));
+				LifeSkillsStudy_SkillLevel:SetText("æŠ€èƒ½ç­‰çº§:".. tostring(nLevel).."/"..tostring(nMaxLevel));
+				LifeSkillsStudy_skilledDegree:SetText("å½“å‰ç†Ÿç»ƒåº¦:"..tostring(nSkillExp) .. "/" .. tostring(nNeedSkillExp) );
+				LifeSkillsStudy_PlayerLevel:SetText("ç©å®¶ç­‰çº§è¦æ±‚:" .. tostring(nNeedLevel));
 				
 				LifeSkillsStudy_Explain_Desc:SetText("  "..szExplain);
 			end
@@ -147,13 +147,13 @@ end
 function LifeSkillsStudy_UpLevel_Click()
 
 
-	-- »ñµÃ·şÎñÆ÷½Å±¾µÄÒ»Ğ©Êı¾İ£¬È»ºóÔÙ´ÎÈ¥µ÷ÓÃ·şÎñÆ÷µÄÕâĞ©Êı¾İ
+	-- è·å¾—æœåŠ¡å™¨è„šæœ¬çš„ä¸€äº›æ•°æ®ï¼Œç„¶åå†æ¬¡å»è°ƒç”¨æœåŠ¡å™¨çš„è¿™äº›æ•°æ®
 	local ScriptId = AbilityTeacher:GetServerData("scriptid");
 	local NpcId    = AbilityTeacher:GetServerData("npcid");
 
 	Player:AskLeanAbility(g_nAbilityID, NpcId);
 	
-	--²»¹Ø±Õ´°¿Ú£¬Ö»½«´°¿ÚÑ§Ï°°´Å¥Disable
+	--ä¸å…³é—­çª—å£ï¼Œåªå°†çª—å£å­¦ä¹ æŒ‰é’®Disable
 	LifeSkillsStudy_UpLevel:Disable();
 	--this:Hide()
 	

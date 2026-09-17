@@ -1,30 +1,30 @@
---ÊÕÍ½ÈÎÎñ
+--æ”¶å¾’ä»»åŠ¡
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x806008_g_ScriptId = 806008
 
---ÊÕÍ½
+--æ”¶å¾’
 x806008_g_Recruit					= {}
 x806008_g_Recruit["Id"]		= 1003
-x806008_g_Recruit["Name"]	= "ÎÒµÄÍ½µÜÒªÏòÎÒ°İÊ¦"
+x806008_g_Recruit["Name"]	= "æˆ‘çš„å¾’å¼Ÿè¦å‘æˆ‘æ‹œå¸ˆ"
 
---ÌáÊ¾ĞÅÏ¢
+--æç¤ºä¿¡æ¯
 x806008_g_msg					= {}
-x806008_g_msg["tem"]	= "  °İÊ¦µÄÊ±ºò±ØĞëºÍÍ½µÜÎªºÃÓÑ¹ØÏµ£¬²¢ÇÒĞèÒªÁ½¸öÈË×é¶Óµ¥¶ÀÇ°À´ÕÒÎÒ¡£"
-x806008_g_msg["ner"]	= "  Ö»ÓĞ2ÈË¶¼×ßµ½ÎÒÉí±ß²Å¿ÉÒÔ°İÊ¦¡£"
-x806008_g_msg["mlv"]	= "  Ê¦¸µµÄµÈ¼¶±ØĞë´óÓÚµÈÓÚÍ½µÜ10¼¶¡£"
-x806008_g_msg["slv"]	= "  Í½µÜ10¼¶¿ªÊ¼²Å¿É°İÊ¦¡£"
-x806008_g_msg["sib"]	= "  ÓĞ½á°İ¹ØÏµ²»ÄÜ°İÊ¦¡£"
-x806008_g_msg["mar"]	= "  ·òÆŞ¹ØÏµ²»ÄÜ°İÊ¦¡£"
-x806008_g_msg["frp"]	= "  Ïà»¥¼ÓÎªºÃÓÑ²ÅÄÜ°İÊ¦¡£"
-x806008_g_msg["msl"]	= "  ÇëÌáÉıÄúµÄÊ¦µÂµÈ¼¶¡¢Ö»ÓĞÊ¦µÂµÈ¼¶´óÓÚµÈÓÚ1µÄÈË²ÅÓĞ×Ê¸ñÊÕÍ½¡£"
-x806008_g_msg["rec_3"]	= "  Ç¿ĞĞ½â³ıÊ¦Í½¹ØÏµ3Ììºó²ÅÄÜÔÙ´Î°İÊ¦¡£"
-x806008_g_msg["rec_2"]	= "  ÊÕÍ½ÊıÁ¿ÒÑ´ï×î´ó¡£"
-x806008_g_msg["rec_1"]	= "  ÒÑ¾­ÓĞÊ¦¸µµÄÍæ¼ÒÎŞ·¨°İÊ¦¡£"
-x806008_g_msg["ts"]	= "  ÒÑ¾­ÊÇÊ¦Í½¹ØÏµÁË£¬²»ÄÜ°İÊ¦¡£"
+x806008_g_msg["tem"]	= "  æ‹œå¸ˆçš„æ—¶å€™å¿…é¡»å’Œå¾’å¼Ÿä¸ºå¥½å‹å…³ç³»ï¼Œå¹¶ä¸”éœ€è¦ä¸¤ä¸ªäººç»„é˜Ÿå•ç‹¬å‰æ¥æ‰¾æˆ‘ã€‚"
+x806008_g_msg["ner"]	= "  åªæœ‰2äººéƒ½èµ°åˆ°æˆ‘èº«è¾¹æ‰å¯ä»¥æ‹œå¸ˆã€‚"
+x806008_g_msg["mlv"]	= "  å¸ˆå‚…çš„ç­‰çº§å¿…é¡»å¤§äºç­‰äºå¾’å¼Ÿ10çº§ã€‚"
+x806008_g_msg["slv"]	= "  å¾’å¼Ÿ10çº§å¼€å§‹æ‰å¯æ‹œå¸ˆã€‚"
+x806008_g_msg["sib"]	= "  æœ‰ç»“æ‹œå…³ç³»ä¸èƒ½æ‹œå¸ˆã€‚"
+x806008_g_msg["mar"]	= "  å¤«å¦»å…³ç³»ä¸èƒ½æ‹œå¸ˆã€‚"
+x806008_g_msg["frp"]	= "  ç›¸äº’åŠ ä¸ºå¥½å‹æ‰èƒ½æ‹œå¸ˆã€‚"
+x806008_g_msg["msl"]	= "  è¯·æå‡æ‚¨çš„å¸ˆå¾·ç­‰çº§ã€åªæœ‰å¸ˆå¾·ç­‰çº§å¤§äºç­‰äº1çš„äººæ‰æœ‰èµ„æ ¼æ”¶å¾’ã€‚"
+x806008_g_msg["rec_3"]	= "  å¼ºè¡Œè§£é™¤å¸ˆå¾’å…³ç³»3å¤©åæ‰èƒ½å†æ¬¡æ‹œå¸ˆã€‚"
+x806008_g_msg["rec_2"]	= "  æ”¶å¾’æ•°é‡å·²è¾¾æœ€å¤§ã€‚"
+x806008_g_msg["rec_1"]	= "  å·²ç»æœ‰å¸ˆå‚…çš„ç©å®¶æ— æ³•æ‹œå¸ˆã€‚"
+x806008_g_msg["ts"]	= "  å·²ç»æ˜¯å¸ˆå¾’å…³ç³»äº†ï¼Œä¸èƒ½æ‹œå¸ˆã€‚"
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı ÇëÇóÊÕÍ½
+--ä»»åŠ¡å…¥å£å‡½æ•° è¯·æ±‚æ”¶å¾’
 --**********************************
 function x806008_OnDefaultEvent( sceneId, selfId, targetId )
 	local	key	= GetNumText()
@@ -38,23 +38,23 @@ function x806008_OnDefaultEvent( sceneId, selfId, targetId )
 		local	MasterName		= LuaFnGetName( sceneId, selfId )
 		local	ApprenticeName= LuaFnGetName( sceneId, tId )
 
-		--Çë¶Ô·½È·ÈÏÊÇ·ñÔ¸Òâ°İÊ¦
+		--è¯·å¯¹æ–¹ç¡®è®¤æ˜¯å¦æ„¿æ„æ‹œå¸ˆ
 		BeginEvent( sceneId )
-				AddText( sceneId, "  °İÊ¦Ö®ºó£¬É±¹Ö¿ÉÒÔ»ñµÃ10£¥µÄ¶îÍâ¾­Ñé¼Ó³É£¬Èç¹ûºÍÊ¦¸µÔÚÒ»Æğ×é¶Ó£¬ÄÇÃ´½«»á»ñµÃ20£¥µÄ¾­Ñé¼Ó³É¡£" )
-				AddText( sceneId, "  Í½µÜ°İÊ¦Ö®ºó½«»á»ñµÃ¡°"..MasterName.."µÄµÜ×Ó¡±µÄ³ÆºÅ¡£" )
-				AddText( sceneId, "  ÄãÊÇ·ñÔ¸Òâ°İ"..MasterName.."ÎªÊ¦£¿" )
-				AddNumText( sceneId, x806008_g_ScriptId, "ÊÇ", 6, 1 )
-				AddNumText( sceneId, x806008_g_ScriptId, "·ñ", 8, 0 )
+				AddText( sceneId, "  æ‹œå¸ˆä¹‹åï¼Œæ€æ€ªå¯ä»¥è·å¾—10ï¼…çš„é¢å¤–ç»éªŒåŠ æˆï¼Œå¦‚æœå’Œå¸ˆå‚…åœ¨ä¸€èµ·ç»„é˜Ÿï¼Œé‚£ä¹ˆå°†ä¼šè·å¾—20ï¼…çš„ç»éªŒåŠ æˆã€‚" )
+				AddText( sceneId, "  å¾’å¼Ÿæ‹œå¸ˆä¹‹åå°†ä¼šè·å¾—â€œ"..MasterName.."çš„å¼Ÿå­â€çš„ç§°å·ã€‚" )
+				AddText( sceneId, "  ä½ æ˜¯å¦æ„¿æ„æ‹œ"..MasterName.."ä¸ºå¸ˆï¼Ÿ" )
+				AddNumText( sceneId, x806008_g_ScriptId, "æ˜¯", 6, 1 )
+				AddNumText( sceneId, x806008_g_ScriptId, "å¦", 8, 0 )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, tId, targetId )
 
 		BeginEvent( sceneId )
-			AddText( sceneId, "  µÈ´ı"..ApprenticeName.."´ğ¸´¡£¡£¡£" )
+			AddText( sceneId, "  ç­‰å¾…"..ApprenticeName.."ç­”å¤ã€‚ã€‚ã€‚" )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 
 		--BeginEvent( sceneId )
-		--	AddText( sceneId, "ÄãÊÇ·ñÔ¸Òâ°İ"..MasterName.."ÎªÊ¦£¿" )
+		--	AddText( sceneId, "ä½ æ˜¯å¦æ„¿æ„æ‹œ"..MasterName.."ä¸ºå¸ˆï¼Ÿ" )
 		--EndEvent( sceneId )
 		--DispatchMissionInfo( sceneId, tId, targetId, x806008_g_ScriptId, x806008_g_Recruit["Id"] )
 
@@ -68,17 +68,17 @@ function x806008_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x806008_OnEnumerate( sceneId, selfId, targetId )
 	AddNumText( sceneId, x806008_g_ScriptId, x806008_g_Recruit["Name"], 6, -1 )
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x806008_CheckAccept( sceneId, selfId, targetId )
-	--(1)×é¶ÓÖĞÖ»ÓĞÊ¦Í½Á½¸öÈË
+	--(1)ç»„é˜Ÿä¸­åªæœ‰å¸ˆå¾’ä¸¤ä¸ªäºº
 	if LuaFnHasTeam( sceneId, selfId ) == 0 or LuaFnGetTeamSize( sceneId, selfId ) ~= 2 then
 		x806008_MsgBox( sceneId, selfId, targetId, x806008_g_msg["tem"] )
 		return 0
@@ -93,53 +93,53 @@ function x806008_CheckAccept( sceneId, selfId, targetId )
 		return 0
 	end
 
-	--(2)Í½µÜµÈ¼¶¡İ10¼¶
+	--(2)å¾’å¼Ÿç­‰çº§â‰¥10çº§
 	if LuaFnGetLevel( sceneId, tId ) < 10 then
 		x806008_MsgBox( sceneId, selfId, targetId, x806008_g_msg["slv"] )
 		return 0
 	end
 
-	--µ±Íæ¼Òµ½45ºó²»ÄÜÔÙ°İÊ¦ÁË
+	--å½“ç©å®¶åˆ°45åä¸èƒ½å†æ‹œå¸ˆäº†
 	if LuaFnGetLevel( sceneId, tId ) > 44 then
 		x806008_MsgBox( sceneId, selfId, targetId, "#{STGZ_20080520_7}" )
 		return 0
 	end
 
 
-	--(3)Ê¦¸µµÈ¼¶±ØĞë¡İÍ½µÜ10¼¶
+	--(3)å¸ˆå‚…ç­‰çº§å¿…é¡»â‰¥å¾’å¼Ÿ10çº§
 	if LuaFnGetLevel( sceneId, selfId ) < ( LuaFnGetLevel( sceneId, tId ) + 10 ) then
 		x806008_MsgBox( sceneId, selfId, targetId, x806008_g_msg["mlv"] )
 		return 0
 	end
 
-	--(4)Ê¦µÂµÈ¼¶>0
+	--(4)å¸ˆå¾·ç­‰çº§>0
 	local MasterLevel = LuaFnGetmasterLevel( sceneId, selfId )
 	if MasterLevel <= 0 then
 		x806008_MsgBox( sceneId, selfId, targetId, x806008_g_msg["msl"] )
 		return 0
 	end
 
-	--(5)ÊÇ·ñÊÇ½á°İ
+	--(5)æ˜¯å¦æ˜¯ç»“æ‹œ
 	if LuaFnIsBrother( sceneId, selfId, tId ) ~= 0 then
 		x806008_MsgBox( sceneId, selfId, targetId, x806008_g_msg["sib"] )
 		return 0
 	end
 
-	--(6)ÊÇ·ñÊÇ·òÆŞ
+	--(6)æ˜¯å¦æ˜¯å¤«å¦»
 	if LuaFnIsSpouses( sceneId, selfId, tId ) ~= 0 then
 		x806008_MsgBox( sceneId, selfId, targetId, x806008_g_msg["mar"] )
 		return 0
 	end
 
-	--06.10.24£¬×îĞÂµÄ²ß»®ÎÄµµÒÑ¾­°Ñ´Ë²¿·ÖÄÚÈİÈ¥µôÁË
-	--(7)ÊÇ·ñÇ¿ĞĞ½â³ıÊ¦Í½¹ØÏµ²»Âú3Ìì
+	--06.10.24ï¼Œæœ€æ–°çš„ç­–åˆ’æ–‡æ¡£å·²ç»æŠŠæ­¤éƒ¨åˆ†å†…å®¹å»æ‰äº†
+	--(7)æ˜¯å¦å¼ºè¡Œè§£é™¤å¸ˆå¾’å…³ç³»ä¸æ»¡3å¤©
 	--if LuaFnGetPrenticeBetrayTime( sceneId, selfId ) < (86400 * 3) then
 	--	x806008_MsgBox( sceneId, selfId, targetId, x806008_g_msg["rec_3"] )
 	--	return 0
 	--end
 
-	--(8)¿´¿´µ±Ç°Í½µÜÊıÊÇ·ñÒÑ¾­×î´óÁË
-	--¼ÆËã¿ÉÒÔÊÕµ½µÄÍ½µÜÊı
+	--(8)çœ‹çœ‹å½“å‰å¾’å¼Ÿæ•°æ˜¯å¦å·²ç»æœ€å¤§äº†
+	--è®¡ç®—å¯ä»¥æ”¶åˆ°çš„å¾’å¼Ÿæ•°
 	local PrenticeNum = 2
 	if MasterLevel == 1 then
 		PrenticeNum = 2
@@ -155,19 +155,19 @@ function x806008_CheckAccept( sceneId, selfId, targetId )
 		return 0
 	end
 	
-	--(9)ÊÇ·ñÏÖÔÚÓĞÊ¦¸µ
+	--(9)æ˜¯å¦ç°åœ¨æœ‰å¸ˆå‚…
 	if LuaFnHaveMaster( sceneId, tId ) ~= 0 then
 		x806008_MsgBox( sceneId, selfId, targetId, x806008_g_msg["rec_1"] )
 		return 0
 	end
 
-	--(10)±ØĞëÊÇºÃÓÑ
+	--(10)å¿…é¡»æ˜¯å¥½å‹
 	if LuaFnIsFriend( sceneId, selfId, tId ) ~= 1 or LuaFnIsFriend( sceneId, tId, selfId ) ~= 1 then
 		x806008_MsgBox( sceneId, selfId, targetId, x806008_g_msg["frp"] )
 		return 0
 	end
 	
-	--(11)ÊÇ·ñÒÑ¾­ÊÇÊ¦Í½¹ØÏµÁË
+	--(11)æ˜¯å¦å·²ç»æ˜¯å¸ˆå¾’å…³ç³»äº†
 	if LuaFnIsMaster( sceneId, selfId, tId ) ~= 0 or LuaFnIsMaster( sceneId, tId, selfId ) ~= 0 then
 		x806008_MsgBox( sceneId, selfId, targetId, x806008_g_msg["ts"] )
 		return 0 
@@ -177,37 +177,37 @@ function x806008_CheckAccept( sceneId, selfId, targetId )
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x806008_OnAccept( sceneId, selfId, targetId )
 	x806008_OnConfirm( sceneId, selfId, targetId )
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x806008_OnSubmit( sceneId, selfId, targetId, tId )
-	--Í½µÜÔö¼ÓÒ»¸ö³ÆºÅ
+	--å¾’å¼Ÿå¢åŠ ä¸€ä¸ªç§°å·
 	local	MasterName	= LuaFnGetName( sceneId, tId )
 	local	SelfName		= LuaFnGetName( sceneId, selfId )
-	AwardShiTuTitle( sceneId, selfId, MasterName.."µÄµÜ×Ó" )
+	AwardShiTuTitle( sceneId, selfId, MasterName.."çš„å¼Ÿå­" )
 	DispatchAllTitle( sceneId, selfId )
 	LuaFnAprentice( sceneId, selfId, tId )
 
-	--Ê¦¸µ
-	x806008_MsgBox( sceneId, tId, targetId, "  ¹§Ï²ÊÕÍ½³É¹¦£¡" )
-	Msg2Player( sceneId, tId, "¹§Ï²ÊÕÍ½³É¹¦£¡", MSG2PLAYER_PARA )
-	Msg2Player( sceneId, tId, "Ê¦¸µÒªÅ¬Á¦½ÌºÃÄãµÄÍ½¶ù¡£", MSG2PLAYER_PARA )
-	str		= format( "¹§Ï²ÄúÊÕ%sÎªÍ½£¬ÊÕÍ½Ö®ºóÉ±¹Ö»ñµÃµÄ¾­Ñé½«»á¶îÍâÔö¼Ó5£¥¡£ºÍÍ½µÜÒ»Æğ×é¶Ó£¬ÄÜ¹»»ñµÃµÄÉÆ¶ñÖµ½«»áÔö¼ÓÎªÔ­À´µÄ160£¥¡£Í½µÜ´ïµ½Ò»¶¨µÈ¼¶ºó£¬»¹»á¸ù¾İÄãÃÇÖ®¼äµÄÓÑºÃ¶È¸øÓëÄú¶îÍâµÄ¾­Ñé½±Àø£¬´Ë¾­ÑéĞèÓÃÉÆ¶ñÖµ¶Ò»»¡£", SelfName )
+	--å¸ˆå‚…
+	x806008_MsgBox( sceneId, tId, targetId, "  æ­å–œæ”¶å¾’æˆåŠŸï¼" )
+	Msg2Player( sceneId, tId, "æ­å–œæ”¶å¾’æˆåŠŸï¼", MSG2PLAYER_PARA )
+	Msg2Player( sceneId, tId, "å¸ˆå‚…è¦åŠªåŠ›æ•™å¥½ä½ çš„å¾’å„¿ã€‚", MSG2PLAYER_PARA )
+	str		= format( "æ­å–œæ‚¨æ”¶%sä¸ºå¾’ï¼Œæ”¶å¾’ä¹‹åæ€æ€ªè·å¾—çš„ç»éªŒå°†ä¼šé¢å¤–å¢åŠ 5ï¼…ã€‚å’Œå¾’å¼Ÿä¸€èµ·ç»„é˜Ÿï¼Œèƒ½å¤Ÿè·å¾—çš„å–„æ¶å€¼å°†ä¼šå¢åŠ ä¸ºåŸæ¥çš„160ï¼…ã€‚å¾’å¼Ÿè¾¾åˆ°ä¸€å®šç­‰çº§åï¼Œè¿˜ä¼šæ ¹æ®ä½ ä»¬ä¹‹é—´çš„å‹å¥½åº¦ç»™ä¸æ‚¨é¢å¤–çš„ç»éªŒå¥–åŠ±ï¼Œæ­¤ç»éªŒéœ€ç”¨å–„æ¶å€¼å…‘æ¢ã€‚", SelfName )
 	LuaFnSendSystemMail( sceneId, MasterName, str )
 	--LuaFnSendNormalMail( sceneId, tId, MasterName, str )
 	CallScriptFunction( SCENE_SCRIPT_ID, "PlaySoundEffect", sceneId, tId, 66 )
 	LuaFnSendSpecificImpactToUnit( sceneId, tId, tId, tId, 18, 1000 )
 
-	--Í½µÜ
-	x806008_MsgBox( sceneId, selfId, targetId, "  ¹§Ï²°İÊ¦³É¹¦£¡" )
-	Msg2Player( sceneId, selfId, "¹§Ï²°İÊ¦³É¹¦£¡", MSG2PLAYER_PARA )
-	str		= format( "¹§Ï²Äú°İ%sÎªÊ¦£¬°İÊ¦Ö®ºóÉ±¹Ö»ñµÃµÄ¾­ÑéÖµ½«»á¶îÍâÔö¼Ó10£¥£¬Èç¹ûºÍÊ¦¸µÒ»Æğ×é¶ÓÉ±¹Ö½«»á¶îÍâÔö¼Ó20£¥¡£40¼¶ÒÔºó¾­Ñé¶îÍâ½±Àø½«»áÈ¡Ïû¡£", MasterName )
+	--å¾’å¼Ÿ
+	x806008_MsgBox( sceneId, selfId, targetId, "  æ­å–œæ‹œå¸ˆæˆåŠŸï¼" )
+	Msg2Player( sceneId, selfId, "æ­å–œæ‹œå¸ˆæˆåŠŸï¼", MSG2PLAYER_PARA )
+	str		= format( "æ­å–œæ‚¨æ‹œ%sä¸ºå¸ˆï¼Œæ‹œå¸ˆä¹‹åæ€æ€ªè·å¾—çš„ç»éªŒå€¼å°†ä¼šé¢å¤–å¢åŠ 10ï¼…ï¼Œå¦‚æœå’Œå¸ˆå‚…ä¸€èµ·ç»„é˜Ÿæ€æ€ªå°†ä¼šé¢å¤–å¢åŠ 20ï¼…ã€‚40çº§ä»¥åç»éªŒé¢å¤–å¥–åŠ±å°†ä¼šå–æ¶ˆã€‚", MasterName )
 	LuaFnSendSystemMail( sceneId, SelfName, str )
 	--LuaFnSendNormalMail( sceneId, selfId, SelfName, str )
 	CallScriptFunction( SCENE_SCRIPT_ID, "PlaySoundEffect", sceneId, selfId, 66 )
@@ -215,10 +215,10 @@ function x806008_OnSubmit( sceneId, selfId, targetId, tId )
 end
 
 --**********************************
---Í¬Òâ°İÊ¦
+--åŒæ„æ‹œå¸ˆ
 --**********************************
 function x806008_OnConfirm( sceneId, selfId, targetId )
-	--tId ÊÇ¼´½«³ÉÎªÊ¦¸µµÄÍæ¼Ò
+	--tId æ˜¯å³å°†æˆä¸ºå¸ˆå‚…çš„ç©å®¶
 	local tId
 	if LuaFnHasTeam( sceneId, selfId ) == 0 then
 		return
@@ -231,12 +231,12 @@ function x806008_OnConfirm( sceneId, selfId, targetId )
 	end
 	tId	= LuaFnGetTeamSceneMember( sceneId, selfId, 0 )
 
-	--Í½µÜ
-	x806008_MsgBox( sceneId, selfId, targetId, "  ÄãÍ¬ÒâÁË°İ¶Ô·½ÎªÊ¦¡£" )
-	Msg2Player( sceneId, selfId, "ÄãÍ¬ÒâÁË°İ¶Ô·½ÎªÊ¦¡£", MSG2PLAYER_PARA )
-	--Ê¦¸µ
-	x806008_MsgBox( sceneId, tId, targetId, "  ¶Ô·½Í¬Òâ°İÄãÎªÊ¦¡£" )
-	Msg2Player( sceneId, tId, "¶Ô·½Í¬Òâ°İÄãÎªÊ¦¡£", MSG2PLAYER_PARA )
+	--å¾’å¼Ÿ
+	x806008_MsgBox( sceneId, selfId, targetId, "  ä½ åŒæ„äº†æ‹œå¯¹æ–¹ä¸ºå¸ˆã€‚" )
+	Msg2Player( sceneId, selfId, "ä½ åŒæ„äº†æ‹œå¯¹æ–¹ä¸ºå¸ˆã€‚", MSG2PLAYER_PARA )
+	--å¸ˆå‚…
+	x806008_MsgBox( sceneId, tId, targetId, "  å¯¹æ–¹åŒæ„æ‹œä½ ä¸ºå¸ˆã€‚" )
+	Msg2Player( sceneId, tId, "å¯¹æ–¹åŒæ„æ‹œä½ ä¸ºå¸ˆã€‚", MSG2PLAYER_PARA )
 
 	if x806008_CheckAccept( sceneId, tId, targetId ) > 0 then
 		x806008_OnSubmit( sceneId, selfId, targetId, tId )
@@ -244,10 +244,10 @@ function x806008_OnConfirm( sceneId, selfId, targetId )
 end
 
 --**********************************
---¾Ü¾ø°İÊ¦
+--æ‹’ç»æ‹œå¸ˆ
 --**********************************
 function x806008_OnCancel( sceneId, selfId, targetId )
-	--tId ÊÇ¼´½«³ÉÎªÊ¦¸µµÄÍæ¼Ò
+	--tId æ˜¯å³å°†æˆä¸ºå¸ˆå‚…çš„ç©å®¶
 	local tId
 	if LuaFnHasTeam( sceneId, selfId ) == 0 then
 		return
@@ -260,16 +260,16 @@ function x806008_OnCancel( sceneId, selfId, targetId )
 	end
 	tId	= LuaFnGetTeamSceneMember( sceneId, selfId, 0 )
 
-	--Í½µÜ
-	x806008_MsgBox( sceneId, selfId, targetId, "  Äã¾Ü¾øÁË°İ¶Ô·½ÎªÊ¦¡£" )
-	Msg2Player( sceneId, selfId, "Äã¾Ü¾øÁË°İ¶Ô·½ÎªÊ¦¡£", MSG2PLAYER_PARA )
-	--Ê¦¸µ
-	x806008_MsgBox( sceneId, tId, targetId, "  ¶Ô·½¾Ü¾ø°İÄãÎªÊ¦¡£" )
-	Msg2Player( sceneId, tId, "¶Ô·½¾Ü¾ø°İÄãÎªÊ¦¡£", MSG2PLAYER_PARA )
+	--å¾’å¼Ÿ
+	x806008_MsgBox( sceneId, selfId, targetId, "  ä½ æ‹’ç»äº†æ‹œå¯¹æ–¹ä¸ºå¸ˆã€‚" )
+	Msg2Player( sceneId, selfId, "ä½ æ‹’ç»äº†æ‹œå¯¹æ–¹ä¸ºå¸ˆã€‚", MSG2PLAYER_PARA )
+	--å¸ˆå‚…
+	x806008_MsgBox( sceneId, tId, targetId, "  å¯¹æ–¹æ‹’ç»æ‹œä½ ä¸ºå¸ˆã€‚" )
+	Msg2Player( sceneId, tId, "å¯¹æ–¹æ‹’ç»æ‹œä½ ä¸ºå¸ˆã€‚", MSG2PLAYER_PARA )
 end
 
 --**********************************
---¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+--å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x806008_MsgBox( sceneId, selfId, targetId, msg )
 	BeginEvent( sceneId )
@@ -279,7 +279,7 @@ function x806008_MsgBox( sceneId, selfId, targetId, msg )
 end
 
 --**********************************
---ĞÑÄ¿ĞÅÏ¢ÌáÊ¾
+--é†’ç›®ä¿¡æ¯æç¤º
 --**********************************
 function x806008_MsgTip( sceneId, selfId, msg )
 	BeginEvent( sceneId )

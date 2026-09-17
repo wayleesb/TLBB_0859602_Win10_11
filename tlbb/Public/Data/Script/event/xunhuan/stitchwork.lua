@@ -1,6 +1,6 @@
---·ìÈÒÌ¨
+--ç¼çº«å°
 
-function x801013_OnDefaultEvent( sceneId, selfId, targetId )	--µã»÷¸ÃÈÎÎñºóÖ´ĞĞ´Ë½Å±¾
+function x801013_OnDefaultEvent( sceneId, selfId, targetId )	--ç‚¹å‡»è¯¥ä»»åŠ¡åæ‰§è¡Œæ­¤è„šæœ¬
 	BeginUICommand(sceneId)
 		UICommand_AddInt(sceneId,targetId)
 		UICommand_AddInt(sceneId,2)

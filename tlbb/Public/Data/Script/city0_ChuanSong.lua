@@ -1,4 +1,4 @@
---Íæ¼Ò½øÈëÒ»¸ö area Ê±´¥·¢
+--ç©å®¶è¿›å…¥ä¸€ä¸ª area æ—¶è§¦å‘
 
  function x805021_OnEnterArea( sceneId, selfId )
 		CityMoveToPort(sceneId, selfId)
@@ -6,7 +6,7 @@
 
 
 
---Íæ¼ÒÔÚÒ»¸ö area ´ôÁËÒ»¶ÎÊ±¼äÃ»×ßÔò¶¨Ê±´¥·¢
+--ç©å®¶åœ¨ä¸€ä¸ª area å‘†äº†ä¸€æ®µæ—¶é—´æ²¡èµ°åˆ™å®šæ—¶è§¦å‘
 
  function x805021_OnTimer( sceneId, selfId )
 
@@ -15,7 +15,7 @@ end
 
 
 
---Íæ¼ÒÀë¿ªÒ»¸ö area Ê±´¥·¢
+--ç©å®¶ç¦»å¼€ä¸€ä¸ª area æ—¶è§¦å‘
 
  function x805021_OnLeaveArea( sceneId, selfId )
 

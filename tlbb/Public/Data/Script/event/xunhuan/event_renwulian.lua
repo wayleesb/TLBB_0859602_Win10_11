@@ -1,63 +1,63 @@
---Á¬»·ÈÎÎñ
+--è¿ç¯ä»»åŠ¡
 
 --MisDescBegin
---½Å±¾ºÅ
+--è„šæœ¬å·
 x229022_g_scriptId = 229022
 
---Ç°ÌáÈÎÎñ
+--å‰æä»»åŠ¡
 --g_MissionIdPre =
 
---ÈÎÎñÄ¿±ênpc[94,177]
-x229022_g_Name	= "Íõ·òÈË"
+--ä»»åŠ¡ç›®æ ‡npc[94,177]
+x229022_g_Name	= "ç‹å¤«äºº"
 
---ÈÎÎñºÅ
+--ä»»åŠ¡å·
 x229022_g_MissionId = 1202
 
---ÈÎÎñ¹éÀà
+--ä»»åŠ¡å½’ç±»
 x229022_g_MissionKind = 1
 
---ÈÎÎñµÈ¼¶
+--ä»»åŠ¡ç­‰çº§
 x229022_g_MissionLevel = 10000
 
---ÊÇ·ñÊÇ¾«Ó¢ÈÎÎñ
+--æ˜¯å¦æ˜¯ç²¾è‹±ä»»åŠ¡
 x229022_g_IfMissionElite = 0
 
---ÏÂÃæ¼¸ÏîÊÇ¶¯Ì¬ÏÔÊ¾µÄÄÚÈİ£¬ÓÃÓÚÔÚÈÎÎñÁĞ±íÖĞ¶¯Ì¬ÏÔÊ¾ÈÎÎñÇé¿ö**********************
---ÈÎÎñÊÇ·ñÒÑ¾­Íê³É
-x229022_g_IsMissionOkFail = 0		--±äÁ¿µÄµÚ0Î»
+--ä¸‹é¢å‡ é¡¹æ˜¯åŠ¨æ€æ˜¾ç¤ºçš„å†…å®¹ï¼Œç”¨äºåœ¨ä»»åŠ¡åˆ—è¡¨ä¸­åŠ¨æ€æ˜¾ç¤ºä»»åŠ¡æƒ…å†µ**********************
+--ä»»åŠ¡æ˜¯å¦å·²ç»å®Œæˆ
+x229022_g_IsMissionOkFail = 0		--å˜é‡çš„ç¬¬0ä½
 
---ÒÔÉÏÊÇ¶¯Ì¬**************************************************************
+--ä»¥ä¸Šæ˜¯åŠ¨æ€**************************************************************
 
---ÈÎÎñ±äÁ¿µÚÒ»Î»ÓÃÀ´´æ´¢Ëæ»úµÃµ½µÄ½Å±¾ºÅ
+--ä»»åŠ¡å˜é‡ç¬¬ä¸€ä½ç”¨æ¥å­˜å‚¨éšæœºå¾—åˆ°çš„è„šæœ¬å·
 
---ÈÎÎñÎÄ±¾ÃèÊö
-x229022_g_MissionName="Á¬»·ÈÎÎñ"
-x229022_g_MissionInfo=""  --ÈÎÎñÃèÊö
+--ä»»åŠ¡æ–‡æœ¬æè¿°
+x229022_g_MissionName="è¿ç¯ä»»åŠ¡"
+x229022_g_MissionInfo=""  --ä»»åŠ¡æè¿°
 x229022_g_MissionTarget = "%f"
-x229022_g_ContinueInfo="¸ÉµÃ²»´í"		--Î´Íê³ÉÈÎÎñµÄnpc¶Ô»°
-x229022_g_MissionComplete="àÅ, ÎÒÖªµÀÁË, Äã¸ÉµÃ²»´í"					--Íê³ÉÈÎÎñnpcËµ»°µÄ»°
+x229022_g_ContinueInfo="å¹²å¾—ä¸é”™"		--æœªå®Œæˆä»»åŠ¡çš„npcå¯¹è¯
+x229022_g_MissionComplete="å—¯, æˆ‘çŸ¥é“äº†, ä½ å¹²å¾—ä¸é”™"					--å®Œæˆä»»åŠ¡npcè¯´è¯çš„è¯
 
---ÓÃÀ´±£´æ×Ö·û´®¸ñÊ½»¯µÄÊı¾İ
+--ç”¨æ¥ä¿å­˜å­—ç¬¦ä¸²æ ¼å¼åŒ–çš„æ•°æ®
 x229022_g_FormatList = {
-								"ÕÒµ½%n",
-								"½«%iËÍ¸ø%n",
-								"½«#Y%p#WËÍ¸ø%n#r  #GĞ¡ÌáÊ¾£ºÈç¹ûĞèÒª±äÒì³èÎï£¬Ò²¿ÉÒÔÕÒÍ¬Àà¶ş´ú³èÎï´úÌæ¡£",
-								"½ÌÑµ%n",
+								"æ‰¾åˆ°%n",
+								"å°†%ié€ç»™%n",
+								"å°†#Y%p#Wé€ç»™%n#r  #Gå°æç¤ºï¼šå¦‚æœéœ€è¦å˜å¼‚å® ç‰©ï¼Œä¹Ÿå¯ä»¥æ‰¾åŒç±»äºŒä»£å® ç‰©ä»£æ›¿ã€‚",
+								"æ•™è®­%n",
 								}
 
---Ö»ÊÇÎª¿Í»§¶ËÏÔÊ¾MissionTarget¶ø×ö, ËùÓĞµÄ¶¯Ì¬µÄ×Ö·û´®¶¼Ğè×¢²áµ½¸ÃList±íÖĞ
+--åªæ˜¯ä¸ºå®¢æˆ·ç«¯æ˜¾ç¤ºMissionTargetè€Œåš, æ‰€æœ‰çš„åŠ¨æ€çš„å­—ç¬¦ä¸²éƒ½éœ€æ³¨å†Œåˆ°è¯¥Listè¡¨ä¸­
 x229022_g_StrList = {
-						 "Ëû",
-						 "Ëı",
+						 "ä»–",
+						 "å¥¹",
 						 }
 
---¸ñÊ½×Ö·û´®ÖĞ¶ÔÓ¦ÓÚg_StringListÖĞ×Ö·û´®µÄË÷Òı, ±íÊ¾´Ó4¿ªÊ¼,ºó¶àÉÙÎ»ÊÓSetMissionByIndexEx(...)µÄ¶àÉÙ¶ø¶¨
+--æ ¼å¼å­—ç¬¦ä¸²ä¸­å¯¹åº”äºg_StringListä¸­å­—ç¬¦ä¸²çš„ç´¢å¼•, è¡¨ç¤ºä»4å¼€å§‹,åå¤šå°‘ä½è§†SetMissionByIndexEx(...)çš„å¤šå°‘è€Œå®š
 x229022_g_StrForePart=4
 
---¶¯Ì¬item±àºÅÔÚmissionparam´æ´¢µÄÆğÊ¼Î»ÖÃ
+--åŠ¨æ€itemç¼–å·åœ¨missionparamå­˜å‚¨çš„èµ·å§‹ä½ç½®
 x229022_g_ItemForePart=6
 
-x229022_g_MissionRound	= 35		--¼ÇÂ¼Ñ­»·ÈÎÎñ±äÁ¿
+x229022_g_MissionRound	= 35		--è®°å½•å¾ªç¯ä»»åŠ¡å˜é‡
 
 x229022_g_MissionLimitTime = 1800000
 
@@ -71,9 +71,9 @@ x229022_g_NpcIdIndicator={{key=1,npcIdIndex=5},{key=2,npcIdIndex=6},{key=3,npcId
 x229022_g_SubMissionType = {wenhou=1, suoqu=2, fubenjiaoxun=3, fubenduowu=4, chongwu=5}
 
 x229022_g_GoodBadDescTable = {
-									{key=1, str="ÓÃÉÆ¶ñÖµ»»È¡Á¬»·ÈÎÎñÎïÆ·"},
-									{key=2, str="´æ´¢µ±Ç°»·Êı"},
-									{key=3, str="¼ÌĞøÉÏ´ÎÁ¬»·ÈÎÎñ"},
+									{key=1, str="ç”¨å–„æ¶å€¼æ¢å–è¿ç¯ä»»åŠ¡ç‰©å“"},
+									{key=2, str="å­˜å‚¨å½“å‰ç¯æ•°"},
+									{key=3, str="ç»§ç»­ä¸Šæ¬¡è¿ç¯ä»»åŠ¡"},
 								}
 
 
@@ -84,7 +84,7 @@ x229022_g_RenwulianItem100_Index = 42
 x229022_g_RenwulianNpc_Index = 6
 x229022_g_RenwulianFunbenNpc_Index = 11
 
---µÈ¼¶	¾­Ñé»ùÊıĞŞÕı
+--ç­‰çº§	ç»éªŒåŸºæ•°ä¿®æ­£
 x229022_g_ExpBonusBaseTable = {
 												{ playerLevel=40, baseExp=3872 },
 												{ playerLevel=41, baseExp=3960 },
@@ -170,7 +170,7 @@ x229022_g_ExpBonusBaseTable = {
 									}
 
 
---»·Êı¼Ó³É£º
+--ç¯æ•°åŠ æˆï¼š
 x229022_g_RoundRefixTable = {
 												{ round=1,	refix=1.000  },
 												{ round=2,	refix=1.051  },
@@ -298,16 +298,16 @@ function x229022_GetMapIndexByStringValue(stringV)
 			return i-1
 		end
 	end
-	local strText = format("±ØĞë½«%s×¢²áµ½StrListÖĞ", stringV)
+	local strText = format("å¿…é¡»å°†%sæ³¨å†Œåˆ°StrListä¸­", stringV)
 	PrintStr(strText)
 	return 0;
 end
 
---¸ù¾İĞÔ±ğÈ¡µÃÏà¹ØĞÅÏ¢
+--æ ¹æ®æ€§åˆ«å–å¾—ç›¸å…³ä¿¡æ¯
 function x229022_GetSexInfo(sex)
-	local strSex = "Ëû"
+	local strSex = "ä»–"
 	if sex <= 0 then
-		strSex = "Ëı"
+		strSex = "å¥¹"
 	end
 	local sexIndex = x229022_GetMapIndexByStringValue(strSex)
 	return strSex, sexIndex
@@ -331,7 +331,7 @@ function x229022_WenHou_Accept(sceneId, selfId, targetId)
 
 	local nNpcId, strNpcName, strNpcScene, nSceneId, nPosX, nPosZ, strNPCDesc = x229022_GetOneMissionNpcEx(sceneId, targetId)
 
-	--¼ÓÈëÈÎÎñµ½Íæ¼ÒÁĞ±í
+	--åŠ å…¥ä»»åŠ¡åˆ°ç©å®¶åˆ—è¡¨
 	local bCanAdd = AddMission( sceneId,selfId, x229022_g_MissionId, x229022_g_scriptId, 0, 0, 0 )
 	if bCanAdd < 1 then
 		AddText( sceneId, "#{WFRN_090213_01}" ) --hzp 2009-2-13
@@ -342,31 +342,31 @@ function x229022_WenHou_Accept(sceneId, selfId, targetId)
 	local  PlayerName=GetName(sceneId,selfId)
 	local  PlayerSex=GetSex(sceneId,selfId)
 	if PlayerSex == 0 then
-		PlayerSex = "¹ÃÄï"
+		PlayerSex = "å§‘å¨˜"
 	else
-		PlayerSex = "ÉÙÏÀ"
+		PlayerSex = "å°‘ä¾ "
 	end
-	AddText(sceneId,"  " .. PlayerName .. PlayerSex .. "£¬Á¬»·ÈÎÎñ...")
+	AddText(sceneId,"  " .. PlayerName .. PlayerSex .. "ï¼Œè¿ç¯ä»»åŠ¡...")
 	-->>end
 	
 	SetMissionEvent(sceneId, selfId, x229022_g_MissionId, 4)
-	Msg2Player(  sceneId, selfId,"#Y½ÓÊÜÈÎÎñ£ºÁ¬»·ÈÎÎñ", MSG2PLAYER_PARA )
+	Msg2Player(  sceneId, selfId,"#Yæ¥å—ä»»åŠ¡ï¼šè¿ç¯ä»»åŠ¡", MSG2PLAYER_PARA )
 	CallScriptFunction( SCENE_SCRIPT_ID, "AskTheWay", sceneId, selfId, nSceneId, nPosX, nPosZ, strNpcName)
 
-	--µÃµ½ÈÎÎñÔÚ20¸öÈÎÎñÖĞµÄĞòÁĞºÅ
+	--å¾—åˆ°ä»»åŠ¡åœ¨20ä¸ªä»»åŠ¡ä¸­çš„åºåˆ—å·
 	local misIndex = GetMissionIndexByID(sceneId,selfId,x229022_g_MissionId)
 
-	SetMissionByIndex(sceneId, selfId, misIndex, 0, 0) --ÉèÖÃÈÎÎñÊÇ·ñÍê³É£¨Î´Íê³É£©
+	SetMissionByIndex(sceneId, selfId, misIndex, 0, 0) --è®¾ç½®ä»»åŠ¡æ˜¯å¦å®Œæˆï¼ˆæœªå®Œæˆï¼‰
 	SetMissionByIndex(sceneId, selfId, misIndex, 1, x229022_g_SubMissionType.wenhou)
-	SetMissionByIndex(sceneId, selfId, misIndex, 2, -1) --±£´æÊ±ÖÓË÷Òı£¬³õÊ¼»¯Îª-1
-	SetMissionByIndex(sceneId, selfId, misIndex, x229022_g_StrForePart, 0)--formet×Ö·û´®Ë÷Òı
+	SetMissionByIndex(sceneId, selfId, misIndex, 2, -1) --ä¿å­˜æ—¶é’Ÿç´¢å¼•ï¼Œåˆå§‹åŒ–ä¸º-1
+	SetMissionByIndex(sceneId, selfId, misIndex, x229022_g_StrForePart, 0)--formetå­—ç¬¦ä¸²ç´¢å¼•
 	SetMissionByIndex(sceneId, selfId, misIndex, x229022_g_StrForePart+1, nNpcId)
 
-	--ÕÒÈË£º
+	--æ‰¾äººï¼š
 	local missionInfo = {
-			"ºÜ¾Ã²»¼û%s%s(%d,%d)ÉõÊÇË¼Äî£¬¿É·ñ´øÎÒÎÊºòÒ»ÏÂËû¡£",
-			"ÄÇ%s%s(%d,%d)ÒàÔøÓĞ¶÷ÓÚÎÒ£¬Èç¹ûÄÜ´úÎÒÎÊºòÒ»ÏÂËû£¬ÎÒ½«Áì×ãÏÂÊ¢Çé¡£",
-			"ÎÒÓë%s%s(%d,%d)½»ÍùÉõºñ£¬¶àÄê²»¼ûÉ·ÊÇÏëÄî£¬ÀÍÄã´ó¼İ£¬´øÎÒÎÊºòÓÚËû¡£",
+			"å¾ˆä¹…ä¸è§%s%s(%d,%d)ç”šæ˜¯æ€å¿µï¼Œå¯å¦å¸¦æˆ‘é—®å€™ä¸€ä¸‹ä»–ã€‚",
+			"é‚£%s%s(%d,%d)äº¦æ›¾æœ‰æ©äºæˆ‘ï¼Œå¦‚æœèƒ½ä»£æˆ‘é—®å€™ä¸€ä¸‹ä»–ï¼Œæˆ‘å°†é¢†è¶³ä¸‹ç››æƒ…ã€‚",
+			"æˆ‘ä¸%s%s(%d,%d)äº¤å¾€ç”šåšï¼Œå¤šå¹´ä¸è§ç…æ˜¯æƒ³å¿µï¼ŒåŠ³ä½ å¤§é©¾ï¼Œå¸¦æˆ‘é—®å€™äºä»–ã€‚",
 	}
 
 	local strMissionTarget = format(missionInfo[random(getn(missionInfo))], strNpcScene, strNpcName, nPosX, nPosZ)
@@ -385,12 +385,12 @@ function x229022_SuoQu_Accept(sceneId, selfId, targetId)
 		if IsEquipItem(nItemId) > 0 then
 			local reqLevel = GeEquipReqLevel(nItemId)
 			local playerLevel = GetLevel(sceneId, selfId)
-			--²»»áË÷È¡×°±¸ÁĞÖĞÍæ¼ÒµÈ¼¶+10µÄ×°±¸¡££¨ÓÉÓÚÓĞÀàËÆÓÚÃÎ»ÃµÄ¡°´«Ëµ¡±£¬·ÀÖ¹Íæ¼Ò´«Ëµ³ö¸ß¼¶×°±¸¾ÍÖ÷¹Û¶ÏÈÎÎñ¡££©
+			--ä¸ä¼šç´¢å–è£…å¤‡åˆ—ä¸­ç©å®¶ç­‰çº§+10çš„è£…å¤‡ã€‚ï¼ˆç”±äºæœ‰ç±»ä¼¼äºæ¢¦å¹»çš„â€œä¼ è¯´â€ï¼Œé˜²æ­¢ç©å®¶ä¼ è¯´å‡ºé«˜çº§è£…å¤‡å°±ä¸»è§‚æ–­ä»»åŠ¡ã€‚ï¼‰
 			if playerLevel >= reqLevel and playerLevel < reqLevel+10 then
 				break
 			end
 			if i == 100 then
-				--"Í³Í³¸øÎÒÎÊºòÈ¥ ¹ş¹ş")
+				--"ç»Ÿç»Ÿç»™æˆ‘é—®å€™å» å“ˆå“ˆ")
 				x229022_WenHou_Accept(sceneId, selfId, targetId)
 				return
 			end	--end if
@@ -400,7 +400,7 @@ function x229022_SuoQu_Accept(sceneId, selfId, targetId)
 		end --end if
 	end --end for
 
-	--¼ÓÈëÈÎÎñµ½Íæ¼ÒÁĞ±í
+	--åŠ å…¥ä»»åŠ¡åˆ°ç©å®¶åˆ—è¡¨
 	local bCanAdd = AddMission( sceneId,selfId, x229022_g_MissionId, x229022_g_scriptId, 1, 0, 1 )
 	if bCanAdd < 1 then
 		AddText( sceneId, "#{WFRN_090213_01}" ) --hzp 2009-2-13
@@ -411,34 +411,34 @@ function x229022_SuoQu_Accept(sceneId, selfId, targetId)
 	local  PlayerName=GetName(sceneId,selfId)
 	local  PlayerSex=GetSex(sceneId,selfId)
 	if PlayerSex == 0 then
-		PlayerSex = "¹ÃÄï"
+		PlayerSex = "å§‘å¨˜"
 	else
-		PlayerSex = "ÉÙÏÀ"
+		PlayerSex = "å°‘ä¾ "
 	end
-	AddText(sceneId,"  " .. PlayerName .. PlayerSex .. "£¬Á¬»·ÈÎÎñ...")
+	AddText(sceneId,"  " .. PlayerName .. PlayerSex .. "ï¼Œè¿ç¯ä»»åŠ¡...")
 	-->> end
 	
 	SetMissionEvent(sceneId, selfId, x229022_g_MissionId, 4)
 
-	Msg2Player(  sceneId, selfId,"#Y½ÓÊÜÈÎÎñ£ºÁ¬»·ÈÎÎñ", MSG2PLAYER_PARA )
+	Msg2Player(  sceneId, selfId,"#Yæ¥å—ä»»åŠ¡ï¼šè¿ç¯ä»»åŠ¡", MSG2PLAYER_PARA )
 	CallScriptFunction( SCENE_SCRIPT_ID, "AskTheWay", sceneId, selfId, nSceneId, nPosX, nPosZ, strNpcName)
 
-	--µÃµ½ÈÎÎñÔÚ20¸öÈÎÎñÖĞµÄĞòÁĞºÅ
+	--å¾—åˆ°ä»»åŠ¡åœ¨20ä¸ªä»»åŠ¡ä¸­çš„åºåˆ—å·
 	local misIndex = GetMissionIndexByID(sceneId,selfId,x229022_g_MissionId)
 
-	SetMissionByIndex(sceneId, selfId, misIndex, 0, 0) --ÉèÖÃÈÎÎñÊÇ·ñÍê³É£¨Î´Íê³É£©
+	SetMissionByIndex(sceneId, selfId, misIndex, 0, 0) --è®¾ç½®ä»»åŠ¡æ˜¯å¦å®Œæˆï¼ˆæœªå®Œæˆï¼‰
 	SetMissionByIndex(sceneId, selfId, misIndex, 1, x229022_g_SubMissionType.suoqu)
-	SetMissionByIndex(sceneId, selfId, misIndex, 2, -1) --±£´æÊ±ÖÓË÷Òı£¬³õÊ¼»¯Îª-1
+	SetMissionByIndex(sceneId, selfId, misIndex, 2, -1) --ä¿å­˜æ—¶é’Ÿç´¢å¼•ï¼Œåˆå§‹åŒ–ä¸º-1
 	SetMissionByIndex(sceneId, selfId, misIndex, x229022_g_StrForePart+2, nNpcId)
 	SetMissionByIndex(sceneId, selfId, misIndex, x229022_g_StrForePart+1, nItemId)
-	SetMissionByIndex(sceneId, selfId, misIndex, x229022_g_StrForePart, 1)--formet×Ö·û´®Ë÷Òı
+	SetMissionByIndex(sceneId, selfId, misIndex, x229022_g_StrForePart, 1)--formetå­—ç¬¦ä¸²ç´¢å¼•
 
 	local missionInfo = {
-				"ÌıËµ%s%s(%d,%d)ĞèÒª%s£¬Âé·³ÄãËÍ¸øËû¡£",
-				"Õâ¼¸Ìì%s%s(%d,%d)ÏëµÃµ½%sÏëµÃ×øÎÔ²»°²£¬Èç¹ûÄãÄÜ°ïÖúËû£¬ÎÒÏëÒ»¶¨ÊÇÓĞºÃ´¦µÄ¡£",
-				"È¥°É£¬¸ø%s%s(%d,%d)ËÍÈ¥%s£¬Äã»áµÃµ½±¨³êµÄ¡£",
-				"%s%s(%d,%d)ÑĞ¾¿Éñ¹¦ÃØóÅ£¬ÒòÎªÈ±ÉÙ%s¶øÒ»³ïÄªÕ¹£¬ÄãÈ¥°ï°ï°É¡£",
-				"ÎÒµÄºÃÓÑ%s%s(%d,%d)ÕıÔÚÊÕ¼¯%s£¬Èç¹ûÄãÄÜÕÒÒ»¸ö¸øËû£¬Ëû»á·Ç³£¸ßĞËµÄ¡£",
+				"å¬è¯´%s%s(%d,%d)éœ€è¦%sï¼Œéº»çƒ¦ä½ é€ç»™ä»–ã€‚",
+				"è¿™å‡ å¤©%s%s(%d,%d)æƒ³å¾—åˆ°%sæƒ³å¾—åå§ä¸å®‰ï¼Œå¦‚æœä½ èƒ½å¸®åŠ©ä»–ï¼Œæˆ‘æƒ³ä¸€å®šæ˜¯æœ‰å¥½å¤„çš„ã€‚",
+				"å»å§ï¼Œç»™%s%s(%d,%d)é€å»%sï¼Œä½ ä¼šå¾—åˆ°æŠ¥é…¬çš„ã€‚",
+				"%s%s(%d,%d)ç ”ç©¶ç¥åŠŸç§˜ç¬ˆï¼Œå› ä¸ºç¼ºå°‘%sè€Œä¸€ç­¹è«å±•ï¼Œä½ å»å¸®å¸®å§ã€‚",
+				"æˆ‘çš„å¥½å‹%s%s(%d,%d)æ­£åœ¨æ”¶é›†%sï¼Œå¦‚æœä½ èƒ½æ‰¾ä¸€ä¸ªç»™ä»–ï¼Œä»–ä¼šéå¸¸é«˜å…´çš„ã€‚",
 				}
 
 	local strMissionTarget = format(missionInfo[random(getn(missionInfo))],
@@ -460,14 +460,14 @@ function x229022_Chongwu_Accept(sceneId, selfId, targetId)
 		petId, petName, petDesc = GetOneMissionPet(x229022_g_RenwulianPet_Index)
 		
 		--if 1==1 then
-		--petId, petName, petDesc = 3000, "Ò°Éú²ñÃ¨", "hahaha"
+		--petId, petName, petDesc = 3000, "é‡ç”ŸæŸ´çŒ«", "hahaha"
 		--break
 		--end
 		takeLevel = GetPetTakeLevel(petId)
 		if takeLevel >= 10 and takeLevel <= GetLevel(sceneId, selfId) then
 			break
 		elseif i == 10 then
-			--Í³Í³¸øÎÒÎÊºòÈ¥ ¹ş¹ş
+			--ç»Ÿç»Ÿç»™æˆ‘é—®å€™å» å“ˆå“ˆ
 			x229022_WenHou_Accept(sceneId, selfId, targetId)
 			return
 		end
@@ -475,7 +475,7 @@ function x229022_Chongwu_Accept(sceneId, selfId, targetId)
 
 	local nNpcId, strNpcName, strNpcScene, nSceneId, nPosX, nPosZ, strNPCDesc = x229022_GetOneMissionNpcEx(sceneId, targetId)
 
-	--¼ÓÈëÈÎÎñµ½Íæ¼ÒÁĞ±í
+	--åŠ å…¥ä»»åŠ¡åˆ°ç©å®¶åˆ—è¡¨
 	local bCanAdd = AddMission( sceneId,selfId, x229022_g_MissionId, x229022_g_scriptId, 0, 0, 0 )
 	if bCanAdd < 1 then
 		AddText( sceneId, "#{WFRN_090213_01}" ) --hzp 2009-2-13
@@ -486,47 +486,47 @@ function x229022_Chongwu_Accept(sceneId, selfId, targetId)
 	local  PlayerName=GetName(sceneId,selfId)
 	local  PlayerSex=GetSex(sceneId,selfId)
 	if PlayerSex == 0 then
-		PlayerSex = "¹ÃÄï"
+		PlayerSex = "å§‘å¨˜"
 	else
-		PlayerSex = "ÉÙÏÀ"
+		PlayerSex = "å°‘ä¾ "
 	end
-	AddText(sceneId,"  " .. PlayerName .. PlayerSex .. "£¬Á¬»·ÈÎÎñ...")
+	AddText(sceneId,"  " .. PlayerName .. PlayerSex .. "ï¼Œè¿ç¯ä»»åŠ¡...")
 	-->> end
 	
 	SetMissionEvent(sceneId, selfId, x229022_g_MissionId, 3)
 	SetMissionEvent(sceneId, selfId, x229022_g_MissionId, 4)
-	Msg2Player(  sceneId, selfId,"#Y½ÓÊÜÈÎÎñ£ºÁ¬»·ÈÎÎñ", MSG2PLAYER_PARA )
+	Msg2Player(  sceneId, selfId,"#Yæ¥å—ä»»åŠ¡ï¼šè¿ç¯ä»»åŠ¡", MSG2PLAYER_PARA )
 	CallScriptFunction( SCENE_SCRIPT_ID, "AskTheWay", sceneId, selfId, nSceneId, nPosX, nPosZ, strNpcName)
 
-	--µÃµ½ÈÎÎñÔÚ20¸öÈÎÎñÖĞµÄĞòÁĞºÅ
+	--å¾—åˆ°ä»»åŠ¡åœ¨20ä¸ªä»»åŠ¡ä¸­çš„åºåˆ—å·
 	local misIndex = GetMissionIndexByID(sceneId,selfId,x229022_g_MissionId)
 
-	SetMissionByIndex(sceneId, selfId, misIndex, 0, 0) --ÉèÖÃÈÎÎñÊÇ·ñÍê³É£¨Î´Íê³É£©
+	SetMissionByIndex(sceneId, selfId, misIndex, 0, 0) --è®¾ç½®ä»»åŠ¡æ˜¯å¦å®Œæˆï¼ˆæœªå®Œæˆï¼‰
 	SetMissionByIndex(sceneId, selfId, misIndex, 1, x229022_g_SubMissionType.chongwu)
-	SetMissionByIndex(sceneId, selfId, misIndex, 2, -1) --±£´æÊ±ÖÓË÷Òı£¬³õÊ¼»¯Îª-1
+	SetMissionByIndex(sceneId, selfId, misIndex, 2, -1) --ä¿å­˜æ—¶é’Ÿç´¢å¼•ï¼Œåˆå§‹åŒ–ä¸º-1
 	SetMissionByIndex(sceneId, selfId, misIndex, x229022_g_StrForePart+2, nNpcId)
 	SetMissionByIndex(sceneId, selfId, misIndex, x229022_g_StrForePart+1, petId)
 
-	SetMissionByIndex(sceneId, selfId, misIndex, x229022_g_StrForePart, 2)--formet×Ö·û´®Ë÷Òı
+	SetMissionByIndex(sceneId, selfId, misIndex, x229022_g_StrForePart, 2)--formetå­—ç¬¦ä¸²ç´¢å¼•
 
 	local missionInfo = {
-			"ÌıËµ%s%s(%d,%d)ĞèÒª%s£¬Âé·³ÄãËÍ¸øËû¡£",
-			"Õâ¼¸Ìì%s%s(%d,%d)ÏëµÃµ½%sÏëµÃ×øÎÔ²»°²£¬Èç¹ûÄãÄÜ°ïÖúËû£¬ÎÒÏëÒ»¶¨ÊÇÓĞºÃ´¦µÄ¡£",
-			"È¥°É£¬¸ø%s%s(%d,%d)ËÍÈ¥%s£¬Äã»áµÃµ½±¨³êµÄ¡£",
-			"%s%s(%d,%d)ÑĞ¾¿Éñ¹¦ÃØóÅ£¬ÒòÎªÈ±ÉÙ%s¶øÒ»³ïÄªÕ¹£¬ÄãÈ¥°ï°ï°É¡£",
-			"ÎÒµÄºÃÓÑ%s%s(%d,%d)ÕıÔÚÊÕ¼¯%s£¬Èç¹ûÄãÄÜÕÒÒ»¸ö¸øËû£¬Ëû»á·Ç³£¸ßĞËµÄ¡£",
+			"å¬è¯´%s%s(%d,%d)éœ€è¦%sï¼Œéº»çƒ¦ä½ é€ç»™ä»–ã€‚",
+			"è¿™å‡ å¤©%s%s(%d,%d)æƒ³å¾—åˆ°%sæƒ³å¾—åå§ä¸å®‰ï¼Œå¦‚æœä½ èƒ½å¸®åŠ©ä»–ï¼Œæˆ‘æƒ³ä¸€å®šæ˜¯æœ‰å¥½å¤„çš„ã€‚",
+			"å»å§ï¼Œç»™%s%s(%d,%d)é€å»%sï¼Œä½ ä¼šå¾—åˆ°æŠ¥é…¬çš„ã€‚",
+			"%s%s(%d,%d)ç ”ç©¶ç¥åŠŸç§˜ç¬ˆï¼Œå› ä¸ºç¼ºå°‘%sè€Œä¸€ç­¹è«å±•ï¼Œä½ å»å¸®å¸®å§ã€‚",
+			"æˆ‘çš„å¥½å‹%s%s(%d,%d)æ­£åœ¨æ”¶é›†%sï¼Œå¦‚æœä½ èƒ½æ‰¾ä¸€ä¸ªç»™ä»–ï¼Œä»–ä¼šéå¸¸é«˜å…´çš„ã€‚",
 			}
 
 	local strMissionTarget = format(missionInfo[random(getn(missionInfo))],
 																									strNpcScene, strNpcName, nPosX, nPosZ, petName)
 	AddText(sceneId, strMissionTarget)
 
-	--¼ì²âÍæ¼ÒÉíÉÏµÄµÀ¾ßÊÇ·ñÒÑ¾­Âú×ãÍê³ÉÌõ¼ş
+	--æ£€æµ‹ç©å®¶èº«ä¸Šçš„é“å…·æ˜¯å¦å·²ç»æ»¡è¶³å®Œæˆæ¡ä»¶
 	for i=0, 6 do
 		local petDataId = LuaFnGetPet_DataID(sceneId,selfId,i)
 		if petDataId ~= nil and petDataId >= 0 then
 		if GetPetName(petId) == GetPetName(petDataId) then
-			SetMissionByIndex(sceneId,selfId,misIndex,0,1)					--°ÑÈÎÎñÍê³É±êÖ¾ÖÃÎª1
+			SetMissionByIndex(sceneId,selfId,misIndex,0,1)					--æŠŠä»»åŠ¡å®Œæˆæ ‡å¿—ç½®ä¸º1
 			break
 		end
 	end
@@ -539,15 +539,15 @@ end
 function x229022_FubenZhanDou_Accept(sceneId, selfId, targetId)
 
 	local round = GetMissionData(sceneId,selfId,MD_RENWULIAN_HUAN)
-	-->80»·£¬²»»áÔÙÓĞÕ½¶·ÀàĞÍ¡££¨ÓÉÓÚ¹ÖµÄµÈ¼¶ÔÚÍæ¼ÒµÈ¼¶»ù´¡ÉÏ£¬»áËæ»·µÄÔö¶à¶øÔö¼ÓÄÑ¶È£¬ºó20»·²ÉÈ¡±£»¤)
+	-->80ç¯ï¼Œä¸ä¼šå†æœ‰æˆ˜æ–—ç±»å‹ã€‚ï¼ˆç”±äºæ€ªçš„ç­‰çº§åœ¨ç©å®¶ç­‰çº§åŸºç¡€ä¸Šï¼Œä¼šéšç¯çš„å¢å¤šè€Œå¢åŠ éš¾åº¦ï¼Œå20ç¯é‡‡å–ä¿æŠ¤)
 	if round > 80 then
-		--Í³Í³¸øÎÒÎÊºòÈ¥ ¹ş¹ş
+		--ç»Ÿç»Ÿç»™æˆ‘é—®å€™å» å“ˆå“ˆ
 		x229022_WenHou_Accept(sceneId, selfId, targetId)
 		return
 	end
 
 	local nNpcId,strNpcName,strNpcScene,nSceneId,nPosX,nPosZ,strNPCDesc,sex=x229022_GetOneMissionNpcEx(sceneId, targetId)
-	--¼ÓÈëÈÎÎñµ½Íæ¼ÒÁĞ±í
+	--åŠ å…¥ä»»åŠ¡åˆ°ç©å®¶åˆ—è¡¨
 	local bCanAdd = AddMission( sceneId,selfId, x229022_g_MissionId, x229022_g_scriptId, 1, 0, 0 )
 	if bCanAdd < 1 then
 		AddText( sceneId, "#{WFRN_090213_01}" ) --hzp 2009-2-13
@@ -558,36 +558,36 @@ function x229022_FubenZhanDou_Accept(sceneId, selfId, targetId)
 	local  PlayerName=GetName(sceneId,selfId)
 	local  PlayerSex=GetSex(sceneId,selfId)
 	if PlayerSex == 0 then
-		PlayerSex = "¹ÃÄï"
+		PlayerSex = "å§‘å¨˜"
 	else
-		PlayerSex = "ÉÙÏÀ"
+		PlayerSex = "å°‘ä¾ "
 	end
-	AddText(sceneId,"  " .. PlayerName .. PlayerSex .. "£¬Á¬»·ÈÎÎñ...")
+	AddText(sceneId,"  " .. PlayerName .. PlayerSex .. "ï¼Œè¿ç¯ä»»åŠ¡...")
 	-->> end
 	
-	Msg2Player(  sceneId, selfId,"#Y½ÓÊÜÈÎÎñ£ºÁ¬»·ÈÎÎñ", MSG2PLAYER_PARA )
+	Msg2Player(  sceneId, selfId,"#Yæ¥å—ä»»åŠ¡ï¼šè¿ç¯ä»»åŠ¡", MSG2PLAYER_PARA )
 	CallScriptFunction( SCENE_SCRIPT_ID, "AskTheWay", sceneId, selfId, nSceneId, nPosX, nPosZ, strNpcName)
 
-	--µÃµ½ÈÎÎñÔÚ20¸öÈÎÎñÖĞµÄĞòÁĞºÅ
+	--å¾—åˆ°ä»»åŠ¡åœ¨20ä¸ªä»»åŠ¡ä¸­çš„åºåˆ—å·
 	local misIndex = GetMissionIndexByID(sceneId,selfId,x229022_g_MissionId)
 	SetMissionEvent(sceneId, selfId, x229022_g_MissionId, 4)
 
-	SetMissionByIndex(sceneId, selfId, misIndex, 0, 0) --ÉèÖÃÈÎÎñÊÇ·ñÍê³É£¨Î´Íê³É£©
+	SetMissionByIndex(sceneId, selfId, misIndex, 0, 0) --è®¾ç½®ä»»åŠ¡æ˜¯å¦å®Œæˆï¼ˆæœªå®Œæˆï¼‰
 	SetMissionByIndex(sceneId, selfId, misIndex, 1, x229022_g_SubMissionType.fubenjiaoxun)
-	SetMissionByIndex(sceneId, selfId, misIndex, 2, -1) --±£´æÊ±ÖÓË÷Òı£¬³õÊ¼»¯Îª-1
-	SetMissionParamByIndexEx(sceneId, selfId, misIndex, 3, 0, 0) --ÒªÇóÉ±ËÀµÄmonster×ÜÊı£¬ ÏÖÔÚ»¹Ã»ÓĞ¸³Öµ
-	SetMissionParamByIndexEx(sceneId, selfId, misIndex, 3, 1, 0) --ÒÑ¾­É±ËÀµÄmonsterÊıÁ¿
+	SetMissionByIndex(sceneId, selfId, misIndex, 2, -1) --ä¿å­˜æ—¶é’Ÿç´¢å¼•ï¼Œåˆå§‹åŒ–ä¸º-1
+	SetMissionParamByIndexEx(sceneId, selfId, misIndex, 3, 0, 0) --è¦æ±‚æ€æ­»çš„monsteræ€»æ•°ï¼Œ ç°åœ¨è¿˜æ²¡æœ‰èµ‹å€¼
+	SetMissionParamByIndexEx(sceneId, selfId, misIndex, 3, 1, 0) --å·²ç»æ€æ­»çš„monsteræ•°é‡
 
 	SetMissionByIndex(sceneId, selfId, misIndex, x229022_g_StrForePart+1, nNpcId)
 	--local strSex, sexIndex = x229022_GetSexInfo(sex)
 	--SetMissionByIndex(sceneId, selfId, misIndex, x229022_g_StrForePart+2, sexIndex)
 
-	SetMissionByIndex(sceneId, selfId, misIndex, x229022_g_StrForePart, 3)--formet×Ö·û´®Ë÷Òı
+	SetMissionByIndex(sceneId, selfId, misIndex, x229022_g_StrForePart, 3)--formetå­—ç¬¦ä¸²ç´¢å¼•
 
 	local missionInfo = {
-				"ÌıËµ%s%s(%d,%d)Îª·Ç×÷´õ£¬ÄãÌæÎÒ½ÌÑµ½ÌÑµËû¡£",
-				"%s%s(%d,%d)ËØÎŞÉÆÃû£¬³ÍĞ×ÑïÉÆÊÇÎÒ±²Ó¦ĞĞÖ®¾Ù£¬È¥¸øËûÒ»µãÑÕÉ«¡£",
-				"ÎÒÌıËµ%s%s(%d,%d)×î½üÓÖ·¸ÁË¼¸Æ±°¸×Ó£¬²»½ÌÑµÏÂËûËû²»»áÊÕÁ²µÄ£¬Õâ¸öÈÎÎñ¾Í½»¸øÄãÁË¡£",
+				"å¬è¯´%s%s(%d,%d)ä¸ºéä½œæ­¹ï¼Œä½ æ›¿æˆ‘æ•™è®­æ•™è®­ä»–ã€‚",
+				"%s%s(%d,%d)ç´ æ— å–„åï¼Œæƒ©å‡¶æ‰¬å–„æ˜¯æˆ‘è¾ˆåº”è¡Œä¹‹ä¸¾ï¼Œå»ç»™ä»–ä¸€ç‚¹é¢œè‰²ã€‚",
+				"æˆ‘å¬è¯´%s%s(%d,%d)æœ€è¿‘åˆçŠ¯äº†å‡ ç¥¨æ¡ˆå­ï¼Œä¸æ•™è®­ä¸‹ä»–ä»–ä¸ä¼šæ”¶æ•›çš„ï¼Œè¿™ä¸ªä»»åŠ¡å°±äº¤ç»™ä½ äº†ã€‚",
 		}
 	local strMissionTarget = format(missionInfo[random(getn(missionInfo))],
 					strNpcScene,strNpcName, nPosX, nPosZ)
@@ -598,19 +598,19 @@ function x229022_FubenZhanDou_Accept(sceneId, selfId, targetId)
 end
 
 function x229022_ExchangeMissionItemForGoodBadFn( sceneId, selfId,targetId, needPoint )
-	--¸øÓèÈÎÎñÎïÆ·
+	--ç»™äºˆä»»åŠ¡ç‰©å“
 	if( needPoint < 0 ) then
 		return
 	end
 	local iDayTime = GetMissionData(sceneId,selfId,MD_RENWULIAN_EXCHANGEITEM)
 	--begin modified by zhangguoxin 090208
-	--local CurTime = GetHourTime()		--µ±Ç°Ê±¼ä
-	--local CurDaytime = floor(CurTime/100)	--µ±Ç°Ê±¼ä(Ìì)
-	local CurDaytime = GetDayTime()	--µ±Ç°Ê±¼ä(Ìì)
+	--local CurTime = GetHourTime()		--å½“å‰æ—¶é—´
+	--local CurDaytime = floor(CurTime/100)	--å½“å‰æ—¶é—´(å¤©)
+	local CurDaytime = GetDayTime()	--å½“å‰æ—¶é—´(å¤©)
 	--begin modified by zhangguoxin 090208
 	if iDayTime == CurDaytime then
 		BeginEvent(sceneId)
-			AddText(sceneId, "Ò»ÌìÖ»ÄÜÓÃÉÆ¶ñÖµ¶Ò»»Ò»´Î£¡")
+			AddText(sceneId, "ä¸€å¤©åªèƒ½ç”¨å–„æ¶å€¼å…‘æ¢ä¸€æ¬¡ï¼")
 		EndEvent()
 		DispatchMissionTips(sceneId, selfId)
 		return
@@ -624,7 +624,7 @@ function x229022_ExchangeMissionItemForGoodBadFn( sceneId, selfId,targetId, need
 	local goodbadValue = LuaFnGetHumanGoodBadValue(sceneId, selfId)
 	if goodbadValue < needPoint then
 		BeginEvent(sceneId)
-			AddText(sceneId, "ÄãµÄÉÆ¶ñÖµ²»¹»£¬¶à´ø´øĞÂÈËÔÙÀ´°É")
+			AddText(sceneId, "ä½ çš„å–„æ¶å€¼ä¸å¤Ÿï¼Œå¤šå¸¦å¸¦æ–°äººå†æ¥å§")
 		EndEvent()
 		DispatchMissionTips(sceneId, selfId)
 	else
@@ -633,12 +633,12 @@ function x229022_ExchangeMissionItemForGoodBadFn( sceneId, selfId,targetId, need
 		local ret = EndAddItem(sceneId,selfId)
 		if ret > 0 then
 			AddItemListToHuman(sceneId,selfId)
-			--ÉèÖÃÈÎÎñÒÑ¾­Íê³É
+			--è®¾ç½®ä»»åŠ¡å·²ç»å®Œæˆ
 			SetMissionByIndex(sceneId,selfId,misIndex,0,1)
 		end
 
 		LuaFnSetHumanGoodBadValue(sceneId, selfId, goodbadValue-needPoint)
-		local str = format("Äã»¨·ÑÁË#Y%d#WµãÉÆ¶ñÖµ£¬µÃÁË³¯Ë¼ÄºÏëµÄ#B%s¡£", needPoint, strItemName)
+		local str = format("ä½ èŠ±è´¹äº†#Y%d#Wç‚¹å–„æ¶å€¼ï¼Œå¾—äº†æœæ€æš®æƒ³çš„#B%sã€‚", needPoint, strItemName)
 		SetMissionData(sceneId, selfId, MD_RENWULIAN_EXCHANGEITEM, CurDaytime)
 
 		Msg2Player(  sceneId, selfId,str, MSG2PLAYER_PARA )
@@ -649,7 +649,7 @@ end
 
 function x229022_ExchangeMissionItemForGoodBad( sceneId, selfId,targetId )
 
-	--¸øÓèÈÎÎñÎïÆ·
+	--ç»™äºˆä»»åŠ¡ç‰©å“
 	local misIndex = GetMissionIndexByID(sceneId,selfId,x229022_g_MissionId)
 	local itemId = GetMissionParam(sceneId, selfId, misIndex, x229022_g_StrForePart+1)
 	local _, strItemName, strItemDesc = GetItemInfoByItemId(itemId)
@@ -657,8 +657,8 @@ function x229022_ExchangeMissionItemForGoodBad( sceneId, selfId,targetId )
 	local nNeedPoint
 	if IsEquipItem(itemId) == 1 then --600+4*Lv
 		nNeedPoint = 600 + 4 * GeEquipReqLevel(itemId)
-	else	--600+4*ÎïÆ·µµ´ÎµÈ¼¶
-		nNeedPoint = 600 + 4 * 1 --ÎïÆ·µµ´ÎµÈ¼¶Ä¿Ç°Ã»ÓĞ£¡£¡
+	else	--600+4*ç‰©å“æ¡£æ¬¡ç­‰çº§
+		nNeedPoint = 600 + 4 * 1 --ç‰©å“æ¡£æ¬¡ç­‰çº§ç›®å‰æ²¡æœ‰ï¼ï¼
 	end
 
 	BeginUICommand(sceneId)
@@ -666,7 +666,7 @@ function x229022_ExchangeMissionItemForGoodBad( sceneId, selfId,targetId )
 		UICommand_AddInt(sceneId,targetId);
 		UICommand_AddInt(sceneId,nNeedPoint)
 		UICommand_AddString(sceneId,"ExchangeMissionItemForGoodBadFn");
-		local str = format("#YÄãËùÒª»»È¡µÄ#B%s#Y£¬ĞèÒªÏûºÄÉÆ¶ñÖµ#W%d#Yµã", strItemName, nNeedPoint)
+		local str = format("#Yä½ æ‰€è¦æ¢å–çš„#B%s#Yï¼Œéœ€è¦æ¶ˆè€—å–„æ¶å€¼#W%d#Yç‚¹", strItemName, nNeedPoint)
 		UICommand_AddString(sceneId,str);
 	EndUICommand(sceneId)
 	DispatchUICommand(sceneId,selfId, 24)
@@ -684,21 +684,21 @@ function x229022_CurrentRoundStorageFn( sceneId, selfId,targetId, needPoint )
 	--PrintNum(leaveSecond)
 	if leaveSecond < 10*60000 then
 		BeginEvent(sceneId)
-			AddText(sceneId, "ÄãÒÑ¾­³¬¹ı20·ÖÖÓÁË£¬ÎŞ·¨´æÖüÈÎÎñ¡£")
+			AddText(sceneId, "ä½ å·²ç»è¶…è¿‡20åˆ†é’Ÿäº†ï¼Œæ— æ³•å­˜è´®ä»»åŠ¡ã€‚")
 		EndEvent()
 		DispatchMissionTips(sceneId, selfId)
 	elseif goodbadValue < needPoint then
 		BeginEvent(sceneId)
-			AddText(sceneId, "ÄãµÄÉÆ¶ñÖµ²»¹»£¬¶à´ø´øĞÂÈËÔÙÀ´°É")
+			AddText(sceneId, "ä½ çš„å–„æ¶å€¼ä¸å¤Ÿï¼Œå¤šå¸¦å¸¦æ–°äººå†æ¥å§")
 		EndEvent()
 		DispatchMissionTips(sceneId, selfId)
 	else
 		LuaFnSetHumanGoodBadValue(sceneId, selfId, goodbadValue-needPoint)
-		local str = format("Äã»¨·ÑÁË#Y%d#WµãÉÆ¶ñÖµ£¬Á¬»·ÈÎÎñ»·ÊıÒÑ±£´æ¡£", needPoint)
+		local str = format("ä½ èŠ±è´¹äº†#Y%d#Wç‚¹å–„æ¶å€¼ï¼Œè¿ç¯ä»»åŠ¡ç¯æ•°å·²ä¿å­˜ã€‚", needPoint)
 		Msg2Player(  sceneId, selfId,str, MSG2PLAYER_PARA )
-		--ÉèÖÃÈÎÎñÒÑ¾­´æ´¢µÄ±êÖ¾
+		--è®¾ç½®ä»»åŠ¡å·²ç»å­˜å‚¨çš„æ ‡å¿—
 		SetMissionByIndex(sceneId,selfId,misIndex,2,1)
-		--Í£Ö¹ÈÎÎñÊ±ÖÓ
+		--åœæ­¢ä»»åŠ¡æ—¶é’Ÿ
 		StopMissionTimer(sceneId, selfId, x229022_g_MissionId)
 		SetMissionData(sceneId,selfId,x229022_g_StopWatch_Pause_Flag,1)
 	end
@@ -716,7 +716,7 @@ function x229022_CurrentRoundStorage( sceneId, selfId,targetId )
 		UICommand_AddInt(sceneId,targetId);
 		UICommand_AddInt(sceneId,nNeedPoint)
 		UICommand_AddString(sceneId,"CurrentRoundStorageFn");
-		local str = format("#Y´æ´¢»·ÊıËùĞèÒªÏûºÄÉÆ¶ñÖµ#W%d#Yµã£¬ÄãÈ·¶¨Âğ£¿", nNeedPoint)
+		local str = format("#Yå­˜å‚¨ç¯æ•°æ‰€éœ€è¦æ¶ˆè€—å–„æ¶å€¼#W%d#Yç‚¹ï¼Œä½ ç¡®å®šå—ï¼Ÿ", nNeedPoint)
 		UICommand_AddString(sceneId,str);
 	EndUICommand(sceneId)
 	DispatchUICommand(sceneId,selfId, 24)
@@ -727,17 +727,17 @@ function x229022_ContinueStoredMissionFn(sceneId, selfId, targetId,flag)
 	if flag < 0 then
 		return
 	end
-	local misIndex = GetMissionIndexByID(sceneId,selfId,x229022_g_MissionId)		--µÃµ½ÈÎÎñÔÚ20¸öÈÎÎñÖĞµÄĞòÁĞºÅ
-	--µÃµ½»·Êı
+	local misIndex = GetMissionIndexByID(sceneId,selfId,x229022_g_MissionId)		--å¾—åˆ°ä»»åŠ¡åœ¨20ä¸ªä»»åŠ¡ä¸­çš„åºåˆ—å·
+	--å¾—åˆ°ç¯æ•°
 	local round = GetMissionData(sceneId,selfId,MD_RENWULIAN_HUAN)
-	local str = format("Äã¼ÌĞøÁËÁ¬»·ÈÎÎñ£¬µ±Ç°µÄ»·ÊıÎªµÚ#Y%d#W»·¡£", round)
+	local str = format("ä½ ç»§ç»­äº†è¿ç¯ä»»åŠ¡ï¼Œå½“å‰çš„ç¯æ•°ä¸ºç¬¬#Y%d#Wç¯ã€‚", round)
 	Msg2Player(  sceneId, selfId,str, MSG2PLAYER_PARA )
-	--Æô¶¯ÈÎÎñÊ±ÖÓ
+	--å¯åŠ¨ä»»åŠ¡æ—¶é’Ÿ
 	StartMissionTimer(sceneId, selfId, x229022_g_MissionId)
-	--ÉèÖÃÈÎÎñÒÑ¾­´æ´¢µÄ±êÖ¾
+	--è®¾ç½®ä»»åŠ¡å·²ç»å­˜å‚¨çš„æ ‡å¿—
 	SetMissionByIndex(sceneId,selfId,misIndex,2,0)
 	SetMissionData(sceneId,selfId,x229022_g_StopWatch_Pause_Flag,0)
-	--¶ÔÊ±¼ä½øĞĞĞŞÕı
+	--å¯¹æ—¶é—´è¿›è¡Œä¿®æ­£
 	local leaveSecond = GetMissionParam(sceneId, selfId, misIndex, 7)
 	local elapseSecond = 30*60 - leaveSecond/1000
 	SetMissionData(sceneId,selfId,MD_RENWULIAN_ACCPETTIME,LuaFnGetCurrentTime()-elapseSecond)
@@ -750,7 +750,7 @@ end
 
 function x229022_ContinueStoredMission(sceneId, selfId, targetId)
 
-	--µÃµ½»·Êı
+	--å¾—åˆ°ç¯æ•°
 	local round = GetMissionData(sceneId,selfId,MD_RENWULIAN_HUAN)
 
 	BeginUICommand(sceneId)
@@ -758,7 +758,7 @@ function x229022_ContinueStoredMission(sceneId, selfId, targetId)
 		UICommand_AddInt(sceneId,targetId);
 		UICommand_AddInt(sceneId,round)
 		UICommand_AddString(sceneId,"ContinueStoredMissionFn");
-		UICommand_AddString(sceneId,"#YÄãÉÏ´ÎÁ¬»·ÈÎÎñ½øĞĞµ½ÁËµÚ#W" .. tostring(round) .. "#Y»·£¬ÄãÈ·¶¨¼ÌĞøÂğ£¿");
+		UICommand_AddString(sceneId,"#Yä½ ä¸Šæ¬¡è¿ç¯ä»»åŠ¡è¿›è¡Œåˆ°äº†ç¬¬#W" .. tostring(round) .. "#Yç¯ï¼Œä½ ç¡®å®šç»§ç»­å—ï¼Ÿ");
 	EndUICommand(sceneId)
 	DispatchUICommand(sceneId,selfId, 24)
 
@@ -771,11 +771,11 @@ function x229022_AddMissionDirectly(sceneId, selfId,targetId)
 		--local  PlayerName=GetName(sceneId,selfId)
 		--local  PlayerSex=GetSex(sceneId,selfId)
 		--if PlayerSex == 0 then
-		--	PlayerSex = "¹ÃÄï"
+		--	PlayerSex = "å§‘å¨˜"
 		--else
-		--	PlayerSex = "ÉÙÏÀ"
+		--	PlayerSex = "å°‘ä¾ "
 		--end
-		--AddText(sceneId,"  " .. PlayerName .. PlayerSex .. "£¬Á¬»·ÈÎÎñ...")
+		--AddText(sceneId,"  " .. PlayerName .. PlayerSex .. "ï¼Œè¿ç¯ä»»åŠ¡...")
 		-->> end
 		
     	--testing begin
@@ -789,16 +789,16 @@ function x229022_AddMissionDirectly(sceneId, selfId,targetId)
     	
 	  	local ret = random(100)
 
-		if ret < 5 then			--1¡¢	ÕÒNPCÎÊºò£¨5%£©
+		if ret < 5 then			--1ã€	æ‰¾NPCé—®å€™ï¼ˆ5%ï¼‰
 			x229022_WenHou_Accept(sceneId, selfId, targetId)
-		elseif ret < 85 then	--2¡¢	Ë÷È¡£¨80%£©
+		elseif ret < 85 then	--2ã€	ç´¢å–ï¼ˆ80%ï¼‰
 			ret = random(100)
-			if ret < 62 then -- 70 	Ë÷È¡ÎïÆ·£¨62%£©³èÎï=1-ÎïÆ·µÄ
+			if ret < 62 then -- 70 	ç´¢å–ç‰©å“ï¼ˆ62%ï¼‰å® ç‰©=1-ç‰©å“çš„
 				x229022_SuoQu_Accept(sceneId, selfId, targetId)
 			else
 				x229022_Chongwu_Accept(sceneId, selfId, targetId)
 			end
-		else									--4¡¢	Õ½¶·£¨´«Èë¸±±¾£©£¨35%£©
+		else									--4ã€	æˆ˜æ–—ï¼ˆä¼ å…¥å‰¯æœ¬ï¼‰ï¼ˆ35%ï¼‰
 			x229022_FubenZhanDou_Accept(sceneId, selfId, targetId)
 		end
 
@@ -811,10 +811,10 @@ function x229022_CostMoneyFn(sceneId, selfId, targetId,flag)
 		return
 	end
 	if x229022_CheckAccept(sceneId,selfId) > 0 then
-		--²ì¿´½ğÇ®ÊÇ·ñ×ã¹»
+		--å¯Ÿçœ‹é‡‘é’±æ˜¯å¦è¶³å¤Ÿ
 		if GetMoney(sceneId, selfId)+ GetMoneyJZ( sceneId, selfId ) < GetLevel(sceneId, selfId)*1000 then ---dengxx
 			BeginEvent(sceneId)
-				AddText(sceneId, "ÄãµÄÇ®ËÆºõ²»¹»°¡")
+				AddText(sceneId, "ä½ çš„é’±ä¼¼ä¹ä¸å¤Ÿå•Š")
 			EndEvent()
 			DispatchEventList(sceneId,selfId,-1)
 		else
@@ -824,18 +824,18 @@ function x229022_CostMoneyFn(sceneId, selfId, targetId,flag)
 end
 --/////////////////////////////////////////////////////////////////////
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x229022_UpdateEventList( sceneId, selfId,targetId )
 	if IsHaveMission(sceneId,selfId,x229022_g_MissionId) > 0 then
-		local misIndex = GetMissionIndexByID(sceneId,selfId,x229022_g_MissionId)		--µÃµ½ÈÎÎñÔÚ20¸öÈÎÎñÖĞµÄĞòÁĞºÅ
+		local misIndex = GetMissionIndexByID(sceneId,selfId,x229022_g_MissionId)		--å¾—åˆ°ä»»åŠ¡åœ¨20ä¸ªä»»åŠ¡ä¸­çš„åºåˆ—å·
 		local missionType = GetMissionParam(sceneId, selfId, misIndex, 1)
 		if 1 == GetNumText() then
-			--ÓÃÉÆ¶ñÖµ»»È¡Á¬»·ÈÎÎñÎïÆ· --ÕÅÕæê»
+			--ç”¨å–„æ¶å€¼æ¢å–è¿ç¯ä»»åŠ¡ç‰©å“ --å¼ çœŸæ˜Š
 			x229022_ExchangeMissionItemForGoodBad( sceneId, selfId,targetId )
 			return
 		elseif 2 == GetNumText() then
-			--´æ´¢µ±Ç°»·Êı --ÕÅÕæê»
+			--å­˜å‚¨å½“å‰ç¯æ•° --å¼ çœŸæ˜Š
 			x229022_CurrentRoundStorage( sceneId, selfId,targetId )
 			return
 		elseif 3 == GetNumText() then
@@ -847,62 +847,62 @@ function x229022_UpdateEventList( sceneId, selfId,targetId )
 			if x229022_IsDemandNpc(sceneId, selfId, targetId) == 1 then
 				SetMissionByIndex(sceneId, selfId, misIndex, 0, 1)
 				if x229022_CheckSubmit( sceneId, selfId ) > 0 then
-					--·¢ËÍÈÎÎñĞèÇóµÄĞÅÏ¢
+					--å‘é€ä»»åŠ¡éœ€æ±‚çš„ä¿¡æ¯
 					BeginEvent(sceneId)
 						AddText(sceneId, x229022_g_MissionName)
-						AddText(sceneId, "°¢£¡ÄãÖÕÓÚÀ´ÁË£¬ÎÒÕıºÃÓĞÊÂÇéĞèÒªÄã°ïÃ¦ÄØ¡£")
+						AddText(sceneId, "é˜¿ï¼ä½ ç»ˆäºæ¥äº†ï¼Œæˆ‘æ­£å¥½æœ‰äº‹æƒ…éœ€è¦ä½ å¸®å¿™å‘¢ã€‚")
 					EndEvent( )
 				end
 				DispatchMissionContinueInfo(sceneId, selfId, targetId, x229022_g_scriptId, x229022_g_MissionId, x229022_g_scriptId)
 			end
 		elseif	missionType == x229022_g_SubMissionType.suoqu then
-			--·¢ËÍÈÎÎñĞèÇóµÄĞÅÏ¢
+			--å‘é€ä»»åŠ¡éœ€æ±‚çš„ä¿¡æ¯
 			local itemId = GetMissionParam(sceneId, selfId, misIndex, x229022_g_StrForePart+1)
 			local _, strItemName, _ = GetItemInfoByItemId(itemId)
 
 			BeginEvent(sceneId)
 				AddText(sceneId, x229022_g_MissionName)
-				AddText(sceneId, "ÎÒÒªµÄ#B" .. strItemName .. "#WÄã¸øÎÒ´øÀ´ÁËÂğ£¿")
+				AddText(sceneId, "æˆ‘è¦çš„#B" .. strItemName .. "#Wä½ ç»™æˆ‘å¸¦æ¥äº†å—ï¼Ÿ")
 			EndEvent( )
 			local bDone = x229022_CheckSubmit( sceneId, selfId )
 			DispatchMissionDemandInfo(sceneId, selfId, targetId, x229022_g_scriptId, x229022_g_MissionId, bDone,x229022_g_scriptId)
 		elseif 	missionType == x229022_g_SubMissionType.chongwu then
-			--·¢ËÍÈÎÎñĞèÇóµÄĞÅÏ¢
+			--å‘é€ä»»åŠ¡éœ€æ±‚çš„ä¿¡æ¯
 			local petDataId = GetMissionParam(sceneId, selfId, misIndex, x229022_g_StrForePart+1)
 			local strItemName = GetPetName(petDataId)
 
 			BeginEvent(sceneId)
 				AddText(sceneId, x229022_g_MissionName)
-				AddText(sceneId, "ÎÒÒªµÄÕäÊŞ#B" .. strItemName .. "#WÄãÏÖÔÚÓĞÂğ£¿")
+				AddText(sceneId, "æˆ‘è¦çš„çå…½#B" .. strItemName .. "#Wä½ ç°åœ¨æœ‰å—ï¼Ÿ")
 			EndEvent( )
 			local bDone = x229022_CheckSubmit( sceneId, selfId )
 			DispatchMissionDemandInfo(sceneId, selfId, targetId, x229022_g_scriptId, x229022_g_MissionId, bDone,x229022_g_scriptId)
 		elseif missionType == x229022_g_SubMissionType.fubenjiaoxun then
-			--Èç¹ûÒÑ¾­Íê³ÉÁË½ÌÑµµÄÈÎÎñ
+			--å¦‚æœå·²ç»å®Œæˆäº†æ•™è®­çš„ä»»åŠ¡
 			if x229022_CheckSubmit( sceneId, selfId ) > 0 then
 				BeginEvent(sceneId)
 					AddText(sceneId, x229022_g_MissionName)
-					AddText(sceneId, "¹ûÈ»ÎäÒÕ¸ßÇ¿£¬ÎÒÔÙ²»¸ÒÎª¶ñÁË£¬µ«ÎÒ»¹ÓĞµãÊÂĞèÒªÄã°ïÃ¦¡£")
+					AddText(sceneId, "æœç„¶æ­¦è‰ºé«˜å¼ºï¼Œæˆ‘å†ä¸æ•¢ä¸ºæ¶äº†ï¼Œä½†æˆ‘è¿˜æœ‰ç‚¹äº‹éœ€è¦ä½ å¸®å¿™ã€‚")
 				EndEvent( )
 				DispatchMissionContinueInfo(sceneId, selfId, targetId, x229022_g_scriptId, x229022_g_MissionId, x229022_g_scriptId)
 			else
-				--Íæ¼ÒÈç¹û²»ÊÇ¶Ó³¤£¬²»»á´´½¨¸±±¾
+				--ç©å®¶å¦‚æœä¸æ˜¯é˜Ÿé•¿ï¼Œä¸ä¼šåˆ›å»ºå‰¯æœ¬
 				--local teamLeaderID = GetTeamLeader(sceneId, selfId)
 				--local nearmembercount = GetNearTeamCount(sceneId, selfId)
-				--if teamLeaderID ~= selfId or nearmembercount < 2 then --°üÀ¨Íæ¼Ò×Ô¼ºÔÚÄÚ
+				--if teamLeaderID ~= selfId or nearmembercount < 2 then --åŒ…æ‹¬ç©å®¶è‡ªå·±åœ¨å†…
 				--	BeginEvent(sceneId)
-				--		AddText(sceneId, "Æ¾Äãµ¥Ç¹Æ¥Âí£¬Ò²ÏëÀ´ÕÒÎÒ£¬»¹ÊÇÕĞĞ©°ïÊÖÔÙÀ´°É¡£\n")
+				--		AddText(sceneId, "å‡­ä½ å•æªåŒ¹é©¬ï¼Œä¹Ÿæƒ³æ¥æ‰¾æˆ‘ï¼Œè¿˜æ˜¯æ‹›äº›å¸®æ‰‹å†æ¥å§ã€‚\n")
 				--	EndEvent()
 				--	DispatchEventList(sceneId, selfId, targetId)
 				--else
 					local str
 					local ret = random(3)
 					if ret == 1 then
-						str = "¾ÍÆ¾ÄãÒ²Ïë½ÌÑµÓÚÎÒ£¬ÏëºÍÎÒ¶¯ÊÖ£¬ÏÈºÍÎÒÏÂÊôÃÇ´ò´ò£¬¿´¿´ÄãµÄ½ïÁ½¡£\n"
+						str = "å°±å‡­ä½ ä¹Ÿæƒ³æ•™è®­äºæˆ‘ï¼Œæƒ³å’Œæˆ‘åŠ¨æ‰‹ï¼Œå…ˆå’Œæˆ‘ä¸‹å±ä»¬æ‰“æ‰“ï¼Œçœ‹çœ‹ä½ çš„æ–¤ä¸¤ã€‚\n"
 					elseif ret ==  2 then
-						str = "¾ÍÆ¾ÄãÒ²Ïë½ÌÑµÓÚÎÒ£¬À´°¡£¬¸øËûµãÀ÷º¦¿´¿´¡£\n"
+						str = "å°±å‡­ä½ ä¹Ÿæƒ³æ•™è®­äºæˆ‘ï¼Œæ¥å•Šï¼Œç»™ä»–ç‚¹å‰å®³çœ‹çœ‹ã€‚\n"
 				        else
-						str = "¶à¹ÜÏĞÊÂ£¬ÈÃÄãÖªµÀÎÒµÄÀ÷º¦£¡¸øÎÒ¿³¡£\n"
+						str = "å¤šç®¡é—²äº‹ï¼Œè®©ä½ çŸ¥é“æˆ‘çš„å‰å®³ï¼ç»™æˆ‘ç ã€‚\n"
 					end
 
 					BeginEvent(sceneId)
@@ -913,14 +913,14 @@ function x229022_UpdateEventList( sceneId, selfId,targetId )
 					if nearmembercount <= 0 then
 						nearmembercount = 1
 					end
-					SetMissionParamByIndexEx(sceneId, selfId, misIndex, 3, 0, nearmembercount) --ÌáÇ°ÉèÖÃ¸ÃÈÎÎñÒªÇóÉ±ËÀµÄmonsterÊıÁ¿
-					--µ÷ÓÃ´´½¨¸±±¾Èë¿Úº¯Êı
+					SetMissionParamByIndexEx(sceneId, selfId, misIndex, 3, 0, nearmembercount) --æå‰è®¾ç½®è¯¥ä»»åŠ¡è¦æ±‚æ€æ­»çš„monsteræ•°é‡
+					--è°ƒç”¨åˆ›å»ºå‰¯æœ¬å…¥å£å‡½æ•°
 					CallScriptFunction(229023 , "MakeCopyScene", sceneId, selfId, nearmembercount)
 				--end
 			end
 		end
 
-	--Ö»ÓĞÔÚÍõ·òÈËÕâ¶şµÚÒ»´Î½ÓÈÎÎñÊÇ²Å½øĞĞÌõ¼şÅĞ¶Ï
+	--åªæœ‰åœ¨ç‹å¤«äººè¿™äºŒç¬¬ä¸€æ¬¡æ¥ä»»åŠ¡æ˜¯æ‰è¿›è¡Œæ¡ä»¶åˆ¤æ–­
   elseif GetName(sceneId, targetId) == x229022_g_Name then
  		--PrintStr(GetName(sceneId, targetId))
 		--PrintStr(x229022_g_Name)
@@ -931,7 +931,7 @@ function x229022_UpdateEventList( sceneId, selfId,targetId )
 				UICommand_AddInt(sceneId,targetId);
 				UICommand_AddInt(sceneId,costMoney)
 				UICommand_AddString(sceneId,"CostMoneyFn");
-				UICommand_AddString(sceneId,"Òª½ÓÈ¡´ËÈÎÎñ£¬ĞèÒªÒ»´Î½»ÄÉ#{_EXCHG" .. tostring(costMoney) .. "}£¬ÄãÈ·ÈÏÂğ£¿");  --dengxx
+				UICommand_AddString(sceneId,"è¦æ¥å–æ­¤ä»»åŠ¡ï¼Œéœ€è¦ä¸€æ¬¡äº¤çº³#{_EXCHG" .. tostring(costMoney) .. "}ï¼Œä½ ç¡®è®¤å—ï¼Ÿ");  --dengxx
 			EndUICommand(sceneId)
 			DispatchUICommand(sceneId,selfId, 24)
 			return
@@ -944,7 +944,7 @@ function x229022_UpdateEventList( sceneId, selfId,targetId )
 end
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x229022_OnDefaultEvent( sceneId, selfId,targetId )
 	--PrintStr("OnDefaultEvent...")
@@ -952,7 +952,7 @@ function x229022_OnDefaultEvent( sceneId, selfId,targetId )
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x229022_OnEnumerate( sceneId, selfId, targetId )
 	--local f = openfile("D:/randomtest.txt", 'w')
@@ -963,17 +963,17 @@ function x229022_OnEnumerate( sceneId, selfId, targetId )
 	--closefile(f)
 
 
-	--ÔİÊ±ÆÁ±ÎÁ¬»·ÈÎÎñ
+	--æš‚æ—¶å±è”½è¿ç¯ä»»åŠ¡
 	--if 1==1 then
 	--	return
 	--end
-	--Èç¹ûÍæ¼ÒÍê³É¹ıÕâ¸öÈÎÎñ
+	--å¦‚æœç©å®¶å®Œæˆè¿‡è¿™ä¸ªä»»åŠ¡
 		if IsMissionHaveDone(sceneId,selfId,x229022_g_MissionId) > 0 then
     	return
-	--Âú×ãÈÎÎñ½ÓÊÕÌõ¼ş
+	--æ»¡è¶³ä»»åŠ¡æ¥æ”¶æ¡ä»¶
 		elseif IsHaveMission(sceneId,selfId,x229022_g_MissionId) > 0 then
 			local misIndex = GetMissionIndexByID(sceneId,selfId,x229022_g_MissionId)
-			--Èç¹ûÊÇË÷È¡ÎïÆ·ÔòÏÔÊ¾ÓÃÉÆ¶ñÖµ¿ÉÒÔ»»È¡ÈÎÎñÎïÆ·
+			--å¦‚æœæ˜¯ç´¢å–ç‰©å“åˆ™æ˜¾ç¤ºç”¨å–„æ¶å€¼å¯ä»¥æ¢å–ä»»åŠ¡ç‰©å“
 			if GetMissionParam(sceneId,selfId,misIndex,1) == x229022_g_SubMissionType.suoqu then
 				AddNumText(sceneId, x229022_g_scriptId,x229022_g_GoodBadDescTable[1].str,1,1);
 			end
@@ -983,16 +983,16 @@ function x229022_OnEnumerate( sceneId, selfId, targetId )
 			--	AddNumText(sceneId, x229022_g_scriptId,x229022_g_MissionName,2,-1);
 			--end
 			if GetName(sceneId,targetId) == x229022_g_Name then
-				--Èç¹ûÒÑ¾­´æ´¢ÁËÁ¬»·ÈÎÎñ,ÔòÏÔÊ¾¼ÌĞø¸ÃÈÎÎñ
+				--å¦‚æœå·²ç»å­˜å‚¨äº†è¿ç¯ä»»åŠ¡,åˆ™æ˜¾ç¤ºç»§ç»­è¯¥ä»»åŠ¡
 				if GetMissionParam(sceneId,selfId,misIndex, 2) == 1 then
 					AddNumText(sceneId, x229022_g_scriptId,x229022_g_GoodBadDescTable[3].str,1,3);
 				else
 					AddNumText(sceneId, x229022_g_scriptId,x229022_g_GoodBadDescTable[2].str,1,2);
 				end
 			end
-	--Âú×ãÈÎÎñ½ÓÊÕÌõ¼ş
+	--æ»¡è¶³ä»»åŠ¡æ¥æ”¶æ¡ä»¶
     elseif GetName(sceneId,targetId) == x229022_g_Name then
-   		--Íæ¼ÒµÈ¼¶>=60¼¶
+   		--ç©å®¶ç­‰çº§>=60çº§
 			if GetLevel(sceneId, selfId) >= 60 then
 				AddNumText(sceneId,x229022_g_scriptId, x229022_g_MissionName, 1, -1);
 			end
@@ -1000,7 +1000,7 @@ function x229022_OnEnumerate( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x229022_CheckAccept( sceneId, selfId )
 	--test begin
@@ -1010,15 +1010,15 @@ function x229022_CheckAccept( sceneId, selfId )
 	--test end
 	local nLevel = LuaFnGetLevel(sceneId, selfId)
 
-	--Íæ¼Òµ±´Î½ÓÁ¬»·ÈÎÎñÊ±¼äÓëÉÏ´ÎÍê³ÉÁ¬»·ÈÎÎñÊ±¼äÖ®Ê±¼ä²î>48Ğ¡Ê±
+	--ç©å®¶å½“æ¬¡æ¥è¿ç¯ä»»åŠ¡æ—¶é—´ä¸ä¸Šæ¬¡å®Œæˆè¿ç¯ä»»åŠ¡æ—¶é—´ä¹‹æ—¶é—´å·®>48å°æ—¶
 	local iDayCount=GetMissionData(sceneId,selfId,MD_RENWULIAN_DAYCOUNT)
 
-	--µÃµ½»·Êı
+	--å¾—åˆ°ç¯æ•°
 	local round = GetMissionData(sceneId,selfId,MD_RENWULIAN_HUAN)
 	if round < 50 then
 		if (LuaFnGetCurrentTime()-iDayCount) < 15*60 then
 			BeginEvent(sceneId)
-				AddText(sceneId, "Á½´ÎÁ¬»·ÈÎÎñ¼ä¸ôÊÇ15·ÖÖÓ£¬»¹ÊÇÉÔ°²ÎğÔê°É¡£")
+				AddText(sceneId, "ä¸¤æ¬¡è¿ç¯ä»»åŠ¡é—´éš”æ˜¯15åˆ†é’Ÿï¼Œè¿˜æ˜¯ç¨å®‰å‹¿èºå§ã€‚")
 			EndEvent()
 			DispatchEventList(sceneId,selfId,-1)
 			return 0
@@ -1026,7 +1026,7 @@ function x229022_CheckAccept( sceneId, selfId )
 	elseif round == 100 then
 		if (LuaFnGetCurrentTime()-iDayCount) < 48*60*60 then
 			BeginEvent(sceneId)
-				AddText(sceneId, "Á½´ÎÁ¬»·ÈÎÎñ¼ä¸ôÊÇ48Ğ¡Ê±£¬»¹ÊÇÉÔ°²ÎğÔê°É¡£")
+				AddText(sceneId, "ä¸¤æ¬¡è¿ç¯ä»»åŠ¡é—´éš”æ˜¯48å°æ—¶ï¼Œè¿˜æ˜¯ç¨å®‰å‹¿èºå§ã€‚")
 			EndEvent()
 			DispatchEventList(sceneId,selfId,-1)
 			return 0
@@ -1039,17 +1039,17 @@ function x229022_CheckAccept( sceneId, selfId )
 		--PrintNum( ((CurDaytime*96 + CurQuarterTime) - (iDayTime*96 + iQuarterTime)) )
 		if (LuaFnGetCurrentTime()-iDayCount) < 24*60*60 then
 			BeginEvent(sceneId)
-				AddText(sceneId, "Á½´ÎÁ¬»·ÈÎÎñ¼ä¸ôÊÇ24Ğ¡Ê±£¬»¹ÊÇÉÔ°²ÎğÔê°É¡£")
+				AddText(sceneId, "ä¸¤æ¬¡è¿ç¯ä»»åŠ¡é—´éš”æ˜¯24å°æ—¶ï¼Œè¿˜æ˜¯ç¨å®‰å‹¿èºå§ã€‚")
 			EndEvent()
 			DispatchEventList(sceneId,selfId,-1)
 			return 0
 		end
 	end
 
-	--Íæ¼ÒµÄĞ¯´ø¾­Ñé¡ÙÍæ¼Ò¿ÉĞ¯´ø¾­ÑéÉÏÏŞ(ÄãĞ¯´øµÄ¾­ÑéÒÑ´ïÉÏÏŞ£¬ÓÃĞ©ÔÙÀ´ÕÒÎÒ°É)
+	--ç©å®¶çš„æºå¸¦ç»éªŒâ‰ ç©å®¶å¯æºå¸¦ç»éªŒä¸Šé™(ä½ æºå¸¦çš„ç»éªŒå·²è¾¾ä¸Šé™ï¼Œç”¨äº›å†æ¥æ‰¾æˆ‘å§)
 	if GetExp(sceneId, selfId)>= GetFullExp(sceneId, selfId) then
 		BeginEvent(sceneId)
-			AddText(sceneId, "ÄãĞ¯´øµÄ¾­ÑéÒÑ´ïÉÏÏŞ£¬ÓÃĞ©ÔÙÀ´ÕÒÎÒ°É¡£")
+			AddText(sceneId, "ä½ æºå¸¦çš„ç»éªŒå·²è¾¾ä¸Šé™ï¼Œç”¨äº›å†æ¥æ‰¾æˆ‘å§ã€‚")
 		EndEvent()
 		DispatchEventList(sceneId,selfId,-1)
 		return 0
@@ -1058,14 +1058,14 @@ function x229022_CheckAccept( sceneId, selfId )
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x229022_OnAccept_Necessary( sceneId, selfId, targetId )
 
-	--µÃµ½»·Êı
+	--å¾—åˆ°ç¯æ•°
 	local round = GetMissionData(sceneId,selfId,MD_RENWULIAN_HUAN)
 	if 0 == round and GetName(sceneId, targetId) == x229022_g_Name then
-		--»¨·Ñ¼ÆËã:Ö»ÓĞµÚÒ»´Î½Ó£¬·ÅÆúÖØĞÂ½Ó£¬Ê±¼äµ½ÈÎÎñ×Ô¶¯É¾³ı²Å»áÊÕ·Ñ£¬Ò²¾ÍÊÇ»·Êı=0Ê±
+		--èŠ±è´¹è®¡ç®—:åªæœ‰ç¬¬ä¸€æ¬¡æ¥ï¼Œæ”¾å¼ƒé‡æ–°æ¥ï¼Œæ—¶é—´åˆ°ä»»åŠ¡è‡ªåŠ¨åˆ é™¤æ‰ä¼šæ”¶è´¹ï¼Œä¹Ÿå°±æ˜¯ç¯æ•°=0æ—¶
 		--CostMoney(sceneId, selfId, GetLevel(sceneId, selfId)*1000)             
 		LuaFnCostMoneyWithPriority(sceneId, selfId, GetLevel(sceneId, selfId)*1000)
 	end
@@ -1074,7 +1074,7 @@ function x229022_OnAccept_Necessary( sceneId, selfId, targetId )
 	if round > 100 then
 		round = 1
 	end
-	--»·ÊıÔö¼Ó1
+	--ç¯æ•°å¢åŠ 1
 
 	SetMissionData(sceneId, selfId, MD_RENWULIAN_HUAN, round)
 	--test code {
@@ -1082,35 +1082,35 @@ function x229022_OnAccept_Necessary( sceneId, selfId, targetId )
 	--local round = GetMissionData(sceneId,selfId,MD_RENWULIAN_HUAN)
 	-- }
 
-	--Æô¶¯ÈÎÎñÊ±ÖÓ
+	--å¯åŠ¨ä»»åŠ¡æ—¶é’Ÿ
 	StartMissionTimer(sceneId, selfId, x229022_g_MissionId)
 
 	local misIndex = GetMissionIndexByID(sceneId,selfId,x229022_g_MissionId)
 
-	SetMissionByIndex(sceneId, selfId, misIndex, 7, 30*60*1000) --ÉèÖÃÈÎÎñµÄÏŞÖÆÊ±¼äÎª30·ÖÖÓ
+	SetMissionByIndex(sceneId, selfId, misIndex, 7, 30*60*1000) --è®¾ç½®ä»»åŠ¡çš„é™åˆ¶æ—¶é—´ä¸º30åˆ†é’Ÿ
 
 	SetMissionData(sceneId, selfId, MD_RENWULIAN_ACCPETTIME, LuaFnGetCurrentTime())
 
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x229022_OnAbandon( sceneId, selfId )
 	local misIndex = GetMissionIndexByID(sceneId,selfId,x229022_g_MissionId)
-	--Í£Ö¹ÈÎÎñÊ±ÖÓ
+	--åœæ­¢ä»»åŠ¡æ—¶é’Ÿ
 	StopMissionTimer(sceneId, selfId, x229022_g_MissionId)
-	--É¾³ıÍæ¼ÒÈÎÎñÁĞ±íÖĞ¶ÔÓ¦µÄÈÎÎñ
+	--åˆ é™¤ç©å®¶ä»»åŠ¡åˆ—è¡¨ä¸­å¯¹åº”çš„ä»»åŠ¡
   DelMission( sceneId, selfId, x229022_g_MissionId )
 
-	--ÉèÖÃÑ­»·ÈÎÎñµÄÊ±¼ä
+	--è®¾ç½®å¾ªç¯ä»»åŠ¡çš„æ—¶é—´
 	SetMissionData(sceneId,selfId,MD_RENWULIAN_DAYCOUNT,LuaFnGetCurrentTime())
 	SetMissionData(sceneId, selfId, MD_RENWULIAN_HUAN, 0)
 
 end
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x229022_OnContinue( sceneId, selfId, targetId )
 	BeginEvent(sceneId)
@@ -1120,13 +1120,13 @@ function x229022_OnContinue( sceneId, selfId, targetId )
 		local misIndex = GetMissionIndexByID(sceneId,selfId,x229022_g_MissionId)
 		local missionType = GetMissionParam(sceneId, selfId, misIndex, 1)
 		if missionType == x229022_g_SubMissionType.wenhou then
-			str = "Ğ»Ğ»Äã´øÀ´¿ÚÑ¶£¬ÉõºÃÉõºÃ¡£"
+			str = "è°¢è°¢ä½ å¸¦æ¥å£è®¯ï¼Œç”šå¥½ç”šå¥½ã€‚"
 		elseif missionType == x229022_g_SubMissionType.suoqu
 			or missionType == x229022_g_SubMissionType.chongwu then
-			str = "°¡£¬ÕæÊÇĞ»Ğ»Äã£¬ÎÒ»¹ÓĞµãÊÂĞèÒªÄã°ïÃ¦¡£"
+			str = "å•Šï¼ŒçœŸæ˜¯è°¢è°¢ä½ ï¼Œæˆ‘è¿˜æœ‰ç‚¹äº‹éœ€è¦ä½ å¸®å¿™ã€‚"
 		elseif missionType == x229022_g_SubMissionType.fubenjiaoxun
 			or missionType == x229022_g_SubMissionType.fubenduowu then
-			str = "¹ûÈ»ÎäÒÕ¸ßÇ¿£¬ÎÒÔÙ²»¸ÒÎª¶ñÁË£¬µ«ÎÒ»¹ÓĞµãÊÂĞèÒªÄã°ïÃ¦¡£"
+			str = "æœç„¶æ­¦è‰ºé«˜å¼ºï¼Œæˆ‘å†ä¸æ•¢ä¸ºæ¶äº†ï¼Œä½†æˆ‘è¿˜æœ‰ç‚¹äº‹éœ€è¦ä½ å¸®å¿™ã€‚"
 		end
 
 		AddText(sceneId,str)
@@ -1136,18 +1136,18 @@ function x229022_OnContinue( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x229022_CheckSubmit( sceneId, selfId )
   if IsHaveMission( sceneId, selfId, x229022_g_MissionId ) <= 0 then
 		return 0
 	end
 
-	--ÔÚ´ËÅĞ¶ÏÌá½»Ìõ¼şÊÇ·ñ·ûºÏ£¬²¢¸øÓèÏàÓ¦½±Àø
+	--åœ¨æ­¤åˆ¤æ–­æäº¤æ¡ä»¶æ˜¯å¦ç¬¦åˆï¼Œå¹¶ç»™äºˆç›¸åº”å¥–åŠ±
 	local misIndex = GetMissionIndexByID(sceneId,selfId,x229022_g_MissionId)
 	local missionType = GetMissionParam(sceneId, selfId, misIndex, 1)
 
-	--²ì¿´ÈÎÎñÊÇ·ñÍê³É
+	--å¯Ÿçœ‹ä»»åŠ¡æ˜¯å¦å®Œæˆ
 	local bCompletion = GetMissionParam(sceneId, selfId, misIndex, 0)
 	--PrintNum(bCompletion)
 	if bCompletion > 0 then
@@ -1155,7 +1155,7 @@ function x229022_CheckSubmit( sceneId, selfId )
 			return 1
 		elseif missionType == x229022_g_SubMissionType.chongwu then
 			local demandPetId = GetMissionParam(sceneId, selfId, misIndex, x229022_g_StrForePart+1)
-			--¼ì²âÍæ¼ÒÉíÉÏµÄµÀ¾ßÊÇ·ñÒÑ¾­Âú×ãÍê³ÉÌõ¼ş
+			--æ£€æµ‹ç©å®¶èº«ä¸Šçš„é“å…·æ˜¯å¦å·²ç»æ»¡è¶³å®Œæˆæ¡ä»¶
 			for i=0, 6 do
 				local petDataId = LuaFnGetPet_DataID(sceneId,selfId,i)
 				if petDataId ~= nil and petDataId >= 0 then
@@ -1175,14 +1175,14 @@ function x229022_CheckSubmit( sceneId, selfId )
 					end
 				else
 					BeginEvent(sceneId)
-						AddText(sceneId, "ÄúµÄÎïÆ·ÏÖÔÚ²»¿ÉÓÃ»òÒÑ±»Ëø¶¨¡£")
+						AddText(sceneId, "æ‚¨çš„ç‰©å“ç°åœ¨ä¸å¯ç”¨æˆ–å·²è¢«é”å®šã€‚")
 					EndEvent( )
 					DispatchMissionTips(sceneId,selfId)
 					return 0
 				end
 			else
 				BeginEvent(sceneId)
-					AddText(sceneId, "È±ÉÙÈÎÎñË÷ÒªµÄÎïÆ·")
+					AddText(sceneId, "ç¼ºå°‘ä»»åŠ¡ç´¢è¦çš„ç‰©å“")
 				EndEvent()
 				DispatchMissionTips(sceneId, selfId)
 				return 0
@@ -1195,7 +1195,7 @@ function x229022_CheckSubmit( sceneId, selfId )
 end
 
 --////////////////////////////////////////////////////////////////
---Ğ§ÂÊ¿ÉÔÚC++ÖĞÓÅ»¯£¬ÔİÊ±ÕâÑù£¬¿´Ğ§¹ûÔÚ¶¨
+--æ•ˆç‡å¯åœ¨C++ä¸­ä¼˜åŒ–ï¼Œæš‚æ—¶è¿™æ ·ï¼Œçœ‹æ•ˆæœåœ¨å®š
 --////////////////////////////////////////////////////////////////
 --function GetMissinonItemByCurrentHuan(playerLevel, round)
 --	if round == 50 then
@@ -1219,17 +1219,17 @@ end
 --			end
 --		end
 --	else
---		PrintStr("round=" .. round .. "·Ç·¨£¡")
+--		PrintStr("round=" .. round .. "éæ³•ï¼")
 --	end
 --end
 
 --**********************************
---ÈÎÎñ½±Àøº¯Êı
+--ä»»åŠ¡å¥–åŠ±å‡½æ•°
 --**********************************
 function x229022_MissionBonus(sceneId, selfId)
 	local playerLevel = GetLevel(sceneId, selfId)
 	local round = GetMissionData(sceneId,selfId,MD_RENWULIAN_HUAN)
-	--µ±Íæ¼Ò50»·£¬¸ù¾İÍæ¼ÒµÈ¼¶£¨Í¬µÈ¼¶£©Ëæ»ú¸øÓèÍæ¼ÒÎäÆ÷ÖÆ×÷±ØĞëÔ­ÁÏÒ»¼ş£¨¸øÓè100%£©¡£
+	--å½“ç©å®¶50ç¯ï¼Œæ ¹æ®ç©å®¶ç­‰çº§ï¼ˆåŒç­‰çº§ï¼‰éšæœºç»™äºˆç©å®¶æ­¦å™¨åˆ¶ä½œå¿…é¡»åŸæ–™ä¸€ä»¶ï¼ˆç»™äºˆ100%ï¼‰ã€‚
 	if round == 50 then
 		local itemId, itemName = GetRenwulianMissionBonusItemByLevel(x229022_g_RenwulianItem50_Index, playerLevel)
 		BeginAddItem(sceneId)
@@ -1237,40 +1237,40 @@ function x229022_MissionBonus(sceneId, selfId)
 		if EndAddItem(sceneId,selfId) > 0 then
 			AddItemListToHuman(sceneId,selfId)
 			local szItemTransfer = GetItemTransfer(sceneId,selfId,0)
-			Msg2Player(sceneId, selfId, "Äã»ñµÃÁËÒ»¸ö" .. itemName, MSG2PLAYER_PARA )
-			local str = "#W#{_INFOUSR" .. LuaFnGetName(sceneId, selfId) .. "}#I¾­¹ı²»Ğ¸Å¬Á¦Íê³ÉÁË#RÍõ·òÈË#IµÄÁ¬»·ÈÎÎñÖ®50»·£¬»ñµÃ#W#{_INFOMSG" .. szItemTransfer .. "}#I½±Àø¡£"
+			Msg2Player(sceneId, selfId, "ä½ è·å¾—äº†ä¸€ä¸ª" .. itemName, MSG2PLAYER_PARA )
+			local str = "#W#{_INFOUSR" .. LuaFnGetName(sceneId, selfId) .. "}#Iç»è¿‡ä¸æ‡ˆåŠªåŠ›å®Œæˆäº†#Rç‹å¤«äºº#Içš„è¿ç¯ä»»åŠ¡ä¹‹50ç¯ï¼Œè·å¾—#W#{_INFOMSG" .. szItemTransfer .. "}#Iå¥–åŠ±ã€‚"
 			BroadMsgByChatPipe(sceneId, selfId, str, 4)
 		else
 			BeginEvent(sceneId)
-				AddText(sceneId, "ÄãµÄ±³°üÒÑÂú£¡")
+				AddText(sceneId, "ä½ çš„èƒŒåŒ…å·²æ»¡ï¼")
 			EndEvent()
 			DispatchMissionTips(sceneId, selfId)
 			return 0
 		end
-	--µ±Íæ¼ÒÂú100»·£¬¸ù¾İÍæ¼ÒµÈ¼¶£¨Í¬µÈ¼¶+10£©Ëæ»ú¸øÓèÍæ¼ÒÎäÆ÷ÖÆ×÷±ØĞëÔ­ÁÏ£¨ÎäÆ÷[×°±¸]ÖÆ×÷Êé£©Ò»¼ş£¨¸øÓè100%£©¡£
+	--å½“ç©å®¶æ»¡100ç¯ï¼Œæ ¹æ®ç©å®¶ç­‰çº§ï¼ˆåŒç­‰çº§+10ï¼‰éšæœºç»™äºˆç©å®¶æ­¦å™¨åˆ¶ä½œå¿…é¡»åŸæ–™ï¼ˆæ­¦å™¨[è£…å¤‡]åˆ¶ä½œä¹¦ï¼‰ä¸€ä»¶ï¼ˆç»™äºˆ100%ï¼‰ã€‚
 	elseif round == 100 then
 
 		local itemId, itemName, itemDesc, broadcastType = GetOneMissionBonusItem(x229022_g_RenwulianItem100_Index)
 		local szItemTransfer = ""
 		BeginAddItem(sceneId)
 			AddItem(sceneId,itemId, 1)
-			AddItem(sceneId, 30008034, 1) --½±ÀøÒ»¿Å½ğ¸ÕÉ°
+			AddItem(sceneId, 30008034, 1) --å¥–åŠ±ä¸€é¢—é‡‘åˆšç ‚
 		if EndAddItem(sceneId,selfId) > 0 then
 			AddItemListToHuman(sceneId,selfId)
 			
 			szItemTransfer_0 = GetItemTransfer(sceneId, selfId, 0)
 			szItemTransfer_1 = GetItemTransfer(sceneId, selfId, 1)
 			
-			Msg2Player(sceneId, selfId, "Äã»ñµÃÁËÒ»¸ö" .. itemName, MSG2PLAYER_PARA )
-			Msg2Player(sceneId, selfId, "Äã»ñµÃÁËÒ»¿Å½ğ¸ÕÉ°", MSG2PLAYER_PARA )
+			Msg2Player(sceneId, selfId, "ä½ è·å¾—äº†ä¸€ä¸ª" .. itemName, MSG2PLAYER_PARA )
+			Msg2Player(sceneId, selfId, "ä½ è·å¾—äº†ä¸€é¢—é‡‘åˆšç ‚", MSG2PLAYER_PARA )
 			
 			local targetStr = "#{_INFOMSG".. szItemTransfer_0 .."}"
-			targetStr = targetStr .. "ºÍÒ»¿Å#{_INFOMSG" .. szItemTransfer_1 .. "}"
-			local str = "#W#{_INFOUSR"..LuaFnGetName(sceneId, selfId) .. "}#I¾­¹ı²»Ğ¸Å¬Á¦Íê³ÉÁË#RÍõ·òÈË#IµÄÁ¬»·ÈÎÎñÖ®100»·£¬»ñµÃ#W" .. targetStr .. "#I½±Àø¡£"
+			targetStr = targetStr .. "å’Œä¸€é¢—#{_INFOMSG" .. szItemTransfer_1 .. "}"
+			local str = "#W#{_INFOUSR"..LuaFnGetName(sceneId, selfId) .. "}#Iç»è¿‡ä¸æ‡ˆåŠªåŠ›å®Œæˆäº†#Rç‹å¤«äºº#Içš„è¿ç¯ä»»åŠ¡ä¹‹100ç¯ï¼Œè·å¾—#W" .. targetStr .. "#Iå¥–åŠ±ã€‚"
 			BroadMsgByChatPipe(sceneId, selfId, str, 4)
 		else
 			BeginEvent(sceneId)
-				AddText(sceneId, "ÄãµÄ±³°üÒÑÂú£¡")
+				AddText(sceneId, "ä½ çš„èƒŒåŒ…å·²æ»¡ï¼")
 			EndEvent()
 			DispatchMissionTips(sceneId, selfId)
 			return 0
@@ -1279,16 +1279,16 @@ function x229022_MissionBonus(sceneId, selfId)
 
 	local expDelta = GetFullExp(sceneId, selfId) - GetExp(sceneId, selfId)
 	if expDelta == 0 then
-		Msg2Player(  sceneId, selfId, "ÄãËùĞ¯´øµÄ¾­ÑéÒÑÂú£¬ ²»ÄÜ»ñµÃ¾­ÑéÁË¡£", MSG2PLAYER_PARA )
+		Msg2Player(  sceneId, selfId, "ä½ æ‰€æºå¸¦çš„ç»éªŒå·²æ»¡ï¼Œ ä¸èƒ½è·å¾—ç»éªŒäº†ã€‚", MSG2PLAYER_PARA )
 		return 1
 	end
-	--¾­Ñé½±Àø = Íæ¼Òµ±Ç°µÈ¼¶½±Àø»ùÊı*»·Êı¼Ó³É
+	--ç»éªŒå¥–åŠ± = ç©å®¶å½“å‰ç­‰çº§å¥–åŠ±åŸºæ•°*ç¯æ•°åŠ æˆ
 	--local A, B, C = 5, 1, 20*60
 	--local D, E = 0.06, 4
 	local playerLevel = GetLevel(sceneId, selfId)
-	----Íæ¼Òµ±Ç°µÈ¼¶½±Àø»ùÊı =£¨A+£¨Íæ¼ÒµÈ¼¶-1£©*B£©*C £»A=5£¬B=1£¬C£¨Ã¿»·Æ½¾ùÊ±¼ä£©=20*60£¨¿ÉÄÜµ÷Õû£©
+	----ç©å®¶å½“å‰ç­‰çº§å¥–åŠ±åŸºæ•° =ï¼ˆA+ï¼ˆç©å®¶ç­‰çº§-1ï¼‰*Bï¼‰*C ï¼›A=5ï¼ŒB=1ï¼ŒCï¼ˆæ¯ç¯å¹³å‡æ—¶é—´ï¼‰=20*60ï¼ˆå¯èƒ½è°ƒæ•´ï¼‰
 	--local BaseBonusValue = (A + (playerLevel-1)*B)*C
-	----»·Êı¼Ó³É =D*£¨µ±Ç°»·Êı-1£©+1+FLOOR£¨£¨µ±Ç°»·Êı-1£©/10£©*£¨£¨E-1-99*D£©/9£© £»D=0.06£¬E£¨100»·¼Ó³ÉÂÊ£©=4£¨¿ÉÄÜµ÷Õû£©
+	----ç¯æ•°åŠ æˆ =D*ï¼ˆå½“å‰ç¯æ•°-1ï¼‰+1+FLOORï¼ˆï¼ˆå½“å‰ç¯æ•°-1ï¼‰/10ï¼‰*ï¼ˆï¼ˆE-1-99*Dï¼‰/9ï¼‰ ï¼›D=0.06ï¼ŒEï¼ˆ100ç¯åŠ æˆç‡ï¼‰=4ï¼ˆå¯èƒ½è°ƒæ•´ï¼‰
 	--local RoundRefix = D*(round-1) + 1 + floor((round-1) / 10)*((E-1-99*D) / 9)
   local BaseBonusValue = 0
   local RoundRefix = 0
@@ -1307,14 +1307,14 @@ function x229022_MissionBonus(sceneId, selfId)
   	end
   end
 
-	--Ôö¼ÓÍæ¼Ò¾­Ñé
+	--å¢åŠ ç©å®¶ç»éªŒ
 	local exp = BaseBonusValue * RoundRefix
 	if exp > expDelta then
 		AddExp(sceneId, selfId, expDelta)
 	else
 		AddExp(sceneId, selfId, exp)
 	end
-	--Msg2Player(  sceneId, selfId, "ÄãµÃµ½ÁË" .. tostring(exp) .. "µãµÄ¾­Ñé½±Àø¡£", MSG2PLAYER_PARA )
+	--Msg2Player(  sceneId, selfId, "ä½ å¾—åˆ°äº†" .. tostring(exp) .. "ç‚¹çš„ç»éªŒå¥–åŠ±ã€‚", MSG2PLAYER_PARA )
 
 	return 1
 end
@@ -1345,25 +1345,25 @@ function x229022_GetExpBonus(sceneId, selfId)
 end
 
 --*******************************************************
---Ìá½»ÈÎÎñµÄ¹«¹²¼ì²âº¯Êı
+--æäº¤ä»»åŠ¡çš„å…¬å…±æ£€æµ‹å‡½æ•°
 --*******************************************************
 function x229022_MissionOnSubmit_Necessary(sceneId, selfId, targetId)
-	--µÃµ½»·Êı
+	--å¾—åˆ°ç¯æ•°
 	local round = GetMissionData(sceneId,selfId,MD_RENWULIAN_HUAN)
 	if round >= 100 then
-		--ÉèÖÃÑ­»·ÈÎÎñµÄÊ±¼ä
+		--è®¾ç½®å¾ªç¯ä»»åŠ¡çš„æ—¶é—´
 		SetMissionData(sceneId,selfId,MD_RENWULIAN_DAYCOUNT,LuaFnGetCurrentTime())
 	end
-	--¼ÇÂ¼Í³¼ÆĞÅÏ¢
+	--è®°å½•ç»Ÿè®¡ä¿¡æ¯
 	LuaFnAuditMissionChain(sceneId,selfId,round)
 
-	Msg2Player(  sceneId, selfId, "ÄãÍê³ÉÁËÁ¬»·ÈÎÎñµÚ" .. tostring(round) .. "»·¡£", MSG2PLAYER_PARA )
+	Msg2Player(  sceneId, selfId, "ä½ å®Œæˆäº†è¿ç¯ä»»åŠ¡ç¬¬" .. tostring(round) .. "ç¯ã€‚", MSG2PLAYER_PARA )
 
-	--É¾³ı¸ÃÈÎÎñ
+	--åˆ é™¤è¯¥ä»»åŠ¡
 	DelMission(sceneId, selfId, x229022_g_MissionId)
 
 	if round < 100 then
-		--¼ÌĞø·¢ËÍÈÎÎñ
+		--ç»§ç»­å‘é€ä»»åŠ¡
 		if x229022_CheckAccept(sceneId,selfId) > 0 then
 			x229022_AddMissionDirectly(sceneId, selfId,targetId)
 		end
@@ -1371,7 +1371,7 @@ function x229022_MissionOnSubmit_Necessary(sceneId, selfId, targetId)
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x229022_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 	if x229022_CheckSubmit( sceneId, selfId ) > 0 then
@@ -1381,7 +1381,7 @@ function x229022_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 		if missionType == x229022_g_SubMissionType.wenhou then
 			bGoon = 1
 		elseif missionType == x229022_g_SubMissionType.chongwu then
-			--³èÎïµÄ·ÖÖ§²»ÔÚx229022_OnSubmit£¬¶øÊÇÔÚx229022_OnMissionCheck¡£
+			--å® ç‰©çš„åˆ†æ”¯ä¸åœ¨x229022_OnSubmitï¼Œè€Œæ˜¯åœ¨x229022_OnMissionCheckã€‚
 		elseif missionType == x229022_g_SubMissionType.suoqu then
 			local demandItemId = GetMissionParam(sceneId, selfId, misIndex, x229022_g_StrForePart+1)
 			if 1==DelItem(sceneId, selfId, demandItemId, 1) then
@@ -1391,7 +1391,7 @@ function x229022_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 			bGoon = 1
 		end
 		if bGoon == 1 then
-			--ÈÎÎñ½±Àø¼ÆËã
+			--ä»»åŠ¡å¥–åŠ±è®¡ç®—
 			if x229022_MissionBonus(sceneId, selfId) > 0 then
 				x229022_MissionOnSubmit_Necessary(sceneId, selfId, targetId)
 			end
@@ -1400,7 +1400,7 @@ function x229022_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 end
 
 --**********************************
---ÔÚÈÎÎñÌá½»Ê±µÄ¼ì²âº¯Êı
+--åœ¨ä»»åŠ¡æäº¤æ—¶çš„æ£€æµ‹å‡½æ•°
 --**********************************
 function x229022_My_MissionCheck_Necessary(sceneId, selfId, npcid, scriptId, index1, index2, index3, demandItemId)
 	--PrintStr("My_MissionCheck_Necessary...demandItemId=" .. demandItemId)
@@ -1408,7 +1408,7 @@ function x229022_My_MissionCheck_Necessary(sceneId, selfId, npcid, scriptId, ind
 	local _, strDemandItemName, _ = GetItemInfoByItemId(demandItemId)
 	if find < 0 then
 		BeginEvent(sceneId)
-			local strText = format("ÄãÔõÃ´Ã»°Ñ%sÄÃµ½ÊÖ¾Í»ØÀ´ÁËÄØ£¿", strDemandItemName)
+			local strText = format("ä½ æ€ä¹ˆæ²¡æŠŠ%sæ‹¿åˆ°æ‰‹å°±å›æ¥äº†å‘¢ï¼Ÿ", strDemandItemName)
 			AddText(sceneId,strText)
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,-1)
@@ -1418,20 +1418,20 @@ function x229022_My_MissionCheck_Necessary(sceneId, selfId, npcid, scriptId, ind
 	if LuaFnIsItemAvailable(sceneId, selfId, find) > 0 then
 		local ret = EraseItem( sceneId, selfId, find )
 		if	ret > 0 then
-			--ÈÎÎñ½±Àø¼ÆËã
+			--ä»»åŠ¡å¥–åŠ±è®¡ç®—
 			if x229022_MissionBonus(sceneId, selfId) == 1 then
 				x229022_MissionOnSubmit_Necessary(sceneId, selfId, npcid)
 			end
 		else
 			BeginEvent(sceneId)
-				local strText = format("ÄãÔõÃ´Ã»°Ñ%sÄÃµ½ÊÖ¾Í»ØÀ´ÁËÄØ£¿", strDemandItemName)
+				local strText = format("ä½ æ€ä¹ˆæ²¡æŠŠ%sæ‹¿åˆ°æ‰‹å°±å›æ¥äº†å‘¢ï¼Ÿ", strDemandItemName)
 				AddText(sceneId,strText)
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,-1)
 		end
 	else
 		BeginEvent(sceneId)
-			AddText(sceneId, "ÄúµÄÎïÆ·ÏÖÔÚ²»¿ÉÓÃ»òÒÑ±»Ëø¶¨¡£")
+			AddText(sceneId, "æ‚¨çš„ç‰©å“ç°åœ¨ä¸å¯ç”¨æˆ–å·²è¢«é”å®šã€‚")
 		EndEvent( )
 		DispatchMissionTips(sceneId,selfId)
 		return
@@ -1440,12 +1440,12 @@ function x229022_My_MissionCheck_Necessary(sceneId, selfId, npcid, scriptId, ind
 end
 
 --************************************************************
---Õâ¸ö½Ó¿Úº¬ÒåÊÇ´íÎóµÄ£¬ÆäÊµÊÇx229022_OnSubmitÖ»²»¹ıÊÇ²ÎÊı²»Í¬¶øÒÑ
---ÕâÊÇ¸öÀúÊ·ÒÅÁôÎÊÌâ£¬ÏÖÔÚÒÑ¾­ÎŞ·¨¸Ä±ä½Ó¿ÚÁË¡£
+--è¿™ä¸ªæ¥å£å«ä¹‰æ˜¯é”™è¯¯çš„ï¼Œå…¶å®æ˜¯x229022_OnSubmitåªä¸è¿‡æ˜¯å‚æ•°ä¸åŒè€Œå·²
+--è¿™æ˜¯ä¸ªå†å²é—ç•™é—®é¢˜ï¼Œç°åœ¨å·²ç»æ— æ³•æ”¹å˜æ¥å£äº†ã€‚
 --************************************************************
 function x229022_OnMissionCheck( sceneId, selfId, npcid, scriptId, index1, index2, index3, petindex )
 	if x229022_CheckSubmit( sceneId, selfId ) > 0 then
-		local misIndex = GetMissionIndexByID(sceneId,selfId,x229022_g_MissionId)		--µÃµ½ÈÎÎñÔÚ20¸öÈÎÎñÖĞµÄĞòÁĞºÅ
+		local misIndex = GetMissionIndexByID(sceneId,selfId,x229022_g_MissionId)		--å¾—åˆ°ä»»åŠ¡åœ¨20ä¸ªä»»åŠ¡ä¸­çš„åºåˆ—å·
 		local missionType = GetMissionParam(sceneId, selfId, misIndex, 1)
 
 		local demandItemId
@@ -1461,7 +1461,7 @@ function x229022_OnMissionCheck( sceneId, selfId, npcid, scriptId, index1, index
 			local petId = LuaFnGetPet_DataID(sceneId, selfId, petindex)
 			if petId ~= nil and petId >= 0 then
 				if GetPetName(petId) == GetPetName(demandPetId) then
-					--ÈÎÎñ½±Àø¼ÆËã
+					--ä»»åŠ¡å¥–åŠ±è®¡ç®—
 					if LuaFnIsPetAvailable(sceneId, selfId, petindex) == 1 then
 						if x229022_MissionBonus(sceneId, selfId) > 0 then
 							LuaFnDeletePet(sceneId, selfId, petindex)
@@ -1469,13 +1469,13 @@ function x229022_OnMissionCheck( sceneId, selfId, npcid, scriptId, index1, index
 						end
 					else
 						BeginEvent(sceneId)
-							AddText(sceneId, "ÄãÌá½»µÄÕäÊŞ²»¿ÉÓÃ»ò±»Ëø¶¨£¡")
+							AddText(sceneId, "ä½ æäº¤çš„çå…½ä¸å¯ç”¨æˆ–è¢«é”å®šï¼")
 						EndEvent()
 						DispatchMissionTips(sceneId, selfId)
 					end
 				else
 					BeginEvent(sceneId)
-						AddText(sceneId, "ÄãÌá½»µÄÕäÊŞ²»ÕıÈ·£¡")
+						AddText(sceneId, "ä½ æäº¤çš„çå…½ä¸æ­£ç¡®ï¼")
 					EndEvent()
 					DispatchMissionTips(sceneId, selfId)
 				end
@@ -1486,16 +1486,16 @@ end
 
 
 --**********************************
---É±ËÀ¹ÖÎï»òÍæ¼Ò
+--æ€æ­»æ€ªç‰©æˆ–ç©å®¶
 --**********************************
-function x229022_OnKillObject( sceneId, selfId, objdataId ,objId)--²ÎÊıÒâË¼£º³¡¾°ºÅ¡¢Íæ¼ÒobjId¡¢¹ÖÎï±íÎ»ÖÃºÅ¡¢¹ÖÎïobjId
+function x229022_OnKillObject( sceneId, selfId, objdataId ,objId)--å‚æ•°æ„æ€ï¼šåœºæ™¯å·ã€ç©å®¶objIdã€æ€ªç‰©è¡¨ä½ç½®å·ã€æ€ªç‰©objId
 	--PrintStr("OnKillObject...")
-	local misIndex = GetMissionIndexByID(sceneId,selfId,x229022_g_MissionId)		--µÃµ½ÈÎÎñÔÚ20¸öÈÎÎñÖĞµÄĞòÁĞºÅ
+	local misIndex = GetMissionIndexByID(sceneId,selfId,x229022_g_MissionId)		--å¾—åˆ°ä»»åŠ¡åœ¨20ä¸ªä»»åŠ¡ä¸­çš„åºåˆ—å·
 
 	local missionType = GetMissionParam(sceneId, selfId, misIndex, 1)
 	if missionType == x229022_g_SubMissionType.suoqu then
 		local bStored = GetMissionParam(sceneId, selfId, misIndex, 2)
-		if bStored <= 0 then --¸ÃÈÎÎñ»¹Ã»ÓĞ´æ´¢
+		if bStored <= 0 then --è¯¥ä»»åŠ¡è¿˜æ²¡æœ‰å­˜å‚¨
 		if GetMissionParam(sceneId, selfId, misIndex, 0) == 0 then
 		local nItemId = GetMissionParam(sceneId, selfId, misIndex, x229022_g_StrForePart+1)
 		local playerLevel = GetLevel(sceneId, selfId)
@@ -1509,23 +1509,23 @@ function x229022_OnKillObject( sceneId, selfId, objdataId ,objId)--²ÎÊıÒâË¼£º³¡¾
 				end
 			end --endfor
 
-			if random(1000) < rate then --ÁÙÊ±µÄËùÎ½µÄĞ¡¼¸ÂÊ:(
+			if random(1000) < rate then --ä¸´æ—¶çš„æ‰€è°“çš„å°å‡ ç‡:(
 				AddMonsterDropItem(sceneId, objId, selfId, nItemId)
 				end --endif4
 			end	--endif3
 		end	--endif1
 		end
 	elseif 	missionType == x229022_g_SubMissionType.fubenjiaoxun then
-		-- È¡µÃÕâ¸ö¹ÖÎïËÀºóÓµÓĞ·ÖÅäÈ¨µÄÈËÊı
+		-- å–å¾—è¿™ä¸ªæ€ªç‰©æ­»åæ‹¥æœ‰åˆ†é…æƒçš„äººæ•°
 		local num = GetMonsterOwnerCount(sceneId,objId)
 		--PrintNum(num)
 		for i=0,num-1  do
-			-- È¡µÃÓµÓĞ·ÖÅäÈ¨µÄÈËµÄobjId
+			-- å–å¾—æ‹¥æœ‰åˆ†é…æƒçš„äººçš„objId
 			local humanObjId = GetMonsterOwnerID(sceneId,objId,i)
 			--PrintStr("humanObjId=" .. humanObjId)
-			-- ¿´Õâ¸öÈËÊÇ²»ÊÇÓĞÕâ¸öÈÎÎñ
+			-- çœ‹è¿™ä¸ªäººæ˜¯ä¸æ˜¯æœ‰è¿™ä¸ªä»»åŠ¡
 			if IsHaveMission(sceneId, humanObjId, x229022_g_MissionId) > 0 then
-				-- ÏÈÅĞ¶ÏÊÇ²»ÊÇÒÑ¾­Âú×ãÁËÍê³É±êÖ¾
+				-- å…ˆåˆ¤æ–­æ˜¯ä¸æ˜¯å·²ç»æ»¡è¶³äº†å®Œæˆæ ‡å¿—
 				local misIndex = GetMissionIndexByID(sceneId,humanObjId,x229022_g_MissionId)
 				if GetMissionParam(sceneId, humanObjId, misIndex, 0) <=0  then
 					local demandKillCount = GetMissionParamEx(sceneId, humanObjId, misIndex, 3, 0)
@@ -1541,7 +1541,7 @@ function x229022_OnKillObject( sceneId, selfId, objdataId ,objId)--²ÎÊıÒâË¼£º³¡¾
 								SetMissionByIndex(sceneId, humanObjId, misIndex, 0, 1)
 								local npcIndex = GetMissionParam(sceneId, humanObjId, misIndex, x229022_g_StrForePart+1)
 								local _, npcName = GetNpcInfoByNpcId(sceneId,npcIndex)
-								local str = format("½ÌÑµ%sµÄÈÎÎñÒÑ¾­Íê³É", npcName)
+								local str = format("æ•™è®­%sçš„ä»»åŠ¡å·²ç»å®Œæˆ", npcName)
 								AddText(sceneId, str)
 							EndEvent()
 							DispatchMissionTips(sceneId, humanObjId)
@@ -1555,16 +1555,16 @@ function x229022_OnKillObject( sceneId, selfId, objdataId ,objId)--²ÎÊıÒâË¼£º³¡¾
 end
 
 --**********************************
---½øÈëÇøÓòÊÂ¼ş
+--è¿›å…¥åŒºåŸŸäº‹ä»¶
 --**********************************
 function x229022_OnEnterArea( sceneId, selfId, zoneId )
 end
 
 --**********************************
---µÀ¾ß¸Ä±ä
+--é“å…·æ”¹å˜
 --**********************************
 function x229022_OnItemChanged( sceneId, selfId, itemdataId )
-	local misIndex = GetMissionIndexByID(sceneId,selfId,x229022_g_MissionId)		--µÃµ½ÈÎÎñÔÚ20¸öÈÎÎñÖĞµÄĞòÁĞºÅ
+	local misIndex = GetMissionIndexByID(sceneId,selfId,x229022_g_MissionId)		--å¾—åˆ°ä»»åŠ¡åœ¨20ä¸ªä»»åŠ¡ä¸­çš„åºåˆ—å·
 
 	local missionType = GetMissionParam(sceneId, selfId, misIndex, 1)
 	local demandItemId = GetMissionParam(sceneId, selfId, misIndex, x229022_g_StrForePart+1)
@@ -1576,7 +1576,7 @@ function x229022_OnItemChanged( sceneId, selfId, itemdataId )
 
 		if strItemName == strDemandItemName then
 			BeginEvent(sceneId)
-				strText = format("ÒÑµÃµ½ÁË%s", strItemName)
+				strText = format("å·²å¾—åˆ°äº†%s", strItemName)
 				AddText(sceneId,strText)
 			EndEvent(sceneId)
 
@@ -1589,17 +1589,17 @@ function x229022_OnItemChanged( sceneId, selfId, itemdataId )
 end
 
 --**********************************
---µÀ¾ßÊ¹ÓÃ
+--é“å…·ä½¿ç”¨
 --**********************************
 function x229022_OnUseItem( sceneId, selfId, targetId, eventId )
 end
 
 
 --**********************************
---ÊÇ·ñÊÇÒªÇóµÄnpc
+--æ˜¯å¦æ˜¯è¦æ±‚çš„npc
 --**********************************
 function x229022_IsDemandNpc(sceneId, selfId, objId)
-	local misIndex = GetMissionIndexByID(sceneId,selfId,x229022_g_MissionId)		--µÃµ½ÈÎÎñÔÚ20¸öÈÎÎñÖĞµÄĞòÁĞºÅ
+	local misIndex = GetMissionIndexByID(sceneId,selfId,x229022_g_MissionId)		--å¾—åˆ°ä»»åŠ¡åœ¨20ä¸ªä»»åŠ¡ä¸­çš„åºåˆ—å·
 	local missionType = GetMissionParam(sceneId, selfId, misIndex, 1)
 	local npcId
 	if missionType == x229022_g_SubMissionType.wenhou or
@@ -1621,12 +1621,12 @@ function x229022_IsDemandNpc(sceneId, selfId, objId)
 end
 
 --**********************************
---Ëø¶¨Ä¿±ê
+--é”å®šç›®æ ‡
 --**********************************
 function x229022_OnLockedTarget(sceneId, selfId, objId )
 	--PrintStr("...OnLockedTarget")
 	if x229022_IsDemandNpc(sceneId, selfId, objId) ==  1 then
-		--TAddText(sceneId, "ÄãÖÕÓÚÀ´ÁË£¬ ÎÒÒÑ¾­µÈ´ıÄãºÃ¾ÃÁË£¡")
+		--TAddText(sceneId, "ä½ ç»ˆäºæ¥äº†ï¼Œ æˆ‘å·²ç»ç­‰å¾…ä½ å¥½ä¹…äº†ï¼")
 		TAddNumText(sceneId, x229022_g_scriptId,x229022_g_MissionName,2,-1,x229022_g_scriptId);
 
 		--local bDone = x229022_CheckSubmit(sceneId, selfId)
@@ -1635,16 +1635,16 @@ function x229022_OnLockedTarget(sceneId, selfId, objId )
 end
 
 --**********************************
---¶¨Ê±ÊÂ¼ş
+--å®šæ—¶äº‹ä»¶
 --**********************************
 function x229022_OnTimer(sceneId,selfId)
-	local misIndex = GetMissionIndexByID(sceneId,selfId,x229022_g_MissionId)		--µÃµ½ÈÎÎñÔÚ20¸öÈÎÎñÖĞµÄĞòÁĞºÅ
+	local misIndex = GetMissionIndexByID(sceneId,selfId,x229022_g_MissionId)		--å¾—åˆ°ä»»åŠ¡åœ¨20ä¸ªä»»åŠ¡ä¸­çš„åºåˆ—å·
 	local leaveSecond = GetMissionParam(sceneId, selfId, misIndex, 7)
 	--PrintNum(leaveSecond)
 
 	local bStored = GetMissionParam(sceneId, selfId, misIndex, 2)
 	if bStored == 1 then
-		--Í£Ö¹ÈÎÎñÊ±ÖÓ
+		--åœæ­¢ä»»åŠ¡æ—¶é’Ÿ
 		StopMissionTimer(sceneId, selfId, x229022_g_MissionId)
 		return
 	end
@@ -1662,10 +1662,10 @@ function x229022_OnTimer(sceneId,selfId)
 	--PrintNum(leaveSecond)
 
 	if leaveSecond <= 0 then
-		--Í£Ö¹ÈÎÎñÊ±ÖÓ
+		--åœæ­¢ä»»åŠ¡æ—¶é’Ÿ
 		StopMissionTimer(sceneId, selfId, x229022_g_MissionId)
-		--Èç¹ûÈÎÎñÒÑ¾­Ê§°Ü£¬ ÔòÌáÊ¾ÈÎÎñÊ§°Ü²¢½«Æä´ÓÈÎÎñÁĞ±íÖĞÉ¾³ı
-		local str = "Á¬»·ÈÎÎñÊ§°Ü£¬ÒÑ¾­½«ÆäÉ¾³ı¡£"
+		--å¦‚æœä»»åŠ¡å·²ç»å¤±è´¥ï¼Œ åˆ™æç¤ºä»»åŠ¡å¤±è´¥å¹¶å°†å…¶ä»ä»»åŠ¡åˆ—è¡¨ä¸­åˆ é™¤
+		local str = "è¿ç¯ä»»åŠ¡å¤±è´¥ï¼Œå·²ç»å°†å…¶åˆ é™¤ã€‚"
 		BeginEvent(sceneId)
 			AddText(sceneId, str)
 		EndEvent()
@@ -1673,7 +1673,7 @@ function x229022_OnTimer(sceneId,selfId)
 		Msg2Player(sceneId, selfId, str, MSG2PLAYER_PARA )
 		DelMission( sceneId, selfId, x229022_g_MissionId )
 
-		--ÉèÖÃÑ­»·ÈÎÎñµÄÊ±¼ä
+		--è®¾ç½®å¾ªç¯ä»»åŠ¡çš„æ—¶é—´
 		SetMissionData(sceneId,selfId,MD_RENWULIAN_DAYCOUNT,LuaFnGetCurrentTime())
 		SetMissionData(sceneId, selfId, MD_RENWULIAN_HUAN, 0)
 
@@ -1683,7 +1683,7 @@ function x229022_OnTimer(sceneId,selfId)
 	if leaveSecond > 10*60000 and leaveSecond < 15*60000 then
 		if mod(leaveSecond, 60000) == 0 then
 			BeginEvent(sceneId)
-				AddText(sceneId, "ÔÚ20·ÖÖÓÄÚÄã¿ÉÒÔ½«¸ÃÈÎÎñ´æ´¢µ½#RÍõ·òÈË#WÄÇ¶ùÈ¥")
+				AddText(sceneId, "åœ¨20åˆ†é’Ÿå†…ä½ å¯ä»¥å°†è¯¥ä»»åŠ¡å­˜å‚¨åˆ°#Rç‹å¤«äºº#Wé‚£å„¿å»")
 			EndEvent()
 			DispatchMissionTips(sceneId, selfId)
 			return
@@ -1692,7 +1692,7 @@ function x229022_OnTimer(sceneId,selfId)
 
 	if leaveSecond < 60000 then
 		BeginEvent(sceneId)
-			AddText(sceneId, "Á¬»·ÈÎÎñ½«ÔÚ" .. tostring(leaveSecond/1000) .. "ÃëºóÊ§°Ü")
+			AddText(sceneId, "è¿ç¯ä»»åŠ¡å°†åœ¨" .. tostring(leaveSecond/1000) .. "ç§’åå¤±è´¥")
 		EndEvent()
 		DispatchMissionTips(sceneId, selfId)
 		return
@@ -1711,7 +1711,7 @@ function x229022_OnPetChanged(sceneId, selfId, petDataId)
 	end
 
 	if GetPetName(demandPetDataId) == GetPetName(petDataId) then
-		local str = format("ÄãµÃµ½ÁËÕäÊŞ%s", GetPetName(petDataId))
+		local str = format("ä½ å¾—åˆ°äº†çå…½%s", GetPetName(petDataId))
 		BeginEvent(sceneId)
 			AddText(sceneId, str)
 		EndEvent()

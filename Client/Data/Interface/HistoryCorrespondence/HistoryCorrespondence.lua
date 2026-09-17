@@ -29,7 +29,7 @@ end
 function HistoryCorrespondence_System_Show()
 	this:Show();
 	HistoryCorrespondence_Log:ClearListBox();
-	HistoryCorrespondence_PageHeader:SetText( "#gFF0FA0系统信息" );
+	HistoryCorrespondence_PageHeader:SetText( "#gFF0FA0绯荤粺淇℃伅" );
 	HistoryCorrespondence_PageDown:Disable();
 	HistoryCorrespondence_PageUp:Disable();
 	local nNumber = DataPool:GetSystemHistroyNumber();
@@ -53,7 +53,7 @@ function HistoryCorrespondence_Show( nChannel, nIndex )
 	curFriendGroup = nChannel;
 	curFriendIndex = nIndex;
 	HistoryCorrespondence_Update();
-	HistoryCorrespondence_PageHeader:SetText( "#gFF0FA0历史信息" );
+	HistoryCorrespondence_PageHeader:SetText( "#gFF0FA0鍘嗗彶淇℃伅" );
 	this:Show();
 end
 

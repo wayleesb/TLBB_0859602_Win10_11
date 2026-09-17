@@ -1,15 +1,15 @@
 local Current_Ride_Index = -1;
 local RIDE_TAB_TEXT = {};
-local  g_Ride;			--Æï³Ë¶ÔÏó
+local  g_Ride;			--éª‘ä¹˜å¯¹è±¡
 local  g_EquipMask;
 function Ride_PreLoad()
 	
-	-- ´ò¿ª½çÃæ
+	-- æ‰“å¼€ç•Œé¢
 	this:RegisterEvent("OPEN_RIDE_PAGE");
 	
-	--Àë¿ª³¡¾°£¬×Ô¶¯¹Ø±Õ
+	--ç¦»å¼€åœºæ™¯ï¼Œè‡ªåŠ¨å…³é—­
 	this:RegisterEvent("PLAYER_LEAVE_WORLD");
-	--Íæ¼Ò¸ü»»Æï³Ë
+	--ç©å®¶æ›´æ¢éª‘ä¹˜
 	this:RegisterEvent("PLAYER_UPDATE_RIDE");
 	
 	this:RegisterEvent("REFRESH_EQUIP");
@@ -19,11 +19,11 @@ end
 function Ride_OnLoad()
 	
 	RIDE_TAB_TEXT = {
-		[0] = "×°±¸",
-		"×ÊÁÏ",
-		"ÕäÊŞ",
-		"Æï³Ë",
-		"ÆäËû",
+		[0] = "è£…å¤‡",
+		"èµ„æ–™",
+		"çå…½",
+		"éª‘ä¹˜",
+		"å…¶ä»–",
 	};
 	g_Ride = Ride_Equip;
 	g_EquipMask	= Ride_Equip_Mask;
@@ -87,7 +87,7 @@ function Ride_OnShow()
 	end
 	
 	nRideIndex = -1
-	while nRideIndex < 60 do	--×î´óÖµ²»ÄÜ³¬¹ı64£¬ÒªĞ¡ÓÚ64 hzp 09-03-09
+	while nRideIndex < 60 do	--æœ€å¤§å€¼ä¸èƒ½è¶…è¿‡64ï¼Œè¦å°äº64 hzp 09-03-09
 		nRideIndex = nRideIndex + 1;
 		StrName = Player : GetMyHorse(nRideIndex);
 		
@@ -118,15 +118,15 @@ end
 
 ----------------------------------------------------------------------------------
 --
--- Ñ¡×°Íæ¼ÒÄ£ĞÍ£¨Ïò×ó)
+-- é€‰è£…ç©å®¶æ¨¡å‹ï¼ˆå‘å·¦)
 --
 function Ride_Modle_TurnLeft(start)
 	local mouse_button = CEArg:GetValue("MouseButton");
 	if(mouse_button == "LeftButton") then
-		--Ïò×óĞı×ª¿ªÊ¼
+		--å‘å·¦æ—‹è½¬å¼€å§‹
 		if(start == 1) then
 			Ride_FakeObject:RotateBegin(-0.3);
-		--Ïò×óĞı×ª½áÊø
+		--å‘å·¦æ—‹è½¬ç»“æŸ
 		else
 			Ride_FakeObject:RotateEnd();
 		end
@@ -135,15 +135,15 @@ end
 
 ----------------------------------------------------------------------------------
 --
--- Ñ¡×°Íæ¼ÒÄ£ĞÍ£¨ÏòÓÒ)
+-- é€‰è£…ç©å®¶æ¨¡å‹ï¼ˆå‘å³)
 --
 function Ride_Modle_TurnRight(start)
 	local mouse_button = CEArg:GetValue("MouseButton");
 	if(mouse_button == "LeftButton") then
-		--ÏòÓÒĞı×ª¿ªÊ¼
+		--å‘å³æ—‹è½¬å¼€å§‹
 		if(start == 1) then
 			Ride_FakeObject:RotateBegin(0.3);
-		--ÏòÓÒĞı×ª½áÊø
+		--å‘å³æ—‹è½¬ç»“æŸ
 		else
 			Ride_FakeObject:RotateEnd();
 		end
@@ -163,7 +163,7 @@ function Ride_SelfEquip_Page_Switch()
 	Ride_OtherInfo : SetCheck(0);
 end
 
---´ò¿ª×Ô¼ºµÄ×ÊÁÏÒ³Ãæ
+--æ‰“å¼€è‡ªå·±çš„èµ„æ–™é¡µé¢
 function Ride_SelfData_Switch()
 	Variable:SetVariable("SelfUnionPos", Ride_Frame:GetProperty("UnifiedPosition"), 1);
 	SystemSetup:OpenPrivatePage("self");
@@ -194,9 +194,9 @@ end
 function Ride_Equip_Click( buttonIn )
 	local button = tonumber( buttonIn );
 	if( button == 1 ) then
-		g_Ride:DoAction();	--Æï³Ë
+		g_Ride:DoAction();	--éª‘ä¹˜
 	else
-		g_Ride:DoSubAction();	--Æï³Ë
+		g_Ride:DoSubAction();	--éª‘ä¹˜
 	end
 end
 

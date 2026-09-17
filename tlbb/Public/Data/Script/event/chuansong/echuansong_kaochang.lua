@@ -1,4 +1,4 @@
---Íæ¼Ò½øÈëÒ»¸ö area Ê±´¥·¢
+--ç©å®¶è¿›å…¥ä¸€ä¸ª area æ—¶è§¦å‘
 function x400922_OnEnterArea( sceneId, selfId )
 	misIndex = GetMissionIndexByID(sceneId,selfId,1220)
 	if misIndex < 0 or misIndex > 20 then
@@ -14,18 +14,18 @@ function x400922_OnEnterArea( sceneId, selfId )
 	end
 end
 
---Íæ¼ÒÔÚÒ»¸ö area ´ôÁËÒ»¶ÎÊ±¼äÃ»×ßÔò¶¨Ê±´¥·¢
+--ç©å®¶åœ¨ä¸€ä¸ª area å‘†äº†ä¸€æ®µæ—¶é—´æ²¡èµ°åˆ™å®šæ—¶è§¦å‘
 function x400922_OnTimer( sceneId, selfId )
-	-- ºÁÃë£¬¿´ÔÚÕâ¸ö area Í£Áô¶à¾ÃÁË
+	-- æ¯«ç§’ï¼Œçœ‹åœ¨è¿™ä¸ª area åœç•™å¤šä¹…äº†
 	StandingTime = QueryAreaStandingTime( sceneId, selfId )
-	-- 5ÃëºóÈÔÎ´´«ËÍ
+	-- 5ç§’åä»æœªä¼ é€
 	if StandingTime >= 5000 then
 		x400922_OnEnterArea( sceneId, selfId )
 		ResetAreaStandingTime( sceneId, selfId, 0 )
 	end
 end
 
---Íæ¼ÒÀë¿ªÒ»¸ö area Ê±´¥·¢
+--ç©å®¶ç¦»å¼€ä¸€ä¸ª area æ—¶è§¦å‘
 function x400922_OnLeaveArea( sceneId, selfId )
 end
 

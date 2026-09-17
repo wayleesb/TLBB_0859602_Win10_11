@@ -1,6 +1,6 @@
---°ïÕ½»ý·Ö
+--å¸®æˆ˜ç§¯åˆ†
 g_ConfraternityCounttabId = 0;
-g_ConfraternityCountTankName ={"ÎÞÕ½³µ","#{INTERFACE_XML_1239}","#{INTERFACE_XML_1240}","#{INTERFACE_XML_1241}","#{INTERFACE_XML_1242}","#{INTERFACE_XML_1243}"};
+g_ConfraternityCountTankName ={"æ— æˆ˜è½¦","#{INTERFACE_XML_1239}","#{INTERFACE_XML_1240}","#{INTERFACE_XML_1241}","#{INTERFACE_XML_1242}","#{INTERFACE_XML_1243}"};
 function ConfraternityCount_PreLoad()
 	this:RegisterEvent("OPEN_GUILDBATTLE_SCORE");	
 end

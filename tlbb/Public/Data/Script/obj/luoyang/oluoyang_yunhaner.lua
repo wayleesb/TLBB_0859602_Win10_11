@@ -1,29 +1,29 @@
---ÔÆº­¶ù
+--äº‘æ¶µå„¿
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x000118_g_scriptId = 000118
 
---ÉÌµê±àºÅ
+--å•†åº—ç¼–å·
 x000118_g_shoptableindex=102
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
-x000118_g_eventList={400918, 400963}	--	È¥ĞşÎäµº¡¢È¥Ê¥ÊŞÉ½
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
+x000118_g_eventList={400918, 400963}	--	å»ç„æ­¦å²›ã€å»åœ£å…½å±±
 
---¶Ò»»ĞèÇóÎïÆ·
+--å…‘æ¢éœ€æ±‚ç‰©å“
 x000118_g_change_needitem = {itemindex = 30501318, itennum = 200}
---¶Ò»»Ä¿±êÎïÆ·
+--å…‘æ¢ç›®æ ‡ç‰©å“
 x000118_g_change_targetitem = {item_1_index = 30402022, item_2_index = 30402021, item_3_index = 30402024, item_4_index = 30402023}
 
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x000118_UpdateEventList( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
 	local  PlayerName=GetName(sceneId,selfId)
-	AddText(sceneId,"ÎÒ¼ÒĞ¡½ãÊÕ¼¯¸÷ÖÖÕäÊŞ£¬ÈËÊÖ²»¹»£¬ÄãÒªÊÇÄÜ°ïÃ¦¾Í¿ÉÒÔµÃµ½³êÀÍµÄ¡£")
+	AddText(sceneId,"æˆ‘å®¶å°å§æ”¶é›†å„ç§çå…½ï¼Œäººæ‰‹ä¸å¤Ÿï¼Œä½ è¦æ˜¯èƒ½å¸®å¿™å°±å¯ä»¥å¾—åˆ°é…¬åŠ³çš„ã€‚")
 	
-	--AddNumText( sceneId, x000118_g_scriptId, "Ãâ·ÑÎŞµĞ", 6, 10 )	--È¥³ıÃâ·ÑÎŞµĞ¹¦ÄÜ--del by Heanqi
+	--AddNumText( sceneId, x000118_g_scriptId, "å…è´¹æ— æ•Œ", 6, 10 )	--å»é™¤å…è´¹æ— æ•ŒåŠŸèƒ½--del by Heanqi
 	
 	for i, eventId in x000118_g_eventList do
 		CallScriptFunction( eventId, "OnEnumerate",sceneId, selfId, targetId )
@@ -31,25 +31,25 @@ function x000118_UpdateEventList( sceneId, selfId,targetId )
 	end
 	
 	AddNumText(sceneId,x000118_g_scriptId,"#{BBSX_081107_1}",6,11)
-	AddNumText(sceneId,x000118_g_scriptId,"¹ºÂò³èÎï¼¼ÄÜÊé",7,2)
-	AddNumText(sceneId,x000118_g_scriptId,"²éÑ¯ÕäÊŞ³É³¤ÂÊ",6,3)
+	AddNumText(sceneId,x000118_g_scriptId,"è´­ä¹°å® ç‰©æŠ€èƒ½ä¹¦",7,2)
+	AddNumText(sceneId,x000118_g_scriptId,"æŸ¥è¯¢çå…½æˆé•¿ç‡",6,3)
 --	AddNumText(sceneId,x000118_g_scriptId,"#{XXWD_8916_07}",11,5)
---	AddNumText(sceneId,x000118_g_scriptId,"ÁéÊŞµ¤ºÏ³É",6,6)
---	AddNumText(sceneId,x000118_g_scriptId,"ÁéÊŞµ¤ºÏ³É½éÉÜ",11,7)
---	AddNumText(sceneId,x000118_g_scriptId,"ÈçºÎ¸øÕäÊŞ¿ìËÙÉı¼¶",11,8)
+--	AddNumText(sceneId,x000118_g_scriptId,"çµå…½ä¸¹åˆæˆ",6,6)
+--	AddNumText(sceneId,x000118_g_scriptId,"çµå…½ä¸¹åˆæˆä»‹ç»",11,7)
+--	AddNumText(sceneId,x000118_g_scriptId,"å¦‚ä½•ç»™çå…½å¿«é€Ÿå‡çº§",11,8)
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 end
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x000118_OnDefaultEvent( sceneId, selfId,targetId )
 	x000118_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x000118_OnEventRequest( sceneId, selfId, targetId, eventId )
 	for i, findId in x000118_g_eventList do
@@ -63,16 +63,16 @@ function x000118_OnEventRequest( sceneId, selfId, targetId, eventId )
 		DispatchShopItem( sceneId, selfId,targetId, x000118_g_shoptableindex )
 	elseif GetNumText() == 3 then
 --		BeginEvent( sceneId )
---		AddText( sceneId, "  ²éÑ¯ÕäÊŞµÄ³É³¤ÂÊ£¬²éÑ¯Ò»´ÎĞèÒªÊÕÈ¡#{_MONEY100}µÄ·ÑÓÃ¡£" )
---		AddNumText( sceneId, x000118_g_scriptId, "È·¶¨", -1, 4 )
+--		AddText( sceneId, "  æŸ¥è¯¢çå…½çš„æˆé•¿ç‡ï¼ŒæŸ¥è¯¢ä¸€æ¬¡éœ€è¦æ”¶å–#{_MONEY100}çš„è´¹ç”¨ã€‚" )
+--		AddNumText( sceneId, x000118_g_scriptId, "ç¡®å®š", -1, 4 )
 --		EndEvent( sceneId )
 --		DispatchEventList( sceneId, selfId, targetId )
 --	elseif GetNumText() == 4 then
 		BeginUICommand( sceneId )
 			UICommand_AddInt( sceneId, targetId )
-			UICommand_AddInt( sceneId, 6 )				--ÕäÊŞ²éÑ¯·ÖÖ§
+			UICommand_AddInt( sceneId, 6 )				--çå…½æŸ¥è¯¢åˆ†æ”¯
 		EndUICommand( sceneId )
-		DispatchUICommand( sceneId, selfId, 3 )	--µ÷ÓÃÕäÊŞ½çÃæ
+		DispatchUICommand( sceneId, selfId, 3 )	--è°ƒç”¨çå…½ç•Œé¢
 	elseif GetNumText() == 5 then
 		BeginEvent( sceneId )
 		AddText( sceneId, "#{XXWD_8916_08}" )
@@ -82,7 +82,7 @@ function x000118_OnEventRequest( sceneId, selfId, targetId, eventId )
 --		BeginUICommand( sceneId )
 --			UICommand_AddInt( sceneId, targetId )
 --		EndUICommand( sceneId )
---		DispatchUICommand( sceneId, selfId, 19824 )	--µ÷ÓÃÁéÊŞµ¤ºÏ³É½çÃæ
+--		DispatchUICommand( sceneId, selfId, 19824 )	--è°ƒç”¨çµå…½ä¸¹åˆæˆç•Œé¢
 	elseif GetNumText() == 7 then
 --		BeginEvent( sceneId )
 --		AddText( sceneId, "#{JNHC_81015_12}" )
@@ -95,7 +95,7 @@ function x000118_OnEventRequest( sceneId, selfId, targetId, eventId )
 --		DispatchEventList( sceneId, selfId, targetId )
 	elseif GetNumText() == 10 then
 	    if eventId == x000118_g_scriptId then	
-			--LuaFnSendSpecificImpactToUnit( sceneId, selfId, selfId, selfId, 50, 0 )	--È¥³ıÃâ·ÑÎŞµĞ¹¦ÄÜ--del by Heanqi
+			--LuaFnSendSpecificImpactToUnit( sceneId, selfId, selfId, selfId, 50, 0 )	--å»é™¤å…è´¹æ— æ•ŒåŠŸèƒ½--del by Heanqi
 			return
 		end
 	elseif GetNumText() == 11 then
@@ -121,7 +121,7 @@ function x000118_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x000118_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x000118_g_eventList do
@@ -136,10 +136,10 @@ function x000118_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x000118_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
-	--¾Ü¾øÖ®ºó£¬Òª·µ»ØNPCµÄÊÂ¼şÁĞ±í
+	--æ‹’ç»ä¹‹åï¼Œè¦è¿”å›NPCçš„äº‹ä»¶åˆ—è¡¨
 	for i, findId in x000118_g_eventList do
 		if missionScriptId == findId then
 			x000118_UpdateEventList( sceneId, selfId, targetId )
@@ -149,7 +149,7 @@ function x000118_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¼ÌĞø£¨ÒÑ¾­½ÓÁËÈÎÎñ£©
+--ç»§ç»­ï¼ˆå·²ç»æ¥äº†ä»»åŠ¡ï¼‰
 --**********************************
 function x000118_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x000118_g_eventList do
@@ -161,7 +161,7 @@ function x000118_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---Ìá½»ÒÑ×öÍêµÄÈÎÎñ
+--æäº¤å·²åšå®Œçš„ä»»åŠ¡
 --**********************************
 function x000118_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, selectRadioId )
 	for i, findId in x000118_g_eventList do
@@ -173,16 +173,16 @@ function x000118_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 end
 
 --**********************************
---ËÀÍöÊÂ¼ş
+--æ­»äº¡äº‹ä»¶
 --**********************************
 function x000118_OnDie( sceneId, selfId, killerId )
 end
 
 --**********************************
---Ìá½»ÕäÊŞ
+--æäº¤çå…½
 --**********************************
 function x000118_OnMissionCheck( sceneId, selfId, npcid, scriptId, index1, index2, index3, indexpet )
---×¢Òâ£¬ÕâÀïÕâÑùĞ´Ê¡ÂÔÁËÔÚeventlistÖĞËÑË÷scriptIdÕâÒ»²¿·Ö£¬¿ÉÄÜ»áÓĞÎÊÌâ
+--æ³¨æ„ï¼Œè¿™é‡Œè¿™æ ·å†™çœç•¥äº†åœ¨eventlistä¸­æœç´¢scriptIdè¿™ä¸€éƒ¨åˆ†ï¼Œå¯èƒ½ä¼šæœ‰é—®é¢˜
 			CallScriptFunction( scriptId, "OnMissionCheck", sceneId, selfId, npcid, scriptId, index1, index2, index3, indexpet )
 end
 
@@ -204,7 +204,7 @@ function x000118_ChangeItem(sceneId, selfId, targetId, key)
 	local nAvailableCount = LuaFnGetAvailableItemCount( sceneId, selfId,  x000118_g_change_needitem.itemindex)
 	--PrintStr("nHaveCount "..nHaveCount.." nAvailableCount "..nAvailableCount)
 	
-	--ÓµÓĞÊıÁ¿³¬¹ı¶ø¿ÉÓÃÊıÁ¿²»×ãËµÃ÷ÊÇÓĞÒÑ¾­¼ÓËøµÄ¡£Õâ¸öµØ·½ÊÇÌØÀıÅĞ¶Ï£¬²ß»®¼á³ÖÒª¼ÓÕâ¸öÌáÊ¾£¬ÈÏÎªÔª±¦°ÚÌ¯ÎïÆ·ÌáÊ¾Òª×¼È·¡£add by hukai#40690
+	--æ‹¥æœ‰æ•°é‡è¶…è¿‡è€Œå¯ç”¨æ•°é‡ä¸è¶³è¯´æ˜æ˜¯æœ‰å·²ç»åŠ é”çš„ã€‚è¿™ä¸ªåœ°æ–¹æ˜¯ç‰¹ä¾‹åˆ¤æ–­ï¼Œç­–åˆ’åšæŒè¦åŠ è¿™ä¸ªæç¤ºï¼Œè®¤ä¸ºå…ƒå®æ‘†æ‘Šç‰©å“æç¤ºè¦å‡†ç¡®ã€‚add by hukai#40690
 	if nHaveCount >= x000118_g_change_needitem.itennum and nAvailableCount < x000118_g_change_needitem.itennum then
 		x000118_ShowMsgInFrame( sceneId, selfId, targetId, "#{JSTS_081119_1}" )
 		return
@@ -232,7 +232,7 @@ function x000118_ChangeItem(sceneId, selfId, targetId, key)
 			    local szItemTransfer = GetItemTransfer(sceneId,selfId, 0)
 				x000118_ShowRandomSystemNotice( sceneId, selfId, szItemTransfer )
 
-				local strNotice = format("¶Ò»»³É¹¦£¬Äã»ñµÃÁË#H#{_ITEM%d}#W", nTargetitem)
+				local strNotice = format("å…‘æ¢æˆåŠŸï¼Œä½ è·å¾—äº†#H#{_ITEM%d}#W", nTargetitem)
 				x000118_ShowNotice( sceneId, selfId, strNotice)
 				
 				x000118_ShowMsgInFrame(sceneId,selfId,targetId, strNotice)
@@ -242,7 +242,7 @@ function x000118_ChangeItem(sceneId, selfId, targetId, key)
 				return
         	end
 	else
-    	x000118_ShowNotice( sceneId, selfId, "¿Û³ıÎïÆ·Ê§°Ü£¡")
+    	x000118_ShowNotice( sceneId, selfId, "æ‰£é™¤ç‰©å“å¤±è´¥ï¼")
 		return
 	end
 end
@@ -258,7 +258,7 @@ end
 function x000118_ShowRandomSystemNotice( sceneId, selfId, strItemInfo )
 	
 	local PlayerName = GetName(sceneId,selfId)
-	local str = format( "#{_INFOUSR%s}#PÀú¾¡Ç§ĞÁÍò¿à£¬ÖÕÓÚÊÕ¼¯Æë200Æ¬#Y#{_ITEM30501318}#P£¬²¢³É¹¦ÔÚ#GÂåÑô£¨182£¬155£©#YÔÆº­¶ù#P´¦¶Ò»»µ½Ò»±¾#{_INFOMSG%s}#P¡£", PlayerName, strItemInfo )
+	local str = format( "#{_INFOUSR%s}#På†å°½åƒè¾›ä¸‡è‹¦ï¼Œç»ˆäºæ”¶é›†é½200ç‰‡#Y#{_ITEM30501318}#Pï¼Œå¹¶æˆåŠŸåœ¨#Gæ´›é˜³ï¼ˆ182ï¼Œ155ï¼‰#Yäº‘æ¶µå„¿#På¤„å…‘æ¢åˆ°ä¸€æœ¬#{_INFOMSG%s}#Pã€‚", PlayerName, strItemInfo )
 	BroadMsgByChatPipe( sceneId, selfId, str, 4 )
 end
 

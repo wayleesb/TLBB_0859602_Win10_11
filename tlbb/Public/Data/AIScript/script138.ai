@@ -1,13 +1,13 @@
-;Õ¶»÷(612)×÷ÎªÆÕÍ¨¹¥»÷,ÓÐ20%»úÂÊÊÍ·Å¸ß¼¶´ò»÷(551),ÑªÉÙÓÚÒ»°ëºóÓÐ10%»úÂÊÊÍ·ÅÅÅÉ½µ¹º£(592),10%µÄ»úÂÊÊÍ·ÅËºÁÑ(609),ÑªÉÙÓÚ30%ÔòÖÎÁÆ582×Ô¼º,´ÎÊý3
+;æ–©å‡»(612)ä½œä¸ºæ™®é€šæ”»å‡»,æœ‰20%æœºçŽ‡é‡Šæ”¾é«˜çº§æ‰“å‡»(551),è¡€å°‘äºŽä¸€åŠåŽæœ‰10%æœºçŽ‡é‡Šæ”¾æŽ’å±±å€’æµ·(592),10%çš„æœºçŽ‡é‡Šæ”¾æ’•è£‚(609),è¡€å°‘äºŽ30%åˆ™æ²»ç–—582è‡ªå·±,æ¬¡æ•°3
 [common]
 [commonend]
 
 [skill]
-0:if(AIS_IsCanSkill(612)=1){AIS_ToSkill(612);AIS_SetTimes(-1);AIS_SetPRI(30);};Èç¹ûÄÜÊ¹ÓÃ612ºÅ¼¼ÄÜÔòÊÍ·Å£¬´ÎÊý²»ÏÞ£¨Õ¶»÷£©
-1:if(AIS_GetAIState()=SATTACK&AIS_Rand()<20&AIS_IsCanSkill(551)=1){AIS_ToSkill(551);AIS_SetTimes(-1);AIS_SetPRI(31);};ÔÚ¹¥»÷×´Ì¬ÏÂ20%µÄ»úÂÊÊÍ·Å551ºÅ¼¼ÄÜ£¬´ÎÊý²»ÏÞ
-2:if(AIS_GetAIState()=SATTACK&AIS_GetHP()<50&AIS_IsCanSkill(592)=1&AIS_Rand()<10){AIS_ToSkill(592);AIS_SetTimes(5);AIS_SetPRI(33);};ÑªÉÙÓÚÒ»°ëºóÓÐ10%»úÂÊÊÍ·ÅÅÅÉ½µ¹º£(592)
-3:if(AIS_GetAIState()=SATTACK&AIS_Rand()<10&AIS_IsCanSkill(609)=1){AIS_ToSkill(609);AIS_SetTimes(-1);AIS_SetPRI(32);};ÔÚ¹¥»÷×´Ì¬ÏÂ10%µÄ»úÂÊÊÍ·Å609ºÅ¼¼ÄÜËºÁÑ£¬´ÎÊý²»ÏÞ
-4:if(AIS_GetAIState()=SATTACK&AIS_GetHP()<30&AIS_IsCanSkill(582)=1){AIS_ToSkill(582);AIS_SetTimes(3);AIS_SetPRI(34);};ÑªÉÙÓÚ30%ºóÓÐ10%»úÂÊÊÍ·ÅÖÎÁÆ(582)
+0:if(AIS_IsCanSkill(612)=1){AIS_ToSkill(612);AIS_SetTimes(-1);AIS_SetPRI(30);};å¦‚æžœèƒ½ä½¿ç”¨612å·æŠ€èƒ½åˆ™é‡Šæ”¾ï¼Œæ¬¡æ•°ä¸é™ï¼ˆæ–©å‡»ï¼‰
+1:if(AIS_GetAIState()=SATTACK&AIS_Rand()<20&AIS_IsCanSkill(551)=1){AIS_ToSkill(551);AIS_SetTimes(-1);AIS_SetPRI(31);};åœ¨æ”»å‡»çŠ¶æ€ä¸‹20%çš„æœºçŽ‡é‡Šæ”¾551å·æŠ€èƒ½ï¼Œæ¬¡æ•°ä¸é™
+2:if(AIS_GetAIState()=SATTACK&AIS_GetHP()<50&AIS_IsCanSkill(592)=1&AIS_Rand()<10){AIS_ToSkill(592);AIS_SetTimes(5);AIS_SetPRI(33);};è¡€å°‘äºŽä¸€åŠåŽæœ‰10%æœºçŽ‡é‡Šæ”¾æŽ’å±±å€’æµ·(592)
+3:if(AIS_GetAIState()=SATTACK&AIS_Rand()<10&AIS_IsCanSkill(609)=1){AIS_ToSkill(609);AIS_SetTimes(-1);AIS_SetPRI(32);};åœ¨æ”»å‡»çŠ¶æ€ä¸‹10%çš„æœºçŽ‡é‡Šæ”¾609å·æŠ€èƒ½æ’•è£‚ï¼Œæ¬¡æ•°ä¸é™
+4:if(AIS_GetAIState()=SATTACK&AIS_GetHP()<30&AIS_IsCanSkill(582)=1){AIS_ToSkill(582);AIS_SetTimes(3);AIS_SetPRI(34);};è¡€å°‘äºŽ30%åŽæœ‰10%æœºçŽ‡é‡Šæ”¾æ²»ç–—(582)
 [skillend]
 
 [beskill]

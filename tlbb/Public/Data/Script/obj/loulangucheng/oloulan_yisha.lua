@@ -1,14 +1,14 @@
---Â¥À¼NPC....
---ÕûÈİ....
+--æ¥¼å…°NPC....
+--æ•´å®¹....
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x001133_g_scriptId = 001133
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x001133_g_eventList = { 805029, 805030 }
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x001133_OnDefaultEvent( sceneId, selfId,targetId )
 
@@ -16,11 +16,11 @@ function x001133_OnDefaultEvent( sceneId, selfId,targetId )
 
 		AddText(sceneId,"#{loulan_zhengrong_20080329}")
 
-		AddNumText( sceneId, x001133_g_scriptId, "ĞŞÕûÈİÃ²½éÉÜ", 11, 1 )
-		AddNumText(sceneId,x001133_g_scriptId,"ĞŞÕûÈİÃ²",6,2)
+		AddNumText( sceneId, x001133_g_scriptId, "ä¿®æ•´å®¹è²Œä»‹ç»", 11, 1 )
+		AddNumText(sceneId,x001133_g_scriptId,"ä¿®æ•´å®¹è²Œ",6,2)
 
-		AddNumText( sceneId, x001133_g_scriptId, "ĞŞ¸ÄÍ·Ïñ½éÉÜ", 11, 3 )
-		AddNumText(sceneId,x001133_g_scriptId,"ĞŞ¸ÄÍ·Ïñ",6,4)
+		AddNumText( sceneId, x001133_g_scriptId, "ä¿®æ”¹å¤´åƒä»‹ç»", 11, 3 )
+		AddNumText(sceneId,x001133_g_scriptId,"ä¿®æ”¹å¤´åƒ",6,4)
 
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
@@ -46,11 +46,11 @@ function x001133_OnEventRequest( sceneId, selfId, targetId, eventId )
 		DispatchEventList(sceneId,selfId,targetId)
 
 	elseif NumText == 2 then
-		-- ĞŞ¸ÄÁ³ĞÍ
+		-- ä¿®æ”¹è„¸å‹
 		CallScriptFunction( 805029, "OnEnumerate",sceneId, selfId, targetId )
 
 	elseif NumText == 4 then
-		-- ĞŞ¸ÄÍ·Ïñ
+		-- ä¿®æ”¹å¤´åƒ
 		CallScriptFunction( 805030, "OnEnumerate",sceneId, selfId, targetId )
 
 	end

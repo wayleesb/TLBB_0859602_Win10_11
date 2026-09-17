@@ -1,5 +1,5 @@
 -- 212220
--- ¶Ò»»ÎïÆ·
+-- å…‘æ¢ç‰©å“
 x212220_g_scriptId = 212220
 
 x212220_g_Stone = {	{level=50,id=20310000,num=15},
@@ -36,7 +36,7 @@ x212220_g_BossItem = {
 
 --MisDescEnd
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x212220_OnDefaultEvent( sceneId, selfId, targetId )
 
@@ -46,11 +46,11 @@ function x212220_OnDefaultEvent( sceneId, selfId, targetId )
 		local str
 		
 		if nNum == 50  then
-			str = "ÄãÈç¹ûÉáµÃ½«15¸öÑàÏÒÓñ½»¸øÎÒ¾Í¿ÉÒÔ´ÓÏÂÃæ×°±¸ÖĞÌôÑ¡Ò»¼ş£º"
+			str = "ä½ å¦‚æœèˆå¾—å°†15ä¸ªç‡•å¼¦ç‰äº¤ç»™æˆ‘å°±å¯ä»¥ä»ä¸‹é¢è£…å¤‡ä¸­æŒ‘é€‰ä¸€ä»¶ï¼š"
 		elseif nNum == 60  then
-			str = "ÄãÈç¹ûÉáµÃ½«30¸öÑàÏÒÓñ½»¸øÎÒ¾Í¿ÉÒÔ´ÓÏÂÃæ×°±¸ÖĞÌôÑ¡Ò»¼ş£º"
+			str = "ä½ å¦‚æœèˆå¾—å°†30ä¸ªç‡•å¼¦ç‰äº¤ç»™æˆ‘å°±å¯ä»¥ä»ä¸‹é¢è£…å¤‡ä¸­æŒ‘é€‰ä¸€ä»¶ï¼š"
 		elseif nNum == 70  then
-			str = "ÄãÈç¹ûÉáµÃ½«60¸öÑàÏÒÓñ½»¸øÎÒ¾Í¿ÉÒÔ´ÓÏÂÃæ×°±¸ÖĞÌôÑ¡Ò»¼ş£º"
+			str = "ä½ å¦‚æœèˆå¾—å°†60ä¸ªç‡•å¼¦ç‰äº¤ç»™æˆ‘å°±å¯ä»¥ä»ä¸‹é¢è£…å¤‡ä¸­æŒ‘é€‰ä¸€ä»¶ï¼š"
 	
 		end
 		BeginEvent(sceneId)
@@ -68,53 +68,53 @@ function x212220_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x212220_OnEnumerate( sceneId, selfId, targetId )
 
-	AddNumText( sceneId, x212220_g_scriptId, "¶Ò»»50¼¶Ì××°", 6, 50 )
-	AddNumText( sceneId, x212220_g_scriptId, "¶Ò»»60¼¶Ì××°", 6, 60 )
-	AddNumText( sceneId, x212220_g_scriptId, "¶Ò»»70¼¶Ì××°", 6, 70 )
+	AddNumText( sceneId, x212220_g_scriptId, "å…‘æ¢50çº§å¥—è£…", 6, 50 )
+	AddNumText( sceneId, x212220_g_scriptId, "å…‘æ¢60çº§å¥—è£…", 6, 60 )
+	AddNumText( sceneId, x212220_g_scriptId, "å…‘æ¢70çº§å¥—è£…", 6, 70 )
 	
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x212220_CheckAccept( sceneId, selfId )
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x212220_OnAccept( sceneId, selfId )
 
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x212220_OnAbandon( sceneId, selfId )
 end
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x212220_OnContinue( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x212220_CheckSubmit( sceneId, selfId )
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x212220_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 	
-	-- ¼ì²â´«¹ıÀ´µÄÕâ¸öÖµÊÇ²»ÊÇÓĞĞ§µÄ
+	-- æ£€æµ‹ä¼ è¿‡æ¥çš„è¿™ä¸ªå€¼æ˜¯ä¸æ˜¯æœ‰æ•ˆçš„
 	local logNum1 = 0
 	local logNum2 = 0
 	local item
@@ -131,7 +131,7 @@ function x212220_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 		end
 	end
 	
-	-- Ìá½»µÄÎïÆ·²»¶ÔÓ¦£¬Ö±½Ó·µ»Ø£¬²»×ö´¦Àí
+	-- æäº¤çš„ç‰©å“ä¸å¯¹åº”ï¼Œç›´æ¥è¿”å›ï¼Œä¸åšå¤„ç†
 	if bHaveItem == 0  then
 		return
 	end
@@ -143,7 +143,7 @@ function x212220_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 		end
 	end
 	
-	--¼ì²âÓĞÃ»ÓĞµÚ¶şÖÖÊ¯Í·
+	--æ£€æµ‹æœ‰æ²¡æœ‰ç¬¬äºŒç§çŸ³å¤´
 	for i, temp1 in x212220_g_Stone2 do
 		if temp1.level == item.level   then
 			stone2 = temp1
@@ -151,30 +151,30 @@ function x212220_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 		end
 	end
 	
-	-- ÕÒ²»µ½¶ÔÓ¦µÄÊ¯Í·£¬Ö±½Ó·µ»Ø
+	-- æ‰¾ä¸åˆ°å¯¹åº”çš„çŸ³å¤´ï¼Œç›´æ¥è¿”å›
 	if bHaveStone == 0    then
 		return
 	end
 	
-	-- 1£¬¼ì²âÍæ¼ÒÉíÉÏÊÇ²»ÊÇÓĞÎ»ÖÃÄÜ¹»·ÅÏÂÎïÆ·
+	-- 1ï¼Œæ£€æµ‹ç©å®¶èº«ä¸Šæ˜¯ä¸æ˜¯æœ‰ä½ç½®èƒ½å¤Ÿæ”¾ä¸‹ç‰©å“
 	BeginAddItem(sceneId)
 		AddItem( sceneId, item.id, 1 )
 	local ret = EndAddItem(sceneId,selfId)
 
 	if ret < 1 then
 		BeginEvent(sceneId)
-			strText = "±³°üÒÑÂú,ÎŞ·¨¶Ò»»¡£"
+			strText = "èƒŒåŒ…å·²æ»¡,æ— æ³•å…‘æ¢ã€‚"
 			AddText(sceneId,strText);
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
 	end
 	
-	-- 2£¬¼ÆËãÊ¯Í·ÊıÁ¿
+	-- 2ï¼Œè®¡ç®—çŸ³å¤´æ•°é‡
 	local selfStoneCount = GetItemCount(sceneId,selfId, stone.id) + GetItemCount(sceneId,selfId, stone2.id)
 	if stone.num > selfStoneCount   then
 		BeginEvent(sceneId)
-			strText = "ÄãÃ»ÓĞ×ã¹»µÄ²ÄÁÏÀ´»»È¡Õâ¸öÎïÆ·¡£"
+			strText = "ä½ æ²¡æœ‰è¶³å¤Ÿçš„ææ–™æ¥æ¢å–è¿™ä¸ªç‰©å“ã€‚"
 			AddText(sceneId,strText);
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
@@ -182,23 +182,23 @@ function x212220_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 		
 	end
 	
-	-- 3£¬¼ì²â±³°üÖĞ£¬Èç¹ûÓĞÊ¯Í·ÉÏËø£¬¾Í²»ÈÃÖ´ĞĞÏÂÈ¥
+	-- 3ï¼Œæ£€æµ‹èƒŒåŒ…ä¸­ï¼Œå¦‚æœæœ‰çŸ³å¤´ä¸Šé”ï¼Œå°±ä¸è®©æ‰§è¡Œä¸‹å»
 	if LuaFnGetAvailableItemCount( sceneId, selfId, stone.id ) + LuaFnGetAvailableItemCount( sceneId, selfId, stone2.id ) < stone.num  then
 		BeginEvent(sceneId)
-			strText = "½»»»Ê§°Ü£¬Çë¼ì²éÄãÌá½»µÄÎïÆ·ÊÇ²»ÊÇÉÏËøÁË¡£"
+			strText = "äº¤æ¢å¤±è´¥ï¼Œè¯·æ£€æŸ¥ä½ æäº¤çš„ç‰©å“æ˜¯ä¸æ˜¯ä¸Šé”äº†ã€‚"
 			AddText(sceneId,strText);
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
 	end	
 	
-	-- 4£¬É¾³ıÎïÆ· ÏÈÉ¾³ı°ó¶¨µÄ
+	-- 4ï¼Œåˆ é™¤ç‰©å“ å…ˆåˆ é™¤ç»‘å®šçš„
 	local BangdingNum = LuaFnGetAvailableItemCount( sceneId, selfId, stone.id );
 	if(BangdingNum >= stone.num) then
 		local ret1 = LuaFnDelAvailableItem(sceneId,selfId, stone.id, stone.num)
 		if ret1 < 1  then
 			BeginEvent(sceneId)
-				strText = "É¾³ıÊ§°Ü£¬Çë¼ì²éÄãÌá½»µÄÎïÆ·ÊÇ²»ÊÇÉÏËøÁË¡£"
+				strText = "åˆ é™¤å¤±è´¥ï¼Œè¯·æ£€æŸ¥ä½ æäº¤çš„ç‰©å“æ˜¯ä¸æ˜¯ä¸Šé”äº†ã€‚"
 				AddText(sceneId,strText);
 			EndEvent(sceneId)
 			DispatchMissionTips(sceneId,selfId)
@@ -210,7 +210,7 @@ function x212220_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 		local ret1 = LuaFnDelAvailableItem(sceneId,selfId, stone2.id, stone2.num)
 		if ret1 < 1  then
 			BeginEvent(sceneId)
-				strText = "É¾³ıÊ§°Ü£¬Çë¼ì²éÄãÌá½»µÄÎïÆ·ÊÇ²»ÊÇÉÏËøÁË¡£"
+				strText = "åˆ é™¤å¤±è´¥ï¼Œè¯·æ£€æŸ¥ä½ æäº¤çš„ç‰©å“æ˜¯ä¸æ˜¯ä¸Šé”äº†ã€‚"
 				AddText(sceneId,strText);
 			EndEvent(sceneId)
 			DispatchMissionTips(sceneId,selfId)
@@ -222,7 +222,7 @@ function x212220_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 		local ret1 = LuaFnDelAvailableItem(sceneId,selfId, stone.id, BangdingNum)
 		if ret1 < 1  then
 			BeginEvent(sceneId)
-				strText = "É¾³ıÊ§°Ü£¬Çë¼ì²éÄãÌá½»µÄÎïÆ·ÊÇ²»ÊÇÉÏËøÁË¡£"
+				strText = "åˆ é™¤å¤±è´¥ï¼Œè¯·æ£€æŸ¥ä½ æäº¤çš„ç‰©å“æ˜¯ä¸æ˜¯ä¸Šé”äº†ã€‚"
 				AddText(sceneId,strText);
 			EndEvent(sceneId)
 			DispatchMissionTips(sceneId,selfId)
@@ -230,12 +230,12 @@ function x212220_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 		end
 		logNum1 = BangdingNum;
 		
-		--É¾Ã»°ó¶¨µÄ
+		--åˆ æ²¡ç»‘å®šçš„
 		local Delete = stone.num - BangdingNum;
 		ret1 = LuaFnDelAvailableItem(sceneId,selfId, stone2.id, Delete)
 		if ret1 < 1  then
 			BeginEvent(sceneId)
-				strText = "É¾³ıÊ§°Ü£¬Çë¼ì²éÄãÌá½»µÄÎïÆ·ÊÇ²»ÊÇÉÏËøÁË¡£"
+				strText = "åˆ é™¤å¤±è´¥ï¼Œè¯·æ£€æŸ¥ä½ æäº¤çš„ç‰©å“æ˜¯ä¸æ˜¯ä¸Šé”äº†ã€‚"
 				AddText(sceneId,strText);
 			EndEvent(sceneId)
 			DispatchMissionTips(sceneId,selfId)
@@ -244,29 +244,29 @@ function x212220_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 		logNum2 = Delete;
 	end
 	
-	-- ¸ø½±Àø
+	-- ç»™å¥–åŠ±
 	AddItemListToHuman(sceneId,selfId)
 
-	-- ¼ÇÂ¼Log
+	-- è®°å½•Log
 	LuaFnAuditYanXuanYuExchange(sceneId, selfId, stone.id, logNum1, item.id)
 	LuaFnAuditYanXuanYuExchange(sceneId, selfId, stone2.id, logNum2, item.id)
 	
-	--¶Ò»»³É¹¦£¬²¥·ÅÌØĞ§
+	--å…‘æ¢æˆåŠŸï¼Œæ’­æ”¾ç‰¹æ•ˆ
 	LuaFnSendSpecificImpactToUnit(sceneId,selfId,selfId,selfId,18,0)
 	
-	-- ·¢ÊÀ½ç¹«¸æ
+	-- å‘ä¸–ç•Œå…¬å‘Š
 	local szItem = GetItemTransfer(sceneId,selfId,0)
 	local randMessage = random(3);
 
 	if randMessage == 1 then
-   	message = format("#YÄÂµº#P°Ñ±Ç×Ó´Õµ½#W#{_INFOUSR%s}#P´øÀ´µÄ#YÑàÏÒÓñ#PÅÔÉîÎüÒ»¿ÚÆø¡£Æ¬¿ÌºóµãÍ·µÀ£ºÒ»¼¶»õ£¬Õâ¸ö#{_INFOMSG%s}#P¹éÄãÁË¡£", 
+   	message = format("#Yç©†å²›#PæŠŠé¼»å­å‡‘åˆ°#W#{_INFOUSR%s}#På¸¦æ¥çš„#Yç‡•å¼¦ç‰#Pæ—æ·±å¸ä¸€å£æ°”ã€‚ç‰‡åˆ»åç‚¹å¤´é“ï¼šä¸€çº§è´§ï¼Œè¿™ä¸ª#{_INFOMSG%s}#På½’ä½ äº†ã€‚", 
    										GetName(sceneId, selfId), szItem);
 
 	elseif randMessage == 2 then		
-		message = format("#YÄÂµº#PÏò#W#{_INFOUSR%s}#P´øÀ´µÄ#YÑàÏÒÓñ#P´µÁË¿ÚÆø£¬ÔÚ¶úÅÔÇãÌıºóµãÍ·µÀ£º´¿¶È²»´í£¬Õâ¸ö#{_INFOMSG%s}#P¹éÄãÁË¡£", 
+		message = format("#Yç©†å²›#På‘#W#{_INFOUSR%s}#På¸¦æ¥çš„#Yç‡•å¼¦ç‰#På¹äº†å£æ°”ï¼Œåœ¨è€³æ—å€¾å¬åç‚¹å¤´é“ï¼šçº¯åº¦ä¸é”™ï¼Œè¿™ä¸ª#{_INFOMSG%s}#På½’ä½ äº†ã€‚", 
 											GetName(sceneId, selfId), szItem);
 	else
-		message = format("#YÄÂµº#PÄÃ×Å#W#{_INFOUSR%s}#P´øÀ´µÄ#YÑàÏÒÓñ#P£¬¶Ô×ÅÑô¹â×ĞÏ¸¿´ÁËÆ¬¿Ì£¬µãÍ·µÀ£ºÊÇÕæµÄ£¬Õâ¸ö#{_INFOMSG%s}#P¹éÄãÁË¡£", 
+		message = format("#Yç©†å²›#Pæ‹¿ç€#W#{_INFOUSR%s}#På¸¦æ¥çš„#Yç‡•å¼¦ç‰#Pï¼Œå¯¹ç€é˜³å…‰ä»”ç»†çœ‹äº†ç‰‡åˆ»ï¼Œç‚¹å¤´é“ï¼šæ˜¯çœŸçš„ï¼Œè¿™ä¸ª#{_INFOMSG%s}#På½’ä½ äº†ã€‚", 
 											GetName(sceneId, selfId), szItem);
 	end
 	
@@ -276,25 +276,25 @@ function x212220_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 end
 
 --**********************************
---É±ËÀ¹ÖÎï»òÍæ¼Ò
+--æ€æ­»æ€ªç‰©æˆ–ç©å®¶
 --**********************************
 function x212220_OnKillObject( sceneId, selfId, objdataId ,objId )
 end
 
 --**********************************
---½øÈëÇøÓòÊÂ¼ş
+--è¿›å…¥åŒºåŸŸäº‹ä»¶
 --**********************************
 function x212220_OnEnterArea( sceneId, selfId, zoneId )
 end
 
 --**********************************
---µÀ¾ß¸Ä±ä
+--é“å…·æ”¹å˜
 --**********************************
 function x212220_OnItemChanged( sceneId, selfId, itemdataId )
 end
 
 --**********************************
---É±ËÀBOSSÊ°È¡×°±¸µÄÊÀ½ç¹«¸æ
+--æ€æ­»BOSSæ‹¾å–è£…å¤‡çš„ä¸–ç•Œå…¬å‘Š
 --**********************************
 function x212220_ItemBulletin( sceneId, selfId, itemId, bagidx, bGem )
 	local bHaveItem = 0
@@ -322,14 +322,14 @@ function x212220_ItemBulletin( sceneId, selfId, itemId, bagidx, bGem )
 	
 	
 	if randMessage == 1 then
-   	message = format("#{_INFOUSR%s}#PÔÚ#G%s#PÒÔÒ»¼Ç¡°ÎÑĞÄ½Å¡±ÌßÖĞ#Y%s#PÍÈ²¿£¬´ó»ñÈ«Ê¤£¬µÃµ½ÁËÒ»¼ş#{_INFOMSG%s}¡£", 
+   	message = format("#{_INFOUSR%s}#Påœ¨#G%s#Pä»¥ä¸€è®°â€œçªå¿ƒè„šâ€è¸¢ä¸­#Y%s#Pè…¿éƒ¨ï¼Œå¤§è·å…¨èƒœï¼Œå¾—åˆ°äº†ä¸€ä»¶#{_INFOMSG%s}ã€‚", 
    										GetName(sceneId, selfId), GetSceneName(sceneId), bossitem.boss, szItem );
 
 	elseif randMessage == 2 then		
-		message = format("#{_INFOUSR%s}#PÔÚ#G%s#PÒ»ÕĞ¡°ÁùÂöÉñ½£¡±»÷µ¹#Y%s#P£¬Ê°Æğ#Y%s#PµôÏÂµÄ#{_INFOMSG%s}#P´óĞ¦¶øÈ¥¡£", 
+		message = format("#{_INFOUSR%s}#Påœ¨#G%s#Pä¸€æ‹›â€œå…­è„‰ç¥å‰‘â€å‡»å€’#Y%s#Pï¼Œæ‹¾èµ·#Y%s#Pæ‰ä¸‹çš„#{_INFOMSG%s}#På¤§ç¬‘è€Œå»ã€‚", 
 											GetName(sceneId, selfId), GetSceneName(sceneId), bossitem.boss, bossitem.boss, szItem);
 	else
-		message = format("#Y%s#PÔÚ#G%s#P±»#W#{_INFOUSR%s}#P´ÓÉíºóÒ»¼ÇÃÍÈ­´òÉË£¬Ö»µÃ½»³öÒ»¼ş#{_INFOMSG%s}#PÇóÈÄ¡£", 
+		message = format("#Y%s#Påœ¨#G%s#Pè¢«#W#{_INFOUSR%s}#Pä»èº«åä¸€è®°çŒ›æ‹³æ‰“ä¼¤ï¼Œåªå¾—äº¤å‡ºä¸€ä»¶#{_INFOMSG%s}#Pæ±‚é¥¶ã€‚", 
 											bossitem.boss, GetSceneName(sceneId), GetName(sceneId, selfId), szItem);
 	end
 	

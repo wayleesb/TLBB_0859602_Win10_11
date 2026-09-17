@@ -30,10 +30,10 @@ function Examination_OnEvent(event)
 			return
 		end
 		
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ı£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æœå’ŒNPCçš„è·ç¦»å¤§äºä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if(arg1 == "distance" and tonumber(arg2)>MAX_OBJ_DISTANCE or arg1=="destroy") then
 			
-			--È¡Ïû¹ØĞÄ
+			--å–æ¶ˆå…³å¿ƒ
 			Examination_Cancel_Clicked()
 		end
 	end
@@ -46,11 +46,11 @@ function Examination_OnShown()
 
 	if UI_ID == 1 then
 
-			Examination_Text : SetText("#r  ÔõÃ´£¿ÏëÒªÀ´²Î¼Ó¿Æ¾Ù¿¼ÊÔ°¡£¿ÔÚÕâ¸öÒÔÎäÎªÖ÷µÄÄê´ú£¬ÎÒÃÇÎÄÈËµÄÈÕ×Ó²»ºÃ¹ı°¡¡¤¡¤¡¤¡¤¡¤¡¤ËãÁË£¬²»ËµÕâĞ©ÁË£¬²Î¼Ó¿Æ¾ÙÒª½»#{_EXCHG"..need_money.."}±¨Ãû·Ñ¡£");
+			Examination_Text : SetText("#r  æ€ä¹ˆï¼Ÿæƒ³è¦æ¥å‚åŠ ç§‘ä¸¾è€ƒè¯•å•Šï¼Ÿåœ¨è¿™ä¸ªä»¥æ­¦ä¸ºä¸»çš„å¹´ä»£ï¼Œæˆ‘ä»¬æ–‡äººçš„æ—¥å­ä¸å¥½è¿‡å•ŠÂ·Â·Â·Â·Â·Â·ç®—äº†ï¼Œä¸è¯´è¿™äº›äº†ï¼Œå‚åŠ ç§‘ä¸¾è¦äº¤#{_EXCHG"..need_money.."}æŠ¥åè´¹ã€‚");
 			Examination_Button_1 : Show();
-			Examination_Button_1 : SetText("ºÃ°É£¬ÕâÀïÊÇ±¨Ãû·Ñ¡£")
+			Examination_Button_1 : SetText("å¥½å§ï¼Œè¿™é‡Œæ˜¯æŠ¥åè´¹ã€‚")
 			Examination_Button_2 : Show();
-			Examination_Button_2 : SetText("ÎÒÔÙÏëÏë¡¤¡¤¡¤¡¤¡¤¡¤")
+			Examination_Button_2 : SetText("æˆ‘å†æƒ³æƒ³Â·Â·Â·Â·Â·Â·")
 			Examination_Button_3 : Hide();
 			Examination_Button_4 : Hide();
 			Examination_Button_5 : Hide();
@@ -61,12 +61,12 @@ function Examination_OnShown()
 			Examination_Number_Text : Hide()
 			Examination_Fault_Text : Hide()
 			
-			Examination_Pageheader : SetText("#gFF0FA0¿Æ¾Ù¿¼ÊÔ"..Get_XParam_STR(0));
+			Examination_Pageheader : SetText("#gFF0FA0ç§‘ä¸¾è€ƒè¯•"..Get_XParam_STR(0));
 			
 			local xx = Get_XParam_INT(1);
 			objCared = DataPool : GetNPCIDByServerID(xx);
 			if objCared == -1 then
-					PushDebugMessage("ServerÊı¾İÎÊÌâ£¡");
+					PushDebugMessage("Serveræ•°æ®é—®é¢˜ï¼");
 					return;
 			end
 			BeginCareObject_Examination(objCared)
@@ -79,19 +79,19 @@ function Examination_OnShown()
 			Question_Sequence = Get_XParam_INT(1)
 
 			local NPCName =	Target:GetDialogNpcName();
-			Examination_NPCName_Text: SetText(NPCName.."(¹²10Ìâ)")
+			Examination_NPCName_Text: SetText(NPCName.."(å…±10é¢˜)")
 			Examination_NPCName_Text:Show()
-			Examination_Pageheader : SetText("#gFF0FA0¿Æ¾Ù¿¼ÊÔ");
+			Examination_Pageheader : SetText("#gFF0FA0ç§‘ä¸¾è€ƒè¯•");
 			Examination_Pageheader : Show()
-			Examination_Text : SetText("" .. Get_XParam_STR(0) .. "#rÏÂÁĞ´ğ°¸ÖĞÖ»ÓĞ1¸öÊÇÕıÈ·µÄ£¬ÇëÑ¡Ôñ");
+			Examination_Text : SetText("" .. Get_XParam_STR(0) .. "#rä¸‹åˆ—ç­”æ¡ˆä¸­åªæœ‰1ä¸ªæ˜¯æ­£ç¡®çš„ï¼Œè¯·é€‰æ‹©");
 			Examination_Text : Show();
-			Examination_Type_Text : SetText("ÀàĞÍ£º"..Get_XParam_STR(7))
+			Examination_Type_Text : SetText("ç±»å‹ï¼š"..Get_XParam_STR(7))
 			Examination_Type_Text : Show();
-			Examination_Number_Text : SetText("µÚ"..Question_Sequence.."Ìâ")
+			Examination_Number_Text : SetText("ç¬¬"..Question_Sequence.."é¢˜")
 			Examination_Number_Text : Show();
 			--Examination_StopWatch : SetProperty("Timer","30");
 			--Examination_StopWatch : Show();
-			Examination_Fault_Text : SetText("Ê£Óà´ğ´í´ÎÊı     "..Get_XParam_INT(10))
+			Examination_Fault_Text : SetText("å‰©ä½™ç­”é”™æ¬¡æ•°     "..Get_XParam_INT(10))
 			Examination_Fault_Text : Show()
 											
 			for i=1,3 do
@@ -106,14 +106,14 @@ function Examination_OnShown()
 
 			if Get_XParam_INT(11) == 0 then			
 				Examination_Buttons[4] : Show();
-				Examination_Buttons[4] : SetText("#cFFCC99»ßÂ¸¿¼¹Ù")
+				Examination_Buttons[4] : SetText("#cFFCC99è´¿èµ‚è€ƒå®˜")
 			else
 				Examination_Buttons[4] : Hide();
 			end
 
 			if Get_XParam_INT(12) == 0 then	
 				Examination_Buttons[5] : Show();
-				Examination_Buttons[5] : SetText("#cFFCC99ÓÃÎÒµÄ¹¦·òËµ»°")
+				Examination_Buttons[5] : SetText("#cFFCC99ç”¨æˆ‘çš„åŠŸå¤«è¯´è¯")
 			else
 				Examination_Buttons[5] : Hide();
 			end
@@ -129,11 +129,11 @@ function Examination_OnShown()
 			this:Show();
 	elseif UI_ID == 3 then
 
-			Examination_Pageheader : SetText("#gFF0FA0¿Æ¾Ù¿¼ÊÔ");
-			Examination_Text : SetText("Õæ¿ÉÏ§£¬ÄãµÄ´ğ°¸ÊÇ´íÎóµÄ¡£±ğ»ÒĞÄ£¬ÏÂ´ÎÔÙÅ¬Á¦ßÏ¡£");
+			Examination_Pageheader : SetText("#gFF0FA0ç§‘ä¸¾è€ƒè¯•");
+			Examination_Text : SetText("çœŸå¯æƒœï¼Œä½ çš„ç­”æ¡ˆæ˜¯é”™è¯¯çš„ã€‚åˆ«ç°å¿ƒï¼Œä¸‹æ¬¡å†åŠªåŠ›å‘¦ã€‚");
 			Question_Sequence = 0;
 			Examination_Button_1 : Show();
-			Examination_Button_1 : SetText("ÖØĞÂ¿ªÊ¼");
+			Examination_Button_1 : SetText("é‡æ–°å¼€å§‹");
 			Examination_Button_2 : Hide();
 			Examination_Button_3 : Hide();
 			Examination_Button_4 : Hide();
@@ -149,9 +149,9 @@ function Examination_OnShown()
 			this:Show();
 		elseif UI_ID == 4 then
 
-			Examination_Pageheader : SetText("#gFF0FA0¿Æ¾Ù¿¼ÊÔ");
-			Examination_Text : SetText("¹§Ï²Äã´ğ¶ÔÁËÈ«²¿ÎÊÌâ£¡#rÏÂ´Î±ğÍü¼Ç¼ÌĞø²Î¼Ó^_^");
-			Examination_Button_2 : SetText("ÔÙ¼û")
+			Examination_Pageheader : SetText("#gFF0FA0ç§‘ä¸¾è€ƒè¯•");
+			Examination_Text : SetText("æ­å–œä½ ç­”å¯¹äº†å…¨éƒ¨é—®é¢˜ï¼#rä¸‹æ¬¡åˆ«å¿˜è®°ç»§ç»­å‚åŠ ^_^");
+			Examination_Button_2 : SetText("å†è§")
 			Examination_Button_2 : Show();
 			Examination_Button_1 : Hide();
 			Examination_Button_3 : Hide();
@@ -269,9 +269,9 @@ function Examination_Cancel_Clicked()
 end
 
 --=========================================================
---¿ªÊ¼¹ØĞÄNPC£¬
---ÔÚ¿ªÊ¼¹ØĞÄÖ®Ç°ĞèÒªÏÈÈ·¶¨Õâ¸ö½çÃæÊÇ²»ÊÇÒÑ¾­ÓĞ¡°¹ØĞÄ¡±µÄNPC£¬
---Èç¹ûÓĞµÄ»°£¬ÏÈÈ¡ÏûÒÑ¾­ÓĞµÄ¡°¹ØĞÄ¡±
+--å¼€å§‹å…³å¿ƒNPCï¼Œ
+--åœ¨å¼€å§‹å…³å¿ƒä¹‹å‰éœ€è¦å…ˆç¡®å®šè¿™ä¸ªç•Œé¢æ˜¯ä¸æ˜¯å·²ç»æœ‰â€œå…³å¿ƒâ€çš„NPCï¼Œ
+--å¦‚æœæœ‰çš„è¯ï¼Œå…ˆå–æ¶ˆå·²ç»æœ‰çš„â€œå…³å¿ƒâ€
 --=========================================================
 function BeginCareObject_Examination(objCaredId)
 	g_Object = objCaredId;
@@ -279,7 +279,7 @@ function BeginCareObject_Examination(objCaredId)
 end
 
 --=========================================================
---Í£Ö¹¶ÔÄ³NPCµÄ¹ØĞÄ
+--åœæ­¢å¯¹æŸNPCçš„å…³å¿ƒ
 --=========================================================
 function StopCareObject_Examination(objCaredId)
 	this:CareObject(objCaredId, 0, "Examination");
@@ -287,7 +287,7 @@ function StopCareObject_Examination(objCaredId)
 
 end
 
---¼ÇÊ±µ½0ºó
+--è®°æ—¶åˆ°0å
 function Examination_OverTime()
 --	Clear_XSCRIPT();
 --			Set_XSCRIPT_Function_Name("OnOverTime");
@@ -296,7 +296,7 @@ function Examination_OverTime()
 --	Send_XSCRIPT();
 end
 
---¼ÇÊ±µ½0ºó
+--è®°æ—¶åˆ°0å
 function Examination_TimeOut()
 		Examination_Button_1:Enable()
 		Examination_Button_2:Enable()

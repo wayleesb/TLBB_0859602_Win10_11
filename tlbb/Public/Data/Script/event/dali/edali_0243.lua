@@ -1,35 +1,35 @@
 -- 210243
--- Òø°¨Ñ©Ô­¶Ò»»Ê±×°
+-- é“¶çš‘é›ªåŸå…‘æ¢æ—¶è£…
 
 x210243_g_ScriptId = 210243
 
 x210243_g_ItemId = {
-										{mp=0,Item=10124009,mpname="ÉÙÁÖÅÉ"},
-										{mp=1,Item=10124010,mpname="Ã÷½Ì"},
-										{mp=2,Item=10124011,mpname="Ø¤°ï"},
-										{mp=4,Item=10124012,mpname="¶ëáÒÅÉ"},
-										{mp=3,Item=10124013,mpname="Îäµ±ÅÉ"},
-										{mp=5,Item=10124014,mpname="ĞÇËŞÅÉ"},
-										{mp=7,Item=10124015,mpname="ÌìÉ½ÅÉ"},
-										{mp=8,Item=10124016,mpname="åĞÒ£ÅÉ"},
-										{mp=6,Item=10124017,mpname="ÌìÁúÅÉ"},
+										{mp=0,Item=10124009,mpname="å°‘æ—æ´¾"},
+										{mp=1,Item=10124010,mpname="æ˜æ•™"},
+										{mp=2,Item=10124011,mpname="ä¸å¸®"},
+										{mp=4,Item=10124012,mpname="å³¨åµ‹æ´¾"},
+										{mp=3,Item=10124013,mpname="æ­¦å½“æ´¾"},
+										{mp=5,Item=10124014,mpname="æ˜Ÿå®¿æ´¾"},
+										{mp=7,Item=10124015,mpname="å¤©å±±æ´¾"},
+										{mp=8,Item=10124016,mpname="é€é¥æ´¾"},
+										{mp=6,Item=10124017,mpname="å¤©é¾™æ´¾"},
 										{mp=9,Item=0},
 }
 
-x210243_g_Stone = {id=30505122, num=20} --°ó¶¨µÄ
-x210243_g_Stone2 = {id=30505135, num=20} --Ã»°ó¶¨µÄ
+x210243_g_Stone = {id=30505122, num=20} --ç»‘å®šçš„
+x210243_g_Stone2 = {id=30505135, num=20} --æ²¡ç»‘å®šçš„
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x210243_OnDefaultEvent( sceneId, selfId, targetId )
 	
 	if GetNumText() == 1   then
 		BeginEvent(sceneId)
-			AddText(sceneId, "#YÁìÈ¡ÃÅÅÉ¸ß¼¶Ê±×°" );
-			AddText(sceneId, "  ÓĞÒ»Î»ÂÃĞĞ¼ÒÔø¾­¾ªÆæµÄ·¢ÏÖ£¬Òø°¨Ñ©Ô­ÉÏµÄÒ»Ğ©¹ÖÎïÉíÉÏ¿ÉÄÜĞ¯´øÓĞÉñÃØµÄ#Y¹ÖÎïÈÕ¼Ç±¾#W¡£Èç¹ûÄãÄÜ°ïËûÕÒÀ´20±¾#Y¹ÖÎïÈÕ¼Ç±¾#W£¬¾Í¿ÉÒÔµÃµ½ËûÔùÓèµÄÒ»¼şÃÅÅÉ¸ß¼¶Ê±×°¡£#r    ÔõÃ´Ñù£¬Äã´òËã½»»»Âğ£¿" );
-			AddNumText(sceneId, x210243_g_ScriptId,"¶Ò»»", 8, 3);
-			AddNumText(sceneId, x210243_g_ScriptId,"È¡Ïû", 8, 4);
+			AddText(sceneId, "#Yé¢†å–é—¨æ´¾é«˜çº§æ—¶è£…" );
+			AddText(sceneId, "  æœ‰ä¸€ä½æ—…è¡Œå®¶æ›¾ç»æƒŠå¥‡çš„å‘ç°ï¼Œé“¶çš‘é›ªåŸä¸Šçš„ä¸€äº›æ€ªç‰©èº«ä¸Šå¯èƒ½æºå¸¦æœ‰ç¥ç§˜çš„#Yæ€ªç‰©æ—¥è®°æœ¬#Wã€‚å¦‚æœä½ èƒ½å¸®ä»–æ‰¾æ¥20æœ¬#Yæ€ªç‰©æ—¥è®°æœ¬#Wï¼Œå°±å¯ä»¥å¾—åˆ°ä»–èµ äºˆçš„ä¸€ä»¶é—¨æ´¾é«˜çº§æ—¶è£…ã€‚#r    æ€ä¹ˆæ ·ï¼Œä½ æ‰“ç®—äº¤æ¢å—ï¼Ÿ" );
+			AddNumText(sceneId, x210243_g_ScriptId,"å…‘æ¢", 8, 3);
+			AddNumText(sceneId, x210243_g_ScriptId,"å–æ¶ˆ", 8, 4);
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 		return
@@ -43,17 +43,17 @@ function x210243_OnDefaultEvent( sceneId, selfId, targetId )
 	end
 	
 	if GetNumText() == 3   then
-		-- 0£¬¿´Íæ¼ÒÊÇ²»ÊÇÓĞÕıÈ·µÄÃÅÅÉ
+		-- 0ï¼Œçœ‹ç©å®¶æ˜¯ä¸æ˜¯æœ‰æ­£ç¡®çš„é—¨æ´¾
 		local nMenpai = GetMenPai(sceneId,selfId)
 		if nMenpai<0 or nMenpai>8   then
 			BeginEvent(sceneId)
-				AddText(sceneId, "  Äã»¹Ã»ÓĞ¼ÓÈëÒ»¸öÃÅÅÉ£¬Ö»ÓĞ¾Å´óÃÅÅÉµÄµÜ×Ó²ÅÄÜ¶Ò»»ÃÅÅÉ¸ß¼¶Ê±×°°¡¡£");
+				AddText(sceneId, "  ä½ è¿˜æ²¡æœ‰åŠ å…¥ä¸€ä¸ªé—¨æ´¾ï¼Œåªæœ‰ä¹å¤§é—¨æ´¾çš„å¼Ÿå­æ‰èƒ½å…‘æ¢é—¨æ´¾é«˜çº§æ—¶è£…å•Šã€‚");
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,targetId)
 			return
 		end
 		
-		-- 1£¬¼ì²âÍæ¼ÒÉíÉÏÊÇ²»ÊÇÓĞ×ã¹»µÄÊ¯Í·
+		-- 1ï¼Œæ£€æµ‹ç©å®¶èº«ä¸Šæ˜¯ä¸æ˜¯æœ‰è¶³å¤Ÿçš„çŸ³å¤´
 		local HaveAllItem = 1
 		if (GetItemCount(sceneId, selfId, x210243_g_Stone.id) + GetItemCount(sceneId, selfId, x210243_g_Stone2.id)) < x210243_g_Stone.num   then
 			HaveAllItem = 0
@@ -62,13 +62,13 @@ function x210243_OnDefaultEvent( sceneId, selfId, targetId )
 		
 		if HaveAllItem == 0  then
 			BeginEvent(sceneId)
-				AddText(sceneId, "  ÄãĞèÒªÄÃ20¸ö¹ÖÎïÈÕ¼Ç±¾²ÅÄÜ¶Ò»»ÃÅÅÉ¸ß¼¶Ê±×°¡£" );
+				AddText(sceneId, "  ä½ éœ€è¦æ‹¿20ä¸ªæ€ªç‰©æ—¥è®°æœ¬æ‰èƒ½å…‘æ¢é—¨æ´¾é«˜çº§æ—¶è£…ã€‚" );
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,targetId)
 			return
 		end
 		
-		-- 2£¬¼ì²âÍæ¼ÒµÄÕâÌ×ËéÆ¬ÊÇ²»ÊÇ¶¼ÄÜ¹»É¾³ı
+		-- 2ï¼Œæ£€æµ‹ç©å®¶çš„è¿™å¥—ç¢ç‰‡æ˜¯ä¸æ˜¯éƒ½èƒ½å¤Ÿåˆ é™¤
 		local AllItemCanDelete = 1
 		local Stone1_Num = LuaFnGetAvailableItemCount(sceneId, selfId, x210243_g_Stone.id)
 		local Stone2_Num = LuaFnGetAvailableItemCount(sceneId, selfId, x210243_g_Stone2.id)
@@ -79,13 +79,13 @@ function x210243_OnDefaultEvent( sceneId, selfId, targetId )
 		
 		if AllItemCanDelete == 0  then
 			BeginEvent(sceneId)
-				AddText(sceneId, "    ¿Û³ıÄãÉíÉÏµÄÎïÆ·Ê§°Ü£¬Çë¼ì²âÄãÊÇ·ñ¶ÔÎïÆ·¼ÓËø£¬»òÕßÎïÆ·´¦ÓÚ½»Ò××´Ì¬¡£" );
+				AddText(sceneId, "    æ‰£é™¤ä½ èº«ä¸Šçš„ç‰©å“å¤±è´¥ï¼Œè¯·æ£€æµ‹ä½ æ˜¯å¦å¯¹ç‰©å“åŠ é”ï¼Œæˆ–è€…ç‰©å“å¤„äºäº¤æ˜“çŠ¶æ€ã€‚" );
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,targetId)
 			return
 		end
 		
-		--¿Û³ıÎïÆ·Ç°»ñµÃÎïÆ·
+		--æ‰£é™¤ç‰©å“å‰è·å¾—ç‰©å“
 		local	bagpos = -1
 		if Stone1_Num > 0 then
 		  bagpos = GetBagPosByItemSn(sceneId, selfId, x210243_g_Stone.id)
@@ -99,7 +99,7 @@ function x210243_OnDefaultEvent( sceneId, selfId, targetId )
 		end
 
 		
-		-- 3£¬¼ì²âÍæ¼ÒÉíÉÏÊÇ²»ÊÇÓĞ¿Õ¼ä·Å½±Àø
+		-- 3ï¼Œæ£€æµ‹ç©å®¶èº«ä¸Šæ˜¯ä¸æ˜¯æœ‰ç©ºé—´æ”¾å¥–åŠ±
 		local nItemId = 0
 		local nMenpaiName = ""
 		for i=1, 10  do
@@ -119,25 +119,25 @@ function x210243_OnDefaultEvent( sceneId, selfId, targetId )
 		
 		local delret = 1
 		if ret == 1  then
-		--¿ªÊ¼¿Û³ıÎïÆ·
+		--å¼€å§‹æ‰£é™¤ç‰©å“
 			local DeleteNum = LuaFnGetAvailableItemCount(sceneId, selfId, x210243_g_Stone.id);
 			if(DeleteNum >= x210243_g_Stone.num) then
-			--¿Û³ı°ó¶¨µÄ
+			--æ‰£é™¤ç»‘å®šçš„
 				if LuaFnDelAvailableItem(sceneId, selfId, x210243_g_Stone.id, x210243_g_Stone.num) == 0   then
 					delret = 0
 				end
 			elseif(DeleteNum == 0) then
-			--¿Û³ıÃ»ÓĞ°ó¶¨µÄ
+			--æ‰£é™¤æ²¡æœ‰ç»‘å®šçš„
 				if LuaFnDelAvailableItem(sceneId, selfId, x210243_g_Stone2.id, x210243_g_Stone.num) == 0   then
 					delret = 0
 				end
 			else
-			--ÏÈ¿Û³ıÃ»°ó¶¨µÄÔÙ¿Û³ı°ó¶¨µÄ
+			--å…ˆæ‰£é™¤æ²¡ç»‘å®šçš„å†æ‰£é™¤ç»‘å®šçš„
 				if LuaFnDelAvailableItem(sceneId, selfId, x210243_g_Stone.id, DeleteNum) == 0   then
 					delret = 0
 				end
 				
-				DeleteNum = x210243_g_Stone.num - DeleteNum;  --»¹ÒªÉ¾³ıµÄ
+				DeleteNum = x210243_g_Stone.num - DeleteNum;  --è¿˜è¦åˆ é™¤çš„
 				if LuaFnDelAvailableItem(sceneId, selfId, x210243_g_Stone2.id, DeleteNum) == 0   then
 					delret = 0
 				end
@@ -148,27 +148,27 @@ function x210243_OnDefaultEvent( sceneId, selfId, targetId )
 				AddItemListToHuman(sceneId,selfId)
 				LuaFnSendSpecificImpactToUnit(sceneId,selfId,selfId,selfId,18,1000)
 				
-				-- ÌáÊ¾Íæ¼Ò
+				-- æç¤ºç©å®¶
 				BeginEvent(sceneId)
-					AddText(sceneId, "Äú»ñµÃÁË" .. nMenpaiName .. "µÄ¸ß¼¶ÃÅÅÉÌ××°Ò»¼ş¡£" );
+					AddText(sceneId, "æ‚¨è·å¾—äº†" .. nMenpaiName .. "çš„é«˜çº§é—¨æ´¾å¥—è£…ä¸€ä»¶ã€‚" );
 				EndEvent(sceneId)
 				DispatchMissionTips(sceneId,selfId)
 				
-				-- ·¢ÊÀ½ç¹«¸æ
+				-- å‘ä¸–ç•Œå…¬å‘Š
 				local str = ""
 				local rand = random(3)
 				
 				if rand == 1  then
-					str = format("#PÍ»È»£¡Ìì»èµØ°µ£¬ÖÚÈË½Ô²»ÖªËù´ë£¬Ô­À´ÊÇ#{_INFOUSR%s}Ê¹ÓÃ#G20±¾#{_INFOMSG%s}#P»»È¡µ½ÁËÎŞ³öÆäÓÒÏÛÉ·ÅÔÈËµÄ#G %s¸ß¼¶ÃÅÅÉÊ±×°#P£¡", GetName(sceneId,selfId), GemItemInfo, nMenpaiName)
+					str = format("#Pçªç„¶ï¼å¤©æ˜åœ°æš—ï¼Œä¼—äººçš†ä¸çŸ¥æ‰€æªï¼ŒåŸæ¥æ˜¯#{_INFOUSR%s}ä½¿ç”¨#G20æœ¬#{_INFOMSG%s}#Pæ¢å–åˆ°äº†æ— å‡ºå…¶å³ç¾¡ç…æ—äººçš„#G %sé«˜çº§é—¨æ´¾æ—¶è£…#Pï¼", GetName(sceneId,selfId), GemItemInfo, nMenpaiName)
 				elseif rand == 2  then
-					str = format("#PÍÛÑ½£¡#{_INFOUSR%s}Ê¹ÓÃ#G20±¾#{_INFOMSG%s}#P»»µ½ÁË#G %s¸ß¼¶ÃÅÅÉÊ±×°#P£¬´©ÉÏºóÕæÊÇ¾ªÈËµÄÒ«ÑÛ£¡", GetName(sceneId,selfId), GemItemInfo, nMenpaiName)
+					str = format("#På“‡å‘€ï¼#{_INFOUSR%s}ä½¿ç”¨#G20æœ¬#{_INFOMSG%s}#Pæ¢åˆ°äº†#G %sé«˜çº§é—¨æ´¾æ—¶è£…#Pï¼Œç©¿ä¸ŠåçœŸæ˜¯æƒŠäººçš„è€€çœ¼ï¼", GetName(sceneId,selfId), GemItemInfo, nMenpaiName)
 				else
-					str = format("#P#{_INFOUSR%s}Ê¹ÓÃ#G20±¾#{_INFOMSG%s}#P»»µ½ÁË#G %s¸ß¼¶ÃÅÅÉÊ±×°#P£¡¹§Ï²£¡¹§Ï²£¡ÔÙ¹§Ï²£¡", GetName(sceneId,selfId), GemItemInfo, nMenpaiName)
+					str = format("#P#{_INFOUSR%s}ä½¿ç”¨#G20æœ¬#{_INFOMSG%s}#Pæ¢åˆ°äº†#G %sé«˜çº§é—¨æ´¾æ—¶è£…#Pï¼æ­å–œï¼æ­å–œï¼å†æ­å–œï¼", GetName(sceneId,selfId), GemItemInfo, nMenpaiName)
 				end
 				
 				BroadMsgByChatPipe(sceneId, selfId, str, 4)
 				
-				-- ¹Ø±Õ´°¿Ú
+				-- å…³é—­çª—å£
 				BeginUICommand(sceneId)
 				EndUICommand(sceneId)
 				DispatchUICommand(sceneId,selfId, 1000)
@@ -189,48 +189,48 @@ function x210243_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x210243_OnEnumerate( sceneId, selfId, targetId )
 	
-	AddNumText(sceneId, x210243_g_ScriptId,"ÁìÈ¡ÃÅÅÉ¸ß¼¶Ê±×°", 6, 1);
-	AddNumText(sceneId, x210243_g_ScriptId,"ÁìÈ¡¸ß¼¶ÃÅÅÉÊ±×°½éÉÜ", 0, 2);
+	AddNumText(sceneId, x210243_g_ScriptId,"é¢†å–é—¨æ´¾é«˜çº§æ—¶è£…", 6, 1);
+	AddNumText(sceneId, x210243_g_ScriptId,"é¢†å–é«˜çº§é—¨æ´¾æ—¶è£…ä»‹ç»", 0, 2);
 
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x210243_CheckAccept( sceneId, selfId )
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x210243_OnAccept( sceneId, selfId, targetId )
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x210243_OnAbandon( sceneId, selfId )
 end
 
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x210243_CheckSubmit( sceneId, selfId )
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x210243_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 end
 
 --**********************************
---½øÈëÇøÓòÊÂ¼ş
+--è¿›å…¥åŒºåŸŸäº‹ä»¶
 --**********************************
 function x210243_OnEnterZone( sceneId, selfId, zoneId )
 end

@@ -1,34 +1,34 @@
---Õäçç¸±±¾ÈÎÎñnpc
+--çç‘å‰¯æœ¬ä»»åŠ¡npc
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x000090_g_scriptId = 000090
 
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x000090_g_eventList={401001}
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x000090_UpdateEventList( sceneId, selfId,targetId )
 
 	BeginEvent(sceneId)
 	
-		AddNumText( sceneId, x000090_g_scriptId, "Æå¾Ö½éÉÜ", 11, 10 )
+		AddNumText( sceneId, x000090_g_scriptId, "æ£‹å±€ä»‹ç»", 11, 10 )
 	
 		if sceneId == 0 then
-			AddNumText( sceneId, x000090_g_scriptId, "½øÈëÂåÑôµÚÒ»ĞİÏ¢ÊÒ", 9, 20 )
-			AddNumText( sceneId, x000090_g_scriptId, "½øÈëÂåÑôµÚ¶şĞİÏ¢ÊÒ", 9, 21 )
-			AddNumText( sceneId, x000090_g_scriptId, "¹ØÓÚĞİÏ¢ÊÒ", 11, 30 )
+			AddNumText( sceneId, x000090_g_scriptId, "è¿›å…¥æ´›é˜³ç¬¬ä¸€ä¼‘æ¯å®¤", 9, 20 )
+			AddNumText( sceneId, x000090_g_scriptId, "è¿›å…¥æ´›é˜³ç¬¬äºŒä¼‘æ¯å®¤", 9, 21 )
+			AddNumText( sceneId, x000090_g_scriptId, "å…³äºä¼‘æ¯å®¤", 11, 30 )
 		elseif sceneId == 1 then
-			AddNumText( sceneId, x000090_g_scriptId, "½øÈëËÕÖİĞİÏ¢ÊÒ", 9, 22 )
-			AddNumText( sceneId, x000090_g_scriptId, "¹ØÓÚĞİÏ¢ÊÒ", 11, 31 )
+			AddNumText( sceneId, x000090_g_scriptId, "è¿›å…¥è‹å·ä¼‘æ¯å®¤", 9, 22 )
+			AddNumText( sceneId, x000090_g_scriptId, "å…³äºä¼‘æ¯å®¤", 11, 31 )
 		elseif sceneId == 2 then
-			AddNumText( sceneId, x000090_g_scriptId, "½øÈë´óÀíĞİÏ¢ÊÒ", 9, 23 )
-			AddNumText( sceneId, x000090_g_scriptId, "¹ØÓÚĞİÏ¢ÊÒ", 11, 32 )
+			AddNumText( sceneId, x000090_g_scriptId, "è¿›å…¥å¤§ç†ä¼‘æ¯å®¤", 9, 23 )
+			AddNumText( sceneId, x000090_g_scriptId, "å…³äºä¼‘æ¯å®¤", 11, 32 )
 		end
 
-		AddNumText( sceneId, x000090_g_scriptId, "ÈçºÎÔÚË¢ÆåÖĞ»ñµÃ¸ü¶àµÄ¾­Ñé", 11, 519 )
+		AddNumText( sceneId, x000090_g_scriptId, "å¦‚ä½•åœ¨åˆ·æ£‹ä¸­è·å¾—æ›´å¤šçš„ç»éªŒ", 11, 519 )
 		--[tx45411]AddNumText(sceneId, x000090_g_scriptId, "#{NSRQ_081110_2}", 11, 999); --zchw
 
 		for i, findId in x000090_g_eventList do
@@ -41,14 +41,14 @@ function x000090_UpdateEventList( sceneId, selfId,targetId )
 end
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x000090_OnDefaultEvent( sceneId, selfId,targetId )
 	x000090_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x000090_OnEventRequest( sceneId, selfId, targetId, eventId )
 
@@ -121,13 +121,13 @@ function x000090_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---ËÀÍöÊÂ¼ş
+--æ­»äº¡äº‹ä»¶
 --**********************************
 function x000090_OnDie( sceneId, selfId, killerId )
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔ½øÈëÆå¾ÖĞİÏ¢ÊÒ
+--æ£€æµ‹æ˜¯å¦å¯ä»¥è¿›å…¥æ£‹å±€ä¼‘æ¯å®¤
 --**********************************
 function x000090_CheckCanEnterRest( sceneId, selfId, targetId, s, x, y )
 
@@ -135,7 +135,7 @@ function x000090_CheckCanEnterRest( sceneId, selfId, targetId, s, x, y )
 
 		if LuaFnIsTeamLeader(sceneId, selfId) == 0 then
 			BeginEvent(sceneId)	
-				AddText( sceneId, "  Ö»ÓĞ¶Ó³¤²ÅÄÜ´øÁì¶ÓÓÑ½øÈëĞİÏ¢ÊÒ¡£" )
+				AddText( sceneId, "  åªæœ‰é˜Ÿé•¿æ‰èƒ½å¸¦é¢†é˜Ÿå‹è¿›å…¥ä¼‘æ¯å®¤ã€‚" )
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,targetId)
 			return
@@ -145,7 +145,7 @@ function x000090_CheckCanEnterRest( sceneId, selfId, targetId, s, x, y )
 		local nearMemberCount = GetNearTeamCount(sceneId, selfId)
 		if teamMemberCount ~= nearMemberCount then
 			BeginEvent(sceneId)	
-				AddText( sceneId, "  ÄãµÄ¶ÓÎéÖĞÓĞÈË²»ÔÚ¸½½ü¡£" )
+				AddText( sceneId, "  ä½ çš„é˜Ÿä¼ä¸­æœ‰äººä¸åœ¨é™„è¿‘ã€‚" )
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,targetId)
 			return

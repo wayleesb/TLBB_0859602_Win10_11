@@ -1,12 +1,12 @@
 --MisDescBegin
 x600050_g_ScriptId = 600050
-x600050_g_Name = "ÉÏ¹Ù±ù"
-x600050_g_Name2 = "ÉÏ¹ÙÑ©"
+x600050_g_Name = "ä¸Šå®˜å†°"
+x600050_g_Name2 = "ä¸Šå®˜é›ª"
 x600050_g_A_LingShiIndex = 2
 x600050_g_B_LingShiIndex = 7
-x600050_g_Human_ResourceNumIndex = 4					--¸öÈË½»ÄÉ×ÊÔ´¸öÊıË÷Òı
-x600050_g_LingShi = {"ÇàÁúÊ¯","°×»¢Ê¯","ÖìÈ¸Ê¯","ĞşÎäÊ¯","ÅÌ¹ÅÊ¯"}		--ÁéÊ¯Ãû×Ö
-x600050_g_LingShiID = {30900051,30900052,30900053,30900054,30900055}	--ÁéÊ¯ID
+x600050_g_Human_ResourceNumIndex = 4					--ä¸ªäººäº¤çº³èµ„æºä¸ªæ•°ç´¢å¼•
+x600050_g_LingShi = {"é’é¾™çŸ³","ç™½è™çŸ³","æœ±é›€çŸ³","ç„æ­¦çŸ³","ç›˜å¤çŸ³"}		--çµçŸ³åå­—
+x600050_g_LingShiID = {30900051,30900052,30900053,30900054,30900055}	--çµçŸ³ID
 x600050_g_BangzhanScriptId	= 402047
-x600050_g_GuildPoint_LingShi = 1						--»ı·Ö¹æÔòË÷Òı£¬±íGuildWarPoint.txtµÄID
+x600050_g_GuildPoint_LingShi = 1						--ç§¯åˆ†è§„åˆ™ç´¢å¼•ï¼Œè¡¨GuildWarPoint.txtçš„ID
 --MisDescEnd

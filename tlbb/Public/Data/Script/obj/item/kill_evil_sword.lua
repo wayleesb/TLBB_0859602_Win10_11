@@ -1,12 +1,12 @@
 --------------------------------------------
---ն�������߽ű�
---Created By ��ΰ
+--斩妖剑道具脚本
+--Created By 左春伟
 --------------------------------------------
 
---�ű�ID
+--脚本ID
 x335808_g_scriptId = 335808
 
---����ID
+--年兽ID
 x335808_g_monster_info = 
 {
 	{ID = 12200, Level = 10, blood = 63360 },
@@ -22,7 +22,7 @@ x335808_g_monster_info =
 	{ID = 12210, Level = 110, blood = 7127040}, 
 	{ID = 12211, Level = 120, blood = 7772160}, 	
 };
---���齱��ֵ
+--经验奖励值
 x335808_g_prize_exp =
 {
 	[10] = 788,[11] = 851,[12] = 907,[13] = 962,[14] = 1017,[15] = 1072,[16] = 1135,[17] = 1190,[18] = 1246,[19] = 1301,
@@ -41,54 +41,54 @@ x335808_g_prize_exp =
 	[140] = 18534,[141] = 18661,[142] = 18787,[143] = 18913,[144] = 19047,[145] = 19173,[146] = 19307,[147] = 19434,[148] = 19560,[149] = 19694,
 }
 --**********************************
---�¼��������
+--事件交互入口
 --**********************************
 function x335808_OnDefaultEvent( sceneId, selfId, bagIndex )	
 end
 
 --**********************************
---�����Ʒ��ʹ�ù����Ƿ������ڼ��ܣ�
---ϵͳ����ִ�п�ʼʱ�����������ķ���ֵ���������ʧ������Ժ�������Ƽ��ܵ�ִ�С�
---����1���������Ƶ���Ʒ�����Լ������Ƽ��ܵ�ִ�У�����0�����Ժ���Ĳ�����
+--这个物品的使用过程是否类似于技能：
+--系统会在执行开始时检测这个函数的返回值，如果返回失败则忽略后面的类似技能的执行。
+--返回1：技能类似的物品，可以继续类似技能的执行；返回0：忽略后面的操作。
 --**********************************
 function x335808_IsSkillLikeScript( sceneId, selfId)
 	return 1
 end
 
 --**********************************
---ֱ��ȡ��Ч����
---ϵͳ��ֱ�ӵ�������ӿڣ���������������ķ���ֵȷ���Ժ�������Ƿ�ִ�С�
---����1���Ѿ�ȡ����ӦЧ��������ִ�к�������������0��û�м�⵽���Ч��������ִ�С�
+--直接取消效果：
+--系统会直接调用这个接口，并根据这个函数的返回值确定以后的流程是否执行。
+--返回1：已经取消对应效果，不再执行后续操作；返回0：没有检测到相关效果，继续执行。
 --**********************************
 function x335808_CancelImpacts( sceneId, selfId )
 	return 0;
 end
 
 --**********************************
---���������ڣ�
---ϵͳ���ڼ��ܼ���ʱ����������ӿڣ���������������ķ���ֵȷ���Ժ�������Ƿ�ִ�С�
---����1���������ͨ�������Լ���ִ�У�����0���������ʧ�ܣ��жϺ���ִ�С�
+--条件检测入口：
+--系统会在技能检测的时间点调用这个接口，并根据这个函数的返回值确定以后的流程是否执行。
+--返回1：条件检测通过，可以继续执行；返回0：条件检测失败，中断后续执行。
 --**********************************
 function x335808_OnConditionCheck( sceneId, selfId )
-	--У��ʹ�õ���Ʒ
+	--校验使用的物品
 	if(1 ~= LuaFnVerifyUsedItem(sceneId, selfId)) then
 		return 0
 	end	
-	--ѡ��ʹ�ö����ˣ�
+	--选择使用对象了？
 	local targetId = LuaFnGetTargetObjID(sceneId, selfId);
 	if targetId < 0 or targetId == selfId then
-		x335808_MsgBox(sceneId, selfId, "ն����ֻ�ܶ�����ʹ�á�");	
+		x335808_MsgBox(sceneId, selfId, "斩妖剑只能对年兽使用。");	
 		return 0;
 	end	
-	--Ŀ���������
+	--目标对象类型
 	local objType = GetCharacterType( sceneId, targetId )
-	if(objType ~= 2)then	--�����ǹ���
-		x335808_MsgBox( sceneId, selfId, "ն����ֻ�ܶ�����ʹ�á�")	
+	if(objType ~= 2)then	--对象不是怪物
+		x335808_MsgBox( sceneId, selfId, "斩妖剑只能对年兽使用。")	
 		return 0;
 	else
 		local dataId = GetMonsterDataID(sceneId, targetId); 
 		if dataId < 12200 or dataId > 12211 then
-			x335808_MsgBox( sceneId, selfId, "ն����ֻ�ܶ�����ʹ�á�")
+			x335808_MsgBox( sceneId, selfId, "斩妖剑只能对年兽使用。")
 			return 0;
 		end
 	end	
@@ -96,10 +96,10 @@ function x335808_OnConditionCheck( sceneId, selfId )
 end
 
 --**********************************
---���ļ�⼰������ڣ�
---ϵͳ���ڼ������ĵ�ʱ����������ӿڣ���������������ķ���ֵȷ���Ժ�������Ƿ�ִ�С�
---����1�����Ĵ���ͨ�������Լ���ִ�У�����0�����ļ��ʧ�ܣ��жϺ���ִ�С�
---ע�⣺�ⲻ�⸺�����ĵļ��Ҳ�������ĵ�ִ�С�
+--消耗检测及处理入口：
+--系统会在技能消耗的时间点调用这个接口，并根据这个函数的返回值确定以后的流程是否执行。
+--返回1：消耗处理通过，可以继续执行；返回0：消耗检测失败，中断后续执行。
+--注意：这不光负责消耗的检测也负责消耗的执行。
 --**********************************
 function x335808_OnDeplete( sceneId, selfId )
 	if(0 < LuaFnDepletingUsedItem(sceneId, selfId)) then
@@ -109,20 +109,20 @@ function x335808_OnDeplete( sceneId, selfId )
 end
 
 --**********************************
---ֻ��ִ��һ����ڣ�
---������˲�����ܻ���������ɺ��������ӿڣ������������Ҹ��������������ʱ�򣩣�������
---����Ҳ����������ɺ��������ӿڣ����ܵ�һ��ʼ�����ĳɹ�ִ��֮�󣩡�
---����1�������ɹ�������0������ʧ�ܡ�
---ע�������Ǽ�����Чһ�ε����
+--只会执行一次入口：
+--聚气和瞬发技能会在消耗完成后调用这个接口（聚气结束并且各种条件都满足的时候），而引导
+--技能也会在消耗完成后调用这个接口（技能的一开始，消耗成功执行之后）。
+--返回1：处理成功；返回0：处理失败。
+--注：这里是技能生效一次的入口
 --**********************************
 function x335808_OnActivateOnce( sceneId, selfId )
 	local targetId = LuaFnGetTargetObjID(sceneId, selfId)
-	local damage = GetMaxHp(sceneId, targetId)/6+1; --+1ȷ����6��ɱ��
+	local damage = GetMaxHp(sceneId, targetId)/6+1; --+1确保能6次杀死
 	LuaFnSetDamage(sceneId, selfId, targetId, damage);
 	
 	local mstLevel = GetLevel(sceneId, targetId);
 	local extraExp = 1;
-	if LuaFnHaveImpactOfSpecificDataIndex(sceneId, selfId, 62) == 1 then --С�鵤
+	if LuaFnHaveImpactOfSpecificDataIndex(sceneId, selfId, 62) == 1 then --小灵丹
 		extraExp = 1.5;
 	end
 	if LuaFnHaveImpactOfSpecificDataIndex(sceneId, selfId, 60) == 1 then
@@ -138,7 +138,7 @@ function x335808_OnActivateOnce( sceneId, selfId )
 	LuaFnAddExp(sceneId, selfId, x335808_g_prize_exp[mstLevel] * extraExp);
 	if extraExp > 1 then
 		BeginEvent(sceneId)
-			local msg = format("#{NSJYTS_1}%d#{NSJYTS_2}", x335808_g_prize_exp[mstLevel] * (extraExp-1))
+			local msg = format("#{NSJYTS_1}%.0f#{NSJYTS_2}", x335808_g_prize_exp[mstLevel] * (extraExp-1))
 			AddText(sceneId, msg)
 		EndEvent()
 		DispatchMissionTips(sceneId, selfId)
@@ -147,17 +147,17 @@ function x335808_OnActivateOnce( sceneId, selfId )
 end
 
 --**********************************
---��������������ڣ�
---�������ܻ���ÿ����������ʱ��������ӿڡ�
---���أ�1�����´�������0���ж�������
---ע�������Ǽ�����Чһ�ε����
+--引导心跳处理入口：
+--引导技能会在每次心跳结束时调用这个接口。
+--返回：1继续下次心跳；0：中断引导。
+--注：这里是技能生效一次的入口
 --**********************************
 function x335808_OnActivateEachTick( sceneId, selfId)
 	return 1;
 end
 
 --**********************************
---��Ϣ��ʾ
+--信息提示
 --**********************************
 function x335808_MsgBox( sceneId, selfId, msg )
 	BeginEvent( sceneId )

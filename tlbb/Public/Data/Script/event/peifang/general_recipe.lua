@@ -1,14 +1,14 @@
--- ÆÕÍ¨Åä·½½Å±¾
+-- æ™®é€šé…æ–¹è„šæœ¬
 
--- ¸Ã½Å±¾ÓĞÒÔÏÂ¶ş¸ö±Ø±¸¹¦ÄÜº¯Êı£º
--- x700900_AbilityCheck ¡ª¡ª¼¼ÄÜÊ¹ÓÃ¼ì²éº¯Êı
--- x700900_AbilityProduce ¡ª¡ªºÏ³É³É¹¦£¬¸ºÔğÏûºÄÒÔ¼°²ú³ö²úÆ·
+-- è¯¥è„šæœ¬æœ‰ä»¥ä¸‹äºŒä¸ªå¿…å¤‡åŠŸèƒ½å‡½æ•°ï¼š
+-- x700900_AbilityCheck â€”â€”æŠ€èƒ½ä½¿ç”¨æ£€æŸ¥å‡½æ•°
+-- x700900_AbilityProduce â€”â€”åˆæˆæˆåŠŸï¼Œè´Ÿè´£æ¶ˆè€—ä»¥åŠäº§å‡ºäº§å“
 
--- ½Å±¾ºÅ
+-- è„šæœ¬å·
 x700900_g_ScriptId = 700900
 
 
--- ËùÓĞ²ÄÁÏ±í
+-- æ‰€æœ‰ææ–™è¡¨
 x700900_g_CaiLiaoBiao = {}
 
 x700900_g_CaiLiaoBiao[ZHIYAO_CAILIAO1 ] = { 20101001, 20101002, }
@@ -42,7 +42,7 @@ x700900_g_CaiLiaoBiao[PENGREN_CAILIAO_ZAWU8 ] = { }
 x700900_g_CaiLiaoBiao[PENGREN_CAILIAO_ZAWU9 ] = { }
 x700900_g_CaiLiaoBiao[PENGREN_CAILIAO_ZAWU10 ] = { 20102039 }
 
--- ËùÓĞ²úÆ·±í
+-- æ‰€æœ‰äº§å“è¡¨
 x700900_g_ChanPinBiao = {}
 
 x700900_g_ChanPinBiao[ZHIYAO_CHANPIN1 ] = { { ID = 30001001, Odds = 5000 }, { ID = 30003011, Odds = 10000 }, }
@@ -100,25 +100,25 @@ x700900_g_ChanPinBiao[PENGREN_CHANPIN_ZAWUGAOJI] = { { ID = 30103018, Odds = 250
 
 x700900_g_CompoundInfo = {}
 
--- Ë÷ÒıÎªÅä·½ ID
+-- ç´¢å¼•ä¸ºé…æ–¹ ID
 
--- abilityId: Éú»î¼¼ÄÜºÅ
--- aMaxLevel: ¸ÃÏîÉú»î¼¼ÄÜµÄ×î´ó¼¶±ğ
--- aLevelLimit: ¶Ô¸ÃÅä·½²úÉúÓ°ÏìµÄÉú»î¼¼ÄÜµÈ¼¶ÉÏÏŞ
--- recipeLevel: Åä·½µÈ¼¶
--- vigorCost: ¸ÃÏîÅä·½µÄ»îÁ¦ÏûºÄ£¨ÓÉÓÚĞÂÉè¼Æ£¬ÕâÒ»ÌõÔİÊ±×÷·Ï£©
--- energyCost: ¸ÃÏîÅä·½µÄ¾«Á¦ÏûºÄ
--- matClassBase: ¸ÃÅä·½Ê¹ÓÃµÄ²ÄÁÏ×é»ùÊı[²ÄÁÏ×é±ØĞë°´µÈ¼¶Á¬Ğø]
--- matClassCount: ¸ÃÅä·½Ê¹ÓÃµÄ²ÄÁÏ×éÊı
--- matCostBase: ¸ÃÏîÅä·½µÄ²ÄÁÏÏûºÄ»ùÊı
--- matFactor: ²ÄÁÏÏûºÄ±¶³ËÒò×Ó
--- succProductClass: ºÏ³É³É¹¦µÄ²úÆ·×é
--- failProductClass: ºÏ³ÉÊ§°ÜµÄ²úÆ·×é£¬¸ù¾İÍæ¼ÒµÄÉú»î¼¶±ğ¸ø³öÏàÓ¦µÄÊ§°Ü²úÆ·×éÒÔ¼°³öÏÖ¼¸ÂÊ
---		defaultClass: Í¨³£²»»áÓÃµ½£¬Ö»ÓĞµ±Ë÷Òı³ö´íÊ±»áÓÃµ½
---		[n]: ±íÊ¾µ±Íæ¼ÒµÄÉú»î¼¼ÄÜ¶ÔÓ¦Îª n ¼¶Ê±²ÉÓÃ
---			prodClass, odds: µ±¼¸ÂÊ·ûºÏ¸ÃÌõ¼ş random(x700900_g_RandNum) < odds Ê± prodClass ¶ÔÓ¦µÄ²úÆ·×é±»Ê¹ÓÃ
+-- abilityId: ç”Ÿæ´»æŠ€èƒ½å·
+-- aMaxLevel: è¯¥é¡¹ç”Ÿæ´»æŠ€èƒ½çš„æœ€å¤§çº§åˆ«
+-- aLevelLimit: å¯¹è¯¥é…æ–¹äº§ç”Ÿå½±å“çš„ç”Ÿæ´»æŠ€èƒ½ç­‰çº§ä¸Šé™
+-- recipeLevel: é…æ–¹ç­‰çº§
+-- vigorCost: è¯¥é¡¹é…æ–¹çš„æ´»åŠ›æ¶ˆè€—ï¼ˆç”±äºæ–°è®¾è®¡ï¼Œè¿™ä¸€æ¡æš‚æ—¶ä½œåºŸï¼‰
+-- energyCost: è¯¥é¡¹é…æ–¹çš„ç²¾åŠ›æ¶ˆè€—
+-- matClassBase: è¯¥é…æ–¹ä½¿ç”¨çš„ææ–™ç»„åŸºæ•°[ææ–™ç»„å¿…é¡»æŒ‰ç­‰çº§è¿ç»­]
+-- matClassCount: è¯¥é…æ–¹ä½¿ç”¨çš„ææ–™ç»„æ•°
+-- matCostBase: è¯¥é¡¹é…æ–¹çš„ææ–™æ¶ˆè€—åŸºæ•°
+-- matFactor: ææ–™æ¶ˆè€—å€ä¹˜å› å­
+-- succProductClass: åˆæˆæˆåŠŸçš„äº§å“ç»„
+-- failProductClass: åˆæˆå¤±è´¥çš„äº§å“ç»„ï¼Œæ ¹æ®ç©å®¶çš„ç”Ÿæ´»çº§åˆ«ç»™å‡ºç›¸åº”çš„å¤±è´¥äº§å“ç»„ä»¥åŠå‡ºç°å‡ ç‡
+--		defaultClass: é€šå¸¸ä¸ä¼šç”¨åˆ°ï¼Œåªæœ‰å½“ç´¢å¼•å‡ºé”™æ—¶ä¼šç”¨åˆ°
+--		[n]: è¡¨ç¤ºå½“ç©å®¶çš„ç”Ÿæ´»æŠ€èƒ½å¯¹åº”ä¸º n çº§æ—¶é‡‡ç”¨
+--			prodClass, odds: å½“å‡ ç‡ç¬¦åˆè¯¥æ¡ä»¶ random(x700900_g_RandNum) < odds æ—¶ prodClass å¯¹åº”çš„äº§å“ç»„è¢«ä½¿ç”¨
 
--- ³õ¼¶Ò©
+-- åˆçº§è¯
 x700900_g_CompoundInfo[163] = { abilityId = ABILITY_ZHIYAO, aMaxLevel = 12, aLevelLimit = 3,
 	recipeLevel = 1, vigorCost = 10, energyCost = 0, matClassBase = ZHIYAO_CAILIAO1,
 	matClassCount = 3, matCostBase = 5, matFactor = 1, succProductClass = ZHIYAO_CHANPINCHUJI,
@@ -130,7 +130,7 @@ x700900_g_CompoundInfo[163] = { abilityId = ABILITY_ZHIYAO, aMaxLevel = 12, aLev
 	},
 }
 
--- ÖĞ¼¶Ò©
+-- ä¸­çº§è¯
 x700900_g_CompoundInfo[164] = { abilityId = ABILITY_ZHIYAO, aMaxLevel = 12, aLevelLimit = 6,
 	recipeLevel = 4, vigorCost = 15, energyCost = 0, matClassBase = ZHIYAO_CAILIAO4,
 	matClassCount = 3, matCostBase = 5, matFactor = 1, succProductClass = ZHIYAO_CHANPINZHONGJI,
@@ -142,7 +142,7 @@ x700900_g_CompoundInfo[164] = { abilityId = ABILITY_ZHIYAO, aMaxLevel = 12, aLev
 	},
 }
 
--- ¸ß¼¶Ò©
+-- é«˜çº§è¯
 x700900_g_CompoundInfo[165] = { abilityId = ABILITY_ZHIYAO, aMaxLevel = 12, aLevelLimit = 10,
 	recipeLevel = 7, vigorCost = 23, energyCost = 0, matClassBase = ZHIYAO_CAILIAO7,
 	matClassCount = 4, matCostBase = 6, matFactor = 1, succProductClass = ZHIYAO_CHANPINGAOJI,
@@ -155,7 +155,7 @@ x700900_g_CompoundInfo[165] = { abilityId = ABILITY_ZHIYAO, aMaxLevel = 12, aLev
 	},
 }
 
--- ³õ¼¶¹ÈÎï
+-- åˆçº§è°·ç‰©
 x700900_g_CompoundInfo[477] = { abilityId = ABILITY_PENGREN, aMaxLevel = 12, aLevelLimit = 3,
 	recipeLevel = 1, vigorCost = 10, energyCost = 0, matClassBase = PENGREN_CAILIAO_GUWU1,
 	matClassCount = 3, matCostBase = 2, matFactor = 1, succProductClass = PENGREN_CHANPIN_GUWUCHUJI,
@@ -167,7 +167,7 @@ x700900_g_CompoundInfo[477] = { abilityId = ABILITY_PENGREN, aMaxLevel = 12, aLe
 	},
 }
 
--- ³õ¼¶ÔÓÎï
+-- åˆçº§æ‚ç‰©
 x700900_g_CompoundInfo[478] = { abilityId = ABILITY_PENGREN, aMaxLevel = 12, aLevelLimit = 3,
 	recipeLevel = 1, vigorCost = 10, energyCost = 0, matClassBase = PENGREN_CAILIAO_ZAWU1,
 	matClassCount = 3, matCostBase = 2, matFactor = 0, succProductClass = PENGREN_CHANPIN_ZAWUCHUJI,
@@ -179,7 +179,7 @@ x700900_g_CompoundInfo[478] = { abilityId = ABILITY_PENGREN, aMaxLevel = 12, aLe
 	},
 }
 
--- ÖĞ¼¶¹ÈÎï
+-- ä¸­çº§è°·ç‰©
 x700900_g_CompoundInfo[479] = { abilityId = ABILITY_PENGREN, aMaxLevel = 12, aLevelLimit = 6,
 	recipeLevel = 4, vigorCost = 15, energyCost = 0, matClassBase = PENGREN_CAILIAO_GUWU4,
 	matClassCount = 3, matCostBase = 3, matFactor = 1, succProductClass = PENGREN_CHANPIN_GUWUZHONGJI,
@@ -191,7 +191,7 @@ x700900_g_CompoundInfo[479] = { abilityId = ABILITY_PENGREN, aMaxLevel = 12, aLe
 	},
 }
 
--- ÖĞ¼¶ÔÓÎï
+-- ä¸­çº§æ‚ç‰©
 x700900_g_CompoundInfo[480] = { abilityId = ABILITY_PENGREN, aMaxLevel = 12, aLevelLimit = 6,
 	recipeLevel = 4, vigorCost = 15, energyCost = 0, matClassBase = PENGREN_CAILIAO_ZAWU4,
 	matClassCount = 3, matCostBase = 3, matFactor = 0, succProductClass = PENGREN_CHANPIN_ZAWUZHONGJI,
@@ -203,7 +203,7 @@ x700900_g_CompoundInfo[480] = { abilityId = ABILITY_PENGREN, aMaxLevel = 12, aLe
 	},
 }
 
--- ¸ß¼¶¹ÈÎï
+-- é«˜çº§è°·ç‰©
 x700900_g_CompoundInfo[481] = { abilityId = ABILITY_PENGREN, aMaxLevel = 12, aLevelLimit = 10,
 	recipeLevel = 7, vigorCost = 23, energyCost = 0, matClassBase = PENGREN_CAILIAO_GUWU7,
 	matClassCount = 4, matCostBase = 6, matFactor = 1, succProductClass = PENGREN_CHANPIN_GUWUGAOJI,
@@ -216,7 +216,7 @@ x700900_g_CompoundInfo[481] = { abilityId = ABILITY_PENGREN, aMaxLevel = 12, aLe
 	},
 }
 
--- ¸ß¼¶ÔÓÎï
+-- é«˜çº§æ‚ç‰©
 x700900_g_CompoundInfo[482] = { abilityId = ABILITY_PENGREN, aMaxLevel = 12, aLevelLimit = 10,
 	recipeLevel = 7, vigorCost = 23, energyCost = 0, matClassBase = PENGREN_CAILIAO_ZAWU7,
 	matClassCount = 4, matCostBase = 6, matFactor = 0, succProductClass = PENGREN_CHANPIN_ZAWUGAOJI,
@@ -229,17 +229,17 @@ x700900_g_CompoundInfo[482] = { abilityId = ABILITY_PENGREN, aMaxLevel = 12, aLe
 	},
 }
 
--- Ëæ»úÒò×Ó
+-- éšæœºå› å­
 x700900_g_RandNum = 10000
 
--- ĞŞ¸Ä£º»îÁ¦ÏûºÄ°´ÕÕÒÔÏÂĞÂÉè¶¨À´Ö´ĞĞ
+-- ä¿®æ”¹ï¼šæ´»åŠ›æ¶ˆè€—æŒ‰ç…§ä»¥ä¸‹æ–°è®¾å®šæ¥æ‰§è¡Œ
 x700900_g_VigorCostList = { 5, 7, 10, 12, 15, 17, 20, 20, 20, 20 }
 
 ----------------------------------------------------------------------------------------
--- »îÁ¦ÖµÏûºÄ¼ÆËã
+-- æ´»åŠ›å€¼æ¶ˆè€—è®¡ç®—
 ----------------------------------------------------------------------------------------
 function x700900_CalcVigorCost( sceneId, selfId, AbilityID, originalCost )
-	-- ¸¨ÖúÉú»î¼¼ÄÜ¼¶±ğ
+	-- è¾…åŠ©ç”Ÿæ´»æŠ€èƒ½çº§åˆ«
 	local AssisAbilityLevel = 0
 
 	if AbilityID == ABILITY_PENGREN then
@@ -268,7 +268,7 @@ function x700900_CalcVigorCost( sceneId, selfId, AbilityID, originalCost )
 		return originalCost
 	end
 
-	-- »îÁ¦ = »îÁ¦*(C0+C1/(C2*¼¶±ğ+C3))
+	-- æ´»åŠ› = æ´»åŠ›*(C0+C1/(C2*çº§åˆ«+C3))
 	local C0 = 1.59090909090909
 	local C1 = 19.3818181818182
 	local C2 = 0.2
@@ -285,10 +285,10 @@ function x700900_CalcVigorCost( sceneId, selfId, AbilityID, originalCost )
 end
 
 ----------------------------------------------------------------------------------------
--- ²ÄÁÏ¼ì²éº¯Êı£¬ÅĞ¶ÏÍæ¼ÒÉíÉÏÊÇ·ñÓĞ×ã¹» quantity µÄ class Àà²ÄÁÏ
--- class: ²ÄÁÏµÄÖÖÀà
--- quantity: ²ÄÁÏËùĞèµÄÊıÁ¿
--- Èç¹û·ûºÏÌõ¼ş£¬Ôò·µ»Ø 1£¬·ñÔò·µ»Ø 0
+-- ææ–™æ£€æŸ¥å‡½æ•°ï¼Œåˆ¤æ–­ç©å®¶èº«ä¸Šæ˜¯å¦æœ‰è¶³å¤Ÿ quantity çš„ class ç±»ææ–™
+-- class: ææ–™çš„ç§ç±»
+-- quantity: ææ–™æ‰€éœ€çš„æ•°é‡
+-- å¦‚æœç¬¦åˆæ¡ä»¶ï¼Œåˆ™è¿”å› 1ï¼Œå¦åˆ™è¿”å› 0
 ----------------------------------------------------------------------------------------
 function x700900_MaterialCheck( sceneId, selfId, class, quantity )
 	local MaterialList = x700900_g_CaiLiaoBiao[class]
@@ -302,7 +302,7 @@ function x700900_MaterialCheck( sceneId, selfId, class, quantity )
 	for idx, MatSN in MaterialList do
 		Count = Count + LuaFnGetAvailableItemCount( sceneId, selfId, MatSN )
 
-		-- ÔÚÕâÀï½øĞĞÅĞ¶Ï£¬ÒÔ¼õÉÙÑ­»·´ÎÊı£¨ÌØ±ğÊÇµ±²ÄÁÏ³äÔ£Ê±£©
+		-- åœ¨è¿™é‡Œè¿›è¡Œåˆ¤æ–­ï¼Œä»¥å‡å°‘å¾ªç¯æ¬¡æ•°ï¼ˆç‰¹åˆ«æ˜¯å½“ææ–™å……è£•æ—¶ï¼‰
 		if Count >= quantity then
 			return 1
 		end
@@ -312,7 +312,7 @@ function x700900_MaterialCheck( sceneId, selfId, class, quantity )
 end
 
 ----------------------------------------------------------------------------------------
---	¼¼ÄÜÊ¹ÓÃ¼ì²éº¯Êı
+--	æŠ€èƒ½ä½¿ç”¨æ£€æŸ¥å‡½æ•°
 ----------------------------------------------------------------------------------------
 function x700900_AbilityCheck( sceneId, selfId, recipeId )
 	local CompoundInfo = x700900_g_CompoundInfo[recipeId]
@@ -320,7 +320,7 @@ function x700900_AbilityCheck( sceneId, selfId, recipeId )
 		return OR_ERROR
 	end
 
-	-- ¼ì²â±³°üÊÇ²»ÊÇÓĞ¿Õ¸ñ£¬Ã»ÓĞ¿Õ¸ñ¾Í²»ÄÜ½øĞĞ
+	-- æ£€æµ‹èƒŒåŒ…æ˜¯ä¸æ˜¯æœ‰ç©ºæ ¼ï¼Œæ²¡æœ‰ç©ºæ ¼å°±ä¸èƒ½è¿›è¡Œ
 	if LuaFnGetPropertyBagSpace( sceneId, selfId ) < 2 then
 		return OR_BAG_OUT_OF_SPACE
 	end
@@ -330,7 +330,7 @@ function x700900_AbilityCheck( sceneId, selfId, recipeId )
 		abilityLevel = CompoundInfo.aLevelLimit
 	end
 
-	-- ¼ì²éÆäËûÏûºÄ
+	-- æ£€æŸ¥å…¶ä»–æ¶ˆè€—
 	if GetHumanVigor( sceneId, selfId ) < x700900_CalcVigorCost( sceneId, selfId, CompoundInfo.abilityId, x700900_g_VigorCostList[abilityLevel] ) then
 		return OR_NOT_ENOUGH_VIGOR
 	end
@@ -339,10 +339,10 @@ function x700900_AbilityCheck( sceneId, selfId, recipeId )
 		return OR_NOT_ENOUGH_ENERGY
 	end
 
-	-- ÅĞ¶ÏÉíÉÏµÄ²ÄÁÏÊÇ·ñ×ã¹»
+	-- åˆ¤æ–­èº«ä¸Šçš„ææ–™æ˜¯å¦è¶³å¤Ÿ
 	local matCost = 0
 
-	-- ²ÄÁÏµÈ¼¶
+	-- ææ–™ç­‰çº§
 	local matLevel = CompoundInfo.recipeLevel
 	local i = 1
 	local matClass = CompoundInfo.matClassBase
@@ -367,11 +367,11 @@ function x700900_AbilityCheck( sceneId, selfId, recipeId )
 end
 
 ----------------------------------------------------------------------------------------
--- ÏûºÄ²ÄÁÏ£¬ÏûºÄÍæ¼Ò quantity ÊıÁ¿µÄ class Àà²ÄÁÏ
--- ±¾º¯Êı²»±£Ö¤²ÄÁÏ×ã¹»£¬ÓÉµ÷ÓÃº¯ÊıÀ´±£Ö¤
--- class: ²ÄÁÏµÄÖÖÀà
--- quantity: ²ÄÁÏËùĞèµÄÊıÁ¿
--- ³É¹¦·µ»Ø 1£¬Ê§°Ü·µ»Ø 0
+-- æ¶ˆè€—ææ–™ï¼Œæ¶ˆè€—ç©å®¶ quantity æ•°é‡çš„ class ç±»ææ–™
+-- æœ¬å‡½æ•°ä¸ä¿è¯ææ–™è¶³å¤Ÿï¼Œç”±è°ƒç”¨å‡½æ•°æ¥ä¿è¯
+-- class: ææ–™çš„ç§ç±»
+-- quantity: ææ–™æ‰€éœ€çš„æ•°é‡
+-- æˆåŠŸè¿”å› 1ï¼Œå¤±è´¥è¿”å› 0
 ----------------------------------------------------------------------------------------
 function x700900_MaterialConsume( sceneId, selfId, class, quantity )
 	local MaterialList = x700900_g_CaiLiaoBiao[class]
@@ -394,7 +394,7 @@ function x700900_MaterialConsume( sceneId, selfId, class, quantity )
 			LuaFnDelAvailableItem( sceneId, selfId, ItemSerial, DelCount )
 			Count = Count - DelCount
 
-			-- ÔÚÕâÀï½øĞĞÅĞ¶Ï£¬ÒÔ¼õÉÙÑ­»·´ÎÊı£¨ÌØ±ğÊÇµ±²ÄÁÏ³äÔ£Ê±£©
+			-- åœ¨è¿™é‡Œè¿›è¡Œåˆ¤æ–­ï¼Œä»¥å‡å°‘å¾ªç¯æ¬¡æ•°ï¼ˆç‰¹åˆ«æ˜¯å½“ææ–™å……è£•æ—¶ï¼‰
 			if Count < 1 then
 				return 1
 			end
@@ -405,7 +405,7 @@ function x700900_MaterialConsume( sceneId, selfId, class, quantity )
 end
 
 ----------------------------------------------------------------------------------------
---	ºÏ³É½áÊø£¬½øĞĞÏà¹ØÏûºÄ
+--	åˆæˆç»“æŸï¼Œè¿›è¡Œç›¸å…³æ¶ˆè€—
 ----------------------------------------------------------------------------------------
 function x700900_AbilityConsume( sceneId, selfId, recipeId )
 	local CompoundInfo = x700900_g_CompoundInfo[recipeId]
@@ -418,7 +418,7 @@ function x700900_AbilityConsume( sceneId, selfId, recipeId )
 		abilityLevel = CompoundInfo.aLevelLimit
 	end
 
-	-- Ê×ÏÈ½øĞĞÆäËûÏûºÄ
+	-- é¦–å…ˆè¿›è¡Œå…¶ä»–æ¶ˆè€—
 	if x700900_g_VigorCostList[abilityLevel] > 0 then
 		local VigorValue = GetHumanVigor( sceneId, selfId ) - x700900_CalcVigorCost( sceneId, selfId, CompoundInfo.abilityId, x700900_g_VigorCostList[abilityLevel] )
 		SetHumanVigor( sceneId, selfId, VigorValue )
@@ -429,10 +429,10 @@ function x700900_AbilityConsume( sceneId, selfId, recipeId )
 		SetHumanEnergy( sceneId, selfId, energyValue )
 	end
 
-	-- È»ºó½øĞĞ²ÄÁÏÏûºÄ
+	-- ç„¶åè¿›è¡Œææ–™æ¶ˆè€—
 	local matCost = 0
 
-	-- ²ÄÁÏµÈ¼¶
+	-- ææ–™ç­‰çº§
 	local matLevel = CompoundInfo.recipeLevel
 	local i = 1
 	local matClass = CompoundInfo.matClassBase
@@ -458,10 +458,10 @@ function x700900_AbilityConsume( sceneId, selfId, recipeId )
 end
 
 ----------------------------------------------------------------------------------------
--- ºÏ³É½áÊøÊ±µÄ³É¹¦ÂÊ¼ÆËã
+-- åˆæˆç»“æŸæ—¶çš„æˆåŠŸç‡è®¡ç®—
 ----------------------------------------------------------------------------------------
 function x700900_CheckForResult( sceneId, selfId, AbilityID, RecipeLevel, MatLevel )
-	-- ¸¨ÖúÉú»î¼¼ÄÜ¼¶±ğ
+	-- è¾…åŠ©ç”Ÿæ´»æŠ€èƒ½çº§åˆ«
 	local AssisAbilityLevel
 
 	if AbilityID == ABILITY_PENGREN then
@@ -490,14 +490,14 @@ function x700900_CheckForResult( sceneId, selfId, AbilityID, RecipeLevel, MatLev
 		return OR_OK
 	end
 
-	-- ¸ÅÂÊ
-	-- ³É¹¦ÂÊ£½10£¥£«ÏûºÄ²ÄÁÏµÈ¼¶¡Á0.5£¥£«¸¨Öú¼¼ÄÜµÈ¼¶¡Á0.2£¥
+	-- æ¦‚ç‡
+	-- æˆåŠŸç‡ï¼10ï¼…ï¼‹æ¶ˆè€—ææ–™ç­‰çº§Ã—0.5ï¼…ï¼‹è¾…åŠ©æŠ€èƒ½ç­‰çº§Ã—0.2ï¼…
 	-- local odds = 10 + MatLevel / 2 + AssisAbilityLevel / 5
-	--	ĞÂµÄ³É¹¦ÂÊ£½5£¥£«ÏûºÄ²ÄÁÏµÈ¼¶¡Á0.25£¥£«¸¨Öú¼¼ÄÜµÈ¼¶¡Á0.1£¥
+	--	æ–°çš„æˆåŠŸç‡ï¼5ï¼…ï¼‹æ¶ˆè€—ææ–™ç­‰çº§Ã—0.25ï¼…ï¼‹è¾…åŠ©æŠ€èƒ½ç­‰çº§Ã—0.1ï¼…
 	local odds = 5 + MatLevel / 4 + AssisAbilityLevel / 2
 	local rand = random( 100 )
 	if odds >= rand then
-		-- ³É¹¦
+		-- æˆåŠŸ
 		return OR_OK
 	end
 
@@ -505,9 +505,9 @@ function x700900_CheckForResult( sceneId, selfId, AbilityID, RecipeLevel, MatLev
 end
 
 ----------------------------------------------------------------------------------------
--- Éú³ÉºÏ³ÉÎï
--- class: ºÏ³ÉÎïµÄÖÖÀà
--- ³É¹¦·µ»Ø ÎïÆ· ID£¬Ê§°Ü·µ»Ø -1
+-- ç”Ÿæˆåˆæˆç‰©
+-- class: åˆæˆç‰©çš„ç§ç±»
+-- æˆåŠŸè¿”å› ç‰©å“ IDï¼Œå¤±è´¥è¿”å› -1
 ----------------------------------------------------------------------------------------
 function x700900_ProduceComplex( sceneId, selfId, class, RecipeLevel, AbilityLevel, AbilityMaxLevel )
 	local ComplexList = x700900_g_ChanPinBiao[class]
@@ -517,7 +517,7 @@ function x700900_ProduceComplex( sceneId, selfId, class, RecipeLevel, AbilityLev
 		return -1
 	end
 
-	-- Ëæ»ú³öÒ»¸öÊı [1, x700900_g_RandNum]
+	-- éšæœºå‡ºä¸€ä¸ªæ•° [1, x700900_g_RandNum]
 	local rand = random( x700900_g_RandNum )
 	local i = 0
 	local item
@@ -538,7 +538,7 @@ function x700900_ProduceComplex( sceneId, selfId, class, RecipeLevel, AbilityLev
 end
 
 ----------------------------------------------------------------------------------------
---	²ú³ö²úÆ·
+--	äº§å‡ºäº§å“
 ----------------------------------------------------------------------------------------
 function x700900_AbilityProduce( sceneId, selfId, recipeId )
 	local CompoundInfo = x700900_g_CompoundInfo[recipeId]
@@ -554,28 +554,28 @@ function x700900_AbilityProduce( sceneId, selfId, recipeId )
 		bCanGainExp = 0
 	end
 
-	-- ÏûºÄ²ÄÁÏ
+	-- æ¶ˆè€—ææ–™
 	local matLevel = x700900_AbilityConsume( sceneId, selfId, recipeId )
 	if matLevel == 0 then
 		return OR_ERROR
 	end
 
-	if bCanGainExp == 1 then						-- »ñµÃÊìÁ·¶È
+	if bCanGainExp == 1 then						-- è·å¾—ç†Ÿç»ƒåº¦
 		CallScriptFunction( ABILITYLOGIC_ID, "GainExperience", sceneId, selfId, CompoundInfo.abilityId, matLevel )
 	end
 
-	-- ÅĞ¶ÏÊÇ·ñºÏ³É³É¹¦
+	-- åˆ¤æ–­æ˜¯å¦åˆæˆæˆåŠŸ
 	local productClass = 0
 	local productRet1 = -1
 	local productRet2 = -1
 	local ret = x700900_CheckForResult( sceneId, selfId, CompoundInfo.abilityId, CompoundInfo.recipeLevel, matLevel )
-	if ret == OR_OK then							-- ºÏ³É³É¹¦
+	if ret == OR_OK then							-- åˆæˆæˆåŠŸ
 		productClass = CompoundInfo.succProductClass
 		productRet1 = x700900_ProduceComplex( sceneId, selfId, productClass, CompoundInfo.recipeLevel, abilityLevel, CompoundInfo.aMaxLevel )
 	end
 
 	local odds = random( x700900_g_RandNum )
-	-- ¸ø¸öÄ¬ÈÏÖµ
+	-- ç»™ä¸ªé»˜è®¤å€¼
 	productClass = CompoundInfo.failProductClass.defaultClass
 
 	local failProduct = CompoundInfo.failProductClass[abilityLevel]
@@ -597,7 +597,7 @@ function x700900_AbilityProduce( sceneId, selfId, recipeId )
 		LuaFnAuditAbility(sceneId, selfId, CompoundInfo.abilityId, recipeId, 1);
 
 		if productRet1 > -1 then
-			local strText = "ÄãÒâÍâµØ»ñµÃÁË#{_ITEM" .. productRet1 .. "}¡£"
+			local strText = "ä½ æ„å¤–åœ°è·å¾—äº†#{_ITEM" .. productRet1 .. "}ã€‚"
 			Msg2Player( sceneId, selfId, strText, MSG2PLAYER_PARA )
 		end
 

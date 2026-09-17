@@ -1,11 +1,11 @@
---¶ëáÒNPC
---ÏôÏæÓñ
---ÆÕÍ¨
+--å³¨åµ‹NPC
+--è§æ¹˜ç‰
+--æ™®é€š
 
 x015008_g_shoptableindex=45
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x015008_OnDefaultEvent( sceneId, selfId,targetId )
 	DispatchShopItem( sceneId, selfId,targetId, x015008_g_shoptableindex )

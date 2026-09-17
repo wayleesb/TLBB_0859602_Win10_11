@@ -7,11 +7,11 @@ local objCared = -1;
 local MAX_OBJ_DISTANCE = 3.0;
 local g_Object = -1;
 
---µ±Ç°½çÃæÊÇÄÄ¸ö½çÃæ....
--- 1 = Ç®ÁúĞÂÊÖÈÎÎñ´ğÌâ½çÃæ....
--- 2 = 2007Ê¥µ®Ôªµ©--ĞÂÊÖ³é½±´ğÌâ½çÃæ....
--- 3 = 2007Ê¥µ®Ôªµ©--µ¹¼ÆÊ±´ğÌâ....
--- 4 = 2007ÔªÏü½Ú--µÆÃÕ´ğÌâ½çÃæ....
+--å½“å‰ç•Œé¢æ˜¯å“ªä¸ªç•Œé¢....
+-- 1 = é’±é¾™æ–°æ‰‹ä»»åŠ¡ç­”é¢˜ç•Œé¢....
+-- 2 = 2007åœ£è¯å…ƒæ—¦--æ–°æ‰‹æŠ½å¥–ç­”é¢˜ç•Œé¢....
+-- 3 = 2007åœ£è¯å…ƒæ—¦--å€’è®¡æ—¶ç­”é¢˜....
+-- 4 = 2007å…ƒå®µèŠ‚--ç¯è°œç­”é¢˜ç•Œé¢....
 local g_UIType = 0
 
 local g_UIServerScript = { 311100, 050021, 050029, 050042, 808093 }
@@ -52,7 +52,7 @@ function Quiz_OnEvent(event)
 		if(tonumber(arg0) ~= objCared) then
 			return;
 		end
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ı£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æœå’ŒNPCçš„è·ç¦»å¤§äºä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if(arg1 == "distance" and tonumber(arg2)>MAX_OBJ_DISTANCE or arg1=="destroy") then
 			Quiz_Cancel_Clicked()
 		end
@@ -70,7 +70,7 @@ function Quiz_OnShown()
 
 			Quiz_Text : SetText( Get_XParam_STR(1) );
 			Quiz_Button_1 : Show();
-			Quiz_Button_1 : SetText("¿ªÊ¼´ğÌâ")
+			Quiz_Button_1 : SetText("å¼€å§‹ç­”é¢˜")
 			Quiz_Button_2 : Hide();
 			Quiz_Button_3 : Hide();
 			Quiz_Pageheader : SetText( Get_XParam_STR(0) );
@@ -78,7 +78,7 @@ function Quiz_OnShown()
 			local xx = Get_XParam_INT(1);
 			objCared = DataPool : GetNPCIDByServerID(xx);
 			if objCared == -1 then
-					PushDebugMessage("ServerÊı¾İÎÊÌâ£¬Ë­¸ÄServer½Å±¾À²£¡");
+					PushDebugMessage("Serveræ•°æ®é—®é¢˜ï¼Œè°æ”¹Serverè„šæœ¬å•¦ï¼");
 					return;
 			end
 			BeginCareObject_Quiz(objCared)
@@ -93,12 +93,12 @@ function Quiz_OnShown()
 			if Question_Sequence == 1 then
 				str = "";
 			else
-				str = "¹§Ï²Äã»Ø´ğÕıÈ·£¡#rÇë¼ÌĞø´ğÌâ¡£#r";
+				str = "æ­å–œä½ å›ç­”æ­£ç¡®ï¼#rè¯·ç»§ç»­ç­”é¢˜ã€‚#r";
 			end
-			if(Variable:GetVariable("System_CodePage") == "1258") then
-				Quiz_Text : SetText(str .. "Ìâ" .. "µÚ" .. Question_Sequence .. Get_XParam_STR(0) .. "#rÏÂÁĞ´ğ°¸ÖĞÖ»ÓĞ1¸öÊÇÕıÈ·µÄ£¬ÇëÑ¡Ôñ");
+			if(Variable:GetVariable("System_Region") == "1258") then
+				Quiz_Text : SetText(str .. "é¢˜" .. "ç¬¬" .. Question_Sequence .. Get_XParam_STR(0) .. "#rä¸‹åˆ—ç­”æ¡ˆä¸­åªæœ‰1ä¸ªæ˜¯æ­£ç¡®çš„ï¼Œè¯·é€‰æ‹©");
 			else
-				Quiz_Text : SetText(str .. "µÚ" .. Question_Sequence .."Ìâ£º#r" .. Get_XParam_STR(0) .. "#rÏÂÁĞ´ğ°¸ÖĞÖ»ÓĞ1¸öÊÇÕıÈ·µÄ£¬ÇëÑ¡Ôñ");
+				Quiz_Text : SetText(str .. "ç¬¬" .. Question_Sequence .."é¢˜ï¼š#r" .. Get_XParam_STR(0) .. "#rä¸‹åˆ—ç­”æ¡ˆä¸­åªæœ‰1ä¸ªæ˜¯æ­£ç¡®çš„ï¼Œè¯·é€‰æ‹©");
 			end
 		
 			Quiz_StopWatch : SetProperty("Timer","30");
@@ -123,7 +123,7 @@ function Quiz_OnShown()
 			Quiz_Text : SetText( Get_XParam_STR(0) );
 			Question_Sequence = 0;
 			Quiz_Button_1 : Show();
-			Quiz_Button_1 : SetText("ÖØĞÂ¿ªÊ¼");
+			Quiz_Button_1 : SetText("é‡æ–°å¼€å§‹");
 			Quiz_Button_2 : Hide();
 			Quiz_Button_3 : Hide();
 			Current = UI_ID;
@@ -132,7 +132,7 @@ function Quiz_OnShown()
 	elseif UI_ID == 4 then
 
 			Quiz_Text : SetText( Get_XParam_STR(0) );
-			Quiz_Button_2 : SetText("ÔÙ¼û")
+			Quiz_Button_2 : SetText("å†è§")
 			Quiz_Button_2 : Show();
 			Quiz_Button_1 : Hide();
 			Quiz_Button_3 : Hide();
@@ -192,9 +192,9 @@ function Quiz_Cancel_Clicked()
 end
 
 --=========================================================
---¿ªÊ¼¹ØĞÄNPC£¬
---ÔÚ¿ªÊ¼¹ØĞÄÖ®Ç°ĞèÒªÏÈÈ·¶¨Õâ¸ö½çÃæÊÇ²»ÊÇÒÑ¾­ÓĞ¡°¹ØĞÄ¡±µÄNPC£¬
---Èç¹ûÓĞµÄ»°£¬ÏÈÈ¡ÏûÒÑ¾­ÓĞµÄ¡°¹ØĞÄ¡±
+--å¼€å§‹å…³å¿ƒNPCï¼Œ
+--åœ¨å¼€å§‹å…³å¿ƒä¹‹å‰éœ€è¦å…ˆç¡®å®šè¿™ä¸ªç•Œé¢æ˜¯ä¸æ˜¯å·²ç»æœ‰â€œå…³å¿ƒâ€çš„NPCï¼Œ
+--å¦‚æœæœ‰çš„è¯ï¼Œå…ˆå–æ¶ˆå·²ç»æœ‰çš„â€œå…³å¿ƒâ€
 --=========================================================
 function BeginCareObject_Quiz(objCaredId)
 	g_Object = objCaredId;
@@ -202,7 +202,7 @@ function BeginCareObject_Quiz(objCaredId)
 end
 
 --=========================================================
---Í£Ö¹¶ÔÄ³NPCµÄ¹ØĞÄ
+--åœæ­¢å¯¹æŸNPCçš„å…³å¿ƒ
 --=========================================================
 function StopCareObject_Quiz(objCaredId)
 	this:CareObject(objCaredId, 0, "Quiz");
@@ -210,7 +210,7 @@ function StopCareObject_Quiz(objCaredId)
 
 end
 
---¼ÇÊ±µ½0ºó
+--è®°æ—¶åˆ°0å
 function Quiz_OverTime()
 	Clear_XSCRIPT();
 			Set_XSCRIPT_Function_Name("OnOverTime");

@@ -2,13 +2,13 @@
 local PS_BUTTON_NUM = 20;
 local PS_BUTTON = {};
 
--- ÏÂÁĞÁ½¸öÖµĞèÒª±£³ÖÍ¬²½£¨ÎïÆ·ID¡¢ÎïÆ·Î»ÖÃ£©
+-- ä¸‹åˆ—ä¸¤ä¸ªå€¼éœ€è¦ä¿æŒåŒæ­¥ï¼ˆç‰©å“IDã€ç‰©å“ä½ç½®ï¼‰
 local g_nCurSelectItemID = -1;
 local g_nCurSelectItem = -1;
 local g_nCurStallIndex = -1;
 local g_StallNum = 0;
 
---±êÖ¾µ±Ç°ÊÇ³èÎï½çÃæ»¹ÊÇÎïÆ·½çÃæ
+--æ ‡å¿—å½“å‰æ˜¯å® ç‰©ç•Œé¢è¿˜æ˜¯ç‰©å“ç•Œé¢
 local STALL_NONE = 0
 local STALL_ITEM = 1;
 local STALL_PET  = 2;
@@ -85,7 +85,7 @@ function PS_Transfer_OnEvent(event)
 		objCared = PlayerShop:GetNpcId();
 		this:CareObject(objCared, 1, "PS_Transfer");	
 		
-		--ÇĞ»»ÊÇ³èÎï»¹ÊÇÎïÆ·
+		--åˆ‡æ¢æ˜¯å® ç‰©è¿˜æ˜¯ç‰©å“
 		if( tonumber(arg1) == 1 ) then
 			g_CurStallObj = STALL_ITEM;
 			PS_Transfer_Item_Set:Show();
@@ -117,12 +117,12 @@ function PS_Transfer_OnEvent(event)
 		if(tonumber(arg0) ~= objCared) then
 			return;
 		end
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ı£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æœå’ŒNPCçš„è·ç¦»å¤§äºä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if(arg1 == "distance" and tonumber(arg2)>MAX_OBJ_DISTANCE or arg1=="destroy") then
 			g_InitiativeClose = 1;
 			this:Hide();
 
-			--È¡Ïû¹ØĞÄ
+			--å–æ¶ˆå…³å¿ƒ
 			this:CareObject(objCared, 0, "PS_Transfer");
 		end	
 	elseif(event =="UNIT_MONEY") then
@@ -135,37 +135,37 @@ end
 -- OnEvent
 --===============================================
 function PS_Transfer_UpdateFrame()
-	--Í¨ÖªC ++
+	--é€šçŸ¥C ++
 	PlayerShop:SetCurSelectPage("other",g_nCurStallIndex-1);
 	
-	--µêÖ÷	--¸ÄÎª³¬Á´½Ó by wangdw
+	--åº—ä¸»	--æ”¹ä¸ºè¶…é“¾æ¥ by wangdw
 	local szName = PlayerShop:GetShopInfo("other","ownername");
-	PS_Transfer_Master:SetChatString("#YµêÖ÷:#{_INFOUSR".. szName .. "}");
-	--µêÖ÷ID
+	PS_Transfer_Master:SetChatString("#Yåº—ä¸»:#{_INFOUSR".. szName .. "}");
+	--åº—ä¸»ID
 	local szID = PlayerShop:GetShopInfo("other","ownerid");
 	PS_Transfer_ID:SetText("ID: ".. szID);
 	
-	--µêÃû
+	--åº—å
 	local szShopName = PlayerShop:GetShopInfo("other","shopname");
-	PS_Transfer_Name_Text:SetText("µêÆÌÃû:" .. szShopName);
+	PS_Transfer_Name_Text:SetText("åº—é“ºå:" .. szShopName);
 	PS_Transfer_PageHeader_Name:SetText("#gFF0FA0" ..szShopName);
 	
-	--µ±Ç°±¾½ğ
+	--å½“å‰æœ¬é‡‘
 	local nBaseMoney = PlayerShop:GetMoney("base","other");
 	PS_Transfer_CurBase_Money:SetProperty("MoneyNumber", tostring(nBaseMoney));
 	
-	--Ó®Àû×Ê½ğ
+	--èµ¢åˆ©èµ„é‡‘
 	local nProfitMoney = PlayerShop:GetMoney("profit","other");
 	PS_Transfer_Gain_Money:SetProperty("MoneyNumber", tostring(nProfitMoney));
 	
-	--ÅÌ³öµê¼Û¸ñ
+	--ç›˜å‡ºåº—ä»·æ ¼
 	local nSaleOutMoney = PlayerShop:GetMoney("saleout","other");
 	PS_Transfer_Sale_Money:SetProperty("MoneyNumber", tostring(nSaleOutMoney));
 	
-	--ÉíÉÏÏÖ½ğ
+	--èº«ä¸Šç°é‡‘
 	PS_Transfer_Self_Money:SetProperty("MoneyNumber", tostring(Player:GetData("MONEY")));
 
-	--½çÃæ¿Ø¼şµÄÒ»Ğ©¸üĞÂ
+	--ç•Œé¢æ§ä»¶çš„ä¸€äº›æ›´æ–°
 	if( g_nCurStallIndex == 1 )  then
 		PS_Transfer_Last:Disable();
 	else
@@ -178,7 +178,7 @@ function PS_Transfer_UpdateFrame()
 	end
 	PS_Transfer_PageNum:SetText(tostring(g_nCurStallIndex).."/".. tostring(g_StallNum));
 	
-	--ÄÜ¹»µã»÷µÄ1234567890
+	--èƒ½å¤Ÿç‚¹å‡»çš„1234567890
 	for i=1 ,PS_STALL_NUM  do
 		PS_STALL_BOTTON[i]:Disable();
 	end
@@ -217,7 +217,7 @@ end
 -- UpdateItem
 --===============================================
 function PS_Transfer_UpdateItem()
-	--¸üĞÂÉÌÆ·
+	--æ›´æ–°å•†å“
 	for i=1, PS_BUTTON_NUM    do
 		local theAction, bLocked = PlayerShop:EnumItem(g_nCurStallIndex-1, i-1, "other");
 
@@ -242,7 +242,7 @@ end
 
 
 --===============================================
--- ¹ºÂò
+-- è´­ä¹°
 --===============================================
 function PS_Transfer_BuyClick()
 	local HaveMoney = Player:GetData("MONEY");
@@ -259,27 +259,27 @@ function PS_Transfer_BuyClick()
 	PlayerShop:BuyShop();
 	
 	this:Hide();
-	--È¡Ïû¹ØĞÄ
+	--å–æ¶ˆå…³å¿ƒ
 	this:CareObject(objCared, 0, "PS_Transfer");
 end
 
 --===============================================
--- Àë¿ª
+-- ç¦»å¼€
 --===============================================
 function PS_Transfer_ExitClick()
 	this:Hide();
-	--È¡Ïû¹ØĞÄ
+	--å–æ¶ˆå…³å¿ƒ
 	this:CareObject(objCared, 0, "PS_Transfer");
 end
 
 --===============================================
--- Ñ¡Ôñ±àºÅ
+-- é€‰æ‹©ç¼–å·
 --===============================================
 function PS_Transfer_Page_Click(nIndex)
 
 	g_nCurStallIndex = nIndex;
 
-	--Ïò·şÎñÆ÷ÇëÇóÊı¾İ
+	--å‘æœåŠ¡å™¨è¯·æ±‚æ•°æ®
 	PS_Transfer_Last:Disable();	
 	PS_Transfer_Next:Disable();
 	local i;
@@ -291,7 +291,7 @@ function PS_Transfer_Page_Click(nIndex)
 end
 
 --===============================================
--- ÉÏÒ»¼ä
+-- ä¸Šä¸€é—´
 --===============================================
 function PS_Transfer_Last_Click()
 	
@@ -301,7 +301,7 @@ function PS_Transfer_Last_Click()
 	
 	g_nCurStallIndex = g_nCurStallIndex - 1;
 
-	--Ïò·şÎñÆ÷ÇëÇóÊı¾İ
+	--å‘æœåŠ¡å™¨è¯·æ±‚æ•°æ®
 	PS_Transfer_Last:Disable();	
 	PS_Transfer_Next:Disable();
 	local i;
@@ -314,7 +314,7 @@ function PS_Transfer_Last_Click()
 end
 
 --===============================================
--- ÏÂÒ»¼ä
+-- ä¸‹ä¸€é—´
 --===============================================
 function PS_Transfer_Next_Click()
 	
@@ -324,7 +324,7 @@ function PS_Transfer_Next_Click()
 	
 	g_nCurStallIndex = g_nCurStallIndex + 1;
 
-	--Ïò·şÎñÆ÷ÇëÇóÊı¾İ
+	--å‘æœåŠ¡å™¨è¯·æ±‚æ•°æ®
 	PS_Transfer_Last:Disable();	
 	PS_Transfer_Next:Disable();
 	local i;
@@ -337,7 +337,7 @@ function PS_Transfer_Next_Click()
 end
 
 --===============================================
--- ×ó¼üÑ¡ÖĞ³èÎï
+-- å·¦é”®é€‰ä¸­å® ç‰©
 --===============================================
 function PS_Transfer_PetList_Selected()
 	
@@ -346,7 +346,7 @@ function PS_Transfer_PetList_Selected()
 end
 
 --===============================================
--- ÓÒ¼üÑ¡ÖĞ³èÎï
+-- å³é”®é€‰ä¸­å® ç‰©
 --===============================================
 function PS_Transfer_PetList_RClick()
 

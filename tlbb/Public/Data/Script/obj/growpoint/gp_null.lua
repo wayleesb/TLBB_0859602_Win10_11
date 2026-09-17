@@ -1,4 +1,4 @@
---¿ÕÉú³¤µã
+--ç©ºç”Ÿé•¿ç‚¹
 
 function x712526_OnRecycle(sceneId,selfId,targetId)
 	return 1;

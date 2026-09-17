@@ -1,12 +1,12 @@
---»éÇì¸±±¾NPC
---ÆÕÍ¨
+--å©šåº†å‰¯æœ¬NPC
+--æ™®é€š
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x155001_OnDefaultEvent(sceneId, selfId,targetId)
 	BeginEvent(sceneId);
-		AddText(sceneId,"Èç¹ûÄãÓĞÁËÏ²»¶µÄÈË£¬¿ÉÒÔÒ»ÆğÀ´ÕÒÎÒ¡£ÎÒ¿ÉÒÔ°ïÄãÃÇÖ÷³Ö»éÀñ¡£");
+		AddText(sceneId,"å¦‚æœä½ æœ‰äº†å–œæ¬¢çš„äººï¼Œå¯ä»¥ä¸€èµ·æ¥æ‰¾æˆ‘ã€‚æˆ‘å¯ä»¥å¸®ä½ ä»¬ä¸»æŒå©šç¤¼ã€‚");
 	EndEvent(sceneId);
 	DispatchEventList(sceneId,selfId,targetId);
 end

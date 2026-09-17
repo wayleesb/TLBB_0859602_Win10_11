@@ -1,16 +1,16 @@
 --MisDescBegin
 x801018_g_ScriptId = 801018
 x801018_g_MissionId = 1220
-x801018_g_Name = "²»ÖªµÀ"
+x801018_g_Name = "ä¸çŸ¥é“"
 x801018_g_MissionKind = 6
 x801018_g_MissionLevel = 10000
 x801018_g_IfMissionElite = 0
-x801018_g_IsMissionOkFail = 0							-- ÈÎÎñÍê³É±ê¼Ç
+x801018_g_IsMissionOkFail = 0							-- ä»»åŠ¡å®Œæˆæ ‡è®°
 x801018_g_TransScript = 400900
-x801018_g_MissionName = "¿¼³¡"
-x801018_g_MissionInfo = "´ò°ÜËùÓĞµÄ¿¼³¡»¤ÎÀ¼´¿É»ñµÃÊ¤Àû¡£"		--ÈÎÎñÃèÊö
-x801018_g_MissionTarget = "´ò°ÜËùÓĞµÄ¿¼³¡»¤ÎÀ¼´¿É»ñµÃÊ¤Àû¡£"	--ÈÎÎñÄ¿±ê
-x801018_g_ContinueInfo = "    ÄãµÄÈÎÎñ»¹Ã»ÓĞÍê³ÉÃ´£¿"						--Î´Íê³ÉÈÎÎñµÄnpc¶Ô»°
-x801018_g_MissionComplete = "    ¸ÉµÃ²»´í£¬ÉõºÃÉõºÃ¡£"						--Íê³ÉÈÎÎñnpcËµ»°µÄ»°
+x801018_g_MissionName = "è€ƒåœº"
+x801018_g_MissionInfo = "æ‰“è´¥æ‰€æœ‰çš„è€ƒåœºæŠ¤å«å³å¯è·å¾—èƒœåˆ©ã€‚"		--ä»»åŠ¡æè¿°
+x801018_g_MissionTarget = "æ‰“è´¥æ‰€æœ‰çš„è€ƒåœºæŠ¤å«å³å¯è·å¾—èƒœåˆ©ã€‚"	--ä»»åŠ¡ç›®æ ‡
+x801018_g_ContinueInfo = "    ä½ çš„ä»»åŠ¡è¿˜æ²¡æœ‰å®Œæˆä¹ˆï¼Ÿ"						--æœªå®Œæˆä»»åŠ¡çš„npcå¯¹è¯
+x801018_g_MissionComplete = "    å¹²å¾—ä¸é”™ï¼Œç”šå¥½ç”šå¥½ã€‚"						--å®Œæˆä»»åŠ¡npcè¯´è¯çš„è¯
 x801018_g_MissionRound = 38
 --MisDescEnd

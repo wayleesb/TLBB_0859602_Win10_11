@@ -1,25 +1,25 @@
---çÎç¿·å¸±±¾....
---¶ËÄ¾Ôª¶Ô»°½Å±¾....
+--ç¼¥ç¼ˆå³°å‰¯æœ¬....
+--ç«¯æœ¨å…ƒå¯¹è¯è„šæœ¬....
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x402274_g_ScriptId	= 402274
 
---¸±±¾Âß¼­½Å±¾ºÅ....
+--å‰¯æœ¬é€»è¾‘è„šæœ¬å·....
 x402274_g_FuBenScriptId = 402263
 
 --**********************************
---ËÀÍö....
+--æ­»äº¡....
 --**********************************
 function x402274_OnDie( sceneId, selfId, killerId )
 
-	--Èç¹û»¹Ã»ÓĞÌôÕ½¹ıÀîÇïË®Ôò¿ÉÒÔÌôÕ½ÀîÇïË®....
+	--å¦‚æœè¿˜æ²¡æœ‰æŒ‘æˆ˜è¿‡æç§‹æ°´åˆ™å¯ä»¥æŒ‘æˆ˜æç§‹æ°´....
 	if 2 ~= CallScriptFunction( x402274_g_FuBenScriptId, "GetBossBattleFlag", sceneId, "LiQiuShui" )	then
 		CallScriptFunction( x402274_g_FuBenScriptId, "SetBossBattleFlag", sceneId, "LiQiuShui", 1 )
 	end
-	-- zchw È«Çò¹«¸æ
+	-- zchw å…¨çƒå…¬å‘Š
 	local	playerName	= GetName( sceneId, killerId )
 	
-	--É±ËÀ¹ÖÎïµÄÊÇ³èÎïÔò»ñÈ¡ÆäÖ÷ÈËµÄÃû×Ö....
+	--æ€æ­»æ€ªç‰©çš„æ˜¯å® ç‰©åˆ™è·å–å…¶ä¸»äººçš„åå­—....
 	local playerID = killerId
 	local objType = GetCharacterType( sceneId, killerId )
 	if objType == 3 then
@@ -27,14 +27,14 @@ function x402274_OnDie( sceneId, selfId, killerId )
 		playerName = GetName( sceneId, playerID )
 	end
 	
-	--Èç¹ûÍæ¼Ò×é¶ÓÁËÔò»ñÈ¡¶Ó³¤µÄÃû×Ö....
+	--å¦‚æœç©å®¶ç»„é˜Ÿäº†åˆ™è·å–é˜Ÿé•¿çš„åå­—....
 	local leaderID = GetTeamLeader( sceneId, playerID )
 	if leaderID ~= -1 then
 		playerName = GetName( sceneId, leaderID )
 	end
 	
 	if playerName ~= nil then
-		str = format("#{PMF_8812_04}#{_INFOUSR%s}#{PMF_8812_05}", playerName); --ÈÎÆ½Éú
+		str = format("#{PMF_8812_04}#{_INFOUSR%s}#{PMF_8812_05}", playerName); --ä»»å¹³ç”Ÿ
 		AddGlobalCountNews( sceneId, str )
 	end
 end

@@ -1,11 +1,11 @@
-local	gOpType						= 0; --²Ù×÷ÀàĞÍ
-local	gExp							= 0; --×î´ó¾­Ñé
-local	gAssExp						= 0; --¿ÉÒÔ¶Ò»»µÄ×î´ó¾­Ñé
-local	gGBValue					= 0; --×î´óÉÆ¶ñÖµ
-local	gAssGBValue				= 0; --¶Ò»»µÄ×î´óÉÆ¶ñÖµ
-local	gGPValue					= 0; --×î´ó°ïÅÉ¹±Ï×¶È
-local	gAssGPValue				= 0; --¶Ò»»µÄ×î´ó°ïÅÉ¹±Ï×¶È
-local	gMasterLevel			= 0; --Ê¦¸µµÈ¼¶
+local	gOpType						= 0; --æ“ä½œç±»å‹
+local	gExp							= 0; --æœ€å¤§ç»éªŒ
+local	gAssExp						= 0; --å¯ä»¥å…‘æ¢çš„æœ€å¤§ç»éªŒ
+local	gGBValue					= 0; --æœ€å¤§å–„æ¶å€¼
+local	gAssGBValue				= 0; --å…‘æ¢çš„æœ€å¤§å–„æ¶å€¼
+local	gGPValue					= 0; --æœ€å¤§å¸®æ´¾è´¡çŒ®åº¦
+local	gAssGPValue				= 0; --å…‘æ¢çš„æœ€å¤§å¸®æ´¾è´¡çŒ®åº¦
+local	gMasterLevel			= 0; --å¸ˆå‚…ç­‰çº§
 local	gBasePoint				= 0;
 local	objCared					= -1;
 local	MAX_OBJ_DISTANCE	= 3.0;
@@ -31,7 +31,7 @@ function ExpAssign_OnEvent(event)
 		this:Show();
 		objCared = DataPool : GetNPCIDByServerID( Get_XParam_INT(0) );
 		if objCared == -1 then
-				PushDebugMessage("server´«¹ıÀ´µÄÊı¾İÓĞÎÊÌâ¡£");
+				PushDebugMessage("serverä¼ è¿‡æ¥çš„æ•°æ®æœ‰é—®é¢˜ã€‚");
 				return;
 		end
 		this:CareObject(objCared, 1, "ExpAssign");
@@ -40,9 +40,9 @@ function ExpAssign_OnEvent(event)
 			return
 		end
 		
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ı£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æœå’ŒNPCçš„è·ç¦»å¤§äºä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if(arg1 == "distance" and tonumber(arg2)>MAX_OBJ_DISTANCE or arg1=="destroy") then
-			--È¡Ïû¹ØĞÄ
+			--å–æ¶ˆå…³å¿ƒ
 			this:CareObject(objCared, 0, "ExpAssign");
 			this:Hide();
 			objCared = -1
@@ -67,17 +67,17 @@ function ExpAssign_Update()
 	AxTrace(0,0,"gMasterLevel="..tostring(gMasterLevel));
 	AxTrace(0,0,"gOpType="..tostring(gOpType));
 	
-	--ÉÆ¶ñÖµ¶Ò»»
+	--å–„æ¶å€¼å…‘æ¢
 	if gOpType == 1 then
-		ExpAssign_Info2:SetText("Ã¿´Î×î´óÄÜ¶Ò»»µÄÉÆ¶ñÖµÎª5000µã¡£");
+		ExpAssign_Info2:SetText("æ¯æ¬¡æœ€å¤§èƒ½å…‘æ¢çš„å–„æ¶å€¼ä¸º5000ç‚¹ã€‚");
 		if gMasterLevel == 1 then
-			gBasePoint = 30; 		--1¼¶Ê¦¸µµÈ¼¶
+			gBasePoint = 30; 		--1çº§å¸ˆå‚…ç­‰çº§
 		elseif gMasterLevel == 2 then
-			gBasePoint = 35;		--2¼¶Ê¦¸µµÈ¼¶
+			gBasePoint = 35;		--2çº§å¸ˆå‚…ç­‰çº§
 		elseif gMasterLevel == 3 then
-			gBasePoint = 50;		--3¼¶Ê¦¸µµÈ¼¶
+			gBasePoint = 50;		--3çº§å¸ˆå‚…ç­‰çº§
 		elseif gMasterLevel == 4 then
-			gBasePoint = 70;		--4¼¶Ê¦¸µµÈ¼¶
+			gBasePoint = 70;		--4çº§å¸ˆå‚…ç­‰çº§
 		end
 		
 		if(gBasePoint ==0)then
@@ -85,7 +85,7 @@ function ExpAssign_Update()
 			gAssExp = 0;
 		else
 			if(gGBValue * gBasePoint>gExp)then
-				--Íæ¼ÒÉÆ¶ñµã*a´óÓÚ¿É¶Ò»»¾­Ñé
+				--ç©å®¶å–„æ¶ç‚¹*aå¤§äºå¯å…‘æ¢ç»éªŒ
 				if(gExp >5000 * gBasePoint)then
 					gAssGBValue = 5000;
 					gAssExp = 5000 * gBasePoint;	
@@ -103,20 +103,20 @@ function ExpAssign_Update()
 				end
 			end
 		end
-		str0	= "ÄúÏÖÔÚ¿ÉÒÔÌáÈ¡µÄ¾­ÑéÎª"..tostring( gExp )..",ÄúÓµÓĞµÄÉÆ¶ñÖµÎª"..tostring( gGBValue )
-		str1	= "ĞèÒªÉÆ¶ñµã:0"
+		str0	= "æ‚¨ç°åœ¨å¯ä»¥æå–çš„ç»éªŒä¸º"..tostring( gExp )..",æ‚¨æ‹¥æœ‰çš„å–„æ¶å€¼ä¸º"..tostring( gGBValue )
+		str1	= "éœ€è¦å–„æ¶ç‚¹:0"
 
-	--°ïÅÉ¹±Ï×¶È¶Ò»»
+	--å¸®æ´¾è´¡çŒ®åº¦å…‘æ¢
 	elseif gOpType == 2 then
-		ExpAssign_Info2:SetText("Ã¿ÌìÓÃ°ï¹±×î¶à¿ÉÁìÈ¡µÄ¾­ÑéÎª12Íòµã¡£");
+		ExpAssign_Info2:SetText("æ¯å¤©ç”¨å¸®è´¡æœ€å¤šå¯é¢†å–çš„ç»éªŒä¸º12ä¸‡ç‚¹ã€‚");
 		if gMasterLevel == 1 then
-			gBasePoint = 250;		--1¼¶Ê¦¸µµÈ¼¶
+			gBasePoint = 250;		--1çº§å¸ˆå‚…ç­‰çº§
 		elseif gMasterLevel == 2 then
-			gBasePoint = 300;		--2¼¶Ê¦¸µµÈ¼¶
+			gBasePoint = 300;		--2çº§å¸ˆå‚…ç­‰çº§
 		elseif gMasterLevel == 3 then
-			gBasePoint = 400;		--3¼¶Ê¦¸µµÈ¼¶
+			gBasePoint = 400;		--3çº§å¸ˆå‚…ç­‰çº§
 		elseif gMasterLevel == 4 then
-			gBasePoint = 600;		--4¼¶Ê¦¸µµÈ¼¶
+			gBasePoint = 600;		--4çº§å¸ˆå‚…ç­‰çº§
 		end
 		gAssGPValue		= gGPValue
 		gAssExp				= gGPValue * gBasePoint
@@ -124,8 +124,8 @@ function ExpAssign_Update()
 			gAssExp			= gExp
 			gAssGBValue	= math.ceil( gAssExp / gBasePoint )
 		end
-		str0	= "ÄúÏÖÔÚ¿ÉÒÔÌáÈ¡µÄ¾­ÑéÎª"..tostring( gExp )..",ÄúÓµÓĞµÄ°ïÅÉ¹±Ï×¶ÈÎª"..tostring( gGPValue )
-		str1	= "ĞèÒª°ïÅÉ¹±Ï×¶È:0"
+		str0	= "æ‚¨ç°åœ¨å¯ä»¥æå–çš„ç»éªŒä¸º"..tostring( gExp )..",æ‚¨æ‹¥æœ‰çš„å¸®æ´¾è´¡çŒ®åº¦ä¸º"..tostring( gGPValue )
+		str1	= "éœ€è¦å¸®æ´¾è´¡çŒ®åº¦:0"
 
 	else
 		return
@@ -133,7 +133,7 @@ function ExpAssign_Update()
 
 	ExpAssign_Cur_Info:SetText( str0 )
 	ExpAssign_Moral_Need:SetText( str1 );
-	--ÎÄ±¾ÊäÈë¿ò
+	--æ–‡æœ¬è¾“å…¥æ¡†
 	ExpAssign_Moral_Value:SetText( "0" );
 
 end
@@ -146,17 +146,17 @@ function ExpAssign_Button_Max_Click()
 	end
 	
 	local	str
-	--ÉÆ¶ñÖµ¶Ò»»
+	--å–„æ¶å€¼å…‘æ¢
 	if gOpType == 1 then
-		str	= "ĞèÒªÉÆ¶ñµã:"..tostring(gAssGBValue)
-	--°ïÅÉ¹±Ï×¶È¶Ò»»
+		str	= "éœ€è¦å–„æ¶ç‚¹:"..tostring(gAssGBValue)
+	--å¸®æ´¾è´¡çŒ®åº¦å…‘æ¢
 	elseif gOpType == 2 then
-		str	= "ĞèÒª°ïÅÉ¹±Ï×¶È:"..tostring(gAssGPValue)
+		str	= "éœ€è¦å¸®æ´¾è´¡çŒ®åº¦:"..tostring(gAssGPValue)
 	else
 		return
 	end
 	ExpAssign_Moral_Need:SetText( str );
-	--ÎÄ±¾ÊäÈë¿ò
+	--æ–‡æœ¬è¾“å…¥æ¡†
 	ExpAssign_Moral_Value:SetText( tostring(gAssExp) );
 
 end
@@ -177,12 +177,12 @@ function ExpAssign_Value_Change()
 		nCurExp	= gAssExp
 		ExpAssign_Moral_Value:SetText( nCurExp );
 	end
-	--ÉÆ¶ñÖµ¶Ò»»
+	--å–„æ¶å€¼å…‘æ¢
 	if gOpType == 1 then
-		str	= "ĞèÒªÉÆ¶ñµã:"..tostring( math.ceil( nCurExp / gBasePoint ) )
-	--°ïÅÉ¹±Ï×¶È¶Ò»»
+		str	= "éœ€è¦å–„æ¶ç‚¹:"..tostring( math.ceil( nCurExp / gBasePoint ) )
+	--å¸®æ´¾è´¡çŒ®åº¦å…‘æ¢
 	elseif gOpType == 2 then
-		str	= "ĞèÒª°ïÅÉ¹±Ï×¶È:"..tostring( math.ceil( nCurExp / gBasePoint ) )
+		str	= "éœ€è¦å¸®æ´¾è´¡çŒ®åº¦:"..tostring( math.ceil( nCurExp / gBasePoint ) )
 	else
 		return
 	end

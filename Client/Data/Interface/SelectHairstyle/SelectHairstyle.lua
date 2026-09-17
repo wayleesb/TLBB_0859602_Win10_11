@@ -39,7 +39,7 @@ function SelectHairstyle_OnEvent(event)
 			objCared = DataPool : GetNPCIDByServerID(xx);
 			AxTrace(0,1,"xx="..xx .. " objCared="..objCared)
 			if objCared == -1 then
-					PushDebugMessage("server´«¹ıÀ´µÄÊı¾İÓĞÎÊÌâ¡£");
+					PushDebugMessage("serverä¼ è¿‡æ¥çš„æ•°æ®æœ‰é—®é¢˜ã€‚");
 					return;
 			end
 
@@ -67,10 +67,10 @@ function SelectHairstyle_OnEvent(event)
 			return;
 		end
 		
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ı£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æœå’ŒNPCçš„è·ç¦»å¤§äºä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if(arg1 == "distance" and tonumber(arg2)>MAX_OBJ_DISTANCE or arg1=="destroy") then
 			
-			--È¡Ïû¹ØĞÄ
+			--å–æ¶ˆå…³å¿ƒ
 			SelectHairstyle_Cancel_Clicked()
 		end
 	end
@@ -137,7 +137,7 @@ function SelectHairstyle_Update()
 
 
 	if(Max_Style <= 0) then
-		SelectHairstyle_Require:SetText("Ã»ÓĞ¿É¸ü¸ÄµÄ·¢ĞÍ¡£");
+		SelectHairstyle_Require:SetText("æ²¡æœ‰å¯æ›´æ”¹çš„å‘å‹ã€‚");
 		SelectHairstyle_CurrentlyPage:SetText("1/1");
 		SelectHairstyle_Model : SetFakeObject( "" );
 		SelectHairstyle_Model : SetFakeObject( "Player_Head" );
@@ -150,7 +150,7 @@ function SelectHairstyle_Update()
 	ItemID,ItemCount,SelectType,IconFile,CostMoney = DataPool : Change_MyHairStyle_Item(Style_Index[Current]);
 	local name,icon = LifeAbility : GetPrescr_Material(ItemID);
 	
-	SelectHairstyle_WarningText : SetText("ĞèÒª"..name.." : "..ItemCount.."#rĞèÒª½ğÇ®: #{_EXCHG"..CostMoney.."}#rÇëÔÚ»­Ãæ×óÉÏ·½Ñ¡Ôñ·¢ĞÍ£¬È»ºóµã»÷¡°È·¶¨¡±¡£");
+	SelectHairstyle_WarningText : SetText("éœ€è¦"..name.." : "..ItemCount.."#réœ€è¦é‡‘é’±: #{_EXCHG"..CostMoney.."}#rè¯·åœ¨ç”»é¢å·¦ä¸Šæ–¹é€‰æ‹©å‘å‹ï¼Œç„¶åç‚¹å‡»â€œç¡®å®šâ€ã€‚");
 
 	SelectHairstyle_Model : SetFakeObject( "Player_Head" );
 	if Max_Style > STYLE_BUTTON then
@@ -189,7 +189,7 @@ function SelectHairstyle_Add_Clicked()
 	local ItemID,ItemCount,SelectType,IconFile,CostMoney  = DataPool : Change_MyHairStyle_Item(Style_Index[Current]);
 	local name,icon = LifeAbility : GetPrescr_Material(ItemID);
 	
-	SelectHairstyle_WarningText : SetText("ĞèÒª"..name.." : "..ItemCount.."#rĞèÒª½ğÇ®: #{_EXCHG"..CostMoney.."}#rÇëÔÚ»­Ãæ×óÉÏ·½Ñ¡Ôñ·¢ĞÍ£¬È»ºóµã»÷¡°È·¶¨¡±¡£");
+	SelectHairstyle_WarningText : SetText("éœ€è¦"..name.." : "..ItemCount.."#réœ€è¦é‡‘é’±: #{_EXCHG"..CostMoney.."}#rè¯·åœ¨ç”»é¢å·¦ä¸Šæ–¹é€‰æ‹©å‘å‹ï¼Œç„¶åç‚¹å‡»â€œç¡®å®šâ€ã€‚");
 	SelectHairstyle_CurrentlyPage : SetText(Current .."/".. Max_Style);
 	DataPool : Change_MyHairStyle(Style_Index[Current]);
 	g_HaveChange = 1;
@@ -205,40 +205,40 @@ function SelectHairstyle_Minus_Clicked()
 	local ItemID,ItemCount,SelectType,IconFile,CostMoney = DataPool : Change_MyHairStyle_Item(Style_Index[Current]);
 	local name,icon = LifeAbility : GetPrescr_Material(ItemID);
 	
-	SelectHairstyle_WarningText : SetText("ĞèÒª"..name.." : "..ItemCount.."#rĞèÒª½ğÇ®: #{_EXCHG"..CostMoney.."}#rÇëÔÚ»­Ãæ×óÉÏ·½Ñ¡Ôñ·¢ĞÍ£¬È»ºóµã»÷¡°È·¶¨¡±¡£");
+	SelectHairstyle_WarningText : SetText("éœ€è¦"..name.." : "..ItemCount.."#réœ€è¦é‡‘é’±: #{_EXCHG"..CostMoney.."}#rè¯·åœ¨ç”»é¢å·¦ä¸Šæ–¹é€‰æ‹©å‘å‹ï¼Œç„¶åç‚¹å‡»â€œç¡®å®šâ€ã€‚");
 	SelectHairstyle_CurrentlyPage : SetText(Current .."/".. Max_Style);
 	DataPool : Change_MyHairStyle(Style_Index[Current]);
 	g_HaveChange = 1;
 end
 
 --==================================
---È·ÈÏ
+--ç¡®è®¤
 --==================================
 function SelectHairstyle_OK_Clicked()
 
-	-- µÃµ½Ñ¡ÔñµÄ·¢ĞÍĞÅÏ¢
+	-- å¾—åˆ°é€‰æ‹©çš„å‘å‹ä¿¡æ¯
 	ItemID,ItemCount,SelectType,IconFile,CostMoney = DataPool : Change_MyHairStyle_Item(Style_Index[Current]);
 
-	-- µÃµ½Ñ¡ÔñµÄ·¢ĞÍĞÅÏ¢
+	-- å¾—åˆ°é€‰æ‹©çš„å‘å‹ä¿¡æ¯
 	if(ItemID ~= -1 and SelectType >= 2) then
 		if( DataPool:GetPlayerMission_ItemCountNow(ItemID) < ItemCount) then
-			PushDebugMessage("È±ÉÙËùĞèµÄ·¢ĞÍÍ¼");
+			PushDebugMessage("ç¼ºå°‘æ‰€éœ€çš„å‘å‹å›¾");
 			return;
 		end
 	end
 	
-	-- µÃµ½Íæ¼ÒµÄ½ğ±ÒºÍ½»×ÓÊıÄ¿
+	-- å¾—åˆ°ç©å®¶çš„é‡‘å¸å’Œäº¤å­æ•°ç›®
 	local nMoney = Player:GetData("MONEY")
 	local nMoneyJZ = Player:GetData("MONEY_JZ")
 	
 	if (nMoney + nMoneyJZ) < CostMoney then
-		PushDebugMessage("½ğÇ®²»×ã");
+		PushDebugMessage("é‡‘é’±ä¸è¶³");
 		return
 	end
 	
-	-- µ÷ÊÔĞÅÏ¢£¬µ±Ç°Ñ¡ÔñµÄ·¢ĞÍID
+	-- è°ƒè¯•ä¿¡æ¯ï¼Œå½“å‰é€‰æ‹©çš„å‘å‹ID
 	--PushDebugMessage ("StyleId = "..Style_Index[Current])
-	-- Èç¹ûÑ¡ÔñµÄ·¢ĞÍºÍµ±Ç°·¢ĞÍ²»Í¬
+	-- å¦‚æœé€‰æ‹©çš„å‘å‹å’Œå½“å‰å‘å‹ä¸åŒ
 	if Style_Index[Current] ~= Original_Style then
 		
 		Clear_XSCRIPT();
@@ -250,7 +250,7 @@ function SelectHairstyle_OK_Clicked()
 		Close_HairStyle();
 
 	else
-		PushDebugMessage("ÇëÑ¡ÔñÒ»ÖÖºÍÄãµ±Ç°²»Í¬µÄ·¢ĞÍ¡£");
+		PushDebugMessage("è¯·é€‰æ‹©ä¸€ç§å’Œä½ å½“å‰ä¸åŒçš„å‘å‹ã€‚");
 	end
 	
 end
@@ -263,15 +263,15 @@ end
 
 ----------------------------------------------------------------------------------
 --
--- Ğı×ªÈËÎïÍ·ÏñÄ£ĞÍ£¨Ïò×ó)
+-- æ—‹è½¬äººç‰©å¤´åƒæ¨¡å‹ï¼ˆå‘å·¦)
 --
 function Player_Head_Modle_TurnLeft(start)
 	local mouse_button = CEArg:GetValue("MouseButton");
 	if(mouse_button == "LeftButton") then
-		--Ïò×óĞı×ª¿ªÊ¼
+		--å‘å·¦æ—‹è½¬å¼€å§‹
 		if(start == 1) then
 			SelectHairstyle_Model:RotateBegin(-0.3);
-		--Ïò×óĞı×ª½áÊø
+		--å‘å·¦æ—‹è½¬ç»“æŸ
 		else
 			SelectHairstyle_Model:RotateEnd();
 		end
@@ -280,15 +280,15 @@ end
 
 ----------------------------------------------------------------------------------
 --
---Ğı×ªÈËÎïÍ·ÏñÄ£ĞÍ£¨ÏòÓÒ)
+--æ—‹è½¬äººç‰©å¤´åƒæ¨¡å‹ï¼ˆå‘å³)
 --
 function Player_Head_Modle_TurnRight(start)
 	local mouse_button = CEArg:GetValue("MouseButton");
 	if(mouse_button == "LeftButton") then
-		--ÏòÓÒĞı×ª¿ªÊ¼
+		--å‘å³æ—‹è½¬å¼€å§‹
 		if(start == 1) then
 			SelectHairstyle_Model:RotateBegin(0.3);
-		--ÏòÓÒĞı×ª½áÊø
+		--å‘å³æ—‹è½¬ç»“æŸ
 		else
 			SelectHairstyle_Model:RotateEnd();
 		end
@@ -304,9 +304,9 @@ function Close_HairStyle()
 end
 
 --=========================================================
---¿ªÊ¼¹ØĞÄNPC£¬
---ÔÚ¿ªÊ¼¹ØĞÄÖ®Ç°ĞèÒªÏÈÈ·¶¨Õâ¸ö½çÃæÊÇ²»ÊÇÒÑ¾­ÓĞ¡°¹ØĞÄ¡±µÄNPC£¬
---Èç¹ûÓĞµÄ»°£¬ÏÈÈ¡ÏûÒÑ¾­ÓĞµÄ¡°¹ØĞÄ¡±
+--å¼€å§‹å…³å¿ƒNPCï¼Œ
+--åœ¨å¼€å§‹å…³å¿ƒä¹‹å‰éœ€è¦å…ˆç¡®å®šè¿™ä¸ªç•Œé¢æ˜¯ä¸æ˜¯å·²ç»æœ‰â€œå…³å¿ƒâ€çš„NPCï¼Œ
+--å¦‚æœæœ‰çš„è¯ï¼Œå…ˆå–æ¶ˆå·²ç»æœ‰çš„â€œå…³å¿ƒâ€
 --=========================================================
 function BeginCareObject_SelectHairstyle(objCaredId)
 
@@ -317,7 +317,7 @@ function BeginCareObject_SelectHairstyle(objCaredId)
 end
 
 --=========================================================
---Í£Ö¹¶ÔÄ³NPCµÄ¹ØĞÄ
+--åœæ­¢å¯¹æŸNPCçš„å…³å¿ƒ
 --=========================================================
 function StopCareObject_SelectHairstyle(objCaredId)
 	this:CareObject(objCaredId, 0, "SelectHairstyle");
@@ -338,7 +338,7 @@ function SelectHairstyle_Clicked(nIndex)
 	local ItemID,ItemCount,SelectType,IconFile,CostMoney = DataPool : Change_MyHairStyle_Item(Style_Index[nIndex]);
 	local name,icon = LifeAbility : GetPrescr_Material(ItemID);
 	
-	SelectHairstyle_WarningText : SetText("ĞèÒª"..name.." : "..ItemCount.."#rĞèÒª½ğÇ®: #{_EXCHG"..CostMoney.."}#rÇëÔÚ»­Ãæ×óÉÏ·½Ñ¡Ôñ·¢ĞÍ£¬È»ºóµã»÷¡°È·¶¨¡±¡£");
+	SelectHairstyle_WarningText : SetText("éœ€è¦"..name.." : "..ItemCount.."#réœ€è¦é‡‘é’±: #{_EXCHG"..CostMoney.."}#rè¯·åœ¨ç”»é¢å·¦ä¸Šæ–¹é€‰æ‹©å‘å‹ï¼Œç„¶åç‚¹å‡»â€œç¡®å®šâ€ã€‚");
 
 	DataPool : Change_MyHairStyle(Style_Index[nIndex]);
 	g_HaveChange = 1;

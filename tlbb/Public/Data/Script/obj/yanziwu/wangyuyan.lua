@@ -1,5 +1,5 @@
 -- 402255
--- ÍõÓïæÌ
+-- ç‹è¯­å«£
 
 x402255_TBL = 
 {
@@ -32,11 +32,11 @@ function x402255_OnHeartBeat(sceneId, selfId, nTick)
 				if LuaFnGetCopySceneData_Param(sceneId, x402255_g_DuanAndWangFlag) == 0  then
 					LuaFnSetCopySceneData_Param(sceneId, x402255_g_DuanAndWangFlag, 1)
 					
-					-- ¶ÎÓş¸Ä±äAiFlie
+					-- æ®µèª‰æ”¹å˜AiFlie
 					local nMonsterNum = GetMonsterCount(sceneId)
 					for i=0, nMonsterNum-1 do
 						local nMonsterId = GetMonsterObjID(sceneId,i)
-						if GetName(sceneId, nMonsterId)== "¶ÎÓş"  then
+						if GetName(sceneId, nMonsterId)== "æ®µèª‰"  then
 							--if GetAIScriptID(sceneId, nMonsterId) == 245  then
 								SetAIScriptID(sceneId, nMonsterId, 246)
 							--end
@@ -50,11 +50,11 @@ function x402255_OnHeartBeat(sceneId, selfId, nTick)
 				--PrintNum(LuaFnGetCopySceneData_Param(sceneId, x402255_g_DuanAndWangFlag))
 				if LuaFnGetCopySceneData_Param(sceneId, x402255_g_DuanAndWangFlag) == 0  then
 					LuaFnSetCopySceneData_Param(sceneId, x402255_g_DuanAndWangFlag, 1)
-					-- ¶ÎÓş¸Ä±äAiFlie
+					-- æ®µèª‰æ”¹å˜AiFlie
 					local nMonsterNum = GetMonsterCount(sceneId)
 					for i=0, nMonsterNum-1 do
 						local nMonsterId = GetMonsterObjID(sceneId,i)
-						if GetName(sceneId, nMonsterId)== "¶ÎÓş"  then
+						if GetName(sceneId, nMonsterId)== "æ®µèª‰"  then
 							--PrintNum(GetAIScriptID(sceneId, nMonsterId))
 							--if GetAIScriptID(sceneId, nMonsterId) == 245  then
 								SetAIScriptID(sceneId, nMonsterId, 246)
@@ -88,7 +88,7 @@ function x402255_OnHeartBeat(sceneId, selfId, nTick)
 --						local posX, posZ = GetWorldPos(sceneId,nTarget)
 --						local fDir = 0.0
 --						LuaFnUnitUseSkill(sceneId, selfId, x402255_TBL.BossSkill, nTarget, posX, posZ, fDir)			
---						LuaFnNpcChat(sceneId, selfId, 0, "³¢³¢ä±Ñô½­ÉÏµÄÁÒÑæ°É£¡")
+--						LuaFnNpcChat(sceneId, selfId, 0, "å°å°æµ”é˜³æ±Ÿä¸Šçš„çƒˆç„°å§ï¼")
 --					end
 --				end
 --			end
@@ -105,7 +105,7 @@ end
 function x402255_OnKillCharacter(sceneId, selfId, targetId)
 --	if(-1~=targetId) then
 --		local szTarget = GetName(sceneId, targetId)		
---		LuaFnNpcChat(sceneId, selfId, 0, szTarget .. "£¬Äã¾ÍËãÔÙÀ÷º¦Ê®±¶£¬ÓöÉÏÒ¯Ò¯Ò²Ö»ÓĞËÀÂ·Ò»Ìõ£¡")
+--		LuaFnNpcChat(sceneId, selfId, 0, szTarget .. "ï¼Œä½ å°±ç®—å†å‰å®³åå€ï¼Œé‡ä¸Šçˆ·çˆ·ä¹Ÿåªæœ‰æ­»è·¯ä¸€æ¡ï¼")
 --	end
 end
 

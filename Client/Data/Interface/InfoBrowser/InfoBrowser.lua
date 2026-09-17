@@ -18,7 +18,7 @@ end
 -- OnEvent()
 --===============================================
 function InfoBrowser_OnEvent( event )
-	--ÏÔÊ¾ÏµÍ³ÓÊ¼şµÄÊ±ºò±Ø¶¨»á¹Ø±Õ±¾½çÃæ
+	--æ˜¾ç¤ºç³»ç»Ÿé‚®ä»¶çš„æ—¶å€™å¿…å®šä¼šå…³é—­æœ¬ç•Œé¢
 	if( event == "OPEN_EMAIL" ) then
 		SystemInfo_NextPage();
 		
@@ -27,7 +27,7 @@ function InfoBrowser_OnEvent( event )
 		nCurrentMail = tonumber( arg0 );		
 		
 		-- [ QUFEI 2007-09-15 17:05 UPDATE BugID #25107 ]
-		-- ÊÕµ½ÎŞĞ§ÓÊ¼şÊ±¹Ø±ÕÓÊ¼ş¶ÁÈ¡´°¿Ú
+		-- æ”¶åˆ°æ— æ•ˆé‚®ä»¶æ—¶å…³é—­é‚®ä»¶è¯»å–çª—å£
 		if( nCurrentMail < 100000 ) then
 			Update_Player_Mail();
 		elseif( nCurrentMail >= 100000 and nCurrentMail < 300000 ) then
@@ -79,8 +79,8 @@ function InfoBrowser_Update()
 	local time	  = DataPool:GetMail( nCurrentMail,"TIME" );
 
 	
-	InfoBrowser_From:SetText( "Ãû×Ö:"..sender.."#b#c0000FF#effffff(Íæ¼Ò)" );
-	InfoBrowser_Time:SetText( "Ê±¼ä:"..time );
+	InfoBrowser_From:SetText( "åå­—:"..sender.."#b#c0000FF#effffff(ç©å®¶)" );
+	InfoBrowser_Time:SetText( "æ—¶é—´:"..time );
 	InfoBrowser_Context:SetText( context );
 	local strFaceImage = DataPool:GetMail( nCurrentMail,"PORTRAIT" );
 	AxTrace( 0,0,"InfoBrowser_Update head image = "..tostring(strFaceImage) );
@@ -121,23 +121,23 @@ end
 function InfoBrowser_Show()
 	this:Show();
 	Variable:SetVariable( "IsInfoBrowerShow","True", 1 );
-	InfoBrowser_Frame_Title:SetText( "#gFF0FA0ĞÅ¼şä¯ÀÀ" );
+	InfoBrowser_Frame_Title:SetText( "#gFF0FA0ä¿¡ä»¶æµè§ˆ" );
 	InfoBrowser_Frame_System:Hide();
 	InfoBrowser_Frame_Player:Show();
 	InfoBrowser_Respondence:Show();
 	InfoBrowser_AddFriend:Show();
-	--Í¶Ëß°´Å¥show
+	--æŠ•è¯‰æŒ‰é’®show
 end
 
 function SystemInfo_Show()
 	this:Show();
 	Variable:SetVariable( "IsInfoBrowerShow","True", 1 );
 	InfoBrowser_Frame_Player:Hide();
-	InfoBrowser_Frame_Title:SetText( "#gFF0FA0ÏµÍ³ĞÅÏ¢" );
+	InfoBrowser_Frame_Title:SetText( "#gFF0FA0ç³»ç»Ÿä¿¡æ¯" );
 	InfoBrowser_Frame_System:Show();
 	InfoBrowser_AddFriend:Hide();
 	InfoBrowser_Respondence:Hide();
-	--Í¶Ëß°´Å¥hide	
+	--æŠ•è¯‰æŒ‰é’®hide	
 end
 
 
@@ -183,8 +183,8 @@ function SystemInfo_Update()
 		local time	  = DataPool:GetMail( nCurrentMail,"TIME" );
 	
 		
-		SystemInfo_From:SetText( "#b#cFF0000#effffffÏµÍ³ÓÊ¼ş" );
-		SystemInfo_Time:SetText( "Ê±¼ä:"..time );
+		SystemInfo_From:SetText( "#b#cFF0000#effffffç³»ç»Ÿé‚®ä»¶" );
+		SystemInfo_Time:SetText( "æ—¶é—´:"..time );
 		SystemInfo_Context:SetText( context );
 		InfoBrowser_Report:Hide();
 end

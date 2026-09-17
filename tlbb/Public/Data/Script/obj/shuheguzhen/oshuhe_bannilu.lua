@@ -1,11 +1,11 @@
---束河古镇NPC....
---服饰店老板....
+--鏉熸渤鍙ら晣NPC....
+--鏈嶉グ搴楄�佹澘....
 
 x001193_g_scriptId = 001193
 x001193_g_shoptableindex = 71
 
 --**********************************
---事件交互入口
+--浜嬩欢浜や簰鍏ュ彛
 --**********************************
 function x001193_OnDefaultEvent( sceneId, selfId, targetId )
 	DispatchShopItem( sceneId, selfId, targetId, x001193_g_shoptableindex )

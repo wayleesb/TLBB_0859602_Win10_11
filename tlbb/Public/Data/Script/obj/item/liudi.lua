@@ -1,9 +1,9 @@
---ÁøµÑ
+--æŸ³ç¬›
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x300002_g_scriptId = 300002
 --**********************************
---Ë¢ĞÂÊÂ¼ş
+--åˆ·æ–°äº‹ä»¶
 --**********************************
 function x300002_OnDefaultEvent( sceneId, selfId, BagIndex )
 		if	sceneId == 30 then
@@ -12,7 +12,7 @@ function x300002_OnDefaultEvent( sceneId, selfId, BagIndex )
 			end
 		else
 			BeginEvent(sceneId)
-				strText = "ÔÚÕâÀïÎŞ·¨Ê¹ÓÃ"
+				strText = "åœ¨è¿™é‡Œæ— æ³•ä½¿ç”¨"
 				AddText(sceneId,strText);
 			EndEvent(sceneId)
 			DispatchMissionTips(sceneId,selfId)

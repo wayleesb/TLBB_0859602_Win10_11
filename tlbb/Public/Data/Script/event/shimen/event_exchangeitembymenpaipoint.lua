@@ -1,46 +1,46 @@
---ÈÎÎñÁ´
+--ä»»åŠ¡é“¾
 
 --MisDescBegin
---½Å±¾ºÅ
+--è„šæœ¬å·
 x229009_g_scriptId = 229009
 
---ÈÎÎñÎÄ±¾ÃèÊö
-x229009_g_ExchangeItem = "¶Ò»»ÎïÆ·"
-x229009_g_ExchangeTitle = "¶Ò»»³ÆºÅ"
-x229009_g_MissionInfo = "ÎªÁË¹ÄÀø¸÷Î»ÃÅÏÂµÜ×Ó½«±¾ÃÅÅÉ·¢Ñï¹â´ó£¬ÎªÊ¦ÌØ×¼±¸ÁËÒ»Ğ©½±Æ·£¬Ê¹ÓÃ#R400#WµãÃÅÅÉ¹±Ï×¶È¼´¿É¶Ò»»¡£"  --ÈÎÎñÃèÊö
+--ä»»åŠ¡æ–‡æœ¬æè¿°
+x229009_g_ExchangeItem = "å…‘æ¢ç‰©å“"
+x229009_g_ExchangeTitle = "å…‘æ¢ç§°å·"
+x229009_g_MissionInfo = "ä¸ºäº†é¼“åŠ±å„ä½é—¨ä¸‹å¼Ÿå­å°†æœ¬é—¨æ´¾å‘æ‰¬å…‰å¤§ï¼Œä¸ºå¸ˆç‰¹å‡†å¤‡äº†ä¸€äº›å¥–å“ï¼Œä½¿ç”¨#R400#Wç‚¹é—¨æ´¾è´¡çŒ®åº¦å³å¯å…‘æ¢ã€‚"  --ä»»åŠ¡æè¿°
 x229009_g_MissionTarget = ""
-x229009_g_ContinueInfo = ""			--Î´Íê³ÉÈÎÎñµÄnpc¶Ô»°
-x229009_g_MissionComplete = ""	--Íê³ÉÈÎÎñnpcËµ»°µÄ»°
+x229009_g_ContinueInfo = ""			--æœªå®Œæˆä»»åŠ¡çš„npcå¯¹è¯
+x229009_g_MissionComplete = ""	--å®Œæˆä»»åŠ¡npcè¯´è¯çš„è¯
 
 --MisDescEnd
 
 x229009_g_exchangeitembymenpaipoint_Index = 23
 
 x229009_g_menpainpc_table =  {
-	{menpaiid=MP_SHAOLIN,  menpainame="ÉÙÁÖ", name="Ğş´È",	 title="ÉÙÁÖËÂ·½ÕÉ",	x=38, z=98},
-	{menpaiid=MP_MINGJIAO, menpainame="Ã÷½Ì", name="ÁÖÊÀ³¤", title="Ã÷½Ì½ÌÖ÷", 	x=98, z=52},
-	{menpaiid=MP_GAIBANG,  menpainame="Ø¤°ï", name="ËÎ´È",	 title="Ø¤°ï³¤ÀÏ", 	x=91, z=63},
-	{menpaiid=MP_WUDANG, 	 menpainame="Îäµ±", name="ÕÅĞşËØ", title="Îäµ±ÅÉÕÆÃÅ",	x=73, z=82},
-	{menpaiid=MP_EMEI, 		 menpainame="¶ëáÒ", name="ÃÏÇàÇà", title="¶ëáÒÅÉÕÆÃÅ",	x=96, z=73},
-	{menpaiid=MP_DALI, 	   menpainame="ÌìÁú", name="±¾Òò",	 title="ÌìÁúËÂ·½ÕÉ",	x=96, z=66},
-	{menpaiid=MP_XINGSU, 	 menpainame="ĞÇËŞ", name="¶¡´ºÇï", title="ĞÇËŞÅÉÕÆÃÅ",	x=142, z=55},
-	{menpaiid=MP_TIANSHAN, menpainame="ÌìÉ½", name="Ã·½£",	 title="ÌìÉ½ÅÉ´óÊ¦½ã",	x=91, z=44},
-	{menpaiid=MP_XIAOYAO,  menpainame="åĞÒ£", name="ËÕĞÇºÓ", title="åĞÒ£ÅÉ´úÕÆÃÅ",	x=125, z=144},
+	{menpaiid=MP_SHAOLIN,  menpainame="å°‘æ—", name="ç„æ…ˆ",	 title="å°‘æ—å¯ºæ–¹ä¸ˆ",	x=38, z=98},
+	{menpaiid=MP_MINGJIAO, menpainame="æ˜æ•™", name="æ—ä¸–é•¿", title="æ˜æ•™æ•™ä¸»", 	x=98, z=52},
+	{menpaiid=MP_GAIBANG,  menpainame="ä¸å¸®", name="å®‹æ…ˆ",	 title="ä¸å¸®é•¿è€", 	x=91, z=63},
+	{menpaiid=MP_WUDANG, 	 menpainame="æ­¦å½“", name="å¼ ç„ç´ ", title="æ­¦å½“æ´¾æŒé—¨",	x=73, z=82},
+	{menpaiid=MP_EMEI, 		 menpainame="å³¨åµ‹", name="å­Ÿé’é’", title="å³¨åµ‹æ´¾æŒé—¨",	x=96, z=73},
+	{menpaiid=MP_DALI, 	   menpainame="å¤©é¾™", name="æœ¬å› ",	 title="å¤©é¾™å¯ºæ–¹ä¸ˆ",	x=96, z=66},
+	{menpaiid=MP_XINGSU, 	 menpainame="æ˜Ÿå®¿", name="ä¸æ˜¥ç§‹", title="æ˜Ÿå®¿æ´¾æŒé—¨",	x=142, z=55},
+	{menpaiid=MP_TIANSHAN, menpainame="å¤©å±±", name="æ¢…å‰‘",	 title="å¤©å±±æ´¾å¤§å¸ˆå§",	x=91, z=44},
+	{menpaiid=MP_XIAOYAO,  menpainame="é€é¥", name="è‹æ˜Ÿæ²³", title="é€é¥æ´¾ä»£æŒé—¨",	x=125, z=144},
 }           
 
---ÄĞ
+--ç”·
 x229009_g_MaleTitleInfo = {
-	{tlvl=1, mpp=0,    slt="ÉÙÁÖÏÀÊ¿", mjt="Ã÷½ÌÏÀÊ¿", gbt="Ø¤°ïÏÀÊ¿", wdt="Îäµ±ÏÀÊ¿", emt="¶ëáÒÏÀÊ¿", xxt="ĞÇËŞÏÀÊ¿", tlt="ÌìÁúÏÀÊ¿", tst="ÌìÉ½ÏÀÊ¿", xyt="åĞÒ£ÏÀÊ¿"},
-	{tlvl=2, mpp=1000, slt="»ÒÒÂ»¤·¨", mjt="ÊÌ»ğÏÀÊ¿", gbt="ÇàÁ«µÜ×Ó", wdt="ÇàÚ¤¾ÓÊ¿", emt="Çå·ç¾ÓÊ¿", xxt="ĞĞÎÁÀÉ¾ı", tlt="²Ø¾­ÏÀÊ¿", tst="ÑôÌì²¿ÖÚ", xyt="¸§ÇÙ¾ÓÊ¿"},
-	{tlvl=3, mpp=2500, slt="½ğÉíÂŞºº", mjt="»¤½Ì·¨Íõ", gbt="ĞşÎä³¤ÀÏ", wdt="ÎŞÎªÕæÈË", emt="ÓñÁúÏÀÊ¿", xxt="´ßÃüÅĞ¹Ù", tlt="³çÊ¥ÌìÊ¦", tst="ÌìÉ½²ÔÓ¥", xyt="ÂåÉñÏÀÊ¿"},
-	{tlvl=4, mpp=5000, slt="µØ²ØÆĞÈø", mjt="¹âÃ÷ÉñÊ¹", gbt="ÕÆ°ôÁúÍ·", wdt="Îäµ±Ìì×ğ", emt="¶ëáÒÏÉÈË", xxt="¶¾ÊÖÒ½ÏÉ", tlt="ÌìÄÏÁúÍõ", tst="»ìÔªÉ½Éñ", xyt="åĞÒ£ÉñÁú"},
+	{tlvl=1, mpp=0,    slt="å°‘æ—ä¾ å£«", mjt="æ˜æ•™ä¾ å£«", gbt="ä¸å¸®ä¾ å£«", wdt="æ­¦å½“ä¾ å£«", emt="å³¨åµ‹ä¾ å£«", xxt="æ˜Ÿå®¿ä¾ å£«", tlt="å¤©é¾™ä¾ å£«", tst="å¤©å±±ä¾ å£«", xyt="é€é¥ä¾ å£«"},
+	{tlvl=2, mpp=1000, slt="ç°è¡£æŠ¤æ³•", mjt="ä¾ç«ä¾ å£«", gbt="é’è²å¼Ÿå­", wdt="é’å†¥å±…å£«", emt="æ¸…é£å±…å£«", xxt="è¡Œç˜Ÿéƒå›", tlt="è—ç»ä¾ å£«", tst="é˜³å¤©éƒ¨ä¼—", xyt="æŠšç´å±…å£«"},
+	{tlvl=3, mpp=2500, slt="é‡‘èº«ç½—æ±‰", mjt="æŠ¤æ•™æ³•ç‹", gbt="ç„æ­¦é•¿è€", wdt="æ— ä¸ºçœŸäºº", emt="ç‰é¾™ä¾ å£«", xxt="å‚¬å‘½åˆ¤å®˜", tlt="å´‡åœ£å¤©å¸ˆ", tst="å¤©å±±è‹é¹°", xyt="æ´›ç¥ä¾ å£«"},
+	{tlvl=4, mpp=5000, slt="åœ°è—è©è¨", mjt="å…‰æ˜ç¥ä½¿", gbt="æŒæ£’é¾™å¤´", wdt="æ­¦å½“å¤©å°Š", emt="å³¨åµ‹ä»™äºº", xxt="æ¯’æ‰‹åŒ»ä»™", tlt="å¤©å—é¾™ç‹", tst="æ··å…ƒå±±ç¥", xyt="é€é¥ç¥é¾™"},
 }
---Å®	
+--å¥³	
 x229009_g_femaleTitleInfo = {	
-	{tlvl=1, mpp=0,	   slt="ÉÙÁÖÏÀÅ®", mjt="Ã÷½ÌÏÀÅ®", gbt="Ø¤°ïÏÀÅ®", wdt="Îäµ±ÏÀÅ®", emt="¶ëáÒÏÀÅ®", xxt="ĞÇËŞÏÀÅ®", tlt="ÌìÁúÏÀÅ®", tst="ÌìÉ½ÏÀÅ®", xyt="åĞÒ£ÏÀÅ®"},
-	{tlvl=2, mpp=1000, slt="°×ÒÂÊÌÕß", mjt="ÊÌ»ğÏÀÅ®", gbt="°×Á«µÜ×Ó", wdt="°×ÔÆ¾ÓÊ¿", emt="Ã÷ÔÂ¾ÓÊ¿", xxt="ĞĞÎÁÄï×Ó", tlt="²Ø¾­ÏÀÅ®", tst="ê»Ìì²¿ÖÚ", xyt="İª»¨¾ÓÊ¿"},
-	{tlvl=3, mpp=2500, slt="¶ÉÊÀ¹ÛÒô", mjt="»¤½ÌÉ¢ÈË", gbt="ÖìÈ¸³¤ÀÏ", wdt="Çå¾²É¢ÈË", emt="½ğ·ïÏÀÅ®", xxt="¶áÃüÒ¹²æ", tlt="³çÊ¥ÌìÅ®", tst="ÌìÉ½Ñ©µñ", xyt="Áè²¨ÏÀÅ®"},
-	{tlvl=4, mpp=5000, slt="åÈÀ¶ÆĞÈø", mjt="¹âÃ÷Ê¥Å®", gbt="ÕÆ²§ÁúÅ®", wdt="Îäµ±ÏÉ×Ó", emt="¶ëáÒÏÉ×Ó", xxt="¶¾ÊÖÒ©Íõ", tlt="ÌìÄÏÁúÅ®", tst="»ìÔª»¨Éñ", xyt="åĞÒ£Ê¥Å®"},
+	{tlvl=1, mpp=0,	   slt="å°‘æ—ä¾ å¥³", mjt="æ˜æ•™ä¾ å¥³", gbt="ä¸å¸®ä¾ å¥³", wdt="æ­¦å½“ä¾ å¥³", emt="å³¨åµ‹ä¾ å¥³", xxt="æ˜Ÿå®¿ä¾ å¥³", tlt="å¤©é¾™ä¾ å¥³", tst="å¤©å±±ä¾ å¥³", xyt="é€é¥ä¾ å¥³"},
+	{tlvl=2, mpp=1000, slt="ç™½è¡£ä¾è€…", mjt="ä¾ç«ä¾ å¥³", gbt="ç™½è²å¼Ÿå­", wdt="ç™½äº‘å±…å£«", emt="æ˜æœˆå±…å£«", xxt="è¡Œç˜Ÿå¨˜å­", tlt="è—ç»ä¾ å¥³", tst="æ˜Šå¤©éƒ¨ä¼—", xyt="è³èŠ±å±…å£«"},
+	{tlvl=3, mpp=2500, slt="æ¸¡ä¸–è§‚éŸ³", mjt="æŠ¤æ•™æ•£äºº", gbt="æœ±é›€é•¿è€", wdt="æ¸…é™æ•£äºº", emt="é‡‘å‡¤ä¾ å¥³", xxt="å¤ºå‘½å¤œå‰", tlt="å´‡åœ£å¤©å¥³", tst="å¤©å±±é›ªé›•", xyt="å‡Œæ³¢ä¾ å¥³"},
+	{tlvl=4, mpp=5000, slt="è¿¦è“è©è¨", mjt="å…‰æ˜åœ£å¥³", gbt="æŒé’µé¾™å¥³", wdt="æ­¦å½“ä»™å­", emt="å³¨åµ‹ä»™å­", xxt="æ¯’æ‰‹è¯ç‹", tlt="å¤©å—é¾™å¥³", tst="æ··å…ƒèŠ±ç¥", xyt="é€é¥åœ£å¥³"},
 }
 
 x229009_g_shimentitle_bonusitem = {
@@ -56,7 +56,7 @@ x229009_g_shimentitle_bonusitem = {
 }
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x229009_OnDefaultEvent( sceneId, selfId,targetId )
 	--PrintStr("OnDefaultEvent...")
@@ -65,18 +65,18 @@ function x229009_OnDefaultEvent( sceneId, selfId,targetId )
 			if v.menpaiid == GetMenPai(sceneId, selfId) then
 				--PrintNum(GetNumText())
 				if 10 <= GetNumText() and GetNumText() <= 14 then
-					--¶Ò»»³ÆºÅ
+					--å…‘æ¢ç§°å·
 					x229009_ExchangeTitleBymenpaipoint( sceneId, selfId,targetId, GetNumText()-10 )
 				elseif 7 == GetNumText() then
 				x229009_ExchangeItemBymenpaipoint( sceneId, selfId,targetId )
 				break
 				elseif 8 == GetNumText() then
-					--Ìí¼Ó³ÆºÅ
+					--æ·»åŠ ç§°å·
 					x229009_AddExchangeTitleList( sceneId, selfId,targetId )
 					break
 				end	
 			else
-				local str = "Äã²»ÊÇ±¾ÃÅÅÉµÜ×Ó£¬ÎÒÖ»Îª±¾ÃÅÅÉµÜ×Ó·şÎñ¡£"
+				local str = "ä½ ä¸æ˜¯æœ¬é—¨æ´¾å¼Ÿå­ï¼Œæˆ‘åªä¸ºæœ¬é—¨æ´¾å¼Ÿå­æœåŠ¡ã€‚"
 				BeginEvent(sceneId)
 					AddText(sceneId, str)
 				EndEvent()
@@ -88,7 +88,7 @@ function x229009_OnDefaultEvent( sceneId, selfId,targetId )
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x229009_OnEnumerate( sceneId, selfId, targetId )
 	--PrintStr("OnEnumerate...")
@@ -105,7 +105,7 @@ function x229009_ExchangeItemBymenpaipointFn( sceneId, selfId,targetId, needPoin
 	
 	local menpaipoint = GetHumanMenpaiPoint(sceneId, selfId)
 	if menpaipoint < 400 then
-		local str = "ÄãµÄÊ¦ÃÅ¹±Ï×¶ÈÄ¿Ç°Îª" .. tostring(menpaipoint) .. "£¬»¹²»×ã400µã£¬¶à¼ÓÅ¬Á¦°É¡£"
+		local str = "ä½ çš„å¸ˆé—¨è´¡çŒ®åº¦ç›®å‰ä¸º" .. tostring(menpaipoint) .. "ï¼Œè¿˜ä¸è¶³400ç‚¹ï¼Œå¤šåŠ åŠªåŠ›å§ã€‚"
 		BeginEvent(sceneId)
 			AddText(sceneId, str)
 		EndEvent()
@@ -118,16 +118,16 @@ function x229009_ExchangeItemBymenpaipointFn( sceneId, selfId,targetId, needPoin
 		local ret = EndAddItem(sceneId,selfId)
 		if ret <= 0 then
 			BeginEvent(sceneId)
-				AddText(sceneId, "ÄãµÄ±³°üÒÑÂú£¬ ÎŞ·¨¶Ò»»£¡")
+				AddText(sceneId, "ä½ çš„èƒŒåŒ…å·²æ»¡ï¼Œ æ— æ³•å…‘æ¢ï¼")
 			EndEvent()
 			DispatchMissionTips(sceneId, selfId)
 		else
 			AddItemListToHuman(sceneId, selfId)
 			SetHumanMenpaiPoint(sceneId, selfId, menpaipoint-400)
-			local str = format("¿Û³ı400µãÃÅÅÉ¹±Ï×¶È£¬Äú»ñµÃÁË%s¡£", strItemName)
+			local str = format("æ‰£é™¤400ç‚¹é—¨æ´¾è´¡çŒ®åº¦ï¼Œæ‚¨è·å¾—äº†%sã€‚", strItemName)
 			Msg2Player(  sceneId, selfId, str, MSG2PLAYER_PARA )	
 			
-			str = format("ÄãµÃµ½ÁË%s¡£", strItemName)
+			str = format("ä½ å¾—åˆ°äº†%sã€‚", strItemName)
 			BeginEvent(sceneId)
 				AddText(sceneId, str)
 			EndEvent()
@@ -288,11 +288,11 @@ end
 
 function x229009_AddExchangeTitleList(sceneId, selfId, targetId)
 	--PrintStr("AddExchangeTitleList...")
-	--µÃµ½ÃÅÅÉ
+	--å¾—åˆ°é—¨æ´¾
 	local level = GetLevel(sceneId, selfId)
 	local menpai = GetMenPai(sceneId, selfId)
 	--local shimentitle = GetShimenTitle(sceneId, selfId)
-	--ÄĞÅ®ÅĞ¶Ï
+	--ç”·å¥³åˆ¤æ–­
 	local titleinfo
 	local sex = GetSex(sceneId, selfId)
 	if 1 == sex then
@@ -307,55 +307,55 @@ function x229009_AddExchangeTitleList(sceneId, selfId, targetId)
 	if menpai == MP_SHAOLIN then
 		for i=1, 4 do
 			local seltitlelvl, needpoint, seltitle = x229009_GetSelectedTitle(menpai, titleinfo, i)
-			local str = seltitle .. "£¨ĞèÒª" .. needpoint .. "µãÊ¦ÃÅ¹±Ï×£©"
+			local str = seltitle .. "ï¼ˆéœ€è¦" .. needpoint .. "ç‚¹å¸ˆé—¨è´¡çŒ®ï¼‰"
 			AddNumText(sceneId,x229009_g_scriptId, str, 3, i+step)
 		end
 	elseif menpai == MP_MINGJIAO then
 		for i=1, 4 do
 			local seltitlelvl, needpoint, seltitle = x229009_GetSelectedTitle(menpai, titleinfo, i)
-			local str = seltitle .. "£¨ĞèÒª" .. needpoint .. "µãÊ¦ÃÅ¹±Ï×£©"
+			local str = seltitle .. "ï¼ˆéœ€è¦" .. needpoint .. "ç‚¹å¸ˆé—¨è´¡çŒ®ï¼‰"
 			AddNumText(sceneId,x229009_g_scriptId, str, 3, i+step)
 		end
 	elseif menpai == MP_GAIBANG then
 		for i=1, 4 do
 			local seltitlelvl, needpoint, seltitle = x229009_GetSelectedTitle(menpai, titleinfo, i)
-			local str = seltitle .. "£¨ĞèÒª" .. needpoint .. "µãÊ¦ÃÅ¹±Ï×£©"
+			local str = seltitle .. "ï¼ˆéœ€è¦" .. needpoint .. "ç‚¹å¸ˆé—¨è´¡çŒ®ï¼‰"
 			AddNumText(sceneId,x229009_g_scriptId, str, 3, i+step)
 		end
 	elseif menpai == MP_WUDANG then
 		for i=1, 4 do
 			local seltitlelvl, needpoint, seltitle = x229009_GetSelectedTitle(menpai, titleinfo, i)
-			local str = seltitle .. "£¨ĞèÒª" .. needpoint .. "µãÊ¦ÃÅ¹±Ï×£©"
+			local str = seltitle .. "ï¼ˆéœ€è¦" .. needpoint .. "ç‚¹å¸ˆé—¨è´¡çŒ®ï¼‰"
 			AddNumText(sceneId,x229009_g_scriptId, str, 3, i+step)
 		end
 	elseif menpai == MP_EMEI then
 		for i=1, 4 do
 			local seltitlelvl, needpoint, seltitle = x229009_GetSelectedTitle(menpai, titleinfo, i)
-			local str = seltitle .. "£¨ĞèÒª" .. needpoint .. "µãÊ¦ÃÅ¹±Ï×£©"
+			local str = seltitle .. "ï¼ˆéœ€è¦" .. needpoint .. "ç‚¹å¸ˆé—¨è´¡çŒ®ï¼‰"
 			AddNumText(sceneId,x229009_g_scriptId, str, 3, i+step)
 		end
 	elseif menpai == MP_DALI then
 		for i=1, 4 do
 			local seltitlelvl, needpoint, seltitle = x229009_GetSelectedTitle(menpai, titleinfo, i)
-			local str = seltitle .. "£¨ĞèÒª" .. needpoint .. "µãÊ¦ÃÅ¹±Ï×£©"
+			local str = seltitle .. "ï¼ˆéœ€è¦" .. needpoint .. "ç‚¹å¸ˆé—¨è´¡çŒ®ï¼‰"
 			AddNumText(sceneId,x229009_g_scriptId, str, 3, i+step)
 		end
 	elseif menpai == MP_XINGSU then
 		for i=1, 4 do
 			local seltitlelvl, needpoint, seltitle = x229009_GetSelectedTitle(menpai, titleinfo, i)
-			local str = seltitle .. "£¨ĞèÒª" .. needpoint .. "µãÊ¦ÃÅ¹±Ï×£©"
+			local str = seltitle .. "ï¼ˆéœ€è¦" .. needpoint .. "ç‚¹å¸ˆé—¨è´¡çŒ®ï¼‰"
 			AddNumText(sceneId,x229009_g_scriptId, str, 3, i+step)
 		end
 	elseif menpai == MP_TIANSHAN then
 		for i=1, 4 do
 			local seltitlelvl, needpoint, seltitle = x229009_GetSelectedTitle(menpai, titleinfo, i)
-			local str = seltitle .. "£¨ĞèÒª" .. needpoint .. "µãÊ¦ÃÅ¹±Ï×£©"
+			local str = seltitle .. "ï¼ˆéœ€è¦" .. needpoint .. "ç‚¹å¸ˆé—¨è´¡çŒ®ï¼‰"
 			AddNumText(sceneId,x229009_g_scriptId, str, 3, i+step)
 		end
 	elseif menpai == MP_XIAOYAO then
 		for i=1, 4 do
 			local seltitlelvl, needpoint, seltitle = x229009_GetSelectedTitle(menpai, titleinfo, i)
-			local str = seltitle .. "£¨ĞèÒª" .. needpoint .. "µãÊ¦ÃÅ¹±Ï×£©"
+			local str = seltitle .. "ï¼ˆéœ€è¦" .. needpoint .. "ç‚¹å¸ˆé—¨è´¡çŒ®ï¼‰"
 			AddNumText(sceneId,x229009_g_scriptId, str, 3, i+step)
 		end
 	end
@@ -396,9 +396,9 @@ function x229009_ExchangeTitleBymenpaipoint( sceneId, selfId,targetId, level )
 	
 	local str
 	if seltitlelvl < curtitlelvl then
-		str = "ÄãÒÑ¾­ÓµÓĞ¸ü¸ß¼¶µÄÃÅÅÉ³ÆºÅ£¬²»ĞèÒª¶Ò»»¡£"
+		str = "ä½ å·²ç»æ‹¥æœ‰æ›´é«˜çº§çš„é—¨æ´¾ç§°å·ï¼Œä¸éœ€è¦å…‘æ¢ã€‚"
 	elseif seltitlelvl == curtitlelvl then
-		str = "ÄãÒÑ¾­ÓµÓĞÁË´Ë³ÆºÅ£¬²»ĞèÒª¶Ò»»¡£"
+		str = "ä½ å·²ç»æ‹¥æœ‰äº†æ­¤ç§°å·ï¼Œä¸éœ€è¦å…‘æ¢ã€‚"
 	elseif seltitlelvl > curtitlelvl then
 		local menpaipoint = GetHumanMenpaiPoint(sceneId, selfId)
 		--PrintStr("menpaipoint=" .. menpaipoint)
@@ -410,21 +410,21 @@ function x229009_ExchangeTitleBymenpaipoint( sceneId, selfId,targetId, level )
 				local ret = EndAddItem(sceneId,selfId)
 				if ret > 0 then
 					AddItemListToHuman(sceneId, selfId)
-					str = "¹§Ï²Äã»ñµÃ#Y" .. seltitle .. "#WµÄ³ÆºÅ£¬Ï£Íû¼ÌĞøÎª±¾ÃÅµÄ·¢Ñï¹â´ó¶øÅ¬Á¦¡£ÕâÀïÓĞÒ»Ì×±¾ÃÅµÄÒÂ·ş£¬¾ÍËãÎªÊ¦¶ÔÄãÕâ¶ÎÊ±¼äĞÁ¿àµÄÒ»¸ö½±Àø°É¡£"
+					str = "æ­å–œä½ è·å¾—#Y" .. seltitle .. "#Wçš„ç§°å·ï¼Œå¸Œæœ›ç»§ç»­ä¸ºæœ¬é—¨çš„å‘æ‰¬å…‰å¤§è€ŒåŠªåŠ›ã€‚è¿™é‡Œæœ‰ä¸€å¥—æœ¬é—¨çš„è¡£æœï¼Œå°±ç®—ä¸ºå¸ˆå¯¹ä½ è¿™æ®µæ—¶é—´è¾›è‹¦çš„ä¸€ä¸ªå¥–åŠ±å§ã€‚"
 					SetShimenTitle(sceneId, selfId, seltitle)
 					LuaFnDispatchAllTitle(sceneId, selfId)
 					SetHumanMenpaiPoint(sceneId, selfId, menpaipoint-needpoint)
 				else
-					str = "ÄãµÄ±³°üÒÑ¾­ÂúÁË£¬ÎªÊ¦×¼±¸ËÍµãĞ¡ÀñÎï¸øÄã£¬ÕûÀíºÃ±³°üÖ®ºóÔÙÀ´ÕÒÎÒ°É¡£"
+					str = "ä½ çš„èƒŒåŒ…å·²ç»æ»¡äº†ï¼Œä¸ºå¸ˆå‡†å¤‡é€ç‚¹å°ç¤¼ç‰©ç»™ä½ ï¼Œæ•´ç†å¥½èƒŒåŒ…ä¹‹åå†æ¥æ‰¾æˆ‘å§ã€‚"
 				end	
 			else
-				str = "¹§Ï²Äã»ñµÃ#Y" .. seltitle .. "#WµÄ³ÆºÅ£¬Ï£Íû¼ÌĞøÎª±¾ÃÅµÄ·¢Ñï¹â´ó¶øÅ¬Á¦¡£"
+				str = "æ­å–œä½ è·å¾—#Y" .. seltitle .. "#Wçš„ç§°å·ï¼Œå¸Œæœ›ç»§ç»­ä¸ºæœ¬é—¨çš„å‘æ‰¬å…‰å¤§è€ŒåŠªåŠ›ã€‚"
 				SetShimenTitle(sceneId, selfId, seltitle)
 				LuaFnDispatchAllTitle(sceneId, selfId)
 				SetHumanMenpaiPoint(sceneId, selfId, menpaipoint-needpoint)
 			end
 		else
-			str = "ÄãµÄÃÅÅÉ¹±Ï×¶È²»¹»£¬ÎŞ·¨¶Ò»»¡£"			
+			str = "ä½ çš„é—¨æ´¾è´¡çŒ®åº¦ä¸å¤Ÿï¼Œæ— æ³•å…‘æ¢ã€‚"			
 		end
 	end
 	BeginEvent(sceneId)

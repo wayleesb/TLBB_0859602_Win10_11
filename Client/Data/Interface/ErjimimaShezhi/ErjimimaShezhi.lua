@@ -1,5 +1,5 @@
 function ErjimimaShezhi_PreLoad()
-	-- ´ò¿ª½çÃæ
+	-- æ‰“å¼€ç•Œé¢
 	this:RegisterEvent("MINORPASSWORD_OPEN_SET");
 	this:RegisterEvent("MINORPASSWORD_CLEAR_PASSWORD_DLG");
 end
@@ -73,10 +73,10 @@ function ErjimimaShezhi_OK_Click()
 	local strPassword1 = ErjimimaShezhi_Shuru:GetText();
 	local strPassword2 = ErjimimaShezhi_Queren:GetText();
 	
-	-- Èç¹ûÃÜÂë²»Ò»ÖÂ
+	-- å¦‚æœå¯†ç ä¸ä¸€è‡´
 	if(strPassword1 ~= strPassword2) then
 	
-		ShowSystemTipInfo("ÃÜÂëÊäÈë²»Ò»ÖÂ£¡");
+		ShowSystemTipInfo("å¯†ç è¾“å…¥ä¸ä¸€è‡´ï¼");
 		ErjimimaShezhi_Shuru:SetText( "" );
 		ErjimimaShezhi_Queren:SetText( "" );
 		return;
@@ -85,11 +85,11 @@ function ErjimimaShezhi_OK_Click()
 	local iLen = string.len(strPassword1);
 	if(iLen < 4) then
 	
-		ShowSystemTipInfo("ÃÜÂë²»ÄÜÉÙÓÚ4¸ö×Ö·û£¡");
+		ShowSystemTipInfo("å¯†ç ä¸èƒ½å°‘äº4ä¸ªå­—ç¬¦ï¼");
 		return;
 	end;
 	
-	-- Èç¹ûÃÜÂëÒ»ÖÂ¡£·¢ËÍ¸Ä±äÃÜÂëÏûÏ¢¡£
+	-- å¦‚æœå¯†ç ä¸€è‡´ã€‚å‘é€æ”¹å˜å¯†ç æ¶ˆæ¯ã€‚
 	SendSetMinorPassword(tostring(strPassword1));
 	this:Hide();
 end

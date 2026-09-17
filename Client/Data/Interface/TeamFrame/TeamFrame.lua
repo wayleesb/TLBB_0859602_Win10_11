@@ -1,66 +1,66 @@
 --*--------------------------------------------------------------------------------------------------------------------
---* ×é¶ÓÏà¹ØµÄlua½Å±¾
---* 1, ÑûÇë½çÃæ.
---* 2, ¶ÓÔ±´ò¿ª¶ÓÎéĞÅÏ¢½çÃæ.
---* 3, ¶Ó³¤´ò¿ª¶ÓÎéĞÅÏ¢½çÃæ.
---* 4, ¶Ó³¤´ò¿ªÉêÇëÕß½çÃæ.
+--* ç»„é˜Ÿç›¸å…³çš„luaè„šæœ¬
+--* 1, é‚€è¯·ç•Œé¢.
+--* 2, é˜Ÿå‘˜æ‰“å¼€é˜Ÿä¼ä¿¡æ¯ç•Œé¢.
+--* 3, é˜Ÿé•¿æ‰“å¼€é˜Ÿä¼ä¿¡æ¯ç•Œé¢.
+--* 4, é˜Ÿé•¿æ‰“å¼€ç”³è¯·è€…ç•Œé¢.
 --*
 --*---------------------------------------------------------------------------------------------------------------------
 
 
 -------------------------------------------------------------------------------------------------------------------
--- È«¾ÖĞèÒªÓÃµ½µÄ±äÁ¿.
+-- å…¨å±€éœ€è¦ç”¨åˆ°çš„å˜é‡.
 --
-local g_iTeamInfoType = 4;				-- ²Ù×÷ÀàĞÍ
-																	-- 0 : ´ò¿ª¶ÓÓÑĞÅÏ¢¶Ô»°¿ò
-																	-- 1 : ´ò¿ªÉêÇë¶Ô»°¿ò
-																	-- 2 : ´ò¿ªÑûÇë¶Ô»°¿ò.
-																	-- 3 : ¶Ó³¤´ò¿ª¶ÓÓÑĞÅÏ¢¶Ô»°¿ò.
-																	-- 4 : ·Ç×é¶ÓÍæ¼Ò´ò¿ª½çÃæ
-																	-- -1: ¹Ø±Õ½çÃæ
+local g_iTeamInfoType = 4;				-- æ“ä½œç±»å‹
+																	-- 0 : æ‰“å¼€é˜Ÿå‹ä¿¡æ¯å¯¹è¯æ¡†
+																	-- 1 : æ‰“å¼€ç”³è¯·å¯¹è¯æ¡†
+																	-- 2 : æ‰“å¼€é‚€è¯·å¯¹è¯æ¡†.
+																	-- 3 : é˜Ÿé•¿æ‰“å¼€é˜Ÿå‹ä¿¡æ¯å¯¹è¯æ¡†.
+																	-- 4 : éç»„é˜Ÿç©å®¶æ‰“å¼€ç•Œé¢
+																	-- -1: å…³é—­ç•Œé¢
 
 -----------------------------------------------------------------------------------------------------------------------
--- ÑûÇë½çÃæ
+-- é‚€è¯·ç•Œé¢
 --
-local g_iTeamCount_Invite   = 0;	-- ÑûÇë¶ÓÎéµÄ¸öÊı.
-local g_iCurShowTeam_Invite = 0;	-- ÔÚ½çÃæÉÏÏÔÊ¾µÄ¶ÓÎé
-																	-- -1 : Ã»ÓĞÏÔÊ¾µÄ¶ÓÎé.
+local g_iTeamCount_Invite   = 0;	-- é‚€è¯·é˜Ÿä¼çš„ä¸ªæ•°.
+local g_iCurShowTeam_Invite = 0;	-- åœ¨ç•Œé¢ä¸Šæ˜¾ç¤ºçš„é˜Ÿä¼
+																	-- -1 : æ²¡æœ‰æ˜¾ç¤ºçš„é˜Ÿä¼.
 
 
 ------------------------------------------------------------------------------------------------------------------------
--- ¶ÓÔ±´ò¿ª¶ÓÎéĞÅÏ¢½çÃæ
+-- é˜Ÿå‘˜æ‰“å¼€é˜Ÿä¼ä¿¡æ¯ç•Œé¢
 --
 
 
 
 ------------------------------------------------------------------------------------------------------------------------
--- ¶Ó³¤´ò¿ª¶ÓÎéĞÅÏ¢½çÃæ
+-- é˜Ÿé•¿æ‰“å¼€é˜Ÿä¼ä¿¡æ¯ç•Œé¢
 --
-local g_iTeamMemberCount_Team = 0;	-- µ±Ç°¶ÓÎéÖĞ¶ÓÔ±µÄ¸öÊı.
-local g_iCurSel_Team = -1;						-- µ±Ç°Ñ¡ÔñµÄ¶ÓÔ±.
+local g_iTeamMemberCount_Team = 0;	-- å½“å‰é˜Ÿä¼ä¸­é˜Ÿå‘˜çš„ä¸ªæ•°.
+local g_iCurSel_Team = -1;						-- å½“å‰é€‰æ‹©çš„é˜Ÿå‘˜.
 
 
 ------------------------------------------------------------------------------------------------------------------------
--- ¶Ó³¤´ò¿ªÉêÇëÕß½çÃæ
+-- é˜Ÿé•¿æ‰“å¼€ç”³è¯·è€…ç•Œé¢
 --
-local g_iSel = -1;									-- ÔÚ½çÃæÉÏÑ¡ÔñµÄ¶ÓÔ±
-																	-- -1 : Ã»ÓĞÑ¡Ôñ¶ÓÔ±.
+local g_iSel = -1;									-- åœ¨ç•Œé¢ä¸Šé€‰æ‹©çš„é˜Ÿå‘˜
+																	-- -1 : æ²¡æœ‰é€‰æ‹©é˜Ÿå‘˜.
 
 
-local g_iCurPageShowCount  = 6; 	-- µ±Ç°Ò³ÃæÏÔÊ¾µÄÉêÇëÈËµÄ¸öÊı.
-local g_iMemberCount_Apply = 0;		-- ½çÃæ´ò¿ªÊ±, ¶ÓÔ±µÄ¸öÊı.
-local g_iCurSel_Apply      = 0;   -- µ±Ç°Ñ¡ÔñµÄÉêÇëÕß.(µ±Ç°Ò³ÃæµÄË÷Òı)
-local g_iCurShowPage_Apply = 0;   -- µ±Ç°Ñ¡ÔñµÄÒ³Ãæ.
-local g_iCurSelApply_Apply = 0;   -- µ±Ç°Ñ¡ÔñµÄË÷Òı, (´ÓÍ·¿ªÊ¼)
+local g_iCurPageShowCount  = 6; 	-- å½“å‰é¡µé¢æ˜¾ç¤ºçš„ç”³è¯·äººçš„ä¸ªæ•°.
+local g_iMemberCount_Apply = 0;		-- ç•Œé¢æ‰“å¼€æ—¶, é˜Ÿå‘˜çš„ä¸ªæ•°.
+local g_iCurSel_Apply      = 0;   -- å½“å‰é€‰æ‹©çš„ç”³è¯·è€….(å½“å‰é¡µé¢çš„ç´¢å¼•)
+local g_iCurShowPage_Apply = 0;   -- å½“å‰é€‰æ‹©çš„é¡µé¢.
+local g_iCurSelApply_Apply = 0;   -- å½“å‰é€‰æ‹©çš„ç´¢å¼•, (ä»å¤´å¼€å§‹)
 
 
-local g_iRealSelApplyIndex      = 0;	-- µ±Ç°Êµ¼ÊÑ¡ÔñµÄÉêÇëÕßµÄË÷Òı
-local g_iRealSelInvitorIndex    = 0;	-- µ±Ç°Êµ¼ÊÑ¡ÔñµÄÑûÇë¶ÓÎéË÷Òı
-local g_iRealSelTeamMemberIndex = 0;  -- µ±Ç°Êµ¼ÊÑ¡ÔñµÄÑûÇë¶ÓÎéµÄË÷Òı
-local g_iRealSelInvitorIndexPingbi = 0;	-- µ±Ç°Êµ¼ÊÑ¡ÔñµÄÑûÇë¶ÓÎéË÷Òı,ÆÁ±Î°´Å¥ÓÃµ½
+local g_iRealSelApplyIndex      = 0;	-- å½“å‰å®é™…é€‰æ‹©çš„ç”³è¯·è€…çš„ç´¢å¼•
+local g_iRealSelInvitorIndex    = 0;	-- å½“å‰å®é™…é€‰æ‹©çš„é‚€è¯·é˜Ÿä¼ç´¢å¼•
+local g_iRealSelTeamMemberIndex = 0;  -- å½“å‰å®é™…é€‰æ‹©çš„é‚€è¯·é˜Ÿä¼çš„ç´¢å¼•
+local g_iRealSelInvitorIndexPingbi = 0;	-- å½“å‰å®é™…é€‰æ‹©çš„é‚€è¯·é˜Ÿä¼ç´¢å¼•,å±è”½æŒ‰é’®ç”¨åˆ°
 
 ------------------------------------------------------------------------------------------------------------------------
--- ½çÃæ¿Ø¼ş
+-- ç•Œé¢æ§ä»¶
 --
 local g_Team_PlayerInfo_Name   = {};
 local g_Team_PlayerInfo_School = {};
@@ -72,34 +72,34 @@ local g_Team_PlayerInfo_Deadlink = {};
 local g_Team_Ui_Model_Disable = {};
 
 -------------------------------------------------------------------------------------------------------------------------
--- Ä£ĞÍ½çÃæ
+-- æ¨¡å‹ç•Œé¢
 --
 local g_TeamFrame_FakeObject = {};
 
 
 function Team_Frame_PreLoad()
 
-	-- ´ò¿ª´°¿Ú½çÃæ
+	-- æ‰“å¼€çª—å£ç•Œé¢
 	this:RegisterEvent("TEAM_OPEN_TEAMINFO_DLG");
 	
-	-- Ë¢ĞÂ¶ÓÔ±ĞÅÏ¢
+	-- åˆ·æ–°é˜Ÿå‘˜ä¿¡æ¯
 	this:RegisterEvent("TEAM_REFRESH_MEMBER");
 	
-	-- Ö÷½ÇÀë¿ª³¡¾°
+	-- ä¸»è§’ç¦»å¼€åœºæ™¯
 	this:RegisterEvent("PLAYER_LEAVE_WORLD");
 	
-	-- ÓĞ¶ÓÎéÊÂ¼ş, ÑûÇë, ÉêÇë
+	-- æœ‰é˜Ÿä¼äº‹ä»¶, é‚€è¯·, ç”³è¯·
 	this:RegisterEvent("TEAM_NOTIFY_APPLY");
-	--ÖØÖÃ
+	--é‡ç½®
 	this:RegisterEvent("RESET_ALLUI");
 	
-	-- È·ÈÏ½âÉ¢¶ÓÎé			add by WTT	20090212
+	-- ç¡®è®¤è§£æ•£é˜Ÿä¼			add by WTT	20090212
 	this:RegisterEvent("CONFIRM_DISMISS_TEAM");
 
 end
 
 function Team_Frame_OnLoad()
-	-- ±£´æ
+	-- ä¿å­˜
 	g_Team_PlayerInfo_Name[0] = Team_PlayerInfo1_Name;
 	g_Team_PlayerInfo_Name[1] = Team_PlayerInfo2_Name;
 	g_Team_PlayerInfo_Name[2] = Team_PlayerInfo3_Name;
@@ -128,7 +128,7 @@ function Team_Frame_OnLoad()
 	g_TeamFrame_FakeObject[4] = TeamFrame_FakeObject5;
 	g_TeamFrame_FakeObject[5] = TeamFrame_FakeObject6;
 
-	-- ËÀÍö±ê¼Ç
+	-- æ­»äº¡æ ‡è®°
 	g_Team_PlayerInfo_Dead[0] = Team_Die_Icon1;
 	g_Team_PlayerInfo_Dead[1] = Team_Die_Icon2;
 	g_Team_PlayerInfo_Dead[2] = Team_Die_Icon3;
@@ -136,7 +136,7 @@ function Team_Frame_OnLoad()
 	g_Team_PlayerInfo_Dead[4] = Team_Die_Icon5;
 	g_Team_PlayerInfo_Dead[5] = Team_Die_Icon6;
 
-	-- µôÏß±ê¼Ç
+	-- æ‰çº¿æ ‡è®°
 	g_Team_PlayerInfo_Deadlink[0] = Team_Downline_Icon1;
 	g_Team_PlayerInfo_Deadlink[1] = Team_Downline_Icon2;
 	g_Team_PlayerInfo_Deadlink[2] = Team_Downline_Icon3;
@@ -145,7 +145,7 @@ function Team_Frame_OnLoad()
 	g_Team_PlayerInfo_Deadlink[5] = Team_Downline_Icon6;
 	
 	
-	-- ui Òş²ØÄ£ĞÍ
+	-- ui éšè—æ¨¡å‹
 	g_Team_Ui_Model_Disable[0] = Team_Model1_Disable;
 	g_Team_Ui_Model_Disable[1] = Team_Model2_Disable;
 	g_Team_Ui_Model_Disable[2] = Team_Model3_Disable;
@@ -169,15 +169,15 @@ function Team_Frame_OnLoad()
 	Team_Downline_Icon5:Hide();
 	Team_Downline_Icon6:Hide();
 
-	Team_Exp_Mode:ComboBoxAddItem( "Æ½¾ù·ÖÅä", 0 );
-	Team_Exp_Mode:ComboBoxAddItem( "¸÷×Ô·ÖÅä", 1 );
-	Team_Exp_Mode:ComboBoxAddItem( "Ñ±ÊŞÄ£Ê½", 2 );
+	Team_Exp_Mode:ComboBoxAddItem( "å¹³å‡åˆ†é…", 0 );
+	Team_Exp_Mode:ComboBoxAddItem( "å„è‡ªåˆ†é…", 1 );
+	Team_Exp_Mode:ComboBoxAddItem( "é©¯å…½æ¨¡å¼", 2 );
 	
 end
 
 function Team_StateUpdate()
-	-- Òş²Ø¸úËæ°´Å¥
-	AxTrace( 0,0,"¶ÓÎé´ò¿ªÀàĞÍ£½£½£½"..tostring(g_iTeamInfoType));
+	-- éšè—è·ŸéšæŒ‰é’®
+	AxTrace( 0,0,"é˜Ÿä¼æ‰“å¼€ç±»å‹ï¼ï¼ï¼"..tostring(g_iTeamInfoType));
 	Team_Follow_Button:Hide();
 
 	if( Player:InTeamFollowMode() ) then
@@ -185,15 +185,15 @@ function Team_StateUpdate()
 	else
 		Team_AbortTeamFollow_Button:Hide();
 	end
-	--ÓÉÓÚÉ¾µôÁË3µÄÀàĞÍ£¬ËùÓĞ3µÄÀàĞÍ¶¼±ä³É0
+	--ç”±äºåˆ æ‰äº†3çš„ç±»å‹ï¼Œæ‰€æœ‰3çš„ç±»å‹éƒ½å˜æˆ0
 	if( g_iTeamInfoType == 3 ) then
 		g_iTeamInfoType = 0;
 	end
 	if( 0 == g_iTeamInfoType) then
-	-- ´ò¿ª¶ÓÎéĞÅÏ¢
-		-- Ìî³ä×Ô¼ºµÄĞÅÏ¢
+	-- æ‰“å¼€é˜Ÿä¼ä¿¡æ¯
+		-- å¡«å……è‡ªå·±çš„ä¿¡æ¯
 		DataPool:SetSelfInfo();
-		-- ÏÔÊ¾½çÃæ
+		-- æ˜¾ç¤ºç•Œé¢
 		local leader = Player:IsLeader();
 		
 		if( leader == 1 ) then
@@ -203,46 +203,46 @@ function Team_StateUpdate()
 			AxTrace( 0,0, "TeamFrame_OpenTeamInfo = "..tonumber( leader ) );
 			TeamFrame_OpenTeamInfo();
 		end
-		-- Ñ¡ÔñµÚÒ»¸ö
+		-- é€‰æ‹©ç¬¬ä¸€ä¸ª
 		SelectPos(0);
 		Team_Button_Frame6:Hide();
 		
 
 	elseif(1 == g_iTeamInfoType) then
-	-- ¶Ó³¤´ò¿ªÉêÇë¼ÓÈë¶ÓÎéÁĞ±í
+	-- é˜Ÿé•¿æ‰“å¼€ç”³è¯·åŠ å…¥é˜Ÿä¼åˆ—è¡¨
 
-		-- ÏÔÊ¾½çÃæ
+		-- æ˜¾ç¤ºç•Œé¢
 		ShwoLeaderFlat(0);
 		TeamFrame_OpenApplyList();
 		Team_Update_ExpMode( -1 );
-			-- Ñ¡ÔñµÚÒ»¸ö
+			-- é€‰æ‹©ç¬¬ä¸€ä¸ª
 		SelectPos(0);
 		
 	elseif(2 == g_iTeamInfoType) then
-	-- ´ò¿ªÑûÇë¶Ô»°¿ò.
+	-- æ‰“å¼€é‚€è¯·å¯¹è¯æ¡†.
 
 		ClearInfo();
-		-- ÏÔÊ¾½çÃæ
+		-- æ˜¾ç¤ºç•Œé¢
 		TeamFrame_OpenInvite();
 		Team_Update_ExpMode( -1 );
-			-- Ñ¡ÔñµÚÒ»¸ö
+			-- é€‰æ‹©ç¬¬ä¸€ä¸ª
 		SelectPos(0);
 
 	elseif(3 == g_iTeamInfoType) then
-	-- ¶Ó³¤´ò¶ÓÎéÁĞ±í
+	-- é˜Ÿé•¿æ‰“é˜Ÿä¼åˆ—è¡¨
 
-		-- Ìî³ä×Ô¼ºµÄĞÅÏ¢
+		-- å¡«å……è‡ªå·±çš„ä¿¡æ¯
 		DataPool:SetSelfInfo();
-		-- ÏÔÊ¾½çÃæ
+		-- æ˜¾ç¤ºç•Œé¢
 		
-		-- Ñ¡ÔñµÚÒ»¸ö
+		-- é€‰æ‹©ç¬¬ä¸€ä¸ª
 		SelectPos(0);
 		
-		-- Òş²Ø×îºóÒ»¸ö°´Å¥
+		-- éšè—æœ€åä¸€ä¸ªæŒ‰é’®
 		Team_Button_Frame6:Hide();
 		
 	elseif(4 == g_iTeamInfoType) then
-	-- ·Ç×é¶ÓÍæ¼Ò´ò¿ª½çÃæ
+	-- éç»„é˜Ÿç©å®¶æ‰“å¼€ç•Œé¢
 		TeamFrame_OpenCreateTeamSelf();
 		Team_Update_ExpMode( -1 );
 	end
@@ -257,15 +257,15 @@ function Team_Frame_OnEvent(event)
 	--ShwoLeaderFlat(0);
 	---------------------------------------------------------------------------------------------
 	--
-	-- ´ò¿ª½çÃæÊÂ¼ş.
+	-- æ‰“å¼€ç•Œé¢äº‹ä»¶.
 	--
 	if ( event == "TEAM_OPEN_TEAMINFO_DLG" ) then
 
-		--Òş²ØuiÄ£ĞÍÃÉ×Ó.
+		--éšè—uiæ¨¡å‹è’™å­.
 		HideUIModelDisable();
-		-- µÃµ½´ò¿ªµÄ¶Ô»°¿òµÄÏÔÊ¾ÀàĞÍ.
+		-- å¾—åˆ°æ‰“å¼€çš„å¯¹è¯æ¡†çš„æ˜¾ç¤ºç±»å‹.
 		local iShow = tonumber(arg0);
-		AxTrace( 0,0, "¶ÓÎé´ò¿ªÀàĞÍ£½£½£½"..tostring(g_iTeamInfoType).."   "..tostring( iShow ));
+		AxTrace( 0,0, "é˜Ÿä¼æ‰“å¼€ç±»å‹ï¼ï¼ï¼"..tostring(g_iTeamInfoType).."   "..tostring( iShow ));
 		if(-1 == iShow) then
 		
 			Team_Close();
@@ -278,16 +278,16 @@ function Team_Frame_OnEvent(event)
 		elseif( 3 == iShow ) then
 			
 		else
-			-- Èç¹û°´Å¥²»ÉÁË¸.	
-			-- Èç¹ûµ±Ç°½çÃæÊÇ´ò¿ªµÄ. Ôò¹Ø±Õ½çÃæ
+			-- å¦‚æœæŒ‰é’®ä¸é—ªçƒ.	
+			-- å¦‚æœå½“å‰ç•Œé¢æ˜¯æ‰“å¼€çš„. åˆ™å…³é—­ç•Œé¢
 			if(this:IsVisible()) then
 			
 				Team_Close();
 				return;
 			end;
 		end;
-		-- Èç¹û½çÃæÃ»ÓĞ´ò¿ª¾Í·µ»Ø.
-		-- Èç¹û½çÃæ´ò¿ª, ¾ÍË¢ĞÂÊı¾İ.
+		-- å¦‚æœç•Œé¢æ²¡æœ‰æ‰“å¼€å°±è¿”å›.
+		-- å¦‚æœç•Œé¢æ‰“å¼€, å°±åˆ·æ–°æ•°æ®.
 		if DataPool:GetApplyMemberCount() > 0 then
 			g_iTeamInfoType = 1;
 		end
@@ -299,7 +299,7 @@ function Team_Frame_OnEvent(event)
 
 	------------------------------------------------------------------------------------
 	--
-	-- Ë¢ĞÂ¶ÓÔ±ĞÅÏ¢ÊÂ¼ş
+	-- åˆ·æ–°é˜Ÿå‘˜ä¿¡æ¯äº‹ä»¶
 	--
 	if(event == "TEAM_REFRESH_MEMBER") then
 		AxTrace( 0,0, "TEAM_REFRESH_MEMBER"..tostring( arg0 ) );
@@ -311,19 +311,19 @@ function Team_Frame_OnEvent(event)
 		end;
 		if(this:IsVisible()) then
 		
-			-- Ö»Òª´°¿Ú´ò¿ªÊ±, ²ÅË¢ĞÂ½çÃæÊı¾İ		
-			-- ¼ÙÈçµ±Ç°½çÃæ´ò¿ª¶ÓÔ±ĞÅÏ¢.
+			-- åªè¦çª—å£æ‰“å¼€æ—¶, æ‰åˆ·æ–°ç•Œé¢æ•°æ®		
+			-- å‡å¦‚å½“å‰ç•Œé¢æ‰“å¼€é˜Ÿå‘˜ä¿¡æ¯.
 			if(g_iTeamInfoType == 0) then
-				-- Çå¿Õ½çÃæ
+				-- æ¸…ç©ºç•Œé¢
 				ClearUIModel();
-				-- µÃµ½ÒªË¢ĞÂ¶ÓÔ±µÄÎ»ÖÃ
+				-- å¾—åˆ°è¦åˆ·æ–°é˜Ÿå‘˜çš„ä½ç½®
 				local iMemberIndex = tonumber(arg0);
 				if((iMemberIndex >= 0) and (iMemberIndex < 6)) then
 					ShwoLeaderFlat(1);
-					-- Ë¢ĞÂ¶ÓÔ±ĞÅÏ¢.
+					-- åˆ·æ–°é˜Ÿå‘˜ä¿¡æ¯.
 					TeamFrame_RefreshTeamMember_Team(iMemberIndex);
 				end;
-				-- Ë¢ĞÂuiÄ£ĞÍ
+				-- åˆ·æ–°uiæ¨¡å‹
 				RefreshUIModel();
 			end
 			return;
@@ -333,7 +333,7 @@ function Team_Frame_OnEvent(event)
 
 	------------------------------------------------------------------------------------------
 	--
-	-- Àë¿ª³¡¾°ÊÂ¼ş
+	-- ç¦»å¼€åœºæ™¯äº‹ä»¶
 	--
 	if( event == "PLAYER_LEAVE_WORLD") then
 		Team_Close();
@@ -343,18 +343,18 @@ function Team_Frame_OnEvent(event)
 	
 	-------------------------------------------------------------------------------------------
 	--
-	-- ÓĞ¶ÓÎéÊÂ¼ş, ÑûÇë, ÉêÇë
+	-- æœ‰é˜Ÿä¼äº‹ä»¶, é‚€è¯·, ç”³è¯·
 	--
 	if( event == "TEAM_NOTIFY_APPLY") then
 		g_iTeamInfoType = tonumber(arg0);
 		AxTrace( 0,0, "TEAM_NOTIFY_APPLY"..tostring( arg0 ) );
 		if( this:IsVisible() ) then
-			--Òş²ØuiÄ£ĞÍÃÉ×Ó.
-			-- 0 : ´ò¿ª¶ÓÓÑĞÅÏ¢¶Ô»°¿ò
-			-- 1 : ´ò¿ªÉêÇë¶Ô»°¿ò
-			-- 2 : ´ò¿ªÑûÇë¶Ô»°¿ò.
-			-- 3 : ¶Ó³¤´ò¿ª¶ÓÓÑĞÅÏ¢¶Ô»°¿ò.
-			-- -1: ¹Ø±Õ½çÃæ
+			--éšè—uiæ¨¡å‹è’™å­.
+			-- 0 : æ‰“å¼€é˜Ÿå‹ä¿¡æ¯å¯¹è¯æ¡†
+			-- 1 : æ‰“å¼€ç”³è¯·å¯¹è¯æ¡†
+			-- 2 : æ‰“å¼€é‚€è¯·å¯¹è¯æ¡†.
+			-- 3 : é˜Ÿé•¿æ‰“å¼€é˜Ÿå‹ä¿¡æ¯å¯¹è¯æ¡†.
+			-- -1: å…³é—­ç•Œé¢
 			if DataPool:GetApplyMemberCount() > 0 then
 				g_iTeamInfoType = 1;
 			end
@@ -370,7 +370,7 @@ function Team_Frame_OnEvent(event)
 	
 	----------------------------------------------------------------------------------------------
 	--
-	-- È·ÈÏ½âÉ¢¶ÓÎé			add by WTT	20090212
+	-- ç¡®è®¤è§£æ•£é˜Ÿä¼			add by WTT	20090212
 	--
 	if ( event == "CONFIRM_DISMISS_TEAM" )	then
 		Team_Confirm_Dismiss_Team();
@@ -382,45 +382,45 @@ end
 
 
 ------------------------------------------------------------------------------------------------------------------
--- µã»÷ÈËÎïÊÂ¼ş
+-- ç‚¹å‡»äººç‰©äº‹ä»¶
 --
 function TeamFrame_Select1()
 
 	g_iSel = 0;
 	
-	--AxTrace( 0,0, "sel+++=Í¬ÒâÉêÇë+++"..tostring(g_iSel).."==="..tostring(g_iTeamInfoType));
+	--AxTrace( 0,0, "sel+++=åŒæ„ç”³è¯·+++"..tostring(g_iSel).."==="..tostring(g_iTeamInfoType));
 	--FlashTeamButton(0);
 	if(1 == g_iTeamInfoType) then
-		-- ¶Ó³¤´ò¿ªÉêÇë¼ÓÈë¶ÓÎéÁĞ±í
+		-- é˜Ÿé•¿æ‰“å¼€ç”³è¯·åŠ å…¥é˜Ÿä¼åˆ—è¡¨
 
-		-- ÉèÖÃµ±Ç°Ñ¡ÖĞµÄÉêÇëÕß
+		-- è®¾ç½®å½“å‰é€‰ä¸­çš„ç”³è¯·è€…
 		TeamFrame_SetCurSelectedApply_Apply(g_iSel);
 
 
 	elseif(2 == g_iTeamInfoType) then
-		-- ´ò¿ªÑûÇë¶Ô»°¿ò.
+		-- æ‰“å¼€é‚€è¯·å¯¹è¯æ¡†.
 
-		-- ¼ÇÂ¼µ±Ç°Ñ¡ÖĞµÄÈËÎï
+		-- è®°å½•å½“å‰é€‰ä¸­çš„äººç‰©
 		-- SetCurSelMember(g_iSel);
 		-- g_iRealSelInvitorIndex = g_iSel;
 		
 		g_iRealSelInvitorIndexPingbi = g_iSel;
 		
 	elseif(0 == g_iTeamInfoType) then
-		-- ¶Ó³¤´ò¿ª¶ÓÓÑĞÅÏ¢¶Ô»°¿ò.
+		-- é˜Ÿé•¿æ‰“å¼€é˜Ÿå‹ä¿¡æ¯å¯¹è¯æ¡†.
 
 		if(0 == g_iTeamMemberCount_Team) then
 
-			-- Èç¹û¶ÓÎé¸öÊıÊÇ0, ·µ»Ø.
+			-- å¦‚æœé˜Ÿä¼ä¸ªæ•°æ˜¯0, è¿”å›.
 			return;
 		end
 		local leader = Player:IsLeader();
 		if(leader == 1)then
 			Team_Button_Frame3:Disable();
-			-- ½ûÖ¹¶Ó³¤ÈÎÃü°´Å¥
+			-- ç¦æ­¢é˜Ÿé•¿ä»»å‘½æŒ‰é’®
 			Team_Button_Frame4:Disable();
 		end
-		-- ¼ÇÂ¼µ±Ç°Ñ¡ÖĞµÄÈËÎï
+		-- è®°å½•å½“å‰é€‰ä¸­çš„äººç‰©
 		--SetCurSelMember(g_iSel);
 		g_iRealSelTeamMemberIndex = g_iSel;
 	end
@@ -428,7 +428,7 @@ function TeamFrame_Select1()
 end
 
 ------------------------------------------------------------------------------------------------------------------
--- µã»÷ÈËÎïÊÂ¼ş
+-- ç‚¹å‡»äººç‰©äº‹ä»¶
 --
 function TeamFrame_Select2()
 
@@ -437,30 +437,30 @@ function TeamFrame_Select2()
 	--AxTrace( 0,0, "sel=="..tostring(g_iSel));
 	--FlashTeamButton(1);
 	if(1 == g_iTeamInfoType) then
-		-- ¶Ó³¤´ò¿ªÉêÇë¼ÓÈë¶ÓÎéÁĞ±í
+		-- é˜Ÿé•¿æ‰“å¼€ç”³è¯·åŠ å…¥é˜Ÿä¼åˆ—è¡¨
 
-		-- ÉèÖÃµ±Ç°Ñ¡ÖĞµÄÉêÇëÕß
+		-- è®¾ç½®å½“å‰é€‰ä¸­çš„ç”³è¯·è€…
 		TeamFrame_SetCurSelectedApply_Apply(g_iSel);
 
 	elseif(2 == g_iTeamInfoType) then
-		-- ´ò¿ªÑûÇë¶Ô»°¿ò.
+		-- æ‰“å¼€é‚€è¯·å¯¹è¯æ¡†.
 
-		-- ¼ÇÂ¼µ±Ç°Ñ¡ÖĞµÄÈËÎï
+		-- è®°å½•å½“å‰é€‰ä¸­çš„äººç‰©
 		-- SetCurSelMember(g_iSel);
 		
 		g_iRealSelInvitorIndexPingbi = g_iSel;
 
 	elseif(0 == g_iTeamInfoType) then
-		-- ¶Ó³¤´ò¿ª¶ÓÓÑĞÅÏ¢¶Ô»°¿ò.
+		-- é˜Ÿé•¿æ‰“å¼€é˜Ÿå‹ä¿¡æ¯å¯¹è¯æ¡†.
 
-		-- ¼ÇÂ¼µ±Ç°Ñ¡ÖĞµÄÈËÎï
+		-- è®°å½•å½“å‰é€‰ä¸­çš„äººç‰©
 		-- SetCurSelMember(g_iSel);
 		g_iRealSelTeamMemberIndex = g_iSel;
 		
 		local leader = Player:IsLeader();
 		if(leader == 1)then
 			Team_Button_Frame3:Enable();
-			-- ½ûÖ¹¶Ó³¤ÈÎÃü°´Å¥
+			-- ç¦æ­¢é˜Ÿé•¿ä»»å‘½æŒ‰é’®
 			Team_Button_Frame4:Enable();
 		end
 	end
@@ -468,38 +468,38 @@ function TeamFrame_Select2()
 end
 
 ------------------------------------------------------------------------------------------------------------------
--- µã»÷ÈËÎïÊÂ¼ş
+-- ç‚¹å‡»äººç‰©äº‹ä»¶
 --
 function TeamFrame_Select3()
 
 	g_iSel = 2;
 	--FlashTeamButton(2);
-	--AxTrace( 0,0, "sel+++=Í¬ÒâÉêÇë+++"..tostring(g_iSel).."==="..tostring(g_iTeamInfoType));
+	--AxTrace( 0,0, "sel+++=åŒæ„ç”³è¯·+++"..tostring(g_iSel).."==="..tostring(g_iTeamInfoType));
 	if(1 == g_iTeamInfoType) then
-		-- ¶Ó³¤´ò¿ªÉêÇë¼ÓÈë¶ÓÎéÁĞ±í
+		-- é˜Ÿé•¿æ‰“å¼€ç”³è¯·åŠ å…¥é˜Ÿä¼åˆ—è¡¨
 
-		-- ÉèÖÃµ±Ç°Ñ¡ÖĞµÄÉêÇëÕß
+		-- è®¾ç½®å½“å‰é€‰ä¸­çš„ç”³è¯·è€…
 		TeamFrame_SetCurSelectedApply_Apply(g_iSel);
 
 	elseif(2 == g_iTeamInfoType) then
-		-- ´ò¿ªÑûÇë¶Ô»°¿ò.
+		-- æ‰“å¼€é‚€è¯·å¯¹è¯æ¡†.
 
-		-- ¼ÇÂ¼µ±Ç°Ñ¡ÖĞµÄÈËÎï
+		-- è®°å½•å½“å‰é€‰ä¸­çš„äººç‰©
 		-- SetCurSelMember(g_iSel);
 		
 		g_iRealSelInvitorIndexPingbi = g_iSel;
 
 	elseif(0 == g_iTeamInfoType) then
-		-- ¶Ó³¤´ò¿ª¶ÓÓÑĞÅÏ¢¶Ô»°¿ò.
+		-- é˜Ÿé•¿æ‰“å¼€é˜Ÿå‹ä¿¡æ¯å¯¹è¯æ¡†.
 
-		-- ¼ÇÂ¼µ±Ç°Ñ¡ÖĞµÄÈËÎï
+		-- è®°å½•å½“å‰é€‰ä¸­çš„äººç‰©
 		-- SetCurSelMember(g_iSel);
 		g_iRealSelTeamMemberIndex = g_iSel;
 		
 		local leader = Player:IsLeader();
 		if(leader == 1)then
 			Team_Button_Frame3:Enable();
-			-- ½ûÖ¹¶Ó³¤ÈÎÃü°´Å¥
+			-- ç¦æ­¢é˜Ÿé•¿ä»»å‘½æŒ‰é’®
 			Team_Button_Frame4:Enable();
 		end
 
@@ -511,38 +511,38 @@ end
 
 
 ------------------------------------------------------------------------------------------------------------------
--- µã»÷ÈËÎïÊÂ¼ş
+-- ç‚¹å‡»äººç‰©äº‹ä»¶
 --
 function TeamFrame_Select4()
 
 	g_iSel = 3;
 	--FlashTeamButton(3);
-	--AxTrace( 0,0, "sel+++=Í¬ÒâÉêÇë+++"..tostring(g_iSel).."==="..tostring(g_iTeamInfoType));
+	--AxTrace( 0,0, "sel+++=åŒæ„ç”³è¯·+++"..tostring(g_iSel).."==="..tostring(g_iTeamInfoType));
 	if(1 == g_iTeamInfoType) then
-		-- ¶Ó³¤´ò¿ªÉêÇë¼ÓÈë¶ÓÎéÁĞ±í
+		-- é˜Ÿé•¿æ‰“å¼€ç”³è¯·åŠ å…¥é˜Ÿä¼åˆ—è¡¨
 
-		-- ÉèÖÃµ±Ç°Ñ¡ÖĞµÄÉêÇëÕß
+		-- è®¾ç½®å½“å‰é€‰ä¸­çš„ç”³è¯·è€…
 		TeamFrame_SetCurSelectedApply_Apply(g_iSel);
 
 	elseif(2 == g_iTeamInfoType) then
-		-- ´ò¿ªÑûÇë¶Ô»°¿ò.
+		-- æ‰“å¼€é‚€è¯·å¯¹è¯æ¡†.
 
-		-- ¼ÇÂ¼µ±Ç°Ñ¡ÖĞµÄÈËÎï
+		-- è®°å½•å½“å‰é€‰ä¸­çš„äººç‰©
 		-- SetCurSelMember(g_iSel);
 		
 		g_iRealSelInvitorIndexPingbi = g_iSel;
 
 	elseif(0 == g_iTeamInfoType) then
-		-- ¶Ó³¤´ò¿ª¶ÓÓÑĞÅÏ¢¶Ô»°¿ò.
+		-- é˜Ÿé•¿æ‰“å¼€é˜Ÿå‹ä¿¡æ¯å¯¹è¯æ¡†.
 
-		-- ¼ÇÂ¼µ±Ç°Ñ¡ÖĞµÄÈËÎï
+		-- è®°å½•å½“å‰é€‰ä¸­çš„äººç‰©
 		-- SetCurSelMember(g_iSel);
 		g_iRealSelTeamMemberIndex = g_iSel;
 		
 		local leader = Player:IsLeader();
 		if(leader == 1)then
 			Team_Button_Frame3:Enable();
-			-- ½ûÖ¹¶Ó³¤ÈÎÃü°´Å¥
+			-- ç¦æ­¢é˜Ÿé•¿ä»»å‘½æŒ‰é’®
 			Team_Button_Frame4:Enable();
 		end
 	end
@@ -550,38 +550,38 @@ function TeamFrame_Select4()
 end
 
 ------------------------------------------------------------------------------------------------------------------
--- µã»÷ÈËÎïÊÂ¼ş
+-- ç‚¹å‡»äººç‰©äº‹ä»¶
 --
 function TeamFrame_Select5()
 
 	g_iSel = 4;
 	--FlashTeamButton(0);
-	--AxTrace( 0,0, "sel+++=Í¬ÒâÉêÇë+++"..tostring(g_iSel).."==="..tostring(g_iTeamInfoType));
+	--AxTrace( 0,0, "sel+++=åŒæ„ç”³è¯·+++"..tostring(g_iSel).."==="..tostring(g_iTeamInfoType));
 	if(1 == g_iTeamInfoType) then
-		-- ¶Ó³¤´ò¿ªÉêÇë¼ÓÈë¶ÓÎéÁĞ±í
+		-- é˜Ÿé•¿æ‰“å¼€ç”³è¯·åŠ å…¥é˜Ÿä¼åˆ—è¡¨
 
-		-- ÉèÖÃµ±Ç°Ñ¡ÖĞµÄÉêÇëÕß
+		-- è®¾ç½®å½“å‰é€‰ä¸­çš„ç”³è¯·è€…
 		TeamFrame_SetCurSelectedApply_Apply(g_iSel);
 
 	elseif(2 == g_iTeamInfoType) then
-		-- ´ò¿ªÑûÇë¶Ô»°¿ò.
+		-- æ‰“å¼€é‚€è¯·å¯¹è¯æ¡†.
 
-		-- ¼ÇÂ¼µ±Ç°Ñ¡ÖĞµÄÈËÎï
+		-- è®°å½•å½“å‰é€‰ä¸­çš„äººç‰©
 		-- SetCurSelMember(g_iSel);
 		
 		g_iRealSelInvitorIndexPingbi = g_iSel;
 
 	elseif(0 == g_iTeamInfoType) then
-		-- ¶Ó³¤´ò¿ª¶ÓÓÑĞÅÏ¢¶Ô»°¿ò.
+		-- é˜Ÿé•¿æ‰“å¼€é˜Ÿå‹ä¿¡æ¯å¯¹è¯æ¡†.
 
-		-- ¼ÇÂ¼µ±Ç°Ñ¡ÖĞµÄÈËÎï
+		-- è®°å½•å½“å‰é€‰ä¸­çš„äººç‰©
 		-- SetCurSelMember(g_iSel);
 		g_iRealSelTeamMemberIndex = g_iSel;
 		
 		local leader = Player:IsLeader();
 		if(leader == 1)then
 			Team_Button_Frame3:Enable();
-			-- ½ûÖ¹¶Ó³¤ÈÎÃü°´Å¥
+			-- ç¦æ­¢é˜Ÿé•¿ä»»å‘½æŒ‰é’®
 			Team_Button_Frame4:Enable();
 		end
 		
@@ -590,38 +590,38 @@ function TeamFrame_Select5()
 end
 
 ------------------------------------------------------------------------------------------------------------------
--- µã»÷ÈËÎïÊÂ¼ş
+-- ç‚¹å‡»äººç‰©äº‹ä»¶
 --
 function TeamFrame_Select6()
 
 	g_iSel = 5;
 	--FlashTeamButton(1);
-	--AxTrace( 0,0, "sel+++=Í¬ÒâÉêÇë+++"..tostring(g_iSel).."==="..tostring(g_iTeamInfoType));
+	--AxTrace( 0,0, "sel+++=åŒæ„ç”³è¯·+++"..tostring(g_iSel).."==="..tostring(g_iTeamInfoType));
 	if(1 == g_iTeamInfoType) then
-		-- ¶Ó³¤´ò¿ªÉêÇë¼ÓÈë¶ÓÎéÁĞ±í
+		-- é˜Ÿé•¿æ‰“å¼€ç”³è¯·åŠ å…¥é˜Ÿä¼åˆ—è¡¨
 
-		-- ÉèÖÃµ±Ç°Ñ¡ÖĞµÄÉêÇëÕß
+		-- è®¾ç½®å½“å‰é€‰ä¸­çš„ç”³è¯·è€…
 		TeamFrame_SetCurSelectedApply_Apply(g_iSel);
 
 	elseif(2 == g_iTeamInfoType) then
-		-- ´ò¿ªÑûÇë¶Ô»°¿ò.
+		-- æ‰“å¼€é‚€è¯·å¯¹è¯æ¡†.
 
-		-- ¼ÇÂ¼µ±Ç°Ñ¡ÖĞµÄÈËÎï
+		-- è®°å½•å½“å‰é€‰ä¸­çš„äººç‰©
 		-- SetCurSelMember(g_iSel);
 		
 		g_iRealSelInvitorIndexPingbi = g_iSel;
 
 	elseif(0 == g_iTeamInfoType) then
-		-- ¶Ó³¤´ò¿ª¶ÓÓÑĞÅÏ¢¶Ô»°¿ò.
+		-- é˜Ÿé•¿æ‰“å¼€é˜Ÿå‹ä¿¡æ¯å¯¹è¯æ¡†.
 
-		-- ¼ÇÂ¼µ±Ç°Ñ¡ÖĞµÄÈËÎï
+		-- è®°å½•å½“å‰é€‰ä¸­çš„äººç‰©
 		-- SetCurSelMember(g_iSel);
 		g_iRealSelTeamMemberIndex = g_iSel;
 		
 		local leader = Player:IsLeader();
 		if(leader == 1)then
 			Team_Button_Frame3:Enable();
-			-- ½ûÖ¹¶Ó³¤ÈÎÃü°´Å¥
+			-- ç¦æ­¢é˜Ÿé•¿ä»»å‘½æŒ‰é’®
 			Team_Button_Frame4:Enable();
 		end
 
@@ -635,13 +635,13 @@ end
 
 
 ------------------------------------------------------------------------------------------------------------------
--- °´Å¥ Team_Follow µã»÷ÊÂ¼ş
+-- æŒ‰é’® Team_Follow ç‚¹å‡»äº‹ä»¶
 --
 function Team_Button_Team_Follow_Click()
 
 	if( 0 == g_iTeamInfoType) then
-		-- ´ò¿ª¶ÓÎéĞÅÏ¢
-		-- ¶Ó³¤´ò¿ª¶ÓÓÑĞÅÏ¢¶Ô»°¿ò.
+		-- æ‰“å¼€é˜Ÿä¼ä¿¡æ¯
+		-- é˜Ÿé•¿æ‰“å¼€é˜Ÿå‹ä¿¡æ¯å¯¹è¯æ¡†.
 		local leader = Player:IsLeader();
 		if( leader == 1 ) then
 			Player:TeamFrame_AskTeamFollow();
@@ -649,10 +649,10 @@ function Team_Button_Team_Follow_Click()
 		end
 
 	elseif(1 == g_iTeamInfoType) then
-		-- ¶Ó³¤´ò¿ªÉêÇë¼ÓÈë¶ÓÎéÁĞ±í
+		-- é˜Ÿé•¿æ‰“å¼€ç”³è¯·åŠ å…¥é˜Ÿä¼åˆ—è¡¨
 
 	elseif(2 == g_iTeamInfoType) then
-		-- ´ò¿ªÑûÇë¶Ô»°¿ò.
+		-- æ‰“å¼€é‚€è¯·å¯¹è¯æ¡†.
 
 	elseif(3 == g_iTeamInfoType) then
 		
@@ -665,15 +665,15 @@ end
 
 
 ------------------------------------------------------------------------------------------------------------------
--- °´Å¥0µã»÷ÊÂ¼ş
+-- æŒ‰é’®0ç‚¹å‡»äº‹ä»¶
 --
 function Team_Button_Frame0_Click()
 
 	if( 0 == g_iTeamInfoType) then
-		-- ¶Ó³¤´ò¿ªÉêÇë¼ÓÈë¶ÓÎéÁĞ±í
+		-- é˜Ÿé•¿æ‰“å¼€ç”³è¯·åŠ å…¥é˜Ÿä¼åˆ—è¡¨
 		local leader = Player:IsLeader();
 		if( leader == 1 ) then
-				-- µÃµ½ÉêÇëÈËµÄ¸öÊı.
+				-- å¾—åˆ°ç”³è¯·äººçš„ä¸ªæ•°.
 			iMemberCount_Apply = DataPool:GetApplyMemberCount();
 			if(0 == iMemberCount_Apply) then
 				return;
@@ -681,83 +681,83 @@ function Team_Button_Frame0_Click()
 			TeamFrame_OpenApplyList();
 		end
 	elseif(1 == g_iTeamInfoType) then
-		-- ¶Ó³¤×é¶ÓÁĞ±í
+		-- é˜Ÿé•¿ç»„é˜Ÿåˆ—è¡¨
 
 	elseif(2 == g_iTeamInfoType) then
-		-- ´ò¿ªÑûÇë¶Ô»°¿ò.
+		-- æ‰“å¼€é‚€è¯·å¯¹è¯æ¡†.
 	end
 end
 
 
 
 ------------------------------------------------------------------------------------------------------------------
--- °´Å¥1µã»÷ÊÂ¼ş
+-- æŒ‰é’®1ç‚¹å‡»äº‹ä»¶
 --
 function Team_Button_Frame1_Click()
 
 	if( 0 == g_iTeamInfoType) then
-		-- ´ò¿ª¶ÓÎéĞÅÏ¢
+		-- æ‰“å¼€é˜Ÿä¼ä¿¡æ¯
 		local leader = Player:IsLeader();
 		if( leader == 1 ) then
-			Player:OpenDismissTeamMsgbox();			-- ´ò¿ª½âÉ¢¶ÓÎéµÄ¶ş´ÎÈ·ÈÏ´°¿Ú			add by WTT	20090212		
+			Player:OpenDismissTeamMsgbox();			-- æ‰“å¼€è§£æ•£é˜Ÿä¼çš„äºŒæ¬¡ç¡®è®¤çª—å£			add by WTT	20090212		
 		end
 	elseif(1 == g_iTeamInfoType) then
-		-- ¶Ó³¤´ò¿ª¶ÓÎéÁĞ±í
+		-- é˜Ÿé•¿æ‰“å¼€é˜Ÿä¼åˆ—è¡¨
 		DataPool:SetSelfInfo();
 		TeamFrame_OpenLeaderTeamInfo();
 
 	elseif(2 == g_iTeamInfoType) then
-		-- ´ò¿ªÑûÇë¶Ô»°¿ò.
+		-- æ‰“å¼€é‚€è¯·å¯¹è¯æ¡†.
 	end
 
 end
 
 ------------------------------------------------------------------------------------------------------------------
--- °´Å¥2µã»÷ÊÂ¼ş
+-- æŒ‰é’®2ç‚¹å‡»äº‹ä»¶
 --
 function Team_Button_Frame2_Click()
 
 	if( 0 == g_iTeamInfoType) then
-		-- ´ò¿ª¶ÓÎéĞÅÏ¢
+		-- æ‰“å¼€é˜Ÿä¼ä¿¡æ¯
 		local leader = Player:IsLeader();
 		if( leader == 1 ) then
 			Player:LeaveTeam();
 			Team_Close();
 		end
 	elseif(1 == g_iTeamInfoType) then
-		-- ¶Ó³¤´ò¿ªÉêÇë¼ÓÈë¶ÓÎéÁĞ±í
+		-- é˜Ÿé•¿æ‰“å¼€ç”³è¯·åŠ å…¥é˜Ÿä¼åˆ—è¡¨
 
-		-- Ç°·­Ò³
+		-- å‰ç¿»é¡µ
 		TeamFrame_PageUp_Apply();
 
 	elseif(2 == g_iTeamInfoType) then
-		-- ´ò¿ªÑûÇë¶Ô»°¿ò.
+		-- æ‰“å¼€é‚€è¯·å¯¹è¯æ¡†.
 	end
 
 end
 
 
 ------------------------------------------------------------------------------------------------------------------
--- °´Å¥3µã»÷ÊÂ¼ş
+-- æŒ‰é’®3ç‚¹å‡»äº‹ä»¶
 --
 function Team_Button_Frame3_Click()
 
 	if( 0 == g_iTeamInfoType) then
-		-- ´ò¿ª¶ÓÎéĞÅÏ¢
+		-- æ‰“å¼€é˜Ÿä¼ä¿¡æ¯
 		local leader = Player:IsLeader();
 		if( leader == 1 ) then
 			if((-1 == g_iSel) or (0 == g_iSel))then
 
-			-- Èç¹ûÔÚ½çÃæÉÏÃ»ÓĞÑ¡ÔñÒ»¸ö¶ÓÔ±¾Í·µ»Ø
-			-- »òÕßÑ¡ÖĞµÄÊÇ×Ô¼º(¶Ó³¤), Ò²·µ»Ø.
+			-- å¦‚æœåœ¨ç•Œé¢ä¸Šæ²¡æœ‰é€‰æ‹©ä¸€ä¸ªé˜Ÿå‘˜å°±è¿”å›
+			-- æˆ–è€…é€‰ä¸­çš„æ˜¯è‡ªå·±(é˜Ÿé•¿), ä¹Ÿè¿”å›.
 			return;
 			end
 
-			-- Ìß³öÒ»¸ö¶ÓÔ±.
+			-- è¸¢å‡ºä¸€ä¸ªé˜Ÿå‘˜.
 			--Player:KickTeamMember();
 			
 			local iTeamCount = DataPool:GetTeamMemberCount();
-			--AxTrace( 0,0, "µ±Ç°Ñ¡Ôñ"..tostring(g_iSel).."¶ÓÓÑ¸öÊı"..tostring(iTeamCount));
+			--AxTrace( 0,0, "å½“å‰é€‰æ‹©"..tostring(g_iSel).."é˜Ÿå‹ä¸ªæ•°"..tostring(iTeamCount));
 			if(iTeamCount <= g_iSel) then
 			
 				return;
@@ -767,21 +767,21 @@ function Team_Button_Frame3_Click()
 			Team_Close();
 		end
 	elseif(1 == g_iTeamInfoType) then
-		-- ¶Ó³¤´ò¿ªÉêÇë¼ÓÈë¶ÓÎéÁĞ±í
+		-- é˜Ÿé•¿æ‰“å¼€ç”³è¯·åŠ å…¥é˜Ÿä¼åˆ—è¡¨
 
-		-- Ïòºó·­Ò³
+		-- å‘åç¿»é¡µ
 		TeamFrame_PageDown_Apply();
 
 	elseif(2 == g_iTeamInfoType) then
-		-- ´ò¿ªÑûÇë¶Ô»°¿ò.
+		-- æ‰“å¼€é‚€è¯·å¯¹è¯æ¡†.
 
-		-- ÏòÇ°·­Ò³
+		-- å‘å‰ç¿»é¡µ
 		TeamFrame_PageUp();
 
 	elseif(3 == g_iTeamInfoType) then
-		-- ¶Ó³¤´ò¿ª¶ÓÓÑĞÅÏ¢¶Ô»°¿ò.
+		-- é˜Ÿé•¿æ‰“å¼€é˜Ÿå‹ä¿¡æ¯å¯¹è¯æ¡†.
 
-		--AxTrace( 0,0, "µ±Ç°Ñ¡Ôñ==="..tostring(g_iSel));
+		--AxTrace( 0,0, "å½“å‰é€‰æ‹©==="..tostring(g_iSel));
 		
 
 	end
@@ -790,22 +790,22 @@ function Team_Button_Frame3_Click()
 end
 
 ------------------------------------------------------------------------------------------------------------------
--- °´Å¥4µã»÷ÊÂ¼ş
+-- æŒ‰é’®4ç‚¹å‡»äº‹ä»¶
 --
 function Team_Button_Frame4_Click()
 
 
 	if( 0 == g_iTeamInfoType) then
-		-- ´ò¿ª¶ÓÎéĞÅÏ¢
+		-- æ‰“å¼€é˜Ÿä¼ä¿¡æ¯
 		local leader = Player:IsLeader();
 		if( leader == 1 ) then
 			local iTeamCount = DataPool:GetTeamMemberCount();
 		
 			if((-1 == g_iSel) or (0 == g_iSel))then
 
-				AxTrace( 0,0, "ÈÎÃü¶Ó³¤"..tostring(g_iSel));
-				-- Èç¹ûÔÚ½çÃæÉÏÃ»ÓĞÑ¡ÔñÒ»¸ö¶ÓÔ±¾Í·µ»Ø
-				-- »òÕßÑ¡ÖĞµÄÊÇ×Ô¼º(¶Ó³¤), Ò²·µ»Ø.
+				AxTrace( 0,0, "ä»»å‘½é˜Ÿé•¿"..tostring(g_iSel));
+				-- å¦‚æœåœ¨ç•Œé¢ä¸Šæ²¡æœ‰é€‰æ‹©ä¸€ä¸ªé˜Ÿå‘˜å°±è¿”å›
+				-- æˆ–è€…é€‰ä¸­çš„æ˜¯è‡ªå·±(é˜Ÿé•¿), ä¹Ÿè¿”å›.
 						
 				return;
 			end
@@ -813,12 +813,12 @@ function Team_Button_Frame4_Click()
 			
 			if( iTeamCount <= g_iSel) then
 			
-				AxTrace( 0,0, "ÈÎÃü¶Ó³¤"..tostring(g_iSel).."  "..tostring(iTeamCount));
+				AxTrace( 0,0, "ä»»å‘½é˜Ÿé•¿"..tostring(g_iSel).."  "..tostring(iTeamCount));
 				return;
 			end;
 			
-			AxTrace( 0,0, "ÈÎÃü¶Ó³¤"..tostring(g_iSel));
-			-- ÌáÉı¶Ó³¤.
+			AxTrace( 0,0, "ä»»å‘½é˜Ÿé•¿"..tostring(g_iSel));
+			-- æå‡é˜Ÿé•¿.
 			-- Player:AppointLeader();
 			Player:AppointLeader(g_iRealSelTeamMemberIndex);
 			Team_Close();
@@ -829,19 +829,19 @@ function Team_Button_Frame4_Click()
 		end
 
 	elseif(1 == g_iTeamInfoType) then
-		-- ¶Ó³¤´ò¿ªÉêÇë¼ÓÈë¶ÓÎéÁĞ±í
+		-- é˜Ÿé•¿æ‰“å¼€ç”³è¯·åŠ å…¥é˜Ÿä¼åˆ—è¡¨
 
 		DataPool:ClearAllApply();
-		-- ÉèÖÃÏÂÒ»´Î¶Ó³¤´ò¿ª½çÃæÊÇ²é¿´¶ÓÎéĞÅÏ¢
+		-- è®¾ç½®ä¸‹ä¸€æ¬¡é˜Ÿé•¿æ‰“å¼€ç•Œé¢æ˜¯æŸ¥çœ‹é˜Ÿä¼ä¿¡æ¯
 		--DataPool:SetTeamFrameOpenFlag(3);
 		g_iTeamInfoType = 0;
 		Team_Close();
 
 
 	elseif(2 == g_iTeamInfoType) then
-		-- ´ò¿ªÑûÇë¶Ô»°¿ò.
+		-- æ‰“å¼€é‚€è¯·å¯¹è¯æ¡†.
 
-		-- Ïòºó·­Ò³
+		-- å‘åç¿»é¡µ
 		TeamFrame_PageDown();
 	end
 
@@ -850,38 +850,38 @@ function Team_Button_Frame4_Click()
 end
 
 ------------------------------------------------------------------------------------------------------------------
--- °´Å¥5µã»÷ÊÂ¼ş
+-- æŒ‰é’®5ç‚¹å‡»äº‹ä»¶
 --
 function Team_Button_Frame5_Click()
 
 
 	if( 0 == g_iTeamInfoType) then
-		-- ´ò¿ª¶ÓÎéĞÅÏ¢
+		-- æ‰“å¼€é˜Ÿä¼ä¿¡æ¯
 		--SendAddFriendMsg();
 		
 	elseif(1 == g_iTeamInfoType) then
-		-- ¶Ó³¤´ò¿ªÉêÇë¼ÓÈë¶ÓÎéÁĞ±í
+		-- é˜Ÿé•¿æ‰“å¼€ç”³è¯·åŠ å…¥é˜Ÿä¼åˆ—è¡¨
 
 		if((-1 == g_iSel))then
 
-			-- Èç¹ûÔÚ½çÃæÉÏÃ»ÓĞÑ¡ÔñÒ»¸ö¶ÓÔ±¾Í·µ»Ø
-			-- »òÕßÑ¡ÖĞµÄÊÇ×Ô¼º(¶Ó³¤), Ò²·µ»Ø.
+			-- å¦‚æœåœ¨ç•Œé¢ä¸Šæ²¡æœ‰é€‰æ‹©ä¸€ä¸ªé˜Ÿå‘˜å°±è¿”å›
+			-- æˆ–è€…é€‰ä¸­çš„æ˜¯è‡ªå·±(é˜Ÿé•¿), ä¹Ÿè¿”å›.
 			return;
 		end
 
-		-- Í¬ÒâÉêÇëÕß¼ÓÈë¶ÓÎé
+		-- åŒæ„ç”³è¯·è€…åŠ å…¥é˜Ÿä¼
 		TeamFrame_AgreeJoinTeam_Apply();
 
 
 	elseif(2 == g_iTeamInfoType) then
-		-- ´ò¿ªÑûÇë¶Ô»°¿ò.
+		-- æ‰“å¼€é‚€è¯·å¯¹è¯æ¡†.
 
-		-- Í¬Òâ¼ÓÈë¶ÓÎé
+		-- åŒæ„åŠ å…¥é˜Ÿä¼
 		TeamFrame_AgreeJoinTeam_Invite();
 		Team_Close();
 
 	elseif(3 == g_iTeamInfoType) then
-		-- ¶Ó³¤´ò¿ª¶ÓÓÑĞÅÏ¢¶Ô»°¿ò.
+		-- é˜Ÿé•¿æ‰“å¼€é˜Ÿå‹ä¿¡æ¯å¯¹è¯æ¡†.
 	
 
 	end
@@ -890,15 +890,15 @@ function Team_Button_Frame5_Click()
 end
 
 ------------------------------------------------------------------------------------------------------------------
--- °´Å¥6µã»÷ÊÂ¼ş
+-- æŒ‰é’®6ç‚¹å‡»äº‹ä»¶
 --
 function Team_Button_Frame6_Click()
 
 	if( 0 == g_iTeamInfoType) then
 	elseif(1 == g_iTeamInfoType) then
-		-- ¶Ó³¤´ò¿ªÉêÇë¼ÓÈë¶ÓÎéÁĞ±í
+		-- é˜Ÿé•¿æ‰“å¼€ç”³è¯·åŠ å…¥é˜Ÿä¼åˆ—è¡¨
 
-		-- ¾Ü¾øÉêÇëÕß¼ÓÈë¶ÓÎé.
+		-- æ‹’ç»ç”³è¯·è€…åŠ å…¥é˜Ÿä¼.
 		TeamFrame_RejectJoinTeam_Apply();
 		--DataPool:SetTeamFrameOpenFlag(3);
 		if(g_iMemberCount_Apply <= 0) then
@@ -908,9 +908,9 @@ function Team_Button_Frame6_Click()
 		end;	
 
 	elseif(2 == g_iTeamInfoType) then
-		-- ´ò¿ªÑûÇë¶Ô»°¿ò.
+		-- æ‰“å¼€é‚€è¯·å¯¹è¯æ¡†.
 
-		-- ¾Ü¾ø¼ÓÈë¶ÓÎé.
+		-- æ‹’ç»åŠ å…¥é˜Ÿä¼.
 		TeamFrame_RejectJoinTeam_Invite();
 		--DataPool:SetTeamFrameOpenFlag(0);
 		if(g_iTeamCount_Invite <= 0) then
@@ -920,10 +920,10 @@ function Team_Button_Frame6_Click()
 		end
 		
 	elseif(3 == g_iTeamInfoType) then
-		-- ¶Ó³¤´ò¿ª¶ÓÓÑĞÅÏ¢¶Ô»°¿ò.
+		-- é˜Ÿé•¿æ‰“å¼€é˜Ÿå‹ä¿¡æ¯å¯¹è¯æ¡†.
 
 	elseif(4 == g_iTeamInfoType) then
-		-- ·Ç×é¶ÓÍæ¼Ò´ò¿ª½çÃæ
+		-- éç»„é˜Ÿç©å®¶æ‰“å¼€ç•Œé¢
 		Player:CreateTeamSelf();
 		Team_Close();
 	end
@@ -932,58 +932,58 @@ end
 
 
 ------------------------------------------------------------------------------------------------------------------
--- °´Å¥7µã»÷ÊÂ¼ş
+-- æŒ‰é’®7ç‚¹å‡»äº‹ä»¶
 --
 function Team_Button_Frame7_Click()
 
 	if( 0 == g_iTeamInfoType) then
-		-- 0 : ´ò¿ª¶ÓÓÑĞÅÏ¢¶Ô»°¿ò
+		-- 0 : æ‰“å¼€é˜Ÿå‹ä¿¡æ¯å¯¹è¯æ¡†
 		SendAddFriendMsg();
 		
 	elseif(1 == g_iTeamInfoType) then
-		-- ¶Ó³¤´ò¿ªÉêÇë¼ÓÈë¶ÓÎéÁĞ±í
+		-- é˜Ÿé•¿æ‰“å¼€ç”³è¯·åŠ å…¥é˜Ÿä¼åˆ—è¡¨
 		
-		DataPool:InviteApplyAddPingbi(1,g_iRealSelApplyIndex,1)--×îºóÕâ¸ö1ÎªÁË´Õ¹»²ÎÊı
+		DataPool:InviteApplyAddPingbi(1,g_iRealSelApplyIndex,1)--æœ€åè¿™ä¸ª1ä¸ºäº†å‡‘å¤Ÿå‚æ•°
 
 	elseif(2 == g_iTeamInfoType) then
-		-- ´ò¿ªÑûÇë¶Ô»°¿ò.
+		-- æ‰“å¼€é‚€è¯·å¯¹è¯æ¡†.
 
 		DataPool:InviteApplyAddPingbi(2,g_iCurShowTeam_Invite,g_iRealSelInvitorIndexPingbi)
 		
 	elseif(3 == g_iTeamInfoType) then
-		-- ¶Ó³¤´ò¿ª¶ÓÓÑĞÅÏ¢¶Ô»°¿ò.
+		-- é˜Ÿé•¿æ‰“å¼€é˜Ÿå‹ä¿¡æ¯å¯¹è¯æ¡†.
 
 	elseif(4 == g_iTeamInfoType) then
-		-- ·Ç×é¶ÓÍæ¼Ò´ò¿ª½çÃæ
+		-- éç»„é˜Ÿç©å®¶æ‰“å¼€ç•Œé¢
 	end
 end
 
 
 ------------------------------------------------------------------------------------------------------------------
--- ´ò¿ª¶ÓÎéĞÅÏ¢
+-- æ‰“å¼€é˜Ÿä¼ä¿¡æ¯
 --
 function TeamFrame_OpenTeamInfo()
 
-		-- Çå¿Õui½çÃæ
+		-- æ¸…ç©ºuiç•Œé¢
 		ClearUIModel();
 
-		-- Òş²ØËÀÍö±ê¼Ç
+		-- éšè—æ­»äº¡æ ‡è®°
 		HideDeadFlag();
 
-		-- Òş²ØµôÏß±ê¼Ç
+		-- éšè—æ‰çº¿æ ‡è®°
 		HideDeadLinkFlag();
 
-		-- Òş²Ø¶Ó³¤±ê¼Ç
+		-- éšè—é˜Ÿé•¿æ ‡è®°
 		ShwoLeaderFlat(0);
 
 
 		g_iSel = -1;
 
-		-- ÉèÖÃ¶Ô»°¿òµÄ²Ù×÷ÀàĞÍ
+		-- è®¾ç½®å¯¹è¯æ¡†çš„æ“ä½œç±»å‹
 		g_iTeamInfoType = 0;
 		g_iTeamInfoType  = 0;
 
-		-- ÏÔÊ¾ÕıÈ·µÄÏÔÊ¾½çÃæ
+		-- æ˜¾ç¤ºæ­£ç¡®çš„æ˜¾ç¤ºç•Œé¢
 		Team_Button_Frame0:Hide();
 		Team_Button_Frame1:Hide();
 		Team_Button_Frame2:Hide();
@@ -993,34 +993,34 @@ function TeamFrame_OpenTeamInfo()
 		Team_Button_Frame6:Hide();
 		Team_Button_Frame7:Hide();
 
-		-- ÉèÖÃ°´Å¥ÎÄ×Ö
+		-- è®¾ç½®æŒ‰é’®æ–‡å­—
 		Team_Button_Frame4:Show();
 		Team_Button_Frame7:Show();
 		Team_Button_Frame6:Show();
 		Team_Button_Frame4:Enable();
 		Team_Button_Frame7:Enable();
 		Team_Button_Frame6:Enable();
-		Team_Button_Frame4:SetText("Àë¿ª¶ÓÎé");
-		Team_Button_Frame7:SetText("¼ÓÎªºÃÓÑ");
-		Team_Button_Frame6:SetText("ÑûÇëºÃÓÑ");
-		Team_Button_Frame7:SetToolTip("");--Õâ¸ö½çÃæ²»ÏÔÊ¾tooltips
-		Team_Name:SetText("#gFF0FA0¶ÓÎéĞÅÏ¢");
+		Team_Button_Frame4:SetText("ç¦»å¼€é˜Ÿä¼");
+		Team_Button_Frame7:SetText("åŠ ä¸ºå¥½å‹");
+		Team_Button_Frame6:SetText("é‚€è¯·å¥½å‹");
+		Team_Button_Frame7:SetToolTip("");--è¿™ä¸ªç•Œé¢ä¸æ˜¾ç¤ºtooltips
+		Team_Name:SetText("#gFF0FA0é˜Ÿä¼ä¿¡æ¯");
 
 		Team_Update_ExpMode( 0 ); 
-		-- µ±Ç°¶ÓÎéÖĞ¶ÓÔ±µÄ¸öÊı.
+		-- å½“å‰é˜Ÿä¼ä¸­é˜Ÿå‘˜çš„ä¸ªæ•°.
 		g_iTeamMemberCount_Team = DataPool:GetTeamMemberCount();
 
-		-- Èç¹û¶ÓÎé¸öÊıÊÇÁã, ²»ÏÔÊ¾½çÃæ.
+		-- å¦‚æœé˜Ÿä¼ä¸ªæ•°æ˜¯é›¶, ä¸æ˜¾ç¤ºç•Œé¢.
 		if(g_iTeamMemberCount_Team <= 0) then
 			this:Hide();
 			--Team_Close();
 
 		end;
 
-		-- ÉèÖÃµ±Ç°Ñ¡Ôñ,
+		-- è®¾ç½®å½“å‰é€‰æ‹©,
 		g_iCurSel_Team = 0;
 
-		-- Çå¿Õ½çÃæ
+		-- æ¸…ç©ºç•Œé¢
 		for i = 0, 5 do
 			g_Team_PlayerInfo_Name[i]:SetText("");
 			g_Team_PlayerInfo_School[i]:SetText("");
@@ -1028,9 +1028,9 @@ function TeamFrame_OpenTeamInfo()
 
 		end;
 
-		-- Ë¢ĞÂÃ¿¸ö¶ÓÔ±.
+		-- åˆ·æ–°æ¯ä¸ªé˜Ÿå‘˜.
 
-		-- ÏÔÊ¾¶Ó³¤±ê¼Ç
+		-- æ˜¾ç¤ºé˜Ÿé•¿æ ‡è®°
 		if(g_iTeamMemberCount_Team > 0) then
 			ShwoLeaderFlat(1);
 		end;
@@ -1046,23 +1046,23 @@ end
 
 ------------------------------------------------------------------------------------------------------------------
 --
--- ·Ç×é¶ÓÍæ¼Ò´ò¿ª½çÃæ
+-- éç»„é˜Ÿç©å®¶æ‰“å¼€ç•Œé¢
 --
 function TeamFrame_OpenCreateTeamSelf()
 
-		-- Çå¿Õui½çÃæ
+		-- æ¸…ç©ºuiç•Œé¢
 		ClearUIModel();
 
-		-- Òş²ØËÀÍö±ê¼Ç
+		-- éšè—æ­»äº¡æ ‡è®°
 		HideDeadFlag();
 
-		-- Òş²ØµôÏß±ê¼Ç
+		-- éšè—æ‰çº¿æ ‡è®°
 		HideDeadLinkFlag();
 
-		-- Òş²Ø¶Ó³¤±ê¼Ç
+		-- éšè—é˜Ÿé•¿æ ‡è®°
 		ShwoLeaderFlat(0);
 
-		-- ÏÔÊ¾ÕıÈ·µÄÏÔÊ¾½çÃæ
+		-- æ˜¾ç¤ºæ­£ç¡®çš„æ˜¾ç¤ºç•Œé¢
 		Team_Button_Frame0:Hide();
 		Team_Button_Frame1:Hide();
 		Team_Button_Frame2:Hide();
@@ -1072,13 +1072,13 @@ function TeamFrame_OpenCreateTeamSelf()
 		Team_Button_Frame6:Hide();
 		Team_Button_Frame7:Hide();
 
-		-- ÉèÖÃ°´Å¥ÎÄ×Ö
+		-- è®¾ç½®æŒ‰é’®æ–‡å­—
 		Team_Button_Frame6:Show();
 		Team_Button_Frame6:Enable();
-		Team_Button_Frame6:SetText("×Ô½¨¶ÓÎé");
-		Team_Name:SetText("#gFF0FA0×Ô½¨¶ÓÎé");
+		Team_Button_Frame6:SetText("è‡ªå»ºé˜Ÿä¼");
+		Team_Name:SetText("#gFF0FA0è‡ªå»ºé˜Ÿä¼");
 
-		-- Çå¿Õ½çÃæ
+		-- æ¸…ç©ºç•Œé¢
 		for i = 0, 5 do
 			g_Team_PlayerInfo_Name[i]:SetText("");
 			g_Team_PlayerInfo_School[i]:SetText("");
@@ -1092,15 +1092,15 @@ end
 
 
 ------------------------------------------------------------------------------------------------------------------
--- ´ò¿ªÉêÇëÁĞ±í
+-- æ‰“å¼€ç”³è¯·åˆ—è¡¨
 --
 function TeamFrame_OpenApplyList()
 
 
 	ShwoLeaderFlat(0);
-	-- Çå¿Õui½çÃæ
+	-- æ¸…ç©ºuiç•Œé¢
 	ClearUIModel();
-	-- Çå¿Õ½çÃæ
+	-- æ¸…ç©ºç•Œé¢
 	for i = 0, 5 do
 		g_Team_PlayerInfo_Name[i]:SetText("");
 		g_Team_PlayerInfo_School[i]:SetText("");
@@ -1108,12 +1108,12 @@ function TeamFrame_OpenApplyList()
 
 	end;
 
-	-- ÉèÖÃ¶Ô»°¿òµÄ²Ù×÷ÀàĞÍ
+	-- è®¾ç½®å¯¹è¯æ¡†çš„æ“ä½œç±»å‹
 	g_iTeamInfoType  = 1;
 	g_iTeamInfoType = 1;
 	
 
-	-- ÏÔÊ¾ÕıÈ·µÄÏÔÊ¾½çÃæ
+	-- æ˜¾ç¤ºæ­£ç¡®çš„æ˜¾ç¤ºç•Œé¢
 	Team_Button_Frame0:Hide();
 	Team_Button_Frame1:Hide();
 	Team_Button_Frame2:Hide();
@@ -1139,42 +1139,42 @@ function TeamFrame_OpenApplyList()
 	Team_Button_Frame6:Disable();
 	Team_Button_Frame7:Disable();
 	
-	Team_Button_Frame1:SetText("¶ÓÎéĞÅÏ¢");
-	Team_Button_Frame2:SetText("ÉÏÒ»Ò³");
-	Team_Button_Frame3:SetText("ÏÂÒ»Ò³");
-	Team_Button_Frame4:SetText("Çå¿ÕÁĞ±í");
-	Team_Button_Frame5:SetText("Í¬ÒâÉêÇë");
-	Team_Button_Frame6:SetText("¾Ü¾øÉêÇë");
-	Team_Button_Frame7:SetText("ÆÁ±ÎÍæ¼Ò");
-	Team_Button_Frame7:SetToolTip("ÆÁ±Î¸ÃÍæ¼Ò");
-	Team_Name:SetText("#gFF0FA0ÉêÇëÁĞ±í");
+	Team_Button_Frame1:SetText("é˜Ÿä¼ä¿¡æ¯");
+	Team_Button_Frame2:SetText("ä¸Šä¸€é¡µ");
+	Team_Button_Frame3:SetText("ä¸‹ä¸€é¡µ");
+	Team_Button_Frame4:SetText("æ¸…ç©ºåˆ—è¡¨");
+	Team_Button_Frame5:SetText("åŒæ„ç”³è¯·");
+	Team_Button_Frame6:SetText("æ‹’ç»ç”³è¯·");
+	Team_Button_Frame7:SetText("å±è”½ç©å®¶");
+	Team_Button_Frame7:SetToolTip("å±è”½è¯¥ç©å®¶");
+	Team_Name:SetText("#gFF0FA0ç”³è¯·åˆ—è¡¨");
 
 
-	-- µÃµ½ÉêÇëÈËµÄ¸öÊı.
+	-- å¾—åˆ°ç”³è¯·äººçš„ä¸ªæ•°.
 	g_iMemberCount_Apply = DataPool:GetApplyMemberCount();
-	--AxTrace(0, 0, "^^µÃµ½ÉêÇë¸öÊı"..tostring(g_iMemberCount_Apply))
+	--AxTrace(0, 0, "^^å¾—åˆ°ç”³è¯·ä¸ªæ•°"..tostring(g_iMemberCount_Apply))
 
 	if(0 == g_iMemberCount_Apply) then
 		this:Hide();
 		return;
 	end
 
-	-- ÉèÖÃµ±Ç°ÏÔÊ¾µÄÒ³Ãæ.
+	-- è®¾ç½®å½“å‰æ˜¾ç¤ºçš„é¡µé¢.
 	g_iCurShowPage_Apply = 0;
 
-	-- ÉèÖÃµ±Ç°Ñ¡ÔñµÄÈËÎï.
+	-- è®¾ç½®å½“å‰é€‰æ‹©çš„äººç‰©.
 	g_iCurSel_Apply = 0;
 
-	-- Ë¢ĞÂµ±Ç°Ò³Ãæ.
+	-- åˆ·æ–°å½“å‰é¡µé¢.
 	TeamFrame_RefreshCurShowApplyPage_Apply(g_iCurShowPage_Apply);
 
-	-- ´ÓµÚ0Ò³¿ªÊ¼.
+	-- ä»ç¬¬0é¡µå¼€å§‹.
 	local iPageCount = 0;
 	iPageCount = (g_iMemberCount_Apply - 1) / g_iCurPageShowCount;
 	iPageCount = math.floor(iPageCount);
 
 
-	-- ½ûÖ¹Ïòºó·­Ò³
+	-- ç¦æ­¢å‘åç¿»é¡µ
 	if(g_iCurShowPage_Apply < iPageCount) then
 		Team_Button_Frame3:Enable();
 	end
@@ -1191,20 +1191,20 @@ end
 
 
 ------------------------------------------------------------------------------------------------------------------
--- ´ò¿ªÑûÇëĞÅÏ¢
+-- æ‰“å¼€é‚€è¯·ä¿¡æ¯
 --
 function TeamFrame_OpenInvite()
 
-	--Çå¿Õui½çÃæ
+	--æ¸…ç©ºuiç•Œé¢
 	ClearUIModel();
 
 	g_iSel = -1;
 
-	-- ÉèÖÃ¶Ô»°¿òµÄ²Ù×÷ÀàĞÍ
+	-- è®¾ç½®å¯¹è¯æ¡†çš„æ“ä½œç±»å‹
 	g_iTeamInfoType = 2;
 	g_iTeamInfoType  = 2;
 
-	-- ÏÔÊ¾ÕıÈ·µÄÏÔÊ¾½çÃæ
+	-- æ˜¾ç¤ºæ­£ç¡®çš„æ˜¾ç¤ºç•Œé¢
 	Team_Button_Frame0:Hide();
 	Team_Button_Frame1:Hide();
 	Team_Button_Frame2:Hide();
@@ -1226,34 +1226,34 @@ function TeamFrame_OpenInvite()
 	Team_Button_Frame6:Enable();
 	Team_Button_Frame7:Enable();
 
-	Team_Button_Frame3:SetText("ÉÏÒ»Ò³");
-	Team_Button_Frame4:SetText("ÏÂÒ»Ò³");
-	Team_Button_Frame5:SetText("Í¬ÒâÑûÇë");
-	Team_Button_Frame6:SetText("¾Ü¾øÑûÇë");
-	Team_Button_Frame7:SetText("ÆÁ±ÎÍæ¼Ò");
-	Team_Button_Frame7:SetToolTip("ÆÁ±Î¸ÃÍæ¼Ò");
-	Team_Name:SetText("#gFF0FA0ÑûÇë¶Ô»°¿ò");
+	Team_Button_Frame3:SetText("ä¸Šä¸€é¡µ");
+	Team_Button_Frame4:SetText("ä¸‹ä¸€é¡µ");
+	Team_Button_Frame5:SetText("åŒæ„é‚€è¯·");
+	Team_Button_Frame6:SetText("æ‹’ç»é‚€è¯·");
+	Team_Button_Frame7:SetText("å±è”½ç©å®¶");
+	Team_Button_Frame7:SetToolTip("å±è”½è¯¥ç©å®¶");
+	Team_Name:SetText("#gFF0FA0é‚€è¯·å¯¹è¯æ¡†");
 
-	-- µÃµ½ÑûÇë¶ÓÎéµÄ¸öÊı.
+	-- å¾—åˆ°é‚€è¯·é˜Ÿä¼çš„ä¸ªæ•°.
 	g_iTeamCount_Invite   = DataPool:GetInviteTeamCount();
 	if( g_iTeamCount_Invite == 0 ) then
 		this:Hide();
 		return;
 	end
-	-- µ±Ç°Ñ¡ÔñµÄÈËÎï
+	-- å½“å‰é€‰æ‹©çš„äººç‰©
 	g_iCurShowTeam_Invite = 0;
 
-	-- ½ûÖ¹ÏòÇ°·­Ò³
+	-- ç¦æ­¢å‘å‰ç¿»é¡µ
 	if(0 == g_iCurShowTeam_Invite) then
 		Team_Button_Frame3:Disable();
 	end
 
-	-- ½ûÖ¹Ïòºó·­Ò³
+	-- ç¦æ­¢å‘åç¿»é¡µ
 	if(g_iCurShowTeam_Invite >= (g_iTeamCount_Invite - 1)) then
 		Team_Button_Frame4:Disable();
 	end
 
-	-- ÏÔÊ¾¶ÓÎéĞÅÏ¢
+	-- æ˜¾ç¤ºé˜Ÿä¼ä¿¡æ¯
 	TeamFrame_RefreshTeamInfo_Invite();
 
 	if(0 == g_iTeamCount_Invite) then
@@ -1262,37 +1262,37 @@ function TeamFrame_OpenInvite()
 		Team_Button_Frame6:Disable();
 	end;
 	
-	-- Òş²Ø¶Ó³¤±ê¼Ç
+	-- éšè—é˜Ÿé•¿æ ‡è®°
 	ShwoLeaderFlat(1);
 	Team_Show();
 end
 
 
 ------------------------------------------------------------------------------------------------------------------
--- ´ò¿ª¶Ó³¤¶ÓÎéĞÅÏ¢
+-- æ‰“å¼€é˜Ÿé•¿é˜Ÿä¼ä¿¡æ¯
 --
 function TeamFrame_OpenLeaderTeamInfo()
 
-	-- Çå¿Õui½çÃæ
+	-- æ¸…ç©ºuiç•Œé¢
 	ClearUIModel();
 
-	-- Òş²ØËÀÍö±ê¼Ç
+	-- éšè—æ­»äº¡æ ‡è®°
 	HideDeadFlag();
 
-	-- Òş²ØµôÏß±ê¼Ç
+	-- éšè—æ‰çº¿æ ‡è®°
 	HideDeadLinkFlag();
 
-	-- Òş²Ø¶Ó³¤±ê¼Ç
+	-- éšè—é˜Ÿé•¿æ ‡è®°
 	ShwoLeaderFlat(0);
 
 	g_iSel = -1;
 
-	-- ÉèÖÃ¶Ô»°¿òµÄ²Ù×÷ÀàĞÍ
+	-- è®¾ç½®å¯¹è¯æ¡†çš„æ“ä½œç±»å‹
 	g_iTeamInfoType = 0;
 	
 	Team_Follow_Button:Show();
 
-	-- ÏÔÊ¾ÕıÈ·µÄÏÔÊ¾½çÃæ
+	-- æ˜¾ç¤ºæ­£ç¡®çš„æ˜¾ç¤ºç•Œé¢
 	Team_Button_Frame0:Show();
 	Team_Button_Frame1:Show();
 	Team_Button_Frame2:Show();
@@ -1302,7 +1302,7 @@ function TeamFrame_OpenLeaderTeamInfo()
 	Team_Button_Frame6:Show();
 	Team_Button_Frame5:Hide();
 	
-	--ÕâÀïÒ»¶¨ÒªÓÃGetApplyMemberCount¶ø²»ÄÜÓÃg_iMemberCount_Apply×öÅĞ¶Ï¡£ÇåÀíÁĞ±íÖ®ºó »òÕß ½Óµ½ÉêÇë²»Ó¦´ğÈ»ºó½âÉ¢¶ÓÎéÔÚ³ÉÁ¢¶ÓÎé »òÕß ½Óµ½ÉêÇë²»Ó¦´ğÈ»ºóÈÎÃüÆäËûÈËÎª¶Ó³¤È»ºó¶Ó³¤ÓÖÈÎÃü»Ø±¾ÈËg_iMemberCount_Apply¶¼²»Îª0¡£
+	--è¿™é‡Œä¸€å®šè¦ç”¨GetApplyMemberCountè€Œä¸èƒ½ç”¨g_iMemberCount_Applyåšåˆ¤æ–­ã€‚æ¸…ç†åˆ—è¡¨ä¹‹å æˆ–è€… æ¥åˆ°ç”³è¯·ä¸åº”ç­”ç„¶åè§£æ•£é˜Ÿä¼åœ¨æˆç«‹é˜Ÿä¼ æˆ–è€… æ¥åˆ°ç”³è¯·ä¸åº”ç­”ç„¶åä»»å‘½å…¶ä»–äººä¸ºé˜Ÿé•¿ç„¶åé˜Ÿé•¿åˆä»»å‘½å›æœ¬äººg_iMemberCount_Applyéƒ½ä¸ä¸º0ã€‚
 	if(DataPool:GetApplyMemberCount() > 0) then --by hukai#46895
 		Team_Button_Frame0:Enable();
 	else
@@ -1320,29 +1320,29 @@ function TeamFrame_OpenLeaderTeamInfo()
 	Team_Button_Frame6:Enable();
 	Team_Button_Frame5:Disable();
 
-	Team_Button_Frame0:SetText("ÉêÇëÁĞ±í");
-	Team_Button_Frame1:SetText("½âÉ¢¶ÓÎé");
-	Team_Button_Frame2:SetText("Àë¿ª¶ÓÎé");
-	Team_Button_Frame3:SetText("ÇëÀë¶ÓÎé");
-	Team_Button_Frame4:SetText("ÈÎÃü¶Ó³¤");
-	Team_Button_Frame7:SetText("¼ÓÎªºÃÓÑ");
-	Team_Button_Frame6:SetText("ÑûÇëºÃÓÑ");
-	Team_Button_Frame7:SetToolTip("");--Õâ¸ö½çÃæ²»ÏÔÊ¾tooltips
-	Team_Name:SetText("#gFF0FA0¶ÓÎéĞÅÏ¢");
+	Team_Button_Frame0:SetText("ç”³è¯·åˆ—è¡¨");
+	Team_Button_Frame1:SetText("è§£æ•£é˜Ÿä¼");
+	Team_Button_Frame2:SetText("ç¦»å¼€é˜Ÿä¼");
+	Team_Button_Frame3:SetText("è¯·ç¦»é˜Ÿä¼");
+	Team_Button_Frame4:SetText("ä»»å‘½é˜Ÿé•¿");
+	Team_Button_Frame7:SetText("åŠ ä¸ºå¥½å‹");
+	Team_Button_Frame6:SetText("é‚€è¯·å¥½å‹");
+	Team_Button_Frame7:SetToolTip("");--è¿™ä¸ªç•Œé¢ä¸æ˜¾ç¤ºtooltips
+	Team_Name:SetText("#gFF0FA0é˜Ÿä¼ä¿¡æ¯");
 
 	Team_Update_ExpMode( 1 );
-	-- Òş²Ø¼ÓÎªºÃÓÑ
+	-- éšè—åŠ ä¸ºå¥½å‹
 	Team_Button_Frame6:Hide();
-	-- µ±Ç°¶ÓÎéÖĞ¶ÓÔ±µÄ¸öÊı.
+	-- å½“å‰é˜Ÿä¼ä¸­é˜Ÿå‘˜çš„ä¸ªæ•°.
 	g_iTeamMemberCount_Team = DataPool:GetTeamMemberCount();
 	if( g_iTeamMemberCount_Team <= 0 ) then
 		this:Hide();
 		return;
 	end;
-	-- ÉèÖÃµ±Ç°Ñ¡Ôñ,
+	-- è®¾ç½®å½“å‰é€‰æ‹©,
 	g_iCurSel_Team = 0;
 
-	-- Çå¿Õ½çÃæ
+	-- æ¸…ç©ºç•Œé¢
 	for i = 0, 5 do
 		g_Team_PlayerInfo_Name[i]:SetText("");
 		g_Team_PlayerInfo_School[i]:SetText("");
@@ -1350,19 +1350,19 @@ function TeamFrame_OpenLeaderTeamInfo()
 
 	end;
 
-	-- ÏÔÊ¾¶Ó³¤±ê¼Ç
+	-- æ˜¾ç¤ºé˜Ÿé•¿æ ‡è®°
 	if(g_iTeamMemberCount_Team > 0) then
 		ShwoLeaderFlat(1);
 	end;
 
-	-- Ë¢ĞÂÃ¿¸ö¶ÓÔ±.
+	-- åˆ·æ–°æ¯ä¸ªé˜Ÿå‘˜.
 	for i = 0, g_iTeamMemberCount_Team - 1 do
 
 		TeamFrame_RefreshTeamMember_Team(i);
 
 	end;
 	
-	-- Ñ¡ÔñµÚÒ»¸ö
+	-- é€‰æ‹©ç¬¬ä¸€ä¸ª
 	SelectPos(0);
 	Team_Show();
 end
@@ -1370,7 +1370,7 @@ end
 
 
 ------------------------------------------------------------------------------------------------------------------
--- ´ò¿ªÑûÇë¶ÓÎéĞÅÏ¢
+-- æ‰“å¼€é‚€è¯·é˜Ÿä¼ä¿¡æ¯
 --
 function TeamFrame_RefreshTeamInfo_Invite()
 
@@ -1381,7 +1381,7 @@ function TeamFrame_RefreshTeamInfo_Invite()
 
 	end
 
-	-- µÃµ½¶ÓÓÑµÄ¸öÊı
+	-- å¾—åˆ°é˜Ÿå‹çš„ä¸ªæ•°
 	if(-1 == g_iCurShowTeam_Invite) then
 
 		return;
@@ -1390,7 +1390,7 @@ function TeamFrame_RefreshTeamInfo_Invite()
 	local iTeamMemberCount = DataPool:GetInviteTeamMemberCount(g_iCurShowTeam_Invite);
 
 	for MemberIndex = 0, iTeamMemberCount - 1 do
-		-- ÏÔÊ¾Ò»¸ö¶ÓÔ±
+		-- æ˜¾ç¤ºä¸€ä¸ªé˜Ÿå‘˜
 		--ShwoLeaderFlat(1);
 		TeamFrame_RefreshTeamMember_Invite(MemberIndex);
 	end
@@ -1401,21 +1401,21 @@ end
 
 
 -------------------------------------------------------------------------------------------------------------------
--- Ë¢ĞÂÄ³Ò»¸ö¶ÓÔ±µÄĞÅÏ¢, ´ò¿ª½çÃæ.
+-- åˆ·æ–°æŸä¸€ä¸ªé˜Ÿå‘˜çš„ä¿¡æ¯, æ‰“å¼€ç•Œé¢.
 --
 function TeamFrame_RefreshTeamMember_Invite(index)
 
-		local szNick;		-- êÇ³Æ
-		local iFamily;	-- ÃÅÅÉ
-		local iLevel;	  -- µÈ¼¶
-		local iCapID;		-- Ã±×Ó
-		local iHead;		-- Í·
-		local iArmourID;-- Éí×Ó
-		local iCuffID;  -- »¤Íó
-		local iFootID;	-- ÍÈ
-		local iWeaponID;-- ÎäÆ÷
+		local szNick;		-- æ˜µç§°
+		local iFamily;	-- é—¨æ´¾
+		local iLevel;	  -- ç­‰çº§
+		local iCapID;		-- å¸½å­
+		local iHead;		-- å¤´
+		local iArmourID;-- èº«å­
+		local iCuffID;  -- æŠ¤è…•
+		local iFootID;	-- è…¿
+		local iWeaponID;-- æ­¦å™¨
 
-		-- µÃµ½¶ÓÔ±µÄÏêÏ¸ĞÅÏ¢
+		-- å¾—åˆ°é˜Ÿå‘˜çš„è¯¦ç»†ä¿¡æ¯
 		szNick
 		,iFamily
 		,iLevel
@@ -1434,11 +1434,11 @@ function TeamFrame_RefreshTeamMember_Invite(index)
 
 		local strModelName = DataPool:GetInviteTeamMemberUIModelName( g_iCurShowTeam_Invite, index);
 
-		-- ÏÔÊ¾ÃÅÅÉĞÅÏ¢
+		-- æ˜¾ç¤ºé—¨æ´¾ä¿¡æ¯
 		ShowFamily(index, iFamily);
 
-		-- ÏÔÊ¾Ä£ĞÍ
-		--AxTrace( 0,0, "==ÑûÇë¶ÓÎéµÄ¶ÓÔ±Ãû×Ö"..tostring(strModelName).."Î»ÖÃ"..tostring(index));
+		-- æ˜¾ç¤ºæ¨¡å‹
+		--AxTrace( 0,0, "==é‚€è¯·é˜Ÿä¼çš„é˜Ÿå‘˜åå­—"..tostring(strModelName).."ä½ç½®"..tostring(index));
 		g_TeamFrame_FakeObject[index]:SetFakeObject("");
 		g_TeamFrame_FakeObject[index]:SetFakeObject(strModelName);
 
@@ -1447,34 +1447,34 @@ end
 
 
 -------------------------------------------------------------------------------------------------------------------
--- ´ò¿ª¶ÓÎéÑûÇë½çÃæÏòÇ°·­Ò³
+-- æ‰“å¼€é˜Ÿä¼é‚€è¯·ç•Œé¢å‘å‰ç¿»é¡µ
 --
 function TeamFrame_PageUp()
 
-	-- ÏòÇ°·­Ò»Ò³
+	-- å‘å‰ç¿»ä¸€é¡µ
 	g_iCurShowTeam_Invite = g_iCurShowTeam_Invite - 1;
 	if(g_iCurShowTeam_Invite < 0) then
 		g_iCurShowTeam_Invite = 0;
 	end
 	
-	--AxTrace( 0,0, "µÃµ½ÑûÇë¶ÓÎéµÄ±àºÅ"..tostring(g_iCurShowTeam_Invite));
+	--AxTrace( 0,0, "å¾—åˆ°é‚€è¯·é˜Ÿä¼çš„ç¼–å·"..tostring(g_iCurShowTeam_Invite));
 		
-	-- ½ûÖ¹ÏòÇ°·­Ò³
+	-- ç¦æ­¢å‘å‰ç¿»é¡µ
 	if(0 == g_iCurShowTeam_Invite) then
 		Team_Button_Frame3:Disable();
 	end
 
-	-- ½ûÖ¹Ïòºó·­Ò³
+	-- ç¦æ­¢å‘åç¿»é¡µ
 	if(g_iCurShowTeam_Invite < (g_iTeamCount_Invite - 1)) then
 		Team_Button_Frame4:Enable();
 	end
 
 
-	-- ÉèÖÃµ±Ç°Ñ¡ÖĞµÄ¶ÓÎé.
+	-- è®¾ç½®å½“å‰é€‰ä¸­çš„é˜Ÿä¼.
 	g_iRealSelInvitorIndex = g_iCurShowTeam_Invite;
 	
 	ClearUIModel();
-	-- Ë¢ĞÂµ±Ç°½çÃæ
+	-- åˆ·æ–°å½“å‰ç•Œé¢
 	TeamFrame_RefreshTeamInfo_Invite();
 
 end
@@ -1482,30 +1482,30 @@ end
 
 
 -------------------------------------------------------------------------------------------------------------------
--- ´ò¿ª¶ÓÎéÑûÇë½çÃæÏòºó·­Ò³
+-- æ‰“å¼€é˜Ÿä¼é‚€è¯·ç•Œé¢å‘åç¿»é¡µ
 --
 function TeamFrame_PageDown()
 
-	-- Ïòºó·­Ò»Ò³
+	-- å‘åç¿»ä¸€é¡µ
 	g_iCurShowTeam_Invite = g_iCurShowTeam_Invite + 1;
 	if(g_iCurShowTeam_Invite >=  (g_iTeamCount_Invite - 1)) then
 		g_iCurShowTeam_Invite = g_iCurShowTeam_Invite;
 	end
 
-	-- ½ûÖ¹Ïòºó·­Ò³
+	-- ç¦æ­¢å‘åç¿»é¡µ
 	if(g_iCurShowTeam_Invite >= (g_iTeamCount_Invite - 1)) then
 		Team_Button_Frame4:Disable();
 	end
 
-	-- ÔÊĞíÇ°·­
+	-- å…è®¸å‰ç¿»
 	if(g_iCurShowTeam_Invite > 0) then
 		Team_Button_Frame3:Enable();
 	end
 
-	-- ÉèÖÃµ±Ç°Ñ¡ÖĞµÄ¶ÓÎéË÷Òı.
+	-- è®¾ç½®å½“å‰é€‰ä¸­çš„é˜Ÿä¼ç´¢å¼•.
 	g_iRealSelInvitorIndex = g_iCurShowTeam_Invite;
 	ClearUIModel();
-	-- Ë¢ĞÂµ±Ç°½çÃæ
+	-- åˆ·æ–°å½“å‰ç•Œé¢
 	TeamFrame_RefreshTeamInfo_Invite();
 
 end
@@ -1513,27 +1513,27 @@ end
 
 
 -------------------------------------------------------------------------------------------------------------------
--- ¶ÓÎéÑûÇë¾Ü¾ø¼ÓÈë¶ÓÎé
+-- é˜Ÿä¼é‚€è¯·æ‹’ç»åŠ å…¥é˜Ÿä¼
 --
 function TeamFrame_RejectJoinTeam_Invite()
 
-		--AxTrace( 0,0, "ÑûÇë¶ÓÎé¸öÊı1"..tostring(g_iTeamCount_Invite));
-		-- Ã»ÓĞÑûÇë¶ÓÎé·µ»Ø
+		--AxTrace( 0,0, "é‚€è¯·é˜Ÿä¼ä¸ªæ•°1"..tostring(g_iTeamCount_Invite));
+		-- æ²¡æœ‰é‚€è¯·é˜Ÿä¼è¿”å›
 		if(0 == g_iTeamCount_Invite) then
 
 			return;
 		end;
 
-		-- ·¢ËÍ¾Ü¾ø¼ÓÈë¶ÓÎéÏûÏ¢.
+		-- å‘é€æ‹’ç»åŠ å…¥é˜Ÿä¼æ¶ˆæ¯.
 		-- Player:RejectJoinTeam();
-		--AxTrace( 0,0, "ÑûÇë¶ÓÎéÑ¡Ôñ1"..tostring(g_iRealSelInvitorIndex));
+		--AxTrace( 0,0, "é‚€è¯·é˜Ÿä¼é€‰æ‹©1"..tostring(g_iRealSelInvitorIndex));
 		Player:RejectJoinTeam(g_iRealSelInvitorIndex);
 
 		g_iTeamCount_Invite = g_iTeamCount_Invite - 1;
-		--AxTrace( 0,0, "ÑûÇë¶ÓÎé¸öÊı2"..tostring(g_iTeamCount_Invite));
+		--AxTrace( 0,0, "é‚€è¯·é˜Ÿä¼ä¸ªæ•°2"..tostring(g_iTeamCount_Invite));
 		if(g_iTeamCount_Invite <= 0) then
 
-			-- ¹Ø±Õ½çÃæ
+			-- å…³é—­ç•Œé¢
 			Team_Close();
 			return;
 		end
@@ -1544,9 +1544,9 @@ function TeamFrame_RejectJoinTeam_Invite()
 			g_iCurShowTeam_Invite = g_iTeamCount_Invite - 1;
 		end
 
-		-- ÉèÖÃµ±Ç°Ñ¡ÔñµÄ¶ÓÎé¡£		
+		-- è®¾ç½®å½“å‰é€‰æ‹©çš„é˜Ÿä¼ã€‚		
 		g_iRealSelInvitorIndex = g_iCurShowTeam_Invite;
-		-- ½ûÖ¹ÏòÇ°·­Ò³
+		-- ç¦æ­¢å‘å‰ç¿»é¡µ
 		if(0 == g_iCurShowTeam_Invite) then
 
 			Team_Button_Frame3:Disable();
@@ -1558,7 +1558,7 @@ function TeamFrame_RejectJoinTeam_Invite()
 		end
 
 
-		-- ½ûÖ¹Ïòºó·­Ò³
+		-- ç¦æ­¢å‘åç¿»é¡µ
 		if(g_iCurShowTeam_Invite >= (g_iTeamCount_Invite - 1)) then
 
 			Team_Button_Frame4:Disable();
@@ -1569,7 +1569,7 @@ function TeamFrame_RejectJoinTeam_Invite()
 
 		end
 
-		-- ÏÔÊ¾¶ÓÎéĞÅÏ¢
+		-- æ˜¾ç¤ºé˜Ÿä¼ä¿¡æ¯
 		TeamFrame_RefreshTeamInfo_Invite();
 
 
@@ -1577,34 +1577,34 @@ end
 
 
 -------------------------------------------------------------------------------------------------------------------
--- ¶ÓÎéÑûÇë½çÃæÍ¬Òâ¼ÓÈë¶ÓÎé
+-- é˜Ÿä¼é‚€è¯·ç•Œé¢åŒæ„åŠ å…¥é˜Ÿä¼
 --
 function TeamFrame_AgreeJoinTeam_Invite()
 
 
-		-- Ã»ÓĞÑûÇë¶ÓÎé·µ»Ø
-		--AxTrace( 0,0, "ÑûÇë¶ÓÎé¸öÊı£½£½Í¬Òâ"..tostring(g_iTeamCount_Invite));
+		-- æ²¡æœ‰é‚€è¯·é˜Ÿä¼è¿”å›
+		--AxTrace( 0,0, "é‚€è¯·é˜Ÿä¼ä¸ªæ•°ï¼ï¼åŒæ„"..tostring(g_iTeamCount_Invite));
 		if(0 == g_iTeamCount_Invite) then
 
 			return;
 		end;
 
-		-- Í¬Òâ¼ÓÈë¶ÓÎé
+		-- åŒæ„åŠ å…¥é˜Ÿä¼
 		-- Player:AgreeJoinTeam();
-		--AxTrace( 0,0, "ÑûÇë¶ÓÎéÑ¡Ôñ£½£½Í¬Òâ "..tostring(g_iRealSelInvitorIndex));
+		--AxTrace( 0,0, "é‚€è¯·é˜Ÿä¼é€‰æ‹©ï¼ï¼åŒæ„ "..tostring(g_iRealSelInvitorIndex));
 		Player:AgreeJoinTeam(g_iRealSelInvitorIndex);
 
-		-- ¹Ø±Õ½çÃæ, ÏÂÒ»´Î´ò¿ªÊÇ×Ô½¨¶ÓÎé.
+		-- å…³é—­ç•Œé¢, ä¸‹ä¸€æ¬¡æ‰“å¼€æ˜¯è‡ªå»ºé˜Ÿä¼.
 		g_iTeamInfoType = 4;
 		
-		-- Òş²Ø½çÃæ
+		-- éšè—ç•Œé¢
 		Team_Close();
 end
 
 
 
 --------------------------------------------------------------------------------------------------------------------
--- ¹Ø±Õ´°¿ÚÊÂ¼ş
+-- å…³é—­çª—å£äº‹ä»¶
 --
 function TeamFrame_CloseWindow()
 
@@ -1622,25 +1622,25 @@ end
 
 
 --------------------------------------------------------------------------------------------------------------------
--- Ë¢ĞÂ¶ÓÔ±ĞÅÏ¢, ´ò¿ªÆÕÍ¨½çÃæĞÅÏ¢
+-- åˆ·æ–°é˜Ÿå‘˜ä¿¡æ¯, æ‰“å¼€æ™®é€šç•Œé¢ä¿¡æ¯
 --
 function TeamFrame_RefreshTeamMember_Team(index)
 
-	local szNick;		-- êÇ³Æ
-	local iFamily;	-- ÃÅÅÉ
-	local iLevel;	  -- µÈ¼¶
-	--local iCapID;		-- Ã±×Ó
-	--local iHead;		-- Í·
-	--local iArmourID;-- Éí×Ó
-	--local iCuffID;  -- »¤Íó
-	--local iFootID;	-- ÍÈ
-	--local iWeaponID;-- ÎäÆ÷
+	local szNick;		-- æ˜µç§°
+	local iFamily;	-- é—¨æ´¾
+	local iLevel;	  -- ç­‰çº§
+	--local iCapID;		-- å¸½å­
+	--local iHead;		-- å¤´
+	--local iArmourID;-- èº«å­
+	--local iCuffID;  -- æŠ¤è…•
+	--local iFootID;	-- è…¿
+	--local iWeaponID;-- æ­¦å™¨
 	local bDeadlink;
 	local bDead;
 	local bSex;
 
 
-	-- µÃµ½¶ÓÔ±µÄÏêÏ¸ĞÅÏ¢
+	-- å¾—åˆ°é˜Ÿå‘˜çš„è¯¦ç»†ä¿¡æ¯
 	szNick
 	,iFamily
 	,iLevel
@@ -1660,37 +1660,37 @@ function TeamFrame_RefreshTeamMember_Team(index)
 	g_Team_PlayerInfo_School[index]:SetText(tostring(iFamily));
 	g_Team_PlayerInfo_Level[index]:SetText(tostring(iLevel));
 	
-	--AxTrace(0, 0, "ËÀÍöµôÏßĞÅÏ¢"..tostring(bDead)..tostring(bDead).."Ë÷Òı"..tostring(index));
+	--AxTrace(0, 0, "æ­»äº¡æ‰çº¿ä¿¡æ¯"..tostring(bDead)..tostring(bDead).."ç´¢å¼•"..tostring(index));
 	if(bDead > 0) then
 		g_Team_PlayerInfo_Dead[index]:Show();
 	end;
 
 	if(bDeadlink > 0) then
-		-- µôÏß±ê¼Ç
+		-- æ‰çº¿æ ‡è®°
 		g_Team_PlayerInfo_Deadlink[index]:Show();
 	end;
 
-	-- ÏÔÊ¾ÃÅÅÉĞÅÏ¢
+	-- æ˜¾ç¤ºé—¨æ´¾ä¿¡æ¯
 	ShowFamily(index, iFamily);
 
 
-	-- µÃµ½uiÄ£ĞÍĞÅÏ¢
+	-- å¾—åˆ°uiæ¨¡å‹ä¿¡æ¯
 	local strModelName = DataPool:GetTeamMemUIModelName(index);
 
 	--AxTrace( 0,0, tostring(strModelName));
-	-- ÏÔÊ¾Ä£ĞÍ
+	-- æ˜¾ç¤ºæ¨¡å‹
 	g_TeamFrame_FakeObject[index]:SetFakeObject(strModelName);
-	--AxTrace(0, 0, "Ë¢ĞÂ"..tostring(strModelName));
+	--AxTrace(0, 0, "åˆ·æ–°"..tostring(strModelName));
 	
 	
 	local bIsInScene = DataPool:IsTeamMemberInScene(index);
 	if(0 == bIsInScene) then
 	
-		--AxTrace( 0,0, "ÏÔÊ¾ÃÉ×Ó --"..tostring(index));
+		--AxTrace( 0,0, "æ˜¾ç¤ºè’™å­ --"..tostring(index));
 		g_Team_Ui_Model_Disable[index]:Show();
 	else
 	
-		--AxTrace( 0,0, "Òş²ØÃÉ×Ó = "..tostring(index));
+		--AxTrace( 0,0, "éšè—è’™å­ = "..tostring(index));
 		g_Team_Ui_Model_Disable[index]:Hide();
 	end;
 
@@ -1699,14 +1699,14 @@ end
 
 
 --------------------------------------------------------------------------------------------------------------------
--- Ë¢ĞÂµ±Ç°Ò³ÃæĞÅÏ¢, ´ò¿ªÉêÇë½çÃæ
+-- åˆ·æ–°å½“å‰é¡µé¢ä¿¡æ¯, æ‰“å¼€ç”³è¯·ç•Œé¢
 --
 function TeamFrame_RefreshCurShowApplyPage_Apply(index)
 
 	ClearUIModel();
 	
 	ShwoLeaderFlat(0);
-	-- Çå¿Õ¾ÉµÄ½çÃæ.
+	-- æ¸…ç©ºæ—§çš„ç•Œé¢.
 	for iUI = 0, 5 do
 			g_Team_PlayerInfo_Name[iUI]:SetText("");
 			g_Team_PlayerInfo_School[iUI]:SetText("");
@@ -1716,22 +1716,22 @@ function TeamFrame_RefreshCurShowApplyPage_Apply(index)
 
 	if(g_iMemberCount_Apply <= 0) then
 
-		-- ¼ÓÈëÉêÇëÕßµÄ¸öÊıĞ¡ÓÚµÈÓÚ0 , ²»Ë¢ĞÂ½çÂôÅª
+		-- åŠ å…¥ç”³è¯·è€…çš„ä¸ªæ•°å°äºç­‰äº0 , ä¸åˆ·æ–°ç•Œå–å¼„
 		return;
 
 	end
 
 
-	-- ¶ÓÔ±ĞÅÏ¢.
-	local szNick;		-- êÇ³Æ
-	local iFamily;	-- ÃÅÅÉ
-	local iLevel;	  -- µÈ¼¶
-	local iCapID;		-- Ã±×Ó
-	local iHead;		-- Í·
-	local iArmourID;-- Éí×Ó
-	local iCuffID;  -- »¤Íó
-	local iFootID;	-- ÍÈ
-	local iWeaponID;-- ÎäÆ÷
+	-- é˜Ÿå‘˜ä¿¡æ¯.
+	local szNick;		-- æ˜µç§°
+	local iFamily;	-- é—¨æ´¾
+	local iLevel;	  -- ç­‰çº§
+	local iCapID;		-- å¸½å­
+	local iHead;		-- å¤´
+	local iArmourID;-- èº«å­
+	local iCuffID;  -- æŠ¤è…•
+	local iFootID;	-- è…¿
+	local iWeaponID;-- æ­¦å™¨
 
 
 	local iCurShowStart = index * g_iCurPageShowCount;
@@ -1745,9 +1745,9 @@ function TeamFrame_RefreshCurShowApplyPage_Apply(index)
 
 	for i = iCurShowStart, iCurShowEnd - 1 do
 
-		-- Ë¢ĞÂµ±Ç°½çÃæµÄÃ¿Ò»¸öÉêÇëÕßĞÅÏ¢.
+		-- åˆ·æ–°å½“å‰ç•Œé¢çš„æ¯ä¸€ä¸ªç”³è¯·è€…ä¿¡æ¯.
 
-		-- µÃµ½¶ÓÔ±µÄÏêÏ¸ĞÅÏ¢
+		-- å¾—åˆ°é˜Ÿå‘˜çš„è¯¦ç»†ä¿¡æ¯
 		szNick
 		,iFamily
 		,iLevel
@@ -1763,13 +1763,13 @@ function TeamFrame_RefreshCurShowApplyPage_Apply(index)
 		g_Team_PlayerInfo_School[iUIIndex]:SetText(tostring(iFamily));
 		g_Team_PlayerInfo_Level[iUIIndex]:SetText(tostring(iLevel));
 
-		-- ÏÔÊ¾ÃÅÅÉĞÅÏ¢
+		-- æ˜¾ç¤ºé—¨æ´¾ä¿¡æ¯
 		ShowFamily(iUIIndex, iFamily);
 
-		-- µÃµ½uiÄ£ĞÍĞÅÏ¢
+		-- å¾—åˆ°uiæ¨¡å‹ä¿¡æ¯
 		local strModelName = DataPool:GetApplyMemberUIModelName(i);
 
-		-- ÏÔÊ¾Ä£ĞÍ
+		-- æ˜¾ç¤ºæ¨¡å‹
 		g_TeamFrame_FakeObject[iUIIndex]:SetFakeObject(strModelName);
 
 		iUIIndex = iUIIndex + 1;
@@ -1783,27 +1783,27 @@ end
 
 
 --------------------------------------------------------------------------------------------------------------------
--- ´ò¿ªÉêÇë½çÃæ, Ñ¡ÔñÒ»¸öÉêÇëÕß
+-- æ‰“å¼€ç”³è¯·ç•Œé¢, é€‰æ‹©ä¸€ä¸ªç”³è¯·è€…
 --
 function TeamFrame_SetCurSelectedApply_Apply(index)
 
 	if(0 == g_iMemberCount_Apply) then
 
-		--Èç¹ûÃ»ÓĞÉêÇëÕß, ·µ»Ø.
+		--å¦‚æœæ²¡æœ‰ç”³è¯·è€…, è¿”å›.
 		return;
 	end
 
-	-- ×ª»»µ±Ç°Êµ¼ÊÑ¡ÔñµÄÉêÇëÕß.
+	-- è½¬æ¢å½“å‰å®é™…é€‰æ‹©çš„ç”³è¯·è€….
 	local iCurSelApply = g_iCurShowPage_Apply * g_iCurPageShowCount + index;
 
-	-- Ë÷Òı³¬¹ı¶ÓÔ±¸öÊı·µ»Ø.
+	-- ç´¢å¼•è¶…è¿‡é˜Ÿå‘˜ä¸ªæ•°è¿”å›.
 	--if(iCurSelApply >= g_iMemberCount_Apply) then
 
 	--	return;
 	--end;
 
-	-- ÉèÖÃÑ¡ÖĞÉêÇëÕß
-	-- Êµ¼ÊË÷Òı, ²»ÊÇ½çÃæË÷Òı
+	-- è®¾ç½®é€‰ä¸­ç”³è¯·è€…
+	-- å®é™…ç´¢å¼•, ä¸æ˜¯ç•Œé¢ç´¢å¼•
 	g_iRealSelApplyIndex = iCurSelApply;       
 	--DataPool:SetCurSelApply(iCurSelApply);
 	g_iCurSelApply_Apply = iCurSelApply;
@@ -1812,7 +1812,7 @@ end
 
 
 --------------------------------------------------------------------------------------------------------------------
--- ´ò¿ªÉêÇë½çÃæ, Í¬Òâ¼ÓÈë¶ÓÎé
+-- æ‰“å¼€ç”³è¯·ç•Œé¢, åŒæ„åŠ å…¥é˜Ÿä¼
 --
 function TeamFrame_AgreeJoinTeam_Apply(index)
 
@@ -1820,7 +1820,7 @@ function TeamFrame_AgreeJoinTeam_Apply(index)
 		
 		return;
 	end
-	-- Í¬Òâ¼ÓÈë¶ÓÎé
+	-- åŒæ„åŠ å…¥é˜Ÿä¼
 	--Player:SendAgreeJoinTeam_Apply();
 	Player:SendAgreeJoinTeam_Apply(g_iRealSelApplyIndex);
 	
@@ -1829,7 +1829,7 @@ function TeamFrame_AgreeJoinTeam_Apply(index)
 	if(g_iMemberCount_Apply <= 0) then
 
 		Team_Close();
-		-- ÏÂ´Î´ò¿ª½çÃæÊÇ¶Ó³¤¿´µ½µÄ¶ÓÎéĞÅÏ¢
+		-- ä¸‹æ¬¡æ‰“å¼€ç•Œé¢æ˜¯é˜Ÿé•¿çœ‹åˆ°çš„é˜Ÿä¼ä¿¡æ¯
 		--DataPool:SetTeamFrameOpenFlag(3);
 		g_iTeamInfoType = 0;
 	end
@@ -1840,21 +1840,21 @@ function TeamFrame_AgreeJoinTeam_Apply(index)
 
 	if(g_iCurShowPage_Apply >= iPageCount) then
 
-		-- ÉèÖÃĞÂµÄÏÔÊ¾Ò³
+		-- è®¾ç½®æ–°çš„æ˜¾ç¤ºé¡µ
 		g_iCurShowPage_Apply = iPageCount;
 
 	end;
 
-	-- É¾³ıÒ»¸öÉêÇëÕß
+	-- åˆ é™¤ä¸€ä¸ªç”³è¯·è€…
 	DataPool:EraseApply(g_iCurSelApply_Apply);
-	-- Ë¢ĞÂĞÂµÄÉêÇë½çÃæ
+	-- åˆ·æ–°æ–°çš„ç”³è¯·ç•Œé¢
 	TeamFrame_RefreshCurShowApplyPage_Apply(g_iCurShowPage_Apply);
 
 end
 
 
 --------------------------------------------------------------------------------------------------------------------
--- ´ò¿ªÉêÇë½çÃæ, ¾Ü¾ø¼ÓÈë¶ÓÎé
+-- æ‰“å¼€ç”³è¯·ç•Œé¢, æ‹’ç»åŠ å…¥é˜Ÿä¼
 --
 function TeamFrame_RejectJoinTeam_Apply(index)
 
@@ -1862,7 +1862,7 @@ function TeamFrame_RejectJoinTeam_Apply(index)
 		
 		return;
 	end
-	-- ·¢ËÍ¾Ü¾ø¼ÓÈë¶ÓÎéÏûÏ¢.
+	-- å‘é€æ‹’ç»åŠ å…¥é˜Ÿä¼æ¶ˆæ¯.
 	--Player:SendRejectJoinTeam_Apply();
 	Player:SendRejectJoinTeam_Apply(g_iRealSelApplyIndex);
 	
@@ -1871,7 +1871,7 @@ function TeamFrame_RejectJoinTeam_Apply(index)
 	if(g_iMemberCount_Apply <= 0) then
 
 		Team_Close();
-		-- ÏÂ´Î´ò¿ª½çÃæÊÇ¶Ó³¤¿´µ½µÄ¶ÓÎéĞÅÏ¢
+		-- ä¸‹æ¬¡æ‰“å¼€ç•Œé¢æ˜¯é˜Ÿé•¿çœ‹åˆ°çš„é˜Ÿä¼ä¿¡æ¯
 		--DataPool:SetTeamFrameOpenFlag(3);
 		g_iTeamInfoType = 0;
 	end
@@ -1882,14 +1882,14 @@ function TeamFrame_RejectJoinTeam_Apply(index)
 
 	if(g_iCurShowPage_Apply >= iPageCount) then
 
-		-- ÉèÖÃĞÂµÄÏÔÊ¾Ò³
+		-- è®¾ç½®æ–°çš„æ˜¾ç¤ºé¡µ
 		g_iCurShowPage_Apply = iPageCount;
 
 	end;
 
-	-- É¾³ıÒ»¸öÉêÇëÕß
+	-- åˆ é™¤ä¸€ä¸ªç”³è¯·è€…
 	DataPool:EraseApply(g_iCurSelApply_Apply);
-	-- Ë¢ĞÂĞÂµÄÉêÇë½çÃæ
+	-- åˆ·æ–°æ–°çš„ç”³è¯·ç•Œé¢
 	TeamFrame_RefreshCurShowApplyPage_Apply(g_iCurShowPage_Apply);
 	Team_Show();
 end
@@ -1897,36 +1897,36 @@ end
 
 
 -------------------------------------------------------------------------------------------------------------------
--- ´ò¿ª¶ÓÎéÑûÇë½çÃæÏòÇ°·­Ò³
+-- æ‰“å¼€é˜Ÿä¼é‚€è¯·ç•Œé¢å‘å‰ç¿»é¡µ
 --
 function TeamFrame_PageUp_Apply()
 
-	-- ´ÓµÚ0Ò³¿ªÊ¼.
+	-- ä»ç¬¬0é¡µå¼€å§‹.
 	local iPageCount = 0;
 	iPageCount = (g_iMemberCount_Apply - 1) / g_iCurPageShowCount;
 	iPageCount = math.floor(iPageCount);
 
 
-	-- ÏòÇ°·­Ò»Ò³
+	-- å‘å‰ç¿»ä¸€é¡µ
 	g_iCurShowPage_Apply = g_iCurShowPage_Apply - 1;
 	if(g_iCurShowPage_Apply < 0) then
 		g_iCurShowPage_Apply = 0;
 	end
 
-	-- ½ûÖ¹ÏòÇ°·­Ò³
+	-- ç¦æ­¢å‘å‰ç¿»é¡µ
 	--if(0 == g_iCurShowTeam_Invite) then
 	if(0 == g_iCurShowPage_Apply) then
 		Team_Button_Frame2:Disable();
 	end
 
-	-- ½ûÖ¹Ïòºó·­Ò³
+	-- ç¦æ­¢å‘åç¿»é¡µ
 	if(g_iCurShowPage_Apply < iPageCount) then
 		Team_Button_Frame3:Enable();
 	end
 
 
 	ClearUIModel();
-	-- Ë¢ĞÂµ±Ç°½çÃæ
+	-- åˆ·æ–°å½“å‰ç•Œé¢
 	TeamFrame_RefreshCurShowApplyPage_Apply(g_iCurShowPage_Apply);
 
 
@@ -1935,35 +1935,35 @@ end
 
 
 -------------------------------------------------------------------------------------------------------------------
--- ´ò¿ª¶ÓÎéÑûÇë½çÃæÏòºó·­Ò³
+-- æ‰“å¼€é˜Ÿä¼é‚€è¯·ç•Œé¢å‘åç¿»é¡µ
 --
 function TeamFrame_PageDown_Apply()
 
-	-- ´ÓµÚ0Ò³¿ªÊ¼.
+	-- ä»ç¬¬0é¡µå¼€å§‹.
 	local iPageCount = 0;
 	iPageCount = (g_iMemberCount_Apply - 1) / g_iCurPageShowCount;
 	iPageCount = math.floor(iPageCount);
 
 
-	-- Ïòºó·­Ò»Ò³
+	-- å‘åç¿»ä¸€é¡µ
 	g_iCurShowPage_Apply = g_iCurShowPage_Apply + 1;
 	if(g_iCurShowPage_Apply >=  iPageCount ) then
 
 		g_iCurShowPage_Apply = iPageCount;
 	end
 
-	-- ½ûÖ¹Ïòºó·­Ò³
+	-- ç¦æ­¢å‘åç¿»é¡µ
 	if(g_iCurShowPage_Apply >= iPageCount) then
 		Team_Button_Frame3:Disable();
 	end
 
-	-- ÔÊĞíÇ°·­
+	-- å…è®¸å‰ç¿»
 	if(g_iCurShowPage_Apply > 0) then
 		Team_Button_Frame2:Enable();
 	end
 
 	ClearUIModel();
-	-- Ë¢ĞÂµ±Ç°½çÃæ
+	-- åˆ·æ–°å½“å‰ç•Œé¢
 	TeamFrame_RefreshCurShowApplyPage_Apply(g_iCurShowPage_Apply);
 
 end
@@ -1971,7 +1971,7 @@ end
 
 --------------------------------------------------------------------------------------------------------------------
 --
--- Çå¿Õui½çÃæ
+-- æ¸…ç©ºuiç•Œé¢
 --
 function ClearUIModel()
 
@@ -1988,52 +1988,52 @@ end;
 
 --------------------------------------------------------------------------------------------------------------------
 --
--- ÏÔÊ¾ÃÅÅÉ
+-- æ˜¾ç¤ºé—¨æ´¾
 --
 function ShowFamily(MemIndex, Family)
 
-	local strName = "ÎŞÃÅÅÉ";
+	local strName = "æ— é—¨æ´¾";
 
-	-- µÃµ½ÃÅÅÉÃû³Æ.
+	-- å¾—åˆ°é—¨æ´¾åç§°.
 	if(0 == Family) then
-		strName = "ÉÙÁÖ";
+		strName = "å°‘æ—";
 
 	elseif(1 == Family) then
-		strName = "Ã÷½Ì";
+		strName = "æ˜æ•™";
 
 	elseif(2 == Family) then
-		strName = "Ø¤°ï";
+		strName = "ä¸å¸®";
 
 	elseif(3 == Family) then
-		strName = "Îäµ±";
+		strName = "æ­¦å½“";
 
 	elseif(4 == Family) then
-		strName = "¶ëáÒ";
+		strName = "å³¨åµ‹";
 
 	elseif(5 == Family) then
-		strName = "ĞÇËŞ";
+		strName = "æ˜Ÿå®¿";
 
 	elseif(6 == Family) then
-		strName = "ÌìÁú";
+		strName = "å¤©é¾™";
 
 	elseif(7 == Family) then
-		strName = "ÌìÉ½";
+		strName = "å¤©å±±";
 
 	elseif(8 == Family) then
-		strName = "åĞÒ£";
+		strName = "é€é¥";
 
 	elseif(9 == Family) then
-		strName = "ÎŞÃÅÅÉ";
+		strName = "æ— é—¨æ´¾";
 	end
 
-	-- ÉèÖÃÏÔÊ¾µÄÃÅÅÉ.
+	-- è®¾ç½®æ˜¾ç¤ºçš„é—¨æ´¾.
 	g_Team_PlayerInfo_School[MemIndex]:SetText(strName);
 
 end;
 
 function HideDeadFlag()
 
-	-- ËÀÍö±ê¼Ç
+	-- æ­»äº¡æ ‡è®°
 	g_Team_PlayerInfo_Dead[0]:Hide();
 	g_Team_PlayerInfo_Dead[1]:Hide();
 	g_Team_PlayerInfo_Dead[2]:Hide();
@@ -2045,7 +2045,7 @@ end;
 
 function HideDeadLinkFlag()
 
-	-- µôÏß±ê¼Ç
+	-- æ‰çº¿æ ‡è®°
 	g_Team_PlayerInfo_Deadlink[0]:Hide();
 	g_Team_PlayerInfo_Deadlink[1]:Hide();
 	g_Team_PlayerInfo_Deadlink[2]:Hide();
@@ -2072,7 +2072,7 @@ function Team_Button_Abort_Team_Follow_Click()
 	Team_AbortTeamFollow_Button:Hide();
 end
 
---Ã¿´Î´ò¿ª½çÃæÑ¡ÖĞ
+--æ¯æ¬¡æ‰“å¼€ç•Œé¢é€‰ä¸­
 function SelectPos(index)
 
 		if(0 == index) then
@@ -2151,7 +2151,7 @@ function ClearInfo()
 	HideDeadFlag();
 	HideDeadLinkFlag();
 	
-	-- Çå¿Õ¾ÉµÄ½çÃæ.
+	-- æ¸…ç©ºæ—§çš„ç•Œé¢.
 	for iUI = 0, 5 do
 			g_Team_PlayerInfo_Name[iUI]:SetText("");
 			g_Team_PlayerInfo_School[iUI]:SetText("");
@@ -2161,19 +2161,19 @@ function ClearInfo()
 end;
 
 function RefreshUIModel()
-	-- µ±Ç°¶ÓÎéÖĞ¶ÓÔ±µÄ¸öÊı.
+	-- å½“å‰é˜Ÿä¼ä¸­é˜Ÿå‘˜çš„ä¸ªæ•°.
 	g_iTeamMemberCount_Team = DataPool:GetTeamMemberCount();
 	if( g_iTeamMemberCount_Team <= 0 ) then
 		return;
 	end
 	ClearUIModel();
-	-- Ë¢ĞÂÃ¿¸ö¶ÓÔ±.
+	-- åˆ·æ–°æ¯ä¸ªé˜Ÿå‘˜.
 	for i = 0, g_iTeamMemberCount_Team - 1 do
 
-		-- µÃµ½uiÄ£ĞÍĞÅÏ¢
+		-- å¾—åˆ°uiæ¨¡å‹ä¿¡æ¯
 		local strModelName = DataPool:GetTeamMemUIModelName(i);
 
-		-- ÏÔÊ¾Ä£ĞÍ
+		-- æ˜¾ç¤ºæ¨¡å‹
 		g_TeamFrame_FakeObject[i]:SetFakeObject(strModelName);
 	end;
 
@@ -2182,7 +2182,7 @@ end;
 
 ----------------------------------------------------------------------------------------
 --
--- Òş²ØÄ£ĞÍ.
+-- éšè—æ¨¡å‹.
 --
 function HideUIModelDisable()
 
@@ -2198,7 +2198,7 @@ end;
 
 -----------------------------------------------------------------------------------------
 --
--- ·¢ËÍ¼ÓÎªºÃÓÑÏûÏ¢
+-- å‘é€åŠ ä¸ºå¥½å‹æ¶ˆæ¯
 --
 function SendAddFriendMsg()
 
@@ -2227,13 +2227,13 @@ function Team_Update_ExpMode( isTeam )
 	
 	local isLeader = Player:IsLeader();
 	AxTrace( 0,0, "update expmode = "..tostring( expMode ).." Leader = "..tostring( isLeader ) );
-	if( tonumber( isLeader ) == 0 ) then --²»ÊÇ¶Ó³¤
+	if( tonumber( isLeader ) == 0 ) then --ä¸æ˜¯é˜Ÿé•¿
 		if( expMode == 1 ) then
-			Team_Exp_Mode_Text:SetText( "¸÷×Ô·ÖÅä" );
+			Team_Exp_Mode_Text:SetText( "å„è‡ªåˆ†é…" );
 		elseif( expMode == 0 ) then
-			Team_Exp_Mode_Text:SetText( "Æ½¾ù·ÖÅä" );
+			Team_Exp_Mode_Text:SetText( "å¹³å‡åˆ†é…" );
 		else
-			Team_Exp_Mode_Text:SetText( "Ñ±ÊŞÄ£Ê½" );
+			Team_Exp_Mode_Text:SetText( "é©¯å…½æ¨¡å¼" );
 		end
 		Team_Exp_Mode_Text:Show();
 		Team_Exp_Mode:Hide();
@@ -2250,7 +2250,7 @@ function Team_Close()
 	if( g_iTeamInfoType == 1 ) then
 		g_iTeamInfoType = 0;
 	elseif (g_iTeamInfoType == 2) then
-		if(g_iTeamCount_Invite <= 0) then                 --ÕâÑùĞ´ÊÇÎªÁË±ÜÃâÍ¬Ê±½Óµ½¶à¸öÑûÇë¡£
+		if(g_iTeamCount_Invite <= 0) then                 --è¿™æ ·å†™æ˜¯ä¸ºäº†é¿å…åŒæ—¶æ¥åˆ°å¤šä¸ªé‚€è¯·ã€‚
 			g_iTeamInfoType = 4;
 		end
 	end
@@ -2263,11 +2263,11 @@ function Team_Show()
 	this:Show();
 end
 
--- È·ÈÏ½âÉ¢¶ÓÎé
+-- ç¡®è®¤è§£æ•£é˜Ÿä¼
 -- add by WTT		20090212
 function Team_Confirm_Dismiss_Team ()
 
-	Player:DismissTeam();						-- ½âÉ¢¶ÓÎé
-	Team_Close();										-- ¹Ø±Õ×é¶Ó´°¿Ú
+	Player:DismissTeam();						-- è§£æ•£é˜Ÿä¼
+	Team_Close();										-- å…³é—­ç»„é˜Ÿçª—å£
 
 end

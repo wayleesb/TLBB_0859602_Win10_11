@@ -1,29 +1,29 @@
---°ïÅÉÊÕ¼¯µÄ»î¶¯½Å±¾
+--å¸®æ´¾æ”¶é›†çš„æ´»åŠ¨è„šæœ¬
 --Created by zchw
---½Å±¾ºÅ
+--è„šæœ¬å·
 x808041_g_ScriptId	= 808041
 x808041_g_Time = 2000;
 
 --**********************************
---½Å±¾Èë¿Úº¯Êý
+--è„šæœ¬å…¥å£å‡½æ•°
 --**********************************
 function x808041_OnDefaultEvent( sceneId, actId, iNoticeType, param2, param3, param4, param5 )
 
-	--²ÎÊýËµÃ÷£º³¡¾°ID£¬»î¶¯ID£¬Ê±¼ä¼ä¸ô£¬¹«¸æÀàÐÍ£¨¿ÉÒÔ²»´«£¬Ä¬ÈÏÆÕÍ¨¹«¸æÀàÐÍ£©
+	--å‚æ•°è¯´æ˜Žï¼šåœºæ™¯IDï¼Œæ´»åŠ¨IDï¼Œæ—¶é—´é—´éš”ï¼Œå…¬å‘Šç±»åž‹ï¼ˆå¯ä»¥ä¸ä¼ ï¼Œé»˜è®¤æ™®é€šå…¬å‘Šç±»åž‹ï¼‰
 	StartOneActivity( sceneId, actId, floor(60*1000), iNoticeType )
 
 end
 
 --**********************************
---ÐÄÌøº¯Êý
+--å¿ƒè·³å‡½æ•°
 --**********************************
 function x808041_OnTimer( sceneId, actId, uTime )
 	local curTime = GetHour()*100 + GetMinute();
 	if curTime >= x808041_g_Time and curTime < x808041_g_Time+1 then
-		--°ïÅÉÊÕ¼¯ ÅÅÃû
+		--å¸®æ´¾æ”¶é›† æŽ’å
 		LuaFnSortGuildCollectNum(sceneId); 		
 	end
-	--¼ì²â»î¶¯ÊÇ·ñ¹ýÆÚ
+	--æ£€æµ‹æ´»åŠ¨æ˜¯å¦è¿‡æœŸ
 	if CheckActiviyValidity( sceneId, actId ) == 0 then
 		LuaFnClearGuildCollectNum(sceneId);
 		StopOneActivity( sceneId, actId )

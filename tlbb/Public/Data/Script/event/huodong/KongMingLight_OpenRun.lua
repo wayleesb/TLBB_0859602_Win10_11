@@ -1,32 +1,32 @@
---´´½¨ÈË:[ QUFEI 2008-03-10 10:41 UPDATE BugID 32708 ]
---¹êÍÃÈüÅÜÈÎÎñ¿×Ã÷µÆÉú³¤µã
+--åˆ›å»ºäºº:[ QUFEI 2008-03-10 10:41 UPDATE BugID 32708 ]
+--é¾Ÿå…”èµ›è·‘ä»»åŠ¡å­”æ˜ç¯ç”Ÿé•¿ç‚¹
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x808085_g_ScriptId	= 808085
 
-x808085_g_Impact_Light_Complete 	= 47	-- µãÁÁ¿×Ã÷µÆÊ±µÄÌØĞ§
-x808085_g_Impact_GodOfFire_Mission = 5929 -- ¹êÍÃÈüÅÜ×´Ì¬ÌØĞ§
+x808085_g_Impact_Light_Complete 	= 47	-- ç‚¹äº®å­”æ˜ç¯æ—¶çš„ç‰¹æ•ˆ
+x808085_g_Impact_GodOfFire_Mission = 5929 -- é¾Ÿå…”èµ›è·‘çŠ¶æ€ç‰¹æ•ˆ
 
---¹êÍÃÈüÅÜÈÎÎñºÅ
+--é¾Ÿå…”èµ›è·‘ä»»åŠ¡å·
 x808085_g_MissionId			= 1000
-x808085_g_MissItemId = 40004444					-- ÈÎÎñÎïÆ·
---ÈÎÎñÊÇ·ñÍê³É
-x808085_g_Mission_IsComplete 			= 0		--ÈÎÎñ²ÎÊıµÄµÚ0Î»
---¹êÍÃÈüÅÜÈÎÎñÃ¿ÌìÂÖÊı±ê¼Ç
-x808085_g_RoundIndex 				 			= 7		--ÈÎÎñ²ÎÊıµÄµÚ7Î»
+x808085_g_MissItemId = 40004444					-- ä»»åŠ¡ç‰©å“
+--ä»»åŠ¡æ˜¯å¦å®Œæˆ
+x808085_g_Mission_IsComplete 			= 0		--ä»»åŠ¡å‚æ•°çš„ç¬¬0ä½
+--é¾Ÿå…”èµ›è·‘ä»»åŠ¡æ¯å¤©è½®æ•°æ ‡è®°
+x808085_g_RoundIndex 				 			= 7		--ä»»åŠ¡å‚æ•°çš„ç¬¬7ä½
 
--- ÈÎÎñÎïÆ·²ÎÊı±ê¼Ç
-x808085_g_LuoYangLighten_Cnt 			= 5	--¿×Ã÷µÆÂåÑô¿ªÆôÊıÁ¿Ë÷Òı
-x808085_g_SuZhouLighten_Cnt				= 7	--¿×Ã÷µÆËÕÖİ¿ªÆôÊıÁ¿Ë÷Òı
-x808085_g_DaLiLighten_Cnt					= 9		--¿×Ã÷µÆ´óÀí¿ªÆôÊıÁ¿Ë÷Òı
+-- ä»»åŠ¡ç‰©å“å‚æ•°æ ‡è®°
+x808085_g_LuoYangLighten_Cnt 			= 5	--å­”æ˜ç¯æ´›é˜³å¼€å¯æ•°é‡ç´¢å¼•
+x808085_g_SuZhouLighten_Cnt				= 7	--å­”æ˜ç¯è‹å·å¼€å¯æ•°é‡ç´¢å¼•
+x808085_g_DaLiLighten_Cnt					= 9		--å­”æ˜ç¯å¤§ç†å¼€å¯æ•°é‡ç´¢å¼•
 
---¿×Ã÷µÆÍê³ÉÊıÁ¿±ê¼Ç
-x808085_g_KongMing_Lighten				= 4		--ÈÎÎñ²ÎÊıµÄµÚ4Î»
+--å­”æ˜ç¯å®Œæˆæ•°é‡æ ‡è®°
+x808085_g_KongMing_Lighten				= 4		--ä»»åŠ¡å‚æ•°çš„ç¬¬4ä½
 
-x808085_g_KongMingLighten_Count		=	8		-- Ã¿¶ÎÂ·ÖĞĞèÒªµãÈ¼µÄ¿×Ã÷µÆÊıÁ¿
-x808085_g_KongMingLighten_MaxCnt	=	24	-- ¹êÍÃÈüÅÜ»î¶¯ĞèÒªµãÈ¼µÄ¿×Ã÷µÆ×ÜÊı
+x808085_g_KongMingLighten_Count		=	8		-- æ¯æ®µè·¯ä¸­éœ€è¦ç‚¹ç‡ƒçš„å­”æ˜ç¯æ•°é‡
+x808085_g_KongMingLighten_MaxCnt	=	24	-- é¾Ÿå…”èµ›è·‘æ´»åŠ¨éœ€è¦ç‚¹ç‡ƒçš„å­”æ˜ç¯æ€»æ•°
 
--- Ã¿Ìì¹êÍÃÈüÅÜ»î¶¯¿ªÆôÊ±¼ä
+-- æ¯å¤©é¾Ÿå…”èµ›è·‘æ´»åŠ¨å¼€å¯æ—¶é—´
 x808085_g_ActivityTime						= { {tstart=1230, tend=1330},
 																		  {tstart=1930, tend=2030},
 																		  {tstart=2130, tend=2230} }
@@ -37,7 +37,7 @@ function x808085_OnRecycle(sceneId,selfId,targetId)
 		return 1
 	end
 	
-	-- Í¨Öª¿×Ã÷µÆË¢ĞÂ½Å±¾¼ÌĞøË¢ĞÂ¿×Ã÷µÆ
+	-- é€šçŸ¥å­”æ˜ç¯åˆ·æ–°è„šæœ¬ç»§ç»­åˆ·æ–°å­”æ˜ç¯
 	local nTargetX = GetItemBoxWorldPosX( sceneId, targetId )
 	local nTargetZ = GetItemBoxWorldPosZ( sceneId, targetId )
 	CallScriptFunction( 808083, "RecordKongMingLightInfo", sceneId, selfId, targetId, nTargetX, nTargetZ )	
@@ -51,7 +51,7 @@ end
 
 function x808085_OnOpen(sceneId,selfId,targetId)
 
-	-- ¼ì²âµãÈ¼¿×Ã÷µÆÌõ¼ş
+	-- æ£€æµ‹ç‚¹ç‡ƒå­”æ˜ç¯æ¡ä»¶
 	if x808085_CheckActivityEvent( sceneId, selfId ) == 0 then
 		return OR_INVALID_TARGET
 	end
@@ -61,17 +61,17 @@ end
 
 function x808085_OnProcOver(sceneId,selfId,targetId)
 
-	-- ¼ì²âµãÈ¼¿×Ã÷µÆÌõ¼ş
+	-- æ£€æµ‹ç‚¹ç‡ƒå­”æ˜ç¯æ¡ä»¶
 	if x808085_CheckActivityEvent( sceneId, selfId ) == 0 then
 		return OR_INVALID_TARGET
 	end
 		
-	-- ¸ø¿ªÆôÕß¼ÓÌØĞ§
+	-- ç»™å¼€å¯è€…åŠ ç‰¹æ•ˆ
 	-- LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, x808085_g_Impact_Light_Complete, 0)
 end
 
 --**********************************
---¼ì²âµ±Ç°ÊÇ·ñÊÇ»î¶¯Ê±¼ä
+--æ£€æµ‹å½“å‰æ˜¯å¦æ˜¯æ´»åŠ¨æ—¶é—´
 --**********************************
 function x808085_CheckActivityTime()
 
@@ -90,11 +90,11 @@ function x808085_CheckActivityTime()
 end
 
 --**********************************
---¼ì²â¼¤»îÌõ¼ş
+--æ£€æµ‹æ¿€æ´»æ¡ä»¶
 --**********************************
 function x808085_CheckActivityEvent( sceneId, selfId )
 	
-	-- ¼ì²âÊÇ·ñÓĞ¹êÍÃÈüÅÜÈÎÎñ
+	-- æ£€æµ‹æ˜¯å¦æœ‰é¾Ÿå…”èµ›è·‘ä»»åŠ¡
 	if IsHaveMission( sceneId, selfId, x808085_g_MissionId ) <= 0 then
 		x808085_MsgBox( sceneId, selfId, "#{GodFire_Info_011}" )		
 		return 0
@@ -104,13 +104,13 @@ function x808085_CheckActivityEvent( sceneId, selfId )
 	
 	local misIndex = GetMissionIndexByID(sceneId,selfId,x808085_g_MissionId)
 	
-	-- ¼ì²âÈÎÎñÊÇ·ñÍê³É	
+	-- æ£€æµ‹ä»»åŠ¡æ˜¯å¦å®Œæˆ	
 	if GetMissionParam(sceneId, selfId, misIndex, x808085_g_Mission_IsComplete) > 0 then
 		x808085_MsgBox( sceneId, selfId, "#{GodFire_Info_028}" )
 		return 0
 	end
 
-	-- ¼ì²â±¾ÂÖ»î¶¯Ê±¼äÊÇ·ñÓĞĞ§
+	-- æ£€æµ‹æœ¬è½®æ´»åŠ¨æ—¶é—´æ˜¯å¦æœ‰æ•ˆ
 	local nDay = LuaFnGetDayOfThisMonth()
 	if nDayTime ~= nDay then
 		x808085_MsgBox( sceneId, selfId, "#{GodFire_Info_017}" )
@@ -123,35 +123,35 @@ function x808085_CheckActivityEvent( sceneId, selfId )
 		return 0
 	end
 
-	-- ¼ì²âÊÇ·ñÓĞÈÎÎñÎïÆ·
+	-- æ£€æµ‹æ˜¯å¦æœ‰ä»»åŠ¡ç‰©å“
 	if HaveItem(sceneId, selfId, x808085_g_MissItemId) <= 0 then
 		x808085_MsgBox( sceneId, selfId, "#{GodFire_Info_039}" )
 		return 0
 	end
 	
-	-- ¼ì²â¸ÃÀà¿×Ã÷µÆÊÇ·ñÒÑµãÍê
+	-- æ£€æµ‹è¯¥ç±»å­”æ˜ç¯æ˜¯å¦å·²ç‚¹å®Œ
 	local BagPos = GetItemBagPos( sceneId, selfId, x808085_g_MissItemId, 0 )
 	local LuoYangCnt = GetBagItemParam(sceneId, selfId, BagPos, x808085_g_LuoYangLighten_Cnt, 1)
 	local SuZhouCnt = GetBagItemParam(sceneId, selfId, BagPos, x808085_g_SuZhouLighten_Cnt, 1)
 	local DaLiCnt = GetBagItemParam(sceneId, selfId, BagPos, x808085_g_DaLiLighten_Cnt, 1)
 	local	nAllCount = GetMissionParam(sceneId, selfId, misIndex, x808085_g_KongMing_Lighten)
 	
-	if sceneId == 6 and DaLiCnt >= x808085_g_KongMingLighten_Count then					-- ÎŞÁ¿É½
+	if sceneId == 6 and DaLiCnt >= x808085_g_KongMingLighten_Count then					-- æ— é‡å±±
 		x808085_MsgBox( sceneId, selfId, "#{GodFire_Info_060}" )		
 		return 0
-	elseif sceneId == 5 and DaLiCnt >= x808085_g_KongMingLighten_Count then			-- ¾µºş
+	elseif sceneId == 5 and DaLiCnt >= x808085_g_KongMingLighten_Count then			-- é•œæ¹–
 		x808085_MsgBox( sceneId, selfId, "#{GodFire_Info_060}" )		
 		return 0
-	elseif sceneId == 4 and SuZhouCnt >= x808085_g_KongMingLighten_Count then		-- Ì«ºş
+	elseif sceneId == 4 and SuZhouCnt >= x808085_g_KongMingLighten_Count then		-- å¤ªæ¹–
 		x808085_MsgBox( sceneId, selfId, "#{GodFire_Info_059}" )		
 		return 0
-	elseif sceneId == 3 and SuZhouCnt >= x808085_g_KongMingLighten_Count then		-- áÔÉ½
+	elseif sceneId == 3 and SuZhouCnt >= x808085_g_KongMingLighten_Count then		-- åµ©å±±
 		x808085_MsgBox( sceneId, selfId, "#{GodFire_Info_059}" )		
 		return 0
-	elseif sceneId == 7 and LuoYangCnt >= x808085_g_KongMingLighten_Count then	-- ½£¸ó
+	elseif sceneId == 7 and LuoYangCnt >= x808085_g_KongMingLighten_Count then	-- å‰‘é˜
 		x808085_MsgBox( sceneId, selfId, "#{GodFire_Info_058}" )		
 		return 0
-	elseif sceneId == 8 and LuoYangCnt >= x808085_g_KongMingLighten_Count then	-- ¶Ø»Í
+	elseif sceneId == 8 and LuoYangCnt >= x808085_g_KongMingLighten_Count then	-- æ•¦ç…Œ
 		x808085_MsgBox( sceneId, selfId, "#{GodFire_Info_058}" )		
 		return 0
 	end
@@ -165,7 +165,7 @@ function x808085_CheckActivityEvent( sceneId, selfId )
 end
 
 --**********************************
---ĞÅÏ¢ÌáÊ¾
+--ä¿¡æ¯æç¤º
 --**********************************
 function x808085_MsgBox( sceneId, selfId, msg )
 	BeginEvent( sceneId )

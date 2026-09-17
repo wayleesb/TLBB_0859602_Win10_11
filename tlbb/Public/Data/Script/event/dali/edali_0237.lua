@@ -1,78 +1,78 @@
---ÁË½â¾Å´óÃÅÅÉÌØÉ«
+--äº†è§£ä¹å¤§é—¨æ´¾ç‰¹è‰²
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x210237_g_ScriptId	= 210237
 
---ÃÅÅÉĞÅÏ¢(ÃÅÅÉÃû³Æ£¬ÌØÉ«ÃèÊö£¬½ÓÒıÈË×ø±ê£¬½ÓÒıÈËÃû³Æ£¬´«ËÍ×ø±ê)
+--é—¨æ´¾ä¿¡æ¯(é—¨æ´¾åç§°ï¼Œç‰¹è‰²æè¿°ï¼Œæ¥å¼•äººåæ ‡ï¼Œæ¥å¼•äººåç§°ï¼Œä¼ é€åæ ‡)
 x210237_g_mpInfo		= {}
-x210237_g_mpInfo[0]	= { "¡¾ÌìÁú¡¿", "#{OBJ_dali_0045}", 189, 124, "ÆÆÌ°",    185, 128 }
-x210237_g_mpInfo[1]	= { "¡¾¶ëáÒ¡¿", "#{OBJ_dali_0046}", 192, 129, "Â·ÈıÄï",  185, 128 }
-x210237_g_mpInfo[2]	= { "¡¾Ø¤°ï¡¿", "#{OBJ_dali_0047}", 126, 135, "¼òÄş",    133, 130 }
-x210237_g_mpInfo[3]	= { "¡¾Ã÷½Ì¡¿", "#{OBJ_dali_0048}", 130, 121, "Ê¯±¦",    133, 130 }
-x210237_g_mpInfo[4]	= { "¡¾ÉÙÁÖ¡¿", "#{OBJ_dali_0049}", 187, 122, "»ÛÒ×",    185, 128 }
-x210237_g_mpInfo[5]	= { "¡¾ÌìÉ½¡¿", "#{OBJ_dali_0050}", 131, 124, "³ÌÇàËª",  133, 130 }
-x210237_g_mpInfo[6]	= { "¡¾Îäµ±¡¿", "#{OBJ_dali_0051}", 127, 131, "ÕÅ»ñ",    133, 130 }
-x210237_g_mpInfo[7]	= { "¡¾åĞÒ£¡¿", "#{OBJ_dali_0052}", 188, 133, "å£Ì¨×ÓÓğ",185, 128 }
-x210237_g_mpInfo[8]	= { "¡¾ĞÇËŞ¡¿", "#{OBJ_dali_0053}", 134, 120, "º£·ç×Ó",  133, 130 }
+x210237_g_mpInfo[0]	= { "ã€å¤©é¾™ã€‘", "#{OBJ_dali_0045}", 189, 124, "ç ´è´ª",    185, 128 }
+x210237_g_mpInfo[1]	= { "ã€å³¨åµ‹ã€‘", "#{OBJ_dali_0046}", 192, 129, "è·¯ä¸‰å¨˜",  185, 128 }
+x210237_g_mpInfo[2]	= { "ã€ä¸å¸®ã€‘", "#{OBJ_dali_0047}", 126, 135, "ç®€å®",    133, 130 }
+x210237_g_mpInfo[3]	= { "ã€æ˜æ•™ã€‘", "#{OBJ_dali_0048}", 130, 121, "çŸ³å®",    133, 130 }
+x210237_g_mpInfo[4]	= { "ã€å°‘æ—ã€‘", "#{OBJ_dali_0049}", 187, 122, "æ…§æ˜“",    185, 128 }
+x210237_g_mpInfo[5]	= { "ã€å¤©å±±ã€‘", "#{OBJ_dali_0050}", 131, 124, "ç¨‹é’éœœ",  133, 130 }
+x210237_g_mpInfo[6]	= { "ã€æ­¦å½“ã€‘", "#{OBJ_dali_0051}", 127, 131, "å¼ è·",    133, 130 }
+x210237_g_mpInfo[7]	= { "ã€é€é¥ã€‘", "#{OBJ_dali_0052}", 188, 133, "æ¾¹å°å­ç¾½",185, 128 }
+x210237_g_mpInfo[8]	= { "ã€æ˜Ÿå®¿ã€‘", "#{OBJ_dali_0053}", 134, 120, "æµ·é£å­",  133, 130 }
 
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x210237_OnDefaultEvent( sceneId, selfId, targetId )
 	local	key	= GetNumText()
 	local	mp
 	local	i		= 0
 	
-	--ÁË½âÃÅÅÉÌØÉ«
+	--äº†è§£é—¨æ´¾ç‰¹è‰²
 	if key == 100 then
 		BeginEvent( sceneId )
-			AddText( sceneId, "  ÁË½â¾Å´óÃÅÅÉÌØÉ«£º" )
+			AddText( sceneId, "  äº†è§£ä¹å¤§é—¨æ´¾ç‰¹è‰²ï¼š" )
 			for i, mp in x210237_g_mpInfo do
 				AddNumText( sceneId, x210237_g_ScriptId, mp[1], 11, i+1 )
 			end
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 
-	--Ñ¡Ôñ¸÷ÃÅÅÉ
+	--é€‰æ‹©å„é—¨æ´¾
 	elseif key >= 1 and key <= 9 then
 		mp	= x210237_g_mpInfo[key-1]
 		BeginEvent( sceneId )
 			AddText( sceneId, mp[2] )
-			AddNumText( sceneId, x210237_g_ScriptId, "ËÍÎÒÈ¥¼û´«ËÍÈË", 9, -1*key )
+			AddNumText( sceneId, x210237_g_ScriptId, "é€æˆ‘å»è§ä¼ é€äºº", 9, -1*key )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 
-	--ËÍÎÒÈ¥¼û´«ËÍÈË
+	--é€æˆ‘å»è§ä¼ é€äºº
 	elseif key >= -9 and key <= -1 then
 		mp	= x210237_g_mpInfo[-1*key-1]
 		CallScriptFunction( SCENE_SCRIPT_ID, "AskTheWay", sceneId, selfId, sceneId, mp[3], mp[4], mp[5] )
 		SetPos( sceneId, selfId, mp[6], mp[7] )
 		
-		--¹Ø±Õ½çÃæ
+		--å…³é—­ç•Œé¢
 		BeginUICommand( sceneId )
 		UICommand_AddInt( sceneId, targetId )
 		EndUICommand( sceneId )
 		DispatchUICommand( sceneId, selfId, 1000 )
 
-	--ÆäËû
+	--å…¶ä»–
 	else
 		return
 	end
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x210237_OnEnumerate( sceneId, selfId, targetId )
 	if GetLevel( sceneId, selfId ) >= 10 and GetMenPai( sceneId, selfId ) == MP_WUMENPAI then
-		AddNumText( sceneId, x210237_g_ScriptId, "ÁË½â¾Å´óÃÅÅÉÌØÉ«", 11, 100 )
+		AddNumText( sceneId, x210237_g_ScriptId, "äº†è§£ä¹å¤§é—¨æ´¾ç‰¹è‰²", 11, 100 )
 	end
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x210237_CheckAccept( sceneId, selfId )
-	--ĞèÒª10¼¶²ÅÄÜ½Ó
+	--éœ€è¦10çº§æ‰èƒ½æ¥
 	if GetLevel( sceneId, selfId ) >= 10 and GetMenPai( sceneId, selfId ) == MP_WUMENPAI then
 		return 1
 	else
@@ -81,50 +81,50 @@ function x210237_CheckAccept( sceneId, selfId )
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x210237_OnAccept( sceneId, selfId )
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x210237_OnAbandon( sceneId, selfId )
 end
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x210237_OnContinue( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x210237_CheckSubmit( sceneId, selfId )
 	return 1
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x210237_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 end
 
 --**********************************
---É±ËÀ¹ÖÎï»òÍæ¼Ò
+--æ€æ­»æ€ªç‰©æˆ–ç©å®¶
 --**********************************
 function x210237_OnKillObject( sceneId, selfId, objdataId )
 end
 
 --**********************************
---½øÈëÇøÓòÊÂ¼ş
+--è¿›å…¥åŒºåŸŸäº‹ä»¶
 --**********************************
 function x210237_OnEnterZone( sceneId, selfId, zoneId )
 end
 
 --**********************************
---µÀ¾ß¸Ä±ä
+--é“å…·æ”¹å˜
 --**********************************
 function x210237_OnItemChanged( sceneId, selfId, itemdataId )
 end

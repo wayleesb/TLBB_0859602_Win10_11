@@ -1,16 +1,16 @@
 --MisDescBegin
 x250036_g_ScriptId = 250036
 x250036_g_MissionId = 1020
-x250036_g_TargetNpcName	="Ï²À´ÀÖ"
+x250036_g_TargetNpcName	="å–œæ¥ä¹"
 x250036_g_MissionKind = 3
 x250036_g_MissionLevel = 1
 x250036_g_IfMissionElite = 0
-x250036_g_MissionLimitTime = 60 * 60 * 1000; --ºÁÃë
-x250036_g_MissionName="»¨³µÑ²ÓÎ";
-x250036_g_MissionInfo="ÇëÕÒÂåÑô[177,94]µÄÏ²À´ÀÖ°²ÅÅ»¨³µÑ²ÓÎ¡£";
-x250036_g_MissionTarget="ÇëÕÒÂåÑôµÄÏ²À´ÀÖ#{_INFOAIM177,94,0,Ï²À´ÀÖ}°²ÅÅ»¨³µÑ²ÓÎ¡£";		--ÈÎÎñÄ¿±ê
-x250036_g_ContinueInfo1="ºÜ±§Ç¸£¬ÄãÔ¤¶¨µÄÊ±¼äÒÑ¾­¹ıÈ¥ÁË£¬ÄãÖ»ÄÜ·ÅÆúÁË¡­¡­";
-x250036_g_ContinueInfo2="ÕâÀïÒª²ß»®À´Ëµ£¬Ğ»Ğ»¡£";
-x250036_g_MissionComplete="ÄÇÈÃÎÒÃÇ¿ªÊ¼°É¡£";
+x250036_g_MissionLimitTime = 60 * 60 * 1000; --æ¯«ç§’
+x250036_g_MissionName="èŠ±è½¦å·¡æ¸¸";
+x250036_g_MissionInfo="è¯·æ‰¾æ´›é˜³[177,94]çš„å–œæ¥ä¹å®‰æ’èŠ±è½¦å·¡æ¸¸ã€‚";
+x250036_g_MissionTarget="è¯·æ‰¾æ´›é˜³çš„å–œæ¥ä¹#{_INFOAIM177,94,0,å–œæ¥ä¹}å®‰æ’èŠ±è½¦å·¡æ¸¸ã€‚";		--ä»»åŠ¡ç›®æ ‡
+x250036_g_ContinueInfo1="å¾ˆæŠ±æ­‰ï¼Œä½ é¢„å®šçš„æ—¶é—´å·²ç»è¿‡å»äº†ï¼Œä½ åªèƒ½æ”¾å¼ƒäº†â€¦â€¦";
+x250036_g_ContinueInfo2="è¿™é‡Œè¦ç­–åˆ’æ¥è¯´ï¼Œè°¢è°¢ã€‚";
+x250036_g_MissionComplete="é‚£è®©æˆ‘ä»¬å¼€å§‹å§ã€‚";
 x250036_g_MoneyBonus = 0
 --MisDescEnd

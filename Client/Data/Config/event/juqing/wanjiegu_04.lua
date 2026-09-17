@@ -2,20 +2,20 @@
 x200004_g_ScriptId = 200004
 x200004_g_MissionId = 4
 x200004_g_PreMissionId = 3
-x200004_g_Name	="¶ÎÕı´¾"
+x200004_g_Name	="æ®µæ­£æ·³"
 x200004_g_MissionKind = 51
 x200004_g_MissionLevel = 20
 x200004_g_IfMissionElite = 0
 x200004_g_Position_X=62.9422
 x200004_g_Position_Z=35.9417
 x200004_g_SceneID=2
-x200004_g_AccomplishNPC_Name="¶ÎÕı´¾"
-x200004_g_MissionName="¶ñ¹áÂúÓ¯"
+x200004_g_AccomplishNPC_Name="æ®µæ­£æ·³"
+x200004_g_MissionName="æ¶è´¯æ»¡ç›ˆ"
 x200004_g_MissionInfo="#{Mis_juqing_0004}"
 x200004_g_MissionTarget="#{Mis_juqing_Tar_0004}"
-x200004_g_MissionComplete="  Õâ£¬Õâ£¬ÎÒÂíÉÏ°ÑÕâ¼şÊÂÇéÍ¨Öª»ÊĞÖ¡£"
+x200004_g_MissionComplete="  è¿™ï¼Œè¿™ï¼Œæˆ‘é©¬ä¸ŠæŠŠè¿™ä»¶äº‹æƒ…é€šçŸ¥çš‡å…„ã€‚"
 x200004_g_MoneyBonus=10
 x200004_g_exp=6900
 x200004_g_RadioItemBonus={{id=10414001 ,num=1},{id=10414002,num=1},{id=10414003,num=1},{id=10414004,num=1}}
-x200004_g_Custom	= { {id="ÒÑÕÒµ½¶ÎÕı´¾",num=1} }
+x200004_g_Custom	= { {id="å·²æ‰¾åˆ°æ®µæ­£æ·³",num=1} }
 --MisDescEnd

@@ -3,19 +3,19 @@ x200086_g_ScriptId = 200086
 x200086_g_Position_X=210.2844
 x200086_g_Position_Z=201.6758
 x200086_g_SceneID=0
-x200086_g_AccomplishNPC_Name="Ğì¾ªÀ×"
+x200086_g_AccomplishNPC_Name="å¾æƒŠé›·"
 x200086_g_MissionId = 16
 x200086_g_PreMissionId = 15
-x200086_g_Name	="Ğì¾ªÀ×"
+x200086_g_Name	="å¾æƒŠé›·"
 x200086_g_MissionKind = 47
 x200086_g_MissionLevel = 40
 x200086_g_IfMissionElite = 0
-x200086_g_MissionName="ËÄº£Îª¼Ò"
+x200086_g_MissionName="å››æµ·ä¸ºå®¶"
 x200086_g_MissionInfo="#{Mis_juqing_0016}"
 x200086_g_MissionTarget="#{Mis_juqing_Tar_0016}"
-x200086_g_MissionComplete="  ¾ÃÑöÉÙÏÀ´óÃû£¬½ñÈÕÒ»¼û¹ûÈ»Ãû²»Ğé´«£¬Ê§¾´Ê§¾´£¡"
+x200086_g_MissionComplete="  ä¹…ä»°å°‘ä¾ å¤§åï¼Œä»Šæ—¥ä¸€è§æœç„¶åä¸è™šä¼ ï¼Œå¤±æ•¬å¤±æ•¬ï¼"
 x200086_g_MoneyBonus=6300
 x200086_g_exp=5800
-x200086_g_Custom	= { {id="ÒÑÕÒµ½Ğì¾ªÀ×",num=1} }
+x200086_g_Custom	= { {id="å·²æ‰¾åˆ°å¾æƒŠé›·",num=1} }
 x200086_g_IsMissionOkFail = 0
 --MisDescEnd

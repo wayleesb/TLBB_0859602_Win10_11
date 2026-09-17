@@ -46,9 +46,9 @@ function LootPacket_OnEvent(event)
 	if(event == "LOOT_OPENED") then
 		objCared = tonumber(arg0);
 		this:Show();
-		--¹ØĞÄµô°ü×Å
+		--å…³å¿ƒæ‰åŒ…ç€
 		this:CareObject(objCared, 1, "ItemBox");
-		--¸üĞÂ
+		--æ›´æ–°
 		LootPacket_Update(1, 1);
 		
 	elseif(event == "LOOT_SLOT_CLEARED") then
@@ -57,7 +57,7 @@ function LootPacket_OnEvent(event)
 		
 	elseif(event == "LOOT_CLOSED") then
 		this:Hide();
-		--È¡Ïû¹ØĞÄ
+		--å–æ¶ˆå…³å¿ƒ
 		this:CareObject(objCared, 0, "ItemBox");
 
 	elseif (event == "OBJECT_CARED_EVENT") then
@@ -65,25 +65,25 @@ function LootPacket_OnEvent(event)
 		if(tonumber(arg0) ~= objCared) then
 			return;
 		end
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ı£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æœå’ŒNPCçš„è·ç¦»å¤§äºä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if(arg1 == "distance" and tonumber(arg2)>MAX_OBJ_DISTANCE or arg1=="destroy") then
 			this:Hide();
 			
-			--È¡Ïû¹ØĞÄ
+			--å–æ¶ˆå…³å¿ƒ
 			this:CareObject(objCared, 0, "ItemBox");
 		end
 		
-	--´ò¿ª½ø¶ÈÌõµÄÊ±ºò£¬¹Ø±Õthis
+	--æ‰“å¼€è¿›åº¦æ¡çš„æ—¶å€™ï¼Œå…³é—­this
 	elseif(event == "PROGRESSBAR_SHOW") then
 		this:Hide();
-		--È¡Ïû¹ØĞÄ
+		--å–æ¶ˆå…³å¿ƒ
 		this:CareObject(objCared, 0, "ItemBox");
 		
-	--½ÇÉ«ËÀÍöµÄÊ±ºò£¬¹Ø±Õthis
+	--è§’è‰²æ­»äº¡çš„æ—¶å€™ï¼Œå…³é—­this
 	elseif(event == "RELIVE_SHOW") then
 		this:Hide();
 		
-		--È¡Ïû¹ØĞÄ
+		--å–æ¶ˆå…³å¿ƒ
 		this:CareObject(objCared, 0, "ItemBox");
 
 	end
@@ -138,8 +138,8 @@ function LootPacket_Update(thePage,bOpen)
 	
 	LootPacket_CurrentlyPage:SetText( tostring(nPageNum) .. "/" .. tostring(g_nTotalPage));
 
-	--Èç¹ûµ±Ç°Ò³ÒÑ¾­Ã»ÓĞÎïÆ·£¬ÄÇÃ´·­µ½ÏÂÒ»Ò³
-	--Èç¹ûÒÑ¾­Ã»ÓĞÏÂÒ»Ò³¾ÍÍùÇ°·­Ò³
+	--å¦‚æœå½“å‰é¡µå·²ç»æ²¡æœ‰ç‰©å“ï¼Œé‚£ä¹ˆç¿»åˆ°ä¸‹ä¸€é¡µ
+	--å¦‚æœå·²ç»æ²¡æœ‰ä¸‹ä¸€é¡µå°±å¾€å‰ç¿»é¡µ
 	if( bCurPageHaveItem == false ) then
 		if( g_LootSlod  == true )	then
 			if( thePage+1 <= g_nTotalPage ) then 
@@ -176,7 +176,7 @@ function LootPacket_Update(thePage,bOpen)
 end
 
 --===============================================
--- µã»÷ÎïÆ·
+-- ç‚¹å‡»ç‰©å“
 --===============================================
 function LootPacket_Clicked(nIndex)
 	if(nIndex < 1 or nIndex > ITEMBOX_SLOTS_NUM) then 
@@ -189,32 +189,32 @@ function LootPacket_Clicked(nIndex)
 end
 
 --===============================================
--- ÉÏ·­Ò³
+-- ä¸Šç¿»é¡µ
 --===============================================
 function LootPacket_Prev_Clicked()
 	LootPacket_Update(nPageNum-1, 0);
 end
 
 --===============================================
--- ÏÂ·­Ò³
+-- ä¸‹ç¿»é¡µ
 --===============================================
 function LootPacket_Next_Clicked()
 	LootPacket_Update(nPageNum+1, 0);
 end
 
 --===============================================
--- ¹Ø±Õ´°¿Ú
+-- å…³é—­çª—å£
 --===============================================
 function LootPacket_Button_Close()
 
 	this:Hide();
-	--È¡Ïû¹ØĞÄ
+	--å–æ¶ˆå…³å¿ƒ
 	this:CareObject(objCared, 0, "ItemBox");
 	
 end
 
 --===============================================
--- È«²¿Ê°È¡
+-- å…¨éƒ¨æ‹¾å–
 --===============================================
 function LootPacket_Collect_Clicked()
 	PlayerPackage:PickAllItem();

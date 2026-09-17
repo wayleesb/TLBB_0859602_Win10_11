@@ -1,18 +1,18 @@
---BOSS´ºÍí 09ºÅ½ÚÄ¿
+--BOSSæ˜¥æ™š 09å·èŠ‚ç›®
 
---¹ã¸æ³èÁ¸
+--å¹¿å‘Šå® ç²®
 
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x050039_g_scriptId = 050039
 
---´ºÍíÖ÷¿Ø½Å±¾½Å±¾ºÅ....
+--æ˜¥æ™šä¸»æ§è„šæœ¬è„šæœ¬å·....
 x050039_g_MainScriptId = 050030
 
---±¾½ÚÄ¿µÄ½ÚÄ¿ºÅ....
+--æœ¬èŠ‚ç›®çš„èŠ‚ç›®å·....
 x050039_g_ChapterId = 9
 
---¶¯×÷²¥·Å±í....
+--åŠ¨ä½œæ’­æ”¾è¡¨....
 x050039_g_ActionTbl = {
 
 	[30] = { [100]=451,[200]=550 },
@@ -20,15 +20,15 @@ x050039_g_ActionTbl = {
 }
 
 --**********************************
---¿ªÊ¼±¾½ÚÄ¿....
+--å¼€å§‹æœ¬èŠ‚ç›®....
 --**********************************
 function x050039_OnStartThisChapter( sceneId )
 
-	--ËïÃÀÃÀº°»°....
-	local msg = "#P[´ºÍíÖ÷³ÖÈË-ËïÃÀÃÀ]£º#YÏÂÃæ²å²¥¹ã¸æ£¡ÔŞÖúÉÌ£ºÔÆö­ö­¡£"
-	MonsterTalk(sceneId, -1, "ÂåÑô", msg )
+	--å­™ç¾ç¾å–Šè¯....
+	local msg = "#P[æ˜¥æ™šä¸»æŒäºº-å­™ç¾ç¾]ï¼š#Yä¸‹é¢æ’æ’­å¹¿å‘Šï¼èµåŠ©å•†ï¼šäº‘éœéœã€‚"
+	MonsterTalk(sceneId, -1, "æ´›é˜³", msg )
 
-	--´´½¨»¤µºÉñÊŞ....
+	--åˆ›å»ºæŠ¤å²›ç¥å…½....
 	local MstId = -1
 	MstId = CallScriptFunction( x050039_g_MainScriptId, "CreateBossActor", sceneId, "HuDaoShenShou", 160, 109, 1 )
 	SetPatrolId(sceneId, MstId, 30)
@@ -36,30 +36,30 @@ function x050039_OnStartThisChapter( sceneId )
 end
 
 --**********************************
---¹ÖÎïÑ²Âßµ½Ä³µãÊ±»Øµ÷±¾½Ó¿Ú....
+--æ€ªç‰©å·¡é€»åˆ°æŸç‚¹æ—¶å›è°ƒæœ¬æ¥å£....
 --**********************************
 function x050039_OnPatrolPoint( sceneId, objId, patrolPathIndex, patrolPointIndex, paopaoIndex	)
 
-	--Èç¹û¶¯×÷±íÖĞÅäÖÃÁË¶¯×÷Ôò²¥·Å¶¯×÷....
+	--å¦‚æœåŠ¨ä½œè¡¨ä¸­é…ç½®äº†åŠ¨ä½œåˆ™æ’­æ”¾åŠ¨ä½œ....
 	x050039_PlayAct( sceneId, objId, patrolPathIndex, patrolPointIndex, paopaoIndex	)
 
 
-	--ÊÇ·ñ×ßµ½ÁË×îºóÒ»¸öÑ²Âßµã....
+	--æ˜¯å¦èµ°åˆ°äº†æœ€åä¸€ä¸ªå·¡é€»ç‚¹....
 	if patrolPointIndex ~= 4 then
 		return
 	end
 
-	--É¾³ı»¤µºÉñÊŞ....
+	--åˆ é™¤æŠ¤å²›ç¥å…½....
 	if 1 == CallScriptFunction( x050039_g_MainScriptId, "IsSpecificBossActor", sceneId, "HuDaoShenShou", objId ) then
 		CallScriptFunction( x050039_g_MainScriptId, "DeleteBossActor", sceneId, "HuDaoShenShou", objId )
-		--±¾½ÚÄ¿½áÊø....
+		--æœ¬èŠ‚ç›®ç»“æŸ....
 		x050039_OnEndThisChapter( sceneId )
 	end
 
 end
 
 --**********************************
---½áÊø±¾½ÚÄ¿....
+--ç»“æŸæœ¬èŠ‚ç›®....
 --**********************************
 function x050039_OnEndThisChapter( sceneId )
 
@@ -68,7 +68,7 @@ function x050039_OnEndThisChapter( sceneId )
 end
 
 --**********************************
---²¥·Å¶¯×÷±íÖĞÄ³¸ö¶¯×÷....
+--æ’­æ”¾åŠ¨ä½œè¡¨ä¸­æŸä¸ªåŠ¨ä½œ....
 --**********************************
 function x050039_PlayAct( sceneId, objId, patrolPathIndex, patrolPointIndex, paopaoIndex	)
 

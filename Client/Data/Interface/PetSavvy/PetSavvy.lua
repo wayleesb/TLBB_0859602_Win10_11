@@ -1,15 +1,15 @@
 -- PetSavvy.lua
--- ÕäÊŞºÏ³É½çÃæ
+-- çå…½åˆæˆç•Œé¢
 
 local mainPet = { idx = -1, guid = { high = -1, low = -1 } }
 local assisPet = { idx = -1, guid = { high = -1, low =-1 } }
 
-local theNPC = -1													-- ¹¦ÄÜ NPC
+local theNPC = -1													-- åŠŸèƒ½ NPC
 local MAX_OBJ_DISTANCE = 3.0
 
 local currentChoose = -1
 
-local moneyCosts = {													-- Ë÷ÒıÊÇÕäÊŞµÄµ±Ç°ÎòĞÔÖµ
+local moneyCosts = {													-- ç´¢å¼•æ˜¯çå…½çš„å½“å‰æ‚Ÿæ€§å€¼
 	[0] = 10000,
 	[1] = 11000,
 	[2] = 12100,
@@ -24,12 +24,12 @@ local moneyCosts = {													-- Ë÷ÒıÊÇÕäÊŞµÄµ±Ç°ÎòĞÔÖµ
 
 function PetSavvy_PreLoad()
 	this : RegisterEvent( "UI_COMMAND" )
-	this : RegisterEvent( "REPLY_MISSION_PET" )						-- Íæ¼Ò´ÓÁĞ±íÑ¡¶¨Ò»Ö»ÕäÊŞ
-	this : RegisterEvent( "UPDATE_PET_PAGE" )						-- Íæ¼ÒÉíÉÏµÄÕäÊŞÊı¾İ·¢Éú±ä»¯£¬°üÀ¨Ôö¼ÓÒ»Ö»ÕäÊŞ
-	this : RegisterEvent( "DELETE_PET" )							-- Íæ¼ÒÉíÉÏ¼õÉÙÒ»Ö»ÕäÊŞ
-	this : RegisterEvent( "OBJECT_CARED_EVENT" )					-- ¹ØĞÄ NPC µÄ´æÔÚºÍ·¶Î§
+	this : RegisterEvent( "REPLY_MISSION_PET" )						-- ç©å®¶ä»åˆ—è¡¨é€‰å®šä¸€åªçå…½
+	this : RegisterEvent( "UPDATE_PET_PAGE" )						-- ç©å®¶èº«ä¸Šçš„çå…½æ•°æ®å‘ç”Ÿå˜åŒ–ï¼ŒåŒ…æ‹¬å¢åŠ ä¸€åªçå…½
+	this : RegisterEvent( "DELETE_PET" )							-- ç©å®¶èº«ä¸Šå‡å°‘ä¸€åªçå…½
+	this : RegisterEvent( "OBJECT_CARED_EVENT" )					-- å…³å¿ƒ NPC çš„å­˜åœ¨å’ŒèŒƒå›´
 	this:RegisterEvent("UNIT_MONEY");
-	this:RegisterEvent("MONEYJZ_CHANGE")		--½»×ÓÆÕ¼° Vega
+	this:RegisterEvent("MONEYJZ_CHANGE")		--äº¤å­æ™®åŠ Vega
 end
 
 function PetSavvy_OnLoad()
@@ -37,8 +37,8 @@ function PetSavvy_OnLoad()
 end
 
 function PetSavvy_OnEvent(event)
-	if event == "UI_COMMAND" and tonumber( arg0 ) == 19820424 then	-- ´ò¿ª½çÃæ
-		if this : IsVisible() then									-- Èç¹û½çÃæ¿ª×Å£¬Ôò²»´¦Àí
+	if event == "UI_COMMAND" and tonumber( arg0 ) == 19820424 then	-- æ‰“å¼€ç•Œé¢
+		if this : IsVisible() then									-- å¦‚æœç•Œé¢å¼€ç€ï¼Œåˆ™ä¸å¤„ç†
 			return
 		end
 		Pet : ShowPetList( 0 )
@@ -52,33 +52,33 @@ function PetSavvy_OnEvent(event)
 		return
 	end
 
-	if event == "REPLY_MISSION_PET" and this : IsVisible() then		-- Íæ¼ÒÑ¡ÁËÒ»Ö»ÕäÊŞ
+	if event == "REPLY_MISSION_PET" and this : IsVisible() then		-- ç©å®¶é€‰äº†ä¸€åªçå…½
 		PetSavvy_SelectPet( tonumber( arg0 ) )
 		PetSavvy_SelfMoney:SetProperty("MoneyNumber", tostring(Player:GetData("MONEY")));
 		PetSavvy_SelfJiaozi:SetProperty("MoneyNumber", tostring(Player:GetData("MONEY_JZ")));
 		return
 	end
 
-	if event == "UPDATE_PET_PAGE" and this : IsVisible() then		-- Íæ¼ÒÉíÉÏµÄÕäÊŞÊı¾İ·¢Éú±ä»¯£¬°üÀ¨Ôö¼ÓÒ»Ö»ÕäÊŞ
+	if event == "UPDATE_PET_PAGE" and this : IsVisible() then		-- ç©å®¶èº«ä¸Šçš„çå…½æ•°æ®å‘ç”Ÿå˜åŒ–ï¼ŒåŒ…æ‹¬å¢åŠ ä¸€åªçå…½
 		PetSavvy_UpdateSelected()
 		PetSavvy_SelfMoney:SetProperty("MoneyNumber", tostring(Player:GetData("MONEY")));
 		PetSavvy_SelfJiaozi:SetProperty("MoneyNumber", tostring(Player:GetData("MONEY_JZ")));
 		return
 	end
 
-	if event == "DELETE_PET" and this : IsVisible() then			-- Íæ¼ÒÉíÉÏ¼õÉÙÒ»Ö»ÕäÊŞ
+	if event == "DELETE_PET" and this : IsVisible() then			-- ç©å®¶èº«ä¸Šå‡å°‘ä¸€åªçå…½
 		PetSavvy_UpdateSelected()
 		PetSavvy_SelfMoney:SetProperty("MoneyNumber", tostring(Player:GetData("MONEY")));
 		PetSavvy_SelfJiaozi:SetProperty("MoneyNumber", tostring(Player:GetData("MONEY_JZ")));
 		return
 	end
 
-	if event == "OBJECT_CARED_EVENT" and this : IsVisible() then	-- ¹ØĞÄ NPC µÄ´æÔÚºÍ·¶Î§
+	if event == "OBJECT_CARED_EVENT" and this : IsVisible() then	-- å…³å¿ƒ NPC çš„å­˜åœ¨å’ŒèŒƒå›´
 		if tonumber( arg0 ) ~= theNPC then
 			return
 		end
 
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ı£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æœå’ŒNPCçš„è·ç¦»å¤§äºä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if arg1 == "distance" and tonumber( arg2 ) > MAX_OBJ_DISTANCE or arg1 == "destroy" then
 			PetSavvy_Cancel_Clicked()
 		end
@@ -105,47 +105,47 @@ function PetSavvy_Choose_Clicked( type )
 		return
 	end
 
-	-- ¹ØÒ»ÏÂÔÙ¿ª£¬Çå¿ÕÊı¾İ
+	-- å…³ä¸€ä¸‹å†å¼€ï¼Œæ¸…ç©ºæ•°æ®
 	Pet : ShowPetList( 0 )
 	Pet : ShowPetList( 1 )
 end
 
 function PetSavvy_OK_Clicked()
-	-- Ê×ÏÈÅĞ¶¨Íæ¼ÒÊÇ·ñ·ÅÈëĞèÒªÌáÉıµÄÕäÊŞ£¬Èç¹ûÃ»ÓĞ·ÅÈëNPC½«»áµ¯³ö¶Ô»°²¢·µ»Ø£º
+	-- é¦–å…ˆåˆ¤å®šç©å®¶æ˜¯å¦æ”¾å…¥éœ€è¦æå‡çš„çå…½ï¼Œå¦‚æœæ²¡æœ‰æ”¾å…¥NPCå°†ä¼šå¼¹å‡ºå¯¹è¯å¹¶è¿”å›ï¼š
 	if mainPet.idx == -1 then
-	-- Çë·ÅÈëÄúÒªÌáÉıÎòĞÔµÈ¼¶µÄÕäÊŞ¡£
-		ShowSystemTipInfo( "Çë·ÅÈëÄúÒªÌáÉıÎòĞÔµÈ¼¶µÄÕäÊŞ¡£" )
+	-- è¯·æ”¾å…¥æ‚¨è¦æå‡æ‚Ÿæ€§ç­‰çº§çš„çå…½ã€‚
+		ShowSystemTipInfo( "è¯·æ”¾å…¥æ‚¨è¦æå‡æ‚Ÿæ€§ç­‰çº§çš„çå…½ã€‚" )
 		return
 	end
 
-	-- ÅĞ¶¨Íæ¼ÒÊÇ·ñ·ÅÈë²ÎÓëºÏ³ÉµÄÕäÊŞ£¬Èç¹ûÃ»ÓĞ·ÅÈëNPC½«»áµ¯³ö¶Ô»°²¢·µ»Ø£º
+	-- åˆ¤å®šç©å®¶æ˜¯å¦æ”¾å…¥å‚ä¸åˆæˆçš„çå…½ï¼Œå¦‚æœæ²¡æœ‰æ”¾å…¥NPCå°†ä¼šå¼¹å‡ºå¯¹è¯å¹¶è¿”å›ï¼š
 	if assisPet.idx == -1 then
-		-- Çë·ÅÈëÄúÒª²ÎÓëºÏ³ÉµÄÕäÊŞ¡£
-		ShowSystemTipInfo( "Çë·ÅÈëÄúÒª²ÎÓëºÏ³ÉµÄÕäÊŞ¡£" )
+		-- è¯·æ”¾å…¥æ‚¨è¦å‚ä¸åˆæˆçš„çå…½ã€‚
+		ShowSystemTipInfo( "è¯·æ”¾å…¥æ‚¨è¦å‚ä¸åˆæˆçš„çå…½ã€‚" )
 		return
 	end
 
-	-- ÅĞ¶Ï¸¨Öú³èÊÇ·ñ·ûºÏÌõ¼ş
+	-- åˆ¤æ–­è¾…åŠ©å® æ˜¯å¦ç¬¦åˆæ¡ä»¶
 	if PetSavvy_Check() == 0 then
-		-- Èç¹û²»·ûºÏÔò·µ»Ø
+		-- å¦‚æœä¸ç¬¦åˆåˆ™è¿”å›
 		return
 	end
 
-	-- ÅĞ¶¨Íæ¼ÒµÄ½ğÇ®ÊÇ·ñ×ã¹»£¬Èç¹û²»¹»½«»áµ¯³ö¶Ô»°¡£
+	-- åˆ¤å®šç©å®¶çš„é‡‘é’±æ˜¯å¦è¶³å¤Ÿï¼Œå¦‚æœä¸å¤Ÿå°†ä¼šå¼¹å‡ºå¯¹è¯ã€‚
 	local savvy = Pet : GetSavvy( mainPet.idx )
 	local cost = moneyCosts[savvy]
 	if not cost then
 		cost = 0
 	end
 
-	-- ÄúµÄ½ğÇ®²»×ã£¬ÇëÈ·ÈÏ
-	local selfMoney = Player:GetData("MONEY") + Player:GetData("MONEY_JZ");	--½»×ÓÆÕ¼° Vega
+	-- æ‚¨çš„é‡‘é’±ä¸è¶³ï¼Œè¯·ç¡®è®¤
+	local selfMoney = Player:GetData("MONEY") + Player:GetData("MONEY_JZ");	--äº¤å­æ™®åŠ Vega
 	if selfMoney < cost then
-		ShowSystemTipInfo( "ÄúµÄ½ğÇ®²»×ã£¬ÇëÈ·ÈÏ¡£" )
+		ShowSystemTipInfo( "æ‚¨çš„é‡‘é’±ä¸è¶³ï¼Œè¯·ç¡®è®¤ã€‚" )
 		return
 	end
 
-	-- ·¢ËÍ UI_Command ½øĞĞºÏ³É
+	-- å‘é€ UI_Command è¿›è¡Œåˆæˆ
 	Clear_XSCRIPT()
 		Set_XSCRIPT_Function_Name( "PetSavvy" )
 		Set_XSCRIPT_ScriptID( 800104 )
@@ -194,7 +194,7 @@ function PetSavvy_Clear()
 	PetSavvy_RemoveMainPet()
 	PetSavvy_RemoveAssisPet()
 
-	PetSavvy_Text2 : SetText( "#cFF0000³É¹¦ÂÊ" )
+	PetSavvy_Text2 : SetText( "#cFF0000æˆåŠŸç‡" )
 	PetSavvy_NeedMoney : SetProperty( "MoneyNumber", tostring( 0 ) )
 
 	PetSavvy_OK : Disable()
@@ -210,40 +210,40 @@ function PetSavvy_Check()
 	end
 
 	if mainPet.idx == assisPet.idx then
-		ShowSystemTipInfo( "Çë·ÅÈëÁ½Ö»²»Í¬µÄÕäÊŞ¡£" )
+		ShowSystemTipInfo( "è¯·æ”¾å…¥ä¸¤åªä¸åŒçš„çå…½ã€‚" )
 		return 0
 	end
 
-	-- ÅĞ¶¨²ÎÓëÕäÊŞµÄĞ¯´øµÈ¼¶ÊÇ·ñ´óÓÚµÈÓÚĞèÒªÌáÉıµÄÕäÊŞµÄĞ¯´øµÈ¼¶£¬Èç¹û²»ÊÇ£¬Ôòµ¯³ö¶Ô»°²¢·µ»Ø£º
+	-- åˆ¤å®šå‚ä¸çå…½çš„æºå¸¦ç­‰çº§æ˜¯å¦å¤§äºç­‰äºéœ€è¦æå‡çš„çå…½çš„æºå¸¦ç­‰çº§ï¼Œå¦‚æœä¸æ˜¯ï¼Œåˆ™å¼¹å‡ºå¯¹è¯å¹¶è¿”å›ï¼š
 	local mainCarryLevel = Pet : GetTakeLevel( mainPet.idx )
 	local assisCarryLevel = Pet : GetTakeLevel( assisPet.idx )
 	if assisCarryLevel < mainCarryLevel then
-		-- ÄúµÄ²ÎÓëºÏ³ÉµÄÕäÊŞĞ¯´øµÈ¼¶Îªa£¬±ØĞëÒªÕÒĞ¯´øµÈ¼¶´óÓÚµÈÓÚbµÄ²ÅÄÜ²ÎÓëºÏ³É¡££¨aÎª²ÎÓëºÏ³ÉÕäÊŞµÄĞ¯´øµÈ¼¶¡¢bÎªĞèÒªÌáÉıµÄÕäÊŞµÄĞ¯´øµÈ¼¶£©
-		ShowSystemTipInfo( "ÄúµÄ²ÎÓëºÏ³ÉµÄÕäÊŞĞ¯´øµÈ¼¶Îª" .. assisCarryLevel .. "£¬±ØĞëÒªÕÒĞ¯´øµÈ¼¶´óÓÚµÈÓÚ" .. mainCarryLevel .. "µÄ²ÅÄÜ²ÎÓëºÏ³É¡£" )
+		-- æ‚¨çš„å‚ä¸åˆæˆçš„çå…½æºå¸¦ç­‰çº§ä¸ºaï¼Œå¿…é¡»è¦æ‰¾æºå¸¦ç­‰çº§å¤§äºç­‰äºbçš„æ‰èƒ½å‚ä¸åˆæˆã€‚ï¼ˆaä¸ºå‚ä¸åˆæˆçå…½çš„æºå¸¦ç­‰çº§ã€bä¸ºéœ€è¦æå‡çš„çå…½çš„æºå¸¦ç­‰çº§ï¼‰
+		ShowSystemTipInfo( "æ‚¨çš„å‚ä¸åˆæˆçš„çå…½æºå¸¦ç­‰çº§ä¸º" .. assisCarryLevel .. "ï¼Œå¿…é¡»è¦æ‰¾æºå¸¦ç­‰çº§å¤§äºç­‰äº" .. mainCarryLevel .. "çš„æ‰èƒ½å‚ä¸åˆæˆã€‚" )
 		return 0
 	end
 
-	-- ÅĞ¶¨²ÎÓëºÏ³ÉµÄÕäÊŞµÄ¸ù¹ÇÊÇ·ñ´óÓÚµÈÓÚĞèÒªÌáÉıµÄÕäÊŞµÄÎòĞÔµÈ¼¶£¬Èç¹ûÅĞ¶¨²»³ÉÁ¢Ôòµ¯³ö¶Ô»°²¢·µ»Ø£º
+	-- åˆ¤å®šå‚ä¸åˆæˆçš„çå…½çš„æ ¹éª¨æ˜¯å¦å¤§äºç­‰äºéœ€è¦æå‡çš„çå…½çš„æ‚Ÿæ€§ç­‰çº§ï¼Œå¦‚æœåˆ¤å®šä¸æˆç«‹åˆ™å¼¹å‡ºå¯¹è¯å¹¶è¿”å›ï¼š
 	local savvy = Pet : GetSavvy( mainPet.idx )
 	local con = Pet : GetBasic( assisPet.idx )
 	if con < savvy then
-		-- ²ÎÓëºÏ³ÉµÄÕäÊŞµÄ¸ù¹Ç±ØĞë´óÓÚµÈÓÚa£¨aÎªĞèÒªÌáÉıµÄÕäÊŞµÄÎòĞÔµÈ¼¶£©
-		ShowSystemTipInfo( "²ÎÓëºÏ³ÉµÄÕäÊŞµÄ¸ù¹Ç±ØĞë´óÓÚµÈÓÚ" .. savvy .. "¡£" )
+		-- å‚ä¸åˆæˆçš„çå…½çš„æ ¹éª¨å¿…é¡»å¤§äºç­‰äºaï¼ˆaä¸ºéœ€è¦æå‡çš„çå…½çš„æ‚Ÿæ€§ç­‰çº§ï¼‰
+		ShowSystemTipInfo( "å‚ä¸åˆæˆçš„çå…½çš„æ ¹éª¨å¿…é¡»å¤§äºç­‰äº" .. savvy .. "ã€‚" )
 		return 0
 	end
 
 	return 1
 end
 
--- ¼ÆËã³É¹¦ÂÊ
+-- è®¡ç®—æˆåŠŸç‡
 function PetSavvy_CalcSuccOdds()
 	if mainPet.idx == -1 then
-		PetSavvy_Text2 : SetText( "#cFF0000³É¹¦ÂÊ" )
+		PetSavvy_Text2 : SetText( "#cFF0000æˆåŠŸç‡" )
 		PetSavvy_OK : Disable()
 		return
 	end
 
-	succOdds = {													-- Ë÷ÒıÊÇÕäÊŞµÄµ±Ç°ÎòĞÔÖµ
+	succOdds = {													-- ç´¢å¼•æ˜¯çå…½çš„å½“å‰æ‚Ÿæ€§å€¼
 		[0] = 1000,
 		[1] = 850,
 		[2] = 750,
@@ -257,10 +257,10 @@ function PetSavvy_CalcSuccOdds()
 	}
 
 	local savvy = Pet : GetSavvy( mainPet.idx )
-	local str = "#cFF0000³É¹¦ÂÊ£º"
+	local str = "#cFF0000æˆåŠŸç‡ï¼š"
 	local odds = succOdds[savvy]
 	if not odds then
-		str = "ÎŞ·¨ÌáÉı"
+		str = "æ— æ³•æå‡"
 		PetSavvy_OK : Disable()
 	else
 		str = str .. math.floor( odds / 10 ) .. "%"
@@ -270,7 +270,7 @@ function PetSavvy_CalcSuccOdds()
 	PetSavvy_Text2 : SetText( str )
 end
 
--- ¼ÆËã½ğÇ®ÏûºÄ
+-- è®¡ç®—é‡‘é’±æ¶ˆè€—
 function PetSavvy_CalcCost()
 	if mainPet.idx == -1 then
 		PetSavvy_NeedMoney : SetProperty( "MoneyNumber", tostring( 0 ) )
@@ -294,52 +294,52 @@ function PetSavvy_SelectPet( petIdx )
 	local petName = Pet : GetPetList_Appoint( petIdx )
 	local guidH, guidL = Pet : GetGUID( petIdx )
 
-	-- ÅĞ¶Ï petIdex ´ú±íµÄÊÇ±»ÌáÉıµÄ³è»¹ÊÇ¸¨Öú³è
-	-- Èç¹ûÊÇ±»ÌáÉıµÄ³è
+	-- åˆ¤æ–­ petIdex ä»£è¡¨çš„æ˜¯è¢«æå‡çš„å® è¿˜æ˜¯è¾…åŠ©å® 
+	-- å¦‚æœæ˜¯è¢«æå‡çš„å® 
 	if currentChoose == 1 then
-		-- Èç¹ûÔ­À´ÒÑ¾­Ñ¡ÔñÁËÒ»¸ö±»ÌáÉıµÄ³è
-		-- ÔòÇå¿ÕÔ­À´µÄÊı¾İ
+		-- å¦‚æœåŸæ¥å·²ç»é€‰æ‹©äº†ä¸€ä¸ªè¢«æå‡çš„å® 
+		-- åˆ™æ¸…ç©ºåŸæ¥çš„æ•°æ®
 		PetSavvy_RemoveMainPet()
 
-		-- XX Èç¹ûÔ­À´¾ÍÓĞ¸¨Öú³è²¢ÇÒ¸¨Öú³è²»·ûºÏĞÂµÄÌõ¼ş
-		-- XX ÔòÇå¿Õ¸¨Öú³èµÄÊı¾İ
-		-- ¼ÇÂ¼¸Ã³èµÄÎ»ÖÃºÅ¡¢GUID
+		-- XX å¦‚æœåŸæ¥å°±æœ‰è¾…åŠ©å® å¹¶ä¸”è¾…åŠ©å® ä¸ç¬¦åˆæ–°çš„æ¡ä»¶
+		-- XX åˆ™æ¸…ç©ºè¾…åŠ©å® çš„æ•°æ®
+		-- è®°å½•è¯¥å® çš„ä½ç½®å·ã€GUID
 		mainPet.idx = petIdx
 		mainPet.guid.high = guidH
 		mainPet.guid.low = guidL
 
-		-- ½«ÕäÊŞÃû×ÖÌîµ½ÎÄ±¾¿òÖĞ
+		-- å°†çå…½åå­—å¡«åˆ°æ–‡æœ¬æ¡†ä¸­
 		PetSavvy_Pet1_Text : SetText( petName )
 
-		-- ¸øÕäÊŞÉÏËø
+		-- ç»™çå…½ä¸Šé”
 		Pet : SetPetLocation( petIdx, 3 )
-	-- Èç¹ûÊÇ¸¨Öú³è
+	-- å¦‚æœæ˜¯è¾…åŠ©å® 
 	elseif currentChoose == 2 then
 		if PlayerPackage:IsPetLock(petIdx) == 1 then
-			PushDebugMessage("ÕäÊŞÒÑ¼ÓËø")
+			PushDebugMessage("çå…½å·²åŠ é”")
 			return
 		end
-		-- XX Èç¹ûÃ»ÓĞ±»ÌáÉıµÄ³è´æÔÚ
-		-- XX ÔòÌáÊ¾ĞèÒªÏÈ·ÅÈë±»ÌáÉıµÄ³è²¢·µ»Ø
-		-- XX ÅĞ¶Ï¸¨Öú³èÊÇ·ñ·ûºÏÌõ¼ş
-		-- XX Èç¹û²»·ûºÏÔò·µ»Ø
-		-- Èç¹ûÔ­À´¾ÍÓĞ¸¨Öú³è
-		-- ÔòÇå¿ÕÔ­À´µÄÊı¾İ
+		-- XX å¦‚æœæ²¡æœ‰è¢«æå‡çš„å® å­˜åœ¨
+		-- XX åˆ™æç¤ºéœ€è¦å…ˆæ”¾å…¥è¢«æå‡çš„å® å¹¶è¿”å›
+		-- XX åˆ¤æ–­è¾…åŠ©å® æ˜¯å¦ç¬¦åˆæ¡ä»¶
+		-- XX å¦‚æœä¸ç¬¦åˆåˆ™è¿”å›
+		-- å¦‚æœåŸæ¥å°±æœ‰è¾…åŠ©å® 
+		-- åˆ™æ¸…ç©ºåŸæ¥çš„æ•°æ®
 		PetSavvy_RemoveAssisPet()
 
-		-- ¼ÇÂ¼¸Ã³èµÄÎ»ÖÃºÅ¡¢GUID
+		-- è®°å½•è¯¥å® çš„ä½ç½®å·ã€GUID
 		assisPet.idx = petIdx
 		assisPet.guid.high = guidH
 		assisPet.guid.low = guidL
 
-		-- ½«ÕäÊŞÃû×ÖÌîµ½ÎÄ±¾¿òÖĞ
+		-- å°†çå…½åå­—å¡«åˆ°æ–‡æœ¬æ¡†ä¸­
 		PetSavvy_Pet2_Text : SetText( petName )
 
-		-- ¸øÕäÊŞÉÏËø
+		-- ç»™çå…½ä¸Šé”
 		Pet : SetPetLocation( petIdx, 3 )
 	end
 
-	-- ¸üĞÂ½ğÇ®ºÍ¼¸ÂÊÏÔÊ¾
+	-- æ›´æ–°é‡‘é’±å’Œå‡ ç‡æ˜¾ç¤º
 	PetSavvy_CalcSuccOdds()
 	PetSavvy_CalcCost()
 end
@@ -348,52 +348,52 @@ function PetSavvy_UpdateSelected()
 	-- AxTrace( 0, 1, "mainPet.guid.high=".. mainPet.guid.high .. "mainPet.guid.low=" .. mainPet.guid.low )
 	-- AxTrace( 0, 1, "assisPet.guid.high=".. assisPet.guid.high .. "assisPet.guid.low=" .. assisPet.guid.low )
 	-- AxTrace( 0, 1, "mainPet.idx=" .. mainPet.idx .. "assisPet.idx=" .. assisPet.idx )
-	-- ÅĞ¶Ï±»Ñ¡ÖĞµÄÕäÊŞÊÇ·ñ»¹ÔÚ±³°üÀï
+	-- åˆ¤æ–­è¢«é€‰ä¸­çš„çå…½æ˜¯å¦è¿˜åœ¨èƒŒåŒ…é‡Œ
 	if mainPet.idx ~= -1 then
 		local newIdx = Pet : GetPetIndexByGUID( mainPet.guid.high, mainPet.guid.low )
 		-- AxTrace( 0, 1, "newIdx=".. newIdx )
 
-		-- Èç¹û²»ÔÚÔòÉ¾µô
+		-- å¦‚æœä¸åœ¨åˆ™åˆ æ‰
 		if newIdx == -1 then
 			mainPet.idx = -1
 			mainPet.guid.high = -1
 			mainPet.guid.low = -1
 			PetSavvy_Pet1_Text : SetText( "" )
-		-- ·ñÔòÅĞ¶ÏÕäÊŞµÄÎ»ÖÃÊÇ·ñ·¢Éú±ä»¯
+		-- å¦åˆ™åˆ¤æ–­çå…½çš„ä½ç½®æ˜¯å¦å‘ç”Ÿå˜åŒ–
 		elseif newIdx ~= mainPet.idx then
-			-- Èç¹û·¢Éú±ä»¯Ôò¶ÔÎ»ÖÃ½øĞĞ¸üĞÂ
+			-- å¦‚æœå‘ç”Ÿå˜åŒ–åˆ™å¯¹ä½ç½®è¿›è¡Œæ›´æ–°
 			mainPet.idx = newIdx
 		end
 	end
 
-	-- ÅĞ¶Ï±»Ñ¡ÖĞµÄÕäÊŞÊÇ·ñ»¹ÔÚ±³°üÀï
+	-- åˆ¤æ–­è¢«é€‰ä¸­çš„çå…½æ˜¯å¦è¿˜åœ¨èƒŒåŒ…é‡Œ
 	if assisPet.idx ~= -1 then
 		local newIdx = Pet : GetPetIndexByGUID( assisPet.guid.high, assisPet.guid.low )
 		-- AxTrace( 0, 1, "newIdx=".. newIdx )
 
-		-- Èç¹û²»ÔÚÔòÉ¾µô
+		-- å¦‚æœä¸åœ¨åˆ™åˆ æ‰
 		if newIdx == -1 then
 			assisPet.idx = -1
 			assisPet.guid.high = -1
 			assisPet.guid.low = -1
 			PetSavvy_Pet2_Text : SetText( "" )
-		-- ·ñÔòÅĞ¶ÏÕäÊŞµÄÎ»ÖÃÊÇ·ñ·¢Éú±ä»¯
+		-- å¦åˆ™åˆ¤æ–­çå…½çš„ä½ç½®æ˜¯å¦å‘ç”Ÿå˜åŒ–
 		elseif newIdx ~= assisPet.idx then
-			-- Èç¹û·¢Éú±ä»¯Ôò¶ÔÎ»ÖÃ½øĞĞ¸üĞÂ
+			-- å¦‚æœå‘ç”Ÿå˜åŒ–åˆ™å¯¹ä½ç½®è¿›è¡Œæ›´æ–°
 			assisPet.idx = newIdx
 		end
 	end
 end
 
 --=========================================================
---¿ªÊ¼¹ØĞÄNPC£¬
---ÔÚ¿ªÊ¼¹ØĞÄÖ®Ç°ĞèÒªÏÈÈ·¶¨Õâ¸ö½çÃæÊÇ²»ÊÇÒÑ¾­ÓĞ¡°¹ØĞÄ¡±µÄNPC£¬
---Èç¹ûÓĞµÄ»°£¬ÏÈÈ¡ÏûÒÑ¾­ÓĞµÄ¡°¹ØĞÄ¡±
+--å¼€å§‹å…³å¿ƒNPCï¼Œ
+--åœ¨å¼€å§‹å…³å¿ƒä¹‹å‰éœ€è¦å…ˆç¡®å®šè¿™ä¸ªç•Œé¢æ˜¯ä¸æ˜¯å·²ç»æœ‰â€œå…³å¿ƒâ€çš„NPCï¼Œ
+--å¦‚æœæœ‰çš„è¯ï¼Œå…ˆå–æ¶ˆå·²ç»æœ‰çš„â€œå…³å¿ƒâ€
 --=========================================================
 function BeginCareObject( objCaredId )
 	theNPC = DataPool : GetNPCIDByServerID( objCaredId )
 	if theNPC == -1 then
-		PushDebugMessage("Î´·¢ÏÖ NPC")
+		PushDebugMessage("æœªå‘ç° NPC")
 		this : Hide()
 		return
 	end
@@ -402,7 +402,7 @@ function BeginCareObject( objCaredId )
 end
 
 --=========================================================
---Í£Ö¹¶ÔÄ³NPCµÄ¹ØĞÄ
+--åœæ­¢å¯¹æŸNPCçš„å…³å¿ƒ
 --=========================================================
 function StopCareObject()
 	this : CareObject( theNPC, 0, "PetSavvy" )

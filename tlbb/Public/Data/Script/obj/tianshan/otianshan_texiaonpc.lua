@@ -1,42 +1,42 @@
---NPCÑİÊ¾¼¼ÄÜÌØĞ§ÓÃ
---ÑİÊ¾NPC
---ÆÕÍ¨
---Õâ¸öNPC×îºÃÊÇ²»»á»¹ÊÖ£¬¿É¹¥»÷£¬µ«ÊÇ²»»áÊÜµ½ÈÎºÎÉËº¦
---½Å±¾ºÅ
+--NPCæ¼”ç¤ºæŠ€èƒ½ç‰¹æ•ˆç”¨
+--æ¼”ç¤ºNPC
+--æ™®é€š
+--è¿™ä¸ªNPCæœ€å¥½æ˜¯ä¸ä¼šè¿˜æ‰‹ï¼Œå¯æ”»å‡»ï¼Œä½†æ˜¯ä¸ä¼šå—åˆ°ä»»ä½•ä¼¤å®³
+--è„šæœ¬å·
 x801008_g_ScriptId = 801008;
 
---ÒªÑİÊ¾µÄ¼¼ÄÜÁĞ±í 
+--è¦æ¼”ç¤ºçš„æŠ€èƒ½åˆ—è¡¨ 
 x801008_g_DemoSkills = {};
---ÉùÃ÷·½·¨£º  x801008_g_DemoSkills[¼¼ÄÜµÄ±àºÅ] = "¼¼ÄÜµÄÃû×Ö"; ×¢£ººóÃæ»á°Ñ¼¼ÄÜµÄ±àºÅµ±ÊÂ¼şºÅÊ¹ÓÃ 
+--å£°æ˜æ–¹æ³•ï¼š  x801008_g_DemoSkills[æŠ€èƒ½çš„ç¼–å·] = "æŠ€èƒ½çš„åå­—"; æ³¨ï¼šåé¢ä¼šæŠŠæŠ€èƒ½çš„ç¼–å·å½“äº‹ä»¶å·ä½¿ç”¨ 
 
-x801008_g_DemoSkills[865]="ÂäÄ¾ÏôÏô";
-x801008_g_DemoSkills[866]="ÍûÃ·Ö¹¿Ê";
-x801008_g_DemoSkills[867]="Ñô¹ØÈıµş";
-x801008_g_DemoSkills[868]="Ñô·îÒõÎ¥";
-x801008_g_DemoSkills[869]="Ñô¸èÌì¾û";
-x801008_g_DemoSkills[870]="Ñô´º°×Ñ©";
-x801008_g_DemoSkills[871]="Ì¤Ñ©ÎŞºÛ";
-x801008_g_DemoSkills[872]="¹êÏ¢¹¦";
-x801008_g_DemoSkills[873]="´½Íö³İº®";
-x801008_g_DemoSkills[874]="Ê®ÃæÂñ·ü";
-x801008_g_DemoSkills[875]="Ô½ÙŞ´úâÒ";
-x801008_g_DemoSkills[876]="¹éÈ¥À´Ùâ";
-x801008_g_DemoSkills[877]="Æ¾ĞéÓù·ç";
-x801008_g_DemoSkills[878]="¾²Ó°³Áèµ";
-x801008_g_DemoSkills[879]="´óÏóÎŞĞÎ";
+x801008_g_DemoSkills[865]="è½æœ¨è§è§";
+x801008_g_DemoSkills[866]="æœ›æ¢…æ­¢æ¸´";
+x801008_g_DemoSkills[867]="é˜³å…³ä¸‰å ";
+x801008_g_DemoSkills[868]="é˜³å¥‰é˜´è¿";
+x801008_g_DemoSkills[869]="é˜³æ­Œå¤©é’§";
+x801008_g_DemoSkills[870]="é˜³æ˜¥ç™½é›ª";
+x801008_g_DemoSkills[871]="è¸é›ªæ— ç—•";
+x801008_g_DemoSkills[872]="é¾Ÿæ¯åŠŸ";
+x801008_g_DemoSkills[873]="å”‡äº¡é½¿å¯’";
+x801008_g_DemoSkills[874]="åé¢åŸ‹ä¼";
+x801008_g_DemoSkills[875]="è¶Šä¿ä»£åº–";
+x801008_g_DemoSkills[876]="å½’å»æ¥å…®";
+x801008_g_DemoSkills[877]="å‡­è™šå¾¡é£";
+x801008_g_DemoSkills[878]="é™å½±æ²‰ç’§";
+x801008_g_DemoSkills[879]="å¤§è±¡æ— å½¢";
 
---ËùÓµÓĞµÄÊÂ¼şIdÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶Idåˆ—è¡¨
 x801008_g_eventList={865,866,867,868,869,870,871,872,873,874,875,876,877,878,879};
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x801008_OnDefaultEvent( sceneId, selfId,targetId )
 	AbilityLevel = QueryHumanAbilityLevel( sceneId, selfId, ABILITY_ZHONGZHI);
 	BeginEvent(sceneId);
-	AddText(sceneId, "    »¶Ó­¹âÁÙ¡£ÇëÑ¡ÔñÏëÒª¹Û¿´µÄ¼¼ÄÜ¡£");
+	AddText(sceneId, "    æ¬¢è¿å…‰ä¸´ã€‚è¯·é€‰æ‹©æƒ³è¦è§‚çœ‹çš„æŠ€èƒ½ã€‚");
 --	for i=1,getn(x801008_g_eventList) do 
 	for nIdx, nEvent in x801008_g_eventList do
-		--Ìí¼ÓÑİÊ¾¼¼ÄÜµÄ°´Å¥ 
+		--æ·»åŠ æ¼”ç¤ºæŠ€èƒ½çš„æŒ‰é’® 
 		AddNumText(sceneId, nEvent, x801008_g_DemoSkills[nEvent]);
 	end
 	EndEvent(sceneId);
@@ -45,10 +45,10 @@ function x801008_OnDefaultEvent( sceneId, selfId,targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x801008_OnEventRequest( sceneId, selfId, targetId, eventId )
-	--ÎÊÌâselfId,ºÍTargetId·Ö±ğÊÇÊ²Ã´µÄID? 
+	--é—®é¢˜selfId,å’ŒTargetIdåˆ†åˆ«æ˜¯ä»€ä¹ˆçš„ID? 
 	LuaFnUnitUseSkill(sceneId, selfId, eventId, targetId,1,0,0,0,0);
 	--CallScriptFunction( 801008, "LuaFnUnitUseSkill",sceneId, selfId, eventId , targetId);
 	--return;

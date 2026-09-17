@@ -1,22 +1,22 @@
---´´½¨
---·é»ğÌ¨
+--åˆ›å»º
+--çƒ½ç«å°
 
 -- scriptId = 715001
 x715001_g_missionId = 552
 
 function  x715001_OnCreate(sceneId,growPointType,x,y)
-	ItemCount = 0-- ÎïÆ·ÊıÁ¿
-	ItemBoxId = ItemBoxEnterScene(x,y,growPointType,sceneId,QUALITY_MUST_BE_CHANGE,ItemCount)	--º¯Êıµ÷ÓÃ
+	ItemCount = 0-- ç‰©å“æ•°é‡
+	ItemBoxId = ItemBoxEnterScene(x,y,growPointType,sceneId,QUALITY_MUST_BE_CHANGE,ItemCount)	--å‡½æ•°è°ƒç”¨
 end
 
---·µ»ØÀàĞÍ
--- 0 ±íÊ¾´ò¿ª³É¹¦
---´ò¿ªÇ°
---ÔÚCONFIG/ABILITY.TXTÎÄ¼şÖĞ
+--è¿”å›ç±»å‹
+-- 0 è¡¨ç¤ºæ‰“å¼€æˆåŠŸ
+--æ‰“å¼€å‰
+--åœ¨CONFIG/ABILITY.TXTæ–‡ä»¶ä¸­
 function	 x715001_OnOpen(sceneId,selfId,targetId)
 	if HaveItem(sceneId,selfId,40002070) <0 then
 		BeginEvent(sceneId)
-			strText = "ĞèÒª»ğÕÛ×Ó"
+			strText = "éœ€è¦ç«æŠ˜å­"
 			AddText(sceneId,strText);
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
@@ -25,7 +25,7 @@ function	 x715001_OnOpen(sceneId,selfId,targetId)
 
 	if HaveItem(sceneId,selfId,40002069) <0	then
 		BeginEvent(sceneId)
-			strText = "ĞèÒªÀÇ·à"
+			strText = "éœ€è¦ç‹¼ç²ª"
 			AddText(sceneId,strText);
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
@@ -35,12 +35,12 @@ function	 x715001_OnOpen(sceneId,selfId,targetId)
 	return OR_OK
 end
 
---»ØÊÕ  £¨ÓëÆäËû3¸öÏà·´£¬·µ»Ø1 ±íÊ¾Òª»ØÊÕ£¬¾ÍÊÇÉú³¤µãÏûÊ§£¬²»ÄÜÔÙÊ¹ÓÃ£©
+--å›æ”¶  ï¼ˆä¸å…¶ä»–3ä¸ªç›¸åï¼Œè¿”å›1 è¡¨ç¤ºè¦å›æ”¶ï¼Œå°±æ˜¯ç”Ÿé•¿ç‚¹æ¶ˆå¤±ï¼Œä¸èƒ½å†ä½¿ç”¨ï¼‰
 function	 x715001_OnRecycle(sceneId,selfId,targetId)
  	return 0;
 end
 
---´ò¿ªºó
+--æ‰“å¼€å
 function	x715001_OnProcOver(sceneId,selfId,targetId)
 	
 	local Ret1 = DelItem( sceneId, selfId, 40002069, 1 )
@@ -52,7 +52,7 @@ function	x715001_OnProcOver(sceneId,selfId,targetId)
 	SetMissionByIndex(sceneId,selfId,misIndex,0,1)
 	SetMissionByIndex(sceneId,selfId,misIndex,1,1)
 	BeginEvent(sceneId)
-	  	strText = "Çı¸ÏºÚ·ä(Íê³É)"
+	  	strText = "é©±èµ¶é»‘èœ‚(å®Œæˆ)"
 	  	AddText(sceneId,strText);
 	EndEvent(sceneId)
 	DispatchMissionTips(sceneId,selfId)

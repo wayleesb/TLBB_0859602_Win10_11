@@ -1,8 +1,8 @@
---°ïÅÉÊÕ¼¯
+--å¸®æ´¾æ”¶é›†
 --Created by zchw
 
 x600046_g_ScriptId							= 600046;
---»î¶¯Ê±¼ä
+--æ´»åŠ¨æ—¶é—´
 x600046_g_weekDay								= 0;
 x600046_g_StartTime 						= 1900;
 x600046_g_EndTime   						= 1959;
@@ -12,9 +12,9 @@ x600046_g_missionId_yanling 		= 1141;
 x600046_g_missionId_qiyelian	 	= 1142;
 
 x600046_g_mapping = {
-	[1140] = {name = "#YÀùÊ¯#W", product = "¹öÊ¯", place1 = "#G¶Ø»ÍÃùÉ³É½#W", place2 = "#GáÔÉ½»şÉ½ÆÂÄÏ#W", itemId = 40004464},
-	[1141] = {name = "#YÑãôá#W", product = "Óğ¼ı", place1 = "#GÌ«ºşö½Í·Ğ÷#W", place2 = "#G¾µºşëÙÖ¬µºÓë»­Ã¼µº#W", itemId = 40004462},
-	[1142] = {name = "#YÆßÒ¶Á«#W", product = "ÉËÒ©", place1 = "#G½£¸ó°×Ã©Áë#W", place2 = "#GÎŞÁ¿É½ÌÒ»¨Ì¶#W", itemId = 40004463},
+	[1140] = {name = "#Yç ¾çŸ³#W", product = "æ»šçŸ³", place1 = "#Gæ•¦ç…Œé¸£æ²™å±±#W", place2 = "#Gåµ©å±±ç®•å±±å¡å—#W", itemId = 40004464},
+	[1141] = {name = "#Yé›ç¿#W", product = "ç¾½ç®­", place1 = "#Gå¤ªæ¹–é¼‹å¤´ç»ª#W", place2 = "#Gé•œæ¹–èƒ­è„‚å²›ä¸ç”»çœ‰å²›#W", itemId = 40004462},
+	[1142] = {name = "#Yä¸ƒå¶è²#W", product = "ä¼¤è¯", place1 = "#Gå‰‘é˜ç™½èŒ…å²­#W", place2 = "#Gæ— é‡å±±æ¡ƒèŠ±æ½­#W", itemId = 40004463},
 	}
 	
 x600046_g_ExpPrizeSig = 
@@ -48,7 +48,7 @@ x600046_g_ExpPrizeUp10 =
 43478802,
 }
 x600046_g_ExpPrize = {};
-x600046_g_ExpPrize[1] = --µÚ1Ãû½±Àø
+x600046_g_ExpPrize[1] = --ç¬¬1åå¥–åŠ±
 {
 39744 ,42832 ,45673 ,48347 ,51157 ,53832 ,57801 ,60537 ,63378 ,66083 ,
 79341 ,82865 ,86010 ,89125 ,92513 ,95657 ,100435 ,103611 ,106755 ,110341 ,
@@ -63,7 +63,7 @@ x600046_g_ExpPrize[1] = --µÚ1Ãû½±Àø
 727157 ,733386 ,739615 ,746117 ,752756 ,759015 ,765245 ,771504 ,777733 ,784372 ,
 790631 ,
 }
-x600046_g_ExpPrize[2] = --µÚ2£¬3Ãû½±Àø
+x600046_g_ExpPrize[2] = --ç¬¬2ï¼Œ3åå¥–åŠ±
 {
 29808,32124,34254,36260,38368,40374,43351,45402,47533,49562,
 59505,62149,64507,66843,69384,71743,75326,77708,80066,82756,
@@ -96,25 +96,25 @@ x600046_g_ExpPrize[4] =
 }
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x600046_OnDefaultEvent( sceneId, selfId, targetId )
 	local opt = GetNumText();
-	if opt == 1 or opt == 2 or opt == 3 then					--¹ØÓÚÖ§Ô®:ÀùÊ¯¡£¡£¡£
+	if opt == 1 or opt == 2 or opt == 3 then					--å…³äºæ”¯æ´:ç ¾çŸ³ã€‚ã€‚ã€‚
  		--x600046_OnClickSupportState(sceneId, selfId, targetId, opt)
-	elseif opt == 4 then															--µã»÷ÁìÈ¡³¯Í¢ÉÍ´Í
+	elseif opt == 4 then															--ç‚¹å‡»é¢†å–æœå»·èµèµ
 		x600046_OnClickGetPrize(sceneId, selfId, targetId);
-	elseif opt == 5 then															--¹ØÓÚÖ§Ô®³¯Í¢
+	elseif opt == 5 then															--å…³äºæ”¯æ´æœå»·
 		x600046_ReturnDlg(sceneId, selfId, targetId, "#{BHSJ_081014_14}")
-	elseif opt == 41 then 														--È·¶¨ Áì½±
+	elseif opt == 41 then 														--ç¡®å®š é¢†å¥–
 		x600046_ConfirmGetPrize(sceneId, selfId, targetId);
-	elseif opt == 42 then 														--È¡Ïû Áì½±
+	elseif opt == 42 then 														--å–æ¶ˆ é¢†å¥–
 		x600046_CloseDlg(sceneId, selfId, targetId);
 	end
 end
 
 --**********************************
---¹Ø±Õ¶Ô»°¿ò
+--å…³é—­å¯¹è¯æ¡†
 --**********************************
 function x600046_CloseDlg(sceneId, selfId, targetId)
 	BeginUICommand( sceneId )
@@ -124,30 +124,30 @@ function x600046_CloseDlg(sceneId, selfId, targetId)
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x600046_OnEnumerate( sceneId, selfId, targetId )
 	local Humanguildid 	= GetHumanGuildID(sceneId,selfId)
 	local cityguildid 	= GetCityGuildID(sceneId, selfId, sceneId)
 	if Humanguildid == cityguildid then
-		--AddNumText(sceneId, x600046_g_ScriptId, "#{BHSJ_081014_02}", 4, 1); 		--Ö§Ô®³¯Í¢£ºÀùÊ¯
-		--AddNumText(sceneId, x600046_g_ScriptId, "#{BHSJ_081014_03}", 4, 2); 		--Ö§Ô®³¯Í¢£ºÑãôá
-		--AddNumText(sceneId, x600046_g_ScriptId, "#{BHSJ_081014_04}", 4, 3);			--Ö§Ô®³¯Í¢£ºÆßÒ¶Á«
-		AddNumText(sceneId, x600046_g_ScriptId, "#{BHSJ_081014_05}", 6, 4);			--ÁìÈ¡³¯Í¢ÉÍ´Í
-		--AddNumText(sceneId, x600046_g_ScriptId, "#{BHSJ_081014_06}", 11, 5);		--¹ØÓÚÖ§Ô®³¯Í¢
+		--AddNumText(sceneId, x600046_g_ScriptId, "#{BHSJ_081014_02}", 4, 1); 		--æ”¯æ´æœå»·ï¼šç ¾çŸ³
+		--AddNumText(sceneId, x600046_g_ScriptId, "#{BHSJ_081014_03}", 4, 2); 		--æ”¯æ´æœå»·ï¼šé›ç¿
+		--AddNumText(sceneId, x600046_g_ScriptId, "#{BHSJ_081014_04}", 4, 3);			--æ”¯æ´æœå»·ï¼šä¸ƒå¶è²
+		AddNumText(sceneId, x600046_g_ScriptId, "#{BHSJ_081014_05}", 6, 4);			--é¢†å–æœå»·èµèµ
+		--AddNumText(sceneId, x600046_g_ScriptId, "#{BHSJ_081014_06}", 11, 5);		--å…³äºæ”¯æ´æœå»·
 	end
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x600046_CheckAccept( sceneId, selfId, missionType )
-	--»î¶¯ÆÚ¼ä£¿
+	--æ´»åŠ¨æœŸé—´ï¼Ÿ
 	local curTime = GetHour() * 100 + GetMinute();
 	if GetTodayWeek() ~= x600046_g_weekDay or curTime < x600046_g_StartTime or curTime > x600046_g_EndTime then
 		return 0, "#{BHSJ_081014_11}";
 	end
-	--ÈÎÎñÒÑÂú£¿
+	--ä»»åŠ¡å·²æ»¡ï¼Ÿ
 	if IsMissionFull(sceneId, selfId) == 1 then
 		return 0, "#{LLFB_80816_6}";
 	end
@@ -166,7 +166,7 @@ function x600046_GetMin(value1, value2)
 end
 
 --**********************************
---·µ»Ø¶Ô»°
+--è¿”å›å¯¹è¯
 --**********************************
 function x600046_ReturnDlg(sceneId, selfId, targetId, msg)
 	BeginEvent(sceneId)
@@ -186,7 +186,7 @@ function x600046_Tips(sceneId, selfId, msg)
 end
 
 --**********************************
---µã»÷Áì½±
+--ç‚¹å‡»é¢†å¥–
 --**********************************
 function x600046_OnClickGetPrize(sceneId, selfId, targetId)
 	if GetTodayWeek() ~= 0 or GetHour()*100+GetMinute() < 2001 then
@@ -195,31 +195,31 @@ function x600046_OnClickGetPrize(sceneId, selfId, targetId)
 	else
 		BeginEvent(sceneId)
 			AddText(sceneId, "#{BHSJ_081014_26}");
-			AddNumText(sceneId, x600046_g_ScriptId, "#{INTERFACE_XML_557}", 0, 41);  --È·¶¨ Áì½±
-			AddNumText(sceneId, x600046_g_ScriptId, "#{INTERFACE_XML_1059}", 0, 42); --È¡Ïû Áì½±
+			AddNumText(sceneId, x600046_g_ScriptId, "#{INTERFACE_XML_557}", 0, 41);  --ç¡®å®š é¢†å¥–
+			AddNumText(sceneId, x600046_g_ScriptId, "#{INTERFACE_XML_1059}", 0, 42); --å–æ¶ˆ é¢†å¥–
 		EndEvent()
 		DispatchEventList(sceneId, selfId, targetId)
 	end
 end
 
 --**********************************
---µã»÷Áì½±
+--ç‚¹å‡»é¢†å¥–
 --**********************************
 function x600046_ConfirmGetPrize(sceneId, selfId, targetId)
-	local misData = GetMissionData(sceneId, selfId, MD_GUILD_COLLECT_DATA); --MD_GUILD_COLLECT_DATA £¨248£© µÍËÄÎ»±£´æ±¾´Î»î¶¯µÄÖÜÊı£¬µÚ5Î»Îª1±íÊ¾ÒÑÁì½±	
+	local misData = GetMissionData(sceneId, selfId, MD_GUILD_COLLECT_DATA); --MD_GUILD_COLLECT_DATA ï¼ˆ248ï¼‰ ä½å››ä½ä¿å­˜æœ¬æ¬¡æ´»åŠ¨çš„å‘¨æ•°ï¼Œç¬¬5ä½ä¸º1è¡¨ç¤ºå·²é¢†å¥–	
 	local weekTime = mod(misData, 10000);
-	--ÅĞ¶ÏÍæ¼ÒÊÇ·ñ½»¸¶ÁËÊÕ¼¯Ä¿±êµÀ¾ßµÄÈÎÎñ
+	--åˆ¤æ–­ç©å®¶æ˜¯å¦äº¤ä»˜äº†æ”¶é›†ç›®æ ‡é“å…·çš„ä»»åŠ¡
 	if weekTime ~= GetWeekTime() then
-		x600046_ReturnDlg(sceneId, selfId, targetId, "#{BHSJ_081014_27}") --¶Ô²»Æğ£¬ÄãÃ»ÓĞÁìÈ¡»î¶¯½±ÀøµÄ×Ê¸ñ¡£
+		x600046_ReturnDlg(sceneId, selfId, targetId, "#{BHSJ_081014_27}") --å¯¹ä¸èµ·ï¼Œä½ æ²¡æœ‰é¢†å–æ´»åŠ¨å¥–åŠ±çš„èµ„æ ¼ã€‚
 		return
 	end
-	--ÅĞ¶ÏÍæ¼ÒÊÇ·ñÁìÈ¡¹ı±¾´Î»î¶¯µÄ½±Àø
+	--åˆ¤æ–­ç©å®¶æ˜¯å¦é¢†å–è¿‡æœ¬æ¬¡æ´»åŠ¨çš„å¥–åŠ±
 	if floor(misData/10000) == 1 then
-		x600046_ReturnDlg(sceneId, selfId, targetId, "#{BHSJ_081014_28}") --¶Ô²»Æğ£¬ÄãÒÑ¾­ÁìÈ¡¹ı±¾´Î»î¶¯µÄ½±Àø
+		x600046_ReturnDlg(sceneId, selfId, targetId, "#{BHSJ_081014_28}") --å¯¹ä¸èµ·ï¼Œä½ å·²ç»é¢†å–è¿‡æœ¬æ¬¡æ´»åŠ¨çš„å¥–åŠ±
 		return			
 	end
-	--Âú×ãÁì½±Ìõ¼ş	
-	local order = CityGetAttr(sceneId, selfId, 17);		--µÃµ½°ïÅÉÊÕ¼¯ÊıÄ¿ÅÅÃû
+	--æ»¡è¶³é¢†å¥–æ¡ä»¶	
+	local order = CityGetAttr(sceneId, selfId, 17);		--å¾—åˆ°å¸®æ´¾æ”¶é›†æ•°ç›®æ’å
 	if order == 0 then
 		x600046_ReturnDlg(sceneId, selfId, targetId, "#{BHSJ_081014_31}");
 		x600046_Tips(sceneId, selfId, "#{BHSJ_081014_32}");
@@ -231,25 +231,25 @@ function x600046_ConfirmGetPrize(sceneId, selfId, targetId)
 		return
 	end
 	local prize = 0;
-	if order > 3 then 																--Ç°3ÃûÌØÊâ½±Àø£¬ÆäËûÃû³Æ½±ÀøÏàÍ¬£¬=µÚËÄÃû
+	if order > 3 then 																--å‰3åç‰¹æ®Šå¥–åŠ±ï¼Œå…¶ä»–åç§°å¥–åŠ±ç›¸åŒï¼Œ=ç¬¬å››å
 		prize = x600046_g_ExpPrize[4][myLevel-9]
 	elseif order > 0 then
 		prize = x600046_g_ExpPrize[order][myLevel-9]
 	end
-	--½±Àø¾­Ñé
+	--å¥–åŠ±ç»éªŒ
 	AddExp(sceneId, selfId, x600046_GetMin(prize, 2*x600046_g_ExpPrizeUp10[myLevel-9]));
-	--½±Àø20µã°ï¹±
+	--å¥–åŠ±20ç‚¹å¸®è´¡
 	CityChangeAttr( sceneId, selfId, GUILD_CONTRIB_POINT, 20 );
-	--ÉèÖÃÁì½±±ê¼Ç
+	--è®¾ç½®é¢†å¥–æ ‡è®°
 	SetMissionData(sceneId, selfId, MD_GUILD_COLLECT_DATA, 10000+misData);
-	--ÈÕÖ¾
+	--æ—¥å¿—
 	AuditGuildCollect(sceneId, selfId, order, 3);
-	--¹Ø±Õ¶Ô»°¿ò
+	--å…³é—­å¯¹è¯æ¡†
 	x600046_CloseDlg(sceneId, selfId, targetId)
 end
 
 --**********************************
---µã»÷Ö§Ô®³¯Í¢£ºÀùÊ¯¡£¡£¡£
+--ç‚¹å‡»æ”¯æ´æœå»·ï¼šç ¾çŸ³ã€‚ã€‚ã€‚
 --**********************************
 function x600046_OnClickSupportState(sceneId, selfId, targetId, opt)
 	local misId = x600046_g_missionId_lishi + opt - 1;
@@ -280,7 +280,7 @@ function x600046_OnClickSupportState(sceneId, selfId, targetId, opt)
 end
 
 --**********************************
---µã»÷Ö§Ô®³¯Í¢£ºÀùÊ¯¡£¡£¡£
+--ç‚¹å‡»æ”¯æ´æœå»·ï¼šç ¾çŸ³ã€‚ã€‚ã€‚
 --**********************************
 function x600046_OnAcceptSupportState(sceneId, selfId, targetId, opt)
 	local misId = x600046_g_missionId_lishi + opt;
@@ -294,43 +294,43 @@ function x600046_OnAcceptSupportState(sceneId, selfId, targetId, opt)
 		return
 	end
 	local misIndex = GetMissionIndexByID(sceneId, selfId, misId);
-	--ÉèÖÃÈÎÎñÁìÈ¡Ê±¼ä
+	--è®¾ç½®ä»»åŠ¡é¢†å–æ—¶é—´
 	SetMissionByIndex(sceneId, selfId, misIndex, 2, GetWeekTime());
-	--ÈÕÖ¾
+	--æ—¥å¿—
 	AuditGuildCollect(sceneId, selfId, 0, 1);
-	--½ÓÊÜÈÎÎñºó¹Ø±Õ¶Ô»°¿ò
+	--æ¥å—ä»»åŠ¡åå…³é—­å¯¹è¯æ¡†
 	x600046_CloseDlg(sceneId, selfId, targetId);
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x600046_OnAbandon( sceneId, selfId, type )
 	local misId = x600046_g_missionId_lishi+type;
 	local itemId = x600046_g_mapping[1140+type].itemId
 	if IsHaveMission(sceneId, selfId, misId) == 1 then
-		--É¾³ıÈÎÎñ
+		--åˆ é™¤ä»»åŠ¡
 		DelMission(sceneId, selfId, misId);		
 		local count = LuaFnGetAvailableItemCount(sceneId, selfId, itemId);	
 		if count > 0 then
-			--Çå³ıÈÎÎñÎïÆ·
+			--æ¸…é™¤ä»»åŠ¡ç‰©å“
 			LuaFnDelAvailableItem(sceneId, selfId, itemId, count) 
 		end		
 	end
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x600046_CheckSubmit( sceneId, selfId, type )
-	--»î¶¯ÆÚ¼ä£¿
+	--æ´»åŠ¨æœŸé—´ï¼Ÿ
 	local hour = GetHour();
 	local minute = GetMinute();
 	local curTime = hour * 100 + minute;
 	if GetTodayWeek() ~= x600046_g_weekDay or curTime < x600046_g_StartTime or curTime > x600046_g_EndTime then
 		return 0, "#{BHSJ_081014_18}";
 	end
-	--Ê±¼äÒ»ÖÂ£¿
+	--æ—¶é—´ä¸€è‡´ï¼Ÿ
 	local misId = x600046_g_missionId_lishi+type;
 	if IsHaveMission(sceneId, selfId, misId) == 1 then
 		local misIndex = GetMissionIndexByID(sceneId, selfId, misId);
@@ -338,22 +338,22 @@ function x600046_CheckSubmit( sceneId, selfId, type )
 			return 0, "#{BHSJ_081014_18}"
 		end
 	else
-		return 0,"³ö´íÁË£¡";
+		return 0,"å‡ºé”™äº†ï¼";
 	end	
 	return 1, "ok";
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x600046_OnSubmit( sceneId, selfId, targetId, type )
-	--Ìá½»¼ì²â
+	--æäº¤æ£€æµ‹
 	local ret, msg = x600046_CheckSubmit(sceneId, selfId, type);
 	if ret == 0 then
 		x600046_ReturnDlg(sceneId, selfId, targetId, msg);
 		return 
 	end
-	--¿Û³ıµÀ¾ß
+	--æ‰£é™¤é“å…·
 	local itemId = x600046_g_mapping[1140+type].itemId
 	local	misId = 1140+type;
 	local count = LuaFnGetAvailableItemCount(sceneId, selfId, itemId);	
@@ -361,59 +361,59 @@ function x600046_OnSubmit( sceneId, selfId, targetId, type )
 		return 
 	end
 	LuaFnDelAvailableItem(sceneId, selfId, itemId, count)
-	--½±Àø¾­Ñé 
+	--å¥–åŠ±ç»éªŒ 
 	local myLevel = GetLevel(sceneId, selfId);
 	if myLevel < 10 then return end
 	local PrizeExp = x600046_g_ExpPrizeSig[myLevel-9];
-	--¾­Ñé½±ÀøÖµÊÇÉı¼¶¾­ÑéµÄ10% Óëµ¥´ÎÈÎÎñ½»¸¶¾­ÑéÖĞµÄĞ¡Öµ
+	--ç»éªŒå¥–åŠ±å€¼æ˜¯å‡çº§ç»éªŒçš„10% ä¸å•æ¬¡ä»»åŠ¡äº¤ä»˜ç»éªŒä¸­çš„å°å€¼
 	LuaFnAddExp(sceneId, selfId, x600046_GetMin(x600046_g_ExpPrizeUp10[myLevel-9], PrizeExp*count));
 	if count > 1 then
 		x600046_Tips(sceneId, selfId, "#{BHSJ_081014_29}");
 	end
-	--½±Àø5µã°ï¹±
+	--å¥–åŠ±5ç‚¹å¸®è´¡
 	CityChangeAttr( sceneId, selfId, GUILD_CONTRIB_POINT, 5 );
-	--Ôö¼Ó°ïÅÉÊÕ¼¯ÊıÄ¿
+	--å¢åŠ å¸®æ´¾æ”¶é›†æ•°ç›®
 	LuaFnAddGuildCollectNum(sceneId, selfId, count);
-	--ÌáÊ¾ÈÎÎñÍê³É
+	--æç¤ºä»»åŠ¡å®Œæˆ
 	x600046_ReturnDlg(sceneId, selfId, targetId, "#{BHSJ_081014_19}")
-	--É¾³ıÈÎÎñ
+	--åˆ é™¤ä»»åŠ¡
 	if IsHaveMission(sceneId, selfId, misId) > 0 then
 		DelMission(sceneId, selfId, misId)
 	end	
-	--ÈÕÖ¾
+	--æ—¥å¿—
 	AuditGuildCollect(sceneId, selfId, count, 2);
-	--ÉèÖÃÍæ¼Ò½»¸¶»î¶¯±êÖ¾
+	--è®¾ç½®ç©å®¶äº¤ä»˜æ´»åŠ¨æ ‡å¿—
 	SetMissionData(sceneId, selfId, MD_GUILD_COLLECT_DATA, GetWeekTime());--MD_GUILD_COLLECT_DATA 248		
 end
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x600046_OnContinue( sceneId, selfId, targetId )
 
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x600046_OnAccept( sceneId, selfId, targetId )
 
 end
 
 --**********************************
---É±ËÀ¹ÖÎï»òÍæ¼Ò
+--æ€æ­»æ€ªç‰©æˆ–ç©å®¶
 --**********************************
 function x600046_OnKillObject( sceneId, selfId, objdataId )
 end
 
 --**********************************
---½øÈëÇøÓòÊÂ¼ş
+--è¿›å…¥åŒºåŸŸäº‹ä»¶
 --**********************************
 function x600046_OnEnterArea( sceneId, selfId, zoneId )
 end
 
 --**********************************
---µÀ¾ß¸Ä±ä
+--é“å…·æ”¹å˜
 --**********************************
 function x600046_OnItemChanged( sceneId, selfId, itemdataId )
 end

@@ -1,21 +1,21 @@
---玄击金刚
+--鐜勫嚮閲戝垰
 
---脚本编号
+--鑴氭湰缂栧彿
 x502001_g_ScriptId	= 502001
 
 --**********************************
 --Monster Timer
 --**********************************
 function x502001_OnCharacterTimer( sceneId, objId, dataId, uTime )
-	--全球公告
-	local str = "#P#{_BOSS7}又现身了！苍山的大地再次陷入玄雷的恐怖之中！"
+	--鍏ㄧ悆鍏憡
+	local str = "#P#{_BOSS7}鍙堢幇韬簡锛佽媿灞辩殑澶у湴鍐嶆闄峰叆鐜勯浄鐨勬亹鎬栦箣涓紒"
 	AddGlobalCountNews( sceneId, str )
-	--取消时钟
+	--鍙栨秷鏃堕挓
 	SetCharacterTimer( sceneId, objId, 0 )
 end
 
 --**********************************
---死亡事件
+--姝讳骸浜嬩欢
 --**********************************
 function x502001_OnDie( sceneId, objId, killerId )
 

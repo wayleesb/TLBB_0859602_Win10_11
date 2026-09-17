@@ -1,15 +1,15 @@
 --MisDescBegin
 x230011_g_ScriptId = 230011
 x230011_g_MissionId = 4011
-x230011_g_Name ="ÖÇÇå´óÊ¦"
+x230011_g_Name ="æ™ºæ¸…å¤§å¸ˆ"
 x230011_g_MissionKind = 1
 x230011_g_MissionLevel = 10000
 x230011_g_IfMissionElite = 0
-x230011_g_IsMissionOkFail = 0		--±äÁ¿µÄµÚ0Î»
-x230011_g_MissionName="°×ÂíËÂĞŞĞĞ"
-x230011_g_MissionInfo="#{event_xunhuan_0001}"  --ÈÎÎñÃèÊö
-x230011_g_MissionTarget="#{event_xunhuan_0002}"		--ÈÎÎñÄ¿±ê
-x230011_g_ContinueInfo="°¢ÃÖÍÓ·ğ...#rÉÙÏÀ¿É·ñÍê³ÉÁËË®ÀÎÈÎÎñ£¿"		--Î´Íê³ÉÈÎÎñµÄnpc¶Ô»°
-x230011_g_MissionComplete="ÉÆÔÕÉÆÔÕ£¬ÉÙÏÀÎª¹úÎªÃñ£¬¼ûÒåÓÂÎª£¬ÈÕºó±ØÓĞÒ»·¬×÷Îª¡£"					--Íê³ÉÈÎÎñnpcËµ»°µÄ»°
+x230011_g_IsMissionOkFail = 0		--å˜é‡çš„ç¬¬0ä½
+x230011_g_MissionName="ç™½é©¬å¯ºä¿®è¡Œ"
+x230011_g_MissionInfo="#{event_xunhuan_0001}"  --ä»»åŠ¡æè¿°
+x230011_g_MissionTarget="#{event_xunhuan_0002}"		--ä»»åŠ¡ç›®æ ‡
+x230011_g_ContinueInfo="é˜¿å¼¥é™€ä½›...#rå°‘ä¾ å¯å¦å®Œæˆäº†æ°´ç‰¢ä»»åŠ¡ï¼Ÿ"		--æœªå®Œæˆä»»åŠ¡çš„npcå¯¹è¯
+x230011_g_MissionComplete="å–„å“‰å–„å“‰ï¼Œå°‘ä¾ ä¸ºå›½ä¸ºæ°‘ï¼Œè§ä¹‰å‹‡ä¸ºï¼Œæ—¥åå¿…æœ‰ä¸€ç•ªä½œä¸ºã€‚"					--å®Œæˆä»»åŠ¡npcè¯´è¯çš„è¯
 x230011_g_ControlScript=230000
 --MisDescEnd

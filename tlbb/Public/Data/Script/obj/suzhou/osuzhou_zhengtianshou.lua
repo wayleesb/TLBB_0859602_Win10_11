@@ -1,20 +1,20 @@
---ËÕÖİNPC
---Ö£ÌìÊÙ
---Ò»°ã
+--è‹å·NPC
+--éƒ‘å¤©å¯¿
+--ä¸€èˆ¬
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x001048_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
 	  local  PlayerName=GetName(sceneId,selfId)
 		local  PlayerSex=GetSex(sceneId,selfId)
 		if PlayerSex == 0 then
-			PlayerSex = "¹ÃÄï"
+			PlayerSex = "å§‘å¨˜"
 		else
-			PlayerSex = "ÉÙÏÀ"
+			PlayerSex = "å°‘ä¾ "
 		end
-		AddText(sceneId,"  "..PlayerName..PlayerSex.."£¬ÊÇ·ñÊÇÏëÇĞ´èÎäÒÕ£¿ÄÇ¾ÍÀŞÌ¨ÉÏÇë°É£¡")
+		AddText(sceneId,"  "..PlayerName..PlayerSex.."ï¼Œæ˜¯å¦æ˜¯æƒ³åˆ‡ç£‹æ­¦è‰ºï¼Ÿé‚£å°±æ“‚å°ä¸Šè¯·å§ï¼")
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 end

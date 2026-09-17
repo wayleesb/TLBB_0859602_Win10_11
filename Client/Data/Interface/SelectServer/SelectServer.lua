@@ -1,6 +1,6 @@
 -------------------------------------------------------------------------------------------------------------
 --
--- È«¾Ö±äÁ¿
+-- å…¨å±€å˜é‡
 --
 local g_LastServer = -1;
 local g_LastArea   = -1;
@@ -11,112 +11,112 @@ local CriticalSpeed3 =1000
 
 local CriticalSpeed =200; 
 local CurPage = 0
-local NetSpeed ={"#e010101ÍøÂçËÙ¶È:#c4CFA4CÁ¼ºÃ","#e010101ÍøÂçËÙ¶È:#cff0000·±Ã¦","#e010101ÍøÂçËÙ¶È:Î´Öª", "#e010101ÍøÂçËÙ¶È:#cff0000Óµ¶Â" }
+local NetSpeed ={"#e010101ç½‘ç»œé€Ÿåº¦:#c4CFA4Cè‰¯å¥½","#e010101ç½‘ç»œé€Ÿåº¦:#cff0000ç¹å¿™","#e010101ç½‘ç»œé€Ÿåº¦:æœªçŸ¥", "#e010101ç½‘ç»œé€Ÿåº¦:#cff0000æ‹¥å µ" }
 local PageSize = 12
 
--- ÇøÓò°´Å¥µÄ¸öÊı
+-- åŒºåŸŸæŒ‰é’®çš„ä¸ªæ•°
 local LOGIN_SERVER_AREA_COUNT = 24;
---Ä¿Ç°ÓĞĞ§µÄÇøÓò°´Å¥¸öÊı£¬ÓÉÓÚ½çÃæ¸Ä¶¯Ì«´ó£¬ÅÂÒÔºóÓĞÈËÓÖ·´»Ú£¬¼ÓÕâ¸ö±äÁ¿£¬Ö÷ÒªÊÇ²»ÏëÈ¥µô·­Ò³´úÂë¡£
+--ç›®å‰æœ‰æ•ˆçš„åŒºåŸŸæŒ‰é’®ä¸ªæ•°ï¼Œç”±äºç•Œé¢æ”¹åŠ¨å¤ªå¤§ï¼Œæ€•ä»¥åæœ‰äººåˆåæ‚”ï¼ŒåŠ è¿™ä¸ªå˜é‡ï¼Œä¸»è¦æ˜¯ä¸æƒ³å»æ‰ç¿»é¡µä»£ç ã€‚
 local EFFECT_LOGIN_SERVER_AREA_COUNT = 12; 
--- ¹«²âÇøÓò°´Å¥µÄ¸öÊı
+-- å…¬æµ‹åŒºåŸŸæŒ‰é’®çš„ä¸ªæ•°
 local LOGIN_SERVER_TESTAREA_COUNT = 4;
--- ÇøÓò°´Å¥
+-- åŒºåŸŸæŒ‰é’®
 local g_BnArea = {};
 
--- ¹«²âÇøÓò°´Å¥
+-- å…¬æµ‹åŒºåŸŸæŒ‰é’®
 local g_BntestArea = {};
 
--- µ±Ç°Ñ¡ÔñµÄÇøÓò
+-- å½“å‰é€‰æ‹©çš„åŒºåŸŸ
 local g_iCurSelArea = 0;
--- login server ¿Í»§¶ËË÷Òı
+-- login server å®¢æˆ·ç«¯ç´¢å¼•
 local g_AreaIndex ={};
--- login server Ãû×Ö
+-- login server åå­—
 local g_AreaName = {};
--- login server Ãû×Ö
+-- login server åå­—
 local g_AreaDis = {};
--- testlogin server ¿Í»§¶ËË÷Òı
+-- testlogin server å®¢æˆ·ç«¯ç´¢å¼•
 local g_testAreaIndex ={};
--- login server Ãû×Ö
+-- login server åå­—
 local g_testAreaName = {};
--- login server Ãû×Ö
+-- login server åå­—
 local g_testAreaDis = {};
--- µ±Ç°Ñ¡ÔñµÄÇøÓòÃû×Ö
+-- å½“å‰é€‰æ‹©çš„åŒºåŸŸåå­—
 local g_iCurSelAreaName;
 
---ÇøÓòtips
+--åŒºåŸŸtips
 local g_AreaTip = {};
 local g_testAreaTip = {};
 
--- Ñ¡ÔñµÄÍøÂç½ÓÈëÉÌ
-local g_iNetProvide = 0;					-- 0 : µçĞÅ
-								-- 1 : ÍøÍ¨
-								-- 2 : ÆäËû
-								-- 3£ºÄ¬ÈÏ
+-- é€‰æ‹©çš„ç½‘ç»œæ¥å…¥å•†
+local g_iNetProvide = 0;					-- 0 : ç”µä¿¡
+								-- 1 : ç½‘é€š
+								-- 2 : å…¶ä»–
+								-- 3ï¼šé»˜è®¤
 
 
---¼ÇÔØÄ¬ÈÏÍøÂç½ÓÈëÉÌ¡£
+--è®°è½½é»˜è®¤ç½‘ç»œæ¥å…¥å•†ã€‚
 local default_iNetProvide	=	1;
 
 local g_idBackSound = -1;
 
--- Ñ¡Ôñ´úÀí	tongxi ,×¢ÊÍµô
+-- é€‰æ‹©ä»£ç†	tongxi ,æ³¨é‡Šæ‰
 --local g_UseProxy = 0;
--- ¼ÇÔØÍÆ¼ö·şÎñÆ÷µÄ¸öÊı
+-- è®°è½½æ¨èæœåŠ¡å™¨çš„ä¸ªæ•°
 local indexForCommendable = 1;
 ------------------------------------------------------------------------------
 --
--- login server ĞÅÏ¢
+-- login server ä¿¡æ¯
 --
 
--- login server µÄ¸öÊı
+-- login server çš„ä¸ªæ•°
 --local LOGIN_SERVER_COUNT = 55;    -- modify by zchw 45-->55
 local LOGIN_SERVER_COUNT = 45;    -- modify by zchw 45-->55
 
 local COMMENDABLE_LOGIN_SERVER_COUNT = 9;
 
--- login server °´Å¥
+-- login server æŒ‰é’®
 local g_BnLoginServer = {};
--- login server ×´Ì¬
+-- login server çŠ¶æ€
 local g_LoginServerStatus = {};
--- login server Ãû×Ö
+-- login server åå­—
 local g_LoginServerName = {};
--- login server ÍÆ¼öµÈ¼¶
+-- login server æ¨èç­‰çº§
 local g_LoginServerCommendableLevel = {};
--- login server ÊÇ·ñĞÂ¿ª
+-- login server æ˜¯å¦æ–°å¼€
 local g_LoginServerIsNew = {};
 
 
 
--- ÍÆ¼ö·şÎñÆ÷°´Å¥
+-- æ¨èæœåŠ¡å™¨æŒ‰é’®
 local g_CommendableBnLoginServer = {};
--- ÍÆ¼ö·şÎñÆ÷Ãû×Ö
+-- æ¨èæœåŠ¡å™¨åå­—
 local g_CommendableLoginServerName = {};
--- ÍÆ¼ö·şÎñÆ÷Index
+-- æ¨èæœåŠ¡å™¨Index
 local g_CommendableLoginServerServerIndex = {};
--- ÍÆ¼ö·şÎñÆ÷ÇøÓòIndex
+-- æ¨èæœåŠ¡å™¨åŒºåŸŸIndex
 local g_CommendableLoginServerAreaIndex = {};
--- ÍÆ¼ö·şÎñÆ÷ÍÆ¼öµÈ¼¶
+-- æ¨èæœåŠ¡å™¨æ¨èç­‰çº§
 local g_CommendableLoginServerCommendableLevel = {};
--- ÍÆ¼ö·şÎñÆ÷ÊÇ·ñĞÂ·ş
+-- æ¨èæœåŠ¡å™¨æ˜¯å¦æ–°æœ
 local g_CommendableLoginServerIsNew = {};
--- ÍÆ¼ö·şÎñÆ÷ ×´Ì¬
+-- æ¨èæœåŠ¡å™¨ çŠ¶æ€
 local g_CommendableLoginServerStatus = {};
 
 
 
 -------------------------------------------------------------------------------
 --
--- ÆäËûĞÅÏ¢
+-- å…¶ä»–ä¿¡æ¯
 --
 
--- µ±Ç°Ñ¡ÔñµÄlogin server
+-- å½“å‰é€‰æ‹©çš„login server
 local g_iCurSelLoginServer = -1;
--- µ±Ç°Ñ¡ÔñµÄÍÆ¼ölogin server index
+-- å½“å‰é€‰æ‹©çš„æ¨èlogin server index
 local g_iCurComSelLoginServer = -1;
 
--- ÇøÓòµÄ¸öÊı
+-- åŒºåŸŸçš„ä¸ªæ•°
 local g_iCurAreaCount = 0;
---¹«²âÇøÓò¸öÊı
+--å…¬æµ‹åŒºåŸŸä¸ªæ•°
 local g_iCurTestAreaCount = 0;
 
 local g_FirstLogin = 1;
@@ -126,42 +126,42 @@ local StatMax = 10;
 
 -------------------------------------------------------------------------------------------------------------
 --
--- º¯ÊıÇø.
+-- å‡½æ•°åŒº.
 --
 --
 
--- ×¢²áonLoadÊÂ¼ş
+-- æ³¨å†ŒonLoadäº‹ä»¶
 function LoginSelectServer_PreLoad()
-	-- ´ò¿ªÑ¡Ôñ·şÎñÆ÷½çÃæ
+	-- æ‰“å¼€é€‰æ‹©æœåŠ¡å™¨ç•Œé¢
 	this:RegisterEvent("GAMELOGIN_OPEN_SELECT_SERVER");
 
-	-- Ñ¡ÔñÇøÓò
+	-- é€‰æ‹©åŒºåŸŸ
 	this:RegisterEvent("GAMELOGIN_CLOSE_SELECT_SERVER");
 
-	-- ´ò¿ªÑ¡Ôñ·şÎñÆ÷½çÃæ
+	-- æ‰“å¼€é€‰æ‹©æœåŠ¡å™¨ç•Œé¢
 	this:RegisterEvent("GAMELOGIN_SELECT_AREA");
 
-	-- Ñ¡Ôñlogin
+	-- é€‰æ‹©login
 	this:RegisterEvent("GAMELOGIN_SELECT_LOGINSERVER");
 
-	-- Ñ¡ÔñÊÇ·ñÊ¹ÓÃ´úÀí
+	-- é€‰æ‹©æ˜¯å¦ä½¿ç”¨ä»£ç†
 	this:RegisterEvent("GAMELOGIN_SELECT_USEPROXY");
 
-	-- ×¢²áÑ¡ÔñÒ»¸ölogin serverÊÂ¼ş
+	-- æ³¨å†Œé€‰æ‹©ä¸€ä¸ªlogin serveräº‹ä»¶
 	this:RegisterEvent("GAMELOGIN_SELECT_LOGIN_SERVER");
 
-	-- Íæ¼Ò½øÈë³¡¾°
+	-- ç©å®¶è¿›å…¥åœºæ™¯
 	this:RegisterEvent("PLAYER_ENTERING_WORLD");
-	--ping½á¹û
+	--pingç»“æœ
 	this:RegisterEvent("PING_RESAULT");
-	--ÉÏ´ÎµÇÂ¼µÄ·şÎñÆ÷
+	--ä¸Šæ¬¡ç™»å½•çš„æœåŠ¡å™¨
 	this:RegisterEvent("GAMELOGIN_LASTSELECT_AREA_AND_SERVER");
 	
 end
 
 function LoginSelectServer_OnLoad()
 	
-	-- µÃµ½ÇøÓò°´Å¥
+	-- å¾—åˆ°åŒºåŸŸæŒ‰é’®
 	g_BnArea[1] = SelectServer_Subarea1;
 	g_BnArea[2] = SelectServer_Subarea2;
 	g_BnArea[3] = SelectServer_Subarea3;
@@ -193,7 +193,7 @@ function LoginSelectServer_OnLoad()
 	g_BntestArea[3] = SelectServer2_Subarea3;
 	g_BntestArea[4] = SelectServer2_Subarea4;
 	--g_BntestArea[5] = SelectServer2_Subarea5;
-	--µÃµ½ÍÆ¼ö·şÎñÆ÷ÁĞ±í
+	--å¾—åˆ°æ¨èæœåŠ¡å™¨åˆ—è¡¨
 	g_CommendableBnLoginServer[1] = SelectServer_Commendable_Subarea1;
 	g_CommendableBnLoginServer[2] = SelectServer_Commendable_Subarea2;
 	g_CommendableBnLoginServer[3] = SelectServer_Commendable_Subarea3;
@@ -217,15 +217,15 @@ function LoginSelectServer_OnLoad()
 	end
 	
 	for i = 1,COMMENDABLE_LOGIN_SERVER_COUNT do
-	 	-- Login server °´Å¥
+	 	-- Login server æŒ‰é’®
 		
 	 	g_CommendableBnLoginServer[i]:SetProperty("CheckMode", "1");
-		-- login server Ãû×Ö
+		-- login server åå­—
 		g_CommendableLoginServerName[i] = "";
 		--login server index
 		g_CommendableLoginServerIndex[i]=-1;
 	end
-	-- µÃµ½·şÎñÆ÷°´Å¥
+	-- å¾—åˆ°æœåŠ¡å™¨æŒ‰é’®
 	g_BnLoginServer[1] = SelectServer_Server1;
 	g_BnLoginServer[2] = SelectServer_Server2;
 	g_BnLoginServer[3] = SelectServer_Server3;
@@ -289,52 +289,52 @@ function LoginSelectServer_OnLoad()
 	
 		
 	for i = 1, LOGIN_SERVER_COUNT do
-	 	-- Login server °´Å¥
+	 	-- Login server æŒ‰é’®
 	 	g_BnLoginServer[i]:SetProperty("CheckMode", "1");
 
-		-- login server ×´Ì¬
+		-- login server çŠ¶æ€
 		g_LoginServerStatus[i] = 0;
 
-		-- login server Ãû×Ö
+		-- login server åå­—
 		g_LoginServerName[i] = "";
 		
 		g_LoginServerCommendableLevel[i]="";
 	end
-	-- Òş²ØËùÓĞÍÆ¼ö·şÎñÆ÷
+	-- éšè—æ‰€æœ‰æ¨èæœåŠ¡å™¨
 	HideAllCommendableBn();	
-	-- µÃµ½·şÎñÆ÷ĞÅÏ¢
+	-- å¾—åˆ°æœåŠ¡å™¨ä¿¡æ¯
 	LoginSelectServer_GetServerInfo();
 
-	-- µÃµ½ÍÆ¼öµÄ·şÎñÆ÷
+	-- å¾—åˆ°æ¨èçš„æœåŠ¡å™¨
 
-	-- µäĞÍÌá¹©ÉÌ
+	-- å…¸å‹æä¾›å•†
 	SelectServer_Line1:SetProperty("CheckMode", "1");
 	SelectServer_Line2:SetProperty("CheckMode", "1");
 	SelectServer_Line3:SetProperty("CheckMode", "1");
 	SelectServer_Line4:SetProperty("CheckMode", "1");
 
-	-- ÍøÂç·şÎñÉÌ°´Å¥.
-	SelectServer_Line1:SetText("µçĞÅ");
-	SelectServer_Line2:SetText("ÍøÍ¨");
-	SelectServer_Line3:SetText("½ÌÓıÍø");
+	-- ç½‘ç»œæœåŠ¡å•†æŒ‰é’®.
+	SelectServer_Line1:SetText("ç”µä¿¡");
+	SelectServer_Line2:SetText("ç½‘é€š");
+	SelectServer_Line3:SetText("æ•™è‚²ç½‘");
 
-	--Í¯Ï² Ìí¼ÓÄ¬ÈÏ°´Å¥
-	SelectServer_Line4:SetText("Ä¬ÈÏ");
+	--ç«¥å–œ æ·»åŠ é»˜è®¤æŒ‰é’®
+	SelectServer_Line4:SetText("é»˜è®¤");
 
 	local strNormalColor = "#cFFF263";
-	SelectServer_Help_Text1:SetText(	strNormalColor.."#e010101#cff0000ºìÉ«±íÊ¾:±¬Âú#cffffff" );
-	SelectServer_Help_Text2:SetText(	strNormalColor.."#e010101#cECE58DÇ³É«±íÊ¾:Á¼ºÃ#cffffff" );
-	SelectServer_Help_Text3:SetText(	strNormalColor.."#e010101#c959595»ÒÉ«±íÊ¾:Î¬»¤#cffffff" );
-	SelectServer_Help_Text4:SetText(	strNormalColor.."#e010101#cff8a00³ÈÉ«±íÊ¾:·±Ã¦#cffffff" );
-	SelectServer_Help_Text5:SetText(	strNormalColor.."#e010101#c4CFA4CÂÌÉ«±íÊ¾:¼«¼Ñ#cffffff" );
+	SelectServer_Help_Text1:SetText(	strNormalColor.."#e010101#cff0000çº¢è‰²è¡¨ç¤º:çˆ†æ»¡#cffffff" );
+	SelectServer_Help_Text2:SetText(	strNormalColor.."#e010101#cECE58Dæµ…è‰²è¡¨ç¤º:è‰¯å¥½#cffffff" );
+	SelectServer_Help_Text3:SetText(	strNormalColor.."#e010101#c959595ç°è‰²è¡¨ç¤º:ç»´æŠ¤#cffffff" );
+	SelectServer_Help_Text4:SetText(	strNormalColor.."#e010101#cff8a00æ©™è‰²è¡¨ç¤º:ç¹å¿™#cffffff" );
+	SelectServer_Help_Text5:SetText(	strNormalColor.."#e010101#c4CFA4Cç»¿è‰²è¡¨ç¤º:æä½³#cffffff" );
 
 
-	-- ´ò¿ª½çÃæ
+	-- æ‰“å¼€ç•Œé¢
 	SelectServer_Frame:SetProperty("AlwaysOnTop", "True");
 
-	-- ÏÈÒş²ØËùÓĞ°´Å¥¡£
+	-- å…ˆéšè—æ‰€æœ‰æŒ‰é’®ã€‚
 	HideAreaBn();
-	-- ÏÈÒş²ØËùÓĞ°´Å¥¡£
+	-- å…ˆéšè—æ‰€æœ‰æŒ‰é’®ã€‚
 	HideTestAreaBn();
 
 
@@ -345,7 +345,7 @@ function HideAllCommendableBn()
 		g_CommendableBnLoginServer[i]:Hide();
 	end;
 end
---ÊÇ·ñ×Ô¶¯°ÑÑ¡ÔñµÄ·şÎñÆ÷ĞòºÅ±ä³É0£¬·ÀÖ¹.txtÎÄ¼şÓĞ´óµÄ±ä¶¯
+--æ˜¯å¦è‡ªåŠ¨æŠŠé€‰æ‹©çš„æœåŠ¡å™¨åºå·å˜æˆ0ï¼Œé˜²æ­¢.txtæ–‡ä»¶æœ‰å¤§çš„å˜åŠ¨
 local autoZero = 0;
 -- OnEvent
 function LoginSelectServer_OnEvent(event)
@@ -354,19 +354,19 @@ function LoginSelectServer_OnEvent(event)
 
 		this:Show();
 
-		-- ÏÔÊ¾´æÔÚµÄÇøÓò°´Å¥¡£
+		-- æ˜¾ç¤ºå­˜åœ¨çš„åŒºåŸŸæŒ‰é’®ã€‚
 		ShowAreaBn();
 		ShowTestAreaBn();
-		--ÏÔÊ¾ÉÏÏÂ·­Ò³
+		--æ˜¾ç¤ºä¸Šä¸‹ç¿»é¡µ
 		UpdateUpAddDownButton();
 
-		-- ²¥·Å±³¾°ÒôÀÖ
+		-- æ’­æ”¾èƒŒæ™¯éŸ³ä¹
 		if(g_idBackSound == -1) then
 			g_idBackSound = Sound:PlaySound(113, true);
 		end
 		
 		--if( 1 == g_FirstLogin ) then
-           -- GameProduceLogin:ShowMessageBox( "    Ä¿Ç°Ö»¿ª·ÅÁËÒ»Ì¨ÍøÍ¨·şÎñÆ÷ÓÃÓÚ²âÊÔ£¬Èç¹ûÄúÊÇµçĞÅµÄÓÃ»§£¬ÇëÔÚ·şÎñÆ÷Ñ¡Ôñ½çÃæµÄÓÒ±ßÑ¡Ôñ¡°µçĞÅ¡±½øĞĞµÇÂ¼£¬ÕâÑù²ÅÄÜÊ¹ÓÃ»¥Áª»¥Í¨¹¦ÄÜÒÔ±£Ö¤ÄúµÄÁ¬½ÓËÙ¶È¡£", "OK", "1" );
+           -- GameProduceLogin:ShowMessageBox( "    ç›®å‰åªå¼€æ”¾äº†ä¸€å°ç½‘é€šæœåŠ¡å™¨ç”¨äºæµ‹è¯•ï¼Œå¦‚æœæ‚¨æ˜¯ç”µä¿¡çš„ç”¨æˆ·ï¼Œè¯·åœ¨æœåŠ¡å™¨é€‰æ‹©ç•Œé¢çš„å³è¾¹é€‰æ‹©â€œç”µä¿¡â€è¿›è¡Œç™»å½•ï¼Œè¿™æ ·æ‰èƒ½ä½¿ç”¨äº’è”äº’é€šåŠŸèƒ½ä»¥ä¿è¯æ‚¨çš„è¿æ¥é€Ÿåº¦ã€‚", "OK", "1" );
 		    --g_FirstLogin = 0
 		--end
 		
@@ -374,14 +374,14 @@ function LoginSelectServer_OnEvent(event)
 	end
 
 
-	-- ¹Ø±Õ½çÃæ
+	-- å…³é—­ç•Œé¢
 	if( event == "GAMELOGIN_CLOSE_SELECT_SERVER") then
 
 		this:Hide();
 		return;
 	end
 
-	-- Ñ¡ÔñÒ»¸ölogin server
+	-- é€‰æ‹©ä¸€ä¸ªlogin server
 	if( event == "GAMELOGIN_SELECT_LOGIN_SERVER") then
 		local num = tonumber(arg0);
 		for aindex = 1,g_iCurAreaCount do 
@@ -403,7 +403,7 @@ function LoginSelectServer_OnEvent(event)
 		return;
 	end
 
-	-- Ñ¡ÔñÇøÓò
+	-- é€‰æ‹©åŒºåŸŸ
 	if( event == "GAMELOGIN_SELECT_AREA") then
 		autoZero = 0;
 
@@ -422,14 +422,14 @@ function LoginSelectServer_OnEvent(event)
 				return;
 			end
 		end
-		--ÍêÈ«Ã»ÓĞÕÒµ½£¬ËµÃ÷ÎÄ¼şÓĞÁË´óµÄ±ä»¯
+		--å®Œå…¨æ²¡æœ‰æ‰¾åˆ°ï¼Œè¯´æ˜æ–‡ä»¶æœ‰äº†å¤§çš„å˜åŒ–
 		CurPage = 0;
 		autoZero = 1;
 		SelectServer_SelectAreaServer(1 - CurPage*PageSize -1);
 		return;
 	end;
 
-	-- Ñ¡Ôñlogin
+	-- é€‰æ‹©login
 	if( event == "GAMELOGIN_SELECT_LOGINSERVER") then
 		if ( g_BnLoginServer[tonumber(arg0)+1]:GetProperty("Disabled")=="False") then
 			if(autoZero == 0 )then
@@ -442,8 +442,8 @@ function LoginSelectServer_OnEvent(event)
 		return;
 	end;
 
-	-- Ê¹ÓÃ´úÀí
-	--Í¯Ï²
+	-- ä½¿ç”¨ä»£ç†
+	--ç«¥å–œ
 	if( event == "GAMELOGIN_SELECT_USEPROXY" ) then
 		if tonumber(arg0) == 1 then
 			--SelectServer_Deputize:SetCheck(1)
@@ -460,14 +460,14 @@ function LoginSelectServer_OnEvent(event)
 		return;
 	end;
 	
-	-- ½øÈë³¡¾°£¬Í£Ö¹±³¾°ÒôÀÖ
+	-- è¿›å…¥åœºæ™¯ï¼Œåœæ­¢èƒŒæ™¯éŸ³ä¹
 	if( event == "PLAYER_ENTERING_WORLD") then
 		if(g_idBackSound ~= -1) then
 			Sound:StopSound(g_idBackSound);
 			g_idBackSound = -1;
 		end
 	end
-	--ping½á¹û
+	--pingç»“æœ
 	if(event == "PING_RESAULT")then
 		local num = tonumber(arg0)
 		if(num ~=nil)then
@@ -483,15 +483,15 @@ function LoginSelectServer_OnEvent(event)
 				--else
 				--	SelectServer_Text2:SetText(NetSpeed[2]);
 				end
-				SelectServer_Text2:SetToolTip("ÍøÂçÑÓÊ±:"..num);
+				SelectServer_Text2:SetToolTip("ç½‘ç»œå»¶æ—¶:"..num);
 			else
 				SelectServer_Text2:SetText(NetSpeed[3]);			
-				SelectServer_Text2:SetToolTip("ÍøÂçÑÓÊ±:Î´Öª");			
+				SelectServer_Text2:SetToolTip("ç½‘ç»œå»¶æ—¶:æœªçŸ¥");			
 			end
 		end
 	end
 
-	--ÉÏ´ÎµÇÂ¼·şÎñÆ÷
+	--ä¸Šæ¬¡ç™»å½•æœåŠ¡å™¨
 	if( event == "GAMELOGIN_LASTSELECT_AREA_AND_SERVER") then
 		local numArea =-1;
 		local numServer = -1;
@@ -526,11 +526,11 @@ function LoginSelectServer_OnEvent(event)
 					SelectServer_Server_Last:SetCheck(1);
 				end
 			else
-				SelectServer_Server_Last:SetText("ÎŞ");
+				SelectServer_Server_Last:SetText("æ— ");
 				SelectServer_Server_Last:Disable();
 			end
 		else
-			SelectServer_Server_Last:SetText("ÎŞ");
+			SelectServer_Server_Last:SetText("æ— ");
 			SelectServer_Server_Last:Disable();
 		end
 		return;
@@ -563,17 +563,17 @@ end
 
 --------------------------------------------------------------------------------------------------------------
 --
--- µÃµ½·şÎñÆ÷ĞÅÏ¢
+-- å¾—åˆ°æœåŠ¡å™¨ä¿¡æ¯
 --
 
 function LoginSelectServer_GetServerInfo()
 
 	 	local iCurAreaCount = GameProduceLogin:GetServerAreaCount();
-	 	local strAreaName = "ÎŞ·şÎñÆ÷";
+	 	local strAreaName = "æ— æœåŠ¡å™¨";
 		local iLoginServerCount = -1;
 		local ServerName;
 		local ServerStatus;
-		--ÍÆ¼öµÈ¼¶
+		--æ¨èç­‰çº§
 		local RecommendLevel; 
 		local IsNew;
 		indexForCommendable = 0;
@@ -586,17 +586,17 @@ function LoginSelectServer_GetServerInfo()
 				break;
 			end
 			local areaname = GameProduceLogin:GetServerAreaName(index);
-	 		-- µÃµ½ÇøÓòÃû×Ö.
+	 		-- å¾—åˆ°åŒºåŸŸåå­—.
 			local i = string.find(areaname,"-");
 			if(i~=nil and i<string.len(areaname)) then
-				if(string.sub(areaname,1,i-1)=="ÍøÍ¨" and testindex<LOGIN_SERVER_TESTAREA_COUNT)then
+				if(string.sub(areaname,1,i-1)=="ç½‘é€š" and testindex<LOGIN_SERVER_TESTAREA_COUNT)then
 					testindex = testindex +1;
 					g_testAreaName[testindex] = string.sub(areaname,i+1);
 					g_testAreaDis[testindex] = GameProduceLogin:GetServerAreaDis(index);
 					g_testAreaIndex[testindex] = index;
 					tuijian = 1;
 					g_testAreaTip[testindex] = GameProduceLogin:GetServerAreaDis(index);
-				elseif(string.sub(areaname,1,i-1)=="¹«²â" and nomalindex< EFFECT_LOGIN_SERVER_AREA_COUNT) then
+				elseif(string.sub(areaname,1,i-1)=="å…¬æµ‹" and nomalindex< EFFECT_LOGIN_SERVER_AREA_COUNT) then
 					nomalindex = nomalindex +1;
 	 				g_AreaName[nomalindex] = string.sub(areaname,i+1);
 					g_AreaDis[nomalindex] = GameProduceLogin:GetServerAreaDis(index);
@@ -612,12 +612,12 @@ function LoginSelectServer_GetServerInfo()
 				tuijian = 1;
 				g_AreaTip[nomalindex] = GameProduceLogin:GetServerAreaDis(index);
 			end;
-	 		-- ÉèÖÃÃû×Ö.
+	 		-- è®¾ç½®åå­—.
 			iLoginServerCount = GameProduceLogin:GetAreaLoginServerCount(index);
 			if(iLoginServerCount > LOGIN_SERVER_COUNT) then
 				iLoginServerCount=LOGIN_SERVER_COUNT;
 			end
-			--µÃµ½ÍÆ¼ö·şÎñÆ÷ÁĞ±í
+			--å¾—åˆ°æ¨èæœåŠ¡å™¨åˆ—è¡¨
 			if(tuijian==1)then 
 				for i=0,iLoginServerCount-1 do
 					if(indexForCommendable>=COMMENDABLE_LOGIN_SERVER_COUNT) then
@@ -630,7 +630,7 @@ function LoginSelectServer_GetServerInfo()
 					RecommendLevel,
 					IsNew
 						= GameProduceLogin:GetAreaLoginServerInfo(index, i);
-						-- ÍÆ¼ö·şÎñÆ÷id
+						-- æ¨èæœåŠ¡å™¨id
 					if(RecommendLevel>0 and indexForCommendable <COMMENDABLE_LOGIN_SERVER_COUNT and ServerStatus ~= StatMax) then
 						indexForCommendable = indexForCommendable + 1;
 						g_CommendableLoginServerName[indexForCommendable] = ServerName;
@@ -653,13 +653,13 @@ function LoginSelectServer_GetServerInfo()
 				local tmpAreaName = GameProduceLogin:GetServerAreaName(g_CommendableLoginServerAreaIndex[i]);
 				local _i = string.find(tmpAreaName,"-");
 				if(_i~=nil and _i<string.len(tmpAreaName)) then
-					if(string.sub(tmpAreaName,1,_i-1)=="¹«²â" or string.sub(tmpAreaName,1,_i-1)=="ÍøÍ¨")then
+					if(string.sub(tmpAreaName,1,_i-1)=="å…¬æµ‹" or string.sub(tmpAreaName,1,_i-1)=="ç½‘é€š")then
 						tmpAreaName = string.sub(tmpAreaName,_i+1);
 					end
 				end
 				strName =tmpAreaName.."-"..g_CommendableLoginServerName[i];								
 				if(g_CommendableLoginServerIsNew[i]~=0)then
-					strName =strName.."(ĞÂ)";
+					strName =strName.."(æ–°)";
 				end
 				if(0 == g_CommendableLoginServerStatus[i]) then
 					strName = "#cff0000#e010101"..strName.."#cffffff";
@@ -686,7 +686,7 @@ function LoginSelectServer_GetServerInfo()
 		g_iCurTestAreaCount = testindex;
 end
 
---ÅÅĞòÁĞ£¬´ÓĞ¡µ½´ó
+--æ’åºåˆ—ï¼Œä»å°åˆ°å¤§
 function SortCommendableLoginServer()
 
 	local TotalCount = indexForCommendable;
@@ -724,22 +724,22 @@ function SortCommendableLoginServer()
 end;
 --------------------------------------------------------------------------------------------------------------
 --
--- Ñ¡ÔñÒ»¸ö¹«²âÇøÓò
+-- é€‰æ‹©ä¸€ä¸ªå…¬æµ‹åŒºåŸŸ
 --
 function SelectServer_SelectTestAreaServer(index)
-	-- ¼ÇÂ¼µ±Ç°Ñ¡ÔñµÄÇøÓòË÷Òı.	
+	-- è®°å½•å½“å‰é€‰æ‹©çš„åŒºåŸŸç´¢å¼•.	
 	g_iCurSelArea = g_testAreaIndex[index+1];
 
-	-- ÉèÖÃÑ¡ÔñµÄÃû×Ö
+	-- è®¾ç½®é€‰æ‹©çš„åå­—
 	g_iCurSelAreaName = g_testAreaName[index+1];
 
-	-- ÉèÖÃ°´Å¥Ñ¡ÖĞ×´Ì¬.
+	-- è®¾ç½®æŒ‰é’®é€‰ä¸­çŠ¶æ€.
 	g_BntestArea[index+1]:SetCheck(1);
 
-	-- Òş²ØÇøÓò°´Å¥.
+	-- éšè—åŒºåŸŸæŒ‰é’®.
 	SelectServer_HideLoginServerBn();
 
-	-- µÃµ½login serverµÄĞÅÏ¢
+	-- å¾—åˆ°login serverçš„ä¿¡æ¯
 	local iLoginServerCount = GameProduceLogin:GetAreaLoginServerCount(g_iCurSelArea);
 
 	if(iLoginServerCount > LOGIN_SERVER_COUNT) then
@@ -755,23 +755,23 @@ function SelectServer_SelectTestAreaServer(index)
 end
 --------------------------------------------------------------------------------------------------------------
 --
--- Ñ¡ÔñÒ»¸öÇøÓò
+-- é€‰æ‹©ä¸€ä¸ªåŒºåŸŸ
 --
 function SelectServer_SelectAreaServer(index)
 
-	-- ¼ÇÂ¼µ±Ç°Ñ¡ÔñµÄÇøÓòË÷Òı.	
+	-- è®°å½•å½“å‰é€‰æ‹©çš„åŒºåŸŸç´¢å¼•.	
 	g_iCurSelArea = g_AreaIndex[index+CurPage*PageSize+1];
 
-	-- ÉèÖÃÑ¡ÔñµÄÃû×Ö
+	-- è®¾ç½®é€‰æ‹©çš„åå­—
 	g_iCurSelAreaName = g_AreaName[index+CurPage*PageSize+1];
 
-	-- ÉèÖÃ°´Å¥Ñ¡ÖĞ×´Ì¬.
+	-- è®¾ç½®æŒ‰é’®é€‰ä¸­çŠ¶æ€.
 	g_BnArea[index+1]:SetCheck(1);
 
-	-- Òş²ØÇøÓò°´Å¥.
+	-- éšè—åŒºåŸŸæŒ‰é’®.
 	SelectServer_HideLoginServerBn();
 
-	-- µÃµ½login serverµÄĞÅÏ¢
+	-- å¾—åˆ°login serverçš„ä¿¡æ¯
 	local iLoginServerCount = GameProduceLogin:GetAreaLoginServerCount(g_iCurSelArea);
 
 	if(iLoginServerCount > LOGIN_SERVER_COUNT) then
@@ -804,11 +804,11 @@ end
 --end
 --------------------------------------------------------------------------------------------------------------
 --
--- ´ÓÍÆ¼öÁĞ±íÀïÑ¡ÔñÒ»¸ölogin server
+-- ä»æ¨èåˆ—è¡¨é‡Œé€‰æ‹©ä¸€ä¸ªlogin server
 --
 --------------------------------------------------------------------------------------------------------------
 function Commendable_SelectLoginServer(index)
-	-- ÉèÖÃ°´Å¥Ñ¡ÖĞ×´Ì¬.
+	-- è®¾ç½®æŒ‰é’®é€‰ä¸­çŠ¶æ€.
 	if(g_CommendableBnLoginServer[index]:GetProperty("Disabled")=="True") then
 		return;
 	end
@@ -821,24 +821,24 @@ function Commendable_SelectLoginServer(index)
 	
 	if(0 == g_CommendableLoginServerStatus[index]) then
 
-		strLoginServerStatus = "#e010101#cff0000±¬Âú#cffffff";
+		strLoginServerStatus = "#e010101#cff0000çˆ†æ»¡#cffffff";
 	elseif(1 == g_CommendableLoginServerStatus[index]) then
 
-		strLoginServerStatus = "#e010101#cff8a00·±Ã¦#cffffff";
+		strLoginServerStatus = "#e010101#cff8a00ç¹å¿™#cffffff";
 	elseif(2 == g_CommendableLoginServerStatus[index]) then
 
-		strLoginServerStatus = "#e010101#cECE58DÁ¼ºÃ#cffffff";
+		strLoginServerStatus = "#e010101#cECE58Dè‰¯å¥½#cffffff";
 	elseif(3 == g_CommendableLoginServerStatus[index]) then
 
-		strLoginServerStatus = "#e010101#c4CFA4C¼«¼Ñ#cffffff";
+		strLoginServerStatus = "#e010101#c4CFA4Cæä½³#cffffff";
 	else
 
-		strLoginServerStatus = "#e010101#c959595Î¬»¤#cffffff";
+		strLoginServerStatus = "#e010101#c959595ç»´æŠ¤#cffffff";
 	end
 	
 	i = g_CommendableLoginServerAreaIndex[index]
 	SelectServer_ShowServerInfo(g_AreaName[i+1].."  "..g_CommendableLoginServerName[index], "", strLoginServerStatus);
-	--Í¬Ê±¸üĞÂÏÂÃæµÄ·şÎñÆ÷ºÍserver
+	--åŒæ—¶æ›´æ–°ä¸‹é¢çš„æœåŠ¡å™¨å’Œserver
 	g_iCurSelArea = g_CommendableLoginServerAreaIndex[index];
 	for aindex = 1,g_iCurAreaCount do 
 		if(g_iCurSelArea == g_AreaIndex[aindex]) then
@@ -859,7 +859,7 @@ function Commendable_SelectLoginServer(index)
 	end
 end;
 --
--- Ñ¡ÔñÒ»¸ölogin server
+-- é€‰æ‹©ä¸€ä¸ªlogin server
 --
 function SelectServer_SelectLoginServer(index,flash)
 	if(g_BnLoginServer[index+1]:GetProperty("Disabled")=="True") then
@@ -868,7 +868,7 @@ function SelectServer_SelectLoginServer(index,flash)
 	
 	GameProduceLogin:SetPingServer(g_iCurSelArea,index);
 	--EnableSelect();
-	-- ¼ÇÂ¼µ±Ç°Ñ¡ÔñµÄlogin server
+	-- è®°å½•å½“å‰é€‰æ‹©çš„login server
 	g_iCurSelLoginServer = index;
 
 	if(g_LastServer == g_iCurSelLoginServer and g_LastArea == g_iCurSelArea)then
@@ -882,31 +882,31 @@ function SelectServer_SelectLoginServer(index,flash)
 	else
 		NotFlashAll();
 	end
-	-- ÉèÖÃ°´Å¥Ñ¡ÖĞ×´Ì¬.
+	-- è®¾ç½®æŒ‰é’®é€‰ä¸­çŠ¶æ€.
 	g_BnLoginServer[index+1]:SetCheck(1);
 	local strLoginServerStatus = "???";
 
 	if(0 == g_LoginServerStatus[index+1]) then
 
-		strLoginServerStatus = "#e010101#cff0000±¬Âú#cffffff";
+		strLoginServerStatus = "#e010101#cff0000çˆ†æ»¡#cffffff";
 	elseif(1 == g_LoginServerStatus[index+1]) then
 
-		strLoginServerStatus = "#e010101#c9E5705·±Ã¦#cffffff";
+		strLoginServerStatus = "#e010101#c9E5705ç¹å¿™#cffffff";
 	elseif(2 == g_LoginServerStatus[index+1]) then
 
-		strLoginServerStatus = "#e010101#cECE58DÁ¼ºÃ#cffffff";
+		strLoginServerStatus = "#e010101#cECE58Dè‰¯å¥½#cffffff";
 	elseif(3 == g_LoginServerStatus[index+1]) then
 
-		strLoginServerStatus = "#e010101#c4CFA4C¼«¼Ñ#cffffff";
+		strLoginServerStatus = "#e010101#c4CFA4Cæä½³#cffffff";
 	else
 
-		strLoginServerStatus = "#e010101#c959595Î¬»¤#cffffff";
+		strLoginServerStatus = "#e010101#c959595ç»´æŠ¤#cffffff";
 	end
 
-	-- ÉèÖÃĞÅÏ¢
+	-- è®¾ç½®ä¿¡æ¯
 	SelectServer_ShowServerInfo(g_iCurSelAreaName.."  "..g_LoginServerName[index+1], "", strLoginServerStatus);
 
-	--¸üĞÂÍÆ¼ö·şÎñÆ÷
+	--æ›´æ–°æ¨èæœåŠ¡å™¨
 	local tmpNum = 0
 	--if(g_LoginServerCommendableLevel[index+1]>0) then
 		for i = 1,indexForCommendable do
@@ -935,7 +935,7 @@ function NotFlashAll()
 end
 --------------------------------------------------------------------------------------------------------------
 --
--- µÃµ½Ò»¸ölogin serverĞÅÏ¢²¢ÏÔÊ¾
+-- å¾—åˆ°ä¸€ä¸ªlogin serverä¿¡æ¯å¹¶æ˜¾ç¤º
 --
 function SelectServer_GetAndShowLoginServer(index)
 
@@ -953,7 +953,7 @@ function SelectServer_GetAndShowLoginServer(index)
 	local strName = g_LoginServerName[index+1];
 
 	if(g_LoginServerIsNew[index+1]==1)then
-		strName = strName.."(ĞÂ)";
+		strName = strName.."(æ–°)";
 	end;
 
 	if(0 == g_LoginServerStatus[index+1]) then
@@ -982,7 +982,7 @@ end
 
 --------------------------------------------------------------------------------------------------------------
 --
--- Òş²Ølogin server °´Å¥
+-- éšè—login server æŒ‰é’®
 --
 function SelectServer_HideLoginServerBn()
 
@@ -995,24 +995,24 @@ end
 
 --------------------------------------------------------------------------------------------------------------
 --
--- Òş²Ølogin server °´Å¥
+-- éšè—login server æŒ‰é’®
 --
 function SelectServer_ShowServerInfo(ServerName, NetStatus, ServerStatus)
 	SelectServer_Text2:SetToolTip("");
-	SelectServer_Text1:SetText("#e010101ÄúÑ¡ÔñµÄ·şÎñÆ÷ÊÇ:#cFFFF00"..ServerName);
+	SelectServer_Text1:SetText("#e010101æ‚¨é€‰æ‹©çš„æœåŠ¡å™¨æ˜¯:#cFFFF00"..ServerName);
 	SelectServer_Text2:SetText(NetStatus);
-	SelectServer_Text3:SetText("#e010101×´Ì¬:"..ServerStatus);
+	SelectServer_Text3:SetText("#e010101çŠ¶æ€:"..ServerStatus);
 
 end
 
 ---------------------------------------------------------------------------------------------------------------
 --
---  È·¶¨Ñ¡ÔñÒ»¸ö·şÎñÆ÷
+--  ç¡®å®šé€‰æ‹©ä¸€ä¸ªæœåŠ¡å™¨
 --
 function SelectServer_SelectOk()
 
-	-- Á¬½Óµ½login server
-	--Í¯Ï²£¬²»Ê¹ÓÃ´úÀí,´«Èë·şÎñÆ÷¹©Ó¦ÉÌ
+	-- è¿æ¥åˆ°login server
+	--ç«¥å–œï¼Œä¸ä½¿ç”¨ä»£ç†,ä¼ å…¥æœåŠ¡å™¨ä¾›åº”å•†
 	AxTrace(0,2,"g_iCurSelArea="..g_iCurSelArea )
 	AxTrace(0,2,"g_iCurComSelLoginServer ="..g_iCurComSelLoginServer )
 	AxTrace(0,2,"g_iCurSelLoginServer ="..g_iCurSelLoginServer )
@@ -1023,7 +1023,7 @@ end
 
 ---------------------------------------------------------------------------------------------------------------
 --
---   ×Ô¶¯Ñ¡ÔñÒ»¸ö·şÎñÆ÷
+--   è‡ªåŠ¨é€‰æ‹©ä¸€ä¸ªæœåŠ¡å™¨
 --
 function SelectServer_SelectAuto()
 	GameProduceLogin:AutoSelLoginServer(g_iNetProvide);
@@ -1031,7 +1031,7 @@ end
 
 ---------------------------------------------------------------------------------------------------------------
 --
---   ÍË³öÓÎÏ·
+--   é€€å‡ºæ¸¸æˆ
 --
 function SelectServer_Exit()
 	QuitApplication("quit");
@@ -1040,14 +1040,14 @@ end
 
 ---------------------------------------------------------------------------------------------------------------
 --
--- Ñ¡ÔñµçĞÅ
+-- é€‰æ‹©ç”µä¿¡
 --
 function SelectServer_SelectLine1()
 
-	-- Ñ¡ÔñµçĞÅ
+	-- é€‰æ‹©ç”µä¿¡
 	g_iNetProvide = 0;
 
-	-- Ñ¡ÖĞµçĞÅ
+	-- é€‰ä¸­ç”µä¿¡
 	SelectServer_Line1:SetCheck(1);
 	SelectServer_Line2:SetCheck(0);
 	SelectServer_Line3:SetCheck(0);
@@ -1060,14 +1060,14 @@ end
 
 ---------------------------------------------------------------------------------------------------------------
 --
--- Ñ¡ÔñÍøÍ¨
+-- é€‰æ‹©ç½‘é€š
 --
 function SelectServer_SelectLine2()
 
-	-- Ñ¡ÔñÍøÍ¨
+	-- é€‰æ‹©ç½‘é€š
 	g_iNetProvide = 1;
 
-	-- Ñ¡ÖĞÍøÍ¨
+	-- é€‰ä¸­ç½‘é€š
 	SelectServer_Line1:SetCheck(0);
 	SelectServer_Line2:SetCheck(1);
 	SelectServer_Line3:SetCheck(0);
@@ -1079,14 +1079,14 @@ end
 
 ---------------------------------------------------------------------------------------------------------------
 --
--- ÆäËû
+-- å…¶ä»–
 --
 function SelectServer_SelectLine3()
 
-	-- Ñ¡ÔñÆäËû
+	-- é€‰æ‹©å…¶ä»–
 	g_iNetProvide = 2;
 
-	-- Ñ¡ÖĞÆäËû
+	-- é€‰ä¸­å…¶ä»–
 	SelectServer_Line1:SetCheck(0);
 	SelectServer_Line2:SetCheck(0);
 	SelectServer_Line3:SetCheck(1);
@@ -1097,14 +1097,14 @@ end
 
 ---------------------------------------------------------------------------------------------------------------
 --
--- Ä¬ÈÏ tongxi
+-- é»˜è®¤ tongxi
 --
 function SelectServer_SelectLine4()
 
-	-- Ñ¡ÔñÄ¬ÈÏ
+	-- é€‰æ‹©é»˜è®¤
 	g_iNetProvide = 3;
 
-	-- Ñ¡ÖĞÆäËû
+	-- é€‰ä¸­å…¶ä»–
 	SelectServer_Line1:SetCheck(0);
 	SelectServer_Line2:SetCheck(0);
 	SelectServer_Line3:SetCheck(0);
@@ -1114,36 +1114,36 @@ end
 
 ---------------------------------------------------------------------------------------------------------------
 --
--- Êó±ê½øÈëÍÆ¼ö·şÎñÆ÷
+-- é¼ æ ‡è¿›å…¥æ¨èæœåŠ¡å™¨
 --
 function Commendable_LoginServer_MouseEnter(index)
 
-	SelectServer_Info:SetText(g_CommendableLoginServerName[index]..tostring(" ·şÎñÆ÷"));
+	SelectServer_Info:SetText(g_CommendableLoginServerName[index]..tostring(" æœåŠ¡å™¨"));
 end
 
 ---------------------------------------------------------------------------------------------------------------
 --
--- Êó±ê½øÈëÇøÓò°´Å¥
+-- é¼ æ ‡è¿›å…¥åŒºåŸŸæŒ‰é’®
 --
 function SelectServer_LoginServer_MouseEnter(index)
 
-	SelectServer_Info:SetText(g_LoginServerName[index+1]..tostring(" ·şÎñÆ÷"));
+	SelectServer_Info:SetText(g_LoginServerName[index+1]..tostring(" æœåŠ¡å™¨"));
 end
 
 ---------------------------------------------------------------------------------------------------------------
 --
--- Êó±ê½øÈëÇøÓò°´Å¥
+-- é¼ æ ‡è¿›å…¥åŒºåŸŸæŒ‰é’®
 --
 function SelectServer_LastServer_MouseEnter()
 	if(g_LastServerName~="") then
-		SelectServer_Info:SetText(g_LastServerName..tostring(" ·şÎñÆ÷"));
+		SelectServer_Info:SetText(g_LastServerName..tostring(" æœåŠ¡å™¨"));
 	else
 		SelectServer_Info:SetText("");
 	end
 end
 ---------------------------------------------------------------------------------------------------------------
 --
--- Êó±êÀë¿ªÇøÓò°´Å¥
+-- é¼ æ ‡ç¦»å¼€åŒºåŸŸæŒ‰é’®
 --
 function SelectServer_LastServer_MouseLeave()
 
@@ -1151,7 +1151,7 @@ function SelectServer_LastServer_MouseLeave()
 end
 ---------------------------------------------------------------------------------------------------------------
 --
--- Êó±êÀë¿ªÇøÓò°´Å¥
+-- é¼ æ ‡ç¦»å¼€åŒºåŸŸæŒ‰é’®
 --
 function SelectServer_LoginServer_MouseLeave(index)
 
@@ -1159,7 +1159,7 @@ function SelectServer_LoginServer_MouseLeave(index)
 end
 ---------------------------------------------------------------------------------------------------------------
 --
--- Êó±ê¹«²âÇøÓò °´Å¥
+-- é¼ æ ‡å…¬æµ‹åŒºåŸŸ æŒ‰é’®
 --
 function SelectServer_TestArea_MouseEnter(index)
 
@@ -1169,7 +1169,7 @@ end
 
 ---------------------------------------------------------------------------------------------------------------
 --
--- Êó±êÀë¿ª¹«²âÇøÓò °´Å¥
+-- é¼ æ ‡ç¦»å¼€å…¬æµ‹åŒºåŸŸ æŒ‰é’®
 --
 function SelectServer_TestArea_MouseLeave(index)
 
@@ -1179,7 +1179,7 @@ end;
 
 ---------------------------------------------------------------------------------------------------------------
 --
--- Êó±ê½øÈëlogin server °´Å¥
+-- é¼ æ ‡è¿›å…¥login server æŒ‰é’®
 --
 function SelectServer_Area_MouseEnter(index)
 
@@ -1189,7 +1189,7 @@ end
 
 ---------------------------------------------------------------------------------------------------------------
 --
--- Êó±êÀë¿ªlogin server °´Å¥
+-- é¼ æ ‡ç¦»å¼€login server æŒ‰é’®
 --
 function SelectServer_Area_MouseLeave(index)
 
@@ -1199,7 +1199,7 @@ end;
 
 function SelectServer_Accept_MouseEnter()
 
-	SelectServer_Info:SetText("µã»÷½øÈëËùÑ¡Ôñ·şÎñÆ÷.");
+	SelectServer_Info:SetText("ç‚¹å‡»è¿›å…¥æ‰€é€‰æ‹©æœåŠ¡å™¨.");
 end;
 
 function SelectServer_MouseLeave()
@@ -1209,13 +1209,13 @@ end;
 
 function SelectServer_Automatic_MouseEnter()
 
-	SelectServer_Info:SetText("°ïÖúÄãÑ¡Ôñ×î¼ÑµÄ·şÎñÆ÷.");
+	SelectServer_Info:SetText("å¸®åŠ©ä½ é€‰æ‹©æœ€ä½³çš„æœåŠ¡å™¨.");
 end;
 
 
 function SelectServer_Cancel_MouseEnter()
 
-	SelectServer_Info:SetText("ÍË³öÌìÁú°Ë²¿.");
+	SelectServer_Info:SetText("é€€å‡ºå¤©é¾™å…«éƒ¨.");
 end;
 
 
@@ -1224,24 +1224,24 @@ function SelectServer_MouseEnter_Line(index)
 
 	if(1 == index) then
 
-		SelectServer_Info:SetText("Èç¹ûÊÇµçĞÅ½ÓÈë£¬ÇëÑ¡ÖĞºóµãÏÂ·½¡°×Ô¶¯Ñ¡Ôñ¡±");
+		SelectServer_Info:SetText("å¦‚æœæ˜¯ç”µä¿¡æ¥å…¥ï¼Œè¯·é€‰ä¸­åç‚¹ä¸‹æ–¹â€œè‡ªåŠ¨é€‰æ‹©â€");
 		return;
 	end
 
 	if(2 == index) then
 
-		SelectServer_Info:SetText("Èç¹ûÊÇÍøÍ¨½ÓÈë£¬ÇëÑ¡ÖĞºóµãÏÂ·½¡°×Ô¶¯Ñ¡Ôñ¡±");
+		SelectServer_Info:SetText("å¦‚æœæ˜¯ç½‘é€šæ¥å…¥ï¼Œè¯·é€‰ä¸­åç‚¹ä¸‹æ–¹â€œè‡ªåŠ¨é€‰æ‹©â€");
 		return;
 	end
 
 	if(3 == index) then
 
-		SelectServer_Info:SetText("Èç¹ûÊÇ½ÌÓıÍø½ÓÈë£¬ÇëÑ¡ÖĞºóµãÏÂ·½¡°×Ô¶¯Ñ¡Ôñ¡±");
+		SelectServer_Info:SetText("å¦‚æœæ˜¯æ•™è‚²ç½‘æ¥å…¥ï¼Œè¯·é€‰ä¸­åç‚¹ä¸‹æ–¹â€œè‡ªåŠ¨é€‰æ‹©â€");
 		return;
 	end
 
 	if(4 == index) then
-		SelectServer_Info:SetText("Ä¬ÈÏ½ÓÈë,ÇëÊÖ¶¯Ñ¡ÔñÒ»¸ö·şÎñÆ÷");
+		SelectServer_Info:SetText("é»˜è®¤æ¥å…¥,è¯·æ‰‹åŠ¨é€‰æ‹©ä¸€ä¸ªæœåŠ¡å™¨");
 		return;
 	end
 end
@@ -1291,32 +1291,32 @@ function ShowAreaBn()
 end
 
 
--- Ë«»÷Ñ¡ÔñÒ»¸ö·şÎñÆ÷¡£
+-- åŒå‡»é€‰æ‹©ä¸€ä¸ªæœåŠ¡å™¨ã€‚
 function SelectServer_ConfirmSelectLine(index)
 	AxTrace(0,2,"7" )
-	-- Ñ¡ÖĞÒ»¸ölogin server
+	-- é€‰ä¸­ä¸€ä¸ªlogin server
 	SelectServer_SelectLoginServer(index,0);
 
-	-- È·ÈÏÑ¡ÔñÒ»¸ö·şÎñÆ÷
+	-- ç¡®è®¤é€‰æ‹©ä¸€ä¸ªæœåŠ¡å™¨
 	SelectServer_SelectOk();
 
 end;
--- Ë«»÷Ñ¡ÔñÒ»¸ö·şÎñÆ÷¡£
+-- åŒå‡»é€‰æ‹©ä¸€ä¸ªæœåŠ¡å™¨ã€‚
 function SelectServer_LastConfirmSelectLine()
 
-	-- Ñ¡ÖĞÒ»¸ölogin server
+	-- é€‰ä¸­ä¸€ä¸ªlogin server
 	SelectServer_SelectLastServer();
 
-	-- È·ÈÏÑ¡ÔñÒ»¸ö·şÎñÆ÷
+	-- ç¡®è®¤é€‰æ‹©ä¸€ä¸ªæœåŠ¡å™¨
 	SelectServer_SelectOk();
 
 end;
--- Ë«»÷Ñ¡ÔñÒ»¸ö·şÎñÆ÷¡£
+-- åŒå‡»é€‰æ‹©ä¸€ä¸ªæœåŠ¡å™¨ã€‚
 function Commendable_ConfirmSelectLine(index)
-	-- Ñ¡ÖĞÒ»¸ölogin server
+	-- é€‰ä¸­ä¸€ä¸ªlogin server
 	Commendable_SelectLoginServer(index);
 
-	-- È·ÈÏÑ¡ÔñÒ»¸ö·şÎñÆ÷
+	-- ç¡®è®¤é€‰æ‹©ä¸€ä¸ªæœåŠ¡å™¨
 	SelectServer_SelectOk();
 
 end;
@@ -1335,7 +1335,7 @@ function SelectServer_PageDown()
 end;
 
 function ShowPage()
-	--¸üĞÂ·­Ò³°´Å¥
+	--æ›´æ–°ç¿»é¡µæŒ‰é’®
 	--UpdateUpAddDownButton();
 	--hide all
 	--HideAreaBn();
@@ -1353,14 +1353,14 @@ function UpdateUpAddDownButton()
 	--end
 end;
 
---ÉêÇëÕÊºÅ
+--ç”³è¯·å¸å·
 function SelectServer_AccountReg()
     GameProduceLogin:StartAccountReg()
 end
 
---ÕÊºÅ³äÖµ
+--å¸å·å……å€¼
 function SelectServer_AccountChongZhi()
-	if(Variable:GetVariable("System_CodePage") == "1258") then
+	if(Variable:GetVariable("System_Region") == "1258") then
     GameProduceLogin:OpenURL( "http://psp.gate.vn" )
 	else
     GameProduceLogin:OpenURL( "http://sde.game.sohu.com/" )

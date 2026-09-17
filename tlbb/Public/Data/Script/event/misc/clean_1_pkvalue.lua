@@ -1,40 +1,40 @@
---Ï´É±Æø
+--æ´—æ€æ°”
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x800110_g_scriptId = 800110
 
 x800110_g_ModScript = 800112
 
 function x800110_OnDefaultEvent( sceneId, selfId, targetId )
 
-	-- µÃµ½µ±Ç°É±ÆøÖµ
+	-- å¾—åˆ°å½“å‰æ€æ°”å€¼
 	local pk_value = LuaFnGetHumanPKValue(sceneId, selfId);
 	if pk_value then
 	else
 		return 0;
 	end
 
-	-- ÅĞ¶ÏÊÇ·ñÓĞÉ±Æø
+	-- åˆ¤æ–­æ˜¯å¦æœ‰æ€æ°”
 	if pk_value < 1 then
-		x800110_NotifyFail(sceneId, selfId, "Äã²¢Ã»ÓĞÉ±Æø",targetId)
---		Msg2Player(sceneId, selfId, "Äã²¢Ã»ÓĞÉ±Æø", MSG2PLAYER_PARA);
+		x800110_NotifyFail(sceneId, selfId, "ä½ å¹¶æ²¡æœ‰æ€æ°”",targetId)
+--		Msg2Player(sceneId, selfId, "ä½ å¹¶æ²¡æœ‰æ€æ°”", MSG2PLAYER_PARA);
 		return 0;
 	end
 
-	-- ¼ì²éÊÇ·ñÓĞ×ã¹»µÄÉÆ¶ñÖµºÍ½ğÇ®À´¿Û³ı1µãÉ±Æø
+	-- æ£€æŸ¥æ˜¯å¦æœ‰è¶³å¤Ÿçš„å–„æ¶å€¼å’Œé‡‘é’±æ¥æ‰£é™¤1ç‚¹æ€æ°”
 	if CallScriptFunction( x800110_g_ModScript, "CheckCost", sceneId, selfId, targetId ,1 ) ~= 1 then
 		return 0
 	end
 
-	-- ¸ù¾İ1µãÉ±ÆøÖµÀ´¿Û³ıÉÆ¶ñÖµºÍ½ğ±Ò
+	-- æ ¹æ®1ç‚¹æ€æ°”å€¼æ¥æ‰£é™¤å–„æ¶å€¼å’Œé‡‘å¸
 	CallScriptFunction( x800110_g_ModScript, "PayForClean", sceneId, selfId, 1 )
 	
-	-- ¿Û³ı1µãÉ±ÆøÖµ
+	-- æ‰£é™¤1ç‚¹æ€æ°”å€¼
 	LuaFnSetHumanPKValue(sceneId, selfId, pk_value - 1)
-	LuaFnAuditGoodbadDecPKValue( sceneId, selfId, 1 ); --¼ÇÂ¼ÓÃÉÆ¶ñÖµ¼õÉÙÉ±ÆøµÄÍ³¼ÆĞÅÏ¢....
+	LuaFnAuditGoodbadDecPKValue( sceneId, selfId, 1 ); --è®°å½•ç”¨å–„æ¶å€¼å‡å°‘æ€æ°”çš„ç»Ÿè®¡ä¿¡æ¯....
 	
-	x800110_NotifyFail( sceneId, selfId, "Äã³É¹¦Ïû³ıÁË1µãÉ±Æø¡£" ,targetId)
---	x800110_NotifyFailTips(sceneId, selfId, "Äã³É¹¦Ïû³ıÁË1µãÉ±Æø¡£");
+	x800110_NotifyFail( sceneId, selfId, "ä½ æˆåŠŸæ¶ˆé™¤äº†1ç‚¹æ€æ°”ã€‚" ,targetId)
+--	x800110_NotifyFailTips(sceneId, selfId, "ä½ æˆåŠŸæ¶ˆé™¤äº†1ç‚¹æ€æ°”ã€‚");
 	
 	-- [ QUFEI 2007-11-09 15:36 UPDATE BugID 27611 ]		
 	local LogInfo	= format( "[ChangePKValue]:ClearPKValue sceneId=%d, GUID=%0X, PKValueBgn=%d, PKValueEnd=%d",
@@ -47,17 +47,17 @@ function x800110_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 -- ************************
--- NPC¶Ô»°´°¿ÚÖĞµ÷ÓÃµÄº¯Êı
+-- NPCå¯¹è¯çª—å£ä¸­è°ƒç”¨çš„å‡½æ•°
 -- ************************
 function x800110_OnEnumerate( sceneId, selfId,targetId )
 
-	AddNumText(sceneId, x800110_g_scriptId, "Çå³ı1µãÉ±Æø", 6, x800110_g_scriptId)
+	AddNumText(sceneId, x800110_g_scriptId, "æ¸…é™¤1ç‚¹æ€æ°”", 6, x800110_g_scriptId)
 
 end
 
 
 --**********************************
--- ÆÁÄ»ÖĞ¼äĞÅÏ¢ÌáÊ¾
+-- å±å¹•ä¸­é—´ä¿¡æ¯æç¤º
 --**********************************
 function x800110_NotifyFailTips( sceneId, selfId, Tip )
 	BeginEvent( sceneId )
@@ -66,7 +66,7 @@ function x800110_NotifyFailTips( sceneId, selfId, Tip )
 	DispatchMissionTips( sceneId, selfId )
 end
 
---¶Ô»°¿òÌáÊ¾
+--å¯¹è¯æ¡†æç¤º
 function x800110_NotifyFail( sceneId, selfId, Tip ,targetId)
 	BeginEvent( sceneId )
 		AddText( sceneId, Tip )

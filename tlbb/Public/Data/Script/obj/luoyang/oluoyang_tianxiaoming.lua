@@ -1,54 +1,54 @@
---ÂåÑôNPC
---ÌïæçÃù
---ÆÕÍ¨
+--æ´›é˜³NPC
+--ç”°éªé¸£
+--æ™®é€š
 
 x000104_g_ScriptId	= 000104
 
---²Ù×÷¼¯
+--æ“ä½œé›†
 x000104_g_Key				=
 {
-		["stu"]					= 100,	--Ñ§Ï°Æï³Ë¼¼ÄÜ
-		["buy"]					= 101,	--¹ºÂòÆï³Ë
+		["stu"]					= 100,	--å­¦ä¹ éª‘ä¹˜æŠ€èƒ½
+		["buy"]					= 101,	--è´­ä¹°éª‘ä¹˜
 }
 
---¼¼ÄÜÁĞ±í
+--æŠ€èƒ½åˆ—è¡¨
 x000104_g_Skill			=
 {
-	{ id=446, name="ÆïÊõ£ºÂ½ĞĞµñ"},
+	{ id=446, name="éª‘æœ¯ï¼šé™†è¡Œé›•"},
 }
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x000104_OnDefaultEvent( sceneId, selfId, targetId )
 	BeginEvent( sceneId )
-		AddText( sceneId, "  Èç¹ûÄãÊÇ¾Å´óÃÅÅÉµÄµÜ×Ó£¬¾Í¿ÉÒÔÕÒÃÅÅÉÀïµÄÆï³Ë¼¼ÄÜ´«ÊÚÈËÑ§Ï°ÆïÊõ¡£" )
-	---	AddNumText( sceneId, x000104_g_ScriptId, "Ñ§Ï°Æï³Ë¼¼ÄÜ", -1, x000104_g_Key["stu"] )
-		AddNumText( sceneId, x000104_g_ScriptId, "¹ºÂòÆï³Ë", 7, x000104_g_Key["buy"] )
+		AddText( sceneId, "  å¦‚æœä½ æ˜¯ä¹å¤§é—¨æ´¾çš„å¼Ÿå­ï¼Œå°±å¯ä»¥æ‰¾é—¨æ´¾é‡Œçš„éª‘ä¹˜æŠ€èƒ½ä¼ æˆäººå­¦ä¹ éª‘æœ¯ã€‚" )
+	---	AddNumText( sceneId, x000104_g_ScriptId, "å­¦ä¹ éª‘ä¹˜æŠ€èƒ½", -1, x000104_g_Key["stu"] )
+		AddNumText( sceneId, x000104_g_ScriptId, "è´­ä¹°éª‘ä¹˜", 7, x000104_g_Key["buy"] )
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x000104_OnEventRequest( sceneId, selfId, targetId )
 	local	key	= GetNumText()
 
 	if key == 0	then
 		AddSkill( sceneId, selfId, 21 )
-		x000104_MsgBox( sceneId, selfId, targetId, "  ÄãÏÖÔÚÒÑ¾­Ñ§»áÆï³Ë¼¼ÄÜÁË¡£" )
+		x000104_MsgBox( sceneId, selfId, targetId, "  ä½ ç°åœ¨å·²ç»å­¦ä¼šéª‘ä¹˜æŠ€èƒ½äº†ã€‚" )
 --	elseif key == x000104_g_Key["stu"] then
 --		if GetLevel( sceneId, selfId ) < 20 then
---			x000104_MsgBox( sceneId, selfId, targetId, "  Çë20¼¶ºóÔÙÀ´ÕÒÎÒ£¡" )
+--			x000104_MsgBox( sceneId, selfId, targetId, "  è¯·20çº§åå†æ¥æ‰¾æˆ‘ï¼" )
 --		end
 --		if LuaFnHaveSpecificEquitation( sceneId, selfId, x000104_g_Skill[1].id ) == 0 then
 --			if LuaFnLearnSpecificEquitation( sceneId, selfId, x000104_g_Skill[1].id, 1 ) == 1 then
 --				LuaFnSendSpecificImpactToUnit( sceneId, selfId, selfId, selfId, 18, 0 )
---				x000104_MsgBox( sceneId, selfId, targetId, "  ÄãÑ§»áÁË¡°"..x000104_g_Skill[1].name.."¡±¡£" )
+--				x000104_MsgBox( sceneId, selfId, targetId, "  ä½ å­¦ä¼šäº†â€œ"..x000104_g_Skill[1].name.."â€ã€‚" )
 --			end
 --		else
---			x000104_MsgBox( sceneId, selfId, targetId, "  ÄãÒÑ¾­Ñ§»á¡°"..x000104_g_Skill[1].name.."¡±ÁË°¡£¡" )
+--			x000104_MsgBox( sceneId, selfId, targetId, "  ä½ å·²ç»å­¦ä¼šâ€œ"..x000104_g_Skill[1].name.."â€äº†å•Šï¼" )
 --		end
 	elseif key == x000104_g_Key["buy"] then
 		DispatchShopItem( sceneId, selfId, targetId, 138 )
@@ -56,7 +56,7 @@ function x000104_OnEventRequest( sceneId, selfId, targetId )
 end
 
 --**********************************
---¶Ô»°¿òÌáÊ¾
+--å¯¹è¯æ¡†æç¤º
 --**********************************
 function x000104_MsgBox( sceneId, selfId, targetId, msg )
 	BeginEvent( sceneId )

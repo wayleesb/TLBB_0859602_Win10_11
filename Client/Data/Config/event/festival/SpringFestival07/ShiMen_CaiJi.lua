@@ -1,4 +1,4 @@
 --MisDescBegin
 x050059_g_ScriptId = 050059
-x050059_g_MissionName = "цееидЙ╩У╢С╡и╧╨"
+x050059_g_MissionName = "И≈╗Ф╢╬Е╧╢Х╢╖Е╓╖И┤┤Х╢╜"
 --MisDescEnd

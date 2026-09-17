@@ -1,11 +1,11 @@
---»î¶¯¡ª¡ª
---°Ù±äÁ³Æ×
---»î¶¯NPC£ºËÕÖİÎÄÑå²©
---½Å±¾ºÅ
+--æ´»åŠ¨â€”â€”
+--ç™¾å˜è„¸è°±
+--æ´»åŠ¨NPCï¼šè‹å·æ–‡å½¦åš
+--è„šæœ¬å·
 x808125_g_ScriptId = 808125
---»î¶¯Ãû³Æ
+--æ´»åŠ¨åç§°
 x808125_g_CampaignName = "BaiBianLianPu"
---½±Àø¾­Ñé±í
+--å¥–åŠ±ç»éªŒè¡¨
 x808125_g_Exp = {
 	[10]=1516,[11]=1596,[12]=1672,[13]=1749,[14]=1829,
 	[15]=1906,[16]=1983,[17]=2063,[18]=2140,[19]=2220,
@@ -40,7 +40,7 @@ x808125_g_Exp = {
 	
 x808125_g_Buff={4838,4839,4840,4843,4852,4853,4854,4857,4858,4879}	
 
---ÏûÏ¢ÌáÊ¾
+--æ¶ˆæ¯æç¤º
 x808125_g_Tip =
 {
 	["lev"] = "#{BBLP_90209_4}",
@@ -54,12 +54,12 @@ x808125_g_Msg ={
 	["ok"] = "#{BBLP_90209_9}"
 }
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x808125_OnDefaultEvent( sceneId, selfId, targetId )
 
 	local NumText = GetNumText()
-	if NumText == 1 then   --²Î¼Ó°Ù±äÁ³Æ×»î¶¯  
+	if NumText == 1 then   --å‚åŠ ç™¾å˜è„¸è°±æ´»åŠ¨  
 		x808125_JoinCampaign(sceneId,selfId,targetId) 
 	elseif NumText == 2 then
 	  BeginEvent( sceneId ) 
@@ -70,7 +70,7 @@ function x808125_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x808125_OnEnumerate( sceneId, selfId, targetId )
 	AddNumText(sceneId, x808125_g_ScriptId, "#{BBLP_90209_2}", 6, 1)
@@ -78,21 +78,21 @@ function x808125_OnEnumerate( sceneId, selfId, targetId )
 end
 
 --**********************************
---²Î¼Ó»î¶¯
+--å‚åŠ æ´»åŠ¨
 --**********************************
 function x808125_JoinCampaign( sceneId, selfId, targetId )
 
-  --°²È«Ê±¼äÄÚ²»ÄÜ²Ù×÷
+  --å®‰å…¨æ—¶é—´å†…ä¸èƒ½æ“ä½œ
 --  if IsPilferLockFlag( sceneId, selfId ) <= 0 then
 --		 return
 --	end
-  --Èç¹ûÍæ¼ÒµÈ¼¶Ğ¡ÓÚ10²»ÄÜ²Î¼Ó»î¶¯
+  --å¦‚æœç©å®¶ç­‰çº§å°äº10ä¸èƒ½å‚åŠ æ´»åŠ¨
 	if GetLevel( sceneId, selfId ) < 10 then
 		 x808125_NotifyTip(sceneId,selfId,x808125_g_Tip["lev"])
 		 return
 	end
 	
-		--Èç¹ûÍæ¼Ò½ñÌì²Î¼Ó¹ı»î¶¯
+		--å¦‚æœç©å®¶ä»Šå¤©å‚åŠ è¿‡æ´»åŠ¨
 	local td = GetTime2Day()
 	local lt = GetMissionData(sceneId,selfId,MD_BAIBIANLIANPU_TIME)
 	if td == lt then 
@@ -101,7 +101,7 @@ function x808125_JoinCampaign( sceneId, selfId, targetId )
 		 return
 	end
 	
-	--Èç¹ûÍæ¼Ò´¦ÓÚÆï³Ë»ò±äÉí×´Ì¬
+	--å¦‚æœç©å®¶å¤„äºéª‘ä¹˜æˆ–å˜èº«çŠ¶æ€
 	if LuaFnIsRiding( sceneId, selfId ) == 1 then 
 		 x808125_NotifyTip(sceneId,selfId,x808125_g_Tip["ride"])
 		 return
@@ -110,16 +110,16 @@ function x808125_JoinCampaign( sceneId, selfId, targetId )
 		 return
 	end
 	
-  --·ûºÏÌõ¼ş¿ªÊ¼±äÉí
+  --ç¬¦åˆæ¡ä»¶å¼€å§‹å˜èº«
   local BuffId = x808125_RandomBuffId()
   LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, BuffId, 0 )
 	
 	SetMissionData(sceneId,selfId,MD_BAIBIANLIANPU_TIME,td)
   
-  --Í³¼ÆĞÅÏ¢
+  --ç»Ÿè®¡ä¿¡æ¯
 	LuaFnAuditQuest(sceneId, selfId, x808125_g_CampaignName)
 	
-	--¸øµã¾­Ñé½±Àø
+	--ç»™ç‚¹ç»éªŒå¥–åŠ±
 	local nLevel = GetLevel(sceneId,selfId)
 	local nExp = x808125_g_Exp[nLevel]
 	AddExp(sceneId,selfId,nExp)
@@ -127,7 +127,7 @@ function x808125_JoinCampaign( sceneId, selfId, targetId )
 end
 
 --**********************************
---Ëæ»ú²úÉúBuffId
+--éšæœºäº§ç”ŸBuffId
 --**********************************
 function x808125_RandomBuffId( )
   local BuffId = 0
@@ -161,7 +161,7 @@ function x808125_RandomBuffId( )
 end
 
 --**********************************
---¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+--å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x808125_MsgBox( sceneId, selfId, targetId, msg )
 
@@ -173,7 +173,7 @@ function x808125_MsgBox( sceneId, selfId, targetId, msg )
 end
 
 --**********************************
---ĞÑÄ¿ÌáÊ¾
+--é†’ç›®æç¤º
 --**********************************
 function x808125_NotifyTip( sceneId, selfId, tip )
 

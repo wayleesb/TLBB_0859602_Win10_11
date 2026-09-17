@@ -117,37 +117,37 @@ function SoundSetup_Check_Clicked(nIndex)
 end
 
 --===============================================
--- ±³¾°
+-- èƒŒæ™¯
 --===============================================
 function SoundSetup_BackgroundMusic_Clicked()
 end
 
 --===============================================
--- »·¾³
+-- ç¯å¢ƒ
 --===============================================
 function SoundSetup_EnvironmentalSound_Clicked()
 end
 
 
 --===============================================
--- ¼¼ÄÜ
+-- æŠ€èƒ½
 --===============================================
 function SoundSetup_SkillsSound_Clicked()
 end
 
 
 --===============================================
--- UIÊÂ¼ş
+-- UIäº‹ä»¶
 --===============================================
 function SoundSetup_ThingSound_Clicked()
 end
 
 --===============================================
--- È·¶¨
+-- ç¡®å®š
 --===============================================
 function SoundSetup_IDOK_Clicked()
 
-	-- ĞèÒª±£´æÊı¾İ
+	-- éœ€è¦ä¿å­˜æ•°æ®
 	SoundSetup_UpdateToGame(SoundSetup_Item1, 	"DisableAllSound");
 	SoundSetup_UpdateToGame(SoundSetup_Item2, 	"EnableBGSound");
 	SoundSetup_UpdateToGame(SoundSetup_Item3, 	"Enable3DSound");
@@ -168,13 +168,13 @@ function SoundSetup_IDOK_Clicked()
 end
 
 --===============================================
--- È¡Ïû
+-- å–æ¶ˆ
 --===============================================
 function SoundSetup_IDCANCEL_Clicked()
 	this:Hide();
 end
 
---»Ö¸´Ä¬ÈÏÑ¡Ïî
+--æ¢å¤é»˜è®¤é€‰é¡¹
 function SoundSetup_Default_Clicked()
 
 	Variable:SetVariable("DisableAllSound", "0", 0);

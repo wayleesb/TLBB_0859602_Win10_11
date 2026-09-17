@@ -1,5 +1,5 @@
---ÊøºÓ¹ÅÕòNPC....
---³æÄñ·»·»Ö÷....
+--æŸæ²³å¤é•‡NPC....
+--è™«é¸ŸåŠåŠä¸»....
 
 x001186_g_scriptId = 001186
 x001186_g_shoptableindex = 27
@@ -11,19 +11,19 @@ x001186_g_MsgInfo = { "#{SHGZ_0612_08}",
 										}
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x001186_OnDefaultEvent( sceneId, selfId, targetId )
 	BeginEvent( sceneId )
 		local msgidx = random(getn(x001186_g_MsgInfo))
 		AddText( sceneId, x001186_g_MsgInfo[msgidx] )
-		AddNumText( sceneId, x001186_g_scriptId, "¿´¿´ÄãÂôµÄ¶«Î÷", 7, 0 )
+		AddNumText( sceneId, x001186_g_scriptId, "çœ‹çœ‹ä½ å–çš„ä¸œè¥¿", 7, 0 )
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x001186_OnEventRequest( sceneId, selfId, targetId, eventId )
 	if GetNumText() == 0 then

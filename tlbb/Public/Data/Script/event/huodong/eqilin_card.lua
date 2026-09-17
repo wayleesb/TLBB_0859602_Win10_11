@@ -1,33 +1,33 @@
---»î¶¯¡ª¡ª
---VIPÍæ¼ÒÔùËÍ÷è÷ë»î¶¯
+--æ´»åŠ¨â€”â€”
+--VIPç©å®¶èµ é€éº’éºŸæ´»åŠ¨
 
 x808070_g_ScriptId = 808070
---x808070_g_QiLinPrize_Active = 0   --Ä¬ÈÏ¹Ø±Õ
+--x808070_g_QiLinPrize_Active = 0   --é»˜è®¤å…³é—­
 
 --x808070_g_ActiveStartTime = 7154	 --20070604
 --x808070_g_ActiveEndTime = 7171		 --20070621
 
 function x808070_QiLinCard(sceneId,selfId,targetId)
-	--ÊÇ·ñÒÑ¾­ÁìÈ¡¹ıVIP÷è÷ë½±Àø
+	--æ˜¯å¦å·²ç»é¢†å–è¿‡VIPéº’éºŸå¥–åŠ±
 	--if GetMissionFlag( sceneId, selfId, MF_ActiveQiLinCard ) == 1 then
-	--	x808070_NotifyFailBox( sceneId, selfId, targetId, "    ÄúÒÑ¾­ÁìÈ¡¹ı»î¶¯½±Àø£¬²»ÄÜÖØ¸´ÁìÈ¡¡£" )
+	--	x808070_NotifyFailBox( sceneId, selfId, targetId, "    æ‚¨å·²ç»é¢†å–è¿‡æ´»åŠ¨å¥–åŠ±ï¼Œä¸èƒ½é‡å¤é¢†å–ã€‚" )
 	--	return
 	--end
 	
-	--ÊÇ·ñ´óÓÚ20¼¶
+	--æ˜¯å¦å¤§äº20çº§
 	--if GetLevel( sceneId, selfId ) < 20 then
-	--	x808070_NotifyFailBox( sceneId, selfId, targetId, "    ÇëÄúµÄµÈ¼¶³¬¹ı20¼¶ºóÔÙÀ´ÁìÈ¡»î¶¯½±Àø¡£" )
+	--	x808070_NotifyFailBox( sceneId, selfId, targetId, "    è¯·æ‚¨çš„ç­‰çº§è¶…è¿‡20çº§åå†æ¥é¢†å–æ´»åŠ¨å¥–åŠ±ã€‚" )
 	--	return
 	--end
 	
-	--¼ì²é±³°ü¿Õ¼ä
+	--æ£€æŸ¥èƒŒåŒ…ç©ºé—´
 	local FreeSpace = LuaFnGetPropertyBagSpace( sceneId, selfId )
 	if( FreeSpace < 1 ) then
-		x808070_NotifyFailBox( sceneId, selfId, targetId, "    ¶Ô²»Æğ£¬ÄúÃ»ÓĞ×ã¹»µÄÎïÆ·À¸¿Õ¼ä£¬ÇëÕûÀíºóÔÙÀ´ÁìÈ¡¡£" )
+		x808070_NotifyFailBox( sceneId, selfId, targetId, "    å¯¹ä¸èµ·ï¼Œæ‚¨æ²¡æœ‰è¶³å¤Ÿçš„ç‰©å“æ ç©ºé—´ï¼Œè¯·æ•´ç†åå†æ¥é¢†å–ã€‚" )
 		return
 	end
 
-	--´ò¿ªÊäÈë¿¨ºÅ½çÃæ
+	--æ‰“å¼€è¾“å…¥å¡å·ç•Œé¢
 	BeginUICommand( sceneId )
 		UICommand_AddInt( sceneId, targetId )
 	EndUICommand( sceneId )
@@ -35,7 +35,7 @@ function x808070_QiLinCard(sceneId,selfId,targetId)
 end
 
 --**********************************
--- ¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+-- å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x808070_NotifyFailBox( sceneId, selfId, targetId, msg )
 	BeginEvent( sceneId )
@@ -45,19 +45,19 @@ function x808070_NotifyFailBox( sceneId, selfId, targetId, msg )
 end
 
 --**********************************
---¼ì²é»î¶¯Ê±¼ä
+--æ£€æŸ¥æ´»åŠ¨æ—¶é—´
 --**********************************
 --function x808070_CheckRightTime()
 --	local DayTime = GetDayTime()
 --	--PrintNum(DayTime)
 --	if DayTime < x808070_g_ActiveStartTime then
 --		x808070_g_QiLinPrize_Active = 0
---		return 0    --´ËÇ°·Ç»î¶¯Ê±¼ä
+--		return 0    --æ­¤å‰éæ´»åŠ¨æ—¶é—´
 --	end
 --
 --	if DayTime > x808070_g_ActiveEndTime then
 --  	x808070_g_QiLinPrize_Active = 0
---  	return 0    --´Ëºó»î¶¯ÒÑ¾­½áÊø
+--  	return 0    --æ­¤åæ´»åŠ¨å·²ç»ç»“æŸ
 --	end
 --
 --	x808070_g_QiLinPrize_Active = 1
@@ -65,17 +65,17 @@ end
 --end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x808070_OnEnumerate( sceneId, selfId, targetId )
     --x808070_CheckRightTime()
 	  --if 1 == x808070_g_QiLinPrize_Active then
-			AddNumText(sceneId, x808070_g_ScriptId, "ÁìÈ¡ĞÒÔËĞÇ½±Àø", 1, 1 )
+			AddNumText(sceneId, x808070_g_ScriptId, "é¢†å–å¹¸è¿æ˜Ÿå¥–åŠ±", 1, 1 )
     --end
 end
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x808070_OnDefaultEvent( sceneId, selfId, targetId )
 	--x808070_CheckRightTime()

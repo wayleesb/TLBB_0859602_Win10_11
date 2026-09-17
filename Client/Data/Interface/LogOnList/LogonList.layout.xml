@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" ?>
+<?xml version="1.0" ?>
 <GUILayout>
     <Window Type="DefaultWindow" Name="LogOnlist_Frame_Background">
         <Property Name="Position" Value="x:0.0 y:0.0" />

@@ -1,29 +1,29 @@
---Éı¼¶¼¼ÄÜµÄ½Å±¾
+--å‡çº§æŠ€èƒ½çš„è„šæœ¬
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x713500_g_ScriptId = 713500
 
 x713500_g_AbilityName = {}
 x713500_g_AbilityDescription = {}
 x713500_g_StudyCost = {}
 
-x713500_g_AbilityName[1] = "Åëâ¿"
-x713500_g_AbilityName[2] = "ÖĞÒ½"
-x713500_g_AbilityName[3] = "¼Ó¹¤"
-x713500_g_AbilityName[8] = "²É¿ó"
-x713500_g_AbilityName[9] = "²ÉÒ©"
-x713500_g_AbilityName[10] = "µöÓã"
-x713500_g_AbilityName[11] = "ÖÖÖ²"
-x713500_g_AbilityDescription[1] = "    ×ö³öÀ´µÄ¶«Î÷¶¼¿ÉÒÔ³Ô~~~"
-x713500_g_AbilityDescription[2] = "ÖĞÒ½¿É²»ÊÇÒ»³¯Ò»Ï¦ÄÜ¹»Ñ§»áµÄ..."
-x713500_g_AbilityDescription[3] = "ÖÆ×÷×°±¸¡¢ºÏ³É±¦Ê¯ĞèÒªµÄ¼¼ÄÜ"
-x713500_g_AbilityDescription[8] = "²É¿óËäÈ»ĞÁ¿à£¬È´ÊÇÒ»ÃÅ×¬Ç®µÄÊÖÒÕ°¡"
-x713500_g_AbilityDescription[9] = "ÎÒ¿ÉÒÔ½»¸øÄã±æ±ğ²İÒ©µÄ±¾Áì£¬²»ÓÃ·ÑÊ±·ÑÁ¦Ñ§Ê²Ã´ÖĞÒ½£¬Ò»Ñù¿ÉÒÔ×¬Ç®"
-x713500_g_AbilityDescription[10] = "Ã»ÓĞÄÍĞÄµÄÈËÊÇ²»ÄÜµöµ½´óÓãµÄ"
-x713500_g_AbilityDescription[11] = "×öÒ»¸ö¿ìÀÖµÄÅ©³¡Ö÷"
+x713500_g_AbilityName[1] = "çƒ¹é¥ª"
+x713500_g_AbilityName[2] = "ä¸­åŒ»"
+x713500_g_AbilityName[3] = "åŠ å·¥"
+x713500_g_AbilityName[8] = "é‡‡çŸ¿"
+x713500_g_AbilityName[9] = "é‡‡è¯"
+x713500_g_AbilityName[10] = "é’“é±¼"
+x713500_g_AbilityName[11] = "ç§æ¤"
+x713500_g_AbilityDescription[1] = "    åšå‡ºæ¥çš„ä¸œè¥¿éƒ½å¯ä»¥åƒ~~~"
+x713500_g_AbilityDescription[2] = "ä¸­åŒ»å¯ä¸æ˜¯ä¸€æœä¸€å¤•èƒ½å¤Ÿå­¦ä¼šçš„..."
+x713500_g_AbilityDescription[3] = "åˆ¶ä½œè£…å¤‡ã€åˆæˆå®çŸ³éœ€è¦çš„æŠ€èƒ½"
+x713500_g_AbilityDescription[8] = "é‡‡çŸ¿è™½ç„¶è¾›è‹¦ï¼Œå´æ˜¯ä¸€é—¨èµšé’±çš„æ‰‹è‰ºå•Š"
+x713500_g_AbilityDescription[9] = "æˆ‘å¯ä»¥äº¤ç»™ä½ è¾¨åˆ«è‰è¯çš„æœ¬é¢†ï¼Œä¸ç”¨è´¹æ—¶è´¹åŠ›å­¦ä»€ä¹ˆä¸­åŒ»ï¼Œä¸€æ ·å¯ä»¥èµšé’±"
+x713500_g_AbilityDescription[10] = "æ²¡æœ‰è€å¿ƒçš„äººæ˜¯ä¸èƒ½é’“åˆ°å¤§é±¼çš„"
+x713500_g_AbilityDescription[11] = "åšä¸€ä¸ªå¿«ä¹çš„å†œåœºä¸»"
 
 
---²âÊÔÊ±£¬Éı¼¶Ê¹ÓÃÍ¬ÑùµÄ»¨·Ñ¶¨Òå£¬ÕıÊ½ÖÆ×÷µÄÊ±ºòÈç¹ûĞèÒª¿ÉÒÔ²ÉÓÃ¶şÎ¬Êı×é£¬ÀıÈç£º
+--æµ‹è¯•æ—¶ï¼Œå‡çº§ä½¿ç”¨åŒæ ·çš„èŠ±è´¹å®šä¹‰ï¼Œæ­£å¼åˆ¶ä½œçš„æ—¶å€™å¦‚æœéœ€è¦å¯ä»¥é‡‡ç”¨äºŒç»´æ•°ç»„ï¼Œä¾‹å¦‚ï¼š
 --x713500_g_StudyCost[1][1] = 200
 x713500_g_StudyCost[1] = 0
 x713500_g_StudyCost[2] = 0
@@ -33,36 +33,36 @@ x713500_g_StudyCost[9] = 0
 x713500_g_StudyCost[10] = 0
 x713500_g_StudyCost[11] = 100
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x713500_OnDefaultEvent( sceneId, selfId, targetId, AbilityID )
-	--Íæ¼Ò¼¼ÄÜµÄµÈ¼¶
+	--ç©å®¶æŠ€èƒ½çš„ç­‰çº§
 	AbilityLevel = QueryHumanAbilityLevel(sceneId, selfId, AbilityID)
-	--Íæ¼Ò¼Ó¹¤¼¼ÄÜµÄÊìÁ·¶È
+	--ç©å®¶åŠ å·¥æŠ€èƒ½çš„ç†Ÿç»ƒåº¦
 	ExpPoint = GetAbilityExp(sceneId, selfId, AbilityID)
 
 	BeginEvent(sceneId)
-		AddText(sceneId, "¼¼ÄÜÃû³Æ£º" .. x713500_g_AbilityName[AbilityID])
+		AddText(sceneId, "æŠ€èƒ½åç§°ï¼š" .. x713500_g_AbilityName[AbilityID])
 		AddText(sceneId, x713500_g_AbilityDescription[AbilityID])
 
 		if AbilityLevel < 1 then
-			AddText(sceneId, "Ñ§Ï°ÕâÏî¼¼ÄÜĞèÒª»¨·ÑÒ»Á½°×Òø¡£")
+			AddText(sceneId, "å­¦ä¹ è¿™é¡¹æŠ€èƒ½éœ€è¦èŠ±è´¹ä¸€ä¸¤ç™½é“¶ã€‚")
 		else
-			AddText(sceneId, "µ±Ç°¼¼ÄÜµÈ¼¶£º" .. AbilityLevel .. " ¼¶")
-			AddText(sceneId, "Éı¼¶ÕâÏî¼¼ÄÜĞèÒª»¨·ÑÒ»Á½°×Òø¡£")
+			AddText(sceneId, "å½“å‰æŠ€èƒ½ç­‰çº§ï¼š" .. AbilityLevel .. " çº§")
+			AddText(sceneId, "å‡çº§è¿™é¡¹æŠ€èƒ½éœ€è¦èŠ±è´¹ä¸€ä¸¤ç™½é“¶ã€‚")
 		end
 	EndEvent(sceneId)
 
-	--ÊìÁ·¶È²»×ã
+	--ç†Ÿç»ƒåº¦ä¸è¶³
 	if ExpPoint < (AbilityLevel + 1) * 10 then
 		BeginEvent(sceneId)
-			strText = format("ÄãµÄÊìÁ·¶È²»×ã")
+			strText = format("ä½ çš„ç†Ÿç»ƒåº¦ä¸è¶³")
 			AddText(sceneId,strText);
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 	elseif GetMoney(sceneId, selfId) < x713500_g_StudyCost[AbilityID] then
 		BeginEvent(sceneId)
-			strText = format("ÄãµÄÇ®²»¹»ÁË")
+			strText = format("ä½ çš„é’±ä¸å¤Ÿäº†")
 			AddText(sceneId,strText);
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
@@ -74,21 +74,21 @@ function x713500_OnDefaultEvent( sceneId, selfId, targetId, AbilityID )
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş   2006-01-06 ĞÂÔö
+--åˆ—ä¸¾äº‹ä»¶   2006-01-06 æ–°å¢
 --**********************************
 function x713500_OnEnumerate( sceneId, selfId, targetId )
-		AddNumText(sceneId,x713500_g_ScriptId,"ÎÒÒªÑ§Ï°¼¼ÄÜ",12,-1);
+		AddNumText(sceneId,x713500_g_ScriptId,"æˆ‘è¦å­¦ä¹ æŠ€èƒ½",12,-1);
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x713500_CheckAccept( sceneId, selfId )
 	return 1
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x713500_OnAccept( sceneId, selfId, AbilityID )
 	AbilityLevel = QueryHumanAbilityLevel( sceneId, selfId, AbilityID )

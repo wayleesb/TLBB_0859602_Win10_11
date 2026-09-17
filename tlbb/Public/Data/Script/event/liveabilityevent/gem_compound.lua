@@ -1,12 +1,12 @@
--- ±¦Ê¯ºÏ³É
+-- å®çŸ³åˆæˆ
 
--- ½Å±¾ºÅ
+-- è„šæœ¬å·
 x701602_g_scriptId = 701602
 
--- ½Å±¾Ãû³Æ
-x701602_g_scriptName = "ºÏ³É±¦Ê¯"
+-- è„šæœ¬åç§°
+x701602_g_scriptName = "åˆæˆå®çŸ³"
 
--- ºÏ³É¹æÔò±í
+-- åˆæˆè§„åˆ™è¡¨
 x701602_g_CompoundRule = {
 	{
 		[1] = { SpecialStuff = 30900015, MoneyCost = 5000, CountTable = { [3] = { SuccOdds = 25, SuccOddsWithSpecStuff = 50, }, [4] = { SuccOdds = 50, SuccOddsWithSpecStuff = 75, }, [5] = { SuccOdds = 75, SuccOddsWithSpecStuff = 100, }, }, },
@@ -22,7 +22,7 @@ x701602_g_CompoundRule = {
 		[1] = { SpecialStuff = -1, MoneyCost = 500, CountTable = { [3] = { SuccOdds = 50, SuccOddsWithSpecStuff = 0, }, [4] = { SuccOdds = 75, SuccOddsWithSpecStuff = 0, }, [5] = { SuccOdds = 100, SuccOddsWithSpecStuff = 0, }, }, },
 		[2] = { SpecialStuff = -1, MoneyCost = 1000, CountTable = { [3] = { SuccOdds = 50, SuccOddsWithSpecStuff = 0, }, [4] = { SuccOdds = 75, SuccOddsWithSpecStuff = 0, }, [5] = { SuccOdds = 100, SuccOddsWithSpecStuff = 0, }, }, },
 		[3] = { SpecialStuff = -1, MoneyCost = 1500, CountTable = { [3] = { SuccOdds = 50, SuccOddsWithSpecStuff = 0, }, [4] = { SuccOdds = 75, SuccOddsWithSpecStuff = 0, }, [5] = { SuccOdds = 100, SuccOddsWithSpecStuff = 0, }, }, },
-		[4] = { SpecialStuff = -1, MoneyCost = 5000, CountTable = { [3] = { SuccOdds = 50, SuccOddsWithSpecStuff = 0, }, [4] = { SuccOdds = 75, SuccOddsWithSpecStuff = 0, }, [5] = { SuccOdds = 100, SuccOddsWithSpecStuff = 0, }, }, }, -- modify by cuiyinjie ¿ª·Å4¼¶3¾«ºÏ³É
+		[4] = { SpecialStuff = -1, MoneyCost = 5000, CountTable = { [3] = { SuccOdds = 50, SuccOddsWithSpecStuff = 0, }, [4] = { SuccOdds = 75, SuccOddsWithSpecStuff = 0, }, [5] = { SuccOdds = 100, SuccOddsWithSpecStuff = 0, }, }, }, -- modify by cuiyinjie å¼€æ”¾4çº§3ç²¾åˆæˆ
 --		[5] = { SpecialStuff = -1, MoneyCost = 2500, CountTable = { [3] = { SuccOdds = 50, SuccOddsWithSpecStuff = 0, }, [4] = { SuccOdds = 75, SuccOddsWithSpecStuff = 0, }, [5] = { SuccOdds = 100, SuccOddsWithSpecStuff = 0, }, }, },
 --		[6] = { SpecialStuff = -1, MoneyCost = 3000, CountTable = { [3] = { SuccOdds = 50, SuccOddsWithSpecStuff = 0, }, [4] = { SuccOdds = 75, SuccOddsWithSpecStuff = 0, }, [5] = { SuccOdds = 100, SuccOddsWithSpecStuff = 0, }, }, },
 --		[7] = { SpecialStuff = -1, MoneyCost = 3500, CountTable = { [3] = { SuccOdds = 50, SuccOddsWithSpecStuff = 0, }, [4] = { SuccOdds = 75, SuccOddsWithSpecStuff = 0, }, [5] = { SuccOdds = 100, SuccOddsWithSpecStuff = 0, }, }, },
@@ -40,13 +40,13 @@ x701602_g_CompoundRule = {
 	},
 }
 
--- ºÏ³É²ÄÁÏĞşÌìº®Óñ
+-- åˆæˆææ–™ç„å¤©å¯’ç‰
 x701602_g_HanYu_MaterialId = 20310110
--- Éú³ÉÎïº®Óñ¾«Ëé
+-- ç”Ÿæˆç‰©å¯’ç‰ç²¾ç¢
 x701602_g_HanYu_OutPutId = 20310111
 
 --**********************************************************************
--- ÈÎÎñÈë¿Úº¯Êı
+-- ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************************************************
 function x701602_OnDefaultEvent( sceneId, selfId, targetId )
 
@@ -57,7 +57,7 @@ function x701602_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************************************************
--- ÁĞ¾ÙÊÂ¼ş
+-- åˆ—ä¸¾äº‹ä»¶
 --**********************************************************************
 function x701602_OnEnumerate( sceneId, selfId, targetId )
 
@@ -66,7 +66,7 @@ function x701602_OnEnumerate( sceneId, selfId, targetId )
 end
 
 --**********************************************************************
--- ÅĞ¶ÏÊÇ·ñ±¦Ê¯
+-- åˆ¤æ–­æ˜¯å¦å®çŸ³
 --**********************************************************************
 function x701602_IsGem( itemIndex )
 	if floor( itemIndex / 10000000 ) == 5 then
@@ -77,7 +77,7 @@ function x701602_IsGem( itemIndex )
 end
 
 --**********************************************************************
--- ÅĞ¶ÏÊÇ·ñ²ÄÁÏ
+-- åˆ¤æ–­æ˜¯å¦ææ–™
 --**********************************************************************
 function x701602_IsMaterial( itemIndex )
 	if floor( itemIndex / 100000 ) == 205 then
@@ -88,7 +88,7 @@ function x701602_IsMaterial( itemIndex )
 end
 
 --**********************************************************************
--- ¸ù¾İÒ»¸öÎïÆ·ºÅµÃµ½¸ÃÎïÆ·µÄ´ó·ÖÀà
+-- æ ¹æ®ä¸€ä¸ªç‰©å“å·å¾—åˆ°è¯¥ç‰©å“çš„å¤§åˆ†ç±»
 --**********************************************************************
 function x701602_GetStuffClass( itemIndex )
 	if x701602_IsGem( itemIndex ) == 1 then
@@ -103,7 +103,7 @@ function x701602_GetStuffClass( itemIndex )
 end
 
 --**********************************************************************
--- ¸ù¾İÒ»¸öÎïÆ·ºÅµÃµ½¸ÃÎïÆ·µÄÀàĞÍ
+-- æ ¹æ®ä¸€ä¸ªç‰©å“å·å¾—åˆ°è¯¥ç‰©å“çš„ç±»å‹
 --**********************************************************************
 function x701602_GetStuffType( itemIndex )
 	if x701602_IsGem( itemIndex ) == 1 then
@@ -118,7 +118,7 @@ function x701602_GetStuffType( itemIndex )
 end
 
 --**********************************************************************
--- ¸ù¾İÒ»¸öÎïÆ·ºÅµÃµ½¸ÃÎïÆ·µÄµÈ¼¶
+-- æ ¹æ®ä¸€ä¸ªç‰©å“å·å¾—åˆ°è¯¥ç‰©å“çš„ç­‰çº§
 --**********************************************************************
 function x701602_GetStuffGrade( itemIndex )
 	if x701602_IsGem( itemIndex ) == 1 then
@@ -133,7 +133,7 @@ function x701602_GetStuffGrade( itemIndex )
 end
 
 --**********************************************************************
--- ¸ù¾İÒ»¸öÎïÆ·ºÅµÃµ½¸ÃÎïÆ·µÄÉı¼¶ÎïÆ·ºÅ
+-- æ ¹æ®ä¸€ä¸ªç‰©å“å·å¾—åˆ°è¯¥ç‰©å“çš„å‡çº§ç‰©å“å·
 --**********************************************************************
 function x701602_GetStuffUpgraded( itemIndex )
 	if x701602_IsGem( itemIndex ) == 1 then
@@ -148,22 +148,22 @@ function x701602_GetStuffUpgraded( itemIndex )
 end
 
 --**********************************************************************
--- ±¦Ê¯ÒÔ¼°²ÄÁÏºÏ³É½Ó¿Ú
--- bagIndex1, bagIndex2 ... bagIndex5£ºÎå¸ö±¦Ê¯»ò²ÄÁÏËùÔÚµÄ¸ñ×Ó
--- bagIndex6£ºÌØÊâ²ÄÁÏ
+-- å®çŸ³ä»¥åŠææ–™åˆæˆæ¥å£
+-- bagIndex1, bagIndex2 ... bagIndex5ï¼šäº”ä¸ªå®çŸ³æˆ–ææ–™æ‰€åœ¨çš„æ ¼å­
+-- bagIndex6ï¼šç‰¹æ®Šææ–™
 --**********************************************************************
 function x701602_GemCompound( sceneId, selfId, bagIndex1, bagIndex2, bagIndex3, bagIndex4, bagIndex5, bagIndex6 )
 	local bagIndexList = { bagIndex1, bagIndex2, bagIndex3, bagIndex4, bagIndex5 }
 	local stuffList = { -1, -1, -1, -1, -1 }
-	local stuffCount = 0					-- ²ÄÁÏ¸öÊı
-	local specialStuff = -1					-- ÌØÊâ²ÄÁÏ
-	local CompoundClass = -1				-- ²ÄÁÏ´óÀà[·ÖÎª±¦Ê¯ºÍ²ÄÁÏ]
-	local CompoundType = -1					-- ²ÄÁÏÖÖÀà[¸÷ÖÖ±¦Ê¯ÒÔ¼°¸÷ÖÖ²ÄÁÏ]
-	local stuffGrade = -1					-- ²ÄÁÏµÈ¼¶
+	local stuffCount = 0					-- ææ–™ä¸ªæ•°
+	local specialStuff = -1					-- ç‰¹æ®Šææ–™
+	local CompoundClass = -1				-- ææ–™å¤§ç±»[åˆ†ä¸ºå®çŸ³å’Œææ–™]
+	local CompoundType = -1					-- ææ–™ç§ç±»[å„ç§å®çŸ³ä»¥åŠå„ç§ææ–™]
+	local stuffGrade = -1					-- ææ–™ç­‰çº§
 	local standardStuff = -1
 	local IsBind = 0;
 	
-	-- ²»ÔÊĞíÓĞÖØ¸´µÄbagIndexList³öÏÖ added by dun.liu 2009.2.5
+	-- ä¸å…è®¸æœ‰é‡å¤çš„bagIndexListå‡ºç° added by dun.liu 2009.2.5
 	local isUnique = ScriptGlobal_IsUniqueNumberTable(bagIndexList);
 	if isUnique == 0 then
 		return OR_ERROR;
@@ -171,7 +171,7 @@ function x701602_GemCompound( sceneId, selfId, bagIndex1, bagIndex2, bagIndex3, 
 
 	for i = 1, 5 do
 		if bagIndexList[i] ~= -1 then
-			if LuaFnIsItemAvailable( sceneId, selfId, bagIndexList[i] ) < 1 then	-- Ê¹ÓÃÓĞÎÊÌâµÄÎïÆ·ÔòÍË³öÁ÷³Ì
+			if LuaFnIsItemAvailable( sceneId, selfId, bagIndexList[i] ) < 1 then	-- ä½¿ç”¨æœ‰é—®é¢˜çš„ç‰©å“åˆ™é€€å‡ºæµç¨‹
 				return OR_STUFF_LACK
 			else
 				stuffList[i] = LuaFnGetItemTableIndexByIndex( sceneId, selfId, bagIndexList[i] )
@@ -184,13 +184,13 @@ function x701602_GemCompound( sceneId, selfId, bagIndex1, bagIndex2, bagIndex3, 
 					CompoundType = x701602_GetStuffType( standardStuff )
 				end
 				
-				--ÅĞ¶Ï²ÄÁÏÊÇ·ñ·ûºÏ
+				--åˆ¤æ–­ææ–™æ˜¯å¦ç¬¦åˆ
 				if x701602_IsMaterial( stuffList[i] ) == 1 and
 					mod( stuffList[i], 10 ) > 8 then
 					return OR_STUFF_LACK
 				end
 				
-				--ÅĞ¶Ï±¦Ê¯ÊÇ·ñ°ó¶¨	
+				--åˆ¤æ–­å®çŸ³æ˜¯å¦ç»‘å®š	
 				if(LuaFnGetItemBindStatus( sceneId, selfId, bagIndexList[i]) == 1) then
 					IsBind = 1;
 				end
@@ -205,7 +205,7 @@ function x701602_GemCompound( sceneId, selfId, bagIndex1, bagIndex2, bagIndex3, 
 	end
 
 	if bagIndex6 ~= -1 then
-		if LuaFnIsItemAvailable( sceneId, selfId, bagIndex6 ) < 1 then			-- Ê¹ÓÃÓĞÎÊÌâµÄÎïÆ·ÔòºöÂÔ
+		if LuaFnIsItemAvailable( sceneId, selfId, bagIndex6 ) < 1 then			-- ä½¿ç”¨æœ‰é—®é¢˜çš„ç‰©å“åˆ™å¿½ç•¥
 			bagIndex6 = -1
 		else
 			specialStuff = LuaFnGetItemTableIndexByIndex( sceneId, selfId, bagIndex6 )
@@ -223,19 +223,19 @@ function x701602_GemCompound( sceneId, selfId, bagIndex1, bagIndex2, bagIndex3, 
 		end
 	end
 
-	if not CompoundRule[stuffGrade] then										-- ÕâÖÖÇé¿öÍ¨³£¶¼ÊÇÒÑ¾­ 9 ¼¶ÁË
+	if not CompoundRule[stuffGrade] then										-- è¿™ç§æƒ…å†µé€šå¸¸éƒ½æ˜¯å·²ç» 9 çº§äº†
 		return OR_CANNOT_UPGRADE
 	end
-	--ºÏ³É8£¬9¼¶±¦Ê¯¹¦ÄÜ¹Ø±Õ
+	--åˆæˆ8ï¼Œ9çº§å®çŸ³åŠŸèƒ½å…³é—­
 	if stuffGrade > 6 then
 --		return OR_CANNOT_UPGRADE
 	end
 	
 	
-	local selfMoney = GetMoney( sceneId, selfId )  +  GetMoneyJZ(sceneId, selfId)  --½»×ÓÆÕ¼° Vega
+	local selfMoney = GetMoney( sceneId, selfId )  +  GetMoneyJZ(sceneId, selfId)  --äº¤å­æ™®åŠ Vega
 	
 	if  selfMoney  < CompoundRule[stuffGrade].MoneyCost then
-		return OR_NOTENOUGH_MONEY												-- Ç®²»¹»£¬Ò»°ãÓÉ¿Í»§¶Ë×ÔĞĞÌáÊ¾
+		return OR_NOTENOUGH_MONEY												-- é’±ä¸å¤Ÿï¼Œä¸€èˆ¬ç”±å®¢æˆ·ç«¯è‡ªè¡Œæç¤º
 	end
 
 	if not CompoundRule[stuffGrade].CountTable[stuffCount] then
@@ -245,7 +245,7 @@ function x701602_GemCompound( sceneId, selfId, bagIndex1, bagIndex2, bagIndex3, 
 	local SuccOdds = CompoundRule[stuffGrade].CountTable[stuffCount].SuccOdds
 
 	if specialStuff ~= -1 then
-		if specialStuff ~= CompoundRule[stuffGrade].SpecialStuff then			-- ÀÄóÄ³äÊıµÄÌØÊâ²ÄÁÏ´¦Àí
+		if specialStuff ~= CompoundRule[stuffGrade].SpecialStuff then			-- æ»¥ç«½å……æ•°çš„ç‰¹æ®Šææ–™å¤„ç†
 			bagIndex6 = -1
 			specialStuff = -1
 		else
@@ -253,17 +253,17 @@ function x701602_GemCompound( sceneId, selfId, bagIndex1, bagIndex2, bagIndex3, 
 		end
 	end
 	
-	-- ±ØĞëÌØÊâ²ÄÁÏ
+	-- å¿…é¡»ç‰¹æ®Šææ–™
 	if specialStuff == -1 then
-		if 1 == CompoundClass then --Èç¹û²ÄÁÏÎª±¦Ê¯£¬Ôò±ØĞëĞèÒªÌØÊâ²ÄÁÏ
+		if 1 == CompoundClass then --å¦‚æœææ–™ä¸ºå®çŸ³ï¼Œåˆ™å¿…é¡»éœ€è¦ç‰¹æ®Šææ–™
 		return OR_ERROR
 		end
 	end
 
-	-- ¼ÆËãĞÂÎïÆ·±àºÅ
+	-- è®¡ç®—æ–°ç‰©å“ç¼–å·
 	local newItemIndex = x701602_GetStuffUpgraded( standardStuff )
 
-	-- ¿Û³ı²ÄÁÏ, Ò»¶¨ÒªÈ«²¿¿Û³ı³É¹¦£¬²ÅÄÜ¼ÌĞø½øĞĞ added by dun.liu 2009.2.5
+	-- æ‰£é™¤ææ–™, ä¸€å®šè¦å…¨éƒ¨æ‰£é™¤æˆåŠŸï¼Œæ‰èƒ½ç»§ç»­è¿›è¡Œ added by dun.liu 2009.2.5
 	for i = 1, 5 do
 		if bagIndexList[i] ~= -1 then
 			local isEraseSuc = LuaFnEraseItem( sceneId, selfId, bagIndexList[i] );
@@ -273,21 +273,21 @@ function x701602_GemCompound( sceneId, selfId, bagIndex1, bagIndex2, bagIndex3, 
 		end
 	end
 
-	-- ¿Û³ıÌØÊâ²ÄÁÏ
+	-- æ‰£é™¤ç‰¹æ®Šææ–™
 	if bagIndex6 ~= -1 then
-		--ÅĞ¶ÏÌØÊâ²ÄÁÏÊÇ·ñ°ó¶¨ add by xindefeng
+		--åˆ¤æ–­ç‰¹æ®Šææ–™æ˜¯å¦ç»‘å®š add by xindefeng
 		if(LuaFnGetItemBindStatus( sceneId, selfId, bagIndex6) == 1) then
-			IsBind = 1;--ÉèÖÃÇ¿ÖÆ°ó¶¨±êÖ¾
+			IsBind = 1;--è®¾ç½®å¼ºåˆ¶ç»‘å®šæ ‡å¿—
 		end
 		LuaFnEraseItem( sceneId, selfId, bagIndex6 )
 	end
 
-	-- ¿Û³ı½ğÇ®
-	local ret = LuaFnCostMoneyWithPriority( sceneId, selfId, CompoundRule[stuffGrade].MoneyCost )  --½»×ÓÆÕ¼° Vega
+	-- æ‰£é™¤é‡‘é’±
+	local ret = LuaFnCostMoneyWithPriority( sceneId, selfId, CompoundRule[stuffGrade].MoneyCost )  --äº¤å­æ™®åŠ Vega
 	if ret < 0 then
 		return OR_NOTENOUGH_MONEY
 	end
-	-- Éú³ÉºÏ³ÉÎï£¬×îºóÒ»¸ö 1 ÊÇÆ·ÖÊ£¬²»Ó°Ïì±¾ÀàĞÍºÏ³ÉÎï
+	-- ç”Ÿæˆåˆæˆç‰©ï¼Œæœ€åä¸€ä¸ª 1 æ˜¯å“è´¨ï¼Œä¸å½±å“æœ¬ç±»å‹åˆæˆç‰©
 	local maxStuffCountChange = 3;
 	local maxSpecialStuffChange = 2;
 	local maxStuffGrade = 8;
@@ -311,7 +311,7 @@ function x701602_GemCompound( sceneId, selfId, bagIndex1, bagIndex2, bagIndex3, 
 	selectRandomIndex = selectRandomIndex + (stuffCount - 3);
 	local randValue = LuaFnCompoundRandom(selectRandomIndex);
 
-	if randValue > SuccOdds then												-- ºÏ³ÉÊ§°Ü
+	if randValue > SuccOdds then												-- åˆæˆå¤±è´¥
 		LuaFnSendAbilityFailureMsg( sceneId, selfId, -1, -1, -1 )
 		LuaFnAuditGemCompound( sceneId, selfId, 0,
 			stuffList[1], stuffList[2], stuffList[3], stuffList[4], stuffList[5], -1 )
@@ -320,30 +320,30 @@ function x701602_GemCompound( sceneId, selfId, bagIndex1, bagIndex2, bagIndex3, 
 		if res == -1 then
 			return OR_FAILURE
 		end
-		--Ç¿ÖÆ°ó¶¨
+		--å¼ºåˆ¶ç»‘å®š
 		if(IsBind == 1) then
 			LuaFnItemBind( sceneId, selfId, res);
 		end
 		
-		--Ôö¼ÓÌØĞ§
+		--å¢åŠ ç‰¹æ•ˆ
 		LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, 49, 0);
 		
-		--ĞÑÄ¿ÌáÊ¾
+		--é†’ç›®æç¤º
 		BeginEvent( sceneId )
-			AddText( sceneId, "ºÏ³É³É¹¦" )
+			AddText( sceneId, "åˆæˆæˆåŠŸ" )
 		EndEvent( sceneId )
 		DispatchMissionTips( sceneId, selfId )
 		
 		if x701602_IsGem( newItemIndex ) == 1 then
 			stuffGrade = x701602_GetStuffGrade( newItemIndex )
-			--¹«¸æ¾«¼ò£¬Ğ¡ÓÚ4¼¶µÄ±¦Ê¯ºÏ³É²»·¢¹«¸æ
+			--å…¬å‘Šç²¾ç®€ï¼Œå°äº4çº§çš„å®çŸ³åˆæˆä¸å‘å…¬å‘Š
 			if stuffGrade >= 4 then
 				local szTransferItem = GetBagItemTransfer( sceneId, selfId, res )
-				BroadMsgByChatPipe( sceneId, selfId, "#W#{_INFOUSR" .. GetName( sceneId, selfId ) .. "}#H¾­¹ıÒ»·¬Å¬Á¦£¬ÖÕÓÚºÏ³É³öÁË#W#{_INFOMSG" .. szTransferItem .. "}#H¡£", 4 )
+				BroadMsgByChatPipe( sceneId, selfId, "#W#{_INFOUSR" .. GetName( sceneId, selfId ) .. "}#Hç»è¿‡ä¸€ç•ªåŠªåŠ›ï¼Œç»ˆäºåˆæˆå‡ºäº†#W#{_INFOMSG" .. szTransferItem .. "}#Hã€‚", 4 )
 			end
 		end
 
-		LuaFnSendAbilitySuccessMsg( sceneId, selfId, -1, -1, newItemIndex )		-- ÌáÊ¾Éú³ÉÎï
+		LuaFnSendAbilitySuccessMsg( sceneId, selfId, -1, -1, newItemIndex )		-- æç¤ºç”Ÿæˆç‰©
 		LuaFnAuditGemCompound( sceneId,selfId, 1,
 			stuffList[1], stuffList[2], stuffList[3], stuffList[4], stuffList[5], newItemIndex )
 	end

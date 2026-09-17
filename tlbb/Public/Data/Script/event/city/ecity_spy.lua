@@ -1,52 +1,52 @@
 
---ÃÅÅÉÒıµ¼ÈÎÎñ
+--é—¨æ´¾å¼•å¯¼ä»»åŠ¡
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 
 ----------------
 --MisDescBegin
---½Å±¾ºÅ
+--è„šæœ¬å·
 x600045_g_ScriptId	= 600045
 
---½ÓÊÜÈÎÎñNPCÊôĞÔ
+--æ¥å—ä»»åŠ¡NPCå±æ€§
 x600045_g_Position_X=133
 x600045_g_Position_Z=50
 
-x600045_g_AccomplishNPC_Name="Îä´óÍş"
+x600045_g_AccomplishNPC_Name="æ­¦å¤§å¨"
 
---ÈÎÎñºÅ
+--ä»»åŠ¡å·
 x600045_g_MissionId			= 1121
 
---ÈÎÎñÄ¿±ênpc
-x600045_g_Name 					= "Îä´óÍş"
---ÈÎÎñ¹éÀà
-x600045_g_MissionKind			= 50 --Íæ¼Ò³ÇÊĞ
---ÈÎÎñµÈ¼¶
+--ä»»åŠ¡ç›®æ ‡npc
+x600045_g_Name 					= "æ­¦å¤§å¨"
+--ä»»åŠ¡å½’ç±»
+x600045_g_MissionKind			= 50 --ç©å®¶åŸå¸‚
+--ä»»åŠ¡ç­‰çº§
 x600045_g_MissionLevel		= 10000
---ÊÇ·ñÊÇ¾«Ó¢ÈÎÎñ
+--æ˜¯å¦æ˜¯ç²¾è‹±ä»»åŠ¡
 x600045_g_IfMissionElite	= 0
---ÈÎÎñÊÇ·ñÒÑ¾­Íê³É
-x600045_g_IsMissionOkFail	= 0		--ÈÎÎñ²ÎÊıµÄµÚ0Î»
+--ä»»åŠ¡æ˜¯å¦å·²ç»å®Œæˆ
+x600045_g_IsMissionOkFail	= 0		--ä»»åŠ¡å‚æ•°çš„ç¬¬0ä½
 
---ÈÎÎñÎÄ±¾ÃèÊö
-x600045_g_MissionName			= "´òÌ½ÏûÏ¢"
---ÈÎÎñÃèÊö
-x600045_g_MissionInfo			= "°ïÅÉÈÎÎñ£¬ÀûÓÃÇé±¨²¾´òÌ½ÆäËû°ïÅÉ³ÇÊĞ×ÊÑ¶£¡"
---ÈÎÎñÄ¿±ê
-x600045_g_MissionTarget		= "    ĞèÒªºÍ±¾°ï³ÉÔ±×é¶ÓÊÕ¼¯3¸ö²»Í¬°ïÅÉ³ÇÊĞÇé±¨£¬È»ºóµ½#GÎä´óÍş#B[133,50]#W´¦ÁìÈ¡½±Àø£¡"
---Î´Íê³ÉÈÎÎñµÄnpc¶Ô»°
-x600045_g_ContinueInfo		= "¿´À´Äã»¹Ã»ÓĞÍê³É°¡£¡"
---Íê³ÉÈÎÎñnpcËµµÄ»°
-x600045_g_MissionComplete	= "×öµÄºÜºÃ£¬¸ĞĞ»ÄãÎª±¾°ïÅÉ×ö³öµÄ¹±Ï×£¡"
+--ä»»åŠ¡æ–‡æœ¬æè¿°
+x600045_g_MissionName			= "æ‰“æ¢æ¶ˆæ¯"
+--ä»»åŠ¡æè¿°
+x600045_g_MissionInfo			= "å¸®æ´¾ä»»åŠ¡ï¼Œåˆ©ç”¨æƒ…æŠ¥ç°¿æ‰“æ¢å…¶ä»–å¸®æ´¾åŸå¸‚èµ„è®¯ï¼"
+--ä»»åŠ¡ç›®æ ‡
+x600045_g_MissionTarget		= "    éœ€è¦å’Œæœ¬å¸®æˆå‘˜ç»„é˜Ÿæ”¶é›†3ä¸ªä¸åŒå¸®æ´¾åŸå¸‚æƒ…æŠ¥ï¼Œç„¶ååˆ°#Gæ­¦å¤§å¨#B[133,50]#Wå¤„é¢†å–å¥–åŠ±ï¼"
+--æœªå®Œæˆä»»åŠ¡çš„npcå¯¹è¯
+x600045_g_ContinueInfo		= "çœ‹æ¥ä½ è¿˜æ²¡æœ‰å®Œæˆå•Šï¼"
+--å®Œæˆä»»åŠ¡npcè¯´çš„è¯
+x600045_g_MissionComplete	= "åšçš„å¾ˆå¥½ï¼Œæ„Ÿè°¢ä½ ä¸ºæœ¬å¸®æ´¾åšå‡ºçš„è´¡çŒ®ï¼"
 
---ÈÎÎñÊÇ·ñÍê³É
---x600045_g_Mission_IsComplete = 0		--ÈÎÎñ²ÎÊıµÄµÚ0Î»
---´òÌ½µÚ¼¸¸ö³ÇÊĞ
-x600045_g_city 				 	= 1		 --ÈÎÎñ²ÎÊıµÄµÚ1Î»
+--ä»»åŠ¡æ˜¯å¦å®Œæˆ
+--x600045_g_Mission_IsComplete = 0		--ä»»åŠ¡å‚æ•°çš„ç¬¬0ä½
+--æ‰“æ¢ç¬¬å‡ ä¸ªåŸå¸‚
+x600045_g_city 				 	= 1		 --ä»»åŠ¡å‚æ•°çš„ç¬¬1ä½
 
--- ÈÎÎñÍê³ÉÇé¿ö,ÄÚÈİ¶¯Ì¬Ë¢ĞÂ,Õ¼ÓÃÈÎÎñ²ÎÊıµÄµÚ1Î»
+-- ä»»åŠ¡å®Œæˆæƒ…å†µ,å†…å®¹åŠ¨æ€åˆ·æ–°,å ç”¨ä»»åŠ¡å‚æ•°çš„ç¬¬1ä½
 
-x600045_g_Custom	= { {id="ÒÑ´òÌ½³ÇÊĞ",num=3} }
+x600045_g_Custom	= { {id="å·²æ‰“æ¢åŸå¸‚",num=3} }
 --MisDescEnd
 ----------------
 
@@ -125,7 +125,7 @@ x600045_g_ExpPrize[5] =
 }
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x600045_OnDefaultEvent( sceneId, selfId, targetId )
 	local id = GetNumText();
@@ -135,22 +135,22 @@ function x600045_OnDefaultEvent( sceneId, selfId, targetId )
 			msg = "#{DTGX_080822_1}";
 			AddText(sceneId, msg);
 		EndEvent()
-		AddNumText(sceneId, x600045_g_ScriptId, "ÁìÈ¡´òÌ½ÈÎÎñ", 6, 3);
-		AddNumText(sceneId, x600045_g_ScriptId, "ÁìÈ¡Íê³É½±Àø", 6, 4);
-		AddNumText(sceneId, x600045_g_ScriptId, "´òÌ½ÈÎÎñ°ïÖú", 11, 2);
+		AddNumText(sceneId, x600045_g_ScriptId, "é¢†å–æ‰“æ¢ä»»åŠ¡", 6, 3);
+		AddNumText(sceneId, x600045_g_ScriptId, "é¢†å–å®Œæˆå¥–åŠ±", 6, 4);
+		AddNumText(sceneId, x600045_g_ScriptId, "æ‰“æ¢ä»»åŠ¡å¸®åŠ©", 11, 2);
 		DispatchEventList(sceneId,selfId,targetId);		
-	elseif id == 2 then  																									--´òÌ½ÈÎÎñ°ïÖú
+	elseif id == 2 then  																									--æ‰“æ¢ä»»åŠ¡å¸®åŠ©
 		BeginEvent(sceneId)
 			AddText(sceneId, "#{DTGX_080822_7}");
 		EndEvent()
 		DispatchEventList(sceneId, selfId, targetId);
-	elseif id == 3 then																										--ÁìÈ¡´òÌ½ÈÎÎñ
-		-- ´ïµ½30¼¶£¿
+	elseif id == 3 then																										--é¢†å–æ‰“æ¢ä»»åŠ¡
+		-- è¾¾åˆ°30çº§ï¼Ÿ
 		if GetLevel(sceneId, selfId) < 30 then
-			x600045_MessageBox(sceneId, selfId, targetId, "¶Ô²»Æğ£¬±ØĞëµÈ¼¶´ïµ½30¼¶²Å¿ÉÒÔÁìÈ¡±¾ÈÎÎñ¡£");
+			x600045_MessageBox(sceneId, selfId, targetId, "å¯¹ä¸èµ·ï¼Œå¿…é¡»ç­‰çº§è¾¾åˆ°30çº§æ‰å¯ä»¥é¢†å–æœ¬ä»»åŠ¡ã€‚");
 			return					
 		end
-		-- Íê³ÉÁË5´Î£¿
+		-- å®Œæˆäº†5æ¬¡ï¼Ÿ
 		local ymd = GetTime2Day();
 		local dayCount = 0;			
 		dayCount = GetMissionData(sceneId, selfId, MD_SPY_DAYCOUNT);
@@ -158,47 +158,47 @@ function x600045_OnDefaultEvent( sceneId, selfId, targetId )
 			x600045_MessageBox(sceneId, selfId, targetId, "#{DTGX_080822_3}");
 			return									
 		end
-		-- ÒÑÓĞÈÎÎñ£¿
+		-- å·²æœ‰ä»»åŠ¡ï¼Ÿ
 		if IsHaveMission(sceneId, selfId, x600045_g_MissionId) > 0 then
 			x600045_MessageBox(sceneId, selfId, targetId, "#{DTGX_080822_4}");
 			return				
 		end
-		-- µÀ¾ßÀ¸Âú£¿	
+		-- é“å…·æ æ»¡ï¼Ÿ	
 		if LuaFnGetTaskItemBagSpace(sceneId, selfId) < 1 then
 			x600045_MessageBox(sceneId, selfId, targetId, "#{DTGX_080822_5}");
 			return				
 		end
-		-- Ìí¼ÓÈÎÎñ
-		local ret = AddMission( sceneId, selfId, x600045_g_MissionId, x600045_g_ScriptId, 0, 0, 0 ); --Ìí¼ÓÈÎÎñ
+		-- æ·»åŠ ä»»åŠ¡
+		local ret = AddMission( sceneId, selfId, x600045_g_MissionId, x600045_g_ScriptId, 0, 0, 0 ); --æ·»åŠ ä»»åŠ¡
 		if ret < 1 then
 			return
 		end
-		-- Ìõ¼şÂú×ã£¬¸øÇé±¨²¾
+		-- æ¡ä»¶æ»¡è¶³ï¼Œç»™æƒ…æŠ¥ç°¿
 		local ret = TryRecieveItem( sceneId, selfId, x600045_g_SpyBook_id, QUALITY_MUST_BE_CHANGE);
 		if ret == -1 then
-			return  -- ¸øµÀ¾ßÊ§°Ü	
+			return  -- ç»™é“å…·å¤±è´¥	
 		end		
-		--MD_SPY_DAYCOUNT ¸öÎ»±£´æÒ»Ìì²ÎÓë´ÎÊı£¬ÆäÓàÎ»Êı±£´æÈÕÆÚ£¬Èç£º20080416´ú±í2008Äê4ÔÂ16ÈÕ
+		--MD_SPY_DAYCOUNT ä¸ªä½ä¿å­˜ä¸€å¤©å‚ä¸æ¬¡æ•°ï¼Œå…¶ä½™ä½æ•°ä¿å­˜æ—¥æœŸï¼Œå¦‚ï¼š20080416ä»£è¡¨2008å¹´4æœˆ16æ—¥
 		local dayCount = GetMissionData(sceneId, selfId, MD_SPY_DAYCOUNT); 
 		if floor(dayCount/10) ~= ymd then
 			dayCount = 10 * ymd;
 		end
-		SetMissionData(sceneId, selfId, MD_SPY_DAYCOUNT, dayCount+1);  -- ±£´æ´ÎÊı
-		-- ÈÕÖ¾
+		SetMissionData(sceneId, selfId, MD_SPY_DAYCOUNT, dayCount+1);  -- ä¿å­˜æ¬¡æ•°
+		-- æ—¥å¿—
 		AuditCitySpy(sceneId, selfId, 0);
-		-- ¸øĞÅÏ¢
+		-- ç»™ä¿¡æ¯
 		BeginEvent(sceneId)
 			AddText(sceneId, " #{DTGX_080822_6}");
 		EndEvent()
 		DispatchEventList(sceneId, selfId, targetId);
 		
-	elseif id == 4 then  								--ÁìÈ¡Íê³É½±Àø
-		--ÁìÈ¡ÈÎÎñÁË£¿
+	elseif id == 4 then  								--é¢†å–å®Œæˆå¥–åŠ±
+		--é¢†å–ä»»åŠ¡äº†ï¼Ÿ
 		if IsHaveMission(sceneId, selfId, x600045_g_MissionId) == 0 then
 			x600045_MessageBox(sceneId, selfId, targetId, "#{DTGX_080825_01}");
 			return			
 		end
-		--ÈÎÎñÍê³É£¿
+		--ä»»åŠ¡å®Œæˆï¼Ÿ
 		local misIndex = GetMissionIndexByID(sceneId, selfId, x600045_g_MissionId);
 		if misIndex > 10000 then			
 			return
@@ -207,72 +207,72 @@ function x600045_OnDefaultEvent( sceneId, selfId, targetId )
 			x600045_MessageBox(sceneId, selfId, targetId, "#{DTGX_080822_17}");
 			return
 		end
-		--¿Û³ıÇé±¨²¾
+		--æ‰£é™¤æƒ…æŠ¥ç°¿
 		local ret = LuaFnDelAvailableItem(sceneId, selfId, x600045_g_SpyBook_id, 1);
 		if ret == 0 then
-			msg = "Äã²»»á°ÑÇé±¨²¾¸øËøÁË°É£¿";
+			msg = "ä½ ä¸ä¼šæŠŠæƒ…æŠ¥ç°¿ç»™é”äº†å§ï¼Ÿ";
 			x600045_MessageBox(sceneId, selfId, targetId, msg);
 			return		
 		end		
-		--¸ø2µã°ï¹±
+		--ç»™2ç‚¹å¸®è´¡
 		CityChangeAttr( sceneId, selfId, GUILD_CONTRIB_POINT, 2 )
 		local dayCount = GetMissionData(sceneId, selfId, MD_SPY_DAYCOUNT);
 		local level = GetLevel(sceneId, selfId);
 		local idx = mod(dayCount, 10);
-		--¸ø¾­Ñé½±Àø
+		--ç»™ç»éªŒå¥–åŠ±
 		local expPrize = x600045_g_ExpPrize[idx][level-9]
 		LuaFnAddExp(sceneId, selfId, expPrize);
-		--ÉèÖÃÈÎÎñÍê³ÉĞÅÏ¢
+		--è®¾ç½®ä»»åŠ¡å®Œæˆä¿¡æ¯
 		DelMission(sceneId, selfId, x600045_g_MissionId);
-		-- ÈÕÖ¾
+		-- æ—¥å¿—
 		AuditCitySpy(sceneId, selfId, 1);
-		--·µ»ØĞÅÏ¢
-		msg = format("Äú»ñµÃÁË2µã°ï¹±£¡");
+		--è¿”å›ä¿¡æ¯
+		msg = format("æ‚¨è·å¾—äº†2ç‚¹å¸®è´¡ï¼");
 		x600045_Tips(sceneId, selfId, msg);	
 		local playerName = GetName(sceneId, selfId);
 		msg = format("#{DTGX_080822_20}#{_INFOUSR%s}#{DTGX_080822_21}", playerName);
-		BroadMsgByChatPipe(sceneId, selfId, msg, 6); --°ïÅÉÏûÏ¢
+		BroadMsgByChatPipe(sceneId, selfId, msg, 6); --å¸®æ´¾æ¶ˆæ¯
 	end
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x600045_OnEnumerate( sceneId, selfId, targetId )
 
-	--ÅĞ¶Ï¸ÃnpcÊÇ·ñÊÇ¶ÔÓ¦ÈÎÎñµÄnpc
+	--åˆ¤æ–­è¯¥npcæ˜¯å¦æ˜¯å¯¹åº”ä»»åŠ¡çš„npc
 	if LuaFnGetName( sceneId, targetId ) ~= x600045_g_Name then
 		return 0;
 	end
-	AddNumText( sceneId, x600045_g_ScriptId, "#G´òÌ½ÏûÏ¢ÈÎÎñ", 1, 1 );
-	AddNumText( sceneId, x600045_g_ScriptId, "´òÌ½ÈÎÎñ°ïÖú", 11, 2 );
+	AddNumText( sceneId, x600045_g_ScriptId, "#Gæ‰“æ¢æ¶ˆæ¯ä»»åŠ¡", 1, 1 );
+	AddNumText( sceneId, x600045_g_ScriptId, "æ‰“æ¢ä»»åŠ¡å¸®åŠ©", 11, 2 );
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş£¬Ò²¹©×ÓÈÎÎñµ÷ÓÃ
+--æ£€æµ‹æ¥å—æ¡ä»¶ï¼Œä¹Ÿä¾›å­ä»»åŠ¡è°ƒç”¨
 --**********************************
 function x600045_CheckAccept( sceneId, selfId, targetId )
 end
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x600045_CheckSubmit( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x600045_OnContinue( sceneId, selfId, targetId )
 end
 
 --**********************************
---½ÓÊÜ£¬½ö¹©×ÓÈÎÎñµ÷ÓÃÉèÖÃ¹«¹²²ÎÊı
+--æ¥å—ï¼Œä»…ä¾›å­ä»»åŠ¡è°ƒç”¨è®¾ç½®å…¬å…±å‚æ•°
 --**********************************
 function x600045_OnAccept( sceneId, selfId, targetId, scriptId )
 end
 
 --**********************************
---·ÅÆú£¬½ö¹©×ÓÈÎÎñµ÷ÓÃ
+--æ”¾å¼ƒï¼Œä»…ä¾›å­ä»»åŠ¡è°ƒç”¨
 --**********************************
 function x600045_OnAbandon( sceneId, selfId )
 	local itemNum = LuaFnGetAvailableItemCount(sceneId, selfId, x600045_g_SpyBook_id);
@@ -286,13 +286,13 @@ function x600045_OnAbandon( sceneId, selfId )
 end
 
 --**********************************
---Ìá½»£¬½ö¹©×ÓÈÎÎñµ÷ÓÃ
+--æäº¤ï¼Œä»…ä¾›å­ä»»åŠ¡è°ƒç”¨
 --**********************************
 function x600045_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 end
 
 --**********************************
---¿òÏÔÊ¾
+--æ¡†æ˜¾ç¤º
 --**********************************
 function x600045_MessageBox( sceneId, selfId, targetId, msg )
 	BeginEvent(sceneId)
@@ -302,7 +302,7 @@ function x600045_MessageBox( sceneId, selfId, targetId, msg )
 end
 
 --**********************************
---TipÏÔÊ¾
+--Tipæ˜¾ç¤º
 --**********************************
 function x600045_Tips(sceneId, selfId, msg)
 	BeginEvent(sceneId)

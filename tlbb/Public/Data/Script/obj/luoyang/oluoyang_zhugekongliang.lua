@@ -1,18 +1,18 @@
---ÂåÑôNPC
---Öî¸ğ¿×ÁÁ
---ËãÃü£¬ÒÔºó¿ÉÄÜ³ÉÎªÑ­»·ÈÎÎñ
+--æ´›é˜³NPC
+--è¯¸è‘›å­”äº®
+--ç®—å‘½ï¼Œä»¥åå¯èƒ½æˆä¸ºå¾ªç¯ä»»åŠ¡
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x000077_g_ScriptId = 000077
 
 x000077_g_ControlScript = 050026
 
 
---¶Ò»»ÁĞ±í
+--å…‘æ¢åˆ—è¡¨
 x000077_g_ChangeLst	=
 {
-	--Íæ¼Ò¿ÉµÃµ½µÄÎïÆ·£¬¶Ò»»ËùĞèÎïÆ·£¬¶Ò»»ËùĞèÎïÆ·ÊıÁ¿
-	--4¼¶
+	--ç©å®¶å¯å¾—åˆ°çš„ç‰©å“ï¼Œå…‘æ¢æ‰€éœ€ç‰©å“ï¼Œå…‘æ¢æ‰€éœ€ç‰©å“æ•°é‡
+	--4çº§
 	[1]	= { id = 50401002, NeedItm = 30504031, NeedNum = 72 },
 	[2]	= { id = 50401001, NeedItm = 30504031, NeedNum = 72 },
 	[3]	= { id = 50403001, NeedItm = 30504031, NeedNum = 72 },
@@ -25,7 +25,7 @@ x000077_g_ChangeLst	=
 	[10] = { id = 50413004, NeedItm = 30504031, NeedNum = 72 },
 	
 	
-	--5¼¶
+	--5çº§
 	[11]	= { id = 50501002, NeedItm = 30504032, NeedNum = 72 },
 	[12]	= { id = 50501001, NeedItm = 30504032, NeedNum = 72 },
 	[13]	= { id = 50503001, NeedItm = 30504032, NeedNum = 72 },
@@ -37,7 +37,7 @@ x000077_g_ChangeLst	=
 	[19]	= { id = 50513006, NeedItm = 30504032, NeedNum = 72 },
 	[20]	= { id = 50513004, NeedItm = 30504032, NeedNum = 72 },
 	
-	--6¼¶
+	--6çº§
 	[21]	= { id = 50601002, NeedItm = 30504033, NeedNum = 72 },
 	[22]	= { id = 50601001, NeedItm = 30504033, NeedNum = 72 },
 	[23]	= { id = 50603001, NeedItm = 30504033, NeedNum = 72 },
@@ -49,7 +49,7 @@ x000077_g_ChangeLst	=
 	[29]	= { id = 50613006, NeedItm = 30504033, NeedNum = 72 },
 	[30]	= { id = 50613004, NeedItm = 30504033, NeedNum = 72 },
 	
-	--7¼¶
+	--7çº§
 	[31]	= { id = 50701002, NeedItm = 30504034, NeedNum = 72 },
 	[32]	= { id = 50701001, NeedItm = 30504034, NeedNum = 72 },
 	[33]	= { id = 50703001, NeedItm = 30504034, NeedNum = 72 },
@@ -63,16 +63,16 @@ x000077_g_ChangeLst	=
 }
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x000077_OnDefaultEvent( sceneId, selfId,targetId )
 
 	BeginEvent(sceneId)
 	
-		AddNumText( sceneId, x000077_g_ControlScript, "ÓÃ±¦Ê¯ËéÆ¬¶Ò»»4¼¶±¦Ê¯", 6, 100 )
-		AddNumText( sceneId, x000077_g_ControlScript, "ÓÃ±¦Ê¯ËéÆ¬¶Ò»»5¼¶±¦Ê¯", 6, 200 )
-		AddNumText( sceneId, x000077_g_ControlScript, "ÓÃ±¦Ê¯ËéÆ¬¶Ò»»6¼¶±¦Ê¯", 6, 300 )
-		AddNumText( sceneId, x000077_g_ControlScript, "ÓÃ±¦Ê¯ËéÆ¬¶Ò»»7¼¶±¦Ê¯", 6, 400 )
+		AddNumText( sceneId, x000077_g_ControlScript, "ç”¨å®çŸ³ç¢ç‰‡å…‘æ¢4çº§å®çŸ³", 6, 100 )
+		AddNumText( sceneId, x000077_g_ControlScript, "ç”¨å®çŸ³ç¢ç‰‡å…‘æ¢5çº§å®çŸ³", 6, 200 )
+		AddNumText( sceneId, x000077_g_ControlScript, "ç”¨å®çŸ³ç¢ç‰‡å…‘æ¢6çº§å®çŸ³", 6, 300 )
+		AddNumText( sceneId, x000077_g_ControlScript, "ç”¨å®çŸ³ç¢ç‰‡å…‘æ¢7çº§å®çŸ³", 6, 400 )
 		
 	  if CallScriptFunction( x000077_g_ControlScript, "CheckRightTime", sceneId) == 1 then
 			AddText(sceneId, "#{CHRISTMAS_LUOYANG_HTJS_1}")
@@ -82,7 +82,7 @@ function x000077_OnDefaultEvent( sceneId, selfId,targetId )
 		  if	i<=0	 then
 			  AddText(sceneId,"#{OBJ_luoyang_0023}")
 		  else
-			  AddText(sceneId,"¶àÃ´´ó¸»´ó¹óµÄ±¦Ïà°¡£¡ÄãÕâÃ´ÓĞ¸£µÄÈË²»½éÒâ¸¶Ê®Á½ØÔ½ğ°É£¿")
+			  AddText(sceneId,"å¤šä¹ˆå¤§å¯Œå¤§è´µçš„å®ç›¸å•Šï¼ä½ è¿™ä¹ˆæœ‰ç¦çš„äººä¸ä»‹æ„ä»˜åä¸¤å¦é‡‘å§ï¼Ÿ")
 		  end
 		end		
 			
@@ -98,16 +98,16 @@ function x000077_OnEventRequest( sceneId, selfId, targetId, eventId )
 	if 100 == key or 200 == key or 300 == key or 400 == key then
 		BeginEvent(sceneId)
 		AddText( sceneId, "#{CHANGE_BAOSHI_KONGMIMG}" )
-		AddNumText( sceneId, x000077_g_ControlScript, "¶Ò»»»¢ÑÛÊ¯", 6, 1 + key )
-		AddNumText( sceneId, x000077_g_ControlScript, "¶Ò»»Ã¨ÑÛÊ¯", 6, 2 + key )
-		AddNumText( sceneId, x000077_g_ControlScript, "¶Ò»»×ÏÓñ", 6, 3 + key )
-		AddNumText( sceneId, x000077_g_ControlScript, "¶Ò»»×æÄ¸ÂÌ", 6, 4 + key )
-		AddNumText( sceneId, x000077_g_ControlScript, "¶Ò»»´¿¾»À¶¾§Ê¯", 6, 5 + key )
-		AddNumText( sceneId, x000077_g_ControlScript, "¶Ò»»´¿¾»ºì¾§Ê¯", 6, 6 + key )
-		AddNumText( sceneId, x000077_g_ControlScript, "¶Ò»»´¿¾»»Æ¾§Ê¯", 6, 7 + key )
-		AddNumText( sceneId, x000077_g_ControlScript, "¶Ò»»´¿¾»ÂÌ¾§Ê¯", 6, 8 + key )
-		--AddNumText( sceneId, x000077_g_ControlScript, "¶Ò»»Ñª¾«Ê¯", 6, 9 + key )
-		--AddNumText( sceneId, x000077_g_ControlScript, "¶Ò»»ºì±¦Ê¯", 6, 10 + key )
+		AddNumText( sceneId, x000077_g_ControlScript, "å…‘æ¢è™çœ¼çŸ³", 6, 1 + key )
+		AddNumText( sceneId, x000077_g_ControlScript, "å…‘æ¢çŒ«çœ¼çŸ³", 6, 2 + key )
+		AddNumText( sceneId, x000077_g_ControlScript, "å…‘æ¢ç´«ç‰", 6, 3 + key )
+		AddNumText( sceneId, x000077_g_ControlScript, "å…‘æ¢ç¥–æ¯ç»¿", 6, 4 + key )
+		AddNumText( sceneId, x000077_g_ControlScript, "å…‘æ¢çº¯å‡€è“æ™¶çŸ³", 6, 5 + key )
+		AddNumText( sceneId, x000077_g_ControlScript, "å…‘æ¢çº¯å‡€çº¢æ™¶çŸ³", 6, 6 + key )
+		AddNumText( sceneId, x000077_g_ControlScript, "å…‘æ¢çº¯å‡€é»„æ™¶çŸ³", 6, 7 + key )
+		AddNumText( sceneId, x000077_g_ControlScript, "å…‘æ¢çº¯å‡€ç»¿æ™¶çŸ³", 6, 8 + key )
+		--AddNumText( sceneId, x000077_g_ControlScript, "å…‘æ¢è¡€ç²¾çŸ³", 6, 9 + key )
+		--AddNumText( sceneId, x000077_g_ControlScript, "å…‘æ¢çº¢å®çŸ³", 6, 10 + key )
 				
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
@@ -127,7 +127,7 @@ end
 
 
 --**********************************
---¶Ò»»
+--å…‘æ¢
 --**********************************
 function x000077_OnMyChange( sceneId, selfId, targetId, key )
 
@@ -137,7 +137,7 @@ function x000077_OnMyChange( sceneId, selfId, targetId, key )
 	
 	local unt = x000077_g_ChangeLst[index]
 	
-	--ĞĞÎªÈÕÖ¾
+	--è¡Œä¸ºæ—¥å¿—
 	
 	if  unt == nil then
 		return
@@ -145,7 +145,7 @@ function x000077_OnMyChange( sceneId, selfId, targetId, key )
 	
 	if LuaFnGetAvailableItemCount( sceneId, selfId, unt.NeedItm ) < unt.NeedNum then
 	
-		local strMsg = format("¶Ò»»#H#{_ITEM%d}#WĞèÒª72¸ö#H#{_ITEM%d}#W£¬ÄúµÄ²ÄÁÏ²»×ã¡£", unt.id, unt.NeedItm)
+		local strMsg = format("å…‘æ¢#H#{_ITEM%d}#Wéœ€è¦72ä¸ª#H#{_ITEM%d}#Wï¼Œæ‚¨çš„ææ–™ä¸è¶³ã€‚", unt.id, unt.NeedItm)
 		
 		x000077_MsgBox( sceneId, selfId, targetId, strMsg )
 		return
@@ -157,27 +157,27 @@ function x000077_OnMyChange( sceneId, selfId, targetId, key )
 		if LuaFnDelAvailableItem( sceneId, selfId, unt.NeedItm, unt.NeedNum ) == 1 then
 			AddItemListToHuman( sceneId, selfId )
 		else
-			x000077_MsgBox( sceneId, selfId, targetId, "    ¿Û³ıÎïÆ·Ê§°Ü£¡" )
+			x000077_MsgBox( sceneId, selfId, targetId, "    æ‰£é™¤ç‰©å“å¤±è´¥ï¼" )
 			return
 		end
 	else
-		x000077_MsgBox( sceneId, selfId, targetId, "    ¶Ô²»Æğ£¬ÄúµÄ±³°üÒÑÂú£¬ÎŞ·¨¶Ò»»¡£" )
+		x000077_MsgBox( sceneId, selfId, targetId, "    å¯¹ä¸èµ·ï¼Œæ‚¨çš„èƒŒåŒ…å·²æ»¡ï¼Œæ— æ³•å…‘æ¢ã€‚" )
 		return
 	end
 	
-	local strMsg = format("¶Ò»»³É¹¦£¬Äã»ñµÃÁË#H#{_ITEM%d}#W", unt.id)
+	local strMsg = format("å…‘æ¢æˆåŠŸï¼Œä½ è·å¾—äº†#H#{_ITEM%d}#W", unt.id)
 	
 	x000077_MsgBox( sceneId, selfId, targetId, strMsg )
 	
-	--ĞĞÎªÈÕÖ¾
+	--è¡Œä¸ºæ—¥å¿—
 	local strLog =  format( "change gem gem:%d gem scrap:%d", unt.id, unt.NeedItm)
 	AuditChangeGem(sceneId, selfId, strLog)
 	  
 	--local	szTran	= GetItemTransfer( sceneId, selfId, 0 )
 	--local szUser	= "#{_INFOUSR"..GetName( sceneId, selfId ).."}"
 	--local szItem	= "#{_INFOMSG"..szTran.."}"
-	--local	szMsg		= format( "#W%s#cff99ccÀú¾¡Ç§ĞÁÎª#GÂåÑô£¨111£¬163£©#Y¹¨²ÊÀö#cff99ccÕÒÆëÁË#Y¹Å´ÉËéÆ¬#cff99cc£¬¹¨²ÊÀöÏ×ÉÏ%s×÷Îª¸ĞĞ»¡£", szUser, szItem )
-	--x000077_MsgBox( sceneId, selfId, targetId, "    Äú³É¹¦µÄ¶Ò»»ÁË"..GetItemName( sceneId, unt.id ).."¡£" )
+	--local	szMsg		= format( "#W%s#cff99ccå†å°½åƒè¾›ä¸º#Gæ´›é˜³ï¼ˆ111ï¼Œ163ï¼‰#Yé¾šå½©ä¸½#cff99ccæ‰¾é½äº†#Yå¤ç“·ç¢ç‰‡#cff99ccï¼Œé¾šå½©ä¸½çŒ®ä¸Š%sä½œä¸ºæ„Ÿè°¢ã€‚", szUser, szItem )
+	--x000077_MsgBox( sceneId, selfId, targetId, "    æ‚¨æˆåŠŸçš„å…‘æ¢äº†"..GetItemName( sceneId, unt.id ).."ã€‚" )
 	--BroadMsgByChatPipe( sceneId, selfId, szMsg, 4 )
 
 end

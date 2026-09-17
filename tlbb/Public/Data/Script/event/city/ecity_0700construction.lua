@@ -1,41 +1,41 @@
--- ³ÇÊĞÄÚÕşÖ®½¨ÉèÈÎÎñÖ÷ÊÂ¼ş½Å±¾
--- ½Å±¾ºÅ
+-- åŸå¸‚å†…æ”¿ä¹‹å»ºè®¾ä»»åŠ¡ä¸»äº‹ä»¶è„šæœ¬
+-- è„šæœ¬å·
 x600035_g_ScriptId = 600035
 
--- ÈÎÎñºÅ
+-- ä»»åŠ¡å·
 x600035_g_MissionId = 1111
 
--- ÈÎÎñÄ¿±ênpc
-x600035_g_Name = "Ö£ÎŞÃû"
+-- ä»»åŠ¡ç›®æ ‡npc
+x600035_g_Name = "éƒ‘æ— å"
 
--- ÈÎÎñÎÄ±¾ÃèÊö
-x600035_g_MissionName = "½¨ÉèÈÎÎñ"
-x600035_g_MissionInfo = "³ÇÊĞÄÚÕş£­½¨ÉèÈÎÎñ"			--ÈÎÎñÃèÊö
-x600035_g_NoMissionInfo = "    °ïÀïËÆºõÃ»ÓĞ½¨ÉèÊ²Ã´¡£"	--²»ÔÚ½¨ÉèÊ±ÌáÊ¾
-x600035_g_MissionTarget = "Íê³É°ï»á´ó×Ü¹ÜµÄÈÎÎñ"		--ÈÎÎñÄ¿±ê
-x600035_g_ContinueInfo = "    ÄãµÄÈÎÎñ»¹Ã»ÓĞÍê³ÉÃ´£¿"	--Î´Íê³ÉÈÎÎñµÄnpc¶Ô»°
-x600035_g_MissionComplete = "Ì«Ğ»Ğ»ÄãÁË"				--Íê³ÉÈÎÎñnpcËµµÄ»°
+-- ä»»åŠ¡æ–‡æœ¬æè¿°
+x600035_g_MissionName = "å»ºè®¾ä»»åŠ¡"
+x600035_g_MissionInfo = "åŸå¸‚å†…æ”¿ï¼å»ºè®¾ä»»åŠ¡"			--ä»»åŠ¡æè¿°
+x600035_g_NoMissionInfo = "    å¸®é‡Œä¼¼ä¹æ²¡æœ‰å»ºè®¾ä»€ä¹ˆã€‚"	--ä¸åœ¨å»ºè®¾æ—¶æç¤º
+x600035_g_MissionTarget = "å®Œæˆå¸®ä¼šå¤§æ€»ç®¡çš„ä»»åŠ¡"		--ä»»åŠ¡ç›®æ ‡
+x600035_g_ContinueInfo = "    ä½ çš„ä»»åŠ¡è¿˜æ²¡æœ‰å®Œæˆä¹ˆï¼Ÿ"	--æœªå®Œæˆä»»åŠ¡çš„npcå¯¹è¯
+x600035_g_MissionComplete = "å¤ªè°¢è°¢ä½ äº†"				--å®Œæˆä»»åŠ¡npcè¯´çš„è¯
 
 x600035_g_MissionParam_SubId = 1
 
--- Í¨ÓÃ³ÇÊĞÈÎÎñ½Å±¾
+-- é€šç”¨åŸå¸‚ä»»åŠ¡è„šæœ¬
 x600035_g_CityMissionScript = 600001
 
--- ×ÓÈÎÎñ±í
+-- å­ä»»åŠ¡è¡¨
 x600035_g_SubMissionScriptList = { 600036, 600038, 600039 }
 
--- ÈÎÎñ½±Àø
-x600035_g_ItemAwardIndexOffset = 29						-- ÎïÆ·½±ÀøËùÔÚ±í¸ñÖĞµÄÁĞÆ«ÒÆ
-x600035_g_MissionRound = MD_CITY_CONSTRUCT_ROUND		-- ³ÇÊĞÄÚÕş½¨ÉèÈÎÎñ
-x600035_g_MissionAbandonTime = MD_CITY_CONSTRUCT_TIME	-- ³ÇÊĞÄÚÕş½¨ÉèÈÎÎñ·ÅÆúÈÎÎñµÄÊ±¼ä
-x600035_g_ContribType = GUILD_CONTRIB_POINT				-- °ï»á¹±Ï×¶È
-x600035_g_CityProcess = 0								-- 0:½¨Éè£¬1:ÑĞ¾¿
+-- ä»»åŠ¡å¥–åŠ±
+x600035_g_ItemAwardIndexOffset = 29						-- ç‰©å“å¥–åŠ±æ‰€åœ¨è¡¨æ ¼ä¸­çš„åˆ—åç§»
+x600035_g_MissionRound = MD_CITY_CONSTRUCT_ROUND		-- åŸå¸‚å†…æ”¿å»ºè®¾ä»»åŠ¡
+x600035_g_MissionAbandonTime = MD_CITY_CONSTRUCT_TIME	-- åŸå¸‚å†…æ”¿å»ºè®¾ä»»åŠ¡æ”¾å¼ƒä»»åŠ¡çš„æ—¶é—´
+x600035_g_ContribType = GUILD_CONTRIB_POINT				-- å¸®ä¼šè´¡çŒ®åº¦
+x600035_g_CityProcess = 0								-- 0:å»ºè®¾ï¼Œ1:ç ”ç©¶
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
-function x600035_OnDefaultEvent( sceneId, selfId, targetId )	--µã»÷¸ÃÈÎÎñºóÖ´ĞĞ´Ë½Å±¾
-	if GetName( sceneId, targetId ) ~= x600035_g_Name then		--ÅĞ¶Ï¸ÃnpcÊÇ·ñÊÇ¶ÔÓ¦ÈÎÎñµÄnpc
+function x600035_OnDefaultEvent( sceneId, selfId, targetId )	--ç‚¹å‡»è¯¥ä»»åŠ¡åæ‰§è¡Œæ­¤è„šæœ¬
+	if GetName( sceneId, targetId ) ~= x600035_g_Name then		--åˆ¤æ–­è¯¥npcæ˜¯å¦æ˜¯å¯¹åº”ä»»åŠ¡çš„npc
 		return
 	end
 
@@ -49,14 +49,14 @@ function x600035_OnDefaultEvent( sceneId, selfId, targetId )	--µã»÷¸ÃÈÎÎñºóÖ´ĞĞ´
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x600035_OnEnumerate( sceneId, selfId, targetId )
-	if GetName( sceneId, targetId ) ~= x600035_g_Name then								--ÅĞ¶Ï¸ÃnpcÊÇ·ñÊÇ¶ÔÓ¦ÈÎÎñµÄnpc
+	if GetName( sceneId, targetId ) ~= x600035_g_Name then								--åˆ¤æ–­è¯¥npcæ˜¯å¦æ˜¯å¯¹åº”ä»»åŠ¡çš„npc
 		return
 	end
 
-	--Èç¹ûÒÑ½ÓÈÎÎñ»òÂú×ãÈÎÎñ½ÓÊÕÌõ¼ş,ÔòÁĞ³öÈÎÎñ
+	--å¦‚æœå·²æ¥ä»»åŠ¡æˆ–æ»¡è¶³ä»»åŠ¡æ¥æ”¶æ¡ä»¶,åˆ™åˆ—å‡ºä»»åŠ¡
 	if IsHaveMission( sceneId, selfId, x600035_g_MissionId ) > 0 then
 		local misIndex = GetMissionIndexByID( sceneId, selfId, x600035_g_MissionId )
 		local subMissionScriptId = GetMissionParam( sceneId, selfId, misIndex, x600035_g_MissionParam_SubId )
@@ -68,7 +68,7 @@ function x600035_OnEnumerate( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş£¬Ò²¹©×ÓÈÎÎñµ÷ÓÃ
+--æ£€æµ‹æ¥å—æ¡ä»¶ï¼Œä¹Ÿä¾›å­ä»»åŠ¡è°ƒç”¨
 --**********************************
 function x600035_CheckAccept( sceneId, selfId )
 	local ret = CallScriptFunction( x600035_g_CityMissionScript, "DoCheckAccept", sceneId, selfId, x600035_g_MissionId, x600035_g_MissionAbandonTime )
@@ -76,10 +76,10 @@ function x600035_CheckAccept( sceneId, selfId )
 end
 
 --**********************************
---½ÓÊÜ£¬½ö¹©×ÓÈÎÎñµ÷ÓÃÉèÖÃ¹«¹²²ÎÊı
+--æ¥å—ï¼Œä»…ä¾›å­ä»»åŠ¡è°ƒç”¨è®¾ç½®å…¬å…±å‚æ•°
 --**********************************
 function x600035_OnAccept( sceneId, selfId, targetId, scriptId )
-	if GetName( sceneId, targetId ) ~= x600035_g_Name then								--ÅĞ¶Ï¸ÃnpcÊÇ·ñÊÇ¶ÔÓ¦ÈÎÎñµÄnpc
+	if GetName( sceneId, targetId ) ~= x600035_g_Name then								--åˆ¤æ–­è¯¥npcæ˜¯å¦æ˜¯å¯¹åº”ä»»åŠ¡çš„npc
 		return
 	end
 
@@ -87,20 +87,20 @@ function x600035_OnAccept( sceneId, selfId, targetId, scriptId )
 end
 
 --**********************************
---·ÅÆú£¬½ö¹©×ÓÈÎÎñµ÷ÓÃ
+--æ”¾å¼ƒï¼Œä»…ä¾›å­ä»»åŠ¡è°ƒç”¨
 --**********************************
 function x600035_OnAbandon( sceneId, selfId )
 	CallScriptFunction( x600035_g_CityMissionScript, "DoAbandon", sceneId, selfId, x600035_g_MissionId, x600035_g_MissionAbandonTime, x600035_g_MissionRound )
 end
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x600035_OnContinue( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x600035_CheckSubmit( sceneId, selfId )
 	local ret = CallScriptFunction( x600035_g_CityMissionScript, "DoCheckSubmit", sceneId, selfId, x600035_g_MissionId )
@@ -108,37 +108,37 @@ function x600035_CheckSubmit( sceneId, selfId )
 end
 
 --**********************************
---Ìá½»£¬½ö¹©×ÓÈÎÎñµ÷ÓÃ
+--æäº¤ï¼Œä»…ä¾›å­ä»»åŠ¡è°ƒç”¨
 --**********************************
 function x600035_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 	if x600035_CheckSubmit( sceneId, selfId ) == 1 then
 		CallScriptFunction( x600035_g_CityMissionScript, "DoSubmit", sceneId, selfId, x600035_g_MissionId, x600035_g_MissionRound )
 
-		-- Éı¼¶½¨Öş
+		-- å‡çº§å»ºç­‘
 		CityIncProgress( sceneId, selfId, sceneId, x600035_g_CityProcess )
 
-		-- ¾­Ñé½±Àø
+		-- ç»éªŒå¥–åŠ±
 		local ExpBonus = CallScriptFunction( x600035_g_CityMissionScript, "CalcExpBonus", sceneId, selfId, x600035_g_MissionRound )
 		AddExp( sceneId, selfId, ExpBonus )
 
-		-- °ï»á¹±Ï×¶È½±Àø
+		-- å¸®ä¼šè´¡çŒ®åº¦å¥–åŠ±
 		local ContribBonus = CallScriptFunction( x600035_g_CityMissionScript, "CalcContribBonus", sceneId, selfId, x600035_g_MissionRound )
 		-- print(ContribBonus)
 		if ContribBonus > 0 then
 			CityChangeAttr( sceneId, selfId, x600035_g_ContribType, ContribBonus )
 		end
 
-		-- ÎïÆ·½±Àø
+		-- ç‰©å“å¥–åŠ±
 		CallScriptFunction( x600035_g_CityMissionScript, "RandomItemAward", sceneId, selfId,
 			x600035_g_MissionRound, x600035_g_ItemAwardIndexOffset )
 
-		-- Í³¼ÆĞÅÏ¢
+		-- ç»Ÿè®¡ä¿¡æ¯
 		LuaFnAuditQuest(sceneId, selfId, x600035_g_MissionName)
 	end
 end
 
 --**********************************
--- ÅĞ¶ÏÄ³¸öÊÂ¼şºÅÊÇ·ñ´æÔÚÓÚµ±Ç°ÊÂ¼şÁĞ±í
+-- åˆ¤æ–­æŸä¸ªäº‹ä»¶å·æ˜¯å¦å­˜åœ¨äºå½“å‰äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x600035_IsInEventList( sceneId, selfId, eventId )
 	local i = 1
@@ -154,7 +154,7 @@ function x600035_IsInEventList( sceneId, selfId, eventId )
 end
 
 --**********************************
---¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+--å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x600035_NotifyFailBox( sceneId, selfId, targetId, msg )
 	BeginEvent( sceneId )

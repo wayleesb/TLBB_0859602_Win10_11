@@ -1,18 +1,18 @@
---´«ÈëÕ½³¡µÄNpc
---ÆÕÍ¨
+--ä¼ å…¥æˆ˜åœºçš„Npc
+--æ™®é€š
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x125001_g_scriptId = 125001
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x125001_g_eventList={001232}
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x125001_OnDefaultEvent( sceneId, selfId, targetId )
 	BeginEvent(sceneId)
-		AddText(sceneId,"  ÏëÒª½øÈëÕ½³¡Âğ£¿Äã×¼±¸ºÃÁËÃ»ÓĞ£¿")
+		AddText(sceneId,"  æƒ³è¦è¿›å…¥æˆ˜åœºå—ï¼Ÿä½ å‡†å¤‡å¥½äº†æ²¡æœ‰ï¼Ÿ")
 		for i, eventId in x125001_g_eventList do
 			CallScriptFunction( eventId, "OnEnumerate",sceneId, selfId, targetId )
 		end
@@ -21,7 +21,7 @@ function x125001_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x125001_OnEventRequest( sceneId, selfId, targetId, eventId )
 	for i, findId in x125001_g_eventList do

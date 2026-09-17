@@ -1,36 +1,36 @@
---Ç©µ½£¨ÌìÁúÏòÇ°³å»î¶¯£©
+--ç­¾åˆ°ï¼ˆå¤©é¾™å‘å‰å†²æ´»åŠ¨ï¼‰
 --xiehong
 
 x889053_g_ScriptId	= 889053;
 
---»î¶¯BUFFid
+--æ´»åŠ¨BUFFid
 x889053_g_Buff_Id	= 20003
 
---¿ªÊ¼½áÊøÈÕÆÚ
---×¢Òâ£ºÈç¹ûÒªÐÂ¿ª»î¶¯£¬Ò»¶¨Òª¸Ä¿ªÊ¼ÈÕÆÚ´óÓÚÉÏÒ»´ÎµÄ½áÊøÈÕÆÚ£¬·ñÔò¼ÇÂ¼Íæ¼Ò²Î¼Ó¼ÆÊýµÄMD²»»áÖØÖÃ
+--å¼€å§‹ç»“æŸæ—¥æœŸ
+--æ³¨æ„ï¼šå¦‚æžœè¦æ–°å¼€æ´»åŠ¨ï¼Œä¸€å®šè¦æ”¹å¼€å§‹æ—¥æœŸå¤§äºŽä¸Šä¸€æ¬¡çš„ç»“æŸæ—¥æœŸï¼Œå¦åˆ™è®°å½•çŽ©å®¶å‚åŠ è®¡æ•°çš„MDä¸ä¼šé‡ç½®
 x889053_g_BeginTime	= 20090709
 x889053_g_EndTime	= 20090816
 
 
---µÈ¼¶ÏÞÖÆ
+--ç­‰çº§é™åˆ¶
 x889053_g_MinLevel	= 10
 
---¿ÉÒÔ»ñµÃ½±ÀøµÄ´ÎÊý
+--å¯ä»¥èŽ·å¾—å¥–åŠ±çš„æ¬¡æ•°
 x889053_g_AwardInfo	= {
 
 {Cycle = 7,	AwardItemId1 = 30008002, AwardCount1 = 1, NeedBagSpace1 = 1, AwardItemId2 = 10124141, AwardCount2 = 1, NeedBagSpace2 = 1}, 
 
-{Cycle = 14, AwardItemId1 = 30008002, AwardCount1 = 1, NeedBagSpace1 = 1, AwardItemId2 = 50313004, AwardCount2 = 1, NeedBagSpace2 = 1},--²ÄÁÏÀ¸
+{Cycle = 14, AwardItemId1 = 30008002, AwardCount1 = 1, NeedBagSpace1 = 1, AwardItemId2 = 50313004, AwardCount2 = 1, NeedBagSpace2 = 1},--ææ–™æ 
 
 {Cycle = 28, AwardItemId1 = 30008002, AwardCount1 = 1, NeedBagSpace1 = 1, AwardItemId2 = 30900045, AwardCount2 = 1, NeedBagSpace2 = 1},
 
-{Cycle = 35, AwardItemId1 = 30008002, AwardCount1 = 1, NeedBagSpace1 = 1, AwardItemId2 = 50313004, AwardCount2 = 2, NeedBagSpace2 = 2},--²ÄÁÏÀ¸
+{Cycle = 35, AwardItemId1 = 30008002, AwardCount1 = 1, NeedBagSpace1 = 1, AwardItemId2 = 50313004, AwardCount2 = 2, NeedBagSpace2 = 2},--ææ–™æ 
 							
   }
 
 
 --**********************************
---ÁÐ¾ÙÊÂ¼þ
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x889053_OnEnumerate( sceneId, selfId, targetId )
 
@@ -41,9 +41,9 @@ function x889053_OnEnumerate( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êý
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
-function x889053_OnDefaultEvent( sceneId, selfId, targetId )	--µã»÷ÌìÁúÏòÇ°³å
+function x889053_OnDefaultEvent( sceneId, selfId, targetId )	--ç‚¹å‡»å¤©é¾™å‘å‰å†²
 
 	local opt = GetNumText();
 	if opt == 1 then
@@ -54,21 +54,21 @@ function x889053_OnDefaultEvent( sceneId, selfId, targetId )	--µã»÷ÌìÁúÏòÇ°³å
 			
 			local insertMsg = x889053_InsertMsg( sceneId, selfId, 1 )
 
-			AddText( sceneId, msg.."#r #r    "..insertMsg );							--¶Ô»°
+			AddText( sceneId, msg.."#r #r    "..insertMsg );							--å¯¹è¯
 			
-			AddNumText( sceneId, x889053_g_ScriptId, "#{TLXQC_090306_4}", 6, 11 );		--°´Å¥£ºÎÒÒª²Î¼Ó¡¶ÌìÁúÏòÇ°³å¡·
-			AddNumText( sceneId, x889053_g_ScriptId, "#{TLXQC_090306_5}", 6, 12 );		--°´Å¥£º²éÑ¯²Î¼Ó´ÎÊý
-			AddNumText( sceneId, x889053_g_ScriptId, "#{TLXQC_090306_6}", 6, 13 );		--°´Å¥£ºÌìÁúÏòÇ°³åËµÃ÷
+			AddNumText( sceneId, x889053_g_ScriptId, "#{TLXQC_090306_4}", 6, 11 );		--æŒ‰é’®ï¼šæˆ‘è¦å‚åŠ ã€Šå¤©é¾™å‘å‰å†²ã€‹
+			AddNumText( sceneId, x889053_g_ScriptId, "#{TLXQC_090306_5}", 6, 12 );		--æŒ‰é’®ï¼šæŸ¥è¯¢å‚åŠ æ¬¡æ•°
+			AddNumText( sceneId, x889053_g_ScriptId, "#{TLXQC_090306_6}", 6, 13 );		--æŒ‰é’®ï¼šå¤©é¾™å‘å‰å†²è¯´æ˜Ž
 		EndEvent()
 		DispatchEventList( sceneId, selfId, targetId )
 		
-	elseif opt == 11 then																--µã»÷°´Å¥£ºÎÒÒª²Î¼Ó¡¶ÌìÁúÏòÇ°³å¡·
+	elseif opt == 11 then																--ç‚¹å‡»æŒ‰é’®ï¼šæˆ‘è¦å‚åŠ ã€Šå¤©é¾™å‘å‰å†²ã€‹
 		
 		if x889053_CheckCanJoinAndNotice( sceneId, selfId, targetId ) == 1 then
 			x889053_Join( sceneId, selfId, targetId )
 		end
 		
-	elseif opt == 12 then																--µã»÷°´Å¥£º²éÑ¯²Î¼Ó´ÎÊý
+	elseif opt == 12 then																--ç‚¹å‡»æŒ‰é’®ï¼šæŸ¥è¯¢å‚åŠ æ¬¡æ•°
 			
 		insertMsg = x889053_InsertMsg( sceneId, selfId, 1 )
 		
@@ -77,7 +77,7 @@ function x889053_OnDefaultEvent( sceneId, selfId, targetId )	--µã»÷ÌìÁúÏòÇ°³å
 		EndEvent()
 		DispatchEventList( sceneId, selfId, targetId )
 		
-	elseif opt == 13 then																--µã»÷°´Å¥£ºÌìÁúÏòÇ°³åËµÃ÷
+	elseif opt == 13 then																--ç‚¹å‡»æŒ‰é’®ï¼šå¤©é¾™å‘å‰å†²è¯´æ˜Ž
 		
 		BeginEvent(sceneId)
 			AddText( sceneId,  "    #{TLXQC_090306_7}");
@@ -88,7 +88,7 @@ function x889053_OnDefaultEvent( sceneId, selfId, targetId )	--µã»÷ÌìÁúÏòÇ°³å
 end
 
 
---Éú³É²åÈë¶Ô»°
+--ç”Ÿæˆæ’å…¥å¯¹è¯
 function x889053_InsertMsg( sceneId, selfId, query )
 	
 	local insertMsg = ""
@@ -125,22 +125,22 @@ function x889053_InsertMsg( sceneId, selfId, query )
 end
 
 
---ÊÇ·ñ»î¶¯Ê±¼ä
+--æ˜¯å¦æ´»åŠ¨æ—¶é—´
 function x889053_IsInActTime( )	
 
 	local curDate = GetTime2Day( )
 	
-	--Èç¹ûÊÇ»î¶¯Ê±¼äÔò·µ»Ø½ñÌìÈÕÆÚ
+	--å¦‚æžœæ˜¯æ´»åŠ¨æ—¶é—´åˆ™è¿”å›žä»Šå¤©æ—¥æœŸ
 	if curDate >= x889053_g_BeginTime and curDate <= x889053_g_EndTime then
 		return curDate
 	end
 	
-	--·ñÔò·µ»Ø0
+	--å¦åˆ™è¿”å›ž0
 	return 0
 	
 end
 
---È¡µÃµ±Ç°²Î¼Ó»î¶¯´ÎÊý
+--å–å¾—å½“å‰å‚åŠ æ´»åŠ¨æ¬¡æ•°
 function x889053_GetJoinCount( sceneId, selfId )
 	
 	local lastJoinDate = GetMissionData( sceneId, selfId, MD_TW_QIANDAO_LAST_JOIN_TIME )
@@ -154,7 +154,7 @@ function x889053_GetJoinCount( sceneId, selfId )
 	
 end
 
---È¡µÃ»¹ÐèÒª¶àÉÙ´Î¿ÉÒÔÁì½±£¬¶¼ÁìÍêÁË¾Í·µ»Ø0
+--å–å¾—è¿˜éœ€è¦å¤šå°‘æ¬¡å¯ä»¥é¢†å¥–ï¼Œéƒ½é¢†å®Œäº†å°±è¿”å›ž0
 function x889053_AwardLeftCount( sceneId, selfId, joinCount )
 	
 	local awardLeftCount = 0
@@ -170,27 +170,27 @@ end
 
 function x889053_CheckCanJoinAndNotice( sceneId, selfId, targetId )
 	
-	--ÊÇ·ñÔÚ»î¶¯Ê±¼äÄÚ£¨Õý³£Ó¦¸ÃÍ¨¹ý£©
+	--æ˜¯å¦åœ¨æ´»åŠ¨æ—¶é—´å†…ï¼ˆæ­£å¸¸åº”è¯¥é€šè¿‡ï¼‰
 	local curDate = x889053_IsInActTime( )
 	if curDate == 0 then
 		x889053_ReturnDlg( sceneId, selfId, targetId, "#{TLXQC_090306_25}" )
 		return 0
 	end
 	
-	--ÅÐ¶ÏµÈ¼¶
+	--åˆ¤æ–­ç­‰çº§
 	if GetLevel( sceneId, selfId ) < x889053_g_MinLevel then
 		x889053_ReturnDlg( sceneId, selfId, targetId, "    #{TLXQC_090306_14}" )
 		return 0
 	end
 	
-	--ÅÐ¶Ï½ñÈÕÊÇ·ñ²Î¼Ó¹ý
+	--åˆ¤æ–­ä»Šæ—¥æ˜¯å¦å‚åŠ è¿‡
 	local lastJoinDate = GetMissionData( sceneId, selfId, MD_TW_QIANDAO_LAST_JOIN_TIME )
 	if curDate <= lastJoinDate then
 		x889053_ReturnDlg( sceneId, selfId, targetId, "    #{TLXQC_090306_15}" )
 		return 0
 	end
 	
-	--ÅÐ¶ÏBUFFÊÇ·ñÔÚ
+	--åˆ¤æ–­BUFFæ˜¯å¦åœ¨
 	if LuaFnHaveImpactOfSpecificDataIndex( sceneId, selfId, x889053_g_Buff_Id ) == 1 then
 		x889053_ReturnDlg( sceneId, selfId, targetId, "    #{TLXQC_090306_16}" )
 		return 0
@@ -208,7 +208,7 @@ function x889053_Join( sceneId, selfId, targetId )
 	for i, awrad in x889053_g_AwardInfo do
 		if awrad.Cycle == joinCount+1 then
 			
-			--ÅÐ¶Ï±³°üÊÇ·ñ¹»
+			--åˆ¤æ–­èƒŒåŒ…æ˜¯å¦å¤Ÿ
 			local error = 0
 			if awrad.Cycle == 7 or awrad.Cycle == 28 then
 				if LuaFnGetPropertyBagSpace( sceneId, selfId ) < awrad.NeedBagSpace1 + awrad.NeedBagSpace2 then
@@ -227,12 +227,12 @@ function x889053_Join( sceneId, selfId, targetId )
 				end
 			end
 			if error == 1 then
-				--Èô±³°ü¿Õ¸ñ²»×ãÊ±£¬Ö»·µ»ØÐÑÄ¿ÌáÊ¾£¬²»·µ»Ønpc¶Ô»°£¬Ö±½Ó¹Ø±Õ¶Ô»°¿ò¡£
+				--è‹¥èƒŒåŒ…ç©ºæ ¼ä¸è¶³æ—¶ï¼Œåªè¿”å›žé†’ç›®æç¤ºï¼Œä¸è¿”å›žnpcå¯¹è¯ï¼Œç›´æŽ¥å…³é—­å¯¹è¯æ¡†ã€‚
 				x889053_CloseDlg( sceneId, selfId, targetId )
 				return
 			end
 			
-			--¸øÓè
+			--ç»™äºˆ
 			local bIsSuccess = 1
 	
 			for i = 1, awrad.AwardCount1 do
@@ -253,12 +253,12 @@ function x889053_Join( sceneId, selfId, targetId )
 			end
 			
 			if bIsSuccess == 1 then 
-				--Í³¼ÆÁìÈ¡½±Àø
+				--ç»Ÿè®¡é¢†å–å¥–åŠ±
 				AuditQianDao( sceneId, selfId, 1, awrad.AwardCount1 )
 				AuditQianDao( sceneId, selfId, 1, awrad.AwardCount2 )
 				x889053_Tips( sceneId, selfId, "#{TLXQC_090306_17}"..awrad.AwardCount1.."#{TLXQC_090306_24}#{_ITEM"..awrad.AwardItemId1.."}#{TLXQC_090306_18}" )
 				x889053_Tips( sceneId, selfId, "#{TLXQC_090306_17}"..awrad.AwardCount2.."#{TLXQC_090306_24}#{_ITEM"..awrad.AwardItemId2.."}#{TLXQC_090306_18}" )
-				--ÁìÈ¡½±Àøºó¹Ø±Õ¶Ô»°¿ò
+				--é¢†å–å¥–åŠ±åŽå…³é—­å¯¹è¯æ¡†
 				x889053_CloseDlg( sceneId, selfId, targetId )
 				getAward = 1
 			end
@@ -266,17 +266,17 @@ function x889053_Join( sceneId, selfId, targetId )
 		end
 	end
 	joinCount = joinCount + 1
-	--¼ÓBUFF
+	--åŠ BUFF
 	LuaFnSendSpecificImpactToUnit( sceneId, selfId, selfId, selfId, x889053_g_Buff_Id, 0 )
 	
 	local curDate = GetTime2Day( )
 	SetMissionData( sceneId, selfId, MD_TW_QIANDAO_LAST_JOIN_TIME, curDate )
 	SetMissionData( sceneId, selfId, MD_TW_QIANDAO_JOIN_COUNT, joinCount )
 	
-	--Í³¼Æ²Î¼Ó»î¶¯
+	--ç»Ÿè®¡å‚åŠ æ´»åŠ¨
 	AuditQianDao( sceneId, selfId, 0, 0 )
 	
-	--Èç¹û²»ÊÇÁìÈ¡½±ÀøµÄ´ÎÊý¾ÍÈÃNPC¸æËßËû»¹Ê£¶àÉÙ´Î¿ÉÒÔÁì
+	--å¦‚æžœä¸æ˜¯é¢†å–å¥–åŠ±çš„æ¬¡æ•°å°±è®©NPCå‘Šè¯‰ä»–è¿˜å‰©å¤šå°‘æ¬¡å¯ä»¥é¢†
 	if getAward ~= 1 then
 		local msg = x889053_InsertMsg( sceneId, selfId, 0 )
 		x889053_ReturnDlg( sceneId, selfId, targetId, "    "..msg )
@@ -284,7 +284,7 @@ function x889053_Join( sceneId, selfId, targetId )
 end
 
 --**********************************
---·µ»Ø¶Ô»°
+--è¿”å›žå¯¹è¯
 --**********************************
 function x889053_ReturnDlg(sceneId, selfId, targetId, msg)
 	BeginEvent(sceneId)
@@ -304,7 +304,7 @@ function x889053_Tips(sceneId, selfId, msg)
 end
 
 --**********************************
---¹Ø±Õ¶Ô»°¿ò
+--å…³é—­å¯¹è¯æ¡†
 --**********************************
 function x889053_CloseDlg(sceneId, selfId, targetId)
 	BeginUICommand( sceneId )
@@ -314,7 +314,7 @@ function x889053_CloseDlg(sceneId, selfId, targetId)
 end
 
 --**********************************
---½ÓÊÜ
+--æŽ¥å—
 --**********************************
 function x889053_OnAccept( sceneId, selfId )
 
@@ -322,47 +322,47 @@ function x889053_OnAccept( sceneId, selfId )
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x889053_OnAbandon( sceneId, selfId )
 
 end
 
 --**********************************
---¼ÌÐø
+--ç»§ç»­
 --**********************************
 function x889053_OnContinue( sceneId, selfId, targetId )
 
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x889053_CheckSubmit( sceneId, selfId )
 
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x889053_OnSubmit( sceneId, selfId, targetId,selectRadioId )
 
 end
 
 --**********************************
---É±ËÀ¹ÖÎï»òÍæ¼Ò
+--æ€æ­»æ€ªç‰©æˆ–çŽ©å®¶
 --**********************************
 function x889053_OnKillObject( sceneId, selfId, objdataId )
 end
 
 --**********************************
---½øÈëÇøÓòÊÂ¼þ
+--è¿›å…¥åŒºåŸŸäº‹ä»¶
 --**********************************
 function x889053_OnEnterArea( sceneId, selfId, zoneId )
 end
 
 --**********************************
---µÀ¾ß¸Ä±ä
+--é“å…·æ”¹å˜
 --**********************************
 function x889053_OnItemChanged( sceneId, selfId, itemdataId )
 end

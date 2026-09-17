@@ -1,22 +1,22 @@
 -- 300042 
--- ´óÏ´Ëèµ¤
--- Ê¹ÓÃÖ®ºó¿ÉÒÔ½«ËùÓĞµÄÒÑ·ÖÅäµãÊı±äÎªÇ±ÄÜ¡£
+-- å¤§æ´—é«“ä¸¹
+-- ä½¿ç”¨ä¹‹åå¯ä»¥å°†æ‰€æœ‰çš„å·²åˆ†é…ç‚¹æ•°å˜ä¸ºæ½œèƒ½ã€‚
 
 
--- ½Å±¾ºÅ
+-- è„šæœ¬å·
 x300042_g_scriptId = 300042
-x300042_g_ItemId = 30008004  -- Ò©Ë®ID
+x300042_g_ItemId = 30008004  -- è¯æ°´ID
 
 x300042_g_UseScriptId = 300052
 --**********************************
--- ÊÂ¼ş½»»¥Èë¿Ú
+-- äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x300042_OnDefaultEvent( sceneId, selfId )
 	BeginEvent(sceneId)
-		AddText(sceneId, "#Y´óÏ´Ëèµ¤")
-		AddText(sceneId, "  Ê¹ÓÃÖ®ºó¿ÉÒÔ½«ËùÓĞµÄÒÑ·ÖÅäµãÊı±äÎªÇ±ÄÜ¡£")
-			AddNumText(sceneId, x300042_g_UseScriptId,"ÎÒÒªÏÖÔÚÏ´µã", 0, 1)
-			AddNumText(sceneId, x300042_g_UseScriptId,"ÒÔºóÔÙËµ", 0, 2)
+		AddText(sceneId, "#Yå¤§æ´—é«“ä¸¹")
+		AddText(sceneId, "  ä½¿ç”¨ä¹‹åå¯ä»¥å°†æ‰€æœ‰çš„å·²åˆ†é…ç‚¹æ•°å˜ä¸ºæ½œèƒ½ã€‚")
+			AddNumText(sceneId, x300042_g_UseScriptId,"æˆ‘è¦ç°åœ¨æ´—ç‚¹", 0, 1)
+			AddNumText(sceneId, x300042_g_UseScriptId,"ä»¥åå†è¯´", 0, 2)
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,-1)
 	

@@ -1,33 +1,33 @@
---»î¶¯¡ª¡ª
---Íø¾Û»î¶¯¿¨
+--æ´»åŠ¨â€”â€”
+--ç½‘èšæ´»åŠ¨å¡
 
 x808061_g_ScriptId						= 808061
-x808061_g_SportsPrize_Active	= 0			--Ä¬ÈÏ¹Ø±Õ
+x808061_g_SportsPrize_Active	= 0			--é»˜è®¤å…³é—­
 
 x808061_g_ActiveStartTime			= 7168	--20070618
 --x808061_g_ActiveEndTime			= 7198	--20070718
 
 function x808061_SportsCard(sceneId,selfId,targetId)
-	--ÊÇ·ñÒÑ¾­ÁìÈ¡¹ıÌåÓı¾º²Â½±Àø
+	--æ˜¯å¦å·²ç»é¢†å–è¿‡ä½“è‚²ç«çŒœå¥–åŠ±
 	if GetMissionFlag( sceneId, selfId, MF_ActiveJuCard ) == 1 then
-		x808061_NotifyFailBox( sceneId, selfId, targetId, "    ÄúÒÑ¾­ÁìÈ¡¹ı»î¶¯½±Àø£¬²»ÄÜÖØ¸´ÁìÈ¡¡£" )
+		x808061_NotifyFailBox( sceneId, selfId, targetId, "    æ‚¨å·²ç»é¢†å–è¿‡æ´»åŠ¨å¥–åŠ±ï¼Œä¸èƒ½é‡å¤é¢†å–ã€‚" )
 		return
 	end
 	
-	--ÊÇ·ñ´óÓÚ20¼¶
+	--æ˜¯å¦å¤§äº20çº§
 	if GetLevel( sceneId, selfId ) < 5 then
-		x808061_NotifyFailBox( sceneId, selfId, targetId, "    ÇëÄúµÄµÈ¼¶³¬¹ı5¼¶ºóÔÙÀ´ÁìÈ¡»î¶¯½±Àø¡£" )
+		x808061_NotifyFailBox( sceneId, selfId, targetId, "    è¯·æ‚¨çš„ç­‰çº§è¶…è¿‡5çº§åå†æ¥é¢†å–æ´»åŠ¨å¥–åŠ±ã€‚" )
 		return
 	end
 	
-	--¼ì²é±³°ü¿Õ¼ä
+	--æ£€æŸ¥èƒŒåŒ…ç©ºé—´
 	local FreeSpace = LuaFnGetPropertyBagSpace( sceneId, selfId )
 	if( FreeSpace < 1 ) then
-		x808061_NotifyFailBox( sceneId, selfId, targetId, "    ¶Ô²»Æğ£¬ÄúÃ»ÓĞ×ã¹»µÄÎïÆ·À¸¿Õ¼ä£¬ÇëÕûÀíºóÔÙÀ´ÁìÈ¡¡£" )
+		x808061_NotifyFailBox( sceneId, selfId, targetId, "    å¯¹ä¸èµ·ï¼Œæ‚¨æ²¡æœ‰è¶³å¤Ÿçš„ç‰©å“æ ç©ºé—´ï¼Œè¯·æ•´ç†åå†æ¥é¢†å–ã€‚" )
 		return
 	end
 
-	--´ò¿ªÊäÈë¿¨ºÅ½çÃæ
+	--æ‰“å¼€è¾“å…¥å¡å·ç•Œé¢
 	BeginUICommand( sceneId )
 		UICommand_AddInt( sceneId, targetId )
 	EndUICommand( sceneId )
@@ -35,7 +35,7 @@ function x808061_SportsCard(sceneId,selfId,targetId)
 end
 
 --**********************************
--- ¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+-- å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x808061_NotifyFailBox( sceneId, selfId, targetId, msg )
 	BeginEvent( sceneId )
@@ -45,19 +45,19 @@ function x808061_NotifyFailBox( sceneId, selfId, targetId, msg )
 end
 
 --**********************************
---¼ì²é»î¶¯Ê±¼ä
+--æ£€æŸ¥æ´»åŠ¨æ—¶é—´
 --**********************************
 function x808061_CheckRightTime()
 	local DayTime = GetDayTime()
 	--PrintNum(DayTime)
 	if DayTime < x808061_g_ActiveStartTime then
 		x808061_g_SportsPrize_Active = 0
-		return 0    --´ËÇ°·Ç»î¶¯Ê±¼ä
+		return 0    --æ­¤å‰éæ´»åŠ¨æ—¶é—´
 	end
 
 --if DayTime > x808061_g_ActiveEndTime then
 --	x808061_g_SportsPrize_Active = 0
---	return 0    --´Ëºó»î¶¯ÒÑ¾­½áÊø
+--	return 0    --æ­¤åæ´»åŠ¨å·²ç»ç»“æŸ
 --end
 
 	x808061_g_SportsPrize_Active = 1
@@ -65,17 +65,17 @@ function x808061_CheckRightTime()
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x808061_OnEnumerate( sceneId, selfId, targetId )
     x808061_CheckRightTime()
 	  if 1 == x808061_g_SportsPrize_Active then
-			AddNumText(sceneId, x808061_g_ScriptId, "ÁìÈ¡Íø¾Û»î¶¯³é½±½±Àø", 1, 1 )
+			AddNumText(sceneId, x808061_g_ScriptId, "é¢†å–ç½‘èšæ´»åŠ¨æŠ½å¥–å¥–åŠ±", 1, 1 )
     end
 end
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x808061_OnDefaultEvent( sceneId, selfId, targetId )
 	x808061_CheckRightTime()

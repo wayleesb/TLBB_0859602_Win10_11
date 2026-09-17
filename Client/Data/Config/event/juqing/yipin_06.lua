@@ -2,15 +2,15 @@
 x200055_g_ScriptId = 200055
 x200055_g_MissionId = 44
 x200055_g_PreMissionId = 43
-x200055_g_Name = "ĞéÖñ"
+x200055_g_Name = "è™šç«¹"
 x200055_g_IfMissionElite = 1
 x200055_g_MissionLevel = 70
 x200055_g_MissionKind = 49
-x200055_g_MissionName="ÎÒµÄ°®Çé²»ÊÇÃÎ"
+x200055_g_MissionName="æˆ‘çš„çˆ±æƒ…ä¸æ˜¯æ¢¦"
 x200055_g_MissionInfo="#{Mis_juqing_0044}"
-x200055_g_MissionTarget="#{Mis_juqing_Tar_0044}"	--ÈÎÎñÄ¿±ê
-x200055_g_MissionComplete="  °¡£¿Ê²Ã´£¬ÎÒ±»Ñ¡ÖĞÁË£¿"
+x200055_g_MissionTarget="#{Mis_juqing_Tar_0044}"	--ä»»åŠ¡ç›®æ ‡
+x200055_g_MissionComplete="  å•Šï¼Ÿä»€ä¹ˆï¼Œæˆ‘è¢«é€‰ä¸­äº†ï¼Ÿ"
 x200055_g_MoneyBonus=9000
 x200055_g_exp=17280
-x200055_g_Custom	= { {id="ÒÑÕÒµ½ĞéÖñ",num=1} }
+x200055_g_Custom	= { {id="å·²æ‰¾åˆ°è™šç«¹",num=1} }
 --MisDescEnd

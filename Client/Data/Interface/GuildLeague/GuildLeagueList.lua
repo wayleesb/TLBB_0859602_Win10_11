@@ -1,8 +1,8 @@
---ÓëNPCµÄ¾àÀë
+--ä¸ŽNPCçš„è·ç¦»
 local g_clientNpcId = -1;
 local MAX_OBJ_DISTANCE = 3.0;
 
---·ÖÒ³ÐÅÏ¢
+--åˆ†é¡µä¿¡æ¯
 local g_CurPage=0
 local g_PageNum=0
 local g_NumPerPage=13
@@ -135,7 +135,7 @@ end
 function GuildLeagueList_DoApply()
 	local index=GuildLeagueList_List:GetSelectItem()
 	if index==-1 then
-		PushDebugMessage("ÇëÏÈÑ¡ÔñÒ»¸ö°ï»áÍ¬ÃË£¡")
+		PushDebugMessage("è¯·å…ˆé€‰æ‹©ä¸€ä¸ªå¸®ä¼šåŒç›Ÿï¼")
 		return
 	end
 	
@@ -157,7 +157,7 @@ function GuildLeagueList_CareEventHandle(careId, op, distance)
 		if(tonumber(careId) ~= g_clientNpcId) then
 			return;
 		end
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ý£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æžœå’ŒNPCçš„è·ç¦»å¤§äºŽä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if(op == "distance" and tonumber(distance)>MAX_OBJ_DISTANCE or op=="destroy") then
 			this:Hide();
 		end

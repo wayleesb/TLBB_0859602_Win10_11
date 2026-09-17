@@ -1,18 +1,18 @@
---´óÀíNPC		ÖÆÒ©npc		1Ñ§Ï°ÖÆÒ©¼¼ÄÜ		2ÖĞÒ½¼¼ÄÜËµÃ÷
---¸µµ±¹é
---ÆÕÍ¨
+--å¤§ç†NPC		åˆ¶è¯npc		1å­¦ä¹ åˆ¶è¯æŠ€èƒ½		2ä¸­åŒ»æŠ€èƒ½è¯´æ˜
+--å‚…å½“å½’
+--æ™®é€š
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x002060_g_ScriptId = 002060
 
---ËùÓµÓĞµÄÊÂ¼şIdÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶Idåˆ—è¡¨
 --estudy_zhiyao = 713503
 --elevelup_zhiyao = 713562
 --edialog_zhiyao = 713602
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x002060_g_eventList={713503,713562,713602}
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x002060_UpdateEventList( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
@@ -25,14 +25,14 @@ function x002060_UpdateEventList( sceneId, selfId,targetId )
 end
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x002060_OnDefaultEvent( sceneId, selfId,targetId )
 	x002060_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x002060_OnEventRequest( sceneId, selfId, targetId, eventId )
 	for i, findId in x002060_g_eventList do
@@ -44,7 +44,7 @@ function x002060_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x002060_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x002060_g_eventList do
@@ -59,10 +59,10 @@ function x002060_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x002060_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
-	--¾Ü¾øÖ®ºó£¬Òª·µ»ØNPCµÄÊÂ¼şÁĞ±í
+	--æ‹’ç»ä¹‹åï¼Œè¦è¿”å›NPCçš„äº‹ä»¶åˆ—è¡¨
 	for i, findId in x002060_g_eventList do
 		if missionScriptId == findId then
 			x002060_UpdateEventList( sceneId, selfId, targetId )
@@ -72,7 +72,7 @@ function x002060_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¼ÌĞø£¨ÒÑ¾­½ÓÁËÈÎÎñ£©
+--ç»§ç»­ï¼ˆå·²ç»æ¥äº†ä»»åŠ¡ï¼‰
 --**********************************
 function x002060_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x002060_g_eventList do
@@ -84,7 +84,7 @@ function x002060_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---Ìá½»ÒÑ×öÍêµÄÈÎÎñ
+--æäº¤å·²åšå®Œçš„ä»»åŠ¡
 --**********************************
 function x002060_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, selectRadioId )
 	for i, findId in x002060_g_eventList do
@@ -96,7 +96,7 @@ function x002060_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 end
 
 --**********************************
---ËÀÍöÊÂ¼ş
+--æ­»äº¡äº‹ä»¶
 --**********************************
 function x002060_OnDie( sceneId, selfId, killerId )
 end

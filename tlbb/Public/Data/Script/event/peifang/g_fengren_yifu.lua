@@ -1,13 +1,13 @@
---Éú»î¼¼ÄÜ
---ÖÆÔìÒÂ·ş
+--ç”Ÿæ´»æŠ€èƒ½
+--åˆ¶é€ è¡£æœ
 
---±¾½Å±¾µÄ½Å±¾ºÅ
+--æœ¬è„šæœ¬çš„è„šæœ¬å·
 x700960_g_ScriptID = 700960;
 
---Ô­ÁÏ±í
+--åŸæ–™è¡¨
 x700960_g_Stuff =
 {
-	--Å®ÕæÊÏ·ş
+	--å¥³çœŸæ°æœ
 	[1] = {20103103, 20103112, 20103115, 20308071},
 	[2] = {20103103, 20103112, 20103115, 20308071}, 
 	[3] = {20103103, 20103112, 20103115, 20308071},
@@ -19,7 +19,7 @@ x700960_g_Stuff =
 	[9]	=	{20103105, 20103114, 20103117, 20308073},
 }
 
---Ô­ÁÏÊıÁ¿
+--åŸæ–™æ•°é‡
 x700960_g_Count	=
 {
 	[1]	= {1, 50, 10, 1},
@@ -35,7 +35,7 @@ x700960_g_Count	=
 
 x700960_g_CompoundInfo = {}
 
---Å®ÕæÊÏ·ş
+--å¥³çœŸæ°æœ
 x700960_g_CompoundInfo[413] =
 {
 	abilityId	= ABILITY_FENGREN,
@@ -135,7 +135,7 @@ x700960_g_CompoundInfo[531] =
 	},
 }
 
---±³°üĞèÒªµÄ¿Õ¼ä
+--èƒŒåŒ…éœ€è¦çš„ç©ºé—´
 x700960_g_BagSpace = 1;
 
 function x700960_AbilityCheck( sceneId, selfId, recipeId )
@@ -145,24 +145,24 @@ function x700960_AbilityCheck( sceneId, selfId, recipeId )
 		return OR_ERROR;
 	end
 	
-	--±³°ü¿Õ¼ä¼ì²é
+	--èƒŒåŒ…ç©ºé—´æ£€æŸ¥
 	if(LuaFnGetPropertyBagSpace(sceneId, selfId) < x700960_g_BagSpace) then
 		return OR_BAG_OUT_OF_SPACE;
 	end
 	
-	--¼¼ÄÜµÈ¼¶ÏŞÖÆ
+	--æŠ€èƒ½ç­‰çº§é™åˆ¶
 	local abilityLevel = QueryHumanAbilityLevel(sceneId, selfId, CompoundInfo.abilityId);
 	if(abilityLevel < CompoundInfo.recipeLevel) then
 		return OR_NO_LEVEL
 	end
 	
-	--»îÁ¦ÏŞÖÆ
+	--æ´»åŠ›é™åˆ¶
 	local vigor = GetHumanVigor(sceneId, selfId);
 	if(vigor - CompoundInfo.deleteVigor < 0) then
 		return OR_NOT_ENOUGH_VIGOR;
 	end
 	
-	--²ÄÁÏÊıÁ¿ÏŞÖÆ
+	--ææ–™æ•°é‡é™åˆ¶
 	local i, matInfo, tblCount, bMatEnoughFlag, idx, MatSN, Count, listCount;
 	
 	tblCount = getn( CompoundInfo.matTbl);
@@ -201,7 +201,7 @@ function x700960_AbilityProduce( sceneId, selfId, recipeId )
 		return OR_ERROR
 	end
 	
-	--¿Û³ı»îÁ¦
+	--æ‰£é™¤æ´»åŠ›
 	local vigor = GetHumanVigor(sceneId, selfId);
 	vigor = vigor - CompoundInfo.deleteVigor;
 	SetHumanVigor(sceneId, selfId, vigor);
@@ -232,7 +232,7 @@ function x700960_AbilityProduce( sceneId, selfId, recipeId )
 			end		
 		end
 		
-		--¿Û³ıÎïÆ·
+		--æ‰£é™¤ç‰©å“
 		for j=1, listCount do
 			MatSN = matInfo.matList[j];
 			DelCount = LuaFnGetAvailableItemCount( sceneId, selfId, MatSN );
@@ -254,8 +254,8 @@ function x700960_AbilityProduce( sceneId, selfId, recipeId )
 		
 		local itemInfo = GetBagItemTransfer( sceneId, selfId, bagIndex );
 	
-		--ÔÚÕâÀï¹ã²¥
-		BroadMsgByChatPipe( sceneId, selfId, "#{_INFOUSR"..GetName( sceneId, selfId).."}#IÊÖÖ¯³É¼ë£¬·Ä¶ÏËóËé£¬ÖÕÓÚÖ¯Ôì³öÒ»¼şÈçÃÎÈç»Ã£¬½õÖ¯²Ê·ÄµÄ#{_INFOMSG"..itemInfo.."}#I£¬¿à¾¡¸ÊÀ´£¬²»½ûĞ¦ÑÕÖğ¿ª¡£", 4);
+		--åœ¨è¿™é‡Œå¹¿æ’­
+		BroadMsgByChatPipe( sceneId, selfId, "#{_INFOUSR"..GetName( sceneId, selfId).."}#Iæ‰‹ç»‡æˆèŒ§ï¼Œçººæ–­æ¢­ç¢ï¼Œç»ˆäºç»‡é€ å‡ºä¸€ä»¶å¦‚æ¢¦å¦‚å¹»ï¼Œé”¦ç»‡å½©çººçš„#{_INFOMSG"..itemInfo.."}#Iï¼Œè‹¦å°½ç”˜æ¥ï¼Œä¸ç¦ç¬‘é¢œé€å¼€ã€‚", 4);
 	end	
 	
 	LuaFnSendAbilitySuccessMsg( sceneId, selfId, CompoundInfo.abilityId, recipeId, matInfo.Product )

@@ -44,7 +44,7 @@ function TargetBuff_OnEvent( event )
 	end
 end
 
--- ·µ»Ø0£¬²»ÏÔÊ¾¡£·µ»Ø1£¬ÏÔÊ¾¡£
+-- è¿”å›0ï¼Œä¸æ˜¾ç¤ºã€‚è¿”å›1ï¼Œæ˜¾ç¤ºã€‚
 function TargetBuff_IsTargetValid()
 	if(Target:IsPresent()) then
 		return 1;

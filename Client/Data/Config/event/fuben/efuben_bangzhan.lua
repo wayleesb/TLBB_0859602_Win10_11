@@ -1,6 +1,6 @@
 --MisDescBegin
 x402047_g_ScriptId = 402047
-x402047_g_Name = "ÖÜÈ»"
-x402047_g_MissionName = "Ç°ÍùäÃÂ¹¹ÅÕ½³¡"
-x402047_g_SubmitInfo = "#{BHXZ_081103_115}"									-- Ìá½»Ê±µÄ¶Ô»°
+x402047_g_Name = "å‘¨ç„¶"
+x402047_g_MissionName = "å‰å¾€æ¶¿é¹¿å¤æˆ˜åœº"
+x402047_g_SubmitInfo = "#{BHXZ_081103_115}"									-- æäº¤æ—¶çš„å¯¹è¯
 --MisDescEnd

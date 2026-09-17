@@ -10,14 +10,14 @@ local g_XinfaDefineID = {};
 
 local g_SkillID = {};
 
--- µ±Ç°Ñ¡ÖĞµÄButton£¬Èç¹ûÑ¡ÖĞµÄÊÇXinfa£¬ÖµµÈÓÚXinfaµÄnIndex
--- 									 Èç¹ûÑ¡ÖĞµÄÊÇSkill£¬ÖµµÈÓÚSkillµÄnIndex + XINFA_BUTTONS_NUM
+-- å½“å‰é€‰ä¸­çš„Buttonï¼Œå¦‚æœé€‰ä¸­çš„æ˜¯Xinfaï¼Œå€¼ç­‰äºXinfaçš„nIndex
+-- 									 å¦‚æœé€‰ä¸­çš„æ˜¯Skillï¼Œå€¼ç­‰äºSkillçš„nIndex + XINFA_BUTTONS_NUM
 local g_CurSelectButton;
 
--- µ±Ç°Ñ¡ÖĞµÄĞÄ·¨
+-- å½“å‰é€‰ä¸­çš„å¿ƒæ³•
 local g_CurSelect;
 
---µ±Ç°Ñ¡ÖĞµÄĞÄ·¨Id
+--å½“å‰é€‰ä¸­çš„å¿ƒæ³•Id
 local g_CurSelectXinfaId;
 
 local objCared = -1;
@@ -25,16 +25,16 @@ local MAX_OBJ_DISTANCE = 3.0;
 
 
 local MenPai_UsedAttr = {
-[0] = {image = "set:Menpaishuxing image:Shuxing_Dark", Tooltip = "MPZSX_20071221_13", },			--ÉÙÁÖ
-[1] = {image = "set:Menpaishuxing image:Shuxing_Fire", Tooltip = "MPZSX_20071221_12",},			--Ã÷½Ì
-[2] = {image = "set:Menpaishuxing image:Shuxing_PoisonFire", Tooltip = "MPZSX_20071221_15",},		--Ø¤°ï
-[3] = {image = "set:Menpaishuxing image:Shuxing_DarkIce", Tooltip = "MPZSX_20071221_16",},		--Îäµ±
-[4] = {image = "set:Menpaishuxing image:Shuxing_IceDark", Tooltip = "MPZSX_20071221_17",},		--¶ëÃ¼
-[5] = {image = "set:Menpaishuxing image:Shuxing_Poison", Tooltip = "MPZSX_20071221_14",},			--ĞÇËŞ
-[6] = {image = "set:Menpaishuxing image:Shuxing_FIPD", Tooltip = "MPZSX_20071221_18",}, --ÌìÁú
-[7] = {image = "set:Menpaishuxing image:Shuxing_Ice", Tooltip = "MPZSX_20071221_11",},			--ÌìÉ½
-[8] = {image = "set:Menpaishuxing image:Shuxing_FirePoison", Tooltip = "MPZSX_20071221_19",},		--åĞÒ£
-[9] = {image = "", Tooltip = "ÎŞÃÅÅÉ",},	--ÎŞÃÅÅÉ
+[0] = {image = "set:Menpaishuxing image:Shuxing_Dark", Tooltip = "MPZSX_20071221_13", },			--å°‘æ—
+[1] = {image = "set:Menpaishuxing image:Shuxing_Fire", Tooltip = "MPZSX_20071221_12",},			--æ˜æ•™
+[2] = {image = "set:Menpaishuxing image:Shuxing_PoisonFire", Tooltip = "MPZSX_20071221_15",},		--ä¸å¸®
+[3] = {image = "set:Menpaishuxing image:Shuxing_DarkIce", Tooltip = "MPZSX_20071221_16",},		--æ­¦å½“
+[4] = {image = "set:Menpaishuxing image:Shuxing_IceDark", Tooltip = "MPZSX_20071221_17",},		--å³¨çœ‰
+[5] = {image = "set:Menpaishuxing image:Shuxing_Poison", Tooltip = "MPZSX_20071221_14",},			--æ˜Ÿå®¿
+[6] = {image = "set:Menpaishuxing image:Shuxing_FIPD", Tooltip = "MPZSX_20071221_18",}, --å¤©é¾™
+[7] = {image = "set:Menpaishuxing image:Shuxing_Ice", Tooltip = "MPZSX_20071221_11",},			--å¤©å±±
+[8] = {image = "set:Menpaishuxing image:Shuxing_FirePoison", Tooltip = "MPZSX_20071221_19",},		--é€é¥
+[9] = {image = "", Tooltip = "æ— é—¨æ´¾",},	--æ— é—¨æ´¾
 };
 
 
@@ -81,7 +81,7 @@ end
 function ActionSkillsStudy_OnEvent(event)
 
 	if(event == "TOGLE_SKILLSTUDY") then
-		--¹ØĞÄNPC
+		--å…³å¿ƒNPC
 		objCared = tonumber(arg0);
 		this:CareObject(objCared, 1, "ActionSkillsStudy");
 
@@ -89,21 +89,21 @@ function ActionSkillsStudy_OnEvent(event)
 		ActionSkillsStudy_UpdateFrame();
 		ActionSkillsStudy_NpcName:SetText("#gFF0FA0" ..Target:GetXinfaNpcName());
 
-	--Ë¢ĞÂ½ğÇ®
+	--åˆ·æ–°é‡‘é’±
 	elseif(event == "UNIT_MONEY") then
 		local nMoneyNow,nGold,nSilverCoin,nCopperCoin = Player:GetData("MONEY");
 
 		ActionSkillsStudy_Currently_Money:SetProperty("MoneyNumber", tostring(nMoneyNow));
-	--Ë¢ĞÂ½»×Ó
+	--åˆ·æ–°äº¤å­
 	elseif (event == "MONEYJZ_CHANGE") then
 		ActionSkillsStudy_Currently_Jiaozi:SetProperty("MoneyNumber", tostring(Player:GetData("MONEY_JZ")));	
-	--Ë¢ĞÂ¾­ÑéÖµ
+	--åˆ·æ–°ç»éªŒå€¼
 	elseif(event == "UNIT_EXP") then
 
 		local nExpNow = Player:GetData("EXP");
-		ActionSkillsStudy_CurrentlyExp_Character_Text:SetText("µ±Ç°¾­Ñé:" .. tostring(nExpNow));
+		ActionSkillsStudy_CurrentlyExp_Character_Text:SetText("å½“å‰ç»éªŒ:" .. string.format("%.0f", nExpNow));
 	
-	-- ÈËÎïÉı¼¶
+	-- äººç‰©å‡çº§
 	elseif(event == "UNIT_LEVEL") then
 		ActionSkillsStudy_UpdateFrame();
 		
@@ -115,11 +115,11 @@ function ActionSkillsStudy_OnEvent(event)
 		if(tonumber(arg0) ~= objCared) then
 			return;
 		end
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ı£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æœå’ŒNPCçš„è·ç¦»å¤§äºä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if(arg1 == "distance" and tonumber(arg2)>MAX_OBJ_DISTANCE or arg1=="destroy") then
 			this:Hide();
 
-			--È¡Ïû¹ØĞÄ
+			--å–æ¶ˆå…³å¿ƒ
 			this:CareObject(objCared, 0, "ActionSkillsStudy");
 		end
 
@@ -137,7 +137,7 @@ function ActionSkillsStudy_UpdateFrame()
 	
 	local nPlayerLevel = Player:GetData("LEVEL")
 
-	--»æÖÆĞÄ·¨Í¼±ê
+	--ç»˜åˆ¶å¿ƒæ³•å›¾æ ‡
 	while i<= XINFA_BUTTONS_NUM do
 
 		local theAction = EnumAction(nActionIndex, "xinfa");
@@ -148,11 +148,11 @@ function ActionSkillsStudy_UpdateFrame()
 			g_XinfaDefineID[i] = -1;
 		else
 			XINFA_BUTTONS[i]:SetActionItem(theAction:GetID());
-			--¼ÇÂ¼Ã¿¸ö¸ñ×ÓµÄĞÄ·¨ID
+			--è®°å½•æ¯ä¸ªæ ¼å­çš„å¿ƒæ³•ID
 			g_XinfaID[i] = theAction:GetID();
 			g_XinfaDefineID[i] = theAction:GetDefineID();
 			
-			-- Èç¹ûÍæ¼Ò²»µ½20¼¶£¬ÄÇÃ´Ëû½«ÓĞ²¿·ÖµÄĞÄ·¨²»ÄÜÉı¼¶
+			-- å¦‚æœç©å®¶ä¸åˆ°20çº§ï¼Œé‚£ä¹ˆä»–å°†æœ‰éƒ¨åˆ†çš„å¿ƒæ³•ä¸èƒ½å‡çº§
 			if nPlayerLevel < 20  then
 				XINFA_BUTTONS[2]:Disable()
 				XINFA_BUTTONS[3]:Disable()
@@ -170,7 +170,7 @@ function ActionSkillsStudy_UpdateFrame()
 
 	end
 
-	--Íæ¼ÒÉíÉÏ½ğÇ®
+	--ç©å®¶èº«ä¸Šé‡‘é’±
 	local nMoneyNow,nGold,nSilverCoin,nCopperCoin = Player:GetData("MONEY");
 
 	ActionSkillsStudy_Currently_Money:SetProperty("MoneyNumber", tostring(nMoneyNow));
@@ -179,19 +179,19 @@ function ActionSkillsStudy_UpdateFrame()
 	--ActionSkillsStudy_Icon_Silver_Currently_Text:SetText(tostring(nSilverCoin));
 	--ActionSkillsStudy_Icon_CopperCoin_Currently_Text:SetText(tostring(nCopperCoin));
 
-	--Íæ¼ÒÒÑ¾­È¡µÃµÄ¾­Ñé
+	--ç©å®¶å·²ç»å–å¾—çš„ç»éªŒ
 	local nExpNow = Player:GetData("EXP");
-	ActionSkillsStudy_CurrentlyExp_Character_Text:SetText("µ±Ç°¾­Ñé:" .. tostring(nExpNow));
+	ActionSkillsStudy_CurrentlyExp_Character_Text:SetText("å½“å‰ç»éªŒ:" .. string.format("%.0f", nExpNow));
 
-	--¸üĞÂµ±Ç°Ñ¡ÖĞµÄĞÄ·¨µÄ¼¼ÄÜ
+	--æ›´æ–°å½“å‰é€‰ä¸­çš„å¿ƒæ³•çš„æŠ€èƒ½
 	ActionSkillsStudy_Xinfa_Clicked(g_CurSelect);
-	--¸üĞÂÖ÷ÊôĞÔĞÅÏ¢
+	--æ›´æ–°ä¸»å±æ€§ä¿¡æ¯
 	ActionSkillsStudy_UpdateMenPaiText();
 
 end
 
 --===============================================
--- ¼¼ÄÜµÄ¸üĞÂ»æÖÆ
+-- æŠ€èƒ½çš„æ›´æ–°ç»˜åˆ¶
 --===============================================
 function ActionSkillsStudy_UpdateSkill( nIndex )
 
@@ -219,7 +219,7 @@ function ActionSkillsStudy_UpdateSkill( nIndex )
 end
 
 --===============================================
--- ¸üĞÂÒ»¸ö¼¼ÄÜÍ¼±êµÄ²Ù×÷
+-- æ›´æ–°ä¸€ä¸ªæŠ€èƒ½å›¾æ ‡çš„æ“ä½œ
 --===============================================
 function ActionSkillsStudy_SkillInfo_Update( SkillID )
 
@@ -233,7 +233,7 @@ function ActionSkillsStudy_SkillInfo_Update( SkillID )
 
 	if(SkillID == -1)then
 
-		--Çå¿Õ¼¼ÄÜ
+		--æ¸…ç©ºæŠ€èƒ½
 		ActionSkillsStudy_SkillName:SetText("");
 		ActionSkillsStudy_SkillLevel:SetText("");
 		ActionSkillsStudy_SkillInfo:SetText("");
@@ -244,7 +244,7 @@ function ActionSkillsStudy_SkillInfo_Update( SkillID )
 	local nSkillId = LifeAbility : GetLifeAbility_Number(SkillID);
 
 
-	--¸üĞÂ¼¼ÄÜĞÅÏ¢
+	--æ›´æ–°æŠ€èƒ½ä¿¡æ¯
 	local szInfo = Player:GetSkillInfo(nSkillId,"explain");
 	local szName = Player:GetSkillInfo(nSkillId,"name");
 	--local szSkillData = Player:GetSkillInfo(nSkillId,"skilldata");
@@ -256,7 +256,7 @@ function ActionSkillsStudy_SkillInfo_Update( SkillID )
 end
 
 --===============================================
--- ¸üĞÂÒ»¸öĞÄ·¨Í¼±êµÄ²Ù×÷
+-- æ›´æ–°ä¸€ä¸ªå¿ƒæ³•å›¾æ ‡çš„æ“ä½œ
 --===============================================
 function ActionSkillsStudy_XinfaInfo_Update( nIndex )--XinfaID
 
@@ -268,12 +268,12 @@ function ActionSkillsStudy_XinfaInfo_Update( nIndex )--XinfaID
 	ActionSkillsStudy_XinfaIcon:SetActionItem( -1 );
 	ActionSkillsStudy_XinfaIcon:SetActionItem( g_XinfaID[nIndex] );
 
-	--»ñµÃÏÖÔÚµÄĞÄ·¨µÈ¼¶
+	--è·å¾—ç°åœ¨çš„å¿ƒæ³•ç­‰çº§
 	local nXinfaLevel = GetXinfaLevel( g_XinfaDefineID[nIndex] );
 
-	--»ñµÃÉı¼¶ĞÄ·¨ĞèÒªµÄ½ğÇ®
+	--è·å¾—å‡çº§å¿ƒæ³•éœ€è¦çš„é‡‘é’±
 	local nMoneyNow,nGold,nSilverCoin,nCopperCoin = GetUplevelXinfaSpendMoney(g_XinfaDefineID[nIndex],nXinfaLevel + 1);
-	--»ñµÃÉı¼¶ĞÄ·¨ĞèÒªµÄ¾­Ñé
+	--è·å¾—å‡çº§å¿ƒæ³•éœ€è¦çš„ç»éªŒ
 	local nExp = GetUplevelXinfaSpendExp(g_XinfaDefineID[nIndex],nXinfaLevel + 1);
 
 	--ActionSkillsStudy_Demand_Money:SetProperty("MoneyNumber", tostring(nMoneyNow));
@@ -282,32 +282,32 @@ function ActionSkillsStudy_XinfaInfo_Update( nIndex )--XinfaID
 	--ActionSkillsStudy_Icon_Silver_Demand_Text:SetText(tostring(nSilverCoin));
 	--ActionSkillsStudy_Icon_CopperCoin_Demand_Text:SetText(tostring(nCopperCoin));
 
-	ActionSkillsStudy_DemandExp_Character_Text:SetText("ËùĞè¾­Ñé:" .. tostring(nExp));
+	ActionSkillsStudy_DemandExp_Character_Text:SetText("æ‰€éœ€ç»éªŒ:" .. string.format("%.0f", nExp));
 
 end
 
 --===============================================
--- Íæ¼Òµã»÷Ñ§Ï°µÄÏìÓ¦
+-- ç©å®¶ç‚¹å‡»å­¦ä¹ çš„å“åº”
 --===============================================
 function ActionSkillsStudy_UpLevel_Clicked()
 	--AxTrace(0, 0, "ActionSkillsStudy_Study" );
 
 	--if (g_CurSelectButton < 1  or  g_CurSelectButton > XINFA_BUTTONS_NUM) then
 	--	return;
-		--ĞèÒªÌáÊ¾²»ÄÜÉı¼¶¼¼ÄÜ
+		--éœ€è¦æç¤ºä¸èƒ½å‡çº§æŠ€èƒ½
 	--end
 
-	-- ´¦ÀíÑ§Ï°
+	-- å¤„ç†å­¦ä¹ 
 	SkillsStudyFrame_study( g_XinfaDefineID[g_CurSelect] );
 end
 
 --===============================================
--- Ñ¡ÖĞÒ»¸öĞÄ·¨Í¼±ê
+-- é€‰ä¸­ä¸€ä¸ªå¿ƒæ³•å›¾æ ‡
 --===============================================
 function ActionSkillsStudy_Xinfa_Clicked(nIndex)
 
 	--AxTrace(0, 0, "ActionSkillsStudy_Xinfa_Clicked " ..nIndex );
-	-- Êı¾İ³¬¹ı·¶Î§£¬·µ»Ø
+	-- æ•°æ®è¶…è¿‡èŒƒå›´ï¼Œè¿”å›
 	if(nIndex < 1 or nIndex > XINFA_BUTTONS_NUM) then
 		return;
 	end
@@ -332,19 +332,19 @@ function ActionSkillsStudy_Xinfa_Clicked(nIndex)
 
 	local nXinfaId = LifeAbility : GetLifeAbility_Number(g_XinfaID[nIndex]);
 
-	--¸üĞÂ¼¼ÄÜµÄËµÃ÷
+	--æ›´æ–°æŠ€èƒ½çš„è¯´æ˜
 	local strName = Player:GetXinfaInfo(nXinfaId,"name");
 	local nLevel= Player:GetXinfaInfo(nXinfaId,"level");
 	local strInfo = Player:GetXinfaInfo(nXinfaId,"explain");
 
 	ActionSkillsStudy_SkillName:SetText(strName);
-	ActionSkillsStudy_SkillLevel:SetText("µ±Ç°µÈ¼¶:".. nLevel);
+	ActionSkillsStudy_SkillLevel:SetText("å½“å‰ç­‰çº§:".. nLevel);
 	ActionSkillsStudy_SkillInfo:SetText(strInfo);
 
-	--¸üĞÂ¼¼ÄÜ
+	--æ›´æ–°æŠ€èƒ½
 	ActionSkillsStudy_UpdateSkill( nIndex );
 
-	--¸üĞÂËµÃ÷ÄÚÈİ
+	--æ›´æ–°è¯´æ˜å†…å®¹
 	ActionSkillsStudy_XinfaInfo_Update( nIndex );
 
 	g_CurSelectButton = nIndex;
@@ -352,7 +352,7 @@ function ActionSkillsStudy_Xinfa_Clicked(nIndex)
 end
 
 --===============================================
--- Ñ¡ÖĞÒ»¸ö¼¼ÄÜÍ¼±ê
+-- é€‰ä¸­ä¸€ä¸ªæŠ€èƒ½å›¾æ ‡
 --===============================================
 function ActionSkillsStudy_Skill_Clicked(nIndex)
 
@@ -372,7 +372,7 @@ function ActionSkillsStudy_Skill_Clicked(nIndex)
 
 	g_CurSelectButton = nIndex + XINFA_BUTTONS_NUM;
 
-	--¸üĞÂËµÃ÷ÄÚÈİ
+	--æ›´æ–°è¯´æ˜å†…å®¹
 	ActionSkillsStudy_SkillInfo_Update( g_SkillID[nIndex] )
 
 end
@@ -383,7 +383,7 @@ end
 --===============================================
 function ActionSkillsStudy_Close_Cilcked()
 	this:Hide()
-	--È¡Ïû¹ØĞÄ
+	--å–æ¶ˆå…³å¿ƒ
 	this:CareObject(objCared, 0, "ActionSkillsStudy");
 
 end
@@ -395,11 +395,11 @@ function ActionSkillsStudy_ClearStaticImage()
 end
 
 function ActionSkillsStudy_UpdateMenPaiText()
-	local menpaiID = Player : GetData("MEMPAI");		--»ñÈ¡Íæ¼ÒÃÅÅÉID
+	local menpaiID = Player : GetData("MEMPAI");		--è·å–ç©å®¶é—¨æ´¾ID
 	if menpaiID ~= nil and menpaiID >=0 and menpaiID <=9 then
 		if (menpaiID == 9) then
 			ActionSkillsStudy_ClearStaticImage();
-			ActionSkillsStudy_MenPai_Attr_Intro : SetText(""); --Ò»°ãÀ´ËµÕâÀï²»»á±»µ÷µ½
+			ActionSkillsStudy_MenPai_Attr_Intro : SetText(""); --ä¸€èˆ¬æ¥è¯´è¿™é‡Œä¸ä¼šè¢«è°ƒåˆ°
 			return;
 		end
 		local	str = GetDictionaryString( "MPZSX_20071221_0" .. (menpaiID +1) );

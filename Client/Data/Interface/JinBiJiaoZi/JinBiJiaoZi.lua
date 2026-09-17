@@ -41,10 +41,10 @@ function JinBiJiaoZi_OnShown( )
 
 	JinBiJiaoZi_Clear( )
 	
-	-- ÉèÖÃ½¹µã
+	-- è®¾ç½®ç„¦ç‚¹
 	JinBiJiaoZi_Gold : SetProperty( "DefaultEditBox", "True" )
 	
-	-- ´ò¿ªµÄÍ¬Ê±¿ªÆôÎïÆ·À¸
+	-- æ‰“å¼€çš„åŒæ—¶å¼€å¯ç‰©å“æ 
 	OpenWindow( "Packet" )
 end
 
@@ -61,14 +61,14 @@ end
 
 function JinBiJiaoZi_Hide( )
 
-	-- ¹Ø±Õ´°¿Ú
+	-- å…³é—­çª—å£
 	this : Hide( )
 
 end
 
 function JinBiJiaoZi_OnHidden( )
 		
-	-- È¡ÏûNPC¹ØĞÄ
+	-- å–æ¶ˆNPCå…³å¿ƒ
 	local npcClientId = DataPool : GetNPCIDByServerID( NpcServerId )
 	if npcClientId ~= -1 then
 		this : CareObject( npcClientId, 0, "JinBiJiaoZi")
@@ -79,47 +79,47 @@ end
 
 function JinBiJiaoZiAccept_Clicked( )
 	
-	-- Èç¹ûÃ»ÊäÈë¹ı¶ş¼¶ÃÜÂëÔòÊäÈëÒ»´Î£¬×¢Òâ£ºPlayer:IsLocked( ) == 0±íÊ¾Ëø¶¨
+	-- å¦‚æœæ²¡è¾“å…¥è¿‡äºŒçº§å¯†ç åˆ™è¾“å…¥ä¸€æ¬¡ï¼Œæ³¨æ„ï¼šPlayer:IsLocked( ) == 0è¡¨ç¤ºé”å®š
 	if Player:IsHavePassword( ) == 1 and Player:IsLocked( ) == 0 then
 		OpenUnLockeMinorPasswordDlg( )
 		return
 	end
 	
-	-- ÊÇ·ñ¹ıÁË°²È«Ê±¼ä....
+	-- æ˜¯å¦è¿‡äº†å®‰å…¨æ—¶é—´....
 	if( tonumber(DataPool:GetLeftProtectTime( ) ) > 0 ) then
 		PushDebugMessage( "#{OR_PILFER_LOCK_FLAG}" )
 		return
 	end
 	
-	-- ÊäÈëºÏ·¨Ïà¹Ø¼ì²é
+	-- è¾“å…¥åˆæ³•ç›¸å…³æ£€æŸ¥
 	local jin = JinBiJiaoZi_Gold : GetProperty( "Text" )
 	local yin = JinBiJiaoZi_Silver : GetProperty( "Text" )
 	local tong = JinBiJiaoZi_CopperCoin : GetProperty( "Text" )
 	
-	-- Ò»¶¨²»ÄÜÖ±½ÓÔÚ½Å±¾Àï¼Ó£¬9999½ğ99Òø99Í­ÒÔºó¾Í²»¾«È·ÁË
+	-- ä¸€å®šä¸èƒ½ç›´æ¥åœ¨è„šæœ¬é‡ŒåŠ ï¼Œ9999é‡‘99é“¶99é“œä»¥åå°±ä¸ç²¾ç¡®äº†
 	local bAvailability, money = Bank : GetInputMoney( jin , yin, tong )
 	
-	-- Íæ¼ÒÊäÈë0£¬Ö±½Ó¹Ø±Õ
+	-- ç©å®¶è¾“å…¥0ï¼Œç›´æ¥å…³é—­
 	if money == 0 then
 		JinBiJiaoZi_Hide( )
 		return
 	end
 		
-	-- ÊäÈë½ğ±Ò³¬¹ı±¾ÉíĞ¯´øµÄÊıÁ¿
+	-- è¾“å…¥é‡‘å¸è¶…è¿‡æœ¬èº«æºå¸¦çš„æ•°é‡
 	local holdMoney = Player:GetData( "MONEY" )
 	if holdMoney < money then
 		PushDebugMessage( "#{JBJZ_090407_5}" )
 		return
 	end
 	
-	-- ³¬¹ı½»×ÓĞ¯´øÉÏÏŞ
+	-- è¶…è¿‡äº¤å­æºå¸¦ä¸Šé™
 	local holdJZ = Player:GetData( "MONEY_JZ" )
 	if DataPool : ScriptPlus( holdJZ, money ) > 144000000 then
 		PushDebugMessage( "#{JBJZ_090407_6}" )
 		return	
 	end
 	
-	-- µ¯³öÈ·¶¨´°¿Ú
+	-- å¼¹å‡ºç¡®å®šçª—å£
 	if ShowConfirmBox == 0 then
 		local msgMoney = ""
 		local msgJZ = ""
@@ -141,7 +141,7 @@ function JinBiJiaoZiAccept_Clicked( )
 		return
 	end
 	
-	-- ¸ø·şÎñÆ÷¶Ë·¢ËÍ½Å±¾Ö´ĞĞÃüÁî
+	-- ç»™æœåŠ¡å™¨ç«¯å‘é€è„šæœ¬æ‰§è¡Œå‘½ä»¤
 	Clear_XSCRIPT( )
 		Set_XSCRIPT_Function_Name( "DoMoneyToJiaozi" )
 		Set_XSCRIPT_ScriptID( 800119 )
@@ -150,7 +150,7 @@ function JinBiJiaoZiAccept_Clicked( )
 	Send_XSCRIPT( )
 	
 	
-	-- ¶¼Ö´ĞĞÍêÁË¹Ø±Õ´°¿Ú£¨²Ù×÷³É¹¦ÓÉ·şÎñÆ÷¶ËÌáÊ¾£©
+	-- éƒ½æ‰§è¡Œå®Œäº†å…³é—­çª—å£ï¼ˆæ“ä½œæˆåŠŸç”±æœåŠ¡å™¨ç«¯æç¤ºï¼‰
 	JinBiJiaoZi_Hide( )
 end
 
@@ -174,7 +174,7 @@ function JinBiJiaoZi_ChangeMoney( )
 		JinBiJiaoZi_CopperCoin : SetTextOriginal( ""..tonumber(tong) )
 	end
 	
-	-- Ò»¶¨²»ÄÜÖ±½ÓÔÚ½Å±¾Àï¼Ó£¬9999½ğ99Òø99Í­ÒÔºó¾Í²»¾«È·ÁË
+	-- ä¸€å®šä¸èƒ½ç›´æ¥åœ¨è„šæœ¬é‡ŒåŠ ï¼Œ9999é‡‘99é“¶99é“œä»¥åå°±ä¸ç²¾ç¡®äº†
 	local bAvailability, money = Bank : GetInputMoney( jin , yin, tong )
 	
 	if money > 0 then

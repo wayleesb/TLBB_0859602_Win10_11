@@ -1,23 +1,23 @@
--- Í¨ÓÃÉú»î¼¼ÄÜÂß¼­½Å±¾
--- ½Å±¾ºÅ
+-- é€šç”¨ç”Ÿæ´»æŠ€èƒ½é€»è¾‘è„šæœ¬
+-- è„šæœ¬å·
 x701601_g_ScriptId = 701601
 
--- ×°±¸ÔÊĞíÏâÇ¶µÄ±¦Ê¯ÀàĞÍ±í
+-- è£…å¤‡å…è®¸é•¶åµŒçš„å®çŸ³ç±»å‹è¡¨
 x701601_g_EquipGemTable = {}
 
 x701601_g_EquipGemCost = {}
 
 x701601_g_EnergyCostTbl = {}
--- ²É¿ó
+-- é‡‡çŸ¿
 x701601_g_EnergyCostTbl[ABILITY_CAIKUANG] = {
 	3,4,5,6,7,8,9,10,11,12,13,14
 }
 
--- ²ÉÒ©
+-- é‡‡è¯
 x701601_g_EnergyCostTbl[ABILITY_CAIYAO] = {
 	3,4,5,6,7,8,9,10,11,12,13,14
 }
--- ÖÖÖ²
+-- ç§æ¤
 x701601_g_EnergyCostTbl[ABILITY_ZHONGZHI] = {
 	10,10,10,20,20,20,30,30,30,30,30,30
 
@@ -27,9 +27,9 @@ x701601_g_EnergyCostTbl[ABILITY_ZHONGZHI] = {
 ---------------------------------------------------------------------
 
 
--- ¼ÆËã²úÆ·Æ·ÖÊ
+-- è®¡ç®—äº§å“å“è´¨
 function x701601_CalcQuality(sceneId, RecipeLevel, AbilityLevel, AbilityMaxLevel, ItemIndex)
-	-- Ëæ»ú³öÒ»¸öÊı [0, 49]
+	-- éšæœºå‡ºä¸€ä¸ªæ•° [0, 49]
 	--Quality = random(0, 49)
 	--return Quality
 	if IsEquipItem(ItemIndex) == 1 then
@@ -62,9 +62,9 @@ end
 ---------------------------------------------------------------------
 
 
--- Åä·½ºÏ³É½áÊøÊ±µÄÊìÁ·¶ÈÔö³¤
+-- é…æ–¹åˆæˆç»“æŸæ—¶çš„ç†Ÿç»ƒåº¦å¢é•¿
 function x701601_GainExperience(sceneId, selfId, AbilityID, RecipeLevel)
-	-- Éú»î¼¼ÄÜ¼¶±ğ
+	-- ç”Ÿæ´»æŠ€èƒ½çº§åˆ«
 	local AbilityLevel = QueryHumanAbilityLevel(sceneId, selfId, AbilityID)
 	local MinLevelDisparity = 0
 	local MaxLevelDisparity = 1
@@ -128,18 +128,18 @@ function x701601_GainExperience(sceneId, selfId, AbilityID, RecipeLevel)
 	end
 
 	SetAbilityExp(sceneId, selfId, AbilityID, Exp)
-	--Msg2Player(sceneId,selfId,"ÊìÁ·¶ÈÔö¼Óµ½"..floor(Exp/100).."¡£",MSG2PLAYER_PARA)
+	--Msg2Player(sceneId,selfId,"ç†Ÿç»ƒåº¦å¢åŠ åˆ°"..floor(Exp/100).."ã€‚",MSG2PLAYER_PARA)
 end
 
 ---------------------------------------------------------------------------
 
---¼ì²éÄ³ÏîÉú»î¼¼ÄÜÊÇ·ñĞèÒªÉı¼¶(¸ù¾İÊìÁ·¶È×Ô¶¯Éı¼¶)
---AbilityID Ö¸Éú»î¼¼ÄÜ ID
+--æ£€æŸ¥æŸé¡¹ç”Ÿæ´»æŠ€èƒ½æ˜¯å¦éœ€è¦å‡çº§(æ ¹æ®ç†Ÿç»ƒåº¦è‡ªåŠ¨å‡çº§)
+--AbilityID æŒ‡ç”Ÿæ´»æŠ€èƒ½ ID
 --
 function	x701601_CheckAbilityLevel(sceneId,selfId,AbilityID)
-	--Íæ¼Ò¼Ó¹¤¼¼ÄÜµÄµÈ¼¶
+	--ç©å®¶åŠ å·¥æŠ€èƒ½çš„ç­‰çº§
 	AbilityLevel = QueryHumanAbilityLevel(sceneId, selfId, AbilityID)
-	--Íæ¼Ò¼Ó¹¤¼¼ÄÜµÄÊìÁ·¶È
+	--ç©å®¶åŠ å·¥æŠ€èƒ½çš„ç†Ÿç»ƒåº¦
 	ExpPoint = GetAbilityExp(sceneId, selfId, AbilityID)
 	Flag = 0
 
@@ -156,7 +156,7 @@ function	x701601_CheckAbilityLevel(sceneId,selfId,AbilityID)
 
 	if Flag>0 then
 		SetHumanAbilityLevel(sceneId, selfId, AbilityID, AbilityLevel+1)
-		AddText(sceneId, selfId, 0, "Éú»î¼¼ÄÜÉı¼¶ÁË£¡")
+		AddText(sceneId, selfId, 0, "ç”Ÿæ´»æŠ€èƒ½å‡çº§äº†ï¼")
 	end
 
 end
@@ -168,44 +168,44 @@ function	x701601_TooManyGems(sceneId,selfId, EquipPos)
 		return 0
 	end
 
-	--·µ»Ø 1 ±íÊ¾±¦Ê¯ÏâÇ¶ÊıÁ¿ÒÑÂú
+	--è¿”å› 1 è¡¨ç¤ºå®çŸ³é•¶åµŒæ•°é‡å·²æ»¡
 	return 1
 end
 
---±¦Ê¯ÏâÇ¶½Ó¿Ú Gaoqi: ÒÔÇ°ÌÆÅôµÄ´úÂë£¬¾­¹ıºú·±ĞŞ¸Ä¹ıºó£¬ÏÖÔÚÕâ¶Î´úÂëÒÑ¾­·ÏÆú
---GemIndex ±¦Ê¯¶ÔÓ¦µÄÎïÆ·Î¨Ò»ºÅ(ItemIndex)
---selfId Ö¸ºÏ³ÉÎïÆ·µÄÍæ¼Ò
---·µ»ØÖµ 0:³É¹¦£¬ÆäËûÊ§°Ü 1:±¦Ê¯ÏûÊ§ 2:×°±¸ÏûÊ§ 3:±¦Ê¯×°±¸¶¼ÏûÊ§ 4:¾«Á¦²»×ã
+--å®çŸ³é•¶åµŒæ¥å£ Gaoqi: ä»¥å‰å”é¹çš„ä»£ç ï¼Œç»è¿‡èƒ¡ç¹ä¿®æ”¹è¿‡åï¼Œç°åœ¨è¿™æ®µä»£ç å·²ç»åºŸå¼ƒ
+--GemIndex å®çŸ³å¯¹åº”çš„ç‰©å“å”¯ä¸€å·(ItemIndex)
+--selfId æŒ‡åˆæˆç‰©å“çš„ç©å®¶
+--è¿”å›å€¼ 0:æˆåŠŸï¼Œå…¶ä»–å¤±è´¥ 1:å®çŸ³æ¶ˆå¤± 2:è£…å¤‡æ¶ˆå¤± 3:å®çŸ³è£…å¤‡éƒ½æ¶ˆå¤± 4:ç²¾åŠ›ä¸è¶³
 function	x701601_EmbedProc(sceneId,selfId, EquipBagIndex, GemIndex, MatIndex1, MatIndex2)
-	--Íæ¼Ò¼Ó¹¤¼¼ÄÜµÄµÈ¼¶
+	--ç©å®¶åŠ å·¥æŠ€èƒ½çš„ç­‰çº§
 	AbilityLevel = QueryHumanAbilityLevel(sceneId, selfId, ABILITY_XIANGQIAN)
-	--Íæ¼Ò¼Ó¹¤¼¼ÄÜµÄÊìÁ·¶È
+	--ç©å®¶åŠ å·¥æŠ€èƒ½çš„ç†Ÿç»ƒåº¦
 	ExpPoint = GetAbilityExp(sceneId, selfId, ABILITY_XIANGQIAN)
-	--±¦Ê¯µÈ¼¶(1~8)
+	--å®çŸ³ç­‰çº§(1~8)
 	GemQual = GetItemQuality(GemIndex)
-	--±¦Ê¯Àà±ğ
+	--å®çŸ³ç±»åˆ«
 	GemType = GetItemIndex(GemIndex)
 
-	--ÓĞ¶à´ó¼¸ÂÊÉú³É£¬¼¸ÂÊËã·¨¿ÉÒÔ½øĞĞĞŞ¸Ä
+	--æœ‰å¤šå¤§å‡ ç‡ç”Ÿæˆï¼Œå‡ ç‡ç®—æ³•å¯ä»¥è¿›è¡Œä¿®æ”¹
 	--odds = 90 - (GemQual - 1) * 5
 	odds = 25
-	if MatIndex1 == 30900009 then --µÍ¼¶±¦Ê¯ÏâÇ¶·û
+	if MatIndex1 == 30900009 then --ä½çº§å®çŸ³é•¶åµŒç¬¦
 		odds = 50
 	end
-	if MatIndex1 == 30900010 then --¸ß¼¶±¦Ê¯ÏâÇ¶·û
+	if MatIndex1 == 30900010 then --é«˜çº§å®çŸ³é•¶åµŒç¬¦
 		odds = 75
 	end
 	rand = random(100)
 
 
-	-- ¼ÆËã¾«Á¦ÏûºÄ
+	-- è®¡ç®—ç²¾åŠ›æ¶ˆè€—
 	EnergyCost = GemQual * 2 + 1
 	MyNewEnergy = GetHumanEnergy( sceneId, selfId ) - EnergyCost
 	if MyNewEnergy < 0 then
 		return 4
 	end
 
-	--ÏûºÄ½ğÇ®
+	--æ¶ˆè€—é‡‘é’±
 	local GemCount = GetGemEmbededCount(sceneId, selfId, EquipBagIndex)
 	local need_money = x701601_g_EquipGemCost[GemQual]
 	if GemCount == 1 then
@@ -216,42 +216,42 @@ function	x701601_EmbedProc(sceneId,selfId, EquipBagIndex, GemIndex, MatIndex1, M
 	local ret = LuaFnCostMoney( sceneId, selfId, need_money )
 	if ret ~= 1 then
 --		BeginEvent(sceneId)
---		AddText(sceneId,"½ğÇ®²»×ã¡£");
+--		AddText(sceneId,"é‡‘é’±ä¸è¶³ã€‚");
 --		EndEvent(sceneId)
 --		DispatchMissionTips(sceneId,selfId)
-		return 4 --´úÂëÀïÃæÃ»ÓĞÏà¹Ø¶¨Òå
+		return 4 --ä»£ç é‡Œé¢æ²¡æœ‰ç›¸å…³å®šä¹‰
 	end
 
-	-- ÏûºÄ¾«Á¦
+	-- æ¶ˆè€—ç²¾åŠ›
 	SetHumanEnergy( sceneId, selfId, MyNewEnergy )
 
 	if odds>rand then
-		--Ôö¼ÓÊìÁ·¶È
+		--å¢åŠ ç†Ÿç»ƒåº¦
 		--x701601_GainExperience(sceneId, selfId, ABILITY_XIANGQIAN, GemQual)
-		return 0 --ÏâÇ¶³É¹¦
+		return 0 --é•¶åµŒæˆåŠŸ
 	else
-		if MatIndex2 == 30900011 then --±¦Ê¯Ç¿»¯·û
+		if MatIndex2 == 30900011 then --å®çŸ³å¼ºåŒ–ç¬¦
 			if GemQual <= 1 then
-				return 1 --±¦Ê¯Ã»ÁË
+				return 1 --å®çŸ³æ²¡äº†
 			else
-				return 5 --±¦Ê¯½µ1¼¶
+				return 5 --å®çŸ³é™1çº§
 			end
 		else
 			if GemQual <= 2 then
-				return 1 --±¦Ê¯Ã»ÁË
+				return 1 --å®çŸ³æ²¡äº†
 			else
-				return 6 --±¦Ê¯½µ2¼¶
+				return 6 --å®çŸ³é™2çº§
 			end
 		end
 	end
 end
 
---±¦Ê¯ÏâÇ¶Ê±ÅĞ¶ÏÁ½¸ö±¦Ê¯ÊÇ·ñ³åÍ»
---Gem1SerialNumber ±¦Ê¯µÄĞòÁĞºÅ
---Gem2SerialNumber ±¦Ê¯µÄĞòÁĞºÅ
---·µ»ØÖµ true ±íÊ¾³åÍ»£¬false ±íÊ¾²»³åÍ»
+--å®çŸ³é•¶åµŒæ—¶åˆ¤æ–­ä¸¤ä¸ªå®çŸ³æ˜¯å¦å†²çª
+--Gem1SerialNumber å®çŸ³çš„åºåˆ—å·
+--Gem2SerialNumber å®çŸ³çš„åºåˆ—å·
+--è¿”å›å€¼ true è¡¨ç¤ºå†²çªï¼Œfalse è¡¨ç¤ºä¸å†²çª
 function	x701601_IsGemConflict(sceneId, Gem1SerialNumber, Gem2SerialNumber)
-	--µÃµ½ÎïÆ·µÄÀàĞÍ£¨±¦Ê¯´óÀà£©
+	--å¾—åˆ°ç‰©å“çš„ç±»å‹ï¼ˆå®çŸ³å¤§ç±»ï¼‰
 	return (LuaFnGetItemType(Gem1SerialNumber) == LuaFnGetItemType(Gem2SerialNumber))
 end
 
@@ -275,7 +275,7 @@ function	x701601_IsGemFitEquip(sceneId, selfId, GemSerialNum, EquipBagIndex)
 		return 0
 	end
 
---Ã¿¸ö¿×µ±ÖĞµÄÏâÇ¶µÄ±¦Ê¯±ØĞë²»Í¬ÀàĞÍ	
+--æ¯ä¸ªå­”å½“ä¸­çš„é•¶åµŒçš„å®çŸ³å¿…é¡»ä¸åŒç±»å‹	
 	local i
 	for i=0, GemCount-1 do
 		GemEmbededType = GetGemEmbededType(sceneId, selfId, EquipBagIndex, i)
@@ -297,7 +297,7 @@ function	x701601_IsGemFitEquip(sceneId, selfId, GemSerialNum, EquipBagIndex)
 	return 0
 end
 
---²É¼¯ÀàÉú»î¼¼ÄÜµÄ¾«Á¦ÏûºÄ´¦Àí
+--é‡‡é›†ç±»ç”Ÿæ´»æŠ€èƒ½çš„ç²¾åŠ›æ¶ˆè€—å¤„ç†
 function x701601_CalcEnergyCostCaiJi(sceneId, selfId, AbilityID, BaseLevel)
 	if not x701601_g_EnergyCostTbl[AbilityID] then
 		return
@@ -311,7 +311,7 @@ function x701601_CalcEnergyCostCaiJi(sceneId, selfId, AbilityID, BaseLevel)
 	return energyCost
 end
 
---²É¼¯ÀàÉú»î¼¼ÄÜµÄ¾«Á¦ÏûºÄ´¦Àí
+--é‡‡é›†ç±»ç”Ÿæ´»æŠ€èƒ½çš„ç²¾åŠ›æ¶ˆè€—å¤„ç†
 function x701601_EnergyCostCaiJi(sceneId, selfId, AbilityID, BaseLevel)
 	local energyCost = x701601_CalcEnergyCostCaiJi(sceneId, selfId, AbilityID, BaseLevel)
 
@@ -322,17 +322,17 @@ function x701601_EnergyCostCaiJi(sceneId, selfId, AbilityID, BaseLevel)
 			curEnergy = 0
 		end
 
-		--ÉèÖÃÏûºÄºóµÄ¾«Á¦
+		--è®¾ç½®æ¶ˆè€—åçš„ç²¾åŠ›
 		SetHumanEnergy( sceneId, selfId, curEnergy )
 	end
 end
 
---ÖÖÖ²¼¼ÄÜµÄ¾«Á¦ÏûºÄ´¦Àí
+--ç§æ¤æŠ€èƒ½çš„ç²¾åŠ›æ¶ˆè€—å¤„ç†
 function x701601_EnergyCostZhongZhi(sceneId, selfId, AbilityID, BaseLevel)
 	x701601_EnergyCostCaiJi(sceneId, selfId, AbilityID, BaseLevel)
 end
 
---ÖÆÒ©¼¼ÄÜ»îÁ¦ÏûºÄ
+--åˆ¶è¯æŠ€èƒ½æ´»åŠ›æ¶ˆè€—
 function x701601_VigorCostZhiYao( sceneId, selfId, AbilityID, RecipeLevel )
 	local cost = 0
 
@@ -345,7 +345,7 @@ function x701601_VigorCostZhiYao( sceneId, selfId, AbilityID, RecipeLevel )
 	return cost
 end
 
---Åëâ¿¼¼ÄÜ»îÁ¦ÏûºÄ
+--çƒ¹é¥ªæŠ€èƒ½æ´»åŠ›æ¶ˆè€—
 function x701601_VigorCostPengRen( sceneId, selfId, AbilityID, RecipeLevel )
 	local cost = 0
 
@@ -358,7 +358,7 @@ function x701601_VigorCostPengRen( sceneId, selfId, AbilityID, RecipeLevel )
 	return cost
 end
 
---´òÔì¼¼ÄÜ»îÁ¦ÏûºÄ
+--æ‰“é€ æŠ€èƒ½æ´»åŠ›æ¶ˆè€—
 function x701601_VigorCostDazao( sceneId, selfId, AbilityID, RecipeLevel )
 	local cost = 0
 
@@ -367,8 +367,8 @@ function x701601_VigorCostDazao( sceneId, selfId, AbilityID, RecipeLevel )
 	return cost
 end
 
---±¦Ê¯Õª³ı½Ó¿Ú
---·µ»ØÖµ 0:³É¹¦£¨µÍ¼¶±¦Ê¯Õª³ı·û£© 1:ÎŞ´Ë×°±¸ 2:±¦Ê¯Î»ÖÃ´íÎó 3:×°±¸ÉÏÃ»ÓĞ±¦Ê¯ 4:×°±¸·Ç·¨ 8:ĞèÒª±¦Ê¯Õª³ı·û 9:³É¹¦£¨¸ß¼¶±¦Ê¯Õª³ı·û£©
+--å®çŸ³æ‘˜é™¤æ¥å£
+--è¿”å›å€¼ 0:æˆåŠŸï¼ˆä½çº§å®çŸ³æ‘˜é™¤ç¬¦ï¼‰ 1:æ— æ­¤è£…å¤‡ 2:å®çŸ³ä½ç½®é”™è¯¯ 3:è£…å¤‡ä¸Šæ²¡æœ‰å®çŸ³ 4:è£…å¤‡éæ³• 8:éœ€è¦å®çŸ³æ‘˜é™¤ç¬¦ 9:æˆåŠŸï¼ˆé«˜çº§å®çŸ³æ‘˜é™¤ç¬¦ï¼‰
 function	x701601_ReomveProc(sceneId,selfId, EquipIndex, GemIndex, MatIndex)
 	local equip_point = LuaFnGetBagEquipType(sceneId,selfId, EquipIndex)
 	if equip_point == -1 then
@@ -384,9 +384,9 @@ function	x701601_ReomveProc(sceneId,selfId, EquipIndex, GemIndex, MatIndex)
 	end
 	local gem_index = LuaFnGetItemTableIndexByIndex( sceneId, selfId, MatIndex )
 	
-	if gem_index == 30900012 then  --µÍ¼¶±¦Ê¯Õª³ı·û
+	if gem_index == 30900012 then  --ä½çº§å®çŸ³æ‘˜é™¤ç¬¦
 		return 0
-	elseif (gem_index >= 30900036 and gem_index <= 30900044) then  --¸ß¼¶±¦Ê¯Õª³ı·û
+	elseif (gem_index >= 30900036 and gem_index <= 30900044) then  --é«˜çº§å®çŸ³æ‘˜é™¤ç¬¦
 		return 9
 	else
 	  return 8
@@ -394,20 +394,20 @@ function	x701601_ReomveProc(sceneId,selfId, EquipIndex, GemIndex, MatIndex)
 
 end
 
---±¦Ê¯Õª³ı½Ó¿Ú
---±¦Ê¯Õª³ıºóµÄÏà¹Ø´¦Àí£¨·¢ËÍÊÀ½ç¹«¸æ£©
+--å®çŸ³æ‘˜é™¤æ¥å£
+--å®çŸ³æ‘˜é™¤åçš„ç›¸å…³å¤„ç†ï¼ˆå‘é€ä¸–ç•Œå…¬å‘Šï¼‰
 function	x701601_SplitGemSucceed(sceneId,selfId, EquipPos, GemPos, MatPos)
 
-    --Ôö¼ÓÌØĞ§
+    --å¢åŠ ç‰¹æ•ˆ
 	LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, 49, 0);
 		
     local CharmId = LuaFnGetItemTableIndexByIndex( sceneId, selfId, MatPos )
-    --´óÓÚµÈÓÚ3¼¶ÒÔÉÏ¸ß¼¶±¦Ê¯Õª³ı·ûÊ¹ÓÃÕª³ı³É¹¦·¢³öÊÀ½ç¹«¸æ
-    if (CharmId >= 30900038 and CharmId <= 30900044) then  --¸ß¼¶±¦Ê¯Õª³ı·û
+    --å¤§äºç­‰äº3çº§ä»¥ä¸Šé«˜çº§å®çŸ³æ‘˜é™¤ç¬¦ä½¿ç”¨æ‘˜é™¤æˆåŠŸå‘å‡ºä¸–ç•Œå…¬å‘Š
+    if (CharmId >= 30900038 and CharmId <= 30900044) then  --é«˜çº§å®çŸ³æ‘˜é™¤ç¬¦
 		   local PlayerName = GetName(sceneId,selfId)
 		   local GemInfo = GetBagItemTransfer( sceneId, selfId, GemPos )
 		   local MatInfo = GetBagItemTransfer( sceneId, selfId, MatPos )
-	     str = format( "#H#{_INFOUSR%s}ÄÃ×Å#{_INFOMSG%s}×ìÀïÄîÄîÓĞ´Ê£¬Ö»¼û#{_INFOMSG%s}ÂıÂı°şÂä£¬¾¹ºÁÎŞËğÉË£¬ÕæÊÇ¼«Æ·Ö®·û°¡£¡", PlayerName, MatInfo, GemInfo)
+	     str = format( "#H#{_INFOUSR%s}æ‹¿ç€#{_INFOMSG%s}å˜´é‡Œå¿µå¿µæœ‰è¯ï¼Œåªè§#{_INFOMSG%s}æ…¢æ…¢å‰¥è½ï¼Œç«Ÿæ¯«æ— æŸä¼¤ï¼ŒçœŸæ˜¯æå“ä¹‹ç¬¦å•Šï¼", PlayerName, MatInfo, GemInfo)
 	     BroadMsgByChatPipe( sceneId, selfId, str, 4 )
 	  end
 

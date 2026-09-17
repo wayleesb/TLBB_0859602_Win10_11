@@ -1,15 +1,15 @@
 local Current_Ride_Index = -1;
 local INVALID_ID =-1;
 local RIDE_TAB_TEXT = {};
-local OtherRide_g_Ride;			--Æï³Ë¶ÔÏó
+local OtherRide_g_Ride;			--éª‘ä¹˜å¯¹è±¡
 local OtherRide_g_EquipMask;
 
 function OtherRide_PreLoad()
 	
-	-- ´ò¿ª½çÃæ
+	-- æ‰“å¼€ç•Œé¢
 	this:RegisterEvent("TOGLE_OTHERRIDE_PAGE");
 	
-	--Àë¿ª³¡¾°£¬×Ô¶¯¹Ø±Õ
+	--ç¦»å¼€åœºæ™¯ï¼Œè‡ªåŠ¨å…³é—­
 	this:RegisterEvent("PLAYER_LEAVE_WORLD");
 
 	
@@ -18,11 +18,11 @@ end
 function OtherRide_OnLoad()
 	
 	RIDE_TAB_TEXT = {
-		[0] = "×°±¸",
-		"×ÊÁÏ",
-		"²©¿Í",
-		"ÕäÊŞ",
-		"Æï³Ë",
+		[0] = "è£…å¤‡",
+		"èµ„æ–™",
+		"åšå®¢",
+		"çå…½",
+		"éª‘ä¹˜",
 	};
 	
 	OtherRide_g_Ride = OtherRide_Equip;
@@ -91,7 +91,7 @@ function OtherRide_OnShow()
 		OtherRide_FakeObject : SetFakeObject( "Other_Horse" );
 	end;
 	
-	OtherRide_Equip_Update();   --ÏÔÊ¾¶Ô·½Æï³Ë
+	OtherRide_Equip_Update();   --æ˜¾ç¤ºå¯¹æ–¹éª‘ä¹˜
 	
 	--nRideIndex = -1
 	--while nRideIndex < 50 do
@@ -108,15 +108,15 @@ end
 
 ----------------------------------------------------------------------------------
 --
--- Ñ¡×°Íæ¼ÒÄ£ĞÍ£¨Ïò×ó)
+-- é€‰è£…ç©å®¶æ¨¡å‹ï¼ˆå‘å·¦)
 --
 function OtherRide_Model_TurnLeft(start)
 	local mouse_button = CEArg:GetValue("MouseButton");
 	if(mouse_button == "LeftButton") then
-		--Ïò×óĞı×ª¿ªÊ¼
+		--å‘å·¦æ—‹è½¬å¼€å§‹
 		if(start == 1) then
 			OtherRide_FakeObject:RotateBegin(-0.3);
-		--Ïò×óĞı×ª½áÊø
+		--å‘å·¦æ—‹è½¬ç»“æŸ
 		else
 			OtherRide_FakeObject:RotateEnd();
 		end
@@ -125,15 +125,15 @@ end
 
 ----------------------------------------------------------------------------------
 --
--- Ñ¡×°Íæ¼ÒÄ£ĞÍ£¨ÏòÓÒ)
+-- é€‰è£…ç©å®¶æ¨¡å‹ï¼ˆå‘å³)
 --
 function OtherRide_Model_TurnRight(start)
 	local mouse_button = CEArg:GetValue("MouseButton");
 	if(mouse_button == "LeftButton") then
-		--ÏòÓÒĞı×ª¿ªÊ¼
+		--å‘å³æ—‹è½¬å¼€å§‹
 		if(start == 1) then
 			OtherRide_FakeObject:RotateBegin(0.3);
-		--ÏòÓÒĞı×ª½áÊø
+		--å‘å³æ—‹è½¬ç»“æŸ
 		else
 			OtherRide_FakeObject:RotateEnd();
 		end
@@ -143,7 +143,7 @@ end
 
 
 --===============================================
--- ´ò¿ªÍæ¼Ò×°±¸UI
+-- æ‰“å¼€ç©å®¶è£…å¤‡UI
 --===============================================
 function OtherRide_TargetEquip_Down()
 	Variable:SetVariable("OtherUnionPos", OtherRide_Frame:GetProperty("UnifiedPosition"), 1);
@@ -151,14 +151,14 @@ function OtherRide_TargetEquip_Down()
 end
 
 --===============================================
--- ´ò¿ªÍæ¼Ò×ÊÁÏUI
+-- æ‰“å¼€ç©å®¶èµ„æ–™UI
 --===============================================
 function OtherRide_TargetData_Down()
 	Variable:SetVariable("OtherUnionPos", OtherRide_Frame:GetProperty("UnifiedPosition"), 1);
 	SystemSetup:OpenPrivatePage("other")
 end
 --===============================================
--- ´ò¿ªÍæ¼Ò²©¿ÍUI
+-- æ‰“å¼€ç©å®¶åšå®¢UI
 --===============================================
 function OtherRide_TargetBlog_Down()
 	Variable:SetVariable("OtherUnionPos", OtherRide_Frame:GetProperty("UnifiedPosition"), 1);
@@ -177,9 +177,9 @@ end
 function OtherRide_Equip_Click( buttonIn )
 	local button = tonumber( buttonIn );
 	if( button == 1 ) then
-		OtherRide_g_Ride:DoAction();	--Æï³Ë
+		OtherRide_g_Ride:DoAction();	--éª‘ä¹˜
 	else
-		OtherRide_g_Ride:DoSubAction();	--Æï³Ë
+		OtherRide_g_Ride:DoSubAction();	--éª‘ä¹˜
 	end
 end
 

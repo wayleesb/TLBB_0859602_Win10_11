@@ -1,5 +1,5 @@
-INT	FLOAT	FLOAT
-ID	A>B时的修正	B>A时的修正
+INT	STRING	STRING
+ID	A>B鏃剁殑淇	B>A鏃剁殑淇
 0	1	1
 1	1	1
 2	1	1

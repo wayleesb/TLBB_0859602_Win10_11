@@ -1,26 +1,26 @@
---³öÊ¦ÈÎÎñ
+--å‡ºå¸ˆä»»åŠ¡
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x806007_g_ScriptId	= 806007
 
---³öÊ¦
+--å‡ºå¸ˆ
 x806007_g_FinishAppr				= {}
 x806007_g_FinishAppr["Id"]	= 1004
-x806007_g_FinishAppr["Name"]= "ÎÒ´ø×ÅÍ½µÜÀ´³öÊ¦ÁË"
+x806007_g_FinishAppr["Name"]= "æˆ‘å¸¦ç€å¾’å¼Ÿæ¥å‡ºå¸ˆäº†"
 
---ÌáÊ¾ĞÅÏ¢
+--æç¤ºä¿¡æ¯
 x806007_g_msg					= {}
-x806007_g_msg["tem"]	= "  ĞèÒªÊ¦Í½2ÈË×é¶ÓÀ´ÕÒÎÒ²ÅÄÜ³öÊ¦¡£"
-x806007_g_msg["ner"]	= "  Ö»ÓĞ2ÈË¶¼×ßµ½ÎÒÉí±ß²Å¿ÉÒÔ³öÊ¦¡£"
-x806007_g_msg["lev"]	= "  Í½µÜµÈ¼¶´ïµ½40¼¶²ÅÄÜ³öÊ¦¡£"
-x806007_g_msg["dad"]	= "  Äã»¹Ã»ÓĞÊÕÍ½¡£"
-x806007_g_msg["itm"]	= "  Ê¦Í½2ÈËµÄ±³°üÖĞ£¬·Ö±ğÖÁÉÙÒªÓĞÒ»¸öÆÕÍ¨ÎïÆ·µÄ¿Õ¸ñ¡£"
+x806007_g_msg["tem"]	= "  éœ€è¦å¸ˆå¾’2äººç»„é˜Ÿæ¥æ‰¾æˆ‘æ‰èƒ½å‡ºå¸ˆã€‚"
+x806007_g_msg["ner"]	= "  åªæœ‰2äººéƒ½èµ°åˆ°æˆ‘èº«è¾¹æ‰å¯ä»¥å‡ºå¸ˆã€‚"
+x806007_g_msg["lev"]	= "  å¾’å¼Ÿç­‰çº§è¾¾åˆ°40çº§æ‰èƒ½å‡ºå¸ˆã€‚"
+x806007_g_msg["dad"]	= "  ä½ è¿˜æ²¡æœ‰æ”¶å¾’ã€‚"
+x806007_g_msg["itm"]	= "  å¸ˆå¾’2äººçš„èƒŒåŒ…ä¸­ï¼Œåˆ†åˆ«è‡³å°‘è¦æœ‰ä¸€ä¸ªæ™®é€šç‰©å“çš„ç©ºæ ¼ã€‚"
 
---³öÊ¦½±Àø
-x806007_g_itm		= { 30008001, "³öÊ¦ÌÇ¶¹" }
+--å‡ºå¸ˆå¥–åŠ±
+x806007_g_itm		= { 30008001, "å‡ºå¸ˆç³–è±†" }
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x806007_OnDefaultEvent( sceneId, selfId, targetId )
 	local	tId	= x806007_CheckAccept( sceneId, selfId, targetId )
@@ -32,17 +32,17 @@ function x806007_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x806007_OnEnumerate( sceneId, selfId, targetId )
 	AddNumText( sceneId, x806007_g_ScriptId, x806007_g_FinishAppr["Name"] , 6, -1 )
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x806007_CheckAccept( sceneId, selfId, targetId )
-	--(1)×é¶ÓÖĞÖ»ÓĞÊ¦Í½Á½¸öÈË
+	--(1)ç»„é˜Ÿä¸­åªæœ‰å¸ˆå¾’ä¸¤ä¸ªäºº
 	if LuaFnHasTeam( sceneId, selfId ) == 0 or LuaFnGetTeamSize( sceneId, selfId ) ~= 2 then
 		x806007_MsgBox( sceneId, selfId, targetId, x806007_g_msg["tem"] )
 		return 0
@@ -57,19 +57,19 @@ function x806007_CheckAccept( sceneId, selfId, targetId )
 		return 0
 	end
 
-	--(2)Í½µÜÊÇ·ñ´ïµ½40¼¶
+	--(2)å¾’å¼Ÿæ˜¯å¦è¾¾åˆ°40çº§
 	if LuaFnGetLevel( sceneId, tId ) < 40 then
 		x806007_MsgBox( sceneId, selfId, targetId, x806007_g_msg["lev"] )
 		return 0
 	end
 
-	--(3)ÊÇ·ñÊÇÊ¦¸µ¹ØÏµ
+	--(3)æ˜¯å¦æ˜¯å¸ˆå‚…å…³ç³»
 	if LuaFnIsPrentice( sceneId, selfId, tId ) ~= 1 then
 		x806007_MsgBox( sceneId, selfId, targetId, x806007_g_msg["dad"] )
 		return 0
 	end
 
-	--(4)Ë«·½±³°üÖĞ±ØĞëÓĞÒ»¸ö¿Õ¼ä
+	--(4)åŒæ–¹èƒŒåŒ…ä¸­å¿…é¡»æœ‰ä¸€ä¸ªç©ºé—´
 	LuaFnBeginAddItem( sceneId )
 	LuaFnAddItem( sceneId, x806007_g_itm[1], 1 )
 	if LuaFnEndAddItem( sceneId, selfId ) ~= 1 or LuaFnEndAddItem( sceneId, tId ) ~= 1 then
@@ -81,43 +81,43 @@ function x806007_CheckAccept( sceneId, selfId, targetId )
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x806007_OnAccept( sceneId, selfId, targetId, tId )
-	--Ê¦¸µ, Ê¦¸µ¶ÔÍ½µÜµÄÓÑºÃ¶È
+	--å¸ˆå‚…, å¸ˆå‚…å¯¹å¾’å¼Ÿçš„å‹å¥½åº¦
 	local	fp_st	= LuaFnGetFriendPoint( sceneId, selfId, tId )
-	--Í½µÜ£¬Í½µÜ¶ÔÊ¦¸µµÄÓÑºÃ¶È
+	--å¾’å¼Ÿï¼Œå¾’å¼Ÿå¯¹å¸ˆå‚…çš„å‹å¥½åº¦
 	local	fp_ts	= LuaFnGetFriendPoint( sceneId, tId, selfId )
 	local	lv_t	= LuaFnGetLevel( sceneId, tId )
 
-	--(1)Èç¹ûÍ½µÜµÈ¼¶ÊÇ[40£¬45]£¬²¢ÇÒË«·½ÓÑºÃ¶È>=300
+	--(1)å¦‚æœå¾’å¼Ÿç­‰çº§æ˜¯[40ï¼Œ45]ï¼Œå¹¶ä¸”åŒæ–¹å‹å¥½åº¦>=300
 	if lv_t >= 40 and lv_t <= 45 and fp_st >= 300 and fp_ts >=300 then
 		--LuaFnAddItemListToHuman( sceneId, selfId )
 		--LuaFnAddItemListToHuman( sceneId, tId )
 
-		--Ê¦µÂµãÏà¹Ø
-		--¸øÊ¦¸µÔö¼ÓÊ¦µÂ£¨X=0-1000000£© N=M£«MIN(X=500, Ê¦¸¸¶ÔÍ½µÜµÄÓÑºÃ¶È*T)
-		--local	_M	= 10		--»ùÊı
-		--local	_T	= 5			--¼ÓÈ¨Ö¸Êı
-		--local	MoralPoint	--Ê¦µÂµãÊı
+		--å¸ˆå¾·ç‚¹ç›¸å…³
+		--ç»™å¸ˆå‚…å¢åŠ å¸ˆå¾·ï¼ˆX=0-1000000ï¼‰ N=Mï¼‹MIN(X=500, å¸ˆçˆ¶å¯¹å¾’å¼Ÿçš„å‹å¥½åº¦*T)
+		--local	_M	= 10		--åŸºæ•°
+		--local	_T	= 5			--åŠ æƒæŒ‡æ•°
+		--local	MoralPoint	--å¸ˆå¾·ç‚¹æ•°
 		--if fp_st * _T < 500 then
 		--	MoralPoint= _M + fp_st * _T
 		--else
 		--	MoralPoint= _M + 500
 		--end
 
-		--Ê¦¸µ
-		x806007_MsgBox( sceneId, selfId, targetId, "  ³öÊ¦³É¹¦£¡" )
-		Msg2Player( sceneId, selfId, "³öÊ¦³É¹¦£¡", MSG2PLAYER_PARA )
-		Msg2Player( sceneId, selfId, "ÄãµÃµ½"..x806007_g_itm[2].."Ò»¸ö¡£", MSG2PLAYER_PARA )
-		--Msg2Player( sceneId, selfId, "µÃµ½Ê¦µÂµãÊı"..MoralPoint.."¡£", MSG2PLAYER_PARA )
+		--å¸ˆå‚…
+		x806007_MsgBox( sceneId, selfId, targetId, "  å‡ºå¸ˆæˆåŠŸï¼" )
+		Msg2Player( sceneId, selfId, "å‡ºå¸ˆæˆåŠŸï¼", MSG2PLAYER_PARA )
+		Msg2Player( sceneId, selfId, "ä½ å¾—åˆ°"..x806007_g_itm[2].."ä¸€ä¸ªã€‚", MSG2PLAYER_PARA )
+		--Msg2Player( sceneId, selfId, "å¾—åˆ°å¸ˆå¾·ç‚¹æ•°"..MoralPoint.."ã€‚", MSG2PLAYER_PARA )
 
-		--Í½µÜ
-		x806007_MsgBox( sceneId, tId, targetId, "  ³öÊ¦³É¹¦£¡" )
-		Msg2Player( sceneId, tId, "³öÊ¦³É¹¦£¡", MSG2PLAYER_PARA )
-		Msg2Player( sceneId, tId, "ÄãµÃµ½"..x806007_g_itm[2].."Ò»¸ö¡£", MSG2PLAYER_PARA )
+		--å¾’å¼Ÿ
+		x806007_MsgBox( sceneId, tId, targetId, "  å‡ºå¸ˆæˆåŠŸï¼" )
+		Msg2Player( sceneId, tId, "å‡ºå¸ˆæˆåŠŸï¼", MSG2PLAYER_PARA )
+		Msg2Player( sceneId, tId, "ä½ å¾—åˆ°"..x806007_g_itm[2].."ä¸€ä¸ªã€‚", MSG2PLAYER_PARA )
 
-		--ÀÛ»ıÊ¦µÂµãÊı
+		--ç´¯ç§¯å¸ˆå¾·ç‚¹æ•°
 		--MoralPoint	= MoralPoint + LuaFnGetMasterMoralPoint( sceneId, selfId )
 		--if MoralPoint > 1000000 then
 		--	MoralPoint= 1000000
@@ -126,62 +126,62 @@ function x806007_OnAccept( sceneId, selfId, targetId, tId )
 		
 		local	title
 		local MasterName	= LuaFnGetName( sceneId, selfId )
-		--Ê¦¸µ³ÆºÅ
+		--å¸ˆå‚…ç§°å·
 		--title	= x806007_GetTitle( MoralPoint )
 		--if title ~= "" then
 		--	AwardShiTuTitle( sceneId, selfId, title )
 		--	DispatchAllTitle( sceneId, selfId )
-		--	Msg2Player( sceneId, selfId, "»ñµÃ³ÆºÅ£º"..title.."¡£", MSG2PLAYER_PARA )
+		--	Msg2Player( sceneId, selfId, "è·å¾—ç§°å·ï¼š"..title.."ã€‚", MSG2PLAYER_PARA )
 		--end
 
-		--Í½µÜ³ÆºÅ
-		title	= MasterName.."Ö®Í½"
+		--å¾’å¼Ÿç§°å·
+		title	= MasterName.."ä¹‹å¾’"
 		AwardShiTuTitle( sceneId, tId, title )
 		DispatchAllTitle( sceneId, tId )
-		Msg2Player( sceneId, tId, "»ñµÃ³ÆºÅ£º"..title.."¡£", MSG2PLAYER_PARA )
+		Msg2Player( sceneId, tId, "è·å¾—ç§°å·ï¼š"..title.."ã€‚", MSG2PLAYER_PARA )
 
-	--(2)Èç¹ûÍ½µÜµÈ¼¶´óÓÚ45£¬»òÕßË«·½ÓÑºÃ¶ÈĞ¡ÓÚ300
+	--(2)å¦‚æœå¾’å¼Ÿç­‰çº§å¤§äº45ï¼Œæˆ–è€…åŒæ–¹å‹å¥½åº¦å°äº300
 	else
-		local	msg	= "ÓÉÓÚÓÑºÃ¶È²»µ½300»òÕßÍ½µÜµÈ¼¶´óÓÚ45¼¶£¬Ã»ÓĞ½±Àø¡£"
-		--Ê¦¸µ
-		x806007_MsgBox( sceneId, selfId, targetId, "  ³öÊ¦³É¹¦£¡"..msg )
-		Msg2Player( sceneId, selfId, "³öÊ¦³É¹¦£¡", MSG2PLAYER_PARA )
+		local	msg	= "ç”±äºå‹å¥½åº¦ä¸åˆ°300æˆ–è€…å¾’å¼Ÿç­‰çº§å¤§äº45çº§ï¼Œæ²¡æœ‰å¥–åŠ±ã€‚"
+		--å¸ˆå‚…
+		x806007_MsgBox( sceneId, selfId, targetId, "  å‡ºå¸ˆæˆåŠŸï¼"..msg )
+		Msg2Player( sceneId, selfId, "å‡ºå¸ˆæˆåŠŸï¼", MSG2PLAYER_PARA )
 		Msg2Player( sceneId, selfId, msg, MSG2PLAYER_PARA )
 	
-		--Í½µÜ
-		x806007_MsgBox( sceneId, tId, targetId, "  ³öÊ¦³É¹¦£¡"..msg )
-		Msg2Player( sceneId, tId, "³öÊ¦³É¹¦£¡", MSG2PLAYER_PARA )
+		--å¾’å¼Ÿ
+		x806007_MsgBox( sceneId, tId, targetId, "  å‡ºå¸ˆæˆåŠŸï¼"..msg )
+		Msg2Player( sceneId, tId, "å‡ºå¸ˆæˆåŠŸï¼", MSG2PLAYER_PARA )
 		Msg2Player( sceneId, tId, msg, MSG2PLAYER_PARA )
 	end
 
-	--È¡ÏûÊ¦Í½¹ØÏµ
+	--å–æ¶ˆå¸ˆå¾’å…³ç³»
 	LuaFnFinishAprentice( sceneId, tId, selfId )
 end
 
 --**********************************
---¸ù¾İÊ¦µÂµã£¬»ñÈ¡³ÆºÅ
+--æ ¹æ®å¸ˆå¾·ç‚¹ï¼Œè·å–ç§°å·
 --**********************************
 function x806007_GetTitle( MoralPoint )
 	--local	mp	= MoralPoint
 	--if mp >= 100000 then
-	--	return "ÌÒÀîÂúÌìÏÂ"
+	--	return "æ¡ƒææ»¡å¤©ä¸‹"
 	--elseif mp >= 50000 then
-	--	return "»åÈË²»¾ë"
+	--	return "è¯²äººä¸å€¦"
 	--elseif mp >= 10000 then
-	--	return "Ò»´úÃûÊ¦"
+	--	return "ä¸€ä»£åå¸ˆ"
 	--elseif mp >= 5000 then
-	--	return "ÂéÀ±½ÌÊ¦"
+	--	return "éº»è¾£æ•™å¸ˆ"
 	--elseif mp >= 2000 then
-	--	return "ÎªÈËÊ¦±í"
+	--	return "ä¸ºäººå¸ˆè¡¨"
 	--elseif mp >= 100 then
-	--	return "³õÎªÈËÊ¦"
+	--	return "åˆä¸ºäººå¸ˆ"
 	--end
 
 	return ""
 end
 
 --**********************************
---¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+--å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x806007_MsgBox( sceneId, selfId, targetId, msg )
 	BeginEvent( sceneId )

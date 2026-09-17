@@ -38,10 +38,10 @@ function SafeTime_DBUpdateLeftSafeTime(time)
 	    local iMin = math.floor( iTime / 60 )
 	    local strTime="";
 	    if(iHor>0)then
-		strTime = strTime..iHor.."Ğ¡Ê±";
+		strTime = strTime..iHor.."å°æ—¶";
 	    end
 	    if(iMin>0)then
-		strTime = strTime..iMin.."·ÖÖÓ";
+		strTime = strTime..iMin.."åˆ†é’Ÿ";
 	    end
 
 	    SafeTime_CurrentTime:SetText("#{FDH_090112_06}#cFFFF00"..strTime);
@@ -114,10 +114,10 @@ function CheckIfOK()
 	local Min = SafeTime_SetMin:GetText();
 	if(Min~=nil and tonumber(Min)~=nil) then 
 		if(tonumber(Min)>60) then
-			PushDebugMessage("ÄúÊäÈëµÄ·ÖÖÓÊı²»ÄÜ´óÓÚ60·ÖÖÓ£¬ÇëÖØĞÂÊäÈë¡£")
+			PushDebugMessage("æ‚¨è¾“å…¥çš„åˆ†é’Ÿæ•°ä¸èƒ½å¤§äº60åˆ†é’Ÿï¼Œè¯·é‡æ–°è¾“å…¥ã€‚")
 			SafeTime_SetMin:SetText("3")
 		elseif (tonumber(Min)<1) then
-			PushDebugMessage("°²È«Ê±¼ä×îÉÙÎª1·ÖÖÓ£¬ÇëÖØĞÂÊäÈë¡£")
+			PushDebugMessage("å®‰å…¨æ—¶é—´æœ€å°‘ä¸º1åˆ†é’Ÿï¼Œè¯·é‡æ–°è¾“å…¥ã€‚")
 			SafeTime_SetMin:SetText("10")
 		end
 	end
@@ -136,14 +136,14 @@ function SafeTime_OK_Click()
 	--local Hor = SafeTime_SetHour:GetText();
 	local dblefttime =DataPool:GetLeftProtectTime();
 	if(tonumber(dblefttime)>0)then
-		PushDebugMessage("°²È«Ê±¼äÄÚ²»ÔÊĞíÖØÉè°²È«Ê±¼ä£¡")
+		PushDebugMessage("å®‰å…¨æ—¶é—´å†…ä¸å…è®¸é‡è®¾å®‰å…¨æ—¶é—´ï¼")
 		return
 	end
 	
 	if( Min~=nil and tonumber(Min)~=nil)then
 		Lua_SetProtectTime(0,tonumber(Min));
 	else
-		PushDebugMessage("ÉèÖÃ²»³É¹¦£¡°²È«Ê±¼ä²»ÄÜÎª¿Õ£¡")
+		PushDebugMessage("è®¾ç½®ä¸æˆåŠŸï¼å®‰å…¨æ—¶é—´ä¸èƒ½ä¸ºç©ºï¼")
 	end
         this:Hide();
 end

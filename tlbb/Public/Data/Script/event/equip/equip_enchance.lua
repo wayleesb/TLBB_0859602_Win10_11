@@ -1,15 +1,15 @@
---×°±¸Ç¿»¯
---½Å±¾ºÅ
+--è£…å¤‡å¼ºåŒ–
+--è„šæœ¬å·
 x809262_g_ScriptId = 809262
 
 x809262_g_QianghualuId = 30900045
 
 x809262_g_QianghualuTime = 11
 gem_index = 30900045
---×°±¸Ç¿»¯UI 1002
+--è£…å¤‡å¼ºåŒ–UI 1002
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x809262_OnEnumerate( sceneId, selfId, targetId )
 
@@ -17,14 +17,14 @@ end
 
 
 --**********************************
---×°±¸Ç¿»¯¼ì²é
+--è£…å¤‡å¼ºåŒ–æ£€æŸ¥
 --**********************************
 function x809262_FinishEnhance( sceneId, selfId, itemidx1, itemidx2 )
 	local ret = LuaFnIsItemLocked( sceneId, selfId, itemidx1 )
 	
 	if ret ~= 0 then
 		BeginEvent(sceneId)
-		AddText(sceneId,"¸Ã×°±¸²»¿ÉÓÃ¡£");
+		AddText(sceneId,"è¯¥è£…å¤‡ä¸å¯ç”¨ã€‚");
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
@@ -33,8 +33,8 @@ function x809262_FinishEnhance( sceneId, selfId, itemidx1, itemidx2 )
 	ret = LuaFnIsItemAvailable( sceneId, selfId, itemidx2 )
 	if ret ~= 1 then
 		BeginEvent(sceneId)
-		--AddText(sceneId,"¸ÃÇ¿»¯¾«»ª²»¿ÉÓÃ¡£");
-		AddText(sceneId,"¸ÃÇ¿»¯¾«»ª»òÇ¿»¯Â¶²»¿ÉÓÃ¡£");
+		--AddText(sceneId,"è¯¥å¼ºåŒ–ç²¾åä¸å¯ç”¨ã€‚");
+		AddText(sceneId,"è¯¥å¼ºåŒ–ç²¾åæˆ–å¼ºåŒ–éœ²ä¸å¯ç”¨ã€‚");
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
@@ -45,8 +45,8 @@ function x809262_FinishEnhance( sceneId, selfId, itemidx1, itemidx2 )
 	if equip_level < 40 then
 	
 		if gem_index ~= 30900005 then
-			--µÍ¼¶Ç¿»¯¾«»ª
-			str	= format( "¸Ã×°±¸Ç¿»¯ĞèÒª%s¡£", GetItemName( sceneId, 30900005 ) )
+			--ä½çº§å¼ºåŒ–ç²¾å
+			str	= format( "è¯¥è£…å¤‡å¼ºåŒ–éœ€è¦%sã€‚", GetItemName( sceneId, 30900005 ) )
 			BeginEvent(sceneId)
 			AddText(sceneId,str);
 			EndEvent(sceneId)
@@ -56,8 +56,8 @@ function x809262_FinishEnhance( sceneId, selfId, itemidx1, itemidx2 )
 	else
 
 		if gem_index ~= 30900006 and gem_index ~= x809262_g_QianghualuId then
-			--¸ß¼¶Ç¿»¯¾«»ª
-			str	= format( "¸Ã×°±¸Ç¿»¯ĞèÒª%s»ò%s¡£", GetItemName( sceneId, 30900006 ), GetItemName( sceneId, x809262_g_QianghualuId ) )
+			--é«˜çº§å¼ºåŒ–ç²¾å
+			str	= format( "è¯¥è£…å¤‡å¼ºåŒ–éœ€è¦%sæˆ–%sã€‚", GetItemName( sceneId, 30900006 ), GetItemName( sceneId, x809262_g_QianghualuId ) )
 			BeginEvent(sceneId)
 			AddText(sceneId,str);
 			EndEvent(sceneId)
@@ -66,16 +66,16 @@ function x809262_FinishEnhance( sceneId, selfId, itemidx1, itemidx2 )
 		end
 	end
 
-	--¼ì²éÊÇ·ñÄÜ¹»Ç¿»¯ 
+	--æ£€æŸ¥æ˜¯å¦èƒ½å¤Ÿå¼ºåŒ– 
 	ret, arg0 = LuaFnEquipEnhanceCheck( sceneId, selfId, itemidx1, itemidx2 )
-	local text="×°±¸Ç¿»¯³É¹¦£¡"
+	local text="è£…å¤‡å¼ºåŒ–æˆåŠŸï¼"
 	-- zchw
 	equip_index = tonumber(LuaFnGetItemTableIndexByIndex( sceneId, selfId, itemidx1 )); 
-	if (equip_index ==10423024) or (equip_index == 10422016) then --ÖØÂ¥Óñ£¬ÖØÂ¥½ä
-		if tonumber(gem_index) == 30900006 then --Ç¿»¯¾«»ª
+	if (equip_index ==10423024) or (equip_index == 10422016) then --é‡æ¥¼ç‰ï¼Œé‡æ¥¼æˆ’
+		if tonumber(gem_index) == 30900006 then --å¼ºåŒ–ç²¾å
 			bindStatus = tonumber(LuaFnGetItemBindStatus(sceneId, selfId, itemidx2));
-			if bindStatus == 1 then --°ó¶¨
-				text = "¸Ã×°±¸²»ÄÜÓÃÒÑ°ó¶¨µÄÌìî¸Ç¿»¯¾«»ªÇ¿»¯£¡";
+			if bindStatus == 1 then --ç»‘å®š
+				text = "è¯¥è£…å¤‡ä¸èƒ½ç”¨å·²ç»‘å®šçš„å¤©ç½¡å¼ºåŒ–ç²¾åå¼ºåŒ–ï¼";
 				BeginEvent(sceneId);
 				AddText(sceneId,text);
 				EndEvent(sceneId);
@@ -85,40 +85,40 @@ function x809262_FinishEnhance( sceneId, selfId, itemidx1, itemidx2 )
 		end
 	end
 	if ret == 0 then
-		--Ç¿»¯ÏûºÄ¼ì²é³É¹¦
+		--å¼ºåŒ–æ¶ˆè€—æ£€æŸ¥æˆåŠŸ
 		x809262_DoFinishEnhance( sceneId, selfId, itemidx1*1000+itemidx2)
 		return
 	end
 	
 	if ret == -1 then
-		text="Î´Öª´íÎó¡£"
+		text="æœªçŸ¥é”™è¯¯ã€‚"
 	end
 	
 	if ret == -2 then
-		text="×°±¸²»¿ÉÓÃ¡£"
+		text="è£…å¤‡ä¸å¯ç”¨ã€‚"
 	end
 	
 	if ret == -3 then
-		--text="Ç¿»¯¾«»ª²»¿ÉÓÃ¡£"
-		text="Ç¿»¯¾«»ª»òÇ¿»¯Â¶²»¿ÉÓÃ¡£"
+		--text="å¼ºåŒ–ç²¾åä¸å¯ç”¨ã€‚"
+		text="å¼ºåŒ–ç²¾åæˆ–å¼ºåŒ–éœ²ä¸å¯ç”¨ã€‚"
 	end
 	
 	if ret == -4 then
-		text="¸Ã×°±¸µÄÇ¿»¯µÈ¼¶ÒÑ¾­×î´ó¡£"
+		text="è¯¥è£…å¤‡çš„å¼ºåŒ–ç­‰çº§å·²ç»æœ€å¤§ã€‚"
 	end
 
 	if ret == -5 then
-		text="Ç¿»¯¸Ã×°±¸ĞèÒª#{_EXCHG%d}£¬ÄúÉíÉÏµÄÏÖ½ğ²»×ã¡£" --zchw
+		text="å¼ºåŒ–è¯¥è£…å¤‡éœ€è¦#{_EXCHG%d}ï¼Œæ‚¨èº«ä¸Šçš„ç°é‡‘ä¸è¶³ã€‚" --zchw
 		text=format( text, arg0 )
 	end
 	
 	if ret == -7 then
-		text="¸Ã×°±¸²»ÄÜ±»Ç¿»¯¡£"
+		text="è¯¥è£…å¤‡ä¸èƒ½è¢«å¼ºåŒ–ã€‚"
 	end
 
 	if ret == -6 then
-		--ĞèÒªÈ·ÈÏ½çÃæ
-		--text="Ç¿»¯Ê§°ÜÖ®ºó£¬Ç¿»¯µÈ¼¶½«»á±ä³É"..tostring(arg0).."£¬ÊÇ·ñ¼ÌĞøÇ¿»¯£¿"
+		--éœ€è¦ç¡®è®¤ç•Œé¢
+		--text="å¼ºåŒ–å¤±è´¥ä¹‹åï¼Œå¼ºåŒ–ç­‰çº§å°†ä¼šå˜æˆ"..tostring(arg0).."ï¼Œæ˜¯å¦ç»§ç»­å¼ºåŒ–ï¼Ÿ"
 		--BeginUICommand(sceneId)
 			--UICommand_AddInt(sceneId,x809262_g_ScriptId);
 			--UICommand_AddInt(sceneId,targetId);
@@ -138,14 +138,14 @@ function x809262_FinishEnhance( sceneId, selfId, itemidx1, itemidx2 )
 end
 
 --**********************************
---×°±¸Ç¿»¯
+--è£…å¤‡å¼ºåŒ–
 --**********************************
 function x809262_DoFinishEnhance( sceneId, selfId, index )
 	local itemidx1 = floor(index / 1000)
 	local itemidx2 = mod(index , 1000)
-	local text="×°±¸Ç¿»¯³É¹¦£¡"
+	local text="è£…å¤‡å¼ºåŒ–æˆåŠŸï¼"
 
-	--Ç¿»¯
+	--å¼ºåŒ–
 	local ret,arg0 = LuaFnEquipEnhance( sceneId, selfId, itemidx1, itemidx2 )
 
 	if ret == 0 then
@@ -154,7 +154,7 @@ function x809262_DoFinishEnhance( sceneId, selfId, index )
 			local	szTranItm2	= GetBagItemTransfer( sceneId, selfId, itemidx2 )
 			local	szMsg				= format( "#W#{_INFOUSR%s}#{EQ_1}#{_INFOMSG%s}#{EQ_2}%d#{EQ_3}#{_INFOMSG%s}#{EQ_4}",
 														LuaFnGetName( sceneId, selfId ), szTranItm2, arg0, szTranItm1 )
-			--¹«¸æ¾«¼ò£¬Ğ¡ÓÚ5¼¶µÄÇ¿»¯£¬²»·¢¹«¸æ
+			--å…¬å‘Šç²¾ç®€ï¼Œå°äº5çº§çš„å¼ºåŒ–ï¼Œä¸å‘å…¬å‘Š
 			if (arg0 >= 5) then
 				AddGlobalCountNews( sceneId, szMsg )
 			end
@@ -168,8 +168,8 @@ function x809262_DoFinishEnhance( sceneId, selfId, index )
 			--PrintNum(t)
 			
 			BeginEvent(sceneId)
-			--local str = "Ììî¸Ç¿»¯Â¶Ê£ÓàÊ¹ÓÃ´ÎÊı%d"
-			local	szMsg				= format( "Ììî¸Ç¿»¯Â¶Ê£ÓàÊ¹ÓÃ´ÎÊı%d/%d",
+			--local str = "å¤©ç½¡å¼ºåŒ–éœ²å‰©ä½™ä½¿ç”¨æ¬¡æ•°%d"
+			local	szMsg				= format( "å¤©ç½¡å¼ºåŒ–éœ²å‰©ä½™ä½¿ç”¨æ¬¡æ•°%d/%d",
 														tonumber(t), tonumber(x809262_g_QianghualuTime) );
 			AddText(sceneId,szMsg);
 			EndEvent(sceneId)
@@ -182,28 +182,28 @@ function x809262_DoFinishEnhance( sceneId, selfId, index )
 	end
 
 	if ret == -1 then
-		text="Î´Öª´íÎó¡£"
+		text="æœªçŸ¥é”™è¯¯ã€‚"
 	end
 	
 	if ret == -2 then
-		text="×°±¸²»¿ÉÓÃ¡£"
+		text="è£…å¤‡ä¸å¯ç”¨ã€‚"
 	end
 	
 	if ret == -3 then
-		text="Ç¿»¯¾«»ª²»¿ÉÓÃ¡£"
+		text="å¼ºåŒ–ç²¾åä¸å¯ç”¨ã€‚"
 	end
 	
 	if ret == -4 then
-		text="¸Ã×°±¸µÄÇ¿»¯µÈ¼¶ÒÑ¾­×î´ó¡£"
+		text="è¯¥è£…å¤‡çš„å¼ºåŒ–ç­‰çº§å·²ç»æœ€å¤§ã€‚"
 	end
 
 	if ret == -5 then
-		text="Ç¿»¯¸Ã×°±¸ĞèÒª#{_EXCHG%d}£¬ÄúÉíÉÏµÄÏÖ½ğ²»×ã¡£" --zchw
+		text="å¼ºåŒ–è¯¥è£…å¤‡éœ€è¦#{_EXCHG%d}ï¼Œæ‚¨èº«ä¸Šçš„ç°é‡‘ä¸è¶³ã€‚" --zchw
 		text=format( text, arg0 )
 	end
 
 	if ret == -6 then
-		text="ºÃ¿ÉÏ§°¡ÄúµÄ×°±¸Ç¿»¯Ê§°ÜÁË,±ğ»ÒĞÄ!!!"
+		text="å¥½å¯æƒœå•Šæ‚¨çš„è£…å¤‡å¼ºåŒ–å¤±è´¥äº†,åˆ«ç°å¿ƒ!!!"
 		
 		if x809262_g_QianghualuId == gem_index then
 			local r, t = LuaFnEraseItemTimes( sceneId, selfId, itemidx2, x809262_g_QianghualuTime )
@@ -211,7 +211,7 @@ function x809262_DoFinishEnhance( sceneId, selfId, index )
 			--PrintNum(t)
 			
 			BeginEvent(sceneId)
-			local	szMsg				= format( "Ììî¸Ç¿»¯Â¶Ê£ÓàÊ¹ÓÃ´ÎÊı%d/%d",
+			local	szMsg				= format( "å¤©ç½¡å¼ºåŒ–éœ²å‰©ä½™ä½¿ç”¨æ¬¡æ•°%d/%d",
 														tonumber(t), tonumber(x809262_g_QianghualuTime) );
 			AddText(sceneId,szMsg);
 			EndEvent(sceneId)

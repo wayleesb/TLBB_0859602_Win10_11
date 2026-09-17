@@ -1,29 +1,29 @@
---ÂåÑôNPC
---¿××ÚÔ¨
---ÆÕÍ¨
+--æ´›é˜³NPC
+--å­”å®—æ¸Š
+--æ™®é€š
 
 x000124_g_ScriptId	= 000124
 
---²Ù×÷¼¯
+--æ“ä½œé›†
 x000124_g_Key				=
 {
-		["do"]					= 100,	--È·¶¨
-		["undo"]				= 101,	--È¡Ïû
+		["do"]					= 100,	--ç¡®å®š
+		["undo"]				= 101,	--å–æ¶ˆ
 }
 
 --******************************************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --******************************************************
 function x000124_OnDefaultEvent( sceneId, selfId, targetId )
 	BeginEvent( sceneId )
-		AddText( sceneId, "  ÎÒÄË´óËÎÑÜÊ¥¹«£¬ÎÄÊ¥ÈË¿××ÚÔ¨ÊÇÒ²¡£Èç¹ûÄãÓĞ¶àÓàµÄÈÎÎñµÀ¾ßÕ¼ÓÃÕä¹óµÄ±³°ü¿Õ¼ä£¬¿ÉÒÔ½»¸øÎÒÀ´É¾³ı¡£µ«ÄãÔÚÉ¾³ıÈÎÎñµÀ¾ßÖ®Ç°£¬Ò»¶¨ÒªÏëÇå³ş£¬ËüÈ·ÊµÃ»ÓĞÓÃÍ¾ÁË¡£" )
-		AddNumText( sceneId, x000124_g_ScriptId, "ÎÒÏëÉ¾³ıÈÎÎñµÀ¾ß", -1, x000124_g_Key["do"] )
+		AddText( sceneId, "  æˆ‘ä¹ƒå¤§å®‹è¡åœ£å…¬ï¼Œæ–‡åœ£äººå­”å®—æ¸Šæ˜¯ä¹Ÿã€‚å¦‚æœä½ æœ‰å¤šä½™çš„ä»»åŠ¡é“å…·å ç”¨çè´µçš„èƒŒåŒ…ç©ºé—´ï¼Œå¯ä»¥äº¤ç»™æˆ‘æ¥åˆ é™¤ã€‚ä½†ä½ åœ¨åˆ é™¤ä»»åŠ¡é“å…·ä¹‹å‰ï¼Œä¸€å®šè¦æƒ³æ¸…æ¥šï¼Œå®ƒç¡®å®æ²¡æœ‰ç”¨é€”äº†ã€‚" )
+		AddNumText( sceneId, x000124_g_ScriptId, "æˆ‘æƒ³åˆ é™¤ä»»åŠ¡é“å…·", -1, x000124_g_Key["do"] )
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x000124_OnEventRequest( sceneId, selfId, targetId, eventId )
 	local	key	= GetNumText()
@@ -37,8 +37,8 @@ function x000124_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --******************************************************
---Ïú»ÙÈÎÎñÎïÆ·
---ÓÉClient\Interface\MissionObjDel\MissionObjDel.lua·¢³ö
+--é”€æ¯ä»»åŠ¡ç‰©å“
+--ç”±Client\Interface\MissionObjDel\MissionObjDel.luaå‘å‡º
 --******************************************************
 function x000124_OnDestroy( sceneId, selfId, posItem )
 	if posItem < 0 then
@@ -65,8 +65,8 @@ function x000124_OnDestroy( sceneId, selfId, posItem )
 end
 
 --******************************************************
---Ïú»ÙÈÎÎñÎïÆ·µÄÌØÊâ´¦Àí ÎåÒ»½ÚÔùËÍ»î¶¯
---Áõ¶Ü 2008-04-17
+--é”€æ¯ä»»åŠ¡ç‰©å“çš„ç‰¹æ®Šå¤„ç† äº”ä¸€èŠ‚èµ é€æ´»åŠ¨
+--åˆ˜ç›¾ 2008-04-17
 --******************************************************
 function x000124_OnDestroyLaborDay( sceneId, selfId, idItem )
 	if(GlobalLaborDayActivityTable.PetCageCardID == idItem) then

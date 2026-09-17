@@ -1,11 +1,11 @@
---µ±Ç°´°¿ÚÀàĞÍ....
+--å½“å‰çª—å£ç±»å‹....
 local g_TextValidate_UIType = -1;
 
 local g_TextValidate_UITypes = {
-	CREATE_ROLE	= 0,	--´´½¨½ÇÉ«ÑéÖ¤....
-	LOGIN_CHECK	= 1,	--µÇÂ½ÑéÖ¤....
-	EXCHANGE	= 2,		--½»Ò×ÑéÖ¤....
-	LEVELUP_CHECK	= 3,--Éı¼¶ÑéÖ¤....
+	CREATE_ROLE	= 0,	--åˆ›å»ºè§’è‰²éªŒè¯....
+	LOGIN_CHECK	= 1,	--ç™»é™†éªŒè¯....
+	EXCHANGE	= 2,		--äº¤æ˜“éªŒè¯....
+	LEVELUP_CHECK	= 3,--å‡çº§éªŒè¯....
 }
 
 local g_TextValidate_UserLoginType = "";
@@ -15,27 +15,27 @@ local g_TextValidate_UserLoginScene = -1;
 
 function TextValidate_PreLoad()
 
-	--´´½¨½ÇÉ«....
-	this:RegisterEvent("SHOW_CREATE_ROLE_CODE_VALIDATE");	--´ò¿ª²¢¸üĞÂ±¾Í¼ĞÎÑéÖ¤½çÃæ....
-	this:RegisterEvent("CREATE_ROLE_CODE_RET");	--·şÎñ¶Ë·µ»ØÑéÖ¤ÊÇ·ñÍ¨¹ı....
+	--åˆ›å»ºè§’è‰²....
+	this:RegisterEvent("SHOW_CREATE_ROLE_CODE_VALIDATE");	--æ‰“å¼€å¹¶æ›´æ–°æœ¬å›¾å½¢éªŒè¯ç•Œé¢....
+	this:RegisterEvent("CREATE_ROLE_CODE_RET");	--æœåŠ¡ç«¯è¿”å›éªŒè¯æ˜¯å¦é€šè¿‡....
 
-	--µÇÂ¼....
-	this:RegisterEvent("SHOW_LOGIN_CODE_VALIDATE");	--´ò¿ª²¢¸üĞÂ±¾Í¼ĞÎÑéÖ¤½çÃæ....
-	this:RegisterEvent("LOGIN_CODE_RET");	--·şÎñ¶Ë·µ»ØÑéÖ¤ÊÇ·ñÍ¨¹ı....
-	this:RegisterEvent("TEXTVALIDATE_SAVELOGINSELECT");	--»º´æÍæ¼ÒÑéÖ¤Ç°µÄµÇÂ½Ñ¡Ôñ....
+	--ç™»å½•....
+	this:RegisterEvent("SHOW_LOGIN_CODE_VALIDATE");	--æ‰“å¼€å¹¶æ›´æ–°æœ¬å›¾å½¢éªŒè¯ç•Œé¢....
+	this:RegisterEvent("LOGIN_CODE_RET");	--æœåŠ¡ç«¯è¿”å›éªŒè¯æ˜¯å¦é€šè¿‡....
+	this:RegisterEvent("TEXTVALIDATE_SAVELOGINSELECT");	--ç¼“å­˜ç©å®¶éªŒè¯å‰çš„ç™»é™†é€‰æ‹©....
 
 	---------------------------------------------------------------
-	--½»Ò×Ïà¹Øbegin
-	this:RegisterEvent("EXCHANGE_BOX_CLOSED");	--½»Ò×ºĞ¹Ø±ÕµÄÊ±ºò£¬Òª¹ØµôÕâ¸ö¿ò¡£
-	this:RegisterEvent("EXCHANGE_THISBOX_INVALID");	--½»Ò×Ê±´Ë¶Ô»°¿òÒÑ¾­ÎŞĞ§
-	this:RegisterEvent("ACCEPT_EXCHANGE_CODE_VALIDATE");	--½»Ò×ÑéÖ¤ÂëµÄÏûÏ¢	
-	this:RegisterEvent("EXCHANGE_IF_CODE_VALIDATE");	--½»Ò×ÑéÖ¤ÂëÊÇ·ñÍ¨¹ı
-	--½»Ò×Ïà¹Øend
+	--äº¤æ˜“ç›¸å…³begin
+	this:RegisterEvent("EXCHANGE_BOX_CLOSED");	--äº¤æ˜“ç›’å…³é—­çš„æ—¶å€™ï¼Œè¦å…³æ‰è¿™ä¸ªæ¡†ã€‚
+	this:RegisterEvent("EXCHANGE_THISBOX_INVALID");	--äº¤æ˜“æ—¶æ­¤å¯¹è¯æ¡†å·²ç»æ— æ•ˆ
+	this:RegisterEvent("ACCEPT_EXCHANGE_CODE_VALIDATE");	--äº¤æ˜“éªŒè¯ç çš„æ¶ˆæ¯	
+	this:RegisterEvent("EXCHANGE_IF_CODE_VALIDATE");	--äº¤æ˜“éªŒè¯ç æ˜¯å¦é€šè¿‡
+	--äº¤æ˜“ç›¸å…³end
 	---------------------------------------------------------------
 
-	--Éı¼¶ÑéÖ¤....
-	this:RegisterEvent("SHOW_LEVELUP_CODE_VALIDATE");	--´ò¿ª²¢¸üĞÂ±¾Í¼ĞÎÑéÖ¤½çÃæ....
-	this:RegisterEvent("LEVELUP_CODE_RET");	--·şÎñ¶Ë·µ»ØÑéÖ¤ÊÇ·ñÍ¨¹ı....
+	--å‡çº§éªŒè¯....
+	this:RegisterEvent("SHOW_LEVELUP_CODE_VALIDATE");	--æ‰“å¼€å¹¶æ›´æ–°æœ¬å›¾å½¢éªŒè¯ç•Œé¢....
+	this:RegisterEvent("LEVELUP_CODE_RET");	--æœåŠ¡ç«¯è¿”å›éªŒè¯æ˜¯å¦é€šè¿‡....
 
 end
 
@@ -45,18 +45,18 @@ end
 
 function TextValidate_OnEvent(event)
 
-	if ( event == "SHOW_CREATE_ROLE_CODE_VALIDATE"  ) then	--´ò¿ª²¢¸üĞÂ±¾Í¼ĞÎÑéÖ¤½çÃæ....
+	if ( event == "SHOW_CREATE_ROLE_CODE_VALIDATE"  ) then	--æ‰“å¼€å¹¶æ›´æ–°æœ¬å›¾å½¢éªŒè¯ç•Œé¢....
 
 		g_TextValidate_UIType = g_TextValidate_UITypes.CREATE_ROLE;
-		--¸üĞÂÍ¼ĞÎÑéÖ¤ĞÅÏ¢....
-		--Õâ¸ö½Ó¿ÚÊÇ¸øÑ¡ÔñÀàµÄÍ¼ĞÎÑéÖ¤ÓÃµÄ....Õâ¸öÊäÈëÀàµÄÍ¼ĞÎÑéÖ¤½çÃæÒ²Ì×ÓÃÕâ¸ö½Ó¿Ú....
-		--5¸ö²ÎÊı·Ö±ğÊÇ5¸ö¿Ø¼şµÄÃû×Ö....²ÎÊı1ÊÇÍ¼ĞÎ¿Ø¼şµÄÃû×Ö..²ÎÊı2~5ÊÇ´ğ°¸¿Ø¼şµÄÃû×Ö....
-		--µ÷ÓÃºó»áË¢ĞÂÑéÖ¤Í¼Æ¬µ½Í¼ĞÎ¿Ø¼ş....²¢Ë¢ĞÂ4¸ö´ğ°¸µ½4¸ö´ğ°¸¿Ø¼şµÄTextÊôĞÔ....
+		--æ›´æ–°å›¾å½¢éªŒè¯ä¿¡æ¯....
+		--è¿™ä¸ªæ¥å£æ˜¯ç»™é€‰æ‹©ç±»çš„å›¾å½¢éªŒè¯ç”¨çš„....è¿™ä¸ªè¾“å…¥ç±»çš„å›¾å½¢éªŒè¯ç•Œé¢ä¹Ÿå¥—ç”¨è¿™ä¸ªæ¥å£....
+		--5ä¸ªå‚æ•°åˆ†åˆ«æ˜¯5ä¸ªæ§ä»¶çš„åå­—....å‚æ•°1æ˜¯å›¾å½¢æ§ä»¶çš„åå­—..å‚æ•°2~5æ˜¯ç­”æ¡ˆæ§ä»¶çš„åå­—....
+		--è°ƒç”¨åä¼šåˆ·æ–°éªŒè¯å›¾ç‰‡åˆ°å›¾å½¢æ§ä»¶....å¹¶åˆ·æ–°4ä¸ªç­”æ¡ˆåˆ°4ä¸ªç­”æ¡ˆæ§ä»¶çš„Textå±æ€§....
 		DataPool:UpdateCaptchaData("TextValidate_Image", "TextValidate_NotUse", "TextValidate_NotUse", "TextValidate_NotUse", "TextValidate_NotUse", 2 );
 
 		TextValidate_Input:SetText("");
 
-		--Èç¹ûÊÇÊ×´Î´ò¿ª´°¿Ú(²»ÊÇË¢ĞÂÍ¼Æ¬)....
+		--å¦‚æœæ˜¯é¦–æ¬¡æ‰“å¼€çª—å£(ä¸æ˜¯åˆ·æ–°å›¾ç‰‡)....
 		if not this:IsVisible() then
 			TextValidate_Frame:SetProperty("AlwaysOnTop", "True");
 			TextValidate_WarningText:SetText("#{Create_Role_Code_Info}");
@@ -67,20 +67,26 @@ function TextValidate_OnEvent(event)
 			this:Show();
 		end
 
-		--Ã¿´ÎË¢ĞÂ´°¿Ú¶¼Ëæ»ú´°¿ÚÎ»ÖÃ....
+		--æ¯æ¬¡åˆ·æ–°çª—å£éƒ½éšæœºçª—å£ä½ç½®....
 		TextValidate_RandomWindowPos()
 
-	elseif event == "CREATE_ROLE_CODE_RET" then	--·şÎñ¶Ë·µ»ØÑéÖ¤ÊÇ·ñÍ¨¹ı....
+	elseif event == "CREATE_ROLE_CODE_RET" then	--æœåŠ¡ç«¯è¿”å›éªŒè¯æ˜¯å¦é€šè¿‡....
+		-- æœåŠ¡ç«¯å…³é—­éªŒè¯ç æ—¶ç›´æ¥è¿”å›æˆåŠŸï¼Œä¸æ˜¾ç¤ºéªŒè¯çª—å£ã€‚
+		if arg0 == "yes" and not this:IsVisible() then
+			g_TextValidate_UIType = g_TextValidate_UITypes.CREATE_ROLE;
+			TextValidate_TimeReach2();
+			return
+		end
 		
 		if g_TextValidate_UIType ~= g_TextValidate_UITypes.CREATE_ROLE then
 			return
 		end
 
 		if arg0 == "no" then
-			--ÑéÖ¤Ê§°Ü
+			--éªŒè¯å¤±è´¥
 			TextValidate_WarningText:SetText("#{Create_Role_Code_Failed}");
 		elseif arg0 == "yes" then
-			--ÑéÖ¤³É¹¦....Ôò¹Ø±Õ½çÃæ²¢ÇĞ»»µ½ÈËÎï´´½¨Á÷³Ì....
+			--éªŒè¯æˆåŠŸ....åˆ™å…³é—­ç•Œé¢å¹¶åˆ‡æ¢åˆ°äººç‰©åˆ›å»ºæµç¨‹....
 			TextValidate_WarningText:SetText("#{Create_Role_Code_Successed}");
 			TextValidate_ChangePic:SetProperty("Disabled", "True");
 			TextValidate_StopWatch2:SetProperty("Timer", "1");
@@ -89,19 +95,19 @@ function TextValidate_OnEvent(event)
 
 		--============================================
 
-	elseif ( event == "SHOW_LOGIN_CODE_VALIDATE" ) then	--´ò¿ª²¢¸üĞÂ±¾Í¼ĞÎÑéÖ¤½çÃæ....
+	elseif ( event == "SHOW_LOGIN_CODE_VALIDATE" ) then	--æ‰“å¼€å¹¶æ›´æ–°æœ¬å›¾å½¢éªŒè¯ç•Œé¢....
 
 		g_TextValidate_UIType = g_TextValidate_UITypes.LOGIN_CHECK
 
-		--¸üĞÂÍ¼ĞÎÑéÖ¤ĞÅÏ¢....
-		--Õâ¸ö½Ó¿ÚÊÇ¸øÑ¡ÔñÀàµÄÍ¼ĞÎÑéÖ¤ÓÃµÄ....Õâ¸öÊäÈëÀàµÄÍ¼ĞÎÑéÖ¤½çÃæÒ²Ì×ÓÃÕâ¸ö½Ó¿Ú....
-		--5¸ö²ÎÊı·Ö±ğÊÇ5¸ö¿Ø¼şµÄÃû×Ö....²ÎÊı1ÊÇÍ¼ĞÎ¿Ø¼şµÄÃû×Ö..²ÎÊı2~5ÊÇ´ğ°¸¿Ø¼şµÄÃû×Ö....
-		--µ÷ÓÃºó»áË¢ĞÂÑéÖ¤Í¼Æ¬µ½Í¼ĞÎ¿Ø¼ş....²¢Ë¢ĞÂ4¸ö´ğ°¸µ½4¸ö´ğ°¸¿Ø¼şµÄTextÊôĞÔ....
+		--æ›´æ–°å›¾å½¢éªŒè¯ä¿¡æ¯....
+		--è¿™ä¸ªæ¥å£æ˜¯ç»™é€‰æ‹©ç±»çš„å›¾å½¢éªŒè¯ç”¨çš„....è¿™ä¸ªè¾“å…¥ç±»çš„å›¾å½¢éªŒè¯ç•Œé¢ä¹Ÿå¥—ç”¨è¿™ä¸ªæ¥å£....
+		--5ä¸ªå‚æ•°åˆ†åˆ«æ˜¯5ä¸ªæ§ä»¶çš„åå­—....å‚æ•°1æ˜¯å›¾å½¢æ§ä»¶çš„åå­—..å‚æ•°2~5æ˜¯ç­”æ¡ˆæ§ä»¶çš„åå­—....
+		--è°ƒç”¨åä¼šåˆ·æ–°éªŒè¯å›¾ç‰‡åˆ°å›¾å½¢æ§ä»¶....å¹¶åˆ·æ–°4ä¸ªç­”æ¡ˆåˆ°4ä¸ªç­”æ¡ˆæ§ä»¶çš„Textå±æ€§....
 		DataPool:UpdateCaptchaData("TextValidate_Image", "TextValidate_NotUse", "TextValidate_NotUse", "TextValidate_NotUse", "TextValidate_NotUse", 2 );
 
 		TextValidate_Input:SetText("");
 
-		--Èç¹ûÊÇÊ×´Î´ò¿ª´°¿Ú(²»ÊÇË¢ĞÂÍ¼Æ¬)....
+		--å¦‚æœæ˜¯é¦–æ¬¡æ‰“å¼€çª—å£(ä¸æ˜¯åˆ·æ–°å›¾ç‰‡)....
 		if not this:IsVisible() then
 			TextValidate_Frame:SetProperty("AlwaysOnTop", "True");
 			TextValidate_WarningText:SetText("#{Create_Role_Code_Info}");
@@ -112,26 +118,32 @@ function TextValidate_OnEvent(event)
 			this:Show();
 		end
 
-		--Ã¿´ÎË¢ĞÂ´°¿Ú¶¼Ëæ»ú´°¿ÚÎ»ÖÃ....
+		--æ¯æ¬¡åˆ·æ–°çª—å£éƒ½éšæœºçª—å£ä½ç½®....
 		TextValidate_RandomWindowPos()
 
-	elseif event == "LOGIN_CODE_RET" then	--·şÎñ¶Ë·µ»ØÑéÖ¤ÊÇ·ñÍ¨¹ı....
+	elseif event == "LOGIN_CODE_RET" then	--æœåŠ¡ç«¯è¿”å›éªŒè¯æ˜¯å¦é€šè¿‡....
+		-- æœåŠ¡ç«¯å…³é—­éªŒè¯ç æ—¶ç›´æ¥è¿”å›æˆåŠŸï¼Œä¸æ˜¾ç¤ºéªŒè¯çª—å£ã€‚
+		if arg0 == "yes" and not this:IsVisible() then
+			g_TextValidate_UIType = g_TextValidate_UITypes.LOGIN_CHECK;
+			TextValidate_TimeReach2();
+			return
+		end
 
 		if g_TextValidate_UIType ~= g_TextValidate_UITypes.LOGIN_CHECK then
 			return
 		end
 
 		if arg0 == "no" then
-			--ÑéÖ¤Ê§°Ü
+			--éªŒè¯å¤±è´¥
 			TextValidate_WarningText:SetText("#{Create_Role_Code_Failed}");
 		elseif arg0 == "yes" then
-			--ÑéÖ¤³É¹¦....Ôò¹Ø±Õ½çÃæ....
+			--éªŒè¯æˆåŠŸ....åˆ™å…³é—­ç•Œé¢....
 			TextValidate_WarningText:SetText("#{Create_Role_Code_Successed}");
 			TextValidate_ChangePic:SetProperty("Disabled", "True");
 			TextValidate_StopWatch2:SetProperty("Timer", "1");
 		end
 
-	elseif event == "TEXTVALIDATE_SAVELOGINSELECT" then	--»º´æÍæ¼ÒÑéÖ¤Ç°µÄµÇÂ½Ñ¡Ôñ....
+	elseif event == "TEXTVALIDATE_SAVELOGINSELECT" then	--ç¼“å­˜ç©å®¶éªŒè¯å‰çš„ç™»é™†é€‰æ‹©....
 
 		g_TextValidate_UserLoginType = tostring(arg0)
 		g_TextValidate_UserLoginRoleId = tonumber(arg2)
@@ -139,19 +151,19 @@ function TextValidate_OnEvent(event)
 
 	--============================================
 
-	elseif ( event == "SHOW_LEVELUP_CODE_VALIDATE" ) then	--´ò¿ª²¢¸üĞÂ±¾Í¼ĞÎÑéÖ¤½çÃæ....
+	elseif ( event == "SHOW_LEVELUP_CODE_VALIDATE" ) then	--æ‰“å¼€å¹¶æ›´æ–°æœ¬å›¾å½¢éªŒè¯ç•Œé¢....
 
 		g_TextValidate_UIType = g_TextValidate_UITypes.LEVELUP_CHECK
 
-		--¸üĞÂÍ¼ĞÎÑéÖ¤ĞÅÏ¢....
-		--Õâ¸ö½Ó¿ÚÊÇ¸øÑ¡ÔñÀàµÄÍ¼ĞÎÑéÖ¤ÓÃµÄ....Õâ¸öÊäÈëÀàµÄÍ¼ĞÎÑéÖ¤½çÃæÒ²Ì×ÓÃÕâ¸ö½Ó¿Ú....
-		--5¸ö²ÎÊı·Ö±ğÊÇ5¸ö¿Ø¼şµÄÃû×Ö....²ÎÊı1ÊÇÍ¼ĞÎ¿Ø¼şµÄÃû×Ö..²ÎÊı2~5ÊÇ´ğ°¸¿Ø¼şµÄÃû×Ö....
-		--µ÷ÓÃºó»áË¢ĞÂÑéÖ¤Í¼Æ¬µ½Í¼ĞÎ¿Ø¼ş....²¢Ë¢ĞÂ4¸ö´ğ°¸µ½4¸ö´ğ°¸¿Ø¼şµÄTextÊôĞÔ....
+		--æ›´æ–°å›¾å½¢éªŒè¯ä¿¡æ¯....
+		--è¿™ä¸ªæ¥å£æ˜¯ç»™é€‰æ‹©ç±»çš„å›¾å½¢éªŒè¯ç”¨çš„....è¿™ä¸ªè¾“å…¥ç±»çš„å›¾å½¢éªŒè¯ç•Œé¢ä¹Ÿå¥—ç”¨è¿™ä¸ªæ¥å£....
+		--5ä¸ªå‚æ•°åˆ†åˆ«æ˜¯5ä¸ªæ§ä»¶çš„åå­—....å‚æ•°1æ˜¯å›¾å½¢æ§ä»¶çš„åå­—..å‚æ•°2~5æ˜¯ç­”æ¡ˆæ§ä»¶çš„åå­—....
+		--è°ƒç”¨åä¼šåˆ·æ–°éªŒè¯å›¾ç‰‡åˆ°å›¾å½¢æ§ä»¶....å¹¶åˆ·æ–°4ä¸ªç­”æ¡ˆåˆ°4ä¸ªç­”æ¡ˆæ§ä»¶çš„Textå±æ€§....
 		DataPool:UpdateCaptchaData("TextValidate_Image", "TextValidate_NotUse", "TextValidate_NotUse", "TextValidate_NotUse", "TextValidate_NotUse", 2 );
 
 		TextValidate_Input:SetText("");
 
-		--Èç¹ûÊÇÊ×´Î´ò¿ª´°¿Ú(²»ÊÇË¢ĞÂÍ¼Æ¬)....
+		--å¦‚æœæ˜¯é¦–æ¬¡æ‰“å¼€çª—å£(ä¸æ˜¯åˆ·æ–°å›¾ç‰‡)....
 		if not this:IsVisible() then
 			TextValidate_Frame:SetProperty("AlwaysOnTop", "True");
 			TextValidate_WarningText:SetText("#{Create_Role_Code_Info}");
@@ -162,20 +174,20 @@ function TextValidate_OnEvent(event)
 			this:Show();
 		end
 
-		--Ã¿´ÎË¢ĞÂ´°¿Ú¶¼Ëæ»ú´°¿ÚÎ»ÖÃ....
+		--æ¯æ¬¡åˆ·æ–°çª—å£éƒ½éšæœºçª—å£ä½ç½®....
 		TextValidate_RandomWindowPos()
 
-	elseif event == "LEVELUP_CODE_RET" then	--·şÎñ¶Ë·µ»ØÑéÖ¤ÊÇ·ñÍ¨¹ı....
+	elseif event == "LEVELUP_CODE_RET" then	--æœåŠ¡ç«¯è¿”å›éªŒè¯æ˜¯å¦é€šè¿‡....
 
 		if g_TextValidate_UIType ~= g_TextValidate_UITypes.LEVELUP_CHECK then
 			return
 		end
 
 		if arg0 == "no" then
-			--ÑéÖ¤Ê§°Ü
+			--éªŒè¯å¤±è´¥
 			TextValidate_WarningText:SetText("#{Create_Role_Code_Failed}");
 		elseif arg0 == "yes" then
-			--ÑéÖ¤³É¹¦....Ôò¹Ø±Õ½çÃæ....
+			--éªŒè¯æˆåŠŸ....åˆ™å…³é—­ç•Œé¢....
 			TextValidate_WarningText:SetText("#{Create_Role_Code_Successed}");
 			TextValidate_ChangePic:SetProperty("Disabled", "True");
 			TextValidate_StopWatch2:SetProperty("Timer", "1");
@@ -184,42 +196,42 @@ function TextValidate_OnEvent(event)
 	end
 
 	---------------------------------------------------------------
-	--½»Ò×Ïà¹Øbegin
-	if  event == "ACCEPT_EXCHANGE_CODE_VALIDATE" then  --½»Ò×Í¼ĞÎÑéÖ¤£¬´úÂëÔÚÕâÀïÓĞÖØ¸´£¬Ö÷ÒªÊÇ·½±ãºÏ²¢ÎÄ¼ş
+	--äº¤æ˜“ç›¸å…³begin
+	if  event == "ACCEPT_EXCHANGE_CODE_VALIDATE" then  --äº¤æ˜“å›¾å½¢éªŒè¯ï¼Œä»£ç åœ¨è¿™é‡Œæœ‰é‡å¤ï¼Œä¸»è¦æ˜¯æ–¹ä¾¿åˆå¹¶æ–‡ä»¶
 		g_TextValidate_UIType = g_TextValidate_UITypes.EXCHANGE;
 		DataPool:UpdateCaptchaData("TextValidate_Image", "TextValidate_NotUse", "TextValidate_NotUse", "TextValidate_NotUse", "TextValidate_NotUse", 2 );
 
 		TextValidate_Input:SetText("");
 
-		--Èç¹û²»ÊÇË¢ĞÂÍ¼Æ¬
+		--å¦‚æœä¸æ˜¯åˆ·æ–°å›¾ç‰‡
 		if not this:IsVisible() then
 			TextValidate_Frame:SetProperty("AlwaysOnTop", "True");
-			TextValidate_WarningText:SetText("#{Create_Role_Code_Info}");	--ÎÄ×Ö¾ÍÓÃÒÔÇ°ÄÇ¸ö
+			TextValidate_WarningText:SetText("#{Create_Role_Code_Info}");	--æ–‡å­—å°±ç”¨ä»¥å‰é‚£ä¸ª
 			TextValidate_Accept:SetProperty("Disabled", "False");
 			TextValidate_ChangePic:SetProperty("Disabled", "False");
 			TextValidate_Close:SetProperty("Disabled", "False");
 			TextValidate_Input:SetProperty("DefaultEditBox", "True");
 			this:Show();
 		end	
-		--Ã¿´ÎË¢ĞÂ´°¿Ú¶¼Ëæ»ú´°¿ÚÎ»ÖÃ....
+		--æ¯æ¬¡åˆ·æ–°çª—å£éƒ½éšæœºçª—å£ä½ç½®....
 		TextValidate_RandomWindowPos()
 	end
 	if  event == "EXCHANGE_THISBOX_INVALID" or event == "EXCHANGE_BOX_CLOSED" then 
-		if this:IsVisible() and g_TextValidate_UIType == g_TextValidate_UITypes.EXCHANGE then	--¶ÔÓÚ½»Ò×À´Ëµ£¬ÕâÀï±ØĞë¼Óg_TextValidate_UITypeµÄÅĞ¶Ï
+		if this:IsVisible() and g_TextValidate_UIType == g_TextValidate_UITypes.EXCHANGE then	--å¯¹äºäº¤æ˜“æ¥è¯´ï¼Œè¿™é‡Œå¿…é¡»åŠ g_TextValidate_UITypeçš„åˆ¤æ–­
 			this : Hide();	
 		end
 	end
-	if event == "EXCHANGE_IF_CODE_VALIDATE" then	--·şÎñ¶Ë·µ»ØÑéÖ¤ÊÇ·ñÍ¨¹ı....
+	if event == "EXCHANGE_IF_CODE_VALIDATE" then	--æœåŠ¡ç«¯è¿”å›éªŒè¯æ˜¯å¦é€šè¿‡....
 
 		if g_TextValidate_UIType ~= g_TextValidate_UITypes.EXCHANGE then
 			return
 		end
 
 		if arg0 == "no" then
-			--ÑéÖ¤Ê§°Ü
+			--éªŒè¯å¤±è´¥
 			TextValidate_WarningText:SetText("#{Create_Role_Code_Failed}");
 		elseif arg0 == "yes" then
-			--ÑéÖ¤³É¹¦....Ôò¹Ø±Õ½çÃæ....
+			--éªŒè¯æˆåŠŸ....åˆ™å…³é—­ç•Œé¢....
 			TextValidate_WarningText:SetText("#{Create_Role_Code_Successed}");
 			TextValidate_ChangePic:SetProperty("Disabled", "True");
 			TextValidate_StopWatch2:SetProperty("Timer", "1");
@@ -227,14 +239,14 @@ function TextValidate_OnEvent(event)
 		end
 
 	end
-	--½»Ò×Ïà¹Øend
+	--äº¤æ˜“ç›¸å…³end
 	---------------------------------------------------------------
 
 end
 
 function TextValidate_BtnCommitClick()
 		
-	--·¢ËÍÍæ¼ÒÊäÈëµÄ×Ö·û´®¸ø·şÎñ¶Ë....
+	--å‘é€ç©å®¶è¾“å…¥çš„å­—ç¬¦ä¸²ç»™æœåŠ¡ç«¯....
 	local strInput = TextValidate_Input:GetText();
 	if( strInput == "" ) then
 		TextValidate_WarningText:SetText("#{Create_Role_Code_Failed}");
@@ -261,7 +273,7 @@ function TextValidate_BtnCloseClick()
 end
 
 function TextValidate_BtnChangePicClick()
-	--ÏòLoginÇëÇóĞÂµÄÍ¼ĞÎÑéÖ¤ĞÅÏ¢....
+	--å‘Loginè¯·æ±‚æ–°çš„å›¾å½¢éªŒè¯ä¿¡æ¯....
 	if g_TextValidate_UIType == g_TextValidate_UITypes.CREATE_ROLE then
 		DataPool:AskCreateCharCode();
 	elseif g_TextValidate_UIType == g_TextValidate_UITypes.LOGIN_CHECK then
@@ -275,7 +287,7 @@ function TextValidate_BtnChangePicClick()
 end
 
 
---½ûÓÃ´°¿ÚÒ»¶ÎÊ±¼ä....·ÀÖ¹²»¶ÏÏòLoginÇëÇóÍ¼Æ¬....
+--ç¦ç”¨çª—å£ä¸€æ®µæ—¶é—´....é˜²æ­¢ä¸æ–­å‘Loginè¯·æ±‚å›¾ç‰‡....
 function TextValidate_DisableWindowSomeTime()
 	TextValidate_Accept:SetProperty("Disabled", "True");
 	TextValidate_ChangePic:SetProperty("Disabled", "True");
@@ -302,16 +314,20 @@ function TextValidate_TimeReach2()
 
 	elseif g_TextValidate_UIType == g_TextValidate_UITypes.LOGIN_CHECK then
 
-		--¸ù¾İÖ®Ç°»º´æµÄÍæ¼ÒµÇÂ¼Ñ¡Ôñ×Ô¶¯½øÈëÓÎÏ·....
-		if g_TextValidate_UserLoginType == "NormalLogin" then
-			GameProduceLogin:SendEnterGameMsg(g_TextValidate_UserLoginRoleId)
-		elseif g_TextValidate_UserLoginType == "NewPlayerLogin" then
-			GameProduceLogin:EnterNewRoleScene(g_TextValidate_UserLoginRoleId, g_TextValidate_UserLoginScene)
-		end
-
+		-- å…ˆæ¶ˆè´¹ç¼“å­˜çš„ç™»å½•é€‰æ‹©ï¼Œé¿å…æˆåŠŸæ¶ˆæ¯é‡å¤è§¦å‘åŒä¸€æ¬¡ç™»å½•ã€‚
+		local loginType = g_TextValidate_UserLoginType;
+		local roleId = g_TextValidate_UserLoginRoleId;
+		local sceneId = g_TextValidate_UserLoginScene;
 		g_TextValidate_UserLoginType = "";
 		g_TextValidate_UserLoginRoleId = -1;
 		g_TextValidate_UserLoginScene = -1;
+
+		--æ ¹æ®ä¹‹å‰ç¼“å­˜çš„ç©å®¶ç™»å½•é€‰æ‹©è‡ªåŠ¨è¿›å…¥æ¸¸æˆ....
+		if loginType == "NormalLogin" then
+			GameProduceLogin:SendEnterGameMsg(roleId)
+		elseif loginType == "NewPlayerLogin" then
+			GameProduceLogin:EnterNewRoleScene(roleId, sceneId)
+		end
 
 	elseif g_TextValidate_UIType == g_TextValidate_UITypes.LEVELUP_CHECK then
 
@@ -322,7 +338,7 @@ function TextValidate_TimeReach2()
 end
 
 --**********************************
---Ëæ»ú´°¿ÚÎ»ÖÃ
+--éšæœºçª—å£ä½ç½®
 --**********************************
 function TextValidate_RandomWindowPos()
 

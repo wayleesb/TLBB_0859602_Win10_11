@@ -1,40 +1,40 @@
---¹¤ÒÕ¼¼ÄÜÉı¼¶
+--å·¥è‰ºæŠ€èƒ½å‡çº§
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x713566_g_ScriptId = 713566
 
---´Ënpc¿ÉÒÔÉıµ½µÄ×î¸ßµÈ¼¶
+--æ­¤npcå¯ä»¥å‡åˆ°çš„æœ€é«˜ç­‰çº§
 x713566_g_MaxLevel = 5
 
-----¼¼ÄÜ±àºÅ
+----æŠ€èƒ½ç¼–å·
 x713566_g_AbilityID = ABILITY_GONGYI
 
---¼¼ÄÜÃû³Æ
-x713566_g_AbilityName = "¹¤ÒÕ"
+--æŠ€èƒ½åç§°
+x713566_g_AbilityName = "å·¥è‰º"
 
-x713566_g_Name1 = "ÈîĞÇÖñ"
+x713566_g_Name1 = "é˜®æ˜Ÿç«¹"
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x713566_OnDefaultEvent( sceneId, selfId, targetId, nNum, npcScriptId, bid )
-	--Íæ¼Ò¼¼ÄÜµÄµÈ¼¶
+	--ç©å®¶æŠ€èƒ½çš„ç­‰çº§
 	AbilityLevel = QueryHumanAbilityLevel(sceneId, selfId, x713566_g_AbilityID)
-	--Íæ¼Ò¼Ó¹¤¼¼ÄÜµÄÊìÁ·¶È
+	--ç©å®¶åŠ å·¥æŠ€èƒ½çš„ç†Ÿç»ƒåº¦
 	ExpPoint = GetAbilityExp(sceneId, selfId, x713566_g_AbilityID)
-	--ÈÎÎñÅĞ¶Ï
+	--ä»»åŠ¡åˆ¤æ–­
 
-	--Èç¹û»¹Ã»ÓĞÑ§»á¸ÃÉú»î¼¼ÄÜ
+	--å¦‚æœè¿˜æ²¡æœ‰å­¦ä¼šè¯¥ç”Ÿæ´»æŠ€èƒ½
 	if AbilityLevel < 1	then
 		BeginEvent(sceneId)
-			strText = "Äã»¹Ã»ÓĞÑ§»á"..x713566_g_AbilityName.."¼¼ÄÜ£¡"
+			strText = "ä½ è¿˜æ²¡æœ‰å­¦ä¼š"..x713566_g_AbilityName.."æŠ€èƒ½ï¼"
 			AddText(sceneId,strText)
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 		return
 	end
-	--Èç¹ûÊÇÔÚ³ÇÊĞÖĞÉı¼¶
+	--å¦‚æœæ˜¯åœ¨åŸå¸‚ä¸­å‡çº§
 	if bid then
-		--¼ì²é³ÇÊĞÊÇ·ñ´¦ÓÚµÍÎ¬»¤×´Ì¬
+		--æ£€æŸ¥åŸå¸‚æ˜¯å¦å¤„äºä½ç»´æŠ¤çŠ¶æ€
 		if CallScriptFunction( CITY_BUILDING_ABILITY_SCRIPT, "CheckCityStatus",sceneId, selfId,targetId) < 0 then
 			return
 		end
@@ -50,13 +50,13 @@ function x713566_OnDefaultEvent( sceneId, selfId, targetId, nNum, npcScriptId, b
 		MaxLevel = 10;
 	end
 	
-	--Èç¹ûÉú»î¼¼ÄÜµÈ¼¶ÒÑ¾­³¬³ö¸ÃnpcËùÄÜ½ÌµÄ·¶Î§
+	--å¦‚æœç”Ÿæ´»æŠ€èƒ½ç­‰çº§å·²ç»è¶…å‡ºè¯¥npcæ‰€èƒ½æ•™çš„èŒƒå›´
 	if AbilityLevel >= MaxLevel then
 		BeginEvent(sceneId)
 			if GetName(sceneId, targetId) == x713566_g_Name1   then
-				strText = "ÎÒÖ»ÄÜ½ÌÄã1-10¼¶µÄ"..x713566_g_AbilityName.."¼¼ÄÜ."
+				strText = "æˆ‘åªèƒ½æ•™ä½ 1-10çº§çš„"..x713566_g_AbilityName.."æŠ€èƒ½."
 			else
-			strText = "ÎÒÖ»ÄÜ½ÌÄã1-5¼¶µÄ"..x713566_g_AbilityName.."¼¼ÄÜ,Çëµ½°ïÅÉÖĞ»òÕßÕÒ¹¤ÒÕÔìÒè¸üÎª¾«Õ¿µÄ#YÈîĞÇÖñ#G£¨¾µºş#{_INFOAIM108,140,5,ÈîĞÇÖñ}£©#WÑ§Ï°¸ü¸ß¼¶µÄ"..x713566_g_AbilityName.."¡£"
+			strText = "æˆ‘åªèƒ½æ•™ä½ 1-5çº§çš„"..x713566_g_AbilityName.."æŠ€èƒ½,è¯·åˆ°å¸®æ´¾ä¸­æˆ–è€…æ‰¾å·¥è‰ºé€ è¯£æ›´ä¸ºç²¾æ¹›çš„#Yé˜®æ˜Ÿç«¹#Gï¼ˆé•œæ¹–#{_INFOAIM108,140,5,é˜®æ˜Ÿç«¹}ï¼‰#Wå­¦ä¹ æ›´é«˜çº§çš„"..x713566_g_AbilityName.."ã€‚"
 			end
 			AddText(sceneId,strText)
 		EndEvent(sceneId)
@@ -77,31 +77,31 @@ function x713566_OnDefaultEvent( sceneId, selfId, targetId, nNum, npcScriptId, b
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x713566_OnEnumerate( sceneId, selfId, targetId, bid )
 		if bid then
 			local ret = CallScriptFunction( CITY_BUILDING_ABILITY_SCRIPT, "OnCityCheck",sceneId, selfId, x713566_g_AbilityID, bid, 6)
-			if ret > 0 then AddNumText(sceneId,x713566_g_ScriptId,"Éı¼¶"..x713566_g_AbilityName.."¼¼ÄÜ", 12, 1) end
+			if ret > 0 then AddNumText(sceneId,x713566_g_ScriptId,"å‡çº§"..x713566_g_AbilityName.."æŠ€èƒ½", 12, 1) end
 			return
 		end
-		--Èç¹û²»µ½µÈ¼¶Ôò²»ÏÔÊ¾Ñ¡Ïî
+		--å¦‚æœä¸åˆ°ç­‰çº§åˆ™ä¸æ˜¾ç¤ºé€‰é¡¹
 		--if GetLevel(sceneId,selfId) >= LEVELUP_ABILITY_GONGYI[1].HumanLevelLimit then
 		local ret, demandMoney, demandExp, limitAbilityExp, limitAbilityExpShow, currentLevelAbilityExpTop, limitLevel, extraMoney, extraExp = LuaFnGetAbilityLevelUpConfig2(ABILITY_GONGYI, 1);
 		if ret and ret == 1 and 1 then
-			AddNumText(sceneId,x713566_g_ScriptId,"Éı¼¶"..x713566_g_AbilityName.."¼¼ÄÜ", 12, 1)
+			AddNumText(sceneId,x713566_g_ScriptId,"å‡çº§"..x713566_g_AbilityName.."æŠ€èƒ½", 12, 1)
 		end
 		return
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x713566_CheckAccept( sceneId, selfId )
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x713566_OnAccept( sceneId, selfId, x713566_g_AbilityID )
 end

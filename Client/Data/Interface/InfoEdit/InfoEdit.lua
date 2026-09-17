@@ -1,5 +1,5 @@
 
---�Ƿ�Ԥ��״̬
+--是否预览状态
 local currentmode = 0;
 
 local g_ChatBtn ={};
@@ -50,8 +50,8 @@ end
 -- UpdateFrame()
 --===============================================
 function InfoEdit_Update()
-	InfoEdit_History:SetText("��ʷ��Ϣ") -- zchw
-	InfoEdit_Preview:SetText( "Ԥ��" );
+	InfoEdit_History:SetText("历史消息") -- zchw
+	InfoEdit_Preview:SetText( "预览" );
 	InfoEdit_PreviewInfo:Hide();
 	InfoEdit_EditInfo:Show();
 	InfoEdit_EditInfo:SetForce();
@@ -70,7 +70,7 @@ end
 
 function InfoEdit_ClosePreviewClick()
 	
-	InfoEdit_Preview:SetText( "Ԥ��" );
+	InfoEdit_Preview:SetText( "预览" );
 	InfoEdit_PreviewInfo:Hide();
 	InfoEdit_EditInfo:Show();
 		
@@ -81,7 +81,7 @@ function InfoEdit_PreviewClick()
 		InfoEdit_ClosePreviewClick();
 	else
 		InfoEdit_PreviewInfo:SetText( InfoEdit_EditInfo:GetText() );
-		InfoEdit_Preview:SetText( "����" );
+		InfoEdit_Preview:SetText( "返回" );
 		InfoEdit_PreviewInfo:Show();
 		InfoEdit_EditInfo:Hide();
 	end
@@ -89,18 +89,24 @@ function InfoEdit_PreviewClick()
 end
 
 function InfoEdit_SendMail()	
-	local SendRet = nil	--��ʶ���ʼ��Ƿ�ɹ�--add by xindefeng
+	local SendRet = nil	--标识发邮件是否成功--add by xindefeng
 	
 	if isFirstClick then
 		isFirstClick = false;
 	end
 	local szValue= InfoEdit_EditInfo:GetText();
+	-- 去掉多行控件自动追加的一个尾换行，用户自己输入的换行仍保留。
+	if string.sub(szValue, -1) == "\n" then
+		szValue = string.sub(szValue, 1, -2);
+	end
 	if( szValue == "" ) then
-		PushDebugMessage("���ܷ��Ϳ��ʼ�");
+		PushDebugMessage("不能发送空邮件");
 		return;
 	end
 	if( this:IsVisible() ) then
-		SendRet = DataPool:SendMail( InfoEdit_Target:GetText(), InfoEdit_EditInfo:GetText() )	--modify by xindefeng
+		SendRet = DataPool:SendMail( InfoEdit_Target:GetText(), szValue )	--modify by xindefeng
+		-- 本地校验或入队失败时保留编辑内容，不继续添加好友。
+		if SendRet ~= 0 then return; end
 		
 		local nchannel,nindex;
 		nchannel, nindex  = DataPool:GetFriendByName( InfoEdit_Target:GetText() );
@@ -109,7 +115,7 @@ function InfoEdit_SendMail()
 		end
 	end
 		
-	if(SendRet == 0)then	--������ʼ��ɹ�,�رս���--modify by xindefeng
+	if(SendRet == 0)then	--如果发邮件成功,关闭界面--modify by xindefeng
 		InfoEdit_Hide()
 	end
 	

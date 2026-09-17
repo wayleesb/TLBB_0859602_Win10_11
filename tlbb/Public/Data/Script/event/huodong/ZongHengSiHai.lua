@@ -1,20 +1,20 @@
---×İºáËÄº£
+--çºµæ¨ªå››æµ·
 
 x889056_g_ScriptId = 889056;
 
---»î¶¯¿ªÆôÈÕÆÚ 2009-4-8
+--æ´»åŠ¨å¼€å¯æ—¥æœŸ 2009-4-8
 x889056_g_BeginTime		= 20090408
 x889056_g_EndTime		= 20090531
 
---¼ÍÄîÕÂ²¿¼ş
+--çºªå¿µç« éƒ¨ä»¶
 x889056_g_PartID		= 30504076
 x889056_g_NeedPartCount	= 4
 
---¼ÍÄîÕÂ
+--çºªå¿µç« 
 x889056_g_ItemID		= 10423050
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x889056_OnEnumerate( sceneId, selfId, targetId )
 	
@@ -25,7 +25,7 @@ function x889056_OnEnumerate( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x889056_OnDefaultEvent( sceneId, selfId, targetId )
 	
@@ -33,7 +33,7 @@ function x889056_OnDefaultEvent( sceneId, selfId, targetId )
 	if opt == 1 then
 		BeginEvent(sceneId)			
 			AddText(sceneId, "#{J_ZHSH_090317_3}");
-			AddNumText(sceneId, x889056_g_ScriptId, "#{J_ZHSH_090317_2}", 6, 11);		--»¹ÊÇËãÁË°É
+			AddNumText(sceneId, x889056_g_ScriptId, "#{J_ZHSH_090317_2}", 6, 11);		--è¿˜æ˜¯ç®—äº†å§
 		EndEvent()
 		DispatchEventList(sceneId, selfId, targetId)
 	elseif opt == 11 then
@@ -47,7 +47,7 @@ function x889056_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
--- ÊÇ·ñÒÑ¾­²Î¼Ó¹ı»î¶¯
+-- æ˜¯å¦å·²ç»å‚åŠ è¿‡æ´»åŠ¨
 --**********************************
 function x889056_IsJoined( sceneId, selfId )
 
@@ -56,7 +56,7 @@ function x889056_IsJoined( sceneId, selfId )
 end
 
 --**********************************
--- ÉèÖÃÒÑ¾­²Î¼Ó¹ı»î¶¯
+-- è®¾ç½®å·²ç»å‚åŠ è¿‡æ´»åŠ¨
 --**********************************
 function x889056_SetJoined( sceneId, selfId )
 
@@ -65,7 +65,7 @@ function x889056_SetJoined( sceneId, selfId )
 end
 
 --**********************************
---ÊÇ·ñÔÚ»î¶¯Ê±¼äÄÚ£¬ÊÇÔò·µ»Øµ±ÌìÈÕÆÚ£¬·ñÔò·µ»Ø0
+--æ˜¯å¦åœ¨æ´»åŠ¨æ—¶é—´å†…ï¼Œæ˜¯åˆ™è¿”å›å½“å¤©æ—¥æœŸï¼Œå¦åˆ™è¿”å›0
 --**********************************
 function x889056_IsInActTime( sceneId, selfId )
 
@@ -79,35 +79,35 @@ function x889056_IsInActTime( sceneId, selfId )
 end
 
 --**********************************
---½±Àø
+--å¥–åŠ±
 --**********************************
 function x889056_GivePrize( sceneId, selfId, targetId )
 
-	-- ÊÇ·ñÔÚ»î¶¯Ê±¼äÄÚ
+	-- æ˜¯å¦åœ¨æ´»åŠ¨æ—¶é—´å†…
 	if x889056_IsInActTime( ) <= 0 then
 		x889056_CloseDlg( sceneId, selfId, targetId )
 		return
 	end
 	
-	-- ÎïÆ·ÊÇ·ñ¹»
+	-- ç‰©å“æ˜¯å¦å¤Ÿ
 	if LuaFnGetAvailableItemCount(sceneId, selfId, x889056_g_PartID) < x889056_g_NeedPartCount then
 		x889056_ReturnDlg( sceneId, selfId, targetId, "#{J_ZHSH_090317_5}" )
 		return
 	end
 	
-	-- ¼ì²é±³°ü¿Õ¼ä
+	-- æ£€æŸ¥èƒŒåŒ…ç©ºé—´
 	if LuaFnGetPropertyBagSpace( sceneId, selfId ) < 1 then
 		x889056_ReturnDlg( sceneId, selfId, targetId, "#{J_ZHSH_090317_6}" )
 		return
 	end
 	
-	-- É¾³ıÎïÆ·Ê§°Ü£¬Î´ÖªÔ­Òò£¬¹Ø±Õ¶Ô»°´°¿Ú
+	-- åˆ é™¤ç‰©å“å¤±è´¥ï¼ŒæœªçŸ¥åŸå› ï¼Œå…³é—­å¯¹è¯çª—å£
 	if LuaFnDelAvailableItem(sceneId, selfId, x889056_g_PartID, x889056_g_NeedPartCount) == 0 then
 		x889056_CloseDlg( sceneId, selfId, targetId )
 		return
 	end
 	
-	-- ¸øÎïÆ·£¬¹Ø±Õ´°¿Ú
+	-- ç»™ç‰©å“ï¼Œå…³é—­çª—å£
 	TryRecieveItem( sceneId, selfId, x889056_g_ItemID, QUALITY_MUST_BE_CHANGE )
 	
 	x889056_SetJoined( sceneId, selfId )
@@ -117,7 +117,7 @@ function x889056_GivePrize( sceneId, selfId, targetId )
 end
 
 --**********************************
---¹Ø±Õ¶Ô»°¿ò
+--å…³é—­å¯¹è¯æ¡†
 --**********************************
 function x889056_CloseDlg(sceneId, selfId, targetId)
 	BeginUICommand( sceneId )
@@ -127,7 +127,7 @@ function x889056_CloseDlg(sceneId, selfId, targetId)
 end
 
 --**********************************
---·µ»Ø¶Ô»°
+--è¿”å›å¯¹è¯
 --**********************************
 function x889056_ReturnDlg(sceneId, selfId, targetId, msg)
 	BeginEvent(sceneId)
@@ -147,50 +147,50 @@ function x889056_Tips(sceneId, selfId, msg)
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x889056_OnAccept( sceneId, selfId )
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x889056_OnAbandon( sceneId, selfId )
 end
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x889056_OnContinue( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x889056_CheckSubmit( sceneId, selfId )
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x889056_OnSubmit( sceneId, selfId, targetId,selectRadioId )
 
 end
 
 --**********************************
---É±ËÀ¹ÖÎï»òÍæ¼Ò
+--æ€æ­»æ€ªç‰©æˆ–ç©å®¶
 --**********************************
 function x889056_OnKillObject( sceneId, selfId, objdataId )
 end
 
 --**********************************
---½øÈëÇøÓòÊÂ¼ş
+--è¿›å…¥åŒºåŸŸäº‹ä»¶
 --**********************************
 function x889056_OnEnterArea( sceneId, selfId, zoneId )
 end
 
 --**********************************
---µÀ¾ß¸Ä±ä
+--é“å…·æ”¹å˜
 --**********************************
 function x889056_OnItemChanged( sceneId, selfId, itemdataId )
 end

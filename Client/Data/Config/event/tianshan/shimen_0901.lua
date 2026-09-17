@@ -1,15 +1,15 @@
 --MisDescBegin
 x228901_g_ScriptId = 228901
-x228901_g_CopySceneName="ÕÛÃ··å"
+x228901_g_CopySceneName="æŠ˜æ¢…å³°"
 x228901_g_MissionId = 1101
 x228901_g_Name = ""
 x228901_g_IfMissionElite = 1
 x228901_g_MissionKind = 28
 x228901_g_MissionLevel = 10000
-x228901_g_MissionName="ÕÛÃ··å"
-x228901_g_MissionInfo="#{MPFB_081023_16}"  --ÈÎÎñÃèÊö
-x228901_g_MissionTarget="#{MPFB_081023_17}"	--ÈÎÎñÄ¿±ê
-x228901_g_ContinueInfo="ÄãÒª¼ÌĞøÅ¬Á¦°¡£¡"	--Î´Íê³ÉÈÎÎñµÄnpc¶Ô»°
-x228901_g_MissionComplete="Ğ»Ğ»°¡¡£"	--Íê³ÉÈÎÎñnpcËµ»°µÄ»°
+x228901_g_MissionName="æŠ˜æ¢…å³°"
+x228901_g_MissionInfo="#{MPFB_081023_16}"  --ä»»åŠ¡æè¿°
+x228901_g_MissionTarget="#{MPFB_081023_17}"	--ä»»åŠ¡ç›®æ ‡
+x228901_g_ContinueInfo="ä½ è¦ç»§ç»­åŠªåŠ›å•Šï¼"	--æœªå®Œæˆä»»åŠ¡çš„npcå¯¹è¯
+x228901_g_MissionComplete="è°¢è°¢å•Šã€‚"	--å®Œæˆä»»åŠ¡npcè¯´è¯çš„è¯
 x228901_g_Parameter_Kill_CountRandom = { { id = 1700080, numNeeded = 6, numKilled = 4 } }
 --MisDescEnd

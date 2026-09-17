@@ -27,7 +27,7 @@ function GemMelting_PreLoad()
 	this:RegisterEvent("PACKAGE_ITEM_CHANGED");
 	this:RegisterEvent("UNIT_MONEY");
 	this:RegisterEvent("RESUME_ENCHASE_GEM")
-	this:RegisterEvent("MONEYJZ_CHANGE")		--½»×ÓÆÕ¼° Vega
+	this:RegisterEvent("MONEYJZ_CHANGE")		--äº¤å­æ™®åŠ Vega
 end
 
 function GemMelting_OnLoad()
@@ -45,7 +45,7 @@ function GemMelting_OnEvent(event)
 		local xx = Get_XParam_INT(0);
 		ObjCaredID = DataPool : GetNPCIDByServerID(xx);
 		if ObjCaredID == -1 then
-			PushDebugMessage("server´«¹ıÀ´µÄÊı¾İÓĞÎÊÌâ¡£");
+			PushDebugMessage("serverä¼ è¿‡æ¥çš„æ•°æ®æœ‰é—®é¢˜ã€‚");
 			return
 		end
 		BeginCareObject_GemMelting()
@@ -91,7 +91,7 @@ function GemMelting_OnEvent(event)
 		GemMelting_CurrentMoney:SetProperty("MoneyNumber", tostring(Player:GetData("MONEY")) )
 	elseif( event == "MONEYJZ_CHANGE") then
 
-		GemMelting_CurrentJiaozi:SetProperty("MoneyNumber", tostring(Player:GetData("MONEY_JZ")) )   --½»×ÓÆÕ¼° Vega
+		GemMelting_CurrentJiaozi:SetProperty("MoneyNumber", tostring(Player:GetData("MONEY_JZ")) )   --äº¤å­æ™®åŠ Vega
 
 	elseif ( event == "RESUME_ENCHASE_GEM" and this:IsVisible() ) then
 
@@ -111,7 +111,7 @@ function GemMelting_OnEvent(event)
 end
 
 --=========================================================
---ÖØÖÃ½çÃæ
+--é‡ç½®ç•Œé¢
 --=========================================================
 function GemMelting_Clear()
 
@@ -137,7 +137,7 @@ function GemMelting_Clear()
 		
 	GemMelting_NeedMoney:SetProperty("MoneyNumber", "")
 	GemMelting_CurrentMoney:SetProperty("MoneyNumber", tostring(Player:GetData("MONEY")) )
-	GemMelting_CurrentJiaozi:SetProperty("MoneyNumber", tostring(Player:GetData("MONEY_JZ")) )   --½»×ÓÆÕ¼° Vega
+	GemMelting_CurrentJiaozi:SetProperty("MoneyNumber", tostring(Player:GetData("MONEY_JZ")) )   --äº¤å­æ™®åŠ Vega
 
 	for i = 1, 3 do
 		g_GemItemPos[i] = -1
@@ -163,16 +163,16 @@ function GemMelting_Clear()
 end
 
 --=========================================================
---¸üĞÂ½çÃæ
+--æ›´æ–°ç•Œé¢
 --=========================================================
 function GemMelting_Update( pos_ui, pos_packet )
 
 	-- pos_ui
-	-- 1 = Íæ¼ÒÏòµÚ1¸ö±¦Ê¯¸ñ×ÓÍÏ·Å±¦Ê¯....
-	-- 2 = Íæ¼ÒÏòµÚ2¸ö±¦Ê¯¸ñ×ÓÍÏ·Å±¦Ê¯....
-	-- 3 = Íæ¼ÒÏòµÚ3¸ö±¦Ê¯¸ñ×ÓÍÏ·Å±¦Ê¯....
-	-- 4 = Íæ¼ÒÏòĞèÇóÎïÆ·µÄ¸ñ×ÓÍÏ·ÅĞèÇóÎïÆ·....
-	-- 0 = Íæ¼ÒÔÚ±³°üÖĞÓÒ¼üµã»÷±¦Ê¯....ĞèÒª×Ô¶¯Ñ°ÕÒ¿Õ¸ñ½«¸Ã±¦Ê¯·Åµ½½çÃæÉÏ....
+	-- 1 = ç©å®¶å‘ç¬¬1ä¸ªå®çŸ³æ ¼å­æ‹–æ”¾å®çŸ³....
+	-- 2 = ç©å®¶å‘ç¬¬2ä¸ªå®çŸ³æ ¼å­æ‹–æ”¾å®çŸ³....
+	-- 3 = ç©å®¶å‘ç¬¬3ä¸ªå®çŸ³æ ¼å­æ‹–æ”¾å®çŸ³....
+	-- 4 = ç©å®¶å‘éœ€æ±‚ç‰©å“çš„æ ¼å­æ‹–æ”¾éœ€æ±‚ç‰©å“....
+	-- 0 = ç©å®¶åœ¨èƒŒåŒ…ä¸­å³é”®ç‚¹å‡»å®çŸ³....éœ€è¦è‡ªåŠ¨å¯»æ‰¾ç©ºæ ¼å°†è¯¥å®çŸ³æ”¾åˆ°ç•Œé¢ä¸Š....
 
 	if pos_ui == 0 or pos_ui == 1 or pos_ui == 2 or pos_ui == 3 then
 		GemMelting_UpdateGemItem( pos_ui, pos_packet )
@@ -183,24 +183,24 @@ function GemMelting_Update( pos_ui, pos_packet )
 end
 
 --=========================================================
---¸üĞÂ±¦Ê¯¸ñ×Ó
+--æ›´æ–°å®çŸ³æ ¼å­
 --=========================================================
 function GemMelting_UpdateGemItem( pos_ui, pos_packet )
 
-	--ÊÇ·ñ¼ÓËø....
+	--æ˜¯å¦åŠ é”....
 	if PlayerPackage:IsLock(pos_packet) == 1 then
 		PushDebugMessage("#{Item_Locked}")
 		return
 	end
 
-	--±ØĞëÊÇ±¦Ê¯....
+	--å¿…é¡»æ˜¯å®çŸ³....
 	local Item_Class = PlayerPackage : GetItemSubTableIndex(pos_packet,0)
 	if Item_Class ~= 5 then
 		PushDebugMessage("#{JKBS_081021_006}")
 		return
 	end
 
-	--±ØĞëÊÇÍ¬ÀàĞÍ±¦Ê¯....
+	--å¿…é¡»æ˜¯åŒç±»å‹å®çŸ³....
 	local bErrorType = 0
 	local CurGemItemID = PlayerPackage : GetItemTableIndex( pos_packet )
 	for i = 1, 3 do
@@ -215,7 +215,7 @@ function GemMelting_UpdateGemItem( pos_ui, pos_packet )
 	end
 
 
-	--»ñÈ¡ÈÛÁ¶µÄĞÅÏ¢....
+	--è·å–ç†”ç‚¼çš„ä¿¡æ¯....
 	local CurProductID = -1
 	local CurNeedItemID = -1
 	local CurNeedMoney = 0
@@ -227,7 +227,7 @@ function GemMelting_UpdateGemItem( pos_ui, pos_packet )
 	end
 
 
-	--¼ÆËãÄ¿±ê¸ñ×Ó....
+	--è®¡ç®—ç›®æ ‡æ ¼å­....
 	local TargetPos = -1
 	if pos_ui == 0 then
 		for i = 3, 1, -1 do
@@ -240,12 +240,12 @@ function GemMelting_UpdateGemItem( pos_ui, pos_packet )
 	end
 
 	if -1 == TargetPos then
-		--PushDebugMessage("£¡£¡£¡ÒÑ¾­·ÅÂúÁËÄã»¹·Å£¡£¡£¡")
+		--PushDebugMessage("ï¼ï¼ï¼å·²ç»æ”¾æ»¡äº†ä½ è¿˜æ”¾ï¼ï¼ï¼")
 		return
 	end
 
 
-	--¸üĞÂÄ¿±ê±¦Ê¯¸ñµÄAction....
+	--æ›´æ–°ç›®æ ‡å®çŸ³æ ¼çš„Action....
 	local theAction = EnumAction(pos_packet, "packageitem");
 	if theAction:GetID() == 0 then
 		return
@@ -260,7 +260,7 @@ function GemMelting_UpdateGemItem( pos_ui, pos_packet )
 	g_GemMelting_GemItemCtrList[TargetPos]:SetActionItem(theAction:GetID());
 
 
-	--¼ì²âÊÇ·ñÒÑ¾­·ÅÂúÁË3¸ö±¦Ê¯....
+	--æ£€æµ‹æ˜¯å¦å·²ç»æ”¾æ»¡äº†3ä¸ªå®çŸ³....
 	local bAllSet = 1
 	for i = 1, 3 do
 		if g_GemItemPos[i] == -1 then
@@ -269,13 +269,13 @@ function GemMelting_UpdateGemItem( pos_ui, pos_packet )
 	end
 
 
-	--Èç¹û·ÅÂúÁË±¦Ê¯ÔòĞèÒªÏÔÊ¾²úÎï....
+	--å¦‚æœæ”¾æ»¡äº†å®çŸ³åˆ™éœ€è¦æ˜¾ç¤ºäº§ç‰©....
 	if bAllSet == 1 and g_ProductID ~= CurProductID then
 
 		g_ProductID = CurProductID
 
-		--ÉèÖÃ²úÎïAction....
-		GemMelting_State : SetText("ÈÛÁ¶ºóµÄ²úÎï£º")
+		--è®¾ç½®äº§ç‰©Action....
+		GemMelting_State : SetText("ç†”ç‚¼åçš„äº§ç‰©ï¼š")
 		GemMelting_ProductItem:Show()
 		local ProductAction = GemMelting:UpdateProductAction( g_ProductID )
 		if ProductAction and ProductAction:GetID() ~= 0 then
@@ -287,20 +287,20 @@ function GemMelting_UpdateGemItem( pos_ui, pos_packet )
 	end
 
 
-	--Èç¹û·ÅÂúÁË±¦Ê¯ÔòĞèÒªÉèÖÃËùĞèÎïÆ·....
+	--å¦‚æœæ”¾æ»¡äº†å®çŸ³åˆ™éœ€è¦è®¾ç½®æ‰€éœ€ç‰©å“....
 	if bAllSet == 1 then
 		g_NeedItemID = CurNeedItemID
 		g_NeedItemID2 = CurNeedItemID2
 		local needItem = "#{BSRL_90512_11}#{_ITEM"..g_NeedItemID.."}"
 		if(g_NeedItemID2 ~=-1 ) then
-			needItem = needItem.."»òÕß#{_ITEM"..g_NeedItemID2.."}"
+			needItem = needItem.."æˆ–è€…#{_ITEM"..g_NeedItemID2.."}"
 		end
 		GemMelting_NeedItem:SetToolTip(needItem)
 		--GemMelting_NeedItem:SetToolTip("#{BSRL_90512_11}#{_ITEM"..g_NeedItemID.."}")
 	end
 
 
-	--Èç¹û·ÅÂúÁË±¦Ê¯ÔòĞèÒªÏÔÊ¾ËùĞèÇ®Êı....
+	--å¦‚æœæ”¾æ»¡äº†å®çŸ³åˆ™éœ€è¦æ˜¾ç¤ºæ‰€éœ€é’±æ•°....
 	if bAllSet == 1 then
 		g_NeedMoney = CurNeedMoney
 		GemMelting_NeedMoney : SetProperty("MoneyNumber", tostring(g_NeedMoney))
@@ -311,18 +311,18 @@ end
 
 
 --=========================================================
---¸üĞÂÈÛÁ¶·û¸ñ×Ó
+--æ›´æ–°ç†”ç‚¼ç¬¦æ ¼å­
 --=========================================================
 function GemMelting_UpdateNeedItem( pos_ui, pos_packet )
 
-	--ÊÇ·ñ¼ÓËø....
+	--æ˜¯å¦åŠ é”....
 	if PlayerPackage:IsLock(pos_packet) == 1 then
 		PushDebugMessage("#{Item_Locked}")
 		return
 	end
 
 
-	--¼ì²âÊÇ·ñÒÑ¾­·ÅÂúÁË3¸ö±¦Ê¯....
+	--æ£€æµ‹æ˜¯å¦å·²ç»æ”¾æ»¡äº†3ä¸ªå®çŸ³....
 	local bAllSet = 1
 	for i = 1, 3 do
 		if g_GemItemPos[i] == -1 then
@@ -335,11 +335,11 @@ function GemMelting_UpdateNeedItem( pos_ui, pos_packet )
 	end
 
 
-	--ÊÇ·ñÊÇĞèÒªµÄÎïÆ·....
+	--æ˜¯å¦æ˜¯éœ€è¦çš„ç‰©å“....
 	if PlayerPackage:GetItemTableIndex( pos_packet ) ~= g_NeedItemID and PlayerPackage:GetItemTableIndex( pos_packet ) ~= g_NeedItemID2 then
 		local needItem = "#{JKBS_081021_010}#{_ITEM"..g_NeedItemID.."}"
 		if(g_NeedItemID2 ~=-1 ) then
-			needItem = needItem.."»òÕß#{_ITEM"..g_NeedItemID2.."}"
+			needItem = needItem.."æˆ–è€…#{_ITEM"..g_NeedItemID2.."}"
 		end
 		PushDebugMessage(needItem)
 		--PushDebugMessage("#{JKBS_081021_010}#{_ITEM"..g_NeedItemID.."}")
@@ -347,7 +347,7 @@ function GemMelting_UpdateNeedItem( pos_ui, pos_packet )
 	end
 
 
-	--¸üĞÂĞèÇóÎïÆ·¸ñµÄAction....
+	--æ›´æ–°éœ€æ±‚ç‰©å“æ ¼çš„Action....
 	local theAction = EnumAction(pos_packet, "packageitem");
 	if theAction:GetID() == 0 then
 		return
@@ -362,7 +362,7 @@ function GemMelting_UpdateNeedItem( pos_ui, pos_packet )
 	GemMelting_NeedItem:SetActionItem(theAction:GetID())
 
 
-	--ÆôÓÃÈÛÁ¶°´Å¥....
+	--å¯ç”¨ç†”ç‚¼æŒ‰é’®....
 	GemMelting_Accept:Enable()
 	g_NotifyBind = 1
 
@@ -370,19 +370,19 @@ function GemMelting_UpdateNeedItem( pos_ui, pos_packet )
 end
 
 --=========================================================
---Çå³ıActionButton
+--æ¸…é™¤ActionButton
 --=========================================================
 function Resume_Equip_GemMelting( nIndex )
 
-	--Èç¹ûÊÇÒÆ³ı±¦Ê¯¸ñ×ÓÀïµÄ±¦Ê¯....
+	--å¦‚æœæ˜¯ç§»é™¤å®çŸ³æ ¼å­é‡Œçš„å®çŸ³....
 	if nIndex == 1 or nIndex == 2 or nIndex == 3 then
 
-		--Çå³ı¸Ã±¦Ê¯....
+		--æ¸…é™¤è¯¥å®çŸ³....
 		LifeAbility:Lock_Packet_Item( g_GemItemPos[nIndex], 0 )
 		g_GemMelting_GemItemCtrList[nIndex]:SetActionItem(-1)
 		g_GemItemPos[nIndex] = -1
 
-		--Èç¹ûËùÓĞ±¦Ê¯¶¼±»ÄÃµôÁË....ÔòÖ±½ÓÇåÀí½çÃæ....
+		--å¦‚æœæ‰€æœ‰å®çŸ³éƒ½è¢«æ‹¿æ‰äº†....åˆ™ç›´æ¥æ¸…ç†ç•Œé¢....
 		local bAllRemove = 1
 		for i = 1, 3 do
 			if g_GemItemPos[i] ~= -1 then
@@ -394,58 +394,58 @@ function Resume_Equip_GemMelting( nIndex )
 			return
 		end
 
-		--·ñÔò....
-		--ÓÉÓÚ±¦Ê¯ÊıÒÑ¾­²»¹»ÁË....
+		--å¦åˆ™....
+		--ç”±äºå®çŸ³æ•°å·²ç»ä¸å¤Ÿäº†....
 
-		--È¡ÏûÏÔÊ¾²úÎï....
+		--å–æ¶ˆæ˜¾ç¤ºäº§ç‰©....
 		GemMelting_State: SetText("")
 		GemMelting_ProductItem:SetActionItem(-1)
 		GemMelting_ProductItem:Hide()
 		g_ProductID = -1
 
-		--È¡ÏûÏÔÊ¾ĞèÇóÎïÆ·....
+		--å–æ¶ˆæ˜¾ç¤ºéœ€æ±‚ç‰©å“....
 		g_NeedItemID = -1
 		GemMelting_NeedMoney:SetProperty("MoneyNumber", "")
 
-		--È¡ÏûÏÔÊ¾ËùĞèÇ®Êı....
+		--å–æ¶ˆæ˜¾ç¤ºæ‰€éœ€é’±æ•°....
 		g_NeedMoney = 0
 		GemMelting_NeedMoney : SetProperty("MoneyNumber", "")
 
 	end
 
 
-	--Çå³ıĞèÇóÎïÆ·....
+	--æ¸…é™¤éœ€æ±‚ç‰©å“....
 	LifeAbility:Lock_Packet_Item( g_NeedItemPos, 0 )
 	GemMelting_NeedItem:SetActionItem(-1)
 	g_NeedItemPos = -1;
 
 
-	--½ûÓÃÈÛÁ¶°´Å¥....
+	--ç¦ç”¨ç†”ç‚¼æŒ‰é’®....
 	GemMelting_Accept:Disable()
 
 
 end
 
 --=========================================================
---È·¶¨
+--ç¡®å®š
 --=========================================================
 function GemMelting_Buttons_Clicked()
 
-	--Ç®ÊÇ·ñ¹»....
-	local selfMoney = Player:GetData("MONEY") + Player:GetData("MONEY_JZ") --½»×ÓÆÕ¼° Vega
+	--é’±æ˜¯å¦å¤Ÿ....
+	local selfMoney = Player:GetData("MONEY") + Player:GetData("MONEY_JZ") --äº¤å­æ™®åŠ Vega
 	if selfMoney < g_NeedMoney then
 		PushDebugMessage( "#{JKBS_081021_011}" )
 		return
 	end
 
-	--ÊÇ·ñ¹ıÁË°²È«Ê±¼ä....
+	--æ˜¯å¦è¿‡äº†å®‰å…¨æ—¶é—´....
 	if( tonumber(DataPool:GetLeftProtectTime()) >0 ) then
 		PushDebugMessage("#{OR_PILFER_LOCK_FLAG}")
 		return
 	end
 
 
-	--¼ì²â°ó¶¨×´Ì¬....
+	--æ£€æµ‹ç»‘å®šçŠ¶æ€....
 	local bHaveBind = 0
 	for i = 1, 3 do
 		if GetItemBindStatus( g_GemItemPos[i] ) == 1 then
@@ -457,7 +457,7 @@ function GemMelting_Buttons_Clicked()
 	end
 
 
-	--Èç¹ûÓĞ°ó¶¨µÄÔòĞèÒªÌáÊ¾....
+	--å¦‚æœæœ‰ç»‘å®šçš„åˆ™éœ€è¦æç¤º....
 	if bHaveBind == 1 and g_NotifyBind == 1 then
 		ShowSystemInfo("JKBS_081022_003")
 		g_NotifyBind = 0
@@ -465,7 +465,7 @@ function GemMelting_Buttons_Clicked()
 	end
 
 
-	--ÈÛÁ¶....
+	--ç†”ç‚¼....
 	Clear_XSCRIPT()
 		Set_XSCRIPT_Function_Name("OnGemMelting")
 		Set_XSCRIPT_ScriptID(800118)
@@ -482,7 +482,7 @@ function GemMelting_Buttons_Clicked()
 end
 
 --=========================================================
---¹Ø±Õ
+--å…³é—­
 --=========================================================
 function GemMelting_Close()
 	this:Hide();
@@ -491,7 +491,7 @@ function GemMelting_Close()
 end
 
 --=========================================================
---½çÃæÒş²Ø
+--ç•Œé¢éšè—
 --=========================================================
 function GemMelting_OnHide()
 	StopCareObject_GemMelting()
@@ -499,16 +499,16 @@ function GemMelting_OnHide()
 end
 
 --=========================================================
---¿ªÊ¼¹ØĞÄNPC£¬
---ÔÚ¿ªÊ¼¹ØĞÄÖ®Ç°ĞèÒªÏÈÈ·¶¨Õâ¸ö½çÃæÊÇ²»ÊÇÒÑ¾­ÓĞ¡°¹ØĞÄ¡±µÄNPC£¬
---Èç¹ûÓĞµÄ»°£¬ÏÈÈ¡ÏûÒÑ¾­ÓĞµÄ¡°¹ØĞÄ¡±
+--å¼€å§‹å…³å¿ƒNPCï¼Œ
+--åœ¨å¼€å§‹å…³å¿ƒä¹‹å‰éœ€è¦å…ˆç¡®å®šè¿™ä¸ªç•Œé¢æ˜¯ä¸æ˜¯å·²ç»æœ‰â€œå…³å¿ƒâ€çš„NPCï¼Œ
+--å¦‚æœæœ‰çš„è¯ï¼Œå…ˆå–æ¶ˆå·²ç»æœ‰çš„â€œå…³å¿ƒâ€
 --=========================================================
 function BeginCareObject_GemMelting()
 	this:CareObject(ObjCaredID, 1, "GemMelting");
 end
 
 --=========================================================
---Í£Ö¹¶ÔÄ³NPCµÄ¹ØĞÄ
+--åœæ­¢å¯¹æŸNPCçš„å…³å¿ƒ
 --=========================================================
 function StopCareObject_GemMelting()
 	this:CareObject(ObjCaredID, 0, "GemMelting");

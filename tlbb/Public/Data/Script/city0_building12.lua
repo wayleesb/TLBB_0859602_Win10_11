@@ -1,26 +1,26 @@
---³ÇÊĞNPC
---Ïá·¿
+--åŸå¸‚NPC
+--å¢æˆ¿
 
 x805019_g_scriptId=805019
 x805019_g_BuildingID14 = 1
-x805019_g_SavvyToExp={0 ,6000,12730,18898,31156,46811,82992,172059,236185,827077,837599}	--¸ú¹Çto exp
-x805019_g_GrowRateToExp={0,7791,14744,70492,251189}	--³É³¤to exp
-x805019_g_hugeExp = 1500000	--¹«¸æexp
-x805019_g_safeNum = 600000000	--°²È«ÔËËãÊıÖµÉÏÏŞ
-x805019_g_maxExp = 30000000	--ÉáÀû×Ó×î´ó±£´æµÄ¾­Ñé
+x805019_g_SavvyToExp={0 ,6000,12730,18898,31156,46811,82992,172059,236185,827077,837599}	--è·Ÿéª¨to exp
+x805019_g_GrowRateToExp={0,7791,14744,70492,251189}	--æˆé•¿to exp
+x805019_g_hugeExp = 1500000	--å…¬å‘Šexp
+x805019_g_safeNum = 600000000	--å®‰å…¨è¿ç®—æ•°å€¼ä¸Šé™
+x805019_g_maxExp = 30000000	--èˆåˆ©å­æœ€å¤§ä¿å­˜çš„ç»éªŒ
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x805019_OnDefaultEvent( sceneId, selfId,targetId )
 
-	--ÊÇ·ñÊÇ±¾°ï³ÉÔ±
+	--æ˜¯å¦æ˜¯æœ¬å¸®æˆå‘˜
 	local guildid 		= GetHumanGuildID(sceneId,selfId)
 	local cityguildid	= GetCityGuildID(sceneId, selfId, sceneId)
 	local strText
 
 	if(guildid ~= cityguildid) then
 		BeginEvent(sceneId)
-			strText = "    Õâ¸ö°ïËùÓĞĞÖµÜÎÒ¶¼¼ÇµÃÃû×Ö£¬Ò»¿´¾ÍÖªµÀ¸óÏÂ²»ÊÇÎÒÃÇ°ïµÄ¡£"
+			strText = "    è¿™ä¸ªå¸®æ‰€æœ‰å…„å¼Ÿæˆ‘éƒ½è®°å¾—åå­—ï¼Œä¸€çœ‹å°±çŸ¥é“é˜ä¸‹ä¸æ˜¯æˆ‘ä»¬å¸®çš„ã€‚"
 			AddText(sceneId,strText)
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
@@ -30,18 +30,18 @@ function x805019_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
 		strText = "#{ZSKSSJ_081113_01}"
 		AddText(sceneId,strText);
-		AddNumText( sceneId, x805019_g_scriptId, "Ïá·¿½éÉÜ", 8, 1 )
---¹Ø±ÕÕäÊŞÉáÀû×Ó¼°°ïÖú£¬Ìí¼Ó¼ÄÁ·ÕäÊŞ£¬ by zhangqiang 2009.6.19
-		AddNumText( sceneId, x805019_g_scriptId, "Á¶ÖÆÕäÊŞÉáÀû×Ó", 6, 2 )
-		AddNumText( sceneId, x805019_g_scriptId, "¹ØÓÚÕäÊŞ¿ìËÙÉı¼¶", 11, 3 )
-		AddNumText( sceneId, x805019_g_scriptId, "¼ÄÁ·ÕäÊŞ", 6, 4 )
+		AddNumText( sceneId, x805019_g_scriptId, "å¢æˆ¿ä»‹ç»", 8, 1 )
+--å…³é—­çå…½èˆåˆ©å­åŠå¸®åŠ©ï¼Œæ·»åŠ å¯„ç»ƒçå…½ï¼Œ by zhangqiang 2009.6.19
+		AddNumText( sceneId, x805019_g_scriptId, "ç‚¼åˆ¶çå…½èˆåˆ©å­", 6, 2 )
+		AddNumText( sceneId, x805019_g_scriptId, "å…³äºçå…½å¿«é€Ÿå‡çº§", 11, 3 )
+		AddNumText( sceneId, x805019_g_scriptId, "å¯„ç»ƒçå…½", 6, 4 )
 
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x805019_OnEventRequest( sceneId, selfId, targetId, eventId )
 	
@@ -62,12 +62,12 @@ function x805019_OnEventRequest( sceneId, selfId, targetId, eventId )
 		DispatchUICommand(sceneId, selfId, 8050191);
 	elseif GetNumText() == 4 then 
 		BeginEvent(sceneId)
-			AddText( sceneId, "Õâ¸ö¹¦ÄÜ¼´½«¿ª·Å" )	
+			AddText( sceneId, "è¿™ä¸ªåŠŸèƒ½å³å°†å¼€æ”¾" )	
 		EndEvent(sceneId)
 		DispatchEventList( sceneId, selfId, targetId )
 	end
 end
---¼ÆËãÉáÀû×Ó×ª»¯µÄ¾­Ñé
+--è®¡ç®—èˆåˆ©å­è½¬åŒ–çš„ç»éªŒ
 function x805019_PetShelizi(sceneId, selfId, PetGuidH, PetGuidL)
 
 	local ret = LuaFnCheckPetShelizi(sceneId, selfId ,PetGuidH, PetGuidL)
@@ -86,41 +86,41 @@ function x805019_PetShelizi(sceneId, selfId, PetGuidH, PetGuidL)
 		DispatchUICommand(sceneId, selfId, 8050192);
 	end
 end
---×ª»¯ÉáÀû×Ó
+--è½¬åŒ–èˆåˆ©å­
 function x805019_PetShelizi_Done(sceneId, selfId, PetGuidH, PetGuidL)
 	local pgH , pgL = LuaFnGetCurrentPetGUID(sceneId, selfId)
-	--ÊÇ·ñ³öÕ½
+	--æ˜¯å¦å‡ºæˆ˜
 	if PetGuidH==pgH and PetGuidL==pgL then
 		x805019_Notify(sceneId,selfId ,"#{ZSKSSJ_081113_05}")
 		return
 	end
-	--ÊÇ·ñ¼ÓËø
+	--æ˜¯å¦åŠ é”
 	if LuaFnIsPetLockedByGUID(sceneId, selfId, PetGuidH, PetGuidL) == 1 then
 		x805019_Notify(sceneId,selfId ,"#{ZSKSSJ_081113_06}")
 		return
 	end
-	--ÊÇ·ñÔÚ°²È«Ê±¼ä
+	--æ˜¯å¦åœ¨å®‰å…¨æ—¶é—´
 	if IsPilferLockFlag(sceneId, selfId)  == -1 then
 		return
 	end
-	--ÊÇ·ñ´óÓÚµÈÓÚ30¼¶£¬ÊÇ·ñÊÇ±¦±¦£¬¶ş´ú»ò±äÒì
+	--æ˜¯å¦å¤§äºç­‰äº30çº§ï¼Œæ˜¯å¦æ˜¯å®å®ï¼ŒäºŒä»£æˆ–å˜å¼‚
 	if LuaFnCheckPetShelizi(sceneId, selfId ,PetGuidH, PetGuidL) ~= 1 then
 		return
 	end
-	--¼ÆËã¾­Ñé
+	--è®¡ç®—ç»éªŒ
 	local nAllExp = x805019_CalcExp(sceneId, selfId, PetGuidH, PetGuidL)
 
-	--¼ì²âÌõ¼ş½ğ±Ò
+	--æ£€æµ‹æ¡ä»¶é‡‘å¸
 	local needmoney = floor(nAllExp / 100)
 	if needmoney <= 0 then
 		needmoney = 1
 	end
-	local selfMoney = GetMoney( sceneId, selfId )  +  GetMoneyJZ(sceneId, selfId)  --½»×ÓÆÕ¼° Vega
+	local selfMoney = GetMoney( sceneId, selfId )  +  GetMoneyJZ(sceneId, selfId)  --äº¤å­æ™®åŠ Vega
 	if selfMoney < needmoney then
 		x805019_Notify(sceneId, selfId,"#{no_money}")
 		return
 	end
-	--¼ì²â±³°ü¿Õ¼ä
+	--æ£€æµ‹èƒŒåŒ…ç©ºé—´
 	if LuaFnGetPropertyBagSpace(sceneId, selfId) == 0 then
 		x805019_Notify(sceneId, selfId,"#{QRJ_81009_05}")
 		return
@@ -138,35 +138,35 @@ function x805019_PetShelizi_Done(sceneId, selfId, PetGuidH, PetGuidL)
 	
 	local t_petLevel = LuaFnGetPetLevelByGUID(sceneId, selfId, PetGuidH, PetGuidL);
 	
-	--¿Û½ğ±Ò
+	--æ‰£é‡‘å¸
 	if LuaFnCostMoneyWithPriority(sceneId,selfId ,needmoney) == -1 then
 		return
 	end
 
 	local PlayerName = GetName(sceneId, selfId)
-	--É¾³ıÕäÊŞ
+	--åˆ é™¤çå…½
 	if LuaFnDeletePetByGUID(sceneId, selfId, PetGuidH, PetGuidL) == 0 then
 		return
 	end
 
-	--¸øÎïÆ·
+	--ç»™ç‰©å“
 	local BagIndex = TryRecieveItem( sceneId, selfId, 30900058, QUALITY_MUST_BE_CHANGE )
 	if BagIndex == -1 then
 		x805019_Notify(sceneId, selfId,"#{QRJ_81009_05}")
 		return
 	end
 	LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, 49, 0);
-	--ÉèÖÃÉáÀû×Ó°üº¬µÄ¾­Ñé
+	--è®¾ç½®èˆåˆ©å­åŒ…å«çš„ç»éªŒ
 	SetBagItemParam	(sceneId, selfId,BagIndex,4 ,2 , nAllExp)
-	--Í¨Öª¿Í»§¶ËË¢ĞÂÎïÆ·ĞÅÏ¢
+	--é€šçŸ¥å®¢æˆ·ç«¯åˆ·æ–°ç‰©å“ä¿¡æ¯
 	LuaFnRefreshItemInfo( sceneId, selfId, BagIndex )
-	--ĞÑÄ¿ÌáÊ¾
+	--é†’ç›®æç¤º
 	x805019_Notify(sceneId, selfId,"#{ZSKSSJ_081126_1}")
-	--ÈÕÖ¾Í³¼Æ
+	--æ—¥å¿—ç»Ÿè®¡
 	local guid = LuaFnObjId2Guid(sceneId, selfId)
-	local log = format("PetGuidH=%X,PetGuidL=%X,PetLevel=%d,PetgrowLevel=%d,PetSavvy=%d,nAllExp=%d", PetGuidH, PetGuidL, t_petLevel, t_growLevel, t_savvy, nAllExp)
+	local log = format("PetGuidH=%X,PetGuidL=%X,PetLevel=%d,PetgrowLevel=%d,PetSavvy=%d,nAllExp=%.0f", PetGuidH, PetGuidL, t_petLevel, t_growLevel, t_savvy, nAllExp)
 	ScriptGlobal_AuditGeneralLog(LUAAUDIT_PETSHELIZI, guid, log)
-	--·¢¹«¸æ
+	--å‘å…¬å‘Š
 	if nAllExp > x805019_g_hugeExp then
 		local growstr = ""
 
@@ -186,12 +186,12 @@ function x805019_PetShelizi_Done(sceneId, selfId, PetGuidH, PetGuidL)
 		
 		local ProductItemInfo = GetBagItemTransfer( sceneId, selfId, BagIndex )
 	
-		local strText = format("#{_INFOUSR%s}#{ZSKSSJ_081113_12}%s#{ZSKSSJ_081113_13}%d#{ZSKSSJ_081113_14}%d#{ZSKSSJ_081113_15}%d#{ZSKSSJ_081113_16}#{_INFOMSG%s}#{ZSKSSJ_081113_17}", PlayerName,growstr,t_savvy,t_petLevel,nAllExp, ProductItemInfo )
+		local strText = format("#{_INFOUSR%s}#{ZSKSSJ_081113_12}%s#{ZSKSSJ_081113_13}%d#{ZSKSSJ_081113_14}%d#{ZSKSSJ_081113_15}%.0f#{ZSKSSJ_081113_16}#{_INFOMSG%s}#{ZSKSSJ_081113_17}", PlayerName,growstr,t_savvy,t_petLevel,nAllExp, ProductItemInfo )
 
 		AddGlobalCountNews( sceneId, strText )
 	end
 end
---ĞÑÄ¿ÌáÊ¾
+--é†’ç›®æç¤º
 function x805019_Notify(sceneId,selfId ,str)
 	BeginEvent(sceneId)
 		AddText(sceneId,str)

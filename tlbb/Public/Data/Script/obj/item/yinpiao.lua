@@ -3,20 +3,20 @@ function x333000_OnDefaultEvent( sceneId, selfId, bagIndex )
 	local value = GetBagItemParam( sceneId, selfId, bagIndex, 0, 2 )	
 	local nMoneyMax = 9990000
 	
-	-- Òì³£¼ì²é
-	-- Ç®ÊÇ·ñ³¬¹ı×î¸ßÉÏÏŞ
+	-- å¼‚å¸¸æ£€æŸ¥
+	-- é’±æ˜¯å¦è¶…è¿‡æœ€é«˜ä¸Šé™
 	if value > nMoneyMax then
 		value = nMoneyMax
 	end
 	
-	-- ÊÇ·ñÊÇÒøÆ±
+	-- æ˜¯å¦æ˜¯é“¶ç¥¨
 	local nItemID = LuaFnGetItemTableIndexByIndex(sceneId, selfId, bagIndex)	
 	if nItemID ~= 30001000 then
 		return 0
 	end
 	
 	local ret = EraseItem( sceneId, selfId, bagIndex )	
-	-- É¾³ıÊ§°Ü
+	-- åˆ é™¤å¤±è´¥
 	if ret ~= 1 then
 		return 0
 	end

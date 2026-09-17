@@ -1,46 +1,46 @@
---BOSS´ºÍíµã²¥½Å±¾
+--BOSSæ˜¥æ™šç‚¹æ’­è„šæœ¬
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x050044_g_ScriptId = 050044
 
---´ºÍíÖ÷¿Ø½Å±¾½Å±¾ºÅ....
+--æ˜¥æ™šä¸»æ§è„šæœ¬è„šæœ¬å·....
 x050044_g_MainScriptId = 050030
 
---ÆÕÍ¨µã²¥È¯½ÚÄ¿±í....
+--æ™®é€šç‚¹æ’­åˆ¸èŠ‚ç›®è¡¨....
 x050044_g_ChapterTblA = {
 
-	[1] = { id=2,  name="¸èÇú£ºÏòÌìÔÙ½èÎå°ÙÄê"				},
-	[2] = { id=3,  name="¸èÇú£º±£ÎÀÈıÁ¬»·"						},
-	[3] = { id=5,  name="¸èÇú£º½¡¿µ¸è"								},
-	[4] = { id=6,  name="Ğ¡Æ·£ºÆó¶ìÍõµÄ¹ÊÊÂ"					},
-	[5] = { id=8,  name="¸èÇú£ºË«½Ú¹÷"								},
-	[6] = { id=10, name="Ğ¡Æ·£ºÒ»¼ûÖÓÇé"							}
+	[1] = { id=2,  name="æ­Œæ›²ï¼šå‘å¤©å†å€Ÿäº”ç™¾å¹´"				},
+	[2] = { id=3,  name="æ­Œæ›²ï¼šä¿å«ä¸‰è¿ç¯"						},
+	[3] = { id=5,  name="æ­Œæ›²ï¼šå¥åº·æ­Œ"								},
+	[4] = { id=6,  name="å°å“ï¼šä¼é¹…ç‹çš„æ•…äº‹"					},
+	[5] = { id=8,  name="æ­Œæ›²ï¼šåŒèŠ‚æ£"								},
+	[6] = { id=10, name="å°å“ï¼šä¸€è§é’Ÿæƒ…"							}
 
 }
 
---¸ß¼¶µã²¥È¯½ÚÄ¿±í....
+--é«˜çº§ç‚¹æ’­åˆ¸èŠ‚ç›®è¡¨....
 x050044_g_ChapterTblB = {
 
-	[1] = { id=2,  name="¸èÇú£ºÏòÌìÔÙ½èÎå°ÙÄê"				},
-	[2] = { id=3,  name="¸èÇú£º±£ÎÀÈıÁ¬»·"						},
-	[3] = { id=5,  name="¸èÇú£º½¡¿µ¸è"								},
-	[4] = { id=6,  name="Ğ¡Æ·£ºÆó¶ìÍõµÄ¹ÊÊÂ"					},
-	[5] = { id=7,  name="Îèµ¸£º¶ÇÆ¤Îè"								},
-	[6] = { id=8,  name="¸èÇú£ºË«½Ú¹÷"								},
-	[7] = { id=10, name="Ğ¡Æ·£ºÒ»¼ûÖÓÇé"							},
-	[8] = { id=11, name="¸èÇú£ºÎÒÃÇÊÇ¼«Æ·±¦Îï½Ó°àÈË"	}
+	[1] = { id=2,  name="æ­Œæ›²ï¼šå‘å¤©å†å€Ÿäº”ç™¾å¹´"				},
+	[2] = { id=3,  name="æ­Œæ›²ï¼šä¿å«ä¸‰è¿ç¯"						},
+	[3] = { id=5,  name="æ­Œæ›²ï¼šå¥åº·æ­Œ"								},
+	[4] = { id=6,  name="å°å“ï¼šä¼é¹…ç‹çš„æ•…äº‹"					},
+	[5] = { id=7,  name="èˆè¹ˆï¼šè‚šçš®èˆ"								},
+	[6] = { id=8,  name="æ­Œæ›²ï¼šåŒèŠ‚æ£"								},
+	[7] = { id=10, name="å°å“ï¼šä¸€è§é’Ÿæƒ…"							},
+	[8] = { id=11, name="æ­Œæ›²ï¼šæˆ‘ä»¬æ˜¯æå“å®ç‰©æ¥ç­äºº"	}
 
 }
 
---ÆÕÍ¨µã²¥È¯ID....
+--æ™®é€šç‚¹æ’­åˆ¸ID....
 x050044_g_TicketIdA = 30900046
 
---¸ß¼¶µã²¥È¯ID....
+--é«˜çº§ç‚¹æ’­åˆ¸ID....
 x050044_g_TicketIdB = 30900047
 
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x050044_OnDefaultEvent( sceneId, selfId,targetId )
 
@@ -48,7 +48,7 @@ function x050044_OnDefaultEvent( sceneId, selfId,targetId )
 
 	if NumText == 0	then
 
-		--ÏÔÊ¾ÆÕÍ¨µã²¥È¯½ÚÄ¿ÁĞ±í....
+		--æ˜¾ç¤ºæ™®é€šç‚¹æ’­åˆ¸èŠ‚ç›®åˆ—è¡¨....
 		BeginEvent(sceneId)
 			AddText(sceneId,"#{CWDB_20080225_02}")
 			local ChapterCount = getn( x050044_g_ChapterTblA )
@@ -60,7 +60,7 @@ function x050044_OnDefaultEvent( sceneId, selfId,targetId )
 
 	elseif NumText == 1	then
 
-		--ÏÔÊ¾¸ß¼¶µã²¥È¯½ÚÄ¿ÁĞ±í....
+		--æ˜¾ç¤ºé«˜çº§ç‚¹æ’­åˆ¸èŠ‚ç›®åˆ—è¡¨....
 		BeginEvent(sceneId)
 			AddText(sceneId,"#{CWDB_20080225_03}")
 			local ChapterCount = getn( x050044_g_ChapterTblB )
@@ -74,12 +74,12 @@ function x050044_OnDefaultEvent( sceneId, selfId,targetId )
 
 	if NumText > 200 then
 
-		--Ê¹ÓÃ¸ß¼¶µã²¥È¯µã²¥½ÚÄ¿....
+		--ä½¿ç”¨é«˜çº§ç‚¹æ’­åˆ¸ç‚¹æ’­èŠ‚ç›®....
 		x050044_DianBo( sceneId, selfId, targetId, 2, NumText - 200 )
 
 	elseif NumText > 100 then
 
-		--Ê¹ÓÃÆÕÍ¨µã²¥È¯µã²¥½ÚÄ¿....
+		--ä½¿ç”¨æ™®é€šç‚¹æ’­åˆ¸ç‚¹æ’­èŠ‚ç›®....
 		x050044_DianBo( sceneId, selfId, targetId, 1, NumText - 100 )
 
 	end
@@ -88,22 +88,22 @@ end
 
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x050044_OnEnumerate( sceneId, selfId, targetId )
 
---		AddNumText( sceneId, x050044_g_ScriptId, "ÆÕÍ¨µã²¥È¯µã²¥", 6, 0 )
---		AddNumText( sceneId, x050044_g_ScriptId, "¸ß¼¶µã²¥È¯µã²¥", 6, 1 )
+--		AddNumText( sceneId, x050044_g_ScriptId, "æ™®é€šç‚¹æ’­åˆ¸ç‚¹æ’­", 6, 0 )
+--		AddNumText( sceneId, x050044_g_ScriptId, "é«˜çº§ç‚¹æ’­åˆ¸ç‚¹æ’­", 6, 1 )
 
 end
 
 
 --**********************************
---µã²¥Ö¸¶¨½ÚÄ¿....
+--ç‚¹æ’­æŒ‡å®šèŠ‚ç›®....
 --**********************************
 function x050044_DianBo( sceneId, selfId, targetId, type, idx )
 
-	--¼ì²âµ±Ç°ÊÇ·ñÔÚ²¥·Å½ÚÄ¿....
+	--æ£€æµ‹å½“å‰æ˜¯å¦åœ¨æ’­æ”¾èŠ‚ç›®....
 	if 1 == CallScriptFunction( x050044_g_MainScriptId, "IsChapterPlaying", sceneId ) then
 		BeginEvent(sceneId)
 			AddText( sceneId, "#{CWDB_20080225_04}" )
@@ -130,9 +130,9 @@ function x050044_DianBo( sceneId, selfId, targetId, type, idx )
 	end
 
 	local needItemName = "#{_ITEM"..needItemId.."}"
-	local msgNoItem = "ÄúÃ»ÓĞĞ¯´ø"..needItemName.."£¬ËùÒÔÎŞ·¨µã²¥½ÚÄ¿Å¶£¡"
+	local msgNoItem = "æ‚¨æ²¡æœ‰æºå¸¦"..needItemName.."ï¼Œæ‰€ä»¥æ— æ³•ç‚¹æ’­èŠ‚ç›®å“¦ï¼"
 
-	--¼ì²âÊÇ·ñÓĞµã²¥µÀ¾ß....
+	--æ£€æµ‹æ˜¯å¦æœ‰ç‚¹æ’­é“å…·....
 	if LuaFnGetAvailableItemCount(sceneId, selfId, needItemId) < 1 then
 		BeginEvent(sceneId)
 			AddText( sceneId, msgNoItem )
@@ -141,7 +141,7 @@ function x050044_DianBo( sceneId, selfId, targetId, type, idx )
 		return
 	end
 
-	--É¾³ıÇ°»ñÈ¡µÀ¾ßµÄTransfer....
+	--åˆ é™¤å‰è·å–é“å…·çš„Transfer....
 	local itemPos = GetItemBagPos( sceneId, selfId, needItemId, 1 )
 	if itemPos < 0 then
 		BeginEvent(sceneId)
@@ -152,7 +152,7 @@ function x050044_DianBo( sceneId, selfId, targetId, type, idx )
 	end
 	local needItemTransfer = GetBagItemTransfer(sceneId,selfId,itemPos)
 
-	--É¾³ıµã²¥µÀ¾ß....
+	--åˆ é™¤ç‚¹æ’­é“å…·....
 	if 1 ~= LuaFnDelAvailableItem( sceneId, selfId, needItemId, 1 ) then
 		BeginEvent(sceneId)
 			AddText( sceneId, msgNoItem )
@@ -161,20 +161,20 @@ function x050044_DianBo( sceneId, selfId, targetId, type, idx )
 		return
 	end
 
-	--µã²¥....
+	--ç‚¹æ’­....
 	CallScriptFunction( x050044_g_MainScriptId, "PlayChapter", sceneId, ChapterData.id )
 
-	--¹«¸æ....
+	--å…¬å‘Š....
 	local PlayerName = GetName(sceneId, selfId)
 	local str
 	if type == 1 then
-		str = format( "#{_INFOUSR%s}#PÊ¹ÓÃÁË#{_INFOMSG%s}#P£¬¿ÉÒÔµã²¥ĞÂ´ºBOSSÁª»¶»áµÄ¾ø´ó²¿·Ö½ÚÄ¿Å¶£¬¾«²Ê²»Èİ´í¹ı£¡£¡£¡", PlayerName, needItemTransfer )
+		str = format( "#{_INFOUSR%s}#Pä½¿ç”¨äº†#{_INFOMSG%s}#Pï¼Œå¯ä»¥ç‚¹æ’­æ–°æ˜¥BOSSè”æ¬¢ä¼šçš„ç»å¤§éƒ¨åˆ†èŠ‚ç›®å“¦ï¼Œç²¾å½©ä¸å®¹é”™è¿‡ï¼ï¼ï¼", PlayerName, needItemTransfer )
 	elseif type == 2 then
-		str = format( "#{_INFOUSR%s}#PÊ¹ÓÃÁË#{_INFOMSG%s}#P£¬ĞÂ´ºBOSSÁª»¶»á½ÚÄ¿ËæÒâµã£¬¾«²Ê²»Èİ´í¹ıÅ¶£¡£¡£¡", PlayerName, needItemTransfer )
+		str = format( "#{_INFOUSR%s}#Pä½¿ç”¨äº†#{_INFOMSG%s}#Pï¼Œæ–°æ˜¥BOSSè”æ¬¢ä¼šèŠ‚ç›®éšæ„ç‚¹ï¼Œç²¾å½©ä¸å®¹é”™è¿‡å“¦ï¼ï¼ï¼", PlayerName, needItemTransfer )
 	end
 	BroadMsgByChatPipe( sceneId, selfId, str, 4 )
 
-	--¹Ø±Õ¶Ô»°¿ò....
+	--å…³é—­å¯¹è¯æ¡†....
 	BeginUICommand(sceneId)
 	EndUICommand(sceneId)
 	DispatchUICommand(sceneId,selfId, 1000)

@@ -1,25 +1,25 @@
---Â¥À¼NPC ½ğ¾ÃÁé
---Created by ×ó´ºÎ°
+--æ¥¼å…°NPC é‡‘ä¹…çµ
+--Created by å·¦æ˜¥ä¼Ÿ
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x001168_g_ScriptId = 001168
-x001168_g_eventList={808039} -- seek_treasureÑ°±¦
+x001168_g_eventList={808039} -- seek_treasureå¯»å®
 x001168_g_moster_album_id = 30505192;
 x001168_g_exchange_num = 20;
 x001168_g_clothing_id = 
 {
-		10124113,           --ÉÙÁÖĞÂÊ±×° 0
-		10124114,           --Ã÷½ÌĞÂÊ±×° 1
-		10124115,           --Ø¤°ïĞÂÊ±×° 2
-		10124117,           --Îäµ±ĞÂÊ±×° 3
-		10124116,           --¶ëáÒĞÂÊ±×° 4
-		10124118,           --ĞÇËŞĞÂÊ±×° 5
-		10124121,           --ÌìÁúĞÂÊ±×° 6
-		10124119,           --ÌìÉ½ĞÂÊ±×° 7
-		10124120,           --åĞÒ£ĞÂÊ±×° 8
+		10124113,           --å°‘æ—æ–°æ—¶è£… 0
+		10124114,           --æ˜æ•™æ–°æ—¶è£… 1
+		10124115,           --ä¸å¸®æ–°æ—¶è£… 2
+		10124117,           --æ­¦å½“æ–°æ—¶è£… 3
+		10124116,           --å³¨åµ‹æ–°æ—¶è£… 4
+		10124118,           --æ˜Ÿå®¿æ–°æ—¶è£… 5
+		10124121,           --å¤©é¾™æ–°æ—¶è£… 6
+		10124119,           --å¤©å±±æ–°æ—¶è£… 7
+		10124120,           --é€é¥æ–°æ—¶è£… 8
 }
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x001168_UpdateEventList( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
@@ -27,22 +27,22 @@ function x001168_UpdateEventList( sceneId, selfId,targetId )
 		for i, eventId in x001168_g_eventList do
 			CallScriptFunction( eventId, "OnEnumerate",sceneId, selfId, targetId )
 		end
-		AddNumText(sceneId, x001168_g_ScriptId, "#{LLXB_8820_01}", 6, 100);  --¶Ò»»
-		AddNumText(sceneId, x001168_g_ScriptId, "#{LLXB_8820_02}", 11, 101); --¶Ò»»°ïÖú
+		AddNumText(sceneId, x001168_g_ScriptId, "#{LLXB_8820_01}", 6, 100);  --å…‘æ¢
+		AddNumText(sceneId, x001168_g_ScriptId, "#{LLXB_8820_02}", 11, 101); --å…‘æ¢å¸®åŠ©
 		--[tx45411]AddNumText(sceneId, x001168_g_ScriptId, "#{NSRQ_081110_2}", 11, 999); --zchw
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 end
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x001168_OnDefaultEvent( sceneId, selfId,targetId )
 	x001168_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x001168_OnEventRequest( sceneId, selfId, targetId, eventId )
 	--[tx45411]if GetNumText() == 999 then
@@ -67,7 +67,7 @@ function x001168_OnEventRequest( sceneId, selfId, targetId, eventId )
 			x001168_ShowMsg(sceneId, selfId, targetId, "#{SJQM_8815_06}")
 			return 		
 		end
-		--¼ÓÈëÃÅÅÉÁËÂğ£¿
+		--åŠ å…¥é—¨æ´¾äº†å—ï¼Ÿ
 		local menpaiId = GetMenPai(sceneId, selfId);
 		if menpaiId < 0 or menpaiId > 8 then
 			x001168_ShowMsg(sceneId, selfId, targetId, "#{LLXB_8820_06}")
@@ -75,31 +75,31 @@ function x001168_OnEventRequest( sceneId, selfId, targetId, eventId )
 		end
 		local nItemBagIndexalbum = GetBagPosByItemSn(sceneId, selfId, x001168_g_moster_album_id)
 		local szTransferalbum = GetBagItemTransfer(sceneId,selfId, nItemBagIndexalbum)
-		-- ok µÃµ½ÓëÍæ¼ÒÃÅÅÉÏà¶ÔÓ¦µÄ¸ß¼¶Ê±×°
+		-- ok å¾—åˆ°ä¸ç©å®¶é—¨æ´¾ç›¸å¯¹åº”çš„é«˜çº§æ—¶è£…
 		if LuaFnDelAvailableItem(sceneId, selfId, x001168_g_moster_album_id, x001168_g_exchange_num) == 1 then
 			local clothingId = x001168_g_clothing_id[menpaiId+1];
 			local ret = TryRecieveItem( sceneId, selfId, clothingId, QUALITY_MUST_BE_CHANGE);
 			if ret > -1 then
-				-- °ó¶¨
+				-- ç»‘å®š
 				if LuaFnItemBind(sceneId, selfId, ret) ~= 1 then
-					x001168_ShowMsg(sceneId, selfId, targetId, "°ó¶¨Ê§°Ü£¡")
+					x001168_ShowMsg(sceneId, selfId, targetId, "ç»‘å®šå¤±è´¥ï¼")
 					return
 				end
-				-- ÌáÊ¾
+				-- æç¤º
 				BeginEvent(sceneId)
-					AddText(sceneId, "¶Ò»»¸ß¼¶ÃÅÅÉÊ±×°³É¹¦£¡")
+					AddText(sceneId, "å…‘æ¢é«˜çº§é—¨æ´¾æ—¶è£…æˆåŠŸï¼")
 				EndEvent()
 				DispatchMissionTips(sceneId, selfId)
-				Msg2Player(sceneId, selfId, "¶Ò»»¸ß¼¶ÃÅÅÉÊ±×°³É¹¦£¡", 8)
-				--¶Ò»»³É¹¦£¬²¥·ÅÌØĞ§
+				Msg2Player(sceneId, selfId, "å…‘æ¢é«˜çº§é—¨æ´¾æ—¶è£…æˆåŠŸï¼", 8)
+				--å…‘æ¢æˆåŠŸï¼Œæ’­æ”¾ç‰¹æ•ˆ
 				LuaFnSendSpecificImpactToUnit(sceneId,selfId,selfId,selfId,18,0)
 				
-				--²¥·Å¹«¸æ
+				--æ’­æ”¾å…¬å‘Š
 				local PlayerName = GetName(sceneId,selfId)
 				local szTransferEquip = GetBagItemTransfer(sceneId,selfId, ret)
 				local str = format("#{_INFOUSR%s}#{GWXCSZGG_1}#{_INFOMSG%s}#{GWXCSZGG_2}#{_INFOMSG%s}#{GWXCSZGG_3}",PlayerName,szTransferalbum,szTransferEquip)
 				BroadMsgByChatPipe( sceneId, selfId, str, 4 )
-				-- ÈÕÖ¾
+				-- æ—¥å¿—
 				AuditExchangeMenpaiSuit(sceneId, selfId, menpaiId, clothingId);
 			end
 		end
@@ -109,7 +109,7 @@ function x001168_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x001168_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x001168_g_eventList do
@@ -124,10 +124,10 @@ function x001168_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x001168_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
-	--¾Ü¾øÖ®ºó£¬Òª·µ»ØNPCµÄÊÂ¼şÁĞ±í
+	--æ‹’ç»ä¹‹åï¼Œè¦è¿”å›NPCçš„äº‹ä»¶åˆ—è¡¨
 	for i, findId in x001168_g_eventList do
 		if missionScriptId == findId then
 			x001168_UpdateEventList( sceneId, selfId, targetId )
@@ -137,7 +137,7 @@ function x001168_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¼ÌĞø£¨ÒÑ¾­½ÓÁËÈÎÎñ£©
+--ç»§ç»­ï¼ˆå·²ç»æ¥äº†ä»»åŠ¡ï¼‰
 --**********************************
 function x001168_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x001168_g_eventList do
@@ -149,7 +149,7 @@ function x001168_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---Ìá½»ÒÑ×öÍêµÄÈÎÎñ
+--æäº¤å·²åšå®Œçš„ä»»åŠ¡
 --**********************************
 function x001168_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, selectRadioId )
 	for i, findId in x001168_g_eventList do
@@ -160,7 +160,7 @@ function x001168_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 	end
 end
 --**********************************
---ÏÔÊ¾ÏûÏ¢
+--æ˜¾ç¤ºæ¶ˆæ¯
 --**********************************
 function x001168_ShowMsg(sceneId, selfId, targetId, msg)
 	BeginEvent(sceneId)

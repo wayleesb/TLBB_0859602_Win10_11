@@ -1,17 +1,17 @@
---ÂåÑôNPC
---·¶ÒÆ³Ç
---ÆÕÍ¨
+--æ´›é˜³NPC
+--èŒƒç§»åŸ
+--æ™®é€š
 
 x000143_g_ScriptId	= 143
 x000143_g_EventList	= { 808008, 808009 }
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x000143_OnDefaultEvent( sceneId, selfId, targetId )
 
 	BeginEvent( sceneId )
-		AddText( sceneId, "  ÎÒÊÇÒÆÃñ½Ó´ıÊ¹£¬Èç¹ûÄã¸ÕÒÆÃñµ½´Ë£¬ÓĞÊ²Ã´ĞèÒª°ïÃ¦µÄ¾¡¹Ü¿ª¿ÚºÃÁË¡£" )
+		AddText( sceneId, "  æˆ‘æ˜¯ç§»æ°‘æ¥å¾…ä½¿ï¼Œå¦‚æœä½ åˆšç§»æ°‘åˆ°æ­¤ï¼Œæœ‰ä»€ä¹ˆéœ€è¦å¸®å¿™çš„å°½ç®¡å¼€å£å¥½äº†ã€‚" )
 		for i, eventId in x000143_g_EventList do
 			CallScriptFunction( eventId, "OnEnumerate", sceneId, selfId, targetId )
 		end
@@ -21,7 +21,7 @@ function x000143_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x000143_OnEventRequest( sceneId, selfId, targetId, eventId )
 

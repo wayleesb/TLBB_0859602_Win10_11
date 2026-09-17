@@ -1,24 +1,24 @@
---Ã´∫˛NPC
---‘Ï∑¥∂Ò‘Ù
---∆’Õ®
+--Â§™ÊπñNPC
+--ÈÄ†ÂèçÊÅ∂Ë¥º
+--ÊôÆÈÄö
 
---Ω≈±æ∫≈
+--ËÑöÊú¨Âè∑
 x808015_g_ScriptId	= 808015
 
---À˘”µ”–µƒ ¬º˛ID¡–±Ì
+--ÊâÄÊã•ÊúâÁöÑ‰∫ã‰ª∂IDÂàóË°®
 x808015_g_EventList	= { 808017 }
---Ω”»°»ŒŒÒµƒ◊ÓµÕµ»º∂
+--Êé•Âèñ‰ªªÂä°ÁöÑÊúÄ‰ΩéÁ≠âÁ∫ß
 x808015_g_minLevel			= 20
---ªÓ∂Ø√ø¥Œtick ±º‰
+--Ê¥ªÂä®ÊØèÊ¨°tickÊó∂Èó¥
 x808015_g_TimeTickIndex = 0
 
---∫ÛÀ¢≥ˆµƒπ÷ŒÔµƒ ˝¡ø
+--ÂêéÂà∑Âá∫ÁöÑÊÄ™Áâ©ÁöÑÊï∞Èáè
 x808015_g_RefreshMonsterNum = 5
 
---15∑÷÷”∫ÛÀ¢≥ˆµƒπ÷ŒÔµƒŒª÷√
+--15ÂàÜÈíüÂêéÂà∑Âá∫ÁöÑÊÄ™Áâ©ÁöÑ‰ΩçÁΩÆ
 x808015_g_DLPosInfoList = {{
 															sceneId=9,
-															sceneName="…Ÿ¡÷",
+															sceneName="Â∞ëÊûó",
 															G1posList = {
 																						{x=61, z=55, r=3},
 																						{x=80, z=60, r=3},
@@ -36,7 +36,7 @@ x808015_g_DLPosInfoList = {{
 														},
 														{
 															sceneId=10,
-															sceneName="ÿ§∞Ô",
+															sceneName="‰∏êÂ∏Æ",
 															G1posList = {
 																						{x=50, z=150, r=3},
 																						{x=60, z=150, r=3},
@@ -54,7 +54,7 @@ x808015_g_DLPosInfoList = {{
 														},
 														{
 															sceneId=11,
-															sceneName="√˜ΩÃ",
+															sceneName="ÊòéÊïô",
 															G1posList = {
 																						{x=36, z=153, r=3},
 																						{x=36, z=147, r=3},
@@ -72,7 +72,7 @@ x808015_g_DLPosInfoList = {{
 														},
 														{
 															sceneId=12,
-															sceneName="Œ‰µ±",
+															sceneName="Ê≠¶ÂΩì",
 															G1posList = {
 																						{x=43, z=95, r=3},
 																						{x=40, z=55, r=3},
@@ -90,7 +90,7 @@ x808015_g_DLPosInfoList = {{
 														},
 														{
 															sceneId=13,
-															sceneName="ÃÏ¡˙",
+															sceneName="Â§©Èæô",
 															G1posList = {
 																						{x=65, z=150, r=3},
 																						{x=64, z=152, r=3},
@@ -108,7 +108,7 @@ x808015_g_DLPosInfoList = {{
 														},
 														{
 															sceneId=14,
-															sceneName="Â–“£",
+															sceneName="ÈÄçÈÅ•",
 															G1posList = {
 																						{x=39, z=150, r=3},
 																						{x=52, z=149, r=3},
@@ -126,7 +126,7 @@ x808015_g_DLPosInfoList = {{
 														},
 														{
 															sceneId=15,
-															sceneName="∂Î·“",
+															sceneName="Â≥®Âµã",
 															G1posList = {
 																						{x=100, z=145, r=3},
 																						{x=84, z=145, r=3},
@@ -144,7 +144,7 @@ x808015_g_DLPosInfoList = {{
 														},
 														{
 															sceneId=16,
-															sceneName="–«Àﬁ",
+															sceneName="ÊòüÂÆø",
 															G1posList = {
 																						{x=43, z=148, r=3},
 																						{x=43, z=132, r=3},
@@ -162,7 +162,7 @@ x808015_g_DLPosInfoList = {{
 														},
 														{
 															sceneId=17,
-															sceneName="ÃÏ…Ω",
+															sceneName="Â§©Â±±",
 															G1posList = {
 																						{x=43, z=146, r=3},
 																						{x=50, z=140, r=3},
@@ -182,7 +182,7 @@ x808015_g_DLPosInfoList = {{
 													
 
 x808015_g_scenePosInfoList = {
-	{sceneId=9, sceneLeader="–˛¥»", sceneName="…Ÿ¡÷", minL=30, maxL=45,  posList={
+	{sceneId=9, sceneLeader="ÁéÑÊÖà", sceneName="Â∞ëÊûó", minL=30, maxL=45,  posList={
 																						{x=42, z=48, r=3},{x=41, z=55, r=3},{x=42, z=65, r=3},{x=42, z=74, r=3},
 																						{x=129, z=56, r=5},{x=42, z=100, r=5},{x=42, z=121, r=3},{x=48, z=139, r=3},
 																						{x=54, z=146, r=3},{x=68, z=148, r=3},{x=42, z=130, r=3},{x=66, z=102, r=10},
@@ -193,7 +193,7 @@ x808015_g_scenePosInfoList = {
 																						{x=149, z=99, r=6},{x=153, z=144, r=6},
 																					}
 	},
-	{sceneId=10, sceneLeader="ÀŒ¥»", sceneName="ÿ§∞Ô", minL=46, maxL=60,  posList={
+	{sceneId=10, sceneLeader="ÂÆãÊÖà", sceneName="‰∏êÂ∏Æ", minL=46, maxL=60,  posList={
 																						{x=46, z=36, r=5},{x=39, z=60, r=5},{x=45, z=76, r=3},{x=45, z=90, r=5},
 																						{x=45, z=113, r=8},{x=49, z=198, r=8},{x=72, z=140, r=3},{x=83, z=141, r=4},
 																						{x=101, z=141, r=4},{x=91, z=124, r=4},{x=72, z=115, r=6},{x=72, z=106, r=5},
@@ -204,7 +204,7 @@ x808015_g_scenePosInfoList = {
 																						{x=132, z=150, r=5},{x=112, z=110, r=5},
 																					}
 	},
-	{sceneId=11, sceneLeader="¡÷ ¿≥§", sceneName="√˜ΩÃ", minL=61, maxL=75,  posList={
+	{sceneId=11, sceneLeader="Êûó‰∏ñÈïø", sceneName="ÊòéÊïô", minL=61, maxL=75,  posList={
 																						{x=38, z=38, r=6},{x=35, z=53, r=6},{x=39, z=77, r=5},{x=36, z=87, r=4},
 																						{x=35, z=97, r=5},{x=37, z=113, r=4},{x=38, z=140, r=5},{x=40, z=153, r=5},
 																						{x=50, z=154, r=5},{x=60, z=154, r=5},{x=62, z=141, r=4},{x=81, z=153, r=5},
@@ -215,7 +215,7 @@ x808015_g_scenePosInfoList = {
 																						{x=115, z=39, r=5},{x=80, z=39, r=5},
 																					}
 	},
-	{sceneId=12, sceneLeader="’≈–˛Àÿ", sceneName="Œ‰µ±", minL=76, maxL=90,  posList={
+	{sceneId=12, sceneLeader="Âº†ÁéÑÁ¥†", sceneName="Ê≠¶ÂΩì", minL=76, maxL=90,  posList={
 																						{x=40, z=55, r=3},{x=54, z=57, r=4},{x=63, z=61, r=6},{x=45, z=70, r=3},
 																						{x=45, z=78, r=3},{x=45, z=94, r=4},{x=63, z=99, r=5},{x=78, z=112, r=10},
 																						{x=79, z=135, r=6},{x=94, z=137, r=3},{x=104, z=127, r=4},{x=90, z=179, r=5},
@@ -226,7 +226,7 @@ x808015_g_scenePosInfoList = {
 																						{x=70, z=83, r=3},{x=86, z=83, r=3},
 																					}
 	},
-	{sceneId=13, sceneLeader="±æ“Ú", sceneName="ÃÏ¡˙", minL=91, maxL=100,posList={
+	{sceneId=13, sceneLeader="Êú¨Âõ†", sceneName="Â§©Èæô", minL=91, maxL=100,posList={
 																						{x=54, z=38, r=5},{x=41, z=46, r=5},{x=42, z=64, r=3},{x=40, z=76, r=7},
 																						{x=55, z=74, r=5},{x=64, z=73, r=5},{x=42, z=104, r=4},{x=24, z=126, r=4},
 																						{x=41, z=130, r=6},{x=95, z=38, r=5},{x=110, z=35, r=4},{x=153, z=35, r=4},
@@ -237,7 +237,7 @@ x808015_g_scenePosInfoList = {
 																						{x=139, z=35, r=3},{x=131, z=132, r=4},
 																					}
 	},
-	{sceneId=14, sceneLeader="À’–«∫”", sceneName="Â–“£", minL=100, maxL=105, posList={
+	{sceneId=14, sceneLeader="ËãèÊòüÊ≤≥", sceneName="ÈÄçÈÅ•", minL=100, maxL=105, posList={
 																						{x=48, z=55, r=5},{x=53, z=63, r=5},{x=46, z=72, r=4},{x=64, z=62, r=4},
 																						{x=69, z=55, r=4},{x=118, z=90, r=10},{x=55, z=73, r=4},{x=49, z=127, r=3},
 																						{x=65, z=135, r=5},{x=49, z=147, r=5},{x=70, z=150, r=5},{x=91, z=124, r=4},
@@ -248,7 +248,7 @@ x808015_g_scenePosInfoList = {
 																						{x=158, z=65, r=3},{x=121, z=42, r=3},
 																					}
 	},
-	{sceneId=15, sceneLeader="√œ«‡«‡", sceneName="∂Î·“", minL=30, maxL=40,	posList={
+	{sceneId=15, sceneLeader="Â≠üÈùíÈùí", sceneName="Â≥®Âµã", minL=30, maxL=40,	posList={
 																						{x=49, z=40, r=8},{x=39, z=46, r=5},{x=35, z=58, r=3},{x=56, z=54, r=4},
 																						{x=54, z=93, r=3},{x=66, z=110, r=3},{x=39, z=108, r=5},{x=36, z=119, r=4},
 																						{x=36, z=131, r=4},{x=39, z=149, r=8},{x=57, z=149, r=5},{x=56, z=138, r=4},
@@ -259,7 +259,7 @@ x808015_g_scenePosInfoList = {
 																						{x=152, z=108, r=5},{x=145, z=153, r=5},
 																					}
 	},
-	{sceneId=16, sceneLeader="∂°¥∫«Ô", sceneName="–«Àﬁ", minL=41, maxL=55,posList={
+	{sceneId=16, sceneLeader="‰∏ÅÊò•Áßã", sceneName="ÊòüÂÆø", minL=41, maxL=55,posList={
 																						{x=46, z=53, r=3},{x=40, z=84, r=5},{x=50, z=83, r=5},{x=43, z=93, r=4},
 																						{x=45, z=130, r=5},{x=43, z=148, r=4},{x=55, z=140, r=5},{x=70, z=140, r=10},
 																						{x=90, z=140, r=9},{x=99, z=130, r=8},{x=95, z=110, r=5},{x=84, z=114, r=5},
@@ -270,7 +270,7 @@ x808015_g_scenePosInfoList = {
 																						{x=68, z=63, r=5},{x=62, z=96, r=5},
 																					}
 	},
-	{sceneId=17, sceneLeader="√∑Ω£", sceneName="ÃÏ…Ω", minL=56, maxL=70,posList={
+	{sceneId=17, sceneLeader="Ê¢ÖÂâë", sceneName="Â§©Â±±", minL=56, maxL=70,posList={
 																						{x=40, z=47, r=8},{x=41, z=67, r=5},{x=36, z=76, r=5},{x=33, z=88, r=5},
 																						{x=33, z=100, r=4},{x=35, z=110, r=5},{x=49, z=126, r=7},{x=39, z=146, r=6},
 																						{x=50, z=140, r=5},{x=62, z=126, r=4},{x=49, z=110, r=5},{x=49, z=77, r=5},
@@ -284,7 +284,7 @@ x808015_g_scenePosInfoList = {
 }
 
 --**********************************
--- ¬º˛Ωªª•»Îø⁄ 19-145-40 18-149-48
+--‰∫ã‰ª∂‰∫§‰∫íÂÖ•Âè£ 19-145-40 18-149-48
 --**********************************
 function x808015_OnDefaultEvent( sceneId, actId, param1, param2, param3, param4, param5 )
 			for i, v in x808015_g_scenePosInfoList do
@@ -295,13 +295,13 @@ function x808015_OnDefaultEvent( sceneId, actId, param1, param2, param3, param4,
 						while j<=30 do
 							
 							local index = j							
-							--local strText = format( "µ±«∞sceneid: %d, %d-%d,%d", sceneId, v.sceneId, v.posList[index].x, v.posList[index].z)
+							--local strText = format( "ÂΩìÂâçsceneid: %d, %d-%d,%d", sceneId, v.sceneId, v.posList[index].x, v.posList[index].z)
 							--PrintStr(strText)
 							MonsterId = LuaFnCreateMonster( sceneId, 486, v.posList[index].x, v.posList[index].z, 3, -1, 808017 )
 							SetCharacterDieTime(sceneId, MonsterId, 1000*60*60)									
 							j = j+1									
 						end
-						local NotifyMsg = "@*;SrvMsg;SCA:#P"..v.sceneLeader.."#P: Œ“#Y"..v.sceneName.."#PÕª‘‚“ª≈˙#GΩ≠∫˛œ¸–°#PÕµœÆ£¨«Î∏˜Œª√≈œ¬µ‹◊”ÀŸªÿ√≈≈…À‡«Â¿¥µ–°£"
+						local NotifyMsg = "@*;SrvMsg;SCA:#P"..v.sceneLeader.."#P: Êàë#Y"..v.sceneName.."#PÁ™ÅÈÅ≠‰∏ÄÊâπ#GÊ±üÊπñÂÆµÂ∞è#PÂÅ∑Ë¢≠ÔºåËØ∑ÂêÑ‰ΩçÈó®‰∏ãÂºüÂ≠êÈÄüÂõûÈó®Ê¥æËÇÉÊ∏ÖÊù•Êïå„ÄÇ"
 						AddGlobalCountNews( sceneId, NotifyMsg )
 						return
 				end				
@@ -310,7 +310,7 @@ end
 
 
 --**********************************
---–ƒÃ¯∫Ø ˝
+--ÂøÉË∑≥ÂáΩÊï∞
 --**********************************
 function x808015_OnTimer( sceneId, actId, uTime )
 
@@ -331,7 +331,7 @@ function x808015_OnTimer( sceneId, actId, uTime )
 				end
 			end
 			
-			-- ‘ˆº”5∏ˆπ÷£¨Œª÷√‘⁄30∏ˆ÷–ÀÊª˙
+			-- Â¢ûÂä†5‰∏™ÊÄ™Ôºå‰ΩçÁΩÆÂú®30‰∏™‰∏≠ÈöèÊú∫
 			for i, v in x808015_g_scenePosInfoList do
 				if v.sceneId == sceneId then
 					local j = 1

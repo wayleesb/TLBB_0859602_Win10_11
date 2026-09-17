@@ -1,43 +1,43 @@
--- ÁùºÏÍşÎä 20090512
+-- å…­åˆå¨æ­¦ 20090512
 
 x889058_g_ScriptId = 889058;
 
--- ĞèÇóÎïÆ·ID
+-- éœ€æ±‚ç‰©å“ID
 x889058_g_NeedItemID		= {
-	30504101,		-- ÁùºÏÁîÅÆ(¶«)
-	30504102,		-- ÁùºÏÁîÅÆ(±±)
-	30504103,		-- ÁùºÏÁîÅÆ(Î÷)
-	30504104,		-- ÁùºÏÁîÅÆ(ÄÏ)
-	30504105,		-- ÁùºÏÁîÅÆ(ÉÏ)
-	30504106,		-- ÁùºÏÁîÅÆ(ÏÂ)
+	30504101,		-- å…­åˆä»¤ç‰Œ(ä¸œ)
+	30504102,		-- å…­åˆä»¤ç‰Œ(åŒ—)
+	30504103,		-- å…­åˆä»¤ç‰Œ(è¥¿)
+	30504104,		-- å…­åˆä»¤ç‰Œ(å—)
+	30504105,		-- å…­åˆä»¤ç‰Œ(ä¸Š)
+	30504106,		-- å…­åˆä»¤ç‰Œ(ä¸‹)
 }
 
--- ½±ÀøÏà¹Ø
+-- å¥–åŠ±ç›¸å…³
 x889058_g_AwradInfo		=	{
-	{ItemId = 10422016, LackItemMsg = "    ¶Ò»»#YÖØÂ¥½ä#WĞèÒª#GÁùÃ¶²»Í¬#WµÄ#YÁùºÏÁîÅÆ#W£¬Çë¼¯Æë#GÁùÃ¶#YÁùºÏÁîÅÆ#WÖ®ºóÔÙÀ´ÕÒÎÒ¡£", RetDlg = "    ¸ĞĞ»ÄãÎª³¯Í¢×ö³öµÄ¹±Ï×£¬Õâ#YÖØÂ¥½ä#WÇëÊÕºÃ¡£", Notice = "µÃµ½ÎïÆ·£ºÖØÂ¥½ä", BagFullDlg = "    Çë½«µÀ¾ßÀ¸Áô³öÒ»¸ö¿ÕÎ»£¬·ñÔòÎÒÎŞ·¨½«#YÖØÂ¥½ä#W¸øÄã¡£"},	-- ÖØÂ¥½ä
---	{ItemId = 10423024, LackItemMsg = "#{LHZD_090513_07}", RetDlg = "#{LHZD_090513_08}", Notice = "#{LHZD_090513_09}", BagFullDlg = "#{LHZD_090513_17}"}	-- ÖØÂ¥Óñ
+	{ItemId = 10422016, LackItemMsg = "    å…‘æ¢#Yé‡æ¥¼æˆ’#Wéœ€è¦#Gå…­æšä¸åŒ#Wçš„#Yå…­åˆä»¤ç‰Œ#Wï¼Œè¯·é›†é½#Gå…­æš#Yå…­åˆä»¤ç‰Œ#Wä¹‹åå†æ¥æ‰¾æˆ‘ã€‚", RetDlg = "    æ„Ÿè°¢ä½ ä¸ºæœå»·åšå‡ºçš„è´¡çŒ®ï¼Œè¿™#Yé‡æ¥¼æˆ’#Wè¯·æ”¶å¥½ã€‚", Notice = "å¾—åˆ°ç‰©å“ï¼šé‡æ¥¼æˆ’", BagFullDlg = "    è¯·å°†é“å…·æ ç•™å‡ºä¸€ä¸ªç©ºä½ï¼Œå¦åˆ™æˆ‘æ— æ³•å°†#Yé‡æ¥¼æˆ’#Wç»™ä½ ã€‚"},	-- é‡æ¥¼æˆ’
+--	{ItemId = 10423024, LackItemMsg = "#{LHZD_090513_07}", RetDlg = "#{LHZD_090513_08}", Notice = "#{LHZD_090513_09}", BagFullDlg = "#{LHZD_090513_17}"}	-- é‡æ¥¼ç‰
 }
 
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x889058_OnEnumerate( sceneId, selfId, targetId )
 	
-	AddNumText( sceneId, x889058_g_ScriptId, "#GÁùºÏÍşÎä", 6, 10 )					-- °´Å¥£º ÁùºÏÍşÎä
-	AddNumText( sceneId, x889058_g_ScriptId, "#GÁùºÏÍşÎä½é½B", 11, 11 )				-- °´Å¥£º ÁùºÏÍşÎä½éÉÜ
+	AddNumText( sceneId, x889058_g_ScriptId, "#Gå…­åˆå¨æ­¦", 6, 10 )					-- æŒ‰é’®ï¼š å…­åˆå¨æ­¦
+	AddNumText( sceneId, x889058_g_ScriptId, "#Gå…­åˆå¨æ­¦ä»‹ç´¹", 11, 11 )				-- æŒ‰é’®ï¼š å…­åˆå¨æ­¦ä»‹ç»
 	
 end
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x889058_OnDefaultEvent( sceneId, selfId, targetId )
 
 	local nNumText = GetNumText( )
 	
 	if( nNumText == 10 ) then
-		-- µã»÷ ÁùºÏÍşÎä
+		-- ç‚¹å‡» å…­åˆå¨æ­¦
 		-- BeginEvent( sceneId )
 		-- AddText( sceneId, "#{LHZD_090513_01}#r" )
 		-- for i, item in x889058_g_AwradInfo do
@@ -48,9 +48,9 @@ function x889058_OnDefaultEvent( sceneId, selfId, targetId )
 		-- DispatchMissionContinueInfo( sceneId, selfId, targetId, x889058_g_ScriptId, 0 )
 		x889058_GiveGift( sceneId, selfId, targetId, 10422016 )
 	elseif( nNumText == 11 ) then
-		-- µã»÷ ÁùºÏÍşÎä½éÉÜ
+		-- ç‚¹å‡» å…­åˆå¨æ­¦ä»‹ç»
 		BeginEvent( sceneId )	
-			AddText( sceneId, "    ¶«Î÷ÄÏ±±ÉÏÏÂ£¬ÊÇÎªÁùºÏ¡£ÈôÊÇÓµÓĞÁùºÏÖ®Á¦£¬±ã¿ÉÍşËÄ·½¡¢ÕğÌìÏÂ¡£#r    ÎÒÕıÎª³¯Í¢ÊÕ¼¯¾ßÓĞÁùºÏÖ®Á¦µÄ#YÁùºÏÁîÅÆ#W£¬ÈôÊÇÄã´øÀ´ÁËÁùÃ¶#G²»Í¬#WµÄ#YÁùºÏÁîÅÆ#W£¬³¯Í¢»áÒÔ#YÖØÂ¥½ä#WÓëÄã½»»»¡£#r    #YÁùºÏÁîÅÆ#W¿ÉÒÔÔÚ#YÁùºÏ×ªµ°#WÖĞµÃµ½¡£" )
+			AddText( sceneId, "    ä¸œè¥¿å—åŒ—ä¸Šä¸‹ï¼Œæ˜¯ä¸ºå…­åˆã€‚è‹¥æ˜¯æ‹¥æœ‰å…­åˆä¹‹åŠ›ï¼Œä¾¿å¯å¨å››æ–¹ã€éœ‡å¤©ä¸‹ã€‚#r    æˆ‘æ­£ä¸ºæœå»·æ”¶é›†å…·æœ‰å…­åˆä¹‹åŠ›çš„#Yå…­åˆä»¤ç‰Œ#Wï¼Œè‹¥æ˜¯ä½ å¸¦æ¥äº†å…­æš#Gä¸åŒ#Wçš„#Yå…­åˆä»¤ç‰Œ#Wï¼Œæœå»·ä¼šä»¥#Yé‡æ¥¼æˆ’#Wä¸ä½ äº¤æ¢ã€‚#r    #Yå…­åˆä»¤ç‰Œ#Wå¯ä»¥åœ¨#Yå…­åˆè½¬è›‹#Wä¸­å¾—åˆ°ã€‚" )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 		
@@ -60,7 +60,7 @@ end
 
 
 --**********************************
---·µ»Ø¶Ô»°
+--è¿”å›å¯¹è¯
 --**********************************
 function x889058_ReturnDlg(sceneId, selfId, targetId, msg)
 	BeginEvent(sceneId)
@@ -80,26 +80,26 @@ function x889058_Tips(sceneId, selfId, msg)
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x889058_OnAccept( sceneId, selfId )
 	
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x889058_OnAbandon( sceneId, selfId )
 end
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x889058_OnContinue( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x889058_CheckSubmit( sceneId, selfId )
 	
@@ -108,7 +108,7 @@ function x889058_CheckSubmit( sceneId, selfId )
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x889058_GiveGift( sceneId, selfId, targetId, selectRadioId )
 	
@@ -125,7 +125,7 @@ function x889058_GiveGift( sceneId, selfId, targetId, selectRadioId )
 		end
 	end
 	
-	-- ÅĞ¶ÏÎïÆ·ÊÇ·ñ¹»
+	-- åˆ¤æ–­ç‰©å“æ˜¯å¦å¤Ÿ
 	for i, itemId in x889058_g_NeedItemID do
 		if( LuaFnGetAvailableItemCount( sceneId, selfId, itemId ) < 1 ) then
 			x889058_ReturnDlg( sceneId, selfId, targetId, LackItemMsg )
@@ -133,7 +133,7 @@ function x889058_GiveGift( sceneId, selfId, targetId, selectRadioId )
 		end
 	end
 	
-	-- ¿ÛÎïÆ·
+	-- æ‰£ç‰©å“
 	for i, itemId in x889058_g_NeedItemID do
 		if( LuaFnDelAvailableItem( sceneId, selfId, itemId, 1) < 1 ) then
 			x889058_ReturnDlg( sceneId, selfId, targetId, LackItemMsg )
@@ -141,7 +141,7 @@ function x889058_GiveGift( sceneId, selfId, targetId, selectRadioId )
 		end
 	end
 	
-	-- ¼ì²é±³°ü¿Õ¼ä
+	-- æ£€æŸ¥èƒŒåŒ…ç©ºé—´
 	BeginAddItem(sceneId)
 	AddItem(sceneId, selectRadioId, 1)
 	local bBagOk = LuaFnEndAddItemIgnoreFatigueState(sceneId, selfId)
@@ -149,17 +149,17 @@ function x889058_GiveGift( sceneId, selfId, targetId, selectRadioId )
 		x889058_ReturnDlg( sceneId, selfId, targetId, BagFullDlg )
 		return
 	else
-		-- Ìí¼ÓÎïÆ·
+		-- æ·»åŠ ç‰©å“
 		LuaFnAddItemListToHumanIgnoreFatigueState( sceneId, selfId )
 		
-		-- Í¨Öª
+		-- é€šçŸ¥
 		x889058_Tips( sceneId, selfId, Notice )
 		x889058_ReturnDlg( sceneId, selfId, targetId, RetDlg )
 		
-		-- ¹«¸æ
+		-- å…¬å‘Š
 		local playerName = GetName(sceneId,selfId)
 		local itemTransInfo = GetItemTransfer( sceneId, selfId, 0 )
-		broadcastMsg	=	"#{_INFOUSR"..playerName.."}".."#IÊÕ¼¯µ½ÁËÈ«²¿ÁùÃ¶#YÁùºÏÁîÅÆ#I£¬ÔÚ#GËÕÖİ£¨170£¬138£©#RÁºÊ¦³É#I´¦¶Ò»»µ½ÁËÉñÆ÷".."#{_INFOMSG"..itemTransInfo.."}".."#I£¡"
+		broadcastMsg	=	"#{_INFOUSR"..playerName.."}".."#Iæ”¶é›†åˆ°äº†å…¨éƒ¨å…­æš#Yå…­åˆä»¤ç‰Œ#Iï¼Œåœ¨#Gè‹å·ï¼ˆ170ï¼Œ138ï¼‰#Ræ¢å¸ˆæˆ#Iå¤„å…‘æ¢åˆ°äº†ç¥å™¨".."#{_INFOMSG"..itemTransInfo.."}".."#Iï¼"
 	end
 	
 	BroadMsgByChatPipe( sceneId, selfId, broadcastMsg, 4 )
@@ -167,19 +167,19 @@ end
 	
 
 --**********************************
---É±ËÀ¹ÖÎï»òÍæ¼Ò
+--æ€æ­»æ€ªç‰©æˆ–ç©å®¶
 --**********************************
 function x889058_OnKillObject( sceneId, selfId, objdataId )
 end
 
 --**********************************
---½øÈëÇøÓòÊÂ¼ş
+--è¿›å…¥åŒºåŸŸäº‹ä»¶
 --**********************************
 function x889058_OnEnterArea( sceneId, selfId, zoneId )
 end
 
 --**********************************
---µÀ¾ß¸Ä±ä
+--é“å…·æ”¹å˜
 --**********************************
 function x889058_OnItemChanged( sceneId, selfId, itemdataId )
 end

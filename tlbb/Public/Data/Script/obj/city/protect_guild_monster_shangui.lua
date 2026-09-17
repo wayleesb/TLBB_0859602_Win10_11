@@ -1,25 +1,25 @@
 -- 805046
--- É½¹íboss
+-- å±±é¬¼boss
 
---¸±±¾Êı¾İË÷Òı¶ÔÕÕ
+--å‰¯æœ¬æ•°æ®ç´¢å¼•å¯¹ç…§
 x805046_g_keySD					= {}
-x805046_g_keySD["typ"]			= 0		--ÉèÖÃ¸±±¾ÀàĞÍ
-x805046_g_keySD["spt"]			= 1		--ÉèÖÃ¸±±¾³¡¾°ÊÂ¼ş½Å±¾ºÅ
-x805046_g_keySD["tim"]			= 2		--ÉèÖÃ¶¨Ê±Æ÷µ÷ÓÃ´ÎÊı
-x805046_g_keySD["currStage"]	= 3		--ÉèÖÃ¶¨Ê±Æ÷µ÷ÓÃ´ÎÊı
-x805046_g_keySD["scn"]			= 4		--ÉèÖÃ¸±±¾Èë¿Ú³¡¾°ºÅ, ³õÊ¼»¯
-x805046_g_keySD["cls"]			= 5		--ÉèÖÃ¸±±¾¹Ø±Õ±êÖ¾, 0¿ª·Å£¬1¹Ø±Õ
-x805046_g_keySD["dwn"]			= 6		--ÉèÖÃÀë¿ªµ¹¼ÆÊ±´ÎÊı
-x805046_g_keySD["tem"]			= 7		--±£´æ¶ÓÎéºÅ
-x805046_g_keySD["x"]			= 8			--ÈËÎïÔÚÈë¿Ú³¡¾°ÖĞµÄxÎ»ÖÃ
-x805046_g_keySD["z"]			= 9			--ÈËÎïÔÚÈë¿Ú³¡¾°ÖĞµÄzÎ»ÖÃ
-x805046_g_keySD["killMonsterNum"]	= 10		--É±ËÀ¹ÖÎïÊıÁ¿
-x805046_g_keySD["genMonsterNum"]	= 11			--Éú³É¹ÖÎïÊıÁ¿
-x805046_g_keySD["playerLevel"]	= 12		--¼ÇÂ¼µ±Ç°¸±±¾µÄ¼¶±ğ
+x805046_g_keySD["typ"]			= 0		--è®¾ç½®å‰¯æœ¬ç±»å‹
+x805046_g_keySD["spt"]			= 1		--è®¾ç½®å‰¯æœ¬åœºæ™¯äº‹ä»¶è„šæœ¬å·
+x805046_g_keySD["tim"]			= 2		--è®¾ç½®å®šæ—¶å™¨è°ƒç”¨æ¬¡æ•°
+x805046_g_keySD["currStage"]	= 3		--è®¾ç½®å®šæ—¶å™¨è°ƒç”¨æ¬¡æ•°
+x805046_g_keySD["scn"]			= 4		--è®¾ç½®å‰¯æœ¬å…¥å£åœºæ™¯å·, åˆå§‹åŒ–
+x805046_g_keySD["cls"]			= 5		--è®¾ç½®å‰¯æœ¬å…³é—­æ ‡å¿—, 0å¼€æ”¾ï¼Œ1å…³é—­
+x805046_g_keySD["dwn"]			= 6		--è®¾ç½®ç¦»å¼€å€’è®¡æ—¶æ¬¡æ•°
+x805046_g_keySD["tem"]			= 7		--ä¿å­˜é˜Ÿä¼å·
+x805046_g_keySD["x"]			= 8			--äººç‰©åœ¨å…¥å£åœºæ™¯ä¸­çš„xä½ç½®
+x805046_g_keySD["z"]			= 9			--äººç‰©åœ¨å…¥å£åœºæ™¯ä¸­çš„zä½ç½®
+x805046_g_keySD["killMonsterNum"]	= 10		--æ€æ­»æ€ªç‰©æ•°é‡
+x805046_g_keySD["genMonsterNum"]	= 11			--ç”Ÿæˆæ€ªç‰©æ•°é‡
+x805046_g_keySD["playerLevel"]	= 12		--è®°å½•å½“å‰å‰¯æœ¬çš„çº§åˆ«
 
 
 --**********************************
--- ×Ô¼ºËÀÍö
+-- è‡ªå·±æ­»äº¡
 --**********************************
 function x805046_OnDie( sceneId, selfId, killerId )
 	local killNum = LuaFnGetCopySceneData_Param( sceneId, x805046_g_keySD["killMonsterNum"] )	
@@ -27,18 +27,18 @@ function x805046_OnDie( sceneId, selfId, killerId )
 	LuaFnSetCopySceneData_Param( sceneId, x805046_g_keySD["killMonsterNum"], killNum )
 	
 	local genNum = LuaFnGetCopySceneData_Param( sceneId, x805046_g_keySD["genMonsterNum"] )	
-	x805046_TipAllHuman(sceneId, "ÒÑÉ±ËÀÉ½¹í  "..killNum.." / "..genNum )	
+	x805046_TipAllHuman(sceneId, "å·²æ€æ­»å±±é¬¼  "..killNum.." / "..genNum )	
 end
 
 --**********************************
--- ĞÄÌø
+-- å¿ƒè·³
 --**********************************
 function x805046_OnHeartBeat(sceneId, selfId, nTick)
 
 end
 
 --**********************************
--- ³õÊ¼»¯
+-- åˆå§‹åŒ–
 --**********************************
 function x805046_OnInit(sceneId, selfId)
 	local genNum = LuaFnGetCopySceneData_Param( sceneId, x805046_g_keySD["genMonsterNum"] )	
@@ -47,34 +47,34 @@ function x805046_OnInit(sceneId, selfId)
 end
 
 --**********************************
--- É±ËÀÍæ¼Ò
+-- æ€æ­»ç©å®¶
 --**********************************
 function x805046_OnKillCharacter(sceneId, selfId, targetId)
 
 end
 
 --**********************************
--- ½øÈëÕ½¶·
+-- è¿›å…¥æˆ˜æ–—
 --**********************************
 function x805046_OnEnterCombat(sceneId, selfId, enmeyId)
 
 end
 
 --**********************************
--- ÍÑÀëÕ½¶·
+-- è„±ç¦»æˆ˜æ–—
 --**********************************
 function x805046_OnLeaveCombat(sceneId, selfId)
 
 end
 
 --**********************************
---ÌáÊ¾ËùÓĞ¸±±¾ÄÚÍæ¼Ò
+--æç¤ºæ‰€æœ‰å‰¯æœ¬å†…ç©å®¶
 --**********************************
 function x805046_TipAllHuman( sceneId, Str )
-	-- »ñµÃ³¡¾°ÀïÍ·µÄËùÓĞÈË
+	-- è·å¾—åœºæ™¯é‡Œå¤´çš„æ‰€æœ‰äºº
 	local nHumanNum = LuaFnGetCopyScene_HumanCount(sceneId)
 	
-	-- Ã»ÓĞÈËµÄ³¡¾°£¬Ê²Ã´¶¼²»×ö
+	-- æ²¡æœ‰äººçš„åœºæ™¯ï¼Œä»€ä¹ˆéƒ½ä¸åš
 	if nHumanNum < 1 then
 		return
 	end
@@ -91,12 +91,12 @@ function x805046_TipAllHuman( sceneId, Str )
 	end
 end
 
---Ëæ»úÑ¡ÔñÒ»¸öÍæ¼Ò
+--éšæœºé€‰æ‹©ä¸€ä¸ªç©å®¶
 function x805046_RandPlayer( sceneId )
-	-- »ñµÃ³¡¾°ÀïÍ·µÄËùÓĞÈË
+	-- è·å¾—åœºæ™¯é‡Œå¤´çš„æ‰€æœ‰äºº
 	local nHumanNum = LuaFnGetCopyScene_HumanCount(sceneId)
 	
-	-- Ã»ÓĞÈËµÄ³¡¾°
+	-- æ²¡æœ‰äººçš„åœºæ™¯
 	if nHumanNum < 1 then
 		return -1
 	end

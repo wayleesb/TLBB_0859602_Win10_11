@@ -1,25 +1,25 @@
---×ªĞÔµ¤NPC Áõ¶Ü
+--è½¬æ€§ä¸¹NPC åˆ˜ç›¾
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x000147_g_scriptId = 000147
 
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x000147_g_eventList={0147000, 0147001, 0147002, 0147003, 0147004, 0147005, 0147006}
 x000147_g_item_zhuanxingdan = 30900048
 
 
 x000147_g_result_msg = {
-	"#{ZXD_20080312_03}", --"ÄúÒÑ³É»éÎŞ·¨¸ü¸ÄĞÔ±ğ£¬Çë½â³ı»éÒö¹ØÏµºóÔÙÊ¹ÓÃ¸ÃÎïÆ·"
-	"#{ZXD_20080318_01}", --"¾àÀëÌ«Ô¶£¬×ªĞÔµ¤Ê¹ÓÃÊ§°Ü"
-	"#{ZXD_20080318_02}", --"Ã»ÓĞ¿ÉÓÃµÄ×ªĞÔµ¤",
-	"#{ZXD_20080318_03}", --"×é¶ÓÊ±ÎŞ·¨×ªĞÔ£¬ÇëÍË³ö×é¶Ó×´Ì¬ºóÔÙÊ¹ÓÃ",
-	"#{ZXD_20080318_04}", --"°ÚÌ¯×´Ì¬Ê±ÎŞ·¨Ê¹ÓÃ×ªĞÔµ¤",
-	"#{ZXD_20080318_05}"  --"³Ë×´Ì¬ÎŞ·¨Ê¹ÓÃ×ªĞÔµ¤"
+	"#{ZXD_20080312_03}", --"æ‚¨å·²æˆå©šæ— æ³•æ›´æ”¹æ€§åˆ«ï¼Œè¯·è§£é™¤å©šå§»å…³ç³»åå†ä½¿ç”¨è¯¥ç‰©å“"
+	"#{ZXD_20080318_01}", --"è·ç¦»å¤ªè¿œï¼Œè½¬æ€§ä¸¹ä½¿ç”¨å¤±è´¥"
+	"#{ZXD_20080318_02}", --"æ²¡æœ‰å¯ç”¨çš„è½¬æ€§ä¸¹",
+	"#{ZXD_20080318_03}", --"ç»„é˜Ÿæ—¶æ— æ³•è½¬æ€§ï¼Œè¯·é€€å‡ºç»„é˜ŸçŠ¶æ€åå†ä½¿ç”¨",
+	"#{ZXD_20080318_04}", --"æ‘†æ‘ŠçŠ¶æ€æ—¶æ— æ³•ä½¿ç”¨è½¬æ€§ä¸¹",
+	"#{ZXD_20080318_05}"  --"ä¹˜çŠ¶æ€æ— æ³•ä½¿ç”¨è½¬æ€§ä¸¹"
 }
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x000147_UpdateEventList( sceneId, selfId, targetId )
 	BeginEvent(sceneId)
@@ -31,14 +31,14 @@ function x000147_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x000147_OnDefaultEvent( sceneId, selfId,targetId )
 	x000147_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
--- ÊÂ¼ş´¦Àí
+-- äº‹ä»¶å¤„ç†
 --**********************************
 function x000147_OnEventRequest( sceneId, selfId, targetId, eventId )
 	local request_id = GetNumText()
@@ -62,7 +62,7 @@ function x000147_OnEventRequest( sceneId, selfId, targetId, eventId )
 			return
 		end
 
-		--Í¨Öª¿Í»§¶Ë¿ªÊ¼×ªĞÔÑ¡Ôñ
+		--é€šçŸ¥å®¢æˆ·ç«¯å¼€å§‹è½¬æ€§é€‰æ‹©
 		BeginUICommand(sceneId)
 			UICommand_AddInt(sceneId, targetId);
 		EndUICommand(sceneId)
@@ -78,7 +78,7 @@ function x000147_OnEventRequest( sceneId, selfId, targetId, eventId )
 		BeginUICommand(sceneId)
 			UICommand_AddInt(sceneId, targetId);
 		EndUICommand(sceneId)
-		DispatchUICommand(sceneId,selfId, 0147006) --¹Ø±ÕNPC¶Ô»°¿ò
+		DispatchUICommand(sceneId,selfId, 0147006) --å…³é—­NPCå¯¹è¯æ¡†
 		
 	elseif request_id == 0147001 then
 		BeginEvent(sceneId)
@@ -89,20 +89,20 @@ function x000147_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
--- ÇëÇóÈ·ÈÏ½çÃæ
+-- è¯·æ±‚ç¡®è®¤ç•Œé¢
 --**********************************
 function x000147_OnZhuanXingRequest( sceneId, selfId, targetId )
 	BeginEvent(sceneId)
 		AddText(sceneId,"#{ZXD_20080312_05}")
-		AddNumText( sceneId, x000147_g_scriptId, "ÊÇ", 6, 0147003)
-		AddNumText( sceneId, x000147_g_scriptId, "·ñ", 6, 0147004)		
+		AddNumText( sceneId, x000147_g_scriptId, "æ˜¯", 6, 0147003)
+		AddNumText( sceneId, x000147_g_scriptId, "å¦", 6, 0147004)		
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 end
 
 
 --**********************************
--- ¿Í»§¶Ëµ÷ÓÃº¯Êı
+-- å®¢æˆ·ç«¯è°ƒç”¨å‡½æ•°
 --**********************************
 function x000147_OnZhuanXingConfirm( sceneId, selfId, targetId, sex, hairColor, hairModel, faceModel, nFaceId)
 	print("x000147_OnZhuanXingConfirm")
@@ -116,7 +116,7 @@ function x000147_OnZhuanXingConfirm( sceneId, selfId, targetId, sex, hairColor, 
 			EndEvent(sceneId)
 			DispatchMissionTips(sceneId,selfId)
 
-			--±äĞÔÍ¬Ê±¼ÓÒ»¸öÉı¼¶ÌØĞ§
+			--å˜æ€§åŒæ—¶åŠ ä¸€ä¸ªå‡çº§ç‰¹æ•ˆ
 			LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, 18, 100 )
 			return
 		end
@@ -130,46 +130,46 @@ end
 
 
 --**********************************
--- ÊÇ·ñÂú×ã×ªĞÔÌõ¼ş
+-- æ˜¯å¦æ»¡è¶³è½¬æ€§æ¡ä»¶
 --**********************************
 function x000147_PreZhuanXingCondition( sceneId, selfId, targetId )
 	
-	--ÒÑ¾­½á»é
+	--å·²ç»ç»“å©š
 	local isMarried = LuaFnIsMarried(sceneId, selfId)
 	if isMarried == 1 then
 		return 1
 	end
 	
-	--¾àÀëÌ«Ô¶
+	--è·ç¦»å¤ªè¿œ
 	local isValidDistance = IsInDist( sceneId, selfId, targetId, 1000.0)
 	if isValidDistance <= 0 then
 		return 2
 	end
 	
-	--Ã»ÓĞºÏ·¨ÎïÆ·
+	--æ²¡æœ‰åˆæ³•ç‰©å“
 	local itemCount = LuaFnGetAvailableItemCount(sceneId, selfId, x000147_g_item_zhuanxingdan)
 	if itemCount <= 0 then
 		return 3
 	end
 	
-	--ÊÇ·ñ×é¶Ó
+	--æ˜¯å¦ç»„é˜Ÿ
 	local hasTeam = LuaFnHasTeam(sceneId, selfId)
 	if hasTeam > 0 then
 		return 4
 	end
 	
-	--ÊÇ·ñ°ÚÌ¯
+	--æ˜¯å¦æ‘†æ‘Š
 	local isStall = LuaFnIsStalling(sceneId, selfId)
 	if isStall > 0 then
 		return 5
 	end
 
-	--ÊÇ·ñÆï³Ë
+	--æ˜¯å¦éª‘ä¹˜
 	local isRiding = LuaFnIsRiding(sceneId, selfId)
 	if isRiding > 0 then
 		return 6
 	end
 	
-	--¿ÉÒÔ×ªĞÔ
+	--å¯ä»¥è½¬æ€§
 	return 0
 end

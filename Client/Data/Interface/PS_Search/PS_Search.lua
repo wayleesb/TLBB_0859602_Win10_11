@@ -42,19 +42,19 @@ function PS_Search_OnEvent(event)
 			return;
 		end
 		
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ı£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æœå’ŒNPCçš„è·ç¦»å¤§äºä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if(arg1 == "distance" and tonumber(arg2)>MAX_OBJ_DISTANCE or arg1=="destroy") then
 			g_InitiativeClose = 1;
 			this:Hide();
 
-			--È¡Ïû¹ØĞÄ
+			--å–æ¶ˆå…³å¿ƒ
 			this:CareObject(objCared, 0, "PS_Search");
 		end	
 	
 	elseif ( event == "PS_CLOSE_FIND_SHOP" )    then
 		this:Hide();
 		
-		--È¡Ïû¹ØĞÄ
+		--å–æ¶ˆå…³å¿ƒ
 		this:CareObject(objCared, 0, "PS_Search");
 
 	end
@@ -62,7 +62,7 @@ function PS_Search_OnEvent(event)
 end
 
 --===============================================
--- µã»÷Ñ¡ÔñÁĞ±í
+-- ç‚¹å‡»é€‰æ‹©åˆ—è¡¨
 --===============================================
 function PS_Search_List_Selected()
 	
@@ -71,10 +71,10 @@ function PS_Search_List_Selected()
 		return;
 	end
 	
-	if(g_CurPage == PAGE_ITEM)    then			--ÎïÆ·Ò³
+	if(g_CurPage == PAGE_ITEM)    then			--ç‰©å“é¡µ
 		PlayerShop:FindShop("item",nSelect+1);
 	
-	elseif(g_CurPage == PAGE_PET) then			--ÕäÊŞÒ³
+	elseif(g_CurPage == PAGE_PET) then			--çå…½é¡µ
 		PlayerShop:FindShop("pet",nSelect+1);
 		
 	end
@@ -88,19 +88,19 @@ function PS_Search_UpdateFrame(nPage)
 	
 	PS_Search_SetTabColor(nPage);
 	PS_Search_List:ClearListBox();
-	if(nPage == PAGE_ITEM)    then					--ÎïÆ·Ò³
-		PS_Search_List:AddItem("ÎïÆ·µê",0)
-		PS_Search_List:AddItem("±¦Ê¯µê",1)
-		PS_Search_List:AddItem("ÎäÆ÷µê",2)
-		PS_Search_List:AddItem("»¤¼×µê",3)
-		PS_Search_List:AddItem("²ÄÁÏµê",4)
+	if(nPage == PAGE_ITEM)    then					--ç‰©å“é¡µ
+		PS_Search_List:AddItem("ç‰©å“åº—",0)
+		PS_Search_List:AddItem("å®çŸ³åº—",1)
+		PS_Search_List:AddItem("æ­¦å™¨åº—",2)
+		PS_Search_List:AddItem("æŠ¤ç”²åº—",3)
+		PS_Search_List:AddItem("ææ–™åº—",4)
 		
-		PS_Search_All:SetText("È«²¿ÎïÆ·Àà");
+		PS_Search_All:SetText("å…¨éƒ¨ç‰©å“ç±»");
 
-	elseif(nPage == PAGE_PET) then 					--ÕäÊŞÒ³
-		PS_Search_List:AddItem("ÕäÊŞµê",0)
+	elseif(nPage == PAGE_PET) then 					--çå…½é¡µ
+		PS_Search_List:AddItem("çå…½åº—",0)
 
-		PS_Search_All:SetText("È«²¿ÕäÊŞÀà");
+		PS_Search_All:SetText("å…¨éƒ¨çå…½ç±»");
 		
 	end
 end
@@ -114,14 +114,14 @@ function PS_Search_ChangeTabIndex(nPage)
 end
 
 --===============================================
--- Ñ¡Ò»Àà
+-- é€‰ä¸€ç±»
 --===============================================
 function PS_Search_All_Clicked()
 	
-	if(g_CurPage == PAGE_ITEM)    then			--ÎïÆ·Ò³
+	if(g_CurPage == PAGE_ITEM)    then			--ç‰©å“é¡µ
 		PlayerShop:FindShop("item", -1);
 	
-	elseif(g_CurPage == PAGE_PET) then			--ÕäÊŞÒ³
+	elseif(g_CurPage == PAGE_PET) then			--çå…½é¡µ
 		PlayerShop:FindShop("pet", -1);
 		
 	end
@@ -129,7 +129,7 @@ function PS_Search_All_Clicked()
 end
 
 --===============================================
--- TabÉÏµÄ×ÖÌåÑÕÉ«
+-- Tabä¸Šçš„å­—ä½“é¢œè‰²
 --===============================================
 function PS_Search_SetTabColor(nPage)
 
@@ -137,11 +137,11 @@ function PS_Search_SetTabColor(nPage)
 	local noselColor = "#e010101";
 
 	if( nPage == PAGE_ITEM )		then
-		PS_Search_Check_Item:SetText(selColor.. "ÎïÆ·");
-		PS_Search_Check_Pet:SetText(noselColor.. "ÕäÊŞ");
+		PS_Search_Check_Item:SetText(selColor.. "ç‰©å“");
+		PS_Search_Check_Pet:SetText(noselColor.. "çå…½");
 	elseif( nPage == PAGE_PET )	then
-		PS_Search_Check_Item:SetText(noselColor.. "ÎïÆ·");
-		PS_Search_Check_Pet:SetText(selColor.. "ÕäÊŞ");
+		PS_Search_Check_Item:SetText(noselColor.. "ç‰©å“");
+		PS_Search_Check_Pet:SetText(selColor.. "çå…½");
 	end
 
 end
@@ -151,7 +151,7 @@ end
 --===============================================
 function PS_Search_Close_Clicked()
 	this:Hide();
-	--È¡Ïû¹ØĞÄ
+	--å–æ¶ˆå…³å¿ƒ
 	this:CareObject(objCared, 0, "PS_Search");
 	
 end

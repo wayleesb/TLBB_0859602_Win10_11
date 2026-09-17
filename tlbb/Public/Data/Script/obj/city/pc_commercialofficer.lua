@@ -1,17 +1,17 @@
---³ÇÊĞNPC
---ÉÌÒµ¹ÙÔ±
+--åŸå¸‚NPC
+--å•†ä¸šå®˜å‘˜
 
 x805017_g_scriptId = 805017
 x805017_g_BuildingID12 = 9
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x805017_g_eventList = { 600017 }
 
--- ÈÎÎñ¼¯ÊÂ¼ş ID ÁĞ±í£¬ÕâÀàÊÂ¼ş°üº¬×ÓÊÂ¼ş
+-- ä»»åŠ¡é›†äº‹ä»¶ ID åˆ—è¡¨ï¼Œè¿™ç±»äº‹ä»¶åŒ…å«å­äº‹ä»¶
 x805017_g_eventSetList = { 600017 }
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x805017_UpdateEventList( sceneId, selfId, targetId )
 	local i = 1
@@ -23,31 +23,31 @@ function x805017_UpdateEventList( sceneId, selfId, targetId )
 
 	BeginEvent( sceneId )
 		if Humanguildid == cityguildid then
-			AddText( sceneId, "    ÎáËØÒÔÌÕÖì¹«ÎªÊ¦×ğ£¬ÉúÒâÖ®µÀ£¬ÎÒÃÇĞÖµÜ¿ÉÒÔ»¥ÏàÑĞ¾¿¡£" )
+			AddText( sceneId, "    å¾ç´ ä»¥é™¶æœ±å…¬ä¸ºå¸ˆå°Šï¼Œç”Ÿæ„ä¹‹é“ï¼Œæˆ‘ä»¬å…„å¼Ÿå¯ä»¥äº’ç›¸ç ”ç©¶ã€‚" )
 			for i, eventId in x805017_g_eventList do
 				CallScriptFunction( eventId, "OnEnumerate", sceneId, selfId, targetId )
 			end
-			AddNumText( sceneId, x805017_g_scriptId, "ÊĞ¼¯ÈÎÎñ½éÉÜ", 11, 1 )
-			AddNumText( sceneId, x805017_g_scriptId, "ÉÌÒµÈ¦¹ÜÀí", 6, 3 )
-			AddNumText( sceneId, x805017_g_scriptId, "¼¯·»½éÉÜ", 11, 2 )
-			--life Ìí¼ÓÕâ¸ö½¨ÖşÎïµÄÏàÓ¦Éú»î¼¼ÄÜÑ¡Ïî
+			AddNumText( sceneId, x805017_g_scriptId, "å¸‚é›†ä»»åŠ¡ä»‹ç»", 11, 1 )
+			AddNumText( sceneId, x805017_g_scriptId, "å•†ä¸šåœˆç®¡ç†", 6, 3 )
+			AddNumText( sceneId, x805017_g_scriptId, "é›†åŠä»‹ç»", 11, 2 )
+			--life æ·»åŠ è¿™ä¸ªå»ºç­‘ç‰©çš„ç›¸åº”ç”Ÿæ´»æŠ€èƒ½é€‰é¡¹
 			CallScriptFunction( CITY_BUILDING_ABILITY_SCRIPT, "AddCityLifeAbilityOpt",sceneId, selfId, x805017_g_scriptId,x805017_g_BuildingID12,888)
 		else
-			AddText( sceneId, "    ·ÇÎÒ°ïÈË£¬ÆäĞÄ±ØÊâ£¬ÉÌ³¡ÈçÕ½³¡£¬ÎÒ»¹ÊÇ²»¶àÑÔÎªÃî¡£" )
+			AddText( sceneId, "    éæˆ‘å¸®äººï¼Œå…¶å¿ƒå¿…æ®Šï¼Œå•†åœºå¦‚æˆ˜åœºï¼Œæˆ‘è¿˜æ˜¯ä¸å¤šè¨€ä¸ºå¦™ã€‚" )
 		end
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x805017_OnDefaultEvent( sceneId, selfId, targetId )
 	x805017_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
--- ÅĞ¶ÏÄ³¸öÊÂ¼şÊÇ·ñ¿ÉÒÔÍ¨¹ı´Ë NPC Ö´ĞĞ
+-- åˆ¤æ–­æŸä¸ªäº‹ä»¶æ˜¯å¦å¯ä»¥é€šè¿‡æ­¤ NPC æ‰§è¡Œ
 --**********************************
 function x805017_IsValidEvent( sceneId, selfId, eventId )
 	local i = 1
@@ -74,13 +74,13 @@ function x805017_IsValidEvent( sceneId, selfId, eventId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x805017_OnEventRequest( sceneId, selfId, targetId, eventId )
 	if x805017_IsValidEvent( sceneId, selfId, eventId ) == 1 then
 		CallScriptFunction( eventId, "OnDefaultEvent", sceneId, selfId, targetId )
 		return
-	--life ´¦ÀíÕâ¸ö½¨ÖşÎïµÄÏàÓ¦Éú»î¼¼ÄÜÑ¡Ïî
+	--life å¤„ç†è¿™ä¸ªå»ºç­‘ç‰©çš„ç›¸åº”ç”Ÿæ´»æŠ€èƒ½é€‰é¡¹
 	elseif eventId ~= x805017_g_scriptId then
 		CallScriptFunction( CITY_BUILDING_ABILITY_SCRIPT, "OnDefaultEvent",sceneId, selfId, targetId, eventId, x805017_g_scriptId, x805017_g_BuildingID12 )
 		return
@@ -97,12 +97,12 @@ function x805017_OnEventRequest( sceneId, selfId, targetId, eventId )
 		DispatchEventList( sceneId, selfId, targetId )
 	elseif GetNumText() == 3 then
 		BeginEvent(sceneId)
-			AddText( sceneId, "Õâ¸ö¹¦ÄÜ¼´½«¿ª·Å" )
+			AddText( sceneId, "è¿™ä¸ªåŠŸèƒ½å³å°†å¼€æ”¾" )
 		EndEvent(sceneId)
 		DispatchEventList( sceneId, selfId, targetId )
 	elseif GetNumText() == 888 then
 		BeginEvent(sceneId)
-		--life Ìí¼ÓÕâ¸ö½¨ÖşÎïµÄÏàÓ¦Éú»î¼¼ÄÜÑ¡Ïî
+		--life æ·»åŠ è¿™ä¸ªå»ºç­‘ç‰©çš„ç›¸åº”ç”Ÿæ´»æŠ€èƒ½é€‰é¡¹
 		CallScriptFunction( CITY_BUILDING_ABILITY_SCRIPT, "OnEnumerate",sceneId, selfId, targetId, x805017_g_BuildingID12 )
 		EndEvent(sceneId)
 		DispatchEventList( sceneId, selfId, targetId )
@@ -110,7 +110,7 @@ function x805017_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x805017_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 	if x805017_IsValidEvent( sceneId, selfId, missionScriptId ) == 1 then
@@ -118,9 +118,9 @@ function x805017_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 		if ret > 0 then
 			CallScriptFunction( missionScriptId, "OnAccept", sceneId, selfId, targetId )
 		elseif ret == -1 then
-			x805017_NotifyFailTips( sceneId, selfId, "ÄãÏÖÔÚ²»ÄÜÁìÈ¡Õâ¸öÈÎÎñ" )
+			x805017_NotifyFailTips( sceneId, selfId, "ä½ ç°åœ¨ä¸èƒ½é¢†å–è¿™ä¸ªä»»åŠ¡" )
 		elseif ret == -2 then
-			x805017_NotifyFailTips( sceneId, selfId, "ÎŞ·¨½ÓÊÜ¸ü¶àÈÎÎñ" )
+			x805017_NotifyFailTips( sceneId, selfId, "æ— æ³•æ¥å—æ›´å¤šä»»åŠ¡" )
 		end
 
 		return
@@ -128,7 +128,7 @@ function x805017_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x805017_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 	if x805017_IsValidEvent( sceneId, selfId, missionScriptId ) == 1 then
@@ -138,7 +138,7 @@ function x805017_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¼ÌĞø£¨ÒÑ¾­½ÓÁËÈÎÎñ£©
+--ç»§ç»­ï¼ˆå·²ç»æ¥äº†ä»»åŠ¡ï¼‰
 --**********************************
 function x805017_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 	if x805017_IsValidEvent( sceneId, selfId, missionScriptId ) == 1 then
@@ -148,7 +148,7 @@ function x805017_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---Ìá½»ÒÑ×öÍêµÄÈÎÎñ
+--æäº¤å·²åšå®Œçš„ä»»åŠ¡
 --**********************************
 function x805017_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, selectRadioId )
 	if x805017_IsValidEvent( sceneId, selfId, missionScriptId ) == 1 then
@@ -158,7 +158,7 @@ function x805017_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 end
 
 --**********************************
---ËÀÍöÊÂ¼ş
+--æ­»äº¡äº‹ä»¶
 --**********************************
 function x805017_OnDie( sceneId, selfId, killerId )
 end

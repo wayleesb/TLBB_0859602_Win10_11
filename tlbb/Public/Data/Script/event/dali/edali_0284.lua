@@ -1,6 +1,6 @@
 			
 --BUS
---´óÀíÄÏÃÅ·ÉÍù¶«ÃÅ
+--å¤§ç†å—é—¨é£å¾€ä¸œé—¨
 
 x210284_g_ScriptId = 210284
 x210284_g_busGuilList = {1000003, 1000004}
@@ -8,33 +8,33 @@ x210284_g_busGuilList = {1000003, 1000004}
 
 function x210284_OnDefaultEvent( sceneId, selfId, targetId )
 	local bSucceeded = 0;
-	strText = "ÎŞ¿ÉÓÃ×øÆï£¬ÇëÉÔºò";
+	strText = "æ— å¯ç”¨åéª‘ï¼Œè¯·ç¨å€™";
 	for i, busGuid in x210284_g_busGuilList do
 		busId = LuaFnBusGetObjIDByGUID(sceneId, busGuid);
 		if busId then
 			if busId ~= -1 then
 				ret = LuaFnBusAddPassenger_Shuttle(sceneId, busId, selfId, targetId, 0);
 				if ret == OR_OK then
-					strText = "ÇëÉÔºò£¬ÂíÉÏÆğ·É"
+					strText = "è¯·ç¨å€™ï¼Œé©¬ä¸Šèµ·é£"
 					bSucceeded = 1;
 					break
 				elseif ret == OR_BUS_PASSENGERFULL then
-					strText = "×øÆïÒÑÂú£¬Çë³Ë×øÏÂÒ»°à¡£"
+					strText = "åéª‘å·²æ»¡ï¼Œè¯·ä¹˜åä¸‹ä¸€ç­ã€‚"
 					break
 				elseif ret == OR_BUS_HASMOUNT then
-					strText = "Äú²»ÄÜÔÚ×øÆïÉÏÖ´ĞĞ´Ë²Ù×÷¡£"
+					strText = "æ‚¨ä¸èƒ½åœ¨åéª‘ä¸Šæ‰§è¡Œæ­¤æ“ä½œã€‚"
 					break
 				elseif ret == OR_BUS_HASPET then
-					strText = "Äú²»ÄÜÔÚĞ¯´øÓĞÕäÊŞµÄÊ±ºòÖ´ĞĞ´Ë²Ù×÷¡£"
+					strText = "æ‚¨ä¸èƒ½åœ¨æºå¸¦æœ‰çå…½çš„æ—¶å€™æ‰§è¡Œæ­¤æ“ä½œã€‚"
 					break
 				elseif ret == OR_BUS_CANNOT_TEAM_FOLLOW then
-					strText = "Äú²»ÄÜÔÚ×é¶Ó¸úËæÊ±Ö´ĞĞ´Ë²Ù×÷¡£"
+					strText = "æ‚¨ä¸èƒ½åœ¨ç»„é˜Ÿè·Ÿéšæ—¶æ‰§è¡Œæ­¤æ“ä½œã€‚"
 					break
 				elseif ret == OR_BUS_CANNOT_DRIDE then
-					strText = "Äú²»ÄÜÔÚË«ÈËÆï³ËÊ±Ö´ĞĞ´Ë²Ù×÷¡£"
+					strText = "æ‚¨ä¸èƒ½åœ¨åŒäººéª‘ä¹˜æ—¶æ‰§è¡Œæ­¤æ“ä½œã€‚"
 					break
 				elseif ret == OR_BUS_CANNOT_CHANGE_MODEL then
-					strText = "Äú²»ÄÜÔÚ±äÉíÊ±Ö´ĞĞ´Ë²Ù×÷¡£"
+					strText = "æ‚¨ä¸èƒ½åœ¨å˜èº«æ—¶æ‰§è¡Œæ­¤æ“ä½œã€‚"
 					break
 				else
 				end
@@ -58,11 +58,11 @@ end
 
 --**********************************
 
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 
 --**********************************
 
 function x210284_OnEnumerate( sceneId, selfId, targetId )
-	AddNumText(sceneId, x210284_g_ScriptId, "·ÉÍù¶«ÃÅ", 9, -1);
+	AddNumText(sceneId, x210284_g_ScriptId, "é£å¾€ä¸œé—¨", 9, -1);
 end
 

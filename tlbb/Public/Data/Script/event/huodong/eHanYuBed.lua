@@ -1,17 +1,17 @@
---����
+--寒玉床
 
 
---�ű���
+--脚本号
 x808072_g_scriptId = 808072
 
-x808072_g_NoRMBBuffID = 5901	--��RMB�һ���buff��ID....
-x808072_g_RMBBuffID = 5902		--RMB�һ���buff��ID....
-x808072_g_SpouseBuffID = 5704 --���޹һ�buff
+x808072_g_NoRMBBuffID = 5901	--非RMB挂机的buff的ID....
+x808072_g_RMBBuffID = 5902		--RMB挂机的buff的ID....
+x808072_g_SpouseBuffID = 5704 --夫妻挂机buff
 
-x808072_g_NormalExpBuffID = 5905	--��ͨ ��þ������Ч....
-x808072_g_MoreExpBuffID = 5904		--���� ��þ������Ч....
+x808072_g_NormalExpBuffID = 5905	--普通 获得经验的特效....
+x808072_g_MoreExpBuffID = 5904		--暴击 获得经验的特效....
 
-x808072_g_MaxAddExpCount = 60		--��ҹ�һ�λ����Ի�þ���Ĵ���....(��ֵ����)
+x808072_g_MaxAddExpCount = 60		--玩家挂一次机可以获得经验的次数....(阀值功能)
 
 x808072_g_ExpTbl = {
 
@@ -57,7 +57,7 @@ function x808072_OnSceneTimer(sceneId)
 end
 
 --**********************************
--- �һ��Ӿ����߼�
+-- 挂机加经验逻辑
 --**********************************
 function x808072_DoHanYuLogic( sceneId, selfId )
 
@@ -69,7 +69,7 @@ function x808072_DoHanYuLogic( sceneId, selfId )
 		return
 	end
 
-	--�����ҵĹһ�����....
+	--获得玩家的挂机类型....
 	local GuaJiType = 0
 	if LuaFnHaveImpactOfSpecificDataIndex( sceneId, selfId, x808072_g_NoRMBBuffID ) == 1 then
 		GuaJiType = 1
@@ -83,7 +83,7 @@ function x808072_DoHanYuLogic( sceneId, selfId )
 		return
 	end
 
-	--��ֵ�߼�....������һ�þ���Ĵ���....��˫���յ�����....
+	--阀值逻辑....限制玩家获得经验的次数....起到双保险的作用....
 	local CanAddExpCount = GetMissionData( sceneId, selfId, MD_HANYUBED_CANADDEXP_COUNT )
 	if CanAddExpCount <= 40 then
 		return
@@ -91,13 +91,13 @@ function x808072_DoHanYuLogic( sceneId, selfId )
 		SetMissionData( sceneId, selfId, MD_HANYUBED_CANADDEXP_COUNT, CanAddExpCount-1 )
 	end
 
-	--��þ���....
+	--获得经验....
 	local IsMoreExp = 0
 	local CurLevel = LuaFnGetLevel( sceneId, selfId )
 	local CurExp = x808072_g_ExpTbl[CurLevel]
 	if CurExp and CurExp > 0 then
 
-		--RMB�һ���2������....������50%���ʸ�4������....
+		--RMB挂机给2倍经验....并且有50%几率给4倍经验....
 		if (2 == GuaJiType) or (3 == GuaJiType) then
 			if random(100) <= 50 then
 				CurExp = CurExp * 4
@@ -117,7 +117,7 @@ function x808072_DoHanYuLogic( sceneId, selfId )
 
 	end
 
-	--����þ����buff....
+	--给获得经验的buff....
 	if 1 == IsMoreExp then
 		LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, x808072_g_MoreExpBuffID, 0)
 	else
@@ -127,38 +127,38 @@ function x808072_DoHanYuLogic( sceneId, selfId )
 end
 
 --**********************************
--- ���ʹ�����ʱ��ص����ӿ�
+-- 玩家使用书的时候回调本接口
 --**********************************
 function x808072_OnPlayerUseHanYuBook( sceneId, selfId )
 
-	--���ø���ҿ��Ի��60�ξ���....
+	--设置该玩家可以获得60次经验....
 	SetMissionData( sceneId, selfId, MD_HANYUBED_CANADDEXP_COUNT, x808072_g_MaxAddExpCount + 40 )
 
 end
 
 --**********************************
--- RMB�һ�buff������ʱ��ص����ӿ�
+-- RMB挂机buff结束的时候回调本接口
 --**********************************
 function x808072_OnImpactFadeOut( sceneId, selfId, impactId )
 
-	--����....
-	--local str = format("#Y�ֳ���#P��#W#{_INFOUSR%s}#P��#G�����#P��ǧ�꺮�����˹�������ʮ���ӡ��ڲ�֪����֮�䣬�����Ѿ�ͻ���ͽ���Զ���������ܱ��⣡", GetName(sceneId,selfId) )
+	--公告....
+	--local str = format("#Y林朝雄#P：#W#{_INFOUSR%s}#P在#G寒玉谷#P的千年寒玉床上运功修行三十分钟。在不知不觉之间，功力已经突飞猛进，远非昔日所能比拟！", GetName(sceneId,selfId) )
 	--BroadMsgByChatPipe(sceneId, selfId, str, 4)
 
 end
 
 --**********************************
--- ����ں�����ʰȡ��������Ʒʱ�ص����ӿ�
+-- 玩家在寒玉床中拾取宝箱中物品时回调本接口
 --**********************************
 function x808072_OnPlayerPickUpItemInHanYuBed( sceneId, selfId, itemId, bagidx )
 
-	--����....
+	--公告....
 	if itemId == 30501148 or itemId == 30501149 or itemId ==30501150 or itemId == 30700200 or itemId == 30505178 then
 
 		local playerName = GetName(sceneId, selfId)
 		local transfer = GetBagItemTransfer(sceneId,selfId,bagidx)
 
-		local message = format("#{_INFOUSR%s}#P��#G���ݣ�178��129���ֳ���#P��ָ��������#G�����#P���������书�����ͬʱ������ļ�һ��#{_INFOMSG%s}#P��", playerName, transfer )
+		local message = format("#{_INFOUSR%s}#P在#G苏州（178，129）林朝雄#P的指引下来到#G寒玉谷#P中修炼，武功大进的同时还意外的捡到一个#{_INFOMSG%s}#P。", playerName, transfer )
 		BroadMsgByChatPipe(sceneId, selfId, message, 4)
 
 	end
@@ -166,7 +166,7 @@ function x808072_OnPlayerPickUpItemInHanYuBed( sceneId, selfId, itemId, bagidx )
 end
 
 --**********************************
--- ��ȡĳ�ȼ��ľ���
+-- 获取某等级的经验
 --**********************************
 function x808072_GetPreExpOfThisLevel( sceneId, level )
 

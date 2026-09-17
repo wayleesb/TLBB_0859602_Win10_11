@@ -1,8 +1,8 @@
-;Ò»¶¨¼¸ÂÊÊ¹ÓÃ¹°Öí£¬ÄÚÍâ¹¥½µµÍ8000µã
+;ä¸€å®šå‡ çŽ‡ä½¿ç”¨æ‹±çŒªï¼Œå†…å¤–æ”»é™ä½Ž8000ç‚¹
 [common]
 [commonend]
 
-;×¢ÒâÎïÀí¹¥»÷¼¼ÄÜÓÅÏÈ¼¶Ó¦¸Ã±ÈÔ¶³Ì¼¼ÄÜÓÅÏÈ¼¶¸ß
+;æ³¨æ„ç‰©ç†æ”»å‡»æŠ€èƒ½ä¼˜å…ˆçº§åº”è¯¥æ¯”è¿œç¨‹æŠ€èƒ½ä¼˜å…ˆçº§é«˜
 [skill]
 0:if(AIS_IsCanSkill(0)=1){AIS_ToSkill(0);AIS_SetTimes(-1);AIS_SetPRI(30);}
 1:if(AIS_GetAIState()=SATTACK&AIS_IsCanSkill(643)=1&AIS_Rand()<30){AIS_ToSkill(643);AIS_SetTimes(-1);AIS_SetPRI(34);}

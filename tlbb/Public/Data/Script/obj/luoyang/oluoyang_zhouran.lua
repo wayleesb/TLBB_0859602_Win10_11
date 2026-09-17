@@ -1,11 +1,11 @@
---ÂåÑôNPC
---ÖÜÈ»
---ÆÕÍ¨
+--æ´›é˜³NPC
+--å‘¨ç„¶
+--æ™®é€š
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x000154_g_scriptId = 000154
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x000154_g_eventList={402047}
 
 x000154_g_ExchGoodsName={"#{BHXZ_081211_4}","#{BHXZ_081211_5}","#{BHXZ_081211_6}","#{BHXZ_081211_7}"}
@@ -14,31 +14,31 @@ x000154_g_ExchGoodsIndex={30008018,30008005,30008004,30900014}
 
 x000154_g_MenpaiName={"#{BHXZ_081211_20}","#{BHXZ_081211_21}","#{BHXZ_081211_22}","#{BHXZ_081211_23}","#{BHXZ_081211_24}",
 											"#{BHXZ_081211_25}","#{BHXZ_081211_26}","#{BHXZ_081211_27}","#{BHXZ_081211_28}"}
-x000154_g_MenpaiWantHonour = 5000 --ÃÅÅÉÊ±×°ĞèÒªµÄÈÙÓş
+x000154_g_MenpaiWantHonour = 5000 --é—¨æ´¾æ—¶è£…éœ€è¦çš„è£èª‰
 x000154_g_MenpaiGoodsIndex={10124142,10124143,10124144,10124145,10124146,
 														10124147,10124148,10124149,10124150}
 
-x000154_g_WantHonour = 100 --ĞèÒªµÄÈÙÓş
-x000154_g_GiveBanggong = 50 --¸øµÄ°ï¹±
+x000154_g_WantHonour = 100 --éœ€è¦çš„è£èª‰
+x000154_g_GiveBanggong = 50 --ç»™çš„å¸®è´¡
 
-x000154_g_BuyLuoyangMoney = 10000000 --1000½ğ
+x000154_g_BuyLuoyangMoney = 10000000 --1000é‡‘
 
-x000154_g_LuoyangOwnerIndex = 53 --ÂåÑô³Ç¹éÊô°ïÅÉIDÔÚGlobalDataÀïÃæµÄË÷Òı
-x000154_g_BaseGuildIndex = 10000 --°ïÅÉIDµÄ»ù´¡Öµ£¬ÒòÎªGlobalDataÀïÃæ³õÊ¼ÖµÊÇ0£¬¶ø0ÊÇºÏ·¨°ïÅÉID£¬Òò´ËÎŞ·¨ÅĞ¶ÏÊÇ·ñÓĞÈËÒÑ¾­ÂòÁË¡£°ïÅÉID¼ÓÉÏÒ»¸ö»ù´¡Öµ£¬ÕâÑù¿ÉÒÔÓÃ0À´ÅĞ¶ÏÊÇ·ñ¹ºÂò
+x000154_g_LuoyangOwnerIndex = 53 --æ´›é˜³åŸå½’å±å¸®æ´¾IDåœ¨GlobalDataé‡Œé¢çš„ç´¢å¼•
+x000154_g_BaseGuildIndex = 10000 --å¸®æ´¾IDçš„åŸºç¡€å€¼ï¼Œå› ä¸ºGlobalDataé‡Œé¢åˆå§‹å€¼æ˜¯0ï¼Œè€Œ0æ˜¯åˆæ³•å¸®æ´¾IDï¼Œå› æ­¤æ— æ³•åˆ¤æ–­æ˜¯å¦æœ‰äººå·²ç»ä¹°äº†ã€‚å¸®æ´¾IDåŠ ä¸Šä¸€ä¸ªåŸºç¡€å€¼ï¼Œè¿™æ ·å¯ä»¥ç”¨0æ¥åˆ¤æ–­æ˜¯å¦è´­ä¹°
 
---³ÆºÅ½±Àø
-x000154_g_PrizeTitle = {AwardPos = 18, SetPos = 42, Index = 255}--½±ÀøµÄË÷Òı(½Å±¾º¯ÊıÖĞµÄcaseË÷Òı)£¬ÉèÖÃÎ»ÖÃµÄË÷Òı(_TITLEÃ¶¾ÙÖĞµÄÖµ)£¬³ÆºÅË÷Òı(CharTitle.txt±íÖĞµÄË÷Òı)
+--ç§°å·å¥–åŠ±
+x000154_g_PrizeTitle = {AwardPos = 18, SetPos = 42, Index = 255}--å¥–åŠ±çš„ç´¢å¼•(è„šæœ¬å‡½æ•°ä¸­çš„caseç´¢å¼•)ï¼Œè®¾ç½®ä½ç½®çš„ç´¢å¼•(_TITLEæšä¸¾ä¸­çš„å€¼)ï¼Œç§°å·ç´¢å¼•(CharTitle.txtè¡¨ä¸­çš„ç´¢å¼•)
 
-x000154_g_LuoyangCityMoneyJZ = 200000 --ÁìÈ¡µÄÂåÑô³ÇÊĞ¹¤×Ê 20½ğ½»×Ó
+x000154_g_LuoyangCityMoneyJZ = 200000 --é¢†å–çš„æ´›é˜³åŸå¸‚å·¥èµ„ 20é‡‘äº¤å­
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x000154_UpdateEventList( sceneId, selfId, targetId )
 
 	BeginEvent(sceneId)
 		AddText(sceneId,"#{BHXZ_081103_114}")
-		--AddNumText(sceneId,x000154_g_scriptId,"ÖÎÁÆ",6,0)
+		--AddNumText(sceneId,x000154_g_scriptId,"æ²»ç–—",6,0)
 	--EndEvent(sceneId)
 	for i, eventId in x000154_g_eventList do
 		CallScriptFunction( eventId, "OnEnumerate",sceneId, selfId, targetId )
@@ -47,9 +47,9 @@ function x000154_UpdateEventList( sceneId, selfId, targetId )
 	AddNumText(sceneId, x000154_g_scriptId, "#{BHXZ_081211_1}", 6, 10);
 	AddNumText(sceneId, x000154_g_scriptId, "#{BHXZ_081211_2}", 11, 11);
 	
-	--AddNumText(sceneId, x000154_g_scriptId, "¹ºÂòÂåÑô³Ç", 6, 13); --¹ºÂòÂåÑô³Ç
-	--AddNumText(sceneId, x000154_g_scriptId, "ÁìÈ¡³ÇÖ÷³ÆºÅ", 6, 14); --ÁìÈ¡³ÇÖ÷³ÆºÅ
-	--AddNumText(sceneId, x000154_g_scriptId, "ÁìÈ¡³ÇÊĞ¹¤×Ê", 6, 15); --ÁìÈ¡³ÇÊĞ¹¤×Ê
+	--AddNumText(sceneId, x000154_g_scriptId, "è´­ä¹°æ´›é˜³åŸ", 6, 13); --è´­ä¹°æ´›é˜³åŸ
+	--AddNumText(sceneId, x000154_g_scriptId, "é¢†å–åŸä¸»ç§°å·", 6, 14); --é¢†å–åŸä¸»ç§°å·
+	--AddNumText(sceneId, x000154_g_scriptId, "é¢†å–åŸå¸‚å·¥èµ„", 6, 15); --é¢†å–åŸå¸‚å·¥èµ„
 	
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
@@ -57,14 +57,14 @@ function x000154_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x000154_OnDefaultEvent( sceneId, selfId,targetId )
 	x000154_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x000154_OnEventRequest( sceneId, selfId, targetId, eventId )
 
@@ -84,13 +84,13 @@ function x000154_OnEventRequest( sceneId, selfId, targetId, eventId )
 		return
 	end
 	
-	--½éÉÜ
+	--ä»‹ç»
 	if key == 11 then
 		x000154_NotifyFailBox( sceneId, selfId, targetId, "#{BHXZ_081211_31}" )
 		return
 	end
 	
-	--È¡Ïû
+	--å–æ¶ˆ
 	if key == 12 then
 		BeginUICommand( sceneId )
 			UICommand_AddInt( sceneId, targetId )
@@ -99,7 +99,7 @@ function x000154_OnEventRequest( sceneId, selfId, targetId, eventId )
 		return
 	end
 	
-	--¹ºÂòÂåÑô³Ç
+	--è´­ä¹°æ´›é˜³åŸ
 	if key == 13 then
 --		if x000154_CheckBuyLuoyang(sceneId, selfId, targetId) == 1 then
 --			if CostMoney(sceneId, selfId, x000154_g_BuyLuoyangMoney) == 1 then
@@ -110,14 +110,14 @@ function x000154_OnEventRequest( sceneId, selfId, targetId, eventId )
 --				BroadMsgByChatPipe(sceneId, selfId, msg, 4)
 --				x000154_NotifyFailBox(sceneId, selfId, targetId, "#{BHXZ_090112_06}")
 --			else
---				x000154_NotifyFailBox(sceneId, selfId, targetId, "    ¿Û³ı½ğÇ®Ê§°Ü£¡")
+--				x000154_NotifyFailBox(sceneId, selfId, targetId, "    æ‰£é™¤é‡‘é’±å¤±è´¥ï¼")
 --			end
 --		end
 		
 		return
 	end
 	
-	--ÁìÈ¡³ÇÖ÷³ÆºÅ
+	--é¢†å–åŸä¸»ç§°å·
 	if key == 14 then
 --		if x000154_CheckGetCityTitle(sceneId, selfId, targetId) == 1 then
 --			LuaFnAwardTitle( sceneId, selfId, x000154_g_PrizeTitle.AwardPos, x000154_g_PrizeTitle.Index)
@@ -130,7 +130,7 @@ function x000154_OnEventRequest( sceneId, selfId, targetId, eventId )
 		return
 	end
 	
-	--ÁìÈ¡³ÇÊĞ¹¤×Ê
+	--é¢†å–åŸå¸‚å·¥èµ„
 	if key == 15 then
 --		if x000154_CheckGetMoneyJZ(sceneId, selfId, targetId) == 1 then
 --			local nowDate = GetDayTime()
@@ -143,19 +143,19 @@ function x000154_OnEventRequest( sceneId, selfId, targetId, eventId )
 		return
 	end
 	
-	--ËÄÖÖÎïÆ·µÄÈ·¶¨½çÃæ
+	--å››ç§ç‰©å“çš„ç¡®å®šç•Œé¢
 	if key == 100 or key == 200 or key == 300 or key == 400 then
 		key = floor(key/100)
 		BeginEvent(sceneId)
 			AddText(sceneId,"#{BHXZ_081211_13}"..x000154_g_ExchGoodsName[key].."#{BHXZ_081211_10}"..x000154_g_ConsumeHonour[key].."#{BHXZ_081211_14}")
-			AddNumText(sceneId, x000154_g_scriptId, "#{BHXZ_081211_15}", 8, key*1000 )--È·¶¨
-			AddNumText(sceneId, x000154_g_scriptId, "#{BHXZ_081211_16}", 8, 12 )--È¡Ïû
+			AddNumText(sceneId, x000154_g_scriptId, "#{BHXZ_081211_15}", 8, key*1000 )--ç¡®å®š
+			AddNumText(sceneId, x000154_g_scriptId, "#{BHXZ_081211_16}", 8, 12 )--å–æ¶ˆ
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 		return
 	end
 	
-	--ËÄÖÖÎïÆ·¶Ò»»
+	--å››ç§ç‰©å“å…‘æ¢
 	if key == 1000 or key == 2000 or key == 3000 or key == 4000 then
 		key = floor(key/1000)
 		local Honour = GetHonour(sceneId,selfId)
@@ -165,7 +165,7 @@ function x000154_OnEventRequest( sceneId, selfId, targetId, eventId )
 			return
 		end
 		
-		--¼ì²é±³°ü¿Õ¼ä
+		--æ£€æŸ¥èƒŒåŒ…ç©ºé—´
 		BeginAddItem(sceneId)
 			AddItem(sceneId, x000154_g_ExchGoodsIndex[key], 1)
 		local bBagOk = EndAddItem(sceneId, selfId)
@@ -192,7 +192,7 @@ function x000154_OnEventRequest( sceneId, selfId, targetId, eventId )
 		return
 	end
 	
-	--ÃÅÅÉÊ±×°Ñ¡Ôñ½çÃæ
+	--é—¨æ´¾æ—¶è£…é€‰æ‹©ç•Œé¢
 	if key == 500 then
 		BeginEvent(sceneId)
 			AddText(sceneId,"#{BHXZ_081211_19}")
@@ -204,19 +204,19 @@ function x000154_OnEventRequest( sceneId, selfId, targetId, eventId )
 		return
 	end
 	
-	--ÃÅÅÉÊ±×°È·¶¨½çÃæ
+	--é—¨æ´¾æ—¶è£…ç¡®å®šç•Œé¢
 	if key >= 510 and key < 600 then
 		local type = floor((key-500)/10)
 		BeginEvent(sceneId)
 			AddText(sceneId,"#{BHXZ_081211_13}"..x000154_g_MenpaiName[type].."#{BHXZ_081211_30}")
-			AddNumText(sceneId, x000154_g_scriptId, "#{BHXZ_081211_15}", 8, 700+type*10 )--È·¶¨
-			AddNumText(sceneId, x000154_g_scriptId, "#{BHXZ_081211_16}", 8, 12 )--È¡Ïû
+			AddNumText(sceneId, x000154_g_scriptId, "#{BHXZ_081211_15}", 8, 700+type*10 )--ç¡®å®š
+			AddNumText(sceneId, x000154_g_scriptId, "#{BHXZ_081211_16}", 8, 12 )--å–æ¶ˆ
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 		return
 	end
 	
-	--°ï¹±¶Ò»»
+	--å¸®è´¡å…‘æ¢
 	if key == 600 then
 		local Honour = GetHonour(sceneId,selfId)
 		
@@ -249,7 +249,7 @@ function x000154_OnEventRequest( sceneId, selfId, targetId, eventId )
 		return
 	end
 	
-	--ÃÅÅÉÊ±×°¶Ò»»
+	--é—¨æ´¾æ—¶è£…å…‘æ¢
 	if key >= 710 and key < 800 then
 		local type = floor((key-700)/10)
 		local Honour = GetHonour(sceneId,selfId)
@@ -259,7 +259,7 @@ function x000154_OnEventRequest( sceneId, selfId, targetId, eventId )
 			return
 		end
 		
-		--¼ì²é±³°ü¿Õ¼ä
+		--æ£€æŸ¥èƒŒåŒ…ç©ºé—´
 		BeginAddItem(sceneId)
 			AddItem(sceneId, x000154_g_MenpaiGoodsIndex[type], 1)
 		local bBagOk = EndAddItem(sceneId, selfId)
@@ -288,7 +288,7 @@ function x000154_OnEventRequest( sceneId, selfId, targetId, eventId )
 	
 	for i, findId in x000154_g_eventList do
 		if eventId == findId then
-			CallScriptFunction( eventId, "OnDefaultEvent",sceneId, selfId, targetId, GetNumText() )	--GetNumText()ÊÇaddnumtextÖĞ×îºóµÄ±äÁ¿
+			CallScriptFunction( eventId, "OnDefaultEvent",sceneId, selfId, targetId, GetNumText() )	--GetNumText()æ˜¯addnumtextä¸­æœ€åçš„å˜é‡
 			return
 		end
 	end
@@ -296,7 +296,7 @@ function x000154_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x000154_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x000154_g_eventList do
@@ -311,10 +311,10 @@ function x000154_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x000154_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
-	--¾Ü¾øÖ®ºó£¬Òª·µ»ØNPCµÄÊÂ¼şÁĞ±í
+	--æ‹’ç»ä¹‹åï¼Œè¦è¿”å›NPCçš„äº‹ä»¶åˆ—è¡¨
 	for i, findId in x000154_g_eventList do
 		if missionScriptId == findId then
 			x000154_UpdateEventList( sceneId, selfId, targetId )
@@ -324,7 +324,7 @@ function x000154_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¼ÌĞø£¨ÒÑ¾­½ÓÁËÈÎÎñ£©
+--ç»§ç»­ï¼ˆå·²ç»æ¥äº†ä»»åŠ¡ï¼‰
 --**********************************
 function x000154_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x000154_g_eventList do
@@ -336,7 +336,7 @@ function x000154_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---Ìá½»ÒÑ×öÍêµÄÈÎÎñ
+--æäº¤å·²åšå®Œçš„ä»»åŠ¡
 --**********************************
 function x000154_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, selectRadioId )
 	for i, findId in x000154_g_eventList do
@@ -348,7 +348,7 @@ function x000154_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 end
 
 --**********************************
--- ¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+-- å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x000154_NotifyFailBox( sceneId, selfId, targetId, msg )
 	BeginEvent( sceneId )
@@ -358,7 +358,7 @@ function x000154_NotifyFailBox( sceneId, selfId, targetId, msg )
 end
 
 --**********************************
--- ÆÁÄ»ÖĞ¼äĞÅÏ¢ÌáÊ¾
+-- å±å¹•ä¸­é—´ä¿¡æ¯æç¤º
 --**********************************
 function x000154_NotifyFailTips( sceneId, selfId, Tip )
 	BeginEvent( sceneId )
@@ -368,33 +368,33 @@ function x000154_NotifyFailTips( sceneId, selfId, Tip )
 end
 
 --**********************************
--- ÊÇ·ñÄÜ¹ºÂòÂåÑô³Ç
+-- æ˜¯å¦èƒ½è´­ä¹°æ´›é˜³åŸ
 --**********************************
 function x000154_CheckBuyLuoyang( sceneId, selfId, targetId )
-	--°²È«Ê±¼ä
+	--å®‰å…¨æ—¶é—´
 	if IsPilferLockFlag(sceneId, selfId) <= 0 then
 		return 0
 	end
 	
-	--ÊÇ·ñ¾ßÓĞ°ï»á
+	--æ˜¯å¦å…·æœ‰å¸®ä¼š
 	if GetHumanGuildID(sceneId, selfId) == -1 then
 		x000154_NotifyFailTips(sceneId, selfId, "#{BHXZ_090112_01}")
 		return 0
 	end
 	
-	--ÊÇ·ñ¾ßÓĞ°ï»á³ÇÊĞ
+	--æ˜¯å¦å…·æœ‰å¸®ä¼šåŸå¸‚
 	if CityGetSelfCityID(sceneId, selfId) == -1 then
 		x000154_NotifyFailTips(sceneId, selfId, "#{BHXZ_090112_02}")
 		return 0
 	end
 	
-	--ÂåÑô³ÇÒÑ¾­±»Õ¼¾İ
+	--æ´›é˜³åŸå·²ç»è¢«å æ®
 	if LuaFnGetWorldGlobalData(x000154_g_LuoyangOwnerIndex) > 0 then
 		x000154_NotifyFailTips(sceneId, selfId, "#{BHXZ_090112_04}")
 		return 0
 	end
 	
-	--½ğÇ®ÊÇ·ñĞ¡ÓÚ1000
+	--é‡‘é’±æ˜¯å¦å°äº1000
 	if GetMoney(sceneId, selfId) < x000154_g_BuyLuoyangMoney then
 		x000154_NotifyFailTips(sceneId, selfId, "#{BHXZ_090112_05}")
 		return 0
@@ -404,28 +404,28 @@ function x000154_CheckBuyLuoyang( sceneId, selfId, targetId )
 end
 
 --**********************************
--- ÊÇ·ñÁìÈ¡³ÇÖ÷³ÆºÅ
+-- æ˜¯å¦é¢†å–åŸä¸»ç§°å·
 --**********************************
 function x000154_CheckGetCityTitle( sceneId, selfId, targetId )
-	--°²È«Ê±¼ä
+	--å®‰å…¨æ—¶é—´
 	if IsPilferLockFlag(sceneId, selfId) <= 0 then
 		return 0
 	end
 	
-	--ÊÇ·ñ¾ßÓĞ°ï»á
+	--æ˜¯å¦å…·æœ‰å¸®ä¼š
 	local GuildID = GetHumanGuildID(sceneId, selfId)
 	if GuildID == -1 then
 		x000154_NotifyFailTips(sceneId, selfId, "#{BHXZ_090112_07}")
 		return 0
 	end
 	
-	--ÂåÑô³ÇµÄÖ÷°ï»á
+	--æ´›é˜³åŸçš„ä¸»å¸®ä¼š
 	if (GuildID+x000154_g_BaseGuildIndex) ~= LuaFnGetWorldGlobalData(x000154_g_LuoyangOwnerIndex) then
 		x000154_NotifyFailTips(sceneId, selfId, "#{BHXZ_090112_08}")
 		return 0
 	end
 	
-	--ÊÇ·ñÒÑ¾­ÁìÈ¡¹ı³ÇÖ÷³ÆºÅ
+	--æ˜¯å¦å·²ç»é¢†å–è¿‡åŸä¸»ç§°å·
 	if GetTitle(sceneId, selfId, x000154_g_PrizeTitle.AwardPos) == x000154_g_PrizeTitle.Index then
 		x000154_NotifyFailTips(sceneId, selfId, "#{BHXZ_090112_09}")
 		return 0
@@ -435,34 +435,34 @@ function x000154_CheckGetCityTitle( sceneId, selfId, targetId )
 end
 
 --**********************************
--- ÊÇ·ñÁìÈ¡³ÇÊĞ¹¤×Ê
+-- æ˜¯å¦é¢†å–åŸå¸‚å·¥èµ„
 --**********************************
 function x000154_CheckGetMoneyJZ( sceneId, selfId, targetId )
-	--°²È«Ê±¼ä
+	--å®‰å…¨æ—¶é—´
 	if IsPilferLockFlag(sceneId, selfId) <= 0 then
 		return 0
 	end
 	
-	--ÊÇ·ñ¾ßÓĞ°ï»á
+	--æ˜¯å¦å…·æœ‰å¸®ä¼š
 	local GuildID = GetHumanGuildID(sceneId, selfId)
 	if GuildID == -1 then
 		x000154_NotifyFailTips(sceneId, selfId, "#{BHXZ_090112_07}")
 		return 0
 	end
 	
-	--ÂåÑô³ÇµÄÖ÷°ï»á
+	--æ´›é˜³åŸçš„ä¸»å¸®ä¼š
 	if (GuildID+x000154_g_BaseGuildIndex) ~= LuaFnGetWorldGlobalData(x000154_g_LuoyangOwnerIndex) then
 		x000154_NotifyFailTips(sceneId, selfId, "#{BHXZ_090112_11}")
 		return 0
 	end
 	
-	--ÁìÈ¡¹¤×ÊµÄÊ±¼ä·¶Î§ ÖÜÈÕµÄ0£º00µ½24£º00
+	--é¢†å–å·¥èµ„çš„æ—¶é—´èŒƒå›´ å‘¨æ—¥çš„0ï¼š00åˆ°24ï¼š00
 	if GetTodayWeek() ~= 0 then
 		x000154_NotifyFailTips(sceneId, selfId, "#{BHXZ_090112_12}")
 		return 0
 	end
 	
-	--ÊÇ·ñÁìÈ¡¹ı³ÇÊĞ¹¤×Ê
+	--æ˜¯å¦é¢†å–è¿‡åŸå¸‚å·¥èµ„
 	if GetMissionData(sceneId, selfId, MD_LUOYANG_CITYMONEY) >= GetDayTime() then
 		x000154_NotifyFailTips(sceneId, selfId, "#{BHXZ_090112_13}")
 		return 0

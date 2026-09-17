@@ -1,37 +1,37 @@
---É³ÖŞÀä
---½Å±¾ºÅ
+--æ²™æ´²å†·
+--è„šæœ¬å·
 x112002_g_scriptId = 112002
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x112002_g_eventList={ 250000 }	
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x112002_UpdateEventList( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
 	local  PlayerName=GetName(sceneId,selfId)
-	AddText(sceneId,"ÎÒÕâ±ß¿ÉÒÔÊÕ¹º¸÷ÖÖ¸÷ÑùµÄÕäÊŞ£¬ÄãÓĞĞèÒª³öÊÛµÄÕäÊŞÂğ£¿")
+	AddText(sceneId,"æˆ‘è¿™è¾¹å¯ä»¥æ”¶è´­å„ç§å„æ ·çš„çå…½ï¼Œä½ æœ‰éœ€è¦å‡ºå”®çš„çå…½å—ï¼Ÿ")
 	for i, eventId in x112002_g_eventList do
 		CallScriptFunction( eventId, "OnEnumerate",sceneId, selfId, targetId )
 		
 	end
 	
-	AddNumText( sceneId, x112002_g_scriptId, "ÕäÊŞµºÊÕÕäÊŞ½éÉÜ", 11, 10 )
+	AddNumText( sceneId, x112002_g_scriptId, "çå…½å²›æ”¶çå…½ä»‹ç»", 11, 10 )
 	
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 end
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x112002_OnDefaultEvent( sceneId, selfId,targetId )
 	x112002_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x112002_OnEventRequest( sceneId, selfId, targetId, eventId )
 
@@ -55,41 +55,41 @@ function x112002_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x112002_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
  
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x112002_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
  
 end
 
 --**********************************
---¼ÌĞø£¨ÒÑ¾­½ÓÁËÈÎÎñ£©
+--ç»§ç»­ï¼ˆå·²ç»æ¥äº†ä»»åŠ¡ï¼‰
 --**********************************
 function x112002_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
  
 end
 
 --**********************************
---Ìá½»ÒÑ×öÍêµÄÈÎÎñ
+--æäº¤å·²åšå®Œçš„ä»»åŠ¡
 --**********************************
 function x112002_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, selectRadioId )
  
 end
 
 --**********************************
---ËÀÍöÊÂ¼ş
+--æ­»äº¡äº‹ä»¶
 --**********************************
 function x112002_OnDie( sceneId, selfId, killerId )
 end
 
 --**********************************
---¼ì²âÈÎÎñ½ÓÊÜÌõ¼ş
+--æ£€æµ‹ä»»åŠ¡æ¥å—æ¡ä»¶
 --**********************************
 function x112002_OnMissionCheck( sceneId, selfId, npcid, scriptId, index1, index2, index3, indexpet )
 			CallScriptFunction( scriptId, "OnMissionCheck", sceneId, selfId, npcid, scriptId, index1, index2, index3, indexpet )

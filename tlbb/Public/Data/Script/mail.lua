@@ -1,7 +1,7 @@
 
---½Å±¾ÓÊ¼şµÄ½Å±¾ÎÄ¼ş
+--è„šæœ¬é‚®ä»¶çš„è„šæœ¬æ–‡ä»¶
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x888889_g_scriptId = 888889
 
 
@@ -41,32 +41,32 @@ function x888889_ExecuteMail( sceneId, selfId, param0, param1, param2, param3 )
 end
 
 
---µã»÷NPCÃ»ÓĞÇëÇóÌØÊâÀàĞÍ¿ÉÖ´ĞĞÓÊ¼şÌáÊ¾ĞÅÏ¢
---Ã»ÕÒµ½
+--ç‚¹å‡»NPCæ²¡æœ‰è¯·æ±‚ç‰¹æ®Šç±»å‹å¯æ‰§è¡Œé‚®ä»¶æç¤ºä¿¡æ¯
+--æ²¡æ‰¾åˆ°
 function x888889_NoScriptTypeMail( sceneId, selfId, scripttype)
 
 	if scripttype == MAIL_COMMISIONSHOP then
-		x888889_NotifyFailBox( sceneId, selfId, -1, "    ¶Ô²»Æğ£¬Äúµ±Ç°Ã»ÓĞ¿ÉÊÕÈ¡µÄÔª±¦»ò½ğ±Ò¡£" )
+		x888889_NotifyFailBox( sceneId, selfId, -1, "    å¯¹ä¸èµ·ï¼Œæ‚¨å½“å‰æ²¡æœ‰å¯æ”¶å–çš„å…ƒå®æˆ–é‡‘å¸ã€‚" )
 	elseif scripttype == MAIL_SHITUPRIZE then
-		x888889_NotifyFailBox( sceneId, selfId, -1, "    ÄãÃ»ÓĞ½±È¯¿ÉÒÔÁìÈ¡£¬¿ìÈ¥¶½´ÙÄãµÄÍ½µÜºÃºÃÉı¼¶°É£¡" )
+		x888889_NotifyFailBox( sceneId, selfId, -1, "    ä½ æ²¡æœ‰å¥–åˆ¸å¯ä»¥é¢†å–ï¼Œå¿«å»ç£ä¿ƒä½ çš„å¾’å¼Ÿå¥½å¥½å‡çº§å§ï¼" )
 	elseif scripttype == MAIL_HUASHANJIANGLI then
 		x888889_NotifySystemMsg( sceneId, selfId, "#{HSLJ20080221_01}")
 	end
 end
 
---ÕÒµ½ÁË
+--æ‰¾åˆ°äº†
 function x888889_FindScriptTypeMail( sceneId, selfId, scripttype)
 
 	if scripttype == MAIL_COMMISIONSHOP then
-		x888889_NotifyFailBox( sceneId, selfId, -1, "    ÄúµÄÔª±¦ºÍ½ğ±ÒÒÑ¾­³É¹¦ÊÕÈ¡£¬Çë²éÊÕÓÊ¼ş¡£" )
+		x888889_NotifyFailBox( sceneId, selfId, -1, "    æ‚¨çš„å…ƒå®å’Œé‡‘å¸å·²ç»æˆåŠŸæ”¶å–ï¼Œè¯·æŸ¥æ”¶é‚®ä»¶ã€‚" )
 	elseif scripttype == MAIL_SHITUPRIZE then
-		--x888889_NotifyFailBox( sceneId, selfId, -1, "    ÄúµÄÃûÊ¦³é½±Ïà¹ØµÄ½±Æ·ÒÑ¾­³É¹¦ÊÕÈ¡£¬Çë²éÊÕ¡£" )
+		--x888889_NotifyFailBox( sceneId, selfId, -1, "    æ‚¨çš„åå¸ˆæŠ½å¥–ç›¸å…³çš„å¥–å“å·²ç»æˆåŠŸæ”¶å–ï¼Œè¯·æŸ¥æ”¶ã€‚" )
 	elseif scripttype == MAIL_HUASHANJIANGLI then
 		x888889_NotifySystemMsg( sceneId, selfId, "#{HSLJ20080221_02}")
 	end
 end
 
---ÊÂ¼şÁĞ±íÌáÊ¾
+--äº‹ä»¶åˆ—è¡¨æç¤º
 function x888889_NotifyFailBox( sceneId, selfId, targetId, msg )
 	BeginEvent( sceneId )
 		AddText( sceneId, msg )
@@ -74,33 +74,33 @@ function x888889_NotifyFailBox( sceneId, selfId, targetId, msg )
 	DispatchEventList( sceneId, selfId, targetId )
 end
 
---ÉèÖÃÍ½µÜ³öÊ¦
+--è®¾ç½®å¾’å¼Ÿå‡ºå¸ˆ
 function x888889_Mail_ShiTuChuShi( sceneId, selfId, command, PrenticeGuid, zero, zero )
 	
-	--¿ª³ıÍ½µÜ
+	--å¼€é™¤å¾’å¼Ÿ
 	LuaFnExpelPrentice( sceneId, selfId, PrenticeGuid )
 	--LuaFnShiTuChuShi( sceneId, selfId,PrenticeGuid )
 end
 
 
 
---Í½µÜ¸øÊ¦¸µ¾­ÑéºÍÉÆ¶ñÖµ
+--å¾’å¼Ÿç»™å¸ˆå‚…ç»éªŒå’Œå–„æ¶å€¼
 function x888889_Mail_Prize_ExpAndGoodBad( sceneId, selfId, command, PrenticeGuid, Exps, GoodBad )
-	--PrenticeGuid¸øÁËselfId£¬ExpsÕâÃ´¶à¾­Ñé
+	--PrenticeGuidç»™äº†selfIdï¼ŒExpsè¿™ä¹ˆå¤šç»éªŒ
 	if Exps > 0 then
 		LuaAddPrenticeProExp( sceneId, selfId, PrenticeGuid, Exps )
 	end
 	
-	--¸øÊ¦¸µÌí¼ÓÉÆ¶ñÖµ
+	--ç»™å¸ˆå‚…æ·»åŠ å–„æ¶å€¼
 	if GoodBad > 0 then
 		local gb_value = LuaFnGetHumanGoodBadValue( sceneId, selfId )
 		LuaFnSetHumanGoodBadValue( sceneId, selfId, gb_value + GoodBad )
 	end
 end
 
---Í½µÜ¸øÊ¦¸µ¾­Ñé
+--å¾’å¼Ÿç»™å¸ˆå‚…ç»éªŒ
 function x888889_Mail_PrenticeProfExp( sceneId, selfId, command, PrenticeGuid, Exps, zero )
-	--PrenticeGuid¸øÁËselfId£¬ExpsÕâÃ´¶à¾­Ñé
+	--PrenticeGuidç»™äº†selfIdï¼ŒExpsè¿™ä¹ˆå¤šç»éªŒ
 	if Exps > 0 then
 		LuaAddPrenticeProExp( sceneId, selfId, PrenticeGuid, Exps )
 	end
@@ -108,16 +108,16 @@ end
 
 function x888889_Mail_Unswear( sceneId, selfId, command, betrayerGuid, alldismiss, zero )
 
-	--(1) ½µµÍºÃÓÑ¶È
+	--(1) é™ä½å¥½å‹åº¦
 	local FriendPoint = LuaFnGetFriendPointByGUID( sceneId, selfId, betrayerGuid )
 	if FriendPoint > 500 then
 		LuaFnSetFriendPointByGUID( sceneId, selfId, betrayerGuid, 500 )
 	end
 
-	--(2) È¡Ïû½á°İ
+	--(2) å–æ¶ˆç»“æ‹œ
 	LuaFnUnswear( sceneId, selfId, betrayerGuid )
 
-	--(3) Èç¹ûÈ«²¿½âÉ¢£¬ÔòÉ¾³ı³ÆºÅ
+	--(3) å¦‚æœå…¨éƒ¨è§£æ•£ï¼Œåˆ™åˆ é™¤ç§°å·
 	if tonumber(alldismiss) == 1 then
 		AwardJieBaiTitle( sceneId, selfId, "" )
 		DispatchAllTitle( sceneId, selfId )
@@ -135,16 +135,16 @@ function x888889_Mail_Repudiate( sceneId, selfId, param0, param1, param2, param3
 
 	SpouseGUID = LuaFnGetSpouseGUID( sceneId, selfId )
 
-	-- Èç¹û²»ÊÇÏàÍ¬µÄ GUID Ôò²»½øĞĞÇ¿ÖÆÀë»é´¦Àí
+	-- å¦‚æœä¸æ˜¯ç›¸åŒçš„ GUID åˆ™ä¸è¿›è¡Œå¼ºåˆ¶ç¦»å©šå¤„ç†
 	if param1 ~= 0 and param1 ~= SpouseGUID then
 		return
 	end
 
-	--É¾³ı³ÆºÅ£»
+	--åˆ é™¤ç§°å·ï¼›
 	LuaFnAwardSpouseTitle( sceneId, selfId, "" )
 	DispatchAllTitle( sceneId, selfId )
 
-	--É¾³ı»éÒö¼¼ÄÜ
+	--åˆ é™¤å©šå§»æŠ€èƒ½
 	Skills = {260, 261, 262, 263, 264, 265, 266, 267, 268 }
 	for i, skillId in Skills do
 		DelSkill( sceneId, selfId, skillId )
@@ -155,15 +155,15 @@ function x888889_Mail_Repudiate( sceneId, selfId, param0, param1, param2, param3
 		DelSkill( sceneId, selfId, skillId )
 	end
 	
-	--É¾³ıĞÎÓ°²»Àë¼¼ÄÜ
+	--åˆ é™¤å½¢å½±ä¸ç¦»æŠ€èƒ½
 	for _, skillId in { 269,270,271,272,273 } do
 		DelSkill( sceneId, selfId, skillId )
 	end
 
-	--Ôö¼Ó½ğÇ®N=100000×öÎª²¹³¥£»
+	--å¢åŠ é‡‘é’±N=100000åšä¸ºè¡¥å¿ï¼›
 --LuaFnAddMoney( sceneId, selfId, 100000 )
 
-	--Ôö¼ÓÒ»¸öÎïÆ·ÏàË¼ÌÇ×öÎª²¹³¥£»£¨Èç¹û¿Õ¼ä¹»£¬²»¹»ËãÁË£©
+	--å¢åŠ ä¸€ä¸ªç‰©å“ç›¸æ€ç³–åšä¸ºè¡¥å¿ï¼›ï¼ˆå¦‚æœç©ºé—´å¤Ÿï¼Œä¸å¤Ÿç®—äº†ï¼‰
 --LuaFnBeginAddItem( sceneId )
 --LuaFnAddItem( sceneId, 30002002, 1 )
 --ret = LuaFnEndAddItem( sceneId, selfId )
@@ -171,46 +171,46 @@ function x888889_Mail_Repudiate( sceneId, selfId, param0, param1, param2, param3
 --	LuaFnAddItemListToHuman( sceneId, selfId )
 --end
 
-	--ºÍ¶Ô·½µÄºÃÓÑ¶ÈÉèÖÃ³ÉN=X£¨10£©
+	--å’Œå¯¹æ–¹çš„å¥½å‹åº¦è®¾ç½®æˆN=Xï¼ˆ10ï¼‰
 	LuaFnSetFriendPointByGUID( sceneId, selfId, SpouseGUID, 10 )
 
 	CallScriptFunction(250036, "OnAbandon", sceneId, selfId);
 	CallScriptFunction(250037, "OnAbandon", sceneId, selfId);
 
-	--É¾³ı½á»é×´Ì¬£»
+	--åˆ é™¤ç»“å©šçŠ¶æ€ï¼›
 	LuaFnDivorce( sceneId, selfId )
 
 end
 
 function x888889_Mail_BetrayMaster( sceneId, selfId, param0, param1, param2, param3 )
-	--¿ª³ıÍ½µÜ
+	--å¼€é™¤å¾’å¼Ÿ
 	LuaFnExpelPrentice( sceneId, selfId, param1 )
 end
 
 function x888889_Mail_ExpelPrentice( sceneId, selfId, param0, param1, param2, param3 )
-	--É¾³ıÍ½µÜ³ÆºÅ
+	--åˆ é™¤å¾’å¼Ÿç§°å·
 	AwardShiTuTitle( sceneId, selfId, "" )
 	DispatchAllTitle( sceneId, selfId )
 
-	--Àë¿ªÊ¦ÃÅ
+	--ç¦»å¼€å¸ˆé—¨
 	LuaFnBetrayMaster( sceneId, selfId )
 end
 
 function x888889_Mail_CommisionShop( sceneId, selfId, param0, param1, param2, param3 )
 
 	--CSOP1 ~ CSOP8
-	--1.¼ÄÊÛÔª±¦     -- Ôª±¦¼õÉÙ
-	--2.¹ºÂòÔª±¦     -- Ôª±¦Ôö¼Ó£¬½ğÇ®¼õÉÙ
-	--3.¼ÄÊÛÔª±¦Âô³ö -- ½ğÇ®Ôö¼Ó
-	--4.¼ÄÊÛÔª±¦ÍË»¹ -- Ôª±¦Ôö¼Ó
-	--5.¼ÄÊÛ½ğÇ®     -- ½ğÇ®¼õÉÙ
-	--6.¹ºÂò½ğÇ®     -- Ôª±¦¼õÉÙ£¬½ğÇ®Ôö¼Ó
-	--7.¼ÄÊÛ½ğÇ®Âô³ö -- Ôª±¦Ôö¼Ó
-	--8.¼ÄÊÛ½ğÇ®ÍË»¹ -- ½ğÇ®Ôö¼Ó	
+	--1.å¯„å”®å…ƒå®     -- å…ƒå®å‡å°‘
+	--2.è´­ä¹°å…ƒå®     -- å…ƒå®å¢åŠ ï¼Œé‡‘é’±å‡å°‘
+	--3.å¯„å”®å…ƒå®å–å‡º -- é‡‘é’±å¢åŠ 
+	--4.å¯„å”®å…ƒå®é€€è¿˜ -- å…ƒå®å¢åŠ 
+	--5.å¯„å”®é‡‘é’±     -- é‡‘é’±å‡å°‘
+	--6.è´­ä¹°é‡‘é’±     -- å…ƒå®å‡å°‘ï¼Œé‡‘é’±å¢åŠ 
+	--7.å¯„å”®é‡‘é’±å–å‡º -- å…ƒå®å¢åŠ 
+	--8.å¯„å”®é‡‘é’±é€€è¿˜ -- é‡‘é’±å¢åŠ 	
 
-	if param1 == 1 then									-- ÍË»Ø¼ÄÊÛ½ğÇ®
-		-- param2 ÊÇĞòÁĞºÅ
-		-- param3 ÊÇÊıÁ¿
+	if param1 == 1 then									-- é€€å›å¯„å”®é‡‘é’±
+		-- param2 æ˜¯åºåˆ—å·
+		-- param3 æ˜¯æ•°é‡
 		local ret = CSAddBankMoney( sceneId, selfId, param3, "CSOP8" )
 		local strAppend = ""
 		if ret == 0 then
@@ -223,21 +223,21 @@ function x888889_Mail_CommisionShop( sceneId, selfId, param0, param1, param2, pa
 			end
 		end
 
-		local mailStr = format( "Äú¼ÄÊÛµÄ#{_MONEY%d}µ½ÆÚÃ»ÓĞÊÛ³ö£¬·µ»¹µÄ½ğÇ®ÒÑ¾­´æµ½ÁËÄúµÄÒøĞĞ»§Í·¡£%s", param3, strAppend )
+		local mailStr = format( "æ‚¨å¯„å”®çš„#{_MONEY%d}åˆ°æœŸæ²¡æœ‰å”®å‡ºï¼Œè¿”è¿˜çš„é‡‘é’±å·²ç»å­˜åˆ°äº†æ‚¨çš„é“¶è¡Œæˆ·å¤´ã€‚%s", param3, strAppend )
 		LuaFnSendSystemMail( sceneId, GetName( sceneId, selfId ), mailStr )
 		local logStr = format( "Recvback type:1 sn:%d value:%d", param2, param3 )
 		LogCommisionDeal( sceneId, selfId, logStr )
-	elseif param1 == 0 then								-- ÍË»Ø¼ÄÊÛÔª±¦
-		-- param2 ÊÇĞòÁĞºÅ
-		-- param3 ÊÇÊıÁ¿
+	elseif param1 == 0 then								-- é€€å›å¯„å”®å…ƒå®
+		-- param2 æ˜¯åºåˆ—å·
+		-- param3 æ˜¯æ•°é‡
 		CSAddYuanbao( sceneId, selfId, param3, "CSOP4" )
-		local mailStr = format( "Äú¼ÄÊÛµÄ%dµãÔª±¦µ½ÆÚÃ»ÓĞÊÛ³ö£¬ÉÌµêÒÑ¾­½«µãÊı·µ»¹¸øÄú¡£", param3 )
+		local mailStr = format( "æ‚¨å¯„å”®çš„%dç‚¹å…ƒå®åˆ°æœŸæ²¡æœ‰å”®å‡ºï¼Œå•†åº—å·²ç»å°†ç‚¹æ•°è¿”è¿˜ç»™æ‚¨ã€‚", param3 )
 		LuaFnSendSystemMail( sceneId, GetName( sceneId, selfId ), mailStr )
 		local logStr = format( "Recvback type:0 sn:%d value:%d", param2, param3 )
 		LogCommisionDeal( sceneId, selfId, logStr )
-	elseif param1 == 2 then								-- ·¢ËÍ¼ÄÊÛ½ğÇ®
-		-- param2 ÊÇĞòÁĞºÅ
-		-- param3 ÊÇÊıÁ¿
+	elseif param1 == 2 then								-- å‘é€å¯„å”®é‡‘é’±
+		-- param2 æ˜¯åºåˆ—å·
+		-- param3 æ˜¯æ•°é‡
 		local ret = CSAddBankMoney( sceneId, selfId, param3, "CSOP3" )
 		local strAppend = ""
 		if ret == 0 then
@@ -250,21 +250,21 @@ function x888889_Mail_CommisionShop( sceneId, selfId, param0, param1, param2, pa
 			end
 		end
 
-		local mailStr = format( "Äú¼ÄÊÛµÄÔª±¦³É¹¦µØÊÛ³ö£¬Äú»ñµÃµÄ#{_MONEY%d}ÒÑ¾­´æÈëÄúµÄÒøĞĞ»§Í·¡£%s", param3, strAppend )
+		local mailStr = format( "æ‚¨å¯„å”®çš„å…ƒå®æˆåŠŸåœ°å”®å‡ºï¼Œæ‚¨è·å¾—çš„#{_MONEY%d}å·²ç»å­˜å…¥æ‚¨çš„é“¶è¡Œæˆ·å¤´ã€‚%s", param3, strAppend )
 		LuaFnSendSystemMail( sceneId, GetName( sceneId, selfId ), mailStr )
 		local logStr = format( "Gain type:1 sn:%d value:%d", param2, param3 )
 		LogCommisionDeal( sceneId, selfId, logStr )
-	elseif param1 == 3 then								-- ·¢ËÍ¼ÄÊÛÔª±¦
-		-- param2 ÊÇĞòÁĞºÅ
-		-- param3 ÊÇÊıÁ¿
+	elseif param1 == 3 then								-- å‘é€å¯„å”®å…ƒå®
+		-- param2 æ˜¯åºåˆ—å·
+		-- param3 æ˜¯æ•°é‡
 		CSAddYuanbao( sceneId, selfId, param3, "CSOP7" )
-		local mailStr = format( "Äú¼ÄÊÛµÄ½ğÇ®³É¹¦µØÊÛ³ö£¬Äú»ñµÃµÄ%dµãÔª±¦ÒÑ¾­¼Óµ½ÄúÉíÉÏ¡£", param3 )
+		local mailStr = format( "æ‚¨å¯„å”®çš„é‡‘é’±æˆåŠŸåœ°å”®å‡ºï¼Œæ‚¨è·å¾—çš„%dç‚¹å…ƒå®å·²ç»åŠ åˆ°æ‚¨èº«ä¸Šã€‚", param3 )
 		LuaFnSendSystemMail( sceneId, GetName( sceneId, selfId ), mailStr )
 		local logStr = format( "Gain type:0 sn:%d value:%d", param2, param3 )
 		LogCommisionDeal( sceneId, selfId, logStr )
 	end
 	
-	--µ÷ÕûÈËÎïµÄ¼ÄÊÛÊıÁ¿
+	--è°ƒæ•´äººç‰©çš„å¯„å”®æ•°é‡
 	DecCommisionNum(sceneId,selfId)
 end
 
@@ -284,7 +284,7 @@ function x888889_Mail_HuaShanJiangLi( sceneId, selfId, param0, param1, param2, p
 			
 			strLogCheck = format(	"HuaShanLunJian_MissionData    FULL_NO.1=(id=%X, Param01=%d, Param02=%d, Param03=%d, Param04=%d)", LuaFnGetGUID(sceneId, selfId), 0, 0, 1, param1 )
 			LuaFnLogCheck(strLogCheck)
-			-- local	mailStr = "¹§Ï²Äú»ñµÃ±¾½ì»ªÉ½ÂÛ½£×Ü»ı·ÖµÚÒ»Ãû!Äú¿ÉÒÔÕÒ»ªÉ½ÂÛ½£Ö÷³ÖÈËËÕ½£Áë£¨ËÕÖİ193£¬138£©ÁìÈ¡·áºñ½±Àø!×¢Òâ£ºÁìÈ¡Ê±¼äÎª1¸öĞ¡Ê±£¬ÄúÈç¹û³¬¹ı1¸öĞ¡Ê±ÈÔÃ»ÓĞÁìÈ¡½±ÀøµÄ»°¾ÍÖ»ÄÜÏÂ´ÎÔÙ¼ÓÓÍ¿©!"
+			-- local	mailStr = "æ­å–œæ‚¨è·å¾—æœ¬å±Šåå±±è®ºå‰‘æ€»ç§¯åˆ†ç¬¬ä¸€å!æ‚¨å¯ä»¥æ‰¾åå±±è®ºå‰‘ä¸»æŒäººè‹å‰‘å²­ï¼ˆè‹å·193ï¼Œ138ï¼‰é¢†å–ä¸°åšå¥–åŠ±!æ³¨æ„ï¼šé¢†å–æ—¶é—´ä¸º1ä¸ªå°æ—¶ï¼Œæ‚¨å¦‚æœè¶…è¿‡1ä¸ªå°æ—¶ä»æ²¡æœ‰é¢†å–å¥–åŠ±çš„è¯å°±åªèƒ½ä¸‹æ¬¡å†åŠ æ²¹å’¯!"
 			-- LuaFnSendSystemMail( sceneId, GetName( sceneId, selfId ), mailStr )
 		elseif param3 == 2 then
 			SetMissionFlag( sceneId, selfId, MF_LunjianJiangli01, 0 )
@@ -294,7 +294,7 @@ function x888889_Mail_HuaShanJiangLi( sceneId, selfId, param0, param1, param2, p
 			
 			strLogCheck = format(	"HuaShanLunJian_MissionData    FULL_NO.2=(id=%X, Param01=%d, Param02=%d, Param03=%d, Param04=%d)", LuaFnGetGUID(sceneId, selfId), 0, 1, 0, param1 )
 			LuaFnLogCheck(strLogCheck)
-			-- local	mailStr = "¹§Ï²Äú»ñµÃ±¾½ì»ªÉ½ÂÛ½£×Ü»ı·ÖµÚ¶şÃû!Äú¿ÉÒÔÕÒ»ªÉ½ÂÛ½£Ö÷³ÖÈËËÕ½£Áë£¨ËÕÖİ193£¬138£©ÁìÈ¡·áºñ½±Àø!×¢Òâ£ºÁìÈ¡Ê±¼äÎª1¸öĞ¡Ê±£¬ÄúÈç¹û³¬¹ı1¸öĞ¡Ê±ÈÔÃ»ÓĞÁìÈ¡½±ÀøµÄ»°¾ÍÖ»ÄÜÏÂ´ÎÔÙ¼ÓÓÍ¿©!"
+			-- local	mailStr = "æ­å–œæ‚¨è·å¾—æœ¬å±Šåå±±è®ºå‰‘æ€»ç§¯åˆ†ç¬¬äºŒå!æ‚¨å¯ä»¥æ‰¾åå±±è®ºå‰‘ä¸»æŒäººè‹å‰‘å²­ï¼ˆè‹å·193ï¼Œ138ï¼‰é¢†å–ä¸°åšå¥–åŠ±!æ³¨æ„ï¼šé¢†å–æ—¶é—´ä¸º1ä¸ªå°æ—¶ï¼Œæ‚¨å¦‚æœè¶…è¿‡1ä¸ªå°æ—¶ä»æ²¡æœ‰é¢†å–å¥–åŠ±çš„è¯å°±åªèƒ½ä¸‹æ¬¡å†åŠ æ²¹å’¯!"
 			-- LuaFnSendSystemMail( sceneId, GetName( sceneId, selfId ), mailStr )
 		elseif param3 == 3 then
 			SetMissionFlag( sceneId, selfId, MF_LunjianJiangli01, 0 )
@@ -304,7 +304,7 @@ function x888889_Mail_HuaShanJiangLi( sceneId, selfId, param0, param1, param2, p
 			
 			strLogCheck = format(	"HuaShanLunJian_MissionData    FULL_NO.3=(id=%X, Param01=%d, Param02=%d, Param03=%d, Param04=%d)", LuaFnGetGUID(sceneId, selfId), 0, 1, 1, param1 )
 			LuaFnLogCheck(strLogCheck)
-			-- local	mailStr = "¹§Ï²Äú»ñµÃ±¾½ì»ªÉ½ÂÛ½£×Ü»ı·ÖµÚÈıÃû!Äú¿ÉÒÔÕÒ»ªÉ½ÂÛ½£Ö÷³ÖÈËËÕ½£Áë£¨ËÕÖİ193£¬138£©ÁìÈ¡·áºñ½±Àø!×¢Òâ£ºÁìÈ¡Ê±¼äÎª1¸öĞ¡Ê±£¬ÄúÈç¹û³¬¹ı1¸öĞ¡Ê±ÈÔÃ»ÓĞÁìÈ¡½±ÀøµÄ»°¾ÍÖ»ÄÜÏÂ´ÎÔÙ¼ÓÓÍ¿©!"
+			-- local	mailStr = "æ­å–œæ‚¨è·å¾—æœ¬å±Šåå±±è®ºå‰‘æ€»ç§¯åˆ†ç¬¬ä¸‰å!æ‚¨å¯ä»¥æ‰¾åå±±è®ºå‰‘ä¸»æŒäººè‹å‰‘å²­ï¼ˆè‹å·193ï¼Œ138ï¼‰é¢†å–ä¸°åšå¥–åŠ±!æ³¨æ„ï¼šé¢†å–æ—¶é—´ä¸º1ä¸ªå°æ—¶ï¼Œæ‚¨å¦‚æœè¶…è¿‡1ä¸ªå°æ—¶ä»æ²¡æœ‰é¢†å–å¥–åŠ±çš„è¯å°±åªèƒ½ä¸‹æ¬¡å†åŠ æ²¹å’¯!"
 			-- LuaFnSendSystemMail( sceneId, GetName( sceneId, selfId ), mailStr )
 		end
 	elseif param2 == 2 then
@@ -316,7 +316,7 @@ function x888889_Mail_HuaShanJiangLi( sceneId, selfId, param0, param1, param2, p
 			
 			strLogCheck = format(	"HuaShanLunJian_MissionData    MenPai_NO.1=(id=%X, Param01=%d, Param02=%d, Param03=%d, Param04=%d)", LuaFnGetGUID(sceneId, selfId), 1, 0, 0, param1 )
 			LuaFnLogCheck(strLogCheck)
-			-- local	mailStr = "¹§Ï²Äú»ñµÃ±¾½ì»ªÉ½ÂÛ½£±¾ÃÅÅÉµÚÒ»Ãû! Äú¿ÉÒÔÕÒ»ªÉ½ÂÛ½£Ö÷³ÖÈËËÕ½£Áë£¨ËÕÖİ193£¬138£©ÁìÈ¡·áºñ½±Àø! ×¢Òâ£ºÁìÈ¡Ê±¼äÎª1¸öĞ¡Ê±£¬ÄúÈç¹û³¬¹ı1¸öĞ¡Ê±ÈÔÃ»ÓĞÁìÈ¡½±ÀøµÄ»°¾ÍÖ»ÄÜÏÂ´ÎÔÙ¼ÓÓÍ¿©!"
+			-- local	mailStr = "æ­å–œæ‚¨è·å¾—æœ¬å±Šåå±±è®ºå‰‘æœ¬é—¨æ´¾ç¬¬ä¸€å! æ‚¨å¯ä»¥æ‰¾åå±±è®ºå‰‘ä¸»æŒäººè‹å‰‘å²­ï¼ˆè‹å·193ï¼Œ138ï¼‰é¢†å–ä¸°åšå¥–åŠ±! æ³¨æ„ï¼šé¢†å–æ—¶é—´ä¸º1ä¸ªå°æ—¶ï¼Œæ‚¨å¦‚æœè¶…è¿‡1ä¸ªå°æ—¶ä»æ²¡æœ‰é¢†å–å¥–åŠ±çš„è¯å°±åªèƒ½ä¸‹æ¬¡å†åŠ æ²¹å’¯!"
 			-- LuaFnSendSystemMail( sceneId, GetName( sceneId, selfId ), mailStr )
 		elseif param3 == 2 then
 			SetMissionFlag( sceneId, selfId, MF_LunjianJiangli01, 1 )
@@ -326,7 +326,7 @@ function x888889_Mail_HuaShanJiangLi( sceneId, selfId, param0, param1, param2, p
 			
 			strLogCheck = format(	"HuaShanLunJian_MissionData    MenPai_NO.2=(id=%X, Param01=%d, Param02=%d, Param03=%d, Param04=%d)", LuaFnGetGUID(sceneId, selfId), 1, 0, 1, param1 )
 			LuaFnLogCheck(strLogCheck)
-			-- local	mailStr = "¹§Ï²Äú»ñµÃ±¾½ì»ªÉ½ÂÛ½£±¾ÃÅÅÉµÚ¶şÃû! Äú¿ÉÒÔÕÒ»ªÉ½ÂÛ½£Ö÷³ÖÈËËÕ½£Áë£¨ËÕÖİ193£¬138£©ÁìÈ¡·áºñ½±Àø! ×¢Òâ£ºÁìÈ¡Ê±¼äÎª1¸öĞ¡Ê±£¬ÄúÈç¹û³¬¹ı1¸öĞ¡Ê±ÈÔÃ»ÓĞÁìÈ¡½±ÀøµÄ»°¾ÍÖ»ÄÜÏÂ´ÎÔÙ¼ÓÓÍ¿©!"
+			-- local	mailStr = "æ­å–œæ‚¨è·å¾—æœ¬å±Šåå±±è®ºå‰‘æœ¬é—¨æ´¾ç¬¬äºŒå! æ‚¨å¯ä»¥æ‰¾åå±±è®ºå‰‘ä¸»æŒäººè‹å‰‘å²­ï¼ˆè‹å·193ï¼Œ138ï¼‰é¢†å–ä¸°åšå¥–åŠ±! æ³¨æ„ï¼šé¢†å–æ—¶é—´ä¸º1ä¸ªå°æ—¶ï¼Œæ‚¨å¦‚æœè¶…è¿‡1ä¸ªå°æ—¶ä»æ²¡æœ‰é¢†å–å¥–åŠ±çš„è¯å°±åªèƒ½ä¸‹æ¬¡å†åŠ æ²¹å’¯!"
 			-- LuaFnSendSystemMail( sceneId, GetName( sceneId, selfId ), mailStr )
 		elseif param3 == 3 then
 			SetMissionFlag( sceneId, selfId, MF_LunjianJiangli01, 1 )
@@ -336,7 +336,7 @@ function x888889_Mail_HuaShanJiangLi( sceneId, selfId, param0, param1, param2, p
 			
 			strLogCheck = format(	"HuaShanLunJian_MissionData    MenPai_NO.3=(id=%X, Param01=%d, Param02=%d, Param03=%d, Param04=%d)", LuaFnGetGUID(sceneId, selfId), 1, 1, 0, param1 )
 			LuaFnLogCheck(strLogCheck)
-			-- local	mailStr = "¹§Ï²Äú»ñµÃ±¾½ì»ªÉ½ÂÛ½£±¾ÃÅÅÉµÚÈıÃû! Äú¿ÉÒÔÕÒ»ªÉ½ÂÛ½£Ö÷³ÖÈËËÕ½£Áë£¨ËÕÖİ193£¬138£©ÁìÈ¡·áºñ½±Àø! ×¢Òâ£ºÁìÈ¡Ê±¼äÎª1¸öĞ¡Ê±£¬ÄúÈç¹û³¬¹ı1¸öĞ¡Ê±ÈÔÃ»ÓĞÁìÈ¡½±ÀøµÄ»°¾ÍÖ»ÄÜÏÂ´ÎÔÙ¼ÓÓÍ¿©!"
+			-- local	mailStr = "æ­å–œæ‚¨è·å¾—æœ¬å±Šåå±±è®ºå‰‘æœ¬é—¨æ´¾ç¬¬ä¸‰å! æ‚¨å¯ä»¥æ‰¾åå±±è®ºå‰‘ä¸»æŒäººè‹å‰‘å²­ï¼ˆè‹å·193ï¼Œ138ï¼‰é¢†å–ä¸°åšå¥–åŠ±! æ³¨æ„ï¼šé¢†å–æ—¶é—´ä¸º1ä¸ªå°æ—¶ï¼Œæ‚¨å¦‚æœè¶…è¿‡1ä¸ªå°æ—¶ä»æ²¡æœ‰é¢†å–å¥–åŠ±çš„è¯å°±åªèƒ½ä¸‹æ¬¡å†åŠ æ²¹å’¯!"
 			-- LuaFnSendSystemMail( sceneId, GetName( sceneId, selfId ), mailStr )
 		end	
 	end
@@ -344,25 +344,25 @@ end
 
 function x888889_Mail_ShiTuPrize( sceneId, selfId, param0, param1, param2, param3 )
 	local plevel = param1
-	--9999,¸ßÁ½Î»Îª50¼¶µÄÁìÈ¡´ÎÊı,µÍÁ½Î»99Îª40¼¶µÄÁìÈ¡´ÎÊı
+	--9999,é«˜ä¸¤ä½ä¸º50çº§çš„é¢†å–æ¬¡æ•°,ä½ä¸¤ä½99ä¸º40çº§çš„é¢†å–æ¬¡æ•°
 	local ct = GetMissionData(sceneId, selfId, MD_SHITU_PRIZE_COUNT)
 	local c40 = mod(ct,100)
 	local c50 = floor(ct/100)
 
-	--ÁìÈ¡´ÎÊı¼ì²é
+	--é¢†å–æ¬¡æ•°æ£€æŸ¥
 	if 40 == plevel then
 		if 10 < c40+1 then
-			x888889_NotifySystemMsg(sceneId,selfId,"ÁìÈ¡ÃûÊ¦½±È¯Ê§°Ü£¬ÒÑ¾­´ïµ½ÉÏÏŞ¡£")
+			x888889_NotifySystemMsg(sceneId,selfId,"é¢†å–åå¸ˆå¥–åˆ¸å¤±è´¥ï¼Œå·²ç»è¾¾åˆ°ä¸Šé™ã€‚")
 			return
 		end
 	elseif 50 == plevel then
 		if 10 < c50+1 then
-			x888889_NotifySystemMsg(sceneId,selfId,"ÁìÈ¡ÌØ¼¶ÃûÊ¦½±È¯Ê§°Ü£¬ÒÑ¾­´ïµ½ÉÏÏŞ¡£")
+			x888889_NotifySystemMsg(sceneId,selfId,"é¢†å–ç‰¹çº§åå¸ˆå¥–åˆ¸å¤±è´¥ï¼Œå·²ç»è¾¾åˆ°ä¸Šé™ã€‚")
 			return
 		end
 	end
 
-	--ÁìÈ¡½±Àø
+	--é¢†å–å¥–åŠ±
 	local itemId = param2
 	local itemNum = param3
 	
@@ -370,11 +370,11 @@ function x888889_Mail_ShiTuPrize( sceneId, selfId, param0, param1, param2, param
 		LuaFnAddItem( sceneId, itemId, itemNum)
 	local ret = LuaFnEndAddItem( sceneId, selfId )
 	if 1 == ret then
-		--Ìí¼ÓÎïÆ·
+		--æ·»åŠ ç‰©å“
 		AddItemListToHuman(sceneId,selfId)
-		x888889_NotifySystemMsg(sceneId,selfId,"ÁìÈ¡½±È¯³É¹¦")
-		--ÔÚ³é½±ÈÕÖ¾ÖĞ¼ÇÂ¼....
-		--ÈÕÖ¾±àºÅ£¬Íæ¼ÒGUID£¬Íæ¼ÒÃû×Ö£¬½±È¯ÎïÆ·ID
+		x888889_NotifySystemMsg(sceneId,selfId,"é¢†å–å¥–åˆ¸æˆåŠŸ")
+		--åœ¨æŠ½å¥–æ—¥å¿—ä¸­è®°å½•....
+		--æ—¥å¿—ç¼–å·ï¼Œç©å®¶GUIDï¼Œç©å®¶åå­—ï¼Œå¥–åˆ¸ç‰©å“ID
 		local logstr = format("PL:%d,0x%X,%s,%d",
 									 				PRIZE_LOG_XINSHOUSHITU,
 									 				LuaFnGetGUID(sceneId,selfId),
@@ -382,11 +382,11 @@ function x888889_Mail_ShiTuPrize( sceneId, selfId, param0, param1, param2, param
 									 				itemId)
 		LuaFnLogPrize(logstr)
 	else
-		x888889_NotifySystemMsg(sceneId,selfId,"Ã»ÓĞ×ã¹»µÄÈÎÎñµÀ¾ßÀ¸¿Õ¼ä£¬ÁìÈ¡Ê§°Ü")
+		x888889_NotifySystemMsg(sceneId,selfId,"æ²¡æœ‰è¶³å¤Ÿçš„ä»»åŠ¡é“å…·æ ç©ºé—´ï¼Œé¢†å–å¤±è´¥")
 		return
 	end
 	
-	--ÁìÈ¡½±ÀøºóĞŞ¸ÄÁìÈ¡´ÎÊı
+	--é¢†å–å¥–åŠ±åä¿®æ”¹é¢†å–æ¬¡æ•°
 	if 40 == plevel then
 		SetMissionData( sceneId, selfId, MD_SHITU_PRIZE_COUNT, ct+1)
 	elseif 50 == plevel then

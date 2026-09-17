@@ -1,10 +1,10 @@
---塔里木NPC
---李柏
+--濉旈噷鏈∟PC
+--鏉庢煆
 
 x044503_g_ScriptId	= 044503
 
 --**********************************
---事件交互入口
+--浜嬩欢浜や簰鍏ュ彛
 --**********************************
 function x044503_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent( sceneId )

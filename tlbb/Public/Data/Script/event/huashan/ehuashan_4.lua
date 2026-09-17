@@ -1,5 +1,5 @@
 -- 1233
---»ªÉ½ÂÛ½£µÄÏà¹ØÂß¼­´¦Àí
+--åå±±è®ºå‰‘çš„ç›¸å…³é€»è¾‘å¤„ç†
 
 x001233_g_ScriptId = 001233
 
@@ -7,8 +7,8 @@ x001233_g_ActivityId = 39
 
 function x001233_OnScenePlayerEnter( sceneId, playerId )
 	
-	-- °ÑÍæ¼ÒµÄId¼ÇÂ¼µ½»î¶¯Êı¾İÇø£¬
-	-- ²éÕÒÒ»¸ö¿ÕÎ»ÖÃ£¬ÓÃÀ´±£´æ
+	-- æŠŠç©å®¶çš„Idè®°å½•åˆ°æ´»åŠ¨æ•°æ®åŒºï¼Œ
+	-- æŸ¥æ‰¾ä¸€ä¸ªç©ºä½ç½®ï¼Œç”¨æ¥ä¿å­˜
 	for i=0, 500    do
 		local nId = GetActivityParam(sceneId, x001233_g_ActivityId, i)
 		if nId == -1   then
@@ -18,7 +18,7 @@ function x001233_OnScenePlayerEnter( sceneId, playerId )
 		end
 	end
 	
-	-- Ã¿¸öÃÅÅÉµÄ¸´»îµãÊÇ²»Ò»ÑùµÄ 
+	-- æ¯ä¸ªé—¨æ´¾çš„å¤æ´»ç‚¹æ˜¯ä¸ä¸€æ ·çš„ 
 	local nPos_X
 	local nPos_Z
 	local nMenpai = LuaFnGetMenPai(sceneId, playerId)
@@ -50,12 +50,12 @@ function x001233_OnScenePlayerEnter( sceneId, playerId )
 		nPos_X = 228
 		nPos_Z = 38
 	elseif nMenpai == 9    then
-		--Ã»ÓĞÃÅÅÉµÄÈËÓ¦¸ÃÊÇ²»³öÏÖµÄ£¬±ÜÃâ´íÎó³öÏÖ£¬ÉèÖÃ¸öÎ»ÖÃ
+		--æ²¡æœ‰é—¨æ´¾çš„äººåº”è¯¥æ˜¯ä¸å‡ºç°çš„ï¼Œé¿å…é”™è¯¯å‡ºç°ï¼Œè®¾ç½®ä¸ªä½ç½®
 		nPos_X = 100
 		nPos_Z = 100
 	end
 	
-	-- µ÷ÕûÍæ¼ÒÕóÓª
+	-- è°ƒæ•´ç©å®¶é˜µè¥
 	SetUnitCampID(sceneId, playerId, playerId, 10+nMenpai)
 	
 	SetPlayerDefaultReliveInfo( sceneId, playerId, "%50", "%50", "0", sceneId, nPos_X, nPos_Z )
@@ -64,7 +64,7 @@ end
 
 function x001233_OnSceneHumanDie( sceneId, selfId, killerId )
 
-	-- Èç¹ûÕâ¸öÉ±ÊÖÊÇ¸ö³èÎï£¬ĞèÒªÏÖÕÒµ½Ö÷ÈË
+	-- å¦‚æœè¿™ä¸ªæ€æ‰‹æ˜¯ä¸ªå® ç‰©ï¼Œéœ€è¦ç°æ‰¾åˆ°ä¸»äºº
 	local nObjType = GetCharacterType(sceneId, killerId);
 	local nHumanId = -1;
 	if nObjType then
@@ -79,19 +79,19 @@ function x001233_OnSceneHumanDie( sceneId, selfId, killerId )
 		return
 	end
 
-	-- ÅĞ¶¨ÕâĞ©½±ÀøµÄ»ñµÃÌõ¼ş£¬
-	-- 1£¬É±ËÀ×Ô¼ºµÄÈË£¬²»ÄÜÊÇ±¾°ïÅÉµÄÈË£¬
+	-- åˆ¤å®šè¿™äº›å¥–åŠ±çš„è·å¾—æ¡ä»¶ï¼Œ
+	-- 1ï¼Œæ€æ­»è‡ªå·±çš„äººï¼Œä¸èƒ½æ˜¯æœ¬å¸®æ´¾çš„äººï¼Œ
 	if LuaFnGetMenPai(sceneId, selfId) == LuaFnGetMenPai(sceneId, nHumanId)    then
 		return
 	end
 
 	
-	--Å²µ½ehuashan_1.luaÖĞÈ¥ÁË changed by xindefeng
-	-- 2£¬¸øÕâ¸ö killerId µÄÃÅÅÉ¹±Ï×¶È+1
+	--æŒªåˆ°ehuashan_1.luaä¸­å»äº† changed by xindefeng
+	-- 2ï¼Œç»™è¿™ä¸ª killerId çš„é—¨æ´¾è´¡çŒ®åº¦+1
 	--local nMenpaiPoint = GetHumanMenpaiPoint(sceneId, nHumanId)
 	--SetHumanMenpaiPoint(sceneId, nHumanId, nMenpaiPoint+1)
 	
-	-- 3£¬¸øÕâ¸ö killerId µÄÃÅÅÉÉ±ÈËÊı+1
+	-- 3ï¼Œç»™è¿™ä¸ª killerId çš„é—¨æ´¾æ€äººæ•°+1
 	CallScriptFunction((001230), "KillPlayer",sceneId, nHumanId, selfId)
 
 end

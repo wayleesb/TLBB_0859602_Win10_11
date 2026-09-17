@@ -1,13 +1,13 @@
---Íò½Ù¹È»ªºÍôŞ
+--ä¸‡åŠ«è°·åå’Œè‰®
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x118012_g_scriptId = 118012
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x118012_g_eventList={}
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x118012_UpdateEventList( sceneId, selfId,targetId )
 	
@@ -15,27 +15,27 @@ function x118012_UpdateEventList( sceneId, selfId,targetId )
 
 	BeginEvent(sceneId)
 	AddText(sceneId,"#{JQ_WJG_B_001}")
-		AddNumText(sceneId, x118012_g_scriptId,"ËÍÎÒµ½ÃÅ¿ÚÈ¥",9,-1);
+		AddNumText(sceneId, x118012_g_scriptId,"é€æˆ‘åˆ°é—¨å£å»",9,-1);
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 end
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x118012_OnDefaultEvent( sceneId, selfId,targetId )
 	x118012_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x118012_OnEventRequest( sceneId, selfId, targetId, eventId )
 	CallScriptFunction((400900), "TransferFunc",sceneId, selfId, sceneId,109,115)
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x118012_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x118012_g_eventList do
@@ -50,10 +50,10 @@ function x118012_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x118012_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
-	--¾Ü¾øÖ®ºó£¬Òª·µ»ØNPCµÄÊÂ¼şÁĞ±í
+	--æ‹’ç»ä¹‹åï¼Œè¦è¿”å›NPCçš„äº‹ä»¶åˆ—è¡¨
 	for i, findId in x118012_g_eventList do
 		if missionScriptId == findId then
 			x118012_UpdateEventList( sceneId, selfId, targetId )
@@ -63,7 +63,7 @@ function x118012_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¼ÌĞø£¨ÒÑ¾­½ÓÁËÈÎÎñ£©
+--ç»§ç»­ï¼ˆå·²ç»æ¥äº†ä»»åŠ¡ï¼‰
 --**********************************
 function x118012_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x118012_g_eventList do
@@ -75,7 +75,7 @@ function x118012_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---Ìá½»ÒÑ×öÍêµÄÈÎÎñ
+--æäº¤å·²åšå®Œçš„ä»»åŠ¡
 --**********************************
 function x118012_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, selectRadioId )
 	for i, findId in x118012_g_eventList do
@@ -87,7 +87,7 @@ function x118012_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 end
 
 --**********************************
---ËÀÍöÊÂ¼ş
+--æ­»äº¡äº‹ä»¶
 --**********************************
 function x118012_OnDie( sceneId, selfId, killerId )
 end

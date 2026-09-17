@@ -1,17 +1,17 @@
---Ø¤°ïNPC
---ÕÆÃÅÈË
---ËÎ³¤ÀÏ
---ÆÕÍ¨
+--ä¸å¸®NPC
+--æŒé—¨äºº
+--å®‹é•¿è€
+--æ™®é€š
 
 x010005_g_scriptId = 010005
 x010005_g_eventList = {229009,229012,808092}
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x010005_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
-		AddText(sceneId,"Ø¤°ïÏëÒª·¢Õ¹×³´ó£¬»¹Õæ²»ÄÜÖ»ÕĞÊÕÆòØ¤¡£ÎÒ×î½üÊÕÁËÒ»¸öµÜ×Ó£¬ËûÒÔÇ°ÊÇ¸öºÍÉĞ¡£")
+		AddText(sceneId,"ä¸å¸®æƒ³è¦å‘å±•å£®å¤§ï¼Œè¿˜çœŸä¸èƒ½åªæ‹›æ”¶ä¹ä¸ã€‚æˆ‘æœ€è¿‘æ”¶äº†ä¸€ä¸ªå¼Ÿå­ï¼Œä»–ä»¥å‰æ˜¯ä¸ªå’Œå°šã€‚")
 		for i, findId in x010005_g_eventList do
 			CallScriptFunction( x010005_g_eventList[i], "OnEnumerate",sceneId, selfId, targetId )
 		end
@@ -20,7 +20,7 @@ function x010005_OnDefaultEvent( sceneId, selfId,targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x010005_OnEventRequest( sceneId, selfId, targetId, eventId )
 	for i, findId in x010005_g_eventList do

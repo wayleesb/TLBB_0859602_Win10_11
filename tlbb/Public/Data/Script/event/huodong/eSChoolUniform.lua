@@ -1,21 +1,21 @@
---»î¶¯¡ª¡ª
---ÌìÊ¹Ğ£·ş¼Æ»®
+--æ´»åŠ¨â€”â€”
+--å¤©ä½¿æ ¡æœè®¡åˆ’
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x889052_g_ScriptId = 889052
 
---»î¶¯Ê±¼ä
-x889052_g_startTime = 09069 --»î¶¯¿ªÊ¼Ê±¼ä
-x889052_g_EndTime   = 09099 --»î¶¯½áÊøÊ±¼ä
+--æ´»åŠ¨æ—¶é—´
+x889052_g_startTime = 09069 --æ´»åŠ¨å¼€å§‹æ—¶é—´
+x889052_g_EndTime   = 09099 --æ´»åŠ¨ç»“æŸæ—¶é—´
 
 
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x889052_OnDefaultEvent( sceneId, selfId, targetId )
 		
-		--¼ì²âÊ±¼äÊÇ·ñÕıÈ·
+		--æ£€æµ‹æ—¶é—´æ˜¯å¦æ­£ç¡®
 		if x889052_CheckRightTime() == 0 then
 			return 
 		end
@@ -39,7 +39,7 @@ function x889052_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---¸øÍæ¼Ò·¢ÓÊ¼ş
+--ç»™ç©å®¶å‘é‚®ä»¶
 --**********************************
 function x889052_OnPlayerLogin( sceneId, selfId )
 	
@@ -51,7 +51,7 @@ function x889052_OnPlayerLogin( sceneId, selfId )
 end
 
 --**********************************
---¼ì²âÊÇ·ñÊÇ»î¶¯Ê±¼ä
+--æ£€æµ‹æ˜¯å¦æ˜¯æ´»åŠ¨æ—¶é—´
 --**********************************
 function x889052_CheckRightTime()
 	local curDayTime = GetDayTime()
@@ -63,7 +63,7 @@ function x889052_CheckRightTime()
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x889052_OnEnumerate( sceneId, selfId, targetId )
 
@@ -76,7 +76,7 @@ end
 
 function x889052_GiveGift(sceneId, selfId, targetId)
 
-	--ÊÇ·ñ²Î¼Ó¹ı¸Ã»î¶¯
+	--æ˜¯å¦å‚åŠ è¿‡è¯¥æ´»åŠ¨
 	local bHave = GetMissionFlag(sceneId, selfId, MF_TW_SCHOOLUNIFORM_JOIN)
 	if (bHave ==1) then
 		
@@ -84,15 +84,15 @@ function x889052_GiveGift(sceneId, selfId, targetId)
 		return
 	end
 	
-	--µÀ¾ßÀ¸ÊÇ·ñ×ã¹»  
+	--é“å…·æ æ˜¯å¦è¶³å¤Ÿ  
 	if LuaFnGetPropertyBagSpace( sceneId, selfId ) < 1 then
 			x889052_NotifyFailBox(sceneId, selfId,targetId,"#{TSJH_090224_9}")
 			return
 	end
 	
-	--¸ù¾İµÈ¼¶»ñµÃÀñÆ·
+	--æ ¹æ®ç­‰çº§è·å¾—ç¤¼å“
 	if GetLevel( sceneId, selfId ) >50 then
-			--¸øÍæ¼Ò¶«Î÷£¬Íê³É
+			--ç»™ç©å®¶ä¸œè¥¿ï¼Œå®Œæˆ
 			BeginAddItem( sceneId )
 				local nIndex = AddItem( sceneId, 30504065, 1 )
 			local ret = EndAddItem( sceneId, selfId )
@@ -100,10 +100,10 @@ function x889052_GiveGift(sceneId, selfId, targetId)
 				return
 			end
 			AddItemListToHuman(sceneId,selfId)
-			--ĞÑÄ¿ÌáÊ¾
+			--é†’ç›®æç¤º
 			x889052_NotifySucessBox(sceneId,selfId,"#{TSJH_090224_11}")
 	else
-		--¸øÍæ¼Ò¶«Î÷£¬Íê³É
+		--ç»™ç©å®¶ä¸œè¥¿ï¼Œå®Œæˆ
 			BeginAddItem( sceneId )
 				local nIndex = AddItem( sceneId, 30504059, 1 )
 			local ret = EndAddItem( sceneId, selfId )
@@ -111,7 +111,7 @@ function x889052_GiveGift(sceneId, selfId, targetId)
 				return
 			end
 			AddItemListToHuman(sceneId,selfId)
-			--ĞÑÄ¿ÌáÊ¾
+			--é†’ç›®æç¤º
 			x889052_NotifySucessBox(sceneId,selfId,"#{TSJH_090224_10}")
 	end
 	
@@ -121,16 +121,16 @@ function x889052_GiveGift(sceneId, selfId, targetId)
 	DispatchUICommand( sceneId, selfId, 1000 )
 	SetMissionFlag(sceneId, selfId, MF_TW_SCHOOLUNIFORM_JOIN, 1)
 	
-	--Í³¼ÆÈÕÖ¾
+	--ç»Ÿè®¡æ—¥å¿—
 	AuditGetSChoolUniform(sceneId, selfId,GetLevel(sceneId, selfId),LuaFnGetSex(sceneId,selfId))
 	
 end
 
 --**********************************
--- ¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+-- å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x889052_NotifySucessBox( sceneId, selfId,msg )
-	--ĞÑÄ¿ÌáÊ¾
+	--é†’ç›®æç¤º
 		BeginEvent(sceneId) 
 			AddText( sceneId,msg)
 		EndEvent(sceneId)
@@ -139,7 +139,7 @@ end
 
 
 --**********************************
--- ¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+-- å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x889052_NotifyFailBox( sceneId, selfId,targetId, msg )
 	BeginEvent( sceneId )
@@ -149,55 +149,55 @@ function x889052_NotifyFailBox( sceneId, selfId,targetId, msg )
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x889052_CheckAccept( sceneId, selfId )
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x889052_OnAccept( sceneId, selfId )
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x889052_OnAbandon( sceneId, selfId )
 end
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x889052_OnContinue( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x889052_CheckSubmit( sceneId, selfId )
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x889052_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 end
 
 --**********************************
---É±ËÀ¹ÖÎï»òÍæ¼Ò
+--æ€æ­»æ€ªç‰©æˆ–ç©å®¶
 --**********************************
 function x889052_OnKillObject( sceneId, selfId, objdataId ,objId )
 end
 
 --**********************************
---½øÈëÇøÓòÊÂ¼ş
+--è¿›å…¥åŒºåŸŸäº‹ä»¶
 --**********************************
 function x889052_OnEnterArea( sceneId, selfId, zoneId )
 end
 
 --**********************************
---µÀ¾ß¸Ä±ä
+--é“å…·æ”¹å˜
 --**********************************
 function x889052_OnItemChanged( sceneId, selfId, itemdataId )
 end

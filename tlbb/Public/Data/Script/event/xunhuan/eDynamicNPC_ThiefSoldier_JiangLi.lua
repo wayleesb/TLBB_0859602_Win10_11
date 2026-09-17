@@ -1,7 +1,7 @@
 
 --************************************************************************
 --MisDescBegin
---½Å±¾ºÅ
+--è„šæœ¬å·
 x050015_g_ScriptId	= 050015
 
 --MisDescEnd
@@ -16,13 +16,13 @@ x050015_TitleLevel3 = 133
 x050015_TitleLevel4 = 134
 x050015_TitleLevel5 = 135
 
---ÌÌ½ğÃûÌûID	--add by xindefeng
+--çƒ«é‡‘åå¸–ID	--add by xindefeng
 x050015_g_TangJinMingTieID = 30505205
---Ò»´ÎÉ¾³ıÌÌ½ğÃûÌûÊıÁ¿	--add by xindefeng
+--ä¸€æ¬¡åˆ é™¤çƒ«é‡‘åå¸–æ•°é‡	--add by xindefeng
 x050015_g_DelMingTieCount = 1
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x050015_OnDefaultEvent( sceneId, selfId, targetId )
 	local SelNum = GetNumText()		
@@ -30,9 +30,9 @@ function x050015_OnDefaultEvent( sceneId, selfId, targetId )
 		x050015_DuiHuan( sceneId, selfId, targetId )
 	elseif SelNum == 2 then
 		x050015_ChaXun( sceneId, selfId, targetId )
-	elseif SelNum == 3 then	--¶Ò»»°ï»á×Ô¶¨Òå³ÆºÅ--add by xindefeng
+	elseif SelNum == 3 then	--å…‘æ¢å¸®ä¼šè‡ªå®šä¹‰ç§°å·--add by xindefeng
 		x050015_ZiDingYi(sceneId, selfId, targetId)
-	elseif SelNum == 22 then	--¹ØÓÚÁìÈ¡°ï»á×Ô¶¨Òå³ÆºÅ--add by xindefeng
+	elseif SelNum == 22 then	--å…³äºé¢†å–å¸®ä¼šè‡ªå®šä¹‰ç§°å·--add by xindefeng
 		x050015_MsgBox(sceneId, selfId, targetId, "#{TangJinMingTie_Help}")
 	elseif SelNum == 255 then
 		BeginUICommand( sceneId )
@@ -43,17 +43,17 @@ function x050015_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x050015_OnEnumerate( sceneId, selfId, targetId )
-	AddNumText(sceneId,x050015_g_ScriptId,"ÎÒÒª¶Ò»»ÎÒµÄ³ÆºÅ",6,1)
-	AddNumText(sceneId,x050015_g_ScriptId,"ÎÒÏë²éÑ¯ÎÒµÄ»ı·Ö",6,2)	
-	AddNumText(sceneId,x050015_g_ScriptId,"ÁìÈ¡°ï»á×Ô¶©³ÆºÅ",6,3)--add by  xindefeng
-	AddNumText(sceneId,x050015_g_ScriptId,"¹ØÓÚÁìÈ¡°ï»á×Ô¶©³ÆºÅ", 11, 22 )--add by xindefeng
-  AddNumText(sceneId,x050015_g_ScriptId,"Àë¿ª......",8, 255 )
+	AddNumText(sceneId,x050015_g_ScriptId,"æˆ‘è¦å…‘æ¢æˆ‘çš„ç§°å·",6,1)
+	AddNumText(sceneId,x050015_g_ScriptId,"æˆ‘æƒ³æŸ¥è¯¢æˆ‘çš„ç§¯åˆ†",6,2)	
+	AddNumText(sceneId,x050015_g_ScriptId,"é¢†å–å¸®ä¼šè‡ªè®¢ç§°å·",6,3)--add by  xindefeng
+	AddNumText(sceneId,x050015_g_ScriptId,"å…³äºé¢†å–å¸®ä¼šè‡ªè®¢ç§°å·", 11, 22 )--add by xindefeng
+  AddNumText(sceneId,x050015_g_ScriptId,"ç¦»å¼€......",8, 255 )
 end
 
-function x050015_GetCurTitle( sceneId, selfId )    --¸ù¾İ»ı·ÖÈ¡µÃ³ÆºÅ(³ÆºÅ±àºÅ)
+function x050015_GetCurTitle( sceneId, selfId )    --æ ¹æ®ç§¯åˆ†å–å¾—ç§°å·(ç§°å·ç¼–å·)
     local Score = GetMissionData( sceneId, selfId, MD_ThiefSoldierInvade )
     
     
@@ -84,24 +84,24 @@ function x050015_GetCurTitle( sceneId, selfId )    --¸ù¾İ»ı·ÖÈ¡µÃ³ÆºÅ(³ÆºÅ±àºÅ)
      
 end
 
-function x050015_GetTitleName( Title )    --¸ù¾İ³ÆºÅ±àºÅÈ¡µÃ³ÆºÅÃû³Æ
+function x050015_GetTitleName( Title )    --æ ¹æ®ç§°å·ç¼–å·å–å¾—ç§°å·åç§°
 
     local TitleName = ""
 
     if Title == x050015_TitleLevel1 then
-        TitleName = "Æ½ÔôÊ¿±ø"
+        TitleName = "å¹³è´¼å£«å…µ"
     elseif Title == x050015_TitleLevel2 then
-        TitleName = "Æ½Ôô¶Ó³¤"
+        TitleName = "å¹³è´¼é˜Ÿé•¿"
     elseif Title == x050015_TitleLevel3 then
-        TitleName = "Æ½ÔôÍ³Áì"
+        TitleName = "å¹³è´¼ç»Ÿé¢†"
     elseif Title == x050015_TitleLevel4 then
-        TitleName = "µ´¿Ü½«¾ü"
+        TitleName = "è¡å¯‡å°†å†›"
     elseif Title == x050015_TitleLevel5 then
-        TitleName = "µ´¿ÜÔªË§"
+        TitleName = "è¡å¯‡å…ƒå¸…"
     elseif Title > x050015_TitleLevel5 then
-        TitleName = "µ´¿ÜÔªË§"
+        TitleName = "è¡å¯‡å…ƒå¸…"
     else
-        TitleName = "Æ½ÔôÊ¿±ø"
+        TitleName = "å¹³è´¼å£«å…µ"
     end
 
     return TitleName
@@ -109,12 +109,12 @@ end
 
 
 --**********************************
---ÎÒÒª¶Ò»»ÎÒµÄ³ÆºÅ
+--æˆ‘è¦å…‘æ¢æˆ‘çš„ç§°å·
 --**********************************
 function x050015_DuiHuan( sceneId, selfId, targetId )
-	local score = GetMissionData( sceneId, selfId, MD_ThiefSoldierInvade )	--»ñÈ¡°ï¹±ÊıÁ¿
+	local score = GetMissionData( sceneId, selfId, MD_ThiefSoldierInvade )	--è·å–å¸®è´¡æ•°é‡
   if score < 100 then
-   x050015_MsgBox( sceneId, selfId, targetId,"  ¸óÏÂµÄ¹±Ï×»¹²»×ãÒÔ»ñµÃĞÂµÄ³ÆºÅ£¬Çë¼ÌĞøÅ¬Á¦¡£" )
+   x050015_MsgBox( sceneId, selfId, targetId,"  é˜ä¸‹çš„è´¡çŒ®è¿˜ä¸è¶³ä»¥è·å¾—æ–°çš„ç§°å·ï¼Œè¯·ç»§ç»­åŠªåŠ›ã€‚" )
    return
   end  
   
@@ -123,79 +123,79 @@ function x050015_DuiHuan( sceneId, selfId, targetId )
   
   local strText = ""
   if OldTitle == x050015_TitleLevel5 then
-      strText = format( "  ÄúÒÑ¾­»ñµÃÁË×î¸ßµÈ¼¶µÄ³ÆºÅ¡£" )
+      strText = format( "  æ‚¨å·²ç»è·å¾—äº†æœ€é«˜ç­‰çº§çš„ç§°å·ã€‚" )
   elseif( CurTitle > OldTitle  ) then
-      AwardTitle( sceneId, selfId,  6, CurTitle )  --°ÑÔ­À´µÄ³ÆºÅÌæ»»
-      DispatchAllTitle( sceneId, selfId )          --Ë¢ĞÂ¿Í»§¶Ë³ÆºÅ
+      AwardTitle( sceneId, selfId,  6, CurTitle )  --æŠŠåŸæ¥çš„ç§°å·æ›¿æ¢
+      DispatchAllTitle( sceneId, selfId )          --åˆ·æ–°å®¢æˆ·ç«¯ç§°å·
       local TitleName = x050015_GetTitleName( CurTitle )
-      strText = format( "  ²»´í²»´í,³¯Í¢¶ÔÓÚÖ¾Ê¿µÄÆ½Ôô¹±Ï×ÉõÎªĞÀÎ¿£¬ÌØÎ¯ÍĞÎÒÊÚÓè³ÆºÅ %s¡£Ï£Íû¸óÏÂÄÜ¹»¼ÌĞøÎªÆ½Ôô¹±Ï××Ô¼ºµÄÁ¦Á¿¡£",  TitleName )      
+      strText = format( "  ä¸é”™ä¸é”™,æœå»·å¯¹äºå¿—å£«çš„å¹³è´¼è´¡çŒ®ç”šä¸ºæ¬£æ…°ï¼Œç‰¹å§”æ‰˜æˆ‘æˆäºˆç§°å· %sã€‚å¸Œæœ›é˜ä¸‹èƒ½å¤Ÿç»§ç»­ä¸ºå¹³è´¼è´¡çŒ®è‡ªå·±çš„åŠ›é‡ã€‚",  TitleName )      
   else
-      strText = format( "  ¸óÏÂµÄ¹±Ï×»¹²»×ãÒÔ»ñµÃĞÂµÄ³ÆºÅ£¬Çë¼ÌĞøÅ¬Á¦¡£" )
+      strText = format( "  é˜ä¸‹çš„è´¡çŒ®è¿˜ä¸è¶³ä»¥è·å¾—æ–°çš„ç§°å·ï¼Œè¯·ç»§ç»­åŠªåŠ›ã€‚" )
   end
   
   x050015_MsgBox( sceneId, selfId, targetId, strText )	
 
 end
 --**********************************
---ÎÒÏë²éÑ¯ÎÒµÄ»ı·Ö
+--æˆ‘æƒ³æŸ¥è¯¢æˆ‘çš„ç§¯åˆ†
 --**********************************
 function x050015_ChaXun( sceneId, selfId, targetId )
 	score = GetMissionData( sceneId, selfId, MD_ThiefSoldierInvade )
-	local strText = format( " ¸óÏÂÄ¿Ç°µÄ»ı·ÖÎª%d£¬Çë¼ÌĞøÅ¬Á¦¡£", score )
+	local strText = format( " é˜ä¸‹ç›®å‰çš„ç§¯åˆ†ä¸º%dï¼Œè¯·ç»§ç»­åŠªåŠ›ã€‚", score )
 	x050015_MsgBox( sceneId, selfId, targetId, strText )
 end
 
 --**************************************************
---¶Ò»»ÎÒµÄ×Ô¶¨Òå°ï»á³ÆºÅ	--add by xindefeng
+--å…‘æ¢æˆ‘çš„è‡ªå®šä¹‰å¸®ä¼šç§°å·	--add by xindefeng
 --**************************************************
 function x050015_ZiDingYi( sceneId, selfId, targetId )
-  --¼ì²âÍæ¼ÒÊÇ·ñ¼ÓÈë°ïÅÉ
+  --æ£€æµ‹ç©å®¶æ˜¯å¦åŠ å…¥å¸®æ´¾
   local guildid	= GetHumanGuildID(sceneId, selfId)  
   if(guildid == -1)then
-  	x050015_MsgBox(sceneId, selfId, targetId, "    ¶Ò»»Ê§°Ü£¬Äã»¹Ã»ÓĞ¼ÓÈëÈÎºÎ°ïÅÉ¡£#W")
+  	x050015_MsgBox(sceneId, selfId, targetId, "    å…‘æ¢å¤±è´¥ï¼Œä½ è¿˜æ²¡æœ‰åŠ å…¥ä»»ä½•å¸®æ´¾ã€‚#W")
   	return
   end
 	
-	--¼ì²âÍæ¼ÒÊÇ·ñÓĞ"ÌÌ½ğÃûÌû"
+	--æ£€æµ‹ç©å®¶æ˜¯å¦æœ‰"çƒ«é‡‘åå¸–"
   local count = GetItemCount(sceneId, selfId, x050015_g_TangJinMingTieID)
   if(count < 1)then
-  	x050015_MsgBox(sceneId, selfId, targetId, "    ¶Ò»»Ê§°Ü£¬ĞèÒª#YÌÌ½ğÃûÌû¡£#W")
+  	x050015_MsgBox(sceneId, selfId, targetId, "    å…‘æ¢å¤±è´¥ï¼Œéœ€è¦#Yçƒ«é‡‘åå¸–ã€‚#W")
   	return
   end
   count = LuaFnGetAvailableItemCount(sceneId, selfId, x050015_g_TangJinMingTieID)
   if(count < 1)then
-  	x050015_MsgBox(sceneId, selfId, targetId, "    ¶Ò»»Ê§°Ü£¬Çë¼ì²éÄãµÄ#YÌÌ½ğÃûÌû#WÊÇ²»ÊÇÉÏËøÁË¡£")
+  	x050015_MsgBox(sceneId, selfId, targetId, "    å…‘æ¢å¤±è´¥ï¼Œè¯·æ£€æŸ¥ä½ çš„#Yçƒ«é‡‘åå¸–#Wæ˜¯ä¸æ˜¯ä¸Šé”äº†ã€‚")
   	return
   end
   
-  --Í¨ÖªServer¿ÉÒÔÁìÈ¡³ÆºÅÁË
+  --é€šçŸ¥Serverå¯ä»¥é¢†å–ç§°å·äº†
   LuaFnDrawGuildPositionName(sceneId, selfId, targetId)
 end
 
 --**************************************************
---¹©ServerÖ±½Óµ÷ÓÃ	--add by xindefeng
+--ä¾›Serverç›´æ¥è°ƒç”¨	--add by xindefeng
 --**************************************************
 function x050015_OnDrawPositonName_Succ( sceneId, selfId )  
-  --É¾³ı"ÌÌ½ğÃûÌû"
+  --åˆ é™¤"çƒ«é‡‘åå¸–"
   local ret = LuaFnDelAvailableItem(sceneId, selfId, x050015_g_TangJinMingTieID, x050015_g_DelMingTieCount)
 	if ret < 1  then
-		x050015_MsgBox(sceneId, selfId, -1, "    ¶Ò»»Ê§°Ü£¬Çë¼ì²éÄãµÄ#YÌÌ½ğÃûÌû#WÊÇ²»ÊÇÉÏËøÁË¡£")
+		x050015_MsgBox(sceneId, selfId, -1, "    å…‘æ¢å¤±è´¥ï¼Œè¯·æ£€æŸ¥ä½ çš„#Yçƒ«é‡‘åå¸–#Wæ˜¯ä¸æ˜¯ä¸Šé”äº†ã€‚")
 		return 0
 	end
 	
 	return 1
 end
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x050015_OnEventRequest( sceneId, selfId, targetId, eventId )
 	if GetNumText() == 1 then
 		x050015_DuiHuan( sceneId, selfId, targetId )
 	elseif GetNumText() == 2 then
 		x050015_ChaXun( sceneId, selfId, targetId )
-	elseif GetNumText() == 3 then	--¶Ò»»°ï»á×Ô¶¨Òå³ÆºÅ--add by xindefeng
+	elseif GetNumText() == 3 then	--å…‘æ¢å¸®ä¼šè‡ªå®šä¹‰ç§°å·--add by xindefeng
 		x050015_ZiDingYi(sceneId, selfId, targetId)
-	elseif GetNumText() == 22 then	--¹ØÓÚÁìÈ¡°ï»á×Ô¶¨Òå³ÆºÅ--add by xindefeng
+	elseif GetNumText() == 22 then	--å…³äºé¢†å–å¸®ä¼šè‡ªå®šä¹‰ç§°å·--add by xindefeng
 		x050015_MsgBox(sceneId, selfId, targetId, "#{TangJinMingTie_Help}")	
 	elseif GetNumText() == 255 then
 		BeginUICommand( sceneId )
@@ -206,7 +206,7 @@ function x050015_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x050015_CheckAccept( sceneId, selfId )
 
@@ -214,7 +214,7 @@ function x050015_CheckAccept( sceneId, selfId )
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x050015_OnAccept( sceneId, selfId )
 
@@ -222,7 +222,7 @@ function x050015_OnAccept( sceneId, selfId )
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x050015_OnAbandon( sceneId, selfId )
 
@@ -230,7 +230,7 @@ function x050015_OnAbandon( sceneId, selfId )
 end
 
 --**********************************
---´´½¨¸±±¾
+--åˆ›å»ºå‰¯æœ¬
 --**********************************
 function x050015_MakeCopyScene( sceneId, selfId, nearmembercount )
 
@@ -238,14 +238,14 @@ function x050015_MakeCopyScene( sceneId, selfId, nearmembercount )
 end
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x050015_OnContinue( sceneId, selfId, targetId )
 
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x050015_CheckSubmit( sceneId, selfId, selectRadioId )
 
@@ -253,14 +253,14 @@ function x050015_CheckSubmit( sceneId, selfId, selectRadioId )
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x050015_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 
 end
 
 --**********************************
---É±ËÀ¹ÖÎï»òÍæ¼Ò
+--æ€æ­»æ€ªç‰©æˆ–ç©å®¶
 --**********************************
 function x050015_OnKillObject( sceneId, selfId, objdataId, objId )
 
@@ -268,19 +268,19 @@ function x050015_OnKillObject( sceneId, selfId, objdataId, objId )
 end
 
 --**********************************
---½øÈëÇøÓòÊÂ¼ş
+--è¿›å…¥åŒºåŸŸäº‹ä»¶
 --**********************************
 function x050015_OnEnterZone( sceneId, selfId, zoneId )
 end
 
 --**********************************
---µÀ¾ß¸Ä±ä
+--é“å…·æ”¹å˜
 --**********************************
 function x050015_OnItemChanged( sceneId, selfId, itemdataId )
 end
 
 --**********************************
---¸±±¾ÊÂ¼ş
+--å‰¯æœ¬äº‹ä»¶
 --**********************************
 function x050015_OnCopySceneReady( sceneId, destsceneId )
 
@@ -288,14 +288,14 @@ function x050015_OnCopySceneReady( sceneId, destsceneId )
 end
 
 --**********************************
---ÓĞÍæ¼Ò½øÈë¸±±¾ÊÂ¼ş
+--æœ‰ç©å®¶è¿›å…¥å‰¯æœ¬äº‹ä»¶
 --**********************************
 function x050015_OnPlayerEnter( sceneId, selfId )
 
 end
 
 --**********************************
---ÓĞÍæ¼ÒÔÚ¸±±¾ÖĞËÀÍöÊÂ¼ş
+--æœ‰ç©å®¶åœ¨å‰¯æœ¬ä¸­æ­»äº¡äº‹ä»¶
 --**********************************
 function x050015_OnHumanDie( sceneId, selfId, killerId )
 --	x = LuaFnGetCopySceneData_Param( sceneId, x050015_g_keySD["x"] )
@@ -304,14 +304,14 @@ function x050015_OnHumanDie( sceneId, selfId, killerId )
 end
 
 --**********************************
---¸±±¾³¡¾°¶¨Ê±Æ÷ÊÂ¼ş
+--å‰¯æœ¬åœºæ™¯å®šæ—¶å™¨äº‹ä»¶
 --**********************************
 function x050015_OnCopySceneTimer( sceneId, nowTime )
 
 end
 
 --**********************************
---ĞÑÄ¿ÌáÊ¾
+--é†’ç›®æç¤º
 --**********************************
 function x050015_NotifyTip( sceneId, selfId, msg )
 
@@ -323,13 +323,13 @@ function x050015_NotifyTip( sceneId, selfId, msg )
 end
 
 --**********************************
---¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+--å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x050015_MsgBox( sceneId, selfId, targetId, msg )
 
 	BeginEvent( sceneId )
 		AddText( sceneId, msg )
-		AddNumText(sceneId,x050015_g_ScriptId,"Àë¿ª......",8, 255 )
+		AddNumText(sceneId,x050015_g_ScriptId,"ç¦»å¼€......",8, 255 )
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, selfId, targetId )
 

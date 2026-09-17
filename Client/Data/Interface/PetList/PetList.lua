@@ -1,7 +1,7 @@
 local g_nSelect_Index = -1;
 local g_PreSelect = -1;
 local g_PetIndex  = {};
-local PET_MAX_NUMBER = 10	--×î´óÕäÊŞĞ¯´øÉÏÏŞ --add by xindefeng
+local PET_MAX_NUMBER = 10	--æœ€å¤§çå…½æºå¸¦ä¸Šé™ --add by xindefeng
 
 --===============================================
 -- OnLoad()
@@ -69,7 +69,7 @@ function PetList_OnEvent(event)
 end
 
 --===============================================
--- ¸üĞÂ½çÃæ
+-- æ›´æ–°ç•Œé¢
 --===============================================
 function PetList_UpdateFrame()
 
@@ -89,7 +89,7 @@ function PetList_UpdateFrame()
 				if( nUnlockElapsedTime == 0 ) then
 					szPetName = szPetName.. "  #-05";
 					
-					strToolTips =  "ÒÑ¼ÓËø" ;
+					strToolTips =  "å·²åŠ é”" ;
 				else
 					szPetName = szPetName.. "  #-10";
 					
@@ -106,7 +106,7 @@ function PetList_UpdateFrame()
 end
 
 --===============================================
--- Ñ¡Ôñ
+-- é€‰æ‹©
 --===============================================
 function PetList_Choose_Click()
 	g_nSelect_Index = PetList_List:GetFirstSelectItem();
@@ -130,7 +130,7 @@ function PetList_Choose_Click()
 	end
 
 	if NeedCheckLock == 1 and PlayerPackage:IsPetLock(g_nSelect_Index) == 1 then
-		PushDebugMessage("ÕäÊŞÒÑ¼ÓËø")
+		PushDebugMessage("çå…½å·²åŠ é”")
 		return;
 	end
 
@@ -138,7 +138,7 @@ function PetList_Choose_Click()
 end
 
 --===============================================
--- ·ÅÆú
+-- æ”¾å¼ƒ
 --===============================================
 function PetList_Refuse_Click()
 	if g_nSelect_Index ~= -1 then
@@ -148,14 +148,14 @@ function PetList_Refuse_Click()
 end
 
 --===============================================
--- Ñ¡ÖĞÁĞ±íÖĞµÄÕäÊŞ
+-- é€‰ä¸­åˆ—è¡¨ä¸­çš„çå…½
 --===============================================
 function PetList_List_Selected()
 	g_nSelect_Index = PetList_List:GetFirstSelectItem();
 end
 
 --===============================================
---¸ù¾İÑ¡ÔñµÄÕäÊŞ£¬ÏÔÊ¾ÏàÓ¦µÄÏêÏ¸ĞÅÏ¢
+--æ ¹æ®é€‰æ‹©çš„çå…½ï¼Œæ˜¾ç¤ºç›¸åº”çš„è¯¦ç»†ä¿¡æ¯
 --===============================================
 function PetList_ShowTargetPet()
 	g_nSelect_Index = PetList_List:GetFirstSelectItem();

@@ -1,56 +1,56 @@
---²İÔ­ BOSSÈºË¢ĞÂ½Å±¾
+--è‰åŸ BOSSç¾¤åˆ·æ–°è„šæœ¬
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x810003_g_ScriptId	= 810003
 
---Ë¢ĞÂ·½Ê½Îª:
---¼¤»î´Ë½Å±¾Ê±¶¨µãË¢³ö10¸öBOSS....
+--åˆ·æ–°æ–¹å¼ä¸º:
+--æ¿€æ´»æ­¤è„šæœ¬æ—¶å®šç‚¹åˆ·å‡º10ä¸ªBOSS....
 
---ĞèÒªË¢³öµÄBOSSµÄÊı¾İ±í....
---BOSSµÄMonsterID²»ÄÜÖØ¸´....ÔÚ³¡¾°ÖĞÍ¬Ò»Ê±¿ÌÍ¬Ò»¸öMonsterIDµÄ¹ÖÖ»ÄÜ´æÔÚÒ»¸ö....ÓĞÁË¾Í²»Ë¢ÁË....
+--éœ€è¦åˆ·å‡ºçš„BOSSçš„æ•°æ®è¡¨....
+--BOSSçš„MonsterIDä¸èƒ½é‡å¤....åœ¨åœºæ™¯ä¸­åŒä¸€æ—¶åˆ»åŒä¸€ä¸ªMonsterIDçš„æ€ªåªèƒ½å­˜åœ¨ä¸€ä¸ª....æœ‰äº†å°±ä¸åˆ·äº†....
 x810003_g_BossData = {
 
-	-- ID						BOSSµÄ monster id
-	-- Title				BOSSµÄ³ÆºÅ....
-	-- PosX					×ø±ê
-	-- PosY					×ø±ê
-	-- BaseAI				BOSSµÄBaseAI....
-	-- ExtAIScript	BOSSµÄÀ©Õ¹AI....
-	-- ScriptID			BOSSµÄ½Å±¾ID....
-	-- NeedCreate		¶¼Ìî1....
+	-- ID						BOSSçš„ monster id
+	-- Title				BOSSçš„ç§°å·....
+	-- PosX					åæ ‡
+	-- PosY					åæ ‡
+	-- BaseAI				BOSSçš„BaseAI....
+	-- ExtAIScript	BOSSçš„æ‰©å±•AI....
+	-- ScriptID			BOSSçš„è„šæœ¬ID....
+	-- NeedCreate		éƒ½å¡«1....
 
-	{ ID=9130, Title="ÃîÊÖ¿Õ¿Õ", PosX=77,  PosY=124, BaseAI=29, ExtAIScript=256, ScriptID=-1, NeedCreate=1 },
-	{ ID=9131, Title="ÃîÊÖ×ß×ä", PosX=44,  PosY=72,  BaseAI=29, ExtAIScript=256, ScriptID=-1, NeedCreate=1 },
-	{ ID=9132, Title="ÃîÊÖ×ß×ä", PosX=83,  PosY=66,  BaseAI=29, ExtAIScript=256, ScriptID=-1, NeedCreate=1 },
-	{ ID=9133, Title="ÃîÊÖ×ß×ä", PosX=100, PosY=90,  BaseAI=29, ExtAIScript=256, ScriptID=-1, NeedCreate=1 },
-	{ ID=9134, Title="ÃîÊÖ×ß×ä", PosX=58,  PosY=121, BaseAI=29, ExtAIScript=256, ScriptID=-1, NeedCreate=1 },
-	{ ID=9135, Title="ÃîÊÖ×ß×ä", PosX=167, PosY=63,  BaseAI=29, ExtAIScript=256, ScriptID=-1, NeedCreate=1 },
-	{ ID=9136, Title="ÃîÊÖ×ß×ä", PosX=280, PosY=284, BaseAI=29, ExtAIScript=256, ScriptID=-1, NeedCreate=1 },
-	{ ID=9137, Title="ÃîÊÖ×ß×ä", PosX=64,  PosY=253, BaseAI=29, ExtAIScript=256, ScriptID=-1, NeedCreate=1 },
-	{ ID=9138, Title="ÃîÊÖ×ß×ä", PosX=190, PosY=49,  BaseAI=29, ExtAIScript=256, ScriptID=-1, NeedCreate=1 },
-	{ ID=9139, Title="ÃîÊÖ×ß×ä", PosX=276, PosY=127, BaseAI=29, ExtAIScript=256, ScriptID=-1, NeedCreate=1 },
+	{ ID=9130, Title="å¦™æ‰‹ç©ºç©º", PosX=77,  PosY=124, BaseAI=29, ExtAIScript=256, ScriptID=-1, NeedCreate=1 },
+	{ ID=9131, Title="å¦™æ‰‹èµ°å’", PosX=44,  PosY=72,  BaseAI=29, ExtAIScript=256, ScriptID=-1, NeedCreate=1 },
+	{ ID=9132, Title="å¦™æ‰‹èµ°å’", PosX=83,  PosY=66,  BaseAI=29, ExtAIScript=256, ScriptID=-1, NeedCreate=1 },
+	{ ID=9133, Title="å¦™æ‰‹èµ°å’", PosX=100, PosY=90,  BaseAI=29, ExtAIScript=256, ScriptID=-1, NeedCreate=1 },
+	{ ID=9134, Title="å¦™æ‰‹èµ°å’", PosX=58,  PosY=121, BaseAI=29, ExtAIScript=256, ScriptID=-1, NeedCreate=1 },
+	{ ID=9135, Title="å¦™æ‰‹èµ°å’", PosX=167, PosY=63,  BaseAI=29, ExtAIScript=256, ScriptID=-1, NeedCreate=1 },
+	{ ID=9136, Title="å¦™æ‰‹èµ°å’", PosX=280, PosY=284, BaseAI=29, ExtAIScript=256, ScriptID=-1, NeedCreate=1 },
+	{ ID=9137, Title="å¦™æ‰‹èµ°å’", PosX=64,  PosY=253, BaseAI=29, ExtAIScript=256, ScriptID=-1, NeedCreate=1 },
+	{ ID=9138, Title="å¦™æ‰‹èµ°å’", PosX=190, PosY=49,  BaseAI=29, ExtAIScript=256, ScriptID=-1, NeedCreate=1 },
+	{ ID=9139, Title="å¦™æ‰‹èµ°å’", PosX=276, PosY=127, BaseAI=29, ExtAIScript=256, ScriptID=-1, NeedCreate=1 },
 }
 
 
 --**********************************
---½Å±¾Èë¿Úº¯Êı
+--è„šæœ¬å…¥å£å‡½æ•°
 --**********************************
 function x810003_OnDefaultEvent( sceneId, actId, iNoticeType, param2, param3, param4, param5 )
 
-	--¿ªÆô»î¶¯....
+	--å¼€å¯æ´»åŠ¨....
 	StartOneActivity( sceneId, actId, 180*1000, iNoticeType )
 
-	--BOSSÊı¾İ±íÎª¿Õ¾Í²»Ë¢BOSS....
+	--BOSSæ•°æ®è¡¨ä¸ºç©ºå°±ä¸åˆ·BOSS....
 	if getn(x810003_g_BossData) < 1 then
 		return
 	end
 
-	--ÖØÖÃBossÖØ½¨×´Ì¬....
+	--é‡ç½®Bossé‡å»ºçŠ¶æ€....
 	for _, Data in x810003_g_BossData do
 		Data.NeedCreate = 1
 	end
 
-	--±éÀú³¡¾°ÖĞËùÓĞµÄ¹Ö....¸üĞÂBOSSÖØ½¨×´Ì¬....
+	--éå†åœºæ™¯ä¸­æ‰€æœ‰çš„æ€ª....æ›´æ–°BOSSé‡å»ºçŠ¶æ€....
 	local nMonsterNum = GetMonsterCount(sceneId)
 	for i=0, nMonsterNum-1 do
 		local MonsterId = GetMonsterObjID(sceneId,i)
@@ -58,7 +58,7 @@ function x810003_OnDefaultEvent( sceneId, actId, iNoticeType, param2, param3, pa
 		x810003_CurSceneHaveMonster( sceneId, MosDataID )
 	end
 
-	--ÖØ½¨ĞèÒªÖØ½¨µÄBOSS....
+	--é‡å»ºéœ€è¦é‡å»ºçš„BOSS....
 	for _, BossData in x810003_g_BossData do
 		if BossData.NeedCreate == 1 then
 			MstId = LuaFnCreateMonster(sceneId, BossData.ID, BossData.PosX, BossData.PosY, BossData.BaseAI, BossData.ExtAIScript, BossData.ScriptID )
@@ -69,11 +69,11 @@ function x810003_OnDefaultEvent( sceneId, actId, iNoticeType, param2, param3, pa
 end
 
 --**********************************
---ĞÄÌøº¯Êı
+--å¿ƒè·³å‡½æ•°
 --**********************************
 function x810003_OnTimer( sceneId, actId, uTime )
 
-	--¼ì²â»î¶¯ÊÇ·ñ¹ıÆÚ
+	--æ£€æµ‹æ´»åŠ¨æ˜¯å¦è¿‡æœŸ
 	if CheckActiviyValidity( sceneId, actId ) == 0 then
 		StopOneActivity( sceneId, actId )
 	end
@@ -81,7 +81,7 @@ function x810003_OnTimer( sceneId, actId, uTime )
 end
 
 --**********************************
---ÓÃÓÚ¸üĞÂÖØ½¨×´Ì¬....
+--ç”¨äºæ›´æ–°é‡å»ºçŠ¶æ€....
 --**********************************
 function x810003_CurSceneHaveMonster( sceneId, DataID )
 

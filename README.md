@@ -8,12 +8,15 @@
 
 适用于 Windows 10/11 的 TLBB 0859602 客户端及配套工具。
 
-### V0.8 更新
+### V0.9 更新
 
-修复客户端崩溃、网络断开、模型与特效显示、界面缩放、任务及寻路等问题；
-修复 GM 工具暗器技能编辑，新增 GM BUFF 2691 / 2692，优化启动工具日志占用并新增“强制停服”。
+- 批量将客户端和服务端文本资源转换为 UTF-8，并更新模型、界面及配置资源。
+- 新增八箱仓库界面及配套贴图资源。
+- 新增客户端和服务端 `CombatLimits.ini` 战斗属性上限配置；修改时需同步两端配置并重启。
+- 新增创建角色和进入游戏的验证码开关，默认关闭。
+- 更新 64 位客户端、服务端、GM 工具、启动工具及下载程序。
 
-查看 [V0.8 完整更新日志（31 项）](CHANGELOG.md#v08)。
+历史版本：[V0.8 完整更新日志（31 项）](https://github.com/wayleesb/TLBB_0859602_Win10_11/releases/tag/0.8)。
 
 ### 目录结构
 
@@ -53,13 +56,15 @@ EXE 使用 .NET 内置单文件压缩，无需手动解压或预装 .NET。
 
 TLBB 0859602 client and bundled tools for Windows 10/11.
 
-### V0.8 Update
+### V0.9 Update
 
-Fixes client crashes, disconnections, model and effect rendering, UI scaling, quests, and pathfinding.
-Also fixes hidden-weapon skill editing in the GM tool, adds GM buffs 2691 / 2692,
-reduces launcher log disk usage, and adds a force-stop server option.
+- Converts client and server text resources to UTF-8 and updates model, interface, and configuration resources.
+- Adds interface and texture resources for the bank with eight storage boxes.
+- Adds client and server `CombatLimits.ini` configuration for combat attribute limits; keep both configurations in sync and restart after changes.
+- Adds verification-code switches for character creation and entering the game, disabled by default.
+- Updates the 64-bit client, server, GM tool, launcher, and downloader.
 
-See the [complete V0.8 changelog (31 entries, in Chinese)](CHANGELOG.md#v08).
+Previous version: [complete V0.8 changelog (31 entries, in Chinese)](https://github.com/wayleesb/TLBB_0859602_Win10_11/releases/tag/0.8).
 
 ### Directory Structure
 
@@ -102,13 +107,15 @@ packaging exclusion list and does not delete local files.
 
 Client TLBB 0859602 và các công cụ đi kèm dành cho Windows 10/11.
 
-### Cập nhật V0.8
+### Cập nhật V0.9
 
-Sửa lỗi client bị văng, mất kết nối, hiển thị mô hình và hiệu ứng, tỷ lệ giao diện, nhiệm vụ và tìm đường.
-Sửa lỗi chỉnh sửa kỹ năng ám khí trong công cụ GM, thêm buff GM 2691 / 2692,
-giảm dung lượng nhật ký của trình khởi chạy và thêm tùy chọn buộc dừng máy chủ.
+- Chuyển hàng loạt tài nguyên văn bản của client và máy chủ sang UTF-8, đồng thời cập nhật tài nguyên mô hình, giao diện và cấu hình.
+- Thêm tài nguyên giao diện và hình ảnh cho kho gồm tám rương.
+- Thêm cấu hình giới hạn thuộc tính chiến đấu `CombatLimits.ini` cho client và máy chủ; cần đồng bộ hai cấu hình và khởi động lại sau khi thay đổi.
+- Thêm tùy chọn bật mã xác minh khi tạo nhân vật và vào game; mặc định tắt.
+- Cập nhật client 64 bit, máy chủ, công cụ GM, trình khởi chạy và trình tải xuống.
 
-Xem [nhật ký thay đổi V0.8 đầy đủ (31 mục, bằng tiếng Trung)](CHANGELOG.md#v08).
+Phiên bản trước: [nhật ký thay đổi V0.8 đầy đủ (31 mục, bằng tiếng Trung)](https://github.com/wayleesb/TLBB_0859602_Win10_11/releases/tag/0.8).
 
 ### Cấu trúc thư mục
 

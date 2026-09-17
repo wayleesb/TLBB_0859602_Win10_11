@@ -1,12 +1,12 @@
---º®Óñ´²Ğ¡ÓÎÏ·
+--å¯’ç‰åºŠå°æ¸¸æˆ
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x808073_g_scriptId = 808073
 
 
 function x808073_OnPatrolPoint( sceneId, objId, patrolPathIndex, patrolPointIndex, paopaoIndex	)
 
-	-- Èç¹û¸Õ×ßµ½×îºóÒ»¸öµãÔò·ÅÑÌ»¨....
+	-- å¦‚æœåˆšèµ°åˆ°æœ€åä¸€ä¸ªç‚¹åˆ™æ”¾çƒŸèŠ±....
 	if patrolPointIndex == 12 and paopaoIndex == 0 then
 		local posX,posZ = GetWorldPos(sceneId, objId)
 		CreateSpecialObjByDataIndex(sceneId, objId, 6, posX, posZ, 0)

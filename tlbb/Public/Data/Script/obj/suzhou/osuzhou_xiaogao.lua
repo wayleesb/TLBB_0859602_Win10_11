@@ -1,24 +1,24 @@
---ËÕÖİNPC
---Ğ¡¸ß
+--è‹å·NPC
+--å°é«˜
 
 x001070_g_ScriptId	= 001070
 
---Åä·½µê
+--é…æ–¹åº—
 x001070_g_shoptableindex= 168
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x001070_OnDefaultEvent( sceneId, selfId, targetId )
 	BeginEvent( sceneId )
 		AddText( sceneId, "#{PFBQ_20070926_001}" )
-		AddNumText( sceneId, x001070_g_ScriptId, "ÖØ¹ºÅä·½", 7, 100 )
-		AddNumText( sceneId, x001070_g_ScriptId, "¹ØÓÚÖØ¹ºÅä·½", 11, 101 )
+		AddNumText( sceneId, x001070_g_ScriptId, "é‡è´­é…æ–¹", 7, 100 )
+		AddNumText( sceneId, x001070_g_ScriptId, "å…³äºé‡è´­é…æ–¹", 11, 101 )
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x001070_OnEventRequest( sceneId, selfId, targetId, eventId )
 	local	key	= GetNumText()

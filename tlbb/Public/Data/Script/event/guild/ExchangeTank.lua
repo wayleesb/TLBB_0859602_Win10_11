@@ -1,54 +1,54 @@
--- ×ª»»Õ½³µºÍÈÃÕ½³µ»ØÓª
+-- è½¬æ¢æˆ˜è½¦å’Œè®©æˆ˜è½¦å›è¥
 
 --************************************************************************
 --MisDescBegin
 
--- ½Å±¾ºÅ
+-- è„šæœ¬å·
 x600052_g_ScriptId = 600052
 
--- ÈÎÎñÄ¿±ê NPC
-x600052_g_Name = "ÉÏ¹Ù±ù"
-x600052_g_Name2 = "ÉÏ¹ÙÑ©"
+-- ä»»åŠ¡ç›®æ ‡ NPC
+x600052_g_Name = "ä¸Šå®˜å†°"
+x600052_g_Name2 = "ä¸Šå®˜é›ª"
 
---°ïÕ½Êı¾İË÷Òı£¬¶ÔÓ¦³ÌĞòÖĞµÄ enum GUILDWAR_INT_ARRAY
+--å¸®æˆ˜æ•°æ®ç´¢å¼•ï¼Œå¯¹åº”ç¨‹åºä¸­çš„ enum GUILDWAR_INT_ARRAY
 x600052_g_A_LingShiIndex = 2
 x600052_g_B_LingShiIndex = 7
 
-x600052_g_LingShi = {"ÇàÁúÊ¯","°×»¢Ê¯","ÖìÈ¸Ê¯","ĞşÎäÊ¯","ÅÌ¹ÅÊ¯"}		--ÁéÊ¯Ãû×Ö
---x600052_g_LingShiID = {30900051,30900052,30900053,30900054,30900055}	--ÁéÊ¯ID
+x600052_g_LingShi = {"é’é¾™çŸ³","ç™½è™çŸ³","æœ±é›€çŸ³","ç„æ­¦çŸ³","ç›˜å¤çŸ³"}		--çµçŸ³åå­—
+--x600052_g_LingShiID = {30900051,30900052,30900053,30900054,30900055}	--çµçŸ³ID
 
-x600052_g_GuildPoint_ExchangeTank = 6				--ÇĞ»»Ò»´ÎÕ½³µµÄÊôĞÔ»ñµÃµÄ»ı·Ö¹æÔòË÷Òı£¬±íGuildWarPoint.txtµÄID
+x600052_g_GuildPoint_ExchangeTank = 6				--åˆ‡æ¢ä¸€æ¬¡æˆ˜è½¦çš„å±æ€§è·å¾—çš„ç§¯åˆ†è§„åˆ™ç´¢å¼•ï¼Œè¡¨GuildWarPoint.txtçš„ID
 
-x600052_g_WantLingShiNum = 20								--ĞèÇóÁéÊ¯ÊıÄ¿
+x600052_g_WantLingShiNum = 20								--éœ€æ±‚çµçŸ³æ•°ç›®
 
-----¸öÈË»ı·ÖÊı¾İË÷Òı£¬¶ÔÓ¦³ÌĞòenum GUILDWAR_INT_INDEX
---x600052_g_Human_ResourceNumIndex = 4					--¸öÈË½»ÄÉ×ÊÔ´¸öÊıË÷Òı
+----ä¸ªäººç§¯åˆ†æ•°æ®ç´¢å¼•ï¼Œå¯¹åº”ç¨‹åºenum GUILDWAR_INT_INDEX
+--x600052_g_Human_ResourceNumIndex = 4					--ä¸ªäººäº¤çº³èµ„æºä¸ªæ•°ç´¢å¼•
 --
 
-x600052_g_TankID = {13334, 13335, 13336, 13337, 13338,	--¿Éµã»÷ò¿ÓÈÕ½³µNPCµÄID
-										13339, 13340, 13341, 13342, 13343}	--¿Éµã»÷Ñ×»ÆÕ½³µNPCµÄID
+x600052_g_TankID = {13334, 13335, 13336, 13337, 13338,	--å¯ç‚¹å‡»èš©å°¤æˆ˜è½¦NPCçš„ID
+										13339, 13340, 13341, 13342, 13343}	--å¯ç‚¹å‡»ç‚é»„æˆ˜è½¦NPCçš„ID
 
-x600052_g_AttrBuff = {31567, 31568, 31569, 31570, 31571,	--ò¿ÓÈÕ½³µbuff
-											31572, 31573, 31574, 31575, 31576}	--Ñ×»ÆÕ½³µbuff
+x600052_g_AttrBuff = {31567, 31568, 31569, 31570, 31571,	--èš©å°¤æˆ˜è½¦buff
+											31572, 31573, 31574, 31575, 31576}	--ç‚é»„æˆ˜è½¦buff
 
-x600052_g_ImmuneControlBuff = 10474							--NPCÃâÒß¿ØÖÆbuff
+x600052_g_ImmuneControlBuff = 10474							--NPCå…ç–«æ§åˆ¶buff
 
-x600052_g_A_FirstTankManSelfID = 13						--A°ï±ä»¯³ÉÕ½³µµÄÍæ¼ÒµÄselfidÔÚ32¸ö¸±±¾Êı¾İÖĞµÄË÷Òı
-x600052_g_A_SecondTankManSelfID = 14					--A°ï±ä»¯³ÉÕ½³µµÄÍæ¼ÒµÄselfidÔÚ32¸ö¸±±¾Êı¾İÖĞµÄË÷Òı
-x600052_g_B_FirstTankManSelfID = 15						--B°ï±ä»¯³ÉÕ½³µµÄÍæ¼ÒµÄselfidÔÚ32¸ö¸±±¾Êı¾İÖĞµÄË÷Òı
-x600052_g_B_SecondTankManSelfID = 16					--B°ï±ä»¯³ÉÕ½³µµÄÍæ¼ÒµÄselfidÔÚ32¸ö¸±±¾Êı¾İÖĞµÄË÷Òı
-x600052_g_A_FirstTankBuff = 17								--A°ï±ä»¯³ÉÕ½³µµÄBuffIDÔÚ32¸ö¸±±¾Êı¾İÖĞµÄË÷Òı
-x600052_g_A_SecondTankBuff = 18								--A°ï±ä»¯³ÉÕ½³µµÄBuffIDÔÚ32¸ö¸±±¾Êı¾İÖĞµÄË÷Òı
-x600052_g_B_FirstTankBuff = 19								--B°ï±ä»¯³ÉÕ½³µµÄBuffIDÔÚ32¸ö¸±±¾Êı¾İÖĞµÄË÷Òı
-x600052_g_B_SecondTankBuff = 20								--B°ï±ä»¯³ÉÕ½³µµÄBuffIDÔÚ32¸ö¸±±¾Êı¾İÖĞµÄË÷Òı
-x600052_g_A_FirstTankPos = 21									--A°ï±ä»¯³ÉÕ½³µµÄPosÔÚ32¸ö¸±±¾Êı¾İÖĞµÄË÷Òı
-x600052_g_A_SecondTankPos = 22								--A°ï±ä»¯³ÉÕ½³µµÄPosÔÚ32¸ö¸±±¾Êı¾İÖĞµÄË÷Òı
-x600052_g_B_FirstTankPos = 23									--B°ï±ä»¯³ÉÕ½³µµÄPosÔÚ32¸ö¸±±¾Êı¾İÖĞµÄË÷Òı
-x600052_g_B_SecondTankPos = 24								--B°ï±ä»¯³ÉÕ½³µµÄPosÔÚ32¸ö¸±±¾Êı¾İÖĞµÄË÷Òı
+x600052_g_A_FirstTankManSelfID = 13						--Aå¸®å˜åŒ–æˆæˆ˜è½¦çš„ç©å®¶çš„selfidåœ¨32ä¸ªå‰¯æœ¬æ•°æ®ä¸­çš„ç´¢å¼•
+x600052_g_A_SecondTankManSelfID = 14					--Aå¸®å˜åŒ–æˆæˆ˜è½¦çš„ç©å®¶çš„selfidåœ¨32ä¸ªå‰¯æœ¬æ•°æ®ä¸­çš„ç´¢å¼•
+x600052_g_B_FirstTankManSelfID = 15						--Bå¸®å˜åŒ–æˆæˆ˜è½¦çš„ç©å®¶çš„selfidåœ¨32ä¸ªå‰¯æœ¬æ•°æ®ä¸­çš„ç´¢å¼•
+x600052_g_B_SecondTankManSelfID = 16					--Bå¸®å˜åŒ–æˆæˆ˜è½¦çš„ç©å®¶çš„selfidåœ¨32ä¸ªå‰¯æœ¬æ•°æ®ä¸­çš„ç´¢å¼•
+x600052_g_A_FirstTankBuff = 17								--Aå¸®å˜åŒ–æˆæˆ˜è½¦çš„BuffIDåœ¨32ä¸ªå‰¯æœ¬æ•°æ®ä¸­çš„ç´¢å¼•
+x600052_g_A_SecondTankBuff = 18								--Aå¸®å˜åŒ–æˆæˆ˜è½¦çš„BuffIDåœ¨32ä¸ªå‰¯æœ¬æ•°æ®ä¸­çš„ç´¢å¼•
+x600052_g_B_FirstTankBuff = 19								--Bå¸®å˜åŒ–æˆæˆ˜è½¦çš„BuffIDåœ¨32ä¸ªå‰¯æœ¬æ•°æ®ä¸­çš„ç´¢å¼•
+x600052_g_B_SecondTankBuff = 20								--Bå¸®å˜åŒ–æˆæˆ˜è½¦çš„BuffIDåœ¨32ä¸ªå‰¯æœ¬æ•°æ®ä¸­çš„ç´¢å¼•
+x600052_g_A_FirstTankPos = 21									--Aå¸®å˜åŒ–æˆæˆ˜è½¦çš„Posåœ¨32ä¸ªå‰¯æœ¬æ•°æ®ä¸­çš„ç´¢å¼•
+x600052_g_A_SecondTankPos = 22								--Aå¸®å˜åŒ–æˆæˆ˜è½¦çš„Posåœ¨32ä¸ªå‰¯æœ¬æ•°æ®ä¸­çš„ç´¢å¼•
+x600052_g_B_FirstTankPos = 23									--Bå¸®å˜åŒ–æˆæˆ˜è½¦çš„Posåœ¨32ä¸ªå‰¯æœ¬æ•°æ®ä¸­çš„ç´¢å¼•
+x600052_g_B_SecondTankPos = 24								--Bå¸®å˜åŒ–æˆæˆ˜è½¦çš„Posåœ¨32ä¸ªå‰¯æœ¬æ•°æ®ä¸­çš„ç´¢å¼•
 
-x600052_g_DefaultTankPos = {{47,39},{47,39},{203,215},{203,215}}	--Õ½³µ»ØÓªµÄ×ø±ê
+x600052_g_DefaultTankPos = {{47,39},{47,39},{203,215},{203,215}}	--æˆ˜è½¦å›è¥çš„åæ ‡
 
-x600052_g_TankName = {"ÇàÁúÕ½³µ","°×»¢Õ½³µ","ÖìÈ¸Õ½³µ","ĞşÎäÕ½³µ","ÅÌ¹ÅÕ½³µ"}
+x600052_g_TankName = {"é’é¾™æˆ˜è½¦","ç™½è™æˆ˜è½¦","æœ±é›€æˆ˜è½¦","ç„æ­¦æˆ˜è½¦","ç›˜å¤æˆ˜è½¦"}
 
 x600052_g_Msg = {"#{BHXZ_081103_55}",
 								"#{BHXZ_081103_46}",
@@ -56,17 +56,17 @@ x600052_g_Msg = {"#{BHXZ_081103_55}",
 								"#{BHXZ_081103_50}",
 								"#{BHXZ_081103_52}"}
 
---°ïÕ½¸±±¾½Å±¾
+--å¸®æˆ˜å‰¯æœ¬è„šæœ¬
 x600052_g_BangzhanScriptId	= 402047
 
 --MisDescEnd
 --************************************************************************
 
 --**********************************
--- ÈÎÎñÈë¿Úº¯Êı
+-- ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
-function x600052_OnDefaultEvent( sceneId, selfId, targetId )	-- µã»÷¸ÃÈÎÎñºóÖ´ĞĞ´Ë½Å±¾
---	if GetName( sceneId, targetId ) ~= x600052_g_Name then		-- ÅĞ¶Ï¸ÃnpcÊÇ·ñÊÇ¶ÔÓ¦ÈÎÎñµÄnpc
+function x600052_OnDefaultEvent( sceneId, selfId, targetId )	-- ç‚¹å‡»è¯¥ä»»åŠ¡åæ‰§è¡Œæ­¤è„šæœ¬
+--	if GetName( sceneId, targetId ) ~= x600052_g_Name then		-- åˆ¤æ–­è¯¥npcæ˜¯å¦æ˜¯å¯¹åº”ä»»åŠ¡çš„npc
 --		return
 --	end
 
@@ -101,7 +101,7 @@ function x600052_OnDefaultEvent( sceneId, selfId, targetId )	-- µã»÷¸ÃÈÎÎñºóÖ´ĞĞ
 	local isguildA = 0
 	local guildid = 0
 	local beginindex = 0
-	local totalguildid = LuaFnGetCopySceneData_Param( sceneId, 6 )					-- È¡µÃ±£´æµÄ°ïÅÉIDºÏÌå
+	local totalguildid = LuaFnGetCopySceneData_Param( sceneId, 6 )					-- å–å¾—ä¿å­˜çš„å¸®æ´¾IDåˆä½“
 	
 	if GetName( sceneId, targetId ) == x600052_g_Name then
 		TankManFirst = LuaFnGetCopySceneData_Param( sceneId, x600052_g_A_FirstTankManSelfID )
@@ -124,19 +124,19 @@ function x600052_OnDefaultEvent( sceneId, selfId, targetId )	-- µã»÷¸ÃÈÎÎñºóÖ´ĞĞ
 	if numText == 1000 or numText == 2000 or numText == 3000 or numText == 4000 or numText == 5000 then
 		BeginEvent(sceneId)
 			local index = numText/1000
-			--µ±Ç°ÊÇ·ñÓĞÕâ¸öÕ½³µÀàĞÍ
+			--å½“å‰æ˜¯å¦æœ‰è¿™ä¸ªæˆ˜è½¦ç±»å‹
 			if (TankManFirst ~= 0 and CallScriptFunction(x600052_g_BangzhanScriptId, "HaveTankBuff", sceneId, TankManFirst) == x600052_g_AttrBuff[index+base]) or
 				(TankManSecond ~= 0 and CallScriptFunction(x600052_g_BangzhanScriptId, "HaveTankBuff", sceneId, TankManSecond) == x600052_g_AttrBuff[index+base]) or
 				(x600052_FindWildTank( sceneId, index+base ) ~= 0) then
-				AddText(sceneId, "  ÏëÈÃÄãµÄ"..x600052_g_TankName[index].."#{BHXZ_081103_54}")
+				AddText(sceneId, "  æƒ³è®©ä½ çš„"..x600052_g_TankName[index].."#{BHXZ_081103_54}")
 				for i = 1, getn( x600052_g_TankName ) do
 					if index ~= i then
 						AddNumText(sceneId, x600052_g_ScriptId, x600052_g_TankName[i], 4, numText + i*100 )
 					end
 				end
-				AddNumText(sceneId, x600052_g_ScriptId, "ÉÏÒ»²½", 8, 1 )
+				AddNumText(sceneId, x600052_g_ScriptId, "ä¸Šä¸€æ­¥", 8, 1 )
 			else
-				AddText(sceneId, "#{BHXZ_081103_42}"..x600052_g_TankName[index].."¡£")
+				AddText(sceneId, "#{BHXZ_081103_42}"..x600052_g_TankName[index].."ã€‚")
 			end
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
@@ -147,15 +147,15 @@ function x600052_OnDefaultEvent( sceneId, selfId, targetId )	-- µã»÷¸ÃÈÎÎñºóÖ´ĞĞ
 		BeginEvent(sceneId)
 			local index = numText/1000
 			index = index - 5
-			--µ±Ç°ÊÇ·ñÓĞÕâ¸öÕ½³µÀàĞÍ
+			--å½“å‰æ˜¯å¦æœ‰è¿™ä¸ªæˆ˜è½¦ç±»å‹
 			if (TankManFirst ~= 0 and CallScriptFunction(x600052_g_BangzhanScriptId, "HaveTankBuff", sceneId, TankManFirst) == x600052_g_AttrBuff[index+base]) or
 				(TankManSecond ~= 0 and CallScriptFunction(x600052_g_BangzhanScriptId, "HaveTankBuff", sceneId, TankManSecond) == x600052_g_AttrBuff[index+base]) or
 				(x600052_FindWildTank( sceneId, index+base ) ~= 0) then
 				AddText(sceneId, "    #{BHXZ_081103_152}"..x600052_g_TankName[index].."#{BHXZ_081103_153}")
-				AddNumText(sceneId, x600052_g_ScriptId, "È·¶¨", 8, numText + 100 )
-				AddNumText(sceneId, x600052_g_ScriptId, "È¡Ïû", 8, numText + 200 )
+				AddNumText(sceneId, x600052_g_ScriptId, "ç¡®å®š", 8, numText + 100 )
+				AddNumText(sceneId, x600052_g_ScriptId, "å–æ¶ˆ", 8, numText + 200 )
 			else
-				AddText(sceneId, "#{BHXZ_081103_42}"..x600052_g_TankName[index].."¡£")
+				AddText(sceneId, "#{BHXZ_081103_42}"..x600052_g_TankName[index].."ã€‚")
 			end
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
@@ -165,13 +165,13 @@ function x600052_OnDefaultEvent( sceneId, selfId, targetId )	-- µã»÷¸ÃÈÎÎñºóÖ´ĞĞ
 	if numText > 1000 and numText < 6000 then
 		local thousand = floor(numText/1000)
 		local hundred = floor((numText - thousand*1000)/100)
-		if hundred == 0 or hundred >= getn( x600052_g_TankName )+1 or thousand == hundred then --·Ç·¨Öµ
+		if hundred == 0 or hundred >= getn( x600052_g_TankName )+1 or thousand == hundred then --éæ³•å€¼
 			return
 		end
 		local ten = floor((numText - thousand*1000 - hundred*100)/10)
 		
-		if ten == 0 then --Òª×ª»»³ÉµÄÕ½³µ×ÓÑ¡Ïî
-			--Òª×ª»»µ½µÄÕ½³µÀàĞÍÊÇ·ñÒÑ¾­´æÔÚÁË
+		if ten == 0 then --è¦è½¬æ¢æˆçš„æˆ˜è½¦å­é€‰é¡¹
+			--è¦è½¬æ¢åˆ°çš„æˆ˜è½¦ç±»å‹æ˜¯å¦å·²ç»å­˜åœ¨äº†
 			if (TankManFirst ~= 0 and CallScriptFunction(x600052_g_BangzhanScriptId, "HaveTankBuff", sceneId, TankManFirst) == x600052_g_AttrBuff[hundred+base]) or
 			 	(TankManSecond ~= 0 and CallScriptFunction(x600052_g_BangzhanScriptId, "HaveTankBuff", sceneId, TankManSecond) == x600052_g_AttrBuff[hundred+base]) or
 			 	(x600052_FindWildTank( sceneId, hundred+base ) ~= 0) then
@@ -179,17 +179,17 @@ function x600052_OnDefaultEvent( sceneId, selfId, targetId )	-- µã»÷¸ÃÈÎÎñºóÖ´ĞĞ
 			else
 				BeginEvent(sceneId)
 					AddText(sceneId, x600052_g_Msg[hundred])
-					AddNumText(sceneId, x600052_g_ScriptId, "È·¶¨", 8, numText + 10 )
-					AddNumText(sceneId, x600052_g_ScriptId, "È¡Ïû", 8, numText + 20 )
+					AddNumText(sceneId, x600052_g_ScriptId, "ç¡®å®š", 8, numText + 10 )
+					AddNumText(sceneId, x600052_g_ScriptId, "å–æ¶ˆ", 8, numText + 20 )
 				EndEvent(sceneId)
 				DispatchEventList(sceneId,selfId,targetId)
 			end
-		elseif ten == 1 then --È·¶¨£¨ĞèÒªÖØĞÂÅĞ¶ÏÊÇ·ñÓĞÕâ¸öÕ½³µÀàĞÍ£¬ÒÔ¼°Òª×ª»»µ½µÄÕ½³µÀàĞÍÊÇ·ñ´æÔÚ£©
+		elseif ten == 1 then --ç¡®å®šï¼ˆéœ€è¦é‡æ–°åˆ¤æ–­æ˜¯å¦æœ‰è¿™ä¸ªæˆ˜è½¦ç±»å‹ï¼Œä»¥åŠè¦è½¬æ¢åˆ°çš„æˆ˜è½¦ç±»å‹æ˜¯å¦å­˜åœ¨ï¼‰
 			if TankManFirst ~= 0 and CallScriptFunction(x600052_g_BangzhanScriptId, "HaveTankBuff", sceneId, TankManFirst) == x600052_g_AttrBuff[thousand+base] then
 				if (TankManSecond ~= 0 and CallScriptFunction(x600052_g_BangzhanScriptId, "HaveTankBuff", sceneId, TankManSecond) == x600052_g_AttrBuff[hundred+base]) or
-					(x600052_FindWildTank( sceneId, hundred+base ) ~= 0) then --ÓĞÖØ¸´µÄÕ½³µÀàĞÍ
+					(x600052_FindWildTank( sceneId, hundred+base ) ~= 0) then --æœ‰é‡å¤çš„æˆ˜è½¦ç±»å‹
 					x600052_NotifyFailBox( sceneId, selfId, targetId, "#{BHXZ_081103_44}".. x600052_g_TankName[hundred] .."#{BHXZ_081103_45}" )
-				else	--Ã»ÓĞÖØ¸´µÄÕ½³µÀàĞÍ
+				else	--æ²¡æœ‰é‡å¤çš„æˆ˜è½¦ç±»å‹
 					local num = GetGuildIntNum( sceneId, guildid, beginindex+hundred-1 )
 					
 					if num < x600052_g_WantLingShiNum then
@@ -203,7 +203,7 @@ function x600052_OnDefaultEvent( sceneId, selfId, targetId )	-- µã»÷¸ÃÈÎÎñºóÖ´ĞĞ
 						LuaFnSetCopySceneData_Param( sceneId, x600052_g_A_FirstTankPos+intbase, 0 )
 						LuaFnCancelSpecificImpact(sceneId,TankManFirst,x600052_g_AttrBuff[thousand+base])
 						--CallScriptFunction(600051, "PowerUptank", sceneId, TankManFirst, targetId, hundred+base, isguildA, 0)
-						--Ò»¶¨ÒªÕÒµ½Ò»¸ö¿ÉÒÔ·ÅÍæ¼ÒselfIdµÄµØ·½²Å´´½¨Õ½³µÄ£ĞÍ£¬·ÀÖ¹²úÉú³ö³¬¹ı2Á¾µÄÕ½³µ£¬»¹ÓĞÕ½³µÀàĞÍ²»ÄÜÖØ¸´
+						--ä¸€å®šè¦æ‰¾åˆ°ä¸€ä¸ªå¯ä»¥æ”¾ç©å®¶selfIdçš„åœ°æ–¹æ‰åˆ›å»ºæˆ˜è½¦æ¨¡å‹ï¼Œé˜²æ­¢äº§ç”Ÿå‡ºè¶…è¿‡2è¾†çš„æˆ˜è½¦ï¼Œè¿˜æœ‰æˆ˜è½¦ç±»å‹ä¸èƒ½é‡å¤
 						local selfIdindex = CallScriptFunction( 600051, "FindTankManIndex", sceneId, isguildA, hundred+base )
 						if selfIdindex > 0 then
 							local PosX,PosZ = GetWorldPos(sceneId,TankManFirst)
@@ -211,7 +211,7 @@ function x600052_OnDefaultEvent( sceneId, selfId, targetId )	-- µã»÷¸ÃÈÎÎñºóÖ´ĞĞ
 							LuaFnSendSpecificImpactToUnit( sceneId, monsterID, monsterID, monsterID, x600052_g_ImmuneControlBuff, 0 )
 						end
 						
-						--Ôö¼Ó»ı·Ö
+						--å¢åŠ ç§¯åˆ†
 						local addpoint = GetGuildWarPoint(sceneId, x600052_g_GuildPoint_ExchangeTank)
 						if isguildA == 1 then
 							CallScriptFunction( x600052_g_BangzhanScriptId, "AddAGuildPoint", sceneId, 0, guildid, addpoint )
@@ -220,14 +220,14 @@ function x600052_OnDefaultEvent( sceneId, selfId, targetId )	-- µã»÷¸ÃÈÎÎñºóÖ´ĞĞ
 						end
 						
 						x600052_NotifyFailBox( sceneId, selfId, targetId, "#{BHXZ_081103_111}" )
-						Msg2Player(sceneId, selfId, "#{BHXZ_081103_138}"..x600052_g_TankName[thousand].."×ª»»³ÉÁË"..x600052_g_TankName[hundred].."¡£" , MSG2PLAYER_PARA)
+						Msg2Player(sceneId, selfId, "#{BHXZ_081103_138}"..x600052_g_TankName[thousand].."è½¬æ¢æˆäº†"..x600052_g_TankName[hundred].."ã€‚" , MSG2PLAYER_PARA)
 					end
 				end
 			elseif TankManSecond ~= 0 and CallScriptFunction(x600052_g_BangzhanScriptId, "HaveTankBuff", sceneId, TankManSecond) == x600052_g_AttrBuff[thousand+base] then
 				if (TankManFirst ~= 0 and CallScriptFunction(x600052_g_BangzhanScriptId, "HaveTankBuff", sceneId, TankManFirst) == x600052_g_AttrBuff[hundred+base]) or
-					(x600052_FindWildTank( sceneId, hundred+base ) ~= 0) then --ÓĞÖØ¸´µÄÕ½³µÀàĞÍ
+					(x600052_FindWildTank( sceneId, hundred+base ) ~= 0) then --æœ‰é‡å¤çš„æˆ˜è½¦ç±»å‹
 					x600052_NotifyFailBox( sceneId, selfId, targetId, "#{BHXZ_081103_44}".. x600052_g_TankName[hundred] .."#{BHXZ_081103_45}" )
-				else  --Ã»ÓĞÖØ¸´µÄÕ½³µÀàĞÍ
+				else  --æ²¡æœ‰é‡å¤çš„æˆ˜è½¦ç±»å‹
 					local num = GetGuildIntNum( sceneId, guildid, beginindex+hundred-1 )
 					
 					if num < x600052_g_WantLingShiNum then
@@ -242,7 +242,7 @@ function x600052_OnDefaultEvent( sceneId, selfId, targetId )	-- µã»÷¸ÃÈÎÎñºóÖ´ĞĞ
 						LuaFnCancelSpecificImpact(sceneId,TankManSecond,x600052_g_AttrBuff[thousand+base])
 						--CallScriptFunction(600051, "PowerUptank", sceneId, TankManSecond, targetId, hundred+base, isguildA, 0)
 						
-						--Ò»¶¨ÒªÕÒµ½Ò»¸ö¿ÉÒÔ·ÅÍæ¼ÒselfIdµÄµØ·½²Å´´½¨Õ½³µÄ£ĞÍ£¬·ÀÖ¹²úÉú³ö³¬¹ı2Á¾µÄÕ½³µ£¬»¹ÓĞÕ½³µÀàĞÍ²»ÄÜÖØ¸´
+						--ä¸€å®šè¦æ‰¾åˆ°ä¸€ä¸ªå¯ä»¥æ”¾ç©å®¶selfIdçš„åœ°æ–¹æ‰åˆ›å»ºæˆ˜è½¦æ¨¡å‹ï¼Œé˜²æ­¢äº§ç”Ÿå‡ºè¶…è¿‡2è¾†çš„æˆ˜è½¦ï¼Œè¿˜æœ‰æˆ˜è½¦ç±»å‹ä¸èƒ½é‡å¤
 						local selfIdindex = CallScriptFunction( 600051, "FindTankManIndex", sceneId, isguildA, hundred+base )
 						if selfIdindex > 0 then
 							local PosX,PosZ = GetWorldPos(sceneId,TankManSecond)
@@ -250,7 +250,7 @@ function x600052_OnDefaultEvent( sceneId, selfId, targetId )	-- µã»÷¸ÃÈÎÎñºóÖ´ĞĞ
 							LuaFnSendSpecificImpactToUnit( sceneId, monsterID, monsterID, monsterID, x600052_g_ImmuneControlBuff, 0 )
 						end
 						
-						--Ôö¼Ó»ı·Ö
+						--å¢åŠ ç§¯åˆ†
 						local addpoint = GetGuildWarPoint(sceneId, x600052_g_GuildPoint_ExchangeTank)
 						if isguildA == 1 then
 							CallScriptFunction( x600052_g_BangzhanScriptId, "AddAGuildPoint", sceneId, 0, guildid, addpoint )
@@ -259,21 +259,21 @@ function x600052_OnDefaultEvent( sceneId, selfId, targetId )	-- µã»÷¸ÃÈÎÎñºóÖ´ĞĞ
 						end
 						
 						x600052_NotifyFailBox( sceneId, selfId, targetId, "#{BHXZ_081103_111}" )
-						Msg2Player(sceneId, selfId, "#{BHXZ_081103_138}"..x600052_g_TankName[thousand].."×ª»»³ÉÁË"..x600052_g_TankName[hundred].."¡£" , MSG2PLAYER_PARA)
+						Msg2Player(sceneId, selfId, "#{BHXZ_081103_138}"..x600052_g_TankName[thousand].."è½¬æ¢æˆäº†"..x600052_g_TankName[hundred].."ã€‚" , MSG2PLAYER_PARA)
 					end
 				end
 			else
 				local tankobjID = x600052_FindWildTank( sceneId, thousand+base )
 				
-				--Ò°ÍâÊÇ·ñÓĞÕâ¸öÕ½³µÀàĞÍ
+				--é‡å¤–æ˜¯å¦æœ‰è¿™ä¸ªæˆ˜è½¦ç±»å‹
 				if tankobjID ~= 0 then
 					local PosX,PosZ = GetWorldPos(sceneId,tankobjID)
 
 					if (TankManFirst ~= 0 and CallScriptFunction(x600052_g_BangzhanScriptId, "HaveTankBuff", sceneId, TankManFirst) == x600052_g_AttrBuff[hundred+base]) or
 						(TankManSecond ~= 0 and CallScriptFunction(x600052_g_BangzhanScriptId, "HaveTankBuff", sceneId, TankManSecond) == x600052_g_AttrBuff[hundred+base]) or
-						(x600052_FindWildTank( sceneId, hundred+base ) ~= 0) then --ÓĞÖØ¸´µÄÕ½³µÀàĞÍ
+						(x600052_FindWildTank( sceneId, hundred+base ) ~= 0) then --æœ‰é‡å¤çš„æˆ˜è½¦ç±»å‹
 						x600052_NotifyFailBox( sceneId, selfId, targetId, "#{BHXZ_081103_44}".. x600052_g_TankName[hundred] .."#{BHXZ_081103_45}" )
-					else	--Ã»ÓĞÖØ¸´µÄÕ½³µÀàĞÍ
+					else	--æ²¡æœ‰é‡å¤çš„æˆ˜è½¦ç±»å‹
 						local num = GetGuildIntNum( sceneId, guildid, beginindex+hundred-1 )
 						
 						if num < x600052_g_WantLingShiNum then
@@ -286,7 +286,7 @@ function x600052_OnDefaultEvent( sceneId, selfId, targetId )	-- µã»÷¸ÃÈÎÎñºóÖ´ĞĞ
 							local monsterID = LuaFnCreateMonster( sceneId, x600052_g_TankID[hundred+base], PosX, PosZ, 3, -1, 402302 )
 							LuaFnSendSpecificImpactToUnit( sceneId, monsterID, monsterID, monsterID, x600052_g_ImmuneControlBuff, 0 )
 							
-							--Ôö¼Ó»ı·Ö
+							--å¢åŠ ç§¯åˆ†
 							local addpoint = GetGuildWarPoint(sceneId, x600052_g_GuildPoint_ExchangeTank)
 							if isguildA == 1 then
 								CallScriptFunction( x600052_g_BangzhanScriptId, "AddAGuildPoint", sceneId, 0, guildid, addpoint )
@@ -295,14 +295,14 @@ function x600052_OnDefaultEvent( sceneId, selfId, targetId )	-- µã»÷¸ÃÈÎÎñºóÖ´ĞĞ
 							end
 							
 							x600052_NotifyFailBox( sceneId, selfId, targetId, "#{BHXZ_081103_111}" )
-							Msg2Player(sceneId, selfId, "#{BHXZ_081103_138}"..x600052_g_TankName[thousand].."×ª»»³ÉÁË"..x600052_g_TankName[hundred].."¡£" , MSG2PLAYER_PARA)
+							Msg2Player(sceneId, selfId, "#{BHXZ_081103_138}"..x600052_g_TankName[thousand].."è½¬æ¢æˆäº†"..x600052_g_TankName[hundred].."ã€‚" , MSG2PLAYER_PARA)
 						end
 					end
 				else
-					x600052_NotifyFailBox( sceneId, selfId, targetId, "#{BHXZ_081103_42}"..x600052_g_TankName[thousand].."¡£" )
+					x600052_NotifyFailBox( sceneId, selfId, targetId, "#{BHXZ_081103_42}"..x600052_g_TankName[thousand].."ã€‚" )
 				end
 			end
-		elseif ten == 2 then --È¡Ïû
+		elseif ten == 2 then --å–æ¶ˆ
 			BeginUICommand( sceneId )
 				UICommand_AddInt( sceneId, targetId )
 			EndUICommand( sceneId )
@@ -317,7 +317,7 @@ function x600052_OnDefaultEvent( sceneId, selfId, targetId )	-- µã»÷¸ÃÈÎÎñºóÖ´ĞĞ
 		local hundred = floor((numText - thousand*1000)/100)
 		thousand = thousand - 5
 		
-		if hundred == 1 then --È·¶¨
+		if hundred == 1 then --ç¡®å®š
 			local countarray = {}
 			for i = 0, 4 do
 				countarray[i+1] = GetGuildIntNum( sceneId, guildid, beginindex+i )
@@ -348,7 +348,7 @@ function x600052_OnDefaultEvent( sceneId, selfId, targetId )	-- µã»÷¸ÃÈÎÎñºóÖ´ĞĞ
 			else
 				local tankobjID = x600052_FindWildTank( sceneId, thousand+base )
 				
-				--Ò°ÍâÊÇ·ñÓĞÕâ¸öÕ½³µÀàĞÍ
+				--é‡å¤–æ˜¯å¦æœ‰è¿™ä¸ªæˆ˜è½¦ç±»å‹
 				if tankobjID ~= 0 then
 					BeginUICommand(sceneId)
 						UICommand_AddInt(sceneId, x600052_g_ScriptId)
@@ -359,10 +359,10 @@ function x600052_OnDefaultEvent( sceneId, selfId, targetId )	-- µã»÷¸ÃÈÎÎñºóÖ´ĞĞ
 					EndUICommand(sceneId)
 					DispatchUICommand(sceneId,selfId, 24)
 				else
-					x600052_NotifyFailBox( sceneId, selfId, targetId, "#{BHXZ_081103_42}"..x600052_g_TankName[thousand].."¡£" )
+					x600052_NotifyFailBox( sceneId, selfId, targetId, "#{BHXZ_081103_42}"..x600052_g_TankName[thousand].."ã€‚" )
 				end
 			end
-		elseif hundred == 2 then --È¡Ïû
+		elseif hundred == 2 then --å–æ¶ˆ
 			BeginUICommand( sceneId )
 				UICommand_AddInt( sceneId, targetId )
 			EndUICommand( sceneId )
@@ -375,7 +375,7 @@ function x600052_OnDefaultEvent( sceneId, selfId, targetId )	-- µã»÷¸ÃÈÎÎñºóÖ´ĞĞ
 end
 
 --**********************************
--- ×ª»»Õ½³µµÄ»Øµ÷½Å±¾
+-- è½¬æ¢æˆ˜è½¦çš„å›è°ƒè„šæœ¬
 --**********************************
 function x600052_ChangeOK( sceneId, selfId, targetId, tanktype )
 	if not sceneId or not selfId or not targetId or not tanktype then
@@ -387,7 +387,7 @@ function x600052_ChangeOK( sceneId, selfId, targetId, tanktype )
 	local intbase = 0
 	local guildid = 0
 	local beginindex = 0
-	local totalguildid = LuaFnGetCopySceneData_Param( sceneId, 6 )					-- È¡µÃ±£´æµÄ°ïÅÉIDºÏÌå
+	local totalguildid = LuaFnGetCopySceneData_Param( sceneId, 6 )					-- å–å¾—ä¿å­˜çš„å¸®æ´¾IDåˆä½“
 	
 	if GetName( sceneId, targetId ) == x600052_g_Name then
 		TankManFirst = LuaFnGetCopySceneData_Param( sceneId, x600052_g_A_FirstTankManSelfID )
@@ -395,7 +395,7 @@ function x600052_ChangeOK( sceneId, selfId, targetId, tanktype )
 		intbase = 0 --(x600052_g_A_FirstTankBuff-x600052_g_A_FirstTankBuff)
 		guildid = floor(totalguildid / 10000)
 		beginindex = x600052_g_A_LingShiIndex
-		--Õ½³µÀàĞÍµÄÖµºÏ·¨ĞÔÅĞ¶Ï
+		--æˆ˜è½¦ç±»å‹çš„å€¼åˆæ³•æ€§åˆ¤æ–­
 		if tanktype < 6 or tanktype > 10 then
 			return
 		end
@@ -405,7 +405,7 @@ function x600052_ChangeOK( sceneId, selfId, targetId, tanktype )
 		intbase = 2 --(x600052_g_B_FirstTankBuff-x600052_g_A_FirstTankBuff)
 		guildid = mod(totalguildid, 10000)
 		beginindex = x600052_g_B_LingShiIndex
-		--Õ½³µÀàĞÍµÄÖµºÏ·¨ĞÔÅĞ¶Ï
+		--æˆ˜è½¦ç±»å‹çš„å€¼åˆæ³•æ€§åˆ¤æ–­
 		if tanktype < 1 or tanktype > 5 then
 			return
 		end
@@ -413,7 +413,7 @@ function x600052_ChangeOK( sceneId, selfId, targetId, tanktype )
 		return
 	end
 	
-	--ÅĞ¶Ï°ïÅÉIDÊÇ·ñÏàÍ¬
+	--åˆ¤æ–­å¸®æ´¾IDæ˜¯å¦ç›¸åŒ
 	if guildid ~= GetHumanGuildID(sceneId, selfId) then
 		return
 	end
@@ -458,7 +458,7 @@ function x600052_ChangeOK( sceneId, selfId, targetId, tanktype )
 	else
 		local tankobjID = x600052_FindWildTank( sceneId, tanktype )
 		
-		--Ò°ÍâÊÇ·ñÓĞÕâ¸öÕ½³µÀàĞÍ
+		--é‡å¤–æ˜¯å¦æœ‰è¿™ä¸ªæˆ˜è½¦ç±»å‹
 		if tankobjID ~= 0 then
 			for i = 0, 4 do
 				SetGuildIntNum( sceneId, guildid, beginindex+i, countarray[i+1]-20 )
@@ -475,9 +475,9 @@ function x600052_ChangeOK( sceneId, selfId, targetId, tanktype )
 			end
 		else
 			if 1 <= tanktype and tanktype <= 5 then
-				x600052_NotifyFailBox( sceneId, selfId, targetId, "#{BHXZ_081103_42}"..x600052_g_TankName[tanktype].."¡£" )
+				x600052_NotifyFailBox( sceneId, selfId, targetId, "#{BHXZ_081103_42}"..x600052_g_TankName[tanktype].."ã€‚" )
 			elseif 6 <= tanktype and tanktype <= 10 then
-				x600052_NotifyFailBox( sceneId, selfId, targetId, "#{BHXZ_081103_42}"..x600052_g_TankName[tanktype-5].."¡£" )
+				x600052_NotifyFailBox( sceneId, selfId, targetId, "#{BHXZ_081103_42}"..x600052_g_TankName[tanktype-5].."ã€‚" )
 			end
 		end
 	end
@@ -485,19 +485,19 @@ function x600052_ChangeOK( sceneId, selfId, targetId, tanktype )
 end
 
 --**********************************
--- ÁĞ¾ÙÊÂ¼ş
+-- åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x600052_OnEnumerate( sceneId, selfId, targetId )
---	if GetName( sceneId, targetId ) ~= x600052_g_Name then		--ÅĞ¶Ï¸ÃnpcÊÇ·ñÊÇ¶ÔÓ¦ÈÎÎñµÄnpc
+--	if GetName( sceneId, targetId ) ~= x600052_g_Name then		--åˆ¤æ–­è¯¥npcæ˜¯å¦æ˜¯å¯¹åº”ä»»åŠ¡çš„npc
 --		return
 --	end
 	
-	AddNumText( sceneId, x600052_g_ScriptId, "#{BHXZ_081103_40}", 4, 1 )--×ª»»Õ½³µ
-	AddNumText( sceneId, x600052_g_ScriptId, "#{BHXZ_081103_58}", 4, 2 )--Õ½³µ»ØÓª
+	AddNumText( sceneId, x600052_g_ScriptId, "#{BHXZ_081103_40}", 4, 1 )--è½¬æ¢æˆ˜è½¦
+	AddNumText( sceneId, x600052_g_ScriptId, "#{BHXZ_081103_58}", 4, 2 )--æˆ˜è½¦å›è¥
 end
 
 --**********************************
--- Ò°ÍâÊÇ·ñÓĞÕâÑùÀàĞÍµÄÕ½³µ£¬·µ»ØobjID
+-- é‡å¤–æ˜¯å¦æœ‰è¿™æ ·ç±»å‹çš„æˆ˜è½¦ï¼Œè¿”å›objID
 --**********************************
 function x600052_FindWildTank( sceneId, tankIDindex )
 	local tankID = x600052_g_TankID[tankIDindex]
@@ -520,50 +520,50 @@ function x600052_FindWildTank( sceneId, tankIDindex )
 end
 
 --**********************************
--- ¼ì²â½ÓÊÜÌõ¼ş
+-- æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x600052_CheckAccept( sceneId, selfId, targetId )
 	return 1
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x600052_OnAccept( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x600052_OnContinue( sceneId, selfId, targetId )
 --	BeginEvent( sceneId )
 --		AddText( sceneId, x600052_g_MissionName )
---		AddText( sceneId, "good ¼ÌĞø" )
+--		AddText( sceneId, "good ç»§ç»­" )
 --	EndEvent( )
 --	DispatchMissionContinueInfo( sceneId, selfId, targetId, x600052_g_ScriptId, x600052_g_MissionId )
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x600052_OnAbandon( sceneId, selfId )
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x600052_CheckSubmit( sceneId, selfId )
 	return 1
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x600052_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 end
 
 --**********************************
--- ¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+-- å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x600052_NotifyFailBox( sceneId, selfId, targetId, msg )
 	BeginEvent( sceneId )
@@ -573,7 +573,7 @@ function x600052_NotifyFailBox( sceneId, selfId, targetId, msg )
 end
 
 --**********************************
--- ÆÁÄ»ÖĞ¼äĞÅÏ¢ÌáÊ¾
+-- å±å¹•ä¸­é—´ä¿¡æ¯æç¤º
 --**********************************
 function x600052_NotifyFailTips( sceneId, selfId, Tip )
 	BeginEvent( sceneId )

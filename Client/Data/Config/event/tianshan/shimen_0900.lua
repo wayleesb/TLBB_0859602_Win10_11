@@ -1,13 +1,13 @@
 --MisDescBegin
 x228900_g_ScriptId = 228900
 x228900_g_MissionId = 1104
-x228900_g_Name	="·ûÃôÒÇ"
+x228900_g_Name	="ç¬¦æ•ä»ª"
 x228900_g_MissionKind = 28
 x228900_g_MissionLevel = 10
 x228900_g_IfMissionElite = 0
-x228900_g_MissionName="ÎªÊ¦ÃÅ¶øÕ½"
+x228900_g_MissionName="ä¸ºå¸ˆé—¨è€Œæˆ˜"
 x228900_g_MissionInfo="#{event_tianshan_0001}"
-x228900_g_MissionTarget="    ÔÚÁéğÕ¹¬ÕÒµ½·ûÃôÒÇ#{_INFOAIM95,60,17,·ûÃôÒÇ}"
-x228900_g_MissionComplete="  ÄãÊÇĞÂÀ´µÄÍ¬ÃÅ°É£¬ÄãÀ´µÃÌ«ºÃÁË£¬ÎÒÕâÀïÓĞºÜ¶àÊÂÇéĞèÒªÄã°ïÃ¦ÄØ¡£"
+x228900_g_MissionTarget="    åœ¨çµé¹«å®«æ‰¾åˆ°ç¬¦æ•ä»ª#{_INFOAIM95,60,17,ç¬¦æ•ä»ª}"
+x228900_g_MissionComplete="  ä½ æ˜¯æ–°æ¥çš„åŒé—¨å§ï¼Œä½ æ¥å¾—å¤ªå¥½äº†ï¼Œæˆ‘è¿™é‡Œæœ‰å¾ˆå¤šäº‹æƒ…éœ€è¦ä½ å¸®å¿™å‘¢ã€‚"
 x228900_g_MoneyBonus=800
 --MisDescEnd

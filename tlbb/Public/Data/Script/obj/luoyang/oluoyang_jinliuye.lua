@@ -1,28 +1,28 @@
---ÂåÑôNPC
---½ğÁùÒ¯
---ÆÕÍ¨
+--æ´›é˜³NPC
+--é‡‘å…­çˆ·
+--æ™®é€š
 
 x000100_g_scriptId 	= 181000
 x000100_g_gotoact	 	= 2
-x000100_g_YBBTIntro =11     --Ôª±¦°ÚÌ¯½éÉÜ
+x000100_g_YBBTIntro =11     --å…ƒå®æ‘†æ‘Šä»‹ç»
 x000100_g_leave			= 20
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x000100_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
-		AddText(sceneId,"  »¶Ó­¹âÁÙ£¬Ò»¿´Äú¾ÍÊÇ¹ó¿Í£¬ÎÒÒÑ¾­Í¨Öª×Ü²¿ÄÇ±ß×öºÃ½Ó´ı¹¤×÷ÁË£¬ÄúÏÖÔÚ¾ÍÒªÈ¥ÎÒÃÇµÄ×Ü²¿Âğ£¿")
+		AddText(sceneId,"  æ¬¢è¿å…‰ä¸´ï¼Œä¸€çœ‹æ‚¨å°±æ˜¯è´µå®¢ï¼Œæˆ‘å·²ç»é€šçŸ¥æ€»éƒ¨é‚£è¾¹åšå¥½æ¥å¾…å·¥ä½œäº†ï¼Œæ‚¨ç°åœ¨å°±è¦å»æˆ‘ä»¬çš„æ€»éƒ¨å—ï¼Ÿ")
 		
-		AddNumText( sceneId, x000100_g_scriptId, "Ç°ÍùÇ®×¯×Ü²¿", 9, x000100_g_gotoact)
-		AddNumText( sceneId, x000100_g_scriptId, "Ôª±¦°ÚÌ¯½éÉÜ", 11, x000100_g_YBBTIntro)
-		--AddNumText( sceneId, x000100_g_scriptId, "Àë¿ª¡­¡­", -1, x000100_g_leave)
+		AddNumText( sceneId, x000100_g_scriptId, "å‰å¾€é’±åº„æ€»éƒ¨", 9, x000100_g_gotoact)
+		AddNumText( sceneId, x000100_g_scriptId, "å…ƒå®æ‘†æ‘Šä»‹ç»", 11, x000100_g_YBBTIntro)
+		--AddNumText( sceneId, x000100_g_scriptId, "ç¦»å¼€â€¦â€¦", -1, x000100_g_leave)
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x000100_OnEventRequest( sceneId, selfId, targetId, eventId )
 	if GetNumText() == x000100_g_gotoact then

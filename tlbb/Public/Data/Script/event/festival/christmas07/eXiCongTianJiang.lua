@@ -1,23 +1,23 @@
---2007Ê¥µ®Ôªµ©»î¶¯....
---ĞÂÊÖ³é½±_Ï²´ÓÌì½µ»î¶¯....
+--2007åœ£è¯å…ƒæ—¦æ´»åŠ¨....
+--æ–°æ‰‹æŠ½å¥–_å–œä»å¤©é™æ´»åŠ¨....
 
---´ğÌâÈÎÎñ ¶Ò»»½±È¯½Å±¾....
+--ç­”é¢˜ä»»åŠ¡ å…‘æ¢å¥–åˆ¸è„šæœ¬....
 
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x050022_g_ScriptId = 050022
 
---»î¶¯Ê±¼ä
-x050022_g_StartDayTime = 2008080610		--»î¶¯¿ªÊ¼Ê±¼ä 2007-12-24
-x050022_g_EndDayTime =2008081309			--»î¶¯½áÊøÊ±¼ä 2008-1-7
+--æ´»åŠ¨æ—¶é—´
+x050022_g_StartDayTime = 2008080610		--æ´»åŠ¨å¼€å§‹æ—¶é—´ 2007-12-24
+x050022_g_EndDayTime =2008081309			--æ´»åŠ¨ç»“æŸæ—¶é—´ 2008-1-7
 
---´ğÌâ½Å±¾½Å±¾ºÅ
+--ç­”é¢˜è„šæœ¬è„šæœ¬å·
 x050022_g_QuizScriptId = 050021
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
-function x050022_OnDefaultEvent( sceneId, selfId, targetId )	--µã»÷¸ÃÈÎÎñºóÖ´ĞĞ´Ë½Å±¾
+function x050022_OnDefaultEvent( sceneId, selfId, targetId )	--ç‚¹å‡»è¯¥ä»»åŠ¡åæ‰§è¡Œæ­¤è„šæœ¬
 
 	if 1 ~= x050022_CheckRightTime() then
 		return
@@ -27,15 +27,15 @@ function x050022_OnDefaultEvent( sceneId, selfId, targetId )	--µã»÷¸ÃÈÎÎñºóÖ´ĞĞ´
 
 	if NumText == 801 then
 
-		--ÏÔÊ¾ĞÂÊÖ´ğÌâ½çÃæ....
+		--æ˜¾ç¤ºæ–°æ‰‹ç­”é¢˜ç•Œé¢....
 		x050022_ShowQuiz( sceneId, selfId, targetId )
 
 	elseif NumText == 802 then
 
 		BeginEvent( sceneId )
-			AddText( sceneId, "  ÄúÈ·¶¨ÏÖÔÚÊ¹ÓÃ½±È¯½øĞĞ¶Ò½±Âğ£¿" )
-			AddNumText(sceneId,x050022_g_ScriptId,"È·¶¨",8,803)
-			AddNumText(sceneId,x050022_g_ScriptId,"È¡Ïû",8,804)
+			AddText( sceneId, "  æ‚¨ç¡®å®šç°åœ¨ä½¿ç”¨å¥–åˆ¸è¿›è¡Œå…‘å¥–å—ï¼Ÿ" )
+			AddNumText(sceneId,x050022_g_ScriptId,"ç¡®å®š",8,803)
+			AddNumText(sceneId,x050022_g_ScriptId,"å–æ¶ˆ",8,804)
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 
@@ -49,7 +49,7 @@ function x050022_OnDefaultEvent( sceneId, selfId, targetId )	--µã»÷¸ÃÈÎÎñºóÖ´ĞĞ´
 
 	elseif NumText == 803 then
 
-		--¶Ò»»½±È¯....
+		--å…‘æ¢å¥–åˆ¸....
 		local ret = x050022_GiveGift( sceneId, selfId, targetId )
 		if ret == 1 then
 			BeginUICommand(sceneId)
@@ -68,7 +68,7 @@ function x050022_OnDefaultEvent( sceneId, selfId, targetId )	--µã»÷¸ÃÈÎÎñºóÖ´ĞĞ´
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x050022_OnEnumerate( sceneId, selfId, targetId )
 
@@ -76,40 +76,40 @@ function x050022_OnEnumerate( sceneId, selfId, targetId )
 		return
 	end
 
-	if LuaFnGetName( sceneId, targetId ) == "ÕÔÌìÊ¦" then
-		AddNumText(sceneId,x050022_g_ScriptId,"Ï²´ÓÌì½µ",6,801)
-		AddNumText(sceneId,x050022_g_ScriptId,"Ï²´ÓÌì½µ½éÉÜ",11,811)
-	elseif LuaFnGetName( sceneId, targetId ) == "¹¨²ÊÔÆ" then
-		AddNumText(sceneId,x050022_g_ScriptId,"ÁìÈ¡Ï²´ÓÌì½µ»î¶¯½±Àø",6,802)
-		AddNumText(sceneId,x050022_g_ScriptId,"¹ØÓÚÏ²´ÓÌì½µ³é½±»î¶¯",8,812)
+	if LuaFnGetName( sceneId, targetId ) == "èµµå¤©å¸ˆ" then
+		AddNumText(sceneId,x050022_g_ScriptId,"å–œä»å¤©é™",6,801)
+		AddNumText(sceneId,x050022_g_ScriptId,"å–œä»å¤©é™ä»‹ç»",11,811)
+	elseif LuaFnGetName( sceneId, targetId ) == "é¾šå½©äº‘" then
+		AddNumText(sceneId,x050022_g_ScriptId,"é¢†å–å–œä»å¤©é™æ´»åŠ¨å¥–åŠ±",6,802)
+		AddNumText(sceneId,x050022_g_ScriptId,"å…³äºå–œä»å¤©é™æŠ½å¥–æ´»åŠ¨",8,812)
 	end
 
 end
 
 --**********************************
---ÏÔÊ¾Ï²´ÓÌì½µ´ğÌâ½çÃæ
+--æ˜¾ç¤ºå–œä»å¤©é™ç­”é¢˜ç•Œé¢
 --**********************************
 function x050022_ShowQuiz( sceneId, selfId, targetId )
 
-	--¼ì²âÊÇ·ñ¿ÉÒÔ´ğÌâ....
+	--æ£€æµ‹æ˜¯å¦å¯ä»¥ç­”é¢˜....
 	local ret, msg = x050022_CheckCanDoQuiz( sceneId, selfId )
 	if 0 == ret then
 		x050022_MsgBox( sceneId, selfId, targetId, msg )
 		return
 	end
 
-	--´ò¿ªÏ²´ÓÌì½µ´ğÌâ½çÃæ....
+	--æ‰“å¼€å–œä»å¤©é™ç­”é¢˜ç•Œé¢....
 	CallScriptFunction( x050022_g_QuizScriptId, "ShowQuizUI",sceneId, selfId, targetId )
 
 end
 
 --**********************************
---¼ì²âÍæ¼Òµ±Ç°ÊÇ·ñ¿ÉÒÔ×ö´ğÌâ
+--æ£€æµ‹ç©å®¶å½“å‰æ˜¯å¦å¯ä»¥åšç­”é¢˜
 --**********************************
 function x050022_CheckCanDoQuiz( sceneId, selfId )
 
 	if 1 ~= x050022_CheckRightTime() then
-		return 0, "  ÏÖÔÚ²»ÊÇ»î¶¯Ê±¼ä¡£"
+		return 0, "  ç°åœ¨ä¸æ˜¯æ´»åŠ¨æ—¶é—´ã€‚"
 	end
 
 	local CurLevel = GetLevel( sceneId, selfId )
@@ -136,7 +136,7 @@ function x050022_CheckCanDoQuiz( sceneId, selfId )
 end
 
 --**********************************
---¼ì²âµ±Ç°ÊÇ·ñÊÇ»î¶¯Ê±¼ä
+--æ£€æµ‹å½“å‰æ˜¯å¦æ˜¯æ´»åŠ¨æ—¶é—´
 --**********************************
 function x050022_CheckRightTime()
 local nYear	 = LuaFnGetThisYear()
@@ -154,7 +154,7 @@ local nYear	 = LuaFnGetThisYear()
 end
 
 --**********************************
---¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+--å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x050022_MsgBox( sceneId, selfId, targetId, msg )
 
@@ -166,30 +166,30 @@ function x050022_MsgBox( sceneId, selfId, targetId, msg )
 end
 
 --**********************************
---Íæ¼Ò´ğ¶ÔËùÓĞÌâÄ¿Ê±»Øµ÷´Ëº¯Êı
+--ç©å®¶ç­”å¯¹æ‰€æœ‰é¢˜ç›®æ—¶å›è°ƒæ­¤å‡½æ•°
 --**********************************
 function x050022_OnPlayerFinishQuiz( sceneId, selfId )
 
-	--¼ÇÂ¼±¾¼¶ÒÑ¾­×ö¹ı´ğÌâÈÎÎñÁË....
+	--è®°å½•æœ¬çº§å·²ç»åšè¿‡ç­”é¢˜ä»»åŠ¡äº†....
 	local Level = GetLevel( sceneId, selfId )
 	SetMissionData( sceneId, selfId, MD_XICONGTIANJIANG_LASTLV, Level )
 
-	--¸ø½±È¯....
+	--ç»™å¥–åˆ¸....
 	TryRecieveItem( sceneId, selfId, 30505147, QUALITY_MUST_BE_CHANGE )
 
-	--ĞÑÄ¿ÌáÊ¾
+	--é†’ç›®æç¤º
 	BeginEvent( sceneId )
 		AddText( sceneId, "#{XSCJ_20071205_10}" )
 	EndEvent( sceneId )
 	DispatchMissionTips( sceneId, selfId )
 
-	--ÌØĞ§....
+	--ç‰¹æ•ˆ....
 	LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, 151, 0)
 
 end
 
 --**********************************
---Íæ¼ÒÉı¼¶Ê±»Øµ÷´Ëº¯Êı
+--ç©å®¶å‡çº§æ—¶å›è°ƒæ­¤å‡½æ•°
 --**********************************
 function x050022_OnPlayerLevelUp( sceneId, selfId )
 
@@ -207,7 +207,7 @@ function x050022_OnPlayerLevelUp( sceneId, selfId )
 end
 
 --**********************************
---¶Ò»»½±È¯
+--å…‘æ¢å¥–åˆ¸
 --**********************************
 function x050022_GiveGift( sceneId, selfId, targetId )
 
@@ -221,27 +221,27 @@ function x050022_GiveGift( sceneId, selfId, targetId )
 		return 0
 	end
 
-	--¼ì²â±³°üÊÇ·ñÓĞµØ·½....
+	--æ£€æµ‹èƒŒåŒ…æ˜¯å¦æœ‰åœ°æ–¹....
 	if LuaFnGetPropertyBagSpace( sceneId, selfId ) < 1 then
 		x050022_MsgBox( sceneId, selfId, targetId, "#{XSCJ_20071205_13}" )
 		return 0
 	end
 
-	--¿Û½±È¯....
+	--æ‰£å¥–åˆ¸....
 	if 0 == DelItem(sceneId, selfId, 30505147, 1) then
 		x050022_MsgBox( sceneId, selfId, targetId, "#{XSCJ_20071205_14}" )
 		return 0
 	end
 
-	--¸ø½±Æ·....
+	--ç»™å¥–å“....
 	local GiftTbl = {
 
-		--ĞèÒªÇ¿ÖÆ°ó¶¨µÄÎïÆ·....
+		--éœ€è¦å¼ºåˆ¶ç»‘å®šçš„ç‰©å“....
 		{ itemId=30505146, odds=200 },
 		{ itemId=30505171, odds=200 },
 		{ itemId=30505170, odds=200 },
 
-		--ĞèÒª¹«¸æµÄÎïÆ·....
+		--éœ€è¦å…¬å‘Šçš„ç‰©å“....
 		{ itemId=10141096, odds=50 },
 		{ itemId=10141097, odds=50 },
 		{ itemId=10141098, odds=40 },
@@ -272,7 +272,7 @@ function x050022_GiveGift( sceneId, selfId, targetId )
 		local BagIndex = TryRecieveItem( sceneId, selfId, GiftTbl[index].itemId, QUALITY_MUST_BE_CHANGE )
 		if BagIndex ~= -1 then
 			BeginEvent( sceneId )
-				AddText( sceneId, "Ï²´ÓÌì½µ£¡¹§Ï²Äú»ñµÃ#{_ITEM"..GiftTbl[index].itemId.."}½±Àø£¬Ï£ÍûÄúÔÙ½ÓÔÙÀ÷" )
+				AddText( sceneId, "å–œä»å¤©é™ï¼æ­å–œæ‚¨è·å¾—#{_ITEM"..GiftTbl[index].itemId.."}å¥–åŠ±ï¼Œå¸Œæœ›æ‚¨å†æ¥å†å‰" )
 			EndEvent( sceneId )
 			DispatchMissionTips( sceneId, selfId )
 			LuaFnItemBind( sceneId, selfId, BagIndex)
@@ -284,21 +284,21 @@ function x050022_GiveGift( sceneId, selfId, targetId )
 		if BagIndex ~= -1 then
 
 			BeginEvent( sceneId )
-				AddText( sceneId, "Ï²´ÓÌì½µ£¡¹§Ï²Äú»ñµÃ#{_ITEM"..GiftTbl[index].itemId.."}½±Àø£¬Ï£ÍûÄúÔÙ½ÓÔÙÀ÷" )
+				AddText( sceneId, "å–œä»å¤©é™ï¼æ­å–œæ‚¨è·å¾—#{_ITEM"..GiftTbl[index].itemId.."}å¥–åŠ±ï¼Œå¸Œæœ›æ‚¨å†æ¥å†å‰" )
 			EndEvent( sceneId )
 			DispatchMissionTips( sceneId, selfId )
 
 			local strTrans = GetBagItemTransfer( sceneId, selfId, BagIndex )
 			local strName = GetName(sceneId, selfId)
-			local strMsg = format("#P²»µÃÁËÀ²£¬¿ª³ö´ó½±À²£¡Ï²´ÓÌì½µ£¬¹§Ï²#{_INFOUSR%s}»ñµÃ#{_INFOMSG%s}Ò»¸ö£¬Ï£Íû#{_INFOUSR%s}ÔÙ½ÓÔÙÀ÷¡£", strName, strTrans, strName)
+			local strMsg = format("#Pä¸å¾—äº†å•¦ï¼Œå¼€å‡ºå¤§å¥–å•¦ï¼å–œä»å¤©é™ï¼Œæ­å–œ#{_INFOUSR%s}è·å¾—#{_INFOMSG%s}ä¸€ä¸ªï¼Œå¸Œæœ›#{_INFOUSR%s}å†æ¥å†å‰ã€‚", strName, strTrans, strName)
 
-			MonsterTalk(sceneId, targetId, "´óÀí", strMsg)
+			MonsterTalk(sceneId, targetId, "å¤§ç†", strMsg)
 
 		end
 
 	end
 
-	--ÌØĞ§....
+	--ç‰¹æ•ˆ....
 	LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, 151, 0)
 
 	return 1

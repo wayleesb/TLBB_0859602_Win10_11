@@ -1,25 +1,25 @@
---ĞşÎäµº¹ÖÎïÑ²Âß
---»î¶¯Ë¢¹Ö½Å±¾
---ÆÕÍ¨
+--ç„æ­¦å²›æ€ªç‰©å·¡é€»
+--æ´»åŠ¨åˆ·æ€ªè„šæœ¬
+--æ™®é€š
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x808068_g_ScriptId = 808068;
 
---³£Á¿ÉùÃ÷ ºÍ Ë½ÓĞÊı¾İ±í¸ñ
-x808068_g_MonsterNumber = 5; --Ã¿×é¹ÖÎïÊıÄ¿
-x808068_g_MonsterLifeTime = 3000000; --¹ÖÎï´æ»îÊ±¼ä50·ÖÖÓ
-x808068_g_ActivitySceneId = 39; --ĞşÎäµº
-x808068_g_ActivityScendName = "ĞşÎäµº";
+--å¸¸é‡å£°æ˜ å’Œ ç§æœ‰æ•°æ®è¡¨æ ¼
+x808068_g_MonsterNumber = 5; --æ¯ç»„æ€ªç‰©æ•°ç›®
+x808068_g_MonsterLifeTime = 3000000; --æ€ªç‰©å­˜æ´»æ—¶é—´50åˆ†é’Ÿ
+x808068_g_ActivitySceneId = 39; --ç„æ­¦å²›
+x808068_g_ActivityScendName = "ç„æ­¦å²›";
 
-x808068_g_BookThiefID = {13400, 13401} --±¦ÊéÇÔÔô¹ÖÎïID Ëæ»úÒ»¸ö
-x808068_g_BookThiefExtAI = {286, 287} --±¦ÊéÇÔÔôÀ©Õ¹AI
-x808068_g_BookThiefNPCID = 807003 --±¦ÊéÇÔÔôNPCID
-x808068_g_BookThiefLifeTime = 40*60000; --±¦ÊéÇÔÔô´æ»îÊ±¼ä
-x808068_g_ExistBookThief = 5 --Ëæ»ú²úÉú5¸ö±¦ÊéÇÔÔô³öÀ´
+x808068_g_BookThiefID = {13400, 13401} --å®ä¹¦çªƒè´¼æ€ªç‰©ID éšæœºä¸€ä¸ª
+x808068_g_BookThiefExtAI = {286, 287} --å®ä¹¦çªƒè´¼æ‰©å±•AI
+x808068_g_BookThiefNPCID = 807003 --å®ä¹¦çªƒè´¼NPCID
+x808068_g_BookThiefLifeTime = 40*60000; --å®ä¹¦çªƒè´¼å­˜æ´»æ—¶é—´
+x808068_g_ExistBookThief = 5 --éšæœºäº§ç”Ÿ5ä¸ªå®ä¹¦çªƒè´¼å‡ºæ¥
 
---Ë½ÓĞº¯ÊıÉùÃ÷
+--ç§æœ‰å‡½æ•°å£°æ˜
 function x808068_BroadcastLocation(sceneId, level, x, z)
-	local noticeMsg = format("#PÕâÖ§Õ½¶ÓÊ×Áì#{_BOSS3}#PµÈ¼¶¸ß´ï#G%d¼¶#P£¬¾İËµÓĞÈËÔÚ#GĞşÎäµº(%d,%d)#P¸½½ü¿´µ½¹ıËûÃÇ¡£", level, x, z)
+	local noticeMsg = format("#Pè¿™æ”¯æˆ˜é˜Ÿé¦–é¢†#{_BOSS3}#Pç­‰çº§é«˜è¾¾#G%dçº§#Pï¼Œæ®è¯´æœ‰äººåœ¨#Gç„æ­¦å²›(%d,%d)#Pé™„è¿‘çœ‹åˆ°è¿‡ä»–ä»¬ã€‚", level, x, z)
 	--PrintStr(format("%d:%d:%d:%s",level, x, z, noticeMsg));
 	if nil~=noticeMsg then
 		AddGlobalCountNews(sceneId, noticeMsg);
@@ -29,9 +29,9 @@ end
 function x808068_BroadcastNotice(sceneId)
 	local index = random(3);
 	local Notices = {
-		"#GĞşÎäµº#PÉÏ³èÎïºÃ£¬¸÷Â·Ó¢ĞÛ±¾Áì¸ß¡£¸ßÊÖÖ®ÖĞË­×îÇ¿£¬µÚÒ»#{_BOSS3}#P¡£ºáĞĞĞşÎä³èÎïÅÂ£¬×÷Íş×÷¸£³£·¢±ë¡£Ë­ÊÇºÃºº¿ìÀ´´ò£¬ÃûÀûË«ÊÕÔÚ½ñ³¯£¡",
-		"#GĞşÎäµº#PÒ»¼¶¾¯±¨£¬Ò»¼¶¾¯±¨£¬#{_BOSS3}#PÒÑ¾­ÔÚµºÉÏ³öÏÖ£¬ÔÚµºÉÏ³öÏÖ£¬Çë¸÷Â·Ó¢ĞÛ×¢Òâ°²È«£¬×¢Òâ°²È«£¡",
-		"#{_BOSS3}#PÕ½¶·Ğ¡×éÒÑ¾­ÔÚ#GĞşÎäµº#PÖøÂ½£¬¸Ã²¿¶Ó×°±¸¾«Á¼£¬ÑµÁ·ÓĞËØ£¬Õ½¶·Á¦Ç¿º·¡£ÇëÌìÏÂÓ¢ĞÛ´òµÃ¹ı¾Í´ò£¬´ò²»¹ı¾ÍÅÜ¡£"
+		"#Gç„æ­¦å²›#Pä¸Šå® ç‰©å¥½ï¼Œå„è·¯è‹±é›„æœ¬é¢†é«˜ã€‚é«˜æ‰‹ä¹‹ä¸­è°æœ€å¼ºï¼Œç¬¬ä¸€#{_BOSS3}#Pã€‚æ¨ªè¡Œç„æ­¦å® ç‰©æ€•ï¼Œä½œå¨ä½œç¦å¸¸å‘å½ªã€‚è°æ˜¯å¥½æ±‰å¿«æ¥æ‰“ï¼Œååˆ©åŒæ”¶åœ¨ä»Šæœï¼",
+		"#Gç„æ­¦å²›#Pä¸€çº§è­¦æŠ¥ï¼Œä¸€çº§è­¦æŠ¥ï¼Œ#{_BOSS3}#På·²ç»åœ¨å²›ä¸Šå‡ºç°ï¼Œåœ¨å²›ä¸Šå‡ºç°ï¼Œè¯·å„è·¯è‹±é›„æ³¨æ„å®‰å…¨ï¼Œæ³¨æ„å®‰å…¨ï¼",
+		"#{_BOSS3}#Pæˆ˜æ–—å°ç»„å·²ç»åœ¨#Gç„æ­¦å²›#Pè‘—é™†ï¼Œè¯¥éƒ¨é˜Ÿè£…å¤‡ç²¾è‰¯ï¼Œè®­ç»ƒæœ‰ç´ ï¼Œæˆ˜æ–—åŠ›å¼ºæ‚ã€‚è¯·å¤©ä¸‹è‹±é›„æ‰“å¾—è¿‡å°±æ‰“ï¼Œæ‰“ä¸è¿‡å°±è·‘ã€‚"
 	};
 	local noticeMsg = Notices[index];
 	--PrintStr(format("%d:%s",index,noticeMsg));
@@ -88,11 +88,11 @@ function x808068_CreateMonstersByGroup(sceneId, groupId)
 										monster.aiScript,
 										monster.aiLuaExtend
 										);
-				SetMonsterGroupID(sceneId, monsterId, groupId);	--Ã¿×é¹ÖÎïÊôÓÚÍ¬Ò»¸öGroupID£¬ÕâÑù¹ÖÎïÃÇ¿ÉÒÔ»¥ÏàÔöÔ®
-				SetPatrolId(sceneId, monsterId, monster.patrolId); --ÉèÖÃ¹ÖÎïµÄÑ²ÂßID
-				SetCharacterDieTime(sceneId, monsterId, x808068_g_MonsterLifeTime); --¹ÖÎïÖ»»á´æ»îµ½Ö¸¶¨Ê±¼ä
-				if (GetName(sceneId, monsterId) == "ÎŞµĞ·ÉÌìÃ¨") then
-					SetCharacterTitle(sceneId, monsterId, "ĞşÎäµºÕì¼©¶Ó³¤")
+				SetMonsterGroupID(sceneId, monsterId, groupId);	--æ¯ç»„æ€ªç‰©å±äºåŒä¸€ä¸ªGroupIDï¼Œè¿™æ ·æ€ªç‰©ä»¬å¯ä»¥äº’ç›¸å¢æ´
+				SetPatrolId(sceneId, monsterId, monster.patrolId); --è®¾ç½®æ€ªç‰©çš„å·¡é€»ID
+				SetCharacterDieTime(sceneId, monsterId, x808068_g_MonsterLifeTime); --æ€ªç‰©åªä¼šå­˜æ´»åˆ°æŒ‡å®šæ—¶é—´
+				if (GetName(sceneId, monsterId) == "æ— æ•Œé£å¤©çŒ«") then
+					SetCharacterTitle(sceneId, monsterId, "ç„æ­¦å²›ä¾¦ç¼‰é˜Ÿé•¿")
 				end
 				--PrintStr(format("%d:monsterDataID=%d",groupId,monster.DataId));
 			else
@@ -111,46 +111,46 @@ end
 
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x808068_OnDefaultEvent( sceneId, actId, param1, param2, param3, param4, param5 )
 	if x808068_g_ActivitySceneId == sceneId and GetActivityState( sceneId, actId ) == -1 then
-		StartOneActivity( sceneId, actId, floor(300000));--Timer ÖÜÆÚ£º5·ÖÖÓ
+		StartOneActivity( sceneId, actId, floor(300000));--Timer å‘¨æœŸï¼š5åˆ†é’Ÿ
 	end
 end
 
 --**********************************
---ĞÄÌøº¯Êı
+--å¿ƒè·³å‡½æ•°
 --**********************************
 function x808068_OnTimer( sceneId, actId, uTime )
 	if x808068_g_ActivitySceneId == sceneId then
 		local RegenesisTime ={
-				{groupId = 3},--0µã
-				{groupId = 1},--1µã
-				{groupId = 2},--2µã
-				{groupId = 3},--3µã
-				{groupId = 1},--4µã
-				{groupId = 2},--5µã
-				{groupId = 3},--6µã
-				{groupId = nil},--7µã
-				{groupId = nil},--8µã
-				{groupId = nil},--9µã
-				{groupId = 1},--10µã
-				{groupId = 2},--11µã
-				{groupId = 3},--12µã
-				{groupId = 1},--13µã
-				{groupId = 2},--14µã
-				{groupId = 3},--15µã
-				{groupId = 1},--16µã
-				{groupId = 2},--17µã
-				{groupId = 3},--18µã
-				{groupId = 1},--19µã
-				{groupId = 2},--20µã
-				{groupId = 3},--21µã
-				{groupId = 1},--22µã
-				{groupId = 2},--23µã
+				{groupId = 3},--0ç‚¹
+				{groupId = 1},--1ç‚¹
+				{groupId = 2},--2ç‚¹
+				{groupId = 3},--3ç‚¹
+				{groupId = 1},--4ç‚¹
+				{groupId = 2},--5ç‚¹
+				{groupId = 3},--6ç‚¹
+				{groupId = nil},--7ç‚¹
+				{groupId = nil},--8ç‚¹
+				{groupId = nil},--9ç‚¹
+				{groupId = 1},--10ç‚¹
+				{groupId = 2},--11ç‚¹
+				{groupId = 3},--12ç‚¹
+				{groupId = 1},--13ç‚¹
+				{groupId = 2},--14ç‚¹
+				{groupId = 3},--15ç‚¹
+				{groupId = 1},--16ç‚¹
+				{groupId = 2},--17ç‚¹
+				{groupId = 3},--18ç‚¹
+				{groupId = 1},--19ç‚¹
+				{groupId = 2},--20ç‚¹
+				{groupId = 3},--21ç‚¹
+				{groupId = 1},--22ç‚¹
+				{groupId = 2},--23ç‚¹
 			};
-		if 5>floor(GetMinute()) then --Ö»ÓĞÔÚÃ¿¸öĞ¡Ê±µÄÍ·5·ÖÖÓÄÚ»áË¢ĞÂ¹ÖÎï
+		if 5>floor(GetMinute()) then --åªæœ‰åœ¨æ¯ä¸ªå°æ—¶çš„å¤´5åˆ†é’Ÿå†…ä¼šåˆ·æ–°æ€ªç‰©
 			local index = floor(GetHour()+1);
 			local groupId = nil;
 			local regenesisTime = RegenesisTime[index];
@@ -165,12 +165,12 @@ function x808068_OnTimer( sceneId, actId, uTime )
 end
 
 --**********************************
---objËÀÍö
+--objæ­»äº¡
 --**********************************
-function x808068_OnDie( sceneId, objId, selfId )--Õâ¸öselfId¿ÉÄÜÊÇ³èÎï
+function x808068_OnDie( sceneId, objId, selfId )--è¿™ä¸ªselfIdå¯èƒ½æ˜¯å® ç‰©
 	local killerID = selfId
 	local objType = GetCharacterType( sceneId, selfId )
-	if objType == 3 then --Èç¹ûÊÇ³èÎïµÄ»°£¬°ÑÕâ¸öIDÉèÖÃ³ÉÖ÷ÈËID
+	if objType == 3 then --å¦‚æœæ˜¯å® ç‰©çš„è¯ï¼ŒæŠŠè¿™ä¸ªIDè®¾ç½®æˆä¸»äººID
 		killerID = GetPetCreator( sceneId, selfId )
 	end
 	
@@ -196,13 +196,13 @@ function x808068_OnDie( sceneId, objId, selfId )--Õâ¸öselfId¿ÉÄÜÊÇ³èÎï
 		local monsterType = random(getn(x808068_g_BookThiefID))
 		local MonsterId = LuaFnCreateMonster(sceneId, x808068_g_BookThiefID[monsterType], ThisPos[1], ThisPos[2], 0, x808068_g_BookThiefExtAI[monsterType], x808068_g_BookThiefNPCID)
 		SetCharacterDieTime(sceneId, MonsterId, x808068_g_BookThiefLifeTime)
-		SetCharacterTitle(sceneId, MonsterId, "±¦ÊéÇÔÔô")
-		--ÉèÖÃ¶Ô¹ÖÎªÓÑºÃµÄ Ä¿Ç°ÊÇ0ºÅÊÇÓÑºÃµÄ£¬Èç¹ûÓĞÈË¸Ä±äÁËÏàÓ¦µÄÊÆÁ¦ÉùÍûÄÇÎÒ¾Í²ÒÁË£¡£¡:-(((
+		SetCharacterTitle(sceneId, MonsterId, "å®ä¹¦çªƒè´¼")
+		--è®¾ç½®å¯¹æ€ªä¸ºå‹å¥½çš„ ç›®å‰æ˜¯0å·æ˜¯å‹å¥½çš„ï¼Œå¦‚æœæœ‰äººæ”¹å˜äº†ç›¸åº”çš„åŠ¿åŠ›å£°æœ›é‚£æˆ‘å°±æƒ¨äº†ï¼ï¼:-(((
 		SetUnitReputationID(sceneId, killerID, MonsterId, 0)
 		
 	end
 	
-	-- #P´«ÎÅÔÚ#{_BOSS3}#P´ó¾üÀ£°ÜÖ®Ç°£¬Í¸Â¶ÁË¾ªÈËµÄÏûÏ¢£ºÒ»Ğ©Ì°À·µÄ#G±¦ÊéÇÔÔô£º#{_BOSS113}¡¢#{_BOSS114}#PÔÚ#GĞşÎäµº#P¿ªÊ¼ÁËËûÃÇµÄÃØÃÜ»î¶¯£¡¸÷Â·Ó¢ĞÛ¿ì¿ìÈ¥¿´¸ö¾¿¾¹°É¡£
+	-- #Pä¼ é—»åœ¨#{_BOSS3}#På¤§å†›æºƒè´¥ä¹‹å‰ï¼Œé€éœ²äº†æƒŠäººçš„æ¶ˆæ¯ï¼šä¸€äº›è´ªå©ªçš„#Gå®ä¹¦çªƒè´¼ï¼š#{_BOSS113}ã€#{_BOSS114}#Påœ¨#Gç„æ­¦å²›#På¼€å§‹äº†ä»–ä»¬çš„ç§˜å¯†æ´»åŠ¨ï¼å„è·¯è‹±é›„å¿«å¿«å»çœ‹ä¸ªç©¶ç«Ÿå§ã€‚
 	local strText = "#{ZSSFC_090211_05}"
 	BroadMsgByChatPipe(sceneId, killerID, strText, 4)
 	

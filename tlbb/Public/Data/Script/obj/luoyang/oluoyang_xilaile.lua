@@ -1,25 +1,25 @@
---ÂåÑôNPC
---Ï²À´ÀÖ
---ÆÕÍ¨
+--æ´›é˜³NPC
+--å–œæ¥ä¹
+--æ™®é€š
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x000127_g_scriptId = 000127
 
---Ä¿±êNPC
-x000127_g_name	="Ï²À´ÀÖ"
+--ç›®æ ‡NPC
+x000127_g_name	="å–œæ¥ä¹"
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í {»¨³µÑ²ÓÎ, °İÌìµØ, ²Î¼Ó»éÀñ}
-x000127_g_RelationEventList={250036, 250037, 250038, 808122} --  808122ÖØÎÂ»éÀñ zchw 
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨ {èŠ±è½¦å·¡æ¸¸, æ‹œå¤©åœ°, å‚åŠ å©šç¤¼}
+x000127_g_RelationEventList={250036, 250037, 250038, 808122} --  808122é‡æ¸©å©šç¤¼ zchw 
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x000127_OnDefaultEvent( sceneId, selfId, targetId )
 	x000127_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x000127_UpdateEventList( sceneId, selfId, targetId )
 	BeginEvent(sceneId)
@@ -35,7 +35,7 @@ function x000127_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x000127_OnEventRequest( sceneId, selfId, targetId, eventId )
 	local i
@@ -56,7 +56,7 @@ function x000127_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x000127_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 	local i
@@ -70,12 +70,12 @@ function x000127_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x000127_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 	local i
 	local findId
-	--¾Ü¾øÖ®ºó£¬Òª·µ»ØNPCµÄÊÂ¼şÁĞ±í
+	--æ‹’ç»ä¹‹åï¼Œè¦è¿”å›NPCçš„äº‹ä»¶åˆ—è¡¨
 	for i, findId in x000127_g_RelationEventList do
 		if missionScriptId == findId then
 			x000127_UpdateEventList( sceneId, selfId, targetId )

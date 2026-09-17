@@ -1,5 +1,5 @@
---UI COMMAND ID 555 ¸üĞÂÉı¼¶Éú»î¼¼ÄÜµÄÒªÇó£¬²¢ÏÔÊ¾
---UI COMMAND ID 556 ¹Ø±ÕÉú»î¼¼ÄÜ½çÃæ
+--UI COMMAND ID 555 æ›´æ–°å‡çº§ç”Ÿæ´»æŠ€èƒ½çš„è¦æ±‚ï¼Œå¹¶æ˜¾ç¤º
+--UI COMMAND ID 556 å…³é—­ç”Ÿæ´»æŠ€èƒ½ç•Œé¢
 
 local g_serverScriptId = 600022;
 local g_MembersCtl = {};
@@ -40,16 +40,16 @@ function ConfraternitySkillsStudy_OnEvent(event)
 		g_serverAbilityId = Get_XParam_INT(1);
 		g_serverBuildingId = Get_XParam_INT(7);
 		
-		--¸üĞÂ²¢ÏÔÊ¾
+		--æ›´æ–°å¹¶æ˜¾ç¤º
 		if(g_serverAbilityId and g_serverBuildingId) then
 			if(g_serverAbilityId > 0 and g_serverBuildingId > 0) then
 				Guild_Ability_Update(
-					Get_XParam_INT(2),	--Éı¼¶ĞèÒªµÄ¼¼ÄÜÊìÁ·¶È
-					Get_XParam_INT(3),	--Éı¼¶ĞèÒªµÄÇ®
-					Get_XParam_INT(4),	--Éı¼¶ĞèÒªµÄÈËÎïµÈ¼¶
-					Get_XParam_INT(5),	--Éı¼¶ĞèÒªµÄÈËÎï¾­ÑéÖµ
-					Get_XParam_INT(6),	--Éı¼¶ĞèÒªµÄÈËÎï°ï»á¹±Ï×¶È
-					Get_XParam_INT(8)		--ÈËÎïµ±Ç°µÄ°ï»á¹±Ï×¶È
+					Get_XParam_INT(2),	--å‡çº§éœ€è¦çš„æŠ€èƒ½ç†Ÿç»ƒåº¦
+					Get_XParam_INT(3),	--å‡çº§éœ€è¦çš„é’±
+					Get_XParam_INT(4),	--å‡çº§éœ€è¦çš„äººç‰©ç­‰çº§
+					Get_XParam_INT(5),	--å‡çº§éœ€è¦çš„äººç‰©ç»éªŒå€¼
+					Get_XParam_INT(6),	--å‡çº§éœ€è¦çš„äººç‰©å¸®ä¼šè´¡çŒ®åº¦
+					Get_XParam_INT(8)		--äººç‰©å½“å‰çš„å¸®ä¼šè´¡çŒ®åº¦
 				);
 				
 				this:CareObject(g_clientNpcId, 1, "CityAbilityUp");
@@ -60,7 +60,7 @@ function ConfraternitySkillsStudy_OnEvent(event)
 	elseif ( event == "UI_COMMAND" and tonumber(arg0) == 556) then
 		this:Hide();
 	elseif ( event == "UNIT_MONEY" and this:IsVisible() ) then
-		-- µ±Ç°µÄ½ğÇ®
+		-- å½“å‰çš„é‡‘é’±
 		local nMoneyNow = Player:GetData("MONEY");
 		local currColor = "FF00FF00";
 		if nMoneyNow < g_skillNeedMoney then
@@ -78,15 +78,15 @@ function ConfraternitySkillsStudy_OnEvent(event)
 		--g_MembersCtl.curmonjz:SetProperty("MoneyColor", currColor);
 		g_MembersCtl.curmonjz:SetProperty("MoneyNumber", tostring(nMoneyJZNow));
 	elseif ( event == "UNIT_EXP" and this:IsVisible() ) then
-		-- µ±Ç°µÄ¾­Ñé
+		-- å½“å‰çš„ç»éªŒ
 		local nExpNow = Player:GetData("EXP");
 		local currColor = "#c00FF00";
 		if nExpNow < g_skillNeedEXP then
 			currColor = "#cFF0000";
 		end
-		g_MembersCtl.curexp.ctl:SetText(g_MembersCtl.curexp.txt..currColor..tostring(nExpNow));
+		g_MembersCtl.curexp.ctl:SetText(g_MembersCtl.curexp.txt..currColor..string.format("%.0f", nExpNow));
 	elseif ( event == "UNIT_LEVEL") then
-		-- µ±Ç°µÄµÈ¼¶
+		-- å½“å‰çš„ç­‰çº§
 		local nLevelNow = Player:GetData("LEVEL");
 		local currColor = "#c00FF00";
 		if nLevelNow < g_skillNeedLevel then
@@ -100,24 +100,24 @@ end
 
 function Guild_Ability_SetCtl()
 	g_MembersCtl =	{
-										--1.¼¼ÄÜÃèÊöÏà¹Ø
+										--1.æŠ€èƒ½æè¿°ç›¸å…³
 										icon		= ConfraternitySkillsStudy_Icon,
 										name 		=	{txt = "", 							ctl = ConfraternitySkillsStudy_SkillName},
-										level		=	{txt = "¼¼ÄÜµÈ¼¶:", 		ctl = ConfraternitySkillsStudy_SkillLevel},
-										aexp		=	{txt = "µ±Ç°ÊìÁ·¶È:", 	ctl = ConfraternitySkillsStudy_skilledDegree},
-										hlevel	=	{txt = "Íæ¼ÒµÈ¼¶ÒªÇó:", ctl = ConfraternitySkillsStudy_PlayerLevel},
-										--2.¼¼ÄÜËµÃ÷
+										level		=	{txt = "æŠ€èƒ½ç­‰çº§:", 		ctl = ConfraternitySkillsStudy_SkillLevel},
+										aexp		=	{txt = "å½“å‰ç†Ÿç»ƒåº¦:", 	ctl = ConfraternitySkillsStudy_skilledDegree},
+										hlevel	=	{txt = "ç©å®¶ç­‰çº§è¦æ±‚:", ctl = ConfraternitySkillsStudy_PlayerLevel},
+										--2.æŠ€èƒ½è¯´æ˜
 										desc		=	{txt = "  ",						ctl = ConfraternitySkillsStudy_Explain_Desc},
-										--3.¾­Ñé¡¢°ï¹±¡¢½ğÇ®
-										curexp	=	{txt = "µ±Ç°¾­Ñé:", 		ctl = ConfraternitySkillsStudy_CurrentlyExp_Character_Text},
-										demexp	=	{txt = "ËùĞè¾­Ñé:", 		ctl = ConfraternitySkillsStudy_DemandExp_Character_Text},
-										curcon	=	{txt = "µ±Ç°°ï¹±:", 		ctl = ConfraternitySkillsStudy_CurrentlyContribute_Character_Text},
-										demcon	=	{txt = "ËùĞè°ï¹±:",			ctl = ConfraternitySkillsStudy_DemandContribute_Character_Text},
+										--3.ç»éªŒã€å¸®è´¡ã€é‡‘é’±
+										curexp	=	{txt = "å½“å‰ç»éªŒ:", 		ctl = ConfraternitySkillsStudy_CurrentlyExp_Character_Text},
+										demexp	=	{txt = "æ‰€éœ€ç»éªŒ:", 		ctl = ConfraternitySkillsStudy_DemandExp_Character_Text},
+										curcon	=	{txt = "å½“å‰å¸®è´¡:", 		ctl = ConfraternitySkillsStudy_CurrentlyContribute_Character_Text},
+										demcon	=	{txt = "æ‰€éœ€å¸®è´¡:",			ctl = ConfraternitySkillsStudy_DemandContribute_Character_Text},
 										curmon	=	ConfraternitySkillsStudy_Currently_Money,
 										curmonjz = ConfraternitySkillsStudy_Currently_Jiaozi,
 										--demmon	=	ConfraternitySkillsStudy_Demand_Money,
 										demmonjz = ConfraternitySkillsStudy_Demand_Jiaozi,
-										--4.Éı¼¶°´Å¥
+										--4.å‡çº§æŒ‰é’®
 										btn			= ConfraternitySkillsStudy_UpLevel,
 									};
 end
@@ -143,7 +143,7 @@ function Guild_Ability_Clear()
 	--g_MembersCtl.demmon:SetProperty("MoneyNumber", 0);
 	g_MembersCtl.demmonjz:SetProperty("MoneyNumber", 0);
 	
-	--g_MembersCtl.btn:Disable(); --2006-9-19 19:58 yangjun ³öÓÚÎÈ¶¨ĞÔ¿¼ÂÊ£¬Ôİ²»¿ØÖÆÕâ¸ö°´Å¥µÄ×´Ì¬¡£
+	--g_MembersCtl.btn:Disable(); --2006-9-19 19:58 yangjun å‡ºäºç¨³å®šæ€§è€ƒç‡ï¼Œæš‚ä¸æ§åˆ¶è¿™ä¸ªæŒ‰é’®çš„çŠ¶æ€ã€‚
 end
 
 function Guild_Ability_Update(anexp, money, level, exp, contribute, curcon)
@@ -169,15 +169,15 @@ function Guild_Ability_Update(anexp, money, level, exp, contribute, curcon)
 	
 	if(nil == theAction) then return; end
 	local currColor = "#c00FF00";
-	-- Éú»î¼¼ÄÜÃû×Ö
+	-- ç”Ÿæ´»æŠ€èƒ½åå­—
 	local szName = theAction:GetName();
 	g_MembersCtl.name.ctl:SetText(g_MembersCtl.name.txt..szName);
-	-- Éú»î¼¼ÄÜµÄµÈ¼¶
+	-- ç”Ÿæ´»æŠ€èƒ½çš„ç­‰çº§
 	local nLevel = Player:GetAbilityInfo(g_serverAbilityId, "level");
-	-- Éú»î¼¼ÄÜµÄ×î´óµÈ¼¶
+	-- ç”Ÿæ´»æŠ€èƒ½çš„æœ€å¤§ç­‰çº§
 	local nMaxLevel = Player:GetAbilityInfo(g_serverAbilityId, "maxlevel");
 	g_MembersCtl.level.ctl:SetText(g_MembersCtl.level.txt..tostring(nLevel).."/"..tostring(nMaxLevel));
-	-- Éú»î¼¼ÄÜÊìÁ·¶È
+	-- ç”Ÿæ´»æŠ€èƒ½ç†Ÿç»ƒåº¦
 	if(-2 ~= Player:GetAbilityInfo(g_serverAbilityId,"popup")) then
 		local nSkillExp = Player:GetAbilityInfo(g_serverAbilityId, "skillexp");
 		if nSkillExp < anexp then
@@ -193,33 +193,33 @@ function Guild_Ability_Update(anexp, money, level, exp, contribute, curcon)
 	else
 		currColor = "#c00FF00";
 	end
-	-- ÈËÎïĞèÒªµÈ¼¶
+	-- äººç‰©éœ€è¦ç­‰çº§
 	g_MembersCtl.hlevel.ctl:SetText(g_MembersCtl.hlevel.txt..currColor..tostring(level));
 		
-	-- Éú»î¼¼ÄÜ½âÊÍ
+	-- ç”Ÿæ´»æŠ€èƒ½è§£é‡Š
 	local szExplain = Player:GetAbilityInfo(g_serverAbilityId, "explain");
 	g_MembersCtl.desc.ctl:SetText(g_MembersCtl.desc.txt..szExplain);
 
-	-- µ±Ç°µÄ¾­Ñé
+	-- å½“å‰çš„ç»éªŒ
 	local nExpNow = Player:GetData("EXP");
 	if nExpNow < exp then
 		currColor = "#cFF0000";
 	else
 		currColor = "#c00FF00";
 	end
-	g_MembersCtl.curexp.ctl:SetText(g_MembersCtl.curexp.txt..currColor.. tostring(nExpNow));
-	-- ĞèÒªµÄ¾­Ñé
+	g_MembersCtl.curexp.ctl:SetText(g_MembersCtl.curexp.txt..currColor.. string.format("%.0f", nExpNow));
+	-- éœ€è¦çš„ç»éªŒ
 	g_MembersCtl.demexp.ctl:SetText(g_MembersCtl.demexp.txt..tostring(exp));
-	-- µ±Ç°°ï»á¹±Ï×¶È
+	-- å½“å‰å¸®ä¼šè´¡çŒ®åº¦
 	if curcon < contribute then
 		currColor = "#cFF0000";
 	else
 		currColor = "#c00FF00";
 	end
 	g_MembersCtl.curcon.ctl:SetText(g_MembersCtl.curcon.txt.. currColor.. tostring(curcon));
-	-- ĞèÒª°ï»á¹±Ï×¶È
+	-- éœ€è¦å¸®ä¼šè´¡çŒ®åº¦
 	g_MembersCtl.demcon.ctl:SetText(g_MembersCtl.demcon.txt..tostring(contribute));
-	-- µ±Ç°µÄ½ğÇ®
+	-- å½“å‰çš„é‡‘é’±
 	local nMoneyNow = Player:GetData("MONEY");
 	if nMoneyNow < money then
 		currColor = "FFFF0000";
@@ -237,7 +237,7 @@ function Guild_Ability_Update(anexp, money, level, exp, contribute, curcon)
 	g_MembersCtl.curmonjz:SetProperty("MoneyNumber", tostring(nMoneyJZNow));
 	--g_MembersCtl.curmonjz:SetProperty("MoneyColor", currColor);
 	--g_MembersCtl.curmon:SetProperty("MoneyMaxNumber", nMoneyNow-1)
-	-- ĞèÒªµÄ½ğÇ®
+	-- éœ€è¦çš„é‡‘é’±
 	--g_MembersCtl.demmon:SetProperty("MoneyNumber", tostring(money));
 	g_MembersCtl.demmonjz:SetProperty("MoneyNumber", tostring(money));
 	
@@ -251,7 +251,7 @@ function Guild_Ability_LevelUp_Click()
 	Set_XSCRIPT_Parameter(0,g_serverNpcId);
 	Set_XSCRIPT_Parameter(1,g_serverAbilityId);
 	Set_XSCRIPT_Parameter(2,g_serverBuildingId);
-	Set_XSCRIPT_Parameter(3,3);			--±êÊ¶¿Í»§¶Ëµ÷ÓÃ
+	Set_XSCRIPT_Parameter(3,3);			--æ ‡è¯†å®¢æˆ·ç«¯è°ƒç”¨
 	Set_XSCRIPT_ParamCount(4);
 	Send_XSCRIPT();
 end
@@ -264,7 +264,7 @@ function Guild_Ability_CareEventHandle(careId, op, distance)
 		if(tonumber(careId) ~= g_clientNpcId) then
 			return;
 		end
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ı£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æœå’ŒNPCçš„è·ç¦»å¤§äºä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if(op == "distance" and tonumber(distance)>MAX_OBJ_DISTANCE or op=="destroy") then
 			this:Hide();
 		end

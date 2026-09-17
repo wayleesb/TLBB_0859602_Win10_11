@@ -1,16 +1,16 @@
---BOSS´ºÍíÖ÷¿Ø½Å±¾
+--BOSSæ˜¥æ™šä¸»æ§è„šæœ¬
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x050030_g_scriptId = 050030
 
-x050030_g_StartDayTime	= 09097		--»î¶¯¿ªÊ¼(Ê×²¥)Ê±¼ä 2009-4-8
-x050030_g_EndDayTime		= 09131		--»î¶¯½áÊøÊ±¼ä 2009-5-12
+x050030_g_StartDayTime	= 09097		--æ´»åŠ¨å¼€å§‹(é¦–æ’­)æ—¶é—´ 2009-4-8
+x050030_g_EndDayTime		= 09131		--æ´»åŠ¨ç»“æŸæ—¶é—´ 2009-5-12
 
 
---·ÅÑÌ»¨µÄÊıÁ¿....
+--æ”¾çƒŸèŠ±çš„æ•°é‡....
 x050030_g_MaxFireCount = 18
 
---ÑÌ»¨±í....
+--çƒŸèŠ±è¡¨....
 x050030_g_FireShowTbl = {
 
 	[18] = { {x=160,y=105,id=4},{x=160,y=114,id=39} }, --zchw
@@ -35,51 +35,51 @@ x050030_g_FireShowTbl = {
 }
 
 
---BOSS±í....
+--BOSSè¡¨....
 x050030_g_BOSSTbl = {
 
-	--ËïÃÀÃÀ....
-	["SunMeiMei"] 		= { dateId = 3891, createMsg = "ÎŞ" },
+	--å­™ç¾ç¾....
+	["SunMeiMei"] 		= { dateId = 3891, createMsg = "æ— " },
 
-	--Ò°ÖíÍõ..¶ñ°Ô..Ô¶¹ÅÆå»ê..Ôô±øÍ·Ä¿..¿ñ±©Áú....
+	--é‡çŒªç‹..æ¶éœ¸..è¿œå¤æ£‹é­‚..è´¼å…µå¤´ç›®..ç‹‚æš´é¾™....
 	["YeZhuWang"] 		= { dateId = 3917, createMsg = "#{SpringFestiva2007_BOSS_15}" },
 	["EBa"]						= { dateId = 3887, createMsg = "#{SpringFestiva2007_BOSS_6}"  },
 	["QiHun"]					= { dateId = 3890, createMsg = "#{SpringFestiva2007_BOSS_4}"  },
 	["ZeiBingTouMu"]	= { dateId = 3888, createMsg = "#{SpringFestiva2007_BOSS_5}"  },
 	["KuangBaoLong"]	= { dateId = 3918, createMsg = "#{SpringFestiva2007_BOSS_16}" },
 
-	--Óà¶¾..ºìĞÜÍõ..¸ğÈÙ....
+	--ä½™æ¯’..çº¢ç†Šç‹..è‘›è£....
 	["YuDu"]					= { dateId = 3901, createMsg = "#{SpringFestiva2007_BOSS_17}" },
 	["HongXiongWang"]	= { dateId = 3902, createMsg = "#{SpringFestiva2007_BOSS_18}" },
 	["GeRong"]				= { dateId = 3903, createMsg = "#{SpringFestiva2007_BOSS_19}" },
 
-	--¶ÎÓş..Ä½Èİ¸´..ÍõÓïæÌ....
+	--æ®µèª‰..æ…•å®¹å¤..ç‹è¯­å«£....
 	["DuanYu"]				= { dateId = 3924, createMsg = "#{SpringFestiva2007_BOSS_22}" },
 	["MuRongFu"]			= { dateId = 3922, createMsg = "#{SpringFestiva2007_BOSS_1}"  },
 	["WangYuYan"]			= { dateId = 3920, createMsg = "#{SpringFestiva2007_BOSS_23}" },
 
-	--Ğ¡Ó¥Ó¥..Ğ¡ÖíÖí..·ÉÌìÃ¨..Ğ¡¹·¹·..Ğ¡»¢»¢....
-	["YingYing"] 			= { dateId = 3928, createMsg = "ÎŞ" },
-	["ZhuZhu"]				= { dateId = 3926, createMsg = "ÎŞ" },
+	--å°é¹°é¹°..å°çŒªçŒª..é£å¤©çŒ«..å°ç‹—ç‹—..å°è™è™....
+	["YingYing"] 			= { dateId = 3928, createMsg = "æ— " },
+	["ZhuZhu"]				= { dateId = 3926, createMsg = "æ— " },
 	["FeiTianMao"]		= { dateId = 3916, createMsg = "#{SpringFestiva2007_BOSS_13}" },
-	["GouGou"]				= { dateId = 3927, createMsg = "ÎŞ" },
-	["HuHu"]					= { dateId = 3929, createMsg = "ÎŞ" },
+	["GouGou"]				= { dateId = 3927, createMsg = "æ— " },
+	["HuHu"]					= { dateId = 3929, createMsg = "æ— " },
 
-	--[ËïÃÀÃÀ]..Ä¾Í°²®..°×µÛ..»ì½­Áú..Æó¶ìÍõ....
+	--[å­™ç¾ç¾]..æœ¨æ¡¶ä¼¯..ç™½å¸..æ··æ±Ÿé¾™..ä¼é¹…ç‹....
 	["MuTongBo"] 			= { dateId = 3894, createMsg = "#{SpringFestiva2007_BOSS_21}" },
 	["BaiDi"]					= { dateId = 3910, createMsg = "#{SpringFestiva2007_BOSS_10}" },
 	["HunJiangLong"]	= { dateId = 3898, createMsg = "#{SpringFestiva2007_BOSS_14}" },
 	["QiEWang"]				= { dateId = 3897, createMsg = "#{SpringFestiva2007_BOSS_20}" },
 
-	--[Æó¶ìÍõ]
+	--[ä¼é¹…ç‹]
 
-	--[ËïÃÀÃÀ]..¶ÎÑÓÇì....
+	--[å­™ç¾ç¾]..æ®µå»¶åº†....
 	["DuanYanQing"]		= { dateId = 3919, createMsg = "#{SpringFestiva2007_BOSS_2}"  },
 
-	--»¤µºÉñÊŞ....
+	--æŠ¤å²›ç¥å…½....
 	["HuDaoShenShou"]	= { dateId = 3893, createMsg = "#{SpringFestiva2007_BOSS_12}" },
 
-	--[ËïÃÀÃÀ]..³àÏö»ğ»ê..´ºÈıÊ®Äï..¶¾Ë¿Ö©ÖëÍõ..²øË¿Ö©ÖëÍõ....
+	--[å­™ç¾ç¾]..èµ¤éœ„ç«é­‚..æ˜¥ä¸‰åå¨˜..æ¯’ä¸èœ˜è››ç‹..ç¼ ä¸èœ˜è››ç‹....
 	["ChiXiaoHuoHun"]	= { dateId = 3914, createMsg = "#{SpringFestiva2007_BOSS_11}" },
 	["Chun30"]				= { dateId = 3908, createMsg = "#{SpringFestiva2007_BOSS_9}"  },
 	["DuSiZhiZhu"]		= { dateId = 3906, createMsg = "#{SpringFestiva2007_BOSS_7}"  },
@@ -87,14 +87,14 @@ x050030_g_BOSSTbl = {
 
 }
 
---BOSS×î´óÉú´æÊ±¼ä....(ÓÃÓÚ·ÀÖ¹ÍüÁËÉ¾³ı´ËBOSS)
+--BOSSæœ€å¤§ç”Ÿå­˜æ—¶é—´....(ç”¨äºé˜²æ­¢å¿˜äº†åˆ é™¤æ­¤BOSS)
 x050030_g_BOSSMaxLifeTime = 15*60*1000
 
 
---½ÚÄ¿ÊıÁ¿....
+--èŠ‚ç›®æ•°é‡....
 x050030_g_ChapterCount = 11
 
---½ÚÄ¿½Å±¾ID...
+--èŠ‚ç›®è„šæœ¬ID...
 x050030_g_ChapterScriptIdTbl = {
 
 	050031,
@@ -112,16 +112,16 @@ x050030_g_ChapterScriptIdTbl = {
 }
 
 
-x050030_g_IDXFireCount = 0 --µ±Ç°ÒÑ¾­È¼·ÅµÄÑÌ»¨µÄÊıÁ¿....
+x050030_g_IDXFireCount = 0 --å½“å‰å·²ç»ç‡ƒæ”¾çš„çƒŸèŠ±çš„æ•°é‡....
 
-x050030_g_IsPlaying = 0 --µ±Ç°ÊÇ·ñÕıÔÚ²¥·Å½ÚÄ¿....
+x050030_g_IsPlaying = 0 --å½“å‰æ˜¯å¦æ­£åœ¨æ’­æ”¾èŠ‚ç›®....
 
 --**********************************
---½Å±¾Èë¿Úº¯Êı....
+--è„šæœ¬å…¥å£å‡½æ•°....
 --**********************************
 function x050030_OnDefaultEvent( sceneId, actId, iNoticeType, param2, param3, param4, param5 )
 
-	--¼ì²âÊÇ·ñÊÇ»î¶¯Ê±¼ä....
+	--æ£€æµ‹æ˜¯å¦æ˜¯æ´»åŠ¨æ—¶é—´....
 	if -1 == x050030_CheckActivityTime() then
 		return
 	end
@@ -132,20 +132,20 @@ function x050030_OnDefaultEvent( sceneId, actId, iNoticeType, param2, param3, pa
 end
 
 --**********************************
---ĞÄÌøº¯Êı....
+--å¿ƒè·³å‡½æ•°....
 --**********************************
 function x050030_OnTimer( sceneId, actId, uTime )
 
 	local CurFireCount = GetActivityParam( sceneId, actId, x050030_g_IDXFireCount )
 	if CurFireCount > 0 then
 
-		--ÑÌ»¨»¹Ã»·Å¹»Ôò¼ÌĞø·Å....
+		--çƒŸèŠ±è¿˜æ²¡æ”¾å¤Ÿåˆ™ç»§ç»­æ”¾....
 		x050030_PlayFire( sceneId, CurFireCount )
 		SetActivityParam( sceneId, actId, x050030_g_IDXFireCount, CurFireCount-1 )
 
 	elseif CurFireCount == 0 then
 
-		--ÑÌ»¨·ÅÍêÁËÔò¼¤»îµÚÒ»¸ö½ÚÄ¿....
+		--çƒŸèŠ±æ”¾å®Œäº†åˆ™æ¿€æ´»ç¬¬ä¸€ä¸ªèŠ‚ç›®....
 		x050030_PlayChapter( sceneId, 1 )
 		StopOneActivity( sceneId, actId )
 
@@ -154,13 +154,13 @@ function x050030_OnTimer( sceneId, actId, uTime )
 end
 
 --**********************************
---²¥·ÅÄ³¸ö½ÚÄ¿....
+--æ’­æ”¾æŸä¸ªèŠ‚ç›®....
 --**********************************
 function x050030_PlayChapter( sceneId, chapterId )
 
 	if chapterId <= x050030_g_ChapterCount then
 
-		--Ê×²¥ºÍÖØ²¥Ê±²Å»áÔÚ½ÚÄ¿¿ªÊ¼µÄÊ±ºò·¢¹«¸æ....
+		--é¦–æ’­å’Œé‡æ’­æ—¶æ‰ä¼šåœ¨èŠ‚ç›®å¼€å§‹çš„æ—¶å€™å‘å…¬å‘Š....
 		if -1 ~= x050030_CheckActivityTime() then
 			BroadMsgByChatPipe( sceneId, -1, "#{SpringFestiva2007_BOSS_3}", 4 )
 		end
@@ -173,13 +173,13 @@ function x050030_PlayChapter( sceneId, chapterId )
 end
 
 --**********************************
---µ±Ä³¸ö½ÚÄ¿½áÊøÊ±»Øµ÷±¾½Ó¿Ú....
+--å½“æŸä¸ªèŠ‚ç›®ç»“æŸæ—¶å›è°ƒæœ¬æ¥å£....
 --**********************************
 function x050030_OnChapterEnd( sceneId, chapterId )
 
 	x050030_g_IsPlaying = 0
 
-	--Ê×²¥ºÍÖØ²¥Ê±×Ô¶¯²¥·ÅÏÂ¸ö½ÚÄ¿....µã²¥Ê±²»×Ô¶¯²¥·ÅÏÂ¸ö½ÚÄ¿....
+	--é¦–æ’­å’Œé‡æ’­æ—¶è‡ªåŠ¨æ’­æ”¾ä¸‹ä¸ªèŠ‚ç›®....ç‚¹æ’­æ—¶ä¸è‡ªåŠ¨æ’­æ”¾ä¸‹ä¸ªèŠ‚ç›®....
 	if -1 ~= x050030_CheckActivityTime() then
 		x050030_PlayChapter( sceneId, chapterId+1 )
 	end
@@ -187,7 +187,7 @@ function x050030_OnChapterEnd( sceneId, chapterId )
 end
 
 --**********************************
---´´½¨Ä³¸öBOSS....
+--åˆ›å»ºæŸä¸ªBOSS....
 --**********************************
 function x050030_CreateBossActor( sceneId, strName, posX, posY, notify )
 
@@ -200,15 +200,15 @@ function x050030_CreateBossActor( sceneId, strName, posX, posY, notify )
 	SetCharacterDieTime( sceneId, MstId, x050030_g_BOSSMaxLifeTime )
 	LuaFnSendSpecificImpactToUnit(sceneId, MstId, MstId, MstId, 152, 0)
 
-	--Ê×²¥ºÍÖØ²¥Ê±²Å»áÔÚ´´½¨BOSSµÄÊ±ºò·¢¹«¸æ....
+	--é¦–æ’­å’Œé‡æ’­æ—¶æ‰ä¼šåœ¨åˆ›å»ºBOSSçš„æ—¶å€™å‘å…¬å‘Š....
 	local notify2 = 1
 	if -1 == x050030_CheckActivityTime() then
 		notify2 = 0
 	end
 
 	if notify and notify == 1 and notify2 == 1 then
-		local msg = "#P[´ºÍíÖ÷³ÖÈË-ËïÃÀÃÀ]£º#W"..bossData.createMsg
-		MonsterTalk(sceneId, -1, "ÂåÑô", msg )
+		local msg = "#P[æ˜¥æ™šä¸»æŒäºº-å­™ç¾ç¾]ï¼š#W"..bossData.createMsg
+		MonsterTalk(sceneId, -1, "æ´›é˜³", msg )
 	end
 
 	return MstId
@@ -216,7 +216,7 @@ function x050030_CreateBossActor( sceneId, strName, posX, posY, notify )
 end
 
 --**********************************
---É¾³ıÄ³¸öBOSS....
+--åˆ é™¤æŸä¸ªBOSS....
 --**********************************
 function x050030_DeleteBossActor( sceneId, strName, objId )
 
@@ -226,7 +226,7 @@ function x050030_DeleteBossActor( sceneId, strName, objId )
 end
 
 --**********************************
---¼ì²âÊÇ·ñÊÇÄ³¸öBOSSÑİÔ±....
+--æ£€æµ‹æ˜¯å¦æ˜¯æŸä¸ªBOSSæ¼”å‘˜....
 --**********************************
 function x050030_IsSpecificBossActor( sceneId, strName, objId )
 
@@ -245,8 +245,8 @@ function x050030_IsSpecificBossActor( sceneId, strName, objId )
 end
 
 --**********************************
---¼ì²âµ±Ç°ÊÇ·ñÊÇ»î¶¯Ê±¼ä....
---Ê×²¥·µ»Ø1 ÖØ²¥·µ»Ø2 ÆäËü·µ»Ø-1
+--æ£€æµ‹å½“å‰æ˜¯å¦æ˜¯æ´»åŠ¨æ—¶é—´....
+--é¦–æ’­è¿”å›1 é‡æ’­è¿”å›2 å…¶å®ƒè¿”å›-1
 --**********************************
 function x050030_CheckActivityTime()
 
@@ -265,7 +265,7 @@ function x050030_CheckActivityTime()
 end
 
 --**********************************
---¼ì²âµ±Ç°ÊÇ·ñÕıÔÚ²¥·Å½ÚÄ¿....
+--æ£€æµ‹å½“å‰æ˜¯å¦æ­£åœ¨æ’­æ”¾èŠ‚ç›®....
 --**********************************
 function x050030_IsChapterPlaying( sceneId )
 
@@ -274,11 +274,11 @@ function x050030_IsChapterPlaying( sceneId )
 end
 
 --**********************************
---·ÅÑÌ»¨....
+--æ”¾çƒŸèŠ±....
 --**********************************
 function x050030_PlayFire( sceneId, step )
 
-	--ÌØÀıĞ´·¨....ÆäËüÈË²»ÒªÑ§....
+	--ç‰¹ä¾‹å†™æ³•....å…¶å®ƒäººä¸è¦å­¦....
 	--CreateSpecialObjByDataIndex(sceneId, objId, 6, posX, posZ, 0)
 	--CreateSpecialObjByDataIndex(sceneId, 0(!!), 6, posX, posZ, 0)
 

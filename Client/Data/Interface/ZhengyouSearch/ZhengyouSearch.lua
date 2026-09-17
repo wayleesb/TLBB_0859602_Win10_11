@@ -1,13 +1,13 @@
--- Õ÷ÓÑÆ½Ì¨: ²éÕÒ£¬ cuiyinjie 2008.10.21
+-- å¾å‹å¹³å°: æŸ¥æ‰¾ï¼Œ cuiyinjie 2008.10.21
 
--- ´ËÌõ¼şºÍPlayerZhengyouPT.luaÀï¶¨ÒåÒ»ÖÂ£¬ÒªÍ¬Ê±¸ü¸Ä, ×¢ÒâÃÅÅÉÓĞÇø±ğ 
+-- æ­¤æ¡ä»¶å’ŒPlayerZhengyouPT.luaé‡Œå®šä¹‰ä¸€è‡´ï¼Œè¦åŒæ—¶æ›´æ”¹, æ³¨æ„é—¨æ´¾æœ‰åŒºåˆ« 
 local g_Conditions = {
-	MenPai = {"ÉÙÁÖ", "Ã÷½Ì", "Ø¤°ï", "Îäµ±", "¶ëáÒ", "ĞÇËŞ", "ÌìÁú", "ÌìÉ½", "åĞÒ£", "ÎŞÃÅÅÉ", "È«²¿"},
-	Level = {"ÈÎÒâ", "10¼¶ÒÔÏÂ", "10µ½20¼¶", "20µ½30¼¶", "30µ½40¼¶", "40µ½50¼¶", "50µ½60¼¶", "60µ½70¼¶", "70µ½80¼¶", "80µ½90¼¶", "90µ½100¼¶", "100¼¶ÒÔÉÏ"},
-	Sexy = {"²»ÏŞ", "ÄĞ", "Å®"},
-	Banghui = {"È«²¿", "ÓĞ°ï", "ÎŞ°ï"},
-	ADType	= {"È«²¿", "ÀÉ²ÅÅ®Ã²", "À­°ï½á»ï", "°İÊ¦Ñ°Í½", "Òå½á½ğÀ¼"},   -- ´Ë´¦ÓÃ×Öµä²»ĞĞ£¬ÁĞ±í¿òºÃÏñ²»Ö§³Ö {"È«²¿", "#{ZYPT_081103_008}", "#{ZYPT_081103_009}", "#{ZYPT_081103_010}", "#{ZYPT_081103_011}",},
-	HotLevel = {"È«²¿", "0-10", "11-20", "21-30", "31-40", "41-50", "51-60", "61-70", "71-80"},
+	MenPai = {"å°‘æ—", "æ˜æ•™", "ä¸å¸®", "æ­¦å½“", "å³¨åµ‹", "æ˜Ÿå®¿", "å¤©é¾™", "å¤©å±±", "é€é¥", "æ— é—¨æ´¾", "å…¨éƒ¨"},
+	Level = {"ä»»æ„", "10çº§ä»¥ä¸‹", "10åˆ°20çº§", "20åˆ°30çº§", "30åˆ°40çº§", "40åˆ°50çº§", "50åˆ°60çº§", "60åˆ°70çº§", "70åˆ°80çº§", "80åˆ°90çº§", "90åˆ°100çº§", "100çº§ä»¥ä¸Š"},
+	Sexy = {"ä¸é™", "ç”·", "å¥³"},
+	Banghui = {"å…¨éƒ¨", "æœ‰å¸®", "æ— å¸®"},
+	ADType	= {"å…¨éƒ¨", "éƒæ‰å¥³è²Œ", "æ‹‰å¸®ç»“ä¼™", "æ‹œå¸ˆå¯»å¾’", "ä¹‰ç»“é‡‘å…°"},   -- æ­¤å¤„ç”¨å­—å…¸ä¸è¡Œï¼Œåˆ—è¡¨æ¡†å¥½åƒä¸æ”¯æŒ {"å…¨éƒ¨", "#{ZYPT_081103_008}", "#{ZYPT_081103_009}", "#{ZYPT_081103_010}", "#{ZYPT_081103_011}",},
+	HotLevel = {"å…¨éƒ¨", "0-10", "11-20", "21-30", "31-40", "41-50", "51-60", "61-70", "71-80"},
 }
 
 
@@ -39,12 +39,12 @@ end
 function ZhengyouSearch_OnWindowOpen(sWndName)
 	local i = 0;
 	for i = 0, 6 do
-	   if ( "ZhengyouSearch" .. i == sWndName ) then  --ÏÈ¹Ø±ÕÆäËü¿ª×ÅµÄ´°¿Ú
+	   if ( "ZhengyouSearch" .. i == sWndName ) then  --å…ˆå…³é—­å…¶å®ƒå¼€ç€çš„çª—å£
            CloseWindow("ZhengyouInfoFabu");
            CloseWindow("ZhengyouYaoqiu");
            CloseWindow("VotedPlayer");
 	   	   this:Show();
-	       if ( 5 == i ) then   -- ÔÚ²éÕÒ±êÇ©ÀïÊ±Ò²Îª²éÕÒÈ«²¿ 
+	       if ( 5 == i ) then   -- åœ¨æŸ¥æ‰¾æ ‡ç­¾é‡Œæ—¶ä¹Ÿä¸ºæŸ¥æ‰¾å…¨éƒ¨ 
 	          g_Ctrls.ADTypeCombo:SetCurrentSelect(0);
 	       else
 	          g_Ctrls.ADTypeCombo:SetCurrentSelect(i);
@@ -96,7 +96,7 @@ function ZhengyouSearch_Close()
    this:Hide();
 end
 
--- ¿ªÊ¼²éÕÒ 
+-- å¼€å§‹æŸ¥æ‰¾ 
 function ZhengyouSearch_BeginSearch()
 	local sMenpai, iMenpai 	=  g_Ctrls.MenpaiCombo:GetCurrentSelect();
 	local sLevel, iLevel 	=  g_Ctrls.LevelCombo:GetCurrentSelect();	
@@ -104,8 +104,8 @@ function ZhengyouSearch_BeginSearch()
 	local sBanghui, iBanghui =  g_Ctrls.BanghuiCombo:GetCurrentSelect();
 	local sADType, iADType 	=  g_Ctrls.ADTypeCombo:GetCurrentSelect();
 	local sHotLevel, iHotLevel 	=  g_Ctrls.HotLevelCombo:GetCurrentSelect();
-	--·¢ËÍ²éÕÒÇëÇó
-	--×¢Òâ£º ÃÅÅÉµÄÈ«²¿ºÍÆäËü²»Ò»Ñù£¬ÆäËü¶¼ÊÇ0£¬ ¶øÃÅÅÉÎª10²ÅÊÇÈ«²¿ 
+	--å‘é€æŸ¥æ‰¾è¯·æ±‚
+	--æ³¨æ„ï¼š é—¨æ´¾çš„å…¨éƒ¨å’Œå…¶å®ƒä¸ä¸€æ ·ï¼Œå…¶å®ƒéƒ½æ˜¯0ï¼Œ è€Œé—¨æ´¾ä¸º10æ‰æ˜¯å…¨éƒ¨ 
 	RequestSearchFindFriendInfo(iMenpai, iBanghui, iSexy, iADType, iLevel, iHotLevel);
 	this:Hide();
 end

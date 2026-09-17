@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" ?>
+<?xml version="1.0" ?>
 <GUILayout>
     <Window Type="TLBB_MainFrame1" Name="CheckCustomPosition_Frame">
       <Property Name="UnifiedPosition" Value="{{0.22500000,188.000000},{0.20000,51.780000}" />

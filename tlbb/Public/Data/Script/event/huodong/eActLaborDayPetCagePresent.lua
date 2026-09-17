@@ -1,45 +1,45 @@
 --------------------------------------------
---Title£º	2008 5.1»î¶¯½Å±¾ Ö® ÊŞÀ¸ÔùËÍ
---Author£º	Áõ¶Ü
---Date£º	2008-04-15
+--Titleï¼š	2008 5.1æ´»åŠ¨è„šæœ¬ ä¹‹ å…½æ èµ é€
+--Authorï¼š	åˆ˜ç›¾
+--Dateï¼š	2008-04-15
 --------------------------------------------
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x808092_g_ScriptId = 808092
 
 --sceneId List
---9		ÉÙÁÖËÂ
---10	Ø¤°ï×Ü¶æ
---11	¹âÃ÷µî
---12	Îäµ±É½
---13	ÌìÁúËÂ
---14	Áè²¨¶´
---15	¶ëáÒÉ½
---16	ĞÇËŞº£
---17	ÌìÉ½
+--9		å°‘æ—å¯º
+--10	ä¸å¸®æ€»èˆµ
+--11	å…‰æ˜æ®¿
+--12	æ­¦å½“å±±
+--13	å¤©é¾™å¯º
+--14	å‡Œæ³¢æ´
+--15	å³¨åµ‹å±±
+--16	æ˜Ÿå®¿æµ·
+--17	å¤©å±±
 
 --MenPaiId List
---0		ÉÙÁÖ
---1		Ã÷½Ì
---2		Ø¤°ï
---3		Îäµ±
---4		¶ëáÒ
---5		ĞÇËŞ
---6		´óÀí
---7		ÌìÉ½
---8		åĞÒ£
---9		±ê×¼
+--0		å°‘æ—
+--1		æ˜æ•™
+--2		ä¸å¸®
+--3		æ­¦å½“
+--4		å³¨åµ‹
+--5		æ˜Ÿå®¿
+--6		å¤§ç†
+--7		å¤©å±±
+--8		é€é¥
+--9		æ ‡å‡†
 
 --GlobalLaborDayActivityTable = {
 --	PetCageCardID					= 40004446,
 --	PetCageLv1 						= 30509500,
 --	PetCageDelayBuff 				= 30187,
---	PetCagePresentStartTime 		= 20080415, --¶Ò»»ÊŞÀ¸¿ªÊ¼Ê±¼ä
---	PetCagePresentEndTime 			= 20080417, --¶Ò»»ÊŞÀ¸½áÊøÊ±¼ä
---	CardPresentStartTime 			= 20080417,	--Ç©ÃûÅÆ¿ªÊ¼¶Ò»»Ê±¼ä
---	CardPresentEndTime 				= 20080417,	--Ç©ÃûÅÆ½áÊø¶Ò»»Ê±¼ä
---	MailStartDayTime 				= 20080415,	--·¢ËÍÓÊ¼ş¿ªÊ¼Ê±¼ä
---	MailEndDayTime 					= 20080418	--·¢ËÍÓÊ¼ş½áÊøÊ±¼ä
+--	PetCagePresentStartTime 		= 20080415, --å…‘æ¢å…½æ å¼€å§‹æ—¶é—´
+--	PetCagePresentEndTime 			= 20080417, --å…‘æ¢å…½æ ç»“æŸæ—¶é—´
+--	CardPresentStartTime 			= 20080417,	--ç­¾åç‰Œå¼€å§‹å…‘æ¢æ—¶é—´
+--	CardPresentEndTime 				= 20080417,	--ç­¾åç‰Œç»“æŸå…‘æ¢æ—¶é—´
+--	MailStartDayTime 				= 20080415,	--å‘é€é‚®ä»¶å¼€å§‹æ—¶é—´
+--	MailEndDayTime 					= 20080418	--å‘é€é‚®ä»¶ç»“æŸæ—¶é—´
 --}
 
 function x808092_Scene2MenPaiID( sceneId )
@@ -65,15 +65,15 @@ function x808092_Scene2MenPaiID( sceneId )
 end
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x808092_OnDefaultEvent( sceneId, selfId, targetId )
 	local ItemID = GetNumText()	
 	if(ItemID == 808092000) then
 		BeginEvent(sceneId)
 			AddText(sceneId, "#{SL_20080416_12}")
-			AddNumText( sceneId, x808092_g_ScriptId, "ÎÒÒªÁìÈ¡ÊŞÀ¸", 6, 808092002 )
-			AddNumText( sceneId, x808092_g_ScriptId, "»¹ÊÇËãÁË°É", 11, 808092003 )
+			AddNumText( sceneId, x808092_g_ScriptId, "æˆ‘è¦é¢†å–å…½æ ", 6, 808092002 )
+			AddNumText( sceneId, x808092_g_ScriptId, "è¿˜æ˜¯ç®—äº†å§", 11, 808092003 )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 	elseif(ItemID == 808092001) then
@@ -82,7 +82,7 @@ function x808092_OnDefaultEvent( sceneId, selfId, targetId )
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 	elseif(ItemID == 808092002) then
-		--¶Ò»»ÊŞÀ¸
+		--å…‘æ¢å…½æ 
 		local condition = x808092_CheckActivityCondition(sceneId, selfId, targetId)
 		
 		if (condition == 0) then
@@ -97,35 +97,35 @@ function x808092_OnDefaultEvent( sceneId, selfId, targetId )
 				AuditPetCagePresent(sceneId, selfId)
 			end
 			
-		--ÁìÈ¡ÊŞÀ¸µÄÊ±¼äÒÑ¾­¹ıÁË
+		--é¢†å–å…½æ çš„æ—¶é—´å·²ç»è¿‡äº†
 		elseif (condition == 1) then
 			BeginEvent(sceneId)
 				AddText(sceneId, "#{SL_20080416_14}")
 			EndEvent(sceneId)
 			DispatchEventList(sceneId, selfId, targetId)
 
-		--ÒÑ¾­¶Ò»»¹ıÊŞÀ¸ÁË
+		--å·²ç»å…‘æ¢è¿‡å…½æ äº†
 		elseif(condition == 2) then
 			BeginEvent(sceneId)
 				AddText(sceneId, "#{SL_20080416_16}")
 			EndEvent(sceneId)
 			DispatchEventList(sceneId, selfId, targetId)
 
-		--Ã»ÓĞÇ©ÃûÅÆ
+		--æ²¡æœ‰ç­¾åç‰Œ
 		elseif(condition == 3) then
 			BeginEvent(sceneId)
 				AddText(sceneId, "#{SL_20080416_13}")
 			EndEvent(sceneId)
 			DispatchEventList(sceneId, selfId, targetId)
 
-		--·Ç±¾ÃÅµÜ×Ó
+		--éæœ¬é—¨å¼Ÿå­
 		elseif(condition == 4) then
 			BeginEvent(sceneId)
 				AddText(sceneId, "#{SL_20080416_15}")
 			EndEvent(sceneId)
 			DispatchEventList(sceneId, selfId, targetId)
 			
-		--ÌØĞ§»¹Î´ÏûÊ§
+		--ç‰¹æ•ˆè¿˜æœªæ¶ˆå¤±
 		elseif(condition == 5) then
 			BeginEvent(sceneId)
 				AddText(sceneId, "#{SL_20080416_17}")
@@ -134,23 +134,23 @@ function x808092_OnDefaultEvent( sceneId, selfId, targetId )
 		end
 		
 	elseif(ItemID == 808092003) then
-		--¹Ø±Õ½çÃæ
+		--å…³é—­ç•Œé¢
 		DispatchUICommand(sceneId, selfId, 1000)
 	end	
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x808092_OnEnumerate( sceneId, selfId, targetId )
 	if (x808092_IsActivityTimeOut() == 0) then
-		AddNumText(sceneId, x808092_g_ScriptId, "´ºÅ¯»¨¿ªÊ¦ÃÅÔùÀñ»î¶¯", 1, 808092000 )
-		AddNumText(sceneId, x808092_g_ScriptId, "´ºÅ¯»¨¿ªÊ¦ÃÅÔùÀñ»î¶¯°ïÖú", 11, 808092001 )	
+		AddNumText(sceneId, x808092_g_ScriptId, "æ˜¥æš–èŠ±å¼€å¸ˆé—¨èµ ç¤¼æ´»åŠ¨", 1, 808092000 )
+		AddNumText(sceneId, x808092_g_ScriptId, "æ˜¥æš–èŠ±å¼€å¸ˆé—¨èµ ç¤¼æ´»åŠ¨å¸®åŠ©", 11, 808092001 )	
 	end
 end
 
 --**********************************
---¼ì²â»î¶¯ÊÇ·ñ¹ıÆÚ
+--æ£€æµ‹æ´»åŠ¨æ˜¯å¦è¿‡æœŸ
 --**********************************
 function x808092_IsActivityTimeOut( )
 	local curDayTime = GetTime2Day()
@@ -164,27 +164,27 @@ function x808092_IsActivityTimeOut( )
 end
 
 --**********************************
---ÁìÈ¡ÊŞÀ¸
+--é¢†å–å…½æ 
 --**********************************
 function x808092_PresentPetCage(sceneId, selfId, targetId)	
-	--µÀ¾ß±³°üÒÑÂú
+	--é“å…·èƒŒåŒ…å·²æ»¡
 	local condition = x808092_CheckPresentCageCondition(sceneId, selfId)
 	if (condition == 0) then
-		--ÏÈÉ¾³ı£¬ÔÙÌí¼Ó
+		--å…ˆåˆ é™¤ï¼Œå†æ·»åŠ 
 		LuaFnDelAvailableItem(sceneId, selfId, GlobalLaborDayActivityTable.PetCageCardID, 1)
 
-		--ËÍÊŞÀ¸²¢°ó¶¨....
+		--é€å…½æ å¹¶ç»‘å®š....
 		local bagIndex = TryRecieveItem( sceneId, selfId, GlobalLaborDayActivityTable.PetCageLv1, QUALITY_MUST_BE_CHANGE )
 		if bagIndex > 0 then
 			LuaFnItemBind( sceneId, selfId, bagIndex)
 		end
 
-		--¹«¸æÍæ¼Ò×Ô¼º
-		BroadMsgByChatPipe( sceneId, selfId, "Äã³É¹¦¶Ò»»Ò»¸öÒ»¼¶ÊŞÀ¸", MSG2PLAYER_PARA )	
+		--å…¬å‘Šç©å®¶è‡ªå·±
+		BroadMsgByChatPipe( sceneId, selfId, "ä½ æˆåŠŸå…‘æ¢ä¸€ä¸ªä¸€çº§å…½æ ", MSG2PLAYER_PARA )	
 		
-		--ĞÑÄ¿ÌáÊ¾
+		--é†’ç›®æç¤º
 		BeginEvent( sceneId )
-			AddText( sceneId, "Äã³É¹¦¶Ò»»Ò»¸öÒ»¼¶ÊŞÀ¸" )
+			AddText( sceneId, "ä½ æˆåŠŸå…‘æ¢ä¸€ä¸ªä¸€çº§å…½æ " )
 		EndEvent( sceneId )
 		DispatchMissionTips( sceneId, selfId )
 		
@@ -192,7 +192,7 @@ function x808092_PresentPetCage(sceneId, selfId, targetId)
 		return 1
 	elseif (condition == 1) then
 		BeginEvent(sceneId)
-			AddText(sceneId, "ÄãµÄµÀ¾ß±³°üÒÑ¾­ÂúÁË£¬ÕûÀíÒ»ÏÂÔÙÀ´°É")
+			AddText(sceneId, "ä½ çš„é“å…·èƒŒåŒ…å·²ç»æ»¡äº†ï¼Œæ•´ç†ä¸€ä¸‹å†æ¥å§")
 		EndEvent(sceneId)
 		DispatchEventList(sceneId, selfId, targetId)
 		return 0
@@ -203,34 +203,34 @@ end
 
 
 --**********************************
---¼ì²â²ÎÓë»î¶¯µÄÇé¿ö
+--æ£€æµ‹å‚ä¸æ´»åŠ¨çš„æƒ…å†µ
 --**********************************
 function x808092_CheckActivityCondition(sceneId, selfId)
-	--ÁìÈ¡ÊŞÀ¸µÄÊ±¼äÒÑ¾­¹ıÁË
+	--é¢†å–å…½æ çš„æ—¶é—´å·²ç»è¿‡äº†
 	if (x808092_IsActivityTimeOut() == 1) then
 		return 1
 	end
 
-	--ÒÑ¾­¶Ò»»¹ıÊŞÀ¸ÁË
+	--å·²ç»å…‘æ¢è¿‡å…½æ äº†
 	local flag = GetMissionFlag(sceneId, selfId, MF_LABORDAY_PETCAGE_GIFT)
 	if(flag > 0) then
 		return 2
 	end
 
-	--Ã»ÓĞÇ©ÃûÅÆ
+	--æ²¡æœ‰ç­¾åç‰Œ
 	local card_count = GetItemCount( sceneId, selfId, GlobalLaborDayActivityTable.PetCageCardID )
 	if (card_count < 1) then
 		return 3
 	end
 
-	--·Ç±¾ÃÅµÜ×Ó
+	--éæœ¬é—¨å¼Ÿå­
 	local menpaiId = GetMenPai(sceneId, selfId)
 	local curSceneMenPaiId = x808092_Scene2MenPaiID(sceneId)
 	if ( menpaiId ~= curSceneMenPaiId ) then
 		return 4
 	end
 	
-	--ÌØĞ§»¹Î´ÏûÊ§
+	--ç‰¹æ•ˆè¿˜æœªæ¶ˆå¤±
 	local hasImapct = LuaFnHaveImpactOfSpecificDataIndex(sceneId, selfId, GlobalLaborDayActivityTable.PetCageDelayBuff)
 	if ( hasImapct > 0 ) then
 		return 5
@@ -240,10 +240,10 @@ function x808092_CheckActivityCondition(sceneId, selfId)
 end
 
 --**********************************
---¼ì²â½ÓÊÜÊŞÀ¸ÎïÆ·Çé¿ö
+--æ£€æµ‹æ¥å—å…½æ ç‰©å“æƒ…å†µ
 --**********************************
 function x808092_CheckPresentCageCondition(sceneId, selfId)
-	--µÀ¾ß°ü¹üÒÑ¾­ÂúÁË
+	--é“å…·åŒ…è£¹å·²ç»æ»¡äº†
 	if (LuaFnGetPropertyBagSpace(sceneId, selfId) < 1) then
 		return 1
 	end
@@ -251,7 +251,7 @@ function x808092_CheckPresentCageCondition(sceneId, selfId)
 end
 
 --**********************************
---Ìí¼ÓÁìÈ¡³É¹¦µÄĞ§¹û
+--æ·»åŠ é¢†å–æˆåŠŸçš„æ•ˆæœ
 --**********************************
 function x808092_PresentPetCageBuffer(sceneId, selfId)
 	LuaFnSendSpecificImpactToUnit( sceneId, selfId, selfId, selfId, 49, 0 )

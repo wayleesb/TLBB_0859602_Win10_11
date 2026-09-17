@@ -1,10 +1,10 @@
---ÑÎºşNPC
---ÑîÔª
+--ç›æ¹–NPC
+--æ¨å…ƒ
 
 x041504_g_ScriptId	= 041504
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x041504_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent( sceneId )
@@ -15,7 +15,7 @@ function x041504_OnDefaultEvent( sceneId, selfId,targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x041504_OnEventRequest( sceneId, selfId, targetId, eventId )
 	local	arg	= GetNumText()

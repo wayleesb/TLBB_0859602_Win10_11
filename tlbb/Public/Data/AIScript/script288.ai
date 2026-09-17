@@ -1,4 +1,4 @@
-Äö»êòáòæ
+å•®é­‚èœ¥èœ´
 
 
 
@@ -6,10 +6,10 @@
 [commonend]
 
 [skill]
-0:if(AIS_IsCanSkill(0)=1){AIS_ToSkill(0);AIS_SetTimes(-1);AIS_SetPRI(29);};Èç¹ûÄÜÊ¹ÓÃ0ºÅ¼¼ÄÜÔòÊÍ·Å£¬´ÎÊı²»ÏŞ£¨ÆÕÍ¨¹¥»÷£©
+0:if(AIS_IsCanSkill(0)=1){AIS_ToSkill(0);AIS_SetTimes(-1);AIS_SetPRI(29);};å¦‚æœèƒ½ä½¿ç”¨0å·æŠ€èƒ½åˆ™é‡Šæ”¾ï¼Œæ¬¡æ•°ä¸é™ï¼ˆæ™®é€šæ”»å‡»ï¼‰
 1:if(AIS_GetAIState()=SATTACK&AIS_GetHP()<66){AIS_ToSpeak(374,1);AIS_SetTimes(1);AIS_SetPRI(31);};
-2:if(AIS_GetAIState()=SATTACK&AIS_GetHP()<66&AIS_IsCanSkill(549)=1){AIS_ToSkill(549);AIS_SetTimes(1);AIS_SetPRI(34);};ÔÚÑªÉÙÓÚ66%Ê±ÊÍ·Å549ºÅ¼¼ÄÜ£¬´ÎÊı1
-3:if(AIS_GetAIState()=SATTACK&AIS_GetHP()<50&AIS_IsCanSkill(649)=1){AIS_ToSkill(649);AIS_SetTimes(1);AIS_SetPRI(34);};ÔÚÑªÉÙÓÚ50%Ê±ÊÍ·Å649ºÅ¼¼ÄÜ£¬´ÎÊı1
+2:if(AIS_GetAIState()=SATTACK&AIS_GetHP()<66&AIS_IsCanSkill(549)=1){AIS_ToSkill(549);AIS_SetTimes(1);AIS_SetPRI(34);};åœ¨è¡€å°‘äº66%æ—¶é‡Šæ”¾549å·æŠ€èƒ½ï¼Œæ¬¡æ•°1
+3:if(AIS_GetAIState()=SATTACK&AIS_GetHP()<50&AIS_IsCanSkill(649)=1){AIS_ToSkill(649);AIS_SetTimes(1);AIS_SetPRI(34);};åœ¨è¡€å°‘äº50%æ—¶é‡Šæ”¾649å·æŠ€èƒ½ï¼Œæ¬¡æ•°1
 [skillend]
 
 [beskill]

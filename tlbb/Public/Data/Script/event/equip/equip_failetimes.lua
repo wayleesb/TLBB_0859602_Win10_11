@@ -1,11 +1,11 @@
---×°±¸¼õÉÙĞŞÀíÊ§°Ü´ÎÊı
---½Å±¾ºÅ
+--è£…å¤‡å‡å°‘ä¿®ç†å¤±è´¥æ¬¡æ•°
+--è„šæœ¬å·
 x809265_g_ScriptId = 809265
 
---¼õÉÙĞŞÀíÊ§°Ü´ÎÊıUI 1005
+--å‡å°‘ä¿®ç†å¤±è´¥æ¬¡æ•°UI 1005
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x809265_OnEnumerate( sceneId, selfId, targetId )
 
@@ -13,14 +13,14 @@ end
 
 
 --**********************************
---¼õÉÙĞŞÀíÊ§°Ü´ÎÊı
+--å‡å°‘ä¿®ç†å¤±è´¥æ¬¡æ•°
 --**********************************
 function x809265_EquipFaileTimes( sceneId, selfId, nItemIndex1, nItemIndex2)
 
 	local ret = LuaFnIsItemLocked( sceneId, selfId, nItemIndex1 )
 	if ret ~= 0 then
 		BeginEvent(sceneId)
-		AddText(sceneId,"¸Ã×°±¸²»¿ÉÓÃ¡£");
+		AddText(sceneId,"è¯¥è£…å¤‡ä¸å¯ç”¨ã€‚");
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
@@ -30,7 +30,7 @@ function x809265_EquipFaileTimes( sceneId, selfId, nItemIndex1, nItemIndex2)
 	ret = LuaFnIsItemAvailable( sceneId, selfId, nItemIndex2 )
 	if ret ~= 1 then
 		BeginEvent(sceneId)
-		AddText(sceneId,"ÈóÎïÂ¶²»¿ÉÓÃ¡£");
+		AddText(sceneId,"æ¶¦ç‰©éœ²ä¸å¯ç”¨ã€‚");
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
@@ -42,18 +42,18 @@ function x809265_EquipFaileTimes( sceneId, selfId, nItemIndex1, nItemIndex2)
 	local sy_index = LuaFnGetItemTableIndexByIndex( sceneId, selfId, nItemIndex2 )
 	if sy_index ~= 30900007 and sy_index ~= 30900000   then
 		BeginEvent(sceneId)
-		AddText(sceneId,"¼õÉÙĞŞÀíÊ§°Ü´ÎÊıĞèÒªÈóÎïÂ¶¡£");
+		AddText(sceneId,"å‡å°‘ä¿®ç†å¤±è´¥æ¬¡æ•°éœ€è¦æ¶¦ç‰©éœ²ã€‚");
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
 	end
 
-	local	text	= "ĞŞÀí³É¹¦"
+	local	text	= "ä¿®ç†æˆåŠŸ"
 	local money = GetMoney( sceneId, selfId )
 	local jiaozi = GetMoneyJZ(sceneId, selfId);
 	local need_money = GetBagItemLevel( sceneId, selfId, nItemIndex1 ) * 200
 	if money+jiaozi < need_money then
-		text="½µµÍ¸Ã×°±¸ĞŞÀíÊ§°Ü´ÎÊıĞèÒª#{_EXCHG%d}£¬ÄúÉíÉÏµÄÏÖ½ğ²»×ã¡£"
+		text="é™ä½è¯¥è£…å¤‡ä¿®ç†å¤±è´¥æ¬¡æ•°éœ€è¦#{_EXCHG%d}ï¼Œæ‚¨èº«ä¸Šçš„ç°é‡‘ä¸è¶³ã€‚"
 		text=format( text, need_money )
 		BeginEvent(sceneId)
 		AddText(sceneId,text);
@@ -68,10 +68,10 @@ function x809265_EquipFaileTimes( sceneId, selfId, nItemIndex1, nItemIndex2)
 	
 	if sy_index == 30900007  then
 		ret = LuaFnFaileTimes( sceneId, selfId, nItemIndex1, nItemIndex2, 1 )
-		szMsg = format( "#W#{_INFOUSR%s}#HÊ¹ÓÃÁË#W#{_INFOMSG%s}#HÖ®ºó£¬×°±¸µÄ¿ÉĞŞÀí´ÎÊı³É¹¦Ôö¼Ó1´Î£¬±ÜÃâÁË×°±¸ĞŞÀíÊ§°Ü3´ÎºóËéÁÑ¡£", szName, szTransfer );
+		szMsg = format( "#W#{_INFOUSR%s}#Hä½¿ç”¨äº†#W#{_INFOMSG%s}#Hä¹‹åï¼Œè£…å¤‡çš„å¯ä¿®ç†æ¬¡æ•°æˆåŠŸå¢åŠ 1æ¬¡ï¼Œé¿å…äº†è£…å¤‡ä¿®ç†å¤±è´¥3æ¬¡åç¢è£‚ã€‚", szName, szTransfer );
 	elseif sy_index == 30900000  then
 		ret = LuaFnFaileTimes( sceneId, selfId, nItemIndex1, nItemIndex2, 0 )
-		szMsg = format( "#W#{_INFOUSR%s}#HÊ¹ÓÃÁË#W#{_INFOMSG%s}#HÖ®ºó£¬×°±¸µÄ¿ÉĞŞÀí´ÎÊı³É¹¦µÄ»Ö¸´³ÉÎª3´Î£¬±ÜÃâÁË×°±¸ĞŞÀíÊ§°Ü3´ÎºóËéÁÑ¡£", szName, szTransfer );
+		szMsg = format( "#W#{_INFOUSR%s}#Hä½¿ç”¨äº†#W#{_INFOMSG%s}#Hä¹‹åï¼Œè£…å¤‡çš„å¯ä¿®ç†æ¬¡æ•°æˆåŠŸçš„æ¢å¤æˆä¸º3æ¬¡ï¼Œé¿å…äº†è£…å¤‡ä¿®ç†å¤±è´¥3æ¬¡åç¢è£‚ã€‚", szName, szTransfer );
 	end
 
 	if ret == 0 then
@@ -85,19 +85,19 @@ function x809265_EquipFaileTimes( sceneId, selfId, nItemIndex1, nItemIndex2)
 	end
 	
 	if ret == -1 then
-		text="Î´Öª´íÎó¡£"
+		text="æœªçŸ¥é”™è¯¯ã€‚"
 	end
 
 	if ret == -2 then
-		text="×°±¸²»¿ÉÓÃ¡£"
+		text="è£…å¤‡ä¸å¯ç”¨ã€‚"
 	end
 	
 	if ret == -3 then
-		text="ÈóÎïÂ¶²»¿ÉÓÃ¡£"
+		text="æ¶¦ç‰©éœ²ä¸å¯ç”¨ã€‚"
 	end
 
 	if ret == -4 then
-		text="ĞŞÀíÊ§°Ü´ÎÊıÒÑ¾­×îµÍÁË¡£"
+		text="ä¿®ç†å¤±è´¥æ¬¡æ•°å·²ç»æœ€ä½äº†ã€‚"
 	end
 
 	BeginEvent(sceneId)

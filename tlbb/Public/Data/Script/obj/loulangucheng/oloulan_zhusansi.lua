@@ -1,11 +1,11 @@
---楼兰NPC....
---当铺材料商人....
+--妤煎叞NPC....
+--褰撻摵鏉愭枡鍟嗕汉....
 
 x001110_g_scriptId = 001110
 x001110_g_shoptableindex = 18
 
 --**********************************
---事件交互入口
+--浜嬩欢浜や簰鍏ュ彛
 --**********************************
 function x001110_OnDefaultEvent( sceneId, selfId, targetId )
 	DispatchShopItem( sceneId, selfId, targetId, x001110_g_shoptableindex )

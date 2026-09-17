@@ -1,16 +1,16 @@
---NPC抽奖
+--NPC鎶藉
 
 x808062_g_ScriptId						= 808062
 
 --**********************************
---列举事件
+--鍒椾妇浜嬩欢
 --**********************************
 function x808062_OnEnumerate( sceneId, selfId, targetId )
-	AddNumText( sceneId, x808062_g_ScriptId, "领取活动奖励", 2, 1)
+	AddNumText( sceneId, x808062_g_ScriptId, "棰嗗彇娲诲姩濂栧姳", 2, 1)
 end
 
 --**********************************
---任务入口函数
+--浠诲姟鍏ュ彛鍑芥暟
 --**********************************
 function x808062_OnDefaultEvent( sceneId, selfId, targetId )
 	local TextNum = GetNumText()

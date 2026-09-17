@@ -1,20 +1,20 @@
---µ÷ÕûÁ³ĞÍ
---½Å±¾ºÅ
+--è°ƒæ•´è„¸å‹
+--è„šæœ¬å·
 x805029_g_ScriptId = 805029
 
---µ÷ÕûÁ³ĞÍUI 21
+--è°ƒæ•´è„¸å‹UI 21
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x805029_OnEnumerate( sceneId, selfId, targetId )
-	-- µ÷ÊÔĞÅÏ¢
+	-- è°ƒè¯•ä¿¡æ¯
 	--BeginEvent(sceneId)
-	--	AddText(sceneId, "½øÈëµ÷ÕûÁ³ĞÍ½Å±¾");
+	--	AddText(sceneId, "è¿›å…¥è°ƒæ•´è„¸å‹è„šæœ¬");
 	--EndEvent(sceneId)
 	--DispatchMissionTips(sceneId,selfId)	
 	
-	-- ÎªÊ²Ã´Òª NPC Ãû×Ö£¿
+	-- ä¸ºä»€ä¹ˆè¦ NPC åå­—ï¼Ÿ
 	local TransportNPCName=GetName(sceneId,targetId);
 
 	BeginUICommand(sceneId)
@@ -26,63 +26,63 @@ function x805029_OnEnumerate( sceneId, selfId, targetId )
 end
 
 --**********************************
---µ÷ÕûÁ³ĞÍ
+--è°ƒæ•´è„¸å‹
 --**********************************
 function x805029_FinishAdjust( sceneId, selfId, styleId)
 
-	-- µÃµ½µ÷ÕûÁ³ĞÍËùĞèÎïÆ·µÄid¼°ÆäÊıÁ¿
+	-- å¾—åˆ°è°ƒæ•´è„¸å‹æ‰€éœ€ç‰©å“çš„idåŠå…¶æ•°é‡
 	local ItemId, ItemCount = GetChangeFaceItemIdAndItemCount(styleId)
 		
-	-- ·µ»ØÖµ·Ç·¨
+	-- è¿”å›å€¼éæ³•
 	if ItemId < 0 or ItemCount < 0 then
 		return
 	end
 	
 	local nItemNum = LuaFnGetAvailableItemCount( sceneId, selfId, ItemId )
 
-	-- ÎïÆ·ÊÇ·ñ¹»ÓÃ»òËø¶¨
+	-- ç‰©å“æ˜¯å¦å¤Ÿç”¨æˆ–é”å®š
 	if ItemCount > nItemNum then
 		BeginEvent(sceneId)
-			AddText(sceneId, "ÄúÃ»ÓĞ¶¨ÑÕÖé£¬»òÕß¶¨ÑÕÖé±»Ëø¶¨¡£");
+			AddText(sceneId, "æ‚¨æ²¡æœ‰å®šé¢œç ï¼Œæˆ–è€…å®šé¢œç è¢«é”å®šã€‚");
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
 	end
 	
-		-- »ñµÃ¶¨ÑÕÖéÔÚ±³°üÖĞµÄÎ»ÖÃ£¨¶¨ÑÕÖé»áÔÚ¸Ä±äÁ³ĞÍµÄ¹ı³ÌÖĞ±»É¾³ı£¬ËùÒÔĞèÒªÏÈ±£´æËüµÄĞÅÏ¢£©
+		-- è·å¾—å®šé¢œç åœ¨èƒŒåŒ…ä¸­çš„ä½ç½®ï¼ˆå®šé¢œç ä¼šåœ¨æ”¹å˜è„¸å‹çš„è¿‡ç¨‹ä¸­è¢«åˆ é™¤ï¼Œæ‰€ä»¥éœ€è¦å…ˆä¿å­˜å®ƒçš„ä¿¡æ¯ï¼‰
 	local ItemPos = LuaFnGetItemPosByItemDataID(sceneId, selfId, ItemId, 0)
 	local szItemTransfer = GetBagItemTransfer(sceneId, selfId, ItemPos)
 	
-	-- ÎïÆ·¼ì²âÍ¨¹ı£¬ÔÙ¼ì²éÍæ¼Ò½ğÇ®
+	-- ç‰©å“æ£€æµ‹é€šè¿‡ï¼Œå†æ£€æŸ¥ç©å®¶é‡‘é’±
 	local moneyJZ = GetMoneyJZ (sceneId, selfId)
 	local money = GetMoney (sceneId, selfId)
 	
-	-- ÎïÆ·ºÍ½ğÇ®¼ì²â¶¼Í¨¹ı
+	-- ç‰©å“å’Œé‡‘é’±æ£€æµ‹éƒ½é€šè¿‡
 	if (moneyJZ + money >= 50000)	then	
-		-- ÉèÖÃÍæ¼ÒĞÂÁ³ĞÍ£¨»áÔÚÕâ¸ö¹ı³ÌÖĞÏûºÄÎïÆ·ºÍ½ğÇ®£©
+		-- è®¾ç½®ç©å®¶æ–°è„¸å‹ï¼ˆä¼šåœ¨è¿™ä¸ªè¿‡ç¨‹ä¸­æ¶ˆè€—ç‰©å“å’Œé‡‘é’±ï¼‰
 		local ret = ChangeHumanFaceModel( sceneId, selfId, styleId )
 		if ret == 0  then
 			BeginEvent(sceneId)
-				AddText(sceneId,"¸Ä±äÁ³ĞÍ³É¹¦¡£");
+				AddText(sceneId,"æ”¹å˜è„¸å‹æˆåŠŸã€‚");
 			EndEvent(sceneId)
 			DispatchMissionTips(sceneId,selfId)
 		
-		-- ¸Ä±äÁ³ĞÍÊ§°Ü
+		-- æ”¹å˜è„¸å‹å¤±è´¥
 		elseif ret == 1 then
 			BeginEvent(sceneId)
-				AddText(sceneId,"ÇëÑ¡ÔñÒ»ÖÖĞÂÁ³ĞÍ¡£");
+				AddText(sceneId,"è¯·é€‰æ‹©ä¸€ç§æ–°è„¸å‹ã€‚");
 			EndEvent(sceneId)
 			DispatchMissionTips(sceneId,selfId)
 			return
 		elseif ret == 3 then
 			BeginEvent(sceneId)
-				AddText(sceneId, "ÄúÃ»ÓĞ¶¨ÑÕÖé£¬»òÕß¶¨ÑÕÖé±»Ëø¶¨¡£");
+				AddText(sceneId, "æ‚¨æ²¡æœ‰å®šé¢œç ï¼Œæˆ–è€…å®šé¢œç è¢«é”å®šã€‚");
 			EndEvent(sceneId)
 			DispatchMissionTips(sceneId,selfId)
 			return
 		elseif ret == 4 then	
 			BeginEvent(sceneId)
-				AddText(sceneId, "½ğÇ®²»×ã");
+				AddText(sceneId, "é‡‘é’±ä¸è¶³");
 			EndEvent(sceneId)
 			DispatchMissionTips(sceneId,selfId)
 			return
@@ -90,34 +90,34 @@ function x805029_FinishAdjust( sceneId, selfId, styleId)
 			return
 		end
 
-	-- ½ğÇ®²»×ã
+	-- é‡‘é’±ä¸è¶³
 	else
 		BeginEvent(sceneId)
-			AddText(sceneId, "ÄúÉíÉÏĞ¯´øµÄ½ğÇ®²»×ã¡£");
+			AddText(sceneId, "æ‚¨èº«ä¸Šæºå¸¦çš„é‡‘é’±ä¸è¶³ã€‚");
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
 	end	
 	
-	-- ·¢ËÍ¹ã²¥
+	-- å‘é€å¹¿æ’­
 	local message;	
 	local randMessage = random(3);
 	local nsex = LuaFnGetSex(sceneId, selfId)
 	local str1,str2
 	if nsex == 0  then
-		str1 = "Ëı"
-		str2 = "ÃÀ"
+		str1 = "å¥¹"
+		str2 = "ç¾"
 	else
-		str1 = "Ëû"
-		str2 = "Ë§"
+		str1 = "ä»–"
+		str2 = "å¸…"
 	end
 	
 	if randMessage == 1 then
-		message = format("#HÈËÒªÃæ×ÓÊ÷ÒªÆ¤£¬#W#{_INFOUSR%s}#HÉîÖªÕâ¸öµÀÀí£¬½ñÌìÓÃ#W#{_INFOMSG%s}#HÕâÒ»ÕûÈİ¸ü²»µÃÁË£¬¼òÖ±¾ÍÊÇÆøËÀÅË°²£¬ÏÛÉ·õõ²õ£¡", LuaFnGetName(sceneId, selfId), szItemTransfer);
+		message = format("#Häººè¦é¢å­æ ‘è¦çš®ï¼Œ#W#{_INFOUSR%s}#Hæ·±çŸ¥è¿™ä¸ªé“ç†ï¼Œä»Šå¤©ç”¨#W#{_INFOMSG%s}#Hè¿™ä¸€æ•´å®¹æ›´ä¸å¾—äº†ï¼Œç®€ç›´å°±æ˜¯æ°”æ­»æ½˜å®‰ï¼Œç¾¡ç…è²‚è‰ï¼", LuaFnGetName(sceneId, selfId), szItemTransfer);
 	elseif randMessage == 2 then
-		message = format("#HÄ§¾µËµÕâ¸öÊÀ½çÉÏ×î" .. str2 .. "µÄÈËµ®ÉúÁË£¡ÄÇ¾ÍÊÇ¸Õ²ÅÈÃÌìÉÏ´óÑãµôÏÂÀ´µÄ#W#{_INFOUSR%s}#H£¬¿ìÈ¥¿´¿´" .. str1 .. "°É£¬Õâ#W#{_INFOMSG%s}#HÓÃÍêºó¹ûÈ»Ğ§¹û³öÖÚ£¡", LuaFnGetName(sceneId, selfId), szItemTransfer);
+		message = format("#Hé­”é•œè¯´è¿™ä¸ªä¸–ç•Œä¸Šæœ€" .. str2 .. "çš„äººè¯ç”Ÿäº†ï¼é‚£å°±æ˜¯åˆšæ‰è®©å¤©ä¸Šå¤§é›æ‰ä¸‹æ¥çš„#W#{_INFOUSR%s}#Hï¼Œå¿«å»çœ‹çœ‹" .. str1 .. "å§ï¼Œè¿™#W#{_INFOMSG%s}#Hç”¨å®Œåæœç„¶æ•ˆæœå‡ºä¼—ï¼", LuaFnGetName(sceneId, selfId), szItemTransfer);
 	else
-		message = format("#Hß×£¿ÔõÃ´Ğ¡ÏªÖĞµÄÓã¶ù¶¼·­ÁË¶ÇÆ¤£¿ÄÑµÀÊÇÖĞ¶¾ÉíÍö£¿²»¶Ô£¬Ô­À´ÊÇ#W#{_INFOUSR%s}#H¸Õ¸Õ×ß¹ıÈ¥£¬Óã¶ùÃÇĞßµÃÔÎÁË¹ıÈ¥¡£ÌìÑ½£¡" .. str1 .. "ÓÃÁË#W#{_INFOMSG%s}#HÒÔºó¾¹È»»áÓĞÕâÑùµÄ¾øÊÀÈİÑÕ£¡", LuaFnGetName(sceneId, selfId), szItemTransfer);
+		message = format("#Hå’¦ï¼Ÿæ€ä¹ˆå°æºªä¸­çš„é±¼å„¿éƒ½ç¿»äº†è‚šçš®ï¼Ÿéš¾é“æ˜¯ä¸­æ¯’èº«äº¡ï¼Ÿä¸å¯¹ï¼ŒåŸæ¥æ˜¯#W#{_INFOUSR%s}#Håˆšåˆšèµ°è¿‡å»ï¼Œé±¼å„¿ä»¬ç¾å¾—æ™•äº†è¿‡å»ã€‚å¤©å‘€ï¼" .. str1 .. "ç”¨äº†#W#{_INFOMSG%s}#Hä»¥åç«Ÿç„¶ä¼šæœ‰è¿™æ ·çš„ç»ä¸–å®¹é¢œï¼", LuaFnGetName(sceneId, selfId), szItemTransfer);
 	end
 
 	BroadMsgByChatPipe(sceneId, selfId, message, 4);

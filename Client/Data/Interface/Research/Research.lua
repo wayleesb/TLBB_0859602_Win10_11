@@ -3,8 +3,8 @@ local g_MembersCtl = {};
 local g_clientNpcId = -1;
 local MAX_OBJ_DISTANCE = 3.0;
 
-local g_CurPage = 1;			--µ±Ç°ÔÚµÚ¼¸Ò³
-local g_SelActBtn = -1;		--µ±Ç°Ñ¡ÖĞµÄbtn
+local g_CurPage = 1;			--å½“å‰åœ¨ç¬¬å‡ é¡µ
+local g_SelActBtn = -1;		--å½“å‰é€‰ä¸­çš„btn
 
 function Research_PreLoad()
 	this:RegisterEvent("UI_COMMAND");
@@ -57,7 +57,7 @@ function City_Research_CareEventHandle(careId, op, distance)
 		if(tonumber(careId) ~= g_clientNpcId) then
 			return;
 		end
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ı£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æœå’ŒNPCçš„è·ç¦»å¤§äºä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if(op == "distance" and tonumber(distance)>MAX_OBJ_DISTANCE or op=="destroy") then
 			this:Hide();
 		end
@@ -67,20 +67,20 @@ function City_Research_SetCtl()
 	g_MembersCtl =	{
 										--Left
 										guildname = 		{txt = "",							ctl = Research_Text1},
-										mainbuilding = 	{txt = "µÈ¼¶:",				ctl = Research_Text2},
+										mainbuilding = 	{txt = "ç­‰çº§:",				ctl = Research_Text2},
 										
-										guildmoney = 		{txt = "°ï»á×Ê½ğ:",		ctl = Research_Text3},
+										guildmoney = 		{txt = "å¸®ä¼šèµ„é‡‘:",		ctl = Research_Text3},
 										degree = {
-																		{txt = "¹¤ÒµÖµ:",			ctl = Research_Text4},
-																		{txt = "Å©ÒµÖµ:",			ctl = Research_Text5},
-																		{txt = "ÉÌÒµÖµ:",			ctl = Research_Text6},
-																		{txt = "¹ú·ÀÖµ:",			ctl = Research_Text7},
-																		{txt = "¿Æ¼¼Öµ:",			ctl = Research_Text8},
-																		{txt = "À©ÕÅÖµ:",			ctl = Research_Text9},
+																		{txt = "å·¥ä¸šå€¼:",			ctl = Research_Text4},
+																		{txt = "å†œä¸šå€¼:",			ctl = Research_Text5},
+																		{txt = "å•†ä¸šå€¼:",			ctl = Research_Text6},
+																		{txt = "å›½é˜²å€¼:",			ctl = Research_Text7},
+																		{txt = "ç§‘æŠ€å€¼:",			ctl = Research_Text8},
+																		{txt = "æ‰©å¼ å€¼:",			ctl = Research_Text9},
 														 },
 										
-										curitem = 			{txt = "Åä·½:",				ctl = Research_Text10},
-										progress = 			{txt = "ÑĞ¾¿½ø¶È:",		ctl = Research_Text11},
+										curitem = 			{txt = "é…æ–¹:",				ctl = Research_Text10},
+										progress = 			{txt = "ç ”ç©¶è¿›åº¦:",		ctl = Research_Text11},
 										
 										--Right
 										list = Research_List,
@@ -94,10 +94,10 @@ function City_Research_SetCtl()
 										down = Research_DownPage,
 										
 										--RightBottom   
-										needmsg = 			{txt = "Åä·½:",		ctl = Research_Text12},
-										needmoney = 		{txt = "×Ê½ğ:",		ctl = Research_Text13},
+										needmsg = 			{txt = "é…æ–¹:",		ctl = Research_Text12},
+										needmoney = 		{txt = "èµ„é‡‘:",		ctl = Research_Text13},
 										needval = 			{txt = "",					ctl = Research_Text14},
-										needmission =  	{txt = "ÈÎÎñ:",		ctl = Research_Text15},
+										needmission =  	{txt = "ä»»åŠ¡:",		ctl = Research_Text15},
 									};
 end
 
@@ -169,9 +169,9 @@ function City_Research_BtnSet()
 end
 
 function City_Research_Update()
-	--»ù±¾ĞÅÏ¢¸üĞÂ
+	--åŸºæœ¬ä¿¡æ¯æ›´æ–°
 	City_Research_Txt_Update();
-	--ÑĞ¾¿½¨ÖşÁĞ±í
+	--ç ”ç©¶å»ºç­‘åˆ—è¡¨
 	local bdList = {City:GetResearchInfo("ResearchBuildingList")};
 	local i = 0;
 	local txt = "";
@@ -179,14 +179,14 @@ function City_Research_Update()
 	local listidx = 0;
 	while i < table.getn(bdList) do
 		if(0 > City_Research_Is_Hide_Idx(i)) then
-			txt = tostring(bdList[i+1]).."ÑĞ¾¿¡¡";
+			txt = tostring(bdList[i+1]).."ç ”ç©¶ã€€";
 			g_MembersCtl.list:AddItem(txt, listidx);
 			g_MembersCtl.list:SetItemUserData(listidx, i);
 			listidx = listidx + 1;
 		end
 		i = i + 1;
 	end
-	--Ä¬ÈÏÑ¡ÖĞµÚÒ»¸ö
+	--é»˜è®¤é€‰ä¸­ç¬¬ä¸€ä¸ª
 	if(listidx > 0) then
 		g_MembersCtl.list:SetItemSelectByItemID(0);
 	end
@@ -194,16 +194,16 @@ end
 
 function City_Research_Txt_Update()
 	local k;
-	--°ï»áÃû³Æ
+	--å¸®ä¼šåç§°
 	local txt = g_MembersCtl.guildname.txt..City:GetBaseInfo("name");
 	txt = txt.."("..tostring(City:GetBaseInfo("id"))..")";
 	g_MembersCtl.guildname.ctl:SetText(txt);
-	--Ö÷Òª½¨Öş
+	--ä¸»è¦å»ºç­‘
 	local bName, bLevel = City:GetResearchInfo("MainBuilding");
 	txt = g_MembersCtl.mainbuilding.txt..bName;
 	txt = txt.."("..tostring(bLevel)..")";
 	g_MembersCtl.mainbuilding.ctl:SetText(txt);
-	--°ï»á×Ê½ğ
+	--å¸®ä¼šèµ„é‡‘
 	local money = City:GetBaseInfo("money");
 	txt = g_MembersCtl.guildmoney.txt;
 	if(0 ~= tonumber(money)) then
@@ -213,7 +213,7 @@ function City_Research_Txt_Update()
 	end
 	--AxTrace(0,0,"City_Research guildmoney:"..txt);
 	g_MembersCtl.guildmoney.ctl:SetText(txt);
-	--°ï»ádegree
+	--å¸®ä¼šdegree
 	local de = {City:GetBaseInfo("attr")};
 	local deNum = table.getn(de);
 	if(deNum > table.getn(g_MembersCtl.degree)) then deNum = table.getn(g_MembersCtl.degree); end
@@ -222,13 +222,13 @@ function City_Research_Txt_Update()
 		txt = txt..tostring(de[k]);
 		g_MembersCtl.degree[k].ctl:SetText(txt);
 	end
-	--µ±Ç°ÑĞ¾¿Åä·½
+	--å½“å‰ç ”ç©¶é…æ–¹
 	bName, bLevel, _ = City:GetResearchInfo("CurResearch");
 	if( -1 == bLevel ) then
 	else
 		txt = g_MembersCtl.curitem.txt..bName;
 		g_MembersCtl.curitem.ctl:SetText(txt);
-		--µ±Ç°ÑĞ¾¿½ø¶È
+		--å½“å‰ç ”ç©¶è¿›åº¦
 		local curPro,maxPro = City:GetResearchInfo("ResearchProcess");
 		txt = g_MembersCtl.progress.txt..tostring(curPro);
 		txt = txt.."/"..tostring(maxPro);
@@ -294,7 +294,7 @@ function City_Research_Act_Clicked(id)
 		return;
 	end
 	
-	--Ñ¡ÖĞ×´Ì¬
+	--é€‰ä¸­çŠ¶æ€
 	local ctl = g_MembersCtl.act[tonumber(id)];
 	if("False" == ctl:GetProperty("Empty")) then
 		ctl:SetPushed(1);
@@ -307,20 +307,20 @@ function City_Research_Act_Clicked(id)
 	if(lidx < 0 or lidx == nil) then
 		return;
 	end
-	--ÑĞ¾¿Ãû³Æ
+	--ç ”ç©¶åç§°
 	local name,desc = City:GetResearchInfo("ResearchName", lidx, (g_CurPage-1)*4+(tonumber(id)));
 	local txt = g_MembersCtl.needmsg.txt.."#c00ccff"..name;
 	if("False" == ctl:GetProperty("Gloom")) then
-		txt = txt.."¡¡";--..desc;
+		txt = txt.."ã€€";--..desc;
 		g_MembersCtl.needmsg.ctl:SetText(txt);
 	else
-		txt = txt.."#R(ÒÑÍê³É)#n¡¡";--..desc;
+		txt = txt.."#R(å·²å®Œæˆ)#nã€€";--..desc;
 		g_MembersCtl.needmsg.ctl:SetText(txt);
 	end
-	--ÑĞ¾¿Ìõ¼ş
+	--ç ”ç©¶æ¡ä»¶
 	local cd = {City:GetResearchInfo("ResearchCondition", lidx, (g_CurPage-1)*4+(tonumber(id)))};
 	if(cd[1] == -2) then return; end
-	--0.½ğÇ®
+	--0.é‡‘é’±
 	local money = cd[1];
 	txt = g_MembersCtl.needmoney.txt;
 	if(0 ~= tonumber(money)) then
@@ -329,12 +329,12 @@ function City_Research_Act_Clicked(id)
 		txt = txt.."0#-02";
 	end
 	g_MembersCtl.needmoney.ctl:SetText(txt);
-	--1.ÏûºÄÖµ
+	--1.æ¶ˆè€—å€¼
 	local nt,nv = cd[3], cd[4];
 	txt = g_MembersCtl.needval.txt..tostring(City_Research_GetNeedTxt(nt));
-	txt = txt.."£º#cFF0000"..tostring(nv);
+	txt = txt.."ï¼š#cFF0000"..tostring(nv);
 	g_MembersCtl.needval.ctl:SetText(txt);
-	--2.ÈÎÎñÊı
+	--2.ä»»åŠ¡æ•°
 	local mn = cd[2];
 	txt = g_MembersCtl.needmission.txt..tostring(mn);
 	g_MembersCtl.needmission.ctl:SetText(txt);
@@ -342,17 +342,17 @@ end
 
 function City_Research_GetNeedTxt(nt)
 	if( tonumber(nt) == 0 ) then
-		return "¹¤ÒµÖµ";
+		return "å·¥ä¸šå€¼";
 	elseif( tonumber(nt) == 1 ) then
-		return "Å©ÒµÖµ";
+		return "å†œä¸šå€¼";
 	elseif( tonumber(nt) == 2 ) then
-		return "ÉÌÒµÖµ";
+		return "å•†ä¸šå€¼";
 	elseif( tonumber(nt) == 3 ) then
-		return "¹ú·ÀÖµ";
+		return "å›½é˜²å€¼";
 	elseif( tonumber(nt) == 4 ) then
-		return "¿Æ¼¼Öµ";
+		return "ç§‘æŠ€å€¼";
 	elseif( tonumber(nt) == 5 ) then
-		return "À©ÕÅÖµ";
+		return "æ‰©å¼ å€¼";
 	else
 		return "";
 	end
@@ -373,10 +373,10 @@ function City_Research_NextPage(dir)
 		return;
 	end
 	
-	if(g_CurPage == 1 and dir < 0) then return; end --ÒÑ¾­ÊÇµÚÒ»Ò³
+	if(g_CurPage == 1 and dir < 0) then return; end --å·²ç»æ˜¯ç¬¬ä¸€é¡µ
 	local newPage = g_CurPage+dir;
 	local newAction = (City:EnumResearch(lidx, (newPage-1)*4+1));
-	if(newAction:GetID() == 0) then return; end --ĞÂÒ³µÄµÚÒ»¸öÎ»ÖÃÉÏ¾ÍÃ»ÓĞÑĞ¾¿ÏîÄ¿
+	if(newAction:GetID() == 0) then return; end --æ–°é¡µçš„ç¬¬ä¸€ä¸ªä½ç½®ä¸Šå°±æ²¡æœ‰ç ”ç©¶é¡¹ç›®
 	
 	g_CurPage = newPage;	
 	local i = 1;
@@ -411,16 +411,16 @@ function City_Research_Act_Set(id)
 	
 	local theAction, isCurrent, isExist = City:EnumResearch(lidx, (g_CurPage-1)*4+(tonumber(id)));
 	if theAction:GetID() ~= 0 then
-		--ÉèÖÃActionItem
+		--è®¾ç½®ActionItem
 		g_MembersCtl.act[tonumber(id)]:SetActionItem(theAction:GetID());
-		--ÉèÖÃÊÇ·ñÊÇµ±Ç°ÑĞ¾¿
+		--è®¾ç½®æ˜¯å¦æ˜¯å½“å‰ç ”ç©¶
 		if(isCurrent < 0) then
 			g_MembersCtl.act[tonumber(id)]:ShowPercentage(-1, -1);
 		elseif(isCurrent > 0) then
 			local curProcess,maxProcess = City:GetResearchInfo("ResearchProcess");
 			g_MembersCtl.act[tonumber(id)]:ShowPercentage(curProcess, maxProcess);
 		end
-		--ÉèÖÃÊÇ·ñÒÑ¾­Íê³ÉµÄÑĞ¾¿
+		--è®¾ç½®æ˜¯å¦å·²ç»å®Œæˆçš„ç ”ç©¶
 		if(isExist < 0) then
 			g_MembersCtl.act[tonumber(id)]:Bright();
 		elseif(isExist > 0) then
@@ -432,7 +432,7 @@ function City_Research_Act_Set(id)
 end
 
 function City_Research_Is_Hide_Idx(idx)
-	--Ä¿Ç°²»ÏÔÊ¾µÄ½¨ÖşÎïÀàĞÍ£¬¶ÔÓ¦enum BUILDING_TYPE
+	--ç›®å‰ä¸æ˜¾ç¤ºçš„å»ºç­‘ç‰©ç±»å‹ï¼Œå¯¹åº”enum BUILDING_TYPE
 	local tHide = {0,1,4,6,7,8,9,12,13,14,15,16,17};
 	local i = 1;
 	while i <= table.getn(tHide) do

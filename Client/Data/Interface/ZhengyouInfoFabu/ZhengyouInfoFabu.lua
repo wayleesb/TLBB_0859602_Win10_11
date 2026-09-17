@@ -1,26 +1,26 @@
--- ����ƽ̨ : ������Ϣ��������Ϣ��������Ϣ�ȵ�ѡ����� cuiyinjie 2008.10.23
+-- 征友平台 : 发布信息，管理信息，撤销信息等的选择界面 cuiyinjie 2008.10.23
 
 local g_strWndName = "ZhengyouInfoFabu";
 
-local g_dlgctrls = {}; --�ؼ�����
+local g_dlgctrls = {}; --控件集合
 
--- �Ի���ѡ��
+-- 对话框选项
 local dlgoptions = { "fabu",  "chexiao", "guanli",};
 
--- �Ի������
-local strDlgCaptions = {"#{ZYPT_081103_056}", "#{ZYPT_081103_067}", "#{ZYPT_081103_072}"}; --{"������Ϣ", "������Ϣ", "������Ϣ",};
+-- 对话框标题
+local strDlgCaptions = {"#{ZYPT_081103_056}", "#{ZYPT_081103_067}", "#{ZYPT_081103_072}"}; --{"发布信息", "撤销信息", "管理信息",};
 
--- �Ի�����ʾ�ı�
+-- 对话框提示文本
 local strDlgText = {
-	"#{ZYPT_081103_057}", --"��ѡ����Ҫ���������ͣ�                ��ע�⣺ͬһ���͵���Ϣ��ͬһʱ����ֻ�ܷ���һ������",
-	"#{ZYPT_081103_102}",--"��ѡ����Ҫ��������Ϣ���ͣ�",
-	"#{ZYPT_081103_103}",--"��ѡ����Ҫ��������Ϣ���ͣ�",
+	"#{ZYPT_081103_057}", --"请选择你要发布的类型：                （注意：同一类型的信息在同一时间内只能发布一条。）",
+	"#{ZYPT_081103_102}",--"请选择您要撤销的信息类型：",
+	"#{ZYPT_081103_103}",--"请选择您要管理的信息类型：",
 };
 
--- ��ǰ����״̬
-local g_OperationStatus = 4;     -- �μ�PlayerZhengyouPT.lua����ڲ�ѯ�������ȵĶ���
+-- 当前操作状态
+local g_OperationStatus = 4;     -- 参见PlayerZhengyouPT.lua里关于查询，管理等的定义
 
--- ��ǰѡ�������
+-- 当前选择的类型
 local g_curSelType = 1;
 
 function ZhengyouInfoFabu_PreLoad()
@@ -73,21 +73,21 @@ end
 
 function ZhengyouInfoFabu_Choose_Click()
  
-	-- ���;����ѯ����
+	-- 发送具体查询请求
 	local curSel = ZhengyouInfoFabu_GetSelectFriendType();
 	if ( 0 == curSel ) then
-	   PushDebugMessage("#{ZYPT_081103_104}"); --("��ѡ����������");
+	   PushDebugMessage("#{ZYPT_081103_104}"); --("请选择征友类型");
 	   return;
 	end
     g_curSelType = curSel;
 
-	-- ������������������Ҫ����������֤
+	-- 发布，管理，撤销都要经服务器验证
 	FindFriendQuery(g_OperationStatus, g_curSelType);
 	
 	this:Hide();
 end
 
--- ע�⣺ ֻ�д��������ϵĲ���������ڣ�����Ĭ��ѡ�е�һ���ѭ�����ˣ�����߻ᵼ�´򿪱�Ĵ���ʱ�˴���Ҳѡ���һ�� 
+-- 注意： 只有窗口名符合的才是这个窗口，所以默认选中第一项放循环里了，放外边会导致打开别的窗口时此窗口也选择第一项 
 function ZhengyouInfoFabu_OnOpen(strOpt)
 	local i = 1;
 
@@ -101,7 +101,7 @@ function ZhengyouInfoFabu_OnOpen(strOpt)
         g_dlgctrls.DlgText:SetText(strDlgText[i]);
         g_OperationStatus = i + 3;
         
-       -- Ĭ��ѡ�е�һ��
+       -- 默认选中第一项
   		 for i = 1, 4 do
        	if (1 == i) then
   				g_dlgctrls.OptBtns[i]:SetCheck(1);

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" ?>
+<?xml version="1.0" ?>
 <GUILayout>
     <Window Type="TLBB_MainFrame1" Name="Research_Frame">
         <Property Name="UnifiedPosition" Value="{{0.0,256},{0.12,0}}" />

@@ -49,30 +49,30 @@ function ViewSetup_OnLoad()
 		CHECK_CTRL[6]  = ViewSetup_Item_Check7;
 		CHECK_CTRL[7]  = ViewSetup_Item_Miwu;
 
-		SLIDER_String[1]   = "dxyy" --µØĞÎÒõÓ°
-		SLIDER_String[2]   = "fhj"	--·´»ì½Ç
-		SLIDER_String[3]   = "wtdh"	--ÎïÌå¶¯»­
+		SLIDER_String[1]   = "dxyy" --åœ°å½¢é˜´å½±
+		SLIDER_String[2]   = "fhj"	--åæ··è§’
+		SLIDER_String[3]   = "wtdh"	--ç‰©ä½“åŠ¨ç”»
 		SLIDER_String[4]   = "gamma"
-		SLIDER_String[5]   = "yszl"	--ÑÕÉ«ÖÊÁ¿			±ÈÌØÊı
-		SLIDER_String[6]   = "wldx"	--ÎÆÀí´óĞ¡
-		SLIDER_String[7]   = "cy"		--²ÉÑù
-		SLIDER_String[8]   = "dbxs"	--¶à±ßĞÎÊı
-		SLIDER_String[9]   = "rwyy"	--ÈËÎïÒõÓ°
-		SLIDER_String[10]   = "ksfw"	--Ä£ĞÍÏÔÊ¾ÖÊÁ¿
+		SLIDER_String[5]   = "yszl"	--é¢œè‰²è´¨é‡			æ¯”ç‰¹æ•°
+		SLIDER_String[6]   = "wldx"	--çº¹ç†å¤§å°
+		SLIDER_String[7]   = "cy"		--é‡‡æ ·
+		SLIDER_String[8]   = "dbxs"	--å¤šè¾¹å½¢æ•°
+		SLIDER_String[9]   = "rwyy"	--äººç‰©é˜´å½±
+		SLIDER_String[10]   = "ksfw"	--æ¨¡å‹æ˜¾ç¤ºè´¨é‡
 		
-		CHECK_String[1]   = "dxgg"	--µØĞÎ¸ß¹â
-		CHECK_String[2]   = "rwgg"	--ÈËÎï¸ß¹â
-		CHECK_String[3]   = "qpfg"	--È«ÆÁ·º¹â
-		CHECK_String[4]   = "cztb"	--´¹Ö±Í¬²½
-		CHECK_String[5]   = "sdh"	--Ë®¶¯»­
-		CHECK_String[6]   = "qpms"	--È«ÆÁÄ£Ê½
-		CHECK_String[7]   = "miwu"	--È«ÆÁÄ£Ê½
+		CHECK_String[1]   = "dxgg"	--åœ°å½¢é«˜å…‰
+		CHECK_String[2]   = "rwgg"	--äººç‰©é«˜å…‰
+		CHECK_String[3]   = "qpfg"	--å…¨å±æ³›å…‰
+		CHECK_String[4]   = "cztb"	--å‚ç›´åŒæ­¥
+		CHECK_String[5]   = "sdh"	--æ°´åŠ¨ç”»
+		CHECK_String[6]   = "qpms"	--å…¨å±æ¨¡å¼
+		CHECK_String[7]   = "miwu"	--å…¨å±æ¨¡å¼
 
 		
-	ViewSetup_Item2_Text1:SetToolTip("¸ü¸ßµÄ¿¹¾â³İ¿ÉÒÔÊ¹½ÇÉ«ÒÔ¼°±³¾°ÎïÌåµÄ±ßÔµ±íÏÖµÃ¸üÆ½»¬£¬µ«Ò²ĞèÒª½Ï¸ßµÄÏÔ´æ#r#RĞèÒªÖØĞÂÆô¶¯");
-	ViewSetup_Item12_Text:SetToolTip("½«ÄãµÄÓÎÏ·Ö¡ÊıÓëÏÔÊ¾Æ÷Ë¢ĞÂÂÊÍ¬²½¡£¿ÉÒÔ½â¾öÓÎÏ·ÖĞÍ¼ÏñÎŞ·¨ÏÔÊ¾µÄÎÊÌâ#r#RĞèÒªÖØĞÂÆô¶¯");
+	ViewSetup_Item2_Text1:SetToolTip("æ›´é«˜çš„æŠ—é”¯é½¿å¯ä»¥ä½¿è§’è‰²ä»¥åŠèƒŒæ™¯ç‰©ä½“çš„è¾¹ç¼˜è¡¨ç°å¾—æ›´å¹³æ»‘ï¼Œä½†ä¹Ÿéœ€è¦è¾ƒé«˜çš„æ˜¾å­˜#r#Réœ€è¦é‡æ–°å¯åŠ¨");
+	ViewSetup_Item12_Text:SetToolTip("å°†ä½ çš„æ¸¸æˆå¸§æ•°ä¸æ˜¾ç¤ºå™¨åˆ·æ–°ç‡åŒæ­¥ã€‚å¯ä»¥è§£å†³æ¸¸æˆä¸­å›¾åƒæ— æ³•æ˜¾ç¤ºçš„é—®é¢˜#r#Réœ€è¦é‡æ–°å¯åŠ¨");
 
-	ViewSetup_Item15:ComboBoxAddItem("-µ±Ç°-", 0);
+	ViewSetup_Item15:ComboBoxAddItem("-å½“å‰-", 0);
 	ViewSetup_Item15:ComboBoxAddItem("800X600", 1);
 	ViewSetup_Item15:ComboBoxAddItem("1024X768", 2);
 	ViewSetup_Item15:ComboBoxAddItem("1280X1024", 3);
@@ -117,7 +117,7 @@ function ViewSetup_UpdateFrame()
 		local temp = SystemSetup:View_GetData( SLIDER_String[i] );
 		if (i==10) then
 			if(temp == ErrViewmode ) then
-				--µÚÒ»´ÎÄ¬ÈÏÎª¸ß
+				--ç¬¬ä¸€æ¬¡é»˜è®¤ä¸ºé«˜
 				SLIDER_CTRL[i]:SetPosition(1);
 			else
 				SLIDER_CTRL[i]:SetPosition(temp/2);
@@ -155,12 +155,12 @@ end
 --===============================================
 function ViewSetup_Accept_Clicked()
 
-	--ÊÇ·ñĞèÒªÖØĞÂÆô¶¯
+	--æ˜¯å¦éœ€è¦é‡æ–°å¯åŠ¨
 	local bNeedReset1 = tonumber(SystemSetup:View_GetData(SLIDER_String[2])) ~= (tonumber(SLIDER_CTRL[2]:GetPosition())*2);
 	local bNeedReset2 = tonumber(SystemSetup:View_GetData(CHECK_String[4])) ~= (tonumber(CHECK_CTRL[4]:GetCheck()));
 	
 	if(bNeedReset1 or bNeedReset2) then
-		PushDebugMessage("²¿·ÖÉèÖÃĞèÒªÖØÆô");
+		PushDebugMessage("éƒ¨åˆ†è®¾ç½®éœ€è¦é‡å¯");
 	end
 
 	for i=1, SLIDER_CTRL_NUM   do
@@ -177,7 +177,7 @@ function ViewSetup_Accept_Clicked()
 
 	local bFullScreen = ViewSetup_Item_Check7:GetCheck();
 
-	--µ±Ç°·ÇÈ«ÆÁ
+	--å½“å‰éå…¨å±
 	if(bFullScreen ~= 1) then
 		local thisRes, thisResIndex = ViewSetup_Item15:GetCurrentSelect();
 --		AxTrace(0,1, "[" .. thisRes .. "]");
@@ -249,23 +249,23 @@ end
 function ViewSetup_Default_Clicked()
 
 
-	SystemSetup:View_SetData( SLIDER_String[1], 2 );	--µØĞÎÒõÓ°
-	SystemSetup:View_SetData( SLIDER_String[2], 0 );	--·´»ì½Ç
-	SystemSetup:View_SetData( SLIDER_String[3], 2 );	--ÎïÌå¶¯»­
+	SystemSetup:View_SetData( SLIDER_String[1], 2 );	--åœ°å½¢é˜´å½±
+	SystemSetup:View_SetData( SLIDER_String[2], 0 );	--åæ··è§’
+	SystemSetup:View_SetData( SLIDER_String[3], 2 );	--ç‰©ä½“åŠ¨ç”»
 	SystemSetup:View_SetData( SLIDER_String[4], 1 );	--gamma
-	SystemSetup:View_SetData( SLIDER_String[5], 2 );	--ÑÕÉ«ÖÊÁ¿
-	SystemSetup:View_SetData( SLIDER_String[6], 1 );	--ÎÆÀí´óĞ¡
-	SystemSetup:View_SetData( SLIDER_String[7], 0 );	--²ÉÑù
-	SystemSetup:View_SetData( SLIDER_String[9], 0 );	--ÈËÎïÒõÓ°
-	SystemSetup:View_SetData( SLIDER_String[10], 2 );	--ÈËÎïÒõÓ°
+	SystemSetup:View_SetData( SLIDER_String[5], 2 );	--é¢œè‰²è´¨é‡
+	SystemSetup:View_SetData( SLIDER_String[6], 1 );	--çº¹ç†å¤§å°
+	SystemSetup:View_SetData( SLIDER_String[7], 0 );	--é‡‡æ ·
+	SystemSetup:View_SetData( SLIDER_String[9], 0 );	--äººç‰©é˜´å½±
+	SystemSetup:View_SetData( SLIDER_String[10], 2 );	--äººç‰©é˜´å½±
 	
-	SystemSetup:View_SetData( CHECK_String[1],1 );	--µØĞÎ¸ß¹â
-	SystemSetup:View_SetData( CHECK_String[2],1 );	--ÈËÎï¸ß¹â
-	SystemSetup:View_SetData( CHECK_String[3],0 );	--È«ÆÁ·º¹â
-	SystemSetup:View_SetData( CHECK_String[4],0 );	--´¹Ö±Í¬²½
-	SystemSetup:View_SetData( CHECK_String[5],1 );	--Ë®¶¯»­
-	SystemSetup:View_SetData( CHECK_String[6],0 );	--È«ÆÁÄ£Ê½
-	SystemSetup:View_SetData( CHECK_String[7],1 );	--ÃÔÎí¿ª¹Ø
+	SystemSetup:View_SetData( CHECK_String[1],1 );	--åœ°å½¢é«˜å…‰
+	SystemSetup:View_SetData( CHECK_String[2],1 );	--äººç‰©é«˜å…‰
+	SystemSetup:View_SetData( CHECK_String[3],0 );	--å…¨å±æ³›å…‰
+	SystemSetup:View_SetData( CHECK_String[4],0 );	--å‚ç›´åŒæ­¥
+	SystemSetup:View_SetData( CHECK_String[5],1 );	--æ°´åŠ¨ç”»
+	SystemSetup:View_SetData( CHECK_String[6],0 );	--å…¨å±æ¨¡å¼
+	SystemSetup:View_SetData( CHECK_String[7],1 );	--è¿·é›¾å¼€å…³
 	ViewSetup_Item15:Disable();
 	
 	ViewSetup_UpdateFrame();

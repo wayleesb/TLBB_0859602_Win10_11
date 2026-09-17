@@ -1,15 +1,15 @@
---ÂåÑôNPC
---°×Ó±ÖĞ
---²¹Ò©µê
+--æ´›é˜³NPC
+--ç™½é¢–ä¸­
+--è¡¥è¯åº—
 
 x000085_g_shoptableindex=29
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x000085_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
-		AddText(sceneId,"  ÎÒÕıÔÚÔÚÊ¦¸µµÄÖ¸µ¼ÏÂÑĞÖÆ²¹Ò©£¬µÈÄÄÒ»ÌìÑĞÖÆ³É¹¦ÁË£¬ÎÒ¿ÉÒÔÒÔ³É±¾¼ÛÂô¸øÄã¡£Ğê¡ª¡ªÒ»°ãÈËÎÒ²»¸æËßËû¡£")
+		AddText(sceneId,"  æˆ‘æ­£åœ¨åœ¨å¸ˆå‚…çš„æŒ‡å¯¼ä¸‹ç ”åˆ¶è¡¥è¯ï¼Œç­‰å“ªä¸€å¤©ç ”åˆ¶æˆåŠŸäº†ï¼Œæˆ‘å¯ä»¥ä»¥æˆæœ¬ä»·å–ç»™ä½ ã€‚å˜˜â€”â€”ä¸€èˆ¬äººæˆ‘ä¸å‘Šè¯‰ä»–ã€‚")
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 	--DispatchShopItem( sceneId, selfId,targetId, x000085_g_shoptableindex )

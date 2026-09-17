@@ -1,90 +1,90 @@
---³öÊÛÕäÊŞ
+--å‡ºå”®çå…½
 --MisDescBegin
---½Å±¾ºÅ
+--è„šæœ¬å·
 x250000_g_ScriptId = 250000
 
---ÈÎÎñºÅ
+--ä»»åŠ¡å·
 x250000_g_MissionId = 720
 
---ÈÎÎñÄ¿±ênpc
-x250000_g_Name	="É³ÖŞÀä" 
+--ä»»åŠ¡ç›®æ ‡npc
+x250000_g_Name	="æ²™æ´²å†·" 
 
---´æ´¢Ëæ»úÊı
-x250000_g_rand = 0					--±äÁ¿µÚ1Î»
+--å­˜å‚¨éšæœºæ•°
+x250000_g_rand = 0					--å˜é‡ç¬¬1ä½
 
---ÈÎÎñÎÄ±¾ÃèÊö
-x250000_g_MissionName="ÎÒÒª³öÊÛÕäÊŞ"
-x250000_g_MissionInfo="    Çë°ïÎÒ¼ÒĞ¡½ã²¶×½ÕäÊŞ¡£"  --ÈÎÎñÃèÊö
-x250000_g_MissionTarget="    Íê³ÉÉ³ÖŞÀäµÄÈÎÎñ¡£"		--ÈÎÎñÄ¿±ê
-x250000_g_ContinueInfo="ÈÎÎñ×öÍêÁËÃ´£¿"		--Î´Íê³ÉÈÎÎñµÄnpc¶Ô»°
-x250000_g_MissionComplete="Ì«Ğ»Ğ»ÄãÁË£¡"					--Íê³ÉÈÎÎñnpcËµµÄ»°
+--ä»»åŠ¡æ–‡æœ¬æè¿°
+x250000_g_MissionName="æˆ‘è¦å‡ºå”®çå…½"
+x250000_g_MissionInfo="    è¯·å¸®æˆ‘å®¶å°å§æ•æ‰çå…½ã€‚"  --ä»»åŠ¡æè¿°
+x250000_g_MissionTarget="    å®Œæˆæ²™æ´²å†·çš„ä»»åŠ¡ã€‚"		--ä»»åŠ¡ç›®æ ‡
+x250000_g_ContinueInfo="ä»»åŠ¡åšå®Œäº†ä¹ˆï¼Ÿ"		--æœªå®Œæˆä»»åŠ¡çš„npcå¯¹è¯
+x250000_g_MissionComplete="å¤ªè°¢è°¢ä½ äº†ï¼"					--å®Œæˆä»»åŠ¡npcè¯´çš„è¯
 
---ÈÎÎñ½±Àø
+--ä»»åŠ¡å¥–åŠ±
 
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
-function x250000_OnDefaultEvent( sceneId, selfId, targetId )	--µã»÷¸ÃÈÎÎñºóÖ´ĞĞ´Ë½Å±¾
+function x250000_OnDefaultEvent( sceneId, selfId, targetId )	--ç‚¹å‡»è¯¥ä»»åŠ¡åæ‰§è¡Œæ­¤è„šæœ¬
     
     DispatchMissionDemandInfo(sceneId,selfId,targetId,x250000_g_ScriptId,x250000_g_MissionId, 2)
     --petdataid = LuaFnGetPet_DataID(sceneId, selfId, indexpet )
 end
 
 --**********************************
---Èç¹ûÍæ¼Ò  ÓĞ  ÈÎÎñËù×÷µÄ´¦Àí
+--å¦‚æœç©å®¶  æœ‰  ä»»åŠ¡æ‰€ä½œçš„å¤„ç†
 --**********************************
 function x250000_HaveMissionToDo( sceneId, selfId,targetId )
  
 end
 
 --**********************************
---Èç¹ûÍæ¼ÒÃ»ÓĞÈÎÎñËù×÷µÄ´¦Àí
+--å¦‚æœç©å®¶æ²¡æœ‰ä»»åŠ¡æ‰€ä½œçš„å¤„ç†
 --**********************************
 function x250000_NoMissionToDo( sceneId, selfId, targetId )
  
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x250000_OnEnumerate( sceneId, selfId, targetId )
  		
- 		if GetName(sceneId,targetId) == x250000_g_Name then		--Èç¹ûÊÇ·¢ÈÎÎñµÄnpc		  
+ 		if GetName(sceneId,targetId) == x250000_g_Name then		--å¦‚æœæ˜¯å‘ä»»åŠ¡çš„npc		  
 			AddNumText(sceneId,x250000_g_ScriptId,x250000_g_MissionName,6,-1)
 		end
 		
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x250000_CheckAccept( sceneId, selfId )
 		return 1
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x250000_OnAccept( sceneId, selfId )
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x250000_OnAbandon( sceneId, selfId )
  
 end
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x250000_OnContinue( sceneId, selfId, targetId )
  
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x250000_CheckSubmit( sceneId, selfId )
 	local bRet = CallScriptFunction( SCENE_SCRIPT_ID, "CheckSubmit", sceneId, selfId, x250000_g_MissionId )
@@ -95,47 +95,47 @@ function x250000_CheckSubmit( sceneId, selfId )
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x250000_OnSubmit( sceneId, selfId, targetId,selectRadioId )
 	
 end
 
 --**********************************
---É±ËÀ¹ÖÎï»òÍæ¼Ò
+--æ€æ­»æ€ªç‰©æˆ–ç©å®¶
 --**********************************
 function x250000_OnKillObject( sceneId, selfId, objdataId )
 
 end
 
 --**********************************
---½øÈëÇøÓòÊÂ¼ş
+--è¿›å…¥åŒºåŸŸäº‹ä»¶
 --**********************************
 function x250000_OnEnterArea( sceneId, selfId, zoneId )
 end
 
 --**********************************
---µÀ¾ß¸Ä±ä
+--é“å…·æ”¹å˜
 --**********************************
 function x250000_OnItemChanged( sceneId, selfId, itemdataId )
 end
 
 --**********************************
---½ÓÈÎÎñºóÏÔÊ¾µÄ½çÃæ
+--æ¥ä»»åŠ¡åæ˜¾ç¤ºçš„ç•Œé¢
 --**********************************
 function x250000_AcceptDialog(sceneId, selfId,x250000_g_rand,g_Dialog,targetId)
  
 end
 
 --**********************************
---½»ÈÎÎñºóÏÔÊ¾µÄ½çÃæ
+--äº¤ä»»åŠ¡åæ˜¾ç¤ºçš„ç•Œé¢
 --**********************************
 function x250000_SubmitDialog(sceneId, selfId,x250000_g_rand)
 
 end
 
 --**********************************
---°ÑĞÅËÍµ½ºóÏÔÊ¾µÄ½çÃæ
+--æŠŠä¿¡é€åˆ°åæ˜¾ç¤ºçš„ç•Œé¢
 --**********************************
 function x250000_SubmitDialog(sceneId, selfId,x250000_g_rand)
 
@@ -150,7 +150,7 @@ function x250000_DisplayMissionTips(sceneId,selfId,g_MissionTip)
 end
 
 --**********************************
---È¡µÃ±¾ÊÂ¼şµÄMissionId£¬ÓÃÓÚobjÎÄ¼şÖĞ¶Ô»°Çé¾°µÄÅĞ¶Ï
+--å–å¾—æœ¬äº‹ä»¶çš„MissionIdï¼Œç”¨äºobjæ–‡ä»¶ä¸­å¯¹è¯æƒ…æ™¯çš„åˆ¤æ–­
 --**********************************
 function x250000_GetEventMissionId(sceneId, selfId)
 	return x250000_g_MissionId
@@ -206,15 +206,15 @@ function x250000_PetValue( PetLevel )
     return MoneyNum
 end
 --**********************************
---Íæ¼ÒÌá½»µÄÎïÆ·¼°ÕäÊŞ
+--ç©å®¶æäº¤çš„ç‰©å“åŠçå…½
 --**********************************
 function x250000_OnMissionCheck( sceneId, selfId, npcid, scriptId, index1, index2, index3, indexpet )
   --PrintNum( indexpet )           
-  --indexpet ´ËË÷ÒıÎª"¾ø¶ÔË÷ÒıÖµ"£¬¼´ÔÚ0-5 Õâ6¸öÀ¸Î»ÖĞµÄĞòºÅ¡£
+  --indexpet æ­¤ç´¢å¼•ä¸º"ç»å¯¹ç´¢å¼•å€¼"ï¼Œå³åœ¨0-5 è¿™6ä¸ªæ ä½ä¸­çš„åºå·ã€‚
   
-	if indexpet == 255 then --Ë÷ÒıÖµ·µ»Ø255±íÊ¾¿Õ£¬Ã»Ìá½»ÕäÊŞ
+	if indexpet == 255 then --ç´¢å¼•å€¼è¿”å›255è¡¨ç¤ºç©ºï¼Œæ²¡æäº¤çå…½
 		BeginEvent(sceneId)
-			strText = "Çë°ÑÕäÊŞÍÏ¶¯µ½´°¿ÚÖĞ!"
+			strText = "è¯·æŠŠçå…½æ‹–åŠ¨åˆ°çª—å£ä¸­!"
 			AddText(sceneId,strText);
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
@@ -225,23 +225,23 @@ function x250000_OnMissionCheck( sceneId, selfId, npcid, scriptId, index1, index
         return        
     end
 	
-    local PetLevel = LuaFnGetPet_Level( sceneId, selfId, ValidIndex )		    --µÃµ½ÕäÊŞ¼¶±ğ				    
+    local PetLevel = LuaFnGetPet_Level( sceneId, selfId, ValidIndex )		    --å¾—åˆ°çå…½çº§åˆ«				    
 		
-		local DataID = LuaFnGetPet_DataID( sceneId, selfId, ValidIndex )       --µÃµ½ÕäÊŞID
+		local DataID = LuaFnGetPet_DataID( sceneId, selfId, ValidIndex )       --å¾—åˆ°çå…½ID
 		local PetName = GetPetName( DataID )  
 				
     --PrintNum( PetLevel )				
 				
 				
-		ret1 = LuaFnDeletePet(sceneId, selfId, ValidIndex ) --É¾³ıÕäÊŞ				
-		if ret1 > 0 then     --³É¹¦É¾³ıÕäÊŞ		    		    
-		    --PrintStr( "É¾³ı³É¹¦À­" )
-		    --É¾³ıÕäÊŞºó£¬½«¸ù¾İÕäÊŞµÈ¼¶¼ÆËãÍæ¼ÒËùµÃ½ğÇ®ÊıÄ¿
+		ret1 = LuaFnDeletePet(sceneId, selfId, ValidIndex ) --åˆ é™¤çå…½				
+		if ret1 > 0 then     --æˆåŠŸåˆ é™¤çå…½		    		    
+		    --PrintStr( "åˆ é™¤æˆåŠŸæ‹‰" )
+		    --åˆ é™¤çå…½åï¼Œå°†æ ¹æ®çå…½ç­‰çº§è®¡ç®—ç©å®¶æ‰€å¾—é‡‘é’±æ•°ç›®
 		    local MoneyNum = x250000_PetValue( PetLevel )
 		    AddMoney( sceneId, selfId, MoneyNum )
 		    
 		    --PrintNum( PetLevel )
-		    Msg2Player(  sceneId, selfId,"Äú³öÊÛÁË"..PetName..",»ñµÃÁË#{_MONEY"..MoneyNum.."}",MSG2PLAYER_PARA )
+		    Msg2Player(  sceneId, selfId,"æ‚¨å‡ºå”®äº†"..PetName..",è·å¾—äº†#{_MONEY"..MoneyNum.."}",MSG2PLAYER_PARA )
 		    
 		end
 		

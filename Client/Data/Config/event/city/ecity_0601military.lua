@@ -1,16 +1,16 @@
 --MisDescBegin
 x600031_g_ScriptId = 600031
 x600031_g_MissionId = 1109
-x600031_g_Name = "Îä´óÍş"
+x600031_g_Name = "æ­¦å¤§å¨"
 x600031_g_MissionKind = 50
 x600031_g_MissionLevel = 10000
 x600031_g_IfMissionElite = 0
-x600031_g_IsMissionOkFail = 0							-- ÈÎÎñÍê³É±ê¼Ç
-x600031_g_MissionName = "¹ú·ÀÈÎÎñ"
-x600031_g_MissionInfo = ""													--ÈÎÎñÃèÊö
-x600031_g_MissionTarget = "    Ê¹ÓÃÑ²ÂßÁî£¬ÄÃÏÂ¿ÉÒÉµÄÈË¡£"	--ÈÎÎñÄ¿±ê
-x600031_g_ContinueInfo = "    ÊÂÇé½øÕ¹µÃÈçºÎ£¿"						--Î´Íê³ÉÈÎÎñµÄnpc¶Ô»°
-x600031_g_MissionComplete = "    ¸ÉµÃ²»´í£¬ÉõºÃÉõºÃ¡£"						--Íê³ÉÈÎÎñnpcËµ»°µÄ»°
+x600031_g_IsMissionOkFail = 0							-- ä»»åŠ¡å®Œæˆæ ‡è®°
+x600031_g_MissionName = "å›½é˜²ä»»åŠ¡"
+x600031_g_MissionInfo = ""													--ä»»åŠ¡æè¿°
+x600031_g_MissionTarget = "    ä½¿ç”¨å·¡é€»ä»¤ï¼Œæ‹¿ä¸‹å¯ç–‘çš„äººã€‚"	--ä»»åŠ¡ç›®æ ‡
+x600031_g_ContinueInfo = "    äº‹æƒ…è¿›å±•å¾—å¦‚ä½•ï¼Ÿ"						--æœªå®Œæˆä»»åŠ¡çš„npcå¯¹è¯
+x600031_g_MissionComplete = "    å¹²å¾—ä¸é”™ï¼Œç”šå¥½ç”šå¥½ã€‚"						--å®Œæˆä»»åŠ¡npcè¯´è¯çš„è¯
 x600031_g_MissionRound = 79
 x600031_g_CityMissionScript = 600001
 x600031_g_MilitaryScript = 600030

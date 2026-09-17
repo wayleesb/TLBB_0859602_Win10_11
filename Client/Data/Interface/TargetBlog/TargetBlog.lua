@@ -13,11 +13,11 @@ function TargetBlog_OnLoad()
 	Link[4] = "http://blog.sohu.com"
 	Link[5] = "http://blog.sohu.com"
 	TARGETBLOG_TAB_TEXT = {
-		[0] = "×°±¸",
-		"×ÊÁÏ",
-		"²©¿Í",
-		"ÕäÊŞ",
-		"Æï³Ë",
+		[0] = "è£…å¤‡",
+		"èµ„æ–™",
+		"åšå®¢",
+		"çå…½",
+		"éª‘ä¹˜",
 	};	
 end
 function TargetBlog_SetTabColor(idx)
@@ -53,20 +53,20 @@ function TargetBlog_OnEvent(event)
 		TargetBlog_Blog:SetCheck(1)
 		this:Show();
 		if(arg1 == "BLOG_STATUS_FAILED") then
-			TargetBlog_Show_Cover("#Y´ò¿ª²©¿ÍÊ§°Ü!");
+			TargetBlog_Show_Cover("#Yæ‰“å¼€åšå®¢å¤±è´¥!");
 		elseif(arg1 == "BLOG_STATUS_WORKING") then
-			TargetBlog_Show_Cover("´ò¿ª²©¿ÍÖĞ...");
+			TargetBlog_Show_Cover("æ‰“å¼€åšå®¢ä¸­...");
 		end
 	elseif(event == "UPDATE_BLOG") then
 		
 		if(arg0 == "BLOG_STATUS_INEXIT") then
-			TargetBlog_Show_Cover("#Y²©¿Í²»´æÔÚ!");
+			TargetBlog_Show_Cover("#Yåšå®¢ä¸å­˜åœ¨!");
 		elseif(arg0 == "BLOG_STATUS_FAILED") then
-			TargetBlog_Show_Cover("#Y´ò¿ª²©¿ÍÊ§°Ü!");
+			TargetBlog_Show_Cover("#Yæ‰“å¼€åšå®¢å¤±è´¥!");
 		elseif(arg0 == "BLOG_STATUS_SUCCESS") then
 			TargetBlog_UpdateFrame();
 		else 
-			TargetBlog_Show_Cover("#RÎ´Öª´íÎó:" .. arg1);
+			TargetBlog_Show_Cover("#RæœªçŸ¥é”™è¯¯:" .. arg1);
 		end
 	end
 
@@ -99,8 +99,8 @@ function TargetBlog_UpdateFrame()
 	TargetBlog_Text3:SetProperty("Text_Utf8",strName)
 	Link[0] = strName
 	
-	--ĞŞ¸Ä³¬Á´½ÓÏÔÊ¾µÄÑùÊ½(ÓëÕæÊµ³¬Á´½ÓµØÖ·²»Ò»Ñù) --add by xindefeng
-	local strShowLink = CachedTarget:GetData("NAME").." µÄ²©¿Í"
+	--ä¿®æ”¹è¶…é“¾æ¥æ˜¾ç¤ºçš„æ ·å¼(ä¸çœŸå®è¶…é“¾æ¥åœ°å€ä¸ä¸€æ ·) --add by xindefeng
+	local strShowLink = CachedTarget:GetData("NAME").." çš„åšå®¢"
 	TargetBlog_Text3:SetText(strShowLink)
 
 	strName = Blog:GetBlogContents("article_title_0");
@@ -139,7 +139,7 @@ end
 
 ----------------------------------------------------------------------------------------
 --
--- ´ò¿ªÍæ¼ÒĞÅÏ¢½çÃæ
+-- æ‰“å¼€ç©å®¶ä¿¡æ¯ç•Œé¢
 --
 function TargetBlog_TargetData_Down()
 	Variable:SetVariable("OtherUnionPos", TargetBlog_Frame:GetProperty("UnifiedPosition"), 1);
@@ -147,7 +147,7 @@ function TargetBlog_TargetData_Down()
 end
 
 --===============================================
--- ´ò¿ªÍæ¼Ò×°±¸UI
+-- æ‰“å¼€ç©å®¶è£…å¤‡UI
 --===============================================
 function TargetBlog_TargetEquip_Down()
 
@@ -155,7 +155,7 @@ function TargetBlog_TargetEquip_Down()
 	SystemSetup:OpenEquipFrame("other");
 end
 --===============================================
--- ´ò¿ªÍæ¼Ò×°±¸UI
+-- æ‰“å¼€ç©å®¶è£…å¤‡UI
 --===============================================
 function TargetBlog_OtherPet_Down()
 

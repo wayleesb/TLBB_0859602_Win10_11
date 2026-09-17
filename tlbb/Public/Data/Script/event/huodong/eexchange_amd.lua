@@ -1,36 +1,36 @@
---»î¶¯¡ª¡ª
+--æ´»åŠ¨â€”â€”
 --AMD
 --MisDescBegin
---½Å±¾ºÅ
+--è„šæœ¬å·
 x808059_g_ScriptId = 808059
-x808059_g_ExchangeAMD_Active = 0   --Ä¬ÈÏ¹Ø±Õ
+x808059_g_ExchangeAMD_Active = 0   --é»˜è®¤å…³é—­
 
 x808059_g_ActiveStartTime = 7154  --7000   --7154
 x808059_g_ActiveEndTime = 7192    --7200     --7192
 
-x808059_g_AwardItem1 = 30505104  --½±Æ·1,Ë«ºËËÙÁúÁî
-x808059_g_AwardItem2 = 30505105  --½±Æ·2,Ë«ºËËÙÁúµ¤
+x808059_g_AwardItem1 = 30505104  --å¥–å“1,åŒæ ¸é€Ÿé¾™ä»¤
+x808059_g_AwardItem2 = 30505105  --å¥–å“2,åŒæ ¸é€Ÿé¾™ä¸¹
 
 x808059_g_AMDTextList = { 30505093, 30505094, 30505095, 30505096, 30505097, 30505098, 30505099, 30505100, 30505101, 30505102, 30505103 }
 
-x808059_g_HelpText000 = "#{EXCHANGE_AMD_HELP000}" --"ÎÒÏë¶Ò»»AMDË«ºËËÙÁúÁî"
-x808059_g_HelpText001 = "#{EXCHANGE_AMD_HELP001}" --"¶Ò»»AMDË«ºËËÙÁúÁîĞèÒªÎÒ¡¢Îª¡¢Ë«¡¢ºË¡¢¿ñ¡¢AMD¡¢Ìì¡¢Áú¡¢Õù¡¢°Ô¡¢Èü¸÷Ò»¸ö£¬ÄúÉíÉÏµÄÎïÆ·²»È«£¬ÇëºË¶ÔºÃÖ®ºóÔÙÀ´ÕÒÎÒ"
-x808059_g_HelpText002 = "#{EXCHANGE_AMD_HELP002}" --"ÎÒÏë¶Ò»»AMDË«ºËËÙÁúÁî"
-x808059_g_HelpText003 = "#{EXCHANGE_AMD_HELP003}" --"ÎïÆ·À¸¿Õ¼ä²»×ã£¬ÇëÕûÀíÎïÆ·À¸ºóÔÙÊÔ¡£"
+x808059_g_HelpText000 = "#{EXCHANGE_AMD_HELP000}" --"æˆ‘æƒ³å…‘æ¢AMDåŒæ ¸é€Ÿé¾™ä»¤"
+x808059_g_HelpText001 = "#{EXCHANGE_AMD_HELP001}" --"å…‘æ¢AMDåŒæ ¸é€Ÿé¾™ä»¤éœ€è¦æˆ‘ã€ä¸ºã€åŒã€æ ¸ã€ç‹‚ã€AMDã€å¤©ã€é¾™ã€äº‰ã€éœ¸ã€èµ›å„ä¸€ä¸ªï¼Œæ‚¨èº«ä¸Šçš„ç‰©å“ä¸å…¨ï¼Œè¯·æ ¸å¯¹å¥½ä¹‹åå†æ¥æ‰¾æˆ‘"
+x808059_g_HelpText002 = "#{EXCHANGE_AMD_HELP002}" --"æˆ‘æƒ³å…‘æ¢AMDåŒæ ¸é€Ÿé¾™ä»¤"
+x808059_g_HelpText003 = "#{EXCHANGE_AMD_HELP003}" --"ç‰©å“æ ç©ºé—´ä¸è¶³ï¼Œè¯·æ•´ç†ç‰©å“æ åå†è¯•ã€‚"
 
-x808059_g_HelpText004 = "#{EXCHANGE_AMD_HELP004}" --"ÔÚ³ï±¸AMDÌìÁúÕù°ÔÈü»î¶¯ÖĞ£¬"
-x808059_g_HelpText005 = "#{EXCHANGE_AMD_HELP005}" --"´ÕÆëÁËÎÒ¡¢Îª¡¢Ë«¡¢ºË¡¢¿ñ¡¢AMD¡¢Ìì¡¢Áú¡¢Õù¡¢°Ô¡¢Èü¸÷Ò»¸ö£¬ÊôÊµÄÑµÃ£¬ÌØÔùËÍ"
-x808059_g_HelpText006 = "#{EXCHANGE_AMD_HELP006}" --"Ò»·İ£¬³ÖÓĞ´ËÎï¼´¿É²Î¼ÓÉÔºóµÄ³é½±»î¶¯£¬Í¬Ê±¸½ËÍ"
-x808059_g_HelpText007 = "#{EXCHANGE_AMD_HELP007}" --"2¸ö£¬»¹Ã»¶Ò½±µÄÍæ¼Ò¸Ï¿ìĞĞ¶¯Ñ½£¡"
+x808059_g_HelpText004 = "#{EXCHANGE_AMD_HELP004}" --"åœ¨ç­¹å¤‡AMDå¤©é¾™äº‰éœ¸èµ›æ´»åŠ¨ä¸­ï¼Œ"
+x808059_g_HelpText005 = "#{EXCHANGE_AMD_HELP005}" --"å‡‘é½äº†æˆ‘ã€ä¸ºã€åŒã€æ ¸ã€ç‹‚ã€AMDã€å¤©ã€é¾™ã€äº‰ã€éœ¸ã€èµ›å„ä¸€ä¸ªï¼Œå±å®éš¾å¾—ï¼Œç‰¹èµ é€"
+x808059_g_HelpText006 = "#{EXCHANGE_AMD_HELP006}" --"ä¸€ä»½ï¼ŒæŒæœ‰æ­¤ç‰©å³å¯å‚åŠ ç¨åçš„æŠ½å¥–æ´»åŠ¨ï¼ŒåŒæ—¶é™„é€"
+x808059_g_HelpText007 = "#{EXCHANGE_AMD_HELP007}" --"2ä¸ªï¼Œè¿˜æ²¡å…‘å¥–çš„ç©å®¶èµ¶å¿«è¡ŒåŠ¨å‘€ï¼"
 
-x808059_g_HelpText008 = "#{EXCHANGE_AMD_HELP008}" --"¶Ô²»Æğ£¬ÏÖÔÚÃ»ÓĞÕıÔÚ¾ÙĞĞµÄ»î¶¯¡£"
-x808059_g_HelpText009 = "#{EXCHANGE_AMD_HELP009}" --"¹ØÓÚ¶Ò»»AMDË«ºËËÙÁúÁî"
-x808059_g_HelpText010 = "#{EXCHANGE_AMD_HELP010}" --"¹ØÓÚ¶Ò»»AMDË«ºËËÙÁúÁîÏà¹Ø½éÉÜ"
+x808059_g_HelpText008 = "#{EXCHANGE_AMD_HELP008}" --"å¯¹ä¸èµ·ï¼Œç°åœ¨æ²¡æœ‰æ­£åœ¨ä¸¾è¡Œçš„æ´»åŠ¨ã€‚"
+x808059_g_HelpText009 = "#{EXCHANGE_AMD_HELP009}" --"å…³äºå…‘æ¢AMDåŒæ ¸é€Ÿé¾™ä»¤"
+x808059_g_HelpText010 = "#{EXCHANGE_AMD_HELP010}" --"å…³äºå…‘æ¢AMDåŒæ ¸é€Ÿé¾™ä»¤ç›¸å…³ä»‹ç»"
 
 --MisDescEnd
 
 --**********************************
---¼ì²âÊÇ·ñÓĞ×ã¹»µÄÎïÆ·ÓÃÀ´½»»»
+--æ£€æµ‹æ˜¯å¦æœ‰è¶³å¤Ÿçš„ç‰©å“ç”¨æ¥äº¤æ¢
 --**********************************
 function x808059_CheckEnoughItem( sceneId, selfId )
     for i=1, 11 do
@@ -44,7 +44,7 @@ function x808059_CheckEnoughItem( sceneId, selfId )
 end
 
 --**********************************
---¶Ò»»ÌìÁú°Ë²¿
+--å…‘æ¢å¤©é¾™å…«éƒ¨
 --**********************************
 function x808059_ExchangeAMD( sceneId, selfId, targetId )
 
@@ -58,7 +58,7 @@ function x808059_ExchangeAMD( sceneId, selfId, targetId )
 		BeginEvent(sceneId)
 			AddText( sceneId, x808059_g_HelpText001 )
 		EndEvent()
-		DispatchEventList( sceneId, selfId, targetId )   --ÌáÊ¾¶«Î÷²»×ã
+		DispatchEventList( sceneId, selfId, targetId )   --æç¤ºä¸œè¥¿ä¸è¶³
 		return
 	end
 	
@@ -67,20 +67,20 @@ function x808059_ExchangeAMD( sceneId, selfId, targetId )
 		BeginEvent( sceneId )
 		    AddText( sceneId, x808059_g_HelpText003 )
 		EndEvent( sceneId )
-		DispatchEventList( sceneId, selfId, targetId )   --ÌáÊ¾±³°ü²»×ã
+		DispatchEventList( sceneId, selfId, targetId )   --æç¤ºèƒŒåŒ…ä¸è¶³
 		
 		return
 	end
 
-	--¿Û³ıÎïÆ·,¼ÙÈç¿Û³ıÊ§°Ü,½«²»»á¸øÓèÎïÆ·
+	--æ‰£é™¤ç‰©å“,å‡å¦‚æ‰£é™¤å¤±è´¥,å°†ä¸ä¼šç»™äºˆç‰©å“
     for i=1, 11 do
 		ret = LuaFnDelAvailableItem(sceneId, selfId, x808059_g_AMDTextList[ i ], 1)
 		if ret ~= 1 then
-			return   --¼ÙÈçÉ¾³ı²Ù×÷ÓĞÈÎºÎÒ»¸öÎïÆ·Ê§°Ü,ÔòÖĞ¶Ï²Ù×÷,²»»á¸øÓèÍæ¼ÒÈÎºÎÎïÆ·
+			return   --å‡å¦‚åˆ é™¤æ“ä½œæœ‰ä»»ä½•ä¸€ä¸ªç‰©å“å¤±è´¥,åˆ™ä¸­æ–­æ“ä½œ,ä¸ä¼šç»™äºˆç©å®¶ä»»ä½•ç‰©å“
 		end
 	end
 	
-	BeginAddItem(sceneId)        --¸øÓèÍæ¼ÒÎïÆ·
+	BeginAddItem(sceneId)        --ç»™äºˆç©å®¶ç‰©å“
 		AddItem( sceneId, x808059_g_AwardItem1, 1 )
 	local Ret = EndAddItem(sceneId,selfId)
 	
@@ -94,7 +94,7 @@ function x808059_ExchangeAMD( sceneId, selfId, targetId )
 		local szItemTransfer2 = ""
 		local ItemInfo2 = ""
 		
-			BeginAddItem(sceneId)        --¸øÓèÍæ¼ÒÎïÆ·
+			BeginAddItem(sceneId)        --ç»™äºˆç©å®¶ç‰©å“
 				AddItem( sceneId, x808059_g_AwardItem2, 2 )
 			local Ret = EndAddItem(sceneId,selfId)
 			
@@ -108,7 +108,7 @@ function x808059_ExchangeAMD( sceneId, selfId, targetId )
 		local SysStr = x808059_g_HelpText004..PlayerInfoName..x808059_g_HelpText005..ItemInfo1..x808059_g_HelpText006..ItemInfo2..x808059_g_HelpText007
 		BroadMsgByChatPipe( sceneId, selfId, SysStr, 4 )
 	end
-	--¹Ø±Õ½çÃæ
+	--å…³é—­ç•Œé¢
 	BeginUICommand( sceneId )
 	UICommand_AddInt( sceneId, targetId )
 	EndUICommand( sceneId )
@@ -117,7 +117,7 @@ function x808059_ExchangeAMD( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x808059_OnDefaultEvent( sceneId, selfId, targetId )
     x808059_CheckRightTime()
@@ -142,19 +142,19 @@ end
 
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x808059_CheckRightTime()
     local DayTime = GetDayTime()
  
     if DayTime < x808059_g_ActiveStartTime then
        x808059_g_ExchangeAMD_Active = 0
-       return 0    --´ËÇ°·Ç»î¶¯Ê±¼ä
+       return 0    --æ­¤å‰éæ´»åŠ¨æ—¶é—´
     end
     
     if DayTime > x808059_g_ActiveEndTime then
        x808059_g_ExchangeAMD_Active = 0
-       return 0    --´Ëºó»î¶¯ÒÑ¾­½áÊø
+       return 0    --æ­¤åæ´»åŠ¨å·²ç»ç»“æŸ
     end
     
     x808059_g_ExchangeAMD_Active = 1
@@ -163,7 +163,7 @@ function x808059_CheckRightTime()
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x808059_OnEnumerate( sceneId, selfId, targetId )
     x808059_CheckRightTime()
@@ -176,58 +176,58 @@ function x808059_OnEnumerate( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x808059_CheckAccept( sceneId, selfId )
 
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x808059_OnAccept( sceneId, selfId )
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x808059_OnAbandon( sceneId, selfId )
 end
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x808059_OnContinue( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x808059_CheckSubmit( sceneId, selfId )
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x808059_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 	
 end
 
 --**********************************
---É±ËÀ¹ÖÎï»òÍæ¼Ò
+--æ€æ­»æ€ªç‰©æˆ–ç©å®¶
 --**********************************
 function x808059_OnKillObject( sceneId, selfId, objdataId ,objId )
 
 end
 
 --**********************************
---½øÈëÇøÓòÊÂ¼ş
+--è¿›å…¥åŒºåŸŸäº‹ä»¶
 --**********************************
 function x808059_OnEnterArea( sceneId, selfId, zoneId )
 end
 
 --**********************************
---µÀ¾ß¸Ä±ä
+--é“å…·æ”¹å˜
 --**********************************
 function x808059_OnItemChanged( sceneId, selfId, itemdataId )
 end

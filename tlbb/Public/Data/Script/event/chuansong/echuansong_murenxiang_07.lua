@@ -1,4 +1,4 @@
---Íæ¼Ò½øÈëÒ»¸ö area Ê±´¥·¢
+--ç©å®¶è¿›å…¥ä¸€ä¸ª area æ—¶è§¦å‘
 function x400913_OnEnterArea( sceneId, selfId )
 	if	IsHaveMission( sceneId, selfId, 702)>0	then
 		CallScriptFunction((210222), "OnAbandon",sceneId, selfId)
@@ -12,31 +12,31 @@ function x400913_OnEnterArea( sceneId, selfId )
 		end
 
 		--BeginEvent(sceneId)
-		--	AddText(sceneId,"  ÄãÈ·¶¨ÒªÀë¿ªÄ¾ÈË¶şÏïÂğ£¿")
-		--	AddNumText(sceneId,g_scriptId,"È·¶¨",2,0)
-		--	AddNumText(sceneId,g_scriptId,"È¡Ïû",2,1)
+		--	AddText(sceneId,"  ä½ ç¡®å®šè¦ç¦»å¼€æœ¨äººäºŒå··å—ï¼Ÿ")
+		--	AddNumText(sceneId,g_scriptId,"ç¡®å®š",2,0)
+		--	AddNumText(sceneId,g_scriptId,"å–æ¶ˆ",2,1)
 		--EndEvent( )
 		--DispatchEventList(sceneId,selfId,targetId)
 	end
 end
 
---Íæ¼ÒÔÚÒ»¸ö area ´ôÁËÒ»¶ÎÊ±¼äÃ»×ßÔò¶¨Ê±´¥·¢
+--ç©å®¶åœ¨ä¸€ä¸ª area å‘†äº†ä¸€æ®µæ—¶é—´æ²¡èµ°åˆ™å®šæ—¶è§¦å‘
 function x400913_OnTimer( sceneId, selfId )
-	-- ºÁÃë£¬¿´ÔÚÕâ¸ö area Í£Áô¶à¾ÃÁË
+	-- æ¯«ç§’ï¼Œçœ‹åœ¨è¿™ä¸ª area åœç•™å¤šä¹…äº†
 	StandingTime = QueryAreaStandingTime( sceneId, selfId )
-	-- 5ÃëºóÈÔÎ´´«ËÍ
+	-- 5ç§’åä»æœªä¼ é€
 	if StandingTime >= 5000 then
 		x400913_OnEnterArea( sceneId, selfId )
 		ResetAreaStandingTime( sceneId, selfId, 0 )
 	end
 end
 
---Íæ¼ÒÀë¿ªÒ»¸ö area Ê±´¥·¢
+--ç©å®¶ç¦»å¼€ä¸€ä¸ª area æ—¶è§¦å‘
 function x400913_OnLeaveArea( sceneId, selfId )
 end
 
 ----**********************************
-----ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+----äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 ----**********************************
 --function OnEventRequest( sceneId, selfId, targetId, eventId )
 --	if	GetNumText()==0	then

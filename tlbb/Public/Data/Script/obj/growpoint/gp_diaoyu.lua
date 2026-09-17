@@ -1,175 +1,175 @@
--- Éú³¤µã µöÓã
+-- ç”Ÿé•¿ç‚¹ é’“é±¼
 
--- ½Å±¾ºÅ
+-- è„šæœ¬å·
 x712000_g_ScriptId = 712000
 
--- ¶ÔÓ¦Éú»î¼¼ÄÜ£ºµöÓã	µöÓã¼¼ÄÜµÄ±àºÅ9
+-- å¯¹åº”ç”Ÿæ´»æŠ€èƒ½ï¼šé’“é±¼	é’“é±¼æŠ€èƒ½çš„ç¼–å·9
 x712000_g_AbilityId = ABILITY_DIAOYU
 
--- Ëæ»úÒò×Ó
+-- éšæœºå› å­
 x712000_g_RandNum = 1000000
 
--- ÓãÈºĞÅÏ¢
+-- é±¼ç¾¤ä¿¡æ¯
 x712000_g_GPInfo = {}
 
 x712000_g_rare =
 {
-	[1] = {Id = 20103106, Name = "¸öË¿Ïß[1¼¶]", Odds = 40000 },
-	[2] = {Id = 20103107, Name = "¸öË¿Ïß[2¼¶]", Odds = 35000 },
-	[3] = {Id = 20103108, Name = "¸öË¿Ïß[3¼¶]", Odds = 30000 },
-	[4] = {Id = 20103109, Name = "¸öÈ¾ÁÏ[1¼¶]", Odds = 4000 },
-	[5] = {Id = 20103110, Name = "¸öÈ¾ÁÏ[2¼¶]", Odds = 3500 },
-	[6] = {Id = 20103111, Name = "¸öÈ¾ÁÏ[3¼¶]", Odds = 3000 },
-	[7] = {Id = 20102025, Name=  "Ö»»¨¸ò", Odds = 25000 },
-	[8] = {Id = 20102026, Name=  "¿Ã×Ï²Ë", Odds = 25000 },
-	[9] = {Id = 20102027, Name=  "Ö»°×Ïº", Odds = 25000 },
-	[10] = {Id = 20102028, Name=  "Ö»ÁúÏº", Odds = 10000 },
-	[11] = {Id = 20102029, Name=  "Ö»ÇàĞ·", Odds = 10000 },
-	[12] = {Id = 20102030, Name=  "Ö»ÎÄ¸ò", Odds = 10000 },
-	[13] = {Id = 20102031, Name=  "Ö»êİ±´", Odds = 4000 },
-	[14] = {Id = 20102032, Name=  "Ö»¶ÔÏº", Odds = 4000 },
-	[15] = {Id = 20102033, Name=  "Ö»ÔÓÉ«¸ò", Odds = 4000 },
-	[16] = {Id = 20102034, Name=  "Ö»ºÓ°ö", Odds = 4000 },
-	[17] = {Id = 20102035, Name=  "Ö»ÍÜĞ·", Odds = 4000 },
-	[18] = {Id = 20102036, Name=  "Ö»ÓñĞ·", Odds = 4000 },
-	[19] = {Id = 20102048, Name=  "Ö»ÑÎ¿Ç°ö", Odds = 4000 },
-	[20] = {Id = 20102049, Name=  "¶äæß×Ó³¾", Odds = 4000 },
-	[21] = {Id = 20102050, Name=  "¿ÃÂãÔå", Odds = 4000 },
-	[22] = {Id = 20102051, Name=  "Ö»ÙùÄ¸", Odds = 4000 },
+	[1] = {Id = 20103106, Name = "ä¸ªä¸çº¿[1çº§]", Odds = 40000 },
+	[2] = {Id = 20103107, Name = "ä¸ªä¸çº¿[2çº§]", Odds = 35000 },
+	[3] = {Id = 20103108, Name = "ä¸ªä¸çº¿[3çº§]", Odds = 30000 },
+	[4] = {Id = 20103109, Name = "ä¸ªæŸ“æ–™[1çº§]", Odds = 4000 },
+	[5] = {Id = 20103110, Name = "ä¸ªæŸ“æ–™[2çº§]", Odds = 3500 },
+	[6] = {Id = 20103111, Name = "ä¸ªæŸ“æ–™[3çº§]", Odds = 3000 },
+	[7] = {Id = 20102025, Name=  "åªèŠ±è›¤", Odds = 25000 },
+	[8] = {Id = 20102026, Name=  "æ£µç´«èœ", Odds = 25000 },
+	[9] = {Id = 20102027, Name=  "åªç™½è™¾", Odds = 25000 },
+	[10] = {Id = 20102028, Name=  "åªé¾™è™¾", Odds = 10000 },
+	[11] = {Id = 20102029, Name=  "åªé’èŸ¹", Odds = 10000 },
+	[12] = {Id = 20102030, Name=  "åªæ–‡è›¤", Odds = 10000 },
+	[13] = {Id = 20102031, Name=  "åªè´»è´", Odds = 4000 },
+	[14] = {Id = 20102032, Name=  "åªå¯¹è™¾", Odds = 4000 },
+	[15] = {Id = 20102033, Name=  "åªæ‚è‰²è›¤", Odds = 4000 },
+	[16] = {Id = 20102034, Name=  "åªæ²³èšŒ", Odds = 4000 },
+	[17] = {Id = 20102035, Name=  "åªè›™èŸ¹", Odds = 4000 },
+	[18] = {Id = 20102036, Name=  "åªç‰èŸ¹", Odds = 4000 },
+	[19] = {Id = 20102048, Name=  "åªç›å£³èšŒ", Odds = 4000 },
+	[20] = {Id = 20102049, Name=  "æœµå­¢å­å°˜", Odds = 4000 },
+	[21] = {Id = 20102050, Name=  "æ£µè£¸è—»", Odds = 4000 },
+	[22] = {Id = 20102051, Name=  "åªè ƒæ¯", Odds = 4000 },
 }
 
--- name: ÓãµÄÃû×Ö mainId: Ö÷Òªµô³öÎï needLevel: µö´ËÓãĞèÒªµÄ¼¶±ğ
-x712000_g_GPInfo[201] = { name = "²İÓã", mainId = 20102001, rareId = {1,4,7,}, needLevel = 1,}
-x712000_g_GPInfo[202] = { name = "öêÓã", mainId = 20102002, rareId = {1,4,8,}, needLevel = 2,}
-x712000_g_GPInfo[203] = { name = "öãÓã", mainId = 20102003, rareId = {1,4,9,}, needLevel = 3,}
-x712000_g_GPInfo[204] = { name = "Æ½Óã", mainId = 20102004, rareId = {2,5,10,}, needLevel = 4,}
-x712000_g_GPInfo[205] = { name = "÷­Óã", mainId = 20102005, rareId = {2,5,11,}, needLevel = 5,}
-x712000_g_GPInfo[206] = { name = "ºÚÓã", mainId = 20102006, rareId = {2,5,12,}, needLevel = 6,}
-x712000_g_GPInfo[207] = { name = "¶·Óã", mainId = 20102007, rareId = {3,6,13,}, needLevel = 7,}
-x712000_g_GPInfo[208] = { name = "öğÓã", mainId = 20102008, rareId = {3,6,14,}, needLevel = 8,}
-x712000_g_GPInfo[209] = { name = "ÒøÓã", mainId = 20102009, rareId = {3,6,15,}, needLevel = 9,}
-x712000_g_GPInfo[210] = { name = "öÙÓã", mainId = 20102010, rareId = {3,6,16,}, needLevel = 10,}
-x712000_g_GPInfo[211] = { name = "¹ÇÉàÓã", mainId = 20102011, rareId = {3,6,17,}, needLevel = 11,}
-x712000_g_GPInfo[212] = { name = "ÁùÏßÓã", mainId = 20102012, rareId = {3,6,18,}, needLevel = 12,}
-x712000_g_GPInfo[213] = { name = "ÇàÓã", mainId = 20102013, rareId = {1,4,7,}, needLevel = 1,}
-x712000_g_GPInfo[214] = { name = "¼ıÓã", mainId = 20102014, rareId = {1,4,8,}, needLevel = 2,}
-x712000_g_GPInfo[215] = { name = "öÔÓã", mainId = 20102015, rareId = {1,4,9,}, needLevel = 3,}
-x712000_g_GPInfo[216] = { name = "±âÍ·Óã", mainId = 20102016, rareId = {2,5,10,}, needLevel = 4,}
-x712000_g_GPInfo[217] = { name = "ÓÍÁ¦Óã", mainId = 20102017, rareId = {2,5,11,}, needLevel = 5,}
-x712000_g_GPInfo[218] = { name = "Çïµ¶Óã", mainId = 20102018, rareId = {2,5,12,}, needLevel = 6,}
-x712000_g_GPInfo[219] = { name = "ËóÓã", mainId = 20102019, rareId = {3,6,13,}, needLevel = 7,}
-x712000_g_GPInfo[220] = { name = "¹â±³Óã", mainId = 20102020, rareId = {3,6,14,}, needLevel = 8,}
-x712000_g_GPInfo[221] = { name = "¹³Óã", mainId = 20102021, rareId = {3,6,15,}, needLevel = 9,}
-x712000_g_GPInfo[222] = { name = "°Ú÷¢Óã", mainId = 20102022, rareId = {3,6,16,}, needLevel = 10,}
-x712000_g_GPInfo[223] = { name = "ÕäÖéÓã", mainId = 20102023, rareId = {3,6,17,}, needLevel = 11,}
-x712000_g_GPInfo[224] = { name = "ÎÄ²ıÓã", mainId = 20102024, rareId = {3,6,18,}, needLevel = 12,}
-x712000_g_GPInfo[225] = { name = "²İÓã", mainId = 20102001, rareId = {1,4,7,}, needLevel = 1,}
-x712000_g_GPInfo[226] = { name = "öêÓã", mainId = 20102002, rareId = {1,4,8,}, needLevel = 2,}
-x712000_g_GPInfo[227] = { name = "öãÓã", mainId = 20102003, rareId = {1,4,9,}, needLevel = 3,}
-x712000_g_GPInfo[228] = { name = "Æ½Óã", mainId = 20102004, rareId = {2,5,10,}, needLevel = 4,}
-x712000_g_GPInfo[229] = { name = "÷­Óã", mainId = 20102005, rareId = {2,5,11,}, needLevel = 5,}
-x712000_g_GPInfo[230] = { name = "ºÚÓã", mainId = 20102006, rareId = {2,5,12,}, needLevel = 6,}
-x712000_g_GPInfo[231] = { name = "¶·Óã", mainId = 20102007, rareId = {3,6,13,}, needLevel = 7,}
-x712000_g_GPInfo[232] = { name = "öğÓã", mainId = 20102008, rareId = {3,6,14,}, needLevel = 8,}
-x712000_g_GPInfo[233] = { name = "ÒøÓã", mainId = 20102009, rareId = {3,6,15,}, needLevel = 9,}
-x712000_g_GPInfo[234] = { name = "öÙÓã", mainId = 20102010, rareId = {3,6,16,}, needLevel = 10,}
-x712000_g_GPInfo[235] = { name = "¹ÇÉàÓã", mainId = 20102011, rareId = {3,6,17,}, needLevel = 11,}
-x712000_g_GPInfo[236] = { name = "ÁùÏßÓã", mainId = 20102012, rareId = {3,6,18,}, needLevel = 12,}
-x712000_g_GPInfo[237] = { name = "ÇàÓã", mainId = 20102013, rareId = {1,4,7,}, needLevel = 1,}
-x712000_g_GPInfo[238] = { name = "¼ıÓã", mainId = 20102014, rareId = {1,4,8,}, needLevel = 2,}
-x712000_g_GPInfo[239] = { name = "öÔÓã", mainId = 20102015, rareId = {1,4,9,}, needLevel = 3,}
-x712000_g_GPInfo[240] = { name = "±âÍ·Óã", mainId = 20102016, rareId = {2,5,10,}, needLevel = 4,}
-x712000_g_GPInfo[241] = { name = "ÓÍÁ¦Óã", mainId = 20102017, rareId = {2,5,11,}, needLevel = 5,}
-x712000_g_GPInfo[242] = { name = "Çïµ¶Óã", mainId = 20102018, rareId = {2,5,12,}, needLevel = 6,}
-x712000_g_GPInfo[243] = { name = "ËóÓã", mainId = 20102019, rareId = {3,6,13,}, needLevel = 7,}
-x712000_g_GPInfo[244] = { name = "¹â±³Óã", mainId = 20102020, rareId = {3,6,14,}, needLevel = 8,}
-x712000_g_GPInfo[245] = { name = "¹³Óã", mainId = 20102021, rareId = {3,6,15,}, needLevel = 9,}
-x712000_g_GPInfo[246] = { name = "°Ú÷¢Óã", mainId = 20102022, rareId = {3,6,16,}, needLevel = 10,}
-x712000_g_GPInfo[247] = { name = "ÕäÖéÓã", mainId = 20102023, rareId = {3,6,17,}, needLevel = 11,}
-x712000_g_GPInfo[248] = { name = "ÎÄ²ıÓã", mainId = 20102024, rareId = {3,6,18,}, needLevel = 12,}
-x712000_g_GPInfo[249] = { name = "ëÙÖ¬Óã", mainId = 20102040, rareId = {3,6,19,}, needLevel = 9,}
-x712000_g_GPInfo[250] = { name = "ÆßĞÇÓã", mainId = 20102041, rareId = {3,6,20,}, needLevel = 10,}
-x712000_g_GPInfo[251] = { name = "³¤ÎÇÓã", mainId = 20102042, rareId = {3,6,21,}, needLevel = 11,}
-x712000_g_GPInfo[252] = { name = "¶à÷¢Óã", mainId = 20102043, rareId = {3,6,22,}, needLevel = 12,}
-x712000_g_GPInfo[253] = { name = "ÇÌ×ìºì÷ˆ", mainId = 20102044, rareId = {3,6,19,}, needLevel = 9,}
-x712000_g_GPInfo[254] = { name = "Çï°×öÙ", mainId = 20102045, rareId = {3,6,20,}, needLevel = 10,}
-x712000_g_GPInfo[255] = { name = "µû÷¢Óã", mainId = 20102046, rareId = {3,6,21,}, needLevel = 11,}
-x712000_g_GPInfo[256] = { name = "ÎÄ÷¥Óã", mainId = 20102047, rareId = {3,6,22,}, needLevel = 12,}
+-- name: é±¼çš„åå­— mainId: ä¸»è¦æ‰å‡ºç‰© needLevel: é’“æ­¤é±¼éœ€è¦çš„çº§åˆ«
+x712000_g_GPInfo[201] = { name = "è‰é±¼", mainId = 20102001, rareId = {1,4,7,}, needLevel = 1,}
+x712000_g_GPInfo[202] = { name = "é²«é±¼", mainId = 20102002, rareId = {1,4,8,}, needLevel = 2,}
+x712000_g_GPInfo[203] = { name = "é²¢é±¼", mainId = 20102003, rareId = {1,4,9,}, needLevel = 3,}
+x712000_g_GPInfo[204] = { name = "å¹³é±¼", mainId = 20102004, rareId = {2,5,10,}, needLevel = 4,}
+x712000_g_GPInfo[205] = { name = "é³é±¼", mainId = 20102005, rareId = {2,5,11,}, needLevel = 5,}
+x712000_g_GPInfo[206] = { name = "é»‘é±¼", mainId = 20102006, rareId = {2,5,12,}, needLevel = 6,}
+x712000_g_GPInfo[207] = { name = "æ–—é±¼", mainId = 20102007, rareId = {3,6,13,}, needLevel = 7,}
+x712000_g_GPInfo[208] = { name = "é²³é±¼", mainId = 20102008, rareId = {3,6,14,}, needLevel = 8,}
+x712000_g_GPInfo[209] = { name = "é“¶é±¼", mainId = 20102009, rareId = {3,6,15,}, needLevel = 9,}
+x712000_g_GPInfo[210] = { name = "é²‘é±¼", mainId = 20102010, rareId = {3,6,16,}, needLevel = 10,}
+x712000_g_GPInfo[211] = { name = "éª¨èˆŒé±¼", mainId = 20102011, rareId = {3,6,17,}, needLevel = 11,}
+x712000_g_GPInfo[212] = { name = "å…­çº¿é±¼", mainId = 20102012, rareId = {3,6,18,}, needLevel = 12,}
+x712000_g_GPInfo[213] = { name = "é’é±¼", mainId = 20102013, rareId = {1,4,7,}, needLevel = 1,}
+x712000_g_GPInfo[214] = { name = "ç®­é±¼", mainId = 20102014, rareId = {1,4,8,}, needLevel = 2,}
+x712000_g_GPInfo[215] = { name = "é²ˆé±¼", mainId = 20102015, rareId = {1,4,9,}, needLevel = 3,}
+x712000_g_GPInfo[216] = { name = "æ‰å¤´é±¼", mainId = 20102016, rareId = {2,5,10,}, needLevel = 4,}
+x712000_g_GPInfo[217] = { name = "æ²¹åŠ›é±¼", mainId = 20102017, rareId = {2,5,11,}, needLevel = 5,}
+x712000_g_GPInfo[218] = { name = "ç§‹åˆ€é±¼", mainId = 20102018, rareId = {2,5,12,}, needLevel = 6,}
+x712000_g_GPInfo[219] = { name = "æ¢­é±¼", mainId = 20102019, rareId = {3,6,13,}, needLevel = 7,}
+x712000_g_GPInfo[220] = { name = "å…‰èƒŒé±¼", mainId = 20102020, rareId = {3,6,14,}, needLevel = 8,}
+x712000_g_GPInfo[221] = { name = "é’©é±¼", mainId = 20102021, rareId = {3,6,15,}, needLevel = 9,}
+x712000_g_GPInfo[222] = { name = "æ‘†é³é±¼", mainId = 20102022, rareId = {3,6,16,}, needLevel = 10,}
+x712000_g_GPInfo[223] = { name = "çç é±¼", mainId = 20102023, rareId = {3,6,17,}, needLevel = 11,}
+x712000_g_GPInfo[224] = { name = "æ–‡æ˜Œé±¼", mainId = 20102024, rareId = {3,6,18,}, needLevel = 12,}
+x712000_g_GPInfo[225] = { name = "è‰é±¼", mainId = 20102001, rareId = {1,4,7,}, needLevel = 1,}
+x712000_g_GPInfo[226] = { name = "é²«é±¼", mainId = 20102002, rareId = {1,4,8,}, needLevel = 2,}
+x712000_g_GPInfo[227] = { name = "é²¢é±¼", mainId = 20102003, rareId = {1,4,9,}, needLevel = 3,}
+x712000_g_GPInfo[228] = { name = "å¹³é±¼", mainId = 20102004, rareId = {2,5,10,}, needLevel = 4,}
+x712000_g_GPInfo[229] = { name = "é³é±¼", mainId = 20102005, rareId = {2,5,11,}, needLevel = 5,}
+x712000_g_GPInfo[230] = { name = "é»‘é±¼", mainId = 20102006, rareId = {2,5,12,}, needLevel = 6,}
+x712000_g_GPInfo[231] = { name = "æ–—é±¼", mainId = 20102007, rareId = {3,6,13,}, needLevel = 7,}
+x712000_g_GPInfo[232] = { name = "é²³é±¼", mainId = 20102008, rareId = {3,6,14,}, needLevel = 8,}
+x712000_g_GPInfo[233] = { name = "é“¶é±¼", mainId = 20102009, rareId = {3,6,15,}, needLevel = 9,}
+x712000_g_GPInfo[234] = { name = "é²‘é±¼", mainId = 20102010, rareId = {3,6,16,}, needLevel = 10,}
+x712000_g_GPInfo[235] = { name = "éª¨èˆŒé±¼", mainId = 20102011, rareId = {3,6,17,}, needLevel = 11,}
+x712000_g_GPInfo[236] = { name = "å…­çº¿é±¼", mainId = 20102012, rareId = {3,6,18,}, needLevel = 12,}
+x712000_g_GPInfo[237] = { name = "é’é±¼", mainId = 20102013, rareId = {1,4,7,}, needLevel = 1,}
+x712000_g_GPInfo[238] = { name = "ç®­é±¼", mainId = 20102014, rareId = {1,4,8,}, needLevel = 2,}
+x712000_g_GPInfo[239] = { name = "é²ˆé±¼", mainId = 20102015, rareId = {1,4,9,}, needLevel = 3,}
+x712000_g_GPInfo[240] = { name = "æ‰å¤´é±¼", mainId = 20102016, rareId = {2,5,10,}, needLevel = 4,}
+x712000_g_GPInfo[241] = { name = "æ²¹åŠ›é±¼", mainId = 20102017, rareId = {2,5,11,}, needLevel = 5,}
+x712000_g_GPInfo[242] = { name = "ç§‹åˆ€é±¼", mainId = 20102018, rareId = {2,5,12,}, needLevel = 6,}
+x712000_g_GPInfo[243] = { name = "æ¢­é±¼", mainId = 20102019, rareId = {3,6,13,}, needLevel = 7,}
+x712000_g_GPInfo[244] = { name = "å…‰èƒŒé±¼", mainId = 20102020, rareId = {3,6,14,}, needLevel = 8,}
+x712000_g_GPInfo[245] = { name = "é’©é±¼", mainId = 20102021, rareId = {3,6,15,}, needLevel = 9,}
+x712000_g_GPInfo[246] = { name = "æ‘†é³é±¼", mainId = 20102022, rareId = {3,6,16,}, needLevel = 10,}
+x712000_g_GPInfo[247] = { name = "çç é±¼", mainId = 20102023, rareId = {3,6,17,}, needLevel = 11,}
+x712000_g_GPInfo[248] = { name = "æ–‡æ˜Œé±¼", mainId = 20102024, rareId = {3,6,18,}, needLevel = 12,}
+x712000_g_GPInfo[249] = { name = "èƒ­è„‚é±¼", mainId = 20102040, rareId = {3,6,19,}, needLevel = 9,}
+x712000_g_GPInfo[250] = { name = "ä¸ƒæ˜Ÿé±¼", mainId = 20102041, rareId = {3,6,20,}, needLevel = 10,}
+x712000_g_GPInfo[251] = { name = "é•¿å»é±¼", mainId = 20102042, rareId = {3,6,21,}, needLevel = 11,}
+x712000_g_GPInfo[252] = { name = "å¤šé³é±¼", mainId = 20102043, rareId = {3,6,22,}, needLevel = 12,}
+x712000_g_GPInfo[253] = { name = "ç¿˜å˜´çº¢é²Œ", mainId = 20102044, rareId = {3,6,19,}, needLevel = 9,}
+x712000_g_GPInfo[254] = { name = "ç§‹ç™½é²‘", mainId = 20102045, rareId = {3,6,20,}, needLevel = 10,}
+x712000_g_GPInfo[255] = { name = "è¶é³é±¼", mainId = 20102046, rareId = {3,6,21,}, needLevel = 11,}
+x712000_g_GPInfo[256] = { name = "æ–‡é³é±¼", mainId = 20102047, rareId = {3,6,22,}, needLevel = 12,}
 
---x712000_g_GPInfo[202] = { name = "öêÓã", mainId = 20102002, rareId = 20102026, rareName = "¿Ã×Ï²Ë", rOdds = 25000, needLevel = 2 }
---x712000_g_GPInfo[203] = { name = "öãÓã", mainId = 20102003, rareId = 20102027, rareName = "Ö»°×Ïº", rOdds = 25000, needLevel = 3 }
---x712000_g_GPInfo[204] = { name = "Æ½Óã", mainId = 20102004, rareId = 20102028, rareName = "Ö»ÁúÏº", rOdds = 2000, needLevel = 4 }
---x712000_g_GPInfo[205] = { name = "÷­Óã", mainId = 20102005, rareId = 20102029, rareName = "Ö»ÇàĞ·", rOdds = 2000, needLevel = 5 }
---x712000_g_GPInfo[206] = { name = "ºÚÓã", mainId = 20102006, rareId = 20102030, rareName = "Ö»ÎÄ¸ò", rOdds = 2000, needLevel = 6 }
---x712000_g_GPInfo[207] = { name = "¶·Óã", mainId = 20102007, rareId = 20102031, rareName = "Ö»êİ±´", rOdds = 200, needLevel = 7 }
---x712000_g_GPInfo[208] = { name = "öğÓã", mainId = 20102008, rareId = 20102032, rareName = "Ö»¶ÔÏº", rOdds = 200, needLevel = 8 }
---x712000_g_GPInfo[209] = { name = "ÒøÓã", mainId = 20102009, rareId = 20102033, rareName = "Ö»ÔÓÉ«¸ò", rOdds = 200, needLevel = 9 }
---x712000_g_GPInfo[210] = { name = "öÙÓã", mainId = 20102010, rareId = 20102034, rareName = "Ö»ºÓ°ö", rOdds = 200, needLevel = 10 }
---x712000_g_GPInfo[211] = { name = "¹ÇÉàÓã", mainId = 20102011, rareId = 20102035, rareName = "Ö»ÍÜĞ·", rOdds = 200, needLevel = 11 }
---x712000_g_GPInfo[212] = { name = "ÁùÏßÓã", mainId = 20102012, rareId = 20102036, rareName = "Ö»ÓñĞ·", rOdds = 200, needLevel = 12 }
---x712000_g_GPInfo[213] = { name = "ÇàÓã", mainId = 20102013, rareId = 20102025, rareName = "Ö»»¨¸ò", rOdds = 25000, needLevel = 1 }
---x712000_g_GPInfo[214] = { name = "¼ıÓã", mainId = 20102014, rareId = 20102026, rareName = "¿Ã×Ï²Ë", rOdds = 25000, needLevel = 2 }
---x712000_g_GPInfo[215] = { name = "öÔÓã", mainId = 20102015, rareId = 20102027, rareName = "Ö»°×Ïº", rOdds = 25000, needLevel = 3 }
---x712000_g_GPInfo[216] = { name = "±âÍ·Óã", mainId = 20102016, rareId = 20102028, rareName = "Ö»ÁúÏº", rOdds = 2000, needLevel = 4 }
---x712000_g_GPInfo[217] = { name = "ÓÍÁ¦Óã", mainId = 20102017, rareId = 20102029, rareName = "Ö»ÇàĞ·", rOdds = 2000, needLevel = 5 }
---x712000_g_GPInfo[218] = { name = "Çïµ¶Óã", mainId = 20102018, rareId = 20102030, rareName = "Ö»ÎÄ¸ò", rOdds = 2000, needLevel = 6 }
---x712000_g_GPInfo[219] = { name = "ËóÓã", mainId = 20102019, rareId = 20102031, rareName = "Ö»êİ±´", rOdds = 200, needLevel = 7 }
---x712000_g_GPInfo[220] = { name = "¹â±³Óã", mainId = 20102020, rareId = 20102032, rareName = "Ö»¶ÔÏº", rOdds = 200, needLevel = 8 }
---x712000_g_GPInfo[221] = { name = "¹³Óã", mainId = 20102021, rareId = 20102033, rareName = "Ö»ÔÓÉ«¸ò", rOdds = 200, needLevel = 9 }
---x712000_g_GPInfo[222] = { name = "°Ú÷¢Óã", mainId = 20102022, rareId = 20102034, rareName = "Ö»ºÓ°ö", rOdds = 200, needLevel = 10 }
---x712000_g_GPInfo[223] = { name = "ÕäÖéÓã", mainId = 20102023, rareId = 20102035, rareName = "Ö»ÍÜĞ·", rOdds = 200, needLevel = 11 }
---x712000_g_GPInfo[224] = { name = "ÎÄ²ıÓã", mainId = 20102024, rareId = 20102036, rareName = "Ö»ÓñĞ·", rOdds = 200, needLevel = 12 }
---x712000_g_GPInfo[225] = { name = "²İÓã", mainId = 20102001, rareId = 20102025, rareName = "Ö»»¨¸ò", rOdds = 25000, needLevel = 1 }
---x712000_g_GPInfo[226] = { name = "öêÓã", mainId = 20102002, rareId = 20102026, rareName = "¿Ã×Ï²Ë", rOdds = 25000, needLevel = 2 }
---x712000_g_GPInfo[227] = { name = "öãÓã", mainId = 20102003, rareId = 20102027, rareName = "Ö»°×Ïº", rOdds = 25000, needLevel = 3 }
---x712000_g_GPInfo[228] = { name = "Æ½Óã", mainId = 20102004, rareId = 20102028, rareName = "Ö»ÁúÏº", rOdds = 2000, needLevel = 4 }
---x712000_g_GPInfo[229] = { name = "÷­Óã", mainId = 20102005, rareId = 20102029, rareName = "Ö»ÇàĞ·", rOdds = 2000, needLevel = 5 }
---x712000_g_GPInfo[230] = { name = "ºÚÓã", mainId = 20102006, rareId = 20102030, rareName = "Ö»ÎÄ¸ò", rOdds = 2000, needLevel = 6 }
---x712000_g_GPInfo[231] = { name = "¶·Óã", mainId = 20102007, rareId = 20102031, rareName = "Ö»êİ±´", rOdds = 200, needLevel = 7 }
---x712000_g_GPInfo[232] = { name = "öğÓã", mainId = 20102008, rareId = 20102032, rareName = "Ö»¶ÔÏº", rOdds = 200, needLevel = 8 }
---x712000_g_GPInfo[233] = { name = "ÒøÓã", mainId = 20102009, rareId = 20102033, rareName = "Ö»ÔÓÉ«¸ò", rOdds = 200, needLevel = 9 }
---x712000_g_GPInfo[234] = { name = "öÙÓã", mainId = 20102010, rareId = 20102034, rareName = "Ö»ºÓ°ö", rOdds = 200, needLevel = 10 }
---x712000_g_GPInfo[235] = { name = "¹ÇÉàÓã", mainId = 20102011, rareId = 20102035, rareName = "Ö»ÍÜĞ·", rOdds = 200, needLevel = 11 }
---x712000_g_GPInfo[236] = { name = "ÁùÏßÓã", mainId = 20102012, rareId = 20102036, rareName = "Ö»ÓñĞ·", rOdds = 200, needLevel = 12 }
---x712000_g_GPInfo[237] = { name = "ÇàÓã", mainId = 20102013, rareId = 20102025, rareName = "Ö»»¨¸ò", rOdds = 25000, needLevel = 1 }
---x712000_g_GPInfo[238] = { name = "¼ıÓã", mainId = 20102014, rareId = 20102026, rareName = "¿Ã×Ï²Ë", rOdds = 25000, needLevel = 2 }
---x712000_g_GPInfo[239] = { name = "öÔÓã", mainId = 20102015, rareId = 20102027, rareName = "Ö»°×Ïº", rOdds = 25000, needLevel = 3 }
---x712000_g_GPInfo[240] = { name = "±âÍ·Óã", mainId = 20102016, rareId = 20102028, rareName = "Ö»ÁúÏº", rOdds = 2000, needLevel = 4 }
---x712000_g_GPInfo[241] = { name = "ÓÍÁ¦Óã", mainId = 20102017, rareId = 20102029, rareName = "Ö»ÇàĞ·", rOdds = 2000, needLevel = 5 }
---x712000_g_GPInfo[242] = { name = "Çïµ¶Óã", mainId = 20102018, rareId = 20102030, rareName = "Ö»ÎÄ¸ò", rOdds = 2000, needLevel = 6 }
---x712000_g_GPInfo[243] = { name = "ËóÓã", mainId = 20102019, rareId = 20102031, rareName = "Ö»êİ±´", rOdds = 200, needLevel = 7 }
---x712000_g_GPInfo[244] = { name = "¹â±³Óã", mainId = 20102020, rareId = 20102032, rareName = "Ö»¶ÔÏº", rOdds = 200, needLevel = 8 }
---x712000_g_GPInfo[245] = { name = "¹³Óã", mainId = 20102021, rareId = 20102033, rareName = "Ö»ÔÓÉ«¸ò", rOdds = 200, needLevel = 9 }
---x712000_g_GPInfo[246] = { name = "°Ú÷¢Óã", mainId = 20102022, rareId = 20102034, rareName = "Ö»ºÓ°ö", rOdds = 200, needLevel = 10 }
---x712000_g_GPInfo[247] = { name = "ÕäÖéÓã", mainId = 20102023, rareId = 20102035, rareName = "Ö»ÍÜĞ·", rOdds = 200, needLevel = 11 }
---x712000_g_GPInfo[248] = { name = "ÎÄ²ıÓã", mainId = 20102024, rareId = 20102036, rareName = "Ö»ÓñĞ·", rOdds = 200, needLevel = 12 }
---x712000_g_GPInfo[249] = { name = "ëÙÖ¬Óã", mainId = 20102040, rareId = 20102048, rareName = "Ö»ÑÎ¿Ç°ö", rOdds = 200, needLevel = 9 }
---x712000_g_GPInfo[250] = { name = "ÆßĞÇÓã", mainId = 20102041, rareId = 20102049, rareName = "¶äæß×Ó³¾", rOdds = 200, needLevel = 10 }
---x712000_g_GPInfo[251] = { name = "³¤ÎÇÓã", mainId = 20102042, rareId = 20102050, rareName = "¿ÃÂãÔå", rOdds = 200, needLevel = 11 }
---x712000_g_GPInfo[252] = { name = "¶à÷¢Óã", mainId = 20102043, rareId = 20102051, rareName = "Ö»ÙùÄ¸", rOdds = 200, needLevel = 12 }
---x712000_g_GPInfo[253] = { name = "ÇÌ×ìºì÷ˆ", mainId = 20102044, rareId = 20102048, rareName = "Ö»ÑÎ¿Ç°ö", rOdds = 200, needLevel = 9 }
---x712000_g_GPInfo[254] = { name = "Çï°×öÙ", mainId = 20102045, rareId = 20102049, rareName = "¶äæß×Ó³¾", rOdds = 200, needLevel = 10 }
---x712000_g_GPInfo[255] = { name = "µû÷¢Óã", mainId = 20102046, rareId = 20102050, rareName = "¿ÃÂãÔå", rOdds = 200, needLevel = 11 }
---x712000_g_GPInfo[256] = { name = "ÎÄ÷¥Óã", mainId = 20102047, rareId = 20102051, rareName = "Ö»ÙùÄ¸", rOdds = 200, needLevel = 12 }
+--x712000_g_GPInfo[202] = { name = "é²«é±¼", mainId = 20102002, rareId = 20102026, rareName = "æ£µç´«èœ", rOdds = 25000, needLevel = 2 }
+--x712000_g_GPInfo[203] = { name = "é²¢é±¼", mainId = 20102003, rareId = 20102027, rareName = "åªç™½è™¾", rOdds = 25000, needLevel = 3 }
+--x712000_g_GPInfo[204] = { name = "å¹³é±¼", mainId = 20102004, rareId = 20102028, rareName = "åªé¾™è™¾", rOdds = 2000, needLevel = 4 }
+--x712000_g_GPInfo[205] = { name = "é³é±¼", mainId = 20102005, rareId = 20102029, rareName = "åªé’èŸ¹", rOdds = 2000, needLevel = 5 }
+--x712000_g_GPInfo[206] = { name = "é»‘é±¼", mainId = 20102006, rareId = 20102030, rareName = "åªæ–‡è›¤", rOdds = 2000, needLevel = 6 }
+--x712000_g_GPInfo[207] = { name = "æ–—é±¼", mainId = 20102007, rareId = 20102031, rareName = "åªè´»è´", rOdds = 200, needLevel = 7 }
+--x712000_g_GPInfo[208] = { name = "é²³é±¼", mainId = 20102008, rareId = 20102032, rareName = "åªå¯¹è™¾", rOdds = 200, needLevel = 8 }
+--x712000_g_GPInfo[209] = { name = "é“¶é±¼", mainId = 20102009, rareId = 20102033, rareName = "åªæ‚è‰²è›¤", rOdds = 200, needLevel = 9 }
+--x712000_g_GPInfo[210] = { name = "é²‘é±¼", mainId = 20102010, rareId = 20102034, rareName = "åªæ²³èšŒ", rOdds = 200, needLevel = 10 }
+--x712000_g_GPInfo[211] = { name = "éª¨èˆŒé±¼", mainId = 20102011, rareId = 20102035, rareName = "åªè›™èŸ¹", rOdds = 200, needLevel = 11 }
+--x712000_g_GPInfo[212] = { name = "å…­çº¿é±¼", mainId = 20102012, rareId = 20102036, rareName = "åªç‰èŸ¹", rOdds = 200, needLevel = 12 }
+--x712000_g_GPInfo[213] = { name = "é’é±¼", mainId = 20102013, rareId = 20102025, rareName = "åªèŠ±è›¤", rOdds = 25000, needLevel = 1 }
+--x712000_g_GPInfo[214] = { name = "ç®­é±¼", mainId = 20102014, rareId = 20102026, rareName = "æ£µç´«èœ", rOdds = 25000, needLevel = 2 }
+--x712000_g_GPInfo[215] = { name = "é²ˆé±¼", mainId = 20102015, rareId = 20102027, rareName = "åªç™½è™¾", rOdds = 25000, needLevel = 3 }
+--x712000_g_GPInfo[216] = { name = "æ‰å¤´é±¼", mainId = 20102016, rareId = 20102028, rareName = "åªé¾™è™¾", rOdds = 2000, needLevel = 4 }
+--x712000_g_GPInfo[217] = { name = "æ²¹åŠ›é±¼", mainId = 20102017, rareId = 20102029, rareName = "åªé’èŸ¹", rOdds = 2000, needLevel = 5 }
+--x712000_g_GPInfo[218] = { name = "ç§‹åˆ€é±¼", mainId = 20102018, rareId = 20102030, rareName = "åªæ–‡è›¤", rOdds = 2000, needLevel = 6 }
+--x712000_g_GPInfo[219] = { name = "æ¢­é±¼", mainId = 20102019, rareId = 20102031, rareName = "åªè´»è´", rOdds = 200, needLevel = 7 }
+--x712000_g_GPInfo[220] = { name = "å…‰èƒŒé±¼", mainId = 20102020, rareId = 20102032, rareName = "åªå¯¹è™¾", rOdds = 200, needLevel = 8 }
+--x712000_g_GPInfo[221] = { name = "é’©é±¼", mainId = 20102021, rareId = 20102033, rareName = "åªæ‚è‰²è›¤", rOdds = 200, needLevel = 9 }
+--x712000_g_GPInfo[222] = { name = "æ‘†é³é±¼", mainId = 20102022, rareId = 20102034, rareName = "åªæ²³èšŒ", rOdds = 200, needLevel = 10 }
+--x712000_g_GPInfo[223] = { name = "çç é±¼", mainId = 20102023, rareId = 20102035, rareName = "åªè›™èŸ¹", rOdds = 200, needLevel = 11 }
+--x712000_g_GPInfo[224] = { name = "æ–‡æ˜Œé±¼", mainId = 20102024, rareId = 20102036, rareName = "åªç‰èŸ¹", rOdds = 200, needLevel = 12 }
+--x712000_g_GPInfo[225] = { name = "è‰é±¼", mainId = 20102001, rareId = 20102025, rareName = "åªèŠ±è›¤", rOdds = 25000, needLevel = 1 }
+--x712000_g_GPInfo[226] = { name = "é²«é±¼", mainId = 20102002, rareId = 20102026, rareName = "æ£µç´«èœ", rOdds = 25000, needLevel = 2 }
+--x712000_g_GPInfo[227] = { name = "é²¢é±¼", mainId = 20102003, rareId = 20102027, rareName = "åªç™½è™¾", rOdds = 25000, needLevel = 3 }
+--x712000_g_GPInfo[228] = { name = "å¹³é±¼", mainId = 20102004, rareId = 20102028, rareName = "åªé¾™è™¾", rOdds = 2000, needLevel = 4 }
+--x712000_g_GPInfo[229] = { name = "é³é±¼", mainId = 20102005, rareId = 20102029, rareName = "åªé’èŸ¹", rOdds = 2000, needLevel = 5 }
+--x712000_g_GPInfo[230] = { name = "é»‘é±¼", mainId = 20102006, rareId = 20102030, rareName = "åªæ–‡è›¤", rOdds = 2000, needLevel = 6 }
+--x712000_g_GPInfo[231] = { name = "æ–—é±¼", mainId = 20102007, rareId = 20102031, rareName = "åªè´»è´", rOdds = 200, needLevel = 7 }
+--x712000_g_GPInfo[232] = { name = "é²³é±¼", mainId = 20102008, rareId = 20102032, rareName = "åªå¯¹è™¾", rOdds = 200, needLevel = 8 }
+--x712000_g_GPInfo[233] = { name = "é“¶é±¼", mainId = 20102009, rareId = 20102033, rareName = "åªæ‚è‰²è›¤", rOdds = 200, needLevel = 9 }
+--x712000_g_GPInfo[234] = { name = "é²‘é±¼", mainId = 20102010, rareId = 20102034, rareName = "åªæ²³èšŒ", rOdds = 200, needLevel = 10 }
+--x712000_g_GPInfo[235] = { name = "éª¨èˆŒé±¼", mainId = 20102011, rareId = 20102035, rareName = "åªè›™èŸ¹", rOdds = 200, needLevel = 11 }
+--x712000_g_GPInfo[236] = { name = "å…­çº¿é±¼", mainId = 20102012, rareId = 20102036, rareName = "åªç‰èŸ¹", rOdds = 200, needLevel = 12 }
+--x712000_g_GPInfo[237] = { name = "é’é±¼", mainId = 20102013, rareId = 20102025, rareName = "åªèŠ±è›¤", rOdds = 25000, needLevel = 1 }
+--x712000_g_GPInfo[238] = { name = "ç®­é±¼", mainId = 20102014, rareId = 20102026, rareName = "æ£µç´«èœ", rOdds = 25000, needLevel = 2 }
+--x712000_g_GPInfo[239] = { name = "é²ˆé±¼", mainId = 20102015, rareId = 20102027, rareName = "åªç™½è™¾", rOdds = 25000, needLevel = 3 }
+--x712000_g_GPInfo[240] = { name = "æ‰å¤´é±¼", mainId = 20102016, rareId = 20102028, rareName = "åªé¾™è™¾", rOdds = 2000, needLevel = 4 }
+--x712000_g_GPInfo[241] = { name = "æ²¹åŠ›é±¼", mainId = 20102017, rareId = 20102029, rareName = "åªé’èŸ¹", rOdds = 2000, needLevel = 5 }
+--x712000_g_GPInfo[242] = { name = "ç§‹åˆ€é±¼", mainId = 20102018, rareId = 20102030, rareName = "åªæ–‡è›¤", rOdds = 2000, needLevel = 6 }
+--x712000_g_GPInfo[243] = { name = "æ¢­é±¼", mainId = 20102019, rareId = 20102031, rareName = "åªè´»è´", rOdds = 200, needLevel = 7 }
+--x712000_g_GPInfo[244] = { name = "å…‰èƒŒé±¼", mainId = 20102020, rareId = 20102032, rareName = "åªå¯¹è™¾", rOdds = 200, needLevel = 8 }
+--x712000_g_GPInfo[245] = { name = "é’©é±¼", mainId = 20102021, rareId = 20102033, rareName = "åªæ‚è‰²è›¤", rOdds = 200, needLevel = 9 }
+--x712000_g_GPInfo[246] = { name = "æ‘†é³é±¼", mainId = 20102022, rareId = 20102034, rareName = "åªæ²³èšŒ", rOdds = 200, needLevel = 10 }
+--x712000_g_GPInfo[247] = { name = "çç é±¼", mainId = 20102023, rareId = 20102035, rareName = "åªè›™èŸ¹", rOdds = 200, needLevel = 11 }
+--x712000_g_GPInfo[248] = { name = "æ–‡æ˜Œé±¼", mainId = 20102024, rareId = 20102036, rareName = "åªç‰èŸ¹", rOdds = 200, needLevel = 12 }
+--x712000_g_GPInfo[249] = { name = "èƒ­è„‚é±¼", mainId = 20102040, rareId = 20102048, rareName = "åªç›å£³èšŒ", rOdds = 200, needLevel = 9 }
+--x712000_g_GPInfo[250] = { name = "ä¸ƒæ˜Ÿé±¼", mainId = 20102041, rareId = 20102049, rareName = "æœµå­¢å­å°˜", rOdds = 200, needLevel = 10 }
+--x712000_g_GPInfo[251] = { name = "é•¿å»é±¼", mainId = 20102042, rareId = 20102050, rareName = "æ£µè£¸è—»", rOdds = 200, needLevel = 11 }
+--x712000_g_GPInfo[252] = { name = "å¤šé³é±¼", mainId = 20102043, rareId = 20102051, rareName = "åªè ƒæ¯", rOdds = 200, needLevel = 12 }
+--x712000_g_GPInfo[253] = { name = "ç¿˜å˜´çº¢é²Œ", mainId = 20102044, rareId = 20102048, rareName = "åªç›å£³èšŒ", rOdds = 200, needLevel = 9 }
+--x712000_g_GPInfo[254] = { name = "ç§‹ç™½é²‘", mainId = 20102045, rareId = 20102049, rareName = "æœµå­¢å­å°˜", rOdds = 200, needLevel = 10 }
+--x712000_g_GPInfo[255] = { name = "è¶é³é±¼", mainId = 20102046, rareId = 20102050, rareName = "æ£µè£¸è—»", rOdds = 200, needLevel = 11 }
+--x712000_g_GPInfo[256] = { name = "æ–‡é³é±¼", mainId = 20102047, rareId = 20102051, rareName = "åªè ƒæ¯", rOdds = 200, needLevel = 12 }
 
 x712000_g_FishTime = {}
-x712000_g_FishTime[0] = { time = 31000, rand = 10000 }	-- Í¨³£ 36 Ãë£¬ÉÏÏÂ¸¡¶¯ 5
-x712000_g_FishTime[1] = { time = 25000, rand = 10000 }	-- Í¨³£ 30 Ãë£¬ÉÏÏÂ¸¡¶¯ 5
-x712000_g_FishTime[2] = { time = 20000, rand = 10000 }	-- Í¨³£ 25 Ãë£¬ÉÏÏÂ¸¡¶¯ 5
-x712000_g_FishTime[3] = { time = 15000, rand = 10000 }	-- Í¨³£ 20 Ãë£¬ÉÏÏÂ¸¡¶¯ 5
+x712000_g_FishTime[0] = { time = 31000, rand = 10000 }	-- é€šå¸¸ 36 ç§’ï¼Œä¸Šä¸‹æµ®åŠ¨ 5
+x712000_g_FishTime[1] = { time = 25000, rand = 10000 }	-- é€šå¸¸ 30 ç§’ï¼Œä¸Šä¸‹æµ®åŠ¨ 5
+x712000_g_FishTime[2] = { time = 20000, rand = 10000 }	-- é€šå¸¸ 25 ç§’ï¼Œä¸Šä¸‹æµ®åŠ¨ 5
+x712000_g_FishTime[3] = { time = 15000, rand = 10000 }	-- é€šå¸¸ 20 ç§’ï¼Œä¸Šä¸‹æµ®åŠ¨ 5
 
-x712000_g_FishBaitImpactID = { 19, 20, 21 }		-- È·±£ÕâÀïµÄÖµ¶ÔÓ¦µÄÏÂ±êÓë x712000_g_FishTime µÄÏàÓ¦ÏÂ±êÏàÍ¬
+x712000_g_FishBaitImpactID = { 19, 20, 21 }		-- ç¡®ä¿è¿™é‡Œçš„å€¼å¯¹åº”çš„ä¸‹æ ‡ä¸ x712000_g_FishTime çš„ç›¸åº”ä¸‹æ ‡ç›¸åŒ
 
---Ì«¹«µöÓã zchw
+--å¤ªå…¬é’“é±¼ zchw
 x712000_g_TaiGongYuGan = 10100032;
 x712000_g_impact_id = 77;
--- ³¤ÓãÈº
+-- é•¿é±¼ç¾¤
 function x712000_OnCreate( sceneId, growPointType, x, y )
-	local ItemCount = 0												-- ÎïÆ·ÊıÁ¿
-	ItemBoxEnterScene( x, y, growPointType, sceneId,QUALITY_MUST_BE_CHANGE, ItemCount )	--º¯Êıµ÷ÓÃ
+	local ItemCount = 0												-- ç‰©å“æ•°é‡
+	ItemBoxEnterScene( x, y, growPointType, sceneId,QUALITY_MUST_BE_CHANGE, ItemCount )	--å‡½æ•°è°ƒç”¨
 end
 
--- µöÓãÇ°
+-- é’“é±¼å‰
 function x712000_OnOpen( sceneId, selfId, targetId )
 	local growPointType = LuaFnGetItemBoxGrowPointType( sceneId, targetId )
 	local GPInfo = x712000_g_GPInfo[growPointType]
@@ -177,15 +177,15 @@ function x712000_OnOpen( sceneId, selfId, targetId )
 		return OR_INVALID_TARGET
 	end
 
-	-- ¼ì²éµöÓã¼¼ÄÜµÈ¼¶
+	-- æ£€æŸ¥é’“é±¼æŠ€èƒ½ç­‰çº§
 	local AbilityLevel = QueryHumanAbilityLevel( sceneId, selfId, x712000_g_AbilityId )
 	if AbilityLevel < GPInfo.needLevel then
-		x712000_NotifyFailTips( sceneId, selfId, "ĞèÒªµöÓã¼¼ÄÜ " .. GPInfo.needLevel .. " ¼¶£¬µ±Ç° " .. AbilityLevel .. " ¼¶" )
+		x712000_NotifyFailTips( sceneId, selfId, "éœ€è¦é’“é±¼æŠ€èƒ½ " .. GPInfo.needLevel .. " çº§ï¼Œå½“å‰ " .. AbilityLevel .. " çº§" )
 		return OR_NO_LEVEL
 	end
 
 	local FishTime = x712000_g_FishTime[0]
-	-- Èç¹ûÓĞÏàÓ¦µÄ Buff£¬ÔòÊ±¼ä·Ö±ğµ÷ÕûÎª 1¡¢2¡¢3
+	-- å¦‚æœæœ‰ç›¸åº”çš„ Buffï¼Œåˆ™æ—¶é—´åˆ†åˆ«è°ƒæ•´ä¸º 1ã€2ã€3
 	local i
 	for i = 1, getn( x712000_g_FishBaitImpactID ) do
 		if LuaFnHaveImpactOfSpecificDataIndex( sceneId, selfId, x712000_g_FishBaitImpactID[i] ) == 1 then
@@ -194,12 +194,12 @@ function x712000_OnOpen( sceneId, selfId, targetId )
 		end
 	end
 
-	SetAbilityOperaTime( sceneId, selfId, (FishTime.time + random(FishTime.rand)) )	--ÉèÖÃÒ»´Îµöµ½ÓãµÄÊ±¼ä
+	SetAbilityOperaTime( sceneId, selfId, (FishTime.time + random(FishTime.rand)) )	--è®¾ç½®ä¸€æ¬¡é’“åˆ°é±¼çš„æ—¶é—´
 
 	return OR_OK
 end
 
--- µöÍêÁË
+-- é’“å®Œäº†
 function x712000_OnProcOver( sceneId, selfId, targetId )
 	local growPointType = LuaFnGetItemBoxGrowPointType( sceneId, targetId )
 	local GPInfo = x712000_g_GPInfo[growPointType]
@@ -208,17 +208,17 @@ function x712000_OnProcOver( sceneId, selfId, targetId )
 	end
 
 	CallScriptFunction( ABILITYLOGIC_ID, "GainExperience", sceneId, selfId, x712000_g_AbilityId, GPInfo.needLevel )
-	--Í³¼ÆÊı¾İ
+	--ç»Ÿè®¡æ•°æ®
 	LuaFnAuditAbility(sceneId, selfId, x712000_g_AbilityId, -1, -1)
 	local ret1 = TryRecieveItem( sceneId, selfId, GPInfo.mainId, QUALITY_MUST_BE_CHANGE )
-	if ret1 > 0 then												-->0±íÊ¾ÎïÆ·³É¹¦·ÅÈë±³°üÖĞ
-		Msg2Player( sceneId, selfId, "Äãµöµ½Ò»Ìõ" .. GPInfo.name .. "¡£", MSG2PLAYER_PARA )
-		-- Ôö¼ÓÊìÁ·¶È
+	if ret1 > 0 then												-->0è¡¨ç¤ºç‰©å“æˆåŠŸæ”¾å…¥èƒŒåŒ…ä¸­
+		Msg2Player( sceneId, selfId, "ä½ é’“åˆ°ä¸€æ¡" .. GPInfo.name .. "ã€‚", MSG2PLAYER_PARA )
+		-- å¢åŠ ç†Ÿç»ƒåº¦
 	elseif ret1 == -1 then
-		Msg2Player( sceneId, selfId, "Äãµöµ½Ò»Ìõ" .. GPInfo.name .. "£¬µ«ÊÇ±³°üÒÑÂú£¬ÄãËæÊÖ°ÑËüÈÓµ½ÁËÒ»±ß¡£", MSG2PLAYER_PARA )
+		Msg2Player( sceneId, selfId, "ä½ é’“åˆ°ä¸€æ¡" .. GPInfo.name .. "ï¼Œä½†æ˜¯èƒŒåŒ…å·²æ»¡ï¼Œä½ éšæ‰‹æŠŠå®ƒæ‰”åˆ°äº†ä¸€è¾¹ã€‚", MSG2PLAYER_PARA )
 	end
 	
-	--Ì«¹«µöÓã zchw
+	--å¤ªå…¬é’“é±¼ zchw
 	if LuaFnGetItemCount(sceneId, selfId, x712000_g_TaiGongYuGan) > 0
 		and LuaFnGetHumanPKValue(sceneId, selfId) < 1 
 		and GetPlayerPvpMode(sceneId, selfId) == 0 then		
@@ -240,9 +240,9 @@ function x712000_OnProcOver( sceneId, selfId, targetId )
 			
 			local ret1 = TryRecieveItem( sceneId, selfId, rareInfo.Id, QUALITY_MUST_BE_CHANGE);
 			if(ret1 > 0) then
-				Msg2Player( sceneId, selfId, "Äãµöµ½Ò»" .. rareInfo.Name .. "¡£", MSG2PLAYER_PARA )
+				Msg2Player( sceneId, selfId, "ä½ é’“åˆ°ä¸€" .. rareInfo.Name .. "ã€‚", MSG2PLAYER_PARA )
 			elseif(ret1 == -1) then
-				Msg2Player( sceneId, selfId, "Äãµöµ½Ò»" .. rareInfo.Name .. "£¬µ«ÊÇ±³°üÒÑÂú£¬ÄãËæÊÖ°ÑËüÈÓµ½ÁËÒ»±ß¡£", MSG2PLAYER_PARA )
+				Msg2Player( sceneId, selfId, "ä½ é’“åˆ°ä¸€" .. rareInfo.Name .. "ï¼Œä½†æ˜¯èƒŒåŒ…å·²æ»¡ï¼Œä½ éšæ‰‹æŠŠå®ƒæ‰”åˆ°äº†ä¸€è¾¹ã€‚", MSG2PLAYER_PARA )
 			end
 			
 		end

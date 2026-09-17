@@ -1,23 +1,23 @@
---ÁÉÎ÷NPC
---½£¶¨
---7¡«10¼¶¼ø¶¨ÉÌ
+--è¾½è¥¿NPC
+--å‰‘å®š
+--7ï½10çº§é‰´å®šå•†
 
 x021008_g_scriptId = 021008
 x021008_g_shoptableindex = 141
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x021008_OnDefaultEvent( sceneId, selfId, targetId )
 	BeginEvent( sceneId )
-		AddText( sceneId, "    ÎÒ×ÔÈÏÔÚ¼ø¶¨·½ÃæµÄÔìÒè»¹¹ıµÄÈ¥£¬ÓĞÊ²Ã´¿ÉÒÔ°ïÄãµÄ£¿" )
-		AddNumText( sceneId, x021008_g_scriptId, "¹ºÂò¼ø¶¨·û", 7, 0 )
+		AddText( sceneId, "    æˆ‘è‡ªè®¤åœ¨é‰´å®šæ–¹é¢çš„é€ è¯£è¿˜è¿‡çš„å»ï¼Œæœ‰ä»€ä¹ˆå¯ä»¥å¸®ä½ çš„ï¼Ÿ" )
+		AddNumText( sceneId, x021008_g_scriptId, "è´­ä¹°é‰´å®šç¬¦", 7, 0 )
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x021008_OnEventRequest( sceneId, selfId, targetId, eventId )
 	if GetNumText() == 0 then

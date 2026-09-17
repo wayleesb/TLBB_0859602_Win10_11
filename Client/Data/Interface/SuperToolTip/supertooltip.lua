@@ -1,11 +1,11 @@
-local CU_MONEY			= 1	-- Ç®
-local CU_GOODBAD		= 2	-- ÉÆ¶ñÖµ
-local CU_MORALPOINT	= 3	-- Ê¦µÂµã
-local CU_TICKET			= 4 -- ¹ÙÆ±Ç®
-local CU_YUANBAO		= 5	-- Ôª±¦
-local CU_ZENGDIAN		= 6 -- Ôùµã
-local CU_MENPAI_POINT	= 7 -- Ê¦ÃÅ¹±Ï×¶È
-local CU_MONEYJZ		= 8 -- ½»×Ó
+local CU_MONEY			= 1	-- é’±
+local CU_GOODBAD		= 2	-- å–„æ¶å€¼
+local CU_MORALPOINT	= 3	-- å¸ˆå¾·ç‚¹
+local CU_TICKET			= 4 -- å®˜ç¥¨é’±
+local CU_YUANBAO		= 5	-- å…ƒå®
+local CU_ZENGDIAN		= 6 -- èµ ç‚¹
+local CU_MENPAI_POINT	= 7 -- å¸ˆé—¨è´¡çŒ®åº¦
+local CU_MONEYJZ		= 8 -- äº¤å­
 
 local g_pos1;
 local g_pos2;
@@ -22,18 +22,18 @@ function g_GetUnlockingStr ( nUnlockElapsedTime )
 	local strLeftTime = "";
 		
 	if( nLeftTime <= 0 ) then
-		strLeftTime = "½âËø³É¹¦£¡ÇëÖØĞÂµÇÂ¼»òÇĞ»»³¡¾°ÕıÊ½½âËø¡£";
+		strLeftTime = "è§£é”æˆåŠŸï¼è¯·é‡æ–°ç™»å½•æˆ–åˆ‡æ¢åœºæ™¯æ­£å¼è§£é”ã€‚";
 	else
 		nLeftTime = math.ceil( nLeftTime/3600 );
 		if( nLeftTime >= 24 ) then
-			strLeftTime = ""..math.floor(nLeftTime/24).." Ìì";
+			strLeftTime = ""..math.floor(nLeftTime/24).." å¤©";
 			nLeftTime = math.mod(nLeftTime,24);
 		end
 		if( nLeftTime > 0 ) then 
-			strLeftTime = strLeftTime.." "..nLeftTime.." Ğ¡Ê±";					
+			strLeftTime = strLeftTime.." "..nLeftTime.." å°æ—¶";					
 		end
 		
-		strLeftTime = strLeftTime.."ºóÕıÊ½½âËø";
+		strLeftTime = strLeftTime.."åæ­£å¼è§£é”";
 	end
 	
 	return strLeftTime;
@@ -94,7 +94,7 @@ function SuperTooltip_OnEvent(event)
 end
 
 function SuperTooltip_Update()
-		-- ÏÈÇå¿ÕÒÔÇ°ÏÔÊ¾µÄÎÄ×Ö
+		-- å…ˆæ¸…ç©ºä»¥å‰æ˜¾ç¤ºçš„æ–‡å­—
 		SuperTooltip_ClearText();
 		
 		local typeDesc = SuperTooltips:GetTypeDesc();
@@ -110,58 +110,58 @@ function SuperTooltip_Update()
 		local nYuanbaotrade = SuperTooltips:GetYuanbaoTradeFlag();
 		
 		----------------------------------------------------------------------
-		--ÏÔÊ¾¾²Ì¬Í·
+		--æ˜¾ç¤ºé™æ€å¤´
 		local toDisplay = "";
 		
 		if(SuperTooltips:GetTitle()~="" and SuperTooltips:GetIconName()~="")then
 			toDisplay = toDisplay .."SuperTooltip_PageHeader";
 		end
 		
-		--Ê£Óà½âËøÊ±¼ä
+		--å‰©ä½™è§£é”æ—¶é—´
 		if( IsProtectd == "1" and unLockingElapsedTime ~= 0) then
 			toDisplay = toDisplay .. ";SuperTooltip_UnlockingTimePart";
 		end
 		
 		
-		--¼ÓÉÏÀàĞÍÃèÊö
+		--åŠ ä¸Šç±»å‹æè¿°
 		if( typeDesc ~= nil) then 
 			toDisplay = toDisplay .. ";SuperTooltip_ShortDesc";
 		end
 		
-		--Ôª±¦½»Ò×
+		--å…ƒå®äº¤æ˜“
 		if (nYuanbaotrade == 1) then
 			toDisplay = toDisplay .. ";SuperTooltip_StaticPart_Yuanbaojiaoyi";
-			SuperTooltip_StaticPart_Yuanbaojiaoyi:SetText("#c00ff00Ôª±¦½»Ò×");
+			SuperTooltip_StaticPart_Yuanbaojiaoyi:SetText("#c00ff00å…ƒå®äº¤æ˜“");
 		end
 		
-		--±¦Ê¯²¿·Ö
+		--å®çŸ³éƒ¨åˆ†
 		if( type(nGemHoleCounts) == "number" and nGemHoleCounts>0 ) then 
 			toDisplay = toDisplay .. ";SuperTooltip_GemPart";
 		end
-		--½ğÇ®1
+		--é‡‘é’±1
 		if( nMoney1 ~= nil) then 
 			toDisplay = toDisplay .. ";SuperTooltip_MoneyPart";
 		end
 
-		--½ğÇ®2
+		--é‡‘é’±2
 		if(nMoney2 ~= nil) then 
 			toDisplay = toDisplay .. ";SuperTooltip_MoneyPart_2";
 		end
 
-		--ÊôĞÔ
+		--å±æ€§
 		if(szPropertys ~= nil) then 
 			toDisplay = toDisplay .. ";SuperTooltip_Property";
 		end
 
-		--×÷Õß
+		--ä½œè€…
 		if(szAuthor ~= nil) then 
 			toDisplay = toDisplay .. ";SuperTooltip_Manufacturer_Frame";
 		end
 
-		--ÏêÏ¸½âÊÍ
+		--è¯¦ç»†è§£é‡Š
 		toDisplay = toDisplay .. ";SuperTooltip_Explain";
 
-		--ÏÔÊ¾×é¼şÄÚÈİ
+		--æ˜¾ç¤ºç»„ä»¶å†…å®¹
 		if(toDisplay=="") then
 			this:Hide();
 			return 0;
@@ -170,7 +170,7 @@ function SuperTooltip_Update()
 		_SuperTooltip_:SetProperty("PageElements",  toDisplay);
 		
 		----------------------------------------------------------------------
-		--ÏÔÊ¾ĞÂµÄÄÚÈİ
+		--æ˜¾ç¤ºæ–°çš„å†…å®¹
 		SuperTooltip_StaticPart_Title:SetText(SuperTooltips:GetTitle());
 		SuperTooltip_StaticPart_Item1:SetText(SuperTooltips:GetDesc1());
 		SuperTooltip_StaticPart_Item2:SetText(SuperTooltips:GetDesc2());
@@ -179,7 +179,7 @@ function SuperTooltip_Update()
 		
 		if(StrongLevel~="" and tonumber(StrongLevel)>0) then
 			
-			SuperTooltip_StaticPart_Item4:SetText("#c0FFFFFÇ¿»¯: +"..SuperTooltips:GetDesc4());
+			SuperTooltip_StaticPart_Item4:SetText("#c0FFFFFå¼ºåŒ–: +"..SuperTooltips:GetDesc4());
 		end;
 		--SuperTooltip_StaticPart_Item5:SetText(SuperTooltips:GetDesc5());
 		SuperTooltip_StaticPart_Icon:SetImage(SuperTooltips:GetIconName());
@@ -195,7 +195,7 @@ function SuperTooltip_Update()
 			SuperTooltip_StaticPart_Icon_Protected : SetProperty("Image","set:UIIcons image:Icon_Lock");
 		end
 
-		--tongxi modify ÏÔÊ¾ĞÇĞÇ
+		--tongxi modify æ˜¾ç¤ºæ˜Ÿæ˜Ÿ
 		--AxTrace( 5,0,StrongLevel );
 		local qual =SuperTooltips:GetEquipQual();
 		if(type(qual) == "number" and tonumber(qual)>0)then
@@ -293,7 +293,7 @@ end
 
 -------------------------------------------------------------------------------------------------------------------------------
 --
--- Çå¿ÕÏÔÊ¾ÎÄ±¾
+-- æ¸…ç©ºæ˜¾ç¤ºæ–‡æœ¬
 --
 function SuperTooltip_ClearText()
 		SuperTooltip_StaticPart_Title:SetText("");
@@ -322,7 +322,7 @@ end
 function SetupMoneyPart(type,nPrice)
 	local StaticPart_GB_Ctl;
 	local StaticPart_Money_Ctl;
-		--Ê¹ÓÃÊ²Ã´×÷Îª»õ±Ò
+		--ä½¿ç”¨ä»€ä¹ˆä½œä¸ºè´§å¸
 	local nUnit =  SuperTooltips:GetMoney1Type();
 	if(type==1)then
 		StaticPart_GB_Ctl = SuperTooltip_StaticPart_GB;
@@ -345,41 +345,41 @@ function SetupMoneyPart(type,nPrice)
 	if(nUnit==nil)then
 		nUnit = CU_MONEY;
 	end;
-	if(CU_MONEY	== nUnit or CU_TICKET == nUnit or CU_MONEYJZ == nUnit)       then      --Ç®£¬¹ÙÆ±Ç®, ½»×Ó
+	if(CU_MONEY	== nUnit or CU_TICKET == nUnit or CU_MONEYJZ == nUnit)       then      --é’±ï¼Œå®˜ç¥¨é’±, äº¤å­
 			StaticPart_GB_Ctl:Hide()
 			StaticPart_Money_Ctl:Show();
 			StaticPart_Money_Ctl:SetProperty("MoneyNumber", tostring(nPrice));
 
-	elseif(CU_GOODBAD == nUnit) then			--ÉÆ¶ñÖµ
+	elseif(CU_GOODBAD == nUnit) then			--å–„æ¶å€¼
 			
 			StaticPart_GB_Ctl:Show()
 			StaticPart_Money_Ctl:Hide();
-			StaticPart_GB_Ctl:SetText("ÉÆ¶ñÖµ:" .. tostring(nPrice) .. " µã")
+			StaticPart_GB_Ctl:SetText("å–„æ¶å€¼:" .. tostring(nPrice) .. " ç‚¹")
 
 
-	elseif(CU_MORALPOINT == nUnit)  then	--Ê¦µÂµã
+	elseif(CU_MORALPOINT == nUnit)  then	--å¸ˆå¾·ç‚¹
 
 			StaticPart_GB_Ctl:Show()
 			SuperTooltip_StaticPart_Money:Hide();
-			StaticPart_GB_Ctl:SetText("Ê¦µÂµã:" .. tostring(nPrice) .. " µã")
+			StaticPart_GB_Ctl:SetText("å¸ˆå¾·ç‚¹:" .. tostring(nPrice) .. " ç‚¹")
 
-	elseif(CU_YUANBAO == nUnit) then	--Ôª±¦
-
-			StaticPart_GB_Ctl:Show()
-			StaticPart_Money_Ctl:Hide();
-			StaticPart_GB_Ctl:SetText("Ôª±¦:" .. tostring(nPrice))
-
-	elseif(CU_ZENGDIAN == nUnit) then	--Ôùµã
+	elseif(CU_YUANBAO == nUnit) then	--å…ƒå®
 
 			StaticPart_GB_Ctl:Show()
 			StaticPart_Money_Ctl:Hide();
-			StaticPart_GB_Ctl:SetText("Ôùµã:" .. tostring(nPrice))
+			StaticPart_GB_Ctl:SetText("å…ƒå®:" .. tostring(nPrice))
 
-	elseif(CU_MENPAI_POINT == nUnit) then	--Ê¦ÃÅ¹±Ï×¶È
+	elseif(CU_ZENGDIAN == nUnit) then	--èµ ç‚¹
 
 			StaticPart_GB_Ctl:Show()
 			StaticPart_Money_Ctl:Hide();
-			StaticPart_GB_Ctl:SetText("ÃÅÅÉ¹±Ï×¶È:" .. tostring(nPrice))
+			StaticPart_GB_Ctl:SetText("èµ ç‚¹:" .. tostring(nPrice))
+
+	elseif(CU_MENPAI_POINT == nUnit) then	--å¸ˆé—¨è´¡çŒ®åº¦
+
+			StaticPart_GB_Ctl:Show()
+			StaticPart_Money_Ctl:Hide();
+			StaticPart_GB_Ctl:SetText("é—¨æ´¾è´¡çŒ®åº¦:" .. tostring(nPrice))
 
 	end	
 	

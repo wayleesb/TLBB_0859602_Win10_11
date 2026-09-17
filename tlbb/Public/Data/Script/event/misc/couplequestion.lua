@@ -1,11 +1,11 @@
--- ·òÆŞ»Ø´ğÎÊÌâ
--- ½Å±¾ºÅ
+-- å¤«å¦»å›ç­”é—®é¢˜
+-- è„šæœ¬å·
 -- UI_COMMAND 888901
 
-x888901_g_ScriptId = 888901  -- ´úÂëÖĞÒ²Ê¹ÓÃÕâ¸ö±àºÅÁË¡£ÑÏ½ûĞŞ¸Ä
+x888901_g_ScriptId = 888901  -- ä»£ç ä¸­ä¹Ÿä½¿ç”¨è¿™ä¸ªç¼–å·äº†ã€‚ä¸¥ç¦ä¿®æ”¹
 x888901_g_Item		 = 30505134
 
--- ÎÊÌâ±í
+-- é—®é¢˜è¡¨
 x888901_g_FemaleType = 6
 x888901_g_MaleType = 7
 
@@ -13,33 +13,33 @@ x888901_g_OptPos = {
 	{1,2,3},{1,3,2},{2,1,3},{2,3,1},{3,1,2},{3,2,1}
 }
 
--- ¿Í»§¶Ë¶¯×÷±í
+-- å®¢æˆ·ç«¯åŠ¨ä½œè¡¨
 x888901_g_ClientOp = {
 	"answer","clientstop","askstop"
 }
 
--- ÉÏÒ»ÌâµÄ»Ø´ğÇé¿ö
+-- ä¸Šä¸€é¢˜çš„å›ç­”æƒ…å†µ
 x888901_g_AnswerState = {
-	["start"]			= "¿ªÊ¼",
-	["timeout"]		= "³¬Ê±",
-	["oknext"]		= "ÕıÈ·",
-	["failnext"]	= "´íÎó",
-	["cancel"]		= "Î´Öª",
+	["start"]			= "å¼€å§‹",
+	["timeout"]		= "è¶…æ—¶",
+	["oknext"]		= "æ­£ç¡®",
+	["failnext"]	= "é”™è¯¯",
+	["cancel"]		= "æœªçŸ¥",
 }
 
 --**********************************
--- ÁĞ¾ÙÊÂ¼ş
+-- åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x888901_OnEnumerate( sceneId, selfId, targetId )
 	local CurMonthDay = LuaFnGetDayOfThisMonth()
 	if CurMonthDay and mod(CurMonthDay,2) == 0 then
-		AddNumText( sceneId, x888901_g_ScriptId, "ĞÄÓĞÁéÏ¬", 2, 100 )
+		AddNumText( sceneId, x888901_g_ScriptId, "å¿ƒæœ‰çµçŠ€", 2, 100 )
 	end
-	--AddNumText(sceneId,x888901_g_ScriptId,"Ö±½Ó½á»é", 5, 2)
+	--AddNumText(sceneId,x888901_g_ScriptId,"ç›´æ¥ç»“å©š", 5, 2)
 end
 
 --**********************************
--- ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+-- äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x888901_OnDefaultEvent( sceneId, selfId, targetId, eventId )
 	local opt = GetNumText()
@@ -58,37 +58,37 @@ function x888901_OnDefaultEvent( sceneId, selfId, targetId, eventId )
 		DispatchUICommand( sceneId, selfId, 1000 )
 	elseif opt == 100 then
 		BeginEvent( sceneId )
-			local strText = "    ÏÍØøÙ³ÏëÖªµÀÄãÃÇÊÇ·ñĞÄÒâÏàÍ¨Âğ£¿ÎÒÕâÀïÓĞÒ»¸öĞ¡Ğ¡µÄ²âÊÔ#RĞÄÓĞÁéÏ¬#W£¬ĞèÒªÄãÃÇÔÚ¶ÌÊ±¼äÄÚ¸÷×Ô¶ÔÏàÍ¬µÄÎÊÌâ×ö³ö»Ø´ğ£¬ÄãÃÇ²»·ÁÊÔÉÏÒ»ÊÔ£¬¿´¿´ÄãÃÇ×ö³öµÄÑ¡ÔñÊÇ·ñÒ»ÖÂ£¬¸Ã²âÊÔÃ¿Á½ÌìÖ»ÓĞÒ»´Î»ú»á±¨Ãû²Î¼Ó£¬ÒªÉ÷ÖØ¶Ô´ı°¡¡£#r    ÄãÔ¸Òâ²Î¼ÓĞÄÓĞÁéÏ¬µÄ²âÊÔÂğ£¿"
+			local strText = "    è´¤ä¼‰ä¿ªæƒ³çŸ¥é“ä½ ä»¬æ˜¯å¦å¿ƒæ„ç›¸é€šå—ï¼Ÿæˆ‘è¿™é‡Œæœ‰ä¸€ä¸ªå°å°çš„æµ‹è¯•#Rå¿ƒæœ‰çµçŠ€#Wï¼Œéœ€è¦ä½ ä»¬åœ¨çŸ­æ—¶é—´å†…å„è‡ªå¯¹ç›¸åŒçš„é—®é¢˜åšå‡ºå›ç­”ï¼Œä½ ä»¬ä¸å¦¨è¯•ä¸Šä¸€è¯•ï¼Œçœ‹çœ‹ä½ ä»¬åšå‡ºçš„é€‰æ‹©æ˜¯å¦ä¸€è‡´ï¼Œè¯¥æµ‹è¯•æ¯ä¸¤å¤©åªæœ‰ä¸€æ¬¡æœºä¼šæŠ¥åå‚åŠ ï¼Œè¦æ…é‡å¯¹å¾…å•Šã€‚#r    ä½ æ„¿æ„å‚åŠ å¿ƒæœ‰çµçŠ€çš„æµ‹è¯•å—ï¼Ÿ"
 			AddText( sceneId, strText )
-			AddNumText( sceneId, x888901_g_ScriptId, "ÎÒÒª²Î¼Ó", 2, 1)
-			AddNumText( sceneId, x888901_g_ScriptId, "ÎÒÔÙÏëÏë", 8, 3);
+			AddNumText( sceneId, x888901_g_ScriptId, "æˆ‘è¦å‚åŠ ", 2, 1)
+			AddNumText( sceneId, x888901_g_ScriptId, "æˆ‘å†æƒ³æƒ³", 8, 3);
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 	end
 end
 
--- ·½±ã½á»éµÄ¹¦ÄÜ£¬²âÊÔ´úÂë
+-- æ–¹ä¾¿ç»“å©šçš„åŠŸèƒ½ï¼Œæµ‹è¯•ä»£ç 
 function x888901_DirectMary(sceneId,selfId)
-	--1.ÊÇ·ñ×é¶Ó
+	--1.æ˜¯å¦ç»„é˜Ÿ
 	local teamId = GetTeamId(sceneId,selfId)
 	if teamId<0 then
 		x888901_NotifySystemMsg(sceneId,selfId,"err_noteam")
 		return
 	end
 	
-	--2.ÊÇ·ñ·òÆŞÁ©ÈË
+	--2.æ˜¯å¦å¤«å¦»ä¿©äºº
 	if GetTeamSize(sceneId,selfId)~=2 then
 		x888901_NotifySystemMsg(sceneId,selfId,"err_musttwo")
 		return
 	end
 	
-	--3.ÊÇ·ñÔÚ¸½½ü
+	--3.æ˜¯å¦åœ¨é™„è¿‘
 	if GetNearTeamCount(sceneId,selfId) ~= 2 then
 		x888901_NotifySystemMsg(sceneId,selfId,"err_mustnear")
 		return
 	end
 	
-	--4.ÊÇ·ñÊÇ·òÆŞ
+	--4.æ˜¯å¦æ˜¯å¤«å¦»
 	local tid1 = GetNearTeamMember(sceneId,selfId,0)
 	local tid2 = GetNearTeamMember(sceneId,selfId,1)
 	
@@ -97,28 +97,28 @@ function x888901_DirectMary(sceneId,selfId)
 	x888901_NotifySystemMsg(sceneId,tid2,"directmarry")
 end
 
--- ¼ì²é¿ªÊ¼´ğÌâÌõ¼ş
+-- æ£€æŸ¥å¼€å§‹ç­”é¢˜æ¡ä»¶
 function x888901_BeginCoupleQuestion(sceneId,selfId,targetId)
-	--1.ÊÇ·ñ×é¶Ó
+	--1.æ˜¯å¦ç»„é˜Ÿ
 	local teamId = GetTeamId(sceneId,selfId)
 	if teamId<0 then
 		x888901_NotifySystemMsg(sceneId,selfId,"err_noteam")
 		return
 	end
 	
-	--2.ÊÇ·ñÁ©ÈË
+	--2.æ˜¯å¦ä¿©äºº
 	if GetTeamSize(sceneId,selfId)~=2 then
 		x888901_NotifySystemMsg(sceneId,selfId,"err_musttwo")
 		return
 	end
 	
-	--3.ÊÇ·ñÔÚ¸½½ü
+	--3.æ˜¯å¦åœ¨é™„è¿‘
 	if GetNearTeamCount(sceneId,selfId) ~= 2 then
 		x888901_NotifySystemMsg(sceneId,selfId,"err_mustnear")
 		return
 	end
 	
-	--4.ÊÇ·ñÊÇ·òÆŞ
+	--4.æ˜¯å¦æ˜¯å¤«å¦»
 	local tid1 = GetNearTeamMember(sceneId,selfId,0)
 	local tid2 = GetNearTeamMember(sceneId,selfId,1)
 	if LuaFnIsMarried(sceneId,tid1)<=0 or LuaFnIsMarried(sceneId,tid2)<=0 then
@@ -131,13 +131,13 @@ function x888901_BeginCoupleQuestion(sceneId,selfId,targetId)
 		end
 	end
 	
-	--5.ÊÇ·ñMACÏàÍ¬
+	--5.æ˜¯å¦MACç›¸åŒ
 	if IsSameMAC(sceneId,tid1,tid2) > 0 then
 		x888901_NotifySystemMsg(sceneId,selfId,"err_samemac")
 		return
 	end
 	
-	--6.ÊÇ·ñ¶Ó³¤
+	--6.æ˜¯å¦é˜Ÿé•¿
 	if LuaFnIsTeamLeader(sceneId,selfId)<=0 then
 		x888901_NotifySystemMsg(sceneId,selfId,"err_mustleader")
 		return
@@ -147,20 +147,20 @@ function x888901_BeginCoupleQuestion(sceneId,selfId,targetId)
 	local LastCoupleQuestionDayTime1 = GetMissionData(sceneId, tid1, MD_COUPLEQUESTION_DAYTIME)
 	local LastCoupleQuestionDayTime2 = GetMissionData(sceneId, tid2, MD_COUPLEQUESTION_DAYTIME)
 	
-	--7.½ñÌìÊÇ·ñÎ´²Î¼Ó
+	--7.ä»Šå¤©æ˜¯å¦æœªå‚åŠ 
 	if CurDayTime <= LastCoupleQuestionDayTime1 or CurDayTime <= LastCoupleQuestionDayTime2 then
 		x888901_NotifySystemMsg(sceneId,selfId,"err_already")
 		return
 	end
 	
-	--8.½ñÌìÊÇ·ñÊÇË«ÈÕ
+	--8.ä»Šå¤©æ˜¯å¦æ˜¯åŒæ—¥
 	local CurMonthDay = LuaFnGetDayOfThisMonth()
 	if not CurMonthDay or mod(CurMonthDay,2) > 0 then
 		x888901_NotifySystemMsg(sceneId,selfId,"err_notday")
 		return
 	end
 	
-	--¼ì²â³É¹¦£¬¿ÉÒÔ¿ªÊ¼³õÊ¼»¯´ğÌâÁË
+	--æ£€æµ‹æˆåŠŸï¼Œå¯ä»¥å¼€å§‹åˆå§‹åŒ–ç­”é¢˜äº†
 	SetMissionData( sceneId, tid1, MD_COUPLEQUESTION_DAYTIME, CurDayTime )
 	SetMissionData( sceneId, tid2, MD_COUPLEQUESTION_DAYTIME, CurDayTime )
 	
@@ -175,7 +175,7 @@ function x888901_BeginCoupleQuestion(sceneId,selfId,targetId)
 		MaxQuestion = 50
 	end
 	
-	--ÉèÖÃË«·½ÈËÎïµÄÊôĞÔ
+	--è®¾ç½®åŒæ–¹äººç‰©çš„å±æ€§
 	StopCoupleQuestion(sceneId,tid1)
 	StopCoupleQuestion(sceneId,tid2)
 	
@@ -184,7 +184,7 @@ function x888901_BeginCoupleQuestion(sceneId,selfId,targetId)
 	StartCoupleQuestion(sceneId,tid2,tid1,targetId,MaxQuestion)
 	SetMissionData(sceneId, tid2, MD_COUPLEQUESTION_DAYTIME,CurDayTime)
 
-	--¼ÇÂ¼Í³¼ÆÈÕÖ¾
+	--è®°å½•ç»Ÿè®¡æ—¥å¿—
 	x888901_LogCoupleAction(sceneId,tid1,tid2,COUPLE_LOG_STARTQUESTION)
 
 	local question,qtype = x888901_RandomQuestion(sceneId,tid1)	
@@ -197,7 +197,7 @@ function x888901_RandomQuestion(sceneId,userId)
 	local nm = ""
 	
 	if coupleId>=0 then
-		--ÄĞÅ®ÅĞ¶Ï
+		--ç”·å¥³åˆ¤æ–­
 		local maleId = userId
 		local femaleId = coupleId
 		if GetSex(sceneId,userId) == 0 then
@@ -205,7 +205,7 @@ function x888901_RandomQuestion(sceneId,userId)
 			femaleId = userId
 		end
 		
-		--¸ù¾İÄĞÅ®²»Í¬¹¹ÔìÃû³ÆºÍÌâºÅ
+		--æ ¹æ®ç”·å¥³ä¸åŒæ„é€ åç§°å’Œé¢˜å·
 		local rp = random(1,2)
 		if rp == 1 then
 			nm = format("#G%s#W",GetName(sceneId,femaleId))
@@ -219,7 +219,7 @@ function x888901_RandomQuestion(sceneId,userId)
 	end
 end
 
--- ·¢ËÍÒ»¸öÎÊÌâ¸ø¿Í»§¶Ë
+-- å‘é€ä¸€ä¸ªé—®é¢˜ç»™å®¢æˆ·ç«¯
 function x888901_SendCoupleQuestion(sceneId,userId,targetId,question,qtype,act)
 	local bStart,qmax,qcur,privity,maxprivity,samenum = GetCoupleQuestionState(sceneId,userId)
 	if bStart > 0 then
@@ -239,44 +239,44 @@ function x888901_SendCoupleQuestion(sceneId,userId,targetId,question,qtype,act)
 		if act == "failnext" then privity=0 end
 		if act == "start" then qcur=0 else qcur=qcur+1 end
 	
-		--ÒÑ¾­Ã»ÓĞÌâ¿É´ğÁË
+		--å·²ç»æ²¡æœ‰é¢˜å¯ç­”äº†
 		if qcur == qmax then
-			--·¢ËÍÌØÊâ½±Àø
+			--å‘é€ç‰¹æ®Šå¥–åŠ±
 				if qmax == 100 and privity == 100 and bStart > 0 then
 				x888901_SendCoupleQuestionPrize(sceneId,userId,coupleId)
 			end
-			--Í¨Öª¿Í»§¶Ë½áÊø´ğÌâ
+			--é€šçŸ¥å®¢æˆ·ç«¯ç»“æŸç­”é¢˜
 			NextCoupleQuestion(sceneId,userId,qcur,privity,samenum)
 			x888901_StopCoupleQuestionScript(sceneId,userId,coupleId,"finish")
 			return
 		end
 	
-		--ÉÏÒ»ÌâµÄ»Ø´ğÇé¿ö
+		--ä¸Šä¸€é¢˜çš„å›ç­”æƒ…å†µ
 		local premsg = x888901_g_AnswerState[act]
 		if not premsg then
 			premsg = x888901_g_AnswerState["cancel"]
 		end
 		
-		--Í¨Öª¿Í»§¶ËÏÔÊ¾ÌâÄ¿
+		--é€šçŸ¥å®¢æˆ·ç«¯æ˜¾ç¤ºé¢˜ç›®
 		BeginUICommand(sceneId)
 			UICommand_AddString(sceneId,act)
 			UICommand_AddInt(sceneId,targetId)
-			UICommand_AddInt(sceneId,qmax) --×ÜÌâÊı
-			UICommand_AddInt(sceneId,qcur+1) --µ±Ç°ÌâÊı
-			UICommand_AddInt(sceneId,privity) --Ä¬Æõ¶È
-			UICommand_AddString(sceneId,con)	--ÎÊÌâ
-			UICommand_AddInt(sceneId,3)			--´ğ°¸ÊıÁ¿
-			UICommand_AddString(sceneId,opt0)	--´ğ°¸1
-			UICommand_AddString(sceneId,opt1)	--´ğ°¸2
-			UICommand_AddString(sceneId,opt2)	--´ğ°¸3
-			UICommand_AddInt(sceneId,pt[1])	--ÏÔÊ¾Î»ÖÃ1
-			UICommand_AddInt(sceneId,pt[2]) --ÏÔÊ¾Î»ÖÃ2
-			UICommand_AddInt(sceneId,pt[3]) --ÏÔÊ¾Î»ÖÃ3
-			UICommand_AddString(sceneId,premsg)	--ÉÏÒ»ÌâµÄ»Ø´ğÇé¿ö
+			UICommand_AddInt(sceneId,qmax) --æ€»é¢˜æ•°
+			UICommand_AddInt(sceneId,qcur+1) --å½“å‰é¢˜æ•°
+			UICommand_AddInt(sceneId,privity) --é»˜å¥‘åº¦
+			UICommand_AddString(sceneId,con)	--é—®é¢˜
+			UICommand_AddInt(sceneId,3)			--ç­”æ¡ˆæ•°é‡
+			UICommand_AddString(sceneId,opt0)	--ç­”æ¡ˆ1
+			UICommand_AddString(sceneId,opt1)	--ç­”æ¡ˆ2
+			UICommand_AddString(sceneId,opt2)	--ç­”æ¡ˆ3
+			UICommand_AddInt(sceneId,pt[1])	--æ˜¾ç¤ºä½ç½®1
+			UICommand_AddInt(sceneId,pt[2]) --æ˜¾ç¤ºä½ç½®2
+			UICommand_AddInt(sceneId,pt[3]) --æ˜¾ç¤ºä½ç½®3
+			UICommand_AddString(sceneId,premsg)	--ä¸Šä¸€é¢˜çš„å›ç­”æƒ…å†µ
 		EndUICommand(sceneId)
 		DispatchUICommand(sceneId,userId, x888901_g_ScriptId)
 	
-		--ĞŞ¸Ä·şÎñÆ÷¶ËÊı¾İ×´Ì¬
+		--ä¿®æ”¹æœåŠ¡å™¨ç«¯æ•°æ®çŠ¶æ€
 		NextCoupleQuestion(sceneId,userId,qcur,privity,samenum)
 		SetCurCoupleQuestion(sceneId,userId,question,3,-1)
 	end
@@ -284,33 +284,33 @@ end
 
 function x888901_SendCoupleQuestionPrize(sceneId,userId,coupleId)
 	if coupleId>=0 then
-		--·¢userIdÎïÆ·
+		--å‘userIdç‰©å“
 		LuaFnBeginAddItem( sceneId )
 		LuaFnAddItem( sceneId, x888901_g_Item, 1)
 		local uret = LuaFnEndAddItem( sceneId, userId )
 		if 1 == uret then
 			AddItemListToHuman(sceneId,userId)
 		end
-		--·¢coupleIdÎïÆ·
+		--å‘coupleIdç‰©å“
 		LuaFnBeginAddItem( sceneId )
 		LuaFnAddItem( sceneId, x888901_g_Item, 1)
 		local oret = LuaFnEndAddItem( sceneId, coupleId )
 		if 1 == oret then
 			AddItemListToHuman(sceneId,coupleId)
 		end
-		--·¢¹«¸æ
+		--å‘å…¬å‘Š
 		if 1 == oret and 1 == uret then
 			local uname = format("#{_INFOUSR%s}",GetName(sceneId,userId))
 			local oname = format("#{_INFOUSR%s}",GetName(sceneId,coupleId))
 			local itemt = format("#{_INFOMSG%s}",GetItemTransfer(sceneId,coupleId,0))
-			local str = format("%s#IÓë%s#IÔÚÔÂÀÏ´¦½øĞĞ#RĞÄÓĞÁéÏ¬#IµÄ²âÊÔÖĞ£¬Ò»Â·¹ı¹ØÕ¶½«¡¢¸ß¸èÃÍ½ø£¬²»À¢ÊÇ·òÆŞÍ¬ĞÄÆäÀû¶Ï½ğ¡£ÌØÔùÓë%s¡£",uname,oname,itemt)
+			local str = format("%s#Iä¸%s#Iåœ¨æœˆè€å¤„è¿›è¡Œ#Rå¿ƒæœ‰çµçŠ€#Içš„æµ‹è¯•ä¸­ï¼Œä¸€è·¯è¿‡å…³æ–©å°†ã€é«˜æ­ŒçŒ›è¿›ï¼Œä¸æ„§æ˜¯å¤«å¦»åŒå¿ƒå…¶åˆ©æ–­é‡‘ã€‚ç‰¹èµ ä¸%sã€‚",uname,oname,itemt)
 			BroadMsgByChatPipe(sceneId, userId, str, 4)
 		end
 	end
 end
 
--- ·òÆŞ´ğÌâ¿Í»§¶Ë½Ó¿Ú(¿Í»§¶Ëµ÷ÓÃ)
-function x888901_CoupleQuestion_ClientAction(sceneId,selfId,op,num,sequence)--modi:lby Ôö¼ÓÌâºÅ¼ìÑé¼ìÑéµ±Ç°ÎÊÌâÊÇ·ñÊÇÕıÔÚ´ğÌâ
+-- å¤«å¦»ç­”é¢˜å®¢æˆ·ç«¯æ¥å£(å®¢æˆ·ç«¯è°ƒç”¨)
+function x888901_CoupleQuestion_ClientAction(sceneId,selfId,op,num,sequence)--modi:lby å¢åŠ é¢˜å·æ£€éªŒæ£€éªŒå½“å‰é—®é¢˜æ˜¯å¦æ˜¯æ­£åœ¨ç­”é¢˜
 	if nil == op or 1 > op then return end
 	local client_op = x888901_g_ClientOp[op]
 	
@@ -323,8 +323,8 @@ function x888901_CoupleQuestion_ClientAction(sceneId,selfId,op,num,sequence)--mo
 	end
 end
 
--- ¿Í»§¶Ë»Ø´ğÎÊÌâ
-function x888901_ClientAnswerCoupleQuestion(sceneId,selfId, num, sequence)--modi:lby Ôö¼ÓÌâºÅ¼ìÑé¼ìÑéµ±Ç°ÎÊÌâÊÇ·ñÊÇÕıÔÚ´ğµÄÌâ
+-- å®¢æˆ·ç«¯å›ç­”é—®é¢˜
+function x888901_ClientAnswerCoupleQuestion(sceneId,selfId, num, sequence)--modi:lby å¢åŠ é¢˜å·æ£€éªŒæ£€éªŒå½“å‰é—®é¢˜æ˜¯å¦æ˜¯æ­£åœ¨ç­”çš„é¢˜
 	local bStart,_,qcur,privity = GetCoupleQuestionState(sceneId,selfId)
 	if bStart>0 then
 		local cq,_,_ = GetCurCoupleQuestion(sceneId,selfId)
@@ -334,54 +334,54 @@ function x888901_ClientAnswerCoupleQuestion(sceneId,selfId, num, sequence)--modi
 		if coupleId>=0 and cq>=0 then
 			local _,_,ocur,_ = GetCoupleQuestionState(sceneId,coupleId)
 			local oq,_,oa = GetCurCoupleQuestion(sceneId,coupleId)
-			--¼ì²éÌâÊÇ·ñÏàÍ¬
-			if oq ~= cq or sequence ~= qcur+1 or ocur ~= qcur then		--modi:lby Ôö¼ÓÌâºÅ¼ìÑé
-				--x888901_StopCoupleQuestionScript(sceneId,selfId,coupleId) --modi:lby ÒòÎª¿ÉÄÜ¶à´ÎÌá½»»áÓĞÌâµÄÄÜÈİ²»ÏàÍ¬²»ÄÜÍË³ö
+			--æ£€æŸ¥é¢˜æ˜¯å¦ç›¸åŒ
+			if oq ~= cq or sequence ~= qcur+1 or ocur ~= qcur then		--modi:lby å¢åŠ é¢˜å·æ£€éªŒ
+				--x888901_StopCoupleQuestionScript(sceneId,selfId,coupleId) --modi:lby å› ä¸ºå¯èƒ½å¤šæ¬¡æäº¤ä¼šæœ‰é¢˜çš„èƒ½å®¹ä¸ç›¸åŒä¸èƒ½é€€å‡º
 				return
 			end
 			
 			local act = "failnext"
-			--¼ì²é´ğ°¸ÊÇ·ñÏàÍ¬
+			--æ£€æŸ¥ç­”æ¡ˆæ˜¯å¦ç›¸åŒ
 			if oa <= 0 then
 				SetCurCoupleQuestion(sceneId,selfId,cq,3,ca)
 				return
 			elseif oa == ca then
 				act = "oknext"
 			end
-			--»ñµÃ¾­ÑéÖµ
+			--è·å¾—ç»éªŒå€¼
 			if act == "oknext" then
 				local cexp = floor(x888901_CaculPrivityExp(sceneId,selfId,privity))
 				AddExp(sceneId,selfId,cexp)
 				local oexp = floor(x888901_CaculPrivityExp(sceneId,coupleId,privity))
 				AddExp(sceneId,coupleId,oexp)
 
-				local tip_part1 = "¹§Ï²£¬ÄãÃÇµÄ´ğ°¸ÏàÍ¬£¬Äã»ñµÃ¾­Ñé"
-				local tip_part2 = "µã¡£"
+				local tip_part1 = "æ­å–œï¼Œä½ ä»¬çš„ç­”æ¡ˆç›¸åŒï¼Œä½ è·å¾—ç»éªŒ"
+				local tip_part2 = "ç‚¹ã€‚"
 				
-				x888901_NotifySystemMsg(sceneId,selfId,act,tip_part1..tostring(cexp)..tip_part2)
-				x888901_NotifySystemMsg(sceneId,coupleId,act,tip_part1..tostring(oexp)..tip_part2)
+				x888901_NotifySystemMsg(sceneId,selfId,act,tip_part1..format("%.0f", cexp)..tip_part2)
+				x888901_NotifySystemMsg(sceneId,coupleId,act,tip_part1..format("%.0f", oexp)..tip_part2)
 			else
 				x888901_NotifySystemMsg(sceneId,selfId,act)
 				x888901_NotifySystemMsg(sceneId,coupleId,act)
 			end
-			--¼ÌĞø·¢ËÍÎÊÌâ
+			--ç»§ç»­å‘é€é—®é¢˜
 			local question,qtype = x888901_RandomQuestion(sceneId,selfId)	
 			x888901_SendCoupleQuestion(sceneId,selfId,-1,question,qtype,act)
 			x888901_SendCoupleQuestion(sceneId,coupleId,-1,question,qtype,act)
 		else
-			--¶Ô·½ÒÑ¾­½áÊø´ğÌâ£¬Ôò×Ô¼ºÒ²Òª½áÊø
+			--å¯¹æ–¹å·²ç»ç»“æŸç­”é¢˜ï¼Œåˆ™è‡ªå·±ä¹Ÿè¦ç»“æŸ
 			x888901_StopCoupleQuestionScript(sceneId,selfId,coupleId)
 		end
 	end
 end
 
--- ´ğÌâ¾­ÑéÖµ¼ÆËã
--- »ù´¡½±Àø=c*LV*LV
--- Ã¿ÌâÊµµÃ½±Àø=»ù´¡½±Àø*£¨1+N*a£©
--- cÎª½±ÀøÖµ¼ÆËã²ÎÊı£¬Ä¬ÈÏÎª0.573
--- LVÎª´ğÌâÕßµÈ¼¶
--- NÎª´ğ¸ÃÌâÊ±µÄÄ¬ÆõÖ¸ÊıÖµ
--- aÎª´ğÌâÊ±µÄ¾­Ñé¼Ó³ÉÏµÊı£¬Ä¬ÈÏÎª0.01
+-- ç­”é¢˜ç»éªŒå€¼è®¡ç®—
+-- åŸºç¡€å¥–åŠ±=c*LV*LV
+-- æ¯é¢˜å®å¾—å¥–åŠ±=åŸºç¡€å¥–åŠ±*ï¼ˆ1+N*aï¼‰
+-- cä¸ºå¥–åŠ±å€¼è®¡ç®—å‚æ•°ï¼Œé»˜è®¤ä¸º0.573
+-- LVä¸ºç­”é¢˜è€…ç­‰çº§
+-- Nä¸ºç­”è¯¥é¢˜æ—¶çš„é»˜å¥‘æŒ‡æ•°å€¼
+-- aä¸ºç­”é¢˜æ—¶çš„ç»éªŒåŠ æˆç³»æ•°ï¼Œé»˜è®¤ä¸º0.01
 
 function x888901_CaculPrivityExp(sceneId,userId,privity)
 	local c = 0.573
@@ -395,23 +395,23 @@ function x888901_CaculPrivityExp(sceneId,userId,privity)
 	--print("x888901_CaculPrivityExp selfId="..tostring(userId).." baseExp="..tostring(baseExp).." Exp="..tostring(Exp))
 	return Exp;
 end
--- Ñ¯ÎÊ¿Í»§¶ËÊÇ·ñ½áÊø
+-- è¯¢é—®å®¢æˆ·ç«¯æ˜¯å¦ç»“æŸ
 function x888901_AskClientRealStop(sceneId,selfId)
 	BeginUICommand(sceneId)
 		UICommand_AddInt(sceneId,x888901_g_ScriptId);
 		UICommand_AddInt(sceneId,2)
 		UICommand_AddString(sceneId,"CoupleQuestion_ClientAction");
-		UICommand_AddString(sceneId,"ÍË³öºó¸Ã´Î²âÊÔ½«¾Í´Ë½áÊø£¬ÄãÈ·ÈÏÒªÍË³öÂğ£¿");
+		UICommand_AddString(sceneId,"é€€å‡ºåè¯¥æ¬¡æµ‹è¯•å°†å°±æ­¤ç»“æŸï¼Œä½ ç¡®è®¤è¦é€€å‡ºå—ï¼Ÿ");
 	EndUICommand(sceneId)
 	DispatchUICommand(sceneId,selfId, 24)
 end
--- ¿Í»§¶Ë½áÊø
+-- å®¢æˆ·ç«¯ç»“æŸ
 function x888901_ClientStopCoupleQuestion(sceneId,selfId)
 	local coupleId = GetCoupleID(sceneId,selfId)
 	x888901_StopCoupleQuestionScript(sceneId,selfId,coupleId,"clientstop")
 end
 
--- ´ğÌâ³¬Ê±
+-- ç­”é¢˜è¶…æ—¶
 function x888901_AnswerQuestionTimeOut(sceneId,selfId,coupleId)
 	local question,qtype = x888901_RandomQuestion(sceneId,selfId)
 	
@@ -423,16 +423,16 @@ function x888901_AnswerQuestionTimeOut(sceneId,selfId,coupleId)
 	--print("x888901_AnswerQuestionTimeOut "..tostring(selfId))
 end
 
--- Í£Ö¹·òÆŞË«·½´ğÌâ
+-- åœæ­¢å¤«å¦»åŒæ–¹ç­”é¢˜
 function x888901_StopCoupleQuestionScript(sceneId,selfId,coupleId,act)
 	local bStart,qmax,_,_,maxprivity,samenum = GetCoupleQuestionState(sceneId,selfId)
 	local tipm = ""
 	
 	if bStart > 0 then
-		tipm = format("¸Ã´Î²âÊÔ¹²%dÌâ£¬ÄãÃÇ·òÆŞ¹²´ğ¶Ô%dÌâ£¬×î¸ßÄ¬ÆõÖ¸Êı´ïµ½%d¡£", qmax,samenum,maxprivity)
+		tipm = format("è¯¥æ¬¡æµ‹è¯•å…±%dé¢˜ï¼Œä½ ä»¬å¤«å¦»å…±ç­”å¯¹%dé¢˜ï¼Œæœ€é«˜é»˜å¥‘æŒ‡æ•°è¾¾åˆ°%dã€‚", qmax,samenum,maxprivity)
 	end
 	
-	--Í³¼ÆËùÓĞ½áÊøµÄĞÅÏ¢
+	--ç»Ÿè®¡æ‰€æœ‰ç»“æŸçš„ä¿¡æ¯
 	if coupleId >= 0 then
 		if act == "finish" then
 			x888901_LogCoupleAction(sceneId,selfId,coupleId,COUPLE_LOG_FINISHQUESTION)
@@ -450,7 +450,7 @@ function x888901_StopCoupleQuestionScript(sceneId,selfId,coupleId,act)
 	end
 end
 
--- È¡Ïû¿Í»§¶ËµÄÏÔÊ¾
+-- å–æ¶ˆå®¢æˆ·ç«¯çš„æ˜¾ç¤º
 function x888901_SendStopCoupleQuestion(sceneId,userId,act,tip)
 	if act then
 		x888901_NotifySystemMsg(sceneId,userId,act,tip)
@@ -464,47 +464,47 @@ function x888901_SendStopCoupleQuestion(sceneId,userId,act,tip)
 	DispatchUICommand(sceneId,userId, x888901_g_ScriptId)
 end
 
--- ÏµÍ³ÌáÊ¾
+-- ç³»ç»Ÿæç¤º
 function x888901_NotifySystemMsg(sceneId,selfId,txtId,tip)
 	BeginEvent(sceneId)
 	if txtId == "err_noteam" then
-		AddText(sceneId,"Äã±ØĞë×é¶Ó²ÅÄÜ²Î¼Ó")
+		AddText(sceneId,"ä½ å¿…é¡»ç»„é˜Ÿæ‰èƒ½å‚åŠ ")
 	elseif txtId == "err_musttwo" then
-		AddText(sceneId,"±ØĞë·òÆŞÁ½ÈË×é¶Ó")
+		AddText(sceneId,"å¿…é¡»å¤«å¦»ä¸¤äººç»„é˜Ÿ")
 	elseif txtId == "err_mustnear" then
-		AddText(sceneId,"·òÆŞÁ½ÈË±ØĞë¶¼ÔÚ¸½½ü")
+		AddText(sceneId,"å¤«å¦»ä¸¤äººå¿…é¡»éƒ½åœ¨é™„è¿‘")
 	elseif txtId == "err_nomarry" then
-		AddText(sceneId,"±ØĞë·òÆŞÁ½ÈË×é¶Ó")
+		AddText(sceneId,"å¿…é¡»å¤«å¦»ä¸¤äººç»„é˜Ÿ")
 	elseif txtId == "err_mustcouple" then
-		AddText(sceneId,"±ØĞë·òÆŞÁ½ÈË×é¶Ó")
+		AddText(sceneId,"å¿…é¡»å¤«å¦»ä¸¤äººç»„é˜Ÿ")
 	elseif txtId == "err_mustleader" then
-		AddText(sceneId,"±ØĞëÊÇ¶Ó³¤²ÅÄÜ±¨Ãû²Î¼Ó")
+		AddText(sceneId,"å¿…é¡»æ˜¯é˜Ÿé•¿æ‰èƒ½æŠ¥åå‚åŠ ")
 	elseif txtId == "err_already" then
-		AddText(sceneId,"ÄãÃÇ½ñÌìÒÑ¾­²Î¼Ó¹ıĞÄÓĞÁéÏ¬ÁË")
+		AddText(sceneId,"ä½ ä»¬ä»Šå¤©å·²ç»å‚åŠ è¿‡å¿ƒæœ‰çµçŠ€äº†")
 	elseif txtId == "timeout" then
-		AddText(sceneId,"»Ø´ğ³¬Ê±¡£")
+		AddText(sceneId,"å›ç­”è¶…æ—¶ã€‚")
 	elseif txtId == "directmarry" then
-		AddText(sceneId,"Ö±½Ó½á»é³É¹¦£¡£¡")
+		AddText(sceneId,"ç›´æ¥ç»“å©šæˆåŠŸï¼ï¼")
 	elseif txtId == "cancel" then
-		AddText(sceneId,"ÌìÓĞ²»²â·çÔÆ£¬²âÊÔÒâÍâ½áÊøÁË¡£"..tip)
+		AddText(sceneId,"å¤©æœ‰ä¸æµ‹é£äº‘ï¼Œæµ‹è¯•æ„å¤–ç»“æŸäº†ã€‚"..tip)
 	elseif txtId == "finish" then
-		AddText(sceneId,"ÄãÃÇÒÑÍê³É²âÊÔ¡£"..tip)
+		AddText(sceneId,"ä½ ä»¬å·²å®Œæˆæµ‹è¯•ã€‚"..tip)
 	elseif txtId == "clientstop" then
-		AddText(sceneId,"ÄãÃÇÖÕÖ¹ÁË²âÊÔ¡£"..tip)
+		AddText(sceneId,"ä½ ä»¬ç»ˆæ­¢äº†æµ‹è¯•ã€‚"..tip)
 	elseif txtId == "oknext" then
 		AddText(sceneId,tip)
 	elseif txtId == "failnext" then
-		AddText(sceneId,"ºÜÒÅº¶£¬ÄãÃÇ·òÆŞµÄ´ğ°¸²»Í¬¡£")
+		AddText(sceneId,"å¾ˆé—æ†¾ï¼Œä½ ä»¬å¤«å¦»çš„ç­”æ¡ˆä¸åŒã€‚")
 	elseif txtId == "err_notday" then
-		AddText(sceneId,"½ñÌìÃ»ÓĞĞÄÓĞÁéÏ¬")
+		AddText(sceneId,"ä»Šå¤©æ²¡æœ‰å¿ƒæœ‰çµçŠ€")
 	elseif txtId == "err_samemac" then
-		AddText(sceneId,"ÄãÃÇ·òÆŞÓÃÍ¬Ò»Ì¨»úÆ÷¿ÉÃ»·¨½øĞĞ²âÊÔ")
+		AddText(sceneId,"ä½ ä»¬å¤«å¦»ç”¨åŒä¸€å°æœºå™¨å¯æ²¡æ³•è¿›è¡Œæµ‹è¯•")
 	end
 	EndEvent(sceneId)
 	DispatchMissionTips(sceneId,selfId)
 end
 
---Í³¼ÆĞÅÏ¢
+--ç»Ÿè®¡ä¿¡æ¯
 function x888901_LogCoupleAction(sceneId,tid1,tid2,logid)
 	local bStart,qmax,_,_,maxprivity = GetCoupleQuestionState(sceneId,tid1)
 	--print(tostring(bStart).." "..tostring(logid).." "..tostring(COUPLE_LOG_DETAIL[logid]))
@@ -516,7 +516,7 @@ function x888901_LogCoupleAction(sceneId,tid1,tid2,logid)
 			femaleId = tid1
 		end
 		
-		--CPL:±àºÅ,ËµÃ÷,GUID1,GUID2,×ÜÌâÊı,×î´óÄ¬ÆõÊı,Ê±¼ä
+		--CPL:ç¼–å·,è¯´æ˜,GUID1,GUID2,æ€»é¢˜æ•°,æœ€å¤§é»˜å¥‘æ•°,æ—¶é—´
 		local logstr = format("CPL:%d,%s,0x%X,0x%X,%d,%d",
 									 				logid,
 									 				COUPLE_LOG_DETAIL[logid],

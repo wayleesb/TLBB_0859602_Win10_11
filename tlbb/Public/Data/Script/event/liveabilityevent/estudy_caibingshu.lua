@@ -1,43 +1,43 @@
---²É±ùÊõ¼¼ÄÜÑ§Ï°
+--é‡‡å†°æœ¯æŠ€èƒ½å­¦ä¹ 
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x713532_g_ScriptId = 713532
 
---´Ënpc¿ÉÒÔÉıµ½µÄ×î¸ßµÈ¼¶
+--æ­¤npcå¯ä»¥å‡åˆ°çš„æœ€é«˜ç­‰çº§
 x713532_g_nMaxLevel = 30
 
---Ñ§Ï°½çÃæÒªËµµÄ»°
-x713532_g_MessageStudy = "Ö»ÒªÄã¿Ï»¨·Ñ#{_EXCHG%d}¾Í¿ÉÒÔÑ§»á²É±ùÊõ¼¼ÄÜ¡£Äã¾ö¶¨Ñ§Ï°Ã´£¿"
+--å­¦ä¹ ç•Œé¢è¦è¯´çš„è¯
+x713532_g_MessageStudy = "åªè¦ä½ è‚¯èŠ±è´¹#{_EXCHG%d}å°±å¯ä»¥å­¦ä¼šé‡‡å†°æœ¯æŠ€èƒ½ã€‚ä½ å†³å®šå­¦ä¹ ä¹ˆï¼Ÿ"
 
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x713532_OnDefaultEvent( sceneId, selfId, targetId, ButtomNum,g_Npc_ScriptId )
-	--Íæ¼Ò¼¼ÄÜµÄµÈ¼¶
+	--ç©å®¶æŠ€èƒ½çš„ç­‰çº§
 	AbilityLevel = QueryHumanAbilityLevel(sceneId, selfId, ABILITY_CAIBINGSHU)
-	--Íæ¼Ò¼Ó¹¤¼¼ÄÜµÄÊìÁ·¶È
+	--ç©å®¶åŠ å·¥æŠ€èƒ½çš„ç†Ÿç»ƒåº¦
 	ExpPoint = GetAbilityExp(sceneId, selfId, ABILITY_CAIBINGSHU)
-	--ÈÎÎñÅĞ¶Ï
+	--ä»»åŠ¡åˆ¤æ–­
 
-	--ÅĞ¶ÏÊÇ·ñÊÇÌìÉ½ÅÉµÜ×Ó,²»ÊÇÌìÉ½µÜ×Ó²»ÄÜÑ§Ï°
+	--åˆ¤æ–­æ˜¯å¦æ˜¯å¤©å±±æ´¾å¼Ÿå­,ä¸æ˜¯å¤©å±±å¼Ÿå­ä¸èƒ½å­¦ä¹ 
 		if GetMenPai(sceneId,selfId) ~= MP_TIANSHAN then
 			BeginEvent(sceneId)
-        		AddText(sceneId,"Äã²»ÊÇ±¾ÅÉµÜ×Ó£¬ÎÒ²»ÄÜ½ÌÄã¡£");
+        		AddText(sceneId,"ä½ ä¸æ˜¯æœ¬æ´¾å¼Ÿå­ï¼Œæˆ‘ä¸èƒ½æ•™ä½ ã€‚");
         	EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,targetId)
 			return
 		end
-	--ÅĞ¶ÏÊÇ·ñÒÑ¾­Ñ§»áÁË²É±ùÊõ,Èç¹ûÑ§»áÁË,ÔòÌáÊ¾ÒÑ¾­Ñ§»áÁË
+	--åˆ¤æ–­æ˜¯å¦å·²ç»å­¦ä¼šäº†é‡‡å†°æœ¯,å¦‚æœå­¦ä¼šäº†,åˆ™æç¤ºå·²ç»å­¦ä¼šäº†
 	if AbilityLevel >= 1 then
 		BeginEvent(sceneId)
-        	AddText(sceneId,"ÄãÒÑ¾­Ñ§»á²É±ùÊõ¼¼ÄÜÁË");
+        	AddText(sceneId,"ä½ å·²ç»å­¦ä¼šé‡‡å†°æœ¯æŠ€èƒ½äº†");
         	EndEvent(sceneId)
         DispatchMissionTips(sceneId,selfId)
 		return
 	end
 
-	--Èç¹ûµã»÷µÄÊÇ¡°Ñ§Ï°¼¼ÄÜ¡±£¨¼´²ÎÊı=0£©
+	--å¦‚æœç‚¹å‡»çš„æ˜¯â€œå­¦ä¹ æŠ€èƒ½â€ï¼ˆå³å‚æ•°=0ï¼‰
 	if ButtomNum == 0 then
 		
 		local tempAbilityId = ABILITY_CAIBINGSHU;
@@ -48,68 +48,68 @@ function x713532_OnDefaultEvent( sceneId, selfId, targetId, ButtomNum,g_Npc_Scri
 			--AddText(sceneId,x713532_g_MessageStudy)
 			local addText = format(x713532_g_MessageStudy, demandMoney);
 			AddText(sceneId,addText)
-			--È·¶¨Ñ§Ï°°´Å¥
-					AddNumText(sceneId,x713532_g_ScriptId,"ÎÒÈ·¶¨ÒªÑ§Ï°", 6, 2)
-			--È¡ÏûÑ§Ï°°´Å¥
-					AddNumText(sceneId,x713532_g_ScriptId,"ÎÒÖ»ÊÇÀ´¿´¿´", 8, 3)
+			--ç¡®å®šå­¦ä¹ æŒ‰é’®
+					AddNumText(sceneId,x713532_g_ScriptId,"æˆ‘ç¡®å®šè¦å­¦ä¹ ", 6, 2)
+			--å–æ¶ˆå­¦ä¹ æŒ‰é’®
+					AddNumText(sceneId,x713532_g_ScriptId,"æˆ‘åªæ˜¯æ¥çœ‹çœ‹", 8, 3)
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,targetId)
 		end
-	elseif ButtomNum == 2 then			--Èç¹ûµã»÷µÄÊÇ¡°ÎÒÈ·¶¨ÒªÑ§Ï°¡±
+	elseif ButtomNum == 2 then			--å¦‚æœç‚¹å‡»çš„æ˜¯â€œæˆ‘ç¡®å®šè¦å­¦ä¹ â€
 		local tempAbilityId = ABILITY_CAIBINGSHU;
 		local tempAbilityLevel = 1;
 		local ret, demandMoney, demandExp, limitAbilityExp, limitAbilityExpShow, currentLevelAbilityExpTop, limitLevel = LuaFnGetAbilityLevelUpConfig(tempAbilityId, tempAbilityLevel);
 		if ret and ret == 1 then
-			--¼ì²éÍæ¼ÒÊÇ·ñÓĞÒ»¸öÒø±ÒµÄÏÖ½ğ
+			--æ£€æŸ¥ç©å®¶æ˜¯å¦æœ‰ä¸€ä¸ªé“¶å¸çš„ç°é‡‘
 			if GetMoney(sceneId,selfId)+GetMoneyJZ(sceneId,selfId) < demandMoney then			
 				BeginEvent(sceneId)
-					AddText(sceneId,"ÄãµÄ½ğÇ®²»×ã");
+					AddText(sceneId,"ä½ çš„é‡‘é’±ä¸è¶³");
 					EndEvent(sceneId)
 				DispatchMissionTips(sceneId,selfId)
 				return
 			end
-			--¼ì²éÍæ¼ÒµÈ¼¶ÊÇ·ñ´ïµ½ÒªÇó
+			--æ£€æŸ¥ç©å®¶ç­‰çº§æ˜¯å¦è¾¾åˆ°è¦æ±‚
 			if GetLevel(sceneId,selfId) < limitLevel then
 				BeginEvent(sceneId)
-					AddText(sceneId,"ÄãµÄµÈ¼¶²»¹»");
+					AddText(sceneId,"ä½ çš„ç­‰çº§ä¸å¤Ÿ");
 					EndEvent(sceneId)
 				DispatchMissionTips(sceneId,selfId)
 				return
 			end
-			--É¾³ı½ğÇ®
+			--åˆ é™¤é‡‘é’±
 			LuaFnCostMoneyWithPriority(sceneId,selfId,demandMoney)
-			--¼¼ÄÜÌáÉıµ½1
+			--æŠ€èƒ½æå‡åˆ°1
 			SetHumanAbilityLevel(sceneId,selfId,ABILITY_CAIBINGSHU,1)
-			--ÔÚnpcÁÄÌì´°¿ÚÍ¨ÖªÍæ¼ÒÒÑ¾­Ñ§»áÁË
+			--åœ¨npcèŠå¤©çª—å£é€šçŸ¥ç©å®¶å·²ç»å­¦ä¼šäº†
 			BeginEvent(sceneId)
-				AddText(sceneId,"ÄãÑ§»áÁË²É±ùÊõ¼¼ÄÜ")
+				AddText(sceneId,"ä½ å­¦ä¼šäº†é‡‡å†°æœ¯æŠ€èƒ½")
 			EndEvent( )
 			DispatchEventList(sceneId,selfId,targetId)
 		end
-	else --Èç¹ûµã»÷¡°ÎÒÖ»ÊÇÀ´¿´¿´¡±
+	else --å¦‚æœç‚¹å‡»â€œæˆ‘åªæ˜¯æ¥çœ‹çœ‹â€
 		CallScriptFunction( g_Npc_ScriptId, "OnDefaultEvent",sceneId, selfId, targetId )
 	end
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x713532_OnEnumerate( sceneId, selfId, targetId )
-		--Èç¹û²»µ½µÈ¼¶Ôò²»ÏÔÊ¾Ñ¡Ïî
+		--å¦‚æœä¸åˆ°ç­‰çº§åˆ™ä¸æ˜¾ç¤ºé€‰é¡¹
 		--if GetLevel(sceneId,selfId) >= 10 then
-			AddNumText(sceneId,x713532_g_ScriptId,"Ñ§Ï°²É±ùÊõ¼¼ÄÜ", 12, 0)
+			AddNumText(sceneId,x713532_g_ScriptId,"å­¦ä¹ é‡‡å†°æœ¯æŠ€èƒ½", 12, 0)
 		--end
 		return
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x713532_CheckAccept( sceneId, selfId )
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x713532_OnAccept( sceneId, selfId, ABILITY_CAIBINGSHU )
 end

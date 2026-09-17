@@ -1,43 +1,43 @@
---¿ª¹â¼¼ÄÜÉı¼¶
+--å¼€å…‰æŠ€èƒ½å‡çº§
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x713571_g_ScriptId = 713571
 
---´Ënpc¿ÉÒÔÉıµ½µÄ×î¸ßµÈ¼¶
+--æ­¤npcå¯ä»¥å‡åˆ°çš„æœ€é«˜ç­‰çº§
 x713571_g_nMaxLevel = 10
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x713571_OnDefaultEvent( sceneId, selfId, targetId )
-	--Íæ¼Ò¼¼ÄÜµÄµÈ¼¶
+	--ç©å®¶æŠ€èƒ½çš„ç­‰çº§
 	AbilityLevel = QueryHumanAbilityLevel(sceneId, selfId, ABILITY_KAIGUANG)
-	--Íæ¼Ò¿ª¹â¼¼ÄÜµÄÊìÁ·¶È
+	--ç©å®¶å¼€å…‰æŠ€èƒ½çš„ç†Ÿç»ƒåº¦
 	ExpPoint = GetAbilityExp(sceneId, selfId, ABILITY_KAIGUANG)
-	--ÈÎÎñÅĞ¶Ï
+	--ä»»åŠ¡åˆ¤æ–­
 
-	--ÅĞ¶ÏÊÇ·ñÊÇÉÙÁÖÅÉµÜ×Ó,²»ÊÇÉÙÁÖµÜ×Ó²»ÄÜÑ§Ï°
+	--åˆ¤æ–­æ˜¯å¦æ˜¯å°‘æ—æ´¾å¼Ÿå­,ä¸æ˜¯å°‘æ—å¼Ÿå­ä¸èƒ½å­¦ä¹ 
 		if GetMenPai(sceneId,selfId) ~= MP_SHAOLIN then
 			BeginEvent(sceneId)
-        		AddText(sceneId,"Äã²»ÊÇ±¾ÅÉµÜ×Ó£¬ÎÒ²»ÄÜ½ÌÄã¡£");
+        		AddText(sceneId,"ä½ ä¸æ˜¯æœ¬æ´¾å¼Ÿå­ï¼Œæˆ‘ä¸èƒ½æ•™ä½ ã€‚");
         	EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,targetId)
 			return
 		end
-	--Èç¹û»¹Ã»ÓĞÑ§»á¸ÃÉú»î¼¼ÄÜ
+	--å¦‚æœè¿˜æ²¡æœ‰å­¦ä¼šè¯¥ç”Ÿæ´»æŠ€èƒ½
 	if AbilityLevel < 1	then
 		BeginEvent(sceneId)
-			strText = "Äã»¹Ã»ÓĞÑ§»á¿ª¹â¼¼ÄÜ£¡"
+			strText = "ä½ è¿˜æ²¡æœ‰å­¦ä¼šå¼€å…‰æŠ€èƒ½ï¼"
 			AddText(sceneId,strText)
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 		return
 	end
 
-	--Èç¹ûÉú»î¼¼ÄÜµÈ¼¶ÒÑ¾­³¬³ö¸ÃnpcËùÄÜ½ÌµÄ·¶Î§
+	--å¦‚æœç”Ÿæ´»æŠ€èƒ½ç­‰çº§å·²ç»è¶…å‡ºè¯¥npcæ‰€èƒ½æ•™çš„èŒƒå›´
 	if AbilityLevel >= x713571_g_nMaxLevel then
 		BeginEvent(sceneId)
-			strText = "ÎÒÖ»ÄÜ½ÌÄã1-10¼¶µÄ¿ª¹â¼¼ÄÜ,Çëµ½°ïÅÉÖĞÑ§Ï°¸ü¸ß¼¶µÄ¿ª¹â."
+			strText = "æˆ‘åªèƒ½æ•™ä½ 1-10çº§çš„å¼€å…‰æŠ€èƒ½,è¯·åˆ°å¸®æ´¾ä¸­å­¦ä¹ æ›´é«˜çº§çš„å¼€å…‰."
 			AddText(sceneId,strText)
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
@@ -53,24 +53,24 @@ function x713571_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x713571_OnEnumerate( sceneId, selfId, targetId )
-		--Èç¹û²»µ½µÈ¼¶Ôò²»ÏÔÊ¾Ñ¡Ïî
+		--å¦‚æœä¸åˆ°ç­‰çº§åˆ™ä¸æ˜¾ç¤ºé€‰é¡¹
 		if 1 then
-			AddNumText(sceneId,x713571_g_ScriptId,"Éı¼¶¿ª¹â¼¼ÄÜ", 12, 1)
+			AddNumText(sceneId,x713571_g_ScriptId,"å‡çº§å¼€å…‰æŠ€èƒ½", 12, 1)
 		end
 		return
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x713571_CheckAccept( sceneId, selfId )
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x713571_OnAccept( sceneId, selfId, ABILITY_KAIGUANG )
 end

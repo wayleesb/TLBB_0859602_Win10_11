@@ -1,27 +1,27 @@
 -- 311012
--- äîÔË£¬µÄÒ»Ð©ÏÞÖÆ£¬
+-- æ¼•è¿ï¼Œçš„ä¸€äº›é™åˆ¶ï¼Œ
 
--- Íæ¼ÒÃ¿É±Ò»¸öÅÜäîÔËµÄÈË£¬ÏµÍ³½«»á¼ÇÂ¼Ò»´Î£¬²¢ÏÔÊ¾ÔÚ¡°ÆäËû¡±½çÃæÖÐ£¬ÏÔÊ¾Îª¡°½Ùäî´ÎÊý£ºXX¡±
--- ¸ÃÊý¾ÝÃ¿Ìì0µãÊ±¸´Î»Îª0
--- µ±Íæ¼ÒµÄ½Ùäî´ÎÊý>=10Ê±£¬Ç¿ÐÐÉèÖÃÆäÉ±ÆøÖµ=10£¬²¢¸´Î»½Ùäî´ÎÊý=0¡£
+-- çŽ©å®¶æ¯æ€ä¸€ä¸ªè·‘æ¼•è¿çš„äººï¼Œç³»ç»Ÿå°†ä¼šè®°å½•ä¸€æ¬¡ï¼Œå¹¶æ˜¾ç¤ºåœ¨â€œå…¶ä»–â€ç•Œé¢ä¸­ï¼Œæ˜¾ç¤ºä¸ºâ€œåŠ«æ¼•æ¬¡æ•°ï¼šXXâ€
+-- è¯¥æ•°æ®æ¯å¤©0ç‚¹æ—¶å¤ä½ä¸º0
+-- å½“çŽ©å®¶çš„åŠ«æ¼•æ¬¡æ•°>=10æ—¶ï¼Œå¼ºè¡Œè®¾ç½®å…¶æ€æ°”å€¼=10ï¼Œå¹¶å¤ä½åŠ«æ¼•æ¬¡æ•°=0ã€‚
 
---MD_KILL_CAOYUN_PAOSHANG_CT = 150  -- Ò»ÌìÊ±¼äÀïÍ·´ò½ÙäîÔËÈËµÄ´ÎÊý
---MD_KILL_CAOYUN_PAOSHANG_PRE_TIME = 151 --ÉÏÒ»´Î´ò½ÙÊ±¼ä 
+--MD_KILL_CAOYUN_PAOSHANG_CT = 150  -- ä¸€å¤©æ—¶é—´é‡Œå¤´æ‰“åŠ«æ¼•è¿äººçš„æ¬¡æ•°
+--MD_KILL_CAOYUN_PAOSHANG_PRE_TIME = 151 --ä¸Šä¸€æ¬¡æ‰“åŠ«æ—¶é—´ 
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x311012_g_ScriptId = 311012
 x311012_TIME_2000_01_03_ = 946828868
 
 --**********************************
--- ±»½ÙÖ®ºó
+-- è¢«åŠ«ä¹‹åŽ
 --**********************************
 function x311012_OnDacoity( sceneId, selfId, Killer )
-	-- ÏÈ¿´ÄãÊÇ²»ÊÇ±»ÈËÉ±µÄ
+	-- å…ˆçœ‹ä½ æ˜¯ä¸æ˜¯è¢«äººæ€çš„
 	local nKiller = Killer
 	if LuaFnIsObjValid(sceneId, nKiller)==1  and
 				--LuaFnIsCanDoScriptLogic(sceneId, nKiller) == 1 and
 				GetCharacterType(sceneId, nKiller) == 3  then
-		-- Èç¹ûÊÇ³èÎïÉ±ËÀ£¬ÐèÒª×ª»»³ÉÈË
+		-- å¦‚æžœæ˜¯å® ç‰©æ€æ­»ï¼Œéœ€è¦è½¬æ¢æˆäºº
 		nKiller = GetPetCreator(sceneId, nKiller)
 	end	
 
@@ -31,14 +31,14 @@ function x311012_OnDacoity( sceneId, selfId, Killer )
 	
 	if LuaFnIsObjValid(sceneId, nKiller)==1  and
 				LuaFnIsCanDoScriptLogic(sceneId, nKiller) == 1 and
-				0 == IsInGuildWar(sceneId, selfId, nKiller) and   --ÊÇ·ñÊÇ¹«»áÕ½Õù
+				0 == IsInGuildWar(sceneId, selfId, nKiller) and   --æ˜¯å¦æ˜¯å…¬ä¼šæˆ˜äº‰
 				GetCharacterType(sceneId, nKiller) == 1  then
 				
 		local nDacoityCount = GetMissionData(sceneId, nKiller, MD_KILL_CAOYUN_PAOSHANG_CT)
 		local nPreTime = GetMissionData(sceneId, nKiller, MD_KILL_CAOYUN_PAOSHANG_PRE_TIME)
 		local nCurTime = LuaFnGetCurrentTime()
 
-		-- ¿´Ê±¼äÊÇ²»ÊÇ¹ýÁËÒ»Ìì£¬¹ýÁË¾ÍÏÈ¸üÐÂ
+		-- çœ‹æ—¶é—´æ˜¯ä¸æ˜¯è¿‡äº†ä¸€å¤©ï¼Œè¿‡äº†å°±å…ˆæ›´æ–°
 		if (nCurTime - nPreTime  >= 3600*24)  or
 			 (floor((nCurTime-x311012_TIME_2000_01_03_)/(3600*24)) ~= floor((nPreTime-x311012_TIME_2000_01_03_)/(3600*24)))   then
 			nDacoityCount = 0
@@ -49,7 +49,7 @@ function x311012_OnDacoity( sceneId, selfId, Killer )
 		nDacoityCount = nDacoityCount + 1
 		
 		if nDacoityCount >= 10  then
-			-- Ç¿ÖÆÉèÖÃÍæ¼ÒµÄÉ±ÆøÎª10
+			-- å¼ºåˆ¶è®¾ç½®çŽ©å®¶çš„æ€æ°”ä¸º10
 			local nPkValue = LuaFnGetHumanPKValue(sceneId, nKiller)
 			LuaFnSetHumanPKValue(sceneId, nKiller, 10)
 			SetMissionData(sceneId, nKiller, MD_KILL_CAOYUN_PAOSHANG_CT, 0)
@@ -64,13 +64,13 @@ function x311012_OnDacoity( sceneId, selfId, Killer )
 			WriteCheckLog( sceneId, selfId, LogInfo )
 			
 			local KillGuid = LuaFnObjId2Guid(sceneId, nKiller)
-			LuaFnSendMailToGUID(sceneId, KillGuid, "Äã½ñÌì½ÙäîµÄ´ÎÊý¶à´ï10´Î£¬ÒÑ¾­Ó°Ïìµ½ÆäËûÍæ¼ÒµÄÕý³£ÀûÒæ£¬ÏÖÔÝÊ±·â½ûÄãµÄ×ÔÓÉ£¬»¹ÍûÏÂ´ÎÐÐÊÂÈýË¼¶øºóÐÐ£¡")
+			LuaFnSendMailToGUID(sceneId, KillGuid, "ä½ ä»Šå¤©åŠ«æ¼•çš„æ¬¡æ•°å¤šè¾¾10æ¬¡ï¼Œå·²ç»å½±å“åˆ°å…¶ä»–çŽ©å®¶çš„æ­£å¸¸åˆ©ç›Šï¼ŒçŽ°æš‚æ—¶å°ç¦ä½ çš„è‡ªç”±ï¼Œè¿˜æœ›ä¸‹æ¬¡è¡Œäº‹ä¸‰æ€è€ŒåŽè¡Œï¼")
 
 		else
 			SetMissionData(sceneId, nKiller, MD_KILL_CAOYUN_PAOSHANG_CT, nDacoityCount)
 			SetMissionData(sceneId, nKiller, MD_KILL_CAOYUN_PAOSHANG_PRE_TIME, nCurTime)
 			BeginEvent(sceneId)
-				strText = "Äã½ñÌì½ÙäîµÄ´ÎÊýÎª" .. tostring(nDacoityCount) .. "´Î£¬µ±Äã½Ùäî´ÎÊý´ïµ½10´ÎÊ±£¬½«±»×¥½ø¼àÓü£¬»¹ÇëÈýË¼¶øÐÐ£¡"
+				strText = "ä½ ä»Šå¤©åŠ«æ¼•çš„æ¬¡æ•°ä¸º" .. tostring(nDacoityCount) .. "æ¬¡ï¼Œå½“ä½ åŠ«æ¼•æ¬¡æ•°è¾¾åˆ°10æ¬¡æ—¶ï¼Œå°†è¢«æŠ“è¿›ç›‘ç‹±ï¼Œè¿˜è¯·ä¸‰æ€è€Œè¡Œï¼"
 				AddText(sceneId,strText);
 			EndEvent(sceneId)
 			DispatchMissionTips(sceneId,nKiller)
@@ -79,7 +79,7 @@ function x311012_OnDacoity( sceneId, selfId, Killer )
 end
 
 --**********************************
--- ¸üÐÂ±»´ò½ÙµÄÊý¾Ý
+-- æ›´æ–°è¢«æ‰“åŠ«çš„æ•°æ®
 --**********************************
 function x311012_UpdataDacoityData( sceneId, selfId )
 
@@ -87,7 +87,7 @@ function x311012_UpdataDacoityData( sceneId, selfId )
 	local nPreTime = GetMissionData(sceneId, selfId, MD_KILL_CAOYUN_PAOSHANG_PRE_TIME)
 	local nCurTime = LuaFnGetCurrentTime()
 	
-	-- ¿´Ê±¼äÊÇ²»ÊÇ¹ýÁËÒ»Ìì£¬¹ýÁË¾ÍÏÈ¸üÐÂ
+	-- çœ‹æ—¶é—´æ˜¯ä¸æ˜¯è¿‡äº†ä¸€å¤©ï¼Œè¿‡äº†å°±å…ˆæ›´æ–°
 	if (nCurTime - nPreTime  >= 3600*24)  or
 		 (floor((nCurTime-x311012_TIME_2000_01_03_)/(3600*24)) ~= floor((nPreTime-x311012_TIME_2000_01_03_)/(3600*24)))   then
 		nDacoityCount = 0

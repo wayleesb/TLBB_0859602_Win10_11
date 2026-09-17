@@ -1,34 +1,34 @@
---ĞÂÊ¥»ğ´«µİ....
---´ğÌâ....
+--æ–°åœ£ç«ä¼ é€’....
+--ç­”é¢˜....
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x808093_g_ScriptId = 808093
 
 
---ÌâÄ¿ÊıÁ¿....
+--é¢˜ç›®æ•°é‡....
 x808093_g_NumQuestion	= 5
 
---ÌâÄ¿ÔÚÌâ¿âÖĞµÄ·ÖÀà....
+--é¢˜ç›®åœ¨é¢˜åº“ä¸­çš„åˆ†ç±»....
 x808093_g_QuestionType = 9
 
---ĞÂÊ¥»ğ´«µİ´ğÌâÈÎÎñºÅ....
+--æ–°åœ£ç«ä¼ é€’ç­”é¢˜ä»»åŠ¡å·....
 x808093_g_MissionIndexA = 1004
 x808093_g_MissionIndexB = 1008
 
---ĞÂÊ¥»ğ´«µİÁìÈ¡´ğÌâÈÎÎñNPC....
-x808093_g_MisNPCNameA = "ÉêÇé"
-x808093_g_MisNPCNameB = "ÑàÇà"
+--æ–°åœ£ç«ä¼ é€’é¢†å–ç­”é¢˜ä»»åŠ¡NPC....
+x808093_g_MisNPCNameA = "ç”³æƒ…"
+x808093_g_MisNPCNameB = "ç‡•é’"
 
 --UICOMMAND
 x808093_g_UICommand = 20080419
 
-x808093_g_UIStart			= 1	--¿ªÊ¼´ğÌâ½çÃæ....
-x808093_g_UIQuestion	= 2	--ÏÔÊ¾ÌâÄ¿½çÃæ....
-x808093_g_UIWrong			= 3	--´ğ´í½çÃæ....
-x808093_g_UIEnd				= 4	--´ğÍêËùÓĞÌâÄ¿½çÃæ....
+x808093_g_UIStart			= 1	--å¼€å§‹ç­”é¢˜ç•Œé¢....
+x808093_g_UIQuestion	= 2	--æ˜¾ç¤ºé¢˜ç›®ç•Œé¢....
+x808093_g_UIWrong			= 3	--ç­”é”™ç•Œé¢....
+x808093_g_UIEnd				= 4	--ç­”å®Œæ‰€æœ‰é¢˜ç›®ç•Œé¢....
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x808093_OnDefaultEvent( sceneId, selfId, targetId )
 
@@ -47,10 +47,10 @@ function x808093_OnDefaultEvent( sceneId, selfId, targetId )
 		return
 	end
 
-	--ÏÔÊ¾´ğÌâ½çÃæ....
+	--æ˜¾ç¤ºç­”é¢˜ç•Œé¢....
 	BeginUICommand(sceneId)
 		UICommand_AddInt(sceneId,x808093_g_UIStart)
-		UICommand_AddString(sceneId,"#gFF0FA0ÌåÓıÖªÊ¶ÎÊ´ğ")
+		UICommand_AddString(sceneId,"#gFF0FA0ä½“è‚²çŸ¥è¯†é—®ç­”")
 		UICommand_AddString(sceneId,"#{XSHCD_20080418_060}")
 		UICommand_AddInt(sceneId,targetId)
 	EndUICommand(sceneId)
@@ -59,7 +59,7 @@ function x808093_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x808093_OnEnumerate( sceneId, selfId, targetId )
 
@@ -70,7 +70,7 @@ function x808093_OnEnumerate( sceneId, selfId, targetId )
 		if IsHaveMission( sceneId, selfId, x808093_g_MissionIndexA ) > 0 then
 			local misIndex = GetMissionIndexByID( sceneId, selfId, x808093_g_MissionIndexA )
 			if 0 == GetMissionParam( sceneId, selfId, misIndex, 0 ) then
-				AddNumText( sceneId, x808093_g_ScriptId, "ÌåÓıÖªÊ¶ÎÊ´ğ", 6, 1 )
+				AddNumText( sceneId, x808093_g_ScriptId, "ä½“è‚²çŸ¥è¯†é—®ç­”", 6, 1 )
 			end
 		end
 
@@ -79,7 +79,7 @@ function x808093_OnEnumerate( sceneId, selfId, targetId )
 		if IsHaveMission( sceneId, selfId, x808093_g_MissionIndexB ) > 0 then
 			local misIndex = GetMissionIndexByID( sceneId, selfId, x808093_g_MissionIndexB )
 			if 0 == GetMissionParam( sceneId, selfId, misIndex, 0 ) then
-				AddNumText( sceneId, x808093_g_ScriptId, "ÌåÓıÖªÊ¶ÎÊ´ğ", 6, 2 )
+				AddNumText( sceneId, x808093_g_ScriptId, "ä½“è‚²çŸ¥è¯†é—®ç­”", 6, 2 )
 			end
 		end
 
@@ -88,11 +88,11 @@ function x808093_OnEnumerate( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÌáÎÊ
+--æé—®
 --**********************************
 function x808093_AskQuestion( sceneId, selfId, Question_Sequence)
 
-	--´òÍêÁËËùÓĞÌâ¾ÍÏÔÊ¾´ğÍêµÄ½çÃæ....
+	--æ‰“å®Œäº†æ‰€æœ‰é¢˜å°±æ˜¾ç¤ºç­”å®Œçš„ç•Œé¢....
 	if Question_Sequence > x808093_g_NumQuestion then
 
 		x808093_OnPlayerFinishQuiz( sceneId, selfId )
@@ -106,16 +106,16 @@ function x808093_AskQuestion( sceneId, selfId, Question_Sequence)
 
 	end
 
-	--Ëæ»ú³öÒ»¸öÌâºÅ....
+	--éšæœºå‡ºä¸€ä¸ªé¢˜å·....
 	local wenti = GetRandomQuestionsIndex( x808093_g_QuestionType )
 
 	local con,opt0,opt1,opt2,opt3,opt4,opt5,key0,key1,key2,key3,key4,key5,sztype=GetQuestionsRecord(wenti)
 	if con=="" then
-		Msg2Player( sceneId,selfId,"Î´ÕÒµ½ÎÊÌâ",MSG2PLAYER_PARA)
+		Msg2Player( sceneId,selfId,"æœªæ‰¾åˆ°é—®é¢˜",MSG2PLAYER_PARA)
 	end
 
 	local key_position = {}
-	--°ÑËûÃÇÎ»ÖÃËæ»úµô
+	--æŠŠä»–ä»¬ä½ç½®éšæœºæ‰
 	local rand = random(3)
 	if rand == 1 then
 		key_position[0] = 1
@@ -162,7 +162,7 @@ function x808093_AskQuestion( sceneId, selfId, Question_Sequence)
 end
 
 --**********************************
---»Ø´ğ
+--å›ç­”
 --**********************************
 function x808093_AnswerQuestion( sceneId, selfId, Question, Answer1, Question_Sequence)
 
@@ -177,7 +177,7 @@ function x808093_AnswerQuestion( sceneId, selfId, Question, Answer1, Question_Se
 	Answer_List[5] = key5;
 
 	if con=="" then
-		Msg2Player( sceneId,selfId,"Î´ÕÒµ½ÎÊÌâ",MSG2PLAYER_PARA)
+		Msg2Player( sceneId,selfId,"æœªæ‰¾åˆ°é—®é¢˜",MSG2PLAYER_PARA)
 	end
 
 	local asktime = GetMissionData(sceneId,selfId,MD_QUIZ_ASKTIME)
@@ -198,7 +198,7 @@ function x808093_AnswerQuestion( sceneId, selfId, Question, Answer1, Question_Se
 end
 
 --**********************************
---´ğÌâ³¬Ê±
+--ç­”é¢˜è¶…æ—¶
 --**********************************
 function x808093_OnOverTime( sceneId, selfId )
 
@@ -211,11 +211,11 @@ function x808093_OnOverTime( sceneId, selfId )
 end
 
 --**********************************
---Íæ¼Ò´ğÍêËùÓĞÌâÄ¿
+--ç©å®¶ç­”å®Œæ‰€æœ‰é¢˜ç›®
 --**********************************
 function x808093_OnPlayerFinishQuiz( sceneId, selfId )
 
-	--Èç¹ûÓĞÎ´Íê³ÉµÄĞÂÊ¥»ğ´«µİµÄ´ğÌâÈÎÎñ....Ôò½«ÈÎÎñÖÃÎªÍê³É....
+	--å¦‚æœæœ‰æœªå®Œæˆçš„æ–°åœ£ç«ä¼ é€’çš„ç­”é¢˜ä»»åŠ¡....åˆ™å°†ä»»åŠ¡ç½®ä¸ºå®Œæˆ....
 
 	if IsHaveMission( sceneId, selfId, x808093_g_MissionIndexA ) > 0 then
 

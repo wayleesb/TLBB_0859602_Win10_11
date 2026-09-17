@@ -18,10 +18,10 @@ function x300017_OnDefaultEvent( sceneId, selfId, BagIndex )
 	--begin modified by zhangguoxin 090209
 	local iDayCount=GetMissionData(sceneId,selfId,MD_CAOYUN_DAYCOUNT)
 	--local iTime = mod(iDayCount,100000)
-	--local iDayTime = floor(iTime/100)	--ÉÏÒ»´Î½»ÈÎÎñµÄÊ±¼ä(ÌìÊı)
-	--local iQuarterTime = mod(iTime,100)	--ÉÏÒ»´Î½»ÈÎÎñµÄÊ±¼ä(¿Ì)
-	--local iDayHuan = floor(iDayCount/100000) --µ±ÌìÄÚÍê³ÉµÄÈÎÎñ´ÎÊı
-	local iDayHuan = iDayCount --µ±ÌìÄÚÍê³ÉµÄÈÎÎñ´ÎÊı 
+	--local iDayTime = floor(iTime/100)	--ä¸Šä¸€æ¬¡äº¤ä»»åŠ¡çš„æ—¶é—´(å¤©æ•°)
+	--local iQuarterTime = mod(iTime,100)	--ä¸Šä¸€æ¬¡äº¤ä»»åŠ¡çš„æ—¶é—´(åˆ»)
+	--local iDayHuan = floor(iDayCount/100000) --å½“å¤©å†…å®Œæˆçš„ä»»åŠ¡æ¬¡æ•°
+	local iDayHuan = iDayCount --å½“å¤©å†…å®Œæˆçš„ä»»åŠ¡æ¬¡æ•° 
 	--end modified by zhangguoxin 090209
 
 	BeginUICommand(sceneId)

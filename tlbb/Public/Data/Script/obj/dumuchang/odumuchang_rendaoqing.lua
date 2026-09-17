@@ -1,18 +1,18 @@
---¶¾ÕÏÔóµØNPC
---ÈÎµÀÇå
---ÆÕÍ¨
+--æ¯’éšœæ³½åœ°NPC
+--ä»»é“æ¸…
+--æ™®é€š
 
 x050112_g_ScriptId	= 050112
 
---²Ù×÷¼¯
+--æ“ä½œé›†
 x050112_g_Key				=
 {
-		["zhu"]					= 100,	--ÎÒÏëÉ¾³ıËùÓĞµÄÈÎÎñ
-		["itm"]					= 101,	--ÎÒÏëÉ¾³ıÈÎÎñµÀ¾ß
-		["do"]					= 102,	--È·ÈÏÉ¾³ıËùÓĞµÄÈÎÎñ
+		["zhu"]					= 100,	--æˆ‘æƒ³åˆ é™¤æ‰€æœ‰çš„ä»»åŠ¡
+		["itm"]					= 101,	--æˆ‘æƒ³åˆ é™¤ä»»åŠ¡é“å…·
+		["do"]					= 102,	--ç¡®è®¤åˆ é™¤æ‰€æœ‰çš„ä»»åŠ¡
 }
 
--- ĞèÒªÔÚÉ¾³ıËùÓĞÈÎÎñµÄÊ±ºò£¬Í¬Ê±É¾³ıµÄÈÎÎñÎïÆ·µÄÁĞ±í
+-- éœ€è¦åœ¨åˆ é™¤æ‰€æœ‰ä»»åŠ¡çš„æ—¶å€™ï¼ŒåŒæ—¶åˆ é™¤çš„ä»»åŠ¡ç‰©å“çš„åˆ—è¡¨
 x050112_g_MisItemList = {	40004000,40004451,40004452,40004461,
 		40004453,40004456,40004459,40004458,40004455,40004457,30505062,											
 }
@@ -21,19 +21,19 @@ x050112_g_YinMoZhuList = {	40004455,40004456,40004457,40004458,40004459
 }
 
 --******************************************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --******************************************************
 function x050112_OnDefaultEvent( sceneId, selfId, targetId )
 	BeginEvent( sceneId )
-		AddText( sceneId, "  ÎÒ¿ÉÒÔ°ïÖú¸÷Î»Ó¢ĞÛÉ¾³ı¶àÓàµÄÈÎÎñµÀ¾ß¡£Èç¹ûÄ³Ğ©ÈÎÎñµÀ¾ßÈÃÄã¸Ğµ½¿àÄÕ£¬¾ÍÀ´ÕÒÎÒ°É£¡" )
-		AddNumText( sceneId, x050112_g_ScriptId, "ÎÒÏëÉ¾³ıÒıÄ§Öé", 6, x050112_g_Key["zhu"] )
-		AddNumText( sceneId, x050112_g_ScriptId, "ÎÒÏëÉ¾³ıÈÎÎñµÀ¾ß", 6, x050112_g_Key["itm"] )
+		AddText( sceneId, "  æˆ‘å¯ä»¥å¸®åŠ©å„ä½è‹±é›„åˆ é™¤å¤šä½™çš„ä»»åŠ¡é“å…·ã€‚å¦‚æœæŸäº›ä»»åŠ¡é“å…·è®©ä½ æ„Ÿåˆ°è‹¦æ¼ï¼Œå°±æ¥æ‰¾æˆ‘å§ï¼" )
+		AddNumText( sceneId, x050112_g_ScriptId, "æˆ‘æƒ³åˆ é™¤å¼•é­”ç ", 6, x050112_g_Key["zhu"] )
+		AddNumText( sceneId, x050112_g_ScriptId, "æˆ‘æƒ³åˆ é™¤ä»»åŠ¡é“å…·", 6, x050112_g_Key["itm"] )
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x050112_OnEventRequest( sceneId, selfId, targetId, eventId )
 	
@@ -42,7 +42,7 @@ function x050112_OnEventRequest( sceneId, selfId, targetId, eventId )
 	if key == x050112_g_Key["zhu"]	then
 		local iHave = 0;
 		for i, nItemId in x050112_g_YinMoZhuList do
-			-- »ñµÃÕâ¸öÎïÆ·µÄÊıÁ¿
+			-- è·å¾—è¿™ä¸ªç‰©å“çš„æ•°é‡
 			local nItemCount = GetItemCount(sceneId, selfId, nItemId)
 			
 			if nItemCount > 0  then
@@ -52,13 +52,13 @@ function x050112_OnEventRequest( sceneId, selfId, targetId, eventId )
 		
 		if (iHave == 0) then
 			BeginEvent( sceneId )
-				AddText( sceneId, "  ÄãÉíÉÏ²¢Ã»ÓĞ¿ÉÒÔÉ¾³ıµÄÒıÄ§Öé°¡£¡" )
+				AddText( sceneId, "  ä½ èº«ä¸Šå¹¶æ²¡æœ‰å¯ä»¥åˆ é™¤çš„å¼•é­”ç å•Šï¼" )
 			EndEvent( sceneId )
 			DispatchEventList( sceneId, selfId, targetId )
 		else
 			BeginEvent( sceneId )
-				AddText( sceneId, "  É¾³ıÉíÉÏËùÓĞµÄÒıÄ§Öé£¬ÊÇ·ñÈ·ÈÏÒªÉ¾³ı£¿" )
-				AddNumText( sceneId, x050112_g_ScriptId, "È·ÈÏ", 6, x050112_g_Key["do"] )
+				AddText( sceneId, "  åˆ é™¤èº«ä¸Šæ‰€æœ‰çš„å¼•é­”ç ï¼Œæ˜¯å¦ç¡®è®¤è¦åˆ é™¤ï¼Ÿ" )
+				AddNumText( sceneId, x050112_g_ScriptId, "ç¡®è®¤", 6, x050112_g_Key["do"] )
 			EndEvent( sceneId )
 			DispatchEventList( sceneId, selfId, targetId )
 		end
@@ -70,7 +70,7 @@ function x050112_OnEventRequest( sceneId, selfId, targetId, eventId )
 
 	elseif key == x050112_g_Key["do"]	then
 		for i, nItemId in x050112_g_YinMoZhuList do
-			-- »ñµÃÕâ¸öÎïÆ·µÄÊıÁ¿
+			-- è·å¾—è¿™ä¸ªç‰©å“çš„æ•°é‡
 			local nItemCount = GetItemCount(sceneId, selfId, nItemId)
 			
 			if nItemCount > 0  then
@@ -78,7 +78,7 @@ function x050112_OnEventRequest( sceneId, selfId, targetId, eventId )
 			end
 		end
 		BeginEvent( sceneId )
-		AddText( sceneId, "  É¾³ıËùÓĞÒıÄ§Öé³É¹¦£¡" )
+		AddText( sceneId, "  åˆ é™¤æ‰€æœ‰å¼•é­”ç æˆåŠŸï¼" )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 		return
@@ -86,8 +86,8 @@ function x050112_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --******************************************************
---Ïú»ÙÈÎÎñÎïÆ·
---ÓÉClient\Interface\MissionObjDel\MissionObjDel.lua·¢³ö
+--é”€æ¯ä»»åŠ¡ç‰©å“
+--ç”±Client\Interface\MissionObjDel\MissionObjDel.luaå‘å‡º
 --******************************************************
 function x050112_OnDestroy( sceneId, selfId, posItem )
 	if posItem < 0 then

@@ -1,4 +1,4 @@
--- 200098  ¾çÇéÈÎÎñ¸ú×Ù
+-- 200098  å‰§æƒ…ä»»åŠ¡è·Ÿè¸ª
 
 x200098_g_ScriptId = 200098
 
@@ -63,7 +63,7 @@ x200098_g_Juqing_1={
 
 function x200098_DispatchJuqintInfo(sceneId, selfId, targetId)
 	
-	-- »ñµÃÍæ¼ÒµÄµÈ¼¶
+	-- è·å¾—ç©å®¶çš„ç­‰çº§
 	local nLevel = LuaFnGetLevel(sceneId, selfId)
 	local DoneMis = 1
 	local HaveMis = 1
@@ -71,13 +71,13 @@ function x200098_DispatchJuqintInfo(sceneId, selfId, targetId)
 	
 	if nLevel < 20 then
 		BeginEvent(sceneId)	
-			AddText( sceneId, "  ÄãÏÖÔÚµÄµÈ¼¶»¹²»µ½20£¬²»ÄÜÆô¶¯¾çÇéÈÎÎñ£¬Çëµ½20¼¶ºóÔÙÀ´ÕÒÎÒ¡£" )
+			AddText( sceneId, "  ä½ ç°åœ¨çš„ç­‰çº§è¿˜ä¸åˆ°20ï¼Œä¸èƒ½å¯åŠ¨å‰§æƒ…ä»»åŠ¡ï¼Œè¯·åˆ°20çº§åå†æ¥æ‰¾æˆ‘ã€‚" )
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 		return
 		
 	else
-		-- 1,¼ì²âÍæ¼Ò×ö¹ıÄÄĞ©ÄÜ×öµÄÈÎÎñ
+		-- 1,æ£€æµ‹ç©å®¶åšè¿‡å“ªäº›èƒ½åšçš„ä»»åŠ¡
 		for i=2, 47   do
 			if IsMissionHaveDone(sceneId,selfId,x200098_g_Juqing_1[i].MisId) < 1 then
 				DoneMis = i-1 --x200098_g_Juqing_1[i].MisId - 1
@@ -85,7 +85,7 @@ function x200098_DispatchJuqintInfo(sceneId, selfId, targetId)
 			end
 		end
 
-		-- 2,¼ì²âÍæ¼Ò×ö¹ıÄÄĞ©ÄÜ×öµÄÈÎÎñ
+		-- 2,æ£€æµ‹ç©å®¶åšè¿‡å“ªäº›èƒ½åšçš„ä»»åŠ¡
 		for i=2, 47   do
 			if IsHaveMission(sceneId,selfId,x200098_g_Juqing_1[i].MisId) > 0 then
 				HaveMis = i --x200098_g_Juqing_1[i].MisId
@@ -93,7 +93,7 @@ function x200098_DispatchJuqintInfo(sceneId, selfId, targetId)
 			end
 		end
 		
-		-- 3,¼ì²âÍæ¼ÒÏÖÔÚ¿ÉÒÔ½ÓµÄÈÎÎñ
+		-- 3,æ£€æµ‹ç©å®¶ç°åœ¨å¯ä»¥æ¥çš„ä»»åŠ¡
 		if HaveMis == 1  then
 			CanMis = DoneMis + 1
 		end
@@ -118,9 +118,9 @@ function x200098_DispatchJuqintInfo(sceneId, selfId, targetId)
 		szText = x200098_g_Juqing_1[HaveMis].DescH
 	end
 	
-	-- Íæ¼ÒÍê³ÉÁËËùÓĞµ±Ç°ÖÆ×÷Íê³ÉµÄ¾çÇéÈÎÎñ
+	-- ç©å®¶å®Œæˆäº†æ‰€æœ‰å½“å‰åˆ¶ä½œå®Œæˆçš„å‰§æƒ…ä»»åŠ¡
 	if IsMissionHaveDone(sceneId,selfId,45) > 0 then
-		szText = "ÄãÏÖÔÚÒÑ¾­Íê³ÉÁË#GÍò½Ù¹È¡¢Ñà×ÓÎë¡¢¾ÛÏÍ×¯¡¢²ÔÃ£É½¡¢ÀŞ¹ÄÉ½#WºÍ#GÒ»Æ·ÌÃ#W¾çÇéÈÎÎñ¡£"
+		szText = "ä½ ç°åœ¨å·²ç»å®Œæˆäº†#Gä¸‡åŠ«è°·ã€ç‡•å­åã€èšè´¤åº„ã€è‹èŒ«å±±ã€æ“‚é¼“å±±#Wå’Œ#Gä¸€å“å ‚#Wå‰§æƒ…ä»»åŠ¡ã€‚"
 	end
 	
 	BeginEvent(sceneId)	
@@ -128,9 +128,9 @@ function x200098_DispatchJuqintInfo(sceneId, selfId, targetId)
 --		AddText( sceneId, "DoneMis =" .. DoneMis )
 --		AddText( sceneId, "HaveMis =" .. HaveMis )
 --		AddText( sceneId, "CanMis =" .. CanMis )
---		AddText( sceneId, "ÄãÒÑ¾­Íê³ÉµÄÈÎÎñÊÇ =" .. x200098_g_Juqing_1[DoneMis].MisId )
---		AddText( sceneId, "ÄãÏÖÔÚ½Óµ½µÄÈÎÎñÊÇ =" .. x200098_g_Juqing_1[HaveMis].MisId )
---		AddText( sceneId, "ÄãÏÖÔÚ¿ÉÒÔ½Óµ½µÄÈÎÎñÊÇ =" .. x200098_g_Juqing_1[CanMis].MisId )
+--		AddText( sceneId, "ä½ å·²ç»å®Œæˆçš„ä»»åŠ¡æ˜¯ =" .. x200098_g_Juqing_1[DoneMis].MisId )
+--		AddText( sceneId, "ä½ ç°åœ¨æ¥åˆ°çš„ä»»åŠ¡æ˜¯ =" .. x200098_g_Juqing_1[HaveMis].MisId )
+--		AddText( sceneId, "ä½ ç°åœ¨å¯ä»¥æ¥åˆ°çš„ä»»åŠ¡æ˜¯ =" .. x200098_g_Juqing_1[CanMis].MisId )
 --	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 

@@ -4,21 +4,21 @@ local objCared = -1;
 local MISSION_ITEM_BUTTONS = {};
 local MISSION_ITEM_TEXT ={};
 local MAX_OBJ_DISTANCE = 3.0;
-local	Accept_Clicked_Num = 0;				-- ÊÇ·ñÒÑ°´¹ıÒ»´Î¡°È·¶¨¡±											add by WTT	20090112
-local	scriptId = -1;								-- ¡°ÑªÔ¡Éñ±ø¡±ÈÎÎñÊ±£¬µ÷ÓÃ¸Ã½çÃæµÄ½Å±¾ID			add by WTT	20090112							
+local	Accept_Clicked_Num = 0;				-- æ˜¯å¦å·²æŒ‰è¿‡ä¸€æ¬¡â€œç¡®å®šâ€											add by WTT	20090112
+local	scriptId = -1;								-- â€œè¡€æµ´ç¥å…µâ€ä»»åŠ¡æ—¶ï¼Œè°ƒç”¨è¯¥ç•Œé¢çš„è„šæœ¬ID			add by WTT	20090112							
 
---ÈÎÎñÌá½»½çÃæ
+--ä»»åŠ¡æäº¤ç•Œé¢
 
 --===============================================
 -- OnLoad
 --===============================================
 function MissionReply_PreLoad()
 
-	this:RegisterEvent("REPLY_MISSION");						-- Ìá½»ÈÎÎñ½çÃæ
-	this:RegisterEvent("QUEST_AFTER_CONTINUE");			-- µã»÷¡°¼ÌĞø¡±Ö®ºó£¬½±Æ·Ñ¡Ôñ½çÃæ
-	this:RegisterEvent("REPLY_MISSION_PET");				-- ÕäÊŞË¢ĞÂ
-	this:RegisterEvent("UPDATE_REPLY_MISSION");			-- Ë¢ĞÂÌá½»ÈÎÎñ½çÃæ
-	this:RegisterEvent("OBJECT_CARED_EVENT");				-- Ä³Âß¼­¶ÔÏóµÄÄ³Ğ©·¢Éú¸Ä±ä
+	this:RegisterEvent("REPLY_MISSION");						-- æäº¤ä»»åŠ¡ç•Œé¢
+	this:RegisterEvent("QUEST_AFTER_CONTINUE");			-- ç‚¹å‡»â€œç»§ç»­â€ä¹‹åï¼Œå¥–å“é€‰æ‹©ç•Œé¢
+	this:RegisterEvent("REPLY_MISSION_PET");				-- çå…½åˆ·æ–°
+	this:RegisterEvent("UPDATE_REPLY_MISSION");			-- åˆ·æ–°æäº¤ä»»åŠ¡ç•Œé¢
+	this:RegisterEvent("OBJECT_CARED_EVENT");				-- æŸé€»è¾‘å¯¹è±¡çš„æŸäº›å‘ç”Ÿæ”¹å˜
 	
 end
 
@@ -38,14 +38,14 @@ end
 --===============================================
 function MissionReply_OnEvent(event)
 	
-	-- Ìá½»ÈÎÎñ½çÃæ
+	-- æäº¤ä»»åŠ¡ç•Œé¢
 	if ( event == "REPLY_MISSION" ) then		
 		if (arg0~=nil) then
 			objCared = tonumber(arg0);
 			BeginCareObject_MissionReply(tonumber(arg0));
 		end
 		
-		-- ¡°ÑªÔ¡Éñ±ø¡±ÈÎÎñÊ±£¬µÃµ½µ÷ÓÃ¸Ã½çÃæµÄ scriptId
+		-- â€œè¡€æµ´ç¥å…µâ€ä»»åŠ¡æ—¶ï¼Œå¾—åˆ°è°ƒç”¨è¯¥ç•Œé¢çš„ scriptId
 		-- add by WTT	20090112
 		if (arg1~=nil) then
 			scriptId = tonumber(arg1);			
@@ -54,31 +54,31 @@ function MissionReply_OnEvent(event)
 		MissionReplyFrameUpdate();
 		this:Show();
 	
-	-- Ë¢ĞÂÌá½»ÈÎÎñ½çÃæ
+	-- åˆ·æ–°æäº¤ä»»åŠ¡ç•Œé¢
 	elseif( event == "UPDATE_REPLY_MISSION" )  then
 		MissionReplyFrameUpdate();
 	
-	-- µã»÷¡°¼ÌĞø¡±Ö®ºó£¬½±Æ·Ñ¡Ôñ½çÃæ
+	-- ç‚¹å‡»â€œç»§ç»­â€ä¹‹åï¼Œå¥–å“é€‰æ‹©ç•Œé¢
 	elseif ( event == "QUEST_AFTER_CONTINUE" and this:IsVisible() ) then
 		StopCareObject_MissionReply(objCared)
 		this:Hide();
 	
-	-- ÕäÊŞË¢ĞÂ
+	-- çå…½åˆ·æ–°
 	elseif ( event == "REPLY_MISSION_PET" and this:IsVisible() ) then
 		Pet_Index = tonumber(arg0);
 		MissionReply_NeedPet_Info : SetText(Pet:GetName(Pet_Index));	
 
-	-- Ä³Âß¼­¶ÔÏóµÄÄ³Ğ©·¢Éú¸Ä±ä
+	-- æŸé€»è¾‘å¯¹è±¡çš„æŸäº›å‘ç”Ÿæ”¹å˜
 	elseif (event == "OBJECT_CARED_EVENT") then
 		if(tonumber(arg0) ~= objCared) then
 			return;
 		end
 		
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ı£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æœå’ŒNPCçš„è·ç¦»å¤§äºä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if(arg1 == "distance" and tonumber(arg2)>MAX_OBJ_DISTANCE or arg1=="destroy") then
 			this:Hide();
 			
-			--È¡Ïû¹ØĞÄ
+			--å–æ¶ˆå…³å¿ƒ
 			StopCareObject_MissionReply(objCared);
 		end
 		
@@ -87,12 +87,12 @@ function MissionReply_OnEvent(event)
 end
 
 --===============================================
--- ¸üĞÂÏÔÊ¾½çÃæÊı¾İ
+-- æ›´æ–°æ˜¾ç¤ºç•Œé¢æ•°æ®
 --===============================================
 function MissionReplyFrameUpdate()
 	
-	--ÈÎÎñĞÅÏ¢£¬£¨ĞèÇó¡¢½±Àø¡¢ÃèÊöµÈ
-	--½øÈëÇ°ÏÈÇå³ıÔ­ÓĞĞÅÏ¢
+	--ä»»åŠ¡ä¿¡æ¯ï¼Œï¼ˆéœ€æ±‚ã€å¥–åŠ±ã€æè¿°ç­‰
+	--è¿›å…¥å‰å…ˆæ¸…é™¤åŸæœ‰ä¿¡æ¯
 	MissionReply_Desc:ClearAllElement();
 	MissionReply_NeedPet_Info: SetText("");
 	if Pet_Index ~= -1 then
@@ -100,9 +100,9 @@ function MissionReplyFrameUpdate()
 	end
 	
 	
-	--ÏÔÊ¾NPCÃû×Ö
+	--æ˜¾ç¤ºNPCåå­—
 	if( Target:IsPresent()) then
-		MissionReply_PageHeader_Name:SetText("#gFF0FA0"..Target:GetDialogNpcName());--get npcµÄname
+		MissionReply_PageHeader_Name:SetText("#gFF0FA0"..Target:GetDialogNpcName());--get npcçš„name
 	end
 	local nTextNum, nBonusNum = DataPool:GetMissionDemand_Num();
 
@@ -112,17 +112,17 @@ function MissionReplyFrameUpdate()
 	end
 	
 	if( nBonusNum>1 ) then
-		MissionReply_Desc:AddTextElement("ĞèÒªÎïÆ·");
+		MissionReply_Desc:AddTextElement("éœ€è¦ç‰©å“");
 	end
 	
 	for i=1, nBonusNum do
-		--    ĞèÒªµÄÀàĞÍ£¬ĞèÒªÎïÆ·ID£¬ĞèÒª¶àÉÙ¸ö
+		--    éœ€è¦çš„ç±»å‹ï¼Œéœ€è¦ç‰©å“IDï¼Œéœ€è¦å¤šå°‘ä¸ª
 		local nItemID, nNum = DataPool:GetMissionDemand_Item(i-1);
 		MissionReply_Desc:AddItemElement(nItemID, nNum, 0);
 	end
 	
 	
-	--ÈÎÎñĞèÒªµÄÎïÆ·À¸£¨Íæ¼Ò×Ô¼ºÍÏ·Å£©
+	--ä»»åŠ¡éœ€è¦çš„ç‰©å“æ ï¼ˆç©å®¶è‡ªå·±æ‹–æ”¾ï¼‰
 	local i=1;
 	while i<=MISSION_BUTTONS_NUM do
 		local theAction = MissionReply:EnumItem(i-1);
@@ -139,34 +139,34 @@ function MissionReplyFrameUpdate()
 	end
 
 	
-	--ÈÎÎñĞèÒªµÄ³èÎïÀ¸£¨Íæ¼Ò×Ô¼ºÍÏ·Å£©
+	--ä»»åŠ¡éœ€è¦çš„å® ç‰©æ ï¼ˆç©å®¶è‡ªå·±æ‹–æ”¾ï¼‰
 	
 end
 
 --===============================================
--- ³èÎï (ÔİÊ±²»ÄÜÍê³É)
+-- å® ç‰© (æš‚æ—¶ä¸èƒ½å®Œæˆ)
 --===============================================
 function MissionReply_Pet_Clicked()
 	MissionReply:OpenPetFrame();
 end
 
 --===============================================
--- È·¶¨
+-- ç¡®å®š
 --===============================================
 function MissionReply_Accept_Clicked()
 		
-	-- Èç¹ûÊÇ¡°ÑªÔ¡Éñ±ø¡±ÖĞµÄ¡°ÉñÆ÷ÖıÔì¡±»ò¡°ÉñÆ÷ÖØÖı¡±ÈÎÎñµ÷ÓÃµÄ¸Ã½çÃæ
+	-- å¦‚æœæ˜¯â€œè¡€æµ´ç¥å…µâ€ä¸­çš„â€œç¥å™¨é“¸é€ â€æˆ–â€œç¥å™¨é‡é“¸â€ä»»åŠ¡è°ƒç”¨çš„è¯¥ç•Œé¢
 	if ( scriptId == 500503 ) or ( scriptId == 500504 ) then
 
 		if (Accept_Clicked_Num == 0) then
-			MissionReply:OpenSecondConfirmFrame(scriptId);		-- ¸ù¾İµ÷ÓÃ¸Ã½çÃæµÄscriptId£¬´ò¿ª¶ÔÓ¦µÄ¶ş´ÎÈ·ÈÏÒ³Ãæ
+			MissionReply:OpenSecondConfirmFrame(scriptId);		-- æ ¹æ®è°ƒç”¨è¯¥ç•Œé¢çš„scriptIdï¼Œæ‰“å¼€å¯¹åº”çš„äºŒæ¬¡ç¡®è®¤é¡µé¢
 			Accept_Clicked_Num = 1;
 
 		else 	 
 			MissionReply:OnContinue(Pet_Index);
 			StopCareObject_MissionReply(objCared)
 			Pet_Index = -1;
-			Accept_Clicked_Num = 0; 													-- µÚ2´Îµã»÷¡°È·¶¨¡±ºó£¬»Ö¸´ Accept_Clicked_Num ÎªÎ´°´¹ı¡°È·¶¨¡±°´Å¥¡£
+			Accept_Clicked_Num = 0; 													-- ç¬¬2æ¬¡ç‚¹å‡»â€œç¡®å®šâ€åï¼Œæ¢å¤ Accept_Clicked_Num ä¸ºæœªæŒ‰è¿‡â€œç¡®å®šâ€æŒ‰é’®ã€‚
 			this:Hide();
 		end
 		
@@ -180,13 +180,13 @@ function MissionReply_Accept_Clicked()
 end
 
 --===============================================
--- È¡Ïû
+-- å–æ¶ˆ
 --===============================================
 function MissionReply_Cancel_Clicked()
 
-	-- Èç¹ûÊÇ¡°ÑªÔ¡Éñ±ø¡±ÖĞµÄ¡°ÉñÆ÷ÖıÔì¡±»ò¡°ÉñÆ÷ÖØÖı¡±ÈÎÎñµ÷ÓÃµÄ¸Ã½çÃæ
+	-- å¦‚æœæ˜¯â€œè¡€æµ´ç¥å…µâ€ä¸­çš„â€œç¥å™¨é“¸é€ â€æˆ–â€œç¥å™¨é‡é“¸â€ä»»åŠ¡è°ƒç”¨çš„è¯¥ç•Œé¢
 	if ( scriptId == 500503 ) or ( scriptId == 500504 ) then
-		Accept_Clicked_Num = 0; 														-- µã»÷¡°È¡Ïû¡±ºó£¬»Ö¸´ Accept_Clicked_Num ÎªÎ´°´¹ı¡°È·¶¨¡±°´Å¥¡£
+		Accept_Clicked_Num = 0; 														-- ç‚¹å‡»â€œå–æ¶ˆâ€åï¼Œæ¢å¤ Accept_Clicked_Num ä¸ºæœªæŒ‰è¿‡â€œç¡®å®šâ€æŒ‰é’®ã€‚
 	end
 	
 	StopCareObject_MissionReply(objCared)
@@ -195,9 +195,9 @@ function MissionReply_Cancel_Clicked()
 end
 
 --=========================================================
---¿ªÊ¼¹ØĞÄNPC£¬
---ÔÚ¿ªÊ¼¹ØĞÄÖ®Ç°ĞèÒªÏÈÈ·¶¨Õâ¸ö½çÃæÊÇ²»ÊÇÒÑ¾­ÓĞ¡°¹ØĞÄ¡±µÄNPC£¬
---Èç¹ûÓĞµÄ»°£¬ÏÈÈ¡ÏûÒÑ¾­ÓĞµÄ¡°¹ØĞÄ¡±
+--å¼€å§‹å…³å¿ƒNPCï¼Œ
+--åœ¨å¼€å§‹å…³å¿ƒä¹‹å‰éœ€è¦å…ˆç¡®å®šè¿™ä¸ªç•Œé¢æ˜¯ä¸æ˜¯å·²ç»æœ‰â€œå…³å¿ƒâ€çš„NPCï¼Œ
+--å¦‚æœæœ‰çš„è¯ï¼Œå…ˆå–æ¶ˆå·²ç»æœ‰çš„â€œå…³å¿ƒâ€
 --=========================================================
 function BeginCareObject_MissionReply(objCaredId)
 
@@ -208,7 +208,7 @@ function BeginCareObject_MissionReply(objCaredId)
 end
 
 --=========================================================
---Í£Ö¹¶ÔÄ³NPCµÄ¹ØĞÄ
+--åœæ­¢å¯¹æŸNPCçš„å…³å¿ƒ
 --=========================================================
 function StopCareObject_MissionReply(objCaredId)
 	this:CareObject(objCaredId, 0, "MissionReply");
@@ -217,7 +217,7 @@ function StopCareObject_MissionReply(objCaredId)
 end
 
 --=========================================================
---Í£Ö¹¶ÔÄ³NPCµÄ¹ØĞÄ
+--åœæ­¢å¯¹æŸNPCçš„å…³å¿ƒ
 --=========================================================
 function MissionReply_OnClose()
 	DataPool:CloseMissionFrame();
@@ -231,7 +231,7 @@ function MissionReply_ToggleShowPetList()
 end
 
 --=========================================================
--- µã»÷Í¼±ê
+-- ç‚¹å‡»å›¾æ ‡
 --=========================================================
 function MissionReply_NeedItem_Click(nIndex)
 	MissionReply:DoAction(nIndex);

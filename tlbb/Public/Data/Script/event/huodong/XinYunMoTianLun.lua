@@ -1,32 +1,32 @@
---ĞÔ¸£Ä¦ÌìÂÖ
+--æ€§ç¦æ‘©å¤©è½®
 
 x889055_g_ScriptId = 889055;
 
---»î¶¯¿ªÆôÈÕÆÚ 2009-4-8
+--æ´»åŠ¨å¼€å¯æ—¥æœŸ 2009-4-8
 x889055_g_BeginTime		= 20090408
 x889055_g_EndTime		= 20090531
 --x889055_g_ExchangeEndTime	= 20090531
 
---¶Ò»»²¿¼şID
+--å…‘æ¢éƒ¨ä»¶ID
 x889055_g_PartID		= 
 {
-	30504083,	--Çì
-	30504082,	--Äê
-	30504081,	--ÖÜ
-	30504079,	--Ìì
-	30504080,	--Áú
+	30504083,	--åº†
+	30504082,	--å¹´
+	30504081,	--å‘¨
+	30504079,	--å¤©
+	30504080,	--é¾™
 }
 
---¼ÍÄîÕÂ
+--çºªå¿µç« 
 x889055_g_ItemID		= 30504072
 
---¶Ò»»BUFF
+--å…‘æ¢BUFF
 x889055_g_BuffID		= 20005
 
---ÎïÆ·µÈ¼¶ÏŞÖÆ
+--ç‰©å“ç­‰çº§é™åˆ¶
 x889055_g_LimitLevel	= 10
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x889055_OnEnumerate( sceneId, selfId, targetId )
 	
@@ -37,7 +37,7 @@ function x889055_OnEnumerate( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x889055_OnDefaultEvent( sceneId, selfId, targetId )
 	
@@ -45,9 +45,9 @@ function x889055_OnDefaultEvent( sceneId, selfId, targetId )
 	if opt == 1 then
 		BeginEvent(sceneId)			
 			AddText(sceneId, "#{XFMTL_20090319_06}");
-			AddNumText(sceneId, x889055_g_ScriptId, "#{XFMTL_20090319_15}", 6, 11);		--ÁìÈ¡ĞÒ¸£Ä¦ÌìÂÖ´ó½±
-			AddNumText(sceneId, x889055_g_ScriptId, "#{XFMTL_20090319_16}", 6, 12);		--»»È¡ÌìÁúÖÜÄêÇìBUFF
-			AddNumText(sceneId, x889055_g_ScriptId, "#{XFMTL_20090319_17}", 11, 13);		--ĞÒ¸£Ä¦ÌìÂÖ°ïÖú
+			AddNumText(sceneId, x889055_g_ScriptId, "#{XFMTL_20090319_15}", 6, 11);		--é¢†å–å¹¸ç¦æ‘©å¤©è½®å¤§å¥–
+			AddNumText(sceneId, x889055_g_ScriptId, "#{XFMTL_20090319_16}", 6, 12);		--æ¢å–å¤©é¾™å‘¨å¹´åº†BUFF
+			AddNumText(sceneId, x889055_g_ScriptId, "#{XFMTL_20090319_17}", 11, 13);		--å¹¸ç¦æ‘©å¤©è½®å¸®åŠ©
 		EndEvent()
 		DispatchEventList(sceneId, selfId, targetId)
 	elseif opt == 11 then
@@ -55,8 +55,8 @@ function x889055_OnDefaultEvent( sceneId, selfId, targetId )
 	elseif opt == 12 then
 		BeginEvent(sceneId)			
 			AddText(sceneId, "#{XFMTL_20090319_11}");
-			AddNumText(sceneId, x889055_g_ScriptId, "#{XFMTL_20090319_18}", 6, 121);	--½øĞĞ¶Ò»»
-			AddNumText(sceneId, x889055_g_ScriptId, "#{XFMTL_20090319_19}", 6, 122);	--»¹Ã»×¼±¸ºÃ
+			AddNumText(sceneId, x889055_g_ScriptId, "#{XFMTL_20090319_18}", 6, 121);	--è¿›è¡Œå…‘æ¢
+			AddNumText(sceneId, x889055_g_ScriptId, "#{XFMTL_20090319_19}", 6, 122);	--è¿˜æ²¡å‡†å¤‡å¥½
 		EndEvent()
 		DispatchEventList(sceneId, selfId, targetId)
 	elseif opt == 13 then
@@ -70,7 +70,7 @@ function x889055_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÇ·ñÔÚ»î¶¯Ê±¼äÄÚ£¬ÊÇÔò·µ»Øµ±ÌìÈÕÆÚ£¬·ñÔò·µ»Ø0
+--æ˜¯å¦åœ¨æ´»åŠ¨æ—¶é—´å†…ï¼Œæ˜¯åˆ™è¿”å›å½“å¤©æ—¥æœŸï¼Œå¦åˆ™è¿”å›0
 --**********************************
 function x889055_IsInActTime( sceneId, selfId )
 
@@ -84,24 +84,24 @@ function x889055_IsInActTime( sceneId, selfId )
 end
 
 --**********************************
---½±Àø
+--å¥–åŠ±
 --**********************************
 function x889055_GivePrize( sceneId, selfId, targetId )
 
-	-- ÊÇ·ñÔÚ»î¶¯Ê±¼äÄÚ
+	-- æ˜¯å¦åœ¨æ´»åŠ¨æ—¶é—´å†…
 	if x889055_IsInActTime( ) <= 0 then
 		x889055_CloseDlg( sceneId, selfId, targetId )
 		return
 	end
 	
-	-- µÈ¼¶´óÓÚ10
+	-- ç­‰çº§å¤§äº10
 	local level = GetLevel( sceneId, selfId )
 	if level < x889055_g_LimitLevel then
 		x889055_ReturnDlg( sceneId, selfId, targetId, "#{XFMTL_20090319_07}" )
 		return	
 	end
 	
-	-- ÎïÆ·ÊÇ·ñ¹»
+	-- ç‰©å“æ˜¯å¦å¤Ÿ
 	for i, partID in x889055_g_PartID do
 		if LuaFnGetAvailableItemCount(sceneId, selfId, partID) < 1 then
 			x889055_ReturnDlg( sceneId, selfId, targetId, "#{XFMTL_20090319_10}" )
@@ -109,13 +109,13 @@ function x889055_GivePrize( sceneId, selfId, targetId )
 		end
 	end
 	
-	-- ¼ì²é±³°ü¿Õ¼ä
+	-- æ£€æŸ¥èƒŒåŒ…ç©ºé—´
 	if LuaFnGetPropertyBagSpace( sceneId, selfId ) < 1 then
 		x889055_ReturnDlg( sceneId, selfId, targetId, "#{XFMTL_20090319_08}" )
 		return
 	end
 	
-	-- É¾³ıÎïÆ·Ê§°Ü£¬Î´ÖªÔ­Òò£¬¹Ø±Õ¶Ô»°´°¿Ú
+	-- åˆ é™¤ç‰©å“å¤±è´¥ï¼ŒæœªçŸ¥åŸå› ï¼Œå…³é—­å¯¹è¯çª—å£
 	for j, partID in x889055_g_PartID do
 		if LuaFnDelAvailableItem(sceneId, selfId, partID, 1) < 1 then
 			x889055_CloseDlg( sceneId, selfId, targetId )
@@ -123,7 +123,7 @@ function x889055_GivePrize( sceneId, selfId, targetId )
 		end
 	end
 	
-	-- ¸øÎïÆ·£¬¹Ø±Õ´°¿Ú
+	-- ç»™ç‰©å“ï¼Œå…³é—­çª—å£
 	TryRecieveItem( sceneId, selfId, x889055_g_ItemID, QUALITY_MUST_BE_CHANGE )
 		
 	x889055_ReturnDlg( sceneId, selfId, targetId, "#{XFMTL_20090319_09}" )
@@ -131,28 +131,28 @@ function x889055_GivePrize( sceneId, selfId, targetId )
 end
 
 --**********************************
---¶Ò»»BUFF
+--å…‘æ¢BUFF
 --**********************************
 function x889055_AddBuff( sceneId, selfId, targetId )
 
-	-- ÊÇ·ñÔÚ»î¶¯Ê±¼äÄÚ
+	-- æ˜¯å¦åœ¨æ´»åŠ¨æ—¶é—´å†…
 	if x889055_IsInActTime( ) <= 0 then
 		x889055_CloseDlg( sceneId, selfId, targetId )
 		return
 	end
 	
-	-- µÈ¼¶´óÓÚ10
+	-- ç­‰çº§å¤§äº10
 	local level = GetLevel( sceneId, selfId )
 	if level < x889055_g_LimitLevel then
 		x889055_ReturnDlg( sceneId, selfId, targetId, "#{XFMTL_20090319_12}" )
 		return	
 	end
 
-	-- É¾³ıÎïÆ·¼ÓBUFF
+	-- åˆ é™¤ç‰©å“åŠ BUFF
 	for i, partID in x889055_g_PartID do
 		if LuaFnDelAvailableItem(sceneId, selfId, partID, 1) > 0 then
 			
-			--¼ÓBUFF
+			--åŠ BUFF
 			LuaFnSendSpecificImpactToUnit( sceneId, selfId, selfId, selfId, x889055_g_BuffID, 0 )
 			
 			x889055_CloseDlg( sceneId, selfId, targetId )
@@ -164,11 +164,11 @@ function x889055_AddBuff( sceneId, selfId, targetId )
 end
 
 --**********************************
---¸øÍæ¼Ò·¢ÓÊ¼ş
+--ç»™ç©å®¶å‘é‚®ä»¶
 --**********************************
 function x889055_OnPlayerLogin( sceneId, selfId )
 	
-	-- ÊÇ·ñÔÚ»î¶¯Ê±¼äÄÚ
+	-- æ˜¯å¦åœ¨æ´»åŠ¨æ—¶é—´å†…
 	local curDate = x889055_IsInActTime( )
 	if curDate > 0 then
 		local lastDate = GetMissionData( sceneId, selfId, MD_TW_XINGFUMOTIANLUN_LAST_MAIL_DATE )
@@ -181,7 +181,7 @@ function x889055_OnPlayerLogin( sceneId, selfId )
 end
 
 --**********************************
---¹Ø±Õ¶Ô»°¿ò
+--å…³é—­å¯¹è¯æ¡†
 --**********************************
 function x889055_CloseDlg(sceneId, selfId, targetId)
 	BeginUICommand( sceneId )
@@ -191,7 +191,7 @@ function x889055_CloseDlg(sceneId, selfId, targetId)
 end
 
 --**********************************
---·µ»Ø¶Ô»°
+--è¿”å›å¯¹è¯
 --**********************************
 function x889055_ReturnDlg(sceneId, selfId, targetId, msg)
 	BeginEvent(sceneId)
@@ -211,49 +211,49 @@ function x889055_Tips(sceneId, selfId, msg)
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x889055_OnAccept( sceneId, selfId )
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x889055_OnAbandon( sceneId, selfId )
 end
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x889055_OnContinue( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x889055_CheckSubmit( sceneId, selfId )
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x889055_OnSubmit( sceneId, selfId, targetId,selectRadioId )
 end
 
 --**********************************
---É±ËÀ¹ÖÎï»òÍæ¼Ò
+--æ€æ­»æ€ªç‰©æˆ–ç©å®¶
 --**********************************
 function x889055_OnKillObject( sceneId, selfId, objdataId )
 end
 
 --**********************************
---½øÈëÇøÓòÊÂ¼ş
+--è¿›å…¥åŒºåŸŸäº‹ä»¶
 --**********************************
 function x889055_OnEnterArea( sceneId, selfId, zoneId )
 end
 
 --**********************************
---µÀ¾ß¸Ä±ä
+--é“å…·æ”¹å˜
 --**********************************
 function x889055_OnItemChanged( sceneId, selfId, itemdataId )
 end

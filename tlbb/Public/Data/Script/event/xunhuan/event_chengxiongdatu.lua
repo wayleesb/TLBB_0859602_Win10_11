@@ -1,50 +1,50 @@
---³ÍĞ×´òÍ¼ÈÎÎñ
---Ñ°Îï
+--æƒ©å‡¶æ‰“å›¾ä»»åŠ¡
+--å¯»ç‰©
 --MisDescBegin
---½Å±¾ºÅ
+--è„šæœ¬å·
 x229020_g_ScriptId = 229020
 
---Ç°ÌáÈÎÎñ
+--å‰æä»»åŠ¡
 --g_MissionIdPre =
 
---ÈÎÎñºÅ
+--ä»»åŠ¡å·
 x229020_g_MissionId = 1200
 
---ÈÎÎñÄ¿±ênpc
-x229020_g_Name	= "Îâ«d"
+--ä»»åŠ¡ç›®æ ‡npc
+x229020_g_Name	= "å´ç "
 
---ÈÎÎñ¹éÀà
+--ä»»åŠ¡å½’ç±»
 x229020_g_MissionKind = 1
 
---ÈÎÎñµÈ¼¶
+--ä»»åŠ¡ç­‰çº§
 x229020_g_MissionLevel = 10000
 
---ÊÇ·ñÊÇ¾«Ó¢ÈÎÎñ
+--æ˜¯å¦æ˜¯ç²¾è‹±ä»»åŠ¡
 x229020_g_IfMissionElite = 0
 
---ÏÂÃæ¼¸ÏîÊÇ¶¯Ì¬ÏÔÊ¾µÄÄÚÈİ£¬ÓÃÓÚÔÚÈÎÎñÁĞ±íÖĞ¶¯Ì¬ÏÔÊ¾ÈÎÎñÇé¿ö**********************
---ÈÎÎñÊÇ·ñÒÑ¾­Íê³É
-x229020_g_IsMissionOkFail = 0		--±äÁ¿µÄµÚ0Î»
+--ä¸‹é¢å‡ é¡¹æ˜¯åŠ¨æ€æ˜¾ç¤ºçš„å†…å®¹ï¼Œç”¨äºåœ¨ä»»åŠ¡åˆ—è¡¨ä¸­åŠ¨æ€æ˜¾ç¤ºä»»åŠ¡æƒ…å†µ**********************
+--ä»»åŠ¡æ˜¯å¦å·²ç»å®Œæˆ
+x229020_g_IsMissionOkFail = 0		--å˜é‡çš„ç¬¬0ä½
 
---ÈÎÎñĞèÒªÉ±ËÀµÄ¹Ö
-x229020_g_DemandKill ={{id=3500,num=1}}		--±äÁ¿µÚ1Î»
+--ä»»åŠ¡éœ€è¦æ€æ­»çš„æ€ª
+x229020_g_DemandKill ={{id=3500,num=1}}		--å˜é‡ç¬¬1ä½
 
-x229020_g_DemandTrueKill ={{name="¶ñ¹÷",num=1}}
+x229020_g_DemandTrueKill ={{name="æ¶æ£",num=1}}
 
---ÈÎÎñĞèÒªµÃµ½µÄÎïÆ·
---g_DemandItem={{id=20309001,num=1},{id=20309005,num=1}}		--´Ó±³°üÖĞ¼ÆËã
---ÒÔÉÏÊÇ¶¯Ì¬**************************************************************
+--ä»»åŠ¡éœ€è¦å¾—åˆ°çš„ç‰©å“
+--g_DemandItem={{id=20309001,num=1},{id=20309005,num=1}}		--ä»èƒŒåŒ…ä¸­è®¡ç®—
+--ä»¥ä¸Šæ˜¯åŠ¨æ€**************************************************************
 
---ÈÎÎñ±äÁ¿µÚÒ»Î»ÓÃÀ´´æ´¢Ëæ»úµÃµ½µÄ½Å±¾ºÅ
+--ä»»åŠ¡å˜é‡ç¬¬ä¸€ä½ç”¨æ¥å­˜å‚¨éšæœºå¾—åˆ°çš„è„šæœ¬å·
 
---ÈÎÎñÎÄ±¾ÃèÊö
+--ä»»åŠ¡æ–‡æœ¬æè¿°
 x229020_g_MissionName="#{CXDT_090304_01}"
-x229020_g_MissionInfo="#{CXDT_090304_02}"  --ÈÎÎñÃèÊö
+x229020_g_MissionInfo="#{CXDT_090304_02}"  --ä»»åŠ¡æè¿°
 x229020_g_MissionTarget = "#{CXDT_090304_03}"
-x229020_g_ContinueInfo="#{CXDT_090304_04}"		--Î´Íê³ÉÈÎÎñµÄnpc¶Ô»°
-x229020_g_MissionComplete="#{CXDT_090304_05}"					--Íê³ÉÈÎÎñnpcËµ»°µÄ»°
+x229020_g_ContinueInfo="#{CXDT_090304_04}"		--æœªå®Œæˆä»»åŠ¡çš„npcå¯¹è¯
+x229020_g_MissionComplete="#{CXDT_090304_05}"					--å®Œæˆä»»åŠ¡npcè¯´è¯çš„è¯
 
---ÈÎÎñ½±Àø
+--ä»»åŠ¡å¥–åŠ±
 x229020_g_MissionItem={{id=40004000,num=1}}
 --g_MoneyBonus = 1000
 
@@ -55,7 +55,7 @@ x229020_g_MissionItem={{id=40004000,num=1}}
 x229020_g_NeedItemId = 30000000
 
 x229020_g_scenePosInfoList = {
-	{sceneId=18, sceneName="ÑãÄÏ", minL=30, maxL=45,  posList={
+	{sceneId=18, sceneName="é›å—", minL=30, maxL=45,  posList={
 																						{x=49, z=49, r=10},{x=70, z=50, r=10},{x=50, z=70, r=10},{x=47, z=89, r=10},
 																						{x=54, z=110, r=10},{x=40, z=130, r=10},{x=42, z=159, r=10},{x=70, z=119, r=10},
 																						{x=70, z=140, r=10},{x=85, z=171, r=10},{x=90, z=229, r=10},{x=79, z=249, r=10},
@@ -68,7 +68,7 @@ x229020_g_scenePosInfoList = {
 																						{x=205, z=47, r=10},{x=149, z=48, r=10},{x=170, z=80, r=10},{x=192, z=132, r=10},
 																					}
 	},
-	{sceneId=19, sceneName="Ñã±±", minL=46, maxL=60,  posList={
+	{sceneId=19, sceneName="é›åŒ—", minL=46, maxL=60,  posList={
 																						{x=50, z=70, r=10},{x=50, z=90, r=10},{x=50, z=110, r=10},{x=50, z=130, r=10},
 																						{x=50, z=150, r=10},{x=50, z=170, r=10},{x=50, z=190, r=10},{x=46, z=208, r=10},
 																						{x=120, z=229, r=10},{x=160, z=240, r=10},{x=152, z=253, r=10},{x=160, z=255, r=10},
@@ -89,7 +89,7 @@ x229020_g_scenePosInfoList = {
 																						{x=100, z=190, r=10},{x=110, z=220, r=10},
 																					}
 	},
-	{sceneId=20, sceneName="²İÔ­", minL=61, maxL=75,  posList={
+	{sceneId=20, sceneName="è‰åŸ", minL=61, maxL=75,  posList={
 																						{x=50, z=50, r=10},{x=70, z=50, r=10},{x=80, z=50, r=10},{x=120, z=50, r=10},
 																						{x=120, z=70, r=10},{x=130, z=60, r=10},{x=130, z=70, r=10},{x=110, z=70, r=10},
 																						{x=110, z=90, r=10},{x=100, z=90, r=10},{x=130, z=90, r=10},{x=130, z=110, r=10},
@@ -120,7 +120,7 @@ x229020_g_scenePosInfoList = {
 																						{x=260, z=220, r=10},{x=260, z=200, r=10},{x=280, z=220, r=10},{x=280, z=230, r=10},
 																					}
 	},
-	{sceneId=21, sceneName="ÁÉÎ÷", minL=76, maxL=90,  posList={
+	{sceneId=21, sceneName="è¾½è¥¿", minL=76, maxL=90,  posList={
 																						{x=60, z=50, r=10},{x=50, z=70, r=10},{x=50, z=90, r=10},{x=50, z=110, r=10},
 																						{x=60, z=120, r=10},{x=60, z=140, r=10},{x=50, z=160, r=10},{x=50, z=180, r=10},
 																						{x=50, z=190, r=10},{x=70, z=190, r=10},{x=70, z=170, r=10},{x=70, z=150, r=10},
@@ -152,7 +152,7 @@ x229020_g_scenePosInfoList = {
 																						{x=260, z=260, r=10},{x=250, z=270, r=10},{x=270, z=210, r=10},
 																					}
 	},
-	{sceneId=22, sceneName="³¤°×É½", minL=91, maxL=100,posList={
+	{sceneId=22, sceneName="é•¿ç™½å±±", minL=91, maxL=100,posList={
 																						{x=50, z=50, r=10},{x=48, z=69, r=10},{x=43, z=79, r=6},{x=43, z=90, r=6},
 																						{x=68, z=104, r=7},{x=44, z=128, r=6},{x=50, z=170, r=10},{x=50, z=190, r=10},
 																						{x=50, z=210, r=10},{x=50, z=220, r=10},{x=70, z=210, r=10},{x=70, z=190, r=10},
@@ -170,7 +170,7 @@ x229020_g_scenePosInfoList = {
 																						{x=45, z=70, r=10},
 																					}
 	},
-	{sceneId=23, sceneName="»ÆÁú¸®", minL=100, maxL=105, posList={
+	{sceneId=23, sceneName="é»„é¾™åºœ", minL=100, maxL=105, posList={
 																						{x=40, z=70, r=10},{x=40, z=80, r=10},{x=60, z=70, r=10},{x=80, z=70, r=10},
 																						{x=80, z=50, r=10},{x=110, z=70, r=10},{x=120, z=80, r=10},{x=120, z=90, r=10},
 																						{x=73, z=80, r=10},{x=50, z=130, r=10},{x=70, z=130, r=10},{x=70, z=150, r=10},
@@ -194,7 +194,7 @@ x229020_g_scenePosInfoList = {
 																						{x=150, z=140, r=10},{x=160, z=160, r=10},{x=41, z=269, r=10},
 																					}
 	},
-	{sceneId=24, sceneName="¶ıº£", minL=30, maxL=40,	posList={
+	{sceneId=24, sceneName="æ´±æµ·", minL=30, maxL=40,	posList={
 																						{x=60, z=70, r=10},{x=60, z=90, r=10},{x=60, z=110, r=10},{x=45, z=95, r=10},
 																						{x=60, z=130, r=10},{x=60, z=150, r=10},{x=50, z=170, r=10},{x=60, z=170, r=10},
 																						{x=40, z=190, r=10},{x=50, z=190, r=10},{x=50, z=260, r=10},{x=44, z=277, r=10},
@@ -224,7 +224,7 @@ x229020_g_scenePosInfoList = {
 																						{x=250, z=220, r=10},{x=260, z=230, r=10},
 																					}
 	},
-	{sceneId=25, sceneName="²ÔÉ½", minL=41, maxL=55,posList={
+	{sceneId=25, sceneName="è‹å±±", minL=41, maxL=55,posList={
 																						{x=50, z=60, r=10},{x=50, z=80, r=10},{x=50, z=100, r=10},{x=50, z=120, r=10},
 																						{x=40, z=160, r=10},{x=40, z=180, r=10},{x=40, z=230, r=10},{x=40, z=250, r=10},
 																						{x=40, z=270, r=10},{x=60, z=270, r=10},{x=60, z=250, r=10},{x=60, z=230, r=10},
@@ -247,7 +247,7 @@ x229020_g_scenePosInfoList = {
 																						{x=90, z=134, r=5},{x=120, z=51, r=10},{x=150, z=80, r=10},{x=240, z=260, r=10},
 																					}
 	},
-	{sceneId=26, sceneName="Ê¯ÁÖ", minL=56, maxL=70,posList={
+	{sceneId=26, sceneName="çŸ³æ—", minL=56, maxL=70,posList={
 																						{x=50, z=50, r=7},{x=50, z=100, r=7},{x=45, z=125, r=5},{x=45, z=155, r=6},
 																						{x=60, z=199, r=10},{x=60, z=240, r=10},{x=60, z=270, r=10},{x=43, z=272, r=5},
 																						{x=90, z=270, r=10},{x=105, z=244, r=5},{x=130, z=240, r=5},{x=150, z=270, r=10},
@@ -264,7 +264,7 @@ x229020_g_scenePosInfoList = {
 																						{x=50, z=171, r=5},{x=190, z=128, r=5},{x=216, z=150, r=7},{x=202, z=48, r=5},
 																					}
 	},
-	{sceneId=27, sceneName="ÓñÏª", minL=71, maxL=85,	posList={
+	{sceneId=27, sceneName="ç‰æºª", minL=71, maxL=85,	posList={
 																						{x=48, z=53, r=7},{x=80, z=50, r=8},{x=80, z=76, r=7},{x=48, z=101, r=7},
 																						{x=45, z=131, r=5},{x=75, z=164, r=5},{x=80, z=190, r=10},{x=58, z=200, r=6},
 																						{x=60, z=240, r=10},{x=39, z=246, r=10},{x=70, z=270, r=10},{x=70, z=270, r=10},
@@ -277,7 +277,7 @@ x229020_g_scenePosInfoList = {
 																						{x=235, z=118, r=5},{x=200, z=200, r=6},{x=185, z=217, r=5},{x=150, z=249, r=10},
 																					}
 	},
-	{sceneId=28, sceneName="ÄÏÚ¯", minL=86, maxL=100,	posList={
+	{sceneId=28, sceneName="å—è¯", minL=86, maxL=100,	posList={
 																						{x=89.97, z=49.88, r=10},{x=84.48, z=48.99, r=10},{x=82.22, z=60.08, r=10},
 																						{x=71.64, z=70.7, r=10},{x=159.65, z=120.50, r=10},{x=186.25, z=118.28, r=10},
 																						{x=195.76, z=107.61, r=10},{x=195.23, z=79.65, r=10},{x=160.14, z=130.37, r=10},
@@ -295,7 +295,7 @@ x229020_g_scenePosInfoList = {
 																						{x=150, z=260, r=10},{x=170, z=260, r=10},{x=190, z=260, r=10},
 																					}
 	},
-	{sceneId=29, sceneName="Ãç½®", minL=96, maxL=100,	posList={
+	{sceneId=29, sceneName="è‹—ç–†", minL=96, maxL=100,	posList={
 																						{x=40, z=40, r=10},{x=60, z=40, r=10},{x=80, z=40, r=10},{x=100, z=40, r=10},
 																						{x=40, z=60, r=10},{x=60, z=60, r=10},{x=100, z=60, r=10},{x=170, z=50, r=10},
 																						{x=186, z=50, r=10},{x=150, z=70, r=10},{x=170, z=70, r=10},{x=190, z=70, r=10},
@@ -311,7 +311,7 @@ x229020_g_scenePosInfoList = {
 																						{x=140, z=210, r=10},{x=120, z=210, r=10},{x=130, z=220, r=10},{x=150, z=220, r=10},
 																					}
 	},
-	{sceneId=30, sceneName="Î÷ºş", minL=30, maxL=35,	posList={
+	{sceneId=30, sceneName="è¥¿æ¹–", minL=30, maxL=35,	posList={
 																						{x=68, z=50, r=10},{x=70, z=70, r=10},{x=90, z=70, r=10},{x=60, z=90, r=10},
 																						{x=80, z=90, r=10},{x=100, z=90, r=10},{x=155, z=58, r=10},{x=110, z=100, r=10},
 																						{x=120, z=110, r=10},{x=120, z=130, r=10},{x=140, z=120, r=10},{x=160, z=120, r=10},
@@ -332,7 +332,7 @@ x229020_g_scenePosInfoList = {
 																						{x=110, z=200, r=10},{x=110, z=220, r=10},{x=120, z=230, r=10},{x=101, z=220, r=10},
 																					}
 	},
-	{sceneId=31, sceneName="ÁúÈª", minL=36, maxL=50,	posList={
+	{sceneId=31, sceneName="é¾™æ³‰", minL=36, maxL=50,	posList={
 																						{x=63, z=40, r=10},{x=74.9, z=40.55, r=10},{x=50, z=60, r=10},{x=70, z=60, r=10},
 																						{x=90, z=60, r=10},{x=57, z=80, r=10},{x=75, z=80, r=10},{x=90, z=77, r=10},
 																						{x=60, z=100, r=10},{x=80, z=100, r=10},{x=50, z=130, r=10},{x=70, z=120, r=10},
@@ -363,7 +363,7 @@ x229020_g_scenePosInfoList = {
 																						{x=45, z=270, r=10},
 																					}
 	},
-	{sceneId=32, sceneName="ÎäÒÄ", minL=51, maxL=65,	posList={
+	{sceneId=32, sceneName="æ­¦å¤·", minL=51, maxL=65,	posList={
 																						{x=50, z=60, r=6},{x=50, z=80, r=10},{x=70, z=80, r=10},{x=60, z=100, r=10},
 																						{x=100, z=90, r=10},{x=110, z=70, r=10},{x=110, z=50, r=10},{x=125, z=55, r=5},
 																						{x=150, z=50, r=10},{x=190, z=50, r=5},{x=210, z=50, r=5},{x=160, z=80, r=10},
@@ -392,7 +392,7 @@ x229020_g_scenePosInfoList = {
 																						{x=56.36, z=220.77, r=5},
 																					}
 	},
-	{sceneId=33, sceneName="Ã·Áë", minL=66, maxL=80,	posList={
+	{sceneId=33, sceneName="æ¢…å²­", minL=66, maxL=80,	posList={
 																						{x=110, z=40, r=10},{x=130, z=40, r=6},{x=150, z=40, r=5},{x=167.67, z=41.85, r=5},
 																						{x=50, z=60, r=10},{x=70, z=60, r=10},{x=90, z=60, r=10},{x=110, z=60, r=10},
 																						{x=130, z=60, r=10},{x=150, z=60, r=7},{x=40, z=80, r=7},{x=60, z=80, r=10},
@@ -423,7 +423,7 @@ x229020_g_scenePosInfoList = {
 																						{x=70, z=270, r=10},{x=90, z=280, r=10},{x=44, z=242, r=10},
 																					}
 	},
-	{sceneId=34, sceneName="ÄÏº£", minL=81, maxL=95,	posList={
+	{sceneId=34, sceneName="å—æµ·", minL=81, maxL=95,	posList={
 																						{x=50, z=40, r=10},{x=70, z=40, r=6},{x=90, z=40, r=6},{x=110, z=40, r=10},
 																						{x=130, z=40, r=10},{x=150, z=40, r=10},{x=160, z=60, r=10},{x=140, z=60, r=10},
 																						{x=120, z=60, r=10},{x=170, z=80, r=7},{x=150, z=80, r=7},{x=140, z=100, r=10},
@@ -449,7 +449,7 @@ x229020_g_scenePosInfoList = {
 																						{x=152, z=270, r=5},
 																					}
 	},
-	{sceneId=35, sceneName="ÇíÖİ", minL=91, maxL=100,	posList={
+	{sceneId=35, sceneName="ç¼å·", minL=91, maxL=100,	posList={
 																						{x=56, z=46, r=5},{x=90, z=45, r=10},{x=110, z=50, r=10},{x=110, z=60, r=6},
 																						{x=140, z=60, r=5},{x=170, z=50, r=10},{x=190, z=60, r=10},{x=174, z=63, r=10},
 																						{x=200, z=80, r=10},{x=220, z=50, r=7},{x=260, z=60, r=10},{x=240, z=60, r=10},
@@ -468,7 +468,7 @@ x229020_g_scenePosInfoList = {
 																						{x=130, z=82, r=10},{x=143, z=80, r=10},{x=165, z=100, r=5},
 																					}
 	},
-	{sceneId=8, sceneName="¶Ø»Í", minL=20, maxL=25,	posList={
+	{sceneId=8, sceneName="æ•¦ç…Œ", minL=20, maxL=25,	posList={
 																						{x=60, z=50, r=10},{x=70, z=90, r=10},{x=50, z=110, r=10},{x=90, z=110, r=10},
 																						{x=90, z=130, r=10},{x=70, z=140, r=10},{x=90, z=150, r=10},{x=110, z=150, r=10},
 																						{x=110, z=170, r=10},{x=90, z=170, r=10},{x=120, z=180, r=10},{x=70, z=170, r=10},
@@ -484,7 +484,7 @@ x229020_g_scenePosInfoList = {
 																						{x=173, z=277, r=5},
 																					}
 	},
-	{sceneId=5, sceneName="¾µºş", minL=20, maxL=25,	posList={
+	{sceneId=5, sceneName="é•œæ¹–", minL=20, maxL=25,	posList={
 																						{x=76, z=46, r=6},{x=100, z=40, r=6},{x=142, z=47, r=5},{x=200, z=50, r=10},
 																						{x=200, z=60, r=10},{x=233, z=45, r=5},{x=250, z=47, r=8},{x=266, z=45, r=6},
 																						{x=278, z=77, r=5},{x=240, z=90, r=6},{x=250, z=100, r=10},{x=277, z=102, r=5},
@@ -501,7 +501,7 @@ x229020_g_scenePosInfoList = {
 																						{x=38, z=232, r=10},{x=72, z=258, r=4},{x=45, z=275, r=7},{x=63, z=277, r=5},
 																					}
 	},
-	{sceneId=3, sceneName="áÔÉ½", minL=20, maxL=30,	posList={
+	{sceneId=3, sceneName="åµ©å±±", minL=20, maxL=30,	posList={
 																						{x=50, z=50, r=10},{x=60, z=50, r=10},{x=50, z=60, r=10},{x=60, z=60, r=10},
 																						{x=50, z=70, r=10},{x=70, z=70, r=10},{x=90, z=70, r=10},{x=50, z=90, r=10},
 																						{x=70, z=90, r=10},{x=90, z=90, r=10},{x=110, z=90, r=10},{x=60, z=110, r=10},
@@ -525,7 +525,7 @@ x229020_g_scenePosInfoList = {
 																						{x=89, z=196, r=10},
 																					}
 	},
-	{sceneId=4, sceneName="Ì«ºş", minL=20, maxL=30,	posList={
+	{sceneId=4, sceneName="å¤ªæ¹–", minL=20, maxL=30,	posList={
 																						{x=107, z=55, r=6},{x=122, z=55, r=6},{x=130, z=70, r=7},{x=103, z=78, r=6},{x=160, z=50, r=10},
 																						{x=170, z=56, r=10},{x=220, z=60, r=8},{x=236, z=63, r=8},{x=275, z=73, r=6},{x=184, z=48, r=5},
 																						{x=197, z=46, r=5},{x=110, z=100, r=7},{x=130, z=100, r=10},{x=110, z=110, r=10},{x=130, z=110, r=10},
@@ -546,7 +546,7 @@ x229020_g_scenePosInfoList = {
 }
 
 										
---ÏÂÁĞµÄmonsterIDÒÀ´Î¶ÔÓ¦ÓÚµÄµÈ¼¶Îª11, 21, 31, 41, 51, 61, 71, 81, 91, 101...201
+--ä¸‹åˆ—çš„monsterIDä¾æ¬¡å¯¹åº”äºçš„ç­‰çº§ä¸º11, 21, 31, 41, 51, 61, 71, 81, 91, 101...201
 x229020_g_MonsterConfigTable = {
 												{level=11, id=3500},{level=21, id=3501},
 												{level=31, id=3502},{level=41, id=3503},
@@ -561,7 +561,7 @@ x229020_g_MonsterConfigTable = {
 												{level=191, id=33508},{level=201, id=33509},
 											 }
                     
---HP¡¢Íâ¹¦ÉËº¦¡¢ÄÚ¹¦ÉËº¦¡¢Íâ¹¦·ÀÓù¡¢ÄÚ¹¦·ÀÓù
+--HPã€å¤–åŠŸä¼¤å®³ã€å†…åŠŸä¼¤å®³ã€å¤–åŠŸé˜²å¾¡ã€å†…åŠŸé˜²å¾¡
 x229020_g_RefixValueOfMonsterAttr = {
 											{attr_enum=5,  refixrate=10},
 											{attr_enum=17, refixrate=10},
@@ -571,24 +571,24 @@ x229020_g_RefixValueOfMonsterAttr = {
 														}
 														
 x229020_g_TitleTableOfMonster = {
-		{part1="½Ù²Æ", part2="Ğ×Í½"},
-		{part1="ÌÓÓü", part2="¶ñÈË"},
-		{part1="ÖØ°¸", part2="Ç¿µÁ"},
-		{part1="º¦Ãü", part2="´õÈË"},
-		{part1="¶¾ÊÖ", part2="¶ñÔô"},
-		{part1="É·ĞÄ", part2="´Ì¿Í"},
-		{part1="½ÙïÚ", part2="¶ñ°Ô"},
+		{part1="åŠ«è´¢", part2="å‡¶å¾’"},
+		{part1="é€ƒç‹±", part2="æ¶äºº"},
+		{part1="é‡æ¡ˆ", part2="å¼ºç›—"},
+		{part1="å®³å‘½", part2="æ­¹äºº"},
+		{part1="æ¯’æ‰‹", part2="æ¶è´¼"},
+		{part1="ç…å¿ƒ", part2="åˆºå®¢"},
+		{part1="åŠ«é•–", part2="æ¶éœ¸"},
 						}
 						
 x229020_g_NameTableOfMonster = {
-	{part1="ÕÔ", part2="ÎÄ", part3="°Ô"},
-	{part1="Ç®", part2="Ôª", part3="Ì©"},
-	{part1="Ëï", part2="³É", part3="ÁÒ"},
-	{part1="Àî", part2="Ö®", part3="ºÕ"},
-	{part1="ÖÜ", part2="²®", part3="»¢"},
-	{part1="Îâ", part2="Ôø", part3="ÁÁ"},
-	{part1="Ö£", part2="ÈÊ", part3="ÀÊ"},
-	{part1="Íõ", part2="¶÷", part3="¹Å"},
+	{part1="èµµ", part2="æ–‡", part3="éœ¸"},
+	{part1="é’±", part2="å…ƒ", part3="æ³°"},
+	{part1="å­™", part2="æˆ", part3="çƒˆ"},
+	{part1="æ", part2="ä¹‹", part3="èµ«"},
+	{part1="å‘¨", part2="ä¼¯", part3="è™"},
+	{part1="å´", part2="æ›¾", part3="äº®"},
+	{part1="éƒ‘", part2="ä»", part3="æœ—"},
+	{part1="ç‹", part2="æ©", part3="å¤"},
 					}						
 
 
@@ -605,7 +605,7 @@ function x229020_GetSceneName(sceneId, selfId, targetSceneId)
 end
 
 function x229020_GetSceneIdByPlayerLevel(playerLevel)
-	if playerLevel >= 100 then -- ´óÓÚµÈÓÚ100¼¶µÄÍæ¼ÒÔòËùÓĞµÄ³¡¾°¶¼ÊÇËæ»úµÄ
+	if playerLevel >= 100 then -- å¤§äºç­‰äº100çº§çš„ç©å®¶åˆ™æ‰€æœ‰çš„åœºæ™¯éƒ½æ˜¯éšæœºçš„
 		local index = random(getn(x229020_g_scenePosInfoList))
 		return x229020_g_scenePosInfoList[index].sceneId
 	else
@@ -660,7 +660,7 @@ function x229020_GetScenePosInfo(sceneId,selectSceneId)
 end
 
 function x229020_CreateTitleAndName(sceneId, selfId)			
-	--ÉèÖÃmonsterµÄ³ÆºÅ
+	--è®¾ç½®monsterçš„ç§°å·
 	local misIndex = GetMissionIndexByID(sceneId,selfId,x229020_g_MissionId)
 	local ct = getn(x229020_g_TitleTableOfMonster)
 	local ret = random(ct)
@@ -668,7 +668,7 @@ function x229020_CreateTitleAndName(sceneId, selfId)
 	ret = random(ct)
 	local part2 = x229020_g_TitleTableOfMonster[ret].part2
 	local strTitle = format("%s%s", part1, part2)
-	--ÉèÖÃmonsterµÄname
+	--è®¾ç½®monsterçš„name
 	
 	local logstr = "CreateTitleAndName.."
 	ct = getn(x229020_g_NameTableOfMonster)
@@ -724,7 +724,7 @@ end
 
 function x229020_CreateTitleAndName_ForCangBaoTu(sceneId, selfId)
 
-	--ÉèÖÃmonsterµÄ³ÆºÅ
+	--è®¾ç½®monsterçš„ç§°å·
 	local ct = getn(x229020_g_TitleTableOfMonster)
 	local ret = random(ct)
 	local part1 = x229020_g_TitleTableOfMonster[ret].part1
@@ -732,7 +732,7 @@ function x229020_CreateTitleAndName_ForCangBaoTu(sceneId, selfId)
 	local part2 = x229020_g_TitleTableOfMonster[ret].part2
 	local strTitle = format("%s%s", part1, part2)
 
-	--ÉèÖÃmonsterµÄname
+	--è®¾ç½®monsterçš„name
 	ct = getn(x229020_g_NameTableOfMonster)
 	ret = random(ct)
 	local part1 = x229020_g_NameTableOfMonster[ret].part1
@@ -747,12 +747,12 @@ function x229020_CreateTitleAndName_ForCangBaoTu(sceneId, selfId)
 end
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
-function x229020_OnDefaultEvent( sceneId, selfId, targetId )	--µã»÷¸ÃÈÎÎñºóÖ´ĞĞ´Ë½Å±¾
-	--·¢ËÍÈÎÎñĞèÇóµÄĞÅÏ¢
+function x229020_OnDefaultEvent( sceneId, selfId, targetId )	--ç‚¹å‡»è¯¥ä»»åŠ¡åæ‰§è¡Œæ­¤è„šæœ¬
+	--å‘é€ä»»åŠ¡éœ€æ±‚çš„ä¿¡æ¯
 	if IsHaveMission(sceneId,selfId,x229020_g_MissionId) > 0 then
-		--·¢ËÍÈÎÎñĞèÇóµÄĞÅÏ¢
+		--å‘é€ä»»åŠ¡éœ€æ±‚çš„ä¿¡æ¯
 		BeginEvent(sceneId)
 			AddText(sceneId, x229020_g_MissionName)
 			AddText(sceneId, x229020_g_MissionInfo)
@@ -760,7 +760,7 @@ function x229020_OnDefaultEvent( sceneId, selfId, targetId )	--µã»÷¸ÃÈÎÎñºóÖ´ĞĞ´
 		local bDone = x229020_CheckSubmit( sceneId, selfId )
 		DispatchMissionDemandInfo(sceneId,selfId,targetId,x229020_g_ScriptId,x229020_g_MissionId,bDone)
 	elseif x229020_CheckAccept(sceneId,selfId) > 0 then
-		--·¢ËÍÈÎÎñ½ÓÊÜÊ±ÏÔÊ¾µÄĞÅÏ¢
+		--å‘é€ä»»åŠ¡æ¥å—æ—¶æ˜¾ç¤ºçš„ä¿¡æ¯
 		local sId = x229020_GetSceneIdByPlayerLevel(GetLevel(sceneId, selfId))
 		local scene, sceneName, x, z, r = x229020_GetScenePosInfo(sceneId,sId)
 		print(scene, x, z, r)
@@ -802,18 +802,18 @@ function x229020_OnDefaultEvent( sceneId, selfId, targetId )	--µã»÷¸ÃÈÎÎñºóÖ´ĞĞ´
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x229020_OnEnumerate( sceneId, selfId, targetId )
 	--PrintStr("OnEnumerate ... ")
-	--Èç¹ûÍæ¼ÒÍê³É¹ıÕâ¸öÈÎÎñ
+	--å¦‚æœç©å®¶å®Œæˆè¿‡è¿™ä¸ªä»»åŠ¡
 		if IsMissionHaveDone(sceneId,selfId,x229020_g_MissionId) > 0 then
     	return
-	--Âú×ãÈÎÎñ½ÓÊÕÌõ¼ş
+	--æ»¡è¶³ä»»åŠ¡æ¥æ”¶æ¡ä»¶
 		elseif IsHaveMission(sceneId,selfId,x229020_g_MissionId) > 0 then
 			AddNumText(sceneId,x229020_g_ScriptId,x229020_g_MissionName,4,-1);
 			return
-	--Âú×ãÈÎÎñ½ÓÊÕÌõ¼ş
+	--æ»¡è¶³ä»»åŠ¡æ¥æ”¶æ¡ä»¶
     elseif x229020_CheckAccept(sceneId,selfId) > 0 then
 			if GetName(sceneId,targetId) == x229020_g_Name then
 				--PrintStr("Name...")
@@ -823,14 +823,14 @@ function x229020_OnEnumerate( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x229020_CheckAccept( sceneId, selfId )
 	--PrintStr("CheckAccept ... ")
 	local nLevel = LuaFnGetLevel(sceneId, selfId)
 	if nLevel < 30 then
 		--BeginEvent(sceneId)
-		--	AddText(sceneId, "ÄãµÄ½­ºşÔÄÀúÌ«µÍ£¬¿Ö²À²»ÄÜÊ¤ÈÎ£¬´ı30¼¶Ö®ºóÔÙÀ´ÕÒÎÒ°É")
+		--	AddText(sceneId, "ä½ çš„æ±Ÿæ¹–é˜…å†å¤ªä½ï¼Œææ€–ä¸èƒ½èƒœä»»ï¼Œå¾…30çº§ä¹‹åå†æ¥æ‰¾æˆ‘å§")
 		--EndEvent()
 		--DispatchEventList(sceneId,selfId,targetId)
 		--PrintStr("return ... 0")
@@ -844,7 +844,7 @@ function x229020_CheckAccept( sceneId, selfId )
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x229020_OnAccept( sceneId, selfId )
 	if x229020_CheckAccept_Necessary( sceneId, selfId ) <= 0  then
@@ -860,14 +860,14 @@ function x229020_OnAccept( sceneId, selfId )
 	local iDayCount=GetMissionData(sceneId,selfId,MD_CHENGXIONGDATU_DAYCOUNT)
 	--local iTime = mod(iDayCount,100000)
 	local iTime=GetMissionData(sceneId,selfId,MD_CHENGXIONGDATU_DAYTIME)
-	local iDayTime = floor(iTime/100)	--ÉÏÒ»´Î·ÅÆúÈÎÎñµÄÊ±¼ä(ÌìÊı)
-	local iQuarterTime = mod(iTime,100)	--ÉÏÒ»´Î·ÅÆúÈÎÎñµÄÊ±¼ä(¿Ì)
-	--local iDayHuan = floor(iDayCount/100000) --µ±ÌìÄÚÍê³ÉµÄÈÎÎñ´ÎÊı
-	local iDayHuan = iDayCount --µ±ÌìÄÚÍê³ÉµÄÈÎÎñ´ÎÊı
+	local iDayTime = floor(iTime/100)	--ä¸Šä¸€æ¬¡æ”¾å¼ƒä»»åŠ¡çš„æ—¶é—´(å¤©æ•°)
+	local iQuarterTime = mod(iTime,100)	--ä¸Šä¸€æ¬¡æ”¾å¼ƒä»»åŠ¡çš„æ—¶é—´(åˆ»)
+	--local iDayHuan = floor(iDayCount/100000) --å½“å¤©å†…å®Œæˆçš„ä»»åŠ¡æ¬¡æ•°
+	local iDayHuan = iDayCount --å½“å¤©å†…å®Œæˆçš„ä»»åŠ¡æ¬¡æ•°
 	
-	--local CurTime = GetHourTime()		--µ±Ç°Ê±¼ä
-	local CurTime = GetQuarterTime()		--µ±Ç°Ê±¼ä
-	local CurDaytime = floor(CurTime/100)	--µ±Ç°Ê±¼ä(Ìì)
+	--local CurTime = GetHourTime()		--å½“å‰æ—¶é—´
+	local CurTime = GetQuarterTime()		--å½“å‰æ—¶é—´
+	local CurDaytime = floor(CurTime/100)	--å½“å‰æ—¶é—´(å¤©)
 	--end modified by zhangguoxin 090208
 
   if iDayTime == CurDaytime and iDayHuan >= 50 then
@@ -880,10 +880,10 @@ function x229020_OnAccept( sceneId, selfId )
 	end
 	
 	--/////////////////////////////////////////////////////////
-	--»¨·Ñ¼ÆËã
+	--èŠ±è´¹è®¡ç®—
  if GetMoney(sceneId, selfId) + GetMoneyJZ(sceneId, selfId) < 1000 then  
 		BeginEvent(sceneId)
-			AddText(sceneId, "½ğÇ®²»×ã")
+			AddText(sceneId, "é‡‘é’±ä¸è¶³")
 		EndEvent()
 		DispatchMissionTips(sceneId,selfId)
 		return
@@ -897,7 +897,7 @@ function x229020_OnAccept( sceneId, selfId )
 	  return
 	end
 	
-	--¼ÓÈëÈÎÎñµ½Íæ¼ÒÁĞ±í
+	--åŠ å…¥ä»»åŠ¡åˆ°ç©å®¶åˆ—è¡¨
 	local ret = AddMission( sceneId,selfId, x229020_g_MissionId, x229020_g_ScriptId, 0, 0, 0 )
 	if ret < 1 then
 		--PrintStr("ret<1")
@@ -914,8 +914,8 @@ function x229020_OnAccept( sceneId, selfId )
 	local z = GetMissionCacheData(sceneId, selfId, 2)
 	local r = GetMissionCacheData(sceneId, selfId, 3)
 		
-	--ÉèÖÃÈÎÎñ±äÁ¿±¦ÎïµÄ³¡¾°±àºÅºÍ×ø±êÎ»ÖÃ
-	local misIndex = GetMissionIndexByID(sceneId,selfId,x229020_g_MissionId)		--µÃµ½ÈÎÎñÔÚ20¸öÈÎÎñÖĞµÄĞòÁĞºÅ
+	--è®¾ç½®ä»»åŠ¡å˜é‡å®ç‰©çš„åœºæ™¯ç¼–å·å’Œåæ ‡ä½ç½®
+	local misIndex = GetMissionIndexByID(sceneId,selfId,x229020_g_MissionId)		--å¾—åˆ°ä»»åŠ¡åœ¨20ä¸ªä»»åŠ¡ä¸­çš„åºåˆ—å·
 	
 	local LogInfo	= format( "[ChengXiong]: x229020_OnAccept( sceneId=%d, GUID=%0X ), Scene=%d, MissionX=%d, MissionZ=%d, MissionR=%d, misIndex=%d",
 														sceneId,
@@ -927,19 +927,19 @@ function x229020_OnAccept( sceneId, selfId )
 														misIndex)	
 	MissionLog(sceneId, LogInfo)	
 	
-	SetMissionByIndex(sceneId,selfId,misIndex,0,0)					--¸ù¾İĞòÁĞºÅ°ÑÈÎÎñ±äÁ¿µÄµÚÒ»Î»ÖÃ0	µÚÒ»Î»ÊÇÍê³É/Ê§°ÜÇé¿ö
-	SetMissionByIndex(sceneId,selfId,misIndex,1,0)					--¸ù¾İĞòÁĞºÅ°ÑÈÎÎñ±äÁ¿µÄµÚ1Î»ÖÃ0
-	SetMissionByIndex(sceneId,selfId,misIndex,2,scene)			--°ÑµÚÈıÎ»ÖÃÎª±¦ÎïµÄ³¡¾°±àºÅ
-	SetMissionByIndex(sceneId,selfId,misIndex,3,x)					--°ÑµÚËÄÎ»ÖÃÎª±¦ÎïµÄX×ø±ê
-	SetMissionByIndex(sceneId,selfId,misIndex,4,z)					--°ÑµÚÎåÎ»ÖÃÎª±¦ÎïµÄZ×ø±ê
-	SetMissionByIndex(sceneId,selfId,misIndex,5,r)					--°ÑµÚ6Î»ÖÃÎª±¦ÎïµÄr
+	SetMissionByIndex(sceneId,selfId,misIndex,0,0)					--æ ¹æ®åºåˆ—å·æŠŠä»»åŠ¡å˜é‡çš„ç¬¬ä¸€ä½ç½®0	ç¬¬ä¸€ä½æ˜¯å®Œæˆ/å¤±è´¥æƒ…å†µ
+	SetMissionByIndex(sceneId,selfId,misIndex,1,0)					--æ ¹æ®åºåˆ—å·æŠŠä»»åŠ¡å˜é‡çš„ç¬¬1ä½ç½®0
+	SetMissionByIndex(sceneId,selfId,misIndex,2,scene)			--æŠŠç¬¬ä¸‰ä½ç½®ä¸ºå®ç‰©çš„åœºæ™¯ç¼–å·
+	SetMissionByIndex(sceneId,selfId,misIndex,3,x)					--æŠŠç¬¬å››ä½ç½®ä¸ºå®ç‰©çš„Xåæ ‡
+	SetMissionByIndex(sceneId,selfId,misIndex,4,z)					--æŠŠç¬¬äº”ä½ç½®ä¸ºå®ç‰©çš„Zåæ ‡
+	SetMissionByIndex(sceneId,selfId,misIndex,5,r)					--æŠŠç¬¬6ä½ç½®ä¸ºå®ç‰©çš„r
 		
 	SetMissionByIndex(sceneId,selfId,misIndex,7,-1)
 	
-	local scenetmp = GetMissionParam(sceneId,selfId,misIndex,2)						--»ñµÃ±¦Îï³¡¾°ºÅ
-	local treasureXtmp = GetMissionParam(sceneId,selfId,misIndex,3)				--»ñµÃ±¦ÎïX×ø±ê
-	local treasureZtmp = GetMissionParam(sceneId,selfId,misIndex,4)				--»ñµÃ±¦ÎïZ×ø±ê	
-	local rtmp = GetMissionParam(sceneId,selfId,misIndex,5)								--»ñµÃ±¦ÎïR	
+	local scenetmp = GetMissionParam(sceneId,selfId,misIndex,2)						--è·å¾—å®ç‰©åœºæ™¯å·
+	local treasureXtmp = GetMissionParam(sceneId,selfId,misIndex,3)				--è·å¾—å®ç‰©Xåæ ‡
+	local treasureZtmp = GetMissionParam(sceneId,selfId,misIndex,4)				--è·å¾—å®ç‰©Zåæ ‡	
+	local rtmp = GetMissionParam(sceneId,selfId,misIndex,5)								--è·å¾—å®ç‰©R	
 	
 	local LogInfo	= format( "[ChengXiong]: x229020_OnAccept_2( sceneId=%d, GUID=%0X ), Scene=%d, MissionX=%d, MissionZ=%d, MissionR=%d, misIndex=%d",
 														sceneId,
@@ -951,8 +951,8 @@ function x229020_OnAccept( sceneId, selfId )
 														misIndex)	
 	MissionLog(sceneId, LogInfo)	
 	
-	Msg2Player(  sceneId, selfId,"#Y½ÓÊÜÈÎÎñ£º³ÍĞ×´òÍ¼", MSG2PLAYER_PARA )
-	CallScriptFunction( SCENE_SCRIPT_ID, "AskTheWay", sceneId, selfId, scene, x, z, "³ÍĞ×´òÍ¼")
+	Msg2Player(  sceneId, selfId,"#Yæ¥å—ä»»åŠ¡ï¼šæƒ©å‡¶æ‰“å›¾", MSG2PLAYER_PARA )
+	CallScriptFunction( SCENE_SCRIPT_ID, "AskTheWay", sceneId, selfId, scene, x, z, "æƒ©å‡¶æ‰“å›¾")
 
 	--//////////////////////////////////////////////////////////////////////////
 	--begin modified by zhangguoxin 090208
@@ -978,10 +978,10 @@ function x229020_OnAccept( sceneId, selfId )
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x229020_OnAbandon( sceneId, selfId )
-	--É¾³ıÍæ¼ÒÈÎÎñÁĞ±íÖĞ¶ÔÓ¦µÄÈÎÎñ
+	--åˆ é™¤ç©å®¶ä»»åŠ¡åˆ—è¡¨ä¸­å¯¹åº”çš„ä»»åŠ¡
 	if HaveItem(sceneId, selfId, x229020_g_MissionItem[1].id) > 0 then
   if LuaFnGetAvailableItemCount(sceneId, selfId, x229020_g_MissionItem[1].id) >= 1 then
                 DelItem( sceneId, selfId, x229020_g_MissionItem[1].id, 1 )
@@ -989,7 +989,7 @@ function x229020_OnAbandon( sceneId, selfId )
                 x229020_Abandon_Necessary(sceneId, selfId)
   else
 		BeginEvent(sceneId)
-			AddText(sceneId, "ÄúµÄÎïÆ·ÏÖÔÚ²»¿ÉÓÃ»òÒÑ±»Ëø¶¨¡£")
+			AddText(sceneId, "æ‚¨çš„ç‰©å“ç°åœ¨ä¸å¯ç”¨æˆ–å·²è¢«é”å®šã€‚")
 		EndEvent( )
 		DispatchMissionTips(sceneId,selfId)	
 		return	
@@ -1001,7 +1001,7 @@ function x229020_OnAbandon( sceneId, selfId )
 end
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x229020_OnContinue( sceneId, selfId, targetId )
 	if x229020_CheckAccept(sceneId,selfId) > 0 then
@@ -1009,11 +1009,11 @@ function x229020_OnContinue( sceneId, selfId, targetId )
 		
 			AddText(sceneId,x229020_g_MissionName)
 			AddText(sceneId,x229020_g_MissionComplete)
-			--½±Àø½ğÇ®
+			--å¥–åŠ±é‡‘é’±
 			--local moneyBonus = 15 + random(15)
 			local moneyBonus = 4000
 			--AddMoneyBonus(sceneId, moneyBonus)          
-			AddText(sceneId,"#Y¹Ì¶¨½±Àø:")        
+			AddText(sceneId,"#Yå›ºå®šå¥–åŠ±:")        
 			AddText(sceneId,"#{_EXCHG"..moneyBonus.."}") 
 			ResetMissionCacheData(sceneId, selfId)
 			SetMissionCacheData(sceneId, selfId, 0, moneyBonus)
@@ -1025,7 +1025,7 @@ function x229020_OnContinue( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x229020_CheckSubmit( sceneId, selfId )
 	if IsHaveMission( sceneId, selfId, x229020_g_MissionId ) <= 0 then
@@ -1040,7 +1040,7 @@ function x229020_CheckSubmit( sceneId, selfId )
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x229020_OnSubmit( sceneId, selfId, targetId,selectRadioId )
 	local misIndex = GetMissionIndexByID(sceneId, selfId, x229020_g_MissionId)
@@ -1050,20 +1050,20 @@ function x229020_OnSubmit( sceneId, selfId, targetId,selectRadioId )
 		--AddMoney(sceneId, selfId, moneyBonus)                     
     AddMoneyJZ(sceneId, selfId, moneyBonus)
     BeginEvent(sceneId)	
-					strText = format("#YÄã»ñµÃÁË#{_EXCHG"..moneyBonus.."}¡£" )
+					strText = format("#Yä½ è·å¾—äº†#{_EXCHG"..moneyBonus.."}ã€‚" )
 				AddText(sceneId,strText);
 			EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)	
-		Msg2Player(  sceneId, selfId,"Äã»ñµÃÁË#{_EXCHG" .. tostring(moneyBonus) .. "}¡£", MSG2PLAYER_PARA )		
-		--Msg2Player(sceneId,selfId,"ÄãµÃµ½ÁË#{_MONEY" .. tostring(moneyBonus) .. "}" ,MSG2PLAYER_PARA )
+		Msg2Player(  sceneId, selfId,"ä½ è·å¾—äº†#{_EXCHG" .. tostring(moneyBonus) .. "}ã€‚", MSG2PLAYER_PARA )		
+		--Msg2Player(sceneId,selfId,"ä½ å¾—åˆ°äº†#{_MONEY" .. tostring(moneyBonus) .. "}" ,MSG2PLAYER_PARA )
 	end
 
 end
 
 --**********************************
---É±ËÀ¹ÖÎï»òÍæ¼Ò
+--æ€æ­»æ€ªç‰©æˆ–ç©å®¶
 --**********************************
-function x229020_OnKillObject( sceneId, selfId, objdataId ,objId)--²ÎÊıÒâË¼£º³¡¾°ºÅ¡¢Íæ¼ÒobjId¡¢¹ÖÎï±íÎ»ÖÃºÅ¡¢¹ÖÎïobjId
+function x229020_OnKillObject( sceneId, selfId, objdataId ,objId)--å‚æ•°æ„æ€ï¼šåœºæ™¯å·ã€ç©å®¶objIdã€æ€ªç‰©è¡¨ä½ç½®å·ã€æ€ªç‰©objId
 	--PrintStr("OnKillObject...")
 	local misIndex = GetMissionIndexByID(sceneId,selfId,x229020_g_MissionId)
 	local part1Index = GetMissionParam(sceneId, selfId, misIndex, 5)
@@ -1104,32 +1104,32 @@ function x229020_OnKillObject( sceneId, selfId, objdataId ,objId)--²ÎÊıÒâË¼£º³¡¾
 		local num = GetMissionParam(sceneId,selfId,misIndex,1)
 	  if num < x229020_g_DemandTrueKill[1].num then
 			if num == x229020_g_DemandTrueKill[1].num - 1 then
-				local OwnerCount = GetMonsterOwnerCount(sceneId,objId)--È¡µÃÕâ¸ö¹ÖÎïËÀºóÓµÓĞ·ÖÅäÈ¨µÄÈËÊı
+				local OwnerCount = GetMonsterOwnerCount(sceneId,objId)--å–å¾—è¿™ä¸ªæ€ªç‰©æ­»åæ‹¥æœ‰åˆ†é…æƒçš„äººæ•°
 				for i=0,OwnerCount-1 do
-					local humanObjId = GetMonsterOwnerID(sceneId,objId,i)--È¡µÃÓµÓĞ·ÖÅäÈ¨µÄÈËµÄobjId
+					local humanObjId = GetMonsterOwnerID(sceneId,objId,i)--å–å¾—æ‹¥æœ‰åˆ†é…æƒçš„äººçš„objId
 					if IsHaveMission(sceneId,humanObjId,x229020_g_MissionId) > 0 
-						and humanObjId == selfId then	--Èç¹ûÕâ¸öÈËÓµÓĞÈÎÎñ
-						--É±ËÀ¹ÖÎï»ñµÃµÄ½ğÇ®£½57£«(¹ÖÎïµÈ¼¶-20)*8
+						and humanObjId == selfId then	--å¦‚æœè¿™ä¸ªäººæ‹¥æœ‰ä»»åŠ¡
+						--æ€æ­»æ€ªç‰©è·å¾—çš„é‡‘é’±ï¼57ï¼‹(æ€ªç‰©ç­‰çº§-20)*8
 						local BonusMoney = 57 + (LuaFnGetLevel(sceneId, objId)-20) * 8
 						AddMoney(sceneId, selfId, BonusMoney)
-						--Msg2Player(  sceneId, selfId,"ÄãµÃµ½ÁË#{_MONEY" .. tostring(BonusMoney) .. "}" ,MSG2PLAYER_PARA )
+						--Msg2Player(  sceneId, selfId,"ä½ å¾—åˆ°äº†#{_MONEY" .. tostring(BonusMoney) .. "}" ,MSG2PLAYER_PARA )
 						
-						--Íæ¼Ò´òÍ¼µÄ±¬ÂÊ£½26£¥£«£¨Íæ¼ÒµÈ¼¶-20£©¡Á0.5£¥ --> (0.25+0.002*lv)*100
+						--ç©å®¶æ‰“å›¾çš„çˆ†ç‡ï¼26ï¼…ï¼‹ï¼ˆç©å®¶ç­‰çº§-20ï¼‰Ã—0.5ï¼… --> (0.25+0.002*lv)*100
 						local DropRate = 25 + LuaFnGetLevel(sceneId, selfId) * 0.2
 						--///////////////////////////////////////////////////////////////////
-						--Ã¿ÌìÇ°5´ÎµÄµôÍ¼ÂÊÊÇÔ­À´µÄÁ½±¶
+						--æ¯å¤©å‰5æ¬¡çš„æ‰å›¾ç‡æ˜¯åŸæ¥çš„ä¸¤å€
 						--begin modified by zhangguoxin 090208
 						local iDayCount=GetMissionData(sceneId,selfId,MD_CHENGXIONGDATU_DAYCOUNT)
 						--local iTime = mod(iDayCount,100000)
 						local iTime = GetMissionData(sceneId,selfId,MD_CHENGXIONGDATU_DAYTIME)
-						local iDayTime = floor(iTime/100)	--ÉÏÒ»´Î·ÅÆúÈÎÎñµÄÊ±¼ä(ÌìÊı)
-						local iQuarterTime = mod(iTime,100)	--ÉÏÒ»´Î·ÅÆúÈÎÎñµÄÊ±¼ä(¿Ì)
-						--local iDayHuan = floor(iDayCount/100000) --µ±ÌìÄÚÍê³ÉµÄÈÎÎñ´ÎÊı
-						local iDayHuan = iDayCount --µ±ÌìÄÚÍê³ÉµÄÈÎÎñ´ÎÊı
+						local iDayTime = floor(iTime/100)	--ä¸Šä¸€æ¬¡æ”¾å¼ƒä»»åŠ¡çš„æ—¶é—´(å¤©æ•°)
+						local iQuarterTime = mod(iTime,100)	--ä¸Šä¸€æ¬¡æ”¾å¼ƒä»»åŠ¡çš„æ—¶é—´(åˆ»)
+						--local iDayHuan = floor(iDayCount/100000) --å½“å¤©å†…å®Œæˆçš„ä»»åŠ¡æ¬¡æ•°
+						local iDayHuan = iDayCount --å½“å¤©å†…å®Œæˆçš„ä»»åŠ¡æ¬¡æ•°
 						
-						--local CurTime = GetHourTime()		--µ±Ç°Ê±¼ä
-						local CurTime = GetQuarterTime()		--µ±Ç°Ê±¼ä
-						local CurDaytime = floor(CurTime/100)	--µ±Ç°Ê±¼ä(Ìì)
+						--local CurTime = GetHourTime()		--å½“å‰æ—¶é—´
+						local CurTime = GetQuarterTime()		--å½“å‰æ—¶é—´
+						local CurDaytime = floor(CurTime/100)	--å½“å‰æ—¶é—´(å¤©)
 						
 						--PrintStr("CurDaytime=" .. CurDaytime)
 						--PrintStr("iDayTime=" .. iDayTime)
@@ -1147,8 +1147,8 @@ function x229020_OnKillObject( sceneId, selfId, objdataId ,objId)--²ÎÊıÒâË¼£º³¡¾
 	
 						--PrintStr("iDayHuan=" .. iDayHuan)
 						iDayCount=GetMissionData(sceneId,selfId,MD_CHENGXIONGDATU_DAYCOUNT)
-						--iDayHuan = floor(iDayCount/100000) --µ±ÌìÄÚÍê³ÉµÄÈÎÎñ´ÎÊı
-						iDayHuan = iDayCount --µ±ÌìÄÚÍê³ÉµÄÈÎÎñ´ÎÊı
+						--iDayHuan = floor(iDayCount/100000) --å½“å¤©å†…å®Œæˆçš„ä»»åŠ¡æ¬¡æ•°
+						iDayHuan = iDayCount --å½“å¤©å†…å®Œæˆçš„ä»»åŠ¡æ¬¡æ•°
 						if iDayHuan <= 5 then
 							DropRate = DropRate * 2
 						end	
@@ -1157,7 +1157,7 @@ function x229020_OnKillObject( sceneId, selfId, objdataId ,objId)--²ÎÊıÒâË¼£º³¡¾
 						local nRandomRet = random(100)
 						--PrintStr("DropRate=" .. DropRate .. " nRandomRet=" .. nRandomRet)
 						if nRandomRet < DropRate then
-							AddMonsterDropItem(sceneId, objId, humanObjId, x229020_g_NeedItemId)    --¸øÕâ¸öÈËÈÎÎñµÀ¾ß(µÀ¾ß»á³öÏÖÔÚÊ¬Ìå°üÀï)
+							AddMonsterDropItem(sceneId, objId, humanObjId, x229020_g_NeedItemId)    --ç»™è¿™ä¸ªäººä»»åŠ¡é“å…·(é“å…·ä¼šå‡ºç°åœ¨å°¸ä½“åŒ…é‡Œ)
 						end
 						break
 					end
@@ -1166,16 +1166,16 @@ function x229020_OnKillObject( sceneId, selfId, objdataId ,objId)--²ÎÊıÒâË¼£º³¡¾
 			
 			SetMissionByIndex(sceneId,selfId,misIndex,1,num+1)
 			BeginEvent(sceneId)
-				AddText(sceneId, "ÒÑÉ±ËÀ¶ñ¹÷")
+				AddText(sceneId, "å·²æ€æ­»æ¶æ£")
 				SetMissionByIndex(sceneId,selfId,misIndex,0,1)
 			EndEvent(sceneId)
 			DispatchMissionTips(sceneId,selfId)
 			ResetMissionEvent(sceneId, selfId, misIndex, 0)	
 			--DelMission(sceneId, selfId, x229020_g_MissionId)
-			--¼ÇÂ¼Í³¼ÆĞÅÏ¢
+			--è®°å½•ç»Ÿè®¡ä¿¡æ¯
 			LuaFnAuditDaTu(sceneId, selfId)
 			
-			-- ·ÀÖ¹Íâ¹ÒµÄ¹¦ÄÜ
+			-- é˜²æ­¢å¤–æŒ‚çš„åŠŸèƒ½
 			LuaFnSendGuajiQuestion(sceneId, selfId)
 		end
 	end
@@ -1183,13 +1183,13 @@ function x229020_OnKillObject( sceneId, selfId, objdataId ,objId)--²ÎÊıÒâË¼£º³¡¾
 end
 
 --**********************************
---½øÈëÇøÓòÊÂ¼ş
+--è¿›å…¥åŒºåŸŸäº‹ä»¶
 --**********************************
 function x229020_OnEnterArea( sceneId, selfId, zoneId )
 end
 
 --**********************************
---¸ù¾İÍæ¼ÒµÈ¼¶¶ÔÓ¦Éú³ÉmonsterµÄID
+--æ ¹æ®ç©å®¶ç­‰çº§å¯¹åº”ç”Ÿæˆmonsterçš„ID
 --**********************************
 function x229020_CreateMonsterbyHumanLevel(sceneId, selfId, x, z)
 	local humanLevel = LuaFnGetLevel(sceneId, selfId)
@@ -1218,14 +1218,14 @@ function x229020_CreateMonsterbyHumanLevel(sceneId, selfId, x, z)
 end
 			
 --**********************************
---µÀ¾ßÊ¹ÓÃ
+--é“å…·ä½¿ç”¨
 --**********************************
 function x229020_OnUseItem( sceneId, selfId, bagIndex )
 	--PrintStr("OnUseItem")
 	local misIndex = GetMissionIndexByID(sceneId,selfId,x229020_g_MissionId)
-	local scene = GetMissionParam(sceneId,selfId,misIndex,2)					--»ñµÃ±¦Îï³¡¾°ºÅ
-	local treasureX = GetMissionParam(sceneId,selfId,misIndex,3)				--»ñµÃ±¦ÎïX×ø±ê
-	local treasureZ = GetMissionParam(sceneId,selfId,misIndex,4)				--»ñµÃ±¦ÎïZ×ø±ê	
+	local scene = GetMissionParam(sceneId,selfId,misIndex,2)					--è·å¾—å®ç‰©åœºæ™¯å·
+	local treasureX = GetMissionParam(sceneId,selfId,misIndex,3)				--è·å¾—å®ç‰©Xåæ ‡
+	local treasureZ = GetMissionParam(sceneId,selfId,misIndex,4)				--è·å¾—å®ç‰©Zåæ ‡	
 	local r = GetMissionParam(sceneId,selfId,misIndex,5)
 	
 	local LogInfo	= format( "[ChengXiong]: x229020_OnUseItem( sceneId=%d, GUID=%0X ), Scene=%d, treasureX=%d, treasureZ=%d, MissionR=%d, misIndex=%d",
@@ -1238,13 +1238,13 @@ function x229020_OnUseItem( sceneId, selfId, bagIndex )
 														misIndex)	
 	MissionLog(sceneId, LogInfo)	
 	
-	--È¡µÃÍæ¼Òµ±Ç°×ø±ê
+	--å–å¾—ç©å®¶å½“å‰åæ ‡
 	local PlayerX = GetHumanWorldX(sceneId,selfId)
 	local PlayerZ = GetHumanWorldZ(sceneId,selfId)
-	--¼ÆËãÍæ¼ÒÓëÄ¿±êµãµÄ¾àÀë
+	--è®¡ç®—ç©å®¶ä¸ç›®æ ‡ç‚¹çš„è·ç¦»
 	local Distance = floor(sqrt((treasureX-PlayerX)*(treasureX-PlayerX)+(treasureZ-PlayerZ)*(treasureZ-PlayerZ)))
 	
-	local str = format("ÄãÖ»ÓĞµ½%sµÄ[%d,%d]²ÅÄÜÊ¹ÓÃ´Ë³Í¶ñÁî", x229020_GetSceneNameById(scene), treasureX, treasureZ)
+	local str = format("ä½ åªæœ‰åˆ°%sçš„[%d,%d]æ‰èƒ½ä½¿ç”¨æ­¤æƒ©æ¶ä»¤", x229020_GetSceneNameById(scene), treasureX, treasureZ)
 	if sceneId ~= scene then
 		BeginEvent(sceneId)
 			AddText(sceneId, str)
@@ -1264,18 +1264,18 @@ function x229020_OnUseItem( sceneId, selfId, bagIndex )
 	elseif Distance <= r then
   	if LuaFnGetAvailableItemCount(sceneId, selfId, x229020_g_MissionItem[1].id) >= 1 then		
   		DelItem( sceneId, selfId, x229020_g_MissionItem[1].id, 1 )
-		--ĞèÒªÔÚ´Ë´´½¨Ö¸¶¨µÄNPC
+		--éœ€è¦åœ¨æ­¤åˆ›å»ºæŒ‡å®šçš„NPC
 		BeginEvent(sceneId)
 			--PrintStr("CreatMonster...")
-			AddText(sceneId,"Ê©·Å³Í¶ñÁî³É¹¦, ÄãÒªĞ¡ĞÄà¶!")
+			AddText(sceneId,"æ–½æ”¾æƒ©æ¶ä»¤æˆåŠŸ, ä½ è¦å°å¿ƒå–½!")
 			x229020_CreateMonsterbyHumanLevel(sceneId, selfId, PlayerX, PlayerZ-2)
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
-			--ÔÚ´Ë²Å¹ØĞÄÉ±¹ÖµÄÊÂ¼ş
+			--åœ¨æ­¤æ‰å…³å¿ƒæ€æ€ªçš„äº‹ä»¶
 			SetMissionEvent(sceneId, selfId, x229020_g_MissionId, 0)
   	else
 			BeginEvent(sceneId)
-				AddText(sceneId, "ÄúµÄÎïÆ·ÏÖÔÚ²»¿ÉÓÃ»òÒÑ±»Ëø¶¨¡£")
+				AddText(sceneId, "æ‚¨çš„ç‰©å“ç°åœ¨ä¸å¯ç”¨æˆ–å·²è¢«é”å®šã€‚")
 			EndEvent( )
 			DispatchMissionTips(sceneId,selfId)
 			return		
@@ -1285,17 +1285,17 @@ function x229020_OnUseItem( sceneId, selfId, bagIndex )
 end
 
 --**********************************
---µÀ¾ß¸Ä±ä
+--é“å…·æ”¹å˜
 --**********************************
 function x229020_OnItemChanged( sceneId, selfId, itemdataId )
 
-	--×£¿­ 2007-10-16
-	--³ÍĞ×´òÍ¼ÔÚrtm0-13ĞŞ¸Ä¹ı»úÖÆ....¸ÄÎª²»ÔÙ»Øµ÷x229020_OnItemChangedÁË....
-	--µ«ÊÇÒÑ¾­ÁìÁËÈÎÎñµÄÈË»¹ÊÇ»á»Øµ÷Õâ¸öº¯Êı....²¢ÒòÎªÕÒ²»µ½Õâ¸öº¯Êı¶ø²úÉú´íÎóÈÕÖ¾....
-	--Òò´ËÏÖÔÚ¿ª·ÅÕâ¸ö¿Õº¯Êı....²¢¸øÄÇĞ©ÓĞÀÏÈÎÎñÊı¾İµÄÍæ¼ÒÌáÊ¾Ïà¹ØĞÅÏ¢....
+	--ç¥å‡¯ 2007-10-16
+	--æƒ©å‡¶æ‰“å›¾åœ¨rtm0-13ä¿®æ”¹è¿‡æœºåˆ¶....æ”¹ä¸ºä¸å†å›è°ƒx229020_OnItemChangedäº†....
+	--ä½†æ˜¯å·²ç»é¢†äº†ä»»åŠ¡çš„äººè¿˜æ˜¯ä¼šå›è°ƒè¿™ä¸ªå‡½æ•°....å¹¶å› ä¸ºæ‰¾ä¸åˆ°è¿™ä¸ªå‡½æ•°è€Œäº§ç”Ÿé”™è¯¯æ—¥å¿—....
+	--å› æ­¤ç°åœ¨å¼€æ”¾è¿™ä¸ªç©ºå‡½æ•°....å¹¶ç»™é‚£äº›æœ‰è€ä»»åŠ¡æ•°æ®çš„ç©å®¶æç¤ºç›¸å…³ä¿¡æ¯....
 
 	BeginEvent(sceneId)
-		AddText(sceneId, "ÄúµÄ³ÍĞ×´òÍ¼ÈÎÎñÊı¾İÒÑ¾­ºÜ¾ÉÁË£¬Çë·ÅÆú¸ÃÈÎÎñºóÖØĞÂÁìÈ¡¡£Èç¹ûÖØĞÂÁìÈ¡ºó»¹»á³öÏÖ±¾ÌáÊ¾×ÊÑ¶ÇëÏò¿Í·şÈËÔ±·´Ó³´ËÎÊÌâ¡£")
+		AddText(sceneId, "æ‚¨çš„æƒ©å‡¶æ‰“å›¾ä»»åŠ¡æ•°æ®å·²ç»å¾ˆæ—§äº†ï¼Œè¯·æ”¾å¼ƒè¯¥ä»»åŠ¡åé‡æ–°é¢†å–ã€‚å¦‚æœé‡æ–°é¢†å–åè¿˜ä¼šå‡ºç°æœ¬æç¤ºèµ„è®¯è¯·å‘å®¢æœäººå‘˜åæ˜ æ­¤é—®é¢˜ã€‚")
 	EndEvent( )
 	DispatchMissionTips(sceneId,selfId)
 
@@ -1358,10 +1358,10 @@ function x229020_OnItemChanged( sceneId, selfId, itemdataId )
 --		MissionLog(sceneId, logstr)
 --		
 --		BeginEvent(sceneId)
---			AddText(sceneId, "ÄãµÃµ½Ò»ÕÅ¹Å¾ÉµÄ²Ø±¦Í¼");
+--			AddText(sceneId, "ä½ å¾—åˆ°ä¸€å¼ å¤æ—§çš„è—å®å›¾");
 --		EndEvent(sceneId)
 --		DispatchMissionTips(sceneId,selfId)
---		--ResetMissionEvent(sceneId, selfId, x229020_g_MissionId, 2) --ÖØĞÂÖÃÎªºÜÖØÒª
+--		--ResetMissionEvent(sceneId, selfId, x229020_g_MissionId, 2) --é‡æ–°ç½®ä¸ºå¾ˆé‡è¦
 --		
 --	end
 end	
@@ -1370,13 +1370,13 @@ function x229020_Abandon_Necessary( sceneId, selfId )
 
 	--begin modified by zhangguoxin 090208
 	--local iDayCount=GetMissionData(sceneId,selfId,MD_CHENGXIONGDATU_DAYCOUNT)
-	--local iDayHuan = floor(iDayCount/100000) --µ±ÌìÄÚÍê³ÉµÄÈÎÎñ´ÎÊı
-	--local CurTime = GetHourTime()		--µ±Ç°Ê±¼ä
+	--local iDayHuan = floor(iDayCount/100000) --å½“å¤©å†…å®Œæˆçš„ä»»åŠ¡æ¬¡æ•°
+	--local CurTime = GetHourTime()		--å½“å‰æ—¶é—´
 	--	
 	--iDayCount = iDayHuan*100000+CurTime 
-	----ÉèÖÃÑ­»·ÈÎÎñµÄÊ±¼ä
+	----è®¾ç½®å¾ªç¯ä»»åŠ¡çš„æ—¶é—´
 	--SetMissionData(sceneId,selfId,MD_CHENGXIONGDATU_DAYCOUNT,iDayCount)
-	local iCurTime = GetQuarterTime()		--µ±Ç°Ê±¼ä
+	local iCurTime = GetQuarterTime()		--å½“å‰æ—¶é—´
 	SetMissionData(sceneId,selfId,MD_CHENGXIONGDATU_DAYTIME,iCurTime) 
 	--end modified by zhangguoxin 090208
 end	
@@ -1387,14 +1387,14 @@ function x229020_CheckAccept_Necessary( sceneId, selfId )
 	--local iDayCount=GetMissionData(sceneId,selfId,MD_CHENGXIONGDATU_DAYCOUNT)
 	--local iTime = mod(iDayCount,100000)
 	local iTime = GetMissionData(sceneId,selfId,MD_CHENGXIONGDATU_DAYTIME)
-	local iDayTime = floor(iTime/100)	--ÉÏÒ»´Î·ÅÆúÈÎÎñµÄÊ±¼ä(ÌìÊı)
-	local iQuarterTime = mod(iTime,100)	--ÉÏÒ»´Î·ÅÆúÈÎÎñµÄÊ±¼ä(Ò»¿ÌÖÖ)
-	--local iDayHuan = floor(iDayCount/100000) --µ±ÌìÄÚÍê³ÉµÄÈÎÎñ´ÎÊı
+	local iDayTime = floor(iTime/100)	--ä¸Šä¸€æ¬¡æ”¾å¼ƒä»»åŠ¡çš„æ—¶é—´(å¤©æ•°)
+	local iQuarterTime = mod(iTime,100)	--ä¸Šä¸€æ¬¡æ”¾å¼ƒä»»åŠ¡çš„æ—¶é—´(ä¸€åˆ»ç§)
+	--local iDayHuan = floor(iDayCount/100000) --å½“å¤©å†…å®Œæˆçš„ä»»åŠ¡æ¬¡æ•°
 	
-	--local CurTime = GetHourTime()		--µ±Ç°Ê±¼ä
-	local CurTime = GetQuarterTime()		--µ±Ç°Ê±¼ä
-	local CurDaytime = floor(CurTime/100)	--µ±Ç°Ê±¼ä(Ìì)
-	local CurQuarterTime = mod(CurTime,100) 	--µ±Ç°Ê±¼ä(Ò»¿ÌÖÓ)
+	--local CurTime = GetHourTime()		--å½“å‰æ—¶é—´
+	local CurTime = GetQuarterTime()		--å½“å‰æ—¶é—´
+	local CurDaytime = floor(CurTime/100)	--å½“å‰æ—¶é—´(å¤©)
+	local CurQuarterTime = mod(CurTime,100) 	--å½“å‰æ—¶é—´(ä¸€åˆ»é’Ÿ)
 	--end modified by zhangguoxin 090208
 	if iDayTime == CurDaytime then
 		if CurQuarterTime == iQuarterTime then

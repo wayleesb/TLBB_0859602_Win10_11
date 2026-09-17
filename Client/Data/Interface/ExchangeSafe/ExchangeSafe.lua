@@ -1,6 +1,6 @@
 
-local ExchangeSafe_BoxName = {"µÚÒ»¸ñ", "µÚ¶ş¸ñ", "µÚÈı¸ñ", "µÚËÄ¸ñ", "µÚÎå¸ñ", "µÚÁù¸ñ", "µÚÆß¸ñ", "µÚ°Ë¸ñ", "µÚ¾Å¸ñ", "µÚÊ®¸ñ", "µÚÊ®Ò»¸ñ", };
-local ExchangeSafe_Box_Maxnum = 100;            --×î¶àÏÔÊ¾100Ìõ
+local ExchangeSafe_BoxName = {"ç¬¬ä¸€æ ¼", "ç¬¬äºŒæ ¼", "ç¬¬ä¸‰æ ¼", "ç¬¬å››æ ¼", "ç¬¬äº”æ ¼", "ç¬¬å…­æ ¼", "ç¬¬ä¸ƒæ ¼", "ç¬¬å…«æ ¼", "ç¬¬ä¹æ ¼", "ç¬¬åæ ¼", "ç¬¬åä¸€æ ¼", };
+local ExchangeSafe_Box_Maxnum = 100;            --æœ€å¤šæ˜¾ç¤º100æ¡
 local ExchangeSafe_Box_NowNum = 0;
 --===============================================
 -- OnLoad()
@@ -71,7 +71,7 @@ function ExchangeSafe_AddItem(strItemName, strTime, nItemNum, nToPos)
 	
 	ExchangeSafe_UpdateTopElement();
 	--local strTips = "";
-	--strTips = string.format("%s %s #GĞŞ¸Ä½ğ±Ò½ğ¶îÎª£º#{_MONEY%d}", strTime, strOtherName, nMoneyThis);
+	--strTips = string.format("%s %s #Gä¿®æ”¹é‡‘å¸é‡‘é¢ä¸ºï¼š#{_MONEY%d}", strTime, strOtherName, nMoneyThis);
 	ExchangeSafe_List:AddChatBoardElement(strTime.."#{JYTX_090302_1}".."#Y"..strBoxName.."#W".."#{JYTX_090302_2}".."["..strItemNameN.."]X"..tostring(nItemNum));
 	ExchangeSafe_List:PageEnd();
 	
@@ -122,7 +122,7 @@ end
 function ExchangeSafe_EditMoney(strTime, nMoneyGold, nMoneyOther)
 	local strOtherName = Exchange:GetOthersName();
 	
-	--local strTips = string.format("%s %s #GĞŞ¸Ä½ğ±Ò½ğ¶îÎª£º#{_MONEY%d}", strTime, strOtherName, nMoneySet);
+	--local strTips = string.format("%s %s #Gä¿®æ”¹é‡‘å¸é‡‘é¢ä¸ºï¼š#{_MONEY%d}", strTime, strOtherName, nMoneySet);
 	local strTips = "";
 	local nGold = tonumber(nMoneyGold);
 	local nOther = tonumber(nMoneyOther);

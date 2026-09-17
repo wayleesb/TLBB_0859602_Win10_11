@@ -1,13 +1,13 @@
---ËæÉíNPCÏà¹Ø¹¦ÄÜ£¬Ä¿Ç°Ìá¹©Ôª±¦Ïà¹ØµÄËæÉí²Ù×÷
+--éšèº«NPCç›¸å…³åŠŸèƒ½ï¼Œç›®å‰æä¾›å…ƒå®ç›¸å…³çš„éšèº«æ“ä½œ
 
 x888898_g_scriptId = ALONENPC_SCRIPT_ID
 
 x888898_g_op		= {}
-x888898_g_op[1]	=	181003		--ËæÉíÔª±¦Ïà¹Ø
+x888898_g_op[1]	=	181003		--éšèº«å…ƒå®ç›¸å…³
 
 --**********************************
--- ¼ì²é´ËËæÉíNPCµÄ¹¦ÄÜ
--- opÊÇÇëÇóÀà±ğ£¬±ÈÈç1´ú±íÔª±¦Ïà¹ØµÄËæÉí²Ù×÷¡­¡­
+-- æ£€æŸ¥æ­¤éšèº«NPCçš„åŠŸèƒ½
+-- opæ˜¯è¯·æ±‚ç±»åˆ«ï¼Œæ¯”å¦‚1ä»£è¡¨å…ƒå®ç›¸å…³çš„éšèº«æ“ä½œâ€¦â€¦
 --**********************************
 function	x888898_AloneNpcEvent( sceneId, selfId, op )
 	if nil == op or 1 > op then return end
@@ -20,13 +20,13 @@ end
 
 function x888898_AloneNpcCheckOp(sceneId,selfId,op)
 	if nil == op or 1 > op then return 0 end
-	--µØ¸®
+	--åœ°åºœ
 	if sceneId == 77 then 
-		BroadMsgByChatPipe(sceneId, selfId, "@*;SrvMsg;DBD:µØ¸®Àï²»ÄÜÊ¹ÓÃËæÉí¹¦ÄÜ", 0);
+		BroadMsgByChatPipe(sceneId, selfId, "@*;SrvMsg;DBD:åœ°åºœé‡Œä¸èƒ½ä½¿ç”¨éšèº«åŠŸèƒ½", 0);
 		return 0
 	end
 	
-	--×é¶Ó¸úËæ
+	--ç»„é˜Ÿè·Ÿéš
 	local selfHasTeamFlag = LuaFnHasTeam(sceneId, selfId);
 	if selfHasTeamFlag and selfHasTeamFlag == 1 then
 		local teamFollowFlag = IsTeamFollow(sceneId,selfId);
@@ -39,22 +39,22 @@ function x888898_AloneNpcCheckOp(sceneId,selfId,op)
 		end
 	end
 	
-	--Ë«ÈËÆï³Ë
+	--åŒäººéª‘ä¹˜
 	local selfHasDRideFlag = LuaFnGetDRideFlag(sceneId, selfId);
 	if selfHasDRideFlag and selfHasDRideFlag == 1 then
 		local selfIsDRideMountOwner = LuaFnIsDRideMountOwner(sceneId, selfId);
 		if not selfIsDRideMountOwner or selfIsDRideMountOwner ~= 1 then
-			--´¦ÓÚË«ÈËÆï³Ë×´Ì¬£¬ÇÒÊÇ±»¶¯µÄ£¬½»¸øÖ÷¶¯·½À´´¦Àí
+			--å¤„äºåŒäººéª‘ä¹˜çŠ¶æ€ï¼Œä¸”æ˜¯è¢«åŠ¨çš„ï¼Œäº¤ç»™ä¸»åŠ¨æ–¹æ¥å¤„ç†
 			return 0
 		end
 	end
 	
-	--ËæÉíÔª±¦ÉÌµêÌõ¼ş¼ì²é
+	--éšèº«å…ƒå®å•†åº—æ¡ä»¶æ£€æŸ¥
 	if op == 1 then
-		--15¼¶ÒÔÉÏ
+		--15çº§ä»¥ä¸Š
 		local level = GetLevel(sceneId,selfId);
 		if nil == level or level < 15 then
-			BroadMsgByChatPipe(sceneId, selfId, "@*;SrvMsg;DBD:´Ë¹¦ÄÜÖ»ÓĞµ±ÄúµÄµÈ¼¶´óÓÚµÈÓÚ15¼¶µÄÊ±ºò·½¿ÉÊ¹ÓÃ", 0);
+			BroadMsgByChatPipe(sceneId, selfId, "@*;SrvMsg;DBD:æ­¤åŠŸèƒ½åªæœ‰å½“æ‚¨çš„ç­‰çº§å¤§äºç­‰äº15çº§çš„æ—¶å€™æ–¹å¯ä½¿ç”¨", 0);
 			return 0
 		end
 

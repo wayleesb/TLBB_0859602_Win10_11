@@ -1,17 +1,17 @@
---²Î¼Ó»éÀñ
+--å‚åŠ å©šç¤¼
 
 x250038_g_ScriptId = 250038;
 
-x250038_g_eventId_updateJoinList = -1;				-- Ë¢ĞÂÄÜ¼ÓÈëµÄÁĞ±í(Òª±£Ö¤´ËÖµ²»»áÓëÍæ¼ÒµÄGUIDÏàÍ¬)
+x250038_g_eventId_updateJoinList = -1;				-- åˆ·æ–°èƒ½åŠ å…¥çš„åˆ—è¡¨(è¦ä¿è¯æ­¤å€¼ä¸ä¼šä¸ç©å®¶çš„GUIDç›¸åŒ)
 
-x250038_g_invitationDataId_level1  = 30303100;		-- ÆÕÍ¨ÇëÌûID
-x250038_g_invitationDataId_level2  = 30303101;		-- ¸ß¼¶ÇëÌûID
-x250038_g_invitationDataId_level3  = 30303102;		-- ºÀ»ªÇëÌûID
+x250038_g_invitationDataId_level1  = 30303100;		-- æ™®é€šè¯·å¸–ID
+x250038_g_invitationDataId_level2  = 30303101;		-- é«˜çº§è¯·å¸–ID
+x250038_g_invitationDataId_level3  = 30303102;		-- è±ªåè¯·å¸–ID
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
-function x250038_OnDefaultEvent(sceneId, selfId, targetId)	--µã»÷¸ÃÈÎÎñºóÖ´ĞĞ´Ë½Å±¾
+function x250038_OnDefaultEvent(sceneId, selfId, targetId)	--ç‚¹å‡»è¯¥ä»»åŠ¡åæ‰§è¡Œæ­¤è„šæœ¬
 	local selectEventId = GetNumText();
 	if selectEventId then
 		if selectEventId == x250038_g_eventId_updateJoinList then
@@ -24,14 +24,14 @@ function x250038_OnDefaultEvent(sceneId, selfId, targetId)	--µã»÷¸ÃÈÎÎñºóÖ´ĞĞ´Ë½
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x250038_OnEnumerate(sceneId, selfId, targetId)
-	AddNumText(sceneId, x250038_g_ScriptId, "²Î¼Ó»éÀñ", 6, x250038_g_eventId_updateJoinList);
+	AddNumText(sceneId, x250038_g_ScriptId, "å‚åŠ å©šç¤¼", 6, x250038_g_eventId_updateJoinList);
 end
 
 --**********************************
---Ë¢ĞÂ¿ÉÄÜ²Î¼ÓµÄ»éÀñÁĞ±í
+--åˆ·æ–°å¯èƒ½å‚åŠ çš„å©šç¤¼åˆ—è¡¨
 --**********************************
 function x250038_OnUpdateJoinList(sceneId, selfId, targetId)
 	BeginEvent(sceneId);
@@ -48,12 +48,12 @@ function x250038_OnUpdateJoinList(sceneId, selfId, targetId)
 		local creatorList = {};
 		if destSceneId and destSceneId ~= -1 then
 			if addText == 0 then
-				AddText(sceneId, "ÇëÑ¡ÔñÄãÒª²Î¼ÓµÄ»éÀñ£¡");
+				AddText(sceneId, "è¯·é€‰æ‹©ä½ è¦å‚åŠ çš„å©šç¤¼ï¼");
 				addText = 1;
 			end
 			creatorList[creatorNum + 1] = selfGUID;
 			creatorNum = creatorNum + 1;
-			AddNumText(sceneId, x250038_g_ScriptId, "ÈÃÎÒ»Øµ½ÎÒµÄ»éÀñ¸±±¾", 9, selfGUID);
+			AddNumText(sceneId, x250038_g_ScriptId, "è®©æˆ‘å›åˆ°æˆ‘çš„å©šç¤¼å‰¯æœ¬", 9, selfGUID);
 		end
 		
 		local itemIdList = {x250038_g_invitationDataId_level3, x250038_g_invitationDataId_level2, x250038_g_invitationDataId_level1};
@@ -70,7 +70,7 @@ function x250038_OnUpdateJoinList(sceneId, selfId, targetId)
 					if ret and creatorName and ret == 1 then
 						local creatorGUID = GetBagItemParam(sceneId, selfId, itemPos, 0, 2);
 						if addText == 0 then
-							AddText(sceneId, "ÇëÑ¡ÔñÄãÒª²Î¼ÓµÄ»éÀñ£¡");
+							AddText(sceneId, "è¯·é€‰æ‹©ä½ è¦å‚åŠ çš„å©šç¤¼ï¼");
 							addText = 1;
 						end
 						
@@ -86,7 +86,7 @@ function x250038_OnUpdateJoinList(sceneId, selfId, targetId)
 						if bFind == 0 then
 							creatorList[creatorNum + 1] = creatorGUID;
 							creatorNum = creatorNum + 1;
-							AddNumText(sceneId, x250038_g_ScriptId, "²Î¼Ó"..creatorName.."µÄ»éÀñ", 8, creatorGUID);
+							AddNumText(sceneId, x250038_g_ScriptId, "å‚åŠ "..creatorName.."çš„å©šç¤¼", 8, creatorGUID);
 						end
 					end
 					itemPos = itemPos + 1;
@@ -96,21 +96,21 @@ function x250038_OnUpdateJoinList(sceneId, selfId, targetId)
 			end
 		end
 		if addText == 0 then
-			AddText(sceneId, "ÄãÉíÉÏÃ»ÓĞ¿ÉÓÃµÄ½á»éÇëÌû£¬ÎŞ·¨²Î¼ÓÈÎºÎ»éÀñ¡£");
+			AddText(sceneId, "ä½ èº«ä¸Šæ²¡æœ‰å¯ç”¨çš„ç»“å©šè¯·å¸–ï¼Œæ— æ³•å‚åŠ ä»»ä½•å©šç¤¼ã€‚");
 		end
 	EndEvent(sceneId);
 	DispatchEventList(sceneId, selfId, targetId);
 end
 
 --**********************************
---µã»÷²Î¼Ó»éÀñµÄÊÂ¼ş
+--ç‚¹å‡»å‚åŠ å©šç¤¼çš„äº‹ä»¶
 --**********************************
 function x250038_OnJoin(sceneId, selfId, targetId, creatorGUID)
 	CallScriptFunction(401030, "PlayerEnter", sceneId, selfId, targetId, creatorGUID);
 end
 
 --**********************************
---¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+--å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x250038_MessageBox(sceneId, selfId, targetId, msg)
 	BeginEvent(sceneId);

@@ -1,24 +1,24 @@
 --120001
 
--- ²ÔÃ£É½£¬Ïô·å
+-- è‹èŒ«å±±ï¼Œè§å³°
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x120001_g_scriptId = 120001
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x120001_g_eventList={200035, 200036}
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x120001_UpdateEventList( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
 	local  PlayerName=GetName(sceneId,selfId)
 	AddText(sceneId,"#{JQ_CMS_B_001}")
 	
-	-- Èç¹ûÕâ¸öÍæ¼ÒÍê³ÉÁË¡°ËÄÃæ³ş¸è£¬¡±
+	-- å¦‚æœè¿™ä¸ªç©å®¶å®Œæˆäº†â€œå››é¢æ¥šæ­Œï¼Œâ€
   if IsMissionHaveDone(sceneId,selfId,31) > 0 then
-		AddNumText(sceneId,x120001_g_scriptId,"½ğ¸êµ´¿Ü÷é±ø",10,123);
+		AddNumText(sceneId,x120001_g_scriptId,"é‡‘æˆˆè¡å¯‡é–å…µ",10,123);
 	end
 	
 	for i, eventId in x120001_g_eventList do
@@ -29,24 +29,24 @@ function x120001_UpdateEventList( sceneId, selfId,targetId )
 end
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x120001_OnDefaultEvent( sceneId, selfId,targetId )
 	x120001_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x120001_OnEventRequest( sceneId, selfId, targetId, eventId )
 	
 	if GetNumText() == 123   then
-		-- ¿ªÆô¾çÇé
+		-- å¼€å¯å‰§æƒ…
 		if LuaFnGetCopySceneData_Param(sceneId, 8) < 3  then
 			LuaFnSetCopySceneData_Param(sceneId, 8, 3)
 			LuaFnSetCopySceneData_Param(sceneId, 10, 1)
 		end
-		-- ¹Ø±ÕUI
+		-- å…³é—­UI
 		BeginUICommand(sceneId)
 		EndUICommand(sceneId)
 		DispatchUICommand(sceneId,selfId, 1000)
@@ -64,7 +64,7 @@ function x120001_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x120001_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x120001_g_eventList do
@@ -79,10 +79,10 @@ function x120001_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x120001_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
-	--¾Ü¾øÖ®ºó£¬Òª·µ»ØNPCµÄÊÂ¼şÁĞ±í
+	--æ‹’ç»ä¹‹åï¼Œè¦è¿”å›NPCçš„äº‹ä»¶åˆ—è¡¨
 	for i, findId in x120001_g_eventList do
 		if missionScriptId == findId then
 			x120001_UpdateEventList( sceneId, selfId, targetId )
@@ -92,7 +92,7 @@ function x120001_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¼ÌĞø£¨ÒÑ¾­½ÓÁËÈÎÎñ£©
+--ç»§ç»­ï¼ˆå·²ç»æ¥äº†ä»»åŠ¡ï¼‰
 --**********************************
 function x120001_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x120001_g_eventList do
@@ -104,7 +104,7 @@ function x120001_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---Ìá½»ÒÑ×öÍêµÄÈÎÎñ
+--æäº¤å·²åšå®Œçš„ä»»åŠ¡
 --**********************************
 function x120001_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, selectRadioId )
 	for i, findId in x120001_g_eventList do
@@ -116,7 +116,7 @@ function x120001_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 end
 
 --**********************************
---ËÀÍöÊÂ¼ş
+--æ­»äº¡äº‹ä»¶
 --**********************************
 function x120001_OnDie( sceneId, selfId, killerId )
 end

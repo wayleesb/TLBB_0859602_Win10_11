@@ -1,60 +1,60 @@
 --------------------------------------------
---Ç©ÃûÂ¼µÀ¾ß½Å±¾
---Created By ×ó´ºÎ°
+--ç­¾åå½•é“å…·è„šæœ¬
+--Created By å·¦æ˜¥ä¼Ÿ
 --------------------------------------------
 
---½Å±¾ID
+--è„šæœ¬ID
 x335806_g_scriptId = 335806
---Ç©ÃûµÀ¾ßID
+--ç­¾åé“å…·ID
 x335806_g_signatureId = 40004452; 
---ĞèÊÕ¼¯ÊıÁ¿
+--éœ€æ”¶é›†æ•°é‡
 x335806_g_FullNum = 15;
--- ÊÕ¼¯Ç©ÃûÈÎÎñºÅ
+-- æ”¶é›†ç­¾åä»»åŠ¡å·
 x335806_g_MissionId = 1130;
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x335806_OnDefaultEvent( sceneId, selfId, bagIndex )	
 
 end
 
 --**********************************
---Õâ¸öÎïÆ·µÄÊ¹ÓÃ¹ı³ÌÊÇ·ñÀàËÆÓÚ¼¼ÄÜ£º
---ÏµÍ³»áÔÚÖ´ĞĞ¿ªÊ¼Ê±¼ì²âÕâ¸öº¯ÊıµÄ·µ»ØÖµ£¬Èç¹û·µ»ØÊ§°ÜÔòºöÂÔºóÃæµÄÀàËÆ¼¼ÄÜµÄÖ´ĞĞ¡£
---·µ»Ø1£º¼¼ÄÜÀàËÆµÄÎïÆ·£¬¿ÉÒÔ¼ÌĞøÀàËÆ¼¼ÄÜµÄÖ´ĞĞ£»·µ»Ø0£ººöÂÔºóÃæµÄ²Ù×÷¡£
+--è¿™ä¸ªç‰©å“çš„ä½¿ç”¨è¿‡ç¨‹æ˜¯å¦ç±»ä¼¼äºæŠ€èƒ½ï¼š
+--ç³»ç»Ÿä¼šåœ¨æ‰§è¡Œå¼€å§‹æ—¶æ£€æµ‹è¿™ä¸ªå‡½æ•°çš„è¿”å›å€¼ï¼Œå¦‚æœè¿”å›å¤±è´¥åˆ™å¿½ç•¥åé¢çš„ç±»ä¼¼æŠ€èƒ½çš„æ‰§è¡Œã€‚
+--è¿”å›1ï¼šæŠ€èƒ½ç±»ä¼¼çš„ç‰©å“ï¼Œå¯ä»¥ç»§ç»­ç±»ä¼¼æŠ€èƒ½çš„æ‰§è¡Œï¼›è¿”å›0ï¼šå¿½ç•¥åé¢çš„æ“ä½œã€‚
 --**********************************
 function x335806_IsSkillLikeScript( sceneId, selfId)
 	return 1
 end
 
 --**********************************
---Ö±½ÓÈ¡ÏûĞ§¹û£º
---ÏµÍ³»áÖ±½Óµ÷ÓÃÕâ¸ö½Ó¿Ú£¬²¢¸ù¾İÕâ¸öº¯ÊıµÄ·µ»ØÖµÈ·¶¨ÒÔºóµÄÁ÷³ÌÊÇ·ñÖ´ĞĞ¡£
---·µ»Ø1£ºÒÑ¾­È¡Ïû¶ÔÓ¦Ğ§¹û£¬²»ÔÙÖ´ĞĞºóĞø²Ù×÷£»·µ»Ø0£ºÃ»ÓĞ¼ì²âµ½Ïà¹ØĞ§¹û£¬¼ÌĞøÖ´ĞĞ¡£
+--ç›´æ¥å–æ¶ˆæ•ˆæœï¼š
+--ç³»ç»Ÿä¼šç›´æ¥è°ƒç”¨è¿™ä¸ªæ¥å£ï¼Œå¹¶æ ¹æ®è¿™ä¸ªå‡½æ•°çš„è¿”å›å€¼ç¡®å®šä»¥åçš„æµç¨‹æ˜¯å¦æ‰§è¡Œã€‚
+--è¿”å›1ï¼šå·²ç»å–æ¶ˆå¯¹åº”æ•ˆæœï¼Œä¸å†æ‰§è¡Œåç»­æ“ä½œï¼›è¿”å›0ï¼šæ²¡æœ‰æ£€æµ‹åˆ°ç›¸å…³æ•ˆæœï¼Œç»§ç»­æ‰§è¡Œã€‚
 --**********************************
 function x335806_CancelImpacts( sceneId, selfId )
 	return 0;
 end
 
 --**********************************
---Ìõ¼ş¼ì²âÈë¿Ú£º
---ÏµÍ³»áÔÚ¼¼ÄÜ¼ì²âµÄÊ±¼äµãµ÷ÓÃÕâ¸ö½Ó¿Ú£¬²¢¸ù¾İÕâ¸öº¯ÊıµÄ·µ»ØÖµÈ·¶¨ÒÔºóµÄÁ÷³ÌÊÇ·ñÖ´ĞĞ¡£
---·µ»Ø1£ºÌõ¼ş¼ì²âÍ¨¹ı£¬¿ÉÒÔ¼ÌĞøÖ´ĞĞ£»·µ»Ø0£ºÌõ¼ş¼ì²âÊ§°Ü£¬ÖĞ¶ÏºóĞøÖ´ĞĞ¡£
+--æ¡ä»¶æ£€æµ‹å…¥å£ï¼š
+--ç³»ç»Ÿä¼šåœ¨æŠ€èƒ½æ£€æµ‹çš„æ—¶é—´ç‚¹è°ƒç”¨è¿™ä¸ªæ¥å£ï¼Œå¹¶æ ¹æ®è¿™ä¸ªå‡½æ•°çš„è¿”å›å€¼ç¡®å®šä»¥åçš„æµç¨‹æ˜¯å¦æ‰§è¡Œã€‚
+--è¿”å›1ï¼šæ¡ä»¶æ£€æµ‹é€šè¿‡ï¼Œå¯ä»¥ç»§ç»­æ‰§è¡Œï¼›è¿”å›0ï¼šæ¡ä»¶æ£€æµ‹å¤±è´¥ï¼Œä¸­æ–­åç»­æ‰§è¡Œã€‚
 --**********************************
 function x335806_OnConditionCheck( sceneId, selfId )
-	--Ğ£ÑéÊ¹ÓÃµÄÎïÆ·
+	--æ ¡éªŒä½¿ç”¨çš„ç‰©å“
 	if 1 ~= LuaFnVerifyUsedItem(sceneId, selfId) then
 		return 0;
 	end
 	if x335806_IsFitCondition(sceneId, selfId) == 0 then
 		return 0;
 	end
-	-- ¼ì²âÍ¨¹ı
+	-- æ£€æµ‹é€šè¿‡
 	local targetId = LuaFnGetTargetObjID(sceneId, selfId);
 	local myName = GetName(sceneId, selfId);
 	BeginEvent(sceneId)
-		local text = format("#{_INFOUSR%s}ÕıÔÚ¶ÔÄãÊÕ¼¯Ç©Ãû£¬Çë²»ÒªÀë¿ª¸½½ü·¶Î§¡£", myName);
+		local text = format("#{_INFOUSR%s}æ­£åœ¨å¯¹ä½ æ”¶é›†ç­¾åï¼Œè¯·ä¸è¦ç¦»å¼€é™„è¿‘èŒƒå›´ã€‚", myName);
 		AddText(sceneId, text);
 	EndEvent()
 	DispatchMissionTips(sceneId, targetId);
@@ -62,21 +62,21 @@ function x335806_OnConditionCheck( sceneId, selfId )
 end
 
 --**********************************
---ÏûºÄ¼ì²â¼°´¦ÀíÈë¿Ú£º
---ÏµÍ³»áÔÚ¼¼ÄÜÏûºÄµÄÊ±¼äµãµ÷ÓÃÕâ¸ö½Ó¿Ú£¬²¢¸ù¾İÕâ¸öº¯ÊıµÄ·µ»ØÖµÈ·¶¨ÒÔºóµÄÁ÷³ÌÊÇ·ñÖ´ĞĞ¡£
---·µ»Ø1£ºÏûºÄ´¦ÀíÍ¨¹ı£¬¿ÉÒÔ¼ÌĞøÖ´ĞĞ£»·µ»Ø0£ºÏûºÄ¼ì²âÊ§°Ü£¬ÖĞ¶ÏºóĞøÖ´ĞĞ¡£
---×¢Òâ£ºÕâ²»¹â¸ºÔğÏûºÄµÄ¼ì²âÒ²¸ºÔğÏûºÄµÄÖ´ĞĞ¡£
+--æ¶ˆè€—æ£€æµ‹åŠå¤„ç†å…¥å£ï¼š
+--ç³»ç»Ÿä¼šåœ¨æŠ€èƒ½æ¶ˆè€—çš„æ—¶é—´ç‚¹è°ƒç”¨è¿™ä¸ªæ¥å£ï¼Œå¹¶æ ¹æ®è¿™ä¸ªå‡½æ•°çš„è¿”å›å€¼ç¡®å®šä»¥åçš„æµç¨‹æ˜¯å¦æ‰§è¡Œã€‚
+--è¿”å›1ï¼šæ¶ˆè€—å¤„ç†é€šè¿‡ï¼Œå¯ä»¥ç»§ç»­æ‰§è¡Œï¼›è¿”å›0ï¼šæ¶ˆè€—æ£€æµ‹å¤±è´¥ï¼Œä¸­æ–­åç»­æ‰§è¡Œã€‚
+--æ³¨æ„ï¼šè¿™ä¸å…‰è´Ÿè´£æ¶ˆè€—çš„æ£€æµ‹ä¹Ÿè´Ÿè´£æ¶ˆè€—çš„æ‰§è¡Œã€‚
 --**********************************
 function x335806_OnDeplete( sceneId, selfId )	
 	return 1;
 end
 
 --**********************************
---Ö»»áÖ´ĞĞÒ»´ÎÈë¿Ú£º
---¾ÛÆøºÍË²·¢¼¼ÄÜ»áÔÚÏûºÄÍê³Éºóµ÷ÓÃÕâ¸ö½Ó¿Ú£¨¾ÛÆø½áÊø²¢ÇÒ¸÷ÖÖÌõ¼ş¶¼Âú×ãµÄÊ±ºò£©£¬¶øÒıµ¼
---¼¼ÄÜÒ²»áÔÚÏûºÄÍê³Éºóµ÷ÓÃÕâ¸ö½Ó¿Ú£¨¼¼ÄÜµÄÒ»¿ªÊ¼£¬ÏûºÄ³É¹¦Ö´ĞĞÖ®ºó£©¡£
---·µ»Ø1£º´¦Àí³É¹¦£»·µ»Ø0£º´¦ÀíÊ§°Ü¡£
---×¢£ºÕâÀïÊÇ¼¼ÄÜÉúĞ§Ò»´ÎµÄÈë¿Ú
+--åªä¼šæ‰§è¡Œä¸€æ¬¡å…¥å£ï¼š
+--èšæ°”å’Œç¬å‘æŠ€èƒ½ä¼šåœ¨æ¶ˆè€—å®Œæˆåè°ƒç”¨è¿™ä¸ªæ¥å£ï¼ˆèšæ°”ç»“æŸå¹¶ä¸”å„ç§æ¡ä»¶éƒ½æ»¡è¶³çš„æ—¶å€™ï¼‰ï¼Œè€Œå¼•å¯¼
+--æŠ€èƒ½ä¹Ÿä¼šåœ¨æ¶ˆè€—å®Œæˆåè°ƒç”¨è¿™ä¸ªæ¥å£ï¼ˆæŠ€èƒ½çš„ä¸€å¼€å§‹ï¼Œæ¶ˆè€—æˆåŠŸæ‰§è¡Œä¹‹åï¼‰ã€‚
+--è¿”å›1ï¼šå¤„ç†æˆåŠŸï¼›è¿”å›0ï¼šå¤„ç†å¤±è´¥ã€‚
+--æ³¨ï¼šè¿™é‡Œæ˜¯æŠ€èƒ½ç”Ÿæ•ˆä¸€æ¬¡çš„å…¥å£
 --**********************************
 function x335806_OnActivateOnce( sceneId, selfId )
 	if IsHaveMission(sceneId, selfId, x335806_g_MissionId) == 1 then
@@ -87,13 +87,13 @@ function x335806_OnActivateOnce( sceneId, selfId )
 end
 
 --**********************************
---Òıµ¼ĞÄÌø´¦ÀíÈë¿Ú£º
---Òıµ¼¼¼ÄÜ»áÔÚÃ¿´ÎĞÄÌø½áÊøÊ±µ÷ÓÃÕâ¸ö½Ó¿Ú¡£
---·µ»Ø£º1¼ÌĞøÏÂ´ÎĞÄÌø£»0£ºÖĞ¶ÏÒıµ¼¡£
---×¢£ºÕâÀïÊÇ¼¼ÄÜÉúĞ§Ò»´ÎµÄÈë¿Ú
+--å¼•å¯¼å¿ƒè·³å¤„ç†å…¥å£ï¼š
+--å¼•å¯¼æŠ€èƒ½ä¼šåœ¨æ¯æ¬¡å¿ƒè·³ç»“æŸæ—¶è°ƒç”¨è¿™ä¸ªæ¥å£ã€‚
+--è¿”å›ï¼š1ç»§ç»­ä¸‹æ¬¡å¿ƒè·³ï¼›0ï¼šä¸­æ–­å¼•å¯¼ã€‚
+--æ³¨ï¼šè¿™é‡Œæ˜¯æŠ€èƒ½ç”Ÿæ•ˆä¸€æ¬¡çš„å…¥å£
 --**********************************
 function x335806_OnActivateEachTick( sceneId, selfId)
-	--¼ì²âºÃÓÑÊÇ·ñ³¬¾àÀë
+	--æ£€æµ‹å¥½å‹æ˜¯å¦è¶…è·ç¦»
 	local targetId = LuaFnGetTargetObjID(sceneId, selfId);
 	local cur_x, cur_y = LuaFnGetWorldPos(sceneId, selfId);
 	local cur_x2, cur_y2 = LuaFnGetWorldPos(sceneId, targetId);
@@ -104,18 +104,18 @@ function x335806_OnActivateEachTick( sceneId, selfId)
 	if IsHaveMission(sceneId, selfId, x335806_g_MissionId) == 1 then
 		local misIndex = GetMissionIndexByID(sceneId, selfId, x335806_g_MissionId);
 		local tickCount = GetMissionParam(sceneId, selfId, misIndex, 2)
-		if tickCount >= 60 then --1·ÖÖÓÊ±¼äµ½£¬½ø¶ÈÌõ×ßÍê
-			--Ìõ¼ş¼ì²é
+		if tickCount >= 60 then --1åˆ†é’Ÿæ—¶é—´åˆ°ï¼Œè¿›åº¦æ¡èµ°å®Œ
+			--æ¡ä»¶æ£€æŸ¥
 			if x335806_IsFitCondition(sceneId, selfId) == 0 then
 				return 0;
 			end		
-			--¸øºÃÓÑÇ©ÃûµÀ¾ß
+			--ç»™å¥½å‹ç­¾åé“å…·
 			local bagPos = TryRecieveItem(sceneId, selfId, x335806_g_signatureId, QUALITY_MUST_BE_CHANGE);
 			if bagPos == -1 then
-				x335806_MsgBox(sceneId, selfId, "¸øºÃÓÑÇ©ÃûµÀ¾ßÊ§°Ü£¡");
+				x335806_MsgBox(sceneId, selfId, "ç»™å¥½å‹ç­¾åé“å…·å¤±è´¥ï¼");
 				return 0;
 			end
-			--Ç©Ãû
+			--ç­¾å
 			local targetId = LuaFnGetTargetObjID(sceneId, selfId);
 			local friendName = GetName(sceneId, targetId);
 			LuaFnSetItemCreator(sceneId, selfId, bagPos, friendName);
@@ -124,7 +124,7 @@ function x335806_OnActivateEachTick( sceneId, selfId)
 			if num >= x335806_g_FullNum then
 				SetMissionByIndex(sceneId, selfId, misIndex, 0, 1);
 			end
-			local text = format("ÒÑ¾­³É¹¦ÊÕ¼¯µ½%d/15¸öÇ©Ãû¡£", num);
+			local text = format("å·²ç»æˆåŠŸæ”¶é›†åˆ°%d/15ä¸ªç­¾åã€‚", num);
 			x335806_MsgBox(sceneId, selfId, text);	
 		end		
 		SetMissionByIndex(sceneId, selfId, misIndex, 2, tickCount+1);
@@ -133,7 +133,7 @@ function x335806_OnActivateEachTick( sceneId, selfId)
 end
 
 --**********************************
---ĞÅÏ¢ÌáÊ¾
+--ä¿¡æ¯æç¤º
 --**********************************
 function x335806_MsgBox( sceneId, selfId, msg )
 	BeginEvent( sceneId )
@@ -143,46 +143,46 @@ function x335806_MsgBox( sceneId, selfId, msg )
 end
 
 --**********************************
--- Ìõ¼ş¼ì²é 
--- ³É¹¦£º1  Ê§°Ü£º0
+-- æ¡ä»¶æ£€æŸ¥ 
+-- æˆåŠŸï¼š1  å¤±è´¥ï¼š0
 --**********************************
 function x335806_IsFitCondition(sceneId, selfId)
-	--ÊÕ¼¯ÒÑÂú£¿
+	--æ”¶é›†å·²æ»¡ï¼Ÿ
 	local text = "";
 	if LuaFnGetItemCount(sceneId, selfId, x335806_g_signatureId) >= x335806_g_FullNum then
 		x335806_MsgBox(sceneId, selfId, "#{SJQM_8815_09}");
 		return 0;
 	end
-	--Ñ¡ÔñÊ¹ÓÃ¶ÔÏóÁË£¿
+	--é€‰æ‹©ä½¿ç”¨å¯¹è±¡äº†ï¼Ÿ
 	local targetId = LuaFnGetTargetObjID(sceneId, selfId);
 	if targetId < 0 or targetId == selfId then
 		x335806_MsgBox(sceneId, selfId, "#{YRJ_SelfUseTip}");	
 		return 0;
 	end	
-	--Ö»ÄÜ¸øÍæ¼ÒÊ¹ÓÃ
-	local objType = GetCharacterType( sceneId, targetId )--¶ÔÏóÀàĞÍ
-	if(objType ~= 1)then	--¶ÔÏó²»ÊÇHuman
-		x335806_MsgBox( sceneId, selfId, "#{ResultText_8}")	--ÎŞĞ§Ä¿±ê
+	--åªèƒ½ç»™ç©å®¶ä½¿ç”¨
+	local objType = GetCharacterType( sceneId, targetId )--å¯¹è±¡ç±»å‹
+	if(objType ~= 1)then	--å¯¹è±¡ä¸æ˜¯Human
+		x335806_MsgBox( sceneId, selfId, "#{ResultText_8}")	--æ— æ•ˆç›®æ ‡
 		return 0
 	end	
-	--ÊÇºÃÓÑ£¿
+	--æ˜¯å¥½å‹ï¼Ÿ
 	if LuaFnIsFriend(sceneId, selfId, targetId) == 1 then
-		if LuaFnGetFriendPoint(sceneId, selfId, targetId) < 200 then --200ÓÑºÃ¶È£¿
+		if LuaFnGetFriendPoint(sceneId, selfId, targetId) < 200 then --200å‹å¥½åº¦ï¼Ÿ
 			x335806_MsgBox(sceneId, selfId, "#{SJQM_8815_10}");
 			return 0;
 		end
-	else --·ÇºÃÓÑ
+	else --éå¥½å‹
 		x335806_MsgBox(sceneId, selfId, "#{SJQM_8815_11}");
 		return 0;
 	end	
-	--³¬¹ı¾àÀë
+	--è¶…è¿‡è·ç¦»
 	local cur_x, cur_y = LuaFnGetWorldPos(sceneId, selfId);
 	local cur_x2, cur_y2 = LuaFnGetWorldPos(sceneId, targetId);
 	if (cur_x2-cur_x)*(cur_x2-cur_x) + (cur_y2-cur_y)*(cur_y2-cur_y) > 30 then 	
-		x335806_MsgBox(sceneId, selfId, "³¬³ö·¶Î§£¡");
+		x335806_MsgBox(sceneId, selfId, "è¶…å‡ºèŒƒå›´ï¼");
 		return 0;	
 	end
-	--ÒÑÓĞ¸ÃºÃÓÑÇ©Ãû£¿
+	--å·²æœ‰è¯¥å¥½å‹ç­¾åï¼Ÿ
 	local friendName = GetName(sceneId, targetId);
 	local taskBagStartPos	= LuaFnGetMaterialEndBagPos(sceneId, selfId) + 1;
 	for i=taskBagStartPos, taskBagStartPos+19 do
@@ -192,14 +192,14 @@ function x335806_IsFitCondition(sceneId, selfId)
 			return 0;
 		end
 	end
-	--ÈÎÎñÀ¸ÓĞ¿Õ¼ä£¿
+	--ä»»åŠ¡æ æœ‰ç©ºé—´ï¼Ÿ
 	if LuaFnGetTaskItemBagSpace(sceneId, selfId) == 0 then
 		x335806_MsgBox(sceneId, selfId, "#{SJQM_8815_13}");
 		return 0;		
 	end
-	--·ÅÆúÈÎÎñ
+	--æ”¾å¼ƒä»»åŠ¡
 	if IsHaveMission(sceneId, selfId, x335806_g_MissionId) == 0 then
-		x335806_MsgBox(sceneId, selfId, "ÄãÒÑ·ÅÆúÇ©ÃûÈÎÎñ£¬¸ÃµÀ¾ß²»¿ÉÓÃ£¡");
+		x335806_MsgBox(sceneId, selfId, "ä½ å·²æ”¾å¼ƒç­¾åä»»åŠ¡ï¼Œè¯¥é“å…·ä¸å¯ç”¨ï¼");
 		return 0;		
 	end
 	--OK

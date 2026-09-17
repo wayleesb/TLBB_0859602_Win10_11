@@ -5,8 +5,8 @@ local g_InvalidHeader = "#cFF0000";
 local g_ProductHeader = "#Y";
 
 --doing 28327 2007.11.30 by alan
---´ò¿ª°ï»áÁĞ±íÊ±ĞèÒª³ÇÊĞÁĞ±íÊı¾İ£¬Ò²»á´¥·¢´ò¿ªÉêÇë³ÇÊĞµÄ½çÃæ£¬µ«´ËÊ±²»ÄÜ´ò¿ª´Ë´°¿Ú
---¿¼ÂÇ¼ÇÂ¼UI COMMAND IDÀ´Ê¶±ğÊÇ·ñĞèÒª´ò¿ªÉêÇë³ÇÊĞµÄ½çÃæ
+--æ‰“å¼€å¸®ä¼šåˆ—è¡¨æ—¶éœ€è¦åŸå¸‚åˆ—è¡¨æ•°æ®ï¼Œä¹Ÿä¼šè§¦å‘æ‰“å¼€ç”³è¯·åŸå¸‚çš„ç•Œé¢ï¼Œä½†æ­¤æ—¶ä¸èƒ½æ‰“å¼€æ­¤çª—å£
+--è€ƒè™‘è®°å½•UI COMMAND IDæ¥è¯†åˆ«æ˜¯å¦éœ€è¦æ‰“å¼€ç”³è¯·åŸå¸‚çš„ç•Œé¢
 local g_CurUICommandID = 0;
 
 local g_CityPortCtl = {};
@@ -49,9 +49,9 @@ end
 
 function City_Port_PrepareCtl()
 	g_CityPortCtl = {
-								--³ÇÊĞÁĞ±í
+								--åŸå¸‚åˆ—è¡¨
 								list			= ConfraternityAddress_MemberList,
-								--³ÇÊĞĞÅÏ¢
+								--åŸå¸‚ä¿¡æ¯
 								name 			= ConfraternityAddress_Info1,
 								com 			= ConfraternityAddress_Info2,
 								product 	= ConfraternityAddress_Info3,
@@ -94,23 +94,23 @@ function City_Port_Selected()
 	if(idx < 0) then return; end
 	
 	City_Port_ClearInfo();
-	--Ãû³Æ
-	g_CityPortCtl.name:SetText("ÁìµØ£º"..City:GetPortInfo(idx, "Name"));
-	--ÉÌÈ¦
-	g_CityPortCtl.com:SetText("ËùÊôÉÌÇø£º"..City:GetPortInfo(idx, "ComName"));
-	--ÌØ²ú
-	g_CityPortCtl.product:SetText("¿ÉÄÜÓµÓĞÌØ²ú£º");
-	--ÌØ²ú1
+	--åç§°
+	g_CityPortCtl.name:SetText("é¢†åœ°ï¼š"..City:GetPortInfo(idx, "Name"));
+	--å•†åœˆ
+	g_CityPortCtl.com:SetText("æ‰€å±å•†åŒºï¼š"..City:GetPortInfo(idx, "ComName"));
+	--ç‰¹äº§
+	g_CityPortCtl.product:SetText("å¯èƒ½æ‹¥æœ‰ç‰¹äº§ï¼š");
+	--ç‰¹äº§1
 	local szItemName = City:GetPortInfo(idx, "Product1");
 	if("" ~= szItemName) then
 		g_CityPortCtl.product1:SetText(g_ProductHeader..szItemName);
 	end
-	--ÌØ²ú1
+	--ç‰¹äº§1
 	szItemName = City:GetPortInfo(idx, "Product2");
 	if("" ~= szItemName) then
 		g_CityPortCtl.product2:SetText(g_ProductHeader..szItemName);
 	end
-	--ÌØ²ú1
+	--ç‰¹äº§1
 	szItemName = City:GetPortInfo(idx, "Product3");
 	if("" ~= szItemName) then
 		g_CityPortCtl.product3:SetText(g_ProductHeader..szItemName);
@@ -124,11 +124,11 @@ function City_Port_CreateCity()
 	local valid = tonumber(City:GetPortInfo(idx, "Valid"));
 	if(valid < 0) then
 		if(valid == -1) then
-			PushDebugMessage("Õâ¿éÁìµØÒÑ±»ÆäËû°ï»áÕ¼Áì¡£");
+			PushDebugMessage("è¿™å—é¢†åœ°å·²è¢«å…¶ä»–å¸®ä¼šå é¢†ã€‚");
 		end
 		return;
 	end
-	--ÉêÇëÁìµØ
+	--ç”³è¯·é¢†åœ°
 	--City:CreateCity(idx);
 	City:InputCityName(idx, g_clientNpcId);
 	this:Hide();
@@ -142,7 +142,7 @@ function City_Port_CareEventHandle(careId, op, distance)
 		if(tonumber(careId) ~= g_clientNpcId) then
 			return;
 		end
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ı£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æœå’ŒNPCçš„è·ç¦»å¤§äºä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if(op == "distance" and tonumber(distance)>MAX_OBJ_DISTANCE or op=="destroy") then
 			this:Hide();
 		end

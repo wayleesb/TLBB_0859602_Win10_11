@@ -1,8 +1,8 @@
---ÓĞ¶àÉÙ¸ö³¡¾°
+--æœ‰å¤šå°‘ä¸ªåœºæ™¯
 function LargeMap_PreLoad()
 	this:RegisterEvent("TOGLE_LARGEMAP");
 	this:RegisterEvent("TEAM_CHANGE_WORLD");
-	--Ã¿Ò»¸ö³¡¾°µÃÊı¾İ
+	--æ¯ä¸€ä¸ªåœºæ™¯å¾—æ•°æ®
 end
 
 function LargeMap_OnLoad()
@@ -30,7 +30,7 @@ end
 
 function LargeMap_Close()
 	this:Hide()
-	local nCurrentSelectScene = LargeMap_Frondground:GetCurrentSelectScene(); --µÃµ½µ±Ç°Ñ¡ÖĞµÄ³¡¾°
+	local nCurrentSelectScene = LargeMap_Frondground:GetCurrentSelectScene(); --å¾—åˆ°å½“å‰é€‰ä¸­çš„åœºæ™¯
 	AxTrace( 0, 0, "current select ="..tostring(nCurrentSelectScene ).." current scene = "..tostring( GetSceneID()) );
 	if( nCurrentSelectScene == GetSceneID() ) then
 		ToggleSceneMap( 1 );
@@ -38,7 +38,7 @@ function LargeMap_Close()
 end
 
 function LargeMap_Show()
-	ToggleSceneMap( 0 );--¹Ø±Õ³¡¾°µØÍ¼
+	ToggleSceneMap( 0 );--å…³é—­åœºæ™¯åœ°å›¾
 	
 	LargeMap_Frondground:InitWorldMap();
 	this:Show();

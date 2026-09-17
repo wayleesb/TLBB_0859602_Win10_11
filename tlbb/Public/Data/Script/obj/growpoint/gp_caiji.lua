@@ -1,219 +1,219 @@
--- Éú³¤µã ²É¼¯[²É¿ó²ÉÒ©]
+-- ç”Ÿé•¿ç‚¹ é‡‡é›†[é‡‡çŸ¿é‡‡è¯]
 
--- ½Å±¾ºÅ
+-- è„šæœ¬å·
 x710000_g_ScriptId = 710000
 
--- Éú³¤µãĞÅÏ¢
+-- ç”Ÿé•¿ç‚¹ä¿¡æ¯
 x710000_g_GPInfo = {}
 
--- Ëæ»úÒò×Ó
+-- éšæœºå› å­
 x710000_g_RandNum = 10000
 
--- abilityId: Éú³¤µã¶ÔÓ¦¼¼ÄÜ name: Éú³¤µãµÄÃû×Ö
--- mainId: Ö÷Òªµô³öÎï mExtraCountOdds: Ö÷Òªµô³öÎï¶îÍâµô³öÊıÁ¿µÄ¼¸ÂÊ
--- associatedId: ¸±²úÆ·ÁĞ±í£¬aOdds ¼¸ÂÊ³öÏÖÊ±Ëæ»ú³öÒ»¸ö£¬ÁĞ±í¿ÉÒÔÎª¿Õ aOdds: ¸±²úÆ·µô³öÂÊ aExtraCountOdds: ³öÏÖ¸±²úÆ·ºó¶îÍâÊıÁ¿¼¸ÂÊ
--- rareId: Ï¡ÓĞÎïÆ·£¬Ï¡ÓĞÎïÆ·¿ÉÒÔÃ»ÓĞ£¬Ìî -1£¬ rOdds: Ï¡ÓĞÎïÆ·µô³öÂÊ
--- needLevel: ²É¼¯´ËÉú³¤µãĞèÒªµÄ¼¶±ğ
+-- abilityId: ç”Ÿé•¿ç‚¹å¯¹åº”æŠ€èƒ½ name: ç”Ÿé•¿ç‚¹çš„åå­—
+-- mainId: ä¸»è¦æ‰å‡ºç‰© mExtraCountOdds: ä¸»è¦æ‰å‡ºç‰©é¢å¤–æ‰å‡ºæ•°é‡çš„å‡ ç‡
+-- associatedId: å‰¯äº§å“åˆ—è¡¨ï¼ŒaOdds å‡ ç‡å‡ºç°æ—¶éšæœºå‡ºä¸€ä¸ªï¼Œåˆ—è¡¨å¯ä»¥ä¸ºç©º aOdds: å‰¯äº§å“æ‰å‡ºç‡ aExtraCountOdds: å‡ºç°å‰¯äº§å“åé¢å¤–æ•°é‡å‡ ç‡
+-- rareId: ç¨€æœ‰ç‰©å“ï¼Œç¨€æœ‰ç‰©å“å¯ä»¥æ²¡æœ‰ï¼Œå¡« -1ï¼Œ rOdds: ç¨€æœ‰ç‰©å“æ‰å‡ºç‡
+-- needLevel: é‡‡é›†æ­¤ç”Ÿé•¿ç‚¹éœ€è¦çš„çº§åˆ«
 
--- ÒÔÏÂ²¿·ÖÎª¿óÊ¯
-x710000_g_GPInfo[1 ] = { abilityId = ABILITY_CAIKUANG, name = "Í­¿ó",
-	mainId = 20103001, mExtraCountOdds = { 10000, 5000, 1200, 200, 100 },	-- ±íÃ÷ 100% ¼¸ÂÊµôÂä£¬50% ¼¸ÂÊµô2¸ö£¬38% ¼¸ÂÊµôÈı¸ö£¬10% ¼¸ÂÊµôËÄ¸ö£¬1% ¼¸ÂÊµôÎå¸ö£¬1% ¼¸ÂÊµôÁù¸ö£¬
+-- ä»¥ä¸‹éƒ¨åˆ†ä¸ºçŸ¿çŸ³
+x710000_g_GPInfo[1 ] = { abilityId = ABILITY_CAIKUANG, name = "é“œçŸ¿",
+	mainId = 20103001, mExtraCountOdds = { 10000, 5000, 1200, 200, 100 },	-- è¡¨æ˜ 100% å‡ ç‡æ‰è½ï¼Œ50% å‡ ç‡æ‰2ä¸ªï¼Œ38% å‡ ç‡æ‰ä¸‰ä¸ªï¼Œ10% å‡ ç‡æ‰å››ä¸ªï¼Œ1% å‡ ç‡æ‰äº”ä¸ªï¼Œ1% å‡ ç‡æ‰å…­ä¸ªï¼Œ
 	associatedId = { 20103013, 20103025, 20103037, 20103049 }, aOdds = 2500, aExtraCountOdds = { 9000, 4000, 2000, 1000 },
 	rareId = -1, rOdds = 100, needLevel = 1 }
-x710000_g_GPInfo[2 ] = { abilityId = ABILITY_CAIKUANG, name = "Ìú¿ó",
+x710000_g_GPInfo[2 ] = { abilityId = ABILITY_CAIKUANG, name = "é“çŸ¿",
 	mainId = 20103002, mExtraCountOdds = { 10000, 5000, 1200, 200, 100 },
 	associatedId = { 20103014, 20103026, 20103038, 20103050 }, aOdds = 2500, aExtraCountOdds = { 9000, 4000, 2000, 1000 },
 	rareId = -1, rOdds = 100, needLevel = 2 }
-x710000_g_GPInfo[3 ] = { abilityId = ABILITY_CAIKUANG, name = "Òø¿ó",
+x710000_g_GPInfo[3 ] = { abilityId = ABILITY_CAIKUANG, name = "é“¶çŸ¿",
 	mainId = 20103003, mExtraCountOdds = { 10000, 5000, 1200, 200, 100 },
 	associatedId = { 20103015, 20103027, 20103039, 20103051 }, aOdds = 2500, aExtraCountOdds = { 9000, 4000, 2000, 1000 },
 	rareId = -1, rOdds = 100, needLevel = 3 }
-x710000_g_GPInfo[4 ] = { abilityId = ABILITY_CAIKUANG, name = "º®Ìú¿ó",
+x710000_g_GPInfo[4 ] = { abilityId = ABILITY_CAIKUANG, name = "å¯’é“çŸ¿",
 	mainId = 20103004, mExtraCountOdds = { 10000, 5000, 1200, 200, 100 },
 	associatedId = { 20103016, 20103028, 20103040, 20103052 }, aOdds = 2500, aExtraCountOdds = { 9000, 4000, 2000, 1000 },
 	rareId = -1, rOdds = 100, needLevel = 4 }
-x710000_g_GPInfo[5 ] = { abilityId = ABILITY_CAIKUANG, name = "½ğ¿ó",
+x710000_g_GPInfo[5 ] = { abilityId = ABILITY_CAIKUANG, name = "é‡‘çŸ¿",
 	mainId = 20103005, mExtraCountOdds = { 10000, 5000, 1200, 200, 100 },
 	associatedId = { 20103017, 20103029, 20103041, 20103053 }, aOdds = 2500, aExtraCountOdds = { 9000, 4000, 2000, 1000 },
 	rareId = -1, rOdds = 100, needLevel = 5 }
-x710000_g_GPInfo[6 ] = { abilityId = ABILITY_CAIKUANG, name = "ĞşÌú¿ó",
+x710000_g_GPInfo[6 ] = { abilityId = ABILITY_CAIKUANG, name = "ç„é“çŸ¿",
 	mainId = 20103006, mExtraCountOdds = { 10000, 5000, 1200, 200, 100 },
 	associatedId = { 20103018, 20103030, 20103042, 20103054 }, aOdds = 2500, aExtraCountOdds = { 9000, 4000, 2000, 1000 },
 	rareId = -1, rOdds = 100, needLevel = 6 }
-x710000_g_GPInfo[7 ] = { abilityId = ABILITY_CAIKUANG, name = "Ë®¾§¿ó",
+x710000_g_GPInfo[7 ] = { abilityId = ABILITY_CAIKUANG, name = "æ°´æ™¶çŸ¿",
 	mainId = 20103007, mExtraCountOdds = { 10000, 5000, 1200, 200, 100 },
 	associatedId = { 20103019, 20103031, 20103043, 20103055 }, aOdds = 2500, aExtraCountOdds = { 9000, 4000, 2000, 1000 },
 	rareId = -1, rOdds = 100, needLevel = 7 }
-x710000_g_GPInfo[8 ] = { abilityId = ABILITY_CAIKUANG, name = "ôä´ä¿ó",
+x710000_g_GPInfo[8 ] = { abilityId = ABILITY_CAIKUANG, name = "ç¿¡ç¿ çŸ¿",
 	mainId = 20103008, mExtraCountOdds = { 10000, 5000, 1200, 200, 100 },
 	associatedId = { 20103020, 20103032, 20103044, 20103056 }, aOdds = 2500, aExtraCountOdds = { 9000, 4000, 2000, 1000 },
 	rareId = -1, rOdds = 100, needLevel = 8 }
-x710000_g_GPInfo[9 ] = { abilityId = ABILITY_CAIKUANG, name = "ÕæÎä¿ó",
+x710000_g_GPInfo[9 ] = { abilityId = ABILITY_CAIKUANG, name = "çœŸæ­¦çŸ¿",
 	mainId = 20103009, mExtraCountOdds = { 10000, 5000, 1200, 200, 100 },
 	associatedId = { 20103021, 20103033, 20103045, 20103057 }, aOdds = 2500, aExtraCountOdds = { 9000, 4000, 2000, 1000 },
 	rareId = -1, rOdds = 100, needLevel = 9 }
-x710000_g_GPInfo[10] = { abilityId = ABILITY_CAIKUANG, name = "ÁúÑª¿ó",
+x710000_g_GPInfo[10] = { abilityId = ABILITY_CAIKUANG, name = "é¾™è¡€çŸ¿",
 	mainId = 20103010, mExtraCountOdds = { 10000, 5000, 1200, 200, 100 },
 	associatedId = { 20103022, 20103034, 20103046, 20103058 }, aOdds = 2500, aExtraCountOdds = { 9000, 4000, 2000, 1000 },
 	rareId = -1, rOdds = 100, needLevel = 10 }
-x710000_g_GPInfo[11] = { abilityId = ABILITY_CAIKUANG, name = "·ïÑª¿ó",
+x710000_g_GPInfo[11] = { abilityId = ABILITY_CAIKUANG, name = "å‡¤è¡€çŸ¿",
 	mainId = 20103011, mExtraCountOdds = { 10000, 5000, 1200, 200, 100 },
 	associatedId = { 20103023, 20103035, 20103047, 20103059 }, aOdds = 2500, aExtraCountOdds = { 9000, 4000, 2000, 1000 },
 	rareId = -1, rOdds = 100, needLevel = 11 }
-x710000_g_GPInfo[12] = { abilityId = ABILITY_CAIKUANG, name = "Å®æ´Ê¯",
+x710000_g_GPInfo[12] = { abilityId = ABILITY_CAIKUANG, name = "å¥³å¨²çŸ³",
 	mainId = 20103012, mExtraCountOdds = { 10000, 5000, 1200, 200, 100 },
 	associatedId = { 20103024, 20103036, 20103048, 20103060 }, aOdds = 2500, aExtraCountOdds = { 9000, 4000, 2000, 1000 },
 	rareId = -1, rOdds = 100, needLevel = 12 }
-x710000_g_GPInfo[13] = { abilityId = ABILITY_CAIKUANG, name = "À¥É½¿óÓñ",
+x710000_g_GPInfo[13] = { abilityId = ABILITY_CAIKUANG, name = "æ˜†å±±çŸ¿ç‰",
 	mainId = 20103118, mExtraCountOdds = { 10000, 5000, 1200, 200, 100 },
 	associatedId = { 20103122, 20103126, 20103130, 20103134 }, aOdds = 2500, aExtraCountOdds = { 9000, 4000, 2000, 1000 },
 	rareId = -1, rOdds = 100, needLevel = 9 }
-x710000_g_GPInfo[14] = { abilityId = ABILITY_CAIKUANG, name = "ÖÚÉú¿óÊ¯",
+x710000_g_GPInfo[14] = { abilityId = ABILITY_CAIKUANG, name = "ä¼—ç”ŸçŸ¿çŸ³",
 	mainId = 20103119, mExtraCountOdds = { 10000, 5000, 1200, 200, 100 },
 	associatedId = { 20103123, 20103127, 20103131, 20103135 }, aOdds = 2500, aExtraCountOdds = { 9000, 4000, 2000, 1000 },
 	rareId = -1, rOdds = 100, needLevel = 10 }
 
--- ÒÔÉÏ²¿·ÖÎª¿óÊ¯
+-- ä»¥ä¸Šéƒ¨åˆ†ä¸ºçŸ¿çŸ³
 
--- ÒÔÏÂ²¿·ÖÎª²İÒ©
-x710000_g_GPInfo[101] = { abilityId = ABILITY_CAIYAO, name = "°×Ó¢",
+-- ä»¥ä¸‹éƒ¨åˆ†ä¸ºè‰è¯
+x710000_g_GPInfo[101] = { abilityId = ABILITY_CAIYAO, name = "ç™½è‹±",
 	mainId = 20101001, mExtraCountOdds = { 10000, 5000, 1200, 200, 100 },
 	associatedId = { 20304005 }, aOdds = 2500, aExtraCountOdds = { 9000, 4000, 2000, 1000 },
 	rareId = -1, rOdds = 100, needLevel = 1 }
-x710000_g_GPInfo[102] = { abilityId = ABILITY_CAIYAO, name = "ÆÑ»Æ",
+x710000_g_GPInfo[102] = { abilityId = ABILITY_CAIYAO, name = "è’²é»„",
 	mainId = 20101002, mExtraCountOdds = { 10000, 5000, 1200, 200, 100 },
 	associatedId = { 20304005 }, aOdds = 2500, aExtraCountOdds = { 9000, 4000, 2000, 1000 },
 	rareId = -1, rOdds = 100, needLevel = 1 }
-x710000_g_GPInfo[103] = { abilityId = ABILITY_CAIYAO, name = "´¨±´",
+x710000_g_GPInfo[103] = { abilityId = ABILITY_CAIYAO, name = "å·è´",
 	mainId = 20101003, mExtraCountOdds = { 10000, 5000, 1200, 200, 100 },
 	associatedId = { 20304006 }, aOdds = 2500, aExtraCountOdds = { 9000, 4000, 2000, 1000 },
 	rareId = -1, rOdds = 100, needLevel = 2 }
-x710000_g_GPInfo[104] = { abilityId = ABILITY_CAIYAO, name = "Ôªºú",
+x710000_g_GPInfo[104] = { abilityId = ABILITY_CAIYAO, name = "å…ƒèƒ¡",
 	mainId = 20101004, mExtraCountOdds = { 10000, 5000, 1200, 200, 100 },
 	associatedId = { 20304006 }, aOdds = 2500, aExtraCountOdds = { 9000, 4000, 2000, 1000 },
 	rareId = -1, rOdds = 100, needLevel = 2 }
-x710000_g_GPInfo[105] = { abilityId = ABILITY_CAIYAO, name = "èÁèË",
+x710000_g_GPInfo[105] = { abilityId = ABILITY_CAIYAO, name = "æ‡æ·",
 	mainId = 20101005, mExtraCountOdds = { 10000, 5000, 1200, 200, 100 },
 	associatedId = { 20304006 }, aOdds = 2500, aExtraCountOdds = { 9000, 4000, 2000, 1000 },
 	rareId = -1, rOdds = 100, needLevel = 3 }
-x710000_g_GPInfo[106] = { abilityId = ABILITY_CAIYAO, name = "¸Ê²İ",
+x710000_g_GPInfo[106] = { abilityId = ABILITY_CAIYAO, name = "ç”˜è‰",
 	mainId = 20101006, mExtraCountOdds = { 10000, 5000, 1200, 200, 100 },
 	associatedId = { 20304007 }, aOdds = 2500, aExtraCountOdds = { 9000, 4000, 2000, 1000 },
 	rareId = -1, rOdds = 100, needLevel = 3 }
-x710000_g_GPInfo[107] = { abilityId = ABILITY_CAIYAO, name = "½ğÒø»¨",
+x710000_g_GPInfo[107] = { abilityId = ABILITY_CAIYAO, name = "é‡‘é“¶èŠ±",
 	mainId = 20101007, mExtraCountOdds = { 10000, 5000, 1200, 200, 100 },
 	associatedId = { 20304007 }, aOdds = 2500, aExtraCountOdds = { 9000, 4000, 2000, 1000 },
 	rareId = -1, rOdds = 100, needLevel = 3 }
-x710000_g_GPInfo[108] = { abilityId = ABILITY_CAIYAO, name = "»ÆÜË",
+x710000_g_GPInfo[108] = { abilityId = ABILITY_CAIYAO, name = "é»„èŠ©",
 	mainId = 20101008, mExtraCountOdds = { 10000, 5000, 1200, 200, 100 },
 	associatedId = { 20304007 }, aOdds = 2500, aExtraCountOdds = { 9000, 4000, 2000, 1000 },
 	rareId = -1, rOdds = 100, needLevel = 4 }
-x710000_g_GPInfo[109] = { abilityId = ABILITY_CAIYAO, name = "èÛè½",
+x710000_g_GPInfo[109] = { abilityId = ABILITY_CAIYAO, name = "æ¸æ",
 	mainId = 20101009, mExtraCountOdds = { 10000, 5000, 1200, 200, 100 },
 	associatedId = { 20304008 }, aOdds = 2500, aExtraCountOdds = { 9000, 4000, 2000, 1000 },
 	rareId = -1, rOdds = 100, needLevel = 4 }
-x710000_g_GPInfo[110] = { abilityId = ABILITY_CAIYAO, name = "³ÁÏã",
+x710000_g_GPInfo[110] = { abilityId = ABILITY_CAIYAO, name = "æ²‰é¦™",
 	mainId = 20101010, mExtraCountOdds = { 10000, 5000, 1200, 200, 100 },
 	associatedId = { 20304008 }, aOdds = 2500, aExtraCountOdds = { 9000, 4000, 2000, 1000 },
 	rareId = -1, rOdds = 100, needLevel = 4 }
-x710000_g_GPInfo[111] = { abilityId = ABILITY_CAIYAO, name = "¶ÅÖÙ",
+x710000_g_GPInfo[111] = { abilityId = ABILITY_CAIYAO, name = "æœä»²",
 	mainId = 20101011, mExtraCountOdds = { 10000, 5000, 1200, 200, 100 },
 	associatedId = { 20304008 }, aOdds = 2500, aExtraCountOdds = { 9000, 4000, 2000, 1000 },
 	rareId = -1, rOdds = 100, needLevel = 5 }
-x710000_g_GPInfo[112] = { abilityId = ABILITY_CAIYAO, name = "²ÔÊõ",
+x710000_g_GPInfo[112] = { abilityId = ABILITY_CAIYAO, name = "è‹æœ¯",
 	mainId = 20101012, mExtraCountOdds = { 10000, 5000, 1200, 200, 100 },
 	associatedId = { 20304009 }, aOdds = 2500, aExtraCountOdds = { 9000, 4000, 2000, 1000 },
 	rareId = -1, rOdds = 100, needLevel = 5 }
-x710000_g_GPInfo[113] = { abilityId = ABILITY_CAIYAO, name = "ÜòÜß",
+x710000_g_GPInfo[113] = { abilityId = ABILITY_CAIYAO, name = "èŒ¯è‹“",
 	mainId = 20101013, mExtraCountOdds = { 10000, 5000, 1200, 200, 100 },
 	associatedId = { 20304009 }, aOdds = 2500, aExtraCountOdds = { 9000, 4000, 2000, 1000 },
 	rareId = -1, rOdds = 100, needLevel = 5 }
-x710000_g_GPInfo[114] = { abilityId = ABILITY_CAIYAO, name = "·À·ç",
+x710000_g_GPInfo[114] = { abilityId = ABILITY_CAIYAO, name = "é˜²é£",
 	mainId = 20101014, mExtraCountOdds = { 10000, 5000, 1200, 200, 100 },
 	associatedId = { 20304009 }, aOdds = 2500, aExtraCountOdds = { 9000, 4000, 2000, 1000 },
 	rareId = -1, rOdds = 100, needLevel = 6 }
-x710000_g_GPInfo[115] = { abilityId = ABILITY_CAIYAO, name = "ÏãŞ¸",
+x710000_g_GPInfo[115] = { abilityId = ABILITY_CAIYAO, name = "é¦™è–·",
 	mainId = 20101015, mExtraCountOdds = { 10000, 5000, 1200, 200, 100 },
 	associatedId = { 20304010 }, aOdds = 2500, aExtraCountOdds = { 9000, 4000, 2000, 1000 },
 	rareId = -1, rOdds = 100, needLevel = 6 }
-x710000_g_GPInfo[116] = { abilityId = ABILITY_CAIYAO, name = "»ÆÁ¬",
+x710000_g_GPInfo[116] = { abilityId = ABILITY_CAIYAO, name = "é»„è¿",
 	mainId = 20101016, mExtraCountOdds = { 10000, 5000, 1200, 200, 100 },
 	associatedId = { 20304010 }, aOdds = 2500, aExtraCountOdds = { 9000, 4000, 2000, 1000 },
 	rareId = -1, rOdds = 100, needLevel = 6 }
-x710000_g_GPInfo[117] = { abilityId = ABILITY_CAIYAO, name = "µ±¹é",
+x710000_g_GPInfo[117] = { abilityId = ABILITY_CAIYAO, name = "å½“å½’",
 	mainId = 20101017, mExtraCountOdds = { 10000, 5000, 1200, 200, 100 },
 	associatedId = { 20304010 }, aOdds = 2500, aExtraCountOdds = { 9000, 4000, 2000, 1000 },
 	rareId = -1, rOdds = 100, needLevel = 7 }
-x710000_g_GPInfo[118] = { abilityId = ABILITY_CAIYAO, name = "¹ğĞÄ",
+x710000_g_GPInfo[118] = { abilityId = ABILITY_CAIYAO, name = "æ¡‚å¿ƒ",
 	mainId = 20101018, mExtraCountOdds = { 10000, 5000, 1200, 200, 100 },
 	associatedId = { 20304011 }, aOdds = 2500, aExtraCountOdds = { 9000, 4000, 2000, 1000 },
 	rareId = -1, rOdds = 100, needLevel = 7 }
-x710000_g_GPInfo[119] = { abilityId = ABILITY_CAIYAO, name = "Ïã¸½",
+x710000_g_GPInfo[119] = { abilityId = ABILITY_CAIYAO, name = "é¦™é™„",
 	mainId = 20101019, mExtraCountOdds = { 10000, 5000, 1200, 200, 100 },
 	associatedId = { 20304011 }, aOdds = 2500, aExtraCountOdds = { 9000, 4000, 2000, 1000 },
 	rareId = -1, rOdds = 100, needLevel = 7 }
-x710000_g_GPInfo[120] = { abilityId = ABILITY_CAIYAO, name = "Ş½Ïã",
+x710000_g_GPInfo[120] = { abilityId = ABILITY_CAIYAO, name = "è—¿é¦™",
 	mainId = 20101020, mExtraCountOdds = { 10000, 5000, 1200, 200, 100 },
 	associatedId = { 20304011 }, aOdds = 2500, aExtraCountOdds = { 9000, 4000, 2000, 1000 },
 	rareId = -1, rOdds = 100, needLevel = 8 }
-x710000_g_GPInfo[121] = { abilityId = ABILITY_CAIYAO, name = "»ØÉñ²İ",
+x710000_g_GPInfo[121] = { abilityId = ABILITY_CAIYAO, name = "å›ç¥è‰",
 	mainId = 20101021, mExtraCountOdds = { 10000, 5000, 1200, 200, 100 },
 	associatedId = { 20304012 }, aOdds = 2500, aExtraCountOdds = { 9000, 4000, 2000, 1000 },
 	rareId = -1, rOdds = 100, needLevel = 8 }
-x710000_g_GPInfo[122] = { abilityId = ABILITY_CAIYAO, name = "Ê×ÎÚ",
+x710000_g_GPInfo[122] = { abilityId = ABILITY_CAIYAO, name = "é¦–ä¹Œ",
 	mainId = 20101022, mExtraCountOdds = { 10000, 5000, 1200, 200, 100 },
 	associatedId = { 20304012 }, aOdds = 2500, aExtraCountOdds = { 9000, 4000, 2000, 1000 },
 	rareId = -1, rOdds = 100, needLevel = 8 }
-x710000_g_GPInfo[123] = { abilityId = ABILITY_CAIYAO, name = "¶¬³æÏÄ²İ",
+x710000_g_GPInfo[123] = { abilityId = ABILITY_CAIYAO, name = "å†¬è™«å¤è‰",
 	mainId = 20101023, mExtraCountOdds = { 10000, 5000, 1200, 200, 100 },
 	associatedId = { 20304013 }, aOdds = 2500, aExtraCountOdds = { 9000, 4000, 2000, 1000 },
 	rareId = -1, rOdds = 100, needLevel = 9 }
-x710000_g_GPInfo[124] = { abilityId = ABILITY_CAIYAO, name = "Áú¿û×Ñ",
+x710000_g_GPInfo[124] = { abilityId = ABILITY_CAIYAO, name = "é¾™è‘µç±½",
 	mainId = 20101024, mExtraCountOdds = { 10000, 5000, 1200, 200, 100 },
 	associatedId = { 20304014 }, aOdds = 2500, aExtraCountOdds = { 9000, 4000, 2000, 1000 },
 	rareId = -1, rOdds = 100, needLevel = 9 }
-x710000_g_GPInfo[125] = { abilityId = ABILITY_CAIYAO, name = "Ïó±´",
+x710000_g_GPInfo[125] = { abilityId = ABILITY_CAIYAO, name = "è±¡è´",
 	mainId = 20101025, mExtraCountOdds = { 10000, 5000, 1200, 200, 100 },
 	associatedId = { 20304013, 20304014 }, aOdds = 2500, aExtraCountOdds = { 9000, 4000, 2000, 1000 },
 	rareId = -1, rOdds = 100, needLevel = 10 }
-x710000_g_GPInfo[126] = { abilityId = ABILITY_CAIYAO, name = "ÈË²Î",
+x710000_g_GPInfo[126] = { abilityId = ABILITY_CAIYAO, name = "äººå‚",
 	mainId = 20101026, mExtraCountOdds = { 10000, 5000, 1200, 200, 100 },
 	associatedId = { 20304013, 20304014 }, aOdds = 2500, aExtraCountOdds = { 9000, 4000, 2000, 1000 },
 	rareId = -1, rOdds = 100, needLevel = 10 }
-x710000_g_GPInfo[127] = { abilityId = ABILITY_CAIYAO, name = "ÁéÖ¥",
+x710000_g_GPInfo[127] = { abilityId = ABILITY_CAIYAO, name = "çµèŠ",
 	mainId = 20101027, mExtraCountOdds = { 10000, 5000, 1200, 200, 100 },
 	associatedId = { 20304016 }, aOdds = 2500, aExtraCountOdds = { 9000, 4000, 2000, 1000 },
 	rareId = -1, rOdds = 100, needLevel = 11 }
-x710000_g_GPInfo[128] = { abilityId = ABILITY_CAIYAO, name = "Ü÷²İ",
+x710000_g_GPInfo[128] = { abilityId = ABILITY_CAIYAO, name = "è€è‰",
 	mainId = 20101028, mExtraCountOdds = { 10000, 5000, 1200, 200, 100 },
 	associatedId = { 20304015 }, aOdds = 2500, aExtraCountOdds = { 9000, 4000, 2000, 1000 },
 	rareId = -1, rOdds = 100, needLevel = 11 }
-x710000_g_GPInfo[129] = { abilityId = ABILITY_CAIYAO, name = "Á«×Ó",
+x710000_g_GPInfo[129] = { abilityId = ABILITY_CAIYAO, name = "è²å­",
 	mainId = 20101029, mExtraCountOdds = { 10000, 5000, 1200, 200, 100 },
 	associatedId = { 20304015 }, aOdds = 2500, aExtraCountOdds = { 9000, 4000, 2000, 1000 },
 	rareId = -1, rOdds = 100, needLevel = 12 }
-x710000_g_GPInfo[130] = { abilityId = ABILITY_CAIYAO, name = "¿İÄ¾´º",
+x710000_g_GPInfo[130] = { abilityId = ABILITY_CAIYAO, name = "æ¯æœ¨æ˜¥",
 	mainId = 20101030, mExtraCountOdds = { 10000, 5000, 1200, 200, 100 },
 	associatedId = { 20304016 }, aOdds = 2500, aExtraCountOdds = { 9000, 4000, 2000, 1000 },
 	rareId = -1, rOdds = 100, needLevel = 12 }
 
--- ÒÔÉÏ²¿·ÖÎª²İÒ©
+-- ä»¥ä¸Šéƒ¨åˆ†ä¸ºè‰è¯
 
 x710000_g_abilityName = {}
-x710000_g_abilityName[ABILITY_CAIKUANG] = "²É¿ó"
-x710000_g_abilityName[ABILITY_CAIYAO] = "²ÉÒ©"
+x710000_g_abilityName[ABILITY_CAIKUANG] = "é‡‡çŸ¿"
+x710000_g_abilityName[ABILITY_CAIYAO] = "é‡‡è¯"
 
--- ³¤Éú³¤µã
+-- é•¿ç”Ÿé•¿ç‚¹
 function x710000_OnCreate( sceneId, growPointType, x, y )
 	local GPInfo = x710000_g_GPInfo[growPointType]
 	if not GPInfo then
 		return
 	end
 
-	-- Ã¿¸öÉú³¤µã×îÉÙÄÜµÃµ½Ò»¸öÎïÆ·£¬ÕâÀïÖ±½Ó·ÅÈë itembox ÖĞÒ»¸ö
+	-- æ¯ä¸ªç”Ÿé•¿ç‚¹æœ€å°‘èƒ½å¾—åˆ°ä¸€ä¸ªç‰©å“ï¼Œè¿™é‡Œç›´æ¥æ”¾å…¥ itembox ä¸­ä¸€ä¸ª
 	local itemBox = ItemBoxEnterScene( x, y, growPointType, sceneId, QUALITY_MUST_BE_CHANGE,1, GPInfo.mainId )
 
-	-- ¼ÓÈë¶îÍâµÄÖ÷ÒªÉú³ÉÎïÆ·
+	-- åŠ å…¥é¢å¤–çš„ä¸»è¦ç”Ÿæˆç‰©å“
 	local odds = random( x710000_g_RandNum )
 	local i
 	for i = 1, getn( GPInfo.mExtraCountOdds ) do
@@ -224,7 +224,7 @@ function x710000_OnCreate( sceneId, growPointType, x, y )
 		end
 	end
 
-	-- ¼ÓÈë¸±²úÆ·
+	-- åŠ å…¥å‰¯äº§å“
 	local aItemCount = getn( GPInfo.associatedId )
 	if aItemCount > 0 then
 		odds = random( x710000_g_RandNum )
@@ -243,7 +243,7 @@ function x710000_OnCreate( sceneId, growPointType, x, y )
 		end
 	end
 
-	-- ¼ÓÈëÏ¡ÓĞÎïÆ·
+	-- åŠ å…¥ç¨€æœ‰ç‰©å“
 	if GPInfo.rareId ~= -1 then
 		odds = random( x710000_g_RandNum )
 		if odds <= GPInfo.rOdds then
@@ -251,7 +251,7 @@ function x710000_OnCreate( sceneId, growPointType, x, y )
 		end
 	end
 	
-	-- hongyu Ìí¼Ó²É¼¯³ö¶Ò»»Æó¶ìµÄ´úÂë
+	-- hongyu æ·»åŠ é‡‡é›†å‡ºå…‘æ¢ä¼é¹…çš„ä»£ç 
 	local ExchangeStoneScriptID = 210242
 	for i=1, 7 do
 	    local Item = CallScriptFunction( ExchangeStoneScriptID, "DropStoneList", sceneId, i )
@@ -273,7 +273,7 @@ function x710000_OnCreate( sceneId, growPointType, x, y )
 		
 end
 
--- µã»÷Éú³¤µãÊ±
+-- ç‚¹å‡»ç”Ÿé•¿ç‚¹æ—¶
 function x710000_OnOpen( sceneId, selfId, targetId )
 	local growPointType = LuaFnGetItemBoxGrowPointType( sceneId, targetId )
 	local GPInfo = x710000_g_GPInfo[growPointType]
@@ -281,15 +281,15 @@ function x710000_OnOpen( sceneId, selfId, targetId )
 		return OR_INVALID_TARGET
 	end
 
-	-- ¼ì²éÏàÓ¦¼¼ÄÜµÈ¼¶
+	-- æ£€æŸ¥ç›¸åº”æŠ€èƒ½ç­‰çº§
 	local AbilityLevel = QueryHumanAbilityLevel( sceneId, selfId, GPInfo.abilityId )
 	if AbilityLevel < GPInfo.needLevel then
 		x710000_NotifyFailTips( sceneId, selfId,
-			"ĞèÒª" .. x710000_g_abilityName[GPInfo.abilityId] .. "¼¼ÄÜ " .. GPInfo.needLevel .. " ¼¶£¬µ±Ç° " .. AbilityLevel .. " ¼¶" )
+			"éœ€è¦" .. x710000_g_abilityName[GPInfo.abilityId] .. "æŠ€èƒ½ " .. GPInfo.needLevel .. " çº§ï¼Œå½“å‰ " .. AbilityLevel .. " çº§" )
 		return OR_NO_LEVEL
 	end
 
-	--¼ì²é¾«Á¦
+	--æ£€æŸ¥ç²¾åŠ›
 	local energyCost = CallScriptFunction( ABILITYLOGIC_ID, "CalcEnergyCostCaiJi", sceneId, selfId, GPInfo.abilityId, GPInfo.needLevel )
 	if GetHumanEnergy( sceneId, selfId ) < energyCost then
 		return OR_NOT_ENOUGH_ENERGY
@@ -298,7 +298,7 @@ function x710000_OnOpen( sceneId, selfId, targetId )
 	return OR_OK
 end
 
--- ½ø¶ÈÌõ×ßÍêÁË
+-- è¿›åº¦æ¡èµ°å®Œäº†
 function x710000_OnProcOver( sceneId, selfId, targetId )
 	local growPointType = LuaFnGetItemBoxGrowPointType( sceneId, targetId )
 	local GPInfo = x710000_g_GPInfo[growPointType]
@@ -306,12 +306,12 @@ function x710000_OnProcOver( sceneId, selfId, targetId )
 		return OR_INVALID_TARGET
 	end
 
-	-- ÏûºÄ¾«Á¦
+	-- æ¶ˆè€—ç²¾åŠ›
 	CallScriptFunction( ABILITYLOGIC_ID, "EnergyCostCaiJi", sceneId, selfId, GPInfo.abilityId, GPInfo.needLevel )
 	return OR_OK
 end
 
--- Ïä×Ó¼ñÍêÁË£¬»ØÊÕ
+-- ç®±å­æ¡å®Œäº†ï¼Œå›æ”¶
 function x710000_OnRecycle( sceneId, selfId, targetId)
 	local growPointType = LuaFnGetItemBoxGrowPointType( sceneId, targetId )
 	local GPInfo = x710000_g_GPInfo[growPointType]
@@ -319,11 +319,11 @@ function x710000_OnRecycle( sceneId, selfId, targetId)
 		return 1
 	end
 
-	--Í³¼ÆÊı¾İ
+	--ç»Ÿè®¡æ•°æ®
 	LuaFnAuditAbility(sceneId, selfId, GPInfo.abilityId, -1, -1)
-	-- Ôö¼ÓÊìÁ·¶È
+	-- å¢åŠ ç†Ÿç»ƒåº¦
 	CallScriptFunction( ABILITYLOGIC_ID, "GainExperience", sceneId, selfId, GPInfo.abilityId, GPInfo.needLevel )
-	--·µ»Ø1£¬Éú³¤µã»ØÊÕ
+	--è¿”å›1ï¼Œç”Ÿé•¿ç‚¹å›æ”¶
 	return 1
 end
 

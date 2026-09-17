@@ -1,38 +1,38 @@
---²ÔÉ½-ÊøºÓ¹ÅÕò´«ËÍNPC
---ËïÀ¤
---ÆÕÍ¨
+--è‹å±±-æŸæ²³å¤é•‡ä¼ é€NPC
+--å­™å¤
+--æ™®é€š
 
 x025113_g_ScriptId	= 025113
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x025113_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent( sceneId )
 		
 		AddText(sceneId,"#{SHGZ_0612_38}")
-    AddNumText( sceneId, x025113_g_ScriptId, "Ç°ÍùÊøºÓ¹ÅÕò", 9, 3436 )
+    AddNumText( sceneId, x025113_g_ScriptId, "å‰å¾€æŸæ²³å¤é•‡", 9, 3436 )
 
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x025113_OnEventRequest( sceneId, selfId, targetId, eventId )
 
-	--Ë³Àû´«ËÍ
+	--é¡ºåˆ©ä¼ é€
 	local	arg	= GetNumText()
 
-  if arg == 3436 then		--²ÔÉ½
+  if arg == 3436 then		--è‹å±±
   		-- add by zchw
 		BeginUICommand(sceneId)
 			UICommand_AddInt(sceneId, x025113_g_ScriptId);
 			-- zchw fix Transfer bug
 			UICommand_AddInt(sceneId, targetId);
 			UICommand_AddString(sceneId, "GotoShuHeGuZhen");
-			UICommand_AddString(sceneId, "ÊøºÓ¹ÅÕòÎª²»¼ÓÉ±Æø³¡¾°£¬Çë×¢Òâ°²È«¡£ÄãÈ·ÈÏÒª½øÈëÂğ£¿");
+			UICommand_AddString(sceneId, "æŸæ²³å¤é•‡ä¸ºä¸åŠ æ€æ°”åœºæ™¯ï¼Œè¯·æ³¨æ„å®‰å…¨ã€‚ä½ ç¡®è®¤è¦è¿›å…¥å—ï¼Ÿ");
 		EndUICommand(sceneId)
 		DispatchUICommand(sceneId,selfId, 24)
 		return
@@ -47,7 +47,7 @@ function x025113_GotoShuHeGuZhen( sceneId, selfId, targetId )
 end
 
 --**********************************
---¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+--å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x025113_MsgBox( sceneId, selfId, targetId, msg )
 	BeginEvent( sceneId )

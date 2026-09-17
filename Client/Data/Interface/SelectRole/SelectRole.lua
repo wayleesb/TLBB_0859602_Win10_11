@@ -1,56 +1,56 @@
 
 -----------------------------------------------------------------------------------------------------------------
 --
--- È«¾Ö±äÁ¿Çø
+-- å…¨å±€å˜é‡åŒº
 --
 
--- Ãû×Ö
+-- åå­—
 local g_RoleName = {};
 
--- ÃÅÅÉ
+-- é—¨æ´¾
 local g_iMenPai = {};
 
--- µÈ¼¶
+-- ç­‰çº§
 local g_iLevel = {};
 
--- µÈ¼¶
+-- ç­‰çº§
 local g_iDelTime = {};
 
--- ÔÚ½çÃæÉÏÏÔÊ¾µÄuiÄ£ĞÍ
+-- åœ¨ç•Œé¢ä¸Šæ˜¾ç¤ºçš„uiæ¨¡å‹
 local g_UIModel = {};
 
--- Ñ¡Ôñ°´Å¥
+-- é€‰æ‹©æŒ‰é’®
 local g_BnSelCheck = {};
 
--- µ±Ç°Ñ¡ÔñµÄ½ÇÉ«
+-- å½“å‰é€‰æ‹©çš„è§’è‰²
 local g_iCurSelRole = 0;
 
--- µ±Ç°½ÇÉ«µÄ¸öÊı
+-- å½“å‰è§’è‰²çš„ä¸ªæ•°
 local g_iCurRoleCount = 0;
 
--- Èç¹ûÊÇ´´½¨³É¹¦ºóË¢ĞÂ½çÃæ£¬ ÒªÑ¡ÖĞ×îºó´´½¨µÄÕâ¸ö½ÇÉ«.
+-- å¦‚æœæ˜¯åˆ›å»ºæˆåŠŸååˆ·æ–°ç•Œé¢ï¼Œ è¦é€‰ä¸­æœ€ååˆ›å»ºçš„è¿™ä¸ªè§’è‰².
 --
--- 0 -- ´´½¨½ÇÉ«Ê§°Ü¡£
--- 1 -- ´´½¨½ÇÉ«³É¹¦¡£
+-- 0 -- åˆ›å»ºè§’è‰²å¤±è´¥ã€‚
+-- 1 -- åˆ›å»ºè§’è‰²æˆåŠŸã€‚
 local g_bCreateSuccess = 0;
 
 ------------------------------------------------------------------------------------------------------------------
 --
--- º¯ÊıÇø
+-- å‡½æ•°åŒº
 --
 
--- ×¢²áonLoadÊÂ¼ş
+-- æ³¨å†ŒonLoadäº‹ä»¶
 function LoginSelectRole_PreLoad()
-	-- ´ò¿ª½çÃæ
+	-- æ‰“å¼€ç•Œé¢
 	this:RegisterEvent("GAMELOGIN_OPEN_SELECT_CHARACTOR");
 	
-	-- ¹Ø±Õ½çÃæ
+	-- å…³é—­ç•Œé¢
 	this:RegisterEvent("GAMELOGIN_CLOSE_SELECT_CHARACTOR");
 	
-	-- Ë¢ĞÂ½ÇÉ«ĞÅÏ¢
+	-- åˆ·æ–°è§’è‰²ä¿¡æ¯
 	this:RegisterEvent("GAMELOGIN_REFRESH_ROLE_SELECT_CHARACTOR"); 
 	
-	-- ´´½¨½ÇÉ«³É¹¦¡£
+	-- åˆ›å»ºè§’è‰²æˆåŠŸã€‚
 	this:RegisterEvent("GAMELOGIN_CREATE_ROLE_OK"); 
 
 	this:RegisterEvent("ENTER_GAME"); 
@@ -59,10 +59,10 @@ function LoginSelectRole_PreLoad()
 	
 end
 
--- ×¢²áonLoadÊÂ¼ş
+-- æ³¨å†ŒonLoadäº‹ä»¶
 function LoginSelectRole_OnLoad()
 
-	-- ½ÇÉ«Ãû×Ö
+	-- è§’è‰²åå­—
 	--g_RoleName[1] = SelectRole_Role1_Name;
 	--g_RoleName[2] = SelectRole_Role2_Name;
 	--g_RoleName[3] = SelectRole_Role3_Name;
@@ -71,12 +71,12 @@ function LoginSelectRole_OnLoad()
 	g_RoleName[2] = ""
 	g_RoleName[3] = ""
 		
-	-- ½ÇÉ«ÃÅÅÉ
+	-- è§’è‰²é—¨æ´¾
 	g_iMenPai[1] = 0;
 	g_iMenPai[2] = 0;
 	g_iMenPai[3] = 0;
 	
-	-- ½ÇÉ«µÈ¼¶
+	-- è§’è‰²ç­‰çº§
 	g_iLevel[1] = 0;
 	g_iLevel[2] = 0;
 	g_iLevel[3] = 0;
@@ -84,12 +84,12 @@ function LoginSelectRole_OnLoad()
 	g_iDelTime[1] = 0;
 	g_iDelTime[2] = 0;
 	g_iDelTime[3] = 0;
-	-- ½ÇÉ«Ñ¡Ôñ°´Å¥
+	-- è§’è‰²é€‰æ‹©æŒ‰é’®
 	--g_BnSelCheck[1] = SelectRole_Role1;
 	--g_BnSelCheck[2] = SelectRole_Role2;
 	--g_BnSelCheck[3] = SelectRole_Role3;
 	
-	-- Ñ¡Ôñ°´Å¥
+	-- é€‰æ‹©æŒ‰é’®
 	--g_BnSelCheck[1]:SetProperty("CheckMode", "1");	
 	--g_BnSelCheck[2]:SetProperty("CheckMode", "1");	
 	--g_BnSelCheck[3]:SetProperty("CheckMode", "1");	
@@ -97,7 +97,7 @@ function LoginSelectRole_OnLoad()
 	--g_BnSelCheck[1]:SetCheck( 0 );	
 	--g_BnSelCheck[2]:SetCheck( 0 );	
 	--g_BnSelCheck[3]:SetCheck( 0 );	
-	-- uiÄ£ĞÍÃû×Ö
+	-- uiæ¨¡å‹åå­—
 	--g_UIModel[1] = SelectRole_Role1_Model;
 	--g_UIModel[2] = SelectRole_Role2_Model;
 	--g_UIModel[3] = SelectRole_Role3_Model;
@@ -117,7 +117,7 @@ function LoginSelectRole_OnEvent(event)
 	    
 	    local CurSelIndex = GameProduceLogin:GetCurSelectRole();
 	    
-		-- Ä¬ÈÏÑ¡ÔñµÚÒ»¸öÈËÎï¡£
+		-- é»˜è®¤é€‰æ‹©ç¬¬ä¸€ä¸ªäººç‰©ã€‚
 		g_iCurSelRole = CurSelIndex + 1  --1;
 		
 		AxTrace( 1, 0, g_iCurSelRole )
@@ -131,14 +131,14 @@ function LoginSelectRole_OnEvent(event)
 	
 	if( event == "GAMELOGIN_CLOSE_SELECT_CHARACTOR" ) then
 	
-		-- Çå¿ÕÊı¾İ
+		-- æ¸…ç©ºæ•°æ®
 		SelectRole_ClearInfo();
 		this:Hide();
 		return;
 	end
 	
 	
-	-- Ë¢ĞÂ½ÇÉ«
+	-- åˆ·æ–°è§’è‰²
 	if( event == "GAMELOGIN_REFRESH_ROLE_SELECT_CHARACTOR") then
 		
 		SelectRole_RefreshRoleInfo();
@@ -146,7 +146,7 @@ function LoginSelectRole_OnEvent(event)
 	end
 	
 	
-	-- ´´½¨½ÇÉ«³É¹¦¡£
+	-- åˆ›å»ºè§’è‰²æˆåŠŸã€‚
 	if( event == "GAMELOGIN_CREATE_ROLE_OK") then
 		
 		g_bCreateSuccess = 1;
@@ -182,22 +182,22 @@ end
 
 ---------------------------------------------------------------------------------------------
 --
--- ½øÈëÓÎÏ·
+-- è¿›å…¥æ¸¸æˆ
 --
 function SelectRole_EnterGame()
 
-	-- ·¢ËÍ½øÈëÓÎÏ·ÏûÏ¢
+	-- å‘é€è¿›å…¥æ¸¸æˆæ¶ˆæ¯
 	GameProduceLogin:SendEnterGameMsg(g_iCurSelRole - 1);
 end
 
 ---------------------------------------------------------------------------------------------
 --
--- ´´½¨½ÇÉ«
+-- åˆ›å»ºè§’è‰²
 --
 function SelectRole_CreateRole()
 
-	--´Ë´¦²»Ö±½Ó´ÓÈËÎïÑ¡Ôñ½çÃæÇĞ»»µ½ÈËÎï´´½¨½çÃæ....
-	--ÏòLoginÇëÇó´´½¨ÈËÎïµÄÍ¼ĞÎÑéÖ¤ĞÅÏ¢....ÑéÖ¤ĞÅÏ¢µ½À´ºó»á¿ªÆôÑéÖ¤½çÃæ....ÑéÖ¤Í¨¹ıºóÑéÖ¤½çÃæ»áÇĞ»»µ½ÈËÎï´´½¨Á÷³Ì....
+	--æ­¤å¤„ä¸ç›´æ¥ä»äººç‰©é€‰æ‹©ç•Œé¢åˆ‡æ¢åˆ°äººç‰©åˆ›å»ºç•Œé¢....
+	--å‘Loginè¯·æ±‚åˆ›å»ºäººç‰©çš„å›¾å½¢éªŒè¯ä¿¡æ¯....éªŒè¯ä¿¡æ¯åˆ°æ¥åä¼šå¼€å¯éªŒè¯ç•Œé¢....éªŒè¯é€šè¿‡åéªŒè¯ç•Œé¢ä¼šåˆ‡æ¢åˆ°äººç‰©åˆ›å»ºæµç¨‹....
 	DataPool:AskCreateCharCode();
 
 end
@@ -206,12 +206,12 @@ end
 
 ---------------------------------------------------------------------------------------------
 --
--- É¾³ı½ÇÉ«
+-- åˆ é™¤è§’è‰²
 --
 function SelectRole_DelRole()
 
 	GameProduceLogin:SetCurSelect( g_iCurSelRole - 1 );
-	-- ´ÓÈËÎïÑ¡Ôñ½çÃæÇĞ»»µ½ÈËÎï´´½¨½çÃæ.
+	-- ä»äººç‰©é€‰æ‹©ç•Œé¢åˆ‡æ¢åˆ°äººç‰©åˆ›å»ºç•Œé¢.
 		local strName;
 	local iMenPai;
 	local iLevel;
@@ -222,24 +222,24 @@ function SelectRole_DelRole()
 	,iLevel
 	,iDelTime
 	= GameProduceLogin:GetRoleInfo(g_iCurSelRole-1);
-	if( iLevel == 0 ) then --ËµÃ÷Ã»ÓĞ½ÇÉ«
-		strInfo="Ã»ÓĞÑ¡Ôñ½ÇÉ«";
+	if( iLevel == 0 ) then --è¯´æ˜æ²¡æœ‰è§’è‰²
+		strInfo="æ²¡æœ‰é€‰æ‹©è§’è‰²";
 			GameProduceLogin:ShowMessageBox( strInfo, "OK", "6" );
 		return;
 	end
-	if( iLevel >= 1 ) then --Èç¹û´óÓÚ10¼¶
-		if( iDelTime >= 11 ) then--ËµÃ÷»¹²»ÄÜÉ¾³ıÄØ£¬³öÌáÊ¾¶Ô»°¿ò
-			strInfo="É¾³ıÉêÇëÒÑ¾­Ìá½»"..tostring( 14 - iDelTime ).."ÌìÁË,ÇëÔÚÉ¾³ı½ÇÉ«3Ììºó£¬14ÌìÒÔÄÚµÇÂ¼ÓÎÏ·£¬µ½ÂåÑô£¨268£¬46£©ÕÒµ½¹ØººÊÙ»òÕßµ½´óÀí£¨80£¬136£©ÕÒµ½ÖÜ²ÖÈ·ÈÏ¡£";
+	if( iLevel >= 1 ) then --å¦‚æœå¤§äº10çº§
+		if( iDelTime >= 11 ) then--è¯´æ˜è¿˜ä¸èƒ½åˆ é™¤å‘¢ï¼Œå‡ºæç¤ºå¯¹è¯æ¡†
+			strInfo="åˆ é™¤ç”³è¯·å·²ç»æäº¤"..tostring( 14 - iDelTime ).."å¤©äº†,è¯·åœ¨åˆ é™¤è§’è‰²3å¤©åï¼Œ14å¤©ä»¥å†…ç™»å½•æ¸¸æˆï¼Œåˆ°æ´›é˜³ï¼ˆ268ï¼Œ46ï¼‰æ‰¾åˆ°å…³æ±‰å¯¿æˆ–è€…åˆ°å¤§ç†ï¼ˆ80ï¼Œ136ï¼‰æ‰¾åˆ°å‘¨ä»“ç¡®è®¤ã€‚";
 			GameProduceLogin:ShowMessageBox( strInfo, "OK", "6" );
-		elseif( iDelTime > 0 ) then		--ËµÃ÷¿ÉÒÔÉ¾³ıÄØ£¬³öÌáÊ¾¶Ô»°¿ò
-			strInfo="ÇëµÇÂ¼ÓÎÏ·£¬µ½ÂåÑô£¨268£¬46£©ÕÒµ½¹ØººÊÙ»òÕßµ½´óÀí£¨80£¬136£©ÕÒµ½ÖÜ²ÖÈ·ÈÏ£¬¼´¿ÉÓÀ¾ÃÉ¾³ı¡£Äã±ØĞëÃ»ÓĞ°ï»á¡¢½á»é¡¢¿ªµê¡¢½á°İ¡¢Ê¦Í½¹ØÏµ²ÅÄÜÉ¾³ı¡£";
+		elseif( iDelTime > 0 ) then		--è¯´æ˜å¯ä»¥åˆ é™¤å‘¢ï¼Œå‡ºæç¤ºå¯¹è¯æ¡†
+			strInfo="è¯·ç™»å½•æ¸¸æˆï¼Œåˆ°æ´›é˜³ï¼ˆ268ï¼Œ46ï¼‰æ‰¾åˆ°å…³æ±‰å¯¿æˆ–è€…åˆ°å¤§ç†ï¼ˆ80ï¼Œ136ï¼‰æ‰¾åˆ°å‘¨ä»“ç¡®è®¤ï¼Œå³å¯æ°¸ä¹…åˆ é™¤ã€‚ä½ å¿…é¡»æ²¡æœ‰å¸®ä¼šã€ç»“å©šã€å¼€åº—ã€ç»“æ‹œã€å¸ˆå¾’å…³ç³»æ‰èƒ½åˆ é™¤ã€‚";
 			GameProduceLogin:ShowMessageBox( strInfo, "OK", "5" );
-		else --ËµÃ÷ÒªÉ¾³ıÁË£¬³öÏÖÌáÊ¾¶Ô»°¿ò
-			strInfo = "ÄãÈ·¶¨Òª½«"..tostring( iLevel ).."¼¶µÄ½ÇÉ«#c00ff00"..strName.."#cffffffÉ¾³ıÂğ?";
+		else --è¯´æ˜è¦åˆ é™¤äº†ï¼Œå‡ºç°æç¤ºå¯¹è¯æ¡†
+			strInfo = "ä½ ç¡®å®šè¦å°†"..tostring( iLevel ).."çº§çš„è§’è‰²#c00ff00"..strName.."#cffffffåˆ é™¤å—?";
 			GameProduceLogin:ShowMessageBox( strInfo, "YesNo", "4" );
 		end
-	else --Ö±½Ó³öÏÖÌáÊ¾£¬ÊÇ·ñÉ¾³ı
-		strInfo = "ÄãÈ·¶¨Òª½«"..tostring( iLevel ).."¼¶µÄ½ÇÉ«#c00ff00"..strName.."#cffffffÉ¾³ıÂğ?";
+	else --ç›´æ¥å‡ºç°æç¤ºï¼Œæ˜¯å¦åˆ é™¤
+		strInfo = "ä½ ç¡®å®šè¦å°†"..tostring( iLevel ).."çº§çš„è§’è‰²#c00ff00"..strName.."#cffffffåˆ é™¤å—?";
 		GameProduceLogin:ShowMessageBox( strInfo, "YesNo", "7" );
 	end
 	
@@ -248,7 +248,7 @@ end
 	
 ---------------------------------------------------------------------------------------------
 --
--- ·µ»Øµ½ÉÏÒ»²½
+-- è¿”å›åˆ°ä¸Šä¸€æ­¥
 --				
 function SelectRole_Return()
 			
@@ -259,16 +259,16 @@ end
 
 ---------------------------------------------------------------------------------------------------------------
 --
---   Ë¢ĞÂ½ÇÉ«ĞÅÏ¢
+--   åˆ·æ–°è§’è‰²ä¿¡æ¯
 --
 function SelectRole_RefreshRoleInfo()
 
-	-- Çå¿Õ½çÃæ.
+	-- æ¸…ç©ºç•Œé¢.
 	SelectRole_ClearInfo();
 	
 	g_iCurRoleCount = GameProduceLogin:GetRoleCount();
-	-- µÃµ½ÈËÎïµÄ¸öÊı
-	AxTrace( 0,0, "µÃµ½½ÇÉ«¸öÊı"..tostring(g_iCurRoleCount));
+	-- å¾—åˆ°äººç‰©çš„ä¸ªæ•°
+	AxTrace( 0,0, "å¾—åˆ°è§’è‰²ä¸ªæ•°"..tostring(g_iCurRoleCount));
 	
 	if(0 == g_iCurRoleCount) then
 	
@@ -277,14 +277,14 @@ function SelectRole_RefreshRoleInfo()
 	
 	for index =0 , g_iCurRoleCount-1 do
 	 		
-	 		AxTrace( 0,0, "ÏÔÊ¾½ÇÉ«"..tostring(index));
+	 		AxTrace( 0,0, "æ˜¾ç¤ºè§’è‰²"..tostring(index));
 			SelectRole_GetRoleInfo(index);
 	end
 	
-	-- Ñ¡Ôñ½ÇÉ«
+	-- é€‰æ‹©è§’è‰²
 	if(1 == g_bCreateSuccess) then
 			
-			-- ´´½¨³É¹¦ºó
+			-- åˆ›å»ºæˆåŠŸå
 			g_iCurSelRole = g_iCurRoleCount;
 			g_bCreateSuccess = 0;
 	end
@@ -296,7 +296,7 @@ end
 
 ---------------------------------------------------------------------------------------------------------------
 --
---   Ë¢ĞÂ½ÇÉ«ĞÅÏ¢
+--   åˆ·æ–°è§’è‰²ä¿¡æ¯
 --
 function SelectRole_GetRoleInfo(index)
 
@@ -311,7 +311,7 @@ function SelectRole_GetRoleInfo(index)
 	,iDelTime
 	= GameProduceLogin:GetRoleInfo(index);
 	
-	-- ÉèÖÃÃû×Ö
+	-- è®¾ç½®åå­—
 	--g_RoleName[index+1]:SetText(strName);
 	g_RoleName[index+1] = strName;
 	g_iMenPai[index+1] = iMenPai;
@@ -322,7 +322,7 @@ end
 
 ---------------------------------------------------------------------------------------------------------------
 --
---   Çå¿Õ½ÇÉ«ĞÅÏ¢.
+--   æ¸…ç©ºè§’è‰²ä¿¡æ¯.
 --
 function SelectRole_ClearInfo()
 
@@ -343,15 +343,15 @@ end
 
 ---------------------------------------------------------------------------------------------------------------
 --
---   Ñ¡Ôñ½ÇÉ«1.
+--   é€‰æ‹©è§’è‰²1.
 --
 function SelectRole_SelectRole1()
 
-	AxTrace( 0,0, " Ñ¡1");	
+	AxTrace( 0,0, " é€‰1");	
 	g_iCurSelRole = 1;
 	if(g_iCurRoleCount < g_iCurSelRole) then
 
-		AxTrace( 0,0, " Î´Ñ¡ÖĞÒ»");	
+		AxTrace( 0,0, " æœªé€‰ä¸­ä¸€");	
 		SelectRole_TargetInfo_Name_Text:SetText("");
 		SelectRole_TargetInfo_Menpai_Text:SetText("");
 		SelectRole_TargetInfo_Level_Text:SetText("");
@@ -364,11 +364,11 @@ end
 
 ---------------------------------------------------------------------------------------------------------------
 --
---   Ñ¡Ôñ½ÇÉ«2.
+--   é€‰æ‹©è§’è‰²2.
 --
 function SelectRole_SelectRole2()
 
-	AxTrace( 0,0, " Ñ¡2");	
+	AxTrace( 0,0, " é€‰2");	
 	g_iCurSelRole = 2;
 	if(g_iCurRoleCount < g_iCurSelRole) then
 	
@@ -385,11 +385,11 @@ end
 
 ---------------------------------------------------------------------------------------------------------------
 --
---   Ñ¡Ôñ½ÇÉ«3.
+--   é€‰æ‹©è§’è‰²3.
 --
 function SelectRole_SelectRole3()
 
-	AxTrace( 0,0, " Ñ¡3");	
+	AxTrace( 0,0, " é€‰3");	
 	g_iCurSelRole = 3;
 	if(g_iCurRoleCount < g_iCurSelRole) then
 	
@@ -406,7 +406,7 @@ end
 
 ---------------------------------------------------------------------------------------------------------------
 --
---   Í¨¹ıË÷Òı, Ñ¡Ôñ½ÇÉ«
+--   é€šè¿‡ç´¢å¼•, é€‰æ‹©è§’è‰²
 --
 function SelectRole_ShowSelRoleInfo(index)
 
@@ -422,65 +422,65 @@ function SelectRole_ShowSelRoleInfo(index)
 	
 		return;
 	end;
-	-- ÏÔÊ¾Ãû×Ö
+	-- æ˜¾ç¤ºåå­—
 	AxTrace(0, 0, "show sel info index="..index);
 	--SelectRole_TargetInfo_Name_Text:SetText(g_RoleName[index]:GetText());
 	--added by dun.liu 2008-04-18
-	SelectRole_TargetInfo_Name_Text:SetText( "#c00ff00½ÇÉ«£º#cffffff"..g_RoleName[index] );
+	SelectRole_TargetInfo_Name_Text:SetText( "#c00ff00è§’è‰²ï¼š#cffffff"..g_RoleName[index] );
 	
 	
-	-- ÏÔÊ¾ÃÅÅÉ
-	local strName = "ÎŞÃÅÅÉ";
+	-- æ˜¾ç¤ºé—¨æ´¾
+	local strName = "æ— é—¨æ´¾";
 	local Family  = g_iMenPai[index];
 
-	-- µÃµ½ÃÅÅÉÃû³Æ.
+	-- å¾—åˆ°é—¨æ´¾åç§°.
 	if(0 == Family) then
-		strName = "ÉÙÁÖ";
+		strName = "å°‘æ—";
 
 	elseif(1 == Family) then
-		strName = "Ã÷½Ì";
+		strName = "æ˜æ•™";
 
 	elseif(2 == Family) then
-		strName = "Ø¤°ï";
+		strName = "ä¸å¸®";
 
 	elseif(3 == Family) then
-		strName = "Îäµ±";
+		strName = "æ­¦å½“";
 
 	elseif(4 == Family) then
-		strName = "¶ëáÒ";
+		strName = "å³¨åµ‹";
 
 	elseif(5 == Family) then
-		strName = "ĞÇËŞ";
+		strName = "æ˜Ÿå®¿";
 
 	elseif(6 == Family) then
-		strName = "ÌìÁú";
+		strName = "å¤©é¾™";
 
 	elseif(7 == Family) then
-		strName = "ÌìÉ½";
+		strName = "å¤©å±±";
 
 	elseif(8 == Family) then
-		strName = "åĞÒ£";
+		strName = "é€é¥";
 
 	elseif(9 == Family) then
-		strName = "ÎŞÃÅÅÉ";
+		strName = "æ— é—¨æ´¾";
 	end
-	SelectRole_TargetInfo_Menpai_Text:SetText("#c00ff00ÃÅÅÉ£º#cffffff"..strName);
+	SelectRole_TargetInfo_Menpai_Text:SetText("#c00ff00é—¨æ´¾ï¼š#cffffff"..strName);
 	
-	-- ÏÔÊ¾µÈ¼¶
-	SelectRole_TargetInfo_Level_Text:SetText("#c00ff00µÈ¼¶£º#cffffff"..tostring(g_iLevel[index]));
+	-- æ˜¾ç¤ºç­‰çº§
+	SelectRole_TargetInfo_Level_Text:SetText("#c00ff00ç­‰çº§ï¼š#cffffff"..tostring(g_iLevel[index]));
 
 	if(tonumber(g_iDelTime[index])>0)then
 		if(g_iDelTime[index]>=11)then
-			SelectRole_TargetInfo_Delete:SetText("#c00ff00"..(3-(14-g_iDelTime[index])).."Ììºó¿ÉÉ¾³ı½ÇÉ«");
+			SelectRole_TargetInfo_Delete:SetText("#c00ff00"..(3-(14-g_iDelTime[index])).."å¤©åå¯åˆ é™¤è§’è‰²");
 		else
-			SelectRole_TargetInfo_Delete:SetText("#c00ff00ÒÑ¿ÉÉ¾³ı½ÇÉ«");
+			SelectRole_TargetInfo_Delete:SetText("#c00ff00å·²å¯åˆ é™¤è§’è‰²");
 		end
 		
 		SelectRole_TargetInfo_Delete:Show();
 	else
 		SelectRole_TargetInfo_Delete:Hide();
 	end
-	-- ÉèÎªÑ¡Ôñ×´Ì¬
+	-- è®¾ä¸ºé€‰æ‹©çŠ¶æ€
 	--g_BnSelCheck[index]:SetCheck(1);
 	
 
@@ -489,7 +489,7 @@ end
 
 function SelectRole_SelRole_MouseEnter(index)
 
-	SelectRole_Info:SetText("Ñ¡Ôñµ±Ç°µÇÂ¼½ÇÉ«");
+	SelectRole_Info:SetText("é€‰æ‹©å½“å‰ç™»å½•è§’è‰²");
 end
 	
 function SelectRole_MouseLeave()
@@ -499,22 +499,22 @@ end
 
 function SelectRole_Play_MouseEnter()
 
-	SelectRole_Info:SetText("½øÈëÓÎÏ·");
+	SelectRole_Info:SetText("è¿›å…¥æ¸¸æˆ");
 end
 
 function SelectRole_Create_MouseEnter()
 
-	SelectRole_Info:SetText("´´½¨Ò»¸öĞÂ½ÇÉ«");
+	SelectRole_Info:SetText("åˆ›å»ºä¸€ä¸ªæ–°è§’è‰²");
 end
 
 function SelectRole_Delete_MouseEnter()
 
-	SelectRole_Info:SetText("É¾³ıÒ»¸öÒÑÓĞ½ÇÉ«");
+	SelectRole_Info:SetText("åˆ é™¤ä¸€ä¸ªå·²æœ‰è§’è‰²");
 end
 
 function SelectRole_Last_MouseEnter()
 
-	SelectRole_Info:SetText("·µ»Øµ½ÕËºÅµÇÂ¼½çÃæ");	--ÕÊºÅ  to  ÕËºÅ
+	SelectRole_Info:SetText("è¿”å›åˆ°è´¦å·ç™»å½•ç•Œé¢");	--å¸å·  to  è´¦å·
 end;
 
 
@@ -597,11 +597,11 @@ end;
 
 
 function SelectRole_Role_Modle_TurnRight( start )
-	--ÏòÓÒĞı×ª¿ªÊ¼
+	--å‘å³æ—‹è½¬å¼€å§‹
 	if(start == 1) then		
         --GameProduceLogin:ModelRotBegin(0.3)
-            GameProduceLogin:ModelRotBegin(1.0)   --Ã¿ÃëÒ»È¦
-	--ÏòÓÒĞı×ª½áÊø
+            GameProduceLogin:ModelRotBegin(1.0)   --æ¯ç§’ä¸€åœˆ
+	--å‘å³æ—‹è½¬ç»“æŸ
 	else
         GameProduceLogin:ModelRotEnd( 0.0 )
 	end
@@ -611,7 +611,7 @@ end
 function SelectRole_Role_Modle_TurnLeft( start )
 	if(start == 1) then
             --GameProduceLogin:ModelRotBegin(-0.3)
-            GameProduceLogin:ModelRotBegin(-1.0)   --Ã¿Ãë-1È¦
+            GameProduceLogin:ModelRotBegin(-1.0)   --æ¯ç§’-1åœˆ
 	else		
         GameProduceLogin:ModelRotEnd( 0.0 )
 	end

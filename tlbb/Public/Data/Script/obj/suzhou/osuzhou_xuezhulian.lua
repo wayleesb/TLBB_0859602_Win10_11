@@ -1,14 +1,14 @@
---ËÕÖİNPC
---Ñ©ÖñÁ«
---Ò»°ã
+--è‹å·NPC
+--é›ªç«¹è²
+--ä¸€èˆ¬
 
 x001036_g_scriptId = 001036
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x001036_g_eventList={800110,800112}
 
 --**********************************
--- ¸üĞÂÊÂ¼şÁĞ±í
+-- æ›´æ–°äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x001036_UpdateEventList( sceneId, selfId,targetId )
 	
@@ -16,7 +16,7 @@ function x001036_UpdateEventList( sceneId, selfId,targetId )
 		local  PlayerName=GetName(sceneId,selfId)
 		AddText(sceneId,"#{OBJ_suzhou_0012}")
 	
-		-- µ÷ÓÃÊÂ¼şÁĞ±í x001036_g_eventList ÖĞµÄÃ¿Ò»ÏîµÄ Enumerate º¯ÊıÀ´ÏÔÊ¾Ñ¡ÔñÌõÄ¿
+		-- è°ƒç”¨äº‹ä»¶åˆ—è¡¨ x001036_g_eventList ä¸­çš„æ¯ä¸€é¡¹çš„ Enumerate å‡½æ•°æ¥æ˜¾ç¤ºé€‰æ‹©æ¡ç›®
 		for i, eventId in x001036_g_eventList do
 			CallScriptFunction( eventId, "OnEnumerate",sceneId, selfId, targetId )
 		end
@@ -25,17 +25,17 @@ function x001036_UpdateEventList( sceneId, selfId,targetId )
 end
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x001036_OnDefaultEvent( sceneId, selfId,targetId )
 	x001036_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x001036_OnEventRequest( sceneId, selfId, targetId, eventId )
-	-- µ÷ÓÃÊÂ¼şÁĞ±í x001036_g_eventList ÖĞµÄÃ¿Ò»ÏîµÄ DefaultEvent º¯Êı
+	-- è°ƒç”¨äº‹ä»¶åˆ—è¡¨ x001036_g_eventList ä¸­çš„æ¯ä¸€é¡¹çš„ DefaultEvent å‡½æ•°
 	for i, findId in x001036_g_eventList do
 		if eventId == findId then
 			CallScriptFunction( eventId, "OnDefaultEvent",sceneId, selfId, targetId )

@@ -1,9 +1,9 @@
-local g_CurrectOperate = 0;  --1Îªpk×´Ì¬ÇĞ»»ĞèÒªµÄÊäÈë´°¿Ú. 2Îª´ò¿ªÒøĞĞÊ±ºòĞèÒªµÄÊä³ö´°¿Ú
-local g_PKModeWant = 0;  --1Îªpk×´Ì¬ÇĞ»»ĞèÒªµÄÊäÈë´°¿Ú.
+local g_CurrectOperate = 0;  --1ä¸ºpkçŠ¶æ€åˆ‡æ¢éœ€è¦çš„è¾“å…¥çª—å£. 2ä¸ºæ‰“å¼€é“¶è¡Œæ—¶å€™éœ€è¦çš„è¾“å‡ºçª—å£
+local g_PKModeWant = 0;  --1ä¸ºpkçŠ¶æ€åˆ‡æ¢éœ€è¦çš„è¾“å…¥çª—å£.
 
 
 function ErjimimaJiesuo_PreLoad()
-	-- ´ò¿ª½çÃæ
+	-- æ‰“å¼€ç•Œé¢
 	this:RegisterEvent("MINORPASSWORD_OPEN_UNLOCK_PASSWORD_DLG");
 	this:RegisterEvent("OPENINPUTPASSWORD_PKVERIFY");
 	this:RegisterEvent("OPENINPUTPASSWORD_BANKVERIFY");
@@ -84,11 +84,11 @@ function ErjimimaJiesuo_OK_Click()
 		local strPassword = ErjimimaJiesuo_Jiesuo:GetText();
 		local iLen = string.len(strPassword);
 		if(iLen < 4) then
-			ShowSystemTipInfo( "#{UITEXT_PWTOOSHORT}" )   --("ÃÜÂë²»ÄÜÉÙÓÚ4¸ö×Ö·û£¡");
+			ShowSystemTipInfo( "#{UITEXT_PWTOOSHORT}" )   --("å¯†ç ä¸èƒ½å°‘äº4ä¸ªå­—ç¬¦ï¼");
 			return;
 		end
 		BankAcquireListWithPW( strPassword )
-		-- Òş²Ø´°¿Ú.
+		-- éšè—çª—å£.
 		ErjimimaJiesuo_Close();
 	        return
 	end
@@ -97,11 +97,11 @@ function ErjimimaJiesuo_OK_Click()
 		local strPassword = ErjimimaJiesuo_Jiesuo:GetText();
 		local iLen = string.len(strPassword);
 		if(iLen < 4) then
-			ShowSystemTipInfo( "#{UITEXT_PWTOOSHORT}" )   --("ÃÜÂë²»ÄÜÉÙÓÚ4¸ö×Ö·û£¡");
+			ShowSystemTipInfo( "#{UITEXT_PWTOOSHORT}" )   --("å¯†ç ä¸èƒ½å°‘äº4ä¸ªå­—ç¬¦ï¼");
 			return;
 		end
 		Player:ChangePVPModeWithPassword( g_PKModeWant, strPassword )
-	        -- Òş²Ø´°¿Ú.
+	        -- éšè—çª—å£.
 		ErjimimaJiesuo_Close();
 		return
 	end
@@ -110,20 +110,20 @@ function ErjimimaJiesuo_OK_Click()
 	local iLen = string.len(strPassword);
 	if(iLen < 4) then
 	
-		ShowSystemTipInfo("ÃÜÂë²»ÄÜÉÙÓÚ4¸ö×Ö·û£¡");
+		ShowSystemTipInfo("å¯†ç ä¸èƒ½å°‘äº4ä¸ªå­—ç¬¦ï¼");
 		return;
 	end;
-	-- ½âËøÃÜÂë¡£
+	-- è§£é”å¯†ç ã€‚
 	UnLockMinorPassword(strPassword);
-	-- Òş²Ø´°¿Ú.
+	-- éšè—çª—å£.
 	ErjimimaJiesuo_Close();
 end
 
---Ç¿ÖÆ½â³ıÃÜÂë
+--å¼ºåˆ¶è§£é™¤å¯†ç 
 function ErjimimaJiesuo_Jiechu()
-	-- Ç¿ÖÆ½Ó´¥ÃÜÂë
+	-- å¼ºåˆ¶æ¥è§¦å¯†ç 
 	ForceUnLockMinorPassword();
 	
-	-- Òş²Ø´°¿Ú.
+	-- éšè—çª—å£.
 	ErjimimaJiesuo_Close();
 end

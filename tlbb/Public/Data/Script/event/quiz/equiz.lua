@@ -1,19 +1,19 @@
 x311100_g_ScriptId = 311100
 
---½ÓÊÜÈÎÎñNPCÊôĞÔ
+--æ¥å—ä»»åŠ¡NPCå±æ€§
 x311100_g_Position_X=147.4986
 x311100_g_Position_Z=146.2925
 x311100_g_SceneID=2
-x311100_g_AccomplishNPC_Name="Ç®Áú"
+x311100_g_AccomplishNPC_Name="é’±é¾™"
 
-x311100_g_MissionName="ÎÒÎÊÄã´ğ"
+x311100_g_MissionName="æˆ‘é—®ä½ ç­”"
 
--- ÎÊÌâUI 	2
+-- é—®é¢˜UI 	2
 
---1.clientµ¯³öNPCµÚÒ»¸ö¶Ô»°½çÃæ
---2.¸øclient³öÌâ
---3.¸æËßclient´ğ´íÁË¡£
---4.¸æËß´ğ¹»ÁË10µÀÌâ£¬½áÊø¡£
+--1.clientå¼¹å‡ºNPCç¬¬ä¸€ä¸ªå¯¹è¯ç•Œé¢
+--2.ç»™clientå‡ºé¢˜
+--3.å‘Šè¯‰clientç­”é”™äº†ã€‚
+--4.å‘Šè¯‰ç­”å¤Ÿäº†10é“é¢˜ï¼Œç»“æŸã€‚
 x311100_g_Quiz_Hortation = {}
 x311100_g_Quiz_Newbie_Hortation = {}
 
@@ -46,7 +46,7 @@ function x311100_OnDefaultEvent( sceneId, selfId, targetId )
 		local TransportNPCName=GetName(sceneId,targetId);
 		BeginUICommand(sceneId)
 			UICommand_AddInt(sceneId,1)
-			UICommand_AddString(sceneId,"#gFF0FA0ÖÇÁ¦´³¹Ø")
+			UICommand_AddString(sceneId,"#gFF0FA0æ™ºåŠ›é—¯å…³")
 			UICommand_AddString(sceneId,"#{function_help_084}")
 			UICommand_AddInt(sceneId,targetId)
 		EndUICommand(sceneId)
@@ -57,7 +57,7 @@ function x311100_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x311100_OnEnumerate( sceneId, selfId, targetId )
 	if	LuaFnGetLevel( sceneId, selfId)>=2 and LuaFnGetLevel( sceneId, selfId)<=20 then
@@ -66,7 +66,7 @@ function x311100_OnEnumerate( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÌáÎÊ
+--æé—®
 --**********************************
 function x311100_AskQuestion( sceneId, selfId, Question_Sequence)
 	if Question_Sequence == 1 and x311100_OnAccept_Quiz( sceneId, selfId ) <= 0 then
@@ -75,7 +75,7 @@ function x311100_AskQuestion( sceneId, selfId, Question_Sequence)
 	if Question_Sequence > 5 then
 		BeginUICommand(sceneId)
 			UICommand_AddInt(sceneId,4)
-			UICommand_AddString(sceneId,"¹§Ï²Äã´ğ¶ÔÁËÈ«²¿ÎÊÌâ£¡#rÏÂ´Î±ğÍü¼Ç¼ÌĞø²Î¼Ó^_^")
+			UICommand_AddString(sceneId,"æ­å–œä½ ç­”å¯¹äº†å…¨éƒ¨é—®é¢˜ï¼#rä¸‹æ¬¡åˆ«å¿˜è®°ç»§ç»­å‚åŠ ^_^")
 		EndUICommand(sceneId)
 		DispatchUICommand(sceneId,selfId, 2)
 		if( IsHaveMission(sceneId,selfId,447) > 0)  then			
@@ -83,7 +83,7 @@ function x311100_AskQuestion( sceneId, selfId, Question_Sequence)
 			SetMissionByIndex(sceneId,selfId,misIndex,1,1)
 			
 			BeginEvent(sceneId)
-				strText = "´ğ¶ÔÁËÎå¸öÎÊÌâ£¬ÈÎÎñÍê³É¡£"
+				strText = "ç­”å¯¹äº†äº”ä¸ªé—®é¢˜ï¼Œä»»åŠ¡å®Œæˆã€‚"
 				AddText(sceneId,strText);
 			EndEvent(sceneId)
 			DispatchMissionTips(sceneId,selfId)
@@ -96,18 +96,18 @@ function x311100_AskQuestion( sceneId, selfId, Question_Sequence)
 		return
 	end
 
---Ëæ»ú³öÒ»¸öºÅÂë
+--éšæœºå‡ºä¸€ä¸ªå·ç 
 	
 	local wenti = GetRandomQuestionsIndex(1)
 
 	local con,opt0,opt1,opt2,opt3,opt4,opt5,key0,key1,key2,key3,key4,key5,sztype=GetQuestionsRecord(wenti)
 
-	if con=="" then		--×¢ÒâÕâÀïÈç¹ûÑ¡ÏîÊÇ¿ÕÔòÓÃ  ==""   À´ÅĞ¶Ï
-		Msg2Player( sceneId,selfId,"Î´ÕÒµ½ÎÊÌâ",MSG2PLAYER_PARA)
+	if con=="" then		--æ³¨æ„è¿™é‡Œå¦‚æœé€‰é¡¹æ˜¯ç©ºåˆ™ç”¨  ==""   æ¥åˆ¤æ–­
+		Msg2Player( sceneId,selfId,"æœªæ‰¾åˆ°é—®é¢˜",MSG2PLAYER_PARA)
 	end
 	
 	local key_position = {}
-	--°ÑËûÃÇÎ»ÖÃËæ»úµô
+	--æŠŠä»–ä»¬ä½ç½®éšæœºæ‰
 	x311100_g_rand = random(0,2)
 	if x311100_g_rand == 0 then
 		key_position[0] = 1
@@ -161,7 +161,7 @@ function x311100_AskQuestion( sceneId, selfId, Question_Sequence)
 end
 
 --**********************************
---»Ø´ğ
+--å›ç­”
 --**********************************
 function x311100_AnswerQuestion( sceneId, selfId, Question, Answer1,  Question_Sequence)
 
@@ -176,17 +176,17 @@ function x311100_AnswerQuestion( sceneId, selfId, Question, Answer1,  Question_S
 	Answer_List[4] = key4;
 	Answer_List[5] = key5;
 	
-	if con=="" then		--×¢ÒâÕâÀïÈç¹ûÑ¡ÏîÊÇ¿ÕÔòÓÃ  ==""   À´ÅĞ¶Ï
-		Msg2Player( sceneId,selfId,"Î´ÕÒµ½ÎÊÌâ",MSG2PLAYER_PARA)
+	if con=="" then		--æ³¨æ„è¿™é‡Œå¦‚æœé€‰é¡¹æ˜¯ç©ºåˆ™ç”¨  ==""   æ¥åˆ¤æ–­
+		Msg2Player( sceneId,selfId,"æœªæ‰¾åˆ°é—®é¢˜",MSG2PLAYER_PARA)
 	end
 	
 	local asktime = GetMissionData(sceneId,selfId,MD_QUIZ_ASKTIME)
 	
 	if Answer_List[Answer1-1] == 1 and LuaFnGetCurrentTime() - asktime < 305 then
 
-		--Ã»ÓĞÈÎÎñ²Å½±Àø½ğÇ®
+		--æ²¡æœ‰ä»»åŠ¡æ‰å¥–åŠ±é‡‘é’±
 		if( IsHaveMission(sceneId,selfId,447) <= 0)  then
-			--½±Àø½ğÇ®
+			--å¥–åŠ±é‡‘é’±
 			if Question_Sequence > 0 and Question_Sequence < 11 then
 				if Player_Level > 9 then
 					x311100_g_Money = x311100_g_Quiz_Hortation[Question_Sequence]
@@ -198,15 +198,15 @@ function x311100_AnswerQuestion( sceneId, selfId, Question, Answer1,  Question_S
 				x311100_g_Money = 1
 			end
 			--AddMoney(sceneId,selfId,x311100_g_Money)
-			--Msg2Player( sceneId,selfId,"ÄãµÃµ½#{_MONEY"..x311100_g_Money.."}",MSG2PLAYER_PARA)
+			--Msg2Player( sceneId,selfId,"ä½ å¾—åˆ°#{_MONEY"..x311100_g_Money.."}",MSG2PLAYER_PARA)
 		end
-	--¸æËßËû´ğ¶ÔÁË
+	--å‘Šè¯‰ä»–ç­”å¯¹äº†
 		x311100_AskQuestion( sceneId, selfId, Question_Sequence + 1)
 	else
-	--¸æËßËû´ğ´íÁË
+	--å‘Šè¯‰ä»–ç­”é”™äº†
 		BeginUICommand(sceneId)
 			UICommand_AddInt(sceneId,3)
-			UICommand_AddString(sceneId,"Õæ¿ÉÏ§£¬ÄãµÄ´ğ°¸ÊÇ´íÎóµÄ¡£±ğ»ÒĞÄ£¬ÏÂ´ÎÔÙÅ¬Á¦ßÏ¡£")
+			UICommand_AddString(sceneId,"çœŸå¯æƒœï¼Œä½ çš„ç­”æ¡ˆæ˜¯é”™è¯¯çš„ã€‚åˆ«ç°å¿ƒï¼Œä¸‹æ¬¡å†åŠªåŠ›å‘¦ã€‚")
 		EndUICommand(sceneId)
 		DispatchUICommand(sceneId,selfId, 2)
 	end
@@ -223,21 +223,21 @@ function x311100_OnAccept_Quiz( sceneId, selfId )
 	--begin modified by zhangguoxin 090207
 	local iDayCount=GetMissionData(sceneId,selfId,MD_QUIZ_DAYCOUNT)
 	local iTime = mod(iDayCount,100000)
-	--local iDayTime = floor(iTime/100)	--ÉÏÒ»´Î½»ÈÎÎñµÄÊ±¼ä(ÌìÊı)
-	local iDayTime = iTime	--ÉÏÒ»´Î½»ÈÎÎñµÄÊ±¼ä(ÌìÊı)
-	--local iQuarterTime = mod(iTime,100)	--ÉÏÒ»´Î½»ÈÎÎñµÄÊ±¼ä(¿Ì)
-	local iDayHuan = floor(iDayCount/100000) --µ±ÌìÄÚÍê³ÉµÄÈÎÎñ´ÎÊı
+	--local iDayTime = floor(iTime/100)	--ä¸Šä¸€æ¬¡äº¤ä»»åŠ¡çš„æ—¶é—´(å¤©æ•°)
+	local iDayTime = iTime	--ä¸Šä¸€æ¬¡äº¤ä»»åŠ¡çš„æ—¶é—´(å¤©æ•°)
+	--local iQuarterTime = mod(iTime,100)	--ä¸Šä¸€æ¬¡äº¤ä»»åŠ¡çš„æ—¶é—´(åˆ»)
+	local iDayHuan = floor(iDayCount/100000) --å½“å¤©å†…å®Œæˆçš„ä»»åŠ¡æ¬¡æ•°
 
-	--local CurTime = GetHourTime()		--µ±Ç°Ê±¼ä
-	--local CurDaytime = floor(CurTime/100)	--µ±Ç°Ê±¼ä(Ìì)
-	local CurDaytime = GetDayTime()	--µ±Ç°Ê±¼ä(Ìì)
-	--local CurQuarterTime = mod(CurTime,100)	--µ±Ç°Ê±¼ä(¿Ì)
+	--local CurTime = GetHourTime()		--å½“å‰æ—¶é—´
+	--local CurDaytime = floor(CurTime/100)	--å½“å‰æ—¶é—´(å¤©)
+	local CurDaytime = GetDayTime()	--å½“å‰æ—¶é—´(å¤©)
+	--local CurQuarterTime = mod(CurTime,100)	--å½“å‰æ—¶é—´(åˆ»)
 		
-	if CurDaytime==iDayTime then 	--ÉÏ´ÎÍê³ÉÈÎÎñÊÇÍ¬Ò»ÌìÄÚ
+	if CurDaytime==iDayTime then 	--ä¸Šæ¬¡å®Œæˆä»»åŠ¡æ˜¯åŒä¸€å¤©å†…
 		if iDayHuan >= Max_Time_EveryDay then
 
 			BeginEvent(sceneId)
-				strText = format("ÖÇÁ¦ÎÊ´ğÒ»Ìì×î¶à×ö%d´Î£¬ÄãÒÑ¾­×öÁË%d´Î¡£", Max_Time_EveryDay,iDayHuan )	
+				strText = format("æ™ºåŠ›é—®ç­”ä¸€å¤©æœ€å¤šåš%dæ¬¡ï¼Œä½ å·²ç»åšäº†%dæ¬¡ã€‚", Max_Time_EveryDay,iDayHuan )	
 				AddText(sceneId,strText)
  			EndEvent(sceneId)
  			DispatchMissionTips(sceneId,selfId)
@@ -245,7 +245,7 @@ function x311100_OnAccept_Quiz( sceneId, selfId )
 			return -1
 		end
 		iDayHuan = iDayHuan+1
-	else							--ÉÏ´ÎÍê³ÉÈÎÎñ²»ÔÚÍ¬Ò»Ìì£¬ÖØÖÃ
+	else							--ä¸Šæ¬¡å®Œæˆä»»åŠ¡ä¸åœ¨åŒä¸€å¤©ï¼Œé‡ç½®
 		iDayTime = CurDaytime
 		iDayHuan = 1
 	end
@@ -262,7 +262,7 @@ end
 function x311100_OnOverTime( sceneId, selfId )
 	BeginUICommand(sceneId)
 			UICommand_AddInt(sceneId,3)
-			UICommand_AddString(sceneId,"Õæ¿ÉÏ§£¬ÄãµÄ´ğ°¸ÊÇ´íÎóµÄ¡£±ğ»ÒĞÄ£¬ÏÂ´ÎÔÙÅ¬Á¦ßÏ¡£")
+			UICommand_AddString(sceneId,"çœŸå¯æƒœï¼Œä½ çš„ç­”æ¡ˆæ˜¯é”™è¯¯çš„ã€‚åˆ«ç°å¿ƒï¼Œä¸‹æ¬¡å†åŠªåŠ›å‘¦ã€‚")
 	EndUICommand(sceneId)
 	DispatchUICommand(sceneId,selfId, 2)
 end

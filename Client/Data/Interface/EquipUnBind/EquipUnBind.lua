@@ -34,7 +34,7 @@ function EquipUnBind_OnEvent(event)
 		objCared = DataPool : GetNPCIDByServerID(xx);
 		AxTrace(0,1,"xx="..xx .. " objCared="..objCared)
 		if objCared == -1 then
-				PushDebugMessage("server´«¹ıÀ´µÄÊı¾İÓĞÎÊÌâ¡£");
+				PushDebugMessage("serverä¼ è¿‡æ¥çš„æ•°æ®æœ‰é—®é¢˜ã€‚");
 				return;
 		end
 		EquipUnBind_SelfMoney:SetProperty("MoneyNumber", tostring(Player:GetData("MONEY")));
@@ -59,10 +59,10 @@ function EquipUnBind_OnEvent(event)
 			return;
 		end
 		
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ı£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æœå’ŒNPCçš„è·ç¦»å¤§äºä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if(arg1 == "distance" and tonumber(arg2)>MAX_OBJ_DISTANCE or arg1=="destroy") then
 			
-			--È¡Ïû¹ØĞÄ
+			--å–æ¶ˆå…³å¿ƒ
 			EquipUnBind_Close()
 		end
 	elseif ( event == "PACKAGE_ITEM_CHANGED" and this:IsVisible() ) then
@@ -122,7 +122,7 @@ function EquipUnBind_Update(UI_index,Item_index)
 				local EquipPoint = LifeAbility : Get_Equip_Point(i_index)
 				if EquipPoint == -1 or EquipPoint == 8 or EquipPoint == 9 or EquipPoint == 10 then
 					if EquipPoint ~= -1 then
-						PushDebugMessage("²»ÄÜ·ÅÈëÕâÖÖ×°±¸¡£")
+						PushDebugMessage("ä¸èƒ½æ”¾å…¥è¿™ç§è£…å¤‡ã€‚")
 					end
 					return
 				end
@@ -144,7 +144,7 @@ function EquipUnBind_Update(UI_index,Item_index)
 	elseif u_index == 2 then
 		if theAction:GetID() ~= 0 then
 				if PlayerPackage : GetItemTableIndex( i_index ) ~= 30900049 then
-					PushDebugMessage("ÕâÀï±ØĞë·ÅÈë³ıÃú·û¡£")
+					PushDebugMessage("è¿™é‡Œå¿…é¡»æ”¾å…¥é™¤é“­ç¬¦ã€‚")
 					return
 				end
 				if Bind_Item2 ~= -1 then
@@ -164,11 +164,11 @@ end
 
 function EquipUnBind_Buttons_Clicked()
 	if Bind_Item1 == -1 then 
-		PushDebugMessage("¶Ô²»Æğ£¬ÇëÏÈ·ÅÈëÄãÏë¿ÌÃúµÄ×°±¸¡£")
+		PushDebugMessage("å¯¹ä¸èµ·ï¼Œè¯·å…ˆæ”¾å…¥ä½ æƒ³åˆ»é“­çš„è£…å¤‡ã€‚")
 		return
 	end
 	if Bind_Item2 == -1 then
-		PushDebugMessage("×°±¸³ıÃúĞèÒª³ıÃú·û¡£")
+		PushDebugMessage("è£…å¤‡é™¤é“­éœ€è¦é™¤é“­ç¬¦ã€‚")
 		return
 	end
 	Clear_XSCRIPT();
@@ -195,9 +195,9 @@ function EquipUnBind_OnHiden()
 	return
 end
 --=========================================================
---¿ªÊ¼¹ØĞÄNPC£¬
---ÔÚ¿ªÊ¼¹ØĞÄÖ®Ç°ĞèÒªÏÈÈ·¶¨Õâ¸ö½çÃæÊÇ²»ÊÇÒÑ¾­ÓĞ¡°¹ØĞÄ¡±µÄNPC£¬
---Èç¹ûÓĞµÄ»°£¬ÏÈÈ¡ÏûÒÑ¾­ÓĞµÄ¡°¹ØĞÄ¡±
+--å¼€å§‹å…³å¿ƒNPCï¼Œ
+--åœ¨å¼€å§‹å…³å¿ƒä¹‹å‰éœ€è¦å…ˆç¡®å®šè¿™ä¸ªç•Œé¢æ˜¯ä¸æ˜¯å·²ç»æœ‰â€œå…³å¿ƒâ€çš„NPCï¼Œ
+--å¦‚æœæœ‰çš„è¯ï¼Œå…ˆå–æ¶ˆå·²ç»æœ‰çš„â€œå…³å¿ƒâ€
 --=========================================================
 function BeginCareObject_EquipUnBind(objCaredId)
 
@@ -208,7 +208,7 @@ function BeginCareObject_EquipUnBind(objCaredId)
 end
 
 --=========================================================
---Í£Ö¹¶ÔÄ³NPCµÄ¹ØĞÄ
+--åœæ­¢å¯¹æŸNPCçš„å…³å¿ƒ
 --=========================================================
 function StopCareObject_EquipUnBind(objCaredId)
 	this:CareObject(objCaredId, 0, "EquipUnBind");

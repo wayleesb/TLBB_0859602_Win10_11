@@ -17,7 +17,7 @@ end
 
 --===============================================
 -- UpdateFrame()
--- 第几个频道的第几个人
+-- 绗嚑涓閬撶殑绗嚑涓汉
 --===============================================
 function ChatInfo_Update()
 	--AxTrace( 0,0,"char PORTRAIT" );
@@ -26,18 +26,18 @@ function ChatInfo_Update()
 	--AxTrace( 0,0,"char ID" );
 	ChatInfo_ID:SetText( "ID:"..tostring( DataPool:GetFriend( "chat", "ID_TEXT" ) ) );
 	--AxTrace( 0,0,"char NAME" );
-	ChatInfo_Name:SetText( "姓名:"..DataPool:GetFriend( "chat", "NAME"  ) );
+	ChatInfo_Name:SetText( "濮撳悕:"..DataPool:GetFriend( "chat", "NAME"  ) );
 	--AxTrace( 0,0,"char LEVEL" );
-	ChatInfo_Level:SetText( "级别:"..tostring( DataPool:GetFriend( "chat", "LEVEL" ) ) );
+	ChatInfo_Level:SetText( "绾у埆:"..tostring( DataPool:GetFriend( "chat", "LEVEL" ) ) );
 	--AxTrace( 0,0,"char MENPAI_TEXT" );
-	ChatInfo_MenPai:SetText( "门派:"..DataPool:GetFriend( "chat", "MENPAI_TEXT" ) );
+	ChatInfo_MenPai:SetText( "闂ㄦ淳:"..DataPool:GetFriend( "chat", "MENPAI_TEXT" ) );
 	--AxTrace( 0,0,"char GUID_NAME" );
-	ChatInfo_Confraternity:SetText( "帮会名称:"..DataPool:GetFriend( "chat", "GUID_NAME" ) );
+	ChatInfo_Confraternity:SetText( "甯細鍚嶇О:"..DataPool:GetFriend( "chat", "GUID_NAME" ) );
 	ChatInfo_GuildLeague:SetText( "#{TM_20080311_30}"..DataPool:GetFriend( "chat", "GUILD_LEAGUE_NAME" ) );
 	--AxTrace( 0,0,"char MOOD" );
-	ChatInfo_Explain:SetText( "心情:"..DataPool:GetFriend( "chat", "MOOD" ) );
+	ChatInfo_Explain:SetText( "蹇冩儏:"..DataPool:GetFriend( "chat", "MOOD" ) );
 	--AxTrace( 0,0,"char TITLE" );
-	ChatInfo_Agname:SetText( "称号:"..DataPool:GetFriend( "chat", "TITLE" ) );
+	ChatInfo_Agname:SetText( "绉板彿:"..DataPool:GetFriend( "chat", "TITLE" ) );
 end
 
 function ChatInfo_Show()

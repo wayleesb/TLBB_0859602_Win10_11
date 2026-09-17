@@ -1,11 +1,11 @@
---±¦²ØÌ½²âÆ÷
+--å®è—æ¢æµ‹å™¨
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x300004_g_scriptId = 300004
 
 x300004_g_event = 500500
 --**********************************
---Ë¢ĞÂÊÂ¼ş
+--åˆ·æ–°äº‹ä»¶
 --**********************************
 function x300004_OnDefaultEvent( sceneId, selfId, BagIndex )
 	CallScriptFunction(x300004_g_event,"OnUseItem",sceneId, selfId, BagIndex)

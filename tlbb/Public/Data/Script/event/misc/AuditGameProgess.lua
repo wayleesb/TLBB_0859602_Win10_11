@@ -1,22 +1,22 @@
--- ÏÂÏßÌáÊ¾Í³¼Æ»î¶¯¹¦ÄÜ
+-- ä¸‹çº¿æç¤ºç»Ÿè®¡æ´»åŠ¨åŠŸèƒ½
 -- dengxx
 
--- ½Å±¾ºÅ
+-- è„šæœ¬å·
 x800120_g_ScriptId	= 800120
 
 x800120_g_actList = {
-			[1]= {min=10,max =160,},--name="Ë«±¶¾­Ñé£¨Ê£Óà£©",prog="Ğ¡Ê±",},
-			[2]= {min=10,max =19,},--name="Ê¦ÃÅÈÎÎñ£¨¸ß½±Àø£©",prog="/10»·",},
-			[3]= {min=20,max =39,},--name="Ê¦ÃÅÈÎÎñ£¨¸ß½±Àø£©",prog="/15»·",},
-			[4]= {min=40,max =74,},--name="Ê¦ÃÅÈÎÎñ£¨¸ß½±Àø£©",prog="/20»·",},
-			[5]= {min=10,max =74,},--name="¿Æ¾Ù´ğÌâ",prog="/1´Î",},
-			[6]= {min=10,max =160,},--name="ÕäççÆå¾Ö",prog="/1´Î",},
-			[7]= {min=75,max =160,},--name="Â¥À¼Ñ°±¦",prog="/1´Î",},
-			[8]= {min=30,max =160,},--name="Ò»¸ö¶¼²»ÄÜÅÜ",prog="/5´Î",},
-			[9]= {min=75,max =160,},--name="»Æ½ğÖ®Á´",prog="/5´Î",},
-			[10]={min=75,max =160,},--name="³õÕ½çÎç¿·å£¨½ÏÄÑ£©",prog="´Î",},
-			[11]={min=20,max =160,},--name="ĞÒÔË¿ì»îÈı",prog="/1´Î",},	
-			[12]={min=30,max =160,},--name="º®Óñ¹ÈĞŞĞĞ",prog="/1´Î",},
+			[1]= {min=10,max =160,},--name="åŒå€ç»éªŒï¼ˆå‰©ä½™ï¼‰",prog="å°æ—¶",},
+			[2]= {min=10,max =19,},--name="å¸ˆé—¨ä»»åŠ¡ï¼ˆé«˜å¥–åŠ±ï¼‰",prog="/10ç¯",},
+			[3]= {min=20,max =39,},--name="å¸ˆé—¨ä»»åŠ¡ï¼ˆé«˜å¥–åŠ±ï¼‰",prog="/15ç¯",},
+			[4]= {min=40,max =74,},--name="å¸ˆé—¨ä»»åŠ¡ï¼ˆé«˜å¥–åŠ±ï¼‰",prog="/20ç¯",},
+			[5]= {min=10,max =74,},--name="ç§‘ä¸¾ç­”é¢˜",prog="/1æ¬¡",},
+			[6]= {min=10,max =160,},--name="çç‘æ£‹å±€",prog="/1æ¬¡",},
+			[7]= {min=75,max =160,},--name="æ¥¼å…°å¯»å®",prog="/1æ¬¡",},
+			[8]= {min=30,max =160,},--name="ä¸€ä¸ªéƒ½ä¸èƒ½è·‘",prog="/5æ¬¡",},
+			[9]= {min=75,max =160,},--name="é»„é‡‘ä¹‹é“¾",prog="/5æ¬¡",},
+			[10]={min=75,max =160,},--name="åˆæˆ˜ç¼¥ç¼ˆå³°ï¼ˆè¾ƒéš¾ï¼‰",prog="æ¬¡",},
+			[11]={min=20,max =160,},--name="å¹¸è¿å¿«æ´»ä¸‰",prog="/1æ¬¡",},	
+			[12]={min=30,max =160,},--name="å¯’ç‰è°·ä¿®è¡Œ",prog="/1æ¬¡",},
 		}
 
 function x800120_AuditGameProgess(sceneId,selfId)
@@ -43,55 +43,55 @@ function x800120_AuditGameProgess(sceneId,selfId)
 		if level >= act.min and level <= act.max then
 			tempData[i].bShow = 1
 			--beginif
-			if i == 1 then  --Ë«±¶Ê±¼ä
+			if i == 1 then  --åŒå€æ—¶é—´
 				local nDECount = DEGetCount(sceneId, selfId)
 			  tempData[i].nCount = nDECount
-			elseif i == 2 or i == 3 or i == 4 then  --Ê¦ÃÅ
+			elseif i == 2 or i == 3 or i == 4 then  --å¸ˆé—¨
 				local iDayCount=GetMissionData(sceneId,selfId,MD_SHIMEN_DAYCOUNT)
 				local iTime = GetMissionData(sceneId,selfId,MD_SHIMEN_DAYTIME)
-				local iDayTime = floor(iTime/100)	--ÉÏÒ»´Î·ÅÆúÈÎÎñµÄÊ±¼ä(ÌìÊı)
-				local CurTime = GetQuarterTime()		--µ±Ç°Ê±¼ä
-				local CurDaytime = floor(CurTime/100)	--µ±Ç°Ê±¼ä(Ìì)
+				local iDayTime = floor(iTime/100)	--ä¸Šä¸€æ¬¡æ”¾å¼ƒä»»åŠ¡çš„æ—¶é—´(å¤©æ•°)
+				local CurTime = GetQuarterTime()		--å½“å‰æ—¶é—´
+				local CurDaytime = floor(CurTime/100)	--å½“å‰æ—¶é—´(å¤©)
 				local iDayHuan = 0	
-				if CurDaytime == iDayTime then 	--ÉÏ´ÎÍê³ÉÈÎÎñÊÇÍ¬Ò»Ìì
+				if CurDaytime == iDayTime then 	--ä¸Šæ¬¡å®Œæˆä»»åŠ¡æ˜¯åŒä¸€å¤©
 					iDayHuan = iDayCount
 			  end
 			  tempData[i].nCount = iDayHuan
-			elseif i == 5 then --¿Æ¾Ù
+			elseif i == 5 then --ç§‘ä¸¾
 				if 1 == GetMissionData(sceneId, selfId, MD_EXAM_FEE_FLAG) then
-	      	local StartTime = GetMissionData(sceneId,selfId,MD_EXAM_STARTTIME) --¿Æ¾ÙÊ±¼ä
-	      	local CurrentTime = LuaFnGetCurrentTime()                          --µ±Ç°Ê±¼ä
+	      	local StartTime = GetMissionData(sceneId,selfId,MD_EXAM_STARTTIME) --ç§‘ä¸¾æ—¶é—´
+	      	local CurrentTime = LuaFnGetCurrentTime()                          --å½“å‰æ—¶é—´
 	        local ntime = CurrentTime - StartTime
-	        local CurTime = GetQuarterTime()								--µ±Ç°Ê±¼ä
-		      local CurQuarterTime = mod( CurTime, 100 )	--µ±Ç°Ê±¼ä(¿Ì)
-	        --ÅĞ¶Ï½ñÌìÊÇ·ñ²Î¼ÓÁË¿Æ¾Ù:µ±Ç°Ê±¼äÎª17:30Ö®ºó,ÇÒÃ»ÓĞ¹ı0µã 23400=6.5*60*60
+	        local CurTime = GetQuarterTime()								--å½“å‰æ—¶é—´
+		      local CurQuarterTime = mod( CurTime, 100 )	--å½“å‰æ—¶é—´(åˆ»)
+	        --åˆ¤æ–­ä»Šå¤©æ˜¯å¦å‚åŠ äº†ç§‘ä¸¾:å½“å‰æ—¶é—´ä¸º17:30ä¹‹å,ä¸”æ²¡æœ‰è¿‡0ç‚¹ 23400=6.5*60*60
 	        if CurQuarterTime >= 70 and  ntime <= 23400 then
 	        	tempData[i].nCount = 1
 	        end
 	      end
-      elseif i == 6 then --ÕäççÆå¾Ö
+      elseif i == 6 then --çç‘æ£‹å±€
       	if GetMissionData(sceneId, selfId, MD_LAST_QIJU_DAY) == GetDayTime() then
       		tempData[i].nCount = 1
       	end
-      elseif i == 7 then --Â¥À¼Ñ°±¦
+      elseif i == 7 then --æ¥¼å…°å¯»å®
       	if GetMissionData(sceneId, selfId, MD_SEEK_TREASURE) == GetTime2Day() then
       		tempData[i].nCount = 1
       	end
-      elseif i == 8 then --Ò»¸ö¶¼²»ÄÜÅÜ
+      elseif i == 8 then --ä¸€ä¸ªéƒ½ä¸èƒ½è·‘
 	      local DayTimes = GetMissionData( sceneId, selfId, MD_ROUNDMISSION1_TIMES )
 		    local CurDate = mod( DayTimes, 100000 )
 		    local takenTimes = floor( DayTimes/100000 )
 		    if GetDayTime() == CurDate then
 		    	 tempData[i].nCount = takenTimes
 		    end
-		  elseif i == 9 then --»Æ½ğÖ®Á´
+		  elseif i == 9 then --é»„é‡‘ä¹‹é“¾
 		  	local DayTimes = GetMissionData( sceneId, selfId, MD_XINSANHUAN_1_DAYTIME )
 		  	local CurDate = mod( DayTimes, 100000 )
 		    local takenTimes = floor( DayTimes/100000 )
 		    if GetDayTime() == CurDate then
 		    	 tempData[i].nCount = takenTimes
 		    end
-		  elseif i == 10 then --³õÕ½çÎç¿·å = çÎç¿·å + ½ñÌìÖØÖÃÌôÕ½´ÎÊı
+		  elseif i == 10 then --åˆæˆ˜ç¼¥ç¼ˆå³° = ç¼¥ç¼ˆå³° + ä»Šå¤©é‡ç½®æŒ‘æˆ˜æ¬¡æ•°
 		  	local lastTime = GetMissionData( sceneId, selfId, MD_PIAOMIAOFENG_SMALL_LASTTIME )
 				local lastDayTime = floor( lastTime / 100 )
 				local lastDayCount = mod( lastTime, 100 )
@@ -105,11 +105,11 @@ function x800120_AuditGameProgess(sceneId,selfId)
 	      if  GetDayTime() == lastDayTime then
 	      	tempData[i].nCount = tempData[i].nCount + lastDayCount
 	      end
-			elseif i == 11 then --ĞÒÔË¿ì»îÈı
+			elseif i == 11 then --å¹¸è¿å¿«æ´»ä¸‰
 				if GetDayTime() == GetMissionData(sceneId, selfId, MD_XINGYUN_TIME_INFO) then
 					tempData[i].nCount = 1
 				end
-			elseif i == 12 then --º®Óñ¹È ´óÂ½ÎŞ·òÆŞĞĞ¹¦Òª¾÷
+			elseif i == 12 then --å¯’ç‰è°· å¤§é™†æ— å¤«å¦»è¡ŒåŠŸè¦è¯€
 				if GetDayTime() == GetMissionData(sceneId, selfId, MD_HANYUBED_USEBOOK_LASTDAY) then
 				  tempData[i].nCount = 1
 				end

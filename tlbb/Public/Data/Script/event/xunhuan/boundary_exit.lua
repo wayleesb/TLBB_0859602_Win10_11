@@ -1,4 +1,4 @@
--- Á¬»·¸±±¾»Ø³ÇÊĞµÄ´«ËÍµã
+-- è¿ç¯å‰¯æœ¬å›åŸå¸‚çš„ä¼ é€ç‚¹
 
 x050103_g_ScriptId = 050103
 x050103_g_ControlScript = 050100
@@ -6,20 +6,20 @@ x050103_g_ControlScript = 050100
 x050103_g_Back_X = 60
 x050103_g_Back_Z = 161
 
--- Íæ¼Ò½øÈë´«ËÍµã
+-- ç©å®¶è¿›å…¥ä¼ é€ç‚¹
 function x050103_OnEnterArea( sceneId, selfId )
 	--CallScriptFunction( x050103_g_ControlScript, "Exit", sceneId, selfId )	
-	--2007.12.6 by alan£¬·ÀÖ¹×é¶Ó¸úËæµÄ¶ÓÔ±±»´«ËÍµã´«×ß
-	local oldsceneId = LuaFnGetCopySceneData_Param( sceneId, 3 )				-- È¡µÃ¸±±¾Èë¿Ú³¡¾°ºÅ
+	--2007.12.6 by alanï¼Œé˜²æ­¢ç»„é˜Ÿè·Ÿéšçš„é˜Ÿå‘˜è¢«ä¼ é€ç‚¹ä¼ èµ°
+	local oldsceneId = LuaFnGetCopySceneData_Param( sceneId, 3 )				-- å–å¾—å‰¯æœ¬å…¥å£åœºæ™¯å·
 	CallScriptFunction((400900), "TransferFunc",sceneId, selfId, oldsceneId,x050103_g_Back_X,x050103_g_Back_Z)
 end
 
--- Íæ¼ÒÍ£ÁôÔÚ´«ËÍµã
+-- ç©å®¶åœç•™åœ¨ä¼ é€ç‚¹
 function x050103_OnTimer( sceneId, selfId )
 	return
 end
 
--- Íæ¼ÒÀë¿ª´«ËÍµã
+-- ç©å®¶ç¦»å¼€ä¼ é€ç‚¹
 function x050103_OnLeaveArea( sceneId, selfId )
 	return
 end

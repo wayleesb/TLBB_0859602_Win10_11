@@ -1,5 +1,5 @@
 
---分页信息
+--鍒嗛〉淇℃伅
 local g_CurPage=0
 local g_PageNum=0
 local g_NumPerPage=13
@@ -130,7 +130,7 @@ end
 function GuildLeagueApply_DoAnswer(answer)
 	local index=GuildLeagueApply_List:GetSelectItem()
 	if index==-1 then
-		PushDebugMessage("请先选择一个帮会同盟！")
+		PushDebugMessage("璇峰厛閫夋嫨涓�涓府浼氬悓鐩燂紒")
 		return
 	end
 	

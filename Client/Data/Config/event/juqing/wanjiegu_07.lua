@@ -2,17 +2,17 @@
 x200007_g_ScriptId = 200007
 x200007_g_MissionId = 7
 x200007_g_PreMissionId = 6
-x200007_g_Name	="¶ÎÕı´¾"
-x200007_g_Name1 ="¶ÎÕıÃ÷"
+x200007_g_Name	="æ®µæ­£æ·³"
+x200007_g_Name1 ="æ®µæ­£æ˜"
 x200007_g_MissionKind = 51
 x200007_g_MissionLevel = 20
 x200007_g_IfMissionElite = 0
-x200007_g_MissionName="´ó½ø¾ü"
+x200007_g_MissionName="å¤§è¿›å†›"
 x200007_g_MissionInfo="#{Mis_juqing_0007}"
 x200007_g_MissionTarget="#{Mis_juqing_Tar_0007}"		
-x200007_g_MissionContinue="  ÄãÕÒÎÒÓĞÊ²Ã´ÊÂÇéÂğ£¿"
-x200007_g_MissionComplete="  ÄãÃÇÖÕÓÚÀ´ÁË¡£"
+x200007_g_MissionContinue="  ä½ æ‰¾æˆ‘æœ‰ä»€ä¹ˆäº‹æƒ…å—ï¼Ÿ"
+x200007_g_MissionComplete="  ä½ ä»¬ç»ˆäºæ¥äº†ã€‚"
 x200007_g_MoneyBonus=1580
 x200007_g_exp=12000
-x200007_g_Custom	= { {id="ÒÑ»¤ËÍ¶ÎÕı´¾",num=1} }
+x200007_g_Custom	= { {id="å·²æŠ¤é€æ®µæ­£æ·³",num=1} }
 --MisDescEnd

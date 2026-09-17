@@ -1,7 +1,7 @@
---»î¶¯¡ª¡ª
---Ê¥µ®½ÚÔªµ©»î¶¯-ÊÕ¼¯ÃÅÅÉµÀ¾ß»»½±Àø
+--æ´»åŠ¨â€”â€”
+--åœ£è¯èŠ‚å…ƒæ—¦æ´»åŠ¨-æ”¶é›†é—¨æ´¾é“å…·æ¢å¥–åŠ±
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x050026_g_ScriptId = 050026
 
 
@@ -16,36 +16,36 @@ x050026_g_HeKaId = {
 	                 20310015,
 	                 20310016,
 	                 20310013,	
-}			                                   --ºØ¿¨ID
+}			                                   --è´ºå¡ID
 
 x050026_g_GiftId = {
-                   30501127,	--Ò×Èİµ¤£ºÌÇ¹ûºĞ*1
-                   30501126,	--Ò×Èİµ¤£º´óÁåîõ*1
-                   30501125,	--Ò×Èİµ¤£ºÊ¥µ®Ê÷*1
-                   30505146,	--ĞÒ¸£Ñ©Çò*10
-                   10141101,	--5¸ñ²ÄÁÏ°ü£¨Ê¥µ®ÍàÍâĞÍ£©
-                   10141100,	--5¸ñÎïÆ·°ü£¨Ê¥µ®ÀÏÈË¿Ú´üÍâĞÍ£©
-                   10141105,	--×øÆï£ºÍÒÄñ
-                   10141106,	--×øÆï£ºÄ¾Å£Á÷Âí
-                   10141107,	--×øÆï£ºĞÜ
-                   10141108,	--×øÆï£ºÍÃ×Ó
-                   10141109,	--×øÆï£ºÂ½Îá
-                   10141110,	--×øÆï£º´óÏó
-                   10410108,  --Ê¥µ®Ã±(ÎŞÊôĞÔÊ±×°)
-                   10410098,  --»¶ÀÖÊ¥µ®Ã±£¨×°±¸°ó¶¨£©
-                   10410099,  --»¶ÀÖÊ¥µ®Ã±£¨×°±¸°ó¶¨£©
-                   10410100,  --»¶ÀÖÊ¥µ®Ã±£¨×°±¸°ó¶¨£©
-                   10410101,  --»¶ÀÖÊ¥µ®Ã±£¨×°±¸°ó¶¨£©
-                   10410102,  --»¶ÀÖÊ¥µ®Ã±£¨×°±¸°ó¶¨£©
-                   10410103,  --»¶ÀÖÊ¥µ®Ã±£¨×°±¸°ó¶¨£©
-                   10410104,  --»¶ÀÖÊ¥µ®Ã±£¨×°±¸°ó¶¨£©
-                   10410105,  --»¶ÀÖÊ¥µ®Ã±£¨×°±¸°ó¶¨£©
-                   10410106,  --»¶ÀÖÊ¥µ®Ã±£¨×°±¸°ó¶¨£©
-                   10410107,  --»¶ÀÖÊ¥µ®Ã±£¨×°±¸°ó¶¨£©
-}			                                   --½±Æ·ID
+                   30501127,	--æ˜“å®¹ä¸¹ï¼šç³–æœç›’*1
+                   30501126,	--æ˜“å®¹ä¸¹ï¼šå¤§é“ƒé“›*1
+                   30501125,	--æ˜“å®¹ä¸¹ï¼šåœ£è¯æ ‘*1
+                   30505146,	--å¹¸ç¦é›ªçƒ*10
+                   10141101,	--5æ ¼ææ–™åŒ…ï¼ˆåœ£è¯è¢œå¤–å‹ï¼‰
+                   10141100,	--5æ ¼ç‰©å“åŒ…ï¼ˆåœ£è¯è€äººå£è¢‹å¤–å‹ï¼‰
+                   10141105,	--åéª‘ï¼šé¸µé¸Ÿ
+                   10141106,	--åéª‘ï¼šæœ¨ç‰›æµé©¬
+                   10141107,	--åéª‘ï¼šç†Š
+                   10141108,	--åéª‘ï¼šå…”å­
+                   10141109,	--åéª‘ï¼šé™†å¾
+                   10141110,	--åéª‘ï¼šå¤§è±¡
+                   10410108,  --åœ£è¯å¸½(æ— å±æ€§æ—¶è£…)
+                   10410098,  --æ¬¢ä¹åœ£è¯å¸½ï¼ˆè£…å¤‡ç»‘å®šï¼‰
+                   10410099,  --æ¬¢ä¹åœ£è¯å¸½ï¼ˆè£…å¤‡ç»‘å®šï¼‰
+                   10410100,  --æ¬¢ä¹åœ£è¯å¸½ï¼ˆè£…å¤‡ç»‘å®šï¼‰
+                   10410101,  --æ¬¢ä¹åœ£è¯å¸½ï¼ˆè£…å¤‡ç»‘å®šï¼‰
+                   10410102,  --æ¬¢ä¹åœ£è¯å¸½ï¼ˆè£…å¤‡ç»‘å®šï¼‰
+                   10410103,  --æ¬¢ä¹åœ£è¯å¸½ï¼ˆè£…å¤‡ç»‘å®šï¼‰
+                   10410104,  --æ¬¢ä¹åœ£è¯å¸½ï¼ˆè£…å¤‡ç»‘å®šï¼‰
+                   10410105,  --æ¬¢ä¹åœ£è¯å¸½ï¼ˆè£…å¤‡ç»‘å®šï¼‰
+                   10410106,  --æ¬¢ä¹åœ£è¯å¸½ï¼ˆè£…å¤‡ç»‘å®šï¼‰
+                   10410107,  --æ¬¢ä¹åœ£è¯å¸½ï¼ˆè£…å¤‡ç»‘å®šï¼‰
+}			                                   --å¥–å“ID
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x050026_OnDefaultEvent( sceneId, selfId, targetId )
 
@@ -72,15 +72,15 @@ function x050026_OnDefaultEvent( sceneId, selfId, targetId )
 	    else
 	       str = format("#{SDYD_081007_021}%d#{SDYD_081007_022}", nGetgiftcount);
 	       AddText(sceneId, str);
-	       AddNumText(sceneId, x050026_g_ScriptId,"È·¶¨", 8, 113);
-				AddNumText(sceneId, x050026_g_ScriptId,"È¡Ïû", 8, 114);
+	       AddNumText(sceneId, x050026_g_ScriptId,"ç¡®å®š", 8, 113);
+				AddNumText(sceneId, x050026_g_ScriptId,"å–æ¶ˆ", 8, 114);
 			end
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 	elseif NumText == 113 then
 	  x050026_GivePlayerGift( sceneId, selfId, targetId )	
 	elseif NumText == 114 then
-	  -- ¹Ø±Õ´°¿Ú
+	  -- å…³é—­çª—å£
 	  BeginUICommand(sceneId)
 		EndUICommand(sceneId)
 		DispatchUICommand(sceneId,selfId, 1000)
@@ -89,30 +89,30 @@ function x050026_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x050026_OnEnumerate( sceneId, selfId, targetId )
   
-  --¼ì²âÊ±¼äÊÇ·ñÕıÈ·
+  --æ£€æµ‹æ—¶é—´æ˜¯å¦æ­£ç¡®
 	local isTime = x050026_CheckRightTime()
 	if 1 ~= isTime then
 		return
 	end
 
-	AddNumText(sceneId, x050026_g_ScriptId, "½ÚÈÕºØÌù¶Ò»»ÀñÆ·", 6, 112 )	
-	AddNumText(sceneId, x050026_g_ScriptId, "½ÚÈÕºØÌù¶Ò»»ÀñÆ·½éÉÜ", 11, 111 )												
+	AddNumText(sceneId, x050026_g_ScriptId, "èŠ‚æ—¥è´ºè´´å…‘æ¢ç¤¼å“", 6, 112 )	
+	AddNumText(sceneId, x050026_g_ScriptId, "èŠ‚æ—¥è´ºè´´å…‘æ¢ç¤¼å“ä»‹ç»", 11, 111 )												
 end
 
 --**********************************
---¼ì²â»î¶¯Ê±¼äÊÇ·ñÕıÈ·
+--æ£€æµ‹æ´»åŠ¨æ—¶é—´æ˜¯å¦æ­£ç¡®
 --**********************************
 function x050026_CheckRightTime( sceneId )
 	  
-	local today = GetDayTime()						--µ±Ç°Ê±¼ä
-		local firstDay = 8357								-- 2008Äê 12 ÔÂ 23 ÈÕ
-		local lastDay = 9007								-- 2009Äê 1  ÔÂ 8  ÈÕ
+	local today = GetDayTime()						--å½“å‰æ—¶é—´
+		local firstDay = 8357								-- 2008å¹´ 12 æœˆ 23 æ—¥
+		local lastDay = 9007								-- 2009å¹´ 1  æœˆ 8  æ—¥
 	  
-	-- 12 ÔÂ 31 ÈÕ 0 Ê± ~ 1 ÔÂ 7 ÈÕ 24 Ê±
+	-- 12 æœˆ 31 æ—¥ 0 æ—¶ ~ 1 æœˆ 7 æ—¥ 24 æ—¶
 	if today <= firstDay or today >= lastDay then
 		return 0
 	end
@@ -122,17 +122,17 @@ function x050026_CheckRightTime( sceneId )
 end
 
 --**********************************
---¸øÍæ¼ÒĞÂÄêºØÌû
+--ç»™ç©å®¶æ–°å¹´è´ºå¸–
 --**********************************
 function x050026_GivePlayerGift( sceneId, selfId, targetId )
 
-	--¹Ø±Õ¶Ô»°´°¿Ú....
+	--å…³é—­å¯¹è¯çª—å£....
 	BeginUICommand( sceneId )
 		UICommand_AddInt( sceneId, targetId )
 	EndUICommand( sceneId )
 	DispatchUICommand( sceneId, selfId, 1000 )
 
-	--Èç¹ûÍæ¼ÒµÈ¼¶Ğ¡ÓÚ25²»Óè»»È¡ºØ¿¨
+	--å¦‚æœç©å®¶ç­‰çº§å°äº25ä¸äºˆæ¢å–è´ºå¡
 	if	GetLevel( sceneId, selfId) < 25 then
 		BeginEvent(sceneId)
 			AddText( sceneId, "#{SDYD_081007_008}" )
@@ -141,7 +141,7 @@ function x050026_GivePlayerGift( sceneId, selfId, targetId )
 		return
 	end
 	
-	--·ñÓĞ1¸öĞÂÄê·û½Ú....
+	--å¦æœ‰1ä¸ªæ–°å¹´ç¬¦èŠ‚....
 	local ShaoLinHeKaCount = LuaFnGetAvailableItemCount(sceneId, selfId, x050026_g_HeKaId[1])
 	local MingJiaoHeKaCount = LuaFnGetAvailableItemCount(sceneId, selfId, x050026_g_HeKaId[2])
 	local GaiBangHeKaCount = LuaFnGetAvailableItemCount(sceneId, selfId, x050026_g_HeKaId[3])
@@ -201,7 +201,7 @@ function x050026_GivePlayerGift( sceneId, selfId, targetId )
 		return
 	end	
 	
-	--¼ì²â±³°üÊÇ·ñÓĞµØ·½....
+	--æ£€æµ‹èƒŒåŒ…æ˜¯å¦æœ‰åœ°æ–¹....
 	if LuaFnGetPropertyBagSpace( sceneId, selfId ) < 1 then
 		BeginEvent(sceneId)
 			AddText( sceneId, "#{SDYD_081007_011}" )
@@ -210,7 +210,7 @@ function x050026_GivePlayerGift( sceneId, selfId, targetId )
 		return
 	end
 	
-	--ÊÇ·ñÉ¾³ıÊ§°Ü....
+	--æ˜¯å¦åˆ é™¤å¤±è´¥....
 	for i, v in x050026_g_HeKaId do
 	  if LuaFnDelAvailableItem(sceneId, selfId, v, 1) == 0 then
 			 BeginEvent(sceneId)
@@ -223,103 +223,103 @@ function x050026_GivePlayerGift( sceneId, selfId, targetId )
 	    
 	    
 	local odds = random(1,1000)
-	local GiftId = 0   --ÀñÎïID
-	local GiftNum = 0  --ÀñÎïÊıÁ¿
+	local GiftId = 0   --ç¤¼ç‰©ID
+	local GiftNum = 0  --ç¤¼ç‰©æ•°é‡
 	local strtext
 
-	--Ëæ»ú·¢·ÅÀñÎï
+	--éšæœºå‘æ”¾ç¤¼ç‰©
 	  if( odds >= 1 and odds <= 81 ) then       --81
 	    GiftId = x050026_g_GiftId[1]
 	    GiftNum = 1
-	    strtext = "¹§Ï²Äú»ñµÃÀñÎïÒ×Èİµ¤£ºÌÇ¹ûºĞ£¬×£ÄúÓÎÏ·Óä¿ì£¡"
+	    strtext = "æ­å–œæ‚¨è·å¾—ç¤¼ç‰©æ˜“å®¹ä¸¹ï¼šç³–æœç›’ï¼Œç¥æ‚¨æ¸¸æˆæ„‰å¿«ï¼"
 	  elseif( odds >= 82 and odds <= 162 ) then          --81
 	    GiftId = x050026_g_GiftId[2]
 	    GiftNum = 1
-	    strtext = "¹§Ï²Äú»ñµÃÀñÎïÒ×Èİµ¤£º´óÁåîõ£¬×£ÄúÓÎÏ·Óä¿ì£¡"
+	    strtext = "æ­å–œæ‚¨è·å¾—ç¤¼ç‰©æ˜“å®¹ä¸¹ï¼šå¤§é“ƒé“›ï¼Œç¥æ‚¨æ¸¸æˆæ„‰å¿«ï¼"
 	  elseif( odds >= 163 and odds <= 281 ) then                  --119
 	    GiftId = x050026_g_GiftId[3]
 	    GiftNum = 1
-	    strtext = "¹§Ï²Äú»ñµÃÀñÎïÒ×Èİµ¤£ºÊ¥µ®Ê÷£¬×£ÄúÓÎÏ·Óä¿ì£¡"
+	    strtext = "æ­å–œæ‚¨è·å¾—ç¤¼ç‰©æ˜“å®¹ä¸¹ï¼šåœ£è¯æ ‘ï¼Œç¥æ‚¨æ¸¸æˆæ„‰å¿«ï¼"
 	  elseif( odds >= 282 and odds <= 371 ) then                  --90
 	    GiftId = x050026_g_GiftId[4]
 	    GiftNum = 10
-	    strtext = "¹§Ï²Äú»ñµÃÀñÎïĞÒ¸£Ñ©Çò£¬×£ÄúÓÎÏ·Óä¿ì£¡"
+	    strtext = "æ­å–œæ‚¨è·å¾—ç¤¼ç‰©å¹¸ç¦é›ªçƒï¼Œç¥æ‚¨æ¸¸æˆæ„‰å¿«ï¼"
 	  elseif( odds >= 372 and odds <= 450 ) then                 --79
 	    GiftId = x050026_g_GiftId[5]
 	    GiftNum = 1
-	    strtext = "¹§Ï²Äú»ñµÃÀñÎï5¸ñ²ÄÁÏ°ü£¨Ê¥µ®ÍàÍâĞÍ£©£¬×£ÄúÓÎÏ·Óä¿ì£¡"
+	    strtext = "æ­å–œæ‚¨è·å¾—ç¤¼ç‰©5æ ¼ææ–™åŒ…ï¼ˆåœ£è¯è¢œå¤–å‹ï¼‰ï¼Œç¥æ‚¨æ¸¸æˆæ„‰å¿«ï¼"
 	  elseif( odds >= 451 and odds <= 529 ) then                 --79
 	    GiftId = x050026_g_GiftId[6]
 	    GiftNum = 1
-	    strtext = "¹§Ï²Äú»ñµÃÀñÎï5¸ñÎïÆ·°ü£¨Ê¥µ®ÀÏÈË¿Ú´üÍâĞÍ£©£¬×£ÄúÓÎÏ·Óä¿ì£¡"
+	    strtext = "æ­å–œæ‚¨è·å¾—ç¤¼ç‰©5æ ¼ç‰©å“åŒ…ï¼ˆåœ£è¯è€äººå£è¢‹å¤–å‹ï¼‰ï¼Œç¥æ‚¨æ¸¸æˆæ„‰å¿«ï¼"
 	  elseif( odds >= 530 and odds <= 553 ) then                 --24
 	    GiftId = x050026_g_GiftId[7]
 	    GiftNum = 1
-	    strtext = "¹§Ï²Äú»ñµÃÀñÎï×øÆï£ºÍÒÄñ£¬×£ÄúÓÎÏ·Óä¿ì£¡"
+	    strtext = "æ­å–œæ‚¨è·å¾—ç¤¼ç‰©åéª‘ï¼šé¸µé¸Ÿï¼Œç¥æ‚¨æ¸¸æˆæ„‰å¿«ï¼"
 	  elseif( odds >= 554 and odds <= 577 ) then                 --24
 	    GiftId = x050026_g_GiftId[8]
 	    GiftNum = 1
-	    strtext = "¹§Ï²Äú»ñµÃÀñÎï×øÆï£ºÄ¾Å£Á÷Âí£¬×£ÄúÓÎÏ·Óä¿ì£¡"
+	    strtext = "æ­å–œæ‚¨è·å¾—ç¤¼ç‰©åéª‘ï¼šæœ¨ç‰›æµé©¬ï¼Œç¥æ‚¨æ¸¸æˆæ„‰å¿«ï¼"
 	  elseif( odds >= 578 and odds <= 601 ) then                 --24
 	    GiftId = x050026_g_GiftId[9]
 	    GiftNum = 1
-	    strtext = "¹§Ï²Äú»ñµÃÀñÎï×øÆï£ºĞÜ£¬×£ÄúÓÎÏ·Óä¿ì£¡"
+	    strtext = "æ­å–œæ‚¨è·å¾—ç¤¼ç‰©åéª‘ï¼šç†Šï¼Œç¥æ‚¨æ¸¸æˆæ„‰å¿«ï¼"
 	  elseif( odds >= 602 and odds <= 625 ) then                 --24
 	    GiftId = x050026_g_GiftId[10]
 	    GiftNum = 1
-	    strtext = "¹§Ï²Äú»ñµÃÀñÎï×øÆï£ºÍÃ×Ó£¬×£ÄúÓÎÏ·Óä¿ì£¡"
+	    strtext = "æ­å–œæ‚¨è·å¾—ç¤¼ç‰©åéª‘ï¼šå…”å­ï¼Œç¥æ‚¨æ¸¸æˆæ„‰å¿«ï¼"
 	  elseif( odds >= 626 and odds <= 636 ) then                 --11
 	    GiftId = x050026_g_GiftId[11]
 	    GiftNum = 1
-	    strtext = "¹§Ï²Äú»ñµÃÀñÎï×øÆï£ºÂ½Îá£¬×£ÄúÓÎÏ·Óä¿ì£¡"
+	    strtext = "æ­å–œæ‚¨è·å¾—ç¤¼ç‰©åéª‘ï¼šé™†å¾ï¼Œç¥æ‚¨æ¸¸æˆæ„‰å¿«ï¼"
 	  elseif( odds >= 637 and odds <= 647 ) then                 --11
 	    GiftId = x050026_g_GiftId[12]
 	    GiftNum = 1
-	    strtext = "¹§Ï²Äú»ñµÃÀñÎï×øÆï£º´óÏó£¬×£ÄúÓÎÏ·Óä¿ì£¡"
+	    strtext = "æ­å–œæ‚¨è·å¾—ç¤¼ç‰©åéª‘ï¼šå¤§è±¡ï¼Œç¥æ‚¨æ¸¸æˆæ„‰å¿«ï¼"
 	  elseif( odds >= 648 and odds <= 655 ) then                 --8
 	    GiftId = x050026_g_GiftId[13]
 	    GiftNum = 1
-	    strtext = "¹§Ï²Äú»ñµÃÀñÎïÊ¥µ®Ã±(ÎŞÊôĞÔÊ±×°)£¬×£ÄúÓÎÏ·Óä¿ì£¡"
+	    strtext = "æ­å–œæ‚¨è·å¾—ç¤¼ç‰©åœ£è¯å¸½(æ— å±æ€§æ—¶è£…)ï¼Œç¥æ‚¨æ¸¸æˆæ„‰å¿«ï¼"
 	  elseif( odds >= 656 and odds <= 656 ) then                 --1
 	    GiftId = x050026_g_GiftId[14]
 	    GiftNum = 1
-	    strtext = "¹§Ï²Äú»ñµÃÀñÎï»¶ÀÖÊ¥µ®Ã±£¨×°±¸°ó¶¨£©£¬×£ÄúÓÎÏ·Óä¿ì£¡"
+	    strtext = "æ­å–œæ‚¨è·å¾—ç¤¼ç‰©æ¬¢ä¹åœ£è¯å¸½ï¼ˆè£…å¤‡ç»‘å®šï¼‰ï¼Œç¥æ‚¨æ¸¸æˆæ„‰å¿«ï¼"
 	  elseif( odds >= 657 and odds <= 661 ) then                 --5
 	    GiftId = x050026_g_GiftId[15]
 	    GiftNum = 1
-	    strtext = "¹§Ï²Äú»ñµÃÀñÎï»¶ÀÖÊ¥µ®Ã±£¨×°±¸°ó¶¨£©£¬×£ÄúÓÎÏ·Óä¿ì£¡"
+	    strtext = "æ­å–œæ‚¨è·å¾—ç¤¼ç‰©æ¬¢ä¹åœ£è¯å¸½ï¼ˆè£…å¤‡ç»‘å®šï¼‰ï¼Œç¥æ‚¨æ¸¸æˆæ„‰å¿«ï¼"
 	  elseif( odds >= 662 and odds <= 666 ) then                 --5
 	    GiftId = x050026_g_GiftId[16]
 	    GiftNum = 1
-	    strtext = "¹§Ï²Äú»ñµÃÀñÎï»¶ÀÖÊ¥µ®Ã±£¨×°±¸°ó¶¨£©£¬×£ÄúÓÎÏ·Óä¿ì£¡"
+	    strtext = "æ­å–œæ‚¨è·å¾—ç¤¼ç‰©æ¬¢ä¹åœ£è¯å¸½ï¼ˆè£…å¤‡ç»‘å®šï¼‰ï¼Œç¥æ‚¨æ¸¸æˆæ„‰å¿«ï¼"
 	  elseif( odds >= 667 and odds <= 684 ) then                 --18
 	    GiftId = x050026_g_GiftId[17]
 	    GiftNum = 1
-	    strtext = "¹§Ï²Äú»ñµÃÀñÎï»¶ÀÖÊ¥µ®Ã±£¨×°±¸°ó¶¨£©£¬×£ÄúÓÎÏ·Óä¿ì£¡"
+	    strtext = "æ­å–œæ‚¨è·å¾—ç¤¼ç‰©æ¬¢ä¹åœ£è¯å¸½ï¼ˆè£…å¤‡ç»‘å®šï¼‰ï¼Œç¥æ‚¨æ¸¸æˆæ„‰å¿«ï¼"
 	  elseif( odds >= 685 and odds <= 714 ) then                 --30
 	    GiftId = x050026_g_GiftId[18]
 	    GiftNum = 1
-	    strtext = "¹§Ï²Äú»ñµÃÀñÎï»¶ÀÖÊ¥µ®Ã±£¨×°±¸°ó¶¨£©£¬×£ÄúÓÎÏ·Óä¿ì£¡"
+	    strtext = "æ­å–œæ‚¨è·å¾—ç¤¼ç‰©æ¬¢ä¹åœ£è¯å¸½ï¼ˆè£…å¤‡ç»‘å®šï¼‰ï¼Œç¥æ‚¨æ¸¸æˆæ„‰å¿«ï¼"
 	  elseif( odds >= 715 and odds <= 760 ) then                 --46
 	    GiftId = x050026_g_GiftId[19]
 	    GiftNum = 1
-	    strtext = "¹§Ï²Äú»ñµÃÀñÎï»¶ÀÖÊ¥µ®Ã±£¨×°±¸°ó¶¨£©£¬×£ÄúÓÎÏ·Óä¿ì£¡"
+	    strtext = "æ­å–œæ‚¨è·å¾—ç¤¼ç‰©æ¬¢ä¹åœ£è¯å¸½ï¼ˆè£…å¤‡ç»‘å®šï¼‰ï¼Œç¥æ‚¨æ¸¸æˆæ„‰å¿«ï¼"
 	  elseif( odds >= 761 and odds <= 814 ) then                 --54
 	    GiftId = x050026_g_GiftId[20]
 	    GiftNum = 1
-	    strtext = "¹§Ï²Äú»ñµÃÀñÎï»¶ÀÖÊ¥µ®Ã±£¨×°±¸°ó¶¨£©£¬×£ÄúÓÎÏ·Óä¿ì£¡"
+	    strtext = "æ­å–œæ‚¨è·å¾—ç¤¼ç‰©æ¬¢ä¹åœ£è¯å¸½ï¼ˆè£…å¤‡ç»‘å®šï¼‰ï¼Œç¥æ‚¨æ¸¸æˆæ„‰å¿«ï¼"
 	  elseif( odds >= 815 and odds <= 892 ) then                 --78
 	    GiftId = x050026_g_GiftId[21]
 	    GiftNum = 1
-	    strtext = "¹§Ï²Äú»ñµÃÀñÎï»¶ÀÖÊ¥µ®Ã±£¨×°±¸°ó¶¨£©£¬×£ÄúÓÎÏ·Óä¿ì£¡"
+	    strtext = "æ­å–œæ‚¨è·å¾—ç¤¼ç‰©æ¬¢ä¹åœ£è¯å¸½ï¼ˆè£…å¤‡ç»‘å®šï¼‰ï¼Œç¥æ‚¨æ¸¸æˆæ„‰å¿«ï¼"
 	  elseif( odds >= 893 and odds <= 966 ) then                 --74
 	    GiftId = x050026_g_GiftId[22]
 	    GiftNum = 1
-	    strtext = "¹§Ï²Äú»ñµÃÀñÎï»¶ÀÖÊ¥µ®Ã±£¨×°±¸°ó¶¨£©£¬×£ÄúÓÎÏ·Óä¿ì£¡"
+	    strtext = "æ­å–œæ‚¨è·å¾—ç¤¼ç‰©æ¬¢ä¹åœ£è¯å¸½ï¼ˆè£…å¤‡ç»‘å®šï¼‰ï¼Œç¥æ‚¨æ¸¸æˆæ„‰å¿«ï¼"
 	  elseif( odds >= 967 and odds <= 1000 ) then                 --34
 	    GiftId = x050026_g_GiftId[23]
 	    GiftNum = 1
-	    strtext = "¹§Ï²Äú»ñµÃÀñÎï»¶ÀÖÊ¥µ®Ã±£¨×°±¸°ó¶¨£©£¬×£ÄúÓÎÏ·Óä¿ì£¡"
+	    strtext = "æ­å–œæ‚¨è·å¾—ç¤¼ç‰©æ¬¢ä¹åœ£è¯å¸½ï¼ˆè£…å¤‡ç»‘å®šï¼‰ï¼Œç¥æ‚¨æ¸¸æˆæ„‰å¿«ï¼"
 	  end
 	
 	BeginAddItem( sceneId )
@@ -331,7 +331,7 @@ function x050026_GivePlayerGift( sceneId, selfId, targetId )
 	AddItemListToHuman(sceneId,selfId)
 	SetMissionData( sceneId, selfId, MD_GETGIFT_COUNT, nGetGiftCount+1 )
 	
-	--ÈÕÖ¾Í³¼Æ
+	--æ—¥å¿—ç»Ÿè®¡
 	local guid = LuaFnObjId2Guid(sceneId, selfId)
 	log = format("ItemId=%d,Num=%d", GiftId, GiftNum)
 	ScriptGlobal_AuditGeneralLog(LUAAUDIT_MPCARD_PRIZE, guid, log)
@@ -341,7 +341,7 @@ function x050026_GivePlayerGift( sceneId, selfId, targetId )
 	EndEvent( sceneId )
   DispatchMissionTips( sceneId, selfId )
   
-	--ÏµÍ³¹«¸æ
+	--ç³»ç»Ÿå…¬å‘Š
 	local	bagpos = -1
 	bagpos = GetBagPosByItemSn(sceneId, selfId, GiftId)
 		
@@ -350,13 +350,13 @@ function x050026_GivePlayerGift( sceneId, selfId, targetId )
 	  ItemInfo = GetBagItemTransfer( sceneId, selfId, bagpos )
 	end
 	local PlayerName = GetName(sceneId,selfId)
-	local str = format( "#{SDYD_16}ÂåÑô#{SDYD_17}#{_INFOUSR%s}#{SDYD_18}#{_INFOMSG%s}#{SDYD_19}#{_INFOUSR%s}#{SDYD_20}", PlayerName, ItemInfo, PlayerName )
+	local str = format( "#{SDYD_16}æ´›é˜³#{SDYD_17}#{_INFOUSR%s}#{SDYD_18}#{_INFOMSG%s}#{SDYD_19}#{_INFOUSR%s}#{SDYD_20}", PlayerName, ItemInfo, PlayerName )
 	BroadMsgByChatPipe( sceneId, selfId, str, 4 )
 
 end
 
 --**********************************
---»ñµÃ½ñÈÕÁìÈ¡½±Æ·´ÎÊı
+--è·å¾—ä»Šæ—¥é¢†å–å¥–å“æ¬¡æ•°
 --**********************************
 function x050026_GetGiftCount( sceneId, selfId )
 	  
@@ -375,55 +375,55 @@ function x050026_GetGiftCount( sceneId, selfId )
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x050026_CheckAccept( sceneId, selfId )
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x050026_OnAccept( sceneId, selfId )
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x050026_OnAbandon( sceneId, selfId )
 end
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x050026_OnContinue( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x050026_CheckSubmit( sceneId, selfId )
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x050026_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 end
 
 --**********************************
---É±ËÀ¹ÖÎï»òÍæ¼Ò
+--æ€æ­»æ€ªç‰©æˆ–ç©å®¶
 --**********************************
 function x050026_OnKillObject( sceneId, selfId, objdataId ,objId )
 end
 
 --**********************************
---½øÈëÇøÓòÊÂ¼ş
+--è¿›å…¥åŒºåŸŸäº‹ä»¶
 --**********************************
 function x050026_OnEnterArea( sceneId, selfId, zoneId )
 end
 
 --**********************************
---µÀ¾ß¸Ä±ä
+--é“å…·æ”¹å˜
 --**********************************
 function x050026_OnItemChanged( sceneId, selfId, itemdataId )
 end

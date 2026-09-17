@@ -1,27 +1,27 @@
 
--- ´´½¨ÈË£º		ñÒÉÙÎ¢
--- ´´½¨Ê±¼ä£º	2008.6.3
--- ¹¦ÄÜÃèÊö£º	¼«Æ·×°±¸·Å³ö£¬ÔÚÊøºÓ¹ÅÕòÃ¿Ê®·ÖÖÓË¢³öËªÓ°BOSS
+-- åˆ›å»ºäººï¼š		è¤šå°‘å¾®
+-- åˆ›å»ºæ—¶é—´ï¼š	2008.6.3
+-- åŠŸèƒ½æè¿°ï¼š	æžå“è£…å¤‡æ”¾å‡ºï¼Œåœ¨æŸæ²³å¤é•‡æ¯ååˆ†é’Ÿåˆ·å‡ºéœœå½±BOSS
 
 -- scriptID = 808040
 
 -- PrintStr("808040")
 
--- ½Å±¾ID
+-- è„šæœ¬ID
 x808040_g_ScriptId	= 808040
 
 
--- ÐèÒªË¢³öµÄËªÓ°BOSSµÄÊý¾Ý±í....
--- ÊøºÓ¹ÅÕòËæ»úµãË¢ÐÂ£¬Ã¿¸ô10·ÖÖÓË¢³ö1Ö»£¬Ë¢ÐÂµã¹²ÓÐ4¸ö ÒªBOSSËÀÍö²Å»áË¢ÐÂ£¬»î×Å²»Ë¢ÐÂ
--- ¾ßÌå×ø±êÎª£ºµã1£¨31£¬38£©£¬µã2£¨32£¬256£©£¬µã3£¨279£¬119£©£¬µã4£¨31£¬145£©
+-- éœ€è¦åˆ·å‡ºçš„éœœå½±BOSSçš„æ•°æ®è¡¨....
+-- æŸæ²³å¤é•‡éšæœºç‚¹åˆ·æ–°ï¼Œæ¯éš”10åˆ†é’Ÿåˆ·å‡º1åªï¼Œåˆ·æ–°ç‚¹å…±æœ‰4ä¸ª è¦BOSSæ­»äº¡æ‰ä¼šåˆ·æ–°ï¼Œæ´»ç€ä¸åˆ·æ–°
+-- å…·ä½“åæ ‡ä¸ºï¼šç‚¹1ï¼ˆ31ï¼Œ38ï¼‰ï¼Œç‚¹2ï¼ˆ32ï¼Œ256ï¼‰ï¼Œç‚¹3ï¼ˆ279ï¼Œ119ï¼‰ï¼Œç‚¹4ï¼ˆ31ï¼Œ145ï¼‰
 x808040_g_BossData = {
 
-	-- ID						BOSSµÄ monster id
-	-- PosX					×ø±ê
-	-- PosY					×ø±ê
-	-- BaseAI				BOSSµÄBaseAI....
-	-- ExtAIScript	BOSSµÄÀ©Õ¹AI....
-	-- ScriptID			BOSSµÄ½Å±¾ID....
+	-- ID						BOSSçš„ monster id
+	-- PosX					åæ ‡
+	-- PosY					åæ ‡
+	-- BaseAI				BOSSçš„BaseAI....
+	-- ExtAIScript	BOSSçš„æ‰©å±•AI....
+	-- ScriptID			BOSSçš„è„šæœ¬ID....
 
 	{ ID=11392, PosX=31,  PosY=38, BaseAI=0, ExtAIScript=0, ScriptID=0 },
 	{ ID=11392, PosX=32,  PosY=256, BaseAI=0, ExtAIScript=0, ScriptID=0 },
@@ -29,20 +29,20 @@ x808040_g_BossData = {
 	{ ID=11392, PosX=31,  PosY=145, BaseAI=0, ExtAIScript=0, ScriptID=0 },
 }
 
--- ³¡¾°ID£¬ÊøºÓ¹ÅÕòµÄ³¡¾°IDÎª420
+-- åœºæ™¯IDï¼ŒæŸæ²³å¤é•‡çš„åœºæ™¯IDä¸º420
 x808040_g_SceneID = 420	
 	
 
 
 
 --**********************************
---½Å±¾Èë¿Úº¯Êý
+--è„šæœ¬å…¥å£å‡½æ•°
 --**********************************
 function x808040_OnDefaultEvent( sceneId, actId, iNoticeType, param2, param3, param4, param5 )
 
 	--PrintStr("x808040_OnDefaultEvent")
 	
-	--¿ªÆô»î¶¯.... ¼ä¸ôÊ®·ÖÖÓ£¬²âÊÔµ÷³É20Ãë¼´¿É¡£ Ê®·ÖÖÓ£º600*1000
+	--å¼€å¯æ´»åŠ¨.... é—´éš”ååˆ†é’Ÿï¼Œæµ‹è¯•è°ƒæˆ20ç§’å³å¯ã€‚ ååˆ†é’Ÿï¼š600*1000
 	if GetActivityState( sceneId, actId ) == -1 then
 		StartOneActivity( sceneId, actId, 600*1000, iNoticeType )
 	end
@@ -50,7 +50,7 @@ function x808040_OnDefaultEvent( sceneId, actId, iNoticeType, param2, param3, pa
 end
 
 --**********************************
---ÐÄÌøº¯Êý
+--å¿ƒè·³å‡½æ•°
 --**********************************
 function x808040_OnTimer( sceneId, actId, uTime )
 
@@ -58,19 +58,19 @@ function x808040_OnTimer( sceneId, actId, uTime )
 	
 	local currHour = GetHour()
 	--PrintStr("x808040_OnTimer::currHour:"..currHour)
-	-- 0µãµ½2µãË¢¹Ö
+	-- 0ç‚¹åˆ°2ç‚¹åˆ·æ€ª
 	if currHour >= 0 and currHour < 2 then
-		-- Èç¹û³¡¾°ÖÐÃ»ÓÐËªÓ°BOSS£¬ÔòË¢³öÒ»¸öÀ´¡£
+		-- å¦‚æžœåœºæ™¯ä¸­æ²¡æœ‰éœœå½±BOSSï¼Œåˆ™åˆ·å‡ºä¸€ä¸ªæ¥ã€‚
 		x808040_CreateABoss()
 	end
-	-- 10µãµ½24µãË¢¹Ö
+	-- 10ç‚¹åˆ°24ç‚¹åˆ·æ€ª
 	if currHour >= 10 and currHour < 24 then
-		-- Èç¹û³¡¾°ÖÐÃ»ÓÐËªÓ°BOSS£¬ÔòË¢³öÒ»¸öÀ´¡£
+		-- å¦‚æžœåœºæ™¯ä¸­æ²¡æœ‰éœœå½±BOSSï¼Œåˆ™åˆ·å‡ºä¸€ä¸ªæ¥ã€‚
 		x808040_CreateABoss()
 	end
 
 
-	--¼ì²â»î¶¯ÊÇ·ñ¹ýÆÚ
+	--æ£€æµ‹æ´»åŠ¨æ˜¯å¦è¿‡æœŸ
 	if CheckActiviyValidity( sceneId, actId ) == 0 then
 		StopOneActivity( sceneId, actId )
 	end
@@ -79,7 +79,7 @@ end
 
 function x808040_CreateABoss()
 
-	--±éÀú³¡¾°ÖÐËùÓÐµÄ¹Ö....¸üÐÂBOSSÖØ½¨×´Ì¬....
+	--éåŽ†åœºæ™¯ä¸­æ‰€æœ‰çš„æ€ª....æ›´æ–°BOSSé‡å»ºçŠ¶æ€....
 	local NeedCreate = 1
 	local nMonsterNum = GetMonsterCount(x808040_g_SceneID)
 	
@@ -89,7 +89,7 @@ function x808040_CreateABoss()
 		local MonsterId = GetMonsterObjID(x808040_g_SceneID,i)
 		local MosDataID = GetMonsterDataID( x808040_g_SceneID, MonsterId )
 		if MosDataID == 11392 then
-			-- ñÒÉÙÎ¢£¬2008.6.26¡£µ±³¡¾°ÄÚ´æÔÚ¶à¸ö¹ÖÎïÊ± »áË¢ÐÂ³öÁ½¸öËªÓ°BOSS£¨µ±³¡¾°ÖÐ»¹ÓÐ±ÈËªÓ°IDÖµ¸ü´óµÄ¹Ö£©¡£
+			-- è¤šå°‘å¾®ï¼Œ2008.6.26ã€‚å½“åœºæ™¯å†…å­˜åœ¨å¤šä¸ªæ€ªç‰©æ—¶ ä¼šåˆ·æ–°å‡ºä¸¤ä¸ªéœœå½±BOSSï¼ˆå½“åœºæ™¯ä¸­è¿˜æœ‰æ¯”éœœå½±IDå€¼æ›´å¤§çš„æ€ªï¼‰ã€‚
 			NeedCreate = 0
 			break
 		else
@@ -99,12 +99,12 @@ function x808040_CreateABoss()
 
 	-- PrintStr("NeedCreate:"..NeedCreate)
 	
-	-- ³¡¾°ÖÐÃ»ÓÐËªÓ°BOSS£¬ÔòË¢³öÒ»¸ö¡£
+	-- åœºæ™¯ä¸­æ²¡æœ‰éœœå½±BOSSï¼Œåˆ™åˆ·å‡ºä¸€ä¸ªã€‚
 	if NeedCreate == 1 then 
 	
 		local BossData = x808040_g_BossData[1]
 		
-		-- Ëæ»úË¢¹ÖµÄÎ»ÖÃ£¬¹²4¸ö¡£
+		-- éšæœºåˆ·æ€ªçš„ä½ç½®ï¼Œå…±4ä¸ªã€‚
 		local rand = random(4)
 		--PrintStr("Create Boss Pos:"..rand)
 
@@ -118,12 +118,12 @@ function x808040_CreateABoss()
 			BossData			= x808040_g_BossData[4]
 		end
 		
-		-- Ë¢³öËªÓ°BOSS
+		-- åˆ·å‡ºéœœå½±BOSS
 		LuaFnCreateMonster(x808040_g_SceneID, BossData.ID, BossData.PosX, BossData.PosY, BossData.BaseAI, BossData.ExtAIScript, BossData.ScriptID )
 	end
 end
 
--- Í³¼ÆÏûÃðËªÓ°BOSS...
+-- ç»Ÿè®¡æ¶ˆç­éœœå½±BOSS...
 function x808040_OnPlayerPickUpItemFromShangyingBoss( sceneId, selfId, itemId, bagidx )
 	-- PrintStr("OnPlayerPickUpItemFromShangyingBoss")
 	if itemId == 20310101 or itemId == 20310102 then
@@ -133,7 +133,7 @@ end
 
 function x808040_IsNeedMonster()
 
-	--±éÀú³¡¾°ÖÐËùÓÐµÄ¹Ö....¸üÐÂBOSSÖØ½¨×´Ì¬....
+	--éåŽ†åœºæ™¯ä¸­æ‰€æœ‰çš„æ€ª....æ›´æ–°BOSSé‡å»ºçŠ¶æ€....
 	local NeedCreate = 0
 	local nMonsterNum = GetMonsterCount(x808040_g_SceneID)
 	
@@ -141,7 +141,7 @@ function x808040_IsNeedMonster()
 		local MonsterId = GetMonsterObjID(x808040_g_SceneID,i)
 		local MosDataID = GetMonsterDataID( x808040_g_SceneID, MonsterId )
 		if MosDataID == 11392 then
-			-- ñÒÉÙÎ¢£¬2008.6.26¡£µ±³¡¾°ÄÚ´æÔÚ¶à¸ö¹ÖÎïÊ± »áË¢ÐÂ³öÁ½¸öËªÓ°BOSS£¨µ±³¡¾°ÖÐ»¹ÓÐ±ÈËªÓ°IDÖµ¸ü´óµÄ¹Ö£©¡£
+			-- è¤šå°‘å¾®ï¼Œ2008.6.26ã€‚å½“åœºæ™¯å†…å­˜åœ¨å¤šä¸ªæ€ªç‰©æ—¶ ä¼šåˆ·æ–°å‡ºä¸¤ä¸ªéœœå½±BOSSï¼ˆå½“åœºæ™¯ä¸­è¿˜æœ‰æ¯”éœœå½±IDå€¼æ›´å¤§çš„æ€ªï¼‰ã€‚
 			NeedCreate = 0
 			break
 		else

@@ -8,40 +8,40 @@ x402046_top  	=170.0000
 x402046_bottom  =173.0000
 
 
---Íæ¼Ò½øÈëÒ»¸ö area Ê±´¥·¢
+--ç©å®¶è¿›å…¥ä¸€ä¸ª area æ—¶è§¦å‘
 function x402046_OnEnterArea( sceneId, selfId )
 
 	BeginUICommand(sceneId)
 		UICommand_AddInt(sceneId, x402046_g_ScriptId);
 		UICommand_AddString(sceneId, "GotoLoulan");
-		UICommand_AddString(sceneId, "ÄãÈ·ÈÏÀë¿ªçÎç¿·åÂğ£¿");
+		UICommand_AddString(sceneId, "ä½ ç¡®è®¤ç¦»å¼€ç¼¥ç¼ˆå³°å—ï¼Ÿ");
 	EndUICommand(sceneId)
 	DispatchUICommand(sceneId,selfId, 24)
 	
 	--CallScriptFunction((400900), "TransferFunc",sceneId, selfId, 186,191,221)
 end
 
---Íæ¼ÒÔÚÒ»¸ö area ´ôÁËÒ»¶ÎÊ±¼äÃ»×ßÔò¶¨Ê±´¥·¢
+--ç©å®¶åœ¨ä¸€ä¸ª area å‘†äº†ä¸€æ®µæ—¶é—´æ²¡èµ°åˆ™å®šæ—¶è§¦å‘
 function x402046_OnTimer( sceneId, selfId )
-	-- ºÁÃë£¬¿´ÔÚÕâ¸ö area Í£Áô¶à¾ÃÁË
+	-- æ¯«ç§’ï¼Œçœ‹åœ¨è¿™ä¸ª area åœç•™å¤šä¹…äº†
 	StandingTime = QueryAreaStandingTime( sceneId, selfId )
-	-- 5ÃëºóÈÔÎ´´«ËÍ
+	-- 5ç§’åä»æœªä¼ é€
 	if StandingTime >= 5000 then
 		x402046_OnEnterArea( sceneId, selfId )
 		ResetAreaStandingTime( sceneId, selfId, 0 )
 	end
 end
 
---Íæ¼ÒÀë¿ªÒ»¸ö area Ê±´¥·¢
+--ç©å®¶ç¦»å¼€ä¸€ä¸ª area æ—¶è§¦å‘
 function x402046_OnLeaveArea( sceneId, selfId )
 end
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
-function x402046_GotoLoulan( sceneId, selfId, targetId )	--µã»÷¸ÃÈÎÎñºóÖ´ĞĞ´Ë½Å±¾
+function x402046_GotoLoulan( sceneId, selfId, targetId )	--ç‚¹å‡»è¯¥ä»»åŠ¡åæ‰§è¡Œæ­¤è„šæœ¬
 	
-	--ÊÇ·ñÊÇ¸±±¾
+	--æ˜¯å¦æ˜¯å‰¯æœ¬
 	local sceneType = LuaFnGetSceneType( sceneId )
 	if sceneType ~= 1 then
 		return
@@ -56,7 +56,7 @@ function x402046_GotoLoulan( sceneId, selfId, targetId )	--µã»÷¸ÃÈÎÎñºóÖ´ĞĞ´Ë½Å±
 			targetZ > x402046_bottom   then
 		
 		BeginEvent(sceneId)
-			AddText(sceneId,"ÄãÒÑ¾­²»ÔÚ¿É´«ËÍÇøÓò¡£")
+			AddText(sceneId,"ä½ å·²ç»ä¸åœ¨å¯ä¼ é€åŒºåŸŸã€‚")
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return

@@ -1,12 +1,12 @@
 -- 125021
--- ¾º¼¼³¡ ¸¨Öú¹¦ÄÜ£¬¶Ò»»Ñü´ø
+-- ç«æŠ€åœº è¾…åŠ©åŠŸèƒ½ï¼Œå…‘æ¢è…°å¸¦
 x125021_g_ScriptId = 125021
 
---ÃËÖ÷Ö®Ó¡		Buff6_1		30505143
---Í­Ñü´ø		Girdle3_4		10421018
---ÒøÑü´ø		Girdle3_3		10421019
---½ğÑü´ø		Girdle3_2		10421020
---Æß±¦Ñü´ø	Girdle3_1		10421021
+--ç›Ÿä¸»ä¹‹å°		Buff6_1		30505143
+--é“œè…°å¸¦		Girdle3_4		10421018
+--é“¶è…°å¸¦		Girdle3_3		10421019
+--é‡‘è…°å¸¦		Girdle3_2		10421020
+--ä¸ƒå®è…°å¸¦	Girdle3_1		10421021
 
 x125021_g_StoneId = 30505143
 
@@ -18,84 +18,84 @@ x125021_g_Item_4 = 10421021
 x125021_g_Exp = 50000
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x125021_OnEnumerate( sceneId, selfId, targetId )	
-	AddNumText( sceneId, x125021_g_ScriptId, "ÃËÖ÷Í­Ñü´ø¶Ò»»ÃËÖ÷Ö®Ó¡", 12, 1 )
-	AddNumText( sceneId, x125021_g_ScriptId, "ÃËÖ÷ÒøÑü´ø¶Ò»»ÃËÖ÷Ö®Ó¡", 12, 2 )
-	AddNumText( sceneId, x125021_g_ScriptId, "ÃËÖ÷½ğÑü´ø¶Ò»»ÃËÖ÷Ö®Ó¡", 12, 3 )
+	AddNumText( sceneId, x125021_g_ScriptId, "ç›Ÿä¸»é“œè…°å¸¦å…‘æ¢ç›Ÿä¸»ä¹‹å°", 12, 1 )
+	AddNumText( sceneId, x125021_g_ScriptId, "ç›Ÿä¸»é“¶è…°å¸¦å…‘æ¢ç›Ÿä¸»ä¹‹å°", 12, 2 )
+	AddNumText( sceneId, x125021_g_ScriptId, "ç›Ÿä¸»é‡‘è…°å¸¦å…‘æ¢ç›Ÿä¸»ä¹‹å°", 12, 3 )
 
-	AddNumText( sceneId, x125021_g_ScriptId, "Éı¼¶ÎªÃËÖ÷Í­Ñü´ø", 6, 7 )
-	AddNumText( sceneId, x125021_g_ScriptId, "Éı¼¶ÎªÃËÖ÷ÒøÑü´ø", 6, 4 )
-	AddNumText( sceneId, x125021_g_ScriptId, "Éı¼¶ÎªÃËÖ÷½ğÑü´ø", 6, 5 )
-	AddNumText( sceneId, x125021_g_ScriptId, "Éı¼¶ÎªÃËÖ÷Æß±¦Ñü´ø", 6, 6 )
+	AddNumText( sceneId, x125021_g_ScriptId, "å‡çº§ä¸ºç›Ÿä¸»é“œè…°å¸¦", 6, 7 )
+	AddNumText( sceneId, x125021_g_ScriptId, "å‡çº§ä¸ºç›Ÿä¸»é“¶è…°å¸¦", 6, 4 )
+	AddNumText( sceneId, x125021_g_ScriptId, "å‡çº§ä¸ºç›Ÿä¸»é‡‘è…°å¸¦", 6, 5 )
+	AddNumText( sceneId, x125021_g_ScriptId, "å‡çº§ä¸ºç›Ÿä¸»ä¸ƒå®è…°å¸¦", 6, 6 )
 end
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x125021_OnDefaultEvent( sceneId, selfId, targetId )
 	local Num = GetNumText()
 	if Num == 1  then
     BeginEvent(sceneId)
-      AddText(sceneId,"#BÃËÖ÷Í­Ñü´ø¶Ò»»ÃËÖ÷Ö®Ó¡");
-      AddText(sceneId,"  1¸öÃËÖ÷Í­Ñü´ø¿ÉÒÔ¶Ò»»1¸öÃËÖ÷Ö®Ó¡");
-      AddNumText( sceneId, x125021_g_ScriptId, "È·¶¨", 8, 10 )
-      AddNumText( sceneId, x125021_g_ScriptId, "È¡Ïû", 8, 20 )
+      AddText(sceneId,"#Bç›Ÿä¸»é“œè…°å¸¦å…‘æ¢ç›Ÿä¸»ä¹‹å°");
+      AddText(sceneId,"  1ä¸ªç›Ÿä¸»é“œè…°å¸¦å¯ä»¥å…‘æ¢1ä¸ªç›Ÿä¸»ä¹‹å°");
+      AddNumText( sceneId, x125021_g_ScriptId, "ç¡®å®š", 8, 10 )
+      AddNumText( sceneId, x125021_g_ScriptId, "å–æ¶ˆ", 8, 20 )
     EndEvent(sceneId)
     DispatchEventList(sceneId,selfId,targetId)
 	
 	elseif Num == 2  then
     BeginEvent(sceneId)
-      AddText(sceneId,"#BÃËÖ÷ÒøÑü´ø¶Ò»»ÃËÖ÷Ö®Ó¡");
-      AddText(sceneId,"  1¸öÃËÖ÷ÒøÑü´ø¿ÉÒÔ¶Ò»»10¸öÃËÖ÷Ö®Ó¡");
-      AddNumText( sceneId, x125021_g_ScriptId, "È·¶¨", 8, 11 )
-      AddNumText( sceneId, x125021_g_ScriptId, "È¡Ïû", 8, 20 )
+      AddText(sceneId,"#Bç›Ÿä¸»é“¶è…°å¸¦å…‘æ¢ç›Ÿä¸»ä¹‹å°");
+      AddText(sceneId,"  1ä¸ªç›Ÿä¸»é“¶è…°å¸¦å¯ä»¥å…‘æ¢10ä¸ªç›Ÿä¸»ä¹‹å°");
+      AddNumText( sceneId, x125021_g_ScriptId, "ç¡®å®š", 8, 11 )
+      AddNumText( sceneId, x125021_g_ScriptId, "å–æ¶ˆ", 8, 20 )
     EndEvent(sceneId)
     DispatchEventList(sceneId,selfId,targetId)
 		
 	elseif Num == 3  then
     BeginEvent(sceneId)
-      AddText(sceneId,"#BÃËÖ÷½ğÑü´ø¶Ò»»ÃËÖ÷Ö®Ó¡");
-      AddText(sceneId,"  1¸öÃËÖ÷½ğÑü´ø¿ÉÒÔ¶Ò»»100¸öÃËÖ÷Ö®Ó¡");
-      AddNumText( sceneId, x125021_g_ScriptId, "È·¶¨", 8, 12 )
-      AddNumText( sceneId, x125021_g_ScriptId, "È¡Ïû", 8, 20 )
+      AddText(sceneId,"#Bç›Ÿä¸»é‡‘è…°å¸¦å…‘æ¢ç›Ÿä¸»ä¹‹å°");
+      AddText(sceneId,"  1ä¸ªç›Ÿä¸»é‡‘è…°å¸¦å¯ä»¥å…‘æ¢100ä¸ªç›Ÿä¸»ä¹‹å°");
+      AddNumText( sceneId, x125021_g_ScriptId, "ç¡®å®š", 8, 12 )
+      AddNumText( sceneId, x125021_g_ScriptId, "å–æ¶ˆ", 8, 20 )
     EndEvent(sceneId)
     DispatchEventList(sceneId,selfId,targetId)
 
 	elseif Num == 4  then
     BeginEvent(sceneId)
-      AddText(sceneId,"#BÉı¼¶ÎªÃËÖ÷ÒøÑü´ø");
-      AddText(sceneId,"  Éı¼¶³ÉÎªÃËÖ÷ÒøÑü´øĞèÒªÏûºÄ£º#r#G    1¸öÃËÖ÷Í­Ñü´ø#r    9¸öÃËÖ÷Ö®Ó¡#r    ÄãÈ·¶¨ÒªÉı¼¶Âğ£¿");
-      AddNumText( sceneId, x125021_g_ScriptId, "È·¶¨", 8, 13 )
-      AddNumText( sceneId, x125021_g_ScriptId, "È¡Ïû", 8, 20 )
+      AddText(sceneId,"#Bå‡çº§ä¸ºç›Ÿä¸»é“¶è…°å¸¦");
+      AddText(sceneId,"  å‡çº§æˆä¸ºç›Ÿä¸»é“¶è…°å¸¦éœ€è¦æ¶ˆè€—ï¼š#r#G    1ä¸ªç›Ÿä¸»é“œè…°å¸¦#r    9ä¸ªç›Ÿä¸»ä¹‹å°#r    ä½ ç¡®å®šè¦å‡çº§å—ï¼Ÿ");
+      AddNumText( sceneId, x125021_g_ScriptId, "ç¡®å®š", 8, 13 )
+      AddNumText( sceneId, x125021_g_ScriptId, "å–æ¶ˆ", 8, 20 )
     EndEvent(sceneId)
     DispatchEventList(sceneId,selfId,targetId)
 
 	elseif Num == 5  then
     BeginEvent(sceneId)
-      AddText(sceneId,"#BÉı¼¶ÎªÃËÖ÷½ğÑü´ø");
-      AddText(sceneId,"  Éı¼¶³ÉÎªÃËÖ÷½ğÑü´øĞèÒªÏûºÄ£º#r#G    1¸öÃËÖ÷ÒøÑü´ø#r    90¸öÃËÖ÷Ö®Ó¡#r    #{_EXCHG"..tostring(500000).."}#W#r  ÄãÈ·¶¨ÒªÉı¼¶Âğ£¿");
-      AddNumText( sceneId, x125021_g_ScriptId, "È·¶¨", 8, 14 )
-      AddNumText( sceneId, x125021_g_ScriptId, "È¡Ïû", 8, 20 )
+      AddText(sceneId,"#Bå‡çº§ä¸ºç›Ÿä¸»é‡‘è…°å¸¦");
+      AddText(sceneId,"  å‡çº§æˆä¸ºç›Ÿä¸»é‡‘è…°å¸¦éœ€è¦æ¶ˆè€—ï¼š#r#G    1ä¸ªç›Ÿä¸»é“¶è…°å¸¦#r    90ä¸ªç›Ÿä¸»ä¹‹å°#r    #{_EXCHG"..tostring(500000).."}#W#r  ä½ ç¡®å®šè¦å‡çº§å—ï¼Ÿ");
+      AddNumText( sceneId, x125021_g_ScriptId, "ç¡®å®š", 8, 14 )
+      AddNumText( sceneId, x125021_g_ScriptId, "å–æ¶ˆ", 8, 20 )
     EndEvent(sceneId)
     DispatchEventList(sceneId,selfId,targetId)
 
 	elseif Num == 6  then
     BeginEvent(sceneId)
-      AddText(sceneId,"#BÉı¼¶ÎªÃËÖ÷Æß±¦Ñü´ø");
-      AddText(sceneId,"  Éı¼¶³ÉÎªÃËÖ÷Æß±¦Ñü´øĞèÒªÏûºÄ£º#r#G    1¸öÃËÖ÷½ğÑü´ø#r    400¸öÃËÖ÷Ö®Ó¡#r    #{_EXCHG"..tostring(1000000).."}#W#r  ÄãÈ·¶¨ÒªÉı¼¶Âğ£¿");
-      AddNumText( sceneId, x125021_g_ScriptId, "È·¶¨", 8, 15 )
-      AddNumText( sceneId, x125021_g_ScriptId, "È¡Ïû", 8, 20 )
+      AddText(sceneId,"#Bå‡çº§ä¸ºç›Ÿä¸»ä¸ƒå®è…°å¸¦");
+      AddText(sceneId,"  å‡çº§æˆä¸ºç›Ÿä¸»ä¸ƒå®è…°å¸¦éœ€è¦æ¶ˆè€—ï¼š#r#G    1ä¸ªç›Ÿä¸»é‡‘è…°å¸¦#r    400ä¸ªç›Ÿä¸»ä¹‹å°#r    #{_EXCHG"..tostring(1000000).."}#W#r  ä½ ç¡®å®šè¦å‡çº§å—ï¼Ÿ");
+      AddNumText( sceneId, x125021_g_ScriptId, "ç¡®å®š", 8, 15 )
+      AddNumText( sceneId, x125021_g_ScriptId, "å–æ¶ˆ", 8, 20 )
     EndEvent(sceneId)
     DispatchEventList(sceneId,selfId,targetId)
 
 	elseif Num == 7  then
     BeginEvent(sceneId)
-      AddText(sceneId,"#BÉı¼¶ÎªÃËÖ÷Í­Ñü´ø");
-      AddText(sceneId,"  Éı¼¶³ÉÎªÃËÖ÷Í­Ñü´øĞèÒªÏûºÄ£º#r#G    40¸öÃËÖ÷Í­Ñü´øËéÆ¬#W#r  ÄãÈ·¶¨ÒªÉı¼¶Âğ£¿");
-      AddNumText( sceneId, x125021_g_ScriptId, "È·¶¨", 8, 16 )
-      AddNumText( sceneId, x125021_g_ScriptId, "È¡Ïû", 8, 20 )
+      AddText(sceneId,"#Bå‡çº§ä¸ºç›Ÿä¸»é“œè…°å¸¦");
+      AddText(sceneId,"  å‡çº§æˆä¸ºç›Ÿä¸»é“œè…°å¸¦éœ€è¦æ¶ˆè€—ï¼š#r#G    40ä¸ªç›Ÿä¸»é“œè…°å¸¦ç¢ç‰‡#W#r  ä½ ç¡®å®šè¦å‡çº§å—ï¼Ÿ");
+      AddNumText( sceneId, x125021_g_ScriptId, "ç¡®å®š", 8, 16 )
+      AddNumText( sceneId, x125021_g_ScriptId, "å–æ¶ˆ", 8, 20 )
     EndEvent(sceneId)
     DispatchEventList(sceneId,selfId,targetId)
 	end
@@ -129,7 +129,7 @@ function x125021_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
--- ËéÆ¬»»Ñü´ø
+-- ç¢ç‰‡æ¢è…°å¸¦
 --**********************************
 function x125021_StoneToItem(sceneId, selfId)
 	
@@ -137,15 +137,15 @@ function x125021_StoneToItem(sceneId, selfId)
 		AddItem( sceneId, x125021_g_Item_1, 1 )
 	local ret = EndAddItem(sceneId,selfId)
 	
-	-- Ñü´øËéÆ¬µÄID
+	-- è…°å¸¦ç¢ç‰‡çš„ID
 	local nStoneId = 40004434
 	if ret > 0  then
 		if LuaFnGetAvailableItemCount(sceneId, selfId, nStoneId)>=40 then
 			LuaFnDelAvailableItem(sceneId,selfId,nStoneId,40)
 			AddItemListToHuman(sceneId,selfId)
 			x125021_DispatchTips(sceneId,selfId,1)
-			-- Ìí¼ÓÒ»¸ö¶Ò»»ÈÕÖ¾
-			LuaFnAuditPlayerBehavior(sceneId, selfId, "ËéÆ¬»»Ñü´ø");
+			-- æ·»åŠ ä¸€ä¸ªå…‘æ¢æ—¥å¿—
+			LuaFnAuditPlayerBehavior(sceneId, selfId, "ç¢ç‰‡æ¢è…°å¸¦");
 		else
 			x125021_DispatchTips(sceneId,selfId,0)
 		end
@@ -176,8 +176,8 @@ function x125021_UpdateItem( sceneId, selfId, nIndex )
 				LuaFnDelAvailableItem(sceneId,selfId,x125021_g_Item_1,1)
 				
 				AddItemListToHuman(sceneId,selfId)
-				-- Ìí¼Ó×°±¸Éı¼¶ÈÕÖ¾
-				LuaFnAuditPlayerBehavior(sceneId, selfId, "Í­Ñü´ø»»ÒøÑü´ø");
+				-- æ·»åŠ è£…å¤‡å‡çº§æ—¥å¿—
+				LuaFnAuditPlayerBehavior(sceneId, selfId, "é“œè…°å¸¦æ¢é“¶è…°å¸¦");
 
 		    	x125021_DispatchTips(sceneId,selfId,1)
 				return
@@ -201,13 +201,13 @@ function x125021_UpdateItem( sceneId, selfId, nIndex )
 				LuaFnDelAvailableItem(sceneId,selfId,x125021_g_StoneId,90)
 				LuaFnDelAvailableItem(sceneId,selfId,x125021_g_Item_2,1)
 				
-				-- ¿ÛG
+				-- æ‰£G
 				--CostMoney(sceneId,selfId,500000)
 				LuaFnCostMoneyWithPriority( sceneId, selfId, 500000 )  
 				
 				AddItemListToHuman(sceneId,selfId)
-				-- Ìí¼Ó×°±¸Éı¼¶ÈÕÖ¾
-				LuaFnAuditPlayerBehavior(sceneId, selfId, "ÒøÑü´ø»»½ğÑü´ø");
+				-- æ·»åŠ è£…å¤‡å‡çº§æ—¥å¿—
+				LuaFnAuditPlayerBehavior(sceneId, selfId, "é“¶è…°å¸¦æ¢é‡‘è…°å¸¦");
 
 		    	x125021_DispatchTips(sceneId,selfId,1)
 				return
@@ -231,21 +231,21 @@ function x125021_UpdateItem( sceneId, selfId, nIndex )
 				LuaFnDelAvailableItem(sceneId,selfId,x125021_g_StoneId,400)
 				LuaFnDelAvailableItem(sceneId,selfId,x125021_g_Item_3,1)
 				
-				-- ¿ÛG
+				-- æ‰£G
 				--CostMoney(sceneId,selfId,1000000)
 				LuaFnCostMoneyWithPriority( sceneId, selfId, 1000000 )  
 				AddItemListToHuman(sceneId,selfId)
 				
 				
-				-- Ìí¼Ó×°±¸Éı¼¶ÈÕÖ¾
-				LuaFnAuditPlayerBehavior(sceneId, selfId, "½ğÑü´ø»»Æß±¦Ñü´ø");
+				-- æ·»åŠ è£…å¤‡å‡çº§æ—¥å¿—
+				LuaFnAuditPlayerBehavior(sceneId, selfId, "é‡‘è…°å¸¦æ¢ä¸ƒå®è…°å¸¦");
 	    	x125021_DispatchTips(sceneId,selfId,1)
 		    	
-		    -- ·¢ËÍÊÀ½ç¹«¸æ
+		    -- å‘é€ä¸–ç•Œå…¬å‘Š
 				local szTransferEquip = GetItemTransfer(sceneId,selfId,0)
 		    
 				local str = ""
-				str = format("#PÓÚ¾ÅÁ«´óº°£ºÌìÏÂÓ¢ĞÛÃÇ£¡Î°´óµÄÓ¢ĞÛ#{_INFOUSR%s}¶àÄêÀ´ÔÚ·âìøÌ¨ÉÏÔ¡Ñª·ÜÕ½£¬ÖÕÓÚÓ®µÃÁËÎäÁÖÃËÖ÷ÕæÕıµÄ±êÖ¾£¡#{_INFOMSG%s}£¡", GetName(sceneId,selfId), szTransferEquip)
+				str = format("#Päºä¹è²å¤§å–Šï¼šå¤©ä¸‹è‹±é›„ä»¬ï¼ä¼Ÿå¤§çš„è‹±é›„#{_INFOUSR%s}å¤šå¹´æ¥åœ¨å°ç¦…å°ä¸Šæµ´è¡€å¥‹æˆ˜ï¼Œç»ˆäºèµ¢å¾—äº†æ­¦æ—ç›Ÿä¸»çœŸæ­£çš„æ ‡å¿—ï¼#{_INFOMSG%s}ï¼", GetName(sceneId,selfId), szTransferEquip)
 				BroadMsgByChatPipe(sceneId, selfId, str, 4)
 		    
 				return
@@ -269,8 +269,8 @@ function x125021_ChangeItem( sceneId, selfId, nIndex )
 		if ret > 0  then
 			if LuaFnDelAvailableItem(sceneId,selfId,x125021_g_Item_1,1) == 1  then
 				AddItemListToHuman(sceneId,selfId)
-				--Ìí¼Ó¶Ò»»ÈÕÖ¾
-				LuaFnAuditPlayerBehavior(sceneId, selfId, "Í­Ñü´ø»»1ÃËÖ÷Ó¡");
+				--æ·»åŠ å…‘æ¢æ—¥å¿—
+				LuaFnAuditPlayerBehavior(sceneId, selfId, "é“œè…°å¸¦æ¢1ç›Ÿä¸»å°");
 			    x125021_DispatchTips(sceneId,selfId,1)
 			    return
 			end
@@ -283,8 +283,8 @@ function x125021_ChangeItem( sceneId, selfId, nIndex )
 		if ret > 0  then
 			if LuaFnDelAvailableItem(sceneId,selfId,x125021_g_Item_2,1) == 1  then
 				AddItemListToHuman(sceneId,selfId)
-				--Ìí¼Ó¶Ò»»ÈÕÖ¾
-				LuaFnAuditPlayerBehavior(sceneId, selfId, "ÒøÑü´ø»»10ÃËÖ÷Ó¡");
+				--æ·»åŠ å…‘æ¢æ—¥å¿—
+				LuaFnAuditPlayerBehavior(sceneId, selfId, "é“¶è…°å¸¦æ¢10ç›Ÿä¸»å°");
 			    x125021_DispatchTips(sceneId,selfId,1)
 			    return
 			end
@@ -297,8 +297,8 @@ function x125021_ChangeItem( sceneId, selfId, nIndex )
 		if ret > 0  then
 			if LuaFnDelAvailableItem(sceneId,selfId,x125021_g_Item_3,1) == 1  then
 				AddItemListToHuman(sceneId,selfId)
-				--Ìí¼Ó¶Ò»»ÈÕÖ¾
-				LuaFnAuditPlayerBehavior(sceneId, selfId, "½ğÑü´ø»»100ÃËÖ÷Ó¡");
+				--æ·»åŠ å…‘æ¢æ—¥å¿—
+				LuaFnAuditPlayerBehavior(sceneId, selfId, "é‡‘è…°å¸¦æ¢100ç›Ÿä¸»å°");
 			  	x125021_DispatchTips(sceneId,selfId,1)
 			    return
 			end
@@ -314,22 +314,22 @@ end
 function x125021_DispatchTips(sceneId,selfId,bOk)
 	if bOk == 0  then
 	  BeginEvent(sceneId)
-	    AddText(sceneId,"¶Ò»»Ê§°Ü£¬Çë¼ì²éÎïÆ·ÊÇ·ñ×ã¹»¶Ò»»¡£");
+	    AddText(sceneId,"å…‘æ¢å¤±è´¥ï¼Œè¯·æ£€æŸ¥ç‰©å“æ˜¯å¦è¶³å¤Ÿå…‘æ¢ã€‚");
 	  EndEvent(sceneId)
 	  DispatchMissionTips(sceneId,selfId)
 	elseif bOk == -1  then
 	  BeginEvent(sceneId)
-	    AddText(sceneId,"½ğÇ®²»×ã");    
+	    AddText(sceneId,"é‡‘é’±ä¸è¶³");    
 	  EndEvent(sceneId)
 	  DispatchMissionTips(sceneId,selfId)
 	elseif bOk == -2  then
 	  BeginEvent(sceneId)
-	    AddText(sceneId,"ÄãµÄ±³°üÃ»ÓĞ¿Õ¼äÁË¡£");
+	    AddText(sceneId,"ä½ çš„èƒŒåŒ…æ²¡æœ‰ç©ºé—´äº†ã€‚");
 	  EndEvent(sceneId)
 	  DispatchMissionTips(sceneId,selfId)
 	else
 	  BeginEvent(sceneId)
-	    AddText(sceneId,"¶Ò»»³É¹¦¡£");
+	    AddText(sceneId,"å…‘æ¢æˆåŠŸã€‚");
 	  EndEvent(sceneId)
 	  DispatchMissionTips(sceneId,selfId)
 	end

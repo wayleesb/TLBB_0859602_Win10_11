@@ -1,54 +1,54 @@
---¶Å×ÓÌÚ
+--æœå­è…¾
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x002028_g_scriptId = 002028
 
 x002028_g_shoptableindex=5
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x002028_g_eventList = { 210201, 210202, 210203 }
 
 x002028_g_ControlScript = 050009
-x002028_g_ExchangeList = { id = 40004305, name = "ÉÏºÃÕáÌÇ", cost = 55 }
+x002028_g_ExchangeList = { id = 40004305, name = "ä¸Šå¥½è”—ç³–", cost = 55 }
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x002028_UpdateEventList( sceneId, selfId, targetId )
     local PlayerName = GetName( sceneId, selfId )
 	local PlayerSex = GetSex( sceneId, selfId )
 
 	if PlayerSex == 0 then
-		PlayerSex = "¹ÃÄï"
+		PlayerSex = "å§‘å¨˜"
 	else
-		PlayerSex = "ÉÙÏÀ"
+		PlayerSex = "å°‘ä¾ "
 	end
 
 	BeginEvent( sceneId )
-		AddText( sceneId, "  " .. PlayerName .. PlayerSex .. "£¬Ïë²»Ïë³¢³¢ÎÒÃÇ´óÀíµÄÓĞÃûµÄĞ¡³Ô£¿°üÄã³ÔÁË°ËÍëÓÖ°ËÍë£¬×ßÒ²²»Ïë×ßÁË¡£")
-		AddNumText( sceneId, x002028_g_scriptId, "¹ºÂòÊ³Æ·", 7, 0 )
+		AddText( sceneId, "  " .. PlayerName .. PlayerSex .. "ï¼Œæƒ³ä¸æƒ³å°å°æˆ‘ä»¬å¤§ç†çš„æœ‰åçš„å°åƒï¼ŸåŒ…ä½ åƒäº†å…«ç¢—åˆå…«ç¢—ï¼Œèµ°ä¹Ÿä¸æƒ³èµ°äº†ã€‚")
+		AddNumText( sceneId, x002028_g_scriptId, "è´­ä¹°é£Ÿå“", 7, 0 )
 
 		for i, eventId in x002028_g_eventList do
 			CallScriptFunction( eventId, "OnEnumerate",sceneId, selfId, targetId )
 		end
 
 		if CallScriptFunction( x002028_g_ControlScript, "IsMidAutumnPeriod", sceneId, selfId ) > 0 then
-			--AddNumText( sceneId, x002028_g_scriptId, "»»È¡Ê³²Ä", 6, 1 )
-			--AddNumText( sceneId, x002028_g_scriptId, "Ê³²ÄÓĞÊ²Ã´ÓÃ", 11, 2 )
+			--AddNumText( sceneId, x002028_g_scriptId, "æ¢å–é£Ÿæ", 6, 1 )
+			--AddNumText( sceneId, x002028_g_scriptId, "é£Ÿææœ‰ä»€ä¹ˆç”¨", 11, 2 )
 		end
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x002028_OnDefaultEvent( sceneId, selfId, targetId )
 	x002028_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x002028_OnEventRequest( sceneId, selfId, targetId, eventId )
 	local i, findId
@@ -68,24 +68,24 @@ function x002028_OnEventRequest( sceneId, selfId, targetId, eventId )
 		if GetNumText() == 1 then
 			local score = GetMissionData( sceneId, selfId, MD_MIDAUTUMN_SCORE )
 			if score < x002028_g_ExchangeList.cost then
-				x002028_NotifyFailBox( sceneId, selfId, targetId, "    Òª»»Ò»·İ" .. x002028_g_ExchangeList.name ..
-				"£¬ĞèÒª»ı·Ö" .. x002028_g_ExchangeList.cost .. "µã£¬ÄãÏÖÔÚÖ»ÓĞ" .. score .. "·Ö£¬ËÆºõ²»¹»°¡¡£" )
+				x002028_NotifyFailBox( sceneId, selfId, targetId, "    è¦æ¢ä¸€ä»½" .. x002028_g_ExchangeList.name ..
+				"ï¼Œéœ€è¦ç§¯åˆ†" .. x002028_g_ExchangeList.cost .. "ç‚¹ï¼Œä½ ç°åœ¨åªæœ‰" .. score .. "åˆ†ï¼Œä¼¼ä¹ä¸å¤Ÿå•Šã€‚" )
 				return
 			end
 
 			BeginEvent( sceneId )
-				AddText( sceneId, "  ÄãÄ¿Ç°µÄÖĞÇï»ı·ÖÎª" .. score .. "·Ö£¬»»È¡Ò»·İ" ..
-					x002028_g_ExchangeList.name .. "£¬ĞèÒª»ı·Ö" .. x002028_g_ExchangeList.cost .. "µã£¬ÄãÈ·¶¨Òª»»Âğ£¿" )
+				AddText( sceneId, "  ä½ ç›®å‰çš„ä¸­ç§‹ç§¯åˆ†ä¸º" .. score .. "åˆ†ï¼Œæ¢å–ä¸€ä»½" ..
+					x002028_g_ExchangeList.name .. "ï¼Œéœ€è¦ç§¯åˆ†" .. x002028_g_ExchangeList.cost .. "ç‚¹ï¼Œä½ ç¡®å®šè¦æ¢å—ï¼Ÿ" )
 
-				AddNumText( sceneId, x002028_g_scriptId, "È·¶¨Òª»»", -1, 3 )
-				AddNumText( sceneId, x002028_g_scriptId, "ÎÒÖ»ÊÇÂ·¹ı", -1, 4 )
+				AddNumText( sceneId, x002028_g_scriptId, "ç¡®å®šè¦æ¢", -1, 3 )
+				AddNumText( sceneId, x002028_g_scriptId, "æˆ‘åªæ˜¯è·¯è¿‡", -1, 4 )
 			EndEvent( sceneId )
 			DispatchEventList( sceneId, selfId, targetId )
 		elseif GetNumText() == 2 then
-			x002028_NotifyFailBox( sceneId, selfId, targetId, "    ÔÚÂåÑô½ªÀğ£¨127£¬" ..
-				"154£©£¬ËÕÖİ°üÊÀÈÙ£¨190£¬168£©£¬´óÀí¶Å×ÓÌÚ£¨109£¬170£©·Ö±ğ»»" ..
-				"ÈıÖÖ²»Í¬µÄÊ³²Äºó£¬ÕÒËÕÖİ£¨193£¬148£©ÔÀ³£Ô²´«ËÍµ½Î÷ºşÀ´»»ÖĞÇï" ..
-				"ÌØÊâÎïÆ·¡£" )
+			x002028_NotifyFailBox( sceneId, selfId, targetId, "    åœ¨æ´›é˜³å§œé²¤ï¼ˆ127ï¼Œ" ..
+				"154ï¼‰ï¼Œè‹å·åŒ…ä¸–è£ï¼ˆ190ï¼Œ168ï¼‰ï¼Œå¤§ç†æœå­è…¾ï¼ˆ109ï¼Œ170ï¼‰åˆ†åˆ«æ¢" ..
+				"ä¸‰ç§ä¸åŒçš„é£Ÿæåï¼Œæ‰¾è‹å·ï¼ˆ193ï¼Œ148ï¼‰å²³å¸¸åœ†ä¼ é€åˆ°è¥¿æ¹–æ¥æ¢ä¸­ç§‹" ..
+				"ç‰¹æ®Šç‰©å“ã€‚" )
 			return
 		elseif GetNumText() == 3 then
 			local score = GetMissionData( sceneId, selfId, MD_MIDAUTUMN_SCORE )
@@ -94,12 +94,12 @@ function x002028_OnEventRequest( sceneId, selfId, targetId, eventId )
 			end
 
 			if LuaFnTryRecieveItem( sceneId, selfId, x002028_g_ExchangeList.id, QUALITY_MUST_BE_CHANGE ) < 0 then
-				x002028_NotifyFailBox( sceneId, selfId, targetId, "    ±³°ü¿Õ¼äÒÑÂú¡£" )
+				x002028_NotifyFailBox( sceneId, selfId, targetId, "    èƒŒåŒ…ç©ºé—´å·²æ»¡ã€‚" )
 			end
 
 			score = score - x002028_g_ExchangeList.cost
 			SetMissionData( sceneId, selfId, MD_MIDAUTUMN_SCORE, score )
-			x002028_NotifyFailBox( sceneId, selfId, targetId, "    Ê£Óà»ı·Ö£º" .. score .. "¡£" )
+			x002028_NotifyFailBox( sceneId, selfId, targetId, "    å‰©ä½™ç§¯åˆ†ï¼š" .. score .. "ã€‚" )
 			return
 		elseif GetNumText() == 4 then
 			BeginUICommand( sceneId )
@@ -111,7 +111,7 @@ function x002028_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x002028_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 	local i, findId
@@ -127,10 +127,10 @@ function x002028_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x002028_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
-	--¾Ü¾øÖ®ºó£¬Òª·µ»ØNPCµÄÊÂ¼şÁĞ±í
+	--æ‹’ç»ä¹‹åï¼Œè¦è¿”å›NPCçš„äº‹ä»¶åˆ—è¡¨
 	local i, findId
 	for i, findId in x002028_g_eventList do
 		if missionScriptId == findId then
@@ -141,7 +141,7 @@ function x002028_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¼ÌĞø£¨ÒÑ¾­½ÓÁËÈÎÎñ£©
+--ç»§ç»­ï¼ˆå·²ç»æ¥äº†ä»»åŠ¡ï¼‰
 --**********************************
 function x002028_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 	local i, findId
@@ -154,7 +154,7 @@ function x002028_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---Ìá½»ÒÑ×öÍêµÄÈÎÎñ
+--æäº¤å·²åšå®Œçš„ä»»åŠ¡
 --**********************************
 function x002028_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, selectRadioId )
 	local i, findId
@@ -167,13 +167,13 @@ function x002028_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 end
 
 --**********************************
---ËÀÍöÊÂ¼ş
+--æ­»äº¡äº‹ä»¶
 --**********************************
 function x002028_OnDie( sceneId, selfId, killerId )
 end
 
 --**********************************
---¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+--å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x002028_NotifyFailBox( sceneId, selfId, targetId, msg )
 	BeginEvent( sceneId )

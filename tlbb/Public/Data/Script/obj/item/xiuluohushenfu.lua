@@ -1,68 +1,68 @@
---¶òĞŞÂŞ»¤Éí·û£¬ÓÀÒ¹ĞŞÂŞ»¤Éí·û£¬Íò½ÙĞŞÂŞ»¤Éí·û
+--å„ä¿®ç½—æŠ¤èº«ç¬¦ï¼Œæ°¸å¤œä¿®ç½—æŠ¤èº«ç¬¦ï¼Œä¸‡åŠ«ä¿®ç½—æŠ¤èº«ç¬¦
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x300003_g_scriptId = 300003
 
---ÈÎÎñºÅ
+--ä»»åŠ¡å·
 x300003_g_MissionId = 637
 
---ÎïÆ·±àºÅ
-x300003_g_ItemId1 = 40002087		--¶òĞŞÂŞ»¤Éí·û
-x300003_g_ItemId2 =	40002088		--ÓÀÒ¹ĞŞÂŞ»¤Éí·û
-x300003_g_ItemId3 =	40002089		--Íò½ÙĞŞÂŞ»¤Éí·û
-x300003_g_ItemId4 = 40002090		--ĞŞÂŞÍõµÄÖ¸Ê¾
+--ç‰©å“ç¼–å·
+x300003_g_ItemId1 = 40002087		--å„ä¿®ç½—æŠ¤èº«ç¬¦
+x300003_g_ItemId2 =	40002088		--æ°¸å¤œä¿®ç½—æŠ¤èº«ç¬¦
+x300003_g_ItemId3 =	40002089		--ä¸‡åŠ«ä¿®ç½—æŠ¤èº«ç¬¦
+x300003_g_ItemId4 = 40002090		--ä¿®ç½—ç‹çš„æŒ‡ç¤º
 --**********************************
---Ë¢ĞÂÊÂ¼ş
+--åˆ·æ–°äº‹ä»¶
 --**********************************
 function x300003_OnDefaultEvent( sceneId, selfId, BagIndex )
-	--ÅĞ¶ÏÊÇ·ñÓĞ¶òĞŞÂŞ»¤Éí·û
+	--åˆ¤æ–­æ˜¯å¦æœ‰å„ä¿®ç½—æŠ¤èº«ç¬¦
 	if (HaveItem (sceneId,selfId,x300003_g_ItemId1) < 0 ) then
 		BeginEvent(sceneId)
-			AddText(sceneId,"ĞèÒª¶òĞŞÂŞ»¤Éí·û")
+			AddText(sceneId,"éœ€è¦å„ä¿®ç½—æŠ¤èº«ç¬¦")
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
 	end
-	--ÅĞ¶ÏÊÇ·ñÓĞ¶òĞŞÂŞ»¤Éí·û
+	--åˆ¤æ–­æ˜¯å¦æœ‰å„ä¿®ç½—æŠ¤èº«ç¬¦
 	if (HaveItem (sceneId,selfId,x300003_g_ItemId2) < 0 ) then
 		BeginEvent(sceneId)
-			AddText(sceneId,"ĞèÒªÓÀÒ¹ĞŞÂŞ»¤Éí·û")
+			AddText(sceneId,"éœ€è¦æ°¸å¤œä¿®ç½—æŠ¤èº«ç¬¦")
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
 	end
-	--ÅĞ¶ÏÊÇ·ñÓĞ
+	--åˆ¤æ–­æ˜¯å¦æœ‰
 	if (HaveItem (sceneId,selfId,x300003_g_ItemId3) < 0 ) then
 		BeginEvent(sceneId)
-			AddText(sceneId,"ĞèÒªÍò½ÙĞŞÂŞ»¤Éí·û")
+			AddText(sceneId,"éœ€è¦ä¸‡åŠ«ä¿®ç½—æŠ¤èº«ç¬¦")
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
 	end
 	
-	--Ôö¼ÓĞŞÂŞÍõµÄÖ¸Ê¾
+	--å¢åŠ ä¿®ç½—ç‹çš„æŒ‡ç¤º
 	BeginAddItem(sceneId)
 		AddItem( sceneId,x300003_g_ItemId4, 1 )
 	ret = EndAddItem(sceneId,selfId)
 	if ret >0 then 
 		AddItemListToHuman(sceneId,selfId)
 		BeginEvent(sceneId)
-			AddText(sceneId,"ÄãµÃµ½ÁËĞŞÂŞÍõµÄÖ¸Ê¾1/1")
+			AddText(sceneId,"ä½ å¾—åˆ°äº†ä¿®ç½—ç‹çš„æŒ‡ç¤º1/1")
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
-		--°ÑÈÎÎñÍê³É±êÖ¾ÖÃÎª1
+		--æŠŠä»»åŠ¡å®Œæˆæ ‡å¿—ç½®ä¸º1
 		misIndex = GetMissionIndexByID(sceneId,selfId,x300003_g_MissionId)
 		num = GetMissionParam(sceneId,selfId,misIndex,0)
 		if num == 0 then
 			SetMissionByIndex(sceneId,selfId,misIndex,0,0)
 		end
-		--É¾³ı3¸ö»¤Éí·û
+		--åˆ é™¤3ä¸ªæŠ¤èº«ç¬¦
 		DelItem( sceneId, selfId, x300003_g_ItemId1, 1 )
 		DelItem( sceneId, selfId, x300003_g_ItemId2, 1 )
 		DelItem( sceneId, selfId, x300003_g_ItemId3, 1 )
 	else
 		BeginEvent(sceneId)
-			AddText(sceneId,"Ã»ÓĞ±³°ü¿Õ¼ä")
+			AddText(sceneId,"æ²¡æœ‰èƒŒåŒ…ç©ºé—´")
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return

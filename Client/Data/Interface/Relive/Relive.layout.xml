@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" ?>
+<?xml version="1.0" ?>
 <GUILayout>
     <Window Type="DefaultWindow" Name="BackGround_Frame">
         <Property Name="Position" Value="x:0 y:0" />

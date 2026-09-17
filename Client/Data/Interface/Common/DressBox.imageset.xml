@@ -1,0 +1,72 @@
+<Imageset Name="DressBox" Imagefile="Common/tga_DressBox.dds" AutoScaled="true">
+  <Image Name="NewExterior_jiaobiao_shichuan" XPos="240" YPos="0" Width="16" Height="32" />
+  <Image Name="NewExterior_jiaobiao_zhuangebi" XPos="224" YPos="0" Width="16" Height="32" />
+  <Image Name="DressBoxButton_Left_Normal" XPos="3" YPos="4" Width="16" Height="14" />
+  <Image Name="DressBoxButton_Right_Normal" XPos="22" YPos="4" Width="16" Height="14" />
+  <Image Name="DressBoxButton_Left_Pushed" XPos="3" YPos="22" Width="16" Height="14" />
+  <Image Name="DressBoxButton_Right_Pushed" XPos="22" YPos="22" Width="16" Height="14" />
+  <Image Name="DressBoxButton_Left_Hover" XPos="3" YPos="40" Width="16" Height="14" />
+  <Image Name="DressBoxButton_Right_Hover" XPos="22" YPos="40" Width="16" Height="14" />
+  <Image Name="DressBoxButton_Left_Disabled" XPos="3" YPos="58" Width="16" Height="14" />
+  <Image Name="DressBoxButton_Right_Disabled" XPos="22" YPos="58" Width="16" Height="14" />
+  <Image Name="DressModel" XPos="47" YPos="4" Width="76" Height="44" />
+  <Image Name="DressFrame1" XPos="138" YPos="6" Width="23" Height="22" />
+  <Image Name="DressFrame2" XPos="137" YPos="32" Width="35" Height="35" />
+  <Image Name="DressFrame3" XPos="176" YPos="32" Width="35" Height="35" />
+  <Image Name="DressFrameLace1_1_T_L" XPos="3" YPos="77" Width="31" Height="9" />
+  <Image Name="DressFrameLace1_1_T_M" XPos="22" YPos="77" Width="10" Height="2" />
+  <Image Name="DressFrameLace1_1_T_R" XPos="39" YPos="77" Width="32" Height="9" />
+  <Image Name="DressFrameLace1_1_M_L" XPos="3" YPos="80" Width="2" Height="10" />
+  <Image Name="DressFrameLace1_1_M_R" XPos="69" YPos="80" Width="2" Height="10" />
+  <Image Name="DressFrameLace1_1_B_L" XPos="3" YPos="89" Width="31" Height="26" />
+  <Image Name="DressFrameLace1_1_B_M" XPos="30" YPos="113" Width="4" Height="2" />
+  <Image Name="DressFrameLace1_1_B_R" XPos="39" YPos="89" Width="32" Height="26" />
+  <Image Name="DressFrameLace1_2_T_L" XPos="3" YPos="115" Width="31" Height="11" />
+  <Image Name="DressFrameLace1_2_T_M" XPos="30" YPos="115" Width="4" Height="2" />
+  <Image Name="DressFrameLace1_2_T_R" XPos="39" YPos="115" Width="32" Height="11" />
+  <Image Name="DressFrameLace1_2_M_L" XPos="3" YPos="126" Width="10" Height="11" />
+  <Image Name="DressFrameLace1_2_M_R" XPos="61" YPos="126" Width="10" Height="11" />
+  <Image Name="DressFrameLace1_2_B_L" XPos="3" YPos="137" Width="31" Height="3" />
+  <Image Name="DressFrameLace1_2_B_M" XPos="22" YPos="139" Width="10" Height="1" />
+  <Image Name="DressFrameLace1_2_B_R" XPos="39" YPos="137" Width="32" Height="3" />
+
+  <Image Name="DressFrameLace2_T_L" XPos="80" YPos="91" Width="17" Height="17" />
+  <Image Name="DressFrameLace2_T_M" XPos="97" YPos="91" Width="10" Height="6" />
+  <Image Name="DressFrameLace2_T_R" XPos="100" YPos="91" Width="17" Height="17" />
+  <Image Name="DressFrameLace2_M_L" XPos="80" YPos="108" Width="6" Height="10" />
+  <Image Name="DressFrameLace2_M_R" XPos="111" YPos="108" Width="6" Height="10" />
+  <Image Name="DressFrameLace2_B_L" XPos="80" YPos="113" Width="17" Height="17" />
+  <Image Name="DressFrameLace2_B_M" XPos="97" YPos="124" Width="10" Height="6" />
+  <Image Name="DressFrameLace2_B_R" XPos="100" YPos="113" Width="17" Height="17" />
+
+  <Image Name="DressFrameLace3_T_L" XPos="121" YPos="91" Width="17" Height="17" />
+  <Image Name="DressFrameLace3_T_M" XPos="138" YPos="91" Width="10" Height="6" />
+  <Image Name="DressFrameLace3_T_R" XPos="141" YPos="91" Width="17" Height="17" />
+  <Image Name="DressFrameLace3_M_L" XPos="121" YPos="108" Width="6" Height="10" />
+  <Image Name="DressFrameLace3_M_R" XPos="152" YPos="108" Width="6" Height="10" />
+  <Image Name="DressFrameLace3_B_L" XPos="121" YPos="113" Width="17" Height="17" />
+  <Image Name="DressFrameLace3_B_M" XPos="138" YPos="124" Width="10" Height="6" />
+  <Image Name="DressFrameLace3_B_R" XPos="141" YPos="113" Width="17" Height="17" />
+
+  <Image Name="DressFrameHover_T_L" XPos="166" YPos="81" Width="14" Height="18" />
+  <Image Name="DressFrameHover_T_M" XPos="180" YPos="81" Width="28" Height="12" />
+  <Image Name="DressFrameHover_T_R" XPos="208" YPos="81" Width="14" Height="18" />
+  <Image Name="DressFrameHover_M_L" XPos="166" YPos="99" Width="12" Height="22" />
+  <Image Name="DressFrameHover_M_R" XPos="210" YPos="99" Width="12" Height="22" />
+  <Image Name="DressFrameHover_B_L" XPos="166" YPos="121" Width="14" Height="18" />
+  <Image Name="DressFrameHover_B_M" XPos="180" YPos="127" Width="28" Height="12" />
+  <Image Name="DressFrameHover_B_R" XPos="208" YPos="121" Width="14" Height="18" />
+
+  <Image Name="DressChange_Normal" XPos="0" YPos="145" Width="84" Height="27" />
+  <Image Name="DressChange_Hover" XPos="0" YPos="173" Width="84" Height="27" />
+  <Image Name="DressChange_Pushed" XPos="0" YPos="201" Width="84" Height="27" />
+  <Image Name="DressChange_Disabled" XPos="0" YPos="229" Width="84" Height="27" />
+  <Image Name="DressUp_Normal" XPos="85" YPos="145" Width="84" Height="27" />
+  <Image Name="DressUp_Hover" XPos="85" YPos="173" Width="84" Height="27" />
+  <Image Name="DressUp_Pushed" XPos="85" YPos="201" Width="84" Height="27" />
+  <Image Name="DressUp_Disabled" XPos="85" YPos="229" Width="84" Height="27" />
+  <Image Name="DressTry_Normal" XPos="170" YPos="145" Width="84" Height="27" />
+  <Image Name="DressTry_Hover" XPos="170" YPos="173" Width="84" Height="27" />
+  <Image Name="DressTry_Pushed" XPos="170" YPos="201" Width="84" Height="27" />
+  <Image Name="DressTry_Disabled" XPos="170" YPos="229" Width="84" Height="27" />
+</Imageset>

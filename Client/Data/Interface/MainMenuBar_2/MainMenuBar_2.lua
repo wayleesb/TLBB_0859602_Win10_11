@@ -49,7 +49,7 @@ function MainMenuBar_2_OnEvent(event)
 		else
 			this:Hide()
 		end
-		-- ÏÔÊ¾¾­Ñé
+		-- æ˜¾ç¤ºç»éªŒ
 	elseif( event == "CHANGE_BAR" and arg0 == "main") then
 		
 		AxTrace(0,0,"arg1 =" .. tostring(arg1))
@@ -95,7 +95,7 @@ function MainMenuBar_2_Clicked(nIndex)
 	if DataPool:IsCanDoAction() then
 		MAIN_2_BUTTONS[nIndex]:DoAction();
 	else
-		PushDebugMessage("Äã²»ÄÜÕâÃ´×ö¡£")
+		PushDebugMessage("ä½ ä¸èƒ½è¿™ä¹ˆåšã€‚")
 		return;
 	end
 end

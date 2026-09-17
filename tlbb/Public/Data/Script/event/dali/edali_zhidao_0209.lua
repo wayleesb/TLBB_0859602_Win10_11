@@ -1,58 +1,58 @@
---Ñ§Ï°¼¼ÄÜ
---¾Å´óÃÅÅÉ¼¼ÄÜ´«ÊÚ
+--å­¦ä¹ æŠ€èƒ½
+--ä¹å¤§é—¨æ´¾æŠ€èƒ½ä¼ æˆ
 
 --MisDescBegin
---½Å±¾ºÅ
+--è„šæœ¬å·
 x210209_g_ScriptId = 210209
 
---ÈÎÎñºÅ
+--ä»»åŠ¡å·
 x210209_g_MissionId = 449
 
---ÈÎÎñ¹éÀà
+--ä»»åŠ¡å½’ç±»
 x210209_g_MissionKind = 13
 
---ÈÎÎñµÀ¾ß±àºÅ
+--ä»»åŠ¡é“å…·ç¼–å·
 x210209_g_ItemId = 40002108
 
---ÈÎÎñµÈ¼¶
+--ä»»åŠ¡ç­‰çº§
 x210209_g_MissionLevel = 1
 
---ÊÇ·ñÊÇ¾«Ó¢ÈÎÎñ
+--æ˜¯å¦æ˜¯ç²¾è‹±ä»»åŠ¡
 x210209_g_IfMissionElite = 0
 
---ÈÎÎñÃû
-x210209_g_MissionName="Ñ§Ï°¼¼ÄÜ"
-x210209_g_MissionInfo="  È¥ÕÒ¾Å´óÃÅÅÉµÄµÜ×ÓÑ§Ï°Ò»Ïî¼¼ÄÜ"
-x210209_g_MissionTarget="Ñ§Ï°¼¼ÄÜ¡£"
-x210209_g_MissionComplete="  ¼ÈÈ»ÄãÄÃÀ´ÁËÍÆ¼öĞÅ£¬ÄÇÎÒ¾Í½Ì¸øÄãÒ»ÏîĞÂÊÖ¼¼ÄÜ£¬ÒªºÃºÃÑ§Ï°£¬¶à¶àÁ·Ï°²Å¿ÉÒÔ¡£"
-x210209_g_Name_0="ÕÔÌìÊ¦"
+--ä»»åŠ¡å
+x210209_g_MissionName="å­¦ä¹ æŠ€èƒ½"
+x210209_g_MissionInfo="  å»æ‰¾ä¹å¤§é—¨æ´¾çš„å¼Ÿå­å­¦ä¹ ä¸€é¡¹æŠ€èƒ½"
+x210209_g_MissionTarget="å­¦ä¹ æŠ€èƒ½ã€‚"
+x210209_g_MissionComplete="  æ—¢ç„¶ä½ æ‹¿æ¥äº†æ¨èä¿¡ï¼Œé‚£æˆ‘å°±æ•™ç»™ä½ ä¸€é¡¹æ–°æ‰‹æŠ€èƒ½ï¼Œè¦å¥½å¥½å­¦ä¹ ï¼Œå¤šå¤šç»ƒä¹ æ‰å¯ä»¥ã€‚"
+x210209_g_Name_0="èµµå¤©å¸ˆ"
 
 --hzp 2009-2-18 begin<<
---x210209_g_Name_1="»ÛÒ×"
---x210209_g_Name_2="Ê¯±¦"
---x210209_g_Name_3="¼òÄş"
---x210209_g_Name_4="ÕÅ»ñ"
---x210209_g_Name_5="Â·ÈıÄï"
---x210209_g_Name_6="º£·ç×Ó"
---x210209_g_Name_7="ÆÆÌ°"
---x210209_g_Name_8="³ÌÇàËª"
---x210209_g_Name_9="å£Ì¨×ÓÓğ"
+--x210209_g_Name_1="æ…§æ˜“"
+--x210209_g_Name_2="çŸ³å®"
+--x210209_g_Name_3="ç®€å®"
+--x210209_g_Name_4="å¼ è·"
+--x210209_g_Name_5="è·¯ä¸‰å¨˜"
+--x210209_g_Name_6="æµ·é£å­"
+--x210209_g_Name_7="ç ´è´ª"
+--x210209_g_Name_8="ç¨‹é’éœœ"
+--x210209_g_Name_9="æ¾¹å°å­ç¾½"
 
 x210209_g_XinShouJiNeng = {
-{name="»ÛÒ×",			skill="Ñ§Ï°Íâ¹¦»¤Ìå"},
-{name="Ê¯±¦",			skill="Ñ§Ï°·ÜÁ¦´ò»÷"},
-{name="¼òÄş",			skill="Ñ§Ï°Òªº¦¹¥»÷"},
-{name="ÕÅ»ñ",			skill="Ñ§Ï°ÄÚ¾¢¹¥»÷"},
-{name="Â·ÈıÄï",		skill="Ñ§Ï°³õ¼¶ÖÎÁÆ"},
-{name="º£·ç×Ó",		skill="Ñ§Ï°ÄÚ¹¦»¤Ìå"},
-{name="ÆÆÌ°",			skill="Ñ§Ï°ÆÆÕÀ¹¥»÷"},
-{name="³ÌÇàËª",		skill="Ñ§Ï°³õ¼¶Òş¶İ"},
-{name="å£Ì¨×ÓÓğ",	skill="Ñ§Ï°È¼ÉÕÏİÚå"},
+{name="æ…§æ˜“",			skill="å­¦ä¹ å¤–åŠŸæŠ¤ä½“"},
+{name="çŸ³å®",			skill="å­¦ä¹ å¥‹åŠ›æ‰“å‡»"},
+{name="ç®€å®",			skill="å­¦ä¹ è¦å®³æ”»å‡»"},
+{name="å¼ è·",			skill="å­¦ä¹ å†…åŠ²æ”»å‡»"},
+{name="è·¯ä¸‰å¨˜",		skill="å­¦ä¹ åˆçº§æ²»ç–—"},
+{name="æµ·é£å­",		skill="å­¦ä¹ å†…åŠŸæŠ¤ä½“"},
+{name="ç ´è´ª",			skill="å­¦ä¹ ç ´ç»½æ”»å‡»"},
+{name="ç¨‹é’éœœ",		skill="å­¦ä¹ åˆçº§éšé"},
+{name="æ¾¹å°å­ç¾½",	skill="å­¦ä¹ ç‡ƒçƒ§é™·é˜±"},
 }
 -->>end
 --MisDescEnd
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x210209_OnDefaultEvent( sceneId, selfId, targetId )
 	if GetName(sceneId,targetId) ~= x210209_g_Name_0 then
@@ -61,7 +61,7 @@ function x210209_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x210209_OnEnumerate( sceneId, selfId, targetId )
 	
@@ -106,68 +106,68 @@ function x210209_OnEnumerate( sceneId, selfId, targetId )
 	end
 	
 	if GetName(sceneId,targetId) == x210209_g_XinShouJiNeng[1].name then
-		--Ìí¼ÓÃÅÅÉ½éÉÜ
-		AddNumText(sceneId, x210209_g_ScriptId,"ÉÙÁÖÅÉÀ´ÓÉ",11,10);
-		AddNumText(sceneId, x210209_g_ScriptId,"ÉÙÁÖÅÉÕ½¶·ÌØÉ«",11,11);
-		AddNumText(sceneId, x210209_g_ScriptId,"ÉÙÁÖÅÉÉú»îÌØÉ«",11,12);
-		AddNumText(sceneId, x210209_g_ScriptId,"ÉÙÁÖ¹ÅÉ²",11,13);
+		--æ·»åŠ é—¨æ´¾ä»‹ç»
+		AddNumText(sceneId, x210209_g_ScriptId,"å°‘æ—æ´¾æ¥ç”±",11,10);
+		AddNumText(sceneId, x210209_g_ScriptId,"å°‘æ—æ´¾æˆ˜æ–—ç‰¹è‰²",11,11);
+		AddNumText(sceneId, x210209_g_ScriptId,"å°‘æ—æ´¾ç”Ÿæ´»ç‰¹è‰²",11,12);
+		AddNumText(sceneId, x210209_g_ScriptId,"å°‘æ—å¤åˆ¹",11,13);
 	elseif	GetName(sceneId,targetId) == x210209_g_XinShouJiNeng[2].name	 then
-		--Ìí¼ÓÃÅÅÉ½éÉÜ
-		AddNumText(sceneId, x210209_g_ScriptId,"Ã÷½ÌÀ´ÓÉ",11,10);
-		AddNumText(sceneId, x210209_g_ScriptId,"Ã÷½ÌÕ½¶·ÌØÉ«",11,11);
-		AddNumText(sceneId, x210209_g_ScriptId,"Ã÷½ÌÉú»îÌØÉ«",11,12);
-		AddNumText(sceneId, x210209_g_ScriptId,"´ó¹âÃ÷µî",11,13);
+		--æ·»åŠ é—¨æ´¾ä»‹ç»
+		AddNumText(sceneId, x210209_g_ScriptId,"æ˜æ•™æ¥ç”±",11,10);
+		AddNumText(sceneId, x210209_g_ScriptId,"æ˜æ•™æˆ˜æ–—ç‰¹è‰²",11,11);
+		AddNumText(sceneId, x210209_g_ScriptId,"æ˜æ•™ç”Ÿæ´»ç‰¹è‰²",11,12);
+		AddNumText(sceneId, x210209_g_ScriptId,"å¤§å…‰æ˜æ®¿",11,13);
 	elseif	GetName(sceneId,targetId) == x210209_g_XinShouJiNeng[3].name	 then
-		--Ìí¼ÓÃÅÅÉ½éÉÜ
-		AddNumText(sceneId, x210209_g_ScriptId,"Ø¤°ïÀ´ÓÉ",11,10);
-		AddNumText(sceneId, x210209_g_ScriptId,"Ø¤°ïÕ½¶·ÌØÉ«",11,11);
-		AddNumText(sceneId, x210209_g_ScriptId,"Ø¤°ïÉú»îÌØÉ«",11,12);
-		AddNumText(sceneId, x210209_g_ScriptId,"Ø¤°ï×Ü¶æ",11,13);
+		--æ·»åŠ é—¨æ´¾ä»‹ç»
+		AddNumText(sceneId, x210209_g_ScriptId,"ä¸å¸®æ¥ç”±",11,10);
+		AddNumText(sceneId, x210209_g_ScriptId,"ä¸å¸®æˆ˜æ–—ç‰¹è‰²",11,11);
+		AddNumText(sceneId, x210209_g_ScriptId,"ä¸å¸®ç”Ÿæ´»ç‰¹è‰²",11,12);
+		AddNumText(sceneId, x210209_g_ScriptId,"ä¸å¸®æ€»èˆµ",11,13);
 	elseif	GetName(sceneId,targetId) == x210209_g_XinShouJiNeng[4].name	then
-		--Ìí¼ÓÃÅÅÉ½éÉÜ
-		AddNumText(sceneId, x210209_g_ScriptId,"Îäµ±ÅÉÀ´ÓÉ",11,10);
-		AddNumText(sceneId, x210209_g_ScriptId,"Îäµ±ÅÉÕ½¶·ÌØÉ«",11,11);
-		AddNumText(sceneId, x210209_g_ScriptId,"Îäµ±ÅÉÉú»îÌØÉ«",11,12);
-		AddNumText(sceneId, x210209_g_ScriptId,"Îäµ±ÏÉ·ç",11,13);
+		--æ·»åŠ é—¨æ´¾ä»‹ç»
+		AddNumText(sceneId, x210209_g_ScriptId,"æ­¦å½“æ´¾æ¥ç”±",11,10);
+		AddNumText(sceneId, x210209_g_ScriptId,"æ­¦å½“æ´¾æˆ˜æ–—ç‰¹è‰²",11,11);
+		AddNumText(sceneId, x210209_g_ScriptId,"æ­¦å½“æ´¾ç”Ÿæ´»ç‰¹è‰²",11,12);
+		AddNumText(sceneId, x210209_g_ScriptId,"æ­¦å½“ä»™é£",11,13);
 	elseif	GetName(sceneId,targetId) == x210209_g_XinShouJiNeng[5].name then
-		--Ìí¼ÓÃÅÅÉ½éÉÜ
-		AddNumText(sceneId, x210209_g_ScriptId,"¶ëáÒÅÉÀ´ÓÉ",11,10);
-		AddNumText(sceneId, x210209_g_ScriptId,"¶ëáÒÅÉÕ½¶·ÌØÉ«",11,11);
-		AddNumText(sceneId, x210209_g_ScriptId,"¶ëáÒÅÉÉú»îÌØÉ«",11,12);
-		AddNumText(sceneId, x210209_g_ScriptId,"¶ëáÒÌìÏÂĞã",11,13);
+		--æ·»åŠ é—¨æ´¾ä»‹ç»
+		AddNumText(sceneId, x210209_g_ScriptId,"å³¨åµ‹æ´¾æ¥ç”±",11,10);
+		AddNumText(sceneId, x210209_g_ScriptId,"å³¨åµ‹æ´¾æˆ˜æ–—ç‰¹è‰²",11,11);
+		AddNumText(sceneId, x210209_g_ScriptId,"å³¨åµ‹æ´¾ç”Ÿæ´»ç‰¹è‰²",11,12);
+		AddNumText(sceneId, x210209_g_ScriptId,"å³¨åµ‹å¤©ä¸‹ç§€",11,13);
 	elseif	GetName(sceneId,targetId) == x210209_g_XinShouJiNeng[6].name then
-		--Ìí¼ÓÃÅÅÉ½éÉÜ
-		AddNumText(sceneId, x210209_g_ScriptId,"ĞÇËŞÅÉÀ´ÓÉ",11,10);
-		AddNumText(sceneId, x210209_g_ScriptId,"ĞÇËŞÅÉÕ½¶·ÌØÉ«",11,11);
-		AddNumText(sceneId, x210209_g_ScriptId,"ĞÇËŞÅÉÉú»îÌØÉ«",11,12);
-		AddNumText(sceneId, x210209_g_ScriptId,"ĞÇËŞ´ºÇï",11,13);
+		--æ·»åŠ é—¨æ´¾ä»‹ç»
+		AddNumText(sceneId, x210209_g_ScriptId,"æ˜Ÿå®¿æ´¾æ¥ç”±",11,10);
+		AddNumText(sceneId, x210209_g_ScriptId,"æ˜Ÿå®¿æ´¾æˆ˜æ–—ç‰¹è‰²",11,11);
+		AddNumText(sceneId, x210209_g_ScriptId,"æ˜Ÿå®¿æ´¾ç”Ÿæ´»ç‰¹è‰²",11,12);
+		AddNumText(sceneId, x210209_g_ScriptId,"æ˜Ÿå®¿æ˜¥ç§‹",11,13);
 	elseif	GetName(sceneId,targetId) == x210209_g_XinShouJiNeng[7].name then
-		--Ìí¼ÓÃÅÅÉ½éÉÜ
-		AddNumText(sceneId, x210209_g_ScriptId,"ÌìÁúÅÉÀ´ÓÉ",11,10);
-		AddNumText(sceneId, x210209_g_ScriptId,"ÌìÁúÅÉÕ½¶·ÌØÉ«",11,11);
-		AddNumText(sceneId, x210209_g_ScriptId,"ÌìÁúÅÉÉú»îÌØÉ«",11,12);
-		AddNumText(sceneId, x210209_g_ScriptId,"ÌìÁú·çÇé",11,13);
+		--æ·»åŠ é—¨æ´¾ä»‹ç»
+		AddNumText(sceneId, x210209_g_ScriptId,"å¤©é¾™æ´¾æ¥ç”±",11,10);
+		AddNumText(sceneId, x210209_g_ScriptId,"å¤©é¾™æ´¾æˆ˜æ–—ç‰¹è‰²",11,11);
+		AddNumText(sceneId, x210209_g_ScriptId,"å¤©é¾™æ´¾ç”Ÿæ´»ç‰¹è‰²",11,12);
+		AddNumText(sceneId, x210209_g_ScriptId,"å¤©é¾™é£æƒ…",11,13);
 	elseif	GetName(sceneId,targetId) == x210209_g_XinShouJiNeng[8].name then
-		--Ìí¼ÓÃÅÅÉ½éÉÜ
-		AddNumText(sceneId, x210209_g_ScriptId,"ÌìÉ½ÅÉÀ´ÓÉ",11,10);
-		AddNumText(sceneId, x210209_g_ScriptId,"ÌìÉ½ÅÉÕ½¶·ÌØÉ«",11,11);
-		AddNumText(sceneId, x210209_g_ScriptId,"ÌìÉ½ÅÉÉú»îÌØÉ«",11,12);
-		AddNumText(sceneId, x210209_g_ScriptId,"çÎç¿ÌìÉ½",11,13);
+		--æ·»åŠ é—¨æ´¾ä»‹ç»
+		AddNumText(sceneId, x210209_g_ScriptId,"å¤©å±±æ´¾æ¥ç”±",11,10);
+		AddNumText(sceneId, x210209_g_ScriptId,"å¤©å±±æ´¾æˆ˜æ–—ç‰¹è‰²",11,11);
+		AddNumText(sceneId, x210209_g_ScriptId,"å¤©å±±æ´¾ç”Ÿæ´»ç‰¹è‰²",11,12);
+		AddNumText(sceneId, x210209_g_ScriptId,"ç¼¥ç¼ˆå¤©å±±",11,13);
 	elseif	GetName(sceneId,targetId) == x210209_g_XinShouJiNeng[9].name then
-		--Ìí¼ÓÃÅÅÉ½éÉÜ
-		AddNumText(sceneId, x210209_g_ScriptId,"åĞÒ£ÅÉÀ´ÓÉ",11,10);
-		AddNumText(sceneId, x210209_g_ScriptId,"åĞÒ£ÅÉÕ½¶·ÌØÉ«",11,11);
-		AddNumText(sceneId, x210209_g_ScriptId,"åĞÒ£ÅÉÉú»îÌØÉ«",11,12);
-		AddNumText(sceneId, x210209_g_ScriptId,"Áè²¨åĞÒ£",11,13);
+		--æ·»åŠ é—¨æ´¾ä»‹ç»
+		AddNumText(sceneId, x210209_g_ScriptId,"é€é¥æ´¾æ¥ç”±",11,10);
+		AddNumText(sceneId, x210209_g_ScriptId,"é€é¥æ´¾æˆ˜æ–—ç‰¹è‰²",11,11);
+		AddNumText(sceneId, x210209_g_ScriptId,"é€é¥æ´¾ç”Ÿæ´»ç‰¹è‰²",11,12);
+		AddNumText(sceneId, x210209_g_ScriptId,"å‡Œæ³¢é€é¥",11,13);
 	end
 
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x210209_CheckAccept( sceneId, selfId )
-	--ĞèÒªÓĞµÀ¾ß²ÅÄÜ½Ó
+	--éœ€è¦æœ‰é“å…·æ‰èƒ½æ¥
 	if	HaveItemInBag ( sceneId, selfId, x210209_g_ItemId)>0	then
 		return 1
 	else
@@ -176,38 +176,38 @@ function x210209_CheckAccept( sceneId, selfId )
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x210209_OnAccept( sceneId, selfId )
-	--¼ÓÈëÈÎÎñµ½Íæ¼ÒÁĞ±í
+	--åŠ å…¥ä»»åŠ¡åˆ°ç©å®¶åˆ—è¡¨
 	AddMission( sceneId,selfId, x210209_g_MissionId, x210209_g_ScriptId, 0, 0, 0 )
-	Msg2Player(  sceneId, selfId,"#Y½ÓÊÜÈÎÎñ£ºÑ§Ï°¼¼ÄÜ",MSG2PLAYER_PARA )
+	Msg2Player(  sceneId, selfId,"#Yæ¥å—ä»»åŠ¡ï¼šå­¦ä¹ æŠ€èƒ½",MSG2PLAYER_PARA )
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x210209_OnAbandon( sceneId, selfId )
-	--É¾³ıÍæ¼ÒÈÎÎñÁĞ±íÖĞ¶ÔÓ¦µÄÈÎÎñ
+	--åˆ é™¤ç©å®¶ä»»åŠ¡åˆ—è¡¨ä¸­å¯¹åº”çš„ä»»åŠ¡
     DelMission( sceneId, selfId, x210209_g_MissionId )
 --	CallScriptFunction( SCENE_SCRIPT_ID, "DelSignpost", sceneId, selfId, sceneId, g_SignPost.tip )
 end
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x210209_OnContinue( sceneId, selfId, targetId )
-    --Ìá½»ÈÎÎñÊ±µÄËµÃ÷ĞÅÏ¢
+    --æäº¤ä»»åŠ¡æ—¶çš„è¯´æ˜ä¿¡æ¯
     BeginEvent(sceneId)
 		AddText(sceneId,x210209_g_MissionName)
 		AddText(sceneId,x210209_g_MissionComplete)
-		AddText(sceneId,"Äã½«Ñ§»áÒ»ÏîĞÂµÄ¼¼ÄÜ")
+		AddText(sceneId,"ä½ å°†å­¦ä¼šä¸€é¡¹æ–°çš„æŠ€èƒ½")
     EndEvent( )
     DispatchMissionContinueInfo(sceneId,selfId,targetId,x210209_g_ScriptId,x210209_g_MissionId)
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x210209_CheckSubmit( sceneId, selfId, selectRadioId )
 	if	HaveItemInBag (  sceneId, selfId, x210209_g_ItemId)==1	then
@@ -218,135 +218,135 @@ function x210209_CheckSubmit( sceneId, selfId, selectRadioId )
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x210209_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 	if x210209_CheckSubmit( sceneId, selfId, selectRadioId ) == 1 then
-		--Ìí¼ÓÈÎÎñ½±Àø
+		--æ·»åŠ ä»»åŠ¡å¥–åŠ±
 		DelMission( sceneId, selfId, x210209_g_MissionId )
 		MissionCom( sceneId, selfId, x210209_g_MissionId )
 		if  GetName(sceneId,targetId) == x210209_g_XinShouJiNeng[1].name	then
-			--ÅĞ¶¨Íæ¼ÒÊÇ²»ÊÇÒÑ¾­Ñ§»áÁËÕâ¸ö¼¼ÄÜ£¬»áÁË¾Í²»ÈÃÔÚÑ§Ï°ÁË
+			--åˆ¤å®šç©å®¶æ˜¯ä¸æ˜¯å·²ç»å­¦ä¼šäº†è¿™ä¸ªæŠ€èƒ½ï¼Œä¼šäº†å°±ä¸è®©åœ¨å­¦ä¹ äº†
 			if  HaveSkill(sceneId, selfId, 241) > 0  then
 				return
 			end
 			AddSkill(  sceneId, selfId, 241)
 			BeginEvent(sceneId)
-				strText = "ÄãÑ§µ½ĞÂµÄ¼¼ÄÜ£ºÉÙÁÖĞÂÊÖ¼¼ÄÜ£ºÍâ¹¦»¤Ìå"
+				strText = "ä½ å­¦åˆ°æ–°çš„æŠ€èƒ½ï¼šå°‘æ—æ–°æ‰‹æŠ€èƒ½ï¼šå¤–åŠŸæŠ¤ä½“"
 				AddText(sceneId,strText);
 			EndEvent(sceneId)
 			DispatchMissionTips(sceneId,selfId)
 		elseif	GetName(sceneId,targetId) == x210209_g_XinShouJiNeng[2].name	then
-			--ÅĞ¶¨Íæ¼ÒÊÇ²»ÊÇÒÑ¾­Ñ§»áÁËÕâ¸ö¼¼ÄÜ£¬»áÁË¾Í²»ÈÃÔÚÑ§Ï°ÁË
+			--åˆ¤å®šç©å®¶æ˜¯ä¸æ˜¯å·²ç»å­¦ä¼šäº†è¿™ä¸ªæŠ€èƒ½ï¼Œä¼šäº†å°±ä¸è®©åœ¨å­¦ä¹ äº†
 			if  HaveSkill(sceneId, selfId, 242) > 0  then
 				return
 			end
 			AddSkill(  sceneId, selfId, 242)
 			BeginEvent(sceneId)
-				strText = "ÄãÑ§µ½ĞÂµÄ¼¼ÄÜ£ºÃ÷½ÌĞÂÊÖ¼¼ÄÜ£º·ÜÁ¦´ò»÷"
+				strText = "ä½ å­¦åˆ°æ–°çš„æŠ€èƒ½ï¼šæ˜æ•™æ–°æ‰‹æŠ€èƒ½ï¼šå¥‹åŠ›æ‰“å‡»"
 				AddText(sceneId,strText);
 			EndEvent(sceneId)
 			DispatchMissionTips(sceneId,selfId)
 		elseif	GetName(sceneId,targetId) == x210209_g_XinShouJiNeng[3].name	then
-			--ÅĞ¶¨Íæ¼ÒÊÇ²»ÊÇÒÑ¾­Ñ§»áÁËÕâ¸ö¼¼ÄÜ£¬»áÁË¾Í²»ÈÃÔÚÑ§Ï°ÁË
+			--åˆ¤å®šç©å®¶æ˜¯ä¸æ˜¯å·²ç»å­¦ä¼šäº†è¿™ä¸ªæŠ€èƒ½ï¼Œä¼šäº†å°±ä¸è®©åœ¨å­¦ä¹ äº†
 			if  HaveSkill(sceneId, selfId, 243) > 0  then
 				return
 			end
 			AddSkill(  sceneId, selfId, 243)
 			BeginEvent(sceneId)
-				strText = "ÄãÑ§µ½ĞÂµÄ¼¼ÄÜ£ºØ¤°ïĞÂÊÖ¼¼ÄÜ£ºÒªº¦¹¥»÷"
+				strText = "ä½ å­¦åˆ°æ–°çš„æŠ€èƒ½ï¼šä¸å¸®æ–°æ‰‹æŠ€èƒ½ï¼šè¦å®³æ”»å‡»"
 				AddText(sceneId,strText);
 			EndEvent(sceneId)
 			DispatchMissionTips(sceneId,selfId)
 		elseif	GetName(sceneId,targetId) == x210209_g_XinShouJiNeng[4].name	then
-			--ÅĞ¶¨Íæ¼ÒÊÇ²»ÊÇÒÑ¾­Ñ§»áÁËÕâ¸ö¼¼ÄÜ£¬»áÁË¾Í²»ÈÃÔÚÑ§Ï°ÁË
+			--åˆ¤å®šç©å®¶æ˜¯ä¸æ˜¯å·²ç»å­¦ä¼šäº†è¿™ä¸ªæŠ€èƒ½ï¼Œä¼šäº†å°±ä¸è®©åœ¨å­¦ä¹ äº†
 			if  HaveSkill(sceneId, selfId, 244) > 0  then
 				return
 			end
 			AddSkill(  sceneId, selfId, 244)
 			BeginEvent(sceneId)
-				strText = "ÄãÑ§µ½ĞÂµÄ¼¼ÄÜ£ºÎäµ±ĞÂÊÖ¼¼ÄÜ£ºÄÚ¾¢¹¥»÷"
+				strText = "ä½ å­¦åˆ°æ–°çš„æŠ€èƒ½ï¼šæ­¦å½“æ–°æ‰‹æŠ€èƒ½ï¼šå†…åŠ²æ”»å‡»"
 				AddText(sceneId,strText);
 			EndEvent(sceneId)
 			DispatchMissionTips(sceneId,selfId)
 		elseif	GetName(sceneId,targetId) == x210209_g_XinShouJiNeng[5].name	then
-			--ÅĞ¶¨Íæ¼ÒÊÇ²»ÊÇÒÑ¾­Ñ§»áÁËÕâ¸ö¼¼ÄÜ£¬»áÁË¾Í²»ÈÃÔÚÑ§Ï°ÁË
+			--åˆ¤å®šç©å®¶æ˜¯ä¸æ˜¯å·²ç»å­¦ä¼šäº†è¿™ä¸ªæŠ€èƒ½ï¼Œä¼šäº†å°±ä¸è®©åœ¨å­¦ä¹ äº†
 			if  HaveSkill(sceneId, selfId, 245) > 0  then
 				return
 			end
 			AddSkill(  sceneId, selfId, 245)
 			BeginEvent(sceneId)
-				strText = "ÄãÑ§µ½ĞÂµÄ¼¼ÄÜ£º¶ëáÒĞÂÊÖ¼¼ÄÜ£º³õ¼¶ÖÎÁÆ"
+				strText = "ä½ å­¦åˆ°æ–°çš„æŠ€èƒ½ï¼šå³¨åµ‹æ–°æ‰‹æŠ€èƒ½ï¼šåˆçº§æ²»ç–—"
 				AddText(sceneId,strText);
 			EndEvent(sceneId)
 			DispatchMissionTips(sceneId,selfId)
 		elseif	GetName(sceneId,targetId) == x210209_g_XinShouJiNeng[6].name	then
-			--ÅĞ¶¨Íæ¼ÒÊÇ²»ÊÇÒÑ¾­Ñ§»áÁËÕâ¸ö¼¼ÄÜ£¬»áÁË¾Í²»ÈÃÔÚÑ§Ï°ÁË
+			--åˆ¤å®šç©å®¶æ˜¯ä¸æ˜¯å·²ç»å­¦ä¼šäº†è¿™ä¸ªæŠ€èƒ½ï¼Œä¼šäº†å°±ä¸è®©åœ¨å­¦ä¹ äº†
 			if  HaveSkill(sceneId, selfId, 246) > 0  then
 				return
 			end
 			AddSkill(  sceneId, selfId, 246)
 			BeginEvent(sceneId)
-				strText = "ÄãÑ§µ½ĞÂµÄ¼¼ÄÜ£ºĞÇËŞĞÂÊÖ¼¼ÄÜ£ºÄÚ¹¦»¤Ìå"
+				strText = "ä½ å­¦åˆ°æ–°çš„æŠ€èƒ½ï¼šæ˜Ÿå®¿æ–°æ‰‹æŠ€èƒ½ï¼šå†…åŠŸæŠ¤ä½“"
 				AddText(sceneId,strText);
 			EndEvent(sceneId)
 			DispatchMissionTips(sceneId,selfId)
 		elseif	GetName(sceneId,targetId) == x210209_g_XinShouJiNeng[7].name	then
-			--ÅĞ¶¨Íæ¼ÒÊÇ²»ÊÇÒÑ¾­Ñ§»áÁËÕâ¸ö¼¼ÄÜ£¬»áÁË¾Í²»ÈÃÔÚÑ§Ï°ÁË
+			--åˆ¤å®šç©å®¶æ˜¯ä¸æ˜¯å·²ç»å­¦ä¼šäº†è¿™ä¸ªæŠ€èƒ½ï¼Œä¼šäº†å°±ä¸è®©åœ¨å­¦ä¹ äº†
 			if  HaveSkill(sceneId, selfId, 247) > 0  then
 				return
 			end
 			AddSkill(  sceneId, selfId, 247)
 			BeginEvent(sceneId)
-				strText = "ÄãÑ§µ½ĞÂµÄ¼¼ÄÜ£ºÌìÁúÅÉĞÂÊÖ¼¼ÄÜ£ºÆÆÕÀ¹¥»÷"
+				strText = "ä½ å­¦åˆ°æ–°çš„æŠ€èƒ½ï¼šå¤©é¾™æ´¾æ–°æ‰‹æŠ€èƒ½ï¼šç ´ç»½æ”»å‡»"
 				AddText(sceneId,strText);
 			EndEvent(sceneId)
 			DispatchMissionTips(sceneId,selfId)
 		elseif	GetName(sceneId,targetId) == x210209_g_XinShouJiNeng[8].name	then
-			--ÅĞ¶¨Íæ¼ÒÊÇ²»ÊÇÒÑ¾­Ñ§»áÁËÕâ¸ö¼¼ÄÜ£¬»áÁË¾Í²»ÈÃÔÚÑ§Ï°ÁË
+			--åˆ¤å®šç©å®¶æ˜¯ä¸æ˜¯å·²ç»å­¦ä¼šäº†è¿™ä¸ªæŠ€èƒ½ï¼Œä¼šäº†å°±ä¸è®©åœ¨å­¦ä¹ äº†
 			if  HaveSkill(sceneId, selfId, 248) > 0  then
 				return
 			end
 			AddSkill(  sceneId, selfId, 248)
 			BeginEvent(sceneId)
-				strText = "ÄãÑ§µ½ĞÂµÄ¼¼ÄÜ£ºÌìÉ½ĞÂÊÖ¼¼ÄÜ£º³õ¼¶Òş¶İ"
+				strText = "ä½ å­¦åˆ°æ–°çš„æŠ€èƒ½ï¼šå¤©å±±æ–°æ‰‹æŠ€èƒ½ï¼šåˆçº§éšé"
 				AddText(sceneId,strText);
 			EndEvent(sceneId)
 			DispatchMissionTips(sceneId,selfId)
 		elseif	GetName(sceneId,targetId) == x210209_g_XinShouJiNeng[9].name	then
-			--ÅĞ¶¨Íæ¼ÒÊÇ²»ÊÇÒÑ¾­Ñ§»áÁËÕâ¸ö¼¼ÄÜ£¬»áÁË¾Í²»ÈÃÔÚÑ§Ï°ÁË
+			--åˆ¤å®šç©å®¶æ˜¯ä¸æ˜¯å·²ç»å­¦ä¼šäº†è¿™ä¸ªæŠ€èƒ½ï¼Œä¼šäº†å°±ä¸è®©åœ¨å­¦ä¹ äº†
 			if  HaveSkill(sceneId, selfId, 249) > 0  then
 				return
 			end
 			AddSkill(  sceneId, selfId, 249)
 			BeginEvent(sceneId)
-				strText = "ÄãÑ§µ½ĞÂµÄ¼¼ÄÜ£ºåĞÒ£ĞÂÊÖ¼¼ÄÜ£ºÈ¼ÉÕÏİÚå"
+				strText = "ä½ å­¦åˆ°æ–°çš„æŠ€èƒ½ï¼šé€é¥æ–°æ‰‹æŠ€èƒ½ï¼šç‡ƒçƒ§é™·é˜±"
 				AddText(sceneId,strText);
 			EndEvent(sceneId)
 			DispatchMissionTips(sceneId,selfId)
 		end
-		--¿Û³ıÈÎÎñÎïÆ·
+		--æ‰£é™¤ä»»åŠ¡ç‰©å“
 		DelItem( sceneId, selfId, x210209_g_ItemId, 1 )
-		--Ñ§Ï°³É¹¦²¥·ÅÌØĞ§
+		--å­¦ä¹ æˆåŠŸæ’­æ”¾ç‰¹æ•ˆ
 		LuaFnSendSpecificImpactToUnit(sceneId,selfId,selfId,selfId,18,0)
 	end
-	Msg2Player(  sceneId, selfId,"#YÍê³ÉÈÎÎñ£ºÑ§Ï°¼¼ÄÜ",MSG2PLAYER_PARA )
+	Msg2Player(  sceneId, selfId,"#Yå®Œæˆä»»åŠ¡ï¼šå­¦ä¹ æŠ€èƒ½",MSG2PLAYER_PARA )
 end
 
 --**********************************
---É±ËÀ¹ÖÎï»òÍæ¼Ò
+--æ€æ­»æ€ªç‰©æˆ–ç©å®¶
 --**********************************
 function x210209_OnKillObject( sceneId, selfId, objdataId )
 end
 
 --**********************************
---½øÈëÇøÓòÊÂ¼ş
+--è¿›å…¥åŒºåŸŸäº‹ä»¶
 --**********************************
 function x210209_OnEnterZone( sceneId, selfId, zoneId )
 end
 
 --**********************************
---µÀ¾ß¸Ä±ä
+--é“å…·æ”¹å˜
 --**********************************
 function x210209_OnItemChanged( sceneId, selfId, itemdataId )
 end

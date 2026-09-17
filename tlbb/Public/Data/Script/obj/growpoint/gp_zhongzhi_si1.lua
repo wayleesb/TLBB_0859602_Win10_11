@@ -1,22 +1,22 @@
---Éú³¤µã½Å±¾£¬Ë¿Ó×Ãç
---½Å±¾ºÅ
+--ç”Ÿé•¿ç‚¹è„šæœ¬ï¼Œä¸å¹¼è‹—
+--è„šæœ¬å·
 --g_ScriptId = 711051
 
---´ËÉú³¤µã±àºÅ
+--æ­¤ç”Ÿé•¿ç‚¹ç¼–å·
 x711051_g_GpId = 552
 
---ÏÂÒ»¸öÉú³¤µãµÄ±àºÅ
+--ä¸‹ä¸€ä¸ªç”Ÿé•¿ç‚¹çš„ç¼–å·
 x711051_g_GpIdNext = 553
 
 function	 x711051_OnRecycle(sceneId,selfId,targetId)
 	itemBoxX = GetItemBoxWorldPosX(sceneId,targetId)
 	itemBoxZ = GetItemBoxWorldPosZ(sceneId,targetId)
 	ItemBoxId = ItemBoxEnterScene(itemBoxX,itemBoxZ,x711051_g_GpIdNext,sceneId,QUALITY_MUST_BE_CHANGE,0)
-	--µÃµ½Éú³¤µãµÄÖ÷ÈËGUID
-	ItemBoxOwnerGUID = GetItemBoxOwner(sceneId, targetId)		--²ÎÊıÊÇSceneID£¬ItemBoxID
-	--¸øItemBoxÉè¶¨Ö÷ÈË
+	--å¾—åˆ°ç”Ÿé•¿ç‚¹çš„ä¸»äººGUID
+	ItemBoxOwnerGUID = GetItemBoxOwner(sceneId, targetId)		--å‚æ•°æ˜¯SceneIDï¼ŒItemBoxID
+	--ç»™ItemBoxè®¾å®šä¸»äºº
 	SetItemBoxOwner(sceneId,ItemBoxId,ItemBoxOwnerGUID)
 
-	SetItemBoxMaxGrowTime(sceneId,ItemBoxId,450000)	--Éè¶¨»ØÊÕÊ±¼ä
+	SetItemBoxMaxGrowTime(sceneId,ItemBoxId,450000)	--è®¾å®šå›æ”¶æ—¶é—´
 	return 1
 end

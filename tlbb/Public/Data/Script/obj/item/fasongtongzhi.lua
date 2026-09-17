@@ -1,16 +1,16 @@
 
---·¢ËÍÍ¨Öª
+--å‘é€é€šçŸ¥
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x300023_g_scriptId = 300023
 
 x300023_g_event = 210239
 --**********************************
---Ë¢ĞÂÊÂ¼ş
+--åˆ·æ–°äº‹ä»¶
 --**********************************
 function x300023_OnDefaultEvent( sceneId, selfId, BagIndex )
 	--PrintStr("...")
-	--CallScriptFunction(x300023_g_event,"OnUseItem",sceneId, selfId, targetId, eventId)    --x300023_g_eventÀï²»´æÔÚOnUseItemº¯Êı
+	--CallScriptFunction(x300023_g_event,"OnUseItem",sceneId, selfId, targetId, eventId)    --x300023_g_eventé‡Œä¸å­˜åœ¨OnUseItemå‡½æ•°
 end
 
 function x300023_IsSkillLikeScript( sceneId, selfId)

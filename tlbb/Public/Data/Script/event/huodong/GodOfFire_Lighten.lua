@@ -1,11 +1,11 @@
---´´½¨ÈË:[ QUFEI 2008-03-10 10:41 UPDATE BugID 32708 ]
---¹êÍÃÈüÅÜ´«µİ»î¶¯....
+--åˆ›å»ºäºº:[ QUFEI 2008-03-10 10:41 UPDATE BugID 32708 ]
+--é¾Ÿå…”èµ›è·‘ä¼ é€’æ´»åŠ¨....
 
---¿×Ã÷µÆË¢ĞÂ½Å±¾....
---ÔÚ¹êÍÃÈüÅÜ»î¶¯ÖĞÃ¿°ë·ÖÖÓË¢ĞÂÒ»´Î¿×Ã÷µÆ
+--å­”æ˜ç¯åˆ·æ–°è„šæœ¬....
+--åœ¨é¾Ÿå…”èµ›è·‘æ´»åŠ¨ä¸­æ¯åŠåˆ†é’Ÿåˆ·æ–°ä¸€æ¬¡å­”æ˜ç¯
 
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x808083_g_ScriptId	= 808083
 
 x808083_g_PosTable_6 = { { posX = 49,  posY = 183 },{ posX = 70,  posY = 190 },{ posX = 88,  posY = 192 },{ posX = 101, posY = 162 },{ posX = 135, posY = 165 },
@@ -74,7 +74,7 @@ x808083_g_PosTable_8 = { { posX = 235, posY = 277 },{ posX = 231, posY = 264 },{
 											 	 { posX = 283, posY = 139 },{ posX = 276, posY = 149 },{ posX = 176, posY = 146 },{ posX = 110, posY = 142 },{ posX = 97,  posY = 170 },
 											 	 { posX = 114, posY = 187 },{ posX = 135, posY = 243 },{ posX = 164, posY = 241 },{ posX = 200, posY = 252 },{ posX = 224, posY = 240 } }
 
--- µãÁÁ¿×Ã÷µÆËù¸øµÄ¾­Ñé
+-- ç‚¹äº®å­”æ˜ç¯æ‰€ç»™çš„ç»éªŒ
 x808083_g_KongMingLight_EXP = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 																0, 0, 0, 0, 0, 0, 0, 0, 0, 1584, 
 																1656, 1719, 1782, 1851, 1914, 1986, 2049, 2112, 2184, 2571, 
@@ -91,14 +91,14 @@ x808083_g_KongMingLight_EXP = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 																17373, 17499, 17625, 17760, 17886, 18012, 18138, 18273, 18408, 18534, 
 																18660, 18786, 18912, 19047, 19173, 19305, 19434, 19560, 19692, 19692 }
 
--- Ã¿Ìì¹êÍÃÈüÅÜ»î¶¯¿ªÆôÊ±¼ä
+-- æ¯å¤©é¾Ÿå…”èµ›è·‘æ´»åŠ¨å¼€å¯æ—¶é—´
 x808083_g_ActivityTime					= { {tstart=1230, tend=1330},
 																	  {tstart=1930, tend=2030},
 																	  {tstart=2130, tend=2230} }
 
--- ±»´«ËÍµ½ÆäËûÎ»ÖÃµÄËæ»úÊı
+-- è¢«ä¼ é€åˆ°å…¶ä»–ä½ç½®çš„éšæœºæ•°
 x808083_g_GotoScenePosOdds			= 10
--- ½±ÀøµÄÎïÆ·
+-- å¥–åŠ±çš„ç‰©å“
 x808083_g_BonusItem 						= { {ItemID=30501002, Odds1=13,  Num=5},
 																	  {ItemID=30505207, Odds1=19,  Num=1},
 																	  {ItemID=30505208, Odds1=25,  Num=1},
@@ -108,62 +108,62 @@ x808083_g_BonusItem 						= { {ItemID=30501002, Odds1=13,  Num=5},
 																	  {ItemID=30505212, Odds1=85,  Num=1},
 																	  {ItemID=30505213, Odds1=100, Num=1} }
 
---ĞèÒªµÄĞ§¹ûID	»ğ°ÑÊ¹Õß
+--éœ€è¦çš„æ•ˆæœID	ç«æŠŠä½¿è€…
 x808083_g_ImpactID 	= 5929
 
---¿×Ã÷µÆ»ØÊÕÌØĞ§
+--å­”æ˜ç¯å›æ”¶ç‰¹æ•ˆ
 x808083_g_ImpactID_LightOver = { 44, 45, 46 }
 
---Ğ§¹ûµÄID	Èç¹ûÍæ¼ÒÉíÉÏÓĞ SelfimpactID,ÔòÊ¹ÓÃ impactId01,·ñÔòÊ¹ÓÃ impactId02
+--æ•ˆæœçš„ID	å¦‚æœç©å®¶èº«ä¸Šæœ‰ SelfimpactID,åˆ™ä½¿ç”¨ impactId01,å¦åˆ™ä½¿ç”¨ impactId02
 x808083_g_itemList = {}
-x808083_g_itemList[1] = { SelfimpactID=5933, impactId01=5936, impactId02=5935 }			-- Î÷¹ÏÆ¤
-x808083_g_itemList[2] = { SelfimpactID=5934, impactId01=5939, impactId02=0		}			-- î§Ë¯³æ
-x808083_g_itemList[3] = { SelfimpactID=5933, impactId01=0,		impactId02=5937 }			-- ²¶ÊŞ¼Ğ
-x808083_g_itemList[4] = { SelfimpactID=5933, impactId01=0, 	 	impactId02=5938 }			-- Íæ¾ßòÚò¼
-x808083_g_itemList[5] = { SelfimpactID=5933, impactId01=0, 	 	impactId02=5940 }			-- Âí·äÎÑ
+x808083_g_itemList[1] = { SelfimpactID=5933, impactId01=5936, impactId02=5935 }			-- è¥¿ç“œçš®
+x808083_g_itemList[2] = { SelfimpactID=5934, impactId01=5939, impactId02=0		}			-- çŒç¡è™«
+x808083_g_itemList[3] = { SelfimpactID=5933, impactId01=0,		impactId02=5937 }			-- æ•å…½å¤¹
+x808083_g_itemList[4] = { SelfimpactID=5933, impactId01=0, 	 	impactId02=5938 }			-- ç©å…·èœˆèš£
+x808083_g_itemList[5] = { SelfimpactID=5933, impactId01=0, 	 	impactId02=5940 }			-- é©¬èœ‚çª
 
---Èº¹¥µÀ¾ß¹¥»÷·¶Î§
+--ç¾¤æ”»é“å…·æ”»å‡»èŒƒå›´
 x808083_g_AttackRange = 5
 
--- ¹êÍÃÈüÅÜÈÎÎñID
+-- é¾Ÿå…”èµ›è·‘ä»»åŠ¡ID
 x808083_g_MissionId =1000
-x808083_g_MissItemId = 40004444				-- ÈÎÎñÎïÆ·
---ÈÎÎñÊÇ·ñÍê³É
-x808083_g_Mission_IsComplete = 0			--ÈÎÎñ²ÎÊıµÄµÚ0Î»
--- ÈÎÎñÎïÆ·²ÎÊı±ê¼Ç
-x808083_g_LuoYangLighten_Cnt = 5			--¿×Ã÷µÆÂåÑô¿ªÆôÊıÁ¿Ë÷Òı
-x808083_g_SuZhouLighten_Cnt	 = 7			--¿×Ã÷µÆËÕÖİ¿ªÆôÊıÁ¿Ë÷Òı
-x808083_g_DaLiLighten_Cnt		 = 9			--¿×Ã÷µÆ´óÀí¿ªÆôÊıÁ¿Ë÷Òı
+x808083_g_MissItemId = 40004444				-- ä»»åŠ¡ç‰©å“
+--ä»»åŠ¡æ˜¯å¦å®Œæˆ
+x808083_g_Mission_IsComplete = 0			--ä»»åŠ¡å‚æ•°çš„ç¬¬0ä½
+-- ä»»åŠ¡ç‰©å“å‚æ•°æ ‡è®°
+x808083_g_LuoYangLighten_Cnt = 5			--å­”æ˜ç¯æ´›é˜³å¼€å¯æ•°é‡ç´¢å¼•
+x808083_g_SuZhouLighten_Cnt	 = 7			--å­”æ˜ç¯è‹å·å¼€å¯æ•°é‡ç´¢å¼•
+x808083_g_DaLiLighten_Cnt		 = 9			--å­”æ˜ç¯å¤§ç†å¼€å¯æ•°é‡ç´¢å¼•
 
---¹êÍÃÈüÅÜÂåÑô´ò¿¨±ê¼Ç
-x808083_g_LuoYang_RecordIdx  = 1			--ÈÎÎñ²ÎÊıµÄµÚ1Î»
---¹êÍÃÈüÅÜËÕÖİ´ò¿¨±ê¼Ç
-x808083_g_SuZhou_RecordIdx 	 = 2			--ÈÎÎñ²ÎÊıµÄµÚ2Î»
---¹êÍÃÈüÅÜ´óÀí´ò¿¨±ê¼Ç
-x808083_g_DaLi_RecordIdx 		 = 3			--ÈÎÎñ²ÎÊıµÄµÚ3Î»
---¿×Ã÷µÆÍê³ÉÊıÁ¿±ê¼Ç
-x808083_g_KongMing_Lighten	 = 4			--ÈÎÎñ²ÎÊıµÄµÚ4Î»
---¹êÍÃÈüÅÜÈÎÎñÃ¿ÌìÂÖÊı±ê¼Ç
-x808083_g_RoundIndex 				 = 7			--ÈÎÎñ²ÎÊıµÄµÚ7Î»
+--é¾Ÿå…”èµ›è·‘æ´›é˜³æ‰“å¡æ ‡è®°
+x808083_g_LuoYang_RecordIdx  = 1			--ä»»åŠ¡å‚æ•°çš„ç¬¬1ä½
+--é¾Ÿå…”èµ›è·‘è‹å·æ‰“å¡æ ‡è®°
+x808083_g_SuZhou_RecordIdx 	 = 2			--ä»»åŠ¡å‚æ•°çš„ç¬¬2ä½
+--é¾Ÿå…”èµ›è·‘å¤§ç†æ‰“å¡æ ‡è®°
+x808083_g_DaLi_RecordIdx 		 = 3			--ä»»åŠ¡å‚æ•°çš„ç¬¬3ä½
+--å­”æ˜ç¯å®Œæˆæ•°é‡æ ‡è®°
+x808083_g_KongMing_Lighten	 = 4			--ä»»åŠ¡å‚æ•°çš„ç¬¬4ä½
+--é¾Ÿå…”èµ›è·‘ä»»åŠ¡æ¯å¤©è½®æ•°æ ‡è®°
+x808083_g_RoundIndex 				 = 7			--ä»»åŠ¡å‚æ•°çš„ç¬¬7ä½
 
--- ¹êÍÃÈüÅÜ»î¶¯ĞèÒªµãÈ¼µÄ¿×Ã÷µÆ×ÜÊı
+-- é¾Ÿå…”èµ›è·‘æ´»åŠ¨éœ€è¦ç‚¹ç‡ƒçš„å­”æ˜ç¯æ€»æ•°
 x808083_g_KongMing_CntMax		 = 24
 
--- Ã¿ÂÖ»î¶¯Ã¿¸ö³¡¾°ĞèÒªË¢³öµÄ¿×Ã÷µÆÊıÁ¿
+-- æ¯è½®æ´»åŠ¨æ¯ä¸ªåœºæ™¯éœ€è¦åˆ·å‡ºçš„å­”æ˜ç¯æ•°é‡
 x808083_g_KongMingLight_CntMax	=	{1, 1, 1, 1, 1, 1}
 
--- Ã¿¸ö³¡¾°Ã¿´ÎË¢ĞÂµÄ¿×Ã÷µÆÊıÁ¿
+-- æ¯ä¸ªåœºæ™¯æ¯æ¬¡åˆ·æ–°çš„å­”æ˜ç¯æ•°é‡
 x808083_g_KongMingLight_UpdateCnt = 10
 
--- ¿×Ã÷µÆÖĞµÄÈÎÎñÎïÆ·ID
+-- å­”æ˜ç¯ä¸­çš„ä»»åŠ¡ç‰©å“ID
 x808083_g_ItemBox_ItemID = 40004445
 
 --**********************************
---½Å±¾Èë¿Úº¯Êı
+--è„šæœ¬å…¥å£å‡½æ•°
 --**********************************
 function x808083_OnDefaultEvent( sceneId, actId, iNoticeType, param2, param3, param4, param5 )
 
-	--¼ì²âÊÇ·ñÊÇ»î¶¯Ê±¼ä....
+	--æ£€æµ‹æ˜¯å¦æ˜¯æ´»åŠ¨æ—¶é—´....
 	if 0 == x808083_CheckActivityTime() then
 		return 0
 	end
@@ -171,16 +171,16 @@ function x808083_OnDefaultEvent( sceneId, actId, iNoticeType, param2, param3, pa
 	for i=1, getn(x808083_g_KongMingLight_CntMax) do
 		x808083_g_KongMingLight_CntMax[i] = 1
 	end
-	--¿ªÊ¼Ë¢ĞÂ¿×Ã÷µÆ....
+	--å¼€å§‹åˆ·æ–°å­”æ˜ç¯....
 	StartOneActivity( sceneId, actId, 30*1000, iNoticeType )
 
 end
 
 --**********************************
---ĞÄÌøº¯Êı
+--å¿ƒè·³å‡½æ•°
 --**********************************
 function x808083_OnTimer( sceneId, actId, uTime )
-	--¼ì²â»î¶¯ÊÇ·ñ¹ıÆÚ....
+	--æ£€æµ‹æ´»åŠ¨æ˜¯å¦è¿‡æœŸ....
 	if CheckActiviyValidity( sceneId, actId ) == 0 then
 		StopOneActivity( sceneId, actId )
 		return
@@ -191,7 +191,7 @@ function x808083_OnTimer( sceneId, actId, uTime )
 end
 
 --**********************************
---¼ì²âµ±Ç°ÊÇ·ñÊÇ»î¶¯Ê±¼ä
+--æ£€æµ‹å½“å‰æ˜¯å¦æ˜¯æ´»åŠ¨æ—¶é—´
 --**********************************
 function x808083_CheckActivityTime()
 
@@ -210,30 +210,30 @@ function x808083_CheckActivityTime()
 end
 
 --**********************************
---Ë¢ĞÂ¿×Ã÷µÆ
+--åˆ·æ–°å­”æ˜ç¯
 --**********************************
 function x808083_DropKongMingLight( sceneId )
 	local nLightPosTbl = 0
 	local nLightCnt = 0
-	local nLightType = 782										-- ¿×Ã÷µÆÀàĞÍ
+	local nLightType = 782										-- å­”æ˜ç¯ç±»å‹
 	if sceneId == 6 then
 		nLightType = 782
-		nLightPosTbl = x808083_g_PosTable_6			-- ÎŞÁ¿É½
+		nLightPosTbl = x808083_g_PosTable_6			-- æ— é‡å±±
 	elseif sceneId == 5 then
 		nLightType = 782
-		nLightPosTbl = x808083_g_PosTable_5			-- ¾µºş
+		nLightPosTbl = x808083_g_PosTable_5			-- é•œæ¹–
 	elseif sceneId == 4 then
 		nLightType = 783
-		nLightPosTbl = x808083_g_PosTable_4			-- Ì«ºş
+		nLightPosTbl = x808083_g_PosTable_4			-- å¤ªæ¹–
 	elseif sceneId == 3 then
 		nLightType = 783
-		nLightPosTbl = x808083_g_PosTable_3			-- áÔÉ½
+		nLightPosTbl = x808083_g_PosTable_3			-- åµ©å±±
 	elseif sceneId == 7 then
 		nLightType = 784
-		nLightPosTbl = x808083_g_PosTable_7			-- ½£¸ó
+		nLightPosTbl = x808083_g_PosTable_7			-- å‰‘é˜
 	elseif sceneId == 8 then
 		nLightType = 784
-		nLightPosTbl = x808083_g_PosTable_8			-- ¶Ø»Í
+		nLightPosTbl = x808083_g_PosTable_8			-- æ•¦ç…Œ
 	else
 		return 0
 	end
@@ -254,12 +254,12 @@ function x808083_DropKongMingLight( sceneId )
 			nLightCnt = x808083_g_KongMingLight_CntMax[6]		
 		end
 
-		-- ¼ì²â±¾´Î¿×Ã÷µÆË¢ĞÂÊıÁ¿
+		-- æ£€æµ‹æœ¬æ¬¡å­”æ˜ç¯åˆ·æ–°æ•°é‡
 		if nLightCnt > x808083_g_KongMingLight_UpdateCnt then
 			return 0
 		end
 		
-		-- Èç¹û»î¶¯Ê±¼äÒÑµ½Ôò²»Ë¢ĞÂ
+		-- å¦‚æœæ´»åŠ¨æ—¶é—´å·²åˆ°åˆ™ä¸åˆ·æ–°
 		local nTimePoint = x808083_CheckActivityTime()
 		local nHour	 = GetHour()
 		local nMinute = GetMinute()
@@ -277,11 +277,11 @@ function x808083_DropKongMingLight( sceneId )
 		local idx = random(getn(nLightPosTbl))
 		local nPos = nLightPosTbl[idx]
 
-		-- Í¶·ÅÈÎÎñÎïÆ·
+		-- æŠ•æ”¾ä»»åŠ¡ç‰©å“
 		local ItemBoxId = 0
 		ItemBoxId = ItemBoxEnterScene( nPos.posX, nPos.posY, nLightType, sceneId, QUALITY_MUST_BE_CHANGE, 1, x808083_g_ItemBox_ItemID )
 		
-		-- ÉèÖÃÉú´æÆÚ
+		-- è®¾ç½®ç”Ÿå­˜æœŸ
 		local nHourTmp = floor(x808083_g_ActivityTime[nTimePoint].tend/100)
 		local nMinuteTmp = mod(x808083_g_ActivityTime[nTimePoint].tend, 100)
 		
@@ -292,29 +292,29 @@ function x808083_DropKongMingLight( sceneId )
 
 		local nLifeTime = (nHourTmp - nHour)*3600000 + (nMinuteTmp - nMinute)*60*1000
 		
-		-- Òì³£´¦Àí
+		-- å¼‚å¸¸å¤„ç†
 		if nLifeTime > 3600000 then
 			nLifeTime = 3600000
 		end
   	SetItemBoxMaxGrowTime( sceneId, ItemBoxId, nLifeTime )
 
 		if sceneId == 6 then
-			-- ÎŞÁ¿É½
+			-- æ— é‡å±±
 			x808083_g_KongMingLight_CntMax[1] = x808083_g_KongMingLight_CntMax[1] + 1					
 		elseif sceneId == 5 then
-			-- ¾µºş
+			-- é•œæ¹–
 			x808083_g_KongMingLight_CntMax[2] = x808083_g_KongMingLight_CntMax[2] + 1					
 		elseif sceneId == 4 then
-			-- Ì«ºş
+			-- å¤ªæ¹–
 			x808083_g_KongMingLight_CntMax[3] = x808083_g_KongMingLight_CntMax[3] + 1					
 		elseif sceneId == 3 then
-			-- áÔÉ½
+			-- åµ©å±±
 			x808083_g_KongMingLight_CntMax[4] = x808083_g_KongMingLight_CntMax[4] + 1					
 		elseif sceneId == 7 then
-			-- ½£¸ó
+			-- å‰‘é˜
 			x808083_g_KongMingLight_CntMax[5] = x808083_g_KongMingLight_CntMax[5] + 1					
 		elseif sceneId == 8 then
-			-- ¶Ø»Í
+			-- æ•¦ç…Œ
 			x808083_g_KongMingLight_CntMax[6] = x808083_g_KongMingLight_CntMax[6] + 1
 		end
 
@@ -322,23 +322,23 @@ function x808083_DropKongMingLight( sceneId )
 
 end
 
--- Ê°È¡ÎïÆ·ºó¼ÇÂ¼¹êÍÃÈüÅÜÈÎÎñĞÅÏ¢
+-- æ‹¾å–ç‰©å“åè®°å½•é¾Ÿå…”èµ›è·‘ä»»åŠ¡ä¿¡æ¯
 function x808083_RecordKongMingLightInfo( sceneId, selfId, targetId, nTargetX, nTargetZ )
 
-	-- ¼ì²âÊÇ·ñÓĞ¹êÍÃÈüÅÜÈÎÎñ
+	-- æ£€æµ‹æ˜¯å¦æœ‰é¾Ÿå…”èµ›è·‘ä»»åŠ¡
 	if IsHaveMission( sceneId, selfId, x808083_g_MissionId ) <= 0 then
 		x808083_NotifyTip( sceneId, selfId, "#{GodFire_Info_011}" )
 		return 0
 	end
 
-	-- ¼ì²âÈÎÎñÊÇ·ñÍê³É
+	-- æ£€æµ‹ä»»åŠ¡æ˜¯å¦å®Œæˆ
 	local misIndex = GetMissionIndexByID(sceneId,selfId,x808083_g_MissionId)
 	if GetMissionParam(sceneId, selfId, misIndex, x808083_g_Mission_IsComplete) > 0 then
 		x808083_NotifyTip( sceneId, selfId, "#{GodFire_Info_038}" )
 		return 0
 	end
 	
-	-- ¼ì²â±¾ÂÖ»î¶¯Ê±¼äÊÇ·ñÓĞĞ§
+	-- æ£€æµ‹æœ¬è½®æ´»åŠ¨æ—¶é—´æ˜¯å¦æœ‰æ•ˆ
 	local	nDayTime = GetMissionData( sceneId, selfId, MD_GODOFFIRE_DAYTIME )
 	
 	local nDay = LuaFnGetDayOfThisMonth()
@@ -353,13 +353,13 @@ function x808083_RecordKongMingLightInfo( sceneId, selfId, targetId, nTargetX, n
 		return 0
 	end
 	
-	-- ¼ì²âÊÇ·ñÓĞÈÎÎñÎïÆ·
+	-- æ£€æµ‹æ˜¯å¦æœ‰ä»»åŠ¡ç‰©å“
 	if HaveItem(sceneId, selfId, x808083_g_MissItemId) <= 0 then
 		x808083_NotifyTip( sceneId, selfId, "#{GodFire_Info_039}" )
 		return 0
 	end
 	
-	--ÉèÖÃ¿×Ã÷µÆÍê³ÉĞÅÏ¢
+	--è®¾ç½®å­”æ˜ç¯å®Œæˆä¿¡æ¯
 	local BagPos = GetItemBagPos( sceneId, selfId, x808083_g_MissItemId, 0 )
 	local LuoYangCnt = GetBagItemParam(sceneId, selfId, BagPos, x808083_g_LuoYangLighten_Cnt, 1)
 	local SuZhouCnt = GetBagItemParam(sceneId, selfId, BagPos, x808083_g_SuZhouLighten_Cnt, 1)
@@ -369,46 +369,46 @@ function x808083_RecordKongMingLightInfo( sceneId, selfId, targetId, nTargetX, n
 	local nLightPosTbl = 0
 
 	if sceneId == 6 then
-		nLightPosTbl = x808083_g_PosTable_6			-- ÎŞÁ¿É½
+		nLightPosTbl = x808083_g_PosTable_6			-- æ— é‡å±±
 		x808083_g_KongMingLight_CntMax[1] = x808083_g_KongMingLight_CntMax[1] - 1
 		SetBagItemParam(sceneId, selfId, BagPos, x808083_g_DaLiLighten_Cnt, 1, DaLiCnt+1)
 		
-		-- µãÈ¼¿×Ã÷µÆ³É¹¦ºóµÄÌØĞ§
+		-- ç‚¹ç‡ƒå­”æ˜ç¯æˆåŠŸåçš„ç‰¹æ•ˆ
 	 	CreateSpecialObjByDataIndex(sceneId, selfId, x808083_g_ImpactID_LightOver[1], nTargetX, nTargetZ, 0)
 	elseif sceneId == 5 then
-		nLightPosTbl = x808083_g_PosTable_5			-- ¾µºş
+		nLightPosTbl = x808083_g_PosTable_5			-- é•œæ¹–
 		x808083_g_KongMingLight_CntMax[2] = x808083_g_KongMingLight_CntMax[2] - 1
 		SetBagItemParam(sceneId, selfId, BagPos, x808083_g_DaLiLighten_Cnt, 1, DaLiCnt+1)
 		
-		-- µãÈ¼¿×Ã÷µÆ³É¹¦ºóµÄÌØĞ§
+		-- ç‚¹ç‡ƒå­”æ˜ç¯æˆåŠŸåçš„ç‰¹æ•ˆ
 	 	CreateSpecialObjByDataIndex(sceneId, selfId, x808083_g_ImpactID_LightOver[1], nTargetX, nTargetZ, 0)
 	elseif sceneId == 4 then
-		nLightPosTbl = x808083_g_PosTable_4			-- Ì«ºş
+		nLightPosTbl = x808083_g_PosTable_4			-- å¤ªæ¹–
 		x808083_g_KongMingLight_CntMax[3] = x808083_g_KongMingLight_CntMax[3] - 1
 		SetBagItemParam(sceneId, selfId, BagPos, x808083_g_SuZhouLighten_Cnt, 1, SuZhouCnt+1)
 		
-		-- µãÈ¼¿×Ã÷µÆ³É¹¦ºóµÄÌØĞ§
+		-- ç‚¹ç‡ƒå­”æ˜ç¯æˆåŠŸåçš„ç‰¹æ•ˆ
 	 	CreateSpecialObjByDataIndex(sceneId, selfId, x808083_g_ImpactID_LightOver[2], nTargetX, nTargetZ, 0)
 	elseif sceneId == 3 then
-		nLightPosTbl = x808083_g_PosTable_3			-- áÔÉ½
+		nLightPosTbl = x808083_g_PosTable_3			-- åµ©å±±
 		x808083_g_KongMingLight_CntMax[4] = x808083_g_KongMingLight_CntMax[4] - 1
 		SetBagItemParam(sceneId, selfId, BagPos, x808083_g_SuZhouLighten_Cnt, 1, SuZhouCnt+1)
 		
-		-- µãÈ¼¿×Ã÷µÆ³É¹¦ºóµÄÌØĞ§
+		-- ç‚¹ç‡ƒå­”æ˜ç¯æˆåŠŸåçš„ç‰¹æ•ˆ
 	 	CreateSpecialObjByDataIndex(sceneId, selfId, x808083_g_ImpactID_LightOver[2], nTargetX, nTargetZ, 0)
 	elseif sceneId == 7 then
-		nLightPosTbl = x808083_g_PosTable_7			-- ½£¸ó
+		nLightPosTbl = x808083_g_PosTable_7			-- å‰‘é˜
 		x808083_g_KongMingLight_CntMax[5] = x808083_g_KongMingLight_CntMax[5] - 1
 		SetBagItemParam(sceneId, selfId, BagPos, x808083_g_LuoYangLighten_Cnt, 1, LuoYangCnt+1)
 		
-		-- µãÈ¼¿×Ã÷µÆ³É¹¦ºóµÄÌØĞ§
+		-- ç‚¹ç‡ƒå­”æ˜ç¯æˆåŠŸåçš„ç‰¹æ•ˆ
 	 	CreateSpecialObjByDataIndex(sceneId, selfId, x808083_g_ImpactID_LightOver[3], nTargetX, nTargetZ, 0)
 	elseif sceneId == 8 then
-		nLightPosTbl = x808083_g_PosTable_8			-- ¶Ø»Í
+		nLightPosTbl = x808083_g_PosTable_8			-- æ•¦ç…Œ
 		x808083_g_KongMingLight_CntMax[6] = x808083_g_KongMingLight_CntMax[6] - 1
 		SetBagItemParam(sceneId, selfId, BagPos, x808083_g_LuoYangLighten_Cnt, 1, LuoYangCnt+1)
 		
-		-- µãÈ¼¿×Ã÷µÆ³É¹¦ºóµÄÌØĞ§
+		-- ç‚¹ç‡ƒå­”æ˜ç¯æˆåŠŸåçš„ç‰¹æ•ˆ
 	 	CreateSpecialObjByDataIndex(sceneId, selfId, x808083_g_ImpactID_LightOver[3], nTargetX, nTargetZ, 0)
 	else
 		return 0
@@ -417,20 +417,20 @@ function x808083_RecordKongMingLightInfo( sceneId, selfId, targetId, nTargetX, n
 	nAllCount = nAllCount + 1
 	SetMissionByIndex(sceneId, selfId, misIndex, x808083_g_KongMing_Lighten, nAllCount)
 	
-	-- ¼ì²âÈÎÎñÊÇ·ñÍê³É
+	-- æ£€æµ‹ä»»åŠ¡æ˜¯å¦å®Œæˆ
 	if GetMissionParam(sceneId, selfId, misIndex, x808083_g_LuoYang_RecordIdx) == 1
 		 and GetMissionParam(sceneId, selfId, misIndex, x808083_g_SuZhou_RecordIdx) == 1
 		 and GetMissionParam(sceneId, selfId, misIndex, x808083_g_DaLi_RecordIdx) == 1
 		 and nAllCount >= x808083_g_KongMing_CntMax then
 
-			-- ÈÎÎñÍê³É
+			-- ä»»åŠ¡å®Œæˆ
 			SetMissionByIndex( sceneId, selfId, misIndex, x808083_g_Mission_IsComplete, 1 )
 			x808083_NotifyTip( sceneId, selfId, "#{GodFire_Info_028}" )
 		
 	end
 	
-	-- ½øĞĞ½±·£´¦Àí
-	-- ½±Àø¾­Ñé
+	-- è¿›è¡Œå¥–ç½šå¤„ç†
+	-- å¥–åŠ±ç»éªŒ
 	local playerlvl = LuaFnGetLevel( sceneId, selfId )
 	local nExpNum = x808083_g_KongMingLight_EXP[playerlvl]
 	LuaFnAddExp( sceneId, selfId, nExpNum )
@@ -440,7 +440,7 @@ function x808083_RecordKongMingLightInfo( sceneId, selfId, targetId, nTargetX, n
 	local nRandOdds = random(100)
 	
 	if nRandOdds <= x808083_g_GotoScenePosOdds then
-		-- ´«ËÍ
+		-- ä¼ é€
 		local nidx = random(getn(nLightPosTbl))
 		local nScenePosTmp1 = nLightPosTbl[nidx]		
 		nMessageStr1 = "#{GodFire_Info_040}"
@@ -450,13 +450,13 @@ function x808083_RecordKongMingLightInfo( sceneId, selfId, targetId, nTargetX, n
 	else
 		for i, nItemList in x808083_g_BonusItem do
 			if nRandOdds <= nItemList.Odds1 then
-				-- ¼ì²â±³°ü¿Õ¼ä
+				-- æ£€æµ‹èƒŒåŒ…ç©ºé—´
 				if LuaFnGetPropertyBagSpace( sceneId, selfId ) < nItemList.Num then
 					x808083_NotifyTip( sceneId, selfId, "#{stall_package_full}" )		
 					return 0
 				end
 				
-				-- ¸øÓè½±ÀøÎïÆ·
+				-- ç»™äºˆå¥–åŠ±ç‰©å“
 				BeginAddItem(sceneId)
 				AddItem(sceneId,nItemList.ItemID, nItemList.Num)
 				local canAdd = EndAddItem(sceneId,selfId)						
@@ -477,7 +477,7 @@ function x808083_RecordKongMingLightInfo( sceneId, selfId, targetId, nTargetX, n
 					nMessageStr1 = "#{GodFire_Info_048}"
 					nMessageStr2 = "#{GodFire_Info_049}"
 					
-					-- ¼ì²â±»¹¥»÷ÕßImpact
+					-- æ£€æµ‹è¢«æ”»å‡»è€…Impact
 					if LuaFnHaveImpactOfSpecificDataIndex(sceneId, selfId, x808083_g_itemList[1].SelfimpactID) ~= 0 then
 						if x808083_g_itemList[1].impactId01 ~= 0 then
 							LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, x808083_g_itemList[1].impactId01, 0);
@@ -491,7 +491,7 @@ function x808083_RecordKongMingLightInfo( sceneId, selfId, targetId, nTargetX, n
 					nMessageStr1 = "#{GodFire_Info_054}"
 					nMessageStr2 = "#{GodFire_Info_055}"
 					
-					-- ¼ì²â±»¹¥»÷ÕßImpact
+					-- æ£€æµ‹è¢«æ”»å‡»è€…Impact
 					if LuaFnHaveImpactOfSpecificDataIndex(sceneId, selfId, x808083_g_itemList[2].SelfimpactID) ~= 0 then
 						if x808083_g_itemList[2].impactId01 ~= 0 then
 							LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, x808083_g_itemList[2].impactId01, 0);
@@ -506,7 +506,7 @@ function x808083_RecordKongMingLightInfo( sceneId, selfId, targetId, nTargetX, n
 					nMessageStr1 = "#{GodFire_Info_050}"
 					nMessageStr2 = "#{GodFire_Info_051}"
 					
-					-- ¼ì²â±»¹¥»÷ÕßImpact
+					-- æ£€æµ‹è¢«æ”»å‡»è€…Impact
 					if LuaFnHaveImpactOfSpecificDataIndex(sceneId, selfId, x808083_g_itemList[3].SelfimpactID) ~= 0 then
 						if x808083_g_itemList[3].impactId01 ~= 0 then
 							LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, x808083_g_itemList[3].impactId01, 0);
@@ -521,7 +521,7 @@ function x808083_RecordKongMingLightInfo( sceneId, selfId, targetId, nTargetX, n
 					nMessageStr1 = "#{GodFire_Info_052}"
 					nMessageStr2 = "#{GodFire_Info_053}"
 					
-					-- ¼ì²â±»¹¥»÷ÕßImpact
+					-- æ£€æµ‹è¢«æ”»å‡»è€…Impact
 					if LuaFnHaveImpactOfSpecificDataIndex(sceneId, selfId, x808083_g_itemList[4].SelfimpactID) ~= 0 then
 						if x808083_g_itemList[4].impactId01 ~= 0 then
 							LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, x808083_g_itemList[4].impactId01, 0);
@@ -536,22 +536,22 @@ function x808083_RecordKongMingLightInfo( sceneId, selfId, targetId, nTargetX, n
 					nMessageStr1 = "#{GodFire_Info_056}"
 					nMessageStr2 = "#{GodFire_Info_057}"					
 					
-					--È¡µÃ±»¹¥»÷ÕßµÄµ±Ç°×ø±ê	
+					--å–å¾—è¢«æ”»å‡»è€…çš„å½“å‰åæ ‡	
 					local PlayerX = GetHumanWorldX(sceneId,selfId)
 					local PlayerY = GetHumanWorldZ(sceneId,selfId)
 					
-					-- ±éÀú³¡¾°ÖĞËùÓĞÍæ¼Ò,²¢¸øÓë±»¹¥»÷Õß¹¥»÷·¶Î§ÄÚµÄÍæ¼Ò¼ÓImpact
+					-- éå†åœºæ™¯ä¸­æ‰€æœ‰ç©å®¶,å¹¶ç»™ä¸è¢«æ”»å‡»è€…æ”»å‡»èŒƒå›´å†…çš„ç©å®¶åŠ Impact
 					local nPlayerCnt = LuaFnGetCopyScene_HumanCount( sceneId )
 					for j=0, nPlayerCnt-1 do
 						local OtherPlayerId = LuaFnGetCopyScene_HumanObjId( sceneId, j )
-						--È¡µÃ±»¹¥»÷ÕßÖÜÎ§ÆäËûÍæ¼ÒµÄµ±Ç°×ø±ê	
+						--å–å¾—è¢«æ”»å‡»è€…å‘¨å›´å…¶ä»–ç©å®¶çš„å½“å‰åæ ‡	
 						local OtherPlayerX = GetHumanWorldX(sceneId,OtherPlayerId)
 						local OtherPlayerY = GetHumanWorldZ(sceneId,OtherPlayerId)
 						
 						local Distance = floor(sqrt((OtherPlayerX-PlayerX)*(OtherPlayerX-PlayerX)+(OtherPlayerY-PlayerY)*(OtherPlayerY-PlayerY)))
 						if Distance < x808083_g_AttackRange then
 							
-							-- ¼ì²â±»¹¥»÷ÕßÖÜÎ§ÆäËûÍæ¼ÒImpact
+							-- æ£€æµ‹è¢«æ”»å‡»è€…å‘¨å›´å…¶ä»–ç©å®¶Impact
 							if IsHaveMission( sceneId, OtherPlayerId, x808083_g_MissionId ) > 0
 								 and LuaFnHaveImpactOfSpecificDataIndex(sceneId, OtherPlayerId, x808083_g_ImpactID) ~= 0 then									
 								if LuaFnHaveImpactOfSpecificDataIndex(sceneId, OtherPlayerId, x808083_g_itemList[5].SelfimpactID) ~= 0 then
@@ -572,16 +572,16 @@ function x808083_RecordKongMingLightInfo( sceneId, selfId, targetId, nTargetX, n
 		end
 	end
 	
-	-- ÏµÍ³¹«¸æ
+	-- ç³»ç»Ÿå…¬å‘Š
 	BroadMsgByChatPipe( sceneId, selfId, nMessageStr1, 8 )
 	
-	-- ĞÑÄ¿ÌáÊ¾
+	-- é†’ç›®æç¤º
 	x808083_NotifyTip( sceneId, selfId, nMessageStr2 )	
 	return 1
 end
 
 --**********************************
---ĞÑÄ¿ÌáÊ¾
+--é†’ç›®æç¤º
 --**********************************
 function x808083_NotifyTip( sceneId, selfId, msg )
 

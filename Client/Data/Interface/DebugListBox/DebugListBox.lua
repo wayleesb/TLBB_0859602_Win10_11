@@ -1,7 +1,7 @@
 local i = 0;
 local max_index = 3;
 local max_size = 400;
---¸ù¾ÝÄ¿Ç°µÄ¿í¶ÈÖ»ÄÜÏÔÊ¾20¸öºº×Ö£¬Èç¹ûÒÔºóÐÞ¸Ä¿í¶ÈµÄ»°£¬ÕâÀïÒ²¿ÉÒÔÊÊµ±¼Ó³¤¡£
+--æ ¹æ®ç›®å‰çš„å®½åº¦åªèƒ½æ˜¾ç¤º20ä¸ªæ±‰å­—ï¼Œå¦‚æžœä»¥åŽä¿®æ”¹å®½åº¦çš„è¯ï¼Œè¿™é‡Œä¹Ÿå¯ä»¥é€‚å½“åŠ é•¿ã€‚
 
 function DebugListBox_PreLoad()
 	this:RegisterEvent("APPLICATION_INITED");
@@ -48,15 +48,9 @@ function DebugListBox_Update(arg0)
 		extencolor = "010101";
 	end
 	
-	if(string.len(arg0) > max_size) then
-		if(DataPool:Check_StringCode(string.sub(arg0,1,max_size)) == 0) then
-				str = string.sub(arg0,1,max_size-1);
-				AxTrace(0,1,"Error str = "..str)
-		else
-				str = string.sub(arg0,1,max_size);
-				AxTrace(0,1,"Right str = "..str)
-		end
-		
+    if(UTF8Length(arg0) > max_size) then
+        str = UTF8Prefix(arg0, max_size);
+
 		DebugListBox_ListBox:AddInfo( "#c"..fontcolor .. "#e" .. extencolor .. str );
 		return;
 	end

@@ -1,4 +1,4 @@
---¶¯Ì¬Éú³ÉµÄ½©Ê¬
+--åŠ¨æ€ç”Ÿæˆçš„åƒµå°¸
 
 x807001_g_scriptId=807001
 
@@ -6,15 +6,15 @@ x807001_g_scriptId=807001
 
 --**********************************
 
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 
 --**********************************
 
 function x807001_OnDefaultEvent( sceneId, selfId, targetId )
 
-	--ÅĞ¶ÏÊÇ·ñÄÜ¹»¼¤»î¸ÃnpcµÄÌõ¼ş
+	--åˆ¤æ–­æ˜¯å¦èƒ½å¤Ÿæ¿€æ´»è¯¥npcçš„æ¡ä»¶
 
-	--PrintStr("haha...ÎÒÊÇ½©Ê¬")
+	--PrintStr("haha...æˆ‘æ˜¯åƒµå°¸")
 
 	local npcLevel = GetCharacterLevel(sceneId, targetId)
 
@@ -35,13 +35,13 @@ function x807001_OnDefaultEvent( sceneId, selfId, targetId )
 	--PrintNum(npcLevel)
 
 	
-	--È¡µÃÍæ¼Ò¸½½üµÄ¶ÓÓÑÊıÁ¿£¨°üÀ¨×Ô¼º£©
+	--å–å¾—ç©å®¶é™„è¿‘çš„é˜Ÿå‹æ•°é‡ï¼ˆåŒ…æ‹¬è‡ªå·±ï¼‰
 	local nearteammembercount = GetNearTeamCount( sceneId, selfId )
 	if  nearteammembercount < DUOBAO_MAZEI_MIN_PLAYER_COUNT then	
 
 		BeginEvent(sceneId)
 
-			AddText(sceneId, "µ¨¸ÒĞ¡¿´ÎÒ£¬ÖÁÉÙ"..DUOBAO_MAZEI_MIN_PLAYER_COUNT.."ÈË×é¶Ó²ÅĞĞàŞ, ¹ş¹ş¡£")
+			AddText(sceneId, "èƒ†æ•¢å°çœ‹æˆ‘ï¼Œè‡³å°‘"..DUOBAO_MAZEI_MIN_PLAYER_COUNT.."äººç»„é˜Ÿæ‰è¡Œå™¢, å“ˆå“ˆã€‚")
 
 		EndEvent(sceneId)
 
@@ -51,11 +51,11 @@ function x807001_OnDefaultEvent( sceneId, selfId, targetId )
 
 	elseif teamLeaderLevel < npcLevel then
 
-		--ÌáÊ¾Ìõ¼ş²»·û
+		--æç¤ºæ¡ä»¶ä¸ç¬¦
 
 		BeginEvent(sceneId)
 
-			AddText(sceneId, "µ¨¸ÒĞ¡¿´ÎÒ£¬µÈ¼¶ÔÙ¸ßĞ©¾ÍÖªµÀÎÒµÄÀ÷º¦ÁË")
+			AddText(sceneId, "èƒ†æ•¢å°çœ‹æˆ‘ï¼Œç­‰çº§å†é«˜äº›å°±çŸ¥é“æˆ‘çš„å‰å®³äº†")
 
 		EndEvent(sceneId)
 
@@ -67,11 +67,11 @@ function x807001_OnDefaultEvent( sceneId, selfId, targetId )
 
 	else
 
-		--¼¤»înpc
+		--æ¿€æ´»npc
 
 		--PrintStr("active npc...")
 
-		--ÉèÖÃ¶Ô¹ÖÎªµĞ¶ÔµÄ Ä¿Ç°ÊÇ28ºÅÊÇµĞ¶ÔµÄ£¬Èç¹ûÓĞÈË¸Ä±äÁËÏàÓ¦µÄÊÆÁ¦ÉùÍûÄÇÎÒ¾Í²ÒÁË£¡£¡:-(((
+		--è®¾ç½®å¯¹æ€ªä¸ºæ•Œå¯¹çš„ ç›®å‰æ˜¯28å·æ˜¯æ•Œå¯¹çš„ï¼Œå¦‚æœæœ‰äººæ”¹å˜äº†ç›¸åº”çš„åŠ¿åŠ›å£°æœ›é‚£æˆ‘å°±æƒ¨äº†ï¼ï¼:-(((
 		SetUnitReputationID(sceneId, selfId, targetId, 28)
 
 

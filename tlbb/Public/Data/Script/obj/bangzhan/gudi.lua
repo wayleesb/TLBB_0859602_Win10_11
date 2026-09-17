@@ -1,18 +1,18 @@
---ÉÌÈËNpc ¹ÅµÏ B°ï
---ÆÕÍ¨
+--å•†äººNpc å¤è¿ª Bå¸®
+--æ™®é€š
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x402298_g_scriptId = 402298
 
---ÉÌµê±àºÅ
+--å•†åº—ç¼–å·
 x402298_g_ShopTabId_1	= 143
 x402298_g_ShopTabId_2	= 27
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x402298_g_eventList={}
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x402298_OnDefaultEvent( sceneId, selfId,targetId )
 	if CallScriptFunction(402047, "IsCommonBGuild", sceneId, selfId ) == 1 then
@@ -31,7 +31,7 @@ function x402298_OnDefaultEvent( sceneId, selfId,targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x402298_OnEventRequest( sceneId, selfId, targetId, eventId )
 	local	key	= GetNumText()

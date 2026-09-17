@@ -1,11 +1,11 @@
 -------------------------------------------------------
---ĞÂ"°ï»áÏêÏ¸ĞÅÏ¢"½çÃæ½Å±¾
+--æ–°"å¸®ä¼šè¯¦ç»†ä¿¡æ¯"ç•Œé¢è„šæœ¬
 --create by xindefeng
 -------------------------------------------------------
 
 local g_QueryGuildID = -1
 
---ÊÂ¼ş×¢²á
+--äº‹ä»¶æ³¨å†Œ
 function ConfraternityInfo2_PreLoad()
 	this:RegisterEvent("GUILD_SHOW_DETAILINFO2")
 	this:RegisterEvent("GUILD_ID_FORDETAILINFO2")
@@ -15,7 +15,7 @@ end
 function ConfraternityInfo2_OnLoad()
 end
 
---ÊÂ¼şÏìÓ¦
+--äº‹ä»¶å“åº”
 function ConfraternityInfo2_OnEvent(event)
 	if(event == "GUILD_ID_FORDETAILINFO2") then
 		g_QueryGuildID = tonumber(arg0)
@@ -35,10 +35,10 @@ function Guild_Info2_Clear()
 end
 
 
---ÉèÖÃÏÔÊ¾ĞÅÏ¢
+--è®¾ç½®æ˜¾ç¤ºä¿¡æ¯
 function Guild_Info2_Update()
 	--title
-	ConfraternityInfo2_DragTitle:SetText("#gFF0FA0°ï»áÏêÏ¸ĞÅÏ¢")
+	ConfraternityInfo2_DragTitle:SetText("#gFF0FA0å¸®ä¼šè¯¦ç»†ä¿¡æ¯")
 	
 	--Guild Name
 	local str = Guild:GetMyGuildDetailInfo("Name")
@@ -64,7 +64,7 @@ function Guild_Info2_Update()
 
 	str = Guild:GetMyGuildDetailInfo("CityName")
 	if(str == "-1") then
-		str = "Ã»ÓĞ³ÇÊĞ"
+		str = "æ²¡æœ‰åŸå¸‚"
 	end
 	ConfraternityInfo2_City:SetText(str)
 	
@@ -72,7 +72,7 @@ function Guild_Info2_Update()
 	ConfraternityInfo2_CityBuilding:SetText(str)
 	str = Guild:GetMyGuildDetailInfo("Scene")
 	if(str == "-1") then
-		str = "Ã»ÓĞËùÔÚ"
+		str = "æ²¡æœ‰æ‰€åœ¨"
 	end
 	ConfraternityInfo2_Locus:SetText(str)
 
@@ -81,7 +81,7 @@ function Guild_Info2_Update()
 
 	str = Guild:GetMyGuildDetailInfo("CurResearch")
 	if(str == "")then
-		str = "ÎŞµ±Ç°ÑĞ¾¿"
+		str = "æ— å½“å‰ç ”ç©¶"
 	end
 	ConfraternityInfo2_Specialty:SetText(str)
 	

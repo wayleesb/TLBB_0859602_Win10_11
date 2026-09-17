@@ -1,5 +1,5 @@
 INT	INT	STRING
-ĞòºÅ	½Å±¾ID	º¯ÊıÃû
+åºå·	è„šæœ¬ID	å‡½æ•°å
 0	311010	OnPopupBargainingUI
 1	311010	OnEnumerate
 2	311010	OnHaggleDown

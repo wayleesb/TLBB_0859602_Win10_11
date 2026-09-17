@@ -1,28 +1,28 @@
---çÎç¿·å¸±±¾....
---ÎÚÀÏ´ó¶Ô»°½Å±¾....
+--ç¼¥ç¼ˆå³°å‰¯æœ¬....
+--ä¹Œè€å¤§å¯¹è¯è„šæœ¬....
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x402285_g_ScriptId = 402285
 
---¸±±¾Âß¼­½Å±¾ºÅ....
+--å‰¯æœ¬é€»è¾‘è„šæœ¬å·....
 x402285_g_FuBenScriptId = 402276
 
---Õ½°ÜÎÚÀÏ´ó¶Ô»°½Å±¾ºÅ....
+--æˆ˜è´¥ä¹Œè€å¤§å¯¹è¯è„šæœ¬å·....
 x402285_g_LossScriptId = 402288
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı....
+--ä»»åŠ¡å…¥å£å‡½æ•°....
 --**********************************
 function x402285_OnDefaultEvent( sceneId, selfId, targetId )
 
 	BeginEvent(sceneId)
 
 		AddText( sceneId, "#{PMF_20080521_10}" )
-		AddNumText( sceneId, x402285_g_ScriptId, "ÌôÕ½", 10, 1 )
+		AddNumText( sceneId, x402285_g_ScriptId, "æŒ‘æˆ˜", 10, 1 )
 
-		--ÅĞ¶Ïµ±Ç°ÊÇ·ñ¿ÉÒÔÌôÕ½ÀîÇïË®....	
+		--åˆ¤æ–­å½“å‰æ˜¯å¦å¯ä»¥æŒ‘æˆ˜æç§‹æ°´....	
 		if 1 == CallScriptFunction( x402285_g_FuBenScriptId, "GetBossBattleFlag", sceneId, "LiQiuShui" ) then
-			AddNumText( sceneId, x402285_g_ScriptId, "¾öÕ½ÀîÇïË®£¿", 10, 2 )
+			AddNumText( sceneId, x402285_g_ScriptId, "å†³æˆ˜æç§‹æ°´ï¼Ÿ", 10, 2 )
 		end
 
 	EndEvent(sceneId)
@@ -31,16 +31,16 @@ function x402285_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x402285_OnEventRequest( sceneId, selfId, targetId, eventId )
 
-	--Èç¹ûÕıÔÚ¼¤»îBOSSÔò·µ»Ø....
+	--å¦‚æœæ­£åœ¨æ¿€æ´»BOSSåˆ™è¿”å›....
 	if 1 == CallScriptFunction( x402285_g_FuBenScriptId, "IsPMFTimerRunning", sceneId ) then
 		return
 	end
 
-	--ÊÇ²»ÊÇ¶Ó³¤....
+	--æ˜¯ä¸æ˜¯é˜Ÿé•¿....
 	if GetTeamLeader(sceneId,selfId) ~= selfId then
 		BeginEvent(sceneId)
 			AddText( sceneId, "#{PMF_20080521_07}" )
@@ -49,7 +49,7 @@ function x402285_OnEventRequest( sceneId, selfId, targetId, eventId )
 		return
 	end
 
-	--Èç¹ûÕıÔÚºÍ±ğµÄBOSSÕ½¶·Ôò·µ»Ø....
+	--å¦‚æœæ­£åœ¨å’Œåˆ«çš„BOSSæˆ˜æ–—åˆ™è¿”å›....
 	local ret, msg = CallScriptFunction( x402285_g_FuBenScriptId, "CheckHaveBOSS", sceneId )
 	if 1 == ret then
 		BeginEvent(sceneId)
@@ -61,7 +61,7 @@ function x402285_OnEventRequest( sceneId, selfId, targetId, eventId )
 
 	if GetNumText() == 1 then
 
-		--ÅĞ¶Ïµ±Ç°ÊÇ·ñ¿ÉÒÔÌôÕ½ÎÚÀÏ´ó....	
+		--åˆ¤æ–­å½“å‰æ˜¯å¦å¯ä»¥æŒ‘æˆ˜ä¹Œè€å¤§....	
 		if 1 ~= CallScriptFunction( x402285_g_FuBenScriptId, "GetBossBattleFlag", sceneId, "WuLaoDa" ) then
 			BeginEvent(sceneId)
 				AddText( sceneId, "#{PMF_20080521_11}" )
@@ -69,16 +69,16 @@ function x402285_OnEventRequest( sceneId, selfId, targetId, eventId )
 			DispatchEventList(sceneId,selfId,targetId)
 			return
 		end
-		--¿ªÆôçÎç¿·å¼ÆÊ±Æ÷À´¼¤»î×Ô¼º....
+		--å¼€å¯ç¼¥ç¼ˆå³°è®¡æ—¶å™¨æ¥æ¿€æ´»è‡ªå·±....
 		CallScriptFunction( x402285_g_FuBenScriptId, "OpenPMFTimer", sceneId, 7, x402285_g_ScriptId, -1 ,-1 )
 
 	elseif GetNumText() == 2 then
 
-		--ÅĞ¶Ïµ±Ç°ÊÇ·ñ¿ÉÒÔÌôÕ½ÀîÇïË®....	
+		--åˆ¤æ–­å½“å‰æ˜¯å¦å¯ä»¥æŒ‘æˆ˜æç§‹æ°´....	
 		if 1 ~= CallScriptFunction( x402285_g_FuBenScriptId, "GetBossBattleFlag", sceneId, "LiQiuShui" ) then
 			return
 		end
-		--¿ªÆôçÎç¿·å¼ÆÊ±Æ÷À´¼¤»îÀîÇïË®....
+		--å¼€å¯ç¼¥ç¼ˆå³°è®¡æ—¶å™¨æ¥æ¿€æ´»æç§‹æ°´....
 		CallScriptFunction( x402285_g_FuBenScriptId, "OpenPMFTimer", sceneId, 7, x402285_g_LossScriptId, -1 ,-1 )
 
 	end
@@ -90,45 +90,45 @@ function x402285_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---çÎç¿·å¼ÆÊ±Æ÷µÄOnTimer....
+--ç¼¥ç¼ˆå³°è®¡æ—¶å™¨çš„OnTimer....
 --**********************************
 function x402285_OnPMFTimer( sceneId, step, data1, data2 )
 
 	if 7 == step then
-		CallScriptFunction( x402285_g_FuBenScriptId, "TipAllHuman", sceneId, "Õ½¶·5ÃëÖÓºó¿ªÊ¼" )
+		CallScriptFunction( x402285_g_FuBenScriptId, "TipAllHuman", sceneId, "æˆ˜æ–—5ç§’é’Ÿåå¼€å§‹" )
 		return
 	end
 
 	if 6 == step then
-		CallScriptFunction( x402285_g_FuBenScriptId, "TipAllHuman", sceneId, "Õ½¶·4ÃëÖÓºó¿ªÊ¼" )
+		CallScriptFunction( x402285_g_FuBenScriptId, "TipAllHuman", sceneId, "æˆ˜æ–—4ç§’é’Ÿåå¼€å§‹" )
 		return
 	end
 
 	if 5 == step then
-		CallScriptFunction( x402285_g_FuBenScriptId, "TipAllHuman", sceneId, "Õ½¶·3ÃëÖÓºó¿ªÊ¼" )
+		CallScriptFunction( x402285_g_FuBenScriptId, "TipAllHuman", sceneId, "æˆ˜æ–—3ç§’é’Ÿåå¼€å§‹" )
 		return
 	end
 
 	if 4 == step then
-		CallScriptFunction( x402285_g_FuBenScriptId, "TipAllHuman", sceneId, "Õ½¶·2ÃëÖÓºó¿ªÊ¼" )
+		CallScriptFunction( x402285_g_FuBenScriptId, "TipAllHuman", sceneId, "æˆ˜æ–—2ç§’é’Ÿåå¼€å§‹" )
 		return
 	end
 
 	if 3 == step then
-		CallScriptFunction( x402285_g_FuBenScriptId, "TipAllHuman", sceneId, "Õ½¶·1ÃëÖÓºó¿ªÊ¼" )
+		CallScriptFunction( x402285_g_FuBenScriptId, "TipAllHuman", sceneId, "æˆ˜æ–—1ç§’é’Ÿåå¼€å§‹" )
 		return
 	end
 
 	if 2 == step then
-		--ÌáÊ¾Õ½¶·¿ªÊ¼....
-		CallScriptFunction( x402285_g_FuBenScriptId, "TipAllHuman", sceneId, "Õ½¶·¿ªÊ¼" )
-		--É¾³ıNPC....
+		--æç¤ºæˆ˜æ–—å¼€å§‹....
+		CallScriptFunction( x402285_g_FuBenScriptId, "TipAllHuman", sceneId, "æˆ˜æ–—å¼€å§‹" )
+		--åˆ é™¤NPC....
 		CallScriptFunction( x402285_g_FuBenScriptId, "DeleteBOSS", sceneId, "WuLaoDa_NPC" )
 		return
 	end
 
 	if 1 == step then
-		--½¨Á¢BOSS....
+		--å»ºç«‹BOSS....
 		CallScriptFunction( x402285_g_FuBenScriptId, "CreateBOSS", sceneId, "WuLaoDa_BOSS", -1, -1 )
 		return
 	end

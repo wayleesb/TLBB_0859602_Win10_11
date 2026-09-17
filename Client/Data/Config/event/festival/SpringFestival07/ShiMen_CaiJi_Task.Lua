@@ -3,16 +3,16 @@ x050061_g_ScriptId	= 050061
 x050061_g_Position_X=78
 x050061_g_Position_Z=95
 x050061_g_SceneID=12
-x050061_g_AccomplishNPC_Name="ÕÅÖĞĞĞ"
+x050061_g_AccomplishNPC_Name="å¼ ä¸­è¡Œ"
 x050061_g_MissionId			= 1150
 x050061_g_MissionIdNext	= -1
 x050061_g_Name 					= ""
 x050061_g_MissionKind			= 3
 x050061_g_MissionLevel		= 10000
 x050061_g_IfMissionElite	= 0
-x050061_g_IsMissionOkFail	= 0		--ÈÎÎñ²ÎÊıµÄµÚ0Î»
+x050061_g_IsMissionOkFail	= 0		--ä»»åŠ¡å‚æ•°çš„ç¬¬0ä½
 x050061_g_AccomplishCircumstance = 0
-x050061_g_MissionName			= "ÃÅÅÉÄê»õ´ó²É¹º"
+x050061_g_MissionName			= "é—¨æ´¾å¹´è´§å¤§é‡‡è´­"
 x050061_g_MissionInfo			= ""
 x050061_g_MissionTarget		= "%f"
 x050061_g_ContinueInfo		= ""
@@ -38,5 +38,5 @@ x050061_g_FormatList = {
 "#{SMCJ_081021_45}",
 "#{SMCJ_081021_46}",
 }
-x050061_g_Custom	=  { {id="#YÈÎÎñµ±Ç°»·Êı",num=8}}
+x050061_g_Custom	=  { {id="#Yä»»åŠ¡å½“å‰ç¯æ•°",num=8}}
 --MisDescEnd

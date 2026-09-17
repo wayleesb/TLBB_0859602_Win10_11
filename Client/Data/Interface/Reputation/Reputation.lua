@@ -21,35 +21,35 @@ end
 
 function Reputation_OnLoad()
 
-	Reputation_TextName = { "ÉÙÁÖ",
-							"Ã÷½Ì",
-							"Ø¤°ï",
-							"Îäµ±",
-							"¶ëáÒ",
-							"ĞÇËŞ",
-							"ÌìÁú",
-							"ÌìÉ½",
-							"åĞÒ£",
-							"´óËÎ³¯Í¢",
-							"´óËÎ¶ËÍõ¸®",
-							"´óËÎÃñ¼ä",
-							"´óÁÉ³¯Í¢",
-							"´óÁÉÃñ¼ä",
-							"´óÀí",
-							"Î÷ÏÄ",
-							"·¬°î",
-							"Ã§¸Ç",
-							"ÒÅÃñ",
-							"Á÷·ÅÕß",
-							"°×Ãç",
-							"ºÚÃç",
-							"ĞŞÂŞ",
-							"É½Ô½Å®¼ÀË¾",
-							"É½Ô½ÄĞ»¤·¨",
-							"öùÓã°ï",
-							"Ò°ÊŞ",
-							"ÂÌÁÖ",
-							"ÑıÄ§",};
+	Reputation_TextName = { "å°‘æ—",
+							"æ˜æ•™",
+							"ä¸å¸®",
+							"æ­¦å½“",
+							"å³¨åµ‹",
+							"æ˜Ÿå®¿",
+							"å¤©é¾™",
+							"å¤©å±±",
+							"é€é¥",
+							"å¤§å®‹æœå»·",
+							"å¤§å®‹ç«¯ç‹åºœ",
+							"å¤§å®‹æ°‘é—´",
+							"å¤§è¾½æœå»·",
+							"å¤§è¾½æ°‘é—´",
+							"å¤§ç†",
+							"è¥¿å¤",
+							"ç•ªé‚¦",
+							"è½ç›–",
+							"é—æ°‘",
+							"æµæ”¾è€…",
+							"ç™½è‹—",
+							"é»‘è‹—",
+							"ä¿®ç½—",
+							"å±±è¶Šå¥³ç¥­å¸",
+							"å±±è¶Šç”·æŠ¤æ³•",
+							"é³„é±¼å¸®",
+							"é‡å…½",
+							"ç»¿æ—",
+							"å¦–é­”",};
 
 
 	Reputation_Progress1[ 1 ] = Reputation_Value_Menpai1_Value_Pic1;
@@ -169,61 +169,61 @@ end
 
 function Reputation_Update( nIndex, nTragetID )
 	local nReputation = Player:GetReputation( nTragetID );
-	local nCurrentNumber;		--ÕâÒ»¼¶µÄµ±Ç°Öµ
-	local nCurrentMaxNumber;--ÕâÒ»¼¶µÄ×î´óÖµ
+	local nCurrentNumber;		--è¿™ä¸€çº§çš„å½“å‰å€¼
+	local nCurrentMaxNumber;--è¿™ä¸€çº§çš„æœ€å¤§å€¼
 	local strTypeMax;
 	local nType = 1;
 	if( nReputation < -550000 ) then 
 		nCurrentNumber = -550000 - nReputation ;
 		nCurrentMaxNumber = 450000;
-		strTypeMax = "Í´ºŞ";
+		strTypeMax = "ç—›æ¨";
 	elseif( nReputation < -320000 ) then
 		nCurrentNumber = -320000 - nReputation ;
 		nCurrentMaxNumber = 230000;
-		strTypeMax = "Ô÷¶ñ";
+		strTypeMax = "æ†æ¶";
 	elseif( nReputation < -160000 ) then
 		nCurrentNumber = -160000 - nReputation ;
 		nCurrentMaxNumber = 160000;
-		strTypeMax = "¶ÔÁ¢";
+		strTypeMax = "å¯¹ç«‹";
 	elseif( nReputation < -60000 ) then
 		nCurrentNumber = -60000 - nReputation ;
 		nCurrentMaxNumber = 100000;
-		strTypeMax = "µĞÒâ";
+		strTypeMax = "æ•Œæ„";
 		nType = 2;
 	elseif( nReputation < 0 ) then
 		nCurrentNumber = -nReputation;
 		nCurrentMaxNumber = 60000;
-		strTypeMax = "·´¸Ğ";
+		strTypeMax = "åæ„Ÿ";
 		nType = 2;
 	elseif( nReputation < 60000 ) then
 		nCurrentNumber = nReputation;
 		nCurrentMaxNumber = 60000;
-		strTypeMax = "Ä®ÊÓ";
+		strTypeMax = "æ¼ è§†";
 		nType = 2;
 	elseif( nReputation < 160000 ) then
 		nCurrentNumber = nReputation - 60000;
 		nCurrentMaxNumber = 100000;
-		strTypeMax = "ºÃÒâ";
+		strTypeMax = "å¥½æ„";
 		nType = 2;
 	elseif( nReputation < 320000 ) then
 		nCurrentNumber = nReputation - 160000;
 		nCurrentMaxNumber = 160000;
-		strTypeMax = "ÓÑÉÆ";
+		strTypeMax = "å‹å–„";
 		nType = 2;
 	elseif( nReputation < 550000 ) then
 		nCurrentNumber = nReputation - 320000;
 		nCurrentMaxNumber = 230000;
-		strTypeMax = "×ğ¾´";
+		strTypeMax = "å°Šæ•¬";
 		nType = 3;
 	elseif( nReputation < 1000000 ) then
 		nCurrentNumber = nReputation - 550000;
 		nCurrentMaxNumber = 450000;
-		strTypeMax = "ĞÅÀµ";
+		strTypeMax = "ä¿¡èµ–";
 		nType = 3;
 	else
 		nCurrentNumber = 0;
 		nCurrentMaxNumber = 0;
-		strTypeMax = "¾´°®";
+		strTypeMax = "æ•¬çˆ±";
 		nType = 3;
 	end
 	Reputation_Back[ nIndex ]:Show();
@@ -231,7 +231,7 @@ function Reputation_Update( nIndex, nTragetID )
 	Reputation_Progress1[ nIndex ]:Hide();
 	Reputation_Progress2[ nIndex ]:Hide();
 	Reputation_Progress3[ nIndex ]:Hide();
-	Reputation_CurLevel[ nIndex ]:SetText( "µ±Ç°ÉùÍû£º".. strTypeMax );
+	Reputation_CurLevel[ nIndex ]:SetText( "å½“å‰å£°æœ›ï¼š".. strTypeMax );
 	Reputation_Text[ nIndex ]:SetText( tostring( nCurrentNumber ).."/"..tostring( nCurrentMaxNumber ) );
 	Reputation_Name[ nIndex ]:SetText( Reputation_TextName[ nTragetID ] );
 	

@@ -1,19 +1,19 @@
--- Ê¦Í½ÇéÉîÈÎÎñ
--- ´´½¨ÈË   [ QUFEI 2007-09-04 13:13 UPDATE ]	    
--- ½Å±¾ºÅ
+-- å¸ˆå¾’æƒ…æ·±ä»»åŠ¡
+-- åˆ›å»ºäºº   [ QUFEI 2007-09-04 13:13 UPDATE ]	    
+-- è„šæœ¬å·
 x806019_g_ScriptId = 806019
 
---ÊÂ¼ş
+--äº‹ä»¶
 x806019_g_Update = {
 
     ["id01"] = 15,    
 
 }
 
---ÌáÊ¾ĞÅÏ¢
+--æç¤ºä¿¡æ¯
 x806019_g_msg = {
 
-    ["st"]	= "Ê¦Í½ÇéÉî",
+    ["st"]	= "å¸ˆå¾’æƒ…æ·±",
     
 }
 
@@ -42,16 +42,16 @@ x806019_g_Impact = {
 		}
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x806019_OnDefaultEvent( sceneId, selfId, targetId )
     -- [ QUFEI 2007-08-31 13:13 UPDATE BugID #24277 ]	    
-    -- ½ÌÊ¦½ÚÁìÈ¡Ê¦Í½ÇéÉîBuff            
+    -- æ•™å¸ˆèŠ‚é¢†å–å¸ˆå¾’æƒ…æ·±Buff            
     local	key	= GetNumText()
     
     if key == x806019_g_Update["id01"] then
         -- [ QUFEI 2007-08-31 13:13 UPDATE BugID #24277 ]	
-        -- ½ÌÊ¦½ÚÁìÈ¡Ê¦Í½ÇéÉîBuff            
+        -- æ•™å¸ˆèŠ‚é¢†å–å¸ˆå¾’æƒ…æ·±Buff            
         local nMonth = LuaFnGetThisMonth()
         local nDay   = LuaFnGetDayOfThisMonth()
         local nData  = (nMonth+1)*100+nDay
@@ -60,7 +60,7 @@ function x806019_OnDefaultEvent( sceneId, selfId, targetId )
             x806019_OnShiTuQingShen( sceneId, selfId, targetId )
             return 0
         else          
-            x806019_MessageBox(sceneId, selfId, "¶Ô²»Æğ£¬Ö»ÓĞ9ÔÂ10ÈÕ½ÌÊ¦½ÚÕâÒ»Ìì²ÅÄÜÁìÈ¡Ê¦Í½ÇéÉî¹â»·¡£")
+            x806019_MessageBox(sceneId, selfId, "å¯¹ä¸èµ·ï¼Œåªæœ‰9æœˆ10æ—¥æ•™å¸ˆèŠ‚è¿™ä¸€å¤©æ‰èƒ½é¢†å–å¸ˆå¾’æƒ…æ·±å…‰ç¯ã€‚")
             return 0		
         end               
     end
@@ -68,12 +68,12 @@ function x806019_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x806019_OnEnumerate( sceneId, selfId, targetId )	
 
     -- [ QUFEI 2007-08-31 13:13 UPDATE BugID #24277 ]	
-    -- ½ÌÊ¦½ÚÁìÈ¡Ê¦Í½ÇéÉîBuff
+    -- æ•™å¸ˆèŠ‚é¢†å–å¸ˆå¾’æƒ…æ·±Buff
     local nMonth = LuaFnGetThisMonth()
     local nDay   = LuaFnGetDayOfThisMonth()
     local nData  = (nMonth+1)*100+nDay
@@ -85,31 +85,31 @@ function x806019_OnEnumerate( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x806019_CheckAccept( sceneId, selfId, targetId )
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x806019_OnAccept( sceneId, selfId, targetId )	
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x806019_OnSubmit( sceneId, selfId, targetId, tId )
 end
 
 --**********************************
---¾Ü¾ø
+--æ‹’ç»
 --**********************************
 function x806019_OnCancel( sceneId, selfId, targetId )
 end
 
 --**********************************
---¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+--å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x806019_MessageBox( sceneId, selfId, msg )
 	BeginEvent( sceneId )
@@ -120,58 +120,58 @@ end
 
 function x806019_OnShiTuQingShen( sceneId, selfId, targetId )
     -- [ QUFEI 2007-08-31 13:13 UPDATE BugID #24277 ]	    
-    -- ½ÌÊ¦½ÚÁìÈ¡Ê¦Í½ÇéÉîBuff            
-    -- ¼ì²âÁìÈ¡Ìõ¼ş
-    -- ÁìÈ¡ÕßÊÇ·ñ´¦ÓÚ×é¶Ó×´Ì¬
+    -- æ•™å¸ˆèŠ‚é¢†å–å¸ˆå¾’æƒ…æ·±Buff            
+    -- æ£€æµ‹é¢†å–æ¡ä»¶
+    -- é¢†å–è€…æ˜¯å¦å¤„äºç»„é˜ŸçŠ¶æ€
     if LuaFnHasTeam( sceneId, selfId ) == 0 then        
-        x806019_MessageBox( sceneId, selfId, "¶Ô²»Æğ£¬±ØĞëÊ¦Í½Á½ÈË×é¶Ó²ÅÄÜÁìÈ¡Ê¦Í½ÇéÉî¹â»·" )				
+        x806019_MessageBox( sceneId, selfId, "å¯¹ä¸èµ·ï¼Œå¿…é¡»å¸ˆå¾’ä¸¤äººç»„é˜Ÿæ‰èƒ½é¢†å–å¸ˆå¾’æƒ…æ·±å…‰ç¯" )				
         return 0
     end
     
-    -- ÁìÈ¡ÕßÊÇ·ñÎª¶Ó³¤
+    -- é¢†å–è€…æ˜¯å¦ä¸ºé˜Ÿé•¿
     if LuaFnIsTeamLeader( sceneId, selfId ) == 0 then                
-        x806019_MessageBox( sceneId, selfId, "¶Ô²»Æğ£¬±ØĞëÊÇ¶Ó³¤²ÅÄÜÁìÈ¡Ê¦Í½ÇéÉî¹â»·" )				
+        x806019_MessageBox( sceneId, selfId, "å¯¹ä¸èµ·ï¼Œå¿…é¡»æ˜¯é˜Ÿé•¿æ‰èƒ½é¢†å–å¸ˆå¾’æƒ…æ·±å…‰ç¯" )				
 				return 0
 		end
     
-    -- ×é¶ÓÖĞÖ»ÓĞÁ½¸öÈË
+    -- ç»„é˜Ÿä¸­åªæœ‰ä¸¤ä¸ªäºº
     if LuaFnGetTeamSize( sceneId, selfId ) ~= 2 then
-        x806019_MessageBox( sceneId, selfId, "¶Ô²»Æğ£¬±ØĞëÊ¦Í½Á½ÈË×é¶Ó²ÅÄÜÁìÈ¡Ê¦Í½ÇéÉî¹â»·" )						
+        x806019_MessageBox( sceneId, selfId, "å¯¹ä¸èµ·ï¼Œå¿…é¡»å¸ˆå¾’ä¸¤äººç»„é˜Ÿæ‰èƒ½é¢†å–å¸ˆå¾’æƒ…æ·±å…‰ç¯" )						
         return 0
 		end 
     
     local TeamSizeSameScene = LuaFnGetTeamSceneMemberCount( sceneId, selfId )    
         
-    -- ×é¶ÓÖĞµÄÁ½¸öÈË±ØĞëÔÚÍ¬Ò»³¡¾°
+    -- ç»„é˜Ÿä¸­çš„ä¸¤ä¸ªäººå¿…é¡»åœ¨åŒä¸€åœºæ™¯
     if TeamSizeSameScene ~=1 then
-        x806019_MessageBox( sceneId, selfId, "¶Ô²»Æğ£¬±ØĞëÊ¦Í½Á½ÈË×é¶Ó²ÅÄÜÁìÈ¡Ê¦Í½ÇéÉî¹â»·" )						
+        x806019_MessageBox( sceneId, selfId, "å¯¹ä¸èµ·ï¼Œå¿…é¡»å¸ˆå¾’ä¸¤äººç»„é˜Ÿæ‰èƒ½é¢†å–å¸ˆå¾’æƒ…æ·±å…‰ç¯" )						
         return 0
 		end 
     
-    -- ×é¶ÓÖĞµÄÁ½¸öÈË±ØĞë¶¼ÔÚ¸½½ü
+    -- ç»„é˜Ÿä¸­çš„ä¸¤ä¸ªäººå¿…é¡»éƒ½åœ¨é™„è¿‘
     local	numMem	= GetNearTeamCount( sceneId, selfId )
     if numMem ~= LuaFnGetTeamSize( sceneId, selfId ) then                
-        x806019_MessageBox( sceneId, selfId, "¶Ô²»Æğ£¬ÄãÃÇÊ¦Í½±ØĞë¶¼ÔÚ¸½½ü²ÅÄÜÁìÈ¡Ê¦Í½ÇéÉî¹â»·" )				
+        x806019_MessageBox( sceneId, selfId, "å¯¹ä¸èµ·ï¼Œä½ ä»¬å¸ˆå¾’å¿…é¡»éƒ½åœ¨é™„è¿‘æ‰èƒ½é¢†å–å¸ˆå¾’æƒ…æ·±å…‰ç¯" )				
         return 0
     end
     
     local theID = LuaFnGetTeamSceneMember( sceneId, selfId, 0 )       
         
-    -- ÁìÈ¡ÕßÊÇ·ñÎªÊ¦Í½
+    -- é¢†å–è€…æ˜¯å¦ä¸ºå¸ˆå¾’
     if LuaFnIsMaster(sceneId, selfId, theID) == 1 or LuaFnIsMaster(sceneId, theID, selfId) == 1 then
-        -- ½±Àø            
+        -- å¥–åŠ±            
         -- PrintNum(selfId)
         -- PrintNum(theID)
         x806019_OnAddImpact( sceneId, selfId, 0 )        
         x806019_OnAddImpact( sceneId, selfId, theID )        
     else            
-        x806019_MessageBox( sceneId, selfId, "¶Ô²»Æğ£¬±ØĞëÊ¦Í½Á½ÈË×é¶Ó²ÅÄÜÁìÈ¡Ê¦Í½ÇéÉî¹â»·" )				
+        x806019_MessageBox( sceneId, selfId, "å¯¹ä¸èµ·ï¼Œå¿…é¡»å¸ˆå¾’ä¸¤äººç»„é˜Ÿæ‰èƒ½é¢†å–å¸ˆå¾’æƒ…æ·±å…‰ç¯" )				
         return 0
     end
        
 end
 
--- ÁìÈ¡Ê¦Í½ÇéÉîBuff
+-- é¢†å–å¸ˆå¾’æƒ…æ·±Buff
 function x806019_OnAddImpact( sceneId, selfId, theID )
     
     local level = 0

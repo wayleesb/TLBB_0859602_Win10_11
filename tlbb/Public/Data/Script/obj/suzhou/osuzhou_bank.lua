@@ -5,17 +5,17 @@ x001026_g_scriptId = 1026
 function x001026_OnDefaultEvent( sceneId, selfId,targetId )
 	  BeginEvent(sceneId)
      
-			AddNumText(sceneId, 7, "´ò¿ªÒøĞĞ",5,-1)
-			AddNumText(sceneId, 8, "¹ºÂòĞÂµÄ×âÁŞÏä",5,-1)
+			AddNumText(sceneId, 7, "æ‰“å¼€é“¶è¡Œ",5,-1)
+			AddNumText(sceneId, 8, "è´­ä¹°æ–°çš„ç§Ÿèµç®±",5,-1)
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 end
 function x001026_OnEventRequest( sceneId, selfId, targetId, eventId )
 	BeginEvent(sceneId)
-		--´ò¿ªÒøĞĞ
+		--æ‰“å¼€é“¶è¡Œ
 		if eventId == 7 then
 			BankBegin(sceneId, selfId)	
-		--¹ºÂòĞÂµÄ×âÁŞÏä
+		--è´­ä¹°æ–°çš„ç§Ÿèµç®±
 		elseif eventId == 8 then
 			EnableBankRentIndex(sceneId, selfId, 2)
 		end

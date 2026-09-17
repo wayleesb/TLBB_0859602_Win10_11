@@ -1,24 +1,24 @@
---Â¥À¼NPC		×°±¸ĞŞÀí
---ÖÜÊ®Èı
---½Å±¾ºÅ
+--æ¥¼å…°NPC		è£…å¤‡ä¿®ç†
+--å‘¨åä¸‰
+--è„šæœ¬å·
 
 x001106_g_ScriptId = 001106
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x001106_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
 		AddText(sceneId,"#{LLXL_081113_1}")
-		AddNumText(sceneId,x001106_g_ScriptId,"ÎÒÒªĞŞÀí×°±¸",6,1)
-		AddNumText(sceneId,x001106_g_ScriptId,"Ôö¼Ó¿ÉĞŞÀí´ÎÊı", 6, 2) --zchw
-		AddNumText(sceneId, x001106_g_ScriptId,"×°±¸ĞŞÀí½éÉÜ",11,12);
+		AddNumText(sceneId,x001106_g_ScriptId,"æˆ‘è¦ä¿®ç†è£…å¤‡",6,1)
+		AddNumText(sceneId,x001106_g_ScriptId,"å¢åŠ å¯ä¿®ç†æ¬¡æ•°", 6, 2) --zchw
+		AddNumText(sceneId, x001106_g_ScriptId,"è£…å¤‡ä¿®ç†ä»‹ç»",11,12);
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x001106_OnEventRequest( sceneId, selfId, targetId, eventId )
 	if GetNumText() == 1 then

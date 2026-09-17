@@ -28,15 +28,15 @@ function PS_CreateShop_OnEvent(event)
 
 		PS_CreateShop_InputShopName:SetProperty("DefaultEditBox", "True");
 		
-		--ÉÌÒµÖ¸Êı
+		--å•†ä¸šæŒ‡æ•°
 		local szCommercialFactor = PlayerShop:GetCommercialFactor();
-		PS_CreateShop_TradeIndex:SetText("ÉÌÒµÖ¸Êı:" .. szCommercialFactor);
+		PS_CreateShop_TradeIndex:SetText("å•†ä¸šæŒ‡æ•°:" .. szCommercialFactor);
 
-		--µ±Ç°ÄÜ¿ªµÄµê
+		--å½“å‰èƒ½å¼€çš„åº—
 		local nType = PlayerShop:GetCanOpenShopType();
 		
 		if(nType == 1)     then
-			--Ö»ÄÜ¿ªÎïÆ·µê
+			--åªèƒ½å¼€ç‰©å“åº—
 			PS_CreateShop_Text3:Show();
 			PS_CreateShop_Text4:Hide();
 			PS_CreateShop_Prop:Show();
@@ -44,7 +44,7 @@ function PS_CreateShop_OnEvent(event)
 			PS_CreateShop_Prop:SetCheck(1);
 			
 		elseif(nType == 2) then
-			--Ö»ÄÜ¿ª³èÎïµê
+			--åªèƒ½å¼€å® ç‰©åº—
 			PS_CreateShop_Text3:Hide();
 			PS_CreateShop_Text4:Show();
 			PS_CreateShop_Prop:Hide();
@@ -52,7 +52,7 @@ function PS_CreateShop_OnEvent(event)
 			PS_CreateShop_Pet:SetCheck(1);
 			
 		elseif(nType == 3) then
-			--Á½ÖÖµê¶¼ÄÜ¿ª
+			--ä¸¤ç§åº—éƒ½èƒ½å¼€
 			PS_CreateShop_Text3:Show();
 			PS_CreateShop_Text4:Show();
 			PS_CreateShop_Prop:Show();
@@ -61,7 +61,7 @@ function PS_CreateShop_OnEvent(event)
 			PS_CreateShop_Pet:SetCheck(0);
 		end
 
-		PS_CreateShop_Demand_Text:SetText("#cff0000¿ªÕÅĞÂµêÆÌĞèÒªÒ»±¾ÕÆ¹ñÒª¾÷#r#cFFF263µ±Ç°µÄÉÌÒµÖ¸ÊıÎª".. szCommercialFactor ..",Èç¹û¿ªÒ»¼äÒ»¹ñÌ¨µÄµêÆÌĞèÒª½ÉÄÉµÄ·ÑÓÃÈçÏÂ¡£");
+		PS_CreateShop_Demand_Text:SetText("#cff0000å¼€å¼ æ–°åº—é“ºéœ€è¦ä¸€æœ¬æŒæŸœè¦è¯€#r#cFFF263å½“å‰çš„å•†ä¸šæŒ‡æ•°ä¸º".. szCommercialFactor ..",å¦‚æœå¼€ä¸€é—´ä¸€æŸœå°çš„åº—é“ºéœ€è¦ç¼´çº³çš„è´¹ç”¨å¦‚ä¸‹ã€‚");
 		
 		local nOpenNeedMoney = PlayerShop:GetMoney("open","self");
 		PS_CreateShop_DemandMoney:SetProperty("MoneyNumber", tostring(nOpenNeedMoney));
@@ -74,18 +74,18 @@ function PS_CreateShop_OnEvent(event)
 		if(tonumber(arg0) ~= objCared) then
 			return;
 		end
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ı£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æœå’ŒNPCçš„è·ç¦»å¤§äºä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if(arg1 == "distance" and tonumber(arg2)>MAX_OBJ_DISTANCE or arg1=="destroy") then
 			g_InitiativeClose = 1;
 			this:Hide();
 
-			--È¡Ïû¹ØĞÄ
+			--å–æ¶ˆå…³å¿ƒ
 			this:CareObject(objCared, 0, "PS_CreateShop");
 		end
 		
 	elseif ( event == "PS_CLOSE_CREATESHOP" )   then
 		this:Hide();
-		--È¡Ïû¹ØĞÄ
+		--å–æ¶ˆå…³å¿ƒ
 		this:CareObject(objCared, 0, "PS_CreateShop");
 		
 	end
@@ -97,7 +97,7 @@ end
 --===============================================
 function PS_CreateShopRefuse_Clicked()
 	this:Hide();
-	--È¡Ïû¹ØĞÄ
+	--å–æ¶ˆå…³å¿ƒ
 	this:CareObject(objCared, 0, "PS_CreateShop");
 
 end

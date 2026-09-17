@@ -70,7 +70,7 @@ function PlayerList_Update(flag)
 			if bp == "" then bp = "N/A" end
 			
 			local mp = pl[i].menpai
-			if mp == "" then mp= "ÎŞ" end
+			if mp == "" then mp= "æ— " end
 			
 			if pl[i].iconstr == "ENEMY" then
 				icostr="#-18"
@@ -78,14 +78,14 @@ function PlayerList_Update(flag)
 				icostr="#-17"
 			end
 
-			local str = string.format("%s%s%-14s#cFFFFFF%4d¼¶#r  #c00B0F0%-14s#cFFFF00%6s",icostr, color ,na ,lv, bp, mp);	
+			local str = string.format("%s%s%-14s#cFFFFFF%4dçº§#r  #c00B0F0%-14s#cFFFF00%6s",icostr, color ,na ,lv, bp, mp);	
 			PlayerList_List:AddItem( str, i, "FFFFFFFF", 4 );
 		end
 	end
 	
 end
 
---Ñ¡ÔñÄ¿±ê
+--é€‰æ‹©ç›®æ ‡
 function PlayerList_PlayerSelect(isAttack )
 	local idx = PlayerList_List:GetFirstSelectItem();
 	
@@ -102,12 +102,12 @@ function PlayerList_PlayerSelect(isAttack )
 	end
 end
 
---¹Ø±Õ
+--å…³é—­
 function PlayerList_Hide()
 	this:Hide();
 end
 
---µ¯³ö
+--å¼¹å‡º
 function PlayerList_Show()
 	
 	PlayerList_ChannalChange(false);
@@ -122,7 +122,7 @@ function PlayerList_Show()
 	this:Show();
 end
 
---ÓÑºÃµĞ¶ÔÇĞ»»
+--å‹å¥½æ•Œå¯¹åˆ‡æ¢
 function PlayerList_ChannalChange( flag )
 	
 	UpdatePlayerList(flag);
@@ -138,12 +138,12 @@ function PlayerList_ChannalChange( flag )
 	PlayerList_Update(flag);
 end
 
---°ïÖú
+--å¸®åŠ©
 function PlayerList_OnHelp()
 	Helper:GotoHelper("*PlayerList");
 end
 
---ÓÒ¼ü²Ëµ¥
+--å³é”®èœå•
 function PlayerList_OpenMenu()
 
 end

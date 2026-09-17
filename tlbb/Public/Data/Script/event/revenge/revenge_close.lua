@@ -1,6 +1,6 @@
---¹Ø±Õ³ğÉ±
+--å…³é—­ä»‡æ€
 
---½Å±¾ºÅ £¨¸Ä³ÉÕıÈ·½Å±¾ºÅ£©
+--è„šæœ¬å· ï¼ˆæ”¹æˆæ­£ç¡®è„šæœ¬å·ï¼‰
 
 
 
@@ -23,7 +23,7 @@ end
 
 function x800114_OnEnumerate( sceneId, selfId,targetId )
 
-	AddNumText(sceneId,x800114_g_scriptId,"ÎÒ·ÅÆúÁË",10,x800114_g_scriptId)
+	AddNumText(sceneId,x800114_g_scriptId,"æˆ‘æ”¾å¼ƒäº†",10,x800114_g_scriptId)
 
 end
 

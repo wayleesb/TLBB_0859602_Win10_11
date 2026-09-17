@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" ?>
+<?xml version="1.0" ?>
 <GUILayout>
     <Window Type="TLBB_MainFrame1" Name="InputMood_Frame">
         <Property Name="UnifiedPosition" Value="{{0.3515625,0},{0.266666,0}}" />

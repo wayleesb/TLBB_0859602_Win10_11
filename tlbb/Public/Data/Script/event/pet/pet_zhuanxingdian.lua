@@ -1,15 +1,15 @@
--- ×ªĞÔµ¤
+-- è½¬æ€§ä¸¹
 
--- ½Å±¾ºÅ
+-- è„šæœ¬å·
 x800108_g_ScriptId = 800108;
 
-x800108_zhuanXingdian_ItemDataID = 30502003;	--×ªĞÔµ¤
+x800108_zhuanXingdian_ItemDataID = 30502003;	--è½¬æ€§ä¸¹
 
 --**********************************
--- ÈÎÎñÈë¿Úº¯Êı
+-- ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x800108_OnDefaultEvent(sceneId, selfId, targetId)
-	--ÕäÊŞÏ´µã
+	--çå…½æ´—ç‚¹
 	BeginUICommand(sceneId);
 		UICommand_AddInt(sceneId, targetId);
 	EndUICommand(sceneId);
@@ -17,58 +17,58 @@ function x800108_OnDefaultEvent(sceneId, selfId, targetId)
 end
 
 --**********************************
--- ÁĞ¾ÙÊÂ¼ş
+-- åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x800108_OnEnumerate(sceneId, selfId, targetId)
-	AddNumText(sceneId, x800108_g_ScriptId, "¸Ä±äÕäÊŞĞÔ¸ñ" , 6, -1);
+	AddNumText(sceneId, x800108_g_ScriptId, "æ”¹å˜çå…½æ€§æ ¼" , 6, -1);
 end
 
 --**********************************
--- ×ªĞÔµ¤¹æÔò
--- 0 - µ¨Ğ¡
--- 1 - ½÷É÷	
--- 2 - ÖÒ³Ï
--- 3 - ¾«Ã÷
--- 4 - ÓÂÃÍ
+-- è½¬æ€§ä¸¹è§„åˆ™
+-- 0 - èƒ†å°
+-- 1 - è°¨æ…	
+-- 2 - å¿ è¯š
+-- 3 - ç²¾æ˜
+-- 4 - å‹‡çŒ›
 --**********************************
 function x800108_ZhuanXingdian(sceneId, selfId, petGUID_H, petGUID_L)
 
 	if not sceneId or not selfId or not petGUID_H or not petGUID_L then
-		x800108_ShowTips(sceneId, selfId, "´íÎó²Ù×÷¡£");
+		x800108_ShowTips(sceneId, selfId, "é”™è¯¯æ“ä½œã€‚");
 		return 0;
 	end
 	
 	local zhuanXingdianItemName = GetItemName(sceneId, x800108_zhuanXingdian_ItemDataID);
 	if not zhuanXingdianItemName then
-		x800108_ShowTips(sceneId, selfId, "Î´¿ª·ÅÎïÆ·¡£");
+		x800108_ShowTips(sceneId, selfId, "æœªå¼€æ”¾ç‰©å“ã€‚");
 		return 0;
 	end
 
 	local curAIType = LuaFnGetPetAITypeByGUID(sceneId, selfId, petGUID_H, petGUID_L);
 	if not curAIType or curAIType == -1 then
-		x800108_ShowTips(sceneId, selfId, "ÄãÖ¸¶¨µÄÕäÊŞ²»´æÔÚ¡£");
+		x800108_ShowTips(sceneId, selfId, "ä½ æŒ‡å®šçš„çå…½ä¸å­˜åœ¨ã€‚");
 		return 0;
 	end
 
 	local petAvailableFlag = LuaFnIsPetAvailableByGUIDNoPW(sceneId, selfId, petGUID_H, petGUID_L);
 	if not petAvailableFlag or petAvailableFlag ~= 1 then
-		x800108_ShowTips(sceneId, selfId, "²»ÄÜ¶ÔËø¶¨µÄÕäÊŞ½øĞĞ²Ù×÷¡£");
+		x800108_ShowTips(sceneId, selfId, "ä¸èƒ½å¯¹é”å®šçš„çå…½è¿›è¡Œæ“ä½œã€‚");
 		return 0;
 	end
 	
 	local availableItemCount = LuaFnGetAvailableItemCount(sceneId, selfId, x800108_zhuanXingdian_ItemDataID);
 	if not availableItemCount or availableItemCount < 1 then
-		x800108_ShowTips(sceneId, selfId, "ĞèÒª"..zhuanXingdianItemName.."¡£");
+		x800108_ShowTips(sceneId, selfId, "éœ€è¦"..zhuanXingdianItemName.."ã€‚");
 		return 0;
 	end
 	
 	local delRet = LuaFnDelAvailableItem(sceneId, selfId, x800108_zhuanXingdian_ItemDataID, 1);
 	if not delRet or delRet ~= 1 then
-		x800108_ShowTips(sceneId, selfId, "¿Û³ı"..zhuanXingdianItemName.."Ê§°Ü¡£");
+		x800108_ShowTips(sceneId, selfId, "æ‰£é™¤"..zhuanXingdianItemName.."å¤±è´¥ã€‚");
 		return 0;
 	end
 
-	--AIÀàĞÍ±Ø¸Ä±ä£¬¶øÇÒÃ¿ÖÖ»úÂÊÊÇÒ»ÑùµÄ
+	--AIç±»å‹å¿…æ”¹å˜ï¼Œè€Œä¸”æ¯ç§æœºç‡æ˜¯ä¸€æ ·çš„
 	local toAIType = random(4) - 1;
 	if toAIType >= curAIType then
 		toAIType = toAIType + 1;
@@ -76,17 +76,17 @@ function x800108_ZhuanXingdian(sceneId, selfId, petGUID_H, petGUID_L)
 
 	local ret = LuaFnSetPetAITypeByGUID(sceneId, selfId, petGUID_H, petGUID_L, toAIType);
 	if not ret or ret ~= 1 then
-		x800108_ShowTips(sceneId, selfId, "ÄãÖ¸¶¨µÄÕäÊŞ²»´æÔÚ¡£");
+		x800108_ShowTips(sceneId, selfId, "ä½ æŒ‡å®šçš„çå…½ä¸å­˜åœ¨ã€‚");
 		return 0;
 	end
 
-	x800108_ShowTips(sceneId, selfId, "ÄúµÄÕäÊŞµÄĞÔ¸ñÒÑ¾­¸Ä±ä³É¹¦¡£");
+	x800108_ShowTips(sceneId, selfId, "æ‚¨çš„çå…½çš„æ€§æ ¼å·²ç»æ”¹å˜æˆåŠŸã€‚");
 	LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, 18, 0);
 	return 1;
 end
 
 --**********************************
--- ÌáÊ¾ĞÅÏ¢
+-- æç¤ºä¿¡æ¯
 --**********************************
 function x800108_ShowTips(sceneId, selfId, tipMsg)
 	BeginEvent(sceneId);

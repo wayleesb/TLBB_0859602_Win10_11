@@ -1,28 +1,28 @@
 -------------------------------------------------------
---"×Ô¶¨Òå°ï»áÖ°Î»Ãû³Æ"½çÃæ½Å±¾
+--"è‡ªå®šä¹‰å¸®ä¼šèŒä½åç§°"ç•Œé¢è„šæœ¬
 --create by xindefeng
 -------------------------------------------------------
 
-local g_NameCtls = nil	--ĞèÒªÓÃµ½µÄ¿Ø¼ş±í
+local g_NameCtls = nil	--éœ€è¦ç”¨åˆ°çš„æ§ä»¶è¡¨
 
---±ê×¼°ï»áÖ°Î»Ãû³Æ
+--æ ‡å‡†å¸®ä¼šèŒä½åç§°
 local g_StdPositionName = {
-	"°ïÖ÷",			--9
-	"¸±°ïÖ÷",		--8
-	"ÄÚÎñÊ¹",		--7
-	"¹¤ÎñÊ¹",		--6
-	"ºë»¯Ê¹",		--5
-	"ÉÌÈË",			--4
-	"¾«Ó¢",			--3
-	"°ïÖÚ"			--2
+	"å¸®ä¸»",			--9
+	"å‰¯å¸®ä¸»",		--8
+	"å†…åŠ¡ä½¿",		--7
+	"å·¥åŠ¡ä½¿",		--6
+	"å¼˜åŒ–ä½¿",		--5
+	"å•†äºº",			--4
+	"ç²¾è‹±",			--3
+	"å¸®ä¼—"			--2
 }
 
---Reset°´Å¥ÊÇ·ñÊ¹ÓÃ¹ı±êÖ¾
+--ResetæŒ‰é’®æ˜¯å¦ä½¿ç”¨è¿‡æ ‡å¿—
 local g_ResetBtnFlag = {0,0,0,0,0,0,0,0}
 
-local g_SaveForReset = nil --±£´æ´ò¿ª½çÃæÊ±"×Ô¶¨ÒåÖ°Î»Ãû³Æ"ÓÃÓÚReset
+local g_SaveForReset = nil --ä¿å­˜æ‰“å¼€ç•Œé¢æ—¶"è‡ªå®šä¹‰èŒä½åç§°"ç”¨äºReset
 
---ÊÂ¼ş×¢²á
+--äº‹ä»¶æ³¨å†Œ
 function ConfraternityCustomPosition_PreLoad()
 	this:RegisterEvent("GUILD_SHOW_CUSTOMPOSITION")
 	this:RegisterEvent("GUILD_FORCE_CLOSE")	
@@ -31,10 +31,10 @@ end
 function ConfraternityCustomPosition_OnLoad()	
 end
 
---ÊÂ¼şÏìÓ¦
+--äº‹ä»¶å“åº”
 function ConfraternityCustomPosition_OnEvent(event)	
 	if( event == "GUILD_SHOW_CUSTOMPOSITION" ) then
-		ConfraternityCustomPosition_SetCtls()	--ÉèÖÃ¿Ø¼ş
+		ConfraternityCustomPosition_SetCtls()	--è®¾ç½®æ§ä»¶
 		g_ResetBtnFlag = {0,0,0,0,0,0,0,0}
 		
 		ConfraternityCustomPosition_Clear()
@@ -45,7 +45,7 @@ function ConfraternityCustomPosition_OnEvent(event)
 	end
 end
 
---ÉèÖÃ¿Ø¼ş±í
+--è®¾ç½®æ§ä»¶è¡¨
 function ConfraternityCustomPosition_SetCtls()
 	g_NameCtls = nil;
 	
@@ -83,121 +83,121 @@ function ConfraternityCustomPosition_SetCtls()
 								}
 end
 
---Çå¿Õ½çÃæÊı¾İ
+--æ¸…ç©ºç•Œé¢æ•°æ®
 function ConfraternityCustomPosition_Clear()	
 end
 
---Ë¢ĞÂ½çÃæÏÔÊ¾µÄÊı¾İ
+--åˆ·æ–°ç•Œé¢æ˜¾ç¤ºçš„æ•°æ®
 function ConfraternityCustomPosition_Update()
 	local szMsg = nil
 	
-	ConfraternityCustomPosition_Title:SetText("#gFF0FA0×Ô¶¨ÒåÖ°Î»Ãû³Æ")
+	ConfraternityCustomPosition_Title:SetText("#gFF0FA0è‡ªå®šä¹‰èŒä½åç§°")
 	
-	--ÏÔÊ¾µ±Ç°"×Ô¶¨ÒåÖ°Î»Ãû³Æ"
+	--æ˜¾ç¤ºå½“å‰"è‡ªå®šä¹‰èŒä½åç§°"
 	for i=1,8 do
-		g_NameCtls.ResetBtn[i]:SetText("»Ö¸´")		--ĞŞ¸Ä°´Å¥Ãû×Ö
+		g_NameCtls.ResetBtn[i]:SetText("æ¢å¤")		--ä¿®æ”¹æŒ‰é’®åå­—
 		
 		szMsg = Guild:GetCurCustomPositionName(10-i)		
-		g_SaveForReset[i] = szMsg	--±£´æÒ»ÏÂ,ÓÃÓÚ±È½ÏÅĞ¶ÏÊÇ·ñ¸Ä¹ı		
+		g_SaveForReset[i] = szMsg	--ä¿å­˜ä¸€ä¸‹,ç”¨äºæ¯”è¾ƒåˆ¤æ–­æ˜¯å¦æ”¹è¿‡		
 		if((szMsg == "") or (szMsg == g_StdPositionName[i]))then
 			szMsg = g_StdPositionName[i]
-			g_NameCtls.ResetBtn[i]:Disable()	--´ÓÀ´Ã»ÓĞ¸Ä¹ı,°´Å¥²»ÄÜÊ¹ÓÃ,»Òµô
+			g_NameCtls.ResetBtn[i]:Disable()	--ä»æ¥æ²¡æœ‰æ”¹è¿‡,æŒ‰é’®ä¸èƒ½ä½¿ç”¨,ç°æ‰
 		else
 			szMsg = szMsg.."("..g_StdPositionName[i]..")"
-			g_NameCtls.ResetBtn[i]:Enable()						--¸Ä¹ı,°´Å¥¿ÉÒÔÊ¹ÓÃ			
+			g_NameCtls.ResetBtn[i]:Enable()						--æ”¹è¿‡,æŒ‰é’®å¯ä»¥ä½¿ç”¨			
 		end
 		
-		--ÉèÖÃµ±Ç°×Ô¶¨ÒåÖ°Î»Ãû³Æ
+		--è®¾ç½®å½“å‰è‡ªå®šä¹‰èŒä½åç§°
 		g_NameCtls.oldNames[i]:SetText(szMsg)
 		
 	end
 	
-	--½«±à¼­¿òÇå¿Õ
+	--å°†ç¼–è¾‘æ¡†æ¸…ç©º
 	for i=1,8 do
 		g_NameCtls.newNames[i]:SetText("")
 	end	
 	
 end
 
---´ò¿ª½çÃæ
+--æ‰“å¼€ç•Œé¢
 function ConfraternityCustomPosition_Show()	
 	this:Show()
 end
 
---¹Ø±Õ´°¿Ú
+--å…³é—­çª—å£
 function ConfraternityCustomPosition_Close()
 	this:Hide()
 end
 
---¸´Î»°´Å¥
+--å¤ä½æŒ‰é’®
 function ConfraternityCustomPosition_Reset(BtnId)
 	g_NameCtls.oldNames[BtnId]:SetText(g_StdPositionName[BtnId])
 	g_NameCtls.newNames[BtnId]:SetText("")
 		
-	g_ResetBtnFlag[BtnId] = 1	--ÉèÖÃÊ¹ÓÃ±êÖ¾	
+	g_ResetBtnFlag[BtnId] = 1	--è®¾ç½®ä½¿ç”¨æ ‡å¿—	
 	
 	g_NameCtls.ResetBtn[BtnId]:SetText("#{INTERFACE_XML_1154}")
-	g_NameCtls.ResetBtn[BtnId]:Disable()	--»Ö¸´Ò»´Î¾Í²»ÄÜÔÙÓÃÁË£¬»Òµô
+	g_NameCtls.ResetBtn[BtnId]:Disable()	--æ¢å¤ä¸€æ¬¡å°±ä¸èƒ½å†ç”¨äº†ï¼Œç°æ‰
 end
 
---È·¶¨
+--ç¡®å®š
 function ConfraternityCustomPosition_Ok()
 	local szOld = nil
 	local szNew = nil
-	local bIsChanged = 0	--¼ÇÂ¼ÊÇ·ñÓĞ¸Ä±ä
-	local bLegal = 1			--ÊÇ·ñºÏ·¨
-	local result = 0			--ĞŞ¸Ä½á¹û
-	local bTipFlag = 0		--ÊÇ·ñĞèÒªÌáÊ¾"ÄúµÄÊäÈëµ±ÖĞÓĞ×ªÒå×Ö·û"
+	local bIsChanged = 0	--è®°å½•æ˜¯å¦æœ‰æ”¹å˜
+	local bLegal = 1			--æ˜¯å¦åˆæ³•
+	local result = 0			--ä¿®æ”¹ç»“æœ
+	local bTipFlag = 0		--æ˜¯å¦éœ€è¦æç¤º"æ‚¨çš„è¾“å…¥å½“ä¸­æœ‰è½¬ä¹‰å­—ç¬¦"
 	
-	--ÔÚ¼ÇÂ¼"ĞÂĞŞ¸ÄµÄ°ï»á×Ô¶¨ÒåÖ°Î»Ãû³Æ"Ö®Ç°,ÏÈÇå¿ÕÒ»ÏÂÊı¾İ½á¹¹
+	--åœ¨è®°å½•"æ–°ä¿®æ”¹çš„å¸®ä¼šè‡ªå®šä¹‰èŒä½åç§°"ä¹‹å‰,å…ˆæ¸…ç©ºä¸€ä¸‹æ•°æ®ç»“æ„
 	Guild:ClearCustomPositionName()
 	
 	for i=1,8 do		
-		--»ñÈ¡ÊäÈë
+		--è·å–è¾“å…¥
 		szNew = g_NameCtls.newNames[i]:GetText()
 		
-		--¼ì²âÊÇ·ñÓĞÎ¥·¨×Ö·û£¬Èç¹û¼ì²âÍ¨¹ıÔò´æ´¢ÏÂÀ´
-		result = 0	--Ã¿´Î¶¼ÒªÉèÖÃ
-		if(g_ResetBtnFlag[i] == 1)then	--Ê¹ÓÃÁËÏàÓ¦µÄReset°´Å¥,»Ö¸´±ê×¼Ö°Î»Ãû×Ö
-			bIsChanged = bIsChanged + 1	--·¢Éú¸Ä±ä
-			result = Guild:AskModifyCustomPositionName(10-i, tostring(g_StdPositionName[i]), 1)	--¼ì²â´æ´¢
-		elseif((szNew ~= "") and (szNew ~= g_SaveForReset[i]))then	--»òÕß×Ô¶¨ÒåÁËÖ°Î»Ãû³Æ
-			bIsChanged = bIsChanged + 1	--·¢Éú¸Ä±ä
-			result = Guild:AskModifyCustomPositionName(10-i, tostring(szNew), 0)			--¼ì²â´æ´¢
+		--æ£€æµ‹æ˜¯å¦æœ‰è¿æ³•å­—ç¬¦ï¼Œå¦‚æœæ£€æµ‹é€šè¿‡åˆ™å­˜å‚¨ä¸‹æ¥
+		result = 0	--æ¯æ¬¡éƒ½è¦è®¾ç½®
+		if(g_ResetBtnFlag[i] == 1)then	--ä½¿ç”¨äº†ç›¸åº”çš„ResetæŒ‰é’®,æ¢å¤æ ‡å‡†èŒä½åå­—
+			bIsChanged = bIsChanged + 1	--å‘ç”Ÿæ”¹å˜
+			result = Guild:AskModifyCustomPositionName(10-i, tostring(g_StdPositionName[i]), 1)	--æ£€æµ‹å­˜å‚¨
+		elseif((szNew ~= "") and (szNew ~= g_SaveForReset[i]))then	--æˆ–è€…è‡ªå®šä¹‰äº†èŒä½åç§°
+			bIsChanged = bIsChanged + 1	--å‘ç”Ÿæ”¹å˜
+			result = Guild:AskModifyCustomPositionName(10-i, tostring(szNew), 0)			--æ£€æµ‹å­˜å‚¨
 		end
 		
-		--¸ø³öÎ¥·¨ÌáÊ¾
+		--ç»™å‡ºè¿æ³•æç¤º
 		if (result == -1) then
-			PushDebugMessage("ÄúÊäÈëµÄ¡°"..szNew.."¡±Î¥·¨£¬Çë×¢ÒâÄúµÄÑÔ´Ç£¡")	
-			bLegal = 0	--±êÊ¶ÓĞÎ¥·¨×Ö·û
+			PushDebugMessage("æ‚¨è¾“å…¥çš„â€œ"..szNew.."â€è¿æ³•ï¼Œè¯·æ³¨æ„æ‚¨çš„è¨€è¾ï¼")	
+			bLegal = 0	--æ ‡è¯†æœ‰è¿æ³•å­—ç¬¦
 			
-			bIsChanged = bIsChanged - 1	--¸Ä±äÊıÁ¿¼õ1
+			bIsChanged = bIsChanged - 1	--æ”¹å˜æ•°é‡å‡1
 		elseif (result == -2) then			
-			bTipFlag = 1		--ĞèÒªÌáÊ¾"ÄúµÄÊäÈëµ±ÖĞÓĞ×ªÒå×Ö·û£¡"
-			bLegal = 0	--±êÊ¶ÓĞÎ¥·¨×Ö·û
+			bTipFlag = 1		--éœ€è¦æç¤º"æ‚¨çš„è¾“å…¥å½“ä¸­æœ‰è½¬ä¹‰å­—ç¬¦ï¼"
+			bLegal = 0	--æ ‡è¯†æœ‰è¿æ³•å­—ç¬¦
 			
-			bIsChanged = bIsChanged - 1	--¸Ä±äÊıÁ¿¼õ1
+			bIsChanged = bIsChanged - 1	--æ”¹å˜æ•°é‡å‡1
 		end		
 	end
 	
-	--ÓĞ²»ºÏ·¨×Ö·û´®Ö±½Ó·µ»Ø
+	--æœ‰ä¸åˆæ³•å­—ç¬¦ä¸²ç›´æ¥è¿”å›
 	if(bLegal == 0) then
-		if(bTipFlag == 1)then	--ĞèÒªÌáÊ¾
-			PushDebugMessage("ÄúµÄÊäÈëµ±ÖĞÓĞÎ¥·¨×Ö·û£¡")	--ÌáÊ¾£º"ÄúµÄÊäÈëµ±ÖĞÓĞ×ªÒå×Ö·û£¡"
+		if(bTipFlag == 1)then	--éœ€è¦æç¤º
+			PushDebugMessage("æ‚¨çš„è¾“å…¥å½“ä¸­æœ‰è¿æ³•å­—ç¬¦ï¼")	--æç¤ºï¼š"æ‚¨çš„è¾“å…¥å½“ä¸­æœ‰è½¬ä¹‰å­—ç¬¦ï¼"
 		end
 		return
 	end
 	
-	--·¢°ü
-	if(bIsChanged > 0) then	--ÓĞ¸Ä±ä
+	--å‘åŒ…
+	if(bIsChanged > 0) then	--æœ‰æ”¹å˜
 		Guild:AskModifyCustomPositionName(0)
 	end
 	
-	--¹Ø±Õ´°¿Ú
+	--å…³é—­çª—å£
 	this:Hide()	
 end
 
---È¡Ïû
+--å–æ¶ˆ
 function ConfraternityCustomPosition_Cancel()
 	this:Hide()
 end

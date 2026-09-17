@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" ?>
+<?xml version="1.0" ?>
 <GUILayout>
     <Window Type="TLBB_MainFrame1" Name="NewbieCardActivation_Frame">
         <Property Name="UnifiedPosition" Value="{{0.5,-128},{0.4,-64}}" />

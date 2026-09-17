@@ -1,42 +1,42 @@
--- µ±½ÇÉ«½øÈëÇøÓò£¬¾Í´¥·¢ÊÂ¼ş
+-- å½“è§’è‰²è¿›å…¥åŒºåŸŸï¼Œå°±è§¦å‘äº‹ä»¶
 
 
 --**********************************
---½øÈëÇøÓòÊÂ¼ş
+--è¿›å…¥åŒºåŸŸäº‹ä»¶
 --**********************************
 function x037004_OnEnterArea( sceneId, selfId, areaId)
-	-- ÔÚÕâÀï´ò¿ªÕ½¶·¿ª¹Ø
+	-- åœ¨è¿™é‡Œæ‰“å¼€æˆ˜æ–—å¼€å…³
 	--if 0 == LuaFnGetCopySceneData_Param(sceneId, 7)    then
 		--PrintNum(123)
 	--	LuaFnSetCopySceneData_Param(sceneId, 7, 1) 
 		
-		-- ¸Ä±ä¼¸¸ö¸ßÊÖµÄÕóÓª
+		-- æ”¹å˜å‡ ä¸ªé«˜æ‰‹çš„é˜µè¥
 		local nMonsterNum = GetMonsterCount(sceneId)
 		local rrr = GetCurCamp(sceneId, selfId)
 		local ii = 0
 		local bHaveMonster = 0
 		for ii=0, nMonsterNum-1 do
 			local nMonsterId = GetMonsterObjID(sceneId,ii)
-			if GetName(sceneId, nMonsterId)  == "»Æºú×Ó"  then
+			if GetName(sceneId, nMonsterId)  == "é»„èƒ¡å­"  then
 				SetUnitReputationID(sceneId, selfId, nMonsterId, 29)
 				SetMonsterFightWithNpcFlag(sceneId, nMonsterId, 1)
-			elseif GetName(sceneId, nMonsterId)  == "»ÒÅÛ¿Í"  then
+			elseif GetName(sceneId, nMonsterId)  == "ç°è¢å®¢"  then
 				SetUnitReputationID(sceneId, selfId, nMonsterId, 29)
 				SetMonsterFightWithNpcFlag(sceneId, nMonsterId, 1)
-			elseif GetName(sceneId, nMonsterId)  == "»¢×¦ÃÅµÜ×Ó"  then
+			elseif GetName(sceneId, nMonsterId)  == "è™çˆªé—¨å¼Ÿå­"  then
 				SetUnitReputationID(sceneId, selfId, nMonsterId, 29)
 				SetMonsterFightWithNpcFlag(sceneId, nMonsterId, 1)
-			elseif GetName(sceneId, nMonsterId)  == "ò°÷×ÎäÊ¿"  then
+			elseif GetName(sceneId, nMonsterId)  == "è™¬é«¯æ­¦å£«"  then
 				SetUnitReputationID(sceneId, selfId, nMonsterId, 29)
 				SetMonsterFightWithNpcFlag(sceneId, nMonsterId, 1)
-			elseif GetName(sceneId, nMonsterId)  == "Ë¤½Ç¸ßÊÖ"  then
+			elseif GetName(sceneId, nMonsterId)  == "æ‘”è§’é«˜æ‰‹"  then
 				SetUnitReputationID(sceneId, selfId, nMonsterId, 29)
 				SetMonsterFightWithNpcFlag(sceneId, nMonsterId, 1)
 				
-			elseif GetName(sceneId, nMonsterId)  == "¶ÎÓş"  then
+			elseif GetName(sceneId, nMonsterId)  == "æ®µèª‰"  then
 				SetUnitReputationID(sceneId, selfId, nMonsterId, 0)
 				SetMonsterFightWithNpcFlag(sceneId, nMonsterId, 1)
-			elseif GetName(sceneId, nMonsterId)  == "Î÷ÏÄÎäÊ¿"  then
+			elseif GetName(sceneId, nMonsterId)  == "è¥¿å¤æ­¦å£«"  then
 				SetUnitReputationID(sceneId, selfId, nMonsterId, 29)
 				SetMonsterFightWithNpcFlag(sceneId, nMonsterId, 1)
 			end
@@ -45,7 +45,7 @@ function x037004_OnEnterArea( sceneId, selfId, areaId)
 end
 
 --**********************************
---½øÈëÇøÓòÊÂ¼ş
+--è¿›å…¥åŒºåŸŸäº‹ä»¶
 --**********************************
 function x037004_OnLeaveArea( sceneId, selfId, areaId)
 end

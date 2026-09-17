@@ -1,15 +1,15 @@
 local g_ItemMax = 0;
 local g_ItemIdx = -1;
 
-local CU_MONEY			= 1	-- Ç®
+local CU_MONEY			= 1	-- é’±
 
 local objCared = -1;
 
-g_MountXueYuID = 39;   --×ùÆïÑ©ÓğµÄid
-g_MountMingYuID = 44;	--×ùÆïÚ¤ÓğµÄid
-g_CameraHeight = 1;     --ÉãÓ°»ú¸ß¶È
-g_CameraDistance = 2;   --ÉãÓ°»ú¾àÀë
-g_CameraPitch = 3;      --ÉãÓ°»ú½Ç¶È
+g_MountXueYuID = 39;   --åº§éª‘é›ªç¾½çš„id
+g_MountMingYuID = 44;	--åº§éª‘å†¥ç¾½çš„id
+g_CameraHeight = 1;     --æ‘„å½±æœºé«˜åº¦
+g_CameraDistance = 2;   --æ‘„å½±æœºè·ç¦»
+g_CameraPitch = 3;      --æ‘„å½±æœºè§’åº¦
 
 
 
@@ -40,7 +40,7 @@ function Shop_Fitting_OnEvent(event)
 	if ( event == "PLAYER_ENTERING_WORLD" ) then
 		Shop_Fitting_Booth_Close();
 		
-		-- ÏÔÊ¾¾­Ñé
+		-- æ˜¾ç¤ºç»éªŒ
 	end
 	if(event == "OPEN_SHOP_FITTING") then
 		this:Show();
@@ -52,7 +52,7 @@ function Shop_Fitting_OnEvent(event)
 		Shop_Fitting_FakeObject:SetFakeObject("EquipChange_Player");
 		
 		local nMountID = GetMountID();
-		if nMountID == g_MountXueYuID or g_MountMingYuID == nMountID  then   --Ñ©ÓğµÄÊÔÆï±È½ÏÌØÊâ£¬µ¥¶ÀÉèÖÃÉãÏñ»úµÄÎ»ÖÃ
+		if nMountID == g_MountXueYuID or g_MountMingYuID == nMountID  then   --é›ªç¾½çš„è¯•éª‘æ¯”è¾ƒç‰¹æ®Šï¼Œå•ç‹¬è®¾ç½®æ‘„åƒæœºçš„ä½ç½®
 		  FakeObj_SetCamera( "EquipChange_Player", g_CameraDistance,12);
 		  FakeObj_SetCamera( "EquipChange_Player", g_CameraHeight,2);
 		elseif nMountID > 0 then
@@ -69,9 +69,9 @@ function Shop_Fitting_OnEvent(event)
 			return;
 		end
 		
-		--Èç¹ûºÍÉÌÈËµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ı£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æœå’Œå•†äººçš„è·ç¦»å¤§äºä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if(arg1 == "distance" and tonumber(arg2)>MAX_OBJ_DISTANCE or arg1=="destroy") then
-			--È¡Ïû¹ØĞÄ
+			--å–æ¶ˆå…³å¿ƒ
 			RestoreShopFitting();
 			this:CareObject(objCared, 0, "Shop_Fitting");
 			this:Hide();			
@@ -82,7 +82,7 @@ function Shop_Fitting_OnEvent(event)
 			Shop_Fitting_FakeObject : Show();
 			Shop_Fitting_FakeObject:SetFakeObject("EquipChange_Player");
 					local nMountID = GetMountID();
-		if nMountID == g_MountXueYuID or g_MountMingYuID == nMountID then   --Ñ©ÓğµÄÊÔÆï±È½ÏÌØÊâ£¬µ¥¶ÀÉèÖÃÉãÏñ»úµÄÎ»ÖÃ
+		if nMountID == g_MountXueYuID or g_MountMingYuID == nMountID then   --é›ªç¾½çš„è¯•éª‘æ¯”è¾ƒç‰¹æ®Šï¼Œå•ç‹¬è®¾ç½®æ‘„åƒæœºçš„ä½ç½®
 		  FakeObj_SetCamera( "EquipChange_Player", g_CameraDistance,12);
 		  FakeObj_SetCamera( "EquipChange_Player", g_CameraHeight,2);
 		elseif nMountID > 0 then
@@ -93,7 +93,7 @@ end
 
 function Shop_Fitting_Booth_Close()
 	
-	--È¡Ïû¹ØĞÄ
+	--å–æ¶ˆå…³å¿ƒ
 	this:CareObject(objCared, 0, "Shop_Fitting");
 	RestoreShopFitting();
 	CloseShopFitting();
@@ -114,16 +114,16 @@ end
 
 ----------------------------------------------------------------------------------
 --
--- Ğı×ªÈËÎïÍ·ÏñÄ£ĞÍ£¨Ïò×ó)
+-- æ—‹è½¬äººç‰©å¤´åƒæ¨¡å‹ï¼ˆå‘å·¦)
 --
 function Shop_Fitting_TurnLeft(start)
 	local mouse_button = CEArg:GetValue("MouseButton");
 	if(mouse_button == "LeftButton") then
 	AxTrace( 0,0, "Shop_Fitting_TurnLeft   " )
-		--Ïò×óĞı×ª¿ªÊ¼
+		--å‘å·¦æ—‹è½¬å¼€å§‹
 		if(start == 1) then
 			Shop_Fitting_FakeObject:RotateBegin(-0.3);
-		--Ïò×óĞı×ª½áÊø
+		--å‘å·¦æ—‹è½¬ç»“æŸ
 		else
 			Shop_Fitting_FakeObject:RotateEnd();
 		end
@@ -132,16 +132,16 @@ end
 
 ----------------------------------------------------------------------------------
 --
---Ğı×ªÈËÎïÍ·ÏñÄ£ĞÍ£¨ÏòÓÒ)
+--æ—‹è½¬äººç‰©å¤´åƒæ¨¡å‹ï¼ˆå‘å³)
 --
 function Shop_Fitting_TurnRight(start)
 	local mouse_button = CEArg:GetValue("MouseButton");
 	if(mouse_button == "LeftButton") then
 	AxTrace( 0,0, "Shop_Fitting_TurnRight   " )
-		--ÏòÓÒĞı×ª¿ªÊ¼
+		--å‘å³æ—‹è½¬å¼€å§‹
 		if(start == 1) then
 			Shop_Fitting_FakeObject:RotateBegin(0.3);
-		--ÏòÓÒĞı×ª½áÊø
+		--å‘å³æ—‹è½¬ç»“æŸ
 		else
 			Shop_Fitting_FakeObject:RotateEnd();
 		end

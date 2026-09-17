@@ -1,5 +1,5 @@
---´óÀíÇ®Áú 
---ÌìÁú¼ÎÄê»ª-Ğı×ªÄ¾Âí Created by DengXX
+--å¤§ç†é’±é¾™ 
+--å¤©é¾™å˜‰å¹´å-æ—‹è½¬æœ¨é©¬ Created by DengXX
 
 x889054_g_ScriptId = 889054
 
@@ -8,16 +8,16 @@ x889054_g_isDone = {}
 x889054_g_isDone[0]="#{J_XZMM_090318_17}"
 x889054_g_isDone[1]="#{J_XZMM_090318_16}"
 
-x889054_g_XuanMuJingDanId = 30504073 --ĞıÄ¾½ğµ° ¸ß¼¶½±Àø 
-x889054_g_XuanMuYingDanId = 30504074 --ĞıÄ¾Òøµ° ³õ¼¶½±Àø
-x889054_g_PiaoMiaoFengItemId = 30504075 --ÁÁ½ğ±¦Ê¯ID 
-x889054_g_XuanMu_Base        = "XUANMU_BASE"    --Í³¼ÆÈÕÖ¾ÓÃ¡¡ÁìÈ¡³õ¼¶½±Àø
-x889054_g_XuanMu_Advance     = "XUANMU_ADVANCE" --Í³¼ÆÈÕÖ¾ÓÃ  ÁìÈ¡¸ß¼¶½±Àø                             
+x889054_g_XuanMuJingDanId = 30504073 --æ—‹æœ¨é‡‘è›‹ é«˜çº§å¥–åŠ± 
+x889054_g_XuanMuYingDanId = 30504074 --æ—‹æœ¨é“¶è›‹ åˆçº§å¥–åŠ±
+x889054_g_PiaoMiaoFengItemId = 30504075 --äº®é‡‘å®çŸ³ID 
+x889054_g_XuanMu_Base        = "XUANMU_BASE"    --ç»Ÿè®¡æ—¥å¿—ç”¨ã€€é¢†å–åˆçº§å¥–åŠ±
+x889054_g_XuanMu_Advance     = "XUANMU_ADVANCE" --ç»Ÿè®¡æ—¥å¿—ç”¨  é¢†å–é«˜çº§å¥–åŠ±                             
 x889054_g_StartDate = 9097  --20090408
 x889054_g_EndDate = 9131    --20090512
-x889054_g_CancelDate = 9150    --20090531 ¹Ø±ÕÑ¡Ïî
+x889054_g_CancelDate = 9150    --20090531 å…³é—­é€‰é¡¹
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x889054_OnEnumerate( sceneId, selfId,targetId )
 	if GetDayTime() >= x889054_g_StartDate and GetDayTime() <= x889054_g_CancelDate then
@@ -29,7 +29,7 @@ function x889054_OnDefaultEvent( sceneId,selfId,targetId )
 	
 	local key = GetNumText()
 	
-	if key == 0 or key ==30 then --µã»÷"Ğı×ªÄ¾Âí"»ò"ÉÏÒ»Ò³"
+	if key == 0 or key ==30 then --ç‚¹å‡»"æ—‹è½¬æœ¨é©¬"æˆ–"ä¸Šä¸€é¡µ"
 		BeginEvent(sceneId)
 		  AddText(sceneId,"#{J_XZMM_090318_2}")
 			if GetDayTime() >= x889054_g_StartDate and  GetDayTime() <= x889054_g_EndDate then 
@@ -49,7 +49,7 @@ function x889054_OnDefaultEvent( sceneId,selfId,targetId )
 										  [5]="#{J_XZMM_090318_13}"
 										 }
      local flag = x889054_AuditHuoDong(sceneId,selfId,targetId,1)
-      --ÏÔÊ¾Í³¼ÆĞÅÏ¢
+      --æ˜¾ç¤ºç»Ÿè®¡ä¿¡æ¯
     	local msg = format("#{J_XZMM_090318_8}")
       BeginEvent( sceneId )
         AddText( sceneId, msg )
@@ -76,7 +76,7 @@ function x889054_OnDefaultEvent( sceneId,selfId,targetId )
 										  [7]="#{J_XZMM_090318_21}"
 										 }
      local flag = x889054_AuditHuoDong(sceneId,selfId,targetId,2)
-    	--ÏÔÊ¾Í³¼ÆĞÅÏ¢
+    	--æ˜¾ç¤ºç»Ÿè®¡ä¿¡æ¯
     	local msg = format("#{J_XZMM_090318_8}")
       BeginEvent( sceneId )
         AddText( sceneId, msg )
@@ -93,7 +93,7 @@ function x889054_OnDefaultEvent( sceneId,selfId,targetId )
   
   if key == 10 then
    
-    --ÅĞ¶Ïµ±ÌìÊÇ·ñÁìÈ¡¹ı½±Àø
+    --åˆ¤æ–­å½“å¤©æ˜¯å¦é¢†å–è¿‡å¥–åŠ±
     local today = GetDayTime()
   	if today == GetMissionData(sceneId, selfId, MD_TW_JIANIANHUA_XUANMU_DATE) then 
 	     BeginEvent( sceneId )
@@ -117,13 +117,13 @@ function x889054_OnDefaultEvent( sceneId,selfId,targetId )
 	    		x889054_ShowTip( sceneId, selfId, "#{J_XZMM_090318_7}" )
 	    	  return
     	 end  
-	     --·¢µã½±Æ·
+	     --å‘ç‚¹å¥–å“
 	     local ret = TryRecieveItem( sceneId, selfId, x889054_g_XuanMuYingDanId, QUALITY_MUST_BE_CHANGE)
 	     if ret >=0 then 
-		    --ÉèÖÃ»î¶¯±ê¼Ç¡¢ÈÕÖ¾Í³¼Æ
+		    --è®¾ç½®æ´»åŠ¨æ ‡è®°ã€æ—¥å¿—ç»Ÿè®¡
 		       SetMissionData(sceneId,selfId,MD_TW_JIANIANHUA_XUANMU_DATE,today)
 		       LuaFnAuditQuest(sceneId,selfId,x889054_g_XuanMu_Base)
-		       --ÎïÆ·ĞÑÄ¿ÌáÊ¾
+		       --ç‰©å“é†’ç›®æç¤º
 		       x889054_ShowTip( sceneId, selfId, "#{QRJ_81009_26}"..GetItemName(sceneId,x889054_g_XuanMuYingDanId))
 	         Msg2Player(sceneId, selfId, "#{QRJ_81009_26}"..GetItemName(sceneId,x889054_g_XuanMuYingDanId), MSG2PLAYER_PARA )
 	     end
@@ -142,7 +142,7 @@ function x889054_OnDefaultEvent( sceneId,selfId,targetId )
  
   if key == 20 then
   	
-     --ÅĞ¶Ïµ±ÌìÊÇ·ñÁìÈ¡¹ı½±Àø	       
+     --åˆ¤æ–­å½“å¤©æ˜¯å¦é¢†å–è¿‡å¥–åŠ±	       
      local today = GetDayTime()
 	   if today == GetMissionData(sceneId, selfId, MD_TW_JIANIANHUA_XUANMU_DATE) then 
     	  BeginEvent( sceneId )
@@ -167,18 +167,18 @@ function x889054_OnDefaultEvent( sceneId,selfId,targetId )
 	    	  return
     	 end  
     	 
-        --¿Û³ıÁÁ½ğ±¦Ê¯
+        --æ‰£é™¤äº®é‡‘å®çŸ³
         if LuaFnGetAvailableItemCount(sceneId,selfId,x889054_g_PiaoMiaoFengItemId) >= 1 then
         	if LuaFnDelAvailableItem(sceneId,selfId,x889054_g_PiaoMiaoFengItemId,1) > 0 then  
 	           local ret = TryRecieveItem( sceneId, selfId, x889054_g_XuanMuJingDanId, QUALITY_MUST_BE_CHANGE)
 	           if ret >=0 then 
-	           --ÉèÖÃ»î¶¯±ê¼Ç¡¢ÈÕÖ¾Í³¼Æ
+	           --è®¾ç½®æ´»åŠ¨æ ‡è®°ã€æ—¥å¿—ç»Ÿè®¡
 	              SetMissionData(sceneId,selfId,MD_TW_JIANIANHUA_XUANMU_DATE,today)
 	              LuaFnAuditQuest(sceneId,selfId,x889054_g_XuanMu_Advance)
-	               --ÎïÆ·ĞÑÄ¿ÌáÊ¾
+	               --ç‰©å“é†’ç›®æç¤º
 			          x889054_ShowTip( sceneId, selfId, "#{QRJ_81009_26}"..GetItemName(sceneId,x889054_g_XuanMuJingDanId))
 		            Msg2Player(sceneId, selfId, "#{QRJ_81009_26}"..GetItemName(sceneId,x889054_g_XuanMuJingDanId), MSG2PLAYER_PARA )
-		            --ÏµÍ³¹«¸æ
+		            --ç³»ç»Ÿå…¬å‘Š
 		            local BagIndex = GetBagPosByItemSn(sceneId, selfId,x889054_g_XuanMuJingDanId)
 		            local ItemInfo = GetBagItemTransfer( sceneId, selfId, BagIndex )
 		            local str = format("#{J_ZDGG_090331_1}#{_INFOMSG%s}#{J_ZDGG_090331_2}#{_INFOUSR%s}#{J_ZDGG_090331_3}",ItemInfo,GetName(sceneId,selfId))
@@ -207,41 +207,41 @@ function x889054_OnDefaultEvent( sceneId,selfId,targetId )
 end
 
 function x889054_AuditHuoDong(sceneId,selfId,targetId,nType)
-  --nType: 1-³õ¼¶»î¶¯Í³¼Æ  2 - ¸ß¼¶»î¶¯Í³¼Æ
+  --nType: 1-åˆçº§æ´»åŠ¨ç»Ÿè®¡  2 - é«˜çº§æ´»åŠ¨ç»Ÿè®¡
   
 	if nType == 1 then	  
 	    local flag={[1]=0,[2]=0,[3]=0,[4]=0,[5]=0}
 	    local today = GetDayTime()
-	   --ĞÒÔË¿ì»îÈı
+	   --å¹¸è¿å¿«æ´»ä¸‰
     	if today == GetMissionData(sceneId, selfId, MD_XINGYUN_TIME_INFO) then 
     		flag[1] = 1
     	end
     	
-      --Æå¾Ö    	
+      --æ£‹å±€    	
     	if today == GetMissionData(sceneId, selfId, MD_LAST_QIJU_DAY) then 
         flag[2] = 1
     	end
     	
-      --Ê¦ÃÅ10»·
+      --å¸ˆé—¨10ç¯
       local iDayCount=GetMissionData(sceneId,selfId,MD_SHIMEN_DAYCOUNT)
       local iTime = mod(iDayCount,100000)
-      local iDayTime = floor(iTime/100)	--ÉÏÒ»´Î·ÅÆúÈÎÎñµÄÊ±¼ä(ÌìÊı)
-      local iDayHuan = floor(iDayCount/100000) --µ±ÌìÄÚÍê³ÉµÄÈÎÎñ´ÎÊı
-      local CurTime = GetHourTime()		--µ±Ç°Ê±¼ä
-	    local CurDaytime = floor(CurTime/100)	--µ±Ç°Ê±¼ä(Ìì)
+      local iDayTime = floor(iTime/100)	--ä¸Šä¸€æ¬¡æ”¾å¼ƒä»»åŠ¡çš„æ—¶é—´(å¤©æ•°)
+      local iDayHuan = floor(iDayCount/100000) --å½“å¤©å†…å®Œæˆçš„ä»»åŠ¡æ¬¡æ•°
+      local CurTime = GetHourTime()		--å½“å‰æ—¶é—´
+	    local CurDaytime = floor(CurTime/100)	--å½“å‰æ—¶é—´(å¤©)
       
       if iDayTime == CurDaytime and 10 <= iDayHuan then 
         flag[3] = 1
     	end
     	
-      --¿Æ¾Ù´ğ¶Ô10Ìâ
+      --ç§‘ä¸¾ç­”å¯¹10é¢˜
       if 1 == GetMissionData(sceneId, selfId, MD_EXAM_FEE_FLAG) then
-      	local StartTime = GetMissionData(sceneId,selfId,MD_EXAM_STARTTIME) --¿Æ¾ÙÊ±¼ä
-      	local CurrentTime = LuaFnGetCurrentTime()                          --µ±Ç°Ê±¼ä
+      	local StartTime = GetMissionData(sceneId,selfId,MD_EXAM_STARTTIME) --ç§‘ä¸¾æ—¶é—´
+      	local CurrentTime = LuaFnGetCurrentTime()                          --å½“å‰æ—¶é—´
         local ntime = CurrentTime - StartTime
-        local CurTime = GetHourTime()								--µ±Ç°Ê±¼ä
-	      local CurQuarterTime = mod( CurTime, 100 )	--µ±Ç°Ê±¼ä(¿Ì)
-        --ÅĞ¶ÏÊÇ·ñÊÇµ±ÌìµÄ¿Æ¾Ù:µ±Ç°Ê±¼äÎª17:30Ö®ºó,ÇÒÃ»ÓĞ¹ı0µã 23400=6.5*60*60
+        local CurTime = GetHourTime()								--å½“å‰æ—¶é—´
+	      local CurQuarterTime = mod( CurTime, 100 )	--å½“å‰æ—¶é—´(åˆ»)
+        --åˆ¤æ–­æ˜¯å¦æ˜¯å½“å¤©çš„ç§‘ä¸¾:å½“å‰æ—¶é—´ä¸º17:30ä¹‹å,ä¸”æ²¡æœ‰è¿‡0ç‚¹ 23400=6.5*60*60
         if CurQuarterTime >= 70 and  ntime <= 23400 then  
       		local times = GetMissionData(sceneId,selfId,MD_EXAM_SEQUENCE)
 					local Question_Sequence_Before = floor(times/100)
@@ -254,7 +254,7 @@ function x889054_AuditHuoDong(sceneId,selfId,targetId,nType)
     		 end
     	 end
     	
-      --º®Óñ´²
+      --å¯’ç‰åºŠ
       if today == GetMissionData(sceneId, selfId, MD_HANYUBED_USEBOOK_LASTDAY) or today == GetMissionData(sceneId, selfId, MD_TW_HANYU_SPOUSEBOOK_LASTUSEDAY) then 
         flag[5] = 1
     	end
@@ -267,36 +267,36 @@ function x889054_AuditHuoDong(sceneId,selfId,targetId,nType)
 		  
 		  local flag={[1]=0,[2]=0,[3]=0,[4]=0,[5]=0,[6]=0,[7]=0}
     	local today = GetDayTime()
-    	--ĞÒÔË¿ì»îÈı
+    	--å¹¸è¿å¿«æ´»ä¸‰
     	if today == GetMissionData(sceneId, selfId, MD_XINGYUN_TIME_INFO) then 
         flag[1] = 1
     	end
     	
-      --Æå¾Ö    	
+      --æ£‹å±€    	
     	if today == GetMissionData(sceneId, selfId, MD_LAST_QIJU_DAY) then 
     		flag[2] = 1
     	end
     	
-      --Ê¦ÃÅ20»·
+      --å¸ˆé—¨20ç¯
       local iDayCount=GetMissionData(sceneId,selfId,MD_SHIMEN_DAYCOUNT)
       local iTime = mod(iDayCount,100000)
-      local iDayTime = floor(iTime/100)	--ÉÏÒ»´Î·ÅÆúÈÎÎñµÄÊ±¼ä(ÌìÊı)
-      local iDayHuan = floor(iDayCount/100000) --µ±ÌìÄÚÍê³ÉµÄÈÎÎñ´ÎÊı
-      local CurTime = GetHourTime()		--µ±Ç°Ê±¼ä
-	    local CurDaytime = floor(CurTime/100)	--µ±Ç°Ê±¼ä(Ìì)
+      local iDayTime = floor(iTime/100)	--ä¸Šä¸€æ¬¡æ”¾å¼ƒä»»åŠ¡çš„æ—¶é—´(å¤©æ•°)
+      local iDayHuan = floor(iDayCount/100000) --å½“å¤©å†…å®Œæˆçš„ä»»åŠ¡æ¬¡æ•°
+      local CurTime = GetHourTime()		--å½“å‰æ—¶é—´
+	    local CurDaytime = floor(CurTime/100)	--å½“å‰æ—¶é—´(å¤©)
 
       if iDayTime == CurDaytime and 20 <= iDayHuan then 
     		flag[3] = 1
     	end
     	
-      --¿Æ¾Ù´ğ¶Ô50Ìâ
+      --ç§‘ä¸¾ç­”å¯¹50é¢˜
       if 1 == GetMissionData(sceneId, selfId, MD_EXAM_FEE_FLAG) then
-      	local StartTime = GetMissionData(sceneId,selfId,MD_EXAM_STARTTIME) --¿Æ¾ÙÊ±¼ä
-      	local CurrentTime = LuaFnGetCurrentTime()                          --µ±Ç°Ê±¼ä
+      	local StartTime = GetMissionData(sceneId,selfId,MD_EXAM_STARTTIME) --ç§‘ä¸¾æ—¶é—´
+      	local CurrentTime = LuaFnGetCurrentTime()                          --å½“å‰æ—¶é—´
         local ntime = CurrentTime - StartTime
-        local CurTime = GetHourTime()								--µ±Ç°Ê±¼ä
-	      local CurQuarterTime = mod( CurTime, 100 )	--µ±Ç°Ê±¼ä(¿Ì)
-        --ÅĞ¶ÏÊÇ·ñÊÇµ±ÌìµÄ¿Æ¾Ù
+        local CurTime = GetHourTime()								--å½“å‰æ—¶é—´
+	      local CurQuarterTime = mod( CurTime, 100 )	--å½“å‰æ—¶é—´(åˆ»)
+        --åˆ¤æ–­æ˜¯å¦æ˜¯å½“å¤©çš„ç§‘ä¸¾
         if CurQuarterTime >= 70 and  ntime <= 23400 then
       		local times = GetMissionData(sceneId,selfId,MD_EXAM_SEQUENCE)
 					local Question_Sequence_Before = floor(times/100)
@@ -309,12 +309,12 @@ function x889054_AuditHuoDong(sceneId,selfId,targetId,nType)
     		 end
     	 end
     	
-      --º®Óñ´²
+      --å¯’ç‰åºŠ
       if today == GetMissionData(sceneId, selfId, MD_HANYUBED_USEBOOK_LASTDAY) or today == GetMissionData(sceneId, selfId, MD_TW_HANYU_SPOUSEBOOK_LASTUSEDAY) then 
     		flag[5] = 1
     	end
     	
-    	--²Î¼ÓÁ¬»·¸±±¾£¨Ò»¸ö¶¼²»ÄÜÅÜÏµÁĞ£©5´Î
+    	--å‚åŠ è¿ç¯å‰¯æœ¬ï¼ˆä¸€ä¸ªéƒ½ä¸èƒ½è·‘ç³»åˆ—ï¼‰5æ¬¡
 	    local DayTimes = GetMissionData( sceneId, selfId, MD_ROUNDMISSION3_TIMES )
 	    local CurDate = mod( DayTimes, 100000 )
 	    local takenTimes = floor( DayTimes/100000 )
@@ -322,7 +322,7 @@ function x889054_AuditHuoDong(sceneId,selfId,targetId,nType)
 		    flag[6] = 1
 	    end
 	     
-	    --ÉíÉÏÓĞÁÁ½ğ±¦Ê¯(Î´¼ÓËø)
+	    --èº«ä¸Šæœ‰äº®é‡‘å®çŸ³(æœªåŠ é”)
 	    if LuaFnGetAvailableItemCount(sceneId,selfId,x889054_g_PiaoMiaoFengItemId) >= 1 then
 	    	flag[7] = 1
     	end
@@ -331,7 +331,7 @@ function x889054_AuditHuoDong(sceneId,selfId,targetId,nType)
   end
 end
 --**********************************
---ĞÑÄ¿ĞÅÏ¢ÌáÊ¾
+--é†’ç›®ä¿¡æ¯æç¤º
 --**********************************
 function x889054_ShowTip( sceneId, selfId, tip )
 	BeginEvent( sceneId )

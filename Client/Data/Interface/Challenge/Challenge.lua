@@ -9,14 +9,14 @@ local g_Challenge_close = 0
 
 function Challenge_PreLoad()
 	
-	-- ´ò¿ª½çÃæ
+	-- æ‰“å¼€ç•Œé¢
 	this:RegisterEvent("OPEN_CHALLENGE_DLG");
 	
 	this:RegisterEvent("CLOSE_CHALLENGE_DLG");
 		
 end
 
--- ×¢²áonLoadÊÂ¼ş
+-- æ³¨å†ŒonLoadäº‹ä»¶
 function Challenge_OnLoad()
 	
 	g_Challenge_FakeObject[0] = Challenge_FakeObject1;
@@ -66,7 +66,7 @@ end
 -- OnEvent
 function Challenge_OnEvent(event)
 
-	-- ´ò¿ª½çÃæÊÂ¼ş.
+	-- æ‰“å¼€ç•Œé¢äº‹ä»¶.
 	--
 	if ( event == "OPEN_CHALLENGE_DLG" ) then
 
@@ -86,7 +86,7 @@ end
 
 
 
---µÃµ½ÌôÕ½¶ÓÎéĞÅÏ¢¡£
+--å¾—åˆ°æŒ‘æˆ˜é˜Ÿä¼ä¿¡æ¯ã€‚
 function Challenge_GetChallengeInfo()
 
 	local iCount = DataPool:GetChallengeTeamMemberCount();
@@ -96,60 +96,60 @@ function Challenge_GetChallengeInfo()
 	local iMenPai = 0;
 	local strMenPai = ""
 	
-	-- Çå³ıÌôÕ½ĞÅÏ¢¡£
+	-- æ¸…é™¤æŒ‘æˆ˜ä¿¡æ¯ã€‚
 	Challenge_ClearChallengeInfo();
 	
 	for i = 0, iCount - 1 do
 
-		-- µÃµ½uiÄ£ĞÍĞÅÏ¢
+		-- å¾—åˆ°uiæ¨¡å‹ä¿¡æ¯
 		strModelName
 		, strName
 		, iLevel 
 		, menpai = DataPool:GetChallengeTeamMemberInfo(i);
 
-		-- ÏÔÊ¾Ä£ĞÍ
+		-- æ˜¾ç¤ºæ¨¡å‹
 		g_Challenge_FakeObject[i]:SetFakeObject(strModelName);
 		
-		-- ÏÔÊ¾Ãû×Ö
+		-- æ˜¾ç¤ºåå­—
 		g_Challenge_Name[i]:SetText(strName);
 		
-		AxTrace( 0,0, "ÌôÕ½Ä£ĞÍÃû×Ö"..tostring(strModelName).."player name:"..strName.."level:"..tostring(iLevel).."menpai:"..tostring( menpai ));
-		-- ÏÔÊ¾µÈ¼¶
+		AxTrace( 0,0, "æŒ‘æˆ˜æ¨¡å‹åå­—"..tostring(strModelName).."player name:"..strName.."level:"..tostring(iLevel).."menpai:"..tostring( menpai ));
+		-- æ˜¾ç¤ºç­‰çº§
 		g_Challenge_Level[i]:SetText(tostring(iLevel));
 		
-		-- µÃµ½ÃÅÅÉÃû³Æ.
+		-- å¾—åˆ°é—¨æ´¾åç§°.
 		if(0 == menpai) then
-			strMenPai = "ÉÙÁÖ";
+			strMenPai = "å°‘æ—";
 			
 		elseif(1 == menpai) then
-			strMenPai = "Ã÷½Ì";
+			strMenPai = "æ˜æ•™";
 			
 		elseif(2 == menpai) then
-			strMenPai = "Ø¤°ï";
+			strMenPai = "ä¸å¸®";
 			
 		elseif(3 == menpai) then
-			strMenPai = "Îäµ±";
+			strMenPai = "æ­¦å½“";
 		
 		elseif(4 == menpai) then
-			strMenPai = "¶ëáÒ";
+			strMenPai = "å³¨åµ‹";
 		
 		elseif(5 == menpai) then
-			strMenPai = "ĞÇËŞ";
+			strMenPai = "æ˜Ÿå®¿";
 		
 		elseif(6 == menpai) then
-			strMenPai = "ÌìÁú";
+			strMenPai = "å¤©é¾™";
 		
 		elseif(7 == menpai) then
-			strMenPai = "ÌìÉ½";
+			strMenPai = "å¤©å±±";
 		
 		elseif(8 == menpai) then
-			strMenPai = "åĞÒ£";
+			strMenPai = "é€é¥";
 		
 		else
-			strMenPai = "ÎŞÃÅÅÉ";
+			strMenPai = "æ— é—¨æ´¾";
 		end
 		
-		-- ÏÔÊ¾ÃÅÅÉ
+		-- æ˜¾ç¤ºé—¨æ´¾
 		g_Challenge_MenPai[i]:SetText(strMenPai);
 		
 	end;
@@ -158,7 +158,7 @@ end
 
 
 
---µÃµ½ÌôÕ½¶ÓÎéĞÅÏ¢¡£
+--å¾—åˆ°æŒ‘æˆ˜é˜Ÿä¼ä¿¡æ¯ã€‚
 function Challenge_ClearChallengeInfo()
 
 	g_Challenge_FakeObject[0]:SetFakeObject("");
@@ -192,7 +192,7 @@ function Challenge_ClearChallengeInfo()
 end;
 
 
--- Í¬ÒâÌôÕ½
+-- åŒæ„æŒ‘æˆ˜
 function Challenge_Yes_Click()
 
 	DataPool:RespondChallenge(1);
@@ -201,7 +201,7 @@ function Challenge_Yes_Click()
 end;
 
 
--- ¾Ü¾øÌôÕ½¡£
+-- æ‹’ç»æŒ‘æˆ˜ã€‚
 function Challenge_No_Click()
 	if g_Challenge_close == 1 then
 		g_Challenge_close = 0

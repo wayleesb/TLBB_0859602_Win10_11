@@ -1,22 +1,22 @@
 --MisDescBegin
 x600020_g_ScriptId = 600020
 x600020_g_MissionId = 1108
-x600020_g_Name = "ÄÂÒ×"
+x600020_g_Name = "ç©†æ˜“"
 x600020_g_MissionKind = 50
 x600020_g_MissionLevel = 10000
 x600020_g_IfMissionElite = 0
-x600020_g_IsMissionOkFail = 0							-- ÈÎÎñÍê³É±ê¼Ç
-x600020_g_MissionName = "ÊĞ¼¯ÈÎÎñ"
-x600020_g_MissionInfo = "    ½ñÌìÎÒÏëÒª %s ÁË£¬È¥°ïÎÒÕÒÀ´°É£¡"			--ÈÎÎñÃèÊö
-x600020_g_MissionTarget = "    Í¨Öª%n¾¡¿ì%s¡£"							--ÈÎÎñÄ¿±ê
-x600020_g_ContinueInfo = "    ÄãµÄÈÎÎñ»¹Ã»ÓĞÍê³ÉÃ´£¿"					--Î´Íê³ÉÈÎÎñµÄnpc¶Ô»°
-x600020_g_SubmitInfo = "    ÊÂÇé½øÕ¹µÃÈçºÎ£¿"							--Íê³ÉÎ´Ìá½»Ê±µÄnpc¶Ô»°
-x600020_g_MissionComplete = "    ¸ÉµÃ²»´í£¬ÉõºÃÉõºÃ¡£"					--Íê³ÉÈÎÎñnpcËµ»°µÄ»°
+x600020_g_IsMissionOkFail = 0							-- ä»»åŠ¡å®Œæˆæ ‡è®°
+x600020_g_MissionName = "å¸‚é›†ä»»åŠ¡"
+x600020_g_MissionInfo = "    ä»Šå¤©æˆ‘æƒ³è¦ %s äº†ï¼Œå»å¸®æˆ‘æ‰¾æ¥å§ï¼"			--ä»»åŠ¡æè¿°
+x600020_g_MissionTarget = "    é€šçŸ¥%nå°½å¿«%sã€‚"							--ä»»åŠ¡ç›®æ ‡
+x600020_g_ContinueInfo = "    ä½ çš„ä»»åŠ¡è¿˜æ²¡æœ‰å®Œæˆä¹ˆï¼Ÿ"					--æœªå®Œæˆä»»åŠ¡çš„npcå¯¹è¯
+x600020_g_SubmitInfo = "    äº‹æƒ…è¿›å±•å¾—å¦‚ä½•ï¼Ÿ"							--å®Œæˆæœªæäº¤æ—¶çš„npcå¯¹è¯
+x600020_g_MissionComplete = "    å¹²å¾—ä¸é”™ï¼Œç”šå¥½ç”šå¥½ã€‚"					--å®Œæˆä»»åŠ¡npcè¯´è¯çš„è¯
 x600020_g_StrForePart = 5
-x600020_g_Offset = 21													-- Suppose to 21, ±íÀïµÚ¼¸ÁĞ NPC µÄÆ«ÒÆÁ¿
-x600020_g_OffsetEx	= 251 										--±íÀïµÚ¼¸ÁĞ NPC µÄÆ«ÒÆÁ¿À©³ä modi:lby20071126
+x600020_g_Offset = 21													-- Suppose to 21, è¡¨é‡Œç¬¬å‡ åˆ— NPC çš„åç§»é‡
+x600020_g_OffsetEx	= 251 										--è¡¨é‡Œç¬¬å‡ åˆ— NPC çš„åç§»é‡æ‰©å…… modi:lby20071126
 x600020_g_MissionRound = 44
 x600020_g_CityMissionScript = 600001
 x600020_g_MarketScript = 600017
-x600020_g_StrList = { "³¥»¹Ç·¿î", "À´È¡»õ" }
+x600020_g_StrList = { "å¿è¿˜æ¬ æ¬¾", "æ¥å–è´§" }
 --MisDescEnd

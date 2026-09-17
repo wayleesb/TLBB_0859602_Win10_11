@@ -2,15 +2,15 @@
 x210215_g_ScriptId = 210215
 x210215_g_MissionIdPre = 454
 x210215_g_MissionId = 455
-x210215_g_Name	="ÔÆÆ®Æ®"
+x210215_g_Name	="äº‘é£˜é£˜"
 x210215_g_MissionKind = 13
 x210215_g_MissionLevel = 5
 x210215_g_IfMissionElite = 0
-x210215_g_MissionName="ÕäÊŞÉı¼¶À²"
-x210215_g_MissionInfo="#{event_dali_0021}"  --ÈÎÎñÃèÊö
-x210215_g_MissionTarget="#{event_dali_0022}"		--ÈÎÎñÄ¿±ê
-x210215_g_ContinueInfo="  Ğ¡ÍÃ×ÓÉıµ½2¼¶ÁËÂğ£¿"		--Î´Íê³ÉÈÎÎñµÄnpc¶Ô»°
-x210215_g_MissionComplete="#{event_dali_0023}"					--Íê³ÉÈÎÎñnpcËµ»°µÄ»°
-x210215_g_SignPost = {x = 263, z = 129, tip = "ÔÆÆ®Æ®"}
+x210215_g_MissionName="çå…½å‡çº§å•¦"
+x210215_g_MissionInfo="#{event_dali_0021}"  --ä»»åŠ¡æè¿°
+x210215_g_MissionTarget="#{event_dali_0022}"		--ä»»åŠ¡ç›®æ ‡
+x210215_g_ContinueInfo="  å°å…”å­å‡åˆ°2çº§äº†å—ï¼Ÿ"		--æœªå®Œæˆä»»åŠ¡çš„npcå¯¹è¯
+x210215_g_MissionComplete="#{event_dali_0023}"					--å®Œæˆä»»åŠ¡npcè¯´è¯çš„è¯
+x210215_g_SignPost = {x = 263, z = 129, tip = "äº‘é£˜é£˜"}
 x210215_g_MoneyBonus=20
 --MisDescEnd

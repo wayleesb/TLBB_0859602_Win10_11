@@ -1,11 +1,11 @@
 
 -- hongyu
--- ÍÁ¶İÖé×¨ÓÃ½çÃæ£¬Çë²»ÒªÓÃÓÚÆäËû¹¦ÄÜ£¬
+-- åœŸéç ä¸“ç”¨ç•Œé¢ï¼Œè¯·ä¸è¦ç”¨äºå…¶ä»–åŠŸèƒ½ï¼Œ
 -- 
 
 local g_SERVER_CONTROL_1 = 1008
 local g_SERVER_CONTROL_2 = 1009
-local g_SERVER_CONTROL_3 = 112235	--ÍÁÁéÖéÊ¹ÓÃ½çÃæ
+local g_SERVER_CONTROL_3 = 112235	--åœŸçµç ä½¿ç”¨ç•Œé¢
 
 local Server_Script_Function = "";
 local Server_Script_ID = 0;
@@ -16,9 +16,9 @@ local Server_Str = ""
 
 local Client_ItemIndex = 0;
 
-local g_Type	-- "use"Ê¹ÓÃÍÁ¶İÖé
-							-- "call"¶ÓÓÑÊ¹ÓÃÍÁ¶İÖé
-							-- "useTLZ"Ê¹ÓÃÍÁÁéÖé
+local g_Type	-- "use"ä½¿ç”¨åœŸéç 
+							-- "call"é˜Ÿå‹ä½¿ç”¨åœŸéç 
+							-- "useTLZ"ä½¿ç”¨åœŸçµç 
 
 --===============================================
 -- PreLoad()
@@ -46,14 +46,14 @@ function Item_TuDunZhu_OnEvent(event)
 			Item_TuDunZhu_Show("use")
 			g_Type = "use"
 		elseif tonumber(arg0) == g_SERVER_CONTROL_2 then
-			-- ¼ì²âÈç¹ûÕâ¸ö´°¿Ú¿ª×Å£¬¾Í²»´¦Àí
+			-- æ£€æµ‹å¦‚æœè¿™ä¸ªçª—å£å¼€ç€ï¼Œå°±ä¸å¤„ç†
 			if( this:IsVisible() ) then
 				return
 			else
 				Item_TuDunZhu_Show("call")
 				g_Type = "call"
 			end
-		elseif tonumber(arg0) == g_SERVER_CONTROL_3 then	--ÍÁÁéÖé
+		elseif tonumber(arg0) == g_SERVER_CONTROL_3 then	--åœŸçµç 
 			Item_TuDunZhu_Show("useTLZ")
 			g_Type = "useTLZ"
 		else
@@ -86,13 +86,13 @@ function Item_TuDunZhu_Show(event)
 --		Server_Script_ID = Get_XParam_INT(0);
 --		Server_Return_1 = Get_XParam_INT(1);
 --		
-		Item_TuDunZhu_OK_Button:SetText("#{INTERFACE_XML_975}")	--¶¨Î»
-		Item_TuDunZhu_Cancel_Button:SetText("#{INTERFACE_XML_976}")	--´«ËÍ
-		Item_TuDunZhu_DragTitle:SetText("#{INTERFACE_XML_977}")	--ÍÁ¶İÖé
-		Item_TuDunZhu_Text:SetText("#{Item_TuDunZhu_Show_001}")	--ÍÁ¶İÖé½éÉÜ
+		Item_TuDunZhu_OK_Button:SetText("#{INTERFACE_XML_975}")	--å®šä½
+		Item_TuDunZhu_Cancel_Button:SetText("#{INTERFACE_XML_976}")	--ä¼ é€
+		Item_TuDunZhu_DragTitle:SetText("#{INTERFACE_XML_977}")	--åœŸéç 
+		Item_TuDunZhu_Text:SetText("#{Item_TuDunZhu_Show_001}")	--åœŸéç ä»‹ç»
 		this:Show()
 
-		-- ¹Ø±Õµ¹¼ÆÊ±¹¦ÄÜ
+		-- å…³é—­å€’è®¡æ—¶åŠŸèƒ½
 		--Item_TuDunZhu_StopWatch : SetProperty("Timer",tostring(2000000));
 		Item_TuDunZhu_StopWatch:Hide()
 
@@ -103,12 +103,12 @@ function Item_TuDunZhu_Show(event)
 		Server_Return_2 = Get_XParam_INT(2);
 		Server_Str = Get_XParam_STR(1)
 
-		Item_TuDunZhu_OK_Button:SetText("#{INTERFACE_XML_976}")	--´«ËÍ
-		Item_TuDunZhu_Cancel_Button:SetText("#{INTERFACE_XML_539}")	--È¡Ïû
-		Item_TuDunZhu_DragTitle:SetText("#{INTERFACE_XML_977}")	--ÍÁ¶İÖé
+		Item_TuDunZhu_OK_Button:SetText("#{INTERFACE_XML_976}")	--ä¼ é€
+		Item_TuDunZhu_Cancel_Button:SetText("#{INTERFACE_XML_539}")	--å–æ¶ˆ
+		Item_TuDunZhu_DragTitle:SetText("#{INTERFACE_XML_977}")	--åœŸéç 
 		Item_TuDunZhu_Text:SetText(Server_Str)
 		
-		-- Ìí¼Óµ¹¼ÆÊ±
+		-- æ·»åŠ å€’è®¡æ—¶
 		Item_TuDunZhu_StopWatch : SetProperty("Timer",tostring(20));
 		Item_TuDunZhu_StopWatch:Show()
 		this:Show()
@@ -116,13 +116,13 @@ function Item_TuDunZhu_Show(event)
 	elseif event == "useTLZ"  then
 	
 		Client_ItemIndex = tonumber(arg1)
-		Item_TuDunZhu_OK_Button:SetText("#{INTERFACE_XML_975}")	--¶¨Î»
-		Item_TuDunZhu_Cancel_Button:SetText("#{INTERFACE_XML_976}")	--´«ËÍ
-		Item_TuDunZhu_DragTitle:SetText("#{INTERFACE_XML_978}")	--ÍÁÁéÖé
-		Item_TuDunZhu_Text:SetText("#{INTERFACE_XML_979}")	--ÍÁÁéÖé½éÉÜ
+		Item_TuDunZhu_OK_Button:SetText("#{INTERFACE_XML_975}")	--å®šä½
+		Item_TuDunZhu_Cancel_Button:SetText("#{INTERFACE_XML_976}")	--ä¼ é€
+		Item_TuDunZhu_DragTitle:SetText("#{INTERFACE_XML_978}")	--åœŸçµç 
+		Item_TuDunZhu_Text:SetText("#{INTERFACE_XML_979}")	--åœŸçµç ä»‹ç»
 		this:Show()
 
-		-- ¹Ø±Õµ¹¼ÆÊ±¹¦ÄÜ
+		-- å…³é—­å€’è®¡æ—¶åŠŸèƒ½
 		--Item_TuDunZhu_StopWatch : SetProperty("Timer",tostring(2000000));
 		Item_TuDunZhu_StopWatch:Hide()
 		
@@ -166,7 +166,7 @@ function Item_TuDunZhu_OK_Clicked()
 	
 		PlayerPackage:UseTulingzhuSetpos(Client_ItemIndex);
 	
-			--Ö±½Óµ÷ÓÃÍÁÁéÖé½Å±¾ÀïµÄº¯Êı½øĞĞÍÁÁéÖéµÄ¶¨Î»....
+			--ç›´æ¥è°ƒç”¨åœŸçµç è„šæœ¬é‡Œçš„å‡½æ•°è¿›è¡ŒåœŸçµç çš„å®šä½....
 		--Clear_XSCRIPT();
 		--	Set_XSCRIPT_Function_Name("SetPosition");
 		--	Set_XSCRIPT_ScriptID(330001);
@@ -195,7 +195,7 @@ function Item_TuDunZhu_Cancel_Clicked()
 		-- 
 	elseif g_Type == "useTLZ"  then
 	
-		PlayerPackage:UseItem(Client_ItemIndex)	--ÍÁÁéÖéµÄÄ¬ÈÏÊ¹ÓÃÂß¼­Îª´«ËÍ....
+		PlayerPackage:UseItem(Client_ItemIndex)	--åœŸçµç çš„é»˜è®¤ä½¿ç”¨é€»è¾‘ä¸ºä¼ é€....
 		
 	end
 
@@ -204,7 +204,7 @@ function Item_TuDunZhu_Cancel_Clicked()
 end
 
 --===============================================
--- ¶¨Î»/È¡Ïû
+-- å®šä½/å–æ¶ˆ
 --===============================================
 function Item_TuDunZhu_Help()
 	

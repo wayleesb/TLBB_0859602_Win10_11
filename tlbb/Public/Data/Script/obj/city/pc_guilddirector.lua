@@ -1,40 +1,40 @@
---³ÇÊĞNPC
---ÑÃÒÛ
+--åŸå¸‚NPC
+--è¡™å½¹
 
 x805009_g_scriptId = 805009
 x805009_g_BuildingID1 = 0
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x805009_g_eventList = { 600035, 600040 }
 
--- ÈÎÎñ¼¯ÊÂ¼ş ID ÁĞ±í£¬ÕâÀàÊÂ¼ş°üº¬×ÓÊÂ¼ş
+-- ä»»åŠ¡é›†äº‹ä»¶ ID åˆ—è¡¨ï¼Œè¿™ç±»äº‹ä»¶åŒ…å«å­äº‹ä»¶
 x805009_g_eventSetList = { 600035, 600040 }
 
---¹ÙÆ±ÀàĞÍID
+--å®˜ç¥¨ç±»å‹ID
 x805009_g_TicketItemIdx	=	40002000
 
--- ÒøÆ±ID
+-- é“¶ç¥¨ID
 x805009_g_Yinpiao = 40002000
 
 
--- ¹±Ï×¶¼³ÆºÅ
+-- è´¡çŒ®éƒ½ç§°å·
 x805009_g_GuildContriTitle = 
 {
-	{ currName="",	nextId=242, needContri=250, 	name="¡ï¹ØÄÚºî"},
-	{ currName="¡ï¹ØÄÚºî",	nextId=243, needContri=750, 	name="¡ïÍ¤ºî"},
-	{ currName="¡ïÍ¤ºî", 	nextId=244, needContri=1500, 	name="¡ïÏçºî"},
-	{ currName="¡ïÏçºî", 	nextId=245, needContri=3000, 	name="¡ïÏØºî"},
-	{ currName="¡ïÏØºî", 	nextId=246, needContri=7500, 	name="¡ï¿¤ºî"},
-	{ currName="¡ï¿¤ºî", 	nextId=247, needContri=15000, 	name="¡ïÏØ¹«"},
-	{ currName="¡ïÏØ¹«", 	nextId=248, needContri=30000, 	name="¡ï¿¤¹«"},
-	{ currName="¡ï¿¤¹«", 	nextId=249, needContri=60000, 	name="¡ï¹ú¹«"},
-	{ currName="¡ï¹ú¹«", 	nextId=250, needContri=125000, 	name="¡ï¿¤Íõ"},
-	{ currName="¡ï¿¤Íõ", 	nextId=251, needContri=250000, 	name="¡ïÇ×Íõ"}
+	{ currName="",	nextId=242, needContri=250, 	name="â˜…å…³å†…ä¾¯"},
+	{ currName="â˜…å…³å†…ä¾¯",	nextId=243, needContri=750, 	name="â˜…äº­ä¾¯"},
+	{ currName="â˜…äº­ä¾¯", 	nextId=244, needContri=1500, 	name="â˜…ä¹¡ä¾¯"},
+	{ currName="â˜…ä¹¡ä¾¯", 	nextId=245, needContri=3000, 	name="â˜…å¿ä¾¯"},
+	{ currName="â˜…å¿ä¾¯", 	nextId=246, needContri=7500, 	name="â˜…éƒ¡ä¾¯"},
+	{ currName="â˜…éƒ¡ä¾¯", 	nextId=247, needContri=15000, 	name="â˜…å¿å…¬"},
+	{ currName="â˜…å¿å…¬", 	nextId=248, needContri=30000, 	name="â˜…éƒ¡å…¬"},
+	{ currName="â˜…éƒ¡å…¬", 	nextId=249, needContri=60000, 	name="â˜…å›½å…¬"},
+	{ currName="â˜…å›½å…¬", 	nextId=250, needContri=125000, 	name="â˜…éƒ¡ç‹"},
+	{ currName="â˜…éƒ¡ç‹", 	nextId=251, needContri=250000, 	name="â˜…äº²ç‹"}
 }
 
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x805009_UpdateEventList( sceneId, selfId, targetId )
 	local i = 1
@@ -46,39 +46,39 @@ function x805009_UpdateEventList( sceneId, selfId, targetId )
 	BeginEvent( sceneId )
 		if(Humanguildid == cityguildid) then
 --		if CityGetSelfCityID( sceneId, selfId ) == sceneId then
-			AddText( sceneId, "    °ïÖĞ´óĞ¡ÊÂÎñ£¬ÓĞĞèÒªÎÒÄÜ°ïÄãÊ²Ã´µÄ£¬Ò»¼ÒĞÖµÜ²»±Ø¿ÍÆø¡£" )
+			AddText( sceneId, "    å¸®ä¸­å¤§å°äº‹åŠ¡ï¼Œæœ‰éœ€è¦æˆ‘èƒ½å¸®ä½ ä»€ä¹ˆçš„ï¼Œä¸€å®¶å…„å¼Ÿä¸å¿…å®¢æ°”ã€‚" )
 
-			--AddNumText( sceneId, x805009_g_scriptId, "ÉèÖÃ½¨Öşµ½Ò»¼¶", 6, 1 )
-			--AddNumText( sceneId, x805009_g_scriptId, "ÉèÖÃ½¨Öşµ½¶ş¼¶", 6, 2 )
-			--AddNumText( sceneId, x805009_g_scriptId, "ÉèÖÃ½¨Öşµ½Èı¼¶", 6, 3 )
-			--AddNumText( sceneId, x805009_g_scriptId, "ÉèÖÃ½¨Öşµ½ËÄ¼¶", 6, 4 )
-			--AddNumText( sceneId, x805009_g_scriptId, "ÉèÖÃ½¨Öşµ½Îå¼¶", 6, 5 )
+			--AddNumText( sceneId, x805009_g_scriptId, "è®¾ç½®å»ºç­‘åˆ°ä¸€çº§", 6, 1 )
+			--AddNumText( sceneId, x805009_g_scriptId, "è®¾ç½®å»ºç­‘åˆ°äºŒçº§", 6, 2 )
+			--AddNumText( sceneId, x805009_g_scriptId, "è®¾ç½®å»ºç­‘åˆ°ä¸‰çº§", 6, 3 )
+			--AddNumText( sceneId, x805009_g_scriptId, "è®¾ç½®å»ºç­‘åˆ°å››çº§", 6, 4 )
+			--AddNumText( sceneId, x805009_g_scriptId, "è®¾ç½®å»ºç­‘åˆ°äº”çº§", 6, 5 )
 
-			--AddNumText( sceneId, x805009_g_scriptId, "ÉèÖÃ³¡¾°µ½Ò»¼¶", 6, 6 )
-			--AddNumText( sceneId, x805009_g_scriptId, "ÉèÖÃ³¡¾°µ½¶ş¼¶", 6, 7 )
-			--AddNumText( sceneId, x805009_g_scriptId, "ÉèÖÃ³¡¾°µ½Èı¼¶", 6, 8 )
-			--AddNumText( sceneId, x805009_g_scriptId, "ÉèÖÃ³¡¾°µ½ËÄ¼¶", 6, 9 )
-			--AddNumText( sceneId, x805009_g_scriptId, "ÉèÖÃ³¡¾°µ½Îå¼¶", 6, 10 )
+			--AddNumText( sceneId, x805009_g_scriptId, "è®¾ç½®åœºæ™¯åˆ°ä¸€çº§", 6, 6 )
+			--AddNumText( sceneId, x805009_g_scriptId, "è®¾ç½®åœºæ™¯åˆ°äºŒçº§", 6, 7 )
+			--AddNumText( sceneId, x805009_g_scriptId, "è®¾ç½®åœºæ™¯åˆ°ä¸‰çº§", 6, 8 )
+			--AddNumText( sceneId, x805009_g_scriptId, "è®¾ç½®åœºæ™¯åˆ°å››çº§", 6, 9 )
+			--AddNumText( sceneId, x805009_g_scriptId, "è®¾ç½®åœºæ™¯åˆ°äº”çº§", 6, 10 )
 
-			--AddNumText( sceneId, x805009_g_scriptId, "µ÷ÕûÁùÂÊ·½Ïò", 6, 13 )
-			AddNumText( sceneId, x805009_g_scriptId, "ÉèÖÃ/²é¿´ÉÏÏßÁôÑÔ", 6, 22 )
-			AddNumText( sceneId, x805009_g_scriptId, "³ÇÊĞ½¨Éè", 6, 12 )
-			AddNumText( sceneId, x805009_g_scriptId, "³ÇÊĞÑĞ¾¿", 6, 14 )
+			--AddNumText( sceneId, x805009_g_scriptId, "è°ƒæ•´å…­ç‡æ–¹å‘", 6, 13 )
+			AddNumText( sceneId, x805009_g_scriptId, "è®¾ç½®/æŸ¥çœ‹ä¸Šçº¿ç•™è¨€", 6, 22 )
+			AddNumText( sceneId, x805009_g_scriptId, "åŸå¸‚å»ºè®¾", 6, 12 )
+			AddNumText( sceneId, x805009_g_scriptId, "åŸå¸‚ç ”ç©¶", 6, 14 )
 
 			for i, eventId in x805009_g_eventList do
 				CallScriptFunction( eventId, "OnEnumerate", sceneId, selfId, targetId )
 			end
-			--AddNumText( sceneId, x805009_g_scriptId, "°ï»á»ÕÕÂ", 6, 15 )
-			--AddNumText( sceneId, x805009_g_scriptId, "»ñµÃÅÜÉÌ¹ÙÆ±", 7, 16 )
-			--AddNumText( sceneId, x805009_g_scriptId, "½»»ØÅÜÉÌ¹ÙÆ±", 7, 17 )
-			AddNumText( sceneId, x805009_g_scriptId, "ÉÌÒµÂ·Ïß", 12, 18 )
-			AddNumText( sceneId, x805009_g_scriptId, "ÏØÑÃ½éÉÜ", 11, 19 )
-			AddNumText( sceneId, x805009_g_scriptId, "½¨ÉèÈÎÎñ½éÉÜ", 11, 20 )
-			AddNumText( sceneId, x805009_g_scriptId, "ÑĞ¾¿ÈÎÎñ½éÉÜ", 11, 21 )
-			AddNumText( sceneId, x805009_g_scriptId, "#{BGCH_8829_02}", 11, 25 )--¹ØÓÚ¶Ò»»°ï¹±ÅÆ
-			AddNumText( sceneId, x805009_g_scriptId, "ÉêÇë³ÉÎª°ïÖ÷", 6, 23 )
+			--AddNumText( sceneId, x805009_g_scriptId, "å¸®ä¼šå¾½ç« ", 6, 15 )
+			--AddNumText( sceneId, x805009_g_scriptId, "è·å¾—è·‘å•†å®˜ç¥¨", 7, 16 )
+			--AddNumText( sceneId, x805009_g_scriptId, "äº¤å›è·‘å•†å®˜ç¥¨", 7, 17 )
+			AddNumText( sceneId, x805009_g_scriptId, "å•†ä¸šè·¯çº¿", 12, 18 )
+			AddNumText( sceneId, x805009_g_scriptId, "å¿è¡™ä»‹ç»", 11, 19 )
+			AddNumText( sceneId, x805009_g_scriptId, "å»ºè®¾ä»»åŠ¡ä»‹ç»", 11, 20 )
+			AddNumText( sceneId, x805009_g_scriptId, "ç ”ç©¶ä»»åŠ¡ä»‹ç»", 11, 21 )
+			AddNumText( sceneId, x805009_g_scriptId, "#{BGCH_8829_02}", 11, 25 )--å…³äºå…‘æ¢å¸®è´¡ç‰Œ
+			AddNumText( sceneId, x805009_g_scriptId, "ç”³è¯·æˆä¸ºå¸®ä¸»", 6, 23 )
 			AddNumText( sceneId, x805009_g_scriptId, "#{SQBZ_090205_01}", 11, 26 )
-			--AddNumText( sceneId, x805009_g_scriptId, "»Øµ½ÂåÑô", 9, 11 )
+			--AddNumText( sceneId, x805009_g_scriptId, "å›åˆ°æ´›é˜³", 9, 11 )
 			--AddNumText( sceneId, x805009_g_scriptId, "#{BHCS_090219_02}", 9, 27 )
 			--AddNumText( sceneId, x805009_g_scriptId, "#{BHCS_090219_03}", 9, 28 )
 			AddNumText( sceneId, x805009_g_scriptId, "#{BHCS_090226_10}", 9, 29 )
@@ -90,26 +90,26 @@ function x805009_UpdateEventList( sceneId, selfId, targetId )
 					currGuildContriTitle = guildName
 				end
 				if currGuildContriTitle == guildName..titleItem.currName then
-					AddNumText( sceneId, x805009_g_scriptId, "½úÉıÎª"..titleItem.name, 6, 30 )
+					AddNumText( sceneId, x805009_g_scriptId, "æ™‹å‡ä¸º"..titleItem.name, 6, 30 )
 					break;
 				end
 			end
 			
-			AddNumText( sceneId, x805009_g_scriptId, "#{BGCH_8829_01}", 6, 24 )--½«°ï¹±¶Ò»»³É°ï¹±ÅÆ
+			AddNumText( sceneId, x805009_g_scriptId, "#{BGCH_8829_01}", 6, 24 )--å°†å¸®è´¡å…‘æ¢æˆå¸®è´¡ç‰Œ
 
 		else
 			local PlayerGender = GetSex( sceneId, selfId )
 			local rank
 
 			if PlayerGender == 0 then
-				rank = "ÏÀÅ®"
+				rank = "ä¾ å¥³"
 			elseif PlayerGender == 1 then
-				rank = "ÉÙÏÀ"
+				rank = "å°‘ä¾ "
 			else
-				rank = "ÕâÎ»"
+				rank = "è¿™ä½"
 			end
 
-			AddText( sceneId, "    " .. rank .. "ÃæÉúµÃ½ô£¬ÎÒÄË±¾³ÇµÄÖ÷¹Ü£¬ÓĞÊ²Ã´ÊÂÇéÎÒ¿ÉÒÔ½Ó´ıÍâ¿Í¡£" )
+			AddText( sceneId, "    " .. rank .. "é¢ç”Ÿå¾—ç´§ï¼Œæˆ‘ä¹ƒæœ¬åŸçš„ä¸»ç®¡ï¼Œæœ‰ä»€ä¹ˆäº‹æƒ…æˆ‘å¯ä»¥æ¥å¾…å¤–å®¢ã€‚" )
 		end
 
 	EndEvent( sceneId )
@@ -117,14 +117,14 @@ function x805009_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x805009_OnDefaultEvent( sceneId, selfId, targetId )
 	x805009_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
--- ÅĞ¶ÏÄ³¸öÊÂ¼şÊÇ·ñ¿ÉÒÔÍ¨¹ı´Ë NPC Ö´ĞĞ
+-- åˆ¤æ–­æŸä¸ªäº‹ä»¶æ˜¯å¦å¯ä»¥é€šè¿‡æ­¤ NPC æ‰§è¡Œ
 --**********************************
 function x805009_IsValidEvent( sceneId, selfId, eventId )
 	local i = 1
@@ -151,16 +151,16 @@ function x805009_IsValidEvent( sceneId, selfId, eventId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x805009_OnEventRequest( sceneId, selfId, targetId, eventId )
-	-- ´¦ÀíÕı³£µÄÊÂ¼şÁĞ±íÖĞµÄÊÂ¼ş
+	-- å¤„ç†æ­£å¸¸çš„äº‹ä»¶åˆ—è¡¨ä¸­çš„äº‹ä»¶
 	if x805009_IsValidEvent( sceneId, selfId, eventId ) == 1 then
 		CallScriptFunction( eventId, "OnDefaultEvent", sceneId, selfId, targetId )
 		return
 	end
 
-	-- ´¦Àí±¾½Å±¾×Ô´øÊÂ¼ş£¬ËïÓêĞ´µÄ£¬Î´×÷ĞŞ¸Ä
+	-- å¤„ç†æœ¬è„šæœ¬è‡ªå¸¦äº‹ä»¶ï¼Œå­™é›¨å†™çš„ï¼Œæœªä½œä¿®æ”¹
 	if GetNumText() == 1 then
 		CityBuildingChange(sceneId, selfId, x805009_g_BuildingID1, 0)
 	elseif GetNumText() == 2 then
@@ -182,10 +182,10 @@ function x805009_OnEventRequest( sceneId, selfId, targetId, eventId )
 	elseif GetNumText() == 10 then
 		CitySetLevel(sceneId, selfId, sceneId, 4)
 	elseif GetNumText() == 11 then
-		-- Èç¹ûÍæ¼ÒÕıÔÚÅÜÉÌ£¬¾Í²»ÈÃÍæ¼ÒÊ¹ÓÃÕâ¸ö¹¦ÄÜ
+		-- å¦‚æœç©å®¶æ­£åœ¨è·‘å•†ï¼Œå°±ä¸è®©ç©å®¶ä½¿ç”¨è¿™ä¸ªåŠŸèƒ½
 		if GetItemCount(sceneId, selfId, x805009_g_Yinpiao)>=1  then
 			BeginEvent( sceneId )
-				AddText( sceneId, "  ÄãÉíÉÏÓĞÒøÆ±£¬ÕıÔÚÅÜÉÌ£¡ÎÒ²»ÄÜ°ïÖúÄã¡£" )
+				AddText( sceneId, "  ä½ èº«ä¸Šæœ‰é“¶ç¥¨ï¼Œæ­£åœ¨è·‘å•†ï¼æˆ‘ä¸èƒ½å¸®åŠ©ä½ ã€‚" )
 			EndEvent( sceneId )
 			DispatchEventList( sceneId, selfId, targetId )
 			return
@@ -196,61 +196,61 @@ function x805009_OnEventRequest( sceneId, selfId, targetId, eventId )
 
 	elseif GetNumText() == 12 then
 		BeginUICommand(sceneId)
-			UICommand_AddInt(sceneId,targetId) --µ÷ÓÃ³ÇÊĞÄÚÕş½çÃæ
+			UICommand_AddInt(sceneId,targetId) --è°ƒç”¨åŸå¸‚å†…æ”¿ç•Œé¢
 		EndUICommand(sceneId)
 		DispatchUICommand(sceneId,selfId, 100)
 	elseif GetNumText() == 13 then
 		BeginUICommand(sceneId)
-			UICommand_AddInt(sceneId,targetId) --µ÷ÓÃ³ÇÊĞ·¢Õ¹Ç÷ÊÆ½çÃæ
+			UICommand_AddInt(sceneId,targetId) --è°ƒç”¨åŸå¸‚å‘å±•è¶‹åŠ¿ç•Œé¢
 		EndUICommand(sceneId)
 		DispatchUICommand(sceneId,selfId, 101)
 	elseif GetNumText() == 14 then
 		BeginUICommand(sceneId)
-			UICommand_AddInt(sceneId,targetId) --µ÷ÓÃ³ÇÊĞÑĞ¾¿½çÃæ
+			UICommand_AddInt(sceneId,targetId) --è°ƒç”¨åŸå¸‚ç ”ç©¶ç•Œé¢
 		EndUICommand(sceneId)
 		DispatchUICommand(sceneId,selfId, 102)
 	elseif GetNumText() == 15 then
 		BeginUICommand(sceneId)
-			UICommand_AddInt(sceneId,targetId) --µ÷ÓÃ°ï»á´óÆì½çÃæ
+			UICommand_AddInt(sceneId,targetId) --è°ƒç”¨å¸®ä¼šå¤§æ——ç•Œé¢
 		EndUICommand(sceneId)
 		DispatchUICommand(sceneId,selfId, 103)
 	elseif GetNumText() == 18 then
 		BeginUICommand(sceneId)
-			UICommand_AddInt(sceneId,targetId) --µ÷ÓÃ³ÇÊĞÉÌÒµÂ·Ïß½çÃæ
+			UICommand_AddInt(sceneId,targetId) --è°ƒç”¨åŸå¸‚å•†ä¸šè·¯çº¿ç•Œé¢
 		EndUICommand(sceneId)
 		DispatchUICommand(sceneId,selfId, 105)
 	elseif GetNumText() == 16 then
-		--»ñµÃ¹ÙÆ±£¬¹Ø±Õ£¬ÒÆµ½ÒøĞĞnpc´¦
+		--è·å¾—å®˜ç¥¨ï¼Œå…³é—­ï¼Œç§»åˆ°é“¶è¡Œnpcå¤„
 
-		--ÊÇ·ñÊÇ±¾°ï³ÉÔ±
+		--æ˜¯å¦æ˜¯æœ¬å¸®æˆå‘˜
 		local guildid 		= GetHumanGuildID(sceneId,selfId)
 		local cityguildid = GetCityGuildID(sceneId, selfId, sceneId)
 
 		if(guildid ~= cityguildid) then
 				BeginEvent(sceneId)
-					strText = "¸óÏÂ²»ÊÇ±¾°ï³ÉÔ±£¬±¾°ïÈÎÎñ²»±ãÏà¸æ¡£"
+					strText = "é˜ä¸‹ä¸æ˜¯æœ¬å¸®æˆå‘˜ï¼Œæœ¬å¸®ä»»åŠ¡ä¸ä¾¿ç›¸å‘Šã€‚"
 					AddText(sceneId,strText);
 				EndEvent(sceneId)
 				DispatchMissionTips(sceneId,selfId)
 				return
 		end
 
-		--ÊÇ·ñÊÇÉÌÈË»ò°ïÖ÷
+		--æ˜¯å¦æ˜¯å•†äººæˆ–å¸®ä¸»
 		local	guildpos = GetGuildPos(sceneId, selfId)
 		if ((guildpos ~= GUILD_POSITION_COM) and (guildpos ~= GUILD_POSITION_CHIEFTAIN)) then
 				BeginEvent(sceneId)
-					strText = "¶Ô²»Æğ,Ö»ÓĞÉÌÒµ¹ÙÔ±»òÊÇ°ïÖ÷²ÅÄÜ¹»»ñµÃ¹ÙÆ±."
+					strText = "å¯¹ä¸èµ·,åªæœ‰å•†ä¸šå®˜å‘˜æˆ–æ˜¯å¸®ä¸»æ‰èƒ½å¤Ÿè·å¾—å®˜ç¥¨."
 					AddText(sceneId,strText);
 				EndEvent(sceneId)
 				DispatchMissionTips(sceneId,selfId)
 				return
 		end
 
-		--¼¶±ğÊÇ·ñ¹»
+		--çº§åˆ«æ˜¯å¦å¤Ÿ
 		local level = GetLevel(sceneId, selfId)
 		if(level<40) then
 				BeginEvent(sceneId)
-					strText = "ÕâÎ»Ğ¡ĞÖµÜÏÖÔÚ¾ÍÀ´¾­ÉÌ£¬Î´ÃâÔçÁËÒ»Ğ©£¬²»Èçµ½40¼¶ÔÙÀ´ÕÒÎÒ£¬·½ÊÇµÀÀí¡£"
+					strText = "è¿™ä½å°å…„å¼Ÿç°åœ¨å°±æ¥ç»å•†ï¼Œæœªå…æ—©äº†ä¸€äº›ï¼Œä¸å¦‚åˆ°40çº§å†æ¥æ‰¾æˆ‘ï¼Œæ–¹æ˜¯é“ç†ã€‚"
 					AddText(sceneId,strText);
 				EndEvent(sceneId)
 				DispatchMissionTips(sceneId,selfId)
@@ -274,12 +274,12 @@ function x805009_OnEventRequest( sceneId, selfId, targetId, eventId )
 			maxMoney = 300000
 		end
 
-		--ÊÇ·ñÓĞÒøÆ±
+		--æ˜¯å¦æœ‰é“¶ç¥¨
 		local	bagpos = GetBagPosByItemSn(sceneId, selfId, x805009_g_TicketItemIdx)
 
 		if bagpos ~= -1	then
 				BeginEvent(sceneId)
-					strText = "¶Ô²»Æğ,ÄúÖ»ÄÜÁìÈ¡Ò»ÕÅ¹ÙÆ±"
+					strText = "å¯¹ä¸èµ·,æ‚¨åªèƒ½é¢†å–ä¸€å¼ å®˜ç¥¨"
 					AddText(sceneId,strText);
 				EndEvent(sceneId)
 				DispatchMissionTips(sceneId,selfId)
@@ -287,11 +287,11 @@ function x805009_OnEventRequest( sceneId, selfId, targetId, eventId )
 
 		elseif bagpos == -1 then
 
-				--°ïÅÉ×Ê½ğÊÇ·ñ¹»¿ª³öÒ»ÕÅÒøÆ±µÄ
+				--å¸®æ´¾èµ„é‡‘æ˜¯å¦å¤Ÿå¼€å‡ºä¸€å¼ é“¶ç¥¨çš„
 				local GuildMoney = CityGetAttr(sceneId, selfId, GUILD_MONEY)
 				if GuildMoney <= curMoney then
 						BeginEvent(sceneId)
-							strText = "°ïÅÉ×Ê½ğ²»¹»ÎªÄã¿ª³öÒøÆ±"
+							strText = "å¸®æ´¾èµ„é‡‘ä¸å¤Ÿä¸ºä½ å¼€å‡ºé“¶ç¥¨"
 							AddText(sceneId,strText);
 						EndEvent(sceneId)
 						DispatchMissionTips(sceneId,selfId)
@@ -303,19 +303,19 @@ function x805009_OnEventRequest( sceneId, selfId, targetId, eventId )
 				if ret > 0 then
 					AddItemListToHuman(sceneId,selfId )
 					bagpos = GetBagPosByItemSn(sceneId, selfId, x805009_g_TicketItemIdx)
-					--¸ù¾İËùÔÚ³¡¾°,ÎïÆ·ÀàĞÍ»ñµÃÓ¦¸ÃµÄÎïÆ·¼ÛÖµ
+					--æ ¹æ®æ‰€åœ¨åœºæ™¯,ç‰©å“ç±»å‹è·å¾—åº”è¯¥çš„ç‰©å“ä»·å€¼
 					SetBagItemParam(sceneId, selfId, bagpos, TICKET_ITEM_PARAM_CUR_MONEY_START, TICKET_ITEM_PARAM_CUR_MONEY_TYPE, curMoney)
 					SetBagItemParam(sceneId, selfId, bagpos, TICKET_ITEM_PARAM_MAX_MONEY_START, TICKET_ITEM_PARAM_MAX_MONEY_TYPE, maxMoney)
 					CityChangeAttr(sceneId, selfId, GUILD_MONEY, (-1)*curMoney)
 					LuaFnRefreshItemInfo(sceneId, selfId, bagpos)
 					BeginEvent(sceneId)
-						strText = "ÉõºÃÉõºÃ£¬ÕâÕÅÒøÆ±ÄãÇÒÄÃÈ¥£¬¶àÎª±¾°ï×¬»ØĞ©×Ê½ğ£¬¹¦ÀÍ²»Ğ¡°¡¡£"
+						strText = "ç”šå¥½ç”šå¥½ï¼Œè¿™å¼ é“¶ç¥¨ä½ ä¸”æ‹¿å»ï¼Œå¤šä¸ºæœ¬å¸®èµšå›äº›èµ„é‡‘ï¼ŒåŠŸåŠ³ä¸å°å•Šã€‚"
 						AddText(sceneId,strText);
 					EndEvent(sceneId)
 					DispatchMissionTips(sceneId,selfId)
 				else
 					BeginEvent(sceneId)
-						strText = "±³°üÒÑÂú,ÎŞ·¨½ÓÊÜÈÎÎñ"
+						strText = "èƒŒåŒ…å·²æ»¡,æ— æ³•æ¥å—ä»»åŠ¡"
 						AddText(sceneId,strText);
 					EndEvent(sceneId)
 					DispatchMissionTips(sceneId,selfId)
@@ -323,37 +323,37 @@ function x805009_OnEventRequest( sceneId, selfId, targetId, eventId )
 		end
 
 	elseif GetNumText() == 17 then
-		--½»»ØÒøÆ±£¬¹Ø±Õ£¬ÒÆµ½ÒøĞĞnpc´¦
+		--äº¤å›é“¶ç¥¨ï¼Œå…³é—­ï¼Œç§»åˆ°é“¶è¡Œnpcå¤„
 
-		--ÊÇ·ñÊÇ±¾°ï³ÉÔ±
+		--æ˜¯å¦æ˜¯æœ¬å¸®æˆå‘˜
 		local guildid 		= GetHumanGuildID(sceneId, selfId)
 		local cityguildid = GetCityGuildID(sceneId, selfId, sceneId)
 
 		if(guildid ~= cityguildid) then
 				BeginEvent(sceneId)
-					strText = "¸óÏÂ²»ÊÇ±¾°ï³ÉÔ±..."
+					strText = "é˜ä¸‹ä¸æ˜¯æœ¬å¸®æˆå‘˜..."
 					AddText(sceneId,strText);
 				EndEvent(sceneId)
 				DispatchMissionTips(sceneId,selfId)
 				return
 		end
 
-		--ÊÇ·ñÊÇÉÌÈË»ò°ïÖ÷
+		--æ˜¯å¦æ˜¯å•†äººæˆ–å¸®ä¸»
 		local	guildpos = GetGuildPos(sceneId, selfId)
 		if ( (guildpos ~= GUILD_POSITION_COM) and (guildpos ~= GUILD_POSITION_CHIEFTAIN) ) then
 				BeginEvent(sceneId)
-					strText = "¶Ô²»Æğ,Ö»ÓĞÉÌÒµ¹ÙÔ±»òÊÇ°ïÖ÷²ÅÄÜ¹»½»»¹ÒøÆ±."
+					strText = "å¯¹ä¸èµ·,åªæœ‰å•†ä¸šå®˜å‘˜æˆ–æ˜¯å¸®ä¸»æ‰èƒ½å¤Ÿäº¤è¿˜é“¶ç¥¨."
 					AddText(sceneId,strText);
 				EndEvent(sceneId)
 				DispatchMissionTips(sceneId,selfId)
 				return
 		end
 
-		--¼¶±ğÊÇ·ñ¹»
+		--çº§åˆ«æ˜¯å¦å¤Ÿ
 		local level = GetLevel(sceneId, selfId)
 		if(level<40) then
 				BeginEvent(sceneId)
-					strText = "ÕâÎ»Ğ¡ĞÖµÜÏÖÔÚ¾ÍÀ´¾­ÉÌ£¬Î´ÃâÔçÁËÒ»Ğ©..."
+					strText = "è¿™ä½å°å…„å¼Ÿç°åœ¨å°±æ¥ç»å•†ï¼Œæœªå…æ—©äº†ä¸€äº›..."
 					AddText(sceneId,strText);
 				EndEvent(sceneId)
 				DispatchMissionTips(sceneId,selfId)
@@ -368,7 +368,7 @@ function x805009_OnEventRequest( sceneId, selfId, targetId, eventId )
 
 				if TicketMoney < MaxTicketMoney	then
 						BeginEvent(sceneId)
-							strText = "ÄãµÄÒøÆ±Ã»ÓĞ×¬µ½Ó¦×¬µÄ¼ÛÖµ£¬ÔÙÈ¥×¬×¬°É¡£"
+							strText = "ä½ çš„é“¶ç¥¨æ²¡æœ‰èµšåˆ°åº”èµšçš„ä»·å€¼ï¼Œå†å»èµšèµšå§ã€‚"
 							AddText(sceneId,strText);
 						EndEvent(sceneId)
 						DispatchMissionTips(sceneId,selfId)
@@ -382,14 +382,14 @@ function x805009_OnEventRequest( sceneId, selfId, targetId, eventId )
 				local ReturnType = DelItem(sceneId, selfId, x805009_g_TicketItemIdx, 1)
 				if ReturnType == 0 then
 					BeginEvent(sceneId)
-						strText = "ÎŞ·¨É¾³ıÒøÆ±"
+						strText = "æ— æ³•åˆ é™¤é“¶ç¥¨"
 						AddText(sceneId,strText);
 					EndEvent(sceneId)
 					DispatchMissionTips(sceneId,selfId)
 					return
 				else
 					BeginEvent(sceneId)
-						strText = "³É¹¦É¾³ıÒøÆ±"
+						strText = "æˆåŠŸåˆ é™¤é“¶ç¥¨"
 						AddText(sceneId,strText);
 					EndEvent(sceneId)
 					DispatchMissionTips(sceneId,selfId)
@@ -398,7 +398,7 @@ function x805009_OnEventRequest( sceneId, selfId, targetId, eventId )
 
 			else
 				BeginEvent(sceneId)
-					strText = "¶Ô²»Æğ,ÄúµÄÒøÆ±ÀïÃ»Ç®"
+					strText = "å¯¹ä¸èµ·,æ‚¨çš„é“¶ç¥¨é‡Œæ²¡é’±"
 					AddText(sceneId,strText);
 				EndEvent(sceneId)
 				DispatchMissionTips(sceneId,selfId)
@@ -406,7 +406,7 @@ function x805009_OnEventRequest( sceneId, selfId, targetId, eventId )
 			end
 		else
 			BeginEvent(sceneId)
-				strText = "¶Ô²»Æğ,ÄúÃ»ÓĞÒøÆ±"
+				strText = "å¯¹ä¸èµ·,æ‚¨æ²¡æœ‰é“¶ç¥¨"
 				AddText(sceneId,strText);
 			EndEvent(sceneId)
 			DispatchMissionTips(sceneId,selfId)
@@ -430,18 +430,18 @@ function x805009_OnEventRequest( sceneId, selfId, targetId, eventId )
 	elseif GetNumText() == 22 then
 		local guildpos = GetGuildPos( sceneId, selfId )
 		if guildpos ~= GUILD_POSITION_ASS_CHIEFTAIN and guildpos ~= GUILD_POSITION_CHIEFTAIN then
-			--Èç¹û²»ÊÇ°ïÖ÷»ò¸±°ïÖ÷Ôò´ò¿ª²é¿´ÁôÑÔ½çÃæ....
+			--å¦‚æœä¸æ˜¯å¸®ä¸»æˆ–å‰¯å¸®ä¸»åˆ™æ‰“å¼€æŸ¥çœ‹ç•™è¨€ç•Œé¢....
 			
-			--×¼±¸´ò¿ª²é¿´ÁôÑÔ½çÃæ....(µÈ´ıLeaveWord¸üĞÂ....)
-			--UI½Å±¾²»»áÖ±½Ó´ò¿ª½çÃæ¶øÊÇÏòWorldÇëÇó°ï»áÁôÑÔ(¸üĞÂ±¾µØ°ï»áÁôÑÔ)....
-			--µ±¿Í»§¶ËµÄLeaveWord±»¸üĞÂºó»á·¢ËÍUIÏûÏ¢....µ½ÄÇÊ±²é¿´ÁôÑÔ½çÃæ²Å»á´ò¿ª....
+			--å‡†å¤‡æ‰“å¼€æŸ¥çœ‹ç•™è¨€ç•Œé¢....(ç­‰å¾…LeaveWordæ›´æ–°....)
+			--UIè„šæœ¬ä¸ä¼šç›´æ¥æ‰“å¼€ç•Œé¢è€Œæ˜¯å‘Worldè¯·æ±‚å¸®ä¼šç•™è¨€(æ›´æ–°æœ¬åœ°å¸®ä¼šç•™è¨€)....
+			--å½“å®¢æˆ·ç«¯çš„LeaveWordè¢«æ›´æ–°åä¼šå‘é€UIæ¶ˆæ¯....åˆ°é‚£æ—¶æŸ¥çœ‹ç•™è¨€ç•Œé¢æ‰ä¼šæ‰“å¼€....
 			BeginUICommand( sceneId )
 				UICommand_AddInt( sceneId, targetId )
 			EndUICommand( sceneId )
 			DispatchUICommand( sceneId, selfId, 19841120 )
 			return
 		else
-			--Èç¹ûÊÇ°ïÖ÷»ò¸±°ïÖ÷Ôò´ò¿ªÉèÖÃÁôÑÔ½çÃæ....
+			--å¦‚æœæ˜¯å¸®ä¸»æˆ–å‰¯å¸®ä¸»åˆ™æ‰“å¼€è®¾ç½®ç•™è¨€ç•Œé¢....
 			BeginUICommand( sceneId )
 				UICommand_AddInt( sceneId, targetId )
 			EndUICommand( sceneId )
@@ -452,7 +452,7 @@ function x805009_OnEventRequest( sceneId, selfId, targetId, eventId )
 	elseif GetNumText() == 23 then
 		GuildPromoteToChief(sceneId, selfId)
 		
-	--½«°ï¹±¶Ò»»³É°ï¹±ÅÆ
+	--å°†å¸®è´¡å…‘æ¢æˆå¸®è´¡ç‰Œ
 	elseif GetNumText() == 24 then
 	
 		BeginUICommand( sceneId )
@@ -460,25 +460,25 @@ function x805009_OnEventRequest( sceneId, selfId, targetId, eventId )
 		EndUICommand( sceneId )
 		DispatchUICommand( sceneId, selfId, 19821 )
 
-	--¹ØÓÚ¶Ò»»°ï¹±ÅÆ
+	--å…³äºå…‘æ¢å¸®è´¡ç‰Œ
 	elseif GetNumText() == 25 then
 		BeginEvent(sceneId)
 			AddText( sceneId, "#{BGCH_8829_05}" )
 		EndEvent(sceneId)
 		DispatchEventList( sceneId, selfId, targetId )
 	
-	--¹ØÓÚÉêÇë³ÉÎª°ïÖ÷
+	--å…³äºç”³è¯·æˆä¸ºå¸®ä¸»
 	elseif GetNumText() == 26 then
 		BeginEvent(sceneId)
 			AddText( sceneId, "#{SQBZ_090205_02}" )
 		EndEvent(sceneId)
 		DispatchEventList( sceneId, selfId, targetId )
 
- --»Øµ½´óÀí
+ --å›åˆ°å¤§ç†
 	elseif GetNumText() == 27 then
 		if GetItemCount(sceneId, selfId, x805009_g_Yinpiao)>=1  then
 			BeginEvent( sceneId )
-				AddText( sceneId, "  ÄãÉíÉÏÓĞÒøÆ±£¬ÕıÔÚÅÜÉÌ£¡ÎÒ²»ÄÜ°ïÖúÄã¡£" )
+				AddText( sceneId, "  ä½ èº«ä¸Šæœ‰é“¶ç¥¨ï¼Œæ­£åœ¨è·‘å•†ï¼æˆ‘ä¸èƒ½å¸®åŠ©ä½ ã€‚" )
 			EndEvent( sceneId )
 			DispatchEventList( sceneId, selfId, targetId )
 			return
@@ -487,11 +487,11 @@ function x805009_OnEventRequest( sceneId, selfId, targetId, eventId )
 		--NewWorld(sceneId, selfId, 0, 144, 98)
 		CallScriptFunction((400900), "TransferFuncFromNpc",sceneId, selfId, 2,181,120)
 		
-	--»Øµ½ËÕÖİ
+	--å›åˆ°è‹å·
 	elseif GetNumText() == 28 then
 		if GetItemCount(sceneId, selfId, x805009_g_Yinpiao)>=1  then
 			BeginEvent( sceneId )
-				AddText( sceneId, "  ÄãÉíÉÏÓĞÒøÆ±£¬ÕıÔÚÅÜÉÌ£¡ÎÒ²»ÄÜ°ïÖúÄã¡£" )
+				AddText( sceneId, "  ä½ èº«ä¸Šæœ‰é“¶ç¥¨ï¼Œæ­£åœ¨è·‘å•†ï¼æˆ‘ä¸èƒ½å¸®åŠ©ä½ ã€‚" )
 			EndEvent( sceneId )
 			DispatchEventList( sceneId, selfId, targetId )
 			return
@@ -502,13 +502,13 @@ function x805009_OnEventRequest( sceneId, selfId, targetId, eventId )
 	elseif GetNumText() == 29 then
 		BeginEvent( sceneId )
 		AddText( sceneId, "#{BHCS_090226_11}" )
-		AddNumText( sceneId, x805009_g_scriptId, "»Øµ½ÂåÑô", 9, 11 )
+		AddNumText( sceneId, x805009_g_scriptId, "å›åˆ°æ´›é˜³", 9, 11 )
 		AddNumText( sceneId, x805009_g_scriptId, "#{BHCS_090219_02}", 9, 27 )
 		AddNumText( sceneId, x805009_g_scriptId, "#{BHCS_090219_03}", 9, 28 )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 			
-	--°ï»á¹±Ï×¶È³ÆºÅ
+	--å¸®ä¼šè´¡çŒ®åº¦ç§°å·
 	elseif GetNumText() == 30 then
 		
 		local currGuildContriSum = CityGetAttr(sceneId, selfId, 15);
@@ -523,7 +523,7 @@ function x805009_OnEventRequest( sceneId, selfId, targetId, eventId )
 				local playerName = GetName(sceneId, selfId);
 
 				if currGuildContriSum < titleItem.needContri then
-					local strTip = "#R"..playerName.."#W£¡½úÉıÎª°ï»áµÄ#G"..guildName..titleItem.name.."#WĞèÒªÎª°ï»á×ö³ö#G"..titleItem.needContri.."#Wµã¹±Ï×µÄ£¡ÏëÒª½úÉıµÄ»°£¬¾ÍÎª°ï»á¶à×öÒ»Ğ©ÊÂÇé°É£¡";
+					local strTip = "#R"..playerName.."#Wï¼æ™‹å‡ä¸ºå¸®ä¼šçš„#G"..guildName..titleItem.name.."#Wéœ€è¦ä¸ºå¸®ä¼šåšå‡º#G"..titleItem.needContri.."#Wç‚¹è´¡çŒ®çš„ï¼æƒ³è¦æ™‹å‡çš„è¯ï¼Œå°±ä¸ºå¸®ä¼šå¤šåšä¸€äº›äº‹æƒ…å§ï¼";
 					BeginEvent( sceneId )
 						AddText( sceneId, strTip )
 					EndEvent( sceneId )
@@ -535,16 +535,16 @@ function x805009_OnEventRequest( sceneId, selfId, targetId, eventId )
 				SetCurTitle( sceneId, selfId, 38, 0 );
 				LuaFnDispatchAllTitle( sceneId, selfId )
 				
-				local strTip = "¹§Ï²Äã£¡#R"..playerName.."#W£¡ÄãÏÖÔÚÊÇÎÒÃÇ°ï»áµÄ#G"..guildName..titleItem.name.."#WÁË£¡ÎªÁË°ï»áµÄÊ¢ÊÀ°ÔÒµ£¬¼ÌĞøÅ¬Á¦°É£¡"
+				local strTip = "æ­å–œä½ ï¼#R"..playerName.."#Wï¼ä½ ç°åœ¨æ˜¯æˆ‘ä»¬å¸®ä¼šçš„#G"..guildName..titleItem.name.."#Wäº†ï¼ä¸ºäº†å¸®ä¼šçš„ç››ä¸–éœ¸ä¸šï¼Œç»§ç»­åŠªåŠ›å§ï¼"
 				
-				--Ôö¼ÓÌØĞ§
+				--å¢åŠ ç‰¹æ•ˆ
 				LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, 49, 0);
 		
-				local sMessage = format("@*;SrvMsg;GLD:#W±¾°ï¸ßÊÖ#R#{_INFOUSR%s}#WÎª±¾°ïÁ¢ÏÂ´ó¹¦£¬´ÍÓè¾ôÎ»£º#G%s#W£¡Íû#R#{_INFOUSR%s}#WÔÙ½ÓÔÙÀ÷£¬Îª±¾°ïÔÙÁ¢ĞÂ¹¦£¡", playerName, guildName..titleItem.name ,playerName);	
+				local sMessage = format("@*;SrvMsg;GLD:#Wæœ¬å¸®é«˜æ‰‹#R#{_INFOUSR%s}#Wä¸ºæœ¬å¸®ç«‹ä¸‹å¤§åŠŸï¼Œèµäºˆçˆµä½ï¼š#G%s#Wï¼æœ›#R#{_INFOUSR%s}#Wå†æ¥å†å‰ï¼Œä¸ºæœ¬å¸®å†ç«‹æ–°åŠŸï¼", playerName, guildName..titleItem.name ,playerName);	
 	    		BroadMsgByChatPipe(sceneId, selfId, sMessage, 6);
 			
 			
-				sMessage = format("#W#{_INFOUSR%s}Îª#G%s#WµÄ½¨Éè²»´ÇĞÁ¿à£¬ÌØ´ÍÓè¾ôÎ»£º#G%s#W£¡", playerName,guildName, guildName..titleItem.name );
+				sMessage = format("#W#{_INFOUSR%s}ä¸º#G%s#Wçš„å»ºè®¾ä¸è¾è¾›è‹¦ï¼Œç‰¹èµäºˆçˆµä½ï¼š#G%s#Wï¼", playerName,guildName, guildName..titleItem.name );
 				BroadMsgByChatPipe(sceneId, selfId, sMessage, 4);
 		
 				BeginEvent( sceneId )
@@ -559,7 +559,7 @@ function x805009_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x805009_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 	if x805009_IsValidEvent( sceneId, selfId, missionScriptId ) == 1 then
@@ -567,9 +567,9 @@ function x805009_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 		if ret > 0 then
 			CallScriptFunction( missionScriptId, "OnAccept", sceneId, selfId, targetId )
 		elseif ret == -1 then
-			x805009_NotifyFailTips( sceneId, selfId, "ÄãÏÖÔÚ²»ÄÜÁìÈ¡Õâ¸öÈÎÎñ" )
+			x805009_NotifyFailTips( sceneId, selfId, "ä½ ç°åœ¨ä¸èƒ½é¢†å–è¿™ä¸ªä»»åŠ¡" )
 		elseif ret == -2 then
-			x805009_NotifyFailTips( sceneId, selfId, "ÎŞ·¨½ÓÊÜ¸ü¶àÈÎÎñ" )
+			x805009_NotifyFailTips( sceneId, selfId, "æ— æ³•æ¥å—æ›´å¤šä»»åŠ¡" )
 		end
 
 		return
@@ -577,7 +577,7 @@ function x805009_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x805009_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 	if x805009_IsValidEvent( sceneId, selfId, missionScriptId ) == 1 then
@@ -587,7 +587,7 @@ function x805009_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¼ÌĞø£¨ÒÑ¾­½ÓÁËÈÎÎñ£©
+--ç»§ç»­ï¼ˆå·²ç»æ¥äº†ä»»åŠ¡ï¼‰
 --**********************************
 function x805009_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 	if x805009_IsValidEvent( sceneId, selfId, missionScriptId ) == 1 then
@@ -597,7 +597,7 @@ function x805009_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---Ìá½»ÒÑ×öÍêµÄÈÎÎñ
+--æäº¤å·²åšå®Œçš„ä»»åŠ¡
 --**********************************
 function x805009_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, selectRadioId )
 	if x805009_IsValidEvent( sceneId, selfId, missionScriptId ) == 1 then
@@ -607,7 +607,7 @@ function x805009_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 end
 
 --**********************************
---ËÀÍöÊÂ¼ş
+--æ­»äº¡äº‹ä»¶
 --**********************************
 function x805009_OnDie( sceneId, selfId, killerId )
 end
@@ -620,29 +620,29 @@ function x805009_NotifyFailTips( sceneId, selfId, Tip )
 end
 
 --**********************************
---°ï¹±½çÃæUI 19821 Banggong Exchangeµ÷ÓÃµ½ÕâÀï
+--å¸®è´¡ç•Œé¢UI 19821 Banggong Exchangeè°ƒç”¨åˆ°è¿™é‡Œ
 --**********************************
-function x805009_BanggongExchange( sceneId, selfId, nvalue ) --Õâ¸öÊÇÍæ¼ÒÊäÈëÖµ£¬Êµ¼ÊµÄ¿Û³ıÖµ»¹ÒªÔÚ´Ë»ù´¡ÉÏ+10%µÄË°ÂÊ
+function x805009_BanggongExchange( sceneId, selfId, nvalue ) --è¿™ä¸ªæ˜¯ç©å®¶è¾“å…¥å€¼ï¼Œå®é™…çš„æ‰£é™¤å€¼è¿˜è¦åœ¨æ­¤åŸºç¡€ä¸Š+10%çš„ç¨ç‡
 	local haveBangGong = CityGetAttr(sceneId, selfId, GUILD_CONTRIB_POINT)
 	
-	--ÊÇ·ñ°²È«Ê±¼ä£¬Õâ¸öÅĞ¶Ïº¯ÊıÀïÃæ×Ô¼ºÓĞÌáÊ¾ĞÅÏ¢£¬²»ĞèÒªÕâÀïĞ´ÌáÊ¾ĞÅÏ¢
+	--æ˜¯å¦å®‰å…¨æ—¶é—´ï¼Œè¿™ä¸ªåˆ¤æ–­å‡½æ•°é‡Œé¢è‡ªå·±æœ‰æç¤ºä¿¡æ¯ï¼Œä¸éœ€è¦è¿™é‡Œå†™æç¤ºä¿¡æ¯
 	if IsPilferLockFlag(sceneId, selfId) <= 0 then
 		return
 	end
 	
-	--ÊäÈëÊÇ·ñ³¬¹ıÒÑÓĞÊıÁ¿
+	--è¾“å…¥æ˜¯å¦è¶…è¿‡å·²æœ‰æ•°é‡
 	if nvalue > haveBangGong then
 		x805009_NotifyFailTips( sceneId, selfId, "#{BGCH_8829_03}")
 		return
 	end
 	
-	--°ï¹±ÅÆµÄ×î´ó¶î¶È²»ÄÜ³¬¹ı200¡£
+	--å¸®è´¡ç‰Œçš„æœ€å¤§é¢åº¦ä¸èƒ½è¶…è¿‡200ã€‚
 	if nvalue > 200 then
 		x805009_NotifyFailTips( sceneId, selfId, "#{BGCH_8922_25}")
 		return
 	end
 	
-	--°ï¹±ÅÆµÄ×îĞ¡¶î¶È²»ÄÜµÍÓÚ10¡£
+	--å¸®è´¡ç‰Œçš„æœ€å°é¢åº¦ä¸èƒ½ä½äº10ã€‚
 	if nvalue < 10 then
 		x805009_NotifyFailTips( sceneId, selfId, "#{BGCH_8922_26}")
 		return
@@ -650,13 +650,13 @@ function x805009_BanggongExchange( sceneId, selfId, nvalue ) --Õâ¸öÊÇÍæ¼ÒÊäÈëÖµ£
 	
 	local totalvalue = floor( nvalue*0.1 ) + nvalue
 
-	--¼ÓÉÏË°ÂÊÖ®ºóÊÇ·ñÓĞ×ã¹»°ï¹±
+	--åŠ ä¸Šç¨ç‡ä¹‹åæ˜¯å¦æœ‰è¶³å¤Ÿå¸®è´¡
 	if totalvalue > haveBangGong then
 		x805009_NotifyFailTips( sceneId, selfId, "#{BGCH_8922_27}")
 		return
 	end
 	
-	--µÀ¾ßÀ¸ÊÇ·ñÓĞ¿Õ¼ä
+	--é“å…·æ æ˜¯å¦æœ‰ç©ºé—´
 	if LuaFnGetPropertyBagSpace( sceneId, selfId ) <= 0 then
 		x805009_NotifyFailTips( sceneId, selfId, "#{SJQM_8819_20}")
 		return
@@ -668,15 +668,15 @@ function x805009_BanggongExchange( sceneId, selfId, nvalue ) --Õâ¸öÊÇÍæ¼ÒÊäÈëÖµ£
 		local roleBangPaiID = GetHumanGuildID(sceneId, selfId)
 		
 		if BagIndex ~= -1 then
-			SetBagItemParam(sceneId, selfId, BagIndex, 4, 2, roleBangPaiID) --°ïÅÉID
-			SetBagItemParam(sceneId, selfId, BagIndex, 8, 2, nvalue) --°ï¹±ÊıÖµ
+			SetBagItemParam(sceneId, selfId, BagIndex, 4, 2, roleBangPaiID) --å¸®æ´¾ID
+			SetBagItemParam(sceneId, selfId, BagIndex, 8, 2, nvalue) --å¸®è´¡æ•°å€¼
 			LuaFnRefreshItemInfo( sceneId, selfId, BagIndex )
 			x805009_NotifyFailTips( sceneId, selfId, "#{BGCH_8829_10}"..nvalue.."#{BGCH_8829_11}")
 		else
-			x805009_NotifyFailTips( sceneId, selfId, "´´½¨ÎïÆ·³ö´í")
+			x805009_NotifyFailTips( sceneId, selfId, "åˆ›å»ºç‰©å“å‡ºé”™")
 		end
 	else
-		x805009_NotifyFailTips( sceneId, selfId, "¿Û³ı°ï¹±Ê§°Ü")
+		x805009_NotifyFailTips( sceneId, selfId, "æ‰£é™¤å¸®è´¡å¤±è´¥")
 	end
 	
 end

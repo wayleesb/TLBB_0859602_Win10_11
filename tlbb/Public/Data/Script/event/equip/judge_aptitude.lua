@@ -1,11 +1,11 @@
---×°±¸×ÊÖÊ¼ø¶¨
---½Å±¾ºÅ
+--è£…å¤‡èµ„è´¨é‰´å®š
+--è„šæœ¬å·
 x809261_g_ScriptId = 809261
 
---×°±¸×ÊÖÊ¼ø¶¨UI 1001
+--è£…å¤‡èµ„è´¨é‰´å®šUI 1001
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x809261_OnEnumerate( sceneId, selfId, targetId )
 
@@ -13,14 +13,14 @@ end
 
 
 --**********************************
---×°±¸×ÊÖÊ¼ø¶¨
+--è£…å¤‡èµ„è´¨é‰´å®š
 --**********************************
 function x809261_FinishAdjust( sceneId, selfId, nItemIndex)
 	local ret = LuaFnIsItemLocked( sceneId, selfId, nItemIndex)
 	
 	if ret ~= 0 then
 		BeginEvent(sceneId)
-		AddText(sceneId,"¸Ã×°±¸²»¿ÉÓÃ¡£");
+		AddText(sceneId,"è¯¥è£…å¤‡ä¸å¯ç”¨ã€‚");
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
@@ -29,28 +29,28 @@ function x809261_FinishAdjust( sceneId, selfId, nItemIndex)
 	ret = LuaFnIsJudgeApt( sceneId, selfId, nItemIndex )
 	if ret == -1 then
 		BeginEvent(sceneId)
-		AddText(sceneId,"¸ÃÎïÆ·²»¿ÉÓÃ¡£");
+		AddText(sceneId,"è¯¥ç‰©å“ä¸å¯ç”¨ã€‚");
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
 	end
 	if ret == 1 then
 		BeginEvent(sceneId)
-		AddText(sceneId,"¸ÃÎïÆ·ÒÑ¾­½øĞĞ¹ı×ÊÖÊ¼ø¶¨¡£");
+		AddText(sceneId,"è¯¥ç‰©å“å·²ç»è¿›è¡Œè¿‡èµ„è´¨é‰´å®šã€‚");
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
 	end
 	if ret == 2 then
 		BeginEvent(sceneId)
-		AddText(sceneId,"¸ÃÎïÆ·»¹Ã»ÓĞ¼ø¶¨£¬ËùÒÔ²»ÄÜ½øĞĞ×ÊÖÊ¼ø¶¨¡£");
+		AddText(sceneId,"è¯¥ç‰©å“è¿˜æ²¡æœ‰é‰´å®šï¼Œæ‰€ä»¥ä¸èƒ½è¿›è¡Œèµ„è´¨é‰´å®šã€‚");
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
 	end
 	if ret == 3 then
 		BeginEvent(sceneId)
-		AddText(sceneId,"¸ÃÎïÆ·Ã»ÓĞ×ÊÖÊ£¬ËùÒÔ²»ÄÜ½øĞĞ×ÊÖÊ¼ø¶¨¡£");
+		AddText(sceneId,"è¯¥ç‰©å“æ²¡æœ‰èµ„è´¨ï¼Œæ‰€ä»¥ä¸èƒ½è¿›è¡Œèµ„è´¨é‰´å®šã€‚");
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
@@ -89,7 +89,7 @@ function x809261_FinishAdjust( sceneId, selfId, nItemIndex)
 	
 	if money < need_money then
 		BeginEvent(sceneId)
-		AddText(sceneId,"½ğÇ®²»×ã¡£");
+		AddText(sceneId,"é‡‘é’±ä¸è¶³ã€‚");
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
@@ -98,7 +98,7 @@ function x809261_FinishAdjust( sceneId, selfId, nItemIndex)
 	local jiaoZi, jinBi = LuaFnCostMoneyWithPriority( sceneId, selfId, need_money )
 	if jiaoZi == -1 then
 		BeginEvent(sceneId)
-		AddText(sceneId,"Î´Öª´íÎó¡£");
+		AddText(sceneId,"æœªçŸ¥é”™è¯¯ã€‚");
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
@@ -108,13 +108,13 @@ function x809261_FinishAdjust( sceneId, selfId, nItemIndex)
 	if ret == 1 then
 		LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, 49, 0);
 		BeginEvent(sceneId)
-		AddText(sceneId,"×°±¸×ÊÖÊ¼ø¶¨³É¹¦¡£");
+		AddText(sceneId,"è£…å¤‡èµ„è´¨é‰´å®šæˆåŠŸã€‚");
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
 	else
 		BeginEvent(sceneId)
-		AddText(sceneId,"Î´Öª´íÎó¡£");
+		AddText(sceneId,"æœªçŸ¥é”™è¯¯ã€‚");
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
@@ -125,82 +125,82 @@ end
 
 
 --**********************************
---ÖØĞÂ¼ø¶¨×°±¸×ÊÖÊ(Ï´×ÊÖÊ)
+--é‡æ–°é‰´å®šè£…å¤‡èµ„è´¨(æ´—èµ„è´¨)
 --**********************************
 function x809261_FinishReAdjust( sceneId, selfId, nEquItemIndex )
 
-	-- ¼ì²â×°±¸ÊÇ·ñ¿ÉÓÃ....
+	-- æ£€æµ‹è£…å¤‡æ˜¯å¦å¯ç”¨....
 	local ret = LuaFnIsItemLocked( sceneId, selfId, nEquItemIndex)
 	if ret ~= 0 then
 		BeginEvent(sceneId)
-			AddText(sceneId,"¸Ã×°±¸²»¿ÉÓÃ¡£");
+			AddText(sceneId,"è¯¥è£…å¤‡ä¸å¯ç”¨ã€‚");
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
 	end
 	
-	-- ¼ì²âÊÇ·ñÓĞ½ğ¸ÕÉ°....
+	-- æ£€æµ‹æ˜¯å¦æœ‰é‡‘åˆšç ‚....
 	itemCount = LuaFnGetAvailableItemCount(sceneId, selfId, 30008034)
 	itemCount2 = LuaFnGetAvailableItemCount(sceneId, selfId, 30008048)
 	if itemCount < 1 and itemCount2 < 1 then
 		BeginEvent(sceneId)
-			AddText(sceneId,"ÄúÈ±ÉÙ½ğ¸ÕÉ°»ò½ğ¸Õï±¡£");
+			AddText(sceneId,"æ‚¨ç¼ºå°‘é‡‘åˆšç ‚æˆ–é‡‘åˆšé”‰ã€‚");
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
 	end
 	
-	-- ¼ì²â×°±¸×ÊÖÊµÄ¼ø¶¨Çé¿ö....
+	-- æ£€æµ‹è£…å¤‡èµ„è´¨çš„é‰´å®šæƒ…å†µ....
 	ret = LuaFnIsJudgeApt( sceneId, selfId, nEquItemIndex )
 	if ret == -1 then
 		BeginEvent(sceneId)
-			AddText(sceneId,"¸ÃÎïÆ·²»¿ÉÓÃ¡£");
+			AddText(sceneId,"è¯¥ç‰©å“ä¸å¯ç”¨ã€‚");
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
 	end
 	if ret == 0 then
 		BeginEvent(sceneId)
-			AddText(sceneId,"¸ÃÎïÆ·»¹Ã»ÓĞ¼ø¶¨¹ı×ÊÖÊ£¬ÇëÏÈ½øĞĞ×°±¸×ÊÖÊ¼ø¶¨¡£");
+			AddText(sceneId,"è¯¥ç‰©å“è¿˜æ²¡æœ‰é‰´å®šè¿‡èµ„è´¨ï¼Œè¯·å…ˆè¿›è¡Œè£…å¤‡èµ„è´¨é‰´å®šã€‚");
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
 	end
 	--if ret == 1 then
-	-- 1 ´ú±íÒÑ¾­¼ø¶¨¹ı×ÊÖÊ....
+	-- 1 ä»£è¡¨å·²ç»é‰´å®šè¿‡èµ„è´¨....
 	--end
 	if ret == 2 then
 		BeginEvent(sceneId)
-			AddText(sceneId,"¸ÃÎïÆ·»¹Ã»ÓĞ¼ø¶¨¹ı£¬ÇëÏÈ½øĞĞ×°±¸¼ø¶¨¡£");
+			AddText(sceneId,"è¯¥ç‰©å“è¿˜æ²¡æœ‰é‰´å®šè¿‡ï¼Œè¯·å…ˆè¿›è¡Œè£…å¤‡é‰´å®šã€‚");
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
 	end
 	if ret == 3 then
 		BeginEvent(sceneId)
-			AddText(sceneId,"¸ÃÎïÆ·Ã»ÓĞ×ÊÖÊ£¬ËùÒÔ²»ÄÜ½øĞĞ×ÊÖÊ¼ø¶¨¡£");
+			AddText(sceneId,"è¯¥ç‰©å“æ²¡æœ‰èµ„è´¨ï¼Œæ‰€ä»¥ä¸èƒ½è¿›è¡Œèµ„è´¨é‰´å®šã€‚");
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
 	end
 	
-	-- ¼ì²â½ğÇ®ÊÇ·ñ¹»....
+	-- æ£€æµ‹é‡‘é’±æ˜¯å¦å¤Ÿ....
 	money = GetMoney( sceneId, selfId )+GetMoneyJZ(sceneId, selfId);
 	equip_level = GetBagItemLevel( sceneId, selfId, nEquItemIndex )
 	need_money = 20 * equip_level + 50
 	
 	if money < need_money then
 		BeginEvent(sceneId)
-			AddText(sceneId,"ÄãĞ¯´øµÄ½ğÇ®²»×ã¡£");
+			AddText(sceneId,"ä½ æºå¸¦çš„é‡‘é’±ä¸è¶³ã€‚");
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
 	end
 	
-	--¼ì²é×°±¸ÊÇ·ñÊÇ°ó¶¨
+	--æ£€æŸ¥è£…å¤‡æ˜¯å¦æ˜¯ç»‘å®š
 	ret = LuaFnGetItemBindStatus( sceneId, selfId, nEquItemIndex )
-	--¿Û³ı¹æÔòÊÇ£º°ó¶¨ÓÅÏÈ£¬È»ºóÊÇ½ğ¸ÕÉ°ÓÅÏÈ¡£Ò²¾Í¿Û³ı´ÎĞòÊÇ°ó¶¨½ğ¸ÕÉ°£¬°ó¶¨½ğ¸Õï±£¬½ğ¸ÕÉ°£¬½ğ¸Õï±
-	--ÕÒ°ó¶¨½ğ¸ÕÉ°
+	--æ‰£é™¤è§„åˆ™æ˜¯ï¼šç»‘å®šä¼˜å…ˆï¼Œç„¶åæ˜¯é‡‘åˆšç ‚ä¼˜å…ˆã€‚ä¹Ÿå°±æ‰£é™¤æ¬¡åºæ˜¯ç»‘å®šé‡‘åˆšç ‚ï¼Œç»‘å®šé‡‘åˆšé”‰ï¼Œé‡‘åˆšç ‚ï¼Œé‡‘åˆšé”‰
+	--æ‰¾ç»‘å®šé‡‘åˆšç ‚
 	local ShaPos = GetBagPosByItemSnAvailableBind(sceneId, selfId, 30008034, tonumber(1) )
 	
 	local needBind = 0
@@ -212,7 +212,7 @@ function x809261_FinishReAdjust( sceneId, selfId, nEquItemIndex )
 	end
 	
 	local ShaPos2 = -1
-	if ShaPos == -1 then --ÕÒ°ó¶¨½ğ¸Õï±
+	if ShaPos == -1 then --æ‰¾ç»‘å®šé‡‘åˆšé”‰
 		ShaPos2 = GetBagPosByItemSnAvailableBind(sceneId, selfId, 30008048, tonumber(1))
 	end
 	
@@ -222,23 +222,23 @@ function x809261_FinishReAdjust( sceneId, selfId, nEquItemIndex )
 		end
 	end
 	
-	if ShaPos == -1 and ShaPos2 == -1 then --ÕÒ½ğ¸ÕÉ°
+	if ShaPos == -1 and ShaPos2 == -1 then --æ‰¾é‡‘åˆšç ‚
 		ShaPos = GetBagPosByItemSnAvailableBind(sceneId, selfId, 30008034, tonumber(0))
 	end
 	
-	if ShaPos == -1 and ShaPos2 == -1 then --ÕÒ½ğ¸Õï±
+	if ShaPos == -1 and ShaPos2 == -1 then --æ‰¾é‡‘åˆšé”‰
 		ShaPos2 = GetBagPosByItemSnAvailableBind(sceneId, selfId, 30008048, tonumber(0))
 	end
 
 	local ShaInfo = 0
-	-- ¿Û½ğ¸ÕÉ°»ò½ğ¸Õï±....
+	-- æ‰£é‡‘åˆšç ‚æˆ–é‡‘åˆšé”‰....
 	if ShaPos ~= -1 then
 		ShaInfo = GetBagItemTransfer( sceneId, selfId, ShaPos )
 	
 		ret = LuaFnEraseItem(sceneId, selfId, ShaPos)
 		if ret ~= 1 then
 			BeginEvent(sceneId)
-				AddText(sceneId,"½ğ¸ÕÉ°²»¿ÉÓÃ¡£");
+				AddText(sceneId,"é‡‘åˆšç ‚ä¸å¯ç”¨ã€‚");
 			EndEvent(sceneId)
 			DispatchMissionTips(sceneId,selfId)
 			return
@@ -249,30 +249,30 @@ function x809261_FinishReAdjust( sceneId, selfId, nEquItemIndex )
 		local r, t = LuaFnEraseItemTimes( sceneId, selfId, ShaPos2, 11 )
 
 			BeginEvent(sceneId)
-			local	szMsg				= format( "½ğ¸Õï±Ê£ÓàÊ¹ÓÃ´ÎÊı%d/%d", tonumber(t), tonumber(11) );
+			local	szMsg				= format( "é‡‘åˆšé”‰å‰©ä½™ä½¿ç”¨æ¬¡æ•°%d/%d", tonumber(t), tonumber(11) );
 			AddText(sceneId,szMsg);
 			EndEvent(sceneId)
 			DispatchMissionTips(sceneId,selfId)
 	end
 	
-	-- ÖØĞÂ¼ø¶¨×°±¸×ÊÖÊ....
+	-- é‡æ–°é‰´å®šè£…å¤‡èµ„è´¨....
 	
 	ret = LuaFnReSetItemApt( sceneId, selfId, nEquItemIndex )
 	if ret == 1 then
 
-		-- ¿ÛÇ®....
+		-- æ‰£é’±....
 		LuaFnCostMoneyWithPriority( sceneId, selfId, need_money ) --zchw
 
-		-- ¼Ó¼ø¶¨³É¹¦ÌØĞ§....
+		-- åŠ é‰´å®šæˆåŠŸç‰¹æ•ˆ....
 		LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, 49, 0);
 		
-		--°ó¶¨
+		--ç»‘å®š
 		if needBind == 1 then
 			LuaFnItemBind( sceneId, selfId, nEquItemIndex )
 		end
 
 		BeginEvent(sceneId)
-			AddText(sceneId,"×°±¸×ÊÖÊÖØĞÂ¼ø¶¨³É¹¦");
+			AddText(sceneId,"è£…å¤‡èµ„è´¨é‡æ–°é‰´å®šæˆåŠŸ");
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
@@ -280,23 +280,23 @@ function x809261_FinishReAdjust( sceneId, selfId, nEquItemIndex )
 	elseif ret == 2 or ret == 3 then -- zchw for notice
 		
 		-- [ QUFEI 2007-09-17 17:22 UPDATE BugID 25245 ]
-		-- ¿ÛÇ®....
+		-- æ‰£é’±....
 		LuaFnCostMoneyWithPriority( sceneId, selfId, need_money ) --zchw
 
-		-- ¼Ó¼ø¶¨³É¹¦ÌØĞ§....
+		-- åŠ é‰´å®šæˆåŠŸç‰¹æ•ˆ....
 		LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, 49, 0);
 		
-		--°ó¶¨
+		--ç»‘å®š
 		if needBind == 1 then
 			LuaFnItemBind( sceneId, selfId, nEquItemIndex )
 		end
 
 		BeginEvent(sceneId)
-			AddText(sceneId,"×°±¸×ÊÖÊÖØĞÂ¼ø¶¨³É¹¦");
+			AddText(sceneId,"è£…å¤‡èµ„è´¨é‡æ–°é‰´å®šæˆåŠŸ");
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 
-		--·¢¹«¸æ....
+		--å‘å…¬å‘Š....
 		x809261_ReAdjustNotify( sceneId, selfId, ret, ShaPos, ShaPos2, ShaInfo, nEquItemIndex )
 
 		return
@@ -304,7 +304,7 @@ function x809261_FinishReAdjust( sceneId, selfId, nEquItemIndex )
 	else
 	
 		BeginEvent(sceneId)
-		AddText(sceneId,"Î´Öª´íÎó¡£");
+		AddText(sceneId,"æœªçŸ¥é”™è¯¯ã€‚");
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
@@ -315,7 +315,7 @@ end
 
 
 --**********************************
---ÖØĞÂ¼ø¶¨×°±¸×ÊÖÊ¹«¸æ
+--é‡æ–°é‰´å®šè£…å¤‡èµ„è´¨å…¬å‘Š
 --**********************************
 function x809261_ReAdjustNotify( sceneId, selfId, ret, ShaPos, ShaPos2, ShaInfo, nEquItemIndex )
 
@@ -324,9 +324,9 @@ function x809261_ReAdjustNotify( sceneId, selfId, ret, ShaPos, ShaPos2, ShaInfo,
 	local strText
 	local nEquipID = LuaFnGetItemTableIndexByIndex( sceneId, selfId, nEquItemIndex )
 
-	--Ö»ÓĞÌØ¶¨¼¸ÀàµÄ×°±¸Ï´³öÁË250ÒÔÉÏµÄ×ÊÖÊÊ±....ÔÊĞí·¢Ï´³ö³¬¼¶×°±¸µÄ¹«¸æ....
-	--1Ã±×Ó 2ÒÂ·ş 3ÊÖÌ× 4Ğ¬ 15»¤¼ç
-	-- Ìí¼Ó 0ÎäÆ÷¡¢6£¬11½äÖ¸£¨2¸ö£©¡¢12,13»¤·û£¨2¸ö£©
+	--åªæœ‰ç‰¹å®šå‡ ç±»çš„è£…å¤‡æ´—å‡ºäº†250ä»¥ä¸Šçš„èµ„è´¨æ—¶....å…è®¸å‘æ´—å‡ºè¶…çº§è£…å¤‡çš„å…¬å‘Š....
+	--1å¸½å­ 2è¡£æœ 3æ‰‹å¥— 4é‹ 15æŠ¤è‚©
+	-- æ·»åŠ  0æ­¦å™¨ã€6ï¼Œ11æˆ’æŒ‡ï¼ˆ2ä¸ªï¼‰ã€12,13æŠ¤ç¬¦ï¼ˆ2ä¸ªï¼‰
 	if ret == 3 then
 		local EquipPoint = GetItemEquipPoint( nEquipID )
 		if EquipPoint~= 1 and EquipPoint~= 2 and EquipPoint~= 3 and EquipPoint~= 4 and EquipPoint~= 15  and EquipPoint ~= 0 and EquipPoint ~= 6 and EquipPoint ~= 11 and EquipPoint ~= 12 and EquipPoint ~= 13 and EquipPoint ~= 17 then
@@ -335,21 +335,21 @@ function x809261_ReAdjustNotify( sceneId, selfId, ret, ShaPos, ShaPos2, ShaInfo,
 	end
 
 
-	--Èç¹û×ÊÖÊÏ´µ½ÁË250ÒÔÉÏ¾Í»á·¢Ï´³ö³¬¼¶×°±¸µÄ¹«¸æ....
+	--å¦‚æœèµ„è´¨æ´—åˆ°äº†250ä»¥ä¸Šå°±ä¼šå‘æ´—å‡ºè¶…çº§è£…å¤‡çš„å…¬å‘Š....
 	if ret == 3 then
 
 		if ShaPos ~= -1 then
 			strText = format("#W#{_INFOUSR%s}#{AQ_16}#{_INFOMSG%s}#{AQ_17}#{_INFOMSG%s}#{AQ_18}", Name, ShaInfo, itemInfo);
 			BroadMsgByChatPipe(sceneId,selfId, strText, 4)
 		elseif ShaPos2 ~= -1 then
-			strText = format("#W#{AQ_28}#{_INFOUSR%s}#HÓÃ#{_INFOMSG%s}#{AQ_29}#{_INFOMSG%s}#{AQ_30}", Name, ShaInfo, itemInfo);
+			strText = format("#W#{AQ_28}#{_INFOUSR%s}#Hç”¨#{_INFOMSG%s}#{AQ_29}#{_INFOMSG%s}#{AQ_30}", Name, ShaInfo, itemInfo);
 			BroadMsgByChatPipe(sceneId,selfId, strText, 4)
 		end
 
 	end
 
 
-	--Èç¹û×ÊÖÊÃ»ÓĞÏ´µ½ÁË250ÒÔÉÏ....µ«Ò²ÒÑ¾­´ïµ½ÓÅĞã....¾Í»á·¢Ï´³öÆÕÍ¨×°±¸µÄ¹«¸æ....
+	--å¦‚æœèµ„è´¨æ²¡æœ‰æ´—åˆ°äº†250ä»¥ä¸Š....ä½†ä¹Ÿå·²ç»è¾¾åˆ°ä¼˜ç§€....å°±ä¼šå‘æ´—å‡ºæ™®é€šè£…å¤‡çš„å…¬å‘Š....
 	if ret == 2 then
 
 		if ShaPos ~= -1 then
@@ -371,7 +371,7 @@ function x809261_ReAdjustNotify( sceneId, selfId, ret, ShaPos, ShaPos2, ShaInfo,
 			elseif rand == 2 then
 				strText = format("#W#{_INFOUSR%s}#{AQ_22}#{_INFOMSG%s}#{AQ_23}#{_INFOMSG%s}#{AQ_24}", Name, ShaInfo, itemInfo )
 			elseif rand == 3 then
-				strText = format("#W#{AQ_25}#{_INFOUSR%s}#{AQ_26}#{_INFOMSG%s}#{AQ_27}#{_INFOMSG%s}¡£", Name, ShaInfo, itemInfo )
+				strText = format("#W#{AQ_25}#{_INFOUSR%s}#{AQ_26}#{_INFOMSG%s}#{AQ_27}#{_INFOMSG%s}ã€‚", Name, ShaInfo, itemInfo )
 			end
 			BroadMsgByChatPipe(sceneId,selfId, strText, 4)
 		end

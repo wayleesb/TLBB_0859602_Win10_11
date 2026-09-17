@@ -4,9 +4,9 @@ function x300019_OnDefaultEvent( sceneId, selfId, BagIndex )
 	local  PlayerName=GetName(sceneId,selfId)	
 	local  PlayerSex=GetSex(sceneId,selfId)
 	if PlayerSex == 0 then
-		PlayerSex = "√√√√"
+		PlayerSex = "Â¶πÂ¶π"
 	else
-		PlayerSex = "–÷µ‹"
+		PlayerSex = "ÂÖÑÂºü"
 	end
 	BeginEvent(sceneId)
 			AddText(sceneId,"#{obj_item_0001}"..PlayerName..PlayerSex.."#{obj_item_0002}");

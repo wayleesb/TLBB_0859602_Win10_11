@@ -1,16 +1,16 @@
 -- 402041
--- Í¯êÛ
---Õäçç¸±±¾ÈÎÎñnpc
+-- ç«¥è´³
+--çç‘å‰¯æœ¬ä»»åŠ¡npc
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x402041_g_scriptId = 402041
 
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x402041_g_eventList={}
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x402041_UpdateEventList( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
@@ -20,11 +20,11 @@ function x402041_UpdateEventList( sceneId, selfId,targetId )
 		local nSceneId = LuaFnGetCopySceneData_Param(sceneId, 3)
 	
 		if nSceneId == 0  then
-			AddNumText( sceneId, x402041_g_scriptId, "ËÍÎÒ»ØÂåÑô", 9, 10 )
+			AddNumText( sceneId, x402041_g_scriptId, "é€æˆ‘å›æ´›é˜³", 9, 10 )
 		elseif nSceneId == 1  then
-			AddNumText( sceneId, x402041_g_scriptId, "ËÍÎÒ»ØËÕÖİ", 9, 11 )
+			AddNumText( sceneId, x402041_g_scriptId, "é€æˆ‘å›è‹å·", 9, 11 )
 		elseif nSceneId == 2  then
-			AddNumText( sceneId, x402041_g_scriptId, "ËÍÎÒ»Ø´óÀí", 9, 12 )
+			AddNumText( sceneId, x402041_g_scriptId, "é€æˆ‘å›å¤§ç†", 9, 12 )
 		end
 		
 		for i, findId in x402041_g_eventList do
@@ -35,14 +35,14 @@ function x402041_UpdateEventList( sceneId, selfId,targetId )
 end
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x402041_OnDefaultEvent( sceneId, selfId,targetId )
 	x402041_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x402041_OnEventRequest( sceneId, selfId, targetId, eventId )
 	if GetNumText() == 10  then
@@ -70,7 +70,7 @@ function x402041_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x402041_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x402041_g_eventList do
@@ -82,10 +82,10 @@ function x402041_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x402041_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
-	--¾Ü¾øÖ®ºó£¬Òª·µ»ØNPCµÄÊÂ¼şÁĞ±í
+	--æ‹’ç»ä¹‹åï¼Œè¦è¿”å›NPCçš„äº‹ä»¶åˆ—è¡¨
 	for i, findId in x402041_g_eventList do
 		if missionScriptId == findId then
 			x402041_UpdateEventList( sceneId, selfId, targetId )
@@ -95,7 +95,7 @@ function x402041_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¼ÌĞø£¨ÒÑ¾­½ÓÁËÈÎÎñ£©
+--ç»§ç»­ï¼ˆå·²ç»æ¥äº†ä»»åŠ¡ï¼‰
 --**********************************
 function x402041_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x402041_g_eventList do
@@ -107,7 +107,7 @@ function x402041_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---Ìá½»ÒÑ×öÍêµÄÈÎÎñ
+--æäº¤å·²åšå®Œçš„ä»»åŠ¡
 --**********************************
 function x402041_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, selectRadioId )
 	for i, findId in x402041_g_eventList do
@@ -119,7 +119,7 @@ function x402041_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 end
 
 --**********************************
---ËÀÍöÊÂ¼ş
+--æ­»äº¡äº‹ä»¶
 --**********************************
 function x402041_OnDie( sceneId, selfId, killerId )
 end

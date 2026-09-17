@@ -1,5 +1,5 @@
--- Ìì¹¤¿ªÎïÁìÈ¡ÈËÃñ±Ò²ÄÁÏ
--- ´´½¨ÈË[ QUFEI 2007-09-21 15:07 UPDATE BugID 24677 ]
+-- å¤©å·¥å¼€ç‰©é¢†å–äººæ°‘å¸ææ–™
+-- åˆ›å»ºäºº[ QUFEI 2007-09-21 15:07 UPDATE BugID 24677 ]
 
 x210244_g_ScriptId = 210244
 
@@ -11,16 +11,16 @@ x210244_g_Update = {
 
 }
 
---ÌáÊ¾ÐÅÏ¢
+--æç¤ºä¿¡æ¯
 x210244_g_msg = {
 
-    ["jl60"]	= "ÁìÈ¡60¼¶½±Àø",
-    ["jl70"]	= "ÁìÈ¡70¼¶½±Àø",
-    ["jl80"]	= "ÁìÈ¡80¼¶½±Àø",
+    ["jl60"]	= "é¢†å–60çº§å¥–åŠ±",
+    ["jl70"]	= "é¢†å–70çº§å¥–åŠ±",
+    ["jl80"]	= "é¢†å–80çº§å¥–åŠ±",
 
 }
 
---½±Àø±ê¼Ç
+--å¥–åŠ±æ ‡è®°
 x210244_g_flag = {
 
     [60]	= MF_TianGongJiangli60,
@@ -29,10 +29,10 @@ x210244_g_flag = {
 
 }
 
---²ÄÁÏ½±Àø
--- 60 ÃÞ²¼ËéÆ¬
--- 70 ¾«ÌúËéÆ¬
--- 80 ÃØÒøËéÆ¬
+--ææ–™å¥–åŠ±
+-- 60 æ£‰å¸ƒç¢Žç‰‡
+-- 70 ç²¾é“ç¢Žç‰‡
+-- 80 ç§˜é“¶ç¢Žç‰‡
 x210244_g_CaiLiaoJiangLi = {
 
     [60]	= 20501000,
@@ -44,11 +44,11 @@ x210244_g_CaiLiaoJiangLi = {
 x210244_g_PlayerLevel = 0
 
 --**********************************
---ÁÐ¾ÙÊÂ¼þ
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x210244_OnEnumerate( sceneId, selfId, targetId )	
 		
---	BeginEvent(sceneId)					¾¯¸æ£ºÕâ¸öº¯ÊýÖÐ²»Òª³öÏÖBeginEventÌ×¼þ »áÇå¿ÕÖ®Ç°µÄAddNumTextÐÅÏ¢ 
+--	BeginEvent(sceneId)					è­¦å‘Šï¼šè¿™ä¸ªå‡½æ•°ä¸­ä¸è¦å‡ºçŽ°BeginEventå¥—ä»¶ ä¼šæ¸…ç©ºä¹‹å‰çš„AddNumTextä¿¡æ¯ 
 	
 		if GetLevel( sceneId, selfId ) >= 60 then
 			AddNumText( sceneId, x210244_g_ScriptId, "#{TGKW_20070918_003}", 6, 105 )
@@ -94,7 +94,7 @@ function x210244_OnTianGongKaiWu( sceneId, selfId, targetId )
 	local mylevel = GetLevel( sceneId, selfId )
 		
 	if mylevel < x210244_g_PlayerLevel then
-		local strText = format("ÄúµÄµÈ¼¶²»¹»£¬´ýµÈ¼¶´ïµ½%d¼¶ÔÙÀ´ÕÒÎÒ°É¡£", x210244_g_PlayerLevel )
+		local strText = format("æ‚¨çš„ç­‰çº§ä¸å¤Ÿï¼Œå¾…ç­‰çº§è¾¾åˆ°%dçº§å†æ¥æ‰¾æˆ‘å§ã€‚", x210244_g_PlayerLevel )
 		x210244_TalkMsg( sceneId, selfId, targetId, strText )	
 		return
 	end
@@ -102,7 +102,7 @@ function x210244_OnTianGongKaiWu( sceneId, selfId, targetId )
 	local index =	GetMissionFlag( sceneId, selfId, x210244_g_flag[x210244_g_PlayerLevel] )
 		
 	if index == 1 then
-		x210244_TalkMsg( sceneId, selfId, targetId, "ÄúÒÑ¾­ÁìÈ¡¹ý¸ÃÏî½±Àø£¬²»ÄÜÔÙÁìÁË¡£" )	
+		x210244_TalkMsg( sceneId, selfId, targetId, "æ‚¨å·²ç»é¢†å–è¿‡è¯¥é¡¹å¥–åŠ±ï¼Œä¸èƒ½å†é¢†äº†ã€‚" )	
 		return
 	end
 	
@@ -111,26 +111,26 @@ function x210244_OnTianGongKaiWu( sceneId, selfId, targetId )
 	ret = EndAddItem( sceneId, selfId )
 			
 	if ret <= 0 then
-		x210244_TalkMsg( sceneId, selfId, targetId, "ÄúµÄ²ÄÁÏÀ¸¿ÕÎ»²»¹»£¬ÖÁÉÙÐèÒª4¸ö¿ÕÎ»£¬²»ÄÜÁìÈ¡½±Àø¡£" )	
+		x210244_TalkMsg( sceneId, selfId, targetId, "æ‚¨çš„ææ–™æ ç©ºä½ä¸å¤Ÿï¼Œè‡³å°‘éœ€è¦4ä¸ªç©ºä½ï¼Œä¸èƒ½é¢†å–å¥–åŠ±ã€‚" )	
 		return
 	end
 	
-	-- ½±Àø²ÄÁÏ	
-	local bagpos01 = TryRecieveItem( sceneId, selfId, x210244_g_CaiLiaoJiangLi[x210244_g_PlayerLevel], QUALITY_MUST_BE_CHANGE )	-- ·Å²»ÏÂ¾ÍÃ»ÓÐÁË
-	local bagpos02 = TryRecieveItem( sceneId, selfId, x210244_g_CaiLiaoJiangLi[x210244_g_PlayerLevel], QUALITY_MUST_BE_CHANGE )	-- ·Å²»ÏÂ¾ÍÃ»ÓÐÁË
-	local bagpos03 = TryRecieveItem( sceneId, selfId, x210244_g_CaiLiaoJiangLi[x210244_g_PlayerLevel], QUALITY_MUST_BE_CHANGE )	-- ·Å²»ÏÂ¾ÍÃ»ÓÐÁË
-	local bagpos04 = TryRecieveItem( sceneId, selfId, x210244_g_CaiLiaoJiangLi[x210244_g_PlayerLevel], QUALITY_MUST_BE_CHANGE )	-- ·Å²»ÏÂ¾ÍÃ»ÓÐÁË
+	-- å¥–åŠ±ææ–™	
+	local bagpos01 = TryRecieveItem( sceneId, selfId, x210244_g_CaiLiaoJiangLi[x210244_g_PlayerLevel], QUALITY_MUST_BE_CHANGE )	-- æ”¾ä¸ä¸‹å°±æ²¡æœ‰äº†
+	local bagpos02 = TryRecieveItem( sceneId, selfId, x210244_g_CaiLiaoJiangLi[x210244_g_PlayerLevel], QUALITY_MUST_BE_CHANGE )	-- æ”¾ä¸ä¸‹å°±æ²¡æœ‰äº†
+	local bagpos03 = TryRecieveItem( sceneId, selfId, x210244_g_CaiLiaoJiangLi[x210244_g_PlayerLevel], QUALITY_MUST_BE_CHANGE )	-- æ”¾ä¸ä¸‹å°±æ²¡æœ‰äº†
+	local bagpos04 = TryRecieveItem( sceneId, selfId, x210244_g_CaiLiaoJiangLi[x210244_g_PlayerLevel], QUALITY_MUST_BE_CHANGE )	-- æ”¾ä¸ä¸‹å°±æ²¡æœ‰äº†
 	
 	local itemInfo = GetBagItemTransfer( sceneId, selfId, bagpos01 )
 		
-	-- Ç¿ÖÆ°ó¶¨										
+	-- å¼ºåˆ¶ç»‘å®š										
 	local	bindidx01	=	LuaFnItemBind( sceneId, selfId, bagpos01 )
 	local	bindidx02	=	LuaFnItemBind( sceneId, selfId, bagpos02 )
 	local	bindidx03	=	LuaFnItemBind( sceneId, selfId, bagpos03 )
 	local	bindidx04	=	LuaFnItemBind( sceneId, selfId, bagpos04 )
 	
 	if bindidx01 ~= 1 or bindidx02 ~= 1 or bindidx03 ~= 1 or bindidx04 ~= 1 then
-		local bindmsg = "°ó¶¨Ê§°Ü"													
+		local bindmsg = "ç»‘å®šå¤±è´¥"													
 		BeginEvent( sceneId )
 			AddText( sceneId, bindmsg )
 		EndEvent( sceneId )
@@ -141,18 +141,18 @@ function x210244_OnTianGongKaiWu( sceneId, selfId, targetId )
 	SetMissionFlag( sceneId, selfId, x210244_g_flag[x210244_g_PlayerLevel], 1 )
 	
 	LuaFnSendSpecificImpactToUnit(sceneId,selfId,selfId,selfId,18,1000)
-	local retmsg = format("%sÎïÆ·ÁìÈ¡³É¹¦", GetItemName(sceneId,x210244_g_CaiLiaoJiangLi[x210244_g_PlayerLevel]) )
+	local retmsg = format("%sç‰©å“é¢†å–æˆåŠŸ", GetItemName(sceneId,x210244_g_CaiLiaoJiangLi[x210244_g_PlayerLevel]) )
 	x210244_TalkMsg( sceneId, selfId, targetId, retmsg )	
 	
-	-- ·¢ËÍÏµÍ³¹«¸æ										
+	-- å‘é€ç³»ç»Ÿå…¬å‘Š										
 	local playername = GetName(sceneId, selfId)
-	local strText = format("#{_INFOUSR%s}#I#{TGKW_20070918_005}#Y%d#{TGKW_20070918_006}#{_INFOMSG%s}#G4¸ö¡£", playername, x210244_g_PlayerLevel, itemInfo)										
+	local strText = format("#{_INFOUSR%s}#I#{TGKW_20070918_005}#Y%d#{TGKW_20070918_006}#{_INFOMSG%s}#G4ä¸ªã€‚", playername, x210244_g_PlayerLevel, itemInfo)										
 	BroadMsgByChatPipe(sceneId, selfId, strText, 4)
 
 end
 
 --**********************************
---ÏûÏ¢ÌáÊ¾
+--æ¶ˆæ¯æç¤º
 --**********************************
 function x210244_MsgBox( sceneId, selfId, str )	
 	BeginEvent( sceneId )
@@ -162,7 +162,7 @@ function x210244_MsgBox( sceneId, selfId, str )
 end
 
 --**********************************
---¶Ô»°ÌáÊ¾
+--å¯¹è¯æç¤º
 --**********************************
 function x210244_TalkMsg( sceneId, selfId, targetId, str )	
 	BeginEvent(sceneId)

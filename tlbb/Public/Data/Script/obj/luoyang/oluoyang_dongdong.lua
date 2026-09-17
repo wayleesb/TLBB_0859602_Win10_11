@@ -1,13 +1,13 @@
--- ÂåÑôNPC
--- ¶¬¶¬
--- ÆÕÍ¨
+-- æ´›é˜³NPC
+-- å†¬å†¬
+-- æ™®é€š
 
 x000142_g_ScriptId = 000142
 
 x000142_g_eventList = { 800116 }
 
 --**********************************
--- ÊÂ¼ş½»»¥Èë¿Ú
+-- äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x000142_OnDefaultEvent( sceneId, selfId, targetId )
 	BeginEvent( sceneId )
@@ -22,7 +22,7 @@ function x000142_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x000142_OnEventRequest( sceneId, selfId, targetId, eventId )
 

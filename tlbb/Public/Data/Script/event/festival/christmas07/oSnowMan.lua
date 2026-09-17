@@ -1,8 +1,8 @@
---07Ê¥µ®Ôªµ©
---Ê¥µ®ÊØÒ¹»î¶¯
---Ñ©ÈËNPC½Å±¾....
+--07åœ£è¯å…ƒæ—¦
+--åœ£è¯å®ˆå¤œæ´»åŠ¨
+--é›ªäººNPCè„šæœ¬....
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x050027_g_ScriptId = 050027
 
 x050027_g_GiftTbl = {
@@ -18,17 +18,17 @@ x050027_g_StartTime = 73100
 x050027_g_EndTime   = 73108
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x050027_OnDefaultEvent( sceneId, selfId,targetId )
 
 	BeginEvent(sceneId)
 		local NeedCount = CallScriptFunction( 050023, "GetNeedBallCount", sceneId )
 		if NeedCount > 0 then
-			AddText(sceneId,"    ´ó¼Ò¼ÓÓÍ°¡£¬»¹²î#Y"..NeedCount.."#W¸öÑ©Çò¶Ñµ½ÎÒÉíÉÏÎÒ¾Í¿ÉÒÔ³¤´óÁË£¡")
+			AddText(sceneId,"    å¤§å®¶åŠ æ²¹å•Šï¼Œè¿˜å·®#Y"..NeedCount.."#Wä¸ªé›ªçƒå †åˆ°æˆ‘èº«ä¸Šæˆ‘å°±å¯ä»¥é•¿å¤§äº†ï¼")
 		end
 		AddText(sceneId,"#{SDSY_20071206_01}")
-		AddNumText(sceneId,x050027_g_ScriptId,"ÁìÈ¡Ê¥µ®ÊØÒ¹ÀñÎï",6,0)
+		AddNumText(sceneId,x050027_g_ScriptId,"é¢†å–åœ£è¯å®ˆå¤œç¤¼ç‰©",6,0)
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 
@@ -36,10 +36,10 @@ end
 
 function x050027_OnEventRequest( sceneId, selfId, targetId, eventId )
 
-	-- 12ÔÂ24ÈÕ24Ê±µ½12ÔÂ25ÈÕ2Ê±
+	-- 12æœˆ24æ—¥24æ—¶åˆ°12æœˆ25æ—¥2æ—¶
 	local curTimeDay = GetTime2Day();
 	local curTimeHour = GetHour();
-	--Ê±¼äÃ»µ½....
+	--æ—¶é—´æ²¡åˆ°....
 	if curTimeDay < 20081225 then
 		BeginEvent(sceneId)
 			AddText(sceneId,"#{SDSY_20071206_02}")
@@ -48,7 +48,7 @@ function x050027_OnEventRequest( sceneId, selfId, targetId, eventId )
 		return
 	end
 
-	--ÊÇ·ñÁì¹ıÁË....
+	--æ˜¯å¦é¢†è¿‡äº†....
 	local flag = GetMissionFlag(sceneId, selfId, MF_CHRISTMAS08_GIFT)
 	if flag ~= 0 then
 		BeginEvent(sceneId)
@@ -58,7 +58,7 @@ function x050027_OnEventRequest( sceneId, selfId, targetId, eventId )
 		return
 	end
 
-	--Ê±¼ä¹ıÁË....
+	--æ—¶é—´è¿‡äº†....
 	if curTimeDay > 20081225 or (curTimeDay == 20081225 and curTimeHour > 1) then
 		BeginEvent(sceneId)
 			AddText(sceneId,"#{SDSY_20071206_04}")
@@ -67,7 +67,7 @@ function x050027_OnEventRequest( sceneId, selfId, targetId, eventId )
 		return
 	end
 
-	--¼ì²â±³°üÊÇ·ñÓĞµØ·½....
+	--æ£€æµ‹èƒŒåŒ…æ˜¯å¦æœ‰åœ°æ–¹....
 	if LuaFnGetPropertyBagSpace( sceneId, selfId ) < 1 then
 		BeginEvent(sceneId)
 			AddText(sceneId,"#{SDSY_20071206_05}")
@@ -76,14 +76,14 @@ function x050027_OnEventRequest( sceneId, selfId, targetId, eventId )
 		return
 	end
 
-	--¸ø¶«Î÷....
+	--ç»™ä¸œè¥¿....
 	local rand = random( getn(x050027_g_GiftTbl) )
 	TryRecieveItem( sceneId, selfId, x050027_g_GiftTbl[rand], QUALITY_MUST_BE_CHANGE )
 
-	--·¢ÓÊ¼ş....
+	--å‘é‚®ä»¶....
 	LuaFnSendSystemMail(sceneId, GetName(sceneId, selfId), "#{SDSY_20071206_06}")
 
-	--¼ÇÂ¼ËûÒÑ¾­Áì¹ıÁË....
+	--è®°å½•ä»–å·²ç»é¢†è¿‡äº†....
 	SetMissionFlag(sceneId, selfId, MF_CHRISTMAS08_GIFT, 1)
 
 	BeginUICommand(sceneId)

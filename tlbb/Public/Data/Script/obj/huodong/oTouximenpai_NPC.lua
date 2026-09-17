@@ -1,21 +1,21 @@
---Ì«ºşNPC
---Ôì·´¶ñÔô
---ÆÕÍ¨
+--å¤ªæ¹–NPC
+--é€ åæ¶è´¼
+--æ™®é€š
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x808017_g_ScriptId	= 808017
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x808017_g_EventList	= { 808016,808027,808028,808029,808030,808031,808032,808033,808034 }
 
---³¡¾°idµ½ÊÂ¼ş½Å±¾ºÅµÄÓ³Éä±í
+--åœºæ™¯idåˆ°äº‹ä»¶è„šæœ¬å·çš„æ˜ å°„è¡¨
 x808017_g_Scene2EventList = {{9,808027}, {16,808028}, {13,808029}, {17,808030},{11,808031},{10,808032},{12,808033},{15,808034},{14,808016}}
 
---½ÓÈ¡ÈÎÎñµÄ×îµÍµÈ¼¶
+--æ¥å–ä»»åŠ¡çš„æœ€ä½ç­‰çº§
 x808017_g_minLevel			= 20
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x808017_UpdateEventList( sceneId, selfId, targetId )
 		for _,FindsceneId in x808017_g_Scene2EventList do
@@ -26,14 +26,14 @@ function x808017_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x808017_OnDefaultEvent( sceneId, selfId, targetId )
 	x808017_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x808017_OnEventRequest( sceneId, selfId, targetId, eventId )
 
@@ -47,7 +47,7 @@ function x808017_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x808017_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 
@@ -61,11 +61,11 @@ function x808017_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x808017_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 
-	--¾Ü¾øÖ®ºó£¬Òª·µ»ØNPCµÄÊÂ¼şÁĞ±í
+	--æ‹’ç»ä¹‹åï¼Œè¦è¿”å›NPCçš„äº‹ä»¶åˆ—è¡¨
 	for i, findId in x808017_g_EventList do
 		if missionScriptId == findId then
 			x808017_UpdateEventList( sceneId, selfId, targetId )
@@ -76,7 +76,7 @@ function x808017_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¼ÌĞø£¨ÒÑ¾­½ÓÁËÈÎÎñ£©
+--ç»§ç»­ï¼ˆå·²ç»æ¥äº†ä»»åŠ¡ï¼‰
 --**********************************
 function x808017_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 
@@ -90,7 +90,7 @@ function x808017_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---Ìá½»ÒÑ×öÍêµÄÈÎÎñ
+--æäº¤å·²åšå®Œçš„ä»»åŠ¡
 --**********************************
 function x808017_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, selectRadioId )
 
@@ -104,7 +104,7 @@ function x808017_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 end
 
 --**********************************
---ËÀÍöÊÂ¼ş
+--æ­»äº¡äº‹ä»¶
 --**********************************
 function x808017_OnDie( sceneId, selfId, killerId )
 end

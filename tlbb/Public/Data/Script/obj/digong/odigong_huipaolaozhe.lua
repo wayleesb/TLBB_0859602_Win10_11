@@ -2,7 +2,7 @@ x044603_g_ScriptId = 044603
 
 
 --**********************************
---事件交互入口
+--浜嬩欢浜や簰鍏ュ彛
 --**********************************
 function x044603_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent(sceneId)

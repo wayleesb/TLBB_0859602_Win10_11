@@ -1,38 +1,38 @@
---¾­Ñé·ÖÅä
+--ç»éªŒåˆ†é…
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x806018_g_ScriptId					= 806018
 
---Ã¿Ìì¿ÉÒÔÄÃ°ï¹±¶Ò»»µÄ¾­Ñé×î¶àÎª200*600=12Íòµã
+--æ¯å¤©å¯ä»¥æ‹¿å¸®è´¡å…‘æ¢çš„ç»éªŒæœ€å¤šä¸º200*600=12ä¸‡ç‚¹
 x806018_g_AssignExpDateMax	= 120000
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x806018_OnDefaultEvent( sceneId, selfId, targetId )
 
 	local	nMlevel	= LuaFnGetmasterLevel( sceneId, selfId )
 	if nMlevel < 1 or nMlevel > 4 then
-		x806018_MsgBox( sceneId, selfId, targetId, "  Ê¦µÂµÈ¼¶´íÎó¡£" )
+		x806018_MsgBox( sceneId, selfId, targetId, "  å¸ˆå¾·ç­‰çº§é”™è¯¯ã€‚" )
 		return
 	end
 	if LuaGetPrenticeSupplyExp( sceneId, selfId ) == 0 then
-		x806018_MsgBox( sceneId, selfId, targetId, "  Ã»ÓĞ¿ÉÒÔÁìÈ¡µÄ¾­Ñé¡£" )
+		x806018_MsgBox( sceneId, selfId, targetId, "  æ²¡æœ‰å¯ä»¥é¢†å–çš„ç»éªŒã€‚" )
 		return
 	end
 	
-	--ÁìÈ¡ÉÏÏŞ
+	--é¢†å–ä¸Šé™
 	local	nOldTime		= GetMissionData( sceneId, selfId, MD_PEXP_GP_TIME )
 	local	nOldValue		= GetMissionData( sceneId, selfId, MD_PEXP_GP_VALUE )
 	local	nNewTime		= GetDayTime()
 	if nOldTime == nNewTime and nOldValue >= x806018_g_AssignExpDateMax then
-		x806018_MsgBox( sceneId, selfId, targetId, "  Äúµ±ÌìÓÃ°ïÅÉ¹±Ï×¶È¶Ò»»µÄ¾­ÑéÒÑ´ïÉÏÏŞ£¬ÇëÃ÷ÌìÔÙÀ´ÁìÈ¡¡£" )
+		x806018_MsgBox( sceneId, selfId, targetId, "  æ‚¨å½“å¤©ç”¨å¸®æ´¾è´¡çŒ®åº¦å…‘æ¢çš„ç»éªŒå·²è¾¾ä¸Šé™ï¼Œè¯·æ˜å¤©å†æ¥é¢†å–ã€‚" )
 		return
 	end
 	
-	--´ò¿ª¿Í»§¶Ë°ïÅÉ¹±Ï×¶È¶Ò»»¾­Ñé´°¿Ú
+	--æ‰“å¼€å®¢æˆ·ç«¯å¸®æ´¾è´¡çŒ®åº¦å…‘æ¢ç»éªŒçª—å£
 	LuaFnExpAssign( sceneId, selfId, 2 )
-	--¹Ø±Õ´°¿Ú
+	--å…³é—­çª—å£
 	BeginUICommand( sceneId )
 	UICommand_AddInt( sceneId, targetId )
 	EndUICommand( sceneId )
@@ -41,21 +41,21 @@ function x806018_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x806018_OnEnumerate( sceneId, selfId, targetId )
 
-	AddNumText( sceneId, x806018_g_ScriptId, "ÎÒÏëÓÃ°ïÅÉ¹±Ï×¶ÈÁìÈ¡¾­Ñé", 6, -1 )
+	AddNumText( sceneId, x806018_g_ScriptId, "æˆ‘æƒ³ç”¨å¸®æ´¾è´¡çŒ®åº¦é¢†å–ç»éªŒ", 6, -1 )
 
 end
 
 --**********************************
---C++»Øµ÷½Ó¿Ú£º
---°ï»á¹±Ï×¶ÈÁìÈ¡Ê¦¸µ¾­Ñé
+--C++å›è°ƒæ¥å£ï¼š
+--å¸®ä¼šè´¡çŒ®åº¦é¢†å–å¸ˆå‚…ç»éªŒ
 --**********************************
 function x806018_CallBackExpAssignByGuildPoint( sceneId, selfId, nExp )
 
-	--ÊÇ·ñ´¦ÓÚÎŞ·¨Ö´ĞĞÂß¼­µÄ×´Ì¬
+	--æ˜¯å¦å¤„äºæ— æ³•æ‰§è¡Œé€»è¾‘çš„çŠ¶æ€
 	if LuaFnIsCanDoScriptLogic( sceneId, selfId ) ~= 1 then
 		return 0
 	end
@@ -63,24 +63,24 @@ function x806018_CallBackExpAssignByGuildPoint( sceneId, selfId, nExp )
 	local	nAssignExp	= nExp
 	local	nMlevel			= LuaFnGetmasterLevel( sceneId, selfId )
 	if nMlevel < 1 or nMlevel > 4 then
-		x806018_MsgTip( sceneId, selfId, "Ê¦µÂµÈ¼¶´íÎó" )
+		x806018_MsgTip( sceneId, selfId, "å¸ˆå¾·ç­‰çº§é”™è¯¯" )
 		return 0
 	end
 	if nAssignExp < 0 or nAssignExp > LuaGetPrenticeSupplyExp( sceneId, selfId ) then
-		x806018_MsgTip( sceneId, selfId, "ÁìÈ¡¾­ÑéÖµ´íÎó" )
+		x806018_MsgTip( sceneId, selfId, "é¢†å–ç»éªŒå€¼é”™è¯¯" )
 		return 0
 	end
 	if IsLocked( sceneId, selfId, 0 ) == 1 then
-		x806018_MsgTip( sceneId, selfId, "°ïÅÉ¹±Ï×¶ÈËø¶¨£¬ÇëÉÔºóÔÙÊÔ" )
+		x806018_MsgTip( sceneId, selfId, "å¸®æ´¾è´¡çŒ®åº¦é”å®šï¼Œè¯·ç¨åå†è¯•" )
 		return 0
 	end
 	
-	--ÁìÈ¡ÉÏÏŞ
+	--é¢†å–ä¸Šé™
 	local	nOldTime		= GetMissionData( sceneId, selfId, MD_PEXP_GP_TIME )
 	local	nOldValue		= GetMissionData( sceneId, selfId, MD_PEXP_GP_VALUE )
 	local	nNewTime		= GetDayTime()
 	if nOldTime == nNewTime and nOldValue >= x806018_g_AssignExpDateMax then
-		x806018_MsgTip( sceneId, selfId, "µ±ÈÕ¶Ò»»´ïÉÏÏŞ" )
+		x806018_MsgTip( sceneId, selfId, "å½“æ—¥å…‘æ¢è¾¾ä¸Šé™" )
 		return 0
 	end
 	if nOldTime ~= nNewTime then
@@ -88,7 +88,7 @@ function x806018_CallBackExpAssignByGuildPoint( sceneId, selfId, nExp )
 	end
 	if nAssignExp + nOldValue > x806018_g_AssignExpDateMax then
 		nAssignExp			= x806018_g_AssignExpDateMax - nOldValue
-		x806018_MsgTip( sceneId, selfId, "Ã¿ÈÕ¶Ò»»ÉÏÏŞÎª"..x806018_g_AssignExpDateMax.."µã¾­Ñé£¬Äú½öÊ£Óà"..nAssignExp.."µã" )
+		x806018_MsgTip( sceneId, selfId, "æ¯æ—¥å…‘æ¢ä¸Šé™ä¸º"..x806018_g_AssignExpDateMax.."ç‚¹ç»éªŒï¼Œæ‚¨ä»…å‰©ä½™"..nAssignExp.."ç‚¹" )
 	end
 	
 	local	nBasePoint	= 0
@@ -103,19 +103,19 @@ function x806018_CallBackExpAssignByGuildPoint( sceneId, selfId, nExp )
 	end
 	local	nGPValue		= ceil( nAssignExp / nBasePoint )
 	if nGPValue > CityGetAttr( sceneId, selfId, GUILD_CONTRIB_POINT ) then
-		x806018_MsgTip( sceneId, selfId, "°ïÅÉ¹±Ï×¶È²»×ã" )
+		x806018_MsgTip( sceneId, selfId, "å¸®æ´¾è´¡çŒ®åº¦ä¸è¶³" )
 		return 0
 	end
-	--¼õÉÙ°ïÅÉ¹±Ï×¶È
+	--å‡å°‘å¸®æ´¾è´¡çŒ®åº¦
 	CityChangeAttr( sceneId, selfId, GUILD_CONTRIB_POINT, -nGPValue )
-	--¼õÉÙÍ½µÜ¹±Ï×µÄ¾­Ñé
+	--å‡å°‘å¾’å¼Ÿè´¡çŒ®çš„ç»éªŒ
 	LuaAddPrenticeProExp( sceneId, selfId, 0, -nAssignExp )
-	--Ôö¼Ó¾­Ñé
+	--å¢åŠ ç»éªŒ
 	AddExp( sceneId, selfId, nAssignExp )
-	--Êı¾İÍ³¼Æ
+	--æ•°æ®ç»Ÿè®¡
 	LuaFnAuditMasterExp( sceneId, selfId, nGPValue, nAssignExp, 2 )
 
-	--ÁìÈ¡¼ÇÂ¼
+	--é¢†å–è®°å½•
 	if nOldTime ~= nNewTime then
 		SetMissionData( sceneId, selfId, MD_PEXP_GP_TIME, nNewTime )
 		SetMissionData( sceneId, selfId, MD_PEXP_GP_VALUE, nAssignExp )
@@ -126,7 +126,7 @@ function x806018_CallBackExpAssignByGuildPoint( sceneId, selfId, nExp )
 end
 
 --**********************************
---¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+--å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x806018_MsgBox( sceneId, selfId, targetId, str )
 
@@ -138,7 +138,7 @@ function x806018_MsgBox( sceneId, selfId, targetId, str )
 end
 
 --**********************************
---ĞÑÄ¿ÌáÊ¾
+--é†’ç›®æç¤º
 --**********************************
 function x806018_MsgTip( sceneId, selfId, str )
 

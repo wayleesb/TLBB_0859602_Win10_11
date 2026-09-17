@@ -1,24 +1,24 @@
---ÂåÑôNPC
---ÇÇ¸´Ê¢
---ÆÕÍ¨
+--æ´›é˜³NPC
+--ä¹”å¤ç››
+--æ™®é€š
 x000109_g_scriptId=000109
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x000109_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
-		AddText(sceneId,"  Ïë²»Ïë×Ô¼º¿ªµê×öÀÏ°å£¿ÎÒ¿ÉÒÔ½Ì¸øÄãÅ¶¡£")
-		AddNumText(sceneId,x000109_g_scriptId,"²é¿´ËùÓĞÉÌµê",6,2)
+		AddText(sceneId,"  æƒ³ä¸æƒ³è‡ªå·±å¼€åº—åšè€æ¿ï¼Ÿæˆ‘å¯ä»¥æ•™ç»™ä½ å“¦ã€‚")
+		AddNumText(sceneId,x000109_g_scriptId,"æŸ¥çœ‹æ‰€æœ‰å•†åº—",6,2)
 		if IsShutout( sceneId, selfId, ONOFF_T_PSHOP ) == 0 then
-			AddNumText(sceneId,x000109_g_scriptId,"½¨Á¢×Ô¼ºµÄÉÌµê",6,0)
+			AddNumText(sceneId,x000109_g_scriptId,"å»ºç«‹è‡ªå·±çš„å•†åº—",6,0)
 		else
-			AddNumText(sceneId,x000109_g_scriptId,"×¢ÏúÎÒµÄµêÆÌ",6,7)
+			AddNumText(sceneId,x000109_g_scriptId,"æ³¨é”€æˆ‘çš„åº—é“º",6,7)
 		end
-		AddNumText(sceneId,x000109_g_scriptId,"¹ÜÀí×Ô¼ºµÄÉÌµê",6,1)
-		AddNumText(sceneId,x000109_g_scriptId,"²é¿´Õı×¼±¸ÅÌ³öµÄµê",6,3)
-		AddNumText(sceneId,x000109_g_scriptId,"Íæ¼ÒÉÌµê½éÉÜ",11,6)
-		AddNumText(sceneId,x000109_g_scriptId,"¹ØÓÚÊÕ¹º²ÄÁÏ",11,10)
+		AddNumText(sceneId,x000109_g_scriptId,"ç®¡ç†è‡ªå·±çš„å•†åº—",6,1)
+		AddNumText(sceneId,x000109_g_scriptId,"æŸ¥çœ‹æ­£å‡†å¤‡ç›˜å‡ºçš„åº—",6,3)
+		AddNumText(sceneId,x000109_g_scriptId,"ç©å®¶å•†åº—ä»‹ç»",11,6)
+		AddNumText(sceneId,x000109_g_scriptId,"å…³äºæ”¶è´­ææ–™",11,10)
 
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
@@ -26,13 +26,13 @@ end
 
 --**********************************
 
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 
 --**********************************
 
 function x000109_OnEventRequest( sceneId, selfId, targetId, eventId )
 
---0.½¨Á¢×Ô¼ºµÄÉÌµê->ÏÔÊ¾½¨µêÌõ¿î->ÓÉ¿Í»§¶ËÇëÇó½¨µê
+--0.å»ºç«‹è‡ªå·±çš„å•†åº—->æ˜¾ç¤ºå»ºåº—æ¡æ¬¾->ç”±å®¢æˆ·ç«¯è¯·æ±‚å»ºåº—
 		if	GetNumText()==0	then
 
 			BeginEvent(sceneId)
@@ -44,18 +44,18 @@ function x000109_OnEventRequest( sceneId, selfId, targetId, eventId )
 			DispatchMissionDemandInfo(sceneId,selfId,targetId,x000109_g_scriptId,0,1)
 
 
-		--1.¹ÜÀí×Ô¼ºµêÆÌ
+		--1.ç®¡ç†è‡ªå·±åº—é“º
 		elseif	GetNumText()==1	then
 
-			--1.0Í¨¹ıµêÆÌÃûÀ´ÅĞ¶¨ÊÇ·ñ´ËµêÒÑ¾­´ò¿ª
+			--1.0é€šè¿‡åº—é“ºåæ¥åˆ¤å®šæ˜¯å¦æ­¤åº—å·²ç»æ‰“å¼€
 			strShop0Name = LuaFnGetShopName(sceneId, selfId, 0)
 			strShop1Name = LuaFnGetShopName(sceneId, selfId, 1)
 
-			--1.1Ã»µêÆÌÖ±½Ó·¢´íÎóÌáÊ¾
+			--1.1æ²¡åº—é“ºç›´æ¥å‘é”™è¯¯æç¤º
 			if((strShop0Name == "")and(strShop1Name == "")) then
 				BeginEvent(sceneId)
 
-					strText = "¶Ô²»Æğ£¬ÄãºÃÏó²¢Ã»ÓĞµêÆÌ¡£"
+					strText = "å¯¹ä¸èµ·ï¼Œä½ å¥½è±¡å¹¶æ²¡æœ‰åº—é“ºã€‚"
 
 					AddText(sceneId,strText);
 
@@ -63,61 +63,61 @@ function x000109_OnEventRequest( sceneId, selfId, targetId, eventId )
 
 				DispatchMissionTips(sceneId,selfId)
 
-			--1.2ÓĞµêÆÌ¸ù¾İ²»Í¬Çé¿ö²»Í¬´¦Àí
+			--1.2æœ‰åº—é“ºæ ¹æ®ä¸åŒæƒ…å†µä¸åŒå¤„ç†
 			else
-				--1.2.1ÓĞÁ½¸öµêÆÌ£¬µÈ´ı½øÒ»²½Ñ¡Ôñ
+				--1.2.1æœ‰ä¸¤ä¸ªåº—é“ºï¼Œç­‰å¾…è¿›ä¸€æ­¥é€‰æ‹©
 				if((strShop0Name ~= "") and (strShop1Name ~= "")) then
 						BeginEvent(sceneId)
 
-							AddText(sceneId,"Å¶Å¶£¬Ô­À´ÊÇÕÆ¹ñµÄµ½ÁË£¬ÇëÎÊÄúÒªÈ¥ÄÄ¼äµê¿´¿´£¿")
+							AddText(sceneId,"å“¦å“¦ï¼ŒåŸæ¥æ˜¯æŒæŸœçš„åˆ°äº†ï¼Œè¯·é—®æ‚¨è¦å»å“ªé—´åº—çœ‹çœ‹ï¼Ÿ")
 
 							if GetPlayerShopFrezeType(sceneId, selfId, 0) == 1 then
-								AddNumText(sceneId,x000109_g_scriptId,"#cCCCCCCµêÆÌ1  "..strShop0Name,-1,4)
+								AddNumText(sceneId,x000109_g_scriptId,"#cCCCCCCåº—é“º1  "..strShop0Name,-1,4)
 							else
-								AddNumText(sceneId,x000109_g_scriptId,"µêÆÌ1  "..strShop0Name,-1,4)
+								AddNumText(sceneId,x000109_g_scriptId,"åº—é“º1  "..strShop0Name,-1,4)
 							end
 							if GetPlayerShopFrezeType(sceneId, selfId, 1) == 1 then
-								AddNumText(sceneId,x000109_g_scriptId,"#cCCCCCCµêÆÌ2  "..strShop1Name,-1,5)
+								AddNumText(sceneId,x000109_g_scriptId,"#cCCCCCCåº—é“º2  "..strShop1Name,-1,5)
 							else
-								AddNumText(sceneId,x000109_g_scriptId,"µêÆÌ2  "..strShop1Name,-1,5)
+								AddNumText(sceneId,x000109_g_scriptId,"åº—é“º2  "..strShop1Name,-1,5)
 							end
 
 						EndEvent(sceneId)
 						DispatchEventList(sceneId,selfId,targetId)
 
-				--1.2.2Ö»ÓĞÒ»¸öÖ±½Ó´ò¿ªÕâ¸ö
+				--1.2.2åªæœ‰ä¸€ä¸ªç›´æ¥æ‰“å¼€è¿™ä¸ª
 				elseif(strShop0Name ~= "") then
 						LuaFnOpenPlayerShop(sceneId, selfId, targetId, 0)
 
-				--1.2.3Ö»ÓĞÒ»¸öÖ±½Ó´ò¿ªÕâ¸ö
+				--1.2.3åªæœ‰ä¸€ä¸ªç›´æ¥æ‰“å¼€è¿™ä¸ª
 				elseif(strShop1Name ~= "") then
 						LuaFnOpenPlayerShop(sceneId, selfId, targetId, 1)
 				end
 
 			end
 
-		--2.²ì¿´ËùÓĞÉÌµêµÄÁĞ±í
+		--2.å¯Ÿçœ‹æ‰€æœ‰å•†åº—çš„åˆ—è¡¨
 
 		elseif	GetNumText()==2	then
 
 			DispatchPlayerShopList( sceneId, selfId, targetId )
 
-		--3.²ì¿´ËùÓĞÅÌ³öÉÌµêµÄÁĞ±í
+		--3.å¯Ÿçœ‹æ‰€æœ‰ç›˜å‡ºå•†åº—çš„åˆ—è¡¨
 		elseif	GetNumText()==3	then
 
 			DispatchPlayerShopSaleOutList( sceneId, selfId, targetId )
 
-		--4.²ì¿´×Ô¼ºÉíÉÏµÄÖ¸¶¨ÉÌµê
+		--4.å¯Ÿçœ‹è‡ªå·±èº«ä¸Šçš„æŒ‡å®šå•†åº—
 		elseif	GetNumText()==4	then
 
 			LuaFnOpenPlayerShop(sceneId, selfId, targetId, 0)
 
-		--5.²ì¿´×Ô¼ºÉíÉÏµÄÖ¸¶¨ÉÌµê
+		--5.å¯Ÿçœ‹è‡ªå·±èº«ä¸Šçš„æŒ‡å®šå•†åº—
 		elseif	GetNumText()==5	then
 
 			LuaFnOpenPlayerShop(sceneId, selfId, targetId, 1)
 		
-		--6.Íæ¼ÒÉÌµê½éÉÜ
+		--6.ç©å®¶å•†åº—ä»‹ç»
 		elseif	GetNumText()==6	then
 
 			BeginEvent(sceneId)
@@ -125,30 +125,30 @@ function x000109_OnEventRequest( sceneId, selfId, targetId, eventId )
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,targetId)
 
-		--7.ÔÙ´ÎÈ·ÈÏÊÇ·ñÉ¾µê
+		--7.å†æ¬¡ç¡®è®¤æ˜¯å¦åˆ åº—
 		elseif	GetNumText()==7	then
 	
-			--1.0Í¨¹ıµêÆÌÃûÀ´ÅĞ¶¨ÊÇ·ñ´ËµêÒÑ¾­´ò¿ª
+			--1.0é€šè¿‡åº—é“ºåæ¥åˆ¤å®šæ˜¯å¦æ­¤åº—å·²ç»æ‰“å¼€
 			local strShop0Name = LuaFnGetShopName(sceneId, selfId, 0)
 			local strShop1Name = LuaFnGetShopName(sceneId, selfId, 1)
 
-			--1.1Ã»µêÆÌÖ±½Ó·¢´íÎóÌáÊ¾
+			--1.1æ²¡åº—é“ºç›´æ¥å‘é”™è¯¯æç¤º
 			if((strShop0Name == "")and(strShop1Name == "")) then
 				BeginEvent(sceneId)
-					strText = "ÄúÖÁÉÙĞèÒªÓµÓĞÒ»¼ÒµêÆÌ¡£"
+					strText = "æ‚¨è‡³å°‘éœ€è¦æ‹¥æœ‰ä¸€å®¶åº—é“ºã€‚"
 					AddText(sceneId,strText);
 				EndEvent(sceneId)
 				DispatchMissionTips(sceneId,selfId)
 			else
 				BeginEvent(sceneId)
 					AddText(sceneId,"#{UnregisterShopHelp}")
-					AddNumText(sceneId,x000109_g_scriptId,"È·¶¨",6,8)
-					AddNumText(sceneId,x000109_g_scriptId,"Àë¿ª",6,9)
+					AddNumText(sceneId,x000109_g_scriptId,"ç¡®å®š",6,8)
+					AddNumText(sceneId,x000109_g_scriptId,"ç¦»å¼€",6,9)
 				EndEvent(sceneId)
 				DispatchEventList(sceneId,selfId,targetId)
 			end
 
-		--7.É¾!
+		--7.åˆ !
 		elseif	GetNumText()==8	then
 			local canErase = CanErasePlayerShop(sceneId, selfId)
 			if(canErase == 1) then
@@ -156,13 +156,13 @@ function x000109_OnEventRequest( sceneId, selfId, targetId, eventId )
 				EndUICommand(sceneId)
 				DispatchUICommand(sceneId,selfId, 1000)
 				ErasePlayerShop(sceneId,selfId)
-				local msg = format("¹§Ï²Äú×¢Ïú³É¹¦£¬µêÆÌÖĞµÄ±¾½ğÒÑ¾­·µ»Ø¸øÄú£¬Çë×¢Òâ²éÊÕ¡£");
+				local msg = format("æ­å–œæ‚¨æ³¨é”€æˆåŠŸï¼Œåº—é“ºä¸­çš„æœ¬é‡‘å·²ç»è¿”å›ç»™æ‚¨ï¼Œè¯·æ³¨æ„æŸ¥æ”¶ã€‚");
 				BeginEvent( sceneId )
 					AddText( sceneId, msg )
 				EndEvent( sceneId )
 				DispatchMissionTips( sceneId, selfId )
 				
-				msg = format("ÄúÒÑ³É¹¦×¢Ïú¸öÈËÉÌµê");
+				msg = format("æ‚¨å·²æˆåŠŸæ³¨é”€ä¸ªäººå•†åº—");
 				BeginEvent( sceneId )
 					AddText( sceneId, msg )
 				EndEvent( sceneId )
@@ -172,13 +172,13 @@ function x000109_OnEventRequest( sceneId, selfId, targetId, eventId )
 				EndUICommand(sceneId)
 				DispatchUICommand(sceneId,selfId, 19810222)
 			elseif canErase == -1 then
-				local msg = format("ÄúµÄÉÌµêÒÑ±»¶³½á¡£");
+				local msg = format("æ‚¨çš„å•†åº—å·²è¢«å†»ç»“ã€‚");
 				BeginEvent( sceneId )
 					AddText( sceneId, msg )
 				EndEvent( sceneId )
 				DispatchMissionTips( sceneId, selfId )
 			else
-				local msg = format("ÄúµÄµêÄÚ»¹ÓĞ³öÊÛ×ÊÑ¶»òÊÕ¹º×ÊÑ¶ÕıÔÚ·¢²¼£¬ÇëÇå¿ÕºóÔÙÀ´¡£");
+				local msg = format("æ‚¨çš„åº—å†…è¿˜æœ‰å‡ºå”®èµ„è®¯æˆ–æ”¶è´­èµ„è®¯æ­£åœ¨å‘å¸ƒï¼Œè¯·æ¸…ç©ºåå†æ¥ã€‚");
 				BeginEvent( sceneId )
 					AddText( sceneId, msg )
 				EndEvent( sceneId )
@@ -201,7 +201,7 @@ end
 
 --**********************************
 
---¼ÌĞø
+--ç»§ç»­
 
 --**********************************
 

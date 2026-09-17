@@ -1,31 +1,31 @@
---ĞşÎäµº
---¹é¼Ñ
---ÆÕÍ¨
+--ç„æ­¦å²›
+--å½’ä½³
+--æ™®é€š
 
 x112001_g_ScriptId	= 112001
 
---ÃÅÅÉĞÅÏ¢(ÃÅÅÉÃû³Æ£¬SceneID£¬PosX£¬PosY£¬ÃÅÅÉID)
+--é—¨æ´¾ä¿¡æ¯(é—¨æ´¾åç§°ï¼ŒSceneIDï¼ŒPosXï¼ŒPosYï¼Œé—¨æ´¾ID)
 x112001_g_mpInfo		= {}
-x112001_g_mpInfo[0]	= { "ĞÇËŞ", 16,  96, 152, MP_XINGSU }
-x112001_g_mpInfo[1]	= { "åĞÒ£", 14,  67, 145, MP_XIAOYAO }
-x112001_g_mpInfo[2]	= { "ÉÙÁÖ",  9,  96, 127, MP_SHAOLIN }
-x112001_g_mpInfo[3]	= { "ÌìÉ½", 17,  95, 120, MP_TIANSHAN }
-x112001_g_mpInfo[4]	= { "ÌìÁú", 13,  96, 120, MP_DALI }
-x112001_g_mpInfo[5]	= { "¶ëáÒ", 15,  89, 139, MP_EMEI }
-x112001_g_mpInfo[6]	= { "Îäµ±", 12, 103, 140, MP_WUDANG }
-x112001_g_mpInfo[7]	= { "Ã÷½Ì", 11,  98, 167, MP_MINGJIAO }
-x112001_g_mpInfo[8]	= { "Ø¤°ï", 10,  91, 116, MP_GAIBANG }
+x112001_g_mpInfo[0]	= { "æ˜Ÿå®¿", 16,  96, 152, MP_XINGSU }
+x112001_g_mpInfo[1]	= { "é€é¥", 14,  67, 145, MP_XIAOYAO }
+x112001_g_mpInfo[2]	= { "å°‘æ—",  9,  96, 127, MP_SHAOLIN }
+x112001_g_mpInfo[3]	= { "å¤©å±±", 17,  95, 120, MP_TIANSHAN }
+x112001_g_mpInfo[4]	= { "å¤©é¾™", 13,  96, 120, MP_DALI }
+x112001_g_mpInfo[5]	= { "å³¨åµ‹", 15,  89, 139, MP_EMEI }
+x112001_g_mpInfo[6]	= { "æ­¦å½“", 12, 103, 140, MP_WUDANG }
+x112001_g_mpInfo[7]	= { "æ˜æ•™", 11,  98, 167, MP_MINGJIAO }
+x112001_g_mpInfo[8]	= { "ä¸å¸®", 10,  91, 116, MP_GAIBANG }
 
 x112001_g_Yinpiao = 40002000 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x112001_OnDefaultEvent( sceneId, selfId,targetId )
 	
-	-- ¼ì²âÍæ¼ÒÉíÉÏÊÇ²»ÊÇÓĞ¡°ÒøÆ±¡±Õâ¸ö¶«Î÷£¬ÓĞ¾Í²»ÄÜÊ¹ÓÃÕâÀïµÄ¹¦ÄÜ
+	-- æ£€æµ‹ç©å®¶èº«ä¸Šæ˜¯ä¸æ˜¯æœ‰â€œé“¶ç¥¨â€è¿™ä¸ªä¸œè¥¿ï¼Œæœ‰å°±ä¸èƒ½ä½¿ç”¨è¿™é‡Œçš„åŠŸèƒ½
 	if GetItemCount(sceneId, selfId, x112001_g_Yinpiao)>=1  then
 		BeginEvent( sceneId )
-			AddText( sceneId, "  ÄãÉíÉÏÓĞÒøÆ±£¬ÕıÔÚÅÜÉÌ£¡ÎÒ²»ÄÜ°ïÖúÄã¡£" )
+			AddText( sceneId, "  ä½ èº«ä¸Šæœ‰é“¶ç¥¨ï¼Œæ­£åœ¨è·‘å•†ï¼æˆ‘ä¸èƒ½å¸®åŠ©ä½ ã€‚" )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 		return
@@ -34,20 +34,20 @@ function x112001_OnDefaultEvent( sceneId, selfId,targetId )
 	local	mp
 	local	i		= 0
 	BeginEvent( sceneId )
-		AddText( sceneId, "    »¶Ó­À´µ½ĞşÎäµº!")
-		AddNumText( sceneId, x112001_g_ScriptId, "·µ»ØÃÅÅÉ", 9, 1000 )
-		AddNumText( sceneId, x112001_g_ScriptId, "³ÇÊĞ - ÂåÑô", 9, 1003 )
-		AddNumText( sceneId, x112001_g_ScriptId, "³ÇÊĞ - ËÕÖİ", 9, 1001 )
-		AddNumText( sceneId, x112001_g_ScriptId, "³ÇÊĞ - ´óÀí", 9, 1002 )
+		AddText( sceneId, "    æ¬¢è¿æ¥åˆ°ç„æ­¦å²›!")
+		AddNumText( sceneId, x112001_g_ScriptId, "è¿”å›é—¨æ´¾", 9, 1000 )
+		AddNumText( sceneId, x112001_g_ScriptId, "åŸå¸‚ - æ´›é˜³", 9, 1003 )
+		AddNumText( sceneId, x112001_g_ScriptId, "åŸå¸‚ - è‹å·", 9, 1001 )
+		AddNumText( sceneId, x112001_g_ScriptId, "åŸå¸‚ - å¤§ç†", 9, 1002 )
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x112001_OnEventRequest( sceneId, selfId, targetId, eventId )
-	--¶ÓÎéÏà¹Ø
+	--é˜Ÿä¼ç›¸å…³
 	if GetTeamId(sceneId,selfId)>=0 and 
 		IsTeamFollow(sceneId, selfId)==1 and
 		LuaFnIsTeamLeader(sceneId,selfId)==1 then
@@ -59,26 +59,26 @@ function x112001_OnEventRequest( sceneId, selfId, targetId, eventId )
 				return
 			end
 			if IsHaveMission(sceneId,mems[i],4021) > 0 then
-				x112001_MsgBox( sceneId, selfId, targetId, "  Äã¶ÓÎé³ÉÔ±ÖĞÓĞÈËÓĞäîÔË»õ²ÕÔÚÉí£¬ÎÒÃÇæäÕ¾²»ÄÜÎªÄãÌá¹©´«ËÍ·şÎñ¡£" )
+				x112001_MsgBox( sceneId, selfId, targetId, "  ä½ é˜Ÿä¼æˆå‘˜ä¸­æœ‰äººæœ‰æ¼•è¿è´§èˆ±åœ¨èº«ï¼Œæˆ‘ä»¬é©¿ç«™ä¸èƒ½ä¸ºä½ æä¾›ä¼ é€æœåŠ¡ã€‚" )
 				return
 			end
 		end
 	end
 
-	--äîÔËÏà¹Ø
+	--æ¼•è¿ç›¸å…³
 	if IsHaveMission(sceneId,selfId,4021) > 0 then
-		x112001_MsgBox( sceneId, selfId, targetId, "  ÄãÓĞäîÔË»õ²ÕÔÚÉí£¬ÎÒÃÇæäÕ¾²»ÄÜÎªÄãÌá¹©´«ËÍ·şÎñ¡£" )
+		x112001_MsgBox( sceneId, selfId, targetId, "  ä½ æœ‰æ¼•è¿è´§èˆ±åœ¨èº«ï¼Œæˆ‘ä»¬é©¿ç«™ä¸èƒ½ä¸ºä½ æä¾›ä¼ é€æœåŠ¡ã€‚" )
 		return
 	end
 
-	--Ë³Àû´«ËÍ
+	--é¡ºåˆ©ä¼ é€
 	local	arg	= GetNumText()
 	local	mp
 	local	i		= 0
 	local	id	= LuaFnGetMenPai( sceneId, selfId )
-	if arg == 1000 then		--·µ»ØÃÅÅÉ
+	if arg == 1000 then		--è¿”å›é—¨æ´¾
 		if id < 0 or id >= 9 then
-			x112001_MsgBox( sceneId, selfId, targetId, "  Äã»¹Ã»ÓĞ¼ÓÈëÈÎºÎÃÅÅÉ£¡" )
+			x112001_MsgBox( sceneId, selfId, targetId, "  ä½ è¿˜æ²¡æœ‰åŠ å…¥ä»»ä½•é—¨æ´¾ï¼" )
 		else
 			mp	= x112001_GetMPInfo( id )
 			if mp ~= nil then
@@ -87,15 +87,15 @@ function x112001_OnEventRequest( sceneId, selfId, targetId, eventId )
 		end
 		return
 	end
-	if arg == 1001 then		--ËÕÖİ
+	if arg == 1001 then		--è‹å·
 		CallScriptFunction( (400900), "TransferFunc", sceneId, selfId, 1, 89,143 )
 		return
 	end
-	if arg == 1002 then		--´óÀí
+	if arg == 1002 then		--å¤§ç†
 		CallScriptFunction( (400900), "TransferFunc", sceneId, selfId, 2, 263, 129 )
 		return
 	end
-	if arg == 1003 then		--ÂåÑô
+	if arg == 1003 then		--æ´›é˜³
 		CallScriptFunction( (400900), "TransferFunc", sceneId, selfId, 0, 183, 156 )
 		return
 	end
@@ -117,7 +117,7 @@ function x112001_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---¸ù¾İÃÅÅÉID»ñÈ¡ÃÅÅÉĞÅÏ¢
+--æ ¹æ®é—¨æ´¾IDè·å–é—¨æ´¾ä¿¡æ¯
 --**********************************
 function x112001_GetMPInfo( mpID )
 	local	mp
@@ -131,7 +131,7 @@ function x112001_GetMPInfo( mpID )
 end
 
 --**********************************
---¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+--å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x112001_MsgBox( sceneId, selfId, targetId, msg )
 	BeginEvent( sceneId )

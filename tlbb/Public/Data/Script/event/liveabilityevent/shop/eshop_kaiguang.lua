@@ -1,28 +1,28 @@
---ÉÌµê
---ÃÅÅÉÉÌµê
---ÉÙÁÖ ¿ª¹â
+--å•†åº—
+--é—¨æ´¾å•†åº—
+--å°‘æ— å¼€å…‰
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x701605_g_ScriptId = 701605
 
---ÉÌµêºÅ
+--å•†åº—å·
 x701605_g_shoptableindex=51
 
---ÉÌµêÃû³Æ
-x701605_g_ShopName = "¹ºÂò¿ª¹âÅä·½"
+--å•†åº—åç§°
+x701605_g_ShopName = "è´­ä¹°å¼€å…‰é…æ–¹"
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
-function x701605_OnDefaultEvent( sceneId, selfId, targetId )	--µã»÷¸ÃÈÎÎñºóÖ´ĞĞ´Ë½Å±¾
+function x701605_OnDefaultEvent( sceneId, selfId, targetId )	--ç‚¹å‡»è¯¥ä»»åŠ¡åæ‰§è¡Œæ­¤è„šæœ¬
 	DispatchShopItem( sceneId, selfId,targetId, x701605_g_shoptableindex )
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x701605_OnEnumerate( sceneId, selfId, targetId )
-	--ÅĞ¶ÏÊÇ·ñÊÇ±¾ÅÉµÜ×Ó
+	--åˆ¤æ–­æ˜¯å¦æ˜¯æœ¬æ´¾å¼Ÿå­
 	if GetMenPai(sceneId,selfId) == MP_SHAOLIN then
 		AddNumText(sceneId,x701605_g_ScriptId,x701605_g_ShopName,7,-1)
     end
@@ -30,55 +30,55 @@ function x701605_OnEnumerate( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x701605_CheckAccept( sceneId, selfId )
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x701605_OnAccept( sceneId, selfId )
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x701605_OnAbandon( sceneId, selfId )
 end
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x701605_OnContinue( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x701605_CheckSubmit( sceneId, selfId )
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x701605_OnSubmit( sceneId, selfId, targetId,selectRadioId )
 end
 
 --**********************************
---É±ËÀ¹ÖÎï»òÍæ¼Ò
+--æ€æ­»æ€ªç‰©æˆ–ç©å®¶
 --**********************************
 function x701605_OnKillObject( sceneId, selfId, objdataId,objId)
 end
 
 --**********************************
---½øÈëÇøÓòÊÂ¼ş
+--è¿›å…¥åŒºåŸŸäº‹ä»¶
 --**********************************
 function x701605_OnEnterArea( sceneId, selfId, zoneId )
 end
 
 --**********************************
---µÀ¾ß¸Ä±ä
+--é“å…·æ”¹å˜
 --**********************************
 function x701605_OnItemChanged( sceneId, selfId, itemdataId )
 end

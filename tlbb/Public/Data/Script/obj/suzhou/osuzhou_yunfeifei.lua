@@ -1,8 +1,8 @@
---ËÕÖİNPC
---ÔÆö­ö­
---Ò»°ã
+--è‹å·NPC
+--äº‘éœéœ
+--ä¸€èˆ¬
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x001050_g_ScriptId	= 001050
 
 x001050_g_shoptableindex	= 27
@@ -11,34 +11,34 @@ x001050_g_eventList	= { 800103, 800104 , 800106, 800101, 800102, 800108}
 x001050_g_miscEventId = 311111;
 
 x001050_g_key				= {}
-x001050_g_key["buy"]= 0		--¹ºÂòÕäÊŞÓÃÆ·
-x001050_g_key["ask"]= 1		--²éÑ¯ÕäÊŞ³É³¤ÂÊ
-x001050_g_key["rep"]= 2		--È·ÈÏ²éÑ¯
-x001050_g_key["i_pc"]= 5		--·¢²¼Õ÷ÓÑĞÅÏ¢ ±ØĞè=5
-x001050_g_key["ask_pc"]= 6		--Õ÷ÓÑ ±ØĞè=6
-x001050_g_key["ask_prcr"]= 7		--²éÑ¯·±Ö³µÄÕäÊŞ
-x001050_g_key["pet_help"]= 10		--ÕäÊŞÏà¹Ø½éÉÜ
-x001050_g_key["pet_help_savvy"]= 11		--ÌáÉıÕäÊŞÎòĞÔ½éÉÜ
-x001050_g_key["pet_help_prcr"]= 12		--ÕäÊŞ·±Ö³½éÉÜ
+x001050_g_key["buy"]= 0		--è´­ä¹°çå…½ç”¨å“
+x001050_g_key["ask"]= 1		--æŸ¥è¯¢çå…½æˆé•¿ç‡
+x001050_g_key["rep"]= 2		--ç¡®è®¤æŸ¥è¯¢
+x001050_g_key["i_pc"]= 5		--å‘å¸ƒå¾å‹ä¿¡æ¯ å¿…éœ€=5
+x001050_g_key["ask_pc"]= 6		--å¾å‹ å¿…éœ€=6
+x001050_g_key["ask_prcr"]= 7		--æŸ¥è¯¢ç¹æ®–çš„çå…½
+x001050_g_key["pet_help"]= 10		--çå…½ç›¸å…³ä»‹ç»
+x001050_g_key["pet_help_savvy"]= 11		--æå‡çå…½æ‚Ÿæ€§ä»‹ç»
+x001050_g_key["pet_help_prcr"]= 12		--çå…½ç¹æ®–ä»‹ç»
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x001050_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent( sceneId )
 		AddText( sceneId, "#{OBJ_suzhou_0019}" )
 		
-		AddNumText( sceneId, x001050_g_ScriptId, "ÕäÊŞÏà¹Ø½éÉÜ", 11, x001050_g_key["pet_help"] )
+		AddNumText( sceneId, x001050_g_ScriptId, "çå…½ç›¸å…³ä»‹ç»", 11, x001050_g_key["pet_help"] )
 		
-		AddNumText( sceneId, x001050_g_ScriptId, "¹ºÂòÕäÊŞÓÃÆ·", 7, x001050_g_key["buy"] )
-		AddNumText( sceneId, x001050_g_ScriptId, "²éÑ¯ÕäÊŞ³É³¤ÂÊ", 6, x001050_g_key["ask"] )
-		AddNumText(sceneId,x001050_g_ScriptId,"·¢²¼Õ÷ÓÑĞÅÏ¢",6,x001050_g_key["i_pc"])
-		AddNumText(sceneId,x001050_g_ScriptId,"Õ÷ÓÑ",6,x001050_g_key["ask_pc"])
+		AddNumText( sceneId, x001050_g_ScriptId, "è´­ä¹°çå…½ç”¨å“", 7, x001050_g_key["buy"] )
+		AddNumText( sceneId, x001050_g_ScriptId, "æŸ¥è¯¢çå…½æˆé•¿ç‡", 6, x001050_g_key["ask"] )
+		AddNumText(sceneId,x001050_g_ScriptId,"å‘å¸ƒå¾å‹ä¿¡æ¯",6,x001050_g_key["i_pc"])
+		AddNumText(sceneId,x001050_g_ScriptId,"å¾å‹",6,x001050_g_key["ask_pc"])
 		
 		CallScriptFunction( 800101, "OnEnumerate", sceneId, selfId, targetId )
 		CallScriptFunction( 800102, "OnEnumerate", sceneId, selfId, targetId )
 		
-		AddNumText(sceneId,x001050_g_ScriptId,"²éÑ¯·±Ö³µÄÕäÊŞ",6,x001050_g_key["ask_prcr"])
+		AddNumText(sceneId,x001050_g_ScriptId,"æŸ¥è¯¢ç¹æ®–çš„çå…½",6,x001050_g_key["ask_prcr"])
 
 		CallScriptFunction( 800103, "OnEnumerate", sceneId, selfId, targetId )
 		CallScriptFunction( 800104, "OnEnumerate", sceneId, selfId, targetId )
@@ -50,15 +50,15 @@ function x001050_OnDefaultEvent( sceneId, selfId,targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x001050_OnEventRequest( sceneId, selfId, targetId, eventId )
 	if eventId == x001050_g_ScriptId then
 		local key	= GetNumText()
 		if key == x001050_g_key["pet_help"] then
 			BeginEvent(sceneId)	
-				AddNumText( sceneId, x001050_g_ScriptId, "ÌáÉıÕäÊŞÎòĞÔ½éÉÜ", 11, x001050_g_key["pet_help_savvy"] )
-				AddNumText(sceneId, x001050_g_ScriptId,"ÕäÊŞ·±Ö³½éÉÜ",11,x001050_g_key["pet_help_prcr"]);
+				AddNumText( sceneId, x001050_g_ScriptId, "æå‡çå…½æ‚Ÿæ€§ä»‹ç»", 11, x001050_g_key["pet_help_savvy"] )
+				AddNumText(sceneId, x001050_g_ScriptId,"çå…½ç¹æ®–ä»‹ç»",11,x001050_g_key["pet_help_prcr"]);
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,targetId)
 			return
@@ -74,32 +74,32 @@ function x001050_OnEventRequest( sceneId, selfId, targetId, eventId )
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,targetId)
 			return
-		--¹ºÂòÕäÊŞÓÃÆ·
+		--è´­ä¹°çå…½ç”¨å“
 		elseif key == x001050_g_key["buy"] then
 			DispatchShopItem( sceneId, selfId,targetId, x001050_g_shoptableindex )
 
-		--²éÑ¯ÕäÊŞ³É³¤ÂÊ
+		--æŸ¥è¯¢çå…½æˆé•¿ç‡
 		elseif key == x001050_g_key["ask"] then
 --			BeginEvent( sceneId )
---			AddText( sceneId, " ²éÑ¯Ò»´ÎĞèÒªÊÕÈ¡#{_MONEY100}µÄ·ÑÓÃ¡£" ) -- zchw
---			AddNumText( sceneId, x001050_g_ScriptId, "È·¶¨", -1, x001050_g_key["rep"] )
+--			AddText( sceneId, " æŸ¥è¯¢ä¸€æ¬¡éœ€è¦æ”¶å–#{_MONEY100}çš„è´¹ç”¨ã€‚" ) -- zchw
+--			AddNumText( sceneId, x001050_g_ScriptId, "ç¡®å®š", -1, x001050_g_key["rep"] )
 --			EndEvent( sceneId )
 --			DispatchEventList( sceneId, selfId, targetId )
 
-		--È·ÈÏ²éÑ¯
+		--ç¡®è®¤æŸ¥è¯¢
 --		elseif key == x001050_g_key["rep"] then
 			x001050_OnConfirm( sceneId, selfId, targetId )
-		--·¢²¼Õ÷ÓÑĞÅÏ¢/Õ÷ÓÑ
+		--å‘å¸ƒå¾å‹ä¿¡æ¯/å¾å‹
 		elseif key == x001050_g_key["i_pc"] or key == x001050_g_key["ask_pc"] then
 			local sel = GetNumText();
 			CallScriptFunction( x001050_g_miscEventId, "OnEnumerate",sceneId, selfId, targetId, sel)
-		--È·ÈÏ²éÑ¯
+		--ç¡®è®¤æŸ¥è¯¢
 		elseif key == x001050_g_key["ask_prcr"] then
 			LuaFnGetPetProcreateInfo(sceneId, selfId);
 		else
 		end
 
-	--ÆäËûÊÂ¼ş
+	--å…¶ä»–äº‹ä»¶
 	else
 		for i, findId in x001050_g_eventList do
 			if eventId == findId then
@@ -111,86 +111,86 @@ function x001050_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---È·ÈÏ²éÑ¯
+--ç¡®è®¤æŸ¥è¯¢
 --**********************************
 function x001050_OnConfirm( sceneId, selfId, targetId )
 	BeginUICommand( sceneId )
 		UICommand_AddInt( sceneId, targetId )
-		UICommand_AddInt( sceneId, 6 )				--ÕäÊŞ²éÑ¯·ÖÖ§
+		UICommand_AddInt( sceneId, 6 )				--çå…½æŸ¥è¯¢åˆ†æ”¯
 	EndUICommand( sceneId )
-	DispatchUICommand( sceneId, selfId, 3 )	--µ÷ÓÃÕäÊŞ½çÃæ
+	DispatchUICommand( sceneId, selfId, 3 )	--è°ƒç”¨çå…½ç•Œé¢
 end
 
 --**********************************
---²éÑ¯ÕäÊŞ³É³¤ÂÊ
+--æŸ¥è¯¢çå…½æˆé•¿ç‡
 --**********************************
 function x001050_OnInquiryForGrowRate( sceneId, selfId, petHid, petLid )
 --local	num		= LuaFnGetPetCount( sceneId, selfId )
 --if num <= 0 or index < 0 or index >= num then
---	x001050_MsgTip( sceneId, selfId, "  ¶Ô²»Æğ£¬ÄúÃ»ÓĞÑ¡ÔñÕäÊŞ£¡" )
+--	x001050_MsgTip( sceneId, selfId, "  å¯¹ä¸èµ·ï¼Œæ‚¨æ²¡æœ‰é€‰æ‹©çå…½ï¼" )
 --	return 0
 --end
 
-	-- Èç¹ûÕâ¸öÕäÊŞÒÑ¾­²éÑ¯¹ıÉú³¤ÂÊ£¬¾Í¸øÍæ¼ÒÒ»¸öÌáÊ¾£¬È»ºó²»ÔÚ¿Û¶«Î÷ÁË
+	-- å¦‚æœè¿™ä¸ªçå…½å·²ç»æŸ¥è¯¢è¿‡ç”Ÿé•¿ç‡ï¼Œå°±ç»™ç©å®¶ä¸€ä¸ªæç¤ºï¼Œç„¶åä¸åœ¨æ‰£ä¸œè¥¿äº†
 	if LuaFnIsPetGrowRateByGUID(sceneId, selfId, petHid, petLid) > 0   then
 		BeginEvent( sceneId )
-			AddText( sceneId, "ÕâÖ»³èÎïÒÑ¾­²éÑ¯¹ı³É³¤ÂÊÁË¡£" )
+			AddText( sceneId, "è¿™åªå® ç‰©å·²ç»æŸ¥è¯¢è¿‡æˆé•¿ç‡äº†ã€‚" )
 		EndEvent( sceneId )
 		DispatchMissionTips( sceneId, selfId )
 		
 		return
 	end
 	
-	local PlayerMoney = GetMoney( sceneId, selfId ) +  GetMoneyJZ(sceneId, selfId)  --½»×ÓÆÕ¼° Vega
+	local PlayerMoney = GetMoney( sceneId, selfId ) +  GetMoneyJZ(sceneId, selfId)  --äº¤å­æ™®åŠ Vega
 	if PlayerMoney < 100 then
-		x001050_MsgTip( sceneId, selfId, "  ¶Ô²»Æğ£¬ÄúÉíÉÏµÄ½ğÇ®²»×ã#{_EXCHG100}£¡" )
+		x001050_MsgTip( sceneId, selfId, "  å¯¹ä¸èµ·ï¼Œæ‚¨èº«ä¸Šçš„é‡‘é’±ä¸è¶³#{_EXCHG100}ï¼" )
 		return 0
 	end
 
 	local	lev		= LuaFnGetPetLevelByGUID( sceneId, selfId, petHid, petLid )
 	if lev < 1 then -- zchw 
-		x001050_MsgTip( sceneId, selfId, "  ¶Ô²»Æğ£¬Ö»ÄÜ²éÑ¯10¼¶ÒÔÉÏÕäÊŞµÄ³É³¤ÂÊ£¡" )
+		x001050_MsgTip( sceneId, selfId, "  å¯¹ä¸èµ·ï¼Œåªèƒ½æŸ¥è¯¢10çº§ä»¥ä¸Šçå…½çš„æˆé•¿ç‡ï¼" )
 		return 0
 	end
 
-	--¿Û³ı½ğÇ®
-	local costJ , costM = LuaFnCostMoneyWithPriority( sceneId, selfId, 100 )		--½»×ÓÆÕ¼° Vega
+	--æ‰£é™¤é‡‘é’±
+	local costJ , costM = LuaFnCostMoneyWithPriority( sceneId, selfId, 100 )		--äº¤å­æ™®åŠ Vega
 	if costM ~= nil and costJ ~= nil then
 		if costJ > 0 then
-			local str = format("Äã»¨·ÑÁË#{_EXCHG%d}",costJ ) 
+			local str = format("ä½ èŠ±è´¹äº†#{_EXCHG%d}",costJ ) 
 			Msg2Player( sceneId, selfId, str, MSG2PLAYER_PARA )
 		end
 		if costM > 0 then
-			local str = format("Äã»¨·ÑÁË#{_MONEY%d}",costM ) 
+			local str = format("ä½ èŠ±è´¹äº†#{_MONEY%d}",costM ) 
 			Msg2Player( sceneId, selfId, str, MSG2PLAYER_PARA )
 		end
-		Msg2Player( sceneId, selfId, "ÓÃÓÚ²éÑ¯ÕäÊŞµÄ³É³¤ÂÊ¡£", MSG2PLAYER_PARA )
+		Msg2Player( sceneId, selfId, "ç”¨äºæŸ¥è¯¢çå…½çš„æˆé•¿ç‡ã€‚", MSG2PLAYER_PARA )
 	else
 		return
 	end
 
 	local	nGrowLevel	= LuaFnGetPetGrowRateByGUID( sceneId, selfId, petHid, petLid )
-	local	strTbl			= { "ÆÕÍ¨", "ÓÅĞã", "½Ü³ö", "×¿Ô½", "ÍêÃÀ" }
+	local	strTbl			= { "æ™®é€š", "ä¼˜ç§€", "æ°å‡º", "å“è¶Š", "å®Œç¾" }
 	if( nGrowLevel < 1 or nGrowLevel > getn( strTbl ) ) then
 		nGrowLevel				= 1
 	end
 	local	strLevel		= strTbl[nGrowLevel]
 
-	--½«»ñÈ¡Êı¾İ´«¸øClient
+	--å°†è·å–æ•°æ®ä¼ ç»™Client
 	BeginUICommand( sceneId )
-		UICommand_AddString( sceneId, "key="..1 )						--¹Ø¼ü×Ö£¬1±íÊ¾³É¹¦Ö´ĞĞ
-		UICommand_AddString( sceneId, "rat="..nGrowLevel )	--³É³¤ÂÊ
-		UICommand_AddString( sceneId, "gld="..100 )					--»¨·Ñ½ğÇ®
+		UICommand_AddString( sceneId, "key="..1 )						--å…³é”®å­—ï¼Œ1è¡¨ç¤ºæˆåŠŸæ‰§è¡Œ
+		UICommand_AddString( sceneId, "rat="..nGrowLevel )	--æˆé•¿ç‡
+		UICommand_AddString( sceneId, "gld="..100 )					--èŠ±è´¹é‡‘é’±
 	EndUICommand( sceneId )
 	DispatchUICommand( sceneId, selfId, 4 )
 	
-	--µ±²éÑ¯µÄÕäÊŞÎª±¦±¦¡¢±äÒì£¬²¢ÇÒ³É³¤ÂÊ²éÑ¯½á¹ûÊÇ3¡¢4»ò5Ê±£¬·¢²¼ÊÀ½ç¹«¸æ
+	--å½“æŸ¥è¯¢çš„çå…½ä¸ºå®å®ã€å˜å¼‚ï¼Œå¹¶ä¸”æˆé•¿ç‡æŸ¥è¯¢ç»“æœæ˜¯3ã€4æˆ–5æ—¶ï¼Œå‘å¸ƒä¸–ç•Œå…¬å‘Š
 	local	rnd			= random( 4 )
 	local	msg			= {}
 	local	typ			= LuaFnGetPetTypeByGUID( sceneId, selfId, petHid, petLid )
 	if( nGrowLevel >= 4 and nGrowLevel <= 5 and typ ~= 2 ) then -- zchw
-		if ( sceneId == 1 ) then		--ËÕÖİNPC
-			msg[1]	= format( "#W#{_INFOUSR%s}#{GLBB_1_A}#Y%s#IµÄ#{_INFOMSG%s}£¡",
+		if ( sceneId == 1 ) then		--è‹å·NPC
+			msg[1]	= format( "#W#{_INFOUSR%s}#{GLBB_1_A}#Y%s#Içš„#{_INFOMSG%s}ï¼",
 				GetName( sceneId, selfId ),
 				strLevel,
 				LuaFnGetPetTransferByGUID( sceneId, selfId, petHid, petLid ) )
@@ -198,7 +198,7 @@ function x001050_OnInquiryForGrowRate( sceneId, selfId, petHid, petLid )
 				GetName( sceneId, selfId ),
 				LuaFnGetPetTransferByGUID( sceneId, selfId, petHid, petLid ),
 				strLevel )
-			msg[3]	= format( "#IÒ»Ö»#{_INFOMSG%s}#{GLBB_3_A}#Y%s#I#{GLBB_3_B}#{_INFOUSR%s}#{GLBB_3_C}",
+			msg[3]	= format( "#Iä¸€åª#{_INFOMSG%s}#{GLBB_3_A}#Y%s#I#{GLBB_3_B}#{_INFOUSR%s}#{GLBB_3_C}",
 				LuaFnGetPetTransferByGUID( sceneId, selfId, petHid, petLid ),
 				strLevel,
 				GetName( sceneId, selfId ) )
@@ -206,10 +206,10 @@ function x001050_OnInquiryForGrowRate( sceneId, selfId, petHid, petLid )
 				 GetName( sceneId, selfId ),
 				 LuaFnGetPetTransferByGUID( sceneId, selfId, petHid, petLid ),
 				 strLevel )
-			--È«Çò¹«¸æ
+			--å…¨çƒå…¬å‘Š
 			AddGlobalCountNews( sceneId, msg[rnd] )
-		elseif ( sceneId == 0 ) then			--ÂåÑôNPC
-			msg[1]	= format( "#W#{_INFOUSR%s}#{LLBB_1_A}#Y%s#IµÄ#{_INFOMSG%s}£¡",
+		elseif ( sceneId == 0 ) then			--æ´›é˜³NPC
+			msg[1]	= format( "#W#{_INFOUSR%s}#{LLBB_1_A}#Y%s#Içš„#{_INFOMSG%s}ï¼",
 				GetName( sceneId, selfId ),
 				strLevel,
 				LuaFnGetPetTransferByGUID( sceneId, selfId, petHid, petLid ) )
@@ -217,7 +217,7 @@ function x001050_OnInquiryForGrowRate( sceneId, selfId, petHid, petLid )
 				GetName( sceneId, selfId ),
 				LuaFnGetPetTransferByGUID( sceneId, selfId, petHid, petLid ),
 				strLevel )
-			msg[3]	= format( "#IÒ»Ö»#{_INFOMSG%s}#{LLBB_3_A}#Y%s#I#{LLBB_3_B}#{_INFOUSR%s}#{LLBB_3_C}",
+			msg[3]	= format( "#Iä¸€åª#{_INFOMSG%s}#{LLBB_3_A}#Y%s#I#{LLBB_3_B}#{_INFOUSR%s}#{LLBB_3_C}",
 				LuaFnGetPetTransferByGUID( sceneId, selfId, petHid, petLid ),
 				strLevel,
 				GetName( sceneId, selfId ) )
@@ -225,7 +225,7 @@ function x001050_OnInquiryForGrowRate( sceneId, selfId, petHid, petLid )
 				 GetName( sceneId, selfId ),
 				 LuaFnGetPetTransferByGUID( sceneId, selfId, petHid, petLid ),
 				 strLevel )
-			--È«Çò¹«¸æ
+			--å…¨çƒå…¬å‘Š
 			AddGlobalCountNews( sceneId, msg[rnd] )
 		end
 	end
@@ -234,7 +234,7 @@ function x001050_OnInquiryForGrowRate( sceneId, selfId, petHid, petLid )
 end
 
 --**********************************
---¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+--å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x001050_MsgBox( sceneId, selfId, targetId, msg )
 	BeginEvent( sceneId )
@@ -244,7 +244,7 @@ function x001050_MsgBox( sceneId, selfId, targetId, msg )
 end
 
 --**********************************
---ĞÑÄ¿ÏµÍ³ĞÅÏ¢ÌáÊ¾
+--é†’ç›®ç³»ç»Ÿä¿¡æ¯æç¤º
 --**********************************
 function x001050_MsgTip( sceneId, selfId, msg )
 	BeginEvent( sceneId )

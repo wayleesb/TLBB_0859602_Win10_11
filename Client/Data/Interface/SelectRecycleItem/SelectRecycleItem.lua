@@ -190,10 +190,10 @@ function SelRecycleItem_Type_Clicked(index)
 end
 
 function SelRecycleItem_ShowItemPage()
-	--¸üĞÂ·­Ò³°´Å¥
+	--æ›´æ–°ç¿»é¡µæŒ‰é’®
 	SelRecycleItem_UpdatePageBtn()
 	cleanUpItemArr();
-	--¸üĞÂItemBtn
+	--æ›´æ–°ItemBtn
 	SelRecycleItem_UpdateItems()
 end
 
@@ -306,7 +306,7 @@ function SelRecycleItem_OK_Clicked()
 		
 		local num = SelRecycleItem_Name_Text0_Input:GetText();
 		if(tonumber(num)==nil or tonumber(num)<=0) then
-			PushDebugMessage("ÊıÁ¿ÊäÈë²»ÄÜÎª¿Õ");
+			PushDebugMessage("æ•°é‡è¾“å…¥ä¸èƒ½ä¸ºç©º");
 			return
 		end
 		if(  tonumber(szGold)==nil or tonumber(szGold)<0 ) then
@@ -319,27 +319,27 @@ function SelRecycleItem_OK_Clicked()
 			szCopperCoin = 0;
 		end
 		if(szGold == 0 and szSilver == 0 and szCopperCoin == 0) then
-			PushDebugMessage("½ğÇ®ÊäÈë²»ÄÜÎª0");
+			PushDebugMessage("é‡‘é’±è¾“å…¥ä¸èƒ½ä¸º0");
 			return
 		end
-		--ÔÚ³ÌĞòÀïÍ·ÔÙ¼ì²âÊäÈë×Ö·ûµÄÓĞĞ§ĞÔºÍÊıÖµ
+		--åœ¨ç¨‹åºé‡Œå¤´å†æ£€æµ‹è¾“å…¥å­—ç¬¦çš„æœ‰æ•ˆæ€§å’Œæ•°å€¼
 		local bAvailability,nMoney = Bank:GetInputMoney(szGold,szSilver,szCopperCoin);
 	
-		--???Ê²Ã´Çé¿öÏÂÊ§°ÜĞèÒªÔÙ¶¨
+		--???ä»€ä¹ˆæƒ…å†µä¸‹å¤±è´¥éœ€è¦å†å®š
 		if(bAvailability == true and tonumber(num)>0) then
 			local pmoney = PlayerShop:GetRecycleShopProfitMoney(Type);
 			if(pmoney>=math.floor(nMoney * num ))then
 				PlayerShop:SendAddRecycleItemMsg(Type,ItemtableIdxs[CurSelItemIdx],tonumber(num),nMoney);
 				this:Hide();
 			else
-				PushDebugMessage("¶Ô²»Æğ£¬ÄúÉÌµêµÄÓ¯Àû×Ê½ğ²»¹»£¬ÎŞ·¨ÊÕ¹º£¡");		
+				PushDebugMessage("å¯¹ä¸èµ·ï¼Œæ‚¨å•†åº—çš„ç›ˆåˆ©èµ„é‡‘ä¸å¤Ÿï¼Œæ— æ³•æ”¶è´­ï¼");		
 			end
 			
 		else
-			PushDebugMessage("ÊıÁ¿»òÕß½ğÇ®ÊäÈë²»·ûºÏÌõ¼ş£¡");
+			PushDebugMessage("æ•°é‡æˆ–è€…é‡‘é’±è¾“å…¥ä¸ç¬¦åˆæ¡ä»¶ï¼");
 		end
 	else
-		PushDebugMessage("ÇëÑ¡ÔñÒ»¸ö²ÄÁÏ£¡");
+		PushDebugMessage("è¯·é€‰æ‹©ä¸€ä¸ªææ–™ï¼");
 	end
 end
 

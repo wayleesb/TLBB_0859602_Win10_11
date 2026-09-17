@@ -1,6 +1,6 @@
---ÊøºÓ¹ÅÕòNPC
---ÀîÃúÑó
---ÆÕÍ¨
+--æŸæ²³å¤é•‡NPC
+--æé“­æ´‹
+--æ™®é€š
 
 x001172_g_ScriptId	= 001172
 x001172_g_MsgInfo = { "#{SHGZ_0612_01}",
@@ -10,28 +10,28 @@ x001172_g_MsgInfo = { "#{SHGZ_0612_01}",
 										}
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x001172_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent( sceneId )
 
 		local msgidx = random(getn(x001172_g_MsgInfo))
 		AddText( sceneId, x001172_g_MsgInfo[msgidx] )	
-    AddNumText( sceneId, x001172_g_ScriptId, "Ç°Íù²ÔÉ½", 9, 3426 )
+    AddNumText( sceneId, x001172_g_ScriptId, "å‰å¾€è‹å±±", 9, 3426 )
 
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x001172_OnEventRequest( sceneId, selfId, targetId, eventId )
 
-	--Ë³Àû´«ËÍ
+	--é¡ºåˆ©ä¼ é€
 	local	arg	= GetNumText()
 
-  if arg == 3426 then		--²ÔÉ½
+  if arg == 3426 then		--è‹å±±
 		CallScriptFunction( (400900), "TransferFunc", sceneId, selfId, 25, 165, 53, 20 )
 		return
 	end
@@ -39,7 +39,7 @@ function x001172_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+--å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x001172_MsgBox( sceneId, selfId, targetId, msg )
 	BeginEvent( sceneId )

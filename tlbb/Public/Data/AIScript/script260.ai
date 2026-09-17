@@ -1,13 +1,13 @@
-;ÄêÊŞBOSS£º15%»úÂÊÈºÌåÊ§Ã÷£¨645£©
+;å¹´å…½BOSSï¼š15%æœºç‡ç¾¤ä½“å¤±æ˜ï¼ˆ645ï¼‰
 [common]
 [commonend]
 
 [skill]
-0:if(AIS_IsCanSkill(614)=1){AIS_ToSkill(614);AIS_SetTimes(-1);AIS_SetPRI(29);};Èç¹ûÄÜÊ¹ÓÃ614ºÅ¼¼ÄÜÔòÊÍ·Å£¬´ÎÊı²»ÏŞ£¨ÆÕÍ¨Ô¶³Ì)
-1:if(AIS_GetAIState()=SATTACK&AIS_Rand()<15&AIS_IsCanSkill(645)=1){AIS_ToSkill(645);AIS_SetTimes(-1);AIS_SetPRI(31);};15£¥»úÂÊÊÍ·Å645ºÅ¼¼ÄÜ£¨ÈºÌåÊ§Ã÷£©£¬´ÎÊı²»ÏŞ
-2:if(AIS_GetAIState()=SATTACK&AIS_Rand()<10&AIS_IsCanSkill(1094)=1){AIS_ToSkill(1094);AIS_ToSpeak(329,1);AIS_SetTimes(-1);AIS_SetPRI(31);};30£¥»úÂÊËµ»°£¬´ÎÊı²»ÏŞ
-3:if(AIS_GetAIState()=SATTACK&AIS_Rand()>20&AIS_Rand()<30&AIS_IsCanSkill(1094)=1){AIS_ToSkill(1094);AIS_ToSpeak(330,1);AIS_SetTimes(-1);AIS_SetPRI(31);};30£¥»úÂÊËµ»°£¬´ÎÊı²»ÏŞ
-4:if(AIS_GetAIState()=SATTACK&AIS_Rand()>70&AIS_Rand()<80&AIS_IsCanSkill(1094)=1){AIS_ToSkill(1094);AIS_ToSpeak(331,1);AIS_SetTimes(-1);AIS_SetPRI(31);};30£¥»úÂÊËµ»°£¬´ÎÊı²»ÏŞ
+0:if(AIS_IsCanSkill(614)=1){AIS_ToSkill(614);AIS_SetTimes(-1);AIS_SetPRI(29);};å¦‚æœèƒ½ä½¿ç”¨614å·æŠ€èƒ½åˆ™é‡Šæ”¾ï¼Œæ¬¡æ•°ä¸é™ï¼ˆæ™®é€šè¿œç¨‹)
+1:if(AIS_GetAIState()=SATTACK&AIS_Rand()<15&AIS_IsCanSkill(645)=1){AIS_ToSkill(645);AIS_SetTimes(-1);AIS_SetPRI(31);};15ï¼…æœºç‡é‡Šæ”¾645å·æŠ€èƒ½ï¼ˆç¾¤ä½“å¤±æ˜ï¼‰ï¼Œæ¬¡æ•°ä¸é™
+2:if(AIS_GetAIState()=SATTACK&AIS_Rand()<10&AIS_IsCanSkill(1094)=1){AIS_ToSkill(1094);AIS_ToSpeak(329,1);AIS_SetTimes(-1);AIS_SetPRI(31);};30ï¼…æœºç‡è¯´è¯ï¼Œæ¬¡æ•°ä¸é™
+3:if(AIS_GetAIState()=SATTACK&AIS_Rand()>20&AIS_Rand()<30&AIS_IsCanSkill(1094)=1){AIS_ToSkill(1094);AIS_ToSpeak(330,1);AIS_SetTimes(-1);AIS_SetPRI(31);};30ï¼…æœºç‡è¯´è¯ï¼Œæ¬¡æ•°ä¸é™
+4:if(AIS_GetAIState()=SATTACK&AIS_Rand()>70&AIS_Rand()<80&AIS_IsCanSkill(1094)=1){AIS_ToSkill(1094);AIS_ToSpeak(331,1);AIS_SetTimes(-1);AIS_SetPRI(31);};30ï¼…æœºç‡è¯´è¯ï¼Œæ¬¡æ•°ä¸é™
 5:if(AIS_GetAIState()=SATTACK&AIS_Rand()<30&AIS_IsCanSkill(1095)=1){AIS_ToSkill(1095);AIS_SetTimes(-1);AIS_SetPRI(32);};
 6:if(AIS_GetAIState()=SATTACK&AIS_Rand()>50&AIS_Rand()<80&AIS_IsCanSkill(1095)=1){AIS_ToSkill(1096);AIS_SetTimes(-1);AIS_SetPRI(32);};
 [skillend]

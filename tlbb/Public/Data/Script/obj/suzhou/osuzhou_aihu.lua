@@ -1,36 +1,36 @@
---ËÕÖİNPC
---°¬»¢
---Ò»°ã
+--è‹å·NPC
+--è‰¾è™
+--ä¸€èˆ¬
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x001031_g_ScriptId	= 001031
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x001031_OnDefaultEvent( sceneId, selfId, targetId )
 
 	BeginEvent( sceneId )
 		AddText( sceneId, "#{ZSCH_20071018_004}" )
-		AddNumText( sceneId, x001031_g_ScriptId, "ÁìÈ¡³èÎïÕ½¶·³ÆºÅ", 6, 10 )
-		AddNumText( sceneId, x001031_g_ScriptId, "³èÎï³ÆºÅ½éÉÜ", 11, 11 )
+		AddNumText( sceneId, x001031_g_ScriptId, "é¢†å–å® ç‰©æˆ˜æ–—ç§°å·", 6, 10 )
+		AddNumText( sceneId, x001031_g_ScriptId, "å® ç‰©ç§°å·ä»‹ç»", 11, 11 )
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, selfId, targetId )
 
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x001031_OnEventRequest( sceneId, selfId, targetId, eventId )
 
 	if GetNumText() == 10 then
-		--´ò¿ªÕäÊŞÑ¡Ôñ½çÃæ
+		--æ‰“å¼€çå…½é€‰æ‹©ç•Œé¢
 		BeginUICommand( sceneId )
 			UICommand_AddInt( sceneId, targetId )
-			UICommand_AddInt( sceneId, 7 )				--ÕäÊŞ³ÆºÅÁìÈ¡·ÖÖ§
+			UICommand_AddInt( sceneId, 7 )				--çå…½ç§°å·é¢†å–åˆ†æ”¯
 		EndUICommand( sceneId )
-		DispatchUICommand( sceneId, selfId, 3 )	--µ÷ÓÃÕäÊŞ½çÃæ
+		DispatchUICommand( sceneId, selfId, 3 )	--è°ƒç”¨çå…½ç•Œé¢
 	elseif GetNumText() == 11 then
 		x001031_MsgBox( sceneId, selfId, targetId, "#{ZSCH_20071018_006}" )
 	end
@@ -38,12 +38,12 @@ function x001031_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---ÁìÈ¡ÕäÊŞÕ½¶·³ÆºÅ
+--é¢†å–çå…½æˆ˜æ–—ç§°å·
 --**********************************
 function x001031_OnAcceptPetTitle( sceneId, selfId, targetId, petHid, petLid )
 
 	if petHid == nil or petLid == nil then
-		x001031_MsgBox( sceneId, selfId, targetId, "ÇëÑ¡ÔñĞèÒªÁìÈ¡³ÆºÅµÄ³èÎï¡£" )
+		x001031_MsgBox( sceneId, selfId, targetId, "è¯·é€‰æ‹©éœ€è¦é¢†å–ç§°å·çš„å® ç‰©ã€‚" )
 		return
 	end
 	if LuaFnIsPetGrowRateByGUID( sceneId, selfId, petHid, petLid ) == 0 then
@@ -51,16 +51,16 @@ function x001031_OnAcceptPetTitle( sceneId, selfId, targetId, petHid, petLid )
 		return
 	end
 
-	--ÎòĞÔ
+	--æ‚Ÿæ€§
 	local	nSavvy	= GetPetSavvy( sceneId, selfId, petHid, petLid )
 	local	nLevS		= 0
-	--³É³¤ÂÊ
+	--æˆé•¿ç‡
 	local	nGrow		= LuaFnGetPetGrowRateByGUID( sceneId, selfId, petHid, petLid )
 	local	nLevG		= 0
-	--×ÊÖÊ
+	--èµ„è´¨
 	local	nPer		= GetPetPerceptionLevel( sceneId, selfId, petHid, petLid )
 	local	nLevP		= 0
-	--È·¶¨ÈıÎ§µµ´Î
+	--ç¡®å®šä¸‰å›´æ¡£æ¬¡
   if nSavvy ==10  then
 		nLevS				= 3
 	elseif nSavvy >= 8 then
@@ -84,16 +84,16 @@ function x001031_OnAcceptPetTitle( sceneId, selfId, targetId, petHid, petLid )
 	elseif nPer >= 1 then
 		nLevP				= 0
 	end
-	--È·¶¨ÕäÊŞ³ÆºÅID
+	--ç¡®å®šçå…½ç§°å·ID
 	local	nTitle	= 100000 + 100 * nLevS + 10 * nLevG + nLevP
 	local	nRet		= LuaFnSetPetTitle( sceneId, selfId, petHid, petLid, nTitle )
 	if nRet == 1 then
 		x001031_MsgBox( sceneId, selfId, targetId, "#{ZSCH_20071018_010}" )
-		--Ïà¹Ø¹«¸æ
+		--ç›¸å…³å…¬å‘Š
 		local	_, nTLevel, nTName, nTDes	= LuaFnGetPetTitleAttr( sceneId, selfId, petHid, petLid, nTitle )
 		local	szMsg
 		if nTLevel ~= nil and nTLevel > 550 then
-			szMsg			= format( "#{ZSCH_NEW1}#{_INFOUSR%s}#{ZSCH_NEW2}#{_INFOMSG%s}#{ZSCH_NEW3}%s£¡",
+			szMsg			= format( "#{ZSCH_NEW1}#{_INFOUSR%s}#{ZSCH_NEW2}#{_INFOMSG%s}#{ZSCH_NEW3}%sï¼",
 				GetName( sceneId, selfId ),
 				LuaFnGetPetTransferByGUID( sceneId, selfId, petHid, petLid ),
 				nTName )
@@ -106,7 +106,7 @@ function x001031_OnAcceptPetTitle( sceneId, selfId, targetId, petHid, petLid )
 end
 
 --**********************************
---¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+--å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x001031_MsgBox( sceneId, selfId, targetId, str )
 

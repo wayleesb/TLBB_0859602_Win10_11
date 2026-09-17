@@ -24,9 +24,9 @@ function Friend_OnLoad()
 		"2",
 		"3",
 		"4",
-		"ºÚÃûµ¥",
-		"³ğÈË",
-		[8] = "ÁÙÊ±",
+		"é»‘åå•",
+		"ä»‡äºº",
+		[8] = "ä¸´æ—¶",
 	};
 end
 
@@ -140,7 +140,7 @@ function Friend_Show()
 	end
 	this:Show();
 	AxTrace( 0,0, "current mood = "..DataPool:GetMood() );
-	Friend_TargetName:SetText( "#YĞÄÇé:" );
+	Friend_TargetName:SetText( "#Yå¿ƒæƒ…:" );
 	Friend_TargetExplain:SetText( DataPool:GetMood() );
 	Friend_Update();
 	local channel = Friend:GetCurrentTeam();
@@ -191,7 +191,7 @@ function Friend_FriendSelect()
 		return;
 	end
 	if( Friend:GetCurrentTeam() == 6 ) then
-		PushDebugMessage("Óë¶Ô·½Îª³ğÈË¹ØÏµ£¬½ö¿ÉÒÔÊ¹ÓÃÓÒ¼ü²Ëµ¥¡£");		
+		PushDebugMessage("ä¸å¯¹æ–¹ä¸ºä»‡äººå…³ç³»ï¼Œä»…å¯ä»¥ä½¿ç”¨å³é”®èœå•ã€‚");		
 		return;
 	end
 	Friend:SetCurrentSelect( tonumber( index ) );
@@ -228,18 +228,18 @@ function Friend_OpenMenu()
 	end
 end
 
---ÏÔÊ¾×Ô¼ºµÄĞÄÇé
+--æ˜¾ç¤ºè‡ªå·±çš„å¿ƒæƒ…
 function Friend_ViewMood_Clicked()
 	Friend:ViewFeel();
 end
 
---Êó±ê½øÈë°´Å¥
+--é¼ æ ‡è¿›å…¥æŒ‰é’®
 function Friend_ViewMood_MouseEnter()
-		--ÏÔÊ¾tooltips
+		--æ˜¾ç¤ºtooltips
 		if( Friend:IsMoodInHead() == 1)   then
-			Friend_ViewMood:SetToolTip("µã»÷ºó½«Òş²ØÄúÔÚÍ·¶¥ÏÔÊ¾µÄĞÄÇé¡£");
+			Friend_ViewMood:SetToolTip("ç‚¹å‡»åå°†éšè—æ‚¨åœ¨å¤´é¡¶æ˜¾ç¤ºçš„å¿ƒæƒ…ã€‚");
 		else
-			Friend_ViewMood:SetToolTip("µã»÷ºó½«ÔÚÄúµÄÍ·¶¥ÏÔÊ¾ĞÄÇéµÄÄÚÈİ¡£");
+			Friend_ViewMood:SetToolTip("ç‚¹å‡»åå°†åœ¨æ‚¨çš„å¤´é¡¶æ˜¾ç¤ºå¿ƒæƒ…çš„å†…å®¹ã€‚");
 		end
 end
 
@@ -279,7 +279,7 @@ function Friend_Search()
 	if(nNumber~=nil and nNumber>=10) then
 		FriendSearcher:OpenFriendSearch();
 	else
-		PushDebugMessage("ÄúµÄµÈ¼¶²»¹»£¬µ½ÁË10¼¶Äú¾ÍÄÜÊ¹ÓÃºÃÓÑËÑË÷¹¦ÄÜÁË¡£");
+		PushDebugMessage("æ‚¨çš„ç­‰çº§ä¸å¤Ÿï¼Œåˆ°äº†10çº§æ‚¨å°±èƒ½ä½¿ç”¨å¥½å‹æœç´¢åŠŸèƒ½äº†ã€‚");
 	end;
 	
 end

@@ -1,4 +1,4 @@
---帮派战争界面
+--甯淳鎴樹簤鐣岄潰
 
 function ConfraternityWar_PreLoad()
 	this:RegisterEvent("UI_COMMAND");	

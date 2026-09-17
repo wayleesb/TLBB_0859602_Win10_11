@@ -1,28 +1,28 @@
---ÂåÑôNPC
---ÔÂÀÏ
---ÆÕÍ¨
+--æ´›é˜³NPC
+--æœˆè€
+--æ™®é€š
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x000093_g_scriptId = 000093
 
---Ä¿±êNPC
-x000093_g_name	="ÔÂÀÏ"
+--ç›®æ ‡NPC
+x000093_g_name	="æœˆè€"
 
 x000093_StartTime   = 9040
 x000093_EndTime     = 9047
 
---ËùÓµÓÐµÄÊÂ¼þIDÁÐ±í {½á»é, Ñ§Ï°·òÆÞ¼¼ÄÜ, Àë»é, Ç¿ÖÆÀë»é, ¹ºÂòÇëÌû,·òÆÞÎÊ´ð}
-x000093_g_RelationEventList={806003, 806016, 806005, 806004, 806017,888901, 808010} --»é½äÉý¼¶ 808010 zchw
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨ {ç»“å©š, å­¦ä¹ å¤«å¦»æŠ€èƒ½, ç¦»å©š, å¼ºåˆ¶ç¦»å©š, è´­ä¹°è¯·å¸–,å¤«å¦»é—®ç­”}
+x000093_g_RelationEventList={806003, 806016, 806005, 806004, 806017,888901, 808010} --å©šæˆ’å‡çº§ 808010 zchw
 
 --**********************************
---ÊÂ¼þ½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x000093_OnDefaultEvent( sceneId, selfId, targetId )
 	x000093_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼þÁÐ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x000093_UpdateEventList( sceneId, selfId, targetId )
 	BeginEvent(sceneId)
@@ -30,12 +30,12 @@ function x000093_UpdateEventList( sceneId, selfId, targetId )
 		local eventId
 		AddText( sceneId, "#{OBJ_luoyang_0025}" )
 		
-		AddNumText( sceneId, x000093_g_scriptId, "½á»é½éÉÜ", 11, 10 )
-		AddNumText( sceneId, x000093_g_scriptId, "¹ØÓÚÐÄÓÐÁéÏ¬", 11, 11 )
+		AddNumText( sceneId, x000093_g_scriptId, "ç»“å©šä»‹ç»", 11, 10 )
+		AddNumText( sceneId, x000093_g_scriptId, "å…³äºŽå¿ƒæœ‰çµçŠ€", 11, 11 )
 		
 		local curDayTime = GetDayTime()
 		if (curDayTime>=x000093_StartTime and curDayTime<x000093_EndTime) then
-			AddNumText(sceneId,x000093_g_scriptId,"¹ØÓÚ°®ÉñÖ®ÎÇ»î¶¯",11,12)
+			AddNumText(sceneId,x000093_g_scriptId,"å…³äºŽçˆ±ç¥žä¹‹å»æ´»åŠ¨",11,12)
 		end
 		
 		for i, eventId in x000093_g_RelationEventList do
@@ -46,7 +46,7 @@ function x000093_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼þÁÐ±íÑ¡ÖÐÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x000093_OnEventRequest( sceneId, selfId, targetId, eventId )
 
@@ -93,7 +93,7 @@ function x000093_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æŽ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x000093_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 	local i
@@ -107,12 +107,12 @@ function x000093_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x000093_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 	local i
 	local findId
-	--¾Ü¾øÖ®ºó£¬Òª·µ»ØNPCµÄÊÂ¼þÁÐ±í
+	--æ‹’ç»ä¹‹åŽï¼Œè¦è¿”å›žNPCçš„äº‹ä»¶åˆ—è¡¨
 	for i, findId in x000093_g_RelationEventList do
 		if missionScriptId == findId then
 			x000093_UpdateEventList( sceneId, selfId, targetId )

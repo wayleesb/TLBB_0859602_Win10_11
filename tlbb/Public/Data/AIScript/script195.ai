@@ -1,14 +1,14 @@
-;ÄÜÊ¹ÓÃº®±ùÖä£¨553£©¡¢±ù±¬£¨557£©£¬ÑªÉÙÓÚÒ»°ë·¢¶¯´óÑ©±À£¨623£©£¬Ò»¶¨¼¸ÂÊÓÃÊ§»êÂäÆÇ£¨607£©É¢¹¦
+;èƒ½ä½¿ç”¨å¯’å†°å’’ï¼ˆ553ï¼‰ã€å†°çˆ†ï¼ˆ557ï¼‰ï¼Œè¡€å°‘äºŽä¸€åŠå‘åŠ¨å¤§é›ªå´©ï¼ˆ623ï¼‰ï¼Œä¸€å®šå‡ çŽ‡ç”¨å¤±é­‚è½é­„ï¼ˆ607ï¼‰æ•£åŠŸ
 [common]
 [commonend]
 
-;×¢ÒâÎïÀí¹¥»÷¼¼ÄÜÓÅÏÈ¼¶Ó¦¸Ã±ÈÔ¶³Ì¼¼ÄÜÓÅÏÈ¼¶¸ß
+;æ³¨æ„ç‰©ç†æ”»å‡»æŠ€èƒ½ä¼˜å…ˆçº§åº”è¯¥æ¯”è¿œç¨‹æŠ€èƒ½ä¼˜å…ˆçº§é«˜
 [skill]
-0:if(AIS_IsCanSkill(0)=1){AIS_ToSkill(0);AIS_SetTimes(-1);AIS_SetPRI(30);};Èç¹ûÄÜÊ¹ÓÃ0ºÅ¼¼ÄÜÔòÊÍ·Å£¬´ÎÊý²»ÏÞ£¨ÆÕÍ¨¹¥»÷£©
-1:if(AIS_GetAIState()=SATTACK&AIS_IsCanSkill(553)=1&AIS_Rand()<10&AIS_GetHP()<90){AIS_ToSkill(553);AIS_SetTimes(30);AIS_SetPRI(31);};Ê¹ÓÃº®±ùÖä£¨553£©
-2:if(AIS_GetAIState()=SATTACK&AIS_GetHP()<50&AIS_IsCanSkill(623)=1&AIS_Rand()<20){AIS_ToSkill(623);AIS_SetTimes(8);AIS_SetPRI(34);};ÉÙÓÚ°ëÑªµÄÇé¿öÏÂ20%µÄ»úÂÊÊÍ·Å623ºÅ¼¼ÄÜ
-3:if(AIS_GetAIState()=SATTACK&AIS_Rand()<10&AIS_IsCanSkill(607)=1&AIS_GetHP()<80){AIS_ToSkill(607);AIS_SetTimes(20);AIS_SetPRI(35);};10%ÊÍ·ÅÊ§»êÂäÆÇ£¨607£©É¢¹¦
-4:if(AIS_GetAIState()=SATTACK&AIS_IsCanSkill(557)=1&AIS_Rand()<10&AIS_GetHP()<70){AIS_ToSkill(557);AIS_SetTimes(20);AIS_SetPRI(32);};Ê¹ÓÃ±ù±¬£¨557£©
+0:if(AIS_IsCanSkill(0)=1){AIS_ToSkill(0);AIS_SetTimes(-1);AIS_SetPRI(30);};å¦‚æžœèƒ½ä½¿ç”¨0å·æŠ€èƒ½åˆ™é‡Šæ”¾ï¼Œæ¬¡æ•°ä¸é™ï¼ˆæ™®é€šæ”»å‡»ï¼‰
+1:if(AIS_GetAIState()=SATTACK&AIS_IsCanSkill(553)=1&AIS_Rand()<10&AIS_GetHP()<90){AIS_ToSkill(553);AIS_SetTimes(30);AIS_SetPRI(31);};ä½¿ç”¨å¯’å†°å’’ï¼ˆ553ï¼‰
+2:if(AIS_GetAIState()=SATTACK&AIS_GetHP()<50&AIS_IsCanSkill(623)=1&AIS_Rand()<20){AIS_ToSkill(623);AIS_SetTimes(8);AIS_SetPRI(34);};å°‘äºŽåŠè¡€çš„æƒ…å†µä¸‹20%çš„æœºçŽ‡é‡Šæ”¾623å·æŠ€èƒ½
+3:if(AIS_GetAIState()=SATTACK&AIS_Rand()<10&AIS_IsCanSkill(607)=1&AIS_GetHP()<80){AIS_ToSkill(607);AIS_SetTimes(20);AIS_SetPRI(35);};10%é‡Šæ”¾å¤±é­‚è½é­„ï¼ˆ607ï¼‰æ•£åŠŸ
+4:if(AIS_GetAIState()=SATTACK&AIS_IsCanSkill(557)=1&AIS_Rand()<10&AIS_GetHP()<70){AIS_ToSkill(557);AIS_SetTimes(20);AIS_SetPRI(32);};ä½¿ç”¨å†°çˆ†ï¼ˆ557ï¼‰
 [skillend]
 
 [beskill]

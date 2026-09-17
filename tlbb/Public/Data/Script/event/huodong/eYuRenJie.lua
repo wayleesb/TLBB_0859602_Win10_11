@@ -1,37 +1,37 @@
 --------------------------------------------
---ÓŞÈË½Ú»î¶¯½Å±¾
---Created By ĞÅµÂ·å
---Ì¨Íå°æ/Ïã¸Û°æ 50 2009-02-17
+--æ„šäººèŠ‚æ´»åŠ¨è„šæœ¬
+--Created By ä¿¡å¾·å³°
+--å°æ¹¾ç‰ˆ/é¦™æ¸¯ç‰ˆ 50 2009-02-17
 --------------------------------------------
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x808079_g_ScriptId = 808079
 
-x808079_g_StartDayTime	= 20090325				--»î¶¯¿ªÊ¼Ê±¼ä 2009-03-25
-x808079_g_EndDayTime	= 20090405				--»î¶¯½áÊøÊ±¼ä 2009-04-05
+x808079_g_StartDayTime	= 20090325				--æ´»åŠ¨å¼€å§‹æ—¶é—´ 2009-03-25
+x808079_g_EndDayTime	= 20090405				--æ´»åŠ¨ç»“æŸæ—¶é—´ 2009-04-05
 
---ÓŞÈË±¦ÖéID
+--æ„šäººå®ç ID
 x808079_g_YuRenBaoZhuID = 30501161
---Ã¿´ÎÁìÈ¡ÓŞÈË±¦Öé¸öÊı
+--æ¯æ¬¡é¢†å–æ„šäººå®ç ä¸ªæ•°
 x808079_g_YuRenBaoZhuCount = 1
 
---ÓŞÈË±äÉíÍè
+--æ„šäººå˜èº«ä¸¸
 x808079_g_YuRenBianShenWanID = {38000006, 38000007, 38000008}
---Ã¿´ÎÁìÈ¡ÓŞÈË±äÉíÍè¸öÊı
+--æ¯æ¬¡é¢†å–æ„šäººå˜èº«ä¸¸ä¸ªæ•°
 x808079_g_YuRenBianShenWanCount = 1
 
---ÓŞÈËÀÖÍ¸¿¨
+--æ„šäººä¹é€å¡
 x808079_g_YuRenLeTouKaID = 30504052
---Ã¿´ÎÁìÈ¡ÓŞÈËÀÖÍ¸¿¨¸öÊı
+--æ¯æ¬¡é¢†å–æ„šäººä¹é€å¡ä¸ªæ•°
 x808079_g_YuRenLeTouKaCount = 1
 
 --BUFF ID
-x808079_g_ImpactID = 20002		--²âÊÔBUFF£º8040
+x808079_g_ImpactID = 20002		--æµ‹è¯•BUFFï¼š8040
 
---µÍµÈ¼¶ÏŞÖÆ
+--ä½ç­‰çº§é™åˆ¶
 x808079_g_LowLevel = 10
 
---¾­Ñé½±Àø
+--ç»éªŒå¥–åŠ±
 x808079_g_AwardExp = {
 					5458,		--10
 					6082,
@@ -145,13 +145,13 @@ x808079_g_AwardExp = {
 					387450					
 						}
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x808079_OnDefaultEvent( sceneId, selfId, targetId )
 
 	local ItemID = GetNumText()
 	
-	if(ItemID == 0) then		--µã»÷¡°²Î¼ÓÓŞÈË½Ú»î¶¯¡±
+	if(ItemID == 0) then		--ç‚¹å‡»â€œå‚åŠ æ„šäººèŠ‚æ´»åŠ¨â€
 		BeginEvent(sceneId)
 			AddText(sceneId,"#{TWYRJ_090217_8}")
 			AddNumText( sceneId, x808079_g_ScriptId, "#{TWYRJ_090217_2}",  6, 1 )
@@ -160,24 +160,24 @@ function x808079_OnDefaultEvent( sceneId, selfId, targetId )
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 		
-	elseif(ItemID == 1) then	--µã»÷"ÁìÈ¡ÓŞÈË½ÚµÀ¾ß"
+	elseif(ItemID == 1) then	--ç‚¹å‡»"é¢†å–æ„šäººèŠ‚é“å…·"
 		x808079_GiveItems( sceneId, selfId, targetId )
 		
-	elseif(ItemID == 2) then	--µã»÷"²Î¼ÓÓŞÈË½Ú³é½±"
+	elseif(ItemID == 2) then	--ç‚¹å‡»"å‚åŠ æ„šäººèŠ‚æŠ½å¥–"
 		x808079_GiveExp( sceneId, selfId, targetId )
 		
-	elseif(ItemID == 3) then	--µã»÷¡°ÓŞÈË½Ú»î¶¯°ïÖú¡±
+	elseif(ItemID == 3) then	--ç‚¹å‡»â€œæ„šäººèŠ‚æ´»åŠ¨å¸®åŠ©â€
 		x808079_ReturnMsg( sceneId, selfId, targetId, "#{TWYRJ_090217_9}" )
 	end
 	
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x808079_OnEnumerate( sceneId, selfId, targetId )
 	
-	--ÔÚÖ¸¶¨Ê±¼äÄÚ£¬ÏÔÊ¾¡°²Î¼ÓÓŞÈË½Ú»î¶¯¡±°´Å¥
+	--åœ¨æŒ‡å®šæ—¶é—´å†…ï¼Œæ˜¾ç¤ºâ€œå‚åŠ æ„šäººèŠ‚æ´»åŠ¨â€æŒ‰é’®
 	if x808079_CheckRightTime( ) ~= 0 then
 		AddNumText(sceneId, x808079_g_ScriptId, "#{TWYRJ_090217_5}", 1, 0 )
 	end
@@ -185,7 +185,7 @@ function x808079_OnEnumerate( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²âµ±Ç°ÊÇ·ñÊÇ»î¶¯Ê±¼ä
+--æ£€æµ‹å½“å‰æ˜¯å¦æ˜¯æ´»åŠ¨æ—¶é—´
 --**********************************
 function x808079_CheckRightTime()
 
@@ -200,27 +200,27 @@ end
 
 function x808079_GiveItemsPrecheck( sceneId, selfId, targetId )
 	
-	--ÊÇ·ñ´ïµ½10¼¶
+	--æ˜¯å¦è¾¾åˆ°10çº§
 	if GetLevel( sceneId, selfId ) < x808079_g_LowLevel then
 		x808079_ReturnMsg( sceneId, selfId, targetId, "#{TWYRJ_090217_10}" )
 		return 0
 	end
 	
-	--¼ì²âµ±ÌìÊÇ·ñÁìÈ¡¹ıÎïÆ·£¬Ã¿ÌìÒ»´Î
+	--æ£€æµ‹å½“å¤©æ˜¯å¦é¢†å–è¿‡ç‰©å“ï¼Œæ¯å¤©ä¸€æ¬¡
 	local lastDate = GetMissionData( sceneId, selfId, MD_YURENJIE_LASTTIME )
 	local curDate = GetTime2Day( )
-	if curDate <= lastDate then	--Áì¹ıÒ»´ÎÁË
+	if curDate <= lastDate then	--é¢†è¿‡ä¸€æ¬¡äº†
 		x808079_ReturnMsg( sceneId, selfId, targetId, "#{TWYRJ_090217_11}" )
 		return 0
 	end
 	
-	--¼ì²éÊÇ·ñÓĞBUFF
+	--æ£€æŸ¥æ˜¯å¦æœ‰BUFF
 	if LuaFnHaveImpactOfSpecificDataIndex( sceneId, selfId, x808079_g_ImpactID ) == 1 then
 		x808079_ReturnMsg( sceneId, selfId, targetId, "#{TWYRJ_090217_12}" );
 		return 0
 	end
 	
-	--¼ì²éµÀ¾ßÀ¸ÊÇ·ñÓĞ¿ÕÎ»
+	--æ£€æŸ¥é“å…·æ æ˜¯å¦æœ‰ç©ºä½
 	local needBagSpace = x808079_g_YuRenBaoZhuCount + x808079_g_YuRenBianShenWanCount + x808079_g_YuRenLeTouKaCount
 	if ( LuaFnGetPropertyBagSpace( sceneId, selfId ) < needBagSpace ) then
 		x808079_ReturnMsg( sceneId, selfId, targetId, "#{TWYRJ_090217_15}" )
@@ -232,78 +232,78 @@ function x808079_GiveItemsPrecheck( sceneId, selfId, targetId )
 end
 
 --**********************************
---·¢·ÅÓŞÈË±¦Öé
+--å‘æ”¾æ„šäººå®ç 
 --**********************************
 function x808079_GiveItems(sceneId, selfId, targetId)
 	
-	--Ìõ¼şÅĞ¶Ï
+	--æ¡ä»¶åˆ¤æ–­
 	if x808079_GiveItemsPrecheck( sceneId, selfId, targetId ) ~= 1 then
 		return
 	end
 	
-	--Ìõ¼şÅĞ¶ÏÍ¨¹ı
+	--æ¡ä»¶åˆ¤æ–­é€šè¿‡
 	
 	
-	--¼ÇÂ¼ÁìÈ¡µÄÊ±¼ä,±£Ö¤Ò»ÌìÒ»´Î
+	--è®°å½•é¢†å–çš„æ—¶é—´,ä¿è¯ä¸€å¤©ä¸€æ¬¡
 	local curDate = GetTime2Day( )
 	SetMissionData( sceneId, selfId, MD_YURENJIE_LASTTIME, curDate )
 	
-	--·¢·ÅÎïÆ·	
-	--¼ÓÓŞÈË±¦Öé	
+	--å‘æ”¾ç‰©å“	
+	--åŠ æ„šäººå®ç 	
 	TryRecieveItem( sceneId, selfId, x808079_g_YuRenBaoZhuID, QUALITY_MUST_BE_CHANGE )
 	
-	--¼ÓÓŞÈËÀÖÍ¸¿¨
+	--åŠ æ„šäººä¹é€å¡
 	TryRecieveItem( sceneId, selfId, x808079_g_YuRenLeTouKaID, QUALITY_MUST_BE_CHANGE )
 	
-	--¼ÓÓŞÈË±äÉíÍè£¨Ëæ»ú»ñµÃÒ»¸ö£©
+	--åŠ æ„šäººå˜èº«ä¸¸ï¼ˆéšæœºè·å¾—ä¸€ä¸ªï¼‰
 	local roll = random( 1, getn( x808079_g_YuRenBianShenWanID ) )
 	local yuRenBianShenWanID = x808079_g_YuRenBianShenWanID[roll]
 	if yuRenBianShenWanID ~= nil then
 		bagIndex = TryRecieveItem( sceneId, selfId, yuRenBianShenWanID, QUALITY_MUST_BE_CHANGE )
 		if bagIndex ~= -1 then
-			--ÉèÖÃÎïÆ·ËùÓĞÕß
+			--è®¾ç½®ç‰©å“æ‰€æœ‰è€…
 			local guid = LuaFnGetGUID( sceneId, selfId )
 			SetBagItemParam( sceneId, selfId, bagIndex, 4, 2, guid - 2147483648 )
-			--ÉèÖÃÎïÆ·´´½¨Õß£ºÓÃÓÚÀñÆ·ÀàÎïÆ·ÔÚtooltipsÉÏÏÔÊ¾"xxxµÄÀñÆ·"
+			--è®¾ç½®ç‰©å“åˆ›å»ºè€…ï¼šç”¨äºç¤¼å“ç±»ç‰©å“åœ¨tooltipsä¸Šæ˜¾ç¤º"xxxçš„ç¤¼å“"
 			LuaFnSetItemCreator( sceneId, selfId, bagIndex, GetName( sceneId, selfId ) )
 			LuaFnRefreshItemInfo( sceneId, selfId, bagIndex )
 		end
 	end
 	
-	--¼ÓBUFF
+	--åŠ BUFF
 	LuaFnSendSpecificImpactToUnit( sceneId, selfId, selfId, selfId, x808079_g_ImpactID, 0 )
 	
-	--ÌáÊ¾	
+	--æç¤º	
 	x808079_ReturnMsg( sceneId, selfId, targetId, "#{TWYRJ_090217_17}" )
 	
-	--Í³¼ÆÎïÆ·ÁìÈ¡ÈË´Î
+	--ç»Ÿè®¡ç‰©å“é¢†å–äººæ¬¡
 	AuditYuRenJie(sceneId, selfId)
 end
 
 function x808079_GiveExpPrechek(sceneId, selfId, targetId)
 
-	--¼ì²éÊÇ·ñÓĞÎïÆ·
+	--æ£€æŸ¥æ˜¯å¦æœ‰ç‰©å“
 	if GetItemCount( sceneId, selfId, x808079_g_YuRenLeTouKaID ) == 0 then
 		x808079_ReturnMsg(sceneId, selfId, targetId, "#{TWYRJ_090217_18}");
 		return 0
 	end
 	
-	--¼ì²éÊÇ·ñÓĞ¿ÉÓÃÎïÆ·
+	--æ£€æŸ¥æ˜¯å¦æœ‰å¯ç”¨ç‰©å“
 	if LuaFnGetAvailableItemCount(sceneId, selfId, x808079_g_YuRenLeTouKaID) < x808079_g_YuRenLeTouKaCount then
 		x808079_ReturnMsg(sceneId, selfId, targetId, "#{ResultText_158}");
 		return 0
 	end
 	
-	--ÅĞ¶Ï½ñÌìÊÇ·ñÁì¹ı¾­Ñé
+	--åˆ¤æ–­ä»Šå¤©æ˜¯å¦é¢†è¿‡ç»éªŒ
 	local lastDate = GetMissionData( sceneId, selfId, MD_TW_YURENJIE_LAST_GET_EXP_DATE )
 	local curDate = GetTime2Day( )
 	
-	if curDate <= lastDate then	--Áì¹ıÒ»´ÎÁË
+	if curDate <= lastDate then	--é¢†è¿‡ä¸€æ¬¡äº†
 		x808079_ReturnMsg( sceneId, selfId, targetId, "#{TWYRJ_090217_19}" )
 		return 0
 	end
 	
-	--¼ì²éÊÇ·ñÓĞBUFF
+	--æ£€æŸ¥æ˜¯å¦æœ‰BUFF
 	if LuaFnHaveImpactOfSpecificDataIndex( sceneId, selfId, x808079_g_ImpactID ) == 1 then
 		x808079_ReturnMsg( sceneId, selfId, targetId, "#{TWYRJ_090217_20}" );
 		return 0
@@ -315,24 +315,24 @@ end
 
 function x808079_GiveExp(sceneId, selfId, targetId)
 	
-	--Ìõ¼ş¼ì²é
+	--æ¡ä»¶æ£€æŸ¥
 	if x808079_GiveExpPrechek( sceneId, selfId, targetId ) ~= 1 then
 		return
 	end
 	
-	--Ìõ¼ş¼ì²éÍ¨¹ı
+	--æ¡ä»¶æ£€æŸ¥é€šè¿‡
 	
-	--¼ÇÂ¼¾­ÑéÁìÈ¡µÄÊ±¼ä,±£Ö¤Ò»ÌìÒ»´Î
+	--è®°å½•ç»éªŒé¢†å–çš„æ—¶é—´,ä¿è¯ä¸€å¤©ä¸€æ¬¡
 	local curDate = GetTime2Day( )
 	SetMissionData( sceneId, selfId, MD_TW_YURENJIE_LAST_GET_EXP_DATE, curDate )
 	
-	--¿ÛÎïÆ·
+	--æ‰£ç‰©å“
 	if LuaFnDelAvailableItem( sceneId, selfId, x808079_g_YuRenLeTouKaID, x808079_g_YuRenLeTouKaCount ) == 0 then
 		x808079_ShowMsg( sceneId, selfId, "del fail")
 		return
 	end
 	
-	--¼Ó¾­Ñé
+	--åŠ ç»éªŒ
 	local level = GetLevel( sceneId, selfId )
 	local index = level - 9
 	local AddExp = 0
@@ -343,12 +343,12 @@ function x808079_GiveExp(sceneId, selfId, targetId)
 	
 	x808079_ReturnMsg( sceneId, selfId, targetId, "#{TWYRJ_090217_21}#G"..AddExp )
 	
-	--Í³¼ÆÎïÆ·ÁìÈ¡ÈË´Î
+	--ç»Ÿè®¡ç‰©å“é¢†å–äººæ¬¡
 	AuditYuRenJieExp( sceneId, selfId, AddExp )
 end
 
 --**********************************
---¸øÍæ¼Ò·¢ÓÊ¼ş
+--ç»™ç©å®¶å‘é‚®ä»¶
 --**********************************
 function x808079_OnPlayerLogin( sceneId, selfId )
 	
@@ -364,7 +364,7 @@ function x808079_OnPlayerLogin( sceneId, selfId )
 end
 
 --**********************************
---¹Ø±Õ¶Ô»°¿ò
+--å…³é—­å¯¹è¯æ¡†
 --**********************************
 function x808079_CloseDlg(sceneId, selfId, targetId)
 
@@ -376,7 +376,7 @@ function x808079_CloseDlg(sceneId, selfId, targetId)
 end
 
 --**********************************
---ĞÅÏ¢ÌáÊ¾
+--ä¿¡æ¯æç¤º
 --**********************************
 function x808079_ShowMsg( sceneId, selfId, msg )
 
@@ -388,7 +388,7 @@ function x808079_ShowMsg( sceneId, selfId, msg )
 end
 
 --**********************************
---NPC·µ»ØÏûÏ¢
+--NPCè¿”å›æ¶ˆæ¯
 --**********************************
 function x808079_ReturnMsg( sceneId, selfId, targetId, msg )
 

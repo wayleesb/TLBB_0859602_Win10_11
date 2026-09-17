@@ -2,12 +2,12 @@ local g_uitype = 1;
 local g_serverScriptId = 311111;
 local g_serverNpcId = -1;
 local g_clientNpcId = -1;
-local g_selidx = -1;						-- µ±Ç°Ñ¡ÔñµÄÕäÊŞ
-local g_selidx_jns = -1;				-- µ±Ç°µÀ¾ßÀ¸Ñ¡ÔñµÄ¼¼ÄÜÊé£¨Ä¿Ç°µÀ¾ßÀ¸Ö»ÓĞÒ»¸ñ£©
-local	g_selidx_ynd = -1;				-- µ±Ç°µÀ¾ßÀ¸Ñ¡ÔñµÄÑÓÄêµ¤£¨Ä¿Ç°µÀ¾ßÀ¸Ö»ÓĞÒ»¸ñ£©
-local g_stduySkill = false;			-- ÊÇ·ñÒÑ¾­Ñ§Ï°¼¼ÄÜ
+local g_selidx = -1;						-- å½“å‰é€‰æ‹©çš„çå…½
+local g_selidx_jns = -1;				-- å½“å‰é“å…·æ é€‰æ‹©çš„æŠ€èƒ½ä¹¦ï¼ˆç›®å‰é“å…·æ åªæœ‰ä¸€æ ¼ï¼‰
+local	g_selidx_ynd = -1;				-- å½“å‰é“å…·æ é€‰æ‹©çš„å»¶å¹´ä¸¹ï¼ˆç›®å‰é“å…·æ åªæœ‰ä¸€æ ¼ï¼‰
+local g_stduySkill = false;			-- æ˜¯å¦å·²ç»å­¦ä¹ æŠ€èƒ½
 local MAX_OBJ_DISTANCE = 3.0;
-local g_DefaultTxt = "Çë½«ÒªÊ¹ÓÃµÄµÀ¾ßÍÏ×§µ½Ç°ÃæµÄµÀ¾ß¿òÖĞ¡£";
+local g_DefaultTxt = "è¯·å°†è¦ä½¿ç”¨çš„é“å…·æ‹–æ‹½åˆ°å‰é¢çš„é“å…·æ¡†ä¸­ã€‚";
 local g_tlvcostmoney = {};
 local g_tbabaymoney = {};
 local g_petSkillStudyMoreMoney = 990000
@@ -17,7 +17,7 @@ local FUNCTION_ACCNAME = {};
 
 local UITYPE_LIANSHOUDAN = 800107
 local UITYPE_ZHUANXINGDAN = 800108
-local CurUIType = -1       --800107ÎªÕäÊŞÏ´µã½çÃæ
+local CurUIType = -1       --800107ä¸ºçå…½æ´—ç‚¹ç•Œé¢
 
 function PetSkillStudy_PreLoad()
 	this:RegisterEvent("UI_COMMAND");
@@ -26,18 +26,18 @@ function PetSkillStudy_PreLoad()
 	this:RegisterEvent("UPDATE_PET_PAGE");
 	this:RegisterEvent("DELETE_PET");
 	this:RegisterEvent("OBJECT_CARED_EVENT");	
---	this:RegisterEvent("CONFIRM_PETSKILLSTUDY");				-- ¸ÃÊÂ¼şÔÚ MessageBox_Self ½çÃæÖĞµÄ PET_SKILL_STUDY_CONFIRM ÊÂ¼şÖĞ´¥·¢
+--	this:RegisterEvent("CONFIRM_PETSKILLSTUDY");				-- è¯¥äº‹ä»¶åœ¨ MessageBox_Self ç•Œé¢ä¸­çš„ PET_SKILL_STUDY_CONFIRM äº‹ä»¶ä¸­è§¦å‘
 end
 
 function PetSkillStudy_OnLoad()
-	PETSKILLSTUDY_ACCBTN[1] = {PetSkillStudy_Skill1, "", -1, ""}; --{ActionButton¿Ø¼ş,Ë÷ÒıµÄÀàĞÍ,Ë÷ÒıÖµ,¹¦ÄÜµÄÀàĞÍ}
+	PETSKILLSTUDY_ACCBTN[1] = {PetSkillStudy_Skill1, "", -1, ""}; --{ActionButtonæ§ä»¶,ç´¢å¼•çš„ç±»å‹,ç´¢å¼•å€¼,åŠŸèƒ½çš„ç±»å‹}
 	--PETSKILLSTUDY_ACCBTN[2] = {PetSkillStudy_Skill2, "", -1, ""};
 	--PETSKILLSTUDY_ACCBTN[3] = {PetSkillStudy_Skill3, "", -1, ""};
 	
-	--"S"		¼¼ÄÜÊéÑ§Ï°
-	--"R"		»¹Í¯
-	--"A"		ÊÙÃüÑÓ³¤
-	--"L"   	Á¶ÊŞµ¤
+	--"S"		æŠ€èƒ½ä¹¦å­¦ä¹ 
+	--"R"		è¿˜ç«¥
+	--"A"		å¯¿å‘½å»¶é•¿
+	--"L"   	ç‚¼å…½ä¸¹
 	FUNCTION_ACCNAME = {"S", "R", "A"};
 	g_tlvcostmoney = {
 		[5]=1000,
@@ -70,7 +70,7 @@ end
 
 function PetSkillStudy_OnEvent(event)
 	
-	--µ÷ÊÔÓÃ£º´òÓ¡µã»÷¿Ø¼şºóËù·¢ÉúµÄÊÂ¼ş
+	--è°ƒè¯•ç”¨ï¼šæ‰“å°ç‚¹å‡»æ§ä»¶åæ‰€å‘ç”Ÿçš„äº‹ä»¶
 	--AxTrace( 6, 0, event )
 	--PushDebugMessage(event);
 	
@@ -86,7 +86,7 @@ function PetSkillStudy_OnEvent(event)
 		PetSkillStudy_Hide();
 	elseif ( event == "OBJECT_CARED_EVENT") then
 		PetSkillStudy_CareEventHandle(arg0,arg1,arg2);
---	Ê¹ÓÃĞÂµÄÕäÊŞÑ§Ï°¼¼ÄÜ½çÃæ£¬´Ë½çÃæ²»ÔÙÏìÓ¦Ñ§Ï°È·ÈÏÏûÏ¢
+--	ä½¿ç”¨æ–°çš„çå…½å­¦ä¹ æŠ€èƒ½ç•Œé¢ï¼Œæ­¤ç•Œé¢ä¸å†å“åº”å­¦ä¹ ç¡®è®¤æ¶ˆæ¯
 --	elseif ( event == "CONFIRM_PETSKILLSTUDY") then
 --		PetSkillStudy_ConfirmPetSkillStudy()
 	end
@@ -97,10 +97,10 @@ function PetSkillStudy_OnUICommand(arg0)
 	CurUIType = -1
 	
 	PetSkillStudy_Skill1:Show();--[tx47256]default behavor: itembox show	
-	--µ÷ÊÔÓÃ£¬ÅĞ¶Ï°´µÄÄÄ¸ö¹¦ÄÜ
+	--è°ƒè¯•ç”¨ï¼Œåˆ¤æ–­æŒ‰çš„å“ªä¸ªåŠŸèƒ½
 	--PushDebugMessage(op);
 	
-	--ÕäÊŞ¼¼ÄÜÑ§Ï°¡¢»¹Í¯¡¢ÑÓ³¤ÊÙÃü¡¢Ñ±Ñø¹²ÓÃÍ¬Ò»¸ö½çÃæ
+	--çå…½æŠ€èƒ½å­¦ä¹ ã€è¿˜ç«¥ã€å»¶é•¿å¯¿å‘½ã€é©¯å…»å…±ç”¨åŒä¸€ä¸ªç•Œé¢
 	if( op == 3 ) then
 		g_serverNpcId = Get_XParam_INT(0);
 		g_clientNpcId = Target:GetServerId2ClientId(g_serverNpcId);
@@ -108,10 +108,10 @@ function PetSkillStudy_OnUICommand(arg0)
 		this:CareObject(g_clientNpcId, 1, "PetSkillStudy");
 		g_uitype = Get_XParam_INT(1);
 		g_selidx = -1;
-		PetSkillStudy_Hide();							--ÎªÁË±ÜÃâÊ¹ÓÃ²»Í¬¹¦ÄÜÊ±³èÎïºÍµÀ¾ß»¹´æÔÚ£¬ÏÈ¹Ø±Õ´°¿Ú£¬ÔÙÖØĞÂ´ò¿ª´°¿Ú
+		PetSkillStudy_Hide();							--ä¸ºäº†é¿å…ä½¿ç”¨ä¸åŒåŠŸèƒ½æ—¶å® ç‰©å’Œé“å…·è¿˜å­˜åœ¨ï¼Œå…ˆå…³é—­çª—å£ï¼Œå†é‡æ–°æ‰“å¼€çª—å£
 		PetSkillStudy_Show();		
 	
-	--ÕäÊŞÏ´µã	
+	--çå…½æ´—ç‚¹	
 	elseif( op == UITYPE_LIANSHOUDAN ) then
 		g_serverNpcId = Get_XParam_INT(0);
 		g_clientNpcId = Target:GetServerId2ClientId(g_serverNpcId);
@@ -122,9 +122,9 @@ function PetSkillStudy_OnUICommand(arg0)
 		Variable:SetVariable("PetStudyType", tostring(g_uitype), 1)--[tx46111]
 		PetSkillStudy_ShowReset()
 		
-		--Ğ»ãp 47505 begin
+		--è°¢é‰· 47505 begin
 		g_selidx = -1;
-		--Ğ»ãp 47505 end
+		--è°¢é‰· 47505 end
 		
 	--elseif( op == UITYPE_ZHUANXINGDAN ) then
 	--	g_serverNpcId = Get_XParam_INT(0);
@@ -152,8 +152,8 @@ function PetSkillStudy_OnUICommand(arg0)
 	end
 end
 
-function PetSkillStudy_ShowReset()  --ÏÔÊ¾Ï´µã½çÃæ
-	--¿Ø¼şÇå³ı²Ù×÷
+function PetSkillStudy_ShowReset()  --æ˜¾ç¤ºæ´—ç‚¹ç•Œé¢
+	--æ§ä»¶æ¸…é™¤æ“ä½œ
 	
 	AxTrace( 1, 0, "PetSkillStudy_ShowReset" )
 	
@@ -167,16 +167,16 @@ function PetSkillStudy_ShowReset()  --ÏÔÊ¾Ï´µã½çÃæ
 			PETSKILLSTUDY_ACCBTN[i][3] = -1;
 	end
 	
-	PetSkillStudy_SkillType_Text:SetText("#gFF0FA0ÕäÊŞÏ´µã");
+	PetSkillStudy_SkillType_Text:SetText("#gFF0FA0çå…½æ´—ç‚¹");
 	PetSkillStudy_SkillType_Text:Show();
-	PetSkillStudy_Accept:SetText("È·ÈÏ");
+	PetSkillStudy_Accept:SetText("ç¡®è®¤");
 	PetSkillStudy_Accept:Enable();
 
 	PetSkillStudy_Money:SetProperty("MoneyNumber", "");
 	PetSkillStudy_Money:Hide()
-	PetSkillStudy_Static3:SetText("ÎŞĞèÏûºÄ½ğÇ®")
+	PetSkillStudy_Static3:SetText("æ— éœ€æ¶ˆè€—é‡‘é’±")
 	--PetSkillStudy_Money:Show();
-	--PetSkillStudy_Static3:SetText("ĞèÒª½ğÇ®");
+	--PetSkillStudy_Static3:SetText("éœ€è¦é‡‘é’±");
 	PetSkillStudy_MultiIMEEditBox:Hide();
 	PetSkillStudy_Text1:SetText(g_DefaultTxt);
 	PetSkillStudy_Text1:Show();
@@ -185,12 +185,12 @@ function PetSkillStudy_ShowReset()  --ÏÔÊ¾Ï´µã½çÃæ
 	this:Show();
 	Pet:ShowPetList(1);
 end
-function PetSkillStudy_SetButtonAccName_Reset()  --ÏÔÊ¾Ï´µã½çÃæ
+function PetSkillStudy_SetButtonAccName_Reset()  --æ˜¾ç¤ºæ´—ç‚¹ç•Œé¢
 	PETSKILLSTUDY_ACCBTN[1][1]:SetProperty("DragAcceptName", "T"..(1).."L" );
 end
 
-function PetSkillStudy_ShowZhuanxingdan() --×ªĞÔµ¤½çÃæ
-	--¿Ø¼şÇå³ı²Ù×÷
+function PetSkillStudy_ShowZhuanxingdan() --è½¬æ€§ä¸¹ç•Œé¢
+	--æ§ä»¶æ¸…é™¤æ“ä½œ
 	PetSkillStudy_PetModel:SetFakeObject( "" );
 	PetSkillStudy_Unlock();
 	for i=1,1 do
@@ -201,16 +201,16 @@ function PetSkillStudy_ShowZhuanxingdan() --×ªĞÔµ¤½çÃæ
 			PETSKILLSTUDY_ACCBTN[i][3] = -1;
 	end
 	
-	PetSkillStudy_SkillType_Text:SetText("#gFF0FA0»¹Í¯µ¤");
+	PetSkillStudy_SkillType_Text:SetText("#gFF0FA0è¿˜ç«¥ä¸¹");
 	PetSkillStudy_SkillType_Text:Show();
-	PetSkillStudy_Accept:SetText("È·ÈÏ");
+	PetSkillStudy_Accept:SetText("ç¡®è®¤");
 	PetSkillStudy_Accept:Enable();
 
 	PetSkillStudy_Money:SetProperty("MoneyNumber", "");
 	PetSkillStudy_Money:Hide()
 	PetSkillStudy_Static3:SetText("")
 	--PetSkillStudy_Money:Show();
-	--PetSkillStudy_Static3:SetText("ĞèÒª½ğÇ®");
+	--PetSkillStudy_Static3:SetText("éœ€è¦é‡‘é’±");
 	PetSkillStudy_MultiIMEEditBox:Hide();
 	PetSkillStudy_Text1:SetText(g_DefaultTxt);
 	PetSkillStudy_Text1:Show();
@@ -232,9 +232,9 @@ function PetSkillStudy_Show()
 	--AxTrace( 1, 0, "PetSkillStudy_Show" )
 	--PushDebugMessage ("PetSkillStudy_Show")
 	
-	--¿Ø¼şÇå³ı²Ù×÷
+	--æ§ä»¶æ¸…é™¤æ“ä½œ
 	--PetSkillStudy_PetList : ClearListBox();
-	--Èç¹û²»ÊÇ¸ÕÑ§Íê¼¼ÄÜ£¬Çå³ı´°¿ÚÖĞµÄÕäÊŞ¼°Ïà¹ØĞÅÏ¢(ÕäÊŞ¼¼ÄÜÑ§Ï°ºó²»Çå³ı)
+	--å¦‚æœä¸æ˜¯åˆšå­¦å®ŒæŠ€èƒ½ï¼Œæ¸…é™¤çª—å£ä¸­çš„çå…½åŠç›¸å…³ä¿¡æ¯(çå…½æŠ€èƒ½å­¦ä¹ åä¸æ¸…é™¤)
 	if (g_stduySkill == false) then
 		PetSkillStudy_PetModel:SetFakeObject( "" );
 		PetSkillStudy_Unlock();
@@ -249,13 +249,13 @@ function PetSkillStudy_Show()
 		Pet:ClosePetSkillStudyMsgBox()
 	end
 	
-	--»ñµÃÈ«²¿ÕäÊŞÁĞ±í
+	--è·å¾—å…¨éƒ¨çå…½åˆ—è¡¨
 	--for	i=1, nPetCount do
 	--	szPetName = Pet : GetPetList_Appoint(i-1);
 	--	PetSkillStudy_PetList : AddItem(szPetName, i-1);
 	--end
 	
-	--Ä¬ÈÏ°ïÍæ¼ÒÑ¡ÔñµÚÒ»Ö»ÕäÊŞ
+	--é»˜è®¤å¸®ç©å®¶é€‰æ‹©ç¬¬ä¸€åªçå…½
 	--if(0 ~= nPetCount) then
 	--	Pet:SetSkillStudyModel(0);
 	--	PetSkillStudy_PetList:SetItemSelectByItemID(0);
@@ -264,10 +264,10 @@ function PetSkillStudy_Show()
 	
 	Variable:SetVariable("PetStudyType", tostring(g_uitype), 1)
 	
---	if(1 == g_uitype) then --ÆÕÍ¨¼¼ÄÜÑ§Ï°
---		PetSkillStudy_SkillType_Text:SetText("#gFF0FA0ÆÕÍ¨¼¼ÄÜÑ§Ï°");
+--	if(1 == g_uitype) then --æ™®é€šæŠ€èƒ½å­¦ä¹ 
+--		PetSkillStudy_SkillType_Text:SetText("#gFF0FA0æ™®é€šæŠ€èƒ½å­¦ä¹ ");
 --		PetSkillStudy_SkillType_Text:Show();
---		PetSkillStudy_Accept:SetText("Ñ§Ï°");
+--		PetSkillStudy_Accept:SetText("å­¦ä¹ ");
 --		PetSkillStudy_Accept:Enable();
 --		
 --		PetSkillStudy_Money:SetProperty("MoneyNumber", "");
@@ -278,10 +278,10 @@ function PetSkillStudy_Show()
 --		PetSkillStudy_Text1:Show();
 --		PetSkillStudy_SetButtonAccName();
 		
-	if(2 == g_uitype) then	--»¹Í¯
-		PetSkillStudy_SkillType_Text:SetText("#gFF0FA0»¹Í¯µ¤");
+	if(2 == g_uitype) then	--è¿˜ç«¥
+		PetSkillStudy_SkillType_Text:SetText("#gFF0FA0è¿˜ç«¥ä¸¹");
 		PetSkillStudy_SkillType_Text:Show();
-		PetSkillStudy_Accept:SetText("È·ÈÏ");
+		PetSkillStudy_Accept:SetText("ç¡®è®¤");
 		PetSkillStudy_Accept:Enable();
 
 		PetSkillStudy_Money:SetProperty("MoneyNumber", "");
@@ -292,23 +292,23 @@ function PetSkillStudy_Show()
 		PetSkillStudy_Text1:Show();
 		PetSkillStudy_SetButtonAccName();
 		
-	elseif(3 == g_uitype) then --ÑÓ³¤ÊÙÃü
-		PetSkillStudy_SkillType_Text:SetText("#gFF0FA0ÑÓ³¤ÊÙÃü");
+	elseif(3 == g_uitype) then --å»¶é•¿å¯¿å‘½
+		PetSkillStudy_SkillType_Text:SetText("#gFF0FA0å»¶é•¿å¯¿å‘½");
 		PetSkillStudy_SkillType_Text:Show();
-		PetSkillStudy_Accept:SetText("È·ÈÏ");
+		PetSkillStudy_Accept:SetText("ç¡®è®¤");
 		PetSkillStudy_Accept:Enable();
 		
 		PetSkillStudy_Money:Hide();
-		PetSkillStudy_Static3:SetText("²»ĞèÒªÏûºÄ½ğÇ®");
+		PetSkillStudy_Static3:SetText("ä¸éœ€è¦æ¶ˆè€—é‡‘é’±");
 		PetSkillStudy_MultiIMEEditBox:Hide();
 		PetSkillStudy_Text1:SetText(g_DefaultTxt);
 		PetSkillStudy_Text1:Show();
 		PetSkillStudy_SetButtonAccName();
 		
-	elseif(4 == g_uitype) then --ÕäÊŞÑ±Ñø
-		PetSkillStudy_SkillType_Text:SetText("#gFF0FA0Ñ±Ñø·Ñ");
+	elseif(4 == g_uitype) then --çå…½é©¯å…»
+		PetSkillStudy_SkillType_Text:SetText("#gFF0FA0é©¯å…»è´¹");
 		PetSkillStudy_SkillType_Text:Show();
-		PetSkillStudy_Accept:SetText("Ñ±Ñø");
+		PetSkillStudy_Accept:SetText("é©¯å…»");
 		PetSkillStudy_Accept:Disable();
 		PetSkillStudy_Money:SetProperty("MoneyNumber", "");
 		PetSkillStudy_Money:Show();
@@ -320,40 +320,40 @@ function PetSkillStudy_Show()
 --			PetSkillStudy_AskMoney(0);
 --		end
 
-	elseif(5 == g_uitype) then --ÕäÊŞÕ÷ÓÑ
-		PetSkillStudy_SkillType_Text:SetText("#gFF0FA0Õ÷ÓÑ");
+	elseif(5 == g_uitype) then --çå…½å¾å‹
+		PetSkillStudy_SkillType_Text:SetText("#gFF0FA0å¾å‹");
 		PetSkillStudy_SkillType_Text:Show();
-		PetSkillStudy_Accept:SetText("È·ÈÏ");
+		PetSkillStudy_Accept:SetText("ç¡®è®¤");
 		PetSkillStudy_Accept:Enable();
 		PetSkillStudy_Money:Hide();
-		PetSkillStudy_Static3:SetText("²»ĞèÒªÏûºÄ½ğÇ®");
+		PetSkillStudy_Static3:SetText("ä¸éœ€è¦æ¶ˆè€—é‡‘é’±");
 		PetSkillStudy_MultiIMEEditBox:SetText("");
 		PetSkillStudy_MultiIMEEditBox:Show();
 		PetSkillStudy_Text1:Hide();
 		PetSkillStudy_Skill1:Hide();	--[tx47256]
-	elseif(6 == g_uitype) then --ÕäÊŞÉú³¤ÂÊ²éÑ¯
-		PetSkillStudy_SkillType_Text:SetText("#gFF0FA0³É³¤²éÑ¯");
+	elseif(6 == g_uitype) then --çå…½ç”Ÿé•¿ç‡æŸ¥è¯¢
+		PetSkillStudy_SkillType_Text:SetText("#gFF0FA0æˆé•¿æŸ¥è¯¢");
 		PetSkillStudy_SkillType_Text:Show();
-		PetSkillStudy_Accept:SetText("²éÑ¯");
+		PetSkillStudy_Accept:SetText("æŸ¥è¯¢");
 		PetSkillStudy_Accept:Disable();
 		
 		PetSkillStudy_Money:SetProperty("MoneyNumber", "100");
 		PetSkillStudy_Money:Show();
 		PetSkillStudy_Static3:SetText("#{INTERFACE_XML_789}");
 		PetSkillStudy_MultiIMEEditBox:Hide();
-		PetSkillStudy_Text1:SetText("²éÑ¯ÕäÊŞµÄ³É³¤ÂÊ"); -- zchw
+		PetSkillStudy_Text1:SetText("æŸ¥è¯¢çå…½çš„æˆé•¿ç‡"); -- zchw
 		PetSkillStudy_Text1:Show();
 		PetSkillStudy_Skill1:Hide();	--[tx47256]
 		
-	elseif(7 == g_uitype) then --ÕäÊŞ³ÆºÅÁìÈ¡
-		PetSkillStudy_SkillType_Text:SetText("#gFF0FA0ÕäÊŞ³ÆºÅÁìÈ¡");
+	elseif(7 == g_uitype) then --çå…½ç§°å·é¢†å–
+		PetSkillStudy_SkillType_Text:SetText("#gFF0FA0çå…½ç§°å·é¢†å–");
 		PetSkillStudy_SkillType_Text:Show();
-		PetSkillStudy_Accept:SetText("È·ÈÏ");
+		PetSkillStudy_Accept:SetText("ç¡®è®¤");
 		PetSkillStudy_Accept:Enable();
 		PetSkillStudy_Money:Hide();
-		PetSkillStudy_Static3:SetText("²»ĞèÒªÏûºÄ½ğÇ®");
+		PetSkillStudy_Static3:SetText("ä¸éœ€è¦æ¶ˆè€—é‡‘é’±");
 		PetSkillStudy_MultiIMEEditBox:Hide();
-		PetSkillStudy_Text1:SetText("ÇëÑ¡ÔñĞèÒªÁìÈ¡³ÆºÅµÄÕäÊŞ¡£");
+		PetSkillStudy_Text1:SetText("è¯·é€‰æ‹©éœ€è¦é¢†å–ç§°å·çš„çå…½ã€‚");
 		PetSkillStudy_Text1:Show();
 		PetSkillStudy_Skill1:Hide();	--[tx47256]			
 	end
@@ -362,20 +362,20 @@ function PetSkillStudy_Show()
 		PetSkillStudy_ShowReset()
 	end
 	
-	--ÕäÊŞ¼¼ÄÜÑ§Ï°Ñ§Ï°Íêºó£¬É¾³ıµÀ¾ßÀ¸ÖĞµÄ¼¼ÄÜÊé
+	--çå…½æŠ€èƒ½å­¦ä¹ å­¦ä¹ å®Œåï¼Œåˆ é™¤é“å…·æ ä¸­çš„æŠ€èƒ½ä¹¦
 --	if (1 == g_uitype) then
---		g_selidx_jns = -1;				--»Ö¸´ÎªÎ´Ñ¡ÖĞµÀ¾ßÀ¸ÖĞµÄ¼¼ÄÜÊé£¨Ö»Õë¶ÔÕäÊŞ¼¼ÄÜÑ§Ï°£©
-		--PushDebugMessage ("¼¼ÄÜÊéÒÑÉ¾³ı¡£")
+--		g_selidx_jns = -1;				--æ¢å¤ä¸ºæœªé€‰ä¸­é“å…·æ ä¸­çš„æŠ€èƒ½ä¹¦ï¼ˆåªé’ˆå¯¹çå…½æŠ€èƒ½å­¦ä¹ ï¼‰
+		--PushDebugMessage ("æŠ€èƒ½ä¹¦å·²åˆ é™¤ã€‚")
 --	end
 	
-	--ÕäÊŞÑÓ³¤ÊÙÃüºó£¬É¾³ıµÀ¾ßÀ¸ÖĞµÄÑÓÄêµ¤
+	--çå…½å»¶é•¿å¯¿å‘½åï¼Œåˆ é™¤é“å…·æ ä¸­çš„å»¶å¹´ä¸¹
 	if (3 == g_uitype) then
-		g_selidx_ynd = -1;				--»Ö¸´ÎªÎ´Ñ¡ÖĞµÀ¾ßÀ¸ÖĞµÄÑÓÄêµ¤£¨Ö»Õë¶ÔÕäÊŞÑÓ³¤ÊÙÃü£©
-		--PushDebugMessage ("ÑÓÄêµ¤ÒÑÉ¾³ı¡£")
+		g_selidx_ynd = -1;				--æ¢å¤ä¸ºæœªé€‰ä¸­é“å…·æ ä¸­çš„å»¶å¹´ä¸¹ï¼ˆåªé’ˆå¯¹çå…½å»¶é•¿å¯¿å‘½ï¼‰
+		--PushDebugMessage ("å»¶å¹´ä¸¹å·²åˆ é™¤ã€‚")
 	end	
 		
 	this:Show();
-	Pet:ShowPetList(1);		-- ´ò¿ªÕäÊŞÁĞ±í
+	Pet:ShowPetList(1);		-- æ‰“å¼€çå…½åˆ—è¡¨
 end
 
 function PetSkillStudy_SetButtonAccName()
@@ -398,7 +398,7 @@ function PetSkillStudy_Test()
 	PetSkillStudy_Show();
 end
 
---Ñ¡Ôñ²»Í¬ÕäÊŞÊ±£¬ÉèÖÃ²»Í¬µÄÕäÊŞÄ£ĞÍ
+--é€‰æ‹©ä¸åŒçå…½æ—¶ï¼Œè®¾ç½®ä¸åŒçš„çå…½æ¨¡å‹
 function PetSkillStudy_Selected(selidx)
 	--local selidx = PetSkillStudy_PetList:GetFirstSelectItem();
 	
@@ -408,9 +408,9 @@ function PetSkillStudy_Selected(selidx)
 		return;
 	end
 
-	if 2 == g_uitype or CurUIType == UITYPE_ZHUANXINGDAN or CurUIType == UITYPE_LIANSHOUDAN then	--»¹Í¯£¬×ªĞÔ£¬Ï´µã
+	if 2 == g_uitype or CurUIType == UITYPE_ZHUANXINGDAN or CurUIType == UITYPE_LIANSHOUDAN then	--è¿˜ç«¥ï¼Œè½¬æ€§ï¼Œæ´—ç‚¹
 		if PlayerPackage:IsPetLock(selidx) == 1 then
-			PushDebugMessage("ÕäÊŞÒÑ¼ÓËø")
+			PushDebugMessage("çå…½å·²åŠ é”")
 			return
 		end
 	end
@@ -420,8 +420,8 @@ function PetSkillStudy_Selected(selidx)
 	Pet:SetPetLocation(selidx,2);
 	PetSkillStudy_PetModel:SetFakeObject( "My_PetStudySkill" );
 
-	--ÕäÊŞ´ò¼¼ÄÜÊé....
-	--Èç¹ûµ±Ç°ÊéºÍ³è¶¼Ñ¡ºÃÁË....Ôò¼ÆËãÊÇ·ñÊÇ¿ªĞÂµÄÊÖ¶¯¼¼ÄÜ¸ñ....Èç¹ûÊÇÔò¶àÊÕÇ®....
+	--çå…½æ‰“æŠ€èƒ½ä¹¦....
+	--å¦‚æœå½“å‰ä¹¦å’Œå® éƒ½é€‰å¥½äº†....åˆ™è®¡ç®—æ˜¯å¦æ˜¯å¼€æ–°çš„æ‰‹åŠ¨æŠ€èƒ½æ ¼....å¦‚æœæ˜¯åˆ™å¤šæ”¶é’±....
 --	if( 1 == g_uitype and g_sleidx ~= selidx) then
 --		if Pet:CheckPetSkillStudyMoreMoneyMode( selidx, PETSKILLSTUDY_ACCBTN[1][3] ) == 1 then
 --			PetSkillStudy_Money:SetProperty( "MoneyNumber", g_petSkillStudyMoreMoney );
@@ -459,11 +459,11 @@ function PetSkillStudy_Selected(selidx)
 	end
 	
 	if( 6 == g_uitype and g_selidx ~= selidx) then
-		PetSkillStudy_Text1:SetText("²éÑ¯ÕäÊŞ³É³¤ÂÊ£¡");
+		PetSkillStudy_Text1:SetText("æŸ¥è¯¢çå…½æˆé•¿ç‡ï¼");
 		PetSkillStudy_Accept:Enable();
 	end
 	
-	g_selidx = selidx;	--ÒÑ¾­Ñ¡ºÃÁËÕäÊŞ
+	g_selidx = selidx;	--å·²ç»é€‰å¥½äº†çå…½
 
 	Pet:ClosePetSkillStudyMsgBox()
 
@@ -486,7 +486,7 @@ function PetSkillStudy_AskMoney( selidx )
 	Send_XSCRIPT();
 end
 
---¸ù¾İÑ¡ÔñµÄÕäÊŞ£¬ÏÔÊ¾ÏàÓ¦µÄÏêÏ¸ĞÅÏ¢
+--æ ¹æ®é€‰æ‹©çš„çå…½ï¼Œæ˜¾ç¤ºç›¸åº”çš„è¯¦ç»†ä¿¡æ¯
 --function PetSkillStudy_ShowTargetPet(selidx)
 	--local selidx = PetSkillStudy_PetList:GetFirstSelectItem();
 --	if( -1 == selidx ) then
@@ -498,13 +498,13 @@ end
 
 ----------------------------------------------------------------------------------
 --
--- Ğı×ªÕäÊŞÄ£ĞÍ£¨Ïò×ó)
+-- æ—‹è½¬çå…½æ¨¡å‹ï¼ˆå‘å·¦)
 --
 function PetSkillStudy_Modle_TurnLeft(start)
-	--Ïò×óĞı×ª¿ªÊ¼
+	--å‘å·¦æ—‹è½¬å¼€å§‹
 	if(start == 1) then
 		PetSkillStudy_PetModel:RotateBegin(-0.3);
-	--Ïò×óĞı×ª½áÊø
+	--å‘å·¦æ—‹è½¬ç»“æŸ
 	else
 		PetSkillStudy_PetModel:RotateEnd();
 	end
@@ -512,21 +512,21 @@ end
 
 ----------------------------------------------------------------------------------
 --
---Ğı×ªÕäÊŞÄ£ĞÍ£¨ÏòÓÒ)
+--æ—‹è½¬çå…½æ¨¡å‹ï¼ˆå‘å³)
 --
 function PetSkillStudy_Modle_TurnRight(start)
-	--ÏòÓÒĞı×ª¿ªÊ¼
+	--å‘å³æ—‹è½¬å¼€å§‹
 	if(start == 1) then
 		PetSkillStudy_PetModel:RotateBegin(0.3);
-	--ÏòÓÒĞı×ª½áÊø
+	--å‘å³æ—‹è½¬ç»“æŸ
 	else
 		PetSkillStudy_PetModel:RotateEnd();
 	end
 end
 
--- ¸üĞÂÕäÊŞÑ§Ï°½çÃæµÄActionButton
--- aidx  ActionButtonµÄË÷Òı
--- pidx	 ±³°ü(Packge)ÄÚµÄÎïÆ·Ë÷Òı
+-- æ›´æ–°çå…½å­¦ä¹ ç•Œé¢çš„ActionButton
+-- aidx  ActionButtonçš„ç´¢å¼•
+-- pidx	 èƒŒåŒ…(Packge)å†…çš„ç‰©å“ç´¢å¼•
 function PetSkillStudy_Update(aidxs, pidxs)
 
 	--PushDebugMessage ("PetSkillStudy_Update")
@@ -538,12 +538,12 @@ function PetSkillStudy_Update(aidxs, pidxs)
 		return;
 	end
 	
-	--½â³ıÔ­À´±»Ëø¶¨µÄÎïÆ·
+	--è§£é™¤åŸæ¥è¢«é”å®šçš„ç‰©å“
 	if("package" == tostring(PETSKILLSTUDY_ACCBTN[aidx][2])) then
 		Pet:SkillStudyUnlock(PETSKILLSTUDY_ACCBTN[aidx][3]);
 	end
 	
-	--ÉèÖÃĞÂµÄÎïÆ·
+	--è®¾ç½®æ–°çš„ç‰©å“
 	local action = EnumAction(pidx, "packageitem");
 	if(action:GetID() ~= 0) then
 		PETSKILLSTUDY_ACCBTN[aidx][1]:SetActionItem(action:GetID());
@@ -563,8 +563,8 @@ function PetSkillStudy_Update(aidxs, pidxs)
 		PETSKILLSTUDY_ACCBTN[1][1]:SetPushed(1);
 	end
 
-	--ÕäÊŞ´ò¼¼ÄÜÊé....
-	--Èç¹ûµ±Ç°ÊéºÍ³è¶¼Ñ¡ºÃÁË....Ôò¼ÆËãÊÇ·ñÊÇ¿ªĞÂµÄÊÖ¶¯¼¼ÄÜ¸ñ....Èç¹ûÊÇÔò¶àÊÕÇ®....
+	--çå…½æ‰“æŠ€èƒ½ä¹¦....
+	--å¦‚æœå½“å‰ä¹¦å’Œå® éƒ½é€‰å¥½äº†....åˆ™è®¡ç®—æ˜¯å¦æ˜¯å¼€æ–°çš„æ‰‹åŠ¨æŠ€èƒ½æ ¼....å¦‚æœæ˜¯åˆ™å¤šæ”¶é’±....
 --	if 1 == g_uitype and g_selidx ~= -1 and action:GetID() ~= 0 then
 --		if Pet:CheckPetSkillStudyMoreMoneyMode( g_selidx, pidx ) == 1 then
 --			PetSkillStudy_Money:SetProperty( "MoneyNumber", g_petSkillStudyMoreMoney );
@@ -575,23 +575,23 @@ function PetSkillStudy_Update(aidxs, pidxs)
 --		end
 --	end
 
-	--ÕäÊŞ¼¼ÄÜÑ§Ï°
+	--çå…½æŠ€èƒ½å­¦ä¹ 
 --	if (1 == g_uitype) then
---		g_selidx_jns = 1			--½«Ñ§Ï°¼¼ÄÜÊéÍÏ½øµÀ¾ßÀ¸ºó£¬Ñ¡ÖĞµÀ¾ßÀ¸£¨µ±Ç°µÀ¾ßÀ¸Ö»ÓĞ1¸ñ£¬ÇÒÖ»Õë¶ÔÕäÊŞÑ§Ï°¼¼ÄÜ£©
-		--PushDebugMessage ("ÒÑ·ÅÈë¼¼ÄÜÊé")
+--		g_selidx_jns = 1			--å°†å­¦ä¹ æŠ€èƒ½ä¹¦æ‹–è¿›é“å…·æ åï¼Œé€‰ä¸­é“å…·æ ï¼ˆå½“å‰é“å…·æ åªæœ‰1æ ¼ï¼Œä¸”åªé’ˆå¯¹çå…½å­¦ä¹ æŠ€èƒ½ï¼‰
+		--PushDebugMessage ("å·²æ”¾å…¥æŠ€èƒ½ä¹¦")
 --	end
 	
-	--ÕäÊŞÑÓ³¤ÊÙÃü
+	--çå…½å»¶é•¿å¯¿å‘½
 	if (3 == g_uitype) then
-		g_selidx_ynd = 1			--½«ÑÓÄêµ¤ÍÏ½øµÀ¾ßÀ¸ºó£¬Ñ¡ÖĞµÀ¾ßÀ¸£¨µ±Ç°µÀ¾ßÀ¸Ö»ÓĞ1¸ñ£¬ÇÒÖ»Õë¶ÔÕäÊŞÑÓ³¤ÊÙÃü£©
-		--PushDebugMessage ("ÒÑ·ÅÈëÕäÊŞÑÓÄêµ¤")
+		g_selidx_ynd = 1			--å°†å»¶å¹´ä¸¹æ‹–è¿›é“å…·æ åï¼Œé€‰ä¸­é“å…·æ ï¼ˆå½“å‰é“å…·æ åªæœ‰1æ ¼ï¼Œä¸”åªé’ˆå¯¹çå…½å»¶é•¿å¯¿å‘½ï¼‰
+		--PushDebugMessage ("å·²æ”¾å…¥çå…½å»¶å¹´ä¸¹")
 	end	
 		
 	Pet:ClosePetSkillStudyMsgBox()
 
 end
 
---´¦ÀíActionButtonµÄµã»÷
+--å¤„ç†ActionButtonçš„ç‚¹å‡»
 function PetSkillStudy_Btn_Click(aidx)
 	if(aidx < 1 or aidx > 1) then
 		return;
@@ -607,14 +607,14 @@ function PetSkillStudy_Btn_Click(aidx)
 	
 end
 
-function PetSkillStudy_PetReset( PetIndex, ItemPos ) --ÕäÊŞÏ´µã
+function PetSkillStudy_PetReset( PetIndex, ItemPos ) --çå…½æ´—ç‚¹
 	
 	if (-1 == PetIndex ) then
-		PushDebugMessage("ÇëÑ¡ÔñÕäÊŞ¡£");
+		PushDebugMessage("è¯·é€‰æ‹©çå…½ã€‚");
 		return;
 	end
 	if(-1 == ItemPos ) then
-		PushDebugMessage("ĞèÒªÁ¶ÊŞµ¤¡£");
+		PushDebugMessage("éœ€è¦ç‚¼å…½ä¸¹ã€‚");
 		return;
 	end
 		
@@ -632,14 +632,14 @@ function PetSkillStudy_PetReset( PetIndex, ItemPos ) --ÕäÊŞÏ´µã
 	
 end
 
-function PetSkillStudy_Zhuanxingdan( PetIndex, ItemPos ) --ÕäÊŞÏ´µã
+function PetSkillStudy_Zhuanxingdan( PetIndex, ItemPos ) --çå…½æ´—ç‚¹
 	
 	if (-1 == PetIndex ) then
-		PushDebugMessage("ÇëÑ¡ÔñÕäÊŞ¡£");
+		PushDebugMessage("è¯·é€‰æ‹©çå…½ã€‚");
 		return;
 	end
 	if(-1 == ItemPos ) then
-		PushDebugMessage("ĞèÒª×ªĞÔµ¤¡£");
+		PushDebugMessage("éœ€è¦è½¬æ€§ä¸¹ã€‚");
 		return;
 	end
 		
@@ -658,33 +658,33 @@ function PetSkillStudy_Zhuanxingdan( PetIndex, ItemPos ) --ÕäÊŞÏ´µã
 end
 
 
---´¦ÀíÍæ¼ÒÈ·ÈÏÒª×öµÄÊÂÇé£¬¸ù¾İg_uitype
+--å¤„ç†ç©å®¶ç¡®è®¤è¦åšçš„äº‹æƒ…ï¼Œæ ¹æ®g_uitype
 function PetSkillStudy_Do()
-	local saidx = -1;	--ActionButtonÑ¡ÖĞµÄË÷Òı
-	local slidx = g_selidx;	--ListBoxÑ¡ÖĞµÄË÷Òı
+	local saidx = -1;	--ActionButtoné€‰ä¸­çš„ç´¢å¼•
+	local slidx = g_selidx;	--ListBoxé€‰ä¸­çš„ç´¢å¼•
 	
-	--×£¿­ 2007-8-17
-	--Ä¿Ç°Ö»ÓÃÁË1¸öActionButton¾Í²»ÒªÔÙÑ­»·²éÕÒµ±Ç°µ½µ×¼¤»îµÄÊÇÄÄ¸öÁË....
-	--·ÇÒªÕâÃ´ÅªµÄ»°....µ±Ê§È¥½¹µãµÄÊ±ºò¾ÍËã·ÅµÄÓĞÎïÆ·Ò²»áËµÃ»ÓĞÎïÆ·ÁË....
+	--ç¥å‡¯ 2007-8-17
+	--ç›®å‰åªç”¨äº†1ä¸ªActionButtonå°±ä¸è¦å†å¾ªç¯æŸ¥æ‰¾å½“å‰åˆ°åº•æ¿€æ´»çš„æ˜¯å“ªä¸ªäº†....
+	--éè¦è¿™ä¹ˆå¼„çš„è¯....å½“å¤±å»ç„¦ç‚¹çš„æ—¶å€™å°±ç®—æ”¾çš„æœ‰ç‰©å“ä¹Ÿä¼šè¯´æ²¡æœ‰ç‰©å“äº†....
 	--for i=1,1 do
 	--	if(PETSKILLSTUDY_ACCBTN[i][1]:GetProperty("Checked") == "True") then
 	--		saidx = i;
 	--		break;
 	--	end
 	--end
-	--Ö±½ÓËµ¼¤»îµÄÊÇµÚ1¸öActionButton¾ÍĞĞÁË....
+	--ç›´æ¥è¯´æ¿€æ´»çš„æ˜¯ç¬¬1ä¸ªActionButtonå°±è¡Œäº†....
 	saidx = 1;
-	--×£¿­ 2007-8-17
+	--ç¥å‡¯ 2007-8-17
 
 	--PushDebugMessage ("PetSkillStudy_Do " .. g_uitype);
 	
 	if CurUIType == UITYPE_LIANSHOUDAN then
 		if (-1 == slidx) then
-			PushDebugMessage("ÇëÑ¡ÔñÕäÊŞ¡£");
+			PushDebugMessage("è¯·é€‰æ‹©çå…½ã€‚");
 			return;
 		end
 		if(-1 == saidx) then
-			PushDebugMessage("ĞèÒªÁ¶ÊŞµ¤¡£");
+			PushDebugMessage("éœ€è¦ç‚¼å…½ä¸¹ã€‚");
 			return;
 		end
 		PetSkillStudy_PetReset( slidx, PETSKILLSTUDY_ACCBTN[saidx][3] )
@@ -694,11 +694,11 @@ function PetSkillStudy_Do()
 
 	if CurUIType == UITYPE_ZHUANXINGDAN then
 		if (-1 == slidx) then
-			PushDebugMessage("ÇëÑ¡ÔñÕäÊŞ¡£");
+			PushDebugMessage("è¯·é€‰æ‹©çå…½ã€‚");
 			return;
 		end
 		if(-1 == saidx) then
-			PushDebugMessage("ĞèÒª×ªĞÔµ¤¡£");
+			PushDebugMessage("éœ€è¦è½¬æ€§ä¸¹ã€‚");
 			return;
 		end
 		PetSkillStudy_Zhuanxingdan( slidx, PETSKILLSTUDY_ACCBTN[saidx][3] )
@@ -709,94 +709,94 @@ function PetSkillStudy_Do()
 	--slidx = PetSkillStudy_PetList:GetFirstSelectItem();
 	--AxTrace(0,0,"saidx: "..saidx.." slidx: "..slidx.." g_uitype: "..g_uitype);
 --	if(1 == g_uitype) then
---		--ÆÕÍ¨¼¼ÄÜÑ§Ï°
+--		--æ™®é€šæŠ€èƒ½å­¦ä¹ 
 --		if (-1 == slidx) then
---			PushDebugMessage("ÇëÑ¡ÔñÕäÊŞ¡£");
+--			PushDebugMessage("è¯·é€‰æ‹©çå…½ã€‚");
 --			return;
 --		end
---		if(-1 == g_selidx_jns) then								-- ÒòÎªÆäËûÑ¡Ïî»áÊ¹ÓÃsaidx£¬ÎªÁË²»Ó°ÏìÆäËûÑ¡Ïî£¬ÕâÀïÊ¹ÓÃÖ»Õë¶ÔÕäÊŞ¼¼ÄÜÑ§Ï°µÄg_selidx_jns
---			PushDebugMessage("ĞèÒª¼¼ÄÜÊé¡£");
+--		if(-1 == g_selidx_jns) then								-- å› ä¸ºå…¶ä»–é€‰é¡¹ä¼šä½¿ç”¨saidxï¼Œä¸ºäº†ä¸å½±å“å…¶ä»–é€‰é¡¹ï¼Œè¿™é‡Œä½¿ç”¨åªé’ˆå¯¹çå…½æŠ€èƒ½å­¦ä¹ çš„g_selidx_jns
+--			PushDebugMessage("éœ€è¦æŠ€èƒ½ä¹¦ã€‚");
 --			return;
 --		end
 	if(2 == g_uitype) then
-		--»¹Í¯
+		--è¿˜ç«¥
 		if (-1 == slidx) then
-			PushDebugMessage("ÇëÑ¡ÔñÕäÊŞ¡£");
+			PushDebugMessage("è¯·é€‰æ‹©çå…½ã€‚");
 			return;
 		end
 		if(-1 == saidx) then
-			PushDebugMessage("ĞèÒª»¹Í¯¾íÖá¡£");
+			PushDebugMessage("éœ€è¦è¿˜ç«¥å·è½´ã€‚");
 			return;
 		end
 	elseif(3 == g_uitype) then
-		--ÑÓ³¤ÊÙÃü
+		--å»¶é•¿å¯¿å‘½
 		if (-1 == slidx) then
-			PushDebugMessage("ÇëÑ¡ÔñÕäÊŞ¡£");
+			PushDebugMessage("è¯·é€‰æ‹©çå…½ã€‚");
 			return;
 		end
-		if(-1 == g_selidx_ynd) then								-- ÒòÎªÆäËûÑ¡Ïî»áÊ¹ÓÃsaidx£¬ÎªÁË²»Ó°ÏìÆäËûÑ¡Ïî£¬ÕâÀïÊ¹ÓÃÖ»Õë¶ÔÕäÊŞÑÓ³¤ÊÙÃüµÄg_selidx_ynd
-			PushDebugMessage("#{ZSSM_090113_01}");	-- "Çë·ÅÈëÕäÊŞÑÓÄêµ¤¡£"
+		if(-1 == g_selidx_ynd) then								-- å› ä¸ºå…¶ä»–é€‰é¡¹ä¼šä½¿ç”¨saidxï¼Œä¸ºäº†ä¸å½±å“å…¶ä»–é€‰é¡¹ï¼Œè¿™é‡Œä½¿ç”¨åªé’ˆå¯¹çå…½å»¶é•¿å¯¿å‘½çš„g_selidx_ynd
+			PushDebugMessage("#{ZSSM_090113_01}");	-- "è¯·æ”¾å…¥çå…½å»¶å¹´ä¸¹ã€‚"
 			return;
 		end
 	elseif(4 == g_uitype) then
-		--Ñ±Ñø
+		--é©¯å…»
 		if (-1 == slidx) then
-			PushDebugMessage("ÇëÑ¡ÔñÕäÊŞ¡£");
+			PushDebugMessage("è¯·é€‰æ‹©çå…½ã€‚");
 			return;
 		end
 	elseif(5 == g_uitype) then
-		--·¢²¼Õ÷ÓÑĞÅÏ¢
+		--å‘å¸ƒå¾å‹ä¿¡æ¯
 		if (-1 == slidx) then
-			PushDebugMessage("ÇëÑ¡ÔñÕäÊŞ¡£");
+			PushDebugMessage("è¯·é€‰æ‹©çå…½ã€‚");
 			return;
 		end
 	else
-		--ÕâÊÇÉ¶
+		--è¿™æ˜¯å•¥
 		--PetSkillStudy_Hide();
 		--return;
 	end
 	
-	--¸ù¾İg_uitypeÀ´´¦Àí
-	--ÑÓ³¤ÊÙÃü
+	--æ ¹æ®g_uitypeæ¥å¤„ç†
+	--å»¶é•¿å¯¿å‘½
 	if(3 == g_uitype) then
 		Pet:SkillStudy_Do(g_uitype, slidx, PETSKILLSTUDY_ACCBTN[saidx][3]);
-	--ÕäÊŞ¼¼ÄÜÑ§Ï°
+	--çå…½æŠ€èƒ½å­¦ä¹ 
 --	elseif(1 == g_uitype) then
---		local pM = Player:GetData("MONEY") + Player:GetData("MONEY_JZ");	--½»×ÓÆÕ¼° Vega
+--		local pM = Player:GetData("MONEY") + Player:GetData("MONEY_JZ");	--äº¤å­æ™®åŠ Vega
 --		local nM = tonumber(PetSkillStudy_Money:GetProperty("MoneyNumber"));
 --		if( pM < nM) then
---			PushDebugMessage("½ğÇ®²»¹»£¬ÎŞ·¨Ñ§Ï°¼¼ÄÜ");
+--			PushDebugMessage("é‡‘é’±ä¸å¤Ÿï¼Œæ— æ³•å­¦ä¹ æŠ€èƒ½");
 --			return;
 --		end
 --		
---		-- Èç¹ûÊÇÑ§Ï°Á½¸ö²»Í¬ÀàµÄÊÖ¶¯¼¼ÄÜ
+--		-- å¦‚æœæ˜¯å­¦ä¹ ä¸¤ä¸ªä¸åŒç±»çš„æ‰‹åŠ¨æŠ€èƒ½
 --		if Pet:CheckPetSkillStudyMoreMoneyMode( slidx, PETSKILLSTUDY_ACCBTN[saidx][3] ) == 1 then
---			Pet:OpenPetSkillStudyMsgBox()				-- Í¨Öª¿Í»§¶Ëµ÷ÓÃ MessageBox_Self ½çÃæ
---			--PushDebugMessage ("×ªµ½ MessageBox_Self ½çÃæ")
+--			Pet:OpenPetSkillStudyMsgBox()				-- é€šçŸ¥å®¢æˆ·ç«¯è°ƒç”¨ MessageBox_Self ç•Œé¢
+--			--PushDebugMessage ("è½¬åˆ° MessageBox_Self ç•Œé¢")
 --			return
 --		else			
 --			Pet:SkillStudy_Do(g_uitype, slidx, PETSKILLSTUDY_ACCBTN[saidx][3]);			
---			g_stduySkill = true;	--ÒÑ¾­Ñ§¹ı¼¼ÄÜ			
---			--PushDebugMessage("µ÷ÊÔĞÅÏ¢£º¼¼ÄÜÒÑÑ§»á	");	
+--			g_stduySkill = true;	--å·²ç»å­¦è¿‡æŠ€èƒ½			
+--			--PushDebugMessage("è°ƒè¯•ä¿¡æ¯ï¼šæŠ€èƒ½å·²å­¦ä¼š	");	
 --		end
-	--»¹Í¯
+	--è¿˜ç«¥
 	elseif(2 == g_uitype) then
-		local pM = Player:GetData("MONEY") + Player:GetData("MONEY_JZ") ;          --½»×ÓÆÕ¼° Vega
+		local pM = Player:GetData("MONEY") + Player:GetData("MONEY_JZ") ;          --äº¤å­æ™®åŠ Vega
 		local nM = tonumber(PetSkillStudy_Money:GetProperty("MoneyNumber"));
 		--AxTrace(0,0,"Money pM:" .. tostring(pM) .. " nM:" .. tostring(nM));
 		if( pM >= nM) then
 		        Pet:SkillStudy_Do(g_uitype, slidx, PETSKILLSTUDY_ACCBTN[saidx][3]);
 		else
-			PushDebugMessage("½ğÇ®²»¹»£¬ÎŞ·¨»¹Í¯");
+			PushDebugMessage("é‡‘é’±ä¸å¤Ÿï¼Œæ— æ³•è¿˜ç«¥");
 			return;
 		end
-	--Ñ±Ñø
+	--é©¯å…»
 	elseif(4 == g_uitype) then
-		local pM = Player:GetData("MONEY") + Player:GetData("MONEY_JZ");	--½»×ÓÆÕ¼° Vega
+		local pM = Player:GetData("MONEY") + Player:GetData("MONEY_JZ");	--äº¤å­æ™®åŠ Vega
 		local nM = tonumber(PetSkillStudy_Money:GetProperty("MoneyNumber"));
 		--AxTrace(0,0,"Money pM:" .. tostring(pM) .. " nM:" .. tostring(nM));
 		if(100 == tonumber(Pet:GetHappy(slidx)) ) then	--and tonumber(Pet:GetHP(slidx)) == tonumber(Pet:GetMaxHP(slidx))
-			PushDebugMessage("ÎŞĞèÑ±Ñø");
+			PushDebugMessage("æ— éœ€é©¯å…»");
 			return;
 		end
 		
@@ -810,7 +810,7 @@ function PetSkillStudy_Do()
 			Set_XSCRIPT_ParamCount(2);
 			Send_XSCRIPT();
 		else
-			PushDebugMessage("½ğÇ®²»¹»£¬ÎŞ·¨Ñ±Ñø");
+			PushDebugMessage("é‡‘é’±ä¸å¤Ÿï¼Œæ— æ³•é©¯å…»");
 			return;
 		end
 	elseif(5 == g_uitype) then
@@ -818,7 +818,7 @@ function PetSkillStudy_Do()
 		local ret = Pet:SkillStudy_Do(g_uitype, slidx, txt, g_serverNpcId);
 		--AxTrace(0,0, "txt{" .. txt .. "} ret{" .. tostring(ret) .. "}");
 		if(0 == ret) then
-			PushDebugMessage("ÇëÊäÈëÕ÷ÓÑµÄ¹ã¸æ´Ê");
+			PushDebugMessage("è¯·è¾“å…¥å¾å‹çš„å¹¿å‘Šè¯");
 			return;
 		end
 	elseif(6 == g_uitype and -1 ~= slidx) then
@@ -841,23 +841,23 @@ function PetSkillStudy_Do()
 		Set_XSCRIPT_Parameter(2,lid);
 		Set_XSCRIPT_ParamCount(3);
 		Send_XSCRIPT();
-		--ĞèÒª¹Ø±Õ½çÃæ
+		--éœ€è¦å…³é—­ç•Œé¢
 		--return;
 	end
 	
-	--»¹Í¯»òÕäÊŞÑ§Ï°¼¼ÄÜºó´°¿Ú²»¹Ø±Õ
+	--è¿˜ç«¥æˆ–çå…½å­¦ä¹ æŠ€èƒ½åçª—å£ä¸å…³é—­
 	if (2 ~= g_uitype) and (1 ~= g_uitype) then
 		PetSkillStudy_Hide();
 	end
 	
-	--Èç¹ûÊÇÕäÊŞÑ§Ï°¼¼ÄÜ
+	--å¦‚æœæ˜¯çå…½å­¦ä¹ æŠ€èƒ½
 	--if (1 == g_uitype) then		
-	--	Pet:ShowPetList(1)		--ÔÙ´Î´ò¿ªÕäÊŞÁĞ±í
+	--	Pet:ShowPetList(1)		--å†æ¬¡æ‰“å¼€çå…½åˆ—è¡¨
 	--end	
 	
 end
 
---´°¿ÚÒş²ØÇ°ÏÈ½«±³°üÖĞ±»Ëø¶¨µÄÎïÆ·½âËø
+--çª—å£éšè—å‰å…ˆå°†èƒŒåŒ…ä¸­è¢«é”å®šçš„ç‰©å“è§£é”
 function PetSkillStudy_Unlock()
 	for i=1,1 do
 		if("package" == tostring(PETSKILLSTUDY_ACCBTN[i][2])) then
@@ -868,7 +868,7 @@ function PetSkillStudy_Unlock()
 	Pet:SkillStudy_MenPaiSkill_Clear();
 end
 
---´°¿ÚÒş²Øº¯Êı
+--çª—å£éšè—å‡½æ•°
 function PetSkillStudy_Hide()
 
 	Pet:ClosePetSkillStudyMsgBox()
@@ -883,10 +883,10 @@ function PetSkillStudy_Hide()
 	
 end
 
---Éú³ÉÕäÊŞÃÅÅÉ¼¼ÄÜÏà¹ØµÄaction£¬²¢ºÍuiÉÏµÄbutton¹ØÁªÉÏ
+--ç”Ÿæˆçå…½é—¨æ´¾æŠ€èƒ½ç›¸å…³çš„actionï¼Œå¹¶å’Œuiä¸Šçš„buttonå…³è”ä¸Š
 function PetSkillStudy_GenMenPaiSkill()
 	--if(2 == g_uitype) then
-	--	--Éú³Éaction
+	--	--ç”Ÿæˆaction
 	--	for i=2,4 do
 	--		PETSKILLSTUDY_ACCBTN[i-1][2] = "menpai";
 	--		PETSKILLSTUDY_ACCBTN[i-1][3] = Get_XParam_INT(i);
@@ -894,7 +894,7 @@ function PetSkillStudy_GenMenPaiSkill()
 	--	
 	--	Pet:SkillStudy_MenPaiSkill_Created(PETSKILLSTUDY_ACCBTN[1][3],PETSKILLSTUDY_ACCBTN[2][3],PETSKILLSTUDY_ACCBTN[3][3]);
 	--	
-	--	--ÅäÖÃaction
+	--	--é…ç½®action
 	--	for k=1,3 do
 	--		local action = Pet:EnumPetSkill(-4444, k-1, "petskill");
 	--		if(action:GetID() ~= 0) then
@@ -926,14 +926,14 @@ function PetSkillStudy_CareEventHandle(careId, op, distance)
 		if(tonumber(careId) ~= g_clientNpcId) then
 			return;
 		end
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ı£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æœå’ŒNPCçš„è·ç¦»å¤§äºä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if(op == "distance" and tonumber(distance)>MAX_OBJ_DISTANCE or op=="destroy") then
 			PetSkillStudy_Hide();
 		end
 end
 
 function PetSkillStudy_ShowPetGrow(nGrowLevel)
-	local strTbl = {"ÆÕÍ¨","ÓÅĞã","½Ü³ö","×¿Ô½","ÍêÃÀ"};
+	local strTbl = {"æ™®é€š","ä¼˜ç§€","æ°å‡º","å“è¶Š","å®Œç¾"};
 	if(nGrowLevel >= 1 and nGrowLevel <= table.getn(strTbl)) then
 		if(strTbl[nGrowLevel]) then
 			PetSkillStudy_PetModel:SetFakeObject("");
@@ -941,7 +941,7 @@ function PetSkillStudy_ShowPetGrow(nGrowLevel)
 			Pet:SetPetLocation(g_selidx,2);
 			PetSkillStudy_PetModel:SetFakeObject( "My_PetStudySkill" );
 			
-			PetSkillStudy_Text1:SetText("ÕâÖ»ÕäÊŞµÄ³É³¤#R"..strTbl[nGrowLevel].."¡£");
+			PetSkillStudy_Text1:SetText("è¿™åªçå…½çš„æˆé•¿#R"..strTbl[nGrowLevel].."ã€‚");
 			PetSkillStudy_Accept:Disable();
 		end
 	end
@@ -961,33 +961,33 @@ function PetSkillStudy_GetTakeBabyCostMoney(ptlv, itemId)
 	
 	local costMoney = g_tbabaymoney[ptlv];
 	
-	--AxTrace(0, 0, "costMoney="..costMoney.."¡£");
+	--AxTrace(0, 0, "costMoney="..costMoney.."ã€‚");
 	
-	--ÖÕ¼¶»¹Í¯¾íÖáÊÕ·Ñ½µÖÁ90%
+	--ç»ˆçº§è¿˜ç«¥å·è½´æ”¶è´¹é™è‡³90%
 	if itemId and itemId ~= -1 then
-		--AxTrace(0, 0, "itemId="..itemId.."¡£");
+		--AxTrace(0, 0, "itemId="..itemId.."ã€‚");
 		if itemId == 30503011 or itemId == 30503012 then
-			--ÕäÊŞ»¹Í¯¾íÖá/¸ß¼¶ÕäÊŞ»¹Í¯¾íÖá
+			--çå…½è¿˜ç«¥å·è½´/é«˜çº§çå…½è¿˜ç«¥å·è½´
 		elseif itemId == 30503016 or itemId == 30503017 or itemId == 30503018 or itemId == 30503019 or itemId == 30503020 then
-			--ÖÕ¼¶ÕäÊŞ»¹Í¯¾íÖá
+			--ç»ˆçº§çå…½è¿˜ç«¥å·è½´
 			costMoney = (costMoney * 90) / 100;
 			if costMoney <= 0 then
 				costMoney = 1;
 			end
 		else
-			--ÀàËÆ »¹Í¯µ¤£ºÍÃ×Ó
+			--ç±»ä¼¼ è¿˜ç«¥ä¸¹ï¼šå…”å­
 			costMoney = costMoney / 100;
 			if costMoney <= 0 then
 				costMoney = 1;
 			end
 		end
 	end
-	--AxTrace(0, 0, "ret costMoney="..costMoney.."¡£");
+	--AxTrace(0, 0, "ret costMoney="..costMoney.."ã€‚");
 	
 	return costMoney;
 end
 
---ÕäÊŞ¼¼ÄÜÑ§Ï°£ºÁ½¸ö²»Í¬ÀàÊÖ¶¯¼¼ÄÜÈ·ÈÏ¡°Ñ§Ï°¡±£¨¸ÃÊÂ¼şÔÚ MessageBox_Self ½çÃæÖĞµÄ PET_SKILL_STUDY_CONFIRM ÊÂ¼şÖĞ´¥·¢£©
+--çå…½æŠ€èƒ½å­¦ä¹ ï¼šä¸¤ä¸ªä¸åŒç±»æ‰‹åŠ¨æŠ€èƒ½ç¡®è®¤â€œå­¦ä¹ â€ï¼ˆè¯¥äº‹ä»¶åœ¨ MessageBox_Self ç•Œé¢ä¸­çš„ PET_SKILL_STUDY_CONFIRM äº‹ä»¶ä¸­è§¦å‘ï¼‰
 function PetSkillStudy_ConfirmPetSkillStudy()
 
 	--PushDebugMessage ("PetSkillStudy_ConfirmPetSkillStudy")
@@ -995,31 +995,31 @@ function PetSkillStudy_ConfirmPetSkillStudy()
 	local saidx = g_selidx_jns
 	local slidx = g_selidx
 
-	--µ±Ç°ÊÇ·ñÊÇÕäÊŞ¼¼ÄÜÑ§Ï°½çÃæ....
+	--å½“å‰æ˜¯å¦æ˜¯çå…½æŠ€èƒ½å­¦ä¹ ç•Œé¢....
 	if 1 ~= g_uitype then
 		return
 	end
 
 	if (-1 == slidx) then
-		PushDebugMessage("ÇëÑ¡ÔñÕäÊŞ¡£")
+		PushDebugMessage("è¯·é€‰æ‹©çå…½ã€‚")
 		return
 	end
 
 	if(-1 == saidx) then
-		PushDebugMessage("ĞèÒª¼¼ÄÜÊé¡£")
+		PushDebugMessage("éœ€è¦æŠ€èƒ½ä¹¦ã€‚")
 		return
 	end
 
-	local pM = Player:GetData("MONEY") + Player:GetData("MONEY_JZ")   --½»×ÓÆÕ¼° Vega
+	local pM = Player:GetData("MONEY") + Player:GetData("MONEY_JZ")   --äº¤å­æ™®åŠ Vega
 	local nM = tonumber(PetSkillStudy_Money:GetProperty("MoneyNumber"))
 	if pM < nM then
-		PushDebugMessage("½ğÇ®²»¹»£¬ÎŞ·¨Ñ§Ï°¼¼ÄÜ")
+		PushDebugMessage("é‡‘é’±ä¸å¤Ÿï¼Œæ— æ³•å­¦ä¹ æŠ€èƒ½")
 		return
 	end
 
 	Pet:SkillStudy_Do( g_uitype, slidx, PETSKILLSTUDY_ACCBTN[saidx][3] )
 
-	g_stduySkill = true;	--ÒÑ¾­Ñ§¹ı¼¼ÄÜ
-	--PushDebugMessage("µ÷ÊÔĞÅÏ¢£ºÊÖ¶¯¼¼ÄÜÒÑÑ§»á¡£");
+	g_stduySkill = true;	--å·²ç»å­¦è¿‡æŠ€èƒ½
+	--PushDebugMessage("è°ƒè¯•ä¿¡æ¯ï¼šæ‰‹åŠ¨æŠ€èƒ½å·²å­¦ä¼šã€‚");
 
 end

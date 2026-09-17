@@ -1,7 +1,7 @@
--- ÄêÊŞBOSSËÀÍö£¬µôÂä±¦Ïä
+-- å¹´å…½BOSSæ­»äº¡ï¼Œæ‰è½å®ç®±
 
 x050051_g_ScriptId	= 050051
---x050051_g_strDieNotice = "ÄêÊŞ£¬ÄêÊŞ£¬ÄêÄêÓĞ×ïÊÜ¡£½ñÄê£¬Ğ×ÃÍÏùÕÅ¿ñÍı¿ÉÁ¯µÄÄêÊŞ±»%s¡°Pia¡±µÄÒ»¼Ç±ŞÅÚ»÷ÖĞÍ·²¿£¬Õ¨µÃÊÇ»èÌìÓÖ°µµØ£¬ÈÌ²»×¡µÄÁ÷ĞÇ£¡Ö»ºÃÈçÍùÄêÒ»Ñù£¬Âä»Ä¶øÌÓ£¡"
+--x050051_g_strDieNotice = "å¹´å…½ï¼Œå¹´å…½ï¼Œå¹´å¹´æœ‰ç½ªå—ã€‚ä»Šå¹´ï¼Œå‡¶çŒ›åš£å¼ ç‹‚å¦„å¯æ€œçš„å¹´å…½è¢«%sâ€œPiaâ€çš„ä¸€è®°é­ç‚®å‡»ä¸­å¤´éƒ¨ï¼Œç‚¸å¾—æ˜¯æ˜å¤©åˆæš—åœ°ï¼Œå¿ä¸ä½çš„æµæ˜Ÿï¼åªå¥½å¦‚å¾€å¹´ä¸€æ ·ï¼Œè½è’è€Œé€ƒï¼"
 x050051_g_strDieNotice = ""
 x050051_g_strDieNotice0 = "#{NSBS_20071228_08}"
 x050051_g_strDieNotice1 = "#{NSBS_20071228_09}"
@@ -25,17 +25,17 @@ x050051_g_PosTbl = {
 
 x050051_g_DropNum = 0;
 
---Éú³¤µãid
+--ç”Ÿé•¿ç‚¹id
 x050051_g_GrowPointID = 780
 --**********************************
---Éú³É±¦Ïä
+--ç”Ÿæˆå®ç®±
 --**********************************
 function x050051_DropNianShouBox( sceneId)
 	
 	local index = random(20)
 	
 	local Pos = x050051_g_PosTbl[index]
-	--¸øÎïÆ·
+	--ç»™ç‰©å“
 	x050051_DropNianShouBoxEx(sceneId, Pos)
 	
 end
@@ -50,10 +50,10 @@ function x050051_DropNianShouBoxEx( sceneId, Pos)
 	end
 	
 	local strMsg0 = "#{NSBS_20071228_14}"
-	local strMsg1 = format("£¨%d£¬%d£©", Pos[1], Pos[2])
+	local strMsg1 = format("ï¼ˆ%dï¼Œ%dï¼‰", Pos[1], Pos[2])
 	local strMsg2 = "#{NSBS_20071228_15}"
 	local strMsg = strMsg0..strMsg1..strMsg2
-	MonsterTalk(sceneId, -1, "ÎŞÁ¿É½", strMsg)
+	MonsterTalk(sceneId, -1, "æ— é‡å±±", strMsg)
 			
 	local ItemBoxId = ItemBoxEnterScene( Pos[1], Pos[2], x050051_g_GrowPointID, sceneId, QUALITY_MUST_BE_CHANGE, 1, 30501157 )
 	
@@ -108,19 +108,19 @@ function x050051_DropNianShouBoxEx( sceneId, Pos)
 end
 
 function x050051_OnDie( sceneId, selfId, killerId )
-	--1.¸øÉ±ËÀÕß¼Ó¾­Ñé
+	--1.ç»™æ€æ­»è€…åŠ ç»éªŒ
 	local level = GetLevel( sceneId, killerId )
 	local expkill = (level*80-326)*10
 	AddExp(sceneId, killerId, expkill)
 	
-	--·¢ËÍĞÑÄ¿ÌáÊ¾
+	--å‘é€é†’ç›®æç¤º
 --	BeginEvent( sceneId )
-		--local str = format("Äã»ñµÃÁË¾­Ñé%d", expkill)
+		--local str = format("ä½ è·å¾—äº†ç»éªŒ%d", expkill)
 		--AddText( sceneId,  str)
 	--EndEvent( sceneId )
 	--DispatchMissionTips( sceneId, selfId )
 	
-	--2.ĞèÒª¸øËùÓĞÈË¼Ó¾­Ñé£¬É±bossÕß¸ü¶à¾­Ñé
+	--2.éœ€è¦ç»™æ‰€æœ‰äººåŠ ç»éªŒï¼Œæ€bossè€…æ›´å¤šç»éªŒ
 	local nHumanCount = LuaFnGetCopyScene_HumanCount(sceneId)
 	
 	for i=0, nHumanCount-1 do
@@ -132,20 +132,20 @@ function x050051_OnDie( sceneId, selfId, killerId )
 			local expother = (level*80-326)*4
 			AddExp(sceneId, nHumanId, expother)
 		
-			--·¢ËÍĞÑÄ¿ÌáÊ¾
+			--å‘é€é†’ç›®æç¤º
 			--BeginEvent( sceneId )
-			--	local str1 = format("Äã»ñµÃÁË¾­Ñé%d", expother)
+			--	local str1 = format("ä½ è·å¾—äº†ç»éªŒ%d", expother)
 			--	AddText( sceneId,  str1)
 		--	EndEvent( sceneId )
 		--	DispatchMissionTips( sceneId, nHumanId)
 		end
 	end
 	
-	--3.µôÂä±¦Ïä£¬Éú³ÉÉú³¤µã
+	--3.æ‰è½å®ç®±ï¼Œç”Ÿæˆç”Ÿé•¿ç‚¹
 	local index = random(20)
 	local index1 = random(20)
 	
-	--Ëæ»ú³öÁ½¸öÏàµÈµÄÉú³¤µã£¬´¦ÀíÒ»ÏÂ
+	--éšæœºå‡ºä¸¤ä¸ªç›¸ç­‰çš„ç”Ÿé•¿ç‚¹ï¼Œå¤„ç†ä¸€ä¸‹
 	if index == index1 then 
 		if index < 20 then
 	   	index1 = index+1
@@ -154,31 +154,31 @@ function x050051_OnDie( sceneId, selfId, killerId )
 	  end
 	end
 	
-	--Éú³ÉµÚÒ»¸ö±¦Ïä
+	--ç”Ÿæˆç¬¬ä¸€ä¸ªå®ç®±
 	local Pos = x050051_g_PosTbl[index]
 	x050051_DropNianShouBoxEx(sceneId, Pos)
-	--Éú³ÉµÚ¶ş¸ö±¦Ïä
+	--ç”Ÿæˆç¬¬äºŒä¸ªå®ç®±
 	local Pos1 = x050051_g_PosTbl[index1]
 	x050051_DropNianShouBoxEx(sceneId, Pos1)
 	
-	--ËÀÍö¹«¸æ
+	--æ­»äº¡å…¬å‘Š
 	local str = format( "#{_INFOUSR%s}", GetName(sceneId,killerId))
 	str = x050051_g_strDieNotice0..str..x050051_g_strDieNotice1
 	
 	BroadMsgByChatPipe( sceneId, killerId, str, 4 )
 	
-	--µôÂä¹«¸æ
+	--æ‰è½å…¬å‘Š
 	--BroadMsgByChatPipe( sceneId, killerId, x050051_g_strDropNotice, 4 )
 end
 
 function x050051_OnHeartBeat(sceneId, selfId, nTick)
 
-	--¼ì²âÊÇ²»ÊÇËÀÁË....
+	--æ£€æµ‹æ˜¯ä¸æ˜¯æ­»äº†....
 	if LuaFnIsCharacterLiving(sceneId, selfId) ~= 1 then
 		return
 	end
 
-	--LuaFnNpcChat(sceneId, selfId, 0, "²»ÖªËÀ»îµÄ¼Ò»ï£¬ÎÒµÄÊÖÏÂ¾ÍÄÜ¸ÉµôÄã£¡")
+	--LuaFnNpcChat(sceneId, selfId, 0, "ä¸çŸ¥æ­»æ´»çš„å®¶ä¼™ï¼Œæˆ‘çš„æ‰‹ä¸‹å°±èƒ½å¹²æ‰ä½ ï¼")
 end
 
 function x050051_OnInit(sceneId, selfId)
@@ -186,20 +186,20 @@ function x050051_OnInit(sceneId, selfId)
 end
 
 function x050051_OnKillCharacter(sceneId, selfId, targetId)
-	--LuaFnNpcChat(sceneId, selfId, 0, "ÎÒÉ±ËÀÒ»¸öÈËÁË....È¥ËÀ°ÉÄã....")
+	--LuaFnNpcChat(sceneId, selfId, 0, "æˆ‘æ€æ­»ä¸€ä¸ªäººäº†....å»æ­»å§ä½ ....")
 end
 
 function x050051_OnEnterCombat(sceneId, selfId, enmeyId)
-	--LuaFnNpcChat(sceneId, selfId, 0, "ÎÒ½øÈëÕ½¶·ÁË....ÄãÃÇµÈ×ÅÈ¥ÕÒÃÏÆÅ°É....")
+	--LuaFnNpcChat(sceneId, selfId, 0, "æˆ‘è¿›å…¥æˆ˜æ–—äº†....ä½ ä»¬ç­‰ç€å»æ‰¾å­Ÿå©†å§....")
 	
 end
 
 function x050051_OnLeaveCombat(sceneId, selfId)
-	--LuaFnNpcChat(sceneId, selfId, 0, "ÎÒÀë¿ªÕ½¶·ÁË....´ó¼ÒÏÈÍ£ÏÂ³ÔµãÒ©°É....")
+	--LuaFnNpcChat(sceneId, selfId, 0, "æˆ‘ç¦»å¼€æˆ˜æ–—äº†....å¤§å®¶å…ˆåœä¸‹åƒç‚¹è¯å§....")
 	
 end
 
---´´½¨Ò»¸öĞ¡¹Ö....
+--åˆ›å»ºä¸€ä¸ªå°æ€ª....
 --function x050051_CreateChildMonster(sceneId, selfId, CreateData)
 
 	--local PosX, PosY = LuaFnGetWorldPos( sceneId, selfId )

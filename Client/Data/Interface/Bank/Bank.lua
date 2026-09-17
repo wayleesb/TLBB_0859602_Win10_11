@@ -1,244 +1,178 @@
-local g_InitiativeClose = 0;
-
---±³°ü¼°Æä±àºÅ
-local PACK_BUTTONS_NUM = 5;
-local PACK_BUTTONS = {};
-
---¸ñ×Ó¼°Æä±àºÅ
-local GRID_BUTTONS_NUM = 20;
+-- å…«ç®±ä»“åº“è§†å›¾ï¼›åªåˆ·æ–°å¯è§çª—å£ï¼Œå…³é—­æ—¶æ¸…ç†ç‰©å“ Action å’Œ NPC å…³æ³¨ã€‚
 local GRID_BUTTONS = {};
-
---Êµ¼ÊÃ¿¸ö±³°ü¾ßÓÐµÄ¸ñ×ÓÊý
-local nUsedGrid = {};
-
---µ±Ç°´ò¿ªµÄ×âÁÞÏä
+local PACK_BUTTONS = {};
+local GRID_SETS = {};
+local CLOSED_SETS = {};
+local g_Active = false;
+local g_ObjCared = -1;
 local g_CurrentRentBox = 1;
+local g_DefaultPosition;
 
-local objCared = -1;
-local MAX_OBJ_DISTANCE = 3.0;
-
-
---===============================================
--- OnLoad()
---===============================================
 function Bank_PreLoad()
-
-	this:RegisterEvent("TOGLE_BANK");
-	this:RegisterEvent("UPDATE_BANK");
-	this:RegisterEvent("OBJECT_CARED_EVENT");
+    this:RegisterEvent("TOGLE_BANK");
+    this:RegisterEvent("UPDATE_BANK");
+    this:RegisterEvent("PACKAGE_ITEM_CHANGED");
+    this:RegisterEvent("OBJECT_CARED_EVENT");
+    this:RegisterEvent("PLAYER_LEAVE_WORLD");
+    this:RegisterEvent("PLAYER_ENTERING_WORLD");
+    this:RegisterEvent("ON_SCENE_TRANS");
+    this:RegisterEvent("ON_SERVER_TRANS");
+    this:RegisterEvent("VIEW_RESOLUTION_CHANGED");
 end
-	
+
 function Bank_OnLoad()
-	GRID_BUTTONS[1]  = Bank_Item1;
-	GRID_BUTTONS[2]  = Bank_Item2;
-	GRID_BUTTONS[3]  = Bank_Item3;
-	GRID_BUTTONS[4]  = Bank_Item4;
-	GRID_BUTTONS[5]  = Bank_Item5;
-	GRID_BUTTONS[6]  = Bank_Item6;
-	GRID_BUTTONS[7]  = Bank_Item7;
-	GRID_BUTTONS[8]  = Bank_Item8;
-	GRID_BUTTONS[9]  = Bank_Item9;
-	GRID_BUTTONS[10] = Bank_Item10;
-	GRID_BUTTONS[11] = Bank_Item11;
-	GRID_BUTTONS[12] = Bank_Item12;
-	GRID_BUTTONS[13] = Bank_Item13;
-	GRID_BUTTONS[14] = Bank_Item14;
-	GRID_BUTTONS[15] = Bank_Item15;
-	GRID_BUTTONS[16] = Bank_Item16;
-	GRID_BUTTONS[17] = Bank_Item17;
-	GRID_BUTTONS[18] = Bank_Item18;
-	GRID_BUTTONS[19] = Bank_Item19;
-	GRID_BUTTONS[20] = Bank_Item20;
-										 
-	PACK_BUTTONS[1]  = Bank_patulousBox_1;
-	PACK_BUTTONS[2]  = Bank_patulousBox_2;
-	PACK_BUTTONS[3]  = Bank_patulousBox_3;
-	PACK_BUTTONS[4]  = Bank_patulousBox_4;
-	PACK_BUTTONS[5]  = Bank_patulousBox_5;
-	
+    GRID_BUTTONS[1] = Bank_Item1;
+    GRID_BUTTONS[2] = Bank_Item2;
+    GRID_BUTTONS[3] = Bank_Item3;
+    GRID_BUTTONS[4] = Bank_Item4;
+    GRID_BUTTONS[5] = Bank_Item5;
+    GRID_BUTTONS[6] = Bank_Item6;
+    GRID_BUTTONS[7] = Bank_Item7;
+    GRID_BUTTONS[8] = Bank_Item8;
+    GRID_BUTTONS[9] = Bank_Item9;
+    GRID_BUTTONS[10] = Bank_Item10;
+    GRID_BUTTONS[11] = Bank_Item11;
+    GRID_BUTTONS[12] = Bank_Item12;
+    GRID_BUTTONS[13] = Bank_Item13;
+    GRID_BUTTONS[14] = Bank_Item14;
+    GRID_BUTTONS[15] = Bank_Item15;
+    GRID_BUTTONS[16] = Bank_Item16;
+    GRID_BUTTONS[17] = Bank_Item17;
+    GRID_BUTTONS[18] = Bank_Item18;
+    GRID_BUTTONS[19] = Bank_Item19;
+    GRID_BUTTONS[20] = Bank_Item20;
+    PACK_BUTTONS[1] = Bank_patulousBox_1;
+    PACK_BUTTONS[2] = Bank_patulousBox_2;
+    PACK_BUTTONS[3] = Bank_patulousBox_3;
+    PACK_BUTTONS[4] = Bank_patulousBox_4;
+    PACK_BUTTONS[5] = Bank_patulousBox_5;
+    PACK_BUTTONS[6] = Bank_patulousBox_6;
+    PACK_BUTTONS[7] = Bank_patulousBox_7;
+    PACK_BUTTONS[8] = Bank_patulousBox_8;
+    g_DefaultPosition = Bank_Frame:GetProperty("UnifiedPosition");
+    Bank_ClearActions();
+end
 
-end										
+function Bank_ClearActions()
+    for i = 1, 20 do
+        GRID_BUTTONS[i]:SetActionItem(-1);
+        GRID_BUTTONS[i]:SetPushed(0);
+        GRID_BUTTONS[i]:SetProperty("DragAcceptName", "");
+        GRID_BUTTONS[i]:Disable();
+    end
+    for i = 1, 8 do
+        PACK_BUTTONS[i]:SetPushed(0);
+        PACK_BUTTONS[i]:SetProperty("DragAcceptName", "");
+        PACK_BUTTONS[i]:Disable();
+    end
+end
 
-
---===============================================
--- OnEvent
---===============================================
 function Bank_OnEvent(event)
-
-	if(event == "TOGLE_BANK") then
-		this:Show();
-		g_InitiativeClose = 0;
-		
-		--¹ØÐÄNPC
-		objCared = Bank:GetNpcId();
-		this:CareObject(objCared, 1, "Bank");
-		
-		for i=1, PACK_BUTTONS_NUM do
-			PACK_BUTTONS[i]:Hide();
-		end
-		
-		--»ñµÃÒÑ¾­ÓµÓÐµÄ×âÁÞÏä¸öÊý
-		local nRentNum = Bank:GetRentBoxNum();
-		--ÉèÖÃÒÑ¾­ÓµÓÐµÄ×âÁÞÏäµÄÍ¼±ê
-		for i=1, nRentNum do
-			PACK_BUTTONS[i]:Show();
-		end
-		
-		g_CurrentRentBox = 1;
-		Bank_UpdateFrame(g_CurrentRentBox);
-		
-	elseif(event == "UPDATE_BANK")  then
-		Bank_UpdateFrame(g_CurrentRentBox);
-	
-	elseif (event == "OBJECT_CARED_EVENT") then
-		AxTrace(0, 0, "arg0"..arg0.." arg1"..arg1.." arg2"..arg2);
-		if(tonumber(arg0) ~= objCared) then
-			return;
-		end
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ý£¬×Ô¶¯¹Ø±Õ
-		if(arg1 == "distance" and tonumber(arg2)>MAX_OBJ_DISTANCE or arg1=="destroy") then
-			g_InitiativeClose = 1;
-			this:Hide();
-			Bank:Close();
-
-			--È¡Ïû¹ØÐÄ
-			this:CareObject(objCared, 0, "Bank");
-		end
-
-	end
+    if event == "TOGLE_BANK" then
+        if IsWindowShow("BigBank") then
+            CloseWindow("BigBank", true);
+        end
+        if g_Active then
+            Bank_Close_Clicked();
+        end
+        this:Show();
+        g_Active = true;
+        g_ObjCared = Bank:GetNpcId();
+        this:CareObject(g_ObjCared, 1, "Bank");
+        Bank:SetOpenWhichBank(0);
+        g_CurrentRentBox = 1;
+        Bank_UpdateFrame(g_CurrentRentBox);
+    elseif event == "UPDATE_BANK" or event == "PACKAGE_ITEM_CHANGED" then
+        if g_Active and this:IsVisible() then
+            Bank_UpdateFrame(g_CurrentRentBox);
+        end
+    elseif event == "OBJECT_CARED_EVENT" then
+        if g_Active and tonumber(arg0) == g_ObjCared and
+            ((arg1 == "distance" and tonumber(arg2) > 3.0) or arg1 == "destroy") then
+            Bank_Close_Clicked();
+        end
+    elseif event == "PLAYER_LEAVE_WORLD" or event == "PLAYER_ENTERING_WORLD" or
+        event == "ON_SCENE_TRANS" or event == "ON_SERVER_TRANS" then
+        Bank_Close_Clicked();
+    elseif event == "VIEW_RESOLUTION_CHANGED" then
+        Bank_Frame:SetProperty("UnifiedPosition", g_DefaultPosition);
+    end
 end
 
---===============================================
--- Bank_UpdateFrame
---===============================================
 function Bank_UpdateFrame(nIndex)
-
-		Bank:SetCurRentIndex(nIndex);
-		for i=1, PACK_BUTTONS_NUM do
-			if(i==nIndex) then
-				PACK_BUTTONS[i]:SetPushed(1);
-			else
-				PACK_BUTTONS[i]:SetPushed(0);
-			end
-		end
-		
-		for i=1, GRID_BUTTONS_NUM do
-			GRID_BUTTONS[i]:SetActionItem(-1);
-			GRID_BUTTONS[i]:Enable();
-		end
-	
-	
-	--´¦Àí½ðÇ®
-	local nMoney;
-	local nGoldCoin;	
-	local nSilverCoin;
-	local nCopperCoin;
-
-	nMoney,nGoldCoin,nSilverCoin,nCopperCoin = Bank:GetBankMoney();
-	--Bank_Gold:SetText(tostring(nGoldCoin));
-	--Bank_Silver:SetText(tostring(nSilverCoin));
-	--Bank_CopperCoin:SetText(tostring(nCopperCoin));
-	Bank_Money:SetProperty("MoneyNumber", tostring(nMoney));
-	
-	
-		
-	--»ñµÃÕâ¸ö±³°ü¿ÉÒÔÊ¹ÓÃµÄ¸ñ×ÓÊý
-	local nBeginIndex,nGridNum = Bank:GetRentBoxInfo(nIndex);
-	
-	--µãÁÁÕâÐ©¿ÉÒÔÊ¹ÓÃµÄ¸ñ×Ó£¬ÖÃ»Ò²»ÄÜÊ¹ÓÃµÄ¸ñ×Ó
-	for i=1, nGridNum do
-		GRID_BUTTONS[i]:Show();
-	end
-	
-	for i=nGridNum+1 ,GRID_BUTTONS_NUM do
-		GRID_BUTTONS[i]:SetProperty("NormalImage","set:Common2 image:Unopened_Normal");
-		GRID_BUTTONS[i]:SetProperty("Empty","False");
-		--ÉèÖÃËÄ¸ö½ÇµÄÊý×Ö£¬È«ÉèÖÃÎª¿Õ
-		GRID_BUTTONS[i]:SetProperty("CornerChar","TopLeft ");
-		GRID_BUTTONS[i]:SetProperty("CornerChar","TopRight ");
-		GRID_BUTTONS[i]:SetProperty("CornerChar","BotLeft ");
-		GRID_BUTTONS[i]:SetProperty("CornerChar","BotRight ");
-		GRID_BUTTONS[i]:Disable();
-	end
-
-	--´ÓÊý¾Ý³ØÖÐÊ¹ÓÃÊý¾ÝÌîÈë±³°üÄÚµÄÎïÆ·
-	local nTotalNum = GetActionNum("bankitem");
-	
-	--AxTrace(0, 0, "Bank:nTotalNum =  " .. nTotalNum);
-
-	local nActIndex = nBeginIndex;
-	local i=1;
-	
-	--AxTrace(0, 0, "Bank:nActIndex =  " .. nActIndex);
-	
-	for i=1,  nGridNum  do
-		
-		local theAction, bLocked = Bank:EnumItem(nActIndex);
-		nActIndex = nActIndex+1;
-
-		--AxTrace(0, 0, "Bank:nActIndex =  " .. nActIndex);
-
-		if theAction:GetID() ~= 0 then
-			GRID_BUTTONS[i]:SetActionItem(theAction:GetID());
-			if(bLocked == true) then 
-				GRID_BUTTONS[i]:Disable();
-			else
-				GRID_BUTTONS[i]:Enable();
-			end
-		else
-			GRID_BUTTONS[i]:SetActionItem(-1);
-		end
-		
-	end
-
+    if not g_Active or not this:IsVisible() then return end
+    Bank_ClearActions();
+    local nRentNum = Bank:GetRentBoxNum();
+    if nIndex < 1 or nIndex > nRentNum then nIndex = 1 end
+    g_CurrentRentBox = nIndex;
+    for i = 1, 8 do
+        if i <= nRentNum then
+            PACK_BUTTONS[i]:Show();
+            PACK_BUTTONS[i]:Enable();
+            PACK_BUTTONS[i]:SetProperty("DragAcceptName", "R"..i);
+            if i == nIndex then PACK_BUTTONS[i]:SetPushed(1) end
+        else
+            PACK_BUTTONS[i]:Hide();
+        end
+    end
+    Bank:SetCurRentIndex(nIndex);
+    local nMoney = Bank:GetBankMoney();
+    Bank_Money:SetProperty("MoneyNumber", tostring(nMoney));
+    local nBeginIndex, nGridNum = Bank:GetRentBoxInfo(nIndex);
+    for i = 1, 20 do
+        if i <= nGridNum then
+            GRID_BUTTONS[i]:Show();
+            GRID_BUTTONS[i]:Enable();
+            GRID_BUTTONS[i]:SetProperty("DragAcceptName", string.format("B%02d", i - 1));
+            local theAction, bLocked = Bank:EnumItem(nBeginIndex + i - 1);
+            if theAction:GetID() ~= 0 then
+                GRID_BUTTONS[i]:SetActionItem(theAction:GetID());
+                if bLocked then
+                    GRID_BUTTONS[i]:SetProperty("DragAcceptName", "");
+                    GRID_BUTTONS[i]:Disable();
+                end
+            end
+        else
+            GRID_BUTTONS[i]:Hide();
+        end
+    end
 end
 
---===============================================
--- ´ò¿ª´æÇ®µÄ¶Ô»°¿ò
---===============================================
-function Bank_Save_Clicked()
-	Bank:OpenSaveFrame();
-end
-
---===============================================
--- ´ò¿ªÈ¡Ç®µÄ¶Ô»°¿ò
---===============================================
-function Bank_Get_Clicked()
-	Bank:OpenGetFrame();
-end
-
-
---===============================================
--- µã»÷×âÁÞÏäµÄ²Ù×÷ 
---===============================================
-function Bank_patulousBox_Clicked(nIndex)
-
-	g_CurrentRentBox = nIndex;
-	--AxTrace(0, 0, "Bank:g_CurrentRentBox =  " .. g_CurrentRentBox);
-	Bank_UpdateFrame(nIndex);
-
-end
-
---===============================================
--- µã»÷¹Ø±Õ
---===============================================
 function Bank_Close_Clicked()
-	if(g_InitiativeClose == 1)  then
-		return;
-	end
-	
-	this:CareObject(objCared, 0, "Bank");
-	this:Hide();
-	Bank:Close();
+    -- Hidden å›žè°ƒå¯èƒ½å†æ¬¡è¿›å…¥ï¼Œå…ˆå¤ä½çŠ¶æ€ä»¥å…é‡å¤å…³é—­é‡‘é¢è¾“å…¥æ¡†ã€‚
+    local wasActive = g_Active;
+    g_Active = false;
+    if g_ObjCared ~= -1 then
+        this:CareObject(g_ObjCared, 0, "Bank");
+        g_ObjCared = -1;
+    end
+    Bank_ClearActions();
+    if this:IsVisible() then this:Hide() end
+    if wasActive then Bank:Close() end
 end
 
+function Bank_ShowAll_Clicked()
+    if not g_Active then return end
+    Bank:SetOpenWhichBank(1);
+    Bank_Close_Clicked();
+    PushEvent("TOGLE_BIGBANK", Bank:GetNpcId());
+end
 
---========================================================================
---
--- ÉèÖÃ¶þ¼¶ÃÜÂë¡£
---
---========================================================================
+function Bank_Save_Clicked()
+    if g_Active then Bank:OpenSaveFrame() end
+end
+
+function Bank_Get_Clicked()
+    if g_Active then Bank:OpenGetFrame() end
+end
+
 function Bank_SuperPassword_Clicked()
+    Player:SetSupperPassword();
+end
 
-		Player:SetSupperPassword();
-end;
+function Bank_patulousBox_Clicked(nIndex)
+    if not g_Active or nIndex < 1 or nIndex > Bank:GetRentBoxNum() then return end
+    g_CurrentRentBox = nIndex;
+    Bank_UpdateFrame(nIndex);
+end
+

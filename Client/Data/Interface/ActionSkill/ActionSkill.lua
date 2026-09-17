@@ -17,7 +17,7 @@ local SKILL_BUTTONS = {};
 --local NUQI_BUTTONS_NUM = 3;
 --local NUQI_BUTTONS = {};
 
---ÃÅÅÉÖ÷ÊôÐÔ±í
+--é—¨æ´¾ä¸»å±žæ€§è¡¨
 local MenPai_MainAttr = {
 [1] = {image = "set:UIIcons image:Ice_Repellency_Normal", Tooltip = "MPZSX_20071221_11" },
 [2] = {image = "set:UIIcons image:Fire_Repellency_Normal", Tooltip = "MPZSX_20071221_12" },
@@ -25,16 +25,16 @@ local MenPai_MainAttr = {
 [4] = {image = "set:UIIcons image:Poison_Repellency_Normal", Tooltip = "MPZSX_20071221_14" } };
 
 local MenPai_UsedAttr = {
-[0] = {image = "set:Menpaishuxing image:Shuxing_Dark", Tooltip = "MPZSX_20071221_13", },			--ÉÙÁÖ
-[1] = {image = "set:Menpaishuxing image:Shuxing_Fire", Tooltip = "MPZSX_20071221_12",},			--Ã÷½Ì
-[2] = {image = "set:Menpaishuxing image:Shuxing_PoisonFire", Tooltip = "MPZSX_20071221_15",},		--Ø¤°ï
-[3] = {image = "set:Menpaishuxing image:Shuxing_DarkIce", Tooltip = "MPZSX_20071221_16",},		--Îäµ±
-[4] = {image = "set:Menpaishuxing image:Shuxing_IceDark", Tooltip = "MPZSX_20071221_17",},		--¶ëÃ¼
-[5] = {image = "set:Menpaishuxing image:Shuxing_Poison", Tooltip = "MPZSX_20071221_14",},			--ÐÇËÞ
-[6] = {image = "set:Menpaishuxing image:Shuxing_FIPD", Tooltip = "MPZSX_20071221_18",}, --ÌìÁú
-[7] = {image = "set:Menpaishuxing image:Shuxing_Ice", Tooltip = "MPZSX_20071221_11",},			--ÌìÉ½
-[8] = {image = "set:Menpaishuxing image:Shuxing_FirePoison", Tooltip = "MPZSX_20071221_19",},		--åÐÒ£
-[9] = {image = "", Tooltip = "ÎÞÃÅÅÉ",},	--ÎÞÃÅÅÉ
+[0] = {image = "set:Menpaishuxing image:Shuxing_Dark", Tooltip = "MPZSX_20071221_13", },			--å°‘æž—
+[1] = {image = "set:Menpaishuxing image:Shuxing_Fire", Tooltip = "MPZSX_20071221_12",},			--æ˜Žæ•™
+[2] = {image = "set:Menpaishuxing image:Shuxing_PoisonFire", Tooltip = "MPZSX_20071221_15",},		--ä¸å¸®
+[3] = {image = "set:Menpaishuxing image:Shuxing_DarkIce", Tooltip = "MPZSX_20071221_16",},		--æ­¦å½“
+[4] = {image = "set:Menpaishuxing image:Shuxing_IceDark", Tooltip = "MPZSX_20071221_17",},		--å³¨çœ‰
+[5] = {image = "set:Menpaishuxing image:Shuxing_Poison", Tooltip = "MPZSX_20071221_14",},			--æ˜Ÿå®¿
+[6] = {image = "set:Menpaishuxing image:Shuxing_FIPD", Tooltip = "MPZSX_20071221_18",}, --å¤©é¾™
+[7] = {image = "set:Menpaishuxing image:Shuxing_Ice", Tooltip = "MPZSX_20071221_11",},			--å¤©å±±
+[8] = {image = "set:Menpaishuxing image:Shuxing_FirePoison", Tooltip = "MPZSX_20071221_19",},		--é€é¥
+[9] = {image = "", Tooltip = "æ— é—¨æ´¾",},	--æ— é—¨æ´¾
 };
 
 
@@ -98,7 +98,7 @@ function ActionSkill_OnEvent(event)
 		ActionSkill_NewSkillStudy();
 	end
 end
---Ñ§»áÁËÐÂ¼¼ÄÜÁË
+--å­¦ä¼šäº†æ–°æŠ€èƒ½äº†
 function ActionSkill_NewSkillStudy()
 	for i=1,6 do
 		XINFA_BUTTONS[i]:SetNewFlash();
@@ -145,7 +145,7 @@ function ActionSkill_Update()
 	ActionSkill_CommonlySkill : SetCheck(0);
 	ActionSkill_ActionSkill : SetCheck(1);
 
---ÏÔÊ¾ÐÄ·¨
+--æ˜¾ç¤ºå¿ƒæ³•
 	for i=1, XINFA_BUTTONS_NUM do
 		local theAction = EnumAction(i-1, "xinfa");
 
@@ -165,7 +165,7 @@ function ActionSkill_Update()
 		else
 			XINFA_BUTTONS[i]:SetActionItem(-1);
 			XINFA_INDEX[i] = -1;
---			XINFA_LEVEL[i] : SetText("Ã»ÓÐ");
+--			XINFA_LEVEL[i] : SetText("æ²¡æœ‰");
 		end
 	end
 
@@ -175,7 +175,7 @@ function ActionSkill_Update()
 	elseif(Current_Skill ~= -1 and SKILL_BUTTONS[Current_Skill] ~= -1) then
 		ActionSkill_Update_Cliecked(Current_Skill,2);
 	end
-	ActionSkill_UpdateMenPaiText();		--¸üÐÂÏÔÊ¾ÎÄ×Ö£¬Èç¹ûÍæ¼Ò¸Ä±äÁËÃÅÅÉ
+	ActionSkill_UpdateMenPaiText();		--æ›´æ–°æ˜¾ç¤ºæ–‡å­—ï¼Œå¦‚æžœçŽ©å®¶æ”¹å˜äº†é—¨æ´¾
 end
 
 function ActionSkill_Update_Cliecked(nIndex, Actiontype)
@@ -204,13 +204,13 @@ function ActionSkill_Update_Cliecked(nIndex, Actiontype)
 	 	strName2= Player:GetXinfaInfo(nXinfaId,"level");
 	 	Current_Xinfa_Level = strName2;
 
-		ActionSkill_Name : SetText( strName .."\n" .. "ÐÄ·¨µÈ¼¶:" .. strName2);
+		ActionSkill_Name : SetText( strName .."\n" .. "å¿ƒæ³•ç­‰çº§:" .. strName2);
 		ActionSkill_Name : SetProperty("TextColours","tl:FFEFEFEF tr:FFEFEFEF bl:FFEFEFEF br:FFEFEFEF");
 		ActionSkill_Name : SetProperty("VertFormatting","VertCentred")
 		ActionSkill_XinfaTarget : Enable();
 --		XINFA_LEVEL[nIndex] : SetText(tostring(strName2));
-		AxTrace(0,1,"XINFA_LEVEL["..nIndex.."] µÈ¼¶="..strName2);
---		AxTrace(0,1,"GET XINFA_LEVEL["..nIndex.."] µÈ¼¶="..XINFA_LEVEL[nIndex]:GetText());
+		AxTrace(0,1,"XINFA_LEVEL["..nIndex.."] ç­‰çº§="..strName2);
+--		AxTrace(0,1,"GET XINFA_LEVEL["..nIndex.."] ç­‰çº§="..XINFA_LEVEL[nIndex]:GetText());
 
 	 	strName = Player:GetXinfaInfo(nXinfaId,"explain");
 	 	ActionSkill_Explain : SetText(strName);
@@ -226,11 +226,11 @@ function ActionSkill_Update_Cliecked(nIndex, Actiontype)
 
 --				XINFA_LEVEL[i] : SetText(tostring(nXinfa_level));
 --				XINFA_LEVEL[i] : Show();
---				AxTrace(0,1,"XINFA_LEVEL["..i.."] µÈ¼¶="..nXinfa_level);
+--				AxTrace(0,1,"XINFA_LEVEL["..i.."] ç­‰çº§="..nXinfa_level);
 			else
 				XINFA_BUTTONS[i]:SetActionItem(-1);
 				XINFA_INDEX[i] = -1;
---				XINFA_LEVEL[i] : SetText("Ã»ÓÐ");
+--				XINFA_LEVEL[i] : SetText("æ²¡æœ‰");
 			end
 		end
 
@@ -266,7 +266,7 @@ function ActionSkill_Update_Cliecked(nIndex, Actiontype)
 
 		XINFA_BUTTONS[Current_Xinfa]:SetPushed(1);
 
-		--±ê¼Ç
+		--æ ‡è®°
 	elseif(Actiontype == 2) then
 
 		if(SKILL_INDEX[nIndex] == -1) then
@@ -300,20 +300,20 @@ function ActionSkill_Update_Cliecked(nIndex, Actiontype)
 		strName = Player:GetSkillInfo(nSkillId,"name");
 
 	 	if( Player:GetSkillInfo(nSkillId,"learn") ) then
---	 		strName2 = "ÒÑ¾­Ñ§»á";
+--	 		strName2 = "å·²ç»å­¦ä¼š";
 	 		ActionSkill_Name : SetProperty("TextColours","tl:FFEFEFEF tr:FFEFEFEF bl:FFEFEFEF br:FFEFEFEF");
 	 		ActionSkill_Name : SetProperty("VertFormatting","TopAligned")
 	 		ActionSkill_ZhaoshiTarget : Enable();
 	 	else
---		 	strName2 = "ÉÐÎ´Ñ§»á";
+--		 	strName2 = "å°šæœªå­¦ä¼š";
 		 	ActionSkill_Name : SetProperty("TextColours","tl:FFFF0000 tr:FFFF0000 bl:FFFF0000 br:FFFF0000");
 		 	ActionSkill_Name : SetProperty("VertFormatting","TopAligned")
 		 	ActionSkill_ZhaoshiTarget : Disable();
 		end
 
 		if nil ~= strName then
---			ActionSkill_Name : SetText( strName .."\n" .. "" .. Current_Xinfa_Name .. "  " .. Current_Xinfa_Level .. "¼¶");
---Ð¡¶þËµ¸ÄµÄ£¬ÑîÒ«×öÖ¤¡£
+--			ActionSkill_Name : SetText( strName .."\n" .. "" .. Current_Xinfa_Name .. "  " .. Current_Xinfa_Level .. "çº§");
+--å°äºŒè¯´æ”¹çš„ï¼Œæ¨è€€åšè¯ã€‚
 			ActionSkill_Name : SetText( strName );
 
 	 	end
@@ -360,16 +360,16 @@ function ActionSkill_Update_Cliecked(nIndex, Actiontype)
 		strName = Player:GetSkillInfo(nNuqiId,"name");
 
 	 	if( Player:GetSkillInfo(nNuqiId,"learn") ) then
---	 		strName2 = "ÒÑ¾­Ñ§»á";
+--	 		strName2 = "å·²ç»å­¦ä¼š";
 	 		ActionSkill_Name : SetProperty("TextColor","FFEFEFEF");
 	 		ActionSkill_ZhaoshiTarget : Enable();
 	 	else
---		 	strName2 = "ÉÐÎ´Ñ§»á";
+--		 	strName2 = "å°šæœªå­¦ä¼š";
 		 	ActionSkiActionSkill_Name : SetProperty("TextColor","FFFF0000");
 		 	ActionSkill_ZhaoshiTarget : Disable();
 		end
 
-	 	ActionSkill_Name : SetText( strName .."\n" .. "Å­Æø¼¼ÄÜ");
+	 	ActionSkill_Name : SetText( strName .."\n" .. "æ€’æ°”æŠ€èƒ½");
 
 	 	strName = Player:GetSkillInfo(nNuqiId,"explain");
 	 	strName2 = Player:GetSkillInfo(nNuqiId,"skilldata");
@@ -422,9 +422,9 @@ function ActionSkill_SetTabColor()
 							};
 
 	local TAB_TEXT = {
-		[0] = "ÆÕÍ¨",
-		"ÃÅÅÉ",
-		"Éú»î",
+		[0] = "æ™®é€š",
+		"é—¨æ´¾",
+		"ç”Ÿæ´»",
 	};
 
 	tab[0]:SetText(noselColor..TAB_TEXT[0]);
@@ -443,11 +443,11 @@ function ActionSkill_ClearStaticImage()
 end
 
 function ActionSkill_UpdateMenPaiText()
-	local menpaiID = Player : GetData("MEMPAI");		--»ñÈ¡Íæ¼ÒÃÅÅÉID
+	local menpaiID = Player : GetData("MEMPAI");		--èŽ·å–çŽ©å®¶é—¨æ´¾ID
 	if menpaiID ~= nil and menpaiID >=0 and menpaiID <=9 then
 		if (menpaiID == 9) then
 			ActionSkill_ClearStaticImage();
-			ActionSkill_MenPai_Attr_Intro : SetText(""); --Ò»°ãÀ´ËµÕâÀï²»»á±»µ÷µ½
+			ActionSkill_MenPai_Attr_Intro : SetText(""); --ä¸€èˆ¬æ¥è¯´è¿™é‡Œä¸ä¼šè¢«è°ƒåˆ°
 			return;
 		end
 		local	str = GetDictionaryString( "MPZSX_20071221_0" .. (menpaiID +1) );

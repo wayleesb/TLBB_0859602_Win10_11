@@ -1,14 +1,14 @@
 -- 402240
--- ºôÑÓÇì  Ñà×ÓÎë¸±±¾ÄÚ
+-- å‘¼å»¶åº†  ç‡•å­åå‰¯æœ¬å†…
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x402240_g_scriptId = 402240
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x402240_g_eventList={}
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x402240_UpdateEventList( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
@@ -17,22 +17,22 @@ function x402240_UpdateEventList( sceneId, selfId,targetId )
 			CallScriptFunction( eventId, "OnEnumerate",sceneId, selfId, targetId )
 		end
 		
-		-- Ìí¼ÓÒ»¸öÍË³ö¸±±¾µÄÑ¡Ïî
-		--AddNumText( sceneId, x402240_g_scriptId, "Ç°ÍùÌ«ºş", 9 ,1  )
+		-- æ·»åŠ ä¸€ä¸ªé€€å‡ºå‰¯æœ¬çš„é€‰é¡¹
+		--AddNumText( sceneId, x402240_g_scriptId, "å‰å¾€å¤ªæ¹–", 9 ,1  )
 		
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 end
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x402240_OnDefaultEvent( sceneId, selfId,targetId )
 	x402240_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x402240_OnEventRequest( sceneId, selfId, targetId, eventId )
 	
@@ -50,7 +50,7 @@ function x402240_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x402240_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x402240_g_eventList do
@@ -65,10 +65,10 @@ function x402240_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x402240_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
-	--¾Ü¾øÖ®ºó£¬Òª·µ»ØNPCµÄÊÂ¼şÁĞ±í
+	--æ‹’ç»ä¹‹åï¼Œè¦è¿”å›NPCçš„äº‹ä»¶åˆ—è¡¨
 	for i, findId in x402240_g_eventList do
 		if missionScriptId == findId then
 			x402240_UpdateEventList( sceneId, selfId, targetId )
@@ -78,7 +78,7 @@ function x402240_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¼ÌĞø£¨ÒÑ¾­½ÓÁËÈÎÎñ£©
+--ç»§ç»­ï¼ˆå·²ç»æ¥äº†ä»»åŠ¡ï¼‰
 --**********************************
 function x402240_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x402240_g_eventList do
@@ -90,7 +90,7 @@ function x402240_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---Ìá½»ÒÑ×öÍêµÄÈÎÎñ
+--æäº¤å·²åšå®Œçš„ä»»åŠ¡
 --**********************************
 function x402240_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, selectRadioId )
 	for i, findId in x402240_g_eventList do
@@ -102,7 +102,7 @@ function x402240_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 end
 
 --**********************************
---ËÀÍöÊÂ¼ş
+--æ­»äº¡äº‹ä»¶
 --**********************************
 function x402240_OnDie( sceneId, selfId, killerId )
 

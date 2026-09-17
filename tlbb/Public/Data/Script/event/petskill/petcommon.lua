@@ -1,9 +1,9 @@
--- ÕäÊŞÍ¨ÓÃ¹¦ÄÜ½Å±¾
+-- çå…½é€šç”¨åŠŸèƒ½è„šæœ¬
 
--- ½Å±¾ºÅ
+-- è„šæœ¬å·
 x335000_g_scriptId = 335000
 
--- ÕäÊŞ¼¼ÄÜÑ§Ï°
+-- çå…½æŠ€èƒ½å­¦ä¹ 
 function x335000_PetStudy( sceneId, selfId, skillId )
 	petGUID_H = LuaFnGetHighSectionOfTargetPetGuid( sceneId, selfId )
 	petGUID_L = LuaFnGetLowSectionOfTargetPetGuid( sceneId, selfId )
@@ -11,7 +11,7 @@ function x335000_PetStudy( sceneId, selfId, skillId )
 	if checkAvailable and checkAvailable == 1 then
 		local ret = PetStudySkill( sceneId, selfId, petGUID_H, petGUID_L, skillId )
 		if ret and ret > 0 then
-			--³É¹¦µÄ¹âĞ§
+			--æˆåŠŸçš„å…‰æ•ˆ
 			LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, 18, 0);
 			return 1
 		end
@@ -20,8 +20,8 @@ function x335000_PetStudy( sceneId, selfId, skillId )
 end
 
 
--- ÅĞ¶Ï¿ÚÁ¸ÊÊºÏÕäÊŞÊ³ÓÃ
--- nIndex ÊÇÕıÔÚÊ¹ÓÃµÄ¿ÚÁ¸µÄ±³°üÎ»ÖÃ
+-- åˆ¤æ–­å£ç²®é€‚åˆçå…½é£Ÿç”¨
+-- nIndex æ˜¯æ­£åœ¨ä½¿ç”¨çš„å£ç²®çš„èƒŒåŒ…ä½ç½®
 function x335000_IsPetCanUseFood( sceneId, selfId, nIndex )
 	petGUID_H = LuaFnGetHighSectionOfTargetPetGuid( sceneId, selfId )
 	petGUID_L = LuaFnGetLowSectionOfTargetPetGuid( sceneId, selfId )
@@ -34,7 +34,7 @@ function x335000_IsPetCanUseFood( sceneId, selfId, nIndex )
 	end
 end
 
--- Ôö¼ÓÕäÊŞ×î´óÉúÃüÖµ
+-- å¢åŠ çå…½æœ€å¤§ç”Ÿå‘½å€¼
 function x335000_IncPetMaxHP( sceneId, selfId, value )
 	if value <= 0 then
 		return 0
@@ -49,7 +49,7 @@ function x335000_IncPetMaxHP( sceneId, selfId, value )
 	return 1
 end
 
--- Ôö¼ÓÕäÊŞÉúÃüÖµ
+-- å¢åŠ çå…½ç”Ÿå‘½å€¼
 function x335000_IncPetHP( sceneId, selfId, value )
 	if value <= 0 then
 		return 0
@@ -74,7 +74,7 @@ function x335000_IncPetHP( sceneId, selfId, value )
 	return 1
 end
 
--- Ôö¼ÓÕäÊŞÊÙÃü
+-- å¢åŠ çå…½å¯¿å‘½
 function x335000_IncPetLife( sceneId, selfId, value )
 	if value <= 0 then
 		return 0
@@ -90,7 +90,7 @@ function x335000_IncPetLife( sceneId, selfId, value )
 	return 1
 end
 
--- Ôö¼ÓÕäÊŞ¿ìÀÖ¶È
+-- å¢åŠ çå…½å¿«ä¹åº¦
 function x335000_IncPetHappiness( sceneId, selfId, value )
 	if value <= 0 then
 		return 0

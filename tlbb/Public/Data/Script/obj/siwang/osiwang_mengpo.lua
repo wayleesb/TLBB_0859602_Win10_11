@@ -1,32 +1,32 @@
---ËÀÍö³¡¾°NPC
---ÃÏÆÅ
---ÆÕÍ¨
+--æ­»äº¡åœºæ™¯NPC
+--å­Ÿå©†
+--æ™®é€š
 
 x077001_g_scriptId=077001
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x077001_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
-		AddText(sceneId,"ÄêÇáÈË£¬ÔÙ¼û£¡ÔÙ¼û¾ÍÊÇ²»¼û£¬»ØÈ¥ºóÒ»ÇĞĞ¡ĞÄ¡£ÄãÏëÈ¥ÄÄÀï£¿")
+		AddText(sceneId,"å¹´è½»äººï¼Œå†è§ï¼å†è§å°±æ˜¯ä¸è§ï¼Œå›å»åä¸€åˆ‡å°å¿ƒã€‚ä½ æƒ³å»å“ªé‡Œï¼Ÿ")
 		
 		if  GetLevel( sceneId, selfId)<10	then			
-			AddNumText(sceneId,x077001_g_scriptId,"´óÀí",9,2)
+			AddNumText(sceneId,x077001_g_scriptId,"å¤§ç†",9,2)
 		end
 		
 		if	GetLevel( sceneId, selfId)>=10	then			
-			AddNumText(sceneId,x077001_g_scriptId,"ÂåÑô",9,0)
-			AddNumText(sceneId,x077001_g_scriptId,"ËÕÖİ",9,1)
-			AddNumText(sceneId,x077001_g_scriptId,"´óÀí",9,2)		
+			AddNumText(sceneId,x077001_g_scriptId,"æ´›é˜³",9,0)
+			AddNumText(sceneId,x077001_g_scriptId,"è‹å·",9,1)
+			AddNumText(sceneId,x077001_g_scriptId,"å¤§ç†",9,2)		
 		end
 		
 		if	GetLevel( sceneId, selfId)>=20	then
-			AddNumText(sceneId,x077001_g_scriptId,"ÊøºÓ¹ÅÕò",9,4)
+			AddNumText(sceneId,x077001_g_scriptId,"æŸæ²³å¤é•‡",9,4)
 		end
 		
 		if	GetLevel( sceneId, selfId)>=75	then
-			AddNumText(sceneId,x077001_g_scriptId,"Â¥À¼",9,5)
+			AddNumText(sceneId,x077001_g_scriptId,"æ¥¼å…°",9,5)
 		end
 		
 		AddNumText(sceneId,x077001_g_scriptId,"#{DFBZ_081016_01}",11,3)
@@ -35,23 +35,23 @@ function x077001_OnDefaultEvent( sceneId, selfId,targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x077001_OnEventRequest( sceneId, selfId, targetId, eventId )
 
-	-- ÂåÑô
+	-- æ´›é˜³
 	if	GetNumText()==0	then
 		CallScriptFunction((400900), "TransferFunc", sceneId, selfId, 0,132,183, 10)
 			
-	-- ËÕÖİ
+	-- è‹å·
 	elseif	GetNumText()==1	then
 		CallScriptFunction((400900), "TransferFunc", sceneId, selfId, 1,114,162, 10)
 	
-	-- ´óÀí
+	-- å¤§ç†
 	elseif	GetNumText()==2	then
 		CallScriptFunction((400900), "TransferFunc", sceneId, selfId, 2,241,138)
 
-	-- Â¥À¼
+	-- æ¥¼å…°
 	elseif	GetNumText()==5	then
 		CallScriptFunction((400900), "TransferFunc", sceneId, selfId, 186, 288, 136, 75 )
 	end
@@ -64,13 +64,13 @@ function x077001_OnEventRequest( sceneId, selfId, targetId, eventId )
 		return	
 	end
 	
-	-- ÊøºÓ¹ÅÕò
+	-- æŸæ²³å¤é•‡
 	if	GetNumText()==4	then
 		BeginUICommand(sceneId)
 			UICommand_AddInt(sceneId, x077001_g_scriptId);			
 			UICommand_AddInt(sceneId, targetId);
 			UICommand_AddString(sceneId, "GotoShuHeGuZhen");
-			UICommand_AddString(sceneId, "ÊøºÓ¹ÅÕòÎª²»¼ÓÉ±Æø³¡¾°£¬Çë×¢Òâ°²È«¡£ÄãÈ·ÈÏÒª½øÈëÂğ£¿");
+			UICommand_AddString(sceneId, "æŸæ²³å¤é•‡ä¸ºä¸åŠ æ€æ°”åœºæ™¯ï¼Œè¯·æ³¨æ„å®‰å…¨ã€‚ä½ ç¡®è®¤è¦è¿›å…¥å—ï¼Ÿ");
 		EndUICommand(sceneId)
 		DispatchUICommand(sceneId,selfId, 24)
 		return
@@ -79,7 +79,7 @@ function x077001_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---´«ËÍÖÁÊøºÓ¹ÅÕò
+--ä¼ é€è‡³æŸæ²³å¤é•‡
 --**********************************
 function x077001_GotoShuHeGuZhen( sceneId, selfId, targetId )
 	CallScriptFunction((400900), "TransferFuncFromNpc", sceneId, selfId, 420, 200, 211, 20 );

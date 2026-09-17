@@ -1,30 +1,30 @@
- -- ¹ÖÎïµôÂä½Å±¾
+ -- æ€ªç‰©æ‰è½è„šæœ¬
 
- -- ½Å±¾±àºÅ
+ -- è„šæœ¬ç¼–å·
 x501000_g_ScriptId = 501000
 
- -- Ëæ»úÒò×Ó
+ -- éšæœºå› å­
 x501000_g_RandNum = 10000
 
- -- ³èÎïµÄ´æ»îÊ±¼ä£¬3·ÖÖÓ
+ -- å® ç‰©çš„å­˜æ´»æ—¶é—´ï¼Œ3åˆ†é’Ÿ
 x501000_g_Lifecycle = 180000
 
- -- ³èÎïµôÂä±í
+ -- å® ç‰©æ‰è½è¡¨
 x501000_g_PetDropList = {}
 
- -- ¹ÖÎïºÅÎªË÷Òı
- -- dropOdds: ³èÎïµôÂäÂÊ
- -- petList ÊÇ¿ÉÄÜµôÂäµÄ³èÎïÁĞ±í
- -- oddsList ÊÇ petList ÖĞÏàÓ¦µÄ³èÎïµÄµôÂäÈ¨ÖØ
+ -- æ€ªç‰©å·ä¸ºç´¢å¼•
+ -- dropOdds: å® ç‰©æ‰è½ç‡
+ -- petList æ˜¯å¯èƒ½æ‰è½çš„å® ç‰©åˆ—è¡¨
+ -- oddsList æ˜¯ petList ä¸­ç›¸åº”çš„å® ç‰©çš„æ‰è½æƒé‡
  
  -- doing 28833 by alan 2007.12.4
- -- ÔÊĞíÒ»ÖÖ¹Öµô¶àÖÖÀàĞÍµÄ³è
- -- petTypeOdds ÊÇ¸÷ÀàĞÍµÄ³èµÄµôÂäÈ¨ÖØ£¬Ö»ÓĞÒ»ÖÖ³èÊ±²»ĞèÒªÖ¸¶¨£¬´ËÁĞ±íÖĞÓĞN¸öÖµÊ±£¬±ØĞëÍ¬Ê±Ö¸¶¨´ÓpetList2µ½petListNµÄÏàÓ¦³èÎï±í
- -- petList2 ÊÇµÚ2ÖÖÀàĞÍµÄ³èÎïÁĞ±í£¬½öÔÚpetTypeOddsÖĞÓĞ2¸öÒÔÉÏÖµÊ±Æğ×÷ÓÃ
- -- petList3 ÊÇµÚ3ÖÖÀàĞÍµÄ³èÎïÁĞ±í£¬½öÔÚpetTypeOddsÖĞÓĞ3¸öÒÔÉÏÖµÊ±Æğ×÷ÓÃ
- -- petListN ÊÇµÚNÖÖÀàĞÍµÄ³èÎïÁĞ±í£¬½öÔÚpetTypeOddsÖĞÓĞN¸öÒÔÉÏÖµÊ±Æğ×÷ÓÃ
+ -- å…è®¸ä¸€ç§æ€ªæ‰å¤šç§ç±»å‹çš„å® 
+ -- petTypeOdds æ˜¯å„ç±»å‹çš„å® çš„æ‰è½æƒé‡ï¼Œåªæœ‰ä¸€ç§å® æ—¶ä¸éœ€è¦æŒ‡å®šï¼Œæ­¤åˆ—è¡¨ä¸­æœ‰Nä¸ªå€¼æ—¶ï¼Œå¿…é¡»åŒæ—¶æŒ‡å®šä»petList2åˆ°petListNçš„ç›¸åº”å® ç‰©è¡¨
+ -- petList2 æ˜¯ç¬¬2ç§ç±»å‹çš„å® ç‰©åˆ—è¡¨ï¼Œä»…åœ¨petTypeOddsä¸­æœ‰2ä¸ªä»¥ä¸Šå€¼æ—¶èµ·ä½œç”¨
+ -- petList3 æ˜¯ç¬¬3ç§ç±»å‹çš„å® ç‰©åˆ—è¡¨ï¼Œä»…åœ¨petTypeOddsä¸­æœ‰3ä¸ªä»¥ä¸Šå€¼æ—¶èµ·ä½œç”¨
+ -- petListN æ˜¯ç¬¬Nç§ç±»å‹çš„å® ç‰©åˆ—è¡¨ï¼Œä»…åœ¨petTypeOddsä¸­æœ‰Nä¸ªä»¥ä¸Šå€¼æ—¶èµ·ä½œç”¨
  
- --ĞŞ¸ÄºóÖ»ÓĞÒ»ÖÖ³èÊ±¸ñÊ½ÓëÔ­À´Ò»Ñù£¬ÏÂÃæÊÇÁ½ÖÖ³èµÄÀı×Ó£º
+ --ä¿®æ”¹ååªæœ‰ä¸€ç§å® æ—¶æ ¼å¼ä¸åŸæ¥ä¸€æ ·ï¼Œä¸‹é¢æ˜¯ä¸¤ç§å® çš„ä¾‹å­ï¼š
  --x501000_g_PetDropList[3000] = {
  -- dropOdds = 1521,
  -- petList = { 3000, 3009, 3001 },
@@ -340,19 +340,19 @@ function x501000_OnDie(sceneId, objId, killerId)
 	end
 
 	local petDropInfo = x501000_g_PetDropList[ GetMonsterDataID( sceneId, objId ) ]
-	if not petDropInfo then      -- Ã»ÓĞÕâÖÖÀàĞÍµÄ¹ÖÎïÅäÖÃĞÅÏ¢
+	if not petDropInfo then      -- æ²¡æœ‰è¿™ç§ç±»å‹çš„æ€ªç‰©é…ç½®ä¿¡æ¯
 		return
 	end
 	
 	local rand = random( x501000_g_RandNum )
-	if rand > petDropInfo.dropOdds then   -- ¼¸ÂÊ²»¹»£¬Ã»ÓĞ³èÎïµôÂä
+	if rand > petDropInfo.dropOdds then   -- å‡ ç‡ä¸å¤Ÿï¼Œæ²¡æœ‰å® ç‰©æ‰è½
 		return
 	end
 
  	-- doing 28833 by alan 2007.12.4
- 	-- ĞŞ¸ÄÎªÔÊĞíÒ»ÖÖ¹Ö´ò³ö¶àÖÖÀàĞÍµÄ³è
+ 	-- ä¿®æ”¹ä¸ºå…è®¸ä¸€ç§æ€ªæ‰“å‡ºå¤šç§ç±»å‹çš„å® 
  	
- 	--¸´ÖÆµÄÈ¨ÖØ±í
+ 	--å¤åˆ¶çš„æƒé‡è¡¨
  	local oddsList = {}
 	
 	for index,value in petDropInfo.oddsList do
@@ -379,7 +379,7 @@ function x501000_OnDie(sceneId, objId, killerId)
 		end
 	end
 	
-	--Ñ¡ÖĞ³èÎïÀàĞÍµÄ³èÎï±í
+	--é€‰ä¸­å® ç‰©ç±»å‹çš„å® ç‰©è¡¨
 	local petList = petDropInfo.petList
 	if petType > 1 then
 		petList = petDropInfo["petList"..tostring(petType)]
@@ -387,12 +387,12 @@ function x501000_OnDie(sceneId, objId, killerId)
 		
 	local petCount = getn( petList )
 	if not petCount or petCount < 1  then
-		return         -- ¶ÔÊı¾İ·Ç·¨½øĞĞÈİ´í
+		return         -- å¯¹æ•°æ®éæ³•è¿›è¡Œå®¹é”™
 	end
 
 	local petDataID = -1
 
-	-- ¼ÆËã±äÒì³èÎïµÄÈ¨ÖØ
+	-- è®¡ç®—å˜å¼‚å® ç‰©çš„æƒé‡
 	if 4<=petCount then
 		local AlienPetPower = { 2448,803,263,86,28,9,3,1}
 		local AlienPetTypePower = oddsList[3]
@@ -409,13 +409,13 @@ function x501000_OnDie(sceneId, objId, killerId)
 		end
 	end
 
-	-- ÖØĞÂ¼ÆËãËæ»úÒò×Ó
+	-- é‡æ–°è®¡ç®—éšæœºå› å­
 	rand = 0
 	for i = 1, petCount do
 		rand = rand + oddsList[i]
 	end 
 
-	rand = random( rand )     -- ÖØĞÂ½øĞĞÒ»´ÎËæ»ú£¬ÒÔÅĞ¶Ï³öÄÄÖÖÀàĞÍµÄ³èÎï
+	rand = random( rand )     -- é‡æ–°è¿›è¡Œä¸€æ¬¡éšæœºï¼Œä»¥åˆ¤æ–­å‡ºå“ªç§ç±»å‹çš„å® ç‰©
   
 	for i = 1, petCount do
 		if oddsList[i] >= rand then
@@ -430,7 +430,7 @@ function x501000_OnDie(sceneId, objId, killerId)
 		return
 	end
 
-	-- Éú³ÉÒ»¸ö³èÎï
+	-- ç”Ÿæˆä¸€ä¸ªå® ç‰©
 	local posX, posZ = LuaFnGetWorldPos(sceneId, objId);
 	if not posX or not posZ or posX < 0 or posZ < 0 then
 		return 
@@ -441,7 +441,7 @@ function x501000_OnDie(sceneId, objId, killerId)
 		return 
 	end
 
-	-- ÉèÖÃ³èÎïµÄ²¶×½±£»¤Ê±¼ä
+	-- è®¾ç½®å® ç‰©çš„æ•æ‰ä¿æŠ¤æ—¶é—´
 	local occupantGuid = LuaFnGetOccupantGUID(sceneId, objId);
 	if not occupantGuid or occupantGuid < 0 then
 		if killerId and killerId > -1 then
@@ -467,7 +467,7 @@ function x501000_OnDie(sceneId, objId, killerId)
 
 	SetPetCaptureProtect(sceneId, petObjID, occupantGuid);
 
-	-- ÉèÖÃ³èÎïµÄ´æ»îÊ±¼ä
+	-- è®¾ç½®å® ç‰©çš„å­˜æ´»æ—¶é—´
 	SetCharacterDieTime(sceneId, petObjID, x501000_g_Lifecycle);
 
 	LuaFnAuditPetCreate(sceneId, occupantGuid, petDataID);

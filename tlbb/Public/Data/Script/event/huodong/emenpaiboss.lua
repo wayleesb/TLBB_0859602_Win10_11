@@ -1,9 +1,9 @@
---¾Å´óÃÅÅÉ³¡¾°BOSS¶¨Ê±Ë¢³ö
+--ä¹å¤§é—¨æ´¾åœºæ™¯BOSSå®šæ—¶åˆ·å‡º
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x808001_g_ScriptId	= 808001
 
---BOSS·Ö²¼
+--BOSSåˆ†å¸ƒ
 x808001_g_BossLayout=
 {
 	--SceneID, MonsterID, px, pz, ai
@@ -19,7 +19,7 @@ x808001_g_BossLayout=
 }
 
 --**********************************
---½Å±¾Èë¿Úº¯Êı
+--è„šæœ¬å…¥å£å‡½æ•°
 --**********************************
 function x808001_OnDefaultEvent( sceneId, actId, param1, param2, param3, param4, param5 )
 
@@ -28,10 +28,10 @@ function x808001_OnDefaultEvent( sceneId, actId, param1, param2, param3, param4,
 		return
 	end
 
-	--°Ú¹Ö
-	--È¡µÃ´Ë³¡¾°ÖĞµÄ¹ÖÎïÊıÁ¿
+	--æ‘†æ€ª
+	--å–å¾—æ­¤åœºæ™¯ä¸­çš„æ€ªç‰©æ•°é‡
 	local	numMon= GetMonsterCount( sceneId )
-	--¹ÖÎïµÄObjId
+	--æ€ªç‰©çš„ObjId
 	local objMon
 	for i=0, numMon-1 do
 		objMon		= GetMonsterObjID( sceneId, i )
@@ -44,7 +44,7 @@ function x808001_OnDefaultEvent( sceneId, actId, param1, param2, param3, param4,
 end
 
 --**********************************
---¸ù¾İ³¡¾°ID·ÃÎÊBOSS·Ö²¼µ¥Ôª
+--æ ¹æ®åœºæ™¯IDè®¿é—®BOSSåˆ†å¸ƒå•å…ƒ
 --**********************************
 function x808001_CallLayoutUnit( sceneId )
 

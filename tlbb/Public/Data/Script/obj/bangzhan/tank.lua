@@ -1,24 +1,24 @@
---NPC Õ½³µÄ£ĞÍNPC
+--NPC æˆ˜è½¦æ¨¡å‹NPC
 
-x402302_g_ScriptId = 402302; --½Å±¾ºÅ
---x402302_g_name	="Õ½³µ";
+x402302_g_ScriptId = 402302; --è„šæœ¬å·
+--x402302_g_name	="æˆ˜è½¦";
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x402302_g_eventId_yes = 0;
 x402302_g_eventId_no = 1;
 
-x402302_g_A_TankID = {13339, 13340, 13341, 13342, 13343}--¿Éµã»÷Õ½³µNPCµÄID
-x402302_g_B_TankID = {13334, 13335, 13336, 13337, 13338}--¿Éµã»÷Õ½³µNPCµÄID
+x402302_g_A_TankID = {13339, 13340, 13341, 13342, 13343}--å¯ç‚¹å‡»æˆ˜è½¦NPCçš„ID
+x402302_g_B_TankID = {13334, 13335, 13336, 13337, 13338}--å¯ç‚¹å‡»æˆ˜è½¦NPCçš„ID
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x402302_OnDefaultEvent( sceneId, selfId, targetId )
 	x402302_UpdateEventList( sceneId, selfId, targetId );
 end
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x402302_UpdateEventList( sceneId, selfId, targetId )
 	local isAguild = CallScriptFunction(402047, "IsCommonAGuild", sceneId, selfId )
@@ -38,11 +38,11 @@ function x402302_UpdateEventList( sceneId, selfId, targetId )
 		end
 	end
 	
-	if isAguild == isNPCAguild then --Íæ¼Ò°ïÅÉºÍÕ½³µ°ïÅÉÊÇ·ñÏàÍ¬
+	if isAguild == isNPCAguild then --ç©å®¶å¸®æ´¾å’Œæˆ˜è½¦å¸®æ´¾æ˜¯å¦ç›¸åŒ
 		BeginEvent(sceneId);
 			AddText( sceneId, "#{BHXZ_081103_89}" );
-			AddNumText( sceneId, x402302_g_ScriptId, "È·¶¨", 9, x402302_g_eventId_yes);
-			AddNumText( sceneId, x402302_g_ScriptId, "È¡Ïû", 8, x402302_g_eventId_no);
+			AddNumText( sceneId, x402302_g_ScriptId, "ç¡®å®š", 9, x402302_g_eventId_yes);
+			AddNumText( sceneId, x402302_g_ScriptId, "å–æ¶ˆ", 8, x402302_g_eventId_no);
 		EndEvent(sceneId);
 		DispatchEventList(sceneId, selfId, targetId);
 	else
@@ -55,7 +55,7 @@ function x402302_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x402302_OnEventRequest( sceneId, selfId, targetId, eventId )
 	local selectEventId	= GetNumText();
@@ -82,13 +82,13 @@ function x402302_OnEventRequest( sceneId, selfId, targetId, eventId )
 		end
 	end
 	
-	if isAguild ~= isNPCAguild or index == -1 then --Íæ¼Ò°ïÅÉºÍÕ½³µ°ïÅÉÊÇ·ñÏàÍ¬£¬ÊÇ·ñÕÒµ½Æô¶¯Õ½³µÀàĞÍ
+	if isAguild ~= isNPCAguild or index == -1 then --ç©å®¶å¸®æ´¾å’Œæˆ˜è½¦å¸®æ´¾æ˜¯å¦ç›¸åŒï¼Œæ˜¯å¦æ‰¾åˆ°å¯åŠ¨æˆ˜è½¦ç±»å‹
 		return
 	end
 	
 	if selectEventId == x402302_g_eventId_yes then
 		local ret = CallScriptFunction(600051, "PowerUptank", sceneId, selfId, targetId, index+base, isAguild, 0)
-		if ret == 1 then --°ÑÕ½³µ×Ô¼ºÉ¾³ı
+		if ret == 1 then --æŠŠæˆ˜è½¦è‡ªå·±åˆ é™¤
 			LuaFnDeleteMonster(sceneId, targetId)
 		end
 	else
@@ -101,13 +101,13 @@ function x402302_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x402302_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x402302_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 end

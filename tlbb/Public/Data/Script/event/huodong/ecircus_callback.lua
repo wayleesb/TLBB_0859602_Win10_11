@@ -1,42 +1,42 @@
---ÂíÏ·ÍÅ»î¶¯
---»Øµ÷½Å±¾
+--é©¬æˆå›¢æ´»åŠ¨
+--å›è°ƒè„šæœ¬
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x808006_g_ScriptId			= 808006
-x808006_g_ScriptId_Pao	= 200060	--ÅİÅİ½Å±¾
---»î¶¯ID£¬¶¨ÒåÔÚ¡¶ActivityNotice¡·±íÖĞ
+x808006_g_ScriptId_Pao	= 200060	--æ³¡æ³¡è„šæœ¬
+--æ´»åŠ¨IDï¼Œå®šä¹‰åœ¨ã€ŠActivityNoticeã€‹è¡¨ä¸­
 x808006_g_ActId					= 37
---»î¶¯ÓĞĞ§ÆÚ£º2007Äê5ÔÂ9ÈÕÖÁ5ÔÂ31
+--æ´»åŠ¨æœ‰æ•ˆæœŸï¼š2007å¹´5æœˆ9æ—¥è‡³5æœˆ31
 x808006_g_ActBegin			= 7129
 x808006_g_ActEnd				= 7151
 
-x808006_g_TickTime			= 60			--»Øµ÷½Å±¾µÄÊ±ÖÓÊ±¼ä£¨µ¥Î»£ºÃë/´Î£©
-x808006_g_PrizeMax			= 5				--Ã¿´Î»î¶¯ÖĞ´ó½±µÄ×î´óÊı¶î
+x808006_g_TickTime			= 60			--å›è°ƒè„šæœ¬çš„æ—¶é’Ÿæ—¶é—´ï¼ˆå•ä½ï¼šç§’/æ¬¡ï¼‰
+x808006_g_PrizeMax			= 5				--æ¯æ¬¡æ´»åŠ¨ä¸­å¤§å¥–çš„æœ€å¤§æ•°é¢
 
---»î¶¯Êı¾İÇøË÷Òı
+--æ´»åŠ¨æ•°æ®åŒºç´¢å¼•
 x808006_g_ActParam			=
 {
-	["tim"]			= 0,			--Ê±ÖÓ×ÜµãÊı
-	["n_chg"]		= 1,			--¶Ò»»ÈËÊı
-	["n_bty"]		= 2,			--´ó½±ÈËÊı
+	["tim"]			= 0,			--æ—¶é’Ÿæ€»ç‚¹æ•°
+	["n_chg"]		= 1,			--å…‘æ¢äººæ•°
+	["n_bty"]		= 2,			--å¤§å¥–äººæ•°
 }
 
---×Ö´®¼¯
+--å­—ä¸²é›†
 x808006_g_Str	=
 {
-	--²»°üº¬×ªÒå×Ö·ûµÄ×Ö´®
-	["npc"]			= "#W¿´À´ÌìºÚÖ®Ç°ÎÒ»¹µÃĞèÒª¸ü¶àµÄÕäÊŞ±¦±¦²ÅÄÜÍê³ÉÈÎÎñÁË£¬²»ÖªµÀÓĞÃ»ÓĞÈÈĞÄÈËÀ´°ïÎÒÍê³É¡£",
+	--ä¸åŒ…å«è½¬ä¹‰å­—ç¬¦çš„å­—ä¸²
+	["npc"]			= "#Wçœ‹æ¥å¤©é»‘ä¹‹å‰æˆ‘è¿˜å¾—éœ€è¦æ›´å¤šçš„çå…½å®å®æ‰èƒ½å®Œæˆä»»åŠ¡äº†ï¼Œä¸çŸ¥é“æœ‰æ²¡æœ‰çƒ­å¿ƒäººæ¥å¸®æˆ‘å®Œæˆã€‚",
 	
-	--°üº¬×ªÒå×Ö·ûµÄ×Ö´®
+	--åŒ…å«è½¬ä¹‰å­—ç¬¦çš„å­—ä¸²
 }
 
 --**********************************
---½Å±¾Èë¿Úº¯Êı
---C++»Øµ÷º¯Êı
+--è„šæœ¬å…¥å£å‡½æ•°
+--C++å›è°ƒå‡½æ•°
 --**********************************
 function x808006_OnDefaultEvent( sceneId, actId, iNoticeType, param2, param3, param4, param5 )
 
-	--Í³Ò»Ö»¿ªÆô±àºÅÎª x808006_g_ActId µÄ»î¶¯
+	--ç»Ÿä¸€åªå¼€å¯ç¼–å·ä¸º x808006_g_ActId çš„æ´»åŠ¨
 	m_actId		= x808006_g_ActId
 
 	if x808006_OnActivityCheck() == 0 then
@@ -51,13 +51,13 @@ function x808006_OnDefaultEvent( sceneId, actId, iNoticeType, param2, param3, pa
 		return
 	end
 
-	--²ÎÊıËµÃ÷£º³¡¾°ID£¬»î¶¯ID£¬Ê±¼ä¼ä¸ô£¨ºÁÃë£©
+	--å‚æ•°è¯´æ˜ï¼šåœºæ™¯IDï¼Œæ´»åŠ¨IDï¼Œæ—¶é—´é—´éš”ï¼ˆæ¯«ç§’ï¼‰
 	StartOneActivity( sceneId, m_actId, floor(x808006_g_TickTime*1000), iNoticeType )
 
-	--»î¶¯Êı¾İÇø
-	SetActivityParam( sceneId, m_actId, x808006_g_ActParam["tim"], 0 )		--±£´æÊ±ÖÓ×ÜµãÊı
-	SetActivityParam( sceneId, m_actId, x808006_g_ActParam["n_chg"], 0 )	--±£´æ¶Ò»»ÈËÊı
-	SetActivityParam( sceneId, m_actId, x808006_g_ActParam["n_bty"], 0 )	--±£´æ´ó½±ÈËÊı
+	--æ´»åŠ¨æ•°æ®åŒº
+	SetActivityParam( sceneId, m_actId, x808006_g_ActParam["tim"], 0 )		--ä¿å­˜æ—¶é’Ÿæ€»ç‚¹æ•°
+	SetActivityParam( sceneId, m_actId, x808006_g_ActParam["n_chg"], 0 )	--ä¿å­˜å…‘æ¢äººæ•°
+	SetActivityParam( sceneId, m_actId, x808006_g_ActParam["n_bty"], 0 )	--ä¿å­˜å¤§å¥–äººæ•°
 
 	--Add Log
 	--begin modified by zhangguoxin 090207
@@ -71,8 +71,8 @@ function x808006_OnDefaultEvent( sceneId, actId, iNoticeType, param2, param3, pa
 end
 
 --**********************************
---ĞÄÌøº¯Êı
---C++»Øµ÷º¯Êı
+--å¿ƒè·³å‡½æ•°
+--C++å›è°ƒå‡½æ•°
 --**********************************
 function x808006_OnTimer( sceneId, actId, uTime )
 
@@ -80,31 +80,31 @@ function x808006_OnTimer( sceneId, actId, uTime )
 		return
 	end
 
-	--»î¶¯Êı¾İÇø
+	--æ´»åŠ¨æ•°æ®åŒº
 	tim		= GetActivityParam( sceneId, actId, x808006_g_ActParam["tim"] )
-	SetActivityParam( sceneId, actId, x808006_g_ActParam["tim"], tim+1 )	--±£´æÊ±ÖÓ×ÜµãÊı
+	SetActivityParam( sceneId, actId, x808006_g_ActParam["tim"], tim+1 )	--ä¿å­˜æ—¶é’Ÿæ€»ç‚¹æ•°
 
-	--»î¶¯ÔÚµÚ¶şÌìÁè³¿Ç°¹Ø±Õ
+	--æ´»åŠ¨åœ¨ç¬¬äºŒå¤©å‡Œæ™¨å‰å…³é—­
 	--begin modified by zhangguoxin 090207
 	--hur		= GetHourTime()
 	--qua		= hur - floor( hur / 100 ) * 100
 	qua = mod(GetQuarterTime(),100);
 	--end modified by zhangguoxin 090207
-	--È«Ìì96¸öÊ±¿Ì
+	--å…¨å¤©96ä¸ªæ—¶åˆ»
 	if qua >= 95 then
 		x808006_OnActivityEnd( sceneId, actId )
 	end
 	
-	--Ò»Ğ¡Ê±Ò»´ÎµÄNPCÆµµÀ
+	--ä¸€å°æ—¶ä¸€æ¬¡çš„NPCé¢‘é“
 	mul		= tim - floor( tim / 60 ) * 60
 	if tim == 59 then
-		CallScriptFunction( x808006_g_ScriptId_Pao, "Paopao", sceneId, "ÜÇË¹", "´óÀí", x808006_g_Str["npc"] )
+		CallScriptFunction( x808006_g_ScriptId_Pao, "Paopao", sceneId, "èŠ®æ–¯", "å¤§ç†", x808006_g_Str["npc"] )
 	end
 
 end
 
 --**********************************
---»î¶¯½áÊø
+--æ´»åŠ¨ç»“æŸ
 --**********************************
 function x808006_OnActivityEnd( sceneId, actId )
 
@@ -112,9 +112,9 @@ function x808006_OnActivityEnd( sceneId, actId )
 		return
 	end
 
-	SetActivityParam( sceneId, actId, x808006_g_ActParam["tim"], 0 )			--±£´æÊ±ÖÓ×ÜµãÊı
-	SetActivityParam( sceneId, actId, x808006_g_ActParam["n_chg"], 0 )		--±£´æ¶Ò»»ÈËÊı
-	SetActivityParam( sceneId, actId, x808006_g_ActParam["n_bty"], 0 )		--±£´æ´ó½±ÈËÊı
+	SetActivityParam( sceneId, actId, x808006_g_ActParam["tim"], 0 )			--ä¿å­˜æ—¶é’Ÿæ€»ç‚¹æ•°
+	SetActivityParam( sceneId, actId, x808006_g_ActParam["n_chg"], 0 )		--ä¿å­˜å…‘æ¢äººæ•°
+	SetActivityParam( sceneId, actId, x808006_g_ActParam["n_bty"], 0 )		--ä¿å­˜å¤§å¥–äººæ•°
 	StopOneActivity( sceneId, actId )
 
 	--Add Log
@@ -129,7 +129,7 @@ function x808006_OnActivityEnd( sceneId, actId )
 end
 
 --**********************************
---»î¶¯¼ì²é
+--æ´»åŠ¨æ£€æŸ¥
 --**********************************
 function x808006_OnActivityCheck()
 
@@ -142,8 +142,8 @@ function x808006_OnActivityCheck()
 end
 
 --**********************************
---³É¹¦¶Ò»»Ò»´Î£¬¼ÆÊı
---ÎŞÉÏÏŞ
+--æˆåŠŸå…‘æ¢ä¸€æ¬¡ï¼Œè®¡æ•°
+--æ— ä¸Šé™
 --**********************************
 function x808006_OnSuccChange( sceneId )
 
@@ -154,8 +154,8 @@ function x808006_OnSuccChange( sceneId )
 end
 
 --**********************************
---³É¹¦´ó½±Ò»´Î£¬¼ÆÊı
---ÓĞÉÏÏŞ
+--æˆåŠŸå¤§å¥–ä¸€æ¬¡ï¼Œè®¡æ•°
+--æœ‰ä¸Šé™
 --**********************************
 function x808006_OnSuccPrize( sceneId )
 
@@ -178,7 +178,7 @@ function x808006_OnSuccPrize( sceneId )
 end
 
 --**********************************
---ÊÇ·ñ´¦ÔÚ»î¶¯ÖĞ
+--æ˜¯å¦å¤„åœ¨æ´»åŠ¨ä¸­
 --**********************************
 function x808006_IsActivityDoing( sceneId )
 

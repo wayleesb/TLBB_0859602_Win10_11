@@ -1,26 +1,26 @@
---Éú³¤µã½Å±¾£¬³É³¤ÏµÁÐ
+--ç”Ÿé•¿ç‚¹è„šæœ¬ï¼Œæˆé•¿ç³»åˆ—
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 --g_ScriptId = 711001
 
--- Ëæ»úÒò×Ó
+-- éšæœºå› å­
 x711001_g_RandNum = 10000
 
--- Éú³¤µãÐÅÏ¢
+-- ç”Ÿé•¿ç‚¹ä¿¡æ¯
 x711001_g_GPInfo = {}
 
--- Éú³¤µãÀàÐÍºÅÎªË÷ÒýºÅ
+-- ç”Ÿé•¿ç‚¹ç±»åž‹å·ä¸ºç´¢å¼•å·
 
--- NextGeneration: ¸ÃÉú³¤µã»ØÊÕºó³¤³öµÄÐÂÉú³¤µãµÄÀàÐÍ
--- MainProduct: Ö÷Òª²úÆ·µÄÎïÆ·ºÅ
--- ProtectDuration: ÈÃÖÖÖ²ÕßÊÕ¸îµÄ±£»¤Ê±¼ä
--- RecycleDuration: »ØÊÕÊ±¼ä
--- rareId: Ï¡ÓÐÆ·µÄÎïÆ·ºÅ£¬Èç¹ûÃ»ÓÐÔòÌî -1
--- rOdds: Ï¡ÓÐÆ·µÄ³öÏÖ¼¸ÂÊ£¬random( x711001_g_RandNum ) <= rOdds Ê±Ï¡ÓÐÎïÆ·²úÉú£¬x711001_g_RandNum ¿ÉÒÔ¸ù¾ÝÊµ¼ÊÇé¿ö¸ü¸Ä
+-- NextGeneration: è¯¥ç”Ÿé•¿ç‚¹å›žæ”¶åŽé•¿å‡ºçš„æ–°ç”Ÿé•¿ç‚¹çš„ç±»åž‹
+-- MainProduct: ä¸»è¦äº§å“çš„ç‰©å“å·
+-- ProtectDuration: è®©ç§æ¤è€…æ”¶å‰²çš„ä¿æŠ¤æ—¶é—´
+-- RecycleDuration: å›žæ”¶æ—¶é—´
+-- rareId: ç¨€æœ‰å“çš„ç‰©å“å·ï¼Œå¦‚æžœæ²¡æœ‰åˆ™å¡« -1
+-- rOdds: ç¨€æœ‰å“çš„å‡ºçŽ°å‡ çŽ‡ï¼Œrandom( x711001_g_RandNum ) <= rOdds æ—¶ç¨€æœ‰ç‰©å“äº§ç”Ÿï¼Œx711001_g_RandNum å¯ä»¥æ ¹æ®å®žé™…æƒ…å†µæ›´æ”¹
 
 x711001_g_rareRules ={};
-x711001_g_rareRules[1] = {{rate=77, num=1}, {rate=14, num=2}, {rate=9, num=3}};		--Íí²ú
-x711001_g_rareRules[2] = {{rate=50, num=3}, {rate=30, num=4}, {rate=20, num=5}};	--Ôç²ú
+x711001_g_rareRules[1] = {{rate=77, num=1}, {rate=14, num=2}, {rate=9, num=3}};		--æ™šäº§
+x711001_g_rareRules[2] = {{rate=50, num=3}, {rate=30, num=4}, {rate=20, num=5}};	--æ—©äº§
 
 x711001_g_GPInfo[	502	] = { NextGeneration =	503	, MainProduct =	20104001, ProtectDuration =	300000, ProductCount = 1, RecycleDuration =	300000	,rareJunior = -1, rareId = 	20105013	, rOdds =	2000	}
 x711001_g_GPInfo[	505	] = { NextGeneration =	506	, MainProduct =	20104002, ProtectDuration =	300000, ProductCount = 1, RecycleDuration =	300000	,rareJunior = -1, rareId = 	20105014	, rOdds =	2000	}
@@ -92,7 +92,7 @@ function x711001_OnRecycle( sceneId, selfId, targetId )
 		AddItemToBox(sceneId,ItemBoxId,QUALITY_MUST_BE_CHANGE,1,GPInfo.MainProduct)
 	end
 	
-	-- ¼ÓÈëÏ¡ÓÐÎïÆ·
+	-- åŠ å…¥ç¨€æœ‰ç‰©å“
 	local randomOdds = random( x711001_g_RandNum );
 	if GPInfo.rareId ~= -1 and randomOdds <= GPInfo.rOdds then
 		local selectrareRule;
@@ -125,25 +125,25 @@ function x711001_OnRecycle( sceneId, selfId, targetId )
 		end
 	end
 
-	--µÃµ½Éú³¤µãµÄÖ÷ÈËGUID
-	local ItemBoxOwnerGUID = GetItemBoxOwner( sceneId, targetId )				--²ÎÊýÊÇSceneID£¬ItemBoxID
+	--å¾—åˆ°ç”Ÿé•¿ç‚¹çš„ä¸»äººGUID
+	local ItemBoxOwnerGUID = GetItemBoxOwner( sceneId, targetId )				--å‚æ•°æ˜¯SceneIDï¼ŒItemBoxID
 
-	--¸øItemBoxÉè¶¨Ö÷ÈË
+	--ç»™ItemBoxè®¾å®šä¸»äºº
 	SetItemBoxOwner( sceneId, ItemBoxId, ItemBoxOwnerGUID )
-	SetItemBoxPickOwnerTime( sceneId, ItemBoxId, GPInfo.ProtectDuration )		--Éè¶¨°ó¶¨Ê±¼ä
-	EnableItemBoxPickOwnerTime( sceneId, ItemBoxId )							--±£»¤Ê±¼ä¿ªÊ¼¼ÆÊ±
+	SetItemBoxPickOwnerTime( sceneId, ItemBoxId, GPInfo.ProtectDuration )		--è®¾å®šç»‘å®šæ—¶é—´
+	EnableItemBoxPickOwnerTime( sceneId, ItemBoxId )							--ä¿æŠ¤æ—¶é—´å¼€å§‹è®¡æ—¶
 
-	SetItemBoxMaxGrowTime( sceneId, ItemBoxId, GPInfo.RecycleDuration )			--Éè¶¨»ØÊÕÊ±¼ä
+	SetItemBoxMaxGrowTime( sceneId, ItemBoxId, GPInfo.RecycleDuration )			--è®¾å®šå›žæ”¶æ—¶é—´
 
-	--È¡µÃÉú³¤µãµÄ×ø±ê
+	--å–å¾—ç”Ÿé•¿ç‚¹çš„åæ ‡
 	local GP_X = GetItemBoxWorldPosX( sceneId, targetId )
 	local GP_Z = GetItemBoxWorldPosZ( sceneId, targetId )
 
-	--ÏÂÈ¡Õû
+	--ä¸‹å–æ•´
 	GP_X = floor( GP_X )
 	GP_Z = floor( GP_Z )
 
-	--ÅÐ¶ÏÖÖÖ²ÅÆµÄÎ»ÖÃÔÚÄÄ¸öÖÖÖ²ÅÆ¹ÜÏ½µÄ·¶Î§ÄÚ
+	--åˆ¤æ–­ç§æ¤ç‰Œçš„ä½ç½®åœ¨å“ªä¸ªç§æ¤ç‰Œç®¡è¾–çš„èŒƒå›´å†…
 	local num = 0
 	local i = 0
 	for i, findid in PLANTNPC_ADDRESS do
@@ -157,19 +157,19 @@ function x711001_OnRecycle( sceneId, selfId, targetId )
 		end
 	end
 
-	--Èç¹ûÕÒ²»µ½ÕýÈ·µÄÎ»ÖÃÔò·µ»Ø
+	--å¦‚æžœæ‰¾ä¸åˆ°æ­£ç¡®çš„ä½ç½®åˆ™è¿”å›ž
 	if num == 0 then
 		return 1
 	end
 
-	--ÅÐ¶ÏÖÖÖ²ÅÆÊÇ·ñÊÇ8£¬Èç¹ûÊÇ8ÔòÍ¨ÖªÍæ¼Ò
+	--åˆ¤æ–­ç§æ¤ç‰Œæ˜¯å¦æ˜¯8ï¼Œå¦‚æžœæ˜¯8åˆ™é€šçŸ¥çŽ©å®¶
 	if PLANTFLAG[num] == 8 then
-		local strMail = format("ÄãÖÖÖ²µÄÖ²ÎïÒÑ¾­³ÉÊìÁË£¬ÇëÔÚ%d·ÖÖÓÄÚ£¬ÔÚ#G%s(%d,%d)#W´¦ÊÕ»ñ¡£",
+		local strMail = format("ä½ ç§æ¤çš„æ¤ç‰©å·²ç»æˆç†Ÿäº†ï¼Œè¯·åœ¨%dåˆ†é’Ÿå†…ï¼Œåœ¨#G%s(%d,%d)#Wå¤„æ”¶èŽ·ã€‚",
 										( GPInfo.ProtectDuration / 60000 ), GetSceneName(sceneId), GP_X, GP_Z )
 		LuaFnSendMailToGUID( sceneId, ItemBoxOwnerGUID, strMail )
 	end
 
-	--ÕÒµ½ÕýÈ·µÄ±àºÅ£¬°ÑÖÖÖ²ÅÆ-1
+	--æ‰¾åˆ°æ­£ç¡®çš„ç¼–å·ï¼ŒæŠŠç§æ¤ç‰Œ-1
 	PLANTFLAG[num] = PLANTFLAG[num] - 1
 
 	return 1

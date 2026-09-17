@@ -16,7 +16,7 @@ end
 function ConfraternityJuanxian_OnEvent(event)
 
 	if(event == "UI_COMMAND" and tonumber(arg0) == 19822) then
-		if this : IsVisible() then									-- Èç¹û½çÃæ¿ª×Å£¬Ôò²»´¦Àí
+		if this : IsVisible() then									-- å¦‚æžœç•Œé¢å¼€ç€ï¼Œåˆ™ä¸å¤„ç†
 			return
 		end
 		ConfraternityJuanxian_Clear()
@@ -30,7 +30,7 @@ function ConfraternityJuanxian_OnEvent(event)
 		local npcObjId = Get_XParam_INT(0)
 		g_clientNpcId = DataPool : GetNPCIDByServerID(npcObjId)
 		if g_clientNpcId == -1 then
-			PushDebugMessage("Î´·¢ÏÖ NPC")
+			PushDebugMessage("æœªå‘çŽ° NPC")
 			ConfraternityJuanxian_Close()
 			return
 		end
@@ -41,7 +41,7 @@ function ConfraternityJuanxian_OnEvent(event)
 			return;
 		end
 		
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ý£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æžœå’ŒNPCçš„è·ç¦»å¤§äºŽä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if arg1 == "distance" and tonumber(arg2) > MAX_OBJ_DISTANCE or arg1=="destroy" then
 			ConfraternityJuanxian_Close()
 		end
@@ -93,9 +93,9 @@ function ConfraternityJuanxian_OK_Clicked()
 	end
 	
 	strNumber = tonumber(str)
-	strNumber = strNumber*10000 --ÊäÈëµ¥Î»ÊÇ½ðËùÒÔ¡Á10000
+	strNumber = strNumber*10000 --è¾“å…¥å•ä½æ˜¯é‡‘æ‰€ä»¥Ã—10000
 	
-	--PushDebugMessage("ÊäÈë£º"..strNumber.." ÓµÓÐ£º"..Player:GetData("MONEY"))
+	--PushDebugMessage("è¾“å…¥ï¼š"..strNumber.." æ‹¥æœ‰ï¼š"..Player:GetData("MONEY"))
 	if strNumber > Player:GetData("MONEY")+ Player:GetData("MONEY_JZ") then
 		PushDebugMessage("#{BPZJ_0801014_007}")
 		return

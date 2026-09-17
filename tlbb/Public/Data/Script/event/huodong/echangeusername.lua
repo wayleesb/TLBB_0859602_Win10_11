@@ -1,27 +1,27 @@
---½ÇÉ«¸üÃû
+--è§’è‰²æ›´å
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x808008_g_ScriptId	= 808008
 
---²Ù×÷¼¯
+--æ“ä½œé›†
 x808008_g_Key				=
 {
-	["ChgU"]					= 100,	--ÎÒÒª¸ÄÃû×Ö
-	["ChgU_Y"]				= 101,	--ÎÒÒª¸ÄÃû×Ö£¬È·ÈÏ
-	["TitP"]					= 110,	--ÎÒÒª¸üĞÂÊ¦Í½³ÆºÅ
-	["TitP_Y"]				= 111,	--ÎÒÒª¸üĞÂÊ¦Í½³ÆºÅ£¬È·ÈÏ
-	["TitS"]					= 120,	--ÎÒÒª¸üĞÂ·òÆŞ³ÆºÅ
-	["TitS_Y"]				= 121,	--ÎÒÒª¸üĞÂ·òÆŞ³ÆºÅ£¬È·ÈÏ
-	["TitG"]					= 130,	--ÎÒÒª¸üĞÂ°ï»á³ÆºÅ
-	["TitG_Y"]				= 131,	--ÎÒÒª¸üĞÂ°ï»á³ÆºÅ£¬È·ÈÏ
+	["ChgU"]					= 100,	--æˆ‘è¦æ”¹åå­—
+	["ChgU_Y"]				= 101,	--æˆ‘è¦æ”¹åå­—ï¼Œç¡®è®¤
+	["TitP"]					= 110,	--æˆ‘è¦æ›´æ–°å¸ˆå¾’ç§°å·
+	["TitP_Y"]				= 111,	--æˆ‘è¦æ›´æ–°å¸ˆå¾’ç§°å·ï¼Œç¡®è®¤
+	["TitS"]					= 120,	--æˆ‘è¦æ›´æ–°å¤«å¦»ç§°å·
+	["TitS_Y"]				= 121,	--æˆ‘è¦æ›´æ–°å¤«å¦»ç§°å·ï¼Œç¡®è®¤
+	["TitG"]					= 130,	--æˆ‘è¦æ›´æ–°å¸®ä¼šç§°å·
+	["TitG_Y"]				= 131,	--æˆ‘è¦æ›´æ–°å¸®ä¼šç§°å·ï¼Œç¡®è®¤
 }
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x808008_OnDefaultEvent( sceneId, selfId, targetId )
 
-	--ÊÇ·ñ´¦ÓÚÎŞ·¨Ö´ĞĞÂß¼­µÄ×´Ì¬
+	--æ˜¯å¦å¤„äºæ— æ³•æ‰§è¡Œé€»è¾‘çš„çŠ¶æ€
 	if LuaFnIsCanDoScriptLogic( sceneId, selfId ) ~= 1 then
 		return 0
 	end
@@ -30,26 +30,26 @@ function x808008_OnDefaultEvent( sceneId, selfId, targetId )
 	if key == x808008_g_Key["ChgU"] then
 		BeginEvent( sceneId )
 			AddText( sceneId, "#{ChangeName_ChgU}" )
-			AddNumText( sceneId, x808008_g_ScriptId, "È·¶¨", 6, x808008_g_Key["ChgU_Y"] )
+			AddNumText( sceneId, x808008_g_ScriptId, "ç¡®å®š", 6, x808008_g_Key["ChgU_Y"] )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 	elseif key == x808008_g_Key["TitP"] then
 		BeginEvent( sceneId )
 			AddText( sceneId, "#{ChangeName_TitP}" )
-			AddNumText( sceneId, x808008_g_ScriptId, "È·¶¨", 6, x808008_g_Key["TitP_Y"] )
+			AddNumText( sceneId, x808008_g_ScriptId, "ç¡®å®š", 6, x808008_g_Key["TitP_Y"] )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 	elseif key == x808008_g_Key["TitS"] then
 		BeginEvent( sceneId )
 			AddText( sceneId, "#{ChangeName_TitS}" )
-			AddNumText( sceneId, x808008_g_ScriptId, "È·¶¨", 6, x808008_g_Key["TitS_Y"] )
+			AddNumText( sceneId, x808008_g_ScriptId, "ç¡®å®š", 6, x808008_g_Key["TitS_Y"] )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 	--dengxx
 	elseif key == x808008_g_Key["TitG"] then
 		BeginEvent( sceneId )
 			AddText( sceneId, "#{BHJW_090217_1}" )
-			AddNumText( sceneId, x808008_g_ScriptId, "È·¶¨", 6, x808008_g_Key["TitG_Y"] )
+			AddNumText( sceneId, x808008_g_ScriptId, "ç¡®å®š", 6, x808008_g_Key["TitG_Y"] )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 	------	
@@ -73,45 +73,45 @@ function x808008_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x808008_OnEnumerate( sceneId, selfId, targetId )
 	
-	AddNumText( sceneId, x808008_g_ScriptId, "ÎÒÒª¸ÄÃû×Ö", 6, x808008_g_Key["ChgU"] )
-	AddNumText( sceneId, x808008_g_ScriptId, "ÎÒÒª¸üĞÂÊ¦Í½³ÆºÅ", 6, x808008_g_Key["TitP"] )
-	AddNumText( sceneId, x808008_g_ScriptId, "ÎÒÒª¸üĞÂ·òÆŞ³ÆºÅ", 6, x808008_g_Key["TitS"] )
+	AddNumText( sceneId, x808008_g_ScriptId, "æˆ‘è¦æ”¹åå­—", 6, x808008_g_Key["ChgU"] )
+	AddNumText( sceneId, x808008_g_ScriptId, "æˆ‘è¦æ›´æ–°å¸ˆå¾’ç§°å·", 6, x808008_g_Key["TitP"] )
+	AddNumText( sceneId, x808008_g_ScriptId, "æˆ‘è¦æ›´æ–°å¤«å¦»ç§°å·", 6, x808008_g_Key["TitS"] )
   AddNumText( sceneId, x808008_g_ScriptId, "#{CHANGENAME_JW}", 6, x808008_g_Key["TitG"] )
 end
 
 --**********************************
---¸üĞÂÅäÅ¼³ÆºÅ
+--æ›´æ–°é…å¶ç§°å·
 --**********************************
 function x808008_OnRefreshSpouseTitle( sceneId, selfId, targetId )
 
 	if LuaFnIsMarried( sceneId, selfId ) == 0 then
-		x808008_MsgBox( sceneId, selfId, "Äú»¹Ã»ÓĞ½á»é" )
+		x808008_MsgBox( sceneId, selfId, "æ‚¨è¿˜æ²¡æœ‰ç»“å©š" )
 		return
 	end
 	
 --local	UserTitle	= LuaFnGetSpouseTitle( sceneId, selfId )
 --local	i, _			= strfind( UserTitle, "*" )
 --if i == nil then
---	x808008_MsgBox( sceneId, selfId, "Äú²»·ûºÏ³ÆºÅ¸üĞÂÌõ¼ş" )
+--	x808008_MsgBox( sceneId, selfId, "æ‚¨ä¸ç¬¦åˆç§°å·æ›´æ–°æ¡ä»¶" )
 --	return
 --end
 	
 	if LuaFnHasTeam( sceneId, selfId ) == 0 then
-		x808008_MsgBox( sceneId, selfId, "ÄúĞèÒªÓë°éÂÂÒ»Æğ×é¶ÓÇ°À´" )
+		x808008_MsgBox( sceneId, selfId, "æ‚¨éœ€è¦ä¸ä¼´ä¾£ä¸€èµ·ç»„é˜Ÿå‰æ¥" )
 		return
 	end
 	
 	if LuaFnGetTeamSize( sceneId, selfId ) ~= 2 then
-		x808008_MsgBox( sceneId, selfId, "¸Ã¶ÓÎéÓ¦¸ÃÓÉÄãÃÇ·òÆŞ¶şÈË×é³É" )
+		x808008_MsgBox( sceneId, selfId, "è¯¥é˜Ÿä¼åº”è¯¥ç”±ä½ ä»¬å¤«å¦»äºŒäººç»„æˆ" )
 		return
 	end
 	
 	if GetNearTeamCount( sceneId, selfId ) ~= 2 then
-		x808008_MsgBox( sceneId, selfId, "ÄúµÄ°éÂÂ²»ÔÚ¸½½ü" )
+		x808008_MsgBox( sceneId, selfId, "æ‚¨çš„ä¼´ä¾£ä¸åœ¨é™„è¿‘" )
 		return
 	end
 
@@ -122,62 +122,62 @@ function x808008_OnRefreshSpouseTitle( sceneId, selfId, targetId )
 	if LuaFnIsMarried( sceneId, ObjID0 ) == 0 or
 		LuaFnIsMarried( sceneId, ObjID1 ) == 0 or
 		SelfGUID ~= SpouGUID then
-		x808008_MsgBox( sceneId, selfId, "ÄúµÄ°éÂÂ²»ÔÚ¶ÓÎéÖĞ" )
+		x808008_MsgBox( sceneId, selfId, "æ‚¨çš„ä¼´ä¾£ä¸åœ¨é˜Ÿä¼ä¸­" )
 		return
 	end
 
 	local	Name0			= GetName( sceneId, ObjID0 )
 	local	Name1			= GetName( sceneId, ObjID1 )
 	if LuaFnGetSex( sceneId, ObjID0 ) == 0 then
-		LuaFnAwardSpouseTitle( sceneId, ObjID1, Name0 .. "µÄ·ò¾ı" )
+		LuaFnAwardSpouseTitle( sceneId, ObjID1, Name0 .. "çš„å¤«å›" )
 	else
-		LuaFnAwardSpouseTitle( sceneId, ObjID1, Name0 .. "µÄÄï×Ó" )
+		LuaFnAwardSpouseTitle( sceneId, ObjID1, Name0 .. "çš„å¨˜å­" )
 	end
 	DispatchAllTitle( sceneId, ObjID1 )
 
 	if LuaFnGetSex( sceneId, ObjID1 ) == 0 then
-		LuaFnAwardSpouseTitle( sceneId, ObjID0, Name1 .. "µÄ·ò¾ı" )
+		LuaFnAwardSpouseTitle( sceneId, ObjID0, Name1 .. "çš„å¤«å›" )
 	else
-		LuaFnAwardSpouseTitle( sceneId, ObjID0, Name1 .. "µÄÄï×Ó" )
+		LuaFnAwardSpouseTitle( sceneId, ObjID0, Name1 .. "çš„å¨˜å­" )
 	end
 	DispatchAllTitle( sceneId, ObjID0 )
 	
 	BeginEvent( sceneId )
-		AddText( sceneId, "  ¹§Ï²Äú£¬ÄúµÄ·òÆŞ³ÆºÅÒÑ¾­¸üĞÂÁË£¡" )
+		AddText( sceneId, "  æ­å–œæ‚¨ï¼Œæ‚¨çš„å¤«å¦»ç§°å·å·²ç»æ›´æ–°äº†ï¼" )
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, selfId, targetId )
 
 end
 
 --**********************************
---¸üĞÂÍ½µÜ³ÆºÅ
+--æ›´æ–°å¾’å¼Ÿç§°å·
 --**********************************
 function x808008_OnRefreshPrenticeTitle( sceneId, selfId, targetId )
 
 	if LuaFnHaveMaster( sceneId, selfId ) == 0 then
-		x808008_MsgBox( sceneId, selfId, "Äú»¹Ã»ÓĞÊ¦¸µ" )
+		x808008_MsgBox( sceneId, selfId, "æ‚¨è¿˜æ²¡æœ‰å¸ˆå‚…" )
 		return
 	end
 	
 --local	UserTitle	= LuaFnGetShiTuTitle( sceneId, selfId )
 --local	i, _			= strfind( UserTitle, "*" )
 --if i == nil then
---	x808008_MsgBox( sceneId, selfId, "Äú²»·ûºÏ³ÆºÅ¸üĞÂÌõ¼ş" )
+--	x808008_MsgBox( sceneId, selfId, "æ‚¨ä¸ç¬¦åˆç§°å·æ›´æ–°æ¡ä»¶" )
 --	return
 --end
 	
 	if LuaFnHasTeam( sceneId, selfId ) == 0 then
-		x808008_MsgBox( sceneId, selfId, "ÄúĞèÒªÓëÊ¦¸µÒ»Æğ×é¶ÓÇ°À´" )
+		x808008_MsgBox( sceneId, selfId, "æ‚¨éœ€è¦ä¸å¸ˆå‚…ä¸€èµ·ç»„é˜Ÿå‰æ¥" )
 		return
 	end
 	
 	if LuaFnGetTeamSize( sceneId, selfId ) ~= 2 then
-		x808008_MsgBox( sceneId, selfId, "¸Ã¶ÓÎéÓ¦¸ÃÓÉÄãÃÇÊ¦Í½¶şÈË×é³É" )
+		x808008_MsgBox( sceneId, selfId, "è¯¥é˜Ÿä¼åº”è¯¥ç”±ä½ ä»¬å¸ˆå¾’äºŒäººç»„æˆ" )
 		return
 	end
 	
 	if GetNearTeamCount( sceneId, selfId ) ~= 2 then
-		x808008_MsgBox( sceneId, selfId, "ÄúµÄÊ¦¸µ²»ÔÚ¸½½ü" )
+		x808008_MsgBox( sceneId, selfId, "æ‚¨çš„å¸ˆå‚…ä¸åœ¨é™„è¿‘" )
 		return
 	end
 
@@ -189,38 +189,38 @@ function x808008_OnRefreshPrenticeTitle( sceneId, selfId, targetId )
 	elseif LuaFnIsMaster( sceneId, selfId, ObjID1 ) == 1 then
 		ObjIDM				= ObjID1
 	else
-		x808008_MsgBox( sceneId, selfId, "ÄúµÄÊ¦¸µ²»ÔÚ¶ÓÎéÖĞ" )
+		x808008_MsgBox( sceneId, selfId, "æ‚¨çš„å¸ˆå‚…ä¸åœ¨é˜Ÿä¼ä¸­" )
 		return
 	end
 	
 	local	NameM			= GetName( sceneId, ObjIDM )
-	AwardShiTuTitle( sceneId, selfId, NameM .. "µÄµÜ×Ó" )
+	AwardShiTuTitle( sceneId, selfId, NameM .. "çš„å¼Ÿå­" )
 	DispatchAllTitle( sceneId, selfId )
 	
 	BeginEvent( sceneId )
-		AddText( sceneId, "  ¹§Ï²Äú£¬ÄúµÄÊ¦Í½³ÆºÅÒÑ¾­¸üĞÂÁË£¡" )
+		AddText( sceneId, "  æ­å–œæ‚¨ï¼Œæ‚¨çš„å¸ˆå¾’ç§°å·å·²ç»æ›´æ–°äº†ï¼" )
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, selfId, targetId )
 
 end
 
 --*********************************
---¸üĞÂ°ï»á¾ôÎ»³ÆºÅ dengxx
+--æ›´æ–°å¸®ä¼šçˆµä½ç§°å· dengxx
 --*********************************
 function x808008_OnRefreshGuildContriTitle( sceneId, selfId, targetId )
   
-  --ÊÇ·ñ´¦ÓÚÎŞ·¨Ö´ĞĞÂß¼­µÄ×´Ì¬
+  --æ˜¯å¦å¤„äºæ— æ³•æ‰§è¡Œé€»è¾‘çš„çŠ¶æ€
 	if LuaFnIsCanDoScriptLogic( sceneId, selfId ) ~= 1 then
 		return 0
 	end
   
-  --ÊÇ·ñ¼ÓÈëÁË°ï»á
+  --æ˜¯å¦åŠ å…¥äº†å¸®ä¼š
   if GetGuildLevel( sceneId, selfId ) < 0 then
 		x808008_MsgBox( sceneId, selfId, "#{BHJW_090217_2}" )
 		return 0
 	end
 	
-	--ÒÆÃñ°ï»áÃ»¸ÄÃû£¬²»ÄÜ¸üĞÂ¾ôÎ»³ÆºÅ
+	--ç§»æ°‘å¸®ä¼šæ²¡æ”¹åï¼Œä¸èƒ½æ›´æ–°çˆµä½ç§°å·
 	local	GuildName	= LuaFnGetGuildName( sceneId, selfId )
 	local	i, _ = strfind( GuildName, "*" )
 	if i ~= nil then
@@ -228,7 +228,7 @@ function x808008_OnRefreshGuildContriTitle( sceneId, selfId, targetId )
 		return 0
 	end
 	
-	--ÊÇ·ñÓĞ°ï»á¾ôÎ»³ÆºÅ
+	--æ˜¯å¦æœ‰å¸®ä¼šçˆµä½ç§°å·
 	local currGuildContriTitle = GetGuildContriTitle(sceneId, selfId);
 	if currGuildContriTitle == "" then
 		x808008_MsgBox( sceneId, selfId, "#{BHJW_090217_4}" )
@@ -237,13 +237,13 @@ function x808008_OnRefreshGuildContriTitle( sceneId, selfId, targetId )
 	
 	local i,_ = strfind(currGuildContriTitle,GuildName)
 	
-	--¾ôÎ»³ÆºÅÊÇ·ñÕıÈ·£º²»ÓÃ¸Ä»òÕßÒÑ¾­¸Ä¹ıÁË
+	--çˆµä½ç§°å·æ˜¯å¦æ­£ç¡®ï¼šä¸ç”¨æ”¹æˆ–è€…å·²ç»æ”¹è¿‡äº†
 	if i ~= nil then 
 	  x808008_MsgBox( sceneId, selfId, "#{BHJW_090217_5}" )
 		return 0
 	else
-	--¸üĞÂ°ï»á¾ôÎ»³ÆºÅ
-	  local i,_ = strfind(currGuildContriTitle,"¡ï")
+	--æ›´æ–°å¸®ä¼šçˆµä½ç§°å·
+	  local i,_ = strfind(currGuildContriTitle,"â˜…")
 	  local str = strsub(currGuildContriTitle,i)
 	  local newGuildContriTitle = GuildName..str
 	  AwardGuildContriTitle( sceneId, selfId, newGuildContriTitle)
@@ -258,11 +258,11 @@ function x808008_OnRefreshGuildContriTitle( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÇ·ñÓĞ×Ê¸ñÉêÇë½ÇÉ«¸üÃû
+--æ˜¯å¦æœ‰èµ„æ ¼ç”³è¯·è§’è‰²æ›´å
 --**********************************
 function x808008_IsCanChangeUserName( sceneId, selfId )
 
-	--ÊÇ·ñ´¦ÓÚÎŞ·¨Ö´ĞĞÂß¼­µÄ×´Ì¬
+	--æ˜¯å¦å¤„äºæ— æ³•æ‰§è¡Œé€»è¾‘çš„çŠ¶æ€
 	if LuaFnIsCanDoScriptLogic( sceneId, selfId ) ~= 1 then
 		return 0
 	end
@@ -270,7 +270,7 @@ function x808008_IsCanChangeUserName( sceneId, selfId )
 	local	UserName	= GetName( sceneId, selfId )
 	local	i, _			= strfind( UserName, "*" )
 	if i == nil then
-		x808008_MsgBox( sceneId, selfId, "Äú²»ÊÇÒÆÃñÍæ¼Ò£¬»òÕßÄúÒÑ¾­ĞŞ¸Ä¹ıÃû×ÖÁË" )
+		x808008_MsgBox( sceneId, selfId, "æ‚¨ä¸æ˜¯ç§»æ°‘ç©å®¶ï¼Œæˆ–è€…æ‚¨å·²ç»ä¿®æ”¹è¿‡åå­—äº†" )
 		return 0
 	end
 	
@@ -279,7 +279,7 @@ function x808008_IsCanChangeUserName( sceneId, selfId )
 end
 
 --**********************************
---½ÇÉ«ÉêÇë¸üÃûÇ°Ìõ¼ş¼ì²é
+--è§’è‰²ç”³è¯·æ›´åå‰æ¡ä»¶æ£€æŸ¥
 --**********************************
 function x808008_CallBackChangeUserNameBefore( sceneId, selfId )
 
@@ -292,34 +292,34 @@ function x808008_CallBackChangeUserNameBefore( sceneId, selfId )
 end
 
 --**********************************
---½ÇÉ«ÉêÇë¸üÃûºó½á¹û·µ»Ø
+--è§’è‰²ç”³è¯·æ›´ååç»“æœè¿”å›
 --**********************************
 function x808008_CallBackChangeUserNameAfter( sceneId, selfId, nRetType )
 
-	--ÊÇ·ñ´¦ÓÚÎŞ·¨Ö´ĞĞÂß¼­µÄ×´Ì¬
+	--æ˜¯å¦å¤„äºæ— æ³•æ‰§è¡Œé€»è¾‘çš„çŠ¶æ€
 	if LuaFnIsCanDoScriptLogic( sceneId, selfId ) ~= 1 then
 		return 0
 	end
 
-	--¸üÃûÏûÏ¢·µ»ØÀàĞÍ
+	--æ›´åæ¶ˆæ¯è¿”å›ç±»å‹
 	--enum	CHANGE_NAME_RESULT
 	--{
-	--	CHGNAME_RE_OK					= 0 ,	// ¸üÃû³É¹¦
-	--	CHGNAME_RE_ERROR ,					// ¸üÃûÊ§°Ü
-	--	CHGNAME_RE_DBBUSY ,					// DBÑ¹Á¦¹ı´ó£¬ÇëÖØĞÂ³¢ÊÔ
-	--	CHGNAME_RE_NAMEERROR ,			// ²»¿É½ÓÊÜµÄĞÂÃû³Æ
-	--	CHGNAME_RE_REPEATED ,				// Ãû³ÆÖØ¸´
+	--	CHGNAME_RE_OK					= 0 ,	// æ›´åæˆåŠŸ
+	--	CHGNAME_RE_ERROR ,					// æ›´åå¤±è´¥
+	--	CHGNAME_RE_DBBUSY ,					// DBå‹åŠ›è¿‡å¤§ï¼Œè¯·é‡æ–°å°è¯•
+	--	CHGNAME_RE_NAMEERROR ,			// ä¸å¯æ¥å—çš„æ–°åç§°
+	--	CHGNAME_RE_REPEATED ,				// åç§°é‡å¤
 	--};
 	if nRetType == 1 then
-		x808008_MsgBox( sceneId, selfId, "¸üÃûÊ§°Ü" )
+		x808008_MsgBox( sceneId, selfId, "æ›´åå¤±è´¥" )
 	elseif nRetType == 2 then
-		x808008_MsgBox( sceneId, selfId, "DBÑ¹Á¦¹ı´ó£¬ÇëÖØĞÂ³¢ÊÔ" )
+		x808008_MsgBox( sceneId, selfId, "DBå‹åŠ›è¿‡å¤§ï¼Œè¯·é‡æ–°å°è¯•" )
 	elseif nRetType == 3 then
-		x808008_MsgBox( sceneId, selfId, "²»¿É½ÓÊÜµÄĞÂÃû³Æ" )
+		x808008_MsgBox( sceneId, selfId, "ä¸å¯æ¥å—çš„æ–°åç§°" )
 	elseif nRetType == 4 then
-		x808008_MsgBox( sceneId, selfId, "Ãû³ÆÖØ¸´" )
+		x808008_MsgBox( sceneId, selfId, "åç§°é‡å¤" )
 	else
-		x808008_MsgBox( sceneId, selfId, "¹§Ï²Äú£¬ÄúµÄÃû×ÖĞŞ¸Ä³É¹¦£¡" )
+		x808008_MsgBox( sceneId, selfId, "æ­å–œæ‚¨ï¼Œæ‚¨çš„åå­—ä¿®æ”¹æˆåŠŸï¼" )
 	end
 	
 	return 1
@@ -327,7 +327,7 @@ function x808008_CallBackChangeUserNameAfter( sceneId, selfId, nRetType )
 end
 
 --**********************************
---ĞÑÄ¿ÌáÊ¾
+--é†’ç›®æç¤º
 --**********************************
 function x808008_MsgBox( sceneId, selfId, str )
 

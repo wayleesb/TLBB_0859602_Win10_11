@@ -1,26 +1,26 @@
---´óÀíNPC
---ÉòÀ¨
---ÆÕÍ¨
+--å¤§ç†NPC
+--æ²ˆæ‹¬
+--æ™®é€š
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x002001_g_scriptId = 002001
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x002001_g_eventList={212128,212131}
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x002001_UpdateEventList( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
-		AddText(sceneId,"  ´óÀí¹úÓĞºÜ¶àÖ²ÎïºÍ¿ó²Ø¼«Îªº±¼û£¬Ò²²»Í÷ÎÒ´Óãê¾©Ç§ÀïÌöÌö¶øÀ´£¬ÕæÊÇ²»Ğé´ËĞĞ°¡¡£")
+		AddText(sceneId,"  å¤§ç†å›½æœ‰å¾ˆå¤šæ¤ç‰©å’ŒçŸ¿è—æä¸ºç½•è§ï¼Œä¹Ÿä¸æ‰æˆ‘ä»æ±´äº¬åƒé‡Œè¿¢è¿¢è€Œæ¥ï¼ŒçœŸæ˜¯ä¸è™šæ­¤è¡Œå•Šã€‚")
 		for i, eventId in x002001_g_eventList do
 			CallScriptFunction( eventId, "OnEnumerate",sceneId, selfId, targetId )
 		end
 		
-		-- ÁìÈ¡³ÆºÅ
+		-- é¢†å–ç§°å·
 		if (IsMissionHaveDone(sceneId,selfId, 253) > 0 ) then
-			AddNumText(sceneId, x002001_g_scriptId, "ÁìÈ¡³ÆºÅ", 6, 999);
+			AddNumText(sceneId, x002001_g_scriptId, "é¢†å–ç§°å·", 6, 999);
 		end
 		
 	EndEvent(sceneId)
@@ -28,14 +28,14 @@ function x002001_UpdateEventList( sceneId, selfId,targetId )
 end
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x002001_OnDefaultEvent( sceneId, selfId,targetId )
 	x002001_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x002001_OnEventRequest( sceneId, selfId, targetId, eventId )
 	
@@ -55,7 +55,7 @@ function x002001_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x002001_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x002001_g_eventList do
@@ -70,10 +70,10 @@ function x002001_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x002001_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
-	--¾Ü¾øÖ®ºó£¬Òª·µ»ØNPCµÄÊÂ¼şÁĞ±í
+	--æ‹’ç»ä¹‹åï¼Œè¦è¿”å›NPCçš„äº‹ä»¶åˆ—è¡¨
 	for i, findId in x002001_g_eventList do
 		if missionScriptId == findId then
 			x002001_UpdateEventList( sceneId, selfId, targetId )
@@ -83,7 +83,7 @@ function x002001_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¼ÌĞø£¨ÒÑ¾­½ÓÁËÈÎÎñ£©
+--ç»§ç»­ï¼ˆå·²ç»æ¥äº†ä»»åŠ¡ï¼‰
 --**********************************
 function x002001_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x002001_g_eventList do
@@ -95,7 +95,7 @@ function x002001_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---Ìá½»ÒÑ×öÍêµÄÈÎÎñ
+--æäº¤å·²åšå®Œçš„ä»»åŠ¡
 --**********************************
 function x002001_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, selectRadioId )
 	for i, findId in x002001_g_eventList do
@@ -107,7 +107,7 @@ function x002001_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 end
 
 --**********************************
---ËÀÍöÊÂ¼ş
+--æ­»äº¡äº‹ä»¶
 --**********************************
 function x002001_OnDie( sceneId, selfId, killerId )
 end

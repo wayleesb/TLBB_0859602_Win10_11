@@ -4,16 +4,16 @@ local g_Icon = "";
 
 local Max_BtnNum = 10;
 local PetNames = {
-	"³ÉÄêÕäÊŞ",
-	"ÕäÊŞ±¦±¦",
-	"1¼¶±äÒì",
-	"2¼¶±äÒì",
-	"3¼¶±äÒì",
-	"4¼¶±äÒì",
-	"5¼¶±äÒì",
-	"6¼¶±äÒì",
-	"7¼¶±äÒì",
-	"8¼¶±äÒì",
+	"æˆå¹´çå…½",
+	"çå…½å®å®",
+	"1çº§å˜å¼‚",
+	"2çº§å˜å¼‚",
+	"3çº§å˜å¼‚",
+	"4çº§å˜å¼‚",
+	"5çº§å˜å¼‚",
+	"6çº§å˜å¼‚",
+	"7çº§å˜å¼‚",
+	"8çº§å˜å¼‚",
 };
 function PetJian_PreLoad()
 	this:RegisterEvent("OPEN_PETJIAN_DLG");
@@ -48,7 +48,7 @@ function PetJian_Init()
 	for i = 1 , g_petNum do
 		PetJian_List : AddItem(PetNames[i], i-1);
 	end
-	--Ä¬ÈÏÑ¡ÖĞ×îºóÒ»¸ö
+	--é»˜è®¤é€‰ä¸­æœ€åä¸€ä¸ª
 	PetJian_List : SetItemSelectByItemID(g_petNum - 1);
 	PetJian_SelectOneType(g_petNum);
 end
@@ -83,10 +83,10 @@ function PetJian_Onshow()
 	else
 		strNeedLevelColor ="#c00FF00";
 	end
-	local strNeedLevel = strNeedLevelColor..tostring( nTakeLevel ).."¼¶#W¿ÉĞ¯´ø";
+	local strNeedLevel = strNeedLevelColor..tostring( nTakeLevel ).."çº§#Wå¯æºå¸¦";
 	PetJian_NeedLevel:SetText( strNeedLevel );
 	-----------------------------------------------------
-	--get AttackTrait (ÔİÈ±)
+	--get AttackTrait (æš‚ç¼º)
 	strName,strIcon = DataPool : PetsOneType_GetAttr(g_CurSel,"attacktype");
 	if strIcon ~= "" then
 		PetJianAttack_Type : SetProperty( "Image", "set:Button6 image:"..strIcon )
@@ -98,21 +98,21 @@ function PetJian_Onshow()
 	local food = DataPool : PetsOneType_GetAttr(g_CurSel,"food");
 	strName = "";
 	if(food >= 1000) then
-		strName = strName .. "Èâ";
+		strName = strName .. "è‚‰";
 		food = food - 1000;
 		if food > 0 then
 			strName = strName .. ",";
 		end
 	end
 	if(food >= 100) then
-		strName = strName .. "²İ";
+		strName = strName .. "è‰";
 		food = food - 100;
 		if food > 0 then
 			strName = strName .. ",";
 		end
 	end
 	if(food >= 10) then
-		strName = strName .. "³æ";
+		strName = strName .. "è™«";
 		food = food - 10;
 		if food > 0 then
 			strName = strName .. ",";
@@ -120,7 +120,7 @@ function PetJian_Onshow()
 	end
 	
 	if(food >= 1) then
-		strName = strName .. "¹È";
+		strName = strName .. "è°·";
 	end
 	PetJianFood_Type : Show();
 	PetJianFood_Type : SetToolTip( strName );
@@ -141,13 +141,13 @@ end
 
 ----------------------------------------------------------------------------------
 --
--- Ğı×ªÕäÊŞÄ£ĞÍ£¨Ïò×ó)
+-- æ—‹è½¬çå…½æ¨¡å‹ï¼ˆå‘å·¦)
 --
 function PetJian_Modle_TurnLeft(start)
-	--Ïò×óĞı×ª¿ªÊ¼
+	--å‘å·¦æ—‹è½¬å¼€å§‹
 	if(start == 1 and CEArg:GetValue("MouseButton")=="LeftButton") then
 		PetJian_FakeObject:RotateBegin(-0.3);
-	--Ïò×óĞı×ª½áÊø
+	--å‘å·¦æ—‹è½¬ç»“æŸ
 	else
 		PetJian_FakeObject:RotateEnd();
 	end
@@ -155,13 +155,13 @@ end
 
 ----------------------------------------------------------------------------------
 --
---Ğı×ªÕäÊŞÄ£ĞÍ£¨ÏòÓÒ)
+--æ—‹è½¬çå…½æ¨¡å‹ï¼ˆå‘å³)
 --
 function PetJian_Modle_TurnRight(start)
-	--ÏòÓÒĞı×ª¿ªÊ¼
+	--å‘å³æ—‹è½¬å¼€å§‹
 	if(start == 1 and CEArg:GetValue("MouseButton")=="LeftButton") then
 		PetJian_FakeObject:RotateBegin(0.3);
-	--ÏòÓÒĞı×ª½áÊø
+	--å‘å³æ—‹è½¬ç»“æŸ
 	else
 		PetJian_FakeObject:RotateEnd();
 	end

@@ -1,6 +1,6 @@
---Ì½Ë÷ÇøÓò(ËùÓĞÕâÒ»ÀàĞÍ¶¼Ê¹ÓÃÕâ¸öLUA£¬ĞŞ¸ÄÇë×¢ÒâÍ¨ÓÃĞÔ)
+--æ¢ç´¢åŒºåŸŸ(æ‰€æœ‰è¿™ä¸€ç±»å‹éƒ½ä½¿ç”¨è¿™ä¸ªLUAï¼Œä¿®æ”¹è¯·æ³¨æ„é€šç”¨æ€§)
 
---ÈÎÎñ¶Î·ÖÀàÁĞ±í_MissType	1.É±¹ÖÈÎÎñ	2.ËÍĞÅÈÎÎñ	3.Ì½Ë÷ÈÎÎñ	4.Ñ°ÎïÈÎÎñ	5.»¤ËÍÈÎÎñ
+--ä»»åŠ¡æ®µåˆ†ç±»åˆ—è¡¨_MissType	1.æ€æ€ªä»»åŠ¡	2.é€ä¿¡ä»»åŠ¡	3.æ¢ç´¢ä»»åŠ¡	4.å¯»ç‰©ä»»åŠ¡	5.æŠ¤é€ä»»åŠ¡
 x006669_g_MissionTypeList	=	{ {StartIdx = 1000000, EndIdx = 1009999, ScriptId = 006666},
 															{StartIdx = 1010000, EndIdx = 1019999, ScriptId = 006668},
 															{StartIdx = 1020000, EndIdx = 1029999, ScriptId = 006669},
@@ -8,7 +8,7 @@ x006669_g_MissionTypeList	=	{ {StartIdx = 1000000, EndIdx = 1009999, ScriptId = 
 															{StartIdx = 1050000, EndIdx = 1059999, ScriptId = 006671} }
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x006669_DisplayBonus(sceneId, missionIndex)
 	local itemCt
@@ -36,9 +36,9 @@ function x006669_DisplayBonus(sceneId, missionIndex)
 end
 			
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı   µã»÷¸ÃÈÎÎñºóÖ´ĞĞ´Ë½Å±¾
+--ä»»åŠ¡å…¥å£å‡½æ•°   ç‚¹å‡»è¯¥ä»»åŠ¡åæ‰§è¡Œæ­¤è„šæœ¬
 --**********************************
-function x006669_OnDefaultEvent( sceneId, selfId, targetId, missionIndex )	--µã»÷¸ÃÈÎÎñºóÖ´ĞĞ´Ë½Å±¾
+function x006669_OnDefaultEvent( sceneId, selfId, targetId, missionIndex )	--ç‚¹å‡»è¯¥ä»»åŠ¡åæ‰§è¡Œæ­¤è„šæœ¬
 	
 	local missionId = TGetMissionIdByIndex(missionIndex)
 	local missionName = TGetMissionName(missionIndex)
@@ -49,9 +49,9 @@ function x006669_OnDefaultEvent( sceneId, selfId, targetId, missionIndex )	--µã»
 	local missionComplete 
 	missionTarget, missionInfo, missionContinue, missionComplete = TGetMissionDesc(missionIndex)
 
-	--·¢ËÍÈÎÎñĞèÇóµÄĞÅÏ¢
+	--å‘é€ä»»åŠ¡éœ€æ±‚çš„ä¿¡æ¯
 	if IsHaveMission(sceneId,selfId,missionId) > 0 then
-		--·¢ËÍÈÎÎñĞèÇóµÄĞÅÏ¢
+		--å‘é€ä»»åŠ¡éœ€æ±‚çš„ä¿¡æ¯
 		BeginEvent(sceneId)
 			AddText(sceneId, missionName)
 			AddText(sceneId, missionContinue)
@@ -61,7 +61,7 @@ function x006669_OnDefaultEvent( sceneId, selfId, targetId, missionIndex )	--µã»
 		DispatchMissionDemandInfo(sceneId,selfId,targetId,missionIndex,missionId,bDone)
 	elseif x006669_CheckAccept(sceneId,selfId,missionIndex) > 0 then
 		--PrintStr("elseif x006669_CheckAccept(sceneId,selfId) > 0 then...")
-		--·¢ËÍÈÎÎñ½ÓÊÜÊ±ÏÔÊ¾µÄĞÅÏ¢
+		--å‘é€ä»»åŠ¡æ¥å—æ—¶æ˜¾ç¤ºçš„ä¿¡æ¯
 		BeginEvent(sceneId)
 			AddText(sceneId, missionName)
 			AddText(sceneId,missionInfo)
@@ -74,15 +74,15 @@ function x006669_OnDefaultEvent( sceneId, selfId, targetId, missionIndex )	--µã»
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x006669_OnEnumerate( sceneId, selfId, targetId, missionIndex )
 	--PrintStr("OnEnumerate..." .. sceneId .. selfId .. targetId .. missionIndex)
-	--Èç¹ûÍæ¼ÒÍê³É¹ıÕâ¸öÈÎÎñ
+	--å¦‚æœç©å®¶å®Œæˆè¿‡è¿™ä¸ªä»»åŠ¡
 	local missionId = TGetMissionIdByIndex(missionIndex)
 	local missionName = TGetMissionName(missionIndex)
 
-	-- ÅĞ¶¨Íæ¼ÒµÄÌõ¼şÊÇ²»ÊÇ¹»½ÓÊÜÕâ¸öÈÎÎñ£¬Èç¹û¹»¾ÍÏÔÊ¾£¬²»¹»¾Í²»ÏÔÊ¾
+	-- åˆ¤å®šç©å®¶çš„æ¡ä»¶æ˜¯ä¸æ˜¯å¤Ÿæ¥å—è¿™ä¸ªä»»åŠ¡ï¼Œå¦‚æœå¤Ÿå°±æ˜¾ç¤ºï¼Œä¸å¤Ÿå°±ä¸æ˜¾ç¤º
 	local nLevel
 	local nMis1
 	local nMis2
@@ -113,7 +113,7 @@ function x006669_OnEnumerate( sceneId, selfId, targetId, missionIndex )
 	if IsMissionHaveDone(sceneId, selfId, missionId) > 0 then
    	return
    	
-	--Âú×ãÈÎÎñ½ÓÊÕÌõ¼ş
+	--æ»¡è¶³ä»»åŠ¡æ¥æ”¶æ¡ä»¶
 	elseif IsHaveMission(sceneId, selfId, missionId) > 0 then
 		local completeNpcScene, completeNpcName = TGetCompleteNpcInfo(missionIndex)
 		if GetName(sceneId, targetId) == completeNpcName then
@@ -122,7 +122,7 @@ function x006669_OnEnumerate( sceneId, selfId, targetId, missionIndex )
 			TEndEvent()	
 			TDispatchEventList(sceneId, selfId, targetId)
 		end
-	--Âú×ãÈÎÎñ½ÓÊÕÌõ¼ş
+	--æ»¡è¶³ä»»åŠ¡æ¥æ”¶æ¡ä»¶
   elseif x006669_CheckAccept(sceneId, selfId, missionIndex) > 0 then
   	local acceptNpcScene, acceptNpcName = TGetAcceptNpcInfo(missionIndex)
 		if GetName(sceneId, targetId) == acceptNpcName then
@@ -136,7 +136,7 @@ function x006669_OnEnumerate( sceneId, selfId, targetId, missionIndex )
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x006669_CheckAccept( sceneId, selfId, missionIndex )
 	local nLevel = LuaFnGetLevel(sceneId, selfId)
@@ -148,7 +148,7 @@ function x006669_CheckAccept( sceneId, selfId, missionIndex )
 	limitLevel,PreMisId1,PreMisId2,PreMisId3 = TGetCheckInfo(missionIndex)
 
 	if nLevel < limitLevel then
-			TAddText(sceneId, "ÄãµÄ½­ºşÔÄÀúÌ«µÍ£¬¿ÖÅÂ²»ÄÜÊ¤ÈÎ£¬´ı".. tostring(limitLevel) .."¼¶Ö®ºóÔÙÀ´ÕÒÎÒ°É")
+			TAddText(sceneId, "ä½ çš„æ±Ÿæ¹–é˜…å†å¤ªä½ï¼Œææ€•ä¸èƒ½èƒœä»»ï¼Œå¾…".. tostring(limitLevel) .."çº§ä¹‹åå†æ¥æ‰¾æˆ‘å§")
 		TEndEvent()
 		TDispatchEventList(sceneId, selfId)
 		return 0
@@ -178,33 +178,33 @@ function x006669_CheckAccept( sceneId, selfId, missionIndex )
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x006669_OnAccept( sceneId, selfId, targetId, missionIndex )
 	local missionId = TGetMissionIdByIndex(missionIndex)
 	local missionName = TGetMissionName(missionIndex)
 
-	-- ¼ì²âÍæ¼ÒÊÇ²»ÊÇÒÑ¾­Íê³É¹ıÕâ¸öÈÎÎñ
+	-- æ£€æµ‹ç©å®¶æ˜¯ä¸æ˜¯å·²ç»å®Œæˆè¿‡è¿™ä¸ªä»»åŠ¡
 	if IsMissionHaveDone(sceneId, selfId, missionId) > 0   then
 		return
 	end
 
-	-- ÔÙ´Î¼ì²âÍæ¼ÒÊÇ²»ÊÇ¿ÉÒÔ½ÓÕâ¸öÈÎÎñ
+	-- å†æ¬¡æ£€æµ‹ç©å®¶æ˜¯ä¸æ˜¯å¯ä»¥æ¥è¿™ä¸ªä»»åŠ¡
 	if x006669_CheckAccept( sceneId, selfId, missionIndex ) <= 0  then
 		return		
 	end
 
-	--¼ÓÈëÈÎÎñµ½Íæ¼ÒÁĞ±í
+	--åŠ å…¥ä»»åŠ¡åˆ°ç©å®¶åˆ—è¡¨
 	local ret = AddMission( sceneId,selfId, missionId, missionIndex, 0, 1, 0 )
 	
 	if ret <= 0 then
-		Msg2Player(  sceneId, selfId,"#YÄãµÄÈÎÎñÈÕÖ¾ÒÑ¾­ÂúÁË" , MSG2PLAYER_PARA )
+		Msg2Player(  sceneId, selfId,"#Yä½ çš„ä»»åŠ¡æ—¥å¿—å·²ç»æ»¡äº†" , MSG2PLAYER_PARA )
 		return
 	end
 	
-	Msg2Player(  sceneId, selfId,"#Y½ÓÊÜÈÎÎñ" .. tostring(missionName), MSG2PLAYER_PARA )
+	Msg2Player(  sceneId, selfId,"#Yæ¥å—ä»»åŠ¡" .. tostring(missionName), MSG2PLAYER_PARA )
 	BeginEvent(sceneId)
-		strText = "#Y½ÓÊÜÈÎÎñ " .. tostring(missionName)
+		strText = "#Yæ¥å—ä»»åŠ¡ " .. tostring(missionName)
 		AddText(sceneId,strText);
 	EndEvent(sceneId)
 	DispatchMissionTips(sceneId,selfId)
@@ -212,7 +212,7 @@ function x006669_OnAccept( sceneId, selfId, targetId, missionIndex )
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x006669_OnAbandon( sceneId, selfId, missionIndex )
 	local missionId = TGetMissionIdByIndex(missionIndex)
@@ -222,7 +222,7 @@ function x006669_OnAbandon( sceneId, selfId, missionIndex )
 end
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x006669_OnContinue( sceneId, selfId, targetId, missionIndex )
 	local missionId = TGetMissionIdByIndex(missionIndex)
@@ -244,14 +244,14 @@ function x006669_OnContinue( sceneId, selfId, targetId, missionIndex )
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x006669_CheckSubmit( sceneId, selfId, missionIndex )
 	local missionId = TGetMissionIdByIndex(missionIndex)
 	local missionName = TGetMissionName(missionIndex)
 	local misIndex = GetMissionIndexByID(sceneId,selfId,missionId)
 	
-	-- ¼ì²âÍæ¼ÒÊÇ·ñÒÑ¾­Ì½Ë÷ÁËËùÓĞµÄÇøÓò
+	-- æ£€æµ‹ç©å®¶æ˜¯å¦å·²ç»æ¢ç´¢äº†æ‰€æœ‰çš„åŒºåŸŸ
 	local enterAreaCount = 0;
 	local a = {{scene=0,ea=0},{scene=0,ea=0},{scene=0,ea=0}}
 	
@@ -269,19 +269,19 @@ function x006669_CheckSubmit( sceneId, selfId, missionIndex )
 end	
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x006669_OnSubmit( sceneId, selfId, targetId, selectRadioId, missionIndex )
 	if x006669_CheckSubmit(sceneId, selfId, missionIndex) > 0 then
 		local missionId = TGetMissionIdByIndex(missionIndex)
 		local missionName = TGetMissionName(missionIndex)
 		
-		-- °²È«ĞÔ¼ì²â
-		-- 1¡¢¼ì²âÍæ¼ÒÊÇ²»ÊÇÓĞÕâ¸öÈÎÎñ
+		-- å®‰å…¨æ€§æ£€æµ‹
+		-- 1ã€æ£€æµ‹ç©å®¶æ˜¯ä¸æ˜¯æœ‰è¿™ä¸ªä»»åŠ¡
 		if IsHaveMission(sceneId,selfId,missionId) <= 0 then
 			return
 		end
-		-- 2¡¢ÆäËû¼ì²â
+		-- 2ã€å…¶ä»–æ£€æµ‹
 		
 		local nAddItemNum = 0;
 		BeginAddItem(sceneId)
@@ -315,7 +315,7 @@ function x006669_OnSubmit( sceneId, selfId, targetId, selectRadioId, missionInde
 		local ret = EndAddItem(sceneId,selfId)
 		--///////////////////////////////////////////////////////////////////////////////////
 		if ret > 0 then
-			--É¾³ıÈÎÎñÖĞÌá½»µÄÎïÆ·
+			--åˆ é™¤ä»»åŠ¡ä¸­æäº¤çš„ç‰©å“
 			--local a = {{name="",item=0,pro=0,ct=0},{name="",item=0,pro=0,ct=0},{name="",item=0,pro=0,ct=0},{name="",item=0,pro=0,ct=0},{name="",item=0,pro=0,ct=0}}
 			--local killDataCount = 0
 			--killDataCount,a[1].name,a[1].item,a[1].pro,a[1].ct, a[2].name,a[2].item,a[2].pro,a[2].ct,a[3].name,a[3].item,a[3].pro,a[3].ct,a[4].name,a[4].item,a[4].pro,a[4].ct,a[5].name,a[5].item,a[5].pro,a[5].ct = TGetLootItemInfo(missionIndex)
@@ -325,7 +325,7 @@ function x006669_OnSubmit( sceneId, selfId, targetId, selectRadioId, missionInde
 			--		DelItem( sceneId, selfId, a[i].item, a[i].ct )
 			--	else
 			--		BeginEvent(sceneId)
-			--			AddText(sceneId, "ÄúµÄÎïÆ·ÏÖÔÚ²»¿ÉÓÃ»òÒÑ±»Ëø¶¨¡£")
+			--			AddText(sceneId, "æ‚¨çš„ç‰©å“ç°åœ¨ä¸å¯ç”¨æˆ–å·²è¢«é”å®šã€‚")
 			--		EndEvent( )
 			--		DispatchMissionTips(sceneId,selfId)
 			--		return		
@@ -336,24 +336,24 @@ function x006669_OnSubmit( sceneId, selfId, targetId, selectRadioId, missionInde
 				AddItemListToHuman(sceneId,selfId)
 			end
 
-			--Ìí¼ÓÈÎÎñ½±Àø
+			--æ·»åŠ ä»»åŠ¡å¥–åŠ±
 			local awardMoney = TGetAwardMoney(missionIndex)
 			AddMoney(sceneId,selfId,awardMoney )
 			local awardExp = TGetAwardExp(missionIndex)
 			LuaFnAddExp( sceneId, selfId, awardExp)
 			
 			DelMission( sceneId,selfId, missionId )
-			--ÉèÖÃÈÎÎñÒÑ¾­±»Íê³É¹ı
+			--è®¾ç½®ä»»åŠ¡å·²ç»è¢«å®Œæˆè¿‡
 			MissionCom( sceneId,selfId, missionId )
 
-			local strText = "#Y" .. missionName .. "ÈÎÎñÒÑÍê³É¡£"
+			local strText = "#Y" .. missionName .. "ä»»åŠ¡å·²å®Œæˆã€‚"
 			BeginEvent( sceneId )
 				AddText( sceneId, strText )
 			EndEvent( sceneId )
 			DispatchMissionTips( sceneId, selfId )
 			Msg2Player( sceneId, selfId, strText, MSG2PLAYER_PARA )
 
-			-- »ñµÃºóĞøÈÎÎñµÄIndex
+			-- è·å¾—åç»­ä»»åŠ¡çš„Index
 			local NextMissIndex = GetNextMissionIndex( missionIndex )
 
 			for i, MissType in x006669_g_MissionTypeList do
@@ -381,9 +381,9 @@ function x006669_OnSubmit( sceneId, selfId, targetId, selectRadioId, missionInde
 			end
 
 		else
-			--ÈÎÎñ½±ÀøÃ»ÓĞ¼Ó³É¹¦
+			--ä»»åŠ¡å¥–åŠ±æ²¡æœ‰åŠ æˆåŠŸ
 			BeginEvent(sceneId)
-				AddText(sceneId, "±³°üÒÑÂú,ÎŞ·¨Íê³ÉÈÎÎñ");
+				AddText(sceneId, "èƒŒåŒ…å·²æ»¡,æ— æ³•å®Œæˆä»»åŠ¡");
 			EndEvent(sceneId)
 			DispatchMissionTips(sceneId,selfId)
 		end		
@@ -391,21 +391,21 @@ function x006669_OnSubmit( sceneId, selfId, targetId, selectRadioId, missionInde
 end
 
 --**********************************
---É±ËÀ¹ÖÎï»òÍæ¼Ò
+--æ€æ­»æ€ªç‰©æˆ–ç©å®¶
 --**********************************
-function x006669_OnKillObject( sceneId, selfId, objdataId ,objId, missionIndex)--²ÎÊıÒâË¼£º³¡¾°ºÅ¡¢Íæ¼ÒobjId¡¢¹ÖÎï±íÎ»ÖÃºÅ¡¢¹ÖÎïobjId
+function x006669_OnKillObject( sceneId, selfId, objdataId ,objId, missionIndex)--å‚æ•°æ„æ€ï¼šåœºæ™¯å·ã€ç©å®¶objIdã€æ€ªç‰©è¡¨ä½ç½®å·ã€æ€ªç‰©objId
 	
 end
 
 --**********************************
---µÀ¾ß¸Ä±ä
+--é“å…·æ”¹å˜
 --**********************************
 function x006669_OnItemChanged( sceneId, selfId,targetId,  itemdataId )
 	
 end
 
 --**********************************
---½øÈëÇøÓòÊÂ¼ş
+--è¿›å…¥åŒºåŸŸäº‹ä»¶
 --**********************************
 function x006669_OnEnterArea( sceneId, selfId, areaId, missionIndex)
 	
@@ -432,14 +432,14 @@ function x006669_OnEnterArea( sceneId, selfId, areaId, missionIndex)
 				DispatchEventList(sceneId,selfId,selfId)
 			end
 	
-			--ÈÎÎñ´¦Àí
+			--ä»»åŠ¡å¤„ç†
 			local misIndex=GetMissionIndexByID(sceneId,selfId,missionId)
 			local num0 = GetMissionParam(sceneId,selfId,misIndex,0)
-			if num0 < 1 then				--Èç¹û²»Âú×ãÈÎÎñÍê³ÉµÃÌõ¼ş
-				SetMissionByIndex(sceneId,selfId,misIndex,0,1)		--ÈÎÎñ±äÁ¿µÚÒ»Î»Ôö¼Ó1
-				SetMissionByIndex(sceneId,selfId,misIndex,1,1)		--ÈÎÎñ±äÁ¿µÚÒ»Î»Ôö¼Ó1
-				-- Ö»ÓĞÔÚÓĞÈÎÎñ£¬²¢ÇÒÔÚÍê³ÉµÄÊ±ºò»áµ¯³ö
-				BeginEvent(sceneId)										--ÏÔÊ¾ÌáÊ¾ĞÅÏ¢
+			if num0 < 1 then				--å¦‚æœä¸æ»¡è¶³ä»»åŠ¡å®Œæˆå¾—æ¡ä»¶
+				SetMissionByIndex(sceneId,selfId,misIndex,0,1)		--ä»»åŠ¡å˜é‡ç¬¬ä¸€ä½å¢åŠ 1
+				SetMissionByIndex(sceneId,selfId,misIndex,1,1)		--ä»»åŠ¡å˜é‡ç¬¬ä¸€ä½å¢åŠ 1
+				-- åªæœ‰åœ¨æœ‰ä»»åŠ¡ï¼Œå¹¶ä¸”åœ¨å®Œæˆçš„æ—¶å€™ä¼šå¼¹å‡º
+				BeginEvent(sceneId)										--æ˜¾ç¤ºæç¤ºä¿¡æ¯
 					AddText(sceneId, szTip);
 				EndEvent(sceneId)
 				DispatchMissionTips(sceneId,selfId)

@@ -1,35 +1,35 @@
---Æô¶¯Õ½³µ
+--å¯åŠ¨æˆ˜è½¦
 
 --************************************************************************
 --MisDescBegin
 
--- ½Å±¾ºÅ
+-- è„šæœ¬å·
 x600051_g_ScriptId = 600051
 
--- ÈÎÎñÄ¿±ê NPC
-x600051_g_Name = "³½Ïª"
-x600051_g_Name2 = "Í¯Çå"
+-- ä»»åŠ¡ç›®æ ‡ NPC
+x600051_g_Name = "è¾°æºª"
+x600051_g_Name2 = "ç«¥æ¸…"
 
-----°ïÕ½Êı¾İË÷Òı£¬¶ÔÓ¦³ÌĞòÖĞµÄ enum GUILDWAR_INT_ARRAY
+----å¸®æˆ˜æ•°æ®ç´¢å¼•ï¼Œå¯¹åº”ç¨‹åºä¸­çš„ enum GUILDWAR_INT_ARRAY
 --x600051_g_A_LingShiIndex = 2
 --x600051_g_B_LingShiIndex = 7
 --
---x600051_g_LingShi = {"ÇàÁúÊ¯","°×»¢Ê¯","ÖìÈ¸Ê¯","ĞşÎäÊ¯","ÅÌ¹ÅÊ¯"}		--ÁéÊ¯Ãû×Ö
---x600051_g_LingShiID = {30603001,30603002,30603003,30603004,30603005}	--ÁéÊ¯ID
+--x600051_g_LingShi = {"é’é¾™çŸ³","ç™½è™çŸ³","æœ±é›€çŸ³","ç„æ­¦çŸ³","ç›˜å¤çŸ³"}		--çµçŸ³åå­—
+--x600051_g_LingShiID = {30603001,30603002,30603003,30603004,30603005}	--çµçŸ³ID
 
---°ïÕ½¸±±¾½Å±¾
+--å¸®æˆ˜å‰¯æœ¬è„šæœ¬
 --x600051_g_BangzhanScriptId	= 402047
 
-x600051_g_TankBuff = {31577, 31578, 31579, 31580, 31581,	--ò¿ÓÈ¼İÊ»buff
-											31582, 31583, 31584, 31585, 31586}	--Ñ×»Æ¼İÊ»buff
+x600051_g_TankBuff = {31577, 31578, 31579, 31580, 31581,	--èš©å°¤é©¾é©¶buff
+											31582, 31583, 31584, 31585, 31586}	--ç‚é»„é©¾é©¶buff
 
-x600051_g_AttrBuff = {31567, 31568, 31569, 31570, 31571,	--ò¿ÓÈÕ½³µbuff
-											31572, 31573, 31574, 31575, 31576}	--Ñ×»ÆÕ½³µbuff
+x600051_g_AttrBuff = {31567, 31568, 31569, 31570, 31571,	--èš©å°¤æˆ˜è½¦buff
+											31572, 31573, 31574, 31575, 31576}	--ç‚é»„æˆ˜è½¦buff
 
-x600051_g_A_TankID = {13339, 13340, 13341, 13342, 13343}--¿Éµã»÷Õ½³µNPCµÄID
-x600051_g_B_TankID = {13334, 13335, 13336, 13337, 13338}--¿Éµã»÷Õ½³µNPCµÄID
+x600051_g_A_TankID = {13339, 13340, 13341, 13342, 13343}--å¯ç‚¹å‡»æˆ˜è½¦NPCçš„ID
+x600051_g_B_TankID = {13334, 13335, 13336, 13337, 13338}--å¯ç‚¹å‡»æˆ˜è½¦NPCçš„ID
 
-x600051_g_ImmuneControlBuff = 10474							--NPCÃâÒß¿ØÖÆbuff
+x600051_g_ImmuneControlBuff = 10474							--NPCå…ç–«æ§åˆ¶buff
 
 x600051_g_Msg = {"#{BHXZ_081103_28}",
 								"#{BHXZ_081103_29}",
@@ -37,31 +37,31 @@ x600051_g_Msg = {"#{BHXZ_081103_28}",
 								"#{BHXZ_081103_31}",
 								"#{BHXZ_081103_32}"}
 
-x600051_g_TankName = {"ÇàÁúÕ½³µ","°×»¢Õ½³µ","ÖìÈ¸Õ½³µ","ĞşÎäÕ½³µ","ÅÌ¹ÅÕ½³µ"}
+x600051_g_TankName = {"é’é¾™æˆ˜è½¦","ç™½è™æˆ˜è½¦","æœ±é›€æˆ˜è½¦","ç„æ­¦æˆ˜è½¦","ç›˜å¤æˆ˜è½¦"}
 
-x600051_g_A_FirstTankManSelfID = 13						--A°ï±ä»¯³ÉÕ½³µµÄÍæ¼ÒµÄselfidÔÚ32¸ö¸±±¾Êı¾İÖĞµÄË÷Òı
-x600051_g_A_SecondTankManSelfID = 14					--A°ï±ä»¯³ÉÕ½³µµÄÍæ¼ÒµÄselfidÔÚ32¸ö¸±±¾Êı¾İÖĞµÄË÷Òı
-x600051_g_B_FirstTankManSelfID = 15						--B°ï±ä»¯³ÉÕ½³µµÄÍæ¼ÒµÄselfidÔÚ32¸ö¸±±¾Êı¾İÖĞµÄË÷Òı
-x600051_g_B_SecondTankManSelfID = 16					--B°ï±ä»¯³ÉÕ½³µµÄÍæ¼ÒµÄselfidÔÚ32¸ö¸±±¾Êı¾İÖĞµÄË÷Òı
-x600051_g_A_FirstTankBuff = 17								--A°ï±ä»¯³ÉÕ½³µµÄBuffIDÔÚ32¸ö¸±±¾Êı¾İÖĞµÄË÷Òı
-x600051_g_A_SecondTankBuff = 18								--A°ï±ä»¯³ÉÕ½³µµÄBuffIDÔÚ32¸ö¸±±¾Êı¾İÖĞµÄË÷Òı
-x600051_g_B_FirstTankBuff = 19								--B°ï±ä»¯³ÉÕ½³µµÄBuffIDÔÚ32¸ö¸±±¾Êı¾İÖĞµÄË÷Òı
-x600051_g_B_SecondTankBuff = 20								--B°ï±ä»¯³ÉÕ½³µµÄBuffIDÔÚ32¸ö¸±±¾Êı¾İÖĞµÄË÷Òı
-x600051_g_A_FirstTankPos = 21									--A°ï±ä»¯³ÉÕ½³µµÄPosÔÚ32¸ö¸±±¾Êı¾İÖĞµÄË÷Òı
-x600051_g_A_SecondTankPos = 22								--A°ï±ä»¯³ÉÕ½³µµÄPosÔÚ32¸ö¸±±¾Êı¾İÖĞµÄË÷Òı
-x600051_g_B_FirstTankPos = 23									--B°ï±ä»¯³ÉÕ½³µµÄPosÔÚ32¸ö¸±±¾Êı¾İÖĞµÄË÷Òı
-x600051_g_B_SecondTankPos = 24								--B°ï±ä»¯³ÉÕ½³µµÄPosÔÚ32¸ö¸±±¾Êı¾İÖĞµÄË÷Òı
-x600051_g_A_TankColdTime = 25									--A°ïÕ½³µÀäÈ´Ê±¼äÔÚ32¸ö¸±±¾Êı¾İÖĞµÄË÷Òı
-x600051_g_B_TankColdTime = 26									--B°ïÕ½³µÀäÈ´Ê±¼äÔÚ32¸ö¸±±¾Êı¾İÖĞµÄË÷Òı
+x600051_g_A_FirstTankManSelfID = 13						--Aå¸®å˜åŒ–æˆæˆ˜è½¦çš„ç©å®¶çš„selfidåœ¨32ä¸ªå‰¯æœ¬æ•°æ®ä¸­çš„ç´¢å¼•
+x600051_g_A_SecondTankManSelfID = 14					--Aå¸®å˜åŒ–æˆæˆ˜è½¦çš„ç©å®¶çš„selfidåœ¨32ä¸ªå‰¯æœ¬æ•°æ®ä¸­çš„ç´¢å¼•
+x600051_g_B_FirstTankManSelfID = 15						--Bå¸®å˜åŒ–æˆæˆ˜è½¦çš„ç©å®¶çš„selfidåœ¨32ä¸ªå‰¯æœ¬æ•°æ®ä¸­çš„ç´¢å¼•
+x600051_g_B_SecondTankManSelfID = 16					--Bå¸®å˜åŒ–æˆæˆ˜è½¦çš„ç©å®¶çš„selfidåœ¨32ä¸ªå‰¯æœ¬æ•°æ®ä¸­çš„ç´¢å¼•
+x600051_g_A_FirstTankBuff = 17								--Aå¸®å˜åŒ–æˆæˆ˜è½¦çš„BuffIDåœ¨32ä¸ªå‰¯æœ¬æ•°æ®ä¸­çš„ç´¢å¼•
+x600051_g_A_SecondTankBuff = 18								--Aå¸®å˜åŒ–æˆæˆ˜è½¦çš„BuffIDåœ¨32ä¸ªå‰¯æœ¬æ•°æ®ä¸­çš„ç´¢å¼•
+x600051_g_B_FirstTankBuff = 19								--Bå¸®å˜åŒ–æˆæˆ˜è½¦çš„BuffIDåœ¨32ä¸ªå‰¯æœ¬æ•°æ®ä¸­çš„ç´¢å¼•
+x600051_g_B_SecondTankBuff = 20								--Bå¸®å˜åŒ–æˆæˆ˜è½¦çš„BuffIDåœ¨32ä¸ªå‰¯æœ¬æ•°æ®ä¸­çš„ç´¢å¼•
+x600051_g_A_FirstTankPos = 21									--Aå¸®å˜åŒ–æˆæˆ˜è½¦çš„Posåœ¨32ä¸ªå‰¯æœ¬æ•°æ®ä¸­çš„ç´¢å¼•
+x600051_g_A_SecondTankPos = 22								--Aå¸®å˜åŒ–æˆæˆ˜è½¦çš„Posåœ¨32ä¸ªå‰¯æœ¬æ•°æ®ä¸­çš„ç´¢å¼•
+x600051_g_B_FirstTankPos = 23									--Bå¸®å˜åŒ–æˆæˆ˜è½¦çš„Posåœ¨32ä¸ªå‰¯æœ¬æ•°æ®ä¸­çš„ç´¢å¼•
+x600051_g_B_SecondTankPos = 24								--Bå¸®å˜åŒ–æˆæˆ˜è½¦çš„Posåœ¨32ä¸ªå‰¯æœ¬æ•°æ®ä¸­çš„ç´¢å¼•
+x600051_g_A_TankColdTime = 25									--Aå¸®æˆ˜è½¦å†·å´æ—¶é—´åœ¨32ä¸ªå‰¯æœ¬æ•°æ®ä¸­çš„ç´¢å¼•
+x600051_g_B_TankColdTime = 26									--Bå¸®æˆ˜è½¦å†·å´æ—¶é—´åœ¨32ä¸ªå‰¯æœ¬æ•°æ®ä¸­çš„ç´¢å¼•
 
 --MisDescEnd
 --************************************************************************
 
 --**********************************
--- ÈÎÎñÈë¿Úº¯Êı
+-- ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
-function x600051_OnDefaultEvent( sceneId, selfId, targetId )	-- µã»÷¸ÃÈÎÎñºóÖ´ĞĞ´Ë½Å±¾
-----	if GetName( sceneId, targetId ) ~= x600051_g_Name then		-- ÅĞ¶Ï¸ÃnpcÊÇ·ñÊÇ¶ÔÓ¦ÈÎÎñµÄnpc
+function x600051_OnDefaultEvent( sceneId, selfId, targetId )	-- ç‚¹å‡»è¯¥ä»»åŠ¡åæ‰§è¡Œæ­¤è„šæœ¬
+----	if GetName( sceneId, targetId ) ~= x600051_g_Name then		-- åˆ¤æ–­è¯¥npcæ˜¯å¦æ˜¯å¯¹åº”ä»»åŠ¡çš„npc
 ----		return
 ----	end
 	
@@ -81,14 +81,14 @@ function x600051_OnDefaultEvent( sceneId, selfId, targetId )	-- µã»÷¸ÃÈÎÎñºóÖ´ĞĞ
 	end
 	
 	if numText == 1 or numText == 2 or numText == 3 or numText == 4 or numText == 5 then
-		--Èç¹ûÂúÁËÖ±½ÓÌáÊ¾2Á¾
+		--å¦‚æœæ»¡äº†ç›´æ¥æç¤º2è¾†
 		local ExchangeManIndex = x600051_FindTankManIndex( sceneId, isAguild, numText-6+base  )
 		if not ExchangeManIndex or ExchangeManIndex == 0 then
 			x600051_NotifyFailBox( sceneId, selfId, targetId, "#{BHXZ_081103_118}" )
 			return
 		end
 		
---		--´æÔÚÍ¬ÑùÀàĞÍµÄÕ½³µÁË
+--		--å­˜åœ¨åŒæ ·ç±»å‹çš„æˆ˜è½¦äº†
 --		if ExchangeManIndex == -1 then
 --			x600051_NotifyFailBox( sceneId, selfId, targetId, "#{BHXZ_081103_119}" )
 --			return 0
@@ -96,8 +96,8 @@ function x600051_OnDefaultEvent( sceneId, selfId, targetId )	-- µã»÷¸ÃÈÎÎñºóÖ´ĞĞ
 		
 		BeginEvent(sceneId)
 			AddText(sceneId, x600051_g_Msg[numText])
-			AddNumText(sceneId, x600051_g_ScriptId, "È·¶¨", 8, numText+6 )
-			AddNumText(sceneId, x600051_g_ScriptId, "È¡Ïû", 8, 6 )
+			AddNumText(sceneId, x600051_g_ScriptId, "ç¡®å®š", 8, numText+6 )
+			AddNumText(sceneId, x600051_g_ScriptId, "å–æ¶ˆ", 8, 6 )
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 	elseif numText == 6 then
@@ -111,10 +111,10 @@ function x600051_OnDefaultEvent( sceneId, selfId, targetId )	-- µã»÷¸ÃÈÎÎñºóÖ´ĞĞ
 end
 
 --**********************************
--- ÁĞ¾ÙÊÂ¼ş
+-- åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x600051_OnEnumerate( sceneId, selfId, targetId )
---	if GetName( sceneId, targetId ) ~= x600051_g_Name then		--ÅĞ¶Ï¸ÃnpcÊÇ·ñÊÇ¶ÔÓ¦ÈÎÎñµÄnpc
+--	if GetName( sceneId, targetId ) ~= x600051_g_Name then		--åˆ¤æ–­è¯¥npcæ˜¯å¦æ˜¯å¯¹åº”ä»»åŠ¡çš„npc
 --		return
 --	end
 	
@@ -126,25 +126,25 @@ function x600051_OnEnumerate( sceneId, selfId, targetId )
 end
 
 --**********************************
--- Æô¶¯Õ½³µ
+-- å¯åŠ¨æˆ˜è½¦
 --**********************************
 function x600051_PowerUptank( sceneId, selfId, targetId, SelectTankType, isA, isAdd )
 
-	--ÊÇ·ñÊÇ¸±±¾
+	--æ˜¯å¦æ˜¯å‰¯æœ¬
 	local sceneType = LuaFnGetSceneType( sceneId )
 	if sceneType ~= 1 then
 		x600051_NotifyFailBox( sceneId, selfId, targetId, "#{BHXZ_081103_78}" )
 		return 0
 	end
 	
-	--ÊÇ·ñÊÇËùĞèÒªµÄ¸±±¾
+	--æ˜¯å¦æ˜¯æ‰€éœ€è¦çš„å‰¯æœ¬
 	local fubentype = LuaFnGetCopySceneData_Param( sceneId, 0 )
 	if fubentype ~= FUBEN_BANGZHAN then
 		x600051_NotifyFailBox( sceneId, selfId, targetId, "#{BHXZ_081103_78}" )
 		return 0
 	end
 	
-	--ÊÇ·ñ¿ªÊ¼°ïÕ½»ı·Ö
+	--æ˜¯å¦å¼€å§‹å¸®æˆ˜ç§¯åˆ†
 	if LuaFnGetCopySceneData_Param( sceneId, 7 ) == 0 then
 		x600051_NotifyFailBox( sceneId, selfId, targetId, "#{BHXZ_081103_26}" )
 		return 0
@@ -185,19 +185,19 @@ function x600051_PowerUptank( sceneId, selfId, targetId, SelectTankType, isA, is
 		ColdTime = LuaFnGetCopySceneData_Param( sceneId, x600051_g_B_TankColdTime )
 	end
 	
-	--´ÓÕ½³µ»¤ÎÀÄÇÀï¿ªµÄÕ½³µÒªÅĞ¶ÏÀäÈ´Ê±¼äÊÇ·ñµ½ÁË
+	--ä»æˆ˜è½¦æŠ¤å«é‚£é‡Œå¼€çš„æˆ˜è½¦è¦åˆ¤æ–­å†·å´æ—¶é—´æ˜¯å¦åˆ°äº†
 	if ColdTime > 0 and isAdd == 1 then
 		x600051_NotifyFailBox( sceneId, selfId, targetId, "    #{BHXZ_081103_129}"..ColdTime.."#{BHXZ_081103_156}" )
 		return 0
 	end
 	
-	--ÕÒ²»µ½ºÏÊÊµÄ·ÅÈëselfIdµÄÎ»ÖÃ¾ÍÊÇÂúÁË
+	--æ‰¾ä¸åˆ°åˆé€‚çš„æ”¾å…¥selfIdçš„ä½ç½®å°±æ˜¯æ»¡äº†
 	if not ExchangeManIndex or ExchangeManIndex == 0 then
 		x600051_NotifyFailBox( sceneId, selfId, targetId, "#{BHXZ_081103_118}" )
 		return 0
 	end
 	
-	--´æÔÚÍ¬ÑùÀàĞÍµÄÕ½³µÁË
+	--å­˜åœ¨åŒæ ·ç±»å‹çš„æˆ˜è½¦äº†
 	if ExchangeManIndex == -1 then
 		x600051_NotifyFailBox( sceneId, selfId, targetId, "#{BHXZ_081103_119}" )
 		return 0
@@ -207,16 +207,16 @@ function x600051_PowerUptank( sceneId, selfId, targetId, SelectTankType, isA, is
 	LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, x600051_g_AttrBuff[SelectTankType], 0 )
 	LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, x600051_g_ImmuneControlBuff, 0 )
 	LuaFnCancelMoveSpeedBuff(sceneId, selfId)
-	LuaFnSetCopySceneData_Param( sceneId, ExchangeManIndex, selfId )--±£´æ±ä»»Õ½³µµÄÍæ¼ÒselfId
-	LuaFnSetCopySceneData_Param( sceneId, ExchangeManIndex-x600051_g_A_FirstTankManSelfID+x600051_g_A_FirstTankBuff, x600051_g_AttrBuff[SelectTankType] )--±£´æÕ½³µbuffid
+	LuaFnSetCopySceneData_Param( sceneId, ExchangeManIndex, selfId )--ä¿å­˜å˜æ¢æˆ˜è½¦çš„ç©å®¶selfId
+	LuaFnSetCopySceneData_Param( sceneId, ExchangeManIndex-x600051_g_A_FirstTankManSelfID+x600051_g_A_FirstTankBuff, x600051_g_AttrBuff[SelectTankType] )--ä¿å­˜æˆ˜è½¦buffid
 	local PosX,PosZ = GetWorldPos(sceneId, selfId)
 	PosX = floor(PosX)
 	PosZ = floor(PosZ)
-	LuaFnSetCopySceneData_Param( sceneId, ExchangeManIndex-x600051_g_A_FirstTankManSelfID+x600051_g_A_FirstTankPos, PosX*10000+PosZ )--±£´æ×ø±ê
+	LuaFnSetCopySceneData_Param( sceneId, ExchangeManIndex-x600051_g_A_FirstTankManSelfID+x600051_g_A_FirstTankPos, PosX*10000+PosZ )--ä¿å­˜åæ ‡
 	if 1 <= SelectTankType and SelectTankType <= 5 then
-		Msg2Player(sceneId, selfId, "ÄãÆô¶¯ÁË"..x600051_g_TankName[SelectTankType].."¡£" , MSG2PLAYER_PARA)
+		Msg2Player(sceneId, selfId, "ä½ å¯åŠ¨äº†"..x600051_g_TankName[SelectTankType].."ã€‚" , MSG2PLAYER_PARA)
 	elseif 6 <= SelectTankType and SelectTankType <= 10 then
-		Msg2Player(sceneId, selfId, "ÄãÆô¶¯ÁË"..x600051_g_TankName[SelectTankType-5].."¡£" , MSG2PLAYER_PARA)
+		Msg2Player(sceneId, selfId, "ä½ å¯åŠ¨äº†"..x600051_g_TankName[SelectTankType-5].."ã€‚" , MSG2PLAYER_PARA)
 	end
 	
 	BeginUICommand( sceneId )
@@ -228,13 +228,13 @@ function x600051_PowerUptank( sceneId, selfId, targetId, SelectTankType, isA, is
 end
 
 --**********************************
--- ÕÒµ½Ò»¸ö¿ÉÒÔ·ÅÕ½³µÍæ¼ÒselfIdµÄ¸±±¾Ë÷Òı£¬ÓĞÊıÁ¿ÅĞ¶Ï
+-- æ‰¾åˆ°ä¸€ä¸ªå¯ä»¥æ”¾æˆ˜è½¦ç©å®¶selfIdçš„å‰¯æœ¬ç´¢å¼•ï¼Œæœ‰æ•°é‡åˆ¤æ–­
 --**********************************
 function x600051_FindTankManIndex( sceneId, IsAGuild, bufftype )
 	
 	local TankManFirst = 0
 	local TankManSecond = 0
-	local ExchangeManIndex = 0 --Õâ´ÎÒª±ä»¯³ÉÕ½³µµÄmanÔÚ¸±±¾Êı¾İÖĞµÄË÷Òı
+	local ExchangeManIndex = 0 --è¿™æ¬¡è¦å˜åŒ–æˆæˆ˜è½¦çš„manåœ¨å‰¯æœ¬æ•°æ®ä¸­çš„ç´¢å¼•
 	
 	if IsAGuild == 1 then
 		TankManFirst = LuaFnGetCopySceneData_Param( sceneId, x600051_g_A_FirstTankManSelfID )
@@ -244,8 +244,8 @@ function x600051_FindTankManIndex( sceneId, IsAGuild, bufftype )
 		TankManSecond = LuaFnGetCopySceneData_Param( sceneId, x600051_g_B_SecondTankManSelfID )
 	end
 	
-	local AalreadyTankCount = 0 --A°ï¶ªÆúÔÚ³¡¾°ÀïµÄÕ½³µÊıÁ¿
-	local BalreadyTankCount = 0 --B°ï¶ªÆúÔÚ³¡¾°ÀïµÄÕ½³µÊıÁ¿
+	local AalreadyTankCount = 0 --Aå¸®ä¸¢å¼ƒåœ¨åœºæ™¯é‡Œçš„æˆ˜è½¦æ•°é‡
+	local BalreadyTankCount = 0 --Bå¸®ä¸¢å¼ƒåœ¨åœºæ™¯é‡Œçš„æˆ˜è½¦æ•°é‡
 	local Abufftype = -1
 	local Bbufftype = -1
 	local nNpcNum = GetMonsterCount(sceneId)
@@ -269,7 +269,7 @@ function x600051_FindTankManIndex( sceneId, IsAGuild, bufftype )
 	end
 	--PrintStr("Abufftype "..Abufftype.." Bbufftype "..Bbufftype.." bufftype "..bufftype)
 	
-	--ÕÒÒ»¸öË÷Òı³öÀ´
+	--æ‰¾ä¸€ä¸ªç´¢å¼•å‡ºæ¥
 	if TankManFirst == 0 or (TankManFirst ~= 0 and CallScriptFunction(402047, "HaveTankBuff", sceneId, TankManFirst) == 0) then
 		if IsAGuild == 1 then
 			if AalreadyTankCount >= 2 then
@@ -277,13 +277,13 @@ function x600051_FindTankManIndex( sceneId, IsAGuild, bufftype )
 			end
 			
 			ExchangeManIndex = x600051_g_A_FirstTankManSelfID
-			if TankManSecond ~= 0 and CallScriptFunction(402047, "HaveTankBuff", sceneId, TankManSecond) == x600051_g_AttrBuff[bufftype] then --ÒªÑ¡ÔñµÄÕ½³µÀàĞÍºÍÈËÒ»ÖÂ
+			if TankManSecond ~= 0 and CallScriptFunction(402047, "HaveTankBuff", sceneId, TankManSecond) == x600051_g_AttrBuff[bufftype] then --è¦é€‰æ‹©çš„æˆ˜è½¦ç±»å‹å’Œäººä¸€è‡´
 				ExchangeManIndex = -1
 			end
-			if Abufftype+5 == bufftype then --ÒªÑ¡ÔñµÄÕ½³µÀàĞÍºÍÒ°Íâ¶ªÆúµÄÕ½³µÀàĞÍÒ»ÖÂ
+			if Abufftype+5 == bufftype then --è¦é€‰æ‹©çš„æˆ˜è½¦ç±»å‹å’Œé‡å¤–ä¸¢å¼ƒçš„æˆ˜è½¦ç±»å‹ä¸€è‡´
 				ExchangeManIndex = -1
 			end
-			if AalreadyTankCount == 1 and (TankManSecond ~= 0 and CallScriptFunction(402047, "HaveTankBuff", sceneId, TankManSecond) ~= 0) then --1Íæ¼ÒºÍ1³¡¾°Õ½³µ
+			if AalreadyTankCount == 1 and (TankManSecond ~= 0 and CallScriptFunction(402047, "HaveTankBuff", sceneId, TankManSecond) ~= 0) then --1ç©å®¶å’Œ1åœºæ™¯æˆ˜è½¦
 				ExchangeManIndex = 0
 			end
 		else
@@ -292,13 +292,13 @@ function x600051_FindTankManIndex( sceneId, IsAGuild, bufftype )
 			end
 			
 			ExchangeManIndex = x600051_g_B_FirstTankManSelfID
-			if TankManSecond ~= 0 and CallScriptFunction(402047, "HaveTankBuff", sceneId, TankManSecond) == x600051_g_AttrBuff[bufftype] then --ÒªÑ¡ÔñµÄÕ½³µÀàĞÍºÍÈËÒ»ÖÂ
+			if TankManSecond ~= 0 and CallScriptFunction(402047, "HaveTankBuff", sceneId, TankManSecond) == x600051_g_AttrBuff[bufftype] then --è¦é€‰æ‹©çš„æˆ˜è½¦ç±»å‹å’Œäººä¸€è‡´
 				ExchangeManIndex = -1
 			end
-			if Bbufftype == bufftype then --ÒªÑ¡ÔñµÄÕ½³µÀàĞÍºÍÒ°Íâ¶ªÆúµÄÕ½³µÀàĞÍÒ»ÖÂ
+			if Bbufftype == bufftype then --è¦é€‰æ‹©çš„æˆ˜è½¦ç±»å‹å’Œé‡å¤–ä¸¢å¼ƒçš„æˆ˜è½¦ç±»å‹ä¸€è‡´
 				ExchangeManIndex = -1
 			end
-			if BalreadyTankCount == 1 and (TankManSecond ~= 0 and CallScriptFunction(402047, "HaveTankBuff", sceneId, TankManSecond) ~= 0) then --1Íæ¼ÒºÍ1³¡¾°Õ½³µ
+			if BalreadyTankCount == 1 and (TankManSecond ~= 0 and CallScriptFunction(402047, "HaveTankBuff", sceneId, TankManSecond) ~= 0) then --1ç©å®¶å’Œ1åœºæ™¯æˆ˜è½¦
 				ExchangeManIndex = 0
 			end
 		end
@@ -309,13 +309,13 @@ function x600051_FindTankManIndex( sceneId, IsAGuild, bufftype )
 			end
 			
 			ExchangeManIndex = x600051_g_A_SecondTankManSelfID
-			if TankManFirst ~= 0 and CallScriptFunction(402047, "HaveTankBuff", sceneId, TankManFirst) == x600051_g_AttrBuff[bufftype] then --ÒªÑ¡ÔñµÄÕ½³µÀàĞÍºÍÈËÒ»ÖÂ
+			if TankManFirst ~= 0 and CallScriptFunction(402047, "HaveTankBuff", sceneId, TankManFirst) == x600051_g_AttrBuff[bufftype] then --è¦é€‰æ‹©çš„æˆ˜è½¦ç±»å‹å’Œäººä¸€è‡´
 				ExchangeManIndex = -1
 			end
-			if Abufftype+5 == bufftype then --ÒªÑ¡ÔñµÄÕ½³µÀàĞÍºÍÒ°Íâ¶ªÆúµÄÕ½³µÀàĞÍÒ»ÖÂ
+			if Abufftype+5 == bufftype then --è¦é€‰æ‹©çš„æˆ˜è½¦ç±»å‹å’Œé‡å¤–ä¸¢å¼ƒçš„æˆ˜è½¦ç±»å‹ä¸€è‡´
 				ExchangeManIndex = -1
 			end
-			if AalreadyTankCount == 1 and (TankManFirst ~= 0 and CallScriptFunction(402047, "HaveTankBuff", sceneId, TankManFirst) ~= 0) then --1Íæ¼ÒºÍ1³¡¾°Õ½³µ
+			if AalreadyTankCount == 1 and (TankManFirst ~= 0 and CallScriptFunction(402047, "HaveTankBuff", sceneId, TankManFirst) ~= 0) then --1ç©å®¶å’Œ1åœºæ™¯æˆ˜è½¦
 				ExchangeManIndex = 0
 			end
 		else
@@ -324,13 +324,13 @@ function x600051_FindTankManIndex( sceneId, IsAGuild, bufftype )
 			end
 			
 			ExchangeManIndex = x600051_g_B_SecondTankManSelfID
-			if TankManFirst ~= 0 and CallScriptFunction(402047, "HaveTankBuff", sceneId, TankManFirst) == x600051_g_AttrBuff[bufftype] then --ÒªÑ¡ÔñµÄÕ½³µÀàĞÍºÍÈËÒ»ÖÂ
+			if TankManFirst ~= 0 and CallScriptFunction(402047, "HaveTankBuff", sceneId, TankManFirst) == x600051_g_AttrBuff[bufftype] then --è¦é€‰æ‹©çš„æˆ˜è½¦ç±»å‹å’Œäººä¸€è‡´
 				ExchangeManIndex = -1
 			end
-			if Bbufftype == bufftype then --ÒªÑ¡ÔñµÄÕ½³µÀàĞÍºÍÒ°Íâ¶ªÆúµÄÕ½³µÀàĞÍÒ»ÖÂ
+			if Bbufftype == bufftype then --è¦é€‰æ‹©çš„æˆ˜è½¦ç±»å‹å’Œé‡å¤–ä¸¢å¼ƒçš„æˆ˜è½¦ç±»å‹ä¸€è‡´
 				ExchangeManIndex = -1
 			end
-			if BalreadyTankCount == 1 and (TankManFirst ~= 0 and CallScriptFunction(402047, "HaveTankBuff", sceneId, TankManFirst) ~= 0) then --1Íæ¼ÒºÍ1³¡¾°Õ½³µ
+			if BalreadyTankCount == 1 and (TankManFirst ~= 0 and CallScriptFunction(402047, "HaveTankBuff", sceneId, TankManFirst) ~= 0) then --1ç©å®¶å’Œ1åœºæ™¯æˆ˜è½¦
 				ExchangeManIndex = 0
 			end
 		end
@@ -340,13 +340,13 @@ function x600051_FindTankManIndex( sceneId, IsAGuild, bufftype )
 end
 
 --**********************************
--- ÕÒµ½Ò»¸ö¿ÉÒÔ·ÅÕ½³µÍæ¼ÒselfIdµÄ¸±±¾Ë÷Òı£¬ÎŞÊıÁ¿ÅĞ¶Ï£¬Ö»ÕÒ¿ÕÍæ¼ÒË÷Òı
+-- æ‰¾åˆ°ä¸€ä¸ªå¯ä»¥æ”¾æˆ˜è½¦ç©å®¶selfIdçš„å‰¯æœ¬ç´¢å¼•ï¼Œæ— æ•°é‡åˆ¤æ–­ï¼Œåªæ‰¾ç©ºç©å®¶ç´¢å¼•
 --**********************************
 function x600051_FindEmptyTankManIndex( sceneId, selfId, IsAGuild )
 	
 	local TankManFirst = 0
 	local TankManSecond = 0
-	local ExchangeManIndex = 0 --Õâ´ÎÒª±ä»¯³ÉÕ½³µµÄmanÔÚ¸±±¾Êı¾İÖĞµÄË÷Òı
+	local ExchangeManIndex = 0 --è¿™æ¬¡è¦å˜åŒ–æˆæˆ˜è½¦çš„manåœ¨å‰¯æœ¬æ•°æ®ä¸­çš„ç´¢å¼•
 	
 	if IsAGuild == 1 then
 		TankManFirst = LuaFnGetCopySceneData_Param( sceneId, x600051_g_A_FirstTankManSelfID )
@@ -356,7 +356,7 @@ function x600051_FindEmptyTankManIndex( sceneId, selfId, IsAGuild )
 		TankManSecond = LuaFnGetCopySceneData_Param( sceneId, x600051_g_B_SecondTankManSelfID )
 	end
 	
-	--ÕÒÒ»¸öË÷Òı³öÀ´
+	--æ‰¾ä¸€ä¸ªç´¢å¼•å‡ºæ¥
 	if TankManFirst == 0 or (TankManFirst ~= 0 and CallScriptFunction(402047, "HaveTankBuff", sceneId, TankManFirst) == 0) then
 		if IsAGuild == 1 then
 			ExchangeManIndex = x600051_g_A_FirstTankManSelfID
@@ -375,50 +375,50 @@ function x600051_FindEmptyTankManIndex( sceneId, selfId, IsAGuild )
 end
 
 --**********************************
--- ¼ì²â½ÓÊÜÌõ¼ş
+-- æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x600051_CheckAccept( sceneId, selfId, targetId )
 	return 1
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x600051_OnAccept( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x600051_OnContinue( sceneId, selfId, targetId )
 --	BeginEvent( sceneId )
 --		AddText( sceneId, x600051_g_MissionName )
---		AddText( sceneId, "good ¼ÌĞø" )
+--		AddText( sceneId, "good ç»§ç»­" )
 --	EndEvent( )
 --	DispatchMissionContinueInfo( sceneId, selfId, targetId, x600051_g_ScriptId, x600051_g_MissionId )
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x600051_OnAbandon( sceneId, selfId )
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x600051_CheckSubmit( sceneId, selfId )
 	return 1
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x600051_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 end
 
 --**********************************
--- ¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+-- å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x600051_NotifyFailBox( sceneId, selfId, targetId, msg )
 	BeginEvent( sceneId )
@@ -428,7 +428,7 @@ function x600051_NotifyFailBox( sceneId, selfId, targetId, msg )
 end
 
 --**********************************
--- ÆÁÄ»ÖĞ¼äĞÅÏ¢ÌáÊ¾
+-- å±å¹•ä¸­é—´ä¿¡æ¯æç¤º
 --**********************************
 function x600051_NotifyFailTips( sceneId, selfId, Tip )
 	BeginEvent( sceneId )

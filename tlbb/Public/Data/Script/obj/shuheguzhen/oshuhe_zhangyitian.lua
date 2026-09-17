@@ -1,10 +1,10 @@
---ÊøºÓ¹ÅÕòNPC....
---ÖÖÖ²´óÊ¦....
+--æŸæ²³å¤é•‡NPC....
+--ç§æ¤å¤§å¸ˆ....
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x001201_g_ScriptId = 001201
 
---ËùÓµÓĞµÄÊÂ¼şIdÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶Idåˆ—è¡¨
 --estudy_zhongzhi = 713511
 --elevelup_zhongzhi = 713570
 --edialog_zhongzhi = 713610
@@ -17,7 +17,7 @@ x001201_g_MsgInfo = { "#{SHGZ_0612_18}",
 										}
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x001201_UpdateEventList( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
@@ -31,14 +31,14 @@ function x001201_UpdateEventList( sceneId, selfId,targetId )
 end
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x001201_OnDefaultEvent( sceneId, selfId,targetId )
 	x001201_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x001201_OnEventRequest( sceneId, selfId, targetId, eventId )
 	for i, findId in x001201_g_eventList do
@@ -50,7 +50,7 @@ end
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x001201_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x001201_g_eventList do
@@ -65,10 +65,10 @@ function x001201_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x001201_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
-	--¾Ü¾øÖ®ºó£¬Òª·µ»ØNPCµÄÊÂ¼şÁĞ±í
+	--æ‹’ç»ä¹‹åï¼Œè¦è¿”å›NPCçš„äº‹ä»¶åˆ—è¡¨
 	for i, findId in x001201_g_eventList do
 		if missionScriptId == findId then
 			x001201_UpdateEventList( sceneId, selfId, targetId )
@@ -78,7 +78,7 @@ function x001201_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¼ÌĞø£¨ÒÑ¾­½ÓÁËÈÎÎñ£©
+--ç»§ç»­ï¼ˆå·²ç»æ¥äº†ä»»åŠ¡ï¼‰
 --**********************************
 function x001201_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x001201_g_eventList do
@@ -90,7 +90,7 @@ function x001201_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---Ìá½»ÒÑ×öÍêµÄÈÎÎñ
+--æäº¤å·²åšå®Œçš„ä»»åŠ¡
 --**********************************
 function x001201_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, selectRadioId )
 	for i, findId in x001201_g_eventList do

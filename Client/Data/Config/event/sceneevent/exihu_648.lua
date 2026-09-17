@@ -1,18 +1,18 @@
 --MisDescBegin
 x212100_g_ScriptId = 212100
 x212100_g_MissionId = 648
-x212100_g_Name	="ËÕ·É"
+x212100_g_Name	="è‹é£"
 x212100_g_MissionKind = 41
 x212100_g_MissionLevel = 25
 x212100_g_IfMissionElite = 0
-x212100_g_MissionName="ËÕ·ÉµÄÊÀ½ç"
+x212100_g_MissionName="è‹é£çš„ä¸–ç•Œ"
 x212100_g_MissionInfo="#{Mis_K_Xihu_1000042}"
 x212100_g_MissionTarget="#{MIS_TAR_ADD_010}"		
-x212100_g_ContinueInfo="  ÄãÒÑ¾­É±ËÀ#WÂóÓÑÈÊ#WÁË£¿"
-x212100_g_MissionComplete="  Ì«Ğ»Ğ»ÄãÁË£¬ĞÂµÄÊÀ½ç£¬·Â·ğ¾ÍÔÚÎÒµÄÃæÇ°¡£"		
+x212100_g_ContinueInfo="  ä½ å·²ç»æ€æ­»#Wéº¦å‹ä»#Wäº†ï¼Ÿ"
+x212100_g_MissionComplete="  å¤ªè°¢è°¢ä½ äº†ï¼Œæ–°çš„ä¸–ç•Œï¼Œä»¿ä½›å°±åœ¨æˆ‘çš„é¢å‰ã€‚"		
 x212100_g_MoneyBonus=1800
 x212100_g_exp=18000
-x212100_g_Custom	= { {id="ÒÑÉ±ËÀÂóÓÑÈÊ",num=1} }
+x212100_g_Custom	= { {id="å·²æ€æ­»éº¦å‹ä»",num=1} }
 x212100_g_IsMissionOkFail = 0
 x212100_g_RadioItemBonus={{id=10412063 ,num=1},{id=10413065,num=1},{id=10402065,num=1}}
 --MisDescEnd

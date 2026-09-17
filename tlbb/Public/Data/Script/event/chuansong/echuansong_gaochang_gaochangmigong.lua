@@ -7,44 +7,44 @@ x400933_top  	=141.0000
 x400933_bottom	=148.0000
 
 
---Íæ¼Ò½øÈëÒ»¸ö area Ê±´¥·¢
+--ç©å®¶è¿›å…¥ä¸€ä¸ª area æ—¶è§¦å‘
 function x400933_OnEnterArea( sceneId, selfId,a,b )
 
 	BeginUICommand(sceneId)
 		UICommand_AddInt(sceneId, x400933_g_ScriptId);
 		UICommand_AddString(sceneId, "GotoGaochangmigong");
-		UICommand_AddString(sceneId, "¸ß²ıÃÔ¹¬Îª²»¼ÓÉ±Æø³¡¾°£¬Çë×¢Òâ°²È«¡£ÄãÈ·ÈÏÒª½øÈëÂğ£¿");
+		UICommand_AddString(sceneId, "é«˜æ˜Œè¿·å®«ä¸ºä¸åŠ æ€æ°”åœºæ™¯ï¼Œè¯·æ³¨æ„å®‰å…¨ã€‚ä½ ç¡®è®¤è¦è¿›å…¥å—ï¼Ÿ");
 	EndUICommand(sceneId)
 	DispatchUICommand(sceneId,selfId, 24)
 	
 	--CallScriptFunction((400900), "TransferFunc",sceneId, selfId, 520,100,99)
 end
 
---Íæ¼ÒÔÚÒ»¸ö area ´ôÁËÒ»¶ÎÊ±¼äÃ»×ßÔò¶¨Ê±´¥·¢
+--ç©å®¶åœ¨ä¸€ä¸ª area å‘†äº†ä¸€æ®µæ—¶é—´æ²¡èµ°åˆ™å®šæ—¶è§¦å‘
 function x400933_OnTimer( sceneId, selfId )
-	-- ºÁÃë£¬¿´ÔÚÕâ¸ö area Í£Áô¶à¾ÃÁË
+	-- æ¯«ç§’ï¼Œçœ‹åœ¨è¿™ä¸ª area åœç•™å¤šä¹…äº†
 	StandingTime = QueryAreaStandingTime( sceneId, selfId )
-	-- 5ÃëºóÈÔÎ´´«ËÍ
+	-- 5ç§’åä»æœªä¼ é€
 	if StandingTime >= 5000 then
 		x400933_OnEnterArea( sceneId, selfId )
 		ResetAreaStandingTime( sceneId, selfId, 0 )
 	end
 end
 
---Íæ¼ÒÀë¿ªÒ»¸ö area Ê±´¥·¢
+--ç©å®¶ç¦»å¼€ä¸€ä¸ª area æ—¶è§¦å‘
 function x400933_OnLeaveArea( sceneId, selfId )
 end
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
-function x400933_GotoGaochangmigong( sceneId, selfId, targetId )	--µã»÷¸ÃÈÎÎñºóÖ´ĞĞ´Ë½Å±¾
+function x400933_GotoGaochangmigong( sceneId, selfId, targetId )	--ç‚¹å‡»è¯¥ä»»åŠ¡åæ‰§è¡Œæ­¤è„šæœ¬
 	
-	-- ¼ì²éÍæ¼ÒÊÇ²»ÊÇ»¹ÔÚÕâ¸ö·¶Î§ÄÚ
+	-- æ£€æŸ¥ç©å®¶æ˜¯ä¸æ˜¯è¿˜åœ¨è¿™ä¸ªèŒƒå›´å†…
 	if sceneId ~= 424   then
-		--ÄãÒÑ¾­²»ÔÚ¿É´«ËÍÇøÓò¡£
+		--ä½ å·²ç»ä¸åœ¨å¯ä¼ é€åŒºåŸŸã€‚
 		BeginEvent(sceneId)
-			AddText(sceneId,"ÄãÒÑ¾­²»ÔÚ¿É´«ËÍÇøÓò¡£")
+			AddText(sceneId,"ä½ å·²ç»ä¸åœ¨å¯ä¼ é€åŒºåŸŸã€‚")
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
@@ -58,7 +58,7 @@ function x400933_GotoGaochangmigong( sceneId, selfId, targetId )	--µã»÷¸ÃÈÎÎñºóÖ
 			targetZ > x400933_bottom   then
 		
 		BeginEvent(sceneId)
-			AddText(sceneId,"ÄãÒÑ¾­²»ÔÚ¿É´«ËÍÇøÓò¡£")
+			AddText(sceneId,"ä½ å·²ç»ä¸åœ¨å¯ä¼ é€åŒºåŸŸã€‚")
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return

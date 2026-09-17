@@ -1,12 +1,12 @@
---Ê¥ÊŞÉ½±¦ÏäÕù¶á
+--åœ£å…½å±±å®ç®±äº‰å¤º
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x808066_g_ScriptId	= 808066
 
---NPC´ó±¦Ïä
+--NPCå¤§å®ç®±
 x808066_g_BigBox = {
 
-	Name			= "°×òş±¦Ïä",
+	Name			= "ç™½èŸ’å®ç®±",
 	MonsterID	= 5011,
 	PosX			= 142,
 	PosY			= 112,
@@ -14,17 +14,17 @@ x808066_g_BigBox = {
 
 }
 
---µ±Ç°µÄ´ó±¦ÏäÊÇ·ñ´æÔÚ....1´æÔÚ 0²»´æÔÚ
+--å½“å‰çš„å¤§å®ç®±æ˜¯å¦å­˜åœ¨....1å­˜åœ¨ 0ä¸å­˜åœ¨
 x808066_g_IsBigBoxExist = 0
 
---µ±Ç°ÊÇ·ñÓĞÈËÔÚ¿ªÆô´ó±¦Ïä....
+--å½“å‰æ˜¯å¦æœ‰äººåœ¨å¼€å¯å¤§å®ç®±....
 x808066_g_IsBigBoxOpening = 0
 x808066_g_OpeningPlayerName = "(ERROR)"
 
---ÕıÔÚ¿ª±¦ÏäµÄÈË¿ªÊ¼¿ª±¦ÏäµÄÊ±¼ä....
+--æ­£åœ¨å¼€å®ç®±çš„äººå¼€å§‹å¼€å®ç®±çš„æ—¶é—´....
 x808066_g_PlayerOpeningTime = 0
 
---¼¼ÄÜÊéID
+--æŠ€èƒ½ä¹¦ID
 x808066_g_SkillBooks = {
 
 			30402051,
@@ -97,7 +97,7 @@ x808066_g_SkillBooksNormal = {
 			30402074
 }
 
---¿ª³öµÄBOSSµÄÊı¾İ±í....
+--å¼€å‡ºçš„BOSSçš„æ•°æ®è¡¨....
 x808066_g_BOSSData = {
 
 	{ ID = 3845, PosX = 144, PosY = 112, BaseAI = 15, ExtAIScript = 0, ScriptID = -1, PatrolId = 0 },
@@ -107,7 +107,7 @@ x808066_g_BOSSData = {
 
 }
 
---µôÂä°ü×ø±ê....ÓĞ¶àÉÙ×ø±ê¾Íµô¶àÉÙµôÂä°ü....
+--æ‰è½åŒ…åæ ‡....æœ‰å¤šå°‘åæ ‡å°±æ‰å¤šå°‘æ‰è½åŒ…....
 x808066_g_DropBox = {
 
 	{ PosX = 135, PosY = 108 },
@@ -136,7 +136,7 @@ x808066_g_DropBox = {
 
 }
 
---µôÂä°üµÄÎïÆ·µôÂä±í....
+--æ‰è½åŒ…çš„ç‰©å“æ‰è½è¡¨....
 x808066_g_DropBoxItem = {
 
 	{ odds = 100, itemId =30505145 },
@@ -144,28 +144,28 @@ x808066_g_DropBoxItem = {
 }
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x808066_OnDefaultEvent( sceneId, actId, param1, param2, param3, param4, param5 )
 
-	--²»¹ÜÊÇ·ñ´´½¨ĞÂµÄ´ó±¦Ïä¶¼·¢¹«¸æ....
+	--ä¸ç®¡æ˜¯å¦åˆ›å»ºæ–°çš„å¤§å®ç®±éƒ½å‘å…¬å‘Š....
 	local message = format("@*;SrvMsg;SCA:#{ShengShouBigBoxNotice}" )
 	AddGlobalCountNews( sceneId, message )
 
-	--À×µç½»¼ÓÌìÆøĞ§¹û....
+	--é›·ç”µäº¤åŠ å¤©æ°”æ•ˆæœ....
 	local curWeather = LuaFnGetSceneWeather(sceneId)
 	if not curWeather or curWeather ~= -1 then
-		--ÒÑ¾­ÓĞÌìÆøÁËÔò²»¸Ä±äÌìÆø....
+		--å·²ç»æœ‰å¤©æ°”äº†åˆ™ä¸æ”¹å˜å¤©æ°”....
 	else
 		LuaFnSetSceneWeather(sceneId, 3, 5*60*1000 )
 	end
 
-	--Èç¹ûÒÑ¾­ÓĞÁË¾Í²»ÔÙ´´½¨ĞÂµÄ´ó±¦Ïä....
+	--å¦‚æœå·²ç»æœ‰äº†å°±ä¸å†åˆ›å»ºæ–°çš„å¤§å®ç®±....
 	if x808066_g_IsBigBoxExist == 1 then
 		return
 	end
 
-	--Ã»ÓĞÔò´´½¨NPC´ó±¦Ïä....
+	--æ²¡æœ‰åˆ™åˆ›å»ºNPCå¤§å®ç®±....
 	local MstId = LuaFnCreateMonster(sceneId, x808066_g_BigBox.MonsterID, x808066_g_BigBox.PosX, x808066_g_BigBox.PosY, 3, 0, x808066_g_BigBox.ScriptID )
 	SetCharacterName( sceneId, MstId, x808066_g_BigBox.Name )
 	x808066_g_IsBigBoxExist = 1
@@ -173,24 +173,24 @@ function x808066_OnDefaultEvent( sceneId, actId, param1, param2, param3, param4,
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔ´ò¿ª´ó±¦Ïä....
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æ‰“å¼€å¤§å®ç®±....
 --**********************************
 function x808066_CheckOpenBigBox( sceneId, selfId )
 
-	--±¦ÏäÊÇ·ñ´æÔÚ....
+	--å®ç®±æ˜¯å¦å­˜åœ¨....
 	if x808066_g_IsBigBoxExist == 0 then
 		return 0, "(ERROR)"
 	end
 
-	--Èç¹ûÓĞÈËÕıÔÚ¿ª´ó±¦Ïä....
+	--å¦‚æœæœ‰äººæ­£åœ¨å¼€å¤§å®ç®±....
 	if x808066_g_IsBigBoxOpening == 1 then
 
-		--Èç¹ûÊÇ×Ô¼ºÔÚ¿ª....
+		--å¦‚æœæ˜¯è‡ªå·±åœ¨å¼€....
 		if x808066_g_OpeningPlayerName == LuaFnGetName( sceneId, selfId ) then
 			return 1, "(ERROR)"
 		end
 
-		--Èç¹ûÊÇ±ğÈËÔÚ¿ª²¢ÇÒËûÒÑ¾­³¬Ê±ÁË....ÔòÈÃÎ»¸øÎÒÀ´¿ª....
+		--å¦‚æœæ˜¯åˆ«äººåœ¨å¼€å¹¶ä¸”ä»–å·²ç»è¶…æ—¶äº†....åˆ™è®©ä½ç»™æˆ‘æ¥å¼€....
 		local NowTime = LuaFnGetCurrentTime()
 		if (NowTime - x808066_g_PlayerOpeningTime) > 150 then
 			x808066_g_PlayerOpeningTime = NowTime
@@ -202,7 +202,7 @@ function x808066_CheckOpenBigBox( sceneId, selfId )
 
 	end
 
-	--Ã»ÓĞÈËÔÚ¿ª´ó±¦Ïä....
+	--æ²¡æœ‰äººåœ¨å¼€å¤§å®ç®±....
 	x808066_g_IsBigBoxOpening = 1
 	x808066_g_PlayerOpeningTime = LuaFnGetCurrentTime()
 	x808066_g_OpeningPlayerName = LuaFnGetName( sceneId, selfId )
@@ -211,7 +211,7 @@ function x808066_CheckOpenBigBox( sceneId, selfId )
 end
 
 --**********************************
---Íæ¼Ò¿ª´ó±¦Ïä±»´ò¶ÏÊÂ¼ş(ÓÉ´ó±¦Ïä½Å±¾µ÷ÓÃ)....
+--ç©å®¶å¼€å¤§å®ç®±è¢«æ‰“æ–­äº‹ä»¶(ç”±å¤§å®ç®±è„šæœ¬è°ƒç”¨)....
 --**********************************
 function x808066_OnCancelOpen( sceneId )
 
@@ -222,27 +222,27 @@ function x808066_OnCancelOpen( sceneId )
 end
 
 --**********************************
---´ó±¦Ïä±»´ò¿ªÊÂ¼ş(ÓÉ´ó±¦Ïä½Å±¾µ÷ÓÃ)....
+--å¤§å®ç®±è¢«æ‰“å¼€äº‹ä»¶(ç”±å¤§å®ç®±è„šæœ¬è°ƒç”¨)....
 --**********************************
 function x808066_OnBigBoxOpen( sceneId, selfId, activatorId )
 
 	local rand = random(100)
 	if rand <= 33 then
-		--¿ª³ö¼¼ÄÜÊé....
+		--å¼€å‡ºæŠ€èƒ½ä¹¦....
 		x808066_GiveSkillBook( sceneId, selfId, activatorId )
 	elseif rand <= 66 then
-		--¿ª³öBOSS....
+		--å¼€å‡ºBOSS....
 		x808066_GiveBOSS( sceneId, selfId, activatorId )
 	else
-		--¿ª³öÒ»¶ÑµôÂä°ü....
+		--å¼€å‡ºä¸€å †æ‰è½åŒ…....
 		x808066_GiveDropBox( sceneId, selfId, activatorId )
 	end
 
-	--kill´ó±¦Ïä....´ó±¦ÏäËÀÍö¶¯»­Îª´ò¿ª¸Ç×Ó....
+	--killå¤§å®ç®±....å¤§å®ç®±æ­»äº¡åŠ¨ç”»ä¸ºæ‰“å¼€ç›–å­....
 	LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, 169, 0);
 	LuaFnGmKillObj( sceneId, activatorId, selfId )
 
-	--Í³¼Æ....
+	--ç»Ÿè®¡....
 	LuaFnAuditShengShouOpenBigBox(sceneId, activatorId)
 
 	x808066_g_IsBigBoxExist = 0
@@ -253,56 +253,56 @@ function x808066_OnBigBoxOpen( sceneId, selfId, activatorId )
 end
 
 --**********************************
---´ó±¦Ïä±»´ò¿ªÊÂ¼ş_¸ø¼¼ÄÜÊé....
+--å¤§å®ç®±è¢«æ‰“å¼€äº‹ä»¶_ç»™æŠ€èƒ½ä¹¦....
 --**********************************
 function x808066_GiveSkillBook( sceneId, selfId, activatorId )
 
-	--Ëæ»ú¸øÍæ¼ÒÒ»±¾¼¼ÄÜÊé....²¢¹«¸æ....
+	--éšæœºç»™ç©å®¶ä¸€æœ¬æŠ€èƒ½ä¹¦....å¹¶å…¬å‘Š....
 	local rand = random(100)
 	
 	local numBooks
 	local randBook
 	local BookID
 	
-	if (rand < 80) then			--80%¼¸ÂÊÔÚËùÓĞ¿ÉÄÜµôÂäµÄÊéÀïËæ»ú
+	if (rand < 80) then			--80%å‡ ç‡åœ¨æ‰€æœ‰å¯èƒ½æ‰è½çš„ä¹¦é‡Œéšæœº
 		numBooks = getn(x808066_g_SkillBooks)
 		randBook = random(numBooks)
 		BookID = x808066_g_SkillBooks[ randBook ]
-	else										--20%²»°üÀ¨10±¾ÌØ¶¨¼¼ÄÜ
+	else										--20%ä¸åŒ…æ‹¬10æœ¬ç‰¹å®šæŠ€èƒ½
 		numBooks = getn(x808066_g_SkillBooksNormal)
 		randBook = random(numBooks)
 		BookID = x808066_g_SkillBooksNormal[ randBook ]
 	end
 
-	--¸øÎïÆ·²¢¹«¸æ....
+	--ç»™ç‰©å“å¹¶å…¬å‘Š....
 	local BagIndex = TryRecieveItem( sceneId, activatorId, BookID, QUALITY_MUST_BE_CHANGE )
 	if BagIndex ~= -1 then
 
 		BeginEvent( sceneId )
-			AddText( sceneId, "Äã»ñµÃÁËÒ»¸ö#{_ITEM"..BookID.."}" )
+			AddText( sceneId, "ä½ è·å¾—äº†ä¸€ä¸ª#{_ITEM"..BookID.."}" )
 		EndEvent( sceneId )
 		DispatchMissionTips( sceneId, activatorId )
 
-		--¹«¸æ....
+		--å…¬å‘Š....
 		local ItemTransfer = GetBagItemTransfer(sceneId,activatorId,BagIndex)
 		local PlayerName = GetName(sceneId, activatorId)
-		local str = format( "#W#{_INFOUSR%s}#PÔÚ#GÊ¥ÊŞÉ½#P¾ÙÑÌ·Å»ğ²»Ğ¡ĞÄÑ¬ÁËÑÛ¾¦£¬Ä£ºıÖ®ÖĞ×²ÔÚ#Y´ó±¦Ïä#PÉÏ£¬´ò¿ªÒ»¿´£¬¾¹È»ÊÇÒ»±¾#{_INFOMSG%s}¡£", PlayerName, ItemTransfer )
+		local str = format( "#W#{_INFOUSR%s}#Påœ¨#Gåœ£å…½å±±#Pä¸¾çƒŸæ”¾ç«ä¸å°å¿ƒç†äº†çœ¼ç›ï¼Œæ¨¡ç³Šä¹‹ä¸­æ’åœ¨#Yå¤§å®ç®±#Pä¸Šï¼Œæ‰“å¼€ä¸€çœ‹ï¼Œç«Ÿç„¶æ˜¯ä¸€æœ¬#{_INFOMSG%s}ã€‚", PlayerName, ItemTransfer )
 		BroadMsgByChatPipe( sceneId, activatorId, str, 4 )
 
 	end
 
-	--kill´ó±¦Ïä....´ó±¦ÏäËÀÍö¶¯»­Îª´ò¿ª¸Ç×Ó....
+	--killå¤§å®ç®±....å¤§å®ç®±æ­»äº¡åŠ¨ç”»ä¸ºæ‰“å¼€ç›–å­....
 	LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, 169, 0);
 	LuaFnGmKillObj( sceneId, activatorId, selfId )
 
 end
 
 --**********************************
---´ó±¦Ïä±»´ò¿ªÊÂ¼ş_¿ª³öBOSS....
+--å¤§å®ç®±è¢«æ‰“å¼€äº‹ä»¶_å¼€å‡ºBOSS....
 --**********************************
 function x808066_GiveBOSS( sceneId, selfId, activatorId )
 
-	--Ë¢BOSS....
+	--åˆ·BOSS....
 	local MstId
 	for _, BOSSData in x808066_g_BOSSData do
 		MstId = LuaFnCreateMonster(sceneId, BOSSData.ID, BOSSData.PosX, BOSSData.PosY, BOSSData.BaseAI, BOSSData.ExtAIScript, BOSSData.ScriptID )
@@ -310,19 +310,19 @@ function x808066_GiveBOSS( sceneId, selfId, activatorId )
 		SetPatrolId(sceneId, MstId, BOSSData.PatrolId)
 	end
 
-	--¹«¸æ....
+	--å…¬å‘Š....
 	local PlayerName = GetName(sceneId, activatorId)
-	local str = format( "#GÊ¥ÊŞÉ½#PÉÏÈºÓ¢¶á±¦£¬Î¨#W#{_INFOUSR%s}#P¼¼¸ßÒ»³ï£¬»ìÕ½Ö®ÖĞÒ»ÕÆ½«#Y°×òş±¦Ïä#P´ò·­£¬²»ÁÏ¾¹Ìø³öËÄ¸ö#W±¦ÏäÍ¯×Ó#P£¡", PlayerName )
+	local str = format( "#Gåœ£å…½å±±#Pä¸Šç¾¤è‹±å¤ºå®ï¼Œå”¯#W#{_INFOUSR%s}#PæŠ€é«˜ä¸€ç­¹ï¼Œæ··æˆ˜ä¹‹ä¸­ä¸€æŒå°†#Yç™½èŸ’å®ç®±#Pæ‰“ç¿»ï¼Œä¸æ–™ç«Ÿè·³å‡ºå››ä¸ª#Wå®ç®±ç«¥å­#Pï¼", PlayerName )
 	BroadMsgByChatPipe( sceneId, activatorId, str, 4 )
 
 end
 
 --**********************************
---´ó±¦Ïä±»´ò¿ªÊÂ¼ş_µôÂäÒ»¶ÑµôÂä°ü....
+--å¤§å®ç®±è¢«æ‰“å¼€äº‹ä»¶_æ‰è½ä¸€å †æ‰è½åŒ…....
 --**********************************
 function x808066_GiveDropBox( sceneId, selfId, activatorId )
 
-	--¼ÆËã×ÜÈ¨ÖØ....
+	--è®¡ç®—æ€»æƒé‡....
 	local totalOdds = 0
 	for _, item in x808066_g_DropBoxItem do
 		totalOdds = totalOdds  + item.odds
@@ -331,13 +331,13 @@ function x808066_GiveDropBox( sceneId, selfId, activatorId )
 		return
 	end
 
-	--¸øµôÂä°ü....
+	--ç»™æ‰è½åŒ…....
 	local BoxId = -1
 	local DropItemId = -1
 	local randValue = 0
 	for _, box in x808066_g_DropBox do
 
-		--¼ÆËã±¾°üµôÂäµÄÎïÆ·....
+		--è®¡ç®—æœ¬åŒ…æ‰è½çš„ç‰©å“....
 		randValue = random(1, totalOdds);
 		randValue = randValue - 1;
 		for _, item in x808066_g_DropBoxItem do
@@ -348,7 +348,7 @@ function x808066_GiveDropBox( sceneId, selfId, activatorId )
 			randValue = randValue - item.odds;
 		end
 
-		--·ÅµôÂä°üµ½³¡¾°Àï....
+		--æ”¾æ‰è½åŒ…åˆ°åœºæ™¯é‡Œ....
 		if DropItemId > 0 then
 			BoxId = DropBoxEnterScene( box.PosX, box.PosY, sceneId )
 			if BoxId > -1 then
@@ -358,16 +358,16 @@ function x808066_GiveDropBox( sceneId, selfId, activatorId )
 
 	end
 	
-	--¹«¸æ....
+	--å…¬å‘Š....
 	local PlayerName = GetName(sceneId, activatorId)
-	local str = format( "#GÊ¥ÊŞÉ½#PÉÏ#W#{_INFOUSR%s}#PÔÚÈººÀÍÆ¾ÙÖ®ÏÂ´ò¿ª#Y°×òş±¦Ïä#P£¬Ö»¼û½ğ¹âÉÁ¹ı¡¢±éµØ²Æ±¦¡¢»¶ÉùÒ»Æ¬¡£", PlayerName )
+	local str = format( "#Gåœ£å…½å±±#Pä¸Š#W#{_INFOUSR%s}#Påœ¨ç¾¤è±ªæ¨ä¸¾ä¹‹ä¸‹æ‰“å¼€#Yç™½èŸ’å®ç®±#Pï¼Œåªè§é‡‘å…‰é—ªè¿‡ã€éåœ°è´¢å®ã€æ¬¢å£°ä¸€ç‰‡ã€‚", PlayerName )
 	BroadMsgByChatPipe( sceneId, activatorId, str, 4 )
 
 end
 
 function x808066_OnPlayerPickUpItemInBoar( sceneId, selfId, itemId, bagidx )
 
-	--¹«¸æ....
+	--å…¬å‘Š....
 	if itemId == 40004429 then
 
 		local playerName = GetName(sceneId, selfId)

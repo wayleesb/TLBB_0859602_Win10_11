@@ -1,17 +1,17 @@
 --MisDescBegin
 x250551_g_ScriptId = 250551
 x250551_g_MissionId = 721
-x250551_g_Name	="ÇñĞĞÂå"
+x250551_g_Name	="é‚±è¡Œæ´›"
 x250551_g_MissionKind = 11
 x250551_g_MissionLevel = 10000
 x250551_g_IfMissionElite = 0
-x250551_g_MissionName="ÉÓ¿ÚĞÅ"
-x250551_g_MissionInfo="°ïÎÒ¸æËß%s%s[%d,%d]£¬õí¾Ï´ó»á¾ÍÒª¿ªÊ¼ÁË¡£"
+x250551_g_MissionName="æå£ä¿¡"
+x250551_g_MissionInfo="å¸®æˆ‘å‘Šè¯‰%s%s[%d,%d]ï¼Œè¹´é å¤§ä¼šå°±è¦å¼€å§‹äº†ã€‚"
 x250551_g_MissionTarget="%f"
-x250551_g_ContinueInfo="¸ÉµÃ²»´í"		--Î´Íê³ÉÈÎÎñµÄnpc¶Ô»°
-x250551_g_MissionComplete="ÎÒÖªµÀÁË£¬ÕâÊÇ¸øÄãµÄ½±Àø"
+x250551_g_ContinueInfo="å¹²å¾—ä¸é”™"		--æœªå®Œæˆä»»åŠ¡çš„npcå¯¹è¯
+x250551_g_MissionComplete="æˆ‘çŸ¥é“äº†ï¼Œè¿™æ˜¯ç»™ä½ çš„å¥–åŠ±"
 x250551_g_FormatList = {
-"ÕÒµ½%n",
+"æ‰¾åˆ°%n",
 }
 x250551_g_StrForePart=4
 --MisDescEnd

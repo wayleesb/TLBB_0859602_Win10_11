@@ -1,5 +1,5 @@
---½­ºşÇ¬À¤´ü Created by Dengxx
---½Å±¾ºÅ
+--æ±Ÿæ¹–ä¹¾å¤è¢‹ Created by Dengxx
+--è„šæœ¬å·
 x300083_g_scriptId = 300083
 
 x300083_ItemList = {
@@ -15,9 +15,9 @@ x300083_ItemList = {
 	{60,30504115}, --10
 	{65,30504116}, --11
 	{70,30504117}, --12
-	{70,30504118}, --13 Õâ¸öÊÇ²¹ÁìµÄ70¼¶°ü
+	{70,30504118}, --13 è¿™ä¸ªæ˜¯è¡¥é¢†çš„70çº§åŒ…
 }
---modify by qds¡£ item :ÎïÆ·ID,num:¸øµÄÎïÆ·ÊıÁ¿£¬ÕâÀïµÄ¶¼ÊÇ²»ÓÃ³ÌĞò½øĞĞ°ó¶¨µÄ¡£
+--modify by qdsã€‚ item :ç‰©å“ID,num:ç»™çš„ç‰©å“æ•°é‡ï¼Œè¿™é‡Œçš„éƒ½æ˜¯ä¸ç”¨ç¨‹åºè¿›è¡Œç»‘å®šçš„ã€‚
 x300083_GiftList = {}
 x300083_GiftList[1]={{item=30008060,num=1},{item=30308021,num=1}}
 x300083_GiftList[2]={{item=30008061,num=1},{item=10124153,num=1},{item=30008066,num=1}}
@@ -33,7 +33,7 @@ x300083_GiftList[11]={{item=30504117,num=1},{item=20310000,num=60}}
 x300083_GiftList[12]={{item=30505192,num=5},{item=20310000,num=60}}
 x300083_GiftList[13]={{item=30505192,num=5},{item=20310000,num=60}}
 
---ÕâÀïµÄÊÇÒª³ÌĞò½øĞĞ°ó¶¨µÄÎïÆ·,±ØĞëÒ»¸öÒ»¸öµØ¸ø,ËùÒÔÎïÆ·ÊıÁ¿¶¼ÊÇ1,ÓĞ¶à¸öµÄ¾ÍĞ´¶à¸öIDÁË¡£
+--è¿™é‡Œçš„æ˜¯è¦ç¨‹åºè¿›è¡Œç»‘å®šçš„ç‰©å“,å¿…é¡»ä¸€ä¸ªä¸€ä¸ªåœ°ç»™,æ‰€ä»¥ç‰©å“æ•°é‡éƒ½æ˜¯1,æœ‰å¤šä¸ªçš„å°±å†™å¤šä¸ªIDäº†ã€‚
 x300083_BindGiftList = {}
 x300083_BindGiftList[1]={30308035,10141805}
 x300083_BindGiftList[2]={}
@@ -66,49 +66,49 @@ x300083_FreeSpaceList = {
 	}
 x300083_SheliziID = 30900058
 x300083_SheliziExp = 300000
-x300083_SheliziExp65 = 6558342 --65¼¶Ç¬À¤´ü¸øµÄÉáÀû×Ó¾­Ñé
+x300083_SheliziExp65 = 6558342 --65çº§ä¹¾å¤è¢‹ç»™çš„èˆåˆ©å­ç»éªŒ
 
---Ç¬À¤´üµÄÊıÁ¿
+--ä¹¾å¤è¢‹çš„æ•°é‡
 x300083_MaxBagID = 13
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x300083_OnDefaultEvent( sceneId, selfId, bagIndex )
--- ²»ĞèÒªÕâ¸ö½Ó¿Ú£¬µ«Òª±£Áô¿Õº¯Êı
+-- ä¸éœ€è¦è¿™ä¸ªæ¥å£ï¼Œä½†è¦ä¿ç•™ç©ºå‡½æ•°
 end
 
 
 function x300083_IsSkillLikeScript( sceneId, selfId)
-	return 1; --Õâ¸ö½Å±¾ĞèÒª¶¯×÷Ö§³Ö
+	return 1; --è¿™ä¸ªè„šæœ¬éœ€è¦åŠ¨ä½œæ”¯æŒ
 end
 
 --**********************************
---Ö±½ÓÈ¡ÏûĞ§¹û£º
---ÏµÍ³»áÖ±½Óµ÷ÓÃÕâ¸ö½Ó¿Ú£¬²¢¸ù¾İÕâ¸öº¯ÊıµÄ·µ»ØÖµÈ·¶¨ÒÔºóµÄÁ÷³ÌÊÇ·ñÖ´ĞĞ¡£
---·µ»Ø1£ºÒÑ¾­È¡Ïû¶ÔÓ¦Ğ§¹û£¬²»ÔÙÖ´ĞĞºóĞø²Ù×÷£»·µ»Ø0£ºÃ»ÓĞ¼ì²âµ½Ïà¹ØĞ§¹û£¬¼ÌĞøÖ´ĞĞ¡£
+--ç›´æ¥å–æ¶ˆæ•ˆæœï¼š
+--ç³»ç»Ÿä¼šç›´æ¥è°ƒç”¨è¿™ä¸ªæ¥å£ï¼Œå¹¶æ ¹æ®è¿™ä¸ªå‡½æ•°çš„è¿”å›å€¼ç¡®å®šä»¥åçš„æµç¨‹æ˜¯å¦æ‰§è¡Œã€‚
+--è¿”å›1ï¼šå·²ç»å–æ¶ˆå¯¹åº”æ•ˆæœï¼Œä¸å†æ‰§è¡Œåç»­æ“ä½œï¼›è¿”å›0ï¼šæ²¡æœ‰æ£€æµ‹åˆ°ç›¸å…³æ•ˆæœï¼Œç»§ç»­æ‰§è¡Œã€‚
 --**********************************
 function x300083_CancelImpacts( sceneId, selfId )
-	return 0; --²»ĞèÒªÕâ¸ö½Ó¿Ú£¬µ«Òª±£Áô¿Õº¯Êı,²¢ÇÒÊ¼ÖÕ·µ»Ø0¡£
+	return 0; --ä¸éœ€è¦è¿™ä¸ªæ¥å£ï¼Œä½†è¦ä¿ç•™ç©ºå‡½æ•°,å¹¶ä¸”å§‹ç»ˆè¿”å›0ã€‚
 end
 
 --**********************************
---Ìõ¼ş¼ì²âÈë¿Ú
+--æ¡ä»¶æ£€æµ‹å…¥å£
 --**********************************
 function x300083_OnConditionCheck( sceneId, selfId )
 
-	--Ğ£ÑéItemÊÇ·ñÓĞĞ§
+	--æ ¡éªŒItemæ˜¯å¦æœ‰æ•ˆ
 	if(1~=LuaFnVerifyUsedItem(sceneId, selfId)) then
 		return 0
 	end
 	
---	--¼ì²âÎïÆ·ÊÇ·ñ¼ÓËø
---	local	bagId	= LuaFnGetBagIndexOfUsedItem( sceneId, selfId )	--±³°üÖĞµÄÎ»ÖÃ
+--	--æ£€æµ‹ç‰©å“æ˜¯å¦åŠ é”
+--	local	bagId	= LuaFnGetBagIndexOfUsedItem( sceneId, selfId )	--èƒŒåŒ…ä¸­çš„ä½ç½®
 --	if LuaFnLockCheck( sceneId, selfId, bagId, 0 ) < 0 then
---		x300083_MsgBox( sceneId, selfId, "#{Item_Locked}" )	--ÎïÆ·ÒÑ¼ÓËø
+--		x300083_MsgBox( sceneId, selfId, "#{Item_Locked}" )	--ç‰©å“å·²åŠ é”
 --		return 0
 --	end
 
-	--²éÕÒÁĞ±í
+	--æŸ¥æ‰¾åˆ—è¡¨
 	local itemIndex = LuaFnGetItemIndexOfUsedItem(sceneId, selfId);
 	local i = 1
 	while x300083_ItemList[i][2] ~= itemIndex do
@@ -119,13 +119,13 @@ function x300083_OnConditionCheck( sceneId, selfId )
 		return 0
 	end 
 
-	--µÈ¼¶²»¹»
+	--ç­‰çº§ä¸å¤Ÿ
 	local CurLevel = LuaFnGetLevel( sceneId, selfId )
 	if CurLevel < x300083_ItemList[i][1] then
 		x300083_MsgBox(sceneId, selfId, "#{GMTripperObj_Resource_Info_Level_Not_Enough}")
 		return 0
 	end
-  --µÀ¾ßÎïÆ·À¸¿ÕÏĞÎ»ÖÃ²»¹»
+  --é“å…·ç‰©å“æ ç©ºé—²ä½ç½®ä¸å¤Ÿ
 	local FreeSpace = LuaFnGetPropertyBagSpace( sceneId, selfId )
 	if( FreeSpace < x300083_FreeSpaceList[i][1]-1 ) then
 	   local msg = format("#{XRLB_90226_1}%d#{XRLB_90226_2}",x300083_FreeSpaceList[i][1]-1)
@@ -138,7 +138,7 @@ function x300083_OnConditionCheck( sceneId, selfId )
 	   return 0
 	end
 	
-	--²ÄÁÏÀ¸Ã»ÓĞÎ»ÖÃ
+	--ææ–™æ æ²¡æœ‰ä½ç½®
 --	if i >= 3 and i <= 7 then
 		FreeSpace = LuaFnGetMaterialBagSpace( sceneId, selfId )
 		if( FreeSpace < x300083_FreeSpaceList[i][2] ) then
@@ -153,7 +153,7 @@ function x300083_OnConditionCheck( sceneId, selfId )
 end
 		 
 --**********************************
---ÏûºÄ¼ì²â¼°´¦ÀíÈë¿Ú£º
+--æ¶ˆè€—æ£€æµ‹åŠå¤„ç†å…¥å£ï¼š
 --**********************************
 function x300083_OnDeplete( sceneId, selfId )
 
@@ -168,7 +168,7 @@ function x300083_OnDeplete( sceneId, selfId )
 		if i > x300083_MaxBagID then 
 			return 0
 		end 
-		--¼ÇÂ¼ÈÕÖ¾
+		--è®°å½•æ—¥å¿—
 		local str = format("%d",x300083_ItemList[i][1]);
 		local guid = LuaFnObjId2Guid(sceneId, selfId);
 		
@@ -181,11 +181,11 @@ function x300083_OnDeplete( sceneId, selfId )
 end
 
 --**********************************
---Ö»»áÖ´ĞĞÒ»´ÎÈë¿Ú£º
---¾ÛÆøºÍË²·¢¼¼ÄÜ»áÔÚÏûºÄÍê³Éºóµ÷ÓÃÕâ¸ö½Ó¿Ú£¨¾ÛÆø½áÊø²¢ÇÒ¸÷ÖÖÌõ¼ş¶¼Âú×ãµÄÊ±ºò£©£¬¶øÒıµ¼
---¼¼ÄÜÒ²»áÔÚÏûºÄÍê³Éºóµ÷ÓÃÕâ¸ö½Ó¿Ú£¨¼¼ÄÜµÄÒ»¿ªÊ¼£¬ÏûºÄ³É¹¦Ö´ĞĞÖ®ºó£©¡£
---·µ»Ø1£º´¦Àí³É¹¦£»·µ»Ø0£º´¦ÀíÊ§°Ü¡£
---×¢£ºÕâÀïÊÇ¼¼ÄÜÉúĞ§Ò»´ÎµÄÈë¿Ú
+--åªä¼šæ‰§è¡Œä¸€æ¬¡å…¥å£ï¼š
+--èšæ°”å’Œç¬å‘æŠ€èƒ½ä¼šåœ¨æ¶ˆè€—å®Œæˆåè°ƒç”¨è¿™ä¸ªæ¥å£ï¼ˆèšæ°”ç»“æŸå¹¶ä¸”å„ç§æ¡ä»¶éƒ½æ»¡è¶³çš„æ—¶å€™ï¼‰ï¼Œè€Œå¼•å¯¼
+--æŠ€èƒ½ä¹Ÿä¼šåœ¨æ¶ˆè€—å®Œæˆåè°ƒç”¨è¿™ä¸ªæ¥å£ï¼ˆæŠ€èƒ½çš„ä¸€å¼€å§‹ï¼Œæ¶ˆè€—æˆåŠŸæ‰§è¡Œä¹‹åï¼‰ã€‚
+--è¿”å›1ï¼šå¤„ç†æˆåŠŸï¼›è¿”å›0ï¼šå¤„ç†å¤±è´¥ã€‚
+--æ³¨ï¼šè¿™é‡Œæ˜¯æŠ€èƒ½ç”Ÿæ•ˆä¸€æ¬¡çš„å…¥å£
 --**********************************
 function x300083_OnActivateOnce( sceneId, selfId )
 	
@@ -210,7 +210,7 @@ function x300083_OnActivateOnce( sceneId, selfId )
 		return 0
 	end
 	
-	--¸ø°ó¶¨µÄÎïÆ·
+	--ç»™ç»‘å®šçš„ç‰©å“
 	local BindNum =getn(x300083_BindGiftList[i])
 	if BindNum>0 then
 	  for j, itemID in x300083_BindGiftList[i] do
@@ -224,16 +224,16 @@ function x300083_OnActivateOnce( sceneId, selfId )
 	end
 	
   
-  --45¼¶¸ø¸ö300000¾­ÑéµÄÕäÊŞÉáÀû×Ó,65¼¶¸øÒ»¸ö
+  --45çº§ç»™ä¸ª300000ç»éªŒçš„çå…½èˆåˆ©å­,65çº§ç»™ä¸€ä¸ª
 	if i==7 or i==11 then 
 		local BagIndex = TryRecieveItem( sceneId, selfId, x300083_SheliziID, QUALITY_CREATE_DEFAULT )
 		if BagIndex == -1 then
 			x300083_MsgBox(sceneId, selfId,"#{QRJ_81009_05}")
 			return 0
 		end
-		--Ç¿ÖÆ°ó¶¨
+		--å¼ºåˆ¶ç»‘å®š
 		LuaFnItemBind( sceneId, selfId, BagIndex )
-		--ÉèÖÃÉáÀû×Ó¾­Ñé
+		--è®¾ç½®èˆåˆ©å­ç»éªŒ
 		if i==7 then
 		  SetBagItemParam	(sceneId, selfId,BagIndex,4 ,2 , x300083_SheliziExp)
 		elseif i==11 then
@@ -242,22 +242,22 @@ function x300083_OnActivateOnce( sceneId, selfId )
 		LuaFnRefreshItemInfo( sceneId, selfId, BagIndex )
 	end 	
 
-	--ÌáÊ¾ĞÅÏ¢
+	--æç¤ºä¿¡æ¯
 	local msg = format("#{XRLB_81203_7}#{_ITEM%d}#{XRLB_81203_8}",x300083_ItemList[i][2])
 	x300083_MsgBox( sceneId, selfId, msg)
 	return 1;
 end
 
 --**********************************
---Òıµ¼ĞÄÌø´¦ÀíÈë¿Ú£º
---·µ»Ø£º1¼ÌĞøÏÂ´ÎĞÄÌø£»0£ºÖĞ¶ÏÒıµ¼¡£
+--å¼•å¯¼å¿ƒè·³å¤„ç†å…¥å£ï¼š
+--è¿”å›ï¼š1ç»§ç»­ä¸‹æ¬¡å¿ƒè·³ï¼›0ï¼šä¸­æ–­å¼•å¯¼ã€‚
 --**********************************
 function x300083_OnActivateEachTick( sceneId, selfId)
 	return 1; 
 end
 
 --**********************************
---ĞÑÄ¿ĞÅÏ¢ÌáÊ¾
+--é†’ç›®ä¿¡æ¯æç¤º
 --**********************************
 function x300083_MsgBox( sceneId, selfId, msg )
 	BeginEvent( sceneId )

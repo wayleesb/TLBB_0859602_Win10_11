@@ -28,7 +28,7 @@ function NewbieCardActivation_OnEvent(event)
 		if(tonumber(arg0) ~= objCared) then
 			return;
 		end
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ı£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æœå’ŒNPCçš„è·ç¦»å¤§äºä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if(arg1 == "distance" and tonumber(arg2)>MAX_OBJ_DISTANCE or arg1=="destroy") then
 			Guild_Create_Close();
 		end
@@ -52,32 +52,32 @@ function NewUserCard_Open_Click()
 	local cardNum = NewbieCardActivation_Input:GetText();
 	if(0 == string.len(cardNum)) then return; end
 	
-	--'k' ²Æ¸»¿¨
+	--'k' è´¢å¯Œå¡
 --	if(string.byte(cardNum) == 116 and g_uicmd == 2004) then
 --		NewUserCard(cardNum);
-	--'t' ÌåÓı¿¨
+	--'t' ä½“è‚²å¡
 --	elseif(string.byte(cardNum) == 107 and g_uicmd == 2005) then
 --		NewUserCard(cardNum);
-	--'s' Íø¾Û¿¨
+	--'s' ç½‘èšå¡
 --	elseif(string.byte(cardNum) == 115 and g_uicmd == 2006) then
 --		NewUserCard(cardNum);
-	--'w' ÎÂÖİÍÆ¹ã¿¨
+	--'w' æ¸©å·æ¨å¹¿å¡
 --	elseif(string.byte(cardNum) == 119 and g_uicmd == 2007) then
 --		NewUserCard(cardNum);
-	--'q' ÷è÷ëµ°¿¨
+	--'q' éº’éºŸè›‹å¡
 --	elseif(string.byte(cardNum) == 113 and g_uicmd == 2008) then
 --		NewUserCard(cardNum);
-  --'q' Ì¨Íå¿¨
+  --'q' å°æ¹¾å¡
 --	elseif(string.byte(cardNum) == 113 and g_uicmd == 2007950) then
 --		NewUserCard(cardNum);
 --	else
---		PushDebugMessage("¿¨ºÅ²»ÕıÈ·£¬Çë¼ì²é");
+--		PushDebugMessage("å¡å·ä¸æ­£ç¡®ï¼Œè¯·æ£€æŸ¥");
 --	end
 	--NewUserCard_Close();
 	
 
 	
-	--ÅĞ¶ÏĞÂÊÖ¿¨558ºÍ666µÄÊäÈëÊÇ·ñÓĞĞ§
+	--åˆ¤æ–­æ–°æ‰‹å¡558å’Œ666çš„è¾“å…¥æ˜¯å¦æœ‰æ•ˆ
 	local firstbyte = string.byte(cardNum)
 	--PushDebugMessage(firstbyte..111111);
 	if (g_uicmd == 2006 and (firstbyte == 116 or firstbyte == 99 or firstbyte ==67 or firstbyte ==83 or firstbyte == 84  or firstbyte == 115 or firstbyte == 68 or firstbyte == 100 )) then
@@ -95,10 +95,10 @@ function NewUserCard_Open_Click()
 		return;
 	end
 	
-	if(g_uicmd == 2004 and firstbyte ~= 116 and firstbyte ~= 115 ) then     --588²Æ¸»¿¨'t','s''T','S'
+	if(g_uicmd == 2004 and firstbyte ~= 116 and firstbyte ~= 115 ) then     --588è´¢å¯Œå¡'t','s''T','S'
 		PushDebugMessage("#{CFK_081027_2}");
 		return;
-	elseif(g_uicmd == 20080819 and firstbyte ~= 99 and firstbyte ~= 100 ) then --666²Æ¸»¿¨'c','C','d'
+	elseif(g_uicmd == 20080819 and firstbyte ~= 99 and firstbyte ~= 100 ) then --666è´¢å¯Œå¡'c','C','d'
 		PushDebugMessage("#{CFK_081027_2}");
 		return;
 	end
@@ -116,21 +116,21 @@ function NewUserCard_SetText(uicmd)
 	if uicmd == 2004 then
 		NewbieCardActivation_DragTitle:SetText("#{INTERFACE_XML_73}");
 		NewbieCardActivation_Text:SetText("#{INTERFACE_XML_536}");
-	elseif uicmd == 20080819 then--666²Æ¸»¿¨
+	elseif uicmd == 20080819 then--666è´¢å¯Œå¡
 		NewbieCardActivation_DragTitle:SetText("#{INTERFACE_XML_73}");
 		NewbieCardActivation_Text:SetText("#{INTERFACE_XML_536}");
 	elseif uicmd == 2005 then
-		NewbieCardActivation_DragTitle:SetText("¼¤»î");
-		NewbieCardActivation_Text:SetText("ÇëÔÚÏÂÃæµÄÊäÈë¿òÄÚÊäÈëÄú»ñµÃµÄCD-Key");
+		NewbieCardActivation_DragTitle:SetText("æ¿€æ´»");
+		NewbieCardActivation_Text:SetText("è¯·åœ¨ä¸‹é¢çš„è¾“å…¥æ¡†å†…è¾“å…¥æ‚¨è·å¾—çš„CD-Key");
 	elseif uicmd == 2006 then
 		NewbieCardActivation_DragTitle:SetText("#{CJ_20080321_01}");
 		NewbieCardActivation_Text:SetText("#{CJ_20080321_02}");
 	elseif uicmd == 2007 then
-		NewbieCardActivation_DragTitle:SetText("¼¤»î");
-		NewbieCardActivation_Text:SetText("ÇëÔÚÏÂÃæµÄÊäÈë¿òÄÚÊäÈëÄú»ñµÃµÄCD-Key");
+		NewbieCardActivation_DragTitle:SetText("æ¿€æ´»");
+		NewbieCardActivation_Text:SetText("è¯·åœ¨ä¸‹é¢çš„è¾“å…¥æ¡†å†…è¾“å…¥æ‚¨è·å¾—çš„CD-Key");
 	elseif uicmd == 2008 then
-		NewbieCardActivation_DragTitle:SetText("¼¤»î");
-		NewbieCardActivation_Text:SetText("ÇëÔÚÏÂÃæµÄÊäÈë¿òÄÚÊäÈëÄú»ñµÃµÄCD-Key");
+		NewbieCardActivation_DragTitle:SetText("æ¿€æ´»");
+		NewbieCardActivation_Text:SetText("è¯·åœ¨ä¸‹é¢çš„è¾“å…¥æ¡†å†…è¾“å…¥æ‚¨è·å¾—çš„CD-Key");
 	elseif uicmd == 2007950 then
 		NewbieCardActivation_DragTitle:SetText("#{CB_XUBAO_LINGQU_2}");
 		NewbieCardActivation_Text:SetText("#{CB_XUBAO_LINGQU_3}");

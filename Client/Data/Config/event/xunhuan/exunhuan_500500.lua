@@ -1,20 +1,20 @@
 --MisDescBegin
 x500500_g_ScriptId = 500500
 x500500_g_MissionId = 700
-x500500_g_Name	="ºÎÖ´ÖĞ" 
+x500500_g_Name	="ä½•æ‰§ä¸­" 
 x500500_g_ItemId = 40002106
 x500500_g_ItemNeedNum = 1
 x500500_g_MissionKind = 1
 x500500_g_MissionLevel = 20
 x500500_g_IfMissionElite = 0
-x500500_g_IsMissionOkFail = 0					--±äÁ¿µÄµÚ0Î»
-x500500_g_DemandItem={{id=40002106,num=1}}		--±äÁ¿µÚ1Î»,ÈÎÎñĞèÒªµÃµ½µÄÎïÆ·
-x500500_g_MissionRound = 3						--Ñ­»·ÈÎÎñµÄÊı¾İË÷Òı£¬ÀïÃæ´æ×ÅÒÑ×öµÄ»·Êı MD_WABAO_HUAN
-x500500_g_MissionName="Ñ°±¦"
-x500500_g_MissionInfo="#{M_700_TEXT1}"  --ÈÎÎñÃèÊö
-x500500_g_MissionTarget="ÕÒµ½±¦²Ø½»¸øºÎÖ´ÖĞ"		--ÈÎÎñÄ¿±ê
-x500500_g_ContinueInfo="ÄãÕÒµ½±¦²ØÁËÃ´£¿µã»÷ÈÎÎñµÀ¾ßÖĞµÄÌ½²âÆ÷¾Í¿ÉÒÔÕÒµ½±¦²ØµÄÎ»ÖÃÁË"		--Î´Íê³ÉÈÎÎñµÄnpc¶Ô»°
-x500500_g_MissionComplete="¸ÉµÄ²»´í"					--Íê³ÉÈÎÎñnpcËµ»°µÄ»°
+x500500_g_IsMissionOkFail = 0					--å˜é‡çš„ç¬¬0ä½
+x500500_g_DemandItem={{id=40002106,num=1}}		--å˜é‡ç¬¬1ä½,ä»»åŠ¡éœ€è¦å¾—åˆ°çš„ç‰©å“
+x500500_g_MissionRound = 3						--å¾ªç¯ä»»åŠ¡çš„æ•°æ®ç´¢å¼•ï¼Œé‡Œé¢å­˜ç€å·²åšçš„ç¯æ•° MD_WABAO_HUAN
+x500500_g_MissionName="å¯»å®"
+x500500_g_MissionInfo="#{M_700_TEXT1}"  --ä»»åŠ¡æè¿°
+x500500_g_MissionTarget="æ‰¾åˆ°å®è—äº¤ç»™ä½•æ‰§ä¸­"		--ä»»åŠ¡ç›®æ ‡
+x500500_g_ContinueInfo="ä½ æ‰¾åˆ°å®è—äº†ä¹ˆï¼Ÿç‚¹å‡»ä»»åŠ¡é“å…·ä¸­çš„æ¢æµ‹å™¨å°±å¯ä»¥æ‰¾åˆ°å®è—çš„ä½ç½®äº†"		--æœªå®Œæˆä»»åŠ¡çš„npcå¯¹è¯
+x500500_g_MissionComplete="å¹²çš„ä¸é”™"					--å®Œæˆä»»åŠ¡npcè¯´è¯çš„è¯
 x500500_g_MoneyBonus=100
 x500500_g_ItemBonus={{id=30002001,num=1}}
 --MisDescEnd

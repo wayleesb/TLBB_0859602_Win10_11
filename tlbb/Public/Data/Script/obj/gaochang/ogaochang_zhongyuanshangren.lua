@@ -1,11 +1,11 @@
---高昌NPC
---中原商人张威
---任务
+--楂樻槍NPC
+--涓師鍟嗕汉寮犲▉
+--浠诲姟
 
 x043508_g_ScriptId	= 043508
 
 --**********************************
---事件交互入口
+--浜嬩欢浜や簰鍏ュ彛
 --**********************************
 function x043508_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent( sceneId )

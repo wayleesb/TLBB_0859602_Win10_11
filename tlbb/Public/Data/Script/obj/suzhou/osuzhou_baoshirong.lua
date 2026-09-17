@@ -1,39 +1,39 @@
--- ËÕÖİNPC
--- °üÊÀÈÙ
--- Ò»°ã
+-- è‹å·NPC
+-- åŒ…ä¸–è£
+-- ä¸€èˆ¬
 
--- ½Å±¾ºÅ
+-- è„šæœ¬å·
 x001037_g_scriptId = 001037
 
 x001037_g_shoptableindex = 25
 
 x001037_g_ControlScript = 050009
-x001037_g_ExchangeList = { id = 40004304, name = "ÓÅÖÊÏãÁÏ", cost = 30 }
+x001037_g_ExchangeList = { id = 40004304, name = "ä¼˜è´¨é¦™æ–™", cost = 30 }
 x001037_g_yiexihuFlag = 1;
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x001037_OnDefaultEvent( sceneId, selfId, targetId )
 	BeginEvent( sceneId )
 		AddText( sceneId, "#{BSR_80919_1}" )
-		AddNumText( sceneId, x001037_g_scriptId, "¿´¿´ÄãÂôµÄ¶«Î÷", 7, 0 )
+		AddNumText( sceneId, x001037_g_scriptId, "çœ‹çœ‹ä½ å–çš„ä¸œè¥¿", 7, 0 )
 		--if x001037_g_yiexihuFlag == 1 then
-		--	AddNumText( sceneId, x001037_g_scriptId, "È¥Ò¹Î÷ºş", 6, 3 )
-			AddNumText( sceneId, x001037_g_scriptId, "²¶×½Ó©»ğ³æ½éÉÜ", 11, 14 )
-			AddNumText( sceneId, x001037_g_scriptId, "Ñ©Çò¡¢ÂÌ¶¹ÌÀ¡¢Î÷¹ÏÖ­»î¶¯½éÉÜ", 11, 15 )
+		--	AddNumText( sceneId, x001037_g_scriptId, "å»å¤œè¥¿æ¹–", 6, 3 )
+			AddNumText( sceneId, x001037_g_scriptId, "æ•æ‰è¤ç«è™«ä»‹ç»", 11, 14 )
+			AddNumText( sceneId, x001037_g_scriptId, "é›ªçƒã€ç»¿è±†æ±¤ã€è¥¿ç“œæ±æ´»åŠ¨ä»‹ç»", 11, 15 )
 		--end
 
 		if CallScriptFunction( x001037_g_ControlScript, "IsMidAutumnPeriod", sceneId, selfId ) > 0 then
-			--AddNumText( sceneId, x001037_g_scriptId, "»»È¡Ê³²Ä", 6, 1 )
-			--AddNumText( sceneId, x001037_g_scriptId, "Ê³²ÄÓĞÊ²Ã´ÓÃ", 11, 2 )
+			--AddNumText( sceneId, x001037_g_scriptId, "æ¢å–é£Ÿæ", 6, 1 )
+			--AddNumText( sceneId, x001037_g_scriptId, "é£Ÿææœ‰ä»€ä¹ˆç”¨", 11, 2 )
 		end
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x001037_OnEventRequest( sceneId, selfId, targetId, eventId )
 	if eventId == x001037_g_scriptId then
@@ -63,24 +63,24 @@ function x001037_OnEventRequest( sceneId, selfId, targetId, eventId )
 		if GetNumText() == 1 then
 			local score = GetMissionData( sceneId, selfId, MD_MIDAUTUMN_SCORE )
 			if score < x001037_g_ExchangeList.cost then
-				x001037_NotifyFailBox( sceneId, selfId, targetId, "    Òª»»Ò»·İ" .. x001037_g_ExchangeList.name ..
-				"£¬ĞèÒª»ı·Ö" .. x001037_g_ExchangeList.cost .. "µã£¬ÄãÏÖÔÚÖ»ÓĞ" .. score .. "·Ö£¬ËÆºõ²»¹»°¡¡£" )
+				x001037_NotifyFailBox( sceneId, selfId, targetId, "    è¦æ¢ä¸€ä»½" .. x001037_g_ExchangeList.name ..
+				"ï¼Œéœ€è¦ç§¯åˆ†" .. x001037_g_ExchangeList.cost .. "ç‚¹ï¼Œä½ ç°åœ¨åªæœ‰" .. score .. "åˆ†ï¼Œä¼¼ä¹ä¸å¤Ÿå•Šã€‚" )
 				return
 			end
 
 			BeginEvent( sceneId )
-				AddText( sceneId, "  ÄãÄ¿Ç°µÄÖĞÇï»ı·ÖÎª" .. score .. "·Ö£¬»»È¡Ò»·İ" ..
-					x001037_g_ExchangeList.name .. "£¬ĞèÒª»ı·Ö" .. x001037_g_ExchangeList.cost .. "µã£¬ÄãÈ·¶¨Òª»»Âğ£¿" )
+				AddText( sceneId, "  ä½ ç›®å‰çš„ä¸­ç§‹ç§¯åˆ†ä¸º" .. score .. "åˆ†ï¼Œæ¢å–ä¸€ä»½" ..
+					x001037_g_ExchangeList.name .. "ï¼Œéœ€è¦ç§¯åˆ†" .. x001037_g_ExchangeList.cost .. "ç‚¹ï¼Œä½ ç¡®å®šè¦æ¢å—ï¼Ÿ" )
 
-				AddNumText( sceneId, x001037_g_scriptId, "È·¶¨Òª»»", -1, 3 )
-				AddNumText( sceneId, x001037_g_scriptId, "ÎÒÖ»ÊÇÂ·¹ı", -1, 4 )
+				AddNumText( sceneId, x001037_g_scriptId, "ç¡®å®šè¦æ¢", -1, 3 )
+				AddNumText( sceneId, x001037_g_scriptId, "æˆ‘åªæ˜¯è·¯è¿‡", -1, 4 )
 			EndEvent( sceneId )
 			DispatchEventList( sceneId, selfId, targetId )
 		elseif GetNumText() == 2 then
-			x001037_NotifyFailBox( sceneId, selfId, targetId, "    ÔÚÂåÑô½ªÀğ£¨127£¬" ..
-				"154£©£¬ËÕÖİ°üÊÀÈÙ£¨190£¬168£©£¬´óÀí¶Å×ÓÌÚ£¨109£¬170£©·Ö±ğ»»" ..
-				"ÈıÖÖ²»Í¬µÄÊ³²Äºó£¬ÕÒËÕÖİ£¨193£¬148£©ÔÀ³£Ô²´«ËÍµ½Î÷ºşÀ´»»ÖĞÇï" ..
-				"ÌØÊâÎïÆ·¡£" )
+			x001037_NotifyFailBox( sceneId, selfId, targetId, "    åœ¨æ´›é˜³å§œé²¤ï¼ˆ127ï¼Œ" ..
+				"154ï¼‰ï¼Œè‹å·åŒ…ä¸–è£ï¼ˆ190ï¼Œ168ï¼‰ï¼Œå¤§ç†æœå­è…¾ï¼ˆ109ï¼Œ170ï¼‰åˆ†åˆ«æ¢" ..
+				"ä¸‰ç§ä¸åŒçš„é£Ÿæåï¼Œæ‰¾è‹å·ï¼ˆ193ï¼Œ148ï¼‰å²³å¸¸åœ†ä¼ é€åˆ°è¥¿æ¹–æ¥æ¢ä¸­ç§‹" ..
+				"ç‰¹æ®Šç‰©å“ã€‚" )
 			return
 		elseif GetNumText() == 3 then
 			local score = GetMissionData( sceneId, selfId, MD_MIDAUTUMN_SCORE )
@@ -89,12 +89,12 @@ function x001037_OnEventRequest( sceneId, selfId, targetId, eventId )
 			end
 
 			if LuaFnTryRecieveItem( sceneId, selfId, x001037_g_ExchangeList.id, QUALITY_MUST_BE_CHANGE ) < 0 then
-				x001037_NotifyFailBox( sceneId, selfId, targetId, "    ±³°ü¿Õ¼äÒÑÂú¡£" )
+				x001037_NotifyFailBox( sceneId, selfId, targetId, "    èƒŒåŒ…ç©ºé—´å·²æ»¡ã€‚" )
 			end
 
 			score = score - x001037_g_ExchangeList.cost
 			SetMissionData( sceneId, selfId, MD_MIDAUTUMN_SCORE, score )
-			x001037_NotifyFailBox( sceneId, selfId, targetId, "    Ê£Óà»ı·Ö£º" .. score .. "¡£" )
+			x001037_NotifyFailBox( sceneId, selfId, targetId, "    å‰©ä½™ç§¯åˆ†ï¼š" .. score .. "ã€‚" )
 			return
 		elseif GetNumText() == 4 then
 			BeginUICommand( sceneId )
@@ -106,7 +106,7 @@ function x001037_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+--å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x001037_NotifyFailBox( sceneId, selfId, targetId, msg )
 	BeginEvent( sceneId )

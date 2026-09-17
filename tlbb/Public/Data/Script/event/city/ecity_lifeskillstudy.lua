@@ -1,24 +1,24 @@
 x600022_g_ScriptId = CITY_BUILDING_ABILITY_SCRIPT
 
 --*******************************************************************************
---³ÇÊĞÉú»î¼¼ÄÜ¼ì²é±¨´íĞÅÏ¢
+--åŸå¸‚ç”Ÿæ´»æŠ€èƒ½æ£€æŸ¥æŠ¥é”™ä¿¡æ¯
 --*******************************************************************************
 x600022_g_ErrorMsg = {
-	{-1, "ÕâÀïÃ»ÓĞÕâ¸öÉú»î¼¼ÄÜ¡£"},
-	{-2, "µÈ¼¶²»¹»¡£"},
-	{-3, "½ğÇ®²»¹»¡£"},
-	{-4, "¾­Ñé²»¹»¡£"},
-	{-5, "ÄãĞèÒªÉı¼¶Õâ¸ö½¨ÖşÎï¡£"},
-	{-6, "Äã»¹Ã»Ñ§»áÕâ¸öÉú»î¼¼ÄÜ¡£"},
-	{-7, "ÄãÒÑ¾­Ñ§»áÕâ¸öÉú»î¼¼ÄÜ¡£"},
-	{-8, "Äã²»ÄÜÊ¹ÓÃÕâ¸ö³ÇÊĞµÄ¹¦ÄÜ¡£"},
-	{-9, "·şÎñÆ÷·±Ã¦£¬ÇëÉÔºóÔÙÊÔ¡£"},
-	{-10, "Ã»ÓĞÕÒµ½°ï¹±ÏûºÄĞÅÏ¢¡£"},
-	{-11, "°ï¹±²»¹»¡£"},
-	{-12, "¼¼ÄÜÊìÁ·¶È²»¹»¡£"},
-	{-13, "ÄãĞèÒªÉı¼¶Õâ¸ö½¨ÖşÎï¡£"},
-	{-14, "ÄãÒÑ¾­´ïµ½´ËÏî¼¼ÄÜµÄ×î¸ßµÈ¼¶£¬ÎŞĞèÔÙÉı¼¶ÁË"},
-	{-15, "´Ë½¨ÖşÄ¿Ç°ÒÑ¾­ÊÇ×î¸ßµÈ¼¶£¬Ö»ÄÜÉı¼¶´Ë¼¼ÄÜµ½´Ë¼¶±ğ£¬ÎŞ·¨ÔÙÉı¼¶ÁË"},
+	{-1, "è¿™é‡Œæ²¡æœ‰è¿™ä¸ªç”Ÿæ´»æŠ€èƒ½ã€‚"},
+	{-2, "ç­‰çº§ä¸å¤Ÿã€‚"},
+	{-3, "é‡‘é’±ä¸å¤Ÿã€‚"},
+	{-4, "ç»éªŒä¸å¤Ÿã€‚"},
+	{-5, "ä½ éœ€è¦å‡çº§è¿™ä¸ªå»ºç­‘ç‰©ã€‚"},
+	{-6, "ä½ è¿˜æ²¡å­¦ä¼šè¿™ä¸ªç”Ÿæ´»æŠ€èƒ½ã€‚"},
+	{-7, "ä½ å·²ç»å­¦ä¼šè¿™ä¸ªç”Ÿæ´»æŠ€èƒ½ã€‚"},
+	{-8, "ä½ ä¸èƒ½ä½¿ç”¨è¿™ä¸ªåŸå¸‚çš„åŠŸèƒ½ã€‚"},
+	{-9, "æœåŠ¡å™¨ç¹å¿™ï¼Œè¯·ç¨åå†è¯•ã€‚"},
+	{-10, "æ²¡æœ‰æ‰¾åˆ°å¸®è´¡æ¶ˆè€—ä¿¡æ¯ã€‚"},
+	{-11, "å¸®è´¡ä¸å¤Ÿã€‚"},
+	{-12, "æŠ€èƒ½ç†Ÿç»ƒåº¦ä¸å¤Ÿã€‚"},
+	{-13, "ä½ éœ€è¦å‡çº§è¿™ä¸ªå»ºç­‘ç‰©ã€‚"},
+	{-14, "ä½ å·²ç»è¾¾åˆ°æ­¤é¡¹æŠ€èƒ½çš„æœ€é«˜ç­‰çº§ï¼Œæ— éœ€å†å‡çº§äº†"},
+	{-15, "æ­¤å»ºç­‘ç›®å‰å·²ç»æ˜¯æœ€é«˜ç­‰çº§ï¼Œåªèƒ½å‡çº§æ­¤æŠ€èƒ½åˆ°æ­¤çº§åˆ«ï¼Œæ— æ³•å†å‡çº§äº†"},
 }
 x600022_g_CITY_BUILDING_MaxLevel = {
 					[CITY_BUILDING_SHUFANG]		= 4,
@@ -31,11 +31,11 @@ x600022_g_CITY_BUILDING_MaxLevel = {
 
 }
 
---¿Û³ı°ï¹±µÄËø
+--æ‰£é™¤å¸®è´¡çš„é”
 x600022_g_Contribution_Lock	=	0					--enum Obj_Human::BITLOCKTYPE
 x600022_g_Contribution_AttrType = 6
 
---×î´óµÈ¼¶ÊÇ12¼¶µÄÉú»î¼¼ÄÜµÄ°ï¹±ÏûºÄ±í
+--æœ€å¤§ç­‰çº§æ˜¯12çº§çš„ç”Ÿæ´»æŠ€èƒ½çš„å¸®è´¡æ¶ˆè€—è¡¨
 x600022_g_Contribution_Cost_12 = {
 	30,		-- 0 -> 1
 	40,		-- 1 -> 2
@@ -51,10 +51,10 @@ x600022_g_Contribution_Cost_12 = {
 	7500,		-- 11 -> 12
 }
 
---×î´óµÈ¼¶ÊÇ100¼¶µÄÉú»î¼¼ÄÜµÄ°ï¹±ÏûºÄ±í
---minlv ×îĞ¡¼¼ÄÜµÈ¼¶
---maxlv ×î´ó¼¼ÄÜµÈ¼¶
---costrate ĞèÒªcostrate*curlv°ï¹±
+--æœ€å¤§ç­‰çº§æ˜¯100çº§çš„ç”Ÿæ´»æŠ€èƒ½çš„å¸®è´¡æ¶ˆè€—è¡¨
+--minlv æœ€å°æŠ€èƒ½ç­‰çº§
+--maxlv æœ€å¤§æŠ€èƒ½ç­‰çº§
+--costrate éœ€è¦costrate*curlvå¸®è´¡
 --x600022_g_Contribution_Cost_100 = {
 --	{minlv=1,		maxlv=20,		costrate=1},
 --	{minlv=21,	maxlv=40,		costrate=2},
@@ -63,7 +63,7 @@ x600022_g_Contribution_Cost_12 = {
 --	{minlv=81,	maxlv=100,	costrate=5},
 --}
 
-x600022_g_ExtraNPCName = {{"Ä¾ÍñÇå", "ÈîĞÇÖñ", "Ò®ÂÉ´óÊ¯"}
+x600022_g_ExtraNPCName = {{"æœ¨å©‰æ¸…", "é˜®æ˜Ÿç«¹", "è€¶å¾‹å¤§çŸ³"}
 													,{ABILITY_FENGREN, ABILITY_GONGYI, ABILITY_ZHUZAO}}
 
 function x600022_GetCostContributionByAbilityLevel(aid,alv)
@@ -71,10 +71,10 @@ function x600022_GetCostContributionByAbilityLevel(aid,alv)
 		local ret, maxlevel = LuaFnGetAbilityMaxLevel(aid);
 		if ret and ret == 1 and maxlevel then
 			if 10 == maxlevel then
-			--12¼¶·â¶¥µÄ¼¼ÄÜ£¬²é±í¿´¿Û³ı¶àÉÙ°ï¹±
+			--12çº§å°é¡¶çš„æŠ€èƒ½ï¼ŒæŸ¥è¡¨çœ‹æ‰£é™¤å¤šå°‘å¸®è´¡
 				return x600022_g_Contribution_Cost_12[alv+1]
 			elseif 100 == maxlevel or 99 == maxlevel then
-			--100¼¶·â¶¥µÄ¼¼ÄÜ£¬Í¨¹ı¼¼ÄÜµÈ¼¶Ëã³öÀ´
+			--100çº§å°é¡¶çš„æŠ€èƒ½ï¼Œé€šè¿‡æŠ€èƒ½ç­‰çº§ç®—å‡ºæ¥
 				return floor( x600022_g_Contribution_Cost_12[ floor( alv/10 ) + 1 ] / 10 )
 
 			--	for i = 1, getn(x600022_g_Contribution_Cost_100) do
@@ -88,10 +88,10 @@ function x600022_GetCostContributionByAbilityLevel(aid,alv)
 	end
 	--if CITY_ABILITY_DETAIL[aid] and CITY_ABILITY_DETAIL[aid].cond[alv+1] then
 	--	if 12 == getn(CITY_ABILITY_DETAIL[aid].cond) then
-	--	--12¼¶·â¶¥µÄ¼¼ÄÜ£¬²é±í¿´¿Û³ı¶àÉÙ°ï¹±
+	--	--12çº§å°é¡¶çš„æŠ€èƒ½ï¼ŒæŸ¥è¡¨çœ‹æ‰£é™¤å¤šå°‘å¸®è´¡
 	--		return x600022_g_Contribution_Cost_12[alv+1]
 	--	elseif 100 == getn(CITY_ABILITY_DETAIL[aid].cond) then
-	--	--100¼¶·â¶¥µÄ¼¼ÄÜ£¬Í¨¹ı¼¼ÄÜµÈ¼¶Ëã³öÀ´
+	--	--100çº§å°é¡¶çš„æŠ€èƒ½ï¼Œé€šè¿‡æŠ€èƒ½ç­‰çº§ç®—å‡ºæ¥
 	--		for i = 1, getn(x600022_g_Contribution_Cost_100) do
 	--			local l = x600022_g_Contribution_Cost_100[i]
 	--			if alv+1 >= l.minlv and alv+1 <= l.maxlv then
@@ -118,9 +118,9 @@ function x600022_ShowErrorMsg(sceneId,selfId,errid)
 	return errid
 end
 
---´¦ÀíÓÃ»§µã»÷µÄ´Ë½¨ÖşÎïµÄÉú»î¼¼ÄÜÑ¡Ïî
+--å¤„ç†ç”¨æˆ·ç‚¹å‡»çš„æ­¤å»ºç­‘ç‰©çš„ç”Ÿæ´»æŠ€èƒ½é€‰é¡¹
 function x600022_OnDefaultEvent( sceneId, selfId, targetId, eventScriptId, npcScriptId, bid )
-	--ÅĞ¶ÏÍæ¼ÒÊÇ²»ÊÇÕâ¸ö³ÇÊĞËùÊô°ï»áµÄ³ÉÔ±
+	--åˆ¤æ–­ç©å®¶æ˜¯ä¸æ˜¯è¿™ä¸ªåŸå¸‚æ‰€å±å¸®ä¼šçš„æˆå‘˜
 	--if GetNumText() == 666 then
 	--	BeginEvent(sceneId)
 	--		AddText(sceneId, "#{JZBZ_081031_01}");
@@ -131,15 +131,15 @@ function x600022_OnDefaultEvent( sceneId, selfId, targetId, eventScriptId, npcSc
 
 	local nUserSelNum = GetNumText();
 	if(eventScriptId == x600022_g_ScriptId) then
-		--Íæ¼ÒÑ¡ÔñÁËÒ»¸öÉú»î¼¼ÄÜ
+		--ç©å®¶é€‰æ‹©äº†ä¸€ä¸ªç”Ÿæ´»æŠ€èƒ½
 		local aid = nUserSelNum;
 		if(aid and CITY_ABILITY_DETAIL[aid]) then
 			BeginEvent(sceneId)
 			for i = 1, getn(CITY_ABILITY_DETAIL[aid].script) do
 				if(CITY_ABILITY_DETAIL[aid].script[i] > 0) then
-					-- i == 1	Ñ§Ï°
-					-- i == 2 Éı¼¶
-					-- i == 3 ÁË½â
+					-- i == 1	å­¦ä¹ 
+					-- i == 2 å‡çº§
+					-- i == 3 äº†è§£
 					CallScriptFunction( CITY_ABILITY_DETAIL[aid].script[i], "OnEnumerate",sceneId, selfId, targetId, bid, i)
 				end
 			end
@@ -147,14 +147,14 @@ function x600022_OnDefaultEvent( sceneId, selfId, targetId, eventScriptId, npcSc
 			DispatchEventList(sceneId,selfId,targetId)
 		end
 	else
-		--¾ßÌå¼¼ÄÜµÄ´¦Àíº¯Êı
+		--å…·ä½“æŠ€èƒ½çš„å¤„ç†å‡½æ•°
 		if x600022_IsValidCityLifeSkill_Script_Id(eventScriptId) == 1 then
 			CallScriptFunction( eventScriptId, "OnDefaultEvent",sceneId, selfId, targetId, nUserSelNum, npcScriptId, bid )
 		end
 	end
 end
 
---¼ì²éÕâ¸öÊÂ¼şIdÊÇ²»ÊÇ³ÇÊĞÉú»î¼¼ÄÜÑ§Ï°¹ØÏµµÄ½Å±¾
+--æ£€æŸ¥è¿™ä¸ªäº‹ä»¶Idæ˜¯ä¸æ˜¯åŸå¸‚ç”Ÿæ´»æŠ€èƒ½å­¦ä¹ å…³ç³»çš„è„šæœ¬
 function x600022_IsValidCityLifeSkill_Script_Id(eid)
 	if nil == eid then return 0 end
 	for i = 1, getn(CITY_ABILITY_DETAIL) do
@@ -168,37 +168,37 @@ function x600022_IsValidCityLifeSkill_Script_Id(eid)
 	return 0
 end
 
---ÁĞ¾Ù´Ë½¨ÖşÎïÉú»î¼¼ÄÜµÄÑ¡Ïî
+--åˆ—ä¸¾æ­¤å»ºç­‘ç‰©ç”Ÿæ´»æŠ€èƒ½çš„é€‰é¡¹
 function x600022_GetLifeAbilityByBuildingId(bid)
 	local aRet = {}
 	if bid and CITY_BUILDING_ABILITY_LIST[bid] then
 		aRet = CITY_BUILDING_ABILITY_LIST[bid]
 	end
 
-	return aRet	--·µ»Ø½á¹û
+	return aRet	--è¿”å›ç»“æœ
 end
 
---Ìí¼ÓÑ§Ï°Éú»î¼¼ÄÜÑ¡Ïî
+--æ·»åŠ å­¦ä¹ ç”Ÿæ´»æŠ€èƒ½é€‰é¡¹
 function x600022_AddCityLifeAbilityOpt(sceneId, selfId, scriptid, bid, optid)
-	--ÅĞ¶ÏÍæ¼ÒÊÇ²»ÊÇÕâ¸ö³ÇÊĞËùÊô°ï»áµÄ³ÉÔ±
+	--åˆ¤æ–­ç©å®¶æ˜¯ä¸æ˜¯è¿™ä¸ªåŸå¸‚æ‰€å±å¸®ä¼šçš„æˆå‘˜
 	if CityGetSelfCityID(sceneId,selfId) ~= sceneId then return end
 	
 	local lifeNum = getn(x600022_GetLifeAbilityByBuildingId(bid))
 	if lifeNum > 0 then
-		AddNumText( sceneId, scriptid, "Ñ§Ï°Éú»î¼¼ÄÜ", 6, optid )
+		AddNumText( sceneId, scriptid, "å­¦ä¹ ç”Ÿæ´»æŠ€èƒ½", 6, optid )
 		--AddNumText( sceneId, x600022_g_ScriptId, "#{JZBZ_081031_02}", 11, 666)
 	end
 end
 
---Ìí¼ÓÉú»î¼¼ÄÜµÄÏêÏ¸ÄÚÈİ
+--æ·»åŠ ç”Ÿæ´»æŠ€èƒ½çš„è¯¦ç»†å†…å®¹
 function x600022_IsHaveLifeAbilityByBuildingId(sceneId, selfId, bid)
 	return getn(x600022_GetLifeAbilityByBuildingId(bid))
 end
 
 function x600022_OnEnumerate( sceneId, selfId, targetId, bid )
-	--ÅĞ¶ÏÍæ¼ÒÊÇ²»ÊÇÕâ¸ö³ÇÊĞËùÊô°ï»áµÄ³ÉÔ±
+	--åˆ¤æ–­ç©å®¶æ˜¯ä¸æ˜¯è¿™ä¸ªåŸå¸‚æ‰€å±å¸®ä¼šçš„æˆå‘˜
 	if CityGetSelfCityID(sceneId,selfId) ~= sceneId then return end
-	--Éú³ÉËùÓĞÉú»î¼¼ÄÜµÄ±íÏî
+	--ç”Ÿæˆæ‰€æœ‰ç”Ÿæ´»æŠ€èƒ½çš„è¡¨é¡¹
 	AddText( sceneId, "#{BPJZ_081103_05}" )
 	local aTable = x600022_GetLifeAbilityByBuildingId(bid)
 	for i = 1, getn(aTable) do
@@ -206,18 +206,18 @@ function x600022_OnEnumerate( sceneId, selfId, targetId, bid )
 	end
 end
 
---¼ì²éÕâ¸ö½¨ÖşÎïµÄÌõ¼şÔ¼Êø£¬¹©¸÷Éú»î¼¼ÄÜ½Å±¾·´µ÷²éÑ¯
---checktype = 1	Ñ§Ï°¼ì²é
---checktype = 2	Éı¼¶¼ì²é
---checktype = 3 Éı¼¶(Client)				--Ñ§Ï°ÊÇÔÚ¸÷Éú»î¼¼ÄÜ½Å±¾ÖĞÖ±½ÓÍê³ÉµÄ
---checktype = 4 Ñ§Ï°µÄÌáÊ¾ĞÅÏ¢ÖĞĞèÒªµÄÊı¾İ(Server)
---checktype = 5 ÁĞ¾ÙÑ§Ï°Ñ¡ÏîÊ±µÄ¼ì²é
---checktype = 6 ÁĞ¾ÙÉı¼¶Ñ¡ÏîÊ±µÄ¼ì²é
+--æ£€æŸ¥è¿™ä¸ªå»ºç­‘ç‰©çš„æ¡ä»¶çº¦æŸï¼Œä¾›å„ç”Ÿæ´»æŠ€èƒ½è„šæœ¬åè°ƒæŸ¥è¯¢
+--checktype = 1	å­¦ä¹ æ£€æŸ¥
+--checktype = 2	å‡çº§æ£€æŸ¥
+--checktype = 3 å‡çº§(Client)				--å­¦ä¹ æ˜¯åœ¨å„ç”Ÿæ´»æŠ€èƒ½è„šæœ¬ä¸­ç›´æ¥å®Œæˆçš„
+--checktype = 4 å­¦ä¹ çš„æç¤ºä¿¡æ¯ä¸­éœ€è¦çš„æ•°æ®(Server)
+--checktype = 5 åˆ—ä¸¾å­¦ä¹ é€‰é¡¹æ—¶çš„æ£€æŸ¥
+--checktype = 6 åˆ—ä¸¾å‡çº§é€‰é¡¹æ—¶çš„æ£€æŸ¥
 function x600022_OnCityCheck(sceneId, selfId, aid, bid, checktype, ex1, targetId)
-	--ÅĞ¶ÏÍæ¼ÒÊÇ²»ÊÇÕâ¸ö³ÇÊĞËùÊô°ï»áµÄ³ÉÔ±
+	--åˆ¤æ–­ç©å®¶æ˜¯ä¸æ˜¯è¿™ä¸ªåŸå¸‚æ‰€å±å¸®ä¼šçš„æˆå‘˜
 	if CityGetSelfCityID(sceneId,selfId) ~= sceneId then return x600022_ShowErrorMsg(sceneId, selfId, -8) end
 
-	--Éú³ÉËùÓĞÉú»î¼¼ÄÜµÄ±íÏî
+	--ç”Ÿæˆæ‰€æœ‰ç”Ÿæ´»æŠ€èƒ½çš„è¡¨é¡¹
 	local blv = CityGetBuildingLevel(sceneId, selfId, sceneId, bid)
 	local rl = nil
 	if CITY_BUILDING_ABILITY_RULE[bid] and CITY_BUILDING_ABILITY_RULE[bid][blv] then
@@ -227,16 +227,16 @@ function x600022_OnCityCheck(sceneId, selfId, aid, bid, checktype, ex1, targetId
 	end
 	end
 
-	--»ñµÃ¼ì²éÀàĞÍ
+	--è·å¾—æ£€æŸ¥ç±»å‹
 	local alv
-	if(1 == checktype or 5 == checktype) then alv = 0 end	--Ñ§Ï°
-	if(2 == checktype or 3 == checktype or 6 == checktype) then --Éı¼¶
+	if(1 == checktype or 5 == checktype) then alv = 0 end	--å­¦ä¹ 
+	if(2 == checktype or 3 == checktype or 6 == checktype) then --å‡çº§
 		alv = QueryHumanAbilityLevel(sceneId, selfId, aid)
 	end
 
-	--°´ÕÕÕÒµ½µÄÕâĞĞÀ´¼ì²é
+	--æŒ‰ç…§æ‰¾åˆ°çš„è¿™è¡Œæ¥æ£€æŸ¥
 	if CITY_BUILDING_SIXRATE[bid] then
-		--»ñÈ¡Ñ§Ï°ÌáÊ¾µÄÊı¾İ
+		--è·å–å­¦ä¹ æç¤ºçš„æ•°æ®
 		if(4 == checktype) then return 1 end
 		if(2 == checktype) then 
 			local ret, maxlevel = LuaFnGetAbilityMaxLevel(aid);
@@ -248,15 +248,15 @@ function x600022_OnCityCheck(sceneId, selfId, aid, bid, checktype, ex1, targetId
 			end;
 			return 1;			
 		end
-		--ÊÇ·ñÑ§»áÁË¼¼ÄÜ
-		--Ñ§Ï°
+		--æ˜¯å¦å­¦ä¼šäº†æŠ€èƒ½
+		--å­¦ä¹ 
 		if 1 == checktype and QueryHumanAbilityLevel(sceneId, selfId, aid) > 0 then
 			return x600022_ShowErrorMsg(sceneId, selfId, -7)
 		end
 		if 5 == checktype and QueryHumanAbilityLevel(sceneId, selfId, aid) > 0 then
 			return x600022_ShowErrorMsg(sceneId, selfId, -7)
 		end
-		--Éı¼¶
+		--å‡çº§
 		if 3 == checktype  then	--Client
 			local ret, maxlevel = LuaFnGetAbilityMaxLevel(aid);
 			if ret and ret == 1 and alv>=maxlevel then
@@ -271,7 +271,7 @@ function x600022_OnCityCheck(sceneId, selfId, aid, bid, checktype, ex1, targetId
 		end
 
 		if rl and 5 ~= checktype and 6 ~= checktype then
-			--¼¼ÄÜ×îĞ¡×î´óµÈ¼¶¼ì²é
+			--æŠ€èƒ½æœ€å°æœ€å¤§ç­‰çº§æ£€æŸ¥
 			if alv >= rl.amax	or alv+1 < rl.amin then
 				if x600022_g_CITY_BUILDING_MaxLevel[bid] and x600022_g_CITY_BUILDING_MaxLevel[bid]<=blv then
 					return x600022_ShowErrorMsg(sceneId, selfId, -15);
@@ -283,7 +283,7 @@ function x600022_OnCityCheck(sceneId, selfId, aid, bid, checktype, ex1, targetId
 			local tempAbilityLevel = alv+1;
 			local ret, demandMoney, demandExp, limitAbilityExp, limitAbilityExpShow, currentLevelAbilityExpTop, limitLevel, extraMoney, extraExp = LuaFnGetAbilityLevelUpConfig2(tempAbilityId, tempAbilityLevel);
 			
-			--ÌØĞ´¸½¼ÓNPCÂß¼­
+			--ç‰¹å†™é™„åŠ NPCé€»è¾‘
 			for i = 1, getn(x600022_g_ExtraNPCName[1]) do
 				--PrintStr(GetName(sceneId, targetId).." "..x600022_g_ExtraNPCName[1][i].." "..tempAbilityId .." ".. x600022_g_ExtraNPCName[2][i])
 				if GetName(sceneId, targetId) == x600022_g_ExtraNPCName[1][i] and tempAbilityId == x600022_g_ExtraNPCName[2][i] then
@@ -294,22 +294,22 @@ function x600022_OnCityCheck(sceneId, selfId, aid, bid, checktype, ex1, targetId
 			end
 			
 			if ret and ret == 1 then
-				--ÈËÎïµÈ¼¶¼ì²é
+				--äººç‰©ç­‰çº§æ£€æŸ¥
 				if GetLevel(sceneId,selfId) < limitLevel then
 					return x600022_ShowErrorMsg(sceneId, selfId, -2)
 				end
-				--ÈËÎï½ğÇ®¼ì²é
-				local rate = -0.2	--CITY_BUILDING_SIXRATE[bid]		»ñµÃÕâ¸ö½¨ÖşÎïµÄ¶ÔÓ¦ÂÊÖµ
+				--äººç‰©é‡‘é’±æ£€æŸ¥
+				local rate = -0.2	--CITY_BUILDING_SIXRATE[bid]		è·å¾—è¿™ä¸ªå»ºç­‘ç‰©çš„å¯¹åº”ç‡å€¼
 				if GetMoney(sceneId,selfId) + GetMoneyJZ(sceneId, selfId) < floor((1+rate)*demandMoney) then
 					return x600022_ShowErrorMsg(sceneId, selfId, -3)
 				end
-				--ÈËÎï¾­Ñé¼ì²é
+				--äººç‰©ç»éªŒæ£€æŸ¥
 				if 1 ~= checktype and 4 ~= checktype then
 				if GetExp(sceneId,selfId) < floor((1+rate)*demandExp) then
 					return x600022_ShowErrorMsg(sceneId, selfId, -4)
 				end
 				end
-				--ÈËÎï°ï»á¹±Ï×¶È¼ì²é
+				--äººç‰©å¸®ä¼šè´¡çŒ®åº¦æ£€æŸ¥
 				local costContribution = x600022_GetCostContributionByAbilityLevel(aid, alv)
 				if costContribution < 0 then
 					return x600022_ShowErrorMsg(sceneId, selfId, -10)
@@ -319,7 +319,7 @@ function x600022_OnCityCheck(sceneId, selfId, aid, bid, checktype, ex1, targetId
 				if curContribute < costContribution then
 					return x600022_ShowErrorMsg(sceneId, selfId, -11)
 				end
-				--ÈËÎï¼¼ÄÜÊìÁ·¶È¼ì²é
+				--äººç‰©æŠ€èƒ½ç†Ÿç»ƒåº¦æ£€æŸ¥
 				local aexp = GetAbilityExp(sceneId, selfId, aid)
 				if checktype == 3 then
 					if aexp < limitAbilityExp then
@@ -335,19 +335,19 @@ function x600022_OnCityCheck(sceneId, selfId, aid, bid, checktype, ex1, targetId
 			end
 		end
 	else
-		return x600022_ShowErrorMsg(sceneId, selfId, -1)			--Ã»ÓĞÕÒµ½Õâ¸ö½¨ÖşÎï¿ÉÒÔ²Ù×÷ÕâÖÖ¼¼ÄÜ
+		return x600022_ShowErrorMsg(sceneId, selfId, -1)			--æ²¡æœ‰æ‰¾åˆ°è¿™ä¸ªå»ºç­‘ç‰©å¯ä»¥æ“ä½œè¿™ç§æŠ€èƒ½
 	end
 
-	return 1				--¼ì²é³É¹¦
+	return 1				--æ£€æŸ¥æˆåŠŸ
 end
 
---»ñµÃÕâ¸ö½¨ÖşÎïÊµ¼Ê¸Ã¿ÛµÄ½ğÇ®¡¢¹±Ï×¶È¡¢¾­ÑéµÈÊıÖµ£¬¹©¸÷Éú»î¼¼ÄÜ½Å±¾·´µ÷
---checktype = 1	Ñ§Ï°¼ì²é(Server)
---checktype = 2	Éı¼¶¼ì²é(Server)
---checktype = 3 Éı¼¶(Client)				--Ñ§Ï°ÊÇÔÚ¸÷Éú»î¼¼ÄÜ½Å±¾ÖĞÖ±½ÓÍê³ÉµÄ
---checktype = 4 Ñ§Ï°µÄÌáÊ¾ĞÅÏ¢ÖĞĞèÒªµÄÊı¾İ(Server)
+--è·å¾—è¿™ä¸ªå»ºç­‘ç‰©å®é™…è¯¥æ‰£çš„é‡‘é’±ã€è´¡çŒ®åº¦ã€ç»éªŒç­‰æ•°å€¼ï¼Œä¾›å„ç”Ÿæ´»æŠ€èƒ½è„šæœ¬åè°ƒ
+--checktype = 1	å­¦ä¹ æ£€æŸ¥(Server)
+--checktype = 2	å‡çº§æ£€æŸ¥(Server)
+--checktype = 3 å‡çº§(Client)				--å­¦ä¹ æ˜¯åœ¨å„ç”Ÿæ´»æŠ€èƒ½è„šæœ¬ä¸­ç›´æ¥å®Œæˆçš„
+--checktype = 4 å­¦ä¹ çš„æç¤ºä¿¡æ¯ä¸­éœ€è¦çš„æ•°æ®(Server)
 function x600022_OnCityAction(sceneId, selfId, targetId, aid, bid, checktype, ex1)
-	--Éú³ÉËùÓĞÉú»î¼¼ÄÜµÄ±íÏî
+	--ç”Ÿæˆæ‰€æœ‰ç”Ÿæ´»æŠ€èƒ½çš„è¡¨é¡¹
 	local blv = CityGetBuildingLevel(sceneId, selfId, sceneId, bid)
 	local rl = nil
 	if CITY_BUILDING_ABILITY_RULE[bid] and CITY_BUILDING_ABILITY_RULE[bid][blv] then
@@ -357,16 +357,16 @@ function x600022_OnCityAction(sceneId, selfId, targetId, aid, bid, checktype, ex
 	end
 	end
 
-	--°´ÕÕÕÒµ½µÄÕâĞĞÀ´Éú³É
+	--æŒ‰ç…§æ‰¾åˆ°çš„è¿™è¡Œæ¥ç”Ÿæˆ
 	if x600022_OnCityCheck(sceneId, selfId, aid, bid, checktype, ex1, targetId) == 1 then
 		local alv = QueryHumanAbilityLevel(sceneId, selfId, aid)
-		local rate = -0.2	--CITY_BUILDING_SIXRATE[bid]		»ñµÃÕâ¸ö½¨ÖşÎïµÄ¶ÔÓ¦ÂÊÖµ
+		local rate = -0.2	--CITY_BUILDING_SIXRATE[bid]		è·å¾—è¿™ä¸ªå»ºç­‘ç‰©çš„å¯¹åº”ç‡å€¼
 
 		local tempAbilityId = aid;
 		local tempAbilityLevel = alv+1;
 		local ret, demandMoney, demandExp, limitAbilityExp, limitAbilityExpShow, currentLevelAbilityExpTop, limitLevel, extraMoney, extraExp = LuaFnGetAbilityLevelUpConfig2(tempAbilityId, tempAbilityLevel);
 		
-		--ÌØĞ´¸½¼ÓNPCÂß¼­
+		--ç‰¹å†™é™„åŠ NPCé€»è¾‘
 		for i = 1, getn(x600022_g_ExtraNPCName[1]) do
 			--PrintStr(GetName(sceneId, targetId).." "..x600022_g_ExtraNPCName[1][i].." "..tempAbilityId .." ".. x600022_g_ExtraNPCName[2][i])
 			if GetName(sceneId, targetId) == x600022_g_ExtraNPCName[1][i] and tempAbilityId == x600022_g_ExtraNPCName[2][i] then
@@ -377,41 +377,41 @@ function x600022_OnCityAction(sceneId, selfId, targetId, aid, bid, checktype, ex
 		end
 		
 		if ret and ret == 1 then
-			local Need_Money = floor((1+rate)*demandMoney)				--ĞèÒªÍæ¼ÒµÄ½ğÇ®
-			local Need_Level	= limitLevel			--ĞèÒªÍæ¼ÒµÄµÈ¼¶
-			local Need_Exp		=	floor((1+rate)*demandExp)		--ĞèÒªÍæ¼ÒµÄ¾­ÑéÖµ
-			local Need_Aexp	=	limitAbilityExpShow		--ĞèÒªµÄ¼¼ÄÜÊìÁ·¶È
+			local Need_Money = floor((1+rate)*demandMoney)				--éœ€è¦ç©å®¶çš„é‡‘é’±
+			local Need_Level	= limitLevel			--éœ€è¦ç©å®¶çš„ç­‰çº§
+			local Need_Exp		=	floor((1+rate)*demandExp)		--éœ€è¦ç©å®¶çš„ç»éªŒå€¼
+			local Need_Aexp	=	limitAbilityExpShow		--éœ€è¦çš„æŠ€èƒ½ç†Ÿç»ƒåº¦
 
 			local costContribution = x600022_GetCostContributionByAbilityLevel(aid, alv)
 			if costContribution < 0 then
 				return x600022_ShowErrorMsg(sceneId, selfId, -10)
 			end
-			local Need_Contribute = costContribution																--ĞèÒªÍæ¼ÒµÄ°ï¹±
+			local Need_Contribute = costContribution																--éœ€è¦ç©å®¶çš„å¸®è´¡
 
-			--¼ì²éµ±Ç°ÊÇ·ñÄÜ¿Û³ı°ï¹±µÄËø
+			--æ£€æŸ¥å½“å‰æ˜¯å¦èƒ½æ‰£é™¤å¸®è´¡çš„é”
 			if Need_Contribute > 0 and 1 == checktype and 3 == checktype then
 				if IsLocked(sceneId, selfId, x600022_g_Contribution_Lock) then return x600022_ShowErrorMsg(sceneId, selfId, -9) end
 			end
 
-			local User_Contribute = CityGetAttr(sceneId,selfId,x600022_g_Contribution_AttrType)			--Íæ¼Òµ±Ç°µÄ°ï¹±
-			if ex1 and ex1 < User_Contribute then User_Contribute = ex1 end	--ÎªÁËÔİÊ±ÏÔÊ¾Ê¹ÓÃ£¬ÒòÎª°ï¹±ÊôĞÔ±È½ÏÌØÊâ
+			local User_Contribute = CityGetAttr(sceneId,selfId,x600022_g_Contribution_AttrType)			--ç©å®¶å½“å‰çš„å¸®è´¡
+			if ex1 and ex1 < User_Contribute then User_Contribute = ex1 end	--ä¸ºäº†æš‚æ—¶æ˜¾ç¤ºä½¿ç”¨ï¼Œå› ä¸ºå¸®è´¡å±æ€§æ¯”è¾ƒç‰¹æ®Š
 
 			if rl and checktype == 1 then	--Server
-				--¿Û³ıÏûºÄ
+				--æ‰£é™¤æ¶ˆè€—
 				LuaFnCostMoneyWithPriority(sceneId,selfId,Need_Money)
-				--Ñ§Ï°Éú»î¼¼ÄÜ²»ºÄ¾­ÑéÖµ
+				--å­¦ä¹ ç”Ÿæ´»æŠ€èƒ½ä¸è€—ç»éªŒå€¼
 				--if Need_Exp > 0 then AddExp(sceneId,selfId,Need_Exp*-1)	end
 				CityChangeAttr(sceneId,selfId,x600022_g_Contribution_AttrType,Need_Contribute*-1)
-				--Ñ§Ï°Éú»î¼¼ÄÜ
+				--å­¦ä¹ ç”Ÿæ´»æŠ€èƒ½
 				SetHumanAbilityLevel(sceneId,selfId,rl.aid,1)
-				--ÔÚnpcÁÄÌì´°¿ÚÍ¨ÖªÍæ¼ÒÒÑ¾­Ñ§»áÁË
+				--åœ¨npcèŠå¤©çª—å£é€šçŸ¥ç©å®¶å·²ç»å­¦ä¼šäº†
 				BeginEvent(sceneId)
-					AddText(sceneId,"ÄãÑ§»áÁË"..CITY_ABILITY_DETAIL[rl.aid].aname.."¼¼ÄÜ")
+					AddText(sceneId,"ä½ å­¦ä¼šäº†"..CITY_ABILITY_DETAIL[rl.aid].aname.."æŠ€èƒ½")
 				EndEvent()
 				DispatchEventList(sceneId,selfId,targetId)
 			elseif checktype == 2 then	--Server
 				BeginUICommand(sceneId)
-					UICommand_AddInt(sceneId,targetId) --µ÷ÓÃ³ÇÊĞÉú»î¼¼ÄÜ½çÃæ
+					UICommand_AddInt(sceneId,targetId) --è°ƒç”¨åŸå¸‚ç”Ÿæ´»æŠ€èƒ½ç•Œé¢
 					UICommand_AddInt(sceneId,aid)
 					UICommand_AddInt(sceneId,Need_Aexp)
 					UICommand_AddInt(sceneId,Need_Money)
@@ -423,10 +423,10 @@ function x600022_OnCityAction(sceneId, selfId, targetId, aid, bid, checktype, ex
 				EndUICommand(sceneId)
 				DispatchUICommand(sceneId,selfId, 555)
 			elseif checktype == 3 then	--Client
-				--¿Û³ıÏûºÄ
+				--æ‰£é™¤æ¶ˆè€—
 				local bOk = CityChangeAttr(sceneId,selfId,x600022_g_Contribution_AttrType,Need_Contribute*-1)
 				if bOk > 0 then
-					--ÓÅÏÈ¿Û³ı½»×Ó zchw
+					--ä¼˜å…ˆæ‰£é™¤äº¤å­ zchw
 					local HumanMoney = LuaFnGetMoney( sceneId, selfId )
   					local HumanMoneyJZ = GetMoneyJZ( sceneId, selfId );
 					if HumanMoney + HumanMoneyJZ  <  Need_Money then
@@ -439,38 +439,38 @@ function x600022_OnCityAction(sceneId, selfId, targetId, aid, bid, checktype, ex
 
 					if Need_Exp > 0 then AddExp(sceneId,selfId,Need_Exp*-1)	end
 					--CityChangeAttr(sceneId,selfId,x600022_g_Contribution_AttrType,Need_Contribute*-1)
-					--Éı¼¶Éú»î¼¼ÄÜ
+					--å‡çº§ç”Ÿæ´»æŠ€èƒ½
 					SetHumanAbilityLevel(sceneId,selfId,aid,alv+1)
-					--ÖØĞÂ¼¤»î¿Í»§¶ËµÄÉı¼¶°´Å¥
+					--é‡æ–°æ¿€æ´»å®¢æˆ·ç«¯çš„å‡çº§æŒ‰é’®
 					BeginUICommand(sceneId)
-						UICommand_AddInt(sceneId,targetId) --µ÷ÓÃ³ÇÊĞÉú»î¼¼ÄÜ½çÃæ
+						UICommand_AddInt(sceneId,targetId) --è°ƒç”¨åŸå¸‚ç”Ÿæ´»æŠ€èƒ½ç•Œé¢
 						UICommand_AddInt(sceneId,aid)
 						UICommand_AddInt(sceneId,bid)
 					EndUICommand(sceneId)
 					DispatchUICommand(sceneId,selfId, 556)
-					--µİ¹éµ÷ÓÃ×Ô¼º£¬ÏÔÊ¾ÏÂÒ»¼¶µÄĞÅÏ¢
+					--é€’å½’è°ƒç”¨è‡ªå·±ï¼Œæ˜¾ç¤ºä¸‹ä¸€çº§çš„ä¿¡æ¯
 					x600022_OnCityAction(sceneId, selfId, targetId, aid, bid, 2, User_Contribute-Need_Contribute)
 				end
 			elseif checktype ==4 then	--Server
 				return Need_Level,Need_Money,Need_Contribute
 			end
 		else
-			return x600022_ShowErrorMsg(sceneId, selfId, -1)			--Ã»ÓĞÕÒµ½Õâ¸ö½¨ÖşÎï¿ÉÒÔ²Ù×÷ÕâÖÖ¼¼ÄÜ
+			return x600022_ShowErrorMsg(sceneId, selfId, -1)			--æ²¡æœ‰æ‰¾åˆ°è¿™ä¸ªå»ºç­‘ç‰©å¯ä»¥æ“ä½œè¿™ç§æŠ€èƒ½
 		end
 	else
-		return 0			--Ã»ÓĞÕÒµ½Õâ¸ö½¨ÖşÎï¿ÉÒÔ²Ù×÷ÕâÖÖ¼¼ÄÜ
+		return 0			--æ²¡æœ‰æ‰¾åˆ°è¿™ä¸ªå»ºç­‘ç‰©å¯ä»¥æ“ä½œè¿™ç§æŠ€èƒ½
 	end
 
-	return 1				--¼ì²é³É¹¦
+	return 1				--æ£€æŸ¥æˆåŠŸ
 end
 
---¼ì²é³ÇÊĞµÄµ±Ç°Î¬»¤×´Ì¬£¬µÍÎ¬»¤×´Ì¬Ê±£¬¸øÌáÊ¾ĞÅÏ¢¡£
+--æ£€æŸ¥åŸå¸‚çš„å½“å‰ç»´æŠ¤çŠ¶æ€ï¼Œä½ç»´æŠ¤çŠ¶æ€æ—¶ï¼Œç»™æç¤ºä¿¡æ¯ã€‚
 function x600022_CheckCityStatus(sceneId, selfId,targetId)
 	if CityGetSelfCityID(sceneId,selfId) ~= sceneId then return -2 end
 	
-	if CityGetMaintainStatus( sceneId, selfId, sceneId ) == 1 then				-- µÍÎ¬»¤×´Ì¬
+	if CityGetMaintainStatus( sceneId, selfId, sceneId ) == 1 then				-- ä½ç»´æŠ¤çŠ¶æ€
 		BeginEvent(sceneId)
-			AddText(sceneId,"±¾°ïÏÖÔÚ×Ê½ğ²»×ã£¬»¹ÊÇ¶à×ö×öÉÌÈËÈÎÎñÈÃÎÒ°ïÄÜ»Ö¸´Õı³£Î¬»¤ÔÙÀ´ÕÒÎÒ°É¡£")
+			AddText(sceneId,"æœ¬å¸®ç°åœ¨èµ„é‡‘ä¸è¶³ï¼Œè¿˜æ˜¯å¤šåšåšå•†äººä»»åŠ¡è®©æˆ‘å¸®èƒ½æ¢å¤æ­£å¸¸ç»´æŠ¤å†æ¥æ‰¾æˆ‘å§ã€‚")
 		EndEvent()
 		DispatchEventList(sceneId,selfId,targetId)
   	return -1

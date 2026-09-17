@@ -1,24 +1,24 @@
---´óÀíNPC
---»ªºÕôŞ
---ÆÕÍ¨
+--å¤§ç†NPC
+--åèµ«è‰®
+--æ™®é€š
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x002014_g_scriptId = 002014
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x002014_g_eventList={200001,200005}
 
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x002014_OnDefaultEvent( sceneId, selfId,targetId )
   local  PlayerName=GetName(sceneId,selfId)	
 	local  PlayerSex=GetSex(sceneId,selfId)
 	if PlayerSex == 0 then
-		PlayerSex = "¹ÃÄï"
+		PlayerSex = "å§‘å¨˜"
 	else
-		PlayerSex = "ÉÙÏÀ"
+		PlayerSex = "å°‘ä¾ "
 	end
 	BeginEvent(sceneId)
 		AddText(sceneId,"  "..PlayerName..PlayerSex.."#{OBJ_dali_0004}")
@@ -31,7 +31,7 @@ function x002014_OnDefaultEvent( sceneId, selfId,targetId )
 end
 
 --**********************************
--- Ñ¡ÖĞÒ»Ïî
+-- é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x002014_OnEventRequest( sceneId, selfId, targetId, eventId )
 	for i, findId in x002014_g_eventList do

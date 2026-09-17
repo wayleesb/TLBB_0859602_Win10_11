@@ -21,10 +21,10 @@ function YuanBao_G_OnEvent(event)
 	if ( event == "UI_COMMAND" ) then
 
 		if(tonumber(arg0) == 19850424 and 3 == Get_XParam_INT(1)) then
-		--¼ÄÊÛÔª±¦
+		--å¯„å”®å…ƒå®
 			local yuanbao = tonumber(Player:GetData("YUANBAO"));
 			if(g_limit + g_Shouxu > yuanbao) then
-				PushDebugMessage("ÄúÉíÉÏµÄÔª±¦Ğ¡ÓÚ51£¬Ö»ÓĞÓµÓĞÔª±¦µÄÊıÁ¿´óÓÚµÈÓÚ51µÄÊ±ºò·½¿É¼ÄÊÛ¡£")
+				PushDebugMessage("æ‚¨èº«ä¸Šçš„å…ƒå®å°äº51ï¼Œåªæœ‰æ‹¥æœ‰å…ƒå®çš„æ•°é‡å¤§äºç­‰äº51çš„æ—¶å€™æ–¹å¯å¯„å”®ã€‚")
 				this:Hide();
 				return;
 			end
@@ -43,11 +43,11 @@ function YuanBao_G_OnEvent(event)
 			return;
 		end
 
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ı£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æœå’ŒNPCçš„è·ç¦»å¤§äºä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if(arg1 == "distance" and tonumber(arg2)>MAX_OBJ_DISTANCE or arg1=="destroy") then
 			this:Hide();
 
-			--È¡Ïû¹ØĞÄ
+			--å–æ¶ˆå…³å¿ƒ
 			StopCareObject_Carriage(objCared);
 		end
 	elseif (event == "OBJECT_CARED_EVENT") then
@@ -86,35 +86,35 @@ function YuanBao_G_OK_Click()
 	local nCopperCoin = tonumber(YuanBao_G_InputMoney_CopperCoin:GetText());
 	local nHaveYuanbao = tonumber(Player:GetData("YUANBAO"));
 	if(nYuanbao == 0) then
-		PushDebugMessage("ÇëÑ¡ÔñÒª¼ÄÊÛµÄÔª±¦ÀàĞÍ£¡")
+		PushDebugMessage("è¯·é€‰æ‹©è¦å¯„å”®çš„å…ƒå®ç±»å‹ï¼")
 		return;
 	end
 	if(nGlod==nil or nSilver == nil or nCopperCoin == nil) then
-		PushDebugMessage("½ğÇ®ÊäÈë¿ò²»ÔÊĞíÓĞ¿ÕÖµ£¡")
+		PushDebugMessage("é‡‘é’±è¾“å…¥æ¡†ä¸å…è®¸æœ‰ç©ºå€¼ï¼")
 		return
 	end
 	local bAvailability,nMoney = Bank:GetInputMoney(nGlod,nSilver,nCopperCoin);
 	if(bAvailability~=true or nMoney <=0)then
-		PushDebugMessage("½ğÇ®²»ÄÜÎª0£¡")
+		PushDebugMessage("é‡‘é’±ä¸èƒ½ä¸º0ï¼")
 		return;
 	end
 	if tonumber(nMoney) < g_YuanBao_Limit[g_grad].min * 10000 then
-		local errMsg = string.format( "%dÔª±¦¼ÄÊÛ¼Û¸ñ²»µÃµÍÓÚ%d½ğ", tonumber(nYuanbao), g_YuanBao_Limit[g_grad].min)
+		local errMsg = string.format( "%då…ƒå®å¯„å”®ä»·æ ¼ä¸å¾—ä½äº%dé‡‘", tonumber(nYuanbao), g_YuanBao_Limit[g_grad].min)
 		PushDebugMessage(errMsg)
 		return
 	end 
 	if tonumber(nMoney) > g_YuanBao_Limit[g_grad].max * 10000 then
-		local errMsg = string.format( "%dÔª±¦¼ÄÊÛ¼Û¸ñ²»µÃ¸ßÓÚ%d½ğ", tonumber(nYuanbao), g_YuanBao_Limit[g_grad].max)
+		local errMsg = string.format( "%då…ƒå®å¯„å”®ä»·æ ¼ä¸å¾—é«˜äº%dé‡‘", tonumber(nYuanbao), g_YuanBao_Limit[g_grad].max)
 		PushDebugMessage(errMsg)
 		return
 	end 
 	
 	if( tonumber(nHaveYuanbao) < tonumber(nYuanbao) +  tonumber(nYuanbao)*2/100) then
 		local tmpnum = tonumber(nYuanbao) +  tonumber(nYuanbao)*2/100;
-		PushDebugMessage("ÄúÉíÉÏµÄÔª±¦ÊıÁ¿²»×ã"..tmpnum.."¸ö£¬ÇëÖØĞÂÑ¡Ôñ¡£")
+		PushDebugMessage("æ‚¨èº«ä¸Šçš„å…ƒå®æ•°é‡ä¸è¶³"..tmpnum.."ä¸ªï¼Œè¯·é‡æ–°é€‰æ‹©ã€‚")
 		return
 	end
-	--ÅĞ¶Ïok £¬µ÷º¯ÊıÈ¥Ò²
+	--åˆ¤æ–­ok ï¼Œè°ƒå‡½æ•°å»ä¹Ÿ
 	Clear_XSCRIPT();
 		Set_XSCRIPT_Function_Name("Sell");
 		Set_XSCRIPT_ScriptID(800116);
@@ -137,11 +137,11 @@ function YuanBao_G_CheckIfOK(idx)
 	elseif(idx == 2) then
 		nNum = tonumber(YuanBao_G_InputMoney_Silver : GetText());
 		Ctl = YuanBao_G_InputMoney_Silver;
-		szErr = "Ö»ÔÊĞíÊäÈëĞ¡ÓÚ100µÄÖµ£¡";
+		szErr = "åªå…è®¸è¾“å…¥å°äº100çš„å€¼ï¼";
 	elseif(idx == 3) then
 		nNum = tonumber(YuanBao_G_InputMoney_CopperCoin : GetText());
 		Ctl = YuanBao_G_InputMoney_CopperCoin;
-		szErr = "Ö»ÔÊĞíÊäÈëĞ¡ÓÚ100µÄÖµ£¡";
+		szErr = "åªå…è®¸è¾“å…¥å°äº100çš„å€¼ï¼";
 	end
 	if(szErr ==nil or Ctl == nil)then
 		return

@@ -1,5 +1,5 @@
---ËæÉíÔª±¦ NPC
---×¢Òâ±¾½Å±¾º¬ÓĞËæÉíÔª±¦Ïà¹Ø¹¦ÄÜ£¬ÇëÒ»¶¨²ÎÕÕÏÖÓĞµÄÀı×Ó½øĞĞĞŞ¸Ä¡£
+--éšèº«å…ƒå® NPC
+--æ³¨æ„æœ¬è„šæœ¬å«æœ‰éšèº«å…ƒå®ç›¸å…³åŠŸèƒ½ï¼Œè¯·ä¸€å®šå‚ç…§ç°æœ‰çš„ä¾‹å­è¿›è¡Œä¿®æ”¹ã€‚
 
 x181003_g_scriptId 	= 181003
 x181003_g_buyrate 	= 0.5
@@ -7,137 +7,137 @@ x181003_g_buyrate 	= 0.5
 x181003_g_shoptableindex=120
 x181003_g_zengdianshop=121
 
-x181003_g_goodact		= 1		--Ôª±¦ÉÌµê
-x181003_g_buyact	 	= 2		--¶Ò»»Ôª±¦
-x181003_g_ticketact = 3		--¶Ò»»Ôª±¦Æ±
-x181003_g_zdianact	= 4		--ÔùµãÉÌµê
-x181003_g_gotodali	= 5		--·µ»ØÂåÑô
+x181003_g_goodact		= 1		--å…ƒå®å•†åº—
+x181003_g_buyact	 	= 2		--å…‘æ¢å…ƒå®
+x181003_g_ticketact = 3		--å…‘æ¢å…ƒå®ç¥¨
+x181003_g_zdianact	= 4		--èµ ç‚¹å•†åº—
+x181003_g_gotodali	= 5		--è¿”å›æ´›é˜³
 
-x181003_g_normalzdianshop	= 6		--ÆÕÍ¨ÔöµãÉÌµê
-x181003_g_lv1zdianshop	= 7			--Ò»¼¶²ÄÁÏ
-x181003_g_lv2zdianshop	= 8			--¶ş¼¶²ÄÁÏ
-x181003_g_lv3zdianshop	= 9			--Èı¼¶²ÄÁÏ
-x181003_g_lv4zdianshop	= 10		--ËÄ¼¶²ÄÁÏ
-x181003_g_lv5zdianshop	= 11		--Îå¼¶²ÄÁÏ
-x181003_g_lv6zdianshop	= 12		--Áù¼¶²ÄÁÏ
-x181003_g_lv7zdianshop	= 13		--Æß¼¶²ÄÁÏ
-x181003_g_lv8zdianshop	= 14		--°Ë¼¶²ÄÁÏ
-x181003_g_lv9zdianshop	= 15		--¾Å¼¶²ÄÁÏ
-x181003_g_lv10zdianshop	= 16		--Ê®¼¶²ÄÁÏ
-x181003_g_newprize	= 17		--²é¿´ÖĞ½±
-x181003_g_YuanBaoIntro	= 18	--Ôª±¦½éÉÜ
+x181003_g_normalzdianshop	= 6		--æ™®é€šå¢ç‚¹å•†åº—
+x181003_g_lv1zdianshop	= 7			--ä¸€çº§ææ–™
+x181003_g_lv2zdianshop	= 8			--äºŒçº§ææ–™
+x181003_g_lv3zdianshop	= 9			--ä¸‰çº§ææ–™
+x181003_g_lv4zdianshop	= 10		--å››çº§ææ–™
+x181003_g_lv5zdianshop	= 11		--äº”çº§ææ–™
+x181003_g_lv6zdianshop	= 12		--å…­çº§ææ–™
+x181003_g_lv7zdianshop	= 13		--ä¸ƒçº§ææ–™
+x181003_g_lv8zdianshop	= 14		--å…«çº§ææ–™
+x181003_g_lv9zdianshop	= 15		--ä¹çº§ææ–™
+x181003_g_lv10zdianshop	= 16		--åçº§ææ–™
+x181003_g_newprize	= 17		--æŸ¥çœ‹ä¸­å¥–
+x181003_g_YuanBaoIntro	= 18	--å…ƒå®ä»‹ç»
 
-x181003_g_leave			= 20	--Àë¿ª
-x181003_g_return		= 21	--·µ»Ø(Ö÷²Ëµ¥)
-x181003_g_return1		= 22	--·µ»Ø(Ôª±¦ÉÌµê)
-x181003_g_DZYBact		= 23	--´òÔìÍ¼Ôª±¦ÉÌµê
+x181003_g_leave			= 20	--ç¦»å¼€
+x181003_g_return		= 21	--è¿”å›(ä¸»èœå•)
+x181003_g_return1		= 22	--è¿”å›(å…ƒå®å•†åº—)
+x181003_g_DZYBact		= 23	--æ‰“é€ å›¾å…ƒå®å•†åº—
 
---Ôª±¦ÉÌµê	-modify by xindefeng
+--å…ƒå®å•†åº—	-modify by xindefeng
 x181003_g_YBShop		=
 {
-	--Ë÷Òı£¨Ë³ĞòµİÔö 1-N£©£¬name = ÉÌµêÃû³Æ£¬id = ÉÌµêID£¬key = GetNumText£¨Ë³ĞòµİÔö 101-N£©
-	[1]	= { name = "#gff00f0ÈÈÂôÉÌµê", id = 151, key = 101 },
-	[2]	= { name = "#c6de4feÌìÁú³èÎï¹İ", id = -1, key = 102 },
-	[3]	= { name = "Ìì¹¬ÓùÂí¼à", id = 134, key = 103 },	
-	[4]	= { name = "#c6de4feÌìÁúĞÎÏó¹İ", id = -1, key = 104 },
-	[5]	= { name = "ä¯Ñô»¨ÅÚµê", id = 132, key = 105 },
-	[6]	= { name = "´º³Ç°Ù»¨¹¬", id = 133, key = 106 },	
-	[7]	= { name = "±âÈµÁéÒ©µê", id = 136, key = 107 },
-	[8]	= { name = "#gff00f0ÌÒ±¤ÆæÎïµê", id = 137, key = 108 },	
-	[9] = { name = "#c6de4feÌìÁú±¦Ê¯Õ«", id = -1, key = 109 },	
-	[10]	= { name = "»¹Ê©Ë®¸ó", id = 146, key = 110 },
-	[11]	= { name = "ÈıÇåÉñ·û¹Û", id = 144, key = 111 }
+	--ç´¢å¼•ï¼ˆé¡ºåºé€’å¢ 1-Nï¼‰ï¼Œname = å•†åº—åç§°ï¼Œid = å•†åº—IDï¼Œkey = GetNumTextï¼ˆé¡ºåºé€’å¢ 101-Nï¼‰
+	[1]	= { name = "#gff00f0çƒ­å–å•†åº—", id = 151, key = 101 },
+	[2]	= { name = "#c6de4feå¤©é¾™å® ç‰©é¦†", id = -1, key = 102 },
+	[3]	= { name = "å¤©å®«å¾¡é©¬ç›‘", id = 134, key = 103 },	
+	[4]	= { name = "#c6de4feå¤©é¾™å½¢è±¡é¦†", id = -1, key = 104 },
+	[5]	= { name = "æµé˜³èŠ±ç‚®åº—", id = 132, key = 105 },
+	[6]	= { name = "æ˜¥åŸç™¾èŠ±å®«", id = 133, key = 106 },	
+	[7]	= { name = "æ‰é¹Šçµè¯åº—", id = 136, key = 107 },
+	[8]	= { name = "#gff00f0æ¡ƒå ¡å¥‡ç‰©åº—", id = 137, key = 108 },	
+	[9] = { name = "#c6de4feå¤©é¾™å®çŸ³æ–‹", id = -1, key = 109 },	
+	[10]	= { name = "è¿˜æ–½æ°´é˜", id = 146, key = 110 },
+	[11]	= { name = "ä¸‰æ¸…ç¥ç¬¦è§‚", id = 144, key = 111 }
 }
 
---Ôª±¦ÕäÊŞµê--add by xindefeng
+--å…ƒå®çå…½åº—--add by xindefeng
 x181003_g_YBPetShops =
 {
-	[1]	= { name = "ö­ö­ÕäÊŞ¹İ", id = 152, key = 112 },
-	[2]	= { name = "Æ®Æ®ÕäÊŞ¹İ", id = 135, key = 113 }
+	[1]	= { name = "éœéœçå…½é¦†", id = 152, key = 112 },
+	[2]	= { name = "é£˜é£˜çå…½é¦†", id = 135, key = 113 }
 }
 
---Ôª±¦ĞÎÏóµê--add by xindefeng
+--å…ƒå®å½¢è±¡åº—--add by xindefeng
 x181003_g_YBXingXiangShops =
 {
-	[1]	= { name = "Ã×À¼Ê±×°µê", id = 120, key = 114 },
-	[2] = { name = "ÈçÒâ±äÉíÕ«", id = 181, key = 115 },
-	[3] = { name = "ÌìÑï·¢ÒÕ¹İ", id = 145, key = 116 },
-	[4] = { name = "À¼ÓêÃÀÈİ·»", id = 182, key = 117 }	--add by zchw
+	[1]	= { name = "ç±³å…°æ—¶è£…åº—", id = 120, key = 114 },
+	[2] = { name = "å¦‚æ„å˜èº«æ–‹", id = 181, key = 115 },
+	[3] = { name = "å¤©æ‰¬å‘è‰ºé¦†", id = 145, key = 116 },
+	[4] = { name = "å…°é›¨ç¾å®¹åŠ", id = 182, key = 117 }	--add by zchw
 }
 
---Ôª±¦±¦Ê¯µê--add by xindefeng
+--å…ƒå®å®çŸ³åº—--add by xindefeng
 x181003_g_YBBaoshiShops =
 {
-	[1]	= { name = "´óÀí±¦Ê¯Õ«", id = 149, key = 118 },
-	[2]	= { name = "ËÕÖİ±¦Ê¯Õ«", id = 150, key = 119 },
-	[3]	= { name = "ÂåÑô±¦Ê¯Õ«", id = 178, key = 120 },
-	[4]	= { name = "#gff00f0±¦Ê¯¾«»ªµê", id = 198, key = 132 }   -- added by houzhifang in 20081107 tt:40793; 120--131±»ÓÃ¹ıÁË
+	[1]	= { name = "å¤§ç†å®çŸ³æ–‹", id = 149, key = 118 },
+	[2]	= { name = "è‹å·å®çŸ³æ–‹", id = 150, key = 119 },
+	[3]	= { name = "æ´›é˜³å®çŸ³æ–‹", id = 178, key = 120 },
+	[4]	= { name = "#gff00f0å®çŸ³ç²¾ååº—", id = 198, key = 132 }   -- added by houzhifang in 20081107 tt:40793; 120--131è¢«ç”¨è¿‡äº†
 }
 
---´òÔìÍ¼ÉÌµê
+--æ‰“é€ å›¾å•†åº—
 x181003_g_DZYBShop	=
 {
-	--Ë÷Òı£¨Ë³ĞòµİÔö 1-N£©£¬name = ÉÌµêÃû³Æ£¬id = ÉÌµêID£¬key = GetNumText£¨Ë³ĞòµİÔö 201-N£©
-	[1]	= { name = "µ¶¸«ºÍÇ¹°ô´òÔìÍ¼", id = 156, key = 201 },
-	[2]	= { name = "µ¥¶ÌºÍË«¶Ì´òÔìÍ¼", id = 157, key = 202 },
-	[3]	= { name = "ÉÈºÍ»·´òÔìÍ¼", id = 158, key = 203 },
-	[4]	= { name = "Ã±×ÓºÍÒÂ·ş´òÔìÍ¼", id = 159, key = 204 },
-	[5]	= { name = "ÊÖÌ×ºÍĞ¬×Ó´òÔìÍ¼", id = 160, key = 205 },
-	[6]	= { name = "»¤ÍóºÍ»¤¼ç´òÔìÍ¼", id = 161, key = 206 },
-	[7]	= { name = "Ñü´ø´òÔìÍ¼", id = 162, key = 207 },
-	[8]= { name = "ÏîÁ´´òÔìÍ¼", id = 163, key = 208 },
-	[9]	= { name = "½äÖ¸´òÔìÍ¼", id = 164, key = 209 },
-	[10]	= { name = "»¤·û´òÔìÍ¼", id = 165, key = 210 },
+	--ç´¢å¼•ï¼ˆé¡ºåºé€’å¢ 1-Nï¼‰ï¼Œname = å•†åº—åç§°ï¼Œid = å•†åº—IDï¼Œkey = GetNumTextï¼ˆé¡ºåºé€’å¢ 201-Nï¼‰
+	[1]	= { name = "åˆ€æ–§å’Œæªæ£’æ‰“é€ å›¾", id = 156, key = 201 },
+	[2]	= { name = "å•çŸ­å’ŒåŒçŸ­æ‰“é€ å›¾", id = 157, key = 202 },
+	[3]	= { name = "æ‰‡å’Œç¯æ‰“é€ å›¾", id = 158, key = 203 },
+	[4]	= { name = "å¸½å­å’Œè¡£æœæ‰“é€ å›¾", id = 159, key = 204 },
+	[5]	= { name = "æ‰‹å¥—å’Œé‹å­æ‰“é€ å›¾", id = 160, key = 205 },
+	[6]	= { name = "æŠ¤è…•å’ŒæŠ¤è‚©æ‰“é€ å›¾", id = 161, key = 206 },
+	[7]	= { name = "è…°å¸¦æ‰“é€ å›¾", id = 162, key = 207 },
+	[8]= { name = "é¡¹é“¾æ‰“é€ å›¾", id = 163, key = 208 },
+	[9]	= { name = "æˆ’æŒ‡æ‰“é€ å›¾", id = 164, key = 209 },
+	[10]	= { name = "æŠ¤ç¬¦æ‰“é€ å›¾", id = 165, key = 210 },
 }
 
---ä¯Ñô»¨ÅÚµê
+--æµé˜³èŠ±ç‚®åº—
 x181003_g_YBHuaPaoShops =
 {
-	[1]	= { name = "»ğÊ÷Òø»¨", id = 190, key = 300 },
-	[2]	= { name = "½ÚÈÕÏ²Çì", id = 191, key = 301 },
-	[3]	= { name = "Çã³ÇÖ®×Ë", id = 192, key = 302 },
+	[1]	= { name = "ç«æ ‘é“¶èŠ±", id = 190, key = 300 },
+	[2]	= { name = "èŠ‚æ—¥å–œåº†", id = 191, key = 301 },
+	[3]	= { name = "å€¾åŸä¹‹å§¿", id = 192, key = 302 },
 }
 
---ÌÒ±¤ÆæÎïµê
+--æ¡ƒå ¡å¥‡ç‰©åº—
 x181003_g_YBQiWuShops =
 {
-	[1]	= { name = "ÁáççÊ¯Í·¼Ç", id = 193, key = 303 },
-	[2]	= { name = "ÒìÊŞ¼Ó¹¤·»", id = 194, key = 304 },
-	[3]	= { name = "ÄÏ±±ÔÓ»õµê", id = 195, key = 305 },
-	[4]	= { name = "Ô­ÌÒ±¤ÆæÎïµê", id = 137, key = 306 },
+	[1]	= { name = "ç²ç‘çŸ³å¤´è®°", id = 193, key = 303 },
+	[2]	= { name = "å¼‚å…½åŠ å·¥åŠ", id = 194, key = 304 },
+	[3]	= { name = "å—åŒ—æ‚è´§åº—", id = 195, key = 305 },
+	[4]	= { name = "åŸæ¡ƒå ¡å¥‡ç‰©åº—", id = 137, key = 306 },
 }
 
---ÈÈÂôÉÌµê
+--çƒ­å–å•†åº—
 x181003_g_YBReMaiShops =
 {
-	[1]	= { name = "ĞÂÆ·ÉÏ¼Ü", id = 188, key = 307 },
-	[2] = { name = "ÈËÆøÉÌÆ·", id = 189, key = 309 },
+	[1]	= { name = "æ–°å“ä¸Šæ¶", id = 188, key = 307 },
+	[2] = { name = "äººæ°”å•†å“", id = 189, key = 309 },
 }
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x181003_OnDefaultEvent( sceneId, selfId, targetId )
 	if targetId == -1 then
 		x181003_OnEventRequest( sceneId, selfId, targetId, nil )
 	else
 		BeginEvent( sceneId )
---			local strText = "    ÓĞÇ®ÄÜÊ¹¹íÍÆÄ¥£¬ËäÈ»½­ºşµ±ÖĞÒÔÎäÁ¦ÎªÉÏ£¬µ«ÊÇÓĞÁËÔª±¦¿ÉÄÜ»áÊ¹Ô­À´ºÜ¶à±È½ÏÄÑ°ìµÄÊÂÇé±äµÃ¼òµ¥ÆğÀ´£¬ÄúÏë×öĞ©Ê²Ã´ÄØ£¿"
+--			local strText = "    æœ‰é’±èƒ½ä½¿é¬¼æ¨ç£¨ï¼Œè™½ç„¶æ±Ÿæ¹–å½“ä¸­ä»¥æ­¦åŠ›ä¸ºä¸Šï¼Œä½†æ˜¯æœ‰äº†å…ƒå®å¯èƒ½ä¼šä½¿åŸæ¥å¾ˆå¤šæ¯”è¾ƒéš¾åŠçš„äº‹æƒ…å˜å¾—ç®€å•èµ·æ¥ï¼Œæ‚¨æƒ³åšäº›ä»€ä¹ˆå‘¢ï¼Ÿ"
 --			AddText( sceneId, strText )
---			AddNumText( sceneId, x181003_g_scriptId, "ÎÒÏë¹ºÂòÉÌÆ·", 2, x181003_g_goodact)
+--			AddNumText( sceneId, x181003_g_scriptId, "æˆ‘æƒ³è´­ä¹°å•†å“", 2, x181003_g_goodact)
 --			if targetId >= 0 then
---				AddNumText( sceneId, x181003_g_scriptId, "ÎÒÏë¶Ò»»Ôª±¦", 2, x181003_g_buyact)
+--				AddNumText( sceneId, x181003_g_scriptId, "æˆ‘æƒ³å…‘æ¢å…ƒå®", 2, x181003_g_buyact)
 --				if IsShutout( sceneId, selfId, ONOFF_T_YBCASH ) == 0 then
---					AddNumText( sceneId, x181003_g_scriptId, "ÎÒÏë¶Ò»»Ôª±¦Æ±", 2, x181003_g_ticketact)
+--					AddNumText( sceneId, x181003_g_scriptId, "æˆ‘æƒ³å…‘æ¢å…ƒå®ç¥¨", 2, x181003_g_ticketact)
 --				end
 --			else
---				targetId = -1	--ÎªÁËÄÜÕı³£µ¯³öÑ¡Ïî
+--				targetId = -1	--ä¸ºäº†èƒ½æ­£å¸¸å¼¹å‡ºé€‰é¡¹
 --			end
 			for i = 1, getn( x181003_g_YBShop ) do
 				AddNumText( sceneId, x181003_g_scriptId, x181003_g_YBShop[i].name, 7, x181003_g_YBShop[i].key )
 			end
-			AddNumText(sceneId,x181003_g_scriptId, "´òÔìÍ¼×¨Âô", 7, x181003_g_DZYBact)
-			AddNumText( sceneId, x181003_g_scriptId, "Ôª±¦ºÍÔùµãÉÌµê½éÉÜ", 11, x181003_g_YuanBaoIntro)
+			AddNumText(sceneId,x181003_g_scriptId, "æ‰“é€ å›¾ä¸“å–", 7, x181003_g_DZYBact)
+			AddNumText( sceneId, x181003_g_scriptId, "å…ƒå®å’Œèµ ç‚¹å•†åº—ä»‹ç»", 11, x181003_g_YuanBaoIntro)
 			if targetId < 0 then
 				targetId = -1
 			end
@@ -147,11 +147,11 @@ function x181003_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x181003_OnEventRequest( sceneId, selfId, targetId, eventId )
 	if GetNumText() == x181003_g_buyact then
-		--ÏÈÑ¯ÎÊ×Ô¼ºµÄÊ£ÓàµãÊı
+		--å…ˆè¯¢é—®è‡ªå·±çš„å‰©ä½™ç‚¹æ•°
 		CallScriptFunction( PRIZE_SCRIPT_ID, "AskPoint", sceneId, selfId )
 		
 		BeginUICommand( sceneId )
@@ -163,47 +163,47 @@ function x181003_OnEventRequest( sceneId, selfId, targetId, eventId )
 		CallScriptFunction( PRIZE_SCRIPT_ID, "AskPrize", sceneId, selfId)
 	elseif GetNumText() == x181003_g_return then
 		local nID = targetId;
-		if nID < 0 then nID = -2 end -- -2ÊÇ²Ëµ¥£¬-1ÊÇÏìÓ¦
+		if nID < 0 then nID = -2 end -- -2æ˜¯èœå•ï¼Œ-1æ˜¯å“åº”
 		x181003_OnDefaultEvent( sceneId, selfId, nID )
 	elseif GetNumText() == x181003_g_goodact or GetNumText() == x181003_g_return1 then
 --		BeginEvent( sceneId )
 --			for i = 1, getn( x181003_g_YBShop ) do
 --				AddNumText( sceneId, x181003_g_scriptId, x181003_g_YBShop[i].name, 7, x181003_g_YBShop[i].key )
 --			end
---			AddNumText(sceneId,x181003_g_scriptId, "´òÔìÍ¼×¨Âô", 7, x181003_g_DZYBact)
---			AddNumText( sceneId, x181003_g_scriptId, "·µ»ØÉÏÒ»Ò³", -1, x181003_g_return)
+--			AddNumText(sceneId,x181003_g_scriptId, "æ‰“é€ å›¾ä¸“å–", 7, x181003_g_DZYBact)
+--			AddNumText( sceneId, x181003_g_scriptId, "è¿”å›ä¸Šä¸€é¡µ", -1, x181003_g_return)
 --		EndEvent( sceneId )
 --		DispatchEventList( sceneId, selfId, targetId )
 		local nID = targetId;
-		if nID < 0 then nID = -2 end -- -2ÊÇ²Ëµ¥£¬-1ÊÇÏìÓ¦
+		if nID < 0 then nID = -2 end -- -2æ˜¯èœå•ï¼Œ-1æ˜¯å“åº”
 		x181003_OnDefaultEvent( sceneId, selfId, nID )
 	elseif GetNumText() == x181003_g_DZYBact then
 		BeginEvent( sceneId )
-			local strText = "  Çë¸ù¾İĞèÇóÑ¡Ôñ²»Í¬µÄ´òÔìÍ¼ÉÌµê£º"
+			local strText = "  è¯·æ ¹æ®éœ€æ±‚é€‰æ‹©ä¸åŒçš„æ‰“é€ å›¾å•†åº—ï¼š"
 			AddText( sceneId, strText )
 			
 			for i = 1, getn( x181003_g_DZYBShop ) do
 				AddNumText( sceneId, x181003_g_scriptId, x181003_g_DZYBShop[i].name, 7, x181003_g_DZYBShop[i].key )
 			end
-			AddNumText( sceneId, x181003_g_scriptId, "·µ»ØÉÏÒ»Ò³", -1, x181003_g_return1)
+			AddNumText( sceneId, x181003_g_scriptId, "è¿”å›ä¸Šä¸€é¡µ", -1, x181003_g_return1)
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 	elseif GetNumText() == x181003_g_zdianact then
 		BeginEvent( sceneId )
-			strText = "  Çë¸ù¾İĞèÇóÑ¡Ôñ²»Í¬µÄÔùµãÉÌµê£º"
+			strText = "  è¯·æ ¹æ®éœ€æ±‚é€‰æ‹©ä¸åŒçš„èµ ç‚¹å•†åº—ï¼š"
 			AddText( sceneId, strText )
-			AddNumText( sceneId, x181003_g_scriptId, "ÆÕÍ¨ÔùµãÉÌÆ·", 7, x181003_g_normalzdianshop)
-			AddNumText( sceneId, x181003_g_scriptId, "Ò»¼¶²ÄÁÏ ", 7, x181003_g_lv1zdianshop)
-			AddNumText( sceneId, x181003_g_scriptId, "¶ş¼¶²ÄÁÏ ", 7, x181003_g_lv2zdianshop)
-			AddNumText( sceneId, x181003_g_scriptId, "Èı¼¶²ÄÁÏ ", 7, x181003_g_lv3zdianshop)
-			AddNumText( sceneId, x181003_g_scriptId, "ËÄ¼¶²ÄÁÏ ", 7, x181003_g_lv4zdianshop)
-			AddNumText( sceneId, x181003_g_scriptId, "Îå¼¶²ÄÁÏ ", 7, x181003_g_lv5zdianshop)
-			AddNumText( sceneId, x181003_g_scriptId, "Áù¼¶²ÄÁÏ ", 7, x181003_g_lv6zdianshop)
-			AddNumText( sceneId, x181003_g_scriptId, "Æß¼¶²ÄÁÏ ", 7, x181003_g_lv7zdianshop)
-			AddNumText( sceneId, x181003_g_scriptId, "°Ë¼¶²ÄÁÏ ", 7, x181003_g_lv8zdianshop)
-			AddNumText( sceneId, x181003_g_scriptId, "¾Å¼¶²ÄÁÏ ", 7, x181003_g_lv9zdianshop)
-			AddNumText( sceneId, x181003_g_scriptId, "Ê®¼¶²ÄÁÏ ", 7, x181003_g_lv10zdianshop)
-			AddNumText( sceneId, x181003_g_scriptId, "·µ»ØÉÏÒ»Ò³", -1, x181003_g_return)
+			AddNumText( sceneId, x181003_g_scriptId, "æ™®é€šèµ ç‚¹å•†å“", 7, x181003_g_normalzdianshop)
+			AddNumText( sceneId, x181003_g_scriptId, "ä¸€çº§ææ–™ ", 7, x181003_g_lv1zdianshop)
+			AddNumText( sceneId, x181003_g_scriptId, "äºŒçº§ææ–™ ", 7, x181003_g_lv2zdianshop)
+			AddNumText( sceneId, x181003_g_scriptId, "ä¸‰çº§ææ–™ ", 7, x181003_g_lv3zdianshop)
+			AddNumText( sceneId, x181003_g_scriptId, "å››çº§ææ–™ ", 7, x181003_g_lv4zdianshop)
+			AddNumText( sceneId, x181003_g_scriptId, "äº”çº§ææ–™ ", 7, x181003_g_lv5zdianshop)
+			AddNumText( sceneId, x181003_g_scriptId, "å…­çº§ææ–™ ", 7, x181003_g_lv6zdianshop)
+			AddNumText( sceneId, x181003_g_scriptId, "ä¸ƒçº§ææ–™ ", 7, x181003_g_lv7zdianshop)
+			AddNumText( sceneId, x181003_g_scriptId, "å…«çº§ææ–™ ", 7, x181003_g_lv8zdianshop)
+			AddNumText( sceneId, x181003_g_scriptId, "ä¹çº§ææ–™ ", 7, x181003_g_lv9zdianshop)
+			AddNumText( sceneId, x181003_g_scriptId, "åçº§ææ–™ ", 7, x181003_g_lv10zdianshop)
+			AddNumText( sceneId, x181003_g_scriptId, "è¿”å›ä¸Šä¸€é¡µ", -1, x181003_g_return)
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 	elseif GetNumText() == x181003_g_gotodali then
@@ -246,58 +246,58 @@ function x181003_OnEventRequest( sceneId, selfId, targetId, eventId )
 			AddText( sceneId, "#{INTRO_YUANBAO}" )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
-	elseif GetNumText() == 102 then	--ÌìÁúÕäÊŞµê	--add by xindefeng
+	elseif GetNumText() == 102 then	--å¤©é¾™çå…½åº—	--add by xindefeng
 		BeginEvent( sceneId )
 		for i = 1, getn( x181003_g_YBPetShops ) do
 			AddNumText( sceneId, x181003_g_scriptId, x181003_g_YBPetShops[i].name, 7, x181003_g_YBPetShops[i].key )
 		end
-		AddNumText( sceneId, x181003_g_scriptId, "·µ»ØÉÏÒ»Ò³", -1, x181003_g_return1)
+		AddNumText( sceneId, x181003_g_scriptId, "è¿”å›ä¸Šä¸€é¡µ", -1, x181003_g_return1)
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
-	elseif GetNumText() == 104 then	--ÌìÁúĞÎÏó¹İ	--add by xindefeng
+	elseif GetNumText() == 104 then	--å¤©é¾™å½¢è±¡é¦†	--add by xindefeng
 		BeginEvent( sceneId )
 		for i = 1, getn( x181003_g_YBXingXiangShops ) do
 			AddNumText( sceneId, x181003_g_scriptId, x181003_g_YBXingXiangShops[i].name, 7, x181003_g_YBXingXiangShops[i].key )
 		end
-		AddNumText( sceneId, x181003_g_scriptId, "·µ»ØÉÏÒ»Ò³", -1, x181003_g_return1)
+		AddNumText( sceneId, x181003_g_scriptId, "è¿”å›ä¸Šä¸€é¡µ", -1, x181003_g_return1)
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
-	elseif GetNumText() == 109 then	--ÌìÁú±¦Ê¯µê--add by xindefeng
+	elseif GetNumText() == 109 then	--å¤©é¾™å®çŸ³åº—--add by xindefeng
 		BeginEvent( sceneId )
 		for i = 1, getn( x181003_g_YBBaoshiShops ) do
 			AddNumText( sceneId, x181003_g_scriptId, x181003_g_YBBaoshiShops[i].name, 7, x181003_g_YBBaoshiShops[i].key )
 		end
-		AddNumText( sceneId, x181003_g_scriptId, "·µ»ØÉÏÒ»Ò³", -1, x181003_g_return1)
+		AddNumText( sceneId, x181003_g_scriptId, "è¿”å›ä¸Šä¸€é¡µ", -1, x181003_g_return1)
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )		
-	elseif GetNumText() == 105 then	--ä¯Ñô»¨ÅÚµê
+	elseif GetNumText() == 105 then	--æµé˜³èŠ±ç‚®åº—
 		BeginEvent( sceneId )
 		for i = 1, getn( x181003_g_YBHuaPaoShops ) do
 			AddNumText( sceneId, x181003_g_scriptId, x181003_g_YBHuaPaoShops[i].name, 7, x181003_g_YBHuaPaoShops[i].key )
 		end
-		AddNumText( sceneId, x181003_g_scriptId, "·µ»ØÉÏÒ»Ò³", -1, x181003_g_return1)
+		AddNumText( sceneId, x181003_g_scriptId, "è¿”å›ä¸Šä¸€é¡µ", -1, x181003_g_return1)
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
-	elseif GetNumText() == 108 then	--ÌÒ±¤ÆæÎïµê
+	elseif GetNumText() == 108 then	--æ¡ƒå ¡å¥‡ç‰©åº—
 		BeginEvent( sceneId )
 		for i = 1, getn( x181003_g_YBQiWuShops ) do
 			AddNumText( sceneId, x181003_g_scriptId, x181003_g_YBQiWuShops[i].name, 7, x181003_g_YBQiWuShops[i].key )
 		end
-		AddNumText( sceneId, x181003_g_scriptId, "·µ»ØÉÏÒ»Ò³", -1, x181003_g_return1)
+		AddNumText( sceneId, x181003_g_scriptId, "è¿”å›ä¸Šä¸€é¡µ", -1, x181003_g_return1)
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
-	elseif GetNumText() == 101 then	--ÈÈÂôÉÌµê
+	elseif GetNumText() == 101 then	--çƒ­å–å•†åº—
 		BeginEvent( sceneId )
 		for i = 1, getn( x181003_g_YBReMaiShops ) do
 			AddNumText( sceneId, x181003_g_scriptId, x181003_g_YBReMaiShops[i].name, 7, x181003_g_YBReMaiShops[i].key )
 		end
-		AddNumText( sceneId, x181003_g_scriptId, "·µ»ØÉÏÒ»Ò³", -1, x181003_g_return1)
+		AddNumText( sceneId, x181003_g_scriptId, "è¿”å›ä¸Šä¸€é¡µ", -1, x181003_g_return1)
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 	else
-		--Ôª±¦ÉÌµê
+		--å…ƒå®å•†åº—
 		for i = 1, getn( x181003_g_YBShop ) do
-			if (GetNumText() == 102 or GetNumText() == 104 or GetNumText() == 109 or GetNumText() == 105 or GetNumText() == 108 or GetNumText() == 101) then	--ÉÌµêÀàĞÍÑ¡Ïî--add by xindefeng
+			if (GetNumText() == 102 or GetNumText() == 104 or GetNumText() == 109 or GetNumText() == 105 or GetNumText() == 108 or GetNumText() == 101) then	--å•†åº—ç±»å‹é€‰é¡¹--add by xindefeng
 				break
 			end
 			if GetNumText() == x181003_g_YBShop[i].key then
@@ -305,49 +305,49 @@ function x181003_OnEventRequest( sceneId, selfId, targetId, eventId )
 				break
 			end
 		end
-		--ÌìÁúÕäÊŞµê--add by xindefeng
+		--å¤©é¾™çå…½åº—--add by xindefeng
 		for i = 1, getn( x181003_g_YBPetShops ) do
 			if GetNumText() == x181003_g_YBPetShops[i].key then
 				x181003_NewDispatchShopItem( sceneId, selfId, targetId, x181003_g_YBPetShops[i].id )
 				break
 			end
 		end
-		--ÌìÁúĞÎÏó¹İ--add by xindefeng
+		--å¤©é¾™å½¢è±¡é¦†--add by xindefeng
 		for i = 1, getn( x181003_g_YBXingXiangShops ) do
 			if GetNumText() == x181003_g_YBXingXiangShops[i].key then
 				x181003_NewDispatchShopItem( sceneId, selfId, targetId, x181003_g_YBXingXiangShops[i].id )
 				break
 			end
 		end
-		--±¦Ê¯ÉÌµê--add by xindefeng
+		--å®çŸ³å•†åº—--add by xindefeng
 		for i = 1, getn( x181003_g_YBBaoshiShops ) do
 			if GetNumText() == x181003_g_YBBaoshiShops[i].key then
 				x181003_NewDispatchShopItem( sceneId, selfId, targetId, x181003_g_YBBaoshiShops[i].id )
 				break
 			end
 		end
-		--´òÔìÍ¼×¨Âô
+		--æ‰“é€ å›¾ä¸“å–
 		for i = 1, getn( x181003_g_DZYBShop ) do
 			if GetNumText() == x181003_g_DZYBShop[i].key then
 				x181003_NewDispatchShopItem( sceneId, selfId, targetId, x181003_g_DZYBShop[i].id )
 				break
 			end
 		end
-		--ä¯Ñô»¨ÅÚµê
+		--æµé˜³èŠ±ç‚®åº—
 		for i = 1, getn( x181003_g_YBHuaPaoShops ) do
 			if GetNumText() == x181003_g_YBHuaPaoShops[i].key then
 				x181003_NewDispatchShopItem( sceneId, selfId, targetId, x181003_g_YBHuaPaoShops[i].id )
 				break
 			end
 		end
-		--ÌÒ±¤ÆæÎïµê
+		--æ¡ƒå ¡å¥‡ç‰©åº—
 		for i = 1, getn( x181003_g_YBQiWuShops ) do
 			if GetNumText() == x181003_g_YBQiWuShops[i].key then
 				x181003_NewDispatchShopItem( sceneId, selfId, targetId, x181003_g_YBQiWuShops[i].id )
 				break
 			end
 		end
-		--ÈÈÂôÉÌµê
+		--çƒ­å–å•†åº—
 		for i = 1, getn( x181003_g_YBReMaiShops ) do
 			if GetNumText() == x181003_g_YBReMaiShops[i].key then
 				x181003_NewDispatchShopItem( sceneId, selfId, targetId, x181003_g_YBReMaiShops[i].id )
@@ -358,10 +358,10 @@ function x181003_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---¿Í»§¶Ë¹ºÂòÔª±¦½Ó¿Ú
+--å®¢æˆ·ç«¯è´­ä¹°å…ƒå®æ¥å£
 --**********************************
 function x181003_BuyYuanbao( sceneId, selfId, nYuanBao )
-	--¹ºÂòÔª±¦
+	--è´­ä¹°å…ƒå®
 	if nYuanBao then
 		if nYuanBao > 0 and nYuanBao <= 10000 then
 			CallScriptFunction( PRIZE_SCRIPT_ID, "AskYuanBao", sceneId, selfId, nYuanBao, nYuanBao*x181003_g_buyrate*1000)
@@ -370,7 +370,7 @@ function x181003_BuyYuanbao( sceneId, selfId, nYuanBao )
 end
 
 --**********************************
---°´ĞèÀ´µ¯³öÉÌµê£¬·ÖÎªËæÉíÉÌµêºÍNPCÉÌµê
+--æŒ‰éœ€æ¥å¼¹å‡ºå•†åº—ï¼Œåˆ†ä¸ºéšèº«å•†åº—å’ŒNPCå•†åº—
 --**********************************
 function x181003_NewDispatchShopItem(sceneId,selfId,targetId,shopId)
 	if targetId >= 0 then	

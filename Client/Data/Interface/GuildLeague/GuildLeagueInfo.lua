@@ -98,7 +98,7 @@ end
 function GuildLeagueInfo_DoChange()
 	if GuildLeagueInfo_Desc:IsVisible() then				
 		--local txt=GuildLeagueInfo_Desc:GetText()
-		--�˴�����ӳ���洢�����ݶ�ȡ�������Ų��ᶪʧ�ַ�ת��
+		--此处必须从程序存储的内容读取，这样才不会丢失字符转义
 		local txt=GuildLeague:GetDescription()
 		GuildLeagueInfo_Desc_Edit:SetText(txt)
 		
@@ -111,7 +111,7 @@ function GuildLeagueInfo_DoChange()
 		GuildLeagueInfo_Desc:SetText(txt)
 				
 		if txt==nil or txt=="" then
-			PushDebugMessage("��û������ͬ������")
+			PushDebugMessage("您没有输入同盟宣言")
 			return
 		end
 		
@@ -135,7 +135,7 @@ end
 function GuildLeagueInfo_Member_List_OnMouseRClick()	
 	local index=GuildLeagueInfo_Member_List:GetSelectItem()
 	if index==-1 then
-		PushDebugMessage("����ѡ��һ��ͬ�˳�Ա��")
+		PushDebugMessage("请先选择一个同盟成员！")
 		return
 	end
 	
@@ -145,7 +145,7 @@ end
 function GuildLeagueInfo_Fire()	
 	local index=GuildLeagueInfo_Member_List:GetSelectItem()
 	if index==-1 then
-		PushDebugMessage("����ѡ��һ��ͬ�˳�Ա��")
+		PushDebugMessage("请先选择一个同盟成员！")
 		return
 	end
 	

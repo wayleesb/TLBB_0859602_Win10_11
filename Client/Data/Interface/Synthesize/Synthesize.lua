@@ -88,9 +88,9 @@ function Synthesize_OnLoad()
 	for i=1,200 do
 		SynthesizePucker[i] = 1;
 	end;
-	Ability_Limit[0] = "ÖıÔì"
-	Ability_Limit[1] = "·ìÈÒ"
-	Ability_Limit[2] = "¹¤ÒÕ"
+	Ability_Limit[0] = "é“¸é€ "
+	Ability_Limit[1] = "ç¼çº«"
+	Ability_Limit[2] = "å·¥è‰º"
 	
 	ShowBindWin = 1
 	
@@ -140,7 +140,7 @@ function Synthesize_OnEvent(event)
 		this:Hide();
 		return;
 -------------------------------------------------
---ÑîÒ«µÄÉè¼Æ£¬ÁõÌúËµ²»Òª£¬ËùÒÔ×¢ÊÍµôÒÔÏÂ¼¸ĞĞ´úÂë
+--æ¨è€€çš„è®¾è®¡ï¼Œåˆ˜é“è¯´ä¸è¦ï¼Œæ‰€ä»¥æ³¨é‡Šæ‰ä»¥ä¸‹å‡ è¡Œä»£ç 
 --	elseif ( event == "TOGLE_SKILL_BOOK" ) then
 --		this:Hide();
 --		return;
@@ -156,25 +156,25 @@ function Synthesize_OnEvent(event)
 		return;
 	elseif ( event == "UNIT_VIGOR" and tostring(arg0) == "player" and this:IsVisible()) then
 		strName = Player : GetData("VIGOR");
-		Synthesize_CurrentlyEnergy1 : SetText("µ±Ç°»îÁ¦£º"..strName)
+		Synthesize_CurrentlyEnergy1 : SetText("å½“å‰æ´»åŠ›ï¼š"..strName)
 		return;
 	elseif ( event == "UNIT_ENERGY" and tostring(arg0) == "player" and this:IsVisible()) then
 		strName = Player : GetData("ENERGY");
-		Synthesize_CurrentlyEnergy2 : SetText("µ±Ç°¾«Á¦£º"..strName) 
+		Synthesize_CurrentlyEnergy2 : SetText("å½“å‰ç²¾åŠ›ï¼š"..strName) 
 		return;
 	elseif ( event == "UNIT_ABILITYEXP" and this:IsVisible()) then
 		strName = Player : GetAbilityInfo(Prescr_Ability,"skillexp");
 		local level= Player:GetAbilityInfo(Prescr_Ability,"level");
 		local max_exp
 		if level > 12 or level < 1 then
-			max_exp = "¡Ş"
+			max_exp = "âˆ"
 		else
 --			max_exp = Max_SkillExp[level]
 			max_exp = LifeAbility : GetLifeAbility_LimitExp(Prescr_Ability,level);
 		end
 		
 		strName = Player : GetAbilityInfo(Prescr_Ability,"skillexp");
-		Synthesize_SkilledGrade:SetText("¼¼ÄÜÊìÁ·¶È£º"..strName.."/"..max_exp);
+		Synthesize_SkilledGrade:SetText("æŠ€èƒ½ç†Ÿç»ƒåº¦ï¼š"..strName.."/"..max_exp);
 		return;
 	elseif ( event == "CHANGE_MAKE_COUNT" ) then
 		Synthesize_MadeAmount : SetText( tonumber(arg0) );
@@ -213,22 +213,22 @@ function Synthesize_UpdateItem()
 		
 		if(nMaxAmount > 0) then
 			if(nLevel >0) then
-				szPrescrName = szPrescrName .. "£¨µÈ¼¶"..nLevel.."£© [" .. nMaxAmount .. "]";
+				szPrescrName = szPrescrName .. "ï¼ˆç­‰çº§"..nLevel.."ï¼‰ [" .. nMaxAmount .. "]";
 			else
 				szPrescrName = szPrescrName .. "    [" .. nMaxAmount .. "]";
 			end
 		elseif(nMaxAmount < 0) then
 			if(nLevel >0) then
-				szPrescrName = szPrescrName .. "£¨µÈ¼¶"..nLevel.."£© [N/A]";
+				szPrescrName = szPrescrName .. "ï¼ˆç­‰çº§"..nLevel.."ï¼‰ [N/A]";
 			else
-				szPrescrName = szPrescrName .. "    [N/A]";--¡Ş
+				szPrescrName = szPrescrName .. "    [N/A]";--âˆ
 			end
 		else
 			--==0
 			if(nLevel >0) then
-				szPrescrName = szPrescrName .. "£¨µÈ¼¶"..nLevel.."£©";
+				szPrescrName = szPrescrName .. "ï¼ˆç­‰çº§"..nLevel.."ï¼‰";
 			else
-				szPrescrName = szPrescrName ;--¡Ş
+				szPrescrName = szPrescrName ;--âˆ
 			end
 		end;
 		
@@ -251,24 +251,24 @@ function Synthesize_Update()
 	
 	strName = Player : GetAbilityInfo(Prescr_Ability,"level");
 	local level = tonumber(strName);
-	Synthesize_Level:SetText("¼¼ÄÜµÈ¼¶£º"..strName);
+	Synthesize_Level:SetText("æŠ€èƒ½ç­‰çº§ï¼š"..strName);
 	
 	local max_exp;
 	if level > 11 or level < 1 then
-		max_exp = "¡Ş"
+		max_exp = "âˆ"
 	else
 --		max_exp = Max_SkillExp[level]
 		max_exp = LifeAbility : GetLifeAbility_LimitExp(Prescr_Ability,level);
 	end
 		
 	strName = Player : GetAbilityInfo(Prescr_Ability,"skillexp");
-	Synthesize_SkilledGrade:SetText("¼¼ÄÜÊìÁ·¶È£º"..strName.."/"..max_exp);
+	Synthesize_SkilledGrade:SetText("æŠ€èƒ½ç†Ÿç»ƒåº¦ï¼š"..strName.."/"..max_exp);
 
 	strName = Player : GetData("VIGOR");
-	Synthesize_CurrentlyEnergy1 : SetText("µ±Ç°»îÁ¦£º"..strName)
+	Synthesize_CurrentlyEnergy1 : SetText("å½“å‰æ´»åŠ›ï¼š"..strName)
 	
 	strName = Player : GetData("ENERGY");
-	Synthesize_CurrentlyEnergy2 : SetText("µ±Ç°¾«Á¦£º"..strName) 
+	Synthesize_CurrentlyEnergy2 : SetText("å½“å‰ç²¾åŠ›ï¼š"..strName) 
 --	if(cur_count <= 1) then
 --		Synthesize_Decrease : Disable();
 --	end
@@ -315,22 +315,22 @@ function Synthesize_Update()
 					
 					if(nMaxAmount > 0) then
 						if(nLevel >0) then
-							szPrescrName = szPrescrName .. "£¨µÈ¼¶"..nLevel.."£© [" .. nMaxAmount .. "]";
+							szPrescrName = szPrescrName .. "ï¼ˆç­‰çº§"..nLevel.."ï¼‰ [" .. nMaxAmount .. "]";
 						else
 							szPrescrName = szPrescrName .. "    [" .. nMaxAmount .. "]";
 						end
 					elseif(nMaxAmount < 0) then
 						if(nLevel >0) then
-							szPrescrName = szPrescrName .. "£¨µÈ¼¶"..nLevel.."£© [N/A]";
+							szPrescrName = szPrescrName .. "ï¼ˆç­‰çº§"..nLevel.."ï¼‰ [N/A]";
 						else
-							szPrescrName = szPrescrName .. "    [N/A]";--¡Ş
+							szPrescrName = szPrescrName .. "    [N/A]";--âˆ
 						end
 					else
 						--==0
 						if(nLevel >0) then
-							szPrescrName = szPrescrName .. "£¨µÈ¼¶"..nLevel.."£©";
+							szPrescrName = szPrescrName .. "ï¼ˆç­‰çº§"..nLevel.."ï¼‰";
 						else
-							szPrescrName = szPrescrName ;--¡Ş
+							szPrescrName = szPrescrName ;--âˆ
 						end
 					end;
 					
@@ -393,7 +393,7 @@ function Synthesize_Minus_Clicked()
 --	end
 end
 
--- add by cuiyinjie 2008-10-25 ÔÚÎ´Ñ¡ÖĞÅä·½Ê±Çå³ıÅä·½ËùĞè²ÄÁÏ
+-- add by cuiyinjie 2008-10-25 åœ¨æœªé€‰ä¸­é…æ–¹æ—¶æ¸…é™¤é…æ–¹æ‰€éœ€ææ–™
 function Synthesize_HideCtrlOnNoSelect()
     local i = 1;
    	for i=1, 4 do
@@ -405,7 +405,7 @@ function Synthesize_HideCtrlOnNoSelect()
 
 	--Synthesize_Item_Frame : Hide();
 	--Synthesize_Item : Hide();
-	Synthesize_Item : SetProperty("ShortImage","");   --ÉèÖÃÎªÎŞÍ¼±ê
+	Synthesize_Item : SetProperty("ShortImage","");   --è®¾ç½®ä¸ºæ— å›¾æ ‡
 	Synthesize_Item_Name_Text : SetText("");
 	Synthesize_Amount : SetText("");
 end
@@ -490,26 +490,26 @@ AxTrace(0,1," here resultid"..resultid)
 	end
 	
 	--4,5,6
-	--ÖıÔì²Ã·ì¹¤ÒÕ
-	--¾«Ìú£¬ÃŞ²¼£¬ÃØÒø
-	--¾«Á¶ - ÖıÔì - 46
-	--¾«ÖÆ - ·ìÈÒ - 47
-	--¾«¹¤ - ¹¤ÒÕ - 48
+	--é“¸é€ è£ç¼å·¥è‰º
+	--ç²¾é“ï¼Œæ£‰å¸ƒï¼Œç§˜é“¶
+	--ç²¾ç‚¼ - é“¸é€  - 46
+	--ç²¾åˆ¶ - ç¼çº« - 47
+	--ç²¾å·¥ - å·¥è‰º - 48
 
 	Synthesize_SpecialMaterialIcon_Frame : Show();
 	Synthesize_SpecialMaterial_Text : Show();
 	if  Prescr_Ability == 46 then
-		Synthesize_SpecialMaterial_WarningText : SetText("#cE6BA00ÇëÔÚÓÒ±ß·ÅÈë´òÔì²ÄÁÏ#cFFFF00¾«Ìú#cE6BA00£¬ÕâÀàÌØÊâ²ÄÁÏ¿ÉÒÔÌáÉı×°±¸µÄÆ·ÖÊ")
-		Synthesize_SpecialMaterial : SetToolTip("¾«Ìú")
-		Synthesize_SpecialMaterial:SetProperty( "DragAcceptName", "N1" );  --´ËÊ±´ò¿ª¾«Á¶½çÃæÁË
+		Synthesize_SpecialMaterial_WarningText : SetText("#cE6BA00è¯·åœ¨å³è¾¹æ”¾å…¥æ‰“é€ ææ–™#cFFFF00ç²¾é“#cE6BA00ï¼Œè¿™ç±»ç‰¹æ®Šææ–™å¯ä»¥æå‡è£…å¤‡çš„å“è´¨")
+		Synthesize_SpecialMaterial : SetToolTip("ç²¾é“")
+		Synthesize_SpecialMaterial:SetProperty( "DragAcceptName", "N1" );  --æ­¤æ—¶æ‰“å¼€ç²¾ç‚¼ç•Œé¢äº†
 	elseif Prescr_Ability == 47 then
-		Synthesize_SpecialMaterial_WarningText : SetText("#cE6BA00ÇëÔÚÓÒ±ß·ÅÈë´òÔì²ÄÁÏ#cFFFF00ÃŞ²¼#cE6BA00£¬ÕâÀàÌØÊâ²ÄÁÏ¿ÉÒÔÌáÉı×°±¸µÄÆ·ÖÊ")
-		Synthesize_SpecialMaterial : SetToolTip("ÃŞ²¼")
-		Synthesize_SpecialMaterial:SetProperty( "DragAcceptName", "N2" ); --´ËÊ±´ò¿ª¾«ÖÆ½çÃæÁË
+		Synthesize_SpecialMaterial_WarningText : SetText("#cE6BA00è¯·åœ¨å³è¾¹æ”¾å…¥æ‰“é€ ææ–™#cFFFF00æ£‰å¸ƒ#cE6BA00ï¼Œè¿™ç±»ç‰¹æ®Šææ–™å¯ä»¥æå‡è£…å¤‡çš„å“è´¨")
+		Synthesize_SpecialMaterial : SetToolTip("æ£‰å¸ƒ")
+		Synthesize_SpecialMaterial:SetProperty( "DragAcceptName", "N2" ); --æ­¤æ—¶æ‰“å¼€ç²¾åˆ¶ç•Œé¢äº†
 	elseif Prescr_Ability == 48 then
-		Synthesize_SpecialMaterial_WarningText : SetText("#cE6BA00ÇëÔÚÓÒ±ß·ÅÈë´òÔì²ÄÁÏ#cFFFF00ÃØÒø#cE6BA00£¬ÕâÀàÌØÊâ²ÄÁÏ¿ÉÒÔÌáÉı×°±¸µÄÆ·ÖÊ")
-		Synthesize_SpecialMaterial : SetToolTip("ÃØÒø")
-		Synthesize_SpecialMaterial:SetProperty( "DragAcceptName", "N3" ); --´ËÊ±´ò¿ª¾«¹¤½çÃæÁË
+		Synthesize_SpecialMaterial_WarningText : SetText("#cE6BA00è¯·åœ¨å³è¾¹æ”¾å…¥æ‰“é€ ææ–™#cFFFF00ç§˜é“¶#cE6BA00ï¼Œè¿™ç±»ç‰¹æ®Šææ–™å¯ä»¥æå‡è£…å¤‡çš„å“è´¨")
+		Synthesize_SpecialMaterial : SetToolTip("ç§˜é“¶")
+		Synthesize_SpecialMaterial:SetProperty( "DragAcceptName", "N3" ); --æ­¤æ—¶æ‰“å¼€ç²¾å·¥ç•Œé¢äº†
 	else
 		Synthesize_SpecialMaterial_Text : Hide();
 		Synthesize_SpecialMaterialIcon_Frame : Hide()
@@ -535,28 +535,28 @@ AxTrace(0,1," here resultid"..resultid)
 
 	local strName = ""
 	if Consume_Vigor >= 0 then
-		strName = strName .. "#r»ù´¡»îÁ¦ÏûºÄ£º".. tostring(Consume_Vigor);
+		strName = strName .. "#råŸºç¡€æ´»åŠ›æ¶ˆè€—ï¼š".. tostring(Consume_Vigor);
 	end
 
 	if Consume_Energy >= 0 then
-		strName = strName .. "#rÏûºÄ¾«Á¦£º".. tostring(Consume_Energy);
+		strName = strName .. "#ræ¶ˆè€—ç²¾åŠ›ï¼š".. tostring(Consume_Energy);
 	end
 	
 	if Consume_Attr >= 0 then
-		strName = strName .. "#rÏûºÄÃÅÅÉ¹±Ï×¶È£º".. tostring(Consume_Attr);
+		strName = strName .. "#ræ¶ˆè€—é—¨æ´¾è´¡çŒ®åº¦ï¼š".. tostring(Consume_Attr);
 	end
 	if resultnum == -1 or resultid == -1 then
-		Synthesize_Item : SetToolTip(tip_name.."#rÀàĞÍ£º"..tip_type..strName);
-		Synthesize_Amount:SetToolTip(tip_name.."#rÀàĞÍ£º"..tip_type..strName);	
+		Synthesize_Item : SetToolTip(tip_name.."#rç±»å‹ï¼š"..tip_type..strName);
+		Synthesize_Amount:SetToolTip(tip_name.."#rç±»å‹ï¼š"..tip_type..strName);	
 	--elseif resultid ~= -1 then
 	
 		--LifeAbility : ShowSuperToolTip(resultid);
-		--Synthesize_Item : SetToolTip(tip_name.."#rÀàĞÍ£º"..tip_type.."#rÊ¹ÓÃµÈ¼¶£º"..tip_level..strName);
-		--Synthesize_Amount:SetToolTip(tip_name.."#rÀàĞÍ£º"..tip_type.."#rÊ¹ÓÃµÈ¼¶£º"..tip_level..strName);
+		--Synthesize_Item : SetToolTip(tip_name.."#rç±»å‹ï¼š"..tip_type.."#rä½¿ç”¨ç­‰çº§ï¼š"..tip_level..strName);
+		--Synthesize_Amount:SetToolTip(tip_name.."#rç±»å‹ï¼š"..tip_type.."#rä½¿ç”¨ç­‰çº§ï¼š"..tip_level..strName);
 	end
 	
 
-	AxTrace(0,1,""..tip_name.."#rÀàĞÍ£º"..tip_type.."#rµÈ¼¶£º"..tip_level.."ÏûºÄ="..strName)
+	AxTrace(0,1,""..tip_name.."#rç±»å‹ï¼š"..tip_type.."#rç­‰çº§ï¼š"..tip_level.."æ¶ˆè€—="..strName)
 	
 	local Material_number = LifeAbility : GetPrescr_Material_Number(nSelIndex);
 	AxTrace(0,1," here Material_number="..Material_number)
@@ -582,7 +582,7 @@ AxTrace(0,1," here resultid"..resultid)
 --			Material_Name_Frame[i] : Show();
 			Material_Name[i] : SetText(name);
 			if holdnum > 99 then
-				Material_Num[i]  : SetText("#e010101¡Ş/" .. stuffnum);
+				Material_Num[i]  : SetText("#e010101âˆ/" .. stuffnum);
 			else
 				Material_Num[i]  : SetText("#e010101" .. holdnum .. "/" .."#e010101" .. stuffnum);
 			end
@@ -595,8 +595,8 @@ AxTrace(0,1," here resultid"..resultid)
 			AxTrace(0, 0, "stuffnum = "..stuffnum);
 			Material_Frame[i]: Show();
 			tip_name,tip_type,tip_level = LifeAbility : GetPrescr_Material_Tooltip(stuffid);
-			--Material_Icon[i] : SetToolTip(tip_name.."#rÀàĞÍ£º"..tip_type.."#rµÈ¼¶£º"..tip_level)
-			--Material_Num[i]  : SetToolTip(tip_name.."#rÀàĞÍ£º"..tip_type.."#rµÈ¼¶£º"..tip_level)
+			--Material_Icon[i] : SetToolTip(tip_name.."#rç±»å‹ï¼š"..tip_type.."#rç­‰çº§ï¼š"..tip_level)
+			--Material_Num[i]  : SetToolTip(tip_name.."#rç±»å‹ï¼š"..tip_type.."#rç­‰çº§ï¼š"..tip_level)
 
 		end
 	end
@@ -610,7 +610,7 @@ AxTrace(0,1," here resultid"..resultid)
 		Synthesize_Make : Enable();
 	end
 	if Prescr_Ability == 46 or Prescr_Ability == 47 or Prescr_Ability == 48 then
-	--µ±¾«Á¶¾«ÖÆ¾«¹¤Ê±£¬Òş²Ø¡°È«²¿ÖÆ×÷¡±°´Å¥
+	--å½“ç²¾ç‚¼ç²¾åˆ¶ç²¾å·¥æ—¶ï¼Œéšè—â€œå…¨éƒ¨åˆ¶ä½œâ€æŒ‰é’®
 		Synthesize_AllMake : Hide()
 		Synthesize_MadeAmount_Bk : Hide()
 		Synthesize_Decrease : Hide()
@@ -621,12 +621,12 @@ AxTrace(0,1," here resultid"..resultid)
 		Synthesize_Decrease : Show()
 		Synthesize_More : Show()
 	end
-	--ÓÉÓÚÏÖÔÚconfig.txt±íÖĞµÄÊı¾İÒÑ¾­±äµÄ²»¿ÉĞÅÈÎ£¨ºÜ¶à¶«Î÷¶¼ÊÇÒòÎªÔÚÒÑ¾­¶¨ºÃµÄ¹æÔòÉÏ£¬²ß»®Ìí´í±í£©£¬ÕâÀïĞ´ËÀÌØÀı
-	--Ö»ÓĞ¾«Á¶¾«ÖÆ¾«¹¤Ê±ºò£¬²Å´Ó±íÀïÅĞ¶ÏÊÇ·ñĞèÒªÌØÊâ²ÄÁÏ£¬²»ÔÙµ¥´¿ÒÀ¿¿±íÀ´ÅĞ¶Ï
+	--ç”±äºç°åœ¨config.txtè¡¨ä¸­çš„æ•°æ®å·²ç»å˜çš„ä¸å¯ä¿¡ä»»ï¼ˆå¾ˆå¤šä¸œè¥¿éƒ½æ˜¯å› ä¸ºåœ¨å·²ç»å®šå¥½çš„è§„åˆ™ä¸Šï¼Œç­–åˆ’æ·»é”™è¡¨ï¼‰ï¼Œè¿™é‡Œå†™æ­»ç‰¹ä¾‹
+	--åªæœ‰ç²¾ç‚¼ç²¾åˆ¶ç²¾å·¥æ—¶å€™ï¼Œæ‰ä»è¡¨é‡Œåˆ¤æ–­æ˜¯å¦éœ€è¦ç‰¹æ®Šææ–™ï¼Œä¸å†å•çº¯ä¾é è¡¨æ¥åˆ¤æ–­
 	if Prescr_Ability == 46 or Prescr_Ability == 47 or Prescr_Ability == 48 then
-		local NeedSpecial = LifeAbility : GetPrescr_Item_IsNeedSpecial( nSelIndex ) --È¡µÃÊÇ·ñĞèÒªÌØÊâ²ÄÁÏ
+		local NeedSpecial = LifeAbility : GetPrescr_Item_IsNeedSpecial( nSelIndex ) --å–å¾—æ˜¯å¦éœ€è¦ç‰¹æ®Šææ–™
 		if NeedSpecial >= 0 then
-			local SItem = Synthesize_SpecialMaterial:GetActionItem() --¼ì²â¿òÀïÓĞÃ»ÓĞ·ÅÈëÌØÊâ²ÄÁÏ
+			local SItem = Synthesize_SpecialMaterial:GetActionItem() --æ£€æµ‹æ¡†é‡Œæœ‰æ²¡æœ‰æ”¾å…¥ç‰¹æ®Šææ–™
 			if SItem > 0 and nMaxAmount > 0 then
 				--Synthesize_AllMake : Enable();
 				Synthesize_Make : Enable();
@@ -644,19 +644,19 @@ AxTrace(0,1," here resultid"..resultid)
 			end
 		end
 	end
-	-- ++++begin  add by cuiyinjie 2008-10-25 ÔÚÎ´Ñ¡ÖĞÅä·½Ê±Çå³ıÅä·½ËùĞè²ÄÁÏ
+	-- ++++begin  add by cuiyinjie 2008-10-25 åœ¨æœªé€‰ä¸­é…æ–¹æ—¶æ¸…é™¤é…æ–¹æ‰€éœ€ææ–™
 	if ( Synthesize_Item_List:GetFirstSelectItem() < 0 ) then
 		Synthesize_HideCtrlOnNoSelect();
 	end
 	-- +++++end
 end
---ÏÔÊ¾µÀ¾ßµÄToolTips
+--æ˜¾ç¤ºé“å…·çš„ToolTips
 function Synthesize_OnShowToolTip(who)
 	local nSelIndex = Synthesize_Item_List:GetFirstSelectItem();
 	local left, right, top, bottom;
 	local itemID = 0;
 	local stuffnum = 0;
-	-- begin +++++++++++ add by cuiyinjie 2008-10-25 for bug TT40225, Ã»Ñ¡ÖĞÅä·½Ê±ÏÔÊ¾tip¿Í»§¶Ë±¨´í
+	-- begin +++++++++++ add by cuiyinjie 2008-10-25 for bug TT40225, æ²¡é€‰ä¸­é…æ–¹æ—¶æ˜¾ç¤ºtipå®¢æˆ·ç«¯æŠ¥é”™
 	if ( nSelIndex < 0 ) then
 	   return;
 	end
@@ -679,7 +679,7 @@ function Synthesize_OnShowToolTip(who)
 	end
 	LifeAbility:ShowSuperToolTip(itemID, true,left,top,right,bottom);
 end
---Òş²ØµÀ¾ßµÄToolTips
+--éšè—é“å…·çš„ToolTips
 function Synthesize_OnHideToolTip()
 	LifeAbility:ShowSuperToolTip(1, false);
 end
@@ -691,7 +691,7 @@ function Synthesize_Do_Clicked()
 		local Item_Medindex = PlayerPackage : GetItemSubTableIndex(Synthesize_Special_Item,3)
 		if Item_Medindex == 0 then
 			local Item_ID = PlayerPackage : GetItemTableIndex(Synthesize_Special_Item);
-			PushDebugMessage("#{_ITEM".. Item_ID .."}²»ÄÜÓÃÓÚºÏ³É¡£")
+			PushDebugMessage("#{_ITEM".. Item_ID .."}ä¸èƒ½ç”¨äºåˆæˆã€‚")
 			return;
 		end
 	end
@@ -704,16 +704,16 @@ function Synthesize_Do_Clicked()
 		nMaxAmount = 99;
 	end
 	
-	--ÅĞ¶Ï°ó¶¨	
+	--åˆ¤æ–­ç»‘å®š	
 	if Prescr_Ability == 46 or Prescr_Ability == 47 or Prescr_Ability == 48 then
 		AxTrace(0,1,"Is true.");
-		local NeedSpecial = LifeAbility : GetPrescr_Item_IsNeedSpecial( nSelIndex ) --È¡µÃÊÇ·ñĞèÒªÌØÊâ²ÄÁÏ
+		local NeedSpecial = LifeAbility : GetPrescr_Item_IsNeedSpecial( nSelIndex ) --å–å¾—æ˜¯å¦éœ€è¦ç‰¹æ®Šææ–™
 		if NeedSpecial >= 0 then
 		
-			local SItem = Synthesize_SpecialMaterial:GetActionItem() --¼ì²â¿òÀïÓĞÃ»ÓĞ·ÅÈëÌØÊâ²ÄÁÏ
+			local SItem = Synthesize_SpecialMaterial:GetActionItem() --æ£€æµ‹æ¡†é‡Œæœ‰æ²¡æœ‰æ”¾å…¥ç‰¹æ®Šææ–™
 			AxTrace(0,1,"SItem="..SItem);
 			if SItem > 0 and nMaxAmount > 0 then
-			--ÅĞ¶ÏÊÇ·ñ°ó¶¨£¬ÆäËûµÄ¼ì²âÒÑ¾­×öÍê	
+			--åˆ¤æ–­æ˜¯å¦ç»‘å®šï¼Œå…¶ä»–çš„æ£€æµ‹å·²ç»åšå®Œ	
 				if(TheLastItem ~= Synthesize_Special_Item) then
 					TheLastItem = Synthesize_Special_Item;
 					Notify = 1;
@@ -757,7 +757,7 @@ function Synthesize_Do_Clicked()
 		return;
 	end
 	if nMake_Count > nMaxAmount then
-		PushDebugMessage("²ÄÁÏ²»×ã£¡")
+		PushDebugMessage("ææ–™ä¸è¶³ï¼")
 		return;
 	end
 	AxTrace(0,2,"Current_Select="..Current_Select.. " nMake_Count=" ..nMake_Count );
@@ -770,7 +770,7 @@ function Synthesize_Do_All_Clicked()
 		local Item_Medindex = PlayerPackage : GetItemSubTableIndex(Synthesize_Special_Item,3)
 		if Item_Medindex == 0 then
 			local Item_ID = PlayerPackage : GetItemTableIndex(Synthesize_Special_Item);
-			PushDebugMessage("#{_ITEM".. Item_ID .."}²»ÄÜÓÃÓÚºÏ³É¡£")
+			PushDebugMessage("#{_ITEM".. Item_ID .."}ä¸èƒ½ç”¨äºåˆæˆã€‚")
 			return
 		end
 	end
@@ -817,7 +817,7 @@ function Synthesize_Cancel_Clicked()
 --	end
 	
 --	ComposeItem_Cancel(nSelIndex);
---¸ù¾İ5415ºÅbugĞŞ¸ÄÒÔÉÏ´úÂë
+--æ ¹æ®5415å·bugä¿®æ”¹ä»¥ä¸Šä»£ç 
 
 	if( Synthesize_Special_Item ~= -1 ) then
 		LifeAbility : Lock_Packet_Item(Synthesize_Special_Item,0);
@@ -888,7 +888,7 @@ function Update_Synthesize_Item(Item_index)
 					local Item_ID = PlayerPackage : GetItemTableIndex(index) 
 					local szName = LifeAbility:GetPrescr_Material(Item_ID)
 					
-					PushDebugMessage("#B"..szName.."#WÖ»ÄÜÓÃÓÚ#B"..Ability_Limit[Item_Type].."#W¡£")
+					PushDebugMessage("#B"..szName.."#Wåªèƒ½ç”¨äº#B"..Ability_Limit[Item_Type].."#Wã€‚")
 					return
 			end
 			

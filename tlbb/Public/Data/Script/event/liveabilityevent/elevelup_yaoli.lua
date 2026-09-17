@@ -1,33 +1,33 @@
---Ò©Àí¼¼ÄÜÉı¼¶
+--è¯ç†æŠ€èƒ½å‡çº§
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x713586_g_ScriptId = 713586
 
---´Ënpc¿ÉÒÔÉıµ½µÄ×î¸ßµÈ¼¶
+--æ­¤npcå¯ä»¥å‡åˆ°çš„æœ€é«˜ç­‰çº§
 x713586_g_nMaxLevel = 30
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x713586_OnDefaultEvent( sceneId, selfId, targetId, nNum, npcScriptId, bid )
-	--Íæ¼Ò¼¼ÄÜµÄµÈ¼¶
+	--ç©å®¶æŠ€èƒ½çš„ç­‰çº§
 	AbilityLevel = QueryHumanAbilityLevel(sceneId, selfId, ABILITY_YAOLI)
-	--Íæ¼Ò¼Ó¹¤¼¼ÄÜµÄÊìÁ·¶È
+	--ç©å®¶åŠ å·¥æŠ€èƒ½çš„ç†Ÿç»ƒåº¦
 	ExpPoint = GetAbilityExp(sceneId, selfId, ABILITY_YAOLI)
-	--ÈÎÎñÅĞ¶Ï
+	--ä»»åŠ¡åˆ¤æ–­
 
-	--Èç¹û»¹Ã»ÓĞÑ§»á¸ÃÉú»î¼¼ÄÜ
+	--å¦‚æœè¿˜æ²¡æœ‰å­¦ä¼šè¯¥ç”Ÿæ´»æŠ€èƒ½
 	if AbilityLevel < 1	then
 		BeginEvent(sceneId)
-			strText = "Äã»¹Ã»ÓĞÑ§»áÒ©Àí¼¼ÄÜ£¡"
+			strText = "ä½ è¿˜æ²¡æœ‰å­¦ä¼šè¯ç†æŠ€èƒ½ï¼"
 			AddText(sceneId,strText)
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 		return
 	end
-	--Èç¹ûÊÇÔÚ³ÇÊĞÖĞÉı¼¶
+	--å¦‚æœæ˜¯åœ¨åŸå¸‚ä¸­å‡çº§
 	if bid then
-		--¼ì²é³ÇÊĞÊÇ·ñ´¦ÓÚµÍÎ¬»¤×´Ì¬
+		--æ£€æŸ¥åŸå¸‚æ˜¯å¦å¤„äºä½ç»´æŠ¤çŠ¶æ€
 		if CallScriptFunction( CITY_BUILDING_ABILITY_SCRIPT, "CheckCityStatus",sceneId, selfId,targetId) < 0 then
 			return
 		end
@@ -37,10 +37,10 @@ function x713586_OnDefaultEvent( sceneId, selfId, targetId, nNum, npcScriptId, b
 		end
 		return
 	end
-	--Èç¹ûÉú»î¼¼ÄÜµÈ¼¶ÒÑ¾­³¬³ö¸ÃnpcËùÄÜ½ÌµÄ·¶Î§
+	--å¦‚æœç”Ÿæ´»æŠ€èƒ½ç­‰çº§å·²ç»è¶…å‡ºè¯¥npcæ‰€èƒ½æ•™çš„èŒƒå›´
 	if AbilityLevel >= x713586_g_nMaxLevel then
 		BeginEvent(sceneId)
-			strText = "ÎÒÖ»ÄÜ½ÌÄã1-"..x713586_g_nMaxLevel.."¼¶µÄÒ©Àí¼¼ÄÜ,Çëµ½°ïÅÉÖĞÑ§Ï°¸ü¸ß¼¶µÄÒ©Àí"
+			strText = "æˆ‘åªèƒ½æ•™ä½ 1-"..x713586_g_nMaxLevel.."çº§çš„è¯ç†æŠ€èƒ½,è¯·åˆ°å¸®æ´¾ä¸­å­¦ä¹ æ›´é«˜çº§çš„è¯ç†"
 			AddText(sceneId,strText)
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
@@ -57,29 +57,29 @@ function x713586_OnDefaultEvent( sceneId, selfId, targetId, nNum, npcScriptId, b
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x713586_OnEnumerate( sceneId, selfId, targetId, bid )
 		if bid then
 			local ret = CallScriptFunction( CITY_BUILDING_ABILITY_SCRIPT, "OnCityCheck",sceneId, selfId, ABILITY_YAOLI, bid, 6)
-			if ret > 0 then AddNumText(sceneId,x713586_g_ScriptId,"Éı¼¶Ò©Àí¼¼ÄÜ", 12, 1) end
+			if ret > 0 then AddNumText(sceneId,x713586_g_ScriptId,"å‡çº§è¯ç†æŠ€èƒ½", 12, 1) end
 			return
 		end
-		--Èç¹û²»µ½µÈ¼¶Ôò²»ÏÔÊ¾Ñ¡Ïî
+		--å¦‚æœä¸åˆ°ç­‰çº§åˆ™ä¸æ˜¾ç¤ºé€‰é¡¹
 		if 1 then
-			AddNumText(sceneId,x713586_g_ScriptId,"Éı¼¶Ò©Àí¼¼ÄÜ", 12, 1)
+			AddNumText(sceneId,x713586_g_ScriptId,"å‡çº§è¯ç†æŠ€èƒ½", 12, 1)
 		end
 		return
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x713586_CheckAccept( sceneId, selfId )
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x713586_OnAccept( sceneId, selfId, ABILITY_YAOLI )
 end

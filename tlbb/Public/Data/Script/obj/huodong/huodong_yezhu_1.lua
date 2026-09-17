@@ -1,18 +1,18 @@
 -- 402101
--- ³¡¾°ÖĞ»î¶¯¿ªÊ¼ºóË¢³öÀ´µÄNpc
+-- åœºæ™¯ä¸­æ´»åŠ¨å¼€å§‹ååˆ·å‡ºæ¥çš„Npc
 
 -- 
 x402101_g_scriptId = 402101
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x402101_g_eventList={402102} 	
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x402101_UpdateEventList( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
-		AddText(sceneId,"  ¡«#r  <¿ÉÁ¯µÄÁéÊŞµÉ´óÁËË«ÑÛÍû×ÅÄã¡­¡­>")
+		AddText(sceneId,"  ï½#r  <å¯æ€œçš„çµå…½çªå¤§äº†åŒçœ¼æœ›ç€ä½ â€¦â€¦>")
 		for i, eventId in x402101_g_eventList do
 			CallScriptFunction( eventId, "OnEnumerate",sceneId, selfId, targetId )
 		end
@@ -20,14 +20,14 @@ function x402101_UpdateEventList( sceneId, selfId,targetId )
 	DispatchEventList(sceneId,selfId,targetId)
 end
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x402101_OnDefaultEvent( sceneId, selfId,targetId )
 	x402101_UpdateEventList( sceneId, selfId,targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x402101_OnEventRequest( sceneId, selfId, targetId, eventId )
 	for i, findId in x402101_g_eventList do

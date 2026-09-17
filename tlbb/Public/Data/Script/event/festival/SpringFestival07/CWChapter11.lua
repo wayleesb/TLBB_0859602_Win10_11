@@ -1,18 +1,18 @@
---BOSS´ºÍí 11ºÅ½ÚÄ¿
+--BOSSæ˜¥æ™š 11å·èŠ‚ç›®
 
---½áÊøÇú
+--ç»“æŸæ›²
 
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x050041_g_scriptId = 050041
 
---´ºÍíÖ÷¿Ø½Å±¾½Å±¾ºÅ....
+--æ˜¥æ™šä¸»æ§è„šæœ¬è„šæœ¬å·....
 x050041_g_MainScriptId = 050030
 
---±¾½ÚÄ¿µÄ½ÚÄ¿ºÅ....
+--æœ¬èŠ‚ç›®çš„èŠ‚ç›®å·....
 x050041_g_ChapterId = 11
 
---¶¯×÷²¥·Å±í....
+--åŠ¨ä½œæ’­æ”¾è¡¨....
 x050041_g_ActionTbl = {
 
 	[38] = { [200]=129,[400]=24,[500]=457,[600]=24,[700]=457 },
@@ -30,11 +30,11 @@ x050041_g_ActionTbl = {
 }
 
 --**********************************
---¿ªÊ¼±¾½ÚÄ¿....
+--å¼€å§‹æœ¬èŠ‚ç›®....
 --**********************************
 function x050041_OnStartThisChapter( sceneId )
 
-	--´´½¨ËïÃÀÃÀ....
+	--åˆ›å»ºå­™ç¾ç¾....
 	local MstId = -1
 	MstId = CallScriptFunction( x050041_g_MainScriptId, "CreateBossActor", sceneId, "SunMeiMei", 160, 106 )
 	SetPatrolId(sceneId, MstId, 37)
@@ -42,15 +42,15 @@ function x050041_OnStartThisChapter( sceneId )
 end
 
 --**********************************
---¹ÖÎïÑ²Âßµ½Ä³µãÊ±»Øµ÷±¾½Ó¿Ú....
+--æ€ªç‰©å·¡é€»åˆ°æŸç‚¹æ—¶å›è°ƒæœ¬æ¥å£....
 --**********************************
 function x050041_OnPatrolPoint( sceneId, objId, patrolPathIndex, patrolPointIndex, paopaoIndex	)
 
-	--Èç¹û¶¯×÷±íÖĞÅäÖÃÁË¶¯×÷Ôò²¥·Å¶¯×÷....
+	--å¦‚æœåŠ¨ä½œè¡¨ä¸­é…ç½®äº†åŠ¨ä½œåˆ™æ’­æ”¾åŠ¨ä½œ....
 	x050041_PlayAct( sceneId, objId, patrolPathIndex, patrolPointIndex, paopaoIndex	)
 
 
-	--ËïÃÀÃÀ×ßµ½´ËµãÊ±´´½¨³àÏö»ğ»ê..Æå»ê..¿ñ±©Áú..°×µÛ....
+	--å­™ç¾ç¾èµ°åˆ°æ­¤ç‚¹æ—¶åˆ›å»ºèµ¤éœ„ç«é­‚..æ£‹é­‚..ç‹‚æš´é¾™..ç™½å¸....
 	if patrolPointIndex == 1 and paopaoIndex == 0 then
 
 		if 0 == CallScriptFunction( x050041_g_MainScriptId, "IsSpecificBossActor", sceneId, "SunMeiMei", objId ) then
@@ -71,7 +71,7 @@ function x050041_OnPatrolPoint( sceneId, objId, patrolPathIndex, patrolPointInde
 	end
 
 
-	--ËïÃÀÃÀ×ßµ½´ËµãÊ±´´½¨´ºÈıÊ®Äï..¶¾Ë¿Ö©ÖëÍõ..²øË¿Ö©ÖëÍõ..ÎŞµĞ·ÉÌìÃ¨..»¤µºÉñÊŞ..Æó¶ìÍõ....
+	--å­™ç¾ç¾èµ°åˆ°æ­¤ç‚¹æ—¶åˆ›å»ºæ˜¥ä¸‰åå¨˜..æ¯’ä¸èœ˜è››ç‹..ç¼ ä¸èœ˜è››ç‹..æ— æ•Œé£å¤©çŒ«..æŠ¤å²›ç¥å…½..ä¼é¹…ç‹....
 	if patrolPointIndex == 2 and paopaoIndex == 0 then
 
 		if 0 == CallScriptFunction( x050041_g_MainScriptId, "IsSpecificBossActor", sceneId, "SunMeiMei", objId ) then
@@ -96,16 +96,16 @@ function x050041_OnPatrolPoint( sceneId, objId, patrolPathIndex, patrolPointInde
 	end
 
 
-	--É¾³ıËïÃÀÃÀ....
+	--åˆ é™¤å­™ç¾ç¾....
 	if patrolPointIndex == 10 and paopaoIndex == -1 then
 		if 1 == CallScriptFunction( x050041_g_MainScriptId, "IsSpecificBossActor", sceneId, "SunMeiMei", objId ) then
 			CallScriptFunction( x050041_g_MainScriptId, "DeleteBossActor", sceneId, "SunMeiMei", objId )
-			--±¾½ÚÄ¿½áÊø....
+			--æœ¬èŠ‚ç›®ç»“æŸ....
 			x050041_OnEndThisChapter( sceneId )
 		end
 	end
 
-	--É¾³ı³àÏö»ğ»ê..´ºÈıÊ®Äï..¶¾Ë¿Ö©ÖëÍõ..²øË¿Ö©ÖëÍõ..ÎŞµĞ·ÉÌìÃ¨..Æå»ê..¿ñ±©Áú..°×µÛ..»¤µºÉñÊŞ..Æó¶ìÍõ....
+	--åˆ é™¤èµ¤éœ„ç«é­‚..æ˜¥ä¸‰åå¨˜..æ¯’ä¸èœ˜è››ç‹..ç¼ ä¸èœ˜è››ç‹..æ— æ•Œé£å¤©çŒ«..æ£‹é­‚..ç‹‚æš´é¾™..ç™½å¸..æŠ¤å²›ç¥å…½..ä¼é¹…ç‹....
 	if patrolPointIndex == 8 and paopaoIndex == -1 then
 		if 1 == CallScriptFunction( x050041_g_MainScriptId, "IsSpecificBossActor", sceneId, "ChiXiaoHuoHun", objId ) then
 			CallScriptFunction( x050041_g_MainScriptId, "DeleteBossActor", sceneId, "ChiXiaoHuoHun", objId )
@@ -133,7 +133,7 @@ function x050041_OnPatrolPoint( sceneId, objId, patrolPathIndex, patrolPointInde
 end
 
 --**********************************
---½áÊø±¾½ÚÄ¿....
+--ç»“æŸæœ¬èŠ‚ç›®....
 --**********************************
 function x050041_OnEndThisChapter( sceneId )
 
@@ -142,11 +142,11 @@ function x050041_OnEndThisChapter( sceneId )
 end
 
 --**********************************
---²¥·Å¶¯×÷±íÖĞÄ³¸ö¶¯×÷....
+--æ’­æ”¾åŠ¨ä½œè¡¨ä¸­æŸä¸ªåŠ¨ä½œ....
 --**********************************
 function x050041_PlayAct( sceneId, objId, patrolPathIndex, patrolPointIndex, paopaoIndex	)
 
-	--·ÅÑÌ»¨....
+	--æ”¾çƒŸèŠ±....
 	if patrolPathIndex == 37 and patrolPointIndex == 3 and paopaoIndex == 0 then
 		CreateSpecialObjByDataIndex(sceneId, objId, 1, 160, 112, 0)
 		CreateSpecialObjByDataIndex(sceneId, objId, 10, 160, 112, 0)

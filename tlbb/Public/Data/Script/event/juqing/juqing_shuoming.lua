@@ -1,51 +1,51 @@
 -- 200100
--- ¾çÇéÑ­»·ÈÎÎñµÄËµÃ÷
+-- å‰§æƒ…å¾ªçŽ¯ä»»åŠ¡çš„è¯´æ˜Ž
 
 x200100_g_ScriptId = 200100
 x200100_g_Info = {	
-		{name="Ä¾ÍñÇå",  mis=8,s1="#{help_JQXH_001}" ,s2="#{help_JQXH_014}",s3="#{help_JQXH_016}", s4="#{help_JQXH_018}"},
-		{name="ÖÓÁé",    mis=8,s1="#{help_JQXH_002}" ,s2="#{help_JQXH_014}",s3="#{help_JQXH_016}", s4="#{help_JQXH_031}"},
-		{name="¶ÎÑÓÇì",  mis=8,s1="#{help_JQXH_003}" ,s2="#{help_JQXH_014}",s3="#{help_JQXH_016}", s4="#{help_JQXH_032}"},
-		{name="ð¯Ä¦ÖÇ",  mis=37,s1="#{help_JQXH_004}" ,s2="#{help_JQXH_014}",s3="#{help_JQXH_016}",s4="#{help_JQXH_040}"},
-		{name="ÈîÐÇÖñ",  mis=15,s1="#{help_JQXH_005}" ,s2="#{help_JQXH_020}",s3="#{help_JQXH_021}",s4="#{help_JQXH_034}"},
-		{name="°¢±Ì",    mis=15,s1="#{help_JQXH_006}" ,s2="#{help_JQXH_014}",s3="#{help_JQXH_016}",s4="#{help_JQXH_035}"},
-		{name="Íõ·òÈË",  mis=15,s1="#{help_JQXH_007}" ,s2="#{help_JQXH_022}",s3="#{help_JQXH_023}",s4="#{help_JQXH_036}"},
-		{name="°¢×Ï",    mis=32,s1="#{help_JQXH_008}" ,s2="#{help_JQXH_014}",s3="#{help_JQXH_016}",s4="#{help_JQXH_037}"},
-		{name="ºÕÁ¬ÌúÊ÷",mis=45,s1="#{help_JQXH_009}" ,s2="#{help_JQXH_024}",s3="#{help_JQXH_025}",s4="#{help_JQXH_041}"},
-		{name="Ä½ÈÝ¸´",  mis=37,s1="#{help_JQXH_010}" ,s2="#{help_JQXH_014}",s3="#{help_JQXH_016}",s4="#{help_JQXH_038}"},
-		{name="¶ÎÕý´¾",  mis=8,s1="#{help_JQXH_011}" ,s2="#{help_JQXH_026}",s3="#{help_JQXH_027}", s4="#{help_JQXH_033}"},
-		{name="Ò®ÂÉ´óÊ¯",mis=23,s1="#{help_JQXH_012}" ,s2="#{help_JQXH_015}",s3="#{help_JQXH_017}",s4="#{help_JQXH_019}"},
-		{name="Ò¶¶þÄï",  mis=37,s1="#{help_JQXH_013}" ,s2="#{help_JQXH_028}",s3="#{help_JQXH_029}",s4="#{help_JQXH_039}"}
+		{name="æœ¨å©‰æ¸…",  mis=8,s1="#{help_JQXH_001}" ,s2="#{help_JQXH_014}",s3="#{help_JQXH_016}", s4="#{help_JQXH_018}"},
+		{name="é’Ÿçµ",    mis=8,s1="#{help_JQXH_002}" ,s2="#{help_JQXH_014}",s3="#{help_JQXH_016}", s4="#{help_JQXH_031}"},
+		{name="æ®µå»¶åº†",  mis=8,s1="#{help_JQXH_003}" ,s2="#{help_JQXH_014}",s3="#{help_JQXH_016}", s4="#{help_JQXH_032}"},
+		{name="é¸ æ‘©æ™º",  mis=37,s1="#{help_JQXH_004}" ,s2="#{help_JQXH_014}",s3="#{help_JQXH_016}",s4="#{help_JQXH_040}"},
+		{name="é˜®æ˜Ÿç«¹",  mis=15,s1="#{help_JQXH_005}" ,s2="#{help_JQXH_020}",s3="#{help_JQXH_021}",s4="#{help_JQXH_034}"},
+		{name="é˜¿ç¢§",    mis=15,s1="#{help_JQXH_006}" ,s2="#{help_JQXH_014}",s3="#{help_JQXH_016}",s4="#{help_JQXH_035}"},
+		{name="çŽ‹å¤«äºº",  mis=15,s1="#{help_JQXH_007}" ,s2="#{help_JQXH_022}",s3="#{help_JQXH_023}",s4="#{help_JQXH_036}"},
+		{name="é˜¿ç´«",    mis=32,s1="#{help_JQXH_008}" ,s2="#{help_JQXH_014}",s3="#{help_JQXH_016}",s4="#{help_JQXH_037}"},
+		{name="èµ«è¿žé“æ ‘",mis=45,s1="#{help_JQXH_009}" ,s2="#{help_JQXH_024}",s3="#{help_JQXH_025}",s4="#{help_JQXH_041}"},
+		{name="æ…•å®¹å¤",  mis=37,s1="#{help_JQXH_010}" ,s2="#{help_JQXH_014}",s3="#{help_JQXH_016}",s4="#{help_JQXH_038}"},
+		{name="æ®µæ­£æ·³",  mis=8,s1="#{help_JQXH_011}" ,s2="#{help_JQXH_026}",s3="#{help_JQXH_027}", s4="#{help_JQXH_033}"},
+		{name="è€¶å¾‹å¤§çŸ³",mis=23,s1="#{help_JQXH_012}" ,s2="#{help_JQXH_015}",s3="#{help_JQXH_017}",s4="#{help_JQXH_019}"},
+		{name="å¶äºŒå¨˜",  mis=37,s1="#{help_JQXH_013}" ,s2="#{help_JQXH_028}",s3="#{help_JQXH_029}",s4="#{help_JQXH_039}"}
 }
---Ä¾ÍñÇå			´óÀí     
---ÖÓÁé        ÎÞÁ¿É½   
---¶ÎÑÓÇì      ´óÀí 
---ð¯Ä¦ÖÇ      ¶Ø»Í     
---ÈîÐÇÖñ      ¾µºþ 
---°¢±Ì        ËÕÖÝ     
---Íõ·òÈË      ËÕÖÝ   
---°¢×Ï        ÂåÑô     
---ºÕÁ¬ÌúÊ÷    ÂåÑô  
---Ä½ÈÝ¸´      ËÕÖÝ     
---¶ÎÕý´¾      ´óÀí  
---Ò®ÂÉ´óÊ¯    ÂåÑô     
---Ò¶¶þÄï      ´óÀí     
+--æœ¨å©‰æ¸…			å¤§ç†     
+--é’Ÿçµ        æ— é‡å±±   
+--æ®µå»¶åº†      å¤§ç† 
+--é¸ æ‘©æ™º      æ•¦ç…Œ     
+--é˜®æ˜Ÿç«¹      é•œæ¹– 
+--é˜¿ç¢§        è‹å·ž     
+--çŽ‹å¤«äºº      è‹å·ž   
+--é˜¿ç´«        æ´›é˜³     
+--èµ«è¿žé“æ ‘    æ´›é˜³  
+--æ…•å®¹å¤      è‹å·ž     
+--æ®µæ­£æ·³      å¤§ç†  
+--è€¶å¾‹å¤§çŸ³    æ´›é˜³     
+--å¶äºŒå¨˜      å¤§ç†     
 
---£¨Íò½Ù£©20¼¶¿ªÊ¼µÄNPC 8 £ºÄ¾ÍñÇå¡¢ÖÓÁé¡¢¶ÎÑÓÇì¡¢¶ÎÓþ£¨¶ÎÕý´¾£©
---£¨Ñà×Ó£©30¼¶¿ªÊ¼µÄNPC 15£º°¢Öì£¨ÈîÐÇÖñ£©¡¢°¢±Ì¡¢ÍõÓïæÌ£¨Íõ·òÈË£©
---£¨¾ÛÏÍ£©40¼¶¿ªÊ¼µÄNPC 23£ºÏô·å£¨Ò®ÂÉ´óÊ¯£©
---£¨²ÔÃ££©50¼¶¿ªÊ¼µÄNPC 32£º°¢×Ï
---£¨ÀÞ¹Ä£©60¼¶¿ªÊ¼µÄNPC 37£ºÄ½ÈÝ¸´¡¢ÐéÖñ£¨Ò¶¶þÄï£©¡¢ð¯Ä¦ÖÇ
---£¨Ò»Æ·£©70¼¶¿ªÊ¼µÄNPC 45£ºÒø´¨¹«Ö÷£¨ºÕÁ¬ÌúÊ÷£©
+--ï¼ˆä¸‡åŠ«ï¼‰20çº§å¼€å§‹çš„NPC 8 ï¼šæœ¨å©‰æ¸…ã€é’Ÿçµã€æ®µå»¶åº†ã€æ®µèª‰ï¼ˆæ®µæ­£æ·³ï¼‰
+--ï¼ˆç‡•å­ï¼‰30çº§å¼€å§‹çš„NPC 15ï¼šé˜¿æœ±ï¼ˆé˜®æ˜Ÿç«¹ï¼‰ã€é˜¿ç¢§ã€çŽ‹è¯­å«£ï¼ˆçŽ‹å¤«äººï¼‰
+--ï¼ˆèšè´¤ï¼‰40çº§å¼€å§‹çš„NPC 23ï¼šè§å³°ï¼ˆè€¶å¾‹å¤§çŸ³ï¼‰
+--ï¼ˆè‹èŒ«ï¼‰50çº§å¼€å§‹çš„NPC 32ï¼šé˜¿ç´«
+--ï¼ˆæ“‚é¼“ï¼‰60çº§å¼€å§‹çš„NPC 37ï¼šæ…•å®¹å¤ã€è™šç«¹ï¼ˆå¶äºŒå¨˜ï¼‰ã€é¸ æ‘©æ™º
+--ï¼ˆä¸€å“ï¼‰70çº§å¼€å§‹çš„NPC 45ï¼šé“¶å·å…¬ä¸»ï¼ˆèµ«è¿žé“æ ‘ï¼‰
 
 --**********************************
---ÁÐ¾ÙÊÂ¼þ
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x200100_OnEnumerate( sceneId, selfId, targetId )
 
-	AddNumText(sceneId, x200100_g_ScriptId,"ÎÒÊÇË­£¿",8,1);
+	AddNumText(sceneId, x200100_g_ScriptId,"æˆ‘æ˜¯è°ï¼Ÿ",8,1);
 	
-	-- Íæ¼ÒÍê³ÉÏà¹Ø¾çÇéÈÎÎñºó£¬²ÅÄÜ¿´¼ûÕâ¸öÑ¡Ïî
+	-- çŽ©å®¶å®Œæˆç›¸å…³å‰§æƒ…ä»»åŠ¡åŽï¼Œæ‰èƒ½çœ‹è§è¿™ä¸ªé€‰é¡¹
 	local szNpcName = GetName(sceneId, targetId)
 	local nIndex = 0
 	for i=1,13   do
@@ -55,8 +55,8 @@ function x200100_OnEnumerate( sceneId, selfId, targetId )
 	end
 	
 	if (IsMissionHaveDone(sceneId,selfId,x200100_g_Info[nIndex].mis) > 0 ) then
-		AddNumText(sceneId, x200100_g_ScriptId,"Ê²Ã´ÊÇ¾çÇéÑ­»·ÈÎÎñ",11,2);
-		AddNumText(sceneId, x200100_g_ScriptId,"Ê²Ã´ÊÇ¹ØÏµÖµ",11,3);
+		AddNumText(sceneId, x200100_g_ScriptId,"ä»€ä¹ˆæ˜¯å‰§æƒ…å¾ªçŽ¯ä»»åŠ¡",11,2);
+		AddNumText(sceneId, x200100_g_ScriptId,"ä»€ä¹ˆæ˜¯å…³ç³»å€¼",11,3);
 	  AddNumText(sceneId, x200100_g_ScriptId,"#{help_JQXH_030}",11,4);
 	end
 	
@@ -67,7 +67,7 @@ function x200100_OnEnumerate( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êý
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x200100_OnDefaultEvent( sceneId, selfId, targetId )
 	local szNpcName = GetName(sceneId, targetId)
@@ -81,7 +81,7 @@ function x200100_OnDefaultEvent( sceneId, selfId, targetId )
 	if GetNumText() == 1  then
 		if nIndex > 0  then
 			BeginEvent( sceneId )
-				AddText( sceneId, "#YÎÒÊÇË­£¿" )
+				AddText( sceneId, "#Yæˆ‘æ˜¯è°ï¼Ÿ" )
 				AddText( sceneId, x200100_g_Info[nIndex].s1 )
 			EndEvent( sceneId )
 			DispatchEventList( sceneId, selfId, targetId )
@@ -90,7 +90,7 @@ function x200100_OnDefaultEvent( sceneId, selfId, targetId )
 	elseif GetNumText() == 2  then
 		if nIndex > 0  then
 			BeginEvent( sceneId )
-				AddText( sceneId, "#YÊ²Ã´ÊÇ¾çÇéÑ­»·ÈÎÎñ£¿" )
+				AddText( sceneId, "#Yä»€ä¹ˆæ˜¯å‰§æƒ…å¾ªçŽ¯ä»»åŠ¡ï¼Ÿ" )
 				AddText( sceneId, x200100_g_Info[nIndex].s3 )
 			EndEvent( sceneId )
 			DispatchEventList( sceneId, selfId, targetId )
@@ -99,7 +99,7 @@ function x200100_OnDefaultEvent( sceneId, selfId, targetId )
 	elseif GetNumText() == 3  then
 		if nIndex > 0  then
 			BeginEvent( sceneId )
-				AddText( sceneId, "#YÊ²Ã´ÊÇ¹ØÏµÖµ£¿" )
+				AddText( sceneId, "#Yä»€ä¹ˆæ˜¯å…³ç³»å€¼ï¼Ÿ" )
 				AddText( sceneId, x200100_g_Info[nIndex].s2 )
 			EndEvent( sceneId )
 			DispatchEventList( sceneId, selfId, targetId )

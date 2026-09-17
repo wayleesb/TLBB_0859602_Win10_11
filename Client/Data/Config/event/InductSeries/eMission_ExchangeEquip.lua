@@ -1,4 +1,4 @@
 --MisDescBegin
 x500620_g_ScriptId = 500620
-x500620_g_Name = "Á¢·±"
+x500620_g_Name = "ç«‹ç¹"
 --MisDescEnd

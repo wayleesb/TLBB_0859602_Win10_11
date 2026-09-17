@@ -1,5 +1,5 @@
 -- 402260
--- �ؼ�կ�ױ�
+-- 秦家寨亲兵
 
 x402260_g_KillMonsCount_Qincheng = 20
 x402260_g_KillMonsCount_Qinjia 	 = 21

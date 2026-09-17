@@ -1,34 +1,34 @@
 --NPC
 --
---½Å±¾ºÅ
+--è„šæœ¬å·
 x000150_g_scriptId = 000150
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x000150_g_eventList={500604, 500607, 500620}
 
 --[tx43453]
-x000150_g_NumText_ExchangeXhuanHuangYu = 2	-- Ğşê»Óñ¶Ò»»°µÆ÷
-x000150_g_NumText_ExchangeXhuanHuangYuHelp = 3	-- Ğşê»Óñ¶Ò»»°µÆ÷°ïÖú
-x000150_g_NumText_DoExchange = 4	-- [tx45022]È·¶¨¶Ò»»
-x000150_g_NumText_CancelExchange = 5	-- [tx45022]È¡Ïû¶Ò»»
-x000150_g_Stone = 20310020      --Ğşê»Óñ
-x000150_g_BindStone = 20310021  --°ó¶¨Ğşê»Óñ
-x000150_g_MeiHuaBiao = 10155003  --Ã·»¨ïÚ
-x000150_g_CountLimit = 50 --½»»»¸öÊı[tx44913]
-x000150_g_MeiHuaBiaoBound = 10155005  --°ó¶¨Ã·»¨ïÚ[tx45022]
+x000150_g_NumText_ExchangeXhuanHuangYu = 2	-- ç„æ˜Šç‰å…‘æ¢æš—å™¨
+x000150_g_NumText_ExchangeXhuanHuangYuHelp = 3	-- ç„æ˜Šç‰å…‘æ¢æš—å™¨å¸®åŠ©
+x000150_g_NumText_DoExchange = 4	-- [tx45022]ç¡®å®šå…‘æ¢
+x000150_g_NumText_CancelExchange = 5	-- [tx45022]å–æ¶ˆå…‘æ¢
+x000150_g_Stone = 20310020      --ç„æ˜Šç‰
+x000150_g_BindStone = 20310021  --ç»‘å®šç„æ˜Šç‰
+x000150_g_MeiHuaBiao = 10155003  --æ¢…èŠ±é•–
+x000150_g_CountLimit = 50 --äº¤æ¢ä¸ªæ•°[tx44913]
+x000150_g_MeiHuaBiaoBound = 10155005  --ç»‘å®šæ¢…èŠ±é•–[tx45022]
 --[/tx43453]
---ÆÕÍ¨
+--æ™®é€š
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x000150_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
 
 --**********************************
---NPC¶Ô»°
+--NPCå¯¹è¯
 --**********************************
-		AddText(sceneId,"  ½­ºş±¾¾ÍÊÇ¸öÊÇ·ÇÖ®µØ£¬¶àÓĞ³ÑĞ×Îª¶ñµÄÎäÁÖ°ÜÀà£¬ÒªÏëÈÃÌìÏÂÏéºÍ£¬¾ÍµÃ¿´¸÷Î»ÏÀÊ¿µÄÁË¡£")
+		AddText(sceneId,"  æ±Ÿæ¹–æœ¬å°±æ˜¯ä¸ªæ˜¯éä¹‹åœ°ï¼Œå¤šæœ‰é€å‡¶ä¸ºæ¶çš„æ­¦æ—è´¥ç±»ï¼Œè¦æƒ³è®©å¤©ä¸‹ç¥¥å’Œï¼Œå°±å¾—çœ‹å„ä½ä¾ å£«çš„äº†ã€‚")
 		for i, eventId in x000150_g_eventList do
 			CallScriptFunction( eventId, "OnEnumerate",sceneId, selfId, targetId )
 		end		
@@ -39,7 +39,7 @@ function x000150_OnDefaultEvent( sceneId, selfId,targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x000150_OnEventRequest( sceneId, selfId, targetId, eventId )
 	for i, findId in x000150_g_eventList do
@@ -72,7 +72,7 @@ function x000150_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x000150_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x000150_g_eventList do
@@ -87,10 +87,10 @@ function x000150_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x000150_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
-	--¾Ü¾øÖ®ºó£¬Òª·µ»ØNPCµÄÊÂ¼şÁĞ±í
+	--æ‹’ç»ä¹‹åï¼Œè¦è¿”å›NPCçš„äº‹ä»¶åˆ—è¡¨
 	for i, findId in x000150_g_eventList do
 		if missionScriptId == findId then
 			x000150_OnDefaultEvent( sceneId, selfId, targetId )
@@ -100,7 +100,7 @@ function x000150_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¼ÌĞø£¨ÒÑ¾­½ÓÁËÈÎÎñ£©
+--ç»§ç»­ï¼ˆå·²ç»æ¥äº†ä»»åŠ¡ï¼‰
 --**********************************
 function x000150_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x000150_g_eventList do
@@ -112,7 +112,7 @@ function x000150_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---Ìá½»ÒÑ×öÍêµÄÈÎÎñ
+--æäº¤å·²åšå®Œçš„ä»»åŠ¡
 --**********************************
 function x000150_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, selectRadioId )
 	for i, findId in x000150_g_eventList do
@@ -124,11 +124,11 @@ function x000150_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 end
 
 --**********************************
---¶Ò»»
+--å…‘æ¢
 --**********************************
 function x000150_DoExchange( sceneId, selfId, targetId )--[tx45022]
 	--[tx43453]
-	--¼ì²éĞşê»Óñ¸öÊı
+	--æ£€æŸ¥ç„æ˜Šç‰ä¸ªæ•°
 	local count = LuaFnGetAvailableItemCount(sceneId, selfId, x000150_g_Stone)
 	local bindCount = LuaFnGetAvailableItemCount(sceneId, selfId, x000150_g_BindStone)
 		
@@ -137,7 +137,7 @@ function x000150_DoExchange( sceneId, selfId, targetId )--[tx45022]
 		x000150_CloseWindow(sceneId, selfId,targetId)		
 		return
 	end
-	-- ¼ì²é±³°ü¿Õ¼ä
+	-- æ£€æŸ¥èƒŒåŒ…ç©ºé—´
 	if LuaFnGetPropertyBagSpace( sceneId, selfId ) < 1 then
 			x000150_NotifyFailTips(sceneId, selfId,"#{AQFC_090115_07}")
 			return
@@ -146,7 +146,7 @@ function x000150_DoExchange( sceneId, selfId, targetId )--[tx45022]
 	local nItemBagIndexStone = 0
 	local szTransferStone = 0
 	
-	--ÓÅÏÈ¿Û³ı°ó¶¨µÄĞşê»Óñ
+	--ä¼˜å…ˆæ‰£é™¤ç»‘å®šçš„ç„æ˜Šç‰
 	local bDelOk = 0
 	if bindCount >= x000150_g_CountLimit then
 		nItemBagIndexStone = GetBagPosByItemSn(sceneId, selfId, x000150_g_BindStone)
@@ -172,7 +172,7 @@ function x000150_DoExchange( sceneId, selfId, targetId )--[tx45022]
 	    return
     end
 	end
-	--»ñÈ¡°µÆ÷[tx44913]	
+	--è·å–æš—å™¨[tx44913]	
 	local nBagIndex = -1
 	if bindCount > 0 then
 		nBagIndex = TryRecieveItem( sceneId, selfId, x000150_g_MeiHuaBiaoBound, 1 );
@@ -181,21 +181,21 @@ function x000150_DoExchange( sceneId, selfId, targetId )--[tx45022]
 	end
 	local szTransferEquip = GetBagItemTransfer(sceneId, selfId, nBagIndex)
 			
-	--»ñÈ¡°µÆ÷[/tx44913]		
+	--è·å–æš—å™¨[/tx44913]		
 	x000150_NotifyFailTips(sceneId, selfId, "#{AQFC_090115_08}")
-	--ÌØĞ§
+	--ç‰¹æ•ˆ
   LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, 18, 0)
-  --¹«¸æ
+  --å…¬å‘Š
  	local message = format("#{AQ_04}#{_INFOUSR%s}#{AQ_01}#{_INFOMSG%s}#{AQ_02}#{_INFOMSG%s}#{AQ_03}",LuaFnGetName(sceneId, selfId),szTransferStone, szTransferEquip)
 	BroadMsgByChatPipe(sceneId, selfId, message, 4);
-	--Í³¼Æ
+	--ç»Ÿè®¡
 	local guid = LuaFnObjId2Guid(sceneId, selfId);
-	ScriptGlobal_AuditGeneralLog(LUAAUDIT_MEIHUABIAO, guid);--[tx43454]ĞÂ°æ±¾Ôö¼ÓÁËguid
+	ScriptGlobal_AuditGeneralLog(LUAAUDIT_MEIHUABIAO, guid);--[tx43454]æ–°ç‰ˆæœ¬å¢åŠ äº†guid
 	--[/tx43453]	
 end
 
 --**********************************
--- ÆÁÄ»ÖĞ¼äĞÅÏ¢ÌáÊ¾
+-- å±å¹•ä¸­é—´ä¿¡æ¯æç¤º
 --**********************************
 function x000150_NotifyFailTips( sceneId, selfId, Tip )--[tx43453]
 	BeginEvent( sceneId )
@@ -205,7 +205,7 @@ function x000150_NotifyFailTips( sceneId, selfId, Tip )--[tx43453]
 end
 
 --**********************************
---¹Ø±Õ´°¿Ú
+--å…³é—­çª—å£
 --**********************************
 function x000150_CloseWindow(sceneId,selfId, targetId)--[tx43453]
 	BeginUICommand( sceneId )
@@ -215,7 +215,7 @@ function x000150_CloseWindow(sceneId,selfId, targetId)--[tx43453]
 end
 
 --**********************************
---ËÀÍöÊÂ¼ş
+--æ­»äº¡äº‹ä»¶
 --**********************************
 function x000150_OnDie( sceneId, selfId, killerId )
 end

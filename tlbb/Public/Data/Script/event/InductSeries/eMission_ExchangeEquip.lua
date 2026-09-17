@@ -1,25 +1,25 @@
--- Ì××°¶Ò»»ÈÎÎñ
+-- å¥—è£…å…‘æ¢ä»»åŠ¡
 
 --************************************************************************
 --MisDescBegin
 
--- ½Å±¾ºÅ
+-- è„šæœ¬å·
 x500620_g_ScriptId = 500620
 
--- ÈÎÎñÄ¿±ê NPC
-x500620_g_Name = "Á¢·±"
+-- ä»»åŠ¡ç›®æ ‡ NPC
+x500620_g_Name = "ç«‹ç¹"
 
 --MisDescEnd
 --************************************************************************
 
-x500620_g_NumText_Main = 1						-- ½ÓÈÎÎñµÄÑ¡Ïî
-x500620_g_NumText_ExchangeLeve76 = 100	--¶Ò»»76¼¶Ì××°
-x500620_g_NumText_ExchangeLeve86 = 200	--¶Ò»»86¼¶Ì××°
-x500620_g_NumText_ExchangeLeve96 = 300	--¶Ò»»96¼¶Ì××°
+x500620_g_NumText_Main = 1						-- æ¥ä»»åŠ¡çš„é€‰é¡¹
+x500620_g_NumText_ExchangeLeve76 = 100	--å…‘æ¢76çº§å¥—è£…
+x500620_g_NumText_ExchangeLeve86 = 200	--å…‘æ¢86çº§å¥—è£…
+x500620_g_NumText_ExchangeLeve96 = 300	--å…‘æ¢96çº§å¥—è£…
 
-x500620_g_EquipName ={{"¶Ò»»Ã÷ÔÂÌ××°","¶Ò»»±ÌÌìÌ××°","¶Ò»»¶ÉãòÌ××°","¶Ò»»ÒĞÂ¥Ì××°"},
-{"¶Ò»»Óñ¹ÇÌ××°","¶Ò»»³¾·÷Ì××°","¶Ò»»Ïã·ÙÌ××°","¶Ò»»ÇÙºáÌ××°"},
-{"¶Ò»»µñÀ»Ì××°","¶Ò»»Ì«ÒõÌ××°","¶Ò»»ÒøóİÌ××°","¶Ò»»ºŞÌìÌ××°"}
+x500620_g_EquipName ={{"å…‘æ¢æ˜æœˆå¥—è£…","å…‘æ¢ç¢§å¤©å¥—è£…","å…‘æ¢æ¸¡æ³¸å¥—è£…","å…‘æ¢å€šæ¥¼å¥—è£…"},
+{"å…‘æ¢ç‰éª¨å¥—è£…","å…‘æ¢å°˜æ‹‚å¥—è£…","å…‘æ¢é¦™ç„šå¥—è£…","å…‘æ¢ç´æ¨ªå¥—è£…"},
+{"å…‘æ¢é›•é˜‘å¥—è£…","å…‘æ¢å¤ªé˜´å¥—è£…","å…‘æ¢é“¶ç­å¥—è£…","å…‘æ¢æ¨å¤©å¥—è£…"}
 }
 
 x500620_g_EquipID ={
@@ -28,14 +28,14 @@ x500620_g_EquipID ={
 {{10511096,10512092,10520092,10522101,10523101},{10511097,10512093,10520093,10522102,10523102},{10511098,10512094,10520094,10522103,10523103},{10511099,10512095,10520095,10522104,10523104}}
 }
 
-x500620_g_Stone = 20310020      --Ğşê»Óñ
-x500620_g_BindStone = 20310021  --°ó¶¨Ğşê»Óñ
+x500620_g_Stone = 20310020      --ç„æ˜Šç‰
+x500620_g_BindStone = 20310021  --ç»‘å®šç„æ˜Šç‰
 
 --**********************************
--- ÈÎÎñÈë¿Úº¯Êı
+-- ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
-function x500620_OnDefaultEvent( sceneId, selfId, targetId )	-- µã»÷¸ÃÈÎÎñºóÖ´ĞĞ´Ë½Å±¾
-	if GetName( sceneId, targetId ) ~= x500620_g_Name then		-- ÅĞ¶Ï¸ÃnpcÊÇ·ñÊÇ¶ÔÓ¦ÈÎÎñµÄnpc
+function x500620_OnDefaultEvent( sceneId, selfId, targetId )	-- ç‚¹å‡»è¯¥ä»»åŠ¡åæ‰§è¡Œæ­¤è„šæœ¬
+	if GetName( sceneId, targetId ) ~= x500620_g_Name then		-- åˆ¤æ–­è¯¥npcæ˜¯å¦æ˜¯å¯¹åº”ä»»åŠ¡çš„npc
 		return
 	end
 
@@ -44,9 +44,9 @@ function x500620_OnDefaultEvent( sceneId, selfId, targetId )	-- µã»÷¸ÃÈÎÎñºóÖ´ĞĞ
 	if numText == x500620_g_NumText_Main then
 		BeginEvent(sceneId)
 		AddText(sceneId, "  #{LLFB_80821_2}")
-		AddNumText(sceneId, x500620_g_ScriptId, "¶Ò»»76¼¶Ì××°", 6, x500620_g_NumText_ExchangeLeve76)
-		AddNumText(sceneId, x500620_g_ScriptId, "¶Ò»»86¼¶Ì××°", 6, x500620_g_NumText_ExchangeLeve86)
-		AddNumText(sceneId, x500620_g_ScriptId, "¶Ò»»96¼¶Ì××°", 6, x500620_g_NumText_ExchangeLeve96)
+		AddNumText(sceneId, x500620_g_ScriptId, "å…‘æ¢76çº§å¥—è£…", 6, x500620_g_NumText_ExchangeLeve76)
+		AddNumText(sceneId, x500620_g_ScriptId, "å…‘æ¢86çº§å¥—è£…", 6, x500620_g_NumText_ExchangeLeve86)
+		AddNumText(sceneId, x500620_g_ScriptId, "å…‘æ¢96çº§å¥—è£…", 6, x500620_g_NumText_ExchangeLeve96)
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 	elseif numText == x500620_g_NumText_ExchangeLeve76 then
@@ -55,7 +55,7 @@ function x500620_OnDefaultEvent( sceneId, selfId, targetId )	-- µã»÷¸ÃÈÎÎñºóÖ´ĞĞ
 		for i = 1, getn( x500620_g_EquipName[1] ) do
 			AddNumText(sceneId, x500620_g_ScriptId, x500620_g_EquipName[1][i], 6, x500620_g_NumText_ExchangeLeve76+i)
 		end
-		AddNumText(sceneId, x500620_g_ScriptId, "·µ»ØÉÏÒ»²ã", 0, x500620_g_NumText_Main)
+		AddNumText(sceneId, x500620_g_ScriptId, "è¿”å›ä¸Šä¸€å±‚", 0, x500620_g_NumText_Main)
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 	elseif numText == x500620_g_NumText_ExchangeLeve86 then
@@ -64,7 +64,7 @@ function x500620_OnDefaultEvent( sceneId, selfId, targetId )	-- µã»÷¸ÃÈÎÎñºóÖ´ĞĞ
 		for i = 1, getn( x500620_g_EquipName[2] ) do
 			AddNumText(sceneId, x500620_g_ScriptId, x500620_g_EquipName[2][i], 6, x500620_g_NumText_ExchangeLeve86+i)
 		end
-		AddNumText(sceneId, x500620_g_ScriptId, "·µ»ØÉÏÒ»²ã", 0, x500620_g_NumText_Main)
+		AddNumText(sceneId, x500620_g_ScriptId, "è¿”å›ä¸Šä¸€å±‚", 0, x500620_g_NumText_Main)
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 	elseif numText == x500620_g_NumText_ExchangeLeve96 then
@@ -73,7 +73,7 @@ function x500620_OnDefaultEvent( sceneId, selfId, targetId )	-- µã»÷¸ÃÈÎÎñºóÖ´ĞĞ
 		for i = 1, getn( x500620_g_EquipName[3] ) do
 			AddNumText(sceneId, x500620_g_ScriptId, x500620_g_EquipName[3][i], 6, x500620_g_NumText_ExchangeLeve96+i)
 		end
-		AddNumText(sceneId, x500620_g_ScriptId, "·µ»ØÉÏÒ»²ã", 0, x500620_g_NumText_Main)
+		AddNumText(sceneId, x500620_g_ScriptId, "è¿”å›ä¸Šä¸€å±‚", 0, x500620_g_NumText_Main)
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 	else
@@ -105,67 +105,67 @@ function x500620_OnDefaultEvent( sceneId, selfId, targetId )	-- µã»÷¸ÃÈÎÎñºóÖ´ĞĞ
 end
 
 --**********************************
--- ÁĞ¾ÙÊÂ¼ş
+-- åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x500620_OnEnumerate( sceneId, selfId, targetId )
-	if GetName( sceneId, targetId ) ~= x500620_g_Name then		--ÅĞ¶Ï¸ÃnpcÊÇ·ñÊÇ¶ÔÓ¦ÈÎÎñµÄnpc
+	if GetName( sceneId, targetId ) ~= x500620_g_Name then		--åˆ¤æ–­è¯¥npcæ˜¯å¦æ˜¯å¯¹åº”ä»»åŠ¡çš„npc
 		return
 	end
 
-	AddNumText( sceneId, x500620_g_ScriptId, "Ğşê»Óñ¶Ò»»Ğşê»Ì××°", 6, x500620_g_NumText_Main )
+	AddNumText( sceneId, x500620_g_ScriptId, "ç„æ˜Šç‰å…‘æ¢ç„æ˜Šå¥—è£…", 6, x500620_g_NumText_Main )
 end
 
 --**********************************
--- ¼ì²â½ÓÊÜÌõ¼ş
+-- æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x500620_CheckAccept( sceneId, selfId, targetId )
 	return 1
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x500620_OnAccept( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÓĞÍæ¼Ò½øÈë¸±±¾ÊÂ¼ş
+--æœ‰ç©å®¶è¿›å…¥å‰¯æœ¬äº‹ä»¶
 --**********************************
 function x500620_OnPlayerEnter( sceneId, selfId )
 end
 
 --**********************************
---objËÀÍö
+--objæ­»äº¡
 --**********************************
 function x500620_OnDie( sceneId, objId, selfId )
 end
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x500620_OnContinue( sceneId, selfId, targetId )
 --	BeginEvent( sceneId )
 --		AddText( sceneId, x500620_g_MissionName )
---		AddText( sceneId, "good ¼ÌĞø" )
+--		AddText( sceneId, "good ç»§ç»­" )
 --	EndEvent( )
 --	DispatchMissionContinueInfo( sceneId, selfId, targetId, x500620_g_ScriptId, x500620_g_MissionId )
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x500620_OnAbandon( sceneId, selfId )
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x500620_CheckSubmit( sceneId, selfId )
 	return 1
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x500620_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 	local level = -1
@@ -197,7 +197,7 @@ function x500620_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 		return
 	end
 	
-	--¼ì²é±³°ü¿Õ¼ä
+	--æ£€æŸ¥èƒŒåŒ…ç©ºé—´
 	BeginAddItem(sceneId)
 		AddItem(sceneId, selectRadioId, 1)
 	local bBagOk = EndAddItem(sceneId, selfId)
@@ -209,7 +209,7 @@ function x500620_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 	local nItemBagIndexStone = 0
 	local szTransferStone = 0
 	
-	--ÓÅÏÈ¿Û³ı°ó¶¨µÄĞşê»Óñ
+	--ä¼˜å…ˆæ‰£é™¤ç»‘å®šçš„ç„æ˜Šç‰
 	local bDelOk = 0
 	if bindCount >= mustdelnum then
 		nItemBagIndexStone = GetBagPosByItemSn(sceneId, selfId, x500620_g_BindStone)
@@ -250,7 +250,7 @@ function x500620_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 end
 
 --**********************************
--- ¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+-- å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x500620_NotifyFailBox( sceneId, selfId, targetId, msg )
 	BeginEvent( sceneId )
@@ -260,7 +260,7 @@ function x500620_NotifyFailBox( sceneId, selfId, targetId, msg )
 end
 
 --**********************************
--- ÆÁÄ»ÖĞ¼äĞÅÏ¢ÌáÊ¾
+-- å±å¹•ä¸­é—´ä¿¡æ¯æç¤º
 --**********************************
 function x500620_NotifyFailTips( sceneId, selfId, Tip )
 	BeginEvent( sceneId )

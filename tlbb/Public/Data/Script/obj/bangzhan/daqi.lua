@@ -1,45 +1,45 @@
---°ïÕ½¸±±¾
---ÆìÌ¨NPC½»»¥½Å±¾
+--å¸®æˆ˜å‰¯æœ¬
+--æ——å°NPCäº¤äº’è„šæœ¬
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x402301_g_ScriptId	= 402301
 
---°ïÕ½¸±±¾½Å±¾
+--å¸®æˆ˜å‰¯æœ¬è„šæœ¬
 x402301_g_BangzhanScriptId	= 402047
 
---´óÆì´æÔÚÊ±¼ä
+--å¤§æ——å­˜åœ¨æ—¶é—´
 x402301_g_FlagTime	= 10*60
 
-x402301_g_OpenFlagSelfIDIndex = 10						--µ±Ç°ÕıÔÚ²Ù×÷ÆìÌ¨µÄselfidÔÚ32¸ö¸±±¾Êı¾İÖĞµÄË÷Òı
-x402301_g_OpenFlagStartTime = 11							--µ±Ç°ÕıÔÚ²Ù×÷ÆìÌ¨µÄ¿ªÊ¼Ê±¼äÔÚ32¸ö¸±±¾Êı¾İÖĞµÄË÷Òı
-x402301_g_FlagRemainedTime = 12								--ÆìÖÄÉıÆğÒÔºóµÄÊ£ÓàÊ±¼äÔÚ32¸ö¸±±¾Êı¾İÖĞµÄË÷Òı
+x402301_g_OpenFlagSelfIDIndex = 10						--å½“å‰æ­£åœ¨æ“ä½œæ——å°çš„selfidåœ¨32ä¸ªå‰¯æœ¬æ•°æ®ä¸­çš„ç´¢å¼•
+x402301_g_OpenFlagStartTime = 11							--å½“å‰æ­£åœ¨æ“ä½œæ——å°çš„å¼€å§‹æ—¶é—´åœ¨32ä¸ªå‰¯æœ¬æ•°æ®ä¸­çš„ç´¢å¼•
+x402301_g_FlagRemainedTime = 12								--æ——å¸œå‡èµ·ä»¥åçš„å‰©ä½™æ—¶é—´åœ¨32ä¸ªå‰¯æœ¬æ•°æ®ä¸­çš„ç´¢å¼•
 
-x402301_g_GuildPoint_GetFlag = 4							--»ı·Ö¹æÔòË÷Òı£¬±íGuildWarPoint.txtµÄID
+x402301_g_GuildPoint_GetFlag = 4							--ç§¯åˆ†è§„åˆ™ç´¢å¼•ï¼Œè¡¨GuildWarPoint.txtçš„ID
 
---°ïÕ½Êı¾İË÷Òı£¬¶ÔÓ¦³ÌĞòÖĞµÄ enum GUILDWAR_INT_ARRAY
-x402301_g_A_FlagNumIndex = 16									--A°ïÕ¼Áì´óÆì´ÎÊıÔÚ°ïÕ½Êı×éÖĞµÄË÷Òı
-x402301_g_B_FlagNumIndex = 17									--B°ïÕ¼Áì´óÆì´ÎÊıÔÚ°ïÕ½Êı×éÖĞµÄË÷Òı
+--å¸®æˆ˜æ•°æ®ç´¢å¼•ï¼Œå¯¹åº”ç¨‹åºä¸­çš„ enum GUILDWAR_INT_ARRAY
+x402301_g_A_FlagNumIndex = 16									--Aå¸®å é¢†å¤§æ——æ¬¡æ•°åœ¨å¸®æˆ˜æ•°ç»„ä¸­çš„ç´¢å¼•
+x402301_g_B_FlagNumIndex = 17									--Bå¸®å é¢†å¤§æ——æ¬¡æ•°åœ¨å¸®æˆ˜æ•°ç»„ä¸­çš„ç´¢å¼•
 
---¸öÈË»ı·ÖÊı¾İË÷Òı£¬¶ÔÓ¦³ÌĞòenum GUILDWAR_INT_INDEX
-x402301_g_Human_FlagIndex = 3									--¸öÈËÕ¼Áì´óÆì´ÎÊıË÷Òı
+--ä¸ªäººç§¯åˆ†æ•°æ®ç´¢å¼•ï¼Œå¯¹åº”ç¨‹åºenum GUILDWAR_INT_INDEX
+x402301_g_Human_FlagIndex = 3									--ä¸ªäººå é¢†å¤§æ——æ¬¡æ•°ç´¢å¼•
 
 
---ÕóÓªNPC
-x402301_g_A_FlagName = "Ñ×»ÆÕ½Æì"
+--é˜µè¥NPC
+x402301_g_A_FlagName = "ç‚é»„æˆ˜æ——"
 x402301_g_A_FlagID = 13332
 x402301_g_A_FlagPosX = 115.9615
 x402301_g_A_FlagPosZ = 130.9660
 
-x402301_g_B_FlagName = "ò¿ÓÈÕ½Æì"
+x402301_g_B_FlagName = "èš©å°¤æˆ˜æ——"
 x402301_g_B_FlagID = 13323
 x402301_g_B_FlagPosX = 115.9615
 x402301_g_B_FlagPosZ = 130.9660
 
 --**********************************
---ÌØÊâ½»»¥:Ìõ¼şÅĞ¶Ï
+--ç‰¹æ®Šäº¤äº’:æ¡ä»¶åˆ¤æ–­
 --**********************************
 function x402301_OnActivateConditionCheck( sceneId, selfId, activatorId )
-	--ÊÇ·ñÊÇ¸±±¾
+	--æ˜¯å¦æ˜¯å‰¯æœ¬
 	local sceneType = LuaFnGetSceneType( sceneId )
 	if sceneType ~= 1 then
 		BeginEvent(sceneId)
@@ -49,7 +49,7 @@ function x402301_OnActivateConditionCheck( sceneId, selfId, activatorId )
 		return 0
 	end
 
-	--ÊÇ·ñÊÇËùĞèÒªµÄ¸±±¾
+	--æ˜¯å¦æ˜¯æ‰€éœ€è¦çš„å‰¯æœ¬
 	local fubentype = LuaFnGetCopySceneData_Param( sceneId, 0 )
 	if fubentype ~= FUBEN_BANGZHAN then
 		BeginEvent(sceneId)
@@ -59,7 +59,7 @@ function x402301_OnActivateConditionCheck( sceneId, selfId, activatorId )
 		return 0
 	end
 	
-	--ÊÇ·ñ¿ªÊ¼¼Ç·Ö
+	--æ˜¯å¦å¼€å§‹è®°åˆ†
 	if LuaFnGetCopySceneData_Param( sceneId, 7 ) == 0 then
 		BeginEvent(sceneId)
 			AddText(sceneId,"#{BHXZ_081103_79}")
@@ -68,7 +68,7 @@ function x402301_OnActivateConditionCheck( sceneId, selfId, activatorId )
 		return 0
 	end
 	
-	--ÆìÌ¨ÉÏÒÑ¾­ÉıÆğÁËÆìÖÄ
+	--æ——å°ä¸Šå·²ç»å‡èµ·äº†æ——å¸œ
 	local RemainedTime = LuaFnGetCopySceneData_Param( sceneId, x402301_g_FlagRemainedTime )
 	if RemainedTime > 0 then
 		local minute = floor(RemainedTime / 60)
@@ -78,14 +78,14 @@ function x402301_OnActivateConditionCheck( sceneId, selfId, activatorId )
 			if minute == 0 then
 				AddText(sceneId,"#{BHXZ_081103_80}"..second.."#{BHXZ_081103_81}")
 			else
-				AddText(sceneId,"#{BHXZ_081103_80}"..minute.."·Ö"..second.."#{BHXZ_081103_81}")
+				AddText(sceneId,"#{BHXZ_081103_80}"..minute.."åˆ†"..second.."#{BHXZ_081103_81}")
 			end
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,activatorId)
 		return 0
 	end
 	
-	--ÎŞµĞ×´Ì¬ÎŞ·¨¼ÀÆì...ÒşÉí¿ÉÒÔ¼ÀÆì
+	--æ— æ•ŒçŠ¶æ€æ— æ³•ç¥­æ——...éšèº«å¯ä»¥ç¥­æ——
 	if LuaFnIsUnbreakable(sceneId,activatorId) ~= 0 then
 		BeginEvent(sceneId)
 			AddText(sceneId,"#{BHXZ_081103_124}")
@@ -94,14 +94,14 @@ function x402301_OnActivateConditionCheck( sceneId, selfId, activatorId )
 		return 0
 	end
 	
-	local totalguildid = LuaFnGetCopySceneData_Param( sceneId, 6 )					-- È¡µÃ±£´æµÄ°ïÅÉIDºÏÌå
+	local totalguildid = LuaFnGetCopySceneData_Param( sceneId, 6 )					-- å–å¾—ä¿å­˜çš„å¸®æ´¾IDåˆä½“
 	local Aguildid = floor(totalguildid / 10000)
 	local Bguildid = mod(totalguildid, 10000)
 	local guildid = GetHumanGuildID(sceneId, activatorId)
 	
 	if guildid ~= Aguildid and guildid ~= Bguildid then
 		BeginEvent(sceneId)
-			AddText(sceneId,"Äã²»ÔÚÕıÈ·µÄ°ïÅÉÖĞ¡£")
+			AddText(sceneId,"ä½ ä¸åœ¨æ­£ç¡®çš„å¸®æ´¾ä¸­ã€‚")
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,activatorId)
 		return 0
@@ -111,11 +111,11 @@ function x402301_OnActivateConditionCheck( sceneId, selfId, activatorId )
 	local OpenFlagStartTime = LuaFnGetCopySceneData_Param( sceneId, x402301_g_OpenFlagStartTime )
 	local NowTime = LuaFnGetCurrentTime()
 	
-	if OpenFlagSelfId ~= 0 then --ÓĞÈËÕıÔÚÒıµ¼¼ÀÆì
-		if OpenFlagSelfId == activatorId then --×Ô¼º
+	if OpenFlagSelfId ~= 0 then --æœ‰äººæ­£åœ¨å¼•å¯¼ç¥­æ——
+		if OpenFlagSelfId == activatorId then --è‡ªå·±
 			return 1
-		else --²»ÊÇ×Ô¼º
-			if (NowTime - OpenFlagStartTime) <= 180 then --ÊÇ·ñ³¬Ê±
+		else --ä¸æ˜¯è‡ªå·±
+			if (NowTime - OpenFlagStartTime) <= 180 then --æ˜¯å¦è¶…æ—¶
 				BeginEvent(sceneId)
 					AddText(sceneId,GetName(sceneId, OpenFlagSelfId).."#{BHXZ_081103_65}")
 				EndEvent(sceneId)
@@ -125,25 +125,25 @@ function x402301_OnActivateConditionCheck( sceneId, selfId, activatorId )
 		end
 	end
 	
-	LuaFnSetCopySceneData_Param( sceneId, x402301_g_OpenFlagSelfIDIndex, activatorId )	-- µ±Ç°ÕıÔÚ²Ù×÷ÆìÌ¨µÄselfid
-	LuaFnSetCopySceneData_Param( sceneId, x402301_g_OpenFlagStartTime, NowTime )	-- µ±Ç°ÕıÔÚ²Ù×÷ÆìÌ¨µÄ¿ªÊ¼Ê±¼ä
+	LuaFnSetCopySceneData_Param( sceneId, x402301_g_OpenFlagSelfIDIndex, activatorId )	-- å½“å‰æ­£åœ¨æ“ä½œæ——å°çš„selfid
+	LuaFnSetCopySceneData_Param( sceneId, x402301_g_OpenFlagStartTime, NowTime )	-- å½“å‰æ­£åœ¨æ“ä½œæ——å°çš„å¼€å§‹æ—¶é—´
 	
 	return 1
 
 end
 
 --**********************************
---ÌØÊâ½»»¥:ÏûºÄºÍ¿Û³ı´¦Àí
+--ç‰¹æ®Šäº¤äº’:æ¶ˆè€—å’Œæ‰£é™¤å¤„ç†
 --**********************************
 function x402301_OnActivateDeplete( sceneId, selfId, activatorId )
 	return 1
 end
 
 --**********************************
---ÌØÊâ½»»¥:¾ÛÆøÀà³É¹¦ÉúĞ§´¦Àí
+--ç‰¹æ®Šäº¤äº’:èšæ°”ç±»æˆåŠŸç”Ÿæ•ˆå¤„ç†
 --**********************************
 function x402301_OnActivateEffectOnce( sceneId, selfId, activatorId )
-	--ÊÇ·ñÊÇ¸±±¾
+	--æ˜¯å¦æ˜¯å‰¯æœ¬
 	local sceneType = LuaFnGetSceneType( sceneId )
 	if sceneType ~= 1 then
 		BeginEvent(sceneId)
@@ -153,7 +153,7 @@ function x402301_OnActivateEffectOnce( sceneId, selfId, activatorId )
 		return 1
 	end
 
-	--ÊÇ·ñÊÇËùĞèÒªµÄ¸±±¾
+	--æ˜¯å¦æ˜¯æ‰€éœ€è¦çš„å‰¯æœ¬
 	local fubentype = LuaFnGetCopySceneData_Param( sceneId, 0 )
 	if fubentype ~= FUBEN_BANGZHAN then
 		BeginEvent(sceneId)
@@ -163,7 +163,7 @@ function x402301_OnActivateEffectOnce( sceneId, selfId, activatorId )
 		return 1
 	end
 	
-	local totalguildid = LuaFnGetCopySceneData_Param( sceneId, 6 )					-- È¡µÃ±£´æµÄ°ïÅÉIDºÏÌå
+	local totalguildid = LuaFnGetCopySceneData_Param( sceneId, 6 )					-- å–å¾—ä¿å­˜çš„å¸®æ´¾IDåˆä½“
 	local Aguildid = floor(totalguildid / 10000)
 	local Bguildid = mod(totalguildid, 10000)
 	local guildid = GetHumanGuildID(sceneId, activatorId)
@@ -175,24 +175,24 @@ function x402301_OnActivateEffectOnce( sceneId, selfId, activatorId )
 		mems[i] = LuaFnGetCopyScene_HumanObjId( sceneId, i )
 	end
 	
-	--´´½¨´óÆìNPC£¬»ı·Ö
+	--åˆ›å»ºå¤§æ——NPCï¼Œç§¯åˆ†
 	if guildid == Aguildid then
 		local MstId = LuaFnCreateMonster(sceneId, x402301_g_A_FlagID, x402301_g_A_FlagPosX, x402301_g_A_FlagPosZ, 3, 0, -1 )
 		SetCharacterName( sceneId, MstId, x402301_g_A_FlagName )
-		LuaFnSetCopySceneData_Param( sceneId, x402301_g_FlagRemainedTime, x402301_g_FlagTime )	--ÆìÖÄÉıÆğÒÔºóµÄÊ£ÓàÊ±¼ä
+		LuaFnSetCopySceneData_Param( sceneId, x402301_g_FlagRemainedTime, x402301_g_FlagTime )	--æ——å¸œå‡èµ·ä»¥åçš„å‰©ä½™æ—¶é—´
 		
 		local addpoint = GetGuildWarPoint(sceneId, x402301_g_GuildPoint_GetFlag)
 		CallScriptFunction( x402301_g_BangzhanScriptId, "AddAGuildPoint", sceneId, activatorId, guildid, addpoint )
 		local alreadynum = GetGuildIntNum( sceneId, guildid, x402301_g_A_FlagNumIndex )
 		SetGuildIntNum( sceneId, guildid, x402301_g_A_FlagNumIndex, alreadynum+1 )
-		--CityChangeAttr( sceneId, activatorId, GUILD_CONTRIB_POINT, 30 ) --Ôö¼Ó°ï¹±
+		--CityChangeAttr( sceneId, activatorId, GUILD_CONTRIB_POINT, 30 ) --å¢åŠ å¸®è´¡
 		CallScriptFunction( x402301_g_BangzhanScriptId, "AddHumanGuildArrayInt", sceneId, activatorId, x402301_g_Human_FlagIndex, 1 )
 		
 		local guid = LuaFnObjId2Guid(sceneId, activatorId)
 		local log = format("HumanGuildID=%d,Apply_GuildID=%d,Applied_GuildID=%d", guildid, Aguildid, Bguildid)
 		ScriptGlobal_AuditGeneralLog(LUAAUDIT_BANGZHAN_FLAG, guid, log)
 		
-		local msg = LuaFnGetGuildName(sceneId, activatorId).."#{BHXZ_081103_125}"..GetName(sceneId, activatorId).."ÒÑ¾­ÉıÆğÁË"..x402301_g_A_FlagName.."¡£"
+		local msg = LuaFnGetGuildName(sceneId, activatorId).."#{BHXZ_081103_125}"..GetName(sceneId, activatorId).."å·²ç»å‡èµ·äº†"..x402301_g_A_FlagName.."ã€‚"
 		for i=0, membercount-1 do
 			if LuaFnIsObjValid( sceneId, mems[i] ) == 1 and LuaFnIsCanDoScriptLogic( sceneId, mems[i] ) == 1 then
 				x402301_NotifyFailTips(sceneId, mems[i], msg)
@@ -202,20 +202,20 @@ function x402301_OnActivateEffectOnce( sceneId, selfId, activatorId )
 	elseif guildid == Bguildid then
 		local MstId = LuaFnCreateMonster(sceneId, x402301_g_B_FlagID, x402301_g_B_FlagPosX, x402301_g_B_FlagPosZ, 3, 0, -1 )
 		SetCharacterName( sceneId, MstId, x402301_g_B_FlagName )
-		LuaFnSetCopySceneData_Param( sceneId, x402301_g_FlagRemainedTime, x402301_g_FlagTime )	--ÆìÖÄÉıÆğÒÔºóµÄÊ£ÓàÊ±¼ä
+		LuaFnSetCopySceneData_Param( sceneId, x402301_g_FlagRemainedTime, x402301_g_FlagTime )	--æ——å¸œå‡èµ·ä»¥åçš„å‰©ä½™æ—¶é—´
 		
 		local addpoint = GetGuildWarPoint(sceneId, x402301_g_GuildPoint_GetFlag)
 		CallScriptFunction( x402301_g_BangzhanScriptId, "AddBGuildPoint", sceneId, activatorId, guildid, addpoint )
 		local alreadynum = GetGuildIntNum( sceneId, guildid, x402301_g_B_FlagNumIndex )
 		SetGuildIntNum( sceneId, guildid, x402301_g_B_FlagNumIndex, alreadynum+1 )
-		--CityChangeAttr( sceneId, activatorId, GUILD_CONTRIB_POINT, 30 ) --Ôö¼Ó°ï¹±
+		--CityChangeAttr( sceneId, activatorId, GUILD_CONTRIB_POINT, 30 ) --å¢åŠ å¸®è´¡
 		CallScriptFunction( x402301_g_BangzhanScriptId, "AddHumanGuildArrayInt", sceneId, activatorId, x402301_g_Human_FlagIndex, 1 )
 		
 		local guid = LuaFnObjId2Guid(sceneId, activatorId)
 		local log = format("HumanGuildID=%d,Apply_GuildID=%d,Applied_GuildID=%d", guildid, Aguildid, Bguildid)
 		ScriptGlobal_AuditGeneralLog(LUAAUDIT_BANGZHAN_FLAG, guid, log)
 		
-		local msg = LuaFnGetGuildName(sceneId, activatorId).."#{BHXZ_081103_125}"..GetName(sceneId, activatorId).."ÒÑ¾­ÉıÆğÁË"..x402301_g_B_FlagName.."¡£"
+		local msg = LuaFnGetGuildName(sceneId, activatorId).."#{BHXZ_081103_125}"..GetName(sceneId, activatorId).."å·²ç»å‡èµ·äº†"..x402301_g_B_FlagName.."ã€‚"
 		for i=0, membercount-1 do
 			if LuaFnIsObjValid( sceneId, mems[i] ) == 1 and LuaFnIsCanDoScriptLogic( sceneId, mems[i] ) == 1 then
 				x402301_NotifyFailTips(sceneId, mems[i], msg)
@@ -224,45 +224,45 @@ function x402301_OnActivateEffectOnce( sceneId, selfId, activatorId )
 		end
 	end
 	
-	LuaFnSetCopySceneData_Param( sceneId, x402301_g_OpenFlagSelfIDIndex, 0 )	-- µ±Ç°ÕıÔÚ²Ù×÷ÆìÌ¨µÄselfid
-	LuaFnSetCopySceneData_Param( sceneId, x402301_g_OpenFlagStartTime, 0 )	-- µ±Ç°ÕıÔÚ²Ù×÷ÆìÌ¨µÄ¿ªÊ¼Ê±¼ä
+	LuaFnSetCopySceneData_Param( sceneId, x402301_g_OpenFlagSelfIDIndex, 0 )	-- å½“å‰æ­£åœ¨æ“ä½œæ——å°çš„selfid
+	LuaFnSetCopySceneData_Param( sceneId, x402301_g_OpenFlagStartTime, 0 )	-- å½“å‰æ­£åœ¨æ“ä½œæ——å°çš„å¼€å§‹æ—¶é—´
 	
 	return 1
 end
 
 --**********************************
---ÌØÊâ½»»¥:Òıµ¼ÀàÃ¿Ê±¼ä¼ä¸ôÉúĞ§´¦Àí
+--ç‰¹æ®Šäº¤äº’:å¼•å¯¼ç±»æ¯æ—¶é—´é—´éš”ç”Ÿæ•ˆå¤„ç†
 --**********************************
 function x402301_OnActivateEffectEachTick( sceneId, selfId, activatorId )
 	return 1
 end
 
 --**********************************
---ÌØÊâ½»»¥:½»»¥¿ªÊ¼Ê±µÄÌØÊâ´¦Àí
+--ç‰¹æ®Šäº¤äº’:äº¤äº’å¼€å§‹æ—¶çš„ç‰¹æ®Šå¤„ç†
 --**********************************
 function x402301_OnActivateActionStart( sceneId, selfId, activatorId )
 		return 1
 end
 
 --**********************************
---ÌØÊâ½»»¥:½»»¥³·ÏûÊ±µÄÌØÊâ´¦Àí
+--ç‰¹æ®Šäº¤äº’:äº¤äº’æ’¤æ¶ˆæ—¶çš„ç‰¹æ®Šå¤„ç†
 --**********************************
 function x402301_OnActivateCancel( sceneId, selfId, activatorId )
 	return 0
 end
 
 --**********************************
---ÌØÊâ½»»¥:½»»¥ÖĞ¶ÏÊ±µÄÌØÊâ´¦Àí
+--ç‰¹æ®Šäº¤äº’:äº¤äº’ä¸­æ–­æ—¶çš„ç‰¹æ®Šå¤„ç†
 --**********************************
 function x402301_OnActivateInterrupt( sceneId, selfId, activatorId )
-	LuaFnSetCopySceneData_Param( sceneId, x402301_g_OpenFlagSelfIDIndex, 0 )	-- µ±Ç°ÕıÔÚ²Ù×÷ÆìÌ¨µÄselfid
-	LuaFnSetCopySceneData_Param( sceneId, x402301_g_OpenFlagStartTime, 0 )	-- µ±Ç°ÕıÔÚ²Ù×÷ÆìÌ¨µÄ¿ªÊ¼Ê±¼ä
+	LuaFnSetCopySceneData_Param( sceneId, x402301_g_OpenFlagSelfIDIndex, 0 )	-- å½“å‰æ­£åœ¨æ“ä½œæ——å°çš„selfid
+	LuaFnSetCopySceneData_Param( sceneId, x402301_g_OpenFlagStartTime, 0 )	-- å½“å‰æ­£åœ¨æ“ä½œæ——å°çš„å¼€å§‹æ—¶é—´
 	
 	return 0
 end
 
 --**********************************
--- ÆÁÄ»ÖĞ¼äĞÅÏ¢ÌáÊ¾
+-- å±å¹•ä¸­é—´ä¿¡æ¯æç¤º
 --**********************************
 function x402301_NotifyFailTips( sceneId, selfId, Tip )
 	BeginEvent( sceneId )

@@ -34,7 +34,7 @@ function AcceptBox_OnEvent(event)
 	    PVPFLAG.DuelName = Name
 	    PVPFLAG.DuelGUID = GUID
 	    g_FrameInfo = PVPFLAG.ACCEPTDUEL;	    
-	    local MsgText = "#c0000FF"..Name.."#W".."ÏòÄúÌá³ö#cFF0000¾ö¶·#W£¬ÄúÊÇ·ñÍ¬Òâ£¿#r×¢Òâ£ºÔÚ¾ö¶·ÖĞËÀÍö½«»áÓĞ³Í·£¡£"
+	    local MsgText = "#c0000FF"..Name.."#W".."å‘æ‚¨æå‡º#cFF0000å†³æ–—#Wï¼Œæ‚¨æ˜¯å¦åŒæ„ï¼Ÿ#ræ³¨æ„ï¼šåœ¨å†³æ–—ä¸­æ­»äº¡å°†ä¼šæœ‰æƒ©ç½šã€‚"
 	    AcceptBox_Text:SetText( MsgText )
 	    this:Show();		
 	end
@@ -46,12 +46,12 @@ end
 -- UpdateFrame
 --===============================================
 function AcceptBox_UpdateFrame()
-	AcceptBox_PageHeader_Name:SetText("#gFF0FA0¾ö¶·È·ÈÏ");
+	AcceptBox_PageHeader_Name:SetText("#gFF0FA0å†³æ–—ç¡®è®¤");
 end
 
 
 --===============================================
--- µã»÷È·¶¨£¨IDOK£©
+-- ç‚¹å‡»ç¡®å®šï¼ˆIDOKï¼‰
 --===============================================
 function AcceptBox_OK_Clicked()
     if( PVPFLAG.ACCEPTDUEL == g_FrameInfo ) then
@@ -64,7 +64,7 @@ function AcceptBox_OK_Clicked()
 end
 
 --===============================================
--- ·ÅÆú°ÚÌ¯(IDCONCEL)
+-- æ”¾å¼ƒæ‘†æ‘Š(IDCONCEL)
 --===============================================
 function AcceptBox_Cancel_Clicked(bClick)
     AxTrace( 0, 0, "AcceptBox_Cancel_Clicked"..tostring( bClick ) )

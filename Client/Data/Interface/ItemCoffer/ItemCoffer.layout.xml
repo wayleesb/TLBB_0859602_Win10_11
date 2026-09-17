@@ -1,9 +1,9 @@
 <?xml version="1.0" ?>
 <GUILayout>
     <Window Type="TLBB_MainFrame1" Name="ItemCoffer_Frame">
-        <Property Name="UnifiedXPosition" Value="{0.5,-101}" />
-        <Property Name="UnifiedYPosition" Value="{0.5,-160}" />
-        <Property Name="AbsoluteSize" Value="w:202.000000 h:327.000000" />
+        <Property Name="UnifiedXPosition" Value="{0.5,-196}" />
+        <Property Name="UnifiedYPosition" Value="{0.5,-240}" />
+        <Property Name="AbsoluteSize" Value="w:392.000000 h:480.000000" />
         <Window Type="TLBB_DragTitle" Name="ItemCoffer_DragTitle">
             <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
             <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
@@ -29,13 +29,13 @@
             <Property Name="RiseOnClick" Value="False" />
             <Window Type="TLBB_ListBoxCommon" Name="ItemCoffer_PetList">
                 <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,23.000000}" />
-                <Property Name="UnifiedSize" Value="{{0.000000,190.000000},{1.000000,-45.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.000000,380.000000},{1.000000,-45.000000}" />
                 <Event Name="ItemSelectionChanged" Function="ItemCoffer_ListSelected();" />
                 <Event Name="MouseRClick" Function="ItemCoffer_ShowTargetPet();" />
             </Window>
             <Window Type="DefaultWindow" Name="ItemCoffer_Set">
                 <Property Name="UnifiedPosition" Value="{{0.000000,1.000000},{0.000000,23.000000}" />
-                <Property Name="UnifiedSize" Value="{{0.000000,190.000000},{1.000000,-45.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.000000,380.000000},{1.000000,-45.000000}" />
                 <Property Name="RiseOnClick" Value="False" />
                 <Window Type="TLBB_ActionButton" Name="ItemCoffer_1">
                     <Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
@@ -98,7 +98,7 @@
                     </Window>
                 </Window>
                 <Window Type="TLBB_ActionButton" Name="ItemCoffer_6">
-                    <Property Name="AbsolutePosition" Value="x:0.000000 y:38.000000" />
+                    <Property Name="AbsolutePosition" Value="x:190.000000 y:0.000000" />
                     <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
                     <Property Name="Empty" Value="false" />
                     <Event Name="Clicked" Function="ItemCofferClicked(6);" />
@@ -110,7 +110,7 @@
                     </Window>
                 </Window>
                 <Window Type="TLBB_ActionButton" Name="ItemCoffer_7">
-                    <Property Name="AbsolutePosition" Value="x:38.000000 y:38.000000" />
+                    <Property Name="AbsolutePosition" Value="x:228.000000 y:0.000000" />
                     <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
                     <Property Name="Empty" Value="false" />
                     <Event Name="Clicked" Function="ItemCofferClicked(7);" />
@@ -122,7 +122,7 @@
                     </Window>
                 </Window>
                 <Window Type="TLBB_ActionButton" Name="ItemCoffer_8">
-                    <Property Name="AbsolutePosition" Value="x:76.000000 y:38.000000" />
+                    <Property Name="AbsolutePosition" Value="x:266.000000 y:0.000000" />
                     <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
                     <Property Name="Empty" Value="false" />
                     <Event Name="Clicked" Function="ItemCofferClicked(8);" />
@@ -131,11 +131,10 @@
                         <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
                         <Property Name="MouseHollow" Value="True" />
                         <Property Name="MouseMoveHollow" Value="True" />
-                        <Property Name="MouseMoveHollow" Value="True" />
                     </Window>
                 </Window>
                 <Window Type="TLBB_ActionButton" Name="ItemCoffer_9">
-                    <Property Name="AbsolutePosition" Value="x:114.000000 y:38.000000" />
+                    <Property Name="AbsolutePosition" Value="x:304.000000 y:0.000000" />
                     <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
                     <Property Name="Empty" Value="false" />
                     <Event Name="Clicked" Function="ItemCofferClicked(9);" />
@@ -147,7 +146,7 @@
                     </Window>
                 </Window>
                 <Window Type="TLBB_ActionButton" Name="ItemCoffer_10">
-                    <Property Name="AbsolutePosition" Value="x:152.000000 y:38.000000" />
+                    <Property Name="AbsolutePosition" Value="x:342.000000 y:0.000000" />
                     <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
                     <Property Name="Empty" Value="false" />
                     <Event Name="Clicked" Function="ItemCofferClicked(10);" />
@@ -159,7 +158,7 @@
                     </Window>
                 </Window>
                 <Window Type="TLBB_ActionButton" Name="ItemCoffer_11">
-                    <Property Name="AbsolutePosition" Value="x:0.000000 y:76.000000" />
+                    <Property Name="AbsolutePosition" Value="x:0.000000 y:38.000000" />
                     <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
                     <Property Name="Empty" Value="false" />
                     <Event Name="Clicked" Function="ItemCofferClicked(11);" />
@@ -171,7 +170,7 @@
                     </Window>
                 </Window>
                 <Window Type="TLBB_ActionButton" Name="ItemCoffer_12">
-                    <Property Name="AbsolutePosition" Value="x:38.000000 y:76.000000" />
+                    <Property Name="AbsolutePosition" Value="x:38.000000 y:38.000000" />
                     <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
                     <Property Name="Empty" Value="false" />
                     <Event Name="Clicked" Function="ItemCofferClicked(12);" />
@@ -183,7 +182,7 @@
                     </Window>
                 </Window>
                 <Window Type="TLBB_ActionButton" Name="ItemCoffer_13">
-                    <Property Name="AbsolutePosition" Value="x:76.000000 y:76.000000" />
+                    <Property Name="AbsolutePosition" Value="x:76.000000 y:38.000000" />
                     <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
                     <Property Name="Empty" Value="false" />
                     <Event Name="Clicked" Function="ItemCofferClicked(13);" />
@@ -195,7 +194,7 @@
                     </Window>
                 </Window>
                 <Window Type="TLBB_ActionButton" Name="ItemCoffer_14">
-                    <Property Name="AbsolutePosition" Value="x:114.000000 y:76.000000" />
+                    <Property Name="AbsolutePosition" Value="x:114.000000 y:38.000000" />
                     <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
                     <Property Name="Empty" Value="false" />
                     <Event Name="Clicked" Function="ItemCofferClicked(14);" />
@@ -207,7 +206,7 @@
                     </Window>
                 </Window>
                 <Window Type="TLBB_ActionButton" Name="ItemCoffer_15">
-                    <Property Name="AbsolutePosition" Value="x:152.000000 y:76.000000" />
+                    <Property Name="AbsolutePosition" Value="x:152.000000 y:38.000000" />
                     <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
                     <Property Name="Empty" Value="false" />
                     <Event Name="Clicked" Function="ItemCofferClicked(15);" />
@@ -219,7 +218,7 @@
                     </Window>
                 </Window>
                 <Window Type="TLBB_ActionButton" Name="ItemCoffer_16">
-                    <Property Name="AbsolutePosition" Value="x:0.000000 y:114.000000" />
+                    <Property Name="AbsolutePosition" Value="x:190.000000 y:38.000000" />
                     <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
                     <Property Name="Empty" Value="false" />
                     <Event Name="Clicked" Function="ItemCofferClicked(16);" />
@@ -231,7 +230,7 @@
                     </Window>
                 </Window>
                 <Window Type="TLBB_ActionButton" Name="ItemCoffer_17">
-                    <Property Name="AbsolutePosition" Value="x:38.000000 y:114.000000" />
+                    <Property Name="AbsolutePosition" Value="x:228.000000 y:38.000000" />
                     <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
                     <Property Name="Empty" Value="false" />
                     <Event Name="Clicked" Function="ItemCofferClicked(17);" />
@@ -243,7 +242,7 @@
                     </Window>
                 </Window>
                 <Window Type="TLBB_ActionButton" Name="ItemCoffer_18">
-                    <Property Name="AbsolutePosition" Value="x:76.000000 y:114.000000" />
+                    <Property Name="AbsolutePosition" Value="x:266.000000 y:38.000000" />
                     <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
                     <Property Name="Empty" Value="false" />
                     <Event Name="Clicked" Function="ItemCofferClicked(18);" />
@@ -255,7 +254,7 @@
                     </Window>
                 </Window>
                 <Window Type="TLBB_ActionButton" Name="ItemCoffer_19">
-                    <Property Name="AbsolutePosition" Value="x:114.000000 y:114.000000" />
+                    <Property Name="AbsolutePosition" Value="x:304.000000 y:38.000000" />
                     <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
                     <Property Name="Empty" Value="false" />
                     <Event Name="Clicked" Function="ItemCofferClicked(19);" />
@@ -267,7 +266,7 @@
                     </Window>
                 </Window>
                 <Window Type="TLBB_ActionButton" Name="ItemCoffer_20">
-                    <Property Name="AbsolutePosition" Value="x:152.000000 y:114.000000" />
+                    <Property Name="AbsolutePosition" Value="x:342.000000 y:38.000000" />
                     <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
                     <Property Name="Empty" Value="false" />
                     <Event Name="Clicked" Function="ItemCofferClicked(20);" />
@@ -279,7 +278,7 @@
                     </Window>
                 </Window>
                 <Window Type="TLBB_ActionButton" Name="ItemCoffer_21">
-                    <Property Name="AbsolutePosition" Value="x:0.000000 y:152.000000" />
+                    <Property Name="AbsolutePosition" Value="x:0.000000 y:76.000000" />
                     <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
                     <Property Name="Empty" Value="false" />
                     <Event Name="Clicked" Function="ItemCofferClicked(21);" />
@@ -291,7 +290,7 @@
                     </Window>
                 </Window>
                 <Window Type="TLBB_ActionButton" Name="ItemCoffer_22">
-                    <Property Name="AbsolutePosition" Value="x:38.000000 y:152.000000" />
+                    <Property Name="AbsolutePosition" Value="x:38.000000 y:76.000000" />
                     <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
                     <Property Name="Empty" Value="false" />
                     <Event Name="Clicked" Function="ItemCofferClicked(22);" />
@@ -303,7 +302,7 @@
                     </Window>
                 </Window>
                 <Window Type="TLBB_ActionButton" Name="ItemCoffer_23">
-                    <Property Name="AbsolutePosition" Value="x:76.000000 y:152.000000" />
+                    <Property Name="AbsolutePosition" Value="x:76.000000 y:76.000000" />
                     <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
                     <Property Name="Empty" Value="false" />
                     <Event Name="Clicked" Function="ItemCofferClicked(23);" />
@@ -315,7 +314,7 @@
                     </Window>
                 </Window>
                 <Window Type="TLBB_ActionButton" Name="ItemCoffer_24">
-                    <Property Name="AbsolutePosition" Value="x:114.000000 y:152.000000" />
+                    <Property Name="AbsolutePosition" Value="x:114.000000 y:76.000000" />
                     <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
                     <Property Name="Empty" Value="false" />
                     <Event Name="Clicked" Function="ItemCofferClicked(24);" />
@@ -327,7 +326,7 @@
                     </Window>
                 </Window>
                 <Window Type="TLBB_ActionButton" Name="ItemCoffer_25">
-                    <Property Name="AbsolutePosition" Value="x:152.000000 y:152.000000" />
+                    <Property Name="AbsolutePosition" Value="x:152.000000 y:76.000000" />
                     <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
                     <Property Name="Empty" Value="false" />
                     <Event Name="Clicked" Function="ItemCofferClicked(25);" />
@@ -339,7 +338,7 @@
                     </Window>
                 </Window>
                 <Window Type="TLBB_ActionButton" Name="ItemCoffer_26">
-                    <Property Name="AbsolutePosition" Value="x:0.000000 y:190.000000" />
+                    <Property Name="AbsolutePosition" Value="x:190.000000 y:76.000000" />
                     <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
                     <Property Name="Empty" Value="false" />
                     <Event Name="Clicked" Function="ItemCofferClicked(26);" />
@@ -351,7 +350,7 @@
                     </Window>
                 </Window>
                 <Window Type="TLBB_ActionButton" Name="ItemCoffer_27">
-                    <Property Name="AbsolutePosition" Value="x:38.000000 y:190.000000" />
+                    <Property Name="AbsolutePosition" Value="x:228.000000 y:76.000000" />
                     <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
                     <Property Name="Empty" Value="false" />
                     <Event Name="Clicked" Function="ItemCofferClicked(27);" />
@@ -363,7 +362,7 @@
                     </Window>
                 </Window>
                 <Window Type="TLBB_ActionButton" Name="ItemCoffer_28">
-                    <Property Name="AbsolutePosition" Value="x:76.000000 y:190.000000" />
+                    <Property Name="AbsolutePosition" Value="x:266.000000 y:76.000000" />
                     <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
                     <Property Name="Empty" Value="false" />
                     <Event Name="Clicked" Function="ItemCofferClicked(28);" />
@@ -375,7 +374,7 @@
                     </Window>
                 </Window>
                 <Window Type="TLBB_ActionButton" Name="ItemCoffer_29">
-                    <Property Name="AbsolutePosition" Value="x:114.000000 y:190.000000" />
+                    <Property Name="AbsolutePosition" Value="x:304.000000 y:76.000000" />
                     <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
                     <Property Name="Empty" Value="false" />
                     <Event Name="Clicked" Function="ItemCofferClicked(29);" />
@@ -387,11 +386,851 @@
                     </Window>
                 </Window>
                 <Window Type="TLBB_ActionButton" Name="ItemCoffer_30">
-                    <Property Name="AbsolutePosition" Value="x:152.000000 y:190.000000" />
+                    <Property Name="AbsolutePosition" Value="x:342.000000 y:76.000000" />
                     <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
                     <Property Name="Empty" Value="false" />
                     <Event Name="Clicked" Function="ItemCofferClicked(30);" />
                     <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_30">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_31">
+                    <Property Name="AbsolutePosition" Value="x:0.000000 y:114.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(31);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_31">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_32">
+                    <Property Name="AbsolutePosition" Value="x:38.000000 y:114.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(32);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_32">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_33">
+                    <Property Name="AbsolutePosition" Value="x:76.000000 y:114.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(33);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_33">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_34">
+                    <Property Name="AbsolutePosition" Value="x:114.000000 y:114.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(34);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_34">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_35">
+                    <Property Name="AbsolutePosition" Value="x:152.000000 y:114.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(35);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_35">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_36">
+                    <Property Name="AbsolutePosition" Value="x:190.000000 y:114.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(36);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_36">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_37">
+                    <Property Name="AbsolutePosition" Value="x:228.000000 y:114.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(37);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_37">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_38">
+                    <Property Name="AbsolutePosition" Value="x:266.000000 y:114.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(38);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_38">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_39">
+                    <Property Name="AbsolutePosition" Value="x:304.000000 y:114.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(39);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_39">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_40">
+                    <Property Name="AbsolutePosition" Value="x:342.000000 y:114.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(40);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_40">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_41">
+                    <Property Name="AbsolutePosition" Value="x:0.000000 y:152.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(41);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_41">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_42">
+                    <Property Name="AbsolutePosition" Value="x:38.000000 y:152.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(42);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_42">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_43">
+                    <Property Name="AbsolutePosition" Value="x:76.000000 y:152.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(43);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_43">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_44">
+                    <Property Name="AbsolutePosition" Value="x:114.000000 y:152.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(44);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_44">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_45">
+                    <Property Name="AbsolutePosition" Value="x:152.000000 y:152.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(45);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_45">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_46">
+                    <Property Name="AbsolutePosition" Value="x:190.000000 y:152.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(46);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_46">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_47">
+                    <Property Name="AbsolutePosition" Value="x:228.000000 y:152.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(47);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_47">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_48">
+                    <Property Name="AbsolutePosition" Value="x:266.000000 y:152.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(48);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_48">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_49">
+                    <Property Name="AbsolutePosition" Value="x:304.000000 y:152.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(49);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_49">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_50">
+                    <Property Name="AbsolutePosition" Value="x:342.000000 y:152.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(50);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_50">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_51">
+                    <Property Name="AbsolutePosition" Value="x:0.000000 y:190.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(51);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_51">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_52">
+                    <Property Name="AbsolutePosition" Value="x:38.000000 y:190.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(52);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_52">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_53">
+                    <Property Name="AbsolutePosition" Value="x:76.000000 y:190.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(53);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_53">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_54">
+                    <Property Name="AbsolutePosition" Value="x:114.000000 y:190.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(54);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_54">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_55">
+                    <Property Name="AbsolutePosition" Value="x:152.000000 y:190.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(55);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_55">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_56">
+                    <Property Name="AbsolutePosition" Value="x:190.000000 y:190.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(56);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_56">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_57">
+                    <Property Name="AbsolutePosition" Value="x:228.000000 y:190.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(57);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_57">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_58">
+                    <Property Name="AbsolutePosition" Value="x:266.000000 y:190.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(58);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_58">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_59">
+                    <Property Name="AbsolutePosition" Value="x:304.000000 y:190.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(59);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_59">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_60">
+                    <Property Name="AbsolutePosition" Value="x:342.000000 y:190.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(60);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_60">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_61">
+                    <Property Name="AbsolutePosition" Value="x:0.000000 y:228.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(61);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_61">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_62">
+                    <Property Name="AbsolutePosition" Value="x:38.000000 y:228.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(62);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_62">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_63">
+                    <Property Name="AbsolutePosition" Value="x:76.000000 y:228.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(63);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_63">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_64">
+                    <Property Name="AbsolutePosition" Value="x:114.000000 y:228.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(64);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_64">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_65">
+                    <Property Name="AbsolutePosition" Value="x:152.000000 y:228.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(65);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_65">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_66">
+                    <Property Name="AbsolutePosition" Value="x:190.000000 y:228.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(66);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_66">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_67">
+                    <Property Name="AbsolutePosition" Value="x:228.000000 y:228.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(67);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_67">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_68">
+                    <Property Name="AbsolutePosition" Value="x:266.000000 y:228.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(68);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_68">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_69">
+                    <Property Name="AbsolutePosition" Value="x:304.000000 y:228.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(69);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_69">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_70">
+                    <Property Name="AbsolutePosition" Value="x:342.000000 y:228.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(70);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_70">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_71">
+                    <Property Name="AbsolutePosition" Value="x:0.000000 y:266.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(71);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_71">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_72">
+                    <Property Name="AbsolutePosition" Value="x:38.000000 y:266.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(72);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_72">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_73">
+                    <Property Name="AbsolutePosition" Value="x:76.000000 y:266.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(73);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_73">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_74">
+                    <Property Name="AbsolutePosition" Value="x:114.000000 y:266.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(74);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_74">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_75">
+                    <Property Name="AbsolutePosition" Value="x:152.000000 y:266.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(75);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_75">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_76">
+                    <Property Name="AbsolutePosition" Value="x:190.000000 y:266.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(76);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_76">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_77">
+                    <Property Name="AbsolutePosition" Value="x:228.000000 y:266.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(77);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_77">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_78">
+                    <Property Name="AbsolutePosition" Value="x:266.000000 y:266.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(78);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_78">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_79">
+                    <Property Name="AbsolutePosition" Value="x:304.000000 y:266.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(79);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_79">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_80">
+                    <Property Name="AbsolutePosition" Value="x:342.000000 y:266.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(80);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_80">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_81">
+                    <Property Name="AbsolutePosition" Value="x:0.000000 y:304.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(81);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_81">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_82">
+                    <Property Name="AbsolutePosition" Value="x:38.000000 y:304.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(82);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_82">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_83">
+                    <Property Name="AbsolutePosition" Value="x:76.000000 y:304.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(83);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_83">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_84">
+                    <Property Name="AbsolutePosition" Value="x:114.000000 y:304.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(84);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_84">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_85">
+                    <Property Name="AbsolutePosition" Value="x:152.000000 y:304.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(85);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_85">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_86">
+                    <Property Name="AbsolutePosition" Value="x:190.000000 y:304.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(86);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_86">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_87">
+                    <Property Name="AbsolutePosition" Value="x:228.000000 y:304.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(87);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_87">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_88">
+                    <Property Name="AbsolutePosition" Value="x:266.000000 y:304.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(88);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_88">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_89">
+                    <Property Name="AbsolutePosition" Value="x:304.000000 y:304.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(89);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_89">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_90">
+                    <Property Name="AbsolutePosition" Value="x:342.000000 y:304.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(90);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_90">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_91">
+                    <Property Name="AbsolutePosition" Value="x:0.000000 y:342.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(91);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_91">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_92">
+                    <Property Name="AbsolutePosition" Value="x:38.000000 y:342.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(92);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_92">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_93">
+                    <Property Name="AbsolutePosition" Value="x:76.000000 y:342.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(93);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_93">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_94">
+                    <Property Name="AbsolutePosition" Value="x:114.000000 y:342.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(94);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_94">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_95">
+                    <Property Name="AbsolutePosition" Value="x:152.000000 y:342.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(95);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_95">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_96">
+                    <Property Name="AbsolutePosition" Value="x:190.000000 y:342.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(96);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_96">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_97">
+                    <Property Name="AbsolutePosition" Value="x:228.000000 y:342.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(97);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_97">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_98">
+                    <Property Name="AbsolutePosition" Value="x:266.000000 y:342.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(98);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_98">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_99">
+                    <Property Name="AbsolutePosition" Value="x:304.000000 y:342.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(99);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_99">
+                        <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
+                        <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
+                        <Property Name="MouseHollow" Value="True" />
+                        <Property Name="MouseMoveHollow" Value="True" />
+                    </Window>
+                </Window>
+                <Window Type="TLBB_ActionButton" Name="ItemCoffer_100">
+                    <Property Name="AbsolutePosition" Value="x:342.000000 y:342.000000" />
+                    <Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+                    <Property Name="Empty" Value="false" />
+                    <Event Name="Clicked" Function="ItemCofferClicked(100);" />
+                    <Window Type="TLBB_StaticImageNULL" Name="ItemCofferIcon_100">
                         <Property Name="AbsolutePosition" Value="x:2.000000 y:20.000000" />
                         <Property Name="AbsoluteSize" Value="w:18.000000 h:14.000000" />
                         <Property Name="MouseHollow" Value="True" />

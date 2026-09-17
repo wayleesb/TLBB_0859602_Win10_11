@@ -1,9 +1,9 @@
---07ʥ��Ԫ��
+--07圣诞元旦
 
---�Ҹ�ѩ��ʹ�ýű�
+--幸福雪球使用脚本
 
 
---�ű���
+--脚本号
 x300064_g_scriptId = 300064
 
 x300064_g_GiftTbl = {
@@ -23,38 +23,38 @@ x300064_g_GiftTbl = {
 
 
 --**********************************
---�¼��������
+--事件交互入口
 --**********************************
 function x300064_OnDefaultEvent( sceneId, selfId, bagIndex )
--- ����Ҫ����ӿڣ���Ҫ�����պ���
+-- 不需要这个接口，但要保留空函数
 end
 
 --**********************************
---�����Ʒ��ʹ�ù����Ƿ������ڼ��ܣ�
---ϵͳ����ִ�п�ʼʱ�����������ķ���ֵ���������ʧ������Ժ�������Ƽ��ܵ�ִ�С�
---����1���������Ƶ���Ʒ�����Լ������Ƽ��ܵ�ִ�У�����0�����Ժ���Ĳ�����
+--这个物品的使用过程是否类似于技能：
+--系统会在执行开始时检测这个函数的返回值，如果返回失败则忽略后面的类似技能的执行。
+--返回1：技能类似的物品，可以继续类似技能的执行；返回0：忽略后面的操作。
 --**********************************
 function x300064_IsSkillLikeScript( sceneId, selfId)
-	return 1; --����ű���Ҫ����֧��
+	return 1; --这个脚本需要动作支持
 end
 
 --**********************************
---ֱ��ȡ��Ч����
---ϵͳ��ֱ�ӵ�������ӿڣ���������������ķ���ֵȷ���Ժ�������Ƿ�ִ�С�
---����1���Ѿ�ȡ����ӦЧ��������ִ�к�������������0��û�м�⵽���Ч��������ִ�С�
+--直接取消效果：
+--系统会直接调用这个接口，并根据这个函数的返回值确定以后的流程是否执行。
+--返回1：已经取消对应效果，不再执行后续操作；返回0：没有检测到相关效果，继续执行。
 --**********************************
 function x300064_CancelImpacts( sceneId, selfId )
-	return 0; --����Ҫ����ӿڣ���Ҫ�����պ���,����ʼ�շ���0��
+	return 0; --不需要这个接口，但要保留空函数,并且始终返回0。
 end
 
 --**********************************
---���������ڣ�
---ϵͳ���ڼ��ܼ���ʱ����������ӿڣ���������������ķ���ֵȷ���Ժ�������Ƿ�ִ�С�
---����1���������ͨ�������Լ���ִ�У�����0���������ʧ�ܣ��жϺ���ִ�С�
+--条件检测入口：
+--系统会在技能检测的时间点调用这个接口，并根据这个函数的返回值确定以后的流程是否执行。
+--返回1：条件检测通过，可以继续执行；返回0：条件检测失败，中断后续执行。
 --**********************************
 function x300064_OnConditionCheck( sceneId, selfId )
 
-	--У��ʹ�õ���Ʒ
+	--校验使用的物品
 	if(1~=LuaFnVerifyUsedItem(sceneId, selfId)) then
 		return 0
 	end
@@ -66,17 +66,17 @@ function x300064_OnConditionCheck( sceneId, selfId )
 
 	local objType = GetCharacterType( sceneId, targetId )
 
-	if objType == 1 then--��������....
+	if objType == 1 then--打的是玩家....
 
-			--���ܶ��Լ�ʹ��....
+			--不能对自己使用....
 		if selfId == targetId then
 			LuaFnSendOResultToPlayer(sceneId, selfId, OR_INVALID_TARGET)
 			return 0
 		end
 
-	elseif objType == 2 then--�����NPC....
+	elseif objType == 2 then--打的是NPC....
 
-		--����Ƕ�NPCʹ�õĻ�....������Ƿ���ѩ��....
+		--如果是对NPC使用的话....检测它是否是雪人....
 		local ret = CallScriptFunction( 050023, "CanThrowSnowBall", sceneId, selfId, targetId )
 		if ret ~= 1 then
 			LuaFnSendOResultToPlayer(sceneId, selfId, OR_INVALID_TARGET)
@@ -95,10 +95,10 @@ function x300064_OnConditionCheck( sceneId, selfId )
 end
 
 --**********************************
---���ļ�⼰������ڣ�
---ϵͳ���ڼ������ĵ�ʱ����������ӿڣ���������������ķ���ֵȷ���Ժ�������Ƿ�ִ�С�
---����1�����Ĵ���ͨ�������Լ���ִ�У�����0�����ļ��ʧ�ܣ��жϺ���ִ�С�
---ע�⣺�ⲻ�⸺�����ĵļ��Ҳ�������ĵ�ִ�С�
+--消耗检测及处理入口：
+--系统会在技能消耗的时间点调用这个接口，并根据这个函数的返回值确定以后的流程是否执行。
+--返回1：消耗处理通过，可以继续执行；返回0：消耗检测失败，中断后续执行。
+--注意：这不光负责消耗的检测也负责消耗的执行。
 --**********************************
 function x300064_OnDeplete( sceneId, selfId )
 	if(LuaFnDepletingUsedItem(sceneId, selfId)) then
@@ -108,11 +108,11 @@ function x300064_OnDeplete( sceneId, selfId )
 end
 
 --**********************************
---ֻ��ִ��һ����ڣ�
---������˲�����ܻ���������ɺ��������ӿڣ������������Ҹ��������������ʱ�򣩣�������
---����Ҳ����������ɺ��������ӿڣ����ܵ�һ��ʼ�����ĳɹ�ִ��֮�󣩡�
---����1�������ɹ�������0������ʧ�ܡ�
---ע�������Ǽ�����Чһ�ε����
+--只会执行一次入口：
+--聚气和瞬发技能会在消耗完成后调用这个接口（聚气结束并且各种条件都满足的时候），而引导
+--技能也会在消耗完成后调用这个接口（技能的一开始，消耗成功执行之后）。
+--返回1：处理成功；返回0：处理失败。
+--注：这里是技能生效一次的入口
 --**********************************
 function x300064_OnActivateOnce( sceneId, selfId )
 	
@@ -122,19 +122,19 @@ function x300064_OnActivateOnce( sceneId, selfId )
 	end
 	local objType = GetCharacterType( sceneId, targetId )
 
-	if objType == 1 then--������������....
+	if objType == 1 then--打的是其他玩家....
 
-		--1/12����(9%)���жԷ�....���Է�һ����Ч....����Ŀ��ʾ....
+		--1/12概率(9%)打中对方....给对方一个特效....并醒目提示....
 		local rand = random(100)
 		if rand < 9 then
 				LuaFnSendSpecificImpactToUnit(sceneId, targetId, targetId, targetId, 10482, 0)
 				BeginEvent( sceneId )
-					AddText( sceneId, "����"..LuaFnGetName(sceneId,selfId).."���Ҹ�ѩ��Ͷ���ˣ�" )
+					AddText( sceneId, "您被"..LuaFnGetName(sceneId,selfId).."的幸福雪球投中了！" )
 				EndEvent( sceneId )
 				DispatchMissionTips( sceneId, targetId )
 		end
 
-	elseif objType == 2 then--�����ѩ��....
+	elseif objType == 2 then--打的是雪人....
 
 		local ret = CallScriptFunction( 050023, "OnHitBySnowBall", sceneId, selfId, targetId )
 		if ret == 1 then
@@ -151,12 +151,12 @@ function x300064_OnActivateOnce( sceneId, selfId )
 
 	end
 
-	--40��(��)ʹ�ñ���Ʒ��һ�����ʻ��ý�Ʒ....
+	--40级(含)使用本物品有一定几率会获得奖品....
 	if GetLevel(sceneId, selfId) < 40 then
 		return 1
 	end
 
-	--1/500��ö���....
+	--1/500获得东西....
 	local GoodLuck = random(5000)
 	if GoodLuck > 10 then
 		return 1
@@ -170,7 +170,7 @@ function x300064_OnActivateOnce( sceneId, selfId )
 		local playerName = GetName(sceneId, selfId)
 		local transfer = GetBagItemTransfer(sceneId,selfId,BagIndex)
 
-		msg = format("#{_INFOUSR%s}#P���Ҹ���ѩ�����˳�ȥ��#{_INFOMSG%s}#P���������������#{_INFOUSR%s}#P�ı����С�", playerName, transfer, playerName )
+		msg = format("#{_INFOUSR%s}#P把幸福的雪球扔了出去，#{_INFOMSG%s}#P从天而降，掉到了#{_INFOUSR%s}#P的背包中。", playerName, transfer, playerName )
 		BroadMsgByChatPipe(sceneId, selfId, msg, 4)
 
 	end
@@ -180,11 +180,11 @@ function x300064_OnActivateOnce( sceneId, selfId )
 end
 
 --**********************************
---��������������ڣ�
---�������ܻ���ÿ����������ʱ��������ӿڡ�
---���أ�1�����´�������0���ж�������
---ע�������Ǽ�����Чһ�ε����
+--引导心跳处理入口：
+--引导技能会在每次心跳结束时调用这个接口。
+--返回：1继续下次心跳；0：中断引导。
+--注：这里是技能生效一次的入口
 --**********************************
 function x300064_OnActivateEachTick( sceneId, selfId)
-	return 1; --���������Խű�, ֻ�����պ���.
+	return 1; --不是引导性脚本, 只保留空函数.
 end

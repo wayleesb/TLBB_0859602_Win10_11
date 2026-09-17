@@ -1,11 +1,11 @@
---火焰山NPC
---丹妮
---任务
+--鐏劙灞盢PC
+--涓瑰Ξ
+--浠诲姟
 
 x042509_g_ScriptId	= 042509
 
 --**********************************
---事件交互入口
+--浜嬩欢浜や簰鍏ュ彛
 --**********************************
 function x042509_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent( sceneId )

@@ -1,17 +1,17 @@
--- ³èÎïÎòĞÔÌáÉı
+-- å® ç‰©æ‚Ÿæ€§æå‡
 
--- ½Å±¾ºÅ
+-- è„šæœ¬å·
 x800106_g_ScriptId = 800106
 
--- NPC Ãû×Ö
-x800106_g_Name = "ÔÆö­ö­"
+-- NPC åå­—
+x800106_g_Name = "äº‘éœéœ"
 
 	
 --**********************************
--- ÈÎÎñÈë¿Úº¯Êı
+-- ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
-function x800106_OnDefaultEvent( sceneId, selfId, targetId )	--µã»÷¸ÃÈÎÎñºóÖ´ĞĞ´Ë½Å±¾
-	if GetName( sceneId, targetId ) ~= x800106_g_Name then		--ÅĞ¶Ï¸Ã npc ÊÇ·ñÊÇÖ¸¶¨µÄnpc
+function x800106_OnDefaultEvent( sceneId, selfId, targetId )	--ç‚¹å‡»è¯¥ä»»åŠ¡åæ‰§è¡Œæ­¤è„šæœ¬
+	if GetName( sceneId, targetId ) ~= x800106_g_Name then		--åˆ¤æ–­è¯¥ npc æ˜¯å¦æ˜¯æŒ‡å®šçš„npc
 		return
 	end
 
@@ -22,19 +22,19 @@ function x800106_OnDefaultEvent( sceneId, selfId, targetId )	--µã»÷¸ÃÈÎÎñºóÖ´ĞĞ´
 end
 
 --**********************************
--- ÁĞ¾ÙÊÂ¼ş
+-- åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x800106_OnEnumerate( sceneId, selfId, targetId )
-	if GetName( sceneId, targetId ) ~= x800106_g_Name then		--ÅĞ¶Ï¸Ã npc ÊÇ·ñÊÇÖ¸¶¨µÄnpc
+	if GetName( sceneId, targetId ) ~= x800106_g_Name then		--åˆ¤æ–­è¯¥ npc æ˜¯å¦æ˜¯æŒ‡å®šçš„npc
 		return
 	end
 
-	AddNumText( sceneId, x800106_g_ScriptId, "Ê¹ÓÃ¸ù¹Çµ¤ÌáÉıÎòĞÔ" ,6,-1)
+	AddNumText( sceneId, x800106_g_ScriptId, "ä½¿ç”¨æ ¹éª¨ä¸¹æå‡æ‚Ÿæ€§" ,6,-1)
 end
 
 
 --**********************************
--- ³èÎïÎòĞÔÌáÉı
+-- å® ç‰©æ‚Ÿæ€§æå‡
 --**********************************
 function x800106_PetSavvy( sceneId, selfId, mainPetGuidH, mainPetGuidL )
 	
@@ -43,55 +43,55 @@ function x800106_PetSavvy( sceneId, selfId, mainPetGuidH, mainPetGuidL )
 	local gengu = LuaFnGetPetGenGuByGUID(sceneId, selfId, mainPetGuidH, mainPetGuidL)
 	local savvy = GetPetSavvy( sceneId, selfId, mainPetGuidH, mainPetGuidL )
 	if savvy == 10 then
-		x800106_NotifyTip(sceneId, selfId, "ÎòĞÔÒÑ¾­´òµ½×î¸ß£¬²»ÄÜÔÙÌáÉı£¡" );
+		x800106_NotifyTip(sceneId, selfId, "æ‚Ÿæ€§å·²ç»æ‰“åˆ°æœ€é«˜ï¼Œä¸èƒ½å†æå‡ï¼" );
 		return 0;
 	end
 	local cost = GetCostOfGenGuBySavvy(sceneId, selfId, savvy);
 	local succRate = GetSuccrateOfGenGuBySavvy(sceneId, selfId, savvy);
 	local rand = random(1000)
 	
-	--¼ì²é ¸ú¹Ç µ¤
+	--æ£€æŸ¥ è·Ÿéª¨ ä¸¹
 	local nSavvyNeed = savvy+1;	
 	local nItemIdGenGuDan = 0;
 	local msgTemp;
 	if nSavvyNeed >= 1 and nSavvyNeed <= 3 then
-		msgTemp = "µÍ";
+		msgTemp = "ä½";
 		nItemIdGenGuDan = 30504038;
 	elseif nSavvyNeed >= 4 and nSavvyNeed <= 6 then
-		msgTemp = "ÖĞ"
+		msgTemp = "ä¸­"
 		nItemIdGenGuDan = 30502001;
 	elseif nSavvyNeed >= 7 and nSavvyNeed <= 10 then
-		msgTemp = "¸ß"
+		msgTemp = "é«˜"
 		nItemIdGenGuDan = 30502002;
 	end
 	
 	local nYaoDingCount = GetItemCount(sceneId, selfId, nItemIdGenGuDan);
 	if nYaoDingCount <= 0 then
 		if nSavvyNeed >= 1 and nSavvyNeed <= 3 then
-			--Ã»ÓĞ°ó¶¨µÄµÍ¼¶¸ù¹Çµ¤
+			--æ²¡æœ‰ç»‘å®šçš„ä½çº§æ ¹éª¨ä¸¹
 			nItemIdGenGuDan = 30502000
 			local nYaoDingCount = GetItemCount(sceneId, selfId, nItemIdGenGuDan);
 			if nYaoDingCount<= 0 then
-				local msg = format("ÌáÉı¸ÃÕäÊŞÎòĞÔµ½%dĞèÒª%s¼¶¸ù¹Çµ¤¡£", savvy+1, msgTemp )
+				local msg = format("æå‡è¯¥çå…½æ‚Ÿæ€§åˆ°%déœ€è¦%sçº§æ ¹éª¨ä¸¹ã€‚", savvy+1, msgTemp )
 				x800106_NotifyTip(sceneId, selfId, msg );
 				return 0;
 			end
 		else
-			local msg = format("ÌáÉı¸ÃÕäÊŞÎòĞÔµ½%dĞèÒª%s¼¶¸ù¹Çµ¤¡£", savvy+1, msgTemp )
+			local msg = format("æå‡è¯¥çå…½æ‚Ÿæ€§åˆ°%déœ€è¦%sçº§æ ¹éª¨ä¸¹ã€‚", savvy+1, msgTemp )
 			x800106_NotifyTip(sceneId, selfId, msg );
 			return 0;
 		end
 	end
-	local	SelfMoney = GetMoney(sceneId, selfId)  +  GetMoneyJZ(sceneId, selfId);   --½»×ÓÆÕ¼° Vega
+	local	SelfMoney = GetMoney(sceneId, selfId)  +  GetMoneyJZ(sceneId, selfId);   --äº¤å­æ™®åŠ Vega
 	if SelfMoney < cost then 
 		return 0;
 	end
 	
-	--É¾³ı¸ú¹Ç µ¤
+	--åˆ é™¤è·Ÿéª¨ ä¸¹
 	local bRet = DelItem(sceneId, selfId, nItemIdGenGuDan, 1)
 	
 	if bRet<=0 then
-		local msg = format("É¾³ıµÀ¾ßÊ§°Ü£¡");
+		local msg = format("åˆ é™¤é“å…·å¤±è´¥ï¼");
 		x800106_NotifyTip(sceneId, selfId, msg );		
 		return 0;
 	end
@@ -112,7 +112,7 @@ function x800106_PetSavvy( sceneId, selfId, mainPetGuidH, mainPetGuidL )
 		
 		Audit_PetImproveWuxing( sceneId, selfId, mainPetGuidH, mainPetGuidL, 0, savvy - nSavvyDown );
 		
-		local msg = format("ºÏ³ÉÊ§°Ü£¬Ä¿Ç°ÕäÊŞµÄÎòĞÔÎª%d", savvy - nSavvyDown );
+		local msg = format("åˆæˆå¤±è´¥ï¼Œç›®å‰çå…½çš„æ‚Ÿæ€§ä¸º%d", savvy - nSavvyDown );
 		x800106_NotifyTip(sceneId, selfId, msg );
 		return 0;
 	end
@@ -126,10 +126,10 @@ function x800106_PetSavvy( sceneId, selfId, mainPetGuidH, mainPetGuidL )
 	szPetTransString = GetPetTransString(  sceneId, selfId, mainPetGuidH, mainPetGuidL );
 	szPlayerName = GetName( sceneId, selfId );
 	
-	local msg = format("¹§Ï²Äú£¬ºÏ³É³É¹¦£¬ÄúµÄÕäÊŞÎòĞÔ£«1¡£");
+	local msg = format("æ­å–œæ‚¨ï¼ŒåˆæˆæˆåŠŸï¼Œæ‚¨çš„çå…½æ‚Ÿæ€§ï¼‹1ã€‚");
 	x800106_NotifyTip(sceneId, selfId, msg );
 
-	--¹«¸æ¾«¼ò£¬ÎòĞÔÌáÉıµ½7ºÍÒÔÉÏ²Å¹«¸æ
+	--å…¬å‘Šç²¾ç®€ï¼Œæ‚Ÿæ€§æå‡åˆ°7å’Œä»¥ä¸Šæ‰å…¬å‘Š
 	if nSavvyNeed >= 7 then
 		
 		local szMsg;
@@ -139,14 +139,14 @@ function x800106_PetSavvy( sceneId, selfId, mainPetGuidH, mainPetGuidL )
 	
 	end
 	
-	--³É¹¦µÄ¹âĞ§
+	--æˆåŠŸçš„å…‰æ•ˆ
 	LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, 18, 0);
 		
 end
 
 
 --**********************************
---ĞÑÄ¿ÌáÊ¾
+--é†’ç›®æç¤º
 --**********************************
 function x800106_NotifyTip( sceneId, selfId, msg )
 

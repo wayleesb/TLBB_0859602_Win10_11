@@ -1,11 +1,11 @@
---火焰山NPC
---阿克
---任务
+--鐏劙灞盢PC
+--闃垮厠
+--浠诲姟
 
 x042502_g_ScriptId	= 042502
 
 --**********************************
---事件交互入口
+--浜嬩欢浜や簰鍏ュ彛
 --**********************************
 function x042502_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent( sceneId )

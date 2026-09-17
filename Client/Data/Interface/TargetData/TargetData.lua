@@ -21,67 +21,67 @@ function TargetData_PreLoad()
 end
 
 function TargetData_OnLoad()
-	--ÉúĞ¤
+	--ç”Ÿè‚–
 	TargetData_YearAnimal:ComboBoxAddItem("-",0);
-	TargetData_YearAnimal:ComboBoxAddItem("Êó",1); 
-	TargetData_YearAnimal:ComboBoxAddItem("Å£",2); 
-	TargetData_YearAnimal:ComboBoxAddItem("»¢",3); 
-	TargetData_YearAnimal:ComboBoxAddItem("ÍÃ",4); 
-	TargetData_YearAnimal:ComboBoxAddItem("Áú",5); 
-	TargetData_YearAnimal:ComboBoxAddItem("Éß",6); 
-	TargetData_YearAnimal:ComboBoxAddItem("Âí",7); 
-	TargetData_YearAnimal:ComboBoxAddItem("Ñò",8); 
-	TargetData_YearAnimal:ComboBoxAddItem("ºï",9);
-	TargetData_YearAnimal:ComboBoxAddItem("¼¦",10);
-	TargetData_YearAnimal:ComboBoxAddItem("¹·",11);
-	TargetData_YearAnimal:ComboBoxAddItem("Öí",12);
+	TargetData_YearAnimal:ComboBoxAddItem("é¼ ",1); 
+	TargetData_YearAnimal:ComboBoxAddItem("ç‰›",2); 
+	TargetData_YearAnimal:ComboBoxAddItem("è™",3); 
+	TargetData_YearAnimal:ComboBoxAddItem("å…”",4); 
+	TargetData_YearAnimal:ComboBoxAddItem("é¾™",5); 
+	TargetData_YearAnimal:ComboBoxAddItem("è›‡",6); 
+	TargetData_YearAnimal:ComboBoxAddItem("é©¬",7); 
+	TargetData_YearAnimal:ComboBoxAddItem("ç¾Š",8); 
+	TargetData_YearAnimal:ComboBoxAddItem("çŒ´",9);
+	TargetData_YearAnimal:ComboBoxAddItem("é¸¡",10);
+	TargetData_YearAnimal:ComboBoxAddItem("ç‹—",11);
+	TargetData_YearAnimal:ComboBoxAddItem("çŒª",12);
 	
-	--Ê¡·İ
+	--çœä»½
 	TargetData_Province:ComboBoxAddItem("-",		 0);
-	TargetData_Province:ComboBoxAddItem("±±¾©",  1); 
-	TargetData_Province:ComboBoxAddItem("Ìì½ò",  2); 
-	TargetData_Province:ComboBoxAddItem("ÉÏº£",  3); 
-	TargetData_Province:ComboBoxAddItem("ÖØÇì",  4); 
-	TargetData_Province:ComboBoxAddItem("ºÓ±±",  5); 
-	TargetData_Province:ComboBoxAddItem("ÁÉÄş",  6); 
-	TargetData_Province:ComboBoxAddItem("É½¶«",  7); 
-	TargetData_Province:ComboBoxAddItem("ºÚÁú½­",8); 
-	TargetData_Province:ComboBoxAddItem("É½Î÷",  9); 
-	TargetData_Province:ComboBoxAddItem("¼ªÁÖ",  10);
-	TargetData_Province:ComboBoxAddItem("ÉÂÎ÷",  11);
-	TargetData_Province:ComboBoxAddItem("ºÓÄÏ",  12);
-	TargetData_Province:ComboBoxAddItem("°²»Õ",  13);
-	TargetData_Province:ComboBoxAddItem("½­ËÕ",  14);
-	TargetData_Province:ComboBoxAddItem("ºş±±",  15);
-	TargetData_Province:ComboBoxAddItem("Õã½­",  16);
-	TargetData_Province:ComboBoxAddItem("ºşÄÏ",  17);
-	TargetData_Province:ComboBoxAddItem("½­Î÷",  18);
-	TargetData_Province:ComboBoxAddItem("¸£½¨",  19);
-	TargetData_Province:ComboBoxAddItem("Ì¨Íå",  20);
-	TargetData_Province:ComboBoxAddItem("ÄÚÃÉ¹Å",21);
-	TargetData_Province:ComboBoxAddItem("¸ÊËà",  22);
-	TargetData_Province:ComboBoxAddItem("ÄşÏÄ",  23);
-	TargetData_Province:ComboBoxAddItem("ËÄ´¨",  24);
-	TargetData_Province:ComboBoxAddItem("¹óÖİ",  25);
-	TargetData_Province:ComboBoxAddItem("ÔÆÄÏ",  26);
-	TargetData_Province:ComboBoxAddItem("¹ãÎ÷",  27);
-	TargetData_Province:ComboBoxAddItem("¹ã¶«",  28);
-	TargetData_Province:ComboBoxAddItem("º£ÄÏ",  29);
-	TargetData_Province:ComboBoxAddItem("ĞÂ½®",  30);
-	TargetData_Province:ComboBoxAddItem("Çàº£",  31);
-	TargetData_Province:ComboBoxAddItem("Î÷²Ø",  32);
-	TargetData_Province:ComboBoxAddItem("°ÄÃÅ",  33);
-	TargetData_Province:ComboBoxAddItem("Ïã¸Û",  34);
-	TargetData_Province:ComboBoxAddItem("ÆäËû",  35);
+	TargetData_Province:ComboBoxAddItem("åŒ—äº¬",  1); 
+	TargetData_Province:ComboBoxAddItem("å¤©æ´¥",  2); 
+	TargetData_Province:ComboBoxAddItem("ä¸Šæµ·",  3); 
+	TargetData_Province:ComboBoxAddItem("é‡åº†",  4); 
+	TargetData_Province:ComboBoxAddItem("æ²³åŒ—",  5); 
+	TargetData_Province:ComboBoxAddItem("è¾½å®",  6); 
+	TargetData_Province:ComboBoxAddItem("å±±ä¸œ",  7); 
+	TargetData_Province:ComboBoxAddItem("é»‘é¾™æ±Ÿ",8); 
+	TargetData_Province:ComboBoxAddItem("å±±è¥¿",  9); 
+	TargetData_Province:ComboBoxAddItem("å‰æ—",  10);
+	TargetData_Province:ComboBoxAddItem("é™•è¥¿",  11);
+	TargetData_Province:ComboBoxAddItem("æ²³å—",  12);
+	TargetData_Province:ComboBoxAddItem("å®‰å¾½",  13);
+	TargetData_Province:ComboBoxAddItem("æ±Ÿè‹",  14);
+	TargetData_Province:ComboBoxAddItem("æ¹–åŒ—",  15);
+	TargetData_Province:ComboBoxAddItem("æµ™æ±Ÿ",  16);
+	TargetData_Province:ComboBoxAddItem("æ¹–å—",  17);
+	TargetData_Province:ComboBoxAddItem("æ±Ÿè¥¿",  18);
+	TargetData_Province:ComboBoxAddItem("ç¦å»º",  19);
+	TargetData_Province:ComboBoxAddItem("å°æ¹¾",  20);
+	TargetData_Province:ComboBoxAddItem("å†…è’™å¤",21);
+	TargetData_Province:ComboBoxAddItem("ç”˜è‚ƒ",  22);
+	TargetData_Province:ComboBoxAddItem("å®å¤",  23);
+	TargetData_Province:ComboBoxAddItem("å››å·",  24);
+	TargetData_Province:ComboBoxAddItem("è´µå·",  25);
+	TargetData_Province:ComboBoxAddItem("äº‘å—",  26);
+	TargetData_Province:ComboBoxAddItem("å¹¿è¥¿",  27);
+	TargetData_Province:ComboBoxAddItem("å¹¿ä¸œ",  28);
+	TargetData_Province:ComboBoxAddItem("æµ·å—",  29);
+	TargetData_Province:ComboBoxAddItem("æ–°ç–†",  30);
+	TargetData_Province:ComboBoxAddItem("é’æµ·",  31);
+	TargetData_Province:ComboBoxAddItem("è¥¿è—",  32);
+	TargetData_Province:ComboBoxAddItem("æ¾³é—¨",  33);
+	TargetData_Province:ComboBoxAddItem("é¦™æ¸¯",  34);
+	TargetData_Province:ComboBoxAddItem("å…¶ä»–",  35);
 	
-	 --°ÄÃÅ  Ïã¸Û ºÍÆäËû
+	 --æ¾³é—¨  é¦™æ¸¯ å’Œå…¶ä»–
 	                                          
-	--ĞÔ±ğ
+	--æ€§åˆ«
 	TargetData_Sex:ComboBoxAddItem("-",0);
-	TargetData_Sex:ComboBoxAddItem("ÄĞ",1);
-	TargetData_Sex:ComboBoxAddItem("Å®",2);
+	TargetData_Sex:ComboBoxAddItem("ç”·",1);
+	TargetData_Sex:ComboBoxAddItem("å¥³",2);
 
-	--ÑªĞÍ
+	--è¡€å‹
 	TargetData_BloodType:ComboBoxAddItem("-",0);
 	TargetData_BloodType:ComboBoxAddItem("A",1);
 	TargetData_BloodType:ComboBoxAddItem("B",2);
@@ -89,20 +89,20 @@ function TargetData_OnLoad()
 	TargetData_BloodType:ComboBoxAddItem("O",4);
 
 
-	--ĞÇ×ù
+	--æ˜Ÿåº§
 	TargetData_Constellation:ComboBoxAddItem("-",0); 
-	TargetData_Constellation:ComboBoxAddItem("Ä§ôÉ×ù",1);
-	TargetData_Constellation:ComboBoxAddItem("Ë®Æ¿×ù",2); 
-	TargetData_Constellation:ComboBoxAddItem("Ë«Óã×ù",3); 
-	TargetData_Constellation:ComboBoxAddItem("°×Ñò×ù",4); 
-	TargetData_Constellation:ComboBoxAddItem("½ğÅ£×ù",5); 
-	TargetData_Constellation:ComboBoxAddItem("Ë«×Ó×ù",6); 
-	TargetData_Constellation:ComboBoxAddItem("¾ŞĞ·×ù",7); 
-	TargetData_Constellation:ComboBoxAddItem("Ê¨×Ó×ù",8); 
-	TargetData_Constellation:ComboBoxAddItem("´¦Å®×ù",9); 
-	TargetData_Constellation:ComboBoxAddItem("Ìì³Ó×ù",10);
-	TargetData_Constellation:ComboBoxAddItem("ÌìĞ«×ù",11);
-	TargetData_Constellation:ComboBoxAddItem("ÉäÊÖ×ù",12);
+	TargetData_Constellation:ComboBoxAddItem("é­”ç¾¯åº§",1);
+	TargetData_Constellation:ComboBoxAddItem("æ°´ç“¶åº§",2); 
+	TargetData_Constellation:ComboBoxAddItem("åŒé±¼åº§",3); 
+	TargetData_Constellation:ComboBoxAddItem("ç™½ç¾Šåº§",4); 
+	TargetData_Constellation:ComboBoxAddItem("é‡‘ç‰›åº§",5); 
+	TargetData_Constellation:ComboBoxAddItem("åŒå­åº§",6); 
+	TargetData_Constellation:ComboBoxAddItem("å·¨èŸ¹åº§",7); 
+	TargetData_Constellation:ComboBoxAddItem("ç‹®å­åº§",8); 
+	TargetData_Constellation:ComboBoxAddItem("å¤„å¥³åº§",9); 
+	TargetData_Constellation:ComboBoxAddItem("å¤©ç§¤åº§",10);
+	TargetData_Constellation:ComboBoxAddItem("å¤©èåº§",11);
+	TargetData_Constellation:ComboBoxAddItem("å°„æ‰‹åº§",12);
 	
 	CTRL[1] = TargetData_Age;
 	CTRL[2] = TargetData_Sex;
@@ -117,11 +117,11 @@ function TargetData_OnLoad()
 	CTRL[11] = TargetData_MessageBoard;
 	
 	SELFDATA_TAB_TEXT = {
-		[0] = "×°±¸",
-		"×ÊÁÏ",
-		"²©¿Í",
-		"ÕäÊŞ",
-		"Æï³Ë",
+		[0] = "è£…å¤‡",
+		"èµ„æ–™",
+		"åšå®¢",
+		"çå…½",
+		"éª‘ä¹˜",
 	};	
 end
 
@@ -203,12 +203,12 @@ function TargetData_OnEvent(event)
 		if(tonumber(arg0) ~= objCared) then
 			return;
 		end
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ı£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æœå’ŒNPCçš„è·ç¦»å¤§äºä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if(arg1=="destroy") then
 			g_InitiativeClose = 1;
 			this:Hide();
 
-			--È¡Ïû¹ØĞÄ
+			--å–æ¶ˆå…³å¿ƒ
 			this:CareObject(objCared, 0, "SelfData");
 		end
 		
@@ -220,7 +220,7 @@ end
 --===============================================
 function TargetData_UpdateFrame(whose)
 	
-	--±êÌâÏÔÊ¾Íæ¼ÒµÄÃû×Ö
+	--æ ‡é¢˜æ˜¾ç¤ºç©å®¶çš„åå­—
 	local szName = SystemSetup:GetPrivateInfo(whose,"name");
  	TargetData_PageHeader:SetText("#gFF0FA0"..szName);
 	
@@ -379,17 +379,17 @@ function TargetData_Accept_Clicked()
 		return;
 	end
 	
-	--Ìá½»
+	--æäº¤
 	SystemSetup:ApplyPrivateInfo();
 	
 	this:Hide();
-	--È¡Ïû¹ØĞÄ
+	--å–æ¶ˆå…³å¿ƒ
 	this:CareObject(objCared, 0, "SelfData");
 
 end
 
 --===============================================
--- ´ò¿ª
+-- æ‰“å¼€
 --===============================================
 function TargetData_TargetEquip_Down()
 	if( g_Current_Page == SELF_PAGE )     then
@@ -399,7 +399,7 @@ function TargetData_TargetEquip_Down()
 		Variable:SetVariable("OtherUnionPos", TargetData_Frame:GetProperty("UnifiedPosition"), 1);
 		SystemSetup:OpenEquipFrame("other");
 	end
-	--È¡Ïû¹ØĞÄ
+	--å–æ¶ˆå…³å¿ƒ
 	this:CareObject(objCared, 0, "SelfData");
 end
 
@@ -413,7 +413,7 @@ function TargetData_TargetBlog_Down()
 	
 end
 --===============================================
--- ´ò¿ª
+-- æ‰“å¼€
 --===============================================
 function TargetData_OtherPet_Down()
 

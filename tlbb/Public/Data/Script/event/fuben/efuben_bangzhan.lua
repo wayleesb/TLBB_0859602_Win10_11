@@ -1,65 +1,65 @@
--- °ïÅÉÕ½Õù add by hukai
+-- å¸®æ´¾æˆ˜äº‰ add by hukai
 --************************************************************************
 --MisDescBegin
 
--- ½Å±¾ºÅ
+-- è„šæœ¬å·
 x402047_g_ScriptId = 402047
 
--- ÈÎÎñÄ¿±ê NPC
-x402047_g_Name = "ÖÜÈ»"
+-- ä»»åŠ¡ç›®æ ‡ NPC
+x402047_g_Name = "å‘¨ç„¶"
 
--- ÈÎÎñÎÄ±¾ÃèÊö
-x402047_g_MissionName = "Ç°ÍùäÃÂ¹¹ÅÕ½³¡"
-x402047_g_SubmitInfo = "#{BHXZ_081103_115}"									-- Ìá½»Ê±µÄ¶Ô»°
+-- ä»»åŠ¡æ–‡æœ¬æè¿°
+x402047_g_MissionName = "å‰å¾€æ¶¿é¹¿å¤æˆ˜åœº"
+x402047_g_SubmitInfo = "#{BHXZ_081103_115}"									-- æäº¤æ—¶çš„å¯¹è¯
 
 --MisDescEnd
 --************************************************************************
 
-x402047_g_NumText_EnterCopyScene = 1		-- ÒªÇó½øÈë¸±±¾µÄÑ¡Ïî
-x402047_g_GetPrizeTitle = 2							-- ÁìÈ¡³ÆºÅµÄÑ¡Ïî
-x402047_g_GetPrizeTitle_Kill = 3				-- ÁìÈ¡³ÆºÅ£¨É±ÈË´ÎÊı×î¶à£¬Á¬Õ¶¿ñ¿Í£©µÄÑ¡Ïî
-x402047_g_GetPrizeTitle_Flag = 4				-- ÁìÈ¡³ÆºÅ£¨Õ¼ÁìÆìÖÄ×î¶à£¬³¬¼¶ÆìÊÖ£©µÄÑ¡Ïî
-x402047_g_GetPrizeTitle_Source = 5			-- ÁìÈ¡³ÆºÅ£¨²É¼¯×ÊÔ´×î¶à£¬ËÑ±¦×¨¼Ò£©µÄÑ¡Ïî
+x402047_g_NumText_EnterCopyScene = 1		-- è¦æ±‚è¿›å…¥å‰¯æœ¬çš„é€‰é¡¹
+x402047_g_GetPrizeTitle = 2							-- é¢†å–ç§°å·çš„é€‰é¡¹
+x402047_g_GetPrizeTitle_Kill = 3				-- é¢†å–ç§°å·ï¼ˆæ€äººæ¬¡æ•°æœ€å¤šï¼Œè¿æ–©ç‹‚å®¢ï¼‰çš„é€‰é¡¹
+x402047_g_GetPrizeTitle_Flag = 4				-- é¢†å–ç§°å·ï¼ˆå é¢†æ——å¸œæœ€å¤šï¼Œè¶…çº§æ——æ‰‹ï¼‰çš„é€‰é¡¹
+x402047_g_GetPrizeTitle_Source = 5			-- é¢†å–ç§°å·ï¼ˆé‡‡é›†èµ„æºæœ€å¤šï¼Œæœå®ä¸“å®¶ï¼‰çš„é€‰é¡¹
 
 x402047_g_CopySceneMap = "zhuluKVK.nav"
 x402047_g_CopySceneArea = "zhuluKVK_area.ini"
 x402047_g_CopySceneMonsterIni = "zhuluKVK_monster.ini"
 
-x402047_g_CopySceneType = FUBEN_BANGZHAN		-- ¸±±¾ÀàĞÍ£¬¶¨ÒåÔÚScriptGlobal.luaÀïÃæ
-x402047_g_MaxMembers = 25					-- ±¾°ï¿ÉÒÔ½ø¸±±¾µÄ×î´óÈËÊı  --tt50777 ÈËÊıÉÏÏŞÓÉ80ÈËĞŞ¸ÄÎª25ÈË
-x402047_g_TickTime = 1						-- »Øµ÷½Å±¾µÄÊ±ÖÓÊ±¼ä£¨µ¥Î»£ºÃë/´Î£©
-x402047_g_StartPoint = 60*5+5						-- ¿ªÊ¼¼Ç·ÖÊ±¼ä£¨µ¥Î»£º´ÎÊı£©ÎªÁËÏÔÊ¾³ö»¹Ê£5·ÖËùÒÔ¼ÓÁË5s
-x402047_g_LimitTotalHoldTime = 60*40 + x402047_g_StartPoint	-- ¸±±¾¿ÉÒÔ´æ»îµÄÊ±¼ä£¨µ¥Î»£º´ÎÊı£©,Èç¹û´ËÊ±¼äµ½ÁË£¬Ôò°ïÕ½½áÊø
-x402047_g_CloseTick = 30+1						-- ¸±±¾¹Ø±ÕÇ°µ¹¼ÆÊ±£¨µ¥Î»£º´ÎÊı£©
-x402047_g_NoUserTime = 10					-- ¸±±¾ÖĞÃ»ÓĞÈËºó¿ÉÒÔ¼ÌĞø±£´æµÄÊ±¼ä£¨µ¥Î»£ºÃë£©
-x402047_g_PvpRuler = 3						--¸±±¾¾º¼¼¹æÔò
-x402047_g_BackTick = 10						-- µ¹¼ÆÊ±£¨µ¥Î»£º´ÎÊı£©
+x402047_g_CopySceneType = FUBEN_BANGZHAN		-- å‰¯æœ¬ç±»å‹ï¼Œå®šä¹‰åœ¨ScriptGlobal.luaé‡Œé¢
+x402047_g_MaxMembers = 25					-- æœ¬å¸®å¯ä»¥è¿›å‰¯æœ¬çš„æœ€å¤§äººæ•°  --tt50777 äººæ•°ä¸Šé™ç”±80äººä¿®æ”¹ä¸º25äºº
+x402047_g_TickTime = 1						-- å›è°ƒè„šæœ¬çš„æ—¶é’Ÿæ—¶é—´ï¼ˆå•ä½ï¼šç§’/æ¬¡ï¼‰
+x402047_g_StartPoint = 60*5+5						-- å¼€å§‹è®°åˆ†æ—¶é—´ï¼ˆå•ä½ï¼šæ¬¡æ•°ï¼‰ä¸ºäº†æ˜¾ç¤ºå‡ºè¿˜å‰©5åˆ†æ‰€ä»¥åŠ äº†5s
+x402047_g_LimitTotalHoldTime = 60*40 + x402047_g_StartPoint	-- å‰¯æœ¬å¯ä»¥å­˜æ´»çš„æ—¶é—´ï¼ˆå•ä½ï¼šæ¬¡æ•°ï¼‰,å¦‚æœæ­¤æ—¶é—´åˆ°äº†ï¼Œåˆ™å¸®æˆ˜ç»“æŸ
+x402047_g_CloseTick = 30+1						-- å‰¯æœ¬å…³é—­å‰å€’è®¡æ—¶ï¼ˆå•ä½ï¼šæ¬¡æ•°ï¼‰
+x402047_g_NoUserTime = 10					-- å‰¯æœ¬ä¸­æ²¡æœ‰äººåå¯ä»¥ç»§ç»­ä¿å­˜çš„æ—¶é—´ï¼ˆå•ä½ï¼šç§’ï¼‰
+x402047_g_PvpRuler = 3						--å‰¯æœ¬ç«æŠ€è§„åˆ™
+x402047_g_BackTick = 10						-- å€’è®¡æ—¶ï¼ˆå•ä½ï¼šæ¬¡æ•°ï¼‰
 
-x402047_g_TankMaxEnemyNum = 15			--ÓĞĞ§·¶Î§ÄÚÕ½³µÆğĞ§¹ûµÄ×î´óµĞ·½ÊıÄ¿
-x402047_g_TankMaxFriendNum = 20			--ÓĞĞ§·¶Î§ÄÚÕ½³µÆğĞ§¹ûµÄ×î´ó±¾·½ÊıÄ¿
+x402047_g_TankMaxEnemyNum = 15			--æœ‰æ•ˆèŒƒå›´å†…æˆ˜è½¦èµ·æ•ˆæœçš„æœ€å¤§æ•Œæ–¹æ•°ç›®
+x402047_g_TankMaxFriendNum = 20			--æœ‰æ•ˆèŒƒå›´å†…æˆ˜è½¦èµ·æ•ˆæœçš„æœ€å¤§æœ¬æ–¹æ•°ç›®
 
-x402047_g_Fuben_A_X = 47--A°ï£¨ÌôÕ½·½£©Èë¿Ú
+x402047_g_Fuben_A_X = 47--Aå¸®ï¼ˆæŒ‘æˆ˜æ–¹ï¼‰å…¥å£
 x402047_g_Fuben_A_Z = 39
-x402047_g_Fuben_B_X = 203 --B°ï£¨Ó¦Õ½·½£©Èë¿Ú
+x402047_g_Fuben_B_X = 203 --Bå¸®ï¼ˆåº”æˆ˜æ–¹ï¼‰å…¥å£
 x402047_g_Fuben_B_Z = 215
 
-x402047_g_ALive_A_X = 51--A°ï£¨ÌôÕ½·½£©¸´»îµã
+x402047_g_ALive_A_X = 51--Aå¸®ï¼ˆæŒ‘æˆ˜æ–¹ï¼‰å¤æ´»ç‚¹
 x402047_g_ALive_A_Z = 26
-x402047_g_ALive_B_X = 205 --B°ï£¨Ó¦Õ½·½£©¸´»îµã
+x402047_g_ALive_B_X = 205 --Bå¸®ï¼ˆåº”æˆ˜æ–¹ï¼‰å¤æ´»ç‚¹
 x402047_g_ALive_B_Z = 227
 
-x402047_g_Back_X = 262 --ÆÕÍ¨³ö¿Ú
+x402047_g_Back_X = 262 --æ™®é€šå‡ºå£
 x402047_g_Back_Z = 51
 
-x402047_g_Exit_SceneID = 409 --´«³ö³¡¾°ID
-x402047_g_Win_X = 32 --»ñÊ¤·½³ö¿Ú
+x402047_g_Exit_SceneID = 409 --ä¼ å‡ºåœºæ™¯ID
+x402047_g_Win_X = 32 --è·èƒœæ–¹å‡ºå£
 x402047_g_Win_Z = 16
-x402047_g_Fail_X = 32 --Ê§°Ü·½³ö¿Ú
+x402047_g_Fail_X = 32 --å¤±è´¥æ–¹å‡ºå£
 x402047_g_Fail_Z = 41
 
-x402047_g_Win_PerHonour = 100 --»ñÊ¤·½Ã¿¸öÈË»ñµÃµÄÈÙÓşÖµ
-x402047_g_Fail_TotalHonour = 2000 --Ê§°Ü·½×Ü¹²»ñµÃµÄÈÙÓşÖµÉÏÏŞ£¡£¡×¢ÒâÊÇ×Ü¹²µÄ£¡£¡
-x402047_g_Fail_PerMaxHonour = 100 --Ê§°Ü·½Ã¿¸öÈË»ñµÃµÄÈÙÓşÖµÉÏÏŞ
+x402047_g_Win_PerHonour = 100 --è·èƒœæ–¹æ¯ä¸ªäººè·å¾—çš„è£èª‰å€¼
+x402047_g_Fail_TotalHonour = 2000 --å¤±è´¥æ–¹æ€»å…±è·å¾—çš„è£èª‰å€¼ä¸Šé™ï¼ï¼æ³¨æ„æ˜¯æ€»å…±çš„ï¼ï¼
+x402047_g_Fail_PerMaxHonour = 100 --å¤±è´¥æ–¹æ¯ä¸ªäººè·å¾—çš„è£èª‰å€¼ä¸Šé™
 
 x402047_g_PrizeMsg = {"#{BHXZ_081103_120}",
 											"#{BHXZ_081103_121}",
@@ -68,80 +68,80 @@ x402047_g_PrizeMsg = {"#{BHXZ_081103_120}",
 x402047_g_FailMsg = "#{BHXZ_081103_123}"
 
 x402047_g_PrizeFlag = {MF_BangZhan_Kill_Flag, MF_BangZhan_Flag_Flag, MF_BangZhan_Source_Flag}
-x402047_g_PrizeBuff = {31549, 31548, 31547} --½±Àøbuff
+x402047_g_PrizeBuff = {31549, 31548, 31547} --å¥–åŠ±buff
 
---³ÆºÅ½±Àø
-x402047_g_PrizeTitle = {{AwardPos = 15, SetPos = 39, Index = 252}, --½±ÀøµÄË÷Òı£¬ÉèÖÃÎ»ÖÃµÄË÷Òı£¬³ÆºÅË÷Òı
+--ç§°å·å¥–åŠ±
+x402047_g_PrizeTitle = {{AwardPos = 15, SetPos = 39, Index = 252}, --å¥–åŠ±çš„ç´¢å¼•ï¼Œè®¾ç½®ä½ç½®çš„ç´¢å¼•ï¼Œç§°å·ç´¢å¼•
 												{AwardPos = 16, SetPos = 40, Index = 253},
 												{AwardPos = 17, SetPos = 41, Index = 254}}
 
-x402047_g_GuildPoint_KillOtherPlayer = 0						--É±ÈË»ı·Ö¹æÔòË÷Òı£¬±íGuildWarPoint.txtµÄID
-x402047_g_GuildPoint_KillTower = 2									--Ëş»ı·Ö¹æÔòË÷Òı£¬±íGuildWarPoint.txtµÄID
-x402047_g_GuildPoint_KillTankPlayer = 3							--É±Õ½³µÍæ¼Ò»ı·Ö¹æÔòË÷Òı£¬±íGuildWarPoint.txtµÄID
-x402047_g_GuildPoint_KillPlatform = 5								--Õ½Ì¨»ı·Ö¹æÔòË÷Òı£¬±íGuildWarPoint.txtµÄID
+x402047_g_GuildPoint_KillOtherPlayer = 0						--æ€äººç§¯åˆ†è§„åˆ™ç´¢å¼•ï¼Œè¡¨GuildWarPoint.txtçš„ID
+x402047_g_GuildPoint_KillTower = 2									--å¡”ç§¯åˆ†è§„åˆ™ç´¢å¼•ï¼Œè¡¨GuildWarPoint.txtçš„ID
+x402047_g_GuildPoint_KillTankPlayer = 3							--æ€æˆ˜è½¦ç©å®¶ç§¯åˆ†è§„åˆ™ç´¢å¼•ï¼Œè¡¨GuildWarPoint.txtçš„ID
+x402047_g_GuildPoint_KillPlatform = 5								--æˆ˜å°ç§¯åˆ†è§„åˆ™ç´¢å¼•ï¼Œè¡¨GuildWarPoint.txtçš„ID
 
-x402047_g_IsSetOverFlag = 9										--ÊÇ·ñËãÁË½áÊø»ı·Ö(¸±±¾tickÔÚ´«³ö¸±±¾ºóÃ»ÓĞÂíÉÏ½áÊø£¬ÒªÔÚºóÃæµÄtickÖĞ²»×ß½áÊøÁì½±Á÷³Ì)ÔÚ32¸ö¸±±¾Êı¾İÖĞµÄË÷Òı
-x402047_g_OpenFlagSelfIDIndex = 10						--µ±Ç°ÕıÔÚ²Ù×÷ÆìÌ¨µÄselfidÔÚ32¸ö¸±±¾Êı¾İÖĞµÄË÷Òı
-x402047_g_OpenFlagStartTime = 11							--µ±Ç°ÕıÔÚ²Ù×÷ÆìÌ¨µÄ¿ªÊ¼Ê±¼äÔÚ32¸ö¸±±¾Êı¾İÖĞµÄË÷Òı
-x402047_g_FlagRemainedTime = 12								--ÆìÖÄÉıÆğÒÔºóµÄÊ£ÓàÊ±¼äÔÚ32¸ö¸±±¾Êı¾İÖĞµÄË÷Òı
-x402047_g_A_FirstTankManSelfID = 13						--A°ï±ä»¯³ÉÕ½³µµÄÍæ¼ÒµÄselfidÔÚ32¸ö¸±±¾Êı¾İÖĞµÄË÷Òı
-x402047_g_A_SecondTankManSelfID = 14					--A°ï±ä»¯³ÉÕ½³µµÄÍæ¼ÒµÄselfidÔÚ32¸ö¸±±¾Êı¾İÖĞµÄË÷Òı
-x402047_g_B_FirstTankManSelfID = 15						--B°ï±ä»¯³ÉÕ½³µµÄÍæ¼ÒµÄselfidÔÚ32¸ö¸±±¾Êı¾İÖĞµÄË÷Òı
-x402047_g_B_SecondTankManSelfID = 16					--B°ï±ä»¯³ÉÕ½³µµÄÍæ¼ÒµÄselfidÔÚ32¸ö¸±±¾Êı¾İÖĞµÄË÷Òı
-x402047_g_A_FirstTankBuff = 17								--A°ï±ä»¯³ÉÕ½³µµÄBuffIDÔÚ32¸ö¸±±¾Êı¾İÖĞµÄË÷Òı
-x402047_g_A_SecondTankBuff = 18								--A°ï±ä»¯³ÉÕ½³µµÄBuffIDÔÚ32¸ö¸±±¾Êı¾İÖĞµÄË÷Òı
-x402047_g_B_FirstTankBuff = 19								--B°ï±ä»¯³ÉÕ½³µµÄBuffIDÔÚ32¸ö¸±±¾Êı¾İÖĞµÄË÷Òı
-x402047_g_B_SecondTankBuff = 20								--B°ï±ä»¯³ÉÕ½³µµÄBuffIDÔÚ32¸ö¸±±¾Êı¾İÖĞµÄË÷Òı
-x402047_g_A_FirstTankPos = 21									--A°ï±ä»¯³ÉÕ½³µµÄPosÔÚ32¸ö¸±±¾Êı¾İÖĞµÄË÷Òı
-x402047_g_A_SecondTankPos = 22								--A°ï±ä»¯³ÉÕ½³µµÄPosÔÚ32¸ö¸±±¾Êı¾İÖĞµÄË÷Òı
-x402047_g_B_FirstTankPos = 23									--B°ï±ä»¯³ÉÕ½³µµÄPosÔÚ32¸ö¸±±¾Êı¾İÖĞµÄË÷Òı
-x402047_g_B_SecondTankPos = 24								--B°ï±ä»¯³ÉÕ½³µµÄPosÔÚ32¸ö¸±±¾Êı¾İÖĞµÄË÷Òı
-x402047_g_A_TankColdTime = 25									--A°ïÕ½³µÀäÈ´Ê±¼äÔÚ32¸ö¸±±¾Êı¾İÖĞµÄË÷Òı
-x402047_g_B_TankColdTime = 26									--B°ïÕ½³µÀäÈ´Ê±¼äÔÚ32¸ö¸±±¾Êı¾İÖĞµÄË÷Òı
-x402047_g_A_BroadcastTick = 27								--A°ï±¤ÀİÑªÁ¿²¥·Å¼ÆÊıÔÚ32¸ö¸±±¾Êı¾İÖĞµÄË÷Òı
-x402047_g_B_BroadcastTick = 28								--B°ï±¤ÀİÑªÁ¿²¥·Å¼ÆÊıÔÚ32¸ö¸±±¾Êı¾İÖĞµÄË÷Òı
+x402047_g_IsSetOverFlag = 9										--æ˜¯å¦ç®—äº†ç»“æŸç§¯åˆ†(å‰¯æœ¬tickåœ¨ä¼ å‡ºå‰¯æœ¬åæ²¡æœ‰é©¬ä¸Šç»“æŸï¼Œè¦åœ¨åé¢çš„tickä¸­ä¸èµ°ç»“æŸé¢†å¥–æµç¨‹)åœ¨32ä¸ªå‰¯æœ¬æ•°æ®ä¸­çš„ç´¢å¼•
+x402047_g_OpenFlagSelfIDIndex = 10						--å½“å‰æ­£åœ¨æ“ä½œæ——å°çš„selfidåœ¨32ä¸ªå‰¯æœ¬æ•°æ®ä¸­çš„ç´¢å¼•
+x402047_g_OpenFlagStartTime = 11							--å½“å‰æ­£åœ¨æ“ä½œæ——å°çš„å¼€å§‹æ—¶é—´åœ¨32ä¸ªå‰¯æœ¬æ•°æ®ä¸­çš„ç´¢å¼•
+x402047_g_FlagRemainedTime = 12								--æ——å¸œå‡èµ·ä»¥åçš„å‰©ä½™æ—¶é—´åœ¨32ä¸ªå‰¯æœ¬æ•°æ®ä¸­çš„ç´¢å¼•
+x402047_g_A_FirstTankManSelfID = 13						--Aå¸®å˜åŒ–æˆæˆ˜è½¦çš„ç©å®¶çš„selfidåœ¨32ä¸ªå‰¯æœ¬æ•°æ®ä¸­çš„ç´¢å¼•
+x402047_g_A_SecondTankManSelfID = 14					--Aå¸®å˜åŒ–æˆæˆ˜è½¦çš„ç©å®¶çš„selfidåœ¨32ä¸ªå‰¯æœ¬æ•°æ®ä¸­çš„ç´¢å¼•
+x402047_g_B_FirstTankManSelfID = 15						--Bå¸®å˜åŒ–æˆæˆ˜è½¦çš„ç©å®¶çš„selfidåœ¨32ä¸ªå‰¯æœ¬æ•°æ®ä¸­çš„ç´¢å¼•
+x402047_g_B_SecondTankManSelfID = 16					--Bå¸®å˜åŒ–æˆæˆ˜è½¦çš„ç©å®¶çš„selfidåœ¨32ä¸ªå‰¯æœ¬æ•°æ®ä¸­çš„ç´¢å¼•
+x402047_g_A_FirstTankBuff = 17								--Aå¸®å˜åŒ–æˆæˆ˜è½¦çš„BuffIDåœ¨32ä¸ªå‰¯æœ¬æ•°æ®ä¸­çš„ç´¢å¼•
+x402047_g_A_SecondTankBuff = 18								--Aå¸®å˜åŒ–æˆæˆ˜è½¦çš„BuffIDåœ¨32ä¸ªå‰¯æœ¬æ•°æ®ä¸­çš„ç´¢å¼•
+x402047_g_B_FirstTankBuff = 19								--Bå¸®å˜åŒ–æˆæˆ˜è½¦çš„BuffIDåœ¨32ä¸ªå‰¯æœ¬æ•°æ®ä¸­çš„ç´¢å¼•
+x402047_g_B_SecondTankBuff = 20								--Bå¸®å˜åŒ–æˆæˆ˜è½¦çš„BuffIDåœ¨32ä¸ªå‰¯æœ¬æ•°æ®ä¸­çš„ç´¢å¼•
+x402047_g_A_FirstTankPos = 21									--Aå¸®å˜åŒ–æˆæˆ˜è½¦çš„Posåœ¨32ä¸ªå‰¯æœ¬æ•°æ®ä¸­çš„ç´¢å¼•
+x402047_g_A_SecondTankPos = 22								--Aå¸®å˜åŒ–æˆæˆ˜è½¦çš„Posåœ¨32ä¸ªå‰¯æœ¬æ•°æ®ä¸­çš„ç´¢å¼•
+x402047_g_B_FirstTankPos = 23									--Bå¸®å˜åŒ–æˆæˆ˜è½¦çš„Posåœ¨32ä¸ªå‰¯æœ¬æ•°æ®ä¸­çš„ç´¢å¼•
+x402047_g_B_SecondTankPos = 24								--Bå¸®å˜åŒ–æˆæˆ˜è½¦çš„Posåœ¨32ä¸ªå‰¯æœ¬æ•°æ®ä¸­çš„ç´¢å¼•
+x402047_g_A_TankColdTime = 25									--Aå¸®æˆ˜è½¦å†·å´æ—¶é—´åœ¨32ä¸ªå‰¯æœ¬æ•°æ®ä¸­çš„ç´¢å¼•
+x402047_g_B_TankColdTime = 26									--Bå¸®æˆ˜è½¦å†·å´æ—¶é—´åœ¨32ä¸ªå‰¯æœ¬æ•°æ®ä¸­çš„ç´¢å¼•
+x402047_g_A_BroadcastTick = 27								--Aå¸®å ¡å’è¡€é‡æ’­æ”¾è®¡æ•°åœ¨32ä¸ªå‰¯æœ¬æ•°æ®ä¸­çš„ç´¢å¼•
+x402047_g_B_BroadcastTick = 28								--Bå¸®å ¡å’è¡€é‡æ’­æ”¾è®¡æ•°åœ¨32ä¸ªå‰¯æœ¬æ•°æ®ä¸­çš„ç´¢å¼•
 
---°ïÕ½Êı¾İË÷Òı£¬¶ÔÓ¦³ÌĞòÖĞµÄ enum GUILDWAR_INT_ARRAY
+--å¸®æˆ˜æ•°æ®ç´¢å¼•ï¼Œå¯¹åº”ç¨‹åºä¸­çš„ enum GUILDWAR_INT_ARRAY
 x402047_g_A_numIndex = 0
 x402047_g_B_numIndex = 1
-x402047_g_A_KillManNumIndex = 12							--A°ïÉ±ÈËÊıÔÚ°ïÕ½Êı×éÖĞµÄË÷Òı
-x402047_g_B_KillManNumIndex = 13							--B°ïÉ±ÈËÊıÔÚ°ïÕ½Êı×éÖĞµÄË÷Òı
-x402047_g_A_KillBuildingNumIndex = 14					--A°ï²ğ»Ù½¨Öş´ÎÊıÔÚ°ïÕ½Êı×éÖĞµÄË÷Òı
-x402047_g_B_KillBuildingNumIndex = 15					--B°ï²ğ»Ù½¨Öş´ÎÊıÔÚ°ïÕ½Êı×éÖĞµÄË÷Òı
---x402047_g_A_FlagNumIndex = 16									--A°ïÕ¼Áì´óÆì´ÎÊıÔÚ°ïÕ½Êı×éÖĞµÄË÷Òı
---x402047_g_B_FlagNumIndex = 17									--B°ïÕ¼Áì´óÆì´ÎÊıÔÚ°ïÕ½Êı×éÖĞµÄË÷Òı
-x402047_g_A_TotalPointIndex = 18							--A°ï×Ü»ı·ÖÔÚ°ïÕ½Êı×éÖĞµÄË÷Òı
-x402047_g_B_TotalPointIndex = 19							--B°ï×Ü»ı·ÖÔÚ°ïÕ½Êı×éÖĞµÄË÷Òı
+x402047_g_A_KillManNumIndex = 12							--Aå¸®æ€äººæ•°åœ¨å¸®æˆ˜æ•°ç»„ä¸­çš„ç´¢å¼•
+x402047_g_B_KillManNumIndex = 13							--Bå¸®æ€äººæ•°åœ¨å¸®æˆ˜æ•°ç»„ä¸­çš„ç´¢å¼•
+x402047_g_A_KillBuildingNumIndex = 14					--Aå¸®æ‹†æ¯å»ºç­‘æ¬¡æ•°åœ¨å¸®æˆ˜æ•°ç»„ä¸­çš„ç´¢å¼•
+x402047_g_B_KillBuildingNumIndex = 15					--Bå¸®æ‹†æ¯å»ºç­‘æ¬¡æ•°åœ¨å¸®æˆ˜æ•°ç»„ä¸­çš„ç´¢å¼•
+--x402047_g_A_FlagNumIndex = 16									--Aå¸®å é¢†å¤§æ——æ¬¡æ•°åœ¨å¸®æˆ˜æ•°ç»„ä¸­çš„ç´¢å¼•
+--x402047_g_B_FlagNumIndex = 17									--Bå¸®å é¢†å¤§æ——æ¬¡æ•°åœ¨å¸®æˆ˜æ•°ç»„ä¸­çš„ç´¢å¼•
+x402047_g_A_TotalPointIndex = 18							--Aå¸®æ€»ç§¯åˆ†åœ¨å¸®æˆ˜æ•°ç»„ä¸­çš„ç´¢å¼•
+x402047_g_B_TotalPointIndex = 19							--Bå¸®æ€»ç§¯åˆ†åœ¨å¸®æˆ˜æ•°ç»„ä¸­çš„ç´¢å¼•
 
---¸öÈË»ı·ÖÊı¾İË÷Òı£¬¶ÔÓ¦³ÌĞòenum GUILDWAR_INT_INDEX
-x402047_g_Human_TotalPointIndex = 0						--¸öÈË×Ü»ı·ÖË÷Òı
-x402047_g_Human_KillManIndex = 1							--¸öÈËÉ±ÈËÊıË÷Òı
-x402047_g_Human_KillBuildingIndex = 2					--¸öÈË²ğ»Ù½¨Öş´ÎÊıË÷Òı
-x402047_g_Human_FlagIndex = 3									--¸öÈËÕ¼Áì´óÆì´ÎÊıË÷Òı
-x402047_g_Human_ResourceNumIndex = 4					--¸öÈË½»ÄÉ×ÊÔ´¸öÊıË÷Òı
+--ä¸ªäººç§¯åˆ†æ•°æ®ç´¢å¼•ï¼Œå¯¹åº”ç¨‹åºenum GUILDWAR_INT_INDEX
+x402047_g_Human_TotalPointIndex = 0						--ä¸ªäººæ€»ç§¯åˆ†ç´¢å¼•
+x402047_g_Human_KillManIndex = 1							--ä¸ªäººæ€äººæ•°ç´¢å¼•
+x402047_g_Human_KillBuildingIndex = 2					--ä¸ªäººæ‹†æ¯å»ºç­‘æ¬¡æ•°ç´¢å¼•
+x402047_g_Human_FlagIndex = 3									--ä¸ªäººå é¢†å¤§æ——æ¬¡æ•°ç´¢å¼•
+x402047_g_Human_ResourceNumIndex = 4					--ä¸ªäººäº¤çº³èµ„æºä¸ªæ•°ç´¢å¼•
 
-x402047_g_TankBuff = {31577, 31578, 31579, 31580, 31581,	--ò¿ÓÈ¼İÊ»buff
-											31582, 31583, 31584, 31585, 31586}	--Ñ×»Æ¼İÊ»buff
+x402047_g_TankBuff = {31577, 31578, 31579, 31580, 31581,	--èš©å°¤é©¾é©¶buff
+											31582, 31583, 31584, 31585, 31586}	--ç‚é»„é©¾é©¶buff
 
-x402047_g_AttrBuff = {31567, 31568, 31569, 31570, 31571,	--ò¿ÓÈÕ½³µbuff
-											31572, 31573, 31574, 31575, 31576}	--Ñ×»ÆÕ½³µbuff
+x402047_g_AttrBuff = {31567, 31568, 31569, 31570, 31571,	--èš©å°¤æˆ˜è½¦buff
+											31572, 31573, 31574, 31575, 31576}	--ç‚é»„æˆ˜è½¦buff
 
---x402047_g_TankAttackBuff = {31587, 31594, 31601, 31608}		--Õ½³µ¹¥»÷buff
-x402047_g_PanGuTankAttackBuff = 31551											--ÅÌ¹ÅÕ½³µ¹¥»÷buff
+--x402047_g_TankAttackBuff = {31587, 31594, 31601, 31608}		--æˆ˜è½¦æ”»å‡»buff
+x402047_g_PanGuTankAttackBuff = 31551											--ç›˜å¤æˆ˜è½¦æ”»å‡»buff
 
-x402047_g_LightBuff = {79, 80, 81, 82}	--Õ½³µÉÁ¹âbuff
+x402047_g_LightBuff = {79, 80, 81, 82}	--æˆ˜è½¦é—ªå…‰buff
 
-x402047_g_TankFriendBuff = {{31553,31554}, {31556,31557}, {31559,31560}, {31562,31563}}		--Õ½³µ¼Ó¸ø¼º·½Ä¿±êµÄbuff
-x402047_g_TankEnemyBuff = {31552, 31555, 31558, 31561}		--Õ½³µ¼Ó¸øµĞ¶ÔÄ¿±êµÄbuff
+x402047_g_TankFriendBuff = {{31553,31554}, {31556,31557}, {31559,31560}, {31562,31563}}		--æˆ˜è½¦åŠ ç»™å·±æ–¹ç›®æ ‡çš„buff
+x402047_g_TankEnemyBuff = {31552, 31555, 31558, 31561}		--æˆ˜è½¦åŠ ç»™æ•Œå¯¹ç›®æ ‡çš„buff
 
-x402047_g_ImmuneControlBuff = 10474							--NPCÃâÒß¿ØÖÆbuff
-x402047_g_SheepBuff = 31550											--±äÑòbuff
+x402047_g_ImmuneControlBuff = 10474							--NPCå…ç–«æ§åˆ¶buff
+x402047_g_SheepBuff = 31550											--å˜ç¾Šbuff
 
---x402047_g_TankSkillID = {1116, 1123, 1130, 1137, 0,	--ò¿ÓÈÕ½³µ¼¼ÄÜID
---												1116, 1123, 1130, 1137, 0}	--Ñ×»ÆÕ½³µ¼¼ÄÜID
+--x402047_g_TankSkillID = {1116, 1123, 1130, 1137, 0,	--èš©å°¤æˆ˜è½¦æŠ€èƒ½ID
+--												1116, 1123, 1130, 1137, 0}	--ç‚é»„æˆ˜è½¦æŠ€èƒ½ID
 
-x402047_g_TankID = {13334, 13335, 13336, 13337, 13338,	--¿Éµã»÷ò¿ÓÈÕ½³µNPCµÄID
-										13339, 13340, 13341, 13342, 13343}	--¿Éµã»÷Ñ×»ÆÕ½³µNPCµÄID
+x402047_g_TankID = {13334, 13335, 13336, 13337, 13338,	--å¯ç‚¹å‡»èš©å°¤æˆ˜è½¦NPCçš„ID
+										13339, 13340, 13341, 13342, 13343}	--å¯ç‚¹å‡»ç‚é»„æˆ˜è½¦NPCçš„ID
 
 x402047_g_PhysicsAttack_Buff = {{value = 16000, buff = 31587},{value = 18000, buff = 31588},{value = 20000, buff = 31589},{value = 22500, buff = 31590},
 																{value = 26000, buff = 31591},{value = 30000, buff = 31592},{value = 300000, buff = 31593}}
@@ -155,28 +155,28 @@ x402047_g_ColdFire_Buff = {{value = 100, buff = 31601},{value = 230, buff = 3160
 x402047_g_LightPoison_Buff = {{value = 100, buff = 31608},{value = 230, buff = 31609},{value = 420, buff = 31610},{value = 840, buff = 31611},
 															{value = 1680, buff = 31612},{value = 2380, buff = 31613},{value = 200000, buff = 31614}}
 
-x402047_g_LingShiID = {30900051,30900052,30900053,30900054,30900055}	--ÁéÊ¯ID
+x402047_g_LingShiID = {30900051,30900052,30900053,30900054,30900055}	--çµçŸ³ID
 
-x402047_g_TankName = {"ÇàÁúÕ½³µ","°×»¢Õ½³µ","ÖìÈ¸Õ½³µ","ĞşÎäÕ½³µ","ÅÌ¹ÅÕ½³µ","ÇàÁúÕ½³µ","°×»¢Õ½³µ","ÖìÈ¸Õ½³µ","ĞşÎäÕ½³µ","ÅÌ¹ÅÕ½³µ"}
+x402047_g_TankName = {"é’é¾™æˆ˜è½¦","ç™½è™æˆ˜è½¦","æœ±é›€æˆ˜è½¦","ç„æ­¦æˆ˜è½¦","ç›˜å¤æˆ˜è½¦","é’é¾™æˆ˜è½¦","ç™½è™æˆ˜è½¦","æœ±é›€æˆ˜è½¦","ç„æ­¦æˆ˜è½¦","ç›˜å¤æˆ˜è½¦"}
 
-x402047_g_ColdTime = 60									--Õ½³µÀäÈ´Ê±¼ä
+x402047_g_ColdTime = 60									--æˆ˜è½¦å†·å´æ—¶é—´
 
---ÕóÓªNPC
-x402047_g_A_Platform = "Ñ×»ÆÌ¨"
-x402047_g_A_FenXiang_Tower = "Ñ×»Æ·ÙÏãËş"
-x402047_g_A_LuoXing_Tower = "Ñ×»ÆÂäĞÇËş"
-x402047_g_A_Flag = "Ñ×»ÆÕ½Æì"
+--é˜µè¥NPC
+x402047_g_A_Platform = "ç‚é»„å°"
+x402047_g_A_FenXiang_Tower = "ç‚é»„ç„šé¦™å¡”"
+x402047_g_A_LuoXing_Tower = "ç‚é»„è½æ˜Ÿå¡”"
+x402047_g_A_Flag = "ç‚é»„æˆ˜æ——"
 
-x402047_g_B_Platform = "ò¿ÓÈÌ¨"
-x402047_g_B_FenXiang_Tower = "ò¿ÓÈ·ÙÏãËş"
-x402047_g_B_LuoXing_Tower = "ò¿ÓÈÂäĞÇËş"
-x402047_g_B_Flag = "ò¿ÓÈÕ½Æì"
+x402047_g_B_Platform = "èš©å°¤å°"
+x402047_g_B_FenXiang_Tower = "èš©å°¤ç„šé¦™å¡”"
+x402047_g_B_LuoXing_Tower = "èš©å°¤è½æ˜Ÿå¡”"
+x402047_g_B_Flag = "èš©å°¤æˆ˜æ——"
 
 --**********************************
--- ÈÎÎñÈë¿Úº¯Êı
+-- ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
-function x402047_OnDefaultEvent( sceneId, selfId, targetId )	-- µã»÷¸ÃÈÎÎñºóÖ´ĞĞ´Ë½Å±¾
-	if GetName( sceneId, targetId ) ~= x402047_g_Name then		-- ÅĞ¶Ï¸ÃnpcÊÇ·ñÊÇ¶ÔÓ¦ÈÎÎñµÄnpc
+function x402047_OnDefaultEvent( sceneId, selfId, targetId )	-- ç‚¹å‡»è¯¥ä»»åŠ¡åæ‰§è¡Œæ­¤è„šæœ¬
+	if GetName( sceneId, targetId ) ~= x402047_g_Name then		-- åˆ¤æ–­è¯¥npcæ˜¯å¦æ˜¯å¯¹åº”ä»»åŠ¡çš„npc
 		return
 	end
 	
@@ -187,9 +187,9 @@ function x402047_OnDefaultEvent( sceneId, selfId, targetId )	-- µã»÷¸ÃÈÎÎñºóÖ´ĞĞ
 	elseif numText == x402047_g_GetPrizeTitle then
 		BeginEvent(sceneId)
 			AddText(sceneId,"#{BHXZ_081103_116}")
-			AddNumText(sceneId, x402047_g_ScriptId, "Á¬Õ¶¿ñ¿Í", 4, x402047_g_GetPrizeTitle_Kill)
-			AddNumText(sceneId, x402047_g_ScriptId, "³¬¼¶ÆìÊÖ", 4, x402047_g_GetPrizeTitle_Flag)
-			AddNumText(sceneId, x402047_g_ScriptId, "ËÑ±¦×¨¼Ò", 4, x402047_g_GetPrizeTitle_Source)
+			AddNumText(sceneId, x402047_g_ScriptId, "è¿æ–©ç‹‚å®¢", 4, x402047_g_GetPrizeTitle_Kill)
+			AddNumText(sceneId, x402047_g_ScriptId, "è¶…çº§æ——æ‰‹", 4, x402047_g_GetPrizeTitle_Flag)
+			AddNumText(sceneId, x402047_g_ScriptId, "æœå®ä¸“å®¶", 4, x402047_g_GetPrizeTitle_Source)
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 	elseif numText == x402047_g_GetPrizeTitle_Kill then
@@ -199,12 +199,12 @@ function x402047_OnDefaultEvent( sceneId, selfId, targetId )	-- µã»÷¸ÃÈÎÎñºóÖ´ĞĞ
 			SetMissionFlag(sceneId, selfId, x402047_g_PrizeFlag[1], 0)
 			LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, x402047_g_PrizeBuff[1], 0 )
 			
-			LuaFnAwardTitle( sceneId, selfId, x402047_g_PrizeTitle[1].AwardPos, x402047_g_PrizeTitle[1].Index, 7*24) --ÓĞĞ§ÆÚÒ»ÖÜ
+			LuaFnAwardTitle( sceneId, selfId, x402047_g_PrizeTitle[1].AwardPos, x402047_g_PrizeTitle[1].Index, 7*24) --æœ‰æ•ˆæœŸä¸€å‘¨
 			SetCurTitle(sceneId, selfId, x402047_g_PrizeTitle[1].SetPos, x402047_g_PrizeTitle[1].Index)
 			LuaFnDispatchAllTitle(sceneId, selfId)
 			
-			x402047_NotifyFailBox( sceneId, selfId, targetId, "#{BHXZ_081103_145}".."¡°Á¬Õ¶¿ñ¿Í¡±".."#{BHXZ_081103_146}" )
-			if GetHumanGuildID(sceneId, selfId) ~= -1 then --Ã»ÓĞ°ïÅÉµÄÊ±ºò²»·¢°ïÅÉ¹«¸æ
+			x402047_NotifyFailBox( sceneId, selfId, targetId, "#{BHXZ_081103_145}".."â€œè¿æ–©ç‹‚å®¢â€".."#{BHXZ_081103_146}" )
+			if GetHumanGuildID(sceneId, selfId) ~= -1 then --æ²¡æœ‰å¸®æ´¾çš„æ—¶å€™ä¸å‘å¸®æ´¾å…¬å‘Š
 				local message = format("@*;SrvMsg;GLD:#{_INFOUSR%s}#{BHXZ_090116_01}",LuaFnGetName(sceneId, selfId))
 				BroadMsgByChatPipe(sceneId, selfId, message, 6);
 			end
@@ -221,12 +221,12 @@ function x402047_OnDefaultEvent( sceneId, selfId, targetId )	-- µã»÷¸ÃÈÎÎñºóÖ´ĞĞ
 			SetMissionFlag(sceneId, selfId, x402047_g_PrizeFlag[2], 0)
 			LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, x402047_g_PrizeBuff[2], 0 )
 			
-			LuaFnAwardTitle( sceneId, selfId, x402047_g_PrizeTitle[2].AwardPos, x402047_g_PrizeTitle[2].Index, 7*24) --ÓĞĞ§ÆÚÒ»ÖÜ
+			LuaFnAwardTitle( sceneId, selfId, x402047_g_PrizeTitle[2].AwardPos, x402047_g_PrizeTitle[2].Index, 7*24) --æœ‰æ•ˆæœŸä¸€å‘¨
 			SetCurTitle(sceneId, selfId, x402047_g_PrizeTitle[2].SetPos, x402047_g_PrizeTitle[2].Index)
 			LuaFnDispatchAllTitle(sceneId, selfId)
 			
-			x402047_NotifyFailBox( sceneId, selfId, targetId, "#{BHXZ_081103_145}".."¡°³¬¼¶ÆìÊÖ¡±".."#{BHXZ_081103_146}" )
-			if GetHumanGuildID(sceneId, selfId) ~= -1 then --Ã»ÓĞ°ïÅÉµÄÊ±ºò²»·¢°ïÅÉ¹«¸æ
+			x402047_NotifyFailBox( sceneId, selfId, targetId, "#{BHXZ_081103_145}".."â€œè¶…çº§æ——æ‰‹â€".."#{BHXZ_081103_146}" )
+			if GetHumanGuildID(sceneId, selfId) ~= -1 then --æ²¡æœ‰å¸®æ´¾çš„æ—¶å€™ä¸å‘å¸®æ´¾å…¬å‘Š
 				local message = format("@*;SrvMsg;GLD:#{_INFOUSR%s}#{BHXZ_090116_02}",LuaFnGetName(sceneId, selfId))
 				BroadMsgByChatPipe(sceneId, selfId, message, 6);
 			end
@@ -243,12 +243,12 @@ function x402047_OnDefaultEvent( sceneId, selfId, targetId )	-- µã»÷¸ÃÈÎÎñºóÖ´ĞĞ
 			SetMissionFlag(sceneId, selfId, x402047_g_PrizeFlag[3], 0)
 			LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, x402047_g_PrizeBuff[3], 0 )
 			
-			LuaFnAwardTitle( sceneId, selfId, x402047_g_PrizeTitle[3].AwardPos, x402047_g_PrizeTitle[3].Index, 7*24) --ÓĞĞ§ÆÚÒ»ÖÜ
+			LuaFnAwardTitle( sceneId, selfId, x402047_g_PrizeTitle[3].AwardPos, x402047_g_PrizeTitle[3].Index, 7*24) --æœ‰æ•ˆæœŸä¸€å‘¨
 			SetCurTitle(sceneId, selfId, x402047_g_PrizeTitle[3].SetPos, x402047_g_PrizeTitle[3].Index)
 			LuaFnDispatchAllTitle(sceneId, selfId)
 			
-			x402047_NotifyFailBox( sceneId, selfId, targetId, "#{BHXZ_081103_145}".."¡°ËÑ±¦×¨¼Ò¡±".."#{BHXZ_081103_146}" )
-			if GetHumanGuildID(sceneId, selfId) ~= -1 then --Ã»ÓĞ°ïÅÉµÄÊ±ºò²»·¢°ïÅÉ¹«¸æ
+			x402047_NotifyFailBox( sceneId, selfId, targetId, "#{BHXZ_081103_145}".."â€œæœå®ä¸“å®¶â€".."#{BHXZ_081103_146}" )
+			if GetHumanGuildID(sceneId, selfId) ~= -1 then --æ²¡æœ‰å¸®æ´¾çš„æ—¶å€™ä¸å‘å¸®æ´¾å…¬å‘Š
 				local message = format("@*;SrvMsg;GLD:#{_INFOUSR%s}#{BHXZ_090116_03}",LuaFnGetName(sceneId, selfId))
 				BroadMsgByChatPipe(sceneId, selfId, message, 6);
 			end
@@ -263,29 +263,29 @@ function x402047_OnDefaultEvent( sceneId, selfId, targetId )	-- µã»÷¸ÃÈÎÎñºóÖ´ĞĞ
 end
 
 --**********************************
--- ÁĞ¾ÙÊÂ¼ş
+-- åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x402047_OnEnumerate( sceneId, selfId, targetId )
-	if GetName( sceneId, targetId ) ~= x402047_g_Name then		--ÅĞ¶Ï¸ÃnpcÊÇ·ñÊÇ¶ÔÓ¦ÈÎÎñµÄnpc
+	if GetName( sceneId, targetId ) ~= x402047_g_Name then		--åˆ¤æ–­è¯¥npcæ˜¯å¦æ˜¯å¯¹åº”ä»»åŠ¡çš„npc
 		return
 	end
 
 	AddNumText( sceneId, x402047_g_ScriptId, x402047_g_MissionName, 4, x402047_g_NumText_EnterCopyScene )
-	AddNumText( sceneId, x402047_g_ScriptId, "ÁìÈ¡³ÆºÅ", 4, x402047_g_GetPrizeTitle )
+	AddNumText( sceneId, x402047_g_ScriptId, "é¢†å–ç§°å·", 4, x402047_g_GetPrizeTitle )
 end
 
 --**********************************
--- ÇëÇó½øÈë¸±±¾³¡¾°
+-- è¯·æ±‚è¿›å…¥å‰¯æœ¬åœºæ™¯
 --**********************************
 function x402047_AcceptEnterCopyScene( sceneId, selfId, targetId )
 	
-	--±äÑò×´Ì¬ÎŞ·¨°ïÕ½£¬·ÀÖ¹µÚÒ»¸ö°ïÕ½Íæ¼ÒÊÇ±äÑò£¬ËûÓÖÎŞ·¨´«ËÍ½ø³¡¾°£¬ÕâÊ±±ğÈËÃ»ÓĞÂíÉÏ½øÈ¥£¬¸±±¾Ã»ÈË¾ÍoverÁË¹ş¹ş
+	--å˜ç¾ŠçŠ¶æ€æ— æ³•å¸®æˆ˜ï¼Œé˜²æ­¢ç¬¬ä¸€ä¸ªå¸®æˆ˜ç©å®¶æ˜¯å˜ç¾Šï¼Œä»–åˆæ— æ³•ä¼ é€è¿›åœºæ™¯ï¼Œè¿™æ—¶åˆ«äººæ²¡æœ‰é©¬ä¸Šè¿›å»ï¼Œå‰¯æœ¬æ²¡äººå°±overäº†å“ˆå“ˆ
 	if LuaFnHaveImpactOfSpecificDataIndex(sceneId, selfId, x402047_g_SheepBuff) == 1 then
 		x402047_NotifyFailTips( sceneId, selfId, "#{BHXZ_081103_105}" )
 		return
 	end
 	
-	--ÊÇ·ñÓĞ°ïÕ½³ÆºÅÃ»ÓĞÁìÈ¡
+	--æ˜¯å¦æœ‰å¸®æˆ˜ç§°å·æ²¡æœ‰é¢†å–
 	for i = 1, getn(x402047_g_PrizeFlag) do
 		if GetMissionFlag(sceneId, selfId, x402047_g_PrizeFlag[i]) == 1 then
 			x402047_NotifyFailTips( sceneId, selfId, "#{BHXZ_081103_106}" )
@@ -293,24 +293,24 @@ function x402047_AcceptEnterCopyScene( sceneId, selfId, targetId )
 		end
 	end
 	
-	--»¹Ã»ÓĞ¼ÓÈë°ï»á
+	--è¿˜æ²¡æœ‰åŠ å…¥å¸®ä¼š
 	local guildid = GetHumanGuildID(sceneId, selfId)
 	if guildid == -1 then
 		x402047_NotifyFailTips( sceneId, selfId, "#{BHXZ_081103_19}" )
 		return
 	end
 	
-	--Ã»ÓĞºÍÆäËû°ïÅÉ´ï³ÉÕ÷ÌÖ¹ØÏµ
+	--æ²¡æœ‰å’Œå…¶ä»–å¸®æ´¾è¾¾æˆå¾è®¨å…³ç³»
 	local guildIDApply,guildIDApplied,CopySceneId = GetGuildWarApply(sceneId, guildid)
 	if not guildIDApply or not guildIDApplied or not CopySceneId or guildIDApply == -1 or guildIDApplied == -1 then
 		x402047_NotifyFailTips( sceneId, selfId, "#{BHXZ_081103_18}" )
 		return
 	end
 
-	if CopySceneId >= 0 then --³¡¾°³õÊ¼»¯Íê³ÉÖ®ºóÖ±½Ó¿ÉÒÔ½øÈ¥
+	if CopySceneId >= 0 then --åœºæ™¯åˆå§‹åŒ–å®Œæˆä¹‹åç›´æ¥å¯ä»¥è¿›å»
 		if guildid == guildIDApply then
 			local GuildInt = GetGuildIntNum( CopySceneId, guildid, x402047_g_A_numIndex )
-			if GuildInt >= x402047_g_MaxMembers or GuildInt == -1 then --±¾°ï¸±±¾ÈËÊıÂúÁË£¬ÕâÀïÈ¡³öµÄÈËÊı²»Ò»¶¨×¼È·
+			if GuildInt >= x402047_g_MaxMembers or GuildInt == -1 then --æœ¬å¸®å‰¯æœ¬äººæ•°æ»¡äº†ï¼Œè¿™é‡Œå–å‡ºçš„äººæ•°ä¸ä¸€å®šå‡†ç¡®
 				x402047_NotifyFailTips( sceneId, selfId, "#{BHXZ_081103_107}" )
 				return
 			end
@@ -318,10 +318,10 @@ function x402047_AcceptEnterCopyScene( sceneId, selfId, targetId )
 			BeginEvent(sceneId)
 			AddText( sceneId, x402047_g_SubmitInfo )
 			EndEvent()
-			DispatchMissionContinueInfo( sceneId, selfId, targetId, x402047_g_ScriptId, 0 ) --ÈÎÎñºÅĞ´0
+			DispatchMissionContinueInfo( sceneId, selfId, targetId, x402047_g_ScriptId, 0 ) --ä»»åŠ¡å·å†™0
 		else
 			local GuildInt = GetGuildIntNum( CopySceneId, guildid, x402047_g_B_numIndex )
-			if GuildInt >= x402047_g_MaxMembers or GuildInt == -1 then --±¾°ï¸±±¾ÈËÊıÂúÁË£¬ÕâÀïÈ¡³öµÄÈËÊı²»Ò»¶¨×¼È·
+			if GuildInt >= x402047_g_MaxMembers or GuildInt == -1 then --æœ¬å¸®å‰¯æœ¬äººæ•°æ»¡äº†ï¼Œè¿™é‡Œå–å‡ºçš„äººæ•°ä¸ä¸€å®šå‡†ç¡®
 				x402047_NotifyFailTips( sceneId, selfId, "#{BHXZ_081103_107}" )
 				return
 			end
@@ -329,7 +329,7 @@ function x402047_AcceptEnterCopyScene( sceneId, selfId, targetId )
 			BeginEvent(sceneId)
 			AddText( sceneId, x402047_g_SubmitInfo )
 			EndEvent()
-			DispatchMissionContinueInfo( sceneId, selfId, targetId, x402047_g_ScriptId, 0 ) --ÈÎÎñºÅĞ´0
+			DispatchMissionContinueInfo( sceneId, selfId, targetId, x402047_g_ScriptId, 0 ) --ä»»åŠ¡å·å†™0
 		end
 		
 		return
@@ -338,24 +338,24 @@ function x402047_AcceptEnterCopyScene( sceneId, selfId, targetId )
 	BeginEvent(sceneId)
 	AddText( sceneId, x402047_g_SubmitInfo )
 	EndEvent()
-	DispatchMissionContinueInfo( sceneId, selfId, targetId, x402047_g_ScriptId, 0 ) --ÈÎÎñºÅĞ´0
+	DispatchMissionContinueInfo( sceneId, selfId, targetId, x402047_g_ScriptId, 0 ) --ä»»åŠ¡å·å†™0
 end
 
 --**********************************
---Ìá½»£¬ĞèÒªÖØĞÂÅĞ¶ÏÃ¿¸öÌõ¼ş
+--æäº¤ï¼Œéœ€è¦é‡æ–°åˆ¤æ–­æ¯ä¸ªæ¡ä»¶
 --**********************************
 function x402047_OnSubmit( sceneId, selfId, targetId, selectRadioId )
-	if GetName( sceneId, targetId ) ~= x402047_g_Name then		--ÅĞ¶Ï¸ÃnpcÊÇ·ñÊÇ¶ÔÓ¦ÈÎÎñµÄnpc
+	if GetName( sceneId, targetId ) ~= x402047_g_Name then		--åˆ¤æ–­è¯¥npcæ˜¯å¦æ˜¯å¯¹åº”ä»»åŠ¡çš„npc
 		return
 	end
 	
-	--±äÑò×´Ì¬ÎŞ·¨°ïÕ½£¬·ÀÖ¹µÚÒ»¸ö°ïÕ½Íæ¼ÒÊÇ±äÑò£¬ËûÓÖÎŞ·¨´«ËÍ½ø³¡¾°£¬ÕâÊ±±ğÈËÃ»ÓĞÂíÉÏ½øÈ¥£¬¸±±¾Ã»ÈË¾ÍoverÁË¹ş¹ş
+	--å˜ç¾ŠçŠ¶æ€æ— æ³•å¸®æˆ˜ï¼Œé˜²æ­¢ç¬¬ä¸€ä¸ªå¸®æˆ˜ç©å®¶æ˜¯å˜ç¾Šï¼Œä»–åˆæ— æ³•ä¼ é€è¿›åœºæ™¯ï¼Œè¿™æ—¶åˆ«äººæ²¡æœ‰é©¬ä¸Šè¿›å»ï¼Œå‰¯æœ¬æ²¡äººå°±overäº†å“ˆå“ˆ
 	if LuaFnHaveImpactOfSpecificDataIndex(sceneId, selfId, x402047_g_SheepBuff) == 1 then
 		x402047_NotifyFailTips( sceneId, selfId, "#{BHXZ_081103_105}" )
 		return
 	end
 	
-	--ÊÇ·ñÓĞ°ïÕ½³ÆºÅÃ»ÓĞÁìÈ¡
+	--æ˜¯å¦æœ‰å¸®æˆ˜ç§°å·æ²¡æœ‰é¢†å–
 	for i = 1, getn(x402047_g_PrizeFlag) do
 		if GetMissionFlag(sceneId, selfId, x402047_g_PrizeFlag[i]) == 1 then
 			x402047_NotifyFailTips( sceneId, selfId, "#{BHXZ_081103_106}" )
@@ -363,24 +363,24 @@ function x402047_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 		end
 	end
 	
-	--»¹Ã»ÓĞ¼ÓÈë°ï»á
+	--è¿˜æ²¡æœ‰åŠ å…¥å¸®ä¼š
 	local guildid = GetHumanGuildID(sceneId, selfId)
 	if guildid == -1 then
 		x402047_NotifyFailTips( sceneId, selfId, "#{BHXZ_081103_19}" )
 		return
 	end
 	
-	--Ã»ÓĞºÍÆäËû°ïÅÉ´ï³ÉÕ÷ÌÖ¹ØÏµ
+	--æ²¡æœ‰å’Œå…¶ä»–å¸®æ´¾è¾¾æˆå¾è®¨å…³ç³»
 	local guildIDApply,guildIDApplied,CopySceneId = GetGuildWarApply(sceneId, guildid)
 	if not guildIDApply or not guildIDApplied or not CopySceneId or guildIDApply == -1 or guildIDApplied == -1 then
 		x402047_NotifyFailTips( sceneId, selfId, "#{BHXZ_081103_18}" )
 		return
 	end
 
-	if CopySceneId >= 0 then --³¡¾°³õÊ¼»¯Íê³ÉÖ®ºóÖ±½Ó¿ÉÒÔ½øÈ¥
+	if CopySceneId >= 0 then --åœºæ™¯åˆå§‹åŒ–å®Œæˆä¹‹åç›´æ¥å¯ä»¥è¿›å»
 		if guildid == guildIDApply then
 			local GuildInt = GetGuildIntNum( CopySceneId, guildid, x402047_g_A_numIndex )
-			if GuildInt >= x402047_g_MaxMembers or GuildInt == -1 then --±¾°ï¸±±¾ÈËÊıÂúÁË£¬ÕâÀïÈ¡³öµÄÈËÊı²»Ò»¶¨×¼È·
+			if GuildInt >= x402047_g_MaxMembers or GuildInt == -1 then --æœ¬å¸®å‰¯æœ¬äººæ•°æ»¡äº†ï¼Œè¿™é‡Œå–å‡ºçš„äººæ•°ä¸ä¸€å®šå‡†ç¡®
 				x402047_NotifyFailTips( sceneId, selfId, "#{BHXZ_081103_107}" )
 				return
 			end
@@ -388,7 +388,7 @@ function x402047_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 			NewWorld( sceneId, selfId, CopySceneId, x402047_g_Fuben_A_X, x402047_g_Fuben_A_Z )
 		else
 			local GuildInt = GetGuildIntNum( CopySceneId, guildid, x402047_g_B_numIndex )
-			if GuildInt >= x402047_g_MaxMembers or GuildInt == -1 then --±¾°ï¸±±¾ÈËÊıÂúÁË£¬ÕâÀïÈ¡³öµÄÈËÊı²»Ò»¶¨×¼È·
+			if GuildInt >= x402047_g_MaxMembers or GuildInt == -1 then --æœ¬å¸®å‰¯æœ¬äººæ•°æ»¡äº†ï¼Œè¿™é‡Œå–å‡ºçš„äººæ•°ä¸ä¸€å®šå‡†ç¡®
 				x402047_NotifyFailTips( sceneId, selfId, "#{BHXZ_081103_107}" )
 				return
 			end
@@ -399,83 +399,83 @@ function x402047_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 		return
 	end
 
-	local firstmenguid = LuaFnObjId2Guid( sceneId, selfId ) --°ïÕ½¸±±¾ÖĞµÚÒ»¸ö½øÈëµÄÈË²»Ò»¶¨ÊÇ°ïÖ÷»òÕß¸±°ïÖ÷»ò¶Ó³¤
-	LuaFnSetSceneLoad_Map( sceneId, x402047_g_CopySceneMap )						-- µØÍ¼ÊÇ±ØĞëÑ¡È¡µÄ£¬¶øÇÒ±ØĞëÔÚConfig/SceneInfo.iniÀïÅäÖÃºÃ
+	local firstmenguid = LuaFnObjId2Guid( sceneId, selfId ) --å¸®æˆ˜å‰¯æœ¬ä¸­ç¬¬ä¸€ä¸ªè¿›å…¥çš„äººä¸ä¸€å®šæ˜¯å¸®ä¸»æˆ–è€…å‰¯å¸®ä¸»æˆ–é˜Ÿé•¿
+	LuaFnSetSceneLoad_Map( sceneId, x402047_g_CopySceneMap )						-- åœ°å›¾æ˜¯å¿…é¡»é€‰å–çš„ï¼Œè€Œä¸”å¿…é¡»åœ¨Config/SceneInfo.inié‡Œé…ç½®å¥½
 	LuaFnSetCopySceneData_TeamLeader( sceneId, firstmenguid )
 	LuaFnSetCopySceneData_NoUserCloseTime( sceneId, x402047_g_NoUserTime * 1000 )
 	LuaFnSetCopySceneData_PvpRuler( sceneId, x402047_g_PvpRuler )
 	LuaFnSetCopySceneData_Timer( sceneId, x402047_g_TickTime * 1000 )
-	LuaFnSetCopySceneData_Param( sceneId, 0, x402047_g_CopySceneType )			-- ÉèÖÃ¸±±¾ÀàĞÍÊı¾İ£¬ÕâÀï½«0ºÅË÷ÒıµÄÊı¾İÉèÖÃÎª999£¬ÓÃÓÚ±íÊ¾¸±±¾ºÅ999(Êı×Ö×Ô¶¨Òå)
-	LuaFnSetCopySceneData_Param( sceneId, 1, x402047_g_ScriptId )					-- ½«1ºÅÊı¾İÉèÖÃÎª¸±±¾³¡¾°ÊÂ¼ş½Å±¾ºÅ
-	LuaFnSetCopySceneData_Param( sceneId, 2, 0 )							-- ÉèÖÃ¶¨Ê±Æ÷µ÷ÓÃ´ÎÊı
-	LuaFnSetCopySceneData_Param( sceneId, 3, -1 )							-- ÉèÖÃ¸±±¾Èë¿Ú³¡¾°ºÅ, ³õÊ¼»¯
-	LuaFnSetCopySceneData_Param( sceneId, 4, 0 )							-- ÉèÖÃ¸±±¾¹Ø±Õ±êÖ¾, 0¿ª·Å£¬1¹Ø±Õ
-	LuaFnSetCopySceneData_Param( sceneId, 5, 0 )							-- ÉèÖÃÀë¿ªµ¹¼ÆÊ±´ÎÊı
-	LuaFnSetCopySceneData_Param( sceneId, 6, guildIDApply*10000+guildIDApplied )-- °ïÅÉIDÈ¡Öµ·¶Î§ÊÇ0~1024£¬ËùÒÔ10000ÒÔÉÏA°ïID£¬10000ÒÔÏÂB°ïID
-	LuaFnSetCopySceneData_Param( sceneId, 7, 0 )							-- ÊÇ·ñ¿ªÊ¼¼Ç·Ö
-	LuaFnSetCopySceneData_Param( sceneId, 8, 0 )							-- ÔİÊ±Î´ÓÃ
-	LuaFnSetCopySceneData_Param( sceneId, x402047_g_IsSetOverFlag, 0 )				-- ÊÇ·ñËãÁË½áÊø»ı·Ö
-	LuaFnSetCopySceneData_Param( sceneId, x402047_g_OpenFlagSelfIDIndex, 0 )	-- µ±Ç°ÕıÔÚ²Ù×÷ÆìÌ¨µÄselfid
-	LuaFnSetCopySceneData_Param( sceneId, x402047_g_OpenFlagStartTime, 0 )	-- µ±Ç°ÕıÔÚ²Ù×÷ÆìÌ¨µÄ¿ªÊ¼Ê±¼ä
-	LuaFnSetCopySceneData_Param( sceneId, x402047_g_FlagRemainedTime, 0 )	-- ÆìÖÄÉıÆğÒÔºóµÄÊ£ÓàÊ±¼ä
-	LuaFnSetCopySceneData_Param( sceneId, x402047_g_A_FirstTankManSelfID, 0 )	--A°ï±ä»¯³ÉÕ½³µµÄÍæ¼ÒµÄselfid
-	LuaFnSetCopySceneData_Param( sceneId, x402047_g_A_SecondTankManSelfID, 0 )--A°ï±ä»¯³ÉÕ½³µµÄÍæ¼ÒµÄselfid
-	LuaFnSetCopySceneData_Param( sceneId, x402047_g_B_FirstTankManSelfID, 0 )	--B°ï±ä»¯³ÉÕ½³µµÄÍæ¼ÒµÄselfid
-	LuaFnSetCopySceneData_Param( sceneId, x402047_g_B_SecondTankManSelfID, 0 )--B°ï±ä»¯³ÉÕ½³µµÄÍæ¼ÒµÄselfid
-	LuaFnSetCopySceneData_Param( sceneId, x402047_g_A_FirstTankBuff, 0 )	--A°ï±ä»¯³ÉÕ½³µµÄBuffID
-	LuaFnSetCopySceneData_Param( sceneId, x402047_g_A_SecondTankBuff, 0 )	--A°ï±ä»¯³ÉÕ½³µµÄBuffID
-	LuaFnSetCopySceneData_Param( sceneId, x402047_g_B_FirstTankBuff, 0 )	--B°ï±ä»¯³ÉÕ½³µµÄBuffID
-	LuaFnSetCopySceneData_Param( sceneId, x402047_g_B_SecondTankBuff, 0 )	--B°ï±ä»¯³ÉÕ½³µµÄBuffID
-	LuaFnSetCopySceneData_Param( sceneId, x402047_g_A_FirstTankPos, 0 )	  --A°ï±ä»¯³ÉÕ½³µµÄPos
-	LuaFnSetCopySceneData_Param( sceneId, x402047_g_A_SecondTankPos, 0 )	--A°ï±ä»¯³ÉÕ½³µµÄPos
-	LuaFnSetCopySceneData_Param( sceneId, x402047_g_B_FirstTankPos, 0 ) 	--B°ï±ä»¯³ÉÕ½³µµÄPos
-	LuaFnSetCopySceneData_Param( sceneId, x402047_g_B_SecondTankPos, 0 )	--B°ï±ä»¯³ÉÕ½³µµÄPos
-	LuaFnSetCopySceneData_Param( sceneId, x402047_g_A_TankColdTime, 0 )	  --A°ïÕ½³µÀäÈ´Ê±¼ä
-	LuaFnSetCopySceneData_Param( sceneId, x402047_g_B_TankColdTime, 0 )	  --B°ïÕ½³µÀäÈ´Ê±¼ä
-	LuaFnSetCopySceneData_Param( sceneId, x402047_g_A_BroadcastTick, 0 )	--A°ï±¤ÀİÑªÁ¿²¥·Å¼ÆÊı
-	LuaFnSetCopySceneData_Param( sceneId, x402047_g_B_BroadcastTick, 0 )	--B°ï±¤ÀİÑªÁ¿²¥·Å¼ÆÊı
+	LuaFnSetCopySceneData_Param( sceneId, 0, x402047_g_CopySceneType )			-- è®¾ç½®å‰¯æœ¬ç±»å‹æ•°æ®ï¼Œè¿™é‡Œå°†0å·ç´¢å¼•çš„æ•°æ®è®¾ç½®ä¸º999ï¼Œç”¨äºè¡¨ç¤ºå‰¯æœ¬å·999(æ•°å­—è‡ªå®šä¹‰)
+	LuaFnSetCopySceneData_Param( sceneId, 1, x402047_g_ScriptId )					-- å°†1å·æ•°æ®è®¾ç½®ä¸ºå‰¯æœ¬åœºæ™¯äº‹ä»¶è„šæœ¬å·
+	LuaFnSetCopySceneData_Param( sceneId, 2, 0 )							-- è®¾ç½®å®šæ—¶å™¨è°ƒç”¨æ¬¡æ•°
+	LuaFnSetCopySceneData_Param( sceneId, 3, -1 )							-- è®¾ç½®å‰¯æœ¬å…¥å£åœºæ™¯å·, åˆå§‹åŒ–
+	LuaFnSetCopySceneData_Param( sceneId, 4, 0 )							-- è®¾ç½®å‰¯æœ¬å…³é—­æ ‡å¿—, 0å¼€æ”¾ï¼Œ1å…³é—­
+	LuaFnSetCopySceneData_Param( sceneId, 5, 0 )							-- è®¾ç½®ç¦»å¼€å€’è®¡æ—¶æ¬¡æ•°
+	LuaFnSetCopySceneData_Param( sceneId, 6, guildIDApply*10000+guildIDApplied )-- å¸®æ´¾IDå–å€¼èŒƒå›´æ˜¯0~1024ï¼Œæ‰€ä»¥10000ä»¥ä¸ŠAå¸®IDï¼Œ10000ä»¥ä¸‹Bå¸®ID
+	LuaFnSetCopySceneData_Param( sceneId, 7, 0 )							-- æ˜¯å¦å¼€å§‹è®°åˆ†
+	LuaFnSetCopySceneData_Param( sceneId, 8, 0 )							-- æš‚æ—¶æœªç”¨
+	LuaFnSetCopySceneData_Param( sceneId, x402047_g_IsSetOverFlag, 0 )				-- æ˜¯å¦ç®—äº†ç»“æŸç§¯åˆ†
+	LuaFnSetCopySceneData_Param( sceneId, x402047_g_OpenFlagSelfIDIndex, 0 )	-- å½“å‰æ­£åœ¨æ“ä½œæ——å°çš„selfid
+	LuaFnSetCopySceneData_Param( sceneId, x402047_g_OpenFlagStartTime, 0 )	-- å½“å‰æ­£åœ¨æ“ä½œæ——å°çš„å¼€å§‹æ—¶é—´
+	LuaFnSetCopySceneData_Param( sceneId, x402047_g_FlagRemainedTime, 0 )	-- æ——å¸œå‡èµ·ä»¥åçš„å‰©ä½™æ—¶é—´
+	LuaFnSetCopySceneData_Param( sceneId, x402047_g_A_FirstTankManSelfID, 0 )	--Aå¸®å˜åŒ–æˆæˆ˜è½¦çš„ç©å®¶çš„selfid
+	LuaFnSetCopySceneData_Param( sceneId, x402047_g_A_SecondTankManSelfID, 0 )--Aå¸®å˜åŒ–æˆæˆ˜è½¦çš„ç©å®¶çš„selfid
+	LuaFnSetCopySceneData_Param( sceneId, x402047_g_B_FirstTankManSelfID, 0 )	--Bå¸®å˜åŒ–æˆæˆ˜è½¦çš„ç©å®¶çš„selfid
+	LuaFnSetCopySceneData_Param( sceneId, x402047_g_B_SecondTankManSelfID, 0 )--Bå¸®å˜åŒ–æˆæˆ˜è½¦çš„ç©å®¶çš„selfid
+	LuaFnSetCopySceneData_Param( sceneId, x402047_g_A_FirstTankBuff, 0 )	--Aå¸®å˜åŒ–æˆæˆ˜è½¦çš„BuffID
+	LuaFnSetCopySceneData_Param( sceneId, x402047_g_A_SecondTankBuff, 0 )	--Aå¸®å˜åŒ–æˆæˆ˜è½¦çš„BuffID
+	LuaFnSetCopySceneData_Param( sceneId, x402047_g_B_FirstTankBuff, 0 )	--Bå¸®å˜åŒ–æˆæˆ˜è½¦çš„BuffID
+	LuaFnSetCopySceneData_Param( sceneId, x402047_g_B_SecondTankBuff, 0 )	--Bå¸®å˜åŒ–æˆæˆ˜è½¦çš„BuffID
+	LuaFnSetCopySceneData_Param( sceneId, x402047_g_A_FirstTankPos, 0 )	  --Aå¸®å˜åŒ–æˆæˆ˜è½¦çš„Pos
+	LuaFnSetCopySceneData_Param( sceneId, x402047_g_A_SecondTankPos, 0 )	--Aå¸®å˜åŒ–æˆæˆ˜è½¦çš„Pos
+	LuaFnSetCopySceneData_Param( sceneId, x402047_g_B_FirstTankPos, 0 ) 	--Bå¸®å˜åŒ–æˆæˆ˜è½¦çš„Pos
+	LuaFnSetCopySceneData_Param( sceneId, x402047_g_B_SecondTankPos, 0 )	--Bå¸®å˜åŒ–æˆæˆ˜è½¦çš„Pos
+	LuaFnSetCopySceneData_Param( sceneId, x402047_g_A_TankColdTime, 0 )	  --Aå¸®æˆ˜è½¦å†·å´æ—¶é—´
+	LuaFnSetCopySceneData_Param( sceneId, x402047_g_B_TankColdTime, 0 )	  --Bå¸®æˆ˜è½¦å†·å´æ—¶é—´
+	LuaFnSetCopySceneData_Param( sceneId, x402047_g_A_BroadcastTick, 0 )	--Aå¸®å ¡å’è¡€é‡æ’­æ”¾è®¡æ•°
+	LuaFnSetCopySceneData_Param( sceneId, x402047_g_B_BroadcastTick, 0 )	--Bå¸®å ¡å’è¡€é‡æ’­æ”¾è®¡æ•°
 	
 	LuaFnSetSceneLoad_Area( sceneId, x402047_g_CopySceneArea )
 
 	LuaFnSetSceneLoad_Monster( sceneId, x402047_g_CopySceneMonsterIni )
 
-	local bRetSceneID = LuaFnCreateCopyScene( sceneId )						-- ³õÊ¼»¯Íê³Éºóµ÷ÓÃ´´½¨¸±±¾º¯Êı
+	local bRetSceneID = LuaFnCreateCopyScene( sceneId )						-- åˆå§‹åŒ–å®Œæˆåè°ƒç”¨åˆ›å»ºå‰¯æœ¬å‡½æ•°
 	if bRetSceneID > 0 then
-		x402047_NotifyFailTips( sceneId, selfId, "¸±±¾´´½¨³É¹¦£¡" )
+		x402047_NotifyFailTips( sceneId, selfId, "å‰¯æœ¬åˆ›å»ºæˆåŠŸï¼" )
 		SetGuildWarApplySceneID(sceneId, guildid, bRetSceneID)
 		NotifyGuildBattle(sceneId,selfId,0,guildIDApply,guildIDApplied);
 		local log = format("HumanGuildID=%d,Apply_GuildID=%d,Applied_GuildID=%d", guildid, guildIDApply, guildIDApplied)
 		ScriptGlobal_AuditGeneralLog(LUAAUDIT_BANGZHAN_CREATEFUBEN, firstmenguid, log)
 	else
-		x402047_NotifyFailTips( sceneId, selfId, "#{BHXZ_081103_17}" ) --¸±±¾ÊıÁ¿ÒÑ´ïÉÏÏŞ
+		x402047_NotifyFailTips( sceneId, selfId, "#{BHXZ_081103_17}" ) --å‰¯æœ¬æ•°é‡å·²è¾¾ä¸Šé™
 	end
 end
 
 --**********************************
---¸±±¾ÊÂ¼ş
+--å‰¯æœ¬äº‹ä»¶
 --**********************************
 function x402047_OnCopySceneReady( sceneId, destsceneId )
-	LuaFnSetCopySceneData_Param( destsceneId, 3, sceneId )				-- ÉèÖÃ¸±±¾Èë¿Ú³¡¾°ºÅ
+	LuaFnSetCopySceneData_Param( destsceneId, 3, sceneId )				-- è®¾ç½®å‰¯æœ¬å…¥å£åœºæ™¯å·
 
 	local firstmanguid = LuaFnGetCopySceneData_TeamLeader( destsceneId )
 	local firstmanObjId = LuaFnGuid2ObjId( sceneId, firstmanguid )
 
-	if firstmanObjId == -1 then											-- ÕÒ²»µ½¸ÃÍæ¼Ò
+	if firstmanObjId == -1 then											-- æ‰¾ä¸åˆ°è¯¥ç©å®¶
 		return
 	end
 
-	if LuaFnIsCanDoScriptLogic( sceneId, firstmanObjId ) ~= 1 then		-- ´¦ÓÚÎŞ·¨Ö´ĞĞÂß¼­µÄ×´Ì¬
+	if LuaFnIsCanDoScriptLogic( sceneId, firstmanObjId ) ~= 1 then		-- å¤„äºæ— æ³•æ‰§è¡Œé€»è¾‘çš„çŠ¶æ€
 		return
 	end
 	
-	local totalguildid = LuaFnGetCopySceneData_Param( sceneId, 6 )					-- È¡µÃ±£´æµÄ°ïÅÉIDºÏÌå
+	local totalguildid = LuaFnGetCopySceneData_Param( sceneId, 6 )					-- å–å¾—ä¿å­˜çš„å¸®æ´¾IDåˆä½“
 	local Aguildid = floor(totalguildid / 10000)
 	--local Bguildid = mod(totalguildid, 10000)
 	local guildid = GetHumanGuildID(sceneId, firstmanObjId)
 	
 	--SetGuildWarApplySceneID(sceneId, Aguildid, destsceneId)
 	
-	--Õâ¸öÍæ¼Ò½øÈë³¡¾°
+	--è¿™ä¸ªç©å®¶è¿›å…¥åœºæ™¯
 	if guildid == Aguildid then
 		NewWorld( sceneId, firstmanObjId, destsceneId, x402047_g_Fuben_A_X, x402047_g_Fuben_A_Z )
 	else
@@ -485,54 +485,54 @@ function x402047_OnCopySceneReady( sceneId, destsceneId )
 end
 
 --**********************************
---ÓĞÍæ¼Ò½øÈë¸±±¾ÊÂ¼ş
+--æœ‰ç©å®¶è¿›å…¥å‰¯æœ¬äº‹ä»¶
 --**********************************
 function x402047_OnPlayerEnter( sceneId, selfId )
-	--Õ½³µÍæ¼ÒÖØĞÂÉÏÏßµÄÊ±ºòÊÇÏÈ×ßÕâÀï£¬È»ºó²Å×ßÈ¡ÏûÕ½³µbuff¡£Òò´ËÕâ¸öµØ·½Íæ¼ÒµÄÕ½³µbuf»¹ÊÇ´æÔÚµÄ£¬ĞèÒªÊÖ¶¯È¡Ïû¡£
+	--æˆ˜è½¦ç©å®¶é‡æ–°ä¸Šçº¿çš„æ—¶å€™æ˜¯å…ˆèµ°è¿™é‡Œï¼Œç„¶åæ‰èµ°å–æ¶ˆæˆ˜è½¦buffã€‚å› æ­¤è¿™ä¸ªåœ°æ–¹ç©å®¶çš„æˆ˜è½¦bufè¿˜æ˜¯å­˜åœ¨çš„ï¼Œéœ€è¦æ‰‹åŠ¨å–æ¶ˆã€‚
 	local buf = x402047_HaveTankBuff( sceneId, selfId )
 	if buf ~= 0 then
 		LuaFnCancelSpecificImpact(sceneId,selfId,buf)
 	end
 	
 	local guildid = GetHumanGuildID(sceneId, selfId)
-	if x402047_IsGuildFull( sceneId, guildid ) == 1 then --±¾°ï¸±±¾ÈËÊıÂúÁË
+	if x402047_IsGuildFull( sceneId, guildid ) == 1 then --æœ¬å¸®å‰¯æœ¬äººæ•°æ»¡äº†
 		x402047_NotifyFailTips( sceneId, selfId, "#{BHXZ_081103_107}" )
-		SetCanChangeScene(sceneId, selfId, 1)--ÊÖ¶¯ÉèÖÃ×¢ÒâÕâ¸ö½Ó¿ÚµÄÓÃ·¨£¬ÆäËûµØ·½²»ÒªÂÒÊ¹ÓÃ
+		SetCanChangeScene(sceneId, selfId, 1)--æ‰‹åŠ¨è®¾ç½®æ³¨æ„è¿™ä¸ªæ¥å£çš„ç”¨æ³•ï¼Œå…¶ä»–åœ°æ–¹ä¸è¦ä¹±ä½¿ç”¨
 		x402047_Exit(sceneId, selfId)
 		return
 	end
 	
-	--¸±±¾¹Ø±Õ±êÖ¾
+	--å‰¯æœ¬å…³é—­æ ‡å¿—
 	local leaveFlag = LuaFnGetCopySceneData_Param( sceneId, 4 )
 	if leaveFlag == 1 and LuaFnGetCopySceneData_Param( sceneId, 5 ) >= x402047_g_CloseTick then
-		x402047_NotifyFailTips( sceneId, selfId, "±¾´Î°ï»áÕ÷ÌÖÒÑ¾­½áÊøÁË¡£" )
-		SetCanChangeScene(sceneId, selfId, 1)--ÊÖ¶¯ÉèÖÃ×¢ÒâÕâ¸ö½Ó¿ÚµÄÓÃ·¨£¬ÆäËûµØ·½²»ÒªÂÒÊ¹ÓÃ
+		x402047_NotifyFailTips( sceneId, selfId, "æœ¬æ¬¡å¸®ä¼šå¾è®¨å·²ç»ç»“æŸäº†ã€‚" )
+		SetCanChangeScene(sceneId, selfId, 1)--æ‰‹åŠ¨è®¾ç½®æ³¨æ„è¿™ä¸ªæ¥å£çš„ç”¨æ³•ï¼Œå…¶ä»–åœ°æ–¹ä¸è¦ä¹±ä½¿ç”¨
 		x402047_Exit(sceneId, selfId)
 		return
 	end
 	
-	local totalguildid = LuaFnGetCopySceneData_Param( sceneId, 6 )					-- È¡µÃ±£´æµÄ°ïÅÉIDºÏÌå
+	local totalguildid = LuaFnGetCopySceneData_Param( sceneId, 6 )					-- å–å¾—ä¿å­˜çš„å¸®æ´¾IDåˆä½“
 	local Aguildid = floor(totalguildid / 10000)
 	local Bguildid = mod(totalguildid, 10000)
 	
 	if guildid == Aguildid then
-		if LuaFnGetCopySceneData_Param( sceneId, 7 ) == 1 then --Èç¹û°ïÕ½ÒÑ¾­¿ªÊ¼ÔòÖ±½ÓÉèÖÃÕóÓª
+		if LuaFnGetCopySceneData_Param( sceneId, 7 ) == 1 then --å¦‚æœå¸®æˆ˜å·²ç»å¼€å§‹åˆ™ç›´æ¥è®¾ç½®é˜µè¥
 			SetUnitCampID(sceneId, selfId, selfId, 10+Aguildid)
 		end
 		SetPlayerDefaultReliveInfoEx( sceneId, selfId, "%10", -1, "0", sceneId, x402047_g_ALive_A_X, x402047_g_ALive_A_Z, x402047_g_ScriptId )
 	elseif guildid == Bguildid then
-		if LuaFnGetCopySceneData_Param( sceneId, 7 ) == 1 then --Èç¹û°ïÕ½ÒÑ¾­¿ªÊ¼ÔòÖ±½ÓÉèÖÃÕóÓª
+		if LuaFnGetCopySceneData_Param( sceneId, 7 ) == 1 then --å¦‚æœå¸®æˆ˜å·²ç»å¼€å§‹åˆ™ç›´æ¥è®¾ç½®é˜µè¥
 			SetUnitCampID(sceneId, selfId, selfId, 11+Aguildid)
 		end
 		SetPlayerDefaultReliveInfoEx( sceneId, selfId, "%10", -1, "0", sceneId, x402047_g_ALive_B_X, x402047_g_ALive_B_Z, x402047_g_ScriptId )
-	else  --°ÑÅĞ¶ÏĞ´ÑÏ¸ñÒ»Ğ©¡£¾ÙÀı£ºÍæ¼Ò°ïÕ½¸±±¾ÏÂÏß£¬È»ºó°ïÖ÷Ìß³öÕâ¸öÍæ¼Ò£¬Õâ´Î°ïÕ½Ã»ÓĞ½áÊøµÄÊ±ºòÍæ¼ÒÖØĞÂÉÏÏßµÄÊ±ºòÓ¦¸Ã²»ÄÜ½øÈë¸±±¾³¡¾°
-		x402047_NotifyFailTips( sceneId, selfId, "Äã²»ÔÚÕıÈ·µÄ°ïÅÉÖĞ£¬ÎŞ·¨½øÈë£¡" )
-		SetCanChangeScene(sceneId, selfId, 1)--ÊÖ¶¯ÉèÖÃ×¢ÒâÕâ¸ö½Ó¿ÚµÄÓÃ·¨£¬ÆäËûµØ·½²»ÒªÂÒÊ¹ÓÃ
+	else  --æŠŠåˆ¤æ–­å†™ä¸¥æ ¼ä¸€äº›ã€‚ä¸¾ä¾‹ï¼šç©å®¶å¸®æˆ˜å‰¯æœ¬ä¸‹çº¿ï¼Œç„¶åå¸®ä¸»è¸¢å‡ºè¿™ä¸ªç©å®¶ï¼Œè¿™æ¬¡å¸®æˆ˜æ²¡æœ‰ç»“æŸçš„æ—¶å€™ç©å®¶é‡æ–°ä¸Šçº¿çš„æ—¶å€™åº”è¯¥ä¸èƒ½è¿›å…¥å‰¯æœ¬åœºæ™¯
+		x402047_NotifyFailTips( sceneId, selfId, "ä½ ä¸åœ¨æ­£ç¡®çš„å¸®æ´¾ä¸­ï¼Œæ— æ³•è¿›å…¥ï¼" )
+		SetCanChangeScene(sceneId, selfId, 1)--æ‰‹åŠ¨è®¾ç½®æ³¨æ„è¿™ä¸ªæ¥å£çš„ç”¨æ³•ï¼Œå…¶ä»–åœ°æ–¹ä¸è¦ä¹±ä½¿ç”¨
 		x402047_Exit(sceneId, selfId)
 		return
 	end
 	
-	--Ç¿ÖÆ¶¥³ö°ïÅÉ³ÆºÅ£¬Ìí¼ÓÌáÊ¾
+	--å¼ºåˆ¶é¡¶å‡ºå¸®æ´¾ç§°å·ï¼Œæ·»åŠ æç¤º
 	if GetCurTitle(sceneId, selfId) ~= 23 then
 		x402047_NotifyFailTips( sceneId, selfId, "#{BHXZ_081205_1}" )
 		Msg2Player(sceneId, selfId, "#{BHXZ_081205_1}" , MSG2PLAYER_PARA)
@@ -541,11 +541,11 @@ function x402047_OnPlayerEnter( sceneId, selfId )
 end
 
 --**********************************
---objËÀÍö
+--objæ­»äº¡
 --**********************************
-function x402047_OnDie( sceneId, objId, selfId )--Õâ¸öselfId¿ÉÄÜÊÇ³èÎï
+function x402047_OnDie( sceneId, objId, selfId )--è¿™ä¸ªselfIdå¯èƒ½æ˜¯å® ç‰©
 	local objType = GetCharacterType( sceneId, selfId )
-	if objType == 3 then --Èç¹ûÊÇ³èÎïµÄ»°£¬°ÑÕâ¸öIDÉèÖÃ³ÉÖ÷ÈËID
+	if objType == 3 then --å¦‚æœæ˜¯å® ç‰©çš„è¯ï¼ŒæŠŠè¿™ä¸ªIDè®¾ç½®æˆä¸»äººID
 		selfId = GetPetCreator( sceneId, selfId )
 	end
 	
@@ -553,31 +553,31 @@ function x402047_OnDie( sceneId, objId, selfId )--Õâ¸öselfId¿ÉÄÜÊÇ³èÎï
 		return
 	end
 	
-	--ÊÇ·ñÊÇ¸±±¾
+	--æ˜¯å¦æ˜¯å‰¯æœ¬
 	local sceneType = LuaFnGetSceneType( sceneId )
 	if sceneType ~= 1 then
 		return
 	end
 
-	--ÊÇ·ñÊÇËùĞèÒªµÄ¸±±¾
+	--æ˜¯å¦æ˜¯æ‰€éœ€è¦çš„å‰¯æœ¬
 	local fubentype = LuaFnGetCopySceneData_Param( sceneId, 0 )
 	if fubentype ~= x402047_g_CopySceneType then
 		return
 	end
 
-	--ÊÇ·ñ¿ªÊ¼¼Ç·Ö
+	--æ˜¯å¦å¼€å§‹è®°åˆ†
 	local isStartPoint = LuaFnGetCopySceneData_Param( sceneId, 7 )
 	if isStartPoint == 0 then
 		return
 	end
 
---	--¸±±¾¹Ø±Õ±êÖ¾
+--	--å‰¯æœ¬å…³é—­æ ‡å¿—
 --	local leaveFlag = LuaFnGetCopySceneData_Param( sceneId, 4 )
---	if leaveFlag == 1 then														-- Èç¹û¸±±¾ÒÑ¾­±»ÖÃ³É¹Ø±Õ×´Ì¬£¬ÔòÉ±¹ÖÎŞĞ§
+--	if leaveFlag == 1 then														-- å¦‚æœå‰¯æœ¬å·²ç»è¢«ç½®æˆå…³é—­çŠ¶æ€ï¼Œåˆ™æ€æ€ªæ— æ•ˆ
 --		return
 --	end
 
-	--È¡µÃµ±Ç°³¡¾°ÀïµÄÈËÊı
+	--å–å¾—å½“å‰åœºæ™¯é‡Œçš„äººæ•°
 	local num = LuaFnGetCopyScene_HumanCount( sceneId )
 	local mems = {}
 	
@@ -585,9 +585,9 @@ function x402047_OnDie( sceneId, objId, selfId )--Õâ¸öselfId¿ÉÄÜÊÇ³èÎï
 		mems[i] = LuaFnGetCopyScene_HumanObjId( sceneId, i )
 	end
 
-	--È¡µÃÉ±ËÀNPCµÄname
+	--å–å¾—æ€æ­»NPCçš„name
 	local szName = GetName( sceneId, objId )
-	if szName == x402047_g_A_FenXiang_Tower or szName == x402047_g_A_LuoXing_Tower then			--AËş
+	if szName == x402047_g_A_FenXiang_Tower or szName == x402047_g_A_LuoXing_Tower then			--Aå¡”
 		if x402047_IsCommonBGuild( sceneId, selfId ) == 0 then
 			return
 		end
@@ -597,7 +597,7 @@ function x402047_OnDie( sceneId, objId, selfId )--Õâ¸öselfId¿ÉÄÜÊÇ³èÎï
 		local alreadynum = GetGuildIntNum( sceneId, humanguildid, x402047_g_B_KillBuildingNumIndex )
 		SetGuildIntNum( sceneId, humanguildid, x402047_g_B_KillBuildingNumIndex, alreadynum+1 )
 		x402047_AddHumanGuildArrayInt( sceneId, selfId, x402047_g_Human_KillBuildingIndex, 1 )
-	elseif szName == x402047_g_B_FenXiang_Tower or szName == x402047_g_B_LuoXing_Tower then	--BËş
+	elseif szName == x402047_g_B_FenXiang_Tower or szName == x402047_g_B_LuoXing_Tower then	--Bå¡”
 		if x402047_IsCommonAGuild( sceneId, selfId ) == 0 then
 			return
 		end
@@ -607,7 +607,7 @@ function x402047_OnDie( sceneId, objId, selfId )--Õâ¸öselfId¿ÉÄÜÊÇ³èÎï
 		local alreadynum = GetGuildIntNum( sceneId, humanguildid, x402047_g_A_KillBuildingNumIndex )
 		SetGuildIntNum( sceneId, humanguildid, x402047_g_A_KillBuildingNumIndex, alreadynum+1 )
 		x402047_AddHumanGuildArrayInt( sceneId, selfId, x402047_g_Human_KillBuildingIndex, 1 )
-	elseif szName == x402047_g_A_Platform then		--AÌ¨
+	elseif szName == x402047_g_A_Platform then		--Aå°
 		if x402047_IsCommonBGuild( sceneId, selfId ) == 0 then
 			return
 		end
@@ -617,7 +617,7 @@ function x402047_OnDie( sceneId, objId, selfId )--Õâ¸öselfId¿ÉÄÜÊÇ³èÎï
 		local alreadynum = GetGuildIntNum( sceneId, humanguildid, x402047_g_B_KillBuildingNumIndex )
 		SetGuildIntNum( sceneId, humanguildid, x402047_g_B_KillBuildingNumIndex, alreadynum+1 )
 		x402047_AddHumanGuildArrayInt( sceneId, selfId, x402047_g_Human_KillBuildingIndex, 1 )
-	elseif szName == x402047_g_B_Platform then		--BÌ¨
+	elseif szName == x402047_g_B_Platform then		--Bå°
 		if x402047_IsCommonAGuild( sceneId, selfId ) == 0 then
 			return
 		end
@@ -629,7 +629,7 @@ function x402047_OnDie( sceneId, objId, selfId )--Õâ¸öselfId¿ÉÄÜÊÇ³èÎï
 		x402047_AddHumanGuildArrayInt( sceneId, selfId, x402047_g_Human_KillBuildingIndex, 1 )
 	end
 	
-	local msg = LuaFnGetGuildName(sceneId, selfId).."#{BHXZ_081103_125}"..GetName(sceneId, selfId).."#{BHXZ_081103_126}"..szName.."¡£"
+	local msg = LuaFnGetGuildName(sceneId, selfId).."#{BHXZ_081103_125}"..GetName(sceneId, selfId).."#{BHXZ_081103_126}"..szName.."ã€‚"
 	for i = 0, num - 1 do
 		if LuaFnIsObjValid( sceneId, mems[i] ) == 1 and LuaFnIsCanDoScriptLogic( sceneId, mems[i] ) == 1 then
 			x402047_NotifyFailTips(sceneId, mems[i], msg)
@@ -639,47 +639,47 @@ function x402047_OnDie( sceneId, objId, selfId )--Õâ¸öselfId¿ÉÄÜÊÇ³èÎï
 end
 
 ----**********************************
-----É±ËÀ¹ÖÎï»òÍæ¼Ò
+----æ€æ­»æ€ªç‰©æˆ–ç©å®¶
 ----**********************************
---function x402047_OnKillObject( sceneId, selfId, objdataId, objId )						-- ²ÎÊıÒâË¼£º³¡¾°ºÅ¡¢Íæ¼ÒobjId¡¢¹ÖÎï±íÎ»ÖÃºÅ¡¢¹ÖÎïobjId
+--function x402047_OnKillObject( sceneId, selfId, objdataId, objId )						-- å‚æ•°æ„æ€ï¼šåœºæ™¯å·ã€ç©å®¶objIdã€æ€ªç‰©è¡¨ä½ç½®å·ã€æ€ªç‰©objId
 --end
 
 --**********************************
--- Íæ¼Ò¸´»î
+-- ç©å®¶å¤æ´»
 --**********************************
 function x402047_OnRelive(sceneId, selfId)
 	LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, 78, 100 )
 end
 
 --**********************************
---ÓĞÍæ¼ÒÔÚ¸±±¾ÖĞËÀÍöÊÂ¼ş
+--æœ‰ç©å®¶åœ¨å‰¯æœ¬ä¸­æ­»äº¡äº‹ä»¶
 --**********************************
-function x402047_OnHumanDie( sceneId, selfId, killerId ) --Õâ¸ökillerIdÓĞ¿ÉÄÜÊÇ¶Ô·½NPC±ÈÈçËş£¬¶ø²»Ò»¶¨ÊÇÍæ¼ÒselfId
-	--ÊÇ·ñÊÇ¸±±¾
+function x402047_OnHumanDie( sceneId, selfId, killerId ) --è¿™ä¸ªkillerIdæœ‰å¯èƒ½æ˜¯å¯¹æ–¹NPCæ¯”å¦‚å¡”ï¼Œè€Œä¸ä¸€å®šæ˜¯ç©å®¶selfId
+	--æ˜¯å¦æ˜¯å‰¯æœ¬
 	local sceneType = LuaFnGetSceneType( sceneId )
 	if sceneType ~= 1 then
 		return
 	end
 
-	--ÊÇ·ñÊÇËùĞèÒªµÄ¸±±¾
+	--æ˜¯å¦æ˜¯æ‰€éœ€è¦çš„å‰¯æœ¬
 	local fubentype = LuaFnGetCopySceneData_Param( sceneId, 0 )
 	if fubentype ~= x402047_g_CopySceneType then
 		return
 	end
 	
-	--ÊÇ·ñ¿ªÊ¼¼Ç·Ö
+	--æ˜¯å¦å¼€å§‹è®°åˆ†
 	local isStartPoint = LuaFnGetCopySceneData_Param( sceneId, 7 )
 	if isStartPoint == 0 then
 		return
 	end
 	
---	--¸±±¾¹Ø±Õ±êÖ¾£¬Õâ¸öÖµµÃ¿¼ÂÇÒ»ÏÂ
+--	--å‰¯æœ¬å…³é—­æ ‡å¿—ï¼Œè¿™ä¸ªå€¼å¾—è€ƒè™‘ä¸€ä¸‹
 --	local leaveFlag = LuaFnGetCopySceneData_Param( sceneId, 4 )
---	if leaveFlag == 1 then														-- Èç¹û¸±±¾ÒÑ¾­±»ÖÃ³É¹Ø±Õ×´Ì¬£¬ÔòÉ±¹ÖÎŞĞ§
+--	if leaveFlag == 1 then														-- å¦‚æœå‰¯æœ¬å·²ç»è¢«ç½®æˆå…³é—­çŠ¶æ€ï¼Œåˆ™æ€æ€ªæ— æ•ˆ
 --		return
 --	end
 	
-	--È¡µÃµ±Ç°³¡¾°ÀïµÄÈËÊı
+	--å–å¾—å½“å‰åœºæ™¯é‡Œçš„äººæ•°
 	local num = LuaFnGetCopyScene_HumanCount( sceneId )
 	local mems = {}
 	
@@ -687,42 +687,42 @@ function x402047_OnHumanDie( sceneId, selfId, killerId ) --Õâ¸ökillerIdÓĞ¿ÉÄÜÊÇ¶
 		mems[i] = LuaFnGetCopyScene_HumanObjId( sceneId, i )
 	end
 	
-	local totalguildid = LuaFnGetCopySceneData_Param( sceneId, 6 )					-- È¡µÃ±£´æµÄ°ïÅÉIDºÏÌå
+	local totalguildid = LuaFnGetCopySceneData_Param( sceneId, 6 )					-- å–å¾—ä¿å­˜çš„å¸®æ´¾IDåˆä½“
 	local Aguildid = floor(totalguildid / 10000)
 	local Bguildid = mod(totalguildid, 10000)
-	local humanguildid = GetHumanGuildID(sceneId, selfId) --ËÀÍöÍæ¼Ò°ïÅÉ
+	local humanguildid = GetHumanGuildID(sceneId, selfId) --æ­»äº¡ç©å®¶å¸®æ´¾
 	
-	if humanguildid == Aguildid then --ËÀÍöÍæ¼ÒÊÇA°ïµÄ
+	if humanguildid == Aguildid then --æ­»äº¡ç©å®¶æ˜¯Aå¸®çš„
 		local objType = GetCharacterType( sceneId, killerId )
 		local otherselfId = 0
 		
-		if objType == 1 then --Èç¹ûÉ±ËÀËûµÄÊÇÍæ¼Ò
+		if objType == 1 then --å¦‚æœæ€æ­»ä»–çš„æ˜¯ç©å®¶
 			otherselfId = killerId
-		elseif objType == 3 then --Èç¹ûÉ±ËÀËûµÄÊÇÆäËûÍæ¼ÒµÄ³èÎï
+		elseif objType == 3 then --å¦‚æœæ€æ­»ä»–çš„æ˜¯å…¶ä»–ç©å®¶çš„å® ç‰©
 			otherselfId = GetPetCreator( sceneId, killerId )
 			if otherselfId == -1 then
 				otherselfId = 0
 			end
-		else --Èç¹ûÉ±ËÀËûµÄÊÇ¶Ô·½NPC±ÈÈçËş
+		else --å¦‚æœæ€æ­»ä»–çš„æ˜¯å¯¹æ–¹NPCæ¯”å¦‚å¡”
 			otherselfId = 0
 		end
 		
-		--ÉèÖÃ°ïÅÉÉ±ÈËÊıÄ¿
+		--è®¾ç½®å¸®æ´¾æ€äººæ•°ç›®
 		local alreadykillnum = GetGuildIntNum( sceneId, humanguildid, x402047_g_B_KillManNumIndex )
 		SetGuildIntNum( sceneId, humanguildid, x402047_g_B_KillManNumIndex, alreadykillnum+1 )
 		
 		local Tankbuf = x402047_HaveTankBuff( sceneId, selfId )
 		
-		--ÉèÖÃ¸öÈËÉ±ÈËÊıÄ¿£¬Ôö¼Ó°ï¹±
+		--è®¾ç½®ä¸ªäººæ€äººæ•°ç›®ï¼Œå¢åŠ å¸®è´¡
 		if otherselfId > 0 then
 			x402047_AddHumanGuildArrayInt( sceneId, otherselfId, x402047_g_Human_KillManIndex, 1 )
 			--CityChangeAttr(sceneId, otherselfId, GUILD_CONTRIB_POINT, 1)
-			if Tankbuf == 0 then --·ÇÕ½³µÍæ¼Ò²Å·¢ËÍÕâ¸öÏµÍ³ÏûÏ¢
-				Msg2Player(sceneId, otherselfId, "#{BHXZ_081103_127}"..GetName(sceneId, selfId).."¡£" , MSG2PLAYER_PARA)
+			if Tankbuf == 0 then --éæˆ˜è½¦ç©å®¶æ‰å‘é€è¿™ä¸ªç³»ç»Ÿæ¶ˆæ¯
+				Msg2Player(sceneId, otherselfId, "#{BHXZ_081103_127}"..GetName(sceneId, selfId).."ã€‚" , MSG2PLAYER_PARA)
 			end
 		end
 		
-		if Tankbuf and Tankbuf ~= 0 then --Õ½³µÍæ¼ÒËÀÍö
+		if Tankbuf and Tankbuf ~= 0 then --æˆ˜è½¦ç©å®¶æ­»äº¡
 			if selfId == LuaFnGetCopySceneData_Param( sceneId, x402047_g_A_FirstTankManSelfID ) then
 				LuaFnSetCopySceneData_Param( sceneId, x402047_g_A_FirstTankManSelfID, 0 )
 				LuaFnSetCopySceneData_Param( sceneId, x402047_g_A_FirstTankBuff, 0 )
@@ -740,9 +740,9 @@ function x402047_OnHumanDie( sceneId, selfId, killerId ) --Õâ¸ökillerIdÓĞ¿ÉÄÜÊÇ¶
 			
 			local msg = ""
 			if otherselfId > 0 then
-				msg = LuaFnGetGuildName(sceneId, otherselfId).."#{BHXZ_081103_125}"..GetName(sceneId, otherselfId).."#{BHXZ_081103_126}"..x402047_g_TankName[Tankbuf-x402047_g_AttrBuff[1]+1].."¡£"
+				msg = LuaFnGetGuildName(sceneId, otherselfId).."#{BHXZ_081103_125}"..GetName(sceneId, otherselfId).."#{BHXZ_081103_126}"..x402047_g_TankName[Tankbuf-x402047_g_AttrBuff[1]+1].."ã€‚"
 			else
-				msg = LuaFnGetGuildName(sceneId, selfId).."#{BHXZ_081103_125}"..x402047_g_TankName[Tankbuf-x402047_g_AttrBuff[1]+1].."ÒÑ¾­±»¶Ô·½´İ»ÙÁË¡£"
+				msg = LuaFnGetGuildName(sceneId, selfId).."#{BHXZ_081103_125}"..x402047_g_TankName[Tankbuf-x402047_g_AttrBuff[1]+1].."å·²ç»è¢«å¯¹æ–¹æ‘§æ¯äº†ã€‚"
 			end
 			for i = 0, num - 1 do
 				if LuaFnIsObjValid( sceneId, mems[i] ) == 1 and LuaFnIsCanDoScriptLogic( sceneId, mems[i] ) == 1 then
@@ -750,41 +750,41 @@ function x402047_OnHumanDie( sceneId, selfId, killerId ) --Õâ¸ökillerIdÓĞ¿ÉÄÜÊÇ¶
 					Msg2Player(sceneId, mems[i], msg, MSG2PLAYER_PARA)
 				end
 			end
-		else --·ÇÕ½³µÍæ¼ÒËÀÍö
+		else --éæˆ˜è½¦ç©å®¶æ­»äº¡
 			local point = GetGuildWarPoint(sceneId, x402047_g_GuildPoint_KillOtherPlayer)
 			x402047_AddBGuildPoint(sceneId, otherselfId, Bguildid, point)
 		end
-	elseif humanguildid == Bguildid then --ËÀÍöÍæ¼ÒÊÇB°ïµÄ
+	elseif humanguildid == Bguildid then --æ­»äº¡ç©å®¶æ˜¯Bå¸®çš„
 		local objType = GetCharacterType( sceneId, killerId )
 		local otherselfId = 0
 		
-		if objType == 1 then --Èç¹ûÉ±ËÀËûµÄÊÇÍæ¼Ò
+		if objType == 1 then --å¦‚æœæ€æ­»ä»–çš„æ˜¯ç©å®¶
 			otherselfId = killerId
-		elseif objType == 3 then --Èç¹ûÉ±ËÀËûµÄÊÇÆäËûÍæ¼ÒµÄ³èÎï
+		elseif objType == 3 then --å¦‚æœæ€æ­»ä»–çš„æ˜¯å…¶ä»–ç©å®¶çš„å® ç‰©
 			otherselfId = GetPetCreator( sceneId, killerId )
 			if otherselfId == -1 then
 				otherselfId = 0
 			end
-		else --Èç¹ûÉ±ËÀËûµÄÊÇ¶Ô·½NPC±ÈÈçËş
+		else --å¦‚æœæ€æ­»ä»–çš„æ˜¯å¯¹æ–¹NPCæ¯”å¦‚å¡”
 			otherselfId = 0
 		end
 		
-		--ÉèÖÃ°ïÅÉÉ±ÈËÊıÄ¿
+		--è®¾ç½®å¸®æ´¾æ€äººæ•°ç›®
 		local alreadykillnum = GetGuildIntNum( sceneId, humanguildid, x402047_g_A_KillManNumIndex )
 		SetGuildIntNum( sceneId, humanguildid, x402047_g_A_KillManNumIndex, alreadykillnum+1 )
 		
 		local Tankbuf = x402047_HaveTankBuff( sceneId, selfId )
 		
-		--ÉèÖÃ¸öÈËÉ±ÈËÊıÄ¿£¬Ôö¼Ó°ï¹±
+		--è®¾ç½®ä¸ªäººæ€äººæ•°ç›®ï¼Œå¢åŠ å¸®è´¡
 		if otherselfId > 0 then
 			x402047_AddHumanGuildArrayInt( sceneId, otherselfId, x402047_g_Human_KillManIndex, 1 )
 			--CityChangeAttr(sceneId, otherselfId, GUILD_CONTRIB_POINT, 1)
-			if Tankbuf == 0 then --·ÇÕ½³µÍæ¼Ò²Å·¢ËÍÕâ¸öÏµÍ³ÏûÏ¢
-				Msg2Player(sceneId, otherselfId, "#{BHXZ_081103_127}"..GetName(sceneId, selfId).."¡£" , MSG2PLAYER_PARA)
+			if Tankbuf == 0 then --éæˆ˜è½¦ç©å®¶æ‰å‘é€è¿™ä¸ªç³»ç»Ÿæ¶ˆæ¯
+				Msg2Player(sceneId, otherselfId, "#{BHXZ_081103_127}"..GetName(sceneId, selfId).."ã€‚" , MSG2PLAYER_PARA)
 			end
 		end
 		
-		if Tankbuf and Tankbuf ~= 0 then --Õ½³µÍæ¼ÒËÀÍö
+		if Tankbuf and Tankbuf ~= 0 then --æˆ˜è½¦ç©å®¶æ­»äº¡
 			if selfId == LuaFnGetCopySceneData_Param( sceneId, x402047_g_B_FirstTankManSelfID ) then
 				LuaFnSetCopySceneData_Param( sceneId, x402047_g_B_FirstTankManSelfID, 0 )
 				LuaFnSetCopySceneData_Param( sceneId, x402047_g_B_FirstTankBuff, 0 )
@@ -802,9 +802,9 @@ function x402047_OnHumanDie( sceneId, selfId, killerId ) --Õâ¸ökillerIdÓĞ¿ÉÄÜÊÇ¶
 			
 			local msg = ""
 			if otherselfId > 0 then
-				msg = LuaFnGetGuildName(sceneId, otherselfId).."#{BHXZ_081103_125}"..GetName(sceneId, otherselfId).."#{BHXZ_081103_126}"..x402047_g_TankName[Tankbuf-x402047_g_AttrBuff[1]+1].."¡£"
+				msg = LuaFnGetGuildName(sceneId, otherselfId).."#{BHXZ_081103_125}"..GetName(sceneId, otherselfId).."#{BHXZ_081103_126}"..x402047_g_TankName[Tankbuf-x402047_g_AttrBuff[1]+1].."ã€‚"
 			else
-				msg = LuaFnGetGuildName(sceneId, selfId).."#{BHXZ_081103_125}"..x402047_g_TankName[Tankbuf-x402047_g_AttrBuff[1]+1].."ÒÑ¾­±»¶Ô·½´İ»ÙÁË¡£"
+				msg = LuaFnGetGuildName(sceneId, selfId).."#{BHXZ_081103_125}"..x402047_g_TankName[Tankbuf-x402047_g_AttrBuff[1]+1].."å·²ç»è¢«å¯¹æ–¹æ‘§æ¯äº†ã€‚"
 			end
 			for i = 0, num - 1 do
 				if LuaFnIsObjValid( sceneId, mems[i] ) == 1 and LuaFnIsCanDoScriptLogic( sceneId, mems[i] ) == 1 then
@@ -812,7 +812,7 @@ function x402047_OnHumanDie( sceneId, selfId, killerId ) --Õâ¸ökillerIdÓĞ¿ÉÄÜÊÇ¶
 					Msg2Player(sceneId, mems[i], msg, MSG2PLAYER_PARA)
 				end
 			end
-		else --·ÇÕ½³µÍæ¼ÒËÀÍö
+		else --éæˆ˜è½¦ç©å®¶æ­»äº¡
 			local point = GetGuildWarPoint(sceneId, x402047_g_GuildPoint_KillOtherPlayer)
 			x402047_AddAGuildPoint(sceneId, otherselfId, Aguildid, point)
 		end
@@ -821,10 +821,10 @@ function x402047_OnHumanDie( sceneId, selfId, killerId ) --Õâ¸ökillerIdÓĞ¿ÉÄÜÊÇ¶
 end
 
 --**********************************
--- Í¨Öª±¾°ïÍæ¼Ò°ïÕ½»ı·Ö
+-- é€šçŸ¥æœ¬å¸®ç©å®¶å¸®æˆ˜ç§¯åˆ†
 --**********************************
 function x402047_NotifyPoint( sceneId, humanguildid, point )
-	--È¡µÃµ±Ç°³¡¾°ÀïµÄÈËÊı
+	--å–å¾—å½“å‰åœºæ™¯é‡Œçš„äººæ•°
 	local num = LuaFnGetCopyScene_HumanCount( sceneId )
 	local mems = {}
 	
@@ -833,22 +833,22 @@ function x402047_NotifyPoint( sceneId, humanguildid, point )
 	end
 	
 	for i = 0, num - 1 do
-		if LuaFnIsObjValid( sceneId, mems[i] ) == 1 and LuaFnIsCanDoScriptLogic( sceneId, mems[i] ) == 1 and GetHumanGuildID(sceneId, mems[i]) == humanguildid then		-- ²»ÔÚ³¡¾°µÄ²»×ö´Ë²Ù×÷£¬²»Âß¼­µÄ²»²Ù×÷
+		if LuaFnIsObjValid( sceneId, mems[i] ) == 1 and LuaFnIsCanDoScriptLogic( sceneId, mems[i] ) == 1 and GetHumanGuildID(sceneId, mems[i]) == humanguildid then		-- ä¸åœ¨åœºæ™¯çš„ä¸åšæ­¤æ“ä½œï¼Œä¸é€»è¾‘çš„ä¸æ“ä½œ
 			x402047_NotifyFailTips( sceneId, mems[i], "#{BHXZ_081103_66}"..point )
 		end
 	end
 end
 
 --**********************************
---Àë¿ª¸±±¾
+--ç¦»å¼€å‰¯æœ¬
 --**********************************
 function x402047_Exit( sceneId, selfId )
-	local oldsceneId = LuaFnGetCopySceneData_Param( sceneId, 3 )				-- È¡µÃ¸±±¾Èë¿Ú³¡¾°ºÅ
+	local oldsceneId = LuaFnGetCopySceneData_Param( sceneId, 3 )				-- å–å¾—å‰¯æœ¬å…¥å£åœºæ™¯å·
 	NewWorld( sceneId, selfId, oldsceneId, x402047_g_Back_X, x402047_g_Back_Z )
 end
 
 --**********************************
---Íæ¼ÒÀë¿ªµÄÊ±ºòÇåÀíÉíÉÏµÄÁéÊ¯ÎïÆ·
+--ç©å®¶ç¦»å¼€çš„æ—¶å€™æ¸…ç†èº«ä¸Šçš„çµçŸ³ç‰©å“
 --**********************************
 function x402047_ClearLingShi( sceneId, selfId )
 	for i = 1, getn( x402047_g_LingShiID ) do
@@ -860,15 +860,15 @@ function x402047_ClearLingShi( sceneId, selfId )
 end
 
 --**********************************
---¸±±¾³¡¾°¶¨Ê±Æ÷ÊÂ¼ş
+--å‰¯æœ¬åœºæ™¯å®šæ—¶å™¨äº‹ä»¶
 --**********************************
 function x402047_OnCopySceneTimer( sceneId, nowTime )
-	--¸±±¾Ê±ÖÓ¶ÁÈ¡¼°ÉèÖÃ
-	local TickCount = LuaFnGetCopySceneData_Param( sceneId, 2 )						-- È¡µÃÒÑ¾­Ö´ĞĞµÄ¶¨Ê±´ÎÊı
+	--å‰¯æœ¬æ—¶é’Ÿè¯»å–åŠè®¾ç½®
+	local TickCount = LuaFnGetCopySceneData_Param( sceneId, 2 )						-- å–å¾—å·²ç»æ‰§è¡Œçš„å®šæ—¶æ¬¡æ•°
 	TickCount = TickCount + 1
-	LuaFnSetCopySceneData_Param( sceneId, 2, TickCount )							-- ÉèÖÃĞÂµÄ¶¨Ê±Æ÷µ÷ÓÃ´ÎÊı
+	LuaFnSetCopySceneData_Param( sceneId, 2, TickCount )							-- è®¾ç½®æ–°çš„å®šæ—¶å™¨è°ƒç”¨æ¬¡æ•°
 
-	--¸±±¾¹Ø±Õ±êÖ¾
+	--å‰¯æœ¬å…³é—­æ ‡å¿—
 	local leaveFlag = LuaFnGetCopySceneData_Param( sceneId, 4 )
 	
 	local membercount = LuaFnGetCopyScene_HumanCount( sceneId )
@@ -879,12 +879,12 @@ function x402047_OnCopySceneTimer( sceneId, nowTime )
 		mems[i] = LuaFnGetCopyScene_HumanObjId( sceneId, i )
 	end
 	
-	--ÆìÖÄÊ£ÓàÊ±¼ä
+	--æ——å¸œå‰©ä½™æ—¶é—´
 	local FlagRemainTime = LuaFnGetCopySceneData_Param( sceneId, x402047_g_FlagRemainedTime )
 	if FlagRemainTime > 0 then
 		FlagRemainTime = FlagRemainTime - 1
 		LuaFnSetCopySceneData_Param( sceneId, x402047_g_FlagRemainedTime, FlagRemainTime )
-		if FlagRemainTime <= 0 then --Ê±¼äµ½ÁËÆìÖÄÏûÊ§
+		if FlagRemainTime <= 0 then --æ—¶é—´åˆ°äº†æ——å¸œæ¶ˆå¤±
 			local nMonsterNum = GetMonsterCount(sceneId)
 			for i=0, nMonsterNum-1 do
 				local nMonsterId = GetMonsterObjID(sceneId,i)
@@ -904,7 +904,7 @@ function x402047_OnCopySceneTimer( sceneId, nowTime )
 		end
 	end
 	
-	--Õ½³µÀäÈ´Ê±¼ä
+	--æˆ˜è½¦å†·å´æ—¶é—´
 	local AColdTime = LuaFnGetCopySceneData_Param( sceneId, x402047_g_A_TankColdTime )
 	if AColdTime > 0 then
 		AColdTime = AColdTime - 1
@@ -916,7 +916,7 @@ function x402047_OnCopySceneTimer( sceneId, nowTime )
 		LuaFnSetCopySceneData_Param( sceneId, x402047_g_B_TankColdTime, BColdTime )
 	end
 	
-	--NPC¼ÓÃâÒß¿ØÖÆ
+	--NPCåŠ å…ç–«æ§åˆ¶
 	if TickCount == 1 then
 		local nNpcNum = GetMonsterCount(sceneId)
 		for i=0, nNpcNum-1 do
@@ -929,11 +929,11 @@ function x402047_OnCopySceneTimer( sceneId, nowTime )
 		end
 	end
 	
-	local totalguildid = LuaFnGetCopySceneData_Param( sceneId, 6 )					-- È¡µÃ±£´æµÄ°ïÅÉIDºÏÌå
+	local totalguildid = LuaFnGetCopySceneData_Param( sceneId, 6 )					-- å–å¾—ä¿å­˜çš„å¸®æ´¾IDåˆä½“
 	local Aguildid = floor(totalguildid / 10000)
 	local Bguildid = mod(totalguildid, 10000)
 	
-	--±¤ÀİÑªÁ¿¹«¸æ
+	--å ¡å’è¡€é‡å…¬å‘Š
 	if 1 then
 		local nNpcNum = GetMonsterCount(sceneId)
 		for i=0, nNpcNum-1 do
@@ -942,7 +942,7 @@ function x402047_OnCopySceneTimer( sceneId, nowTime )
 			local broadcast = 0
 			local setindex = 0
 			local guild = 0
-			local iscontinue = 1 --Ã»ÓĞcontinueÓï¾ä??
+			local iscontinue = 1 --æ²¡æœ‰continueè¯­å¥??
 			
 			if name == x402047_g_A_Platform then
 				broadcast = LuaFnGetCopySceneData_Param(sceneId, x402047_g_A_BroadcastTick)
@@ -962,13 +962,13 @@ function x402047_OnCopySceneTimer( sceneId, nowTime )
 				local downpercent = ""
 				
 				if nHp <= nMaxHp*0.9 and broadcast == 0 then
-					downpercent = "90£¥"
+					downpercent = "90ï¼…"
 					LuaFnSetCopySceneData_Param( sceneId, setindex, 1 )
 				elseif nHp <= nMaxHp*0.5 and broadcast == 1 then
-					downpercent = "50£¥"
+					downpercent = "50ï¼…"
 					LuaFnSetCopySceneData_Param( sceneId, setindex, 2 )
 				elseif nHp <= nMaxHp*0.1 and broadcast == 2 then
-					downpercent = "10£¥"
+					downpercent = "10ï¼…"
 					LuaFnSetCopySceneData_Param( sceneId, setindex, 3 )
 				end
 				
@@ -986,13 +986,13 @@ function x402047_OnCopySceneTimer( sceneId, nowTime )
 	end
 	
 	--TickCount = (x402047_g_LimitTotalHoldTime-x402047_g_CloseTick)
-	if leaveFlag == 1 then															-- ĞèÒªÀë¿ª
-		--Àë¿ªµ¹¼ÆÊ±¼äµÄ¶ÁÈ¡ºÍÉèÖÃ
+	if leaveFlag == 1 then															-- éœ€è¦ç¦»å¼€
+		--ç¦»å¼€å€’è®¡æ—¶é—´çš„è¯»å–å’Œè®¾ç½®
 		local leaveTickCount = LuaFnGetCopySceneData_Param( sceneId, 5 )
 		leaveTickCount = leaveTickCount + 1
 		LuaFnSetCopySceneData_Param( sceneId, 5, leaveTickCount )
 		
-		if leaveTickCount >= x402047_g_CloseTick then										-- µ¹¼ÆÊ±¼äµ½£¬´ó¼Ò¶¼³öÈ¥°É
+		if leaveTickCount >= x402047_g_CloseTick then										-- å€’è®¡æ—¶é—´åˆ°ï¼Œå¤§å®¶éƒ½å‡ºå»å§
 			local IsSetOverFlag = LuaFnGetCopySceneData_Param(sceneId, x402047_g_IsSetOverFlag)
 			
 			if IsSetOverFlag == 0 then
@@ -1001,7 +1001,7 @@ function x402047_OnCopySceneTimer( sceneId, nowTime )
 				local Apoint = GetGuildIntNum( sceneId, Aguildid, x402047_g_A_TotalPointIndex )
 				local Bpoint = GetGuildIntNum( sceneId, Bguildid, x402047_g_B_TotalPointIndex )
 				
-				--°ïÅÉ½±ÀøµÄÑ­»·£¬ĞèÒªÏÈÕÒµ½A°ïµ½µ×¶àÉÙÈË£¬B°ïµ½µ×¶àÉÙÈË¡£»¹ÒªÕÒµ½xx×î¶àµÄÍæ¼ÒÒÔ¼ÇÂ¼MissionData£¬ÉÔºóËû¿ÉÒÔÁì½±ºÍbuff¡£
+				--å¸®æ´¾å¥–åŠ±çš„å¾ªç¯ï¼Œéœ€è¦å…ˆæ‰¾åˆ°Aå¸®åˆ°åº•å¤šå°‘äººï¼ŒBå¸®åˆ°åº•å¤šå°‘äººã€‚è¿˜è¦æ‰¾åˆ°xxæœ€å¤šçš„ç©å®¶ä»¥è®°å½•MissionDataï¼Œç¨åä»–å¯ä»¥é¢†å¥–å’Œbuffã€‚
 				local AGuildcount = 0
 				local BGuildcount = 0
 				local KillMax = 0
@@ -1016,7 +1016,7 @@ function x402047_OnCopySceneTimer( sceneId, nowTime )
 						local FlagNum = GetHumanGuildInt( sceneId, mems[i], x402047_g_Human_FlagIndex )
 						local SourceNum = GetHumanGuildInt( sceneId, mems[i], x402047_g_Human_ResourceNumIndex )
 						
-						--Í³¼Æxx´ÎÊı
+						--ç»Ÿè®¡xxæ¬¡æ•°
 						if KillNum > KillMax then
 							KillMax = KillNum
 							PrizeSelfId[1] = mems[i]
@@ -1030,7 +1030,7 @@ function x402047_OnCopySceneTimer( sceneId, nowTime )
 							PrizeSelfId[3] = mems[i]
 						end
 						
-						--Í³¼ÆÃ¿¸ö°ïÅÉµÄÈËÊı
+						--ç»Ÿè®¡æ¯ä¸ªå¸®æ´¾çš„äººæ•°
 						if guildid == Aguildid then
 							AGuildcount = AGuildcount + 1
 						elseif guildid == Bguildid then
@@ -1038,13 +1038,13 @@ function x402047_OnCopySceneTimer( sceneId, nowTime )
 						end
 					end
 				end
-				--¼ÆËãÁ½¸öµÄĞ§ÂÊºÍ¼ÆËãÒ»¸öµÄ²î²»¶à£¬ËùÒÔË÷ĞÔÈ«²¿¼ÆËã³öÀ´
+				--è®¡ç®—ä¸¤ä¸ªçš„æ•ˆç‡å’Œè®¡ç®—ä¸€ä¸ªçš„å·®ä¸å¤šï¼Œæ‰€ä»¥ç´¢æ€§å…¨éƒ¨è®¡ç®—å‡ºæ¥
 				local AFailHonour = 0
-				if AGuildcount ~= 0 then --±ÜÃâ·¢Éú³ı0´íÎó
+				if AGuildcount ~= 0 then --é¿å…å‘ç”Ÿé™¤0é”™è¯¯
 					AFailHonour = floor(x402047_g_Fail_TotalHonour/AGuildcount)
 				end
 				local BFailHonour = 0
-				if BGuildcount ~= 0 then --±ÜÃâ·¢Éú³ı0´íÎó
+				if BGuildcount ~= 0 then --é¿å…å‘ç”Ÿé™¤0é”™è¯¯
 					BFailHonour = floor(x402047_g_Fail_TotalHonour/BGuildcount)
 				end
 				if AFailHonour > x402047_g_Fail_PerMaxHonour then
@@ -1055,7 +1055,7 @@ function x402047_OnCopySceneTimer( sceneId, nowTime )
 				end
 				
 				local isAWin = 0
-				if Apoint > Bpoint then --Èç¹ûÆ½·ÖÔòÅĞĞûÕ½·½Ê§°Ü
+				if Apoint > Bpoint then --å¦‚æœå¹³åˆ†åˆ™åˆ¤å®£æˆ˜æ–¹å¤±è´¥
 					isAWin = 1
 					
 					local log = format("WinGuildID=%d,WinTotalHonour=%d,FailGuildID=%d,FailTotalHonour=%d", Aguildid, x402047_g_Win_PerHonour*AGuildcount, Bguildid, BFailHonour*BGuildcount)					
@@ -1066,7 +1066,7 @@ function x402047_OnCopySceneTimer( sceneId, nowTime )
 					ScriptGlobal_AuditGeneralLog(LUAAUDIT_BANGZHAN_HONOUR, -1, log)
 				end
 				
-				--¸öÈË½±Àø£¬·¢ËÍÓÊ¼ş£¬ÒòÎªÒ»´Î°ïÕ½Ò»¸öÍæ¼ÒÓĞ¿ÉÄÜ»ñµÃ¶à¸ö³ÆºÅ£¬ËùÒÔÓÃÁË¶à¸öflag
+				--ä¸ªäººå¥–åŠ±ï¼Œå‘é€é‚®ä»¶ï¼Œå› ä¸ºä¸€æ¬¡å¸®æˆ˜ä¸€ä¸ªç©å®¶æœ‰å¯èƒ½è·å¾—å¤šä¸ªç§°å·ï¼Œæ‰€ä»¥ç”¨äº†å¤šä¸ªflag
 				for i = 1, getn(PrizeSelfId) do
 					if PrizeSelfId[i] ~= 0 then
 						SetMissionFlag(sceneId, PrizeSelfId[i], x402047_g_PrizeFlag[i], 1)
@@ -1074,56 +1074,56 @@ function x402047_OnCopySceneTimer( sceneId, nowTime )
 					end
 				end
 				
-				--½«µ±Ç°¸±±¾³¡¾°ÀïµÄËùÓĞÈË´«ËÍ»ØÔ­À´½øÈëÊ±ºòµÄ³¡¾°¡£´«ËÍ²Ù×÷Ò»¶¨ÊÇ×îºóÒ»²½£¬ÒòÎª´«ËÍÇĞ³¡¾°µÄÊ±ºò²»ÄÜ½øĞĞÂß¼­´¦ÀíÁË
+				--å°†å½“å‰å‰¯æœ¬åœºæ™¯é‡Œçš„æ‰€æœ‰äººä¼ é€å›åŸæ¥è¿›å…¥æ—¶å€™çš„åœºæ™¯ã€‚ä¼ é€æ“ä½œä¸€å®šæ˜¯æœ€åä¸€æ­¥ï¼Œå› ä¸ºä¼ é€åˆ‡åœºæ™¯çš„æ—¶å€™ä¸èƒ½è¿›è¡Œé€»è¾‘å¤„ç†äº†
 				for i=0, membercount-1 do
 					if LuaFnIsObjValid( sceneId, mems[i] ) == 1 and LuaFnIsCanDoScriptLogic( sceneId, mems[i] ) == 1 then
 						local Tankbuf = x402047_HaveTankBuff( sceneId, mems[i] )
-						if Tankbuf and Tankbuf ~= 0 then --Õ½³µÍæ¼ÒÈ¡Ïûbuff
+						if Tankbuf and Tankbuf ~= 0 then --æˆ˜è½¦ç©å®¶å–æ¶ˆbuff
 							LuaFnCancelSpecificImpact(sceneId,mems[i],Tankbuf)
 						end
 						x402047_ClearLingShi( sceneId, mems[i] )
-						--ÇåÀí¸öÈËÁÙÊ±°ïÕ½Êı¾İ
+						--æ¸…ç†ä¸ªäººä¸´æ—¶å¸®æˆ˜æ•°æ®
 						for j = x402047_g_Human_TotalPointIndex, x402047_g_Human_ResourceNumIndex do
 							SetHumanGuildInt(sceneId, mems[i], j, 0)
 						end
 						
 						local guildid = GetHumanGuildID(sceneId, mems[i])
-						if guildid == Aguildid then --ÊÇA°ï³ÉÔ±
-							if isAWin == 1 then --A°ï»ñÊ¤
+						if guildid == Aguildid then --æ˜¯Aå¸®æˆå‘˜
+							if isAWin == 1 then --Aå¸®è·èƒœ
 								x402047_AddHonour( sceneId, mems[i], x402047_g_Win_PerHonour )
 								NewWorld( sceneId, mems[i], x402047_g_Exit_SceneID, x402047_g_Win_X, x402047_g_Win_Z )
 							else
 								x402047_AddHonour( sceneId, mems[i], AFailHonour )
-								SetCurTitle(sceneId, mems[i], 23, 0) --Ê§°Ü·½Ç¿ÖÆ¶¥³ö°ïÅÉ³ÆºÅ
-								LuaFnSendSystemMail(sceneId, GetName(sceneId, mems[i]), x402047_g_FailMsg) --±äÑòÓÊ¼ş
+								SetCurTitle(sceneId, mems[i], 23, 0) --å¤±è´¥æ–¹å¼ºåˆ¶é¡¶å‡ºå¸®æ´¾ç§°å·
+								LuaFnSendSystemMail(sceneId, GetName(sceneId, mems[i]), x402047_g_FailMsg) --å˜ç¾Šé‚®ä»¶
 								LuaFnSendSpecificImpactToUnit(sceneId, mems[i], mems[i], mems[i], x402047_g_SheepBuff, 0 )
 								NewWorld( sceneId, mems[i], x402047_g_Exit_SceneID, x402047_g_Fail_X, x402047_g_Fail_Z )
 							end
-						elseif guildid == Bguildid then --ÊÇB°ï³ÉÔ±
-							if isAWin == 0 then --B°ï»ñÊ¤
+						elseif guildid == Bguildid then --æ˜¯Bå¸®æˆå‘˜
+							if isAWin == 0 then --Bå¸®è·èƒœ
 								x402047_AddHonour( sceneId, mems[i], x402047_g_Win_PerHonour )
 								NewWorld( sceneId, mems[i], x402047_g_Exit_SceneID, x402047_g_Win_X, x402047_g_Win_Z )
 							else
 								x402047_AddHonour( sceneId, mems[i], BFailHonour )
-								SetCurTitle(sceneId, mems[i], 23, 0)  --Ê§°Ü·½Ç¿ÖÆ¶¥³ö°ïÅÉ³ÆºÅ
-								LuaFnSendSystemMail(sceneId, GetName(sceneId, mems[i]), x402047_g_FailMsg) --±äÑòÓÊ¼ş
+								SetCurTitle(sceneId, mems[i], 23, 0)  --å¤±è´¥æ–¹å¼ºåˆ¶é¡¶å‡ºå¸®æ´¾ç§°å·
+								LuaFnSendSystemMail(sceneId, GetName(sceneId, mems[i]), x402047_g_FailMsg) --å˜ç¾Šé‚®ä»¶
 								LuaFnSendSpecificImpactToUnit(sceneId, mems[i], mems[i], mems[i], x402047_g_SheepBuff, 0 )
 								NewWorld( sceneId, mems[i], x402047_g_Exit_SceneID, x402047_g_Fail_X, x402047_g_Fail_Z )
 							end
-						else --²»ÔÚÕıÈ·°ïÅÉ£¿£¿
+						else --ä¸åœ¨æ­£ç¡®å¸®æ´¾ï¼Ÿï¼Ÿ
 							x402047_Exit( sceneId, mems[i] )
 						end
 					end
 				end
-			else--²»ÄÜÈÃÍæ¼ÒÖØĞÂ½øÈë×ßÁì½±Á÷³Ì£¬²»ÄÜÇåÀí°ïÅÉIDÒòÎª½áÊøºó»¹ÒªÓÃµ½°ïÅÉID£¡£¡playerenter¼ÓÁËÈç¹ûÒÑ¾­¹Ø±ÕÔòÂíÉÏ´«³ö¸±±¾
+			else--ä¸èƒ½è®©ç©å®¶é‡æ–°è¿›å…¥èµ°é¢†å¥–æµç¨‹ï¼Œä¸èƒ½æ¸…ç†å¸®æ´¾IDå› ä¸ºç»“æŸåè¿˜è¦ç”¨åˆ°å¸®æ´¾IDï¼ï¼playerenteråŠ äº†å¦‚æœå·²ç»å…³é—­åˆ™é©¬ä¸Šä¼ å‡ºå‰¯æœ¬
 				for i=0, membercount-1 do
 					if LuaFnIsObjValid( sceneId, mems[i] ) == 1 and LuaFnIsCanDoScriptLogic( sceneId, mems[i] ) == 1 then
 						local Tankbuf = x402047_HaveTankBuff( sceneId, mems[i] )
-						if Tankbuf and Tankbuf ~= 0 then --Õ½³µÍæ¼ÒÈ¡Ïûbuff
+						if Tankbuf and Tankbuf ~= 0 then --æˆ˜è½¦ç©å®¶å–æ¶ˆbuff
 							LuaFnCancelSpecificImpact(sceneId,mems[i],Tankbuf)
 						end
 						x402047_ClearLingShi( sceneId, mems[i] )
-						--ÇåÀí¸öÈËÁÙÊ±°ïÕ½Êı¾İ
+						--æ¸…ç†ä¸ªäººä¸´æ—¶å¸®æˆ˜æ•°æ®
 						for j = x402047_g_Human_TotalPointIndex, x402047_g_Human_ResourceNumIndex do
 							SetHumanGuildInt(sceneId, mems[i], j, 0)
 						end
@@ -1135,8 +1135,8 @@ function x402047_OnCopySceneTimer( sceneId, nowTime )
 			
 			return
 		else
-			--Í¨Öªµ±Ç°¸±±¾³¡¾°ÀïµÄËùÓĞÈË£¬³¡¾°¹Ø±Õµ¹¼ÆÊ±¼ä
-			local strText = format( "Äã½«ÔÚ %d ÃëºóÀë¿ª³¡¾°", ( x402047_g_CloseTick - leaveTickCount ) * x402047_g_TickTime )
+			--é€šçŸ¥å½“å‰å‰¯æœ¬åœºæ™¯é‡Œçš„æ‰€æœ‰äººï¼Œåœºæ™¯å…³é—­å€’è®¡æ—¶é—´
+			local strText = format( "ä½ å°†åœ¨ %d ç§’åç¦»å¼€åœºæ™¯", ( x402047_g_CloseTick - leaveTickCount ) * x402047_g_TickTime )
 
 			for i=0, membercount-1 do
 				if LuaFnIsObjValid( sceneId, mems[i] ) == 1 and LuaFnIsCanDoScriptLogic( sceneId, mems[i] ) == 1 then
@@ -1144,19 +1144,19 @@ function x402047_OnCopySceneTimer( sceneId, nowTime )
 				end
 			end
 			
-			--Õâ¸öµØ·½²»ĞèÒªreturn
+			--è¿™ä¸ªåœ°æ–¹ä¸éœ€è¦return
 		end
 	end
 	
-	if TickCount == (x402047_g_LimitTotalHoldTime-x402047_g_CloseTick) then		-- ÉèÖÃ¸±±¾¹Ø±Õ±êÖ¾£¬¿ªÊ¼Í¨Öª
-		--ÉèÖÃ¸±±¾¹Ø±Õ±êÖ¾
+	if TickCount == (x402047_g_LimitTotalHoldTime-x402047_g_CloseTick) then		-- è®¾ç½®å‰¯æœ¬å…³é—­æ ‡å¿—ï¼Œå¼€å§‹é€šçŸ¥
+		--è®¾ç½®å‰¯æœ¬å…³é—­æ ‡å¿—
 		LuaFnSetCopySceneData_Param( sceneId, 4, 1 )
-	elseif TickCount == x402047_g_StartPoint then --¿ªÊ¼¼Ç·Ö
+	elseif TickCount == x402047_g_StartPoint then --å¼€å§‹è®°åˆ†
 		
-		--ÉèÖÃ¼Ç·Ö±êÖ¾
+		--è®¾ç½®è®°åˆ†æ ‡å¿—
 		LuaFnSetCopySceneData_Param( sceneId, 7, 1 )
 		
-		--ÉèÖÃÍæ¼ÒÕóÓª£¬²¢Í¨ÖªÍæ¼Ò°ïÕ½¿ªÊ¼
+		--è®¾ç½®ç©å®¶é˜µè¥ï¼Œå¹¶é€šçŸ¥ç©å®¶å¸®æˆ˜å¼€å§‹
 		for i=0, membercount-1 do
 			if LuaFnIsObjValid( sceneId, mems[i] ) == 1 and LuaFnIsCanDoScriptLogic( sceneId, mems[i] ) == 1 then
 				x402047_NotifyFailTips( sceneId, mems[i], "#{BHXZ_081103_108}" )
@@ -1175,7 +1175,7 @@ function x402047_OnCopySceneTimer( sceneId, nowTime )
 			end
 		end
 		
-		--ÉèÖÃNPCÕóÓª
+		--è®¾ç½®NPCé˜µè¥
 		local nNpcNum = GetMonsterCount(sceneId)
 		for i=0, nNpcNum-1 do
 			local nNpcId = GetMonsterObjID(sceneId,i)
@@ -1190,17 +1190,17 @@ function x402047_OnCopySceneTimer( sceneId, nowTime )
 		end
 	else
 		
-		--°ïÕ½¿ªÊ¼µÄÌáÊ¾
+		--å¸®æˆ˜å¼€å§‹çš„æç¤º
 		if TickCount < x402047_g_StartPoint then
 			local RemainTick = x402047_g_StartPoint - TickCount
-			if mod(RemainTick, 60) == 0 then --Ã¿·ÖÖÓÌáÊ¾
+			if mod(RemainTick, 60) == 0 then --æ¯åˆ†é’Ÿæç¤º
 				for	i = 0, membercount - 1 do
 					if LuaFnIsObjValid( sceneId, mems[i] ) == 1 and LuaFnIsCanDoScriptLogic( sceneId, mems[i] ) == 1 then
 						x402047_NotifyFailTips( sceneId, mems[i], "#{BHXZ_081103_129}"..floor(RemainTick / 60).."#{BHXZ_081103_130}" )
 					end
 				end
 			end
-			if RemainTick <= x402047_g_BackTick then --µ¹¼ÆÊ±ÌáÊ¾
+			if RemainTick <= x402047_g_BackTick then --å€’è®¡æ—¶æç¤º
 				for	i = 0, membercount - 1 do
 					if LuaFnIsObjValid( sceneId, mems[i] ) == 1 and LuaFnIsCanDoScriptLogic( sceneId, mems[i] ) == 1 then
 						x402047_NotifyFailTips( sceneId, mems[i], "#{BHXZ_081103_129}"..RemainTick.."#{BHXZ_081103_131}" )
@@ -1209,7 +1209,7 @@ function x402047_OnCopySceneTimer( sceneId, nowTime )
 			end
 		end
 		
-		--ËşÊÍ·Å¼¼ÄÜ£¬Ã¿5sÆğÒ»´Î×÷ÓÃ£¬·ÙÏãËş²»ÄÜÍ¬Ê±·ÅÁ½¸ö¼¼ÄÜ£¬ËùÒÔºóÒ»ÃëÔÚ·ÅÒ»¸ö¼¼ÄÜ
+		--å¡”é‡Šæ”¾æŠ€èƒ½ï¼Œæ¯5sèµ·ä¸€æ¬¡ä½œç”¨ï¼Œç„šé¦™å¡”ä¸èƒ½åŒæ—¶æ”¾ä¸¤ä¸ªæŠ€èƒ½ï¼Œæ‰€ä»¥åä¸€ç§’åœ¨æ”¾ä¸€ä¸ªæŠ€èƒ½
 		local modtick = mod( TickCount, 5 )
 		if TickCount >= x402047_g_StartPoint and modtick == 0 then
 			local nNpcNum = GetMonsterCount(sceneId)
@@ -1249,7 +1249,7 @@ function x402047_OnCopySceneTimer( sceneId, nowTime )
 			end
 		end
 		
-		--Õ½³µÍæ¼ÒÊÇ·ñµôÏß£¬ÒÔ¼°Õ½³µ×ø±ê¸üĞÂ£¬Ã¿s¸üĞÂÒ»´Î
+		--æˆ˜è½¦ç©å®¶æ˜¯å¦æ‰çº¿ï¼Œä»¥åŠæˆ˜è½¦åæ ‡æ›´æ–°ï¼Œæ¯sæ›´æ–°ä¸€æ¬¡
 		local TankInfo = {{},{},{},{}}
 		local modtick10 = mod( TickCount, 10 )
 		local modtick12 = mod( TickCount, 12 )
@@ -1276,17 +1276,17 @@ function x402047_OnCopySceneTimer( sceneId, nowTime )
 						end
 					end
 					
-					if buff == 0 then --Õ½³µÍæ¼ÒÒì³£µôÏß
-						local oldbuff = LuaFnGetCopySceneData_Param( sceneId, x402047_g_A_FirstTankBuff+i ) --È¡³ö¸±±¾ÄÚ¼ÇÂ¼µÄbuf
-						local totalpos = LuaFnGetCopySceneData_Param( sceneId, x402047_g_A_FirstTankPos+i ) --È¡³ö¸±±¾ÄÚ¼ÇÂ¼µÄpos
+					if buff == 0 then --æˆ˜è½¦ç©å®¶å¼‚å¸¸æ‰çº¿
+						local oldbuff = LuaFnGetCopySceneData_Param( sceneId, x402047_g_A_FirstTankBuff+i ) --å–å‡ºå‰¯æœ¬å†…è®°å½•çš„buf
+						local totalpos = LuaFnGetCopySceneData_Param( sceneId, x402047_g_A_FirstTankPos+i ) --å–å‡ºå‰¯æœ¬å†…è®°å½•çš„pos
 						PosX = floor(totalpos / 10000)
 						PosZ = mod(totalpos, 10000)
 						
 						if oldbuff > 0 then
 							local selfIdindex = 0
-							if i == 0 or i == 1 then --A°ïÕ½³µ
+							if i == 0 or i == 1 then --Aå¸®æˆ˜è½¦
 								selfIdindex = CallScriptFunction( 600051, "FindTankManIndex", sceneId, Aguildid, oldbuff-x402047_g_AttrBuff[1]+1 )
-							else --B°ïÕ½³µ
+							else --Bå¸®æˆ˜è½¦
 								selfIdindex = CallScriptFunction( 600051, "FindTankManIndex", sceneId, Bguildid, oldbuff-x402047_g_AttrBuff[1]+1 )
 							end
 							if selfIdindex > 0 and PosX > 0 and PosZ > 0 then
@@ -1298,20 +1298,20 @@ function x402047_OnCopySceneTimer( sceneId, nowTime )
 						LuaFnSetCopySceneData_Param( sceneId, x402047_g_A_FirstTankManSelfID+i, 0 )
 						LuaFnSetCopySceneData_Param( sceneId, x402047_g_A_FirstTankBuff+i, 0 )
 						LuaFnSetCopySceneData_Param( sceneId, x402047_g_A_FirstTankPos+i, 0 )
-					else --¸üĞÂ×ø±ê
+					else --æ›´æ–°åæ ‡
 						PosX,PosZ = GetWorldPos(sceneId,tankman)
 						LuaFnSetCopySceneData_Param( sceneId, x402047_g_A_FirstTankPos+i, floor(PosX)*10000+floor(PosZ) )
 						TankInfo[i+1].x = PosX
 						TankInfo[i+1].z = PosZ
 						
-						--Õ½³µ·Å¹âĞ§
-						if i == 0 or i == 1 then--A°ï
+						--æˆ˜è½¦æ”¾å…‰æ•ˆ
+						if i == 0 or i == 1 then--Aå¸®
 							if modtick12 == 7 and TankInfo[i+1].type == 1 then
 								LuaFnSendSpecificImpactToUnit( sceneId, tankman, tankman, tankman, x402047_g_LightBuff[TankInfo[i+1].type], 0 )
 							elseif modtick10 == 8 and 2 <= TankInfo[i+1].type and TankInfo[i+1].type <= 4 then
 								LuaFnSendSpecificImpactToUnit( sceneId, tankman, tankman, tankman, x402047_g_LightBuff[TankInfo[i+1].type], 0 )
 							end
-						else--B°ï
+						else--Bå¸®
 							if modtick12 == 1 and TankInfo[i+1].type == 1 then
 								LuaFnSendSpecificImpactToUnit( sceneId, tankman, tankman, tankman, x402047_g_LightBuff[TankInfo[i+1].type], 0 )
 							elseif modtick10 == 3 and 2 <= TankInfo[i+1].type and TankInfo[i+1].type <= 4 then
@@ -1320,17 +1320,17 @@ function x402047_OnCopySceneTimer( sceneId, nowTime )
 						end
 						
 					end
-				else --ID²»ÕıÈ·»òÕß²»ÄÜÂß¼­ËµÃ÷Õ½³µÍæ¼ÒÒÑ¾­µôÏß£¬ĞèÒª×öµôÏß´¦Àí
-					local oldbuff = LuaFnGetCopySceneData_Param( sceneId, x402047_g_A_FirstTankBuff+i ) --È¡³ö¸±±¾ÄÚ¼ÇÂ¼µÄbuf
-					local totalpos = LuaFnGetCopySceneData_Param( sceneId, x402047_g_A_FirstTankPos+i ) --È¡³ö¸±±¾ÄÚ¼ÇÂ¼µÄpos
+				else --IDä¸æ­£ç¡®æˆ–è€…ä¸èƒ½é€»è¾‘è¯´æ˜æˆ˜è½¦ç©å®¶å·²ç»æ‰çº¿ï¼Œéœ€è¦åšæ‰çº¿å¤„ç†
+					local oldbuff = LuaFnGetCopySceneData_Param( sceneId, x402047_g_A_FirstTankBuff+i ) --å–å‡ºå‰¯æœ¬å†…è®°å½•çš„buf
+					local totalpos = LuaFnGetCopySceneData_Param( sceneId, x402047_g_A_FirstTankPos+i ) --å–å‡ºå‰¯æœ¬å†…è®°å½•çš„pos
 					PosX = floor(totalpos / 10000)
 					PosZ = mod(totalpos, 10000)
 					
 					if oldbuff > 0 then
 						local selfIdindex = 0
-						if i == 0 or i == 1 then --A°ïÕ½³µ
+						if i == 0 or i == 1 then --Aå¸®æˆ˜è½¦
 							selfIdindex = CallScriptFunction( 600051, "FindTankManIndex", sceneId, Aguildid, oldbuff-x402047_g_AttrBuff[1]+1 )
-						else --B°ïÕ½³µ
+						else --Bå¸®æˆ˜è½¦
 							selfIdindex = CallScriptFunction( 600051, "FindTankManIndex", sceneId, Bguildid, oldbuff-x402047_g_AttrBuff[1]+1 )
 						end
 						if selfIdindex > 0 and PosX > 0 and PosZ > 0 then
@@ -1346,8 +1346,8 @@ function x402047_OnCopySceneTimer( sceneId, nowTime )
 			end --end if
 		end --end for
 		
-		--¶¨Ê±¼ì²é¶ÓÎé³ÉÔ±µÄ°ïÅÉID£¬Èç¹û²»·ûºÏ£¬ÔòÌß³ö¸±±¾
-		--Õ½³µ·Å¼¼ÄÜ
+		--å®šæ—¶æ£€æŸ¥é˜Ÿä¼æˆå‘˜çš„å¸®æ´¾IDï¼Œå¦‚æœä¸ç¬¦åˆï¼Œåˆ™è¸¢å‡ºå‰¯æœ¬
+		--æˆ˜è½¦æ”¾æŠ€èƒ½
 		local Acount = 0
 		local Bcount = 0
 		local AGuildName = ""
@@ -1365,8 +1365,8 @@ function x402047_OnCopySceneTimer( sceneId, nowTime )
 						AGuildName = LuaFnGetGuildName(sceneId, mems[i])
 					end
 					
-					if modtick10 == 3 and Tankbuf == 0 and isalive == 1 then --°×»¢Õ½³µ,ÖìÈ¸Õ½³µ,ĞşÎäÕ½³µ
-						for	j = 1, 2 do --¶Ô¼º·½µÄĞ§¹û
+					if modtick10 == 3 and Tankbuf == 0 and isalive == 1 then --ç™½è™æˆ˜è½¦,æœ±é›€æˆ˜è½¦,ç„æ­¦æˆ˜è½¦
+						for	j = 1, 2 do --å¯¹å·±æ–¹çš„æ•ˆæœ
 							if TankInfo[j].impactfriendnum < x402047_g_TankMaxFriendNum and (TankInfo[j].type == 2 or TankInfo[j].type == 3 or TankInfo[j].type == 4)
 							and (TankInfo[j].x-xx)*(TankInfo[j].x-xx) + (TankInfo[j].z-zz)*(TankInfo[j].z-zz) < 15*15 then
 								LuaFnSendSpecificImpactToUnit( sceneId, TankInfo[j].selfId, TankInfo[j].selfId, mems[i], x402047_g_TankFriendBuff[TankInfo[j].type][1], 0 )
@@ -1375,7 +1375,7 @@ function x402047_OnCopySceneTimer( sceneId, nowTime )
 							end
 						end
 						
-						for	j = 3, 4 do --¶ÔµĞ·½µÄĞ§¹û
+						for	j = 3, 4 do --å¯¹æ•Œæ–¹çš„æ•ˆæœ
 							if (TankInfo[j].type == 2 or TankInfo[j].type == 3 or TankInfo[j].type == 4)
 							and (TankInfo[j].x-xx)*(TankInfo[j].x-xx) + (TankInfo[j].z-zz)*(TankInfo[j].z-zz) < 15*15 then
 								if TankInfo[j].impactenemynum < x402047_g_TankMaxEnemyNum then
@@ -1387,8 +1387,8 @@ function x402047_OnCopySceneTimer( sceneId, nowTime )
 							end
 						end
 					end
-					if modtick12 == 1 and Tankbuf == 0 and isalive == 1 then --ÇàÁúÕ½³µ
-						for	j = 1, 2 do --¶Ô¼º·½µÄĞ§¹û
+					if modtick12 == 1 and Tankbuf == 0 and isalive == 1 then --é’é¾™æˆ˜è½¦
+						for	j = 1, 2 do --å¯¹å·±æ–¹çš„æ•ˆæœ
 							if TankInfo[j].impactfriendnum < x402047_g_TankMaxFriendNum and TankInfo[j].type == 1
 							and (TankInfo[j].x-xx)*(TankInfo[j].x-xx) + (TankInfo[j].z-zz)*(TankInfo[j].z-zz) < 15*15 then
 								LuaFnSendSpecificImpactToUnit( sceneId, TankInfo[j].selfId, TankInfo[j].selfId, mems[i], x402047_g_TankFriendBuff[TankInfo[j].type][1], 0 )
@@ -1397,7 +1397,7 @@ function x402047_OnCopySceneTimer( sceneId, nowTime )
 							end
 						end
 						
-						for	j = 3, 4 do --¶ÔµĞ·½µÄĞ§¹û
+						for	j = 3, 4 do --å¯¹æ•Œæ–¹çš„æ•ˆæœ
 							if TankInfo[j].type == 1 and (TankInfo[j].x-xx)*(TankInfo[j].x-xx) + (TankInfo[j].z-zz)*(TankInfo[j].z-zz) < 15*15 then
 								if TankInfo[j].impactenemynum < x402047_g_TankMaxEnemyNum then
 									LuaFnSendSpecificImpactToUnit( sceneId, TankInfo[j].selfId, TankInfo[j].selfId, mems[i], x402047_g_TankEnemyBuff[TankInfo[j].type], 0 )
@@ -1414,8 +1414,8 @@ function x402047_OnCopySceneTimer( sceneId, nowTime )
 						BGuildName = LuaFnGetGuildName(sceneId, mems[i])
 					end
 					
-					if modtick10 == 8 and Tankbuf == 0 and isalive == 1 then --°×»¢Õ½³µ,ÖìÈ¸Õ½³µ,ĞşÎäÕ½³µ
-						for	j = 1, 2 do --¶ÔµĞ·½µÄĞ§¹û
+					if modtick10 == 8 and Tankbuf == 0 and isalive == 1 then --ç™½è™æˆ˜è½¦,æœ±é›€æˆ˜è½¦,ç„æ­¦æˆ˜è½¦
+						for	j = 1, 2 do --å¯¹æ•Œæ–¹çš„æ•ˆæœ
 							if (TankInfo[j].type == 2 or TankInfo[j].type == 3 or TankInfo[j].type == 4)
 							and (TankInfo[j].x-xx)*(TankInfo[j].x-xx) + (TankInfo[j].z-zz)*(TankInfo[j].z-zz) < 15*15 then
 								if TankInfo[j].impactenemynum < x402047_g_TankMaxEnemyNum then
@@ -1427,7 +1427,7 @@ function x402047_OnCopySceneTimer( sceneId, nowTime )
 							end
 						end
 						
-						for	j = 3, 4 do --¶Ô¼º·½µÄĞ§¹û
+						for	j = 3, 4 do --å¯¹å·±æ–¹çš„æ•ˆæœ
 							if TankInfo[j].impactfriendnum < x402047_g_TankMaxFriendNum and (TankInfo[j].type == 2 or TankInfo[j].type == 3 or TankInfo[j].type == 4)
 							and (TankInfo[j].x-xx)*(TankInfo[j].x-xx) + (TankInfo[j].z-zz)*(TankInfo[j].z-zz) < 15*15 then
 								LuaFnSendSpecificImpactToUnit( sceneId, TankInfo[j].selfId, TankInfo[j].selfId, mems[i], x402047_g_TankFriendBuff[TankInfo[j].type][1], 0 )
@@ -1436,8 +1436,8 @@ function x402047_OnCopySceneTimer( sceneId, nowTime )
 							end
 						end
 					end
-					if modtick12 == 7 and Tankbuf == 0 and isalive == 1 then --ÇàÁúÕ½³µ
-						for	j = 1, 2 do --¶ÔµĞ·½µÄĞ§¹û
+					if modtick12 == 7 and Tankbuf == 0 and isalive == 1 then --é’é¾™æˆ˜è½¦
+						for	j = 1, 2 do --å¯¹æ•Œæ–¹çš„æ•ˆæœ
 							if TankInfo[j].type == 1 and (TankInfo[j].x-xx)*(TankInfo[j].x-xx) + (TankInfo[j].z-zz)*(TankInfo[j].z-zz) < 15*15 then
 								if TankInfo[j].impactenemynum < x402047_g_TankMaxEnemyNum then
 									LuaFnSendSpecificImpactToUnit( sceneId, TankInfo[j].selfId, TankInfo[j].selfId, mems[i], x402047_g_TankEnemyBuff[TankInfo[j].type], 0 )
@@ -1448,7 +1448,7 @@ function x402047_OnCopySceneTimer( sceneId, nowTime )
 							end
 						end
 						
-						for	j = 3, 4 do --¶Ô¼º·½µÄĞ§¹û
+						for	j = 3, 4 do --å¯¹å·±æ–¹çš„æ•ˆæœ
 							if TankInfo[j].impactfriendnum < x402047_g_TankMaxFriendNum and TankInfo[j].type == 1 
 							and (TankInfo[j].x-xx)*(TankInfo[j].x-xx) + (TankInfo[j].z-zz)*(TankInfo[j].z-zz) < 15*15 then
 								LuaFnSendSpecificImpactToUnit( sceneId, TankInfo[j].selfId, TankInfo[j].selfId, mems[i], x402047_g_TankFriendBuff[TankInfo[j].type][1], 0 )
@@ -1458,7 +1458,7 @@ function x402047_OnCopySceneTimer( sceneId, nowTime )
 						end
 					end
 				else
-					if Tankbuf and Tankbuf ~= 0 then --Õ½³µÍæ¼Ò²»ÔÚÕıÈ·°ïÅÉ
+					if Tankbuf and Tankbuf ~= 0 then --æˆ˜è½¦ç©å®¶ä¸åœ¨æ­£ç¡®å¸®æ´¾
 						LuaFnCancelSpecificImpact(sceneId,mems[i],Tankbuf)
 					end
 					x402047_NotifyFailTips( sceneId, mems[i], "#{BHXZ_081103_147}" )
@@ -1471,15 +1471,15 @@ function x402047_OnCopySceneTimer( sceneId, nowTime )
 		SetGuildIntNum( sceneId, Aguildid, x402047_g_A_numIndex, Acount )
 		SetGuildIntNum( sceneId, Bguildid, x402047_g_B_numIndex, Bcount )
 		
-		--Õ½¶·½ø³Ì¹«¸æ²¥·Å¹¦ÄÜ10·Ö£¬20·Ö£¬30·Ö
+		--æˆ˜æ–—è¿›ç¨‹å…¬å‘Šæ’­æ”¾åŠŸèƒ½10åˆ†ï¼Œ20åˆ†ï¼Œ30åˆ†
 		if TickCount == (x402047_g_StartPoint+10*60) or TickCount == (x402047_g_StartPoint+20*60) or TickCount == (x402047_g_StartPoint+30*60) then
 			local Apoint = GetGuildIntNum( sceneId, Aguildid, x402047_g_A_TotalPointIndex )
 			local Bpoint = GetGuildIntNum( sceneId, Bguildid, x402047_g_B_TotalPointIndex )
-			if AGuildName == "" then --Èç¹ûÕâ¸ö°ïÅÉÃ»ÈËÔòÎŞ·¨È¡³ö°ïÅÉÃû³Æ
-				AGuildName = Aguildid.."ºÅ"
+			if AGuildName == "" then --å¦‚æœè¿™ä¸ªå¸®æ´¾æ²¡äººåˆ™æ— æ³•å–å‡ºå¸®æ´¾åç§°
+				AGuildName = Aguildid.."å·"
 			end
-			if BGuildName == "" then --Èç¹ûÕâ¸ö°ïÅÉÃ»ÈËÔòÎŞ·¨È¡³ö°ïÅÉÃû³Æ
-				BGuildName = Bguildid.."ºÅ"
+			if BGuildName == "" then --å¦‚æœè¿™ä¸ªå¸®æ´¾æ²¡äººåˆ™æ— æ³•å–å‡ºå¸®æ´¾åç§°
+				BGuildName = Bguildid.."å·"
 			end
 			local leadmsg = ""
 			if Apoint > Bpoint then
@@ -1487,16 +1487,16 @@ function x402047_OnCopySceneTimer( sceneId, nowTime )
 			else
 				leadmsg = BGuildName.."#{BHXZ_081103_132}"
 			end
-			local msg = "#{BHXZ_081103_133}"..floor((TickCount-x402047_g_StartPoint)/60).."#{BHXZ_081103_134}"..AGuildName.."#{BHXZ_081103_135}"..Acount.."#{BHXZ_081103_136}"..Apoint.."£¡"..BGuildName.."#{BHXZ_081103_135}"..Bcount.."#{BHXZ_081103_136}"..Bpoint.."£¡"..leadmsg
+			local msg = "#{BHXZ_081103_133}"..floor((TickCount-x402047_g_StartPoint)/60).."#{BHXZ_081103_134}"..AGuildName.."#{BHXZ_081103_135}"..Acount.."#{BHXZ_081103_136}"..Apoint.."ï¼"..BGuildName.."#{BHXZ_081103_135}"..Bcount.."#{BHXZ_081103_136}"..Bpoint.."ï¼"..leadmsg
 			for i=0, membercount-1 do
-				if LuaFnIsObjValid( sceneId, mems[i] ) == 1 and LuaFnIsCanDoScriptLogic( sceneId, mems[i] ) == 1 then		-- ²»ÔÚ³¡¾°µÄ²»×ö´Ë²Ù×÷£¬²»Âß¼­µÄ²»²Ù×÷
+				if LuaFnIsObjValid( sceneId, mems[i] ) == 1 and LuaFnIsCanDoScriptLogic( sceneId, mems[i] ) == 1 then		-- ä¸åœ¨åœºæ™¯çš„ä¸åšæ­¤æ“ä½œï¼Œä¸é€»è¾‘çš„ä¸æ“ä½œ
 					x402047_NotifyFailTips( sceneId, mems[i], msg )
 					Msg2Player(sceneId, mems[i], msg , MSG2PLAYER_PARA)
 				end
 			end
 		end
 		
-		--ÅÌ¹ÅÕ½³µ·Å¼¼ÄÜ
+		--ç›˜å¤æˆ˜è½¦æ”¾æŠ€èƒ½
 		for j=1, 4 do
 			if TankInfo[j].type == 5 and modtick10 == 4 then
 				local nNpcNum = GetMonsterCount(sceneId)
@@ -1507,7 +1507,7 @@ function x402047_OnCopySceneTimer( sceneId, nowTime )
 					attckindex = 1
 				end
 				
-				for i=0, nNpcNum-1 do --¹¥»÷¶Ô·½½¨Öş
+				for i=0, nNpcNum-1 do --æ”»å‡»å¯¹æ–¹å»ºç­‘
 					local nNpcId = GetMonsterObjID(sceneId,i)
 					local name = GetName(sceneId, nNpcId)
 					local xx,zz = GetWorldPos(sceneId,nNpcId)
@@ -1519,7 +1519,7 @@ function x402047_OnCopySceneTimer( sceneId, nowTime )
 					end
 				end
 				
-				for i=attckindex, attckindex+1 do --¹¥»÷¶Ô·½Õ½³µ
+				for i=attckindex, attckindex+1 do --æ”»å‡»å¯¹æ–¹æˆ˜è½¦
 					local xx,zz = GetWorldPos(sceneId,TankInfo[i].selfId)
 					
 					if TankInfo[i].type ~= 0 and GetHp(sceneId, TankInfo[i].selfId) > 0 and
@@ -1534,35 +1534,35 @@ function x402047_OnCopySceneTimer( sceneId, nowTime )
 end
 
 --**********************************
--- Õ½³µbuffÈ¡ÏûÊ±ºò»Øµ÷µÄ½Å±¾º¯Êı
+-- æˆ˜è½¦buffå–æ¶ˆæ—¶å€™å›è°ƒçš„è„šæœ¬å‡½æ•°
 --**********************************
 function x402047_OnImpactFadeOut( sceneId, selfId, impactId )
 	
 	local tanktype = impactId-x402047_g_AttrBuff[1]+1
 	
-	--Õâ¸öÒªÏÈĞ´£¬ÒâÍâÇé¿öÏÂÆäËû³¡¾°Ò²¿ÉÒÔÈ¡ÏûÕâ¸öbuf
+	--è¿™ä¸ªè¦å…ˆå†™ï¼Œæ„å¤–æƒ…å†µä¸‹å…¶ä»–åœºæ™¯ä¹Ÿå¯ä»¥å–æ¶ˆè¿™ä¸ªbuf
 	LuaFnCancelSpecificImpact(sceneId,selfId,x402047_g_TankBuff[tanktype])
 	LuaFnCancelSpecificImpact(sceneId,selfId,x402047_g_ImmuneControlBuff)
-	--LuaFnCancelSpecificImpact(sceneId,selfId,impactId) --×¢ÊÍµôÕâ¸ö
+	--LuaFnCancelSpecificImpact(sceneId,selfId,impactId) --æ³¨é‡Šæ‰è¿™ä¸ª
 	
-	--ÊÇ·ñÊÇ¸±±¾
+	--æ˜¯å¦æ˜¯å‰¯æœ¬
 	local sceneType = LuaFnGetSceneType( sceneId )
 	if sceneType ~= 1 then
 		return
 	end
 	
-	--ÊÇ·ñÊÇËùĞèÒªµÄ¸±±¾
+	--æ˜¯å¦æ˜¯æ‰€éœ€è¦çš„å‰¯æœ¬
 	local fubentype = LuaFnGetCopySceneData_Param( sceneId, 0 )
 	if fubentype ~= FUBEN_BANGZHAN then
 		return
 	end
 	
-	--ÊÇ·ñ¿ªÊ¼°ïÕ½»ı·Ö
+	--æ˜¯å¦å¼€å§‹å¸®æˆ˜ç§¯åˆ†
 	if LuaFnGetCopySceneData_Param( sceneId, 7 ) == 0 then
 		return
 	end
 	
-	--¸±±¾³¡¾°¼ÇÂ¼µÄÕ½³µÍæ¼ÒselfId
+	--å‰¯æœ¬åœºæ™¯è®°å½•çš„æˆ˜è½¦ç©å®¶selfId
 	local isAguild = 0
 	if selfId == LuaFnGetCopySceneData_Param( sceneId, x402047_g_A_FirstTankManSelfID ) then
 		isAguild = 1
@@ -1584,27 +1584,27 @@ function x402047_OnImpactFadeOut( sceneId, selfId, impactId )
 		LuaFnSetCopySceneData_Param( sceneId, x402047_g_B_SecondTankManSelfID, 0 )
 		LuaFnSetCopySceneData_Param( sceneId, x402047_g_B_SecondTankBuff, 0 )
 		LuaFnSetCopySceneData_Param( sceneId, x402047_g_B_SecondTankPos, 0 )
-	else --ËÀÍöµÄÍæ¼ÒÔÚÇ°Ãæx402047_OnHumanDieÒÑ¾­Çå³ıÁË¸±±¾ÄÚµÄselfid£¬Òò´Ë²»»á¼ÌĞøÍùÏÂ´´½¨Õ½³µ
+	else --æ­»äº¡çš„ç©å®¶åœ¨å‰é¢x402047_OnHumanDieå·²ç»æ¸…é™¤äº†å‰¯æœ¬å†…çš„selfidï¼Œå› æ­¤ä¸ä¼šç»§ç»­å¾€ä¸‹åˆ›å»ºæˆ˜è½¦
 		return
 	end
 	
-	Msg2Player(sceneId, selfId, "#{BHXZ_081103_137}"..x402047_g_TankName[tanktype].."¡£" , MSG2PLAYER_PARA)
+	Msg2Player(sceneId, selfId, "#{BHXZ_081103_137}"..x402047_g_TankName[tanktype].."ã€‚" , MSG2PLAYER_PARA)
 	
-	local totalguildid = LuaFnGetCopySceneData_Param( sceneId, 6 )	-- È¡µÃ±£´æµÄ°ïÅÉIDºÏÌå
+	local totalguildid = LuaFnGetCopySceneData_Param( sceneId, 6 )	-- å–å¾—ä¿å­˜çš„å¸®æ´¾IDåˆä½“
 	local Aguildid = floor(totalguildid / 10000)
 	local Bguildid = mod(totalguildid, 10000)
 	
-	--ÑªÁ¿ÉÙÓÚ20%Ö±½ÓËã±¬µôÁË£¬²»´´½¨Õ½³µ£¬Õ½³µÍæ¼ÒÏÂÏß¹æÔò»¹°´ÕÕÔ­µØ´´½¨Õ½³µ #43231
+	--è¡€é‡å°‘äº20%ç›´æ¥ç®—çˆ†æ‰äº†ï¼Œä¸åˆ›å»ºæˆ˜è½¦ï¼Œæˆ˜è½¦ç©å®¶ä¸‹çº¿è§„åˆ™è¿˜æŒ‰ç…§åŸåœ°åˆ›å»ºæˆ˜è½¦ #43231
 	if GetHp(sceneId,selfId) >= floor(GetMaxHp(sceneId,selfId)*0.2) then
-		--Ò»¶¨ÒªÕÒµ½Ò»¸ö¿ÉÒÔ·ÅÍæ¼ÒselfIdµÄµØ·½²Å´´½¨Õ½³µÄ£ĞÍ£¬·ÀÖ¹²úÉú³ö³¬¹ı2Á¾µÄÕ½³µ£¬»¹ÓĞÕ½³µÀàĞÍ²»ÄÜÖØ¸´
+		--ä¸€å®šè¦æ‰¾åˆ°ä¸€ä¸ªå¯ä»¥æ”¾ç©å®¶selfIdçš„åœ°æ–¹æ‰åˆ›å»ºæˆ˜è½¦æ¨¡å‹ï¼Œé˜²æ­¢äº§ç”Ÿå‡ºè¶…è¿‡2è¾†çš„æˆ˜è½¦ï¼Œè¿˜æœ‰æˆ˜è½¦ç±»å‹ä¸èƒ½é‡å¤
 		local selfIdindex = CallScriptFunction( 600051, "FindTankManIndex", sceneId, isAguild, tanktype )
 		if selfIdindex > 0 then
 			local PosX,PosZ = GetWorldPos(sceneId,selfId)
 			local monsterID = LuaFnCreateMonster( sceneId, x402047_g_TankID[tanktype], PosX, PosZ, 3, -1, 402302 )
 			LuaFnSendSpecificImpactToUnit( sceneId, monsterID, monsterID, monsterID, x402047_g_ImmuneControlBuff, 0 )
 		end
-	else --ÉèÖÃÀäÈ´Ê±¼ä£¬ÌáÊ¾ĞÅÏ¢£¬Ôö¼Ó»ı·Ö£¬ÉèÖÃ°ïÅÉÉ±ÈËÊıÄ¿
-		--È¡µÃµ±Ç°³¡¾°ÀïµÄÈËÊı
+	else --è®¾ç½®å†·å´æ—¶é—´ï¼Œæç¤ºä¿¡æ¯ï¼Œå¢åŠ ç§¯åˆ†ï¼Œè®¾ç½®å¸®æ´¾æ€äººæ•°ç›®
+		--å–å¾—å½“å‰åœºæ™¯é‡Œçš„äººæ•°
 		local num = LuaFnGetCopyScene_HumanCount( sceneId )
 		local mems = {}
 		
@@ -1618,20 +1618,20 @@ function x402047_OnImpactFadeOut( sceneId, selfId, impactId )
 				x402047_NotifyFailTips(sceneId, mems[i], msg)
 			end
 		end
-		BroadMsgByChatPipe(sceneId, selfId, "@*;SrvMsg;GLD:#{BHXZ_090112_39}", 6); --°ïÅÉÆµµÀ
+		BroadMsgByChatPipe(sceneId, selfId, "@*;SrvMsg;GLD:#{BHXZ_090112_39}", 6); --å¸®æ´¾é¢‘é“
 		
 		if isAguild == 1 then
 			LuaFnSetCopySceneData_Param( sceneId, x402047_g_A_TankColdTime, x402047_g_ColdTime )
 			local tankpoint = GetGuildWarPoint(sceneId, x402047_g_GuildPoint_KillTankPlayer)
 			x402047_AddBGuildPoint(sceneId, 0, Bguildid, tankpoint)
-			--ÉèÖÃ°ïÅÉÉ±ÈËÊıÄ¿
+			--è®¾ç½®å¸®æ´¾æ€äººæ•°ç›®
 			local alreadykillnum = GetGuildIntNum( sceneId, Bguildid, x402047_g_B_KillManNumIndex )
 			SetGuildIntNum( sceneId, Bguildid, x402047_g_B_KillManNumIndex, alreadykillnum+1 )
 		else
 			LuaFnSetCopySceneData_Param( sceneId, x402047_g_B_TankColdTime, x402047_g_ColdTime )
 			local tankpoint = GetGuildWarPoint(sceneId, x402047_g_GuildPoint_KillTankPlayer)
 			x402047_AddAGuildPoint(sceneId, 0, Aguildid, tankpoint)
-			--ÉèÖÃ°ïÅÉÉ±ÈËÊıÄ¿
+			--è®¾ç½®å¸®æ´¾æ€äººæ•°ç›®
 			local alreadykillnum = GetGuildIntNum( sceneId, Aguildid, x402047_g_A_KillManNumIndex )
 			SetGuildIntNum( sceneId, Aguildid, x402047_g_A_KillManNumIndex, alreadykillnum+1 )
 		end
@@ -1640,7 +1640,7 @@ function x402047_OnImpactFadeOut( sceneId, selfId, impactId )
 end
 
 --**********************************
--- ÊÇ·ñÓĞÕ½³µbuff£¬ÓĞ·µ»ØbuffIDÃ»ÓĞ·µ»Ø0
+-- æ˜¯å¦æœ‰æˆ˜è½¦buffï¼Œæœ‰è¿”å›buffIDæ²¡æœ‰è¿”å›0
 --**********************************
 function x402047_HaveTankBuff( sceneId, selfId )
 	for i = 1, getn( x402047_g_AttrBuff ) do
@@ -1652,7 +1652,7 @@ function x402047_HaveTankBuff( sceneId, selfId )
 end
 
 --**********************************
--- ÆÁÄ»ÖĞ¼äĞÅÏ¢ÌáÊ¾
+-- å±å¹•ä¸­é—´ä¿¡æ¯æç¤º
 --**********************************
 function x402047_NotifyFailTips( sceneId, selfId, Tip )
 	BeginEvent( sceneId )
@@ -1662,7 +1662,7 @@ function x402047_NotifyFailTips( sceneId, selfId, Tip )
 end
 
 --**********************************
--- ¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+-- å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x402047_NotifyFailBox( sceneId, selfId, targetId, msg )
 	BeginEvent( sceneId )
@@ -1672,10 +1672,10 @@ function x402047_NotifyFailBox( sceneId, selfId, targetId, msg )
 end
 
 --**********************************
--- ÊÇ·ñ±¾°ï½øÈë¸±±¾µÄÈËÊı³¬¹ıÉÏÏŞ x402047_g_MaxMembers ÈË
+-- æ˜¯å¦æœ¬å¸®è¿›å…¥å‰¯æœ¬çš„äººæ•°è¶…è¿‡ä¸Šé™ x402047_g_MaxMembers äºº
 --**********************************
 function x402047_IsGuildFull( sceneId, guildid )
-	local totalguildid = LuaFnGetCopySceneData_Param( sceneId, 6 )					-- È¡µÃ±£´æµÄ°ïÅÉIDºÏÌå
+	local totalguildid = LuaFnGetCopySceneData_Param( sceneId, 6 )					-- å–å¾—ä¿å­˜çš„å¸®æ´¾IDåˆä½“
 	local Aguildid = floor(totalguildid / 10000)
 	local Bguildid = mod(totalguildid, 10000)
 	
@@ -1711,17 +1711,17 @@ function x402047_IsGuildFull( sceneId, guildid )
 		else
 			return 0
 		end
-	else --Ó¦¸Ã²»»á×ßµ½ÕâÀïÀ´£¬Õâ¸öº¯Êıµ÷ÓÃºóÃæµÄÂß¼­²¿·ÖÓĞ×¼È·µÄÊÇ·ñÔÚ°ïÅÉÖĞµÄÅĞ¶Ï£¬Òò´ËÕâÀï·µ»Ø0±íÊ¾Í¨¹ı
+	else --åº”è¯¥ä¸ä¼šèµ°åˆ°è¿™é‡Œæ¥ï¼Œè¿™ä¸ªå‡½æ•°è°ƒç”¨åé¢çš„é€»è¾‘éƒ¨åˆ†æœ‰å‡†ç¡®çš„æ˜¯å¦åœ¨å¸®æ´¾ä¸­çš„åˆ¤æ–­ï¼Œå› æ­¤è¿™é‡Œè¿”å›0è¡¨ç¤ºé€šè¿‡
 		return 0
 	end
 	
 end
 
 --**********************************
---ÊÇ·ñÊÇA°ïÍæ¼Ò£¬NPC obj½Å±¾µ÷ÓÃµ½ÕâÀï
+--æ˜¯å¦æ˜¯Aå¸®ç©å®¶ï¼ŒNPC objè„šæœ¬è°ƒç”¨åˆ°è¿™é‡Œ
 --**********************************
 function x402047_IsCommonAGuild( sceneId, selfId )
-	local totalguildid = LuaFnGetCopySceneData_Param( sceneId, 6 )					-- È¡µÃ±£´æµÄ°ïÅÉIDºÏÌå
+	local totalguildid = LuaFnGetCopySceneData_Param( sceneId, 6 )					-- å–å¾—ä¿å­˜çš„å¸®æ´¾IDåˆä½“
 	local Aguildid = floor(totalguildid / 10000)
 	local Bguildid = mod(totalguildid, 10000)
 	local humanguildid = GetHumanGuildID(sceneId, selfId)
@@ -1734,10 +1734,10 @@ function x402047_IsCommonAGuild( sceneId, selfId )
 end
 
 --**********************************
---ÊÇ·ñÊÇB°ïÍæ¼Ò£¬NPC obj½Å±¾µ÷ÓÃµ½ÕâÀï
+--æ˜¯å¦æ˜¯Bå¸®ç©å®¶ï¼ŒNPC objè„šæœ¬è°ƒç”¨åˆ°è¿™é‡Œ
 --**********************************
 function x402047_IsCommonBGuild( sceneId, selfId )
-	local totalguildid = LuaFnGetCopySceneData_Param( sceneId, 6 )					-- È¡µÃ±£´æµÄ°ïÅÉIDºÏÌå
+	local totalguildid = LuaFnGetCopySceneData_Param( sceneId, 6 )					-- å–å¾—ä¿å­˜çš„å¸®æ´¾IDåˆä½“
 	local Aguildid = floor(totalguildid / 10000)
 	local Bguildid = mod(totalguildid, 10000)
 	local humanguildid = GetHumanGuildID(sceneId, selfId)
@@ -1750,33 +1750,33 @@ function x402047_IsCommonBGuild( sceneId, selfId )
 end
 
 --**********************************
---Ôö¼ÓA°ï»ı·Ö²¢Í¨ÖªA°ïÍæ¼Ò£¬É±ÈË¡¢½¨Öş¡¢´óÆì¡¢ÁéÊ¯NPC½Å±¾µ÷ÓÃµ½ÕâÀï
+--å¢åŠ Aå¸®ç§¯åˆ†å¹¶é€šçŸ¥Aå¸®ç©å®¶ï¼Œæ€äººã€å»ºç­‘ã€å¤§æ——ã€çµçŸ³NPCè„šæœ¬è°ƒç”¨åˆ°è¿™é‡Œ
 --**********************************
 function x402047_AddAGuildPoint( sceneId, selfId, guildid, addpoint )
 	local point = GetGuildIntNum( sceneId, guildid, x402047_g_A_TotalPointIndex )
 	point = point + addpoint
-	x402047_NotifyPoint( sceneId, guildid, point ) --Í¨ÖªÍæ¼Ò°ïÅÉ
-	SetGuildIntNum( sceneId, guildid, x402047_g_A_TotalPointIndex, point )--±£´æ»ı·Ö
-	if selfId > 0 then --É±ÈËµÄÊÇ¶Ô·½NPCÔòÕâÀïÊÇ0£¬ÇĞ»»Õ½³µÊôĞÔµÄÊ±ºòÒ²ÊÇ0£¬ÑªÁ¿20%ÒÔÏÂÀë¿ªÕ½³µÒ²ÊÇ0
+	x402047_NotifyPoint( sceneId, guildid, point ) --é€šçŸ¥ç©å®¶å¸®æ´¾
+	SetGuildIntNum( sceneId, guildid, x402047_g_A_TotalPointIndex, point )--ä¿å­˜ç§¯åˆ†
+	if selfId > 0 then --æ€äººçš„æ˜¯å¯¹æ–¹NPCåˆ™è¿™é‡Œæ˜¯0ï¼Œåˆ‡æ¢æˆ˜è½¦å±æ€§çš„æ—¶å€™ä¹Ÿæ˜¯0ï¼Œè¡€é‡20%ä»¥ä¸‹ç¦»å¼€æˆ˜è½¦ä¹Ÿæ˜¯0
 		x402047_AddHumanGuildArrayInt( sceneId, selfId, x402047_g_Human_TotalPointIndex, addpoint )
 	end
 end
 
 --**********************************
---Ôö¼ÓB°ï»ı·Ö²¢Í¨ÖªB°ïÍæ¼Ò£¬É±ÈË¡¢½¨Öş¡¢´óÆì¡¢ÁéÊ¯NPC½Å±¾µ÷ÓÃµ½ÕâÀï
+--å¢åŠ Bå¸®ç§¯åˆ†å¹¶é€šçŸ¥Bå¸®ç©å®¶ï¼Œæ€äººã€å»ºç­‘ã€å¤§æ——ã€çµçŸ³NPCè„šæœ¬è°ƒç”¨åˆ°è¿™é‡Œ
 --**********************************
 function x402047_AddBGuildPoint( sceneId, selfId, guildid, addpoint )
 	local point = GetGuildIntNum( sceneId, guildid, x402047_g_B_TotalPointIndex )
 	point = point + addpoint
-	x402047_NotifyPoint( sceneId, guildid, point ) --Í¨ÖªÍæ¼Ò°ïÅÉ
-	SetGuildIntNum( sceneId, guildid, x402047_g_B_TotalPointIndex, point )--±£´æ»ı·Ö
-	if selfId > 0 then --É±ÈËµÄÊÇ¶Ô·½NPCÔòÕâÀïÊÇ0£¬ÇĞ»»Õ½³µÊôĞÔµÄÊ±ºòÒ²ÊÇ0£¬ÑªÁ¿20%ÒÔÏÂÀë¿ªÕ½³µÒ²ÊÇ0
+	x402047_NotifyPoint( sceneId, guildid, point ) --é€šçŸ¥ç©å®¶å¸®æ´¾
+	SetGuildIntNum( sceneId, guildid, x402047_g_B_TotalPointIndex, point )--ä¿å­˜ç§¯åˆ†
+	if selfId > 0 then --æ€äººçš„æ˜¯å¯¹æ–¹NPCåˆ™è¿™é‡Œæ˜¯0ï¼Œåˆ‡æ¢æˆ˜è½¦å±æ€§çš„æ—¶å€™ä¹Ÿæ˜¯0ï¼Œè¡€é‡20%ä»¥ä¸‹ç¦»å¼€æˆ˜è½¦ä¹Ÿæ˜¯0
 		x402047_AddHumanGuildArrayInt( sceneId, selfId, x402047_g_Human_TotalPointIndex, addpoint )
 	end
 end
 
 --**********************************
---Ôö¼Ó¸öÈË»ı·ÖÊı¾İ
+--å¢åŠ ä¸ªäººç§¯åˆ†æ•°æ®
 --**********************************
 function x402047_AddHumanGuildArrayInt( sceneId, selfId, ArrayIntIndex, addvalue )
 	local value = GetHumanGuildInt( sceneId, selfId, ArrayIntIndex )
@@ -1785,7 +1785,7 @@ function x402047_AddHumanGuildArrayInt( sceneId, selfId, ArrayIntIndex, addvalue
 end
 
 --**********************************
---Ôö¼Ó¸öÈËÈÙÓşÖµ
+--å¢åŠ ä¸ªäººè£èª‰å€¼
 --**********************************
 function x402047_AddHonour( sceneId, selfId, addHonour )
 	if addHonour > 0 then
@@ -1796,7 +1796,7 @@ function x402047_AddHonour( sceneId, selfId, addHonour )
 end
 
 --**********************************
--- Çå³ı³¡¾°ÄÚµÄXX¹Ö
+-- æ¸…é™¤åœºæ™¯å†…çš„XXæ€ª
 --**********************************
 function x402047_ClearMonsterByName(sceneId, szName)
 	local nMonsterNum = GetMonsterCount(sceneId)
@@ -1809,11 +1809,11 @@ function x402047_ClearMonsterByName(sceneId, szName)
 end
 
 --**********************************
---¸ù¾İÕ½³µÀàĞÍÒÔ¼°¸öÈËÊôĞÔ·µ»ØÒ»¸öÒª¼Ó¸ø¶Ô·½µÄ¹¥»÷buff
+--æ ¹æ®æˆ˜è½¦ç±»å‹ä»¥åŠä¸ªäººå±æ€§è¿”å›ä¸€ä¸ªè¦åŠ ç»™å¯¹æ–¹çš„æ”»å‡»buff
 --**********************************
 function x402047_AttackBuffByHuman( sceneId, selfId, TankType )
 	
-	if TankType == 1 then --ÇàÁúÕ½³µ
+	if TankType == 1 then --é’é¾™æˆ˜è½¦
 		local PhysicsAttack = GetHumanAttr(sceneId, selfId, 1)
 		local nMax = getn( x402047_g_PhysicsAttack_Buff )
 		
@@ -1827,7 +1827,7 @@ function x402047_AttackBuffByHuman( sceneId, selfId, TankType )
 			return x402047_g_PhysicsAttack_Buff[nMax].buff
 		end
 		
-	elseif TankType == 2 then --°×»¢Õ½³µ
+	elseif TankType == 2 then --ç™½è™æˆ˜è½¦
 		local MagicAttack = GetHumanAttr(sceneId, selfId, 2)
 		local nMax = getn( x402047_g_MagicAttack_Buff )
 		
@@ -1841,7 +1841,7 @@ function x402047_AttackBuffByHuman( sceneId, selfId, TankType )
 			return x402047_g_MagicAttack_Buff[nMax].buff
 		end
 		
-	elseif TankType == 3 then --ÖìÈ¸Õ½³µ
+	elseif TankType == 3 then --æœ±é›€æˆ˜è½¦
 		local cold = GetHumanAttr(sceneId, selfId, 3)
 		local fire = GetHumanAttr(sceneId, selfId, 4)
 		local nMax = getn( x402047_g_ColdFire_Buff )
@@ -1856,7 +1856,7 @@ function x402047_AttackBuffByHuman( sceneId, selfId, TankType )
 			return x402047_g_ColdFire_Buff[nMax].buff
 		end
 		
-	elseif TankType == 4 then --ĞşÎäÕ½³µ
+	elseif TankType == 4 then --ç„æ­¦æˆ˜è½¦
 		local light = GetHumanAttr(sceneId, selfId, 5)
 		local poison = GetHumanAttr(sceneId, selfId, 6)
 		local nMax = getn( x402047_g_LightPoison_Buff )

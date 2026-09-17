@@ -1,8 +1,8 @@
---º®Óñ´²
---NPC½Å±¾....
+--å¯’ç‰åºŠ
+--NPCè„šæœ¬....
 
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x402106_g_ScriptId = 402106
 
 
@@ -24,7 +24,7 @@ x402106_g_PosTbl = {
 }
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x402106_OnDefaultEvent( sceneId, selfId,targetId )
 
@@ -33,25 +33,25 @@ function x402106_OnDefaultEvent( sceneId, selfId,targetId )
 		if sceneId == 1 then
 		
 			AddText(sceneId,"#{HANYUBED_20071221_01}")
-			AddNumText(sceneId,x402106_g_ScriptId,"½øÈëº®Óñ¹È",9,1)
+			AddNumText(sceneId,x402106_g_ScriptId,"è¿›å…¥å¯’ç‰è°·",9,1)
 
 		elseif sceneId == 194 then
 
 			AddText(sceneId,"#{HANYUBED_20071221_02}")
-			AddNumText(sceneId,x402106_g_ScriptId,"»Øµ½ËÕÖİ",9,2)
+			AddNumText(sceneId,x402106_g_ScriptId,"å›åˆ°è‹å·",9,2)
 
 		end
 
-		AddNumText(sceneId,x402106_g_ScriptId,"¹ºÂò¹ÅÄ¹ĞĞ¹¦Òª¾÷",6,3)
-		AddNumText(sceneId,x402106_g_ScriptId,"ÔÚº®Óñ¹ÈÖĞĞŞĞĞµÄËÄÏî×¢Òâ",11,4)
-		AddNumText(sceneId,x402106_g_ScriptId,"·òÆŞĞĞ¹¦Òª¾÷Ê¹ÓÃËµÃ÷",11,100)
+		AddNumText(sceneId,x402106_g_ScriptId,"è´­ä¹°å¤å¢“è¡ŒåŠŸè¦è¯€",6,3)
+		AddNumText(sceneId,x402106_g_ScriptId,"åœ¨å¯’ç‰è°·ä¸­ä¿®è¡Œçš„å››é¡¹æ³¨æ„",11,4)
+		AddNumText(sceneId,x402106_g_ScriptId,"å¤«å¦»è¡ŒåŠŸè¦è¯€ä½¿ç”¨è¯´æ˜",11,100)
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x402106_OnEventRequest( sceneId, selfId, targetId, eventId )
 
@@ -59,13 +59,13 @@ function x402106_OnEventRequest( sceneId, selfId, targetId, eventId )
 
 	if NumText == 1 then
 
-		--´«ËÍµ½º®Óñ¹È....
+		--ä¼ é€åˆ°å¯’ç‰è°·....
 		local idx = random( getn(x402106_g_PosTbl) )
 		CallScriptFunction((400900), "TransferFunc",sceneId, selfId, 194, x402106_g_PosTbl[idx].x, x402106_g_PosTbl[idx].y)
 
 	elseif NumText == 2 then
 
-		--´«ËÍµ½ËÕÖİ....
+		--ä¼ é€åˆ°è‹å·....
 		CallScriptFunction((400900), "TransferFunc",sceneId, selfId, 1,178,132)
 
 	elseif NumText == 3 then
@@ -86,8 +86,8 @@ function x402106_OnEventRequest( sceneId, selfId, targetId, eventId )
 
 		BeginEvent(sceneId)
 			AddText(sceneId,"#{HANYUBED_20071221_04}#{_MONEY"..NeedMoney.."}#{HANYUBED_20071221_05}")
-			AddNumText(sceneId,x402106_g_ScriptId,"È·¶¨",8,5)
-			AddNumText(sceneId,x402106_g_ScriptId,"È¡Ïû",8,6)
+			AddNumText(sceneId,x402106_g_ScriptId,"ç¡®å®š",8,5)
+			AddNumText(sceneId,x402106_g_ScriptId,"å–æ¶ˆ",8,6)
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 
@@ -118,7 +118,7 @@ function x402106_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---ÂòÊé
+--ä¹°ä¹¦
 --**********************************
 function x402106_BuyBook( sceneId, selfId, targetId )
 
@@ -127,7 +127,7 @@ function x402106_BuyBook( sceneId, selfId, targetId )
 		return
 	end
 
-	--¼ì²â±³°üÊÇ·ñÓĞµØ·½....
+	--æ£€æµ‹èƒŒåŒ…æ˜¯å¦æœ‰åœ°æ–¹....
 	if LuaFnGetPropertyBagSpace( sceneId, selfId ) < 1 then
 		BeginEvent(sceneId)
 			AddText(sceneId,"#{HANYUBED_20071221_07}")
@@ -136,7 +136,7 @@ function x402106_BuyBook( sceneId, selfId, targetId )
 		return
 	end
 
-	--¼ì²â½ğÇ®ÊÇ·ñ¹»....
+	--æ£€æµ‹é‡‘é’±æ˜¯å¦å¤Ÿ....
 	local NeedMoney = x402106_CalcBookPrice( sceneId, selfId )
 	if NeedMoney <= 0 then
 		return
@@ -151,15 +151,15 @@ function x402106_BuyBook( sceneId, selfId, targetId )
 		return
 	end
 
-	--¸øÊé....
+	--ç»™ä¹¦....
 	local ret = TryRecieveItem( sceneId, selfId, 30700200, QUALITY_MUST_BE_CHANGE )
 	if ret ~= -1 then
 		LuaFnCostMoney(sceneId, selfId, NeedMoney)
 	end
 
-	--ÌáÊ¾....
-	local str1 = "Äã¸¶³öÁË#{_MONEY"..NeedMoney.."}¡£"
-	local str2 = "Äã¹ºÂòÁËÒ»¸ö#{_ITEM"..(30700200).."}¡£"
+	--æç¤º....
+	local str1 = "ä½ ä»˜å‡ºäº†#{_MONEY"..NeedMoney.."}ã€‚"
+	local str2 = "ä½ è´­ä¹°äº†ä¸€ä¸ª#{_ITEM"..(30700200).."}ã€‚"
 	BeginEvent( sceneId )
 		AddText( sceneId, str1 )
 	EndEvent( sceneId )
@@ -178,14 +178,14 @@ function x402106_BuyBook( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ÆËãÊéÇ®
+--è®¡ç®—ä¹¦é’±
 --**********************************
 function x402106_CalcBookPrice( sceneId, selfId )
 
 	local NeedMoney = 0
 	local PlayerLevel = GetLevel( sceneId, selfId )
 
-	--¸ÄÓÃĞÂ¹«Ê½....£¨ INT£¨LV/10£©-2 £© / 2
+	--æ”¹ç”¨æ–°å…¬å¼....ï¼ˆ INTï¼ˆLV/10ï¼‰-2 ï¼‰ / 2
 	NeedMoney = floor( PlayerLevel / 10 ) - 2
 	NeedMoney = NeedMoney * 5000*2
 
@@ -194,12 +194,12 @@ function x402106_CalcBookPrice( sceneId, selfId )
 
 --		NeedMoney = 0
 
---	elseif PlayerLevel < 90 then	--INT£¨LV/10£©-2
+--	elseif PlayerLevel < 90 then	--INTï¼ˆLV/10ï¼‰-2
 
 --		NeedMoney = floor( PlayerLevel / 10 ) - 2
 --		NeedMoney = NeedMoney * 10000
 
---	else	--INT£¨Ã¿´Î¾­Ñé*60 /£¨81*µÈ¼¶+70000£©£©
+--	else	--INTï¼ˆæ¯æ¬¡ç»éªŒ*60 /ï¼ˆ81*ç­‰çº§+70000ï¼‰ï¼‰
 
 --		local PreExp = CallScriptFunction(808072, "GetPreExpOfThisLevel", sceneId, PlayerLevel)
 --		NeedMoney = (PreExp * 60) / ( 81 * PlayerLevel + 70000 )

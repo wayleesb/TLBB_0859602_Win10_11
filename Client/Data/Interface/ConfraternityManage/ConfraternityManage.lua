@@ -3,35 +3,35 @@ local g_TabSel = -1;
 local g_ListToMember;
 local g_MemberSel = {};
 
-local GUILD_REQUIRES_INFO = 1;	--È«²¿ÉêÇë³ÉÔ±ĞÅÏ¢
-local GUILD_MEMBERS_INFO = 2;		--È«²¿³ÉÔ±ĞÅÏ¢
+local GUILD_REQUIRES_INFO = 1;	--å…¨éƒ¨ç”³è¯·æˆå‘˜ä¿¡æ¯
+local GUILD_MEMBERS_INFO = 2;		--å…¨éƒ¨æˆå‘˜ä¿¡æ¯
 local GUILD_MANAGE_TAB_TEXT = {};
 local g_ShowMsgFlag = false;
 
 
 local g_positionInfo = {
-	"#G´ıÅú×¼¡¡",
-	"°ïÖÚ¡¡¡¡",
-	"¾«Ó¢¡¡¡¡",
-	"ÉÌÈË¡¡¡¡",
-	"ºë»¯Ê¹¡¡",
-	"¹¤ÎñÊ¹¡¡",
-	"ÄÚÎñÊ¹¡¡",
-	"¸±°ïÖ÷¡¡",
-	"°ïÖ÷¡¡¡¡",
+	"#Gå¾…æ‰¹å‡†ã€€",
+	"å¸®ä¼—ã€€ã€€",
+	"ç²¾è‹±ã€€ã€€",
+	"å•†äººã€€ã€€",
+	"å¼˜åŒ–ä½¿ã€€",
+	"å·¥åŠ¡ä½¿ã€€",
+	"å†…åŠ¡ä½¿ã€€",
+	"å‰¯å¸®ä¸»ã€€",
+	"å¸®ä¸»ã€€ã€€",
 };
 
 local g_menpaiInfo = {
-	"ÉÙÁÖ",
-	"Ã÷½Ì",
-	"Ø¤°ï",
-	"Îäµ±",
-	"¶ëáÒ",
-	"ĞÇËŞ",
-	"ÌìÁú",
-	"ÌìÉ½",
-	"åĞÒ£",
-	"ÎŞÃÅÅÉ",
+	"å°‘æ—",
+	"æ˜æ•™",
+	"ä¸å¸®",
+	"æ­¦å½“",
+	"å³¨åµ‹",
+	"æ˜Ÿå®¿",
+	"å¤©é¾™",
+	"å¤©å±±",
+	"é€é¥",
+	"æ— é—¨æ´¾",
 };
 
 
@@ -50,8 +50,8 @@ function ConfraternityManage_OnLoad()
 	g_MemberSel[GUILD_MEMBERS_INFO] = -1;
 	
 	GUILD_MANAGE_TAB_TEXT = {
-		"»áÔ±",
-		"Ô¤±¸",
+		"ä¼šå‘˜",
+		"é¢„å¤‡",
 	};
 	
 end
@@ -63,16 +63,16 @@ function ConfraternityManage_OnEvent(event)
 		if(tonumber(arg0) == 31 and this:IsVisible()) then
 			Guild_Manage_Closed();
 		elseif(tonumber(arg0) == 30) then
-			Guild:AskGuildMembersInfo();	--±ØĞëÃ¿´Î´ò¿ª½çÃæµÄÊ±ºò¶¼Ïò·şÎñÆ÷ÒªÊı¾İ
+			Guild:AskGuildMembersInfo();	--å¿…é¡»æ¯æ¬¡æ‰“å¼€ç•Œé¢çš„æ—¶å€™éƒ½å‘æœåŠ¡å™¨è¦æ•°æ®
 		end
 	elseif( event == "GUILD_SHOW_MEMBERINFO" ) then
-		--×¼±¸Êı¾İ
+		--å‡†å¤‡æ•°æ®
 		Guild:PrepareMembersInfomation();
 		Guild_Manage_SelectTab(GUILD_MEMBERS_INFO);
 		this:Hide();
 		this:Show();
 	elseif( event == "GUILD_UPDATE_MEMBERINFO" and this:IsVisible()) then
-		--×¼±¸Êı¾İ
+		--å‡†å¤‡æ•°æ®
 		Guild:PrepareMembersInfomation();
 		Guild_Manage_SelectTab(g_TabSel);
 	elseif( event == "GUILD_FORCE_CLOSE" ) then
@@ -83,15 +83,15 @@ function ConfraternityManage_OnEvent(event)
 		if(this:IsVisible()) then
 			Guild_Manage_Closed();
 		else
-			Guild:AskGuildMembersInfo();	--±ØĞëÃ¿´Î´ò¿ª½çÃæµÄÊ±ºò¶¼Ïò·şÎñÆ÷ÒªÊı¾İ
+			Guild:AskGuildMembersInfo();	--å¿…é¡»æ¯æ¬¡æ‰“å¼€ç•Œé¢çš„æ—¶å€™éƒ½å‘æœåŠ¡å™¨è¦æ•°æ®
 		end
-	elseif( event == "SHOW_GUILDWAR_ANIMI" ) then	--°ïÕ½¸Ä±ä¡°°ï»áĞûÕ½¡±ÎÄ×ÖÑÕÉ« Ê¹ÓÃ²¥·Å°ïÕ½¶¯»­µÄÊÂ¼ş£¬Èç¹ûÒÔºóÕâ¸öÏÔÊ¾ºÍ°ïÕ½¶¯»­²»Í¬²½£¬ÄÇÃ´ĞèÒª½¨Á¢ĞÂµÄÊÂ¼ş¡£
+	elseif( event == "SHOW_GUILDWAR_ANIMI" ) then	--å¸®æˆ˜æ”¹å˜â€œå¸®ä¼šå®£æˆ˜â€æ–‡å­—é¢œè‰² ä½¿ç”¨æ’­æ”¾å¸®æˆ˜åŠ¨ç”»çš„äº‹ä»¶ï¼Œå¦‚æœä»¥åè¿™ä¸ªæ˜¾ç¤ºå’Œå¸®æˆ˜åŠ¨ç”»ä¸åŒæ­¥ï¼Œé‚£ä¹ˆéœ€è¦å»ºç«‹æ–°çš„äº‹ä»¶ã€‚
        local type = arg0;
 		if(arg0=="show") then
-                ConfraternityManage_7:SetText("#g0071BF°ï»áĞûÕ½");
-                ConfraternityManage_7:SetToolTip("ÄãµÄ°ï»áÕıÔÚ°ïÕ½");
+                ConfraternityManage_7:SetText("#g0071BFå¸®ä¼šå®£æˆ˜");
+                ConfraternityManage_7:SetToolTip("ä½ çš„å¸®ä¼šæ­£åœ¨å¸®æˆ˜");
         else
-                ConfraternityManage_7:SetText("°ï»áĞûÕ½");
+                ConfraternityManage_7:SetText("å¸®ä¼šå®£æˆ˜");
                 ConfraternityManage_7:SetToolTip("");        
         end
 	end
@@ -169,18 +169,18 @@ function Guild_Manage_SelectTab( idx )
 	Guild:CloseKickGuildBox();
 	Guild_Manage_SetTabColor(idx);
 	
-	--Çå¿Õ½çÃæÏÔÊ¾
+	--æ¸…ç©ºç•Œé¢æ˜¾ç¤º
 	Guild_Manage_Clear();
-	--¿ªÊ¼¸üĞÂ½çÃæ
+	--å¼€å§‹æ›´æ–°ç•Œé¢
 	if( Guild:GetMembersNum(5) == 0 ) then
-		g_TabSel = 2;		--Ö®ËùÒÔÒªÕâÑù×öÊÇÒòÎª²ß»®ÒªÇóTab2²»ÄÜÏÔÊ¾¸ßÁÁ×´Ì¬
+		g_TabSel = 2;		--ä¹‹æ‰€ä»¥è¦è¿™æ ·åšæ˜¯å› ä¸ºç­–åˆ’è¦æ±‚Tab2ä¸èƒ½æ˜¾ç¤ºé«˜äº®çŠ¶æ€
 	end
 	g_TabSel = idx;
 	Guild_Manage_BtnSet();
 	Guild_Manage_Update()
 end
 
---ÉÁ¶¯µÚ¶ş¸öTab,ÏÖÔÚÃ»ÓÃÁË
+--é—ªåŠ¨ç¬¬äºŒä¸ªTab,ç°åœ¨æ²¡ç”¨äº†
 function Guild_PlayTab2()
 	if( this: IsVisible() and Guild:GetMembersNum(5) > 0 ) then
 		if( ConfraternityManage_Tab2 : GetCheck() == 0 ) then
@@ -190,14 +190,14 @@ function Guild_PlayTab2()
 		end
 	else
 		KillTimer("Guild_PlayTab2()");
-		--»Ö¸´×´Ì¬
+		--æ¢å¤çŠ¶æ€
 		ConfraternityManage_Tab2 : SetCheck(0);	
 		
 	end
 end
 
 function Guild_Manage_BtnSet()
-	--°´Å¥ÏÔÊ¾¿ØÖÆ
+	--æŒ‰é’®æ˜¾ç¤ºæ§åˆ¶
 	if(g_TabSel == GUILD_MEMBERS_INFO) then
 		g_MembersCtl.btn[1]:Show();
 		g_MembersCtl.btn[2]:Show();
@@ -207,16 +207,16 @@ function Guild_Manage_BtnSet()
 		g_MembersCtl.btn[7]:Show();
 		g_MembersCtl.btn[8]:Show();		--add by xindefeng
 		
-		g_MembersCtl.btn[1]:SetText("ÈÎÃü");
-		g_MembersCtl.btn[2]:SetText("Öğ³ö");
-		g_MembersCtl.btn[3]:SetText("ìøÈÃ");
-		g_MembersCtl.btn[4]:SetText("½âÉ¢");
-		g_MembersCtl.btn[5]:SetText("ĞŞ¸Ä×ÚÖ¼");
-		g_MembersCtl.btn[6]:SetText("Àë¿ª");
+		g_MembersCtl.btn[1]:SetText("ä»»å‘½");
+		g_MembersCtl.btn[2]:SetText("é€å‡º");
+		g_MembersCtl.btn[3]:SetText("ç¦…è®©");
+		g_MembersCtl.btn[4]:SetText("è§£æ•£");
+		g_MembersCtl.btn[5]:SetText("ä¿®æ”¹å®—æ—¨");
+		g_MembersCtl.btn[6]:SetText("ç¦»å¼€");
 	elseif(g_TabSel == GUILD_REQUIRES_INFO) then
-		if( Guild:GetMembersNum(5) == 0 ) then --Èç¹ûÃ»ÓĞÉêÇë¼ÓÈëÕß
+		if( Guild:GetMembersNum(5) == 0 ) then --å¦‚æœæ²¡æœ‰ç”³è¯·åŠ å…¥è€…
 			if g_ShowMsgFlag == false then
-				PushDebugMessage("±¾°ïµ±Ç°Ã»ÓĞÔ¤±¸»áÔ±");
+				PushDebugMessage("æœ¬å¸®å½“å‰æ²¡æœ‰é¢„å¤‡ä¼šå‘˜");
 			else
 				g_ShowMsgFlag = false;
 			end
@@ -238,40 +238,40 @@ function Guild_Manage_BtnSet()
 		g_MembersCtl.btn[7]:Hide();
 		g_MembersCtl.btn[8]:Hide();	--add by xindefeng
 		
-		g_MembersCtl.btn[1]:SetText("½ÓÊÕ");
-		g_MembersCtl.btn[2]:SetText("¾Ü¾ø");
-		g_MembersCtl.btn[6]:SetText("Àë¿ª");
+		g_MembersCtl.btn[1]:SetText("æ¥æ”¶");
+		g_MembersCtl.btn[2]:SetText("æ‹’ç»");
+		g_MembersCtl.btn[6]:SetText("ç¦»å¼€");
 	end
 	
-	--°´Å¥EnableºÍDisable¿ØÖÆ
-	local szPower = Guild:GetMyGuildPower(); --"1111111111" Õâ10¸öÎ»ÖÃ´ú±í10ÖÖÈ¨Á¦
+	--æŒ‰é’®Enableå’ŒDisableæ§åˆ¶
+	local szPower = Guild:GetMyGuildPower(); --"1111111111" è¿™10ä¸ªä½ç½®ä»£è¡¨10ç§æƒåŠ›
 	if(g_TabSel == GUILD_MEMBERS_INFO) then
-		--Ö°Îñµ÷¶¯È¨1
+		--èŒåŠ¡è°ƒåŠ¨æƒ1
 		Guild_Manage_BtnEnableDisable(szPower,1,1);
-		--È¨ÏŞµ÷ÕûÈ¨2
-		--¿ª³ı°ïÖÚÈ¨4
+		--æƒé™è°ƒæ•´æƒ2
+		--å¼€é™¤å¸®ä¼—æƒ4
 		Guild_Manage_BtnEnableDisable(szPower,4,2);
-		--ìøÈÃÈ¨5
+		--ç¦…è®©æƒ5
 		Guild_Manage_BtnEnableDisable(szPower,5,3);
-		--Ö§È¡°ï×ÊÈ¨6
-		--´æÈë½ğ¶îÈ¨7
-		--Àë¿ª°ï»áÈ¨8
-		--½âÉ¢°ï»áÈ¨9
+		--æ”¯å–å¸®èµ„æƒ6
+		--å­˜å…¥é‡‘é¢æƒ7
+		--ç¦»å¼€å¸®ä¼šæƒ8
+		--è§£æ•£å¸®ä¼šæƒ9
 		Guild_Manage_BtnEnableDisable(szPower,9,4);
-		--ĞŞ¸Ä°ï»á×ÚÖ¼È¨10
+		--ä¿®æ”¹å¸®ä¼šå®—æ—¨æƒ10
 		Guild_Manage_BtnEnableDisable(szPower,10,5);
 	elseif(g_TabSel == GUILD_REQUIRES_INFO) then
-		--½ÓÊÕ°ïÖÚÈ¨3
+		--æ¥æ”¶å¸®ä¼—æƒ3
 		Guild_Manage_BtnEnableDisable(szPower,3,1);
 		Guild_Manage_BtnEnableDisable(szPower,3,2);
 	end
 	
-	if( Guild:GetMembersNum(5) == 0 ) then --Èç¹ûÃ»ÓĞÉêÇë¼ÓÈëÕß
-		ConfraternityManage_Tab2_Mask : SetToolTip("±¾°ïµ±Ç°Ã»ÓĞÔ¤±¸»áÔ±");
+	if( Guild:GetMembersNum(5) == 0 ) then --å¦‚æœæ²¡æœ‰ç”³è¯·åŠ å…¥è€…
+		ConfraternityManage_Tab2_Mask : SetToolTip("æœ¬å¸®å½“å‰æ²¡æœ‰é¢„å¤‡ä¼šå‘˜");
 		ConfraternityManage_Tab2_Mask : Enable();
 		ConfraternityManage_Tab2:Disable();
 	else
-		ConfraternityManage_Tab2 : SetToolTip("ÏÖÓĞÔ¤±¸»áÔ±ÉêÇë¼ÓÈë±¾°ï");
+		ConfraternityManage_Tab2 : SetToolTip("ç°æœ‰é¢„å¤‡ä¼šå‘˜ç”³è¯·åŠ å…¥æœ¬å¸®");
 		ConfraternityManage_Tab2_Mask : Disable();
 		ConfraternityManage_Tab2:Enable();
 		ConfraternityManage_Tab2 : FlashMe(1);
@@ -299,20 +299,20 @@ function Guild_Manage_Update()
 		g_MembersCtl[GUILD_MEMBERS_INFO]:SetCheck(0);
 	end
 	
-	--×Ô¼º°ï»áµÄÃû³Æ
+	--è‡ªå·±å¸®ä¼šçš„åç§°
 	--local szMsg = Guild:GetMyGuildInfo("Name");
-	--g_MembersCtl.header:SetText(szMsg .. "°ï»á»áÔ±¹ÜÀí");
-	--20060710°´²ß»®ÒªÇó£¬Ö»ÏÔÊ¾»áÔ±¹ÜÀí
-	g_MembersCtl.header:SetText("#gFF0FA0»áÔ±¹ÜÀí");
+	--g_MembersCtl.header:SetText(szMsg .. "å¸®ä¼šä¼šå‘˜ç®¡ç†");
+	--20060710æŒ‰ç­–åˆ’è¦æ±‚ï¼Œåªæ˜¾ç¤ºä¼šå‘˜ç®¡ç†
+	g_MembersCtl.header:SetText("#gFF0FA0ä¼šå‘˜ç®¡ç†");
 	
-	--×Ô¼º°ï»áµÄ×ÚÖ¼
+	--è‡ªå·±å¸®ä¼šçš„å®—æ—¨
 	szMsg = Guild:GetMyGuildInfo("Desc");
 	g_MembersCtl.desc:SetText(szMsg);
 	
-	--ÈËÊı
-	g_MembersCtl.count:SetText("»áÔ±:"..Guild:GetMembersNum(3).."/"..Guild:GetMembersNum(1).."/"..Guild:GetMembersNum(2));
+	--äººæ•°
+	g_MembersCtl.count:SetText("ä¼šå‘˜:"..Guild:GetMembersNum(3).."/"..Guild:GetMembersNum(1).."/"..Guild:GetMembersNum(2));
 	
-	--ÈËÔ±ÁĞ±í
+	--äººå‘˜åˆ—è¡¨
 	g_ListToMember = {};
 	local listidx = 0;
 	if(g_TabSel == GUILD_MEMBERS_INFO) then
@@ -322,7 +322,7 @@ function Guild_Manage_Update()
 		
 		while i < totalNum do
 			--if( -1 ~= Guild:GetMembersInfo(i, "GUID")) then
-				--ÓĞĞ§µÄÊı¾İ
+				--æœ‰æ•ˆçš„æ•°æ®
 				--if(GUILD_REQUIRES_INFO ~= Guild:GetMembersInfo(i, "Position")) then
 					--szMsg = Guild:GetMembersInfo(i, "Name");
 					--g_MembersCtl.list:AddItem(g_positionInfo[Guild:GetMembersInfo(i, "Position")]..szMsg, listidx);
@@ -347,7 +347,7 @@ function Guild_Manage_Update()
 
 		while i < totalNum do
 			--if( -1 ~= Guild:GetMembersInfo(i, "GUID")) then
-				--ÓĞĞ§µÄÊı¾İ
+				--æœ‰æ•ˆçš„æ•°æ®
 				--if(GUILD_REQUIRES_INFO == Guild:GetMembersInfo(i, "Position")) then
 					--szMsg = Guild:GetMembersInfo(i, "Name");
 					--g_MembersCtl.list:AddItem(szMsg, listidx);
@@ -374,13 +374,13 @@ function Guild_Manage_JudgeSelectMember()
 	if(g_MemberSel[g_TabSel] < 0 or nil == g_ListToMember[g_MemberSel[g_TabSel]]
 		 or g_MemberSel[g_TabSel] >= g_MembersCtl.list:GetItemNumber()) then
 		g_MemberSel[g_TabSel] = -1;
-		--Ä¬ÈÏÑ¡ÖĞÁĞ±íÀïµÄµÚÒ»¸öÈË
+		--é»˜è®¤é€‰ä¸­åˆ—è¡¨é‡Œçš„ç¬¬ä¸€ä¸ªäºº
 		if(nil ~= g_ListToMember[0]) then
 			g_MembersCtl.list:SetItemSelectByItemID(0);
 			Guild_Manage_Selected();
 		end		
 	else
-		--Ñ¡ÖĞÉÏ´ÎÑ¡ÖĞµÄÈË
+		--é€‰ä¸­ä¸Šæ¬¡é€‰ä¸­çš„äºº
 		g_MembersCtl.list:SetItemSelectByItemID(g_MemberSel[g_TabSel]);
 		Guild_Manage_Selected();
 	end
@@ -400,40 +400,40 @@ function Guild_Manage_SetMembersInfo( lidx )
 	Guild_Manage_ClearInfo();
 	local szMsg;
 
-	--Ãû³Æ
+	--åç§°
 	szMsg = Guild:GetMembersInfo(g_ListToMember[lidx], "Name");
 	local szId;
 	_,szId = Guild:GetMembersInfo(g_ListToMember[lidx], "GUID");
 	g_MembersCtl.name:SetText(szMsg.."("..szId..")");
 	
-	--ÃÅÅÉ
+	--é—¨æ´¾
 	szMsg = g_menpaiInfo[Guild:GetMembersInfo(g_ListToMember[lidx], "MenPai")+1];
-	g_MembersCtl.info[1].txt:SetText("ÃÅÅÉ:");
+	g_MembersCtl.info[1].txt:SetText("é—¨æ´¾:");
 	g_MembersCtl.info[1].msg:SetText(szMsg);
 	
-	--µÈ¼¶
+	--ç­‰çº§
 	szMsg = Guild:GetMembersInfo(g_ListToMember[lidx], "Level");
-	g_MembersCtl.info[2].txt:SetText("µÈ¼¶:");
+	g_MembersCtl.info[2].txt:SetText("ç­‰çº§:");
 	g_MembersCtl.info[2].msg:SetText(szMsg);
 	
 	if(g_TabSel == GUILD_MEMBERS_INFO) then
-		--¹±Ï×¶È	
+		--è´¡çŒ®åº¦	
 		--2006-12-7 19:44 TODO
 		szMsg = Guild:GetMembersInfo(g_ListToMember[lidx], "CurCon").."/"..Guild:GetMembersInfo(g_ListToMember[lidx], "MaxCon");
 		--szMsg = Guild:GetMembersInfo(g_ListToMember[lidx], "CurCon");
-		g_MembersCtl.info[3].txt:SetText("¹±Ï×¶È:");
+		g_MembersCtl.info[3].txt:SetText("è´¡çŒ®åº¦:");
 		g_MembersCtl.info[3].msg:SetText(szMsg);
-		--Èë°ïÊ±¼ä
+		--å…¥å¸®æ—¶é—´
 		szMsg = Guild:GetMembersInfo(g_ListToMember[lidx], "JoinTime");
-		g_MembersCtl.info[4].txt:SetText("Èë°ïÊ±¼ä:");
+		g_MembersCtl.info[4].txt:SetText("å…¥å¸®æ—¶é—´:");
 		g_MembersCtl.info[4].msg:SetText(szMsg);
-		--ÉÏÏßÊ±¼ä
+		--ä¸Šçº¿æ—¶é—´
 		szMsg = Guild:GetMembersInfo(g_ListToMember[lidx], "LogOutTime");
-		g_MembersCtl.info[5].txt:SetText("ÉÏÏßÊ±¼ä:");
+		g_MembersCtl.info[5].txt:SetText("ä¸Šçº¿æ—¶é—´:");
 		g_MembersCtl.info[5].msg:SetText(szMsg);
-		--Ã¿ÖÜ¹±Ï×¶È
+		--æ¯å‘¨è´¡çŒ®åº¦
 		szMsg = Guild:GetMembersInfo(g_ListToMember[lidx], "ContriPerWeek");
-		g_MembersCtl.info[6].txt:SetText("±¾ÖÜ¹±Ï×¶È:");
+		g_MembersCtl.info[6].txt:SetText("æœ¬å‘¨è´¡çŒ®åº¦:");
 		g_MembersCtl.info[6].msg:SetText(szMsg);
 	end
 end
@@ -491,8 +491,8 @@ function Guild_Manage_BtnClick( idx )
 				end
 			end
 		--add & comment by xindefeng	
-		--°ïÖ÷:µ¯³ö¿ÉÒÔĞŞ¸ÄÖ°Î»µÄ½çÃæ
-		--·Ç°ïÖ÷:µ¯³öÖ»¿ÉÒÔ²é¿´Ö°Î»µÄ½çÃæ
+		--å¸®ä¸»:å¼¹å‡ºå¯ä»¥ä¿®æ”¹èŒä½çš„ç•Œé¢
+		--éå¸®ä¸»:å¼¹å‡ºåªå¯ä»¥æŸ¥çœ‹èŒä½çš„ç•Œé¢
 		elseif(idx == 8)then	--btn8
 			Guild:AskCurCustomPositionName()
 		end
@@ -532,7 +532,7 @@ end
 
 function Guild_Manage_ChangeDescBegin()
 
-	--Èç¹ûÃ»ÊäÈë¹ı¶ş¼¶ÃÜÂëÔòÊäÈëÒ»´Î£¬×¢Òâ£ºPlayer:IsLocked() == 0±íÊ¾Ëø¶¨
+	--å¦‚æœæ²¡è¾“å…¥è¿‡äºŒçº§å¯†ç åˆ™è¾“å…¥ä¸€æ¬¡ï¼Œæ³¨æ„ï¼šPlayer:IsLocked() == 0è¡¨ç¤ºé”å®š
 	if Player:IsHavePassword() == 1 and Player:IsLocked() == 0 then
 		OpenUnLockeMinorPasswordDlg()
 		return
@@ -546,7 +546,7 @@ function Guild_Manage_ChangeDescBegin()
 	g_MembersCtl.edit:Show();
 	
 	g_MembersCtl.desc:Hide();
-	g_MembersCtl.btn[5]:SetText("ĞŞ¸ÄÍê³É");
+	g_MembersCtl.btn[5]:SetText("ä¿®æ”¹å®Œæˆ");
 end
 
 function Guild_Manage_ChangeDescFin()
@@ -558,7 +558,7 @@ function Guild_Manage_ChangeDescFin()
 	g_MembersCtl.desc:Show();
 	
 	Guild:FixGuildInfo("Desc", szMsg);
-	g_MembersCtl.btn[5]:SetText("ĞŞ¸Ä×ÚÖ¼");
+	g_MembersCtl.btn[5]:SetText("ä¿®æ”¹å®—æ—¨");
 end
 
 function ConfraternityManage_Hidden()

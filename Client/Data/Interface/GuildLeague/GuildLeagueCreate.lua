@@ -1,4 +1,4 @@
---ÓëNPCµÄ¾àÀë
+--ä¸ŽNPCçš„è·ç¦»
 local g_clientNpcId = -1;
 local MAX_OBJ_DISTANCE = 3.0;
 --===============================================
@@ -19,10 +19,10 @@ end
 function GuildLeagueCreate_OnEvent( event )
 	if event == "GUILD_LEAGUE_CREATE" or 
 		(event == "UI_COMMAND" and tonumber(arg0)==1207) then
-		GuildLeagueCreate_InputName:SetText("×î³¤12¸ö×Ö·û")
+		GuildLeagueCreate_InputName:SetText("æœ€é•¿12ä¸ªå­—ç¬¦")
 		GuildLeagueCreate_InputName:SetProperty("DefaultEditBox", "True");
 		GuildLeagueCreate_InputName:SetSelected(0,-1)
-		GuildLeagueCreate_InputDesc:SetText("Ò»¸öÐÂÐËµÄÍ¬ÃËÊÆÁ¦")
+		GuildLeagueCreate_InputDesc:SetText("ä¸€ä¸ªæ–°å…´çš„åŒç›ŸåŠ¿åŠ›")
 		this:Show()
 		g_clientNpcId = Get_XParam_INT(0);
 		g_clientNpcId = Target:GetServerId2ClientId(g_clientNpcId);
@@ -45,7 +45,7 @@ function GuildLeagueCreate_DoCreate()
 	end
 	
 	if desc==nil or desc=="" then
-		PushDebugMessage("ÄúÃ»ÓÐÊäÈëÍ¬ÃËÐûÑÔ")
+		PushDebugMessage("æ‚¨æ²¡æœ‰è¾“å…¥åŒç›Ÿå®£è¨€")
 		return
 	end
 	
@@ -70,7 +70,7 @@ function GuildLeagueCreate_CareEventHandle(careId, op, distance)
 		if(tonumber(careId) ~= g_clientNpcId) then
 			return;
 		end
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ý£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æžœå’ŒNPCçš„è·ç¦»å¤§äºŽä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if(op == "distance" and tonumber(distance)>MAX_OBJ_DISTANCE or op=="destroy") then
 			this:Hide();
 		end

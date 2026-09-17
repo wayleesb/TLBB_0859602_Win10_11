@@ -1,18 +1,18 @@
 --MisDescBegin
 x600044_g_ScriptId = 600044
 x600044_g_MissionId = 1109
-x600044_g_Name = "Îä´óÍş"
+x600044_g_Name = "æ­¦å¤§å¨"
 x600044_g_MissionKind = 50
 x600044_g_MissionLevel = 10000
 x600044_g_IfMissionElite = 0
-x600044_g_IsMissionOkFail			= 0									--0 ÈÎÎñÍê³É±ê¼Ç[Öµ²»ÄÜ±ä]
-x600044_g_MissionParam_SubId		= 1									--1 ×ÓÈÎÎñ½Å±¾ºÅ´æ·ÅÎ»ÖÃ[Öµ²»ÄÜ±ä]
-x600044_g_MissionName = "¹ú·ÀÈÎÎñ"
-x600044_g_MissionInfo = "    ¹ú·ÀÈÎÎñ"									--ÈÎÎñÃèÊö
-x600044_g_MissionTarget = "    ÄãµÄÈÎÎñÊÇÉ±ËÀ%n¡£"						--ÈÎÎñÄ¿±ê
-x600044_g_ContinueInfo = "    ÄãµÄÈÎÎñ»¹Ã»ÓĞÍê³ÉÃ´£¿"					--Î´Íê³ÉÈÎÎñµÄnpc¶Ô»°
-x600044_g_SubmitInfo = "    ÊÂÇé½øÕ¹µÃÈçºÎ£¿"							--Íê³ÉÎ´Ìá½»Ê±µÄnpc¶Ô»°
-x600044_g_MissionComplete = "    ¸ÉµÃ²»´í£¬ÉõºÃÉõºÃ¡£"					--Íê³ÉÈÎÎñnpcËµ»°µÄ»°
+x600044_g_IsMissionOkFail			= 0									--0 ä»»åŠ¡å®Œæˆæ ‡è®°[å€¼ä¸èƒ½å˜]
+x600044_g_MissionParam_SubId		= 1									--1 å­ä»»åŠ¡è„šæœ¬å·å­˜æ”¾ä½ç½®[å€¼ä¸èƒ½å˜]
+x600044_g_MissionName = "å›½é˜²ä»»åŠ¡"
+x600044_g_MissionInfo = "    å›½é˜²ä»»åŠ¡"									--ä»»åŠ¡æè¿°
+x600044_g_MissionTarget = "    ä½ çš„ä»»åŠ¡æ˜¯æ€æ­»%nã€‚"						--ä»»åŠ¡ç›®æ ‡
+x600044_g_ContinueInfo = "    ä½ çš„ä»»åŠ¡è¿˜æ²¡æœ‰å®Œæˆä¹ˆï¼Ÿ"					--æœªå®Œæˆä»»åŠ¡çš„npcå¯¹è¯
+x600044_g_SubmitInfo = "    äº‹æƒ…è¿›å±•å¾—å¦‚ä½•ï¼Ÿ"							--å®Œæˆæœªæäº¤æ—¶çš„npcå¯¹è¯
+x600044_g_MissionComplete = "    å¹²å¾—ä¸é”™ï¼Œç”šå¥½ç”šå¥½ã€‚"					--å®Œæˆä»»åŠ¡npcè¯´è¯çš„è¯
 x600044_g_StrForePart = 4
 x600044_g_MissionRound = 79
 x600044_g_Parameter_Kill_AllRandom = { { id = 4, numNeeded = 5, numKilled = 6 } }

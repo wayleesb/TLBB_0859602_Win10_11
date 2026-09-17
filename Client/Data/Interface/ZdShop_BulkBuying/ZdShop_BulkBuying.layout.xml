@@ -64,7 +64,7 @@
             <Window Type="TLBB_EditBoxNormal" Name="ZdShop_BulkBuying_IME">
                 <Property Name="AbsolutePosition" Value="x:121.000000 y:35.000000" />
                 <Property Name="AbsoluteSize" Value="w:71.000000 h:20.000000" />
-                <Property Name="MaxTextLength" Value="2" />
+                <Property Name="MaxTextLength" Value="3" />
                 <Property Name="ValidationString" Value="[0-9]*" />
                 <Event Name="TextChanged" Function="ZdShop_BulkBuying_TextChanged();" />
                 <Property Name="Text" Value="99" />

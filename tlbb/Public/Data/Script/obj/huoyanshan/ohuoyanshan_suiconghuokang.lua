@@ -1,11 +1,11 @@
---»ğÑæÉ½NPC
---ËÎ±ø»ğ¿¹
---ÈÎÎñ
+--ç«ç„°å±±NPC
+--å®‹å…µç«æŠ—
+--ä»»åŠ¡
 
 x042513_g_scriptId	= 042513
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x042513_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent( sceneId )
@@ -16,7 +16,7 @@ function x042513_OnDefaultEvent( sceneId, selfId,targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x042513_OnEventRequest( sceneId, selfId, targetId, eventId )
 	if GetNumText()==0	then

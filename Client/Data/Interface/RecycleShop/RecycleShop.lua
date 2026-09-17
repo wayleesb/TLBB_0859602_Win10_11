@@ -38,7 +38,7 @@ function RecycleShop_OnEvent(event)
 	if ( event == "OPEN_RECYCLESHOP_SELF" )   then
 		objCared = DataPool : GetNPCIDByServerID(tonumber(arg0));
 		if objCared == -1 then
-			PushDebugMessage("server´«¹ıÀ´µÄÊı¾İÓĞÎÊÌâ¡£");
+			PushDebugMessage("serverä¼ è¿‡æ¥çš„æ•°æ®æœ‰é—®é¢˜ã€‚");
 			return;
 		end
 		this:CareObject(objCared, 1, "RecycleShop");
@@ -50,7 +50,7 @@ function RecycleShop_OnEvent(event)
 	if(event == "OPEN_RECYCLESHOP_PARTNER" )   then
 		objCared = DataPool : GetNPCIDByServerID(tonumber(arg0));
 		if objCared == -1 then
-			PushDebugMessage("server´«¹ıÀ´µÄÊı¾İÓĞÎÊÌâ¡£");
+			PushDebugMessage("serverä¼ è¿‡æ¥çš„æ•°æ®æœ‰é—®é¢˜ã€‚");
 			return;
 		end
 		this:CareObject(objCared, 1, "RecycleShop");
@@ -62,7 +62,7 @@ function RecycleShop_OnEvent(event)
 	if(event == "OPEN_RECYCLESHOP_BUYER" )   then
 		objCared = DataPool : GetNPCIDByServerID(tonumber(arg0));
 		if objCared == -1 then
-			PushDebugMessage("server´«¹ıÀ´µÄÊı¾İÓĞÎÊÌâ¡£");
+			PushDebugMessage("serverä¼ è¿‡æ¥çš„æ•°æ®æœ‰é—®é¢˜ã€‚");
 			return;
 		end
 		this:CareObject(objCared, 1, "RecycleShop");
@@ -75,7 +75,7 @@ function RecycleShop_OnEvent(event)
 	    if( tonumber(arg0) == 19810222 ) then
     	    this:Hide();
 		
-		    --È¡Ïû¹ØĞÄ
+		    --å–æ¶ˆå…³å¿ƒ
 		    this:CareObject(objCared, 0, "PS_ShopMag");
     	end
 	 	
@@ -102,7 +102,7 @@ function RecycleShop_InitDLG(idx)
 		RecycleShop_GetItem:Show();
 		RecycleShop_ReSetAD:Show();
 		RecycleShop_CancelItem:Show();
-		RecycleShop_DragTitle:SetText("#gFF0FA0ÎÒÒªÊÕ¹ºµÄ²ÄÁÏ");
+		RecycleShop_DragTitle:SetText("#gFF0FA0æˆ‘è¦æ”¶è´­çš„ææ–™");
 	else
 		for i =1 ,TotalNum do
 			RecycleItems[i]:SetProperty("DragAcceptName", "X"..tostring(i-1));
@@ -118,14 +118,14 @@ end
 
 function RecycleShop_UpdateDLG(idx)
 	HaveNum = 0;
-	--µêÆÌÃû
+	--åº—é“ºå
 	local shopName = PlayerShop:GetRecycleShopName(idx);
-	RecycleShop_Name_Text:SetText("µêÆÌÃû:".. shopName);
-	--µêÖ÷	--¸ÄÎª³¬Á´½Ó by wangdw
+	RecycleShop_Name_Text:SetText("åº—é“ºå:".. shopName);
+	--åº—ä¸»	--æ”¹ä¸ºè¶…é“¾æ¥ by wangdw
 	local szName = PlayerShop:GetRecycleShopOwnerName(idx);
-	RecycleShop_Master_Text:SetChatString("#YµêÖ÷:#{_INFOUSR".. szName .."}");
+	RecycleShop_Master_Text:SetChatString("#Yåº—ä¸»:#{_INFOUSR".. szName .."}");
 	
-	--µêÖ÷ID
+	--åº—ä¸»ID
 	local szID = PlayerShop:GetRecycleShopOwnerID(idx);
 	RecycleShop_ID_Text:SetText("ID:"..szID);
 	for i=1, RECYCLEITEM_NUM    do
@@ -142,7 +142,7 @@ function RecycleShop_UpdateDLG(idx)
 			else
 				RecycleItems[i]:SetPushed(0);
 			end
-			--¿ª·ÅÍÏ¶¯¹¦ÄÜ
+			--å¼€æ”¾æ‹–åŠ¨åŠŸèƒ½
 			
 			local needToGet =  PlayerShop:GetRecycleItem(i-1,idx,"needtoget");
 			local needToRec =  PlayerShop:GetRecycleItem(i-1,idx,"needtorecycle");
@@ -161,23 +161,23 @@ function RecycleShop_UpdateDLG(idx)
 		end
 	end
 	if(Count>0)then
-		RecycleShop_Name_Text9:SetText("ÒÑ¾­³É¹¦ÊÕ¹º"..Count.."×é²ÄÁÏ");
+		RecycleShop_Name_Text9:SetText("å·²ç»æˆåŠŸæ”¶è´­"..Count.."ç»„ææ–™");
 	end
 end
 
---ĞÂÔöÊÕ¹º
+--æ–°å¢æ”¶è´­
 function RecycleShop_AddNewItem_Click()
 	if(Type<=0 or Type >3) then
 		return
 	end
 	if(HaveNum>=TotalNum)then
-		PushDebugMessage("ÎŞ·¨ĞÂÔö£¬¿ÉÊÕ¹º¿Õ¼äÒÑÂú¡£")
+		PushDebugMessage("æ— æ³•æ–°å¢ï¼Œå¯æ”¶è´­ç©ºé—´å·²æ»¡ã€‚")
 		return
 	end
 	PlayerShop:OpenSelectRecycleItemDLG(Type);
 end
 
---È¡»Ø²ÄÁÏ()
+--å–å›ææ–™()
 function RecycleShop_GetItem_Click()
 	if g_nCurSelectItem<=0 or g_nCurSelectItem>RECYCLEITEM_NUM then 
 		return ;
@@ -188,13 +188,13 @@ function RecycleShop_GetItem_Click()
 	local needToGet =  PlayerShop:GetRecycleItem(g_nCurSelectItem-1,Type,"needtoget");
 	local needToRec =  PlayerShop:GetRecycleItem(g_nCurSelectItem-1,Type,"needtorecycle");
 	if(needToGet == 0)then
-		PushDebugMessage("ÄúÊÕ¹ºµÄ²ÄÁÏ»¹Ã»ÓĞÊÕ¹ºÍê³É£¡")
+		PushDebugMessage("æ‚¨æ”¶è´­çš„ææ–™è¿˜æ²¡æœ‰æ”¶è´­å®Œæˆï¼")
 		return
 	end
 	PlayerShop:SendTakeRecItemMsg(Type,g_nCurSelectItem-1);
 end
 
---È¡ÏûÊÕ¹º
+--å–æ¶ˆæ”¶è´­
 function RecycleShop_CancelItem_Click()
 	if g_nCurSelectItem<=0 or g_nCurSelectItem>RECYCLEITEM_NUM then 
 		return ;
@@ -204,13 +204,13 @@ function RecycleShop_CancelItem_Click()
 	end
 	local needToGet =  PlayerShop:GetRecycleItem(g_nCurSelectItem-1,Type,"needtoget");
 	if(needToGet > 0)then
-		PushDebugMessage("´Ë²ÄÁÏÊÕ¹ºÖĞ£¬²»ÄÜÈ¡Ïû£¬ÇëÈ¡³öÒÑÊÕ¹º²¿·ÖÔÙ½øĞĞ²Ù×÷¡£")
+		PushDebugMessage("æ­¤ææ–™æ”¶è´­ä¸­ï¼Œä¸èƒ½å–æ¶ˆï¼Œè¯·å–å‡ºå·²æ”¶è´­éƒ¨åˆ†å†è¿›è¡Œæ“ä½œã€‚")
 		return
 	end
 	PlayerShop:CancelRecItem(Type,g_nCurSelectItem-1);
 end
 
---ÉèÖÃ¹ã¸æ
+--è®¾ç½®å¹¿å‘Š
 function RecycleShop_ReSetAD_Click()
 	if Type <=0 or Type>2 then
 		return;
@@ -232,10 +232,10 @@ function RecycleShop_Item_Click(idx)
 		--name
 		local name = PlayerShop:GetRecycleItem(idx-1,Type,"name");
 		RecycleShop_TargetItem_Name:SetText(name);
-		--ÊÕ¹º¼Û
+		--æ”¶è´­ä»·
 		local price = PlayerShop:GetRecycleItem(idx-1,Type,"price");
 		RecycleShop_TargetItem_Money:SetProperty("MoneyNumber", tostring(price));
-		--ÊıÁ¿
+		--æ•°é‡
 		local numToget = PlayerShop:GetRecycleItem(idx-1,Type,"needtoget");
 		RecycleShop_Name_Text8:SetText(numToget);
 		local numTorec = PlayerShop:GetRecycleItem(idx-1,Type,"needtorecycle");
@@ -257,7 +257,7 @@ function RecycleShop_ExitClick()
 	this:Hide();
 end
 
---³öÊÛ
+--å‡ºå”®
 function RecycleShop_Sell_Click()
 	PlayerShop:RecycleShop_EnterSell();
 end

@@ -1,6 +1,6 @@
 -- 125020
--- ½øÈë¾º¼¼³¡µÄ¿ØÖÆ
--- ±¾½Å±¾ÐèÒªserverÌí¼ÓÆô¶¯²ÎÊý "-loadscriptonce" ²ÅÄÜÕý³£ÔËÐÐ
+-- è¿›å…¥ç«žæŠ€åœºçš„æŽ§åˆ¶
+-- æœ¬è„šæœ¬éœ€è¦serveræ·»åŠ å¯åŠ¨å‚æ•° "-loadscriptonce" æ‰èƒ½æ­£å¸¸è¿è¡Œ
 
 --
 x125020_g_ScriptId = 125020
@@ -13,7 +13,7 @@ x125020_g_Position = {
 				{id=5,scene=420,x=33, z=49},
 }
 
--- 4¸öbuff±¦ÏäÎ»ÖÃ
+-- 4ä¸ªbuffå®ç®±ä½ç½®
 x125020_g_BuffPosition = {
 				{id=1,x=81, z=53, preTime=0},
 				{id=2,x=81, z=146,preTime=0},
@@ -26,18 +26,18 @@ x125020_g_BuffPosition = {
 				
 }
 
--- Ð¡±¦ÏäµÄÃû×ÖÁÐ±í
+-- å°å®ç®±çš„åå­—åˆ—è¡¨
 x125020_g_SmallBoxName = {
-				"×ÏÉ«ÃØóÅ",
-				"»ÆÉ«ÃØóÅ",
-				"ÂÌÉ«ÃØóÅ",
-				"°×É«ÃØóÅ",
-				"ºÚÉ«ÃØóÅ",
-				"À¶É«ÃØóÅ",
-				"ºìÉ«ÃØóÅ",
+				"ç´«è‰²ç§˜ç¬ˆ",
+				"é»„è‰²ç§˜ç¬ˆ",
+				"ç»¿è‰²ç§˜ç¬ˆ",
+				"ç™½è‰²ç§˜ç¬ˆ",
+				"é»‘è‰²ç§˜ç¬ˆ",
+				"è“è‰²ç§˜ç¬ˆ",
+				"çº¢è‰²ç§˜ç¬ˆ",
 }
 
--- Ð¡±¦Ïä¿ª³öÀ´µÄbuffÁÐ±í
+-- å°å®ç®±å¼€å‡ºæ¥çš„buffåˆ—è¡¨
 x125020_g_SmallBoxList = {
 				{id=1,monId=5004,script=125023,},
 				{id=2,monId=5005,script=125023,},
@@ -48,7 +48,7 @@ x125020_g_SmallBoxList = {
 				{id=7,monId=5010,script=125023,},
 }
 
--- ËéÆ¬±¦ÏäÎ»ÖÃ
+-- ç¢Žç‰‡å®ç®±ä½ç½®
 x125020_g_StonePosition_1 = {
 				{tp=1,x=45,z=65},{tp=1,x=42,z=67},{tp=1,x=47,z=63},
 				{tp=1,x=52,z=87},{tp=1,x=63,z=84},{tp=1,x=71,z=78},
@@ -80,41 +80,41 @@ x125020_g_StonePosition_5 = {
 				{tp=5,x=59,z=45},}
 
 
--- ÉÏÒ»´Î±¦ÏäË¢ÐÂµÄÊ±¼ä
+-- ä¸Šä¸€æ¬¡å®ç®±åˆ·æ–°çš„æ—¶é—´
 x125020_g_PreCreateBoxTime = -10
 
--- ´´½¨Ç°Ò»·ÖÖÓµÄ¹«¸æÊÇ·ñÒÑ¾­·¢ËÍ
+-- åˆ›å»ºå‰ä¸€åˆ†é’Ÿçš„å…¬å‘Šæ˜¯å¦å·²ç»å‘é€
 x125020_g_IsPreBroad = 0
 
 -- 
 x125020_g_Step = 0
 
--- ·¢ËÍ´´½¨Ç°Ò»·ÖÖÓµÄ¹«¸æµÄÊ±¼ä
+-- å‘é€åˆ›å»ºå‰ä¸€åˆ†é’Ÿçš„å…¬å‘Šçš„æ—¶é—´
 x125020_g_PreBroadTime = 0
 
--- ´ó±¦ÏäÎ»ÖÃ
+-- å¤§å®ç®±ä½ç½®
 x125020_g_BigBoxPosition = {x=81,z=99}
 
 x125020_g_OutPosition = {scene=0,x=160,z=106}
 
 x125020_g_CampList = {}
 
--- Í¬Ò»ÕóÓªµÄ×î´óÈËÊý
+-- åŒä¸€é˜µè¥çš„æœ€å¤§äººæ•°
 x125020_g_SameCampMax = 10
 
--- ´«ËÍ±£»¤buffµÄId
+-- ä¼ é€ä¿æŠ¤buffçš„Id
 x125020_g_GotoProtect  = 54
 
--- ÉÏÒ»´ÎË¢Ð¡±¦ÏäµÄÊ±¼ä
+-- ä¸Šä¸€æ¬¡åˆ·å°å®ç®±çš„æ—¶é—´
 x125020_g_PreCreateSmallBoxTime = 0
 
--- ´ó±¦ÏäÐÅÏ¢
+-- å¤§å®ç®±ä¿¡æ¯
 x125020_g_BigBoxInfo = {id=5003,x=82,z=100,ai=3,aif=0,script=125022}
 
--- Ê¯Í·Ïä×ÓÐÅÏ¢
+-- çŸ³å¤´ç®±å­ä¿¡æ¯
 x125020_g_StoneBoxInfo = {id=5002,ai=3,aif=0,script=125024}
 
--- ÒøÆ±±àºÅºÍäîÔËbuff
+-- é“¶ç¥¨ç¼–å·å’Œæ¼•è¿buff
 x125020_g_Yinpiao = 40002000
 x125020_g_CaoyunMisId = 4021
 
@@ -127,80 +127,80 @@ function x125020_OnInitScene(sceneId, selfId)
 end
 
 --**********************************
---ÁÐ¾ÙÊÂ¼þ
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x125020_OnEnumerate( sceneId, selfId, targetId )	
-   AddNumText( sceneId, x125020_g_ScriptId, "½øÈë¾º¼¼³¡", 9, 1 )        
-   AddNumText( sceneId, x125020_g_ScriptId, "Ê²Ã´ÊÇ·âìøÌ¨¾º¼¼", 11, 2 )        
+   AddNumText( sceneId, x125020_g_ScriptId, "è¿›å…¥ç«žæŠ€åœº", 9, 1 )        
+   AddNumText( sceneId, x125020_g_ScriptId, "ä»€ä¹ˆæ˜¯å°ç¦…å°ç«žæŠ€", 11, 2 )        
 end
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êý
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x125020_OnDefaultEvent( sceneId, selfId, targetId )
-	-- ¿É½øÈëµØÍ¼µÈ¼¶£º35¼¶
-	-- ¿ª·ÅÊ±¼ä£º24Ð¡Ê±¿ª·Å£¬¶ÓÎé¿ÉÒÔËæÊ±½øÈë²Î¼ÓÕ½¶·£¬Ö»ÊÇ²»Ò»¶¨ÓÐ±¦Ïä¿ÉÒÔ¿ª¡£
-	-- ÒÔÏÂÉí·ÝÕß²»¿É½øÈë£º½ÓÆ±µÄäîÔËÉÌ¡¢½ÓÆ±µÄ°ï»áÉÌÈË¡¢ÆäËû´«ËÍÊÜÏÞÖÆÕß¡¢ÎäÁÖÃËÖ÷µÈ¡£
-	-- ±ØÐëÔÚÒ»Ö§¶ÓÎéÖÐ²ÅÄÜ½øÈë¡£
+	-- å¯è¿›å…¥åœ°å›¾ç­‰çº§ï¼š35çº§
+	-- å¼€æ”¾æ—¶é—´ï¼š24å°æ—¶å¼€æ”¾ï¼Œé˜Ÿä¼å¯ä»¥éšæ—¶è¿›å…¥å‚åŠ æˆ˜æ–—ï¼Œåªæ˜¯ä¸ä¸€å®šæœ‰å®ç®±å¯ä»¥å¼€ã€‚
+	-- ä»¥ä¸‹èº«ä»½è€…ä¸å¯è¿›å…¥ï¼šæŽ¥ç¥¨çš„æ¼•è¿å•†ã€æŽ¥ç¥¨çš„å¸®ä¼šå•†äººã€å…¶ä»–ä¼ é€å—é™åˆ¶è€…ã€æ­¦æž—ç›Ÿä¸»ç­‰ã€‚
+	-- å¿…é¡»åœ¨ä¸€æ”¯é˜Ÿä¼ä¸­æ‰èƒ½è¿›å…¥ã€‚
 	
 	if GetNumText() == 2  then
     BeginEvent(sceneId)
-      AddText(sceneId,"#BÊ²Ã´ÊÇ·âìøÌ¨¾º¼¼");
+      AddText(sceneId,"#Bä»€ä¹ˆæ˜¯å°ç¦…å°ç«žæŠ€");
       AddText(sceneId,"#{JINGJI_INFO}");
     EndEvent(sceneId)
     DispatchEventList(sceneId,selfId,targetId)
     return 0
 	end
 
-  -- 0£¬´¦ÓÚË«ÈËÆï³Ë×´Ì¬µÄÈË£¬²»ÄÜ±¨Ãû
+  -- 0ï¼Œå¤„äºŽåŒäººéª‘ä¹˜çŠ¶æ€çš„äººï¼Œä¸èƒ½æŠ¥å
   if LuaFnGetDRideFlag(sceneId, selfId) ~= 0  then
     BeginEvent(sceneId)
-      AddText(sceneId,"#B¾º¼¼³¡");
-      AddText(sceneId,"  Ë«ÈËÆï³Ë×´Ì¬ÏÂ£¬²»ÄÜ½øÈë¾º¼¼³¡¡£");
+      AddText(sceneId,"#Bç«žæŠ€åœº");
+      AddText(sceneId,"  åŒäººéª‘ä¹˜çŠ¶æ€ä¸‹ï¼Œä¸èƒ½è¿›å…¥ç«žæŠ€åœºã€‚");
     EndEvent(sceneId)
     DispatchEventList(sceneId,selfId,targetId)
     return 0
   end
 
-  -- 1,ÈËÎïµÈ¼¶¸ßÓÚ35
+  -- 1,äººç‰©ç­‰çº§é«˜äºŽ35
   if GetLevel(sceneId, selfId) < 35  then
     BeginEvent(sceneId)
-      AddText(sceneId,"#B¾º¼¼³¡");
-      AddText(sceneId,"  ½øÈë¾º¼¼³¡±ØÐëÒª35¼¶ÒÔÉÏ²ÅÄÜ²Î¼Ó£¬¸óÏÂÐÞÎª»¹²»¹»£¬µÈµ½35¼¶Ö®ºóÔÙÀ´ÕÒÎÒ°É¡£");
+      AddText(sceneId,"#Bç«žæŠ€åœº");
+      AddText(sceneId,"  è¿›å…¥ç«žæŠ€åœºå¿…é¡»è¦35çº§ä»¥ä¸Šæ‰èƒ½å‚åŠ ï¼Œé˜ä¸‹ä¿®ä¸ºè¿˜ä¸å¤Ÿï¼Œç­‰åˆ°35çº§ä¹‹åŽå†æ¥æ‰¾æˆ‘å§ã€‚");
     EndEvent(sceneId)
     DispatchEventList(sceneId,selfId,targetId)
     return 0
   end
   
-  -- 2£¬×é¶Ó²ÅÄÜ½øÈë
+  -- 2ï¼Œç»„é˜Ÿæ‰èƒ½è¿›å…¥
   if LuaFnHasTeam( sceneId, selfId ) == 0  then
     BeginEvent(sceneId)
-      AddText(sceneId,"#B¾º¼¼³¡");
-      AddText(sceneId,"  ½øÈë¾º¼¼³¡±ØÒªÔÚÒ»¸ö¶ÓÎéÀïÍ·¡£");
+      AddText(sceneId,"#Bç«žæŠ€åœº");
+      AddText(sceneId,"  è¿›å…¥ç«žæŠ€åœºå¿…è¦åœ¨ä¸€ä¸ªé˜Ÿä¼é‡Œå¤´ã€‚");
     EndEvent(sceneId)
     DispatchEventList(sceneId,selfId,targetId)
     return 0
 	end
 
-	-- ÅÜÉÌ×´Ì¬²»ÄÜ½ø¾º¼¼³¡
+	-- è·‘å•†çŠ¶æ€ä¸èƒ½è¿›ç«žæŠ€åœº
 	if GetItemCount(sceneId, selfId, x125020_g_Yinpiao)>=1  then
 		BeginEvent( sceneId )
-			AddText( sceneId, "  ÄãÏÖÔÚÕý´¦ÓÚ´«ËÍÊÜµ½ÏÞÖÆµÄ×´Ì¬£¬²»ÄÜ½øÈëáÔÉ½·âìøÌ¨¡£" )
+			AddText( sceneId, "  ä½ çŽ°åœ¨æ­£å¤„äºŽä¼ é€å—åˆ°é™åˆ¶çš„çŠ¶æ€ï¼Œä¸èƒ½è¿›å…¥åµ©å±±å°ç¦…å°ã€‚" )
 		EndEvent( sceneId )
 		DispatchEventList(sceneId,selfId,targetId)
 		return
 	end
 
-	-- Íæ¼Ò´¦ÓÚäîÔË×´Ì¬²»ÄÜ½øÈë³¡¾°
+	-- çŽ©å®¶å¤„äºŽæ¼•è¿çŠ¶æ€ä¸èƒ½è¿›å…¥åœºæ™¯
 	if IsHaveMission(sceneId,selfId, x125020_g_CaoyunMisId) > 0 then
 		BeginEvent( sceneId )
-			AddText( sceneId, "  ÄãÏÖÔÚÕý´¦ÓÚ´«ËÍÊÜµ½ÏÞÖÆµÄ×´Ì¬£¬²»ÄÜ½øÈëáÔÉ½·âìøÌ¨¡£" )
+			AddText( sceneId, "  ä½ çŽ°åœ¨æ­£å¤„äºŽä¼ é€å—åˆ°é™åˆ¶çš„çŠ¶æ€ï¼Œä¸èƒ½è¿›å…¥åµ©å±±å°ç¦…å°ã€‚" )
 		EndEvent( sceneId )
 		DispatchEventList(sceneId,selfId,targetId)
 		return
 	end
 	
-	-- ¼ì²âÍê±Ï£¬´«ËÍ
+	-- æ£€æµ‹å®Œæ¯•ï¼Œä¼ é€
 	local nPos_X = 0
 	local nPos_Z = 0
 	for i, pos in x125020_g_Position  do
@@ -215,13 +215,13 @@ function x125020_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
--- Íæ¼Ò½øÈë
+-- çŽ©å®¶è¿›å…¥
 --**********************************
 function x125020_OnScenePlayerEnter(sceneId, selfId)
 	
---	-- 0£¬Èç¹ûÍæ¼ÒÃ»ÓÐ¶ÓÎé£¬ÈÃÍæ¼ÒÀë¿ª
+--	-- 0ï¼Œå¦‚æžœçŽ©å®¶æ²¡æœ‰é˜Ÿä¼ï¼Œè®©çŽ©å®¶ç¦»å¼€
 --	if LuaFnHasTeam(sceneId, selfId) == 0  then
---		-- È¡ÏûÍæ¼ÒÉíÉÏÏÞÖÆ´«ËÍµÄÎÞµÐbuffºó²ÅÄÜ´«ËÍ
+--		-- å–æ¶ˆçŽ©å®¶èº«ä¸Šé™åˆ¶ä¼ é€çš„æ— æ•ŒbuffåŽæ‰èƒ½ä¼ é€
 --		if LuaFnHaveImpactOfSpecificDataIndex(sceneId, selfId, x125020_g_GotoProtect) == 1   then
 --			LuaFnCancelSpecificImpact(sceneId, selfId, x125020_g_GotoProtect)
 --		end
@@ -231,7 +231,7 @@ function x125020_OnScenePlayerEnter(sceneId, selfId)
 --		return
 --	end
 
-	-- 1£¬¼ì²é³¡¾°ÄÚºÍ×Ô¼ºÕóÓªÏàÍ¬µÄÍæ¼ÒµÄÊýÁ¿
+	-- 1ï¼Œæ£€æŸ¥åœºæ™¯å†…å’Œè‡ªå·±é˜µè¥ç›¸åŒçš„çŽ©å®¶çš„æ•°é‡
 	local nTeamId = GetTeamId(sceneId, selfId)
 	local nCampID = nTeamId + 500
 	if x125020_GetSameCampCount(sceneId, nCampID) >= x125020_g_SameCampMax  then
@@ -244,20 +244,20 @@ function x125020_OnScenePlayerEnter(sceneId, selfId)
 		return
 	end
 	
-	-- ¶ÔÃ»ÓÐ¶ÓÎéµÄÍæ¼Ò£¬¸øÍæ¼ÒÁÙÊ±ÕóÓª	
+	-- å¯¹æ²¡æœ‰é˜Ÿä¼çš„çŽ©å®¶ï¼Œç»™çŽ©å®¶ä¸´æ—¶é˜µè¥	
 	
 	
-	-- ¼ì²âÍæ¼Ò¿ÉÒÔÁô×ÅÕâÀï
+	-- æ£€æµ‹çŽ©å®¶å¯ä»¥ç•™ç€è¿™é‡Œ
 	if LuaFnHasTeam(sceneId, selfId) == 1  then	
 		SetUnitCampID(sceneId, selfId, selfId, nCampID)
 		
-	-- Ã»ÓÐ¶ÓÎéµÄÍæ¼Ò£¬¾Í¸øÒ»¸öËæ»ú¶ÓÎéºÅ
+	-- æ²¡æœ‰é˜Ÿä¼çš„çŽ©å®¶ï¼Œå°±ç»™ä¸€ä¸ªéšæœºé˜Ÿä¼å·
 	else
 		local tempCamp = random(449) + 50
 		SetUnitCampID(sceneId, selfId, selfId, tempCamp)
 	end
 	
-	-- end£¬ÉèÖÃËÀÍöÊÂ¼þ
+	-- endï¼Œè®¾ç½®æ­»äº¡äº‹ä»¶
 	local x,z = LuaFnGetWorldPos(sceneId, selfId)
 	local v = x125020_g_Position
 	if x~=v[1].x or z~=v[1].z  and
@@ -277,7 +277,7 @@ end
 -- x125020_OnRelive
 --**********************************
 function x125020_OnRelive(sceneId, selfId)
-	-- ¸øÕâ¸öÍæ¼ÒÒ»¸öbuff BUFFÃèÊö£ºÓÚ¾ÅÁ«±£»¤Äã²»»áÊÜµ½ÒâÍâÉËº¦¡£
+	-- ç»™è¿™ä¸ªçŽ©å®¶ä¸€ä¸ªbuff BUFFæè¿°ï¼šäºŽä¹èŽ²ä¿æŠ¤ä½ ä¸ä¼šå—åˆ°æ„å¤–ä¼¤å®³ã€‚
 	LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, 
 										selfId, 8054, 100 )
 end
@@ -287,16 +287,16 @@ end
 --**********************************
 function x125020_OnSceneTimer(sceneId)
 	
-	-- 1,´¦Àí³¡¾°ÖÐÕóÓªÐ¡ÓÚ10µÄÈË£¬
+	-- 1,å¤„ç†åœºæ™¯ä¸­é˜µè¥å°äºŽ10çš„äººï¼Œ
 	x125020_DealNoCampHuman(sceneId)
 	
-	-- 2,Ëæ»úµÄ·Ï»°
+	-- 2,éšæœºçš„åºŸè¯
 	x125020_RandomBroad(sceneId)
 	
-	-- 2£¬±¦ÏäË¢ÐÂ
+	-- 2ï¼Œå®ç®±åˆ·æ–°
 	local nCurTime = GetHour()
-	-- ±¦ÏäË¢ÐÂÌõ¼þ£¬
-	-- a£¬ÐèÒªÊÇË«ÊýÕûµã£¬
+	-- å®ç®±åˆ·æ–°æ¡ä»¶ï¼Œ
+	-- aï¼Œéœ€è¦æ˜¯åŒæ•°æ•´ç‚¹ï¼Œ
 	local nMinute = GetMinute()
 	
 	if (nCurTime==0 or nCurTime==10 or
@@ -306,7 +306,7 @@ function x125020_OnSceneTimer(sceneId)
 		if (nCurTime-x125020_g_PreCreateBoxTime >= 2 or x125020_g_PreCreateBoxTime-nCurTime>=2) and
 			 x125020_g_Step == 0  and 
 			 nMinute >= 45 and nMinute < 50    then	
-			-- ÏÈ·¢Ò»¸öÌáÊ¾¹«¸æ£¬Ò»·ÖÖÓºóÔÙË¢³ö±¦Ïä
+			-- å…ˆå‘ä¸€ä¸ªæç¤ºå…¬å‘Šï¼Œä¸€åˆ†é’ŸåŽå†åˆ·å‡ºå®ç®±
 			x125020_PreBroad(sceneId)
 			x125020_g_PreBroadTime = LuaFnGetCurrentTime()
 			x125020_g_IsPreBroad = 0
@@ -334,18 +334,18 @@ function x125020_OnSceneTimer(sceneId)
 end
 
 --**********************************
--- ´´½¨±¦ÏäÇ°Ò»·ÖÖÓµÄ¹«¸æ
+-- åˆ›å»ºå®ç®±å‰ä¸€åˆ†é’Ÿçš„å…¬å‘Š
 --**********************************
 function x125020_PreBroad(sceneId)
-	local str = "#YÓÚ¾ÅÁ«#P´óº°£ºÌìÏÂÓ¢ÐÛÃÇ£¡Ò»·ÖÖÓÖ®ºó£¬×°Âú±¦ÎïºÍ¾­ÑéµÄ±¦Ïä¾Í½«·ÅÔÚ·âìøÌ¨£¡ÏëÒª×öÎäÁÖÃËÖ÷µÄÓ¢ÐÛÃÇ£¬¾¡¹ÜÀ´ÄÃ°É£¡ÇëÕÒµ½#GÂåÑô£¨155£¬107£©ÏÄºîÈÊ£¬ËÕÖÝ£¨186£¬129£©ÏÄËìÁ¼£¬´óÀí£¨177£¬133£©°×³çÒå#P£¬½øÈë·âìøÌ¨¾º¼¼³¡£¬Õù¶áÎäÁÖÃËÖ÷£¡"
+	local str = "#YäºŽä¹èŽ²#På¤§å–Šï¼šå¤©ä¸‹è‹±é›„ä»¬ï¼ä¸€åˆ†é’Ÿä¹‹åŽï¼Œè£…æ»¡å®ç‰©å’Œç»éªŒçš„å®ç®±å°±å°†æ”¾åœ¨å°ç¦…å°ï¼æƒ³è¦åšæ­¦æž—ç›Ÿä¸»çš„è‹±é›„ä»¬ï¼Œå°½ç®¡æ¥æ‹¿å§ï¼è¯·æ‰¾åˆ°#Gæ´›é˜³ï¼ˆ155ï¼Œ107ï¼‰å¤ä¾¯ä»ï¼Œè‹å·žï¼ˆ186ï¼Œ129ï¼‰å¤é‚è‰¯ï¼Œå¤§ç†ï¼ˆ177ï¼Œ133ï¼‰ç™½å´‡ä¹‰#Pï¼Œè¿›å…¥å°ç¦…å°ç«žæŠ€åœºï¼Œäº‰å¤ºæ­¦æž—ç›Ÿä¸»ï¼"
 	BroadMsgByChatPipe(sceneId, 0, str, 4)
 end
 
 --**********************************
--- ÔÚ³¡¾°ÖÐ´´½¨³öÒ»¸öÐ¡±¦Ïä
+-- åœ¨åœºæ™¯ä¸­åˆ›å»ºå‡ºä¸€ä¸ªå°å®ç®±
 --**********************************
 function x125020_CreateSmallBox(sceneId)
-	-- ÏÈÉ¾³ýËùÓÐµÄÐ¡Ïä×Ó
+	-- å…ˆåˆ é™¤æ‰€æœ‰çš„å°ç®±å­
 	local nCount = GetMonsterCount(sceneId)
 	for i=0, nCount-1 do
 		local nMonsterId = GetMonsterObjID(sceneId, i)
@@ -357,7 +357,7 @@ function x125020_CreateSmallBox(sceneId)
 		end
 	end
 	
-	-- ÔÙËæ»ú´´½¨8¸öÏä×Ó
+	-- å†éšæœºåˆ›å»º8ä¸ªç®±å­
 	for i=1, getn(x125020_g_BuffPosition)  do
 		local nRand = random(getn(x125020_g_SmallBoxList))
 		local nBoxId = LuaFnCreateMonster(sceneId, x125020_g_SmallBoxList[nRand].monId,
@@ -373,20 +373,20 @@ function x125020_CreateSmallBox(sceneId)
 end
 
 --**********************************
--- ÔÚ³¡¾°ÖÐ´´½¨³öÒ»¸ö´ó±¦Ïä
+-- åœ¨åœºæ™¯ä¸­åˆ›å»ºå‡ºä¸€ä¸ªå¤§å®ç®±
 --**********************************
 function x125020_CreateBigBox(sceneId)
 
-	-- ·¢ËÍÏµÍ³¹«¸æ(ÎÞÂÛÊÇ·ñÕâ¸öÊ±ºòÐèÒª´´½¨±¦Ïä£¬Õâ¸ö¹«¸æ¶¼ÊÇÒ»¶¨Òª·¢µÄ)
-	local str = "#YÓÚ¾ÅÁ«#P´óº°£ºÌìÏÂÓ¢ÐÛÃÇ£¡×°Âú±¦ÎïºÍ¾­ÑéµÄ±¦ÏäÒÑ¾­·ÅÔÚ·âìøÌ¨£¡ÏëÒª×öÎäÁÖÃËÖ÷µÄÓ¢ÐÛÃÇ£¬¾¡¹ÜÀ´ÄÃ°É£¡ÇëÕÒµ½#GÂåÑôÏÄºîÈÊ(155£¬107)£¬ËÕÖÝÏÄËìÁ¼(186£¬129)£¬´óÀí°×³çÒå(177£¬133)#P£¬½øÈë·âìøÌ¨¾º¼¼³¡£¬Õù¶áÎäÁÖÃËÖ÷£¡"
+	-- å‘é€ç³»ç»Ÿå…¬å‘Š(æ— è®ºæ˜¯å¦è¿™ä¸ªæ—¶å€™éœ€è¦åˆ›å»ºå®ç®±ï¼Œè¿™ä¸ªå…¬å‘Šéƒ½æ˜¯ä¸€å®šè¦å‘çš„)
+	local str = "#YäºŽä¹èŽ²#På¤§å–Šï¼šå¤©ä¸‹è‹±é›„ä»¬ï¼è£…æ»¡å®ç‰©å’Œç»éªŒçš„å®ç®±å·²ç»æ”¾åœ¨å°ç¦…å°ï¼æƒ³è¦åšæ­¦æž—ç›Ÿä¸»çš„è‹±é›„ä»¬ï¼Œå°½ç®¡æ¥æ‹¿å§ï¼è¯·æ‰¾åˆ°#Gæ´›é˜³å¤ä¾¯ä»(155ï¼Œ107)ï¼Œè‹å·žå¤é‚è‰¯(186ï¼Œ129)ï¼Œå¤§ç†ç™½å´‡ä¹‰(177ï¼Œ133)#Pï¼Œè¿›å…¥å°ç¦…å°ç«žæŠ€åœºï¼Œäº‰å¤ºæ­¦æž—ç›Ÿä¸»ï¼"
 	BroadMsgByChatPipe(sceneId, 0, str, 4)
 	
-	-- ÏÈÒª¼ì²â³¡¾°ÖÐÊÇ²»ÊÇ»¹ÓÐÕâ¸ömonster Èç¹ûÓÐ£¬¾Í²»ÔÙ´´½¨
+	-- å…ˆè¦æ£€æµ‹åœºæ™¯ä¸­æ˜¯ä¸æ˜¯è¿˜æœ‰è¿™ä¸ªmonster å¦‚æžœæœ‰ï¼Œå°±ä¸å†åˆ›å»º
 	local nCount = GetMonsterCount(sceneId)
 	local bHaveBox = 0
 	for i=0, nCount-1  do
 		local nObjId = GetMonsterObjID(sceneId, i)
-		if GetName(sceneId, nObjId) == "±¦Ïä"  then
+		if GetName(sceneId, nObjId) == "å®ç®±"  then
 			bHaveBox = 1
 		end
 	end
@@ -395,28 +395,28 @@ function x125020_CreateBigBox(sceneId)
 		return
 	end
 	
-	-- ´´½¨Ò»¸öÌØ±ðµÄ monster 
+	-- åˆ›å»ºä¸€ä¸ªç‰¹åˆ«çš„ monster 
 	local v = x125020_g_BigBoxInfo
 	local nBoxId = LuaFnCreateMonster(sceneId, v.id, v.x, v.z, v.ai, v.aif, v.script)
 	SetUnitCampID(sceneId, nBoxId, nBoxId, 0)
 end
 
 --**********************************
--- ÔÚ³¡¾°ÖÐ´´½¨³öÊ¯Í·Ïä×Ó
+-- åœ¨åœºæ™¯ä¸­åˆ›å»ºå‡ºçŸ³å¤´ç®±å­
 --**********************************
 function x125020_CreateStoneBox(sceneId)
 
-	-- ÏÈÉ¾³ýÒÔÇ°ÓÐµÄÏä×Ó
+	-- å…ˆåˆ é™¤ä»¥å‰æœ‰çš„ç®±å­
 	local nCount = GetMonsterCount(sceneId)
 	for i=0, nCount-1 do
 		local nMonsterId = GetMonsterObjID(sceneId, i)
 		local szName = GetName(sceneId, nMonsterId)
-		if szName == "°×É«±¦Ïä"  then
+		if szName == "ç™½è‰²å®ç®±"  then
 			LuaFnDeleteMonster(sceneId, nMonsterId)
 		end
 	end
 
-	-- ÔÚ  x125020_g_StonePosition_1 
+	-- åœ¨  x125020_g_StonePosition_1 
 	local v = x125020_g_StoneBoxInfo 
 	
 	local nRand = random(getn(x125020_g_StonePosition_1))
@@ -453,7 +453,7 @@ function x125020_CreateStoneBox(sceneId)
 end
 
 --**********************************
--- »ñµÃ³¡¾°ÖÐÒ»¸öÕóÓªÄ¿Ç°µÄÈËÊý
+-- èŽ·å¾—åœºæ™¯ä¸­ä¸€ä¸ªé˜µè¥ç›®å‰çš„äººæ•°
 --**********************************
 function x125020_GetSameCampCount(sceneId, CampId)
 	local nHumanCount = LuaFnGetCopyScene_HumanCount(sceneId)
@@ -469,7 +469,7 @@ function x125020_GetSameCampCount(sceneId, CampId)
 end
 
 --**********************************
--- ´¦Àí³¡¾°ÖÐÃ»ÓÐÕóÓªµÄÈË
+-- å¤„ç†åœºæ™¯ä¸­æ²¡æœ‰é˜µè¥çš„äºº
 --**********************************
 function x125020_DealNoCampHuman(sceneId)
 	
@@ -477,7 +477,7 @@ function x125020_DealNoCampHuman(sceneId)
 	for i=0, nHumanCount-1  do
 		local nHumanId = LuaFnGetCopyScene_HumanObjId(sceneId, i)
 		if GetUnitCampID(sceneId, nHumanId, nHumanId) < 500   then
-			-- »ñµÃ¶ÓÎéÐÅÏ¢
+			-- èŽ·å¾—é˜Ÿä¼ä¿¡æ¯
 			if LuaFnIsObjValid(sceneId, nHumanId) == 1 and LuaFnIsCanDoScriptLogic(sceneId, nHumanId) == 1 then
 				if LuaFnHasTeam(sceneId, nHumanId) == 1  then
 					local nTeamId = GetTeamId(sceneId, nHumanId)
@@ -501,18 +501,18 @@ function x125020_DealNoCampHuman(sceneId)
 end	
 
 --**********************************
--- Ëæ»úº°»°
+-- éšæœºå–Šè¯
 --**********************************
 function x125020_RandomBroad(sceneId)
 	if random(100) == 1  then
 		local rand = random(3)
 		local str
 		if rand == 1  then
-			str = "#G[·âìøÌ¨]#YÓÚ¾ÅÁ«#P´óº°£ºÓ¢ÐÛÃÇ£¡ÄÃ³öÄãÃÇµÄÕæÊµ±¾Áì°É£¡"
+			str = "#G[å°ç¦…å°]#YäºŽä¹èŽ²#På¤§å–Šï¼šè‹±é›„ä»¬ï¼æ‹¿å‡ºä½ ä»¬çš„çœŸå®žæœ¬é¢†å§ï¼"
 		elseif rand == 2  then
-			str = "#G[·âìøÌ¨]#YÓÚ¾ÅÁ«#P´óº°£º¼ÓÓÍ£¡²»È»ÐÅÎï¾ÍÒª±»±ðÈËÇÀ×ßÁË£¡"
+			str = "#G[å°ç¦…å°]#YäºŽä¹èŽ²#På¤§å–Šï¼šåŠ æ²¹ï¼ä¸ç„¶ä¿¡ç‰©å°±è¦è¢«åˆ«äººæŠ¢èµ°äº†ï¼"
 		elseif rand == 3  then
-			str = "#G[·âìøÌ¨]#YÓÚ¾ÅÁ«#P´óº°£ºÕ½¶·°É£¡ÎªÁËÃûÎ»£¡Ò²ÎªÁË½±Àø£¡"
+			str = "#G[å°ç¦…å°]#YäºŽä¹èŽ²#På¤§å–Šï¼šæˆ˜æ–—å§ï¼ä¸ºäº†åä½ï¼ä¹Ÿä¸ºäº†å¥–åŠ±ï¼"
 		end
 
 		CallScriptFunction((200060), "Duibai",sceneId, "", "", str)
@@ -520,23 +520,23 @@ function x125020_RandomBroad(sceneId)
 end
 
 --**********************************
--- ÓÐÍæ¼ÒÔÚ³¡¾°ÄÚËÀÍö
+-- æœ‰çŽ©å®¶åœ¨åœºæ™¯å†…æ­»äº¡
 --**********************************
 function x125020_OnSceneHumanDie( sceneId, selfId, killerId )
-	-- »ñµÃÍæ¼ÒÉíÉÏµÄ "ËéÆ¬ÊýÁ¿"£¬Í³Í³É¾³ý
+	-- èŽ·å¾—çŽ©å®¶èº«ä¸Šçš„ "ç¢Žç‰‡æ•°é‡"ï¼Œç»Ÿç»Ÿåˆ é™¤
 	local nStoneId = 40004434
 	local nStoneCount = GetItemCount(sceneId, selfId, nStoneId)
 	
 	if nStoneCount >= 1  then
 		local ret = DelItem(sceneId, selfId, nStoneId, 1)
 		
-		-- ÔÚµØÉÏÉú³ÉµôÂä°ü£¬°ÑËéÆ¬·Å½øÈ¥£¬·ÀÖ¹³öÏÖË¢£¬Ö»ÓÐ³É¹¦É¾³ý£¬²Å´´½¨µôÂä
+		-- åœ¨åœ°ä¸Šç”ŸæˆæŽ‰è½åŒ…ï¼ŒæŠŠç¢Žç‰‡æ”¾è¿›åŽ»ï¼Œé˜²æ­¢å‡ºçŽ°åˆ·ï¼Œåªæœ‰æˆåŠŸåˆ é™¤ï¼Œæ‰åˆ›å»ºæŽ‰è½
 		if ret > 0   then
 			local x
 			local z
 			x,z = GetWorldPos(sceneId, selfId)
 			
-			-- ¸ø¿ªÆô³É¹¦µÄÍæ¼ÒÒ»¸öµôÂä°ü
+			-- ç»™å¼€å¯æˆåŠŸçš„çŽ©å®¶ä¸€ä¸ªæŽ‰è½åŒ…
 			local nBoxId = DropBoxEnterScene(	x,z,sceneId )
 			AddItemToBox(sceneId,nBoxId,QUALITY_CREATE_BY_BOSS, 1, nStoneId)
 		end

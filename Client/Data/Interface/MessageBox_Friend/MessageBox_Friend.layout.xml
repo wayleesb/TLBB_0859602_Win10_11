@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" ?>
+<?xml version="1.0" ?>
 <GUILayout>
     <Window Type="TLBB_MainFrame1" Name="MessageBox_Friend_Frame">
         <Property Name="UnifiedPosition" Value="{{0.500000,-128.000000},{0.500000,-118.000000}" />

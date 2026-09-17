@@ -2,14 +2,14 @@
 
 local g_clientNpcId = -1;
 
-local g_ExchangeMaxBangGong = 200; --¿ÉÒÔ¶Ò»»µÄ°ï¹±ÉÏÏŞ
-local g_ExchangeMinBangGong = 10;	--¿ÉÒÔ¶Ò»»µÄ°ï¹±ÏÂÏŞ
+local g_ExchangeMaxBangGong = 200; --å¯ä»¥å…‘æ¢çš„å¸®è´¡ä¸Šé™
+local g_ExchangeMinBangGong = 10;	--å¯ä»¥å…‘æ¢çš„å¸®è´¡ä¸‹é™
 
 function BanggongExchange_PreLoad()
 
 	this:RegisterEvent("UI_COMMAND");
 	this:RegisterEvent("OBJECT_CARED_EVENT");
-	--this:RegisterEvent("UNIT_GUILDPOINT"); --°ï¹±½çÃæÃ»ÓĞÊµÊ±Ë¢ĞÂ»úÖÆ£¬ÈËÎïÊôĞÔºÍ»áÔ±¹ÜÀí½çÃæ¶¼Ã»ÓĞ
+	--this:RegisterEvent("UNIT_GUILDPOINT"); --å¸®è´¡ç•Œé¢æ²¡æœ‰å®æ—¶åˆ·æ–°æœºåˆ¶ï¼Œäººç‰©å±æ€§å’Œä¼šå‘˜ç®¡ç†ç•Œé¢éƒ½æ²¡æœ‰
 	
 end
 
@@ -19,7 +19,7 @@ end
 function BanggongExchange_OnEvent(event)
 
 	if(event == "UI_COMMAND" and tonumber(arg0) == 19821) then
-		if this : IsVisible() then									-- Èç¹û½çÃæ¿ª×Å£¬Ôò²»´¦Àí
+		if this : IsVisible() then									-- å¦‚æœç•Œé¢å¼€ç€ï¼Œåˆ™ä¸å¤„ç†
 			return
 		end
 		BanggongExchange_Clear()
@@ -33,7 +33,7 @@ function BanggongExchange_OnEvent(event)
 		local npcObjId = Get_XParam_INT(0)
 		g_clientNpcId = DataPool : GetNPCIDByServerID(npcObjId)
 		if g_clientNpcId == -1 then
-			PushDebugMessage("Î´·¢ÏÖ NPC")
+			PushDebugMessage("æœªå‘ç° NPC")
 			BanggongExchange_Close()
 			return
 		end
@@ -44,7 +44,7 @@ function BanggongExchange_OnEvent(event)
 			return;
 		end
 		
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ı£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æœå’ŒNPCçš„è·ç¦»å¤§äºä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if arg1 == "distance" and tonumber(arg2) > MAX_OBJ_DISTANCE or arg1=="destroy" then
 			BanggongExchange_Close()
 		end
@@ -105,13 +105,13 @@ function BanggongExchange_OK_Clicked()
 		return
 	end
 	
-	--°ï¹±ÅÆµÄ×î´ó¶î¶È²»ÄÜ³¬¹ı200¡£
+	--å¸®è´¡ç‰Œçš„æœ€å¤§é¢åº¦ä¸èƒ½è¶…è¿‡200ã€‚
 	if strNumber > g_ExchangeMaxBangGong then
 		PushDebugMessage("#{BGCH_8922_25}")
 		return
 	end
 	
-	--°ï¹±ÅÆµÄ×îĞ¡¶î¶È²»ÄÜµÍÓÚ10¡£
+	--å¸®è´¡ç‰Œçš„æœ€å°é¢åº¦ä¸èƒ½ä½äº10ã€‚
 	if strNumber < g_ExchangeMinBangGong then
 		PushDebugMessage("#{BGCH_8922_26}")
 		return

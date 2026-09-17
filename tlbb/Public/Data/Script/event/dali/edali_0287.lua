@@ -1,60 +1,60 @@
--- Òı¼ö¼ÓÈëÃÅÅÉÈÎÎñ
--- ÔÚ¸÷ÃÅÅÉµÄ°İÊ¦NPC´¦Ôö¼ÓÒ»¸öÑ¡Ïî£ºÒı¼ö¼ÓÈëÃÅÅÉ¡£
+-- å¼•èåŠ å…¥é—¨æ´¾ä»»åŠ¡
+-- åœ¨å„é—¨æ´¾çš„æ‹œå¸ˆNPCå¤„å¢åŠ ä¸€ä¸ªé€‰é¡¹ï¼šå¼•èåŠ å…¥é—¨æ´¾ã€‚
 
 x210287_g_ScriptId = 210287
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x210287_OnEnumerate( sceneId, selfId, targetId )
 	local mp = GetMenPai(sceneId, selfId)
 	if mp ~= 9 then 
-		AddNumText(sceneId, x210287_g_ScriptId, "Òı¼ö¼ÓÈëÃÅÅÉ", 1, 900);
+		AddNumText(sceneId, x210287_g_ScriptId, "å¼•èåŠ å…¥é—¨æ´¾", 1, 900);
 	end
 end
 
 function x210287_OnDefaultEvent( sceneId, selfId, targetId )
 	if GetNumText()==900  then
 		local nNpcmenPai = -1
-		-- »ñµÃNPCµÄÃÅÅÉÒıµ¼ÈËµÄÃÅÅÉ
-		if GetName(sceneId, targetId) == "»ÛÒ×"  then
+		-- è·å¾—NPCçš„é—¨æ´¾å¼•å¯¼äººçš„é—¨æ´¾
+		if GetName(sceneId, targetId) == "æ…§æ˜“"  then
 			nNpcmenPai = 0
-		elseif GetName(sceneId, targetId) == "Ê¯±¦"  then
+		elseif GetName(sceneId, targetId) == "çŸ³å®"  then
 			nNpcmenPai = 1
-		elseif GetName(sceneId, targetId) == "¼òÄş"  then
+		elseif GetName(sceneId, targetId) == "ç®€å®"  then
 			nNpcmenPai = 2
-		elseif GetName(sceneId, targetId) == "ÕÅ»ñ"  then
+		elseif GetName(sceneId, targetId) == "å¼ è·"  then
 			nNpcmenPai = 3
-		elseif GetName(sceneId, targetId) == "Â·ÈıÄï"  then
+		elseif GetName(sceneId, targetId) == "è·¯ä¸‰å¨˜"  then
 			nNpcmenPai = 4
-		elseif GetName(sceneId, targetId) == "º£·ç×Ó"  then
+		elseif GetName(sceneId, targetId) == "æµ·é£å­"  then
 			nNpcmenPai = 5
-		elseif GetName(sceneId, targetId) == "ÆÆÌ°"  then
+		elseif GetName(sceneId, targetId) == "ç ´è´ª"  then
 			nNpcmenPai = 6
-		elseif GetName(sceneId, targetId) == "³ÌÇàËª"  then
+		elseif GetName(sceneId, targetId) == "ç¨‹é’éœœ"  then
 			nNpcmenPai = 7
-		elseif GetName(sceneId, targetId) == "å£Ì¨×ÓÓğ"  then
+		elseif GetName(sceneId, targetId) == "æ¾¹å°å­ç¾½"  then
 			nNpcmenPai = 8
 		end	
 		
-		--1,µã»÷µÄÊ±ºòÊ×ÏÈÅĞ¶¨Íæ¼ÒÊÇ·ñÎª±¾ÃÅÅÉµÜ×Ó£¬Èç¹û²»ÊÇÔòµ¯³ö¶Ô»°£ºÖ»ÓĞ±¾ÃÅµÜ×Ó²ÅÄÜÒı¼öÎ´¼ÓÈëÃÅÅÉµÄÍæ¼Ò¼ÓÈë±¾ÃÅ
+		--1,ç‚¹å‡»çš„æ—¶å€™é¦–å…ˆåˆ¤å®šç©å®¶æ˜¯å¦ä¸ºæœ¬é—¨æ´¾å¼Ÿå­ï¼Œå¦‚æœä¸æ˜¯åˆ™å¼¹å‡ºå¯¹è¯ï¼šåªæœ‰æœ¬é—¨å¼Ÿå­æ‰èƒ½å¼•èæœªåŠ å…¥é—¨æ´¾çš„ç©å®¶åŠ å…¥æœ¬é—¨
 		if nNpcmenPai ~= GetMenPai(sceneId, selfId)   then
 			BeginEvent(sceneId)
-				AddText(sceneId,"  Ö»ÓĞ±¾ÃÅµÜ×Ó²ÅÄÜÒı¼öÎ´¼ÓÈëÃÅÅÉµÄÍæ¼Ò¼ÓÈë±¾ÃÅ¡£");
+				AddText(sceneId,"  åªæœ‰æœ¬é—¨å¼Ÿå­æ‰èƒ½å¼•èæœªåŠ å…¥é—¨æ´¾çš„ç©å®¶åŠ å…¥æœ¬é—¨ã€‚");
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,targetId)
 			return
 		end
 		
 		BeginEvent(sceneId)
-			AddText(sceneId,"  ÏÖÔÚ¸÷ÃÅÅÉÕù¶áÈË²ÅºÜ¼¤ÁÒ°¡£¬Îª´ËÎÒ¾ö¶¨£¬·²±¾ÃÅµÜ×ÓÍÆ¼ö10¼¶Î´¼ÓÈëÃÅÅÉµÄµÜ×Ó¼ÓÈë±¾ÃÅ£¬½«»á¸øÓèÒ»¶¨µÄ½±Àø¡£");
-			AddNumText(sceneId, x210287_g_ScriptId, "ÎÒÒªÒı¼öËûÈË¼ÓÈëÃÅÅÉ", 1, 901)
+			AddText(sceneId,"  ç°åœ¨å„é—¨æ´¾äº‰å¤ºäººæ‰å¾ˆæ¿€çƒˆå•Šï¼Œä¸ºæ­¤æˆ‘å†³å®šï¼Œå‡¡æœ¬é—¨å¼Ÿå­æ¨è10çº§æœªåŠ å…¥é—¨æ´¾çš„å¼Ÿå­åŠ å…¥æœ¬é—¨ï¼Œå°†ä¼šç»™äºˆä¸€å®šçš„å¥–åŠ±ã€‚");
+			AddNumText(sceneId, x210287_g_ScriptId, "æˆ‘è¦å¼•èä»–äººåŠ å…¥é—¨æ´¾", 1, 901)
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 	
 	elseif GetNumText()== 901  then
 	
-		--Ò»ÌìÖ»ÄÜÒı¼ö3´Î....
+		--ä¸€å¤©åªèƒ½å¼•è3æ¬¡....
 		local lastDayTime = GetMissionData(sceneId, selfId, MD_JOINMEIPAI_DAYTIME)
 		local curDayTime = GetDayTime()
 		if curDayTime > lastDayTime then
@@ -65,17 +65,17 @@ function x210287_OnDefaultEvent( sceneId, selfId, targetId )
 		local TodayCount = GetMissionData(sceneId, selfId, MD_JOINMEIPAI_COUNT)
 		if TodayCount > 2 then
 			BeginEvent(sceneId)
-				AddText(sceneId,"  Äú½ñÌìÒÑ¾­Òı¼öÌ«¶àµÄĞÂÊÖ¼ÓÈëÃÅÅÉÁË£¬ÇëÃ÷ÌìÔÙÒı¼ö¸ü¶àµÄĞÂÊÖ°É£¡");
+				AddText(sceneId,"  æ‚¨ä»Šå¤©å·²ç»å¼•èå¤ªå¤šçš„æ–°æ‰‹åŠ å…¥é—¨æ´¾äº†ï¼Œè¯·æ˜å¤©å†å¼•èæ›´å¤šçš„æ–°æ‰‹å§ï¼");
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,targetId)
 			return
 		end
 
-		-- »ñµÃÕâ¸öÍæ¼ÒÊÇ²»ÊÇºÍÒ»¸öÈËµ¥¶À×é¶ÓÁË
+		-- è·å¾—è¿™ä¸ªç©å®¶æ˜¯ä¸æ˜¯å’Œä¸€ä¸ªäººå•ç‹¬ç»„é˜Ÿäº†
 		--PrintNum(GetTeamSize(sceneId,selfId))
 		if GetTeamSize(sceneId,selfId) < 2  then
 			BeginEvent(sceneId)
-				AddText(sceneId,"  Äú±ØĞëÒªºÍÒı¼öµÄÈËµ¥¶À×é¶ÓÇ°À´¡£");
+				AddText(sceneId,"  æ‚¨å¿…é¡»è¦å’Œå¼•èçš„äººå•ç‹¬ç»„é˜Ÿå‰æ¥ã€‚");
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,targetId)
 			return
@@ -83,16 +83,16 @@ function x210287_OnDefaultEvent( sceneId, selfId, targetId )
 		
 		if GetTeamSize(sceneId,selfId) > 2  then
 			BeginEvent(sceneId)
-				AddText(sceneId,"  ±ØĞëÒªºÍ±»Òı¼öµÄÍæ¼ÒÁ½¸öÈË×é¶ÓÇ°À´·½¿É¡£");
+				AddText(sceneId,"  å¿…é¡»è¦å’Œè¢«å¼•èçš„ç©å®¶ä¸¤ä¸ªäººç»„é˜Ÿå‰æ¥æ–¹å¯ã€‚");
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,targetId)
 			return
 		end
 		
-		--ÅĞ¶Ï×Ô¼º´øÀ´µÄÈË£¬ÊÇ²»ÊÇ·ûºÏÌõ¼ş
+		--åˆ¤æ–­è‡ªå·±å¸¦æ¥çš„äººï¼Œæ˜¯ä¸æ˜¯ç¬¦åˆæ¡ä»¶
 		if GetNearTeamCount(sceneId,selfId) ~= 2 then
 			BeginEvent(sceneId)
-				AddText(sceneId,"  ÄúËùÒªÒı¼öµÄ¶ÔÏó²»ÔÚ¸½½ü¡£");
+				AddText(sceneId,"  æ‚¨æ‰€è¦å¼•èçš„å¯¹è±¡ä¸åœ¨é™„è¿‘ã€‚");
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,targetId)
 			return
@@ -108,51 +108,51 @@ function x210287_OnDefaultEvent( sceneId, selfId, targetId )
 		local distSqNpcToPlayer = (tarPosX - npcPosX) * (tarPosX - npcPosX) + (tarPosZ - npcPosZ) * (tarPosZ - npcPosZ);
 		if distSqNpcToPlayer >= 9 then
 			BeginEvent(sceneId)
-				AddText(sceneId,"  ÄúËùÒªÒı¼öµÄ¶ÔÏó²»ÔÚ¸½½ü¡£");
+				AddText(sceneId,"  æ‚¨æ‰€è¦å¼•èçš„å¯¹è±¡ä¸åœ¨é™„è¿‘ã€‚");
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,targetId)
 			return
 		end
 		
---		-- »ñµÃÕâ¸öĞÂÊÖµÄĞÅÏ¢£¬
+--		-- è·å¾—è¿™ä¸ªæ–°æ‰‹çš„ä¿¡æ¯ï¼Œ
 		if GetMenPai(sceneId,nPlayerId)~=9 or GetLevel(sceneId,nPlayerId)~= 10  then
 			BeginEvent(sceneId)
-				AddText(sceneId,"  Ö»ÓĞµÈ¼¶µ½´ï10¼¶ÇÒÃ»ÓĞ¼ÓÈëÆäËûÃÅÅÉµÄÍæ¼Ò£¬·½¿ÉÍ¨¹ıÒı¼ö¼ÓÈë±¾ÃÅ¡£");
+				AddText(sceneId,"  åªæœ‰ç­‰çº§åˆ°è¾¾10çº§ä¸”æ²¡æœ‰åŠ å…¥å…¶ä»–é—¨æ´¾çš„ç©å®¶ï¼Œæ–¹å¯é€šè¿‡å¼•èåŠ å…¥æœ¬é—¨ã€‚");
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,targetId)
 			return
 		end
 		
-		-- Ö´ĞĞµ½ÕâÀï£¬¾Í¿ÉÒÔ¸øĞÂÊÖ´ò¿ª¶Ô»°¿ò
+		-- æ‰§è¡Œåˆ°è¿™é‡Œï¼Œå°±å¯ä»¥ç»™æ–°æ‰‹æ‰“å¼€å¯¹è¯æ¡†
 		BeginEvent(sceneId)
-			local szStr = "  " .. GetName(sceneId,selfId) .. "ÍÆ¼öÄú¼ÓÈë" .. x210287_GetMenPaiName(GetMenPai(sceneId,selfId)) .. "£¬ÇëÎÊÄúÊÇ·ñÔ¸Òâ¼ÓÈë£¿"
+			local szStr = "  " .. GetName(sceneId,selfId) .. "æ¨èæ‚¨åŠ å…¥" .. x210287_GetMenPaiName(GetMenPai(sceneId,selfId)) .. "ï¼Œè¯·é—®æ‚¨æ˜¯å¦æ„¿æ„åŠ å…¥ï¼Ÿ"
 			AddText(sceneId, szStr)
-			AddNumText(sceneId, x210287_g_ScriptId, "Ô¸Òâ¼ÓÈë", 1, 905)
-			AddNumText(sceneId, x210287_g_ScriptId, "ÎÒÔÙ¿¼ÂÇ¿¼ÂÇ", 1, 906)
+			AddNumText(sceneId, x210287_g_ScriptId, "æ„¿æ„åŠ å…¥", 1, 905)
+			AddNumText(sceneId, x210287_g_ScriptId, "æˆ‘å†è€ƒè™‘è€ƒè™‘", 1, 906)
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,nPlayerId,targetId)
 		
 		BeginEvent(sceneId)
-			AddText(sceneId,"  ÄãÒÑ¾­¸ø¶ÓÓÑ·¢ËÍÁËÍÆ¼öĞÅÏ¢¡£")
+			AddText(sceneId,"  ä½ å·²ç»ç»™é˜Ÿå‹å‘é€äº†æ¨èä¿¡æ¯ã€‚")
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 
 	elseif GetNumText()== 905  then
-		-- °Ñ×Ô¼º¼ÓÈëÕâ¸öÃÅÅÉ£¬¸ø½éÉÜÈË£¬×Ô¼ºµ±Ç°¶ÓÓÑÃÅÅÉ¹±Ï×¶È
+		-- æŠŠè‡ªå·±åŠ å…¥è¿™ä¸ªé—¨æ´¾ï¼Œç»™ä»‹ç»äººï¼Œè‡ªå·±å½“å‰é˜Ÿå‹é—¨æ´¾è´¡çŒ®åº¦
 		x210287_PlayerJoinMenpai(sceneId,selfId,targetId)
 		
---		-- ¹Ø±Õ¶Ô»°¿ò
+--		-- å…³é—­å¯¹è¯æ¡†
 --		BeginUICommand(sceneId)
 --		EndUICommand(sceneId)
 --		DispatchUICommand(sceneId,selfId, 1000)
 		
 	elseif GetNumText()== 906  then
-		-- ¹Ø±Õ¶Ô»°¿ò
+		-- å…³é—­å¯¹è¯æ¡†
 		BeginUICommand(sceneId)
 		EndUICommand(sceneId)
 		DispatchUICommand(sceneId,selfId, 1000)
 		
-		--¸ø¶Ó³¤ÌáÊ¾ÎÒ¾Ü¾øÁËÒı¼ö....
+		--ç»™é˜Ÿé•¿æç¤ºæˆ‘æ‹’ç»äº†å¼•è....
 		if GetNearTeamCount(sceneId,selfId) ~= 2 then
 			return
 		end
@@ -164,7 +164,7 @@ function x210287_OnDefaultEvent( sceneId, selfId, targetId )
 
 		if LuaFnIsCanDoScriptLogic(sceneId, nPlayerId) ~= 0  then
 			BeginEvent(sceneId)
-				AddText(sceneId,"¶Ô·½¾Ü¾øÁËÄúµÄÒı¼ö")
+				AddText(sceneId,"å¯¹æ–¹æ‹’ç»äº†æ‚¨çš„å¼•è")
 			EndEvent(sceneId)
 			DispatchMissionTips(sceneId,nPlayerId)
 		end
@@ -176,23 +176,23 @@ end
 function x210287_GetMenPaiName(nMenPaiId)
 	local szMenPai = ""
 	if nMenPaiId == 0 then
-		szMenPai = "ÉÙÁÖÅÉ"
+		szMenPai = "å°‘æ—æ´¾"
 	elseif nMenPaiId == 1 then
-		szMenPai =  "Ã÷½Ì"
+		szMenPai =  "æ˜æ•™"
 	elseif nMenPaiId == 2 then
-		szMenPai =  "Ø¤°ï"
+		szMenPai =  "ä¸å¸®"
 	elseif nMenPaiId == 3 then
-		szMenPai =  "Îäµ±ÅÉ"
+		szMenPai =  "æ­¦å½“æ´¾"
 	elseif nMenPaiId == 4 then
-		szMenPai =  "¶ëáÒÅÉ"
+		szMenPai =  "å³¨åµ‹æ´¾"
 	elseif nMenPaiId == 5 then
-		szMenPai =  "ĞÇËŞÅÉ"
+		szMenPai =  "æ˜Ÿå®¿æ´¾"
 	elseif nMenPaiId == 6 then
-		szMenPai =  "ÌìÁúÅÉ"
+		szMenPai =  "å¤©é¾™æ´¾"
 	elseif nMenPaiId == 7 then
-		szMenPai =  "ÌìÉ½ÅÉ"
+		szMenPai =  "å¤©å±±æ´¾"
 	elseif nMenPaiId == 8 then
-		szMenPai =  "åĞÒ£ÅÉ"
+		szMenPai =  "é€é¥æ´¾"
 	end	
 	
 	return szMenPai
@@ -200,10 +200,10 @@ end
 
 function x210287_PlayerJoinMenpai(sceneId,selfId,targetId)
 	
-	-- ÊÊµ±×öµã°²È«ĞÔ¼ì²é
+	-- é€‚å½“åšç‚¹å®‰å…¨æ€§æ£€æŸ¥
 	if GetTeamSize(sceneId,selfId) < 2  then
 		BeginEvent(sceneId)
-			AddText(sceneId,"  Äã±ØĞëºÍÄãµÄÍÆ¼öÈË±£³Ö×é¶Ó¡£");
+			AddText(sceneId,"  ä½ å¿…é¡»å’Œä½ çš„æ¨èäººä¿æŒç»„é˜Ÿã€‚");
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 		return
@@ -211,16 +211,16 @@ function x210287_PlayerJoinMenpai(sceneId,selfId,targetId)
 	
 	if GetTeamSize(sceneId,selfId) > 2  then
 		BeginEvent(sceneId)
-			AddText(sceneId,"  ±ØĞëÒªºÍÒı¼öµÄÍæ¼ÒÁ½¸öÈË×é¶ÓÇ°À´·½¿É¡£");
+			AddText(sceneId,"  å¿…é¡»è¦å’Œå¼•èçš„ç©å®¶ä¸¤ä¸ªäººç»„é˜Ÿå‰æ¥æ–¹å¯ã€‚");
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 		return
 	end
 	
-	--ÅĞ¶Ï×Ô¼º´øÀ´µÄÈË£¬ÊÇ²»ÊÇ·ûºÏÌõ¼ş
+	--åˆ¤æ–­è‡ªå·±å¸¦æ¥çš„äººï¼Œæ˜¯ä¸æ˜¯ç¬¦åˆæ¡ä»¶
 	if GetNearTeamCount(sceneId,selfId) ~= 2 then
 		BeginEvent(sceneId)
-			AddText(sceneId,"  ÄãµÄÍÆ¼öÈË±ØĞëÒªÔÚ¸½½ü¡£");
+			AddText(sceneId,"  ä½ çš„æ¨èäººå¿…é¡»è¦åœ¨é™„è¿‘ã€‚");
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 		return
@@ -231,7 +231,7 @@ function x210287_PlayerJoinMenpai(sceneId,selfId,targetId)
 		nPlayerId = GetNearTeamMember(sceneId,selfId,1)
 	end
 	
-	-- ÑéÖ¤Õâ¸öIdÊÇ²»ÊÇÓĞĞ§
+	-- éªŒè¯è¿™ä¸ªIdæ˜¯ä¸æ˜¯æœ‰æ•ˆ
 	if LuaFnIsCanDoScriptLogic(sceneId, nPlayerId) == 0  then
 		return
 	end
@@ -244,140 +244,140 @@ function x210287_PlayerJoinMenpai(sceneId,selfId,targetId)
 	
 	local szMenpai = x210287_GetMenPaiName(nMenPaiId)
 	
-	-- ÖÆ¶¨¼ÓÈëÃÅÅÉµÄ²Ù×÷
+	-- åˆ¶å®šåŠ å…¥é—¨æ´¾çš„æ“ä½œ
 	if LuaFnGetPropertyBagSpace( sceneId, selfId ) < 2 then
 		BeginEvent(sceneId)
-			AddText(sceneId,"  ÕûÀíÒ»ÏÂ±³°ü£¬ĞèÒªÓĞÁ½¸ö¿ÕÎ»ÖÃ£¬ÎÒ»áÓĞ½±Àø¸øÄã£¡")
+			AddText(sceneId,"  æ•´ç†ä¸€ä¸‹èƒŒåŒ…ï¼Œéœ€è¦æœ‰ä¸¤ä¸ªç©ºä½ç½®ï¼Œæˆ‘ä¼šæœ‰å¥–åŠ±ç»™ä½ ï¼")
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 	elseif GetLevel( sceneId, selfId ) < 10 then
 		BeginEvent(sceneId)
-			AddText(sceneId,"Ê©Ö÷»¹ÊÇµÈµ½10¼¶Ö®ºóÔÙÀ´°İÊ¦Ñ§ÒÕ°É£¡")
+			AddText(sceneId,"æ–½ä¸»è¿˜æ˜¯ç­‰åˆ°10çº§ä¹‹åå†æ¥æ‹œå¸ˆå­¦è‰ºå§ï¼")
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 	else
 		x210287_g_MenPai = GetMenPai(sceneId, selfId)
 		if x210287_g_MenPai == 0 then
 			BeginEvent(sceneId)
-				AddText(sceneId, "ÄãÓÖÀ´ÏûÇ²ÎªÊ¦ÁË£¬ÄãÒÑÊÇÎÒÉÙÁÖµÜ×Ó£¬»¹°İÊ²Ã´Ê¦ÄØ¡£")
+				AddText(sceneId, "ä½ åˆæ¥æ¶ˆé£ä¸ºå¸ˆäº†ï¼Œä½ å·²æ˜¯æˆ‘å°‘æ—å¼Ÿå­ï¼Œè¿˜æ‹œä»€ä¹ˆå¸ˆå‘¢ã€‚")
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,targetId)
-		--·µ»ØÖµÎª9±íÊ¾ÎŞÃÅÅÉ
+		--è¿”å›å€¼ä¸º9è¡¨ç¤ºæ— é—¨æ´¾
 		elseif x210287_g_MenPai==9	then
 			
 			LuaFnJoinMenpai(sceneId, selfId, targetId, nMenPaiId)
 
-			-- ÉèÖÃÃÅÅÉ¹ØÏµÖµ
+			-- è®¾ç½®é—¨æ´¾å…³ç³»å€¼
 			CallScriptFunction( 200099, "InitRelation", sceneId, selfId )
 
 			BeginEvent(sceneId)
-  			AddText(sceneId,"ÄãÒÑ¾­¼ÓÈë" .. szMenpai .. "£¡");
+  			AddText(sceneId,"ä½ å·²ç»åŠ å…¥" .. szMenpai .. "ï¼");
 			EndEvent(sceneId)
 			DispatchMissionTips(sceneId,selfId)
 			
-			-- °ÑÏà¹ØµÄĞÄ·¨ÉèÖÃÎª10¼¶
+			-- æŠŠç›¸å…³çš„å¿ƒæ³•è®¾ç½®ä¸º10çº§
 			LuaFnSetXinFaLevel(sceneId,selfId, 1 + nMenPaiId*6, 10)
 			LuaFnSetXinFaLevel(sceneId,selfId, 4 + nMenPaiId*6, 10)
 			LuaFnSetXinFaLevel(sceneId,selfId, 5 + nMenPaiId*6, 10)
 			
-			if nMenPaiId == 0  then 		-- ÉÙÁÖ
+			if nMenPaiId == 0  then 		-- å°‘æ—
 	  		if TryRecieveItem( sceneId, selfId, 10124000, 1 ) >= 0 then
-					str		= "#YÄã»ñµÃÁË"..GetItemName( sceneId, 10124000).."¡£"
+					str		= "#Yä½ è·å¾—äº†"..GetItemName( sceneId, 10124000).."ã€‚"
 					x210287_MsgBox( sceneId, selfId, str )
 				end
 				LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, 160, 0)
 				LuaFnSendSystemMail( sceneId, GetName(sceneId,selfId), "#{LevelMail_menpai_3}" )
-			elseif nMenPaiId == 1  then  --Ã÷½Ì
+			elseif nMenPaiId == 1  then  --æ˜æ•™
 	  		if TryRecieveItem( sceneId, selfId, 10124001, 1 ) >= 0 then
-					str		= "#YÄã»ñµÃÁË"..GetItemName( sceneId, 10124001).."¡£"
+					str		= "#Yä½ è·å¾—äº†"..GetItemName( sceneId, 10124001).."ã€‚"
 					x210287_MsgBox( sceneId, selfId, str )
 				end
 				LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, 161, 0)
 				LuaFnSendSystemMail( sceneId, GetName(sceneId,selfId), "#{LevelMail_menpai_2}" )
-			elseif nMenPaiId == 2  then  --Ø¤°ï
+			elseif nMenPaiId == 2  then  --ä¸å¸®
 	  		if TryRecieveItem( sceneId, selfId, 10124002, 1 ) >= 0 then
-					str		= "#YÄã»ñµÃÁË"..GetItemName( sceneId, 10124002).."¡£"
+					str		= "#Yä½ è·å¾—äº†"..GetItemName( sceneId, 10124002).."ã€‚"
 					x210287_MsgBox( sceneId, selfId, str )
 				end
 				LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, 162, 0)
 				LuaFnSendSystemMail( sceneId, GetName(sceneId,selfId), "#{LevelMail_menpai_6}" )
-			elseif nMenPaiId == 3  then		--Îäµ±ÅÉ
+			elseif nMenPaiId == 3  then		--æ­¦å½“æ´¾
 	  		if TryRecieveItem( sceneId, selfId, 10124004, 1 ) >= 0 then
-					str		= "#YÄã»ñµÃÁË"..GetItemName( sceneId, 10124004).."¡£"
+					str		= "#Yä½ è·å¾—äº†"..GetItemName( sceneId, 10124004).."ã€‚"
 					x210287_MsgBox( sceneId, selfId, str )
 				end
 				LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, 163, 0)
 				LuaFnSendSystemMail( sceneId, GetName(sceneId,selfId), "#{LevelMail_menpai_9}" )
-			elseif nMenPaiId == 4  then  --¶ëáÒÅÉ
+			elseif nMenPaiId == 4  then  --å³¨åµ‹æ´¾
 	  		if TryRecieveItem( sceneId, selfId, 10124003, 1 ) >= 0 then
-					str		= "#YÄã»ñµÃÁË"..GetItemName( sceneId, 10124003).."¡£"
+					str		= "#Yä½ è·å¾—äº†"..GetItemName( sceneId, 10124003).."ã€‚"
 					x210287_MsgBox( sceneId, selfId, str )
 				end
 				LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, 164, 0)
 				LuaFnSendSystemMail( sceneId, GetName(sceneId,selfId), "#{LevelMail_menpai_4}" )
-			elseif nMenPaiId == 5  then  --ĞÇËŞÅÉ
+			elseif nMenPaiId == 5  then  --æ˜Ÿå®¿æ´¾
 	  		if TryRecieveItem( sceneId, selfId, 10124005, 1 ) >= 0 then
-					str		= "#YÄã»ñµÃÁË"..GetItemName( sceneId, 10124005).."¡£"
+					str		= "#Yä½ è·å¾—äº†"..GetItemName( sceneId, 10124005).."ã€‚"
 					x210287_MsgBox( sceneId, selfId, str )
 				end
 				LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, 165, 0)
 				LuaFnSendSystemMail( sceneId, GetName(sceneId,selfId), "#{LevelMail_menpai_1}" )
-			elseif nMenPaiId == 6  then  --ÌìÁúÅÉ
+			elseif nMenPaiId == 6  then  --å¤©é¾™æ´¾
 	  		if TryRecieveItem( sceneId, selfId, 10124008, 1 ) >= 0 then
-					str		= "#YÄã»ñµÃÁË"..GetItemName( sceneId, 10124008).."¡£"
+					str		= "#Yä½ è·å¾—äº†"..GetItemName( sceneId, 10124008).."ã€‚"
 					x210287_MsgBox( sceneId, selfId, str )
 				end
 				LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, 166, 0)
 				LuaFnSendSystemMail( sceneId, GetName(sceneId,selfId), "#{LevelMail_menpai_5}" )
-			elseif nMenPaiId == 7  then  --ÌìÉ½ÅÉ
+			elseif nMenPaiId == 7  then  --å¤©å±±æ´¾
 	  		if TryRecieveItem( sceneId, selfId, 10124006, 1 ) >= 0 then
-					str		= "#YÄã»ñµÃÁË"..GetItemName( sceneId, 10124006).."¡£"
+					str		= "#Yä½ è·å¾—äº†"..GetItemName( sceneId, 10124006).."ã€‚"
 					x210287_MsgBox( sceneId, selfId, str )
 				end
 				LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, 167, 0)
 				LuaFnSendSystemMail( sceneId, GetName(sceneId,selfId), "#{LevelMail_menpai_7}" )
-			elseif nMenPaiId == 8  then  --åĞÒ£ÅÉ
+			elseif nMenPaiId == 8  then  --é€é¥æ´¾
 	  		if TryRecieveItem( sceneId, selfId, 10124007, 1 ) >= 0 then
-					str		= "#YÄã»ñµÃÁË"..GetItemName( sceneId, 10124007).."¡£"
+					str		= "#Yä½ è·å¾—äº†"..GetItemName( sceneId, 10124007).."ã€‚"
 					x210287_MsgBox( sceneId, selfId, str )
 				end
 				LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, 168, 0)
 				LuaFnSendSystemMail( sceneId, GetName(sceneId,selfId), "#{LevelMail_menpai_8}" )
 			end
 
-			--ÃÅÅÉ½±ÀøÕÙ¼¯Áî
+			--é—¨æ´¾å¥–åŠ±å¬é›†ä»¤
 			for i=1, 20 do
 				TryRecieveItem( sceneId, selfId, 30501001, 1 )
 			end
-			x210287_MsgBox( sceneId, selfId, "µÃµ½20Ã¶ÃÅÅÉÕÙ¼¯Áî¡£" )
+			x210287_MsgBox( sceneId, selfId, "å¾—åˆ°20æšé—¨æ´¾å¬é›†ä»¤ã€‚" )
 
 			if	LuaFnGetSex( sceneId, selfId)==0	then
-				LuaFnMsg2Player( sceneId, selfId,"ÄãÒÑ¾­¼ÓÈë" .. szMenpai .. "£¡",MSG2PLAYER_PARA)
+				LuaFnMsg2Player( sceneId, selfId,"ä½ å·²ç»åŠ å…¥" .. szMenpai .. "ï¼",MSG2PLAYER_PARA)
 --				CallScriptFunction( 220900, "OnDefaultEvent",sceneId, selfId, targetId )
 			else
-				LuaFnMsg2Player( sceneId, selfId,"ÄãÒÑ¾­¼ÓÈë" .. szMenpai .. "£¡",MSG2PLAYER_PARA)
+				LuaFnMsg2Player( sceneId, selfId,"ä½ å·²ç»åŠ å…¥" .. szMenpai .. "ï¼",MSG2PLAYER_PARA)
 --				CallScriptFunction( 220900, "OnDefaultEvent",sceneId, selfId, targetId )
 			end
 			
-			--¸øÍÆ¼öÈË½±Àø JOIN_MENPAI_WELCOME nPlayerId
+			--ç»™æ¨èäººå¥–åŠ± JOIN_MENPAI_WELCOME nPlayerId
 			local nMenpaiPoint = GetHumanMenpaiPoint(sceneId, nPlayerId)
 			SetHumanMenpaiPoint(sceneId, nPlayerId, nMenpaiPoint+20)
-			LuaFnMsg2Player(sceneId, nPlayerId,"ÓÉÓÚÄúµÄÍÆ¼ö£¬Äú»ñµÃÁË20Ê¦ÃÅ¹±Ï×¶È¡£",MSG2PLAYER_PARA)
+			LuaFnMsg2Player(sceneId, nPlayerId,"ç”±äºæ‚¨çš„æ¨èï¼Œæ‚¨è·å¾—äº†20å¸ˆé—¨è´¡çŒ®åº¦ã€‚",MSG2PLAYER_PARA)
 			
-			--Ôö¼Ó½ñÌìÍÆ¼öµÄ´ÎÊı....
+			--å¢åŠ ä»Šå¤©æ¨èçš„æ¬¡æ•°....
 			local TodayCount = GetMissionData(sceneId, nPlayerId, MD_JOINMEIPAI_COUNT)
 			SetMissionData(sceneId, nPlayerId, MD_JOINMEIPAI_COUNT, TodayCount+1 )
 
-			-- ÃÅÅÉ¹«¸æ
+			-- é—¨æ´¾å…¬å‘Š
 			local szPlayer1 = GetName(sceneId, selfId)
 			local szPlayer2 = GetName(sceneId, nPlayerId)
 			local szBroad = "@*;SrvMsg;" .. "tuijian_join_menpai" ..";"..szPlayer1..";"..szPlayer2..";"..szPlayer2
 			
 			BroadMsgByChatPipe(sceneId, selfId, szBroad, 7)
 			
-			-- ¸ø±»Òı¼öÈËÒ»¸ö¶Ô»°ÌáÊ¾
+			-- ç»™è¢«å¼•èäººä¸€ä¸ªå¯¹è¯æç¤º
 			BeginEvent(sceneId)
-				AddText(sceneId, "  ÄãÒÑ¾­³ÉÎªÁË±¾ÅÉµÜ×Ó¡£")
+				AddText(sceneId, "  ä½ å·²ç»æˆä¸ºäº†æœ¬æ´¾å¼Ÿå­ã€‚")
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,targetId)
 			
@@ -387,7 +387,7 @@ function x210287_PlayerJoinMenpai(sceneId,selfId,targetId)
 end
 
 --**********************************
---ÏûÏ¢ÌáÊ¾
+--æ¶ˆæ¯æç¤º
 --**********************************
 function x210287_MsgBox( sceneId, selfId, str )
 	Msg2Player( sceneId, selfId, str, MSG2PLAYER_PARA )

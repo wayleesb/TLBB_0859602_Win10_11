@@ -3,23 +3,23 @@ x500601_g_ScriptId	= 500601
 x500601_g_Position_X=160.2399
 x500601_g_Position_Z=134.1486
 x500601_g_SceneID=0
-x500601_g_AccomplishNPC_Name="ÖÜÌìÊ¦"
+x500601_g_AccomplishNPC_Name="å‘¨å¤©å¸ˆ"
 x500601_g_PreMissionId	=	407
 x500601_g_MissionId			= 408
 x500601_g_MissionIdNext	= 409
 x500601_g_NextScriptId	= 500602
 x500601_g_AcceptNPC_SceneID	=	0
-x500601_g_Name 					= "²·»Úç÷"
+x500601_g_Name 					= "åœæ‚”çª"
 x500601_g_MissionKind			= 11
 x500601_g_MissionLevel		= 28
 x500601_g_IfMissionElite	= 0
-x500601_g_IsMissionOkFail	= 0		--ÈÎÎñ²ÎÊıµÄµÚ0Î»
-x500601_g_MissionName			= "ÉúËÀÆå¾Ö"
+x500601_g_IsMissionOkFail	= 0		--ä»»åŠ¡å‚æ•°çš„ç¬¬0ä½
+x500601_g_MissionName			= "ç”Ÿæ­»æ£‹å±€"
 x500601_g_MissionInfo			= "#{YD_20080421_32}"
 x500601_g_MissionTarget		= "#{YD_20080421_31}"
 x500601_g_ContinueInfo		= "#{YD_20080421_33}"
 x500601_g_MissionComplete	= "#{YD_20080421_34}"
 x500601_g_MaxRound	= 1
 x500601_g_ControlScript		= 001066
-x500601_g_Custom	= { {id="ÒÑÉ±ËÀÔ¶¹ÅÆå»ê",num=1} }
+x500601_g_Custom	= { {id="å·²æ€æ­»è¿œå¤æ£‹é­‚",num=1} }
 --MisDescEnd

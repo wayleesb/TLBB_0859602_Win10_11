@@ -1,50 +1,50 @@
 --MisDescBegin
 x600026_g_ScriptId = 600026
 x600026_g_MissionId = 1110
-x600026_g_Name = "Ù¡Ü½ÈØ"
+x600026_g_Name = "ä½ŸèŠ™è“‰"
 x600026_g_MissionLevel = 10000
 x600026_g_MissionKind = 50
 x600026_g_IfMissionElite = 0
-x600026_g_IsMissionOkFail			=0	--0 ÈÎÎñÍê³É±ê¼Ç
-x600026_g_MissionParam_SubId		=1	--1 ×ÓÈÎÎñ½Å±¾ºÅ´æ·ÅÎ»ÖÃ
-x600026_g_Param_sceneid				=2	--2 µ±Ç°¸±±¾ÈÎÎñµÄ³¡¾°ºÅ
-x600026_g_MissionParam_Phase		=3	--3 ½×¶ÎºÅ ´ËºÅÓÃÓÚÇø·Öµ±Ç°ÈÎÎñUIµÄÃèÊöĞÅÏ¢
-x600026_g_MissionParam_MasterId		=4	--4 ÃÅÅÉÕÆÃÅµÄNPCIdºÅ
-x600026_g_MissionParam_MenpaiIndex	=5	--5 Ä³ÃÅÅÉµÄË÷Òı£¬·Ö±ğÓÃÓÚ²éÕÒ×Ö·û´®ÁĞ±íÖĞÄ³ÃÅÅÉµÄÃû³Æ[¿Í»§¶Ë]ÒÔ¼°ÈÎÎñÓëÃÅÅÉÏà¹ØµÄĞÅÏ¢[·şÎñÆ÷¶Ë]
+x600026_g_IsMissionOkFail			=0	--0 ä»»åŠ¡å®Œæˆæ ‡è®°
+x600026_g_MissionParam_SubId		=1	--1 å­ä»»åŠ¡è„šæœ¬å·å­˜æ”¾ä½ç½®
+x600026_g_Param_sceneid				=2	--2 å½“å‰å‰¯æœ¬ä»»åŠ¡çš„åœºæ™¯å·
+x600026_g_MissionParam_Phase		=3	--3 é˜¶æ®µå· æ­¤å·ç”¨äºåŒºåˆ†å½“å‰ä»»åŠ¡UIçš„æè¿°ä¿¡æ¯
+x600026_g_MissionParam_MasterId		=4	--4 é—¨æ´¾æŒé—¨çš„NPCIdå·
+x600026_g_MissionParam_MenpaiIndex	=5	--5 æŸé—¨æ´¾çš„ç´¢å¼•ï¼Œåˆ†åˆ«ç”¨äºæŸ¥æ‰¾å­—ç¬¦ä¸²åˆ—è¡¨ä¸­æŸé—¨æ´¾çš„åç§°[å®¢æˆ·ç«¯]ä»¥åŠä»»åŠ¡ä¸é—¨æ´¾ç›¸å…³çš„ä¿¡æ¯[æœåŠ¡å™¨ç«¯]
 x600026_g_MissionRound = 55
-x600026_g_MissionName = "À©ÕÅÈÎÎñ"
-x600026_g_MissionInfo = ""													--ÈÎÎñÃèÊö
-x600026_g_MissionTarget = "%f"												--ÈÎÎñÄ¿±ê
-x600026_g_ContinueInfo = "    ÄãµÄÈÎÎñ»¹Ã»ÓĞÍê³ÉÃ´£¿"						--Î´Íê³ÉÈÎÎñµÄnpc¶Ô»°
-x600026_g_SubmitInfo = "    ÊÂÇé½øÕ¹µÃÈçºÎ£¿"								--Íê³ÉÎ´Ìá½»Ê±µÄnpc¶Ô»°
-x600026_g_MissionComplete = "    ÉõºÃ£¬´Ë´ÎĞĞ¶¯½­ºş¾¡Öª£¬ÎŞ²»³ÆÎÒ°ï´óµÂ´óÒå¡£"	--Íê³ÉÈÎÎñnpcËµ»°µÄ»°
+x600026_g_MissionName = "æ‰©å¼ ä»»åŠ¡"
+x600026_g_MissionInfo = ""													--ä»»åŠ¡æè¿°
+x600026_g_MissionTarget = "%f"												--ä»»åŠ¡ç›®æ ‡
+x600026_g_ContinueInfo = "    ä½ çš„ä»»åŠ¡è¿˜æ²¡æœ‰å®Œæˆä¹ˆï¼Ÿ"						--æœªå®Œæˆä»»åŠ¡çš„npcå¯¹è¯
+x600026_g_SubmitInfo = "    äº‹æƒ…è¿›å±•å¾—å¦‚ä½•ï¼Ÿ"								--å®Œæˆæœªæäº¤æ—¶çš„npcå¯¹è¯
+x600026_g_MissionComplete = "    ç”šå¥½ï¼Œæ­¤æ¬¡è¡ŒåŠ¨æ±Ÿæ¹–å°½çŸ¥ï¼Œæ— ä¸ç§°æˆ‘å¸®å¤§å¾·å¤§ä¹‰ã€‚"	--å®Œæˆä»»åŠ¡npcè¯´è¯çš„è¯
 x600026_g_StrForePart = 3
 x600026_g_FormatList = {
 "",
-"    ÕÒ%1nÔ®¾È¸ÃÃÅÅÉ´ó½Ù´óÄÑ¡£",
-"    »¤ËÍ%2sµÜ×Ó×ß³ö½ûµØ¡£",
+"    æ‰¾%1næ´æ•‘è¯¥é—¨æ´¾å¤§åŠ«å¤§éš¾ã€‚",
+"    æŠ¤é€%2så¼Ÿå­èµ°å‡ºç¦åœ°ã€‚",
 }
 x600026_g_StrList = {
-[0] = "ÉÙÁÖ",
-[1] = "Ã÷½Ì",
-[2] = "Ø¤°ï",
-[3] = "Îäµ±",
-[4] = "¶ëáÒ",
-[5] = "ÌìÁúËÂ",
-[6] = "ĞÇËŞ",
-[7] = "ÌìÉ½",
-[8] = "åĞÒ£",
+[0] = "å°‘æ—",
+[1] = "æ˜æ•™",
+[2] = "ä¸å¸®",
+[3] = "æ­¦å½“",
+[4] = "å³¨åµ‹",
+[5] = "å¤©é¾™å¯º",
+[6] = "æ˜Ÿå®¿",
+[7] = "å¤©å±±",
+[8] = "é€é¥",
 }
 x600026_g_MenpaiInfo = {
-[0] = { Name = "ÉÙÁÖ",		NpcId = 1700008,	CopySceneName = "ËşÁÖ",		Type = FUBEN_TALIN1,		    Map = "tongrenxiang_2.nav",		Exit = "tongrenxiang_2_area.ini",	Monster = "tongrenxiang_2_monster_%d.ini", 	EntrancePos = { x = 28, z = 52 },	BackPos = { x = 38, z = 97 }, },
-[1] = { Name = "Ã÷½Ì",		NpcId = 1700009,	CopySceneName = "¹âÃ÷¶´",	Type = FUBEN_GUANGMINGDONG1,	Map = "guangmingdong_2.nav",	Exit = "guangmingdong_2_area.ini",	Monster = "guangmingdong_2_monster_%d.ini", EntrancePos = { x = 19, z = 42 },	BackPos = { x = 98, z = 57 }, },
-[2] = { Name = "Ø¤°ï",		NpcId = 1700010,	CopySceneName = "¾Æ½Ñ",		Type = FUBEN_JIUJIAO1,			Map = "jiujiao_2.nav",			Exit = "jiujiao_2_area.ini",		Monster = "jiujiao_2_monster_%d.ini", 		EntrancePos = { x = 45, z = 47 },	BackPos = { x = 91, z = 99 }, },
-[3] = { Name = "Îäµ±",		NpcId = 1700011,	CopySceneName = "ÁéĞÔ·å",	Type = FUBEN_LINGXINGFENG1,		Map = "lingxingfeng_2.nav",		Exit = "lingxingfeng_2_area.ini",	Monster = "lingxingfeng_2_monster_%d.ini", 	EntrancePos = { x = 42, z = 46 },	BackPos = { x = 77, z = 86 }, },
-[4] = { Name = "¶ëáÒ",		NpcId = 1700012,	CopySceneName = "ÌÒ»¨Õó",	Type = FUBEN_TAOHUAZHEN1,		Map = "taohuazhen_2.nav",		Exit = "taohuazhen_2_area.ini",		Monster = "taohuazhen_2_monster_%d.ini", 	EntrancePos = { x = 26, z = 46 },	BackPos = { x = 96, z = 73 }, },
-[5] = { Name = "ÌìÁúËÂ",	NpcId = 1700013,	CopySceneName = "Ëşµ×",		Type = FUBEN_TADI1,				Map = "tadi_2.nav",				Exit = "tadi_2_area.ini",			Monster = "tadi_2_monster_%d.ini", 			EntrancePos = { x = 45, z = 48 },	BackPos = { x = 96, z = 67 }, },
-[6] = { Name = "ĞÇËŞ",		NpcId = 1700014,	CopySceneName = "ÎåÉñ¶´",	Type = FUBEN_WUSHENDONG1,		Map = "wushendong_2.nav",		Exit = "wushendong_2_area.ini",		Monster = "wushendong_2_monster_%d.ini", 	EntrancePos = { x = 14, z = 40 },	BackPos = { x = 142, z = 56 }, },
-[7] = { Name = "ÌìÉ½",		NpcId = 1700015,	CopySceneName = "ÕÛÃ··å",	Type = FUBEN_ZHEMEIFENG1,		Map = "zhemeifeng_2.nav",		Exit = "zhemeifeng_2_area.ini",		Monster = "zhemeifeng_2_monster_%d.ini", 	EntrancePos = { x = 29, z = 49 },	BackPos = { x = 90, z = 45 }, },
-[8] = { Name = "åĞÒ£",		NpcId = 1700016,	CopySceneName = "¹Èµ×",		Type = FUBEN_GUDI1,				Map = "gudi_2.nav",				Exit = "gudi_2_area.ini",			Monster = "gudi_2_monster_%d.ini", 			EntrancePos = { x = 42, z = 47 },	BackPos = { x = 124, z = 145 }, },
+[0] = { Name = "å°‘æ—",		NpcId = 1700008,	CopySceneName = "å¡”æ—",		Type = FUBEN_TALIN1,		    Map = "tongrenxiang_2.nav",		Exit = "tongrenxiang_2_area.ini",	Monster = "tongrenxiang_2_monster_%d.ini", 	EntrancePos = { x = 28, z = 52 },	BackPos = { x = 38, z = 97 }, },
+[1] = { Name = "æ˜æ•™",		NpcId = 1700009,	CopySceneName = "å…‰æ˜æ´",	Type = FUBEN_GUANGMINGDONG1,	Map = "guangmingdong_2.nav",	Exit = "guangmingdong_2_area.ini",	Monster = "guangmingdong_2_monster_%d.ini", EntrancePos = { x = 19, z = 42 },	BackPos = { x = 98, z = 57 }, },
+[2] = { Name = "ä¸å¸®",		NpcId = 1700010,	CopySceneName = "é…’çª–",		Type = FUBEN_JIUJIAO1,			Map = "jiujiao_2.nav",			Exit = "jiujiao_2_area.ini",		Monster = "jiujiao_2_monster_%d.ini", 		EntrancePos = { x = 45, z = 47 },	BackPos = { x = 91, z = 99 }, },
+[3] = { Name = "æ­¦å½“",		NpcId = 1700011,	CopySceneName = "çµæ€§å³°",	Type = FUBEN_LINGXINGFENG1,		Map = "lingxingfeng_2.nav",		Exit = "lingxingfeng_2_area.ini",	Monster = "lingxingfeng_2_monster_%d.ini", 	EntrancePos = { x = 42, z = 46 },	BackPos = { x = 77, z = 86 }, },
+[4] = { Name = "å³¨åµ‹",		NpcId = 1700012,	CopySceneName = "æ¡ƒèŠ±é˜µ",	Type = FUBEN_TAOHUAZHEN1,		Map = "taohuazhen_2.nav",		Exit = "taohuazhen_2_area.ini",		Monster = "taohuazhen_2_monster_%d.ini", 	EntrancePos = { x = 26, z = 46 },	BackPos = { x = 96, z = 73 }, },
+[5] = { Name = "å¤©é¾™å¯º",	NpcId = 1700013,	CopySceneName = "å¡”åº•",		Type = FUBEN_TADI1,				Map = "tadi_2.nav",				Exit = "tadi_2_area.ini",			Monster = "tadi_2_monster_%d.ini", 			EntrancePos = { x = 45, z = 48 },	BackPos = { x = 96, z = 67 }, },
+[6] = { Name = "æ˜Ÿå®¿",		NpcId = 1700014,	CopySceneName = "äº”ç¥æ´",	Type = FUBEN_WUSHENDONG1,		Map = "wushendong_2.nav",		Exit = "wushendong_2_area.ini",		Monster = "wushendong_2_monster_%d.ini", 	EntrancePos = { x = 14, z = 40 },	BackPos = { x = 142, z = 56 }, },
+[7] = { Name = "å¤©å±±",		NpcId = 1700015,	CopySceneName = "æŠ˜æ¢…å³°",	Type = FUBEN_ZHEMEIFENG1,		Map = "zhemeifeng_2.nav",		Exit = "zhemeifeng_2_area.ini",		Monster = "zhemeifeng_2_monster_%d.ini", 	EntrancePos = { x = 29, z = 49 },	BackPos = { x = 90, z = 45 }, },
+[8] = { Name = "é€é¥",		NpcId = 1700016,	CopySceneName = "è°·åº•",		Type = FUBEN_GUDI1,				Map = "gudi_2.nav",				Exit = "gudi_2_area.ini",			Monster = "gudi_2_monster_%d.ini", 			EntrancePos = { x = 42, z = 47 },	BackPos = { x = 124, z = 145 }, },
 }
 x600026_g_CityMissionScript = 600001
 x600026_g_ExpandScript = 600023

@@ -1,21 +1,21 @@
-local g_KeepHeight = 105; --ÆÁÄ»ÉÏ·½²»¿É¸²¸ÇµÄÇøÓòËùÕ¼µÄ¸ß¶È
-local g_MinHeight = 107; --ÁÄÌìÇøÓò¸ß¶ÈµÄ×îĞ¡Öµ
-local g_MaxHeight = 449-28; --ÁÄÌìÇøÓò¸ß¶ÈµÄ×î´óÖµ
-local g_MinWidth	=	320;	--ÁÄÌìÇøÓò¿í¶ÈµÄ×îĞ¡Öµ
-local g_MaxWidth	=	800-180;	--ÁÄÌìÇøÓò¿í¶ÈµÄ×î´óÖµ
+local g_KeepHeight = 105; --å±å¹•ä¸Šæ–¹ä¸å¯è¦†ç›–çš„åŒºåŸŸæ‰€å çš„é«˜åº¦
+local g_MinHeight = 107; --èŠå¤©åŒºåŸŸé«˜åº¦çš„æœ€å°å€¼
+local g_MaxHeight = 449-28; --èŠå¤©åŒºåŸŸé«˜åº¦çš„æœ€å¤§å€¼
+local g_MinWidth	=	320;	--èŠå¤©åŒºåŸŸå®½åº¦çš„æœ€å°å€¼
+local g_MaxWidth	=	800-180;	--èŠå¤©åŒºåŸŸå®½åº¦çš„æœ€å¤§å€¼
 
-local g_MoveUpHeight = 70; --ÆÁÄ»·Ö±æÂÊ±ä»¯Ê±µÄÉÏÉı¸ß¶È
+local g_MoveUpHeight = 70; --å±å¹•åˆ†è¾¨ç‡å˜åŒ–æ—¶çš„ä¸Šå‡é«˜åº¦
 local g_CurSpeakerName = "";
 local channel_config = {};
 local CHANNEL_DATA = {};
 
-local channel_seltab = 0;		--Ä¬ÈÏÑ¡Ôñ¡°È«²¿¡±
+local channel_seltab = 0;		--é»˜è®¤é€‰æ‹©â€œå…¨éƒ¨â€
 local channel_tab = {};
-local CHANNEL_TAB_MAX = 7;	--×î´óÓĞÎå¸öÒ³ÃæTab
-local channel_tab_total = 4;	--Ä¬ÈÏÓĞÁ½¸öÒ³ÃæTab, 0 & 1
+local CHANNEL_TAB_MAX = 7;	--æœ€å¤§æœ‰äº”ä¸ªé¡µé¢Tab
+local channel_tab_total = 4;	--é»˜è®¤æœ‰ä¸¤ä¸ªé¡µé¢Tab, 0 & 1
 
-local channel_sendhis = 0;	--0 ²»ÊÇ´Ó·¢ËÍÀúÊ·Àï»ñÈ¡µÄ×Ö´®
-														--1 ÊÇ´Ó·¢ËÍÀúÊ·Àï»ñÈ¡µÄ×Ö´®
+local channel_sendhis = 0;	--0 ä¸æ˜¯ä»å‘é€å†å²é‡Œè·å–çš„å­—ä¸²
+														--1 æ˜¯ä»å‘é€å†å²é‡Œè·å–çš„å­—ä¸²
 local channel_sendhis2 = 0;
 
 local g_CurFlashTab = -1;
@@ -23,11 +23,11 @@ local g_CurFlashTab = -1;
 local channel_flash = {};
 local CHANNEL_DATA_NEAR = 
 	{	
-		"set:Buttons image:Channelvicinity_Normal", 		-- ÆµµÀÑ¡Ôñ°´Å¥ÆÕÍ¨
-		"set:Buttons image:ChannelVicinity_Hover", 		-- ÆµµÀÑ¡Ôñ°´Å¥¼¤»î
-		"set:Buttons image:ChannelVicinity_Pushed",		-- ÆµµÀÑ¡Ôñ°´Å¥°´ÏÂ
-		"#cFFFFFF",									-- ÁÄÌìÄÚÈİÑÕÉ«
-		"#e010101#cFFFFFF",						-- Ãû³Æ¡¾¸½½ü¡¿
+		"set:Buttons image:Channelvicinity_Normal", 		-- é¢‘é“é€‰æ‹©æŒ‰é’®æ™®é€š
+		"set:Buttons image:ChannelVicinity_Hover", 		-- é¢‘é“é€‰æ‹©æŒ‰é’®æ¿€æ´»
+		"set:Buttons image:ChannelVicinity_Pushed",		-- é¢‘é“é€‰æ‹©æŒ‰é’®æŒ‰ä¸‹
+		"#cFFFFFF",									-- èŠå¤©å†…å®¹é¢œè‰²
+		"#e010101#cFFFFFF",						-- åç§°ã€é™„è¿‘ã€‘
 --		"#91#e010101#cFFFFFF",
 	};
 	
@@ -37,7 +37,7 @@ local CHANNEL_DATA_SCENE =
 		"set:Buttons image:ChannelWorld_Hover", 
 		"set:Buttons image:ChannelWorld_Pushed",
 		"#cFFFFFF",
-		"#e010101#c00FFCC",					--¡¾ÊÀ½ç¡¿
+		"#e010101#c00FFCC",					--ã€ä¸–ç•Œã€‘
 --		"#92#e010101#c00FF00",
 	};
 	
@@ -47,7 +47,7 @@ local CHANNEL_DATA_PRIVATE =
 		"set:Buttons image:ChannelPersonal_Hover", 
 		"set:Buttons image:ChannelPersonal_Pushed",
 		"#cFFFFFF",
-		"#e010101#cFF7C80",					--¡¾Ë½ÁÄ¡¿
+		"#e010101#cFF7C80",					--ã€ç§èŠã€‘
 --		"#98#e010101#c99CC00",
 	};
 
@@ -57,7 +57,7 @@ local CHANNEL_DATA_SYSTEM =
 		"set:Buttons image:ChannelPersonal_Hover", 
 		"set:Buttons image:ChannelPersonal_Pushed",
 		"#cFF0000",
-		"#e010101#cFF0000",					--¡¾ÏµÍ³¡¿
+		"#e010101#cFF0000",					--ã€ç³»ç»Ÿã€‘
 --		"#96#e010101#cFFFF00",
 	};
 	
@@ -67,7 +67,7 @@ local CHANNEL_DATA_TEAM =
 		"set:Buttons image:ChannelTeam_Hover", 
 		"set:Buttons image:ChannelTeam_Pushed",
 		"#cFFFFFF",
-		"#e010101#cCC99FF",					--¡¾¶ÓÎé¡¿
+		"#e010101#cCC99FF",					--ã€é˜Ÿä¼ã€‘
 --	"#93#e010101#cFFFF00",
 	};
 
@@ -77,7 +77,7 @@ local CHANNEL_DATA_SELF =
 		"set:Buttons image:ChannelTeam_Hover", 
 		"set:Buttons image:ChannelTeam_Pushed",
 		"#e010101#cFFFFFF",
---		"#e010101#cFFFF00",				--¡¾×ÔÓÃ¡¿
+--		"#e010101#cFFFF00",				--ã€è‡ªç”¨ã€‘
 		"nouse",
 	};
 	
@@ -87,7 +87,7 @@ local CHANNEL_DATA_HELP =
 		"set:Buttons image:ChannelTeam_Hover", 
 		"set:Buttons image:ChannelTeam_Pushed",
 		"#e010101#cFFFFFF",
---		"#e010101#cFFFF00",				--¡¾°ïÖú¡¿
+--		"#e010101#cFFFF00",				--ã€å¸®åŠ©ã€‘
 		"nouse",
 	};
 	
@@ -97,7 +97,7 @@ local CHANNEL_DATA_MENPAI =
 		"set:Buttons image:ChannelMenpai_Hover", 
 		"set:Buttons image:ChannelMenpai_Pushed",
 		"#cFFFFFF",
-		"#e010101#cFFFF00",					--¡¾ÃÅÅÉ¡¿
+		"#e010101#cFFFF00",					--ã€é—¨æ´¾ã€‘
 --		"#94#e010101#cFFFF00",
 	};
 
@@ -107,7 +107,7 @@ local CHANNEL_DATA_GUILD =
 		"set:Buttons image:ChannelCorporative_Hover", 
 		"set:Buttons image:ChannelCorporative_Pushed",
 		"#cFFFFFF",
-		"#e010101#cFFCC99",					--¡¾°ï»á¡¿
+		"#e010101#cFFCC99",					--ã€å¸®ä¼šã€‘
 --		"#95#e010101#cFFFF00",
 	};
 
@@ -117,7 +117,7 @@ local CHANNEL_DATA_GUILD_LEAGUE =
 		"set:CommonFrame6 image:ChannelTongMeng_Hover", 
 		"set:CommonFrame6 image:ChannelTongMeng_Pushed",
 		"#cFFFFFF",
-		"#e010101#c66c4fc",					--¡¾°ï»áÍ¬ÃË¡¿
+		"#e010101#c66c4fc",					--ã€å¸®ä¼šåŒç›Ÿã€‘
 --		"#95#e010101#cFFFF00",
 	};
 
@@ -127,7 +127,7 @@ local CHANNEL_DATA_IPREGION =
 		"set:UIIcons image:ChannelCorporative_Hover", 
 		"set:UIIcons image:ChannelCorporative_Pushed",
 		"#e010101#cFFFFFF",
---		"#e010101#cFFFF00",				--¡¾Í¬³Ç¡¿
+--		"#e010101#cFFFF00",				--ã€åŒåŸã€‘
 		"nouse",
 	};
 
@@ -153,7 +153,7 @@ function ChatFrame_PreLoad()
 	this:RegisterEvent("SHOW_SPEAKER");
 	this:RegisterEvent("FLASH_TAB");
 	
-	-- ×¢²áÍ¬³ÇÆµµÀÉÁË¸, µÇÂ¼ºóÉÁË¸XÃë
+	-- æ³¨å†ŒåŒåŸé¢‘é“é—ªçƒ, ç™»å½•åé—ªçƒXç§’
 	this:RegisterEvent("UI_COMMAND");
 	
 end
@@ -171,7 +171,7 @@ function ChatFrame_OnLoad()
 	CHANNEL_DATA["help"] = CHANNEL_DATA_HELP;
 	CHANNEL_DATA["ipregion"] = CHANNEL_DATA_IPREGION;
 	
-	--TABÒ³µÄÅäÖÃĞÅÏ¢
+	--TABé¡µçš„é…ç½®ä¿¡æ¯
 	channel_tab[2] = Chat_SelfChk;
 	channel_tab[3] = Chat_City;
 	channel_tab[4] = Chat_CreateChk1;
@@ -180,16 +180,16 @@ function ChatFrame_OnLoad()
 
 	channel_flash[3] = Chat_City_Flash
 	
-	-- °´ÕÕGameDefine2.h ÖĞ ENUM_CHAT_TYPE Ë³Ğò
-	channel_config[0] = {"×ÛºÏ",1,1,1,1,1,1,1,1,0,1,0,0,1};
-	channel_config[1] = {"ÏµÍ³",0,0,0,1,1,0,0,0,1,0,0,0,0};
-	channel_config[2] = {"¸öÈË",0,1,0,1,0,0,1,0,0,0,0,0,1};
-	channel_config[3] = {"Í¬³Ç",0,1,0,1,0,0,1,0,0,0,0,1,1};
+	-- æŒ‰ç…§GameDefine2.h ä¸­ ENUM_CHAT_TYPE é¡ºåº
+	channel_config[0] = {"ç»¼åˆ",1,1,1,1,1,1,1,1,0,1,0,0,1};
+	channel_config[1] = {"ç³»ç»Ÿ",0,0,0,1,1,0,0,0,1,0,0,0,0};
+	channel_config[2] = {"ä¸ªäºº",0,1,0,1,0,0,1,0,0,0,0,0,1};
+	channel_config[3] = {"åŒåŸ",0,1,0,1,0,0,1,0,0,0,0,1,1};
 	channel_config[4] = {"",1,1,1,1,1,1,1,1,1,1,0,0,1};
 	channel_config[5] = {"",1,1,1,1,1,1,1,1,1,1,0,0,1};
 	channel_config[6] = {"",1,1,1,1,1,1,1,1,1,1,0,0,1};
 	
-	--Òş²ØĞ¡À®°È
+	--éšè—å°å–‡å­
 	Chat_ChatSpeaker_StarWindow:SetText( "" );
 	Chat_ChatSpeaker_StarWindow:SetProperty( "Name","" );
 	Chat_ChatSpeaker_StarWindow:Hide();
@@ -201,9 +201,9 @@ end
 function ChatFrame_OnEvent(event)
 	if ( event == "PLAYER_ENTERING_WORLD" ) then
 		this:Show();
-		--ÉèÖÃÀúÊ·ÏûÏ¢¼ÇÂ¼±£´æµÄ×î´óÖµ
+		--è®¾ç½®å†å²æ¶ˆæ¯è®°å½•ä¿å­˜çš„æœ€å¤§å€¼
 		Talk:SetMaxSaveNumber(tonumber(Chat_Frame_History:GetProperty("ChatBoardNumber")));
-		--ÉèÖÃÏµÍ³ÏûÏ¢µÄ×Ô¶¯ÏûÊ§Ê±¼ä¼ä¸ô
+		--è®¾ç½®ç³»ç»Ÿæ¶ˆæ¯çš„è‡ªåŠ¨æ¶ˆå¤±æ—¶é—´é—´éš”
 		Talk:SetDisappearTime(tonumber(Chat_Frame_History:GetProperty("BoardKillTimer")));
 		Talk:SetCurTab(channel_seltab);
 
@@ -211,7 +211,7 @@ function ChatFrame_OnEvent(event)
 		ChatFrame_SetTabConfig( 1 );
 		ChatFrame_SetTabConfig( 2 );
 		ChatFrame_SetTabConfig( 3 );
-		channel_tab[3]:SetText("Í¬³Ç");
+		channel_tab[3]:SetText("åŒåŸ");
 		Talk:HandleHistoryAction("listChange", g_theCurrentChannel, g_theCurrentChannelName);
 
 	elseif (event == "CHAT_MESSAGE" ) then
@@ -237,7 +237,7 @@ function ChatFrame_OnEvent(event)
 	elseif (event == "CHAT_MENUBAR_ACTION") then
 		ChatFrame_HandleMenuBarAction(arg0,arg1,arg2);
 	elseif (event == "RESET_ALLUI") then
-		-- Òş²Ø¶àÓàµÄTab´°Ìå
+		-- éšè—å¤šä½™çš„Tabçª—ä½“
 		channel_tab_total = 4;
 		for i= channel_tab_total, CHANNEL_TAB_MAX-1 do
 			ChatFrame_SetTabMouseRButtonHollow(i, 1);
@@ -246,7 +246,7 @@ function ChatFrame_OnEvent(event)
 		g_theCurrentChannel = "near";
 		g_theCurrentChannelName = "";
 		channel_seltab = 0;
-		--Òş²ØĞ¡À®°È
+		--éšè—å°å–‡å­
 		Chat_ChatSpeaker_StarWindow:SetText( "" );
 		Chat_ChatSpeaker_StarWindow:SetProperty( "Name","" );
 		Chat_ChatSpeaker_StarWindow:Hide();
@@ -269,7 +269,7 @@ function ChatFrame_OnEvent(event)
 		Chat_ChatSpeaker_StarWindow2:SetProperty( "Reset","false" );
 		Talk:HideContexMenu4Speaker();
 
---	È¡ÏûÃ¿´ÎÔÚÍ¬³Ç·¢ÑÔÖĞ³öÏÖ°´Å¥ÉÁË¸
+--	å–æ¶ˆæ¯æ¬¡åœ¨åŒåŸå‘è¨€ä¸­å‡ºç°æŒ‰é’®é—ªçƒ
 --	elseif (event == "FLASH_TAB") then
 --
 --		local showTab = tonumber(arg0);
@@ -283,18 +283,18 @@ function ChatFrame_OnEvent(event)
 --			end
 --		end
 	
-	-- ÉÏÏßÍ¬³ÇÆµµÀÉÁË¸
+	-- ä¸Šçº¿åŒåŸé¢‘é“é—ªçƒ
 	elseif (event == "UI_COMMAND") then
 		if (tonumber( arg0 ) == 870001001) then
 			FlashTab(3);
-			SetTimer("ChatFrame","StopFlashCityChannel()", 5000);		--ÉèÖÃ¶¨Ê±Æ÷10ÃëÖÓ¹Ø±Õ´°¿Ú
+			SetTimer("ChatFrame","StopFlashCityChannel()", 5000);		--è®¾ç½®å®šæ—¶å™¨10ç§’é’Ÿå…³é—­çª—å£
 		end
 	end
 end
 
 function StopFlashCityChannel()
 	NotFlashTab(3);
-	KillTimer("StopFlashCityChannel()");		--¹Ø±Õ¶¨Ê±Æ÷
+	KillTimer("StopFlashCityChannel()");		--å…³é—­å®šæ—¶å™¨
 end
 
 function NotFlashTab(idx)
@@ -366,7 +366,7 @@ function ChatFrame_ChannelSelect(pos)
 		i = i+1;
 	end
 	
-	-- Ë½ÁÄ¶ÔÏóÁĞ±í¼ÓÈë£¬todo_yangjun
+	-- ç§èŠå¯¹è±¡åˆ—è¡¨åŠ å…¥ï¼Œtodo_yangjun
 	if(-1 ~= FoundPrv) then
 		local strPrvType, strPrvName1, strPrvName2, strPrvName3 = Talk:GetChannel(FoundPrv);
 		if(CHANNEL_DATA[strPrvType] == nil) then
@@ -436,7 +436,7 @@ function ChatFrame_InsertChatContent(chatType, chatTalkerName, chatContent)
 	else
 		if(chatType ~= "self") then
 			strFinal = CHANNEL_DATA[chatType][5];
-			if(string.byte(chatContent, 1) ~= 64 and string.byte(chatContent, 1) ~= 42) then -- '@' ÎÄ×Ö±íÇé½âÎö
+			if(string.byte(chatContent, 1) ~= 64 and string.byte(chatContent, 1) ~= 42) then -- '@' æ–‡å­—è¡¨æƒ…è§£æ
 				strFinal = strFinal .. "[" .. strHeader .. "]";
 				if(ChatFrame_IsNameMySelf(chatTalkerName) > 0) then
 					strFinal = strFinal .. "#W[" .. chatTalkerName .. "]";
@@ -444,7 +444,7 @@ function ChatFrame_InsertChatContent(chatType, chatTalkerName, chatContent)
 					--strFinal = strFinal .. "#c00CCFF[#aB{" .. chatTalkerName .. "}" .. chatTalkerName .. "#aE]";
 					strFinal = strFinal .. Talk:GetHyperLinkString(chatType,chatTalkerName);
 				end
-				strFinal = strFinal .. CHANNEL_DATA[chatType][4] .. "£º" ..chatContent;
+				strFinal = strFinal .. CHANNEL_DATA[chatType][4] .. "ï¼š" ..chatContent;
 			else
 				local strTemplate = Talk:GetTalkTemplateString(chatTalkerName, chatContent);
 				strFinal = strFinal .. "[" .. strHeader .. "]";
@@ -509,7 +509,7 @@ function ChatFrame_MoveCtl(dir)
 	_,_,udimFrameYPos = string.find(udimStr, ",([+-]?[0-9]+%.[0-9]+)}");
 	--AxTrace(0,0,"udimStr:"..udimStr.." udimFrameYPos:"..udimFrameYPos);
 	udimScale = tonumber(udimScale);
-	udimFrameYPos = tonumber(udimFrameYPos)+step; --±ØĞëĞ¡ÓÚ0£¬ÁÄÌì´°¿ÚÊÇ×óÏÂ½Ç°ó¶¨µÄ
+	udimFrameYPos = tonumber(udimFrameYPos)+step; --å¿…é¡»å°äº0ï¼ŒèŠå¤©çª—å£æ˜¯å·¦ä¸‹è§’ç»‘å®šçš„
 
 	local absCheckHeight = g_MoveCtl.check:GetProperty("AbsoluteHeight");
 	
@@ -583,7 +583,7 @@ function ChatFrame_AdjustMoveCtl( screenWidth, screenHeight )
 	local absFrameHeight = g_MoveCtl.frame:GetProperty("AbsoluteHeight");
 	
 	
-	--½çÃæÏÖÔÚµÄ¸ß¶ÈÊÇ²»ÊÇ³¬³öÏÔÊ¾·¶Î§ÁË¡£
+	--ç•Œé¢ç°åœ¨çš„é«˜åº¦æ˜¯ä¸æ˜¯è¶…å‡ºæ˜¾ç¤ºèŒƒå›´äº†ã€‚
 	
 	local udimStr = g_MoveCtl.frame:GetProperty("UnifiedYPosition");
 	
@@ -592,7 +592,7 @@ function ChatFrame_AdjustMoveCtl( screenWidth, screenHeight )
 	_,_,udimScale = string.find(udimStr, "{(%d+%.%d+),");
 	_,_,udimFrameYPos = string.find(udimStr, ",([+-]?[0-9]+%.[0-9]+)}");
 	udimScale = tonumber(udimScale);
-	udimFrameYPos = tonumber(udimFrameYPos); --±ØĞëĞ¡ÓÚ0£¬ÁÄÌì´°¿ÚÊÇ×óÏÂ½Ç°ó¶¨µÄ
+	udimFrameYPos = tonumber(udimFrameYPos); --å¿…é¡»å°äº0ï¼ŒèŠå¤©çª—å£æ˜¯å·¦ä¸‹è§’ç»‘å®šçš„
 	
 	if((absFrameHeight + g_KeepHeight + absMoveUpHeight) > tolHeight) then	
 		local newFrameYPos = (tolHeight - g_KeepHeight - absMoveUpHeight)*-1;
@@ -608,7 +608,7 @@ function ChatFrame_AdjustMoveCtl( screenWidth, screenHeight )
 		g_MoveCtl.frame:SetProperty("UnifiedYPosition", udimStr);
 	end
 
-	--ÉèÖÃ×Ó´°ÌåµÄÎ»ÖÃ
+	--è®¾ç½®å­çª—ä½“çš„ä½ç½®
 	absFrameHeight = g_MoveCtl.frame:GetProperty("AbsoluteHeight");
 	
 	--check
@@ -661,7 +661,7 @@ function ChatFrame_ChannelChanged(force)
 	end
 end
 
--- Ñ¡ÖĞÄ³Ò»¸öTab¶ÔÓ¦µÄÆµµÀ
+-- é€‰ä¸­æŸä¸€ä¸ªTabå¯¹åº”çš„é¢‘é“
 function Chat_ChangeTabIndex( nIndex )
 	Chat_Frame_History:RemoveAllChatString();
 	channel_seltab = nIndex;
@@ -686,9 +686,9 @@ function Chat_ChangeTabIndex( nIndex )
 	end
 end
 
--- ²¶×½Tab°´Å¥Ê§°ÜÊ±µÄ²Ù×÷
+-- æ•æ‰TabæŒ‰é’®å¤±è´¥æ—¶çš„æ“ä½œ
 -- add by WTT 2009.4.20
--- ½â¾ö TT£º47859	¡¾ÆµµÀ¡¿×óÏÂ·½4¸öÆµµÀÀ¸£¬×ó¼ü°´×¡Ò»¸öÆµµÀÀ¸±êÌâ£¬ÍÏ¶¯µ½·ÇÆµµÀÀ¸±êÌâºóËÉÊÖ£¬ÆµµÀÀ¸±êÌâ¸Ä±ä£¬ÄÚÈİ²»±ä
+-- è§£å†³ TTï¼š47859	ã€é¢‘é“ã€‘å·¦ä¸‹æ–¹4ä¸ªé¢‘é“æ ï¼Œå·¦é”®æŒ‰ä½ä¸€ä¸ªé¢‘é“æ æ ‡é¢˜ï¼Œæ‹–åŠ¨åˆ°éé¢‘é“æ æ ‡é¢˜åæ¾æ‰‹ï¼Œé¢‘é“æ æ ‡é¢˜æ”¹å˜ï¼Œå†…å®¹ä¸å˜
 function Chat_OnTabCaptureLost (nIndex)
 	if nIndex ~= channel_seltab then
 		Chat_ChangeTabIndex(nIndex);
@@ -697,7 +697,7 @@ end
 
 function ChatFrame_CreateTab(pos)
 	if(channel_tab_total+1 > CHANNEL_TAB_MAX) then
-		PushDebugMessage("²»ÄÜ´´½¨¸ü¶àÆµµÀ");
+		PushDebugMessage("ä¸èƒ½åˆ›å»ºæ›´å¤šé¢‘é“");
 	else
 		--channel_tab_total = channel_tab_total + 1;
 		Talk:CreateTab(pos);
@@ -716,7 +716,7 @@ function ChatFrame_CreateTabFinish(tabName,tabCfg, strFlg)
 	elseif(strFlg == "sucess") then
 		channel_tab_total = channel_tab_total + 1;
 		if(tabName == "") then
-			tabName = "×Ô½¨" .. tostring(channel_tab_total - 4);
+			tabName = "è‡ªå»º" .. tostring(channel_tab_total - 4);
 		end
 		
 		channel_seltab = channel_tab_total-1;
@@ -724,7 +724,7 @@ function ChatFrame_CreateTabFinish(tabName,tabCfg, strFlg)
 		channel_config[channel_seltab][1] = tabName;
 		
 		--AxTrace(0, 0, "CreateTabFinish Index: " .. tostring(channel_seltab).."Name: "..tostring(channel_config[channel_seltab][1]).." "..tabCfg);
-		--±£´æÅäÖÃ
+		--ä¿å­˜é…ç½®
 		Talk:SaveTab(channel_seltab, tabName, tabCfg);
 		ChatFrame_SetTabConfig(channel_seltab);
 		
@@ -739,12 +739,12 @@ end
 
 function ChatFrame_ConfigTab(pos)
 	if(channel_seltab == 0 or channel_seltab == 1) then
-		PushDebugMessage("´ËÆµµÀ²»ÄÜÅäÖÃ");
-		--AxTrace(0, 0, "´ËÆµµÀ²»ÄÜÅäÖÃ");
+		PushDebugMessage("æ­¤é¢‘é“ä¸èƒ½é…ç½®");
+		--AxTrace(0, 0, "æ­¤é¢‘é“ä¸èƒ½é…ç½®");
 		return;
 	end
 		
-	-- »ñµÃµ±Ç°ÅäÖÃ
+	-- è·å¾—å½“å‰é…ç½®
 	local i = 2;
 	local strConfig = "";
 	--AxTrace(0,0,"channel_config xxxx"..tostring(table.getn(channel_config[channel_seltab])));
@@ -757,7 +757,7 @@ function ChatFrame_ConfigTab(pos)
 	
 	--AxTrace(0, 0, "configTab Index: " .. tostring(channel_seltab));
 	--AxTrace(0, 0, "configTab: " .. strConfig .. " " .. tostring(channel_seltab) );
-	-- Í¨Öª³ÌĞò¿ªÊ¼ÅäÖÃ
+	-- é€šçŸ¥ç¨‹åºå¼€å§‹é…ç½®
 	Talk:ConfigTab( channel_config[channel_seltab][1],strConfig,pos);
 end
 
@@ -774,14 +774,14 @@ function ChatFrame_ConfigTabFinish(tabName, tabCfg, strFlg)
 			ChatFrame_ChangeTabConfig(tabCfg);
 			--Chat_ChangeTabIndex(channel_seltab);
 			
-			--±£´æÅäÖÃ
+			--ä¿å­˜é…ç½®
 			Talk:SaveTab(channel_seltab, channel_config[channel_seltab][1], tabCfg);
 			ChatFrame_SetTabConfig(channel_seltab);
 		end
 	end
 end
 
--- ¸ü¸ÄÁÄÌìÒ³ÃæTabÅäÖÃ
+-- æ›´æ”¹èŠå¤©é¡µé¢Tabé…ç½®
 function ChatFrame_ChangeTabConfig( tabCfg )
 	local k = 1;
 	--AxTrace(0,0,".....config:"..tostring(tabCfg).."!!!");
@@ -800,10 +800,10 @@ function ChatFrame_ChangeTabConfig( tabCfg )
 	ChatFrame_PrintTabConfig(channel_seltab);
 end
 
--- É¾³ıÁÄÌìÒ³ÃæTab
+-- åˆ é™¤èŠå¤©é¡µé¢Tab
 function Chat_DestoryTabIndex( nIndex )
 	if( nIndex <= 3 ) then
-		PushDebugMessage("´ËÆµµÀ²»¿ÉÉ¾³ı");
+		PushDebugMessage("æ­¤é¢‘é“ä¸å¯åˆ é™¤");
 		return;
 	end
 	
@@ -814,7 +814,7 @@ function Chat_DestoryTabIndex( nIndex )
 	channel_tab_total = channel_tab_total - 1;
 	--AxTrace(0, 0, "Chat_DestoryTabIndex Index: " .. tostring(nIndex) .. " TotalIndex: " .. tostring(channel_tab_total));
 	
-	-- ÏòÇ°¿½±´ÅäÖÃ
+	-- å‘å‰æ‹·è´é…ç½®
 	if( channel_tab_total ~= 3 ) then
 		local i;
 		for i=nIndex, channel_tab_total do
@@ -823,7 +823,7 @@ function Chat_DestoryTabIndex( nIndex )
 				channel_config[i][k] = channel_config[i+1][k];
 				k = k+1;
 			end
-			--±£´æÅäÖÃ
+			--ä¿å­˜é…ç½®
 			local xxi = 2;
 			local strConfig = "";
 			while channel_config[i][xxi] ~= nil do
@@ -835,7 +835,7 @@ function Chat_DestoryTabIndex( nIndex )
 				Talk:SaveTab(i, channel_config[i][1], strConfig);
 				ChatFrame_SetTabConfig(i);
 			end
-			--¸Ä±äÎÄ×Ö
+			--æ”¹å˜æ–‡å­—
 			channel_tab[i]:SetText(channel_config[i][1]);
 		end
 	
@@ -852,14 +852,14 @@ function Chat_DestoryTabIndex( nIndex )
 		Chat_CommonChk:SetCheck(1);
 	end
 
-	-- Òş²Ø¶àÓàµÄTab´°Ìå
+	-- éšè—å¤šä½™çš„Tabçª—ä½“
 	for i=channel_tab_total, CHANNEL_TAB_MAX-1 do
 		ChatFrame_SetTabMouseRButtonHollow(i, 1);
 		channel_tab[i]:Hide();
 	end	
 	Talk:ClearTab(channel_tab_total);
 	
-	-- ¸üĞÂChatHistoryÀïµÄÄÚÈİ
+	-- æ›´æ–°ChatHistoryé‡Œçš„å†…å®¹
 	Talk:MoveTabHisQue(nIndex, channel_tab_total);
 	Chat_ChangeTabIndex(channel_seltab);
 end
@@ -874,9 +874,9 @@ function ChatFrame_HandleAccKey( op, msg )
 	elseif( op == "shift_up" or op == "shift_down") then
 		Talk:HandleHistoryAction("changMsg", msg,"");
 	elseif( op == "acc_prevchannel") then
-		ChatFrame_ChangeCurrentChannel(1); --µ±Ç°ÆµµÀµÄÇ°Ò»ÆµµÀ
+		ChatFrame_ChangeCurrentChannel(1); --å½“å‰é¢‘é“çš„å‰ä¸€é¢‘é“
 	elseif( op == "acc_nextchannel") then
-		ChatFrame_ChangeCurrentChannel(-1);	--µ±Ç°ÆµµÀµÄºóÒ»ÆµµÀ
+		ChatFrame_ChangeCurrentChannel(-1);	--å½“å‰é¢‘é“çš„åä¸€é¢‘é“
 	elseif( op == "acc_clearchat" ) then
 		ChatFrame_extendRegionTest();
 	end
@@ -942,8 +942,8 @@ function ChatFrame_LoadTabConfig(tabIdx, tabName, tabConfig)
 		channel_config[channel_seltab][1] = tabName;
 
 		ChatFrame_SetTabMouseRButtonHollow(channel_seltab, 0);
-		if(channel_seltab == 3) then	--Í¬³ÇÆµµÀÌØÊâ´¦Àí
-			channel_tab[channel_seltab]:SetText("Í¬³Ç");
+		if(channel_seltab == 3) then	--åŒåŸé¢‘é“ç‰¹æ®Šå¤„ç†
+			channel_tab[channel_seltab]:SetText("åŒåŸ");
 		else
 			channel_tab[channel_seltab]:SetText(channel_config[channel_seltab][1]);
 		end

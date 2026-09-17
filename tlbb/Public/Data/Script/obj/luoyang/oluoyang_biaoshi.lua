@@ -1,21 +1,21 @@
---ÂåÑôNPC
---ïÚÊ¦
---ÆÕÍ¨
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ´›é˜³NPC
+--é•–å¸ˆ
+--æ™®é€š
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x000073_g_scriptId = 000073
 
 x000073_g_eventList={889051}
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x000073_OnDefaultEvent( sceneId, selfId,targetId )
 	x000073_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x000073_UpdateEventList( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
@@ -28,7 +28,7 @@ function x000073_UpdateEventList( sceneId, selfId,targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x000073_OnEventRequest( sceneId, selfId, targetId, eventId )
 	
@@ -41,27 +41,27 @@ function x000073_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x000073_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x000073_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 
 end
 
 --**********************************
---¼ÌĞø£¨ÒÑ¾­½ÓÁËÈÎÎñ£©
+--ç»§ç»­ï¼ˆå·²ç»æ¥äº†ä»»åŠ¡ï¼‰
 --**********************************
 function x000073_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 
 end
 
 --**********************************
---Ìá½»ÒÑ×öÍêµÄÈÎÎñ
+--æäº¤å·²åšå®Œçš„ä»»åŠ¡
 --**********************************
 function x000073_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, selectRadioId )
 

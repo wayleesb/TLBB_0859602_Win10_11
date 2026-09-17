@@ -1,35 +1,35 @@
---Ê¦¹±ÉÌµê
+--å¸ˆè´¡å•†åº—
 x229012_g_scriptId = 229012
 
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x229012_OnDefaultEvent( sceneId, selfId,targetId )
 
 	local NumText = GetNumText();
 	if(NumText == 1) then
 		BeginEvent(sceneId)
-			AddNumText(sceneId,x229012_g_scriptId, "2¼¶Åä·½", 7, 3)
-			AddNumText(sceneId,x229012_g_scriptId, "3¼¶Åä·½", 7, 4)
-			AddNumText(sceneId,x229012_g_scriptId, "4¼¶Åä·½", 7, 5)
-			AddNumText(sceneId,x229012_g_scriptId, "5¼¶Åä·½", 7, 6)
-			AddNumText(sceneId,x229012_g_scriptId, "6¼¶Åä·½", 7, 7)
-			AddNumText(sceneId,x229012_g_scriptId, "7¼¶Åä·½", 7, 8)
+			AddNumText(sceneId,x229012_g_scriptId, "2çº§é…æ–¹", 7, 3)
+			AddNumText(sceneId,x229012_g_scriptId, "3çº§é…æ–¹", 7, 4)
+			AddNumText(sceneId,x229012_g_scriptId, "4çº§é…æ–¹", 7, 5)
+			AddNumText(sceneId,x229012_g_scriptId, "5çº§é…æ–¹", 7, 6)
+			AddNumText(sceneId,x229012_g_scriptId, "6çº§é…æ–¹", 7, 7)
+			AddNumText(sceneId,x229012_g_scriptId, "7çº§é…æ–¹", 7, 8)
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 
 	elseif(NumText == 2) then
 		BeginEvent(sceneId)
-			AddNumText(sceneId,x229012_g_scriptId, "2¼¶Åä·½", 7, 3)
-			AddNumText(sceneId,x229012_g_scriptId, "3¼¶Åä·½", 7, 4)
-			AddNumText(sceneId,x229012_g_scriptId, "4¼¶Åä·½", 7, 5)
-			AddNumText(sceneId,x229012_g_scriptId, "5¼¶Åä·½", 7, 6)
-			AddNumText(sceneId,x229012_g_scriptId, "6¼¶Åä·½", 7, 7)
-			AddNumText(sceneId,x229012_g_scriptId, "7¼¶Åä·½", 7, 8)
-			AddNumText(sceneId,x229012_g_scriptId, "8¼¶Åä·½", 7, 9)
-			AddNumText(sceneId,x229012_g_scriptId, "9¼¶Åä·½", 7, 10)
-			AddNumText(sceneId,x229012_g_scriptId, "10¼¶Åä·½", 7, 11)
+			AddNumText(sceneId,x229012_g_scriptId, "2çº§é…æ–¹", 7, 3)
+			AddNumText(sceneId,x229012_g_scriptId, "3çº§é…æ–¹", 7, 4)
+			AddNumText(sceneId,x229012_g_scriptId, "4çº§é…æ–¹", 7, 5)
+			AddNumText(sceneId,x229012_g_scriptId, "5çº§é…æ–¹", 7, 6)
+			AddNumText(sceneId,x229012_g_scriptId, "6çº§é…æ–¹", 7, 7)
+			AddNumText(sceneId,x229012_g_scriptId, "7çº§é…æ–¹", 7, 8)
+			AddNumText(sceneId,x229012_g_scriptId, "8çº§é…æ–¹", 7, 9)
+			AddNumText(sceneId,x229012_g_scriptId, "9çº§é…æ–¹", 7, 10)
+			AddNumText(sceneId,x229012_g_scriptId, "10çº§é…æ–¹", 7, 11)
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 		
@@ -41,15 +41,15 @@ function x229012_OnDefaultEvent( sceneId, selfId,targetId )
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x229012_OnEnumerate( sceneId, selfId, targetId )
 
 	local lev = GetLevel(sceneId, selfId)
 	if(lev>=40 and lev<70) then
-		AddNumText(sceneId,x229012_g_scriptId, "¹ºÂòÅä·½", 7, 1)
+		AddNumText(sceneId,x229012_g_scriptId, "è´­ä¹°é…æ–¹", 7, 1)
 	elseif(lev>=70) then
-		AddNumText(sceneId,x229012_g_scriptId, "¹ºÂòÅä·½", 7, 2)
+		AddNumText(sceneId,x229012_g_scriptId, "è´­ä¹°é…æ–¹", 7, 2)
 	end
 
 end

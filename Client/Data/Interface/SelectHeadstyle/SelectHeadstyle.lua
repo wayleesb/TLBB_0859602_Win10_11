@@ -1,4 +1,4 @@
---[ ´´½¨ÈË QUFEI 2007-12-15 16:40 UPDATE BugID 26242 ]
+--[ åˆ›å»ºäºº QUFEI 2007-12-15 16:40 UPDATE BugID 26242 ]
 
 local g_HeadGroup_Icon = {}
 local g_Headstyle_Icon = {}
@@ -75,7 +75,7 @@ function SelectHeadstyle_OnEvent(event)
 		local xx = Get_XParam_INT(0);
 		objCared = DataPool : GetNPCIDByServerID(xx);
 		if objCared == -1 then
-				PushDebugMessage("server´«¹ıÀ´µÄÊı¾İÓĞÎÊÌâ¡£");
+				PushDebugMessage("serverä¼ è¿‡æ¥çš„æ•°æ®æœ‰é—®é¢˜ã€‚");
 				return;
 		end
 
@@ -106,10 +106,10 @@ function SelectHeadstyle_OnEvent(event)
 			Close_Headstyle()
 			return;
 		end
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ı£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æœå’ŒNPCçš„è·ç¦»å¤§äºä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if(arg1 == "distance" and tonumber(arg2)>MAX_OBJ_DISTANCE or arg1=="destroy") then
 			
-			--È¡Ïû¹ØĞÄ
+			--å–æ¶ˆå…³å¿ƒ
 			Close_Headstyle()
 		end
 	end
@@ -161,7 +161,7 @@ function SelectHeadstyle_Update()
 	end
 	
 	for i=1, 200 do
-		nID,ItemID,ItemCount,SelectType,IconFile,CostMoney,StyleName,TitleInfo = DataPool : Change_MyHeadStyle_Item(i, 0);			-- »ñµÃÍ·Ïñ×éĞÅÏ¢		
+		nID,ItemID,ItemCount,SelectType,IconFile,CostMoney,StyleName,TitleInfo = DataPool : Change_MyHeadStyle_Item(i, 0);			-- è·å¾—å¤´åƒç»„ä¿¡æ¯		
 		if(ItemID ~= -1) then
 			-- AxTrace(1, 1, "SelectHeadstyle_Update: Index="..i.." nID="..nID.." ItemID="..ItemID.." ItemCount="..ItemCount.." SelectType="..SelectType.." IconFile="..IconFile.." CostMoney="..CostMoney.." StyleName="..StyleName.." TitleInfo="..TitleInfo)
 			IconFile = GetIconFullName(IconFile)
@@ -174,7 +174,7 @@ function SelectHeadstyle_Update()
 		
 		n = 1
 		for j=1, 5 do
-			nIDEX,ItemIDEX,ItemCountEX,SelectTypeEX,IconFileEX,CostMoneyEX,StyleNameEX,_ = DataPool : Change_MyHeadStyle_Item(i, j-1);			-- »ñµÃÍ·Ïñ×éÖĞÃ¿¸öÍ·ÏñĞÅÏ¢			
+			nIDEX,ItemIDEX,ItemCountEX,SelectTypeEX,IconFileEX,CostMoneyEX,StyleNameEX,_ = DataPool : Change_MyHeadStyle_Item(i, j-1);			-- è·å¾—å¤´åƒç»„ä¸­æ¯ä¸ªå¤´åƒä¿¡æ¯			
 			if(ItemIDEX ~= -1) then
 				-- AxTrace(1, 1, "SelectHeadstyle_Update: IndexEX="..j.." nIDEX="..nIDEX.." ItemIDEX="..ItemIDEX.." ItemCountEX="..ItemCountEX.." SelectTypeEX="..SelectTypeEX.." IconFileEX="..IconFileEX.." CostMoneyEX="..CostMoneyEX.." StyleNameEX="..StyleNameEX)
 				IconFileEX = GetIconFullName(IconFileEX)				
@@ -191,7 +191,7 @@ function SelectHeadstyle_Update()
 	g_Group_Count = m-1
 	
 	if(g_Group_Count <= 0) then
-		SelectHeadstyle_Require:SetText("Ã»ÓĞ¿É¸ü¸ÄµÄÍ·ĞÍ¡£");
+		SelectHeadstyle_Require:SetText("æ²¡æœ‰å¯æ›´æ”¹çš„å¤´å‹ã€‚");
 		SelectHeadstyle_CurrentlyPage:SetText("1/1");		
 		SelectHeadstyle_PageUp : Disable();
 		SelectHeadstyle_PageDown : Disable();
@@ -213,7 +213,7 @@ function Close_Headstyle()
 end
 
 --==================================
---¿ªÊ¼¹ØĞÄNPC£¬
+--å¼€å§‹å…³å¿ƒNPCï¼Œ
 --==================================
 function BeginCareObject_SelectHeadstyle(objCaredId)
 	g_Object = objCaredId;
@@ -221,7 +221,7 @@ function BeginCareObject_SelectHeadstyle(objCaredId)
 end
 
 --==================================
---Í£Ö¹¶ÔÄ³NPCµÄ¹ØĞÄ
+--åœæ­¢å¯¹æŸNPCçš„å…³å¿ƒ
 --==================================
 function StopCareObject_SelectHeadstyle(objCaredId)
 	this:CareObject(objCaredId, 0, "SelectHeadstyle");
@@ -230,7 +230,7 @@ function StopCareObject_SelectHeadstyle(objCaredId)
 end
 
 --==================================
---¹Ø±Õ
+--å…³é—­
 --==================================
 function SelectHeadstyle_Cancel_Clicked()
 	-- AxTrace(1, 1, "SelectHeadstyle_Cancel_Clicked: g_Original_Style="..g_Original_Style)
@@ -240,38 +240,38 @@ function SelectHeadstyle_Cancel_Clicked()
 end
 
 --==================================
---È·ÈÏ
+--ç¡®è®¤
 --==================================
 function SelectHeadstyle_OK_Clicked()	
 	
-	-- Ã»ÓĞÑ¡ÔñÍ·Ïñ
+	-- æ²¡æœ‰é€‰æ‹©å¤´åƒ
 	if g_nCurSelectGrp <= 0 then
-		PushDebugMessage("#{INTERHEAD_XML_004}");															-- "ÄúÃ»ÓĞÑ¡ÔñÏëÒª¸ü»»µÄÍ·Ïñ"
+		PushDebugMessage("#{INTERHEAD_XML_004}");															-- "æ‚¨æ²¡æœ‰é€‰æ‹©æƒ³è¦æ›´æ¢çš„å¤´åƒ"
 		return 0
 	end
 
-	-- µÃµ½Ñ¡ÔñµÄÍ·ÏñĞÅÏ¢
+	-- å¾—åˆ°é€‰æ‹©çš„å¤´åƒä¿¡æ¯
 	local nID,ItemID,ItemCount,SelectType,IconFile,CostMoney,StyleName,_ = DataPool : Change_MyHeadStyle_Item(g_Group_Index[g_nCurSelectGrp], g_Style_Index[1]);
 
 	if(ItemID ~= -1 and SelectType >= 2) then
 		if( DataPool:GetPlayerMission_ItemCountNow(ItemID) < ItemCount) then
-			PushDebugMessage("#{INTERHEAD_XML_005}");														-- "È±ÉÙ×ã¹»µÄ²ÄÁÏ»ò¸Ã²ÄÁÏ±»Ëø¶¨¡£"
+			PushDebugMessage("#{INTERHEAD_XML_005}");														-- "ç¼ºå°‘è¶³å¤Ÿçš„ææ–™æˆ–è¯¥ææ–™è¢«é”å®šã€‚"
 			return;
 		end
 	end
 	
-	-- µÃµ½Íæ¼ÒµÄ½ğ±ÒºÍ½»×ÓÊıÄ¿
+	-- å¾—åˆ°ç©å®¶çš„é‡‘å¸å’Œäº¤å­æ•°ç›®
 	local nMoney = Player:GetData("MONEY")
 	local nMoneyJZ = Player:GetData("MONEY_JZ")
 	
 	if (nMoney + nMoneyJZ) < CostMoney then
-		PushDebugMessage("#{INTERHEAD_XML_006}");															-- "½ğÇ®²»×ã"
+		PushDebugMessage("#{INTERHEAD_XML_006}");															-- "é‡‘é’±ä¸è¶³"
 		return
 	end
 
-	-- µ÷ÊÔĞÅÏ¢£¬µ±Ç°Ñ¡ÔñµÄÍ·ÏñID
+	-- è°ƒè¯•ä¿¡æ¯ï¼Œå½“å‰é€‰æ‹©çš„å¤´åƒID
 	--PushDebugMessage ("StyleId = "..nID)
-	-- Èç¹ûÑ¡ÔñµÄÍ·ÏñºÍµ±Ç°Í·Ïñ²»Í¬
+	-- å¦‚æœé€‰æ‹©çš„å¤´åƒå’Œå½“å‰å¤´åƒä¸åŒ
 	if nID ~= g_Original_Style then														
 		g_HaveChange = 1
 		
@@ -286,13 +286,13 @@ function SelectHeadstyle_OK_Clicked()
 		g_nCurSelectGrp = 0
 
 	else
-		PushDebugMessage("#{INTERHEAD_XML_009}");															-- "ÇëÑ¡ÔñÒ»ÖÖºÍÄãµ±Ç°²»Í¬µÄÍ·Ïñ¡£"
+		PushDebugMessage("#{INTERHEAD_XML_009}");															-- "è¯·é€‰æ‹©ä¸€ç§å’Œä½ å½“å‰ä¸åŒçš„å¤´åƒã€‚"
 	end
 	
 end
 
 --==================================
---Ñ¡ÖĞÒ»¸öÍ·Ïñ×éÍ¼±ê
+--é€‰ä¸­ä¸€ä¸ªå¤´åƒç»„å›¾æ ‡
 --==================================
 function SelectHeadGroup_Clicked(nGroupidx)
 	
@@ -347,7 +347,7 @@ function SelectHeadGroup_Clicked(nGroupidx)
 end
 
 --==================================
---Ñ¡ÖĞÒ»¸öÍ·ÏñÍ¼±ê
+--é€‰ä¸­ä¸€ä¸ªå¤´åƒå›¾æ ‡
 --==================================
 --function SelectHeadstyle_Clicked(nIndex)
 --	
@@ -365,7 +365,7 @@ end
 --	AxTrace(1, 1, "SelectHeadstyle_Clicked: nID="..nID.." ItemID="..ItemID.." ItemCount="..ItemCount.." SelectType="..SelectType.." IconFile="..IconFile.." CostMoney="..CostMoney.." StyleName="..StyleName)
 --	local name,icon = LifeAbility : GetPrescr_Material(ItemID);
 --
---	SelectHeadstyle_WarningText : SetText("ĞèÒªµÀ¾ß£º#G"..name.."#r#WĞèÒª½ğÇ®£º#Y#{_MONEY"..CostMoney.."}#W#rÇëÔÚ»­ÃæÉÏ·½Ñ¡ÔñÍ·ĞÍ£¬È»ºóµã»÷¡°È·¶¨¡±¡£");
+--	SelectHeadstyle_WarningText : SetText("éœ€è¦é“å…·ï¼š#G"..name.."#r#Wéœ€è¦é‡‘é’±ï¼š#Y#{_MONEY"..CostMoney.."}#W#rè¯·åœ¨ç”»é¢ä¸Šæ–¹é€‰æ‹©å¤´å‹ï¼Œç„¶åç‚¹å‡»â€œç¡®å®šâ€ã€‚");
 --	
 --end
 

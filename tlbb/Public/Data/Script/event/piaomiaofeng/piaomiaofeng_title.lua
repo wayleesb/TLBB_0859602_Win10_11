@@ -1,35 +1,35 @@
 
--- çÎç¿·å³ÆºÅ	20090220 by zhangguoxin
+-- ç¼¥ç¼ˆå³°ç§°å·	20090220 by zhangguoxin
 x402305_g_scriptId = 402305
 
---Æ®ÃìĞş·û
+--é£˜æ¸ºç„ç¬¦
 x402305_g_XuanFuID = 20310112
 
---¶Ò»»ĞèÇó
+--å…‘æ¢éœ€æ±‚
 x402305_g_Cost = {1,15,45,90}
---³ÆºÅid
+--ç§°å·id
 x402305_g_TitleID = {256,257,258,259}
---²»Í¬µÈ¼¶µÄÊ§°ÜÌáÊ¾
+--ä¸åŒç­‰çº§çš„å¤±è´¥æç¤º
 x402305_g_FailMsg = {"#{PMF_REMINDINF_002}","#{PMF_REMINDINF_003}","#{PMF_REMINDINF_004}","#{PMF_REMINDINF_005}"}
---³ÆºÅµÈ¼¶
+--ç§°å·ç­‰çº§
 x402305_g_TitleLvNum = 4;
---³ÆºÅidx ³ÌĞòÓÃ
+--ç§°å·idx ç¨‹åºç”¨
 x402305_g_TitleIndex = 19;
 
 
 function x402305_ChangePiaoMiaoTitle(sceneId, selfId, targetId,titleLv)
 	
 	--DeleteTitle(sceneId,selfId,x402305_g_TitleIndex);
-	--ºÏ·¨ĞÔ¼ì²é
+	--åˆæ³•æ€§æ£€æŸ¥
 	if titleLv < 1 and titleLv > x402305_g_TitleLvNum then
 		return
 	end
 	
-	--½ÇÉ«ÏÖÓĞ³ÆºÅ	
+	--è§’è‰²ç°æœ‰ç§°å·	
 	local HadTitleID = GetTitle(sceneId,selfId,x402305_g_TitleIndex)
 	
 	if (titleLv == 1) then
-		--ÊÇ·ñÒÑÓĞ³ÆºÅ
+		--æ˜¯å¦å·²æœ‰ç§°å·
 		if (HadTitleID == x402305_g_TitleID[1]
 				or HadTitleID == x402305_g_TitleID[2]
 				or HadTitleID == x402305_g_TitleID[3]
@@ -40,14 +40,14 @@ function x402305_ChangePiaoMiaoTitle(sceneId, selfId, targetId,titleLv)
 	end
 	
 	if (titleLv == 2) then
-		--ÊÇ·ñÒÑÓĞ³ÆºÅ
+		--æ˜¯å¦å·²æœ‰ç§°å·
 		if (HadTitleID == x402305_g_TitleID[2]
 				or HadTitleID == x402305_g_TitleID[3]
 				or HadTitleID == x402305_g_TitleID[4]) then
 			x402305_NotifyFailBox(sceneId, selfId, targetId, "#{PMF_REMINDINF_001}")	
 			return
 		end
-		--ÊÇ·ñÓĞÉÏÒ»µÈ¼¶µÄ³ÆºÅ
+		--æ˜¯å¦æœ‰ä¸Šä¸€ç­‰çº§çš„ç§°å·
 		if (HadTitleID ~= x402305_g_TitleID[1]) then
 			x402305_NotifyFailBox(sceneId, selfId, targetId, x402305_g_FailMsg[titleLv])
 			return
@@ -55,13 +55,13 @@ function x402305_ChangePiaoMiaoTitle(sceneId, selfId, targetId,titleLv)
 	end
 	
 	if (titleLv == 3) then
-		--ÊÇ·ñÒÑÓĞ³ÆºÅ
+		--æ˜¯å¦å·²æœ‰ç§°å·
 		if (HadTitleID == x402305_g_TitleID[3]
 				or HadTitleID == x402305_g_TitleID[4]) then
 			x402305_NotifyFailBox(sceneId, selfId, targetId, "#{PMF_REMINDINF_001}")	
 			return
 		end
-		--ÊÇ·ñÓĞÉÏÒ»µÈ¼¶µÄ³ÆºÅ
+		--æ˜¯å¦æœ‰ä¸Šä¸€ç­‰çº§çš„ç§°å·
 		if (HadTitleID ~= x402305_g_TitleID[2]) then
 			x402305_NotifyFailBox(sceneId, selfId, targetId, x402305_g_FailMsg[titleLv])
 			return
@@ -69,56 +69,56 @@ function x402305_ChangePiaoMiaoTitle(sceneId, selfId, targetId,titleLv)
 	end
 	
 	if (titleLv == 4) then
-		--ÊÇ·ñÒÑÓĞ³ÆºÅ
+		--æ˜¯å¦å·²æœ‰ç§°å·
 		if (HadTitleID == x402305_g_TitleID[4]) then
 			x402305_NotifyFailBox(sceneId, selfId, targetId, "#{PMF_REMINDINF_001}")	
 			return
 		end
-		--ÊÇ·ñÓĞÉÏÒ»µÈ¼¶µÄ³ÆºÅ
+		--æ˜¯å¦æœ‰ä¸Šä¸€ç­‰çº§çš„ç§°å·
 		if (HadTitleID ~= x402305_g_TitleID[3]) then
 			x402305_NotifyFailBox(sceneId, selfId, targetId, x402305_g_FailMsg[titleLv])
 			return
 		end
 	end
 	
-	--¼ì²éÎïĞş·ûÁ¿
+	--æ£€æŸ¥ç‰©ç„ç¬¦é‡
 	local checkRet = x402305_CheckXuanFu(sceneId,selfId,targetId,x402305_g_Cost[titleLv]);
 	if (checkRet ~= 1) then
 			x402305_NotifyFailBox(sceneId, selfId, targetId, x402305_g_FailMsg[titleLv])
 			return
 	end
 	
-	--¿Û³ıĞş·û
+	--æ‰£é™¤ç„ç¬¦
 	local costRet = x402305_CostXuanFu(sceneId,selfId,targetId,x402305_g_Cost[titleLv]);
 	if (costRet ~= 1) then
-		x402305_NotifyFailBox(sceneId, selfId, targetId, "¿Û³ıÎïÆ·Ê§°Ü£¡")
+		x402305_NotifyFailBox(sceneId, selfId, targetId, "æ‰£é™¤ç‰©å“å¤±è´¥ï¼")
 		return
 	end
 	
-	--¸øÓè³ÆºÅ
+	--ç»™äºˆç§°å·
 	AwardTitle( sceneId, selfId, x402305_g_TitleIndex, x402305_g_TitleID[titleLv])
-	--Ğ´auditÈÕÖ¾ add by zhangguoxin 090226
+	--å†™auditæ—¥å¿— add by zhangguoxin 090226
 	local guid = LuaFnObjId2Guid(sceneId, selfId);
 	local LogInfo = format("LUAAUDIT_TITLE_GET,0X%08X,%d,",guid,x402305_g_TitleID[titleLv]);
 	LuaFnAuditGeneralLog(LogInfo);
-	--¸üĞÂ¿Í»§¶Ë
+	--æ›´æ–°å®¢æˆ·ç«¯
 	DispatchAllTitle(sceneId,selfId)
-	--ÉèÖÃµ±Ç°³ÆºÅ
+	--è®¾ç½®å½“å‰ç§°å·
 	SetCurTitle(sceneId,selfId,43,x402305_g_TitleID[titleLv])
-	--¹Ø±Õ¶Ô»°¿ò
+	--å…³é—­å¯¹è¯æ¡†
 	x402305_CloseWindow(sceneId,selfId, targetId)
-	--·¢ËÍ¹«¸æ
+	--å‘é€å…¬å‘Š
 	x402305_SendNotice(sceneId, selfId, targetId,titleLv)
-	--·ÅÌØĞ§
+	--æ”¾ç‰¹æ•ˆ
 	LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, 49, 0)
-	--ĞÑÄ¿ÌáÊ¾
+	--é†’ç›®æç¤º
 	x402305_MsgBox(sceneId, selfId,"#{PMF_090302_6}")
 end
 
---·¢ËÍ¹«¸æ
+--å‘é€å…¬å‘Š
 function x402305_SendNotice(sceneId, selfId, targetId,lv)
 
-	--ºÏ·¨ĞÔ¼ì²é
+	--åˆæ³•æ€§æ£€æŸ¥
 	if lv < 1 and lv > x402305_g_TitleLvNum then
 		return
 	end
@@ -142,7 +142,7 @@ function x402305_SendNotice(sceneId, selfId, targetId,lv)
 	BroadMsgByChatPipe(sceneId, selfId, strText, 4)
 end
 
---¼ì²éÎïÆ·
+--æ£€æŸ¥ç‰©å“
 function x402305_CheckXuanFu(sceneId, selfId, targetId,num)
 	if num <= 0 then
 		return 0
@@ -157,7 +157,7 @@ function x402305_CheckXuanFu(sceneId, selfId, targetId,num)
 	return 1;
 end
 
---¿Û³ıÎïÆ·
+--æ‰£é™¤ç‰©å“
 function x402305_CostXuanFu(sceneId, selfId, targetId,num)
 	if num <= 0 then
 		return 0
@@ -171,7 +171,7 @@ function x402305_CostXuanFu(sceneId, selfId, targetId,num)
 	return 1;
 end
 
---¹Ø±Õ¶Ô»°¿ò
+--å…³é—­å¯¹è¯æ¡†
 function x402305_CloseWindow(sceneId,selfId, targetId)
 	BeginUICommand( sceneId )
 			UICommand_AddInt( sceneId, targetId )
@@ -180,12 +180,12 @@ function x402305_CloseWindow(sceneId,selfId, targetId)
 end
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x402305_OnDefaultEvent( sceneId, selfId, targetId )
 	local nNum = GetNumText()
 	
-	--µÚÒ»²ã½çÃæ
+	--ç¬¬ä¸€å±‚ç•Œé¢
 	if (nNum == 10) then
 		BeginEvent(sceneId)
 			AddText(sceneId,"#{PMF_090302_1}")
@@ -197,7 +197,7 @@ function x402305_OnDefaultEvent( sceneId, selfId, targetId )
 		DispatchEventList(sceneId,selfId,targetId)
 	end
 	
-	--¹ØÓÚ
+	--å…³äº
 	if (nNum == 11) then
 		BeginEvent(sceneId)
 			AddText(sceneId,"#{PMF_090220_02}")
@@ -205,12 +205,12 @@ function x402305_OnDefaultEvent( sceneId, selfId, targetId )
 		DispatchEventList(sceneId,selfId,targetId)
 	end
 	
-	--µÚ¶ş²ã½çÃæ
+	--ç¬¬äºŒå±‚ç•Œé¢
 	if (nNum == 21) then
 		BeginEvent(sceneId)
 			AddText(sceneId,"#{PMF_090302_2}")
-			AddNumText( sceneId, x402305_g_scriptId, "ÎÒÒª¶Ò»»", 6, 1 )
-			AddNumText( sceneId, x402305_g_scriptId, "»¹ÊÇËãÁË", 0, 100 )
+			AddNumText( sceneId, x402305_g_scriptId, "æˆ‘è¦å…‘æ¢", 6, 1 )
+			AddNumText( sceneId, x402305_g_scriptId, "è¿˜æ˜¯ç®—äº†", 0, 100 )
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId,x402305_g_scriptId,0)
 	end
@@ -218,8 +218,8 @@ function x402305_OnDefaultEvent( sceneId, selfId, targetId )
 	if (nNum == 22) then
 		BeginEvent(sceneId)
 			AddText(sceneId,"#{PMF_090302_3}")
-			AddNumText( sceneId, x402305_g_scriptId, "ÎÒÒª¶Ò»»", 6, 2 )
-			AddNumText( sceneId, x402305_g_scriptId, "»¹ÊÇËãÁË", 0, 100 )
+			AddNumText( sceneId, x402305_g_scriptId, "æˆ‘è¦å…‘æ¢", 6, 2 )
+			AddNumText( sceneId, x402305_g_scriptId, "è¿˜æ˜¯ç®—äº†", 0, 100 )
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId,x402305_g_scriptId,0)
 	end
@@ -227,8 +227,8 @@ function x402305_OnDefaultEvent( sceneId, selfId, targetId )
 	if (nNum == 23) then
 		BeginEvent(sceneId)
 			AddText(sceneId,"#{PMF_090302_4}")
-			AddNumText( sceneId, x402305_g_scriptId, "ÎÒÒª¶Ò»»", 6, 3 )
-			AddNumText( sceneId, x402305_g_scriptId, "»¹ÊÇËãÁË", 0, 100 )
+			AddNumText( sceneId, x402305_g_scriptId, "æˆ‘è¦å…‘æ¢", 6, 3 )
+			AddNumText( sceneId, x402305_g_scriptId, "è¿˜æ˜¯ç®—äº†", 0, 100 )
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId,x402305_g_scriptId,0)
 	end
@@ -236,71 +236,71 @@ function x402305_OnDefaultEvent( sceneId, selfId, targetId )
 	if (nNum == 24) then
 		BeginEvent(sceneId)
 			AddText(sceneId,"#{PMF_090302_5}")
-			AddNumText( sceneId, x402305_g_scriptId, "ÎÒÒª¶Ò»»", 6, 4 )
-			AddNumText( sceneId, x402305_g_scriptId, "»¹ÊÇËãÁË", 0, 100 )
+			AddNumText( sceneId, x402305_g_scriptId, "æˆ‘è¦å…‘æ¢", 6, 4 )
+			AddNumText( sceneId, x402305_g_scriptId, "è¿˜æ˜¯ç®—äº†", 0, 100 )
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId,x402305_g_scriptId,0)
 	end
 	
 	if (nNum == 100) then
-		--¹Ø±Õ¶Ô»°¿ò
+		--å…³é—­å¯¹è¯æ¡†
 		x402305_CloseWindow(sceneId,selfId, targetId)
 	end
 	
-	--È·ÈÏ¶Ò»»
+	--ç¡®è®¤å…‘æ¢
 	if nNum >= 1 and nNum <= x402305_g_TitleLvNum then
 		x402305_ChangePiaoMiaoTitle(sceneId, selfId, targetId,nNum)
 	end
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x402305_OnEnumerate( sceneId, selfId, targetId )
-	AddNumText( sceneId, x402305_g_scriptId, "¶Ò»»çÎç¿·å³ÆºÅ", 3, 10 )	
+	AddNumText( sceneId, x402305_g_scriptId, "å…‘æ¢ç¼¥ç¼ˆå³°ç§°å·", 3, 10 )	
 	AddNumText( sceneId, x402305_g_scriptId, "#{PMF_090220_01}", 11, 11 )	
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x402305_CheckAccept( sceneId, selfId )
 	return 1
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x402305_OnAccept( sceneId, selfId )
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x402305_OnAbandon( sceneId, selfId )
 end
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x402305_OnContinue( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x402305_CheckSubmit( sceneId, selfId )
 end
 
 --**********************************
---ËÍ³ö³èÎïµ°µÄ¹«¸æ
+--é€å‡ºå® ç‰©è›‹çš„å…¬å‘Š
 --**********************************
 function x402305_ShowSystemNotice( sceneId, selfId, strItemInfo,iIndex )
 		
 end
 
 --**********************************
--- ¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+-- å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x402305_NotifyFailBox( sceneId, selfId, targetId, msg )
 	BeginEvent( sceneId )
@@ -310,7 +310,7 @@ function x402305_NotifyFailBox( sceneId, selfId, targetId, msg )
 end
 
 --**********************************
---ĞÑÄ¿ĞÅÏ¢ÌáÊ¾
+--é†’ç›®ä¿¡æ¯æç¤º
 --**********************************
 function x402305_MsgBox( sceneId, selfId, msg )
 	BeginEvent( sceneId )
@@ -320,25 +320,25 @@ function x402305_MsgBox( sceneId, selfId, msg )
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x402305_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 end
 
 --**********************************
---É±ËÀ¹ÖÎï»òÍæ¼Ò
+--æ€æ­»æ€ªç‰©æˆ–ç©å®¶
 --**********************************
 function x402305_OnKillObject( sceneId, selfId, objdataId ,objId )
 end
 
 --**********************************
---½øÈëÇøÓòÊÂ¼ş
+--è¿›å…¥åŒºåŸŸäº‹ä»¶
 --**********************************
 function x402305_OnEnterArea( sceneId, selfId, zoneId )
 end
 
 --**********************************
---µÀ¾ß¸Ä±ä
+--é“å…·æ”¹å˜
 --**********************************
 function x402305_OnItemChanged( sceneId, selfId, itemdataId )
 end

@@ -1,13 +1,13 @@
 --001230
 
--- ±¨Ãû½øÈë»ªÉ½ÂÛ½£µÄ³¡¾°
+-- æŠ¥åè¿›å…¥åå±±è®ºå‰‘çš„åœºæ™¯
 
 --************************************************************************
 --MisDescBegin
---½Å±¾ºÅ
+--è„šæœ¬å·
 x001230_g_ScriptId = 1230
 
---ÊÂ¼ş
+--äº‹ä»¶
 x001230_g_Update = {
 
     ["id01"] = 0,
@@ -16,26 +16,26 @@ x001230_g_Update = {
 
 }
 
---ÌáÊ¾ĞÅÏ¢
+--æç¤ºä¿¡æ¯
 x001230_g_msg = {
 
-    ["cj"]	= "²Î¼Ó»ªÉ½ÂÛ½£",
-    ["jl"]	= "ÁìÈ¡»ªÉ½ÂÛ½£½±Àø",
-    ["Mail"]	= "È·ÈÏ½±Àø",
+    ["cj"]	= "å‚åŠ åå±±è®ºå‰‘",
+    ["jl"]	= "é¢†å–åå±±è®ºå‰‘å¥–åŠ±",
+    ["Mail"]	= "ç¡®è®¤å¥–åŠ±",
 
 }
 
---»î¶¯±àºÅ,Õâ¸öÊı×ÖĞèÒªºÍ»î¶¯±íÖĞµÄ¶ÔÓ¦
---ÆäÖĞµÄÊı¾İµÄµÚ0Î»Î»ÖÃÓÃÀ´±íÊ¾»î¶¯ÊÇ·ñ¿ªÆô
+--æ´»åŠ¨ç¼–å·,è¿™ä¸ªæ•°å­—éœ€è¦å’Œæ´»åŠ¨è¡¨ä¸­çš„å¯¹åº”
+--å…¶ä¸­çš„æ•°æ®çš„ç¬¬0ä½ä½ç½®ç”¨æ¥è¡¨ç¤ºæ´»åŠ¨æ˜¯å¦å¼€å¯
 x001230_g_nActivityId = 9
 
--- Õâ¸ö»î¶¯ÆäÊµ²»ĞèÒª´´½¨¸±±¾£¬Ö±½Ó°ÑËùÓĞµÄÈË£¬·ÅÈëÒ»¸ö³¡¾°¾Í¿ÉÒÔÁË 
+-- è¿™ä¸ªæ´»åŠ¨å…¶å®ä¸éœ€è¦åˆ›å»ºå‰¯æœ¬ï¼Œç›´æ¥æŠŠæ‰€æœ‰çš„äººï¼Œæ”¾å…¥ä¸€ä¸ªåœºæ™¯å°±å¯ä»¥äº† 
 x001230_g_nScnenId = 125
 
--- ÏÖÔÚÊÇ²»ÊÇ»î¶¯¼ÆÊıÊ±¼äµÄ±êÖ¾
+-- ç°åœ¨æ˜¯ä¸æ˜¯æ´»åŠ¨è®¡æ•°æ—¶é—´çš„æ ‡å¿—
 x001230_g_bHuashaning = 0
 
--- 9¸öÃÅÅÉµÄÉ±ÈËÊı
+-- 9ä¸ªé—¨æ´¾çš„æ€äººæ•°
 x001230_g_nMenpaikills = {{id=0,kill=0},
 													{id=1,kill=0},
 													{id=2,kill=0},
@@ -47,8 +47,8 @@ x001230_g_nMenpaikills = {{id=0,kill=0},
 													{id=8,kill=0},}
 
 -- [ QUFEI 2007-07-27 17:27 UPDATE ]
--- 9¸öÃÅÅÉÇ°ÈıÃûµÄÍæ¼ÒID		
--- ²ÎÊı take ±íÊ¾¸ÃÍæ¼ÒÊÇ·ñÁì¹ı½±Àø
+-- 9ä¸ªé—¨æ´¾å‰ä¸‰åçš„ç©å®¶ID		
+-- å‚æ•° take è¡¨ç¤ºè¯¥ç©å®¶æ˜¯å¦é¢†è¿‡å¥–åŠ±
 x001230_g_nMenpaiQiansan = {{id=0,player01="",player02="",player03="",playerid01=0,playerid02=0,playerid03=0},
 													  {id=1,player01="",player02="",player03="",playerid01=0,playerid02=0,playerid03=0},
 													  {id=2,player01="",player02="",player03="",playerid01=0,playerid02=0,playerid03=0},
@@ -60,44 +60,44 @@ x001230_g_nMenpaiQiansan = {{id=0,player01="",player02="",player03="",playerid01
 													  {id=8,player01="",player02="",player03="",playerid01=0,playerid02=0,playerid03=0},}
 
 -- [ QUFEI 2007-07-27 17:27 UPDATE ]
--- ÃÅÅÉ¸ß¼¶Ê±×°½±Àø
-x001230_g_nMenpaiShiZhuang = {{id=10124009,name="¿ÕÉ«"},
-															{id=10124010,name="Ê¥»ğ"},
-															{id=10124011,name="±ÌÄ°"},
-															{id=10124013,name="º×Ñ©"},
-															{id=10124012,name="ÆüÓ°"},
-															{id=10124014,name="Ğ×Âä"},
-															{id=10124017,name="Ñôäì"},
-															{id=10124015,name="ÔÂÂş"},
-															{id=10124016,name="»Ãéä"},}
+-- é—¨æ´¾é«˜çº§æ—¶è£…å¥–åŠ±
+x001230_g_nMenpaiShiZhuang = {{id=10124009,name="ç©ºè‰²"},
+															{id=10124010,name="åœ£ç«"},
+															{id=10124011,name="ç¢§é™Œ"},
+															{id=10124013,name="é¹¤é›ª"},
+															{id=10124012,name="æ³£å½±"},
+															{id=10124014,name="å‡¶è½"},
+															{id=10124017,name="é˜³æ½‡"},
+															{id=10124015,name="æœˆæ¼«"},
+															{id=10124016,name="å¹»æ®‡"},}
 															
--- ²ÄÁÏ½±Àø
-x001230_g_nCailiaoJiangli	 = {{id=20500000,name="¾«ÌúËéÆ¬"},
-															{id=20501000,name="ÃŞ²¼ËéÆ¬"},
-															{id=20502000,name="ÃØÒøËéÆ¬"},}
+-- ææ–™å¥–åŠ±
+x001230_g_nCailiaoJiangli	 = {{id=20500000,name="ç²¾é“ç¢ç‰‡"},
+															{id=20501000,name="æ£‰å¸ƒç¢ç‰‡"},
+															{id=20502000,name="ç§˜é“¶ç¢ç‰‡"},}
 
 x001230_g_bEndTime = 0
 x001230_g_bMenpai = ""
 
 x001230_g_WorldGlobal = 21
 
-x001230_g_PlayerKc = {}				-- Ã¿¸öÍæ¼ÒÉ±ÈËµÄÊıÄ¿
-x001230_g_PlayerName = {}			-- Ã¿¸öÍæ¼ÒµÄÃû×Ö
-x001230_g_PlayerNum = 0				-- Íæ¼ÒÊıÄ¿
+x001230_g_PlayerKc = {}				-- æ¯ä¸ªç©å®¶æ€äººçš„æ•°ç›®
+x001230_g_PlayerName = {}			-- æ¯ä¸ªç©å®¶çš„åå­—
+x001230_g_PlayerNum = 0				-- ç©å®¶æ•°ç›®
 
 --[ QUFEI 2007-07-27 15:04 UPDATE ]
-x001230_g_PlayerMenpai = {}		-- Ã¿¸öÍæ¼ÒµÄÃÅÅÉ
+x001230_g_PlayerMenpai = {}		-- æ¯ä¸ªç©å®¶çš„é—¨æ´¾
 x001230_g_PlayerId = {}
 
 x001230_g_PreTime = 0
 
 
---³¡¾°ÖĞÑëµÄ2¸öÃØ¼®Ë¢ĞÂµã....
+--åœºæ™¯ä¸­å¤®çš„2ä¸ªç§˜ç±åˆ·æ–°ç‚¹....
 x001230_g_MJPosA = {
 	{x=135, y=125},{x=141, y=123}
 }
 
---³¡¾°ËÄÖÜµÄ6¸öÃØ¼®Ë¢ĞÂµã....
+--åœºæ™¯å››å‘¨çš„6ä¸ªç§˜ç±åˆ·æ–°ç‚¹....
 x001230_g_MJPosB = {
 	{x=143, y=140, rand=-1},
 	{x=153, y=121, rand=-1},
@@ -109,32 +109,32 @@ x001230_g_MJPosB = {
 	{x=131, y=138, rand=-1}
 }
 
---ÃØ¼®±í....
+--ç§˜ç±è¡¨....
 x001230_g_MJTblA = {
 	5009,5010
 }
 
---ÃØ¼®±í....
+--ç§˜ç±è¡¨....
 x001230_g_MJTblB = {
 	5004,5005,5006,5007,5008
 }
 
 x001230_g_MJNameTbl = {
-	"×ÏÉ«ÃØóÅ",
-	"»ÆÉ«ÃØóÅ",
-	"ÂÌÉ«ÃØóÅ",
-	"°×É«ÃØóÅ",
-	"ºÚÉ«ÃØóÅ",
-	"À¶É«ÃØóÅ",
-	"ºìÉ«ÃØóÅ"
+	"ç´«è‰²ç§˜ç¬ˆ",
+	"é»„è‰²ç§˜ç¬ˆ",
+	"ç»¿è‰²ç§˜ç¬ˆ",
+	"ç™½è‰²ç§˜ç¬ˆ",
+	"é»‘è‰²ç§˜ç¬ˆ",
+	"è“è‰²ç§˜ç¬ˆ",
+	"çº¢è‰²ç§˜ç¬ˆ"
 }
 
---ÃØ¼®½Å±¾....
+--ç§˜ç±è„šæœ¬....
 x001230_g_MJScript = 001235
 
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x001230_OnDefaultEvent( sceneId, selfId, targetId )
 	
@@ -143,114 +143,114 @@ function x001230_OnDefaultEvent( sceneId, selfId, targetId )
 	if key == x001230_g_Update["id01"] then
 		if LuaFnHasTeam( sceneId, selfId ) ~= 0  then
 			BeginEvent(sceneId)
-				AddText(sceneId,"#B»ªÉ½ÂÛ½£");
-				AddText(sceneId,"  ÇëÀë¿ª¶ÓÎéÖ®ºóÔÙ±¨Ãû²Î¼Ó¡£");
+				AddText(sceneId,"#Båå±±è®ºå‰‘");
+				AddText(sceneId,"  è¯·ç¦»å¼€é˜Ÿä¼ä¹‹åå†æŠ¥åå‚åŠ ã€‚");
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,targetId)
 			
 			return 0
 		end
     
-        -- 0£¬´¦ÓÚË«ÈËÆï³Ë×´Ì¬µÄÈË£¬²»ÄÜ±¨Ãû
+        -- 0ï¼Œå¤„äºåŒäººéª‘ä¹˜çŠ¶æ€çš„äººï¼Œä¸èƒ½æŠ¥å
         if LuaFnGetDRideFlag(sceneId, selfId) ~= 0  then
             BeginEvent(sceneId)
-                AddText(sceneId,"#B»ªÉ½ÂÛ½£");
-                AddText(sceneId,"  Ë«ÈËÆï³Ë×´Ì¬ÏÂ£¬²»ÄÜ±¨Ãû²Î¼Ó»ªÉ½ÂÛ½£¡£");
+                AddText(sceneId,"#Båå±±è®ºå‰‘");
+                AddText(sceneId,"  åŒäººéª‘ä¹˜çŠ¶æ€ä¸‹ï¼Œä¸èƒ½æŠ¥åå‚åŠ åå±±è®ºå‰‘ã€‚");
             EndEvent(sceneId)
             DispatchEventList(sceneId,selfId,targetId)
             
             return 0
         end
 
-        -- 1,ÈËÎïµÈ¼¶¸ßÓÚ30
+        -- 1,äººç‰©ç­‰çº§é«˜äº30
         if GetLevel(sceneId, selfId) < 30  then
             BeginEvent(sceneId)
-                AddText(sceneId,"#B»ªÉ½ÂÛ½£");
-                AddText(sceneId,"  ²Î¼Ó»ªÉ½ÂÛ½£±ØĞëÒª30¼¶ÒÔÉÏ²ÅÄÜ²Î¼Ó£¬¸óÏÂĞŞÎª»¹²»¹»£¬µÈµ½30¼¶Ö®ºóÔÙÀ´ÕÒÎÒ°É¡£");
+                AddText(sceneId,"#Båå±±è®ºå‰‘");
+                AddText(sceneId,"  å‚åŠ åå±±è®ºå‰‘å¿…é¡»è¦30çº§ä»¥ä¸Šæ‰èƒ½å‚åŠ ï¼Œé˜ä¸‹ä¿®ä¸ºè¿˜ä¸å¤Ÿï¼Œç­‰åˆ°30çº§ä¹‹åå†æ¥æ‰¾æˆ‘å§ã€‚");
             EndEvent(sceneId)
             DispatchEventList(sceneId,selfId,targetId)
             
             return 0
         end
 
-        -- 2,¼ì²â»î¶¯ÊÇ²»ÊÇÒÑ¾­¿ªÊ¼ÁË£¬Èç¹ûÒÑ¾­¿ªÊ¼£¬¾Í²»ÄÜÔÙ½øÈ¥ÁË
+        -- 2,æ£€æµ‹æ´»åŠ¨æ˜¯ä¸æ˜¯å·²ç»å¼€å§‹äº†ï¼Œå¦‚æœå·²ç»å¼€å§‹ï¼Œå°±ä¸èƒ½å†è¿›å»äº†
         local nWeek = GetTodayWeek()
         if (nWeek==0 or nWeek==4 or nWeek==2) ~= 1  then
             BeginEvent(sceneId)
-                AddText(sceneId,"#B»ªÉ½ÂÛ½£");
-                AddText(sceneId,"  ÏÖÔÚ²»ÊÇ²Î¼Ó»ªÉ½ÂÛ½£µÄ±¨ÃûÊ±¼ä£¬ÇëÓÚÖÜ¶ş¡¢ÖÜËÄºÍÖÜÈÕÔÙÀ´¡£");
+                AddText(sceneId,"#Båå±±è®ºå‰‘");
+                AddText(sceneId,"  ç°åœ¨ä¸æ˜¯å‚åŠ åå±±è®ºå‰‘çš„æŠ¥åæ—¶é—´ï¼Œè¯·äºå‘¨äºŒã€å‘¨å››å’Œå‘¨æ—¥å†æ¥ã€‚");
             EndEvent(sceneId)
             DispatchEventList(sceneId,selfId,targetId)
             
             return
         end
         
-        -- 3,Ê±¼ä¼ì²â£¬½ÓÊÜ±¨ÃûµÄÊ±¼ä£¬8µãµ½8µã30·Ö
+        -- 3,æ—¶é—´æ£€æµ‹ï¼Œæ¥å—æŠ¥åçš„æ—¶é—´ï¼Œ8ç‚¹åˆ°8ç‚¹30åˆ†
         --begin modified by zhangguoxin 090207
         --local nHour = GetHourTime()
         --local temp = floor(nHour/100)*100
         --PrintNum(nHour-temp)
         --if ((nWeek==0) and (nHour-temp<60 or nHour-temp>=62)) or 
-        --     ( (nWeek==2 or nWeek==4) and (nHour-temp<76 or nHour-temp>=78))  then		--±¨ÃûÊ±¼ä2 4µÄ19:00-19:30£¬ÈÕµÄ15:00-15:30
+        --     ( (nWeek==2 or nWeek==4) and (nHour-temp<76 or nHour-temp>=78))  then		--æŠ¥åæ—¶é—´2 4çš„19:00-19:30ï¼Œæ—¥çš„15:00-15:30
         local nQuarter = mod(GetQuarterTime(),100);
         if ((nWeek==0) and (nQuarter < 60 or nQuarter >= 62 )) or 
-             ( (nWeek==2 or nWeek==4) and (nQuarter < 76 or nQuarter >= 78))  then		--±¨ÃûÊ±¼ä2 4µÄ19:00-19:30£¬ÈÕµÄ15:00-15:30
+             ( (nWeek==2 or nWeek==4) and (nQuarter < 76 or nQuarter >= 78))  then		--æŠ¥åæ—¶é—´2 4çš„19:00-19:30ï¼Œæ—¥çš„15:00-15:30
         --end modified by zhangguoxin 090207
             BeginEvent(sceneId)
-                AddText(sceneId,"#B»ªÉ½ÂÛ½£");
-                AddText(sceneId,"  ÏÖÔÚ²»ÊÇ²Î¼Ó»ªÉ½ÂÛ½£µÄ±¨ÃûÊ±¼ä£¬µÈµ½»î¶¯¿ªÊ¼µÄÊ±ºòÔÙÀ´ÕÒÎÒ°É¡£");
+                AddText(sceneId,"#Båå±±è®ºå‰‘");
+                AddText(sceneId,"  ç°åœ¨ä¸æ˜¯å‚åŠ åå±±è®ºå‰‘çš„æŠ¥åæ—¶é—´ï¼Œç­‰åˆ°æ´»åŠ¨å¼€å§‹çš„æ—¶å€™å†æ¥æ‰¾æˆ‘å§ã€‚");
             EndEvent(sceneId)
             DispatchEventList(sceneId,selfId,targetId)
             
             return
         end
 
-        -- 4,ÈËÊı¼ì²â,Ê¹ÓÃ»î¶¯Êı¾İÇøµÄÊı¾İÀ´±£´æÕâĞ©Êı¾İ
+        -- 4,äººæ•°æ£€æµ‹,ä½¿ç”¨æ´»åŠ¨æ•°æ®åŒºçš„æ•°æ®æ¥ä¿å­˜è¿™äº›æ•°æ®
         local nMenpai = LuaFnGetMenPai(sceneId, selfId)
         
         if nMenpai == 9   then
             BeginEvent(sceneId)
-                AddText(sceneId,"#B»ªÉ½ÂÛ½£");
-                AddText(sceneId,"  ¶Ô²»Æğ£¬ÄãÃ»ÓĞÃÅÅÉ£¬ÄãÊÇÔõÃ´»ìµ½30¼¶µÄ°¡£¡£¡£¡");
+                AddText(sceneId,"#Båå±±è®ºå‰‘");
+                AddText(sceneId,"  å¯¹ä¸èµ·ï¼Œä½ æ²¡æœ‰é—¨æ´¾ï¼Œä½ æ˜¯æ€ä¹ˆæ··åˆ°30çº§çš„å•Šï¼ï¼ï¼");
             EndEvent(sceneId)
             DispatchEventList(sceneId,selfId,targetId)
             return 0
         end
         
         local nPeopleNum = GetActivityParam(sceneId, x001230_g_nActivityId, nMenpai)
-        -- a,¼ì²âÍæ¼ÒËùÔÚÃÅÅÉÊÇ²»ÊÇÒÑ¾­ÓĞ10ÈËÁË£¬
+        -- a,æ£€æµ‹ç©å®¶æ‰€åœ¨é—¨æ´¾æ˜¯ä¸æ˜¯å·²ç»æœ‰10äººäº†ï¼Œ
         if nPeopleNum < 10 then
-            -- Ëû¿ÉÒÔ½øÈë
+            -- ä»–å¯ä»¥è¿›å…¥
         elseif nPeopleNum >=10 and nPeopleNum < 30  then
-            -- ÅĞ¶ÏÊÇ²»ÊÇÈËÊı×î¶àµÄÃÅÅÉ£¬
+            -- åˆ¤æ–­æ˜¯ä¸æ˜¯äººæ•°æœ€å¤šçš„é—¨æ´¾ï¼Œ
             for i=0, 8   do
                 if nMenpai ~= i   then
                     if GetActivityParam(sceneId, x001230_g_nActivityId, nMenpai) >= nPeopleNum  then
-                        --¿ÉÒÔ½øÈë
+                        --å¯ä»¥è¿›å…¥
                     end
                 end
             end
-            -- ĞèÒªµÈ´ı±ğµÄÃÅÅÉ£«ÈËºó½øÈë
+            -- éœ€è¦ç­‰å¾…åˆ«çš„é—¨æ´¾ï¼‹äººåè¿›å…¥
             BeginEvent(sceneId)
-                AddText(sceneId,"#B»ªÉ½ÂÛ½£");
-                AddText(sceneId,"  ¶Ô²»Æğ£¬±¾´Î»ªÉ½ÂÛ½£¹óÃÅÅÉ²Î¼ÓµÄÈËÊı¹ı¶à£¬ÇëµÈ´ıÆäËûÃÅÅÉÈË½øÈëÖ®ºóÔÙ½øÈë¡£");
+                AddText(sceneId,"#Båå±±è®ºå‰‘");
+                AddText(sceneId,"  å¯¹ä¸èµ·ï¼Œæœ¬æ¬¡åå±±è®ºå‰‘è´µé—¨æ´¾å‚åŠ çš„äººæ•°è¿‡å¤šï¼Œè¯·ç­‰å¾…å…¶ä»–é—¨æ´¾äººè¿›å…¥ä¹‹åå†è¿›å…¥ã€‚");
             EndEvent(sceneId)
             DispatchEventList(sceneId,selfId,targetId)
             return 0
             
         elseif nPeopleNum >= 30  then
             BeginEvent(sceneId)
-                AddText(sceneId,"#B»ªÉ½ÂÛ½£");
-                AddText(sceneId,"  ¶Ô²»Æğ£¬¹óÃÅÅÉ²Î¼ÓµÄÈËÊıÒÑÂú30ÈË¡£");
+                AddText(sceneId,"#Båå±±è®ºå‰‘");
+                AddText(sceneId,"  å¯¹ä¸èµ·ï¼Œè´µé—¨æ´¾å‚åŠ çš„äººæ•°å·²æ»¡30äººã€‚");
             EndEvent(sceneId)
             DispatchEventList(sceneId,selfId,targetId)
             return 0
         end
-        -- ÆäËûµÄÒ»Ğ©¿ÉÒÔ½øÈë»ªÉ½ÂÛ½£µÄÅĞ¶¨
+        -- å…¶ä»–çš„ä¸€äº›å¯ä»¥è¿›å…¥åå±±è®ºå‰‘çš„åˆ¤å®š
         -- PrintNum(selfId)
         -- local Name = GetName(sceneId, selfId)
         -- LuaFnSendSystemMail( sceneId, Name, "mail test" )
-        -- ×¢Òâ£¬Õâ¸öÏµÍ³ÊÇ²»´´½¨¸±±¾µÄ£¬Ö±½Ó½øÈë³¡¾°¾Í¿ÉÒÔÁË
+        -- æ³¨æ„ï¼Œè¿™ä¸ªç³»ç»Ÿæ˜¯ä¸åˆ›å»ºå‰¯æœ¬çš„ï¼Œç›´æ¥è¿›å…¥åœºæ™¯å°±å¯ä»¥äº†
         local nPos_X;
         local nPos_Z;
         
@@ -287,18 +287,18 @@ function x001230_OnDefaultEvent( sceneId, selfId, targetId )
         end
         
         -- [ QUFEI 2007-07-30 18:31 UPDATE ]
-        -- Çå¿Õ½±Àø±ê¼Ç
+        -- æ¸…ç©ºå¥–åŠ±æ ‡è®°
         -- PrintNum(selfId)
         SetMissionFlag( sceneId, selfId, MF_LunjianJiangli01, 0 )
         SetMissionFlag( sceneId, selfId, MF_LunjianJiangli02, 0 )
         SetMissionFlag( sceneId, selfId, MF_LunjianJiangli03, 0 )
         
         CallScriptFunction((400900), "TransferFunc",sceneId, selfId, x001230_g_nScnenId, nPos_X, nPos_Z)
-        --»î¶¯Í³¼Æ
-        LuaFnAuditQuest(sceneId, selfId, "»ªÉ½ÂÛ½£")
+        --æ´»åŠ¨ç»Ÿè®¡
+        LuaFnAuditQuest(sceneId, selfId, "åå±±è®ºå‰‘")
    
    elseif key == x001230_g_Update["id02"] then
-        -- »ªÉ½ÂÛ½£½±Àø ÖÜÈÕ£º16:00-17:00 ÖÜ2¡¢ÖÜ4£º20:00-21:00
+        -- åå±±è®ºå‰‘å¥–åŠ± å‘¨æ—¥ï¼š16:00-17:00 å‘¨2ã€å‘¨4ï¼š20:00-21:00
         local nWeek = GetTodayWeek()
         --begin modified by zhangguoxin 090207
 				--local nHour = GetHourTime()
@@ -312,7 +312,7 @@ function x001230_OnDefaultEvent( sceneId, selfId, targetId )
             x001230_OnHuashanJiangli( sceneId, selfId, targetId )
             return 0
         else            
-            x001230_MyMsgBox( sceneId, selfId, "ÁìÈ¡»ªÉ½ÂÛ½£½±ÀøµÄÊ±¼äÒÑ¹ı£¬µÈµ½»î¶¯½áÊøÒ»¸öĞ¡Ê±ÄÚÔÙÀ´ÕÒÎÒ°É¡£" )
+            x001230_MyMsgBox( sceneId, selfId, "é¢†å–åå±±è®ºå‰‘å¥–åŠ±çš„æ—¶é—´å·²è¿‡ï¼Œç­‰åˆ°æ´»åŠ¨ç»“æŸä¸€ä¸ªå°æ—¶å†…å†æ¥æ‰¾æˆ‘å§ã€‚" )
             return 0		
         end
    elseif key == x001230_g_Update["id03"] then
@@ -323,7 +323,7 @@ function x001230_OnDefaultEvent( sceneId, selfId, targetId )
    			   			
    			if ( index01 == 1 and index02 == 1 and index03 == 1 ) then
 					BeginEvent(sceneId)
-					local strText = "ÄúÒÑ¾­Áì¹ı½±Àø£¬ÇëÔÙ½ÓÔÙÀ÷£¬ÏÂ´Î¶á¿ıÊ±ÔÙÀ´ÕÒÎÒ°É¡£"
+					local strText = "æ‚¨å·²ç»é¢†è¿‡å¥–åŠ±ï¼Œè¯·å†æ¥å†å‰ï¼Œä¸‹æ¬¡å¤ºé­æ—¶å†æ¥æ‰¾æˆ‘å§ã€‚"
 					AddText(sceneId,strText);
 					EndEvent(sceneId)
 					DispatchMissionTips(sceneId,selfId)	
@@ -331,7 +331,7 @@ function x001230_OnDefaultEvent( sceneId, selfId, targetId )
 					return 0
    			end
    			
-   			-- ¼ì²âSelfIdÊÇ·ñÓĞĞ§
+   			-- æ£€æµ‹SelfIdæ˜¯å¦æœ‰æ•ˆ
    			if LuaFnIsObjValid( sceneId, selfId ) ~= 1 then
 					return 0
 				end
@@ -350,13 +350,13 @@ end
 
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x001230_OnEnumerate( sceneId, selfId, targetId )	
     AddNumText( sceneId, x001230_g_ScriptId, x001230_g_msg["cj"], 6, x001230_g_Update["id01"] )        
     
     --[ QUFEI 2007-07-27 11:13 UPDATE ]	
-    --»ªÉ½ÂÛ½£½áÊøºóÒ»Ğ¡Ê±ÄÚÁìÈ¡½±Àø	ÖÜÈÕ£º16:00-17:00 ÖÜ2¡¢ÖÜ4£º20:00-21:00
+    --åå±±è®ºå‰‘ç»“æŸåä¸€å°æ—¶å†…é¢†å–å¥–åŠ±	å‘¨æ—¥ï¼š16:00-17:00 å‘¨2ã€å‘¨4ï¼š20:00-21:00
     local nWeek = GetTodayWeek()
     
     --begin modified by zhangguoxin 090207
@@ -376,97 +376,97 @@ function x001230_OnEnumerate( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x001230_CheckAccept( sceneId, selfId )
 	
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x001230_OnAccept( sceneId, selfId, targetId )
 	
 end
 
 --**********************************
---Íæ¼ÒÍ¬Òâ½øÈë¸±±¾
+--ç©å®¶åŒæ„è¿›å…¥å‰¯æœ¬
 --**********************************
 function x001230_AcceptEnterCopyScene( sceneId, selfId )
 	
 end
 
 --**********************************
---ÓĞÍæ¼ÒÔÚ¸±±¾ÖĞËÀÍöÊÂ¼ş
+--æœ‰ç©å®¶åœ¨å‰¯æœ¬ä¸­æ­»äº¡äº‹ä»¶
 --**********************************
 function x001230_OnHumanDie( sceneId, selfId, killerId )
 	
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x001230_OnAbandon( sceneId, selfId )
 	
 end
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x001230_OnContinue( sceneId, selfId, targetId )
 	
 end	
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x001230_CheckSubmit( sceneId, selfId, selectRadioId )
 	
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x001230_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 	
 end
 
 --**********************************
---É±ËÀ¹ÖÎï»òÍæ¼Ò
+--æ€æ­»æ€ªç‰©æˆ–ç©å®¶
 --**********************************
 function x001230_OnKillObject( sceneId, selfId, objdataId, objId )
 
 end
 
 --**********************************
---½øÈëÇøÓòÊÂ¼ş
+--è¿›å…¥åŒºåŸŸäº‹ä»¶
 --**********************************
 function x001230_OnEnterZone( sceneId, selfId, zoneId )
 	
 end
 
 --**********************************
---µÀ¾ß¸Ä±ä
+--é“å…·æ”¹å˜
 --**********************************
 function x001230_OnItemChanged( sceneId, selfId, itemdataId )
 	
 end
 
 --**********************************
---¸±±¾³¡¾°¶¨Ê±Æ÷ÊÂ¼ş
+--å‰¯æœ¬åœºæ™¯å®šæ—¶å™¨äº‹ä»¶
 --**********************************
 function x001230_OnCopySceneTimer( sceneId, nowTime )
 	
 end
 
 --[ QUFEI 2007-07-27 11:13 UPDATE ]
---»ªÉ½ÂÛ½£½±ÀøÊÂ¼ş
+--åå±±è®ºå‰‘å¥–åŠ±äº‹ä»¶
 function x001230_OnHuashanJiangli( sceneId, selfId, targetId )
 	--[ QUFEI 2007-07-27 11:18 UPDATE ]
 	
 	-- PrintStr(GetName(sceneId, selfId))	
 	local name   	= GetName(sceneId, selfId)
-	--ÏòselfIdËùÔÚµÄÃÅÅÉ·¢ËÍ¹«¸æ
+	--å‘selfIdæ‰€åœ¨çš„é—¨æ´¾å‘é€å…¬å‘Š
 	local strText = ""
 	local menpai  = GetMenPai(sceneId, selfId)	
 	menpai = menpai+1
@@ -486,7 +486,7 @@ function x001230_OnHuashanJiangli( sceneId, selfId, targetId )
 	local	timenow = LuaFnGetCurrentTime()
 		
 	if nData ~= 0 and nData ~= timeidx	then
-		-- ¸ÃÍæ¼ÒÁì½±Æ·³¬Ê±
+		-- è¯¥ç©å®¶é¢†å¥–å“è¶…æ—¶
 		SetMissionFlag( sceneId, selfId, MF_LunjianJiangli01, 0 )
 		SetMissionFlag( sceneId, selfId, MF_LunjianJiangli02, 0 )
 		SetMissionFlag( sceneId, selfId, MF_LunjianJiangli03, 0 )
@@ -501,15 +501,15 @@ function x001230_OnHuashanJiangli( sceneId, selfId, targetId )
 	-- PrintNum(index02)
 	-- PrintNum(index03)
 	
-	-- ½±Àø±ê¼Ç	index01	index02	index03
-	-- ½±ÀøÎ´È¡		0				0				0				(Ä¬ÈÏ)
-	-- »ı·ÖµÚÒ»		0				0				1	
-	-- »ı·ÖµÚ¶ş		0				1				0
-	-- »ı·ÖµÚÈı		0				1				1
-	-- ÃÅÅÉµÚÒ»		1				0				0
-	-- ÃÅÅÉµÚ¶ş		1				0				1
-	-- ÃÅÅÉµÚÈı		1				1				0
-	-- ½±ÀøÒÑÈ¡		1				1				1
+	-- å¥–åŠ±æ ‡è®°	index01	index02	index03
+	-- å¥–åŠ±æœªå–		0				0				0				(é»˜è®¤)
+	-- ç§¯åˆ†ç¬¬ä¸€		0				0				1	
+	-- ç§¯åˆ†ç¬¬äºŒ		0				1				0
+	-- ç§¯åˆ†ç¬¬ä¸‰		0				1				1
+	-- é—¨æ´¾ç¬¬ä¸€		1				0				0
+	-- é—¨æ´¾ç¬¬äºŒ		1				0				1
+	-- é—¨æ´¾ç¬¬ä¸‰		1				1				0
+	-- å¥–åŠ±å·²å–		1				1				1
 	
 	if ( index01 == 0 and index02 == 0 and index03 == 1 )
 		 or ( index01 == 0 and index02 == 1 and index03 == 0 )
@@ -520,7 +520,7 @@ function x001230_OnHuashanJiangli( sceneId, selfId, targetId )
 		 or ( index01 == 1 and index02 == 1 and index03 == 1 ) then
 		 		if index01 == 1 and index02 == 1 and index03 == 1 then		 			
 			 		BeginEvent(sceneId)
-					strText = "ÄúÒÑ¾­Áì¹ı½±Àø£¬ÇëÔÙ½ÓÔÙÀ÷£¬ÏÂ´Î¶á¿ıÊ±ÔÙÀ´ÕÒÎÒ°É¡£"
+					strText = "æ‚¨å·²ç»é¢†è¿‡å¥–åŠ±ï¼Œè¯·å†æ¥å†å‰ï¼Œä¸‹æ¬¡å¤ºé­æ—¶å†æ¥æ‰¾æˆ‘å§ã€‚"
 					AddText(sceneId,strText);
 					EndEvent(sceneId)
 					DispatchMissionTips(sceneId,selfId)	
@@ -545,41 +545,41 @@ function x001230_OnHuashanJiangli( sceneId, selfId, targetId )
 										itemInfo[2]	=	""
 										itemInfo[3]	=	""
 										
-										-- ½±ÀøÊ±×°
-										local bagpos = TryRecieveItem( sceneId, selfId, x001230_g_nMenpaiShiZhuang[menpai].id, QUALITY_MUST_BE_CHANGE )	-- ·Å²»ÏÂ¾ÍÃ»ÓĞÁË
+										-- å¥–åŠ±æ—¶è£…
+										local bagpos = TryRecieveItem( sceneId, selfId, x001230_g_nMenpaiShiZhuang[menpai].id, QUALITY_MUST_BE_CHANGE )	-- æ”¾ä¸ä¸‹å°±æ²¡æœ‰äº†
 										local itemInfo01 = GetBagItemTransfer( sceneId, selfId, bagpos )
 										
-										--²éÑ¯×éÈÕÖ¾
+										--æŸ¥è¯¢ç»„æ—¥å¿—
 										strLogCheck = format("HuaShanLunJian_GetPrize	userId:%X, itemId:%d, count:%d", LuaFnGetGUID(sceneId, selfId), x001230_g_nMenpaiShiZhuang[menpai].id, 1)
 										LuaFnLogCheck(strLogCheck)
 																				
-										-- Ç¿ÖÆ°ó¶¨																													
+										-- å¼ºåˆ¶ç»‘å®š																													
 										local	bindidx	=	LuaFnItemBind( sceneId, selfId, bagpos )
 										
 										if bindidx ~= 1 then
-											local bindmsg = "°ó¶¨Ê§°Ü"													
+											local bindmsg = "ç»‘å®šå¤±è´¥"													
 											BeginEvent( sceneId )
 												AddText( sceneId, bindmsg )
 											EndEvent( sceneId )
 											DispatchMissionTips( sceneId, selfId )
 										end
 										
-										-- ½±Àø²ÄÁÏ
+										-- å¥–åŠ±ææ–™
 										temp = random(3)																								
 										-- PrintNum(temp)
 										-- PrintStr(x001230_g_nCailiaoJiangli[temp].name)
-										bagpos = TryRecieveItem( sceneId, selfId, x001230_g_nCailiaoJiangli[temp].id, QUALITY_MUST_BE_CHANGE )	-- ·Å²»ÏÂ¾ÍÃ»ÓĞÁË
+										bagpos = TryRecieveItem( sceneId, selfId, x001230_g_nCailiaoJiangli[temp].id, QUALITY_MUST_BE_CHANGE )	-- æ”¾ä¸ä¸‹å°±æ²¡æœ‰äº†
 										itemInfo[temp] = GetBagItemTransfer( sceneId, selfId, bagpos )
 										
-										--²éÑ¯×éÈÕÖ¾
+										--æŸ¥è¯¢ç»„æ—¥å¿—
 										strLogCheck = format("HuaShanLunJian_GetPrize	userId:%X, itemId:%d, count:%d", LuaFnGetGUID(sceneId, selfId), x001230_g_nCailiaoJiangli[temp].id, 1)
 										LuaFnLogCheck(strLogCheck)
 										
-										-- Ç¿ÖÆ°ó¶¨										
+										-- å¼ºåˆ¶ç»‘å®š										
 										local	bindidx	=	LuaFnItemBind( sceneId, selfId, bagpos )
 																				
 										if bindidx ~= 1 then
-											local bindmsg = "°ó¶¨Ê§°Ü"													
+											local bindmsg = "ç»‘å®šå¤±è´¥"													
 											BeginEvent( sceneId )
 												AddText( sceneId, bindmsg )
 											EndEvent( sceneId )
@@ -592,18 +592,18 @@ function x001230_OnHuashanJiangli( sceneId, selfId, targetId )
 										temp = random(3)																				
 										-- PrintNum(temp)
 										-- PrintStr(x001230_g_nCailiaoJiangli[temp].name)
-										bagpos = TryRecieveItem( sceneId, selfId, x001230_g_nCailiaoJiangli[temp].id, QUALITY_MUST_BE_CHANGE )	-- ·Å²»ÏÂ¾ÍÃ»ÓĞÁË
+										bagpos = TryRecieveItem( sceneId, selfId, x001230_g_nCailiaoJiangli[temp].id, QUALITY_MUST_BE_CHANGE )	-- æ”¾ä¸ä¸‹å°±æ²¡æœ‰äº†
 										itemInfo[temp] = GetBagItemTransfer( sceneId, selfId, bagpos )								
 										
-										--²éÑ¯×éÈÕÖ¾
+										--æŸ¥è¯¢ç»„æ—¥å¿—
 										strLogCheck = format("HuaShanLunJian_GetPrize	userId:%X, itemId:%d, count:%d", LuaFnGetGUID(sceneId, selfId), x001230_g_nCailiaoJiangli[temp].id, 1)
 										LuaFnLogCheck(strLogCheck)
 										
-										-- Ç¿ÖÆ°ó¶¨										
+										-- å¼ºåˆ¶ç»‘å®š										
 										local	bindidx	=	LuaFnItemBind( sceneId, selfId, bagpos )
 																				
 										if bindidx ~= 1 then
-											local bindmsg = "°ó¶¨Ê§°Ü"													
+											local bindmsg = "ç»‘å®šå¤±è´¥"													
 											BeginEvent( sceneId )
 												AddText( sceneId, bindmsg )
 											EndEvent( sceneId )
@@ -616,18 +616,18 @@ function x001230_OnHuashanJiangli( sceneId, selfId, targetId )
 										temp = random(3)																											
 										-- PrintNum(temp)
 										-- PrintStr(x001230_g_nCailiaoJiangli[temp].name)
-										bagpos = TryRecieveItem( sceneId, selfId, x001230_g_nCailiaoJiangli[temp].id, QUALITY_MUST_BE_CHANGE )	-- ·Å²»ÏÂ¾ÍÃ»ÓĞÁË
+										bagpos = TryRecieveItem( sceneId, selfId, x001230_g_nCailiaoJiangli[temp].id, QUALITY_MUST_BE_CHANGE )	-- æ”¾ä¸ä¸‹å°±æ²¡æœ‰äº†
 										itemInfo[temp] = GetBagItemTransfer( sceneId, selfId, bagpos )	
 										
-										--²éÑ¯×éÈÕÖ¾
+										--æŸ¥è¯¢ç»„æ—¥å¿—
 										strLogCheck = format("HuaShanLunJian_GetPrize	userId:%X, itemId:%d, count:%d", LuaFnGetGUID(sceneId, selfId), x001230_g_nCailiaoJiangli[temp].id, 1)
 										LuaFnLogCheck(strLogCheck)							
 										
-										-- Ç¿ÖÆ°ó¶¨										
+										-- å¼ºåˆ¶ç»‘å®š										
 										local	bindidx	=	LuaFnItemBind( sceneId, selfId, bagpos )
 																				
 										if bindidx ~= 1 then
-											local bindmsg = "°ó¶¨Ê§°Ü"													
+											local bindmsg = "ç»‘å®šå¤±è´¥"													
 											BeginEvent( sceneId )
 												AddText( sceneId, bindmsg )
 											EndEvent( sceneId )
@@ -637,39 +637,39 @@ function x001230_OnHuashanJiangli( sceneId, selfId, targetId )
 										idx[temp] = idx[temp]+1
 										-- PrintNum(idx[temp])
 										
-										-- ¸ÃÍæ¼ÒÁì¹ı½±Æ·
+										-- è¯¥ç©å®¶é¢†è¿‡å¥–å“
 										SetMissionFlag( sceneId, selfId, MF_LunjianJiangli01, 1 )
 										SetMissionFlag( sceneId, selfId, MF_LunjianJiangli02, 1 )
 										SetMissionFlag( sceneId, selfId, MF_LunjianJiangli03, 1 )
 										
-										--ÏòselfIdËùÔÚµÄÃÅÅÉ·¢ËÍ¹«¸æ
+										--å‘selfIdæ‰€åœ¨çš„é—¨æ´¾å‘é€å…¬å‘Š
 										if idx[1] > 0 and idx[2] > 0 and idx[3] > 0 then																
-											strText = format("#{_INFOUSR%s}#P#{HSJL01}#{_INFOMSG%s}#{HSJL02}%d¸ö#{_INFOMSG%s}£¬%d¸ö#{_INFOMSG%s}£¬%d¸ö#{_INFOMSG%s}#{HSJL03}", name, itemInfo01, idx[1], itemInfo[1], idx[2], itemInfo[2], idx[3], itemInfo[3] )
+											strText = format("#{_INFOUSR%s}#P#{HSJL01}#{_INFOMSG%s}#{HSJL02}%dä¸ª#{_INFOMSG%s}ï¼Œ%dä¸ª#{_INFOMSG%s}ï¼Œ%dä¸ª#{_INFOMSG%s}#{HSJL03}", name, itemInfo01, idx[1], itemInfo[1], idx[2], itemInfo[2], idx[3], itemInfo[3] )
 											-- PrintStr(strText)
 										elseif idx[1] > 0 and idx[2] > 0 and idx[3] == 0 then
-											strText = format("#{_INFOUSR%s}#P#{HSJL01}#{_INFOMSG%s}#{HSJL02}%d¸ö#{_INFOMSG%s}£¬%d¸ö#{_INFOMSG%s}#{HSJL03}", name, itemInfo01, idx[1], itemInfo[1], idx[2], itemInfo[2] )
+											strText = format("#{_INFOUSR%s}#P#{HSJL01}#{_INFOMSG%s}#{HSJL02}%dä¸ª#{_INFOMSG%s}ï¼Œ%dä¸ª#{_INFOMSG%s}#{HSJL03}", name, itemInfo01, idx[1], itemInfo[1], idx[2], itemInfo[2] )
 											-- PrintStr(strText)
 										elseif idx[1] > 0 and idx[2] == 0 and idx[3] > 0 then																
-											strText = format("#{_INFOUSR%s}#P#{HSJL01}#{_INFOMSG%s}#{HSJL02}%d¸ö#{_INFOMSG%s}£¬%d¸ö#{_INFOMSG%s}#{HSJL03}", name, itemInfo01, idx[1], itemInfo[1], idx[3], itemInfo[3] )
+											strText = format("#{_INFOUSR%s}#P#{HSJL01}#{_INFOMSG%s}#{HSJL02}%dä¸ª#{_INFOMSG%s}ï¼Œ%dä¸ª#{_INFOMSG%s}#{HSJL03}", name, itemInfo01, idx[1], itemInfo[1], idx[3], itemInfo[3] )
 											-- PrintStr(strText)
 										elseif idx[1] == 0 and idx[2] > 0 and idx[3] > 0 then																
-											strText = format("#{_INFOUSR%s}#P#{HSJL01}#{_INFOMSG%s}#{HSJL02}%d¸ö#{_INFOMSG%s}£¬%d¸ö#{_INFOMSG%s}#{HSJL03}", name, itemInfo01, idx[2], itemInfo[2], idx[3], itemInfo[3] )
+											strText = format("#{_INFOUSR%s}#P#{HSJL01}#{_INFOMSG%s}#{HSJL02}%dä¸ª#{_INFOMSG%s}ï¼Œ%dä¸ª#{_INFOMSG%s}#{HSJL03}", name, itemInfo01, idx[2], itemInfo[2], idx[3], itemInfo[3] )
 											-- PrintStr(strText)
 										elseif idx[1] > 0 and idx[2] == 0 and idx[3] == 0 then																
-											strText = format("#{_INFOUSR%s}#P#{HSJL01}#{_INFOMSG%s}#{HSJL02}%d¸ö#{_INFOMSG%s}#{HSJL03}", name, itemInfo01, idx[1], itemInfo[1] )
+											strText = format("#{_INFOUSR%s}#P#{HSJL01}#{_INFOMSG%s}#{HSJL02}%dä¸ª#{_INFOMSG%s}#{HSJL03}", name, itemInfo01, idx[1], itemInfo[1] )
 											-- PrintStr(strText)
 										elseif idx[1] == 0 and idx[2] == 0 and idx[3] > 0 then																
-											strText = format("#{_INFOUSR%s}#P#{HSJL01}#{_INFOMSG%s}#{HSJL02}%d¸ö#{_INFOMSG%s}#{HSJL03}", name, itemInfo01, idx[3], itemInfo[3] )
+											strText = format("#{_INFOUSR%s}#P#{HSJL01}#{_INFOMSG%s}#{HSJL02}%dä¸ª#{_INFOMSG%s}#{HSJL03}", name, itemInfo01, idx[3], itemInfo[3] )
 											-- PrintStr(strText)
 										elseif idx[1] == 0 and idx[2] > 0 and idx[3] == 0 then																
-											strText = format("#{_INFOUSR%s}#P#{HSJL01}#{_INFOMSG%s}#{HSJL02}%d¸ö#{_INFOMSG%s}#{HSJL03}", name, itemInfo01, idx[2], itemInfo[2] )
+											strText = format("#{_INFOUSR%s}#P#{HSJL01}#{_INFOMSG%s}#{HSJL02}%dä¸ª#{_INFOMSG%s}#{HSJL03}", name, itemInfo01, idx[2], itemInfo[2] )
 											-- PrintStr(strText)
 										end
 										BroadMsgByChatPipe(sceneId,selfId, strText, 7)				 																			
 								
 								else
 						 				BeginEvent(sceneId)
-										strText = "ÎïÆ·À¸»ò²ÄÁÏÀ¸Ã»ÓĞ×ã¹»µÄ¿Õ¼ä£¬ÇëÕûÀíºóÔÙÀ´ÁìÈ¡¡£"
+										strText = "ç‰©å“æ æˆ–ææ–™æ æ²¡æœ‰è¶³å¤Ÿçš„ç©ºé—´ï¼Œè¯·æ•´ç†åå†æ¥é¢†å–ã€‚"
 										AddText(sceneId,strText);
 										EndEvent(sceneId)
 										DispatchMissionTips(sceneId,selfId)
@@ -693,39 +693,39 @@ function x001230_OnHuashanJiangli( sceneId, selfId, targetId )
 										itemInfo[2]	=	""
 										itemInfo[3]	=	""
 										
-										-- ½±ÀøÊ±×°
-										local bagpos = TryRecieveItem( sceneId, selfId, x001230_g_nMenpaiShiZhuang[menpai].id, QUALITY_MUST_BE_CHANGE )	-- ·Å²»ÏÂ¾ÍÃ»ÓĞÁË
+										-- å¥–åŠ±æ—¶è£…
+										local bagpos = TryRecieveItem( sceneId, selfId, x001230_g_nMenpaiShiZhuang[menpai].id, QUALITY_MUST_BE_CHANGE )	-- æ”¾ä¸ä¸‹å°±æ²¡æœ‰äº†
 										local itemInfo01 = GetBagItemTransfer( sceneId, selfId, bagpos )
 										
-										--²éÑ¯×éÈÕÖ¾
+										--æŸ¥è¯¢ç»„æ—¥å¿—
 										strLogCheck = format("HuaShanLunJian_GetPrize	userId:%X, itemId:%d, count:%d", LuaFnGetGUID(sceneId, selfId), x001230_g_nMenpaiShiZhuang[menpai].id, 1)
 										LuaFnLogCheck(strLogCheck)
 										
-										-- Ç¿ÖÆ°ó¶¨																													
+										-- å¼ºåˆ¶ç»‘å®š																													
 										local	bindidx	=	LuaFnItemBind( sceneId, selfId, bagpos )
 																				
 										if bindidx ~= 1 then
-											local bindmsg = "°ó¶¨Ê§°Ü"													
+											local bindmsg = "ç»‘å®šå¤±è´¥"													
 											BeginEvent( sceneId )
 												AddText( sceneId, bindmsg )
 											EndEvent( sceneId )
 											DispatchMissionTips( sceneId, selfId )
 										end
 										
-										-- ½±Àø²ÄÁÏ
+										-- å¥–åŠ±ææ–™
 										temp = random(3)												
-										bagpos = TryRecieveItem( sceneId, selfId, x001230_g_nCailiaoJiangli[temp].id, QUALITY_MUST_BE_CHANGE )	-- ·Å²»ÏÂ¾ÍÃ»ÓĞÁË
+										bagpos = TryRecieveItem( sceneId, selfId, x001230_g_nCailiaoJiangli[temp].id, QUALITY_MUST_BE_CHANGE )	-- æ”¾ä¸ä¸‹å°±æ²¡æœ‰äº†
 										itemInfo[temp] = GetBagItemTransfer( sceneId, selfId, bagpos )
 										
-										--²éÑ¯×éÈÕÖ¾
+										--æŸ¥è¯¢ç»„æ—¥å¿—
 										strLogCheck = format("HuaShanLunJian_GetPrize	userId:%X, itemId:%d, count:%d", LuaFnGetGUID(sceneId, selfId), x001230_g_nCailiaoJiangli[temp].id, 1)
 										LuaFnLogCheck(strLogCheck)
 										
-										-- Ç¿ÖÆ°ó¶¨										
+										-- å¼ºåˆ¶ç»‘å®š										
 										local	bindidx	=	LuaFnItemBind( sceneId, selfId, bagpos )
 																				
 										if bindidx ~= 1 then
-											local bindmsg = "°ó¶¨Ê§°Ü"													
+											local bindmsg = "ç»‘å®šå¤±è´¥"													
 											BeginEvent( sceneId )
 												AddText( sceneId, bindmsg )
 											EndEvent( sceneId )
@@ -735,18 +735,18 @@ function x001230_OnHuashanJiangli( sceneId, selfId, targetId )
 										idx[temp] = idx[temp]+1
 										
 										temp = random(3)												
-										bagpos = TryRecieveItem( sceneId, selfId, x001230_g_nCailiaoJiangli[temp].id, QUALITY_MUST_BE_CHANGE )	-- ·Å²»ÏÂ¾ÍÃ»ÓĞÁË
+										bagpos = TryRecieveItem( sceneId, selfId, x001230_g_nCailiaoJiangli[temp].id, QUALITY_MUST_BE_CHANGE )	-- æ”¾ä¸ä¸‹å°±æ²¡æœ‰äº†
 										itemInfo[temp] = GetBagItemTransfer( sceneId, selfId, bagpos )
 										
-										--²éÑ¯×éÈÕÖ¾
+										--æŸ¥è¯¢ç»„æ—¥å¿—
 										strLogCheck = format("HuaShanLunJian_GetPrize	userId:%X, itemId:%d, count:%d", LuaFnGetGUID(sceneId, selfId), x001230_g_nCailiaoJiangli[temp].id, 1)
 										LuaFnLogCheck(strLogCheck)
 										
-										-- Ç¿ÖÆ°ó¶¨										
+										-- å¼ºåˆ¶ç»‘å®š										
 										local	bindidx	=	LuaFnItemBind( sceneId, selfId, bagpos )
 																				
 										if bindidx ~= 1 then
-											local bindmsg = "°ó¶¨Ê§°Ü"													
+											local bindmsg = "ç»‘å®šå¤±è´¥"													
 											BeginEvent( sceneId )
 												AddText( sceneId, bindmsg )
 											EndEvent( sceneId )
@@ -759,24 +759,24 @@ function x001230_OnHuashanJiangli( sceneId, selfId, targetId )
 										SetMissionFlag( sceneId, selfId, MF_LunjianJiangli02, 1 )
 										SetMissionFlag( sceneId, selfId, MF_LunjianJiangli03, 1 )
 																		
-										--ÏòselfIdËùÔÚµÄÃÅÅÉ·¢ËÍ¹«¸æ
+										--å‘selfIdæ‰€åœ¨çš„é—¨æ´¾å‘é€å…¬å‘Š
 										if idx[1] > 0 and idx[2] > 0 and idx[3] == 0 then
-											strText = format("#{_INFOUSR%s}#P#{HSJL01}#{_INFOMSG%s}#{HSJL02}%d¸ö#{_INFOMSG%s}£¬%d¸ö#{_INFOMSG%s}#{HSJL03}", name, itemInfo01, idx[1], itemInfo[1], idx[2], itemInfo[2] )
+											strText = format("#{_INFOUSR%s}#P#{HSJL01}#{_INFOMSG%s}#{HSJL02}%dä¸ª#{_INFOMSG%s}ï¼Œ%dä¸ª#{_INFOMSG%s}#{HSJL03}", name, itemInfo01, idx[1], itemInfo[1], idx[2], itemInfo[2] )
 										elseif idx[1] > 0 and idx[2] == 0 and idx[3] > 0 then																
-											strText = format("#{_INFOUSR%s}#P#{HSJL01}#{_INFOMSG%s}#{HSJL02}%d¸ö#{_INFOMSG%s}£¬%d¸ö#{_INFOMSG%s}#{HSJL03}", name, itemInfo01, idx[1], itemInfo[1], idx[3], itemInfo[3] )
+											strText = format("#{_INFOUSR%s}#P#{HSJL01}#{_INFOMSG%s}#{HSJL02}%dä¸ª#{_INFOMSG%s}ï¼Œ%dä¸ª#{_INFOMSG%s}#{HSJL03}", name, itemInfo01, idx[1], itemInfo[1], idx[3], itemInfo[3] )
 										elseif idx[1] == 0 and idx[2] > 0 and idx[3] > 0 then																
-											strText = format("#{_INFOUSR%s}#P#{HSJL01}#{_INFOMSG%s}#{HSJL02}%d¸ö#{_INFOMSG%s}£¬%d¸ö#{_INFOMSG%s}#{HSJL03}", name, itemInfo01, idx[2], itemInfo[2], idx[3], itemInfo[3] )
+											strText = format("#{_INFOUSR%s}#P#{HSJL01}#{_INFOMSG%s}#{HSJL02}%dä¸ª#{_INFOMSG%s}ï¼Œ%dä¸ª#{_INFOMSG%s}#{HSJL03}", name, itemInfo01, idx[2], itemInfo[2], idx[3], itemInfo[3] )
 										elseif idx[1] > 0 and idx[2] == 0 and idx[3] == 0 then																
-											strText = format("#{_INFOUSR%s}#P#{HSJL01}#{_INFOMSG%s}#{HSJL02}%d¸ö#{_INFOMSG%s}#{HSJL03}", name, itemInfo01, idx[1], itemInfo[1] )
+											strText = format("#{_INFOUSR%s}#P#{HSJL01}#{_INFOMSG%s}#{HSJL02}%dä¸ª#{_INFOMSG%s}#{HSJL03}", name, itemInfo01, idx[1], itemInfo[1] )
 										elseif idx[1] == 0 and idx[2] == 0 and idx[3] > 0 then																
-											strText = format("#{_INFOUSR%s}#P#{HSJL01}#{_INFOMSG%s}#{HSJL02}%d¸ö#{_INFOMSG%s}#{HSJL03}", name, itemInfo01, idx[3], itemInfo[3] )
+											strText = format("#{_INFOUSR%s}#P#{HSJL01}#{_INFOMSG%s}#{HSJL02}%dä¸ª#{_INFOMSG%s}#{HSJL03}", name, itemInfo01, idx[3], itemInfo[3] )
 										elseif idx[1] == 0 and idx[2] > 0 and idx[3] == 0 then																
-											strText = format("#{_INFOUSR%s}#P#{HSJL01}#{_INFOMSG%s}#{HSJL02}%d¸ö#{_INFOMSG%s}#{HSJL03}", name, itemInfo01, idx[2], itemInfo[2] )
+											strText = format("#{_INFOUSR%s}#P#{HSJL01}#{_INFOMSG%s}#{HSJL02}%dä¸ª#{_INFOMSG%s}#{HSJL03}", name, itemInfo01, idx[2], itemInfo[2] )
 										end
 										BroadMsgByChatPipe(sceneId,selfId, strText, 7)				 											
 						 		else
 						 				BeginEvent(sceneId)
-										strText = "ÎïÆ·À¸»ò²ÄÁÏÀ¸Ã»ÓĞ×ã¹»µÄ¿Õ¼ä£¬ÇëÕûÀíºóÔÙÀ´ÁìÈ¡¡£"
+										strText = "ç‰©å“æ æˆ–ææ–™æ æ²¡æœ‰è¶³å¤Ÿçš„ç©ºé—´ï¼Œè¯·æ•´ç†åå†æ¥é¢†å–ã€‚"
 										AddText(sceneId,strText);
 										EndEvent(sceneId)
 										DispatchMissionTips(sceneId,selfId)
@@ -800,39 +800,39 @@ function x001230_OnHuashanJiangli( sceneId, selfId, targetId )
 										itemInfo[2]	=	""
 										itemInfo[3]	=	""
 										
-										-- ½±ÀøÊ±×°
-										local bagpos = TryRecieveItem( sceneId, selfId, x001230_g_nMenpaiShiZhuang[menpai].id, QUALITY_MUST_BE_CHANGE )	-- ·Å²»ÏÂ¾ÍÃ»ÓĞÁË
+										-- å¥–åŠ±æ—¶è£…
+										local bagpos = TryRecieveItem( sceneId, selfId, x001230_g_nMenpaiShiZhuang[menpai].id, QUALITY_MUST_BE_CHANGE )	-- æ”¾ä¸ä¸‹å°±æ²¡æœ‰äº†
 										local itemInfo01 = GetBagItemTransfer( sceneId, selfId, bagpos )
 										
-										--²éÑ¯×éÈÕÖ¾
+										--æŸ¥è¯¢ç»„æ—¥å¿—
 										strLogCheck = format("HuaShanLunJian_GetPrize	userId:%X, itemId:%d, count:%d", LuaFnGetGUID(sceneId, selfId), x001230_g_nMenpaiShiZhuang[menpai].id, 1)
 										LuaFnLogCheck(strLogCheck)
 										
-										-- Ç¿ÖÆ°ó¶¨																													
+										-- å¼ºåˆ¶ç»‘å®š																													
 										local	bindidx	=	LuaFnItemBind( sceneId, selfId, bagpos )
 										
 										if bindidx ~= 1 then
-											local bindmsg = "°ó¶¨Ê§°Ü"													
+											local bindmsg = "ç»‘å®šå¤±è´¥"													
 											BeginEvent( sceneId )
 												AddText( sceneId, bindmsg )
 											EndEvent( sceneId )
 											DispatchMissionTips( sceneId, selfId )
 										end
 										
-										-- ½±Àø²ÄÁÏ
+										-- å¥–åŠ±ææ–™
 										temp = random(3)												
-										bagpos = TryRecieveItem( sceneId, selfId, x001230_g_nCailiaoJiangli[temp].id, QUALITY_MUST_BE_CHANGE )	-- ·Å²»ÏÂ¾ÍÃ»ÓĞÁË
+										bagpos = TryRecieveItem( sceneId, selfId, x001230_g_nCailiaoJiangli[temp].id, QUALITY_MUST_BE_CHANGE )	-- æ”¾ä¸ä¸‹å°±æ²¡æœ‰äº†
 										itemInfo[temp] = GetBagItemTransfer( sceneId, selfId, bagpos )
 										
-										--²éÑ¯×éÈÕÖ¾
+										--æŸ¥è¯¢ç»„æ—¥å¿—
 										strLogCheck = format("HuaShanLunJian_GetPrize	userId:%X, itemId:%d, count:%d", LuaFnGetGUID(sceneId, selfId), x001230_g_nCailiaoJiangli[temp].id, 1)
 										LuaFnLogCheck(strLogCheck)
 										
-										-- Ç¿ÖÆ°ó¶¨										
+										-- å¼ºåˆ¶ç»‘å®š										
 										local	bindidx	=	LuaFnItemBind( sceneId, selfId, bagpos )
 										
 										if bindidx ~= 1 then
-											local bindmsg = "°ó¶¨Ê§°Ü"													
+											local bindmsg = "ç»‘å®šå¤±è´¥"													
 											BeginEvent( sceneId )
 												AddText( sceneId, bindmsg )
 											EndEvent( sceneId )
@@ -845,18 +845,18 @@ function x001230_OnHuashanJiangli( sceneId, selfId, targetId )
 										SetMissionFlag( sceneId, selfId, MF_LunjianJiangli02, 1 )
 										SetMissionFlag( sceneId, selfId, MF_LunjianJiangli03, 1 )
 																					
-										--ÏòselfIdËùÔÚµÄÃÅÅÉ·¢ËÍ¹«¸æ
+										--å‘selfIdæ‰€åœ¨çš„é—¨æ´¾å‘é€å…¬å‘Š
 										if idx[1] > 0 and idx[2] == 0 and idx[3] == 0 then																
-											strText = format("#{_INFOUSR%s}#P#{HSJL01}#{_INFOMSG%s}#{HSJL02}%d¸ö#{_INFOMSG%s}#{HSJL03}", name, itemInfo01, idx[1], itemInfo[1] )
+											strText = format("#{_INFOUSR%s}#P#{HSJL01}#{_INFOMSG%s}#{HSJL02}%dä¸ª#{_INFOMSG%s}#{HSJL03}", name, itemInfo01, idx[1], itemInfo[1] )
 										elseif idx[1] == 0 and idx[2] == 0 and idx[3] > 0 then																
-											strText = format("#{_INFOUSR%s}#P#{HSJL01}#{_INFOMSG%s}#{HSJL02}%d¸ö#{_INFOMSG%s}#{HSJL03}", name, itemInfo01, idx[3], itemInfo[3] )
+											strText = format("#{_INFOUSR%s}#P#{HSJL01}#{_INFOMSG%s}#{HSJL02}%dä¸ª#{_INFOMSG%s}#{HSJL03}", name, itemInfo01, idx[3], itemInfo[3] )
 										elseif idx[1] == 0 and idx[2] > 0 and idx[3] == 0 then																
-											strText = format("#{_INFOUSR%s}#P#{HSJL01}#{_INFOMSG%s}#{HSJL02}%d¸ö#{_INFOMSG%s}#{HSJL03}", name, itemInfo01, idx[2], itemInfo[2] )
+											strText = format("#{_INFOUSR%s}#P#{HSJL01}#{_INFOMSG%s}#{HSJL02}%dä¸ª#{_INFOMSG%s}#{HSJL03}", name, itemInfo01, idx[2], itemInfo[2] )
 										end
 										BroadMsgByChatPipe(sceneId,selfId, strText, 7)				 											
 						 		else
 						 				BeginEvent(sceneId)
-										strText = "ÎïÆ·À¸»ò²ÄÁÏÀ¸Ã»ÓĞ×ã¹»µÄ¿Õ¼ä£¬ÇëÕûÀíºóÔÙÀ´ÁìÈ¡¡£"
+										strText = "ç‰©å“æ æˆ–ææ–™æ æ²¡æœ‰è¶³å¤Ÿçš„ç©ºé—´ï¼Œè¯·æ•´ç†åå†æ¥é¢†å–ã€‚"
 										AddText(sceneId,strText);
 										EndEvent(sceneId)
 										DispatchMissionTips(sceneId,selfId)
@@ -876,20 +876,20 @@ function x001230_OnHuashanJiangli( sceneId, selfId, targetId )
 										itemInfo[2]	=	""
 										itemInfo[3]	=	""
 										
-										-- ½±Àø²ÄÁÏ
+										-- å¥–åŠ±ææ–™
 										temp = random(3)												
-										local bagpos = TryRecieveItem( sceneId, selfId, x001230_g_nCailiaoJiangli[temp].id, QUALITY_MUST_BE_CHANGE )	-- ·Å²»ÏÂ¾ÍÃ»ÓĞÁË
+										local bagpos = TryRecieveItem( sceneId, selfId, x001230_g_nCailiaoJiangli[temp].id, QUALITY_MUST_BE_CHANGE )	-- æ”¾ä¸ä¸‹å°±æ²¡æœ‰äº†
 										itemInfo[temp] = GetBagItemTransfer( sceneId, selfId, bagpos )
 										
-										--²éÑ¯×éÈÕÖ¾
+										--æŸ¥è¯¢ç»„æ—¥å¿—
 										strLogCheck = format("HuaShanLunJian_GetPrize	userId:%X, itemId:%d, count:%d", LuaFnGetGUID(sceneId, selfId), x001230_g_nCailiaoJiangli[temp].id, 1)
 										LuaFnLogCheck(strLogCheck)
 										
-										-- Ç¿ÖÆ°ó¶¨										
+										-- å¼ºåˆ¶ç»‘å®š										
 										local	bindidx	=	LuaFnItemBind( sceneId, selfId, bagpos )
 										
 										if bindidx ~= 1 then
-											local bindmsg = "°ó¶¨Ê§°Ü"													
+											local bindmsg = "ç»‘å®šå¤±è´¥"													
 											BeginEvent( sceneId )
 												AddText( sceneId, bindmsg )
 											EndEvent( sceneId )
@@ -899,18 +899,18 @@ function x001230_OnHuashanJiangli( sceneId, selfId, targetId )
 										idx[temp] = idx[temp]+1
 										
 										temp = random(3)												
-										bagpos = TryRecieveItem( sceneId, selfId, x001230_g_nCailiaoJiangli[temp].id, QUALITY_MUST_BE_CHANGE )	-- ·Å²»ÏÂ¾ÍÃ»ÓĞÁË
+										bagpos = TryRecieveItem( sceneId, selfId, x001230_g_nCailiaoJiangli[temp].id, QUALITY_MUST_BE_CHANGE )	-- æ”¾ä¸ä¸‹å°±æ²¡æœ‰äº†
 										itemInfo[temp] = GetBagItemTransfer( sceneId, selfId, bagpos )								
 										
-										--²éÑ¯×éÈÕÖ¾
+										--æŸ¥è¯¢ç»„æ—¥å¿—
 										strLogCheck = format("HuaShanLunJian_GetPrize	userId:%X, itemId:%d, count:%d", LuaFnGetGUID(sceneId, selfId), x001230_g_nCailiaoJiangli[temp].id, 1)
 										LuaFnLogCheck(strLogCheck)
 										
-										-- Ç¿ÖÆ°ó¶¨										
+										-- å¼ºåˆ¶ç»‘å®š										
 										local	bindidx	=	LuaFnItemBind( sceneId, selfId, bagpos )
 										
 										if bindidx ~= 1 then
-											local bindmsg = "°ó¶¨Ê§°Ü"													
+											local bindmsg = "ç»‘å®šå¤±è´¥"													
 											BeginEvent( sceneId )
 												AddText( sceneId, bindmsg )
 											EndEvent( sceneId )
@@ -920,18 +920,18 @@ function x001230_OnHuashanJiangli( sceneId, selfId, targetId )
 										idx[temp] = idx[temp]+1
 										
 										temp = random(3)												
-										bagpos = TryRecieveItem( sceneId, selfId, x001230_g_nCailiaoJiangli[temp].id, QUALITY_MUST_BE_CHANGE )	-- ·Å²»ÏÂ¾ÍÃ»ÓĞÁË
+										bagpos = TryRecieveItem( sceneId, selfId, x001230_g_nCailiaoJiangli[temp].id, QUALITY_MUST_BE_CHANGE )	-- æ”¾ä¸ä¸‹å°±æ²¡æœ‰äº†
 										itemInfo[temp] = GetBagItemTransfer( sceneId, selfId, bagpos )	
 										
-										--²éÑ¯×éÈÕÖ¾
+										--æŸ¥è¯¢ç»„æ—¥å¿—
 										strLogCheck = format("HuaShanLunJian_GetPrize	userId:%X, itemId:%d, count:%d", LuaFnGetGUID(sceneId, selfId), x001230_g_nCailiaoJiangli[temp].id, 1)
 										LuaFnLogCheck(strLogCheck)							
 										
-										-- Ç¿ÖÆ°ó¶¨										
+										-- å¼ºåˆ¶ç»‘å®š										
 										local	bindidx	=	LuaFnItemBind( sceneId, selfId, bagpos )
 										
 										if bindidx ~= 1 then
-											local bindmsg = "°ó¶¨Ê§°Ü"													
+											local bindmsg = "ç»‘å®šå¤±è´¥"													
 											BeginEvent( sceneId )
 												AddText( sceneId, bindmsg )
 											EndEvent( sceneId )
@@ -944,26 +944,26 @@ function x001230_OnHuashanJiangli( sceneId, selfId, targetId )
 										SetMissionFlag( sceneId, selfId, MF_LunjianJiangli02, 1 )
 										SetMissionFlag( sceneId, selfId, MF_LunjianJiangli03, 1 )
 										
-										--ÏòselfIdËùÔÚµÄÃÅÅÉ·¢ËÍ¹«¸æ
+										--å‘selfIdæ‰€åœ¨çš„é—¨æ´¾å‘é€å…¬å‘Š
 										if idx[1] > 0 and idx[2] > 0 and idx[3] > 0 then																
-											strText = format("#{_INFOUSR%s}#P#{HSJL04}%d¸ö#{_INFOMSG%s}£¬%d¸ö#{_INFOMSG%s}£¬%d¸ö#{_INFOMSG%s}#{HSJL05}", name, idx[1], itemInfo[1], idx[2], itemInfo[2], idx[3], itemInfo[3] )
+											strText = format("#{_INFOUSR%s}#P#{HSJL04}%dä¸ª#{_INFOMSG%s}ï¼Œ%dä¸ª#{_INFOMSG%s}ï¼Œ%dä¸ª#{_INFOMSG%s}#{HSJL05}", name, idx[1], itemInfo[1], idx[2], itemInfo[2], idx[3], itemInfo[3] )
 										elseif idx[1] > 0 and idx[2] > 0 and idx[3] == 0 then
-											strText = format("#{_INFOUSR%s}#P#{HSJL04}%d¸ö#{_INFOMSG%s}£¬%d¸ö#{_INFOMSG%s}#{HSJL05}", name, idx[1], itemInfo[1], idx[2], itemInfo[2] )
+											strText = format("#{_INFOUSR%s}#P#{HSJL04}%dä¸ª#{_INFOMSG%s}ï¼Œ%dä¸ª#{_INFOMSG%s}#{HSJL05}", name, idx[1], itemInfo[1], idx[2], itemInfo[2] )
 										elseif idx[1] > 0 and idx[2] == 0 and idx[3] > 0 then																
-											strText = format("#{_INFOUSR%s}#P#{HSJL04}%d¸ö#{_INFOMSG%s}£¬%d¸ö#{_INFOMSG%s}#{HSJL05}", name, idx[1], itemInfo[1], idx[3], itemInfo[3] )
+											strText = format("#{_INFOUSR%s}#P#{HSJL04}%dä¸ª#{_INFOMSG%s}ï¼Œ%dä¸ª#{_INFOMSG%s}#{HSJL05}", name, idx[1], itemInfo[1], idx[3], itemInfo[3] )
 										elseif idx[1] == 0 and idx[2] > 0 and idx[3] > 0 then																
-											strText = format("#{_INFOUSR%s}#P#{HSJL04}%d¸ö#{_INFOMSG%s}£¬%d¸ö#{_INFOMSG%s}#{HSJL05}", name, idx[2], itemInfo[2], idx[3], itemInfo[3] )
+											strText = format("#{_INFOUSR%s}#P#{HSJL04}%dä¸ª#{_INFOMSG%s}ï¼Œ%dä¸ª#{_INFOMSG%s}#{HSJL05}", name, idx[2], itemInfo[2], idx[3], itemInfo[3] )
 										elseif idx[1] > 0 and idx[2] == 0 and idx[3] == 0 then																
-											strText = format("#{_INFOUSR%s}#P#{HSJL04}%d¸ö#{_INFOMSG%s}#{HSJL05}", name, idx[1], itemInfo[1] )
+											strText = format("#{_INFOUSR%s}#P#{HSJL04}%dä¸ª#{_INFOMSG%s}#{HSJL05}", name, idx[1], itemInfo[1] )
 										elseif idx[1] == 0 and idx[2] == 0 and idx[3] > 0 then																
-											strText = format("#{_INFOUSR%s}#P#{HSJL04}%d¸ö#{_INFOMSG%s}#{HSJL05}", name, idx[3], itemInfo[3] )
+											strText = format("#{_INFOUSR%s}#P#{HSJL04}%dä¸ª#{_INFOMSG%s}#{HSJL05}", name, idx[3], itemInfo[3] )
 										elseif idx[1] == 0 and idx[2] > 0 and idx[3] == 0 then																
-											strText = format("#{_INFOUSR%s}#P#{HSJL04}%d¸ö#{_INFOMSG%s}#{HSJL05}", name, idx[2], itemInfo[2] )
+											strText = format("#{_INFOUSR%s}#P#{HSJL04}%dä¸ª#{_INFOMSG%s}#{HSJL05}", name, idx[2], itemInfo[2] )
 										end
 										BroadMsgByChatPipe(sceneId,selfId, strText, 7)				 											
 						 		else
 						 				BeginEvent(sceneId)
-										strText = "ÎïÆ·À¸»ò²ÄÁÏÀ¸Ã»ÓĞ×ã¹»µÄ¿Õ¼ä£¬ÇëÕûÀíºóÔÙÀ´ÁìÈ¡¡£"
+										strText = "ç‰©å“æ æˆ–ææ–™æ æ²¡æœ‰è¶³å¤Ÿçš„ç©ºé—´ï¼Œè¯·æ•´ç†åå†æ¥é¢†å–ã€‚"
 										AddText(sceneId,strText);
 										EndEvent(sceneId)
 										DispatchMissionTips(sceneId,selfId)
@@ -983,20 +983,20 @@ function x001230_OnHuashanJiangli( sceneId, selfId, targetId )
 										itemInfo[2]	=	""
 										itemInfo[3]	=	""
 										
-										-- ½±Àø²ÄÁÏ
+										-- å¥–åŠ±ææ–™
 										temp = random(3)												
-										local bagpos = TryRecieveItem( sceneId, selfId, x001230_g_nCailiaoJiangli[temp].id, QUALITY_MUST_BE_CHANGE )	-- ·Å²»ÏÂ¾ÍÃ»ÓĞÁË
+										local bagpos = TryRecieveItem( sceneId, selfId, x001230_g_nCailiaoJiangli[temp].id, QUALITY_MUST_BE_CHANGE )	-- æ”¾ä¸ä¸‹å°±æ²¡æœ‰äº†
 										itemInfo[temp] = GetBagItemTransfer( sceneId, selfId, bagpos )
 										
-										--²éÑ¯×éÈÕÖ¾
+										--æŸ¥è¯¢ç»„æ—¥å¿—
 										strLogCheck = format("HuaShanLunJian_GetPrize	userId:%X, itemId:%d, count:%d", LuaFnGetGUID(sceneId, selfId), x001230_g_nCailiaoJiangli[temp].id, 1)
 										LuaFnLogCheck(strLogCheck)
 										
-										-- Ç¿ÖÆ°ó¶¨										
+										-- å¼ºåˆ¶ç»‘å®š										
 										local	bindidx	=	LuaFnItemBind( sceneId, selfId, bagpos )
 										
 										if bindidx ~= 1 then
-											local bindmsg = "°ó¶¨Ê§°Ü"													
+											local bindmsg = "ç»‘å®šå¤±è´¥"													
 											BeginEvent( sceneId )
 												AddText( sceneId, bindmsg )
 											EndEvent( sceneId )
@@ -1006,18 +1006,18 @@ function x001230_OnHuashanJiangli( sceneId, selfId, targetId )
 										idx[temp] = idx[temp]+1
 										
 										temp = random(3)												
-										bagpos = TryRecieveItem( sceneId, selfId, x001230_g_nCailiaoJiangli[temp].id, QUALITY_MUST_BE_CHANGE )	-- ·Å²»ÏÂ¾ÍÃ»ÓĞÁË
+										bagpos = TryRecieveItem( sceneId, selfId, x001230_g_nCailiaoJiangli[temp].id, QUALITY_MUST_BE_CHANGE )	-- æ”¾ä¸ä¸‹å°±æ²¡æœ‰äº†
 										itemInfo[temp] = GetBagItemTransfer( sceneId, selfId, bagpos )
 										
-										--²éÑ¯×éÈÕÖ¾
+										--æŸ¥è¯¢ç»„æ—¥å¿—
 										strLogCheck = format("HuaShanLunJian_GetPrize	userId:%X, itemId:%d, count:%d", LuaFnGetGUID(sceneId, selfId), x001230_g_nCailiaoJiangli[temp].id, 1)
 										LuaFnLogCheck(strLogCheck)
 										
-										-- Ç¿ÖÆ°ó¶¨										
+										-- å¼ºåˆ¶ç»‘å®š										
 										local	bindidx	=	LuaFnItemBind( sceneId, selfId, bagpos )
 										
 										if bindidx ~= 1 then
-											local bindmsg = "°ó¶¨Ê§°Ü"													
+											local bindmsg = "ç»‘å®šå¤±è´¥"													
 											BeginEvent( sceneId )
 												AddText( sceneId, bindmsg )
 											EndEvent( sceneId )
@@ -1030,24 +1030,24 @@ function x001230_OnHuashanJiangli( sceneId, selfId, targetId )
 										SetMissionFlag( sceneId, selfId, MF_LunjianJiangli02, 1 )
 										SetMissionFlag( sceneId, selfId, MF_LunjianJiangli03, 1 )
 													
-										--ÏòselfIdËùÔÚµÄÃÅÅÉ·¢ËÍ¹«¸æ
+										--å‘selfIdæ‰€åœ¨çš„é—¨æ´¾å‘é€å…¬å‘Š
 										if idx[1] > 0 and idx[2] > 0 and idx[3] == 0 then
-											strText = format("#{_INFOUSR%s}#P#{HSJL04}%d¸ö#{_INFOMSG%s}£¬%d¸ö#{_INFOMSG%s}#{HSJL05}", name, idx[1], itemInfo[1], idx[2], itemInfo[2] )
+											strText = format("#{_INFOUSR%s}#P#{HSJL04}%dä¸ª#{_INFOMSG%s}ï¼Œ%dä¸ª#{_INFOMSG%s}#{HSJL05}", name, idx[1], itemInfo[1], idx[2], itemInfo[2] )
 										elseif idx[1] > 0 and idx[2] == 0 and idx[3] > 0 then																
-											strText = format("#{_INFOUSR%s}#P#{HSJL04}%d¸ö#{_INFOMSG%s}£¬%d¸ö#{_INFOMSG%s}#{HSJL05}", name, idx[1], itemInfo[1], idx[3], itemInfo[3] )
+											strText = format("#{_INFOUSR%s}#P#{HSJL04}%dä¸ª#{_INFOMSG%s}ï¼Œ%dä¸ª#{_INFOMSG%s}#{HSJL05}", name, idx[1], itemInfo[1], idx[3], itemInfo[3] )
 										elseif idx[1] == 0 and idx[2] > 0 and idx[3] > 0 then																
-											strText = format("#{_INFOUSR%s}#P#{HSJL04}%d¸ö#{_INFOMSG%s}£¬%d¸ö#{_INFOMSG%s}#{HSJL05}", name, idx[2], itemInfo[2], idx[3], itemInfo[3] )
+											strText = format("#{_INFOUSR%s}#P#{HSJL04}%dä¸ª#{_INFOMSG%s}ï¼Œ%dä¸ª#{_INFOMSG%s}#{HSJL05}", name, idx[2], itemInfo[2], idx[3], itemInfo[3] )
 										elseif idx[1] > 0 and idx[2] == 0 and idx[3] == 0 then																
-											strText = format("#{_INFOUSR%s}#P#{HSJL04}%d¸ö#{_INFOMSG%s}#{HSJL05}", name, idx[1], itemInfo[1] )
+											strText = format("#{_INFOUSR%s}#P#{HSJL04}%dä¸ª#{_INFOMSG%s}#{HSJL05}", name, idx[1], itemInfo[1] )
 										elseif idx[1] == 0 and idx[2] == 0 and idx[3] > 0 then																
-											strText = format("#{_INFOUSR%s}#P#{HSJL04}%d¸ö#{_INFOMSG%s}#{HSJL05}", name, idx[3], itemInfo[3] )
+											strText = format("#{_INFOUSR%s}#P#{HSJL04}%dä¸ª#{_INFOMSG%s}#{HSJL05}", name, idx[3], itemInfo[3] )
 										elseif idx[1] == 0 and idx[2] > 0 and idx[3] == 0 then																
-											strText = format("#{_INFOUSR%s}#P#{HSJL04}%d¸ö#{_INFOMSG%s}#{HSJL05}", name, idx[2], itemInfo[2] )
+											strText = format("#{_INFOUSR%s}#P#{HSJL04}%dä¸ª#{_INFOMSG%s}#{HSJL05}", name, idx[2], itemInfo[2] )
 										end
 										BroadMsgByChatPipe(sceneId,selfId, strText, 7)				 											
 						 		else
 						 				BeginEvent(sceneId)
-										strText = "ÎïÆ·À¸»ò²ÄÁÏÀ¸Ã»ÓĞ×ã¹»µÄ¿Õ¼ä£¬ÇëÕûÀíºóÔÙÀ´ÁìÈ¡¡£"
+										strText = "ç‰©å“æ æˆ–ææ–™æ æ²¡æœ‰è¶³å¤Ÿçš„ç©ºé—´ï¼Œè¯·æ•´ç†åå†æ¥é¢†å–ã€‚"
 										AddText(sceneId,strText);
 										EndEvent(sceneId)
 										DispatchMissionTips(sceneId,selfId)
@@ -1067,20 +1067,20 @@ function x001230_OnHuashanJiangli( sceneId, selfId, targetId )
 										itemInfo[2]	=	""
 										itemInfo[3]	=	""
 										
-										-- ½±Àø²ÄÁÏ
+										-- å¥–åŠ±ææ–™
 										temp = random(3)												
-										local bagpos = TryRecieveItem( sceneId, selfId, x001230_g_nCailiaoJiangli[temp].id, QUALITY_MUST_BE_CHANGE )	-- ·Å²»ÏÂ¾ÍÃ»ÓĞÁË
+										local bagpos = TryRecieveItem( sceneId, selfId, x001230_g_nCailiaoJiangli[temp].id, QUALITY_MUST_BE_CHANGE )	-- æ”¾ä¸ä¸‹å°±æ²¡æœ‰äº†
 										itemInfo[temp] = GetBagItemTransfer( sceneId, selfId, bagpos )
 										
-										--²éÑ¯×éÈÕÖ¾
+										--æŸ¥è¯¢ç»„æ—¥å¿—
 										strLogCheck = format("HuaShanLunJian_GetPrize	userId:%X, itemId:%d, count:%d", LuaFnGetGUID(sceneId, selfId), x001230_g_nCailiaoJiangli[temp].id, 1)
 										LuaFnLogCheck(strLogCheck)
 										
-										-- Ç¿ÖÆ°ó¶¨										
+										-- å¼ºåˆ¶ç»‘å®š										
 										local	bindidx	=	LuaFnItemBind( sceneId, selfId, bagpos )
 										
 										if bindidx ~= 1 then
-											local bindmsg = "°ó¶¨Ê§°Ü"													
+											local bindmsg = "ç»‘å®šå¤±è´¥"													
 											BeginEvent( sceneId )
 												AddText( sceneId, bindmsg )
 											EndEvent( sceneId )
@@ -1093,18 +1093,18 @@ function x001230_OnHuashanJiangli( sceneId, selfId, targetId )
 										SetMissionFlag( sceneId, selfId, MF_LunjianJiangli02, 1 )
 										SetMissionFlag( sceneId, selfId, MF_LunjianJiangli03, 1 )
 													
-										--ÏòselfIdËùÔÚµÄÃÅÅÉ·¢ËÍ¹«¸æ
+										--å‘selfIdæ‰€åœ¨çš„é—¨æ´¾å‘é€å…¬å‘Š
 										if idx[1] > 0 and idx[2] == 0 and idx[3] == 0 then																
-											strText = format("#{_INFOUSR%s}#P#{HSJL04}%d¸ö#{_INFOMSG%s}#{HSJL05}", name, idx[1], itemInfo[1] )
+											strText = format("#{_INFOUSR%s}#P#{HSJL04}%dä¸ª#{_INFOMSG%s}#{HSJL05}", name, idx[1], itemInfo[1] )
 										elseif idx[1] == 0 and idx[2] == 0 and idx[3] > 0 then																
-											strText = format("#{_INFOUSR%s}#P#{HSJL04}%d¸ö#{_INFOMSG%s}#{HSJL05}", name, idx[3], itemInfo[3] )
+											strText = format("#{_INFOUSR%s}#P#{HSJL04}%dä¸ª#{_INFOMSG%s}#{HSJL05}", name, idx[3], itemInfo[3] )
 										elseif idx[1] == 0 and idx[2] > 0 and idx[3] == 0 then																
-											strText = format("#{_INFOUSR%s}#P#{HSJL04}%d¸ö#{_INFOMSG%s}#{HSJL05}", name, idx[2], itemInfo[2] )
+											strText = format("#{_INFOUSR%s}#P#{HSJL04}%dä¸ª#{_INFOMSG%s}#{HSJL05}", name, idx[2], itemInfo[2] )
 										end
 										BroadMsgByChatPipe(sceneId,selfId, strText, 7)				 											
 						 		else
 						 				BeginEvent(sceneId)
-										strText = "ÎïÆ·À¸»ò²ÄÁÏÀ¸Ã»ÓĞ×ã¹»µÄ¿Õ¼ä£¬ÇëÕûÀíºóÔÙÀ´ÁìÈ¡¡£"
+										strText = "ç‰©å“æ æˆ–ææ–™æ æ²¡æœ‰è¶³å¤Ÿçš„ç©ºé—´ï¼Œè¯·æ•´ç†åå†æ¥é¢†å–ã€‚"
 										AddText(sceneId,strText);
 										EndEvent(sceneId)
 										DispatchMissionTips(sceneId,selfId)
@@ -1113,7 +1113,7 @@ function x001230_OnHuashanJiangli( sceneId, selfId, targetId )
 				end				 
 	else
 		BeginEvent(sceneId)
-		strText = "¶Ô²»Æğ£¬Õâ´ÎÄúÃ»ÓĞ»ñµÃ±¾ÃÅÅÉÇ°ÈıÃûµÄ³É¼¨£¬»¹ÍûÏÂ´Î¶à¼ÓÅ¬Á¦¡£"
+		strText = "å¯¹ä¸èµ·ï¼Œè¿™æ¬¡æ‚¨æ²¡æœ‰è·å¾—æœ¬é—¨æ´¾å‰ä¸‰åçš„æˆç»©ï¼Œè¿˜æœ›ä¸‹æ¬¡å¤šåŠ åŠªåŠ›ã€‚"
 		AddText(sceneId,strText);
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)						
@@ -1122,49 +1122,49 @@ function x001230_OnHuashanJiangli( sceneId, selfId, targetId )
 end
 
 --**********************************
---»ªÉ½ÂÛ½£³¡¾°¶¨Ê±Æ÷ÊÂ¼ş
+--åå±±è®ºå‰‘åœºæ™¯å®šæ—¶å™¨äº‹ä»¶
 --**********************************
 function x001230_OnHuashanSceneTimer( sceneId, selfId )
 
 	local nNowTimeEX = LuaFnGetCurrentTime()
 	if x001230_g_bEndTime ~= 0 and nNowTimeEX > x001230_g_bEndTime+60    then
 		
-		BroadMsgByChatPipe(sceneId,0,"@*;SrvMsg;SCA:" .. "#PÔÚ±¾½ì»ªÉ½ÂÛ½£µ±ÖĞ£¬#Y" .. x001230_g_bMenpai .. "#P¾­¹ıÉÏÏÂÒ»ĞÄµÄÅ¬Á¦£¬ÖÕÓÚ»ñµÃ#Y»ªÉ½ÂÛ½£µÚÒ»#PµÄÈÙÓş£¬×÷Îª½±Àø£¬ÆäÃÅÏÂËùÓĞµÜ×ÓÔÚÏÂ½ì»ªÉ½ÂÛ½£»î¶¯½áÊøÇ°£¬Ã¿ÌìµÄµÚÒ»ÂÖÊ¦ÃÅÈÎÎñ½«»á±äÎª#Y3±¶¾­Ñé¡£",4)
+		BroadMsgByChatPipe(sceneId,0,"@*;SrvMsg;SCA:" .. "#Påœ¨æœ¬å±Šåå±±è®ºå‰‘å½“ä¸­ï¼Œ#Y" .. x001230_g_bMenpai .. "#Pç»è¿‡ä¸Šä¸‹ä¸€å¿ƒçš„åŠªåŠ›ï¼Œç»ˆäºè·å¾—#Yåå±±è®ºå‰‘ç¬¬ä¸€#Pçš„è£èª‰ï¼Œä½œä¸ºå¥–åŠ±ï¼Œå…¶é—¨ä¸‹æ‰€æœ‰å¼Ÿå­åœ¨ä¸‹å±Šåå±±è®ºå‰‘æ´»åŠ¨ç»“æŸå‰ï¼Œæ¯å¤©çš„ç¬¬ä¸€è½®å¸ˆé—¨ä»»åŠ¡å°†ä¼šå˜ä¸º#Y3å€ç»éªŒã€‚",4)
 		
 		local mingci = 1
 		local str = ""
-		local MenpaiTbl = {	"ÉÙÁÖ",
-												"Ã÷½Ì",
-												"Ø¤°ï",
-												"Îäµ±",
-												"¶ëáÒ",
-												"ĞÇËŞ",
-												"ÌìÁú",
-												"ÌìÉ½",
-												"åĞÒ£"	}
+		local MenpaiTbl = {	"å°‘æ—",
+												"æ˜æ•™",
+												"ä¸å¸®",
+												"æ­¦å½“",
+												"å³¨åµ‹",
+												"æ˜Ÿå®¿",
+												"å¤©é¾™",
+												"å¤©å±±",
+												"é€é¥"	}
 		
-		-- ÔÚËùÓĞÑ¡ÊÖÖĞÕÒµ½Ç°5Ãû
+		-- åœ¨æ‰€æœ‰é€‰æ‰‹ä¸­æ‰¾åˆ°å‰5å
 		for i=1, x001230_g_PlayerNum  do				
 			if mingci == 1  then
-					str = "µÚÒ»Ãû£º" .. x001230_g_PlayerName[i] .. "#Y[" .. MenpaiTbl[x001230_g_PlayerMenpai[i]+1] .. "]"
+					str = "ç¬¬ä¸€åï¼š" .. x001230_g_PlayerName[i] .. "#Y[" .. MenpaiTbl[x001230_g_PlayerMenpai[i]+1] .. "]"
 					mingci = 2					
 			elseif mingci == 2  then
-					str = "µÚ¶şÃû£º" .. x001230_g_PlayerName[i]	.. "#Y[" .. MenpaiTbl[x001230_g_PlayerMenpai[i]+1] .. "]"					
+					str = "ç¬¬äºŒåï¼š" .. x001230_g_PlayerName[i]	.. "#Y[" .. MenpaiTbl[x001230_g_PlayerMenpai[i]+1] .. "]"					
 					mingci = 3											
 			elseif mingci == 3  then
-					str = "µÚÈıÃû£º" .. x001230_g_PlayerName[i] .. "#Y[" .. MenpaiTbl[x001230_g_PlayerMenpai[i]+1] .. "]"
+					str = "ç¬¬ä¸‰åï¼š" .. x001230_g_PlayerName[i] .. "#Y[" .. MenpaiTbl[x001230_g_PlayerMenpai[i]+1] .. "]"
 					mingci = 4
 			elseif mingci == 4  then
-					str = "µÚËÄÃû£º" .. x001230_g_PlayerName[i] .. "#Y[" .. MenpaiTbl[x001230_g_PlayerMenpai[i]+1] .. "]"
+					str = "ç¬¬å››åï¼š" .. x001230_g_PlayerName[i] .. "#Y[" .. MenpaiTbl[x001230_g_PlayerMenpai[i]+1] .. "]"
 					mingci = 5					
 			elseif mingci == 5  then
-					str = "µÚÎåÃû£º" .. x001230_g_PlayerName[i] .. "#Y[" .. MenpaiTbl[x001230_g_PlayerMenpai[i]+1] .. "]"
+					str = "ç¬¬äº”åï¼š" .. x001230_g_PlayerName[i] .. "#Y[" .. MenpaiTbl[x001230_g_PlayerMenpai[i]+1] .. "]"
 					mingci = 6							
 			elseif mingci == 6  then
 					break
 			end
 			
-			-- ÏòÈ«×é·şÎñÆ÷·¢ËÍĞÂÎÅ¹«¸æ
+			-- å‘å…¨ç»„æœåŠ¡å™¨å‘é€æ–°é—»å…¬å‘Š
 			AddGlobalCountNews ( sceneId, str )
 		end
 		
@@ -1172,13 +1172,13 @@ function x001230_OnHuashanSceneTimer( sceneId, selfId )
 		x001230_g_bEndTime = 0
 	end
 		
-	-- ¼ì²âÕâ¸ö³¡¾°ÄÚÊÇ²»ÊÇÓĞÍæ¼Ò£¬Èç¹ûÃ»ÓĞ£¬Ö±½Ó·µ»Ø
+	-- æ£€æµ‹è¿™ä¸ªåœºæ™¯å†…æ˜¯ä¸æ˜¯æœ‰ç©å®¶ï¼Œå¦‚æœæ²¡æœ‰ï¼Œç›´æ¥è¿”å›
 	local nHumanNum = LuaFnGetCopyScene_HumanCount(sceneId)
 	if nHumanNum == 0  then
 		return
 	end
 	
-	--¼ì²âµ±Ç°ÊÇ²»ÊÇ»ªÉ½ÂÛ½£µÄ»î¶¯Ê±¼ä£¬Èç¹û²»ÊÇ£¬¾Í°Ñ³¡¾°ÄÚµÄËùÓĞÍæ¼Ò¶¼T³öÈ¥
+	--æ£€æµ‹å½“å‰æ˜¯ä¸æ˜¯åå±±è®ºå‰‘çš„æ´»åŠ¨æ—¶é—´ï¼Œå¦‚æœä¸æ˜¯ï¼Œå°±æŠŠåœºæ™¯å†…çš„æ‰€æœ‰ç©å®¶éƒ½Tå‡ºå»
 	local bIsTime = 1
 	
 	local nWeek = GetTodayWeek()
@@ -1191,7 +1191,7 @@ function x001230_OnHuashanSceneTimer( sceneId, selfId )
 	--local temp = floor(nHour/100)*100
 	
 	--	if nHour - temp < 60  or nHour - temp >= 64   then
-	--  ÕıÊ½»î¶¯Ê±¼ä ÖÜÈÕ£º15:00-16:00 ÖÜ2¡¢ÖÜ4£º19:00-20:00
+	--  æ­£å¼æ´»åŠ¨æ—¶é—´ å‘¨æ—¥ï¼š15:00-16:00 å‘¨2ã€å‘¨4ï¼š19:00-20:00
 	--if ((nWeek==0) and (nHour-temp<60 or nHour-temp>=64)) or 
 	--	 ( (nWeek==2 or nWeek==4) and (nHour-temp<76 or nHour-temp>=80))  then
 	local nQuarter = mod(GetQuarterTime(),100);
@@ -1205,7 +1205,7 @@ function x001230_OnHuashanSceneTimer( sceneId, selfId )
 	if bIsTime == 1   then
 		if x001230_g_bHuashaning == 0   then
 			x001230_g_bHuashaning = 1
-			-- ¿ªÊÇÒ»´ÎĞÂµÄ»î¶¯Ç°£¬ĞèÒªÇåÀíÉ±ÈË¼ÆÊıÆ÷
+			-- å¼€æ˜¯ä¸€æ¬¡æ–°çš„æ´»åŠ¨å‰ï¼Œéœ€è¦æ¸…ç†æ€äººè®¡æ•°å™¨
 			
 			for i=1 ,400  do
 				x001230_g_PlayerKc[i] = 0
@@ -1217,7 +1217,7 @@ function x001230_OnHuashanSceneTimer( sceneId, selfId )
 			end
 			x001230_g_PlayerNum = 0
 			-- PrintNum(selfId)
-			-- Çå¿ÕÏà¹ØµÄÊıÖµ
+			-- æ¸…ç©ºç›¸å…³çš„æ•°å€¼
 			for i=1, 9  do
 				x001230_g_nMenpaiQiansan[i].id = (i-1)
 				x001230_g_nMenpaiQiansan[i].player01=""
@@ -1229,7 +1229,7 @@ function x001230_OnHuashanSceneTimer( sceneId, selfId )
 			end			
 			
 			-- [ QUFEI 2007-07-30 18:31 UPDATE ]
-			-- Çå¿Õ½±Àø±ê¼Ç
+			-- æ¸…ç©ºå¥–åŠ±æ ‡è®°
 			if LuaFnIsObjValid(sceneId, selfId) == 1 and LuaFnIsCanDoScriptLogic(sceneId,selfId) == 1 then
 				SetMissionFlag( sceneId, selfId, MF_LunjianJiangli01, 0 )
 				SetMissionFlag( sceneId, selfId, MF_LunjianJiangli02, 0 )
@@ -1239,21 +1239,21 @@ function x001230_OnHuashanSceneTimer( sceneId, selfId )
 		end
 		
 		if x001230_g_bHuashaning == 1   then
-			-- »ñµÃµ±Ç°µÄÊ±¼ä
+			-- è·å¾—å½“å‰çš„æ—¶é—´
 			local nNowTime = LuaFnGetCurrentTime()
 			if x001230_g_PreTime == 0    then
 				x001230_g_PreTime = nNowTime
 				return
 			end
-			-- 1£¬Ã¿¼ä¸ô5·ÖÖÓ£¬ĞèÒªÍ¨ÖªÍæ¼Ò£¬Ç°3ÃûµÄÃÅÅÉ£¬·¢ËÍ¸øÈ«ÊÀ½ç
+			-- 1ï¼Œæ¯é—´éš”5åˆ†é’Ÿï¼Œéœ€è¦é€šçŸ¥ç©å®¶ï¼Œå‰3åçš„é—¨æ´¾ï¼Œå‘é€ç»™å…¨ä¸–ç•Œ
 			if nNowTime > x001230_g_PreTime+300    then
 			
 				x001230_g_PreTime = nNowTime
 				
-				--Ë¢ĞÂÃØ¼®....
+				--åˆ·æ–°ç§˜ç±....
 				x001230_GiveMJ( sceneId )
 				
-				-- ×öÒ»´ÎÅÅĞò£¬
+				-- åšä¸€æ¬¡æ’åºï¼Œ
 				for i=1, 9    do
 					for j=1, i   do
 						if x001230_g_nMenpaikills[i].kill > x001230_g_nMenpaikills[j].kill   then
@@ -1268,10 +1268,10 @@ function x001230_OnHuashanSceneTimer( sceneId, selfId )
 					end
 				end
 				
-				-- ·¢µ±Ç°µÄÏà¹Ø¹«¸æ
+				-- å‘å½“å‰çš„ç›¸å…³å…¬å‘Š
 				local nMingci = 1
 				
-				local szStr = "#{HSJL_090113_01}" --"»ªÉ½Ö®µß£¬ÌìÏÂÃÅÅÉ¸÷³ÊĞÛ·ç£¬Ä¿Ç°´ÓÊµÁ¦ÉÏÅÅÃûÔÚµÚÒ»µÚ¶şÓëµÚÈıÃûµÄÃÅÅÉ£º·Ö±ğÎª" zchw
+				local szStr = "#{HSJL_090113_01}" --"åå±±ä¹‹é¢ ï¼Œå¤©ä¸‹é—¨æ´¾å„å‘ˆé›„é£ï¼Œç›®å‰ä»å®åŠ›ä¸Šæ’ååœ¨ç¬¬ä¸€ç¬¬äºŒä¸ç¬¬ä¸‰åçš„é—¨æ´¾ï¼šåˆ†åˆ«ä¸º" zchw
 
 				szStr = szStr .. x001230_Id2Menpai(x001230_g_nMenpaikills[1].id) .. x001230_g_nMenpaikills[1].kill .. "#{HSJL_090113_02}"
 				szStr = szStr .. x001230_Id2Menpai(x001230_g_nMenpaikills[2].id) .. x001230_g_nMenpaikills[2].kill .. "#{HSJL_090113_02}"
@@ -1283,13 +1283,13 @@ function x001230_OnHuashanSceneTimer( sceneId, selfId )
 		end
 	end
 	
-	-- Èç¹û bIsTime == 0 ,¾Í°ÑËùÓĞµÄÍæ¼ÒT³öÈ¥
+	-- å¦‚æœ bIsTime == 0 ,å°±æŠŠæ‰€æœ‰çš„ç©å®¶Tå‡ºå»
 	if bIsTime == 0   then
 		
 		if x001230_g_bHuashaning == 1   then
-			-- »î¶¯½áÊøµÄÊ±¿Ì£¬ÕâÊÇÊ±ºòÒª´¦Àí±È½Ï¶à¶«Î÷£¬×¢Òâ£¡£¡£¡
-			-- 1£¬¿´ÏÂË­ÊÇ½ñÌìµÄÊ¤ÀûÕß£¬Èç¹ûÓĞ¶à¸ö²¢ÁĞµÚÒ»£¬¾Í¡°Ëæ»ú¡±³öÒ»¸öÊ¤ÀûÕß
-			--  a£¬ÏÖÅÅĞòËùÓĞµÄÉ±ÈËÊı
+			-- æ´»åŠ¨ç»“æŸçš„æ—¶åˆ»ï¼Œè¿™æ˜¯æ—¶å€™è¦å¤„ç†æ¯”è¾ƒå¤šä¸œè¥¿ï¼Œæ³¨æ„ï¼ï¼ï¼
+			-- 1ï¼Œçœ‹ä¸‹è°æ˜¯ä»Šå¤©çš„èƒœåˆ©è€…ï¼Œå¦‚æœæœ‰å¤šä¸ªå¹¶åˆ—ç¬¬ä¸€ï¼Œå°±â€œéšæœºâ€å‡ºä¸€ä¸ªèƒœåˆ©è€…
+			--  aï¼Œç°æ’åºæ‰€æœ‰çš„æ€äººæ•°
 				x001230_g_bHuashaning = 0
 				x001230_g_bEndTime = LuaFnGetCurrentTime()
 				
@@ -1315,61 +1315,61 @@ function x001230_OnHuashanSceneTimer( sceneId, selfId )
 					end
 				end
 
-				-- ÔÚµÃµ½µÄÉ±ÈËÊı1µÄÃÅÅÉÖĞÈ¥Ëæ»úÒ»¸ö£¬ºÇºÇ£¬´«ËµÖĞµÄÇ¿X
+				-- åœ¨å¾—åˆ°çš„æ€äººæ•°1çš„é—¨æ´¾ä¸­å»éšæœºä¸€ä¸ªï¼Œå‘µå‘µï¼Œä¼ è¯´ä¸­çš„å¼ºX
 				local nVMenpai = random(nMax)
 
 				if x001230_g_nMenpaikills[nVMenpai].kill < 1  then
-					-- ±¾´Î»î¶¯ÎŞĞ§£¬¶¼Ã»ÓĞÉ±ÈË£¬ÄÄÀïÀ´µÄÊ¤ÀûÕß
+					-- æœ¬æ¬¡æ´»åŠ¨æ— æ•ˆï¼Œéƒ½æ²¡æœ‰æ€äººï¼Œå“ªé‡Œæ¥çš„èƒœåˆ©è€…
 					return
 				end
 				
-				-- ÉèÖÃÈ«¾ÖµÄÊı¾İ£¬Ê¤Àû×ÅÃÅÅÉ£¬×¢Òâ£¬ÕâÀï+ÊÇÌØ±ğĞèÒªµÄ£¬ÒòÎª0ÊÇÒ»¸ö³õÊ¼Öµ
+				-- è®¾ç½®å…¨å±€çš„æ•°æ®ï¼Œèƒœåˆ©ç€é—¨æ´¾ï¼Œæ³¨æ„ï¼Œè¿™é‡Œ+æ˜¯ç‰¹åˆ«éœ€è¦çš„ï¼Œå› ä¸º0æ˜¯ä¸€ä¸ªåˆå§‹å€¼
 				LuaFnSetWorldGlobalData(x001230_g_WorldGlobal, x001230_g_nMenpaikills[nVMenpai].id + 10)
 
-				-- ·¢Ïà¹ØÃÅÅÉµÄÍ¨¸æ
+				-- å‘ç›¸å…³é—¨æ´¾çš„é€šå‘Š
 				local szMenpai = ""
 				if x001230_g_nMenpaikills[nVMenpai].id == 0  then
-					szMenpai = "ÉÙÁÖÅÉ"
+					szMenpai = "å°‘æ—æ´¾"
 				elseif x001230_g_nMenpaikills[nVMenpai].id == 1  then
-					szMenpai = "Ã÷½Ì"
+					szMenpai = "æ˜æ•™"
 				elseif x001230_g_nMenpaikills[nVMenpai].id == 2  then
-					szMenpai = "Ø¤°ï"
+					szMenpai = "ä¸å¸®"
 				elseif x001230_g_nMenpaikills[nVMenpai].id == 3  then
-					szMenpai = "Îäµ±ÅÉ"
+					szMenpai = "æ­¦å½“æ´¾"
 				elseif x001230_g_nMenpaikills[nVMenpai].id == 4  then
-					szMenpai = "¶ëáÒÅÉ"
+					szMenpai = "å³¨åµ‹æ´¾"
 				elseif x001230_g_nMenpaikills[nVMenpai].id == 5  then
-					szMenpai = "ĞÇËŞÅÉ"
+					szMenpai = "æ˜Ÿå®¿æ´¾"
 				elseif x001230_g_nMenpaikills[nVMenpai].id == 6  then
-					szMenpai = "ÌìÁúÅÉ"
+					szMenpai = "å¤©é¾™æ´¾"
 				elseif x001230_g_nMenpaikills[nVMenpai].id == 7  then
-					szMenpai = "ÌìÉ½ÅÉ"
+					szMenpai = "å¤©å±±æ´¾"
 				elseif x001230_g_nMenpaikills[nVMenpai].id == 8  then
-					szMenpai = "åĞÒ£ÅÉ"
+					szMenpai = "é€é¥æ´¾"
 				end
-				--AddGlobalCountNews( sceneId, "#PÔÚ±¾½ì»ªÉ½ÂÛ½£µ±ÖĞ£¬#W" .. szMenpai .. "#P¾­¹ıÉÏÏÂÒ»ĞÄµÄÅ¬Á¦£¬ÖÕÓÚ»ñµÃ»ªÉ½ÂÛ½£µÚÒ»µÄÈÙÓş£¬×÷Îª½±Àø£¬ÆäÃÅÏÂËùÓĞµÜ×ÓÔÚÏÂ½ì»ªÉ½ÂÛ½£»î¶¯½áÊøÇ°£¬Ã¿ÌìµÄµÚÒ»ÂÖÊ¦ÃÅÈÎÎñ½«»á±äÎª#Y3±¶#P¾­Ñé¡£" )
+				--AddGlobalCountNews( sceneId, "#Påœ¨æœ¬å±Šåå±±è®ºå‰‘å½“ä¸­ï¼Œ#W" .. szMenpai .. "#Pç»è¿‡ä¸Šä¸‹ä¸€å¿ƒçš„åŠªåŠ›ï¼Œç»ˆäºè·å¾—åå±±è®ºå‰‘ç¬¬ä¸€çš„è£èª‰ï¼Œä½œä¸ºå¥–åŠ±ï¼Œå…¶é—¨ä¸‹æ‰€æœ‰å¼Ÿå­åœ¨ä¸‹å±Šåå±±è®ºå‰‘æ´»åŠ¨ç»“æŸå‰ï¼Œæ¯å¤©çš„ç¬¬ä¸€è½®å¸ˆé—¨ä»»åŠ¡å°†ä¼šå˜ä¸º#Y3å€#Pç»éªŒã€‚" )
 				
 				x001230_g_bMenpai = szMenpai
-				-- BroadMsgByChatPipe(sceneId,0,"@*;SrvMsg;SCA:" .. "#PÔÚ±¾½ì»ªÉ½ÂÛ½£µ±ÖĞ£¬#Y" .. szMenpai .. "#P¾­¹ıÉÏÏÂÒ»ĞÄµÄÅ¬Á¦£¬ÖÕÓÚ»ñµÃ»ªÉ½ÂÛ½£µÚÒ»µÄÈÙÓş£¬×÷Îª½±Àø£¬ÆäÃÅÏÂËùÓĞµÜ×ÓÔÚÏÂ½ì»ªÉ½ÂÛ½£»î¶¯½áÊøÇ°£¬Ã¿ÌìµÄµÚÒ»ÂÖÊ¦ÃÅÈÎÎñ½«»á±äÎª#Y3±¶¾­Ñé¡£",4)
+				-- BroadMsgByChatPipe(sceneId,0,"@*;SrvMsg;SCA:" .. "#Påœ¨æœ¬å±Šåå±±è®ºå‰‘å½“ä¸­ï¼Œ#Y" .. szMenpai .. "#Pç»è¿‡ä¸Šä¸‹ä¸€å¿ƒçš„åŠªåŠ›ï¼Œç»ˆäºè·å¾—åå±±è®ºå‰‘ç¬¬ä¸€çš„è£èª‰ï¼Œä½œä¸ºå¥–åŠ±ï¼Œå…¶é—¨ä¸‹æ‰€æœ‰å¼Ÿå­åœ¨ä¸‹å±Šåå±±è®ºå‰‘æ´»åŠ¨ç»“æŸå‰ï¼Œæ¯å¤©çš„ç¬¬ä¸€è½®å¸ˆé—¨ä»»åŠ¡å°†ä¼šå˜ä¸º#Y3å€ç»éªŒã€‚",4)
 
-				-- ¼ÇÂ¼ÃÅÅÉÉ±ÈËÊılog
+				-- è®°å½•é—¨æ´¾æ€äººæ•°log
 				for i=1, 9   do
 					local strLog = "[huashan end]: menpai=" .. tostring(x001230_g_nMenpaikills[i].id) .. "   KillNum=" .. tostring(x001230_g_nMenpaikills[i].kill)
 					MissionLog(sceneId,strLog)
 				end
 				
-				-- Çå¿ÕÏà¹ØµÄÊıÖµ
+				-- æ¸…ç©ºç›¸å…³çš„æ•°å€¼
 				for i=1, 9  do
 					x001230_g_nMenpaikills[i].id = i-1
 					x001230_g_nMenpaikills[i].kill = 0
 				end
 				
-				-- ÅÅĞòËùÓĞµÄÍæ¼ÒÉ±ÈËÊı
+				-- æ’åºæ‰€æœ‰çš„ç©å®¶æ€äººæ•°
 				for i=1, x001230_g_PlayerNum   do
 					for j=1, i   do
 						-- local	objid = LuaFnGuid2ObjId( sceneId, x001230_g_PlayerId[i] )
 						
-						-- if objid == -1 then											-- ÕÒ²»µ½¸ÃÍæ¼Ò
+						-- if objid == -1 then											-- æ‰¾ä¸åˆ°è¯¥ç©å®¶
 							-- PrintNum(i)
 						-- end
 						if x001230_g_PlayerKc[i] > x001230_g_PlayerKc[j]  then
@@ -1392,7 +1392,7 @@ function x001230_OnHuashanSceneTimer( sceneId, selfId )
 				end
 				
 				-- [ QUFEI 2007-07-27 17:24 UPDATE ]
-				-- »ñµÃÃÅÅÉÇ°ÈıÃûµÄÍæ¼ÒÃû×Ö
+				-- è·å¾—é—¨æ´¾å‰ä¸‰åçš„ç©å®¶åå­—
 				local num = {}
 				for i=0 ,8  do
 					num[i] = 0
@@ -1418,7 +1418,7 @@ function x001230_OnHuashanSceneTimer( sceneId, selfId )
 					end
 				end
 				
-				--²éÑ¯×éÈÕÖ¾
+				--æŸ¥è¯¢ç»„æ—¥å¿—
 				local strLogCheck = format(	"HuaShanLunJian_Rank_All    no.1=(id=%X, name=%s), no.2=(id=%X, name=%s), no.3=(id=%X, name=%s), ",
 											LuaFnGetGUID(sceneId, x001230_g_PlayerId[1]),x001230_g_PlayerName[1],
 											LuaFnGetGUID(sceneId, x001230_g_PlayerId[2]),x001230_g_PlayerName[2],
@@ -1438,7 +1438,7 @@ function x001230_OnHuashanSceneTimer( sceneId, selfId )
           AuditHuashanThreeWinners(sceneId,x001230_g_nMenpaiQiansan[i].playerid03)
 				end		
 								
-				-- ÅÅĞòÍê³É£¬¿ªÊ¼¹«¸æ
+				-- æ’åºå®Œæˆï¼Œå¼€å§‹å…¬å‘Š
 				local mingci = 1
 				local KillCounts = 0
 				local str = ""
@@ -1446,8 +1446,8 @@ function x001230_OnHuashanSceneTimer( sceneId, selfId )
 				for i=1, x001230_g_PlayerNum  do
 				
 					if mingci == 1 and x001230_g_PlayerName[i] ~= "" then
-						-- str = "µÚÒ»Ãû£º" .. x001230_g_PlayerName[i]
-						mailStr = "¹§Ï²Äú»ñµÃ±¾½ì»ªÉ½ÂÛ½£×Ü»ı·ÖµÚÒ»Ãû!Äú¿ÉÒÔÕÒ»ªÉ½ÂÛ½£Ö÷³ÖÈËËÕ½£Áë£¨ËÕÖİ193£¬138£©ÁìÈ¡·áºñ½±Àø!×¢Òâ£ºÁìÈ¡Ê±¼ä1¸öĞ¡Ê±£¬Èô³¬¹ı1¸öĞ¡Ê±ÈÔÎ´ÁìÈ¡½±Àø¾ÍÖ»ÄÜÏÂ´ÎÔÙ¼ÓÓÍ¿©!ÁìÈ¡½±ÀøÖ®Ç°ÇëÏÈµã»÷È·ÈÏ½±ÀøÑ¡Ïî£¬ÊÕÈ¡Áì½±ÓÊ¼şºó£¬µã»÷ÁìÈ¡»ªÉ½ÂÛ½£½±Àø·½¿ÉÁì½±³É¹¦¡£"
+						-- str = "ç¬¬ä¸€åï¼š" .. x001230_g_PlayerName[i]
+						mailStr = "æ­å–œæ‚¨è·å¾—æœ¬å±Šåå±±è®ºå‰‘æ€»ç§¯åˆ†ç¬¬ä¸€å!æ‚¨å¯ä»¥æ‰¾åå±±è®ºå‰‘ä¸»æŒäººè‹å‰‘å²­ï¼ˆè‹å·193ï¼Œ138ï¼‰é¢†å–ä¸°åšå¥–åŠ±!æ³¨æ„ï¼šé¢†å–æ—¶é—´1ä¸ªå°æ—¶ï¼Œè‹¥è¶…è¿‡1ä¸ªå°æ—¶ä»æœªé¢†å–å¥–åŠ±å°±åªèƒ½ä¸‹æ¬¡å†åŠ æ²¹å’¯!é¢†å–å¥–åŠ±ä¹‹å‰è¯·å…ˆç‚¹å‡»ç¡®è®¤å¥–åŠ±é€‰é¡¹ï¼Œæ”¶å–é¢†å¥–é‚®ä»¶åï¼Œç‚¹å‡»é¢†å–åå±±è®ºå‰‘å¥–åŠ±æ–¹å¯é¢†å¥–æˆåŠŸã€‚"
 						
 						local StartTime = LuaFnGetCurrentTime()
 												
@@ -1456,7 +1456,7 @@ function x001230_OnHuashanSceneTimer( sceneId, selfId )
 						local nMonth = LuaFnGetThisMonth()
 						local nDay   = LuaFnGetDayOfThisMonth()
 						local nData  = (nMonth+1)*100+nDay						
-						-- ·¢¿ÉÖ´ĞĞÓÊ¼ş¸øÇ°ÈıÃûÍæ¼Ò
+						-- å‘å¯æ‰§è¡Œé‚®ä»¶ç»™å‰ä¸‰åç©å®¶
 						LuaFnSendScriptMail( sceneId, x001230_g_PlayerName[i], MAIL_HUASHANJIANGLI, nData, 1, 1)
 						
 						strLogCheck = format(	"HuaShanLunJian_ScriptMail    FULL_NO.1=(id=%X, name=%s, Param01=%d, Param02=%d, Param03=%d)", LuaFnGetGUID(sceneId, x001230_g_PlayerId[i]), x001230_g_PlayerName[i], nData, 1, 1 )
@@ -1472,15 +1472,15 @@ function x001230_OnHuashanSceneTimer( sceneId, selfId )
 							mingci = 2
 						end
 					elseif mingci == 2 and x001230_g_PlayerName[i] ~= "" then
-						-- str = "µÚ¶şÃû£º" .. x001230_g_PlayerName[i]
-						mailStr = "¹§Ï²Äú»ñµÃ±¾½ì»ªÉ½ÂÛ½£×Ü»ı·ÖµÚ¶şÃû!Äú¿ÉÒÔÕÒ»ªÉ½ÂÛ½£Ö÷³ÖÈËËÕ½£Áë£¨ËÕÖİ193£¬138£©ÁìÈ¡·áºñ½±Àø!×¢Òâ£ºÁìÈ¡Ê±¼ä1¸öĞ¡Ê±£¬Èô³¬¹ı1¸öĞ¡Ê±ÈÔÎ´ÁìÈ¡½±Àø¾ÍÖ»ÄÜÏÂ´ÎÔÙ¼ÓÓÍ¿©!ÁìÈ¡½±ÀøÖ®Ç°ÇëÏÈµã»÷È·ÈÏ½±ÀøÑ¡Ïî£¬ÊÕÈ¡Áì½±ÓÊ¼şºó£¬µã»÷ÁìÈ¡»ªÉ½ÂÛ½£½±Àø·½¿ÉÁì½±³É¹¦¡£"
+						-- str = "ç¬¬äºŒåï¼š" .. x001230_g_PlayerName[i]
+						mailStr = "æ­å–œæ‚¨è·å¾—æœ¬å±Šåå±±è®ºå‰‘æ€»ç§¯åˆ†ç¬¬äºŒå!æ‚¨å¯ä»¥æ‰¾åå±±è®ºå‰‘ä¸»æŒäººè‹å‰‘å²­ï¼ˆè‹å·193ï¼Œ138ï¼‰é¢†å–ä¸°åšå¥–åŠ±!æ³¨æ„ï¼šé¢†å–æ—¶é—´1ä¸ªå°æ—¶ï¼Œè‹¥è¶…è¿‡1ä¸ªå°æ—¶ä»æœªé¢†å–å¥–åŠ±å°±åªèƒ½ä¸‹æ¬¡å†åŠ æ²¹å’¯!é¢†å–å¥–åŠ±ä¹‹å‰è¯·å…ˆç‚¹å‡»ç¡®è®¤å¥–åŠ±é€‰é¡¹ï¼Œæ”¶å–é¢†å¥–é‚®ä»¶åï¼Œç‚¹å‡»é¢†å–åå±±è®ºå‰‘å¥–åŠ±æ–¹å¯é¢†å¥–æˆåŠŸã€‚"
 
 						local StartTime = LuaFnGetCurrentTime()
 						
 						local nMonth = LuaFnGetThisMonth()
 						local nDay   = LuaFnGetDayOfThisMonth()
 						local nData  = (nMonth+1)*100+nDay						
-						-- ·¢¿ÉÖ´ĞĞÓÊ¼ş¸øÇ°ÈıÃûÍæ¼Ò
+						-- å‘å¯æ‰§è¡Œé‚®ä»¶ç»™å‰ä¸‰åç©å®¶
 						LuaFnSendScriptMail( sceneId, x001230_g_PlayerName[i], MAIL_HUASHANJIANGLI, nData, 1, 2)
 
 						strLogCheck = format(	"HuaShanLunJian_ScriptMail    FULL_NO.2=(id=%X, name=%s, Param01=%d, Param02=%d, Param03=%d)", LuaFnGetGUID(sceneId, x001230_g_PlayerId[i]), x001230_g_PlayerName[i], nData, 1, 2 )
@@ -1497,15 +1497,15 @@ function x001230_OnHuashanSceneTimer( sceneId, selfId )
 						end
 						
 					elseif mingci == 3 and x001230_g_PlayerName[i] ~= "" then
-						-- str = "µÚÈıÃû£º" .. x001230_g_PlayerName[i]
-						mailStr = "¹§Ï²Äú»ñµÃ±¾½ì»ªÉ½ÂÛ½£×Ü»ı·ÖµÚÈıÃû!Äú¿ÉÒÔÕÒ»ªÉ½ÂÛ½£Ö÷³ÖÈËËÕ½£Áë£¨ËÕÖİ193£¬138£©ÁìÈ¡·áºñ½±Àø!×¢Òâ£ºÁìÈ¡Ê±¼ä1¸öĞ¡Ê±£¬Èô³¬¹ı1¸öĞ¡Ê±ÈÔÎ´ÁìÈ¡½±Àø¾ÍÖ»ÄÜÏÂ´ÎÔÙ¼ÓÓÍ¿©!ÁìÈ¡½±ÀøÖ®Ç°ÇëÏÈµã»÷È·ÈÏ½±ÀøÑ¡Ïî£¬ÊÕÈ¡Áì½±ÓÊ¼şºó£¬µã»÷ÁìÈ¡»ªÉ½ÂÛ½£½±Àø·½¿ÉÁì½±³É¹¦¡£"
+						-- str = "ç¬¬ä¸‰åï¼š" .. x001230_g_PlayerName[i]
+						mailStr = "æ­å–œæ‚¨è·å¾—æœ¬å±Šåå±±è®ºå‰‘æ€»ç§¯åˆ†ç¬¬ä¸‰å!æ‚¨å¯ä»¥æ‰¾åå±±è®ºå‰‘ä¸»æŒäººè‹å‰‘å²­ï¼ˆè‹å·193ï¼Œ138ï¼‰é¢†å–ä¸°åšå¥–åŠ±!æ³¨æ„ï¼šé¢†å–æ—¶é—´1ä¸ªå°æ—¶ï¼Œè‹¥è¶…è¿‡1ä¸ªå°æ—¶ä»æœªé¢†å–å¥–åŠ±å°±åªèƒ½ä¸‹æ¬¡å†åŠ æ²¹å’¯!é¢†å–å¥–åŠ±ä¹‹å‰è¯·å…ˆç‚¹å‡»ç¡®è®¤å¥–åŠ±é€‰é¡¹ï¼Œæ”¶å–é¢†å¥–é‚®ä»¶åï¼Œç‚¹å‡»é¢†å–åå±±è®ºå‰‘å¥–åŠ±æ–¹å¯é¢†å¥–æˆåŠŸã€‚"
 
 						local StartTime = LuaFnGetCurrentTime()
 						
 						local nMonth = LuaFnGetThisMonth()
 						local nDay   = LuaFnGetDayOfThisMonth()
 						local nData  = (nMonth+1)*100+nDay						
-						-- ·¢¿ÉÖ´ĞĞÓÊ¼ş¸øÇ°ÈıÃûÍæ¼Ò
+						-- å‘å¯æ‰§è¡Œé‚®ä»¶ç»™å‰ä¸‰åç©å®¶
 						LuaFnSendScriptMail( sceneId, x001230_g_PlayerName[i], MAIL_HUASHANJIANGLI, nData, 1, 3)
 						
 						strLogCheck = format(	"HuaShanLunJian_ScriptMail    FULL_NO.3=(id=%X, name=%s, Param01=%d, Param02=%d, Param03=%d)", LuaFnGetGUID(sceneId, x001230_g_PlayerId[i]), x001230_g_PlayerName[i], nData, 1, 3 )
@@ -1522,14 +1522,14 @@ function x001230_OnHuashanSceneTimer( sceneId, selfId )
 						end
 						
 					elseif mingci == 4  then
-						-- str = "µÚËÄÃû£º" .. x001230_g_PlayerName[i]
+						-- str = "ç¬¬å››åï¼š" .. x001230_g_PlayerName[i]
 						mingci = 5
 						if x001230_g_PlayerKc[i] ~= x001230_g_PlayerKc[i+1]  then
 							mingci = 5
 						end
 						
 					elseif mingci == 5  then
-						-- str = "µÚÎåÃû£º" .. x001230_g_PlayerName[i]
+						-- str = "ç¬¬äº”åï¼š" .. x001230_g_PlayerName[i]
 						mingci = 6
 						if x001230_g_PlayerKc[i] ~= x001230_g_PlayerKc[i+1]  then
 							mingci = 6
@@ -1542,24 +1542,24 @@ function x001230_OnHuashanSceneTimer( sceneId, selfId )
 				end
 
 				for i=1, 9  do
-					--ÏòÃ¿¸öÃÅÅÉ·¢ËÍÇ°ÈıÃûµÄÃÅÅÉ¹«¸æ
-					str = "#P±¾´Î»ªÉ½ÂÛ½£ÒÑ¾­½áÊø£¬¸÷Î»Í¬ÃÅÎªÕñĞËÃÅÅÉÇ°ÆÍºó¼Ì£¬ÔÚÕ½¶·ÖĞ±íÏÖÉñÓÂ£¬ËûÃÇÖ®ÖĞ»ı·Ö×î¸ßµÄÊÇ£º#W"
+					--å‘æ¯ä¸ªé—¨æ´¾å‘é€å‰ä¸‰åçš„é—¨æ´¾å…¬å‘Š
+					str = "#Pæœ¬æ¬¡åå±±è®ºå‰‘å·²ç»ç»“æŸï¼Œå„ä½åŒé—¨ä¸ºæŒ¯å…´é—¨æ´¾å‰ä»†åç»§ï¼Œåœ¨æˆ˜æ–—ä¸­è¡¨ç°ç¥å‹‡ï¼Œä»–ä»¬ä¹‹ä¸­ç§¯åˆ†æœ€é«˜çš„æ˜¯ï¼š#W"
 					-- PrintNum(x001230_g_nMenpaiQiansan[i].playerid01)
 					-- PrintNum(x001230_g_nMenpaiQiansan[i].playerid02)
 					-- PrintNum(x001230_g_nMenpaiQiansan[i].playerid03)
 					if x001230_g_nMenpaiQiansan[i].playerid01 ~= 0 and x001230_g_nMenpaiQiansan[i].player01 ~= "" then
 						BroadMsgByChatPipe(sceneId,x001230_g_nMenpaiQiansan[i].playerid01, str, 7)
-						str = "µÚÒ»Ãû£º" .. x001230_g_nMenpaiQiansan[i].player01
+						str = "ç¬¬ä¸€åï¼š" .. x001230_g_nMenpaiQiansan[i].player01
 						BroadMsgByChatPipe(sceneId,x001230_g_nMenpaiQiansan[i].playerid01, str, 7)	
 					end
 					
 					if x001230_g_nMenpaiQiansan[i].playerid02 ~= 0 and x001230_g_nMenpaiQiansan[i].player02 ~= "" then
-						str = "µÚ¶şÃû£º" .. x001230_g_nMenpaiQiansan[i].player02
+						str = "ç¬¬äºŒåï¼š" .. x001230_g_nMenpaiQiansan[i].player02
 						BroadMsgByChatPipe(sceneId,x001230_g_nMenpaiQiansan[i].playerid02, str, 7)			
 					end
 					
 					if x001230_g_nMenpaiQiansan[i].playerid03 ~= 0 and x001230_g_nMenpaiQiansan[i].player03 ~= "" then
-						str = "µÚÈıÃû£º" .. x001230_g_nMenpaiQiansan[i].player03
+						str = "ç¬¬ä¸‰åï¼š" .. x001230_g_nMenpaiQiansan[i].player03
 						BroadMsgByChatPipe(sceneId,x001230_g_nMenpaiQiansan[i].playerid03, str, 7)							
 					end
 					
@@ -1567,14 +1567,14 @@ function x001230_OnHuashanSceneTimer( sceneId, selfId )
 						and x001230_g_nMenpaiQiansan[i].player01 ~= x001230_g_PlayerName[1] 
 						and x001230_g_nMenpaiQiansan[i].player01 ~= x001230_g_PlayerName[2] 
 						and x001230_g_nMenpaiQiansan[i].player01 ~= x001230_g_PlayerName[3] then
-						mailStr = "¹§Ï²Äú»ñµÃ±¾½ì»ªÉ½ÂÛ½£±¾ÃÅÅÉµÚÒ»Ãû!Äú¿ÉÒÔÕÒ»ªÉ½ÂÛ½£Ö÷³ÖÈËËÕ½£Áë£¨ËÕÖİ193£¬138£©ÁìÈ¡·áºñ½±Àø!×¢Òâ£ºÁìÈ¡Ê±¼ä1¸öĞ¡Ê±£¬Èô³¬¹ı1¸öĞ¡Ê±ÈÔÎ´ÁìÈ¡½±Àø¾ÍÖ»ÄÜÏÂ´ÎÔÙ¼ÓÓÍ¿©!ÁìÈ¡½±ÀøÖ®Ç°ÇëÏÈµã»÷È·ÈÏ½±ÀøÑ¡Ïî£¬ÊÕÈ¡Áì½±ÓÊ¼şºó£¬µã»÷ÁìÈ¡»ªÉ½ÂÛ½£½±Àø·½¿ÉÁì½±³É¹¦¡£"
+						mailStr = "æ­å–œæ‚¨è·å¾—æœ¬å±Šåå±±è®ºå‰‘æœ¬é—¨æ´¾ç¬¬ä¸€å!æ‚¨å¯ä»¥æ‰¾åå±±è®ºå‰‘ä¸»æŒäººè‹å‰‘å²­ï¼ˆè‹å·193ï¼Œ138ï¼‰é¢†å–ä¸°åšå¥–åŠ±!æ³¨æ„ï¼šé¢†å–æ—¶é—´1ä¸ªå°æ—¶ï¼Œè‹¥è¶…è¿‡1ä¸ªå°æ—¶ä»æœªé¢†å–å¥–åŠ±å°±åªèƒ½ä¸‹æ¬¡å†åŠ æ²¹å’¯!é¢†å–å¥–åŠ±ä¹‹å‰è¯·å…ˆç‚¹å‡»ç¡®è®¤å¥–åŠ±é€‰é¡¹ï¼Œæ”¶å–é¢†å¥–é‚®ä»¶åï¼Œç‚¹å‡»é¢†å–åå±±è®ºå‰‘å¥–åŠ±æ–¹å¯é¢†å¥–æˆåŠŸã€‚"
 																
 						local StartTime = LuaFnGetCurrentTime()
 						
 						local nMonth = LuaFnGetThisMonth()
 						local nDay   = LuaFnGetDayOfThisMonth()
 						local nData  = (nMonth+1)*100+nDay						
-						--·¢¿ÉÖ´ĞĞÓÊ¼ş¸øÇ°ÈıÃûÍæ¼Ò																		
+						--å‘å¯æ‰§è¡Œé‚®ä»¶ç»™å‰ä¸‰åç©å®¶																		
 						LuaFnSendScriptMail( sceneId, x001230_g_nMenpaiQiansan[i].player01, MAIL_HUASHANJIANGLI, nData, 2, 1)
 
 						strLogCheck = format(	"HuaShanLunJian_ScriptMail    MenPai_NO.1=(id=%X, name=%s, Param01=%d, Param02=%d, Param03=%d)", LuaFnGetGUID(sceneId, x001230_g_nMenpaiQiansan[i].playerid01), x001230_g_nMenpaiQiansan[i].player01, nData, 2, 1 )
@@ -1590,14 +1590,14 @@ function x001230_OnHuashanSceneTimer( sceneId, selfId )
 						and x001230_g_nMenpaiQiansan[i].player02 ~= x001230_g_PlayerName[1] 
 						and x001230_g_nMenpaiQiansan[i].player02 ~= x001230_g_PlayerName[2] 
 						and x001230_g_nMenpaiQiansan[i].player02 ~= x001230_g_PlayerName[3] then						
-						mailStr = "¹§Ï²Äú»ñµÃ±¾½ì»ªÉ½ÂÛ½£±¾ÃÅÅÉµÚ¶şÃû!Äú¿ÉÒÔÕÒ»ªÉ½ÂÛ½£Ö÷³ÖÈËËÕ½£Áë£¨ËÕÖİ193£¬138£©ÁìÈ¡·áºñ½±Àø!×¢Òâ£ºÁìÈ¡Ê±¼ä1¸öĞ¡Ê±£¬Èô³¬¹ı1¸öĞ¡Ê±ÈÔÎ´ÁìÈ¡½±Àø¾ÍÖ»ÄÜÏÂ´ÎÔÙ¼ÓÓÍ¿©!ÁìÈ¡½±ÀøÖ®Ç°ÇëÏÈµã»÷È·ÈÏ½±ÀøÑ¡Ïî£¬ÊÕÈ¡Áì½±ÓÊ¼şºó£¬µã»÷ÁìÈ¡»ªÉ½ÂÛ½£½±Àø·½¿ÉÁì½±³É¹¦¡£"
+						mailStr = "æ­å–œæ‚¨è·å¾—æœ¬å±Šåå±±è®ºå‰‘æœ¬é—¨æ´¾ç¬¬äºŒå!æ‚¨å¯ä»¥æ‰¾åå±±è®ºå‰‘ä¸»æŒäººè‹å‰‘å²­ï¼ˆè‹å·193ï¼Œ138ï¼‰é¢†å–ä¸°åšå¥–åŠ±!æ³¨æ„ï¼šé¢†å–æ—¶é—´1ä¸ªå°æ—¶ï¼Œè‹¥è¶…è¿‡1ä¸ªå°æ—¶ä»æœªé¢†å–å¥–åŠ±å°±åªèƒ½ä¸‹æ¬¡å†åŠ æ²¹å’¯!é¢†å–å¥–åŠ±ä¹‹å‰è¯·å…ˆç‚¹å‡»ç¡®è®¤å¥–åŠ±é€‰é¡¹ï¼Œæ”¶å–é¢†å¥–é‚®ä»¶åï¼Œç‚¹å‡»é¢†å–åå±±è®ºå‰‘å¥–åŠ±æ–¹å¯é¢†å¥–æˆåŠŸã€‚"
 						
 						local StartTime = LuaFnGetCurrentTime()
 						
 						local nMonth = LuaFnGetThisMonth()
 						local nDay   = LuaFnGetDayOfThisMonth()
 						local nData  = (nMonth+1)*100+nDay						
-						--·¢¿ÉÖ´ĞĞÓÊ¼ş¸øÇ°ÈıÃûÍæ¼Ò												
+						--å‘å¯æ‰§è¡Œé‚®ä»¶ç»™å‰ä¸‰åç©å®¶												
 						LuaFnSendScriptMail( sceneId, x001230_g_nMenpaiQiansan[i].player02, MAIL_HUASHANJIANGLI, nData, 2, 2)
 						
 						strLogCheck = format(	"HuaShanLunJian_ScriptMail    MenPai_NO.2=(id=%X, name=%s, Param01=%d, Param02=%d, Param03=%d)", LuaFnGetGUID(sceneId, x001230_g_nMenpaiQiansan[i].playerid02), x001230_g_nMenpaiQiansan[i].player02, nData, 2, 2 )
@@ -1613,14 +1613,14 @@ function x001230_OnHuashanSceneTimer( sceneId, selfId )
 						and	x001230_g_nMenpaiQiansan[i].player03 ~= x001230_g_PlayerName[1] 
 						and x001230_g_nMenpaiQiansan[i].player03 ~= x001230_g_PlayerName[2] 
 						and x001230_g_nMenpaiQiansan[i].player03 ~= x001230_g_PlayerName[3] then						
-						mailStr = "¹§Ï²Äú»ñµÃ±¾½ì»ªÉ½ÂÛ½£±¾ÃÅÅÉµÚÈıÃû!Äú¿ÉÒÔÕÒ»ªÉ½ÂÛ½£Ö÷³ÖÈËËÕ½£Áë£¨ËÕÖİ193£¬138£©ÁìÈ¡·áºñ½±Àø!×¢Òâ£ºÁìÈ¡Ê±¼ä1¸öĞ¡Ê±£¬Èô³¬¹ı1¸öĞ¡Ê±ÈÔÎ´ÁìÈ¡½±Àø¾ÍÖ»ÄÜÏÂ´ÎÔÙ¼ÓÓÍ¿©!ÁìÈ¡½±ÀøÖ®Ç°ÇëÏÈµã»÷È·ÈÏ½±ÀøÑ¡Ïî£¬ÊÕÈ¡Áì½±ÓÊ¼şºó£¬µã»÷ÁìÈ¡»ªÉ½ÂÛ½£½±Àø·½¿ÉÁì½±³É¹¦¡£"
+						mailStr = "æ­å–œæ‚¨è·å¾—æœ¬å±Šåå±±è®ºå‰‘æœ¬é—¨æ´¾ç¬¬ä¸‰å!æ‚¨å¯ä»¥æ‰¾åå±±è®ºå‰‘ä¸»æŒäººè‹å‰‘å²­ï¼ˆè‹å·193ï¼Œ138ï¼‰é¢†å–ä¸°åšå¥–åŠ±!æ³¨æ„ï¼šé¢†å–æ—¶é—´1ä¸ªå°æ—¶ï¼Œè‹¥è¶…è¿‡1ä¸ªå°æ—¶ä»æœªé¢†å–å¥–åŠ±å°±åªèƒ½ä¸‹æ¬¡å†åŠ æ²¹å’¯!é¢†å–å¥–åŠ±ä¹‹å‰è¯·å…ˆç‚¹å‡»ç¡®è®¤å¥–åŠ±é€‰é¡¹ï¼Œæ”¶å–é¢†å¥–é‚®ä»¶åï¼Œç‚¹å‡»é¢†å–åå±±è®ºå‰‘å¥–åŠ±æ–¹å¯é¢†å¥–æˆåŠŸã€‚"
 						
 						local StartTime = LuaFnGetCurrentTime()
 						
 						local nMonth = LuaFnGetThisMonth()
 						local nDay   = LuaFnGetDayOfThisMonth()
 						local nData  = (nMonth+1)*100+nDay						
-						--·¢¿ÉÖ´ĞĞÓÊ¼ş¸øÇ°ÈıÃûÍæ¼Ò
+						--å‘å¯æ‰§è¡Œé‚®ä»¶ç»™å‰ä¸‰åç©å®¶
 						LuaFnSendScriptMail( sceneId, x001230_g_nMenpaiQiansan[i].player03, MAIL_HUASHANJIANGLI, nData, 2, 3)
 						
 						strLogCheck = format(	"HuaShanLunJian_ScriptMail    MenPai_NO.3=(id=%X, name=%s, Param01=%d, Param02=%d, Param03=%d)", LuaFnGetGUID(sceneId, x001230_g_nMenpaiQiansan[i].playerid03), x001230_g_nMenpaiQiansan[i].player03, nData, 2, 3 )
@@ -1634,7 +1634,7 @@ function x001230_OnHuashanSceneTimer( sceneId, selfId )
 					end									
 				end						
 
-				-- Çå¿ÕÏà¹ØÄÚÈİ
+				-- æ¸…ç©ºç›¸å…³å†…å®¹
 				for i=1, x001230_g_PlayerNum   do
 					x001230_g_PlayerKc[i] = 0										
 				end				
@@ -1647,7 +1647,7 @@ function x001230_OnHuashanSceneTimer( sceneId, selfId )
 			local nHumanId = LuaFnGetCopyScene_HumanObjId(sceneId,i)
 			if LuaFnIsObjValid( sceneId, nHumanId ) == 1 and LuaFnIsCanDoScriptLogic( sceneId, nHumanId ) == 1 then
 			  BeginEvent(sceneId)
-			  	AddText(sceneId, "#P»ªÉ½ÂÛ½£»î¶¯½áÊø¡£")
+			  	AddText(sceneId, "#Påå±±è®ºå‰‘æ´»åŠ¨ç»“æŸã€‚")
 			  EndEvent()
 			  DispatchMissionTips(sceneId, nHumanId)
 		
@@ -1692,11 +1692,11 @@ function x001230_OnHuashanSceneTimer( sceneId, selfId )
 					nPos_X			 = 61
 					nPos_Z			 = 69
 				elseif nMempai == 9    then
-					--Ã»ÓĞÃÅÅÉµÄÈËÓ¦¸ÃÊÇ²»³öÏÖµÄ£¬±ÜÃâ´íÎó³öÏÖ£¬ÉèÖÃ¸öÎ»ÖÃ
+					--æ²¡æœ‰é—¨æ´¾çš„äººåº”è¯¥æ˜¯ä¸å‡ºç°çš„ï¼Œé¿å…é”™è¯¯å‡ºç°ï¼Œè®¾ç½®ä¸ªä½ç½®
 					nMenpaiScene = 1
 					nPos_X			 = 191
 					nPos_Z			 = 138
-					--PrintStr("ÄãÕâ¸ö¼Ò»ï£¬±»ÈËKµÄ¶¼²»ÖªµÀ×Ô¼ºÃÅÅÉÁË£¿£¿£¿")
+					--PrintStr("ä½ è¿™ä¸ªå®¶ä¼™ï¼Œè¢«äººKçš„éƒ½ä¸çŸ¥é“è‡ªå·±é—¨æ´¾äº†ï¼Ÿï¼Ÿï¼Ÿ")
 				end
 				CallScriptFunction((400900), "TransferFunc",sceneId, nHumanId, nMenpaiScene, nPos_X, nPos_Z)
 			end
@@ -1708,10 +1708,10 @@ function x001230_OnHuashanSceneTimer( sceneId, selfId )
 end
 
 --**********************************
--- É±ÈË¼ÆÊı
+-- æ€äººè®¡æ•°
 --**********************************
 function x001230_KillPlayer(sceneId, killerId, diedId)
-	-- Ö»ÓĞÔÚ»î¶¯Ê±¼äÄÚÉ±µÄÈË²ÅÊÇÓĞĞ§µÄ
+	-- åªæœ‰åœ¨æ´»åŠ¨æ—¶é—´å†…æ€çš„äººæ‰æ˜¯æœ‰æ•ˆçš„
 	if x001230_g_bHuashaning == 0  then
 		return
 	end
@@ -1730,16 +1730,16 @@ function x001230_KillPlayer(sceneId, killerId, diedId)
 	if IsAddCnt == 0 then
 		
 		BeginEvent(sceneId)
-			AddText(sceneId, "ÓÉÓÚÄúÖØ¸´É±ËÀÍ¬Ò»¸öÍæ¼Ò»ò¸ÃÍæ¼ÒÓëÄúµÈ¼¶Ïà²î³¬¹ı40¼¶£¬Äú½«²»»á»ñµÃÃÅÅÉ¹±Ï×¶ÈºÍ»ı·Ö½±Àø¡£")
+			AddText(sceneId, "ç”±äºæ‚¨é‡å¤æ€æ­»åŒä¸€ä¸ªç©å®¶æˆ–è¯¥ç©å®¶ä¸æ‚¨ç­‰çº§ç›¸å·®è¶…è¿‡40çº§ï¼Œæ‚¨å°†ä¸ä¼šè·å¾—é—¨æ´¾è´¡çŒ®åº¦å’Œç§¯åˆ†å¥–åŠ±ã€‚")
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId, killerId)
 			
 		return 0
 	end
 	
-	-- ´Óehuashan_4.luaÖĞÅ²¹ıÀ´ changed by xindfeng
+	-- ä»ehuashan_4.luaä¸­æŒªè¿‡æ¥ changed by xindfeng
 	local nMenpaiPoint = GetHumanMenpaiPoint(sceneId, killerId)
-	SetHumanMenpaiPoint(sceneId, killerId, nMenpaiPoint+1)		--ÃÅÅÉ¹±Ï×¶È+1
+	SetHumanMenpaiPoint(sceneId, killerId, nMenpaiPoint+1)		--é—¨æ´¾è´¡çŒ®åº¦+1
 		
 	
 	local nKillerMenpai = GetMenPai(sceneId, killerId)
@@ -1752,8 +1752,8 @@ function x001230_KillPlayer(sceneId, killerId, diedId)
 		end
 	end
 	
-	-- ¸øËùÓĞ³¡¾°ÖĞÉ±ÊÖÃÅÅÉµÄÈË·¢ÏûÏ¢£¬¸æËßËûÃÇµÃ·ÖÁË
-	--1£¬»ñµÃ³¡¾°ÖĞµÄËùÓĞÈË£¬
+	-- ç»™æ‰€æœ‰åœºæ™¯ä¸­æ€æ‰‹é—¨æ´¾çš„äººå‘æ¶ˆæ¯ï¼Œå‘Šè¯‰ä»–ä»¬å¾—åˆ†äº†
+	--1ï¼Œè·å¾—åœºæ™¯ä¸­çš„æ‰€æœ‰äººï¼Œ
 	local nHumanNum = LuaFnGetCopyScene_HumanCount(sceneId)
 
 	for i=0, nHumanNum-1  do
@@ -1762,7 +1762,7 @@ function x001230_KillPlayer(sceneId, killerId, diedId)
 
 			if nKillerMenpai == GetMenPai(sceneId, PlayerId)    then
 				BeginEvent(sceneId)
-						AddText(sceneId, "±¾ÃÅÅÉµ±Ç°µÃ·Ö£º" .. nKillCount)
+						AddText(sceneId, "æœ¬é—¨æ´¾å½“å‰å¾—åˆ†ï¼š" .. nKillCount)
 				EndEvent(sceneId)
 				DispatchMissionTips(sceneId, PlayerId)
 			end
@@ -1770,16 +1770,16 @@ function x001230_KillPlayer(sceneId, killerId, diedId)
 		end
 	end
 	
-	-- ¼ÇÂ¼ÃÅÅÉÉ±ÈËÊılog
+	-- è®°å½•é—¨æ´¾æ€äººæ•°log
 	local strLog = "[huashan]: menpai=" .. tostring(nKillerMenpai) .. "   KillNum=" .. tostring(nKillCount)
 	MissionLog(sceneId,strLog)
 
-	-- ¸øÍæ¼ÒµÄÉ±ÈËÊı¼ÆÊı
+	-- ç»™ç©å®¶çš„æ€äººæ•°è®¡æ•°
 	local KillerName = GetName(sceneId, killerId)
 	local nIndex = 0
 	for i=0, x001230_g_PlayerNum  do
 		if KillerName == x001230_g_PlayerName[i]  then
-			-- ÕÒµ½ÈËÁË
+			-- æ‰¾åˆ°äººäº†
 			x001230_g_PlayerKc[i] = x001230_g_PlayerKc[i]+1
 			BeginEvent(sceneId)
 				AddText(sceneId, "#{HSLJJF_1}" .. x001230_g_PlayerKc[i].."#{HSLJJF_2}")
@@ -1794,7 +1794,7 @@ function x001230_KillPlayer(sceneId, killerId, diedId)
 end
 
 --**********************************
--- Ôö¼ÓÒ»¸öÍæ¼Òµ½É±ÊÖÁĞ±íÖĞÈ¥
+-- å¢åŠ ä¸€ä¸ªç©å®¶åˆ°æ€æ‰‹åˆ—è¡¨ä¸­å»
 --**********************************
 function x001230_AddPlayer(sceneId, Name, PlayerId)
 	
@@ -1814,34 +1814,34 @@ function x001230_AddPlayer(sceneId, Name, PlayerId)
 	x001230_g_PlayerId[x001230_g_PlayerNum] = PlayerId
 	
 	--[ QUFEI 2007-07-27 15:04 UPDATE ]
-	--»ñµÃÍæ¼ÒµÄÃÅÅÉID
+	--è·å¾—ç©å®¶çš„é—¨æ´¾ID
 	x001230_g_PlayerMenpai[x001230_g_PlayerNum] = GetMenPai(sceneId, PlayerId)
 
 end
 
 --**********************************
--- Ôö¼ÓÒ»¸öÍæ¼Òµ½É±ÊÖÁĞ±íÖĞÈ¥
+-- å¢åŠ ä¸€ä¸ªç©å®¶åˆ°æ€æ‰‹åˆ—è¡¨ä¸­å»
 --**********************************
 function x001230_Id2Menpai(nMenpaiId)
 	local szMenpai = ""
 	if nMenpaiId == 0  then
-		szMenpai = "ÉÙÁÖÅÉ"
+		szMenpai = "å°‘æ—æ´¾"
 	elseif nMenpaiId == 1  then
-		szMenpai = "Ã÷½Ì"
+		szMenpai = "æ˜æ•™"
 	elseif nMenpaiId == 2  then
-		szMenpai = "Ø¤°ï"
+		szMenpai = "ä¸å¸®"
 	elseif nMenpaiId == 3  then
-		szMenpai = "Îäµ±ÅÉ"
+		szMenpai = "æ­¦å½“æ´¾"
 	elseif nMenpaiId == 4  then
-		szMenpai = "¶ëáÒÅÉ"
+		szMenpai = "å³¨åµ‹æ´¾"
 	elseif nMenpaiId == 5  then
-		szMenpai = "ĞÇËŞÅÉ"
+		szMenpai = "æ˜Ÿå®¿æ´¾"
 	elseif nMenpaiId == 6  then
-		szMenpai = "ÌìÁúÅÉ"
+		szMenpai = "å¤©é¾™æ´¾"
 	elseif nMenpaiId == 7  then
-		szMenpai = "ÌìÉ½ÅÉ"
+		szMenpai = "å¤©å±±æ´¾"
 	elseif nMenpaiId == 8  then
-		szMenpai = "åĞÒ£ÅÉ"
+		szMenpai = "é€é¥æ´¾"
 	end
 	
 	return szMenpai
@@ -1849,7 +1849,7 @@ function x001230_Id2Menpai(nMenpaiId)
 end
 
 --**********************************
---¶Ô»°¿òÌáÊ¾
+--å¯¹è¯æ¡†æç¤º
 --**********************************
 function x001230_MyMsgBox( sceneId, selfId, str )
 	BeginEvent(sceneId)    
@@ -1859,11 +1859,11 @@ function x001230_MyMsgBox( sceneId, selfId, str )
 end
 
 --**********************************
---Ë¢ĞÂÃØ¼®
+--åˆ·æ–°ç§˜ç±
 --**********************************
 function x001230_GiveMJ( sceneId )
 
-	-- ÏÈÉ¾³ı¾ÉµÄÃØ¼®....
+	-- å…ˆåˆ é™¤æ—§çš„ç§˜ç±....
 	local nCount = GetMonsterCount(sceneId)
 	for i=0, nCount-1 do
 		local nMonsterId = GetMonsterObjID(sceneId, i)
@@ -1875,7 +1875,7 @@ function x001230_GiveMJ( sceneId )
 		end
 	end
 
-	--³¡¾°ÖĞÑëË¢ĞÂ2¸ö....
+	--åœºæ™¯ä¸­å¤®åˆ·æ–°2ä¸ª....
 	for i=1, getn(x001230_g_MJPosA)  do
 		local Rand = random(getn(x001230_g_MJTblA))
 		LuaFnCreateMonster(sceneId, x001230_g_MJTblA[Rand],
@@ -1884,14 +1884,14 @@ function x001230_GiveMJ( sceneId )
 
 	end
 
-	--³¡¾°ËÄÖÜË¢ĞÂ4¸ö....
+	--åœºæ™¯å››å‘¨åˆ·æ–°4ä¸ª....
 
-		--ÖØÖÃÈ¨Öµ....
+		--é‡ç½®æƒå€¼....
 	for i=1, getn(x001230_g_MJPosB) do
 		x001230_g_MJPosB[i].rand = random(100)
 	end
 
-		--Ñ¡³öÈ¨Öµ×î´óµÄ4¸öµã×÷ÎªÍ¶·ÅÃØ¼®µÄµã....
+		--é€‰å‡ºæƒå€¼æœ€å¤§çš„4ä¸ªç‚¹ä½œä¸ºæŠ•æ”¾ç§˜ç±çš„ç‚¹....
 	for i=1, 4 do
 
 		local MaxVal = -1
@@ -1905,7 +1905,7 @@ function x001230_GiveMJ( sceneId )
 			end
 		end
 
-		--Í¶·ÅÃØ¼®....
+		--æŠ•æ”¾ç§˜ç±....
 		local Rand = random(getn(x001230_g_MJTblB))
 		LuaFnCreateMonster(sceneId, x001230_g_MJTblB[Rand],
 																x001230_g_MJPosB[index].x, x001230_g_MJPosB[index].y,

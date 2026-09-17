@@ -1,6 +1,6 @@
---»î¶¯¡ª¡ª¶Ò»»ĞÄ·¨¡¢ÃØ¼®
+--æ´»åŠ¨â€”â€”å…‘æ¢å¿ƒæ³•ã€ç§˜ç±
 --MisDescBegin
---½Å±¾ºÅ
+--è„šæœ¬å·
 x808036_g_ScriptId = 808036
 x808036_g_ExchangeXinfaBook_Active = 1
 
@@ -10,76 +10,76 @@ x808036_g_NeedItemID = 30505078
 --MisDescEnd
 
 
---0ÉÙÁÖ 1Ã÷½Ì 2Ø¤°ï 3Îäµ± 4¶ëáÒ 5ĞÇËŞ 6´óÀí 7ÌìÉ½ 8ÏûÒ£
+--0å°‘æ— 1æ˜æ•™ 2ä¸å¸® 3æ­¦å½“ 4å³¨åµ‹ 5æ˜Ÿå®¿ 6å¤§ç† 7å¤©å±± 8æ¶ˆé¥
 --************************************
---È¡µÃ½±ÀøÃØ¼®ID
+--å–å¾—å¥–åŠ±ç§˜ç±ID
 --************************************
 function x808036_GetAwardItemID_Miji( sceneId, selfId )
     local PlayerMenpai = GetMenPai( sceneId, selfId )
     local ItemID = -1;
-    if 0 == PlayerMenpai then    --ÉÙÁÖ
+    if 0 == PlayerMenpai then    --å°‘æ—
         ItemID = 30308002
     end
-    if 1 == PlayerMenpai then    --Ã÷½Ì
+    if 1 == PlayerMenpai then    --æ˜æ•™
         ItemID = 30308003
     end
-    if 2 == PlayerMenpai then    --Ø¤°ï
+    if 2 == PlayerMenpai then    --ä¸å¸®
         ItemID = 30308004
     end
-    if 3 == PlayerMenpai then    --Îäµ±
+    if 3 == PlayerMenpai then    --æ­¦å½“
         ItemID = 30308005
     end
-    if 4 == PlayerMenpai then    --¶ëáÒ
+    if 4 == PlayerMenpai then    --å³¨åµ‹
         ItemID = 30308006
     end
-    if 5 == PlayerMenpai then    --ĞÇËŞ
+    if 5 == PlayerMenpai then    --æ˜Ÿå®¿
         ItemID = 30308007
     end
-    if 6 == PlayerMenpai then    --´óÀí
+    if 6 == PlayerMenpai then    --å¤§ç†
         ItemID = 30308008
     end
-    if 7 == PlayerMenpai then    --ÌìÉ½
+    if 7 == PlayerMenpai then    --å¤©å±±
         ItemID = 30308009
     end
-    if 8 == PlayerMenpai then    --ÏûÒ£
+    if 8 == PlayerMenpai then    --æ¶ˆé¥
         ItemID = 30308010
     end
 
     return ItemID
 end
 
---0ÉÙÁÖ 1Ã÷½Ì 2Ø¤°ï 3Îäµ± 4¶ëáÒ 5ĞÇËŞ 6´óÀí 7ÌìÉ½ 8ÏûÒ£
+--0å°‘æ— 1æ˜æ•™ 2ä¸å¸® 3æ­¦å½“ 4å³¨åµ‹ 5æ˜Ÿå®¿ 6å¤§ç† 7å¤©å±± 8æ¶ˆé¥
 --************************************
---È¡µÃ½±ÀøÒª¾÷ID
+--å–å¾—å¥–åŠ±è¦è¯€ID
 --************************************
 function x808036_GetAwardItemID_Yaojue( sceneId, selfId )
     local PlayerMenpai = GetMenPai( sceneId, selfId )
     local ItemID = -1;
-    if 0 == PlayerMenpai then    --ÉÙÁÖ
+    if 0 == PlayerMenpai then    --å°‘æ—
         ItemID = 30308011
     end
-    if 1 == PlayerMenpai then    --Ã÷½Ì
+    if 1 == PlayerMenpai then    --æ˜æ•™
         ItemID = 30308012
     end
-    if 2 == PlayerMenpai then    --Ø¤°ï
+    if 2 == PlayerMenpai then    --ä¸å¸®
         ItemID = 30308013
     end
-    if 3 == PlayerMenpai then    --Îäµ±
+    if 3 == PlayerMenpai then    --æ­¦å½“
         ItemID = 30308014
     end
-    if 4 == PlayerMenpai then    --¶ëáÒ
+    if 4 == PlayerMenpai then    --å³¨åµ‹
         ItemID = 30308015
     end
-    if 5 == PlayerMenpai then    --ĞÇËŞ
+    if 5 == PlayerMenpai then    --æ˜Ÿå®¿
         ItemID = 30308016
     end
-    if 6 == PlayerMenpai then    --´óÀí
+    if 6 == PlayerMenpai then    --å¤§ç†
         ItemID = 30308017
     end
-    if 7 == PlayerMenpai then    --ÌìÉ½
+    if 7 == PlayerMenpai then    --å¤©å±±
         ItemID = 30308018
     end
-    if 8 == PlayerMenpai then    --ÏûÒ£
+    if 8 == PlayerMenpai then    --æ¶ˆé¥
         ItemID = 30308019
     end
 
@@ -88,16 +88,16 @@ end
 
 
 --**************************************
---ÉèÖÃ±äÁ¿,±ê¼ÇÒÑ¾­¸øÓè¹ıÃØ¼®»òÕßÒª¾÷ÁË
+--è®¾ç½®å˜é‡,æ ‡è®°å·²ç»ç»™äºˆè¿‡ç§˜ç±æˆ–è€…è¦è¯€äº†
 --**************************************
 function x808036_SetExchangeCompleteFlag( sceneId, selfId )
     SetMissionData( sceneId, selfId, MD_EXCHANGE_MIJIORYAOJUE, 1 )
 end
 --********************************************
---È¡µÃÊÇ·ñÒÑ¾­¸øÓè¹ıÃØ¼®»òÕßÒª¾÷ÁË.0ÎªÃ»¸øÓè¹ı
+--å–å¾—æ˜¯å¦å·²ç»ç»™äºˆè¿‡ç§˜ç±æˆ–è€…è¦è¯€äº†.0ä¸ºæ²¡ç»™äºˆè¿‡
 --********************************************
 function x808036_GetExchangeCompleteFlag( sceneId, selfId )
-    local CompleteFlag = GetMissionData( sceneId, selfId, MD_EXCHANGE_MIJIORYAOJUE ) --È¡³ö±êÖ¾
+    local CompleteFlag = GetMissionData( sceneId, selfId, MD_EXCHANGE_MIJIORYAOJUE ) --å–å‡ºæ ‡å¿—
     
     if CompleteFlag > 0 then
         return 1
@@ -108,7 +108,7 @@ function x808036_GetExchangeCompleteFlag( sceneId, selfId )
 end
 
 --**********************************
---¼ì²âÊÇ·ñÓĞ×ã¹»µÄÎïÆ·ÓÃÀ´½»»»ÃØ¼®
+--æ£€æµ‹æ˜¯å¦æœ‰è¶³å¤Ÿçš„ç‰©å“ç”¨æ¥äº¤æ¢ç§˜ç±
 --**********************************
 function x808036_CheckEnoughItem_Miji( sceneId, selfId )
     local TianshuID = x808036_g_NeedItemID
@@ -121,7 +121,7 @@ function x808036_CheckEnoughItem_Miji( sceneId, selfId )
     return 1
 end
 --**********************************
---¼ì²âÊÇ·ñÓĞ×ã¹»µÄÎïÆ·ÓÃÀ´½»»»Òª¾÷
+--æ£€æµ‹æ˜¯å¦æœ‰è¶³å¤Ÿçš„ç‰©å“ç”¨æ¥äº¤æ¢è¦è¯€
 --**********************************
 function x808036_CheckEnoughItem_Yaojue( sceneId, selfId )
     local TianshuID = x808036_g_NeedItemID
@@ -135,16 +135,16 @@ function x808036_CheckEnoughItem_Yaojue( sceneId, selfId )
 end
 
 --**********************************
---¶Ò»»ÃØ¼®ºÍÒª¾÷
+--å…‘æ¢ç§˜ç±å’Œè¦è¯€
 --**********************************
 function x808036_Exchange_MijiAndYaojue( sceneId, selfId, targetId, ItemDesc, AddAward )
-    --ItemDesc 1ÎªÃØ¼®2ÎªÒª¾÷
+    --ItemDesc 1ä¸ºç§˜ç±2ä¸ºè¦è¯€
     local Item_Miji = 1
     local Item_Yaojue = 2
     
     local CompleteFlag = x808036_GetExchangeCompleteFlag( sceneId, selfId )
     if 1 == CompleteFlag then
-        local strDirText05 = "¶Ô²»Æğ£¬¶Ò»»ÃØ¼®ºÍÒª¾÷µÄ»ú»áÖ»ÓĞ1´Î¡£"
+        local strDirText05 = "å¯¹ä¸èµ·ï¼Œå…‘æ¢ç§˜ç±å’Œè¦è¯€çš„æœºä¼šåªæœ‰1æ¬¡ã€‚"
 		BeginEvent(sceneId)
 			AddText( sceneId, strDirText05 )
 		EndEvent()
@@ -156,14 +156,14 @@ function x808036_Exchange_MijiAndYaojue( sceneId, selfId, targetId, ItemDesc, Ad
     if Item_Miji == ItemDesc then
         local CanExchange = x808036_CheckEnoughItem_Miji( sceneId, selfId )
 		if 1 ~= CanExchange then
-	        strDirText00 = "¶Ò»»ÃØ¼®ĞèÒª7ÕÅÌìÊé²ĞÒ³£¬ÄúµÄÊıÁ¿²»×ã£¬Çë´ÕÆëÖ®ºóÔÙÀ´ÕÒÎÒ¡£"    
+	        strDirText00 = "å…‘æ¢ç§˜ç±éœ€è¦7å¼ å¤©ä¹¦æ®‹é¡µï¼Œæ‚¨çš„æ•°é‡ä¸è¶³ï¼Œè¯·å‡‘é½ä¹‹åå†æ¥æ‰¾æˆ‘ã€‚"    
 		end
     end
     
     if Item_Yaojue == ItemDesc then
         local CanExchange = x808036_CheckEnoughItem_Yaojue( sceneId, selfId )
 		if 1 ~= CanExchange then
-		    strDirText00 = "¶Ò»»Òª¾÷ĞèÒª8ÕÅÌìÊé²ĞÒ³£¬ÄúµÄÊıÁ¿²»×ã£¬Çë´ÕÆëÖ®ºóÔÙÀ´ÕÒÎÒ¡£"
+		    strDirText00 = "å…‘æ¢è¦è¯€éœ€è¦8å¼ å¤©ä¹¦æ®‹é¡µï¼Œæ‚¨çš„æ•°é‡ä¸è¶³ï¼Œè¯·å‡‘é½ä¹‹åå†æ¥æ‰¾æˆ‘ã€‚"
 		end        
     end
     
@@ -179,7 +179,7 @@ function x808036_Exchange_MijiAndYaojue( sceneId, selfId, targetId, ItemDesc, Ad
     local PlayerLevel = GetLevel( sceneId, selfId )
     if PlayerLevel < 30 then
 		BeginEvent( sceneId )
-		    local strDirText04 = "Ö»ÓĞµÈ¼¶´óÓÚµÈÓÚ30¼¶Ö®ºó²Å¿ÉÒÔÊ¹ÓÃÌìÊé²ĞÒ³À´¶Ò»»ÃØ¼®ºÍÒª¾÷"
+		    local strDirText04 = "åªæœ‰ç­‰çº§å¤§äºç­‰äº30çº§ä¹‹åæ‰å¯ä»¥ä½¿ç”¨å¤©ä¹¦æ®‹é¡µæ¥å…‘æ¢ç§˜ç±å’Œè¦è¯€"
 		    AddText( sceneId, strDirText04 )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
@@ -190,7 +190,7 @@ function x808036_Exchange_MijiAndYaojue( sceneId, selfId, targetId, ItemDesc, Ad
 	local FreeSpace = LuaFnGetPropertyBagSpace( sceneId, selfId )
 	if( FreeSpace < 1 ) then
 		BeginEvent( sceneId )
-		    local strDirText01 = "ÄúµÄ±³°ü¿Õ¼ä²»×ã£¬ÎŞ·¨µÃµ½½±ÀøµÄÎïÆ·£¬ÇëÕûÀí±³°üÖ®ºóÔÙÀ´ÕÒÎÒ¡£"
+		    local strDirText01 = "æ‚¨çš„èƒŒåŒ…ç©ºé—´ä¸è¶³ï¼Œæ— æ³•å¾—åˆ°å¥–åŠ±çš„ç‰©å“ï¼Œè¯·æ•´ç†èƒŒåŒ…ä¹‹åå†æ¥æ‰¾æˆ‘ã€‚"
 		    AddText( sceneId, strDirText01 )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
@@ -198,10 +198,10 @@ function x808036_Exchange_MijiAndYaojue( sceneId, selfId, targetId, ItemDesc, Ad
 		return
 	end
 	
-	if 0 == AddAward then  --²»ÕæÕı¸øÓèÎïÆ·,Ö»ÊÇ×öÒ»´Î¼ì²é
+	if 0 == AddAward then  --ä¸çœŸæ­£ç»™äºˆç‰©å“,åªæ˜¯åšä¸€æ¬¡æ£€æŸ¥
 		BeginEvent(sceneId)
-			local strDirText02 = "¶Ò»»ÃØ¼®ĞÄ·¨µÄ»ú»áÖ»ÓĞ1´Î£¬Ò²¾ÍÊÇËµ£¬¶Ò»»ÁËĞÄ·¨»òÕßÃØ¼®µ±ÖĞµÄÈÎÒâÒ»ÖÖÖ®ºó²»ÄÜÔÙ¶Ò»»ÁíÍâÒ»ÖÖ¡£ÄúÈ·ÈÏ¶Ò»»Âğ£¿"
-			local strDirText03 = "È·¶¨"
+			local strDirText02 = "å…‘æ¢ç§˜ç±å¿ƒæ³•çš„æœºä¼šåªæœ‰1æ¬¡ï¼Œä¹Ÿå°±æ˜¯è¯´ï¼Œå…‘æ¢äº†å¿ƒæ³•æˆ–è€…ç§˜ç±å½“ä¸­çš„ä»»æ„ä¸€ç§ä¹‹åä¸èƒ½å†å…‘æ¢å¦å¤–ä¸€ç§ã€‚æ‚¨ç¡®è®¤å…‘æ¢å—ï¼Ÿ"
+			local strDirText03 = "ç¡®å®š"
 	        
 			AddText( sceneId, strDirText02 )
 	        
@@ -216,7 +216,7 @@ function x808036_Exchange_MijiAndYaojue( sceneId, selfId, targetId, ItemDesc, Ad
 		DispatchEventList( sceneId, selfId, targetId )
     end
     
-    if 1 == AddAward then   --´ËÊ±»á¸øÓèÎïÆ·
+    if 1 == AddAward then   --æ­¤æ—¶ä¼šç»™äºˆç‰©å“
 		if Item_Yaojue == ItemDesc then
 			x808036_SetAward_Yaojue( sceneId, selfId, targetId )
 		end
@@ -228,14 +228,14 @@ function x808036_Exchange_MijiAndYaojue( sceneId, selfId, targetId, ItemDesc, Ad
 end
 
 --**********************************
---¶Ò»»ÃØ¼®
+--å…‘æ¢ç§˜ç±
 --**********************************
 function x808036_Exchange_Miji( sceneId, selfId, targetId )
     x808036_Exchange_MijiAndYaojue( sceneId, selfId, targetId, 1, 0 )	
 end
 
 --**********************************
---¶Ò»»Òª¾÷
+--å…‘æ¢è¦è¯€
 --**********************************
 function x808036_Exchange_Yaojue( sceneId, selfId, targetId )
     x808036_Exchange_MijiAndYaojue( sceneId, selfId, targetId, 2, 0 )
@@ -243,19 +243,19 @@ end
 
 
 --**********************************
---¸øÍæ¼ÒÒª¾÷
+--ç»™ç©å®¶è¦è¯€
 --**********************************
 function x808036_SetAward_Yaojue( sceneId, selfId, targetId )
 	local CompleteFlag = x808036_GetExchangeCompleteFlag( sceneId, selfId )
 
-	if( CompleteFlag ~= 1 ) then    --±êÖ¾Îª1Îª³É¹¦
+	if( CompleteFlag ~= 1 ) then    --æ ‡å¿—ä¸º1ä¸ºæˆåŠŸ
 		x808036_SetExchangeCompleteFlag( sceneId, selfId )
 		local Ret = LuaFnDelAvailableItem(sceneId, selfId, x808036_g_NeedItemID, x808036_g_NeedItemCount_Yaojue )
 	    
-	    if Ret > 0 then      --É¾³ıÊıÁ¿ºÍÒªÇóÊıÁ¿Ò»ÖÂ	        	      
+	    if Ret > 0 then      --åˆ é™¤æ•°é‡å’Œè¦æ±‚æ•°é‡ä¸€è‡´	        	      
 			local AwardID = x808036_GetAwardItemID_Yaojue( sceneId, selfId )			    
 			if -1 ~= AwardID then
-				BeginAddItem(sceneId)        --¸øÓèÍæ¼ÒÒª¾÷
+				BeginAddItem(sceneId)        --ç»™äºˆç©å®¶è¦è¯€
 					AddItem( sceneId, AwardID, 1 )
 				local Ret = EndAddItem(sceneId,selfId)
 				if Ret > 0 then
@@ -265,7 +265,7 @@ function x808036_SetAward_Yaojue( sceneId, selfId, targetId )
 					local PlayerInfoName = "#{_INFOUSR"..PlayerName .."}"
 					local ItemInfo = "#{_INFOMSG".. szItemTransfer .."}"
 					
-					local SysStr = PlayerInfoName.."Ê¹ÓÃÁË"..(x808036_g_NeedItemCount_Yaojue).."ÕÅÌìÊé²ĞÒ³£¬ÔÚ´óÀí¹¨²ÊÔÆ£¨170£¬122£©´¦³É¹¦µÄ¶Ò»»µ½ÁË"..ItemInfo.."Ò»±¾¡£"
+					local SysStr = PlayerInfoName.."ä½¿ç”¨äº†"..(x808036_g_NeedItemCount_Yaojue).."å¼ å¤©ä¹¦æ®‹é¡µï¼Œåœ¨å¤§ç†é¾šå½©äº‘ï¼ˆ170ï¼Œ122ï¼‰å¤„æˆåŠŸçš„å…‘æ¢åˆ°äº†"..ItemInfo.."ä¸€æœ¬ã€‚"
 					BroadMsgByChatPipe( sceneId, selfId, SysStr, 4 )
 	
 				end
@@ -277,19 +277,19 @@ function x808036_SetAward_Yaojue( sceneId, selfId, targetId )
 end
 
 --**********************************
---¸øÍæ¼ÒÃØ¼®
+--ç»™ç©å®¶ç§˜ç±
 --**********************************
 function x808036_SetAward_Miji( sceneId, selfId, targetId )
 	local CompleteFlag = x808036_GetExchangeCompleteFlag( sceneId, selfId )
 
-	if( CompleteFlag ~= 1 ) then    --±êÖ¾Îª1Îª³É¹¦
+	if( CompleteFlag ~= 1 ) then    --æ ‡å¿—ä¸º1ä¸ºæˆåŠŸ
 		x808036_SetExchangeCompleteFlag( sceneId, selfId )
 		local Ret = LuaFnDelAvailableItem(sceneId, selfId, x808036_g_NeedItemID, x808036_g_NeedItemCount_Miji )
 	    
-	    if Ret > 0 then      --É¾³ıÊıÁ¿ºÍÒªÇóÊıÁ¿Ò»ÖÂ	        	      
+	    if Ret > 0 then      --åˆ é™¤æ•°é‡å’Œè¦æ±‚æ•°é‡ä¸€è‡´	        	      
 			local AwardID = x808036_GetAwardItemID_Miji( sceneId, selfId )			    
 			if -1 ~= AwardID then
-				BeginAddItem(sceneId)        --¸øÓèÍæ¼ÒÃØ¼®
+				BeginAddItem(sceneId)        --ç»™äºˆç©å®¶ç§˜ç±
 					AddItem( sceneId, AwardID, 1 )
 				local Ret = EndAddItem(sceneId,selfId)
 				if Ret > 0 then
@@ -299,7 +299,7 @@ function x808036_SetAward_Miji( sceneId, selfId, targetId )
 					local PlayerInfoName = "#{_INFOUSR"..PlayerName .."}"
 					local ItemInfo = "#{_INFOMSG".. szItemTransfer .."}"
 					
-					local SysStr = PlayerInfoName.."Ê¹ÓÃÁË"..(x808036_g_NeedItemCount_Miji).."ÕÅÌìÊé²ĞÒ³£¬ÔÚ´óÀí¹¨²ÊÔÆ£¨170£¬122£©´¦³É¹¦µÄ¶Ò»»µ½ÁË"..ItemInfo.."Ò»±¾¡£"
+					local SysStr = PlayerInfoName.."ä½¿ç”¨äº†"..(x808036_g_NeedItemCount_Miji).."å¼ å¤©ä¹¦æ®‹é¡µï¼Œåœ¨å¤§ç†é¾šå½©äº‘ï¼ˆ170ï¼Œ122ï¼‰å¤„æˆåŠŸçš„å…‘æ¢åˆ°äº†"..ItemInfo.."ä¸€æœ¬ã€‚"
 					BroadMsgByChatPipe( sceneId, selfId, SysStr, 4 )
 	
 				end
@@ -314,30 +314,30 @@ end
 
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x808036_OnDefaultEvent( sceneId, selfId, targetId )
     
     x808036_CheckRightTime()
     
-    if 1 ~= x808036_g_ExchangeXinfaBook_Active then    --Ã»»î¶¯µÄÊ±ºò¾Í²»Ö´ĞĞ(Èİ´í´¦Àí,ÕıÈ·Á÷³Ì²»Ó¦µ÷ÓÃµ½ÕâÀï)
+    if 1 ~= x808036_g_ExchangeXinfaBook_Active then    --æ²¡æ´»åŠ¨çš„æ—¶å€™å°±ä¸æ‰§è¡Œ(å®¹é”™å¤„ç†,æ­£ç¡®æµç¨‹ä¸åº”è°ƒç”¨åˆ°è¿™é‡Œ)
         return
     end
     
     local TextNum = GetNumText()
-    if TextNum == 1 then        --µãÁË¶Ò»»ÃØ¼®
+    if TextNum == 1 then        --ç‚¹äº†å…‘æ¢ç§˜ç±
         x808036_Exchange_Miji( sceneId, selfId, targetId )
     end
     
-    if TextNum == 2 then        --µãÁË¶Ò»»Òª¾÷
+    if TextNum == 2 then        --ç‚¹äº†å…‘æ¢è¦è¯€
         x808036_Exchange_Yaojue( sceneId, selfId, targetId )
 	end
 	
-	if TextNum == 3 then        --µãÁË¶Ò»»ÃØ¼® --È·¶¨	    
+	if TextNum == 3 then        --ç‚¹äº†å…‘æ¢ç§˜ç± --ç¡®å®š	    
 	    x808036_Exchange_MijiAndYaojue( sceneId, selfId, targetId, 1, 1 )
     end
     
-    if TextNum == 4 then        --µãÁË¶Ò»»Òª¾÷ --È·¶¨
+    if TextNum == 4 then        --ç‚¹äº†å…‘æ¢è¦è¯€ --ç¡®å®š
         x808036_Exchange_MijiAndYaojue( sceneId, selfId, targetId, 2, 1 )
 	end
 	
@@ -351,19 +351,19 @@ function x808036_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²âÊÇ·ñÕıÈ·µÄ»î¶¯Ê±¼ä
+--æ£€æµ‹æ˜¯å¦æ­£ç¡®çš„æ´»åŠ¨æ—¶é—´
 --**********************************
 function x808036_CheckRightTime()
     local DayTime = GetDayTime()
     
-    if DayTime < 7107 then      --07Äê107Ìì(4ÔÂ18ºÅ)
+    if DayTime < 7107 then      --07å¹´107å¤©(4æœˆ18å·)
        x808036_g_ExchangeXinfaBook_Active = 0
-       return 0    --´ËÇ°·Ç»î¶¯Ê±¼ä
+       return 0    --æ­¤å‰éæ´»åŠ¨æ—¶é—´
     end
     
-    if DayTime >= 7123 then      --07Äê114Ìì(5ÔÂ4ºÅ)
+    if DayTime >= 7123 then      --07å¹´114å¤©(5æœˆ4å·)
        x808036_g_ExchangeXinfaBook_Active = 0
-       return 0    --´Ëºó»î¶¯ÒÑ¾­½áÊø
+       return 0    --æ­¤åæ´»åŠ¨å·²ç»ç»“æŸ
     end
     
     x808036_g_ExchangeXinfaBook_Active = 1
@@ -372,7 +372,7 @@ function x808036_CheckRightTime()
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x808036_OnEnumerate( sceneId, selfId, targetId )
     
@@ -382,69 +382,69 @@ function x808036_OnEnumerate( sceneId, selfId, targetId )
         return
     end
     
-    local strMiji = "¶Ò»»35¼¶ÃØ¼®"
-    local strYaojue = "¶Ò»»65¼¶Òª¾÷"
+    local strMiji = "å…‘æ¢35çº§ç§˜ç±"
+    local strYaojue = "å…‘æ¢65çº§è¦è¯€"
     
     AddNumText(sceneId, x808036_g_ScriptId, strMiji, 1, 1 )
     AddNumText(sceneId, x808036_g_ScriptId, strYaojue, 1, 2 )
     
-    AddNumText(sceneId, x808036_g_ScriptId, "¹ØÓÚ¶Ò»»ÃØ¼®£¬Òª¾÷", 11, 5 )
+    AddNumText(sceneId, x808036_g_ScriptId, "å…³äºå…‘æ¢ç§˜ç±ï¼Œè¦è¯€", 11, 5 )
     
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x808036_CheckAccept( sceneId, selfId )
 
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x808036_OnAccept( sceneId, selfId )
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x808036_OnAbandon( sceneId, selfId )
 end
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x808036_OnContinue( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x808036_CheckSubmit( sceneId, selfId )
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x808036_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 	
 end
 
 --**********************************
---É±ËÀ¹ÖÎï»òÍæ¼Ò
+--æ€æ­»æ€ªç‰©æˆ–ç©å®¶
 --**********************************
 function x808036_OnKillObject( sceneId, selfId, objdataId ,objId )
 
 end
 
 --**********************************
---½øÈëÇøÓòÊÂ¼ş
+--è¿›å…¥åŒºåŸŸäº‹ä»¶
 --**********************************
 function x808036_OnEnterArea( sceneId, selfId, zoneId )
 end
 
 --**********************************
---µÀ¾ß¸Ä±ä
+--é“å…·æ”¹å˜
 --**********************************
 function x808036_OnItemChanged( sceneId, selfId, itemdataId )
 end

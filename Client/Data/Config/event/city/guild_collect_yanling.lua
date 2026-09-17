@@ -2,17 +2,17 @@
 x600048_g_ScriptId	= 600048
 x600048_g_Position_X=147
 x600048_g_Position_Z=96
-x600048_g_AccomplishNPC_Name="Ù¡Ü½ÈØ"
+x600048_g_AccomplishNPC_Name="ä½ŸèŠ™è“‰"
 x600048_g_MissionId			  = 1141
-x600048_g_Name 					  = "Ù¡Ü½ÈØ"
-x600048_g_MissionKind			= 50 --Íæ¼Ò³ÇÊĞ
+x600048_g_Name 					  = "ä½ŸèŠ™è“‰"
+x600048_g_MissionKind			= 50 --ç©å®¶åŸå¸‚
 x600048_g_MissionLevel		= 10000
 x600048_g_IfMissionElite	= 0
-x600048_g_IsMissionOkFail	= 0		--ÈÎÎñ²ÎÊıµÄµÚ0Î»
-x600048_g_MissionName			= "Ö§Ô®³¯Í¢£ºÑãôáÈÎÎñ"
+x600048_g_IsMissionOkFail	= 0		--ä»»åŠ¡å‚æ•°çš„ç¬¬0ä½
+x600048_g_MissionName			= "æ”¯æ´æœå»·ï¼šé›ç¿ä»»åŠ¡"
 x600048_g_MissionInfo			= ""
-x600048_g_MissionTarget		= "    ÊÕ¼¯Ò»Åú#YÑãôá#W¡£Äã¿Éµ½#GÌ«ºşö½Í·ä¾#W»ò#G¾µºşëÙÖ¬µºÓë»­Ã¼µº#WÄÇÕÒµ½¡£ÇëÓÚ½ÓÊÜÈÎÎñµ±ÈÕ20:00Ç°Íê³É²¢½»¸¶¡£"
+x600048_g_MissionTarget		= "    æ”¶é›†ä¸€æ‰¹#Yé›ç¿#Wã€‚ä½ å¯åˆ°#Gå¤ªæ¹–é¼‹å¤´æ¸š#Wæˆ–#Gé•œæ¹–èƒ­è„‚å²›ä¸ç”»çœ‰å²›#Wé‚£æ‰¾åˆ°ã€‚è¯·äºæ¥å—ä»»åŠ¡å½“æ—¥20:00å‰å®Œæˆå¹¶äº¤ä»˜ã€‚"
 x600048_g_ContinueInfo		= ""
 x600048_g_MissionComplete	= ""
-x600048_g_Custom	= { {id="ÒÑÕÒµ½£ºÑãôá",num=1} }
+x600048_g_Custom	= { {id="å·²æ‰¾åˆ°ï¼šé›ç¿",num=1} }
 --MisDescEnd

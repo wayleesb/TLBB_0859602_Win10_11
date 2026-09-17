@@ -1,11 +1,11 @@
 -- 120009 
--- 楚王逃跑
+-- 妤氱帇閫冭窇
 
 --**********************************
---进入区域事件
+--杩涘叆鍖哄煙浜嬩欢
 --**********************************
 function x120009_OnEnterArea( sceneId, selfId, areaId)
-	-- 看剧情是不是到了 4
+	-- 鐪嬪墽鎯呮槸涓嶆槸鍒颁簡 4
 	if LuaFnGetCopySceneData_Param(sceneId, 8) == 4  then
 		LuaFnSetCopySceneData_Param(sceneId, 8, 5)
 	end
@@ -13,7 +13,7 @@ function x120009_OnEnterArea( sceneId, selfId, areaId)
 end
 
 --**********************************
---进入区域事件
+--杩涘叆鍖哄煙浜嬩欢
 --**********************************
 function x120009_OnLeaveArea( sceneId, selfId, areaId)
 end

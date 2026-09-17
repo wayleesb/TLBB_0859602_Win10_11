@@ -1,45 +1,45 @@
--- ¶¡´ºÇïÉíÉÏµÄ½Å±¾£¬Íæ¼Òµã»÷¾ÍÌôÕ½
+-- ä¸æ˜¥ç§‹èº«ä¸Šçš„è„šæœ¬ï¼Œç©å®¶ç‚¹å‡»å°±æŒ‘æˆ˜
 
 x200046_g_MissionId = 37
 x200046_g_ScriptId = 200046
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x200046_OnDefaultEvent( sceneId, selfId, targetId )
-	--Èç¹ûÍæ¼ÒÍê³É¹ıÕâ¸öÈÎÎñ
+	--å¦‚æœç©å®¶å®Œæˆè¿‡è¿™ä¸ªä»»åŠ¡
 	if GetNumText() == 1  then
-		-- ÉèÖÃÍæ¼ÒÕóÓª£¬¿ÉÒÔ¿ªÊ¼×÷Õ½
-		if GetName(sceneId, targetId) == "¶¡´ºÇï"  then
+		-- è®¾ç½®ç©å®¶é˜µè¥ï¼Œå¯ä»¥å¼€å§‹ä½œæˆ˜
+		if GetName(sceneId, targetId) == "ä¸æ˜¥ç§‹"  then
 			SetUnitReputationID(sceneId, selfId, targetId, 29)
 			SetMonsterFightWithNpcFlag(sceneId, targetId, 1)
 			SetNPCAIType(sceneId, targetId, 16)
 			
 			BeginEvent(sceneId)
-				AddText(sceneId, "ÄãÕæÊÇ»îµÄ²»ÄÍ·³ÁË!")
+				AddText(sceneId, "ä½ çœŸæ˜¯æ´»çš„ä¸è€çƒ¦äº†!")
 			EndEvent()
 			DispatchEventList(sceneId,selfId,targetId,x200046_g_ScriptId,x200046_g_MissionId)
 	
-			-- ¸Ä±äĞéÖñºÍËÕĞÇºÓµÄÕóÓªºÍAI
+			-- æ”¹å˜è™šç«¹å’Œè‹æ˜Ÿæ²³çš„é˜µè¥å’ŒAI
 			local nMonsterNum = GetMonsterCount(sceneId)
 			local ii = 0
 			local bHaveMonster = 0
 			for ii=0, nMonsterNum-1 do
 				local nMonsterId = GetMonsterObjID(sceneId,ii)
 				
-				if GetName(sceneId, nMonsterId)  == "ĞéÖñ"  then
+				if GetName(sceneId, nMonsterId)  == "è™šç«¹"  then
 					SetUnitReputationID(sceneId, selfId, nMonsterId, 0)
 					SetMonsterFightWithNpcFlag(sceneId, nMonsterId, 1)
 					SetNPCAIType(sceneId, nMonsterId, 16)
 				end
-				if GetName(sceneId, nMonsterId)  == "ËÕĞÇºÓ"  then
+				if GetName(sceneId, nMonsterId)  == "è‹æ˜Ÿæ²³"  then
 					SetUnitReputationID(sceneId, selfId, nMonsterId, 0)
 					SetMonsterFightWithNpcFlag(sceneId, nMonsterId, 1)
 					SetNPCAIType(sceneId, nMonsterId, 16)
 				end
 			end
 			
-			-- ¹Ø±Õ½çÃæ
+			-- å…³é—­ç•Œé¢
 			BeginUICommand( sceneId )
 			UICommand_AddInt( sceneId, targetId )
 			EndUICommand( sceneId )
@@ -50,78 +50,78 @@ function x200046_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x200046_OnEnumerate( sceneId, selfId, targetId )
 	
-	--Èç¹ûÍæ¼ÒÍê³É¹ıÕâ¸öÈÎÎñ
+	--å¦‚æœç©å®¶å®Œæˆè¿‡è¿™ä¸ªä»»åŠ¡
 	if IsMissionHaveDone(sceneId,selfId,x200046_g_MissionId) > 0 then
 		return 
-	--Èç¹ûÒÑ½Ó´ËÈÎÎñ
+	--å¦‚æœå·²æ¥æ­¤ä»»åŠ¡
 	elseif IsHaveMission(sceneId,selfId,x200046_g_MissionId) > 0 then
-		--ĞèÒªÔÚ¸±±¾²Å¿ÉÒÔ
-		AddNumText(sceneId, x200046_g_ScriptId,"ÌôÕ½¶¡´ºÇï",10,1)
+		--éœ€è¦åœ¨å‰¯æœ¬æ‰å¯ä»¥
+		AddNumText(sceneId, x200046_g_ScriptId,"æŒ‘æˆ˜ä¸æ˜¥ç§‹",10,1)
 	end
 
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x200046_CheckAccept( sceneId, selfId )
-	--ÅĞ¶¨Ìõ¼ş
+	--åˆ¤å®šæ¡ä»¶
 end
 
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x200046_OnAccept( sceneId, selfId, targetId )
 
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x200046_OnAbandon( sceneId, selfId )
 end
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x200046_OnContinue( sceneId, selfId, targetId )
 	
 end	
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x200046_CheckSubmit( sceneId, selfId, selectRadioId )
 	
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x200046_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 end
 
 --**********************************
---É±ËÀ¹ÖÎï»òÍæ¼Ò
+--æ€æ­»æ€ªç‰©æˆ–ç©å®¶
 --**********************************
 function x200046_OnKillObject( sceneId, selfId, objdataId, objId )
 
 end
 
 --**********************************
---½øÈëÇøÓòÊÂ¼ş
+--è¿›å…¥åŒºåŸŸäº‹ä»¶
 --**********************************
 function x200046_OnEnterZone( sceneId, selfId, zoneId )
 	
 end
 
 --**********************************
---µÀ¾ß¸Ä±ä
+--é“å…·æ”¹å˜
 --**********************************
 function x200046_OnItemChanged( sceneId, selfId, itemdataId )
 	

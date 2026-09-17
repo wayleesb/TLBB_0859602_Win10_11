@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" ?>
+<?xml version="1.0" ?>
 <GUILayout>
     <Window Type="TLBB_MainFrame0" Name="ConfraternityWar_Frame">
         <Property Name="UnifiedPosition" Value="{{0.5,-90},{0.5,-160}}" />

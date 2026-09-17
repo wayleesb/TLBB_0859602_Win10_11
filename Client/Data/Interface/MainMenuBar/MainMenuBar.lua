@@ -2,21 +2,21 @@ local MAINMENUBAR_BUTTON_NUM = 30;
 local MAINMENUBAR_PAGENUM = 0;	-- 0, 1, 2
 local MAINMENUBAR_BUTTONS = {};
 local bExchangeFlash = 0;
-local iTeamInfoType = 0;	-- -1 : ±íÊ¾Ã»ÓĞ¶ÓÎéĞÅÏ¢
-													-- 0  : ±íÊ¾´ò¿ª¶ÓÎéĞÅÏ¢
-													-- 1  : ±íÊ¾ÓĞÈËÉêÇë¼ÓÈë¶ÓÎé,   ´ò¿ªÉêÇëÁĞ±í.
-													-- 2  : ±íÊ¾ÓĞÈËÑûÇëÄã¼ÓÈë¶ÓÎé, ´ò¿ªÑûÇëÄãµÄ¶ÓÎéÁĞ±í.
+local iTeamInfoType = 0;	-- -1 : è¡¨ç¤ºæ²¡æœ‰é˜Ÿä¼ä¿¡æ¯
+													-- 0  : è¡¨ç¤ºæ‰“å¼€é˜Ÿä¼ä¿¡æ¯
+													-- 1  : è¡¨ç¤ºæœ‰äººç”³è¯·åŠ å…¥é˜Ÿä¼,   æ‰“å¼€ç”³è¯·åˆ—è¡¨.
+													-- 2  : è¡¨ç¤ºæœ‰äººé‚€è¯·ä½ åŠ å…¥é˜Ÿä¼, æ‰“å¼€é‚€è¯·ä½ çš„é˜Ÿä¼åˆ—è¡¨.
 													
 
-local bTogleSelfEquip = 0;	-- 0 £ºµ±Ç°×´Ì¬ÊÇ¹Ø±Õ½çÃæ
-														-- 1 £ºµ±Ç°×´Ì¬ÊÇ´ò¿ª½çÃæ
-														-- 1 : µ±Ç°×´Ì¬ÊÇ´ò¿ª½çÃæ
+local bTogleSelfEquip = 0;	-- 0 ï¼šå½“å‰çŠ¶æ€æ˜¯å…³é—­ç•Œé¢
+														-- 1 ï¼šå½“å‰çŠ¶æ€æ˜¯æ‰“å¼€ç•Œé¢
+														-- 1 : å½“å‰çŠ¶æ€æ˜¯æ‰“å¼€ç•Œé¢
 
-local bTogleTeam			= 0;  -- 0 : µ±Ç°×´Ì¬ÊÇ¹Ø±Õ½çÃæ
-														-- 1 : µ±Ç°×´Ì¬ÊÇ´ò¿ª½çÃæ	
+local bTogleTeam			= 0;  -- 0 : å½“å‰çŠ¶æ€æ˜¯å…³é—­ç•Œé¢
+														-- 1 : å½“å‰çŠ¶æ€æ˜¯æ‰“å¼€ç•Œé¢	
 														
-local bIsTeamBnFlash	= 0;	-- 0 : ×é¶Ó°´Å¥Ã»ÉÁË¸.																										 
-														-- 1 : ×é¶Ó°´Å¥ÉÁË¸.
+local bIsTeamBnFlash	= 0;	-- 0 : ç»„é˜ŸæŒ‰é’®æ²¡é—ªçƒ.																										 
+														-- 1 : ç»„é˜ŸæŒ‰é’®é—ªçƒ.
 
 local nMenpaiSkillId = {};
 nMenpaiSkillId[1] = {281,291,295};
@@ -32,15 +32,15 @@ nMenpaiSkillId[9] = {521,522,535};
 local MAINMENUBAR_ACCKEY = {};
 local g_CharcaterFlash = falas;
 local MAINMENUBAR_DATA = {};
---¡¾¸½½ü¡¿
+--ã€é™„è¿‘ã€‘
 local MAINMENUBAR_DATA_NEAR = 
 	{	
-		"set:Buttons image:Channelvicinity_Normal", 		-- ÆµµÀÑ¡Ôñ°´Å¥ÆÕÍ¨
-		"set:Buttons image:ChannelVicinity_Hover", 		-- ÆµµÀÑ¡Ôñ°´Å¥¼¤»î
-		"set:Buttons image:ChannelVicinity_Pushed",		-- ÆµµÀÑ¡Ôñ°´Å¥°´ÏÂ
+		"set:Buttons image:Channelvicinity_Normal", 		-- é¢‘é“é€‰æ‹©æŒ‰é’®æ™®é€š
+		"set:Buttons image:ChannelVicinity_Hover", 		-- é¢‘é“é€‰æ‹©æŒ‰é’®æ¿€æ´»
+		"set:Buttons image:ChannelVicinity_Pushed",		-- é¢‘é“é€‰æ‹©æŒ‰é’®æŒ‰ä¸‹
 	};
 
---¡¾ÊÀ½ç¡¿
+--ã€ä¸–ç•Œã€‘
 local MAINMENUBAR_DATA_SCENE = 
 	{
 		"set:Buttons image:ChannelWorld_Normal", 
@@ -48,7 +48,7 @@ local MAINMENUBAR_DATA_SCENE =
 		"set:Buttons image:ChannelWorld_Pushed",
 	};
 
---¡¾Ë½ÁÄ¡¿
+--ã€ç§èŠã€‘
 local MAINMENUBAR_DATA_PRIVATE = 
 	{
 		"set:Buttons image:ChannelPersonal_Normal", 
@@ -56,7 +56,7 @@ local MAINMENUBAR_DATA_PRIVATE =
 		"set:Buttons image:ChannelPersonal_Pushed",
 	};
 
---¡¾ÏµÍ³¡¿
+--ã€ç³»ç»Ÿã€‘
 local MAINMENUBAR_DATA_SYSTEM = 
 	{
 		"set:Buttons image:ChannelPersonal_Normal", 
@@ -64,7 +64,7 @@ local MAINMENUBAR_DATA_SYSTEM =
 		"set:Buttons image:ChannelPersonal_Pushed",
 	};
 
---¡¾¶ÓÎé¡¿
+--ã€é˜Ÿä¼ã€‘
 local MAINMENUBAR_DATA_TEAM = 
 	{
 		"set:Buttons image:ChannelTeam_Normal", 
@@ -72,7 +72,7 @@ local MAINMENUBAR_DATA_TEAM =
 		"set:Buttons image:ChannelTeam_Pushed",
 	};
 
---¡¾×ÔÓÃ¡¿
+--ã€è‡ªç”¨ã€‘
 local MAINMENUBAR_DATA_SELF =
 	{
 		"set:Buttons image:ChannelTeam_Normal", 
@@ -80,7 +80,7 @@ local MAINMENUBAR_DATA_SELF =
 		"set:Buttons image:ChannelTeam_Pushed",
 	};
 
---¡¾ÃÅÅÉ¡¿
+--ã€é—¨æ´¾ã€‘
 local MAINMENUBAR_DATA_MENPAI =
 	{
 		"set:Buttons image:ChannelMenpai_Normal", 
@@ -88,7 +88,7 @@ local MAINMENUBAR_DATA_MENPAI =
 		"set:Buttons image:ChannelMenpai_Pushed",
 	};
 
---¡¾°ï»á¡¿
+--ã€å¸®ä¼šã€‘
 local MAINMENUBAR_DATA_GUILD = 
 	{
 		"set:Buttons image:ChannelCorporative_Normal", 
@@ -96,7 +96,7 @@ local MAINMENUBAR_DATA_GUILD =
 		"set:Buttons image:ChannelCorporative_Pushed",
 	};
 
---¡¾°ï»áÍ¬ÃË¡¿
+--ã€å¸®ä¼šåŒç›Ÿã€‘
 local MAINMENUBAR_DATA_GUILD_LEAGUE = 
 	{
 		"set:CommonFrame6 image:ChannelTongMeng_Normal", 
@@ -104,7 +104,7 @@ local MAINMENUBAR_DATA_GUILD_LEAGUE =
 		"set:CommonFrame6 image:ChannelTongMeng_Pushed",
 	};
 
---¡¾Í¬³Ç¡¿
+--ã€åŒåŸã€‘
 local MAINMENUBAR_DATA_IPREGION = 
 	{
 		"set:UIIcons image:ChannelCorporative_Normal", 
@@ -120,7 +120,7 @@ function MainMenuBar_PreLoad()
 	this:RegisterEvent("PLAYER_ENTERING_WORLD");
 	this:RegisterEvent("CHANGE_BAR");
 	this:RegisterEvent("RECEIVE_EXCHANGE_APPLY");
-	this:RegisterEvent("TEAM_NOTIFY_APPLY");				-- ×¢²áÓĞÈËÉêÇë¼ÓÈë¶ÓÎéÊÂ¼ş.
+	this:RegisterEvent("TEAM_NOTIFY_APPLY");				-- æ³¨å†Œæœ‰äººç”³è¯·åŠ å…¥é˜Ÿä¼äº‹ä»¶.
 
 	this:RegisterEvent("HAVE_MAIL");
 
@@ -191,15 +191,15 @@ function MainMenuBar_OnLoad()
 	MAINMENUBAR_ACCKEY["acc_friend"] = MainMenuBar_Friend_Clicked;
 	MAINMENUBAR_ACCKEY["acc_team"] = MainMenuBar_Team_Clicked;
 	MAINMENUBAR_ACCKEY["acc_exchange"] = MainMenuBar_Exchange_Clicked;
-	MAINMENUBAR_ACCKEY["acc_guild"] = nil;	-- ½ÇÉ«°ï»á
-	MAINMENUBAR_ACCKEY["acc_chatmod"] = MainMenuBar_ChatMood;			--ÁÄÌìÈËÎïĞİÏĞ¶¯×÷
-	MAINMENUBAR_ACCKEY["acc_face"] = MainMenuBar_SelectFaceMotion;	--ÁÄÌì°ü×Ó±íÇé
+	MAINMENUBAR_ACCKEY["acc_guild"] = nil;	-- è§’è‰²å¸®ä¼š
+	MAINMENUBAR_ACCKEY["acc_chatmod"] = MainMenuBar_ChatMood;			--èŠå¤©äººç‰©ä¼‘é—²åŠ¨ä½œ
+	MAINMENUBAR_ACCKEY["acc_face"] = MainMenuBar_SelectFaceMotion;	--èŠå¤©åŒ…å­è¡¨æƒ…
 	
-	MAINMENUBAR_ACCKEY["acc_MainMenuBarpageup"] = MainmenuBar_PageUp;	--¿ì½İÀ¸ÏòÉÏ·­Ò³
-	MAINMENUBAR_ACCKEY["acc_MainMenuBarpagedown"] = MainmenuBar_PageDown;	--¿ì½İÀ¸ÏòÏÂ·­Ò³
-	MAINMENUBAR_ACCKEY["acc_MainMenuBarPageOne"] = MainmenuBar_PageOne;	--¿ì½İÀ¸µÚÒ»Ò³
-	MAINMENUBAR_ACCKEY["acc_MainMenuBarPageTwo"] = MainmenuBar_PageTwo;	--¿ì½İÀ¸µÚ¶şÒ³
-	MAINMENUBAR_ACCKEY["acc_MainMenuBarPageThree"] = MainmenuBar_PageThree;	--¿ì½İÀ¸µÚÈıÒ³
+	MAINMENUBAR_ACCKEY["acc_MainMenuBarpageup"] = MainmenuBar_PageUp;	--å¿«æ·æ å‘ä¸Šç¿»é¡µ
+	MAINMENUBAR_ACCKEY["acc_MainMenuBarpagedown"] = MainmenuBar_PageDown;	--å¿«æ·æ å‘ä¸‹ç¿»é¡µ
+	MAINMENUBAR_ACCKEY["acc_MainMenuBarPageOne"] = MainmenuBar_PageOne;	--å¿«æ·æ ç¬¬ä¸€é¡µ
+	MAINMENUBAR_ACCKEY["acc_MainMenuBarPageTwo"] = MainmenuBar_PageTwo;	--å¿«æ·æ ç¬¬äºŒé¡µ
+	MAINMENUBAR_ACCKEY["acc_MainMenuBarPageThree"] = MainmenuBar_PageThree;	--å¿«æ·æ ç¬¬ä¸‰é¡µ
 	
 	MAINMENUBAR_DATA["near"] 		= MAINMENUBAR_DATA_NEAR;
 	MAINMENUBAR_DATA["scene"] 	= MAINMENUBAR_DATA_SCENE;
@@ -233,9 +233,9 @@ function MainMenuBar_OnEvent(event)
 			MainMenuBar_EditBox:SetProperty("DefaultEditBox", "True");
 		end
 		MainMenuBar_InputLanguage_Changed();
-		-- ÏÔÊ¾¾­Ñé
+		-- æ˜¾ç¤ºç»éªŒ
 		MainMenuBar_ShowExperience();
-		-- ÇĞ»»³¡¾°ºóÍ£Ö¹ÉÁË¸×é¶Ó°´Å¥
+		-- åˆ‡æ¢åœºæ™¯ååœæ­¢é—ªçƒç»„é˜ŸæŒ‰é’®
 		MainMenuBar_Stop_Flash_Team_Button();
 	elseif( event == "UPDATESTATE_SUBMENUBAR" ) then
 		local SubToolbarState = SystemSetup:GetSubMenubarState()
@@ -272,7 +272,7 @@ function MainMenuBar_OnEvent(event)
 		end
 		
 	elseif( event == "CHANGE_BAR" and arg0 == "tip") then
-	  --¸Ä±ätip
+	  --æ”¹å˜tip
 	  local ButtonId = tonumber(arg1)
 	  local key = tostring( arg2 )
 	  
@@ -280,11 +280,11 @@ function MainMenuBar_OnEvent(event)
 	  MAINMENUBAR_BUTTONS[ButtonId+10]:SetProperty("CornerChar", key);
 	  MAINMENUBAR_BUTTONS[ButtonId+20]:SetProperty("CornerChar", key);
 	elseif( event == "CHANGE_BAR" and arg0 == "ut") then
-	--¸Ä±ätip
+	--æ”¹å˜tip
 	  MainMenuBar_UpdateButtonTip();
 		
 	elseif ( event == "RECEIVE_EXCHANGE_APPLY" )  then
-		-- ÉÁË¸½»Ò×°´Å¥, Í¨ÖªÓĞÈËÉêÇë½»Ò×
+		-- é—ªçƒäº¤æ˜“æŒ‰é’®, é€šçŸ¥æœ‰äººç”³è¯·äº¤æ˜“
 		MainMenuBar_Flash_Exchange();
 		
 	elseif( event == "TEAM_NOTIFY_APPLY" ) then
@@ -292,22 +292,22 @@ function MainMenuBar_OnEvent(event)
 		iTeamInfoType = tonumber(arg0);
 		if(iTeamInfoType == 1 or iTeamInfoType == 2) then 
 		
-			-- ÉÁË¸¶ÓÎé°´Å¥, Í¨ÖªÓĞÈËÉêÇë¼ÓÈë¶ÓÎé.
+			-- é—ªçƒé˜Ÿä¼æŒ‰é’®, é€šçŸ¥æœ‰äººç”³è¯·åŠ å…¥é˜Ÿä¼.
 			MainMenuBar_Flash_Team_Button();
 			
 		end
 		
 	elseif( event == "UNIT_EXP" ) then
 			
-			-- ÏÔÊ¾¾­Ñé
+			-- æ˜¾ç¤ºç»éªŒ
 			MainMenuBar_ShowExperience();
 	elseif( event == "UNIT_LEVEL" ) then
 			
-			-- ÏÔÊ¾¾­Ñé
+			-- æ˜¾ç¤ºç»éªŒ
 			MainMenuBar_ShowExperience();
 	elseif( event == "UNIT_MAX_EXP" ) then
 		
-			-- ÏÔÊ¾¾­Ñé
+			-- æ˜¾ç¤ºç»éªŒ
 			MainMenuBar_ShowExperience();
 	elseif( event =="HAVE_MAIL" ) then
 		Sound:PlayUISound(27);
@@ -334,7 +334,7 @@ function MainMenuBar_OnEvent(event)
 		Button_Mission:SetFlash( 1 );
 	elseif( event == "ACCELERATE_KEYSEND" ) then
 			
-			-- ´¦Àí¼üÅÌ¿ì½İ¼ü
+			-- å¤„ç†é”®ç›˜å¿«æ·é”®
 			MainMenuBar_HandleAccKey(arg0);
 	elseif (event == "CHAT_ADJUST_MOVE_CTL") then
 		-- MainMenuBar_AdjustMoveCtl(arg0, arg1);
@@ -380,11 +380,11 @@ function MainmenuBar_ActionUpate()
 		MAINMENUBAR_BUTTONS[i]:SetNewFlash();
 	end
 end
---µ±¼ÓÈëÃÅÅÉºó£¬ĞèÒª½«3¸ö¼¼ÄÜ¼Óµ½¿ì½İÀ¸
+--å½“åŠ å…¥é—¨æ´¾åï¼Œéœ€è¦å°†3ä¸ªæŠ€èƒ½åŠ åˆ°å¿«æ·æ 
 function MainmenuBar_JoinMenpai()
 	
 	local menpai = Player:GetData("MEMPAI") + 1;
-	--ÅĞ¶ÏÒª·Åµ½ÄÄ¸öÀ¸Àï
+	--åˆ¤æ–­è¦æ”¾åˆ°å“ªä¸ªæ é‡Œ
 	PutSkillToMainmenuBar( nMenpaiSkillId[ menpai ][ 1 ],nMenpaiSkillId[ menpai ][ 2 ],nMenpaiSkillId[ menpai ][ 3 ] );
 	
 	
@@ -392,7 +392,7 @@ function MainmenuBar_JoinMenpai()
 end
 function MainMenuBar_SelfEquip_Clicked()
 	
-	-- ´ò¿ª×°±¸½çÃæ
+	-- æ‰“å¼€è£…å¤‡ç•Œé¢
 	if(0 == bTogleSelfEquip) then
 		
 		bTogleSelfEquip = 1;
@@ -454,11 +454,11 @@ end
 
 function PlayerExp_Update()
 	PlayerExp, PlayerMaxExp = Player:GetExp();
-	PlayerExp_Exp:SetProgress(PlayerExp, PlayerMaxExp);
+	PlayerExp_Exp:SetProgress(PlayerMaxExp > 0 and math.min(1, math.max(0, PlayerExp / PlayerMaxExp)) or 0, 1);
 end
 
 function PlayerExp_Exp_Text_MouseEnter()
-	PlayerExp_Exp_Text:SetText(PlayerExp .. "/" .. PlayerMaxExp);
+	PlayerExp_Exp_Text:SetText(string.format("%.0f/%.0f", PlayerExp, PlayerMaxExp));
 end
 
 function PlayerExp_Exp_Text_MouseLeave()
@@ -470,7 +470,7 @@ function MainMenuBar_Team_Clicked()
 
 	ShowTeamInfoDlg(bIsTeamBnFlash);
 	
-	-- Í£Ö¹ÉÁË¸
+	-- åœæ­¢é—ªçƒ
 	if(bIsTeamBnFlash) then 
 		
 		MainMenuBar_Stop_Flash_Team_Button();
@@ -479,21 +479,21 @@ function MainMenuBar_Team_Clicked()
 end
 
 ---------------------------------------------------------------------------------------------
--- ÉÁË¸¶ÓÎé°´Å¥
+-- é—ªçƒé˜Ÿä¼æŒ‰é’®
 function MainMenuBar_Flash_Team_Button()
 	Button_Team:SetFlash( 1 );
 	bIsTeamBnFlash = 1;
 end
 
 ---------------------------------------------------------------------------------------------
--- Í£Ö¹ÉÁË¸¶ÓÎé°´Å¥
+-- åœæ­¢é—ªçƒé˜Ÿä¼æŒ‰é’®
 function MainMenuBar_Stop_Flash_Team_Button()
 	Button_Team:SetFlash( 0 );
 	bIsTeamBnFlash = 0;
 end
 
 ---------------------------------------------------------------------------------------------
--- ÉÁË¸½»Ò×ÇëÇó
+-- é—ªçƒäº¤æ˜“è¯·æ±‚
 function MainMenuBar_Flash_Exchange()
 	Button_Exchange:SetFlash( 1 );
 	bExchangeFlash = 1;
@@ -501,26 +501,26 @@ function MainMenuBar_Flash_Exchange()
 end
 
 ---------------------------------------------------------------------------------------------
--- Í£Ö¹ÉÁË¸½»Ò×ÇëÇó
+-- åœæ­¢é—ªçƒäº¤æ˜“è¯·æ±‚
 function MainMenuBar_Stop_Flash_Exchange()
 	Button_Exchange:SetFlash( 0 );
 	bExchangeFlash = 0;
 end
 
 ---------------------------------------------------------------------------------------------
--- ÏÔÊ¾¾­Ñé
+-- æ˜¾ç¤ºç»éªŒ
 function MainMenuBar_ShowExperience()
 	
-	-- µÃµ½µ±Ç°¾­Ñé
+	-- å¾—åˆ°å½“å‰ç»éªŒ
 	local CurExperience = Player:GetData("EXP");
 		
-	-- µÃµ½Éı¼¶ĞèÒªµÄ¾­Ñé
+	-- å¾—åˆ°å‡çº§éœ€è¦çš„ç»éªŒ
 	local RequireExperience = Player:GetData("NEEDEXP");
 	
-	-- ÏÔÊ¾½ø¶È
-	MainMenuBar_EXP2:SetProgress(CurExperience / RequireExperience, 1.0);
+	-- æ˜¾ç¤ºè¿›åº¦
+	MainMenuBar_EXP2:SetProgress(RequireExperience > 0 and math.min(1, math.max(0, CurExperience / RequireExperience)) or 0, 1.0);
 		
-	--AxTrace( 0,0, "=================ÏÔÊ¾¾­Ñé½ø¶È=========================");
+	--AxTrace( 0,0, "=================æ˜¾ç¤ºç»éªŒè¿›åº¦=========================");
 	
 end
 
@@ -530,7 +530,7 @@ function MainMenuBar_ShowExpTooltip()
 	
 	local exp = Player:GetData( "EXP" );
 	local maxexp = Player:GetData( "NEEDEXP" );
-	MainMenuBar_EXP2:SetToolTip( tostring( exp ).."/"..tostring( maxexp ) );
+	MainMenuBar_EXP2:SetToolTip( string.format("%.0f", exp).."/"..string.format("%.0f", maxexp) );
 end
 
 function MainMenuBar_HideExpTooltip()
@@ -555,7 +555,7 @@ function MainMenuBar_Clicked(nIndex)
 	if DataPool:IsCanDoAction() then
 		MAINMENUBAR_BUTTONS[nIndex]:DoAction();
 	else
-		PushDebugMessage("Äã²»ÄÜÕâÃ´×ö¡£")
+		PushDebugMessage("ä½ ä¸èƒ½è¿™ä¹ˆåšã€‚")
 		return;
 	end
 	
@@ -570,7 +570,7 @@ function MainMenuBar_AdjustMoveCtl( screenWidth, screenHeight )
 	end
 end
 
---ÁÄÌìÏà¹ØµÄ¹¦ÄÜ°´Å¥
+--èŠå¤©ç›¸å…³çš„åŠŸèƒ½æŒ‰é’®
 function MainMenuBar_extendRegionTest()
 	Talk:HandleMainBarAction("extendRegion", "");
 end
@@ -662,11 +662,11 @@ function MainMenuBar_TextAccepted()
 end
 
 function MainMenuBar_JoinItemElementFailure()
-	PushDebugMessage("Ìí¼ÓÎïÆ·ĞÅÏ¢Ê§°Ü¡£");
+	PushDebugMessage("æ·»åŠ ç‰©å“ä¿¡æ¯å¤±è´¥ã€‚");
 end
 
 function MainMenuBar_ItemElementFull()
-	PushDebugMessage("²»ÄÜÌí¼Ó¸ü¶àÎïÆ·ĞÅÏ¢¡£");
+	PushDebugMessage("ä¸èƒ½æ·»åŠ æ›´å¤šç‰©å“ä¿¡æ¯ã€‚");
 end
 
 function MainMenuBar_HandleHistoryAction(op,arg0,arg1)
@@ -745,7 +745,7 @@ function MainMenuBar_SelectColorFaceFinish(act, strResult)
 	end
 end
 
---´ò¿ªµÚ¶ş¸ö¹¤¾ßÌõ
+--æ‰“å¼€ç¬¬äºŒä¸ªå·¥å…·æ¡
 function MainMenuBar_MainMenuBar_On_Clk()
 	TurnMenuBar("on")
 	
@@ -756,7 +756,7 @@ function MainMenuBar_MainMenuBar_On_Clk()
 	
 end
 
---¹Ø±ÕµÚ¶ş¸ö¹¤¾ßÌõ
+--å…³é—­ç¬¬äºŒä¸ªå·¥å…·æ¡
 function MainMenuBar_MainMenuBar_Off_Clk()
 	TurnMenuBar("off")
 
@@ -837,21 +837,21 @@ function MainmenuBar_UpdateAll()
 	
 end
 
--- ´¦ÀíCtrl+1¿ì½İ¼ü
+-- å¤„ç†Ctrl+1å¿«æ·é”®
 function MainmenuBar_PageOne()
 	MAINMENUBAR_PAGENUM = 0;
 	--AxTrace(0,2,"MAINMENUBAR_PAGENUM -"..MAINMENUBAR_PAGENUM);
 	MainmenuBar_UpdateAll();
 end
 
--- ´¦ÀíCtrl+2¿ì½İ¼ü
+-- å¤„ç†Ctrl+2å¿«æ·é”®
 function MainmenuBar_PageTwo()
 	MAINMENUBAR_PAGENUM = 1;
 	--AxTrace(0,2,"MAINMENUBAR_PAGENUM -"..MAINMENUBAR_PAGENUM);
 	MainmenuBar_UpdateAll();
 end
 
--- ´¦ÀíCtrl+3¿ì½İ¼ü
+-- å¤„ç†Ctrl+3å¿«æ·é”®
 function MainmenuBar_PageThree()
 	MAINMENUBAR_PAGENUM = 2;
 	--AxTrace(0,2,"MAINMENUBAR_PAGENUM -"..MAINMENUBAR_PAGENUM);
@@ -864,7 +864,7 @@ end
 
 function MainMenuBar_UpdateButtonTip()
 	local tip,str
-	local AcceArryEx = 10   --×Ô¶¨Òå¿ì½İ¼üÊı×éÖĞÇ°11¸öÔªËØ²»ÔÊĞíÍæ¼Ò×Ô¶¨Òå
+	local AcceArryEx = 10   --è‡ªå®šä¹‰å¿«æ·é”®æ•°ç»„ä¸­å‰11ä¸ªå…ƒç´ ä¸å…è®¸ç©å®¶è‡ªå®šä¹‰
 	for i=1,10 do
 	   str = SystemSetup:GetAcceTip(i + AcceArryEx);
 	   tip = string.format( "TopRight %s", str )

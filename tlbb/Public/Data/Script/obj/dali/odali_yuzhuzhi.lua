@@ -1,31 +1,31 @@
---´óÀíNPC
---ÓàÖúÖ®
---ÆÕÍ¨
+--å¤§ç†NPC
+--ä½™åŠ©ä¹‹
+--æ™®é€š
 
 x002088_g_ScriptId	= 002088
 
---²Ù×÷¼¯
+--æ“ä½œé›†
 x002088_g_Key				=
 {
-		["mis"]					= 100,	--ÎÒÏëÉ¾³ıËùÓĞµÄÈÎÎñ
-		["itm"]					= 101,	--ÎÒÏëÉ¾³ıÈÎÎñµÀ¾ß
-		["do"]					= 102,	--È·ÈÏÉ¾³ıËùÓĞµÄÈÎÎñ
+		["mis"]					= 100,	--æˆ‘æƒ³åˆ é™¤æ‰€æœ‰çš„ä»»åŠ¡
+		["itm"]					= 101,	--æˆ‘æƒ³åˆ é™¤ä»»åŠ¡é“å…·
+		["do"]					= 102,	--ç¡®è®¤åˆ é™¤æ‰€æœ‰çš„ä»»åŠ¡
 }
 
--- ĞèÒªÔÚÉ¾³ıËùÓĞÈÎÎñµÄÊ±ºò£¬Í¬Ê±É¾³ıµÄÈÎÎñÎïÆ·µÄÁĞ±í
+-- éœ€è¦åœ¨åˆ é™¤æ‰€æœ‰ä»»åŠ¡çš„æ—¶å€™ï¼ŒåŒæ—¶åˆ é™¤çš„ä»»åŠ¡ç‰©å“çš„åˆ—è¡¨
 x002088_g_MisItemList = {	40004000,40004451,40004452,40004461,
 		40004453,40004456,40004459,40004458,40004455,40004457,30505062,	
-		40004465, 40004462, 40004463, 40004464,				--ÔÂÀÏºùÂ«£¬ÀùÊ¯£¬ÆßÒ¶Á«£¬Ñãôá zchw						
+		40004465, 40004462, 40004463, 40004464,				--æœˆè€è‘«èŠ¦ï¼Œç ¾çŸ³ï¼Œä¸ƒå¶è²ï¼Œé›ç¿ zchw						
 }
 
 --******************************************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --******************************************************
 function x002088_OnDefaultEvent( sceneId, selfId, targetId )
 	BeginEvent( sceneId )
-		AddText( sceneId, "  ÎÒÊÇ·î´óÀí¹ú»ÊµÛ±İÏÂÖ®Ãü£¬ÔÚ´Ë°ïÖúÌìÏÂÓ¢ĞÛÇåÀíÈÎÎñµÄ¡£Èç¹ûÄúÏëÉ¾³ıÈÎÎñÁĞ±íÖĞËùÓĞµÄÈÎÎñ£¬»òÕßÉ¾³ıÄ³¸öÌØ¶¨ÈÎÎñµÀ¾ß£¬¶¼¿ÉÒÔÀ´ÕÒÎÒ°ïÃ¦¡£ÄúÏë×öÊ²Ã´ÄØ£¿" )
-		AddNumText( sceneId, x002088_g_ScriptId, "ÎÒÏëÉ¾³ıËùÓĞµÄÈÎÎñ", -1, x002088_g_Key["mis"] )
-		AddNumText( sceneId, x002088_g_ScriptId, "ÎÒÏëÉ¾³ıÈÎÎñµÀ¾ß", -1, x002088_g_Key["itm"] )
+		AddText( sceneId, "  æˆ‘æ˜¯å¥‰å¤§ç†å›½çš‡å¸é™›ä¸‹ä¹‹å‘½ï¼Œåœ¨æ­¤å¸®åŠ©å¤©ä¸‹è‹±é›„æ¸…ç†ä»»åŠ¡çš„ã€‚å¦‚æœæ‚¨æƒ³åˆ é™¤ä»»åŠ¡åˆ—è¡¨ä¸­æ‰€æœ‰çš„ä»»åŠ¡ï¼Œæˆ–è€…åˆ é™¤æŸä¸ªç‰¹å®šä»»åŠ¡é“å…·ï¼Œéƒ½å¯ä»¥æ¥æ‰¾æˆ‘å¸®å¿™ã€‚æ‚¨æƒ³åšä»€ä¹ˆå‘¢ï¼Ÿ" )
+		AddNumText( sceneId, x002088_g_ScriptId, "æˆ‘æƒ³åˆ é™¤æ‰€æœ‰çš„ä»»åŠ¡", -1, x002088_g_Key["mis"] )
+		AddNumText( sceneId, x002088_g_ScriptId, "æˆ‘æƒ³åˆ é™¤ä»»åŠ¡é“å…·", -1, x002088_g_Key["itm"] )
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, selfId, targetId )
 end
@@ -33,7 +33,7 @@ end
 
 function x002088_CheckCanDelMission_OverTime( sceneId, selfId, targetId, eventId )
     local DayTime = GetDayTime()
-    local LastTime = GetMissionData( sceneId, selfId, MD_NPC_DELMISSION ) --È¡³öÉÏ´Î·ÅÆúÊ±¼ä
+    local LastTime = GetMissionData( sceneId, selfId, MD_NPC_DELMISSION ) --å–å‡ºä¸Šæ¬¡æ”¾å¼ƒæ—¶é—´
     
     if DayTime > LastTime then
         SetMissionData( sceneId, selfId, MD_NPC_DELMISSION, DayTime )
@@ -46,7 +46,7 @@ end
 
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x002088_OnEventRequest( sceneId, selfId, targetId, eventId )
 	local	key	= GetNumText()
@@ -54,13 +54,13 @@ function x002088_OnEventRequest( sceneId, selfId, targetId, eventId )
 	if key == x002088_g_Key["mis"]	then
 		if GetMissionCount( sceneId, selfId ) <= 0 then
 			BeginEvent( sceneId )
-				AddText( sceneId, "  ÄãµÄÉíÉÏ¸ù±¾Ã»ÓĞÈÎÎñ°¡£¡" )
+				AddText( sceneId, "  ä½ çš„èº«ä¸Šæ ¹æœ¬æ²¡æœ‰ä»»åŠ¡å•Šï¼" )
 			EndEvent( sceneId )
 			DispatchEventList( sceneId, selfId, targetId )
 		else
 			BeginEvent( sceneId )
-				AddText( sceneId, "  É¾³ıÈÎÎñ½«»áÉ¾³ıÉíÉÏËùÓĞµÄÈÎÎñ£¬ÊÇ·ñÈ·ÈÏÒªÉ¾³ı£¿" )
-				AddNumText( sceneId, x002088_g_ScriptId, "È·ÈÏ", -1, x002088_g_Key["do"] )
+				AddText( sceneId, "  åˆ é™¤ä»»åŠ¡å°†ä¼šåˆ é™¤èº«ä¸Šæ‰€æœ‰çš„ä»»åŠ¡ï¼Œæ˜¯å¦ç¡®è®¤è¦åˆ é™¤ï¼Ÿ" )
+				AddNumText( sceneId, x002088_g_ScriptId, "ç¡®è®¤", -1, x002088_g_Key["do"] )
 			EndEvent( sceneId )
 			DispatchEventList( sceneId, selfId, targetId )
 		end
@@ -76,22 +76,22 @@ function x002088_OnEventRequest( sceneId, selfId, targetId, eventId )
 	    local CanDel = x002088_CheckCanDelMission_OverTime( sceneId, selfId, targetId, eventId )
 	    if CanDel ~= 1 then
 			BeginEvent( sceneId )
-				AddText( sceneId, "ÄãÉÏ´ÎÀ´ÎÒÕâÀïÉ¾³ıÈÎÎñµ½ÏÖÔÚ²»×ã24Ğ¡Ê±£¬ÏÖÔÚ»¹²»ÄÜÖúÄã¡£" )
+				AddText( sceneId, "ä½ ä¸Šæ¬¡æ¥æˆ‘è¿™é‡Œåˆ é™¤ä»»åŠ¡åˆ°ç°åœ¨ä¸è¶³24å°æ—¶ï¼Œç°åœ¨è¿˜ä¸èƒ½åŠ©ä½ ã€‚" )
 			EndEvent( sceneId )
 			DispatchEventList( sceneId, selfId, targetId )
 				        
 	        return
 	    end
 	    
-	  if IsHaveMission( sceneId, selfId, 1258 ) > 0 then --Ğş·ğÖéÎïÆ·²»ÄÜĞ´ÁĞ±íÀïÃæ£¬²»È»ËûÉ¾µÚÒ»»·»òµÚ¶ş»·µÄÊ±ºòÒ²»áÉ¾Ò»¸öĞş·ğÖé¡£doing 38427
+	  if IsHaveMission( sceneId, selfId, 1258 ) > 0 then --ç„ä½›ç ç‰©å“ä¸èƒ½å†™åˆ—è¡¨é‡Œé¢ï¼Œä¸ç„¶ä»–åˆ ç¬¬ä¸€ç¯æˆ–ç¬¬äºŒç¯çš„æ—¶å€™ä¹Ÿä¼šåˆ ä¸€ä¸ªç„ä½›ç ã€‚doing 38427
 	  	DelItem(sceneId, selfId, 40004454, 1)
 	  end
 	  
 		DelAllMission( sceneId, selfId )
 	  
-	  -- ĞèÒªÔÚÉ¾³ıÈÎÎñµÄÍ¬Ê±É¾³ıµÄÈÎÎñÎïÆ·
+	  -- éœ€è¦åœ¨åˆ é™¤ä»»åŠ¡çš„åŒæ—¶åˆ é™¤çš„ä»»åŠ¡ç‰©å“
 		for i, nItemId in x002088_g_MisItemList do
-			-- »ñµÃÕâ¸öÎïÆ·µÄÊıÁ¿
+			-- è·å¾—è¿™ä¸ªç‰©å“çš„æ•°é‡
 			local nItemCount = GetItemCount(sceneId, selfId, nItemId)
 			
 			if nItemCount > 0  then
@@ -100,17 +100,17 @@ function x002088_OnEventRequest( sceneId, selfId, targetId, eventId )
 		
 		end
 	    
-		Msg2Player( sceneId, selfId, "#RÉ¾³ıËùÓĞÈÎÎñ³É¹¦£¡", MSG2PLAYER_PARA )
+		Msg2Player( sceneId, selfId, "#Råˆ é™¤æ‰€æœ‰ä»»åŠ¡æˆåŠŸï¼", MSG2PLAYER_PARA )
 		BeginEvent( sceneId )
-			AddText( sceneId, "  É¾³ıËùÓĞÈÎÎñ³É¹¦£¡" )
+			AddText( sceneId, "  åˆ é™¤æ‰€æœ‰ä»»åŠ¡æˆåŠŸï¼" )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 	end
 end
 
 --******************************************************
---Ïú»ÙÈÎÎñÎïÆ·
---ÓÉClient\Interface\MissionObjDel\MissionObjDel.lua·¢³ö
+--é”€æ¯ä»»åŠ¡ç‰©å“
+--ç”±Client\Interface\MissionObjDel\MissionObjDel.luaå‘å‡º
 --******************************************************
 function x002088_OnDestroy( sceneId, selfId, posItem )
 	if posItem < 0 then

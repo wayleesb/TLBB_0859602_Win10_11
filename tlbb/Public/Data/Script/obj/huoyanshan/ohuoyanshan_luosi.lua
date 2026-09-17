@@ -1,11 +1,11 @@
---火焰山NPC
---洛斯
---任务
+--鐏劙灞盢PC
+--娲涙柉
+--浠诲姟
 
 x042506_g_ScriptId	= 042506
 
 --**********************************
---事件交互入口
+--浜嬩欢浜や簰鍏ュ彛
 --**********************************
 function x042506_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent( sceneId )

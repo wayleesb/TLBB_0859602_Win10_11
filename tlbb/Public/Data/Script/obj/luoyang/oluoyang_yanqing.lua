@@ -1,17 +1,17 @@
---ÂåÑôNPC
---ÑàÇà
---ÆÕÍ¨
+--æ´›é˜³NPC
+--ç‡•é’
+--æ™®é€š
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x000034_g_ScriptId = 000034
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x000034_g_eventList={250507, 808101, 808102, 808103, 808093}
 
 
-x000034_g_DarkSkillName = { [40] = {name = "°µÆ÷Í¶ÖÀ", id = 274, needmoney = 20000},
-                            [70] = {name = "°µÆ÷´òÑ¨", id = 275, needmoney = 100000},
-                            [90] = {name = "°µÆ÷»¤Ìå", id = 276, needmoney = 500000},
+x000034_g_DarkSkillName = { [40] = {name = "æš—å™¨æŠ•æ·", id = 274, needmoney = 20000},
+                            [70] = {name = "æš—å™¨æ‰“ç©´", id = 275, needmoney = 100000},
+                            [90] = {name = "æš—å™¨æŠ¤ä½“", id = 276, needmoney = 500000},
                           }                
 x000034_g_DarkSkillTips = { [40] = "#{FBSJ_090106_89}",
                             [70] = "#{FBSJ_090106_90}",
@@ -29,19 +29,19 @@ x000034_g_DarkBreachPointNeedMoney =
 	[109] = 110000,
 	[119] = 120000,
 	[129] = 130000,
-}  --Í»ÆÆÆ¿¾±ĞèÒª½ğÇ®
+}  --çªç ´ç“¶é¢ˆéœ€è¦é‡‘é’±
 
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x000034_UpdateEventList( sceneId, selfId,targetId )
     local  PlayerName=GetName(sceneId,selfId)	
 	local  PlayerSex=GetSex(sceneId,selfId)
 	if PlayerSex == 0 then
-		PlayerSex = "¹ÃÄï"
+		PlayerSex = "å§‘å¨˜"
 	else
-		PlayerSex = "ÉÙÏÀ"
+		PlayerSex = "å°‘ä¾ "
 	end
 	BeginEvent(sceneId)
 		AddText(sceneId,"#{FBYQ_090204_01}"..PlayerSex.."#{FBYQ_090204_02}")
@@ -61,14 +61,14 @@ function x000034_UpdateEventList( sceneId, selfId,targetId )
 end
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x000034_OnDefaultEvent( sceneId, selfId,targetId )
 	x000034_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x000034_OnEventRequest( sceneId, selfId, targetId, eventId )
 	for i, findId in x000034_g_eventList do
@@ -79,11 +79,11 @@ function x000034_OnEventRequest( sceneId, selfId, targetId, eventId )
 	end
 	
 	local NumText = GetNumText();
-	if NumText == 6 then  --È¡ÏûÁË
+	if NumText == 6 then  --å–æ¶ˆäº†
 		BeginUICommand(sceneId)
 		EndUICommand(sceneId)
 		DispatchUICommand(sceneId,selfId, 1000)
-	elseif NumText == 7 then  --Í»ÆÆ°µÆ÷Æ¿¾±
+	elseif NumText == 7 then  --çªç ´æš—å™¨ç“¶é¢ˆ
 		BeginEvent(sceneId)
 			AddText(sceneId,"#{FBSJ_081209_10}")
 			AddNumText(sceneId,x000034_g_ScriptId,"#{FBSJ_081209_11}",6,12)
@@ -92,7 +92,7 @@ function x000034_OnEventRequest( sceneId, selfId, targetId, eventId )
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 		
-	elseif NumText == 8 then  --Ñ§Ï°°µÆ÷ÊÖ·¨
+	elseif NumText == 8 then  --å­¦ä¹ æš—å™¨æ‰‹æ³•
 		BeginEvent(sceneId)
 			AddText(sceneId,"#{FBSJ_081209_20}")
 			AddNumText(sceneId,x000034_g_ScriptId,"#{FBSJ_081209_21}",6,14)
@@ -101,7 +101,7 @@ function x000034_OnEventRequest( sceneId, selfId, targetId, eventId )
 			AddNumText(sceneId,x000034_g_ScriptId,"#{FBSJ_081209_12}",8,13)
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
-	elseif NumText == 9 then   --ÖØÏ´°µÆ÷ÊôĞÔ
+	elseif NumText == 9 then   --é‡æ´—æš—å™¨å±æ€§
 		BeginEvent(sceneId)
 			AddText(sceneId,"#{FBSJ_081209_31}")
 			AddNumText(sceneId,x000034_g_ScriptId,"#{FBSJ_081209_32}",6,21)
@@ -112,13 +112,13 @@ function x000034_OnEventRequest( sceneId, selfId, targetId, eventId )
 			AddNumText(sceneId,x000034_g_ScriptId,"#{FBSJ_081209_12}",8,13)
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
-	elseif NumText == 10 then  --ÖØÏ´°µÆ÷¼¼ÄÜ
+	elseif NumText == 10 then  --é‡æ´—æš—å™¨æŠ€èƒ½
 		BeginUICommand(sceneId)
 		UICommand_AddInt( sceneId, 6 )
 		UICommand_AddInt( sceneId, targetId )
 		EndUICommand(sceneId)
 		DispatchUICommand(sceneId,selfId, 800034)
-	elseif NumText == 11 then  --ÖØÖÃ°µÆ÷
+	elseif NumText == 11 then  --é‡ç½®æš—å™¨
 		BeginEvent(sceneId)
 			AddText(sceneId,"#{FBSJ_081209_84}")
 			AddNumText(sceneId,x000034_g_ScriptId,"#{FBSJ_090311_03}",6,26)
@@ -126,15 +126,15 @@ function x000034_OnEventRequest( sceneId, selfId, targetId, eventId )
 			AddNumText(sceneId,x000034_g_ScriptId,"#{FBSJ_081209_12}",8,13)
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
-	elseif NumText == 12 then                   --ÎÒÒªÍ»ÆÆµ±Ç°Æ¿¾±
+	elseif NumText == 12 then                   --æˆ‘è¦çªç ´å½“å‰ç“¶é¢ˆ
 		if (x000034_CheckDarkReachPoint(sceneId, selfId, targetId) == 1) then
 			BeginEvent(sceneId)
 				local nDarkLevel = GetDarkLevel(sceneId, selfId);
 				local nNeedMoney = x000034_g_DarkBreachPointNeedMoney[nDarkLevel];
 				if (nNeedMoney == nil or nNeedMoney <= 0) then
-					nNeedMoney = 100000;         --ÒÔ·ÀÍòÒ»£¬²¢Ã»Ê²Ã´ÓÃ
+					nNeedMoney = 100000;         --ä»¥é˜²ä¸‡ä¸€ï¼Œå¹¶æ²¡ä»€ä¹ˆç”¨
 				end
-				local strInfo = format("  Í»ÆÆÆ¿¾±ĞèÒª#{_EXCHG%d}¡£", nNeedMoney);
+				local strInfo = format("  çªç ´ç“¶é¢ˆéœ€è¦#{_EXCHG%d}ã€‚", nNeedMoney);
 				AddText(sceneId,strInfo)
 				AddNumText(sceneId,x000034_g_ScriptId,"#{INTERFACE_XML_557}",6,20)
 				AddNumText(sceneId,x000034_g_ScriptId,"#{Agreement_Info_No}",8,6)
@@ -147,7 +147,7 @@ function x000034_OnEventRequest( sceneId, selfId, targetId, eventId )
 	elseif NumText == 14 then
 		
 			BeginEvent(sceneId)
-				local strInfo = format("  Ñ§Ï°%sÊÖ·¨ĞèÒª#{_EXCHG%d}¡£", x000034_g_DarkSkillName[40].name, x000034_g_DarkSkillName[40].needmoney);
+				local strInfo = format("  å­¦ä¹ %sæ‰‹æ³•éœ€è¦#{_EXCHG%d}ã€‚", x000034_g_DarkSkillName[40].name, x000034_g_DarkSkillName[40].needmoney);
 				AddText(sceneId,strInfo)
 				AddNumText(sceneId,x000034_g_ScriptId,"#{INTERFACE_XML_557}",6,17)
 				AddNumText(sceneId,x000034_g_ScriptId,"#{Agreement_Info_No}",8,6)
@@ -155,7 +155,7 @@ function x000034_OnEventRequest( sceneId, selfId, targetId, eventId )
 			DispatchEventList(sceneId,selfId,targetId)
 	elseif NumText == 15 then
 			BeginEvent(sceneId)
-				local strInfo = format("  Ñ§Ï°%sÊÖ·¨ĞèÒª#{_EXCHG%d}¡£", x000034_g_DarkSkillName[70].name, x000034_g_DarkSkillName[70].needmoney);
+				local strInfo = format("  å­¦ä¹ %sæ‰‹æ³•éœ€è¦#{_EXCHG%d}ã€‚", x000034_g_DarkSkillName[70].name, x000034_g_DarkSkillName[70].needmoney);
 				AddText(sceneId,strInfo)
 				AddNumText(sceneId,x000034_g_ScriptId,"#{INTERFACE_XML_557}",6,18)
 				AddNumText(sceneId,x000034_g_ScriptId,"#{Agreement_Info_No}",8,6)
@@ -163,7 +163,7 @@ function x000034_OnEventRequest( sceneId, selfId, targetId, eventId )
 			DispatchEventList(sceneId,selfId,targetId)
 	elseif NumText == 16 then
 			BeginEvent(sceneId)
-				local strInfo = format("  Ñ§Ï°%sÊÖ·¨ĞèÒª#{_EXCHG%d}¡£", x000034_g_DarkSkillName[90].name, x000034_g_DarkSkillName[90].needmoney);
+				local strInfo = format("  å­¦ä¹ %sæ‰‹æ³•éœ€è¦#{_EXCHG%d}ã€‚", x000034_g_DarkSkillName[90].name, x000034_g_DarkSkillName[90].needmoney);
 				AddText(sceneId,strInfo)
 				AddNumText(sceneId,x000034_g_ScriptId,"#{INTERFACE_XML_557}",6,19)
 				AddNumText(sceneId,x000034_g_ScriptId,"#{Agreement_Info_No}",8,6)
@@ -252,7 +252,7 @@ function x000034_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x000034_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x000034_g_eventList do
@@ -267,10 +267,10 @@ function x000034_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x000034_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
-	--¾Ü¾øÖ®ºó£¬Òª·µ»ØNPCµÄÊÂ¼şÁĞ±í
+	--æ‹’ç»ä¹‹åï¼Œè¦è¿”å›NPCçš„äº‹ä»¶åˆ—è¡¨
 	for i, findId in x000034_g_eventList do
 		if missionScriptId == findId then
 			x000034_UpdateEventList( sceneId, selfId, targetId )
@@ -280,7 +280,7 @@ function x000034_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¼ÌĞø£¨ÒÑ¾­½ÓÁËÈÎÎñ£©
+--ç»§ç»­ï¼ˆå·²ç»æ¥äº†ä»»åŠ¡ï¼‰
 --**********************************
 function x000034_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x000034_g_eventList do
@@ -292,7 +292,7 @@ function x000034_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---Ìá½»ÒÑ×öÍêµÄÈÎÎñ
+--æäº¤å·²åšå®Œçš„ä»»åŠ¡
 --**********************************
 function x000034_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, selectRadioId )
 	for i, findId in x000034_g_eventList do
@@ -304,7 +304,7 @@ function x000034_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 end
 
 --**********************************
---ËÀÍöÊÂ¼ş
+--æ­»äº¡äº‹ä»¶
 --**********************************
 function x000034_OnDie( sceneId, selfId, killerId )
 end
@@ -313,8 +313,8 @@ end
 
 
 --**********************************
---ÅĞ¶ÏÊÇ·ñÄÜ¹»Ñ§Ï°
---nSkillIndex²ÎÊı¿ÉÄÜÖµÎª£º40£¬70£¬90£¬·Ö±ğÑ§Ï°¶ÔÓ¦¼¶±ğµÄ¼¼ÄÜ
+--åˆ¤æ–­æ˜¯å¦èƒ½å¤Ÿå­¦ä¹ 
+--nSkillIndexå‚æ•°å¯èƒ½å€¼ä¸ºï¼š40ï¼Œ70ï¼Œ90ï¼Œåˆ†åˆ«å­¦ä¹ å¯¹åº”çº§åˆ«çš„æŠ€èƒ½
 --**********************************
 function x000034_CheckStudyDarkSkills( sceneId, selfId, targetId, nSkillIndex )
 	
@@ -322,7 +322,7 @@ function x000034_CheckStudyDarkSkills( sceneId, selfId, targetId, nSkillIndex )
 		return 0;
 	end
 	
-	--ÅĞ¶ÏÍæ¼ÒµÈ¼¶ÊÇ·ñ¹»ÁË
+	--åˆ¤æ–­ç©å®¶ç­‰çº§æ˜¯å¦å¤Ÿäº†
 	local strNotice = "";
 	local nLevel = GetLevel(sceneId, selfId);
 	if ( nLevel < nSkillIndex) then
@@ -337,7 +337,7 @@ function x000034_CheckStudyDarkSkills( sceneId, selfId, targetId, nSkillIndex )
 		return 0;
 	end
 	
-	--ÅĞ¶ÏÊÇ·ñÒÑ¾­Ñ§»áÁË¶ÔÓ¦¼¼ÄÜ
+	--åˆ¤æ–­æ˜¯å¦å·²ç»å­¦ä¼šäº†å¯¹åº”æŠ€èƒ½
 	if  (HaveSkill(sceneId, selfId, x000034_g_DarkSkillName[nSkillIndex].id) > 0 ) then
 		if (nSkillIndex == 40) then
 			strNotice = "#{FBSJ_081209_26}";
@@ -350,9 +350,9 @@ function x000034_CheckStudyDarkSkills( sceneId, selfId, targetId, nSkillIndex )
 		return 0;
 	end
 	
-	--ÅĞ¶ÏÍæ¼ÒÉíÉÏÊÇ·ñÓĞ×ã¹»µÄÇ®
+	--åˆ¤æ–­ç©å®¶èº«ä¸Šæ˜¯å¦æœ‰è¶³å¤Ÿçš„é’±
 	local nHaveMoney = GetMoney(sceneId, selfId) + GetMoneyJZ(sceneId, selfId);
-	if (nHaveMoney < x000034_g_DarkSkillName[nSkillIndex].needmoney) then    --10½ğ
+	if (nHaveMoney < x000034_g_DarkSkillName[nSkillIndex].needmoney) then    --10é‡‘
 		strNotice = "#{FBSJ_081209_25}";
 		x000034_ShowNotice(sceneId, selfId, targetId, strNotice);
 		return 0;
@@ -363,8 +363,8 @@ function x000034_CheckStudyDarkSkills( sceneId, selfId, targetId, nSkillIndex )
 end
 
 --**********************************
---Íæ¼ÒÕÒNPCÑ§Ï°°µÆ÷Ê¹ÓÃ¼¼ÄÜ
---nSkillIndex²ÎÊı¿ÉÄÜÖµÎª£º40£¬70£¬90£¬·Ö±ğÑ§Ï°¶ÔÓ¦¼¶±ğµÄ¼¼ÄÜ
+--ç©å®¶æ‰¾NPCå­¦ä¹ æš—å™¨ä½¿ç”¨æŠ€èƒ½
+--nSkillIndexå‚æ•°å¯èƒ½å€¼ä¸ºï¼š40ï¼Œ70ï¼Œ90ï¼Œåˆ†åˆ«å­¦ä¹ å¯¹åº”çº§åˆ«çš„æŠ€èƒ½
 --**********************************
 function x000034_StudyDarkSkills( sceneId, selfId, targetId, nSkillIndex )
 	
@@ -372,7 +372,7 @@ function x000034_StudyDarkSkills( sceneId, selfId, targetId, nSkillIndex )
 		return
 	end
 	
-	--ÅĞ¶ÏÍæ¼ÒµÈ¼¶ÊÇ·ñ¹»ÁË
+	--åˆ¤æ–­ç©å®¶ç­‰çº§æ˜¯å¦å¤Ÿäº†
 	local strNotice = "";
 	local nLevel = GetLevel(sceneId, selfId);
 	if ( nLevel < nSkillIndex) then
@@ -387,7 +387,7 @@ function x000034_StudyDarkSkills( sceneId, selfId, targetId, nSkillIndex )
 		return 0;
 	end
 	
-	--ÅĞ¶ÏÊÇ·ñÒÑ¾­Ñ§»áÁË¶ÔÓ¦¼¼ÄÜ
+	--åˆ¤æ–­æ˜¯å¦å·²ç»å­¦ä¼šäº†å¯¹åº”æŠ€èƒ½
 	if  (HaveSkill(sceneId, selfId, x000034_g_DarkSkillName[nSkillIndex].id) > 0 ) then
 		if (nSkillIndex == 40) then
 			strNotice = "#{FBSJ_081209_26}";
@@ -400,15 +400,15 @@ function x000034_StudyDarkSkills( sceneId, selfId, targetId, nSkillIndex )
 		return 0;
 	end
 	
-	--ÅĞ¶ÏÍæ¼ÒÉíÉÏÊÇ·ñÓĞ×ã¹»µÄÇ®
+	--åˆ¤æ–­ç©å®¶èº«ä¸Šæ˜¯å¦æœ‰è¶³å¤Ÿçš„é’±
 	local nHaveMoney = GetMoney(sceneId, selfId) + GetMoneyJZ(sceneId, selfId);
-	if (nHaveMoney < x000034_g_DarkSkillName[nSkillIndex].needmoney) then    --10½ğ
+	if (nHaveMoney < x000034_g_DarkSkillName[nSkillIndex].needmoney) then    --10é‡‘
 		strNotice = "#{FBSJ_081209_25}";
 		x000034_ShowNotice(sceneId, selfId, targetId, strNotice);
 		return
 	end
 	
-	--ÉÏÃæÅĞ¶Ï¶¼Í¨¹ı£¬¿ÉÒÔ¿ÛÇ®¸ø¼¼ÄÜÁË
+	--ä¸Šé¢åˆ¤æ–­éƒ½é€šè¿‡ï¼Œå¯ä»¥æ‰£é’±ç»™æŠ€èƒ½äº†
 	local nRet, nRetJB = LuaFnCostMoneyWithPriority(sceneId, selfId, x000034_g_DarkSkillName[nSkillIndex].needmoney);
 	if (nRet == -1) then
 		strNotice = "#{FBSJ_081209_25}";
@@ -421,13 +421,13 @@ function x000034_StudyDarkSkills( sceneId, selfId, targetId, nSkillIndex )
 	x000034_NotifyTips( sceneId, selfId, x000034_g_DarkSkillTips[nSkillIndex] )
 	
 	x000034_StudySkillImpact(sceneId, selfId)
-	DarkOperateResult(sceneId, selfId, 5, 1);    --ÈÃ¼¼ÄÜ°´Å¥ÉÁË¸
+	DarkOperateResult(sceneId, selfId, 5, 1);    --è®©æŠ€èƒ½æŒ‰é’®é—ªçƒ
 	
 end
 
 
 --**********************************
--- ÆÁÄ»ÖĞ¼äĞÅÏ¢ÌáÊ¾
+-- å±å¹•ä¸­é—´ä¿¡æ¯æç¤º
 --**********************************
 function x000034_NotifyTips( sceneId, selfId, Tip )
 	BeginEvent( sceneId )
@@ -438,13 +438,13 @@ end
 
 
 --**********************************
---Íæ¼ÒÊÇ·ñÂú×ã°µÆ÷Æ¿¾±Ìõ¼ş
---·µ»ØÖµ£º0»òÕß1£¬1ÎªÂú×ã£¬0
+--ç©å®¶æ˜¯å¦æ»¡è¶³æš—å™¨ç“¶é¢ˆæ¡ä»¶
+--è¿”å›å€¼ï¼š0æˆ–è€…1ï¼Œ1ä¸ºæ»¡è¶³ï¼Œ0
 --**********************************
 function x000034_CheckDarkReachPoint(sceneId, selfId, targetId)
 		
 		local strInfo = "";
-		--ÅĞ¶ÏÍæ¼ÒÉíÉÏÊÇ·ñ×°±¸ÓĞ°µÆ÷
+		--åˆ¤æ–­ç©å®¶èº«ä¸Šæ˜¯å¦è£…å¤‡æœ‰æš—å™¨
 		local bHaveDarkEquip = HaveDarkEquiped(sceneId, selfId);
 		if ( bHaveDarkEquip ~= 1) then
 			strInfo = "#{FBSJ_081209_13}";
@@ -452,7 +452,7 @@ function x000034_CheckDarkReachPoint(sceneId, selfId, targetId)
 			return 0;
 		end
 		
-		--ÅĞ¶ÏÍæ¼ÒÉíÉÏ°µÆ÷ÊÇ·ñ´ïµ½Æ¿¾±
+		--åˆ¤æ–­ç©å®¶èº«ä¸Šæš—å™¨æ˜¯å¦è¾¾åˆ°ç“¶é¢ˆ
 		local bNeedNPC = IsDarkNeedLevelUpByNpcNow(sceneId, selfId);
 		if (bNeedNPC ~= 1) then
 			strInfo = "#{FBSJ_081209_14}";
@@ -460,7 +460,7 @@ function x000034_CheckDarkReachPoint(sceneId, selfId, targetId)
 			return 0;
 		end
 		
-		--ÅĞ¶ÏÍæ¼ÒµÈ¼¶ÊÇ·ñºÍ°µÆ÷µÈ¼¶ÏàµÈ»òÕßÃ»ÓĞ°µÆ÷µÈ¼¶¸ß
+		--åˆ¤æ–­ç©å®¶ç­‰çº§æ˜¯å¦å’Œæš—å™¨ç­‰çº§ç›¸ç­‰æˆ–è€…æ²¡æœ‰æš—å™¨ç­‰çº§é«˜
 		local nDarkLevel = GetDarkLevel(sceneId, selfId);
 		local nCharLevel = GetLevel(sceneId, selfId);
 		if (nDarkLevel >= nCharLevel) then
@@ -469,14 +469,14 @@ function x000034_CheckDarkReachPoint(sceneId, selfId, targetId)
 			return 0;
 		end
 		
-		--ÅĞ¶ÏÍæ¼ÒÉíÉÏÊÇ·ñÓĞ×ã¹»µÄÇ®
+		--åˆ¤æ–­ç©å®¶èº«ä¸Šæ˜¯å¦æœ‰è¶³å¤Ÿçš„é’±
 		local nDarkLevel = GetDarkLevel(sceneId, selfId);
 		local nNeedMoney = x000034_g_DarkBreachPointNeedMoney[nDarkLevel];
 		if (nNeedMoney == nil or nNeedMoney <= 0) then
-			nNeedMoney = 100000;         --ÒÔ·ÀÍòÒ»£¬²¢Ã»Ê²Ã´ÓÃ
+			nNeedMoney = 100000;         --ä»¥é˜²ä¸‡ä¸€ï¼Œå¹¶æ²¡ä»€ä¹ˆç”¨
 		end
 		local nHaveMoney = GetMoney(sceneId, selfId) + GetMoneyJZ(sceneId, selfId);
-		if (nHaveMoney < nNeedMoney) then    --10½ğ
+		if (nHaveMoney < nNeedMoney) then    --10é‡‘
 			strNotice = "#{FBSJ_081209_25}";
 			x000034_ShowNotice(sceneId, selfId, targetId, strNotice);
 			return 0;
@@ -489,7 +489,7 @@ end
 function x000034_BreachDarkPoint(sceneId, selfId, targetId)
 
 	local strInfo = "";
-	--ÅĞ¶ÏÍæ¼ÒÉíÉÏÊÇ·ñ×°±¸ÓĞ°µÆ÷
+	--åˆ¤æ–­ç©å®¶èº«ä¸Šæ˜¯å¦è£…å¤‡æœ‰æš—å™¨
 	local bHaveDarkEquip = HaveDarkEquiped(sceneId, selfId);
 	if ( bHaveDarkEquip ~= 1) then
 		strInfo = "#{FBSJ_081209_13}";
@@ -497,7 +497,7 @@ function x000034_BreachDarkPoint(sceneId, selfId, targetId)
 		return 0;
 	end
 		
-	--ÅĞ¶ÏÍæ¼ÒÉíÉÏ°µÆ÷ÊÇ·ñ´ïµ½Æ¿¾±
+	--åˆ¤æ–­ç©å®¶èº«ä¸Šæš—å™¨æ˜¯å¦è¾¾åˆ°ç“¶é¢ˆ
 	local bNeedNPC = IsDarkNeedLevelUpByNpcNow(sceneId, selfId);
 	if (bNeedNPC ~= 1) then
 		strInfo = "#{FBSJ_081209_14}";
@@ -505,7 +505,7 @@ function x000034_BreachDarkPoint(sceneId, selfId, targetId)
 		return 0;
 	end
 		
-	--ÅĞ¶ÏÍæ¼ÒµÈ¼¶ÊÇ·ñºÍ°µÆ÷µÈ¼¶ÏàµÈ»òÕßÃ»ÓĞ°µÆ÷µÈ¼¶¸ß
+	--åˆ¤æ–­ç©å®¶ç­‰çº§æ˜¯å¦å’Œæš—å™¨ç­‰çº§ç›¸ç­‰æˆ–è€…æ²¡æœ‰æš—å™¨ç­‰çº§é«˜
 	local nDarkLevel = GetDarkLevel(sceneId, selfId);
 	local nCharLevel = GetLevel(sceneId, selfId);
 	if (nDarkLevel >= nCharLevel) then
@@ -514,20 +514,20 @@ function x000034_BreachDarkPoint(sceneId, selfId, targetId)
 		return 0;
 	end
 		
-			--ÅĞ¶ÏÍæ¼ÒÉíÉÏÊÇ·ñÓĞ×ã¹»µÄÇ®
+			--åˆ¤æ–­ç©å®¶èº«ä¸Šæ˜¯å¦æœ‰è¶³å¤Ÿçš„é’±
 	local nDarkLevel = GetDarkLevel(sceneId, selfId);
 	local nNeedMoney = x000034_g_DarkBreachPointNeedMoney[nDarkLevel];
 	if (nNeedMoney == nil or nNeedMoney <= 0) then
-		nNeedMoney = 100000;         --ÒÔ·ÀÍòÒ»£¬²¢Ã»Ê²Ã´ÓÃ
+		nNeedMoney = 100000;         --ä»¥é˜²ä¸‡ä¸€ï¼Œå¹¶æ²¡ä»€ä¹ˆç”¨
 	end
 	local nHaveMoney = GetMoney(sceneId, selfId) + GetMoneyJZ(sceneId, selfId);
-	if (nHaveMoney < nNeedMoney) then    --10½ğ
+	if (nHaveMoney < nNeedMoney) then    --10é‡‘
 		strNotice = "#{FBSJ_081209_25}";
 		x000034_ShowNotice(sceneId, selfId, targetId, strNotice);
 		return 0;
 	end
 	
-	--ÉÏÃæÅĞ¶Ï¶¼Í¨¹ı£¬¿ÉÒÔ¿ÛÇ®Í»ÆÆÁË
+	--ä¸Šé¢åˆ¤æ–­éƒ½é€šè¿‡ï¼Œå¯ä»¥æ‰£é’±çªç ´äº†
 	local nRet, nRetJB = LuaFnCostMoneyWithPriority(sceneId, selfId, nNeedMoney);
 	if (nRet == -1) then
 		strNotice = "#{FBSJ_081209_25}";
@@ -535,16 +535,16 @@ function x000034_BreachDarkPoint(sceneId, selfId, targetId)
 		return 0;
 	end
 	
-	--Í»ÆÆÆ¿¾±£¬ÈÃ°µÆ÷Éı¼¶
+	--çªç ´ç“¶é¢ˆï¼Œè®©æš—å™¨å‡çº§
 	local bDarkLevelup = DarkLevelUp(sceneId, selfId);
 	if (bDarkLevelup == 1) then
 		x000034_ShowNotice(sceneId, selfId, targetId, "#{FBSJ_081209_18}");
-		--Í»ÆÆ³É¹¦£¬¼ÇÂ¼Í³¼ÆÈÕÖ¾
+		--çªç ´æˆåŠŸï¼Œè®°å½•ç»Ÿè®¡æ—¥å¿—
 			local guid = LuaFnObjId2Guid(sceneId, selfId);
 			local sLog = format("dark level now: %d", nDarkLevel + 1); 
 			ScriptGlobal_AuditGeneralLog(LUAAUDIT_ANQITUPO, guid, sLog);
 	else
-		x000034_ShowNotice(sceneId, selfId, targetId, "Í»ÆÆÊ§°Ü");
+		x000034_ShowNotice(sceneId, selfId, targetId, "çªç ´å¤±è´¥");
 	end
 	
 	return
@@ -558,6 +558,6 @@ function x000034_ShowNotice( sceneId, selfId, targetId, strNotice)
 end
 
 function x000034_StudySkillImpact(sceneId, playerId)
-	--ÏÔÊ¾Ñ§Ï°µ½ĞÂ¼¼ÄÜµÄÌØĞ§ Ä¿Ç°Ê¹ÓÃÉı¼¶ÌØĞ§
+	--æ˜¾ç¤ºå­¦ä¹ åˆ°æ–°æŠ€èƒ½çš„ç‰¹æ•ˆ ç›®å‰ä½¿ç”¨å‡çº§ç‰¹æ•ˆ
 	LuaFnSendSpecificImpactToUnit(sceneId, playerId, playerId, playerId, 32407, 0 )
 end

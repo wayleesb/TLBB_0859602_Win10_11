@@ -2,17 +2,17 @@
 x200022_g_ScriptId = 200022
 x200022_g_MissionId = 22
 x200022_g_PreMissionId = 47
-x200022_g_Name	="ÇÇ·å"
-x200022_g_Name1 ="Ğì¾ªÀ×"
+x200022_g_Name	="ä¹”å³°"
+x200022_g_Name1 ="å¾æƒŠé›·"
 x200022_g_MissionKind = 47
 x200022_g_MissionLevel = 40
 x200022_g_IfMissionElite = 0
-x200022_g_MissionName="ËäÍòÇ§ÈËÎáÍùÒÓ"
+x200022_g_MissionName="è™½ä¸‡åƒäººå¾å¾€çŸ£"
 x200022_g_MissionInfo="#{Mis_juqing_0022}"
 x200022_g_MissionTarget="#{Mis_juqing_Tar_0022}"		
-x200022_g_MissionComplete="  ÇÇ·åÕæÊÇ¡­¡­ÄÑµÀËûÕæµÄÎªÁËÒ»¸öĞ¡¹ÃÄï£¬Á¬×Ô¼ºµÄĞÔÃü¶¼²»ÒªÁËÂğ£¿¾ÛÏÍ×¯ÄÚÏÖÔÚÒ²ĞíÒÑ¾­´óÂÒÁË°É¡­¡­"		
+x200022_g_MissionComplete="  ä¹”å³°çœŸæ˜¯â€¦â€¦éš¾é“ä»–çœŸçš„ä¸ºäº†ä¸€ä¸ªå°å§‘å¨˜ï¼Œè¿è‡ªå·±çš„æ€§å‘½éƒ½ä¸è¦äº†å—ï¼Ÿèšè´¤åº„å†…ç°åœ¨ä¹Ÿè®¸å·²ç»å¤§ä¹±äº†å§â€¦â€¦"		
 x200022_g_MoneyBonus=9000
 x200022_g_exp=9600
 x200022_g_RadioItemBonus={{id=10423008 ,num=1},{id=10423009,num=1},{id=10423010,num=1},{id=10423011,num=1}}
-x200022_g_Custom	= {{id="ËäÍòÇ§ÈËÎáÍùÒÓ",num=1}}
+x200022_g_Custom	= {{id="è™½ä¸‡åƒäººå¾å¾€çŸ£",num=1}}
 --MisDescEnd

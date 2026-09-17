@@ -1,27 +1,27 @@
---»î¶¯¡ª¡ª
---´º½Ú»î¶¯-ÁìÈ¡±ŞÅÚ
+--æ´»åŠ¨â€”â€”
+--æ˜¥èŠ‚æ´»åŠ¨-é¢†å–é­ç‚®
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x050054_g_ScriptId = 050054
---»î¶¯Ê±¼ä
-x050054_g_StartDayTime = 8030   --»î¶¯½áÊøÊ±¼ä 2008-1-31
-x050054_g_EndDayTime = 8044   --»î¶¯½áÊøÊ±¼ä 2008-2-14
+--æ´»åŠ¨æ—¶é—´
+x050054_g_StartDayTime = 8030   --æ´»åŠ¨ç»“æŸæ—¶é—´ 2008-1-31
+x050054_g_EndDayTime = 8044   --æ´»åŠ¨ç»“æŸæ—¶é—´ 2008-2-14
 
---±ŞÅÚID
+--é­ç‚®ID
 x050054_g_BianPaoID = 30505165
 
---x050054_g_strPlayerLvErr = "ÄãÈ¥Õ¨ÄêÊŞ£¡ÌìÄÄ£¬Äã»¹ÊÇ²»ÒªÈ¥ÁË£¬ÄêÊŞºÃ¿ÉÅÂµÄ£¬Äã»¹²»µ½10¼¶ÄØ£¬¸ù±¾²»¿ÉÄÜ´ò¹ıËüµÄ£¡"
---x050054_g_strNotSpace = "ÄúµÄ°ü¹üÃ»ÓĞ×ã¹»¿Õ¼ä£¬ÇëÕûÀíºóÔÙÀ´ÁìÈ¡¡£"
---x050054_g_strYiLingQu = "ÄãÒÑ¾­ÒªÁËºÜ¶à±ŞÅÚÁËÀ²£¡Äã¿ìÈ¥Õ¨ÄêÊŞ°É£¡µùËµÄêÊŞÅÜÁËÎÒÃÇµÄÉú»î¾ÍºÃÆğÀ´À²£¡"
---x050054_g_strGetBianPao = "ËÍÄãÒ»Ã¶±ŞÅÚ£¡¾ÍÒ»Ã¶Å¶£¡Äã¿´ÆğÀ´ºÃÀ÷º¦µÄ£¬Ò»¶¨ÄÜ¹»°ÑÄêÊŞ´ò°Ü£¡ÖÁÉÙ¡­¡­Ò²ÄÜ°ÑËüÏÅÅÜ°É¡£"
+--x050054_g_strPlayerLvErr = "ä½ å»ç‚¸å¹´å…½ï¼å¤©å“ªï¼Œä½ è¿˜æ˜¯ä¸è¦å»äº†ï¼Œå¹´å…½å¥½å¯æ€•çš„ï¼Œä½ è¿˜ä¸åˆ°10çº§å‘¢ï¼Œæ ¹æœ¬ä¸å¯èƒ½æ‰“è¿‡å®ƒçš„ï¼"
+--x050054_g_strNotSpace = "æ‚¨çš„åŒ…è£¹æ²¡æœ‰è¶³å¤Ÿç©ºé—´ï¼Œè¯·æ•´ç†åå†æ¥é¢†å–ã€‚"
+--x050054_g_strYiLingQu = "ä½ å·²ç»è¦äº†å¾ˆå¤šé­ç‚®äº†å•¦ï¼ä½ å¿«å»ç‚¸å¹´å…½å§ï¼çˆ¹è¯´å¹´å…½è·‘äº†æˆ‘ä»¬çš„ç”Ÿæ´»å°±å¥½èµ·æ¥å•¦ï¼"
+--x050054_g_strGetBianPao = "é€ä½ ä¸€æšé­ç‚®ï¼å°±ä¸€æšå“¦ï¼ä½ çœ‹èµ·æ¥å¥½å‰å®³çš„ï¼Œä¸€å®šèƒ½å¤ŸæŠŠå¹´å…½æ‰“è´¥ï¼è‡³å°‘â€¦â€¦ä¹Ÿèƒ½æŠŠå®ƒå“è·‘å§ã€‚"
 
 x050054_g_strPlayerLvErr = "#{NSBS_20071228_04}"
-x050054_g_strNotSpace = "ÄúµÄ°ü¹üÃ»ÓĞ×ã¹»¿Õ¼ä£¬ÇëÕûÀíºóÔÙÀ´ÁìÈ¡¡£"
+x050054_g_strNotSpace = "æ‚¨çš„åŒ…è£¹æ²¡æœ‰è¶³å¤Ÿç©ºé—´ï¼Œè¯·æ•´ç†åå†æ¥é¢†å–ã€‚"
 x050054_g_strYiLingQu = "#{NSBS_20071228_05}"
 x050054_g_strGetBianPao = "#{NSBS_20071228_06}"
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x050054_OnDefaultEvent( sceneId, selfId, targetId )
 
@@ -33,25 +33,25 @@ function x050054_OnDefaultEvent( sceneId, selfId, targetId )
 	local NumText = GetNumText()
 
 	if NumText == 101 then
-		--Áì¸öÈË±ŞÅÚ....
+		--é¢†ä¸ªäººé­ç‚®....
 		x050054_GiveSelfBianPao( sceneId, selfId, targetId )
 	end
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x050054_OnEnumerate( sceneId, selfId, targetId )
 
     local isTime = x050054_CheckRightTime()
     if 1 == isTime then
-			AddNumText(sceneId, x050054_g_ScriptId, "¸øÎÒÒ»Ã¶±ŞÅÚ", 6, 101 )													
+			AddNumText(sceneId, x050054_g_ScriptId, "ç»™æˆ‘ä¸€æšé­ç‚®", 6, 101 )													
     end
 
 end
 
 --**********************************
---¼ì²â»î¶¯ÊÇ·ñÒÑ½áÊø
+--æ£€æµ‹æ´»åŠ¨æ˜¯å¦å·²ç»“æŸ
 --**********************************
 function x050054_CheckRightTime()
 
@@ -65,23 +65,23 @@ function x050054_CheckRightTime()
 end
 
 --**********************************
---Áì¸öÈË±ŞÅÚ
+--é¢†ä¸ªäººé­ç‚®
 --**********************************
 function x050054_GiveSelfBianPao( sceneId, selfId, targetId )
 
-	--¼ì²âÍæ¼ÒµÈ¼¶....
+	--æ£€æµ‹ç©å®¶ç­‰çº§....
 	if x050054_CheckPlayerLv( sceneId, selfId, targetId ) == 0 then
 		return
 	end
 
-	--½ñÌìÒÑ¾­Áì¹ıµÄÊıÁ¿....
+	--ä»Šå¤©å·²ç»é¢†è¿‡çš„æ•°é‡....
 	local num = GetMissionData( sceneId, selfId, MD_CHUNJIE_BIANPAO_NUMBER )
-	--ÉÏ´ÎÁìÈ¡Ê±¼ä....
+	--ä¸Šæ¬¡é¢†å–æ—¶é—´....
 	local lastDayTime = GetMissionData( sceneId, selfId, MD_CHUNJIE_BIANPAO_DAYTIME )
 	local CurDayTime = GetDayTime()
 	
 	if CurDayTime <= lastDayTime then		
-		if num >10 then--ÁìÈ¡ÊıÁ¿³¬¹ı10
+		if num >10 then--é¢†å–æ•°é‡è¶…è¿‡10
 			BeginEvent(sceneId)
 				AddText( sceneId, x050054_g_strYiLingQu )
 			EndEvent(sceneId)
@@ -92,7 +92,7 @@ function x050054_GiveSelfBianPao( sceneId, selfId, targetId )
 		num = 50;
 	end
 
-	--¼ì²â±³°üÊÇ·ñÓĞµØ·½....
+	--æ£€æµ‹èƒŒåŒ…æ˜¯å¦æœ‰åœ°æ–¹....
 	if x050054_CheckPacketSpace( sceneId, selfId, targetId ) == 0 then
 		return
 	end
@@ -107,7 +107,7 @@ end
 
 	
 --**********************************
---¼ì²âÍæ¼ÒµÈ¼¶ÊÇ·ñ·ûºÏÒªÇó
+--æ£€æµ‹ç©å®¶ç­‰çº§æ˜¯å¦ç¬¦åˆè¦æ±‚
 --**********************************
 function x050054_CheckPlayerLv( sceneId, selfId, targetId )
 
@@ -124,7 +124,7 @@ function x050054_CheckPlayerLv( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²âÍæ¼Ò±³°ü¿Õ¼äÊÇ·ñ×ã¹»
+--æ£€æµ‹ç©å®¶èƒŒåŒ…ç©ºé—´æ˜¯å¦è¶³å¤Ÿ
 --**********************************
 function x050054_CheckPacketSpace( sceneId, selfId, targetId )
 
@@ -141,11 +141,11 @@ function x050054_CheckPacketSpace( sceneId, selfId, targetId )
 end
 
 --**********************************
---¸øÍæ¼Ò±ŞÅÚ
+--ç»™ç©å®¶é­ç‚®
 --**********************************
 function x050054_GivePlayerBianPao( sceneId, selfId, targetId )
 			
-	--¸ø±ŞÅÚ1×Ô¼ºµÄ....
+	--ç»™é­ç‚®1è‡ªå·±çš„....
 	--local BagIndex = TryRecieveItem( sceneId, selfId, x050054_g_BianPaoID, QUALITY_MUST_BE_CHANGE )
 
 	--if BagIndex ~= -1 then
@@ -157,7 +157,7 @@ function x050054_GivePlayerBianPao( sceneId, selfId, targetId )
 			
 	if canAdd1 == 0  then
 		--BeginEvent( sceneId )
-			--AddText( sceneId, "ÄúµÄÎïÆ·À¸Ã»ÓĞ×ã¹»¿Õ¼ä£¬ÇëÏÂ´ÎÁìÈ¡Ê±Áô³ö×ã¹»ÎïÆ·À¸¿Õ¼ä¡£" )
+			--AddText( sceneId, "æ‚¨çš„ç‰©å“æ æ²¡æœ‰è¶³å¤Ÿç©ºé—´ï¼Œè¯·ä¸‹æ¬¡é¢†å–æ—¶ç•™å‡ºè¶³å¤Ÿç‰©å“æ ç©ºé—´ã€‚" )
 		--EndEvent( sceneId )
 		--DispatchMissionTips( sceneId, selfId )
 		BeginEvent(sceneId)
@@ -183,55 +183,55 @@ function x050054_GivePlayerBianPao( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x050054_CheckAccept( sceneId, selfId )
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x050054_OnAccept( sceneId, selfId )
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x050054_OnAbandon( sceneId, selfId )
 end
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x050054_OnContinue( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x050054_CheckSubmit( sceneId, selfId )
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x050054_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 end
 
 --**********************************
---É±ËÀ¹ÖÎï»òÍæ¼Ò
+--æ€æ­»æ€ªç‰©æˆ–ç©å®¶
 --**********************************
 function x050054_OnKillObject( sceneId, selfId, objdataId ,objId )
 end
 
 --**********************************
---½øÈëÇøÓòÊÂ¼ş
+--è¿›å…¥åŒºåŸŸäº‹ä»¶
 --**********************************
 function x050054_OnEnterArea( sceneId, selfId, zoneId )
 end
 
 --**********************************
---µÀ¾ß¸Ä±ä
+--é“å…·æ”¹å˜
 --**********************************
 function x050054_OnItemChanged( sceneId, selfId, itemdataId )
 end

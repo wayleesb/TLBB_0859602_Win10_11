@@ -1,25 +1,25 @@
---Ç®Áú
+--é’±é¾™
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x002031_g_scriptId = 002031
 
-x002031_g_startTime = 09097 --»î¶¯¿ªÊ¼Ê±¼ä
-x002031_g_EndTime   = 09150 --»î¶¯½áÊøÊ±¼ä
+x002031_g_startTime = 09097 --æ´»åŠ¨å¼€å§‹æ—¶é—´
+x002031_g_EndTime   = 09150 --æ´»åŠ¨ç»“æŸæ—¶é—´
 
---ËùÓµÓÐµÄÊÂ¼þIDÁÐ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x002031_g_eventList={210205,210207,210208,050028,889054,889055,889056,889057}--210206,311100
 
 --**********************************
---ÊÂ¼þÁÐ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x002031_UpdateEventList( sceneId, selfId,targetId )
 	
 	local  PlayerName=GetName(sceneId,selfId)	
 	local  PlayerSex=GetSex(sceneId,selfId)
 	if PlayerSex == 0 then
-		PlayerSex = "ÃÃÃÃ"
+		PlayerSex = "å¦¹å¦¹"
 	else
-		PlayerSex = "ÐÖµÜ"
+		PlayerSex = "å…„å¼Ÿ"
 	end
 	
 	BeginEvent(sceneId)
@@ -27,7 +27,7 @@ function x002031_UpdateEventList( sceneId, selfId,targetId )
 	if curDayTime >= x002031_g_startTime and curDayTime <= x002031_g_EndTime then
 		AddText(sceneId,"#{XFMTL_20090319_05}")
 	else
-		AddText(sceneId,"#{OBJ_dali_0013}"..PlayerName..PlayerSex.."²»ÏëÒ»ÊÔÉíÊÖÂð£¿")		--#r  ÔÚÏÂ²»²Å£¬È´Ò²ÓÐ¡°½­ºþ°ÙÏþÉú¡±µÄÐéÃû£¬¶Ô¹Å½ñÌìÏÂ½­ºþÖ®ÊÂ¶¼ÂÔÖªÒ»¶þ£¬ÈôÓÐÊ²Ã´ÒÉÎÊ£¬Äã¿ÉÒÔ¾¡¹ÜÀ´ÕÒÎÒ¡£--#r  #r#r  ¡°ÄãÎÊÎÒ´ð¡±£­ÎÒÀ´¸æËßÄãÒ»Ð©½­ºþÊÂ¡£  #r#r  ¡°ÎÒÎÊÄã´ð¡±£­Á¬Ðø´ð¶ÔÎÊÌâ¾Í×ÊÖúÄãÒøÁ½¡£
+		AddText(sceneId,"#{OBJ_dali_0013}"..PlayerName..PlayerSex.."ä¸æƒ³ä¸€è¯•èº«æ‰‹å—ï¼Ÿ")		--#r  åœ¨ä¸‹ä¸æ‰ï¼Œå´ä¹Ÿæœ‰â€œæ±Ÿæ¹–ç™¾æ™“ç”Ÿâ€çš„è™šåï¼Œå¯¹å¤ä»Šå¤©ä¸‹æ±Ÿæ¹–ä¹‹äº‹éƒ½ç•¥çŸ¥ä¸€äºŒï¼Œè‹¥æœ‰ä»€ä¹ˆç–‘é—®ï¼Œä½ å¯ä»¥å°½ç®¡æ¥æ‰¾æˆ‘ã€‚--#r  #r#r  â€œä½ é—®æˆ‘ç­”â€ï¼æˆ‘æ¥å‘Šè¯‰ä½ ä¸€äº›æ±Ÿæ¹–äº‹ã€‚  #r#r  â€œæˆ‘é—®ä½ ç­”â€ï¼è¿žç»­ç­”å¯¹é—®é¢˜å°±èµ„åŠ©ä½ é“¶ä¸¤ã€‚
 	end
 	for i, eventId in x002031_g_eventList do
 		CallScriptFunction( eventId, "OnEnumerate",sceneId, selfId, targetId )
@@ -37,14 +37,14 @@ function x002031_UpdateEventList( sceneId, selfId,targetId )
 end
 
 --**********************************
---ÊÂ¼þ½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x002031_OnDefaultEvent( sceneId, selfId,targetId )
 	x002031_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼þÁÐ±íÑ¡ÖÐÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x002031_OnEventRequest( sceneId, selfId, targetId, eventId )
 	for i, findId in x002031_g_eventList do
@@ -56,7 +56,7 @@ function x002031_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æŽ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x002031_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x002031_g_eventList do
@@ -71,10 +71,10 @@ function x002031_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x002031_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
-	--¾Ü¾øÖ®ºó£¬Òª·µ»ØNPCµÄÊÂ¼þÁÐ±í
+	--æ‹’ç»ä¹‹åŽï¼Œè¦è¿”å›žNPCçš„äº‹ä»¶åˆ—è¡¨
 	for i, findId in x002031_g_eventList do
 		if missionScriptId == findId then
 			x002031_UpdateEventList( sceneId, selfId, targetId )
@@ -84,7 +84,7 @@ function x002031_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¼ÌÐø£¨ÒÑ¾­½ÓÁËÈÎÎñ£©
+--ç»§ç»­ï¼ˆå·²ç»æŽ¥äº†ä»»åŠ¡ï¼‰
 --**********************************
 function x002031_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x002031_g_eventList do
@@ -96,7 +96,7 @@ function x002031_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---Ìá½»ÒÑ×öÍêµÄÈÎÎñ
+--æäº¤å·²åšå®Œçš„ä»»åŠ¡
 --**********************************
 function x002031_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, selectRadioId )
 	for i, findId in x002031_g_eventList do
@@ -108,7 +108,7 @@ function x002031_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 end
 
 --**********************************
---ËÀÍöÊÂ¼þ
+--æ­»äº¡äº‹ä»¶
 --**********************************
 function x002031_OnDie( sceneId, selfId, killerId )
 end

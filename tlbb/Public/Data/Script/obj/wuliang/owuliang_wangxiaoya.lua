@@ -1,23 +1,23 @@
---ÍõĞ¡Ñ¾
+--ç‹å°ä¸«
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x006011_g_scriptId = 006011
 x006011_g_NianShouJieShao = "  #{NSBS_20071228_13}"
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x006011_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
-		AddText(sceneId,"  µù£¬ÎÒ²»ÒªĞÂÒÂ·ş£¬ÎÒÒªÄï£¬ÄïÈ¥ÄÄÀïÁË£¬ÔõÃ´»¹²»»ØÀ´°¡£¿")
+		AddText(sceneId,"  çˆ¹ï¼Œæˆ‘ä¸è¦æ–°è¡£æœï¼Œæˆ‘è¦å¨˜ï¼Œå¨˜å»å“ªé‡Œäº†ï¼Œæ€ä¹ˆè¿˜ä¸å›æ¥å•Šï¼Ÿ")
 		--CallScriptFunction( 050054, "OnEnumerate",sceneId, selfId, targetId )
-		--AddNumText( sceneId, x006011_g_scriptId, "ÄêÊŞ»î¶¯°ïÖú", 11, 102 )
+		--AddNumText( sceneId, x006011_g_scriptId, "å¹´å…½æ´»åŠ¨å¸®åŠ©", 11, 102 )
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x006011_OnEventRequest( sceneId, selfId, targetId, eventId )
 	if GetNumText() == 101 then

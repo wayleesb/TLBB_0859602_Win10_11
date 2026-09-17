@@ -1,22 +1,22 @@
---Â¥À¼NPC....
---ÎäÆ÷Ïà¹Ø¹¦ÄÜ....
+--æ¥¼å…°NPC....
+--æ­¦å™¨ç›¸å…³åŠŸèƒ½....
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x001101_g_ScriptId = 001101
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x001101_OnDefaultEvent( sceneId, selfId, targetId )
 
 	
 	BeginEvent( sceneId )
 		AddText( sceneId, "#{LLGC_20080324_13}" )
-		AddNumText( sceneId, x001101_g_ScriptId, "×°±¸×ÊÖÊ¼ø¶¨", 6, 1 )
-		AddNumText( sceneId, x001101_g_ScriptId, "×°±¸¼«ÏŞ´ò¿×", 6, 2 )--ÏÖÔÚÔö¼ÓÒ»ÖÖ´ò¿×·½Ê½£¬Òò´ËÕâ¸ö±ä³É¶ş¼¶½çÃæ
-		AddNumText( sceneId, x001101_g_ScriptId, "×°±¸¼«ÏŞÏâÇ¶", 6, 3 )
-		AddNumText( sceneId, x001101_g_ScriptId, "±¦Ê¯¼«ÏŞÕª³ı", 6, 4 )
-		AddNumText( sceneId, x001101_g_ScriptId, "¼«ÏŞÏâÇ¶Ïà¹Ø°ïÖú", 11, 5 )
+		AddNumText( sceneId, x001101_g_ScriptId, "è£…å¤‡èµ„è´¨é‰´å®š", 6, 1 )
+		AddNumText( sceneId, x001101_g_ScriptId, "è£…å¤‡æé™æ‰“å­”", 6, 2 )--ç°åœ¨å¢åŠ ä¸€ç§æ‰“å­”æ–¹å¼ï¼Œå› æ­¤è¿™ä¸ªå˜æˆäºŒçº§ç•Œé¢
+		AddNumText( sceneId, x001101_g_ScriptId, "è£…å¤‡æé™é•¶åµŒ", 6, 3 )
+		AddNumText( sceneId, x001101_g_ScriptId, "å®çŸ³æé™æ‘˜é™¤", 6, 4 )
+		AddNumText( sceneId, x001101_g_ScriptId, "æé™é•¶åµŒç›¸å…³å¸®åŠ©", 11, 5 )
 		
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
@@ -24,7 +24,7 @@ function x001101_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x001101_OnEventRequest( sceneId, selfId, targetId, eventId )
 
@@ -44,9 +44,9 @@ function x001101_OnEventRequest( sceneId, selfId, targetId, eventId )
 --		DispatchUICommand( sceneId, selfId, 75117 )
 
 	BeginEvent( sceneId )
-		AddText( sceneId, "ÇëÑ¡Ôñ¼«ÏŞ´ò¿×µÄ·½Ê½£º" )
-		AddNumText( sceneId, x001101_g_ScriptId, "Ê¹ÓÃµã½ğÖ®¼ı´ò¿×", 6, 10 )
-		AddNumText( sceneId, x001101_g_ScriptId, "Ê¹ÓÃº®Óñ¾«´â´ò¿×", 6, 11 )
+		AddText( sceneId, "è¯·é€‰æ‹©æé™æ‰“å­”çš„æ–¹å¼ï¼š" )
+		AddNumText( sceneId, x001101_g_ScriptId, "ä½¿ç”¨ç‚¹é‡‘ä¹‹ç®­æ‰“å­”", 6, 10 )
+		AddNumText( sceneId, x001101_g_ScriptId, "ä½¿ç”¨å¯’ç‰ç²¾ç²¹æ‰“å­”", 6, 11 )
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 		
@@ -75,7 +75,7 @@ function x001101_OnEventRequest( sceneId, selfId, targetId, eventId )
 	
 		BeginUICommand( sceneId )
 		UICommand_AddInt( sceneId, targetId )
-		UICommand_AddInt( sceneId, 1 )		--type£¬Çø·Öµã½ğ»¹ÊÇº®Óñ
+		UICommand_AddInt( sceneId, 1 )		--typeï¼ŒåŒºåˆ†ç‚¹é‡‘è¿˜æ˜¯å¯’ç‰
 		EndUICommand( sceneId )
 		DispatchUICommand( sceneId, selfId, 75117 )
 	
@@ -83,7 +83,7 @@ function x001101_OnEventRequest( sceneId, selfId, targetId, eventId )
 	
 		BeginUICommand( sceneId )
 		UICommand_AddInt( sceneId, targetId )
-		UICommand_AddInt( sceneId, 2 )		--type£¬Çø·Öµã½ğ»¹ÊÇº®Óñ
+		UICommand_AddInt( sceneId, 2 )		--typeï¼ŒåŒºåˆ†ç‚¹é‡‘è¿˜æ˜¯å¯’ç‰
 		EndUICommand( sceneId )
 		DispatchUICommand( sceneId, selfId, 75117 )
 		

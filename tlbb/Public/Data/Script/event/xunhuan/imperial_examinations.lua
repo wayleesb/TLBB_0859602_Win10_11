@@ -1,14 +1,14 @@
 x801016_g_ScriptId = 801016
 
-x801016_g_MissionName="¿Æ¾Ù"
+x801016_g_MissionName="ç§‘ä¸¾"
 
 x801016_g_Switch = 1
--- ÎÊÌâUI 	2
+-- é—®é¢˜UI 	2
 
---1.clientµ¯³öNPCµÚÒ»¸ö¶Ô»°½çÃæ
---2.¸øclient³öÌâ
---3.¸æËßclient´ğ´íÁË¡£
---4.¸æËß´ğ¹»ÁË10µÀÌâ£¬½áÊø¡£
+--1.clientå¼¹å‡ºNPCç¬¬ä¸€ä¸ªå¯¹è¯ç•Œé¢
+--2.ç»™clientå‡ºé¢˜
+--3.å‘Šè¯‰clientç­”é”™äº†ã€‚
+--4.å‘Šè¯‰ç­”å¤Ÿäº†10é“é¢˜ï¼Œç»“æŸã€‚
 x801016_g_Imperial_Exam_Hortation = {}
 
 x801016_g_Imperial_Exam_Hortation[1] = 1
@@ -137,10 +137,10 @@ x801016_g_Imperial_Exam_Table[119] = {money = 307663,exp = 2819}
 x801016_g_Imperial_Exam_Table[120] = {money = 312593,exp = 2867}
 
 x801016_g_AccomplishCircumstance = 1
--- modify by zchw È¥³ı¾»»¯¼¼ÄÜÊé
+-- modify by zchw å»é™¤å‡€åŒ–æŠ€èƒ½ä¹¦
 --x801016_g_Award = {20109001,20109002,20109003,20109004,20109005,20109006,20109007,20109008,20109009,20109010,50101001,50101002,50102001,50102002,50102003,50102004,50103001,50104002,50111001,50111002,50112001,50112002,50112003,50112004,50113001,50113002,50113003,50113004,50113005,50114001,30503011,30606001,30402001,30402002,30402003,30402004,30402005,30402006,30402007,30402008,30402009,30402010,30402011,30402013,30402015,30402017,30402019,30402025,30402029,30402031,30402033,30402035,30402037,30402039,30402041,30402043,30402045,30402047,30402049,30402051,30402052,30402053,30402054,30402055,30402059,30402061,30402063,30402065,30402067,30402069,30402071,30402073}
 x801016_g_Award = {20109001,20109002,20109003,20109004,20109005,20109006,20109007,20109008,20109009,20109010,50101001,50101002,50102001,50102002,50102003,50102004,50103001,50104002,50111001,50111002,50112001,50112002,50112003,50112004,50113001,50113002,50113003,50113004,50113005,50114001,30503011,30606001,30402001,30402002,30402003,30402004,30402005,30402006,30402007,30402008,30402009,30402010,30402011,30402013,30402015,30402017,30402019,30402025,30402029,30402033,30402035,30402037,30402039,30402041,30402043,30402045,30402047,30402049,30402051,30402052,30402053,30402054,30402055,30402059,30402061,30402063,30402065,30402067,30402069,30402071,30402073}
-x801016_g_Examinant_Name = {"(Ö÷)¿¼¹ÙÒ»","¿¼¹Ù¶ş","¿¼¹ÙÈı","¿¼¹ÙËÄ","¿¼¹ÙÎå","¿¼¹ÙÁù","¿¼¹ÙÆß","¿¼¹Ù°Ë","¿¼¹Ù¾Å","¿¼¹ÙÊ®","¿¼¹ÙÊ®Ò»","¿¼¹ÙÊ®¶ş","¿¼¹ÙÊ®Èı","¿¼¹ÙÊ®ËÄ","¿¼¹ÙÊ®Îå","¿¼¹ÙÊ®Áù","¿¼¹ÙÊ®Æß","¿¼¹ÙÊ®°Ë","¿¼¹ÙÊ®¾Å","¿¼¹Ù¶şÊ®"}
+x801016_g_Examinant_Name = {"(ä¸»)è€ƒå®˜ä¸€","è€ƒå®˜äºŒ","è€ƒå®˜ä¸‰","è€ƒå®˜å››","è€ƒå®˜äº”","è€ƒå®˜å…­","è€ƒå®˜ä¸ƒ","è€ƒå®˜å…«","è€ƒå®˜ä¹","è€ƒå®˜å","è€ƒå®˜åä¸€","è€ƒå®˜åäºŒ","è€ƒå®˜åä¸‰","è€ƒå®˜åå››","è€ƒå®˜åäº”","è€ƒå®˜åå…­","è€ƒå®˜åä¸ƒ","è€ƒå®˜åå…«","è€ƒå®˜åä¹","è€ƒå®˜äºŒå"}
 
 x801016_g_Bribe_Money = 10000
 
@@ -173,7 +173,7 @@ x801016_g_Reward_Gem = {50101001,50101002,50102001,50102002,50102003,50102004,50
 x801016_g_Reward_Reborn_Medicine = 30503011
 x801016_g_Reward_Prolong_Medicine = 30606001
 x801016_g_Reward_Punch = {20109001,20109002,20109003,20109004,20109005,20109006,20109007,20109008,20109009,20109010}
--- modify by zchw È¥³ı¾»»¯¼¼ÄÜÊé
+-- modify by zchw å»é™¤å‡€åŒ–æŠ€èƒ½ä¹¦
 --x801016_g_Reward_Craftsmanship = {30402001,30402002,30402003,30402004,30402005,30402006,30402007,30402008,30402009,30402010,30402011,30402013,30402015,30402017,30402019,30402025,30402029,30402031,30402033,30402035,30402037,30402039,30402041,30402043,30402045,30402047,30402049,30402051,30402052,30402053,30402054,30402055,30402059,30402061,30402063,30402065,30402067,30402069,30402071,30402073}
 x801016_g_Reward_Craftsmanship = {30402001,30402002,30402003,30402004,30402005,30402006,30402007,30402008,30402009,30402010,30402011,30402013,30402015,30402017,30402019,30402025,30402029,30402033,30402035,30402037,30402039,30402041,30402043,30402045,30402047,30402049,30402051,30402052,30402053,30402054,30402055,30402059,30402061,30402063,30402065,30402067,30402069,30402071,30402073}
 x801016_g_Reward_Dress = 10124018
@@ -198,8 +198,8 @@ function x801016_OnDefaultEvent( sceneId, selfId, targetId, param2, param3, para
 	end
 	if  x801016_EstimationPhase( sceneId, selfId) == 0 then
 
-		local msg = "ÏÖÔÚ²»½øĞĞ¿Æ¾Ù¿¼ÊÔ¡£"
-		local cmsg = "Àë¿ª¡¤¡¤¡¤¡¤¡¤¡¤"
+		local msg = "ç°åœ¨ä¸è¿›è¡Œç§‘ä¸¾è€ƒè¯•ã€‚"
+		local cmsg = "ç¦»å¼€Â·Â·Â·Â·Â·Â·"
 
 		x801016_Client_Show_Message( sceneId, selfId, targetId, msg, cmsg, 0)
 		return
@@ -231,25 +231,25 @@ function x801016_OnDefaultEvent( sceneId, selfId, targetId, param2, param3, para
 	return
 end
 --**********************************
---ĞÄÌøº¯Êı
+--å¿ƒè·³å‡½æ•°
 --**********************************
 function x801016_OnTimer( sceneId, actId, uTime )
 end
 
 function x801016_Broadcast_CANDIDATE_EXAM( sceneId, selfId )
 --	local sum_Candidate = getn(CANDIDATE_EXAM)
---	local str = "µÚÒ»ÂÖÖİÊÔÒÑ¾­½áÊø£¬½øÈëµÚ¶şÂÖÊ¡ÊÔµÄÍæ¼ÒÓĞ:"
+--	local str = "ç¬¬ä¸€è½®å·è¯•å·²ç»ç»“æŸï¼Œè¿›å…¥ç¬¬äºŒè½®çœè¯•çš„ç©å®¶æœ‰:"
 --	for i,EachStudent in CANDIDATE_EXAM do
 --		if EachStudent then 
 --				if EachStudent.guid ~= 0 then
 --					local tName=EachStudent.guid
---					str = str .. "#{_INFOUSR"..tName.."}£¬"
+--					str = str .. "#{_INFOUSR"..tName.."}ï¼Œ"
 --				end
 --		end
 --	end
---	str = str .. "Çëµ½´óÀíµÄÖ÷¿¼¹Ù´¦½øĞĞµÚ¶şÂÖÃæÊÔ¡£"
+--	str = str .. "è¯·åˆ°å¤§ç†çš„ä¸»è€ƒå®˜å¤„è¿›è¡Œç¬¬äºŒè½®é¢è¯•ã€‚"
 	
-	--»ñÈ¡ÈÕÆÚ--add by xindefeng
+	--è·å–æ—¥æœŸ--add by xindefeng
 	local Year = LuaFnGetThisYear()
 	local Month = LuaFnGetThisMonth() + 1
 	if(Month < 10) then
@@ -257,22 +257,22 @@ function x801016_Broadcast_CANDIDATE_EXAM( sceneId, selfId )
 	end
 	local Day = LuaFnGetDayOfThisMonth()
 	
-	local str = "µÚÒ»ÂÖÖİÊÔÒÑ¾­½áÊø£¬½øÈëµÚ¶şÂÖÊ¡ÊÔµÄÍæ¼ÒÓĞ£º"
+	local str = "ç¬¬ä¸€è½®å·è¯•å·²ç»ç»“æŸï¼Œè¿›å…¥ç¬¬äºŒè½®çœè¯•çš„ç©å®¶æœ‰ï¼š"
 	BroadMsgByChatPipe( sceneId,selfId,str,4)
 
 	for i,EachStudent in CANDIDATE_EXAM do
 		if EachStudent then 
 			if EachStudent.guid ~= 0 then
 				local tName = EachStudent.guid
-				str = "  #{_INFOUSR"..tName.."}£¬"
+				str = "  #{_INFOUSR"..tName.."}ï¼Œ"
 				if str ~= "  "  then
-					--ĞèÒªĞŞ¸Ä£¬Ôö¼Ó·¢ËÍÓÊ¼ş¹¦ÄÜ½øÈëµÚ¶şÂÖµÄÍæ¼Òmodi:lby20071209
+					--éœ€è¦ä¿®æ”¹ï¼Œå¢åŠ å‘é€é‚®ä»¶åŠŸèƒ½è¿›å…¥ç¬¬äºŒè½®çš„ç©å®¶modi:lby20071209
 					--local tGuid = LuaFnGuid2ObjId(sceneId,EachStudent.guid)
 					--local strName=GetName(sceneId,tGuid);
 					
 					--changed by xindefeng
-					--LuaFnSendSystemMail(sceneId, strName, "¹§Ï²Äã¿Æ¾ÙÃûÁĞÇ°Ã©£¬³É¹¦½øÈëÊ¡ÊÔ¡£ÇëËÙµ½ËÙµ½´óÀí²Î¼Ó¿Æ¾ÙÊ¡ÊÔ¡£")
-					local strMai = format("#Y¹§Ï²Äã¿Æ¾ÙÃûÁĞÇ°Ã©£¬³É¹¦½øÈëÊ¡ÊÔ¡£ÇëËÙµ½#G´óÀíÒ»ºÅ¿¼¹Ù£¨46£¬152£©#Y´¦²Î¼Ó¿Æ¾ÙÊ¡ÊÔ¡£#GÊ¡ÊÔ½«ÔÚµ±ÈÕ£¨ÓÊ¼ş·¢ËÍµ±ÈÕ£©21£º30½áÊø¡£#r                                  %s-%s-%s", Year, Month, Day)					
+					--LuaFnSendSystemMail(sceneId, strName, "æ­å–œä½ ç§‘ä¸¾ååˆ—å‰èŒ…ï¼ŒæˆåŠŸè¿›å…¥çœè¯•ã€‚è¯·é€Ÿåˆ°é€Ÿåˆ°å¤§ç†å‚åŠ ç§‘ä¸¾çœè¯•ã€‚")
+					local strMai = format("#Yæ­å–œä½ ç§‘ä¸¾ååˆ—å‰èŒ…ï¼ŒæˆåŠŸè¿›å…¥çœè¯•ã€‚è¯·é€Ÿåˆ°#Gå¤§ç†ä¸€å·è€ƒå®˜ï¼ˆ46ï¼Œ152ï¼‰#Yå¤„å‚åŠ ç§‘ä¸¾çœè¯•ã€‚#Gçœè¯•å°†åœ¨å½“æ—¥ï¼ˆé‚®ä»¶å‘é€å½“æ—¥ï¼‰21ï¼š30ç»“æŸã€‚#r                                  %s-%s-%s", Year, Month, Day)					
 					LuaFnSendSystemMail(sceneId, tName, strMai)					
 					
 					BroadMsgByChatPipe( sceneId,selfId,str,4)
@@ -281,16 +281,16 @@ function x801016_Broadcast_CANDIDATE_EXAM( sceneId, selfId )
 		end
 	end
 	
-	str = "ÇëÒÔÉÏÍæ¼Òµ½´óÀíµÄÖ÷¿¼¹Ù´¦½øĞĞµÚ¶şÂÖÃæÊÔ¡£"
+	str = "è¯·ä»¥ä¸Šç©å®¶åˆ°å¤§ç†çš„ä¸»è€ƒå®˜å¤„è¿›è¡Œç¬¬äºŒè½®é¢è¯•ã€‚"
 	BroadMsgByChatPipe( sceneId,selfId,str,4)
 
 end
 
 function x801016_Broadcast_TOP_3_EXAM( sceneId, selfId )
 	local sum_Candidate = getn(TOP_3_EXAM)
-	local str = "#P±¾´Î¿Æ¾Ù»î¶¯ÒÑ¾­ÍêÈ«½áÊø£¬Ç°ÈıÃûÎª£º"
+	local str = "#Pæœ¬æ¬¡ç§‘ä¸¾æ´»åŠ¨å·²ç»å®Œå…¨ç»“æŸï¼Œå‰ä¸‰åä¸ºï¼š"
 	local strMingCi=""
-	--»ñÈ¡ÈÕÆÚ--add by xindefeng
+	--è·å–æ—¥æœŸ--add by xindefeng
 	local Year = LuaFnGetThisYear()
 	local Month = LuaFnGetThisMonth() + 1
 	if(Month < 10) then
@@ -305,21 +305,21 @@ function x801016_Broadcast_TOP_3_EXAM( sceneId, selfId )
 --					local tName=GetName(sceneId,tGuid);
 					local tName=EachStudent.guid
 					if i == 1 then
-						str = str .. "×´Ôª£º"
-						strMingCi = "×´Ôª"
+						str = str .. "çŠ¶å…ƒï¼š"
+						strMingCi = "çŠ¶å…ƒ"
 					elseif i == 2 then
-						str = str .. "°ñÑÛ£º"
-						strMingCi = "°ñÑÛ"
+						str = str .. "æ¦œçœ¼ï¼š"
+						strMingCi = "æ¦œçœ¼"
 					elseif i == 3 then
-						str = str .. "Ì½»¨£º"
-						strMingCi = "Ì½»¨"
+						str = str .. "æ¢èŠ±ï¼š"
+						strMingCi = "æ¢èŠ±"
 					end
-					str = str .. "#{_INFOUSR"..tName.."}£¬"
+					str = str .. "#{_INFOUSR"..tName.."}ï¼Œ"
 					
-					--ĞèÒªĞŞ¸Ä£¬Ôö¼Ó·¢ËÍÓÊ¼ş¹¦ÄÜÇ°Èı¼×µÄÈËÔ±modi:lby20071209
+					--éœ€è¦ä¿®æ”¹ï¼Œå¢åŠ å‘é€é‚®ä»¶åŠŸèƒ½å‰ä¸‰ç”²çš„äººå‘˜modi:lby20071209
 					--changed by xindefeng
-					--strMai	= format( "¹§Ï²Äã¸ßÖĞ±¾´Î¿Æ¾ÙµÄ%s£¬Äã»ñµÃÁË³¯Í¢°ä·¢µÄ¼Î½±£¬Çëµ½´óÀíÖ÷¿¼¹Ù´¦ÁìÈ¡¡£", strMingCi )
-					local strMai = format("#Y¹§Ï²Äã¸ßÖĞ±¾´Î¿Æ¾ÙµÄ#G%s#Y£¬Äã»ñµÃÁË³¯Í¢°ä·¢µÄ¼Î½±£¬ÇëËÙµ½´óÀíÖ÷¿¼¹Ù´¦ÁìÈ¡¡£#G½±Æ·Ö»ÄÜµ±ÈÕ£¨ÓÊ¼ş·¢ËÍµ±ÈÕ£©ÁìÈ¡£¬ÓâÆÚ½«ÎŞ·¨ÁìÈ¡¡£#r                                  %s-%s-%s", strMingCi, Year, Month, Day)
+					--strMai	= format( "æ­å–œä½ é«˜ä¸­æœ¬æ¬¡ç§‘ä¸¾çš„%sï¼Œä½ è·å¾—äº†æœå»·é¢å‘çš„å˜‰å¥–ï¼Œè¯·åˆ°å¤§ç†ä¸»è€ƒå®˜å¤„é¢†å–ã€‚", strMingCi )
+					local strMai = format("#Yæ­å–œä½ é«˜ä¸­æœ¬æ¬¡ç§‘ä¸¾çš„#G%s#Yï¼Œä½ è·å¾—äº†æœå»·é¢å‘çš„å˜‰å¥–ï¼Œè¯·é€Ÿåˆ°å¤§ç†ä¸»è€ƒå®˜å¤„é¢†å–ã€‚#Gå¥–å“åªèƒ½å½“æ—¥ï¼ˆé‚®ä»¶å‘é€å½“æ—¥ï¼‰é¢†å–ï¼Œé€¾æœŸå°†æ— æ³•é¢†å–ã€‚#r                                  %s-%s-%s", strMingCi, Year, Month, Day)
 					--local tGuid = LuaFnGuid2ObjId(sceneId,EachStudent.guid)
 					--local strName=GetName(sceneId,tGuid);
 					LuaFnSendSystemMail(sceneId, tName, strMai)
@@ -328,14 +328,14 @@ function x801016_Broadcast_TOP_3_EXAM( sceneId, selfId )
 		
 	end
 	
-	str = str .. "ÇëÒÔÉÏ»ñ½±Õßµ½Ö÷¿¼¹Ù´¦ÁìÈ¡½±Àø¡£"
+	str = str .. "è¯·ä»¥ä¸Šè·å¥–è€…åˆ°ä¸»è€ƒå®˜å¤„é¢†å–å¥–åŠ±ã€‚"
 	
 	BroadMsgByChatPipe( sceneId,selfId,str,4)
 	
 end
 
 --**********************************
---¼ÓÈëµ½Candidate 10Ãûµ¥
+--åŠ å…¥åˆ°Candidate 10åå•
 --**********************************
 function x801016_Add_To_Candidate( sceneId, selfId, currentPlayer_Time, currentPlayer_Guid )
 	local sum_Candidate = getn(CANDIDATE_EXAM)
@@ -402,7 +402,7 @@ function x801016_Delete_Candidate( sceneId, selfId )
 	return 0
 end
 --**********************************
---¼ÓÈëµ½TOP 3Ãûµ¥
+--åŠ å…¥åˆ°TOP 3åå•
 --**********************************
 function x801016_Add_To_Top( sceneId, selfId, currentPlayer_Time, currentPlayer_Guid )
 	local sum_Top = getn(TOP_3_EXAM)
@@ -466,14 +466,14 @@ function x801016_Delete_Top( sceneId, selfId )
 end
 
 --**********************************
---ÅĞ¶ÏÊÇ·ñ»î¶¯
+--åˆ¤æ–­æ˜¯å¦æ´»åŠ¨
 --**********************************
 function x801016_EstimationPhase( sceneId, selfId )
 	--begin modified by zhangguoxin 090208
-	--local CurTime = GetHourTime()								--µ±Ç°Ê±¼ä
-	local CurTime = GetQuarterTime()								--µ±Ç°Ê±¼ä
+	--local CurTime = GetHourTime()								--å½“å‰æ—¶é—´
+	local CurTime = GetQuarterTime()								--å½“å‰æ—¶é—´
 	--begin modified by zhangguoxin 090208
-	local CurQuarterTime = mod( CurTime, 100 )	--µ±Ç°Ê±¼ä(¿Ì)
+	local CurQuarterTime = mod( CurTime, 100 )	--å½“å‰æ—¶é—´(åˆ»)
 	
 	if CurQuarterTime >= 70 and CurQuarterTime < 82 then
 		return 1
@@ -487,7 +487,7 @@ function x801016_EstimationPhase( sceneId, selfId )
 end
 
 --**********************************
---ÅĞ¶Ïµãµ½µÄÊÇÄÄ¸öNPC
+--åˆ¤æ–­ç‚¹åˆ°çš„æ˜¯å“ªä¸ªNPC
 --**********************************
 function x801016_Which_Examinant( sceneId, selfId, targetId )
 
@@ -505,7 +505,7 @@ end
 function x801016_Bestow_Gift_OnTop( sceneId, selfId, place)
 	local targetId = GetMissionData(sceneId,selfId,MD_EXAM_TARGETID)
 	local str_item = ""
-	local str_title = "Ì½»¨"
+	local str_title = "æ¢èŠ±"
 	local str_msg_2 = ""
 
 
@@ -513,41 +513,41 @@ function x801016_Bestow_Gift_OnTop( sceneId, selfId, place)
 	local huodongItemIndex = -1;
 	BeginAddItem(sceneId)
 		AddItem( sceneId,x801016_g_Reward_Reborn_Medicine,1)
-		str_item = str_item .. "#r#{_ITEM"..x801016_g_Reward_Reborn_Medicine.."}¡£"
-		str_msg_2 = str_msg_2 .."Äã»ñµÃÁËÒ»¸ö#B#{_ITEM"..x801016_g_Reward_Reborn_Medicine.."}#W¡£"
---		Msg2Player( sceneId,selfId,"Äã»ñµÃÁËÒ»¸ö#B#{_ITEM"..x801016_g_Reward_Reborn_Medicine.."}#W¡£",MSG2PLAYER_PARA)
-		--»î¶¯½±ÀøÍ³¼Æ
+		str_item = str_item .. "#r#{_ITEM"..x801016_g_Reward_Reborn_Medicine.."}ã€‚"
+		str_msg_2 = str_msg_2 .."ä½ è·å¾—äº†ä¸€ä¸ª#B#{_ITEM"..x801016_g_Reward_Reborn_Medicine.."}#Wã€‚"
+--		Msg2Player( sceneId,selfId,"ä½ è·å¾—äº†ä¸€ä¸ª#B#{_ITEM"..x801016_g_Reward_Reborn_Medicine.."}#Wã€‚",MSG2PLAYER_PARA)
+		--æ´»åŠ¨å¥–åŠ±ç»Ÿè®¡
 		local itemName;
 		_,itemName,_ = GetItemInfoByItemId(x801016_g_Reward_Reborn_Medicine)
-		LuaFnAuditItemCreate(sceneId,selfId,1,x801016_g_Reward_Reborn_Medicine,itemName,"#P¿Æ¾Ù-Ì½»¨")
+		LuaFnAuditItemCreate(sceneId,selfId,1,x801016_g_Reward_Reborn_Medicine,itemName,"#Pç§‘ä¸¾-æ¢èŠ±")
 		
 		if place < 3 then
 			local sum = getn(x801016_g_Reward_Gem)
 			local rrr = random(sum)
 			
 			AddItem( sceneId,x801016_g_Reward_Gem[rrr],1)
-			str_item = str_item .. "#r#{_ITEM"..x801016_g_Reward_Gem[rrr].."}¡£"
-			str_msg_2 = str_msg_2 .."Äã»ñµÃÁËÒ»¸ö#B#{_ITEM"..x801016_g_Reward_Gem[rrr].."}#W¡£"
---			Msg2Player( sceneId,selfId,"Äã»ñµÃÁËÒ»¸ö#B#{_ITEM"..x801016_g_Reward_Gem[rrr].."}#W¡£",MSG2PLAYER_PARA)
-			str_title = "°ñÑÛ"
-			--»î¶¯½±ÀøÍ³¼Æ
+			str_item = str_item .. "#r#{_ITEM"..x801016_g_Reward_Gem[rrr].."}ã€‚"
+			str_msg_2 = str_msg_2 .."ä½ è·å¾—äº†ä¸€ä¸ª#B#{_ITEM"..x801016_g_Reward_Gem[rrr].."}#Wã€‚"
+--			Msg2Player( sceneId,selfId,"ä½ è·å¾—äº†ä¸€ä¸ª#B#{_ITEM"..x801016_g_Reward_Gem[rrr].."}#Wã€‚",MSG2PLAYER_PARA)
+			str_title = "æ¦œçœ¼"
+			--æ´»åŠ¨å¥–åŠ±ç»Ÿè®¡
 			_,itemName,_ = GetItemInfoByItemId(x801016_g_Reward_Gem[rrr])
-			LuaFnAuditItemCreate(sceneId,selfId,1,x801016_g_Reward_Gem[rrr],itemName,"#P¿Æ¾Ù-°ñÑÛ")
+			LuaFnAuditItemCreate(sceneId,selfId,1,x801016_g_Reward_Gem[rrr],itemName,"#Pç§‘ä¸¾-æ¦œçœ¼")
 		end
 		
 		if place < 2 then
 			AddItem( sceneId,x801016_g_Reward_Prolong_Medicine,1)
 			AddItem( sceneId,x801016_g_Reward_Prolong_Medicine,1)
-			str_item = str_item .. "#rÁ½¸ö#{_ITEM"..x801016_g_Reward_Prolong_Medicine.."}¡£"
-			str_msg_2 = str_msg_2 .."Äã»ñµÃÁËÁ½¸ö#B#{_ITEM"..x801016_g_Reward_Prolong_Medicine.."}#W¡£"
---			Msg2Player( sceneId,selfId,"Äã»ñµÃÁËÁ½¸ö#B#{_ITEM"..x801016_g_Reward_Prolong_Medicine.."}#W¡£",MSG2PLAYER_PARA)
-			str_title = "×´Ôª"
-			--»î¶¯½±ÀøÍ³¼Æ
+			str_item = str_item .. "#rä¸¤ä¸ª#{_ITEM"..x801016_g_Reward_Prolong_Medicine.."}ã€‚"
+			str_msg_2 = str_msg_2 .."ä½ è·å¾—äº†ä¸¤ä¸ª#B#{_ITEM"..x801016_g_Reward_Prolong_Medicine.."}#Wã€‚"
+--			Msg2Player( sceneId,selfId,"ä½ è·å¾—äº†ä¸¤ä¸ª#B#{_ITEM"..x801016_g_Reward_Prolong_Medicine.."}#Wã€‚",MSG2PLAYER_PARA)
+			str_title = "çŠ¶å…ƒ"
+			--æ´»åŠ¨å¥–åŠ±ç»Ÿè®¡
 			_,itemName,_ = GetItemInfoByItemId(x801016_g_Reward_Prolong_Medicine)
-			LuaFnAuditItemCreate(sceneId,selfId,2,x801016_g_Reward_Prolong_Medicine,itemName,"#P¿Æ¾Ù-×´Ôª")
+			LuaFnAuditItemCreate(sceneId,selfId,2,x801016_g_Reward_Prolong_Medicine,itemName,"#Pç§‘ä¸¾-çŠ¶å…ƒ")
 		end
 		
-		--5ÔÂ9ÈÕ¡ª¡ª5ÔÂ31ÈÕ(¸ß¼¶»éÀñÈ¯ÔùËÍ)
+		--5æœˆ9æ—¥â€”â€”5æœˆ31æ—¥(é«˜çº§å©šç¤¼åˆ¸èµ é€)
 		local leftDayLimit = 7128;
 		local rightDayLimit = 7151;
 		local curDay = GetDayTime();
@@ -566,37 +566,37 @@ function x801016_Bestow_Gift_OnTop( sceneId, selfId, place)
 		x801016_Delete_Candidate( sceneId, selfId )
 		x801016_MessageBox( sceneId, selfId, str_msg_2)
 		Msg2Player( sceneId,selfId,str_msg_2,MSG2PLAYER_PARA)
-		local msg = "¹§Ï²Äã£¬ÄãÊÇ±¾½ì¿Æ¾Ù¿¼ÊÔµÄ"..str_title.."²¢ÇÒ»ñµÃÒÔÏÂ½±Æ·:"..str_item
-		local cmsg = "Àë¿ª¡¤¡¤¡¤¡¤¡¤¡¤"
+		local msg = "æ­å–œä½ ï¼Œä½ æ˜¯æœ¬å±Šç§‘ä¸¾è€ƒè¯•çš„"..str_title.."å¹¶ä¸”è·å¾—ä»¥ä¸‹å¥–å“:"..str_item
+		local cmsg = "ç¦»å¼€Â·Â·Â·Â·Â·Â·"
 		
 		x801016_MyAwardTitle( sceneId, selfId, place )
 		x801016_Client_Show_Message( sceneId, selfId, targetId, msg, cmsg, 0)
 		if huodongItemIndex and huodongItemIndex > -1 then
 			local strHodongItem = GetItemTransfer(sceneId, selfId, huodongItemIndex);
-			local strMsg = "#PÔÚÃâ·Ñ¾Ù°ì»Ê¼Ò¼¶»éÀñµÄ»î¶¯µ±ÖĞ£¬ÓÉÓÚ#W#{_INFOUSR"..GetName(sceneId, selfId).."}#PÔÚ¿Æ¾Ù»î¶¯ÖĞ»ñµÃÁË#Y¿Æ¾Ù"..str_title.."#PµÄ³ÆºÅ¡£³¯Í¢ÉõÎªĞÀÉÍ£¬ÌØ½±Àø#{_INFOMSG"..strHodongItem.."}¡£"
+			local strMsg = "#Påœ¨å…è´¹ä¸¾åŠçš‡å®¶çº§å©šç¤¼çš„æ´»åŠ¨å½“ä¸­ï¼Œç”±äº#W#{_INFOUSR"..GetName(sceneId, selfId).."}#Påœ¨ç§‘ä¸¾æ´»åŠ¨ä¸­è·å¾—äº†#Yç§‘ä¸¾"..str_title.."#Pçš„ç§°å·ã€‚æœå»·ç”šä¸ºæ¬£èµï¼Œç‰¹å¥–åŠ±#{_INFOMSG"..strHodongItem.."}ã€‚"
 			BroadMsgByChatPipe(sceneId, selfId, "@*;SrvMsg;SCA:"..strMsg, 4);
 		end
 		if place == 3 then
-				Msg2Player( sceneId,selfId,"Äú»ñµÃÁË³ÆºÅ#B¿Æ¾ÙÌ½»¨¡£",MSG2PLAYER_PARA)
+				Msg2Player( sceneId,selfId,"æ‚¨è·å¾—äº†ç§°å·#Bç§‘ä¸¾æ¢èŠ±ã€‚",MSG2PLAYER_PARA)
 		elseif place == 2 then
-				Msg2Player( sceneId,selfId,"Äú»ñµÃÁË³ÆºÅ#B¿Æ¾Ù°ñÑÛ¡£",MSG2PLAYER_PARA)
+				Msg2Player( sceneId,selfId,"æ‚¨è·å¾—äº†ç§°å·#Bç§‘ä¸¾æ¦œçœ¼ã€‚",MSG2PLAYER_PARA)
 		elseif place == 1 then
-				Msg2Player( sceneId,selfId,"Äú»ñµÃÁË³ÆºÅ#B¿Æ¾Ù×´Ôª¡£",MSG2PLAYER_PARA)
+				Msg2Player( sceneId,selfId,"æ‚¨è·å¾—äº†ç§°å·#Bç§‘ä¸¾çŠ¶å…ƒã€‚",MSG2PLAYER_PARA)
 		end
 		return
 	else
-		local msg = "±³°üÒÑÂú£¬ÇëÇåÀíÍê±³°üÔÙÀ´ÁìÈ¡½±Àø¡£"
-		local cmsg = "Àë¿ª¡¤¡¤¡¤¡¤¡¤¡¤"
+		local msg = "èƒŒåŒ…å·²æ»¡ï¼Œè¯·æ¸…ç†å®ŒèƒŒåŒ…å†æ¥é¢†å–å¥–åŠ±ã€‚"
+		local cmsg = "ç¦»å¼€Â·Â·Â·Â·Â·Â·"
 
 		x801016_Client_Show_Message( sceneId, selfId, targetId, msg, cmsg, 0)
 		return
---		Msg2Player( sceneId,selfId,"±³°üÒÑÂú£¬ÇëÇåÀíÍê±³°üÔÙÀ´ÁìÈ¡½±Àø¡£",MSG2PLAYER_PARA)
+--		Msg2Player( sceneId,selfId,"èƒŒåŒ…å·²æ»¡ï¼Œè¯·æ¸…ç†å®ŒèƒŒåŒ…å†æ¥é¢†å–å¥–åŠ±ã€‚",MSG2PLAYER_PARA)
 	end
 
 	return
 end
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x801016_OnEnumerate( sceneId, selfId, targetId )
 --SetMissionData(sceneId,selfId,MD_EXAM_SEQUENCE,203)
@@ -615,15 +615,15 @@ function x801016_OnEnumerate( sceneId, selfId, targetId )
 		SetMissionData(sceneId,selfId,MD_EXAM_FIGHT_FLAG,0)
 		SetMissionData(sceneId,selfId,MD_EXAM_BRIBE_FLAG,0)
 
-		-- ÈÎÎñ»ò»î¶¯Í³¼Æ
-		LuaFnAuditQuest(sceneId, selfId, "¿Æ¾Ù")
+		-- ä»»åŠ¡æˆ–æ´»åŠ¨ç»Ÿè®¡
+		LuaFnAuditQuest(sceneId, selfId, "ç§‘ä¸¾")
 
 	end
 	
 	if LuaFnGetLevel( sceneId, selfId) < 10 then
 
-		local msg = "10¼¶ÒÔÉÏµÄÍæ¼Ò·½¿É²Î¼Ó»î¶¯¡£"
-		local cmsg = "Àë¿ª¡¤¡¤¡¤¡¤¡¤¡¤"
+		local msg = "10çº§ä»¥ä¸Šçš„ç©å®¶æ–¹å¯å‚åŠ æ´»åŠ¨ã€‚"
+		local cmsg = "ç¦»å¼€Â·Â·Â·Â·Â·Â·"
 
 		x801016_Client_Show_Message( sceneId, selfId, targetId, msg, cmsg, 0)
 		return
@@ -636,15 +636,15 @@ function x801016_OnEnumerate( sceneId, selfId, targetId )
 			x801016_Bestow_Gift_OnTop( sceneId, selfId, ret);
 			return
 --		elseif  x801016_Query_Candidate( sceneId, selfId ) == 1 then
---			local msg = "ÄãÃ»ÓĞ½øÈëÇ°Èı¼×¡£"
---			local cmsg = "Àë¿ª¡¤¡¤¡¤¡¤¡¤¡¤"
+--			local msg = "ä½ æ²¡æœ‰è¿›å…¥å‰ä¸‰ç”²ã€‚"
+--			local cmsg = "ç¦»å¼€Â·Â·Â·Â·Â·Â·"
 
 --			x801016_Client_Show_Message( sceneId, selfId, targetId, msg, cmsg, 0)
 --			return
 		end
 		
-		local msg = "ÏÖÔÚ»¹Ã»ÓĞµ½¿Æ¾Ù¿ªÊ¼µÄÊ±¼ä£¬ÇëµÈ»î¶¯¿ªÊ¼Ö®ºóÔÙÀ´ÕÒ¡£"
-		local cmsg = "Àë¿ª¡¤¡¤¡¤¡¤¡¤¡¤"
+		local msg = "ç°åœ¨è¿˜æ²¡æœ‰åˆ°ç§‘ä¸¾å¼€å§‹çš„æ—¶é—´ï¼Œè¯·ç­‰æ´»åŠ¨å¼€å§‹ä¹‹åå†æ¥æ‰¾ã€‚"
+		local cmsg = "ç¦»å¼€Â·Â·Â·Â·Â·Â·"
 
 		x801016_Client_Show_Message( sceneId, selfId, targetId, msg, cmsg, 0)
 		return
@@ -658,8 +658,8 @@ function x801016_OnEnumerate( sceneId, selfId, targetId )
 
 	if Wrong_Times == 0 then
 
-		local msg = "¿ÉÏ§¿ÉÏ§£¬ÄãÒÑ¾­Ã»ÓĞ´ğ´í»ú»áÁË£¬ÇëÏÂ´Î¿¼ÊÔµÄÊ±ºò¼ÌĞøÅ¬Á¦¡£"
-		local cmsg = "Àë¿ª¡¤¡¤¡¤¡¤¡¤¡¤"
+		local msg = "å¯æƒœå¯æƒœï¼Œä½ å·²ç»æ²¡æœ‰ç­”é”™æœºä¼šäº†ï¼Œè¯·ä¸‹æ¬¡è€ƒè¯•çš„æ—¶å€™ç»§ç»­åŠªåŠ›ã€‚"
+		local cmsg = "ç¦»å¼€Â·Â·Â·Â·Â·Â·"
 
 		x801016_Client_Show_Message( sceneId, selfId, targetId, msg, cmsg, 0)
 		return
@@ -668,8 +668,8 @@ function x801016_OnEnumerate( sceneId, selfId, targetId )
 	if times~=0 and x801016_EstimationPhase( sceneId, selfId ) == 1 then
 
 		if Examinator_Sequence >= x801016_g_Count_Examinant then
-			local msg = "ÇëµÈ´ıÏÂÒ»ÂÖµÄ¿Æ¾Ù»î¶¯¡£"
-			local cmsg = "Àë¿ª¡¤¡¤¡¤¡¤¡¤¡¤"
+			local msg = "è¯·ç­‰å¾…ä¸‹ä¸€è½®çš„ç§‘ä¸¾æ´»åŠ¨ã€‚"
+			local cmsg = "ç¦»å¼€Â·Â·Â·Â·Â·Â·"
 
 			x801016_Client_Show_Message( sceneId, selfId, targetId, msg, cmsg, 0)
 			return
@@ -678,9 +678,9 @@ function x801016_OnEnumerate( sceneId, selfId, targetId )
 	if times~=0 and x801016_EstimationPhase( sceneId, selfId ) == 1 then
 	
 		if Examinator_Sequence+1 ~= x801016_g_Count_Examinant and Examinator_Sequence+1 ~= x801016_Which_Examinant( sceneId, selfId, targetId ) then
-			--local msg = "ÇëÕÒµÚ"..tostring(Examinator_Sequence+1).."Î»¿¼¹ÙÓ¦ÊÔ¡£#r´Ë¿¼¹ÙÎ»ÖÃÔÚ("..x801016_g_Examinant_Position[Examinator_Sequence+1].x..", "..x801016_g_Examinant_Position[Examinator_Sequence+1].z..")¡£"
-			local msg = "ÇëÕÒµÚ"..tostring(Examinator_Sequence+1).."Î»¿¼¹ÙÓ¦ÊÔ¡£#r´Ë¿¼¹ÙÎ»ÖÃÔÚ#{_INFOAIM"..x801016_g_Examinant_Position[Examinator_Sequence+1].x..","..x801016_g_Examinant_Position[Examinator_Sequence+1].z..","..sceneId..","..x801016_g_Examinant_Name[Examinator_Sequence+1].."}¡£" --zchw
-			local cmsg = "Àë¿ª¡¤¡¤¡¤¡¤¡¤¡¤"
+			--local msg = "è¯·æ‰¾ç¬¬"..tostring(Examinator_Sequence+1).."ä½è€ƒå®˜åº”è¯•ã€‚#ræ­¤è€ƒå®˜ä½ç½®åœ¨("..x801016_g_Examinant_Position[Examinator_Sequence+1].x..", "..x801016_g_Examinant_Position[Examinator_Sequence+1].z..")ã€‚"
+			local msg = "è¯·æ‰¾ç¬¬"..tostring(Examinator_Sequence+1).."ä½è€ƒå®˜åº”è¯•ã€‚#ræ­¤è€ƒå®˜ä½ç½®åœ¨#{_INFOAIM"..x801016_g_Examinant_Position[Examinator_Sequence+1].x..","..x801016_g_Examinant_Position[Examinator_Sequence+1].z..","..sceneId..","..x801016_g_Examinant_Name[Examinator_Sequence+1].."}ã€‚" --zchw
+			local cmsg = "ç¦»å¼€Â·Â·Â·Â·Â·Â·"
 			CallScriptFunction( SCENE_SCRIPT_ID, "AskTheWay", sceneId, selfId, sceneId, x801016_g_Examinant_Position[Examinator_Sequence+1].x, x801016_g_Examinant_Position[Examinator_Sequence+1].z, x801016_g_Examinant_Name[Examinator_Sequence+1] )
 
 			x801016_Client_Show_Message( sceneId, selfId, targetId, msg, cmsg, 0)
@@ -695,8 +695,8 @@ function x801016_OnEnumerate( sceneId, selfId, targetId )
 	if x801016_EstimationPhase( sceneId, selfId) == 2 then
 		if x801016_Query_Candidate( sceneId, selfId ) == 0 then
 
-			local msg = "ÄãÃ»ÓĞ²Î¼ÓÊ¡ÊÔµÄ×Ê¸ñ¡£"
-			local cmsg = "Àë¿ª¡¤¡¤¡¤¡¤¡¤¡¤"
+			local msg = "ä½ æ²¡æœ‰å‚åŠ çœè¯•çš„èµ„æ ¼ã€‚"
+			local cmsg = "ç¦»å¼€Â·Â·Â·Â·Â·Â·"
 
 			x801016_Client_Show_Message( sceneId, selfId, targetId, msg, cmsg, 0)
 			return
@@ -704,8 +704,8 @@ function x801016_OnEnumerate( sceneId, selfId, targetId )
 
 		if Examinator_Sequence > x801016_g_Count_Examinant then
 
-			local msg = "¹§Ï²Äú»Ø´ğÍêËùÓĞµÄÊ¡ÊÔÌâÄ¿£¬Èı¼×½«ÔÚÉÒºó¹«²¼¡£"
-			local cmsg = "Àë¿ª¡¤¡¤¡¤¡¤¡¤¡¤"
+			local msg = "æ­å–œæ‚¨å›ç­”å®Œæ‰€æœ‰çš„çœè¯•é¢˜ç›®ï¼Œä¸‰ç”²å°†åœ¨æ¢¢åå…¬å¸ƒã€‚"
+			local cmsg = "ç¦»å¼€Â·Â·Â·Â·Â·Â·"
 
 			x801016_Client_Show_Message( sceneId, selfId, targetId, msg, cmsg, 0)
 			return
@@ -714,9 +714,9 @@ function x801016_OnEnumerate( sceneId, selfId, targetId )
 			SetMissionData(sceneId,selfId,MD_EXAM_TARGETID,targetId)
 			AddNumText(sceneId,x801016_g_ScriptId,x801016_g_MissionName,4,-1);
 		else
-			--local msg = "ÇëÕÒ(Ö÷)¿¼¹ÙÒ»Ó¦ÊÔ¡£#r´Ë¿¼¹ÙÎ»ÖÃÔÚ("..x801016_g_Examinant_Position[1].x..", "..x801016_g_Examinant_Position[1].z..")¡£"
-			local msg = "ÇëÕÒ(Ö÷)¿¼¹ÙÒ»Ó¦ÊÔ¡£#r´Ë¿¼¹ÙÎ»ÖÃÔÚ#{_INFOAIM"..x801016_g_Examinant_Position[1].x..","..x801016_g_Examinant_Position[1].z..","..sceneId..","..x801016_g_Examinant_Name[0+1].."}¡£" --zchw
-			local cmsg = "Àë¿ª¡¤¡¤¡¤¡¤¡¤¡¤"
+			--local msg = "è¯·æ‰¾(ä¸»)è€ƒå®˜ä¸€åº”è¯•ã€‚#ræ­¤è€ƒå®˜ä½ç½®åœ¨("..x801016_g_Examinant_Position[1].x..", "..x801016_g_Examinant_Position[1].z..")ã€‚"
+			local msg = "è¯·æ‰¾(ä¸»)è€ƒå®˜ä¸€åº”è¯•ã€‚#ræ­¤è€ƒå®˜ä½ç½®åœ¨#{_INFOAIM"..x801016_g_Examinant_Position[1].x..","..x801016_g_Examinant_Position[1].z..","..sceneId..","..x801016_g_Examinant_Name[0+1].."}ã€‚" --zchw
+			local cmsg = "ç¦»å¼€Â·Â·Â·Â·Â·Â·"
 			CallScriptFunction( SCENE_SCRIPT_ID, "AskTheWay", sceneId, selfId, sceneId, x801016_g_Examinant_Position[0+1].x, x801016_g_Examinant_Position[0+1].z, x801016_g_Examinant_Name[0+1] )
 
 			x801016_Client_Show_Message( sceneId, selfId, targetId, msg, cmsg, 0)
@@ -726,8 +726,8 @@ function x801016_OnEnumerate( sceneId, selfId, targetId )
 		SetMissionData(sceneId,selfId,MD_EXAM_TARGETID,targetId)
 		AddNumText(sceneId,x801016_g_ScriptId,x801016_g_MissionName,4,-1);
 	else
-		local msg = "ÏÖÔÚ²»½øĞĞ¿Æ¾Ù¿¼ÊÔ¡£"
-		local cmsg = "Àë¿ª¡¤¡¤¡¤¡¤¡¤¡¤"
+		local msg = "ç°åœ¨ä¸è¿›è¡Œç§‘ä¸¾è€ƒè¯•ã€‚"
+		local cmsg = "ç¦»å¼€Â·Â·Â·Â·Â·Â·"
 
 		x801016_Client_Show_Message( sceneId, selfId, targetId, msg, cmsg, 0)
 		return
@@ -735,7 +735,7 @@ function x801016_OnEnumerate( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÌáÎÊ
+--æé—®
 --**********************************
 function x801016_AskQuestion( sceneId, selfId )
 --	SetMissionData(sceneId,selfId,MD_EXAM_SEQUENCE,1093)
@@ -763,8 +763,8 @@ function x801016_AskQuestion( sceneId, selfId )
 			local jz,jb = LuaFnCostMoneyWithPriority( sceneId, selfId, need_money )  
 
 			if jz == -1  then                                           
-				local msg = "¶Ô²»Æğ£¬ÄúÉíÉÏµÄ½ğÇ®²»×ã¡£"
-				local cmsg = "Àë¿ª¡¤¡¤¡¤¡¤¡¤¡¤"
+				local msg = "å¯¹ä¸èµ·ï¼Œæ‚¨èº«ä¸Šçš„é‡‘é’±ä¸è¶³ã€‚"
+				local cmsg = "ç¦»å¼€Â·Â·Â·Â·Â·Â·"
 
 				x801016_Client_Show_Message( sceneId, selfId, targetId, msg, cmsg, 0)
 				return
@@ -775,8 +775,8 @@ function x801016_AskQuestion( sceneId, selfId )
 	end
 	
 	if times ~= 0 and Wrong_Times == 0 then
-		local msg = "¿ÉÏ§¿ÉÏ§£¬ÄãÒÑ¾­Ã»ÓĞ´ğ´í»ú»áÁË£¬ÇëÏÂ´Î¿¼ÊÔµÄÊ±ºò¼ÌĞøÅ¬Á¦¡£"
-		local cmsg = "Àë¿ª¡¤¡¤¡¤¡¤¡¤¡¤"
+		local msg = "å¯æƒœå¯æƒœï¼Œä½ å·²ç»æ²¡æœ‰ç­”é”™æœºä¼šäº†ï¼Œè¯·ä¸‹æ¬¡è€ƒè¯•çš„æ—¶å€™ç»§ç»­åŠªåŠ›ã€‚"
+		local cmsg = "ç¦»å¼€Â·Â·Â·Â·Â·Â·"
 
 		x801016_Client_Show_Message( sceneId, selfId, targetId, msg, cmsg, 0)
 		return
@@ -788,17 +788,17 @@ function x801016_AskQuestion( sceneId, selfId )
 	if phase_now == 1 then
 
 		if Examinator_Sequence >= x801016_g_Count_Examinant then
-			local msg = "ÇëµÈ´ıÏÂÒ»ÂÖµÄ¿Æ¾Ù»î¶¯¡£"
-			local cmsg = "Àë¿ª¡¤¡¤¡¤¡¤¡¤¡¤"
+			local msg = "è¯·ç­‰å¾…ä¸‹ä¸€è½®çš„ç§‘ä¸¾æ´»åŠ¨ã€‚"
+			local cmsg = "ç¦»å¼€Â·Â·Â·Â·Â·Â·"
 
 			x801016_Client_Show_Message( sceneId, selfId, targetId, msg, cmsg, 0)
 			return
 		end
 --		PrintNum(Question_Sequence_Before)
 		if Examinator_Sequence+1 ~= x801016_Which_Examinant( sceneId, selfId, targetId ) then
-			--local msg = "ÇëÕÒµÚ"..tostring(Examinator_Sequence+1).."Î»¿¼¹ÙÓ¦ÊÔ¡£#r´Ë¿¼¹ÙÎ»ÖÃÔÚ("..x801016_g_Examinant_Position[Examinator_Sequence+1].x..", "..x801016_g_Examinant_Position[Examinator_Sequence+1].z..")¡£"
-			local msg = "ÇëÕÒµÚ"..tostring(Examinator_Sequence+1).."Î»¿¼¹ÙÓ¦ÊÔ¡£#r´Ë¿¼¹ÙÎ»ÖÃÔÚ#{_INFOAIM"..x801016_g_Examinant_Position[Examinator_Sequence+1].x..","..x801016_g_Examinant_Position[Examinator_Sequence+1].z..","..sceneId..","..x801016_g_Examinant_Name[Examinator_Sequence+1].."}¡£" --zchw
-			local cmsg = "Àë¿ª¡¤¡¤¡¤¡¤¡¤¡¤"
+			--local msg = "è¯·æ‰¾ç¬¬"..tostring(Examinator_Sequence+1).."ä½è€ƒå®˜åº”è¯•ã€‚#ræ­¤è€ƒå®˜ä½ç½®åœ¨("..x801016_g_Examinant_Position[Examinator_Sequence+1].x..", "..x801016_g_Examinant_Position[Examinator_Sequence+1].z..")ã€‚"
+			local msg = "è¯·æ‰¾ç¬¬"..tostring(Examinator_Sequence+1).."ä½è€ƒå®˜åº”è¯•ã€‚#ræ­¤è€ƒå®˜ä½ç½®åœ¨#{_INFOAIM"..x801016_g_Examinant_Position[Examinator_Sequence+1].x..","..x801016_g_Examinant_Position[Examinator_Sequence+1].z..","..sceneId..","..x801016_g_Examinant_Name[Examinator_Sequence+1].."}ã€‚" --zchw
+			local cmsg = "ç¦»å¼€Â·Â·Â·Â·Â·Â·"
 			CallScriptFunction( SCENE_SCRIPT_ID, "AskTheWay", sceneId, selfId, sceneId, x801016_g_Examinant_Position[Examinator_Sequence+1].x, x801016_g_Examinant_Position[Examinator_Sequence+1].z, x801016_g_Examinant_Name[Examinator_Sequence+1] )
 
 			x801016_Client_Show_Message( sceneId, selfId, targetId, msg, cmsg, 0)
@@ -808,8 +808,8 @@ function x801016_AskQuestion( sceneId, selfId )
 		local current_time = New_Time - starttime
 		if Question_Sequence == 1 and Wrong_Times == 0 then
 			if current_time < 72000 then
-				local msg = "Ã¿ÌìÖ»ÄÜ²Î¼ÓÒ»´Î¿Æ¾Ù»î¶¯¡£"
-				local cmsg = "Àë¿ª¡¤¡¤¡¤¡¤¡¤¡¤"
+				local msg = "æ¯å¤©åªèƒ½å‚åŠ ä¸€æ¬¡ç§‘ä¸¾æ´»åŠ¨ã€‚"
+				local cmsg = "ç¦»å¼€Â·Â·Â·Â·Â·Â·"
 
 				x801016_Client_Show_Message( sceneId, selfId, targetId, msg, cmsg, 0)
 				return
@@ -821,16 +821,16 @@ function x801016_AskQuestion( sceneId, selfId )
 	elseif phase_now == 2 then
 		
 		if x801016_Query_Candidate( sceneId, selfId ) == 0 then
-			local msg = "ÄãÃ»ÓĞ²Î¼ÓÊ¡ÊÔµÄ×Ê¸ñ¡£"
-			local cmsg = "Àë¿ª¡¤¡¤¡¤¡¤¡¤¡¤"
+			local msg = "ä½ æ²¡æœ‰å‚åŠ çœè¯•çš„èµ„æ ¼ã€‚"
+			local cmsg = "ç¦»å¼€Â·Â·Â·Â·Â·Â·"
 
 			x801016_Client_Show_Message( sceneId, selfId, targetId, msg, cmsg, 0)
 			return
 		end
 		
 		if x801016_Which_Examinant( sceneId, selfId, targetId ) ~= 1 then
-			local msg = "ÇëÕÒµÚÒ»Î»¿¼¹ÙÓ¦ÊÔ¡£"
-			local cmsg = "Àë¿ª¡¤¡¤¡¤¡¤¡¤¡¤"
+			local msg = "è¯·æ‰¾ç¬¬ä¸€ä½è€ƒå®˜åº”è¯•ã€‚"
+			local cmsg = "ç¦»å¼€Â·Â·Â·Â·Â·Â·"
 			CallScriptFunction( SCENE_SCRIPT_ID, "AskTheWay", sceneId, selfId, sceneId, x801016_g_Examinant_Position[0+1].x, x801016_g_Examinant_Position[0+1].z, x801016_g_Examinant_Name[0+1] )
 
 			x801016_Client_Show_Message( sceneId, selfId, targetId, msg, cmsg, 0)
@@ -839,8 +839,8 @@ function x801016_AskQuestion( sceneId, selfId )
 	
 		if Examinator_Sequence == x801016_g_Count_Examinant then
 
-			local msg = "¹§Ï²Äú»Ø´ğÍêËùÓĞµÄÊ¡ÊÔÌâÄ¿£¬Èı¼×½«ÔÚÉÒºó¹«²¼¡£"
-			local cmsg = "Àë¿ª¡¤¡¤¡¤¡¤¡¤¡¤"
+			local msg = "æ­å–œæ‚¨å›ç­”å®Œæ‰€æœ‰çš„çœè¯•é¢˜ç›®ï¼Œä¸‰ç”²å°†åœ¨æ¢¢åå…¬å¸ƒã€‚"
+			local cmsg = "ç¦»å¼€Â·Â·Â·Â·Â·Â·"
 
 			x801016_Client_Show_Message( sceneId, selfId, targetId, msg, cmsg, 0)
 			return
@@ -850,8 +850,8 @@ function x801016_AskQuestion( sceneId, selfId )
 		end
 
 	else
-		local msg = "ÏÖÔÚ²»½øĞĞ¿Æ¾Ù¿¼ÊÔ¡£"
-		local cmsg = "Àë¿ª¡¤¡¤¡¤¡¤¡¤¡¤"
+		local msg = "ç°åœ¨ä¸è¿›è¡Œç§‘ä¸¾è€ƒè¯•ã€‚"
+		local cmsg = "ç¦»å¼€Â·Â·Â·Â·Â·Â·"
 
 			x801016_Client_Show_Message( sceneId, selfId, targetId, msg, cmsg, 0)
 		return
@@ -860,9 +860,9 @@ function x801016_AskQuestion( sceneId, selfId )
 
 	local wenti = GetMissionData(sceneId,selfId,MD_EXAM_QUESTION)
 	if wenti == 0 then
-		--Ëæ»ú³öÒ»¸öºÅÂë
-		-- Èç¹ûÊÇÇ°5ÂÖ£¬¾ÍÔÚ4ÀïÍ·Ëæ»ú£¬ºóÃæµÄÔÚ5ÖĞËæ»ú
-		-- »ñµÃµ±Ç°ÊÇµÚ¼¸ÂÖ
+		--éšæœºå‡ºä¸€ä¸ªå·ç 
+		-- å¦‚æœæ˜¯å‰5è½®ï¼Œå°±åœ¨4é‡Œå¤´éšæœºï¼Œåé¢çš„åœ¨5ä¸­éšæœº
+		-- è·å¾—å½“å‰æ˜¯ç¬¬å‡ è½®
 		local nRing = x801016_Which_Examinant(sceneId, selfId, targetId)
 		if nRing<=5  then
 			wenti = GetRandomQuestionsIndex(4)
@@ -878,14 +878,14 @@ function x801016_AskQuestion( sceneId, selfId )
 
 	local con,opt0,opt1,opt2,opt3,opt4,opt5,key0,key1,key2,key3,key4,key5,sztype=GetQuestionsRecord(wenti)
 
-	if con=="" then		--×¢ÒâÕâÀïÈç¹ûÑ¡ÏîÊÇ¿ÕÔòÓÃ  ==""   À´ÅĞ¶Ï
-		Msg2Player( sceneId,selfId,"Î´ÕÒµ½ÎÊÌâ:"..wenti,MSG2PLAYER_PARA)
+	if con=="" then		--æ³¨æ„è¿™é‡Œå¦‚æœé€‰é¡¹æ˜¯ç©ºåˆ™ç”¨  ==""   æ¥åˆ¤æ–­
+		Msg2Player( sceneId,selfId,"æœªæ‰¾åˆ°é—®é¢˜:"..wenti,MSG2PLAYER_PARA)
 	end
 	
 	SetMissionData(sceneId,selfId,MD_EXAM_QUESTION,wenti)
 	
 	local key_position = {}
-	--°ÑËûÃÇÎ»ÖÃËæ»úµô
+	--æŠŠä»–ä»¬ä½ç½®éšæœºæ‰
 	x801016_g_rand = random(0,2)
 	if x801016_g_rand == 0 then
 		key_position[0] = 1
@@ -952,7 +952,7 @@ function x801016_AskQuestion( sceneId, selfId )
 end
 
 --**********************************
---»Ø´ğ
+--å›ç­”
 --**********************************
 function x801016_AnswerQuestion( sceneId, selfId, Question, Answer1 )
 	local times = GetMissionData(sceneId,selfId,MD_EXAM_SEQUENCE)
@@ -965,7 +965,7 @@ function x801016_AnswerQuestion( sceneId, selfId, Question, Answer1 )
 	
 	local wenti = GetMissionData(sceneId,selfId,MD_EXAM_QUESTION)
 	if Question ~= wenti  then
-		--PrintStr("Íæ¼ÒÌá½»µÄÎÊÌâ´íÎó£¬ÊÇ²»ÊÇÔÚ×÷±×?")
+		--PrintStr("ç©å®¶æäº¤çš„é—®é¢˜é”™è¯¯ï¼Œæ˜¯ä¸æ˜¯åœ¨ä½œå¼Š?")
 		return
 	end
 
@@ -980,8 +980,8 @@ function x801016_AnswerQuestion( sceneId, selfId, Question, Answer1 )
 	local targetId = GetMissionData(sceneId,selfId,MD_EXAM_TARGETID)
 		
 	if Wrong_Times == 0 then
-		local msg = "¿ÉÏ§¿ÉÏ§£¬ÄãÒÑ¾­Ã»ÓĞ´ğ´í»ú»áÁË£¬ÇëÏÂ´Î¿¼ÊÔµÄÊ±ºò¼ÌĞøÅ¬Á¦¡£"
-		local cmsg = "Àë¿ª¡¤¡¤¡¤¡¤¡¤¡¤"
+		local msg = "å¯æƒœå¯æƒœï¼Œä½ å·²ç»æ²¡æœ‰ç­”é”™æœºä¼šäº†ï¼Œè¯·ä¸‹æ¬¡è€ƒè¯•çš„æ—¶å€™ç»§ç»­åŠªåŠ›ã€‚"
+		local cmsg = "ç¦»å¼€Â·Â·Â·Â·Â·Â·"
 
 		x801016_Client_Show_Message( sceneId, selfId, targetId, msg, cmsg, 0)
 		return
@@ -992,8 +992,8 @@ function x801016_AnswerQuestion( sceneId, selfId, Question, Answer1 )
 	if x801016_EstimationPhase( sceneId, selfId ) == 1 then
 	
 		if Examinator_Sequence+1 ~= x801016_Which_Examinant( sceneId, selfId, targetId ) then
-			local msg = "ÇëÕÒµÚ"..tostring(Examinator_Sequence+1).."Î»¿¼¹ÙÓ¦ÊÔ¡£"
-			local cmsg = "Àë¿ª¡¤¡¤¡¤¡¤¡¤¡¤"
+			local msg = "è¯·æ‰¾ç¬¬"..tostring(Examinator_Sequence+1).."ä½è€ƒå®˜åº”è¯•ã€‚"
+			local cmsg = "ç¦»å¼€Â·Â·Â·Â·Â·Â·"
 			CallScriptFunction( SCENE_SCRIPT_ID, "AskTheWay", sceneId, selfId, sceneId, x801016_g_Examinant_Position[Examinator_Sequence+1].x, x801016_g_Examinant_Position[Examinator_Sequence+1].z, x801016_g_Examinant_Name[Examinator_Sequence+1] )
 
 			x801016_Client_Show_Message( sceneId, selfId, targetId, msg, cmsg, 0)
@@ -1002,16 +1002,16 @@ function x801016_AnswerQuestion( sceneId, selfId, Question, Answer1 )
 	elseif x801016_EstimationPhase( sceneId, selfId ) == 2 then
 	
 		if x801016_Query_Candidate( sceneId, selfId ) == 0 then
-			local msg = "ÄãÃ»ÓĞ²Î¼ÓÊ¡ÊÔµÄ×Ê¸ñ¡£"
-			local cmsg = "Àë¿ª¡¤¡¤¡¤¡¤¡¤¡¤"
+			local msg = "ä½ æ²¡æœ‰å‚åŠ çœè¯•çš„èµ„æ ¼ã€‚"
+			local cmsg = "ç¦»å¼€Â·Â·Â·Â·Â·Â·"
 	
 			x801016_Client_Show_Message( sceneId, selfId, targetId, msg, cmsg, 0)
 			return
 		end
 		
 		if x801016_Which_Examinant( sceneId, selfId, targetId ) ~= 1 then
-			local msg = "ÇëÕÒµÚÒ»Î»¿¼¹ÙÓ¦ÊÔ¡£"
-			local cmsg = "Àë¿ª¡¤¡¤¡¤¡¤¡¤¡¤"
+			local msg = "è¯·æ‰¾ç¬¬ä¸€ä½è€ƒå®˜åº”è¯•ã€‚"
+			local cmsg = "ç¦»å¼€Â·Â·Â·Â·Â·Â·"
 			CallScriptFunction( SCENE_SCRIPT_ID, "AskTheWay", sceneId, selfId, sceneId, x801016_g_Examinant_Position[0+1].x, x801016_g_Examinant_Position[0+1].z, x801016_g_Examinant_Name[0+1] )
 
 			x801016_Client_Show_Message( sceneId, selfId, targetId, msg, cmsg, 0)
@@ -1019,16 +1019,16 @@ function x801016_AnswerQuestion( sceneId, selfId, Question, Answer1 )
 		end
 
 	else
-		local msg = "ÏÖÔÚ²»½øĞĞ¿Æ¾Ù¿¼ÊÔ¡£"
-		local cmsg = "Àë¿ª¡¤¡¤¡¤¡¤¡¤¡¤"
+		local msg = "ç°åœ¨ä¸è¿›è¡Œç§‘ä¸¾è€ƒè¯•ã€‚"
+		local cmsg = "ç¦»å¼€Â·Â·Â·Â·Â·Â·"
 
 		x801016_Client_Show_Message( sceneId, selfId, targetId, msg, cmsg, 0)
 		
 		return
 	end
 	
-	if con=="" then		--×¢ÒâÕâÀïÈç¹ûÑ¡ÏîÊÇ¿ÕÔòÓÃ  ==""   À´ÅĞ¶Ï
-		Msg2Player( sceneId,selfId,"Î´ÕÒµ½ÎÊÌâ",MSG2PLAYER_PARA)
+	if con=="" then		--æ³¨æ„è¿™é‡Œå¦‚æœé€‰é¡¹æ˜¯ç©ºåˆ™ç”¨  ==""   æ¥åˆ¤æ–­
+		Msg2Player( sceneId,selfId,"æœªæ‰¾åˆ°é—®é¢˜",MSG2PLAYER_PARA)
 	end
 	
 	-- local asktime = GetMissionData(sceneId,selfId,MD_EXAM_ASKTIME)
@@ -1056,8 +1056,8 @@ function x801016_Answer_Wrong( sceneId, selfId )
 	local Examinator_Sequence =   floor(Question_Sequence_Before/x801016_g_Count_Question)
 	SetMissionData(sceneId,selfId,MD_EXAM_QUESTION,0)
 	if Wrong_Times == 0 then
-		msg = "¿ÉÏ§¿ÉÏ§£¬ÄãÒÑ¾­Ã»ÓĞ´ğ´í»ú»áÁË£¬ÇëÏÂ´Î¿¼ÊÔµÄÊ±ºò¼ÌĞøÅ¬Á¦¡£"
-		cmsg = "Àë¿ª¡¤¡¤¡¤¡¤¡¤¡¤"
+		msg = "å¯æƒœå¯æƒœï¼Œä½ å·²ç»æ²¡æœ‰ç­”é”™æœºä¼šäº†ï¼Œè¯·ä¸‹æ¬¡è€ƒè¯•çš„æ—¶å€™ç»§ç»­åŠªåŠ›ã€‚"
+		cmsg = "ç¦»å¼€Â·Â·Â·Â·Â·Â·"
 
 		x801016_Client_Show_Message( sceneId, selfId, targetId, msg, cmsg, 0)
 		return
@@ -1066,13 +1066,13 @@ function x801016_Answer_Wrong( sceneId, selfId )
 	SetMissionData(sceneId,selfId,MD_EXAM_SEQUENCE,times-1)
 	local error_times = Wrong_Times - 1
 	if error_times == 0 then
-		msg = "¿ÉÏ§¿ÉÏ§£¬ÄãÒÑ¾­Ã»ÓĞ´ğ´í»ú»áÁË£¬ÇëÏÂ´Î¿¼ÊÔµÄÊ±ºò¼ÌĞøÅ¬Á¦¡£"
-		cmsg = "Àë¿ª¡¤¡¤¡¤¡¤¡¤¡¤"
+		msg = "å¯æƒœå¯æƒœï¼Œä½ å·²ç»æ²¡æœ‰ç­”é”™æœºä¼šäº†ï¼Œè¯·ä¸‹æ¬¡è€ƒè¯•çš„æ—¶å€™ç»§ç»­åŠªåŠ›ã€‚"
+		cmsg = "ç¦»å¼€Â·Â·Â·Â·Â·Â·"
 
 		x801016_Client_Show_Message( sceneId, selfId, targetId, msg, cmsg, 0)
 	else
-		msg = "¶Ô²»Æğ£¬Äú´ğ´íÁË£¬Äú»¹ÓĞ"..error_times.."´Î»ú»á£¬ÇëºÃºÃ°ÑÎÕ¡£"
-		cmsg = "×¼±¸ºÃÁË£¬¿ªÊ¼°É¡¤¡¤¡¤¡¤¡¤¡¤"
+		msg = "å¯¹ä¸èµ·ï¼Œæ‚¨ç­”é”™äº†ï¼Œæ‚¨è¿˜æœ‰"..error_times.."æ¬¡æœºä¼šï¼Œè¯·å¥½å¥½æŠŠæ¡ã€‚"
+		cmsg = "å‡†å¤‡å¥½äº†ï¼Œå¼€å§‹å§Â·Â·Â·Â·Â·Â·"
 	
 		x801016_Client_Show_Message( sceneId, selfId, targetId, msg, cmsg, 1)
 	end
@@ -1092,8 +1092,8 @@ function x801016_Answer_Right( sceneId, selfId )
 	
 	if x801016_EstimationPhase(sceneId,selfId) == 2 then
 		if x801016_Query_Candidate( sceneId, selfId ) == 0 then
-			local msg = "ÄãÃ»ÓĞ²Î¼ÓÊ¡ÊÔµÄ×Ê¸ñ¡£"
-			local cmsg = "Àë¿ª¡¤¡¤¡¤¡¤¡¤¡¤"
+			local msg = "ä½ æ²¡æœ‰å‚åŠ çœè¯•çš„èµ„æ ¼ã€‚"
+			local cmsg = "ç¦»å¼€Â·Â·Â·Â·Â·Â·"
 		
 			x801016_Client_Show_Message( sceneId, selfId, targetId, msg, cmsg, 0)
 			return
@@ -1118,18 +1118,18 @@ function x801016_Answer_Right( sceneId, selfId )
 			local selfGuid = LuaFnObjId2Guid(sceneId,selfId)
 
 			local current_time = LuaFnGetCurrentTime() - starttime
-			local msg = "¹§Ï²ÄúÒÑ¾­»Ø´ğÍêËùÓĞµÄÖİÊÔÌâÄ¿£¬²»ÖªµÀÄÜ²»ÄÜ½øÊ¡ÊÔÄØ£¬ÇëÁôÒâÉÔºóµÄÍ¨Öª¡£"
-			local cmsg = "Àë¿ª¡¤¡¤¡¤¡¤¡¤¡¤"
+			local msg = "æ­å–œæ‚¨å·²ç»å›ç­”å®Œæ‰€æœ‰çš„å·è¯•é¢˜ç›®ï¼Œä¸çŸ¥é“èƒ½ä¸èƒ½è¿›çœè¯•å‘¢ï¼Œè¯·ç•™æ„ç¨åçš„é€šçŸ¥ã€‚"
+			local cmsg = "ç¦»å¼€Â·Â·Â·Â·Â·Â·"
 
 			local myname = GetName(sceneId,selfId)
-			BroadMsgByChatPipe( sceneId,selfId,"#W#{_INFOUSR"..myname.."}#PÔÚµÚÒ»ÂÖµÄ¿Æ¾Ùµ±ÖĞË³ÀûµÄ»Ø´ğÍêÈ«²¿µÄÌâÄ¿¡£",4) 
+			BroadMsgByChatPipe( sceneId,selfId,"#W#{_INFOUSR"..myname.."}#Påœ¨ç¬¬ä¸€è½®çš„ç§‘ä¸¾å½“ä¸­é¡ºåˆ©çš„å›ç­”å®Œå…¨éƒ¨çš„é¢˜ç›®ã€‚",4) 
 --			x801016_Add_To_Candidate( sceneId, selfId, current_time, selfGuid)
 			x801016_Add_To_Candidate( sceneId, selfId, current_time, myname)
 			x801016_Client_Show_Message( sceneId, selfId, targetId, msg, cmsg, 0)
 			SetMissionData(sceneId,selfId,MD_EXAM_BRIBE_FLAG,0)
 			SetMissionData(sceneId,selfId,MD_EXAM_FIGHT_FLAG,0)
 			SetMissionData(sceneId,selfId,MD_EXAM_SEQUENCE,(x801016_g_Count_Examinant*x801016_g_Count_Question)*100+3)
-			AuditCandidate(sceneId,selfId)                               --Í³¼ÆÍ¨¹ıµÚÒ»ÂÖµÄ´ÎÊı add by Dengxianxi
+			AuditCandidate(sceneId,selfId)                               --ç»Ÿè®¡é€šè¿‡ç¬¬ä¸€è½®çš„æ¬¡æ•° add by Dengxianxi
 		elseif x801016_EstimationPhase(sceneId,selfId) == 2 then
 --			PrintNum(Question_Sequence)
 			SetMissionData(sceneId,selfId,MD_EXAM_SEQUENCE,times + 100)
@@ -1138,8 +1138,8 @@ function x801016_Answer_Right( sceneId, selfId )
 				local selfGuid = LuaFnObjId2Guid(sceneId,selfId)
 
 				local current_time = LuaFnGetCurrentTime() - starttime
-				local msg = "¹§Ï²Äú»Ø´ğÍêËùÓĞµÄÊ¡ÊÔÌâÄ¿£¬Èı¼×½«ÔÚÉÒºó¹«²¼¡£"
-				local cmsg = "Àë¿ª¡¤¡¤¡¤¡¤¡¤¡¤"
+				local msg = "æ­å–œæ‚¨å›ç­”å®Œæ‰€æœ‰çš„çœè¯•é¢˜ç›®ï¼Œä¸‰ç”²å°†åœ¨æ¢¢åå…¬å¸ƒã€‚"
+				local cmsg = "ç¦»å¼€Â·Â·Â·Â·Â·Â·"
 --				PrintNum(current_time)
 --				PrintNum(selfGuid)
 				local myname = GetName(sceneId,selfId)
@@ -1155,10 +1155,10 @@ function x801016_Answer_Right( sceneId, selfId )
 			SetMissionData(sceneId,selfId,MD_EXAM_SEQUENCE,times + 101)
 			SetMissionData(sceneId,selfId,MD_EXAM_BRIBE_FLAG,0)
 			SetMissionData(sceneId,selfId,MD_EXAM_FIGHT_FLAG,0)
---dong yi ÈÃÎÒ¸ÉµÄ
-			--local msg = "ÄúµÄ»Ø´ğÍêÈ«ÕıÈ·£¬ÇëÕÒÏÂÒ»Î»¿¼¹ÙÓ¦ÊÔ¡£#rÄúÔö¼ÓÁËÒ»´ÎµÄ¿ÉÒÔ´ğ´íµÄ»ú»á¡£#rÏÂÒ»¸ö¿¼¹ÙÎ»ÖÃÔÚ("..x801016_g_Examinant_Position[Examinator_Sequence+2].x..", "..x801016_g_Examinant_Position[Examinator_Sequence+2].z..")¡£"
-			local msg = "ÄúµÄ»Ø´ğÍêÈ«ÕıÈ·£¬ÇëÕÒÏÂÒ»Î»¿¼¹ÙÓ¦ÊÔ¡£#rÄúÔö¼ÓÁËÒ»´ÎµÄ¿ÉÒÔ´ğ´íµÄ»ú»á¡£#rÏÂÒ»¸ö¿¼¹ÙÎ»ÖÃÔÚ#{_INFOAIM"..x801016_g_Examinant_Position[Examinator_Sequence+2].x..","..x801016_g_Examinant_Position[Examinator_Sequence+2].z..","..sceneId..","..x801016_g_Examinant_Name[Examinator_Sequence+2].."}¡£" --zchw
-			local cmsg = "Àë¿ª¡¤¡¤¡¤¡¤¡¤¡¤"
+--dong yi è®©æˆ‘å¹²çš„
+			--local msg = "æ‚¨çš„å›ç­”å®Œå…¨æ­£ç¡®ï¼Œè¯·æ‰¾ä¸‹ä¸€ä½è€ƒå®˜åº”è¯•ã€‚#ræ‚¨å¢åŠ äº†ä¸€æ¬¡çš„å¯ä»¥ç­”é”™çš„æœºä¼šã€‚#rä¸‹ä¸€ä¸ªè€ƒå®˜ä½ç½®åœ¨("..x801016_g_Examinant_Position[Examinator_Sequence+2].x..", "..x801016_g_Examinant_Position[Examinator_Sequence+2].z..")ã€‚"
+			local msg = "æ‚¨çš„å›ç­”å®Œå…¨æ­£ç¡®ï¼Œè¯·æ‰¾ä¸‹ä¸€ä½è€ƒå®˜åº”è¯•ã€‚#ræ‚¨å¢åŠ äº†ä¸€æ¬¡çš„å¯ä»¥ç­”é”™çš„æœºä¼šã€‚#rä¸‹ä¸€ä¸ªè€ƒå®˜ä½ç½®åœ¨#{_INFOAIM"..x801016_g_Examinant_Position[Examinator_Sequence+2].x..","..x801016_g_Examinant_Position[Examinator_Sequence+2].z..","..sceneId..","..x801016_g_Examinant_Name[Examinator_Sequence+2].."}ã€‚" --zchw
+			local cmsg = "ç¦»å¼€Â·Â·Â·Â·Â·Â·"
 			CallScriptFunction( SCENE_SCRIPT_ID, "AskTheWay", sceneId, selfId, sceneId, x801016_g_Examinant_Position[Examinator_Sequence+2].x, x801016_g_Examinant_Position[Examinator_Sequence+2].z, x801016_g_Examinant_Name[Examinator_Sequence+2] )
 
 			x801016_Client_Show_Message( sceneId, selfId, targetId, msg, cmsg, 0)
@@ -1185,11 +1185,11 @@ end
 function x801016_GenPreminuTxt1(rr,szItem)
 		local str = ""
 		if rr == 1 then
-			str = "#P¿Æ¾Ù¿¼ÊÔÊ±£¬ÔõÃ´Ò²ÕÒ²»¼û±ÊÄ«£¬Ö»ºÃÕÒÁË¼ş#W#{_INFOMSG"..szItem.."}#PÀ´´úÌæ±Ê¡£"
+			str = "#Pç§‘ä¸¾è€ƒè¯•æ—¶ï¼Œæ€ä¹ˆä¹Ÿæ‰¾ä¸è§ç¬”å¢¨ï¼Œåªå¥½æ‰¾äº†ä»¶#W#{_INFOMSG"..szItem.."}#Pæ¥ä»£æ›¿ç¬”ã€‚"
 		elseif rr == 2 then
-			str = "#PÔÚ¿Æ¾Ù¿¼ÊÔÊ±£¬ÔÚ×À×ÓÏÂÃæ·¢ÏÖÒ»¸ö#W#{_INFOMSG"..szItem.."}¡£"
+			str = "#Påœ¨ç§‘ä¸¾è€ƒè¯•æ—¶ï¼Œåœ¨æ¡Œå­ä¸‹é¢å‘ç°ä¸€ä¸ª#W#{_INFOMSG"..szItem.."}ã€‚"
 		elseif rr == 3 then
-			str = "#PÔÚ¿Æ¾Ù¿¼ÊÔÊ±£¬ÔÚ×À×ÓÏÂÃæ·¢ÏÖÒ»¸ö#W#{_INFOMSG"..szItem.."}¡£"
+			str = "#Påœ¨ç§‘ä¸¾è€ƒè¯•æ—¶ï¼Œåœ¨æ¡Œå­ä¸‹é¢å‘ç°ä¸€ä¸ª#W#{_INFOMSG"..szItem.."}ã€‚"
 		end
 		return str
 end
@@ -1197,11 +1197,11 @@ end
 function x801016_GenPreminuTxt2(rr,szItem)
 		local str = ""
 		if rr == 1 then
-			str = "#PÔÚ¿Æ¾Ù¿¼ÊÔÊ±£¬ÉîµÃÖ÷¿¼¹ÙµÄÆ÷ÖØ£¬ÔùÓèÆäÒ»¼ş#W#{_INFOMSG"..szItem.."}¡£"
+			str = "#Påœ¨ç§‘ä¸¾è€ƒè¯•æ—¶ï¼Œæ·±å¾—ä¸»è€ƒå®˜çš„å™¨é‡ï¼Œèµ äºˆå…¶ä¸€ä»¶#W#{_INFOMSG"..szItem.."}ã€‚"
 		elseif rr == 2 then
-			str = "#PÔÚ¿Æ¾Ù¿¼ÊÔÊ±£¬ÔÚ×À×ÓÏÂÃæ·¢ÏÖÒ»¸ö#W#{_INFOMSG"..szItem.."}#P¡£"
+			str = "#Påœ¨ç§‘ä¸¾è€ƒè¯•æ—¶ï¼Œåœ¨æ¡Œå­ä¸‹é¢å‘ç°ä¸€ä¸ª#W#{_INFOMSG"..szItem.."}#Pã€‚"
 		elseif rr == 3 then
-			str = "#PÔÚ¿Æ¾Ù¿¼ÊÔÊ±£¬ÔÚ×À×ÓÏÂÃæ·¢ÏÖÒ»¸ö#W#{_INFOMSG"..szItem.."}#P¡£"
+			str = "#Påœ¨ç§‘ä¸¾è€ƒè¯•æ—¶ï¼Œåœ¨æ¡Œå­ä¸‹é¢å‘ç°ä¸€ä¸ª#W#{_INFOMSG"..szItem.."}#Pã€‚"
 		end
 		return str
 end
@@ -1212,11 +1212,11 @@ function x801016_GenPreminuTxt3(type,rr,idItem)
 			return str
 		end
 		if rr == 1 and type == 1 then
-			str = "#P¿Æ¾Ù¿¼ÊÔÊ±£¬ÔõÃ´Ò²ÕÒ²»¼û±ÊÄ«£¬Ö»ºÃÕÒÁË¼ş#W#{_ITEM"..idItem.."}#P´úÌæ±Ê¡£¿ÉÏ§³ö¿¼³¡Ê±£¬Òò±³°üÒÑÂú£¬#{_ITEM"..idItem.."}±»¿¼¹ÙÃ»ÊÕ³ä¹«ÁË¡£"
+			str = "#Pç§‘ä¸¾è€ƒè¯•æ—¶ï¼Œæ€ä¹ˆä¹Ÿæ‰¾ä¸è§ç¬”å¢¨ï¼Œåªå¥½æ‰¾äº†ä»¶#W#{_ITEM"..idItem.."}#Pä»£æ›¿ç¬”ã€‚å¯æƒœå‡ºè€ƒåœºæ—¶ï¼Œå› èƒŒåŒ…å·²æ»¡ï¼Œ#{_ITEM"..idItem.."}è¢«è€ƒå®˜æ²¡æ”¶å……å…¬äº†ã€‚"
 		elseif rr == 1 and type == 2 then
-			str = "#PÔÚ¿Æ¾Ù¿¼ÊÔÊ±£¬ÉîµÃÖ÷¿¼¹ÙµÄÆ÷ÖØ¡£Ö÷¿¼¹Ù±¾´òËãÔùÓèÆä#W#{_ITEM"..idItem.."}#PÒ»¼ş£¬ÒòÎªÆä±³°üÒÑÂú¶ø×÷°Õ¡£"
+			str = "#Påœ¨ç§‘ä¸¾è€ƒè¯•æ—¶ï¼Œæ·±å¾—ä¸»è€ƒå®˜çš„å™¨é‡ã€‚ä¸»è€ƒå®˜æœ¬æ‰“ç®—èµ äºˆå…¶#W#{_ITEM"..idItem.."}#Pä¸€ä»¶ï¼Œå› ä¸ºå…¶èƒŒåŒ…å·²æ»¡è€Œä½œç½¢ã€‚"
 		else
-			str = "#PÔÚ¿Æ¾Ù¿¼ÊÔÊ±£¬ÔÚ×À×ÓÏÂÃæ·¢ÏÖÒ»¸ö#W#{_ITEM"..idItem.."}#P¡£¿ÉÏ§±³°üÒÑÂú£¬Ïë´øÒ²´ø²»×ßÁË¡£"
+			str = "#Påœ¨ç§‘ä¸¾è€ƒè¯•æ—¶ï¼Œåœ¨æ¡Œå­ä¸‹é¢å‘ç°ä¸€ä¸ª#W#{_ITEM"..idItem.."}#Pã€‚å¯æƒœèƒŒåŒ…å·²æ»¡ï¼Œæƒ³å¸¦ä¹Ÿå¸¦ä¸èµ°äº†ã€‚"
 		end
 		return str
 end
@@ -1232,7 +1232,7 @@ function x801016_Give_Premium( sceneId, selfId )
 	local Question_Sequence = mod(Question_Sequence_Before,x801016_g_Count_Question)
 	local Examinator_Sequence =   floor(Question_Sequence_Before/x801016_g_Count_Question)
 	
-	--½±Àø¾­Ñé
+	--å¥–åŠ±ç»éªŒ
 	local PlayerMaxLevel = GetHumanMaxLevelLimit()
 	if Player_Level <= PlayerMaxLevel and Player_Level >=10 then
 		LuaFnAddExp(sceneId,selfId,x801016_g_Imperial_Exam_Hortation[Question_Sequence+1] * x801016_g_Imperial_Exam_Table[Player_Level].exp)
@@ -1241,13 +1241,13 @@ function x801016_Give_Premium( sceneId, selfId )
 	if	(random(1000) <= 1 and Examinator_Sequence < x801016_g_Count_Examinant)  then
 		local rr = random(3)
 		local reward_object
-    local msg = "Äã»ñµÃÁËÒ»¸ö"    --ĞÑÄ¿ÌáÊ¾ÓÃ
+    local msg = "ä½ è·å¾—äº†ä¸€ä¸ª"    --é†’ç›®æç¤ºç”¨
 		
 		if rr == 1 then
 			local sum = getn(x801016_g_Reward_Punch)
 			local rrr = random(sum)
 			reward_object = x801016_g_Reward_Punch[rrr]
-			msg = "Äã»ñµÃÁËÒ»¼ş"
+			msg = "ä½ è·å¾—äº†ä¸€ä»¶"
 		elseif rr == 2 then
 			local sum = getn(x801016_g_Reward_Gem)
 			local rrr = random(sum)
@@ -1262,17 +1262,17 @@ function x801016_Give_Premium( sceneId, selfId )
 		if ret > 0 then
 			AddItemListToHuman(sceneId,selfId)
 			szItemTransfer = GetItemTransfer(sceneId,selfId,0)
-			Msg2Player( sceneId,selfId,"Äã"..x801016_GenPreminuTxt1(rr,szItemTransfer),MSG2PLAYER_PARA)
+			Msg2Player( sceneId,selfId,"ä½ "..x801016_GenPreminuTxt1(rr,szItemTransfer),MSG2PLAYER_PARA)
 			BroadMsgByChatPipe( sceneId,selfId,"#{_INFOUSR"..myname.."}"..x801016_GenPreminuTxt1(rr,szItemTransfer),4)
 			
 			local itemName;
 			_,itemName,_ = GetItemInfoByItemId(reward_object)
 			
-			--ĞÑÄ¿ÌáÊ¾
+			--é†’ç›®æç¤º
 			x801016_MessageBox(sceneId,selfId,msg..itemName)
 			
-			--»î¶¯½±ÀøÍ³¼Æ
-			LuaFnAuditItemCreate(sceneId,selfId,1,reward_object,itemName,"¿Æ¾Ù")
+			--æ´»åŠ¨å¥–åŠ±ç»Ÿè®¡
+			LuaFnAuditItemCreate(sceneId,selfId,1,reward_object,itemName,"ç§‘ä¸¾")
 			
 			
 		else
@@ -1283,13 +1283,13 @@ function x801016_Give_Premium( sceneId, selfId )
 	if (random(1000) <= 100 and Examinator_Sequence >= x801016_g_Count_Examinant) then
 		local rr = random(3)
 		local reward_object
-		local msg = "Äã»ñµÃÁËÒ»¸ö"    --ĞÑÄ¿ÌáÊ¾ÓÃ
+		local msg = "ä½ è·å¾—äº†ä¸€ä¸ª"    --é†’ç›®æç¤ºç”¨
 		
 		if rr == 1 then
 			local sum = getn(x801016_g_Reward_Craftsmanship)
 			local rrr = random(sum)
 			reward_object = x801016_g_Reward_Craftsmanship[rrr]
-			msg = "Äã»ñµÃÁËÒ»¼ş"
+			msg = "ä½ è·å¾—äº†ä¸€ä»¶"
 		elseif rr == 2 then
 			reward_object = x801016_g_Reward_Prolong_Medicine
 		elseif rr == 3 then
@@ -1302,17 +1302,17 @@ function x801016_Give_Premium( sceneId, selfId )
 		if ret > 0 then
 			AddItemListToHuman(sceneId,selfId)
 			szItemTransfer = GetItemTransfer(sceneId,selfId,0)
-			Msg2Player( sceneId,selfId,"Äã"..x801016_GenPreminuTxt2(rr,szItemTransfer),MSG2PLAYER_PARA)
+			Msg2Player( sceneId,selfId,"ä½ "..x801016_GenPreminuTxt2(rr,szItemTransfer),MSG2PLAYER_PARA)
 			BroadMsgByChatPipe( sceneId,selfId,"#{_INFOUSR"..myname.."}"..x801016_GenPreminuTxt2(rr,szItemTransfer),4)
 			
 			local itemName;
 			_,itemName,_ = GetItemInfoByItemId(reward_object)
 			
-			--ĞÑÄ¿ÌáÊ¾
+			--é†’ç›®æç¤º
 			x801016_MessageBox(sceneId,selfId,msg..itemName)
 			
-			--»î¶¯½±ÀøÍ³¼Æ
-			LuaFnAuditItemCreate(sceneId,selfId,1,reward_object,itemName,"¿Æ¾Ù")
+			--æ´»åŠ¨å¥–åŠ±ç»Ÿè®¡
+			LuaFnAuditItemCreate(sceneId,selfId,1,reward_object,itemName,"ç§‘ä¸¾")
 		
 		else
 			BroadMsgByChatPipe( sceneId,selfId,"#{_INFOUSR"..myname.."}"..x801016_GenPreminuTxt3(2,rr,reward_object),4)
@@ -1347,16 +1347,16 @@ function x801016_OnBribe(sceneId, selfId)
 	local targetId = GetMissionData(sceneId,selfId,MD_EXAM_TARGETID)
 	if GetMoney(sceneId, selfId)+ GetMoneyJZ(sceneId, selfId) < x801016_g_Bribe_Money then  --dengxx
 		
-		local msg = "ÄãÕæµÄ±ÈÎÒ»¹Çî£¬Äã»¹ÊÇÀÏÊµµÄ´ğÌâ°É£¡"
-		local cmsg = "Àë¿ª¡¤¡¤¡¤¡¤¡¤¡¤"
+		local msg = "ä½ çœŸçš„æ¯”æˆ‘è¿˜ç©·ï¼Œä½ è¿˜æ˜¯è€å®çš„ç­”é¢˜å§ï¼"
+		local cmsg = "ç¦»å¼€Â·Â·Â·Â·Â·Â·"
 
 		x801016_Client_Show_Message( sceneId, selfId, targetId, msg, cmsg, 0)
 		return
 	end
 	
-  local msg = "²»´í²»´í£¬¿´À´ÄãºÍÆäËûÈË²»Í¬£¬¾ÓÈ»¶®µÃÒâË¼ÒâË¼£¬ÕâÑù°É£¬Èç¹ûÄãÔ¸Òâ¸¶#{_EXCHG"..tostring(10000).."}£¬ÎÒ¾ÍËãÄãÕâÌâ¹ıÁË¡£"
-	local cmsg = "ÎÒÒª¸¶#{_EXCHG"..tostring(10000).."}¡£"
-	local cmsg2 = "ÎÒ»¹ÊÇ×Ô¼º»Ø´ğ°É¡£"
+  local msg = "ä¸é”™ä¸é”™ï¼Œçœ‹æ¥ä½ å’Œå…¶ä»–äººä¸åŒï¼Œå±…ç„¶æ‡‚å¾—æ„æ€æ„æ€ï¼Œè¿™æ ·å§ï¼Œå¦‚æœä½ æ„¿æ„ä»˜#{_EXCHG"..tostring(10000).."}ï¼Œæˆ‘å°±ç®—ä½ è¿™é¢˜è¿‡äº†ã€‚"
+	local cmsg = "æˆ‘è¦ä»˜#{_EXCHG"..tostring(10000).."}ã€‚"
+	local cmsg2 = "æˆ‘è¿˜æ˜¯è‡ªå·±å›ç­”å§ã€‚"
 
 	BeginEvent(sceneId)
 
@@ -1381,13 +1381,13 @@ function x801016_OnHandle_Bribe(sceneId, selfId)
 		SetMissionData(sceneId,selfId,MD_EXAM_SEQUENCE,times-1)
 		local error_times = mod(times-1, 100)
 		if error_times == 0 then
-			msg = "ÄãÌ«´óµ¨ÁË£¬Á¬±¾¿¼¹ÙÒ²¸ÒÓŞÅª£¬ÕâÌâ¾ÍËãÄã´ğ´íÁË£¬ÄãÒÑ¾­Ã»ÓĞ´ğ´í»ú»áÁË£¬ÇëÏÂ´Î¿¼ÊÔµÄÊ±ºò¼ÌĞøÅ¬Á¦¡£"
-			cmsg = "Àë¿ª¡¤¡¤¡¤¡¤¡¤¡¤"
+			msg = "ä½ å¤ªå¤§èƒ†äº†ï¼Œè¿æœ¬è€ƒå®˜ä¹Ÿæ•¢æ„šå¼„ï¼Œè¿™é¢˜å°±ç®—ä½ ç­”é”™äº†ï¼Œä½ å·²ç»æ²¡æœ‰ç­”é”™æœºä¼šäº†ï¼Œè¯·ä¸‹æ¬¡è€ƒè¯•çš„æ—¶å€™ç»§ç»­åŠªåŠ›ã€‚"
+			cmsg = "ç¦»å¼€Â·Â·Â·Â·Â·Â·"
 	
 			x801016_Client_Show_Message( sceneId, selfId, targetId, msg, cmsg, 0)
 		else
-			msg = "ÄãÌ«´óµ¨ÁË£¬Á¬±¾¿¼¹ÙÒ²¸ÒÓŞÅª£¬ÕâÌâ¾ÍËãÄã´ğ´íÁË£¬Äú»¹ÓĞ"..error_times.."´Î»ú»á£¬ÇëºÃºÃ°ÑÎÕ¡£"
-			cmsg = "×¼±¸ºÃÁË£¬¿ªÊ¼°É¡¤¡¤¡¤¡¤¡¤¡¤"
+			msg = "ä½ å¤ªå¤§èƒ†äº†ï¼Œè¿æœ¬è€ƒå®˜ä¹Ÿæ•¢æ„šå¼„ï¼Œè¿™é¢˜å°±ç®—ä½ ç­”é”™äº†ï¼Œæ‚¨è¿˜æœ‰"..error_times.."æ¬¡æœºä¼šï¼Œè¯·å¥½å¥½æŠŠæ¡ã€‚"
+			cmsg = "å‡†å¤‡å¥½äº†ï¼Œå¼€å§‹å§Â·Â·Â·Â·Â·Â·"
 		
 			x801016_Client_Show_Message( sceneId, selfId, targetId, msg, cmsg, 1)
 		end
@@ -1397,8 +1397,8 @@ function x801016_OnHandle_Bribe(sceneId, selfId)
 	local targetId = GetMissionData(sceneId,selfId,MD_EXAM_TARGETID)
 	if ( x801016_EstimationPhase( sceneId, selfId) ~= 2 ) and x801016_EstimationPhase( sceneId, selfId) ~= 1 then
 
-		local msg = "ÏÖÔÚ²»½øĞĞ¿Æ¾Ù¿¼ÊÔ¡£"
-		local cmsg = "Àë¿ª¡¤¡¤¡¤¡¤¡¤¡¤"
+		local msg = "ç°åœ¨ä¸è¿›è¡Œç§‘ä¸¾è€ƒè¯•ã€‚"
+		local cmsg = "ç¦»å¼€Â·Â·Â·Â·Â·Â·"
 
 		x801016_Client_Show_Message( sceneId, selfId, targetId, msg, cmsg, 0)
 		return
@@ -1420,8 +1420,8 @@ function x801016_OnHandle_Violence(sceneId, selfId)
 	
 	if ( x801016_EstimationPhase( sceneId, selfId) ~= 2 ) and x801016_EstimationPhase( sceneId, selfId) ~= 1 then
 
-		local msg = "ÏÖÔÚ²»½øĞĞ¿Æ¾Ù¿¼ÊÔ¡£"
-		local cmsg = "Àë¿ª¡¤¡¤¡¤¡¤¡¤¡¤"
+		local msg = "ç°åœ¨ä¸è¿›è¡Œç§‘ä¸¾è€ƒè¯•ã€‚"
+		local cmsg = "ç¦»å¼€Â·Â·Â·Â·Â·Â·"
 
 		x801016_Client_Show_Message( sceneId, selfId, targetId, msg, cmsg, 0)
 		return
@@ -1435,11 +1435,11 @@ function x801016_OnHandle_Violence(sceneId, selfId)
 			local selfGuid = LuaFnObjId2Guid(sceneId,selfId)
 
 			local current_time = LuaFnGetCurrentTime() - starttime
-			local msg = "¹§Ï²ÄúÒÑ¾­»Ø´ğÍêËùÓĞµÄÖİÊÔÌâÄ¿£¬²»ÖªµÀÄÜ²»ÄÜ½øÊ¡ÊÔÄØ£¬ÇëÁôÒâÉÔºóµÄÍ¨Öª¡£"
-			local cmsg = "Àë¿ª¡¤¡¤¡¤¡¤¡¤¡¤"
+			local msg = "æ­å–œæ‚¨å·²ç»å›ç­”å®Œæ‰€æœ‰çš„å·è¯•é¢˜ç›®ï¼Œä¸çŸ¥é“èƒ½ä¸èƒ½è¿›çœè¯•å‘¢ï¼Œè¯·ç•™æ„ç¨åçš„é€šçŸ¥ã€‚"
+			local cmsg = "ç¦»å¼€Â·Â·Â·Â·Â·Â·"
 			
 			local myname = GetName(sceneId,selfId)
-			BroadMsgByChatPipe( sceneId,selfId,"#{_INFOUSR"..myname.."}#PÔÚµÚÒ»ÂÖµÄ¿Æ¾Ùµ±ÖĞË³ÀûµÄ»Ø´ğÍêÈ«²¿µÄÌâÄ¿¡£",4) 
+			BroadMsgByChatPipe( sceneId,selfId,"#{_INFOUSR"..myname.."}#Påœ¨ç¬¬ä¸€è½®çš„ç§‘ä¸¾å½“ä¸­é¡ºåˆ©çš„å›ç­”å®Œå…¨éƒ¨çš„é¢˜ç›®ã€‚",4) 
 
 --			x801016_Add_To_Candidate( sceneId, selfId, current_time, selfGuid)
 			x801016_Add_To_Candidate( sceneId, selfId, current_time, myname)
@@ -1465,16 +1465,16 @@ function x801016_OnHandle_Violence(sceneId, selfId)
 			SetMissionData(sceneId,selfId,MD_EXAM_SEQUENCE,times + 100)
 		end
 		
-		local msg = "¿´ÆğÀ´Äã»¹ÕæµÄÓĞÁ½°ÑË¢×Ó£¬ÕâµÀÌâÄ¿¾ÍËãÄã¹ıÁË°É¡£"
-		local cmsg = "Àë¿ª¡¤¡¤¡¤¡¤¡¤¡¤"
+		local msg = "çœ‹èµ·æ¥ä½ è¿˜çœŸçš„æœ‰ä¸¤æŠŠåˆ·å­ï¼Œè¿™é“é¢˜ç›®å°±ç®—ä½ è¿‡äº†å§ã€‚"
+		local cmsg = "ç¦»å¼€Â·Â·Â·Â·Â·Â·"
 
 		x801016_Client_Show_Message( sceneId, selfId, targetId, msg, cmsg, 0)
 		
 	elseif x801016_EstimationPhase(sceneId,selfId) == 2 then
 	
 		if x801016_Query_Candidate( sceneId, selfId ) == 0 then
-			local msg = "ÄãÃ»ÓĞ²Î¼ÓÊ¡ÊÔµÄ×Ê¸ñ¡£"
-			local cmsg = "Àë¿ª¡¤¡¤¡¤¡¤¡¤¡¤"
+			local msg = "ä½ æ²¡æœ‰å‚åŠ çœè¯•çš„èµ„æ ¼ã€‚"
+			local cmsg = "ç¦»å¼€Â·Â·Â·Â·Â·Â·"
 	
 			x801016_Client_Show_Message( sceneId, selfId, targetId, msg, cmsg, 0)
 			return
@@ -1486,8 +1486,8 @@ function x801016_OnHandle_Violence(sceneId, selfId)
 			local selfGuid = LuaFnObjId2Guid(sceneId,selfId)
 
 			local current_time = LuaFnGetCurrentTime() - starttime
-			local msg = "¹§Ï²Äú»Ø´ğÍêËùÓĞµÄÊ¡ÊÔÌâÄ¿£¬Èı¼×½«ÔÚÉÒºó¹«²¼¡£"
-			local cmsg = "Àë¿ª¡¤¡¤¡¤¡¤¡¤¡¤"
+			local msg = "æ­å–œæ‚¨å›ç­”å®Œæ‰€æœ‰çš„çœè¯•é¢˜ç›®ï¼Œä¸‰ç”²å°†åœ¨æ¢¢åå…¬å¸ƒã€‚"
+			local cmsg = "ç¦»å¼€Â·Â·Â·Â·Â·Â·"
 			local myname = GetName(sceneId,selfId)
 --			x801016_Add_To_Top( sceneId, selfId, current_time, selfGuid)
 			x801016_Add_To_Top( sceneId, selfId, current_time, myname)
@@ -1498,8 +1498,8 @@ function x801016_OnHandle_Violence(sceneId, selfId)
 			SetMissionData(sceneId,selfId,MD_EXAM_FIGHT_FLAG,0)
 		end
 		
-		local msg = "¿´ÆğÀ´Äã»¹ÕæµÄÓĞÁ½°ÑË¢×Ó£¬ÕâµÀÌâÄ¿¾ÍËãÄã¹ıÁË°É¡£"
-		local cmsg = "Àë¿ª¡¤¡¤¡¤¡¤¡¤¡¤"
+		local msg = "çœ‹èµ·æ¥ä½ è¿˜çœŸçš„æœ‰ä¸¤æŠŠåˆ·å­ï¼Œè¿™é“é¢˜ç›®å°±ç®—ä½ è¿‡äº†å§ã€‚"
+		local cmsg = "ç¦»å¼€Â·Â·Â·Â·Â·Â·"
 
 		x801016_Client_Show_Message( sceneId, selfId, targetId, msg, cmsg, 0)
 	end
@@ -1518,7 +1518,7 @@ function x801016_Client_Show_Message( sceneId, selfId, targetId, Message, CloseM
 end
 
 --**********************************
---³ÆºÅÊÚÓè
+--ç§°å·æˆäºˆ
 --**********************************
 function x801016_MyAwardTitle( sceneId, selfId, place )
 
@@ -1527,21 +1527,21 @@ function x801016_MyAwardTitle( sceneId, selfId, place )
 	end
 	local	lstTitle	=
 	{
-		139,	--×´Ôª
-		140,	--°ñÑÛ
-		141,	--Ì½»¨
+		139,	--çŠ¶å…ƒ
+		140,	--æ¦œçœ¼
+		141,	--æ¢èŠ±
 	}
 	local	curTitle	= GetTitle( sceneId, selfId, 4 )
 	local	newTitle	= lstTitle[ place ]
 	if curTitle > 0 then
-		--½ö±£ÁôÈ¨ÖØ¸ßµÄ³ÆºÅ
+		--ä»…ä¿ç•™æƒé‡é«˜çš„ç§°å·
 		if newTitle <= curTitle then
 			DeleteTitle( sceneId, selfId, 4 )
-			AwardTitle( sceneId, selfId, 4, newTitle, 24 * 7 )	--ÓĞĞ§ÆÚ£ºÒ»ÖÜ
+			AwardTitle( sceneId, selfId, 4, newTitle, 24 * 7 )	--æœ‰æ•ˆæœŸï¼šä¸€å‘¨
 			SetCurTitle( sceneId, selfId, 4, newTitle )
 		end
 	else
-		AwardTitle( sceneId, selfId, 4, newTitle, 24 * 7 )		--ÓĞĞ§ÆÚ£ºÒ»ÖÜ
+		AwardTitle( sceneId, selfId, 4, newTitle, 24 * 7 )		--æœ‰æ•ˆæœŸï¼šä¸€å‘¨
 		SetCurTitle( sceneId, selfId, 4, newTitle )
 	end
 	LuaFnDispatchAllTitle( sceneId, selfId )
@@ -1549,23 +1549,23 @@ function x801016_MyAwardTitle( sceneId, selfId, place )
 end
 
 --**********************************
---·¢·Å½ğ°ñÌâÃû½±ÀøÎïÆ·
+--å‘æ”¾é‡‘æ¦œé¢˜åå¥–åŠ±ç‰©å“
 --**********************************
 function x801016_JinBangTiMing( sceneId, selfId, targetId )
 
 	local NPCName=GetName(sceneId, targetId)	
-	-- ±ØĞëÔÚ¿¼¹ÙÒ»²ÅÄÜÁìÈ¡
+	-- å¿…é¡»åœ¨è€ƒå®˜ä¸€æ‰èƒ½é¢†å–
 	if NPCName ~= x801016_g_Examinant_Name[1] then
 		return 0
 	end
 	
 	local MyLevel = GetLevel( sceneId, selfId )
-	-- Íæ¼Ò±ØĞëÔÚ40¼¶ÒÔÉÏ	
+	-- ç©å®¶å¿…é¡»åœ¨40çº§ä»¥ä¸Š	
 	if MyLevel < 40 then
 		return 0
 	end
 	
-	-- ±³°ü±ØĞë»¹ÓĞ¿Õ¼ä
+	-- èƒŒåŒ…å¿…é¡»è¿˜æœ‰ç©ºé—´
 	BeginAddItem( sceneId )
 	AddItem( sceneId, x801016_g_Jiangli_JinBang, 1 )
 	space = EndAddItem( sceneId, selfId )
@@ -1574,16 +1574,16 @@ function x801016_JinBangTiMing( sceneId, selfId, targetId )
 		return 0
 	end
 	
-	-- ½±Àø½ğ°ñÌâÃû
-	local bagpos = TryRecieveItem( sceneId, selfId, x801016_g_Jiangli_JinBang, QUALITY_MUST_BE_CHANGE )	-- ·Å²»ÏÂ¾ÍÃ»ÓĞÁË
+	-- å¥–åŠ±é‡‘æ¦œé¢˜å
+	local bagpos = TryRecieveItem( sceneId, selfId, x801016_g_Jiangli_JinBang, QUALITY_MUST_BE_CHANGE )	-- æ”¾ä¸ä¸‹å°±æ²¡æœ‰äº†
 	local itemInfo = GetBagItemTransfer( sceneId, selfId, bagpos )
 	
-	x801016_MessageBox( sceneId, selfId, "Äã½ñÈÕÕæÊÇ¼ªĞÇ¸ßÕÕ×²´óÔË°¡£¬±¾¿¼¹ÙÏÖ½«½ğ°ñÌâÃûÔùÓëÄã£¬ÍûÄãÔÙ½ÓÔÙÀ÷£¬Ò»¾Ù¶á¿ı¡£" )
+	x801016_MessageBox( sceneId, selfId, "ä½ ä»Šæ—¥çœŸæ˜¯å‰æ˜Ÿé«˜ç…§æ’å¤§è¿å•Šï¼Œæœ¬è€ƒå®˜ç°å°†é‡‘æ¦œé¢˜åèµ ä¸ä½ ï¼Œæœ›ä½ å†æ¥å†å‰ï¼Œä¸€ä¸¾å¤ºé­ã€‚" )
 
 end
 
 --**********************************
---ĞÑÄ¿ĞÅÏ¢ÌáÊ¾
+--é†’ç›®ä¿¡æ¯æç¤º
 --**********************************
 function x801016_MessageBox( sceneId, selfId, msg )
 	BeginEvent( sceneId )

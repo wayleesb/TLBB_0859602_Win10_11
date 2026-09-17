@@ -1,5 +1,5 @@
---µÀ¾ß£º±¦Ê¯¾«»ª
---½Å±¾ºÅ 332206
+--é“å…·ï¼šå®çŸ³ç²¾å
+--è„šæœ¬å· 332206
 --Author:  houzhifang  2008-11-06
 
 x332206_g_scriptId = 332206
@@ -7,7 +7,7 @@ x332206_g_scriptId = 332206
 
 x332206_g_ItemData = 
 {
-	--»¢ÑÛÊ¯¾«»ª
+	--è™çœ¼çŸ³ç²¾å
 {ItemIndex = 30501174, GiveItem = 30504028, ImpactId = 31615},
 {ItemIndex = 30501175, GiveItem = 30504029, ImpactId = 31616},
 {ItemIndex = 30501176, GiveItem = 30504030, ImpactId = 31617},
@@ -18,7 +18,7 @@ x332206_g_ItemData =
 {ItemIndex = 30501181, GiveItem = 30504035, ImpactId = 31622},
 {ItemIndex = 30501182, GiveItem = 30504036, ImpactId = 31623},
 {ItemIndex = 30504040, GiveItem = 30504031, ImpactId = 31618},
---Ã¨ÑÛÊ¯¾«»ª
+--çŒ«çœ¼çŸ³ç²¾å
 {ItemIndex = 30501183, GiveItem = 30504028, ImpactId = 31624},
 {ItemIndex = 30501184, GiveItem = 30504029, ImpactId = 31625},
 {ItemIndex = 30501185, GiveItem = 30504030, ImpactId = 31626},
@@ -29,7 +29,7 @@ x332206_g_ItemData =
 {ItemIndex = 30501190, GiveItem = 30504035, ImpactId = 31631},
 {ItemIndex = 30501191, GiveItem = 30504036, ImpactId = 31632},
 {ItemIndex = 30504041, GiveItem = 30504031, ImpactId = 31627},
---×ÏÓñ¾«»ª
+--ç´«ç‰ç²¾å
 {ItemIndex = 30501192, GiveItem = 30504028, ImpactId = 31633},
 {ItemIndex = 30501193, GiveItem = 30504029, ImpactId = 31634},
 {ItemIndex = 30501194, GiveItem = 30504030, ImpactId = 31635},
@@ -39,7 +39,7 @@ x332206_g_ItemData =
 {ItemIndex = 30501198, GiveItem = 30504034, ImpactId = 31639},
 {ItemIndex = 30501199, GiveItem = 30504035, ImpactId = 31640},
 {ItemIndex = 30501200, GiveItem = 30504036, ImpactId = 31641},
---×æÄ¸ÂÌ¾«»ª
+--ç¥–æ¯ç»¿ç²¾å
 {ItemIndex = 30501201, GiveItem = 30504028, ImpactId = 31642},
 {ItemIndex = 30501202, GiveItem = 30504029, ImpactId = 31643},
 {ItemIndex = 30501203, GiveItem = 30504030, ImpactId = 31644},
@@ -49,7 +49,7 @@ x332206_g_ItemData =
 {ItemIndex = 30501207, GiveItem = 30504034, ImpactId = 31648},
 {ItemIndex = 30501208, GiveItem = 30504035, ImpactId = 31649},
 {ItemIndex = 30501209, GiveItem = 30504036, ImpactId = 31650},
---ºì¾§Ê¯¾«»ª
+--çº¢æ™¶çŸ³ç²¾å
 {ItemIndex = 30501210, GiveItem = 30504028, ImpactId = 31660},
 {ItemIndex = 30501211, GiveItem = 30504029, ImpactId = 31661},
 {ItemIndex = 30501212, GiveItem = 30504030, ImpactId = 31662},
@@ -59,7 +59,7 @@ x332206_g_ItemData =
 {ItemIndex = 30501216, GiveItem = 30504034, ImpactId = 31666},
 {ItemIndex = 30501217, GiveItem = 30504035, ImpactId = 31667},
 {ItemIndex = 30501218, GiveItem = 30504036, ImpactId = 31668},
---À¶¾§Ê¯¾«»ª
+--è“æ™¶çŸ³ç²¾å
 {ItemIndex = 30501219, GiveItem = 30504028, ImpactId = 31651},
 {ItemIndex = 30501220, GiveItem = 30504029, ImpactId = 31652},
 {ItemIndex = 30501221, GiveItem = 30504030, ImpactId = 31653},
@@ -69,7 +69,7 @@ x332206_g_ItemData =
 {ItemIndex = 30501225, GiveItem = 30504034, ImpactId = 31657},
 {ItemIndex = 30501226, GiveItem = 30504035, ImpactId = 31658},
 {ItemIndex = 30501227, GiveItem = 30504036, ImpactId = 31659},
---»Æ¾§Ê¯¾«»ª
+--é»„æ™¶çŸ³ç²¾å
 {ItemIndex = 30501228, GiveItem = 30504028, ImpactId = 31669},
 {ItemIndex = 30501229, GiveItem = 30504029, ImpactId = 31670},
 {ItemIndex = 30501230, GiveItem = 30504030, ImpactId = 31671},
@@ -79,7 +79,7 @@ x332206_g_ItemData =
 {ItemIndex = 30501234, GiveItem = 30504034, ImpactId = 31675},
 {ItemIndex = 30501235, GiveItem = 30504035, ImpactId = 31676},
 {ItemIndex = 30501236, GiveItem = 30504036, ImpactId = 31677},
---ÂÌ¾§Ê¯¾«»ª
+--ç»¿æ™¶çŸ³ç²¾å
 {ItemIndex = 30501237, GiveItem = 30504028, ImpactId = 31678},
 {ItemIndex = 30501238, GiveItem = 30504029, ImpactId = 31679},
 {ItemIndex = 30501239, GiveItem = 30504030, ImpactId = 31680},
@@ -89,7 +89,7 @@ x332206_g_ItemData =
 {ItemIndex = 30501243, GiveItem = 30504034, ImpactId = 31684},
 {ItemIndex = 30501244, GiveItem = 30504035, ImpactId = 31685},
 {ItemIndex = 30501245, GiveItem = 30504036, ImpactId = 31686},
---Ñª¾«Ê¯¾«»ª
+--è¡€ç²¾çŸ³ç²¾å
 {ItemIndex = 30501319, GiveItem = 30504028, ImpactId = 31696},
 {ItemIndex = 30501320, GiveItem = 30504029, ImpactId = 31697},
 {ItemIndex = 30501321, GiveItem = 30504030, ImpactId = 31698},
@@ -99,7 +99,7 @@ x332206_g_ItemData =
 {ItemIndex = 30501325, GiveItem = 30504034, ImpactId = 31702},
 {ItemIndex = 30501326, GiveItem = 30504035, ImpactId = 31703},      
 {ItemIndex = 30501327, GiveItem = 30504036, ImpactId = 31704},
---ºì±¦Ê¯¾«»ª
+--çº¢å®çŸ³ç²¾å
 {ItemIndex = 30501328, GiveItem = 30504028, ImpactId = 31687},
 {ItemIndex = 30501329, GiveItem = 30504029, ImpactId = 31688},
 {ItemIndex = 30501330, GiveItem = 30504030, ImpactId = 31689},
@@ -112,45 +112,45 @@ x332206_g_ItemData =
 }
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x332206_OnDefaultEvent( sceneId, selfId, bagIndex )
--- ²»ĞèÒªÕâ¸ö½Ó¿Ú£¬±£Áô¿Õº¯Êı
+-- ä¸éœ€è¦è¿™ä¸ªæ¥å£ï¼Œä¿ç•™ç©ºå‡½æ•°
 end
 
 --**********************************
---Õâ¸öÎïÆ·µÄÊ¹ÓÃ¹ı³ÌÊÇ·ñÀàËÆÓÚ¼¼ÄÜ£º
---ÏµÍ³»áÔÚÖ´ĞĞ¿ªÊ¼Ê±¼ì²âÕâ¸öº¯ÊıµÄ·µ»ØÖµ£¬Èç¹û·µ»ØÊ§°ÜÔòºöÂÔºóÃæµÄÀàËÆ¼¼ÄÜµÄÖ´ĞĞ¡£
---·µ»Ø1£º¼¼ÄÜÀàËÆµÄÎïÆ·£¬¿ÉÒÔ¼ÌĞøÀàËÆ¼¼ÄÜµÄÖ´ĞĞ£»·µ»Ø0£ººöÂÔºóÃæµÄ²Ù×÷¡£
+--è¿™ä¸ªç‰©å“çš„ä½¿ç”¨è¿‡ç¨‹æ˜¯å¦ç±»ä¼¼äºæŠ€èƒ½ï¼š
+--ç³»ç»Ÿä¼šåœ¨æ‰§è¡Œå¼€å§‹æ—¶æ£€æµ‹è¿™ä¸ªå‡½æ•°çš„è¿”å›å€¼ï¼Œå¦‚æœè¿”å›å¤±è´¥åˆ™å¿½ç•¥åé¢çš„ç±»ä¼¼æŠ€èƒ½çš„æ‰§è¡Œã€‚
+--è¿”å›1ï¼šæŠ€èƒ½ç±»ä¼¼çš„ç‰©å“ï¼Œå¯ä»¥ç»§ç»­ç±»ä¼¼æŠ€èƒ½çš„æ‰§è¡Œï¼›è¿”å›0ï¼šå¿½ç•¥åé¢çš„æ“ä½œã€‚
 --**********************************
 function x332206_IsSkillLikeScript( sceneId, selfId)
-	return 1; --Õâ¸ö½Å±¾ĞèÒª¶¯×÷Ö§³Ö
+	return 1; --è¿™ä¸ªè„šæœ¬éœ€è¦åŠ¨ä½œæ”¯æŒ
 end
 
 --**********************************
---Ö±½ÓÈ¡ÏûĞ§¹û£º
---ÏµÍ³»áÖ±½Óµ÷ÓÃÕâ¸ö½Ó¿Ú£¬²¢¸ù¾İÕâ¸öº¯ÊıµÄ·µ»ØÖµÈ·¶¨ÒÔºóµÄÁ÷³ÌÊÇ·ñÖ´ĞĞ¡£
---·µ»Ø1£ºÒÑ¾­È¡Ïû¶ÔÓ¦Ğ§¹û£¬²»ÔÙÖ´ĞĞºóĞø²Ù×÷£»·µ»Ø0£ºÃ»ÓĞ¼ì²âµ½Ïà¹ØĞ§¹û£¬¼ÌĞøÖ´ĞĞ¡£
+--ç›´æ¥å–æ¶ˆæ•ˆæœï¼š
+--ç³»ç»Ÿä¼šç›´æ¥è°ƒç”¨è¿™ä¸ªæ¥å£ï¼Œå¹¶æ ¹æ®è¿™ä¸ªå‡½æ•°çš„è¿”å›å€¼ç¡®å®šä»¥åçš„æµç¨‹æ˜¯å¦æ‰§è¡Œã€‚
+--è¿”å›1ï¼šå·²ç»å–æ¶ˆå¯¹åº”æ•ˆæœï¼Œä¸å†æ‰§è¡Œåç»­æ“ä½œï¼›è¿”å›0ï¼šæ²¡æœ‰æ£€æµ‹åˆ°ç›¸å…³æ•ˆæœï¼Œç»§ç»­æ‰§è¡Œã€‚
 --**********************************
 function x332206_CancelImpacts( sceneId, selfId )
-	return 0; --²»ĞèÒªÕâ¸ö½Ó¿Ú£¬µ«Òª±£Áô¿Õº¯Êı,²¢ÇÒÊ¼ÖÕ·µ»Ø0¡£
+	return 0; --ä¸éœ€è¦è¿™ä¸ªæ¥å£ï¼Œä½†è¦ä¿ç•™ç©ºå‡½æ•°,å¹¶ä¸”å§‹ç»ˆè¿”å›0ã€‚
 end
 
 --**********************************
---Ìõ¼ş¼ì²âÈë¿Ú£º
---ÏµÍ³»áÔÚ¼¼ÄÜ¼ì²âµÄÊ±¼äµãµ÷ÓÃÕâ¸ö½Ó¿Ú£¬²¢¸ù¾İÕâ¸öº¯ÊıµÄ·µ»ØÖµÈ·¶¨ÒÔºóµÄÁ÷³ÌÊÇ·ñÖ´ĞĞ¡£
---·µ»Ø1£ºÌõ¼ş¼ì²âÍ¨¹ı£¬¿ÉÒÔ¼ÌĞøÖ´ĞĞ£»·µ»Ø0£ºÌõ¼ş¼ì²âÊ§°Ü£¬ÖĞ¶ÏºóĞøÖ´ĞĞ¡£
+--æ¡ä»¶æ£€æµ‹å…¥å£ï¼š
+--ç³»ç»Ÿä¼šåœ¨æŠ€èƒ½æ£€æµ‹çš„æ—¶é—´ç‚¹è°ƒç”¨è¿™ä¸ªæ¥å£ï¼Œå¹¶æ ¹æ®è¿™ä¸ªå‡½æ•°çš„è¿”å›å€¼ç¡®å®šä»¥åçš„æµç¨‹æ˜¯å¦æ‰§è¡Œã€‚
+--è¿”å›1ï¼šæ¡ä»¶æ£€æµ‹é€šè¿‡ï¼Œå¯ä»¥ç»§ç»­æ‰§è¡Œï¼›è¿”å›0ï¼šæ¡ä»¶æ£€æµ‹å¤±è´¥ï¼Œä¸­æ–­åç»­æ‰§è¡Œã€‚
 --**********************************
 function x332206_OnConditionCheck( sceneId, selfId )
 
-	--Ğ£ÑéÊ¹ÓÃµÄÎï?
+	--æ ¡éªŒä½¿ç”¨çš„ç‰©?
 	if(1~=LuaFnVerifyUsedItem(sceneId, selfId)) then
 		return 0
 	end
 	
 	local FreeSpace = LuaFnGetPropertyBagSpace( sceneId, selfId )
 	if( FreeSpace < 1 ) then
-	        local strNotice = "µÀ¾ßÀ¸ÒÑÂú£¬Çë±£ÁôÒ»¸ö¿ÕÎ»¡£"
+	        local strNotice = "é“å…·æ å·²æ»¡ï¼Œè¯·ä¿ç•™ä¸€ä¸ªç©ºä½ã€‚"
 		      x332206_ShowNotice( sceneId, selfId, strNotice)
 	        return 0
 	end
@@ -179,19 +179,19 @@ function x332206_OnConditionCheck( sceneId, selfId )
 	end
 	
 	if nHaveImpact == 1 then
-		local strNotice = "ÄúÉíÉÏÒÑ¾­ÓĞ±¦Ê¯¾«»ªĞ§¹ûÁË£¬Ìæ»»ÇëÊÖ¶¯È¡Ïû¸ÃĞ§¹û¡£"
+		local strNotice = "æ‚¨èº«ä¸Šå·²ç»æœ‰å®çŸ³ç²¾åæ•ˆæœäº†ï¼Œæ›¿æ¢è¯·æ‰‹åŠ¨å–æ¶ˆè¯¥æ•ˆæœã€‚"
 		x332206_ShowNotice( sceneId, selfId, strNotice)
 		return 0;
 	end
 	
-	return 1; --²»ĞèÒªÈÎºÎÌõ¼ş£¬²¢ÇÒÊ¼ÖÕ·µ»Ø1¡£
+	return 1; --ä¸éœ€è¦ä»»ä½•æ¡ä»¶ï¼Œå¹¶ä¸”å§‹ç»ˆè¿”å›1ã€‚
 end
 
 --**********************************
---ÏûºÄ¼ì²â¼°´¦ÀíÈë¿Ú£º
---ÏµÍ³»áÔÚ¼¼ÄÜÏûºÄµÄÊ±¼äµãµ÷ÓÃÕâ¸ö½Ó¿Ú£¬²¢¸ù¾İÕâ¸öº¯ÊıµÄ·µ»ØÖµÈ·¶¨ÒÔºóµÄÁ÷³ÌÊÇ·ñÖ´ĞĞ¡£
---·µ»Ø1£ºÏûºÄ´¦ÀíÍ¨¹ı£¬¿ÉÒÔ¼ÌĞøÖ´ĞĞ£»·µ»Ø0£ºÏûºÄ¼ì²âÊ§°Ü£¬ÖĞ¶ÏºóĞøÖ´ĞĞ¡£
---×¢Òâ£ºÕâ²»¹â¸ºÔğÏûºÄµÄ¼ì²âÒ²¸ºÔğÏûºÄµÄÖ´ĞĞ¡£
+--æ¶ˆè€—æ£€æµ‹åŠå¤„ç†å…¥å£ï¼š
+--ç³»ç»Ÿä¼šåœ¨æŠ€èƒ½æ¶ˆè€—çš„æ—¶é—´ç‚¹è°ƒç”¨è¿™ä¸ªæ¥å£ï¼Œå¹¶æ ¹æ®è¿™ä¸ªå‡½æ•°çš„è¿”å›å€¼ç¡®å®šä»¥åçš„æµç¨‹æ˜¯å¦æ‰§è¡Œã€‚
+--è¿”å›1ï¼šæ¶ˆè€—å¤„ç†é€šè¿‡ï¼Œå¯ä»¥ç»§ç»­æ‰§è¡Œï¼›è¿”å›0ï¼šæ¶ˆè€—æ£€æµ‹å¤±è´¥ï¼Œä¸­æ–­åç»­æ‰§è¡Œã€‚
+--æ³¨æ„ï¼šè¿™ä¸å…‰è´Ÿè´£æ¶ˆè€—çš„æ£€æµ‹ä¹Ÿè´Ÿè´£æ¶ˆè€—çš„æ‰§è¡Œã€‚
 --**********************************
 function x332206_OnDeplete( sceneId, selfId )
 	
@@ -203,11 +203,11 @@ function x332206_OnDeplete( sceneId, selfId )
 end
 
 --**********************************
---Ö»»áÖ´ĞĞÒ»´ÎÈë¿Ú£º
---¾ÛÆøºÍË²·¢¼¼ÄÜ»áÔÚÏûºÄÍê³Éºóµ÷ÓÃÕâ¸ö½Ó¿Ú£¨¾ÛÆø½áÊø²¢ÇÒ¸÷ÖÖÌõ¼ş¶¼Âú×ãµÄÊ±ºò£©£¬¶øÒıµ¼
---¼¼ÄÜÒ²»áÔÚÏûºÄÍê³Éºóµ÷ÓÃÕâ¸ö½Ó¿Ú£¨¼¼ÄÜµÄÒ»¿ªÊ¼£¬ÏûºÄ³É¹¦Ö´ĞĞÖ®ºó£©¡£
---·µ»Ø1£º´¦Àí³É¹¦£»·µ»Ø0£º´¦ÀíÊ§°Ü¡£
---×¢£ºÕâÀïÊÇ¼¼ÄÜÉúĞ§Ò»´ÎµÄÈë¿Ú
+--åªä¼šæ‰§è¡Œä¸€æ¬¡å…¥å£ï¼š
+--èšæ°”å’Œç¬å‘æŠ€èƒ½ä¼šåœ¨æ¶ˆè€—å®Œæˆåè°ƒç”¨è¿™ä¸ªæ¥å£ï¼ˆèšæ°”ç»“æŸå¹¶ä¸”å„ç§æ¡ä»¶éƒ½æ»¡è¶³çš„æ—¶å€™ï¼‰ï¼Œè€Œå¼•å¯¼
+--æŠ€èƒ½ä¹Ÿä¼šåœ¨æ¶ˆè€—å®Œæˆåè°ƒç”¨è¿™ä¸ªæ¥å£ï¼ˆæŠ€èƒ½çš„ä¸€å¼€å§‹ï¼Œæ¶ˆè€—æˆåŠŸæ‰§è¡Œä¹‹åï¼‰ã€‚
+--è¿”å›1ï¼šå¤„ç†æˆåŠŸï¼›è¿”å›0ï¼šå¤„ç†å¤±è´¥ã€‚
+--æ³¨ï¼šè¿™é‡Œæ˜¯æŠ€èƒ½ç”Ÿæ•ˆä¸€æ¬¡çš„å…¥å£
 --**********************************
 function x332206_OnActivateOnce( sceneId, selfId )
 
@@ -234,21 +234,21 @@ function x332206_OnActivateOnce( sceneId, selfId )
 		end
 	end
 	if nHaveImpact == 1 then
-		local strNotice = "ÄúÉíÉÏÒÑ¾­ÓĞ±¦Ê¯¾«»ªĞ§¹ûÁË£¬Ìæ»»ÇëÊÖ¶¯È¡Ïû¸ÃĞ§¹û¡£"
+		local strNotice = "æ‚¨èº«ä¸Šå·²ç»æœ‰å®çŸ³ç²¾åæ•ˆæœäº†ï¼Œæ›¿æ¢è¯·æ‰‹åŠ¨å–æ¶ˆè¯¥æ•ˆæœã€‚"
 		x332206_ShowNotice( sceneId, selfId, strNotice)
 		return 0;
 	end
 	
 	LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, nGiveImpactId, 0)
 
-	BeginAddItem(sceneId)                --¸øÎïÆ·
+	BeginAddItem(sceneId)                --ç»™ç‰©å“
 		AddItem(sceneId, nGiveItemIndex, 1)
 	local canAdd = LuaFnEndAddItemIgnoreFatigueState( sceneId, selfId )
 
     if canAdd > 0 then
 		LuaFnAddItemListToHumanIgnoreFatigueState(sceneId,selfId)
 		local ItemName = GetItemName(sceneId, nGiveItemIndex)
-		local strNotice = "ÄúµÃµ½ÁË"..ItemName
+		local strNotice = "æ‚¨å¾—åˆ°äº†"..ItemName
 		x332206_ShowNotice( sceneId, selfId, strNotice)
 	end
 	
@@ -256,13 +256,13 @@ function x332206_OnActivateOnce( sceneId, selfId )
 end
 
 --**********************************
---Òıµ¼ĞÄÌø´¦ÀíÈë¿Ú£º
---Òıµ¼¼¼ÄÜ»áÔÚÃ¿´ÎĞÄÌø½áÊøÊ±µ÷ÓÃÕâ¸ö½Ó¿Ú¡£
---·µ»Ø£º1¼ÌĞøÏÂ´ÎĞÄÌø£»0£ºÖĞ¶ÏÒıµ¼¡£
---×¢£ºÕâÀïÊÇ¼¼ÄÜÉúĞ§Ò»´ÎµÄÈë¿Ú
+--å¼•å¯¼å¿ƒè·³å¤„ç†å…¥å£ï¼š
+--å¼•å¯¼æŠ€èƒ½ä¼šåœ¨æ¯æ¬¡å¿ƒè·³ç»“æŸæ—¶è°ƒç”¨è¿™ä¸ªæ¥å£ã€‚
+--è¿”å›ï¼š1ç»§ç»­ä¸‹æ¬¡å¿ƒè·³ï¼›0ï¼šä¸­æ–­å¼•å¯¼ã€‚
+--æ³¨ï¼šè¿™é‡Œæ˜¯æŠ€èƒ½ç”Ÿæ•ˆä¸€æ¬¡çš„å…¥å£
 --**********************************
 function x332206_OnActivateEachTick( sceneId, selfId)
-	return 1; --²»ÊÇÒıµ¼ĞÔ½Å±¾, Ö»±£Áô¿Õº¯Êı.
+	return 1; --ä¸æ˜¯å¼•å¯¼æ€§è„šæœ¬, åªä¿ç•™ç©ºå‡½æ•°.
 end
 
 function x332206_ShowNotice( sceneId, selfId, strNotice)
@@ -274,7 +274,7 @@ end
 
 function x332206_ShowRandomSystemNotice( sceneId, selfId, strItemInfo )
 	
-	--Õâ¸öº¯ÊıÏÖÔÚÃ»ÓĞÓÃ
+	--è¿™ä¸ªå‡½æ•°ç°åœ¨æ²¡æœ‰ç”¨
 	--local PlayerName = GetName(sceneId,selfId)
 	--local str = format( x332206_g_strGongGaoInfo, PlayerName, strItemInfo )
 	--BroadMsgByChatPipe( sceneId, selfId, str, 4 )

@@ -1,15 +1,15 @@
 
---Ã¿´Î´ò¿ª±Ø¶¨»ñµÃµÄ²úÆ·
+--æ¯æ¬¡æ‰“å¼€å¿…å®šè·å¾—çš„äº§å“
 x715031_g_MainItemId = 20103008
---¿ÉÄÜµÃµ½µÄ²úÆ·
+--å¯èƒ½å¾—åˆ°çš„äº§å“
 x715031_g_SubItemId = 50112003
---½ÇÉ«ÉíÉÏ±ØĞëÓĞµÄÎïÆ·
+--è§’è‰²èº«ä¸Šå¿…é¡»æœ‰çš„ç‰©å“
 x715031_g_MustHaveItemId = 20309009
 
 function 	x715031_OnCreate(sceneId,growPointType,x,y)
 	local targetId  = ItemBoxEnterScene(x,y,growPointType,sceneId,QUALITY_MUST_BE_CHANGE,1,x715031_g_MainItemId)
 	
-	--80%¼¸ÂÊ£¬±¦ÏäÀï³öÏÖ1¸öÎïÆ·£¬³öÏÖµÄÎïÆ·µÄÅĞ¶¨µÈÓÚÍÚ±¦µÄÊ±ºò³öÏÖÎïÆ·µÄÅĞ¶¨¡£
+	--80%å‡ ç‡ï¼Œå®ç®±é‡Œå‡ºç°1ä¸ªç‰©å“ï¼Œå‡ºç°çš„ç‰©å“çš„åˆ¤å®šç­‰äºæŒ–å®çš„æ—¶å€™å‡ºç°ç‰©å“çš„åˆ¤å®šã€‚
 	if random(100) <= 80 then
 		local ItemSn, ItemName, bBroadCast = GetItemSnByDropRateOfItemTable()
 		AddItemToBox(sceneId,targetId,QUALITY_MUST_BE_CHANGE,1,ItemSn)
@@ -18,54 +18,54 @@ function 	x715031_OnCreate(sceneId,growPointType,x,y)
 end
 
 
---´ò¿ªÇ°º¯Êı¿ªÊ¼&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+--æ‰“å¼€å‰å‡½æ•°å¼€å§‹&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 function	 x715031_OnOpen(sceneId,selfId,targetId)
---·µ»ØÀàĞÍ
--- 0 ±íÊ¾´ò¿ª³É¹¦
+--è¿”å›ç±»å‹
+-- 0 è¡¨ç¤ºæ‰“å¼€æˆåŠŸ
 	--PrintStr("OnOpen...")
 	if HaveItem(sceneId,selfId, x715031_g_MustHaveItemId) > 0 then
 		local Bagpos = GetBagPosByItemSn(sceneId,selfId,x715031_g_MustHaveItemId)
 		if LuaFnIsItemAvailable(sceneId,selfId,Bagpos) == 1 then
 			return OR_OK
 		else
-			Msg2Player(  sceneId, selfId,"±¦²ØÖ÷ÈËµÄÔ¿³×ÏÖÔÚËÆºõ²»¿ÉÓÃ¡£" ,MSG2PLAYER_PARA )	
+			Msg2Player(  sceneId, selfId,"å®è—ä¸»äººçš„é’¥åŒ™ç°åœ¨ä¼¼ä¹ä¸å¯ç”¨ã€‚" ,MSG2PLAYER_PARA )	
 			BeginEvent(sceneId)
-				AddText(sceneId, "±¦²ØÖ÷ÈËµÄÔ¿³×ÏÖÔÚËÆºõ²»¿ÉÓÃ¡£")
+				AddText(sceneId, "å®è—ä¸»äººçš„é’¥åŒ™ç°åœ¨ä¼¼ä¹ä¸å¯ç”¨ã€‚")
 			EndEvent()
 			DispatchMissionTips(sceneId,selfId)
 			return OR_ERROR	
 		end
 	else
 		BeginEvent(sceneId)
-			AddText(sceneId, "ĞèÒª±¦²ØÖ÷ÈËµÄÔ¿³×²ÅÄÜ´ò¿ª");
+			AddText(sceneId, "éœ€è¦å®è—ä¸»äººçš„é’¥åŒ™æ‰èƒ½æ‰“å¼€");
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return OR_STUFF_LACK	
 	end
 end
---´ò¿ªÇ°º¯Êı½áÊø&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+--æ‰“å¼€å‰å‡½æ•°ç»“æŸ&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
 
 function	x715031_OnProcOver(sceneId,selfId,targetId)
 	--PrintStr("OnProcOver...")
-	--´ò¿ª±¦Ïä»á100%»ñµÃÇ®£¬Ö±½Ó¼ÓÔÚÍæ¼ÒÉíÉÏ¼´¿É¡£
-	--Ç®Êı=114£«£¨bossµÈ¼¶£­30£©¡Á16 -->bosslevel == playerlevel
+	--æ‰“å¼€å®ç®±ä¼š100%è·å¾—é’±ï¼Œç›´æ¥åŠ åœ¨ç©å®¶èº«ä¸Šå³å¯ã€‚
+	--é’±æ•°=114ï¼‹ï¼ˆbossç­‰çº§ï¼30ï¼‰Ã—16 -->bosslevel == playerlevel
 	if 1 == LuaFnDelAvailableItem(sceneId,selfId, x715031_g_MustHaveItemId, 1) then
 		local BonusMoney = 114 + (GetLevel(sceneId, selfId)-20) * 16
 		AddMoney(sceneId, selfId, BonusMoney)
-		Msg2Player(  sceneId, selfId,"ÄãµÃµ½ÁË#{_MONEY" .. tostring(BonusMoney) .. "}" ,MSG2PLAYER_PARA )	
+		Msg2Player(  sceneId, selfId,"ä½ å¾—åˆ°äº†#{_MONEY" .. tostring(BonusMoney) .. "}" ,MSG2PLAYER_PARA )	
 	else
-		Msg2Player(  sceneId, selfId,"±¦²ØÖ÷ÈËµÄÔ¿³×ÏÖÔÚËÆºõ²»¿ÉÓÃ¡£" ,MSG2PLAYER_PARA )	
+		Msg2Player(  sceneId, selfId,"å®è—ä¸»äººçš„é’¥åŒ™ç°åœ¨ä¼¼ä¹ä¸å¯ç”¨ã€‚" ,MSG2PLAYER_PARA )	
 		return OR_ERROR
 	end
 	return OR_OK
 end
 
---»ØÊÕº¯Êı¿ªÊ¼########################################################################
+--å›æ”¶å‡½æ•°å¼€å§‹########################################################################
 function	 x715031_OnRecycle(sceneId,selfId,targetId)
 		return OR_OK
 end
---»ØÊÕº¯Êı½áÊø########################################################################
+--å›æ”¶å‡½æ•°ç»“æŸ########################################################################
 
 function x715031_OnTickCreateFinish( sceneId, growPointType, tickCount )
 end

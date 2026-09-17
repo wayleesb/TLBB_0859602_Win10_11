@@ -12,7 +12,7 @@ end
 function PlayerZhengyou_OnEvent(event)
 	if(event == "OPEN_WINDOW") then
 		if( arg0 == "ZhengyouWindow") then
-			--Èç¹ûÒÑ¾­ÏÔÊ¾¾ÍÓ¦¸Ã¹Øµô
+			--å¦‚æœå·²ç»æ˜¾ç¤ºå°±åº”è¯¥å…³æ‰
 			if ( this:IsVisible() ) then
 			   this:Hide();
 			   return;

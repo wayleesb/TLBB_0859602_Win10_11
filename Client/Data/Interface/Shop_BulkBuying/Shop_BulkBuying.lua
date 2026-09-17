@@ -3,8 +3,8 @@ local g_ItemIdx = -1;
 
 local ARR_PRICE = {};
 
-local CU_MONEY			= 1	-- Ç®
-local CU_MONEYJZ		= 8 -- ½»×Ó
+local CU_MONEY			= 1	-- é’±
+local CU_MONEYJZ		= 8 -- äº¤å­
 
 function Shop_BulkBuying_PreLoad()
 	this:RegisterEvent("OPEN_BULKBUY_BOOTH");
@@ -31,20 +31,20 @@ function Shop_BulkBuying_OnEvent(event)
 		if(NpcShop:GetShopType("unit") == CU_MONEYJZ) then
 			tmpjz = playerMoneyJZ;
 		end
-		Shop_BulkBuying_Money2:SetProperty("MoneyMaxNumber", playerMoney + tmpjz);
+		Shop_BulkBuying_Money2:SetProperty("MoneyMaxNumber", math.min(2147483647, playerMoney + tmpjz));
 		Shop_BulkBuying_Money3:SetProperty("MoneyNumber", playerMoney);
 		Shop_BulkBuying_Money4:SetProperty("MoneyNumber", playerMoneyJZ);
 	end
 end
 
 function Shop_BulkBuying_Open( idx )
-	--ÉÌµêÊÇÏûºÄ½ğÇ®µÄ
+	--å•†åº—æ˜¯æ¶ˆè€—é‡‘é’±çš„
 	local i = 0;
 	if(NpcShop:GetShopType("unit") == CU_MONEY) then
-		--Õâ¸öÎ»ÖÃµÄÎïÆ·µÄµş¼ÓÊıÁ¿ÊÇ´óÓÚ1µÄ
-		g_ItemMax = NpcShop:EnumItemMaxOverlay(idx);
+		--è¿™ä¸ªä½ç½®çš„ç‰©å“çš„å åŠ æ•°é‡æ˜¯å¤§äº1çš„
+		g_ItemMax = NpcShop:GetBulkBuyLimit(idx);
 		--if(g_ItemMax > 1) then
-			--·ûºÏÌõ¼ş£¬ÏÔÊ¾½çÃæ
+			--ç¬¦åˆæ¡ä»¶ï¼Œæ˜¾ç¤ºç•Œé¢
 			for i = 1, 2 do
 					ARR_PRICE[i]:SetProperty("GoldIcon", "set:Button2 image:Icon_GoldCoin")
 				  ARR_PRICE[i]:SetProperty("SilverIcon", "set:Button2 image:Icon_SilverCoin")
@@ -55,30 +55,31 @@ function Shop_BulkBuying_Open( idx )
 			local price = NpcShop:EnumItemPrice(g_ItemIdx);
 			local playerMoney = Player:GetData("MONEY");
 			local playerMoneyJZ = Player:GetData("MONEY_JZ");
-			--ĞèÒª»¨·Ñ
+			--éœ€è¦èŠ±è´¹
 			Shop_BulkBuying_Money2:SetProperty("MoneyMaxNumber", playerMoney);
-			Shop_BulkBuying_Money2:SetProperty("MoneyNumber", price*20);
-			--ÎïÆ·µ¥¼Û
-			Shop_BulkBuying_Money1:SetProperty("MoneyNumber", price);
-			--ÉíÌåĞ¯´ø
+			Shop_BulkBuying_Money2:SetProperty("MoneyNumber", 0);
+			--ç‰©å“å•ä»·
+			Shop_BulkBuying_Money1:SetProperty("MoneyNumber", math.max(0, price));
+			--èº«ä½“æºå¸¦
 			Shop_BulkBuying_Money3:SetProperty("MoneyNumber", playerMoney);
 			Shop_BulkBuying_Money4:SetProperty("MoneyNumber", playerMoneyJZ);
-			--ÊıÁ¿
+			--æ•°é‡
 			Shop_BulkBuying_IME:SetProperty("DefaultEditBox", "True");
-			Shop_BulkBuying_IME:SetText("20");
+			Shop_BulkBuying_IME:SetText(tostring(math.min(20, g_ItemMax)));
 			Shop_BulkBuying_IME:SetSelected( 0, -1 );
-			--Ãû³Æ
+			--åç§°
 			Shop_BulkBuying_PageHeader:SetText("#gFF0FA0"..NpcShop:EnumItemName(g_ItemIdx));
+			Shop_BulkBuying_TextChanged();
 			this:Show();
 		--end
 	end
 	
-	--ÉÌµêÊÇÓÅÏÈ¿Û½»×ÓµÄ
+	--å•†åº—æ˜¯ä¼˜å…ˆæ‰£äº¤å­çš„
 	if(NpcShop:GetShopType("unit") == CU_MONEYJZ) then
-		--Õâ¸öÎ»ÖÃµÄÎïÆ·µÄµş¼ÓÊıÁ¿ÊÇ´óÓÚ1µÄ
-		g_ItemMax = NpcShop:EnumItemMaxOverlay(idx);
+		--è¿™ä¸ªä½ç½®çš„ç‰©å“çš„å åŠ æ•°é‡æ˜¯å¤§äº1çš„
+		g_ItemMax = NpcShop:GetBulkBuyLimit(idx);
 		--if(g_ItemMax > 1) then
-			--·ûºÏÌõ¼ş£¬ÏÔÊ¾½çÃæ
+			--ç¬¦åˆæ¡ä»¶ï¼Œæ˜¾ç¤ºç•Œé¢
 			for i = 1, 2 do
 					ARR_PRICE[i]:SetProperty("GoldIcon", "set:Button6 image:Lace_JiaoziJin")
 				  ARR_PRICE[i]:SetProperty("SilverIcon", "set:Button6 image:Lace_JiaoziYin")
@@ -89,20 +90,21 @@ function Shop_BulkBuying_Open( idx )
 			local price = NpcShop:EnumItemPrice(g_ItemIdx);
 			local playerMoney = Player:GetData("MONEY");
 			local playerMoneyJZ = Player:GetData("MONEY_JZ");
-			--ĞèÒª»¨·Ñ
-			Shop_BulkBuying_Money2:SetProperty("MoneyMaxNumber", playerMoney + playerMoneyJZ);
-			Shop_BulkBuying_Money2:SetProperty("MoneyNumber", price*20);
-			--ÎïÆ·µ¥¼Û
-			Shop_BulkBuying_Money1:SetProperty("MoneyNumber", price);
-			--ÉíÌåĞ¯´ø
+			--éœ€è¦èŠ±è´¹
+			Shop_BulkBuying_Money2:SetProperty("MoneyMaxNumber", math.min(2147483647, playerMoney + playerMoneyJZ));
+			Shop_BulkBuying_Money2:SetProperty("MoneyNumber", 0);
+			--ç‰©å“å•ä»·
+			Shop_BulkBuying_Money1:SetProperty("MoneyNumber", math.max(0, price));
+			--èº«ä½“æºå¸¦
 			Shop_BulkBuying_Money3:SetProperty("MoneyNumber", playerMoney);
 			Shop_BulkBuying_Money4:SetProperty("MoneyNumber", playerMoneyJZ);
-			--ÊıÁ¿
+			--æ•°é‡
 			Shop_BulkBuying_IME:SetProperty("DefaultEditBox", "True");
-			Shop_BulkBuying_IME:SetText("20");
+			Shop_BulkBuying_IME:SetText(tostring(math.min(20, g_ItemMax)));
 			Shop_BulkBuying_IME:SetSelected( 0, -1 );
-			--Ãû³Æ
+			--åç§°
 			Shop_BulkBuying_PageHeader:SetText("#gFF0FA0"..NpcShop:EnumItemName(g_ItemIdx));
+			Shop_BulkBuying_TextChanged();
 			this:Show();
 		--end
 	end
@@ -110,35 +112,30 @@ function Shop_BulkBuying_Open( idx )
 end
 
 function Shop_BulkBuying_Accept_Clicked()
-	--¹ºÂò¶à¸ö
-	local num = tonumber(Shop_BulkBuying_IME:GetText());
-	if(nil ~= num) then
-		if( tonumber( num ) == 0  ) then
-		else
-			NpcShop:BulkBuyItem(g_ItemIdx, num);
-		end
+	if not Shop_BulkBuying_TextChanged() then
+		PushDebugMessage(GetDictionaryString("STACK999_INVALID_QUANTITY"));
+		return;
 	end
+	NpcShop:BulkBuyItem(g_ItemIdx, tonumber(Shop_BulkBuying_IME:GetText()));
 	this:Hide();
 end
 
 function Shop_BulkBuying_TextChanged()
 	local num = tonumber(Shop_BulkBuying_IME:GetText());
-	if(nil == num or(num and num < 0)) then 
-		Shop_BulkBuying_Money2:SetProperty("MoneyNumber", 0);
-		return; 
+	local limit = NpcShop:GetBulkBuyLimit(g_ItemIdx);
+	Shop_BulkBuying_Accept:SetProperty("Disabled", "True");
+	Shop_BulkBuying_Money2:SetProperty("MoneyNumber", 0);
+	if not num or num ~= math.floor(num) or num < 1 or num > limit then
+		Shop_BulkBuying_Money2:SetText(GetDictionaryString("STACK999_INVALID_QUANTITY"));
+		return false;
 	end
-	
-	if(num > 20) then
-		num = 20;
+	local unitPrice = NpcShop:EnumItemPrice(g_ItemIdx);
+	local price = unitPrice * num;
+	if unitPrice < 0 or price > 2147483647 then
+		Shop_BulkBuying_Money2:SetText(GetDictionaryString("STACK999_PRICE_OUT_OF_RANGE"));
+		return false;
 	end
-	if(num == 0) then
-		Shop_BulkBuying_Money2:SetText("");
-		Shop_BulkBuying_Money2:SetProperty("MoneyNumber", 0);
-	end
-	--if(tostring(num) ~= Shop_BulkBuying_IME:GetText())then --ÈÃ½ğÇ®ËæÊ±¸üĞÂ,by hukai#38377
-		local price = NpcShop:EnumItemPrice(g_ItemIdx)*num;
-		Shop_BulkBuying_Money2:SetProperty("MoneyNumber", price);
-		Shop_BulkBuying_IME:SetTextOriginal(num); --ĞŞ¸ÄÔ­À´µÄbug£¬µİ¹éµ÷ÓÃµ¼ÖÂ¿Í»§¶Ë½Å±¾ÏµÍ³ËÀµô
-	--end
-	
+	Shop_BulkBuying_Money2:SetProperty("MoneyNumber", math.max(0, price));
+	Shop_BulkBuying_Accept:SetProperty("Disabled", "False");
+	return true;
 end

@@ -1,27 +1,27 @@
---´óÀíNPC
---¿¼¹Ù
---ÆÕÍ¨
---½Å±¾ºÅ
+--å¤§ç†NPC
+--è€ƒå®˜
+--æ™®é€š
+--è„šæœ¬å·
 x801017_g_scriptId = 801017
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x801017_g_eventList={801016}	
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x801017_UpdateEventList( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
 		local  PlayerName=GetName(sceneId,selfId)
 		local  PlayerSex=GetSex(sceneId,selfId)
 		if PlayerSex == 0 then
-			PlayerSex = "¹ÃÄï"
+			PlayerSex = "å§‘å¨˜"
 		else
-			PlayerSex = "ÉÙÏÀ"
+			PlayerSex = "å°‘ä¾ "
 		end
 		AddText(sceneId,"#{EXAM_INFO_1}")
 		
-		AddNumText( sceneId, x801017_g_scriptId, "¿Æ¾Ù½éÉÜ", 11, 10 )
+		AddNumText( sceneId, x801017_g_scriptId, "ç§‘ä¸¾ä»‹ç»", 11, 10 )
 		
 		for i, eventId in x801017_g_eventList do
 			CallScriptFunction( eventId, "OnEnumerate",sceneId, selfId, targetId )
@@ -31,14 +31,14 @@ function x801017_UpdateEventList( sceneId, selfId,targetId )
 end
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x801017_OnDefaultEvent( sceneId, selfId,targetId )
 	x801017_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x801017_OnEventRequest( sceneId, selfId, targetId, eventId )
 	if GetNumText() == 10 then
@@ -56,7 +56,7 @@ function x801017_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---ËÀÍöÊÂ¼ş
+--æ­»äº¡äº‹ä»¶
 --**********************************
 function x801017_OnDie( sceneId, selfId, killerId )
 end

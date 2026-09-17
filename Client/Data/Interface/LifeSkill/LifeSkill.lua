@@ -130,10 +130,10 @@ function LifeSkill_Update()
 			end
 		end
 	end
-	--µÃµ½µ±Ç°×î¶à¿ÉÏÔÊ¾µÄidÊýÁ¿
+	--å¾—åˆ°å½“å‰æœ€å¤šå¯æ˜¾ç¤ºçš„idæ•°é‡
 	MaxValidID = maxValidID - 1;
 	
-	--Èç¹ûµ±Ç°ÎªµÚÒ»Ò³£¬ÉÏ·­°´Å¥»Òµô	
+	--å¦‚æžœå½“å‰ä¸ºç¬¬ä¸€é¡µï¼Œä¸Šç¿»æŒ‰é’®ç°æŽ‰	
 	if Current_Page == 0 then
 		LifeSkill_UPdata1 : Disable();
 	else
@@ -189,12 +189,12 @@ function LifeSkill_Buttons_Clicked(nIndex)
 	local popup = Player:GetAbilityInfo(lifeid,"popup");
 	if(tonumber(popup) == 2) then
 		LifeSkill_Next1 : Show();
-		LifeSkill_Next1 : SetText("ÏâÇ¶")
+		LifeSkill_Next1 : SetText("é•¶åµŒ")
 --		LifeSkill_Next2 : Show();
 --		LifeSkill_Next3 : Hide();
 	elseif ( popup == 1 ) then
 		LifeSkill_Next1 : Show();
-		LifeSkill_Next1 : SetText("ÖÆ×÷")
+		LifeSkill_Next1 : SetText("åˆ¶ä½œ")
 --		LifeSkill_Next2 : Hide();
 --		LifeSkill_Next3 : Hide();
 	else
@@ -207,24 +207,24 @@ function LifeSkill_Buttons_Clicked(nIndex)
  	local strName2= Player:GetAbilityInfo(lifeid,"level");
  	local level = tonumber(strName2);
 	LifeSkill_Target_Skill_Name : SetText( strName );
-	LifeSkill_Target_Skill_Level : SetText("µÈ¼¶:" .. strName2);
+	LifeSkill_Target_Skill_Level : SetText("ç­‰çº§:" .. strName2);
 	
 	strName = Player:GetAbilityInfo(lifeid,"explain");
 	LifeSkill_Target_Skill_Explain : SetText( strName );
 	
 	local max_exp;
 	if level > 12 or level < 1 then
-		max_exp = "¡Þ"
+		max_exp = "âˆž"
 	else
 --		max_exp = Max_SkillExp[level]
 		max_exp = LifeAbility : GetLifeAbility_LimitExp(lifeid,level);
 	end
 	
 	strName = Player:GetAbilityInfo(lifeid,"skillexp");
-	LifeSkill_Target_Skill_Sleight:SetText( "ÊìÁ·¶È:"..strName.."/"..max_exp);
+	LifeSkill_Target_Skill_Sleight:SetText( "ç†Ÿç»ƒåº¦:"..strName.."/"..max_exp);
 
 	LifeSkill_Target_Skill:SetActionItem( LIFE_INDEX[nIndex] );
---ÑîÒ«µÄÉè¼Æ£¬ÁõÌúËµ²»Òª£¬ËùÒÔ×¢ÊÍÒÔÏÂ´úÂë
+--æ¨è€€çš„è®¾è®¡ï¼Œåˆ˜é“è¯´ä¸è¦ï¼Œæ‰€ä»¥æ³¨é‡Šä»¥ä¸‹ä»£ç 
 --	LifeAbility : Update_Synthesize(lifeid);
 --------------------------------------------
 end
@@ -254,7 +254,7 @@ function Life_Action_Page_Switch()
 		LifeSkill_CommonlySkill : SetCheck(0);
 		LifeSkill_ActionSkill : SetCheck(0);
 		LifeSkill_LifeSkill : SetCheck(1);
-		PushDebugMessage("Äã»¹Ã»ÓÐ°ÝÈëÃÅÅÉ¡£");
+		PushDebugMessage("ä½ è¿˜æ²¡æœ‰æ‹œå…¥é—¨æ´¾ã€‚");
 		return; 
 	end;
 	OpenSkillBook();
@@ -290,9 +290,9 @@ function LifeSkill_SetTabColor()
 							};
 
 	local TAB_TEXT = {
-		[0] = "ÆÕÍ¨",
-		"ÃÅÅÉ",
-		"Éú»î",
+		[0] = "æ™®é€š",
+		"é—¨æ´¾",
+		"ç”Ÿæ´»",
 	};
 	
 	tab[0]:SetText(noselColor..TAB_TEXT[0]);

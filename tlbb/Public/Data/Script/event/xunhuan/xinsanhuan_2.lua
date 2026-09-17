@@ -1,84 +1,84 @@
--- Á¬»·¸±±¾ÈÎÎñ
--- Ğş·ğÖé
+-- è¿ç¯å‰¯æœ¬ä»»åŠ¡
+-- ç„ä½›ç 
 
 --************************************************************************
 --MisDescBegin
 
--- ½Å±¾ºÅ
+-- è„šæœ¬å·
 x050221_g_ScriptId = 050221
 
--- ÈÎÎñºÅ
-x050221_g_MissionId = 1257					--1256 »Æ½ğÖ®Á´--1257 Ğş·ğÖé--1258 ÈÛÑÒÖ®µØ
+-- ä»»åŠ¡å·
+x050221_g_MissionId = 1257					--1256 é»„é‡‘ä¹‹é“¾--1257 ç„ä½›ç --1258 ç†”å²©ä¹‹åœ°
 
--- ÈÎÎñÄ¿±ê NPC
-x050221_g_Name = "Áõ¶Ü"
+-- ä»»åŠ¡ç›®æ ‡ NPC
+x050221_g_Name = "åˆ˜ç›¾"
 
---ÈÎÎñ¹éÀà
+--ä»»åŠ¡å½’ç±»
 x050221_g_MissionKind = 8
 
---ÈÎÎñµÈ¼¶
+--ä»»åŠ¡ç­‰çº§
 x050221_g_MissionLevel = 10000
 
--- ÈÎÎñÎÄ±¾ÃèÊö
-x050221_g_MissionName = "Ğş·ğÖé"
-x050221_g_MissionInfo = "    "														-- ÈÎÎñÃèÊö
-x050221_g_MissionTarget = "    #{LLFBM_80918_2}"						-- ÈÎÎñÄ¿±ê
---x050221_g_ContinueInfo = "    ÄãÃÇ×¼±¸ºÃÁË¾ÍÇëÇ°È¥ÖñÁÖÏûÃğºìĞÜÍõ£¡"					-- Î´Íê³ÉÈÎÎñµÄnpc¶Ô»°
-x050221_g_SubmitInfo = "#{LLFB_80816_43}"										-- Ìá½»Ê±µÄ´ğ¸´
-x050221_g_MissionComplete = "#{LLFB_80902_2}"	--Íê³ÉÈÎÎñnpcËµµÄ»°
+-- ä»»åŠ¡æ–‡æœ¬æè¿°
+x050221_g_MissionName = "ç„ä½›ç "
+x050221_g_MissionInfo = "    "														-- ä»»åŠ¡æè¿°
+x050221_g_MissionTarget = "    #{LLFBM_80918_2}"						-- ä»»åŠ¡ç›®æ ‡
+--x050221_g_ContinueInfo = "    ä½ ä»¬å‡†å¤‡å¥½äº†å°±è¯·å‰å»ç«¹æ—æ¶ˆç­çº¢ç†Šç‹ï¼"					-- æœªå®Œæˆä»»åŠ¡çš„npcå¯¹è¯
+x050221_g_SubmitInfo = "#{LLFB_80816_43}"										-- æäº¤æ—¶çš„ç­”å¤
+x050221_g_MissionComplete = "#{LLFB_80902_2}"	--å®Œæˆä»»åŠ¡npcè¯´çš„è¯
 
-x050221_g_IsMissionOkFail = 0														-- 0 ºÅË÷Òı£ºµ±Ç°ÈÎÎñÊÇ·ñÍê³É(0Î´Íê³É£»1Íê³É£»2Ê§°Ü)
-x050221_g_IsBossYaoWang = 1															-- 1 ºÅË÷Òı£ºÉ±bossºé¼¬ÑıÍõµÄÊıÁ¿
-x050221_g_IsFindGoods = 2																-- 2 ºÅË÷Òı£ºÊÇ·ñÕÒµ½Ğş·ğÖé
-x050221_g_Param_sceneid = 3															-- 3 ºÅË÷Òı£ºµ±Ç°ÈÎÎñÊı¾İµÄ3Î»ÖÃÉèÖÃÎª³¡¾°ID
+x050221_g_IsMissionOkFail = 0														-- 0 å·ç´¢å¼•ï¼šå½“å‰ä»»åŠ¡æ˜¯å¦å®Œæˆ(0æœªå®Œæˆï¼›1å®Œæˆï¼›2å¤±è´¥)
+x050221_g_IsBossYaoWang = 1															-- 1 å·ç´¢å¼•ï¼šæ€bossæ´ªæ£˜å¦–ç‹çš„æ•°é‡
+x050221_g_IsFindGoods = 2																-- 2 å·ç´¢å¼•ï¼šæ˜¯å¦æ‰¾åˆ°ç„ä½›ç 
+x050221_g_Param_sceneid = 3															-- 3 å·ç´¢å¼•ï¼šå½“å‰ä»»åŠ¡æ•°æ®çš„3ä½ç½®è®¾ç½®ä¸ºåœºæ™¯ID
 
-x050221_g_Custom	= { {id="ÒÑÉ±ËÀ£º#r  ºé¼¬ÑıÍõ",num=1},{id="ÒÑÕÒµ½£º#r  Ğş·ğÖé",num=1} }
+x050221_g_Custom	= { {id="å·²æ€æ­»ï¼š#r  æ´ªæ£˜å¦–ç‹",num=1},{id="å·²æ‰¾åˆ°ï¼š#r  ç„ä½›ç ",num=1} }
 
 --MisDescEnd
 --************************************************************************
 
---x050221_g_huangjinzhilian = 40004453	--»Æ½ğÖ®Á´
-x050221_g_heyuanxin = 40004460	--ºÎÔÃµÄĞÅ
-x050221_g_xuanfouzhu = 40004454	--Ğş·ğÖé
+--x050221_g_huangjinzhilian = 40004453	--é»„é‡‘ä¹‹é“¾
+x050221_g_heyuanxin = 40004460	--ä½•æ‚¦çš„ä¿¡
+x050221_g_xuanfouzhu = 40004454	--ç„ä½›ç 
 
---x050221_g_yimouzhufeng = 	--ÒıÄ§Öé£¨·ç£©
---x050221_g_yimouzhuyan = 	--ÒıÄ§Öé£¨Ñæ£©
---x050221_g_yimouzhudi = 	--ÒıÄ§Öé£¨µØ£©
---x050221_g_yimouzhuxuan = 	--ÒıÄ§Öé£¨Ğş£©
---x050221_g_yimouzhudu = 	--ÒıÄ§Öé£¨¶¾£©
+--x050221_g_yimouzhufeng = 	--å¼•é­”ç ï¼ˆé£ï¼‰
+--x050221_g_yimouzhuyan = 	--å¼•é­”ç ï¼ˆç„°ï¼‰
+--x050221_g_yimouzhudi = 	--å¼•é­”ç ï¼ˆåœ°ï¼‰
+--x050221_g_yimouzhuxuan = 	--å¼•é­”ç ï¼ˆç„ï¼‰
+--x050221_g_yimouzhudu = 	--å¼•é­”ç ï¼ˆæ¯’ï¼‰
 
-x050221_g_Monster15ID = "¶¾ÕÏĞ¡¹Ö"			--Ğ¡¹Ö
-x050221_g_Monster10ID = "ÔóµØ¶¾Öë"			--Ğ¡¹Ö
+x050221_g_Monster15ID = "æ¯’éšœå°æ€ª"			--å°æ€ª
+x050221_g_Monster10ID = "æ³½åœ°æ¯’è››"			--å°æ€ª
 
-x050221_g_BossID = {"Ëº·çÄ§","ÆÆÑæ×ğÕß","ÁÑµØĞĞÕß","ÎäĞş½«","Îå¶¾Ä§Ê¹"}
+x050221_g_BossID = {"æ’•é£é­”","ç ´ç„°å°Šè€…","è£‚åœ°è¡Œè€…","æ­¦ç„å°†","äº”æ¯’é­”ä½¿"}
 x050221_g_YinMoZhuID = {40004456,40004459,40004458,40004455,40004457}
 
-x050221_g_BossYaoWang = "ºé¼¬ÑıÍõ"			-- bossºé¼¬ÑıÍõ
+x050221_g_BossYaoWang = "æ´ªæ£˜å¦–ç‹"			-- bossæ´ªæ£˜å¦–ç‹
 
-Monster15IDTbl = {13080,13081,13082,13083,13084,13085,13086,13087,13088,13089}			--15Ğ¡¹Ö
-Monster10IDTbl = {13100,13101,13102,13103,13104,13105,13106,13107,13108,13109}			--10Ğ¡¹Ö
+Monster15IDTbl = {13080,13081,13082,13083,13084,13085,13086,13087,13088,13089}			--15å°æ€ª
+Monster10IDTbl = {13100,13101,13102,13103,13104,13105,13106,13107,13108,13109}			--10å°æ€ª
 
-BossIDTbl = {{13120,13121,13122,13123,13124,13125,13126,13127,13128,13129},	--·çboss
-{13200,13201,13202,13203,13204,13205,13206,13207,13208,13209},						--Ñæboss
-{13140,13141,13142,13143,13144,13145,13146,13147,13148,13149},					--µØboss
-{13160,13161,13162,13163,13164,13165,13166,13167,13168,13169},						--Ğşboss
-{13180,13181,13182,13183,13184,13185,13186,13187,13188,13189}}						--¶¾boss
+BossIDTbl = {{13120,13121,13122,13123,13124,13125,13126,13127,13128,13129},	--é£boss
+{13200,13201,13202,13203,13204,13205,13206,13207,13208,13209},						--ç„°boss
+{13140,13141,13142,13143,13144,13145,13146,13147,13148,13149},					--åœ°boss
+{13160,13161,13162,13163,13164,13165,13166,13167,13168,13169},						--ç„boss
+{13180,13181,13182,13183,13184,13185,13186,13187,13188,13189}}						--æ¯’boss
 
-BossYaoWangIDTbl = {13220,13221,13222,13223,13224,13225,13226,13227,13228,13229}		-- bossºé¼¬ÑıÍõ
+BossYaoWangIDTbl = {13220,13221,13222,13223,13224,13225,13226,13227,13228,13229}		-- bossæ´ªæ£˜å¦–ç‹
 
-x050221_g_BossTalk = {"ºÎÈË¸Ò´òÈÅÎáĞİÏ¢£¿£¡", --bossËµ»°
-"´Ë´¦½«ÊÇ¶ûµÈ³¤ÃßÖ®µØ£¡",
-"ÉÃ´³ÎáÖ®ÁìµØÕßËÀ£¡",
-"ÓÖÀ´Ò»¸öËÍËÀµÄ£¡",
-"¹ş¹ş£¬ÖÕÓÚÓÖ¿ÉÒÔÉìÕ¹ÊÖ½ÅÁË£¡"}
+x050221_g_BossTalk = {"ä½•äººæ•¢æ‰“æ‰°å¾ä¼‘æ¯ï¼Ÿï¼", --bossè¯´è¯
+"æ­¤å¤„å°†æ˜¯å°”ç­‰é•¿çœ ä¹‹åœ°ï¼",
+"æ“…é—¯å¾ä¹‹é¢†åœ°è€…æ­»ï¼",
+"åˆæ¥ä¸€ä¸ªé€æ­»çš„ï¼",
+"å“ˆå“ˆï¼Œç»ˆäºåˆå¯ä»¥ä¼¸å±•æ‰‹è„šäº†ï¼"}
 
-x050221_g_YaoWangTalk = "ºÎ·½Ğ¡±²¸ÒÉ±Îáº¢¶ù£¬¿É¸ÒÇ°À´ÊÜËÀ£¿£¡"			-- bossºé¼¬ÑıÍõËµ»°
+x050221_g_YaoWangTalk = "ä½•æ–¹å°è¾ˆæ•¢æ€å¾å­©å„¿ï¼Œå¯æ•¢å‰æ¥å—æ­»ï¼Ÿï¼"			-- bossæ´ªæ£˜å¦–ç‹è¯´è¯
 
-x050221_g_Pos = {{left={130,191},right={137,200}},--·ç
- {left={68,132},right={77,142}},--Ñæ
- {left={77,65},right={87,73}},--µØ
- {left={176,158},right={188,169}},--Ğş
- {left={175,62},right={188,72}}}--¶¾
+x050221_g_Pos = {{left={130,191},right={137,200}},--é£
+ {left={68,132},right={77,142}},--ç„°
+ {left={77,65},right={87,73}},--åœ°
+ {left={176,158},right={188,169}},--ç„
+ {left={175,62},right={188,72}}}--æ¯’
 
 x050221_g_BossYaoWangPos ={127,118}
 
@@ -97,31 +97,31 @@ x050221_g_monster10Pos = {{132,199},{136,200},{138,196},{135,192},{134,189},{128
 {184,74},{182,78},{179,75},{179,83},{190,76},{194,74},{191,63},{188,60},{180,61},{177,62}
 }
 
-x050221_g_NumText_Main = 1					-- ½ÓÈÎÎñµÄÑ¡Ïî
-x050221_g_NumText_EnterCopyScene = 2		-- ÒªÇó½øÈë¸±±¾µÄÑ¡Ïî
+x050221_g_NumText_Main = 1					-- æ¥ä»»åŠ¡çš„é€‰é¡¹
+x050221_g_NumText_EnterCopyScene = 2		-- è¦æ±‚è¿›å…¥å‰¯æœ¬çš„é€‰é¡¹
 
 x050221_g_CopySceneMap = "dumuchang.nav"
 x050221_g_CopySceneArea = "dumuchang_area.ini"
 x050221_g_CopySceneMonsterIni = "dumuchang_monster.ini"
 
-x050221_g_CopySceneType = FUBEN_XUANFOUZHU		-- ¸±±¾ÀàĞÍ£¬¶¨ÒåÔÚScriptGlobal.luaÀïÃæ
-x050221_g_LimitMembers = XINSANHUAN_MIN_ENTRY_PLAYER_COUNT					-- ¿ÉÒÔ½ø¸±±¾µÄ×îĞ¡¶ÓÎéÈËÊı
-x050221_g_TickTime = 5						-- »Øµ÷½Å±¾µÄÊ±ÖÓÊ±¼ä£¨µ¥Î»£ºÃë/´Î£©
-x050221_g_LimitTotalHoldTime = 360			-- ¸±±¾¿ÉÒÔ´æ»îµÄÊ±¼ä£¨µ¥Î»£º´ÎÊı£©,Èç¹û´ËÊ±¼äµ½ÁË£¬ÔòÈÎÎñ½«»áÊ§°Ü
-x050221_g_CloseTick = 6						-- ¸±±¾¹Ø±ÕÇ°µ¹¼ÆÊ±£¨µ¥Î»£º´ÎÊı£©
-x050221_g_NoUserTime = 30					-- ¸±±¾ÖĞÃ»ÓĞÈËºó¿ÉÒÔ¼ÌĞø±£´æµÄÊ±¼ä£¨µ¥Î»£ºÃë£©
+x050221_g_CopySceneType = FUBEN_XUANFOUZHU		-- å‰¯æœ¬ç±»å‹ï¼Œå®šä¹‰åœ¨ScriptGlobal.luaé‡Œé¢
+x050221_g_LimitMembers = XINSANHUAN_MIN_ENTRY_PLAYER_COUNT					-- å¯ä»¥è¿›å‰¯æœ¬çš„æœ€å°é˜Ÿä¼äººæ•°
+x050221_g_TickTime = 5						-- å›è°ƒè„šæœ¬çš„æ—¶é’Ÿæ—¶é—´ï¼ˆå•ä½ï¼šç§’/æ¬¡ï¼‰
+x050221_g_LimitTotalHoldTime = 360			-- å‰¯æœ¬å¯ä»¥å­˜æ´»çš„æ—¶é—´ï¼ˆå•ä½ï¼šæ¬¡æ•°ï¼‰,å¦‚æœæ­¤æ—¶é—´åˆ°äº†ï¼Œåˆ™ä»»åŠ¡å°†ä¼šå¤±è´¥
+x050221_g_CloseTick = 6						-- å‰¯æœ¬å…³é—­å‰å€’è®¡æ—¶ï¼ˆå•ä½ï¼šæ¬¡æ•°ï¼‰
+x050221_g_NoUserTime = 30					-- å‰¯æœ¬ä¸­æ²¡æœ‰äººåå¯ä»¥ç»§ç»­ä¿å­˜çš„æ—¶é—´ï¼ˆå•ä½ï¼šç§’ï¼‰
 
 x050221_g_Fuben_X = 220
 x050221_g_Fuben_Z = 217
 x050221_g_Back_X = 122
 x050221_g_Back_Z = 56
 
-x050221_g_TakeTimes = 5											-- Ã¿Ìì×î¶àÁìÈ¡´ÎÊı
+x050221_g_TakeTimes = 5											-- æ¯å¤©æœ€å¤šé¢†å–æ¬¡æ•°
 --**********************************
--- ÈÎÎñÈë¿Úº¯Êı
+-- ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
-function x050221_OnDefaultEvent( sceneId, selfId, targetId )	-- µã»÷¸ÃÈÎÎñºóÖ´ĞĞ´Ë½Å±¾
-	if GetName( sceneId, targetId ) ~= x050221_g_Name then		-- ÅĞ¶Ï¸ÃnpcÊÇ·ñÊÇ¶ÔÓ¦ÈÎÎñµÄnpc
+function x050221_OnDefaultEvent( sceneId, selfId, targetId )	-- ç‚¹å‡»è¯¥ä»»åŠ¡åæ‰§è¡Œæ­¤è„šæœ¬
+	if GetName( sceneId, targetId ) ~= x050221_g_Name then		-- åˆ¤æ–­è¯¥npcæ˜¯å¦æ˜¯å¯¹åº”ä»»åŠ¡çš„npc
 		return
 	end
 	
@@ -135,7 +135,7 @@ function x050221_OnDefaultEvent( sceneId, selfId, targetId )	-- µã»÷¸ÃÈÎÎñºóÖ´ĞĞ
 				EndEvent( sceneId )
 				DispatchEventList( sceneId, selfId, targetId )
 			elseif x050221_CheckAccept( sceneId, selfId, targetId ) > 0 then
-				--·¢ËÍÈÎÎñ½ÓÊÜÊ±ÏÔÊ¾µÄĞÅÏ¢
+				--å‘é€ä»»åŠ¡æ¥å—æ—¶æ˜¾ç¤ºçš„ä¿¡æ¯
 				BeginEvent( sceneId )
 					AddText( sceneId, "#{LLFB_80816_22}" )
 				EndEvent( )
@@ -153,7 +153,7 @@ function x050221_OnDefaultEvent( sceneId, selfId, targetId )	-- µã»÷¸ÃÈÎÎñºóÖ´ĞĞ
 					AddText( sceneId, x050221_g_SubmitInfo )
 				else
 						AddText( sceneId, "#{LLFB_80816_24}" )
-						AddNumText( sceneId, x050221_g_ScriptId, "Ç°Íù¶¾ÕÏÔóµØ", 10, x050221_g_NumText_EnterCopyScene )
+						AddNumText( sceneId, x050221_g_ScriptId, "å‰å¾€æ¯’éšœæ³½åœ°", 10, x050221_g_NumText_EnterCopyScene )
 						EndEvent( sceneId )
 					DispatchEventList( sceneId, selfId, targetId )
 					return
@@ -168,7 +168,7 @@ function x050221_OnDefaultEvent( sceneId, selfId, targetId )	-- µã»÷¸ÃÈÎÎñºóÖ´ĞĞ
 end
 
 --**********************************
--- ²»ÄÜÓĞÆäËûµÄÈÎÎñ£¬Ã»ÓĞ·µ»Ø 0£¬ÓĞ·µ»Ø 1
+-- ä¸èƒ½æœ‰å…¶ä»–çš„ä»»åŠ¡ï¼Œæ²¡æœ‰è¿”å› 0ï¼Œæœ‰è¿”å› 1
 --**********************************
 function x050221_CheckConflictMission( sceneId, selfId )
 	local missionId = 0
@@ -185,14 +185,14 @@ function x050221_CheckConflictMission( sceneId, selfId )
 end
 
 --**********************************
--- ÁĞ¾ÙÊÂ¼ş
+-- åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x050221_OnEnumerate( sceneId, selfId, targetId )
-	if GetName( sceneId, targetId ) ~= x050221_g_Name then		--ÅĞ¶Ï¸ÃnpcÊÇ·ñÊÇ¶ÔÓ¦ÈÎÎñµÄnpc
+	if GetName( sceneId, targetId ) ~= x050221_g_Name then		--åˆ¤æ–­è¯¥npcæ˜¯å¦æ˜¯å¯¹åº”ä»»åŠ¡çš„npc
 		return
 	end
 
-	-- ²»ÄÜÓĞÆäËûµÄÈÎÎñ
+	-- ä¸èƒ½æœ‰å…¶ä»–çš„ä»»åŠ¡
 	if x050221_CheckConflictMission( sceneId, selfId ) == 1 then
 		return
 	end
@@ -201,20 +201,20 @@ function x050221_OnEnumerate( sceneId, selfId, targetId )
 end
 
 --**********************************
--- ¼ì²â½ÓÊÜÌõ¼ş
+-- æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x050221_CheckAccept( sceneId, selfId, targetId )
-	-- ÒÑ¾­½Ó¹ıÔò²»·ûºÏÌõ¼ş
+	-- å·²ç»æ¥è¿‡åˆ™ä¸ç¬¦åˆæ¡ä»¶
 	if IsHaveMission( sceneId, selfId, x050221_g_MissionId ) > 0 then
 		return 0
 	end
 
-	-- ²»ÄÜÓĞÆäËûµÄÈÎÎñ
+	-- ä¸èƒ½æœ‰å…¶ä»–çš„ä»»åŠ¡
 	if x050221_CheckConflictMission( sceneId, selfId ) == 1 then
 		return 0
 	end
 	
-	-- Ò»ÌìÖ»ÄÜÁì x050221_g_TakeTimes ´Î
+	-- ä¸€å¤©åªèƒ½é¢† x050221_g_TakeTimes æ¬¡
 	local DayTimes, oldDate, nowDate, takenTimes
 
 	DayTimes = GetMissionData( sceneId, selfId, MD_XINSANHUAN_2_DAYTIME )
@@ -227,17 +227,17 @@ function x050221_CheckAccept( sceneId, selfId, targetId )
 		SetMissionData( sceneId, selfId, MD_XINSANHUAN_2_DAYTIME, nowDate )
 	end
 
-	--5´Î
+	--5æ¬¡
 	if takenTimes >= x050221_g_TakeTimes then
 		x050221_NotifyFailBox( sceneId, selfId, targetId, "#{LLFB_80816_3}" )
 		return 0
 	end
 
-	-- ¼ì²âÍæ¼ÒÊÇ·ñ·ûºÏ¸Õ·ÅÆúÈÎÎñ
-	local iTime = GetMissionData( sceneId, selfId, MD_XINSANHUAN_2_LAST )			-- ÉÏÒ»´Î·ÅÆúÈÎÎñµÄÊ±¼ä(µ¥Î»£ºÒ»¿ÌÖÓ)
+	-- æ£€æµ‹ç©å®¶æ˜¯å¦ç¬¦åˆåˆšæ”¾å¼ƒä»»åŠ¡
+	local iTime = GetMissionData( sceneId, selfId, MD_XINSANHUAN_2_LAST )			-- ä¸Šä¸€æ¬¡æ”¾å¼ƒä»»åŠ¡çš„æ—¶é—´(å•ä½ï¼šä¸€åˆ»é’Ÿ)
 	--begin modified by zhangguoxin 090208
-	--local CurTime = GetHourTime()												-- µ±Ç°Ê±¼ä(µ¥Î»£ºÒ»¿ÌÖÓ)
-	local CurTime = GetQuarterTime()												-- µ±Ç°Ê±¼ä(µ¥Î»£ºÒ»¿ÌÖÓ)
+	--local CurTime = GetHourTime()												-- å½“å‰æ—¶é—´(å•ä½ï¼šä¸€åˆ»é’Ÿ)
+	local CurTime = GetQuarterTime()												-- å½“å‰æ—¶é—´(å•ä½ï¼šä¸€åˆ»é’Ÿ)
 	--end modified by zhangguoxin 090208
 
 	if iTime+1  >= CurTime then
@@ -245,27 +245,27 @@ function x050221_CheckAccept( sceneId, selfId, targetId )
 		return 0
 	end
 
-	-- µÈ¼¶´ïµ½75
+	-- ç­‰çº§è¾¾åˆ°75
 	if GetLevel(sceneId, selfId) < 75 then
 		x050221_NotifyFailBox( sceneId, selfId, targetId, "#{LLFB_80816_5}" )
 		return 0
 	end
 
-	-- ËùÓĞĞÄ·¨´ïµ½45
+	-- æ‰€æœ‰å¿ƒæ³•è¾¾åˆ°45
 	if x050221_CheckAllXinfaLevel(sceneId, selfId, 45) == 0  then
 		x050221_NotifyFailBox( sceneId, selfId, targetId, "#{LLFB_80816_5}" )
 		return 0
 	end
 
-	-- ÉíÉÏÈÎÎñÊıÁ¿ÊÇ·ñ´ïµ½ÉÏÏŞ20¸ö
+	-- èº«ä¸Šä»»åŠ¡æ•°é‡æ˜¯å¦è¾¾åˆ°ä¸Šé™20ä¸ª
 	if GetMissionCount( sceneId, selfId ) >= 20 then						
 		x050221_NotifyFailBox( sceneId, selfId, targetId, "#{LLFB_80816_6}" )
 		return 0
 	end
 	
-	-- ÉíÉÏÈÎÎñÎïÆ·À¸ÊıÁ¿
+	-- èº«ä¸Šä»»åŠ¡ç‰©å“æ æ•°é‡
 	if LuaFnGetTaskItemBagSpace( sceneId, selfId ) < 1 then
-		x050221_NotifyFailTips( sceneId, selfId, "È±ÉÙÒ»¸ñÈÎÎñÎïÆ·¿Õ¼ä" )
+		x050221_NotifyFailTips( sceneId, selfId, "ç¼ºå°‘ä¸€æ ¼ä»»åŠ¡ç‰©å“ç©ºé—´" )
 		return 0
 	end
 	
@@ -278,36 +278,36 @@ function x050221_CheckAccept( sceneId, selfId, targetId )
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x050221_OnAccept( sceneId, selfId, targetId )
-	if LuaFnDelAvailableItem( sceneId, selfId, x050221_g_heyuanxin, 1 ) <= 0 then--ĞèÒª¿Û³ıºÎÔÃµÄĞÅ
+	if LuaFnDelAvailableItem( sceneId, selfId, x050221_g_heyuanxin, 1 ) <= 0 then--éœ€è¦æ‰£é™¤ä½•æ‚¦çš„ä¿¡
 		x050221_NotifyFailBox( sceneId, selfId, targetId, "#{LLFB_80816_21}" )
 		return
 	end
 
-	-- ¼ÓÈëÈÎÎñµ½Íæ¼ÒÁĞ±í
-	AddMission( sceneId, selfId, x050221_g_MissionId, x050221_g_ScriptId, 1, 0, 0 )			-- kill¡¢area¡¢item
+	-- åŠ å…¥ä»»åŠ¡åˆ°ç©å®¶åˆ—è¡¨
+	AddMission( sceneId, selfId, x050221_g_MissionId, x050221_g_ScriptId, 1, 0, 0 )			-- killã€areaã€item
 	if IsHaveMission( sceneId, selfId, x050221_g_MissionId ) <= 0 then
 		return
 	end
 
-	-- Ò»ÌìÖ»ÄÜÁì x050221_g_TakeTimes ´Î
+	-- ä¸€å¤©åªèƒ½é¢† x050221_g_TakeTimes æ¬¡
 	local DayTimes = GetMissionData( sceneId, selfId, MD_XINSANHUAN_2_DAYTIME )
 	local takenTimes = floor( DayTimes/100000 )
 	DayTimes = (takenTimes+1)*100000 + GetDayTime()
 	SetMissionData( sceneId, selfId, MD_XINSANHUAN_2_DAYTIME, DayTimes )
 
---	SetMissionEvent( sceneId, selfId, x050221_g_MissionId, 4 ) -- ×¢²á OnLockedTarget ÊÂ¼ş
+--	SetMissionEvent( sceneId, selfId, x050221_g_MissionId, 4 ) -- æ³¨å†Œ OnLockedTarget äº‹ä»¶
 
 	local misIndex = GetMissionIndexByID( sceneId, selfId, x050221_g_MissionId )
 
-	SetMissionByIndex( sceneId, selfId, misIndex, x050221_g_IsMissionOkFail, 0 )	-- ÈÎÎñÍê³ÉÇé¿öÖÃÎªÎ´Íê³É
-	SetMissionByIndex( sceneId, selfId, misIndex, x050221_g_Param_sceneid, -1 )		-- ¸±±¾ºÅÖÃÎª -1
+	SetMissionByIndex( sceneId, selfId, misIndex, x050221_g_IsMissionOkFail, 0 )	-- ä»»åŠ¡å®Œæˆæƒ…å†µç½®ä¸ºæœªå®Œæˆ
+	SetMissionByIndex( sceneId, selfId, misIndex, x050221_g_Param_sceneid, -1 )		-- å‰¯æœ¬å·ç½®ä¸º -1
 	SetMissionByIndex( sceneId, selfId, misIndex, x050221_g_IsBossYaoWang, 0 )
 	SetMissionByIndex( sceneId, selfId, misIndex, x050221_g_IsFindGoods, 0 )
 	
-	--ĞèÒª¿Û³ıÒ»´ÎÒıÄ§Öé£¬ÉÏ´ÎÈÎÎñÊ§°Ü¿ÉÄÜÉíÉÏ»¹ÓĞÒıÄ§Öé´æÔÚ
+	--éœ€è¦æ‰£é™¤ä¸€æ¬¡å¼•é­”ç ï¼Œä¸Šæ¬¡ä»»åŠ¡å¤±è´¥å¯èƒ½èº«ä¸Šè¿˜æœ‰å¼•é­”ç å­˜åœ¨
 	for i = 1, getn( x050221_g_YinMoZhuID ) do
 		local num = LuaFnGetAvailableItemCount( sceneId, selfId, x050221_g_YinMoZhuID[i] )
 		if num > 0 then
@@ -315,33 +315,33 @@ function x050221_OnAccept( sceneId, selfId, targetId )
 		end
 	end
 	
-	--¸øÒıÄ§Öé£¨·ç£©
+	--ç»™å¼•é­”ç ï¼ˆé£ï¼‰
 	BeginAddItem( sceneId )
 	AddItem( sceneId, x050221_g_YinMoZhuID[1], 1 )
 	local ret = EndAddItem( sceneId, selfId )
 	if ret <= 0 then
-		x050221_NotifyFailBox( sceneId, selfId, targetId, "ÄãµÄ±³°üÂúÁË¡£" )
+		x050221_NotifyFailBox( sceneId, selfId, targetId, "ä½ çš„èƒŒåŒ…æ»¡äº†ã€‚" )
 		return
 	end
 	AddItemListToHuman(sceneId, selfId)
 
-	--ÏÔÊ¾ÄÚÈİ¸æËßÍæ¼ÒÒÑ¾­½ÓÊÜÁËÈÎÎñ
+	--æ˜¾ç¤ºå†…å®¹å‘Šè¯‰ç©å®¶å·²ç»æ¥å—äº†ä»»åŠ¡
 	BeginEvent( sceneId )
 		AddText( sceneId, "#{LLFB_80816_24}" )
-		AddNumText( sceneId, x050221_g_ScriptId, "Ç°Íù¶¾ÕÏÔóµØ", 10, x050221_g_NumText_EnterCopyScene )
+		AddNumText( sceneId, x050221_g_ScriptId, "å‰å¾€æ¯’éšœæ³½åœ°", 10, x050221_g_NumText_EnterCopyScene )
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
--- ÇëÇó½øÈë¸±±¾³¡¾°
+-- è¯·æ±‚è¿›å…¥å‰¯æœ¬åœºæ™¯
 --**********************************
 function x050221_AcceptEnterCopyScene( sceneId, selfId, targetId )
-	if IsHaveMission( sceneId, selfId, x050221_g_MissionId ) > 0 then					-- ÓĞÈÎÎñ²Å¿ÉÒÔ×ßÕâÀï
+	if IsHaveMission( sceneId, selfId, x050221_g_MissionId ) > 0 then					-- æœ‰ä»»åŠ¡æ‰å¯ä»¥èµ°è¿™é‡Œ
 		local misIndex = GetMissionIndexByID( sceneId, selfId, x050221_g_MissionId )
 		local copysceneid = GetMissionParam( sceneId, selfId, misIndex, x050221_g_Param_sceneid )
-		if copysceneid >= 0 then												-- ½ø¹ı¸±±¾
-		-- ½«×Ô¼º´«ËÍµ½¸±±¾³¡¾°
+		if copysceneid >= 0 then												-- è¿›è¿‡å‰¯æœ¬
+		-- å°†è‡ªå·±ä¼ é€åˆ°å‰¯æœ¬åœºæ™¯
 			if GetMissionParam( sceneId, selfId, misIndex, x050221_g_IsMissionOkFail ) == 2 then
 				x050221_NotifyFailBox( sceneId, selfId, targetId, "#{LLFB_80816_23}" )
 			elseif IsCanEnterCopyScene( copysceneid, GetHumanGUID( sceneId, selfId ) ) == 1 then
@@ -375,13 +375,13 @@ function x050221_AcceptEnterCopyScene( sceneId, selfId, targetId )
 		end
 		
 		local outmessage = "#{FB0}"
-		local issatisfy = 1 --ÊÇ·ñÂú×ãÌõ¼ş
+		local issatisfy = 1 --æ˜¯å¦æ»¡è¶³æ¡ä»¶
 		local memberID = 0
-		local isAccept = 0 --ÊÇ·ñÓĞÈËÒÑ¾­½ÓÁËÈÎÎñ
-		local Acceptmessage = "" --ÒÑ¾­½ÓÁËÈÎÎñµÄÌáÊ¾ÓëÆäËû¹«¹²ÌáÊ¾²»Í¬
+		local isAccept = 0 --æ˜¯å¦æœ‰äººå·²ç»æ¥äº†ä»»åŠ¡
+		local Acceptmessage = "" --å·²ç»æ¥äº†ä»»åŠ¡çš„æç¤ºä¸å…¶ä»–å…¬å…±æç¤ºä¸åŒ
 		for	i = 0, nearMemberCount - 1 do
 			memberID = GetNearTeamMember( sceneId, selfId, i )
-			outmessage = outmessage.."#r#B¶ÓÔ±  "..GetName(sceneId, memberID)
+			outmessage = outmessage.."#r#Bé˜Ÿå‘˜  "..GetName(sceneId, memberID)
 			if GetLevel(sceneId, memberID) >= 75 then
 				outmessage = outmessage.."#{FB1}"
 			else
@@ -409,7 +409,7 @@ function x050221_AcceptEnterCopyScene( sceneId, selfId, targetId )
 						if isAccept == 0 then
 							Acceptmessage = "#G"..GetName(sceneId, memberID)
 						else
-							Acceptmessage = Acceptmessage.."#W¡¢#G"..GetName(sceneId, memberID)
+							Acceptmessage = Acceptmessage.."#Wã€#G"..GetName(sceneId, memberID)
 						end
 						isAccept = 1
 			 		end
@@ -434,7 +434,7 @@ function x050221_AcceptEnterCopyScene( sceneId, selfId, targetId )
 			return
 		end
 		
-		--¼ÆËã¸±±¾ÖĞ¹ÖµÄµÈ¼¶....
+		--è®¡ç®—å‰¯æœ¬ä¸­æ€ªçš„ç­‰çº§....
 		local mylevel = 0
 		local memId
 		local tempMemlevel = 0
@@ -458,7 +458,7 @@ function x050221_AcceptEnterCopyScene( sceneId, selfId, targetId )
 			mylevel = GetLevel(sceneId, selfId)
 		end
 	
-		--¼ÆËãµÈ¼¶¶Î....
+		--è®¡ç®—ç­‰çº§æ®µ....
 		local PlayerMaxLevel = GetHumanMaxLevelLimit()
 		local iniLevel
 		if mylevel < 10 then
@@ -475,59 +475,59 @@ function x050221_AcceptEnterCopyScene( sceneId, selfId, targetId )
 		end
 
 		local leaderguid = LuaFnObjId2Guid( sceneId, selfId )
-		LuaFnSetSceneLoad_Map( sceneId, x050221_g_CopySceneMap )						-- µØÍ¼ÊÇ±ØĞëÑ¡È¡µÄ£¬¶øÇÒ±ØĞëÔÚConfig/SceneInfo.iniÀïÅäÖÃºÃ
+		LuaFnSetSceneLoad_Map( sceneId, x050221_g_CopySceneMap )						-- åœ°å›¾æ˜¯å¿…é¡»é€‰å–çš„ï¼Œè€Œä¸”å¿…é¡»åœ¨Config/SceneInfo.inié‡Œé…ç½®å¥½
 		LuaFnSetCopySceneData_TeamLeader( sceneId, leaderguid )
 		LuaFnSetCopySceneData_NoUserCloseTime( sceneId, x050221_g_NoUserTime * 1000 )
 		LuaFnSetCopySceneData_Timer( sceneId, x050221_g_TickTime * 1000 )
-		LuaFnSetCopySceneData_Param( sceneId, 0, x050221_g_CopySceneType )				-- ÉèÖÃ¸±±¾Êı¾İ£¬ÕâÀï½«0ºÅË÷ÒıµÄÊı¾İÉèÖÃÎª999£¬ÓÃÓÚ±íÊ¾¸±±¾ºÅ999(Êı×Ö×Ô¶¨Òå)
-		LuaFnSetCopySceneData_Param( sceneId, 1, x050221_g_ScriptId )					-- ½«1ºÅÊı¾İÉèÖÃÎª¸±±¾³¡¾°ÊÂ¼ş½Å±¾ºÅ
-		LuaFnSetCopySceneData_Param( sceneId, 2, 0 )							-- ÉèÖÃ¶¨Ê±Æ÷µ÷ÓÃ´ÎÊı
-		LuaFnSetCopySceneData_Param( sceneId, 3, -1 )							-- ÉèÖÃ¸±±¾Èë¿Ú³¡¾°ºÅ, ³õÊ¼»¯
-		LuaFnSetCopySceneData_Param( sceneId, 4, 0 )							-- ÉèÖÃ¸±±¾¹Ø±Õ±êÖ¾, 0¿ª·Å£¬1¹Ø±Õ
-		LuaFnSetCopySceneData_Param( sceneId, 5, 0 )							-- ÉèÖÃÀë¿ªµ¹¼ÆÊ±´ÎÊı
-		LuaFnSetCopySceneData_Param( sceneId, 6, GetTeamId( sceneId, selfId ) )	-- ±£´æ¶ÓÎéºÅ
-		LuaFnSetCopySceneData_Param( sceneId, 7, mylevel )				-- ¶ÓÎéµÄ»ù´¡µÈ¼¶
+		LuaFnSetCopySceneData_Param( sceneId, 0, x050221_g_CopySceneType )				-- è®¾ç½®å‰¯æœ¬æ•°æ®ï¼Œè¿™é‡Œå°†0å·ç´¢å¼•çš„æ•°æ®è®¾ç½®ä¸º999ï¼Œç”¨äºè¡¨ç¤ºå‰¯æœ¬å·999(æ•°å­—è‡ªå®šä¹‰)
+		LuaFnSetCopySceneData_Param( sceneId, 1, x050221_g_ScriptId )					-- å°†1å·æ•°æ®è®¾ç½®ä¸ºå‰¯æœ¬åœºæ™¯äº‹ä»¶è„šæœ¬å·
+		LuaFnSetCopySceneData_Param( sceneId, 2, 0 )							-- è®¾ç½®å®šæ—¶å™¨è°ƒç”¨æ¬¡æ•°
+		LuaFnSetCopySceneData_Param( sceneId, 3, -1 )							-- è®¾ç½®å‰¯æœ¬å…¥å£åœºæ™¯å·, åˆå§‹åŒ–
+		LuaFnSetCopySceneData_Param( sceneId, 4, 0 )							-- è®¾ç½®å‰¯æœ¬å…³é—­æ ‡å¿—, 0å¼€æ”¾ï¼Œ1å…³é—­
+		LuaFnSetCopySceneData_Param( sceneId, 5, 0 )							-- è®¾ç½®ç¦»å¼€å€’è®¡æ—¶æ¬¡æ•°
+		LuaFnSetCopySceneData_Param( sceneId, 6, GetTeamId( sceneId, selfId ) )	-- ä¿å­˜é˜Ÿä¼å·
+		LuaFnSetCopySceneData_Param( sceneId, 7, mylevel )				-- é˜Ÿä¼çš„åŸºç¡€ç­‰çº§
 		LuaFnSetCopySceneData_Param( sceneId, 8, iniLevel )				-- 
-		LuaFnSetCopySceneData_Param( sceneId, 9, 0 )							-- ·ç
-		LuaFnSetCopySceneData_Param( sceneId, 10, 0 )							-- Ñæ
-		LuaFnSetCopySceneData_Param( sceneId, 11, 0 )							-- µØ
-		LuaFnSetCopySceneData_Param( sceneId, 12, 0 )							-- Ğş
-		LuaFnSetCopySceneData_Param( sceneId, 13, 0 )							-- ¶¾
-		LuaFnSetCopySceneData_Param( sceneId, 14, 0 )							-- ÊÇ·ñÉ±ËÀÆÆÑæ×ğÕß
-		LuaFnSetCopySceneData_Param( sceneId, 15, 0 )							-- ÊÇ·ñÒı³öºé¼¬ÑıÍõ
-		LuaFnSetCopySceneData_Param( sceneId, 16, 0 )							-- Ê×´ÎÌáĞÑÊ±¼ä
+		LuaFnSetCopySceneData_Param( sceneId, 9, 0 )							-- é£
+		LuaFnSetCopySceneData_Param( sceneId, 10, 0 )							-- ç„°
+		LuaFnSetCopySceneData_Param( sceneId, 11, 0 )							-- åœ°
+		LuaFnSetCopySceneData_Param( sceneId, 12, 0 )							-- ç„
+		LuaFnSetCopySceneData_Param( sceneId, 13, 0 )							-- æ¯’
+		LuaFnSetCopySceneData_Param( sceneId, 14, 0 )							-- æ˜¯å¦æ€æ­»ç ´ç„°å°Šè€…
+		LuaFnSetCopySceneData_Param( sceneId, 15, 0 )							-- æ˜¯å¦å¼•å‡ºæ´ªæ£˜å¦–ç‹
+		LuaFnSetCopySceneData_Param( sceneId, 16, 0 )							-- é¦–æ¬¡æé†’æ—¶é—´
 
 		LuaFnSetSceneLoad_Area( sceneId, x050221_g_CopySceneArea )
 
 		LuaFnSetSceneLoad_Monster( sceneId, x050221_g_CopySceneMonsterIni )
 
-		local bRetSceneID = LuaFnCreateCopyScene( sceneId )						-- ³õÊ¼»¯Íê³Éºóµ÷ÓÃ´´½¨¸±±¾º¯Êı
+		local bRetSceneID = LuaFnCreateCopyScene( sceneId )						-- åˆå§‹åŒ–å®Œæˆåè°ƒç”¨åˆ›å»ºå‰¯æœ¬å‡½æ•°
 		if bRetSceneID > 0 then
-			x050221_NotifyFailTips( sceneId, selfId, "¸±±¾´´½¨³É¹¦£¡" )
+			x050221_NotifyFailTips( sceneId, selfId, "å‰¯æœ¬åˆ›å»ºæˆåŠŸï¼" )
 			AuditXinSanHuanCreateFuben( sceneId, selfId, 2 )
 		else
-			x050221_NotifyFailTips( sceneId, selfId, "¸±±¾ÊıÁ¿ÒÑ´ïÉÏÏŞ£¬ÇëÉÔºòÔÙÊÔ£¡" )
+			x050221_NotifyFailTips( sceneId, selfId, "å‰¯æœ¬æ•°é‡å·²è¾¾ä¸Šé™ï¼Œè¯·ç¨å€™å†è¯•ï¼" )
 		end
 	end
 end
 
 --**********************************
---¸±±¾ÊÂ¼ş
+--å‰¯æœ¬äº‹ä»¶
 --**********************************
 function x050221_OnCopySceneReady( sceneId, destsceneId )
-	LuaFnSetCopySceneData_Param( destsceneId, 3, sceneId )				-- ÉèÖÃ¸±±¾Èë¿Ú³¡¾°ºÅ
+	LuaFnSetCopySceneData_Param( destsceneId, 3, sceneId )				-- è®¾ç½®å‰¯æœ¬å…¥å£åœºæ™¯å·
 	local leaderguid = LuaFnGetCopySceneData_TeamLeader( destsceneId )
 	local leaderObjId = LuaFnGuid2ObjId( sceneId, leaderguid )
 
-	if leaderObjId == -1 then											-- ÕÒ²»µ½¸ÃÍæ¼Ò
+	if leaderObjId == -1 then											-- æ‰¾ä¸åˆ°è¯¥ç©å®¶
 		return
 	end
 
-	if LuaFnIsCanDoScriptLogic( sceneId, leaderObjId ) ~= 1 then		-- ´¦ÓÚÎŞ·¨Ö´ĞĞÂß¼­µÄ×´Ì¬
+	if LuaFnIsCanDoScriptLogic( sceneId, leaderObjId ) ~= 1 then		-- å¤„äºæ— æ³•æ‰§è¡Œé€»è¾‘çš„çŠ¶æ€
 		return
 	end
 
-	--È¡µÃÍæ¼Ò¸½½üµÄ¶ÓÓÑÊıÁ¿£¨°üÀ¨×Ô¼º£©
+	--å–å¾—ç©å®¶é™„è¿‘çš„é˜Ÿå‹æ•°é‡ï¼ˆåŒ…æ‹¬è‡ªå·±ï¼‰
 	local i, nearMemberCount, member
 	local members = {}
 	local validmembercount = 0
@@ -535,7 +535,7 @@ function x050221_OnCopySceneReady( sceneId, destsceneId )
 	nearMemberCount = GetNearTeamCount( sceneId, leaderObjId )
 	for i = 0, nearMemberCount - 1 do
 		member = GetNearTeamMember( sceneId, leaderObjId, i )
-		if IsHaveMission( sceneId, member, x050221_g_MissionId ) > 0 then		-- ÓĞÈÎÎñ
+		if IsHaveMission( sceneId, member, x050221_g_MissionId ) > 0 then		-- æœ‰ä»»åŠ¡
 			validmembercount = validmembercount + 1
 			members[validmembercount] = member
 		end
@@ -545,10 +545,10 @@ function x050221_OnCopySceneReady( sceneId, destsceneId )
 	for i = 1, validmembercount do
 		if IsHaveMission( sceneId, members[i], x050221_g_MissionId ) > 0 then
 			misIndex = GetMissionIndexByID( sceneId, members[i], x050221_g_MissionId )
-			if LuaFnIsCanDoScriptLogic( sceneId, members[i] ) == 1 then			-- ´¦ÓÚ¿ÉÒÔÖ´ĞĞÂß¼­µÄ×´Ì¬
-				--½«ÈÎÎñµÄµÚ1ºÅÊı¾İÉèÖÃÎª¸±±¾µÄ³¡¾°ºÅ
+			if LuaFnIsCanDoScriptLogic( sceneId, members[i] ) == 1 then			-- å¤„äºå¯ä»¥æ‰§è¡Œé€»è¾‘çš„çŠ¶æ€
+				--å°†ä»»åŠ¡çš„ç¬¬1å·æ•°æ®è®¾ç½®ä¸ºå‰¯æœ¬çš„åœºæ™¯å·
 				SetMissionByIndex( sceneId, members[i], misIndex, x050221_g_Param_sceneid, destsceneId )
-		--		SetMissionEvent( sceneId, members[i], x050221_g_MissionId, 0 )			-- ¹ØĞÄÉ±¹ÖÊÂ¼ş
+		--		SetMissionEvent( sceneId, members[i], x050221_g_MissionId, 0 )			-- å…³å¿ƒæ€æ€ªäº‹ä»¶
 				NewWorld( sceneId, members[i], destsceneId, x050221_g_Fuben_X, x050221_g_Fuben_Z )
 			end
 		end
@@ -556,17 +556,17 @@ function x050221_OnCopySceneReady( sceneId, destsceneId )
 end
 
 --**********************************
---ÓĞÍæ¼Ò½øÈë¸±±¾ÊÂ¼ş
+--æœ‰ç©å®¶è¿›å…¥å‰¯æœ¬äº‹ä»¶
 --**********************************
 function x050221_OnPlayerEnter( sceneId, selfId )
 end
 
 --**********************************
---objËÀÍö
+--objæ­»äº¡
 --**********************************
-function x050221_OnDie( sceneId, objId, selfId )--Õâ¸öselfId¿ÉÄÜÊÇ³èÎï
+function x050221_OnDie( sceneId, objId, selfId )--è¿™ä¸ªselfIdå¯èƒ½æ˜¯å® ç‰©
 	local objType = GetCharacterType( sceneId, selfId )
-	if objType == 3 then --Èç¹ûÊÇ³èÎïµÄ»°£¬°ÑÕâ¸öIDÉèÖÃ³ÉÖ÷ÈËID
+	if objType == 3 then --å¦‚æœæ˜¯å® ç‰©çš„è¯ï¼ŒæŠŠè¿™ä¸ªIDè®¾ç½®æˆä¸»äººID
 		selfId = GetPetCreator( sceneId, selfId )
 	end
 	
@@ -578,25 +578,25 @@ function x050221_OnDie( sceneId, objId, selfId )--Õâ¸öselfId¿ÉÄÜÊÇ³èÎï
 	--	return
 	--end
 	
-	--ÊÇ·ñÊÇ¸±±¾
+	--æ˜¯å¦æ˜¯å‰¯æœ¬
 	local sceneType = LuaFnGetSceneType( sceneId )
 	if sceneType ~= 1 then
 		return
 	end
 
-	--ÊÇ·ñÊÇËùĞèÒªµÄ¸±±¾
+	--æ˜¯å¦æ˜¯æ‰€éœ€è¦çš„å‰¯æœ¬
 	local fubentype = LuaFnGetCopySceneData_Param( sceneId, 0 )
 	if fubentype ~= x050221_g_CopySceneType then
 		return
 	end
 
-	--¸±±¾¹Ø±Õ±êÖ¾
+	--å‰¯æœ¬å…³é—­æ ‡å¿—
 	local leaveFlag = LuaFnGetCopySceneData_Param( sceneId, 4 )
-	if leaveFlag == 1 then														-- Èç¹û¸±±¾ÒÑ¾­±»ÖÃ³É¹Ø±Õ×´Ì¬£¬ÔòÉ±¹ÖÎŞĞ§
+	if leaveFlag == 1 then														-- å¦‚æœå‰¯æœ¬å·²ç»è¢«ç½®æˆå…³é—­çŠ¶æ€ï¼Œåˆ™æ€æ€ªæ— æ•ˆ
 		return
 	end
 
-	--È¡µÃµ±Ç°³¡¾°ÀïµÄÈËÊı
+	--å–å¾—å½“å‰åœºæ™¯é‡Œçš„äººæ•°
 	local num = LuaFnGetCopyScene_HumanCount( sceneId )
 	local mems = {}
 	
@@ -604,41 +604,41 @@ function x050221_OnDie( sceneId, objId, selfId )--Õâ¸öselfId¿ÉÄÜÊÇ³èÎï
 		mems[i] = LuaFnGetCopyScene_HumanObjId( sceneId, i )
 	end
 
-	--È¡µÃÉ±ËÀ¹ÖÎïµÄname
+	--å–å¾—æ€æ­»æ€ªç‰©çš„name
 	local szName = GetName( sceneId, objId )
 	
 	for i = 1, getn( x050221_g_BossID ) do
 		if szName == x050221_g_BossID[i] then
 		
 			local dropthing = 0
-			if i == 1 then--·ç
+			if i == 1 then--é£
 				dropthing = x050221_g_YinMoZhuID[3]
-			elseif i == 2 then--Ñæ
-			elseif i == 3 then--µØ
+			elseif i == 2 then--ç„°
+			elseif i == 3 then--åœ°
 				dropthing = x050221_g_YinMoZhuID[5]
-			elseif i == 4 then--Ğş
+			elseif i == 4 then--ç„
 				dropthing = x050221_g_YinMoZhuID[2]
-			elseif i == 5 then--¶¾
+			elseif i == 5 then--æ¯’
 				dropthing = x050221_g_YinMoZhuID[4]
 			end
 			
 			for j = 0, num - 1 do
-				if LuaFnIsObjValid( sceneId, mems[j] ) == 1 and LuaFnIsCanDoScriptLogic( sceneId, mems[j] ) == 1 then						-- ²»ÔÚ³¡¾°µÄ²»×ö´Ë²Ù×÷
-					x050221_NotifyFailTips( sceneId, mems[j], "ÒÑÉ±ËÀ"..x050221_g_BossID[i].."£º 1/1" )
+				if LuaFnIsObjValid( sceneId, mems[j] ) == 1 and LuaFnIsCanDoScriptLogic( sceneId, mems[j] ) == 1 then						-- ä¸åœ¨åœºæ™¯çš„ä¸åšæ­¤æ“ä½œ
+					x050221_NotifyFailTips( sceneId, mems[j], "å·²æ€æ­»"..x050221_g_BossID[i].."ï¼š 1/1" )
 				end
 			end
 			
-			if i == 2 then--É±ËÀÁËÆÆÑæ×ğÕß
+			if i == 2 then--æ€æ­»äº†ç ´ç„°å°Šè€…
 				LuaFnSetCopySceneData_Param( sceneId, 14, 1 )
 			else
 				for j = 0, num - 1 do
-					if LuaFnIsObjValid( sceneId, mems[j] ) == 1 and LuaFnIsCanDoScriptLogic( sceneId, mems[j] ) == 1 then						-- ²»ÔÚ³¡¾°µÄ²»×ö´Ë²Ù×÷
+					if LuaFnIsObjValid( sceneId, mems[j] ) == 1 and LuaFnIsCanDoScriptLogic( sceneId, mems[j] ) == 1 then						-- ä¸åœ¨åœºæ™¯çš„ä¸åšæ­¤æ“ä½œ
 						AddMonsterDropItem( sceneId, objId, mems[j], dropthing )
 					end
 				end
 			end
 
-			-- Îå¸öÇ°ÖÃ Boss È«²¿»÷É±ºóÁ¢¼´Éú³Éºé¼¬ÑıÍõ£¬±ÜÃâÎŞÒâÒåµÈ´ı¡£
+			-- äº”ä¸ªå‰ç½® Boss å…¨éƒ¨å‡»æ€åç«‹å³ç”Ÿæˆæ´ªæ£˜å¦–ç‹ï¼Œé¿å…æ— æ„ä¹‰ç­‰å¾…ã€‚
 			if x050221_IsBossYaoWangReady( sceneId ) == 1 then
 				x050221_LoadBossYaoWang( sceneId, 0 )
 			end
@@ -650,13 +650,13 @@ function x050221_OnDie( sceneId, objId, selfId )--Õâ¸öselfId¿ÉÄÜÊÇ³èÎï
 	if szName == x050221_g_BossYaoWang then
 		local misIndex = 0
 		for i = 0, num - 1 do
-			if LuaFnIsObjValid( sceneId, mems[i] ) == 1 and LuaFnIsCanDoScriptLogic( sceneId, mems[i] ) == 1 then						-- ²»ÔÚ³¡¾°µÄ²»×ö´Ë²Ù×÷
-				--x050221_NotifyFailTips( sceneId, mems[i], "ÈÎÎñÄ¿±êÍê³É" )
-				x050221_NotifyFailTips( sceneId, mems[i], "ÒÑÉ±ËÀ"..x050221_g_BossYaoWang.."£º 1/1" )
+			if LuaFnIsObjValid( sceneId, mems[i] ) == 1 and LuaFnIsCanDoScriptLogic( sceneId, mems[i] ) == 1 then						-- ä¸åœ¨åœºæ™¯çš„ä¸åšæ­¤æ“ä½œ
+				--x050221_NotifyFailTips( sceneId, mems[i], "ä»»åŠ¡ç›®æ ‡å®Œæˆ" )
+				x050221_NotifyFailTips( sceneId, mems[i], "å·²æ€æ­»"..x050221_g_BossYaoWang.."ï¼š 1/1" )
 				if IsHaveMission( sceneId, mems[i], x050221_g_MissionId ) > 0 then
 					misIndex = GetMissionIndexByID( sceneId, mems[i], x050221_g_MissionId )
-					SetMissionByIndex( sceneId, mems[i], misIndex, x050221_g_IsBossYaoWang, 1 )--ÉèÖÃÉ±boss±êÖ¾				
-					--SetMissionByIndex( sceneId, mems[i], misIndex, x050221_g_IsMissionOkFail, 1 )	-- ÈÎÎñÍê³É
+					SetMissionByIndex( sceneId, mems[i], misIndex, x050221_g_IsBossYaoWang, 1 )--è®¾ç½®æ€bossæ ‡å¿—				
+					--SetMissionByIndex( sceneId, mems[i], misIndex, x050221_g_IsMissionOkFail, 1 )	-- ä»»åŠ¡å®Œæˆ
 				end
 				AddMonsterDropItem( sceneId, objId, mems[i], x050221_g_xuanfouzhu )
 			end
@@ -666,44 +666,44 @@ function x050221_OnDie( sceneId, objId, selfId )--Õâ¸öselfId¿ÉÄÜÊÇ³èÎï
 		BroadcastMsg = gsub( BroadcastMsg, "%$N", GetName( sceneId, selfId ) )
 		BroadMsgByChatPipe( sceneId, selfId, BroadcastMsg, 4 )
 		
-		LuaFnSetCopySceneData_Param( sceneId, 4, 1 )--ÉèÖÃÀë¿ª³¡¾°
+		LuaFnSetCopySceneData_Param( sceneId, 4, 1 )--è®¾ç½®ç¦»å¼€åœºæ™¯
 		return
 	end
 end
 
 --**********************************
---É±ËÀ¹ÖÎï»òÍæ¼Ò
+--æ€æ­»æ€ªç‰©æˆ–ç©å®¶
 --**********************************
-function x050221_OnKillObject( sceneId, selfId, objdataId, objId )						-- ²ÎÊıÒâË¼£º³¡¾°ºÅ¡¢Íæ¼ÒobjId¡¢¹ÖÎï±íÎ»ÖÃºÅ¡¢¹ÖÎïobjId
+function x050221_OnKillObject( sceneId, selfId, objdataId, objId )						-- å‚æ•°æ„æ€ï¼šåœºæ™¯å·ã€ç©å®¶objIdã€æ€ªç‰©è¡¨ä½ç½®å·ã€æ€ªç‰©objId
 end
 
 --**********************************
---ÓĞÍæ¼ÒÔÚ¸±±¾ÖĞËÀÍöÊÂ¼ş
+--æœ‰ç©å®¶åœ¨å‰¯æœ¬ä¸­æ­»äº¡äº‹ä»¶
 --**********************************
 function x050221_OnHumanDie( sceneId, selfId, killerId )
 end
 
 --**********************************
---Àë¿ª¸±±¾
+--ç¦»å¼€å‰¯æœ¬
 --**********************************
 function x050221_Exit( sceneId, selfId )
-	local oldsceneId = LuaFnGetCopySceneData_Param( sceneId, 3 )				-- È¡µÃ¸±±¾Èë¿Ú³¡¾°ºÅ
+	local oldsceneId = LuaFnGetCopySceneData_Param( sceneId, 3 )				-- å–å¾—å‰¯æœ¬å…¥å£åœºæ™¯å·
 	NewWorld( sceneId, selfId, oldsceneId, x050221_g_Back_X, x050221_g_Back_Z )
 end
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x050221_OnContinue( sceneId, selfId, targetId )
 	BeginEvent( sceneId )
 		AddText( sceneId, x050221_g_MissionName )
-		AddText( sceneId, "good ¼ÌĞø" )
+		AddText( sceneId, "good ç»§ç»­" )
 	EndEvent( )
 	DispatchMissionContinueInfo( sceneId, selfId, targetId, x050221_g_ScriptId, x050221_g_MissionId )
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x050221_OnAbandon( sceneId, selfId )
 	if IsHaveMission( sceneId, selfId, x050221_g_MissionId ) == 0 then
@@ -713,17 +713,17 @@ function x050221_OnAbandon( sceneId, selfId )
 	local misIndex = GetMissionIndexByID( sceneId, selfId, x050221_g_MissionId )
 	local copyscene = GetMissionParam( sceneId, selfId, misIndex, x050221_g_Param_sceneid )
 
-	-- ÉèÖÃ·ÅÆúÁ¬»·ÈÎÎñµÄÊ±¼ä
+	-- è®¾ç½®æ”¾å¼ƒè¿ç¯ä»»åŠ¡çš„æ—¶é—´
 	--begin modified by zhangguoxin 090208
-	--local CurTime = GetHourTime()											-- µ±Ç°Ê±¼ä
-	local CurTime = GetQuarterTime()											-- µ±Ç°Ê±¼ä
+	--local CurTime = GetHourTime()											-- å½“å‰æ—¶é—´
+	local CurTime = GetQuarterTime()											-- å½“å‰æ—¶é—´
 	--begin modified by zhangguoxin 090208
 	SetMissionData( sceneId, selfId, MD_XINSANHUAN_2_LAST, CurTime )
 
-	--É¾³ıÍæ¼ÒÈÎÎñÁĞ±íÖĞ¶ÔÓ¦µÄÈÎÎñ
+	--åˆ é™¤ç©å®¶ä»»åŠ¡åˆ—è¡¨ä¸­å¯¹åº”çš„ä»»åŠ¡
 	DelMission( sceneId, selfId, x050221_g_MissionId )
 	
-	--ĞèÒª¿Û³ıÖĞ¼äÈÎÎñÎïÆ·£¬ÒıÄ§Öé
+	--éœ€è¦æ‰£é™¤ä¸­é—´ä»»åŠ¡ç‰©å“ï¼Œå¼•é­”ç 
 	for i = 1, getn( x050221_g_YinMoZhuID ) do
 		local num = LuaFnGetAvailableItemCount( sceneId, selfId, x050221_g_YinMoZhuID[i] )
 		if num > 0 then
@@ -731,17 +731,17 @@ function x050221_OnAbandon( sceneId, selfId )
 		end
 	end
 	
-	--ÊÇ·ñÊÇËùĞèÒªµÄ¸±±¾
+	--æ˜¯å¦æ˜¯æ‰€éœ€è¦çš„å‰¯æœ¬
 	local fubentype = LuaFnGetCopySceneData_Param( sceneId, 0 )
 
-	if sceneId == copyscene and fubentype == x050221_g_CopySceneType then											-- Èç¹ûÔÚ¸±±¾ÀïÉ¾³ıÈÎÎñ£¬ÔòÖ±½Ó´«ËÍ»Ø
-		x050221_NotifyFailTips( sceneId, selfId, "ÈÎÎñÊ§°Ü£¡" )
-		local oldsceneId = LuaFnGetCopySceneData_Param( sceneId, 3 )		-- È¡µÃ¸±±¾Èë¿Ú³¡¾°ºÅ
+	if sceneId == copyscene and fubentype == x050221_g_CopySceneType then											-- å¦‚æœåœ¨å‰¯æœ¬é‡Œåˆ é™¤ä»»åŠ¡ï¼Œåˆ™ç›´æ¥ä¼ é€å›
+		x050221_NotifyFailTips( sceneId, selfId, "ä»»åŠ¡å¤±è´¥ï¼" )
+		local oldsceneId = LuaFnGetCopySceneData_Param( sceneId, 3 )		-- å–å¾—å‰¯æœ¬å…¥å£åœºæ™¯å·
 		NewWorld( sceneId, selfId, oldsceneId, x050221_g_Back_X, x050221_g_Back_Z )
 	end
 end
 
--- ¼ì²éºé¼¬ÑıÍõµÄ¼´Ê±Ë¢ĞÂÌõ¼ş¡£
+-- æ£€æŸ¥æ´ªæ£˜å¦–ç‹çš„å³æ—¶åˆ·æ–°æ¡ä»¶ã€‚
 function x050221_IsBossYaoWangReady( sceneId )
 	if LuaFnGetCopySceneData_Param( sceneId, 14 ) ~= 1 then
 		return 0
@@ -750,14 +750,14 @@ function x050221_IsBossYaoWangReady( sceneId )
 		return 0
 	end
 
-	-- ²ÎÊı 9-13 ¼ÇÂ¼Îå¸öÇøÓò Boss ÊÇ·ñÒÑÒı³ö¡£
+	-- å‚æ•° 9-13 è®°å½•äº”ä¸ªåŒºåŸŸ Boss æ˜¯å¦å·²å¼•å‡ºã€‚
 	for i = 9, 13 do
 		if LuaFnGetCopySceneData_Param( sceneId, i ) ~= 1 then
 			return 0
 		end
 	end
 
-	-- ÒÑÒı³öµÄ Boss ÈÔ´æ»îÊ±²»ÄÜÌáÇ°Éú³Éºé¼¬ÑıÍõ¡£
+	-- å·²å¼•å‡ºçš„ Boss ä»å­˜æ´»æ—¶ä¸èƒ½æå‰ç”Ÿæˆæ´ªæ£˜å¦–ç‹ã€‚
 	local monsterCount = GetMonsterCount( sceneId )
 	for i = 0, monsterCount - 1 do
 		local monsterID = GetMonsterObjID( sceneId, i )
@@ -774,7 +774,7 @@ function x050221_IsBossYaoWangReady( sceneId )
 	return 1
 end
 
--- Éú³Éºé¼¬ÑıÍõ£»force=1 Ê±±£ÁôÔ­ÓĞ 15 ·ÖÖÓ¶µµ×Âß¼­¡£
+-- ç”Ÿæˆæ´ªæ£˜å¦–ç‹ï¼›force=1 æ—¶ä¿ç•™åŸæœ‰ 15 åˆ†é’Ÿå…œåº•é€»è¾‘ã€‚
 function x050221_LoadBossYaoWang( sceneId, force )
 	if LuaFnGetCopySceneData_Param( sceneId, 15 ) ~= 0 then
 		return
@@ -798,22 +798,22 @@ function x050221_LoadBossYaoWang( sceneId, force )
 		return
 	end
 
-	SetLevel( sceneId, monsterID, mylevel+3 )--µÈ¼¶±ÈÒ»°ãĞ¡¹Ö¸ß3¼¶
+	SetLevel( sceneId, monsterID, mylevel+3 )--ç­‰çº§æ¯”ä¸€èˆ¬å°æ€ªé«˜3çº§
 	SetCharacterName( sceneId, monsterID, x050221_g_BossYaoWang )
-	MonsterTalk(sceneId,monsterID,"¶¾ÕÏÔóµØ",x050221_g_YaoWangTalk)
+	MonsterTalk(sceneId,monsterID,"æ¯’éšœæ³½åœ°",x050221_g_YaoWangTalk)
 	LuaFnSetCopySceneData_Param( sceneId, 15, 1 )
 end
 
 --**********************************
---¸±±¾³¡¾°¶¨Ê±Æ÷ÊÂ¼ş
+--å‰¯æœ¬åœºæ™¯å®šæ—¶å™¨äº‹ä»¶
 --**********************************
 function x050221_OnCopySceneTimer( sceneId, nowTime )
-	--¸±±¾Ê±ÖÓ¶ÁÈ¡¼°ÉèÖÃ
-	local TickCount = LuaFnGetCopySceneData_Param( sceneId, 2 )						-- È¡µÃÒÑ¾­Ö´ĞĞµÄ¶¨Ê±´ÎÊı
+	--å‰¯æœ¬æ—¶é’Ÿè¯»å–åŠè®¾ç½®
+	local TickCount = LuaFnGetCopySceneData_Param( sceneId, 2 )						-- å–å¾—å·²ç»æ‰§è¡Œçš„å®šæ—¶æ¬¡æ•°
 	TickCount = TickCount + 1
-	LuaFnSetCopySceneData_Param( sceneId, 2, TickCount )							-- ÉèÖÃĞÂµÄ¶¨Ê±Æ÷µ÷ÓÃ´ÎÊı
+	LuaFnSetCopySceneData_Param( sceneId, 2, TickCount )							-- è®¾ç½®æ–°çš„å®šæ—¶å™¨è°ƒç”¨æ¬¡æ•°
 
-	--¸±±¾¹Ø±Õ±êÖ¾
+	--å‰¯æœ¬å…³é—­æ ‡å¿—
 	local leaveFlag = LuaFnGetCopySceneData_Param( sceneId, 4 )
 
 	local membercount = LuaFnGetCopyScene_HumanCount( sceneId )
@@ -826,22 +826,22 @@ function x050221_OnCopySceneTimer( sceneId, nowTime )
 
 --	local LevelGap = LuaFnGetCopySceneData_Param( sceneId, CopyScene_LevelGap )
 
-	if leaveFlag == 1 then															-- ĞèÒªÀë¿ª
-		--Àë¿ªµ¹¼ÆÊ±¼äµÄ¶ÁÈ¡ºÍÉèÖÃ
+	if leaveFlag == 1 then															-- éœ€è¦ç¦»å¼€
+		--ç¦»å¼€å€’è®¡æ—¶é—´çš„è¯»å–å’Œè®¾ç½®
 		local leaveTickCount = LuaFnGetCopySceneData_Param( sceneId, 5 )
 		leaveTickCount = leaveTickCount + 1
 		LuaFnSetCopySceneData_Param( sceneId, 5, leaveTickCount )
 
-		if leaveTickCount >= x050221_g_CloseTick then										-- µ¹¼ÆÊ±¼äµ½£¬´ó¼Ò¶¼³öÈ¥°É
-			--½«µ±Ç°¸±±¾³¡¾°ÀïµÄËùÓĞÈË´«ËÍ»ØÔ­À´½øÈëÊ±ºòµÄ³¡¾°
+		if leaveTickCount >= x050221_g_CloseTick then										-- å€’è®¡æ—¶é—´åˆ°ï¼Œå¤§å®¶éƒ½å‡ºå»å§
+			--å°†å½“å‰å‰¯æœ¬åœºæ™¯é‡Œçš„æ‰€æœ‰äººä¼ é€å›åŸæ¥è¿›å…¥æ—¶å€™çš„åœºæ™¯
 			for i=0, membercount-1 do
 				if LuaFnIsObjValid( sceneId, mems[i] ) == 1 and LuaFnIsCanDoScriptLogic( sceneId, mems[i] ) == 1 then
 					x050221_Exit( sceneId, mems[i] )
 				end
 			end
 		else
-			--Í¨Öªµ±Ç°¸±±¾³¡¾°ÀïµÄËùÓĞÈË£¬³¡¾°¹Ø±Õµ¹¼ÆÊ±¼ä
-			local strText = format( "Äã½«ÔÚ %d ÃëºóÀë¿ª³¡¾°", ( x050221_g_CloseTick - leaveTickCount ) * x050221_g_TickTime )
+			--é€šçŸ¥å½“å‰å‰¯æœ¬åœºæ™¯é‡Œçš„æ‰€æœ‰äººï¼Œåœºæ™¯å…³é—­å€’è®¡æ—¶é—´
+			local strText = format( "ä½ å°†åœ¨ %d ç§’åç¦»å¼€åœºæ™¯", ( x050221_g_CloseTick - leaveTickCount ) * x050221_g_TickTime )
 
 			for i=0, membercount-1 do
 				if LuaFnIsObjValid( sceneId, mems[i] ) == 1 and LuaFnIsCanDoScriptLogic( sceneId, mems[i] ) == 1 then
@@ -849,57 +849,57 @@ function x050221_OnCopySceneTimer( sceneId, nowTime )
 				end
 			end
 		end
-	elseif TickCount == x050221_g_LimitTotalHoldTime then									-- ¸±±¾×ÜÊ±¼äÏŞÖÆµ½ÁË
-		--´Ë´¦ÉèÖÃ¸±±¾ÈÎÎñÓĞÊ±¼äÏŞÖÆµÄÇé¿ö£¬µ±Ê±¼äµ½ºó´¦Àí...
+	elseif TickCount == x050221_g_LimitTotalHoldTime then									-- å‰¯æœ¬æ€»æ—¶é—´é™åˆ¶åˆ°äº†
+		--æ­¤å¤„è®¾ç½®å‰¯æœ¬ä»»åŠ¡æœ‰æ—¶é—´é™åˆ¶çš„æƒ…å†µï¼Œå½“æ—¶é—´åˆ°åå¤„ç†...
 		local misIndex = 0
 		for	i = 0, membercount - 1 do
 			if LuaFnIsObjValid( sceneId, mems[i] ) == 1 and LuaFnIsCanDoScriptLogic( sceneId, mems[i] ) == 1 then
-				x050221_NotifyFailTips( sceneId, mems[i], "ÈÎÎñÊ±¼äÒÑµ½£¬Àë¿ª³¡¾°...." )
+				x050221_NotifyFailTips( sceneId, mems[i], "ä»»åŠ¡æ—¶é—´å·²åˆ°ï¼Œç¦»å¼€åœºæ™¯...." )
 				if IsHaveMission( sceneId, mems[i], x050221_g_MissionId ) > 0 then
 					misIndex = GetMissionIndexByID( sceneId, mems[i], x050221_g_MissionId )
 					if GetMissionParam( sceneId, mems[i], misIndex, x050221_g_IsMissionOkFail ) ~= 1 then
-						SetMissionByIndex( sceneId, mems[i], misIndex, x050221_g_IsMissionOkFail, 2 )	-- Èç¹ûÃ»ÓĞÍê³É¾ÍÉèÖÃÎªÊ§°Ü
+						SetMissionByIndex( sceneId, mems[i], misIndex, x050221_g_IsMissionOkFail, 2 )	-- å¦‚æœæ²¡æœ‰å®Œæˆå°±è®¾ç½®ä¸ºå¤±è´¥
 					end
 				end
 				x050221_Exit( sceneId, mems[i] )
 			end
 		end
-		--ÉèÖÃ¸±±¾¹Ø±Õ±êÖ¾
+		--è®¾ç½®å‰¯æœ¬å…³é—­æ ‡å¿—
 		LuaFnSetCopySceneData_Param( sceneId, 4, 1 )
 	else
-		--¶¨Ê±¼ì²é¶ÓÎé³ÉÔ±µÄ¶ÓÎéºÅ£¬Èç¹û²»·ûºÏ£¬ÔòÌß³ö¸±±¾
-		local oldteamid = LuaFnGetCopySceneData_Param( sceneId, 6 )					-- È¡µÃ±£´æµÄ¶ÓÎéºÅ
+		--å®šæ—¶æ£€æŸ¥é˜Ÿä¼æˆå‘˜çš„é˜Ÿä¼å·ï¼Œå¦‚æœä¸ç¬¦åˆï¼Œåˆ™è¸¢å‡ºå‰¯æœ¬
+		local oldteamid = LuaFnGetCopySceneData_Param( sceneId, 6 )					-- å–å¾—ä¿å­˜çš„é˜Ÿä¼å·
 
 		for	i = 0, membercount - 1 do
 			if LuaFnIsObjValid( sceneId, mems[i] ) == 1 and LuaFnIsCanDoScriptLogic( sceneId, mems[i] ) == 1 and oldteamid ~= GetTeamId( sceneId, mems[i] ) then
-				x050221_NotifyFailTips( sceneId, mems[i], "Äã²»ÔÚÕıÈ·µÄ¶ÓÎéÖĞ£¬Àë¿ª³¡¾°...." )
+				x050221_NotifyFailTips( sceneId, mems[i], "ä½ ä¸åœ¨æ­£ç¡®çš„é˜Ÿä¼ä¸­ï¼Œç¦»å¼€åœºæ™¯...." )
 				x050221_Exit( sceneId, mems[i] )
 			end
 		end
 		
-		local isFireBoss = LuaFnGetCopySceneData_Param( sceneId, 14 )				-- ÊÇ·ñÉ±ËÀÆÆÑæ×ğÕß
-		local isYaoWang = LuaFnGetCopySceneData_Param( sceneId, 15 )			-- ÊÇ·ñÒı³öºé¼¬ÑıÍõ
-		local NotifyTime = LuaFnGetCopySceneData_Param( sceneId, 16 )			-- ÌáĞÑÊ±¼ä
+		local isFireBoss = LuaFnGetCopySceneData_Param( sceneId, 14 )				-- æ˜¯å¦æ€æ­»ç ´ç„°å°Šè€…
+		local isYaoWang = LuaFnGetCopySceneData_Param( sceneId, 15 )			-- æ˜¯å¦å¼•å‡ºæ´ªæ£˜å¦–ç‹
+		local NotifyTime = LuaFnGetCopySceneData_Param( sceneId, 16 )			-- æé†’æ—¶é—´
 		
-		--Ã¿2·ÖÖÓÌáÊ¾Ò»´Î£¬µ¥Êı¼ÆÊ±
+		--æ¯2åˆ†é’Ÿæç¤ºä¸€æ¬¡ï¼Œå•æ•°è®¡æ—¶
 		local isPreNotify = 0
 		if mod( TickCount*x050221_g_TickTime, 60 ) == 0 and mod( TickCount*x050221_g_TickTime+60, 120 ) == 0 then
 			isPreNotify = 1
 			for	i = 0, membercount - 1 do
 				if LuaFnIsObjValid( sceneId, mems[i] ) == 1 and LuaFnIsCanDoScriptLogic( sceneId, mems[i] ) == 1 then
 					local Minute = floor( (360 - TickCount)*x050221_g_TickTime/60 )
-					x050221_NotifyFailTips( sceneId, mems[i], "Ê£Óà"..Minute.."·ÖÖÓ" )
+					x050221_NotifyFailTips( sceneId, mems[i], "å‰©ä½™"..Minute.."åˆ†é’Ÿ" )
 				end
 			end	
 		end
 
-		--Ğ¡ÓÚ15·ÖÖÓµÄÊ±ºò£¬É±ËÀÁËÆÆÑæ×ğÕß£¬ĞèÒªÃ¿2·ÖÌáĞÑÒ»´Îboss³öÏÖÊ±¼ä
+		--å°äº15åˆ†é’Ÿçš„æ—¶å€™ï¼Œæ€æ­»äº†ç ´ç„°å°Šè€…ï¼Œéœ€è¦æ¯2åˆ†æé†’ä¸€æ¬¡bosså‡ºç°æ—¶é—´
 		if TickCount < 180 and isFireBoss == 1 then
-			if NotifyTime == 0 then --Ê×´ÎÌáĞÑ
+			if NotifyTime == 0 then --é¦–æ¬¡æé†’
 				for	i = 0, membercount - 1 do
 					if LuaFnIsObjValid( sceneId, mems[i] ) == 1 and LuaFnIsCanDoScriptLogic( sceneId, mems[i] ) == 1 then
 						local Minute = 0
-						if 180 - TickCount < 12 then--Ğ¡ÓÚ1·ÖÖÓ°´1·ÖÖÓÌáÊ¾
+						if 180 - TickCount < 12 then--å°äº1åˆ†é’ŸæŒ‰1åˆ†é’Ÿæç¤º
 							Minute = 1
 						else
 							Minute = floor( (180 - TickCount)*x050221_g_TickTime/60 )
@@ -908,11 +908,11 @@ function x050221_OnCopySceneTimer( sceneId, nowTime )
 					end
 				end
 				LuaFnSetCopySceneData_Param( sceneId, 16, TickCount )
---			elseif TickCount - NotifyTime >= 24 then --ºóÃæµÄÌáĞÑ
+--			elseif TickCount - NotifyTime >= 24 then --åé¢çš„æé†’
 --				for	i = 0, membercount - 1 do
 --					if LuaFnIsObjValid( sceneId, mems[i] ) == 1 and LuaFnIsCanDoScriptLogic( sceneId, mems[i] ) == 1 then
 --						local Minute = 0
---						if 180 - TickCount < 12 then--Ğ¡ÓÚ1·ÖÖÓ°´1·ÖÖÓÌáÊ¾
+--						if 180 - TickCount < 12 then--å°äº1åˆ†é’ŸæŒ‰1åˆ†é’Ÿæç¤º
 --							Minute = 1
 --						else
 --							Minute = floor( (180 - TickCount)*x050221_g_TickTime/60 )
@@ -922,23 +922,23 @@ function x050221_OnCopySceneTimer( sceneId, nowTime )
 --				end
 --				LuaFnSetCopySceneData_Param( sceneId, 16, TickCount )
 			end
-		--´óÓÚµÈÓÚ15·ÖÖÓ
+		--å¤§äºç­‰äº15åˆ†é’Ÿ
 		elseif TickCount >= 180 and isFireBoss == 1 and isYaoWang == 0 then
-			-- 15 ·ÖÖÓÈÔÎ´Íê³ÉÇ°ÖÃÊ±£¬±£ÁôÔ­ÓĞ¶µµ×Ë¢ĞÂ¡£
+			-- 15 åˆ†é’Ÿä»æœªå®Œæˆå‰ç½®æ—¶ï¼Œä¿ç•™åŸæœ‰å…œåº•åˆ·æ–°ã€‚
 			x050221_LoadBossYaoWang( sceneId, 1 )
 		end
 	end
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x050221_CheckSubmit( sceneId, selfId )
 	if IsHaveMission( sceneId, selfId, x050221_g_MissionId ) <= 0 then
 		return 0
 	end
 
-	local misIndex = GetMissionIndexByID( sceneId, selfId, x050221_g_MissionId )				-- µÃµ½ÈÎÎñµÄĞòÁĞºÅ
+	local misIndex = GetMissionIndexByID( sceneId, selfId, x050221_g_MissionId )				-- å¾—åˆ°ä»»åŠ¡çš„åºåˆ—å·
 	if GetMissionParam( sceneId, selfId, misIndex, x050221_g_IsMissionOkFail ) ~= 1 then
 		return 0
 	end
@@ -951,17 +951,17 @@ function x050221_CheckSubmit( sceneId, selfId )
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x050221_OnSubmit( sceneId, selfId, targetId, selectRadioId )
-	if GetName( sceneId, targetId ) ~= x050221_g_Name then		--ÅĞ¶Ï¸ÃnpcÊÇ·ñÊÇ¶ÔÓ¦ÈÎÎñµÄnpc
+	if GetName( sceneId, targetId ) ~= x050221_g_Name then		--åˆ¤æ–­è¯¥npcæ˜¯å¦æ˜¯å¯¹åº”ä»»åŠ¡çš„npc
 		return
 	end
 	
 	if x050221_CheckSubmit( sceneId, selfId ) == 1 then
 		x050221_NotifyFailBox( sceneId, selfId, targetId, x050221_g_MissionComplete )
 
-		--ĞèÒª¿Û³ıÒ»´ÎÖĞ¼äÈÎÎñÎïÆ·ÒıÄ§Öé£¬Ã»ÓĞ¾Í²»¹ÜËü
+		--éœ€è¦æ‰£é™¤ä¸€æ¬¡ä¸­é—´ä»»åŠ¡ç‰©å“å¼•é­”ç ï¼Œæ²¡æœ‰å°±ä¸ç®¡å®ƒ
 		for i = 1, getn( x050221_g_YinMoZhuID ) do
 			local num = LuaFnGetAvailableItemCount( sceneId, selfId, x050221_g_YinMoZhuID[i] )
 			if num > 0 then
@@ -970,13 +970,13 @@ function x050221_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 		end
 
 		DelMission( sceneId, selfId, x050221_g_MissionId )
-		-- ÈÎÎñ»ò»î¶¯Í³¼Æ
-		LuaFnAuditQuest(sceneId, selfId, "Â¥À¼Á¬»·ÈÎÎñĞş·ğÖé")
+		-- ä»»åŠ¡æˆ–æ´»åŠ¨ç»Ÿè®¡
+		LuaFnAuditQuest(sceneId, selfId, "æ¥¼å…°è¿ç¯ä»»åŠ¡ç„ä½›ç ")
 	end
 end
 
 --**********************************
--- ¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+-- å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x050221_NotifyFailBox( sceneId, selfId, targetId, msg )
 	BeginEvent( sceneId )
@@ -986,7 +986,7 @@ function x050221_NotifyFailBox( sceneId, selfId, targetId, msg )
 end
 
 --**********************************
--- ÆÁÄ»ÖĞ¼äĞÅÏ¢ÌáÊ¾
+-- å±å¹•ä¸­é—´ä¿¡æ¯æç¤º
 --**********************************
 function x050221_NotifyFailTips( sceneId, selfId, Tip )
 	BeginEvent( sceneId )
@@ -996,7 +996,7 @@ function x050221_NotifyFailTips( sceneId, selfId, Tip )
 end
 
 --**********************************
---¼ì²âĞÄ·¨ÊÇ²»¹»½ÓÈÎÎñ
+--æ£€æµ‹å¿ƒæ³•æ˜¯ä¸å¤Ÿæ¥ä»»åŠ¡
 --**********************************
 function x050221_CheckAllXinfaLevel(sceneId, selfId, level)
 	local nMenpai = GetMenPai(sceneId, selfId)
@@ -1014,18 +1014,18 @@ function x050221_CheckAllXinfaLevel(sceneId, selfId, level)
 end
 
 --**********************************
---ÅĞ¶Ï²úÉúmonsterº¯Êı£¬ÓÉÒıÄ§Öé½Å±¾338510~338514µ÷ÓÃµ½ÕâÀï
+--åˆ¤æ–­äº§ç”Ÿmonsterå‡½æ•°ï¼Œç”±å¼•é­”ç è„šæœ¬338510~338514è°ƒç”¨åˆ°è¿™é‡Œ
 --**********************************
 function x050221_IsMonster(sceneId, selfId, flag)
 
-	--ÊÇ·ñÊÇ¸±±¾
+	--æ˜¯å¦æ˜¯å‰¯æœ¬
 	local sceneType = LuaFnGetSceneType( sceneId )
 	if sceneType ~= 1 then
 		x050221_NotifyFailTips( sceneId, selfId, "#{LLFB_80816_31}" )
 		return 0
 	end
 
-	--ÊÇ·ñÊÇËùĞèÒªµÄ¸±±¾
+	--æ˜¯å¦æ˜¯æ‰€éœ€è¦çš„å‰¯æœ¬
 	local fubentype = LuaFnGetCopySceneData_Param( sceneId, 0 )
 	if fubentype ~= x050221_g_CopySceneType then
 		x050221_NotifyFailTips( sceneId, selfId, "#{LLFB_80816_31}" )
@@ -1036,7 +1036,7 @@ function x050221_IsMonster(sceneId, selfId, flag)
 	local nAliveMonsterNum = nMonsterNum
 	for i=0, nMonsterNum-1 do
 		local MonsterId = GetMonsterObjID(sceneId,i)
-		if (LuaFnIsCharacterLiving( sceneId, MonsterId ) == 0) or (GetName(sceneId,MonsterId) == "ÈÎµÀÇå") then
+		if (LuaFnIsCharacterLiving( sceneId, MonsterId ) == 0) or (GetName(sceneId,MonsterId) == "ä»»é“æ¸…") then
 			nAliveMonsterNum = nAliveMonsterNum - 1
 		end
 	end
@@ -1081,7 +1081,7 @@ function x050221_GenerateMonster(sceneId, selfId, flag)
 		return
 	end
 
-	local ret = 0 --·µ»ØÖµ£¬1ÒıÄ§Öé»áÏûÊ§£¬0²»»áÏûÊ§
+	local ret = 0 --è¿”å›å€¼ï¼Œ1å¼•é­”ç ä¼šæ¶ˆå¤±ï¼Œ0ä¸ä¼šæ¶ˆå¤±
 	if flag >= 1 and flag <= 5 then
 		local mylevel = LuaFnGetCopySceneData_Param( sceneId, 7 )
 		local iniLevel = LuaFnGetCopySceneData_Param( sceneId, 8 )
@@ -1105,8 +1105,8 @@ function x050221_GenerateMonster(sceneId, selfId, flag)
 		
 		--PrintStr("monster15ID "..monster15ID.."monster10ID "..monster10ID.."bossID "..bossID)
 
-		if inpostype == flag then--µØµãÓÅÏÈ£¬ÊÇ·ñÉ±bossÆä´Î
-			if isboss == 0 then--Ã»ÓĞÒı³öboss
+		if inpostype == flag then--åœ°ç‚¹ä¼˜å…ˆï¼Œæ˜¯å¦æ€bosså…¶æ¬¡
+			if isboss == 0 then--æ²¡æœ‰å¼•å‡ºboss
 				for i = (flag-1)*15+1,flag*15  do
 					monsterID = LuaFnCreateMonster( sceneId, monster15ID, x050221_g_monster15Pos[i][1], x050221_g_monster15Pos[i][2], 14, -1, 050221 )
 					SetLevel( sceneId, monsterID, mylevel )
@@ -1114,39 +1114,39 @@ function x050221_GenerateMonster(sceneId, selfId, flag)
 				end
 			
 				local extAIScript = -1
-				if flag == 1 then--·ç
+				if flag == 1 then--é£
 					extAIScript = 263
-				elseif flag == 2 then--Ñæ
+				elseif flag == 2 then--ç„°
 					extAIScript = 267
-				elseif flag == 3 then--µØ
+				elseif flag == 3 then--åœ°
 					extAIScript = 264
-				elseif flag == 4 then--Ğş
+				elseif flag == 4 then--ç„
 					extAIScript = 265
-				elseif flag == 5 then--¶¾
+				elseif flag == 5 then--æ¯’
 					extAIScript = 266
 				end
 
 				monsterID = LuaFnCreateMonster( sceneId, bossID, x050221_g_BossPos[flag][1], x050221_g_BossPos[flag][2], 14, extAIScript, 050221 )
-				SetLevel( sceneId, monsterID, mylevel+2 )--µÈ¼¶±ÈÒ»°ãĞ¡¹Ö¸ß2¼¶
+				SetLevel( sceneId, monsterID, mylevel+2 )--ç­‰çº§æ¯”ä¸€èˆ¬å°æ€ªé«˜2çº§
 				SetCharacterName( sceneId, monsterID, x050221_g_BossID[flag] )
-				MonsterTalk(sceneId,monsterID,"¶¾ÕÏÔóµØ",x050221_g_BossTalk[flag])
+				MonsterTalk(sceneId,monsterID,"æ¯’éšœæ³½åœ°",x050221_g_BossTalk[flag])
 				
 				LuaFnSetCopySceneData_Param( sceneId, 8+flag, 1)
 				
-				if flag == 1 then--·ç
+				if flag == 1 then--é£
 					x050221_NotifyFailTips( sceneId, selfId, "#{LLFB_80816_29}" )
-				elseif flag == 2 then--Ñæ
+				elseif flag == 2 then--ç„°
 					x050221_NotifyFailTips( sceneId, selfId, "#{LLFB_80816_38}" )
-				elseif flag == 3 then--µØ
+				elseif flag == 3 then--åœ°
 					x050221_NotifyFailTips( sceneId, selfId, "#{LLFB_80816_32}" )
-				elseif flag == 4 then--Ğş
+				elseif flag == 4 then--ç„
 					x050221_NotifyFailTips( sceneId, selfId, "#{LLFB_80816_34}" )
-				elseif flag == 5 then--¶¾
+				elseif flag == 5 then--æ¯’
 					x050221_NotifyFailTips( sceneId, selfId, "#{LLFB_80816_36}" )
 				end
 				
 				ret = 1
-			else--ÒÑ¾­Òı³öboss
+			else--å·²ç»å¼•å‡ºboss
 				for i = (flag-1)*10+1,flag*10  do
 					monsterID = LuaFnCreateMonster( sceneId, monster10ID, x050221_g_monster10Pos[i][1], x050221_g_monster10Pos[i][2], 14, -1, 050221 )
 					SetLevel( sceneId, monsterID, mylevel )
@@ -1155,22 +1155,22 @@ function x050221_GenerateMonster(sceneId, selfId, flag)
 				
 				x050221_NotifyFailTips( sceneId, selfId, x050221_g_BossID[flag].."#{LLFB_80816_28}" )
 			end
-		else--²»ÊÇÕıÈ·µØµã
-			for i = (inpostype-1)*10+1,inpostype*10  do--ÔÚÊ¹ÓÃµØÒı³ö10¸öĞ¡¹Ö£¬¶ø²»ÊÇÔÚÒıÄ§ÖéµÄÔ­À´µØ·½
+		else--ä¸æ˜¯æ­£ç¡®åœ°ç‚¹
+			for i = (inpostype-1)*10+1,inpostype*10  do--åœ¨ä½¿ç”¨åœ°å¼•å‡º10ä¸ªå°æ€ªï¼Œè€Œä¸æ˜¯åœ¨å¼•é­”ç çš„åŸæ¥åœ°æ–¹
 				monsterID = LuaFnCreateMonster( sceneId, monster10ID, x050221_g_monster10Pos[i][1], x050221_g_monster10Pos[i][2], 14, -1, 050221 )
 				SetLevel( sceneId, monsterID, mylevel )
 				SetCharacterName( sceneId, monsterID, x050221_g_Monster10ID )
 			end
 			
-			if flag == 1 then--·ç
+			if flag == 1 then--é£
 				x050221_NotifyFailTips( sceneId, selfId, "#{LLFB_80816_30}" )
-			elseif flag == 2 then--Ñæ
+			elseif flag == 2 then--ç„°
 				x050221_NotifyFailTips( sceneId, selfId, "#{LLFB_80816_39}" )
-			elseif flag == 3 then--µØ
+			elseif flag == 3 then--åœ°
 				x050221_NotifyFailTips( sceneId, selfId, "#{LLFB_80816_33}" )
-			elseif flag == 4 then--Ğş
+			elseif flag == 4 then--ç„
 				x050221_NotifyFailTips( sceneId, selfId, "#{LLFB_80816_35}" )
-			elseif flag == 5 then--¶¾
+			elseif flag == 5 then--æ¯’
 				x050221_NotifyFailTips( sceneId, selfId, "#{LLFB_80816_37}" )
 			end
 		end
@@ -1180,7 +1180,7 @@ function x050221_GenerateMonster(sceneId, selfId, flag)
 end
 
 --**********************************
--- Ê°È¡´¦Àí scene.luaµÄx888888_OnPlayerPickupItemFromDropBoxµ÷ÓÃµ½ÕâÀï
+-- æ‹¾å–å¤„ç† scene.luaçš„x888888_OnPlayerPickupItemFromDropBoxè°ƒç”¨åˆ°è¿™é‡Œ
 --**********************************
 function x050221_PickupItem(sceneId, selfId, itemId, bagidx )
 	if IsHaveMission( sceneId, selfId, x050221_g_MissionId ) <= 0 then
@@ -1191,9 +1191,9 @@ function x050221_PickupItem(sceneId, selfId, itemId, bagidx )
 		return
 	end
 	
-	x050221_NotifyFailTips( sceneId, selfId, "ÒÑÕÒµ½Ğş·ğÖé£º 1/1" )
-	x050221_NotifyFailTips( sceneId, selfId, "ÈÎÎñÄ¿±êÍê³É" )
+	x050221_NotifyFailTips( sceneId, selfId, "å·²æ‰¾åˆ°ç„ä½›ç ï¼š 1/1" )
+	x050221_NotifyFailTips( sceneId, selfId, "ä»»åŠ¡ç›®æ ‡å®Œæˆ" )
 	misIndex = GetMissionIndexByID( sceneId, selfId, x050221_g_MissionId )
 	SetMissionByIndex( sceneId, selfId, misIndex, x050221_g_IsFindGoods, 1 )
-	SetMissionByIndex( sceneId, selfId, misIndex, x050221_g_IsMissionOkFail, 1 )	-- ÈÎÎñÍê³É
+	SetMissionByIndex( sceneId, selfId, misIndex, x050221_g_IsMissionOkFail, 1 )	-- ä»»åŠ¡å®Œæˆ
 end

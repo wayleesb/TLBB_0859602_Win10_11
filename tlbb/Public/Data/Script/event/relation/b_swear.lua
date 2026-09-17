@@ -1,63 +1,63 @@
--- ½á°İÈÎÎñ
+-- ç»“æ‹œä»»åŠ¡
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x806001_g_ScriptId = 806001
 
---½á°İĞèÒªµÄ½ğÇ®
+--ç»“æ‹œéœ€è¦çš„é‡‘é’±
 x806001_g_NeedMoney = 100000
 x806001_g_DrawTitleNeedMoney = 50000
 x806001_g_ChangeTitleNeedMoney = 10000
 
---ÌáÊ¾ĞÅÏ¢
+--æç¤ºä¿¡æ¯
 x806001_g_msg_swear					= {}
-x806001_g_msg_swear["swr"]	= "½á°İ"
-x806001_g_msg_swear["tit"]	= "ÁìÈ¡³ÆºÅ"
-x806001_g_msg_swear["chr"]	= "ĞŞ¸Ä¸öÈË³ÆºÅ"
-x806001_g_msg_swear["tem"]	= " ÄãĞèÒªºÍÄãÒª½á°İÖ®ÈË×é¶ÓÇ°À´ÕÒÎÒ£¬ÎÒ²ÅÄÜ¸øÄãÃÇÖ÷³Ö½á°İÒÇÊ½¡£"
-x806001_g_msg_swear["ten"]	= " ÄãµÄ¶ÓÎéÖĞÓĞÈË²»ÔÚÂåÑô³ÇÖĞ£¬ËùÒÔÎÒÎŞ·¨ÎªÄãÃÇÖ÷³Ö½á°İÒÇÊ½¡£"
-x806001_g_msg_swear["cap"]	= " Ö»ÓĞ¶Ó³¤²ÅÄÜÍê³É½á°İµÄ²Ù×÷¡£"
-x806001_g_msg_swear["mar"]	= " ·òÆŞÖ®¼äÊÇ²»ÄÜ½á°İµÄ¡£ÄãÃÇ»¹ÊÇÏÈ»ØÈ¥°É¡£"
-x806001_g_msg_swear["mat"]	= " Ê¦Í½Ö®¼äÊÇ²»ÄÜ½á°İµÄ¡£ÄãÃÇ»¹ÊÇÏÈ»ØÈ¥°É¡£"
-x806001_g_msg_swear["fri"]	= " Ö»ÓĞºÃÓÑÖ®¼ä²ÅÄÜ½á°İ¡£ÄãÃÇ»¹ĞèÒª½øÒ»²½Ìá¸ßÓÑÒê²ÅĞĞ¡£"
-x806001_g_msg_swear["all"]	= " ËùÓĞµÄ½á°İĞÖµÜ±ØĞëÍ¬Ê±ÔÚ¶ÓÎéÖĞ£¬²ÅÄÜ¼ÓÈëĞÂµÄ½á°İĞÖµÜ¡£"
-x806001_g_msg_swear["one"]	= " ÄãÃÇÒÑ¾­ÊÇ½á°İĞÖµÜÁË£¬²»ĞèÒªÔÙ½á°İÒ»´ÎÀ´¼ÓÉîÓÑÒêÁË¡£"
-x806001_g_msg_swear["alr"]	= " ÄúµÄ¶ÓÎéÖĞAÒÑ¾­½á°İ¹ı£¬ËùÒÔÎÒÎŞ·¨ÎªÄãÃÇ½á°İ¡£"
-x806001_g_msg_swear["frd"]	= " Èç¹ûÄãÃÇÏë½á°İµÄ»°£¬ÎÒ¿ÉÒÔÎªÄãÃÇÖ÷³Ö½á°İÒÇÊ½£¬×«Ğ´½ğÀ¼Æ×¡£²»¹ıÔÚÕâÖ®Ç°ÎÒÒªÈ·ÈÏÄãÃÇÖ®¼äµÄÓÑºÃ¶ÈÒÑ¾­´ïµ½1000µã¡£"
-x806001_g_msg_swear["mon"]	= " ½øĞĞ½á°İÒÇÊ½ĞèÒª»¨·Ñ#{_EXCHG%d}£¬ÄãÈ·¶¨Òª½á°İÂğ£¿"
-x806001_g_msg_swear["nom"]	= " ÄúÉíÉÏµÄÏÖ½ğ²»×ã#{_EXCHG%d}¡£"
-x806001_g_msg_swear["con"]	= " ĞÖµÜ½á°İ£¬½ñºóÓĞ¸£Í¬Ïí£¬ÓĞÄÑÍ¬µ±¡£ÄãÕæµÄÈ·¶¨Òª½á°İÂğ£¿"
-x806001_g_msg_swear["chn"]	= " ÄãµÄ¶ÓÎé·¢ÉúÁË±ä»¯£¬ËùÒÔÎÒÎŞ·¨ÎªÄãÃÇÖ÷³Ö½á°İÒÇÊ½¡£"
-x806001_g_msg_swear["bul"]	= " »ÊÌìÔÚÉÏ£¬ºóÍÁÔÚÏÂ£¡ÄãÃÇ½ñÈÕ½á°İÎªĞÖµÜ£¬ÒÔºóÓĞ¸£Í¬Ïí£¬ÓĞÄÑÍ¬µ±£¡²»ÇóÍ¬ÄêÍ¬ÔÂÍ¬ÈÕÉú£¬µ«ÇóÍ¬ÄêÍ¬ÔÂÍ¬ÈÕËÀ£¡ÌìÏÂÓ¢ĞÛÃÇ£¬×£ºØËûÃÇ°É£¡"
-x806001_g_msg_swear["pro"]	= " ¹§Ï²ÖîÎ»£¬ÄãÃÇÒÑ¾­³ÉÎª½á°İĞÖµÜ£¬ÇëÄãÃÇµÄ¶Ó³¤À´ÁìÈ¡½á°İ³ÆºÅ°É¡£"
-x806001_g_msg_swear["caa"]	= " ±ØĞëºÍÄãµÄËùÓĞ½á°İĞÖµÜ×é¶Ó£¬²ÅÄÜÁìÈ¡½á°İ³ÆºÅ¡£"
-x806001_g_msg_swear["cac"]	= " Ö»ÓĞ¶Ó³¤²ÅÄÜÎª½á°İĞÖµÜÃÇÁìÈ¡³ÆºÅ¡£"
-x806001_g_msg_swear["cas"]	= " Äã»¹Ã»ÓĞ½á°İ¹ı£¬²»ÄÜÁìÈ¡½á°İ³ÆºÅ¡£"
-x806001_g_msg_swear["cab"]	= " ÄãµÄ¶ÓÎéÖĞÓĞÈË²»ÊÇÄãµÄ½á°İĞÖµÜ¡£"
-x806001_g_msg_swear["cat"]	= " ÄãÒÑ¾­ÁìÈ¡¹ı½á°İ³ÆºÅÁË¡£"
-x806001_g_msg_swear["can"]	= " Äã»¹Ã»ÓĞÁìÈ¡¹ı½á°İ³ÆºÅ£¬»¹²»ÄÜĞŞ¸Ä½á°İ³ÆºÅ¡£"
-x806001_g_msg_swear["ccs"]	= " Äã»¹Ã»ÓĞ½á°İ¹ı£¬²»ÄÜĞŞ¸Ä½á°İ³ÆºÅ¡£"
-x806001_g_msg_swear["nmm"]	= " ĞŞ¸Ä½á°İ³ÆºÅĞèÒª#{_EXCHG%d}£¬ÄãÉíÉÏµÄÏÖ½ğ²»×ã¡£"
-x806001_g_msg_swear["ner"]	= " Äã¾àÀëÎÒÌ«Ô¶ÁË£¬ÎÒÎŞ·¨ÎªÄãÃÇÖ÷³Ö½á°İÒÇÊ½¡£"
-x806001_g_msg_swear["nel"]	= " ÄãµÄ¶ÓÎéÕıÔÚ½á°İ£¬¶øÄã¾àÀëÎÒÌ«Ô¶£¬ÎÒÎŞ·¨ÎªÄãÃÇÖ÷³Ö½á°İÒÇÊ½¡£"
-x806001_g_msg_swear["wait"]	= " µÈ´ıÆäËûÈË»Ø¸´¡£"
+x806001_g_msg_swear["swr"]	= "ç»“æ‹œ"
+x806001_g_msg_swear["tit"]	= "é¢†å–ç§°å·"
+x806001_g_msg_swear["chr"]	= "ä¿®æ”¹ä¸ªäººç§°å·"
+x806001_g_msg_swear["tem"]	= " ä½ éœ€è¦å’Œä½ è¦ç»“æ‹œä¹‹äººç»„é˜Ÿå‰æ¥æ‰¾æˆ‘ï¼Œæˆ‘æ‰èƒ½ç»™ä½ ä»¬ä¸»æŒç»“æ‹œä»ªå¼ã€‚"
+x806001_g_msg_swear["ten"]	= " ä½ çš„é˜Ÿä¼ä¸­æœ‰äººä¸åœ¨æ´›é˜³åŸä¸­ï¼Œæ‰€ä»¥æˆ‘æ— æ³•ä¸ºä½ ä»¬ä¸»æŒç»“æ‹œä»ªå¼ã€‚"
+x806001_g_msg_swear["cap"]	= " åªæœ‰é˜Ÿé•¿æ‰èƒ½å®Œæˆç»“æ‹œçš„æ“ä½œã€‚"
+x806001_g_msg_swear["mar"]	= " å¤«å¦»ä¹‹é—´æ˜¯ä¸èƒ½ç»“æ‹œçš„ã€‚ä½ ä»¬è¿˜æ˜¯å…ˆå›å»å§ã€‚"
+x806001_g_msg_swear["mat"]	= " å¸ˆå¾’ä¹‹é—´æ˜¯ä¸èƒ½ç»“æ‹œçš„ã€‚ä½ ä»¬è¿˜æ˜¯å…ˆå›å»å§ã€‚"
+x806001_g_msg_swear["fri"]	= " åªæœ‰å¥½å‹ä¹‹é—´æ‰èƒ½ç»“æ‹œã€‚ä½ ä»¬è¿˜éœ€è¦è¿›ä¸€æ­¥æé«˜å‹è°Šæ‰è¡Œã€‚"
+x806001_g_msg_swear["all"]	= " æ‰€æœ‰çš„ç»“æ‹œå…„å¼Ÿå¿…é¡»åŒæ—¶åœ¨é˜Ÿä¼ä¸­ï¼Œæ‰èƒ½åŠ å…¥æ–°çš„ç»“æ‹œå…„å¼Ÿã€‚"
+x806001_g_msg_swear["one"]	= " ä½ ä»¬å·²ç»æ˜¯ç»“æ‹œå…„å¼Ÿäº†ï¼Œä¸éœ€è¦å†ç»“æ‹œä¸€æ¬¡æ¥åŠ æ·±å‹è°Šäº†ã€‚"
+x806001_g_msg_swear["alr"]	= " æ‚¨çš„é˜Ÿä¼ä¸­Aå·²ç»ç»“æ‹œè¿‡ï¼Œæ‰€ä»¥æˆ‘æ— æ³•ä¸ºä½ ä»¬ç»“æ‹œã€‚"
+x806001_g_msg_swear["frd"]	= " å¦‚æœä½ ä»¬æƒ³ç»“æ‹œçš„è¯ï¼Œæˆ‘å¯ä»¥ä¸ºä½ ä»¬ä¸»æŒç»“æ‹œä»ªå¼ï¼Œæ’°å†™é‡‘å…°è°±ã€‚ä¸è¿‡åœ¨è¿™ä¹‹å‰æˆ‘è¦ç¡®è®¤ä½ ä»¬ä¹‹é—´çš„å‹å¥½åº¦å·²ç»è¾¾åˆ°1000ç‚¹ã€‚"
+x806001_g_msg_swear["mon"]	= " è¿›è¡Œç»“æ‹œä»ªå¼éœ€è¦èŠ±è´¹#{_EXCHG%d}ï¼Œä½ ç¡®å®šè¦ç»“æ‹œå—ï¼Ÿ"
+x806001_g_msg_swear["nom"]	= " æ‚¨èº«ä¸Šçš„ç°é‡‘ä¸è¶³#{_EXCHG%d}ã€‚"
+x806001_g_msg_swear["con"]	= " å…„å¼Ÿç»“æ‹œï¼Œä»Šåæœ‰ç¦åŒäº«ï¼Œæœ‰éš¾åŒå½“ã€‚ä½ çœŸçš„ç¡®å®šè¦ç»“æ‹œå—ï¼Ÿ"
+x806001_g_msg_swear["chn"]	= " ä½ çš„é˜Ÿä¼å‘ç”Ÿäº†å˜åŒ–ï¼Œæ‰€ä»¥æˆ‘æ— æ³•ä¸ºä½ ä»¬ä¸»æŒç»“æ‹œä»ªå¼ã€‚"
+x806001_g_msg_swear["bul"]	= " çš‡å¤©åœ¨ä¸Šï¼ŒååœŸåœ¨ä¸‹ï¼ä½ ä»¬ä»Šæ—¥ç»“æ‹œä¸ºå…„å¼Ÿï¼Œä»¥åæœ‰ç¦åŒäº«ï¼Œæœ‰éš¾åŒå½“ï¼ä¸æ±‚åŒå¹´åŒæœˆåŒæ—¥ç”Ÿï¼Œä½†æ±‚åŒå¹´åŒæœˆåŒæ—¥æ­»ï¼å¤©ä¸‹è‹±é›„ä»¬ï¼Œç¥è´ºä»–ä»¬å§ï¼"
+x806001_g_msg_swear["pro"]	= " æ­å–œè¯¸ä½ï¼Œä½ ä»¬å·²ç»æˆä¸ºç»“æ‹œå…„å¼Ÿï¼Œè¯·ä½ ä»¬çš„é˜Ÿé•¿æ¥é¢†å–ç»“æ‹œç§°å·å§ã€‚"
+x806001_g_msg_swear["caa"]	= " å¿…é¡»å’Œä½ çš„æ‰€æœ‰ç»“æ‹œå…„å¼Ÿç»„é˜Ÿï¼Œæ‰èƒ½é¢†å–ç»“æ‹œç§°å·ã€‚"
+x806001_g_msg_swear["cac"]	= " åªæœ‰é˜Ÿé•¿æ‰èƒ½ä¸ºç»“æ‹œå…„å¼Ÿä»¬é¢†å–ç§°å·ã€‚"
+x806001_g_msg_swear["cas"]	= " ä½ è¿˜æ²¡æœ‰ç»“æ‹œè¿‡ï¼Œä¸èƒ½é¢†å–ç»“æ‹œç§°å·ã€‚"
+x806001_g_msg_swear["cab"]	= " ä½ çš„é˜Ÿä¼ä¸­æœ‰äººä¸æ˜¯ä½ çš„ç»“æ‹œå…„å¼Ÿã€‚"
+x806001_g_msg_swear["cat"]	= " ä½ å·²ç»é¢†å–è¿‡ç»“æ‹œç§°å·äº†ã€‚"
+x806001_g_msg_swear["can"]	= " ä½ è¿˜æ²¡æœ‰é¢†å–è¿‡ç»“æ‹œç§°å·ï¼Œè¿˜ä¸èƒ½ä¿®æ”¹ç»“æ‹œç§°å·ã€‚"
+x806001_g_msg_swear["ccs"]	= " ä½ è¿˜æ²¡æœ‰ç»“æ‹œè¿‡ï¼Œä¸èƒ½ä¿®æ”¹ç»“æ‹œç§°å·ã€‚"
+x806001_g_msg_swear["nmm"]	= " ä¿®æ”¹ç»“æ‹œç§°å·éœ€è¦#{_EXCHG%d}ï¼Œä½ èº«ä¸Šçš„ç°é‡‘ä¸è¶³ã€‚"
+x806001_g_msg_swear["ner"]	= " ä½ è·ç¦»æˆ‘å¤ªè¿œäº†ï¼Œæˆ‘æ— æ³•ä¸ºä½ ä»¬ä¸»æŒç»“æ‹œä»ªå¼ã€‚"
+x806001_g_msg_swear["nel"]	= " ä½ çš„é˜Ÿä¼æ­£åœ¨ç»“æ‹œï¼Œè€Œä½ è·ç¦»æˆ‘å¤ªè¿œï¼Œæˆ‘æ— æ³•ä¸ºä½ ä»¬ä¸»æŒç»“æ‹œä»ªå¼ã€‚"
+x806001_g_msg_swear["wait"]	= " ç­‰å¾…å…¶ä»–äººå›å¤ã€‚"
 
 --Key for AddNumText
 x806001_g_key					= {}
-x806001_g_key["swear"]	= 10000	--½á°İÁ÷³Ì
-x806001_g_key["allow"]	= 10001	--È·¶¨½á°İ»¨·Ñ½çÃæ
-x806001_g_key["unall"]	= 10002	--È¡Ïû½á°İ»¨·Ñ½çÃæ
-x806001_g_key["confi"]	= 10003	--È·¶¨½á°İÍ¬Òâ½çÃæ
-x806001_g_key["uncon"]	= 10004	--È¡Ïû½á°İÍ¬Òâ½çÃæ
-x806001_g_key["title"]	= 20000	--ÁìÈ¡³ÆºÅ
-x806001_g_key["chrti"]	= 30000	--ĞŞ¸Ä³ÆºÅ
+x806001_g_key["swear"]	= 10000	--ç»“æ‹œæµç¨‹
+x806001_g_key["allow"]	= 10001	--ç¡®å®šç»“æ‹œèŠ±è´¹ç•Œé¢
+x806001_g_key["unall"]	= 10002	--å–æ¶ˆç»“æ‹œèŠ±è´¹ç•Œé¢
+x806001_g_key["confi"]	= 10003	--ç¡®å®šç»“æ‹œåŒæ„ç•Œé¢
+x806001_g_key["uncon"]	= 10004	--å–æ¶ˆç»“æ‹œåŒæ„ç•Œé¢
+x806001_g_key["title"]	= 20000	--é¢†å–ç§°å·
+x806001_g_key["chrti"]	= 30000	--ä¿®æ”¹ç§°å·
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x806001_OnDefaultEvent( sceneId, selfId, targetId )
 	local	key	= GetNumText()
 	
-	-- ¼ì²éÊÇ·ñ·ûºÏÌõ¼ş
+	-- æ£€æŸ¥æ˜¯å¦ç¬¦åˆæ¡ä»¶
 	if key == x806001_g_key["swear"] then
 		if x806001_CheckAccept( sceneId, selfId, targetId ) == 0 then
 			return 0
@@ -67,7 +67,7 @@ function x806001_OnDefaultEvent( sceneId, selfId, targetId )
 		return 1
 	end
 	
-	--È·ÈÏ»¨·Ñ
+	--ç¡®è®¤èŠ±è´¹
 	if key == x806001_g_key["allow"] then
 		--local money
 		--money = LuaFnGetMoney( sceneId, selfId )
@@ -84,7 +84,7 @@ function x806001_OnDefaultEvent( sceneId, selfId, targetId )
 		return 1
 	end
 	
-	--È¡Ïû»¨·Ñ
+	--å–æ¶ˆèŠ±è´¹
 	if key == x806001_g_key["unall"] then
 		BeginUICommand( sceneId )
 		UICommand_AddInt( sceneId, targetId )
@@ -93,18 +93,18 @@ function x806001_OnDefaultEvent( sceneId, selfId, targetId )
 		return 1
 	end
 	
-	--Í¬Òâ½á°İ
+	--åŒæ„ç»“æ‹œ
 	if key == x806001_g_key["confi"] then
-		--¼ÇÂ¼ĞÅÏ¢
+		--è®°å½•ä¿¡æ¯
 		x806001_AgreeSwear( sceneId, selfId, targetId )
 		
-		--¹Ø±Õ´°¿Ú
+		--å…³é—­çª—å£
 		BeginUICommand( sceneId )
 		UICommand_AddInt( sceneId, targetId )
 		EndUICommand( sceneId )
 		DispatchUICommand( sceneId, selfId, 1000 )
 		
-		--²é¿´ÊÇ·ñËùÓĞµÄ¶ÓÔ±¶¼Í¬ÒâÁË
+		--æŸ¥çœ‹æ˜¯å¦æ‰€æœ‰çš„é˜Ÿå‘˜éƒ½åŒæ„äº†
 		if x806001_CheckIfAllAgreeSwear( sceneId, selfId, targetId ) == 1 then
 			x806001_DoSwear( sceneId, selfId, targetId )
 		else
@@ -113,34 +113,34 @@ function x806001_OnDefaultEvent( sceneId, selfId, targetId )
 		return 1
 	end
 
-	--²»Í¬Òâ½á°İ
+	--ä¸åŒæ„ç»“æ‹œ
 	if key == x806001_g_key["uncon"] then
 		x806001_QuitSwear( sceneId, selfId, targetId )
 		return 1
 	end
 	
-	--ÁìÈ¡³ÆºÅ
+	--é¢†å–ç§°å·
 	if key == x806001_g_key["title"] then
 		local TeamSize = x806001_CheckDrawTitle( sceneId, selfId, targetId )
 		if TeamSize == 0 then
 			return 0
 		end
 		
-		--¼ÇÂ¼¶ÓÎéĞÅÏ¢
+		--è®°å½•é˜Ÿä¼ä¿¡æ¯
 		x806001_LogTeamInfo( sceneId, selfId, targetId )
 		
-		--ÁìÈ¡½á°İ³ÆºÅ
+		--é¢†å–ç»“æ‹œç§°å·
 		LuaFnDrawJieBaiName( sceneId, selfId, TeamSize )
 		return 1
 	end
 	
-	--ĞŞ¸Ä¸öÈË³ÆºÅ
+	--ä¿®æ”¹ä¸ªäººç§°å·
 	if key == x806001_g_key["chrti"] then
 		if x806001_CheckChangeTitle( sceneId, selfId, targetId ) == 0 then
 			return 0
 		end
 		
-		--ĞŞ¸Ä½á°İ³ÆºÅ
+		--ä¿®æ”¹ç»“æ‹œç§°å·
 		LuaFnChangeJieBaiName( sceneId, selfId, TeamSize )
 		return 1
 	end
@@ -149,7 +149,7 @@ function x806001_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x806001_OnEnumerate( sceneId, selfId, targetId )
 	AddNumText( sceneId, x806001_g_ScriptId, x806001_g_msg_swear["swr"], 6, x806001_g_key["swear"] )
@@ -158,17 +158,17 @@ function x806001_OnEnumerate( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x806001_CheckAccept( sceneId, selfId, targetId )
 
-	--(1)ÊÇ·ñ×é¶Ó
+	--(1)æ˜¯å¦ç»„é˜Ÿ
 	if LuaFnHasTeam( sceneId, selfId ) == 0 then
 		x806001_MessageBox( sceneId, selfId, targetId, x806001_g_msg_swear["tem"] )
 		return 0
 	end
 	
-	--È¡¶ÓÎéÈËÊı£¬ÈËÊı²»ÄÜÊÇ1¸ö
+	--å–é˜Ÿä¼äººæ•°ï¼Œäººæ•°ä¸èƒ½æ˜¯1ä¸ª
 	local TeamSize = LuaFnGetTeamSize( sceneId, selfId )
 	TotalTeamNum = TeamSize
 	if TeamSize == 1 then
@@ -176,26 +176,26 @@ function x806001_CheckAccept( sceneId, selfId, targetId )
 		return 0
 	end
 
-	--È¡Í¬³¡¾°¶ÓÎéÈËÊı
+	--å–åŒåœºæ™¯é˜Ÿä¼äººæ•°
 	local TeamSizeSameScene = LuaFnGetTeamSceneMemberCount( sceneId, selfId )
 	if TeamSizeSameScene+1 ~= TeamSize then
 		x806001_MessageBox( sceneId, selfId, targetId, x806001_g_msg_swear["ten"] )
 		return 0
 	end
 
-	--(2)ÊÇ·ñ¶Ó³¤
+	--(2)æ˜¯å¦é˜Ÿé•¿
 	if LuaFnIsTeamLeader( sceneId, selfId ) ~= 1 then
 		x806001_MessageBox( sceneId, selfId, targetId, x806001_g_msg_swear["cap"] )
 		return 0
 	end
 	
-	--(3)¾àÀëÊÇ·ñºÏÊÊ
+	--(3)è·ç¦»æ˜¯å¦åˆé€‚
 	if IsInDist( sceneId, selfId, targetId, 6 ) ~= 1 then
 		x806001_MessageBox( sceneId, selfId, targetId, x806001_g_msg_swear["ner"] )
 		return 0
 	end
 	
-	--(4)¶ÓÔ±ÖĞÊÇ·ñ´æÔÚ·òÆŞ¡¢Ê¦Í½¡¢½á°İ¡¢·ÇºÃÓÑ¹ØÏµ
+	--(4)é˜Ÿå‘˜ä¸­æ˜¯å¦å­˜åœ¨å¤«å¦»ã€å¸ˆå¾’ã€ç»“æ‹œã€éå¥½å‹å…³ç³»
 	local i = 0
 	local j = 0
 	local theID = 0
@@ -203,29 +203,29 @@ function x806001_CheckAccept( sceneId, selfId, targetId )
 	local Friend1 = 0
 	local Friend2 = 0
 	local Brothers = 0
-	local BrotherNum = LuaFnIsSweared(sceneId, selfId) --¶Ó³¤ÊÇ·ñ½á°İ¹ı
+	local BrotherNum = LuaFnIsSweared(sceneId, selfId) --é˜Ÿé•¿æ˜¯å¦ç»“æ‹œè¿‡
 	while i < TeamSizeSameScene do
 		theID = LuaFnGetTeamSceneMember( sceneId, selfId, i )
 
-		--ÊÇ·ñ·òÆŞ
+		--æ˜¯å¦å¤«å¦»
 		if LuaFnIsSpouses(sceneId, selfId, theID) == 1 then
 			x806001_MessageBox( sceneId, selfId, targetId, x806001_g_msg_swear["mar"] )
 			return 0
 		end
 
-		--ÊÇ·ñÊ¦¸¸
+		--æ˜¯å¦å¸ˆçˆ¶
 		if LuaFnIsMaster(sceneId, selfId, theID) == 1 then
 			x806001_MessageBox( sceneId, selfId, targetId, x806001_g_msg_swear["mat"] )
 			return 0
 		end
 
-		--ÊÇ·ñÍ½µÜ
+		--æ˜¯å¦å¾’å¼Ÿ
 		if LuaFnIsPrentice(sceneId, theID, selfId) == 1 then
 			x806001_MessageBox( sceneId, selfId, targetId, x806001_g_msg_swear["mat"] )
 			return 0
 		end
 
-		--ÊÇ·ñºÃÓÑ
+		--æ˜¯å¦å¥½å‹
 		if LuaFnIsFriend(sceneId, selfId, theID) == 0 then
 			x806001_MessageBox( sceneId, selfId, targetId, x806001_g_msg_swear["fri"] )
 			return 0
@@ -235,7 +235,7 @@ function x806001_CheckAccept( sceneId, selfId, targetId )
 			return 0
 		end
 
-		--ÓÑºÃ¶ÈÊÇ·ñ>=1000
+		--å‹å¥½åº¦æ˜¯å¦>=1000
 		Friend1 = LuaFnGetFriendPoint( sceneId, selfId, theID )
 		Friend2 = LuaFnGetFriendPoint( sceneId, theID, selfId )
 		if Friend1 < 1000 or Friend2 < 1000 then
@@ -243,35 +243,35 @@ function x806001_CheckAccept( sceneId, selfId, targetId )
 			return 0
 		end
 		
-		--¾àÀëÊÇ·ñºÏÊÊ
+		--è·ç¦»æ˜¯å¦åˆé€‚
 		if IsInDist( sceneId, theID, targetId, 6 ) ~= 1 then
 			local	theName	= LuaFnGetName( sceneId, theID )
-			x806001_MessageBox( sceneId, selfId, targetId, " ÄúµÄ¶ÓÎéÖĞ#R" .. theName .. "#W¾àÀëÎÒÌ«Ô¶£¬ËùÒÔÎÒÎŞ·¨ÎªÄãÃÇ½á°İ¡£" )
+			x806001_MessageBox( sceneId, selfId, targetId, " æ‚¨çš„é˜Ÿä¼ä¸­#R" .. theName .. "#Wè·ç¦»æˆ‘å¤ªè¿œï¼Œæ‰€ä»¥æˆ‘æ— æ³•ä¸ºä½ ä»¬ç»“æ‹œã€‚" )
 			x806001_MessageBox( sceneId, theID, targetId, x806001_g_msg_swear["nel"] )
 			return 0
 		end
 
-		--ÊÇ·ñÒÑ¾­ÓĞ½á°İ¹ØÏµ
+		--æ˜¯å¦å·²ç»æœ‰ç»“æ‹œå…³ç³»
 		local theSwear = LuaFnIsSweared(sceneId, theID)
-		if theSwear > 0 then --¶ÓÔ±ÓĞ½á°İ¹ØÏµ
-			if BrotherNum > 0 then --¶Ó³¤ÓĞ½á°İ¹ØÏµ
+		if theSwear > 0 then --é˜Ÿå‘˜æœ‰ç»“æ‹œå…³ç³»
+			if BrotherNum > 0 then --é˜Ÿé•¿æœ‰ç»“æ‹œå…³ç³»
 				if LuaFnIsBrother(sceneId, selfId, theID) == 0 then
 					local	theName	= LuaFnGetName( sceneId, theID )
-					x806001_MessageBox( sceneId, selfId, targetId, " ÄúµÄ¶ÓÎéÖĞ" .. theName .. "ÒÑ¾­ÊÇ±ğÈËµÄ½á°İĞÖµÜ£¬ÎÒÎŞ·¨ÔÙ¸øÄãÃÇÖ÷³Ö½á°İÒÇÊ½ÁË¡£" )
+					x806001_MessageBox( sceneId, selfId, targetId, " æ‚¨çš„é˜Ÿä¼ä¸­" .. theName .. "å·²ç»æ˜¯åˆ«äººçš„ç»“æ‹œå…„å¼Ÿï¼Œæˆ‘æ— æ³•å†ç»™ä½ ä»¬ä¸»æŒç»“æ‹œä»ªå¼äº†ã€‚" )
 					return 0
 				end
 			else
 				local	theName	= LuaFnGetName( sceneId, theID )
-				x806001_MessageBox( sceneId, selfId, targetId, " ÄúµÄ¶ÓÎéÖĞ" .. theName .. "ÒÑ¾­ÊÇ±ğÈËµÄ½á°İĞÖµÜ£¬ÎÒÎŞ·¨ÔÙ¸øÄãÃÇÖ÷³Ö½á°İÒÇÊ½ÁË¡£" )
+				x806001_MessageBox( sceneId, selfId, targetId, " æ‚¨çš„é˜Ÿä¼ä¸­" .. theName .. "å·²ç»æ˜¯åˆ«äººçš„ç»“æ‹œå…„å¼Ÿï¼Œæˆ‘æ— æ³•å†ç»™ä½ ä»¬ä¸»æŒç»“æ‹œä»ªå¼äº†ã€‚" )
 			end
 		end
 		
-		--Èç¹û¶Ó³¤ÒÑ¾­ÓĞ½á°İ¹ØÏµ£¬½«¶ÓÎéÖĞËùÓĞµÄÓë¶Ó³¤ÊÇĞÖµÜµÄÈË·Åµ½DICÀïÃæÈ¥
+		--å¦‚æœé˜Ÿé•¿å·²ç»æœ‰ç»“æ‹œå…³ç³»ï¼Œå°†é˜Ÿä¼ä¸­æ‰€æœ‰çš„ä¸é˜Ÿé•¿æ˜¯å…„å¼Ÿçš„äººæ”¾åˆ°DICé‡Œé¢å»
 		if theSwear > 0 and BrotherNum > 0 then
 			Brothers = Brothers + 1
 		end
 
-		--±éÀú¶ÓÔ±
+		--éå†é˜Ÿå‘˜
 		j = i
 		while j < TeamSizeSameScene do
 			otherID = LuaFnGetTeamSceneMember( sceneId, theID, j )
@@ -306,9 +306,9 @@ function x806001_CheckAccept( sceneId, selfId, targetId )
 		i = i + 1
 	end
 		
-	--(5)Èç¹û¶Ó³¤ÓĞ½á°İ¹ØÏµ£¬¿´¿´ËùÓĞµÄĞÖµÜÊÇ·ñ¶¼ÔÚÕâ¸ö¶ÓÎéÀïÃæ
+	--(5)å¦‚æœé˜Ÿé•¿æœ‰ç»“æ‹œå…³ç³»ï¼Œçœ‹çœ‹æ‰€æœ‰çš„å…„å¼Ÿæ˜¯å¦éƒ½åœ¨è¿™ä¸ªé˜Ÿä¼é‡Œé¢
 	if BrotherNum > 0 then
-		-- ĞÖµÜÊıµÈÓÚÍ¬³¡¾°µÄ¶ÓÔ±Êı
+		-- å…„å¼Ÿæ•°ç­‰äºåŒåœºæ™¯çš„é˜Ÿå‘˜æ•°
 		if BrotherNum == Brothers then
 			if BrotherNum == TeamSizeSameScene then
 				x806001_MessageBox( sceneId, selfId, targetId, x806001_g_msg_swear["one"] )
@@ -325,7 +325,7 @@ function x806001_CheckAccept( sceneId, selfId, targetId )
 end
 
 --**********************************
---¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+--å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x806001_MessageBox( sceneId, selfId, targetId, msg )
 	BeginEvent( sceneId )
@@ -335,32 +335,32 @@ function x806001_MessageBox( sceneId, selfId, targetId, msg )
 end
 
 --**********************************
---¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+--å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x806001_ConfirmSwear( sceneId, selfId, targetId )
 	BeginEvent( sceneId )
 		AddText( sceneId, x806001_g_msg_swear["con"] )
-		AddNumText( sceneId, x806001_g_ScriptId, "È·ÈÏ½á°İ", 6, x806001_g_key["confi"] )
-		AddNumText( sceneId, x806001_g_ScriptId, "ÎÒ²»Ïë½á°İÁË", 8, x806001_g_key["uncon"] )
+		AddNumText( sceneId, x806001_g_ScriptId, "ç¡®è®¤ç»“æ‹œ", 6, x806001_g_key["confi"] )
+		AddNumText( sceneId, x806001_g_ScriptId, "æˆ‘ä¸æƒ³ç»“æ‹œäº†", 8, x806001_g_key["uncon"] )
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---È·ÈÏ»¨·Ñ¶Ô»°´°¿Ú
+--ç¡®è®¤èŠ±è´¹å¯¹è¯çª—å£
 --**********************************
 function x806001_OnSubmit( sceneId, selfId, targetId )
 	BeginEvent( sceneId )
 		local msg	= format( x806001_g_msg_swear["mon"], x806001_g_NeedMoney )
 		AddText( sceneId, msg )
-		AddNumText( sceneId, x806001_g_ScriptId, "È·¶¨", 6, x806001_g_key["allow"] )
-		AddNumText( sceneId, x806001_g_ScriptId, "È¡Ïû", 8, x806001_g_key["unall"] )
+		AddNumText( sceneId, x806001_g_ScriptId, "ç¡®å®š", 6, x806001_g_key["allow"] )
+		AddNumText( sceneId, x806001_g_ScriptId, "å–æ¶ˆ", 8, x806001_g_key["unall"] )
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---È·ÈÏÍ¬Òâ¶Ô»°´°¿Ú
+--ç¡®è®¤åŒæ„å¯¹è¯çª—å£
 --**********************************
 function x806001_OnConfirm( sceneId, selfId, targetId )
 	x806001_ConfirmSwear( sceneId, selfId, targetId )
@@ -374,7 +374,7 @@ function x806001_OnConfirm( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ÇÂ¼¶ÓÎéĞÅÏ¢
+--è®°å½•é˜Ÿä¼ä¿¡æ¯
 --**********************************
 function x806001_LogTeamInfo( sceneId, selfId, targetId )
 	LuaFnTeamSnapshort( sceneId, selfId )
@@ -387,22 +387,22 @@ function x806001_LogTeamInfo( sceneId, selfId, targetId )
 end
 
 --**********************************
---·ÅÆú½á°İ
+--æ”¾å¼ƒç»“æ‹œ
 --**********************************
 function x806001_QuitSwear( sceneId, selfId, targetId )
 
-	--¹Ø±Õ×Ô¼ºµÄ´°¿Ú
+	--å…³é—­è‡ªå·±çš„çª—å£
 	BeginUICommand( sceneId )
 	UICommand_AddInt( sceneId, targetId )
 	EndUICommand( sceneId )
 	DispatchUICommand( sceneId, selfId, 1000 )
 	
-	--¸øÆäËûÈË·¢ÏûÏ¢
+	--ç»™å…¶ä»–äººå‘æ¶ˆæ¯
 	local TeamLeaderID = GetTeamLeader( sceneId, selfId )
 	if TeamLeaderID ~= nil then
 		local i = 0
 		local TeamSizeSameScene = LuaFnGetTeamSceneMemberCount( sceneId, TeamLeaderID )
-		local	msg = LuaFnGetName( sceneId, selfId ) .. "Ë¼ÂÇÔÙÈı£¬ÍË³öÁË½á°İÒÇÊ½¡£"
+		local	msg = LuaFnGetName( sceneId, selfId ) .. "æ€è™‘å†ä¸‰ï¼Œé€€å‡ºäº†ç»“æ‹œä»ªå¼ã€‚"
 		if TeamLeaderID ~= selfId then
 			x806001_MessageBox( sceneId, selfId, targetId, msg )
 			x806001_MessageBox( sceneId, TeamLeaderID, targetId, msg )
@@ -419,7 +419,7 @@ function x806001_QuitSwear( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ÇÂ¼Í¬Òâ½á°İĞÅÏ¢
+--è®°å½•åŒæ„ç»“æ‹œä¿¡æ¯
 --**********************************
 function x806001_AgreeSwear( sceneId, selfId, targetId )
 	LuaFnAgreeSwear( sceneId, selfId, selfId )
@@ -433,10 +433,10 @@ function x806001_AgreeSwear( sceneId, selfId, targetId )
 end
 
 --**********************************
---²é¿´ÊÇ·ñËùÓĞÈË¶¼Í¬Òâ½á°İ
+--æŸ¥çœ‹æ˜¯å¦æ‰€æœ‰äººéƒ½åŒæ„ç»“æ‹œ
 --**********************************
 function x806001_CheckIfAllAgreeSwear( sceneId, selfId, targetId )
-	--¼ì²éÊÇ·ñËùÓĞÈË¶¼Í¬ÒâÁË
+	--æ£€æŸ¥æ˜¯å¦æ‰€æœ‰äººéƒ½åŒæ„äº†
 	if LuaFnIfAllTeamAgreeSwear(sceneId, selfId) == 0 then
 		return 0
 	end
@@ -453,12 +453,12 @@ function x806001_CheckIfAllAgreeSwear( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÕæÊµµÄ½á°İ²Ù×÷
+--çœŸå®çš„ç»“æ‹œæ“ä½œ
 --**********************************
 function x806001_DoSwear( sceneId, selfId, targetId )
 	local TeamLeaderID = GetTeamLeader( sceneId, selfId )
 	
-	--¶Ó³¤Ã»ÁË:(
+	--é˜Ÿé•¿æ²¡äº†:(
 	if TeamLeaderID == nil then
 		return 0
 	end
@@ -466,29 +466,29 @@ function x806001_DoSwear( sceneId, selfId, targetId )
 	local BrotherNum = LuaFnIsSweared(sceneId, TeamLeaderID)
 	local TeamSizeSameScene = LuaFnGetTeamSceneMemberCount( sceneId, TeamLeaderID )
 	
-	--¼ì²éÊÇ·ñÒÑ¾­×é¶ÓÁË
+	--æ£€æŸ¥æ˜¯å¦å·²ç»ç»„é˜Ÿäº†
 	if BrotherNum == TeamSizeSameScene then
 		return 0
 	end
 
-	--¼ì²é¶ÓÎéÊÇ·ñÓĞ±ä»¯
+	--æ£€æŸ¥é˜Ÿä¼æ˜¯å¦æœ‰å˜åŒ–
 	if LuaFnVerifyTeamWithSnapshort( sceneId, TeamLeaderID ) == 0 then
 		x806001_MessageBox( sceneId, TeamLeaderID, targetId, x806001_g_msg_swear["chn"] )
 		return 0
 	end
 	
-	--²é¿´¶ÓÔ±¼ä¹ØÏµÊÇ·ñÓĞ±ä»¯
+	--æŸ¥çœ‹é˜Ÿå‘˜é—´å…³ç³»æ˜¯å¦æœ‰å˜åŒ–
 	if x806001_CheckAccept( sceneId, TeamLeaderID, targetId ) == 0 then
 		x806001_MessageBox( sceneId, TeamLeaderID, targetId, x806001_g_msg_swear["chn"] )
 		return 0
 	end
 	
-	--¼ì²é³É¹¦ÁË£¬¸Ï½ô¿ÛÑ¾10¸ö½ğ×Ó
+	--æ£€æŸ¥æˆåŠŸäº†ï¼Œèµ¶ç´§æ‰£ä¸«10ä¸ªé‡‘å­
 	--local Cost = LuaFnCostMoney( sceneId, TeamLeaderID, 100000 )
 	--hzp 2008-12-9
 	local jzCost, jbCost = LuaFnCostMoneyWithPriority( sceneId, TeamLeaderID, 100000 );	
 	
-	--Ã»¿Û³É¹¦£¿£¿
+	--æ²¡æ‰£æˆåŠŸï¼Ÿï¼Ÿ
 	--if Cost == nil or Cost <= 0 then
 	if jzCost == -1 then
 		local msg	= format( x806001_g_msg_swear["nom"], x806001_g_NeedMoney )
@@ -498,10 +498,10 @@ function x806001_DoSwear( sceneId, selfId, targetId )
 	
 	local Names = LuaFnGetName( sceneId, TeamLeaderID )
 	
-	--ĞŞ¸Ä¶Ó³¤ºÃÓÑÁĞ±í
+	--ä¿®æ”¹é˜Ÿé•¿å¥½å‹åˆ—è¡¨
 	LuaFnAllTeamSwear( sceneId, TeamLeaderID )
 	
-	--ĞŞ¸ÄÆäËûÈËºÃÓÑÁĞ±í
+	--ä¿®æ”¹å…¶ä»–äººå¥½å‹åˆ—è¡¨
 	local i = 0
 	while i < TeamSizeSameScene do
 		local theID = LuaFnGetTeamSceneMember( sceneId, TeamLeaderID, i )
@@ -510,7 +510,7 @@ function x806001_DoSwear( sceneId, selfId, targetId )
 		i = i + 1
 	end
 	
-	--ÈÃ¶Ó³¤Áì³ÆºÅ
+	--è®©é˜Ÿé•¿é¢†ç§°å·
 	x806001_MessageBox( sceneId, TeamLeaderID, targetId, x806001_g_msg_swear["pro"] )
 	i = 0
 	while i < TeamSizeSameScene do
@@ -519,7 +519,7 @@ function x806001_DoSwear( sceneId, selfId, targetId )
 		i = i + 1
 	end
 	
- 		--ÏµÍ³¹ã²¥ÏûÏ¢
+ 		--ç³»ç»Ÿå¹¿æ’­æ¶ˆæ¯
 	local leaderObjId = selfId;
 	local sAllUserName="";
 		
@@ -533,7 +533,7 @@ function x806001_DoSwear( sceneId, selfId, targetId )
 		local sUserName2 = format("#B#{_INFOUSR%s}#Y", sUserName);		
 		sAllUserName = sAllUserName..sUserName2;		
 		if i ~= nearteammembercount-1 then
-			sAllUserName = sAllUserName.."¡¢"
+			sAllUserName = sAllUserName.."ã€"
 		end			
 	end
 			
@@ -543,17 +543,17 @@ function x806001_DoSwear( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²âÁìÈ¡³ÆºÅ
+--æ£€æµ‹é¢†å–ç§°å·
 --**********************************
 function x806001_CheckDrawTitle( sceneId, selfId, targetId )
 
-	--(1)ÊÇ·ñ×é¶Ó
+	--(1)æ˜¯å¦ç»„é˜Ÿ
 	if LuaFnHasTeam( sceneId, selfId ) == 0 then
 		x806001_MessageBox( sceneId, selfId, targetId, x806001_g_msg_swear["caa"] )
 		return 0
 	end
 	
-	--È¡¶ÓÎéÈËÊı£¬ÈËÊı²»ÄÜÊÇ1¸ö
+	--å–é˜Ÿä¼äººæ•°ï¼Œäººæ•°ä¸èƒ½æ˜¯1ä¸ª
 	local TeamSize = LuaFnGetTeamSize( sceneId, selfId )
 	TotalTeamNum = TeamSize
 	if TeamSize == 1 then
@@ -561,27 +561,27 @@ function x806001_CheckDrawTitle( sceneId, selfId, targetId )
 		return 0
 	end
 
-	--È¡Í¬³¡¾°¶ÓÎéÈËÊı
+	--å–åŒåœºæ™¯é˜Ÿä¼äººæ•°
 	local TeamSizeSameScene = LuaFnGetTeamSceneMemberCount( sceneId, selfId )
 	if TeamSizeSameScene+1 ~= TeamSize then
 		x806001_MessageBox( sceneId, selfId, targetId, x806001_g_msg_swear["caa"] )
 		return 0
 	end
 
-	--(2)ÊÇ·ñ¶Ó³¤
+	--(2)æ˜¯å¦é˜Ÿé•¿
 	if LuaFnIsTeamLeader( sceneId, selfId ) ~= 1 then
 		x806001_MessageBox( sceneId, selfId, targetId, x806001_g_msg_swear["cac"] )
 		return 0
 	end
 	
-	--(3)ÊÇ·ñ½á°İ¹ı
+	--(3)æ˜¯å¦ç»“æ‹œè¿‡
 	local BrotherNum = LuaFnIsSweared(sceneId, selfId)
 	if BrotherNum == 0 then
 		x806001_MessageBox( sceneId, selfId, targetId, x806001_g_msg_swear["cas"] )
 		return 0
 	end
 
-	--(4)ÊÇ·ñ¶ÓÎéÖĞÓĞ²»ÊÇ½á°İĞÖµÜµÄ¶ÓÔ±
+	--(4)æ˜¯å¦é˜Ÿä¼ä¸­æœ‰ä¸æ˜¯ç»“æ‹œå…„å¼Ÿçš„é˜Ÿå‘˜
 	local i = 0
 	local theID = 0
 	local Brothers = 0
@@ -595,13 +595,13 @@ function x806001_CheckDrawTitle( sceneId, selfId, targetId )
 		i = i + 1
 	end
 
-	--(5)ÊÇ·ñËùÓĞ¶ÓÔ±¶¼À´ÁË
+	--(5)æ˜¯å¦æ‰€æœ‰é˜Ÿå‘˜éƒ½æ¥äº†
 	if BrotherNum ~= Brothers then
 		x806001_MessageBox( sceneId, selfId, targetId, x806001_g_msg_swear["caa"] )
 		return 0
 	end
 
-	--(6)ÊÇ·ñÓĞ×ã¹»µÄ½ğÇ®
+	--(6)æ˜¯å¦æœ‰è¶³å¤Ÿçš„é‡‘é’±
 	--hzp 2008-12-26
 		local nMoneyJZ = GetMoneyJZ(sceneId, selfId);
 		local nMoneyJB = LuaFnGetMoney(sceneId, selfId);
@@ -613,8 +613,8 @@ function x806001_CheckDrawTitle( sceneId, selfId, targetId )
 		return 0
 	end
 	
-	--(7)ÊÇ·ñÒÑ¾­Áì¹ı³ÆºÅÁË
-	--ÁìÈ¡¹ı³ÆºÅºó£¬ÈÔÈ»¿ÉÒÔÁìÈ¡³ÆºÅ£¬ÓÃÓÚµ±½á°İÈËÊı·¢Éú±ä»¯Ê±£¬ĞŞ¸Ä½á°İĞÖµÜµÄ³ÆºÅ
+	--(7)æ˜¯å¦å·²ç»é¢†è¿‡ç§°å·äº†
+	--é¢†å–è¿‡ç§°å·åï¼Œä»ç„¶å¯ä»¥é¢†å–ç§°å·ï¼Œç”¨äºå½“ç»“æ‹œäººæ•°å‘ç”Ÿå˜åŒ–æ—¶ï¼Œä¿®æ”¹ç»“æ‹œå…„å¼Ÿçš„ç§°å·
 	
 	--local title = LuaFnGetJieBaiName( sceneId, selfId )
 	--if title ~= nil then
@@ -622,30 +622,30 @@ function x806001_CheckDrawTitle( sceneId, selfId, targetId )
 		--return 0
 	--end
 	
-	--·µ»Ø¶ÓÎéÖĞ×ÜÈËÊı
+	--è¿”å›é˜Ÿä¼ä¸­æ€»äººæ•°
 	return TeamSize
 end
 
 --**********************************
---¼ì²âĞŞ¸Ä³ÆºÅ
+--æ£€æµ‹ä¿®æ”¹ç§°å·
 --**********************************
 function x806001_CheckChangeTitle( sceneId, selfId, targetId )
 
-	--(1)ÊÇ·ñ½á°İ¹ı
+	--(1)æ˜¯å¦ç»“æ‹œè¿‡
 	local BrotherNum = LuaFnIsSweared(sceneId, selfId)
 	if BrotherNum == 0 then
 		x806001_MessageBox( sceneId, selfId, targetId, x806001_g_msg_swear["ccs"] )
 		return 0
 	end
 	
-	--(2)ÊÇ·ñÁìÈ¡¹ı³ÆºÅ
+	--(2)æ˜¯å¦é¢†å–è¿‡ç§°å·
 	local title = LuaFnGetJieBaiName( sceneId, selfId )
 	if title == nil then
 		x806001_MessageBox( sceneId, selfId, targetId, x806001_g_msg_swear["can"] )
 		return 0
 	end
 	
-	--(3)ÊÇ·ñÓĞ×ã¹»µÄ½ğÇ®
+	--(3)æ˜¯å¦æœ‰è¶³å¤Ÿçš„é‡‘é’±
 	--hzp 2008-12-26
 	local nMoneyJZ = GetMoneyJZ(sceneId, selfId);
 	local nMoneyJB = LuaFnGetMoney(sceneId, selfId);
@@ -662,12 +662,12 @@ function x806001_CheckChangeTitle( sceneId, selfId, targetId )
 end
 
 --**********************************
---µÈ´ıÆäËûÈËÈ·¶¨µÄ¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+--ç­‰å¾…å…¶ä»–äººç¡®å®šçš„å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x806001_WaitSwear( sceneId, selfId, targetId )
 	BeginEvent( sceneId )
 		AddText( sceneId, x806001_g_msg_swear["wait"] )		
-		AddNumText( sceneId, x806001_g_ScriptId, "ÎÒ²»Ïë½á°İÁË", 8, x806001_g_key["uncon"] )
+		AddNumText( sceneId, x806001_g_ScriptId, "æˆ‘ä¸æƒ³ç»“æ‹œäº†", 8, x806001_g_key["uncon"] )
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, selfId, targetId )
 end

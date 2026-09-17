@@ -1,20 +1,20 @@
--- 125022 ±¦Ïä
--- »ñÈ¡buffµÄ±¦Ïä
+-- 125022 å®ç®±
+-- èŽ·å–buffçš„å®ç®±
 
 x125022_g_scriptId = 125022
 
 
---ËùÓµÓÐµÄÊÂ¼þIDÁÐ±íÓÃID¼¯ºÏÊµÏÖ
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨ç”¨IDé›†åˆå®žçŽ°
 x125022_g_LimitiBuffCollectionID = 75;
 
---¸ß¼¶Ê±×°£¬50%µôÂäËæ»ú 1 ¼þ
+--é«˜çº§æ—¶è£…ï¼Œ50%æŽ‰è½éšæœº 1 ä»¶
 x125022_g_LootItem_1 = {
 10124009,10124010,10124011,10124012,
 10124013,10124014,10124015,10124016,
 10124017,                           
 }
 
---4ÐÇÌ××°£¬100%µôÂäËæ»ú 1 ¼þ
+--4æ˜Ÿå¥—è£…ï¼Œ100%æŽ‰è½éšæœº 1 ä»¶
 x125022_g_LootItem_2 = {
 10510005,10510006,10510008,10510012,10510013,10510017,10510023,10510026,
 10510035,10510036,10510038,10510042,10510043,10510047,10510053,10510056,
@@ -62,62 +62,62 @@ x125022_g_LootItem_2 = {
 10523029,10523039,10523049,10523059,10523069,10523079,10523089,10552009,
 10552019,10552029,10552039,10552049,10552059,10552069,10552079,10552089,
 10553009,10553019,10553029,10553039,10553049,10553059,10553069,10553079,
-10553089,}-- 10500019~10553089ÓÉzzÌí¼Ó
+10553089,}-- 10500019~10553089ç”±zzæ·»åŠ 
 
 
 
 x125022_g_LootItem_3 = {10421018}
 
---ÎÞµÐbuff
+--æ— æ•Œbuff
 x125022_g_BuffId_1 = 54
 
---ÎäÁÖÃËÖ÷buff
+--æ­¦æž—ç›Ÿä¸»buff
 x125022_g_BuffId_2 = 8046
 
---ÇýÉ¢²»¸ÃÓÐµÄBUFFµÄÐ§¹û
-x125022_g_BuffId_3 = 8055	--ÐÄÎÞÅÔæð£¨¿ªÏäÇýÉ¢£©
+--é©±æ•£ä¸è¯¥æœ‰çš„BUFFçš„æ•ˆæžœ
+x125022_g_BuffId_3 = 8055	--å¿ƒæ— æ—éª›ï¼ˆå¼€ç®±é©±æ•£ï¼‰
 
 
---ÐÄÎÞÅÔæðBuffID
-x125022_g_BuffId_4 = 8056	--ÐÄÎÞÅÔæð£¨¿ªÏäÃâÒß£©
+--å¿ƒæ— æ—éª›BuffID
+x125022_g_BuffId_4 = 8056	--å¿ƒæ— æ—éª›ï¼ˆå¼€ç®±å…ç–«ï¼‰
 
 --Code Check Only
 --QUALITY_CREATE_BY_BOSS =nil
 
 --**********************************
---ÊÂ¼þÁÐ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x125022_OnDefaultEvent( sceneId, selfId, targetId )
 	
 end
 
 --**********************************
---ÌØÊâ½»»¥:Ìõ¼þÅÐ¶Ï
+--ç‰¹æ®Šäº¤äº’:æ¡ä»¶åˆ¤æ–­
 --**********************************
 function x125022_OnActivateConditionCheck( sceneId, selfId, activatorId )
-	-- ÏÞÖÆÉíÉÏµÄbuff
+	-- é™åˆ¶èº«ä¸Šçš„buff
 	local bOk = x125022_IsCanOpenBox( sceneId,activatorId )
 	
 	if bOk == 0  then
     BeginEvent(sceneId)
-      AddText(sceneId,"ÄãÏÖÔÚ²»ÄÜ¿ªÆôÕâ¸ö±¦Ïä¡£");
+      AddText(sceneId,"ä½ çŽ°åœ¨ä¸èƒ½å¼€å¯è¿™ä¸ªå®ç®±ã€‚");
     EndEvent(sceneId)
     DispatchMissionTips(sceneId,activatorId,selfId)
 	end
-	-- ÇýÉ¢²»¸ÃÓÐµÄBUFF²¢Ìí¼ÓÐÄÎÞÅÔæðBuff
+	-- é©±æ•£ä¸è¯¥æœ‰çš„BUFFå¹¶æ·»åŠ å¿ƒæ— æ—éª›Buff
 	LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, activatorId, x125022_g_BuffId_3, 0);
 	LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, activatorId, x125022_g_BuffId_4, 0);
 
 	if GetUnitCampID(sceneId, activatorId, activatorId) < 500   then
     BeginEvent(sceneId)
-      AddText(sceneId,"ÄãÏÖÔÚµÄÕ½¶·ÕóÓª²»ÕýÈ·£¬²»ÄÜ¿ªÆô±¦Ïä¡£");
+      AddText(sceneId,"ä½ çŽ°åœ¨çš„æˆ˜æ–—é˜µè¥ä¸æ­£ç¡®ï¼Œä¸èƒ½å¼€å¯å®ç®±ã€‚");
     EndEvent(sceneId)
     DispatchMissionTips(sceneId,activatorId,selfId)
 		bOk = 0
 	end
 	
 	if bOk == 1  then
-		local str = "#G[·âìøÌ¨]#W" .. GetName(sceneId, activatorId) .."#PÕýÔÚÊÔÍ¼´ò¿ª±¦ÏäÄØ£¡"
+		local str = "#G[å°ç¦…å°]#W" .. GetName(sceneId, activatorId) .."#Pæ­£åœ¨è¯•å›¾æ‰“å¼€å®ç®±å‘¢ï¼"
 		CallScriptFunction((200060), "Duibai",sceneId, "", "", str)
 	end
 	
@@ -125,7 +125,7 @@ function x125022_OnActivateConditionCheck( sceneId, selfId, activatorId )
 end
 
 --**********************************
--- ¼ì²âµ±Ç°Íæ¼ÒÉíÉÏµÄbuff£¬ÄÜ²»ÄÜ¿ªÆô±¦Ïä
+-- æ£€æµ‹å½“å‰çŽ©å®¶èº«ä¸Šçš„buffï¼Œèƒ½ä¸èƒ½å¼€å¯å®ç®±
 --**********************************
 function x125022_IsCanOpenBox( sceneId,activatorId )
 	
@@ -137,19 +137,19 @@ function x125022_IsCanOpenBox( sceneId,activatorId )
 end
 
 --**********************************
---ÌØÊâ½»»¥:ÏûºÄºÍ¿Û³ý´¦Àí
+--ç‰¹æ®Šäº¤äº’:æ¶ˆè€—å’Œæ‰£é™¤å¤„ç†
 --**********************************
 function x125022_OnActivateDeplete( sceneId, selfId, activatorId )
 	return 1
 end
 
 --**********************************
---ÌØÊâ½»»¥:¾ÛÆøÀà³É¹¦ÉúÐ§´¦Àí
+--ç‰¹æ®Šäº¤äº’:èšæ°”ç±»æˆåŠŸç”Ÿæ•ˆå¤„ç†
 --**********************************
 function x125022_OnActivateEffectOnce( sceneId, selfId, activatorId )
 	
-	-- selfId == ±¦ÏäId
-	-- activatorId == ¿ªÆôÈËId
+	-- selfId == å®ç®±Id
+	-- activatorId == å¼€å¯äººId
 	
 	local x
 	local z
@@ -160,13 +160,13 @@ function x125022_OnActivateEffectOnce( sceneId, selfId, activatorId )
 	local bDelOk = 0
 	for i=0, nCount-1  do
 		local nObjId = GetMonsterObjID(sceneId, i)
-		if GetName(sceneId, nObjId) == "»ÆÉ«±¦Ïä"  then
+		if GetName(sceneId, nObjId) == "é»„è‰²å®ç®±"  then
 			bDelOk = 1
 			LuaFnDeleteMonster(sceneId, nObjId)
 		end
 	end
 	
-	-- ¸ø¿ªÆô³É¹¦µÄÍæ¼ÒÒ»¸öµôÂä°ü
+	-- ç»™å¼€å¯æˆåŠŸçš„çŽ©å®¶ä¸€ä¸ªæŽ‰è½åŒ…
 	local nItemCount = 2
 	local nItemId_1
 	local nItemId_2
@@ -192,10 +192,10 @@ function x125022_OnActivateEffectOnce( sceneId, selfId, activatorId )
 								nItemId_2,nItemId_3)
 			end
 			
-			-- °ÑÕâ¸öµôÂä°ó¶¨¸øÖÆ¶¨Íæ¼Ò
+			-- æŠŠè¿™ä¸ªæŽ‰è½ç»‘å®šç»™åˆ¶å®šçŽ©å®¶
 			SetItemBoxOwner(sceneId, nBoxId, LuaFnGetGUID(sceneId,activatorId))
 			
-			-- ·¢ËÍÏµÍ³¹«¸æ
+			-- å‘é€ç³»ç»Ÿå…¬å‘Š
 			local nCurHour = GetHour()
 			if nCurHour==0 or nCurHour==2 or nCurHour==4 or
 				 nCurHour==6 or nCurHour==8 or nCurHour==10 or
@@ -216,17 +216,17 @@ function x125022_OnActivateEffectOnce( sceneId, selfId, activatorId )
 				nCurHour = 0
 			end
 			
-			--#P [ÊÀ½ç]ÓÚ¾ÅÁ«´óº°£ºÌìÏÂÓ¢ÐÛÃÇ£¡Ç¿´óµÄAAAÒÑ¾­´ò¿ªÁËÎäÁÖÃËÖ÷µÄ±¦Ïä£¡Çë´ó¼ÒXXXµãÔÙÀ´·âìøÌ¨Õù¶áÎäÁÖÃËÖ÷Ö®Î»°É£¡
-			local str = format("#YÓÚ¾ÅÁ«#P´óº°£ºÌìÏÂÓ¢ÐÛÃÇ£¡Ç¿´óµÄ#{_INFOUSR%s}#PÒÑ¾­´ò¿ªÁËÎäÁÖÃËÖ÷µÄ±¦Ïä£¡Çë´ó¼Ò#Y%sµã45·Ö#PÔÙÀ´#G·âìøÌ¨#PÕù¶áÎäÁÖÃËÖ÷Ö®Î»°É£¡",GetName(sceneId,activatorId),nCurHour)
+			--#P [ä¸–ç•Œ]äºŽä¹èŽ²å¤§å–Šï¼šå¤©ä¸‹è‹±é›„ä»¬ï¼å¼ºå¤§çš„AAAå·²ç»æ‰“å¼€äº†æ­¦æž—ç›Ÿä¸»çš„å®ç®±ï¼è¯·å¤§å®¶XXXç‚¹å†æ¥å°ç¦…å°äº‰å¤ºæ­¦æž—ç›Ÿä¸»ä¹‹ä½å§ï¼
+			local str = format("#YäºŽä¹èŽ²#På¤§å–Šï¼šå¤©ä¸‹è‹±é›„ä»¬ï¼å¼ºå¤§çš„#{_INFOUSR%s}#På·²ç»æ‰“å¼€äº†æ­¦æž—ç›Ÿä¸»çš„å®ç®±ï¼è¯·å¤§å®¶#Y%sç‚¹45åˆ†#På†æ¥#Gå°ç¦…å°#Päº‰å¤ºæ­¦æž—ç›Ÿä¸»ä¹‹ä½å§ï¼",GetName(sceneId,activatorId),nCurHour)
 			BroadMsgByChatPipe(sceneId, 0, str, 4)
 			
 		end
 	end
 	
-	-- ÔÚÕâÀï¼ÇÂ¼¿ªÆô±¦ÏäµÄÈÕÖ¾
-	LuaFnAuditPlayerBehavior(sceneId, activatorId, "¿ªÆôÃËÖ÷±¦Ïä");
+	-- åœ¨è¿™é‡Œè®°å½•å¼€å¯å®ç®±çš„æ—¥å¿—
+	LuaFnAuditPlayerBehavior(sceneId, activatorId, "å¼€å¯ç›Ÿä¸»å®ç®±");
 	
-	-- ¸øÕâ¸öÍæ¼ÒÒ»¸öbuff
+	-- ç»™è¿™ä¸ªçŽ©å®¶ä¸€ä¸ªbuff
 	LuaFnSendSpecificImpactToUnit(sceneId, activatorId, activatorId, 
 										activatorId, x125022_g_BuffId_1, 100 )
 	
@@ -239,14 +239,14 @@ function x125022_OnActivateEffectOnce( sceneId, selfId, activatorId )
 end
 
 --**********************************
---ÌØÊâ½»»¥:Òýµ¼ÀàÃ¿Ê±¼ä¼ä¸ôÉúÐ§´¦Àí
+--ç‰¹æ®Šäº¤äº’:å¼•å¯¼ç±»æ¯æ—¶é—´é—´éš”ç”Ÿæ•ˆå¤„ç†
 --**********************************
 function x125022_OnActivateEffectEachTick( sceneId, selfId, activatorId )
 	return 1
 end
 
 --**********************************
---ÌØÊâ½»»¥:½»»¥¿ªÊ¼Ê±µÄÌØÊâ´¦Àí
+--ç‰¹æ®Šäº¤äº’:äº¤äº’å¼€å§‹æ—¶çš„ç‰¹æ®Šå¤„ç†
 --**********************************
 function x125022_OnActivateActionStart( sceneId, selfId, activatorId )
 	--PrintNum(777)
@@ -254,16 +254,16 @@ function x125022_OnActivateActionStart( sceneId, selfId, activatorId )
 end
 
 --**********************************
---ÌØÊâ½»»¥:½»»¥³·ÏûÊ±µÄÌØÊâ´¦Àí
+--ç‰¹æ®Šäº¤äº’:äº¤äº’æ’¤æ¶ˆæ—¶çš„ç‰¹æ®Šå¤„ç†
 --**********************************
 function x125022_OnActivateCancel( sceneId, selfId, activatorId )
-	local str = "#G[·âìøÌ¨]#W" .. GetName(sceneId,activatorId) .. "#P´ò¿ª±¦ÏäµÄÅ¬Á¦¹¦°Ü´¹³É£¡"
+	local str = "#G[å°ç¦…å°]#W" .. GetName(sceneId,activatorId) .. "#Pæ‰“å¼€å®ç®±çš„åŠªåŠ›åŠŸè´¥åž‚æˆï¼"
 	CallScriptFunction((200060), "Duibai",sceneId, "", "", str)
 	return 0
 end
 
 --**********************************
---ÌØÊâ½»»¥:½»»¥ÖÐ¶ÏÊ±µÄÌØÊâ´¦Àí
+--ç‰¹æ®Šäº¤äº’:äº¤äº’ä¸­æ–­æ—¶çš„ç‰¹æ®Šå¤„ç†
 --**********************************
 function x125022_OnActivateInterrupt( sceneId, selfId, activatorId )
 	
@@ -278,7 +278,7 @@ function x125022_DealExp(sceneId, activatorId)
 
 	local nPlayerCamp = GetUnitCampID(sceneId, activatorId, activatorId)
 
-	-- ¿ªÆô±¦ÏäµÄÍ¬Ê±£¬·ÖÅäExp
+	-- å¼€å¯å®ç®±çš„åŒæ—¶ï¼Œåˆ†é…Exp
 	local nHumanIdList = {}
 	
 	for i=1, 10  do
@@ -312,9 +312,9 @@ function x125022_DealExp(sceneId, activatorId)
 	
 end
 
---¾­Ñé£¬
---ºÍ¿ª±¦ÏäµÄÈËÏàÍ¬ÕóÓªµÄÈËÆ½·Ö 10 Íò
---ÔÚ³¡µÄ³ýÕâÐ©ÈËÒÔÍâµÄÈËÆ½·Ö 10 Íò
+--ç»éªŒï¼Œ
+--å’Œå¼€å®ç®±çš„äººç›¸åŒé˜µè¥çš„äººå¹³åˆ† 10 ä¸‡
+--åœ¨åœºçš„é™¤è¿™äº›äººä»¥å¤–çš„äººå¹³åˆ† 10 ä¸‡
 
 
 

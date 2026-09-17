@@ -1,146 +1,146 @@
---´óÀíNPC
---ÕÅµÀ³¤
---ÆÕÍ¨
+--å¤§ç†NPC
+--å¼ é“é•¿
+--æ™®é€š
 
 x002075_g_ScriptId	= 002075
 
---åë³ßÌìÑÄ(¼¼ÄÜ±àºÅ¡¢¼¼ÄÜÃû³Æ¡¢ÏûºÄ½ğÇ®)
+--å’«å°ºå¤©æ¶¯(æŠ€èƒ½ç¼–å·ã€æŠ€èƒ½åç§°ã€æ¶ˆè€—é‡‘é’±)
 x002075_g_Ability				= {}
 x002075_g_Ability["aid"]= 39
-x002075_g_Ability["nam"]= "åë³ßÌìÑÄ"
+x002075_g_Ability["nam"]= "å’«å°ºå¤©æ¶¯"
 x002075_g_Ability["gld"]= 300000		--30G
-x002075_g_LevMax				= 3					--¿ÉÑ§Ï°µÄ×î¸ßµÈ¼¶
+x002075_g_LevMax				= 3					--å¯å­¦ä¹ çš„æœ€é«˜ç­‰çº§
 
---²Ù×÷¼¯
+--æ“ä½œé›†
 x002075_g_Key				= {}
-x002075_g_Key["nul"]= 0		--É¶¶¼Ã»×ö
-x002075_g_Key["stu"]= 1		--Ñ§Ï°¼¼ÄÜ
-x002075_g_Key["sty"]= 101	--È·¶¨Ñ§Ï°
-x002075_g_Key["stn"]= 100	--·ÅÆúÑ§Ï°
-x002075_g_Key["lup"]= 2		--Éı¼¶¼¼ÄÜ
-x002075_g_Key["upy"]= 201	--È·¶¨Éı¼¶
-x002075_g_Key["upn"]= 200	--·ÅÆúÉı¼¶
-x002075_g_Key["des"]= 3		--¶¨Î»·û½éÉÜ
+x002075_g_Key["nul"]= 0		--å•¥éƒ½æ²¡åš
+x002075_g_Key["stu"]= 1		--å­¦ä¹ æŠ€èƒ½
+x002075_g_Key["sty"]= 101	--ç¡®å®šå­¦ä¹ 
+x002075_g_Key["stn"]= 100	--æ”¾å¼ƒå­¦ä¹ 
+x002075_g_Key["lup"]= 2		--å‡çº§æŠ€èƒ½
+x002075_g_Key["upy"]= 201	--ç¡®å®šå‡çº§
+x002075_g_Key["upn"]= 200	--æ”¾å¼ƒå‡çº§
+x002075_g_Key["des"]= 3		--å®šä½ç¬¦ä»‹ç»
 
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x002075_OnDefaultEvent( sceneId, selfId, targetId )
 	local	lev	= QueryHumanAbilityLevel( sceneId, selfId, x002075_g_Ability["aid"] )
 	BeginEvent( sceneId )
-		AddText( sceneId, "  ÎÒ¿ÉÒÔ´«ÊÚ¸øÄãÒ»ÖÖÉñÆæµÄ¼¼ÄÜ£¬ÀûÓÃÕâÖÖ¼¼ÄÜÖÆ×÷³öÀ´µÄ·ûÎÄ¿ÉÒÔ¼ÇÂ¼Î»ÖÃĞÅÏ¢£¬ÒÔºóÄãÏëÔÙ»Øµ½Õâ¸ö¼ÇÂ¼µÄµØ·½£¬Ö»ÒªÊ¹ÓÃ·ûÎÄ¾Í¿ÉÒÔÁË¡£" )
-		AddText( sceneId, "  Çë×¢Òâ£¬Ô½¸ß¼¶µÄ·ûÎÄ¿ÉÒÔÊ¹ÓÃµÄ´ÎÊıÒ²»áÔ½À´Ô½¶à¡£" )
+		AddText( sceneId, "  æˆ‘å¯ä»¥ä¼ æˆç»™ä½ ä¸€ç§ç¥å¥‡çš„æŠ€èƒ½ï¼Œåˆ©ç”¨è¿™ç§æŠ€èƒ½åˆ¶ä½œå‡ºæ¥çš„ç¬¦æ–‡å¯ä»¥è®°å½•ä½ç½®ä¿¡æ¯ï¼Œä»¥åä½ æƒ³å†å›åˆ°è¿™ä¸ªè®°å½•çš„åœ°æ–¹ï¼Œåªè¦ä½¿ç”¨ç¬¦æ–‡å°±å¯ä»¥äº†ã€‚" )
+		AddText( sceneId, "  è¯·æ³¨æ„ï¼Œè¶Šé«˜çº§çš„ç¬¦æ–‡å¯ä»¥ä½¿ç”¨çš„æ¬¡æ•°ä¹Ÿä¼šè¶Šæ¥è¶Šå¤šã€‚" )
 		if GetLevel( sceneId, selfId ) >= 30 then
 			if lev <= 0 then
-				AddNumText( sceneId, x002075_g_ScriptId, "Ñ§Ï°"..x002075_g_Ability["nam"], 6, x002075_g_Key["stu"] )
+				AddNumText( sceneId, x002075_g_ScriptId, "å­¦ä¹ "..x002075_g_Ability["nam"], 6, x002075_g_Key["stu"] )
 			else
-				AddNumText( sceneId, x002075_g_ScriptId, "Éı¼¶¼¼ÄÜ", 6, x002075_g_Key["lup"] )
+				AddNumText( sceneId, x002075_g_ScriptId, "å‡çº§æŠ€èƒ½", 6, x002075_g_Key["lup"] )
 			end			
-			AddNumText( sceneId, x002075_g_ScriptId, "Ê²Ã´Ò²²»×ö", -1, x002075_g_Key["nul"] )
+			AddNumText( sceneId, x002075_g_ScriptId, "ä»€ä¹ˆä¹Ÿä¸åš", -1, x002075_g_Key["nul"] )
 		end
-		AddNumText( sceneId, x002075_g_ScriptId, "¶¨Î»·û½éÉÜ", 11, x002075_g_Key["des"] )
+		AddNumText( sceneId, x002075_g_ScriptId, "å®šä½ç¬¦ä»‹ç»", 11, x002075_g_Key["des"] )
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x002075_OnEventRequest( sceneId, selfId, targetId, eventId )
 	local	key	= GetNumText()
 	local	lev	= QueryHumanAbilityLevel( sceneId, selfId, x002075_g_Ability["aid"] )
-	local exp = GetAbilityExp( sceneId, selfId, x002075_g_Ability["aid"] )	--ÊìÁ·¶È
+	local exp = GetAbilityExp( sceneId, selfId, x002075_g_Ability["aid"] )	--ç†Ÿç»ƒåº¦
 	local ret, demandMoney, _, limitAbilityExp, limitAbilityExpShow, _, limitLevel
 		= LuaFnGetAbilityLevelUpConfig( x002075_g_Ability["aid"], lev + 1 )
 
-	--¶¨Î»·û½éÉÜ
+	--å®šä½ç¬¦ä»‹ç»
 	if key == x002075_g_Key["des"]	then
 
 		x002075_MsgBox( sceneId, selfId, targetId, "#{function_help_020}" )
 
-	--Ñ§Ï°¼¼ÄÜ
+	--å­¦ä¹ æŠ€èƒ½
 	elseif key == x002075_g_Key["stu"]	then
 	
-		if GetLevel( sceneId, selfId ) < 30 then--·Ç·¨Çé¿ö×ßµ½ÕâÀï£¬Ò²²»ĞèÒªÌáÊ¾ÁË
+		if GetLevel( sceneId, selfId ) < 30 then--éæ³•æƒ…å†µèµ°åˆ°è¿™é‡Œï¼Œä¹Ÿä¸éœ€è¦æç¤ºäº†
 			return 0
 		end
 
-		x002075_OnAsk( sceneId, selfId, targetId, x002075_g_Key["stu"], "  ÄúÑ§Ï°ÕâÏî¼¼ÄÜĞèÒªÏûºÄ#{_EXCHG" .. demandMoney .. "}£¬ÊÇ·ñ¼ÌĞø£¿" )
+		x002075_OnAsk( sceneId, selfId, targetId, x002075_g_Key["stu"], "  æ‚¨å­¦ä¹ è¿™é¡¹æŠ€èƒ½éœ€è¦æ¶ˆè€—#{_EXCHG" .. demandMoney .. "}ï¼Œæ˜¯å¦ç»§ç»­ï¼Ÿ" )
 	
-	--È·¶¨Ñ§Ï°
+	--ç¡®å®šå­¦ä¹ 
 	elseif key == x002075_g_Key["sty"] then
 	
-		if GetLevel( sceneId, selfId ) < 30 then--·Ç·¨Çé¿ö×ßµ½ÕâÀï£¬Ò²²»ĞèÒªÌáÊ¾ÁË
+		if GetLevel( sceneId, selfId ) < 30 then--éæ³•æƒ…å†µèµ°åˆ°è¿™é‡Œï¼Œä¹Ÿä¸éœ€è¦æç¤ºäº†
 			return 0
 		end
 
 		if lev > 0 then
-			x002075_MsgBox( sceneId, selfId, targetId, "  ÄúÒÑ¾­Ñ§Ï°¹ı´Ë¼¼ÄÜÁË£¡" )
+			x002075_MsgBox( sceneId, selfId, targetId, "  æ‚¨å·²ç»å­¦ä¹ è¿‡æ­¤æŠ€èƒ½äº†ï¼" )
 			return 0
 		end
 
 		if LuaFnGetMoney( sceneId, selfId )+GetMoneyJZ( sceneId, selfId ) < demandMoney then
-			x002075_MsgBox( sceneId, selfId, targetId, "  ÄúÉíÉÏµÄÏÖ½ğ²»×ã£¬ÎŞ·¨Ñ§Ï°´Ë¼¼ÄÜ£¡" )
+			x002075_MsgBox( sceneId, selfId, targetId, "  æ‚¨èº«ä¸Šçš„ç°é‡‘ä¸è¶³ï¼Œæ— æ³•å­¦ä¹ æ­¤æŠ€èƒ½ï¼" )
 			return 0
 		end
 
 		LuaFnCostMoneyWithPriority( sceneId, selfId, demandMoney )
 		SetHumanAbilityLevel( sceneId, selfId, x002075_g_Ability["aid"], 1 )
 		x002075_SetMyPrescription( sceneId, selfId, 1 )
-		x002075_MsgBox( sceneId, selfId, targetId, "  ¹§Ï²ÄúÒÑ¾­Ñ§»áÁË"..x002075_g_Ability["nam"].."£¬²»¹ıÈç¹ûÏëÖÆ×÷Ê¹ÓÃ´ÎÊı¸ü¶àµÄ¶¨Î»·û£¬ÇëÉı¼¶ÄúµÄ¼¼ÄÜ¡£" )
+		x002075_MsgBox( sceneId, selfId, targetId, "  æ­å–œæ‚¨å·²ç»å­¦ä¼šäº†"..x002075_g_Ability["nam"].."ï¼Œä¸è¿‡å¦‚æœæƒ³åˆ¶ä½œä½¿ç”¨æ¬¡æ•°æ›´å¤šçš„å®šä½ç¬¦ï¼Œè¯·å‡çº§æ‚¨çš„æŠ€èƒ½ã€‚" )
 
-	--Éı¼¶¼¼ÄÜ
+	--å‡çº§æŠ€èƒ½
 	elseif key == x002075_g_Key["lup"] then
-		if GetLevel( sceneId, selfId ) < 30 then--·Ç·¨Çé¿ö×ßµ½ÕâÀï£¬Ò²²»ĞèÒªÌáÊ¾ÁË
+		if GetLevel( sceneId, selfId ) < 30 then--éæ³•æƒ…å†µèµ°åˆ°è¿™é‡Œï¼Œä¹Ÿä¸éœ€è¦æç¤ºäº†
 			return 0
 		end
 		
 		if lev >= x002075_g_LevMax then
-			x002075_MsgBox( sceneId, selfId, targetId, "  ÄúµÄ¼¼ÄÜµÈ¼¶ÒÑ¾­×ã¹»£¬²»ĞèÒªÔÙ´ÎÉı¼¶¡£" )
+			x002075_MsgBox( sceneId, selfId, targetId, "  æ‚¨çš„æŠ€èƒ½ç­‰çº§å·²ç»è¶³å¤Ÿï¼Œä¸éœ€è¦å†æ¬¡å‡çº§ã€‚" )
 			return 0
 		end
-		x002075_OnAsk( sceneId, selfId, targetId, x002075_g_Key["lup"], "  ÄúÉı¼¶ÕâÏî¼¼ÄÜĞèÒªÏûºÄ#{_EXCHG" .. demandMoney .. "}£¬ÊÇ·ñ¼ÌĞø£¿" )
+		x002075_OnAsk( sceneId, selfId, targetId, x002075_g_Key["lup"], "  æ‚¨å‡çº§è¿™é¡¹æŠ€èƒ½éœ€è¦æ¶ˆè€—#{_EXCHG" .. demandMoney .. "}ï¼Œæ˜¯å¦ç»§ç»­ï¼Ÿ" )
 
-	--È·¶¨Éı¼¶
+	--ç¡®å®šå‡çº§
 	elseif key == x002075_g_Key["upy"] then
 		if ret ~= 1 then
 			return 0
 		end
 		
-		if GetLevel( sceneId, selfId ) < 30 then--·Ç·¨Çé¿ö×ßµ½ÕâÀï£¬Ò²²»ĞèÒªÌáÊ¾ÁË
+		if GetLevel( sceneId, selfId ) < 30 then--éæ³•æƒ…å†µèµ°åˆ°è¿™é‡Œï¼Œä¹Ÿä¸éœ€è¦æç¤ºäº†
 			return 0
 		end
 
 		if lev < 1 then
-			x002075_MsgBox( sceneId, selfId, targetId, "  Äú»¹Ã»ÓĞÑ§Ï°"..x002075_g_Ability["nam"].."£¬µÈÑ§»áÁË1¼¶¼¼ÄÜÖ®ºóÔÙÕÒÎÒÉı¼¶°É¡£" )
+			x002075_MsgBox( sceneId, selfId, targetId, "  æ‚¨è¿˜æ²¡æœ‰å­¦ä¹ "..x002075_g_Ability["nam"].."ï¼Œç­‰å­¦ä¼šäº†1çº§æŠ€èƒ½ä¹‹åå†æ‰¾æˆ‘å‡çº§å§ã€‚" )
 			return 0
 		end
 
 		if lev >= x002075_g_LevMax then
-			x002075_MsgBox( sceneId, selfId, targetId, "  ÄúµÄ¼¼ÄÜµÈ¼¶ÒÑ¾­×ã¹»£¬²»ĞèÒªÔÙ´ÎÉı¼¶¡£" )
+			x002075_MsgBox( sceneId, selfId, targetId, "  æ‚¨çš„æŠ€èƒ½ç­‰çº§å·²ç»è¶³å¤Ÿï¼Œä¸éœ€è¦å†æ¬¡å‡çº§ã€‚" )
 			return 0
 		end
 
 		if exp < limitAbilityExp then
-			x002075_MsgBox( sceneId, selfId, targetId, "  ĞèÒª" .. limitAbilityExpShow .. "µãÊìÁ·¶È²ÅÄÜÔÙ´ÎÉı¼¶¡£" )
+			x002075_MsgBox( sceneId, selfId, targetId, "  éœ€è¦" .. limitAbilityExpShow .. "ç‚¹ç†Ÿç»ƒåº¦æ‰èƒ½å†æ¬¡å‡çº§ã€‚" )
 			return 0
 		end
 
 		if LuaFnGetMoney( sceneId, selfId )+GetMoneyJZ( sceneId, selfId ) < demandMoney then
-			x002075_MsgBox( sceneId, selfId, targetId, "  ĞèÒª#{_EXCHG" .. demandMoney .. "}²ÅÄÜÔÙ´ÎÉı¼¶¡£" )
+			x002075_MsgBox( sceneId, selfId, targetId, "  éœ€è¦#{_EXCHG" .. demandMoney .. "}æ‰èƒ½å†æ¬¡å‡çº§ã€‚" )
 			return 0
 		end
 
-		--Éı¼¶´Ë¼¼ÄÜ
+		--å‡çº§æ­¤æŠ€èƒ½
 		LuaFnCostMoneyWithPriority( sceneId, selfId, demandMoney )
 		SetHumanAbilityLevel( sceneId, selfId, x002075_g_Ability["aid"], lev+1 )
 		x002075_SetMyPrescription( sceneId, selfId, lev+1 )
-		x002075_MsgBox( sceneId, selfId, targetId, "  ÄúµÄ¼¼ÄÜÒÑ¾­³É¹¦µÄÉı¼¶£¬¹§Ï²Äú¿ÉÒÔÖÆÔì¸ü¸ß¼¶µÄ·ûÎÄÁË¡£" )
+		x002075_MsgBox( sceneId, selfId, targetId, "  æ‚¨çš„æŠ€èƒ½å·²ç»æˆåŠŸçš„å‡çº§ï¼Œæ­å–œæ‚¨å¯ä»¥åˆ¶é€ æ›´é«˜çº§çš„ç¬¦æ–‡äº†ã€‚" )
 
 	else
 		
-		--¹Ø±Õ½çÃæ		
+		--å…³é—­ç•Œé¢		
 		BeginUICommand( sceneId )
 		UICommand_AddInt( sceneId, targetId )
 		EndUICommand( sceneId )
@@ -152,29 +152,29 @@ function x002075_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---ÉèÖÃÏàÓ¦µÈ¼¶µÄÅä·½
+--è®¾ç½®ç›¸åº”ç­‰çº§çš„é…æ–¹
 --**********************************
 function x002075_SetMyPrescription( sceneId, selfId, lev )
-	--Ã¿¸öµÈ¼¶¶ÔÓ¦6ÖÖÅä·½£ººìÉ«¡¢À¶É«¡¢°×É«¡¢ÂÌÉ«¡¢»ÆÉ«¡¢×ÏÉ«
+	--æ¯ä¸ªç­‰çº§å¯¹åº”6ç§é…æ–¹ï¼šçº¢è‰²ã€è“è‰²ã€ç™½è‰²ã€ç»¿è‰²ã€é»„è‰²ã€ç´«è‰²
 	for i=0, 5 do
 		SetPrescription( sceneId, selfId, 510+(lev-1)*6+i, 1 )
 	end
 end
 
 --**********************************
---Ñ¯ÎÊÊÇ·ñÕâÑù×ö
+--è¯¢é—®æ˜¯å¦è¿™æ ·åš
 --**********************************
 function x002075_OnAsk( sceneId, selfId, targetId, key, msg )
 	BeginEvent( sceneId )
 		AddText( sceneId, msg )
-		AddNumText( sceneId, x002075_g_ScriptId, "ÊÇ", -1, key*100+1 )
-		AddNumText( sceneId, x002075_g_ScriptId, "·ñ", -1, key*100 )
+		AddNumText( sceneId, x002075_g_ScriptId, "æ˜¯", -1, key*100+1 )
+		AddNumText( sceneId, x002075_g_ScriptId, "å¦", -1, key*100 )
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x002075_MsgBox( sceneId, selfId, targetId, msg )
 	BeginEvent( sceneId )

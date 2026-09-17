@@ -1,12 +1,12 @@
---50ÍòÍ¬Çì
+--50ä¸‡åŒåº†
 
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x808074_g_scriptId = 808074
 x808074_g_Fu = 30505163
 x808074_g_gongcaiyun_scriptId = 002089
 --**********************************
---ÁÐ¾ÙÊÂ¼þ
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x808074_OnEnumerate( sceneId, selfId, targetId )
 
@@ -17,8 +17,8 @@ function x808074_OnEnumerate( sceneId, selfId, targetId )
 	if (nowYear == 2008) then
 		if(nowMonth==0) then
 			if(nowDate>=16 and nowDate<=27) then
-				AddNumText(sceneId, x808074_g_scriptId, "#gFF0FA0²Î¼Ó¡°120Éý¼¶°æ»ØÀ¡»î¶¯¡±³é½±", 1, 1 )
-				AddNumText(sceneId, x808074_g_scriptId, "Ê²Ã´ÊÇ¡°120Éý¼¶°æ»ØÀ¡»î¶¯¡±", 11, 3 )
+				AddNumText(sceneId, x808074_g_scriptId, "#gFF0FA0å‚åŠ â€œ120å‡çº§ç‰ˆå›žé¦ˆæ´»åŠ¨â€æŠ½å¥–", 1, 1 )
+				AddNumText(sceneId, x808074_g_scriptId, "ä»€ä¹ˆæ˜¯â€œ120å‡çº§ç‰ˆå›žé¦ˆæ´»åŠ¨â€", 11, 3 )
 			end
 		end
 	end
@@ -26,7 +26,7 @@ function x808074_OnEnumerate( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êý
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x808074_OnDefaultEvent( sceneId, selfId, targetId )
 	local TextNum = GetNumText()
@@ -49,7 +49,7 @@ function x808074_OnDefaultEvent( sceneId, selfId, targetId )
 		LuaFnSendSpecificImpactToUnit(sceneId,selfId,selfId,selfId,5906,0);
 		SetMissionData( sceneId, selfId, MD_50WAN_TIME_INFO, nowDate );
 		
-		--²Î¼Ó³é½±
+		--å‚åŠ æŠ½å¥–
 		local guid = LuaFnGetGUID(sceneId,selfId)
 		local nLevel = GetLevel(sceneId, selfId)
 		WritePrizeLog(sceneId, selfId,"50w ".." guid="..guid.." level="..nLevel);
@@ -67,8 +67,8 @@ function x808074_OnDefaultEvent( sceneId, selfId, targetId )
 	elseif TextNum == 1 then	
 		BeginEvent(sceneId)
 		AddText( sceneId, "#{TQLQ_20071218_09}" )		
-		AddNumText(sceneId, x808074_g_scriptId, "ÎÒÒª²Î¼Ó³é½±", 8, 5 )
-		AddNumText(sceneId, x808074_g_scriptId, "ÈÃÎÒÔÙÏëÏë", 8, 6 )
+		AddNumText(sceneId, x808074_g_scriptId, "æˆ‘è¦å‚åŠ æŠ½å¥–", 8, 5 )
+		AddNumText(sceneId, x808074_g_scriptId, "è®©æˆ‘å†æƒ³æƒ³", 8, 6 )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 	elseif TextNum == 3 then	
@@ -84,7 +84,7 @@ function x808074_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
--- ¶Ô»°´°¿ÚÐÅÏ¢ÌáÊ¾
+-- å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x808074_NotifyBox( sceneId, selfId, targetId, msg )
 	BeginEvent( sceneId )

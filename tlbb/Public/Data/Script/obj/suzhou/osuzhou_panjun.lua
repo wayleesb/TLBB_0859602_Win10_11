@@ -1,39 +1,39 @@
---ËÕÖİNPC
---ÅË¿£
---Ò»°ã
+--è‹å·NPC
+--æ½˜æµš
+--ä¸€èˆ¬
 
 x001040_g_scriptId = 001040
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x001040_g_eventList={800115}
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x001040_UpdateEventList( sceneId, selfId,targetId )
 	
 	BeginEvent(sceneId)
 	local  PlayerName=GetName(sceneId,selfId)
-	--AddText(sceneId,"  ÒÔ³ğºŞ½â¾ö³ğºŞ£¬Ö»»á´øÀ´¸ü¶àµÄ³ğºŞ£¬ÄãÈ·ÈÏÒª¿ªÆô³ğÉ±Ã´£¬ÄÇÃ´ÄãÒ²½«ÊÜµ½ÑÏÀ÷µÄ³Í·£¡£")	
+	--AddText(sceneId,"  ä»¥ä»‡æ¨è§£å†³ä»‡æ¨ï¼Œåªä¼šå¸¦æ¥æ›´å¤šçš„ä»‡æ¨ï¼Œä½ ç¡®è®¤è¦å¼€å¯ä»‡æ€ä¹ˆï¼Œé‚£ä¹ˆä½ ä¹Ÿå°†å—åˆ°ä¸¥å‰çš„æƒ©ç½šã€‚")	
 	for i, eventId in x001040_g_eventList do
 		CallScriptFunction( eventId, "OnEnumerate",sceneId, selfId, targetId )
 	end
 	
-	AddNumText( sceneId, x001040_g_scriptId, "¾ö¶·½éÉÜ", 11, 10 )
+	AddNumText( sceneId, x001040_g_scriptId, "å†³æ–—ä»‹ç»", 11, 10 )
 	
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 end
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x001040_OnDefaultEvent( sceneId, selfId,targetId )
 	x001040_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x001040_OnEventRequest( sceneId, selfId, targetId, eventId )
 

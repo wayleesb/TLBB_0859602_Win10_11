@@ -1,7 +1,7 @@
 --***********************************************************************************************************************************************
 --***********************************************************************************************************************************************
 --
--- ×é¶ÓÁĞ±í¿òµÄÖ÷Òª½Å±¾ÊÂ¼ş
+-- ç»„é˜Ÿåˆ—è¡¨æ¡†çš„ä¸»è¦è„šæœ¬äº‹ä»¶
 -- 
 --
 --
@@ -12,7 +12,7 @@
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 --
--- ¾Ö²¿±äÁ¿µÄ¶¨Òå.
+-- å±€éƒ¨å˜é‡çš„å®šä¹‰.
 --
 local PARTYFRAMEs = {};
 local PARTY_HP = {};
@@ -20,10 +20,10 @@ local PARTY_MP = {};
 local PARTY_FRAME = {};
 local PARTY_NAME  = {};
 local Portrait_ToolTips = {};
-local UnLink_flag = {};					-- µôÏß±ê¼Ç
-local Porttrait_Mask = {};			-- »ÒµôÃÉ×Ó
+local UnLink_flag = {};					-- æ‰çº¿æ ‡è®°
+local Porttrait_Mask = {};			-- ç°æ‰è’™å­
 
--- ÏÔÊ¾hpµÄtext
+-- æ˜¾ç¤ºhpçš„text
 local HP_Text_Tip = {};
 
 local	MemberName;
@@ -39,13 +39,13 @@ local DeadLink;
 local Dead;
 local sex;
 
--- ÏÔÊ¾¶ÓÓÑËùÖĞµÄbuf
+-- æ˜¾ç¤ºé˜Ÿå‹æ‰€ä¸­çš„buf
 local PARTY_BUFF_MAX = 6;
 local PARTY_IMPACT_CTL = {};
 
--- ¶ÓÓÑ³öÕ½ÕäÊŞ°´Å¥
+-- é˜Ÿå‹å‡ºæˆ˜çå…½æŒ‰é’®
 local Team_Member_Pet_Button = {};
--- ¶ÓÓÑµÄ³öÕ½ÕäÊŞÏÔÊ¾ĞÅÏ¢
+-- é˜Ÿå‹çš„å‡ºæˆ˜çå…½æ˜¾ç¤ºä¿¡æ¯
 local PetPortrait_ToolTips = {};
 
 --***********************************************************************************************************************************************
@@ -57,11 +57,11 @@ local PetPortrait_ToolTips = {};
 function PartyFrame_PreLoad()
 
 	--AxTrace( 0,0, "partyframe_Preload");
-	this:RegisterEvent("TEAM_ENTER_MEMBER");				-- ×¢²á¶ÓÔ±¼ÓÈëÊÂ¼ş
-	this:RegisterEvent("TEAM_UPDATE_MEMBER");				-- ×¢²á¶ÓÔ±¸üĞÂÊÂ¼ş
-	this:RegisterEvent("TEAM_HIDE_ALL_PLAYER");			-- Òş²ØËùÓĞ¶ÓÔ±ÊÂ¼ş
-	this:RegisterEvent("TEAM_REFRESH_DATA");				-- ¸üĞÂÄ³Ò»¸ö¶ÓÔ±µÄÊÂ¼ş
-	this:RegisterEvent("ON_TEAM_UPDATE_PARTYFRAME");			-- ¸üĞÂPartyFrame½çÃæ			add by WTT
+	this:RegisterEvent("TEAM_ENTER_MEMBER");				-- æ³¨å†Œé˜Ÿå‘˜åŠ å…¥äº‹ä»¶
+	this:RegisterEvent("TEAM_UPDATE_MEMBER");				-- æ³¨å†Œé˜Ÿå‘˜æ›´æ–°äº‹ä»¶
+	this:RegisterEvent("TEAM_HIDE_ALL_PLAYER");			-- éšè—æ‰€æœ‰é˜Ÿå‘˜äº‹ä»¶
+	this:RegisterEvent("TEAM_REFRESH_DATA");				-- æ›´æ–°æŸä¸€ä¸ªé˜Ÿå‘˜çš„äº‹ä»¶
+	this:RegisterEvent("ON_TEAM_UPDATE_PARTYFRAME");			-- æ›´æ–°PartyFrameç•Œé¢			add by WTT
 	
 end
 
@@ -110,7 +110,7 @@ function PartyFrame_OnLoad()
 	HP_Text_Tip[4] = PartyFrame_HP_Text4;
 	HP_Text_Tip[5] = PartyFrame_HP_Text5;
 	
-	--2006Äê5ÔÂ20ÈÕ, ĞŞ¸ÄµôÏßĞÅÏ¢¹¦ÄÜ
+	--2006å¹´5æœˆ20æ—¥, ä¿®æ”¹æ‰çº¿ä¿¡æ¯åŠŸèƒ½
 	UnLink_flag[1] = Team_Leader_Flag2;
 	UnLink_flag[2] = Team_Leader2_Flag2;
 	UnLink_flag[3] = Team_Leader3_Flag2;
@@ -118,7 +118,7 @@ function PartyFrame_OnLoad()
 	UnLink_flag[5] = Team_Leader5_Flag2;
 	
 	
-	--2006Äê5ÔÂ20ÈÕ, ĞŞ¸ÄËÀÍöÃÉ×Ó
+	--2006å¹´5æœˆ20æ—¥, ä¿®æ”¹æ­»äº¡è’™å­
 	Porttrait_Mask[1] = Portrait_Icon1_Mask;
 	Porttrait_Mask[2] = Portrait_Icon2_Mask;
 	Porttrait_Mask[3] = Portrait_Icon3_Mask;
@@ -173,7 +173,7 @@ function PartyFrame_OnLoad()
 	Team_Leader4_Flag:Hide();
 	Team_Leader5_Flag:Hide();
 	
-	-- µÚ1ÖÁ5ºÅ¶ÓÓÑµÄ³öÕ½³èÎï°´Å¥
+	-- ç¬¬1è‡³5å·é˜Ÿå‹çš„å‡ºæˆ˜å® ç‰©æŒ‰é’®
 	-- add by WTT
 	Team_Member_Pet_Button[1] = Team_Pet_Button;
 	Team_Member_Pet_Button[2] = Team_Pet2_Button;
@@ -181,7 +181,7 @@ function PartyFrame_OnLoad()
 	Team_Member_Pet_Button[4] = Team_Pet4_Button;
 	Team_Member_Pet_Button[5] = Team_Pet5_Button;
 	
-	-- ÕäÊŞÍ·ÏñÉÏµÄ¸¡¶¯ĞÅÏ¢
+	-- çå…½å¤´åƒä¸Šçš„æµ®åŠ¨ä¿¡æ¯
 	-- add by WTT
 	PetPortrait_ToolTips[1]= Team_Pet_Button;
 	PetPortrait_ToolTips[2]= Team_Pet2_Button;
@@ -193,18 +193,18 @@ end
 
 --****************************************************************************************************************
 --
--- ÊÂ¼şÈë¿Ú
+-- äº‹ä»¶å…¥å£
 --
 --****************************************************************************************************************
 function PartyFrame_OnEvent(event)
 	
-	--AxTrace( 0,0, "eventÃæ");
+	--AxTrace( 0,0, "eventé¢");
 	----------------------------------------------------------------------------------------------------------------
 	--
-	-- Òş²ØËùÓĞ¶ÓÓÑ½çÃæ
+	-- éšè—æ‰€æœ‰é˜Ÿå‹ç•Œé¢
 	if ( event == "TEAM_HIDE_ALL_PLAYER" ) then
 	
-		--AxTrace( 0,0, "É¾³ıËùÓĞ½çÃæ");
+		--AxTrace( 0,0, "åˆ é™¤æ‰€æœ‰ç•Œé¢");
 		Hide_All_Play_Func();
 		return;
 	end
@@ -212,7 +212,7 @@ function PartyFrame_OnEvent(event)
 
 	-----------------------------------------------------------------------------------------------------------------
 	--
-	-- ¸üĞÂËùÓĞ¶ÓÓÑ½çÃæ.
+	-- æ›´æ–°æ‰€æœ‰é˜Ÿå‹ç•Œé¢.
 	if( event == "TEAM_REFRESH_DATA" ) then
 	
 		Refresh_All_Member_Info_Func();
@@ -223,7 +223,7 @@ function PartyFrame_OnEvent(event)
 
 	------------------------------------------------------------------------------------------------------------------
 	--
-	-- ÓĞĞÂµÄ¶ÓÔ±½øÈë
+	-- æœ‰æ–°çš„é˜Ÿå‘˜è¿›å…¥
 	if ( event == "TEAM_ENTER_MEMBER" ) then
 		Refresh_All_Member_Info_Func();
 		return;
@@ -234,7 +234,7 @@ function PartyFrame_OnEvent(event)
 	
 	--------------------------------------------------------------------------------------------------------------------
 	--
-	-- ¸üĞÂ¶ÓÔ±ĞÅÏ¢.
+	-- æ›´æ–°é˜Ÿå‘˜ä¿¡æ¯.
 	if ( event == "TEAM_UPDATE_MEMBER" ) then
 			Refresh_All_Member_Info_Func();
 		return;
@@ -243,7 +243,7 @@ function PartyFrame_OnEvent(event)
 	
 	--------------------------------------------------------------------------------------------------------------------
 	--
-	-- ¸üĞÂPartyFrame½çÃæ
+	-- æ›´æ–°PartyFrameç•Œé¢
 	-- add by WTT
 	if ( event == "ON_TEAM_UPDATE_PARTYFRAME" ) then
 		Refresh_All_Member_Info_Func();
@@ -256,27 +256,27 @@ end
 
 --***********************************************************************************************************************************************
 --
--- ÏÔÊ¾Ò»¸öĞÂ¼ÓÈëµÄ¶ÓÔ±
+-- æ˜¾ç¤ºä¸€ä¸ªæ–°åŠ å…¥çš„é˜Ÿå‘˜
 --
 --************************************************************************************************************************************************
 function PartyFrame_UpdatePage(index)
 
 	
-	--AxTrace( 0,0, "ÏÔÊ¾¶ÓÓÑ!" .. tostring(index));
+	--AxTrace( 0,0, "æ˜¾ç¤ºé˜Ÿå‹!" .. tostring(index));
 	if((index < 1) or (index > 5)) then
-			--AxTrace( 0,0, "½çÃæË÷Òı³öÏÖÒì³£!");
+			--AxTrace( 0,0, "ç•Œé¢ç´¢å¼•å‡ºç°å¼‚å¸¸!");
 			return;
 	end
 		
 	this:Show();
 	
-	--ÏÔÊ¾ĞÂ¼ÓÈë¶ÓÓÑµÄÍ·Ïñ
+	--æ˜¾ç¤ºæ–°åŠ å…¥é˜Ÿå‹çš„å¤´åƒ
 	PARTYFRAMEs[index]:Show();
 	
-	--ÏÔÊ¾ĞÂ¼ÓÈë¶ÓÓÑµÄÕäÊŞ°´Å¥
+	--æ˜¾ç¤ºæ–°åŠ å…¥é˜Ÿå‹çš„çå…½æŒ‰é’®
 	PetButton_Show (index);
 
-	--AxTrace( 0,0, "ÏÔÊ¾¶ÓÓÑÍê±Ï!" .. tostring(index));
+	--AxTrace( 0,0, "æ˜¾ç¤ºé˜Ÿå‹å®Œæ¯•!" .. tostring(index));
 	
 end
 
@@ -284,7 +284,7 @@ end
 
 --***********************************************************************************************************************************************
 --
--- µ±ÓÒ¼üµã»÷´°¿ÚµÄÊ±ºò, µ¯³ö²Ëµ¥
+-- å½“å³é”®ç‚¹å‡»çª—å£çš„æ—¶å€™, å¼¹å‡ºèœå•
 --
 --************************************************************************************************************************************************
 function Show_Team_Func(index)
@@ -296,7 +296,7 @@ end
 
 --***********************************************************************************************************************************************
 --
--- Òş²Ø¶ÓÁĞ´°¿Ú
+-- éšè—é˜Ÿåˆ—çª—å£
 --
 --************************************************************************************************************************************************
 function Hide_All_Play_Func()
@@ -319,23 +319,23 @@ end
 
 --***********************************************************************************************************************************************
 --
--- ÏÔÊ¾¶ÓÔ±ĞÅÏ¢
+-- æ˜¾ç¤ºé˜Ÿå‘˜ä¿¡æ¯
 --
 --************************************************************************************************************************************************
 function Show_Team_Member_Info_Func(index)
 	
-		--AxTrace( 0,0, "¿ªÊ¼µÃµ½¶ÓÓÑĞÅÏ¢Íê±Ï!" .. tostring(index));
-		-- µÃµ½¶ÓÔ±µÄ¸öÊı
+		--AxTrace( 0,0, "å¼€å§‹å¾—åˆ°é˜Ÿå‹ä¿¡æ¯å®Œæ¯•!" .. tostring(index));
+		-- å¾—åˆ°é˜Ÿå‘˜çš„ä¸ªæ•°
 		local iMemCount = DataPool:GetTeamMemberCount();
-		--AxTrace( 0,0, "µÃµ½¶ÓÓÑ¸öÊı!" .. tostring(iMemCount));
+		--AxTrace( 0,0, "å¾—åˆ°é˜Ÿå‹ä¸ªæ•°!" .. tostring(iMemCount));
 				
 		if((iMemCount < 1)and(iMemCount > 5)) then
 		
-			--AxTrace( 0,0, "µÃµ½¶ÓÓÑ¸öÊıÒì³£" .. tostring(iMemCount));
+			--AxTrace( 0,0, "å¾—åˆ°é˜Ÿå‹ä¸ªæ•°å¼‚å¸¸" .. tostring(iMemCount));
 			return;
 		end
 		
-		-- µÃµ½¶ÓÔ±µÄÏêÏ¸ĞÅÏ¢
+		-- å¾—åˆ°é˜Ÿå‘˜çš„è¯¦ç»†ä¿¡æ¯
 		MemberName
 		, strIconIndex
 		, HPValue
@@ -351,48 +351,48 @@ function Show_Team_Member_Info_Func(index)
 		, ScenceName
 		= DataPool:GetTeamMemberInfo( index );
 		
-		--AxTrace( 0,0, "µÃµ½¶ÓÓÑĞÅÏ¢Íê±Ï!" .. tostring(index));
-		-- ÉèÖÃÃû×Ö.
+		--AxTrace( 0,0, "å¾—åˆ°é˜Ÿå‹ä¿¡æ¯å®Œæ¯•!" .. tostring(index));
+		-- è®¾ç½®åå­—.
 		--PARTY_NAME[index]:SetText(MemberName);
 		
-		-- ÉèÖÃhp
+		-- è®¾ç½®hp
 		if(-1 ~= HPValue) then
 			PARTY_HP[index]:SetProgress(tonumber(HPValue), tonumber(HPMax));
 		else
 			PARTY_HP[index]:SetProgress(1, 1);
 		end;
-		--AxTrace( 0,0, "µ±Ç°ÑªÖµ!" .. tostring(HPValue));
-		--AxTrace( 0,0, "ÑªÖµ×î´ó!" .. tostring(HPMax));
+		--AxTrace( 0,0, "å½“å‰è¡€å€¼!" .. tostring(HPValue));
+		--AxTrace( 0,0, "è¡€å€¼æœ€å¤§!" .. tostring(HPMax));
 		
-		-- ÉèÖÃmp
+		-- è®¾ç½®mp
 		--PARTY_MP[index]:SetProgress(tonumber(MPValue), tonumber(MPMax));
-		--AxTrace( 0,0, "µ±Ç°Ä§·¨!" .. tostring(MPValue));
-		--AxTrace( 0,0, "Ä§·¨×î´ó!" .. tostring(MPMax));
+		--AxTrace( 0,0, "å½“å‰é­”æ³•!" .. tostring(MPValue));
+		--AxTrace( 0,0, "é­”æ³•æœ€å¤§!" .. tostring(MPMax));
 		
 		
 		Show_Leader_Flag_Func();
 		
-		-- ÉèÖÃtooltips
-		local bDead = "·ñ";
-		local bDeadLink = "·ñ";
+		-- è®¾ç½®tooltips
+		local bDead = "å¦";
+		local bDeadLink = "å¦";
 			
 		Portrait_ToolTips[index]:SetProperty("Image", "set:PlayerFrame_Icon image:Icon_xiaoyao");
 		Portrait_ToolTips[index]:SetProperty("Image", strIconIndex);
 	
 		--if(0 ~= Dead) then
-		--	bDead = "ÊÇ"
+		--	bDead = "æ˜¯"
 		--	Portrait_ToolTips[index]:SetProperty("Image", "set:TeamFrame5 image:Die_Icon");
 		--end	
 		
 		--if(0 ~= DeadLink) then
-		--	bDeadLink = "ÊÇ"
-		--	AxTrace( 0,0, "ÉèÖÃµôÏßĞÅÏ¢");
+		--	bDeadLink = "æ˜¯"
+		--	AxTrace( 0,0, "è®¾ç½®æ‰çº¿ä¿¡æ¯");
 		--	Portrait_ToolTips[index]:SetProperty("Image", "set:TeamFrame5 image:Downline_Icon");
 		--end
 		
-		AxTrace( 0,0, "µÃµ½¶ÓÓÑĞÅÏ¢Íê±Ï!" .. tostring(index));
+		AxTrace( 0,0, "å¾—åˆ°é˜Ÿå‹ä¿¡æ¯å®Œæ¯•!" .. tostring(index));
 		if(0 ~= Dead) then
-			bDead = "ÊÇ"
+			bDead = "æ˜¯"
 			--Portrait_ToolTips[tonumber(index)]:Disable();
 			Porttrait_Mask[index]:Show();
 		else
@@ -406,67 +406,67 @@ function Show_Team_Member_Info_Func(index)
 			UnLink_flag[tonumber(index)]:Hide();
 		else
 		
-			bDeadLink = "ÊÇ"
+			bDeadLink = "æ˜¯"
 			UnLink_flag[tonumber(index)]:Show();
 		end
 		
 		
-		--local strInfo = "\n Ãû×Ö: "  
+		--local strInfo = "\n åå­—: "  
 		--								.. tostring(MemberName)
-		--      					.. "\n ÃÅÅÉ:"
+		--      					.. "\n é—¨æ´¾:"
 		--								.. tostring(Fammily)
-		--								.. "\n µÈ¼¶:"
+		--								.. "\n ç­‰çº§:"
 		--								.. tostring(Level)
 		--								.. " \n hp:"
 		--								.. tostring(HPValue) .. "/" .. tostring(HPMax)
 		--								.. " \n mp:"
 		--								.. tostring(MPValue) .. "/" .. tostring(MPMax)
-		--								.. " \n Å­Æø:"
+		--								.. " \n æ€’æ°”:"
 		--								.. tostring(Anger)
-		--								.. " \n ¶ÏÏß:"
+		--								.. " \n æ–­çº¿:"
 		--								.. tostring(bDeadLink)
-		--								.. " \n ËÀÍö:"
+		--								.. " \n æ­»äº¡:"
 		--								.. tostring(bDead);
 		
 		--AxTrace( 0,0, "fmaily  " .. tostring(Fammily));
 		local strMenPai = "";
-		-- µÃµ½ÃÅÅÉÃû³Æ.
+		-- å¾—åˆ°é—¨æ´¾åç§°.
 		if(0 == Fammily) then
-			strMenPai = "ÉÙÁÖ";
+			strMenPai = "å°‘æ—";
 	
 		elseif(1 == Fammily) then
-			strMenPai = "Ã÷½Ì";
+			strMenPai = "æ˜æ•™";
 	
 		elseif(2 == Fammily) then
-			strMenPai = "Ø¤°ï";
+			strMenPai = "ä¸å¸®";
 	
 		elseif(3 == Fammily) then
-			strMenPai = "Îäµ±";
+			strMenPai = "æ­¦å½“";
 	
 		elseif(4 == Fammily) then
-			strMenPai = "¶ëáÒ";
+			strMenPai = "å³¨åµ‹";
 	
 		elseif(5 == Fammily) then
-			strMenPai = "ĞÇËŞ";
+			strMenPai = "æ˜Ÿå®¿";
 	
 		elseif(6 == Fammily) then
-			strMenPai = "ÌìÁú";
+			strMenPai = "å¤©é¾™";
 	
 		elseif(7 == Fammily) then
-			strMenPai = "ÌìÉ½";
+			strMenPai = "å¤©å±±";
 	
 		elseif(8 == Fammily) then
-			strMenPai = "åĞÒ£";
+			strMenPai = "é€é¥";
 	
 		elseif(9 == Fammily) then
-			strMenPai = "ÎŞÃÅÅÉ";
+			strMenPai = "æ— é—¨æ´¾";
 		end
 	
 		local strInfo = tostring(MemberName)
 		      					.. "\n"
 										.. tostring(strMenPai).."  "
-										.. tostring(Level).. "¼¶"
-										.. "\nËùÔÚµØ£º"
+										.. tostring(Level).. "çº§"
+										.. "\næ‰€åœ¨åœ°ï¼š"
 										.. ScenceName;
 									
 										
@@ -474,8 +474,8 @@ function Show_Team_Member_Info_Func(index)
 		
 		if(-1 == HPValue) then
 		
-			-- ¿ç³¡¾°µÄÇé¿ö¡£
-			PARTY_HP[index]:SetToolTip("Î´Öª");
+			-- è·¨åœºæ™¯çš„æƒ…å†µã€‚
+			PARTY_HP[index]:SetToolTip("æœªçŸ¥");
 		else
 		
 			PARTY_HP[index]:SetToolTip(tostring(HPValue).."/"..tostring(HPMax));
@@ -484,7 +484,7 @@ function Show_Team_Member_Info_Func(index)
 		PartyFrame_ClerBufInfo(index);
 		PartyFrame_UpdateBufInfo(index);
 
-		-- ÏÔÊ¾¶ÓÔ±³öÕ½ÕäÊŞÍ¼±ê
+		-- æ˜¾ç¤ºé˜Ÿå‘˜å‡ºæˆ˜çå…½å›¾æ ‡
 		PetButton_Show(index);
 	
 end
@@ -492,34 +492,34 @@ end
 
 --***********************************************************************************************************************************************
 --
--- ¸üĞÂËùÓĞ¶ÓÔ±ĞÅÏ¢
+-- æ›´æ–°æ‰€æœ‰é˜Ÿå‘˜ä¿¡æ¯
 --
 --************************************************************************************************************************************************
 function Refresh_All_Member_Info_Func()
 	
-		-- ÏÈÒş²ØµôËùÓĞµÄ¶ÓÔ±.
+		-- å…ˆéšè—æ‰æ‰€æœ‰çš„é˜Ÿå‘˜.
 		Hide_All_Play_Func();
 		
-		-- µÃµ½¶ÓÔ±µÄ¸öÊı
+		-- å¾—åˆ°é˜Ÿå‘˜çš„ä¸ªæ•°
 		local iMemCount = DataPool:GetTeamMemberCount();
-		--AxTrace( 0,0, "µÃµ½¶ÓÓÑ¸öÊı!" .. tostring(iMemCount));
+		--AxTrace( 0,0, "å¾—åˆ°é˜Ÿå‹ä¸ªæ•°!" .. tostring(iMemCount));
 		
 		-- 
 		if((iMemCount < 1)or(iMemCount > 6)) then
 		
-			--AxTrace( 0,0, "µÃµ½¶ÓÓÑ¸öÊıÒì³£" .. tostring(iMemCount));
+			--AxTrace( 0,0, "å¾—åˆ°é˜Ÿå‹ä¸ªæ•°å¼‚å¸¸" .. tostring(iMemCount));
 			return;
 		end
 						
 		for index = 1, iMemCount - 1 do
 			
-				-- ÏÔÊ¾Ò»¸ö¶ÓÔ±
+				-- æ˜¾ç¤ºä¸€ä¸ªé˜Ÿå‘˜
 				PartyFrame_UpdatePage(index);
 				
-				-- ÏÔÊ¾¶ÓÔ±µÄÏêÏ¸ĞÅÏ¢
+				-- æ˜¾ç¤ºé˜Ÿå‘˜çš„è¯¦ç»†ä¿¡æ¯
 				Show_Team_Member_Info_Func(index);
 				
-				-- ÏÔÊ¾¶ÓÔ±µÄÕäÊŞ°´Å¥
+				-- æ˜¾ç¤ºé˜Ÿå‘˜çš„çå…½æŒ‰é’®
 				PetButton_Show(index);
 
 		end
@@ -531,12 +531,12 @@ end
 
 --***********************************************************************************************************************************************
 --
--- ÏÔÊ¾¶Ó³¤ĞÅÏ¢
+-- æ˜¾ç¤ºé˜Ÿé•¿ä¿¡æ¯
 --
 --************************************************************************************************************************************************
 function Show_Leader_Flag_Func()
 
-	-- ÏÔÊ¾¶Ó³¤±ê¼Ç
+	-- æ˜¾ç¤ºé˜Ÿé•¿æ ‡è®°
 	local iIsLeader = DataPool:IsTeamLeader();
 	if (1 == iIsLeader) then
 		
@@ -548,26 +548,26 @@ end
 
 --***********************************************************************************************************************************************
 --
--- Ñ¡Ôñ¶ÓÓÑ×÷Îªtarget(Í¬ÓÎÏ·ÖĞ, ÓÒ¼üµã»÷Ò»¸öÄ£ĞÍĞ§¹ûÒ»Ñù)
+-- é€‰æ‹©é˜Ÿå‹ä½œä¸ºtarget(åŒæ¸¸æˆä¸­, å³é”®ç‚¹å‡»ä¸€ä¸ªæ¨¡å‹æ•ˆæœä¸€æ ·)
 --
 --************************************************************************************************************************************************
 function PartyFrame_SelectAsTarget(UIIndex)
 
-	--AxTrace( 0,0, "Ñ¡ÔñÍ·Ïñ");
+	--AxTrace( 0,0, "é€‰æ‹©å¤´åƒ");
 	DataPool:SelectAsTargetByUIIndex(UIIndex);
 end;
 
 
 --***********************************************************************************************************************************************
 --
--- Êó±êÒÆÈëÊÂ¼ş
+-- é¼ æ ‡ç§»å…¥äº‹ä»¶
 --
 --************************************************************************************************************************************************
 
 function PartyFrame_HP_Text_MouseEnter(UIIndex)
 
 	
-		-- µÃµ½¶ÓÔ±µÄÏêÏ¸ĞÅÏ¢
+		-- å¾—åˆ°é˜Ÿå‘˜çš„è¯¦ç»†ä¿¡æ¯
 		--MemberName
 		--, strIconIndex
 		--, HPValue
@@ -586,7 +586,7 @@ function PartyFrame_HP_Text_MouseEnter(UIIndex)
 	
 	--if(-1 == HPValue) then
 	
-	--	ShowHpTipText = "Î´Öª";
+	--	ShowHpTipText = "æœªçŸ¥";
 	--else
 	
 	--	ShowHpTipText = tostring(HPValue).."/"..tostring(HPMax);
@@ -597,7 +597,7 @@ end;
 
 --***********************************************************************************************************************************************
 --
--- Êó±êÒÆ³öÊÂ¼ş
+-- é¼ æ ‡ç§»å‡ºäº‹ä»¶
 --
 --************************************************************************************************************************************************
 
@@ -653,13 +653,13 @@ end
 
 --***********************************************************************************************************************************************
 --
--- ÏÔÊ¾¶ÓÔ±µÄÕäÊŞ°´Å¥
+-- æ˜¾ç¤ºé˜Ÿå‘˜çš„çå…½æŒ‰é’®
 -- add by WTT
 --
 --************************************************************************************************************************************************
 function PetButton_Show(UIIndex)
 	
-	-- ÏÔÊ¾ÕäÊŞ°´Å¥
+	-- æ˜¾ç¤ºçå…½æŒ‰é’®
 	Team_Member_Pet_Button[UIIndex]:Show();
 
 	return
@@ -668,52 +668,52 @@ end
 
 --***********************************************************************************************************************************************
 --
--- Êó±ê×ó¼üµ¥»÷£ºÑ¡ÖĞ¶ÓÓÑµÄµ±Ç°³öÕ½ÕäÊŞ
+-- é¼ æ ‡å·¦é”®å•å‡»ï¼šé€‰ä¸­é˜Ÿå‹çš„å½“å‰å‡ºæˆ˜çå…½
 -- add by WTT
 --
 --************************************************************************************************************************************************
 function PetButton_SetFightPetAsTarget(UIIndex)	
 	
-	-- Ê×ÏÈÍ¨¹ıUIË÷ÒıÀ´Ñ¡ÖĞ¶ÓÓÑµÄÕäÊŞ×÷Îªµ±Ç°Ñ¡ÖĞÄ¿±ê
+	-- é¦–å…ˆé€šè¿‡UIç´¢å¼•æ¥é€‰ä¸­é˜Ÿå‹çš„çå…½ä½œä¸ºå½“å‰é€‰ä¸­ç›®æ ‡
 	local iFindFightingPet = DataPool:SelectTeamMemPetAsTargetByUIIndex(UIIndex);
 	
-	-- Èç¹ûÕÒ²»µ½¶ÓÓÑµÄ³öÕ½ÕäÊŞ
+	-- å¦‚æœæ‰¾ä¸åˆ°é˜Ÿå‹çš„å‡ºæˆ˜çå…½
 	if (iFindFightingPet == -1) then
 	
-		PushDebugMessage ("#{ZSAN_90311_2}");			-- ¶ÓÓÑ²»ÔÚ¸½½ü£¬»òÕßÎŞ³öÕ½ÕäÊŞ£¬ÎŞ·¨²é¿´ÕäÊŞĞÅÏ¢¡£
+		PushDebugMessage ("#{ZSAN_90311_2}");			-- é˜Ÿå‹ä¸åœ¨é™„è¿‘ï¼Œæˆ–è€…æ— å‡ºæˆ˜çå…½ï¼Œæ— æ³•æŸ¥çœ‹çå…½ä¿¡æ¯ã€‚
 			
 	end
 	
-	-- ¸üĞÂµ±Ç°µÄPartyFrame½çÃæ
+	-- æ›´æ–°å½“å‰çš„PartyFrameç•Œé¢
 	Update_PartyFrame_Menu ();
 	
 end
 
 --***********************************************************************************************************************************************
 --
--- Êó±êÓÒ¼üµ¥»÷£º´ò¿ª¶ÓÓÑµÄ³öÕ½ÕäÊŞµÄÑ¡Ïî²Ëµ¥
+-- é¼ æ ‡å³é”®å•å‡»ï¼šæ‰“å¼€é˜Ÿå‹çš„å‡ºæˆ˜çå…½çš„é€‰é¡¹èœå•
 -- add by WTT
 --
 --************************************************************************************************************************************************
 function PetButton_ToggleTargetPetPage(UIIndex)
 
-	-- Ê×ÏÈÍ¨¹ıUIË÷ÒıÀ´Ñ¡ÖĞ¶ÓÓÑµÄÕäÊŞ×÷Îªµ±Ç°Ñ¡ÖĞÄ¿±ê
+	-- é¦–å…ˆé€šè¿‡UIç´¢å¼•æ¥é€‰ä¸­é˜Ÿå‹çš„çå…½ä½œä¸ºå½“å‰é€‰ä¸­ç›®æ ‡
 	local iFindFightingPet = DataPool:SelectTeamMemPetAsTargetByUIIndex(UIIndex);
 	
-	-- Èç¹ûÕÒ²»µ½¶ÓÓÑµÄ³öÕ½ÕäÊŞ
+	-- å¦‚æœæ‰¾ä¸åˆ°é˜Ÿå‹çš„å‡ºæˆ˜çå…½
 	if (iFindFightingPet == -1) then
 	
-		PushDebugMessage ("#{ZSAN_90311_2}");			-- ¶ÓÓÑ²»ÔÚ¸½½ü£¬»òÕßÎŞ³öÕ½ÕäÊŞ£¬ÎŞ·¨²é¿´ÕäÊŞĞÅÏ¢¡£
+		PushDebugMessage ("#{ZSAN_90311_2}");			-- é˜Ÿå‹ä¸åœ¨é™„è¿‘ï¼Œæˆ–è€…æ— å‡ºæˆ˜çå…½ï¼Œæ— æ³•æŸ¥çœ‹çå…½ä¿¡æ¯ã€‚
 		
-	-- Èç¹ûÄÜÕÒµ½¶ÓÓÑµÄ³öÕ½ÕäÊŞ
+	-- å¦‚æœèƒ½æ‰¾åˆ°é˜Ÿå‹çš„å‡ºæˆ˜çå…½
 	else
 	
-		-- µ¯³ö¶ÓÓÑÕäÊŞ°´Å¥µÄÓÒ¼ü²Ëµ¥
+		-- å¼¹å‡ºé˜Ÿå‹çå…½æŒ‰é’®çš„å³é”®èœå•
 		Show_Team_Member_Pet_Menu ();
 	
 	end
 	
-	-- ¸üĞÂµ±Ç°µÄPartyFrame½çÃæ
+	-- æ›´æ–°å½“å‰çš„PartyFrameç•Œé¢
 	Update_PartyFrame_Menu ();
 	
 end

@@ -1,6 +1,6 @@
--- ÔÀÀÏÈı
+-- å²³è€ä¸‰
 -- 402242
--- Ñà×ÓÎë´óÕ½¸±±¾
+-- ç‡•å­åå¤§æˆ˜å‰¯æœ¬
 
 x402242_TBL = 
 {
@@ -15,12 +15,12 @@ BossBuff = 9999
 
 function x402242_OnDie( sceneId, selfId, killerId )
 	
-	LuaFnNpcChat(sceneId, selfId, 0, "ÈıÃÃ£¬ËÄµÜ¿ìÀ´£¬µã×ÓÔúÊÖ£¬¶ş¸çÎÒÒªÏÈ³·ÁË¡£")
+	LuaFnNpcChat(sceneId, selfId, 0, "ä¸‰å¦¹ï¼Œå››å¼Ÿå¿«æ¥ï¼Œç‚¹å­æ‰æ‰‹ï¼ŒäºŒå“¥æˆ‘è¦å…ˆæ’¤äº†ã€‚")
 	MonsterAI_SetIntParamByIndex(sceneId, selfId, x402242_TBL.IDX_TimerPrepare, 0)
 	MonsterAI_SetIntParamByIndex(sceneId, selfId, x402242_TBL.IDX_TimerInterval, 0)
 	MonsterAI_SetBoolParamByIndex(sceneId, selfId, x402242_TBL.IDX_FlagCombat, 0)
 	
-	-- ËÀÍöµÄÊ±ºò£¬Í¨Öª¸±±¾Ë¢¹Ö
+	-- æ­»äº¡çš„æ—¶å€™ï¼Œé€šçŸ¥å‰¯æœ¬åˆ·æ€ª
 	LuaFnSetCopySceneData_Param(sceneId, 8, 4)
 end
 
@@ -45,7 +45,7 @@ function x402242_OnHeartBeat(sceneId, selfId, nTick)
 --						local posX, posZ = GetWorldPos(sceneId,nTarget)
 --						local fDir = 0.0
 --						LuaFnUnitUseSkill(sceneId, selfId, x402242_TBL.BossSkill, nTarget, posX, posZ, fDir)			
---						LuaFnNpcChat(sceneId, selfId, 0, "³¢³¢ä±Ñô½­ÉÏµÄÁÒÑæ°É£¡")
+--						LuaFnNpcChat(sceneId, selfId, 0, "å°å°æµ”é˜³æ±Ÿä¸Šçš„çƒˆç„°å§ï¼")
 --					end
 --				end
 --			end
@@ -62,7 +62,7 @@ end
 function x402242_OnKillCharacter(sceneId, selfId, targetId)
 --	if(-1~=targetId) then
 --		local szTarget = GetName(sceneId, targetId)		
---		LuaFnNpcChat(sceneId, selfId, 0, szTarget .. "£¬Äã¾ÍËãÔÙÀ÷º¦Ê®±¶£¬ÓöÉÏÒ¯Ò¯Ò²Ö»ÓĞËÀÂ·Ò»Ìõ£¡")
+--		LuaFnNpcChat(sceneId, selfId, 0, szTarget .. "ï¼Œä½ å°±ç®—å†å‰å®³åå€ï¼Œé‡ä¸Šçˆ·çˆ·ä¹Ÿåªæœ‰æ­»è·¯ä¸€æ¡ï¼")
 --	end
 end
 

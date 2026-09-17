@@ -1,52 +1,52 @@
---ÃÅÅÉ½±Àø×°±¸ÓëÕäÊŞ
+--é—¨æ´¾å¥–åŠ±è£…å¤‡ä¸çå…½
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x808004_g_ScriptId			= 808004
 
---²Ù×÷¼¯
+--æ“ä½œé›†
 x808004_g_Key			=
 {
-	["eqp"]					= 100,	--ÁìÈ¡×°±¸
-	["pet"]					= 101,	--ÁìÈ¡ÕäÊŞ
-	["menpai"]				= 102,	--ÁìÈ¡ÃÅÅÉÊ±×°
+	["eqp"]					= 100,	--é¢†å–è£…å¤‡
+	["pet"]					= 101,	--é¢†å–çå…½
+	["menpai"]				= 102,	--é¢†å–é—¨æ´¾æ—¶è£…
 }
 
---×°±¸½±Àø
+--è£…å¤‡å¥–åŠ±
 x808004_g_EqpNum	= 9
 x808004_g_Eqp			=
 {
-	[0]	= { weapon = 10430010, armor = 10443010, menpai=10124000 },	--ÉÙÁÖ
-	[1]	= { weapon = 10431110, armor = 10443110, menpai=10124001 },	--Ã÷½Ì
-	[2]	= { weapon = 10431210, armor = 10443210, menpai=10124002 },	--Ø¤°ï
-	[3]	= { weapon = 10432010, armor = 10443410, menpai=10124004 },	--Îäµ±
-	[4]	= { weapon = 10432110, armor = 10443310, menpai=10124003 },	--¶ëáÒ
-	[5]	= { weapon = 10433210, armor = 10443510, menpai=10124005 },	--ĞÇËŞ
-	[6]	= { weapon = 10435210, armor = 10443810, menpai=10124008 },	--ÌìÁú
-	[7]	= { weapon = 10434010, armor = 10443610, menpai=10124006 },	--ÌìÉ½
-	[8] = { weapon = 10435110, armor = 10443710, menpai=10124007 },	--åĞÒ£
+	[0]	= { weapon = 10430010, armor = 10443010, menpai=10124000 },	--å°‘æ—
+	[1]	= { weapon = 10431110, armor = 10443110, menpai=10124001 },	--æ˜æ•™
+	[2]	= { weapon = 10431210, armor = 10443210, menpai=10124002 },	--ä¸å¸®
+	[3]	= { weapon = 10432010, armor = 10443410, menpai=10124004 },	--æ­¦å½“
+	[4]	= { weapon = 10432110, armor = 10443310, menpai=10124003 },	--å³¨åµ‹
+	[5]	= { weapon = 10433210, armor = 10443510, menpai=10124005 },	--æ˜Ÿå®¿
+	[6]	= { weapon = 10435210, armor = 10443810, menpai=10124008 },	--å¤©é¾™
+	[7]	= { weapon = 10434010, armor = 10443610, menpai=10124006 },	--å¤©å±±
+	[8] = { weapon = 10435110, armor = 10443710, menpai=10124007 },	--é€é¥
 }
 
---ÕäÊŞ½±Àø
+--çå…½å¥–åŠ±
 x808004_g_PetNum	= 3
 x808004_g_Pet			=
 {
-	itemRcvErrMsg = "    ÔÚËÍÄãÕäÊŞÊ±£¬Í¬Ê±»¹Òª¸øÄãÕäÊŞÍæ¾ßÓëÕäÊŞµÄÊ³Æ·£¬ÇëÔÚÎïÆ·±³°üÖĞÁô³öÁ½¸ö¿Õ¸ñ£¬ÔÙÀ´ÕÒÎÒ¡£",
-	[1]	= { id = 3030, name = "¹·",   itemList = { { id = 30601001, num = 20 }, { id = 30602001, num = 20 } } },
-	[2]	= { id = 3040, name = "´Ìâ¬", itemList = { { id = 30601001, num = 20 }, { id = 30604001, num = 20 } } },
-	[3]	= { id = 3050, name = "ºï×Ó", itemList = { { id = 30601001, num = 20 }, { id = 30605001, num = 20 } } },
+	itemRcvErrMsg = "    åœ¨é€ä½ çå…½æ—¶ï¼ŒåŒæ—¶è¿˜è¦ç»™ä½ çå…½ç©å…·ä¸çå…½çš„é£Ÿå“ï¼Œè¯·åœ¨ç‰©å“èƒŒåŒ…ä¸­ç•™å‡ºä¸¤ä¸ªç©ºæ ¼ï¼Œå†æ¥æ‰¾æˆ‘ã€‚",
+	[1]	= { id = 3030, name = "ç‹—",   itemList = { { id = 30601001, num = 20 }, { id = 30602001, num = 20 } } },
+	[2]	= { id = 3040, name = "åˆºçŒ¬", itemList = { { id = 30601001, num = 20 }, { id = 30604001, num = 20 } } },
+	[3]	= { id = 3050, name = "çŒ´å­", itemList = { { id = 30601001, num = 20 }, { id = 30605001, num = 20 } } },
 }
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x808004_OnDefaultEvent( sceneId, selfId, targetId, menpai )
 	local	mp	= GetMenPai( sceneId, selfId )
 	if mp < 0 or mp >= x808004_g_EqpNum then
-		x808004_MsgBox( sceneId, selfId, targetId, "  Äã»¹Ã»ÓĞ¼ÓÈëÃÅÅÉ£¡" )
+		x808004_MsgBox( sceneId, selfId, targetId, "  ä½ è¿˜æ²¡æœ‰åŠ å…¥é—¨æ´¾ï¼" )
 		return
 	end
 	if mp ~= menpai then
-		x808004_MsgBox( sceneId, selfId, targetId, "  Äã²»ÊÇ±¾ÃÅµÜ×Ó£¡" )
+		x808004_MsgBox( sceneId, selfId, targetId, "  ä½ ä¸æ˜¯æœ¬é—¨å¼Ÿå­ï¼" )
 		return
 	end
 
@@ -55,7 +55,7 @@ function x808004_OnDefaultEvent( sceneId, selfId, targetId, menpai )
 	local	fPet	= flag - fEqp * 10
 	local	str
 
-	--Ñ¡Ôñ°´Å¥
+	--é€‰æ‹©æŒ‰é’®
 	local	key	= GetNumText()
 	local	rnd
 	
@@ -66,20 +66,20 @@ function x808004_OnDefaultEvent( sceneId, selfId, targetId, menpai )
 		end
 
 		if LuaFnGetPropertyBagSpace( sceneId, selfId ) < 1 then
-			x808004_MsgBox( sceneId, selfId, targetId, "  ÄãµÄ±³°ü¿Õ¼ä²»¹»ÁË£¬ÕûÀíºóÔÙÀ´ÕÒÎÒ¡£" )
+			x808004_MsgBox( sceneId, selfId, targetId, "  ä½ çš„èƒŒåŒ…ç©ºé—´ä¸å¤Ÿäº†ï¼Œæ•´ç†åå†æ¥æ‰¾æˆ‘ã€‚" )
 			return
 		end
 		if TryRecieveItem( sceneId, selfId, x808004_g_Eqp[mp].weapon, 1 ) >= 0 then
-			str		= "#YÄã»ñµÃÁË"..GetItemName( sceneId, x808004_g_Eqp[mp].weapon ).."¡£"
+			str		= "#Yä½ è·å¾—äº†"..GetItemName( sceneId, x808004_g_Eqp[mp].weapon ).."ã€‚"
 			Msg2Player( sceneId, selfId, str, MSG2PLAYER_PARA )
 			x808004_NotifyTip( sceneId, selfId, str )
 		end
 		if TryRecieveItem( sceneId, selfId, x808004_g_Eqp[mp].armor, 1 ) >= 0 then
-			str		= "#YÄã»ñµÃÁË"..GetItemName( sceneId, x808004_g_Eqp[mp].armor ).."¡£"
+			str		= "#Yä½ è·å¾—äº†"..GetItemName( sceneId, x808004_g_Eqp[mp].armor ).."ã€‚"
 			Msg2Player( sceneId, selfId, str, MSG2PLAYER_PARA )
 			x808004_NotifyTip( sceneId, selfId, str )
 		end
-		x808004_MsgBox( sceneId, selfId, targetId, "  ¿´¿´±³°ü£¬ÄãµÃµ½ÁË×°±¸½±Àø¡£" )
+		x808004_MsgBox( sceneId, selfId, targetId, "  çœ‹çœ‹èƒŒåŒ…ï¼Œä½ å¾—åˆ°äº†è£…å¤‡å¥–åŠ±ã€‚" )
 		fEqp		= 1
 	elseif key == x808004_g_Key["pet"] then
 		if fPet > 0 then
@@ -106,13 +106,13 @@ function x808004_OnDefaultEvent( sceneId, selfId, targetId, menpai )
 		local createPetRet, retGUID_H, retGUID_L = LuaFnCreatePetToHuman(sceneId, selfId, x808004_g_Pet[rnd].id, 10, 0);
 		if createPetRet and createPetRet == 1 then
 			LuaFnAddItemListToHuman( sceneId, selfId )
-			str		= "#YÄã»ñµÃÁËÒ»Ö»"..x808004_g_Pet[rnd].name.."¡£"
+			str		= "#Yä½ è·å¾—äº†ä¸€åª"..x808004_g_Pet[rnd].name.."ã€‚"
 			Msg2Player( sceneId, selfId, str, MSG2PLAYER_PARA )
 			x808004_NotifyTip( sceneId, selfId, str )
-			x808004_MsgBox( sceneId, selfId, targetId, "  ¿´¿´ÄãµÄ³èÎïÀ¸£¬ÄãµÃµ½ÁË³èÎï½±Àø¡£" )
+			x808004_MsgBox( sceneId, selfId, targetId, "  çœ‹çœ‹ä½ çš„å® ç‰©æ ï¼Œä½ å¾—åˆ°äº†å® ç‰©å¥–åŠ±ã€‚" )
 			fPet	= 1
 		else
-			x808004_MsgBox( sceneId, selfId, targetId, "  ÄãÒÑ¾­²»ÄÜĞ¯´ø¸ü¶àµÄ³èÎïÁË¡£Äã¿ÉÒÔÑ¡Ôñ·ÅÉú³èÎïÀ´¿Õ³öÒ»¸ö³èÎïÀ¸Î»¡£\n  ´ò¿ª³èÎï½éÃæ£¬Ñ¡Ôñ³èÎïÇåµ¥ÖĞÄãÒª¶ªÆúµÄ³èÎï£¬µã»÷·ÅÉú¾Í¿ÉÒÔ·ÅÆú´Ë³èÎïÁË¡£" )
+			x808004_MsgBox( sceneId, selfId, targetId, "  ä½ å·²ç»ä¸èƒ½æºå¸¦æ›´å¤šçš„å® ç‰©äº†ã€‚ä½ å¯ä»¥é€‰æ‹©æ”¾ç”Ÿå® ç‰©æ¥ç©ºå‡ºä¸€ä¸ªå® ç‰©æ ä½ã€‚\n  æ‰“å¼€å® ç‰©ä»‹é¢ï¼Œé€‰æ‹©å® ç‰©æ¸…å•ä¸­ä½ è¦ä¸¢å¼ƒçš„å® ç‰©ï¼Œç‚¹å‡»æ”¾ç”Ÿå°±å¯ä»¥æ”¾å¼ƒæ­¤å® ç‰©äº†ã€‚" )
 		end
 	elseif key == x808004_g_Key["menpai"] then
 		if GetMissionData( sceneId, selfId, MD_MENPAI_BOUNTY_SHIZHUANG ) > 0 then
@@ -120,16 +120,16 @@ function x808004_OnDefaultEvent( sceneId, selfId, targetId, menpai )
 		end
 
 		if GetItemCount(sceneId,selfId, x808004_g_Eqp[mp].menpai) > 0 then
-			x808004_MsgBox( sceneId, selfId, targetId, "ÄúÉíÉÏÒÑ¾­ÓĞÁËÃÅÅÉÊ±×°£¬ÎŞ·¨ÔÙ´ÎÁìÈ¡¡£" )
+			x808004_MsgBox( sceneId, selfId, targetId, "æ‚¨èº«ä¸Šå·²ç»æœ‰äº†é—¨æ´¾æ—¶è£…ï¼Œæ— æ³•å†æ¬¡é¢†å–ã€‚" )
 			return
 		end
 		
 		if LuaFnGetPropertyBagSpace( sceneId, selfId ) < 1 then
-			x808004_MsgBox( sceneId, selfId, targetId, "  ÄãµÄ±³°ü¿Õ¼ä²»¹»ÁË£¬ÕûÀíºóÔÙÀ´ÕÒÎÒ¡£" )
+			x808004_MsgBox( sceneId, selfId, targetId, "  ä½ çš„èƒŒåŒ…ç©ºé—´ä¸å¤Ÿäº†ï¼Œæ•´ç†åå†æ¥æ‰¾æˆ‘ã€‚" )
 			return
 		end
 		if TryRecieveItem( sceneId, selfId, x808004_g_Eqp[mp].menpai, 1 ) >= 0 then
-			str		= "#YÄã»ñµÃÁË"..GetItemName( sceneId, x808004_g_Eqp[mp].menpai ).."¡£"
+			str		= "#Yä½ è·å¾—äº†"..GetItemName( sceneId, x808004_g_Eqp[mp].menpai ).."ã€‚"
 			Msg2Player( sceneId, selfId, str, MSG2PLAYER_PARA )
 			x808004_NotifyTip( sceneId, selfId, str )
 		end
@@ -137,33 +137,33 @@ function x808004_OnDefaultEvent( sceneId, selfId, targetId, menpai )
 		return
 	end
 	
-	--ÃÅÅÉ½±ÀøµÄ±ê¼Ç
+	--é—¨æ´¾å¥–åŠ±çš„æ ‡è®°
 	SetMissionData( sceneId, selfId, MD_MENPAI_BOUNTY, floor( fEqp * 10 + fPet ) )
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x808004_OnEnumerate( sceneId, selfId, targetId )
-	--ÉèÖÃÃÅÅÉ½±ÀøµÄ±ê¼Ç£¬´ËÈÎÎñÖ»ÄÜ½ÓÈ¡Ò»´Î
+	--è®¾ç½®é—¨æ´¾å¥–åŠ±çš„æ ‡è®°ï¼Œæ­¤ä»»åŠ¡åªèƒ½æ¥å–ä¸€æ¬¡
 	local	flag		= GetMissionData( sceneId, selfId, MD_MENPAI_BOUNTY )
 	local	bShiZhuang	= GetMissionData( sceneId, selfId, MD_MENPAI_BOUNTY_SHIZHUANG )
 	local	fEqp	= floor( flag / 10 )
 	local	fPet	= flag - fEqp * 10
 	if fEqp == 0 then
-		AddNumText( sceneId, x808004_g_ScriptId, "ÁìÈ¡×°±¸", 4, x808004_g_Key["eqp"] )
+		AddNumText( sceneId, x808004_g_ScriptId, "é¢†å–è£…å¤‡", 4, x808004_g_Key["eqp"] )
 	end
 	if fPet == 0 then
-		AddNumText( sceneId, x808004_g_ScriptId, "ÁìÈ¡ÕäÊŞ", 4, x808004_g_Key["pet"] )
+		AddNumText( sceneId, x808004_g_ScriptId, "é¢†å–çå…½", 4, x808004_g_Key["pet"] )
 	end
 	if bShiZhuang <= 0 then
-		AddNumText( sceneId, x808004_g_ScriptId, "ÁìÈ¡ÃÅÅÉÊ±×°", 4, x808004_g_Key["menpai"] )
+		AddNumText( sceneId, x808004_g_ScriptId, "é¢†å–é—¨æ´¾æ—¶è£…", 4, x808004_g_Key["menpai"] )
 	end
 	
 end
 
 --**********************************
---¶Ô»°¿òÌáÊ¾
+--å¯¹è¯æ¡†æç¤º
 --**********************************
 function x808004_MsgBox( sceneId, selfId, targetId, msg )
 	BeginEvent( sceneId )
@@ -173,7 +173,7 @@ function x808004_MsgBox( sceneId, selfId, targetId, msg )
 end
 
 --**********************************
---ĞÑÄ¿ÌáÊ¾
+--é†’ç›®æç¤º
 --**********************************
 function x808004_NotifyTip( sceneId, selfId, msg )
 	BeginEvent( sceneId )

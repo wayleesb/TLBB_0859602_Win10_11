@@ -1,30 +1,30 @@
---»î¶¯¡ª¡ª
---ÌìÊ¹Ğ£·ş¼Æ»®
+--æ´»åŠ¨â€”â€”
+--å¤©ä½¿æ ¡æœè®¡åˆ’
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x889057_g_ScriptId = 889057
 
---»î¶¯Ê±¼ä
-x889057_g_startTime = 09097 --»î¶¯¿ªÊ¼Ê±¼ä
-x889057_g_EndTime   = 09150 --»î¶¯½áÊøÊ±¼ä
+--æ´»åŠ¨æ—¶é—´
+x889057_g_startTime = 09097 --æ´»åŠ¨å¼€å§‹æ—¶é—´
+x889057_g_EndTime   = 09150 --æ´»åŠ¨ç»“æŸæ—¶é—´
 
---ÈÎÎñËùĞèµÄÎïÆ·
-x889057_Task1Item = 20600005 --ÊŞÑÀÖ®Íõ
-x889057_Task2Item = 20600006 --¼ÑÈË´¹Çà
+--ä»»åŠ¡æ‰€éœ€çš„ç‰©å“
+x889057_Task1Item = 20600005 --å…½ç‰™ä¹‹ç‹
+x889057_Task2Item = 20600006 --ä½³äººå‚é’
 x889057_Task3Item = {20600007,20600008,20600009}
 
 x889057_Exp = {250000,600000,700000}
 
---³¬¼¶´ó½±ÀñÎï
+--è¶…çº§å¤§å¥–ç¤¼ç‰©
 x889057_GiftId = 30504078
 
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x889057_OnDefaultEvent( sceneId, selfId, targetId )
 		
-		--¼ì²âÊ±¼äÊÇ·ñÕıÈ·
+		--æ£€æµ‹æ—¶é—´æ˜¯å¦æ­£ç¡®
 		if x889057_CheckRightTime() == 0 then
 			return 
 		end
@@ -56,7 +56,7 @@ end
 
 
 --**********************************
---¼ì²âÊÇ·ñÊÇ»î¶¯Ê±¼ä
+--æ£€æµ‹æ˜¯å¦æ˜¯æ´»åŠ¨æ—¶é—´
 --**********************************
 function x889057_CheckRightTime()
 	local curDayTime = GetDayTime()
@@ -68,7 +68,7 @@ function x889057_CheckRightTime()
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x889057_OnEnumerate( sceneId, selfId, targetId )
 		if x889057_CheckRightTime() == 0 then
@@ -81,7 +81,7 @@ end
 
 function x889057_GiveGift(sceneId, selfId, targetId)
 
-	--ÊÇ·ñÈı¸öÈÎÎñÒÑ¾­Íê³É
+	--æ˜¯å¦ä¸‰ä¸ªä»»åŠ¡å·²ç»å®Œæˆ
 	if (GetMissionFlag(sceneId, selfId, MF_TW_BRAVERYCHALLENGE1) ==0 
 		or GetMissionFlag(sceneId, selfId, MF_TW_BRAVERYCHALLENGE22) ==0 
 		or GetMissionFlag(sceneId, selfId, MF_TW_BRAVERYCHALLENGE3) ==0) then
@@ -91,32 +91,32 @@ function x889057_GiveGift(sceneId, selfId, targetId)
 	
 	local weekTime = GetWeekTime();
 	local diJiTian = GetTodayWeek();
-	if diJiTian == 0 then  -- ĞÇÆÚÒ»×÷ÎªÒ»ÖÜ¿ªÊ¼
+	if diJiTian == 0 then  -- æ˜ŸæœŸä¸€ä½œä¸ºä¸€å‘¨å¼€å§‹
 		weekTime = weekTime - 1;
 	end
-	--±¾ÖÜÊÇ·ñÖØÖÃ¹ı
+	--æœ¬å‘¨æ˜¯å¦é‡ç½®è¿‡
 	if GetMissionData(sceneId, selfId, MD_TW_BRAVERYCHALLENGE_GIFT) == weekTime then
 			x889057_NotifyFailBox(sceneId, selfId, targetId, "#{J_YZGSC_090317_19}");
 			return					
 	end
 
-	--µÀ¾ßÀ¸ÊÇ·ñ×ã¹»  
+	--é“å…·æ æ˜¯å¦è¶³å¤Ÿ  
 	if LuaFnGetPropertyBagSpace( sceneId, selfId ) < 1 then
 			x889057_NotifyFailBox(sceneId, selfId,targetId,"#{J_YZGSC_090317_20}")
 			return
 	end
 
-	--ÖØÖÃ±êÖ¾Î»
+	--é‡ç½®æ ‡å¿—ä½
 	SetMissionFlag(sceneId, selfId, MF_TW_BRAVERYCHALLENGE1,0)
 	SetMissionFlag(sceneId, selfId, MF_TW_BRAVERYCHALLENGE22,0)
 	SetMissionFlag(sceneId, selfId, MF_TW_BRAVERYCHALLENGE3,0)
 
 	SetMissionData(sceneId, selfId, MD_TW_BRAVERYCHALLENGE_GIFT, weekTime);
 
-	--¸øÍæ¼Ò¶«Î÷£¬Íê³É
+	--ç»™ç©å®¶ä¸œè¥¿ï¼Œå®Œæˆ
 	local	bagpos = -1
 	bagpos = TryRecieveItem( sceneId, selfId, x889057_GiftId, QUALITY_MUST_BE_CHANGE )
-		--¶Ô»°¿òÌáÊ¾
+		--å¯¹è¯æ¡†æç¤º
 	x889057_NotifyFailBox(sceneId,selfId,targetId,"#{J_YZGSC_090317_21}")
 	if (bagpos ~= -1) then
 		 local ItemInfo = GetBagItemTransfer( sceneId, selfId, bagpos )
@@ -125,16 +125,16 @@ function x889057_GiveGift(sceneId, selfId, targetId)
 	end 
 
 
-	--Í³¼ÆÈÕÖ¾
+	--ç»Ÿè®¡æ—¥å¿—
 	AuditBravertChallenge(sceneId, selfId,5)
 	
 end
 --**********************************
--- ²Î¼ÓÌôÕ½ÈÎÎñÒ»
+-- å‚åŠ æŒ‘æˆ˜ä»»åŠ¡ä¸€
 --**********************************
 function x889057_Task1(sceneId, selfId, targetId)
 	
-	--ÊÇ·ñ²Î¼Ó¹ı¸Ã»î¶¯
+	--æ˜¯å¦å‚åŠ è¿‡è¯¥æ´»åŠ¨
 	local bHave = GetMissionFlag(sceneId, selfId, MF_TW_BRAVERYCHALLENGE1)
 	if (bHave == 1) then
 			x889057_NotifyFailBox(sceneId, selfId,targetId,"#{J_YZGSC_090317_8}")
@@ -155,11 +155,11 @@ function x889057_Task1(sceneId, selfId, targetId)
 end
 
 --**********************************
--- ²Î¼ÓÌôÕ½ÈÎÎñ¶ş 
+-- å‚åŠ æŒ‘æˆ˜ä»»åŠ¡äºŒ 
 --**********************************
 function x889057_Task2(sceneId, selfId, targetId)
 
-	--ÊÇ·ñ²Î¼Ó¹ı¸Ã»î¶¯
+	--æ˜¯å¦å‚åŠ è¿‡è¯¥æ´»åŠ¨
 	local bHave = GetMissionFlag(sceneId, selfId, MF_TW_BRAVERYCHALLENGE22)
 	if (bHave == 1) then
 			x889057_NotifyFailBox(sceneId, selfId,targetId,"#{J_YZGSC_090317_8}")
@@ -180,11 +180,11 @@ function x889057_Task2(sceneId, selfId, targetId)
 end
 
 --**********************************
--- ²Î¼ÓÌôÕ½ÈÎÎñÈı 
+-- å‚åŠ æŒ‘æˆ˜ä»»åŠ¡ä¸‰ 
 --**********************************
 function x889057_Task3(sceneId, selfId, targetId)
 
-	--ÊÇ·ñ²Î¼Ó¹ı¸Ã»î¶¯
+	--æ˜¯å¦å‚åŠ è¿‡è¯¥æ´»åŠ¨
 	local bHave = GetMissionFlag(sceneId, selfId, MF_TW_BRAVERYCHALLENGE3)
 	if (bHave == 1) then
 			x889057_NotifyFailBox(sceneId, selfId,targetId,"#{J_YZGSC_090317_8}")
@@ -209,27 +209,27 @@ function x889057_Task3(sceneId, selfId, targetId)
 end
 
 --**********************************
--- ÖØÖÃ 
+-- é‡ç½® 
 --**********************************
 function x889057_Reset(sceneId, selfId, targetId)
 	BeginEvent( sceneId )
 		AddText( sceneId,"#{J_YZGSC_090317_15}")
-		AddNumText(sceneId, x889057_g_ScriptId, "È·¶¨", 6, 41)
-		AddNumText(sceneId, x889057_g_ScriptId, "È¡Ïû", 6, 42)
+		AddNumText(sceneId, x889057_g_ScriptId, "ç¡®å®š", 6, 41)
+		AddNumText(sceneId, x889057_g_ScriptId, "å–æ¶ˆ", 6, 42)
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 end
 
 --**********************************
--- ÖØÖÃ
+-- é‡ç½®
 --**********************************
 function x889057_Reset_OK(sceneId, selfId, targetId)
 	local weekTime = GetWeekTime();
 	local diJiTian = GetTodayWeek();
-	if diJiTian == 0 then  -- ĞÇÆÚÒ»×÷ÎªÒ»ÖÜ¿ªÊ¼
+	if diJiTian == 0 then  -- æ˜ŸæœŸä¸€ä½œä¸ºä¸€å‘¨å¼€å§‹
 		weekTime = weekTime - 1;
 	end
-	--±¾ÖÜÊÇ·ñÖØÖÃ¹ı
+	--æœ¬å‘¨æ˜¯å¦é‡ç½®è¿‡
 	if GetMissionData(sceneId, selfId, MD_TW_BRAVERYCHALLENGE_RESET) == weekTime then
 			x889057_NotifyFailBox(sceneId, selfId, targetId, "#{J_YZGSC_090317_16}");
 			return					
@@ -240,11 +240,11 @@ function x889057_Reset_OK(sceneId, selfId, targetId)
 		x889057_NotifyFailBox(sceneId, selfId,targetId,"#{J_YZGSC_090317_17}")
 		return
 	end 
-	--ÖØÖÃ
+	--é‡ç½®
 	SetMissionFlag(sceneId, selfId, MF_TW_BRAVERYCHALLENGE1, 0)
 	SetMissionFlag(sceneId, selfId, MF_TW_BRAVERYCHALLENGE22, 0)
 	SetMissionFlag(sceneId, selfId, MF_TW_BRAVERYCHALLENGE3, 0)
-	-- ÉèÖÃ¶Ò½±Ê±¼ä
+	-- è®¾ç½®å…‘å¥–æ—¶é—´
 	SetMissionData(sceneId, selfId, MD_TW_BRAVERYCHALLENGE_RESET, weekTime);
 	AuditBravertChallenge(sceneId, selfId, 4)
 	x889057_NotifyFailBox(sceneId, selfId, targetId, "#{J_YZGSC_090317_25}");
@@ -264,10 +264,10 @@ function x889057_Reset_Init(sceneId, selfId, targetId)
 end
 
 --**********************************
--- ¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+-- å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x889057_NotifySucessBox( sceneId, selfId,msg )
-	--ĞÑÄ¿ÌáÊ¾
+	--é†’ç›®æç¤º
 		BeginEvent(sceneId) 
 			AddText( sceneId,msg)
 		EndEvent(sceneId)
@@ -276,7 +276,7 @@ end
 
 
 --**********************************
--- ¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+-- å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x889057_NotifyFailBox( sceneId, selfId,targetId, msg )
 	BeginEvent( sceneId )
@@ -286,55 +286,55 @@ function x889057_NotifyFailBox( sceneId, selfId,targetId, msg )
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x889057_CheckAccept( sceneId, selfId )
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x889057_OnAccept( sceneId, selfId )
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x889057_OnAbandon( sceneId, selfId )
 end
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x889057_OnContinue( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x889057_CheckSubmit( sceneId, selfId )
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x889057_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 end
 
 --**********************************
---É±ËÀ¹ÖÎï»òÍæ¼Ò
+--æ€æ­»æ€ªç‰©æˆ–ç©å®¶
 --**********************************
 function x889057_OnKillObject( sceneId, selfId, objdataId ,objId )
 end
 
 --**********************************
---½øÈëÇøÓòÊÂ¼ş
+--è¿›å…¥åŒºåŸŸäº‹ä»¶
 --**********************************
 function x889057_OnEnterArea( sceneId, selfId, zoneId )
 end
 
 --**********************************
---µÀ¾ß¸Ä±ä
+--é“å…·æ”¹å˜
 --**********************************
 function x889057_OnItemChanged( sceneId, selfId, itemdataId )
 end

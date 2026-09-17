@@ -3,21 +3,21 @@ x808099_g_ScriptId	= 808099
 x808099_g_Position_X=207.4352
 x808099_g_Position_Z=49.5008
 x808099_g_SceneID=24
-x808099_g_AccomplishNPC_Name="µ¶Ò¢"
+x808099_g_AccomplishNPC_Name="åˆ€å°§"
 x808099_g_MissionId			= 1005
 x808099_g_MissionIdNext	= 1006
 x808099_g_AcceptNPC_SceneID	=	2
-x808099_g_Name 					= "ÉêÇé"
+x808099_g_Name 					= "ç”³æƒ…"
 x808099_g_MissionKind			= 13
 x808099_g_MissionLevel		= 10
 x808099_g_IfMissionElite	= 0
-x808099_g_IsMissionOkFail	= 0		--ÈÎÎñ²ÎÊıµÄµÚ0Î»
-x808099_g_MissionName			= "ĞÜĞÜµÄÊ¥»ğ"
+x808099_g_IsMissionOkFail	= 0		--ä»»åŠ¡å‚æ•°çš„ç¬¬0ä½
+x808099_g_MissionName			= "ç†Šç†Šçš„åœ£ç«"
 x808099_g_MissionInfo			= "#{XSHCD_20080418_020}"
 x808099_g_MissionTarget		= "#{XSHCD_20080418_046}"
 x808099_g_ContinueInfo		= "#{XSHCD_20080418_021}"
 x808099_g_MissionComplete	= "#{XSHCD_20080418_022}"
 x808099_g_MaxRound	= 3
 x808099_g_ControlScript		= 001066
-x808099_g_Custom	= { {id="ÒÑ½«»ğ¾æ½»¸ø¶ıº£µÄµ¶Ò¢",num=1} }
+x808099_g_Custom	= { {id="å·²å°†ç«ç‚¬äº¤ç»™æ´±æµ·çš„åˆ€å°§",num=1} }
 --MisDescEnd

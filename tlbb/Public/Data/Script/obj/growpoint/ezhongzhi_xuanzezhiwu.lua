@@ -1,18 +1,18 @@
---Ñ¡ÔñÖ²ÎïµÄ½Å±¾
+--é€‰æ‹©æ¤ç‰©çš„è„šæœ¬
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x713550_g_scriptId = 713550
 
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êý
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x713550_OnDefaultEvent( sceneId, selfId, targetId, zhiwuId )
 	local num =0
-	--ÅÐ¶ÏÖÖÖ²ÅÆµÄÎ»ÖÃ
+	--åˆ¤æ–­ç§æ¤ç‰Œçš„ä½ç½®
 	local PlantFlag_X
 	local PlantFlag_Z
-	PlantFlag_X,PlantFlag_Z =  GetWorldPos(sceneId,targetId)	--µÃµ½npc×ø±ê
+	PlantFlag_X,PlantFlag_Z =  GetWorldPos(sceneId,targetId)	--å¾—åˆ°npcåæ ‡
 	PlantFlag_X = floor(PlantFlag_X)
 	PlantFlag_Z = floor(PlantFlag_Z)
 
@@ -22,26 +22,26 @@ function x713550_OnDefaultEvent( sceneId, selfId, targetId, zhiwuId )
 			break
 		end
 	end
-	--Èç¹ûÃ»ÕÒµ½¶ÔÓ¦Î»ÖÃ
+	--å¦‚æžœæ²¡æ‰¾åˆ°å¯¹åº”ä½ç½®
 	if num == 0 then
 		BeginEvent(sceneId)
-			AddText(sceneId, "Ë®ÍÁÁ÷Ê§£¬Çë°®»¤´ó×ÔÈ»£¡")
+			AddText(sceneId, "æ°´åœŸæµå¤±ï¼Œè¯·çˆ±æŠ¤å¤§è‡ªç„¶ï¼")
 		EndEvent(sceneId)
 		DispatchEventList(sceneId, selfId, targetId)
 		return
 	end
-	--Èç¹ûÍÁµØ²»ÊÇÏÐÖÃ×´Ì¬
+	--å¦‚æžœåœŸåœ°ä¸æ˜¯é—²ç½®çŠ¶æ€
 	if	PLANTFLAG[num] ~= 0 then
 		BeginEvent(sceneId)
-			AddText(sceneId, "ÍÁµØÒÑ±»ÖÖÖ²£¬Çë¹ýÒ»»á¶ùÔÙÀ´°É£¡")
+			AddText(sceneId, "åœŸåœ°å·²è¢«ç§æ¤ï¼Œè¯·è¿‡ä¸€ä¼šå„¿å†æ¥å§ï¼")
 		EndEvent(sceneId)
 		DispatchEventList(sceneId, selfId, targetId)
 		return
 	end
 
-	--Èç¹û»îÁ¦²»×ã
+	--å¦‚æžœæ´»åŠ›ä¸è¶³
 	x713550_g_energy = GetHumanEnergy(sceneId,selfId)
-	--²éÕÒÖ²ÎïµÈ¼¶
+	--æŸ¥æ‰¾æ¤ç‰©ç­‰çº§
 	local level_Index
 	if zhiwuId >= getn(V_ZHONGZHI_ID) then
 		level_Index = zhiwuId-getn(V_ZHONGZHI_NAME)/2
@@ -54,14 +54,14 @@ function x713550_OnDefaultEvent( sceneId, selfId, targetId, zhiwuId )
 	local EnergyCost = CallScriptFunction( ABILITYLOGIC_ID, "CalcEnergyCostCaiJi", sceneId, selfId, ABILITY_ZHONGZHI, x713550_g_ZhiWuLevel )
 	if x713550_g_energy < EnergyCost then
 		BeginEvent(sceneId)
-			AddText(sceneId, "ÄãµÄ¾«Á¦²»×ã!")
+			AddText(sceneId, "ä½ çš„ç²¾åŠ›ä¸è¶³!")
 		EndEvent(sceneId)
 		DispatchEventList(sceneId, selfId, targetId)
 		return
 	end
 
-	--ÅÐ¶ÏÍæ¼ÒÊÇ·ñÔÚN·ÖÖÓÄÚÖÖÖ²ÁË£¬Èç¹ûÔÚN·ÖÖÓÄÚÖÖÖ²ÁË£¬Ôò²»ÔÊÐíÔÙÖÖ£¬³¬¹ýN·ÖÖÓÔò¿ÉÒÔ
-	--missiondataÄ¬ÈÏÖµÊÇ0£¬ÖØÐÂÆô¶¯·þÎñÆ÷²»»á±ä
+	--åˆ¤æ–­çŽ©å®¶æ˜¯å¦åœ¨Nåˆ†é’Ÿå†…ç§æ¤äº†ï¼Œå¦‚æžœåœ¨Nåˆ†é’Ÿå†…ç§æ¤äº†ï¼Œåˆ™ä¸å…è®¸å†ç§ï¼Œè¶…è¿‡Nåˆ†é’Ÿåˆ™å¯ä»¥
+	--missiondataé»˜è®¤å€¼æ˜¯0ï¼Œé‡æ–°å¯åŠ¨æœåŠ¡å™¨ä¸ä¼šå˜
 	local CurrentTime = LuaFnGetCurrentTime()
 	local MissionData = GetMissionData(sceneId,selfId,MD_ZHONGZHI_TIME)
 	local Zhongzhi_Flag =  GetMissionData(sceneId,selfId,MD_ZHONGZHI_FLAG)
@@ -76,18 +76,18 @@ function x713550_OnDefaultEvent( sceneId, selfId, targetId, zhiwuId )
 		
 		WaitTime = floor(WaitTime/60)
 		BeginEvent(sceneId)
-			AddText(sceneId, "²»ÄÜÁ¬ÐøÖÖÖ²£¬´óÔ¼"..WaitTime.."·ÖÖÓºó¿ÉÒÔÔÙ´ÎÖÖÖ²¡£")
+			AddText(sceneId, "ä¸èƒ½è¿žç»­ç§æ¤ï¼Œå¤§çº¦"..WaitTime.."åˆ†é’ŸåŽå¯ä»¥å†æ¬¡ç§æ¤ã€‚")
 		EndEvent(sceneId)
 		DispatchEventList(sceneId, selfId, targetId)
 		return
 	end
-	--Í³¼ÆÊý¾Ý
+	--ç»Ÿè®¡æ•°æ®
 	LuaFnAuditAbility(sceneId, selfId, ABILITY_ZHONGZHI, -1, -1)
-	--Ôö¼ÓÊìÁ·¶È
+	--å¢žåŠ ç†Ÿç»ƒåº¦
 	CallScriptFunction(ABILITYLOGIC_ID, "GainExperience", sceneId, selfId, ABILITY_ZHONGZHI, x713550_g_ZhiWuLevel)
-	--É¾³ýÏàÓ¦»îÁ¦
+	--åˆ é™¤ç›¸åº”æ´»åŠ›
 		CallScriptFunction(ABILITYLOGIC_ID, "EnergyCostZhongZhi", sceneId, selfId, ABILITY_ZHONGZHI, x713550_g_ZhiWuLevel)
-	--·ÅÖÃÉú³¤µã
+	--æ”¾ç½®ç”Ÿé•¿ç‚¹
 
 	ItemBoxTypeId = V_ZHONGZHI_ITEMBOX_ID[zhiwuId]
 
@@ -99,10 +99,10 @@ function x713550_OnDefaultEvent( sceneId, selfId, targetId, zhiwuId )
 	SetItemBoxMaxGrowTime(sceneId,ItemBoxId02,45000)
 	SetItemBoxMaxGrowTime(sceneId,ItemBoxId03,45000)
 	SetItemBoxMaxGrowTime(sceneId,ItemBoxId04,45000)
-	--µÃµ½guid
+	--å¾—åˆ°guid
 	local guid = GetHumanGUID(sceneId,selfId)
 
-	--¸øItemBoxÉè¶¨Ö÷ÈË
+	--ç»™ItemBoxè®¾å®šä¸»äºº
 	SetItemBoxOwner(sceneId,ItemBoxId01,guid)
 	SetItemBoxOwner(sceneId,ItemBoxId02,guid)
 	SetItemBoxOwner(sceneId,ItemBoxId03,guid)
@@ -110,11 +110,11 @@ function x713550_OnDefaultEvent( sceneId, selfId, targetId, zhiwuId )
 
 	PLANTFLAG[num] = 8
 	BeginEvent(sceneId)
-		AddText(sceneId, "ÄãÒÑ¾­¿ªÊ¼ÖÖÖ²")
+		AddText(sceneId, "ä½ å·²ç»å¼€å§‹ç§æ¤")
 	EndEvent(sceneId)
 	DispatchEventList(sceneId, selfId, targetId)
 
-	--°ÑmissiondataÉèÖÃÎªµ±Ç°Ê±¼ä
+	--æŠŠmissiondataè®¾ç½®ä¸ºå½“å‰æ—¶é—´
 	SetMissionData(sceneId,selfId,MD_ZHONGZHI_TIME,CurrentTime)
 	
 	if zhiwuId >= getn(V_ZHONGZHI_ID) then

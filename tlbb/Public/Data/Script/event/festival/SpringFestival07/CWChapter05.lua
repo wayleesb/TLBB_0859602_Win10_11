@@ -1,18 +1,18 @@
---BOSS´ºÍí 05ºÅ½ÚÄ¿
+--BOSSæ˜¥æ™š 05å·èŠ‚ç›®
 
---·ÉÌìÃ¨-½¡¿µ¸è
+--é£å¤©çŒ«-å¥åº·æ­Œ
 
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x050035_g_scriptId = 050035
 
---´ºÍíÖ÷¿Ø½Å±¾½Å±¾ºÅ....
+--æ˜¥æ™šä¸»æ§è„šæœ¬è„šæœ¬å·....
 x050035_g_MainScriptId = 050030
 
---±¾½ÚÄ¿µÄ½ÚÄ¿ºÅ....
+--æœ¬èŠ‚ç›®çš„èŠ‚ç›®å·....
 x050035_g_ChapterId = 5
 
---¶¯×÷²¥·Å±í....
+--åŠ¨ä½œæ’­æ”¾è¡¨....
 x050035_g_ActionTbl = {
 
 	[49] = { [100]=453 },
@@ -26,11 +26,11 @@ x050035_g_ActionTbl = {
 }
 
 --**********************************
---¿ªÊ¼±¾½ÚÄ¿....
+--å¼€å§‹æœ¬èŠ‚ç›®....
 --**********************************
 function x050035_OnStartThisChapter( sceneId )
 
-	--´´½¨ËïÃÀÃÀ....
+	--åˆ›å»ºå­™ç¾ç¾....
 	local MstId = -1
 	MstId = CallScriptFunction( x050035_g_MainScriptId, "CreateBossActor", sceneId, "SunMeiMei", 160, 110 )
 	SetPatrolId(sceneId, MstId, 49)
@@ -38,22 +38,22 @@ function x050035_OnStartThisChapter( sceneId )
 end
 
 --**********************************
---¹ÖÎïÑ²Âßµ½Ä³µãÊ±»Øµ÷±¾½Ó¿Ú....
+--æ€ªç‰©å·¡é€»åˆ°æŸç‚¹æ—¶å›è°ƒæœ¬æ¥å£....
 --**********************************
 function x050035_OnPatrolPoint( sceneId, objId, patrolPathIndex, patrolPointIndex, paopaoIndex	)
 
-	--Èç¹û¶¯×÷±íÖĞÅäÖÃÁË¶¯×÷Ôò²¥·Å¶¯×÷....
+	--å¦‚æœåŠ¨ä½œè¡¨ä¸­é…ç½®äº†åŠ¨ä½œåˆ™æ’­æ”¾åŠ¨ä½œ....
 	x050035_PlayAct( sceneId, objId, patrolPathIndex, patrolPointIndex, paopaoIndex	)
 
 
-	--ËïÃÀÃÀ×ßµ½´ËµãÊ±....
+	--å­™ç¾ç¾èµ°åˆ°æ­¤ç‚¹æ—¶....
 	if patrolPointIndex == 2 and paopaoIndex == -1 then
 
 		if 0 == CallScriptFunction( x050035_g_MainScriptId, "IsSpecificBossActor", sceneId, "SunMeiMei", objId ) then
 			return
 		end
 
-		--´´½¨Ğ¡Ó¥Ó¥..Ğ¡ÖíÖí..·ÉÌìÃ¨..Ğ¡¹·¹·..Ğ¡»¢»¢....
+		--åˆ›å»ºå°é¹°é¹°..å°çŒªçŒª..é£å¤©çŒ«..å°ç‹—ç‹—..å°è™è™....
 		local MstId = -1
 		MstId = CallScriptFunction( x050035_g_MainScriptId, "CreateBossActor", sceneId, "YingYing", 158, 106 )
 		SetPatrolId(sceneId, MstId, 19)
@@ -66,7 +66,7 @@ function x050035_OnPatrolPoint( sceneId, objId, patrolPathIndex, patrolPointInde
 		MstId = CallScriptFunction( x050035_g_MainScriptId, "CreateBossActor", sceneId, "HuHu", 161, 106 )
 		SetPatrolId(sceneId, MstId, 23)
 
-		--É¾³ıËïÃÀÃÀ....
+		--åˆ é™¤å­™ç¾ç¾....
 		CallScriptFunction( x050035_g_MainScriptId, "DeleteBossActor", sceneId, "SunMeiMei", objId )
 
 		return
@@ -74,7 +74,7 @@ function x050035_OnPatrolPoint( sceneId, objId, patrolPathIndex, patrolPointInde
 	end
 
 
-	--É¾³ıĞ¡Ó¥Ó¥..Ğ¡ÖíÖí..·ÉÌìÃ¨..Ğ¡¹·¹·..Ğ¡»¢»¢....
+	--åˆ é™¤å°é¹°é¹°..å°çŒªçŒª..é£å¤©çŒ«..å°ç‹—ç‹—..å°è™è™....
 	if patrolPointIndex == 12 and paopaoIndex == -1 then
 
 		if 1 == CallScriptFunction( x050035_g_MainScriptId, "IsSpecificBossActor", sceneId, "YingYing", objId ) then
@@ -87,7 +87,7 @@ function x050035_OnPatrolPoint( sceneId, objId, patrolPathIndex, patrolPointInde
 			CallScriptFunction( x050035_g_MainScriptId, "DeleteBossActor", sceneId, "GouGou", objId )
 		elseif 1 == CallScriptFunction( x050035_g_MainScriptId, "IsSpecificBossActor", sceneId, "HuHu", objId ) then
 			CallScriptFunction( x050035_g_MainScriptId, "DeleteBossActor", sceneId, "HuHu", objId )
-			--±¾½ÚÄ¿½áÊø....
+			--æœ¬èŠ‚ç›®ç»“æŸ....
 			x050035_OnEndThisChapter( sceneId )
 		end
 
@@ -96,7 +96,7 @@ function x050035_OnPatrolPoint( sceneId, objId, patrolPathIndex, patrolPointInde
 end
 
 --**********************************
---½áÊø±¾½ÚÄ¿....
+--ç»“æŸæœ¬èŠ‚ç›®....
 --**********************************
 function x050035_OnEndThisChapter( sceneId )
 
@@ -105,7 +105,7 @@ function x050035_OnEndThisChapter( sceneId )
 end
 
 --**********************************
---²¥·Å¶¯×÷±íÖĞÄ³¸ö¶¯×÷....
+--æ’­æ”¾åŠ¨ä½œè¡¨ä¸­æŸä¸ªåŠ¨ä½œ....
 --**********************************
 function x050035_PlayAct( sceneId, objId, patrolPathIndex, patrolPointIndex, paopaoIndex	)
 

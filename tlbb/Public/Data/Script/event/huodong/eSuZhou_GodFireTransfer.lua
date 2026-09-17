@@ -1,105 +1,105 @@
---´´½¨ÈË[ QUFEI 2008-03-05 10:27 UPDATE BugID 32710 ]
---ËÕÖİ¹êÍÃÈüÅÜÈÎÎñÊÂ¼ş½Å±¾
---±¾»î¶¯Ã¿Ìì¿ªÆôÈı´Î,Ã¿¸öÍæ¼ÒÃ¿ÌìÖ»ÄÜ²Î¼ÓÒ»´Î
+--åˆ›å»ºäºº[ QUFEI 2008-03-05 10:27 UPDATE BugID 32710 ]
+--è‹å·é¾Ÿå…”èµ›è·‘ä»»åŠ¡äº‹ä»¶è„šæœ¬
+--æœ¬æ´»åŠ¨æ¯å¤©å¼€å¯ä¸‰æ¬¡,æ¯ä¸ªç©å®¶æ¯å¤©åªèƒ½å‚åŠ ä¸€æ¬¡
 
 --MisDescBegin
---½Å±¾ºÅ
+--è„šæœ¬å·
 x808081_g_ScriptId	= 808081
 
---½ÓÊÜÈÎÎñNPCÊôĞÔ
+--æ¥å—ä»»åŠ¡NPCå±æ€§
 x808081_g_Position_X=234.7967
 x808081_g_Position_Z=78.4228
 x808081_g_SceneID=1
-x808081_g_AccomplishNPC_Name="Â½Ê¿ï£"
+x808081_g_AccomplishNPC_Name="é™†å£«é“®"
 
---ÈÎÎñºÅ
+--ä»»åŠ¡å·
 x808081_g_MissionId			= 1000
---ÏÂÒ»¸öÈÎÎñµÄID
+--ä¸‹ä¸€ä¸ªä»»åŠ¡çš„ID
 x808081_g_MissionIdNext	= 1000
---ÈÎÎñÄ¿±ênpc
-x808081_g_Name 					= "Â½Ê¿ï£"
---ÈÎÎñ¹éÀà
+--ä»»åŠ¡ç›®æ ‡npc
+x808081_g_Name 					= "é™†å£«é“®"
+--ä»»åŠ¡å½’ç±»
 x808081_g_MissionKind			= 13
---ÈÎÎñµÈ¼¶
+--ä»»åŠ¡ç­‰çº§
 x808081_g_MissionLevel		= 20
---ÊÇ·ñÊÇ¾«Ó¢ÈÎÎñ
+--æ˜¯å¦æ˜¯ç²¾è‹±ä»»åŠ¡
 x808081_g_IfMissionElite	= 0
---ÈÎÎñÊÇ·ñÒÑ¾­Íê³É
-x808081_g_IsMissionOkFail	= 0		--ÈÎÎñ²ÎÊıµÄµÚ0Î»
+--ä»»åŠ¡æ˜¯å¦å·²ç»å®Œæˆ
+x808081_g_IsMissionOkFail	= 0		--ä»»åŠ¡å‚æ•°çš„ç¬¬0ä½
 
---ÈÎÎñÎÄ±¾ÃèÊö
-x808081_g_MissionName			= "¹êÍÃÈüÅÜÈÎÎñ"
---ÈÎÎñÃèÊö
+--ä»»åŠ¡æ–‡æœ¬æè¿°
+x808081_g_MissionName			= "é¾Ÿå…”èµ›è·‘ä»»åŠ¡"
+--ä»»åŠ¡æè¿°
 x808081_g_MissionInfo			= "#{GodFire_Info_001}"
---ÈÎÎñÄ¿±ê
+--ä»»åŠ¡ç›®æ ‡
 x808081_g_MissionTarget		= "#{GodFire_Info_005}"
---Î´Íê³ÉÈÎÎñµÄnpc¶Ô»°
+--æœªå®Œæˆä»»åŠ¡çš„npcå¯¹è¯
 x808081_g_ContinueInfo		= "#{GodFire_Info_007}"
---Íê³ÉÈÎÎñnpcËµµÄ»°
+--å®Œæˆä»»åŠ¡npcè¯´çš„è¯
 x808081_g_MissionComplete	= "#{GodFire_Info_008}"
---Ã¿´Î¹êÍÃÈüÅÜ´«µİ»î¶¯ĞèÒª´ò¿¨µÄ³ÇÊĞ×ÜÊı
+--æ¯æ¬¡é¾Ÿå…”èµ›è·‘ä¼ é€’æ´»åŠ¨éœ€è¦æ‰“å¡çš„åŸå¸‚æ€»æ•°
 x808081_g_MaxRound	= 3
---¿ØÖÆ½Å±¾
+--æ§åˆ¶è„šæœ¬
 x808081_g_ControlScript		= 001066
 
--- ÈÎÎñÍê³ÉÇé¿ö,ÄÚÈİ¶¯Ì¬Ë¢ĞÂ,·Ö±ğÕ¼ÓÃÈÎÎñ²ÎÊıµÄµÚ1,2,3,4Î»
-x808081_g_Custom	= { {id="ÒÑÓëÂåÑôµÄÕÔÃ÷³Ï¶Ô»°",num=1}, {id="ÒÑÓëËÕÖİµÄÂ½Ê¿ï£¶Ô»°",num=1}, {id="ÒÑÓë´óÀíµÄÍõÈôÓí¶Ô»°",num=1}, {id="ÒÑµãÈ¼È«²¿¿×Ã÷µÆ",num=24} }
+-- ä»»åŠ¡å®Œæˆæƒ…å†µ,å†…å®¹åŠ¨æ€åˆ·æ–°,åˆ†åˆ«å ç”¨ä»»åŠ¡å‚æ•°çš„ç¬¬1,2,3,4ä½
+x808081_g_Custom	= { {id="å·²ä¸æ´›é˜³çš„èµµæ˜è¯šå¯¹è¯",num=1}, {id="å·²ä¸è‹å·çš„é™†å£«é“®å¯¹è¯",num=1}, {id="å·²ä¸å¤§ç†çš„ç‹è‹¥ç¦¹å¯¹è¯",num=1}, {id="å·²ç‚¹ç‡ƒå…¨éƒ¨å­”æ˜ç¯",num=24} }
 --MisDescEnd
 
---ÈÎÎñÊÇ·ñÍê³É
-x808081_g_Mission_IsComplete = 0		--ÈÎÎñ²ÎÊıµÄµÚ0Î»
---»ğ°ÑËÕÖİ´ò¿¨±ê¼Ç
-x808081_g_RecordIdx 				 = 2		--ÈÎÎñ²ÎÊıµÄµÚ2Î» 1.ÂåÑô 2.ËÕÖİ 3.´óÀí
---¿×Ã÷µÆÍê³ÉÊıÁ¿±ê¼Ç
-x808081_g_KongMing_Lighten	 = 4		--ÈÎÎñ²ÎÊıµÄµÚ4Î»
---ÈÎÎñ½Å±¾ºÅ¼ÇÂ¼
-x808081_g_MissScriptID_Idx	 = 5		--ÈÎÎñ²ÎÊıµÄµÚ5Î»
---ÈÎÎñ·¢²¼NPC±ê¼Ç
-x808081_g_AcceptNPC_Idx			 = 6		--ÈÎÎñ²ÎÊıµÄµÚ6Î» 1.ÂåÑôNPC 2.ËÕÖİNPC 3.´óÀíNPC
---¹êÍÃÈüÅÜÈÎÎñÃ¿ÌìÂÖÊı±ê¼Ç
-x808081_g_RoundIndex 				 = 7		--ÈÎÎñ²ÎÊıµÄµÚ7Î»
+--ä»»åŠ¡æ˜¯å¦å®Œæˆ
+x808081_g_Mission_IsComplete = 0		--ä»»åŠ¡å‚æ•°çš„ç¬¬0ä½
+--ç«æŠŠè‹å·æ‰“å¡æ ‡è®°
+x808081_g_RecordIdx 				 = 2		--ä»»åŠ¡å‚æ•°çš„ç¬¬2ä½ 1.æ´›é˜³ 2.è‹å· 3.å¤§ç†
+--å­”æ˜ç¯å®Œæˆæ•°é‡æ ‡è®°
+x808081_g_KongMing_Lighten	 = 4		--ä»»åŠ¡å‚æ•°çš„ç¬¬4ä½
+--ä»»åŠ¡è„šæœ¬å·è®°å½•
+x808081_g_MissScriptID_Idx	 = 5		--ä»»åŠ¡å‚æ•°çš„ç¬¬5ä½
+--ä»»åŠ¡å‘å¸ƒNPCæ ‡è®°
+x808081_g_AcceptNPC_Idx			 = 6		--ä»»åŠ¡å‚æ•°çš„ç¬¬6ä½ 1.æ´›é˜³NPC 2.è‹å·NPC 3.å¤§ç†NPC
+--é¾Ÿå…”èµ›è·‘ä»»åŠ¡æ¯å¤©è½®æ•°æ ‡è®°
+x808081_g_RoundIndex 				 = 7		--ä»»åŠ¡å‚æ•°çš„ç¬¬7ä½
 
 
-x808081_g_AcceptMission_IDX		= 620	--»ğ°Ñ½ÓÊÕÈÎÎñË÷Òı
-x808081_g_CompleteMission_IDX	= 621	--»ğ°ÑÌá½»ÈÎÎñË÷Òı
-x808081_g_MissionInfo_IDX			= 622	--ÈÎÎñËµÃ÷Ë÷Òı
+x808081_g_AcceptMission_IDX		= 620	--ç«æŠŠæ¥æ”¶ä»»åŠ¡ç´¢å¼•
+x808081_g_CompleteMission_IDX	= 621	--ç«æŠŠæäº¤ä»»åŠ¡ç´¢å¼•
+x808081_g_MissionInfo_IDX			= 622	--ä»»åŠ¡è¯´æ˜ç´¢å¼•
 
-x808081_g_Jion_Count = 0						--±¨ÃûÈËÊı±ê¼Ç
-x808081_g_Join_CountMax = 50				--±¨ÃûÈËÊıÉÏÏŞ
+x808081_g_Jion_Count = 0						--æŠ¥åäººæ•°æ ‡è®°
+x808081_g_Join_CountMax = 50				--æŠ¥åäººæ•°ä¸Šé™
 
-x808081_g_KongMingLighten_MaxCnt	=	24	-- ¹êÍÃÈüÅÜ»î¶¯ĞèÒªµãÈ¼µÄ¿×Ã÷µÆ×ÜÊı
+x808081_g_KongMingLighten_MaxCnt	=	24	-- é¾Ÿå…”èµ›è·‘æ´»åŠ¨éœ€è¦ç‚¹ç‡ƒçš„å­”æ˜ç¯æ€»æ•°
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x808081_g_EventList	= {}
 
-x808081_g_Impact_Accept_Mission 	= 47	-- ½ÓÊÜÈÎÎñÊ±µÄÌØĞ§ID
-x808081_g_Impact_Light_Complete 	= 38	-- µãÁÁ¿×Ã÷µÆÊ±µÄÌØĞ§
-x808081_g_Impact_Transport_Mission = 113 -- ÔËÊä×´Ì¬ÌØĞ§
-x808081_g_Impact_GodOfFire_Mission = 5929 -- ¹êÍÃÈüÅÜ×´Ì¬ÌØĞ§
-x808081_g_PlayerSlow_LVL					= 20	-- ½ÓÊÜÈÎÎñµÄ×îµÍµÈ¼¶
+x808081_g_Impact_Accept_Mission 	= 47	-- æ¥å—ä»»åŠ¡æ—¶çš„ç‰¹æ•ˆID
+x808081_g_Impact_Light_Complete 	= 38	-- ç‚¹äº®å­”æ˜ç¯æ—¶çš„ç‰¹æ•ˆ
+x808081_g_Impact_Transport_Mission = 113 -- è¿è¾“çŠ¶æ€ç‰¹æ•ˆ
+x808081_g_Impact_GodOfFire_Mission = 5929 -- é¾Ÿå…”èµ›è·‘çŠ¶æ€ç‰¹æ•ˆ
+x808081_g_PlayerSlow_LVL					= 20	-- æ¥å—ä»»åŠ¡çš„æœ€ä½ç­‰çº§
 
--- ±¨Ãû³ÖĞøÊ±¼ä(·ÖÖÓ)
+-- æŠ¥åæŒç»­æ—¶é—´(åˆ†é’Ÿ)
 x808081_g_Along_Time							= 5
--- Ã¿Ìì¹êÍÃÈüÅÜ»î¶¯¿ªÆôÊ±¼ä
+-- æ¯å¤©é¾Ÿå…”èµ›è·‘æ´»åŠ¨å¼€å¯æ—¶é—´
 x808081_g_ActivityTime						= { {tstart=1230, tend=1330},
 																		  {tstart=1930, tend=2030},
 																		  {tstart=2130, tend=2230} }
 
-x808081_g_ItemId = { id=40004444,num=1 }				-- ÈÎÎñÎïÆ·
+x808081_g_ItemId = { id=40004444,num=1 }				-- ä»»åŠ¡ç‰©å“
 
--- ÅÅÃû
+-- æ’å
 x808081_g_GodFireMis_PaiMing = 0
--- ÉÏ´ÎÇå³ıÅÅÃûµÄ»·Êı
+-- ä¸Šæ¬¡æ¸…é™¤æ’åçš„ç¯æ•°
 x808081_g_ClearPaiMing_Round = 0
 
 
--- ½±ÀøµÄ³ÆºÅ ¼«Æ··ÉÃ«ÍÈ
+-- å¥–åŠ±çš„ç§°å· æå“é£æ¯›è…¿
 x808081_g_GodFire_Title = 241
--- ³ÆºÅÓĞĞ§ÆÚ(Ìì)
+-- ç§°å·æœ‰æ•ˆæœŸ(å¤©)
 x808081_GodFireTitle_AlongTime = 7
 
 
--- ½±Àø¾­ÑéĞŞÕıÖµ(ÓëÅÅÃûÓĞ¹Ø)
+-- å¥–åŠ±ç»éªŒä¿®æ­£å€¼(ä¸æ’åæœ‰å…³)
 x808081_g_BonusEXP_ListEX = { 3.0000,2.9592,2.9184,2.8776,2.8367,2.7959,2.7551,2.7143,2.6735,2.6327,
 															2.5918,2.5510,2.5102,2.4694,2.4286,2.3878,2.3469,2.3061,2.2653,2.2245,
 															2.1837,2.1429,2.1020,2.0612,2.0204,1.9796,1.9388,1.8980,1.8571,1.8163,
@@ -122,48 +122,48 @@ x808081_g_BonusEXP_List = { 0,0,0,0,0,0,0,0,0,0,
 														208476,209988,211500,213120,214632,216144,217656,219276,220896,222408,
 														223920,225432,226944,228564,230076,231660,233208,234720,236304,236304 }
 
--- ¿×Ã÷µÆÖĞµÄÈÎÎñÎïÆ·ID
+-- å­”æ˜ç¯ä¸­çš„ä»»åŠ¡ç‰©å“ID
 x808081_g_ItemBox_ItemID = 40004445
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
---µã»÷¸ÃÈÎÎñºóÖ´ĞĞ´Ë½Å±¾
+--ç‚¹å‡»è¯¥ä»»åŠ¡åæ‰§è¡Œæ­¤è„šæœ¬
 function x808081_OnDefaultEvent( sceneId, selfId, targetId )
 
-	--ÅĞ¶Ï¸ÃnpcÊÇ·ñÊÇ¶ÔÓ¦ÈÎÎñµÄnpc
+	--åˆ¤æ–­è¯¥npcæ˜¯å¦æ˜¯å¯¹åº”ä»»åŠ¡çš„npc
 	if LuaFnGetName( sceneId, targetId ) ~= x808081_g_Name then
-		x808081_NotifyTip( sceneId, selfId, "½ÓÊÜÈÎÎñÊ§°Ü" )					
+		x808081_NotifyTip( sceneId, selfId, "æ¥å—ä»»åŠ¡å¤±è´¥" )					
 		return 0
 	end
 			
 	local	key	= GetNumText()	
 	if key == x808081_g_AcceptMission_IDX then		
-		-- ÈÎÎñÊÇ·ñÒÑÂú
+		-- ä»»åŠ¡æ˜¯å¦å·²æ»¡
 		if IsMissionFull( sceneId, selfId ) == 1 then
 			x808081_NotifyTip( sceneId, selfId, "#{QIANXUN_INFO_23}" )
 			return 0
 		end
 
-		-- ¼ì²â±¨ÃûÊ±¼ä
+		-- æ£€æµ‹æŠ¥åæ—¶é—´
 		if x808081_CheckApplyTime() == 0 then
 			x808081_NotifyTip( sceneId, selfId, "#{GodFire_Info_018}" )					
 			return 0
 		end
 		
-		-- ¼ì²âÈÎÎñ½ÓÊÜÌõ¼ş
+		-- æ£€æµ‹ä»»åŠ¡æ¥å—æ¡ä»¶
 		if x808081_CheckAccept( sceneId, selfId, targetId )<=0 then
 			return 0
 		end
 
-		-- ½øÈë½ÓÊÜÈÎÎñ½çÃæ			
+		-- è¿›å…¥æ¥å—ä»»åŠ¡ç•Œé¢			
 		x808081_AcceptMission( sceneId, selfId, targetId )				
 
 	elseif key == x808081_g_CompleteMission_IDX then
-		-- Èç¹ûÒÑ¾­½ÓÁËÈÎÎñ
+		-- å¦‚æœå·²ç»æ¥äº†ä»»åŠ¡
 		if IsHaveMission( sceneId, selfId, x808081_g_MissionId ) > 0 then
 												
-			--·¢ËÍÈÎÎñĞèÇóµÄĞÅÏ¢
+			--å‘é€ä»»åŠ¡éœ€æ±‚çš„ä¿¡æ¯
 			BeginEvent(sceneId)
 				AddText(sceneId, x808081_g_MissionName)
 				AddText(sceneId, x808081_g_ContinueInfo)			
@@ -182,47 +182,47 @@ function x808081_OnDefaultEvent( sceneId, selfId, targetId )
 		return 0
 
 	else
-		x808081_NotifyTip( sceneId, selfId, "½ÓÊÜÈÎÎñÊ§°Ü" )					
+		x808081_NotifyTip( sceneId, selfId, "æ¥å—ä»»åŠ¡å¤±è´¥" )					
 		return 0
 	end
 
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x808081_OnEnumerate( sceneId, selfId, targetId )
 	
-	--ÅĞ¶Ï¸ÃnpcÊÇ·ñÊÇ¶ÔÓ¦ÈÎÎñµÄnpc
+	--åˆ¤æ–­è¯¥npcæ˜¯å¦æ˜¯å¯¹åº”ä»»åŠ¡çš„npc
 	if LuaFnGetName( sceneId, targetId ) ~= x808081_g_Name then
 		return 0
 	end
 	
-	AddNumText( sceneId, x808081_g_ScriptId, "ÎÒÒª²Î¼Ó¹êÍÃÈüÅÜ", 7, x808081_g_AcceptMission_IDX )
-	AddNumText( sceneId, x808081_g_ScriptId, "ÎÒÒÑ¾­Íê³ÉÁË¹êÍÃÈüÅÜ", 7, x808081_g_CompleteMission_IDX )
-	AddNumText( sceneId, x808081_g_ScriptId, "¹êÍÃÈüÅÜ»î¶¯½éÉÜ", 11, x808081_g_MissionInfo_IDX )
+	AddNumText( sceneId, x808081_g_ScriptId, "æˆ‘è¦å‚åŠ é¾Ÿå…”èµ›è·‘", 7, x808081_g_AcceptMission_IDX )
+	AddNumText( sceneId, x808081_g_ScriptId, "æˆ‘å·²ç»å®Œæˆäº†é¾Ÿå…”èµ›è·‘", 7, x808081_g_CompleteMission_IDX )
+	AddNumText( sceneId, x808081_g_ScriptId, "é¾Ÿå…”èµ›è·‘æ´»åŠ¨ä»‹ç»", 11, x808081_g_MissionInfo_IDX )
 
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş£¬Ò²¹©×ÓÈÎÎñµ÷ÓÃ
+--æ£€æµ‹æ¥å—æ¡ä»¶ï¼Œä¹Ÿä¾›å­ä»»åŠ¡è°ƒç”¨
 --**********************************
 function x808081_CheckAccept( sceneId, selfId, targetId )
 	
-	--¼ì²âÍæ¼ÒÊÇ·ñ·ûºÏ½ÓÊÜÈÎÎñµÄÌõ¼ş
-	--ÅĞ¶Ï¸ÃnpcÊÇ·ñÊÇ¶ÔÓ¦ÈÎÎñµÄnpc
+	--æ£€æµ‹ç©å®¶æ˜¯å¦ç¬¦åˆæ¥å—ä»»åŠ¡çš„æ¡ä»¶
+	--åˆ¤æ–­è¯¥npcæ˜¯å¦æ˜¯å¯¹åº”ä»»åŠ¡çš„npc
 	if LuaFnGetName( sceneId, targetId ) ~= x808081_g_Name then
-		x808081_NotifyTip( sceneId, selfId, "½ÓÊÜÈÎÎñÊ§°Ü" )					
+		x808081_NotifyTip( sceneId, selfId, "æ¥å—ä»»åŠ¡å¤±è´¥" )					
 		return 0
 	end
 	
-	--¼ì²âµÈ¼¶
+	--æ£€æµ‹ç­‰çº§
 	if LuaFnGetLevel( sceneId, selfId ) < x808081_g_PlayerSlow_LVL then		
 		x808081_TalkInfo( sceneId, selfId, targetId, "#{GodFire_Info_013}" )
 		return 0
 	end
 
-	--¼ì²âÔËÊä×´Ì¬×¤ÁôĞ§¹û
+	--æ£€æµ‹è¿è¾“çŠ¶æ€é©»ç•™æ•ˆæœ
 	if LuaFnHaveImpactOfSpecificDataIndex(sceneId, selfId, x808081_g_Impact_Transport_Mission) ~= 0
 		 or LuaFnHaveImpactOfSpecificDataIndex(sceneId, selfId, x808081_g_Impact_GodOfFire_Mission) ~= 0 then
 		x808081_TalkInfo( sceneId, selfId, targetId, "#{GodFire_Info_014}" )
@@ -230,26 +230,26 @@ function x808081_CheckAccept( sceneId, selfId, targetId )
 	end
 
 	local nTimePoint = x808081_CheckHuoDongTime()
-	-- Çå³ıÅÅÃû
+	-- æ¸…é™¤æ’å
 	if x808081_g_ClearPaiMing_Round ~= nTimePoint then
 		x808081_g_Jion_Count = 0
 		x808081_g_GodFireMis_PaiMing = 0
 		x808081_g_ClearPaiMing_Round = nTimePoint
 	end
 
-	--¼ì²â±¨ÃûÈËÊıÉÏÏŞ
+	--æ£€æµ‹æŠ¥åäººæ•°ä¸Šé™
 	if x808081_g_Jion_Count >= x808081_g_Join_CountMax then
 		x808081_TalkInfo( sceneId, selfId, targetId, "#{GodFire_Info_015}" )
 		return 0
 	end
 
-	--ÒÑ¾­½Ó¹ıÔò²»·ûºÏÌõ¼ş
+	--å·²ç»æ¥è¿‡åˆ™ä¸ç¬¦åˆæ¡ä»¶
 	if IsHaveMission( sceneId, selfId, x808081_g_MissionId ) > 0 then
 		x808081_TalkInfo( sceneId, selfId, targetId, "#{GodFire_Info_016}" )
 		return 0
 	end
 	
-	--¼ì²âÍæ¼Ò²Î¼Ó»î¶¯µÄÊ±¼ä
+	--æ£€æµ‹ç©å®¶å‚åŠ æ´»åŠ¨çš„æ—¶é—´
 	local	nDayTime = GetMissionData( sceneId, selfId, MD_GODOFFIRE_DAYTIME )
 	
 	local nDay = LuaFnGetDayOfThisMonth()
@@ -258,13 +258,13 @@ function x808081_CheckAccept( sceneId, selfId, targetId )
 		return 0
 	end
 	
-	--¼ì²âÍæ¼ÒÊÇ·ñ×é¶Ó¸úËæ
+	--æ£€æµ‹ç©å®¶æ˜¯å¦ç»„é˜Ÿè·Ÿéš
 	if IsTeamFollow( sceneId, selfId ) == 1 then
 		x808081_TalkInfo( sceneId, selfId, targetId, "#{GCTeamFollowErrorHandler_Info_In_Mis_GodOfFire}" )		
 		return 0
 	end
 	
-	--¼ì²âÊÇ·ñ´¦ÓÚË«ÈËÆï³Ë×´Ì¬
+	--æ£€æµ‹æ˜¯å¦å¤„äºåŒäººéª‘ä¹˜çŠ¶æ€
 	if LuaFnGetDRideFlag(sceneId, selfId) ~= 0  then
 		x808081_TalkInfo( sceneId, selfId, targetId, "#{ResultText_117}" )
 		return 0
@@ -274,13 +274,13 @@ function x808081_CheckAccept( sceneId, selfId, targetId )
 end
 
 --**********************************
---½ÓÊÜ£¬½ö¹©×ÓÈÎÎñµ÷ÓÃÉèÖÃ¹«¹²²ÎÊı
+--æ¥å—ï¼Œä»…ä¾›å­ä»»åŠ¡è°ƒç”¨è®¾ç½®å…¬å…±å‚æ•°
 --**********************************
 function x808081_OnAccept( sceneId, selfId, targetId, scriptId )
 	
-	--ÅĞ¶Ï¸ÃnpcÊÇ·ñÊÇ¶ÔÓ¦ÈÎÎñµÄnpc
+	--åˆ¤æ–­è¯¥npcæ˜¯å¦æ˜¯å¯¹åº”ä»»åŠ¡çš„npc
  	if LuaFnGetName( sceneId, targetId ) ~= x808081_g_Name then
- 		x808081_NotifyTip( sceneId, selfId, "½ÓÊÜÈÎÎñÊ§°Ü" )					
+ 		x808081_NotifyTip( sceneId, selfId, "æ¥å—ä»»åŠ¡å¤±è´¥" )					
 		return 0
 	end
 
@@ -299,17 +299,17 @@ function x808081_OnAccept( sceneId, selfId, targetId, scriptId )
 	AddItem(sceneId,x808081_g_ItemId.id, x808081_g_ItemId.num)
 	local canAdd = EndAddItem(sceneId,selfId)						
 	if canAdd > 0 then
-		--¼ÓÈëÈÎÎñµ½Íæ¼ÒÁĞ±í
+		--åŠ å…¥ä»»åŠ¡åˆ°ç©å®¶åˆ—è¡¨
 		local bAdd = AddMission( sceneId, selfId, x808081_g_MissionId, x808081_g_ScriptId, 0, 0, 0 )
 		if bAdd >= 1 then				
 			AddItemListToHuman(sceneId,selfId)
 			
-			--µÃµ½ÈÎÎñµÄĞòÁĞºÅ
+			--å¾—åˆ°ä»»åŠ¡çš„åºåˆ—å·
 			local	misIndex		= GetMissionIndexByID( sceneId, selfId, x808081_g_MissionId )
 			
-			--¸ù¾İĞòÁĞºÅ°ÑÈÎÎñ±äÁ¿µÄµÚ0Î»ÖÃ0 (ÈÎÎñÍê³ÉÇé¿ö)
+			--æ ¹æ®åºåˆ—å·æŠŠä»»åŠ¡å˜é‡çš„ç¬¬0ä½ç½®0 (ä»»åŠ¡å®Œæˆæƒ…å†µ)
 			SetMissionByIndex( sceneId, selfId, misIndex, x808081_g_Mission_IsComplete, 0 )
-			--¸ù¾İĞòÁĞºÅ°ÑÈÎÎñ±äÁ¿µÄµÚ1Î»ÖÃÎªÈÎÎñ½Å±¾ºÅ
+			--æ ¹æ®åºåˆ—å·æŠŠä»»åŠ¡å˜é‡çš„ç¬¬1ä½ç½®ä¸ºä»»åŠ¡è„šæœ¬å·
 			SetMissionByIndex( sceneId, selfId, misIndex, x808081_g_MissScriptID_Idx, scriptId )		
 			SetMissionByIndex(sceneId, selfId, misIndex, x808081_g_AcceptNPC_Idx, 2)
 			SetMissionByIndex(sceneId, selfId, misIndex, x808081_g_RecordIdx, 1)
@@ -326,7 +326,7 @@ function x808081_OnAccept( sceneId, selfId, targetId, scriptId )
 
 			x808081_g_Jion_Count = x808081_g_Jion_Count + 1
 
-			-- Í¨Öª¿Í»§¶Ë			
+			-- é€šçŸ¥å®¢æˆ·ç«¯			
 			BeginEvent(sceneId)				
 				AddText(sceneId, "#{GodFire_Info_003}")				
 			EndEvent(sceneId)
@@ -350,16 +350,16 @@ function x808081_OnAccept( sceneId, selfId, targetId, scriptId )
 end
 
 --**********************************
---·ÅÆú£¬½ö¹©×ÓÈÎÎñµ÷ÓÃ
+--æ”¾å¼ƒï¼Œä»…ä¾›å­ä»»åŠ¡è°ƒç”¨
 --**********************************
 function x808081_OnAbandon( sceneId, selfId )
   
-  --É¾³ıÍæ¼ÒÈÎÎñÁĞ±íÖĞ¶ÔÓ¦µÄÈÎÎñ,ÎïÆ·ºÍ×¤ÁôĞ§¹û
+  --åˆ é™¤ç©å®¶ä»»åŠ¡åˆ—è¡¨ä¸­å¯¹åº”çš„ä»»åŠ¡,ç‰©å“å’Œé©»ç•™æ•ˆæœ
   if HaveItem(sceneId, selfId, x808081_g_ItemId.id) > 0 then
   	if LuaFnGetAvailableItemCount(sceneId, selfId, x808081_g_ItemId.id) >= x808081_g_ItemId.num then
   		DelItem( sceneId, selfId, x808081_g_ItemId.id, LuaFnGetAvailableItemCount(sceneId, selfId, x808081_g_ItemId.id) )
   	else
-	  	x808081_NotifyTip( sceneId, selfId, "ÄúµÄÎïÆ·ÏÖÔÚ²»¿ÉÓÃ»òÒÑ±»Ëø¶¨¡£" )			
+	  	x808081_NotifyTip( sceneId, selfId, "æ‚¨çš„ç‰©å“ç°åœ¨ä¸å¯ç”¨æˆ–å·²è¢«é”å®šã€‚" )			
 			return 0
   	end
   end
@@ -368,7 +368,7 @@ function x808081_OnAbandon( sceneId, selfId )
   	if LuaFnGetAvailableItemCount(sceneId, selfId, x808081_g_ItemBox_ItemID) >= 1 then
   		DelItem( sceneId, selfId, x808081_g_ItemBox_ItemID, LuaFnGetAvailableItemCount(sceneId, selfId, x808081_g_ItemBox_ItemID) )
   	else
-	  	x808081_NotifyTip( sceneId, selfId, "ÄúµÄÎïÆ·ÏÖÔÚ²»¿ÉÓÃ»òÒÑ±»Ëø¶¨¡£" )			
+	  	x808081_NotifyTip( sceneId, selfId, "æ‚¨çš„ç‰©å“ç°åœ¨ä¸å¯ç”¨æˆ–å·²è¢«é”å®šã€‚" )			
 			return 0
   	end
   end
@@ -390,17 +390,17 @@ function x808081_OnAbandon( sceneId, selfId )
 end
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x808081_OnContinue( sceneId, selfId, targetId )
 	
-	--ÅĞ¶Ï¸ÃnpcÊÇ·ñÊÇ¶ÔÓ¦ÈÎÎñµÄnpc
+	--åˆ¤æ–­è¯¥npcæ˜¯å¦æ˜¯å¯¹åº”ä»»åŠ¡çš„npc
 	if LuaFnGetName( sceneId, targetId ) ~= x808081_g_Name then
-		x808081_NotifyTip( sceneId, selfId, "½ÓÊÜÈÎÎñÊ§°Ü" )					
+		x808081_NotifyTip( sceneId, selfId, "æ¥å—ä»»åŠ¡å¤±è´¥" )					
 		return 0
 	end
 
-	-- ¼ì²éÈÎÎñÊÇ·ñÍê³É
+	-- æ£€æŸ¥ä»»åŠ¡æ˜¯å¦å®Œæˆ
 	if x808081_CheckSubmit( sceneId, selfId, targetId ) ~= 1 then			
 		return 0
 	end
@@ -414,7 +414,7 @@ function x808081_OnContinue( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x808081_CheckSubmit( sceneId, selfId, targetId )
 
@@ -423,13 +423,13 @@ function x808081_CheckSubmit( sceneId, selfId, targetId )
 		return 0
 	end
 
-	--¼ì²âµÈ¼¶
+	--æ£€æµ‹ç­‰çº§
 	if LuaFnGetLevel( sceneId, selfId ) < x808081_g_PlayerSlow_LVL then		
 		x808081_TalkInfo( sceneId, selfId, targetId, "#{GodFire_Info_013}" )
 		return 0
 	end
 
-	--¼ì²âÍæ¼Ò²Î¼Ó»î¶¯µÄÊ±¼ä
+	--æ£€æµ‹ç©å®¶å‚åŠ æ´»åŠ¨çš„æ—¶é—´
 	local	nDayTime = GetMissionData( sceneId, selfId, MD_GODOFFIRE_DAYTIME )
 	
 	local nDay = LuaFnGetDayOfThisMonth()
@@ -445,7 +445,7 @@ function x808081_CheckSubmit( sceneId, selfId, targetId )
 		return 0
 	end
 	
-	-- ¼ì²âÊÇ²»ÊÇÈÎÎñ·¢²¼NPC
+	-- æ£€æµ‹æ˜¯ä¸æ˜¯ä»»åŠ¡å‘å¸ƒNPC
 	if GetMissionParam(sceneId, selfId, misIndex, x808081_g_AcceptNPC_Idx) == 1 then
 		x808081_TalkInfo( sceneId, selfId, targetId, "#{GodFire_Info_025}" )
 		return 0
@@ -457,19 +457,19 @@ function x808081_CheckSubmit( sceneId, selfId, targetId )
 		return 0	
 	end
 
-	--¼ì²âÍæ¼ÒÊÇ·ñ×é¶Ó¸úËæ
+	--æ£€æµ‹ç©å®¶æ˜¯å¦ç»„é˜Ÿè·Ÿéš
 	if IsTeamFollow( sceneId, selfId ) == 1 then
 		x808081_TalkInfo( sceneId, selfId, targetId, "#{GCTeamFollowErrorHandler_Info_In_Mis_GodOfFire}" )		
 		return 0
 	end
 	
-	--¼ì²âÊÇ·ñ´¦ÓÚË«ÈËÆï³Ë×´Ì¬
+	--æ£€æµ‹æ˜¯å¦å¤„äºåŒäººéª‘ä¹˜çŠ¶æ€
 	if LuaFnGetDRideFlag(sceneId, selfId) ~= 0  then
 		x808081_TalkInfo( sceneId, selfId, targetId, "#{ResultText_117}" )
 		return 0
 	end
 
-	-- ¼ì²âÈÎÎñÊÇ·ñÍê³É	
+	-- æ£€æµ‹ä»»åŠ¡æ˜¯å¦å®Œæˆ	
 	if GetMissionParam(sceneId, selfId, misIndex, x808081_g_Mission_IsComplete) > 0 then
 		return 1
 	end
@@ -479,19 +479,19 @@ function x808081_CheckSubmit( sceneId, selfId, targetId )
 end
 
 --**********************************
---Ìá½»£¬½ö¹©×ÓÈÎÎñµ÷ÓÃ
+--æäº¤ï¼Œä»…ä¾›å­ä»»åŠ¡è°ƒç”¨
 --**********************************
 function x808081_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 	
-	--ÅĞ¶Ï¸ÃnpcÊÇ·ñÊÇ¶ÔÓ¦ÈÎÎñµÄnpc
+	--åˆ¤æ–­è¯¥npcæ˜¯å¦æ˜¯å¯¹åº”ä»»åŠ¡çš„npc
 	if LuaFnGetName( sceneId, targetId ) ~= x808081_g_Name then
-		x808081_NotifyTip( sceneId, selfId, "Ìá½»ÈÎÎñÊ§°Ü" )					
+		x808081_NotifyTip( sceneId, selfId, "æäº¤ä»»åŠ¡å¤±è´¥" )					
 		return 0
 	end
 
-  -- ¼ì²éÈÎÎñÊÇ·ñÍê³É
+  -- æ£€æŸ¥ä»»åŠ¡æ˜¯å¦å®Œæˆ
 	if x808081_CheckSubmit( sceneId, selfId, targetId ) ~= 1 then
-		x808081_NotifyTip( sceneId, selfId, "Ìá½»ÈÎÎñÊ§°Ü" )				
+		x808081_NotifyTip( sceneId, selfId, "æäº¤ä»»åŠ¡å¤±è´¥" )				
 		return 0
 	end
 	
@@ -502,7 +502,7 @@ function x808081_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 		strText = format("#{_INFOUSR%s}#{GodFire_Info_029}%d#{GodFire_Info_030}", GetName(sceneId,selfId), x808081_g_GodFireMis_PaiMing )
 		BroadMsgByChatPipe( sceneId, 0, strText, 4 )
 		
-		-- ÉèÖÃ¼«Æ··ÉÃ«ÍÈ³ÆºÅ
+		-- è®¾ç½®æå“é£æ¯›è…¿ç§°å·
 		if x808081_g_GodFire_Title == GetTitle( sceneId, selfId, 14 ) then
 			DeleteTitle( sceneId, selfId, 14 )			
 		end
@@ -517,10 +517,10 @@ function x808081_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 
 	nExpNum = floor(nExpNum * nExpEx)
 	LuaFnAddExp( sceneId, selfId, nExpNum )
-	strText = format("#{_INFOUSR%s}#{GodFire_Info_031}%d#{GodFire_Info_032}%d¡£#{GodFire_Info_033}", GetName(sceneId,selfId), x808081_g_GodFireMis_PaiMing, nExpNum )
+	strText = format("#{_INFOUSR%s}#{GodFire_Info_031}%d#{GodFire_Info_032}%.0fã€‚#{GodFire_Info_033}", GetName(sceneId,selfId), x808081_g_GodFireMis_PaiMing, nExpNum )
 	x808081_TalkInfo( sceneId, selfId, targetId, strText )
 	
-	-- »î¶¯Ë³ÀûÍê³É
+	-- æ´»åŠ¨é¡ºåˆ©å®Œæˆ
 	x808081_NotifyTip( sceneId, selfId, "#{GodFire_Info_063}" )
 	BroadMsgByChatPipe( sceneId, selfId, "#{GodFire_Info_063}", 8 )
 	
@@ -533,25 +533,25 @@ function x808081_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 end
 
 --**********************************
---É±ËÀ¹ÖÎï»òÍæ¼Ò
+--æ€æ­»æ€ªç‰©æˆ–ç©å®¶
 --**********************************
-function x808081_OnKillObject( sceneId, selfId, objdataId ,objId)--²ÎÊıÒâË¼£º³¡¾°ºÅ¡¢Íæ¼ÒobjId¡¢¹ÖÎï±íÎ»ÖÃºÅ¡¢¹ÖÎï
+function x808081_OnKillObject( sceneId, selfId, objdataId ,objId)--å‚æ•°æ„æ€ï¼šåœºæ™¯å·ã€ç©å®¶objIdã€æ€ªç‰©è¡¨ä½ç½®å·ã€æ€ªç‰©
 end
 
 --**********************************
---½øÈëÇøÓòÊÂ¼ş
+--è¿›å…¥åŒºåŸŸäº‹ä»¶
 --**********************************
 function x808081_OnEnterArea( sceneId, selfId, zoneId )	
 end
 
 --**********************************
---µÀ¾ß¸Ä±ä
+--é“å…·æ”¹å˜
 --**********************************
 function x808081_OnItemChanged( sceneId, selfId, itemdataId )
 end
 
 --**********************************
---½ÓÈÎÎñºóÏÔÊ¾µÄ½çÃæ
+--æ¥ä»»åŠ¡åæ˜¾ç¤ºçš„ç•Œé¢
 --**********************************
 function x808081_AcceptDialog(sceneId, selfId, rand, g_Dialog, targetId )
 
@@ -563,13 +563,13 @@ function x808081_AcceptDialog(sceneId, selfId, rand, g_Dialog, targetId )
 end
 
 --**********************************
---½»ÈÎÎñºóÏÔÊ¾µÄ½çÃæ
+--äº¤ä»»åŠ¡åæ˜¾ç¤ºçš„ç•Œé¢
 --**********************************
 function x808081_SubmitDialog( sceneId, selfId, rand )
 end
 
 --**********************************
---ĞÑÄ¿ÌáÊ¾
+--é†’ç›®æç¤º
 --**********************************
 function x808081_NotifyTip( sceneId, selfId, msg )
 
@@ -581,7 +581,7 @@ function x808081_NotifyTip( sceneId, selfId, msg )
 end
 
 --**********************************
---ÓëNPC¶Ô»°
+--ä¸NPCå¯¹è¯
 --**********************************
 function x808081_TalkInfo( sceneId, selfId, targetId, msg )
 
@@ -593,7 +593,7 @@ function x808081_TalkInfo( sceneId, selfId, targetId, msg )
 end
 
 --**********************************
---È¡µÃ±¾ÊÂ¼şµÄMissionId£¬ÓÃÓÚobjÎÄ¼şÖĞ¶Ô»°Çé¾°µÄÅĞ¶Ï
+--å–å¾—æœ¬äº‹ä»¶çš„MissionIdï¼Œç”¨äºobjæ–‡ä»¶ä¸­å¯¹è¯æƒ…æ™¯çš„åˆ¤æ–­
 --**********************************
 function x808081_GetEventMissionId( sceneId, selfId )	
 	return x808081_g_MissionId
@@ -601,15 +601,15 @@ end
 
 function x808081_AcceptMission( sceneId, selfId, targetId )
 	
-	--ÅĞ¶Ï¸ÃnpcÊÇ·ñÊÇ¶ÔÓ¦ÈÎÎñµÄnpc
+	--åˆ¤æ–­è¯¥npcæ˜¯å¦æ˜¯å¯¹åº”ä»»åŠ¡çš„npc
 	if LuaFnGetName( sceneId, targetId ) ~= x808081_g_Name then
-		x808081_NotifyTip( sceneId, selfId, "½ÓÊÜÈÎÎñÊ§°Ü" )
+		x808081_NotifyTip( sceneId, selfId, "æ¥å—ä»»åŠ¡å¤±è´¥" )
 		return 0
 	end
 
 	local  PlayerName=GetName(sceneId,selfId)		
 	
-	--·¢ËÍÈÎÎñ½ÓÊÜÊ±ÏÔÊ¾µÄĞÅÏ¢
+	--å‘é€ä»»åŠ¡æ¥å—æ—¶æ˜¾ç¤ºçš„ä¿¡æ¯
 	BeginEvent(sceneId)
 		AddText(sceneId,x808081_g_MissionName)
 		AddText( sceneId, x808081_g_MissionInfo )
@@ -624,13 +624,13 @@ function x808081_AcceptMission( sceneId, selfId, targetId )
 end
 
 --/////////////////////////////////////////////////////////////////////////////////////////////////////
---»ñÈ¡¾ßÌåitemµÄÏêÏ¸ĞÅÏ¢
+--è·å–å…·ä½“itemçš„è¯¦ç»†ä¿¡æ¯
 function x808081_GetItemDetailInfo(itemId)
 	return 0
 end	
 
 --**********************************
---¼ì²â»î¶¯±¨ÃûÊ±¼ä
+--æ£€æµ‹æ´»åŠ¨æŠ¥åæ—¶é—´
 --**********************************
 function x808081_CheckApplyTime()
 
@@ -648,7 +648,7 @@ function x808081_CheckApplyTime()
 end
 
 --**********************************
---¼ì²â»î¶¯Ê±¼ä
+--æ£€æµ‹æ´»åŠ¨æ—¶é—´
 --**********************************
 function x808081_CheckHuoDongTime()
 
@@ -668,13 +668,13 @@ function x808081_CheckHuoDongTime()
 end
 
 --**********************************
---µÀ¾ßÊ¹ÓÃ
+--é“å…·ä½¿ç”¨
 --**********************************
 function x808081_OnUseItem( sceneId, selfId, bagIndex )	
 end
 
 --**********************************
---ËÀÍöÊÂ¼ş
+--æ­»äº¡äº‹ä»¶
 --**********************************
 function x808081_OnDie( sceneId, selfId, killerId )
 	x808081_NotifyTip( sceneId, selfId, "#{GodFire_Info_034}" )
@@ -682,8 +682,8 @@ function x808081_OnDie( sceneId, selfId, killerId )
 end
 
 --**********************************
---É¾³ı»î¶¯ĞÅÏ¢
---É¾³ıÍæ¼ÒÈÎÎñÁĞ±íÖĞ¶ÔÓ¦µÄÈÎÎñ,ÎïÆ·ºÍ×¤ÁôĞ§¹û
+--åˆ é™¤æ´»åŠ¨ä¿¡æ¯
+--åˆ é™¤ç©å®¶ä»»åŠ¡åˆ—è¡¨ä¸­å¯¹åº”çš„ä»»åŠ¡,ç‰©å“å’Œé©»ç•™æ•ˆæœ
 --**********************************
 function x808081_DelMissionInfo( sceneId, selfId )
 
@@ -717,7 +717,7 @@ function x808081_DelMissionInfo( sceneId, selfId )
 end
 
 --**********************************
--- »ğ°ÑÌØĞ§ÓĞĞ§ÆÚµ½Ê±×Ô¶¯É¾³ıÈÎÎñĞÅÏ¢
+-- ç«æŠŠç‰¹æ•ˆæœ‰æ•ˆæœŸåˆ°æ—¶è‡ªåŠ¨åˆ é™¤ä»»åŠ¡ä¿¡æ¯
 --**********************************
 -- function x808081_OnImpactFadeOut( sceneId, selfId, impactId )
 -- 

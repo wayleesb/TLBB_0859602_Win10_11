@@ -1,5 +1,5 @@
 -- 210242
--- ÊîÆÚ»î¶¯£¬¶Ò»»Æó¶ìµ°
+-- æš‘æœŸæ´»åŠ¨ï¼Œå…‘æ¢ä¼é¹…è›‹
 
 x210242_g_ScriptId = 210242
 
@@ -7,24 +7,24 @@ x210242_g_ItemId = {30505114,30505115,30505116,30505117,30505118,30505119,305051
 
 x210242_g_PetEggId = 30505121
 
--- µôÂäÆßĞÇËéÆ¬»î¶¯Ê±¼ä[2009/2/15, 2009/4/1]
-x210242_g_Drop_QiXingSuiPian_StartDay = 9045 --2009/2/15¿ªÊ¼
-x210242_g_Drop_QiXingSuiPian_EndDay = 9090 --2009/4/1½áÊø
+-- æ‰è½ä¸ƒæ˜Ÿç¢ç‰‡æ´»åŠ¨æ—¶é—´[2009/2/15, 2009/4/1]
+x210242_g_Drop_QiXingSuiPian_StartDay = 9045 --2009/2/15å¼€å§‹
+x210242_g_Drop_QiXingSuiPian_EndDay = 9090 --2009/4/1ç»“æŸ
 
--- ¶Ò»»Æó¶ìµ°»î¶¯Ê±¼ä[2009/2/15, 2009/5/1]
-x210242_g_ExchangePenguinEggStartDay	= 9045 --2009/2/15¿ªÊ¼
-x210242_g_ExchangePenguinEggEndDay		= 9120 --2009/5/1½áÊø
+-- å…‘æ¢ä¼é¹…è›‹æ´»åŠ¨æ—¶é—´[2009/2/15, 2009/5/1]
+x210242_g_ExchangePenguinEggStartDay	= 9045 --2009/2/15å¼€å§‹
+x210242_g_ExchangePenguinEggEndDay		= 9120 --2009/5/1ç»“æŸ
 	
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x210242_OnDefaultEvent( sceneId, selfId, targetId )
 	
-	-- »î¶¯Ê±¼ä£¬Ö»ÔÚÕâ¸ö»î¶¯Ê±¼äÄÚÄÜÏÔÊ¾Õâ¸ö¶Ô»°
+	-- æ´»åŠ¨æ—¶é—´ï¼Œåªåœ¨è¿™ä¸ªæ´»åŠ¨æ—¶é—´å†…èƒ½æ˜¾ç¤ºè¿™ä¸ªå¯¹è¯
 	if x210242_IsValidPenguinEggExchangeTime() == 0    then
 		BeginEvent(sceneId)
-			AddText(sceneId, "#Y¶Ò»»Æó¶ì" );
-			AddText(sceneId, "    »î¶¯ÒÑ¾­¹ıÆÚ¡£" );
+			AddText(sceneId, "#Yå…‘æ¢ä¼é¹…" );
+			AddText(sceneId, "    æ´»åŠ¨å·²ç»è¿‡æœŸã€‚" );
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 		return
@@ -32,14 +32,14 @@ function x210242_OnDefaultEvent( sceneId, selfId, targetId )
 	
 	if GetNumText() == 1   then
 		BeginEvent(sceneId)
-			AddText(sceneId, "#Y¶Ò»»Æó¶ì" );
-			AddText(sceneId, "  Ñ×ÈÈµÄÏÄÌìÀï£¬ÄãÏë²»ÏëÒªÒ»ÕóÁ¹·ç£¿Ïë²»ÏëÒªÒ»±­ÀäÒû£¿Ïë²»ÏëÒªÒ»Ë¿ÇåË¬£¿" );
-			AddText(sceneId, "  Ö»ÒªÓĞÈ«²¿Æß¿ÅÆßĞÇËéÆ¬£¬Äã¾Í¶¼¿ÉÒÔ»ñµÃÀ²£¡" );
-			AddText(sceneId, "  Ò»Î»²»ÖªÃûµÄ³¤Õß£¬¿ÉÒÔÊ¹ÓÃÕâĞ©ËéÆ¬À´ÈÃÌìÁú°Ë²¿µÄÊÀ½ç±äµÃ¸ü¼ÓÇåË¬£¬¶ø×÷Îª½±Àø£¬Ëû»¹ÍĞÎÒËÍ¸øÊÕ¼¯ÆßĞÇËéÆ¬µÄÈËÒ»¼ş×îÇåË¬µÄÀñÎï£¡" );
-			AddText(sceneId, "  Ò»Ö»¿É°®µÄÆó¶ì£¡" );
-			AddText(sceneId, "  ÄúÈ·ÈÏÒª¶Ò»»Æó¶ìµ°Âğ£¿" );
-			AddNumText(sceneId, x210242_g_ScriptId,"È·¶¨", 8, 3);
-			AddNumText(sceneId, x210242_g_ScriptId,"È¡Ïû", 8, 4);
+			AddText(sceneId, "#Yå…‘æ¢ä¼é¹…" );
+			AddText(sceneId, "  ç‚çƒ­çš„å¤å¤©é‡Œï¼Œä½ æƒ³ä¸æƒ³è¦ä¸€é˜µå‡‰é£ï¼Ÿæƒ³ä¸æƒ³è¦ä¸€æ¯å†·é¥®ï¼Ÿæƒ³ä¸æƒ³è¦ä¸€ä¸æ¸…çˆ½ï¼Ÿ" );
+			AddText(sceneId, "  åªè¦æœ‰å…¨éƒ¨ä¸ƒé¢—ä¸ƒæ˜Ÿç¢ç‰‡ï¼Œä½ å°±éƒ½å¯ä»¥è·å¾—å•¦ï¼" );
+			AddText(sceneId, "  ä¸€ä½ä¸çŸ¥åçš„é•¿è€…ï¼Œå¯ä»¥ä½¿ç”¨è¿™äº›ç¢ç‰‡æ¥è®©å¤©é¾™å…«éƒ¨çš„ä¸–ç•Œå˜å¾—æ›´åŠ æ¸…çˆ½ï¼Œè€Œä½œä¸ºå¥–åŠ±ï¼Œä»–è¿˜æ‰˜æˆ‘é€ç»™æ”¶é›†ä¸ƒæ˜Ÿç¢ç‰‡çš„äººä¸€ä»¶æœ€æ¸…çˆ½çš„ç¤¼ç‰©ï¼" );
+			AddText(sceneId, "  ä¸€åªå¯çˆ±çš„ä¼é¹…ï¼" );
+			AddText(sceneId, "  æ‚¨ç¡®è®¤è¦å…‘æ¢ä¼é¹…è›‹å—ï¼Ÿ" );
+			AddNumText(sceneId, x210242_g_ScriptId,"ç¡®å®š", 8, 3);
+			AddNumText(sceneId, x210242_g_ScriptId,"å–æ¶ˆ", 8, 4);
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 		return
@@ -54,7 +54,7 @@ function x210242_OnDefaultEvent( sceneId, selfId, targetId )
 	
 	if GetNumText() == 3   then
 		
-		-- 1£¬¼ì²âÍæ¼ÒÉíÉÏÊÇ²»ÊÇÓĞÒ»Ì×ËéÆ¬£¬
+		-- 1ï¼Œæ£€æµ‹ç©å®¶èº«ä¸Šæ˜¯ä¸æ˜¯æœ‰ä¸€å¥—ç¢ç‰‡ï¼Œ
 		local HaveAllItem = 1
 		for i, ItemId in x210242_g_ItemId  do
 			if GetItemCount(sceneId, selfId, ItemId) < 1   then
@@ -67,13 +67,13 @@ function x210242_OnDefaultEvent( sceneId, selfId, targetId )
 		
 		if HaveAllItem == 0  then
 			BeginEvent(sceneId)
-				AddText(sceneId, "    ¶Ò»»Æó¶ìµ°ĞèÒª½ğ¡¢Ä¾¡¢Ë®¡¢»ğ¡¢ÍÁ¡¢ÈÕ¡¢ÔÂÆßÖÖËéÆ¬¸÷Ò»¸ö£¬ÄúÉíÉÏµÄËéÆ¬²»È«£¬Òò´ËÎŞ·¨¶Ò»»¡£" );
+				AddText(sceneId, "    å…‘æ¢ä¼é¹…è›‹éœ€è¦é‡‘ã€æœ¨ã€æ°´ã€ç«ã€åœŸã€æ—¥ã€æœˆä¸ƒç§ç¢ç‰‡å„ä¸€ä¸ªï¼Œæ‚¨èº«ä¸Šçš„ç¢ç‰‡ä¸å…¨ï¼Œå› æ­¤æ— æ³•å…‘æ¢ã€‚" );
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,targetId)
 			return
 		end
 		
-		-- 2£¬¼ì²âÍæ¼ÒµÄÕâÌ×ËéÆ¬ÊÇ²»ÊÇ¶¼ÄÜ¹»É¾³ı
+		-- 2ï¼Œæ£€æµ‹ç©å®¶çš„è¿™å¥—ç¢ç‰‡æ˜¯ä¸æ˜¯éƒ½èƒ½å¤Ÿåˆ é™¤
 		local AllItemCanDelete = 1
 		for i, ItemId in x210242_g_ItemId  do
 			if LuaFnGetAvailableItemCount(sceneId, selfId, ItemId) < 1   then
@@ -84,13 +84,13 @@ function x210242_OnDefaultEvent( sceneId, selfId, targetId )
 		
 		if AllItemCanDelete == 0  then
 			BeginEvent(sceneId)
-				AddText(sceneId, "    ¿Û³ıÄãÉíÉÏµÄÎïÆ·Ê§°Ü£¬Çë¼ì²âÄãÊÇ·ñ¶ÔÎïÆ·¼ÓËø£¬»òÕßÎïÆ·´¦ÓÚ½»Ò××´Ì¬¡£" );
+				AddText(sceneId, "    æ‰£é™¤ä½ èº«ä¸Šçš„ç‰©å“å¤±è´¥ï¼Œè¯·æ£€æµ‹ä½ æ˜¯å¦å¯¹ç‰©å“åŠ é”ï¼Œæˆ–è€…ç‰©å“å¤„äºäº¤æ˜“çŠ¶æ€ã€‚" );
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,targetId)
 			return
 		end
 		
-		-- 3£¬¼ì²âÍæ¼ÒÉíÉÏÊÇ²»ÊÇÓĞ¿Õ¼ä·Å½±Àø
+		-- 3ï¼Œæ£€æµ‹ç©å®¶èº«ä¸Šæ˜¯ä¸æ˜¯æœ‰ç©ºé—´æ”¾å¥–åŠ±
 	 	BeginAddItem(sceneId)
 			AddItem( sceneId, x210242_g_PetEggId, 1 )
 		local ret = EndAddItem(sceneId,selfId)
@@ -106,9 +106,9 @@ function x210242_OnDefaultEvent( sceneId, selfId, targetId )
 			
 			if delret == 1  then
 				AddItemListToHuman(sceneId,selfId)
-				-- ·¢ÊÀ½ç¹«¸æ
+				-- å‘ä¸–ç•Œå…¬å‘Š
 				local transfer = GetItemTransfer(sceneId,selfId,0)
-				local str = format("#P #{_INFOUSR%s}¾­¹ıÒ»·¬Å¬Á¦£¬ÖÕÓÚÊÕ¼¯È«ÁËÏóÕ÷Æßê×µÄ½ğĞÇ¡¢Ä¾ĞÇ¡¢Ë®ĞÇ¡¢»ğĞÇ¡¢ÍÁĞÇ¡¢ÔÂÁÁ¡¢Ì«ÑôÆß¿ÅËéÆ¬¡£×÷Îª³êĞ»£¬´óÀíµÄ¹¨²ÊÔÆÌØÔùËÍ¸øÆäÒ»¿Å#{_INFOMSG%s}¡£",GetName(sceneId,selfId), transfer)
+				local str = format("#P #{_INFOUSR%s}ç»è¿‡ä¸€ç•ªåŠªåŠ›ï¼Œç»ˆäºæ”¶é›†å…¨äº†è±¡å¾ä¸ƒæ›œçš„é‡‘æ˜Ÿã€æœ¨æ˜Ÿã€æ°´æ˜Ÿã€ç«æ˜Ÿã€åœŸæ˜Ÿã€æœˆäº®ã€å¤ªé˜³ä¸ƒé¢—ç¢ç‰‡ã€‚ä½œä¸ºé…¬è°¢ï¼Œå¤§ç†çš„é¾šå½©äº‘ç‰¹èµ é€ç»™å…¶ä¸€é¢—#{_INFOMSG%s}ã€‚",GetName(sceneId,selfId), transfer)
 				BroadMsgByChatPipe(sceneId, selfId, str, 4)
 				LuaFnSendSpecificImpactToUnit(sceneId,selfId,selfId,selfId,18,1000)
 
@@ -123,16 +123,16 @@ function x210242_OnDefaultEvent( sceneId, selfId, targetId )
 	
 	if GetNumText() == 2   then
 		BeginEvent(sceneId)
-			AddText(sceneId, "#Y¶Ò»»Æó¶ì" );
+			AddText(sceneId, "#Yå…‘æ¢ä¼é¹…" );
 			AddText(sceneId, "#{duihuanqie_shuoming}" );
 			
-			--AddText(sceneId, "    Ñ×ÈÈµÄÏÄÌìÀï£¬ÄãÏë²»ÏëÒªÒ»ÕóÁ¹·ç£¿Ïë²»ÏëÒªÒ»±­ÀäÒû£¿Ïë²»ÏëÒªÒ»Ë¿ÇåË¬£¿" );
-			--AddText(sceneId, "    Ö»ÒªÓĞÈ«²¿Æß¿ÅÆßĞÇËéÆ¬£¬Äã¾Í¶¼¿ÉÒÔ»ñµÃÀ²£¡" );
-			--AddText(sceneId, "    Ò»Î»²»ÖªÃûµÄ³¤Õß£¬¿ÉÒÔÊ¹ÓÃÕâĞ©ËéÆ¬À´ÈÃÌìÁú°Ë²¿µÄÊÀ½ç±äµÃ¸ü¼ÓÇåË¬£¬¶ø×÷Îª½±Àø£¬Ëû»¹ÍĞÎÒËÍ¸øÊÕ¼¯ÆßĞÇËéÆ¬µÄÈËÒ»¼ş×îÇåË¬µÄÀñÎï£¡" );
-			--AddText(sceneId, "    Ò»Ö»¿É°®µÄÆó¶ì£¡" );
-			--AddText(sceneId, "    ËéÆ¬¶ÔÓ¦µÄĞÇËŞ²»Í¬£¬ÆäÖĞ×îÎªÄÑµÃµÄÊÇÌ«ÑôËéÆ¬¡£Ö»ÓĞÔÚ²É¼¯²İÒ©»òÕß²É¼¯¿óÊ¯µÄÊ±ºò£¬²ÅÓĞ¿ÉÄÜ»ñµÃÆßĞÇËéÆ¬µ±ÖĞµÄÒ»ÖÖ¡£" );
-			--AddText(sceneId, "    µ±Äã´ÕÆë½ğĞÇËéÆ¬£¬Ä¾ĞÇËéÆ¬£¬Ë®ĞÇËéÆ¬£¬»ğĞÇËéÆ¬£¬ÍÁĞÇËéÆ¬£¬ÔÂÁÁËéÆ¬£¬Ì«ÑôËéÆ¬Ö®ºó£¬°ÑËüÃÇ½»¸øÎÒ¡£ÎÒ¾Í¿ÉÒÔ´úÄÇÎ»³¤ÕßËÍ¸øÄãÒ»Ã¶ÌìÏÂº±¼ûµÄÆó¶ìµ°¡£Æó¶ìµ°¿ÉÒÔÔÚÄãµÈ¼¶´óÓÚµÈÓÚ55¼¶Ê±Ê¹ÓÃ£¬Ê¹ÓÃºó½«»áÕÙ»½³öÒ»Ö»Æó¶ì±¦±¦×÷ÎªÄãµÄÕäÊŞ¡£" );
-			--AddText(sceneId, "    ĞèÒªËµÃ÷µÄÊÇ£¬ÆßĞÇËéÆ¬Ö»ÓĞ¾Û¼¯ÔÚÒ»ÆğµÄÊ±ºò²ÅÓĞ¼ÛÖµ¡£µ±È»Äú¶àÓàµÄÒ»Ğ©ËéÆ¬¿ÉÒÔ³öÊÛ¸øÉÌµê»»È¡ÉÙÁ¿µÄ½ğÇ®¡£" );
+			--AddText(sceneId, "    ç‚çƒ­çš„å¤å¤©é‡Œï¼Œä½ æƒ³ä¸æƒ³è¦ä¸€é˜µå‡‰é£ï¼Ÿæƒ³ä¸æƒ³è¦ä¸€æ¯å†·é¥®ï¼Ÿæƒ³ä¸æƒ³è¦ä¸€ä¸æ¸…çˆ½ï¼Ÿ" );
+			--AddText(sceneId, "    åªè¦æœ‰å…¨éƒ¨ä¸ƒé¢—ä¸ƒæ˜Ÿç¢ç‰‡ï¼Œä½ å°±éƒ½å¯ä»¥è·å¾—å•¦ï¼" );
+			--AddText(sceneId, "    ä¸€ä½ä¸çŸ¥åçš„é•¿è€…ï¼Œå¯ä»¥ä½¿ç”¨è¿™äº›ç¢ç‰‡æ¥è®©å¤©é¾™å…«éƒ¨çš„ä¸–ç•Œå˜å¾—æ›´åŠ æ¸…çˆ½ï¼Œè€Œä½œä¸ºå¥–åŠ±ï¼Œä»–è¿˜æ‰˜æˆ‘é€ç»™æ”¶é›†ä¸ƒæ˜Ÿç¢ç‰‡çš„äººä¸€ä»¶æœ€æ¸…çˆ½çš„ç¤¼ç‰©ï¼" );
+			--AddText(sceneId, "    ä¸€åªå¯çˆ±çš„ä¼é¹…ï¼" );
+			--AddText(sceneId, "    ç¢ç‰‡å¯¹åº”çš„æ˜Ÿå®¿ä¸åŒï¼Œå…¶ä¸­æœ€ä¸ºéš¾å¾—çš„æ˜¯å¤ªé˜³ç¢ç‰‡ã€‚åªæœ‰åœ¨é‡‡é›†è‰è¯æˆ–è€…é‡‡é›†çŸ¿çŸ³çš„æ—¶å€™ï¼Œæ‰æœ‰å¯èƒ½è·å¾—ä¸ƒæ˜Ÿç¢ç‰‡å½“ä¸­çš„ä¸€ç§ã€‚" );
+			--AddText(sceneId, "    å½“ä½ å‡‘é½é‡‘æ˜Ÿç¢ç‰‡ï¼Œæœ¨æ˜Ÿç¢ç‰‡ï¼Œæ°´æ˜Ÿç¢ç‰‡ï¼Œç«æ˜Ÿç¢ç‰‡ï¼ŒåœŸæ˜Ÿç¢ç‰‡ï¼Œæœˆäº®ç¢ç‰‡ï¼Œå¤ªé˜³ç¢ç‰‡ä¹‹åï¼ŒæŠŠå®ƒä»¬äº¤ç»™æˆ‘ã€‚æˆ‘å°±å¯ä»¥ä»£é‚£ä½é•¿è€…é€ç»™ä½ ä¸€æšå¤©ä¸‹ç½•è§çš„ä¼é¹…è›‹ã€‚ä¼é¹…è›‹å¯ä»¥åœ¨ä½ ç­‰çº§å¤§äºç­‰äº55çº§æ—¶ä½¿ç”¨ï¼Œä½¿ç”¨åå°†ä¼šå¬å”¤å‡ºä¸€åªä¼é¹…å®å®ä½œä¸ºä½ çš„çå…½ã€‚" );
+			--AddText(sceneId, "    éœ€è¦è¯´æ˜çš„æ˜¯ï¼Œä¸ƒæ˜Ÿç¢ç‰‡åªæœ‰èšé›†åœ¨ä¸€èµ·çš„æ—¶å€™æ‰æœ‰ä»·å€¼ã€‚å½“ç„¶æ‚¨å¤šä½™çš„ä¸€äº›ç¢ç‰‡å¯ä»¥å‡ºå”®ç»™å•†åº—æ¢å–å°‘é‡çš„é‡‘é’±ã€‚" );
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 		return
@@ -140,83 +140,83 @@ function x210242_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x210242_OnEnumerate( sceneId, selfId, targetId )
 	
-	-- »î¶¯ÓĞĞ§Ê±¼äÅĞ¶¨
+	-- æ´»åŠ¨æœ‰æ•ˆæ—¶é—´åˆ¤å®š
 	if x210242_IsValidPenguinEggExchangeTime() == 0    then
-		-- »î¶¯Èç¹ûÒÑ¾­¹ıÆÚ£¬¾Í²»ÔÙÏÔÊ¾ÕâĞ©ÄÚÈİ
+		-- æ´»åŠ¨å¦‚æœå·²ç»è¿‡æœŸï¼Œå°±ä¸å†æ˜¾ç¤ºè¿™äº›å†…å®¹
 		return
 	end
 
-	AddNumText(sceneId, x210242_g_ScriptId,"ÎÒÒª¶Ò»»Æó¶ìµ°", 6, 1);
-	AddNumText(sceneId, x210242_g_ScriptId,"¹ØÓÚ¶Ò»»Æó¶ìµ°", 0, 2);
+	AddNumText(sceneId, x210242_g_ScriptId,"æˆ‘è¦å…‘æ¢ä¼é¹…è›‹", 6, 1);
+	AddNumText(sceneId, x210242_g_ScriptId,"å…³äºå…‘æ¢ä¼é¹…è›‹", 0, 2);
 
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x210242_CheckAccept( sceneId, selfId )
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x210242_OnAccept( sceneId, selfId, targetId )
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x210242_OnAbandon( sceneId, selfId )
 end
 
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x210242_CheckSubmit( sceneId, selfId )
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x210242_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 end
 
 --**********************************
---½øÈëÇøÓòÊÂ¼ş
+--è¿›å…¥åŒºåŸŸäº‹ä»¶
 --**********************************
 function x210242_OnEnterZone( sceneId, selfId, zoneId )
 end
 
 
--- ÊÇ·ñºÏ·¨¶Ò»»Æó¶ìµ°»î¶¯Ê±¼ä
+-- æ˜¯å¦åˆæ³•å…‘æ¢ä¼é¹…è›‹æ´»åŠ¨æ—¶é—´
 function x210242_IsValidPenguinEggExchangeTime()
 	local theDay = GetDayTime()
 	if theDay < x210242_g_ExchangePenguinEggStartDay or
 		 theDay > x210242_g_ExchangePenguinEggEndDay then
-		return 0 --·Ç»î¶¯Ê±¼ä
+		return 0 --éæ´»åŠ¨æ—¶é—´
 	end
 	
 	return 1
 end
 
 --**********************************
---Íæ¼Ò»ñµÃÌ«ÑôÊ¯ µÄÊ±ºò£¬ÔÚµôÂä°üÄÚ»ñµÃ
+--ç©å®¶è·å¾—å¤ªé˜³çŸ³ çš„æ—¶å€™ï¼Œåœ¨æ‰è½åŒ…å†…è·å¾—
 --**********************************
 function x210242_PickupItem( sceneId, selfId, itemId, bagidx )
-	-- #P XÅÙ³öÁËÒ»¿é¹ÖÊ¯£¬²Á¸É¾»ÄàÍÁÖ®ºó£¬²Å·¢ÏÖ¾ÓÈ»ÊÇÒ»¿éY¡£
+	-- #P Xåˆ¨å‡ºäº†ä¸€å—æ€ªçŸ³ï¼Œæ“¦å¹²å‡€æ³¥åœŸä¹‹åï¼Œæ‰å‘ç°å±…ç„¶æ˜¯ä¸€å—Yã€‚
 	local transfer = GetBagItemTransfer(sceneId, selfId, bagidx)
-	local str = format("#P #{_INFOUSR%s}ÅÙ³öÁËÒ»¿é¹ÖÊ¯£¬²Á¸É¾»ÄàÍÁÖ®ºó£¬²Å·¢ÏÖ¾ÓÈ»ÊÇÒ»¿é#{_INFOMSG%s}¡£",GetName(sceneId,selfId), transfer)
+	local str = format("#P #{_INFOUSR%s}åˆ¨å‡ºäº†ä¸€å—æ€ªçŸ³ï¼Œæ“¦å¹²å‡€æ³¥åœŸä¹‹åï¼Œæ‰å‘ç°å±…ç„¶æ˜¯ä¸€å—#{_INFOMSG%s}ã€‚",GetName(sceneId,selfId), transfer)
 	BroadMsgByChatPipe(sceneId, selfId, str, 4)
 	
 end
 
 function x210242_CheckPercentOK( numerator, denominator )
-  --²ÎÊıÎª·Ö×Ó,·ÖÄ¸. ÀıÈç ( 100, 10000 ) ±íÊ¾¼¸ÂÊÎª 100 / 10000
+  --å‚æ•°ä¸ºåˆ†å­,åˆ†æ¯. ä¾‹å¦‚ ( 100, 10000 ) è¡¨ç¤ºå‡ ç‡ä¸º 100 / 10000
   local roll = random( denominator )
   if roll <= numerator then
       return 1
@@ -225,26 +225,26 @@ function x210242_CheckPercentOK( numerator, denominator )
 end
 
 --**********************************
---¼ì²âÊÇ·ñÕıÈ·µÄ»î¶¯Ê±¼ä(µôÂäÆßĞÇËéÆ¬)
+--æ£€æµ‹æ˜¯å¦æ­£ç¡®çš„æ´»åŠ¨æ—¶é—´(æ‰è½ä¸ƒæ˜Ÿç¢ç‰‡)
 --**********************************
 function x210242_IsValidDayToDrop_QiXingSuiPian()
     local DayTime = GetDayTime()
     if DayTime < x210242_g_Drop_QiXingSuiPian_StartDay or
     	 DayTime > x210242_g_Drop_QiXingSuiPian_EndDay	 then
-       return 0    --·Ç»î¶¯Ê±¼ä
+       return 0    --éæ´»åŠ¨æ—¶é—´
     end
     
     return 1  
 end
 
 function x210242_DropStoneList(sceneId, LongzhuIndex) 
-  --½ğ	0.0200 	0.00667
-	--Ä¾	0.0050 	0.00167
-	--Ë®	0.0020 	0.00067
-	--»ğ	0.0011 	0.00037
-	--ÍÁ	0.0007 	0.00023
-	--ÔÂ	0.0004 	0.00013
-	--ÈÕ	0.0002 	0.00007
+  --é‡‘	0.0200 	0.00667
+	--æœ¨	0.0050 	0.00167
+	--æ°´	0.0020 	0.00067
+	--ç«	0.0011 	0.00037
+	--åœŸ	0.0007 	0.00023
+	--æœˆ	0.0004 	0.00013
+	--æ—¥	0.0002 	0.00007
 
   if 0 == x210242_IsValidDayToDrop_QiXingSuiPian()  then
   	return -1

@@ -34,7 +34,7 @@ end
 --===============================================
 function FangChenMiRefuse_Bn2Click()
 	
-	if(Variable:GetVariable("System_CodePage") == "1258") then
+	if(Variable:GetVariable("System_Region") == "1258") then
 		--do nothing
 	else
 		GameProduceLogin:OpenURL( "http://sde.game.sohu.com/fangchenmi/submitlogin.jsp" )

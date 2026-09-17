@@ -1,24 +1,24 @@
---»ğÑæÉ½NPC
---°×Ó³ÖĞ
---Ò©Æ·ÉÌµê
+--ç«ç„°å±±NPC
+--ç™½æ˜ ä¸­
+--è¯å“å•†åº—
 
 x042500_g_ScriptId	= 042500
 
---Ò©µê
+--è¯åº—
 x042500_g_shoptableindex = 179
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x042500_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent( sceneId )
-		AddText( sceneId, "  $N£¬#{HYS_20071224_02}" )
+		AddText( sceneId, "  $Nï¼Œ#{HYS_20071224_02}" )
 		AddNumText( sceneId, x042500_g_ScriptId, "#{HYS_20071224_03}", 7, 100 )
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, selfId, targetId )
 end
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x042500_OnEventRequest( sceneId, selfId, targetId, eventId )
 	local	key	= GetNumText()

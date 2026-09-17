@@ -1,19 +1,19 @@
---½Å±¾ºÅ
+--è„šæœ¬å·
 x000088_g_scriptId = 000088
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x000088_g_eventList = { 801010 }
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x000088_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
-		AddText(sceneId,"  »¨×ÔÆ®ÁãË®×ÔÁ÷£¬µ­µ­ÇàË¿×ÔÑÔ³î£¬´ºÅ¯ÇïËªÁ¯ÈËĞä£¬ÂúÔÂ°ëÏÒÔÂÈç¹³¡£¼ÈÈ»ÎŞ´¦ÑÔ³î£¬ºÎ²»»»¸ö·¢ĞÍÄØ£¿")
+		AddText(sceneId,"  èŠ±è‡ªé£˜é›¶æ°´è‡ªæµï¼Œæ·¡æ·¡é’ä¸è‡ªè¨€æ„ï¼Œæ˜¥æš–ç§‹éœœæ€œäººè¢–ï¼Œæ»¡æœˆåŠå¼¦æœˆå¦‚é’©ã€‚æ—¢ç„¶æ— å¤„è¨€æ„ï¼Œä½•ä¸æ¢ä¸ªå‘å‹å‘¢ï¼Ÿ")
 		
-		AddNumText( sceneId, x000088_g_scriptId, "ĞŞ¸Ä·¢ĞÍ½éÉÜ", 11, 10 )
+		AddNumText( sceneId, x000088_g_scriptId, "ä¿®æ”¹å‘å‹ä»‹ç»", 11, 10 )
 		
-		AddNumText(sceneId,x000088_g_scriptId,"ĞŞ¸Ä·¢ĞÍ",6,1)
+		AddNumText(sceneId,x000088_g_scriptId,"ä¿®æ”¹å‘å‹",6,1)
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 end
@@ -29,7 +29,7 @@ function x000088_OnEventRequest( sceneId, selfId, targetId, eventId )
 	end
 	
 	if GetNumText() == 1 then
-		-- ĞŞ¸Ä·¢ĞÍ
+		-- ä¿®æ”¹å‘å‹
 		CallScriptFunction( 801010, "OnEnumerate",sceneId, selfId, targetId )
 		return
 	end

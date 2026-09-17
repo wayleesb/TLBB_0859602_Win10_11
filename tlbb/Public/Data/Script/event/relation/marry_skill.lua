@@ -1,67 +1,67 @@
---·òÆŞ¼¼ÄÜÑ§Ï°
+--å¤«å¦»æŠ€èƒ½å­¦ä¹ 
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x806016_g_ScriptId		= 806016
 
 
---ĞÄĞÄÏàÓ¡¼¼ÄÜ±í....
+--å¿ƒå¿ƒç›¸å°æŠ€èƒ½è¡¨....
 x806016_g_skillList_XXXY = {
 
-	{id=260, name="ĞÄĞÄÏàÓ¡(1¼¶)", firendPt=1000, lvM=0, lvF=0, exp=0, money=0},
-	{id=261, name="ĞÄĞÄÏàÓ¡(2¼¶)", firendPt=2000, lvM=0, lvF=0, exp=0, money=442},
-	{id=262, name="ĞÄĞÄÏàÓ¡(3¼¶)", firendPt=3000, lvM=0, lvF=0, exp=0, money=967},
-	{id=263, name="ĞÄĞÄÏàÓ¡(4¼¶)", firendPt=4000, lvM=0, lvF=0, exp=0, money=1800},
-	{id=264, name="ĞÄĞÄÏàÓ¡(5¼¶)", firendPt=5000, lvM=0, lvF=0, exp=0, money=3009},
-	{id=265, name="ĞÄĞÄÏàÓ¡(6¼¶)", firendPt=6000, lvM=0, lvF=0, exp=0, money=4660},
-	{id=266, name="ĞÄĞÄÏàÓ¡(7¼¶)", firendPt=7000, lvM=0, lvF=0, exp=0, money=6825},
-	{id=267, name="ĞÄĞÄÏàÓ¡(8¼¶)", firendPt=8000, lvM=0, lvF=0, exp=0, money=13322},
-	{id=268, name="ĞÄĞÄÏàÓ¡(9¼¶)", firendPt=9000, lvM=0, lvF=0, exp=0, money=23449}
+	{id=260, name="å¿ƒå¿ƒç›¸å°(1çº§)", firendPt=1000, lvM=0, lvF=0, exp=0, money=0},
+	{id=261, name="å¿ƒå¿ƒç›¸å°(2çº§)", firendPt=2000, lvM=0, lvF=0, exp=0, money=442},
+	{id=262, name="å¿ƒå¿ƒç›¸å°(3çº§)", firendPt=3000, lvM=0, lvF=0, exp=0, money=967},
+	{id=263, name="å¿ƒå¿ƒç›¸å°(4çº§)", firendPt=4000, lvM=0, lvF=0, exp=0, money=1800},
+	{id=264, name="å¿ƒå¿ƒç›¸å°(5çº§)", firendPt=5000, lvM=0, lvF=0, exp=0, money=3009},
+	{id=265, name="å¿ƒå¿ƒç›¸å°(6çº§)", firendPt=6000, lvM=0, lvF=0, exp=0, money=4660},
+	{id=266, name="å¿ƒå¿ƒç›¸å°(7çº§)", firendPt=7000, lvM=0, lvF=0, exp=0, money=6825},
+	{id=267, name="å¿ƒå¿ƒç›¸å°(8çº§)", firendPt=8000, lvM=0, lvF=0, exp=0, money=13322},
+	{id=268, name="å¿ƒå¿ƒç›¸å°(9çº§)", firendPt=9000, lvM=0, lvF=0, exp=0, money=23449}
 
 };
 
---Í¬ÆøÁ¬Ö¦¼¼ÄÜ±í....
+--åŒæ°”è¿ææŠ€èƒ½è¡¨....
 x806016_g_skillList_TQLZ = {
 
-	{id=250, name="Í¬ÆøÁ¬Ö¦(1¼¶)", firendPt=1000, lvM=35, lvF=20, exp=24739, money=10000},
-	{id=251, name="Í¬ÆøÁ¬Ö¦(2¼¶)", firendPt=3000, lvM=45, lvF=30, exp=53745, money=40000},
-	{id=252, name="Í¬ÆøÁ¬Ö¦(3¼¶)", firendPt=5000, lvM=55, lvF=40, exp=116762, money=100000},
-	{id=253, name="Í¬ÆøÁ¬Ö¦(4¼¶)", firendPt=7000, lvM=65, lvF=50, exp=253665, money=200000},
-	{id=254, name="Í¬ÆøÁ¬Ö¦(5¼¶)", firendPt=9999, lvM=75, lvF=60, exp=551086, money=500000},
+	{id=250, name="åŒæ°”è¿æ(1çº§)", firendPt=1000, lvM=35, lvF=20, exp=24739, money=10000},
+	{id=251, name="åŒæ°”è¿æ(2çº§)", firendPt=3000, lvM=45, lvF=30, exp=53745, money=40000},
+	{id=252, name="åŒæ°”è¿æ(3çº§)", firendPt=5000, lvM=55, lvF=40, exp=116762, money=100000},
+	{id=253, name="åŒæ°”è¿æ(4çº§)", firendPt=7000, lvM=65, lvF=50, exp=253665, money=200000},
+	{id=254, name="åŒæ°”è¿æ(5çº§)", firendPt=9999, lvM=75, lvF=60, exp=551086, money=500000},
 
 };
 
---Ìì³¤µØ¾Ã¼¼ÄÜ±í....
+--å¤©é•¿åœ°ä¹…æŠ€èƒ½è¡¨....
 x806016_g_skillList_TCDJ = {
 
-	{id=255, name="Ìì³¤µØ¾Ã(1¼¶)", firendPt=1000, lvM=35, lvF=20, exp=24739, money=10000},
-	{id=256, name="Ìì³¤µØ¾Ã(2¼¶)", firendPt=3000, lvM=45, lvF=30, exp=53745, money=40000},
-	{id=257, name="Ìì³¤µØ¾Ã(3¼¶)", firendPt=5000, lvM=55, lvF=40, exp=116762, money=100000},
-	{id=258, name="Ìì³¤µØ¾Ã(4¼¶)", firendPt=7000, lvM=65, lvF=50, exp=253665, money=200000},
-	{id=259, name="Ìì³¤µØ¾Ã(5¼¶)", firendPt=9999, lvM=75, lvF=60, exp=551086, money=500000},
+	{id=255, name="å¤©é•¿åœ°ä¹…(1çº§)", firendPt=1000, lvM=35, lvF=20, exp=24739, money=10000},
+	{id=256, name="å¤©é•¿åœ°ä¹…(2çº§)", firendPt=3000, lvM=45, lvF=30, exp=53745, money=40000},
+	{id=257, name="å¤©é•¿åœ°ä¹…(3çº§)", firendPt=5000, lvM=55, lvF=40, exp=116762, money=100000},
+	{id=258, name="å¤©é•¿åœ°ä¹…(4çº§)", firendPt=7000, lvM=65, lvF=50, exp=253665, money=200000},
+	{id=259, name="å¤©é•¿åœ°ä¹…(5çº§)", firendPt=9999, lvM=75, lvF=60, exp=551086, money=500000},
 
 };
 
---ĞÎÓ°²»Àë¼¼ÄÜ±í....
+--å½¢å½±ä¸ç¦»æŠ€èƒ½è¡¨....
 x806016_g_skillList_XYBL = {
 
-	{id=269, name="ĞÎÓ°²»Àë(1¼¶)", firendPt=1000, lvM=35, lvF=20, exp=24739, money=10000},
-	{id=270, name="ĞÎÓ°²»Àë(2¼¶)", firendPt=3000, lvM=45, lvF=30, exp=53745, money=40000},
-	{id=271, name="ĞÎÓ°²»Àë(3¼¶)", firendPt=5000, lvM=55, lvF=40, exp=116762, money=100000},
-	{id=272, name="ĞÎÓ°²»Àë(4¼¶)", firendPt=7000, lvM=65, lvF=50, exp=253665, money=200000},
-	{id=273, name="ĞÎÓ°²»Àë(5¼¶)", firendPt=9999, lvM=75, lvF=60, exp=551086, money=500000},
+	{id=269, name="å½¢å½±ä¸ç¦»(1çº§)", firendPt=1000, lvM=35, lvF=20, exp=24739, money=10000},
+	{id=270, name="å½¢å½±ä¸ç¦»(2çº§)", firendPt=3000, lvM=45, lvF=30, exp=53745, money=40000},
+	{id=271, name="å½¢å½±ä¸ç¦»(3çº§)", firendPt=5000, lvM=55, lvF=40, exp=116762, money=100000},
+	{id=272, name="å½¢å½±ä¸ç¦»(4çº§)", firendPt=7000, lvM=65, lvF=50, exp=253665, money=200000},
+	{id=273, name="å½¢å½±ä¸ç¦»(5çº§)", firendPt=9999, lvM=75, lvF=60, exp=551086, money=500000},
 
 };
 
---ĞÎÓ°²»Àë1¼¶¶ÔÓ¦µÄ¼¼ÄÜID
+--å½¢å½±ä¸ç¦»1çº§å¯¹åº”çš„æŠ€èƒ½ID
 x806016_g_xybl_SkillID = 269
---Ñ§Ï°ĞÎÓ°²»Àë1¼¶ĞèÒªµÄÎïÆ·ID
+--å­¦ä¹ å½¢å½±ä¸ç¦»1çº§éœ€è¦çš„ç‰©å“ID
 x806016_g_xybl_ItemID = 30308059
 
---ĞèÒªÊÀ½ç¹«¸æµÄ¼¼ÄÜ±àºÅ±í
+--éœ€è¦ä¸–ç•Œå…¬å‘Šçš„æŠ€èƒ½ç¼–å·è¡¨
 x806016_g_MaxMarrySkill_T = {268,253,254,258,259,272,273};
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x806016_OnDefaultEvent(sceneId, selfId, targetId)
 
@@ -69,10 +69,10 @@ function x806016_OnDefaultEvent(sceneId, selfId, targetId)
 
 	if selectEventId == 0 then
 		BeginEvent(sceneId);
-			AddNumText(sceneId, x806016_g_ScriptId, "Ñ§Ï°ĞÄĞÄÏàÓ¡", 12, 11);
-			AddNumText(sceneId, x806016_g_ScriptId, "Ñ§Ï°Í¬ÆøÁ¬Ö¦", 12, 12);
-			AddNumText(sceneId, x806016_g_ScriptId, "Ñ§Ï°Ìì³¤µØ¾Ã", 12, 13);
-			AddNumText(sceneId, x806016_g_ScriptId, "Ñ§Ï°ĞÎÓ°²»Àë", 12, 14);
+			AddNumText(sceneId, x806016_g_ScriptId, "å­¦ä¹ å¿ƒå¿ƒç›¸å°", 12, 11);
+			AddNumText(sceneId, x806016_g_ScriptId, "å­¦ä¹ åŒæ°”è¿æ", 12, 12);
+			AddNumText(sceneId, x806016_g_ScriptId, "å­¦ä¹ å¤©é•¿åœ°ä¹…", 12, 13);
+			AddNumText(sceneId, x806016_g_ScriptId, "å­¦ä¹ å½¢å½±ä¸ç¦»", 12, 14);
 		EndEvent(sceneId);
 		DispatchEventList(sceneId, selfId, targetId);
 
@@ -82,14 +82,14 @@ function x806016_OnDefaultEvent(sceneId, selfId, targetId)
 		if ret > 0 then
 			local skill = x806016_g_skillList_XXXY[nextLevel+1];
 			BeginEvent(sceneId);
-				AddText(sceneId, "  ĞÄĞÄÏàÓ¡¿ÉÒÔÔö¼ÓÅäÅ¼µÄÌåÁ¦£¬¼¼ÄÜµÈ¼¶Ô½¸ßÔö¼ÓµÄÌåÁ¦Ô½¶à¡£");
+				AddText(sceneId, "  å¿ƒå¿ƒç›¸å°å¯ä»¥å¢åŠ é…å¶çš„ä½“åŠ›ï¼ŒæŠ€èƒ½ç­‰çº§è¶Šé«˜å¢åŠ çš„ä½“åŠ›è¶Šå¤šã€‚");
 				if skill.money > 0 then
-					AddText(sceneId, "  ÄĞ·½ĞèÒª»¨·Ñ#{_EXCHG"..skill.money.."}Ñ§Ï°"..skill.name.."¡£");
+					AddText(sceneId, "  ç”·æ–¹éœ€è¦èŠ±è´¹#{_EXCHG"..skill.money.."}å­¦ä¹ "..skill.name.."ã€‚");
 				end
 				if nextLevel > 0 then
-					AddNumText(sceneId, x806016_g_ScriptId, "Éı¼¶¼¼ÄÜ", 12, 21);
+					AddNumText(sceneId, x806016_g_ScriptId, "å‡çº§æŠ€èƒ½", 12, 21);
 				else
-					AddNumText(sceneId, x806016_g_ScriptId, "Ñ§Ï°¼¼ÄÜ", 12, 21);
+					AddNumText(sceneId, x806016_g_ScriptId, "å­¦ä¹ æŠ€èƒ½", 12, 21);
 				end
 			EndEvent(sceneId);
 			DispatchEventList(sceneId, selfId, targetId);
@@ -101,13 +101,13 @@ function x806016_OnDefaultEvent(sceneId, selfId, targetId)
 		if ret > 0 then
 			local skill = x806016_g_skillList_TQLZ[nextLevel+1];
 			BeginEvent(sceneId);
-				AddText(sceneId, "  Í¬ÆøÁ¬Ö¦ÄÜ¹»»Ö¸´ÅäÅ¼µÄÑª£¬¼¼ÄÜµÈ¼¶Ô½¸ß£¬»Ö¸´µÄÑªÔ½¶à¡£");
-				AddText(sceneId, "  Ñ§Ï°"..skill.name.."ĞèÒªÄĞ·½»¨·Ñ"..skill.exp.."¾­ÑéºÍ#{_EXCHG"..skill.money.."}¡£");
-				AddText(sceneId, "  Í¬Ê±ĞèÒª·òÆŞµÄºÃ¸Ğ¶È´ïµ½#G"..skill.firendPt.."#W£¬ÄĞ·½µÈ¼¶´ïµ½"..skill.lvM.."¼¶£¬Å®·½µÈ¼¶´ïµ½"..skill.lvF.."¼¶¡£");
+				AddText(sceneId, "  åŒæ°”è¿æèƒ½å¤Ÿæ¢å¤é…å¶çš„è¡€ï¼ŒæŠ€èƒ½ç­‰çº§è¶Šé«˜ï¼Œæ¢å¤çš„è¡€è¶Šå¤šã€‚");
+				AddText(sceneId, "  å­¦ä¹ "..skill.name.."éœ€è¦ç”·æ–¹èŠ±è´¹"..skill.exp.."ç»éªŒå’Œ#{_EXCHG"..skill.money.."}ã€‚");
+				AddText(sceneId, "  åŒæ—¶éœ€è¦å¤«å¦»çš„å¥½æ„Ÿåº¦è¾¾åˆ°#G"..skill.firendPt.."#Wï¼Œç”·æ–¹ç­‰çº§è¾¾åˆ°"..skill.lvM.."çº§ï¼Œå¥³æ–¹ç­‰çº§è¾¾åˆ°"..skill.lvF.."çº§ã€‚");
 				if nextLevel > 0 then
-					AddNumText(sceneId, x806016_g_ScriptId, "Éı¼¶¼¼ÄÜ", 12, 22);
+					AddNumText(sceneId, x806016_g_ScriptId, "å‡çº§æŠ€èƒ½", 12, 22);
 				else
-					AddNumText(sceneId, x806016_g_ScriptId, "Ñ§Ï°¼¼ÄÜ", 12, 22);
+					AddNumText(sceneId, x806016_g_ScriptId, "å­¦ä¹ æŠ€èƒ½", 12, 22);
 				end
 			EndEvent(sceneId);
 			DispatchEventList(sceneId, selfId, targetId);
@@ -119,13 +119,13 @@ function x806016_OnDefaultEvent(sceneId, selfId, targetId)
 		if ret > 0 then
 			local skill = x806016_g_skillList_TCDJ[nextLevel+1];
 			BeginEvent(sceneId);
-				AddText(sceneId, "  Ìì³¤µØ¾Ã¿ÉÒÔ¸´»îÅäÅ¼²¢»Ø¸´Ò»¶¨±ÈÀıµÄÑªÆø£¬¼¼ÄÜµÈ¼¶Ô½¸ß£¬¼¼ÄÜÀäÈ´Ê±¼äÔ½ÉÙ¡£");
-				AddText(sceneId, "  Ñ§Ï°"..skill.name.."ĞèÒªÄĞ·½»¨·Ñ"..skill.exp.."¾­ÑéºÍ#{_EXCHG"..skill.money.."}¡£");
-				AddText(sceneId, "  Í¬Ê±ĞèÒª·òÆŞµÄºÃ¸Ğ¶È´ïµ½#G"..skill.firendPt.."#W£¬ÄĞ·½µÈ¼¶´ïµ½"..skill.lvM.."¼¶£¬Å®·½µÈ¼¶´ïµ½"..skill.lvF.."¼¶¡£");
+				AddText(sceneId, "  å¤©é•¿åœ°ä¹…å¯ä»¥å¤æ´»é…å¶å¹¶å›å¤ä¸€å®šæ¯”ä¾‹çš„è¡€æ°”ï¼ŒæŠ€èƒ½ç­‰çº§è¶Šé«˜ï¼ŒæŠ€èƒ½å†·å´æ—¶é—´è¶Šå°‘ã€‚");
+				AddText(sceneId, "  å­¦ä¹ "..skill.name.."éœ€è¦ç”·æ–¹èŠ±è´¹"..skill.exp.."ç»éªŒå’Œ#{_EXCHG"..skill.money.."}ã€‚");
+				AddText(sceneId, "  åŒæ—¶éœ€è¦å¤«å¦»çš„å¥½æ„Ÿåº¦è¾¾åˆ°#G"..skill.firendPt.."#Wï¼Œç”·æ–¹ç­‰çº§è¾¾åˆ°"..skill.lvM.."çº§ï¼Œå¥³æ–¹ç­‰çº§è¾¾åˆ°"..skill.lvF.."çº§ã€‚");
 				if nextLevel > 0 then
-					AddNumText(sceneId, x806016_g_ScriptId, "Éı¼¶¼¼ÄÜ", 12, 23);
+					AddNumText(sceneId, x806016_g_ScriptId, "å‡çº§æŠ€èƒ½", 12, 23);
 				else
-					AddNumText(sceneId, x806016_g_ScriptId, "Ñ§Ï°¼¼ÄÜ", 12, 23);
+					AddNumText(sceneId, x806016_g_ScriptId, "å­¦ä¹ æŠ€èƒ½", 12, 23);
 				end
 			EndEvent(sceneId);
 			DispatchEventList(sceneId, selfId, targetId);
@@ -137,17 +137,17 @@ function x806016_OnDefaultEvent(sceneId, selfId, targetId)
 		if ret > 0 then
 			local skill = x806016_g_skillList_XYBL[nextLevel+1];
 			BeginEvent(sceneId);
-				AddText(sceneId, "  ĞÎÓ°²»Àë¿ÉÒÔÍ¬³¡¾°Ë²¼äÒÆ¶¯µ½ÅäÅ¼ËùÔÚµã£¬¼¼ÄÜµÈ¼¶Ô½¸ß£¬¼¼ÄÜÀäÈ´Ê±¼äÔ½ÉÙ¡£");
+				AddText(sceneId, "  å½¢å½±ä¸ç¦»å¯ä»¥åŒåœºæ™¯ç¬é—´ç§»åŠ¨åˆ°é…å¶æ‰€åœ¨ç‚¹ï¼ŒæŠ€èƒ½ç­‰çº§è¶Šé«˜ï¼ŒæŠ€èƒ½å†·å´æ—¶é—´è¶Šå°‘ã€‚");
 				if skill.id == x806016_g_xybl_SkillID then
-					AddText(sceneId, "  Ñ§Ï°"..skill.name.."ĞèÒªÄĞ·½³ÖÓĞ#G#{_ITEM"..tostring(x806016_g_xybl_ItemID).."}#W¡£");
+					AddText(sceneId, "  å­¦ä¹ "..skill.name.."éœ€è¦ç”·æ–¹æŒæœ‰#G#{_ITEM"..tostring(x806016_g_xybl_ItemID).."}#Wã€‚");
 				else
-					AddText(sceneId, "  Ñ§Ï°"..skill.name.."ĞèÒªÄĞ·½»¨·Ñ"..skill.exp.."¾­ÑéºÍ#{_EXCHG"..skill.money.."}¡£");
+					AddText(sceneId, "  å­¦ä¹ "..skill.name.."éœ€è¦ç”·æ–¹èŠ±è´¹"..skill.exp.."ç»éªŒå’Œ#{_EXCHG"..skill.money.."}ã€‚");
 				end
-				AddText(sceneId, "  Í¬Ê±ĞèÒª·òÆŞµÄºÃ¸Ğ¶È´ïµ½#G"..skill.firendPt.."#W£¬ÄĞ·½µÈ¼¶´ïµ½"..skill.lvM.."¼¶£¬Å®·½µÈ¼¶´ïµ½"..skill.lvF.."¼¶¡£");
+				AddText(sceneId, "  åŒæ—¶éœ€è¦å¤«å¦»çš„å¥½æ„Ÿåº¦è¾¾åˆ°#G"..skill.firendPt.."#Wï¼Œç”·æ–¹ç­‰çº§è¾¾åˆ°"..skill.lvM.."çº§ï¼Œå¥³æ–¹ç­‰çº§è¾¾åˆ°"..skill.lvF.."çº§ã€‚");
 				if nextLevel > 0 then
-					AddNumText(sceneId, x806016_g_ScriptId, "Éı¼¶¼¼ÄÜ", 12, 24);
+					AddNumText(sceneId, x806016_g_ScriptId, "å‡çº§æŠ€èƒ½", 12, 24);
 				else
-					AddNumText(sceneId, x806016_g_ScriptId, "Ñ§Ï°¼¼ÄÜ", 12, 24);
+					AddNumText(sceneId, x806016_g_ScriptId, "å­¦ä¹ æŠ€èƒ½", 12, 24);
 				end
 			EndEvent(sceneId);
 			DispatchEventList(sceneId, selfId, targetId);
@@ -174,41 +174,41 @@ function x806016_OnDefaultEvent(sceneId, selfId, targetId)
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x806016_OnEnumerate(sceneId, selfId, targetId)
 	local isMarried = LuaFnIsMarried(sceneId, selfId);
 	if isMarried and isMarried > 0 then
-		AddNumText(sceneId, x806016_g_ScriptId, "Ñ§Ï°·òÆŞ¼¼ÄÜ", 12, 0);
+		AddNumText(sceneId, x806016_g_ScriptId, "å­¦ä¹ å¤«å¦»æŠ€èƒ½", 12, 0);
 	end
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÑ§Ï°Ä³Ïî·òÆŞ¼¼ÄÜ....
+--æ£€æµ‹æ˜¯å¦å¯ä»¥å­¦ä¹ æŸé¡¹å¤«å¦»æŠ€èƒ½....
 --**********************************
 function x806016_CheckStudySkill( sceneId, selfId, targetId, SkillList )
 
-	--Ç°ÌáÌõ¼ş
-	local szMsg = "Èç¹ûÏëÑ§Ï°·òÆŞ¼¼ÄÜ£¬ÇëÄĞÅ®Ë«·½2ÈË×é³ÉÒ»¶ÓÔÙÀ´ÕÒÎÒ¡£"
+	--å‰ææ¡ä»¶
+	local szMsg = "å¦‚æœæƒ³å­¦ä¹ å¤«å¦»æŠ€èƒ½ï¼Œè¯·ç”·å¥³åŒæ–¹2äººç»„æˆä¸€é˜Ÿå†æ¥æ‰¾æˆ‘ã€‚"
 	if LuaFnHasTeam(sceneId, selfId) == 0 then
 		x806016_MessageBox(sceneId, selfId, targetId, szMsg);
 		return 0;
 	end
 	
-	szMsg = "¶ÓÎé±ØĞëÖ»ÄÜÓÉ·òÆŞË«·½×é³É£¬¶ÓÎéÖĞ²»ÄÜÓĞÆäËûÈËÔ±¡£"
+	szMsg = "é˜Ÿä¼å¿…é¡»åªèƒ½ç”±å¤«å¦»åŒæ–¹ç»„æˆï¼Œé˜Ÿä¼ä¸­ä¸èƒ½æœ‰å…¶ä»–äººå‘˜ã€‚"
 	if LuaFnGetTeamSize(sceneId, selfId) ~= 2 then
 		x806016_MessageBox(sceneId, selfId, targetId, szMsg);
 		return 0;
 	end
 
-	szMsg = "Ö»ÓĞ2ÈË¶¼×ßµ½ÎÒÉí±ß²Å¿ÉÒÔÑ§Ï°¼¼ÄÜ¡£"
+	szMsg = "åªæœ‰2äººéƒ½èµ°åˆ°æˆ‘èº«è¾¹æ‰å¯ä»¥å­¦ä¹ æŠ€èƒ½ã€‚"
 	local nearNum = GetNearTeamCount(sceneId, selfId);
 	if nearNum ~= 2 then
 		x806016_MessageBox(sceneId, selfId, targetId, szMsg);
 		return 0;
 	end
 
-	szMsg = "²»ÊÇ·òÆŞ²»ÄÜÑ§Ï°·òÆŞ¼¼ÄÜ¡£"
+	szMsg = "ä¸æ˜¯å¤«å¦»ä¸èƒ½å­¦ä¹ å¤«å¦»æŠ€èƒ½ã€‚"
 	local maleId = -1;
 	local femaleId = -1;
 	for nearIndex = 0, nearNum - 1 do
@@ -233,7 +233,7 @@ function x806016_CheckStudySkill( sceneId, selfId, targetId, SkillList )
 		return 0;
 	end
 
-	szMsg = "ÄÚ²¿´íÎó£¬½Å±¾²»¿ÉÒÔÕı³£Ö´ĞĞ¡£"
+	szMsg = "å†…éƒ¨é”™è¯¯ï¼Œè„šæœ¬ä¸å¯ä»¥æ­£å¸¸æ‰§è¡Œã€‚"
 	if LuaFnIsCanDoScriptLogic(sceneId, maleId) ~= 1 then
 		return 0;
 	end
@@ -241,7 +241,7 @@ function x806016_CheckStudySkill( sceneId, selfId, targetId, SkillList )
 		return 0;
 	end
 	
-	szMsg = "Ë«·½±ØĞë»¥ÎªºÃÓÑ²ÅÄÜÑ§Ï°·òÆŞ¼¼ÄÜ¡£"
+	szMsg = "åŒæ–¹å¿…é¡»äº’ä¸ºå¥½å‹æ‰èƒ½å­¦ä¹ å¤«å¦»æŠ€èƒ½ã€‚"
 	local maleIsFirend, femaleIsFirend;
 	maleIsFirend = LuaFnIsFriend(sceneId, maleId, femaleId);
 	femaleIsFirend = LuaFnIsFriend(sceneId, femaleId, maleId);
@@ -257,7 +257,7 @@ function x806016_CheckStudySkill( sceneId, selfId, targetId, SkillList )
 
 	local skill, skillLevel;
 	skillLevel = 0;
-	--¼ì²éÍæ¼ÒµÄ·òÆŞ¼¼ÄÜÒÑ¾­Ñ§µ½¼¸¼¶
+	--æ£€æŸ¥ç©å®¶çš„å¤«å¦»æŠ€èƒ½å·²ç»å­¦åˆ°å‡ çº§
 	for _, skill in SkillList do
 		local maleHaveSkill = HaveSkill(sceneId, maleId, skill.id);
 		if maleHaveSkill and maleHaveSkill > 0 then
@@ -273,7 +273,7 @@ function x806016_CheckStudySkill( sceneId, selfId, targetId, SkillList )
 	
 	local maxSkillLevel = skillLevel - 1;
 	
-	szMsg = "Äú´Ë¼¼ÄÜÒÑ¾­Éı¼¶µ½×î¸ß£¬ÎŞ·¨¼ÌĞøÉı¼¶¡£"
+	szMsg = "æ‚¨æ­¤æŠ€èƒ½å·²ç»å‡çº§åˆ°æœ€é«˜ï¼Œæ— æ³•ç»§ç»­å‡çº§ã€‚"
 	if maleSkillLevel >= maxSkillLevel then
 		x806016_MessageBox(sceneId, selfId, targetId, szMsg);
 		return 0;
@@ -286,11 +286,11 @@ function x806016_CheckStudySkill( sceneId, selfId, targetId, SkillList )
 end
 
 --**********************************
---Ñ§Ï°¼¼ÄÜ
+--å­¦ä¹ æŠ€èƒ½
 --**********************************
 function x806016_StudySkill(sceneId, selfId, targetId, SkillList)
 
-	--¼ì²â»ù±¾Ìõ¼ş....
+	--æ£€æµ‹åŸºæœ¬æ¡ä»¶....
 	local ret, nextLevel, maleId, femaleId = x806016_CheckStudySkill( sceneId, selfId, targetId, SkillList );
 	if ret == 0 then
 		return
@@ -298,7 +298,7 @@ function x806016_StudySkill(sceneId, selfId, targetId, SkillList)
 
 	local skill = SkillList[nextLevel+1];
 
-	szMsg = "Ë«·½µÄÓÑºÃ¶È±ØĞë´ïµ½%d²Å¿ÉÒÔÑ§»áÏÂÒ»Ïî·òÆŞ¼¼ÄÜ¡£"
+	szMsg = "åŒæ–¹çš„å‹å¥½åº¦å¿…é¡»è¾¾åˆ°%dæ‰å¯ä»¥å­¦ä¼šä¸‹ä¸€é¡¹å¤«å¦»æŠ€èƒ½ã€‚"
 	local maleFirendPt, femaleFirendPt, needFirendPt;
 	maleFirendPt =  LuaFnGetFriendPoint(sceneId, maleId, femaleId);
 	femaleFirendPt =  LuaFnGetFriendPoint(sceneId, femaleId, maleId);
@@ -310,14 +310,14 @@ function x806016_StudySkill(sceneId, selfId, targetId, SkillList)
 		return
 	end
 
-	szMsg = "ÄĞ·½µÈ¼¶±ØĞë´ïµ½%d²Å¿ÉÒÔÑ§»áÏÂÒ»Ïî·òÆŞ¼¼ÄÜ¡£"
+	szMsg = "ç”·æ–¹ç­‰çº§å¿…é¡»è¾¾åˆ°%dæ‰å¯ä»¥å­¦ä¼šä¸‹ä¸€é¡¹å¤«å¦»æŠ€èƒ½ã€‚"
 	if GetLevel( sceneId, maleId ) < skill.lvM then
 		szMsg = format(szMsg, skill.lvM);
 		x806016_MessageBox(sceneId, selfId, targetId, szMsg);
 		return
 	end
 
-	szMsg = "Å®·½µÈ¼¶±ØĞë´ïµ½%d²Å¿ÉÒÔÑ§»áÏÂÒ»Ïî·òÆŞ¼¼ÄÜ¡£"
+	szMsg = "å¥³æ–¹ç­‰çº§å¿…é¡»è¾¾åˆ°%dæ‰å¯ä»¥å­¦ä¼šä¸‹ä¸€é¡¹å¤«å¦»æŠ€èƒ½ã€‚"
 	if GetLevel( sceneId, femaleId ) < skill.lvF then
 		szMsg = format(szMsg, skill.lvF);
 		x806016_MessageBox(sceneId, selfId, targetId, szMsg);
@@ -326,24 +326,24 @@ function x806016_StudySkill(sceneId, selfId, targetId, SkillList)
 	
 	if skill.id == x806016_g_xybl_SkillID then
 		if HaveItemInBag(sceneId,maleId,x806016_g_xybl_ItemID)<0 then
-			x806016_MessageBox(sceneId, selfId, targetId, "ÄĞ·½ĞèÒª³ÖÓĞ#G#{_ITEM"..tostring(x806016_g_xybl_ItemID).."}#W²ÅÄÜÑ§Ï°¸Ã¼¼ÄÜ£¡");
+			x806016_MessageBox(sceneId, selfId, targetId, "ç”·æ–¹éœ€è¦æŒæœ‰#G#{_ITEM"..tostring(x806016_g_xybl_ItemID).."}#Wæ‰èƒ½å­¦ä¹ è¯¥æŠ€èƒ½ï¼");
 			return
 		end
 		if LuaFnGetAvailableItemCount(sceneId,maleId,x806016_g_xybl_ItemID)<=0 then
-			x806016_MessageBox(sceneId, selfId, targetId, "ĞèÇóÎïÆ·#G#{_ITEM"..tostring(x806016_g_xybl_ItemID).."}#WÒÑ¼ÓËø£¬Çë½âËøºóÔÙÑ§Ï°£¡");
+			x806016_MessageBox(sceneId, selfId, targetId, "éœ€æ±‚ç‰©å“#G#{_ITEM"..tostring(x806016_g_xybl_ItemID).."}#Wå·²åŠ é”ï¼Œè¯·è§£é”åå†å­¦ä¹ ï¼");
 			return
 		end
-		--¿Û³ıÎïÆ·
+		--æ‰£é™¤ç‰©å“
 		LuaFnDelAvailableItem(sceneId,maleId,x806016_g_xybl_ItemID,1)
 	else
-		szMsg = "ÄĞ·½¾­Ñé±ØĞë´ïµ½%d²Å¿ÉÒÔÑ§»áÏÂÒ»Ïî·òÆŞ¼¼ÄÜ¡£"
+		szMsg = "ç”·æ–¹ç»éªŒå¿…é¡»è¾¾åˆ°%.0fæ‰å¯ä»¥å­¦ä¼šä¸‹ä¸€é¡¹å¤«å¦»æŠ€èƒ½ã€‚"
 		if GetExp(sceneId, maleId) < skill.exp then
 			szMsg = format(szMsg, skill.exp);
 			x806016_MessageBox(sceneId, selfId, targetId, szMsg);
 			return
 		end
 	
-		szMsg = "ÄĞ·½ĞèÒªĞ¯´ø#{_EXCHG%d}²ÅÄÜÑ§Ï°¼¼ÄÜ¡£"
+		szMsg = "ç”·æ–¹éœ€è¦æºå¸¦#{_EXCHG%d}æ‰èƒ½å­¦ä¹ æŠ€èƒ½ã€‚"
 		local maleMoney, needMoney;
 		maleMoney = LuaFnGetMoney(sceneId, maleId);
 		needMoney = skill.money;
@@ -355,23 +355,23 @@ function x806016_StudySkill(sceneId, selfId, targetId, SkillList)
 			return
 		end
 	
-		--¿Û³ıÄĞ·½ÉíÉÏ½ğÇ®....
+		--æ‰£é™¤ç”·æ–¹èº«ä¸Šé‡‘é’±....
 		LuaFnCostMoneyWithPriority(sceneId, maleId, needMoney);
 		
-		--¿Û³ıÄĞ·½Éí¾­Ñé....
+		--æ‰£é™¤ç”·æ–¹èº«ç»éªŒ....
 		if skill.exp > 0 then
 			LuaFnAddExp( sceneId, maleId, -skill.exp );
 		end
 	end
 
-	--Ôö¼ÓÒ»¸ö·òÆŞ¼¼ÄÜ¸øË«·½
+	--å¢åŠ ä¸€ä¸ªå¤«å¦»æŠ€èƒ½ç»™åŒæ–¹
 	x806016_MyAddSkill(sceneId, maleId, SkillList, nextLevel);
 	x806016_MyAddSkill( sceneId, femaleId, SkillList, nextLevel);
 	x806016_SendWorldMsg(sceneId,maleId,femaleId,SkillList, nextLevel)
-	--Ìí¼ÓÍ³¼ÆĞÅÏ¢
+	--æ·»åŠ ç»Ÿè®¡ä¿¡æ¯
 	x806016_LogCoupleAction(sceneId,maleId,femaleId,SkillList, nextLevel)
 	
-	--³É¹¦Ñ§Ï°ºó¹Ø±Õ¶Ô»°´°¿Ú....
+	--æˆåŠŸå­¦ä¹ åå…³é—­å¯¹è¯çª—å£....
 	BeginUICommand(sceneId)
 	EndUICommand(sceneId)
 	DispatchUICommand(sceneId,selfId, 1000)
@@ -381,11 +381,11 @@ function x806016_StudySkill(sceneId, selfId, targetId, SkillList)
 end
 
 --**********************************
---Ìí¼ÓÒ»Ïî·òÆŞ¼¼ÄÜ
+--æ·»åŠ ä¸€é¡¹å¤«å¦»æŠ€èƒ½
 --**********************************
 function x806016_MyAddSkill(sceneId, selfId, SkillList, nextLevel)
 
-	--É¾³ı·òÆŞ¼¼ÄÜ
+	--åˆ é™¤å¤«å¦»æŠ€èƒ½
 	local tempSkill;
 	for _, tempSkill in SkillList do
 		local haveSkill = HaveSkill(sceneId, selfId, tempSkill.id);
@@ -397,10 +397,10 @@ function x806016_MyAddSkill(sceneId, selfId, SkillList, nextLevel)
 	local skill = SkillList[nextLevel+1];
 
 	AddSkill(sceneId, selfId, skill.id);
-	--Msg2Player( sceneId, selfId, "ÄãÑ§»áÁË"..skill.name.."¡£", MSG2PLAYER_PARA )
+	--Msg2Player( sceneId, selfId, "ä½ å­¦ä¼šäº†"..skill.name.."ã€‚", MSG2PLAYER_PARA )
 	
 	--BeginEvent(sceneId)
-		--AddText(sceneId, "ÄãÑ§»áÁË"..skill.name.."¡£");
+		--AddText(sceneId, "ä½ å­¦ä¼šäº†"..skill.name.."ã€‚");
 	--EndEvent(sceneId)
 	--DispatchMissionTips(sceneId,selfId)
 	
@@ -412,7 +412,7 @@ function x806016_MyAddSkill(sceneId, selfId, SkillList, nextLevel)
 end
 
 --**********************************
---¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+--å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x806016_MessageBox(sceneId, selfId, targetId, msg)
 	BeginEvent(sceneId);
@@ -421,10 +421,10 @@ function x806016_MessageBox(sceneId, selfId, targetId, msg)
 	DispatchEventList(sceneId, selfId, targetId);
 end
 
---Ñ§Ï°ĞÎÓ°²»Àë1¼¶Ê±µÄÌáÊ¾ĞÅÏ¢
+--å­¦ä¹ å½¢å½±ä¸ç¦»1çº§æ—¶çš„æç¤ºä¿¡æ¯
 function x806016_SendSkillMsg_XYBL(sceneId,selfId,skname)
 	if skname then
-		local str = format("#I¹ó·ò¸¾Í¬ĞÄĞ­Á¦£¬ÅÅ³ıÍòÄÑ£¬ÔÚÄĞ·½ºÄ·ÑÁË#Y#{_ITEM"..tostring(x806016_g_xybl_ItemID).."}#IÖ®ºó£¬ÖÕÓÚÑ§»áÁË·òÆŞ¼¼ÄÜ#Y%s¡£",skname)
+		local str = format("#Iè´µå¤«å¦‡åŒå¿ƒååŠ›ï¼Œæ’é™¤ä¸‡éš¾ï¼Œåœ¨ç”·æ–¹è€—è´¹äº†#Y#{_ITEM"..tostring(x806016_g_xybl_ItemID).."}#Iä¹‹åï¼Œç»ˆäºå­¦ä¼šäº†å¤«å¦»æŠ€èƒ½#Y%sã€‚",skname)
 		BeginEvent(sceneId)
 			AddText(sceneId, str);
 		EndEvent(sceneId)
@@ -432,11 +432,11 @@ function x806016_SendSkillMsg_XYBL(sceneId,selfId,skname)
 	end
 end
 
---ÏµÍ³ÌáÊ¾ĞÅÏ¢
+--ç³»ç»Ÿæç¤ºä¿¡æ¯
 function x806016_SendSkillMsg(sceneId,selfId,exp,money,skname)
 	if exp and money and skname then
 		local moneyt = format("#{_EXCHG%d}",money)
-		local str = format("#I¹ó·ò¸¾Í¬ĞÄĞ­Á¦£¬ÅÅ³ıÍòÄÑ£¬ÔÚÄĞ·½ºÄ·ÑÁË#Y%d¾­ÑéºÍ%s½ğÇ®#IÖ®ºó£¬ÖÕÓÚÑ§»áÁË·òÆŞ¼¼ÄÜ#Y%s¡£",exp,moneyt,skname)
+		local str = format("#Iè´µå¤«å¦‡åŒå¿ƒååŠ›ï¼Œæ’é™¤ä¸‡éš¾ï¼Œåœ¨ç”·æ–¹è€—è´¹äº†#Y%.0fç»éªŒå’Œ%sé‡‘é’±#Iä¹‹åï¼Œç»ˆäºå­¦ä¼šäº†å¤«å¦»æŠ€èƒ½#Y%sã€‚",exp,moneyt,skname)
 		BeginEvent(sceneId)
 			AddText(sceneId, str);
 		EndEvent(sceneId)
@@ -444,7 +444,7 @@ function x806016_SendSkillMsg(sceneId,selfId,exp,money,skname)
 	end
 end
 
---ÊÀ½çÌáÊ¾ĞÅÏ¢
+--ä¸–ç•Œæç¤ºä¿¡æ¯
 function x806016_SendWorldMsg(sceneId,maleId,femaleId,SkillList, nextLevel)
 	local skill = SkillList[nextLevel+1]
 	
@@ -453,7 +453,7 @@ function x806016_SendWorldMsg(sceneId,maleId,femaleId,SkillList, nextLevel)
 			if tempId == skill.id then
 					local uname = format("#{_INFOUSR%s}",GetName(sceneId,maleId))
 					local oname = format("#{_INFOUSR%s}",GetName(sceneId,femaleId))
-					local str = format("#W%s#IÓë#W%s#I·òÆŞÍ¬ĞÄ£¬ÖÕÓÚ¿à¾¡¸ÊÀ´£¬Ñ§»áÁË#cff66cc%s#I£¬²»À¢ÊÇËùÓĞ·òÆŞµÄ¿¬Ä£¡£",uname,oname,skill.name)
+					local str = format("#W%s#Iä¸#W%s#Iå¤«å¦»åŒå¿ƒï¼Œç»ˆäºè‹¦å°½ç”˜æ¥ï¼Œå­¦ä¼šäº†#cff66cc%s#Iï¼Œä¸æ„§æ˜¯æ‰€æœ‰å¤«å¦»çš„æ¥·æ¨¡ã€‚",uname,oname,skill.name)
 					BroadMsgByChatPipe(sceneId, maleId, str, 4)
 				return
 			end -- end if tempId
@@ -462,14 +462,14 @@ function x806016_SendWorldMsg(sceneId,maleId,femaleId,SkillList, nextLevel)
 	
 end
 
---Í³¼ÆĞÅÏ¢
+--ç»Ÿè®¡ä¿¡æ¯
 function x806016_LogCoupleAction(sceneId,tid1,tid2,SkillList,nextLevel)
 	local skill = SkillList[nextLevel+1]
 	local logid = COUPLE_LOG_LEVELUPSKILL
 	if nextLevel == 0 then logid = COUPLE_LOG_LEARNSKILL end
 	
 	if skill and logid and COUPLE_LOG_DETAIL[logid] then
-		--CPL:±àºÅ,ËµÃ÷,GUID1,GUID2,¼¼ÄÜID,¼¼ÄÜÃû³Æ,Ê±¼ä
+		--CPL:ç¼–å·,è¯´æ˜,GUID1,GUID2,æŠ€èƒ½ID,æŠ€èƒ½åç§°,æ—¶é—´
 		local logstr = format("CPL:%d,%s,0x%X,0x%X,%d,%s",
 									 				logid,
 									 				COUPLE_LOG_DETAIL[logid],

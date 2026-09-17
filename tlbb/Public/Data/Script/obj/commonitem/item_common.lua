@@ -1,11 +1,11 @@
---ÎïÆ·¹«ÓÃ½Å±¾
+--ç‰©å“å…¬ç”¨è„šæœ¬
 
 x330000_g_scriptId = 330000;
 
 --**********************************
---È¼·ÅÑÌ»¨µÄÊ±ºòÍæ¼ÒÓĞ¼¸ÂÊ»ñµÃÒ»¿Å±¦Ê¯
+--ç‡ƒæ”¾çƒŸèŠ±çš„æ—¶å€™ç©å®¶æœ‰å‡ ç‡è·å¾—ä¸€é¢—å®çŸ³
 --**********************************
-x330000_g_yianHuaBaoshi_dropRate_cur = 25;		--Íæ¼ÒÔÚÈ¼·ÅÑÌ»¨µÄÊ±ºò£¬ÓĞ2.5£¥µÄ¼¸ÂÊ»ñµÃÒ»¿Å±¦Ê¯¡£
+x330000_g_yianHuaBaoshi_dropRate_cur = 25;		--ç©å®¶åœ¨ç‡ƒæ”¾çƒŸèŠ±çš„æ—¶å€™ï¼Œæœ‰2.5ï¼…çš„å‡ ç‡è·å¾—ä¸€é¢—å®çŸ³ã€‚
 x330000_g_yianHuaBaoshi_dropRate_max = 1000;
 
 x330000_g_yianHuaBaoshi_gems = {{gemId=50101001, rate=25},
@@ -32,17 +32,17 @@ function x330000_YianhuaDuihuanBaoshi(sceneId, selfId)
 				if ret > 0 then
 					AddItemListToHuman(sceneId, selfId);
 					
-					--»ñµÃÎïÆ·ĞÅÏ¢
+					--è·å¾—ç‰©å“ä¿¡æ¯
 	        local ItemInfo = GetItemTransfer(sceneId,selfId,0)
 
 					local message;
 					local randMessage = random(3);
 					if randMessage == 1 then
-						message = format("#W#{_INFOUSR%s}#IÔÚÈ¼·ÅÑÌ»¨Ê±£¬²»Ğ¡ĞÄ±»ÑÌ»¨Éä³öµÄÒ»¿Å#cB3DB35#{_INFOMSG%s}#I¸ø´òÖĞÁËÁ³¡£", LuaFnGetName(sceneId, selfId), ItemInfo);
+						message = format("#W#{_INFOUSR%s}#Iåœ¨ç‡ƒæ”¾çƒŸèŠ±æ—¶ï¼Œä¸å°å¿ƒè¢«çƒŸèŠ±å°„å‡ºçš„ä¸€é¢—#cB3DB35#{_INFOMSG%s}#Iç»™æ‰“ä¸­äº†è„¸ã€‚", LuaFnGetName(sceneId, selfId), ItemInfo);
 					elseif randMessage == 2 then
-						message = format("#W#{_INFOUSR%s}#IÈ¼·ÅÍêÑÌ»¨ÒâÓÌÎ´¾¡£¬ÔÚ²¦À­ÑÌ»¨µÄ»Ò½ıÊ±£¬Í»È»·¢ÏÖÁËÒ»¿Å#cB3DB35#{_INFOMSG%s}#I¡£", LuaFnGetName(sceneId, selfId), ItemInfo);
+						message = format("#W#{_INFOUSR%s}#Iç‡ƒæ”¾å®ŒçƒŸèŠ±æ„çŠ¹æœªå°½ï¼Œåœ¨æ‹¨æ‹‰çƒŸèŠ±çš„ç°çƒ¬æ—¶ï¼Œçªç„¶å‘ç°äº†ä¸€é¢—#cB3DB35#{_INFOMSG%s}#Iã€‚", LuaFnGetName(sceneId, selfId), ItemInfo);
 					else
-						message = format("#W#{_INFOUSR%s}#I·¢ÏÖÁËÒ»¸öÑÆ»ğµÄÑÌ»¨£¬Õı×¼±¸¶ªµÄÊ±ºò£¬´ÓÑÌ»¨ÖĞ»¬³öÁËÒ»¿Å#cB3DB35#{_INFOMSG%s}#I¡£", LuaFnGetName(sceneId, selfId), ItemInfo);
+						message = format("#W#{_INFOUSR%s}#Iå‘ç°äº†ä¸€ä¸ªå“‘ç«çš„çƒŸèŠ±ï¼Œæ­£å‡†å¤‡ä¸¢çš„æ—¶å€™ï¼Œä»çƒŸèŠ±ä¸­æ»‘å‡ºäº†ä¸€é¢—#cB3DB35#{_INFOMSG%s}#Iã€‚", LuaFnGetName(sceneId, selfId), ItemInfo);
 					end
 					BroadMsgByChatPipe(sceneId, selfId, message, 4);
 				end

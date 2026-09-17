@@ -1,8 +1,8 @@
 -- 120010 
--- 楚王逃跑
+-- 妤氱帇閫冭窇
 
 --**********************************
---进入区域事件
+--杩涘叆鍖哄煙浜嬩欢
 --**********************************
 function x120010_OnEnterArea( sceneId, selfId, areaId)
 --	if LuaFnGetCopySceneData_Param(sceneId, 8) == 6  then
@@ -12,7 +12,7 @@ function x120010_OnEnterArea( sceneId, selfId, areaId)
 end
 
 --**********************************
---进入区域事件
+--杩涘叆鍖哄煙浜嬩欢
 --**********************************
 function x120010_OnLeaveArea( sceneId, selfId, areaId)
 end

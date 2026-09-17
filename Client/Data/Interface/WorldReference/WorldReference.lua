@@ -16,13 +16,13 @@ end
 function WorldReference_OpenPKDesc()
     WorldReferenceGreeting_Desc:ClearAllElement()
     --WorldReference_PageHeader:SetText("#{INTERFACE_XML_39}")
-    WorldReference_PageHeader:SetText("¹ØÓÚPK")
+    WorldReference_PageHeader:SetText("å…³äºPK")
     WorldReferenceGreeting_Desc:AddTextElement( "#{PK_HELP_001}")
     this:Show();
 end
 
 --=========================================================
--- ÊÂ¼ş´¦Àí
+-- äº‹ä»¶å¤„ç†
 --=========================================================
 function WorldReference_OnEvent(event)
     WorldReference_PageHeader:SetText("#{INTERFACE_XML_39}")
@@ -58,31 +58,31 @@ function WorldReference_OnEvent(event)
 end
 
 --=========================================================
--- ¹Ø±ÕÏàÓ¦
+-- å…³é—­ç›¸åº”
 --=========================================================
 function WorldReference_Close()
 end
 
 --=========================================================
--- ÏÔÊ¾ÈÎÎñÁĞ±í
+-- æ˜¾ç¤ºä»»åŠ¡åˆ—è¡¨
 --=========================================================
 function WorldReference_EventListUpdate()
 end
 
 --=========================================================
--- ÏÔÊ¾ÈÎÎñĞÅÏ¢
+-- æ˜¾ç¤ºä»»åŠ¡ä¿¡æ¯
 --=========================================================
 function WorldReference_WorldReferenceInfoUpdate()
 end
 
 --=========================================================
---ContinueÈÎÎñµÄ¶Ô»°¿ò
+--Continueä»»åŠ¡çš„å¯¹è¯æ¡†
 --=========================================================
 function WorldReference_MissionContinueUpdate(bDone)
 end
 
 --=========================================================
---ÊÕÈ¡½±ÀøÎïÆ·µÄ¶Ô»°¿ò
+--æ”¶å–å¥–åŠ±ç‰©å“çš„å¯¹è¯æ¡†
 --=========================================================
 function WorldReference_MissionRewardUpdate()
 end
@@ -97,7 +97,7 @@ end
 
 
 --=========================================================
---ÏÔÊ¾Ê×Ò³
+--æ˜¾ç¤ºé¦–é¡µ
 --=========================================================
 function WorldReference_DispatchMainPage()
 	
@@ -106,7 +106,7 @@ function WorldReference_DispatchMainPage()
 	
 	local NumVisiable = tonumber( WRGetVisiableContexCount() )
 	
-	WorldReferenceGreeting_Desc:AddTextElement( "¡¡¡¡¼ÇµÃÃ¿µ½Ò»¸öĞÂµÄ¼¶±ğ¾Í´ò¿ªÎÒÀ´¿´¿´£¬ÎÒ»á¸æËßÄãºÜ¶à½­ºşµ±ÖĞµÄÊÂÇé¡£")
+	WorldReferenceGreeting_Desc:AddTextElement( "ã€€ã€€è®°å¾—æ¯åˆ°ä¸€ä¸ªæ–°çš„çº§åˆ«å°±æ‰“å¼€æˆ‘æ¥çœ‹çœ‹ï¼Œæˆ‘ä¼šå‘Šè¯‰ä½ å¾ˆå¤šæ±Ÿæ¹–å½“ä¸­çš„äº‹æƒ…ã€‚")
 		
 	for i=0, NumVisiable-1 do
 	    local VisiableID = WRGetVisiableContexID( i )
@@ -119,7 +119,7 @@ function WorldReference_DispatchMainPage()
 	        	    
 	end
 	
---	WorldReference_Frame_Debug:SetText("½­ºşÖ¸ÄÏ")
+--	WorldReference_Frame_Debug:SetText("æ±Ÿæ¹–æŒ‡å—")
 	
 	this:Show();
 end
@@ -127,10 +127,10 @@ end
 function WorldReference_DispatchTable( TableID )
     WorldReferenceGreeting_Desc:ClearAllElement();
 	
-	WRCollectVisiableContex( TableID )   --ÈÎÎñ±íÄÚÈİ	
+	WRCollectVisiableContex( TableID )   --ä»»åŠ¡è¡¨å†…å®¹	
 	local NumVisiable = tonumber( WRGetVisiableContexCount() )
 	if(NumVisiable>0 and TableID == 1)then
-		local strTemp = "²é¿´¿É½ÓÈÎÎñ".."&"..TableID..","..(-1).."$0"
+		local strTemp = "æŸ¥çœ‹å¯æ¥ä»»åŠ¡".."&"..TableID..","..(-1).."$0"
 	        WorldReferenceGreeting_Desc:AddOptionElement( strTemp );
 	end
 	for i=0, NumVisiable-1 do    
@@ -145,33 +145,33 @@ function WorldReference_DispatchTable( TableID )
 	    	        	    
 	end
     
-    local strBack = "»ØÊ×Ò³".."&0,0".."$0"
+    local strBack = "å›é¦–é¡µ".."&0,0".."$0"
 	WorldReferenceGreeting_Desc:AddOptionElement( strBack );
 end
 
 --=========================================================
---ÏÔÊ¾ÈÎÎñÒ³
+--æ˜¾ç¤ºä»»åŠ¡é¡µ
 --=========================================================
 function WorldReference_DispatchMissionTable()
     WorldReference_DispatchTable( 1 )
 end
 
 --=========================================================
---ÏÔÊ¾¹ÖÎïÒ³
+--æ˜¾ç¤ºæ€ªç‰©é¡µ
 --=========================================================
 function WorldReference_DispatchMonsterTable()
     WorldReference_DispatchTable( 2 )
 end
 
 --=========================================================
---ÏÔÊ¾"ÆäËû"Ò³
+--æ˜¾ç¤º"å…¶ä»–"é¡µ
 --=========================================================
 function WorldReference_DispatchOtherTable()
     WorldReference_DispatchTable( 5 )
 end
 
 --=========================================================
---ÏÔÊ¾BOSSÊ×Ò³
+--æ˜¾ç¤ºBOSSé¦–é¡µ
 --=========================================================
 function WorldReference_DispatchBossTable()
 
@@ -195,19 +195,19 @@ function WorldReference_DispatchBossTable()
 		end
 	end
 
-	local strBack = "»ØÊ×Ò³".."&0,0".."$0"
+	local strBack = "å›é¦–é¡µ".."&0,0".."$0"
 	WorldReferenceGreeting_Desc:AddOptionElement( strBack )
 
 end
 
 --=========================================================
---ÏÔÊ¾"ÕÊºÅ°²È«"Ò³
+--æ˜¾ç¤º"å¸å·å®‰å…¨"é¡µ
 --=========================================================
 function WorldReference_DispatchAccountSafeTable( TableID )
  WorldReferenceGreeting_Desc:ClearAllElement();
 	
-	WRCollectVisiableContexEx( TableID, -1, 1 )   --ÕÊºÅ°²È«±íÄÚÈİ
-	WorldReferenceGreeting_Desc:AddTextElement( "    ÏÂÁĞÄÚÈİ½éÉÜÁËÕËºÅ°²È«µÄĞÅÏ¢£¬°üÀ¨ÈçºÎÉèÖÃÃÜÂë£¬ÈçºÎÊ¹ÓÃÓÎÏ·ÄÚ±£»¤¹¦ÄÜµÈ¡£ÏêÏ¸ĞÅÏ¢Çëµã»÷²é¿´Ä¿Â¼ÖĞµÄÄÚÈİ¡£")	--ÕÊºÅ  to  ÕËºÅ
+	WRCollectVisiableContexEx( TableID, -1, 1 )   --å¸å·å®‰å…¨è¡¨å†…å®¹
+	WorldReferenceGreeting_Desc:AddTextElement( "    ä¸‹åˆ—å†…å®¹ä»‹ç»äº†è´¦å·å®‰å…¨çš„ä¿¡æ¯ï¼ŒåŒ…æ‹¬å¦‚ä½•è®¾ç½®å¯†ç ï¼Œå¦‚ä½•ä½¿ç”¨æ¸¸æˆå†…ä¿æŠ¤åŠŸèƒ½ç­‰ã€‚è¯¦ç»†ä¿¡æ¯è¯·ç‚¹å‡»æŸ¥çœ‹ç›®å½•ä¸­çš„å†…å®¹ã€‚")	--å¸å·  to  è´¦å·
 	local NumVisiable = tonumber( WRGetVisiableContexCount() )
 	for i=0, NumVisiable-1 do    
 	    local VisiableID = WRGetVisiableContexID( i )
@@ -221,17 +221,17 @@ function WorldReference_DispatchAccountSafeTable( TableID )
 	    	        	    
 	end
     
-  local strBack = "»ØÊ×Ò³".."&0,0".."$0"
+  local strBack = "å›é¦–é¡µ".."&0,0".."$0"
 	WorldReferenceGreeting_Desc:AddOptionElement( strBack );
 end
 
---·ÖÅÉÕÊºÅ°²È« ×ÓÏîµÄº¯Êı
+--åˆ†æ´¾å¸å·å®‰å…¨ å­é¡¹çš„å‡½æ•°
 function WorldReference_DispatchContexAccount(TableID, ContexID)
   	WorldReferenceGreeting_Desc:ClearAllElement()
   	if( ContexID < 0) then
-  		WRCollectVisiableContexEx( TableID, -ContexID, 0 )		--ÉÏÒ»²½
+  		WRCollectVisiableContexEx( TableID, -ContexID, 0 )		--ä¸Šä¸€æ­¥
   	else
-  		WRCollectVisiableContexEx( TableID, ContexID, 1 )   --ÕÊºÅ°²È«±íÄÚÈİ	
+  		WRCollectVisiableContexEx( TableID, ContexID, 1 )   --å¸å·å®‰å…¨è¡¨å†…å®¹	
   	end
 		local NumVisiable = tonumber( WRGetVisiableContexCount() )
 		local VisiableID =-1;
@@ -251,15 +251,15 @@ function WorldReference_DispatchContexAccount(TableID, ContexID)
 		local strBack;
 		--VisiableID = WRGetVisiableContexID( 0 )
     if VisiableID ~= -1  and WRGetContexType( TableID, VisiableID ) > 1 then
-    	strBack = "ÉÏÒ»²½".."&"..TableID..","..(-VisiableID).."$0"
+    	strBack = "ä¸Šä¸€æ­¥".."&"..TableID..","..(-VisiableID).."$0"
     else
-    	strBack = "»ØÊ×Ò³".."&0,0".."$0"
+    	strBack = "å›é¦–é¡µ".."&0,0".."$0"
     end
 		WorldReferenceGreeting_Desc:AddOptionElement( strBack );
 end
 
 --=========================================================
---´¦Àíµã»÷BOSS±íÖĞÄ³Ò»ÏîµÄÊÂ¼ş....
+--å¤„ç†ç‚¹å‡»BOSSè¡¨ä¸­æŸä¸€é¡¹çš„äº‹ä»¶....
 --=========================================================
 function WorldReference_BOSSOptionClicked( Data2 )
 
@@ -268,27 +268,27 @@ function WorldReference_BOSSOptionClicked( Data2 )
 	local menuLevel = -1
 	local parentId = -1
 
-	--Èç¹ûµãµÄÊÇ·µ»ØÉÏ¼¶²Ëµ¥µÄÑ¡Ïî....ÔòÏàµ±ÓÚµã»÷-Date2²Ëµ¥....
+	--å¦‚æœç‚¹çš„æ˜¯è¿”å›ä¸Šçº§èœå•çš„é€‰é¡¹....åˆ™ç›¸å½“äºç‚¹å‡»-Date2èœå•....
 	if Data2 < 0 then
 		Data2 = -Data2
 	end
 
-	--»ñÈ¡ËùÑ¡ÌõÄ¿µÄĞÅÏ¢....
+	--è·å–æ‰€é€‰æ¡ç›®çš„ä¿¡æ¯....
 	menuLevel,parentId = WRBOSSTblGetContexInfo( Data2 )
 
-	--Èç¹ûÑ¡µÄ²»ÊÇ²Ëµ¥¶øÊÇÎÄ×ÖÃèÊöÏîÔòÏÔÊ¾ÄÚÈİ....
+	--å¦‚æœé€‰çš„ä¸æ˜¯èœå•è€Œæ˜¯æ–‡å­—æè¿°é¡¹åˆ™æ˜¾ç¤ºå†…å®¹....
 	if menuLevel == -1 then
 
-		--¼ÓÈëÄÚÈİÎÄ×Ö....
+		--åŠ å…¥å†…å®¹æ–‡å­—....
     local strContex = WRGetVisiableContex( 3, Data2 )    
     WorldReferenceGreeting_Desc:AddTextElement( strContex )
 
-	else --Èç¹ûÑ¡µÄÊÇ²Ëµ¥ÔòÏÔÊ¾Æä×ÓÏîµÄTitle....
+	else --å¦‚æœé€‰çš„æ˜¯èœå•åˆ™æ˜¾ç¤ºå…¶å­é¡¹çš„Title....
 
-		--ÊÕ¼¯¸¸ÏîIDÎªData2µÄ¿ÉÏîÄ¿....
+		--æ”¶é›†çˆ¶é¡¹IDä¸ºData2çš„å¯é¡¹ç›®....
 		WRBOSSTblCollectVisiableContex( Data2 )
 
-		--¼ÓÈëÏîÄ¿µ½½çÃæÖĞ....
+		--åŠ å…¥é¡¹ç›®åˆ°ç•Œé¢ä¸­....
 		local NumVisiable = WRGetVisiableContexCount()
 		for i=0, NumVisiable-1 do    
 	    local VisiableID = WRGetVisiableContexID( i )
@@ -301,32 +301,32 @@ function WorldReference_BOSSOptionClicked( Data2 )
 
 	end
 
-	--¼ÓÈë·µ»ØÉÏ²ãµÄÑ¡Ïî....
+	--åŠ å…¥è¿”å›ä¸Šå±‚çš„é€‰é¡¹....
 	local strBack
 	if -1 == parentId then
-			strBack = "ÉÏÒ»²½".."&0,"..(3).."$0"
+			strBack = "ä¸Šä¸€æ­¥".."&0,"..(3).."$0"
 	else
-		strBack = "ÉÏÒ»²½".."&3,"..-parentId.."$0"
+		strBack = "ä¸Šä¸€æ­¥".."&3,"..-parentId.."$0"
 	end
 	WorldReferenceGreeting_Desc:AddOptionElement( strBack )
 
 end
 
 --=========================================================
---ÏÔÊ¾Ê±¼ä
+--æ˜¾ç¤ºæ—¶é—´
 --=========================================================
 function WorldReference_DispatchServerTime( strDate )
     WorldReferenceGreeting_Desc:ClearAllElement()    
     
     WorldReferenceGreeting_Desc:AddTextElement( strDate )
     
-    local strBack = "»ØÊ×Ò³".."&0,"..(0).."$0"
+    local strBack = "å›é¦–é¡µ".."&0,"..(0).."$0"
 	WorldReferenceGreeting_Desc:AddOptionElement( strBack );
 end
 
 function WorldReference_DispatchContex( TableID, ContexIndex )
-    if( TableID == 1 and ContexIndex == -1) then   --½­ºşÖ¸ÄÏ
-            	--´ò¿ª¿É½ÓÈÎÎñÁĞ±í
+    if( TableID == 1 and ContexIndex == -1) then   --æ±Ÿæ¹–æŒ‡å—
+            	--æ‰“å¼€å¯æ¥ä»»åŠ¡åˆ—è¡¨
 		ToggleMissionOutLine();
 		return
     end
@@ -334,17 +334,17 @@ function WorldReference_DispatchContex( TableID, ContexIndex )
     local strContex = WRGetVisiableContex( TableID, ContexIndex )    
     WorldReferenceGreeting_Desc:AddTextElement( strContex )
     
-    local strBack = "ÉÏÒ»²½".."&0,"..TableID.."$0"
+    local strBack = "ä¸Šä¸€æ­¥".."&0,"..TableID.."$0"
 	WorldReferenceGreeting_Desc:AddOptionElement( strBack );
     
 end
 
 --=========================================================
--- Ñ¡ÔñÒ»¸öÈÎÎñ
+-- é€‰æ‹©ä¸€ä¸ªä»»åŠ¡
 --=========================================================
 function WorldReferenceOption_Clicked()
 
-	--ÎÄ×ÖµÄ¸ñÊ½ÊÇ
+	--æ–‡å­—çš„æ ¼å¼æ˜¯
 	--QuestGreeting_option_03&211207,0
 	pos1,pos2 = string.find(arg0,"#");
 	pos3,pos4 = string.find(arg0,",");
@@ -353,35 +353,35 @@ function WorldReferenceOption_Clicked()
 	local strOptionExtra1 = string.sub(arg0, pos2+1,pos3-1 );
 	local strOptionExtra2 = string.sub(arg0, pos4+1);
 
-    local Data1 = tonumber( strOptionExtra1 )      --Data1Îª±íµÄ±àºÅ
-    local Data2 = tonumber( strOptionExtra2 )      --Data2Îª±íÖĞÄÚÈİµÄindex
+    local Data1 = tonumber( strOptionExtra1 )      --Data1ä¸ºè¡¨çš„ç¼–å·
+    local Data2 = tonumber( strOptionExtra2 )      --Data2ä¸ºè¡¨ä¸­å†…å®¹çš„index
     
 
-    if( Data1 == 0 ) then       --Ê×Ò³
-        if( Data2 == 0 ) then   --Ê×Ò³
+    if( Data1 == 0 ) then       --é¦–é¡µ
+        if( Data2 == 0 ) then   --é¦–é¡µ
             WorldReference_DispatchMainPage()
         end
         
-        if( Data2 == 1 ) then   --ÈÎÎñ±í
+        if( Data2 == 1 ) then   --ä»»åŠ¡è¡¨
             WorldReference_DispatchMissionTable()
         end
            
-        if( Data2 == 2 ) then   --¹ÖÎï
+        if( Data2 == 2 ) then   --æ€ªç‰©
             WorldReference_DispatchMonsterTable()
         end
         if( Data2 == 3 ) then   --BOSS
             WorldReference_DispatchBossTable()
         end
         
-        if( Data2 == 4 ) then   --Ê±¼ä
+        if( Data2 == 4 ) then   --æ—¶é—´
             WRAskTime()
         end
 
-        if( Data2 == 5 ) then   --ÆäËû±í
+        if( Data2 == 5 ) then   --å…¶ä»–è¡¨
             WorldReference_DispatchOtherTable()
         end
         
-        if( Data2 == 6) then		--ÕÊºÅ°²È«±í
+        if( Data2 == 6) then		--å¸å·å®‰å…¨è¡¨
         		WorldReference_DispatchAccountSafeTable(Data2);
         		return;
         end
@@ -390,32 +390,32 @@ function WorldReferenceOption_Clicked()
             WorldReference_DispatchContex( Data1, Data2 - 1 )
         end
         
-    elseif( Data1 == 3 ) then	--BOSS±íÎªÁËÖ§³Ö¶à¼¶²Ëµ¥ĞèÒª½øĞĞÌØÊâ´¦Àí....
+    elseif( Data1 == 3 ) then	--BOSSè¡¨ä¸ºäº†æ”¯æŒå¤šçº§èœå•éœ€è¦è¿›è¡Œç‰¹æ®Šå¤„ç†....
     	WorldReference_BOSSOptionClicked(Data2);
-    elseif( Data1 == 6 ) then	--ÕÊºÅ°²È«±íµÄ×ÓÏî
+    elseif( Data1 == 6 ) then	--å¸å·å®‰å…¨è¡¨çš„å­é¡¹
     	WorldReference_DispatchContexAccount(Data1, Data2);
     else
-			WorldReference_DispatchContex( Data1, Data2 )   --ÏÔÊ¾Ò»¸öÄÚÈİÎÄ±¾
+			WorldReference_DispatchContex( Data1, Data2 )   --æ˜¾ç¤ºä¸€ä¸ªå†…å®¹æ–‡æœ¬
     end
 
 end
 
 --=========================================================
---¿ªÊ¼¹ØĞÄNPC£¬
---ÔÚ¿ªÊ¼¹ØĞÄÖ®Ç°ĞèÒªÏÈÈ·¶¨Õâ¸ö½çÃæÊÇ²»ÊÇÒÑ¾­ÓĞ¡°¹ØĞÄ¡±µÄNPC£¬
---Èç¹ûÓĞµÄ»°£¬ÏÈÈ¡ÏûÒÑ¾­ÓĞµÄ¡°¹ØĞÄ¡±
+--å¼€å§‹å…³å¿ƒNPCï¼Œ
+--åœ¨å¼€å§‹å…³å¿ƒä¹‹å‰éœ€è¦å…ˆç¡®å®šè¿™ä¸ªç•Œé¢æ˜¯ä¸æ˜¯å·²ç»æœ‰â€œå…³å¿ƒâ€çš„NPCï¼Œ
+--å¦‚æœæœ‰çš„è¯ï¼Œå…ˆå–æ¶ˆå·²ç»æœ‰çš„â€œå…³å¿ƒâ€
 --=========================================================
 function BeginCareObject_WorldReference(objCaredId)
 end
 
 --=========================================================
---Í£Ö¹¶ÔÄ³NPCµÄ¹ØĞÄ
+--åœæ­¢å¯¹æŸNPCçš„å…³å¿ƒ
 --=========================================================
 function StopCareObject_WorldReference(objCaredId)
 end
 
 --=========================================================
---ÏÔÊ¾Ä³¸öBOSSµÄĞÅÏ¢....
+--æ˜¾ç¤ºæŸä¸ªBOSSçš„ä¿¡æ¯....
 --=========================================================
 function WorldReference_OpenBossInfo( BossId )
 

@@ -5,7 +5,7 @@ function SoftKeyBoard_PreLoad()
 	this:RegisterEvent("SET_SOFTKEY_AIM");
 end
 
--- 注册onLoad事件
+-- 娉ㄥ唽onLoad浜嬩欢
 function SoftKeyBoard_OnLoad()
 end
 
@@ -16,7 +16,7 @@ function SoftKeyBoard_OnEvent(event)
 		end
 	elseif( event == "SET_SOFTKEY_AIM" ) then
      	SoftKeyBoard_SoftKey:SetAimEditBox( arg0 );
-	-- 打开帐号输入界面
+	-- 鎵撳紑甯愬彿杈撳叆鐣岄潰
  	elseif( event == "CLOSE_WINDOW" ) then
 		if( arg0 == "SoftKeyBoard" ) then
 			SoftKeyBoard_Close();

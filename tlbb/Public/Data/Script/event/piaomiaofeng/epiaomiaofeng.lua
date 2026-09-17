@@ -1,17 +1,17 @@
---çÎç¿·å¸±±¾....
+--ç¼¥ç¼ˆå³°å‰¯æœ¬....
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x402263_g_ScriptId = 402263
 
-x402263_g_CopySceneType = FUBEN_PIAOMIAOFENG	--¸±±¾ÀàĞÍ£¬¶¨ÒåÔÚScriptGlobal.luaÀïÃæ
+x402263_g_CopySceneType = FUBEN_PIAOMIAOFENG	--å‰¯æœ¬ç±»å‹ï¼Œå®šä¹‰åœ¨ScriptGlobal.luaé‡Œé¢
 
-x402263_g_TickTime		= 1				--»Øµ÷½Å±¾µÄÊ±ÖÓÊ±¼ä£¨µ¥Î»£ºÃë/´Î£©
-x402263_g_NoUserTime	= 300			--¸±±¾ÖĞÃ»ÓĞÈËºó¿ÉÒÔ¼ÌĞø±£´æµÄÊ±¼ä£¨µ¥Î»£ºÃë£©
-x402263_g_Fuben_X			= 124			--½øÈë¸±±¾µÄÎ»ÖÃX
-x402263_g_Fuben_Z			= 164			--½øÈë¸±±¾µÄÎ»ÖÃZ
-x402263_g_FuBenTime		= 3*60*60	--¸±±¾¹Ø±ÕÊ±¼ä....
+x402263_g_TickTime		= 1				--å›è°ƒè„šæœ¬çš„æ—¶é’Ÿæ—¶é—´ï¼ˆå•ä½ï¼šç§’/æ¬¡ï¼‰
+x402263_g_NoUserTime	= 300			--å‰¯æœ¬ä¸­æ²¡æœ‰äººåå¯ä»¥ç»§ç»­ä¿å­˜çš„æ—¶é—´ï¼ˆå•ä½ï¼šç§’ï¼‰
+x402263_g_Fuben_X			= 124			--è¿›å…¥å‰¯æœ¬çš„ä½ç½®X
+x402263_g_Fuben_Z			= 164			--è¿›å…¥å‰¯æœ¬çš„ä½ç½®Z
+x402263_g_FuBenTime		= 3*60*60	--å‰¯æœ¬å…³é—­æ—¶é—´....
 
---BOSS±í....
+--BOSSè¡¨....
 x402263_g_BOSSList =
 {
 	["HaDaBa_NPC"]				= { DataID=9548, Title="", posX=124, posY=86, Dir=0, BaseAI=3, AIScript=0, ScriptID=402270 },
@@ -21,18 +21,18 @@ x402263_g_BOSSList =
 	["SangTuGong_BOSS"]		= { DataID=9541, Title="", posX=41, posY=105, Dir=0, BaseAI=27, AIScript=0, ScriptID=402265 },
 	["JiangShi_BOSS"]			= { DataID=9542, Title="", posX=0, posY=0, Dir=0, BaseAI=28, AIScript=0, ScriptID=-1 },
 
-	["WuLaoDa_NPC"]				= { DataID=9550, Title="ÍòÏÉÖ®Ê×", posX=117, posY=49, Dir=11, BaseAI=3, AIScript=0, ScriptID=402272 },
-	["WuLaoDaLoss_NPC"]		= { DataID=9551, Title="ÍòÏÉÖ®Ê×", posX=0, posY=0, Dir=0, BaseAI=3, AIScript=0, ScriptID=402275 },
-	["WuLaoDa_BOSS"]			= { DataID=9543, Title="ÍòÏÉÖ®Ê×", posX=117, posY=49, Dir=11, BaseAI=27, AIScript=0, ScriptID=402266 },
+	["WuLaoDa_NPC"]				= { DataID=9550, Title="ä¸‡ä»™ä¹‹é¦–", posX=117, posY=49, Dir=11, BaseAI=3, AIScript=0, ScriptID=402272 },
+	["WuLaoDaLoss_NPC"]		= { DataID=9551, Title="ä¸‡ä»™ä¹‹é¦–", posX=0, posY=0, Dir=0, BaseAI=3, AIScript=0, ScriptID=402275 },
+	["WuLaoDa_BOSS"]			= { DataID=9543, Title="ä¸‡ä»™ä¹‹é¦–", posX=117, posY=49, Dir=11, BaseAI=27, AIScript=0, ScriptID=402266 },
 
-	["ZhuoBuFan_BOSS"]		= { DataID=9544, Title="½£Éñ", posX=121, posY=31, Dir=0, BaseAI=27, AIScript=0, ScriptID=402267 },
-	["BuPingDaoRen_BOSS"]	= { DataID=9545, Title="òÔÍõ", posX=129, posY=31, Dir=0, BaseAI=27, AIScript=261, ScriptID=402268 },
+	["ZhuoBuFan_BOSS"]		= { DataID=9544, Title="å‰‘ç¥", posX=121, posY=31, Dir=0, BaseAI=27, AIScript=0, ScriptID=402267 },
+	["BuPingDaoRen_BOSS"]	= { DataID=9545, Title="è›Ÿç‹", posX=129, posY=31, Dir=0, BaseAI=27, AIScript=261, ScriptID=402268 },
 
 	["DuanMuYuan_BOSS"]		= { DataID=9547, Title="", posX=125, posY=36, Dir=0, BaseAI=0, AIScript=0, ScriptID=402274 },
 
 	["FuMinYi_NPC"]				= { DataID=9552, Title="", posX=159, posY=54, Dir=11, BaseAI=3, AIScript=0, ScriptID=402273 },
 
-	["LiQiuShui_BOSS"]		= { DataID=9546, Title="ÉñÃØÅ®×Ó", posX=125, posY=36, Dir=11, BaseAI=27, AIScript=0, ScriptID=402269 },
+	["LiQiuShui_BOSS"]		= { DataID=9546, Title="ç¥ç§˜å¥³å­", posX=125, posY=36, Dir=11, BaseAI=27, AIScript=0, ScriptID=402269 },
 }
 
 x402263_g_FightBOSSList =
@@ -45,32 +45,32 @@ x402263_g_FightBOSSList =
 	[6] = x402263_g_BOSSList["LiQiuShui_BOSS"].DataID
 }
 
---ÊÇ·ñ¿ÉÒÔÌôÕ½Ä³¸öBOSSµÄ±ê¼ÇÁĞ±í....
+--æ˜¯å¦å¯ä»¥æŒ‘æˆ˜æŸä¸ªBOSSçš„æ ‡è®°åˆ—è¡¨....
 x402263_g_BattleFlagTbl = 
 {
-	["HaDaBa"]			= 8,	--ÊÇ·ñ¿ÉÒÔÌôÕ½¹ş´ó°Ô...
-	["SangTuGong"]	= 9,	--ÊÇ·ñ¿ÉÒÔÌôÕ½É£ÍÁ¹«....
-	["WuLaoDa"]			= 10,	--ÊÇ·ñ¿ÉÒÔÌôÕ½ÎÚÀÏ´ó....
-	["ShuangZi"]		= 11,	--ÊÇ·ñ¿ÉÒÔÌôÕ½Ë«×Ó....
-	["LiQiuShui"]		= 12,	--ÊÇ·ñ¿ÉÒÔÌôÕ½ÀîÇïË®....
+	["HaDaBa"]			= 8,	--æ˜¯å¦å¯ä»¥æŒ‘æˆ˜å“ˆå¤§éœ¸...
+	["SangTuGong"]	= 9,	--æ˜¯å¦å¯ä»¥æŒ‘æˆ˜æ¡‘åœŸå…¬....
+	["WuLaoDa"]			= 10,	--æ˜¯å¦å¯ä»¥æŒ‘æˆ˜ä¹Œè€å¤§....
+	["ShuangZi"]		= 11,	--æ˜¯å¦å¯ä»¥æŒ‘æˆ˜åŒå­....
+	["LiQiuShui"]		= 12,	--æ˜¯å¦å¯ä»¥æŒ‘æˆ˜æç§‹æ°´....
 }
 
---³¡¾°±äÁ¿Ë÷Òı....ÊÇ·ñ¿ÉÒÔÌôÕ½Ä³¸öBOSSµÄ±ê¼Ç....
--- 0=²»ÄÜÌôÕ½ 1=¿ÉÒÔÌôÕ½ 2=ÒÑ¾­ÌôÕ½¹ıÁË
+--åœºæ™¯å˜é‡ç´¢å¼•....æ˜¯å¦å¯ä»¥æŒ‘æˆ˜æŸä¸ªBOSSçš„æ ‡è®°....
+-- 0=ä¸èƒ½æŒ‘æˆ˜ 1=å¯ä»¥æŒ‘æˆ˜ 2=å·²ç»æŒ‘æˆ˜è¿‡äº†
 x402263_g_IDX_BattleFlag_Hadaba			= 8
 x402263_g_IDX_BattleFlag_Sangtugong	= 9
 x402263_g_IDX_BattleFlag_Wulaoda		= 10
 x402263_g_IDX_BattleFlag_Shuangzi		= 11
 x402263_g_IDX_BattleFlag_Liqiushui	= 12
 
-x402263_g_IDX_FuBenOpenTime		= 13	--¸±±¾½¨Á¢µÄÊ±¼ä....
-x402263_g_IDX_FuBenLifeStep		= 14	--¸±±¾ÉúÃüÆÚµÄstep....(°üÀ¨½¨Á¢NPC....¹Ø±Õµ¹¼ÆÊ±ÌáÊ¾....)
+x402263_g_IDX_FuBenOpenTime		= 13	--å‰¯æœ¬å»ºç«‹çš„æ—¶é—´....
+x402263_g_IDX_FuBenLifeStep		= 14	--å‰¯æœ¬ç”Ÿå‘½æœŸçš„step....(åŒ…æ‹¬å»ºç«‹NPC....å…³é—­å€’è®¡æ—¶æç¤º....)
 
---³¡¾°±äÁ¿Ë÷Òı....Í¨ÓÃµÄçÎç¿·å¼ÆÊ±Æ÷....Ö÷ÒªÓÃÓÚ¼¤»îBOSSÕ½¶·....
+--åœºæ™¯å˜é‡ç´¢å¼•....é€šç”¨çš„ç¼¥ç¼ˆå³°è®¡æ—¶å™¨....ä¸»è¦ç”¨äºæ¿€æ´»BOSSæˆ˜æ–—....
 x402263_g_IDX_PMFTimerStep			= 15
 x402263_g_IDX_PMFTimerScriptID	= 16
 
---³¡¾°±äÁ¿Ë÷Òı....ÎÚÀÏ´óËÀÍöµÄ¼ÆÊ±Æ÷....ÓÃÓÚ´¦ÀíËÀÍöÂß¼­....
+--åœºæ™¯å˜é‡ç´¢å¼•....ä¹Œè€å¤§æ­»äº¡çš„è®¡æ—¶å™¨....ç”¨äºå¤„ç†æ­»äº¡é€»è¾‘....
 x402263_g_IDX_WuLaoDaDieStep				= 17
 x402263_g_IDX_WuLaoDaDieScriptID		= 18
 x402263_g_IDX_WuLaoDaDiePosX				=	19
@@ -78,11 +78,11 @@ x402263_g_IDX_WuLaoDaDiePosY				=	20
 
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı....
+--ä»»åŠ¡å…¥å£å‡½æ•°....
 --**********************************
 function x402263_OnDefaultEvent( sceneId, selfId, targetId )
 
-	--¼ì²âÊÇ·ñ¿ÉÒÔ½øÈë¸±±¾....
+	--æ£€æµ‹æ˜¯å¦å¯ä»¥è¿›å…¥å‰¯æœ¬....
 	local ret, msg = x402263_CheckCanEnter( sceneId, selfId, targetId )
 	if 1 ~= ret then
 		BeginEvent(sceneId)
@@ -92,7 +92,7 @@ function x402263_OnDefaultEvent( sceneId, selfId, targetId )
 		return
 	end
 
-	--¹Ø±ÕNPC¶Ô»°´°¿Ú....
+	--å…³é—­NPCå¯¹è¯çª—å£....
 	BeginUICommand(sceneId)
 	EndUICommand(sceneId)
 	DispatchUICommand(sceneId,selfId, 1000)
@@ -102,35 +102,35 @@ function x402263_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x402263_OnEnumerate( sceneId, selfId, targetId )
 
-	AddNumText( sceneId, x402263_g_ScriptId, "ÌôÕ½çÎç¿·å", 10, 1 )
+	AddNumText( sceneId, x402263_g_ScriptId, "æŒ‘æˆ˜ç¼¥ç¼ˆå³°", 10, 1 )
 
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔ½øÈë´Ë¸±±¾....
+--æ£€æµ‹æ˜¯å¦å¯ä»¥è¿›å…¥æ­¤å‰¯æœ¬....
 --**********************************
 function x402263_CheckCanEnter( sceneId, selfId, targetId )
 
-	--ÊÇ·ñÓĞ¶ÓÎé....
+	--æ˜¯å¦æœ‰é˜Ÿä¼....
 	if LuaFnHasTeam(sceneId,selfId) ~= 1 then
 		return 0, "#{PMF_20080521_02}"
 	end
 
-	--ÊÇ²»ÊÇ¶Ó³¤....
+	--æ˜¯ä¸æ˜¯é˜Ÿé•¿....
 	if GetTeamLeader(sceneId,selfId) ~= selfId then
 		return 0, "#{PMF_20080521_03}"
 	end
 
-	--ÈËÊıÊÇ·ñ¹»....
+	--äººæ•°æ˜¯å¦å¤Ÿ....
 	if GetTeamSize(sceneId,selfId) < PIAOMIAOFENG_MIN_ENTRY_PLAYER_COUNT then
 		return 0, "#{PMF_20080521_04}"
 	end
 
-	--ÊÇ·ñ¶¼ÔÚ¸½½ü....
+	--æ˜¯å¦éƒ½åœ¨é™„è¿‘....
 	local NearTeamSize = GetNearTeamCount(sceneId,selfId)
 	if GetTeamSize(sceneId,selfId) ~= NearTeamSize then
 		return 0, "#{PMF_20080521_05}"
@@ -139,7 +139,7 @@ function x402263_CheckCanEnter( sceneId, selfId, targetId )
 	local Humanlist = {}
 	local nHumanNum = 0
 
-	--ÊÇ·ñÓĞÈË²»¹»90¼¶....
+	--æ˜¯å¦æœ‰äººä¸å¤Ÿ90çº§....
 	for i=0, NearTeamSize-1 do
 		local PlayerId = GetNearTeamMember( sceneId, selfId, i )
 		if GetLevel( sceneId, PlayerId ) < 90 then
@@ -150,17 +150,17 @@ function x402263_CheckCanEnter( sceneId, selfId, targetId )
 
 	if nHumanNum > 0 then
 
-		local msg = "    ¶ÓÎéµ±ÖĞµÄ"
+		local msg = "    é˜Ÿä¼å½“ä¸­çš„"
 		for i=0, nHumanNum-2 do
-			msg = msg .. Humanlist[i] .. "£¬"
+			msg = msg .. Humanlist[i] .. "ï¼Œ"
 		end
-		msg = msg .. Humanlist[nHumanNum-1] .. "µÄĞŞÎªÉĞÇ³£¬»¹ÊÇ²»ÒªÈ¥ÎªÃî¡£"
+		msg = msg .. Humanlist[nHumanNum-1] .. "çš„ä¿®ä¸ºå°šæµ…ï¼Œè¿˜æ˜¯ä¸è¦å»ä¸ºå¦™ã€‚"
 		return 0, msg
 
 	end
 
 
-	--ÊÇ·ñÓĞÈË½ñÌì×ö¹ı3´ÎÁË....
+	--æ˜¯å¦æœ‰äººä»Šå¤©åšè¿‡3æ¬¡äº†....
 	nHumanNum = 0
 	local CurDayTime = GetDayTime()
 	for i=0, NearTeamSize-1 do
@@ -186,9 +186,9 @@ function x402263_CheckCanEnter( sceneId, selfId, targetId )
 
 		local msg = "    "
 		for i=0, nHumanNum-2 do
-			msg = msg .. Humanlist[i] .. "£¬"
+			msg = msg .. Humanlist[i] .. "ï¼Œ"
 		end
-		msg = msg .. Humanlist[nHumanNum-1] .. "±¾ÈÕÒÑ¾­ÌôÕ½¹ı3´ÎçÎç¿·åÁË¡£"
+		msg = msg .. Humanlist[nHumanNum-1] .. "æœ¬æ—¥å·²ç»æŒ‘æˆ˜è¿‡3æ¬¡ç¼¥ç¼ˆå³°äº†ã€‚"
 		return 0, msg
 
 	end
@@ -198,7 +198,7 @@ function x402263_CheckCanEnter( sceneId, selfId, targetId )
 end
 
 --**********************************
---´´½¨¸±±¾....
+--åˆ›å»ºå‰¯æœ¬....
 --**********************************
 function x402263_MakeCopyScene( sceneId, selfId )
 
@@ -247,9 +247,9 @@ function x402263_MakeCopyScene( sceneId, selfId )
 	local bRetSceneID = LuaFnCreateCopyScene(sceneId)
 	BeginEvent(sceneId)
 		if bRetSceneID>0 then
-			AddText(sceneId,"¸±±¾´´½¨³É¹¦£¡");
+			AddText(sceneId,"å‰¯æœ¬åˆ›å»ºæˆåŠŸï¼");
 		else
-			AddText(sceneId,"¸±±¾ÊıÁ¿ÒÑ´ïÉÏÏŞ£¬ÇëÉÔºòÔÙÊÔ£¡");
+			AddText(sceneId,"å‰¯æœ¬æ•°é‡å·²è¾¾ä¸Šé™ï¼Œè¯·ç¨å€™å†è¯•ï¼");
 		end
 	EndEvent(sceneId)
 	DispatchMissionTips(sceneId,selfId)
@@ -257,16 +257,16 @@ function x402263_MakeCopyScene( sceneId, selfId )
 end
 
 --**********************************
---¸±±¾ÊÂ¼ş....
+--å‰¯æœ¬äº‹ä»¶....
 --**********************************
 function x402263_OnCopySceneReady( sceneId, destsceneId )
 
-	--½øÈë¸±±¾µÄ¹æÔò
-	-- 1£¬Èç¹ûÕâ¸öÍæ¼ÒÃ»ÓĞ×é¶Ó£¬¾Í´«ËÍÕâ¸öÍæ¼Ò×Ô¼º½øÈë¸±±¾
-	-- 2, Èç¹ûÍæ¼ÒÓĞ¶ÓÎé£¬µ«ÊÇÍæ¼Ò²»ÊÇ¶Ó³¤£¬¾Í´«ËÍ×Ô¼º½øÈë¸±±¾
-	-- 3£¬Èç¹ûÍæ¼ÒÓĞ¶ÓÎé£¬²¢ÇÒÕâ¸öÍæ¼ÒÊÇ¶Ó³¤£¬¾Í´«ËÍ×Ô¼ººÍ¸½½ü¶ÓÓÑÒ»Æğ½øÈ¥
+	--è¿›å…¥å‰¯æœ¬çš„è§„åˆ™
+	-- 1ï¼Œå¦‚æœè¿™ä¸ªç©å®¶æ²¡æœ‰ç»„é˜Ÿï¼Œå°±ä¼ é€è¿™ä¸ªç©å®¶è‡ªå·±è¿›å…¥å‰¯æœ¬
+	-- 2, å¦‚æœç©å®¶æœ‰é˜Ÿä¼ï¼Œä½†æ˜¯ç©å®¶ä¸æ˜¯é˜Ÿé•¿ï¼Œå°±ä¼ é€è‡ªå·±è¿›å…¥å‰¯æœ¬
+	-- 3ï¼Œå¦‚æœç©å®¶æœ‰é˜Ÿä¼ï¼Œå¹¶ä¸”è¿™ä¸ªç©å®¶æ˜¯é˜Ÿé•¿ï¼Œå°±ä¼ é€è‡ªå·±å’Œé™„è¿‘é˜Ÿå‹ä¸€èµ·è¿›å»
 
-	LuaFnSetCopySceneData_Param(destsceneId, 3, sceneId) --ÉèÖÃ¸±±¾Èë¿Ú³¡¾°ºÅ
+	LuaFnSetCopySceneData_Param(destsceneId, 3, sceneId) --è®¾ç½®å‰¯æœ¬å…¥å£åœºæ™¯å·
 	leaderguid  = LuaFnGetCopySceneData_TeamLeader(destsceneId)
 	leaderObjId = LuaFnGuid2ObjId(sceneId,leaderguid)
 
@@ -274,7 +274,7 @@ function x402263_OnCopySceneReady( sceneId, destsceneId )
 		return
 	end
 
-	--Í³¼Æ´´½¨¸±±¾´ÎÊı....
+	--ç»Ÿè®¡åˆ›å»ºå‰¯æœ¬æ¬¡æ•°....
 	AuditPMFCreateFuben( sceneId, leaderObjId )
 
 	if LuaFnHasTeam( sceneId, leaderObjId ) == 0  then
@@ -295,7 +295,7 @@ function x402263_OnCopySceneReady( sceneId, destsceneId )
 end
 
 --**********************************
---¸±±¾³¡¾°¶¨Ê±Æ÷ÊÂ¼ş....
+--å‰¯æœ¬åœºæ™¯å®šæ—¶å™¨äº‹ä»¶....
 --**********************************
 function x402263_OnCopySceneTimer( sceneId, nowTime )
 
@@ -310,14 +310,14 @@ function x402263_OnCopySceneTimer( sceneId, nowTime )
 end
 
 --**********************************
---ÓĞÍæ¼Ò½øÈë¸±±¾ÊÂ¼ş....
+--æœ‰ç©å®¶è¿›å…¥å‰¯æœ¬äº‹ä»¶....
 --**********************************
 function x402263_OnPlayerEnter( sceneId, selfId )
 
-	--ÉèÖÃËÀÍöÊÂ¼ş....
+	--è®¾ç½®æ­»äº¡äº‹ä»¶....
 	SetPlayerDefaultReliveInfo( sceneId, selfId, "%10", -1, "0", sceneId, x402263_g_Fuben_X, x402263_g_Fuben_Z )
 
-	--ÉèÖÃÌôÕ½¹ıÒ»´ÎçÎç¿·å....
+	--è®¾ç½®æŒ‘æˆ˜è¿‡ä¸€æ¬¡ç¼¥ç¼ˆå³°....
 	local lastTime = GetMissionData( sceneId, selfId, MD_PIAOMIAOFENG_LASTTIME )
 	local lastDayTime = floor( lastTime / 100 )
 	local lastDayCount = mod( lastTime, 100 )
@@ -335,14 +335,14 @@ function x402263_OnPlayerEnter( sceneId, selfId )
 end
 
 --**********************************
---ÓĞÍæ¼ÒÔÚ¸±±¾ÖĞËÀÍöÊÂ¼ş....
+--æœ‰ç©å®¶åœ¨å‰¯æœ¬ä¸­æ­»äº¡äº‹ä»¶....
 --**********************************
 function x402263_OnHumanDie( sceneId, selfId, killerId )
 	
 end
 
 --**********************************
---ÌáÊ¾ËùÓĞ¸±±¾ÄÚÍæ¼Ò....
+--æç¤ºæ‰€æœ‰å‰¯æœ¬å†…ç©å®¶....
 --**********************************
 function x402263_TipAllHuman( sceneId, Str )
 
@@ -360,7 +360,7 @@ function x402263_TipAllHuman( sceneId, Str )
 end
 
 --**********************************
---Tick¸±±¾ÉúÃüÆÚ....
+--Tickå‰¯æœ¬ç”Ÿå‘½æœŸ....
 --**********************************
 function x402263_TickFubenLife( sceneId, nowTime )
 
@@ -389,89 +389,89 @@ function x402263_TickFubenLife( sceneId, nowTime )
 
 	if lifeStep == 14 then
 		LuaFnSetCopySceneData_Param( sceneId, x402263_g_IDX_FuBenLifeStep, 15 )
-		x402263_TipAllHuman( sceneId, "¸±±¾½«ÔÚ1Ãëºó¹Ø±Õ¡£" )
+		x402263_TipAllHuman( sceneId, "å‰¯æœ¬å°†åœ¨1ç§’åå…³é—­ã€‚" )
 		return
 	end
 
 	if lifeStep == 13 then
 		LuaFnSetCopySceneData_Param( sceneId, x402263_g_IDX_FuBenLifeStep, 14 )
-		x402263_TipAllHuman( sceneId, "¸±±¾½«ÔÚ2Ãëºó¹Ø±Õ¡£" )
+		x402263_TipAllHuman( sceneId, "å‰¯æœ¬å°†åœ¨2ç§’åå…³é—­ã€‚" )
 		return
 	end
 
 	if lifeStep == 12 then
 		LuaFnSetCopySceneData_Param( sceneId, x402263_g_IDX_FuBenLifeStep, 13 )
-		x402263_TipAllHuman( sceneId, "¸±±¾½«ÔÚ3Ãëºó¹Ø±Õ¡£" )
+		x402263_TipAllHuman( sceneId, "å‰¯æœ¬å°†åœ¨3ç§’åå…³é—­ã€‚" )
 		return
 	end
 
 	if lifeStep == 11 then
 		LuaFnSetCopySceneData_Param( sceneId, x402263_g_IDX_FuBenLifeStep, 12 )
-		x402263_TipAllHuman( sceneId, "¸±±¾½«ÔÚ4Ãëºó¹Ø±Õ¡£" )
+		x402263_TipAllHuman( sceneId, "å‰¯æœ¬å°†åœ¨4ç§’åå…³é—­ã€‚" )
 		return
 	end
 
 	if lifeStep == 10 then
 		LuaFnSetCopySceneData_Param( sceneId, x402263_g_IDX_FuBenLifeStep, 11 )
-		x402263_TipAllHuman( sceneId, "¸±±¾½«ÔÚ5Ãëºó¹Ø±Õ¡£" )
+		x402263_TipAllHuman( sceneId, "å‰¯æœ¬å°†åœ¨5ç§’åå…³é—­ã€‚" )
 		return
 	end
 
 	if leftTime <= 10 and lifeStep == 9 then
 		LuaFnSetCopySceneData_Param( sceneId, x402263_g_IDX_FuBenLifeStep, 10 )
-		x402263_TipAllHuman( sceneId, "¸±±¾½«ÔÚ10Ãëºó¹Ø±Õ¡£" )
+		x402263_TipAllHuman( sceneId, "å‰¯æœ¬å°†åœ¨10ç§’åå…³é—­ã€‚" )
 		return
 	end
 
 	if leftTime <= 30 and lifeStep == 8 then
 		LuaFnSetCopySceneData_Param( sceneId, x402263_g_IDX_FuBenLifeStep, 9 )
-		x402263_TipAllHuman( sceneId, "¸±±¾½«ÔÚ30Ãëºó¹Ø±Õ¡£" )
+		x402263_TipAllHuman( sceneId, "å‰¯æœ¬å°†åœ¨30ç§’åå…³é—­ã€‚" )
 		return
 	end
 
 	if leftTime <= 60 and lifeStep == 7 then
 		LuaFnSetCopySceneData_Param( sceneId, x402263_g_IDX_FuBenLifeStep, 8 )
-		x402263_TipAllHuman( sceneId, "¸±±¾½«ÔÚ1·ÖÖÓºó¹Ø±Õ¡£" )
+		x402263_TipAllHuman( sceneId, "å‰¯æœ¬å°†åœ¨1åˆ†é’Ÿåå…³é—­ã€‚" )
 		return
 	end
 
 	if leftTime <= 120 and lifeStep == 6 then
 		LuaFnSetCopySceneData_Param( sceneId, x402263_g_IDX_FuBenLifeStep, 7 )
-		x402263_TipAllHuman( sceneId, "¸±±¾½«ÔÚ2·ÖÖÓºó¹Ø±Õ¡£" )
+		x402263_TipAllHuman( sceneId, "å‰¯æœ¬å°†åœ¨2åˆ†é’Ÿåå…³é—­ã€‚" )
 		return
 	end
 
 	if leftTime <= 180 and lifeStep == 5 then
 		LuaFnSetCopySceneData_Param( sceneId, x402263_g_IDX_FuBenLifeStep, 6 )
-		x402263_TipAllHuman( sceneId, "¸±±¾½«ÔÚ3·ÖÖÓºó¹Ø±Õ¡£" )
+		x402263_TipAllHuman( sceneId, "å‰¯æœ¬å°†åœ¨3åˆ†é’Ÿåå…³é—­ã€‚" )
 		return
 	end
 
 	if leftTime <= 300 and lifeStep == 4 then
 		LuaFnSetCopySceneData_Param( sceneId, x402263_g_IDX_FuBenLifeStep, 5 )
-		x402263_TipAllHuman( sceneId, "¸±±¾½«ÔÚ5·ÖÖÓºó¹Ø±Õ¡£" )
+		x402263_TipAllHuman( sceneId, "å‰¯æœ¬å°†åœ¨5åˆ†é’Ÿåå…³é—­ã€‚" )
 		return
 	end
 
 	if leftTime <= 900 and lifeStep == 3 then
 		LuaFnSetCopySceneData_Param( sceneId, x402263_g_IDX_FuBenLifeStep, 4 )
-		x402263_TipAllHuman( sceneId, "¸±±¾½«ÔÚ15·ÖÖÓºó¹Ø±Õ¡£" )
+		x402263_TipAllHuman( sceneId, "å‰¯æœ¬å°†åœ¨15åˆ†é’Ÿåå…³é—­ã€‚" )
 		return
 	end
 
 	if leftTime <= 1800 and lifeStep == 2 then
 		LuaFnSetCopySceneData_Param( sceneId, x402263_g_IDX_FuBenLifeStep, 3 )
-		x402263_TipAllHuman( sceneId, "¸±±¾½«ÔÚ30·ÖÖÓºó¹Ø±Õ¡£" )
+		x402263_TipAllHuman( sceneId, "å‰¯æœ¬å°†åœ¨30åˆ†é’Ÿåå…³é—­ã€‚" )
 		return
 	end
 
 	if leftTime <= 3600 and lifeStep == 1 then
 		LuaFnSetCopySceneData_Param( sceneId, x402263_g_IDX_FuBenLifeStep, 2 )
-		x402263_TipAllHuman( sceneId, "¸±±¾½«ÔÚ60·ÖÖÓºó¹Ø±Õ¡£" )
+		x402263_TipAllHuman( sceneId, "å‰¯æœ¬å°†åœ¨60åˆ†é’Ÿåå…³é—­ã€‚" )
 		return
 	end
 
-	--³õÊ¼»¯¸±±¾ÄÚµÄNPC....
+	--åˆå§‹åŒ–å‰¯æœ¬å†…çš„NPC....
 	if lifeStep == 0 then
 
 		local MstId = x402263_CreateBOSS( sceneId, "HaDaBa_NPC", -1, -1 )
@@ -494,7 +494,7 @@ function x402263_TickFubenLife( sceneId, nowTime )
 end
 
 --**********************************
---TickçÎç¿·å¼ÆÊ±Æ÷....
+--Tickç¼¥ç¼ˆå³°è®¡æ—¶å™¨....
 --**********************************
 function x402263_TickPMFTimer( sceneId, nowTime )
 
@@ -504,10 +504,10 @@ function x402263_TickPMFTimer( sceneId, nowTime )
 	end
 	local scriptID = LuaFnGetCopySceneData_Param( sceneId, x402263_g_IDX_PMFTimerScriptID )
 
-	--»Øµ÷Ö¸¶¨½Å±¾µÄOnTimer....
+	--å›è°ƒæŒ‡å®šè„šæœ¬çš„OnTimer....
 	CallScriptFunction( scriptID, "OnPMFTimer", sceneId, step )
 
-	--Èç¹ûÒÑ¾­×ßÍêËùÓĞstepÔò¹Ø±Õ¼ÆÊ±Æ÷....
+	--å¦‚æœå·²ç»èµ°å®Œæ‰€æœ‰stepåˆ™å…³é—­è®¡æ—¶å™¨....
 	step = step - 1
 	if step <= 0 then
 		LuaFnSetCopySceneData_Param( sceneId, x402263_g_IDX_PMFTimerStep, 0 )
@@ -519,7 +519,7 @@ function x402263_TickPMFTimer( sceneId, nowTime )
 end
 
 --**********************************
---¿ªÆôçÎç¿·å¼ÆÊ±Æ÷....
+--å¼€å¯ç¼¥ç¼ˆå³°è®¡æ—¶å™¨....
 --**********************************
 function x402263_OpenPMFTimer( sceneId, allstep, ScriptID )
 
@@ -529,7 +529,7 @@ function x402263_OpenPMFTimer( sceneId, allstep, ScriptID )
 end
 
 --**********************************
---µ±Ç°çÎç¿·å¼ÆÊ±Æ÷ÊÇ·ñ¼¤»î....
+--å½“å‰ç¼¥ç¼ˆå³°è®¡æ—¶å™¨æ˜¯å¦æ¿€æ´»....
 --**********************************
 function x402263_IsPMFTimerRunning( sceneId )
 
@@ -543,7 +543,7 @@ function x402263_IsPMFTimerRunning( sceneId )
 end
 
 --**********************************
---TickÎÚÀÏ´óËÀÍö¼ÆÊ±Æ÷....
+--Tickä¹Œè€å¤§æ­»äº¡è®¡æ—¶å™¨....
 --**********************************
 function x402263_TickWuLaoDaDieTimer( sceneId, nowTime )
 
@@ -556,10 +556,10 @@ function x402263_TickWuLaoDaDieTimer( sceneId, nowTime )
 	local posX = LuaFnGetCopySceneData_Param( sceneId, x402263_g_IDX_WuLaoDaDiePosX )
 	local posY = LuaFnGetCopySceneData_Param( sceneId, x402263_g_IDX_WuLaoDaDiePosY )
 
-	--»Øµ÷Ö¸¶¨½Å±¾µÄOnTimer....
+	--å›è°ƒæŒ‡å®šè„šæœ¬çš„OnTimer....
 	CallScriptFunction( scriptID, "OnHaDaBaDieTimer", sceneId, step, posX, posY )
 
-	--Èç¹ûÒÑ¾­×ßÍêËùÓĞstepÔò¹Ø±Õ¼ÆÊ±Æ÷....
+	--å¦‚æœå·²ç»èµ°å®Œæ‰€æœ‰stepåˆ™å…³é—­è®¡æ—¶å™¨....
 	step = step - 1
 	if step <= 0 then
 		LuaFnSetCopySceneData_Param( sceneId, x402263_g_IDX_WuLaoDaDieStep, 0 )
@@ -573,7 +573,7 @@ function x402263_TickWuLaoDaDieTimer( sceneId, nowTime )
 end
 
 --**********************************
---¿ªÆôÎÚÀÏ´óËÀÍö¼ÆÊ±Æ÷....
+--å¼€å¯ä¹Œè€å¤§æ­»äº¡è®¡æ—¶å™¨....
 --**********************************
 function x402263_OpenWuLaoDaDieTimer( sceneId, allstep, ScriptID, posX, posY )
 
@@ -585,8 +585,8 @@ function x402263_OpenWuLaoDaDieTimer( sceneId, allstep, ScriptID, posX, posY )
 end
 
 --**********************************
---Tick½£ÎèÇøÓò....
---Ö»ÒªÍæ¼ÒÕ¾ÔÚ³¡¾°ÀïµÄ6¸ö¹âÖùÄÚ....Ã¿Ãë¶¼ÄÜ»ñµÃÒ»¸öÃâÒß½£ÎèµÄbuff....
+--Tickå‰‘èˆåŒºåŸŸ....
+--åªè¦ç©å®¶ç«™åœ¨åœºæ™¯é‡Œçš„6ä¸ªå…‰æŸ±å†…....æ¯ç§’éƒ½èƒ½è·å¾—ä¸€ä¸ªå…ç–«å‰‘èˆçš„buff....
 --**********************************
 function x402263_TickJianWuArea( sceneId, nowTime )
 
@@ -624,7 +624,7 @@ function x402263_TickJianWuArea( sceneId, nowTime )
 end
 
 --**********************************
---´´½¨Ö¸¶¨BOSS....
+--åˆ›å»ºæŒ‡å®šBOSS....
 --**********************************
 function x402263_CreateBOSS( sceneId, name, x, y )
 
@@ -652,7 +652,7 @@ function x402263_CreateBOSS( sceneId, name, x, y )
 
 	LuaFnSendSpecificImpactToUnit(sceneId, MstId, MstId, MstId, 152, 0)
 
-	--Í³¼Æ´´½¨BOSS....
+	--ç»Ÿè®¡åˆ›å»ºBOSS....
 	AuditPMFCreateBoss( sceneId, BOSSData.DataID )
 
 	return MstId
@@ -660,7 +660,7 @@ function x402263_CreateBOSS( sceneId, name, x, y )
 end
 
 --**********************************
---É¾³ıÖ¸¶¨BOSS....
+--åˆ é™¤æŒ‡å®šBOSS....
 --**********************************
 function x402263_DeleteBOSS( sceneId, name )
 
@@ -682,7 +682,7 @@ function x402263_DeleteBOSS( sceneId, name )
 end
 
 --**********************************
---Ñ°ÕÒÖ¸¶¨BOSS....
+--å¯»æ‰¾æŒ‡å®šBOSS....
 --**********************************
 function x402263_FindBOSS( sceneId, name )
 
@@ -704,7 +704,7 @@ function x402263_FindBOSS( sceneId, name )
 end
 
 --**********************************
---¼ì²âµ±Ç°ÊÇ·ñÒÑ¾­´æÔÚÒ»¸öBOSSÁË....
+--æ£€æµ‹å½“å‰æ˜¯å¦å·²ç»å­˜åœ¨ä¸€ä¸ªBOSSäº†....
 --**********************************
 function x402263_CheckHaveBOSS( sceneId )
 
@@ -726,11 +726,11 @@ function x402263_CheckHaveBOSS( sceneId )
 	end
 
 	if nBossNum > 0 then
-		local msg = "ÕıÓë"
+		local msg = "æ­£ä¸"
 		for i=0, nBossNum-2 do
-			msg = msg .. BossList[i] .. "£¬"
+			msg = msg .. BossList[i] .. "ï¼Œ"
 		end
-		msg = msg .. BossList[nBossNum-1] .. "Õ½¶·ÖĞ"
+		msg = msg .. BossList[nBossNum-1] .. "æˆ˜æ–—ä¸­"
 		return 1, msg
 	end
 
@@ -739,7 +739,7 @@ function x402263_CheckHaveBOSS( sceneId )
 end
 
 --**********************************
---»ñÈ¡ÊÇ·ñ¿ÉÒÔÌôÕ½Ä³¸öBOSSµÄ±ê¼Ç....
+--è·å–æ˜¯å¦å¯ä»¥æŒ‘æˆ˜æŸä¸ªBOSSçš„æ ‡è®°....
 --**********************************
 function x402263_GetBossBattleFlag( sceneId, bossName )
 
@@ -749,7 +749,7 @@ function x402263_GetBossBattleFlag( sceneId, bossName )
 end
 
 --**********************************
---ÉèÖÃÊÇ·ñ¿ÉÒÔÌôÕ½Ä³¸öBOSSµÄ±ê¼Ç....
+--è®¾ç½®æ˜¯å¦å¯ä»¥æŒ‘æˆ˜æŸä¸ªBOSSçš„æ ‡è®°....
 --**********************************
 function x402263_SetBossBattleFlag( sceneId, bossName, bCan )
 

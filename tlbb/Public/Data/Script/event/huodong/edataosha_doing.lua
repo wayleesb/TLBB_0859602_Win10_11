@@ -1,157 +1,157 @@
---´óÌÓÉ±
---»î¶¯½øĞĞÖĞ
---¸±±¾µØÍ¼´óĞ¡Îª256*256£¬¹²°üº¬64*64µÄ16¸öĞ¡·¿¼ä
+--å¤§é€ƒæ€
+--æ´»åŠ¨è¿›è¡Œä¸­
+--å‰¯æœ¬åœ°å›¾å¤§å°ä¸º256*256ï¼Œå…±åŒ…å«64*64çš„16ä¸ªå°æˆ¿é—´
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x808002_g_ScriptId			= 808002
-x808002_g_ScriptId_Ctrl	= 808003		--»Øµ÷½Å±¾
+x808002_g_ScriptId_Ctrl	= 808003		--å›è°ƒè„šæœ¬
 
-x808002_g_PlyJoinMax		= 64				--×î´ó±¨ÃûÈËÊı
-x808002_g_GoldMin				= 10000			--±¨Ãû·Ñ
-x808002_g_LevelMin			= 40				--×îµÍµÈ¼¶ÏŞÖÆ
-x808002_g_GodBuff				= 112				--ÎŞµĞBUFF
-x808002_g_CampA					= 10				--ÌôÕ½A·½ÕóÓªºÅ
-x808002_g_CampB					= 11				--ÌôÕ½B·½ÕóÓªºÅ
-x808002_g_BackCity			=						--»Ø³Ç×ø±ê
+x808002_g_PlyJoinMax		= 64				--æœ€å¤§æŠ¥åäººæ•°
+x808002_g_GoldMin				= 10000			--æŠ¥åè´¹
+x808002_g_LevelMin			= 40				--æœ€ä½ç­‰çº§é™åˆ¶
+x808002_g_GodBuff				= 112				--æ— æ•ŒBUFF
+x808002_g_CampA					= 10				--æŒ‘æˆ˜Aæ–¹é˜µè¥å·
+x808002_g_CampB					= 11				--æŒ‘æˆ˜Bæ–¹é˜µè¥å·
+x808002_g_BackCity			=						--å›åŸåæ ‡
 {
 	["scn"]	= 1,
 	["px"]	= 183,
 	["pz"]	= 140,
 }
 
---¸±±¾Ïà¹Ø
-x808002_g_CopySceneName	= "±ÈÎä»á³¡"		--¸±±¾Ãû³Æ
-x808002_g_CopySceneType	= FUBEN_DATAOSHA--¸±±¾ÀàĞÍ£¬¶¨ÒåÔÚScriptGlobal.luaÀïÃæ
+--å‰¯æœ¬ç›¸å…³
+x808002_g_CopySceneName	= "æ¯”æ­¦ä¼šåœº"		--å‰¯æœ¬åç§°
+x808002_g_CopySceneType	= FUBEN_DATAOSHA--å‰¯æœ¬ç±»å‹ï¼Œå®šä¹‰åœ¨ScriptGlobal.luaé‡Œé¢
 x808002_g_CopySceneMap	= "dataosha.nav"
-x808002_g_TickTime			= 5					--»Øµ÷½Å±¾µÄÊ±ÖÓÊ±¼ä£¨µ¥Î»£ºÃë/´Î£©
-x808002_g_CloseTick			= 6					--¸±±¾¹Ø±ÕÇ°µ¹¼ÆÊ±£¨µ¥Î»£º´ÎÊı£©
-x808002_g_NoUserTime		= 600				--¸±±¾ÖĞÃ»ÓĞÈËºó¿ÉÒÔ¼ÌĞø±£´æµÄÊ±¼ä£¨µ¥Î»£ºÃë£©
-x808002_g_PvpRuler			= 5					--¸±±¾Pvp¹æÔò£¬¿ÉPK
-x808002_g_JoinTick			= 3					--±¨Ãûµ¹¼ÆÊ±
+x808002_g_TickTime			= 5					--å›è°ƒè„šæœ¬çš„æ—¶é’Ÿæ—¶é—´ï¼ˆå•ä½ï¼šç§’/æ¬¡ï¼‰
+x808002_g_CloseTick			= 6					--å‰¯æœ¬å…³é—­å‰å€’è®¡æ—¶ï¼ˆå•ä½ï¼šæ¬¡æ•°ï¼‰
+x808002_g_NoUserTime		= 600				--å‰¯æœ¬ä¸­æ²¡æœ‰äººåå¯ä»¥ç»§ç»­ä¿å­˜çš„æ—¶é—´ï¼ˆå•ä½ï¼šç§’ï¼‰
+x808002_g_PvpRuler			= 5					--å‰¯æœ¬Pvpè§„åˆ™ï¼Œå¯PK
+x808002_g_JoinTick			= 3					--æŠ¥åå€’è®¡æ—¶
 
---¸±±¾Êı¾İÇøË÷Òı
+--å‰¯æœ¬æ•°æ®åŒºç´¢å¼•
 x808002_g_ScnParam			=
 {
-	["typ"]	= 0,	--ÉèÖÃ¸±±¾Êı¾İ£¬ÕâÀï½«0ºÅË÷ÒıµÄÊı¾İÉèÖÃÎª999£¬ÓÃÓÚ±íÊ¾¸±±¾ºÅ999(Êı×Ö×Ô¶¨Òå)
-	["sid"]	= 1,	--½«1ºÅÊı¾İÉèÖÃÎª¸±±¾³¡¾°ÊÂ¼ş½Å±¾ºÅ
-	["tim"]	= 2,	--ÉèÖÃ¶¨Ê±Æ÷µ÷ÓÃ´ÎÊı
-	["ent"]	= 3,	--ÉèÖÃ¸±±¾Èë¿Ú³¡¾°ºÅ, ³õÊ¼»¯
-	["cls"]	= 4,	--ÉèÖÃ¸±±¾¹Ø±Õ±êÖ¾, 0¿ª·Å£¬1¹Ø±Õ
-	["rnd"]	= 5,	--ÉèÖÃµÚ¼¸»ØºÏ
-	["jon"]	= 6,	--ÉèÖÃ±¨Ãûµ¹¼ÆÊ±´ÎÊı
-	["chk"]	= 7,	--ÉèÖÃĞ£ÑéÊ±¼ä²î
-	["tab"]	= 8,	--ÉèÖÃ±íµ¥ID
+	["typ"]	= 0,	--è®¾ç½®å‰¯æœ¬æ•°æ®ï¼Œè¿™é‡Œå°†0å·ç´¢å¼•çš„æ•°æ®è®¾ç½®ä¸º999ï¼Œç”¨äºè¡¨ç¤ºå‰¯æœ¬å·999(æ•°å­—è‡ªå®šä¹‰)
+	["sid"]	= 1,	--å°†1å·æ•°æ®è®¾ç½®ä¸ºå‰¯æœ¬åœºæ™¯äº‹ä»¶è„šæœ¬å·
+	["tim"]	= 2,	--è®¾ç½®å®šæ—¶å™¨è°ƒç”¨æ¬¡æ•°
+	["ent"]	= 3,	--è®¾ç½®å‰¯æœ¬å…¥å£åœºæ™¯å·, åˆå§‹åŒ–
+	["cls"]	= 4,	--è®¾ç½®å‰¯æœ¬å…³é—­æ ‡å¿—, 0å¼€æ”¾ï¼Œ1å…³é—­
+	["rnd"]	= 5,	--è®¾ç½®ç¬¬å‡ å›åˆ
+	["jon"]	= 6,	--è®¾ç½®æŠ¥åå€’è®¡æ—¶æ¬¡æ•°
+	["chk"]	= 7,	--è®¾ç½®æ ¡éªŒæ—¶é—´å·®
+	["tab"]	= 8,	--è®¾ç½®è¡¨å•ID
 }
 
---ÅÅĞĞ°ñ±íµ¥Êı¾İÇøË÷Òı
+--æ’è¡Œæ¦œè¡¨å•æ•°æ®åŒºç´¢å¼•
 x808002_g_TabParam			=
 {
-	["enn"]	= 0,	--½øÈë¸±±¾µÄÈËÊı
-	["fbn"]	= 1,	--Ê¹ÓÃ¸±±¾ÊıÁ¿
-	["fb1"]	= 2,	--¸±±¾1µÄSceneId
-	["fb2"]	= 3,	--¸±±¾2µÄSceneId
-	["fbs"]	= 4,	--¸±±¾µÄ´´½¨×´Ì¬£º0(¿ÕÏĞ)£¬1(´´½¨ÖĞ)
+	["enn"]	= 0,	--è¿›å…¥å‰¯æœ¬çš„äººæ•°
+	["fbn"]	= 1,	--ä½¿ç”¨å‰¯æœ¬æ•°é‡
+	["fb1"]	= 2,	--å‰¯æœ¬1çš„SceneId
+	["fb2"]	= 3,	--å‰¯æœ¬2çš„SceneId
+	["fbs"]	= 4,	--å‰¯æœ¬çš„åˆ›å»ºçŠ¶æ€ï¼š0(ç©ºé—²)ï¼Œ1(åˆ›å»ºä¸­)
 }
 
---ÏûÏ¢ÌáÊ¾
+--æ¶ˆæ¯æç¤º
 x808002_g_Msg						=
 {
-	["flw"]		= "¶Ô²»Æğ£¬×é¶Ó¸úËæ×´Ì¬ÏÂ²»ÄÜ±¨Ãû¡£",
-	["drd"]		= "¶Ô²»Æğ£¬Ë«ÈËÆï³Ë×´Ì¬ÏÂ²»ÄÜ±¨Ãû¡£",
-	["ear"]		= "ÏÖÔÚ²»ÊÇ»î¶¯¿ªÊ¼±¨ÃûµÄÊ±¼ä£¬ÇëÔÚ±¨ÃûÊ±¼äÄÚÔÙÀ´ÕÒÎÒ¡£",
-	["pop1"]	= "  ±ÈÎä´ó»áÏÖÔÚÕıÊ½¿ªÊ¼£¬µÚÒ»´Î²Î¼Ó±ÈÈüĞèÒªÃ¿ÈË½»ÄÉ#{_EXCHG"..x808002_g_GoldMin.."}µÄ±¨Ãû·Ñ£¬ÄúÊÇ·ñÔ¸Òâ²Î¼Ó£¿",
-	["gld"]		= "ÄúÉíÉÏµÄÏÖ½ğ²»×ã#{_EXCHG"..x808002_g_GoldMin.."}£¬Çë´Õ×ãÏÖ½ğÖ®ºóÔÙÕÒÎÒ±¨Ãû¡£",
-	["itm"]		= "ÄúµÄ±³°üÖĞ×îºÃÓĞÒ»¸ö¿ÕÎ»£¬Îä×´ÔªÊÇÓĞ½±ÀøµÄßÏ£¡",
-	["ful"]		= "¶Ô²»Æğ£¬ºÍÄúµÈ¼¶Ïà·ûµÄ×é¼¶µÄ±¨ÃûÈËÊıÒÑ¾­×ã¹»£¬ÇëÏÂ´ÎÔÙÀ´²Î¼Ó¡£",
-	["lev"]		= "¶Ô²»Æğ£¬Ö»ÓĞ"..x808002_g_LevelMin.."¼¶ÒÔÉÏ²ÅÄÜ²Î¼Ó´Ë±ÈÈü¡£",
-	["grp"]		= "¶Ô²»Æğ£¬ºÍÄúµÈ¼¶Ïà·ûµÄ×éµÄ±ÈÈü»¹Ã»ÓĞ¿ª·Å¡£",
-	["popn"]	= "  ÏÖÔÚÊÇÏÂÒ»ÂÖ±ÈÎä´ó»áµÄ±¨ÃûÊ±¼ä£¬Ö»ÓĞÉÏÒ»ÂÖµÄÊ¤Õß²ÅÄÜ²Î¼ÓÏÂÒ»ÂÖµÄ±ÈÈü¡£",
-	["fal"]		= "¶Ô²»Æğ£¬Ö»ÓĞÉÏÒ»ÂÖ±ÈÎä´ó»áµÄ»ñÊ¤Õß²ÅÄÜ²Î¼ÓÏÂÒ»ÂÖµÄ±ÈÈü¡£",
+	["flw"]		= "å¯¹ä¸èµ·ï¼Œç»„é˜Ÿè·ŸéšçŠ¶æ€ä¸‹ä¸èƒ½æŠ¥åã€‚",
+	["drd"]		= "å¯¹ä¸èµ·ï¼ŒåŒäººéª‘ä¹˜çŠ¶æ€ä¸‹ä¸èƒ½æŠ¥åã€‚",
+	["ear"]		= "ç°åœ¨ä¸æ˜¯æ´»åŠ¨å¼€å§‹æŠ¥åçš„æ—¶é—´ï¼Œè¯·åœ¨æŠ¥åæ—¶é—´å†…å†æ¥æ‰¾æˆ‘ã€‚",
+	["pop1"]	= "  æ¯”æ­¦å¤§ä¼šç°åœ¨æ­£å¼å¼€å§‹ï¼Œç¬¬ä¸€æ¬¡å‚åŠ æ¯”èµ›éœ€è¦æ¯äººäº¤çº³#{_EXCHG"..x808002_g_GoldMin.."}çš„æŠ¥åè´¹ï¼Œæ‚¨æ˜¯å¦æ„¿æ„å‚åŠ ï¼Ÿ",
+	["gld"]		= "æ‚¨èº«ä¸Šçš„ç°é‡‘ä¸è¶³#{_EXCHG"..x808002_g_GoldMin.."}ï¼Œè¯·å‡‘è¶³ç°é‡‘ä¹‹åå†æ‰¾æˆ‘æŠ¥åã€‚",
+	["itm"]		= "æ‚¨çš„èƒŒåŒ…ä¸­æœ€å¥½æœ‰ä¸€ä¸ªç©ºä½ï¼Œæ­¦çŠ¶å…ƒæ˜¯æœ‰å¥–åŠ±çš„å‘¦ï¼",
+	["ful"]		= "å¯¹ä¸èµ·ï¼Œå’Œæ‚¨ç­‰çº§ç›¸ç¬¦çš„ç»„çº§çš„æŠ¥åäººæ•°å·²ç»è¶³å¤Ÿï¼Œè¯·ä¸‹æ¬¡å†æ¥å‚åŠ ã€‚",
+	["lev"]		= "å¯¹ä¸èµ·ï¼Œåªæœ‰"..x808002_g_LevelMin.."çº§ä»¥ä¸Šæ‰èƒ½å‚åŠ æ­¤æ¯”èµ›ã€‚",
+	["grp"]		= "å¯¹ä¸èµ·ï¼Œå’Œæ‚¨ç­‰çº§ç›¸ç¬¦çš„ç»„çš„æ¯”èµ›è¿˜æ²¡æœ‰å¼€æ”¾ã€‚",
+	["popn"]	= "  ç°åœ¨æ˜¯ä¸‹ä¸€è½®æ¯”æ­¦å¤§ä¼šçš„æŠ¥åæ—¶é—´ï¼Œåªæœ‰ä¸Šä¸€è½®çš„èƒœè€…æ‰èƒ½å‚åŠ ä¸‹ä¸€è½®çš„æ¯”èµ›ã€‚",
+	["fal"]		= "å¯¹ä¸èµ·ï¼Œåªæœ‰ä¸Šä¸€è½®æ¯”æ­¦å¤§ä¼šçš„è·èƒœè€…æ‰èƒ½å‚åŠ ä¸‹ä¸€è½®çš„æ¯”èµ›ã€‚",
 
-	["n_son"]	= "±ÈÎä´ó»á%d¼¶±ğ×é±¾´Î»î¶¯¼´½«ÔÚ%d·ÖÖÓºó½áÊø£¬Çë¸÷Î»Ñ¡ÊÖ¾¡¿ì½áÊø±ÈÈü¡£",
-	["n_end"]	= "±ÈÎä´ó»á%d¼¶±ğ×é±¾´Î»î¶¯ÒÑ¾­½áÊø£¬Çë½øÈëÏÂÒ»ÂÖµÄÑ¡ÊÖ¾¡¿ì×¼±¸±¨Ãû¡£",
-	["r_win"]	= "¹§Ï²£¬±ÈÎä»ñÊ¤",
-	["r_wnx"]	= "Çëµ½Ëå±ªÃù´¦ÁìÈ¡ÄúµÄ½±Àø£¬Ö®ºó²ÅÄÜ½øÈëÏÂÒ»ÂÖ±ÈÎä",
-	["r_mal"]	= "¹§Ï²ÄúÓ®µÃ±ÈÎä£¡Çëµ½Ëå±ªÃù£¨173£¬130£©´¦ÁìÈ¡ÄúµÄ½±Àø£¬ÉÔÊÂĞªÏ¢ºóÄú½«½øÈëÏÂÒ»ÂÖ±ÈÎä¡£#r×¢Òâ£ºÄúÖ»ÓĞÁìÈ¡¹ı½±Àø²Å»á½øÈëÏÂÒ»ÂÖ£¬²»Òª´íÊ§»ú»áÅ¶£¬¸Ï¿ìÈ¥ÁìÈ¡°É¡£",
-	["r_fal"]	= "ÒÅº¶£¬±ÈÎäÊ§°Ü",
-	["r_flx"]	= "Çëµ½Ëå±ªÃù´¦ÁìÈ¡ÄúµÄ½±Àø",
+	["n_son"]	= "æ¯”æ­¦å¤§ä¼š%dçº§åˆ«ç»„æœ¬æ¬¡æ´»åŠ¨å³å°†åœ¨%dåˆ†é’Ÿåç»“æŸï¼Œè¯·å„ä½é€‰æ‰‹å°½å¿«ç»“æŸæ¯”èµ›ã€‚",
+	["n_end"]	= "æ¯”æ­¦å¤§ä¼š%dçº§åˆ«ç»„æœ¬æ¬¡æ´»åŠ¨å·²ç»ç»“æŸï¼Œè¯·è¿›å…¥ä¸‹ä¸€è½®çš„é€‰æ‰‹å°½å¿«å‡†å¤‡æŠ¥åã€‚",
+	["r_win"]	= "æ­å–œï¼Œæ¯”æ­¦è·èƒœ",
+	["r_wnx"]	= "è¯·åˆ°éš‹è±¹é¸£å¤„é¢†å–æ‚¨çš„å¥–åŠ±ï¼Œä¹‹åæ‰èƒ½è¿›å…¥ä¸‹ä¸€è½®æ¯”æ­¦",
+	["r_mal"]	= "æ­å–œæ‚¨èµ¢å¾—æ¯”æ­¦ï¼è¯·åˆ°éš‹è±¹é¸£ï¼ˆ173ï¼Œ130ï¼‰å¤„é¢†å–æ‚¨çš„å¥–åŠ±ï¼Œç¨äº‹æ­‡æ¯åæ‚¨å°†è¿›å…¥ä¸‹ä¸€è½®æ¯”æ­¦ã€‚#ræ³¨æ„ï¼šæ‚¨åªæœ‰é¢†å–è¿‡å¥–åŠ±æ‰ä¼šè¿›å…¥ä¸‹ä¸€è½®ï¼Œä¸è¦é”™å¤±æœºä¼šå“¦ï¼Œèµ¶å¿«å»é¢†å–å§ã€‚",
+	["r_fal"]	= "é—æ†¾ï¼Œæ¯”æ­¦å¤±è´¥",
+	["r_flx"]	= "è¯·åˆ°éš‹è±¹é¸£å¤„é¢†å–æ‚¨çš„å¥–åŠ±",
 }
 
---Ê§°ÜÕß½±Àø
-x808002_g_BountyRate		= 5	--½±Àø¸ÅÂÊ°Ù·Ö±È
-x808002_g_BountyItem	 	=		--½±ÀøÎïÆ·ÁĞ±í
+--å¤±è´¥è€…å¥–åŠ±
+x808002_g_BountyRate		= 5	--å¥–åŠ±æ¦‚ç‡ç™¾åˆ†æ¯”
+x808002_g_BountyItem	 	=		--å¥–åŠ±ç‰©å“åˆ—è¡¨
 {
-	20500000,									--¾«ÌúËéÆ¬
-	20501000,									--ÃŞ²¼ËéÆ¬
-	20502000,									--ÃØÒøËéÆ¬
+	20500000,									--ç²¾é“ç¢ç‰‡
+	20501000,									--æ£‰å¸ƒç¢ç‰‡
+	20502000,									--ç§˜é“¶ç¢ç‰‡
 }
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x808002_OnDefaultEvent( sceneId, selfId, targetId )
 
-	--ÕÒ²»µ½¸ÃÍæ¼Ò
+	--æ‰¾ä¸åˆ°è¯¥ç©å®¶
 	if LuaFnIsObjValid( sceneId, selfId ) ~= 1 then
 		return
 	end
-	--ÅĞ¶Ï×é¶Ó¸úËæ×´Ì¬
+	--åˆ¤æ–­ç»„é˜Ÿè·ŸéšçŠ¶æ€
 	if IsTeamFollow( sceneId, selfId ) == 1 then
 		x808002_MsgBox( sceneId, selfId, x808002_g_Msg["flw"] )
 		return
 	end
-	--ÅĞ¶ÏË«ÈËÆï³Ë×´Ì¬
+	--åˆ¤æ–­åŒäººéª‘ä¹˜çŠ¶æ€
 	if LuaFnGetDRideFlag( sceneId, selfId ) == 1 then
 		x808002_MsgBox( sceneId, selfId, x808002_g_Msg["drd"] )
 		return
 	end
 
-	--±ÈÎä»ØºÏÊı
+	--æ¯”æ­¦å›åˆæ•°
 	local	rnd	= CallScriptFunction( x808002_g_ScriptId_Ctrl, "GetRound", sceneId, selfId )
 
-	--Ñ¡Ôñ°´Å¥
+	--é€‰æ‹©æŒ‰é’®
 	local	key	= GetNumText()
 
-	--ÎÒÒª±¨Ãû
+	--æˆ‘è¦æŠ¥å
 	if key == 0 then
-		--²é¿´±ÈÎä½á¹û£¬ÊÇ·ñÁìÈ¡¹ı½±Àø
+		--æŸ¥çœ‹æ¯”æ­¦ç»“æœï¼Œæ˜¯å¦é¢†å–è¿‡å¥–åŠ±
 		if x808002_OnPlyBounty( sceneId, selfId, targetId, rnd ) == 1 then
 			if rnd > 0 then
-				x808002_MsgBox( sceneId, selfId, "Çë²»ÒªÀëÎÒÌ«Ô¶£¬ÉÔºó½«¹«²¼±ÈÎä³É¼¨" )
+				x808002_MsgBox( sceneId, selfId, "è¯·ä¸è¦ç¦»æˆ‘å¤ªè¿œï¼Œç¨åå°†å…¬å¸ƒæ¯”æ­¦æˆç»©" )
 			end
 			return
 		end
 
-		--»î¶¯ÊÇ·ñ´¦ÓÚ±¨ÃûÖĞ
+		--æ´»åŠ¨æ˜¯å¦å¤„äºæŠ¥åä¸­
 		if CallScriptFunction( x808002_g_ScriptId_Ctrl, "IsJoinDoing", sceneId, selfId ) == 0 then
 			x808002_MsgBox( sceneId, selfId, x808002_g_Msg["ear"] )
 			return
 		end
 		
-		--¼ì²â±¨ÃûÌõ¼ş
+		--æ£€æµ‹æŠ¥åæ¡ä»¶
 		if x808002_CheckPlyJoin( sceneId, selfId ) ~= 1 then
 			return
 		end
 
-		--µÚÒ»´Î²ÎÈü
+		--ç¬¬ä¸€æ¬¡å‚èµ›
 		if rnd == 1 then
 			BeginEvent( sceneId )
 			AddText( sceneId, x808002_g_Msg["pop1"] )
-			AddNumText( sceneId, x808002_g_ScriptId, "ÎÒÏÖÔÚ¾ÍÒª²Î¼Ó", 10, 1001 )
+			AddNumText( sceneId, x808002_g_ScriptId, "æˆ‘ç°åœ¨å°±è¦å‚åŠ ", 10, 1001 )
 			EndEvent( sceneId )
 			DispatchEventList( sceneId, selfId, targetId )
-		--Ñ­»·Èü
+		--å¾ªç¯èµ›
 		else
 			BeginEvent( sceneId )
 			AddText( sceneId, x808002_g_Msg["popn"] )
-			AddNumText( sceneId, x808002_g_ScriptId, "ÎÒÏÖÔÚ¾ÍÒª²Î¼Ó", 10, 1002 )
+			AddNumText( sceneId, x808002_g_ScriptId, "æˆ‘ç°åœ¨å°±è¦å‚åŠ ", 10, 1002 )
 			EndEvent( sceneId )
 			DispatchEventList( sceneId, selfId, targetId )
 		end
 
-	--µÚÒ»ÂÖ£ºÎÒÏÖÔÚ¾ÍÒª²Î¼Ó
+	--ç¬¬ä¸€è½®ï¼šæˆ‘ç°åœ¨å°±è¦å‚åŠ 
 	elseif key == 1001 then
-		--¹Ø±Õ½çÃæ
+		--å…³é—­ç•Œé¢
 		BeginUICommand( sceneId )
 		UICommand_AddInt( sceneId, targetId )
 		EndUICommand( sceneId )
@@ -160,44 +160,44 @@ function x808002_OnDefaultEvent( sceneId, selfId, targetId )
 		local nMoneyJZ = GetMoneyJZ (sceneId, selfId)
 		local nMoney = GetMoney (sceneId, selfId)
 		
-		--½ğÇ®¼ì²é
+		--é‡‘é’±æ£€æŸ¥
 		if (nMoneyJZ + nMoney) < x808002_g_GoldMin then
-			-- Ç®²»¹»
+			-- é’±ä¸å¤Ÿ
 			x808002_MsgBox( sceneId, selfId, x808002_g_Msg["gld"] )
 			return
 		end
 
-		x808002_MsgBox( sceneId, selfId, "¹§Ï²ÄúÒÑ¾­±¨Ãû³É¹¦£¬Ï£ÍûÄúÕâ´ÎÄÜ¹»ÓÂ¶áÎä×´Ôª!" )
-		x808002_MsgBox( sceneId, selfId, "Àë¿ª»á³¡ºó£¬¼ÇµÃ¼°Ê±»ØÀ´ÁìÈ¡½±ÀøÅ¶!" )
+		x808002_MsgBox( sceneId, selfId, "æ­å–œæ‚¨å·²ç»æŠ¥åæˆåŠŸï¼Œå¸Œæœ›æ‚¨è¿™æ¬¡èƒ½å¤Ÿå‹‡å¤ºæ­¦çŠ¶å…ƒ!" )
+		x808002_MsgBox( sceneId, selfId, "ç¦»å¼€ä¼šåœºåï¼Œè®°å¾—åŠæ—¶å›æ¥é¢†å–å¥–åŠ±å“¦!" )
 
-		--Íæ¼Ò±¨Ãû
+		--ç©å®¶æŠ¥å
 		x808002_OnPlyJoin( sceneId, selfId, rnd )
 	
-	--Ñ­»·£ºÎÒÏÖÔÚ¾ÍÒª²Î¼Ó
+	--å¾ªç¯ï¼šæˆ‘ç°åœ¨å°±è¦å‚åŠ 
 	elseif key == 1002 then
-		--¹Ø±Õ½çÃæ
+		--å…³é—­ç•Œé¢
 		BeginUICommand( sceneId )
 		UICommand_AddInt( sceneId, targetId )
 		EndUICommand( sceneId )
 		DispatchUICommand( sceneId, selfId, 1000 )
 
-		--Íæ¼Ò±¨Ãû
+		--ç©å®¶æŠ¥å
 		x808002_OnPlyJoin( sceneId, selfId, rnd )
 	end
 
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x808002_OnEnumerate( sceneId, selfId, targetId )
 
-	AddNumText( sceneId, x808002_g_ScriptId, "ÎÒÒª±¨Ãû", 4, 0 )
+	AddNumText( sceneId, x808002_g_ScriptId, "æˆ‘è¦æŠ¥å", 4, 0 )
 
 end
 
 --**********************************
---¼ì²âÍæ¼Ò±¨ÃûÌõ¼ş
+--æ£€æµ‹ç©å®¶æŠ¥åæ¡ä»¶
 --**********************************
 function x808002_CheckPlyJoin( sceneId, selfId )
 
@@ -206,7 +206,7 @@ function x808002_CheckPlyJoin( sceneId, selfId )
 		return 0
 	end
 	
-	--¸ù¾İÍæ¼ÒµÈ¼¶»ñÈ¡×é±ğĞÅÏ¢
+	--æ ¹æ®ç©å®¶ç­‰çº§è·å–ç»„åˆ«ä¿¡æ¯
 	local	ActID, _, _	= CallScriptFunction( x808002_g_ScriptId_Ctrl, "GetGroupInfo", sceneId, selfId )
 	if ActID == nil then
 		x808002_MsgBox( sceneId, selfId, x808002_g_Msg["grp"] )
@@ -222,16 +222,16 @@ function x808002_CheckPlyJoin( sceneId, selfId )
 end
 
 --**********************************
---Íæ¼Ò±¨Ãû
+--ç©å®¶æŠ¥å
 --**********************************
 function x808002_OnPlyJoin( sceneId, selfId, rnd )
 
-	--ÕÒ²»µ½¸ÃÍæ¼Ò
+	--æ‰¾ä¸åˆ°è¯¥ç©å®¶
 	if LuaFnIsObjValid( sceneId, selfId ) ~= 1 then
 		return
 	end
 
-	--±ÈÎä»ØºÏÊı
+	--æ¯”æ­¦å›åˆæ•°
 	rnd_self	= x808002_GetMyCurrentRound( sceneId, selfId )
 	ret_self	= GetMissionData( sceneId, selfId, MD_DATAOSHA_RESULT )
 	if rnd > 1 then
@@ -241,9 +241,9 @@ function x808002_OnPlyJoin( sceneId, selfId, rnd )
 		end
 	end
 
-	--»ñÈ¡±íµ¥ID
+	--è·å–è¡¨å•ID
 	tabId			= CallScriptFunction( x808002_g_ScriptId_Ctrl, "GetTableID", sceneId, selfId )
-	--±íµ¥ÈËÊı
+	--è¡¨å•äººæ•°
 	ply_num		= HitParadeGetTabParam( sceneId, tabId, x808002_g_TabParam["enn"] )
 	if tabId == -1 or ply_num >= x808002_g_PlyJoinMax then
 		x808002_MsgBox( sceneId, selfId, x808002_g_Msg["ful"] )
@@ -258,26 +258,26 @@ function x808002_OnPlyJoin( sceneId, selfId, rnd )
 		return
 	end
 
-	--ÅĞ¶Ï¸±±¾ÊÇ·ñ¼ÓÔØ
+	--åˆ¤æ–­å‰¯æœ¬æ˜¯å¦åŠ è½½
 	scn_num		= HitParadeGetTabParam( sceneId, tabId, x808002_g_TabParam["fbn"] )
 	scn_fb		= { 0, 0 }
 	scn_fb[1]	= HitParadeGetTabParam( sceneId, tabId, x808002_g_TabParam["fb1"] )
 	scn_fb[2]	= HitParadeGetTabParam( sceneId, tabId, x808002_g_TabParam["fb2"] )
 	if scn_num > 0 then
-		--µ±±¨ÃûÈËÊıÎª£¨x808002_g_PlyJoinMax/2£©Ê±£¬´´½¨¸±±¾2
+		--å½“æŠ¥åäººæ•°ä¸ºï¼ˆx808002_g_PlyJoinMax/2ï¼‰æ—¶ï¼Œåˆ›å»ºå‰¯æœ¬2
 		if LuaFnGetSceneType( scn_fb[scn_num] ) == 1 and ply_num ~= floor(x808002_g_PlyJoinMax/2) then
 			x808002_OnSelectRoom( sceneId, selfId, scn_fb[scn_num], tabId )
 			return
 		end
 	end
 
-	--Ò»¶¨Òª¿¼ÂÇ¡°¸±±¾´´½¨ÖĞ¡±µÄ×´¿ö
+	--ä¸€å®šè¦è€ƒè™‘â€œå‰¯æœ¬åˆ›å»ºä¸­â€çš„çŠ¶å†µ
 	if scn_num <= 2 then
 		if HitParadeGetTabParam( sceneId, tabId, x808002_g_TabParam["fbs"] ) == 0 then
 			HitParadeSetTabParam( sceneId, tabId, x808002_g_TabParam["fbs"], 1 )
 			x808002_MakeCopyScene( sceneId, selfId, tabId, rnd, tabId )
 		else
-			x808002_MsgBox( sceneId, selfId, "¸±±¾´´½¨ÖĞ" )
+			x808002_MsgBox( sceneId, selfId, "å‰¯æœ¬åˆ›å»ºä¸­" )
 			return
 		end
 
@@ -298,16 +298,16 @@ function x808002_OnPlyJoin( sceneId, selfId, rnd )
 end
 
 --**********************************
---Íæ¼Ò½±Àø
+--ç©å®¶å¥–åŠ±
 --**********************************
 function x808002_OnPlyBounty( sceneId, selfId, targetId, rnd )
 
-	--±ÈÈü½á¹û£¬ÒÔÆä"·ûºÅÎ»"±êÊ¶Ê¤¸º£¬ÒÔÆä"¾ø¶ÔÖµÊÇ·ñ´óÓÚ1"±êÊ¶ÊÇ·ñÁìÈ¡¹ı½±Àø£¬0µÈÍ¬ÓÚÃ»ÓĞ¹ı±ÈÈü
+	--æ¯”èµ›ç»“æœï¼Œä»¥å…¶"ç¬¦å·ä½"æ ‡è¯†èƒœè´Ÿï¼Œä»¥å…¶"ç»å¯¹å€¼æ˜¯å¦å¤§äº1"æ ‡è¯†æ˜¯å¦é¢†å–è¿‡å¥–åŠ±ï¼Œ0ç­‰åŒäºæ²¡æœ‰è¿‡æ¯”èµ›
 	ret_self	= GetMissionData( sceneId, selfId, MD_DATAOSHA_RESULT )
 	if abs( ret_self ) <= 1 then
 		return 0
 	end
-	--ÊÇ·ñ»ñÊ¤
+	--æ˜¯å¦è·èƒœ
 	if ret_self > 0 then
 		isWin		= 1
 	else
@@ -317,22 +317,22 @@ function x808002_OnPlyBounty( sceneId, selfId, targetId, rnd )
 	ret_self	= floor( ret_self / abs(ret_self) )
 	SetMissionData( sceneId, selfId, MD_DATAOSHA_RESULT, ret_self )
 
-	--·Ö³öÊ¤¸ºµÄ×é£¬ÎŞÂÛÊÇÊ¤ÀûÕß»¹ÊÇÊ§°ÜÕß¾ù¿ÉÒÔ»ñµÃ¾­Ñé
+	--åˆ†å‡ºèƒœè´Ÿçš„ç»„ï¼Œæ— è®ºæ˜¯èƒœåˆ©è€…è¿˜æ˜¯å¤±è´¥è€…å‡å¯ä»¥è·å¾—ç»éªŒ
 	BeginEvent( sceneId )
-		AddText( sceneId, "  ²»´í£¬¸óÏÂÓÂÆø¿É¼Î£¬ÎÒÕâÀï×¼±¸ÁËÒ»Ğ©Ğ¡Ğ¡µÄÀñÎï£¬»¹ÍûĞ¦ÄÉ¡£" )
+		AddText( sceneId, "  ä¸é”™ï¼Œé˜ä¸‹å‹‡æ°”å¯å˜‰ï¼Œæˆ‘è¿™é‡Œå‡†å¤‡äº†ä¸€äº›å°å°çš„ç¤¼ç‰©ï¼Œè¿˜æœ›ç¬‘çº³ã€‚" )
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, selfId, targetId )
 
-	--Ôö¼Ó¾­ÑéÖµ
+	--å¢åŠ ç»éªŒå€¼
 	exp				= GetLevel( sceneId, selfId ) * 44
 	AddExp( sceneId, selfId, exp )
 
-	--ÁìÈ¡½±ÀøÔÙ½øĞĞÅÅÃû
-	--ÀíÓÉ£º°´ÕÕµÈ¼¶»®·ÖÎª¶à×é£¬Ã¿×é¶ÔÓ¦¶à¸±±¾£¬¶àÏß³Ì
-	--»ñÈ¡±íµ¥ID
+	--é¢†å–å¥–åŠ±å†è¿›è¡Œæ’å
+	--ç†ç”±ï¼šæŒ‰ç…§ç­‰çº§åˆ’åˆ†ä¸ºå¤šç»„ï¼Œæ¯ç»„å¯¹åº”å¤šå‰¯æœ¬ï¼Œå¤šçº¿ç¨‹
+	--è·å–è¡¨å•ID
 	tabId			= CallScriptFunction( x808002_g_ScriptId_Ctrl, "GetTableID", sceneId, selfId )
 	--Add Log
-	LogInfo	= format( "[TAOSHA]: x808002_OnPlyBounty( sceneId=%d, GUID=%0X ), AddExp=%d, tabId=%d",
+	LogInfo	= format( "[TAOSHA]: x808002_OnPlyBounty( sceneId=%d, GUID=%0X ), AddExp=%.0f, tabId=%d",
 		sceneId,
 		LuaFnObjId2Guid( sceneId, selfId ),
 		exp, tabId )
@@ -343,16 +343,16 @@ function x808002_OnPlyBounty( sceneId, selfId, targetId, rnd )
 		return 0
 	end
 	guid			= LuaFnObjId2Guid( sceneId, selfId )
-	--ÅÅĞĞ¼üÖµ£¨½µĞò£¬¼üÖµÔ½´ó£¬ÅÅÃûÔ½¿¿Ç°£©£º»·Êı * 3 £¬Ê¤Õß¼Ó2£¬¸ºÕß¼Ó1
+	--æ’è¡Œé”®å€¼ï¼ˆé™åºï¼Œé”®å€¼è¶Šå¤§ï¼Œæ’åè¶Šé å‰ï¼‰ï¼šç¯æ•° * 3 ï¼Œèƒœè€…åŠ 2ï¼Œè´Ÿè€…åŠ 1
 	key				= rnd_self * 3
 	if ret_self > 0 then
-		key			= key + 2				--Ê¤Õß
+		key			= key + 2				--èƒœè€…
 	elseif ret_self < 0 then
-		key			= key + 1				--¸ºÕß
+		key			= key + 1				--è´Ÿè€…
 	end
 	HitParadePlayerJoin( sceneId, tabId, guid, key )
 	
-	--Ê§°ÜÕß¶îÍâ½±Àø
+	--å¤±è´¥è€…é¢å¤–å¥–åŠ±
 	if isWin == 0 and
 		random( 100 ) <= x808002_g_BountyRate and
 		LuaFnGetPropertyBagSpace( sceneId, selfId ) >= 1
@@ -362,7 +362,7 @@ function x808002_OnPlyBounty( sceneId, selfId, targetId, rnd )
 		if idBag >= 0 then
 			LuaFnItemBind( sceneId, selfId, idBag )
 			szTran= GetBagItemTransfer( sceneId, selfId, idBag )
-			szMsg	= format( "¶£¶£µ±µ±£¡±ÈÎä³¡ÉÏ£¬#{_INFOUSR%s}Óë¶ÔÊÖ¼¤Õ½Õıº¨£¬Àä²»·À³¡Íâ·ÉÀ´Ò»Îï£¬¾¹ÊÇ#{_INFOMSG%s}¡£",
+			szMsg	= format( "å®å®å½“å½“ï¼æ¯”æ­¦åœºä¸Šï¼Œ#{_INFOUSR%s}ä¸å¯¹æ‰‹æ¿€æˆ˜æ­£é…£ï¼Œå†·ä¸é˜²åœºå¤–é£æ¥ä¸€ç‰©ï¼Œç«Ÿæ˜¯#{_INFOMSG%s}ã€‚",
 				LuaFnGetName( sceneId, selfId ),
 				szTran )
 			x808002_MyGlobalNews( sceneId, szMsg )
@@ -374,74 +374,74 @@ function x808002_OnPlyBounty( sceneId, selfId, targetId, rnd )
 end
 
 --**********************************
---´´½¨¸±±¾
+--åˆ›å»ºå‰¯æœ¬
 --**********************************
 function x808002_MakeCopyScene( sceneId, selfId, tabId, rnd, tabId )
 
-	--»ñÈ¡¸±±¾¸öÊı
+	--è·å–å‰¯æœ¬ä¸ªæ•°
 	scn_num	= HitParadeGetTabParam( sceneId, tabId, x808002_g_TabParam["fbn"] )
-	--»ñÈ¡µ¥ÂÖÖ´ĞĞÊ±¼ä
+	--è·å–å•è½®æ‰§è¡Œæ—¶é—´
 	unt_tim	= CallScriptFunction( x808002_g_ScriptId_Ctrl, "GetCurrentUnitTime", sceneId, selfId, x808002_g_TickTime )
 
-	--ÉèÖÃ¸±±¾²ÎÊı
+	--è®¾ç½®å‰¯æœ¬å‚æ•°
 	local	leaderguid	= LuaFnObjId2Guid( sceneId, selfId )
-	LuaFnSetSceneLoad_Map( sceneId, x808002_g_CopySceneMap )							--µØÍ¼ÊÇ±ØĞëÑ¡È¡µÄ£¬¶øÇÒ±ØĞëÔÚConfig/SceneInfo.iniÀïÅäÖÃºÃ
+	LuaFnSetSceneLoad_Map( sceneId, x808002_g_CopySceneMap )							--åœ°å›¾æ˜¯å¿…é¡»é€‰å–çš„ï¼Œè€Œä¸”å¿…é¡»åœ¨Config/SceneInfo.inié‡Œé…ç½®å¥½
 	LuaFnSetCopySceneData_TeamLeader( sceneId, leaderguid )
 	LuaFnSetCopySceneData_NoUserCloseTime( sceneId, x808002_g_NoUserTime * 1000 )
 	LuaFnSetCopySceneData_PvpRuler( sceneId, x808002_g_PvpRuler )
 	LuaFnSetCopySceneData_Timer( sceneId, x808002_g_TickTime * 1000 )
-	LuaFnSetCopySceneData_Param( sceneId, x808002_g_ScnParam["typ"], x808002_g_CopySceneType )			--ÉèÖÃ¸±±¾Êı¾İ£¬ÕâÀï½«0ºÅË÷ÒıµÄÊı¾İÉèÖÃÎª999£¬ÓÃÓÚ±íÊ¾¸±±¾ºÅ999(Êı×Ö×Ô¶¨Òå)
-	LuaFnSetCopySceneData_Param( sceneId, x808002_g_ScnParam["sid"], x808002_g_ScriptId )						--½«1ºÅÊı¾İÉèÖÃÎª¸±±¾³¡¾°ÊÂ¼ş½Å±¾ºÅ
-	LuaFnSetCopySceneData_Param( sceneId, x808002_g_ScnParam["tim"], 0 )	--ÉèÖÃ¶¨Ê±Æ÷µ÷ÓÃ´ÎÊı
-	LuaFnSetCopySceneData_Param( sceneId, x808002_g_ScnParam["ent"], -1 )	--ÉèÖÃ¸±±¾Èë¿Ú³¡¾°ºÅ, ³õÊ¼»¯
-	LuaFnSetCopySceneData_Param( sceneId, x808002_g_ScnParam["cls"], 0 )	--ÉèÖÃ¸±±¾¹Ø±Õ±êÖ¾, 0¿ª·Å£¬1¹Ø±Õ
-	LuaFnSetCopySceneData_Param( sceneId, x808002_g_ScnParam["rnd"], rnd )--ÉèÖÃµÚ¼¸»ØºÏ
-	LuaFnSetCopySceneData_Param( sceneId, x808002_g_ScnParam["jon"], 0 )	--ÉèÖÃ±¨Ãûµ¹¼ÆÊ±´ÎÊı
+	LuaFnSetCopySceneData_Param( sceneId, x808002_g_ScnParam["typ"], x808002_g_CopySceneType )			--è®¾ç½®å‰¯æœ¬æ•°æ®ï¼Œè¿™é‡Œå°†0å·ç´¢å¼•çš„æ•°æ®è®¾ç½®ä¸º999ï¼Œç”¨äºè¡¨ç¤ºå‰¯æœ¬å·999(æ•°å­—è‡ªå®šä¹‰)
+	LuaFnSetCopySceneData_Param( sceneId, x808002_g_ScnParam["sid"], x808002_g_ScriptId )						--å°†1å·æ•°æ®è®¾ç½®ä¸ºå‰¯æœ¬åœºæ™¯äº‹ä»¶è„šæœ¬å·
+	LuaFnSetCopySceneData_Param( sceneId, x808002_g_ScnParam["tim"], 0 )	--è®¾ç½®å®šæ—¶å™¨è°ƒç”¨æ¬¡æ•°
+	LuaFnSetCopySceneData_Param( sceneId, x808002_g_ScnParam["ent"], -1 )	--è®¾ç½®å‰¯æœ¬å…¥å£åœºæ™¯å·, åˆå§‹åŒ–
+	LuaFnSetCopySceneData_Param( sceneId, x808002_g_ScnParam["cls"], 0 )	--è®¾ç½®å‰¯æœ¬å…³é—­æ ‡å¿—, 0å¼€æ”¾ï¼Œ1å…³é—­
+	LuaFnSetCopySceneData_Param( sceneId, x808002_g_ScnParam["rnd"], rnd )--è®¾ç½®ç¬¬å‡ å›åˆ
+	LuaFnSetCopySceneData_Param( sceneId, x808002_g_ScnParam["jon"], 0 )	--è®¾ç½®æŠ¥åå€’è®¡æ—¶æ¬¡æ•°
 
 	LuaFnSetSceneLoad_Area( sceneId, "dataosha_area.ini" )
 	LuaFnSetSceneLoad_Monster( sceneId, "dataosha_monster.ini" )
 
-	--ÉèÖÃĞ£ÑéÊ±¼ä²î
+	--è®¾ç½®æ ¡éªŒæ—¶é—´å·®
 	LuaFnSetCopySceneData_Param( sceneId, x808002_g_ScnParam["chk"], unt_tim )
-	--ÉèÖÃ±íµ¥ID
+	--è®¾ç½®è¡¨å•ID
 	LuaFnSetCopySceneData_Param( sceneId, x808002_g_ScnParam["tab"], tabId )
 
-	--³õÊ¼»¯Íê³Éºóµ÷ÓÃ´´½¨¸±±¾º¯Êı
+	--åˆå§‹åŒ–å®Œæˆåè°ƒç”¨åˆ›å»ºå‰¯æœ¬å‡½æ•°
 	local bRetSceneID = LuaFnCreateCopyScene( sceneId )
 	if bRetSceneID > 0 then
 		HitParadeSetTabParam( sceneId, tabId, x808002_g_TabParam["fbn"], scn_num + 1 )
-		x808002_MsgBox( sceneId, selfId, "¸±±¾´´½¨³É¹¦" )
+		x808002_MsgBox( sceneId, selfId, "å‰¯æœ¬åˆ›å»ºæˆåŠŸ" )
 	else
 		HitParadeSetTabParam( sceneId, tabId, x808002_g_TabParam["fbs"], 0 )
-		x808002_MsgBox( sceneId, selfId, "¸±±¾ÊıÁ¿ÒÑ´ïÉÏÏŞ£¬ÇëÉÔºòÔÙÊÔ" )
+		x808002_MsgBox( sceneId, selfId, "å‰¯æœ¬æ•°é‡å·²è¾¾ä¸Šé™ï¼Œè¯·ç¨å€™å†è¯•" )
 	end
 
 end
 
 --**********************************
---¸±±¾ÊÂ¼ş
+--å‰¯æœ¬äº‹ä»¶
 --**********************************
 function x808002_OnCopySceneReady( sceneId, destsceneId )
 
-	--ÉèÖÃ¸±±¾Èë¿Ú³¡¾°ºÅ
+	--è®¾ç½®å‰¯æœ¬å…¥å£åœºæ™¯å·
 	LuaFnSetCopySceneData_Param( destsceneId, x808002_g_ScnParam["ent"], sceneId )
 	local	leaderguid	= LuaFnGetCopySceneData_TeamLeader( destsceneId )
 	local	leaderObjId	= LuaFnGuid2ObjId( sceneId, leaderguid )
 
-	--»ñÈ¡±íµ¥ID
+	--è·å–è¡¨å•ID
 	tabId		= LuaFnGetCopySceneData_Param( destsceneId, x808002_g_ScnParam["tab"] )
 
-	--ÉèÖÃ¸±±¾µÄ³¡¾°ºÅ
+	--è®¾ç½®å‰¯æœ¬çš„åœºæ™¯å·
 	scn_num	= HitParadeGetTabParam( sceneId, tabId, x808002_g_TabParam["fbn"] )
 	if scn_num == 1 then
 		HitParadeSetTabParam( sceneId, tabId, x808002_g_TabParam["fb1"], destsceneId )
 	else
 		HitParadeSetTabParam( sceneId, tabId, x808002_g_TabParam["fb2"], destsceneId )
 	end
-	--¸±±¾´´½¨Íê³É
+	--å‰¯æœ¬åˆ›å»ºå®Œæˆ
 	HitParadeSetTabParam( sceneId, tabId, x808002_g_TabParam["fbs"], 0 )
 
-	--Ñ¡Ôñ·¿¼ä
+	--é€‰æ‹©æˆ¿é—´
 	x808002_OnSelectRoom( sceneId, leaderObjId, destsceneId, tabId )
 
 	--Add Log
@@ -452,37 +452,37 @@ function x808002_OnCopySceneReady( sceneId, destsceneId )
 end
 
 --**********************************
---ÎªÍæ¼ÒÑ¡Ôñ·¿¼ä£¬²¢´«Èë¸±±¾
+--ä¸ºç©å®¶é€‰æ‹©æˆ¿é—´ï¼Œå¹¶ä¼ å…¥å‰¯æœ¬
 --**********************************
 function x808002_OnSelectRoom( sceneId, selfId, destsceneId, tabId  )
 
-	--ÕÒ²»µ½¸ÃÍæ¼Ò
+	--æ‰¾ä¸åˆ°è¯¥ç©å®¶
 	if LuaFnIsObjValid( sceneId, selfId ) ~= 1 then
 		return
 	end
 
-	--ÊÇ·ñ´¦ÓÚÎŞ·¨Ö´ĞĞÂß¼­µÄ×´Ì¬
+	--æ˜¯å¦å¤„äºæ— æ³•æ‰§è¡Œé€»è¾‘çš„çŠ¶æ€
 	if LuaFnIsCanDoScriptLogic( sceneId, selfId ) ~= 1 then
 		return
 	end
 
-	--ÉèÖÃ¸±±¾¹Ø±Õ±êÖ¾, 0¿ª·Å£¬1¹Ø±Õ
+	--è®¾ç½®å‰¯æœ¬å…³é—­æ ‡å¿—, 0å¼€æ”¾ï¼Œ1å…³é—­
 --LuaFnSetCopySceneData_Param( sceneId, x808002_g_ScnParam["cls"], 0 )
 
-	--±ÈÎä»ØºÏÊı
+	--æ¯”æ­¦å›åˆæ•°
 	rnd			= CallScriptFunction( x808002_g_ScriptId_Ctrl, "GetRound", sceneId, selfId )
-	--Íæ¼Ò±¨Ãû£¬È¡±ÈÎä»·ÊıÎªÅÅĞĞ¼üÖµ
+	--ç©å®¶æŠ¥åï¼Œå–æ¯”æ­¦ç¯æ•°ä¸ºæ’è¡Œé”®å€¼
 	guid		= LuaFnObjId2Guid( sceneId, selfId )
-	--ÅÅĞĞ¼üÖµ£¨½µĞò£¬¼üÖµÔ½´ó£¬ÅÅÃûÔ½¿¿Ç°£©£º»·Êı * 3 £¬Ê¤Õß¼Ó2£¬¸ºÕß¼Ó1
+	--æ’è¡Œé”®å€¼ï¼ˆé™åºï¼Œé”®å€¼è¶Šå¤§ï¼Œæ’åè¶Šé å‰ï¼‰ï¼šç¯æ•° * 3 ï¼Œèƒœè€…åŠ 2ï¼Œè´Ÿè€…åŠ 1
 	ply_id	= HitParadePlayerJoin( sceneId, tabId, guid, rnd*3 )
 	if ply_id < 0 then
 		return
 	end
-	--½øÈë¸±±¾µÄÈËÊı
+	--è¿›å…¥å‰¯æœ¬çš„äººæ•°
 	ent_id	= HitParadeGetTabParam( sceneId, tabId, x808002_g_TabParam["enn"] )
 	HitParadeSetTabParam( sceneId, tabId, x808002_g_TabParam["enn"], ( ent_id + 1 ) )
 
-	--ÕóÓªºÅ»º´æ£¬ÒòÎªÃ¿´Î½øÈë³¡¾°Ê±£¬ÕóÓª»áÇå¿Õ
+	--é˜µè¥å·ç¼“å­˜ï¼Œå› ä¸ºæ¯æ¬¡è¿›å…¥åœºæ™¯æ—¶ï¼Œé˜µè¥ä¼šæ¸…ç©º
 	id_mod	= ent_id - floor( ent_id / 2 ) * 2
 	if id_mod == 0 then
 		SetMissionData( sceneId, selfId, MD_PREV_CAMP, x808002_g_CampA )
@@ -490,10 +490,10 @@ function x808002_OnSelectRoom( sceneId, selfId, destsceneId, tabId  )
 		SetMissionData( sceneId, selfId, MD_PREV_CAMP, x808002_g_CampB )
 	end
 
-	--¸±±¾¸öÊı
+	--å‰¯æœ¬ä¸ªæ•°
 	scn_num	= HitParadeGetTabParam( sceneId, tabId, x808002_g_TabParam["fbn"] )
 
-	--·¿¼äË÷Òı£¬·¿¼ä´óĞ¡64*64
+	--æˆ¿é—´ç´¢å¼•ï¼Œæˆ¿é—´å¤§å°64*64
 	idRoom	= floor( ent_id / 2 ) - floor( (scn_num-1) * 16 )
 	px_mod	= idRoom - floor( idRoom /4 ) * 4
 	if px_mod < 0 or px_mod >= 4 then
@@ -506,17 +506,17 @@ function x808002_OnSelectRoom( sceneId, selfId, destsceneId, tabId  )
 	end
 	pz			= floor( pz_mul * 64 + 32 )
 
-	--´«Èë¸±±¾
+	--ä¼ å…¥å‰¯æœ¬
 	NewWorld( sceneId, selfId, destsceneId, px, pz )
 	
-	--»î¶¯Í³¼Æ
-	LuaFnAuditQuest( sceneId, selfId, "±ÈÎä´ó»á" )
+	--æ´»åŠ¨ç»Ÿè®¡
+	LuaFnAuditQuest( sceneId, selfId, "æ¯”æ­¦å¤§ä¼š" )
 	
-	--¿Û³ı½ğÇ®£¨Ö»ÔÚµÚÒ»ÂÖ¿ÛÇ®£©
+	--æ‰£é™¤é‡‘é’±ï¼ˆåªåœ¨ç¬¬ä¸€è½®æ‰£é’±ï¼‰
 	if rnd <= 1 then
 
-		-- Ê¹ÓÃ´øÓÅÏÈ¼¶µÄ½ğÇ®ÏûºÄº¯Êı
-		-- Ô­À´¿Û½ğ±ÒÃ»ÓĞÅĞ¶ÏÊÇ·ñ¿ÛÇ®Ê§°Ü£¬ËùÒÔ¿Û½»×ÓÒ²Î´¼ÓÊÇ·ñ¿ÛÇ®Ê§°ÜµÄ´¦Àí£¡				
+		-- ä½¿ç”¨å¸¦ä¼˜å…ˆçº§çš„é‡‘é’±æ¶ˆè€—å‡½æ•°
+		-- åŸæ¥æ‰£é‡‘å¸æ²¡æœ‰åˆ¤æ–­æ˜¯å¦æ‰£é’±å¤±è´¥ï¼Œæ‰€ä»¥æ‰£äº¤å­ä¹ŸæœªåŠ æ˜¯å¦æ‰£é’±å¤±è´¥çš„å¤„ç†ï¼				
 		LuaFnCostMoneyWithPriority (sceneId, selfId, x808002_g_GoldMin)
 				
 		--Add Log
@@ -524,10 +524,10 @@ function x808002_OnSelectRoom( sceneId, selfId, destsceneId, tabId  )
 		MissionLog( sceneId, LogInfo )
 	end
 	
-	--¼ÇÂ¼±ÈÎä»ØºÏÊı£¨Äê+µ±ÄêµÚ¼¸Ìì+»ØºÏÊı£ºYY+DDD+RR£©
+	--è®°å½•æ¯”æ­¦å›åˆæ•°ï¼ˆå¹´+å½“å¹´ç¬¬å‡ å¤©+å›åˆæ•°ï¼šYY+DDD+RRï¼‰
 	rnd_MD	= GetDayTime() * 100 + rnd
 	SetMissionData( sceneId, selfId, MD_DATAOSHA_ROUND, rnd_MD )
-	--¼ÇÂ¼±ÈÎä½á¹û
+	--è®°å½•æ¯”æ­¦ç»“æœ
 	SetMissionData( sceneId, selfId, MD_DATAOSHA_RESULT, 0 )
 
 	--Add Log
@@ -538,7 +538,7 @@ function x808002_OnSelectRoom( sceneId, selfId, destsceneId, tabId  )
 end
 
 --**********************************
---ÓĞÍæ¼Ò½øÈë¸±±¾ÊÂ¼ş
+--æœ‰ç©å®¶è¿›å…¥å‰¯æœ¬äº‹ä»¶
 --**********************************
 function x808002_OnPlayerEnter( sceneId, selfId )
 	
@@ -548,16 +548,16 @@ function x808002_OnPlayerEnter( sceneId, selfId )
 		LuaFnObjId2Guid( sceneId, selfId ) )
 	MissionLog( sceneId, LogInfo )
 
-	--ÉèÖÃ¸´»îĞÅÏ¢
-	--»Ø³ÇÖÁËÕÖİ±¨Ãûµã¸½½ü
+	--è®¾ç½®å¤æ´»ä¿¡æ¯
+	--å›åŸè‡³è‹å·æŠ¥åç‚¹é™„è¿‘
 	SetPlayerDefaultReliveInfo( sceneId, selfId, "%10", -1, "0", x808002_g_BackCity["scn"], x808002_g_BackCity["px"], x808002_g_BackCity["pz"] )
 
-	--¸±±¾¹Ø±Õ±êÖ¾
+	--å‰¯æœ¬å…³é—­æ ‡å¿—
 	local	LeaveFlag	= LuaFnGetCopySceneData_Param( sceneId, x808002_g_ScnParam["cls"] )
 
-	--±¨ÃûÖĞ£¬´«Èë»á³¡
+	--æŠ¥åä¸­ï¼Œä¼ å…¥ä¼šåœº
 	if LuaFnGetCopySceneData_Param( sceneId, x808002_g_ScnParam["typ"] ) == x808002_g_CopySceneType then
-		--ÅĞ¶ÏÍæ¼ÒÊÇ·ñÒÑ¾­±¨Ãû¸Ã»ØºÏ±ÈÈü
+		--åˆ¤æ–­ç©å®¶æ˜¯å¦å·²ç»æŠ¥åè¯¥å›åˆæ¯”èµ›
 		rnd_self= x808002_GetMyCurrentRound( sceneId, selfId )
 		rnd			= LuaFnGetCopySceneData_Param( sceneId, x808002_g_ScnParam["rnd"] )
 		if rnd_self ~= rnd then
@@ -566,19 +566,19 @@ function x808002_OnPlayerEnter( sceneId, selfId )
 			return
 		end
 		if LeaveFlag > 0 then
-			x808002_MsgBox( sceneId, selfId, "±ÈÎä´ó»á±¾´Î»î¶¯ÒÑ¾­½áÊø" )
+			x808002_MsgBox( sceneId, selfId, "æ¯”æ­¦å¤§ä¼šæœ¬æ¬¡æ´»åŠ¨å·²ç»ç»“æŸ" )
 			x808002_OnGoBack( sceneId, selfId )
 			return
 		end
 
-		--ÉèÖÃ¶ÔÁ¢ÕóÓª
+		--è®¾ç½®å¯¹ç«‹é˜µè¥
 		idCamp	= GetMissionData( sceneId, selfId, MD_PREV_CAMP )
 		SetUnitCampID( sceneId, selfId, selfId, idCamp )
-		--ÉèÖÃÍæ¼ÒµÄÖ¸¶¨PvpÊÚÈ¨Î»
-		SetPvpAuthorizationFlagByID( sceneId, selfId, 2, 0 )			--2ÊÇ¾º¼¼ÊÚÈ¨±ê¼Ç
-		--ÉèÖÃÎŞµĞBUFF
+		--è®¾ç½®ç©å®¶çš„æŒ‡å®šPvpæˆæƒä½
+		SetPvpAuthorizationFlagByID( sceneId, selfId, 2, 0 )			--2æ˜¯ç«æŠ€æˆæƒæ ‡è®°
+		--è®¾ç½®æ— æ•ŒBUFF
 		--LuaFnSendSpecificImpactToUnit( sceneId, selfId, selfId, selfId, x808002_g_GodBuff, 0 )
-		--µ¥»ØºÏ»ñÊ¤±ê¼Ç£¬Ê¤ÀûÕß´«³ö
+		--å•å›åˆè·èƒœæ ‡è®°ï¼Œèƒœåˆ©è€…ä¼ å‡º
 		SetMissionFlag( sceneId, selfId, MF_DATAOSHA_WIN, 0 )
 
 	end
@@ -586,20 +586,20 @@ function x808002_OnPlayerEnter( sceneId, selfId )
 end
 
 --**********************************
---ÓĞÍæ¼ÒÔÚ¸±±¾ÖĞËÀÍöÊÂ¼ş
+--æœ‰ç©å®¶åœ¨å‰¯æœ¬ä¸­æ­»äº¡äº‹ä»¶
 --**********************************
 function x808002_OnHumanDie( sceneId, selfId, killerId )
 
-	--Ê§°ÜÕß´¦Àí
-	--¼ÇÂ¼±ÈÎä½á¹û
+	--å¤±è´¥è€…å¤„ç†
+	--è®°å½•æ¯”æ­¦ç»“æœ
 	SetMissionData( sceneId, selfId, MD_DATAOSHA_RESULT, -10 )
 	x808002_MsgBox( sceneId, selfId, x808002_g_Msg["r_fal"] )
 	x808002_MsgBox( sceneId, selfId, x808002_g_Msg["r_flx"] )
-	--ÉèÖÃÍæ¼ÒµÄÖ¸¶¨PvpÊÚÈ¨Î»
-	--SetPvpAuthorizationFlagByID( sceneId, selfId, 2, 0 )			--2ÊÇ¾º¼¼ÊÚÈ¨±ê¼Ç
+	--è®¾ç½®ç©å®¶çš„æŒ‡å®šPvpæˆæƒä½
+	--SetPvpAuthorizationFlagByID( sceneId, selfId, 2, 0 )			--2æ˜¯ç«æŠ€æˆæƒæ ‡è®°
 
-	--»ñÊ¤Õß´¦Àí
-	--¼ÇÂ¼±ÈÎä½á¹û
+	--è·èƒœè€…å¤„ç†
+	--è®°å½•æ¯”æ­¦ç»“æœ
 	if killerId == nil or LuaFnIsObjValid( sceneId, killerId ) ~= 1 then
 		return
 	end
@@ -607,10 +607,10 @@ function x808002_OnHumanDie( sceneId, selfId, killerId )
 	x808002_MsgBox( sceneId, killerId, x808002_g_Msg["r_win"] )
 	x808002_MsgBox( sceneId, killerId, x808002_g_Msg["r_wnx"] )
 	LuaFnSendSystemMail( sceneId, GetName( sceneId, killerId ), x808002_g_Msg["r_mal"] )
-	--ÉèÖÃÍæ¼ÒµÄÖ¸¶¨PvpÊÚÈ¨Î»
-	--SetPvpAuthorizationFlagByID( sceneId, killerId, 2, 0 )		--2ÊÇ¾º¼¼ÊÚÈ¨±ê¼Ç
+	--è®¾ç½®ç©å®¶çš„æŒ‡å®šPvpæˆæƒä½
+	--SetPvpAuthorizationFlagByID( sceneId, killerId, 2, 0 )		--2æ˜¯ç«æŠ€æˆæƒæ ‡è®°
 	if LuaFnIsCharacterLiving( sceneId, killerId ) == 1 then
-		--µ¥»ØºÏ»ñÊ¤±ê¼Ç£¬Ê¤ÀûÕß´«³ö
+		--å•å›åˆè·èƒœæ ‡è®°ï¼Œèƒœåˆ©è€…ä¼ å‡º
 		SetMissionFlag( sceneId, killerId, MF_DATAOSHA_WIN, 1 )
 		--x808002_OnGoBack( sceneId, killerId )
 	end
@@ -618,53 +618,53 @@ function x808002_OnHumanDie( sceneId, selfId, killerId )
 end
 
 --**********************************
---É±ËÀ¹ÖÎï»òÍæ¼Ò
+--æ€æ­»æ€ªç‰©æˆ–ç©å®¶
 --**********************************
 function x808002_OnKillObject( sceneId, selfId, objdataId, objId )
 end
 
 --**********************************
---½øÈëÇøÓòÊÂ¼ş
+--è¿›å…¥åŒºåŸŸäº‹ä»¶
 --**********************************
 function x808002_OnEnterZone( sceneId, selfId, zoneId )
 end
 
 --**********************************
---µÀ¾ß¸Ä±ä
+--é“å…·æ”¹å˜
 --**********************************
 function x808002_OnItemChanged( sceneId, selfId, itemdataId )
 end
 
 --**********************************
---¸±±¾³¡¾°¶¨Ê±Æ÷ÊÂ¼ş
+--å‰¯æœ¬åœºæ™¯å®šæ—¶å™¨äº‹ä»¶
 --**********************************
 function x808002_OnCopySceneTimer( sceneId, nowTime )
 
-	--¸±±¾Ê±ÖÓ¶ÁÈ¡¼°ÉèÖÃ
-	--È¡µÃÒÑ¾­Ö´ĞĞµÄ¶¨Ê±´ÎÊı
+	--å‰¯æœ¬æ—¶é’Ÿè¯»å–åŠè®¾ç½®
+	--å–å¾—å·²ç»æ‰§è¡Œçš„å®šæ—¶æ¬¡æ•°
 	local	TickCount	= LuaFnGetCopySceneData_Param( sceneId, x808002_g_ScnParam["tim"] )
 	TickCount				= TickCount + 1
-	--ÉèÖÃĞÂµÄ¶¨Ê±Æ÷µ÷ÓÃ´ÎÊı
+	--è®¾ç½®æ–°çš„å®šæ—¶å™¨è°ƒç”¨æ¬¡æ•°
 	LuaFnSetCopySceneData_Param( sceneId, x808002_g_ScnParam["tim"], TickCount )
 
-	--¸±±¾¹Ø±Õ±êÖ¾
+	--å‰¯æœ¬å…³é—­æ ‡å¿—
 	local	LeaveFlag	= LuaFnGetCopySceneData_Param( sceneId, x808002_g_ScnParam["cls"] )
-	--±¨Ãûµ¹¼ÆÊ±
+	--æŠ¥åå€’è®¡æ—¶
 	local	JoinFlag	= LuaFnGetCopySceneData_Param( sceneId, x808002_g_ScnParam["jon"] )
 
-	--»ñÈ¡³¡¾°ÖĞÍæ¼ÒÈËÊı
+	--è·å–åœºæ™¯ä¸­ç©å®¶äººæ•°
 	local	mem_num		= LuaFnGetCopyScene_HumanCount( sceneId )
 	local	mem_obj		= LuaFnGetCopyScene_HumanObjId( sceneId, 0 )
-	--¸ù¾İÍæ¼ÒµÈ¼¶»ñÈ¡×é±ğĞÅÏ¢
+	--æ ¹æ®ç©å®¶ç­‰çº§è·å–ç»„åˆ«ä¿¡æ¯
 	local	ActID, ActMinLev, _	= CallScriptFunction( x808002_g_ScriptId_Ctrl, "GetGroupInfo", sceneId, mem_obj )
 
-	--»ñÈ¡Ò»¸ö»ØºÏÖĞµÄ±¨ÃûÊ±¼ä³¤¶È
+	--è·å–ä¸€ä¸ªå›åˆä¸­çš„æŠ¥åæ—¶é—´é•¿åº¦
 	local	JoinTime	= CallScriptFunction( x808002_g_ScriptId_Ctrl, "GetJoinTime", sceneId, x808002_g_TickTime )
-	--»ñÈ¡Ò»¸ö»ØºÏÖĞµÄ±ÈÎäÊ±¼ä³¤¶È
+	--è·å–ä¸€ä¸ªå›åˆä¸­çš„æ¯”æ­¦æ—¶é—´é•¿åº¦
 	local	AttackTime= CallScriptFunction( x808002_g_ScriptId_Ctrl, "GetAttackTime", sceneId, x808002_g_TickTime )
 	AttackTime			= JoinTime + AttackTime
 
-	--Ê±¼äĞ£Ñé
+	--æ—¶é—´æ ¡éªŒ
 	local	CheckTime	= LuaFnGetCopySceneData_Param( sceneId, x808002_g_ScnParam["chk"] )
 	if JoinTime > CheckTime then
 		JoinTime			= JoinTime - CheckTime
@@ -678,82 +678,82 @@ function x808002_OnCopySceneTimer( sceneId, nowTime )
 	end
 
 	if LeaveFlag < 1 then
-	--±ÈÎä½øĞĞÖĞ
+	--æ¯”æ­¦è¿›è¡Œä¸­
 
 		if JoinFlag == 0 then
-		--ÊÇ·ñ¿ªÊ¼µ¹¼ÆÊ±
+		--æ˜¯å¦å¼€å§‹å€’è®¡æ—¶
 			if TickCount == JoinTime then
 				LuaFnSetCopySceneData_Param( sceneId, x808002_g_ScnParam["jon"], x808002_g_JoinTick )
 			elseif TickCount > JoinTime then
 				LuaFnSetCopySceneData_Param( sceneId, x808002_g_ScnParam["jon"], -1 )
-				--±ÈÎä¿ªÊ¼
+				--æ¯”æ­¦å¼€å§‹
 				for i = 0, mem_num - 1 do
 					mem_obj	= LuaFnGetCopyScene_HumanObjId( sceneId, i )
 					if LuaFnIsObjValid( sceneId, mem_obj ) ~= 1 then
 						break
 					end
-					--ÉèÖÃÍæ¼ÒµÄÖ¸¶¨PvpÊÚÈ¨Î»
-					SetPvpAuthorizationFlagByID( sceneId, mem_obj, 2, 1 )			--2ÊÇ¾º¼¼ÊÚÈ¨±ê¼Ç
+					--è®¾ç½®ç©å®¶çš„æŒ‡å®šPvpæˆæƒä½
+					SetPvpAuthorizationFlagByID( sceneId, mem_obj, 2, 1 )			--2æ˜¯ç«æŠ€æˆæƒæ ‡è®°
 				end
 			end
 		elseif JoinFlag > 0 then
-		--±¨Ãûµ¹¼ÆÊ±
+		--æŠ¥åå€’è®¡æ—¶
 			LuaFnSetCopySceneData_Param( sceneId, x808002_g_ScnParam["jon"], JoinFlag-1 )
 			for i = 0, mem_num - 1 do
 				mem_obj	= LuaFnGetCopyScene_HumanObjId( sceneId, i )
 				if LuaFnIsObjValid( sceneId, mem_obj ) ~= 1 then
 					break
 				end
-				str		= format( "±ÈÎä½«ÔÚ %d Ãëºó¿ªÊ¼", JoinFlag * x808002_g_TickTime )
+				str		= format( "æ¯”æ­¦å°†åœ¨ %d ç§’åå¼€å§‹", JoinFlag * x808002_g_TickTime )
 				x808002_MsgBox( sceneId, mem_obj, str )
 			end
 		end
 
-		--±ÈÎäÊÇ·ñµ½Ê±
+		--æ¯”æ­¦æ˜¯å¦åˆ°æ—¶
 		if TickCount == (AttackTime-12) then
-			--±ÈÎä¼´½«½áÊø£¬ÌáÇ°Ò»·ÖÖÓÈ«Çò¹«¸æ
+			--æ¯”æ­¦å³å°†ç»“æŸï¼Œæå‰ä¸€åˆ†é’Ÿå…¨çƒå…¬å‘Š
 			if ActMinLev ~= nil then
 				str		= format( x808002_g_Msg["n_son"], ActMinLev, 1 )
 				x808002_MyGlobalNews( sceneId, str )
 			end
 		elseif TickCount >= AttackTime then
-			--±ÈÎä½áÊø
+			--æ¯”æ­¦ç»“æŸ
 			LuaFnSetCopySceneData_Param( sceneId, x808002_g_ScnParam["cls"], 1 )
 		end
-		--É¨Ãè»á³¡
+		--æ‰«æä¼šåœº
 		x808002_OnScanScene( sceneId )
 
 	elseif LeaveFlag == 1 then
-	--±ÈÎäÒÑ½áÊø
+	--æ¯”æ­¦å·²ç»“æŸ
 		LuaFnSetCopySceneData_Param( sceneId, x808002_g_ScnParam["cls"], LeaveFlag+1 )
 		x808002_OnScanRoom( sceneId, mem_num )
 	elseif LeaveFlag < x808002_g_CloseTick then
-	--µ¹¼ÆÊ±
+	--å€’è®¡æ—¶
 		LuaFnSetCopySceneData_Param( sceneId, x808002_g_ScnParam["cls"], LeaveFlag+1 )
 		for i = 0, mem_num - 1 do
 			mem_obj	= LuaFnGetCopyScene_HumanObjId( sceneId, i )
 			if LuaFnIsObjValid( sceneId, mem_obj ) ~= 1 then
 				break
 			end
-			str			= format( "Äã½«ÔÚ %d ÃëºóÀë¿ª³¡¾°", ( x808002_g_CloseTick - LeaveFlag ) * x808002_g_TickTime )
+			str			= format( "ä½ å°†åœ¨ %d ç§’åç¦»å¼€åœºæ™¯", ( x808002_g_CloseTick - LeaveFlag ) * x808002_g_TickTime )
 			x808002_MsgBox( sceneId, mem_obj, str )
 		end
 	elseif LeaveFlag == x808002_g_CloseTick then
-	--»Ø³Ç
-		LuaFnSetCopySceneData_Param( sceneId, x808002_g_ScnParam["cls"], LeaveFlag+1 )	--ÉèÖÃ¸±±¾¹Ø±Õ±êÖ¾
+	--å›åŸ
+		LuaFnSetCopySceneData_Param( sceneId, x808002_g_ScnParam["cls"], LeaveFlag+1 )	--è®¾ç½®å‰¯æœ¬å…³é—­æ ‡å¿—
 		for i = 0, mem_num - 1 do
 			mem_obj	= LuaFnGetCopyScene_HumanObjId( sceneId, i )
 			if LuaFnIsObjValid( sceneId, mem_obj ) ~= 1 then
 				break
 			end
-			--ÉèÖÃÍæ¼ÒµÄÖ¸¶¨PvpÊÚÈ¨Î»
-			--SetPvpAuthorizationFlagByID( sceneId, mem_obj, 2, 0 )			--2ÊÇ¾º¼¼ÊÚÈ¨±ê¼Ç
+			--è®¾ç½®ç©å®¶çš„æŒ‡å®šPvpæˆæƒä½
+			--SetPvpAuthorizationFlagByID( sceneId, mem_obj, 2, 0 )			--2æ˜¯ç«æŠ€æˆæƒæ ‡è®°
 			if LuaFnIsCharacterLiving( sceneId, mem_obj ) == 1 then
 				x808002_OnGoBack( sceneId, mem_obj )
 			end
 		end
 		
-		--È«Çò¹«¸æ
+		--å…¨çƒå…¬å‘Š
 		if ActMinLev ~= nil then
 			str			= format( x808002_g_Msg["n_end"], ActMinLev )
 			x808002_MyGlobalNews( sceneId, str )
@@ -763,14 +763,14 @@ function x808002_OnCopySceneTimer( sceneId, nowTime )
 end
 
 --**********************************
---±ÈÎä½áÊøÉ¨Ãè»á³¡
---¹æÔò£º»î¶¯½áÊøµÄÊ±ºò¶ÔµØÍ¼ËùÓĞ·¿¼ä
---É¨ÃèÒ»´Î£¬·¿¼äÈËÊı>1µÄÈÎÎñÊ§°Ü£¬´«
---ËÍÖÁËÕÖİ±¨ÃûµØµãÅÔ±ßµÄÎ»ÖÃ¡£
+--æ¯”æ­¦ç»“æŸæ‰«æä¼šåœº
+--è§„åˆ™ï¼šæ´»åŠ¨ç»“æŸçš„æ—¶å€™å¯¹åœ°å›¾æ‰€æœ‰æˆ¿é—´
+--æ‰«æä¸€æ¬¡ï¼Œæˆ¿é—´äººæ•°>1çš„ä»»åŠ¡å¤±è´¥ï¼Œä¼ 
+--é€è‡³è‹å·æŠ¥ååœ°ç‚¹æ—è¾¹çš„ä½ç½®ã€‚
 --**********************************
 function x808002_OnScanRoom( sceneId, mem_num )
 
-	--É¨Ãè»á³¡Íæ¼Ò
+	--æ‰«æä¼šåœºç©å®¶
 	local mem_lst		= {}
 	local mem_px		= {}
 	local mem_pz		= {}
@@ -779,8 +779,8 @@ function x808002_OnScanRoom( sceneId, mem_num )
 		mem_px[i], mem_pz[i]	= GetWorldPos( sceneId, mem_lst[i] )
 	end
 
-	--É¨Ãè32¸ö·¿¼ä£¬¾ö¶¨Ê¤¸º
-	local	rom_px, rom_pz		--Ã¿¸ö·¿¼äµÄ×óÉÏ½Ç×ø±ê
+	--æ‰«æ32ä¸ªæˆ¿é—´ï¼Œå†³å®šèƒœè´Ÿ
+	local	rom_px, rom_pz		--æ¯ä¸ªæˆ¿é—´çš„å·¦ä¸Šè§’åæ ‡
 	local	num, id
 	for i = 0, 31 do
 		px_mod	= i - floor( i /4 ) * 4
@@ -803,14 +803,14 @@ function x808002_OnScanRoom( sceneId, mem_num )
 			end
 		end
 
-		--ÅĞ¶ÏÍæ¼ÒÊ¤¸º
+		--åˆ¤æ–­ç©å®¶èƒœè´Ÿ
 		if num == 1 then
-			--ÊÇ·ñÒÑ¾­ÔÚ±¾ÂÖÊ§°Ü¹ı£¬ÒÔ·À·¶¸´»î¼¼ÄÜ
+			--æ˜¯å¦å·²ç»åœ¨æœ¬è½®å¤±è´¥è¿‡ï¼Œä»¥é˜²èŒƒå¤æ´»æŠ€èƒ½
 			if GetMissionData( sceneId, mem_lst[id], MD_DATAOSHA_RESULT ) == -10 then
 				x808002_MsgBox( sceneId, mem_lst[id], x808002_g_Msg["r_fal"] )
 				x808002_MsgBox( sceneId, mem_lst[id], x808002_g_Msg["r_flx"] )
 			else
-				--¼ÇÂ¼±ÈÎä½á¹û
+				--è®°å½•æ¯”æ­¦ç»“æœ
 				SetMissionData( sceneId, mem_lst[id], MD_DATAOSHA_RESULT, 10 )
 				x808002_MsgBox( sceneId, mem_lst[id], x808002_g_Msg["r_win"] )
 				x808002_MsgBox( sceneId, mem_lst[id], x808002_g_Msg["r_wnx"] )
@@ -822,19 +822,19 @@ function x808002_OnScanRoom( sceneId, mem_num )
 end
 
 --**********************************
---É¨Ãè»á³¡
---»ñÊ¤Õß´«³ö¸±±¾
+--æ‰«æä¼šåœº
+--è·èƒœè€…ä¼ å‡ºå‰¯æœ¬
 --**********************************
 function x808002_OnScanScene( sceneId )
 
-	--»ñÈ¡³¡¾°ÖĞÍæ¼ÒÈËÊı
+	--è·å–åœºæ™¯ä¸­ç©å®¶äººæ•°
 	local	mem_num		= LuaFnGetCopyScene_HumanCount( sceneId )
 	for i = 0, mem_num - 1 do
 		mem_obj				= LuaFnGetCopyScene_HumanObjId( sceneId, i )
 		if LuaFnIsObjValid( sceneId, mem_obj ) ~= 1 then
 			break
 		end
-		--µ¥»ØºÏ»ñÊ¤±ê¼Ç£¬Ê¤ÀûÕß´«³ö
+		--å•å›åˆè·èƒœæ ‡è®°ï¼Œèƒœåˆ©è€…ä¼ å‡º
 		if GetMissionFlag( sceneId, mem_obj, MF_DATAOSHA_WIN ) == 1 and
 			LuaFnIsCharacterLiving( sceneId, mem_obj ) == 1
 		then
@@ -845,7 +845,7 @@ function x808002_OnScanScene( sceneId )
 end
 
 --**********************************
---»Ø³Ç
+--å›åŸ
 --**********************************
 function x808002_OnGoBack( sceneId, selfId )
 
@@ -862,7 +862,7 @@ function x808002_OnGoBack( sceneId, selfId )
 end
 
 --**********************************
---»ñÈ¡Ä³Íæ¼Ò´Ë´Î±ÈÎäµÄµ±Ç°»ØºÏÊı
+--è·å–æŸç©å®¶æ­¤æ¬¡æ¯”æ­¦çš„å½“å‰å›åˆæ•°
 --**********************************
 function x808002_GetMyCurrentRound( sceneId, selfId )
 
@@ -877,14 +877,14 @@ function x808002_GetMyCurrentRound( sceneId, selfId )
 end
 
 --**********************************
---ĞÑÄ¿ÌáÊ¾
+--é†’ç›®æç¤º
 --**********************************
 function x808002_MsgBox( sceneId, selfId, Msg )
 
 	if Msg == nil then
 		return
 	end
-	--ÊÇ·ñ´¦ÓÚÎŞ·¨Ö´ĞĞÂß¼­µÄ×´Ì¬
+	--æ˜¯å¦å¤„äºæ— æ³•æ‰§è¡Œé€»è¾‘çš„çŠ¶æ€
 	if LuaFnIsCanDoScriptLogic( sceneId, selfId ) ~= 1 then
 		return
 	end
@@ -904,7 +904,7 @@ function x808002_MsgBox( sceneId, selfId, Msg )
 end
 
 --**********************************
---È«Çò¹«¸æ
+--å…¨çƒå…¬å‘Š
 --**********************************
 function x808002_MyGlobalNews( sceneId, Msg )
 

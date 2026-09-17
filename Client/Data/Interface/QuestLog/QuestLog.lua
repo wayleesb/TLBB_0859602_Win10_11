@@ -8,7 +8,7 @@ local k
 local LEVEL_TO_MY_LEVEL = 10000;
 
 local MissionOutlineDeploy = {}
-local CurList      -- 1ÎªÈÎÎñÁĞ±í,2ÎªÈÎÎñË÷Òı
+local CurList      -- 1ä¸ºä»»åŠ¡åˆ—è¡¨,2ä¸ºä»»åŠ¡ç´¢å¼•
 
 local Current_Clicked = -1;
 
@@ -33,7 +33,7 @@ function QuestLog_OnLoad()
 	end;
 	
 	for i=1,200 do
-	    MissionOutlineDeploy[ i ] = 1  --ÈÎÎñË÷ÒıÄ¬ÈÏ¶¼ÎªÕ¹¿ª
+	    MissionOutlineDeploy[ i ] = 1  --ä»»åŠ¡ç´¢å¼•é»˜è®¤éƒ½ä¸ºå±•å¼€
 	end
 	
 	First_Open = 1;
@@ -80,7 +80,7 @@ function QuestLog_OnEvent(event)
 			end
 			
 			if( 2 == CurList ) then
-			    return    --Õâ¸öÏûÏ¢ÊÇÓÃÀ´¸üĞÂÈÎÎñ¼ÆÊ±µÄ,µ±µ±Ç°Ñ¡ÖĞÏîÎªÈÎÎñË÷ÒıÊ±,Ôò²»Ó¦¸Ã½øĞĞ¸üĞÂ.
+			    return    --è¿™ä¸ªæ¶ˆæ¯æ˜¯ç”¨æ¥æ›´æ–°ä»»åŠ¡è®¡æ—¶çš„,å½“å½“å‰é€‰ä¸­é¡¹ä¸ºä»»åŠ¡ç´¢å¼•æ—¶,åˆ™ä¸åº”è¯¥è¿›è¡Œæ›´æ–°.
 			end
 						
 		if arg0 ~= nil and tonumber(arg0) <= 20 and tonumber(arg0) >= 0 then
@@ -134,15 +134,15 @@ function QuestLog_UpdateMissionType( iMissionType )
 					local MissionLevel, MinLevel, MaxLevel, strNpcName, strNpcPos, strScene, strMissionName = GetMissionOutlineInfo( iMissionType, i )
 					
 					if( MissionLevel - nMyLevel < -11 ) then
-						color = "FFB9B9B9"; --»ÒÉ«
+						color = "FFB9B9B9"; --ç°è‰²
 					elseif( MissionLevel - nMyLevel <=-6 ) then
-						color = "FF0A9605";	--ÂÌÉ«
+						color = "FF0A9605";	--ç»¿è‰²
 					elseif( MissionLevel - nMyLevel <= 5 ) then
-						color = "FFD9F80A";	--»ÆÉ«
+						color = "FFD9F80A";	--é»„è‰²
 					elseif( MissionLevel - nMyLevel <= 10 ) then
-						color = "FFF8A10A";	--³ÈÉ«
+						color = "FFF8A10A";	--æ©™è‰²
 					else
-						color = "FFFA0A0A"; --ºìÉ«
+						color = "FFFA0A0A"; --çº¢è‰²
 					end					
 					
 					QuestLog_Listbox:AddItem( "    "..MissionLevel.." "..strMissionName, (iStart+i), color )
@@ -170,7 +170,7 @@ function QuestLog_UpdateMissionOutline()
     QuestLog_Listbox:ClearListBox()
     QuestLog_Desc:ClearAllElement();
     
-	for i=1,200 do             --ÏÖÈÎÎñÀàĞÍÒ»¹²200ÖÖ
+	for i=1,200 do             --ç°ä»»åŠ¡ç±»å‹ä¸€å…±200ç§
 	    QuestLog_UpdateMissionType( i )
 	end
 	
@@ -205,13 +205,13 @@ function QuestLog_MissionOutlineClicked()
     
     strNpcPos = "#{_INFOAIM"..(PosX)..","..(PosY)..","..(SceneID)..","..(strNpcName).."}"
     --strNpcPos = "[["..(PosX)..","..(PosY)..","..(SceneID)..","..(strNpcName).."]]"
-    --strNpcPos = "£¨"..PosX.."£¬"..PosY.."£©"
+    --strNpcPos = "ï¼ˆ"..PosX.."ï¼Œ"..PosY.."ï¼‰"
 
     if strScene and strScene ~= "" then
-			QuestLog_Desc:AddTextElement("ÈÎÎñËùÔÚµØ£º"..strScene.."  "..strNpcPos )
+			QuestLog_Desc:AddTextElement("ä»»åŠ¡æ‰€åœ¨åœ°ï¼š"..strScene.."  "..strNpcPos )
     end
-    QuestLog_Desc:AddTextElement("ÈÎÎñ·¢²¼ÈË£º"..strNpcName )
-    QuestLog_Desc:AddTextElement("ÈÎÎñµÈ¼¶£º"..tostring(MissionLevel) )
+    QuestLog_Desc:AddTextElement("ä»»åŠ¡å‘å¸ƒäººï¼š"..strNpcName )
+    QuestLog_Desc:AddTextElement("ä»»åŠ¡ç­‰çº§ï¼š"..tostring(MissionLevel) )
     
     
 end
@@ -280,34 +280,34 @@ function QuestLog_UpdateListbox()
 						end
 --------------------------------------------------
 						local strOKFail = "";
-					--ÏÔÊ¾ÈÎÎñÊÇ·ñÒÑÍê³É»òÒÑÊ§°Ü
+					--æ˜¾ç¤ºä»»åŠ¡æ˜¯å¦å·²å®Œæˆæˆ–å·²å¤±è´¥
 						if( DataPool:GetPlayerMission_Display(i-1,1) > 0 ) then
 							local Mission_Variable = DataPool:GetPlayerMission_Variable(i-1,0);
 
 --							local Mission_WhetherComplete = DataPool:GetMission_WhetherComplete(i-1);
 --							if( Mission_WhetherComplete > 0 ) then
---								strOKFail = "Íê³É";
+--								strOKFail = "å®Œæˆ";
 --							end
 							if(Mission_Variable >0) then
 								if(Mission_Variable == 1) then
-									strOKFail = "Íê³É";
+									strOKFail = "å®Œæˆ";
 								elseif(Mission_Variable == 2) then
-									strOKFail = "Ê§°Ü";
+									strOKFail = "å¤±è´¥";
 								end
 							end
 						end	
 
 ----------------------------------------------------
 						if(nMissionLevel - nMyLevel < -11) then
-							color = "FFB9B9B9"; --»ÒÉ«
+							color = "FFB9B9B9"; --ç°è‰²
 						elseif(nMissionLevel - nMyLevel <=-6) then
-							color = "FF0A9605";	--ÂÌÉ«
+							color = "FF0A9605";	--ç»¿è‰²
 						elseif(nMissionLevel - nMyLevel <= 5) then
-							color = "FFD9F80A";	--»ÆÉ«
+							color = "FFD9F80A";	--é»„è‰²
 						elseif(nMissionLevel - nMyLevel <= 10) then
-							color = "FFF8A10A";	--³ÈÉ«
+							color = "FFF8A10A";	--æ©™è‰²
 						else
-							color = "FFFA0A0A"; --ºìÉ«
+							color = "FFFA0A0A"; --çº¢è‰²
 						end
 
 						if(First_Open == 1) then
@@ -368,7 +368,7 @@ function QuestLog_UpdateListbox()
 	end
 	
 	if(k<1) then
-		QuestLog_Listbox:AddItem("Ã»ÓĞÈÎºÎÈÎÎñ¡£",0);
+		QuestLog_Listbox:AddItem("æ²¡æœ‰ä»»ä½•ä»»åŠ¡ã€‚",0);
 	end
 	QuestLog_Listbox : SetItemSelectByItemID(Current_Select);
 	QuestLog_Amount : SetText( k .. "/" .. nMissionNum);
@@ -384,7 +384,7 @@ function QuestLog_UpdateListbox()
 end
 
 function MissionType_Insert(str)
---ÅÅĞòËã·¨ÔÚÉÏÃæÒÑ¾­ÊµÏÖÁË£¬ÀíÂÛÉÏ½²Õâ¸ö²»»á±»µ÷ÓÃµ½¡£chris
+--æ’åºç®—æ³•åœ¨ä¸Šé¢å·²ç»å®ç°äº†ï¼Œç†è®ºä¸Šè®²è¿™ä¸ªä¸ä¼šè¢«è°ƒç”¨åˆ°ã€‚chris
 --		for i=1,table.getn(MissionType) do
 		for i,Per_Segment in ipairs(MissionType) do
 			if(MissionType[i] == str) then
@@ -423,7 +423,7 @@ end
 				nSelIndex = Current_Select;
 			end
 		end
---		AxTrace(0,0,"Ñ¡ÖĞÏîÎª =" .. nSelIndex);
+--		AxTrace(0,0,"é€‰ä¸­é¡¹ä¸º =" .. nSelIndex);
 		if nSelIndex > 20 then
 
 			if MissionPucker[nSelIndex-100] == 1 then
@@ -476,12 +476,12 @@ end
 		strReplace = strReplace .. strDesc
 		strDesc = strReplace
 		QuestLog_TargetMission : SetText("#gFF0FA0" ..strInfo);
-		QuestLog_Desc:AddTextElement("#YÈÎÎñÄ¿±ê£º#W")
+		QuestLog_Desc:AddTextElement("#Yä»»åŠ¡ç›®æ ‡ï¼š#W")
 		QuestLog_Desc:AddTextElement("" .. strDesc);
 --		QuestLog_Desc:AddTextElement("" .. strReplace);
 		DataPool:GetPlayerMission_ActivePos(nSelIndex);
 
---ÏÔÊ¾ÊÇ·ñË«±¶Ê±¼ä
+--æ˜¾ç¤ºæ˜¯å¦åŒå€æ—¶é—´
 		local nDoubleExp = DataPool:GetPlayerMission_Display(nSelIndex,6)
 
 		local DoubleExp_Text = "";
@@ -489,20 +489,20 @@ end
 			local IsDouble = DataPool:GetPlayerMission_DataRound(nDoubleExp);
 
 			if IsDouble > 0 then
-				DoubleExp_Text = "#B¶à±¶½±Àø"
+				DoubleExp_Text = "#Bå¤šå€å¥–åŠ±"
 				QuestLog_Desc:AddTextElement(DoubleExp_Text);
 			end
 		end
 		
 --		AxTrace(0, 0, "strInfo= " .. strInfo );
---Ç°ÃæÊÇ·ñÓĞÒ»Î»ÏÔÊ¾ÈÎÎñÊÇ·ñÒÑÍê³É
+--å‰é¢æ˜¯å¦æœ‰ä¸€ä½æ˜¾ç¤ºä»»åŠ¡æ˜¯å¦å·²å®Œæˆ
 		if( DataPool:GetPlayerMission_Display(nSelIndex,1) > 0 ) then
 			MissionParam_Index = MissionParam_Index + 1;
 		end	
 --		for i =0,7 do
 --			AxTrace(0,0, "variable [" .. i .."] = " .. DataPool:GetPlayerMission_Variable(nSelIndex,i) );
 --		end
---ÏÔÊ¾ÈÎÎñÊ£ÓàÊ±¼ä
+--æ˜¾ç¤ºä»»åŠ¡å‰©ä½™æ—¶é—´
 		local nTotalTime = DataPool:GetPlayerMission_Display(nSelIndex,2);
 		AxTrace(1,1,"nTotalTime="..nTotalTime)
 		if( nTotalTime > 0 ) then
@@ -516,51 +516,51 @@ end
 					nHour = math.floor(nTotalTime/60000/60) 
 					nMinute = math.floor((math.mod(nTotalTime,60000*60))/60000)
 					nSecond = math.floor((math.mod(nTotalTime,60000))/1000)
-					strTotalTime = nHour .. "Ğ¡Ê±"..nMinute.."·Ö"..nSecond.."Ãë"
+					strTotalTime = nHour .. "å°æ—¶"..nMinute.."åˆ†"..nSecond.."ç§’"
 				elseif(nTotalTime >= 60000) then
 					nMinute = nTotalTime/60000;
-					strTotalTime = nMinute .. "·Ö"
+					strTotalTime = nMinute .. "åˆ†"
 					nSecond = (nTotalTime - nMinute * 60000)/1000;
-					strTotalTime = strTotalTime .. nSecond .."Ãë"
+					strTotalTime = strTotalTime .. nSecond .."ç§’"
 				elseif(nTotalTime >= 1000) then
-					strTotalTime = nTotalTime/1000 .."Ãë"
+					strTotalTime = nTotalTime/1000 .."ç§’"
 				end
         
         if(nRemainTime >= 60000*60) then
 					nHour = math.floor(nRemainTime/60000/60)
 					nMinute = math.floor((math.mod(nRemainTime,60000*60))/60000)
 					nSecond = math.floor((math.mod(nRemainTime,60000))/1000)
-					strRemainTime = nHour .. "Ğ¡Ê±"..nMinute.."·Ö"..nSecond.."Ãë"
+					strRemainTime = nHour .. "å°æ—¶"..nMinute.."åˆ†"..nSecond.."ç§’"
 				elseif(nRemainTime >= 60000) then
 					nMinute = math.floor(nRemainTime/60000);
-					strRemainTime = nMinute .. "·Ö"
+					strRemainTime = nMinute .. "åˆ†"
 					nSecond = math.floor((nRemainTime - nMinute * 60000)/1000);
-					strRemainTime = strRemainTime .. nSecond .."Ãë"
+					strRemainTime = strRemainTime .. nSecond .."ç§’"
 				elseif(nRemainTime >= 1000) then
-					strRemainTime = math.floor(nRemainTime/1000) .."Ãë"
+					strRemainTime = math.floor(nRemainTime/1000) .."ç§’"
 				else
-					strRemainTime = "0Ãë"
+					strRemainTime = "0ç§’"
 				end
 
---				QuestLog_Desc:AddTextElement("Ê£ÓàÊ±¼ä£º " .. strRemainTime .."/".. strTotalTime);
-				QuestLog_Desc:AddTextElement("Ê£ÓàÊ±¼ä£º " .. strRemainTime );
---				AxTrace(0,0, "Ê±¼ä [" .. nSelIndex .."] = " .. strRemainTime .. " param_index = "..MissionParam_Index);
+--				QuestLog_Desc:AddTextElement("å‰©ä½™æ—¶é—´ï¼š " .. strRemainTime .."/".. strTotalTime);
+				QuestLog_Desc:AddTextElement("å‰©ä½™æ—¶é—´ï¼š " .. strRemainTime );
+--				AxTrace(0,0, "æ—¶é—´ [" .. nSelIndex .."] = " .. strRemainTime .. " param_index = "..MissionParam_Index);
 			end
 		end	
 
---ÏÔÊ¾ÈÎÎñµ±Ç°»·Êı
+--æ˜¾ç¤ºä»»åŠ¡å½“å‰ç¯æ•°
 		local nRound = DataPool:GetPlayerMission_Display(nSelIndex,3);
 		if( nRound >= 0 ) then
 			Mission_Variable = DataPool:GetPlayerMission_DataRound(nRound);
 			
 			if(Mission_Variable >= 0) then
 --				QuestLog_Desc:AddTextElement(" ");
-				QuestLog_Desc:AddTextElement("#r#YÈÎÎñµ±Ç°»·Êı£º#W"..Mission_Variable);
---				AxTrace(0,0, "»·Êı [" .. nSelIndex .."]=  "..MissionParam_Index);
+				QuestLog_Desc:AddTextElement("#r#Yä»»åŠ¡å½“å‰ç¯æ•°ï¼š#W"..Mission_Variable);
+--				AxTrace(0,0, "ç¯æ•° [" .. nSelIndex .."]=  "..MissionParam_Index);
 			end
 		end	
 
---ÏÔÊ¾ÈÎÎñÒøÆ±ÊıÁ¿
+--æ˜¾ç¤ºä»»åŠ¡é“¶ç¥¨æ•°é‡
 		if( DataPool:GetPlayerMission_Display(nSelIndex,4) > 0 ) then
 			Mission_Variable = DataPool:GetPlayerMission_Variable(nSelIndex,MissionParam_Index);
 			MissionParam_Index = MissionParam_Index + 1;
@@ -570,47 +570,47 @@ end
 				silverdesc = DataPool:GetPlayerMission_BillName(nSelIndex);
 				QuestLog_Desc:AddTextElement(silverdesc .. ":");
 				QuestLog_Desc:AddMoneyElement(Mission_Variable);
-				AxTrace(0,0, "ÒøÆ± [" .. nSelIndex .."] =" ..MissionParam_Index );
+				AxTrace(0,0, "é“¶ç¥¨ [" .. nSelIndex .."] =" ..MissionParam_Index );
 			end
 		end	
 		QuestLog_Desc:AddTextElement(" ");
 		if( DataPool:GetPlayerMission_Display(nSelIndex,5) <= 0 ) then
-			QuestLog_Desc:AddTextElement("#YÍê³ÉÇé¿ö£º#W")
+			QuestLog_Desc:AddTextElement("#Yå®Œæˆæƒ…å†µï¼š#W")
 		end
 		
---ÈÎÎñĞèÒªÉ±µÄnpc		
+--ä»»åŠ¡éœ€è¦æ€çš„npc		
 		local nDemandKillNum,Kill_Random_Type = DataPool:GetPlayerMissionDemandKill_Num(nSelIndex);
 		if( nDemandKillNum > 0 ) then
 --			QuestLog_Desc:AddTextElement(" ");
-			QuestLog_Desc:AddTextElement("ÒÑÉ±ËÀ£º");
+			QuestLog_Desc:AddTextElement("å·²æ€æ­»ï¼š");
 		end	
 	
 		for i=1, nDemandKillNum do
-			--    ĞèÒªµÄNPC£¬ĞèÒªNPC ID£¬ĞèÒª¶àÉÙ¸ö
+			--    éœ€è¦çš„NPCï¼Œéœ€è¦NPC IDï¼Œéœ€è¦å¤šå°‘ä¸ª
 			local nNPCName, nNum = DataPool:GetPlayerMissionDemand_NPC(i-1,Kill_Random_Type,nSelIndex);
 			Mission_Variable = DataPool:GetPlayerMission_Variable(nSelIndex,MissionParam_Index,Kill_Random_Type,i-1);
 			MissionParam_Index = MissionParam_Index + 1;
 			AxTrace(0, 0, "nNPCName:" .. nNPCName);
 			AxTrace(0, 0, "num:" .. nNum);
 			
-			QuestLog_Desc:AddTextElement(nNPCName .. " £º "..Mission_Variable.. " / " .. nNum);
+			QuestLog_Desc:AddTextElement(nNPCName .. " ï¼š "..Mission_Variable.. " / " .. nNum);
 			AxTrace(0,0, "NPC [" .. nSelIndex .."] =" ..MissionParam_Index );
 		end
 
---ÈÎÎñĞèÒªµÄÎïÆ·
+--ä»»åŠ¡éœ€è¦çš„ç‰©å“
 		local nDemandNum,Item_Random_Type= DataPool:GetPlayerMissionDemand_Num(nSelIndex);
 		if( nDemandNum > 0 ) then
 --			QuestLog_Desc:AddTextElement(" ");
 			if(Item_Random_Type == -100) then
-				QuestLog_Desc:AddTextElement("ÒÑÌá½»£º");
+				QuestLog_Desc:AddTextElement("å·²æäº¤ï¼š");
 				Item_Random_Type = 0
 			else
-				QuestLog_Desc:AddTextElement("ÒÑµÃµ½£º");
+				QuestLog_Desc:AddTextElement("å·²å¾—åˆ°ï¼š");
 			end
 		end	
 	
 		for i=1, nDemandNum do
-			--    ĞèÒªµÄÀàĞÍ£¬ĞèÒªÎïÆ·ID£¬ĞèÒª¶àÉÙ¸ö
+			--    éœ€è¦çš„ç±»å‹ï¼Œéœ€è¦ç‰©å“IDï¼Œéœ€è¦å¤šå°‘ä¸ª
 			local szName,nItemID, nNum = DataPool:GetPlayerMissionDemand_Item(i-1,Item_Random_Type,nSelIndex);
 --			Mission_Variable = DataPool:GetPlayerMission_Variable(nSelIndex,MissionParam_Index);
 --			MissionParam_Index = MissionParam_Index + 1
@@ -631,18 +631,18 @@ end
 					Mission_Variable = nNum
 				end
 			end
-			QuestLog_Desc:AddTextElement(szName .. " £º " .. Mission_Variable .. " / " .. nNum);
+			QuestLog_Desc:AddTextElement(szName .. " ï¼š " .. Mission_Variable .. " / " .. nNum);
 		end
 
 -----------------------------------------------------------------------------------
---ÈÎÎñ×Ô¶¨ÒåµÄÎïÆ·
+--ä»»åŠ¡è‡ªå®šä¹‰çš„ç‰©å“
 		local nCustomNum = DataPool:GetPlayerMissionCustom_Num(nSelIndex);
 		if( nCustomNum > 0 ) then
 			QuestLog_Desc:AddTextElement(" ");
 		end	
 	
 		for i=1, nCustomNum do
-			--    ĞèÒªµÄNPC£¬ĞèÒªNPC ID£¬ĞèÒª¶àÉÙ¸ö
+			--    éœ€è¦çš„NPCï¼Œéœ€è¦NPC IDï¼Œéœ€è¦å¤šå°‘ä¸ª
 			local strCustom, nNum = DataPool:GetPlayerMissionCustom(i-1);
 			Mission_Variable = DataPool:GetPlayerMission_Variable(nSelIndex,MissionParam_Index);
 			MissionParam_Index = MissionParam_Index + 1;
@@ -652,13 +652,13 @@ end
 			if nNum == 0 then
 				QuestLog_Desc:AddTextElement(strCustom);
 			else
-				QuestLog_Desc:AddTextElement(strCustom .. " £º ".. Mission_Variable .. " / " .. nNum);
+				QuestLog_Desc:AddTextElement(strCustom .. " ï¼š ".. Mission_Variable .. " / " .. nNum);
 			end
 		end
 
 -----------------------------------------------------------------------------------	
 
---ÈÎÎñ×Ô¶¨ÒåµÄËæ»úÎïÆ· zzÌí¼Ó
+--ä»»åŠ¡è‡ªå®šä¹‰çš„éšæœºç‰©å“ zzæ·»åŠ 
 
 	local nRandomCustomNum = DataPool:GetPlayerMissionRandomCustom_Num(nSelIndex);
 	if( nRandomCustomNum > 0 ) then
@@ -669,7 +669,7 @@ end
 		if nNeedNum == 0 then
 			QuestLog_Desc:AddTextElement(strCustom);
 		else
-			QuestLog_Desc:AddTextElement(strCustom .. " £º ".. nCompleteNum .. " / " .. nNeedNum);
+			QuestLog_Desc:AddTextElement(strCustom .. " ï¼š ".. nCompleteNum .. " / " .. nNeedNum);
 		end
 	end
 ----------------------------------------------------------------------------------
@@ -678,20 +678,20 @@ end
 		local nBonusNum = DataPool:GetPlayerMissionBonus_Num();
 		
 		if( nBonusNum > 0 ) then
-			QuestLog_Desc:AddTextElement("#Y½±Àø£º#W");
+			QuestLog_Desc:AddTextElement("#Yå¥–åŠ±ï¼š#W");
 		end
 		local nRadio = 1;
 		local nRand = 1;
 
 		for i=1, nBonusNum do
-			--½±ÀøµÄÀàĞÍ£¬½±ÀøÎïÆ·ID£¬½±Àø¶àÉÙ¸ö
+			--å¥–åŠ±çš„ç±»å‹ï¼Œå¥–åŠ±ç‰©å“IDï¼Œå¥–åŠ±å¤šå°‘ä¸ª
 			local strType, nItemID, nNum = DataPool:GetPlayerMissionBonus_Item(i-1);
 			if(strType == "money") then
---				QuestLog_Desc:AddTextElement("½±Àø½ğÇ®£º");
-				--ÕâÀïÓĞ¶Ô¾çÇéÑ­»·ÈÎÎñµÄÌØÊâ´¦Àí
+--				QuestLog_Desc:AddTextElement("å¥–åŠ±é‡‘é’±ï¼š");
+				--è¿™é‡Œæœ‰å¯¹å‰§æƒ…å¾ªç¯ä»»åŠ¡çš„ç‰¹æ®Šå¤„ç†
 				local nScriptId = DataPool:GetPlayerMission_Display(nSelIndex,7)
 				if (nScriptId >= 890000 and nScriptId <= 890005) then
-					--PushDebugMessage("½Ğ½»×Ó¿Ø¼ş")
+					--PushDebugMessage("å«äº¤å­æ§ä»¶")
 					QuestLog_Desc:AddJiaoZiElement(nNum)
 				else
 					if (nScriptId >= 1010243 and nScriptId <= 1010250) or
@@ -726,20 +726,22 @@ end
 					 (nScriptId >= 1009000 and nScriptId <= 1009027) or
 					 (nScriptId >= 1009100 and nScriptId <= 1009103) then
 		
-						-- Ê¹ÓÃÍæ¼Ò×Ô¼ºµÄµÈ¼¶À´¼ÆËãµÃµ½µÄ½±Àø
+						-- ä½¿ç”¨ç©å®¶è‡ªå·±çš„ç­‰çº§æ¥è®¡ç®—å¾—åˆ°çš„å¥–åŠ±
 						nNum = tonumber(Player:GetData("LEVEL") * 18 -101)
 					end
 	
 					QuestLog_Desc:AddMoneyElement(nNum);
 				end
-			elseif(strType == "item") then
---				QuestLog_Desc:AddTextElement("¹Ì¶¨½±ÀøÎïÆ·£º");
+			elseif(strType == "exp") then
+			QuestLog_Desc:AddTextElement("ç»éªŒï¼š" .. string.format("%.0f", nNum));
+		elseif(strType == "item") then
+--				QuestLog_Desc:AddTextElement("å›ºå®šå¥–åŠ±ç‰©å“ï¼š");
 				local ActionID = DataPool:EnumPlayerMission_ItemAction(nItemID);
 				QuestLog_Desc:AddActionElement(ActionID, nNum, 0);
 			elseif(strType == "itemrand") then
 				if (nRand == 1) then
 					nRand = 0;
-					QuestLog_Desc:AddTextElement("Ëæ»ú½±ÀøÎïÆ·£º");
+					QuestLog_Desc:AddTextElement("éšæœºå¥–åŠ±ç‰©å“ï¼š");
 					local ActionID = DataPool:EnumPlayerMission_ItemAction(nItemID);
 					QuestLog_Desc:AddActionElement(ActionID, nNum, 0);
 				end
@@ -750,7 +752,7 @@ end
 				bBeingRadio = 1;
 				if (nRadio == 1) then
 					nRadio = 0;
-					QuestLog_Desc:AddTextElement("ÔÚÏÂÁĞÎïÆ·ÖĞÑ¡ÔñÒ»Ïî×÷Îª½±Àø");
+					QuestLog_Desc:AddTextElement("åœ¨ä¸‹åˆ—ç‰©å“ä¸­é€‰æ‹©ä¸€é¡¹ä½œä¸ºå¥–åŠ±");
 				end
 				AxTrace(0, 0, "nItemID:" .. nItemID);
 				local ActionID = DataPool:EnumPlayerMission_ItemAction(nItemID);

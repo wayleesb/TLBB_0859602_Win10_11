@@ -1,32 +1,32 @@
--- Ê³²ÄÅä·½¡¢ºÏ³ÉÅä·½
+-- é£Ÿæé…æ–¹ã€åˆæˆé…æ–¹
 
--- ¸Ã½Å±¾ÓĞÒÔÏÂ¶ş¸ö±Ø±¸¹¦ÄÜº¯Êı£º
--- x700901_AbilityCheck		- ¼¼ÄÜÊ¹ÓÃ¼ì²éº¯Êı
--- x700901_AbilityProduce	-  ºÏ³É³É¹¦£¬¸ºÔğÏûºÄÒÔ¼°²ú³ö²úÆ·
+-- è¯¥è„šæœ¬æœ‰ä»¥ä¸‹äºŒä¸ªå¿…å¤‡åŠŸèƒ½å‡½æ•°ï¼š
+-- x700901_AbilityCheck		- æŠ€èƒ½ä½¿ç”¨æ£€æŸ¥å‡½æ•°
+-- x700901_AbilityProduce	-  åˆæˆæˆåŠŸï¼Œè´Ÿè´£æ¶ˆè€—ä»¥åŠäº§å‡ºäº§å“
 
--- ½Å±¾ºÅ
+-- è„šæœ¬å·
 x700901_g_ScriptId	= 700901
 
--- Ô­ÁÏ±í
+-- åŸæ–™è¡¨
 x700901_g_Stuff			= {}
--- ³õ¼¶Ê³²ÄÔ­ÁÏ
+-- åˆçº§é£ŸæåŸæ–™
 x700901_g_Stuff[1]	= { 20102001, 20102013, 20102002, 20102014, 20102003, 20102015, 20106001, 20106002, 20106003 }
--- ÖĞ¼¶Ê³²ÄÔ­ÁÏ
+-- ä¸­çº§é£ŸæåŸæ–™
 x700901_g_Stuff[2]	= { 20102004, 20102016, 20102005, 20102017, 20102006, 20102018, 20106004, 20106005, 20106006 }
--- ¸ß¼¶Ê³²ÄÔ­ÁÏ
+-- é«˜çº§é£ŸæåŸæ–™
 x700901_g_Stuff[3]	= { 20102007, 20102008, 20102009, 20102010, 20102011, 20102012, 20102019, 20102020, 20102021,20102022,20102023,20102024,20102040,20102041,20102042,20102043,20102044,20102045,20102046,20102047,20106007,20106008,20106009,20106010,20106011,20106012 }
 
 
--- Åä·½±í
--- Ë÷ÒıÎªÅä·½ ID
--- abilityId: Éú»î¼¼ÄÜºÅ
--- recipeLevel: Åä·½µÈ¼¶
--- matTbl: ¸ÃÅä·½Ê¹ÓÃµÄ²ÄÁÏ×é±í
---		matList:Ä³¸öµµ´ÎµÄ²ÄÁÏÇåµ¥
---		count:Ê¹ÓÃ¸Ãµµ´ÎµÄ²ÄÁÏĞèÒªµÄÊıÁ¿
--- Product: ²úÆ·
+-- é…æ–¹è¡¨
+-- ç´¢å¼•ä¸ºé…æ–¹ ID
+-- abilityId: ç”Ÿæ´»æŠ€èƒ½å·
+-- recipeLevel: é…æ–¹ç­‰çº§
+-- matTbl: è¯¥é…æ–¹ä½¿ç”¨çš„ææ–™ç»„è¡¨
+--		matList:æŸä¸ªæ¡£æ¬¡çš„ææ–™æ¸…å•
+--		count:ä½¿ç”¨è¯¥æ¡£æ¬¡çš„ææ–™éœ€è¦çš„æ•°é‡
+-- Product: äº§å“
 x700901_g_CompoundInfo			= {}
--- ³õ¼¶Ê³²Ä
+-- åˆçº§é£Ÿæ
 x700901_g_CompoundInfo[558]	= {
 	abilityId = ABILITY_PENGREN,
 	recipeLevel = 1,
@@ -35,7 +35,7 @@ x700901_g_CompoundInfo[558]	= {
 	},
 	Product = 20102037,
 }
--- ÖĞ¼¶Ê³²Ä
+-- ä¸­çº§é£Ÿæ
 x700901_g_CompoundInfo[559] = {
 	abilityId = ABILITY_PENGREN,
 	recipeLevel = 1,
@@ -44,7 +44,7 @@ x700901_g_CompoundInfo[559] = {
 	},
 	Product = 20102038,
 }
--- ¸ß¼¶Ê³²Ä
+-- é«˜çº§é£Ÿæ
 x700901_g_CompoundInfo[560] = {
 	abilityId = ABILITY_PENGREN,
 	recipeLevel = 1,
@@ -54,11 +54,11 @@ x700901_g_CompoundInfo[560] = {
 	Product = 20102039,
 }
 
--- ±³°üĞèÒªµÄ¿Õ¼ä
+-- èƒŒåŒ…éœ€è¦çš„ç©ºé—´
 x700901_g_BagSpace	= 1
 
 ----------------------------------------------------------------------------------------
---	¼¼ÄÜÊ¹ÓÃ¼ì²éº¯Êı
+--	æŠ€èƒ½ä½¿ç”¨æ£€æŸ¥å‡½æ•°
 ----------------------------------------------------------------------------------------
 function x700901_AbilityCheck( sceneId, selfId, recipeId )
 	local CompoundInfo = x700901_g_CompoundInfo[recipeId]
@@ -66,7 +66,7 @@ function x700901_AbilityCheck( sceneId, selfId, recipeId )
 		return OR_ERROR
 	end
 
-	-- ¼ì²â±³°üÊÇ²»ÊÇÓĞ¿Õ¸ñ£¬Ã»ÓĞ¿Õ¸ñ¾Í²»ÄÜ½øĞĞ
+	-- æ£€æµ‹èƒŒåŒ…æ˜¯ä¸æ˜¯æœ‰ç©ºæ ¼ï¼Œæ²¡æœ‰ç©ºæ ¼å°±ä¸èƒ½è¿›è¡Œ
 	if LuaFnGetMaterialBagSpace( sceneId, selfId ) < x700901_g_BagSpace then
 		return OR_BAG_OUT_OF_SPACE
 	end
@@ -76,7 +76,7 @@ function x700901_AbilityCheck( sceneId, selfId, recipeId )
 		return OR_NO_LEVEL
 	end
 
-	-- ÅĞ¶ÏÉíÉÏµÄ²ÄÁÏÊÇ·ñ×ã¹»
+	-- åˆ¤æ–­èº«ä¸Šçš„ææ–™æ˜¯å¦è¶³å¤Ÿ
 	local i, matInfo, tblCount, bMatEnoughFlag, idx, MatSN, Count
 
 	tblCount = getn( CompoundInfo.matTbl )
@@ -98,7 +98,7 @@ function x700901_AbilityCheck( sceneId, selfId, recipeId )
 		for idx, MatSN in matInfo.matList do
 			Count = Count + LuaFnGetAvailableItemCount( sceneId, selfId, MatSN )
 
-			-- ÔÚÕâÀï½øĞĞÅĞ¶Ï£¬ÒÔ¼õÉÙÑ­»·´ÎÊı£¨ÌØ±ğÊÇµ±²ÄÁÏ³äÔ£Ê±£©
+			-- åœ¨è¿™é‡Œè¿›è¡Œåˆ¤æ–­ï¼Œä»¥å‡å°‘å¾ªç¯æ¬¡æ•°ï¼ˆç‰¹åˆ«æ˜¯å½“ææ–™å……è£•æ—¶ï¼‰
 			if Count >= matInfo.count then
 				bMatEnoughFlag = 1
 				break
@@ -118,7 +118,7 @@ function x700901_AbilityCheck( sceneId, selfId, recipeId )
 end
 
 ----------------------------------------------------------------------------------------
---	²ú³ö²úÆ·
+--	äº§å‡ºäº§å“
 ----------------------------------------------------------------------------------------
 function x700901_AbilityProduce( sceneId, selfId, recipeId )
 	local CompoundInfo = x700901_g_CompoundInfo[recipeId]
@@ -126,7 +126,7 @@ function x700901_AbilityProduce( sceneId, selfId, recipeId )
 		return OR_ERROR
 	end
 
-	-- ÏûºÄ²ÄÁÏ
+	-- æ¶ˆè€—ææ–™
 	local i, matInfo, tblCount, bMatEnoughFlag, idx, MatSN, Count, DelCount
 
 	tblCount = getn( CompoundInfo.matTbl )
@@ -149,7 +149,7 @@ function x700901_AbilityProduce( sceneId, selfId, recipeId )
 		for idx, MatSN in matInfo.matList do
 			Count = Count + LuaFnGetAvailableItemCount( sceneId, selfId, MatSN )
 
-			-- ÔÚÕâÀï½øĞĞÅĞ¶Ï£¬ÒÔ¼õÉÙÑ­»·´ÎÊı£¨ÌØ±ğÊÇµ±²ÄÁÏ³äÔ£Ê±£©
+			-- åœ¨è¿™é‡Œè¿›è¡Œåˆ¤æ–­ï¼Œä»¥å‡å°‘å¾ªç¯æ¬¡æ•°ï¼ˆç‰¹åˆ«æ˜¯å½“ææ–™å……è£•æ—¶ï¼‰
 			if Count >= matInfo.count then
 				bMatEnoughFlag = 1
 				break
@@ -170,7 +170,7 @@ function x700901_AbilityProduce( sceneId, selfId, recipeId )
 					LuaFnDelAvailableItem( sceneId, selfId, MatSN, DelCount )
 					Count = Count - DelCount
 
-					-- ÔÚÕâÀï½øĞĞÅĞ¶Ï£¬ÒÔ¼õÉÙÑ­»·´ÎÊı£¨ÌØ±ğÊÇµ±²ÄÁÏ³äÔ£Ê±£©
+					-- åœ¨è¿™é‡Œè¿›è¡Œåˆ¤æ–­ï¼Œä»¥å‡å°‘å¾ªç¯æ¬¡æ•°ï¼ˆç‰¹åˆ«æ˜¯å½“ææ–™å……è£•æ—¶ï¼‰
 					if Count < 1 then
 						bMatEnoughFlag = 2
 						break

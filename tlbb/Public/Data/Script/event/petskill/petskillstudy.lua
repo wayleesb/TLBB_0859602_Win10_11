@@ -1,4 +1,4 @@
---ÕäÊŞ¼¼ÄÜÑ§Ï°UI 3
+--çå…½æŠ€èƒ½å­¦ä¹ UI 3
 
 x311111_g_ScriptId = 311111;
 
@@ -6,34 +6,34 @@ x311111_g_MenPaiId = 0;
 x311111_g_MenPaiSkillIds = {701,702,703}
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x311111_OnEnumerate( sceneId, selfId, targetId, sel )
 	if(sel == 6) then
 		BeginUICommand(sceneId)
-			UICommand_AddInt(sceneId,targetId); --µ÷ÓÃ·¢²¼Õ÷ÓÑĞÅÏ¢½çÃæ
+			UICommand_AddInt(sceneId,targetId); --è°ƒç”¨å‘å¸ƒå¾å‹ä¿¡æ¯ç•Œé¢
 		EndUICommand(sceneId)
 		DispatchUICommand(sceneId,selfId, 5)
 		
 		local ret = DispatchPetPlacardList(sceneId,selfId,targetId,-1,-1,1);
 		if(0 == ret) then
-			Msg2Player( sceneId,selfId,"ÏÖÔÚÃ»ÓĞ×¢²áµÄÕäÊŞ",MSG2PLAYER_PARA)
+			Msg2Player( sceneId,selfId,"ç°åœ¨æ²¡æœ‰æ³¨å†Œçš„çå…½",MSG2PLAYER_PARA)
 		end
 	elseif (sel == 1) then
 		BeginUICommand(sceneId)
-			UICommand_AddInt(sceneId,targetId);	--µ÷ÓÃĞÂ°æÕäÊŞ¼¼ÄÜÑ§Ï°½çÃæ UI 223
+			UICommand_AddInt(sceneId,targetId);	--è°ƒç”¨æ–°ç‰ˆçå…½æŠ€èƒ½å­¦ä¹ ç•Œé¢ UI 223
 		EndUICommand(sceneId)
 		DispatchUICommand(sceneId,selfId, 223)
 	else
 		BeginUICommand(sceneId)
 			UICommand_AddInt(sceneId,targetId);
-			UICommand_AddInt(sceneId,sel)		--µ÷ÓÃ¼¼ÄÜÑ§Ï°½çÃæ
+			UICommand_AddInt(sceneId,sel)		--è°ƒç”¨æŠ€èƒ½å­¦ä¹ ç•Œé¢
 		EndUICommand(sceneId)
 		DispatchUICommand(sceneId,selfId, 3)
 	end
 end
 
---Ìõ¼ş¼ì²é£¬·µ»Ø0 ¼ì²éÊ§°Ü ,1 ¼ì²é³É¹¦
+--æ¡ä»¶æ£€æŸ¥ï¼Œè¿”å›0 æ£€æŸ¥å¤±è´¥ ,1 æ£€æŸ¥æˆåŠŸ
 function x311111_PetSkillStudy_MenPaiCheck(sceneId, selfId)
 	if(x311111_g_MenPaiId ~= tonumber(GetMenPai(sceneId, selfId))) then
 		return 0;
@@ -42,17 +42,17 @@ function x311111_PetSkillStudy_MenPaiCheck(sceneId, selfId)
 	end
 end
 
---ÃÅÅÉ¼¼ÄÜÑ§Ï°
+--é—¨æ´¾æŠ€èƒ½å­¦ä¹ 
 function x311111_PetSkillStudy_MenPai_Learn(sceneId, selfId, petHid, petLid, skillId)
 	local ret = PetStudySkill_MenPai(sceneId, selfId, petHid, petLid, skillId);
 	if( 1 == ret ) then
-		Msg2Player( sceneId,selfId,"ÕäÊŞÃÅÅÉ¼¼ÄÜÑ§Ï°³É¹¦",MSG2PLAYER_PARA)
+		Msg2Player( sceneId,selfId,"çå…½é—¨æ´¾æŠ€èƒ½å­¦ä¹ æˆåŠŸ",MSG2PLAYER_PARA)
 	else
-		Msg2Player( sceneId,selfId,"ÕäÊŞÃÅÅÉ¼¼ÄÜÑ§Ï°Ê§°Ü",MSG2PLAYER_PARA)
+		Msg2Player( sceneId,selfId,"çå…½é—¨æ´¾æŠ€èƒ½å­¦ä¹ å¤±è´¥",MSG2PLAYER_PARA)
 	end
 end
 
---Ñ±Ñø·Ñ²éÑ¯
+--é©¯å…»è´¹æŸ¥è¯¢
 function x311111_PetSkillStudy_Ask_Money(sceneId, selfId, petHid, petLid)
 	local money	= x311111_CalcMoney_ha( sceneId, selfId, petHid, petLid )
 	BeginUICommand(sceneId)
@@ -61,38 +61,38 @@ function x311111_PetSkillStudy_Ask_Money(sceneId, selfId, petHid, petLid)
 	DispatchUICommand(sceneId,selfId, 4)
 end
 
---Ñ±ÑøÕäÊŞ
+--é©¯å…»çå…½
 function x311111_PetSkillStudy_Domestication(sceneId, selfId, petHid, petLid)
 --local ret = PetDomestication(sceneId, selfId, petHid, petLid);
 	local checkAvailable = LuaFnIsPetAvailableByGUIDNoPW(sceneId, selfId, petHid, petLid);
 	if checkAvailable and checkAvailable == 1 then
 		local money	= x311111_CalcMoney_ha( sceneId, selfId, petHid, petLid )
-		local PlayerMoney = GetMoney( sceneId, selfId )  +  GetMoneyJZ(sceneId, selfId)  --½»×ÓÆÕ¼° Vega
+		local PlayerMoney = GetMoney( sceneId, selfId )  +  GetMoneyJZ(sceneId, selfId)  --äº¤å­æ™®åŠ Vega
 		if PlayerMoney < money then
 			return
 		end
-		--¸øÍæ¼ÒµÄÕäÊŞÌáÉı¿ìÀÖ¶È²¢É¾³ı½ğÇ®
+		--ç»™ç©å®¶çš„çå…½æå‡å¿«ä¹åº¦å¹¶åˆ é™¤é‡‘é’±
 		LuaFnCostMoneyWithPriority( sceneId, selfId, money )
 		LuaFnSetPetHappiness( sceneId, selfId, petHid, petLid, 100 )
-		Msg2Player( sceneId, selfId, "ÕäÊŞÑ±Ñø³É¹¦", MSG2PLAYER_PARA )
+		Msg2Player( sceneId, selfId, "çå…½é©¯å…»æˆåŠŸ", MSG2PLAYER_PARA )
 	else
-		Msg2Player( sceneId, selfId, "²»ÄÜÔÚ½»Ò××´Ì¬½øĞĞ¸Ã²Ù×÷", MSG2PLAYER_PARA )
+		Msg2Player( sceneId, selfId, "ä¸èƒ½åœ¨äº¤æ˜“çŠ¶æ€è¿›è¡Œè¯¥æ“ä½œ", MSG2PLAYER_PARA )
 	end
 end
 
---²é¿´Ç°Ò»ÆªÕ÷ÓÑĞÅÏ¢
+--æŸ¥çœ‹å‰ä¸€ç¯‡å¾å‹ä¿¡æ¯
 function x311111_PetInviteFriend_Ask_NewPage(sceneId, selfId, npcId, guid1, guid2, dir)
 	local ret = DispatchPetPlacardList(sceneId, selfId, npcId, guid1, guid2, dir)
 	if(0 == ret) then
-		Msg2Player( sceneId,selfId,"Ã»ÓĞ¸ü¶àÕäÊŞÁË",MSG2PLAYER_PARA)
+		Msg2Player( sceneId,selfId,"æ²¡æœ‰æ›´å¤šçå…½äº†",MSG2PLAYER_PARA)
 	end
 end
 
 --**********************************
---¼ÆËã»Ö¸´»¶ÀÖ¶È·ÑÓÃ
+--è®¡ç®—æ¢å¤æ¬¢ä¹åº¦è´¹ç”¨
 --**********************************
---µ¥Î»ÑªÑ±Ñø¼ÛÖµ£º0.025+n*0.0005£¨nÎªÕäÊŞµÈ¼¶£©
---µ¥Î»¿ìÀÖ¶È¼ÛÖµ£º0.373+0.44*n£¨nÎªÕäÊŞµÈ¼¶£©
+--å•ä½è¡€é©¯å…»ä»·å€¼ï¼š0.025+n*0.0005ï¼ˆnä¸ºçå…½ç­‰çº§ï¼‰
+--å•ä½å¿«ä¹åº¦ä»·å€¼ï¼š0.373+0.44*nï¼ˆnä¸ºçå…½ç­‰çº§ï¼‰
 function x311111_CalcMoney_ha( sceneId, selfId, petHid, petLid )
 	local lv	= LuaFnGetPetLevelByGUID( sceneId, selfId, petHid, petLid )
 	local	ha	= 100 - LuaFnGetPetHappiness( sceneId, selfId, petHid, petLid )

@@ -1,5 +1,5 @@
 function ErjimimaXiugai_PreLoad()
-	-- ´ò¿ª½çÃæ
+	-- æ‰“å¼€ç•Œé¢
 	this:RegisterEvent("MINORPASSWORD_OPEN_CHANGE");
 	this:RegisterEvent("MINORPASSWORD_CLEAR_PASSWORD_DLG");
 
@@ -74,18 +74,18 @@ function ErjimimaXiugai_gotoWeb()
 end
 
 function ErjimimaXiugai_OK_Click()
-	-- ¾ÉµÄÃÜÂë
+	-- æ—§çš„å¯†ç 
 	local strPasswordOld = ErjimimaXiugai_Before:GetText();
 	
-	-- ĞÂµÄÃÜÂë¡£
+	-- æ–°çš„å¯†ç ã€‚
 	local strPassword1 = ErjimimaXiugai_After:GetText(); 
 	local strPassword2 = ErjimimaXiugai_Queren:GetText();
 
 	
-	-- Èç¹ûÃÜÂë²»Ò»ÖÂ
+	-- å¦‚æœå¯†ç ä¸ä¸€è‡´
 	if(strPassword1 ~= strPassword2) then
 	
-		ShowSystemTipInfo("ÃÜÂëÊäÈë²»Ò»ÖÂ£¡")
+		ShowSystemTipInfo("å¯†ç è¾“å…¥ä¸ä¸€è‡´ï¼")
 		
 		ErjimimaXiugai_Before:SetText( "" );
 		ErjimimaXiugai_After:SetText( "" );
@@ -98,17 +98,17 @@ function ErjimimaXiugai_OK_Click()
 	local iLenNew = string.len(strPassword1);
 	if(iLenOld < 4) then
 	
-		ShowSystemTipInfo("¾ÉÃÜÂë²»ÄÜÉÙÓÚ4¸ö×Ö·û£¡");
+		ShowSystemTipInfo("æ—§å¯†ç ä¸èƒ½å°‘äº4ä¸ªå­—ç¬¦ï¼");
 		return;
 	end;
 	
 	if(iLenNew < 4) then
 	
-		ShowSystemTipInfo("ĞÂÃÜÂë²»ÄÜÉÙÓÚ4¸ö×Ö·û£¡");
+		ShowSystemTipInfo("æ–°å¯†ç ä¸èƒ½å°‘äº4ä¸ªå­—ç¬¦ï¼");
 		return;
 	end;
 
-	-- Èç¹ûÃÜÂëÒ»ÖÂ¡£·¢ËÍ¸Ä±äÃÜÂëÏûÏ¢¡£
+	-- å¦‚æœå¯†ç ä¸€è‡´ã€‚å‘é€æ”¹å˜å¯†ç æ¶ˆæ¯ã€‚
 	ModifyMinorPassword(strPasswordOld, strPassword1);
 	
 	ErjimimaXiugai_Before:SetText( "" );
@@ -116,12 +116,12 @@ function ErjimimaXiugai_OK_Click()
 	ErjimimaXiugai_Queren:SetText( "" );
 end
 
---Ç¿ÖÆ½â³ı
+--å¼ºåˆ¶è§£é™¤
 function ErjimimaXiugai_Jiechu()
-	-- Ç¿ÖÆ½Ó´¥ÃÜÂë
+	-- å¼ºåˆ¶æ¥è§¦å¯†ç 
 	ForceUnLockMinorPassword();
 	
-	-- Òş²Ø´°¿Ú.
+	-- éšè—çª—å£.
 	ErjimimaXiugai_Close();
 
 end

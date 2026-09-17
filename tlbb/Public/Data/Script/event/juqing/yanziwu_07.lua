@@ -1,16 +1,16 @@
 -- 200017
--- ´´½¨³öÀ´µÄ ÀîÑÓ×Ú ÉíÉÏµÄ½Å±¾
+-- åˆ›å»ºå‡ºæ¥çš„ æŽå»¶å®— èº«ä¸Šçš„è„šæœ¬
 
 x200017_g_ScriptId = 200017
 --**********************************
---ÈÎÎñÈë¿Úº¯Êý
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x200017_OnDefaultEvent( sceneId, selfId, targetId )
 	if LuaFnGetCopySceneData_Param(sceneId, 15) == 1  then
 		BeginEvent(sceneId)
-			AddText( sceneId, "  ºÃ°É£¬¼ÈÈ»Íõ¹ÃÄï²»°Ã»Ú£¬ÎÒ¾Í·ÅÄãÃÇÒ»ÌõÉúÂ·¡£ÎÒÕâÀï¾ÍÓÐ±¯ËÖÇå·çµÄ½âÒ©£¬¿ì¿ìÄÃÈ¥£¬ÃâµÃÎÒÓÖ±äÁËÖ÷Òâ¡£" )
+			AddText( sceneId, "  å¥½å§ï¼Œæ—¢ç„¶çŽ‹å§‘å¨˜ä¸æ‡Šæ‚”ï¼Œæˆ‘å°±æ”¾ä½ ä»¬ä¸€æ¡ç”Ÿè·¯ã€‚æˆ‘è¿™é‡Œå°±æœ‰æ‚²é…¥æ¸…é£Žçš„è§£è¯ï¼Œå¿«å¿«æ‹¿åŽ»ï¼Œå…å¾—æˆ‘åˆå˜äº†ä¸»æ„ã€‚" )
 			if IsHaveMission( sceneId, selfId, 15 ) > 0 then
-					AddNumText( sceneId, x200017_g_ScriptId, "µÃµ½±¯ËÖÇå·çµÄ½âÒ©", 6 ,-1  )
+					AddNumText( sceneId, x200017_g_ScriptId, "å¾—åˆ°æ‚²é…¥æ¸…é£Žçš„è§£è¯", 6 ,-1  )
 			end
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
@@ -19,35 +19,35 @@ end
 
 function x200017_OnEventRequest( sceneId, selfId, targetId )
 
-	--ÅÐ¶ÏÍæ¼ÒÊÇ²»ÊÇÓÐÕâ¸öÈÎÎñ£¬
+	--åˆ¤æ–­çŽ©å®¶æ˜¯ä¸æ˜¯æœ‰è¿™ä¸ªä»»åŠ¡ï¼Œ
 	if IsHaveMission( sceneId, selfId, 15 ) > 0 then
-		--¿´Íæ¼ÒÉíÉÏÓÐÕâ¸öÎïÆ·ÁËÃ»ÓÐ
+		--çœ‹çŽ©å®¶èº«ä¸Šæœ‰è¿™ä¸ªç‰©å“äº†æ²¡æœ‰
 		if GetItemCount(sceneId, selfId, 40001005) < 1  then
-			-- ¸øÍæ¼ÒÎïÆ·
+			-- ç»™çŽ©å®¶ç‰©å“
 	  	BeginAddItem(sceneId)
 				AddItem( sceneId, 40001005, 1 )
 			local ret = EndAddItem(sceneId,selfId)
 			if ret < 1  then
 				BeginEvent(sceneId)
-					AddText( sceneId, "ÄãµÄ±³°üÒÑÂú", 0 )
+					AddText( sceneId, "ä½ çš„èƒŒåŒ…å·²æ»¡", 0 )
 				EndEvent(sceneId)
 				DispatchMissionTips(sceneId,selfId)
 			else
 				AddItemListToHuman(sceneId,selfId)
 				BeginEvent(sceneId)
-					AddText( sceneId, "ÄãµÃµ½ÁË±¯ËÖÇå·çµÄ½âÒ©", 0 )
+					AddText( sceneId, "ä½ å¾—åˆ°äº†æ‚²é…¥æ¸…é£Žçš„è§£è¯", 0 )
 				EndEvent(sceneId)
 				DispatchMissionTips(sceneId,selfId)
 			end
 		else
 			BeginEvent(sceneId)
-				AddText( sceneId, "ÄãÉíÉÏÒÑ¾­ÓÐ±¯ËÖÇå·çµÄ½âÒ©ÁË¡£", 0 )
+				AddText( sceneId, "ä½ èº«ä¸Šå·²ç»æœ‰æ‚²é…¥æ¸…é£Žçš„è§£è¯äº†ã€‚", 0 )
 			EndEvent(sceneId)
 			DispatchMissionTips(sceneId,selfId)
 		end
 	end
 	
-	-- ¹Ø±Õ¶Ô»°¿ð
+	-- å…³é—­å¯¹è¯ç­
 	BeginUICommand( sceneId )
 	UICommand_AddInt( sceneId, targetId )
 	EndUICommand( sceneId )
@@ -56,64 +56,64 @@ function x200017_OnEventRequest( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÁÐ¾ÙÊÂ¼þ
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x200017_OnEnumerate( sceneId, selfId, targetId )
 
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼þ
+--æ£€æµ‹æŽ¥å—æ¡ä»¶
 --**********************************
 function x200017_CheckAccept( sceneId, selfId )
 	
 end
 
 --**********************************
---½ÓÊÜ
+--æŽ¥å—
 --**********************************
 function x200017_OnAccept( sceneId, selfId, targetId )
 
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x200017_OnAbandon( sceneId, selfId )
 end
 
 --**********************************
---¼ÌÐø
+--ç»§ç»­
 --**********************************
 function x200017_OnContinue( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x200017_CheckSubmit( sceneId, selfId )
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x200017_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 end
 
 --**********************************
---É±ËÀ¹ÖÎï»òÍæ¼Ò
+--æ€æ­»æ€ªç‰©æˆ–çŽ©å®¶
 --**********************************
 function x200017_OnKillObject( sceneId, selfId, objdataId )
 end
 
 --**********************************
---½øÈëÇøÓòÊÂ¼þ
+--è¿›å…¥åŒºåŸŸäº‹ä»¶
 --**********************************
 function x200017_OnEnterZone( sceneId, selfId, zoneId )
 end
 
 --**********************************
---µÀ¾ß¸Ä±ä
+--é“å…·æ”¹å˜
 --**********************************
 function x200017_OnItemChanged( sceneId, selfId, itemdataId )
 end

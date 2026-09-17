@@ -1,42 +1,42 @@
---»î¶¯
---±¦±¦Ë«ÏìÅÚ
+--æ´»åŠ¨
+--å®å®åŒå“ç‚®
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x808075_g_ScriptId = 808075
 
 
-x808075_g_StartDayTime = 8323		--»î¶¯¿ªÊ¼Ê±¼ä 2008-03-06
-x808075_g_EndDayTime = 8364			--»î¶¯½áÊøÊ±¼ä 2008-04-20
+x808075_g_StartDayTime = 8323		--æ´»åŠ¨å¼€å§‹æ—¶é—´ 2008-03-06
+x808075_g_EndDayTime = 8364			--æ´»åŠ¨ç»“æŸæ—¶é—´ 2008-04-20
 
-x808075_g_MailStartDayTime = 8323		--·¢ËÍÓÊ¼ş¿ªÊ¼Ê±¼ä 2008-03-06
-x808075_g_MailEndDayTime = 8364			--·¢ËÍÓÊ¼ş½áÊøÊ±¼ä 2008-04-07
+x808075_g_MailStartDayTime = 8323		--å‘é€é‚®ä»¶å¼€å§‹æ—¶é—´ 2008-03-06
+x808075_g_MailEndDayTime = 8364			--å‘é€é‚®ä»¶ç»“æŸæ—¶é—´ 2008-04-07
 
---ÎÄ×ÖÎïÆ·µÄÎïÆ·±í....
+--æ–‡å­—ç‰©å“çš„ç‰©å“è¡¨....
 x808075_g_WordItemTbl = {
 
 	30505184,	--2008
-	30505185,	--³©
-	30505186,	--Íæ
-	30505187,	--Ìì
-	30505188,	--Áú
-	30505189,	--°Ë
-	30505190,	--²¿
+	30505185,	--ç•…
+	30505186,	--ç©
+	30505187,	--å¤©
+	30505188,	--é¾™
+	30505189,	--å…«
+	30505190,	--éƒ¨
 
 }
 
---Ñ¼×ìÊŞÏîÈ¦....
+--é¸­å˜´å…½é¡¹åœˆ....
 x808075_g_DuckItemId = 30505179
 
---Ã«Â¿Áåîõ....
+--æ¯›é©´é“ƒé“›....
 x808075_g_DonkeyItemId5 = 30505180
 x808075_g_DonkeyItemId45 = 30505181
 x808075_g_DonkeyItemId55 = 30505182
 x808075_g_DonkeyItemId65 = 30505183
 
---Ë«ÏìÅÚbuff....
+--åŒå“ç‚®buff....
 x808075_g_SXPBuffId = 5928
 
---¾­Ñé±í....
+--ç»éªŒè¡¨....
 x808075_g_ExpTbl = {
 
 	[10]=20923,[11]=22099,[12]=23242,[13]=24393,[14]=25591,
@@ -72,7 +72,7 @@ x808075_g_ExpTbl = {
 }
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x808075_OnDefaultEvent( sceneId, selfId, targetId )
 
@@ -86,8 +86,8 @@ function x808075_OnDefaultEvent( sceneId, selfId, targetId )
 
 		BeginEvent(sceneId)
 			AddText(sceneId,"#{BBSXP_20080229_02}")
-			AddNumText( sceneId, x808075_g_ScriptId, "ÎÒÒª²Î¼Ó³é½±", 6, 2 )
-			AddNumText( sceneId, x808075_g_ScriptId, "ÎÒÒª¶Ò»»³©ÍæÌìÁúBUFF", 6, 3 )
+			AddNumText( sceneId, x808075_g_ScriptId, "æˆ‘è¦å‚åŠ æŠ½å¥–", 6, 2 )
+			AddNumText( sceneId, x808075_g_ScriptId, "æˆ‘è¦å…‘æ¢ç•…ç©å¤©é¾™BUFF", 6, 3 )
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 
@@ -100,27 +100,27 @@ function x808075_OnDefaultEvent( sceneId, selfId, targetId )
 
 	elseif NumText == 2	then
 
-		--±¦±¦Ë«ÏìÅÚ³é½±....
+		--å®å®åŒå“ç‚®æŠ½å¥–....
 		x808075_SXPChouJiang( sceneId, selfId, targetId )
 
 	elseif NumText == 3	then
 
-		--»»buffÈ·ÈÏ....
+		--æ¢buffç¡®è®¤....
 		BeginEvent(sceneId)
 			AddText(sceneId,"#{BBSXP_20080229_09}")
-			AddNumText( sceneId, x808075_g_ScriptId, "½øĞĞ¶Ò»»", 6, 4 )
-			AddNumText( sceneId, x808075_g_ScriptId, "»¹Ã»×¼±¸ºÃ", 6, 5 )
+			AddNumText( sceneId, x808075_g_ScriptId, "è¿›è¡Œå…‘æ¢", 6, 4 )
+			AddNumText( sceneId, x808075_g_ScriptId, "è¿˜æ²¡å‡†å¤‡å¥½", 6, 5 )
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 
 	elseif NumText == 4	then
 
-		--»»buff....
+		--æ¢buff....
 		x808075_SXPGiveBuff( sceneId, selfId, targetId )
 
 	elseif NumText == 5	then
 
-		--¹Ø±ÕNPC¶Ô»°´°¿Ú....
+		--å…³é—­NPCå¯¹è¯çª—å£....
 		BeginUICommand(sceneId)
 		EndUICommand(sceneId)
 		DispatchUICommand(sceneId,selfId, 1000)
@@ -130,19 +130,19 @@ function x808075_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x808075_OnEnumerate( sceneId, selfId, targetId )
 
 	if 1 == x808075_CheckRightTime() then
-		AddNumText(sceneId, x808075_g_ScriptId, "±¦±¦Ë«ÏìÅÚ»î¶¯", 1, 0 )
-		AddNumText(sceneId, x808075_g_ScriptId, "±¦±¦Ë«ÏìÅÚ»î¶¯°ïÖú", 13, 1 )
+		AddNumText(sceneId, x808075_g_ScriptId, "å®å®åŒå“ç‚®æ´»åŠ¨", 1, 0 )
+		AddNumText(sceneId, x808075_g_ScriptId, "å®å®åŒå“ç‚®æ´»åŠ¨å¸®åŠ©", 13, 1 )
 	end
 
 end
 
 --**********************************
---¼ì²âµ±Ç°ÊÇ·ñÊÇ»î¶¯Ê±¼ä....
+--æ£€æµ‹å½“å‰æ˜¯å¦æ˜¯æ´»åŠ¨æ—¶é—´....
 --**********************************
 function x808075_CheckRightTime()
 
@@ -156,11 +156,11 @@ function x808075_CheckRightTime()
 end
 
 --**********************************
---±¦±¦Ë«ÏìÅÚ³é½±....Ñ¼×ìÊŞ..Ã«Â¿..¾­Ñé....
+--å®å®åŒå“ç‚®æŠ½å¥–....é¸­å˜´å…½..æ¯›é©´..ç»éªŒ....
 --**********************************
 function x808075_SXPChouJiang( sceneId, selfId, targetId )
 
-	--ÊÇ·ñ´ïµ½10¼¶....
+	--æ˜¯å¦è¾¾åˆ°10çº§....
 	if GetLevel( sceneId, selfId ) < 10 then
 		BeginEvent( sceneId )
 			AddText( sceneId, "#{BBSXP_20080229_03}" )
@@ -169,7 +169,7 @@ function x808075_SXPChouJiang( sceneId, selfId, targetId )
 		return
 	end
 
-	--Ã¿ÌìÖ»ÄÜ³é10´Î....
+	--æ¯å¤©åªèƒ½æŠ½10æ¬¡....
 	local lastTime = GetMissionData( sceneId, selfId, MD_SHUANGXIANGPAO_LASTTIME )
 	local lastDayTime = floor( lastTime / 100 )
 	local lastDayCount = mod( lastTime, 100 )
@@ -188,7 +188,7 @@ function x808075_SXPChouJiang( sceneId, selfId, targetId )
 		return
 	end
 
-	--±³°üÊÇ·ñÓĞµØ·½....
+	--èƒŒåŒ…æ˜¯å¦æœ‰åœ°æ–¹....
 	if LuaFnGetPropertyBagSpace( sceneId, selfId ) < 1 then
 
 		BeginEvent( sceneId )
@@ -204,7 +204,7 @@ function x808075_SXPChouJiang( sceneId, selfId, targetId )
 
 	end
 
-	--ÊÇ·ñ¼¯ÆëÁËËùÓĞµÄ×Ö....
+	--æ˜¯å¦é›†é½äº†æ‰€æœ‰çš„å­—....
 	if 0 == x808075_CheckHaveAllWord( sceneId, selfId, targetId ) then
 		BeginEvent( sceneId )
 			AddText( sceneId, "#{BBSXP_20080229_08}" )
@@ -213,16 +213,16 @@ function x808075_SXPChouJiang( sceneId, selfId, targetId )
 		return
 	end
 
-	--¿Û³ıÍæ¼ÒµÄ×Ö....
+	--æ‰£é™¤ç©å®¶çš„å­—....
 	if 0 == x808075_DelAllWord( sceneId, selfId, targetId ) then
 		BeginEvent( sceneId )
-			AddText( sceneId, "¿Û³ıÎïÆ·Ê§°Ü£¡" )
+			AddText( sceneId, "æ‰£é™¤ç‰©å“å¤±è´¥ï¼" )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 		return
 	end
 
-	--ËùÓĞÌõ¼şÂú×ã....¸øÍæ¼Ò½±Æ·....
+	--æ‰€æœ‰æ¡ä»¶æ»¡è¶³....ç»™ç©å®¶å¥–å“....
 	local giftName = x808075_SXPGiveGift( sceneId, selfId, targetId )
 
 	BeginEvent( sceneId )
@@ -230,10 +230,10 @@ function x808075_SXPChouJiang( sceneId, selfId, targetId )
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, selfId, targetId )
 
-	--¸øbuff....
+	--ç»™buff....
 	LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, x808075_g_SXPBuffId, 0)
 
-	--¼ÇÂ¼½ñÌì³é¹ıÒ»´ÎÁË....
+	--è®°å½•ä»Šå¤©æŠ½è¿‡ä¸€æ¬¡äº†....
 	lastDayCount = lastDayCount + 1
 	lastTime = lastDayTime * 100 + lastDayCount
 	SetMissionData( sceneId, selfId, MD_SHUANGXIANGPAO_LASTTIME, lastTime )
@@ -242,33 +242,33 @@ function x808075_SXPChouJiang( sceneId, selfId, targetId )
 end
 
 --**********************************
---¸øÍæ¼ÒË«ÏìÅÚ½±Æ·....
+--ç»™ç©å®¶åŒå“ç‚®å¥–å“....
 --**********************************
 function x808075_SXPGiveGift( sceneId, selfId, targetId )
 
 	local CurLevel = GetLevel( sceneId, selfId )
 	local msg = "@*;SrvMsg;SCA:".."#{BBSXP_20080229_12}#{_INFOUSR%s}#{BBSXP_20080229_13}#{_INFOMSG%s}#{BBSXP_20080229_14}"
-	local msg2 = "@*;SrvMsg;SCA:".."#PÔÚ#G±¦±¦Ë«ÏìÅÚ»î¶¯#PÖĞ£¬#{_INFOUSR%s}#P´ÕÆëÁËËùÓĞ×ÖÔª£¬²¢ÇÒÔÚ#G´óÀí#Y¹¨²ÊÔÆ#G£¨170£¬122£©#P´¦³éµ½ÁË#Y%d#P¾­ÑéÖµ¡£"
+	local msg2 = "@*;SrvMsg;SCA:".."#Påœ¨#Gå®å®åŒå“ç‚®æ´»åŠ¨#Pä¸­ï¼Œ#{_INFOUSR%s}#På‡‘é½äº†æ‰€æœ‰å­—å…ƒï¼Œå¹¶ä¸”åœ¨#Gå¤§ç†#Yé¾šå½©äº‘#Gï¼ˆ170ï¼Œ122ï¼‰#På¤„æŠ½åˆ°äº†#Y%.0f#Pç»éªŒå€¼ã€‚"
 
 	local rand = random(10000)
 
 	if rand <= 1000 then
 
-		--10/100¸øÑ¼×ìÊŞ....
+		--10/100ç»™é¸­å˜´å…½....
 		local BagIndex = TryRecieveItem( sceneId, selfId, x808075_g_DuckItemId, QUALITY_MUST_BE_CHANGE )
 		if BagIndex ~= -1 then
-			--·¢¹«¸æ....
+			--å‘å…¬å‘Š....
 			local ItemInfo = GetBagItemTransfer( sceneId, selfId, BagIndex )
 			local str = format( msg, GetName(sceneId,selfId), ItemInfo )
 			AddGlobalCountNews( sceneId, str )
-			--¼ÇÂ¼»ñµÃÑ¼×ìÊŞ....
+			--è®°å½•è·å¾—é¸­å˜´å…½....
 			AuditShuangXiangPao( sceneId, selfId, 1 )
 		end
 		return "#{_ITEM"..x808075_g_DuckItemId.."}"
 
 	elseif rand <= 2500 then
 
-		--15/100¸øÃ«Â¿....
+		--15/100ç»™æ¯›é©´....
 		local itemId = x808075_g_DonkeyItemId5
 		if CurLevel >= 65 then
 			itemId = x808075_g_DonkeyItemId65
@@ -282,40 +282,40 @@ function x808075_SXPGiveGift( sceneId, selfId, targetId )
 
 		local BagIndex = TryRecieveItem( sceneId, selfId, itemId, QUALITY_MUST_BE_CHANGE )
 		if BagIndex ~= -1 then
-			--·¢¹«¸æ....
+			--å‘å…¬å‘Š....
 			local ItemInfo = GetBagItemTransfer( sceneId, selfId, BagIndex )
 			local str = format( msg, GetName(sceneId,selfId), ItemInfo )
 			AddGlobalCountNews( sceneId, str )
-			--¼ÇÂ¼»ñµÃÃ«Â¿....
+			--è®°å½•è·å¾—æ¯›é©´....
 			AuditShuangXiangPao( sceneId, selfId, 2 )
 		end
 		return "#{_ITEM"..itemId.."}"
 
 	else
 
-		--75/100¸ø¾­Ñé....
+		--75/100ç»™ç»éªŒ....
 		local CurExp = x808075_g_ExpTbl[CurLevel]
 		if CurExp and CurExp > 0 then
 			LuaFnAddExp( sceneId, selfId, CurExp )
-			--¼ÇÂ¼»ñµÃ¾­Ñé....
+			--è®°å½•è·å¾—ç»éªŒ....
 			AuditShuangXiangPao( sceneId, selfId, 3 )
-			--·¢¹«¸æ....
+			--å‘å…¬å‘Š....
 			local str = format( msg2, GetName(sceneId,selfId), CurExp )
 			AddGlobalCountNews( sceneId, str )
 
 		end
-		return CurExp.."¾­Ñé"
+		return CurExp.."ç»éªŒ"
 
 	end
 
 end
 
 --**********************************
---¸ø±¦±¦Ë«ÏìÅÚbuff....
+--ç»™å®å®åŒå“ç‚®buff....
 --**********************************
 function x808075_SXPGiveBuff( sceneId, selfId, targetId )
 
-	--³¢ÊÔ¿Û³ıÒ»¸ö×Ö....
+	--å°è¯•æ‰£é™¤ä¸€ä¸ªå­—....
 	if 0 == x808075_DelOneWord( sceneId, selfId, targetId ) then
 		BeginEvent( sceneId )
 			AddText( sceneId, "#{BBSXP_20080229_10}" )
@@ -324,13 +324,13 @@ function x808075_SXPGiveBuff( sceneId, selfId, targetId )
 		return
 	end
 
-	--¸øbuff....
+	--ç»™buff....
 	LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, x808075_g_SXPBuffId, 0)
 
-	--¼ÇÂ¼¶Ò»»buff....
+	--è®°å½•å…‘æ¢buff....
 	AuditShuangXiangPao( sceneId, selfId, 4 )
 
-	--¹Ø±ÕNPC¶Ô»°´°¿Ú....
+	--å…³é—­NPCå¯¹è¯çª—å£....
 	BeginUICommand(sceneId)
 	EndUICommand(sceneId)
 	DispatchUICommand(sceneId,selfId, 1000)
@@ -338,7 +338,7 @@ function x808075_SXPGiveBuff( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²âÍæ¼ÒÊÇ·ñÓĞËùÓĞµÄ×Ö....
+--æ£€æµ‹ç©å®¶æ˜¯å¦æœ‰æ‰€æœ‰çš„å­—....
 --**********************************
 function x808075_CheckHaveAllWord( sceneId, selfId, targetId )
     
@@ -355,7 +355,7 @@ function x808075_CheckHaveAllWord( sceneId, selfId, targetId )
 end
 
 --**********************************
---É¾³ıÍæ¼ÒËùÓĞµÄ×Ö....
+--åˆ é™¤ç©å®¶æ‰€æœ‰çš„å­—....
 --**********************************
 function x808075_DelAllWord( sceneId, selfId, targetId )
     
@@ -372,7 +372,7 @@ function x808075_DelAllWord( sceneId, selfId, targetId )
 end
 
 --**********************************
---É¾³ıÍæ¼ÒµÄÒ»¸ö×Ö....
+--åˆ é™¤ç©å®¶çš„ä¸€ä¸ªå­—....
 --**********************************
 function x808075_DelOneWord( sceneId, selfId, targetId )
     
@@ -389,7 +389,7 @@ function x808075_DelOneWord( sceneId, selfId, targetId )
 end
 
 --**********************************
---Íæ¼ÒµÚÒ»´ÎµÇÂ¼Ê±»Øµ÷±¾º¯Êı....
+--ç©å®¶ç¬¬ä¸€æ¬¡ç™»å½•æ—¶å›è°ƒæœ¬å‡½æ•°....
 --**********************************
 function x808075_OnPlayerFirstLogin( sceneId, selfId )
 

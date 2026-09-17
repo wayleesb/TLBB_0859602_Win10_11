@@ -1,4 +1,4 @@
-INT	INT
+INT	STRING
 Level	Exp
 1	90
 2	324

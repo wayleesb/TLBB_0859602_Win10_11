@@ -4,20 +4,20 @@ x212113_g_MissionId = 678
 x212113_g_PreMissionId1 = 673
 x212113_g_PreMissionId2 = 674
 x212113_g_PreMissionId3 = 675
-x212113_g_Name	="ÔÂ¼¾"
+x212113_g_Name	="æœˆå­£"
 x212113_g_MissionKind = 44
 x212113_g_MissionLevel = 70
 x212113_g_IfMissionElite = 0
-x212113_g_MissionName="×ï¿ı»öÊ×"
+x212113_g_MissionName="ç½ªé­ç¥¸é¦–"
 x212113_g_MissionInfo="#{Mis_K_Meiling_1000183}"
-x212113_g_MissionTarget="    Ã·ÁëµÄÔÂ¼¾#{_INFOAIM192,70,33,ÔÂ¼¾}ÒªÇóÄãÉ±ËÀÑÏ°×»¢¡£Ğ¡ĞÄ£¬Ö»ÒªÔÂ¼¾¿ªÊ¼¼Àìë£¬#RÑÏ°×»¢#W¾Í»á³öÏÖ¡£"		
-x212113_g_ContinueInfo="  ÄãÒÑ¾­É±ËÀÑÏ°×»¢ÁËÂğ£¿"
-x212113_g_MissionComplete="  Ğ»Ğ»Äã£¬Ğ»Ğ»Äã¡£¿È¿È¡­¡­ÎÒÃ»ÊÂ£¬Ã¿´Î¼Àìë×Ü»áÏûºÄÒ»Ğ©ÕæÆøµÄ¡­¡­"		
+x212113_g_MissionTarget="    æ¢…å²­çš„æœˆå­£#{_INFOAIM192,70,33,æœˆå­£}è¦æ±‚ä½ æ€æ­»ä¸¥ç™½è™ã€‚å°å¿ƒï¼Œåªè¦æœˆå­£å¼€å§‹ç¥­ç¥€ï¼Œ#Rä¸¥ç™½è™#Wå°±ä¼šå‡ºç°ã€‚"		
+x212113_g_ContinueInfo="  ä½ å·²ç»æ€æ­»ä¸¥ç™½è™äº†å—ï¼Ÿ"
+x212113_g_MissionComplete="  è°¢è°¢ä½ ï¼Œè°¢è°¢ä½ ã€‚å’³å’³â€¦â€¦æˆ‘æ²¡äº‹ï¼Œæ¯æ¬¡ç¥­ç¥€æ€»ä¼šæ¶ˆè€—ä¸€äº›çœŸæ°”çš„â€¦â€¦"		
 x212113_g_MoneyBonus=51700
 x212113_g_exp=37000
-x212113_g_szMonsterName = "ÑÏ°×»¢"
+x212113_g_szMonsterName = "ä¸¥ç™½è™"
 x212113_g_MonsterID = 525
-x212113_g_Custom	= { {id="ÒÑÉ±ËÀÑÏ°×»¢",num=1} }
+x212113_g_Custom	= { {id="å·²æ€æ­»ä¸¥ç™½è™",num=1} }
 x212113_g_IsMissionOkFail = 0
 x212113_g_RadioItemBonus={{id=10412072 ,num=1},{id=10403056,num=1}}
 --MisDescEnd

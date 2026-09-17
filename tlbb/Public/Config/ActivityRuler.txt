@@ -1,8 +1,8 @@
 INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT	INT
 actid	sceneid_0	rate_0	sceneid_1	rate_1	sceneid_2	rate_2	sceneid_3	rate_3	sceneid_4	rate_4	sceneid_5	rate_5	sceneid_6	rate_6	sceneid_7	rate_7	sceneid_8	rate_8	sceneid_9	rate_9
-#<0>actid	»î¶¯±àºÅ																			
-#<1>sceneid_?	Group?£º³¡¾°ID																			
-#<2>rate_?	Group?£ºËæ»ú·Ö×Ó£¬·ÖÄ¸ÎªÍ¬×éÖĞËùÓĞ·Ö×ÓµÄºÍ																			
+#<0>actid	æ´»åŠ¨ç¼–å·																			
+#<1>sceneid_?	Group?ï¼šåœºæ™¯ID																			
+#<2>rate_?	Group?ï¼šéšæœºåˆ†å­ï¼Œåˆ†æ¯ä¸ºåŒç»„ä¸­æ‰€æœ‰åˆ†å­çš„å’Œ																			
 #																				
 0	0	1	1	1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1
 6	140	1	139	1	142	1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1

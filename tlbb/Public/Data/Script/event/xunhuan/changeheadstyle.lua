@@ -1,21 +1,21 @@
---[ ´´½¨ÈË QUFEI 2007-12-15 16:40 UPDATE BugID 26242 ]
---µ÷ÕûÍ·Ïñ
---½Å±¾ºÅ
+--[ åˆ›å»ºäºº QUFEI 2007-12-15 16:40 UPDATE BugID 26242 ]
+--è°ƒæ•´å¤´åƒ
+--è„šæœ¬å·
 x805030_g_ScriptId = 805030
 
---µ÷ÕûÍ·ÏñUI 112730
+--è°ƒæ•´å¤´åƒUI 112730
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x805030_OnEnumerate( sceneId, selfId, targetId )
-	-- µ÷ÊÔĞÅÏ¢
+	-- è°ƒè¯•ä¿¡æ¯
 	--BeginEvent(sceneId)
-	--	AddText(sceneId, "½øÈëµ÷ÕûÍ·Ïñ½Å±¾");
+	--	AddText(sceneId, "è¿›å…¥è°ƒæ•´å¤´åƒè„šæœ¬");
 	--EndEvent(sceneId)
 	--DispatchMissionTips(sceneId,selfId)	
 	
-	-- ÎªÊ²Ã´Òª NPC Ãû×Ö£¿
+	-- ä¸ºä»€ä¹ˆè¦ NPC åå­—ï¼Ÿ
 	local TransportNPCName=GetName(sceneId,targetId);
 
 	BeginUICommand(sceneId)
@@ -27,61 +27,61 @@ function x805030_OnEnumerate( sceneId, selfId, targetId )
 end
 
 --**********************************
---µ÷ÕûÍ·Ïñ
+--è°ƒæ•´å¤´åƒ
 --**********************************
 function x805030_FinishAdjust( sceneId, selfId, styleId )
 	
-	-- Í·ÏñÎ´Ñ¡ÖĞ»òÑ¡ÖĞÎŞĞ§
+	-- å¤´åƒæœªé€‰ä¸­æˆ–é€‰ä¸­æ— æ•ˆ
 	if styleId <= 0 then														
 		x805030_NotifyTip( sceneId, selfId, "#{INTERHEAD_XML_004}" )
 		return		
 	end
 	
-	-- µÃµ½µ÷ÕûÍ·ÏñËùĞèÎïÆ·µÄid¼°ÆäÊıÁ¿
+	-- å¾—åˆ°è°ƒæ•´å¤´åƒæ‰€éœ€ç‰©å“çš„idåŠå…¶æ•°é‡
 	local ItemId, ItemCount = GetChangeHeadInfo(styleId)
 		
-	-- ·µ»ØÖµ·Ç·¨
+	-- è¿”å›å€¼éæ³•
 	if ItemId < 0 or ItemCount < 0 then
 		return
 	end
 	
 	local nItemNum = LuaFnGetAvailableItemCount( sceneId, selfId, ItemId )
 
-	--ÏûºÄÎïÆ·ÊÇ·ñ¹»ÓÃ»òËø¶¨
+	--æ¶ˆè€—ç‰©å“æ˜¯å¦å¤Ÿç”¨æˆ–é”å®š
 	if ItemCount > nItemNum then
 		x805030_NotifyTip( sceneId, selfId, "#{INTERHEAD_XML_005}" )
 		return
 	end
 
-	-- ÎïÆ·¼ì²âÍ¨¹ı£¬ÔÙ¼ì²éÍæ¼Ò½ğÇ®
+	-- ç‰©å“æ£€æµ‹é€šè¿‡ï¼Œå†æ£€æŸ¥ç©å®¶é‡‘é’±
 	local moneyJZ = GetMoneyJZ (sceneId, selfId);
 	local money = GetMoney (sceneId, selfId);
 	
-	-- ÎïÆ·ºÍ½ğÇ®¼ì²â¶¼Í¨¹ı
+	-- ç‰©å“å’Œé‡‘é’±æ£€æµ‹éƒ½é€šè¿‡
 	if (moneyJZ + money >= 50000)	then
-		-- ÉèÖÃÍæ¼ÒĞÂÍ·Ïñ£¨»áÔÚÕâ¸ö¹ı³ÌÖĞÏûºÄÎïÆ·ºÍ½ğÇ®£©
+		-- è®¾ç½®ç©å®¶æ–°å¤´åƒï¼ˆä¼šåœ¨è¿™ä¸ªè¿‡ç¨‹ä¸­æ¶ˆè€—ç‰©å“å’Œé‡‘é’±ï¼‰
 		local ret = ChangePlayerHeadImage( sceneId, selfId, styleId )	
-		if ret == 0  then																--³É¹¦
+		if ret == 0  then																--æˆåŠŸ
 			x805030_NotifyTip( sceneId, selfId, "#{INTERHEAD_XML_010}" )		
 					
-		-- ÒÔÏÂÎª²Ù×÷Ê§°ÜÊ±µÄ²¿·Ö´íÎóĞÅÏ¢
-		elseif ret == 1 then														--ËùÑ¡µÄÍ·ÏñÓëÍæ¼Òµ±Ç°µÄÍ·ÏñÒ»ÖÂ
+		-- ä»¥ä¸‹ä¸ºæ“ä½œå¤±è´¥æ—¶çš„éƒ¨åˆ†é”™è¯¯ä¿¡æ¯
+		elseif ret == 1 then														--æ‰€é€‰çš„å¤´åƒä¸ç©å®¶å½“å‰çš„å¤´åƒä¸€è‡´
 			x805030_NotifyTip( sceneId, selfId, "#{INTERHEAD_XML_009}" )				
 			return
-		elseif ret == 3 then														--Ã»ÓĞĞèÒªÏûºÄµÄÎïÆ·»ò¸ÃÎïÆ·±»Ëø¶¨
+		elseif ret == 3 then														--æ²¡æœ‰éœ€è¦æ¶ˆè€—çš„ç‰©å“æˆ–è¯¥ç‰©å“è¢«é”å®š
 			x805030_NotifyTip( sceneId, selfId, "#{INTERHEAD_XML_005}" )				
 			return
 		else
 			return
 		end
 	
-	-- ½ğÇ®²»×ã	
+	-- é‡‘é’±ä¸è¶³	
 	else
 		x805030_NotifyTip( sceneId, selfId, "#{INTERHEAD_XML_006}" )						
 		return
 	end
 	
-	-- ·¢²¼¹«¸æ
+	-- å‘å¸ƒå…¬å‘Š
 	local message;
 	if random(2) == 1 then
 		message = format("#W#{_INFOUSR%s}#{INTERHEAD_XML_007}", LuaFnGetName(sceneId, selfId));
@@ -91,13 +91,13 @@ function x805030_FinishAdjust( sceneId, selfId, styleId )
 
 	BroadMsgByChatPipe(sceneId, selfId, message, 4);
 		
-	-- ¼ÇÂ¼³É¹¦ĞŞ¸ÄÍ·ÏñµÄÍæ¼ÒÈÕÖ¾
+	-- è®°å½•æˆåŠŸä¿®æ”¹å¤´åƒçš„ç©å®¶æ—¥å¿—
 	AuditChangeHead( sceneId, selfId, styleId )
 		
 end
 
 --**********************************
--- ÆÁÄ»ÉÏµÄĞÑÄ¿ÌáÊ¾
+-- å±å¹•ä¸Šçš„é†’ç›®æç¤º
 --**********************************
 function x805030_NotifyTip( sceneId, selfId, msg )
 

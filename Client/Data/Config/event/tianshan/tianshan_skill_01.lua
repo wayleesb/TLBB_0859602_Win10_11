@@ -3,20 +3,20 @@ x228902_g_ScriptId = 228902
 x228902_g_Position_X = 217
 x228902_g_Position_Z = 255
 x228902_g_SceneID = 2
-x228902_g_AccomplishNPC_Name = "ÍõÉØ"
+x228902_g_AccomplishNPC_Name = "ç‹éŸ¶"
 x228902_g_MissionId = 944
-x228902_g_Name = "À¼½£"
+x228902_g_Name = "å…°å‰‘"
 x228902_g_MissionKind = 28
 x228902_g_MissionLevel = 30
 x228902_g_IfMissionElite = 0
-x228902_g_MissionName = "×ÔÁ¢ÃÅ»§"
+x228902_g_MissionName = "è‡ªç«‹é—¨æˆ·"
 x228902_g_MissionInfo = "#{TIANSHAN_SKILL_01}"
-x228902_g_MissionTarget = "    ÔÚ#G´óÀí³ÇĞŞÎÄÌ¨#WÕÒµ½#RÍõÉØ#W#{_INFOAIM217,255,2,ÍõÉØ}¡£"
+x228902_g_MissionTarget = "    åœ¨#Gå¤§ç†åŸä¿®æ–‡å°#Wæ‰¾åˆ°#Rç‹éŸ¶#W#{_INFOAIM217,255,2,ç‹éŸ¶}ã€‚"
 x228902_g_MissionContinue = "    "
 x228902_g_MissionComplete = "#{TIANSHAN_SKILL_02}"
 x228902_g_MoneyBonus = 1000
 x228902_g_exp = 2000
-x228902_g_IsMissionOkFail = 0					-- ÊÇ·ñÍê³ÉÈÎÎñµÄ±ê¼ÇÎ»
-x228902_g_IsFindTarget = 1						-- ÊÇ·ñÕÒµ½ÍõÉØ±ê¼ÇÎ»
-x228902_g_Custom = { { id = "ÒÑÕÒµ½ÍõÉØ", num = 1 } }
+x228902_g_IsMissionOkFail = 0					-- æ˜¯å¦å®Œæˆä»»åŠ¡çš„æ ‡è®°ä½
+x228902_g_IsFindTarget = 1						-- æ˜¯å¦æ‰¾åˆ°ç‹éŸ¶æ ‡è®°ä½
+x228902_g_Custom = { { id = "å·²æ‰¾åˆ°ç‹éŸ¶", num = 1 } }
 --MisDescEnd

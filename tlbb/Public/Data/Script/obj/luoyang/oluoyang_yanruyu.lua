@@ -1,21 +1,21 @@
 -- 000131
 -- 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x000131_g_scriptId = 000131
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x000131_g_eventList = { 805029, 805030 }
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x000131_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
-		AddText(sceneId,"  Ë×»°Ëµ£¬ÏàÓÉĞÄÉú£¬¿Í¹Ù¶Ô×Ô¼ºµÄÈİÃ²¿É·ñÂúÒâÄØ£¬Òª²»ÒªÉÔÉÔ×öĞ©¸Ä±ä£¿")
-		AddNumText( sceneId, x000131_g_scriptId, "ĞŞÕûÈİÃ²½éÉÜ", 11, 10 )
-		AddNumText(sceneId,x000131_g_scriptId,"ĞŞÕûÈİÃ²",6,1)
-		AddNumText( sceneId, x000131_g_scriptId, "ĞŞ¸ÄÍ·Ïñ½éÉÜ", 11, 14 )
-		AddNumText(sceneId,x000131_g_scriptId,"ĞŞ¸ÄÍ·Ïñ",6,4)
+		AddText(sceneId,"  ä¿—è¯è¯´ï¼Œç›¸ç”±å¿ƒç”Ÿï¼Œå®¢å®˜å¯¹è‡ªå·±çš„å®¹è²Œå¯å¦æ»¡æ„å‘¢ï¼Œè¦ä¸è¦ç¨ç¨åšäº›æ”¹å˜ï¼Ÿ")
+		AddNumText( sceneId, x000131_g_scriptId, "ä¿®æ•´å®¹è²Œä»‹ç»", 11, 10 )
+		AddNumText(sceneId,x000131_g_scriptId,"ä¿®æ•´å®¹è²Œ",6,1)
+		AddNumText( sceneId, x000131_g_scriptId, "ä¿®æ”¹å¤´åƒä»‹ç»", 11, 14 )
+		AddNumText(sceneId,x000131_g_scriptId,"ä¿®æ”¹å¤´åƒ",6,4)
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 end
@@ -37,12 +37,12 @@ function x000131_OnEventRequest( sceneId, selfId, targetId, eventId )
 	end
 	
 	if GetNumText() == 1 then
-		-- ĞŞ¸ÄÁ³ĞÍ
+		-- ä¿®æ”¹è„¸å‹
 		CallScriptFunction( 805029, "OnEnumerate",sceneId, selfId, targetId )
 		return
 	end
 	if GetNumText() == 4 then
-		-- ĞŞ¸ÄÍ·Ïñ
+		-- ä¿®æ”¹å¤´åƒ
 		CallScriptFunction( 805030, "OnEnumerate",sceneId, selfId, targetId )
 		return
 	end

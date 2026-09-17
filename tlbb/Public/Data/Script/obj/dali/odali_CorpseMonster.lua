@@ -1,11 +1,11 @@
---¶¯Ì¬Éú³ÉµÄ½©Ê¬
+--åŠ¨æ€ç”Ÿæˆçš„åƒµå°¸
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x002073_OnDefaultEvent( sceneId, selfId, targetId )
-	--ÅĞ¶ÏÊÇ·ñÄÜ¹»¼¤»î¸ÃnpcµÄÌõ¼ş
-	--PrintStr("haha...ÎÒÊÇ½©Ê¬")
+	--åˆ¤æ–­æ˜¯å¦èƒ½å¤Ÿæ¿€æ´»è¯¥npcçš„æ¡ä»¶
+	--PrintStr("haha...æˆ‘æ˜¯åƒµå°¸")
 	local npcLevel = GetCharacterLevel(sceneId, targetId)
 	local teamCount = GetTeamMemberCount(sceneId, selfId)
 	local teamLeaderID = GetTeamLeader(sceneId, selfId)
@@ -18,20 +18,20 @@ function x002073_OnDefaultEvent( sceneId, selfId, targetId )
 	
 	if  teamCount < 2 then	
 		BeginEvent(sceneId)
-			AddText(sceneId, "µ¨¸ÒĞ¡¿´ÎÒ£¬±ØĞëµÃ3ÈË×é¶Ó²ÅĞĞàŞ, ¹ş¹ş")
+			AddText(sceneId, "èƒ†æ•¢å°çœ‹æˆ‘ï¼Œå¿…é¡»å¾—3äººç»„é˜Ÿæ‰è¡Œå™¢, å“ˆå“ˆ")
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 		return
 	elseif teamLeaderLevel < npcLevel then
-		--ÌáÊ¾Ìõ¼ş²»·û
+		--æç¤ºæ¡ä»¶ä¸ç¬¦
 		BeginEvent(sceneId)
-			AddText(sceneId, "µ¨¸ÒĞ¡¿´ÎÒ£¬µÈ¼¶ÔÙ¸ßĞ©¾ÍÖªµÀÎÒµÄÀ÷º¦ÁË")
+			AddText(sceneId, "èƒ†æ•¢å°çœ‹æˆ‘ï¼Œç­‰çº§å†é«˜äº›å°±çŸ¥é“æˆ‘çš„å‰å®³äº†")
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 		return
 
 	else
-		--¼¤»înpc, ÆäÊµÊÇÉú³ÉÁËÒ»¸öÄ£ĞÍÏàÍ¬µÄĞÂµÄNPC
+		--æ¿€æ´»npc, å…¶å®æ˜¯ç”Ÿæˆäº†ä¸€ä¸ªæ¨¡å‹ç›¸åŒçš„æ–°çš„NPC
 		local PosX,PosZ=LuaFnGetWorldPos(sceneId, targetId)
 		PosX=floor(PosX)
 		PosZ=floor(PosZ)

@@ -1,21 +1,21 @@
---Õäçç¸±±¾ÈÎÎñnpc
+--çç‘å‰¯æœ¬ä»»åŠ¡npc
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x402001_g_scriptId = 402001
 
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x402001_g_eventList={401001}
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x402001_UpdateEventList( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
 	
-		AddNumText( sceneId, x402001_g_scriptId, "Æå¾Ö½éÉÜ", 11, 10 )
-		AddNumText( sceneId, x402001_g_scriptId, "Àë¿ªĞİÏ¢ÊÒ", 9, 11 )
-		AddNumText( sceneId, x402001_g_scriptId, "ÈçºÎÔÚË¢ÆåÖĞ»ñµÃ¸ü¶àµÄ¾­Ñé", 11, 512 )
+		AddNumText( sceneId, x402001_g_scriptId, "æ£‹å±€ä»‹ç»", 11, 10 )
+		AddNumText( sceneId, x402001_g_scriptId, "ç¦»å¼€ä¼‘æ¯å®¤", 9, 11 )
+		AddNumText( sceneId, x402001_g_scriptId, "å¦‚ä½•åœ¨åˆ·æ£‹ä¸­è·å¾—æ›´å¤šçš„ç»éªŒ", 11, 512 )
 
 		for i, findId in x402001_g_eventList do
 			CallScriptFunction( x402001_g_eventList[i], "OnEnumerate",sceneId, selfId, targetId )
@@ -26,14 +26,14 @@ function x402001_UpdateEventList( sceneId, selfId,targetId )
 end
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x402001_OnDefaultEvent( sceneId, selfId,targetId )
 	x402001_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x402001_OnEventRequest( sceneId, selfId, targetId, eventId )
 
@@ -47,9 +47,9 @@ function x402001_OnEventRequest( sceneId, selfId, targetId, eventId )
 		return
 	elseif Numtext == 11 then
 		BeginEvent(sceneId)	
-			AddText( sceneId, "  Èç¹ûÄãµÄ¶ÓÓÑ¶¼ÔÚĞİÏ¢ÊÒÖĞ£¬¶øÄãÈ´¶À×ÔÀë¿ªµÄ»°£¬ËûÃÇ»áÒò´ËÎŞ·¨½øÈëÆå¾Ö¡£ÄãÈ·ÈÏÒªÀë¿ªÂğ£¿" )
-			AddNumText( sceneId, x402001_g_scriptId, "È·¶¨", 8, 12 )
-			AddNumText( sceneId, x402001_g_scriptId, "È¡Ïû", 8, 13 )
+			AddText( sceneId, "  å¦‚æœä½ çš„é˜Ÿå‹éƒ½åœ¨ä¼‘æ¯å®¤ä¸­ï¼Œè€Œä½ å´ç‹¬è‡ªç¦»å¼€çš„è¯ï¼Œä»–ä»¬ä¼šå› æ­¤æ— æ³•è¿›å…¥æ£‹å±€ã€‚ä½ ç¡®è®¤è¦ç¦»å¼€å—ï¼Ÿ" )
+			AddNumText( sceneId, x402001_g_scriptId, "ç¡®å®š", 8, 12 )
+			AddNumText( sceneId, x402001_g_scriptId, "å–æ¶ˆ", 8, 13 )
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 		return
@@ -86,7 +86,7 @@ function x402001_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---ËÀÍöÊÂ¼ş
+--æ­»äº¡äº‹ä»¶
 --**********************************
 function x402001_OnDie( sceneId, selfId, killerId )
 end

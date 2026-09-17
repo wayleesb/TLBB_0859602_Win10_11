@@ -1,5 +1,5 @@
 -- mod_event
--- ÈÎÎñ±í¸ñÖĞµÄÒ»Ğ©Í¨ÓÃÊı¾İ´¦Àíº¯Êı
+-- ä»»åŠ¡è¡¨æ ¼ä¸­çš„ä¸€äº›é€šç”¨æ•°æ®å¤„ç†å‡½æ•°
 
 x006672_g_MaxRelationship = 9999
 
@@ -8,18 +8,18 @@ x006672_g_MinRelationship = 0
 x006672_g_MenpaiMission = 800
 x006672_g_MenpaiMission_1 = 810
 
--- 30~50¼¶Íæ¼ÒÁ÷Ê§ÈÎÎñ_Ê¦ÃÅÈÎÎñ
+-- 30~50çº§ç©å®¶æµå¤±ä»»åŠ¡_å¸ˆé—¨ä»»åŠ¡
 x006672_g_MissionLimitList	=	{StartIdx = 1018729, EndIdx = 1018818}
 x006672_g_AcceptMissionSceneId = {9, 11, 10, 12, 15, 16, 13, 17, 14}
 
 --**********************************
--- ÁĞ¾ÙÊÂ¼ş
+-- åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x006672_DoEnumerate( sceneId, selfId, targetId, missionIndex )
 	
 	local missionId = TGetMissionIdByIndex( missionIndex )
 
-	-- Èç¹ûÍæ¼ÒÍê³É¹ıÕâ¸öÈÎÎñ²¢ÇÒ¸ÃÈÎÎñ²»ÊÇÑ­»·ÈÎÎñ
+	-- å¦‚æœç©å®¶å®Œæˆè¿‡è¿™ä¸ªä»»åŠ¡å¹¶ä¸”è¯¥ä»»åŠ¡ä¸æ˜¯å¾ªç¯ä»»åŠ¡
 	if IsMissionHaveDone( sceneId, selfId, missionId ) > 0
 	 and TIsMissionRoundable( missionIndex ) ~= 1 then
 		return
@@ -27,7 +27,7 @@ function x006672_DoEnumerate( sceneId, selfId, targetId, missionIndex )
 
 	local missionName = TGetMissionName( missionIndex )
 
-	-- ÅĞ¶¨Íæ¼ÒµÄÌõ¼şÊÇ²»ÊÇ¹»½ÓÊÜÕâ¸öÈÎÎñ£¬Èç¹û¹»¾ÍÏÔÊ¾£¬²»¹»¾Í²»ÏÔÊ¾
+	-- åˆ¤å®šç©å®¶çš„æ¡ä»¶æ˜¯ä¸æ˜¯å¤Ÿæ¥å—è¿™ä¸ªä»»åŠ¡ï¼Œå¦‚æœå¤Ÿå°±æ˜¾ç¤ºï¼Œä¸å¤Ÿå°±ä¸æ˜¾ç¤º
 	local PrevMis = { -1, -1, -1 }
 	local nLevel = 0
 	nLevel, PrevMis[1], PrevMis[2], PrevMis[3] = TGetCheckInfo( missionIndex )
@@ -62,11 +62,11 @@ function x006672_DoEnumerate( sceneId, selfId, targetId, missionIndex )
 		end
 	end
 
-	-- ÒÑ¾­½ÓÊÕÁËÈÎÎñ
+	-- å·²ç»æ¥æ”¶äº†ä»»åŠ¡
 	if IsHaveMission( sceneId, selfId, missionId ) > 0 then
 		local completeNpcScene, completeNpcName = TGetCompleteNpcInfo( missionIndex )
 		if GetName( sceneId, targetId ) == completeNpcName then
-			-- ÊÇ·ñÎªÑ­»·ÈÎÎñ
+			-- æ˜¯å¦ä¸ºå¾ªç¯ä»»åŠ¡
 			if TIsMissionRoundable( missionIndex ) == 1 then
 				TAddNumText( sceneId, missionIndex, missionName, 4, -1 )
 			else
@@ -77,7 +77,7 @@ function x006672_DoEnumerate( sceneId, selfId, targetId, missionIndex )
 	else
 		local acceptNpcScene, acceptNpcName = TGetAcceptNpcInfo( missionIndex )
 		if GetName( sceneId, targetId ) == acceptNpcName then
-			-- ÊÇ·ñÎªÑ­»·ÈÎÎñ
+			-- æ˜¯å¦ä¸ºå¾ªç¯ä»»åŠ¡
 			if TIsMissionRoundable( missionIndex ) == 1 then
 				TAddNumText( sceneId, missionIndex, missionName, 3, -1 )
 			else
@@ -89,7 +89,7 @@ function x006672_DoEnumerate( sceneId, selfId, targetId, missionIndex )
 end
 
 --**********************************
--- ¼ì²â½ÓÊÜÌõ¼ş
+-- æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x006672_CheckAccept( sceneId, selfId, missionIndex )
 	
@@ -99,7 +99,7 @@ function x006672_CheckAccept( sceneId, selfId, missionIndex )
 	limitLevel, PrevMis[1], PrevMis[2], PrevMis[3] = TGetCheckInfo( missionIndex )
 
 	if nLevel < limitLevel then
-		x006672_NotifyFailBox( sceneId, selfId, -1, "    ÄãµÄ½­ºşÔÄÀúÌ«µÍ£¬¿ÖÅÂ²»ÄÜÊ¤ÈÎ£¬´ı" .. limitLevel .. "¼¶Ö®ºóÔÙÀ´ÕÒÎÒ°É¡£" )
+		x006672_NotifyFailBox( sceneId, selfId, -1, "    ä½ çš„æ±Ÿæ¹–é˜…å†å¤ªä½ï¼Œææ€•ä¸èƒ½èƒœä»»ï¼Œå¾…" .. limitLevel .. "çº§ä¹‹åå†æ¥æ‰¾æˆ‘å§ã€‚" )
 		return 0
 	end
 	
@@ -156,15 +156,15 @@ function x006672_CheckAccept( sceneId, selfId, missionIndex )
 end
 
 --**********************************
--- È¡µÃÒ»¸ö¶¯Ì¬µÄ¶Ô»°¸ñÊ½»¯×Ö·û´®
--- missionIndex: ÈÎÎñÔÚÈÎÎñ±íÖĞµÄ±àºÅ
--- duologueContent: ¶Ô»°ÄÚÈİ£¬Èç¹ûÊÇ¹Ì¶¨¶Ô»°£¬ÔòÖ±½Ó·µ»Ø
+-- å–å¾—ä¸€ä¸ªåŠ¨æ€çš„å¯¹è¯æ ¼å¼åŒ–å­—ç¬¦ä¸²
+-- missionIndex: ä»»åŠ¡åœ¨ä»»åŠ¡è¡¨ä¸­çš„ç¼–å·
+-- duologueContent: å¯¹è¯å†…å®¹ï¼Œå¦‚æœæ˜¯å›ºå®šå¯¹è¯ï¼Œåˆ™ç›´æ¥è¿”å›
 --**********************************
 function x006672_GetRandomDuologue( sceneId, missionIndex, duologueContent )
 	
-	-- Ëæ»ú¶Ô»°ĞèÒªÏÈÌôÑ¡³öÒ»¾äÀ´
+	-- éšæœºå¯¹è¯éœ€è¦å…ˆæŒ‘é€‰å‡ºä¸€å¥æ¥
 	local duologueList = {}
-	-- °ÑËæ»úÑ¡ÏîİÍÈ¡³öÀ´£¬Èûµ½ duologueList ÀïÃæ
+	-- æŠŠéšæœºé€‰é¡¹èƒå–å‡ºæ¥ï¼Œå¡åˆ° duologueList é‡Œé¢
 	gsub( duologueContent, "(%d+)", function(n) tinsert( %duologueList, tonumber(n) ) end )
 
 	-- print( duologueList )
@@ -173,7 +173,7 @@ function x006672_GetRandomDuologue( sceneId, missionIndex, duologueContent )
 		return ""
 	end
 
-	-- ĞÂÔöµÄ½Ó¿Ú¶ÁĞÂÔöµÄ±í¸ñ£¬È¡»ØÄ³¾ä¶Ô»°
+	-- æ–°å¢çš„æ¥å£è¯»æ–°å¢çš„è¡¨æ ¼ï¼Œå–å›æŸå¥å¯¹è¯
 	duologueContent = TGetDuologue( sceneId, duologueList[random( getn(duologueList) )] )
 
 	-- print( duologueContent )
@@ -186,13 +186,13 @@ function x006672_GetRandomDuologue( sceneId, missionIndex, duologueContent )
 end
 
 --**********************************
--- ¸ñÊ½»¯Ò»¸ö¶¯Ì¬µÄ¶Ô»°¸ñÊ½»¯×Ö·û´®
--- ¸ñÊ½»¯ÖĞµÄÄ£Ê½
---	%R: Íæ¼ÒµÄ³ÆÎ½£¨ÉÙÏÀ£¬ÏÀÅ®£©
---	%n: NPC µÄÃû×Ö
---	%l: NPC µÄÎ»ÖÃÒÔ¼°×ø±ê
---	%g: NPC µÄĞÔ±ğ£¨Ëû£¬Ëı£©
---	%i: ÈÎÎñÎïÆ·µÄÃû×Ö
+-- æ ¼å¼åŒ–ä¸€ä¸ªåŠ¨æ€çš„å¯¹è¯æ ¼å¼åŒ–å­—ç¬¦ä¸²
+-- æ ¼å¼åŒ–ä¸­çš„æ¨¡å¼
+--	%R: ç©å®¶çš„ç§°è°“ï¼ˆå°‘ä¾ ï¼Œä¾ å¥³ï¼‰
+--	%n: NPC çš„åå­—
+--	%l: NPC çš„ä½ç½®ä»¥åŠåæ ‡
+--	%g: NPC çš„æ€§åˆ«ï¼ˆä»–ï¼Œå¥¹ï¼‰
+--	%i: ä»»åŠ¡ç‰©å“çš„åå­—
 --**********************************
 function x006672_FormatDuologue( sceneId, selfId, duologueContent, npcId, itemIndex, itemList )
 	
@@ -200,30 +200,30 @@ function x006672_FormatDuologue( sceneId, selfId, duologueContent, npcId, itemIn
 		return ""
 	end
 
-	-- ¶Ô¶Ô»°½øĞĞ±äÁ¿Ìæ»»
+	-- å¯¹å¯¹è¯è¿›è¡Œå˜é‡æ›¿æ¢
 	if strfind( duologueContent, "%R", 1, 1 ) then
 		local PlayerGender = GetSex( sceneId, selfId )
 		local rank
 
 		if PlayerGender == 0 then
-			rank = "ÏÀÅ®"
+			rank = "ä¾ å¥³"
 		else
-			rank = "ÉÙÏÀ"
+			rank = "å°‘ä¾ "
 		end
 
 		duologueContent = gsub( duologueContent, "%%R", rank )
 	end
 
-	-- ÓĞËæ»ú NPC
+	-- æœ‰éšæœº NPC
 	if npcId and npcId ~= -1 then
 		local nNpcId, strNpcName, strNpcScene, nPosX, nPosZ, strNPCDesc, nScene, nGender, nLevel, nType
 			= GetNpcInfoByNpcId(sceneId, npcId )
 
 		local strGender = {}
-		strGender[0] = "Ëı"
-		strGender[1] = "Ëû"
+		strGender[0] = "å¥¹"
+		strGender[1] = "ä»–"
 
-		-- ¶Ô¶Ô»°½øĞĞ±äÁ¿Ìæ»»
+		-- å¯¹å¯¹è¯è¿›è¡Œå˜é‡æ›¿æ¢
 		-- if strfind( duologueContent, "%l", 1, 1 ) then
 		--	duologueContent = gsub( duologueContent, "%%l", "" )
 		-- end
@@ -231,7 +231,7 @@ function x006672_FormatDuologue( sceneId, selfId, duologueContent, npcId, itemIn
 		if strfind( duologueContent, "%n", 1, 1 ) then
 			local newLocation
 			if nPosX > 0 and nPosZ > 0 then
-				newLocation = strNpcScene .. strNpcName ..  "£¨" .. nPosX .. "£¬" .. nPosZ .. "£©"
+				newLocation = strNpcScene .. strNpcName ..  "ï¼ˆ" .. nPosX .. "ï¼Œ" .. nPosZ .. "ï¼‰"
 			else
 				newLocation = strNpcScene .. strNpcName
 			end
@@ -264,7 +264,7 @@ function x006672_FormatDuologue( sceneId, selfId, duologueContent, npcId, itemIn
 end
 
 --**********************************
--- ÏÔÊ¾ÈÎÎñ½±Àø
+-- æ˜¾ç¤ºä»»åŠ¡å¥–åŠ±
 --**********************************
 function x006672_DisplayBonus( sceneId, missionIndex, selfId )
 	
@@ -328,7 +328,7 @@ function x006672_DisplayBonus( sceneId, missionIndex, selfId )
 		 (missionIndex >= 1009000 and missionIndex <= 1009027) or
 		 (missionIndex >= 1009100 and missionIndex <= 1009103) then
 		
-		-- Ê¹ÓÃÍæ¼Ò×Ô¼ºµÄµÈ¼¶À´¼ÆËãµÃµ½µÄ½±Àø
+		-- ä½¿ç”¨ç©å®¶è‡ªå·±çš„ç­‰çº§æ¥è®¡ç®—å¾—åˆ°çš„å¥–åŠ±
 		awardMoney = GetLevel(sceneId, selfId) * 18 -101
 	end
 	
@@ -336,7 +336,7 @@ function x006672_DisplayBonus( sceneId, missionIndex, selfId )
 end
 
 --**********************************
--- ½±Àø¹ØÏµÖµ
+-- å¥–åŠ±å…³ç³»å€¼
 --**********************************
 function x006672_RewardRelationShip( sceneId, selfId, missionIndex, targetId )
 	
@@ -350,59 +350,59 @@ function x006672_RewardRelationShip( sceneId, selfId, missionIndex, targetId )
 	local nLimitiIndex = -1
 	
 	if mdLocation == MD_RELATION_MUWANQING 				then
-		szNpcName = "Ä¾ÍñÇå"
+		szNpcName = "æœ¨å©‰æ¸…"
 		nLimitiIndex = MD_JQXH_MUWANQING_LIMITI
 	elseif mdLocation == MD_RELATION_ZHONGLING  	then
-		szNpcName = "ÖÓÁé"
+		szNpcName = "é’Ÿçµ"
 		nLimitiIndex = MD_JQXH_ZHONGLING_LIMITI
 	elseif mdLocation == MD_RELATION_DUANYANQING  then
-		szNpcName = "¶ÎÑÓÇì"
+		szNpcName = "æ®µå»¶åº†"
 		nLimitiIndex = MD_JQXH_DUANYANQING_LIMITI
 	elseif mdLocation == MD_RELATION_DUANYU  			then
-		szNpcName = "¶ÎÓş"
+		szNpcName = "æ®µèª‰"
 		nLimitiIndex = MD_JQXH_DUANYU_LIMITI
 	elseif mdLocation == MD_RELATION_AZHU			    then
-		szNpcName = "°¢Öì"
+		szNpcName = "é˜¿æœ±"
 		nLimitiIndex = MD_JQXH_AZHU_LIMITI
 	elseif mdLocation == MD_RELATION_ABI				  then
-		szNpcName = "°¢±Ì"
+		szNpcName = "é˜¿ç¢§"
 		nLimitiIndex = MD_JQXH_ABI_LIMITI
 	elseif mdLocation == MD_RELATION_WANGYUYAN	  then
-		szNpcName = "ÍõÓïæÌ"
+		szNpcName = "ç‹è¯­å«£"
 		nLimitiIndex = MD_JQXH_WANGYUYAN_LIMITI
 	elseif mdLocation == MD_RELATION_XIAOFENG	    then
-		szNpcName = "Ïô·å"
+		szNpcName = "è§å³°"
 		nLimitiIndex = MD_JQXH_XIAOFENG_LIMITI
 	elseif mdLocation == MD_RELATION_AZI				  then
-		szNpcName = "°¢×Ï"
+		szNpcName = "é˜¿ç´«"
 		nLimitiIndex = MD_JQXH_AZI_LIMITI
 	elseif mdLocation == MD_RELATION_MURONGFU	    then
-		szNpcName = "Ä½Èİ¸´"
+		szNpcName = "æ…•å®¹å¤"
 		nLimitiIndex = MD_JQXH_MURONGFU_LIMITI
 	elseif mdLocation == MD_RELATION_XUZHU			  then
-		szNpcName = "ĞéÖñ"
+		szNpcName = "è™šç«¹"
 		nLimitiIndex = MD_JQXH_XUZHU_LIMITI
 	elseif mdLocation == MD_RELATION_JIUMOZHI	    then
-		szNpcName = "ğ¯Ä¦ÖÇ"
+		szNpcName = "é¸ æ‘©æ™º"
 		nLimitiIndex = MD_JQXH_JIUMOZHI_LIMITI
 	elseif mdLocation == MD_RELATION_YINCHUAN	    then
-		szNpcName = "Òø´¨¹«Ö÷"
+		szNpcName = "é“¶å·å…¬ä¸»"
 		nLimitiIndex = MD_JQXH_YINCHUAN_LIMITI
 	end
 	
-	-- ¼ÇÂ¼ºÍÕâ¸öNpc½ñÌìÍê³ÉÈÎÎñµÄ´ÎÊı
+	-- è®°å½•å’Œè¿™ä¸ªNpcä»Šå¤©å®Œæˆä»»åŠ¡çš„æ¬¡æ•°
 	if nLimitiIndex >= MD_JQXH_MUWANQING_LIMITI and 
 			nLimitiIndex <= MD_JQXH_YINCHUAN_LIMITI  then
 		--begin modified by zhangguoxin 090207
 		local nDayCount = GetMissionData(sceneId, selfId, nLimitiIndex)
 		local nCount = 		floor(nDayCount/100000)
 		local nTime = 		mod(nDayCount,100000)
-		--local nDayTime = 	floor(nTime/100)	--ÉÏÒ»´Î½»ÈÎÎñµÄÊ±¼ä(ÌìÊı)
-		nDayTime = 	nTime											--ÉÏÒ»´Î½»ÈÎÎñµÄÊ±¼ä(ÌìÊı)
+		--local nDayTime = 	floor(nTime/100)	--ä¸Šä¸€æ¬¡äº¤ä»»åŠ¡çš„æ—¶é—´(å¤©æ•°)
+		nDayTime = 	nTime											--ä¸Šä¸€æ¬¡äº¤ä»»åŠ¡çš„æ—¶é—´(å¤©æ•°)
 		
-		local CurTime = GetDayTime()						--µ±Ç°Ê±¼ä
-		local CurDaytime = CurTime					--µ±Ç°Ê±¼ä
-		--local CurDaytime = floor(CurTime/100)	--µ±Ç°Ê±¼ä(Ìì)
+		local CurTime = GetDayTime()						--å½“å‰æ—¶é—´
+		local CurDaytime = CurTime					--å½“å‰æ—¶é—´
+		--local CurDaytime = floor(CurTime/100)	--å½“å‰æ—¶é—´(å¤©)
 		--end modified by zhangguoxin 090207
 		if nDayTime == CurDaytime  then
 			nCount = nCount + 1
@@ -425,55 +425,55 @@ function x006672_RewardRelationShip( sceneId, selfId, missionIndex, targetId )
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		
-		-- Èç¹ûÍæ¼ÒºÍNpc´ïµ½Ò»¸öĞÂµÄ¹ØÏµ£¬·¢¹«¸æ
+		-- å¦‚æœç©å®¶å’ŒNpcè¾¾åˆ°ä¸€ä¸ªæ–°çš„å…³ç³»ï¼Œå‘å…¬å‘Š
 		if value == 1000  then
 			BeginEvent(sceneId)
-				local strText = "ÄãÓë#G" .. szNpcName .. "#WµÄ¹ØÏµÒÑ¾­·¢Õ¹µ½#Y¾ı×ÓÖ®½»#W¡£"
+				local strText = "ä½ ä¸#G" .. szNpcName .. "#Wçš„å…³ç³»å·²ç»å‘å±•åˆ°#Yå›å­ä¹‹äº¤#Wã€‚"
 				AddText(sceneId,strText);
 			EndEvent(sceneId)
 			DispatchMissionTips(sceneId,selfId)
 			
-			-- ·¢ÓÊ¼şÍ¨ÖªÍæ¼Ò
+			-- å‘é‚®ä»¶é€šçŸ¥ç©å®¶
 			LuaFnSendSystemMail(sceneId, GetName(sceneId,selfId), strText)
 			
 		elseif value == 2000  then
 			BeginEvent(sceneId)
-				local strText = "ÄãÓë#G" .. szNpcName .. "#WµÄ¹ØÏµÒÑ¾­·¢Õ¹µ½#YÄªÄæÖ®½»#W¡£"
+				local strText = "ä½ ä¸#G" .. szNpcName .. "#Wçš„å…³ç³»å·²ç»å‘å±•åˆ°#Yè«é€†ä¹‹äº¤#Wã€‚"
 				AddText(sceneId,strText);
 			EndEvent(sceneId)
 			DispatchMissionTips(sceneId,selfId)
 			
-			-- ·¢ÓÊ¼şÍ¨ÖªÍæ¼Ò
+			-- å‘é‚®ä»¶é€šçŸ¥ç©å®¶
 			LuaFnSendSystemMail(sceneId, GetName(sceneId,selfId), strText)
 			
 		elseif value == 4000  then
 			BeginEvent(sceneId)
-				local strText = "ÄãÓë#G" .. szNpcName .. "#WµÄ¹ØÏµÒÑ¾­·¢Õ¹µ½#Y°Ë°İÖ®½»#W"
+				local strText = "ä½ ä¸#G" .. szNpcName .. "#Wçš„å…³ç³»å·²ç»å‘å±•åˆ°#Yå…«æ‹œä¹‹äº¤#W"
 				AddText(sceneId,strText);
 			EndEvent(sceneId)
 			DispatchMissionTips(sceneId,selfId)
 			
-			-- ·¢ÓÊ¼şÍ¨ÖªÍæ¼Ò
+			-- å‘é‚®ä»¶é€šçŸ¥ç©å®¶
 			LuaFnSendSystemMail(sceneId, GetName(sceneId,selfId), strText)
 			
 		elseif value == 6500  then
 			BeginEvent(sceneId)
-				local strText = "ÄãÓë#G" .. szNpcName .. "#WµÄ¹ØÏµÒÑ¾­·¢Õ¹µ½#YØØ¾±Ö®½»#W¡£"
+				local strText = "ä½ ä¸#G" .. szNpcName .. "#Wçš„å…³ç³»å·²ç»å‘å±•åˆ°#Yåˆé¢ˆä¹‹äº¤#Wã€‚"
 				AddText(sceneId,strText);
 			EndEvent(sceneId)
 			DispatchMissionTips(sceneId,selfId)
 			
-			-- ·¢ÓÊ¼şÍ¨ÖªÍæ¼Ò
+			-- å‘é‚®ä»¶é€šçŸ¥ç©å®¶
 			LuaFnSendSystemMail(sceneId, GetName(sceneId,selfId), strText)
 			
-			-- ·¢ÏµÍ³¹«¸æ
+			-- å‘ç³»ç»Ÿå…¬å‘Š
 			local szPlayer = GetName(sceneId, selfId)
 
-			if GetName(sceneId,targetId) == "Ä¾ÍñÇå"    then
+			if GetName(sceneId,targetId) == "æœ¨å©‰æ¸…"    then
 				local szBroad = "@*;SrvMsg;" .. "juqing_xunhuan_system_muwanqing" ..";"..szPlayer..";"..szPlayer
 				BroadMsgByChatPipe(sceneId, selfId, szBroad, 4)
 				
-			elseif GetName(sceneId,targetId) == "Ò®ÂÉ´óÊ¯"    then
+			elseif GetName(sceneId,targetId) == "è€¶å¾‹å¤§çŸ³"    then
 				local szBroad = "@*;SrvMsg;" .. "juqing_xunhuan_system_xiaofeng" ..";"..szPlayer..";"..szPlayer
 				BroadMsgByChatPipe(sceneId, selfId, szBroad, 4)
 				
@@ -482,16 +482,16 @@ function x006672_RewardRelationShip( sceneId, selfId, missionIndex, targetId )
 	end
 
 	SetMissionData( sceneId, selfId, mdLocation, value )
-	---Ä¾ÍñÇå¹ØÏµÖµÍ³¼Æ dengxx
+	---æœ¨å©‰æ¸…å…³ç³»å€¼ç»Ÿè®¡ dengxx
 		if mdLocation == MD_RELATION_MUWANQING then
 		   AuditRelationPoint(sceneId,selfId,value,"MD_RELATION_MUWANQING")
 		end
 	
-	-- hongyu ,×Å¼±ÁË£¬ÔÚÕâÀïÏÈ+¾­ÑéºÍ½ğÇ®½±Àø
-	-- ½±ÀøµÄ½ğÇ®ºÍ¾­ÑéÖµ£¬Ö»ºÍ×Ô¼ºµÄµÈ¼¶ÓĞ¹Ø
-	-- µÈ¼¶±ØĞëÊÇ´óÓÚµÈÓÚ20£¬Ğ¡ÓÚµÈÓÚPlayerMaxLevel
-	-- ¹«Ê½  ¾­Ñé= µÈ¼¶*80 - 326
-	-- 			 ½ğÇ®= µÈ¼¶*18 - 101
+	-- hongyu ,ç€æ€¥äº†ï¼Œåœ¨è¿™é‡Œå…ˆ+ç»éªŒå’Œé‡‘é’±å¥–åŠ±
+	-- å¥–åŠ±çš„é‡‘é’±å’Œç»éªŒå€¼ï¼Œåªå’Œè‡ªå·±çš„ç­‰çº§æœ‰å…³
+	-- ç­‰çº§å¿…é¡»æ˜¯å¤§äºç­‰äº20ï¼Œå°äºç­‰äºPlayerMaxLevel
+	-- å…¬å¼  ç»éªŒ= ç­‰çº§*80 - 326
+	-- 			 é‡‘é’±= ç­‰çº§*18 - 101
 	local PlayerMaxLevel = GetHumanMaxLevelLimit()
 	local nLevel = GetLevel(sceneId, selfId)
 	
@@ -504,7 +504,7 @@ function x006672_RewardRelationShip( sceneId, selfId, missionIndex, targetId )
 		AddExp(sceneId, selfId, nExp)
 	end
 	
-	-- ÈÎÎñÍ³¼Æ
+	-- ä»»åŠ¡ç»Ÿè®¡
 	local missionName = TGetMissionName( missionIndex )
 	LuaFnAuditQuest( sceneId, selfId, missionName)
 	
@@ -514,7 +514,7 @@ function x006672_RewardRelationShip( sceneId, selfId, missionIndex, targetId )
 end
 
 --**********************************
--- ³Í·£¹ØÏµÖµ
+-- æƒ©ç½šå…³ç³»å€¼
 --**********************************
 function x006672_PunishRelationShip( sceneId, selfId, missionIndex )
 	
@@ -530,7 +530,7 @@ function x006672_PunishRelationShip( sceneId, selfId, missionIndex )
 	end
 
 	SetMissionData( sceneId, selfId, mdLocation, value )
-	---Ä¾ÍñÇå¹ØÏµÖµÍ³¼Æ dengxx
+	---æœ¨å©‰æ¸…å…³ç³»å€¼ç»Ÿè®¡ dengxx
 		if mdLocation == MD_RELATION_MUWANQING then
 		   AuditRelationPoint(sceneId,selfId,value,"MD_RELATION_MUWANQING")
 		end
@@ -541,7 +541,7 @@ function x006672_PunishRelationShip( sceneId, selfId, missionIndex )
 end
 
 --**********************************
--- ³Í·££¬ÏŞÖÆ½ÓÈÎÎñÊ±¼ä
+-- æƒ©ç½šï¼Œé™åˆ¶æ¥ä»»åŠ¡æ—¶é—´
 --**********************************
 function x006672_AcceptTimeLimit( sceneId, selfId, missionIndex )
 	
@@ -550,12 +550,12 @@ function x006672_AcceptTimeLimit( sceneId, selfId, missionIndex )
 		return
 	end
 
-	-- 20 ÄêÄÚÓ¦¸Ã²»»á³¬¹ı 2 ^ 31
+	-- 20 å¹´å†…åº”è¯¥ä¸ä¼šè¶…è¿‡ 2 ^ 31
 	SetMissionData( sceneId, selfId, mdLocation, LuaFnGetCurrentTime( ) + value )
 end
 
 --**********************************
--- ¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+-- å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x006672_NotifyFailBox( sceneId, selfId, targetId, msg )
 	BeginEvent( sceneId )

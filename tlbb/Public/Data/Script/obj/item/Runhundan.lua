@@ -1,32 +1,32 @@
 -- 300068 
--- Èó»êµ¤
--- Ê¹ÓÃÖ®ºóÓÀ¾ÃÔö¼Ó5µãÇ±ÄÜ¡£
+-- æ¶¦é­‚ä¸¹
+-- ä½¿ç”¨ä¹‹åæ°¸ä¹…å¢åŠ 5ç‚¹æ½œèƒ½ã€‚
 
--- ½Å±¾ºÅ
+-- è„šæœ¬å·
 x300068_g_scriptId = 300068
 
--- Èó»êµ¤
+-- æ¶¦é­‚ä¸¹
 x300068_g_ItemId = 30008044
 --**********************************
--- ÊÂ¼ş½»»¥Èë¿Ú
+-- äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x300068_OnDefaultEvent( sceneId, selfId, nItemIndex)
-	-- ÊÇ·ñÊ¹ÓÃ¹ıÈó»êµ¤£¬Ä¿Ç°Ö»ÓĞÈó»êµ¤»á¶ÔMD_EX_HUMAN_QIANNENG_SUBJOIN½øĞĞ²Ù×÷
+	-- æ˜¯å¦ä½¿ç”¨è¿‡æ¶¦é­‚ä¸¹ï¼Œç›®å‰åªæœ‰æ¶¦é­‚ä¸¹ä¼šå¯¹MD_EX_HUMAN_QIANNENG_SUBJOINè¿›è¡Œæ“ä½œ
 	local Runhundan_Point = GetMissionData( sceneId, selfId, MD_EX_HUMAN_QIANNENG_SUBJOIN )
 	if( Runhundan_Point > 0 ) then
 		BeginEvent( sceneId )
-			AddText( sceneId, "Èó»êµ¤Ö»ÄÜÊ¹ÓÃÒ»´ÎÅ¶" )
+			AddText( sceneId, "æ¶¦é­‚ä¸¹åªèƒ½ä½¿ç”¨ä¸€æ¬¡å“¦" )
 		EndEvent( sceneId )
 		DispatchMissionTips( sceneId, selfId )
 	else
 		if( x300068_DelRunhundan(sceneId, selfId, nItemIndex ) > 0 ) then
 			
-			--¼ÓÉÏ5¸ö¶îÍâÊôĞÔµã
+			--åŠ ä¸Š5ä¸ªé¢å¤–å±æ€§ç‚¹
 			local RemainPoint = GetPlayerRemainPoints(sceneId, selfId)
 			RemainPoint = RemainPoint + 5
 			SetPlayerRemainPoints(sceneId, selfId, RemainPoint)
 			
-			--¼ÇÂ¼Èó»êµ¤¶îÍâ¼Ó³Éµã£¬Èó»êµ¤¼Ó³ÉµãÖ»ÓĞ5
+			--è®°å½•æ¶¦é­‚ä¸¹é¢å¤–åŠ æˆç‚¹ï¼Œæ¶¦é­‚ä¸¹åŠ æˆç‚¹åªæœ‰5
 			SetMissionData( sceneId, selfId, MD_EX_HUMAN_QIANNENG_SUBJOIN, 5 )
 			AuditRunHunDan( sceneId, selfId, x300068_g_ItemId )
 			
@@ -59,10 +59,10 @@ function x300068_DelRunhundan( sceneId, selfId, nItemIndex)
 	local nItemId = GetItemTableIndexByIndex(sceneId, selfId, nItemIndex)
 	if nItemId == x300068_g_ItemId then
 		local EraseRet = EraseItem( sceneId, selfId, nItemIndex )
-		if EraseRet < 0 then      --Èç¹ûÉ¾³ıÊ§°Ü,½«²»»áÔö¼ÓÍæ¼ÒÊôĞÔ
+		if EraseRet < 0 then      --å¦‚æœåˆ é™¤å¤±è´¥,å°†ä¸ä¼šå¢åŠ ç©å®¶å±æ€§
 			return 0
 		else
-			return 1			--É¾³ı³É¹¦
+			return 1			--åˆ é™¤æˆåŠŸ
 		end
 	else
 		return 0

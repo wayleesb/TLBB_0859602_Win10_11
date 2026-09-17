@@ -1,6 +1,6 @@
 local currentSoftKeyAim = 0;
 
--- µÇÂ½ÓÊ¼şÃûÁĞ±í
+-- ç™»é™†é‚®ä»¶ååˆ—è¡¨
 local TailName ={
 		[0] = "@game.sohu.com",
 		"@changyou.com",
@@ -25,35 +25,35 @@ local MiBaoDhCount = 0
 local PasswdProctectTels = {"", "", "", "", ""}
 
 
--- ×¢²áPreLoadÊÂ¼ş
+-- æ³¨å†ŒPreLoadäº‹ä»¶
 function LoginLogOn_PreLoad()
-	-- ´ò¿ª½çÃæ
+	-- æ‰“å¼€ç•Œé¢
 	this:RegisterEvent("GAMELOGIN_OPEN_COUNT_INPUT");
 	
-	-- ¹Ø±Õ½çÃæ
+	-- å…³é—­ç•Œé¢
 	this:RegisterEvent("GAMELOGIN_CLOSE_COUNT_INPUT");
 	
-	-- ½øÈëÓÎÏ·ºóÇå¿ÕÕÊºÅ
+	-- è¿›å…¥æ¸¸æˆåæ¸…ç©ºå¸å·
 	this:RegisterEvent("GAMELOGIN_CLEAR_ACCOUNT");
 	
-	-- passport×¢²áÊ§°Ü
+	-- passportæ³¨å†Œå¤±è´¥
 	this:RegisterEvent("PASSPORTREG_FAILD");
 	this:RegisterEvent("LOGIN_MIBAO");
 	
-	-- Í¨Öª¿Í»§¶ËÏÔÊ¾ÃÜ±£ÌáÊ¾
+	-- é€šçŸ¥å®¢æˆ·ç«¯æ˜¾ç¤ºå¯†ä¿æç¤º
 	this:RegisterEvent("GAMELOGIN_NOTIFY_PASSWDTEL_OPENED");
 
 end
 
--- ×¢²áonLoadÊÂ¼ş
+-- æ³¨å†ŒonLoadäº‹ä»¶
 function LoginLogOn_OnLoad()
 		
-		-- Ëæ»ú¶ÓÁĞÉèÖÃ³õÖµ
+		-- éšæœºé˜Ÿåˆ—è®¾ç½®åˆå€¼
 		for i=1,PhoneCount do
 			PhoneIndex[i] = -1
 		end 
 
-	-- Éú³ÉÓÊÏäÕÊºÅµÄÏÂÀ­ÁĞ±í
+	-- ç”Ÿæˆé‚®ç®±å¸å·çš„ä¸‹æ‹‰åˆ—è¡¨
   local TailCount = 6
 	local i = 0;
 	
@@ -62,8 +62,8 @@ function LoginLogOn_OnLoad()
 	end
 	LogOn_Region:SetCurrentSelect( 0 );
 	
-	-- 081014 start /* Èç¹ûÓĞÎÄ¼şÅäÖÃÃÜ±££¬Ôò¶ÁÅäÖÃ */
-	-- ´ÓÅäÖÃÎÄ¼şÀïËæ»úÈ¡3¸öµç»°
+	-- 081014 start /* å¦‚æœæœ‰æ–‡ä»¶é…ç½®å¯†ä¿ï¼Œåˆ™è¯»é…ç½® */
+	-- ä»é…ç½®æ–‡ä»¶é‡Œéšæœºå–3ä¸ªç”µè¯
 	--math.randomseed(os.time() + 250);
 	math.random(0,100);math.random(0,100)
 	local arrIdx = {-1,-1,-1};
@@ -85,7 +85,7 @@ function LoginLogOn_OnLoad()
 				arrIdx[iGetCount] = iTmpIdx;
 			end;
 		end;
-		if (MiBaoDhCount > MAX_TEL_SHOWCOUNT) then --¿¼ÂÇµ½ÌáÊ¾¿ò´óĞ¡£¬ ÃÜ±£µç»°ÊıÁ¿ÏŞ¶¨Îª3¸ö
+		if (MiBaoDhCount > MAX_TEL_SHOWCOUNT) then --è€ƒè™‘åˆ°æç¤ºæ¡†å¤§å°ï¼Œ å¯†ä¿ç”µè¯æ•°é‡é™å®šä¸º3ä¸ª
 			MiBaoDhCount = MAX_TEL_SHOWCOUNT
 	end
 		
@@ -99,7 +99,7 @@ function LoginLogOn_OnLoad()
 		for i=1,MiBaoDhCount do
 			local strTel = GameProduceLogin:GetPasswdTelByIndex(arrIdx[i]);
 			PasswdProctectTels[i] = strTel;
-			--str1 = str1..strTel.."  "; -- Ë÷ÒıÏÂ±êÆğÊ¼ºÍc++Àï²»Ò»Ñù
+			--str1 = str1..strTel.."  "; -- ç´¢å¼•ä¸‹æ ‡èµ·å§‹å’Œc++é‡Œä¸ä¸€æ ·
 		end
 		
 		 --dengxx
@@ -114,7 +114,7 @@ function LoginLogOn_OnLoad()
 	end
 	-- 081014 end /**/
 	
-	local iNum1 =math.random(1,3); --µÚÒ»¸öËæ»úÊı×ÜÊÇ1£¬¼ÓÕâ¸öÔö¼ÓËæ»úĞÔ
+	local iNum1 =math.random(1,3); --ç¬¬ä¸€ä¸ªéšæœºæ•°æ€»æ˜¯1ï¼ŒåŠ è¿™ä¸ªå¢åŠ éšæœºæ€§
 	for i=1,PhoneCount do
 		bFlag = 0
 		while bFlag == 0 do
@@ -128,7 +128,7 @@ function LoginLogOn_OnLoad()
 
 	local str = "#{DHMB_080917_004}".."#r"
 	local str1=""
-	--dengxx  ÏÔÊ¾¿Õ¼äÌ«Ğ¡£¬ĞèÒªÉÙ¿³µôÒ»¸ö¿Õ¸ñ
+	--dengxx  æ˜¾ç¤ºç©ºé—´å¤ªå°ï¼Œéœ€è¦å°‘ç æ‰ä¸€ä¸ªç©ºæ ¼
 	for i=1,PhoneCount-1 do
 		str1 = str1..PhoneCode[PhoneIndex[i]].." ";
 	end
@@ -155,24 +155,24 @@ AxTrace( 1,1, event );
     if( event == "PASSPORTREG_FAILD" ) then
         local FaildInfo = tonumber( arg0 )
         
-        if( 1 == FaildInfo ) then  --×¢²áÊ§°Ü
+        if( 1 == FaildInfo ) then  --æ³¨å†Œå¤±è´¥
             LogOn_Enroll1_Frame:Hide();
         end
-        if( 2 == FaildInfo ) then  --×¢²áÒÑ¾­´æÔÚ
+        if( 2 == FaildInfo ) then  --æ³¨å†Œå·²ç»å­˜åœ¨
             LogOn_Enroll1_Frame:Hide();
         end
-        if( 3 == FaildInfo ) then  --Ä³Ğ©ĞÅÏ¢ÌîĞ´´íÎó,ÔÊĞíÖØÌî
+        if( 3 == FaildInfo ) then  --æŸäº›ä¿¡æ¯å¡«å†™é”™è¯¯,å…è®¸é‡å¡«
             LogOn_Enroll1_Accept:Enable()
         end
         
     end
 
-	-- ´ò¿ªÕÊºÅÊäÈë½çÃæ
+	-- æ‰“å¼€å¸å·è¾“å…¥ç•Œé¢
  	if( event == "GAMELOGIN_OPEN_COUNT_INPUT" ) then
 		LogOn_PassWord_Protect_Check:SetCheck(0)
 		--LogOn_Phone_Protect_Check:SetCheck(0)
 		
-		-- ½ô¼±ĞŞ¸Ä£¬ÓÉÓÚÍâÍø»¹Ã»ÓĞ¿ªÍ¨´ËÏî·şÎñ£¬ÏÈ¹Ø±Õ Áõ¶Ü 2008.7.30
+		-- ç´§æ€¥ä¿®æ”¹ï¼Œç”±äºå¤–ç½‘è¿˜æ²¡æœ‰å¼€é€šæ­¤é¡¹æœåŠ¡ï¼Œå…ˆå…³é—­ åˆ˜ç›¾ 2008.7.30
 		--LogOn_Phone_Protect_Check:Disable()
 		--LogOn_Phone:Disable()
 		
@@ -195,10 +195,10 @@ AxTrace( 1,1, event );
 	end
 		
 	
-	-- ¹Ø±ÕÕÊºÅÊäÈë½çÃæ
+	-- å…³é—­å¸å·è¾“å…¥ç•Œé¢
 	if( event == "GAMELOGIN_CLOSE_COUNT_INPUT") then
 		
-		-- Çå¿ÕÃÜÂë.
+		-- æ¸…ç©ºå¯†ç .
 		LogOn_PassWord:SetText("");
 		LogOn_ID:SetText("");
 		CloseWindow( "SoftKeyBoard" );
@@ -206,10 +206,10 @@ AxTrace( 1,1, event );
 		return;
 	end
 	
-	-- ½øÈëÓÎÏ·ºóÇå¿ÕÕÊºÅ
+	-- è¿›å…¥æ¸¸æˆåæ¸…ç©ºå¸å·
 	if( event == "GAMELOGIN_CLEAR_ACCOUNT") then
 		
-		-- Çå¿ÕÃÜÂë.
+		-- æ¸…ç©ºå¯†ç .
 		LogOn_PassWord:SetText("");
 		LogOn_ID:SetText("");
 		CloseWindow( "SoftKeyBoard" );
@@ -244,10 +244,10 @@ function LogOn_Initilize()
 end
 ----------------------------------------------------------------------------------------------------------
 --
--- ÍËµ½·şÎñÆ÷Ñ¡Ôñ½çÃæ
+-- é€€åˆ°æœåŠ¡å™¨é€‰æ‹©ç•Œé¢
 --
 function LogOn_ExitToSelectServer()
--- ÍËµ½·şÎñÆ÷Ñ¡Ôñ½çÃæ
+-- é€€åˆ°æœåŠ¡å™¨é€‰æ‹©ç•Œé¢
 	GameProduceLogin:ExitToSelectServer();
 	
 	--this:Hide();
@@ -256,16 +256,16 @@ end
 
 ----------------------------------------------------------------------------------------------------------
 --
--- ÑéÖ¤ÓÃ»§ÃûºÍÃÜÂë
+-- éªŒè¯ç”¨æˆ·åå’Œå¯†ç 
 --
 function LogOn_CheckAccount()
 
-	-- ÍËµ½·şÎñÆ÷Ñ¡Ôñ½çÃæ
+	-- é€€åˆ°æœåŠ¡å™¨é€‰æ‹©ç•Œé¢
 	local strName = LogOn_ID:GetText();
 	local strPassword = LogOn_PassWord:GetText();
 	local strTail, nIndex = LogOn_Region:GetCurrentSelect();
 	local bMiBao = 0;
-	if(Variable:GetVariable("System_CodePage") == "1258") then
+	if(Variable:GetVariable("System_Region") == "1258") then
 		-- Dummy
 	else
 		bMiBao = LogOn_PassWord_Protect_Check:GetCheck();
@@ -275,40 +275,40 @@ function LogOn_CheckAccount()
 			strTail = "";
 	end
 	
-	strTail = LogOn_Region:GetText();    --ÔİÊ±ĞŞ¸Ä,ÒòÎªGetCurrentSelectµÄbug,µ¼ÖÂÔÚÄ³Ğ©²Ù×÷µÄÊ±ºò²»ÄÜÕıÈ·È¡µÃµ±Ç°µÄÑ¡Ôñ,¶ø½çÃæµ×²ãÕıÔÚĞŞ¸ÄÖĞ,ÔİÊ±ÓÃ´Ëº¯Êı½â¾öÓÃ»§Ãûºó×ºÎª¿ÕµÄÎÊÌâBugID:15422
+	strTail = LogOn_Region:GetText();    --æš‚æ—¶ä¿®æ”¹,å› ä¸ºGetCurrentSelectçš„bug,å¯¼è‡´åœ¨æŸäº›æ“ä½œçš„æ—¶å€™ä¸èƒ½æ­£ç¡®å–å¾—å½“å‰çš„é€‰æ‹©,è€Œç•Œé¢åº•å±‚æ­£åœ¨ä¿®æ”¹ä¸­,æš‚æ—¶ç”¨æ­¤å‡½æ•°è§£å†³ç”¨æˆ·ååç¼€ä¸ºç©ºçš„é—®é¢˜BugID:15422
 	
-	if(Variable:GetVariable("System_CodePage") == "1258") then
+	if(Variable:GetVariable("System_Region") == "1258") then
 		strTail = "";
 	end
 	
-	AxTrace( 0,0, "ÑéÖ¤ÓÃ»§Ãû"..strName.." "..strPassword);
+	AxTrace( 0,0, "éªŒè¯ç”¨æˆ·å"..strName.." "..strPassword);
 	if( strName =="" ) then
-		AxTrace( 0,0, "Ã»ÓĞÓÃ»§");
+		AxTrace( 0,0, "æ²¡æœ‰ç”¨æˆ·");
 		return;
 	end
 	if( strPassword == "" ) then
-		AxTrace( 0,0, "Ã»ÓĞÃÜÂë");
+		AxTrace( 0,0, "æ²¡æœ‰å¯†ç ");
 		return;
 	end
 	
 --	GameProduceLogin:CheckAccount(strName..strTail, strPassword,bMiBao);
 	GameProduceLogin:CheckAccount(strTail, bMiBao);
 	if(bMiBao == 0) then
-		--ÕÊºÅÃÜÂëeditboxÊ§È¥ÊäÈë½¹µã
+		--å¸å·å¯†ç editboxå¤±å»è¾“å…¥ç„¦ç‚¹
 		LogOn_Frame_OnHiden();
 	end
 	
-	-- Çå¿ÕÃÜÂë.
+	-- æ¸…ç©ºå¯†ç .
 	--LogOn_PassWord:SetText("");
 end;
 
---ÉêÇëÕÊºÅ
+--ç”³è¯·å¸å·
 function LogOn_AccountReg()
     GameProduceLogin:StartAccountReg()
 end
 ----------------------------------------------------------------------------------------------------------
 --
--- idÊäÈë¿òÊ§È¥½¹µã
+-- idè¾“å…¥æ¡†å¤±å»ç„¦ç‚¹
 --
 function Logon_ID_TabPressed()
 	if( g_bLogOnMode == 0 ) then
@@ -324,7 +324,7 @@ end
 
 ----------------------------------------------------------------------------------------------------------
 --
--- ÃÜÂëÊäÈë¿òÊ§È¥½¹µã
+-- å¯†ç è¾“å…¥æ¡†å¤±å»ç„¦ç‚¹
 --
 function Logon_Password_TabPressed()
 	if( g_bLogOnMode == 0 ) then
@@ -342,18 +342,18 @@ end
 
 ----------------------------------------------------------------------------------------------------------
 --
--- ÕÊºÅÊäÈë
+-- å¸å·è¾“å…¥
 --
 function LogOn_ID_MouseEnter()
 
-	LogOn_Info:SetText("ÔÚ´ËÊäÈëÄãµÄÕËºÅ");     --ÕÊºÅ  to  ÕËºÅ
+	LogOn_Info:SetText("åœ¨æ­¤è¾“å…¥ä½ çš„è´¦å·");     --å¸å·  to  è´¦å·
 
 end
 
 
 ----------------------------------------------------------------------------------------------------------
 --
--- ÃÜÂëÊäÈë¿òÊ§È¥½¹µã
+-- å¯†ç è¾“å…¥æ¡†å¤±å»ç„¦ç‚¹
 --
 function LogOn_MouseLeave()
 
@@ -363,13 +363,13 @@ end
 
 function LogOn_PassWord_MouseEnter()
 
-	LogOn_Info:SetText("ÔÚ´ËÊäÈëÄãµÄÃÜÂë");
+	LogOn_Info:SetText("åœ¨æ­¤è¾“å…¥ä½ çš„å¯†ç ");
 end;
 
 
 ------------------------------------------------------------------------------------------------------
 --
--- Ä£Äâ¼üÅÌ
+-- æ¨¡æ‹Ÿé”®ç›˜
 --
 function LogOn_KeyBoard()
 	ToggleWindow( "SoftKeyBoard" );
@@ -379,33 +379,33 @@ end
 
 function LogOn_Keyboard_MouseEnter()
 
-	LogOn_Info:SetText("Èç¹ûÄãÔÚ¹«¹²³¡ºÏÉÏÍø£¬ÎªÁËÄãµÄÕËºÅ°²È«£¬ÍÆ¼öÊ¹ÓÃ");  --ÕÊºÅ  to  ÕËºÅ
+	LogOn_Info:SetText("å¦‚æœä½ åœ¨å…¬å…±åœºåˆä¸Šç½‘ï¼Œä¸ºäº†ä½ çš„è´¦å·å®‰å…¨ï¼Œæ¨èä½¿ç”¨");  --å¸å·  to  è´¦å·
 end
 
 
 function LogOn_LogOnGame_MouseEnter()
 
-	LogOn_Info:SetText("µã»÷µÇÈëÓÎÏ·");
+	LogOn_Info:SetText("ç‚¹å‡»ç™»å…¥æ¸¸æˆ");
 end;
 
 function LogOn_Payment_MouseEnter()
 
-	LogOn_Info:SetText("ÎªÄãµÄÕËºÅ³äÖµ");  --ÕÊºÅ  to  ÕËºÅ
+	LogOn_Info:SetText("ä¸ºä½ çš„è´¦å·å……å€¼");  --å¸å·  to  è´¦å·
 end
 
 function LogOn_RequisitionID_MouseEnter()
 
-	LogOn_Info:SetText("ÉêÇëÒ»¸öĞÂÕËºÅ");	--ÕÊºÅ  to  ÕËºÅ
+	LogOn_Info:SetText("ç”³è¯·ä¸€ä¸ªæ–°è´¦å·");	--å¸å·  to  è´¦å·
 end;
 
 function LogOn_Author_MouseEnter()
 
-	LogOn_Info:SetText("²é¿´ÓÎÏ·¿ª·¢ÍÅ¶ÓĞÅÏ¢");
+	LogOn_Info:SetText("æŸ¥çœ‹æ¸¸æˆå¼€å‘å›¢é˜Ÿä¿¡æ¯");
 end;
 
 function LogOn_Last_MouseEnter()
 
-	LogOn_Info:SetText("·µ»Ø·şÎñÆ÷Ñ¡Ôñ½çÃæ");
+	LogOn_Info:SetText("è¿”å›æœåŠ¡å™¨é€‰æ‹©ç•Œé¢");
 end;
 
 function LogOn_LogonID_Active()
@@ -478,13 +478,13 @@ function LogOn_Enroll1_Cancel()
 	LogOn_PassWord:Enable();
 	LogOn_ID:Enable();
 	
-	--·¢ËÍÄ¬ÈÏÃÜÂë
+	--å‘é€é»˜è®¤å¯†ç 
 	GameProduceLogin:PassportButNotReg();
 	
 end
 
 function LogOn_AccountChongZhi()
-	if(Variable:GetVariable("System_CodePage") == "1258") then
+	if(Variable:GetVariable("System_Region") == "1258") then
     GameProduceLogin:OpenURL( "http://psp.gate.vn" )
 	else
     GameProduceLogin:OpenURL( "http://sde.game.sohu.com/" )
@@ -532,8 +532,8 @@ function Logon_Enroll_PressTable( iIndex )
 end
 
 function LogOn_Show_MibaoPage()
-	--ÔİÊ±Ô½ÄÏ°æºÍÖĞÎÄ°æ¶¼Ö¸ÏòÍ¬ÑùµÄÒ³Ãæ£¬Ô½ÄÏ°æµÄÍ¬Ñ§ÓĞĞèÒª×Ô¼º¸Ä
-	if(Variable:GetVariable("System_CodePage") == "1258") then
+	--æš‚æ—¶è¶Šå—ç‰ˆå’Œä¸­æ–‡ç‰ˆéƒ½æŒ‡å‘åŒæ ·çš„é¡µé¢ï¼Œè¶Šå—ç‰ˆçš„åŒå­¦æœ‰éœ€è¦è‡ªå·±æ”¹
+	if(Variable:GetVariable("System_Region") == "1258") then
     GameProduceLogin:OpenURL( "http://tl.sohu.com/index_fd.shtml" )
 	else
     GameProduceLogin:OpenURL( "http://tl.sohu.com/index_fd.shtml" )
@@ -615,7 +615,7 @@ function LogOn_MibaoSetToolTip()
 		
 	end
 	strTmp = strTmp..strEnd
-	-- LogOn_Phone_Protect_Text:SetProperty("Tooltip", strTmp); --Õâ¸ö²»ÄÜ×ªÒå
+	-- LogOn_Phone_Protect_Text:SetProperty("Tooltip", strTmp); --è¿™ä¸ªä¸èƒ½è½¬ä¹‰
 	--LogOn_Phone_Protect_Text:SetToolTip(strTmp);
 end
 

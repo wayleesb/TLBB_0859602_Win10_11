@@ -1,25 +1,25 @@
---Öğ³öÊ¦ÃÅÈÎÎñ
+--é€å‡ºå¸ˆé—¨ä»»åŠ¡
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x806009_g_ScriptId	= 806009
 
---Öğ³öÊ¦ÃÇ
+--é€å‡ºå¸ˆä»¬
 x806009_g_ExpelPrentice					= {}
 x806009_g_ExpelPrentice["Id"]		= 1006
-x806009_g_ExpelPrentice["Name"]	= "ÎÒÒª°ÑÍ½µÜÖğ³öÊ¦ÃÅ"
+x806009_g_ExpelPrentice["Name"]	= "æˆ‘è¦æŠŠå¾’å¼Ÿé€å‡ºå¸ˆé—¨"
 
---ÌáÊ¾ĞÅÏ¢
+--æç¤ºä¿¡æ¯
 x806009_g_msg				=
 {
-	["gld"]= "  Öğ³öÍ½µÜĞèÒª½»ÄÉ#{_EXCHG%d}¡£",
-	["con"]= "  ¿ª³ıÍ½µÜ½«»á±»¿Û³ı#{_EXCHG%d}£¬ÊÇ·ñÕæµÄÒª¿ª³ıÍæ¼Ò£º%s¡£",
+	["gld"]= "  é€å‡ºå¾’å¼Ÿéœ€è¦äº¤çº³#{_EXCHG%d}ã€‚",
+	["con"]= "  å¼€é™¤å¾’å¼Ÿå°†ä¼šè¢«æ‰£é™¤#{_EXCHG%d}ï¼Œæ˜¯å¦çœŸçš„è¦å¼€é™¤ç©å®¶ï¼š%sã€‚",
 }
 
---¿ª³ıÍ½µÜ£¬¿Û³ı½ğÇ®
+--å¼€é™¤å¾’å¼Ÿï¼Œæ‰£é™¤é‡‘é’±
 x806009_g_Gold			= 25000
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x806009_OnDefaultEvent( sceneId, selfId, targetId )
 	local	key	= GetNumText()
@@ -35,12 +35,12 @@ function x806009_OnDefaultEvent( sceneId, selfId, targetId )
 			if guid ~= -1 then
 				log	= 1
 				PrenticeName	= LuaFnGetFriendName( sceneId, selfId, guid )
-				AddNumText( sceneId, x806009_g_ScriptId, "½«"..PrenticeName.."Öğ³öÊ¦ÃÅ", 6, i )
+				AddNumText( sceneId, x806009_g_ScriptId, "å°†"..PrenticeName.."é€å‡ºå¸ˆé—¨", 6, i )
 			end
 		end
 
 		if log == 0 then
-			AddText( sceneId, "  Äã»¹Ã»ÓĞÍ½µÜ£¡" )
+			AddText( sceneId, "  ä½ è¿˜æ²¡æœ‰å¾’å¼Ÿï¼" )
 		end
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
@@ -54,7 +54,7 @@ function x806009_OnDefaultEvent( sceneId, selfId, targetId )
 		str	= format( x806009_g_msg["con"], x806009_g_Gold, PrenticeName )
 		BeginEvent( sceneId )
 			AddText( sceneId, str )
-			AddNumText( sceneId, x806009_g_ScriptId, "ÊÇ", 6, (key+1)*100 )
+			AddNumText( sceneId, x806009_g_ScriptId, "æ˜¯", 6, (key+1)*100 )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 	end
@@ -68,17 +68,17 @@ function x806009_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x806009_OnEnumerate( sceneId, selfId, targetId )
 	AddNumText( sceneId, x806009_g_ScriptId, x806009_g_ExpelPrentice["Name"], 6, -1 )
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x806009_CheckAccept( sceneId, selfId, targetId )
-	--¼ì²éÊ¦¸µÉíÉÏ½ğÇ®
+	--æ£€æŸ¥å¸ˆå‚…èº«ä¸Šé‡‘é’±
 	--if LuaFnGetMoney( sceneId, selfId ) < x806009_g_Gold then
 	--hzp 2008-12-9
 	local nMoneyJZ = GetMoneyJZ(sceneId, selfId);
@@ -94,7 +94,7 @@ function x806009_CheckAccept( sceneId, selfId, targetId )
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x806009_OnAccept( sceneId, selfId, targetId, nIndex )
 	
@@ -102,7 +102,7 @@ function x806009_OnAccept( sceneId, selfId, targetId, nIndex )
 	local PrenticeGUID = LuaFnGetPrenticeGUID( sceneId, selfId, nIndex )
 	if PrenticeGUID == -1 then
 		BeginEvent( sceneId )
-		AddText( sceneId, "  Äã»¹Ã»ÓĞÍ½µÜ£¡" )
+		AddText( sceneId, "  ä½ è¿˜æ²¡æœ‰å¾’å¼Ÿï¼" )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 		return
@@ -111,42 +111,42 @@ function x806009_OnAccept( sceneId, selfId, targetId, nIndex )
 	local PrenticeName	= LuaFnGetFriendName( sceneId, selfId, PrenticeGUID )
 	local selfName	= LuaFnGetName( sceneId, selfId )
 
-	--¿Û³ıÉíÉÏ½ğÇ®
+	--æ‰£é™¤èº«ä¸Šé‡‘é’±
 	--LuaFnCostMoney( sceneId, selfId, x806009_g_Gold )
-	--str	= format( "½â³ıÊ¦Í½¹ØÏµ£¬¿Û³ı#{_MONEY%d}¡£", x806009_g_Gold )
+	--str	= format( "è§£é™¤å¸ˆå¾’å…³ç³»ï¼Œæ‰£é™¤#{_MONEY%d}ã€‚", x806009_g_Gold )
 	--Msg2Player( sceneId, selfId, str, MSG2PLAYER_PARA )
 	
 	--hzp 2008-12-9
 	local nMoneyJZ, nMoneyJB = LuaFnCostMoneyWithPriority( sceneId, selfId, x806009_g_Gold )
-	--Èç¹ûÖ»¿Û³ı½ğ±Ò
+	--å¦‚æœåªæ‰£é™¤é‡‘å¸
 	if nMoneyJZ == 0 then
-		str	= format( "½â³ıÊ¦Í½¹ØÏµ£¬¿Û³ı#{_MONEY%d}¡£", x806009_g_Gold )
+		str	= format( "è§£é™¤å¸ˆå¾’å…³ç³»ï¼Œæ‰£é™¤#{_MONEY%d}ã€‚", x806009_g_Gold )
 		Msg2Player( sceneId, selfId, str, MSG2PLAYER_PARA )
 	end
-	--Èç¹ûÖ»¿Û³ı½»×Ó
+	--å¦‚æœåªæ‰£é™¤äº¤å­
 	if nMoneyJB == 0 then
-		str	= format( "½â³ıÊ¦Í½¹ØÏµ£¬¿Û³ı#{_EXCHG%d}¡£", x806009_g_Gold )
+		str	= format( "è§£é™¤å¸ˆå¾’å…³ç³»ï¼Œæ‰£é™¤#{_EXCHG%d}ã€‚", x806009_g_Gold )
 		Msg2Player( sceneId, selfId, str, MSG2PLAYER_PARA )
 	end
-	--Èç¹û¼ÈÓĞ½»×ÓÓÖÓĞ½ğ±Ò
+	--å¦‚æœæ—¢æœ‰äº¤å­åˆæœ‰é‡‘å¸
 	if nMoneyJB ~= 0 and nMoneyJZ ~= 0 then
-		str	= format( "½â³ıÊ¦Í½¹ØÏµ£¬¿Û³ı#{_EXCHG%d}ºÍ#{_MONEY%d}¡£", nMoneyJZ, nMoneyJB )
+		str	= format( "è§£é™¤å¸ˆå¾’å…³ç³»ï¼Œæ‰£é™¤#{_EXCHG%d}å’Œ#{_MONEY%d}ã€‚", nMoneyJZ, nMoneyJB )
 		Msg2Player( sceneId, selfId, str, MSG2PLAYER_PARA )
 	end
-	x806009_MsgBox( sceneId, selfId, targetId, "  Äã½â³ıÁËºÍ"..PrenticeName.."µÄÊ¦Í½¹ØÏµ¡£" )
+	x806009_MsgBox( sceneId, selfId, targetId, "  ä½ è§£é™¤äº†å’Œ"..PrenticeName.."çš„å¸ˆå¾’å…³ç³»ã€‚" )
 
-	--·¢ÆÕÍ¨ÓÊ¼ş¸øÍ½µÜ
-	LuaFnSendSystemMail( sceneId, PrenticeName, "ÄãµÄÊ¦¸¸" .. selfName .. "ÎŞÒâÓÚ¼ÌĞø½Ìµ¼Äã£¬ÒÑÓëÄãÍÑÀëÁËÊ¦Í½¹ØÏµ¡£" )
-	--LuaFnSendNormalMail( sceneId, selfId, PrenticeName, "ÄãµÄÊ¦¸¸" .. selfName .. "ÎŞÒâÓÚ¼ÌĞø½Ìµ¼Äã£¬ÒÑÓëÄãÍÑÀëÁËÊ¦Í½¹ØÏµ¡£" )
-	--·¢¿ÉÖ´ĞĞÓÊ¼ş¸øÍ½µÜ
+	--å‘æ™®é€šé‚®ä»¶ç»™å¾’å¼Ÿ
+	LuaFnSendSystemMail( sceneId, PrenticeName, "ä½ çš„å¸ˆçˆ¶" .. selfName .. "æ— æ„äºç»§ç»­æ•™å¯¼ä½ ï¼Œå·²ä¸ä½ è„±ç¦»äº†å¸ˆå¾’å…³ç³»ã€‚" )
+	--LuaFnSendNormalMail( sceneId, selfId, PrenticeName, "ä½ çš„å¸ˆçˆ¶" .. selfName .. "æ— æ„äºç»§ç»­æ•™å¯¼ä½ ï¼Œå·²ä¸ä½ è„±ç¦»äº†å¸ˆå¾’å…³ç³»ã€‚" )
+	--å‘å¯æ‰§è¡Œé‚®ä»¶ç»™å¾’å¼Ÿ
 	LuaFnSendScriptMail( sceneId, PrenticeName, MAIL_EXPELPRENTICE, 0, 0, 0 )
 
-	--×îÖÕÇåÀíÃÅ»§
+	--æœ€ç»ˆæ¸…ç†é—¨æˆ·
 	LuaFnExpelPrentice( sceneId, selfId, PrenticeGUID )
 end
 
 --**********************************
---¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+--å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x806009_MsgBox( sceneId, selfId, targetId, msg )
 	BeginEvent( sceneId )

@@ -1,57 +1,57 @@
---Ë®ÀÎÈÎÎñ
---ÕÒÈË
+--æ°´ç‰¢ä»»åŠ¡
+--æ‰¾äºº
 
 --MisDescBegin
---½Å±¾ºÅ
+--è„šæœ¬å·
 x232001_g_ScriptId	= 232001
 
---½ÓÊÜÈÎÎñNPCÊôĞÔ
+--æ¥å—ä»»åŠ¡NPCå±æ€§
 x232001_g_Position_X=66.5252
 x232001_g_Position_Z=76.7254
 x232001_g_SceneID=4
-x232001_g_AccomplishNPC_Name="ºôÑÓÇì"
+x232001_g_AccomplishNPC_Name="å‘¼å»¶åº†"
 
---ÈÎÎñºÅ
+--ä»»åŠ¡å·
 x232001_g_MissionId	= 1212
---ÈÎÎñÄ¿±ênpc
-x232001_g_Name			= "ºôÑÓ±ª"
---ÈÎÎñ¹éÀà
+--ä»»åŠ¡ç›®æ ‡npc
+x232001_g_Name			= "å‘¼å»¶è±¹"
+--ä»»åŠ¡å½’ç±»
 x232001_g_MissionKind			= 1
---ÈÎÎñµÈ¼¶
+--ä»»åŠ¡ç­‰çº§
 x232001_g_MissionLevel		= 10000
---ÊÇ·ñÊÇ¾«Ó¢ÈÎÎñ
+--æ˜¯å¦æ˜¯ç²¾è‹±ä»»åŠ¡
 x232001_g_IfMissionElite	= 0
---ÈÎÎñÊÇ·ñÒÑ¾­Íê³É
-x232001_g_IsMissionOkFail	= 0		--±äÁ¿µÄµÚ0Î»
---ÈÎÎñÎÄ±¾ÃèÊö
-x232001_g_MissionName			= "°ïÖúÆ½¶¨Ë®ÀÎÅÑÂÒ"
---ÈÎÎñÃèÊö
+--ä»»åŠ¡æ˜¯å¦å·²ç»å®Œæˆ
+x232001_g_IsMissionOkFail	= 0		--å˜é‡çš„ç¬¬0ä½
+--ä»»åŠ¡æ–‡æœ¬æè¿°
+x232001_g_MissionName			= "å¸®åŠ©å¹³å®šæ°´ç‰¢å›ä¹±"
+--ä»»åŠ¡æè¿°
 x232001_g_MissionInfo			= "#{event_xunhuan_0005}"
---ÈÎÎñÄ¿±ê
-x232001_g_MissionTarget		= "  È¥Ì«ºşµÄË®Õ¯ÖĞ´¦ÕÒºôÑÓÇì#{_INFOAIM67,77,4,ºôÑÓÇì}¡£"
---Î´Íê³ÉÈÎÎñµÄnpc¶Ô»°
-x232001_g_ContinueInfo		= "  ÉÙÏÀÊÇ·ñÍê³ÉÁËË®ÀÎÈÎÎñ£¿"
---Íê³ÉÈÎÎñnpcËµ»°µÄ»°
-x232001_g_MissionComplete	= "  ·Ç³£¸ĞĞ»ÄúµÄ°ïÃ¦£¬Ë®ÀÎÀïÃæ·¸ÈËµÄ±©¶¯ÒÑ¾­Æ½Ï¢ÁË¡£"
---¿ØÖÆ½Å±¾
+--ä»»åŠ¡ç›®æ ‡
+x232001_g_MissionTarget		= "  å»å¤ªæ¹–çš„æ°´å¯¨ä¸­å¤„æ‰¾å‘¼å»¶åº†#{_INFOAIM67,77,4,å‘¼å»¶åº†}ã€‚"
+--æœªå®Œæˆä»»åŠ¡çš„npcå¯¹è¯
+x232001_g_ContinueInfo		= "  å°‘ä¾ æ˜¯å¦å®Œæˆäº†æ°´ç‰¢ä»»åŠ¡ï¼Ÿ"
+--å®Œæˆä»»åŠ¡npcè¯´è¯çš„è¯
+x232001_g_MissionComplete	= "  éå¸¸æ„Ÿè°¢æ‚¨çš„å¸®å¿™ï¼Œæ°´ç‰¢é‡Œé¢çŠ¯äººçš„æš´åŠ¨å·²ç»å¹³æ¯äº†ã€‚"
+--æ§åˆ¶è„šæœ¬
 x232001_g_ControlScript		= 232000
 --MisDescEnd
 
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
-function x232001_OnDefaultEvent( sceneId, selfId, targetId )	--µã»÷¸ÃÈÎÎñºóÖ´ĞĞ´Ë½Å±¾
+function x232001_OnDefaultEvent( sceneId, selfId, targetId )	--ç‚¹å‡»è¯¥ä»»åŠ¡åæ‰§è¡Œæ­¤è„šæœ¬
 
-	--ÅĞ¶Ï¸ÃnpcÊÇ·ñÊÇ¶ÔÓ¦ÈÎÎñµÄnpc
+	--åˆ¤æ–­è¯¥npcæ˜¯å¦æ˜¯å¯¹åº”ä»»åŠ¡çš„npc
 	if LuaFnGetName( sceneId, targetId ) ~= x232001_g_Name then
 		return
 	end
 
-	--Èç¹ûÒÑ½Ó´ËÈÎÎñ
+	--å¦‚æœå·²æ¥æ­¤ä»»åŠ¡
 	if IsHaveMission( sceneId, selfId, x232001_g_MissionId ) > 0 then
 
-		--·¢ËÍÈÎÎñĞèÇóµÄĞÅÏ¢
+		--å‘é€ä»»åŠ¡éœ€æ±‚çš„ä¿¡æ¯
 		BeginEvent( sceneId )
 			AddText( sceneId, x232001_g_MissionName )
 			AddText( sceneId, x232001_g_ContinueInfo )
@@ -59,10 +59,10 @@ function x232001_OnDefaultEvent( sceneId, selfId, targetId )	--µã»÷¸ÃÈÎÎñºóÖ´ĞĞ´
 		local	bDone	= x232001_CheckSubmit( sceneId, selfId )
 		DispatchMissionDemandInfo( sceneId, selfId, targetId, x232001_g_ScriptId, x232001_g_MissionId, bDone )
 
-	--Î´½Ó£¬ÇÒÂú×ãÈÎÎñ½ÓÊÕÌõ¼ş
+	--æœªæ¥ï¼Œä¸”æ»¡è¶³ä»»åŠ¡æ¥æ”¶æ¡ä»¶
 	elseif x232001_CheckAccept( sceneId, selfId ) > 0 then
 
-		--·¢ËÍÈÎÎñ½ÓÊÜÊ±ÏÔÊ¾µÄĞÅÏ¢
+		--å‘é€ä»»åŠ¡æ¥å—æ—¶æ˜¾ç¤ºçš„ä¿¡æ¯
 		BeginEvent( sceneId )
 			AddText( sceneId, x232001_g_MissionName )
 			AddText( sceneId, x232001_g_MissionInfo )
@@ -76,16 +76,16 @@ function x232001_OnDefaultEvent( sceneId, selfId, targetId )	--µã»÷¸ÃÈÎÎñºóÖ´ĞĞ´
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x232001_OnEnumerate( sceneId, selfId, targetId )
 
-	--ÅĞ¶Ï¸ÃnpcÊÇ·ñÊÇ¶ÔÓ¦ÈÎÎñµÄnpc
+	--åˆ¤æ–­è¯¥npcæ˜¯å¦æ˜¯å¯¹åº”ä»»åŠ¡çš„npc
  	if LuaFnGetName( sceneId, targetId ) ~= x232001_g_Name then
 		return
 	end
 
-   --Èç¹ûÒÑ½Ó´ËÈÎÎñ
+   --å¦‚æœå·²æ¥æ­¤ä»»åŠ¡
 	if IsHaveMission( sceneId, selfId, x232001_g_MissionId ) > 0 or x232001_CheckAccept( sceneId, selfId ) > 0 then
 		AddNumText( sceneId, x232001_g_ScriptId, x232001_g_MissionName,3,-1 )
 	end
@@ -93,12 +93,12 @@ function x232001_OnEnumerate( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x232001_CheckAccept( sceneId, selfId )
 
 	if CallScriptFunction( x232001_g_ControlScript, "CheckAccept", sceneId, selfId ) == 1 then
-		--¼ì²âÍæ¼ÒÊÇ·ñ·ûºÏ½ÓÊÜÈÎÎñµÄÌõ¼ş
+		--æ£€æµ‹ç©å®¶æ˜¯å¦ç¬¦åˆæ¥å—ä»»åŠ¡çš„æ¡ä»¶
 		return 1
 	else
 		return 0
@@ -107,16 +107,16 @@ function x232001_CheckAccept( sceneId, selfId )
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x232001_OnAccept( sceneId, selfId, targetId )
 
-	--ÅĞ¶Ï¸ÃnpcÊÇ·ñÊÇ¶ÔÓ¦ÈÎÎñµÄnpc
+	--åˆ¤æ–­è¯¥npcæ˜¯å¦æ˜¯å¯¹åº”ä»»åŠ¡çš„npc
  	if LuaFnGetName( sceneId, targetId ) ~= x232001_g_Name then
 		return
 	end
 
-	--¼ÓÈëÈÎÎñµ½Íæ¼ÒÁĞ±í
+	--åŠ å…¥ä»»åŠ¡åˆ°ç©å®¶åˆ—è¡¨
 	CallScriptFunction( x232001_g_ControlScript, "OnAccept", sceneId, selfId, targetId, x232001_g_ScriptId )
 
 	if IsHaveMission( sceneId, selfId, x232001_g_MissionId ) <= 0 then
@@ -124,31 +124,31 @@ function x232001_OnAccept( sceneId, selfId, targetId )
 	end
 
 	local misIndex = GetMissionIndexByID( sceneId, selfId, x232001_g_MissionId )
-	--¸ù¾İĞòÁĞºÅ°ÑÈÎÎñ±äÁ¿µÄµÚ6Î»ÖÃ1 (ÈÎÎñÍê³ÉÇé¿ö)
+	--æ ¹æ®åºåˆ—å·æŠŠä»»åŠ¡å˜é‡çš„ç¬¬6ä½ç½®1 (ä»»åŠ¡å®Œæˆæƒ…å†µ)
 	SetMissionByIndex( sceneId, selfId, misIndex, 6, 1 )
 
-	--ÏÔÊ¾ÄÚÈİ¸æËßÍæ¼ÒÒÑ¾­½ÓÊÜÁËÈÎÎñ
+	--æ˜¾ç¤ºå†…å®¹å‘Šè¯‰ç©å®¶å·²ç»æ¥å—äº†ä»»åŠ¡
 	BeginEvent( sceneId )
 		AddText( sceneId, x232001_g_MissionInfo )
-		AddText( sceneId, "#rÄã½ÓÊÜÁËÈÎÎñ£º#r  "..x232001_g_MissionName )
+		AddText( sceneId, "#rä½ æ¥å—äº†ä»»åŠ¡ï¼š#r  "..x232001_g_MissionName )
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, selfId, targetId )
 
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x232001_OnAbandon( sceneId, selfId )
-	--É¾³ıÍæ¼ÒÈÎÎñÁĞ±íÖĞ¶ÔÓ¦µÄÈÎÎñ
+	--åˆ é™¤ç©å®¶ä»»åŠ¡åˆ—è¡¨ä¸­å¯¹åº”çš„ä»»åŠ¡
 	CallScriptFunction( x232001_g_ControlScript, "OnAbandon", sceneId, selfId )
 end
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x232001_OnContinue( sceneId, selfId, targetId )
-	--Ìá½»ÈÎÎñÊ±µÄËµÃ÷ĞÅÏ¢
+	--æäº¤ä»»åŠ¡æ—¶çš„è¯´æ˜ä¿¡æ¯
 	BeginEvent( sceneId )
 	AddText( sceneId, x232001_g_MissionName )
 	AddText( sceneId, x232001_g_MissionComplete )
@@ -157,18 +157,18 @@ function x232001_OnContinue( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x232001_CheckSubmit( sceneId, selfId )
 	return CallScriptFunction( x232001_g_ControlScript, "CheckSubmit", sceneId, selfId )
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x232001_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 
-	--ÅĞ¶Ï¸ÃnpcÊÇ·ñÊÇ¶ÔÓ¦ÈÎÎñµÄnpc
+	--åˆ¤æ–­è¯¥npcæ˜¯å¦æ˜¯å¯¹åº”ä»»åŠ¡çš„npc
  	if LuaFnGetName( sceneId, targetId ) ~= x232001_g_Name then
 		return
 	end
@@ -177,20 +177,20 @@ function x232001_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 end
 
 --**********************************
---É±ËÀ¹ÖÎï»òÍæ¼Ò
+--æ€æ­»æ€ªç‰©æˆ–ç©å®¶
 --**********************************
---²ÎÊıÒâË¼£º³¡¾°ºÅ¡¢Íæ¼ÒobjId¡¢¹ÖÎï±íÎ»ÖÃºÅ¡¢¹ÖÎïobjId
+--å‚æ•°æ„æ€ï¼šåœºæ™¯å·ã€ç©å®¶objIdã€æ€ªç‰©è¡¨ä½ç½®å·ã€æ€ªç‰©objId
 function x232001_OnKillObject( sceneId, selfId, objdataId , objId )
 end
 
 --**********************************
---½øÈëÇøÓòÊÂ¼ş
+--è¿›å…¥åŒºåŸŸäº‹ä»¶
 --**********************************
 function x232001_OnEnterArea( sceneId, selfId, zoneId )
 end
 
 --**********************************
---µÀ¾ß¸Ä±ä
+--é“å…·æ”¹å˜
 --**********************************
 function x232001_OnItemChanged( sceneId, selfId, itemdataId )
 end

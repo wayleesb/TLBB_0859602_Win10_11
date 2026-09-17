@@ -1,5 +1,5 @@
 -- 402257
--- Çà³ÇÅÉµÜ×Ó
+-- é’åŸæ´¾å¼Ÿå­
 
 x402257_g_KillMonsCount_Qincheng = 20
 x402257_g_KillMonsCount_Qinjia 	 = 21

@@ -1,24 +1,24 @@
---Â¥À¼NPC....
---³æÄñ·»·»Ö÷....
+--æ¥¼å…°NPC....
+--è™«é¸ŸåŠåŠä¸»....
 
 x001111_g_scriptId = 001111
 x001111_g_shoptableindex = 27
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x001111_OnDefaultEvent( sceneId, selfId, targetId )
 	BeginEvent( sceneId )
 		AddText( sceneId, "#{LLGC_20080324_01}" )
-		AddNumText( sceneId, x001111_g_scriptId, "¿´¿´ÄãÂôµÄ¶«Î÷", 7, 0 )
+		AddNumText( sceneId, x001111_g_scriptId, "çœ‹çœ‹ä½ å–çš„ä¸œè¥¿", 7, 0 )
 		
-		AddNumText(sceneId,x001111_g_scriptId,"²éÑ¯ÕäÊŞ³É³¤ÂÊ",6,1)
+		AddNumText(sceneId,x001111_g_scriptId,"æŸ¥è¯¢çå…½æˆé•¿ç‡",6,1)
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x001111_OnEventRequest( sceneId, selfId, targetId, eventId )
 	if GetNumText() == 0 then
@@ -26,8 +26,8 @@ function x001111_OnEventRequest( sceneId, selfId, targetId, eventId )
 	elseif GetNumText() == 1 then
 		BeginUICommand( sceneId )
 			UICommand_AddInt( sceneId, targetId )
-			UICommand_AddInt( sceneId, 6 )				--ÕäÊŞ²éÑ¯·ÖÖ§
+			UICommand_AddInt( sceneId, 6 )				--çå…½æŸ¥è¯¢åˆ†æ”¯
 		EndUICommand( sceneId )
-		DispatchUICommand( sceneId, selfId, 3 )	--µ÷ÓÃÕäÊŞ½çÃæ
+		DispatchUICommand( sceneId, selfId, 3 )	--è°ƒç”¨çå…½ç•Œé¢
 	end
 end

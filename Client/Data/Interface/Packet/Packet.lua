@@ -1,5 +1,5 @@
 local nTheTabIndex = 0;
-local PACKAGE_BUTTONS_NUM = 30;
+local PACKAGE_BUTTONS_NUM = 100;
 local PACKAGE_BUTTONS = {};
 local PACKAGE_BUTTON_BACK={};
 local PACKAGE_EXTBAG_NUM = 10;
@@ -7,9 +7,9 @@ local PACKAGE_EXTBAG = {};
 local PACKAGE_TAB_TEXT = {};
 local Lock_Flag = 0;
 local g_MaxLine = 0;
-local g_PackageWidth = 183;
+local g_PackageWidth = 358;
 local g_PackageHeight={};
-local PACKAGE_NUM_PER_LINE = 5;
+local PACKAGE_NUM_PER_LINE = 10;
 
 g_PackageHeight["title"] = { 0, 25, };
 g_PackageHeight["page"]  = { 25, 20, };
@@ -33,7 +33,7 @@ function Packet_PreLoad()
 	this:RegisterEvent("UPDATE_ZENGDIAN");
 	this:RegisterEvent("CITY_SHOW_SHOP");
 	
-	-- ¿ªÊ¼ÕûÀíºÍ½áÊøÕûÀí
+	-- å¼€å§‹æ•´ç†å’Œç»“æŸæ•´ç†
 	this:RegisterEvent("BEGIN_PACKUP_PACKET");
 	this:RegisterEvent("END_PACKUP_PACKET");
 	this:RegisterEvent("PLAYER_LEAVE_WORLD");
@@ -44,58 +44,109 @@ function Packet_PreLoad()
 end
 
 function Packet_OnLoad()
-	PACKAGE_BUTTONS =	{	Packet_Space_Line1_Row1_button,
-							Packet_Space_Line1_Row2_button,
-							Packet_Space_Line1_Row3_button,
-							Packet_Space_Line1_Row4_button,
-							Packet_Space_Line1_Row5_button,
-							Packet_Space_Line2_Row1_button,
-							Packet_Space_Line2_Row2_button,
-							Packet_Space_Line2_Row3_button,
-							Packet_Space_Line2_Row4_button,
-							Packet_Space_Line2_Row5_button,
-							Packet_Space_Line3_Row1_button,
-							Packet_Space_Line3_Row2_button,
-							Packet_Space_Line3_Row3_button,
-							Packet_Space_Line3_Row4_button,
-							Packet_Space_Line3_Row5_button,
-							Packet_Space_Line4_Row1_button,
-							Packet_Space_Line4_Row2_button,
-							Packet_Space_Line4_Row3_button,
-							Packet_Space_Line4_Row4_button,
-							Packet_Space_Line4_Row5_button,
-							Packet_Space_Line5_Row1_button,
-							Packet_Space_Line5_Row2_button,
-							Packet_Space_Line5_Row3_button,
-							Packet_Space_Line5_Row4_button,
-							Packet_Space_Line5_Row5_button,
-							Packet_Space_Line6_Row1_button,
-							Packet_Space_Line6_Row2_button,
-							Packet_Space_Line6_Row3_button,
-							Packet_Space_Line6_Row4_button,
-							Packet_Space_Line6_Row5_button,
-							Packet_Space_Line7_Row1_button,
-							Packet_Space_Line7_Row2_button,
-							Packet_Space_Line7_Row3_button,
-							Packet_Space_Line7_Row4_button,
-							Packet_Space_Line7_Row5_button,
-							Packet_Space_Line8_Row1_button,
-							Packet_Space_Line8_Row2_button,
-							Packet_Space_Line8_Row3_button,
-							Packet_Space_Line8_Row4_button,
-							Packet_Space_Line8_Row5_button,
-							Packet_Space_Line9_Row1_button,
-							Packet_Space_Line9_Row2_button,
-							Packet_Space_Line9_Row3_button,
-							Packet_Space_Line9_Row4_button,
-							Packet_Space_Line9_Row5_button,
-							Packet_Space_Line10_Row1_button,
-							Packet_Space_Line10_Row2_button,
-							Packet_Space_Line10_Row3_button,
-							Packet_Space_Line10_Row4_button,
-							Packet_Space_Line10_Row5_button,
-							};
-														
+	PACKAGE_BUTTONS = {
+		Packet_Space_Line1_Row1_button,
+		Packet_Space_Line1_Row2_button,
+		Packet_Space_Line1_Row3_button,
+		Packet_Space_Line1_Row4_button,
+		Packet_Space_Line1_Row5_button,
+		Packet_Space_Line1_Row6_button,
+		Packet_Space_Line1_Row7_button,
+		Packet_Space_Line1_Row8_button,
+		Packet_Space_Line1_Row9_button,
+		Packet_Space_Line1_Row10_button,
+		Packet_Space_Line2_Row1_button,
+		Packet_Space_Line2_Row2_button,
+		Packet_Space_Line2_Row3_button,
+		Packet_Space_Line2_Row4_button,
+		Packet_Space_Line2_Row5_button,
+		Packet_Space_Line2_Row6_button,
+		Packet_Space_Line2_Row7_button,
+		Packet_Space_Line2_Row8_button,
+		Packet_Space_Line2_Row9_button,
+		Packet_Space_Line2_Row10_button,
+		Packet_Space_Line3_Row1_button,
+		Packet_Space_Line3_Row2_button,
+		Packet_Space_Line3_Row3_button,
+		Packet_Space_Line3_Row4_button,
+		Packet_Space_Line3_Row5_button,
+		Packet_Space_Line3_Row6_button,
+		Packet_Space_Line3_Row7_button,
+		Packet_Space_Line3_Row8_button,
+		Packet_Space_Line3_Row9_button,
+		Packet_Space_Line3_Row10_button,
+		Packet_Space_Line4_Row1_button,
+		Packet_Space_Line4_Row2_button,
+		Packet_Space_Line4_Row3_button,
+		Packet_Space_Line4_Row4_button,
+		Packet_Space_Line4_Row5_button,
+		Packet_Space_Line4_Row6_button,
+		Packet_Space_Line4_Row7_button,
+		Packet_Space_Line4_Row8_button,
+		Packet_Space_Line4_Row9_button,
+		Packet_Space_Line4_Row10_button,
+		Packet_Space_Line5_Row1_button,
+		Packet_Space_Line5_Row2_button,
+		Packet_Space_Line5_Row3_button,
+		Packet_Space_Line5_Row4_button,
+		Packet_Space_Line5_Row5_button,
+		Packet_Space_Line5_Row6_button,
+		Packet_Space_Line5_Row7_button,
+		Packet_Space_Line5_Row8_button,
+		Packet_Space_Line5_Row9_button,
+		Packet_Space_Line5_Row10_button,
+		Packet_Space_Line6_Row1_button,
+		Packet_Space_Line6_Row2_button,
+		Packet_Space_Line6_Row3_button,
+		Packet_Space_Line6_Row4_button,
+		Packet_Space_Line6_Row5_button,
+		Packet_Space_Line6_Row6_button,
+		Packet_Space_Line6_Row7_button,
+		Packet_Space_Line6_Row8_button,
+		Packet_Space_Line6_Row9_button,
+		Packet_Space_Line6_Row10_button,
+		Packet_Space_Line7_Row1_button,
+		Packet_Space_Line7_Row2_button,
+		Packet_Space_Line7_Row3_button,
+		Packet_Space_Line7_Row4_button,
+		Packet_Space_Line7_Row5_button,
+		Packet_Space_Line7_Row6_button,
+		Packet_Space_Line7_Row7_button,
+		Packet_Space_Line7_Row8_button,
+		Packet_Space_Line7_Row9_button,
+		Packet_Space_Line7_Row10_button,
+		Packet_Space_Line8_Row1_button,
+		Packet_Space_Line8_Row2_button,
+		Packet_Space_Line8_Row3_button,
+		Packet_Space_Line8_Row4_button,
+		Packet_Space_Line8_Row5_button,
+		Packet_Space_Line8_Row6_button,
+		Packet_Space_Line8_Row7_button,
+		Packet_Space_Line8_Row8_button,
+		Packet_Space_Line8_Row9_button,
+		Packet_Space_Line8_Row10_button,
+		Packet_Space_Line9_Row1_button,
+		Packet_Space_Line9_Row2_button,
+		Packet_Space_Line9_Row3_button,
+		Packet_Space_Line9_Row4_button,
+		Packet_Space_Line9_Row5_button,
+		Packet_Space_Line9_Row6_button,
+		Packet_Space_Line9_Row7_button,
+		Packet_Space_Line9_Row8_button,
+		Packet_Space_Line9_Row9_button,
+		Packet_Space_Line9_Row10_button,
+		Packet_Space_Line10_Row1_button,
+		Packet_Space_Line10_Row2_button,
+		Packet_Space_Line10_Row3_button,
+		Packet_Space_Line10_Row4_button,
+		Packet_Space_Line10_Row5_button,
+		Packet_Space_Line10_Row6_button,
+		Packet_Space_Line10_Row7_button,
+		Packet_Space_Line10_Row8_button,
+		Packet_Space_Line10_Row9_button,
+		Packet_Space_Line10_Row10_button,
+	};
+
 	PACKAGE_EXTBAG  = {
 						Packet_Space_Line1;
 						Packet_Space_Line2;
@@ -110,9 +161,9 @@ function Packet_OnLoad()
 						}
 		
 	PACKAGE_TAB_TEXT = {
-		[0] = "µÀ¾ß",
-		"²ÄÁÏ",
-		"ÈÎÎñ",
+		[0] = "é“å…·",
+		"ææ–™",
+		"ä»»åŠ¡",
 	};
 	
 	Packet_Pet:Enable();
@@ -127,8 +178,8 @@ end
 function Packet_Close()
 	this:Hide();
 	
-	--¹Ø±Õ½çÃæÊ±£¬ÏòServerÇëÇó±³°üÍ¬²½
-	--AskMyBagListº¯Êı±¾ÉíÓĞ¼ÆÊ±¿ØÖÆ
+	--å…³é—­ç•Œé¢æ—¶ï¼Œå‘Serverè¯·æ±‚èƒŒåŒ…åŒæ­¥
+	--AskMyBagListå‡½æ•°æœ¬èº«æœ‰è®¡æ—¶æ§åˆ¶
 	DataPool:AskMyBagList();
 end
 function Packet_OnEvent( event )
@@ -154,7 +205,7 @@ function Packet_OnEvent( event )
 		if( arg0 == "Packet") then
 			Packet_Open();
 		end
-	--Ëø¶¨ÕıÔÚ²Ù×÷µÄ±³°üÖĞµÄÎïÆ·
+	--é”å®šæ­£åœ¨æ“ä½œçš„èƒŒåŒ…ä¸­çš„ç‰©å“
 	elseif ( event == "LOCK_PACKET_ITEM" ) then 
 
 	elseif ( event == "REPLY_MISSION" ) then 
@@ -170,18 +221,18 @@ function Packet_OnEvent( event )
 	elseif ( event == "RESET_EXT_BAG" ) then
 		ResetExtBag();
 	elseif (event == "UPDATE_YUANBAO" and this:IsVisible()) then
-		Packet_YuanBao2:SetText("Ôª±¦:"..tostring(Player:GetData("YUANBAO")));
+		Packet_YuanBao2:SetText("å…ƒå®:"..tostring(Player:GetData("YUANBAO")));
 	elseif (event == "MONEYJZ_CHANGE" and this:IsVisible()) then
 		Packet_Jiaozi:SetProperty("MoneyNumber", tostring(Player:GetData("MONEY_JZ")));
 	elseif (event == "UPDATE_ZENGDIAN" and this:IsVisible()) then
-		Packet_YuanBao:SetText("Ôùµã:"..tostring(Player:GetData("ZENGDIAN")));
+		Packet_YuanBao:SetText("èµ ç‚¹:"..tostring(Player:GetData("ZENGDIAN")));
 		
 	elseif ( event == "BEGIN_PACKUP_PACKET" )   then
-		--Ëø¶¨¡°ÕûÀí°´Å¥¡±
+		--é”å®šâ€œæ•´ç†æŒ‰é’®â€
 		Packet_Classify:Disable()
 	
 	elseif ( event == "END_PACKUP_PACKET" )	    then
-		--´ò¿ª¡°ÕûÀí°´Å¥¡±
+		--æ‰“å¼€â€œæ•´ç†æŒ‰é’®â€
 		Packet_Classify:Enable()
 	elseif(event == "PLAYER_LEAVE_WORLD" and this:IsVisible()) then
 		Packet_Close();
@@ -219,17 +270,17 @@ function Package_UpdateBagLine( nMaxLine )
 		end
 	end
 	local nWindowHeight;
-	nWindowHeight = g_MaxLine * 35 + 200;
+	nWindowHeight = g_MaxLine * 35 + 205;
 	Packet_Frame:SetProperty( "AbsoluteHeight",nWindowHeight );
 	
-	--ÉèÖÃÃ¿Ò»¸ö¿Ø¼şµÄÎ»ÖÃ
+	--è®¾ç½®æ¯ä¸€ä¸ªæ§ä»¶çš„ä½ç½®
 end
 function Packet_OnUpdateShow()	
 	local i=1;
 	local szPacketName = "";
 	local CurrNum = 20;
 	local BaseNum = 20;
-	local MaxNum = 30;
+	local MaxNum = PACKAGE_BUTTONS_NUM;
 	Lock_Flag = 0;
 
 	if(nTheTabIndex == 0) then
@@ -252,17 +303,18 @@ function Packet_OnUpdateShow()
 	end
 	
 	local nMaxLine = math.floor( CurrNum / PACKAGE_NUM_PER_LINE );
-	--Èç¹ûÊÇÕû³ıÁË
+	--å¦‚æœæ˜¯æ•´é™¤äº†
 	if( nMaxLine * PACKAGE_NUM_PER_LINE == CurrNum ) then
 	else
 		nMaxLine = nMaxLine + 1;
 	end
-	AxTrace( 8,0,"ÒÑ¾­ÓĞµÄ°ü¸ñÊı"..tostring( CurrNum ).."  ĞèÒªÏÔÊ¾µÄĞĞÊı"..tostring( nMaxLine ) );
-	--Èç¹û³¬¹ıµ±Ç°ÏÔÊ¾µÄ×î´ó·¶Î§ÁË£¬¾Í¸üĞÂ°üµÄĞĞÊı
+	AxTrace( 8,0,"å·²ç»æœ‰çš„åŒ…æ ¼æ•°"..tostring( CurrNum ).."  éœ€è¦æ˜¾ç¤ºçš„è¡Œæ•°"..tostring( nMaxLine ) );
+	--å¦‚æœè¶…è¿‡å½“å‰æ˜¾ç¤ºçš„æœ€å¤§èŒƒå›´äº†ï¼Œå°±æ›´æ–°åŒ…çš„è¡Œæ•°
 	Package_UpdateBagLine( nMaxLine );
-	local nMaxDisplayNumber = nMaxLine * PACKAGE_NUM_PER_LINE;
-	for i=1, nMaxDisplayNumber do
-		--Èç¹ûÊÇĞèÒªÏÔÊ¾µÄ
+	-- åˆ‡æ¢é¡µç­¾æˆ–ç¼©å®¹æ—¶ï¼Œæ¸…ç†å…¨éƒ¨æ§ä»¶ï¼Œé¿å…éšè—æ ¼æ®‹ç•™ç‰©å“ã€‚
+	for i=1, PACKAGE_BUTTONS_NUM do
+		PACKAGE_BUTTONS[i]:SetPushed(0);
+		--å¦‚æœæ˜¯éœ€è¦æ˜¾ç¤ºçš„
 		if( i <= CurrNum ) then
 			local theAction,bLocked = PlayerPackage:EnumItem(szPacketName, i-1);
 			PACKAGE_BUTTONS[ i ]:Show();
@@ -278,8 +330,9 @@ function Packet_OnUpdateShow()
 				PACKAGE_BUTTONS[i]:Enable();
 			end
 
-		else  --ÕâĞ©ÊÇĞèÒªÒş²ØµÄ
+		else  --è¿™äº›æ˜¯éœ€è¦éšè—çš„
 			PACKAGE_BUTTONS[ i ]:SetActionItem( -1 );
+			PACKAGE_BUTTONS[ i ]:Disable();
 			PACKAGE_BUTTONS[ i ]:Hide();
 		end
 	end
@@ -294,9 +347,9 @@ function Packet_OnUpdateShow()
 	--Money
 	Packet_Money:SetProperty("MoneyNumber", tostring(Player:GetData("MONEY")));
 	--YuanBao
-	Packet_YuanBao2:SetText("Ôª±¦:"..tostring(Player:GetData("YUANBAO")));
+	Packet_YuanBao2:SetText("å…ƒå®:"..tostring(Player:GetData("YUANBAO")));
 	--ZengDian
-	Packet_YuanBao:SetText("Ôùµã:"..tostring(Player:GetData("ZENGDIAN")));
+	Packet_YuanBao:SetText("èµ ç‚¹:"..tostring(Player:GetData("ZENGDIAN")));
 	--Money_JZ
 	Packet_Jiaozi:SetProperty("MoneyNumber", tostring(Player:GetData("MONEY_JZ")));
 		
@@ -304,20 +357,28 @@ end
 
 function Packet_UpdateDragAcceptName()
 	local nStartAcceptIndex = 0;
+	local nCapacity = 0;
 	
 	if(nTheTabIndex == 0) then
 		nStartAcceptIndex = 1;
+		nCapacity = DataPool:GetBaseBag_Num();
 	elseif(nTheTabIndex == 1) then
 		nStartAcceptIndex = DataPool:GetBaseBag_MaxNum()+1;
+		nCapacity = DataPool:GetMatBag_Num();
 	elseif(nTheTabIndex == 2) then
 		nStartAcceptIndex = DataPool:GetBaseBag_MaxNum()+DataPool:GetMatBag_MaxNum()+1;
+		nCapacity = DataPool:GetTaskBag_Num();
 	else 
 		return;
 	end
 
 	local i=1;
 	while i<=PACKAGE_BUTTONS_NUM do
-		PACKAGE_BUTTONS[i]:SetProperty("DragAcceptName", "P"..tostring(nStartAcceptIndex));
+		if i <= nCapacity then
+			PACKAGE_BUTTONS[i]:SetProperty("DragAcceptName", "P"..tostring(nStartAcceptIndex));
+		else
+			PACKAGE_BUTTONS[i]:SetProperty("DragAcceptName", "");
+		end
 		
 		nStartAcceptIndex = nStartAcceptIndex+1;
 		i = i+1;
@@ -348,7 +409,7 @@ end
 
 
 --===============================================
--- Æô¶¯°ÚÌ¯½çÃæ(ÔÚ°ÚÌ¯Ç°»áÏÈÈ·ÈÏÌ¯Î»·Ñ)
+-- å¯åŠ¨æ‘†æ‘Šç•Œé¢(åœ¨æ‘†æ‘Šå‰ä¼šå…ˆç¡®è®¤æ‘Šä½è´¹)
 --===============================================
 function Packet_Sale_Clicked()
 	PlayerPackage:OpenStallSaleFrame();
@@ -360,7 +421,7 @@ end
 
 
 --===============================================
--- µã»÷Ëø¶¨
+-- ç‚¹å‡»é”å®š
 --===============================================
 function Packet_Lock_Open()
 	PlayerPackage:OpenLockFrame(nTheTabIndex);

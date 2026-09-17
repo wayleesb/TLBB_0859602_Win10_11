@@ -1,47 +1,47 @@
--- ËÕÖİNPC
--- ÔÀ³£Ô²
--- ÖĞÇïÈÎÎñ
+-- è‹å·NPC
+-- å²³å¸¸åœ†
+-- ä¸­ç§‹ä»»åŠ¡
 
 x050001_g_scriptId = 050001
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x050001_g_eventList = { 050017, 808064, 050020 } --050009,
 
 x050001_g_ControlScript = 050009
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x050001_UpdateEventList( sceneId, selfId, targetId )
 	BeginEvent( sceneId )
 		if CallScriptFunction( x050001_g_ControlScript, "IsMidAutumnPeriod", sceneId, selfId ) > 0 then
-			AddText( sceneId, "    ÖĞÇïÖ®Ò¹£¬»¨ºÃÔÂÔ²£¬Ñ°³£ÏïÄ°³ÂÂŞç²£¬" ..
-				"¼¸´¦Â¥Ì¨×à¹ÜÏÒ¡£µ«´ËÊ±´Ë¿Ì£¬ÕıÊÇ±ß¹ØµÄ½«Ê¿·ÜÁ¦¿¹»÷ÍâµĞ" ..
-				"£¬²ÅÓĞÁËÎÒÃÇÕâ»¨»¨ÊÀ½ç¡£" )
+			AddText( sceneId, "    ä¸­ç§‹ä¹‹å¤œï¼ŒèŠ±å¥½æœˆåœ†ï¼Œå¯»å¸¸å··é™Œé™ˆç½—ç»®ï¼Œ" ..
+				"å‡ å¤„æ¥¼å°å¥ç®¡å¼¦ã€‚ä½†æ­¤æ—¶æ­¤åˆ»ï¼Œæ­£æ˜¯è¾¹å…³çš„å°†å£«å¥‹åŠ›æŠ—å‡»å¤–æ•Œ" ..
+				"ï¼Œæ‰æœ‰äº†æˆ‘ä»¬è¿™èŠ±èŠ±ä¸–ç•Œã€‚" )
 		else
-			AddText( sceneId, "    ËÕÑ§Ê¿ÓĞÒ»¾ä´ÊĞ´µÃºÃ£¬ÈËÓĞ±¯»¶ÀëºÏ£¬" ..
-				"ÔÂÓĞÒõÇçÔ²È±£¬´ËÊÂ¹ÅÄÑÈ«¡£ÏÖÔÚËäÈ»²»ÊÇ»¨ºÃÔÂÔ²Ö®Ò¹£¬µ«" ..
-				"ÔÚÎÒĞÄÖĞ£¬ÔÂÁÁºÍÈËÒ»Ñù£¬ÓÀÔ¶ÊÇÍÅÔ²µÄ¡£" )
+			AddText( sceneId, "    è‹å­¦å£«æœ‰ä¸€å¥è¯å†™å¾—å¥½ï¼Œäººæœ‰æ‚²æ¬¢ç¦»åˆï¼Œ" ..
+				"æœˆæœ‰é˜´æ™´åœ†ç¼ºï¼Œæ­¤äº‹å¤éš¾å…¨ã€‚ç°åœ¨è™½ç„¶ä¸æ˜¯èŠ±å¥½æœˆåœ†ä¹‹å¤œï¼Œä½†" ..
+				"åœ¨æˆ‘å¿ƒä¸­ï¼Œæœˆäº®å’Œäººä¸€æ ·ï¼Œæ°¸è¿œæ˜¯å›¢åœ†çš„ã€‚" )
 		end
 
 		local i, eventId
 		for i, eventId in x050001_g_eventList do
 			CallScriptFunction( eventId, "OnEnumerate", sceneId, selfId, targetId )
 		end
-		--AddNumText(sceneId, x050001_g_scriptId, "ÖĞÇï»î¶¯½éÉÜ", 11, 1010);
+		--AddNumText(sceneId, x050001_g_scriptId, "ä¸­ç§‹æ´»åŠ¨ä»‹ç»", 11, 1010);
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x050001_OnDefaultEvent( sceneId, selfId, targetId )
 	x050001_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x050001_OnEventRequest( sceneId, selfId, targetId, eventId )
 	local Num = GetNumText();
@@ -63,7 +63,7 @@ function x050001_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x050001_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 	local i, findId
@@ -79,10 +79,10 @@ function x050001_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x050001_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
-	--¾Ü¾øÖ®ºó£¬Òª·µ»ØNPCµÄÊÂ¼şÁĞ±í
+	--æ‹’ç»ä¹‹åï¼Œè¦è¿”å›NPCçš„äº‹ä»¶åˆ—è¡¨
 	local i, findId
 	for i, findId in x050001_g_eventList do
 		if missionScriptId == findId then

@@ -1,5 +1,5 @@
---���ߣ��ɵ���«<ID:31000001>
---�ű��� 332101
+--道具：仙丹葫芦<ID:31000001>
+--脚本号 332101
 --Author: Steven.Han 17:20 2007-5-17
 
 x332101_g_scriptId = 332101
@@ -7,37 +7,37 @@ x332101_g_MaxValue = 125000
 x332101_g_IncPerAct = 5000
 
 --**********************************
---�¼��������
+--事件交互入口
 --**********************************
 function x332101_OnDefaultEvent( sceneId, selfId, bagIndex )
--- ����Ҫ����ӿڣ���Ҫ�����պ���
+-- 不需要这个接口，但要保留空函数
 end
 
 --**********************************
---�����Ʒ��ʹ�ù����Ƿ������ڼ��ܣ�
---ϵͳ����ִ�п�ʼʱ�����������ķ���ֵ���������ʧ������Ժ�������Ƽ��ܵ�ִ�С�
---����1���������Ƶ���Ʒ�����Լ������Ƽ��ܵ�ִ�У�����0�����Ժ���Ĳ�����
+--这个物品的使用过程是否类似于技能：
+--系统会在执行开始时检测这个函数的返回值，如果返回失败则忽略后面的类似技能的执行。
+--返回1：技能类似的物品，可以继续类似技能的执行；返回0：忽略后面的操作。
 --**********************************
 function x332101_IsSkillLikeScript( sceneId, selfId)
-	return 1; --����ű���Ҫ����֧��
+	return 1; --这个脚本需要动作支持
 end
 
 --**********************************
---ֱ��ȡ��Ч����
---ϵͳ��ֱ�ӵ�������ӿڣ���������������ķ���ֵȷ���Ժ�������Ƿ�ִ�С�
---����1���Ѿ�ȡ����ӦЧ��������ִ�к�������������0��û�м�⵽���Ч��������ִ�С�
+--直接取消效果：
+--系统会直接调用这个接口，并根据这个函数的返回值确定以后的流程是否执行。
+--返回1：已经取消对应效果，不再执行后续操作；返回0：没有检测到相关效果，继续执行。
 --**********************************
 function x332101_CancelImpacts( sceneId, selfId )
-	return 0; --����Ҫ����ӿڣ���Ҫ�����պ���,����ʼ�շ���0��
+	return 0; --不需要这个接口，但要保留空函数,并且始终返回0。
 end
 
 --**********************************
---���������ڣ�
---ϵͳ���ڼ��ܼ���ʱ����������ӿڣ���������������ķ���ֵȷ���Ժ�������Ƿ�ִ�С�
---����1���������ͨ�������Լ���ִ�У�����0���������ʧ�ܣ��жϺ���ִ�С�
+--条件检测入口：
+--系统会在技能检测的时间点调用这个接口，并根据这个函数的返回值确定以后的流程是否执行。
+--返回1：条件检测通过，可以继续执行；返回0：条件检测失败，中断后续执行。
 --**********************************
 function x332101_OnConditionCheck( sceneId, selfId )
-	--У��ʹ�õ���Ʒ
+	--校验使用的物品
 	if(1~=LuaFnVerifyUsedItem(sceneId, selfId)) then
 		return 0
 	end
@@ -52,14 +52,14 @@ function x332101_OnConditionCheck( sceneId, selfId )
         return 0
     end
         
-	return 1; --����Ҫ�κ�����������ʼ�շ���1��
+	return 1; --不需要任何条件，并且始终返回1。
 end
 
 --**********************************
---���ļ�⼰������ڣ�
---ϵͳ���ڼ������ĵ�ʱ����������ӿڣ���������������ķ���ֵȷ���Ժ�������Ƿ�ִ�С�
---����1�����Ĵ���ͨ�������Լ���ִ�У�����0�����ļ��ʧ�ܣ��жϺ���ִ�С�
---ע�⣺�ⲻ�⸺�����ĵļ��Ҳ�������ĵ�ִ�С�
+--消耗检测及处理入口：
+--系统会在技能消耗的时间点调用这个接口，并根据这个函数的返回值确定以后的流程是否执行。
+--返回1：消耗处理通过，可以继续执行；返回0：消耗检测失败，中断后续执行。
+--注意：这不光负责消耗的检测也负责消耗的执行。
 --**********************************
 function x332101_OnDeplete( sceneId, selfId )
 	if(0<LuaFnDepletingUsedItem(sceneId, selfId)) then
@@ -69,11 +69,11 @@ function x332101_OnDeplete( sceneId, selfId )
 end
 
 --**********************************
---ֻ��ִ��һ����ڣ�
---������˲�����ܻ���������ɺ��������ӿڣ������������Ҹ��������������ʱ�򣩣�������
---����Ҳ����������ɺ��������ӿڣ����ܵ�һ��ʼ�����ĳɹ�ִ��֮�󣩡�
---����1�������ɹ�������0������ʧ�ܡ�
---ע�������Ǽ�����Чһ�ε����
+--只会执行一次入口：
+--聚气和瞬发技能会在消耗完成后调用这个接口（聚气结束并且各种条件都满足的时候），而引导
+--技能也会在消耗完成后调用这个接口（技能的一开始，消耗成功执行之后）。
+--返回1：处理成功；返回0：处理失败。
+--注：这里是技能生效一次的入口
 --**********************************
 function x332101_OnActivateOnce( sceneId, selfId )
 
@@ -83,7 +83,7 @@ function x332101_OnActivateOnce( sceneId, selfId )
     
     local PlayerHP = GetHp(sceneId, selfId)
     local PlayerMaxHP  = GetMaxHp(sceneId, selfId)
-    local NeedHP = PlayerMaxHP - PlayerHP   --��Ҫ�ָ���HP��
+    local NeedHP = PlayerMaxHP - PlayerHP   --需要恢复的HP量
     
     if x332101_g_IncPerAct < NeedHP then
         NeedHP = x332101_g_IncPerAct
@@ -94,42 +94,42 @@ function x332101_OnActivateOnce( sceneId, selfId )
     if PlayerHP == PlayerMaxHP then
         LuaFnSendOResultToPlayer( sceneId, selfId, OR_HEALTH_IS_FULL )
     else
-		local nCB = ValidValue   --ʹ��ǰ����
-		local nHPB = PlayerHP    --ʹ��ǰ���hp
-		local bErased = -1       --��Ʒ�Ƿ�ɾ��
+		local nCB = ValidValue   --使用前容量
+		local nHPB = PlayerHP    --使用前玩家hp
+		local bErased = -1       --物品是否被删除
 		    
-        if NeedHP >= ValidValue then  --���ṩ��HP����ָ���Ҷ���HP
+        if NeedHP >= ValidValue then  --可提供的HP不足恢复玩家定量HP
             --IncreaseHp
-            IncreaseHp(sceneId, selfId, ValidValue ) --�ָ����ṩ��HP
-            SetBagItemParam( sceneId, selfId, bagId, 4, 2, x332101_g_MaxValue ) --�����������
-            SetBagItemParam( sceneId, selfId, bagId, 8, 2, x332101_g_MaxValue ) --������������
+            IncreaseHp(sceneId, selfId, ValidValue ) --恢复可提供的HP
+            SetBagItemParam( sceneId, selfId, bagId, 4, 2, x332101_g_MaxValue ) --设置最大容量
+            SetBagItemParam( sceneId, selfId, bagId, 8, 2, x332101_g_MaxValue ) --设置已用容量
             bErased = EraseItem( sceneId, selfId, bagId )
         else
-            IncreaseHp(sceneId, selfId, NeedHP ) --�ָ���Ҫ��HP,��ʱ,���Ӧ������ȫ��
-            SetBagItemParam( sceneId, selfId, bagId, 4, 2, x332101_g_MaxValue ) --�����������
-            SetBagItemParam( sceneId, selfId, bagId, 8, 2, UseValue + x332101_g_IncPerAct ) --������������
+            IncreaseHp(sceneId, selfId, NeedHP ) --恢复需要的HP,此时,玩家应该生命全满
+            SetBagItemParam( sceneId, selfId, bagId, 4, 2, x332101_g_MaxValue ) --设置最大容量
+            SetBagItemParam( sceneId, selfId, bagId, 8, 2, UseValue + x332101_g_IncPerAct ) --设置已用容量
             
             if( x332101_g_MaxValue == ( UseValue + x332101_g_IncPerAct ) ) then
                 bErased = EraseItem( sceneId, selfId, bagId )
             end
             
-            --SetBagItemParam( sceneId, selfId, bagId, 8, 2, UseValue + NeedHP ) --������������
+            --SetBagItemParam( sceneId, selfId, bagId, 8, 2, UseValue + NeedHP ) --设置已用容量
         end
         
 		local szName = GetName( sceneId, selfId )
 		local nGuid = LuaFnGetGUID( sceneId, selfId )
-		local nHPA = GetHp(sceneId, selfId)             --ʹ�ú����hp
+		local nHPA = GetHp(sceneId, selfId)             --使用后玩家hp
 		        
         if bErased < 0 then
 			--local szLog = "Use31000001, Name=%s, Guid=%d, CB=%d, CA=%d, HPB=%d, HPA=%d, BIDX=%d"
-			local szLog = "Use31000001, ����=%s, Guid=%d, ʹ��ǰҩ��=%d, ʹ�ú�ҩ��=%d, ʹ��ǰHP=%d, ʹ�ú�HP=%d, ����λ��=%d"
+			local szLog = "Use31000001, 名字=%s, Guid=%d, 使用前药量=%d, 使用后药量=%d, 使用前HP=%d, 使用后HP=%d, 背包位置=%d"
 			local UseValue_log = GetBagItemParam( sceneId, selfId, bagId, 8, 2 )
-			local nCA = x332101_g_MaxValue - UseValue_log   --ʹ�ú�����
+			local nCA = x332101_g_MaxValue - UseValue_log   --使用后容量
 			
 			local szDebugLog = format( szLog, szName, nGuid, nCB, nCA, nHPB, nHPA, bagId )
 			WriteDebugLog( sceneId, selfId, szDebugLog )
         else
-			local szLog = "Use31000001, ����=%s, Guid=%d, ʹ��ǰҩ��=%d, �ѱ�ɾ��, ʹ��ǰHP=%d, ʹ�ú�HP=%d, ����λ��=%d"
+			local szLog = "Use31000001, 名字=%s, Guid=%d, 使用前药量=%d, 已被删除, 使用前HP=%d, 使用后HP=%d, 背包位置=%d"
 			local szDebugLog = format( szLog, szName, nGuid, nCB, nHPB, nHPA, bagId )
 			WriteDebugLog( sceneId, selfId, szDebugLog )
         end
@@ -143,13 +143,13 @@ function x332101_OnActivateOnce( sceneId, selfId )
 end
 
 --**********************************
---��������������ڣ�
---�������ܻ���ÿ����������ʱ��������ӿڡ�
---���أ�1�����´�������0���ж�������
---ע�������Ǽ�����Чһ�ε����
+--引导心跳处理入口：
+--引导技能会在每次心跳结束时调用这个接口。
+--返回：1继续下次心跳；0：中断引导。
+--注：这里是技能生效一次的入口
 --**********************************
 function x332101_OnActivateEachTick( sceneId, selfId)
-	return 1; --���������Խű�, ֻ�����պ���.
+	return 1; --不是引导性脚本, 只保留空函数.
 end
 
 function x332101_ShowNotice( sceneId, selfId, strNotice)

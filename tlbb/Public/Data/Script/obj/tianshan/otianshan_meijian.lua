@@ -1,24 +1,24 @@
---ÌìÉ½NPC
---ÕÆÃÅÈË
---Ã·½£
---ÆÕÍ¨
+--å¤©å±±NPC
+--æŒé—¨äºº
+--æ¢…å‰‘
+--æ™®é€š
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x017001_g_ScriptId = 017001
 
 x017001_g_eventList={228900,229009,200096,200097,808004,229012, 808092}
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x017001_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
-		AddText(sceneId,"  ÎÒÊÇÃ·½££¬ÀÏ×ğÖ÷²»ÔÚ£¬ÎÒÀ´ÔİÊ±¹ÜÀíÌìÉ½µÜ×Ó¡£")
+		AddText(sceneId,"  æˆ‘æ˜¯æ¢…å‰‘ï¼Œè€å°Šä¸»ä¸åœ¨ï¼Œæˆ‘æ¥æš‚æ—¶ç®¡ç†å¤©å±±å¼Ÿå­ã€‚")
 		local mp = GetMenPai(sceneId, selfId)
 		if mp == 9 then 
-			AddNumText(sceneId, x017001_g_ScriptId, "¼ÓÈëÃÅÅÉ",6,0)
+			AddNumText(sceneId, x017001_g_ScriptId, "åŠ å…¥é—¨æ´¾",6,0)
 		end
-		AddNumText(sceneId, x017001_g_ScriptId, "ÃÅÅÉ½éÉÜ",8,1)
-		AddNumText(sceneId, x017001_g_ScriptId, "ÈçºÎÑ§Ï°ÃÅÅÉ¼¼ÄÜ",8,6)		--Ö¸Â·µ½¼¼ÄÜÑ§Ï°ÈË
+		AddNumText(sceneId, x017001_g_ScriptId, "é—¨æ´¾ä»‹ç»",8,1)
+		AddNumText(sceneId, x017001_g_ScriptId, "å¦‚ä½•å­¦ä¹ é—¨æ´¾æŠ€èƒ½",8,6)		--æŒ‡è·¯åˆ°æŠ€èƒ½å­¦ä¹ äºº
 		for i, eventId in x017001_g_eventList do
 			CallScriptFunction( eventId, "OnEnumerate",sceneId, selfId, targetId )
 		end
@@ -27,7 +27,7 @@ function x017001_OnDefaultEvent( sceneId, selfId,targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x017001_OnEventRequest( sceneId, selfId, targetId, eventId )
 
@@ -43,7 +43,7 @@ function x017001_OnEventRequest( sceneId, selfId, targetId, eventId )
 		x017001_g_MenPai = GetMenPai(sceneId, selfId)
 		if x017001_g_MenPai == 7   then
 			BeginEvent(sceneId)
-				AddText(sceneId, "ÄãÓÖÀ´ÏûÇ²ÎªÊ¦ÁË£¬ÄãÒÑÊÇÎÒÌìÉ½µÜ×Ó£¬»¹°İÊ²Ã´Ê¦ÄØ¡£")
+				AddText(sceneId, "ä½ åˆæ¥æ¶ˆé£ä¸ºå¸ˆäº†ï¼Œä½ å·²æ˜¯æˆ‘å¤©å±±å¼Ÿå­ï¼Œè¿˜æ‹œä»€ä¹ˆå¸ˆå‘¢ã€‚")
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,targetId)
 			return
@@ -51,7 +51,7 @@ function x017001_OnEventRequest( sceneId, selfId, targetId, eventId )
 		
 		if x017001_g_MenPai ~= 9 then
 			BeginEvent(sceneId)
-				AddText(sceneId,"ÄãÒÑÊÇ±ğµÄÃÅÅÉµÄ¸ßÍ½ÁË£¬ÎÒÃÇ²»ÊÕÄãµÄ¡£")
+				AddText(sceneId,"ä½ å·²æ˜¯åˆ«çš„é—¨æ´¾çš„é«˜å¾’äº†ï¼Œæˆ‘ä»¬ä¸æ”¶ä½ çš„ã€‚")
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,targetId)
 			return
@@ -59,8 +59,8 @@ function x017001_OnEventRequest( sceneId, selfId, targetId, eventId )
 
 		BeginEvent(sceneId)
 			AddText(sceneId, "#{MenpaiInfo_007}")
-			AddNumText(sceneId, x017001_g_ScriptId, "ÎÒÈ·¶¨Òª°İÈëÌìÉ½ÅÉ",6,3)
-			AddNumText(sceneId, x017001_g_ScriptId, "ÎÒÔİÊ±»¹²»Ïë°İÈëÃÅÅÉ",8,4)
+			AddNumText(sceneId, x017001_g_ScriptId, "æˆ‘ç¡®å®šè¦æ‹œå…¥å¤©å±±æ´¾",6,3)
+			AddNumText(sceneId, x017001_g_ScriptId, "æˆ‘æš‚æ—¶è¿˜ä¸æƒ³æ‹œå…¥é—¨æ´¾",8,4)
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 		 
@@ -78,64 +78,64 @@ function x017001_OnEventRequest( sceneId, selfId, targetId, eventId )
 	if GetNumText()==3	then
 		if LuaFnGetPropertyBagSpace( sceneId, selfId ) < 2 then
 			BeginEvent(sceneId)
-				AddText(sceneId,"  ÕûÀíÒ»ÏÂ±³°ü£¬ĞèÒªÓĞÁ½¸ö¿ÕÎ»ÖÃ£¬ÎÒ»áÓĞ½±Àø¸øÄã£¡")
+				AddText(sceneId,"  æ•´ç†ä¸€ä¸‹èƒŒåŒ…ï¼Œéœ€è¦æœ‰ä¸¤ä¸ªç©ºä½ç½®ï¼Œæˆ‘ä¼šæœ‰å¥–åŠ±ç»™ä½ ï¼")
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,targetId)
 		elseif GetLevel( sceneId, selfId ) < 10 then
 			BeginEvent(sceneId)
-				AddText(sceneId,"Äã»¹ÊÇµÈµ½10¼¶Ö®ºóÔÙÀ´°İÊ¦Ñ§ÒÕ°É£¡")
+				AddText(sceneId,"ä½ è¿˜æ˜¯ç­‰åˆ°10çº§ä¹‹åå†æ¥æ‹œå¸ˆå­¦è‰ºå§ï¼")
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,targetId)
 		else
 			x017001_g_MenPai = GetMenPai(sceneId, selfId)
 			if x017001_g_MenPai == 7 then
 				BeginEvent(sceneId)
-					AddText(sceneId, "ÄãÓÖÀ´ÏûÇ²ÎªÊ¦ÁË£¬ÄãÒÑÊÇÎÒÌìÉ½µÜ×Ó£¬»¹°İÊ²Ã´Ê¦ÄØ¡£")
+					AddText(sceneId, "ä½ åˆæ¥æ¶ˆé£ä¸ºå¸ˆäº†ï¼Œä½ å·²æ˜¯æˆ‘å¤©å±±å¼Ÿå­ï¼Œè¿˜æ‹œä»€ä¹ˆå¸ˆå‘¢ã€‚")
 				EndEvent(sceneId)
 				DispatchEventList(sceneId,selfId,targetId)
-			--·µ»ØÖµÎª9±íÊ¾ÎŞÃÅÅÉ
+			--è¿”å›å€¼ä¸º9è¡¨ç¤ºæ— é—¨æ´¾
 			elseif x017001_g_MenPai==9	then
 				LuaFnJoinMenpai(sceneId, selfId, targetId, 7)
 
-				-- ÉèÖÃ³õÊ¼µÄNpc¹ØÏµÖµ
+				-- è®¾ç½®åˆå§‹çš„Npcå…³ç³»å€¼
 				CallScriptFunction( 200099, "InitRelation", sceneId, selfId )
 
-				-- °ÑÏà¹ØµÄĞÄ·¨ÉèÖÃÎª10¼¶±ğ  43,46,47
+				-- æŠŠç›¸å…³çš„å¿ƒæ³•è®¾ç½®ä¸º10çº§åˆ«  43,46,47
 				LuaFnSetXinFaLevel(sceneId,selfId,43,10)
 				LuaFnSetXinFaLevel(sceneId,selfId,46,10)
 				LuaFnSetXinFaLevel(sceneId,selfId,47,10)
 
 				BeginEvent(sceneId)
-	  				AddText(sceneId,"ÄãÒÑ¾­¼ÓÈëÌìÉ½ÅÉ£¡");
+	  				AddText(sceneId,"ä½ å·²ç»åŠ å…¥å¤©å±±æ´¾ï¼");
 	  			EndEvent(sceneId)
 	  			DispatchMissionTips(sceneId,selfId)
-				--¸øÍæ¼Ò·¢ĞÅ,¸æËßËûµ½ÄÄÀï´ò¹Ö,ÔõÑù×¬Ç®
+				--ç»™ç©å®¶å‘ä¿¡,å‘Šè¯‰ä»–åˆ°å“ªé‡Œæ‰“æ€ª,æ€æ ·èµšé’±
 				LuaFnSendSystemMail( sceneId, GetName(sceneId,selfId), "#{LevelMail_menpai_7}" )
 				--LuaFnSendSystemMail( sceneId, GetName(sceneId,selfId), "#{OBJ_tianshan_0001}" )
 				
-				--ÃÅÅÉ½±ÀøÕÙ¼¯Áî
+				--é—¨æ´¾å¥–åŠ±å¬é›†ä»¤
 				for i=1, 20 do
 					TryRecieveItem( sceneId, selfId, 30501001, 1 )
 				end
-				x017001_MsgBox( sceneId, selfId, "µÃµ½20Ã¶ÃÅÅÉÕÙ¼¯Áî¡£" )
+				x017001_MsgBox( sceneId, selfId, "å¾—åˆ°20æšé—¨æ´¾å¬é›†ä»¤ã€‚" )
 
 				if TryRecieveItem( sceneId, selfId, 10124006, 1 ) >= 0 then
-					str		= "#YÄã»ñµÃÁË"..GetItemName( sceneId, 10124006 ).."¡£"
+					str		= "#Yä½ è·å¾—äº†"..GetItemName( sceneId, 10124006 ).."ã€‚"
 					x017001_MsgBox( sceneId, selfId, str )
 				end
 					
 				if	LuaFnGetSex( sceneId, selfId)==0	then
-					LuaFnMsg2Player( sceneId, selfId,"ÄãÒÑ¾­¼ÓÈëÌìÉ½ÅÉ£¡",MSG2PLAYER_PARA)
+					LuaFnMsg2Player( sceneId, selfId,"ä½ å·²ç»åŠ å…¥å¤©å±±æ´¾ï¼",MSG2PLAYER_PARA)
 					LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, 167, 0)
 					CallScriptFunction( 228900, "OnDefaultEvent",sceneId, selfId, targetId )
 				else
-					LuaFnMsg2Player( sceneId, selfId,"ÄãÒÑ¾­¼ÓÈëÌìÉ½ÅÉ£¡",MSG2PLAYER_PARA)
+					LuaFnMsg2Player( sceneId, selfId,"ä½ å·²ç»åŠ å…¥å¤©å±±æ´¾ï¼",MSG2PLAYER_PARA)
 					LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, 167, 0)
 					CallScriptFunction( 228900, "OnDefaultEvent",sceneId, selfId, targetId )
 				end
 			else
 				BeginEvent(sceneId)
-					AddText(sceneId,"ÄãÒÑÊÇ±ğµÄÃÅÅÉµÄ¸ßÍ½ÁË£¬ÎÒÃÇ²»ÊÕÄãµÄ¡£")
+					AddText(sceneId,"ä½ å·²æ˜¯åˆ«çš„é—¨æ´¾çš„é«˜å¾’äº†ï¼Œæˆ‘ä»¬ä¸æ”¶ä½ çš„ã€‚")
 				EndEvent(sceneId)
 				DispatchEventList(sceneId,selfId,targetId)
 			end
@@ -146,19 +146,19 @@ function x017001_OnEventRequest( sceneId, selfId, targetId, eventId )
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 	end
-	--Ö¸Â·
+	--æŒ‡è·¯
 	if GetNumText()==6 then
 		BeginEvent(sceneId)
-			AddText(sceneId, "À¼½££¨88£¬44£©¿ÉÒÔ½Ì¸øÄãÎÒÅÉÕ½¶·¼¼ÄÜ£¬Ëû¾ÍÔÚÎÒÅÔ±ß¡£")
+			AddText(sceneId, "å…°å‰‘ï¼ˆ88ï¼Œ44ï¼‰å¯ä»¥æ•™ç»™ä½ æˆ‘æ´¾æˆ˜æ–—æŠ€èƒ½ï¼Œä»–å°±åœ¨æˆ‘æ—è¾¹ã€‚")
 		EndEvent(sceneId)
 		DispatchEventList(sceneId, selfId, targetId)
-		CallScriptFunction( SCENE_SCRIPT_ID, "AskTheWay", sceneId, selfId, sceneId, 88, 44, "À¼½£" )
+		CallScriptFunction( SCENE_SCRIPT_ID, "AskTheWay", sceneId, selfId, sceneId, 88, 44, "å…°å‰‘" )
 		return
 	end
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x017001_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x017001_g_eventList do
@@ -173,10 +173,10 @@ function x017001_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x017001_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
-	--¾Ü¾øÖ®ºó£¬Òª·µ»ØNPCµÄÊÂ¼şÁĞ±í
+	--æ‹’ç»ä¹‹åï¼Œè¦è¿”å›NPCçš„äº‹ä»¶åˆ—è¡¨
 	for i, findId in x017001_g_eventList do
 		if missionScriptId == findId then
 			x017001_OnDefaultEvent( sceneId, selfId, targetId )
@@ -186,7 +186,7 @@ function x017001_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¼ÌĞø£¨ÒÑ¾­½ÓÁËÈÎÎñ£©
+--ç»§ç»­ï¼ˆå·²ç»æ¥äº†ä»»åŠ¡ï¼‰
 --**********************************
 function x017001_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x017001_g_eventList do
@@ -198,7 +198,7 @@ function x017001_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---Ìá½»ÒÑ×öÍêµÄÈÎÎñ
+--æäº¤å·²åšå®Œçš„ä»»åŠ¡
 --**********************************
 function x017001_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, selectRadioId )
 	for i, findId in x017001_g_eventList do
@@ -210,13 +210,13 @@ function x017001_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 end
 
 --**********************************
---ËÀÍöÊÂ¼ş
+--æ­»äº¡äº‹ä»¶
 --**********************************
 function x017001_OnDie( sceneId, selfId, killerId )
 end
 
 --**********************************
---ÏûÏ¢ÌáÊ¾
+--æ¶ˆæ¯æç¤º
 --**********************************
 function x017001_MsgBox( sceneId, selfId, str )
 	Msg2Player( sceneId, selfId, str, MSG2PLAYER_PARA )

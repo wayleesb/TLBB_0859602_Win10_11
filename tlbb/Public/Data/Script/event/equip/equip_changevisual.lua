@@ -1,11 +1,11 @@
---×°±¸¸Ä±äÍâĞÎ
---½Å±¾ºÅ
+--è£…å¤‡æ”¹å˜å¤–å½¢
+--è„šæœ¬å·
 x809264_g_ScriptId = 809264
 
---×°±¸¸Ä±äÍâĞÎUI 1010
+--è£…å¤‡æ”¹å˜å¤–å½¢UI 1010
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x809264_OnEnumerate( sceneId, selfId, targetId )
 
@@ -13,15 +13,15 @@ end
 
 
 --**********************************
---×°±¸¸Ä±äÍâĞÎ
+--è£…å¤‡æ”¹å˜å¤–å½¢
 --**********************************
 function x809264_ChangeVisual( sceneId, selfId, nItemIndex1, nItemIndex2, nVisualIndex)
-	local text="¸Ä±äÍâĞÎ³É¹¦£¡"
+	local text="æ”¹å˜å¤–å½¢æˆåŠŸï¼"
 
 	local ret = LuaFnIsItemAvailable( sceneId, selfId, nItemIndex1 )
 	if ret ~= 1 then
 		BeginEvent(sceneId)
-		AddText(sceneId,"Çë·ÅÈë¿É±äĞÎµÄ×°±¸¡£");
+		AddText(sceneId,"è¯·æ”¾å…¥å¯å˜å½¢çš„è£…å¤‡ã€‚");
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
@@ -30,7 +30,7 @@ function x809264_ChangeVisual( sceneId, selfId, nItemIndex1, nItemIndex2, nVisua
 	ret = LuaFnIsItemAvailable( sceneId, selfId, nItemIndex2 )
 	if ret ~= 1 then
 		BeginEvent(sceneId)
-		AddText(sceneId,"Çë·ÅÈë±äĞÎ·û¡£");
+		AddText(sceneId,"è¯·æ”¾å…¥å˜å½¢ç¬¦ã€‚");
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
@@ -38,9 +38,9 @@ function x809264_ChangeVisual( sceneId, selfId, nItemIndex1, nItemIndex2, nVisua
 	
 	sy_index = LuaFnGetItemTableIndexByIndex( sceneId, selfId, nItemIndex2 )
 	if sy_index ~= 30900004 then
-		--±äĞÎ·û
+		--å˜å½¢ç¬¦
 		BeginEvent(sceneId)
-		AddText(sceneId,"¸Ä±ä×°±¸ÍâĞÎĞèÒª±äĞÎ·û¡£");
+		AddText(sceneId,"æ”¹å˜è£…å¤‡å¤–å½¢éœ€è¦å˜å½¢ç¬¦ã€‚");
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
@@ -49,7 +49,7 @@ function x809264_ChangeVisual( sceneId, selfId, nItemIndex1, nItemIndex2, nVisua
 	money = GetMoney( sceneId, selfId )
 	need_money = GetBagItemLevel( sceneId, selfId, nItemIndex1 ) * 20000
 	if money < need_money then
-		text="Ç¿»¯¸Ã×°±¸µÄÍâĞÎĞèÒª#{_MONEY%d}£¬ÄúÉíÉÏµÄÏÖ½ğ²»×ã¡£"
+		text="å¼ºåŒ–è¯¥è£…å¤‡çš„å¤–å½¢éœ€è¦#{_MONEY%d}ï¼Œæ‚¨èº«ä¸Šçš„ç°é‡‘ä¸è¶³ã€‚"
 		text=format( text, need_money )
 		BeginEvent(sceneId)
 		AddText(sceneId,text);
@@ -67,23 +67,23 @@ function x809264_ChangeVisual( sceneId, selfId, nItemIndex1, nItemIndex2, nVisua
 	end
 	
 	if ret == -1 then
-		text="¸Ã×°±¸²»¿É±äĞÎ¡£"
+		text="è¯¥è£…å¤‡ä¸å¯å˜å½¢ã€‚"
 	end
 
 	if ret == -2 then
-		text="×°±¸²»¿ÉÓÃ¡£"
+		text="è£…å¤‡ä¸å¯ç”¨ã€‚"
 	end
 	
 	if ret == -3 then
-		text="±äĞÎ·û²»¿ÉÓÃ¡£"
+		text="å˜å½¢ç¬¦ä¸å¯ç”¨ã€‚"
 	end
 
 	if ret == -4 then
-		text="²»ÄÜ¸Ä±ä³ÉÏàÍ¬ÍâĞÎ¡£"
+		text="ä¸èƒ½æ”¹å˜æˆç›¸åŒå¤–å½¢ã€‚"
 	end
 
 	if ret == -5 then
-		text="Òª¸Ä±äµÄÍâĞÎ²»´æÔÚ¡£"
+		text="è¦æ”¹å˜çš„å¤–å½¢ä¸å­˜åœ¨ã€‚"
 	end
 
 	BeginEvent(sceneId)

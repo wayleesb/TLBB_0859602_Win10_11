@@ -1,11 +1,11 @@
---ÁË½â¾Å´óÃÅÅÉÌØÉ«
+--äº†è§£ä¹å¤§é—¨æ´¾ç‰¹è‰²
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x800115_g_ScriptId	= 800115
 
 
 
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x800115_OnDefaultEvent( sceneId, selfId, targetId )
 	local	key	= GetNumText()
@@ -19,15 +19,15 @@ function x800115_OnDefaultEvent( sceneId, selfId, targetId )
 	   
 	   if( Level < 20 ) then
             BeginEvent( sceneId )
-		        AddText(sceneId,"  ÄúµÄµÈ¼¶²»×ã20¼¶£¬ÎŞ·¨Ìá³ö¾ö¶·ÒªÇó")
-				AddNumText( sceneId, x800115_g_ScriptId, "ÖªµÀÁË¡­¡­", -1, 2 )
+		        AddText(sceneId,"  æ‚¨çš„ç­‰çº§ä¸è¶³20çº§ï¼Œæ— æ³•æå‡ºå†³æ–—è¦æ±‚")
+				AddNumText( sceneId, x800115_g_ScriptId, "çŸ¥é“äº†â€¦â€¦", -1, 2 )
 			
 			EndEvent( sceneId )
 			DispatchEventList( sceneId, selfId, targetId )	
         elseif Energy < 100 then
             BeginEvent( sceneId )
-		        AddText(sceneId,"  ¶Ô²»Æğ£¬ÄúµÄ¾«Á¦Öµ²»×ã100£¬ÎŞ·¨Ìá³ö¾ö¶·ÒªÇó¡£")
-				AddNumText( sceneId, x800115_g_ScriptId, "ÖªµÀÁË¡­¡­", -1, 2 )
+		        AddText(sceneId,"  å¯¹ä¸èµ·ï¼Œæ‚¨çš„ç²¾åŠ›å€¼ä¸è¶³100ï¼Œæ— æ³•æå‡ºå†³æ–—è¦æ±‚ã€‚")
+				AddNumText( sceneId, x800115_g_ScriptId, "çŸ¥é“äº†â€¦â€¦", -1, 2 )
 			
 			EndEvent( sceneId )
 			DispatchEventList( sceneId, selfId, targetId )	
@@ -38,7 +38,7 @@ function x800115_OnDefaultEvent( sceneId, selfId, targetId )
 
 	elseif  key == 2 then
 	    --PrintStr( " =2 ")
-		--¹Ø±Õ½çÃæ
+		--å…³é—­ç•Œé¢
 		BeginUICommand( sceneId )
 		UICommand_AddInt( sceneId, targetId )
 		EndUICommand( sceneId )
@@ -51,26 +51,26 @@ function x800115_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x800115_OnEnumerate( sceneId, selfId, targetId )
 	--if GetLevel( sceneId, selfId ) >= 10 and GetMenPai( sceneId, selfId ) == MP_WUMENPAI then
-		--AddNumText( sceneId, x800115_g_ScriptId, "ÎÒÒªÌá³ö¾ö¶·", -1, 100 )
+		--AddNumText( sceneId, x800115_g_ScriptId, "æˆ‘è¦æå‡ºå†³æ–—", -1, 100 )
 	--end
 	
 	--local Level = GetLevel( sceneId, selfId )
 	--if( Level >= 20 ) then
                 BeginEvent( sceneId )
-		AddText(sceneId,"  ½­ºşÖĞ³äÂúÁË¶÷Ô¹£¬Èç¹ûÄú²»ÏëÖ±½ÓÒÔµ¶ÏàÏò£¬Ò²¿ÉÒÔÑ¡ÔñÒ»ÖÖ±È½ÏÎÄÃ÷µÄ·½Ê½£¬¾ö¶·¡£¶Ô·½Í¬ÒâÖ®ºó¾ö¶·½«»á¿ªÊ¼£¬Ò»¸öĞ¡Ê±Ö®ºó½áÊø¡£ÔÚ¾ö¶·ÖĞËÀÍöÒ²»áÓĞ³Í·£¡£")
-		AddNumText( sceneId, x800115_g_ScriptId, "ÎÒÒªÌá³ö¾ö¶·", 6, 1 )
-		AddNumText( sceneId, x800115_g_ScriptId, "ÎÒÏëÏëÔÙËµ¡­¡­", 8, 2 )
+		AddText(sceneId,"  æ±Ÿæ¹–ä¸­å……æ»¡äº†æ©æ€¨ï¼Œå¦‚æœæ‚¨ä¸æƒ³ç›´æ¥ä»¥åˆ€ç›¸å‘ï¼Œä¹Ÿå¯ä»¥é€‰æ‹©ä¸€ç§æ¯”è¾ƒæ–‡æ˜çš„æ–¹å¼ï¼Œå†³æ–—ã€‚å¯¹æ–¹åŒæ„ä¹‹åå†³æ–—å°†ä¼šå¼€å§‹ï¼Œä¸€ä¸ªå°æ—¶ä¹‹åç»“æŸã€‚åœ¨å†³æ–—ä¸­æ­»äº¡ä¹Ÿä¼šæœ‰æƒ©ç½šã€‚")
+		AddNumText( sceneId, x800115_g_ScriptId, "æˆ‘è¦æå‡ºå†³æ–—", 6, 1 )
+		AddNumText( sceneId, x800115_g_ScriptId, "æˆ‘æƒ³æƒ³å†è¯´â€¦â€¦", 8, 2 )
 			
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 	--else
           --      BeginEvent( sceneId )
-	--	AddText(sceneId,"  ÄúµÄµÈ¼¶²»×ã20¼¶£¬ÎŞ·¨Ìá³ö¾ö¶·ÒªÇó")
-	--	AddNumText( sceneId, x800115_g_ScriptId, "ÖªµÀÁË¡­¡­", -1, 2 )
+	--	AddText(sceneId,"  æ‚¨çš„ç­‰çº§ä¸è¶³20çº§ï¼Œæ— æ³•æå‡ºå†³æ–—è¦æ±‚")
+	--	AddNumText( sceneId, x800115_g_ScriptId, "çŸ¥é“äº†â€¦â€¦", -1, 2 )
 			
 	--	EndEvent( sceneId )
 	--	DispatchEventList( sceneId, selfId, targetId )	
@@ -81,10 +81,10 @@ function x800115_OnEnumerate( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x800115_CheckAccept( sceneId, selfId )
-	--ĞèÒª10¼¶²ÅÄÜ½Ó
+	--éœ€è¦10çº§æ‰èƒ½æ¥
 	--if GetLevel( sceneId, selfId ) >= 10 and GetMenPai( sceneId, selfId ) == MP_WUMENPAI then
 	--	return 1
 	--else
@@ -93,50 +93,50 @@ function x800115_CheckAccept( sceneId, selfId )
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x800115_OnAccept( sceneId, selfId )
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x800115_OnAbandon( sceneId, selfId )
 end
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x800115_OnContinue( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x800115_CheckSubmit( sceneId, selfId )
 	return 1
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x800115_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 end
 
 --**********************************
---É±ËÀ¹ÖÎï»òÍæ¼Ò
+--æ€æ­»æ€ªç‰©æˆ–ç©å®¶
 --**********************************
 function x800115_OnKillObject( sceneId, selfId, objdataId )
 end
 
 --**********************************
---½øÈëÇøÓòÊÂ¼ş
+--è¿›å…¥åŒºåŸŸäº‹ä»¶
 --**********************************
 function x800115_OnEnterZone( sceneId, selfId, zoneId )
 end
 
 --**********************************
---µÀ¾ß¸Ä±ä
+--é“å…·æ”¹å˜
 --**********************************
 function x800115_OnItemChanged( sceneId, selfId, itemdataId )
 end

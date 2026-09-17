@@ -1,32 +1,32 @@
--- µç»°ÃÜ±£ÁìÈ¡ÔùÆ·
--- ´´½¨ÈË[ LB JIA 2008-7-29 10:21:55]
+-- ç”µè¯å¯†ä¿é¢†å–èµ å“
+-- åˆ›å»ºäºº[ LB JIA 2008-7-29 10:21:55]
 
 x210245_g_ScriptId = 210245
 
---½±Àø±ê¼Ç
+--å¥–åŠ±æ ‡è®°
 x210245_g_flag = MF_DianHuaMiBao_Gift
 
---½±ÀøÈó»êµ¤
+--å¥–åŠ±æ¶¦é­‚ä¸¹
 x210245_g_Gift = 30008044
---½±Àø°²±£½ğÅÆ
---x210245_g_AnBaoJinPai = 30008046	--°²±£½ğÅÆ 
-x210245_g_AnBaoDaLiBao = 30008047  --°²±£´óÀñ°ü
+--å¥–åŠ±å®‰ä¿é‡‘ç‰Œ
+--x210245_g_AnBaoJinPai = 30008046	--å®‰ä¿é‡‘ç‰Œ 
+x210245_g_AnBaoDaLiBao = 30008047  --å®‰ä¿å¤§ç¤¼åŒ…
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x210245_OnEnumerate( sceneId, selfId, targetId )
 		AddNumText( sceneId, x210245_g_ScriptId, "#{DHMB_0728_17}", 2, 110)
 		--AddNumText( sceneId, x210245_g_ScriptId, "#{DHMB_8801_19}", 2, 112) 
 		AddNumText( sceneId, x210245_g_ScriptId, "#{DHMB_0728_18}", 11, 111 )
-		--AddNumText( sceneId, x210245_g_ScriptId, "#{DHMB_8801_20}", 11, 113 )	--112,113Îª°²±£´óÀñ°üÔùËÍ
+		--AddNumText( sceneId, x210245_g_ScriptId, "#{DHMB_8801_20}", 11, 113 )	--112,113ä¸ºå®‰ä¿å¤§ç¤¼åŒ…èµ é€
 end
 
 function x210245_OnDefaultEvent( sceneId, selfId, targetId )
 	local	dkey	= GetNumText()
 			
 	if dkey == 110 then
-		x210245_MsgBox(sceneId, selfId, "#{RHD_80904_01}") --ÔİÊ±¹Ø±ÕÁìÈ¡Èó»êµ¤£¬38667
+		x210245_MsgBox(sceneId, selfId, "#{RHD_80904_01}") --æš‚æ—¶å…³é—­é¢†å–æ¶¦é­‚ä¸¹ï¼Œ38667
 --		local ismibao = IsPhoneMibao(sceneId, selfId)
 --   		local ishadzengping = GetMissionFlag(sceneId, selfId, MF_DianHuaMiBao_Gift)
 --   		local runhundan_point = GetMissionData(sceneId, selfId, MD_EX_HUMAN_QIANNENG_SUBJOIN)
@@ -39,20 +39,20 @@ function x210245_OnDefaultEvent( sceneId, selfId, targetId )
 --        	x210245_MsgBox(sceneId, selfId, "#{DHMB_0711_10}")
 --        
 --      else
---        	--¼ì²é±³°ü¿Õ¼äÊÇ·ñ×ã¹»
+--        	--æ£€æŸ¥èƒŒåŒ…ç©ºé—´æ˜¯å¦è¶³å¤Ÿ
 --       	if LuaFnGetPropertyBagSpace( sceneId, selfId ) < 1 then
 --					x210245_MsgBox(sceneId, selfId, "#{DHMB_0711_11}")
 --					return
 --				end
 --			
---            --¸øÎïÆ·£¬Ê×ÏÈÖÃÁìÈ¡±êÖ¾Îª1
+--            --ç»™ç‰©å“ï¼Œé¦–å…ˆç½®é¢†å–æ ‡å¿—ä¸º1
 --        SetMissionFlag(sceneId, selfId, MF_DianHuaMiBao_Gift, 1)
 --				local ret1 = TryRecieveItem(sceneId, selfId, x210245_g_Gift, 1)
 --				if ret1 < 0 then
 --					x210245_MsgBox(sceneId, selfId, "#{DHMB_0711_11}")
 --					return
 --				end
---			-----------------------²âÊÔ´úÂë----------------------
+--			-----------------------æµ‹è¯•ä»£ç ----------------------
 --			--SetMissionFlag(sceneId, selfId, MF_DianHuaMiBao_Gift, 0)
 --			-----------------------------------------------------
 --			
@@ -84,13 +84,13 @@ function x210245_OnDefaultEvent( sceneId, selfId, targetId )
 				x210245_MsgBox(sceneId, selfId, "#{DHMB_0711_11}")
 				return
 			end	
-			--Ê×ÏÈÉ¾ÎïÆ·
+			--é¦–å…ˆåˆ ç‰©å“
 			--local delret = DelItem(sceneId, selfId, x210245_g_AnBaoJinPai, 1)
-			--if delret < 0 then	 --Èç¹ûÉ¾³ıÊ§°Ü,½«²»»á¸øÍæ¼Ò´óÀñ°ü
+			--if delret < 0 then	 --å¦‚æœåˆ é™¤å¤±è´¥,å°†ä¸ä¼šç»™ç©å®¶å¤§ç¤¼åŒ…
 				--return
 			--end
 			
-			--¸øÎïÆ·
+			--ç»™ç‰©å“
 			local ret = TryRecieveItem(sceneId,selfId, x210245_g_AnBaoDaLiBao, 1)
 			if ret < 0 then
 				x210245_MsgBox(sceneId, selfId, "#{DHMB_0711_11}")
@@ -98,7 +98,7 @@ function x210245_OnDefaultEvent( sceneId, selfId, targetId )
 			end
 			
 			SetMissionFlag(sceneId, selfId, MF_AnBaoDaLiBao_Gift, 1)
-			AuditAnBaoJinPaiZengPing(sceneId, selfId,x210245_g_AnBaoDaLiBao)		--¼ÇÂ¼°²±£´óÀñ°üµÄÁìÈ¡
+			AuditAnBaoJinPaiZengPing(sceneId, selfId,x210245_g_AnBaoDaLiBao)		--è®°å½•å®‰ä¿å¤§ç¤¼åŒ…çš„é¢†å–
 			x210245_MsgBox(sceneId, selfId, "#{DHMB_8801_23}")
 		end
 	end	
@@ -106,7 +106,7 @@ function x210245_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÏûÏ¢ÌáÊ¾
+--æ¶ˆæ¯æç¤º
 --**********************************
 function x210245_MsgBox( sceneId, selfId, str )	
 	BeginEvent( sceneId )
@@ -116,10 +116,10 @@ function x210245_MsgBox( sceneId, selfId, str )
 end
 
 --**********************************
---Íæ¼ÒÉÏÏßÖ®ºóµÄÓÊ¼şÌáÊ¾£¬scene.luaµÄx888888_OnScenePlayerLoginµ÷ÓÃµ½ÕâÀï
+--ç©å®¶ä¸Šçº¿ä¹‹åçš„é‚®ä»¶æç¤ºï¼Œscene.luaçš„x888888_OnScenePlayerLoginè°ƒç”¨åˆ°è¿™é‡Œ
 --**********************************
 function x210245_SendMail( sceneId, selfId, nowtime )
 
-	LuaFnSendSystemMail( sceneId, GetName(sceneId, selfId), "#{DHMB_08820_01}" )   -- ·¢ÓÊ¼ş
+	LuaFnSendSystemMail( sceneId, GetName(sceneId, selfId), "#{DHMB_08820_01}" )   -- å‘é‚®ä»¶
 
 end

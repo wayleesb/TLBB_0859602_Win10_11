@@ -59,7 +59,7 @@
             <Window Type="TLBB_EditBoxNormal" Name="Shop_BulkBuying_IME">
                 <Property Name="UnifiedPosition" Value="{{0.6,0.000000},{0.22,0.000000}" />
                 <Property Name="UnifiedSize" Value="{{0.35,0.000000},{0.000000,20.000000}" />
-                <Property Name="MaxTextLength" Value="2" />
+                <Property Name="MaxTextLength" Value="3" />
                 <Property Name="ValidationString" Value="[0-9]*" />
                 <Event Name="TextChanged" Function="Shop_BulkBuying_TextChanged();" />
                 <Property Name="Text" Value="99" />

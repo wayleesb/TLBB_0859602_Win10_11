@@ -4,7 +4,7 @@ x002074_g_dropitemId = 30701020
 
 function x002074_OnDie(sceneId, objId, killerId)
 
-  --如果是宠物打死的就获取其主人的ID....
+  --濡傛灉鏄疇鐗╂墦姝荤殑灏辫幏鍙栧叾涓讳汉鐨処D....
 	local PlayerId = killerId
 	local objType = GetCharacterType( sceneId, killerId )
 	if objType == 3 then

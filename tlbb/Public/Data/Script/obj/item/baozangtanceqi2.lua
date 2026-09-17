@@ -1,55 +1,55 @@
---±¦²ØÌ½²âÆ÷2ĞÍ 
+--å®è—æ¢æµ‹å™¨2å‹ 
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x300005_g_scriptId = 300004
 
---ÈÎÎñºÅ
+--ä»»åŠ¡å·
 x300005_g_MissionId = 700
 
---ÈÎÎñµÀ¾ß±àºÅ
+--ä»»åŠ¡é“å…·ç¼–å·
 x300005_g_ItemId = 40002106
 
 --**********************************
---Ë¢ĞÂÊÂ¼ş
+--åˆ·æ–°äº‹ä»¶
 --**********************************
 function x300005_OnDefaultEvent( sceneId, selfId, BagIndex )
 	misIndex = GetMissionIndexByID(sceneId,selfId,x300005_g_MissionId)
-	x300005_g_MissionCondition = GetMissionParam(sceneId,selfId,misIndex,0)		--»ñµÃÈÎÎñ×´Ì¬
-	scene = GetMissionParam(sceneId,selfId,misIndex,2)					--»ñµÃ±¦Îï³¡¾°ºÅ
-	treasureX = GetMissionParam(sceneId,selfId,misIndex,3)					--»ñµÃ±¦ÎïX×ø±ê
-	treasureZ = GetMissionParam(sceneId,selfId,misIndex,4)				--»ñµÃ±¦ÎïZ×ø±ê	
-	--Èç¹ûÈÎÎñÒÑ¾­Íê³É
+	x300005_g_MissionCondition = GetMissionParam(sceneId,selfId,misIndex,0)		--è·å¾—ä»»åŠ¡çŠ¶æ€
+	scene = GetMissionParam(sceneId,selfId,misIndex,2)					--è·å¾—å®ç‰©åœºæ™¯å·
+	treasureX = GetMissionParam(sceneId,selfId,misIndex,3)					--è·å¾—å®ç‰©Xåæ ‡
+	treasureZ = GetMissionParam(sceneId,selfId,misIndex,4)				--è·å¾—å®ç‰©Zåæ ‡	
+	--å¦‚æœä»»åŠ¡å·²ç»å®Œæˆ
 	if x300005_g_MissionCondition == 1 then
 		BeginEvent(sceneId)
-			AddText(sceneId,"ÒÑ¾­ÕÒµ½ÁË,»ØÈ¥½»ÈÎÎñ°É")
+			AddText(sceneId,"å·²ç»æ‰¾åˆ°äº†,å›å»äº¤ä»»åŠ¡å§")
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
 	end
-	--È¡µÃÍæ¼Òµ±Ç°×ø±ê
+	--å–å¾—ç©å®¶å½“å‰åæ ‡
 	PlayerX = GetHumanWorldX(sceneId,selfId)
 	PlayerZ = GetHumanWorldZ(sceneId,selfId)
-	--¼ÆËãÍæ¼ÒÓë±¦²ØµÄ¾àÀë
+	--è®¡ç®—ç©å®¶ä¸å®è—çš„è·ç¦»
 	Distance = floor(sqrt((treasureX - PlayerX) * (treasureX - PlayerX) + (treasureZ - PlayerZ) * (treasureZ - PlayerZ)))
 	if sceneId ~= scene then
 		BeginEvent(sceneId)
-			AddText(sceneId,"ËÆºõ±¦²Ø²»ÔÚÕâ¸ö³¡¾°")
+			AddText(sceneId,"ä¼¼ä¹å®è—ä¸åœ¨è¿™ä¸ªåœºæ™¯")
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
 	end
 	if Distance >1 then
 		--BeginEvent(sceneId)
-		--	AddText(sceneId,"Ì½²âÆ÷Ã»ÓĞ¸ĞÓ¦µ½ÈÎºÎ±¦²Ø")
+		--	AddText(sceneId,"æ¢æµ‹å™¨æ²¡æœ‰æ„Ÿåº”åˆ°ä»»ä½•å®è—")
 		--EndEvent(sceneId)
 		--DispatchMissionTips(sceneId,selfId)
 		--BeginEvent(sceneId)
-		--	AddText(sceneId,"¼ÌĞøÕÒ°É")
+		--	AddText(sceneId,"ç»§ç»­æ‰¾å§")
 		--EndEvent(sceneId)
 		--DispatchMissionTips(sceneId,selfId)
 	--elseif Distance <= 100 and Distance >=2 then
 		BeginEvent(sceneId)
-			AddText(sceneId,"¾àÀë±¦²Ø»¹ÓĞ"..Distance.."Ã×")
+			AddText(sceneId,"è·ç¦»å®è—è¿˜æœ‰"..Distance.."ç±³")
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 	elseif Distance <= 1 then
@@ -58,7 +58,7 @@ function x300005_OnDefaultEvent( sceneId, selfId, BagIndex )
 		local ret = EndAddItem(sceneId,selfId)
 		if ret > 0 then
 			AddItemListToHuman(sceneId,selfId)
-			SetMissionByIndex(sceneId,selfId,misIndex,0,1)		--°ÑÈÎÎñ×´Ì¬±äÁ¿ÉèÖÃÎª1,±íÊ¾ÒÑ¾­Íê³É
+			SetMissionByIndex(sceneId,selfId,misIndex,0,1)		--æŠŠä»»åŠ¡çŠ¶æ€å˜é‡è®¾ç½®ä¸º1,è¡¨ç¤ºå·²ç»å®Œæˆ
 		end
 	end
 end

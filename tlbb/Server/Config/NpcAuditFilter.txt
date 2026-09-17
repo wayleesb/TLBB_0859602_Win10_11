@@ -1,5 +1,5 @@
 INT	INT
-ID	¹ÖÎïÄ£°åID
+ID	æ€ªç‰©æ¨¡æ¿ID
 1	700
 2	701
 3	702

@@ -1,11 +1,11 @@
 
--- µ±Ç°µÄÒ³Êı
+-- å½“å‰çš„é¡µæ•°
 local g_CurPage = -1;
 
--- È«²¿µÄÒ³Êı
+-- å…¨éƒ¨çš„é¡µæ•°
 local g_AllPage;
 
--- Ã¿Ò³ÏÔÊ¾µÄÊıÁ¿
+-- æ¯é¡µæ˜¾ç¤ºçš„æ•°é‡
 local MESSAGE_EACH_PAGE = 10;
 
 local objCared = -1;
@@ -54,11 +54,11 @@ function PS_Message_OnEvent(event)
 		if(tonumber(arg0) ~= objCared) then
 			return;
 		end
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ı£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æœå’ŒNPCçš„è·ç¦»å¤§äºä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if(arg1 == "distance" and tonumber(arg2)>MAX_OBJ_DISTANCE or arg1=="destroy") then
 			this:Hide();
 
-			--È¡Ïû¹ØĞÄ
+			--å–æ¶ˆå…³å¿ƒ
 			this:CareObject(objCared, 0, "PS_Message");
 		end	
 
@@ -75,10 +75,10 @@ function PS_Message_UpdateFrame()
 	
 	
 	if( szType == "exchange") then
-		PS_Message_DragTitle:SetText("½»Ò×¼ÇÂ¼");
+		PS_Message_DragTitle:SetText("äº¤æ˜“è®°å½•");
 		g_AllPage = math.floor((PlayerShop:GetMessageNum("exchange")-1)/MESSAGE_EACH_PAGE)+1;
 	else
-		PS_Message_DragTitle:SetText("¹ÜÀí¼ÇÂ¼");
+		PS_Message_DragTitle:SetText("ç®¡ç†è®°å½•");
 		g_AllPage = math.floor((PlayerShop:GetMessageNum("manage")-1)/MESSAGE_EACH_PAGE)+1;
 	end
 	
@@ -86,7 +86,7 @@ function PS_Message_UpdateFrame()
 	
 	local nMessageNum = PlayerShop:GetCurPageMessageNum("exchange");
 	
-	--  Ã¿Ò»Ò³ÏÔÊ¾×î¶à10¸ö
+	--  æ¯ä¸€é¡µæ˜¾ç¤ºæœ€å¤š10ä¸ª
 	local szInfo;
 	for i=0, nMessageNum-1 do
 		szInfo = PlayerShop:EnumMessage(i);
@@ -107,7 +107,7 @@ function PS_Message_UpdateFrame()
 end
 
 --===============================================
--- ÉÏÒ»Ò³
+-- ä¸Šä¸€é¡µ
 --===============================================
 function PS_Message_Pre_Clicked()
 	
@@ -119,7 +119,7 @@ function PS_Message_Pre_Clicked()
 end
 
 --===============================================
--- ÏÂÒ»Ò³
+-- ä¸‹ä¸€é¡µ
 --===============================================
 function PS_Message_Next_Clicked()
 
@@ -131,12 +131,12 @@ function PS_Message_Next_Clicked()
 end
 
 --===============================================
--- ¹Ø±Õ
+-- å…³é—­
 --===============================================
 function PS_Message_Close1_Clicked()
 
 	this:Hide();
-	--È¡Ïû¹ØĞÄ
+	--å–æ¶ˆå…³å¿ƒ
 	this:CareObject(objCared, 0, "PS_Message");
 
 end

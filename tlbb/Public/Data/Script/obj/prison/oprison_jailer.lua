@@ -1,46 +1,46 @@
---¼àÓüNPC
---Óü×ä
---ÆÕÍ¨
+--ç›‘ç‹±NPC
+--ç‹±å’
+--æ™®é€š
 
 x077011_g_ScriptId	= 077011
 
---²Ù×÷¼¯
+--æ“ä½œé›†
 x077011_g_Key				=
 {
-	["dlg"]	= 10,	--ÕâÀïÊÇÄÄ¶ù£¿
-	["out"]	= 11,	--ÎÒÒª³öÈ¥
-	["sn0"]	= 0,	--È¥ÂåÑô
-	["sn1"]	= 1,	--È¥ËÕÖİ
-	["sn2"]	= 2,	--È¥´óÀí
+	["dlg"]	= 10,	--è¿™é‡Œæ˜¯å“ªå„¿ï¼Ÿ
+	["out"]	= 11,	--æˆ‘è¦å‡ºå»
+	["sn0"]	= 0,	--å»æ´›é˜³
+	["sn1"]	= 1,	--å»è‹å·
+	["sn2"]	= 2,	--å»å¤§ç†
 }
 
---»ñÊÍÌõ¼ş£¬×îĞ¡É±ÆøÖµ
-x077011_g_PKMinVal	= 8--[tx43640]ÓÉ4¸ÄÎª8
+--è·é‡Šæ¡ä»¶ï¼Œæœ€å°æ€æ°”å€¼
+x077011_g_PKMinVal	= 8--[tx43640]ç”±4æ”¹ä¸º8
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x077011_OnDefaultEvent( sceneId, selfId, targetId )
 
 	BeginEvent( sceneId )
 			AddText(sceneId, "#{PRISON_081120_01}")
-			AddNumText( sceneId, x077011_g_ScriptId, "ÎÒÒª³öÈ¥", 9, x077011_g_Key["out"] )
-			AddNumText( sceneId, x077011_g_ScriptId, "ÕâÀïÊÇÄÄ¶ù£¿", 11, x077011_g_Key["dlg"] )
-			AddNumText( sceneId, x077011_g_ScriptId, "ÎÒÒªÉìÔ©", 9, 21 )
-			AddNumText( sceneId, x077011_g_ScriptId, "ÎÒÓĞÌØÉâÁî", 9, 15 )
-			AddNumText( sceneId, x077011_g_ScriptId, "Ê²Ã´ÊÇÉìÔ©£¿", 11, 22 )
+			AddNumText( sceneId, x077011_g_ScriptId, "æˆ‘è¦å‡ºå»", 9, x077011_g_Key["out"] )
+			AddNumText( sceneId, x077011_g_ScriptId, "è¿™é‡Œæ˜¯å“ªå„¿ï¼Ÿ", 11, x077011_g_Key["dlg"] )
+			AddNumText( sceneId, x077011_g_ScriptId, "æˆ‘è¦ä¼¸å†¤", 9, 21 )
+			AddNumText( sceneId, x077011_g_ScriptId, "æˆ‘æœ‰ç‰¹èµ¦ä»¤", 9, 15 )
+			AddNumText( sceneId, x077011_g_ScriptId, "ä»€ä¹ˆæ˜¯ä¼¸å†¤ï¼Ÿ", 11, 22 )
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, selfId, targetId )
 
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x077011_OnEventRequest( sceneId, selfId, targetId, eventId )
 
 	local	key	= GetNumText()
-	local	val	= LuaFnGetHumanPKValue( sceneId, selfId )	--É±ÆøÖµ
+	local	val	= LuaFnGetHumanPKValue( sceneId, selfId )	--æ€æ°”å€¼
 	
 	if key == 15 then
 		
@@ -52,7 +52,7 @@ function x077011_OnEventRequest( sceneId, selfId, targetId, eventId )
 		end
 		
 		if IsWaiGuaUser( sceneId, selfId ) > 0 then
-			x077011_MsgBox( sceneId, selfId, targetId, "ÄúÒòÎªÊ¹ÓÃÍâ¹Ò±»×¥½ø¼àÓü£¬Òò´ËÎŞ·¨Ê¹ÓÃÌØÉâÁî¡£" )
+			x077011_MsgBox( sceneId, selfId, targetId, "æ‚¨å› ä¸ºä½¿ç”¨å¤–æŒ‚è¢«æŠ“è¿›ç›‘ç‹±ï¼Œå› æ­¤æ— æ³•ä½¿ç”¨ç‰¹èµ¦ä»¤ã€‚" )
 			return 0;
 		end
 		
@@ -63,7 +63,7 @@ function x077011_OnEventRequest( sceneId, selfId, targetId, eventId )
 		if LuaFnLockCheck( sceneId, selfId, bagpos, 0 ) < 0 then
 			local nItemNum = LuaFnGetAvailableItemCount( sceneId, selfId, 30008019 );		
 			if nItemNum <= 0 then
-				x077011_MsgBox( sceneId, selfId, targetId, "´ËÎïÆ·ÒÑ±»Ëø¶¨£¡" )
+				x077011_MsgBox( sceneId, selfId, targetId, "æ­¤ç‰©å“å·²è¢«é”å®šï¼" )
 				return 0;
 			end
 		end
@@ -72,10 +72,10 @@ function x077011_OnEventRequest( sceneId, selfId, targetId, eventId )
 		
 		if bRet > 0 then
 			BeginEvent( sceneId )
-				AddText( sceneId, "  ¹§Ï²Äã£¬ÄãÖÕÓÚ¿ÉÒÔ³öÈ¥ÁË£¬¼ÇµÃ³öÈ¥Ö®ºóÇĞÄªÔÙÂÒÉ±ÎŞ¹¼£¬·ñÔòÎÒÊÇ²»»áÈÄÄãµÄ£¬ÄãÏëÈ¥ÄÄ¸ö³ÇÊĞ£¿" )
-				AddNumText( sceneId, x077011_g_ScriptId, "ÂåÑô", 9, 3 )
-				AddNumText( sceneId, x077011_g_ScriptId, "ËÕÖİ", 9, 4 )
-				AddNumText( sceneId, x077011_g_ScriptId, "´óÀí", 9, 5 )
+				AddText( sceneId, "  æ­å–œä½ ï¼Œä½ ç»ˆäºå¯ä»¥å‡ºå»äº†ï¼Œè®°å¾—å‡ºå»ä¹‹ååˆ‡è«å†ä¹±æ€æ— è¾œï¼Œå¦åˆ™æˆ‘æ˜¯ä¸ä¼šé¥¶ä½ çš„ï¼Œä½ æƒ³å»å“ªä¸ªåŸå¸‚ï¼Ÿ" )
+				AddNumText( sceneId, x077011_g_ScriptId, "æ´›é˜³", 9, 3 )
+				AddNumText( sceneId, x077011_g_ScriptId, "è‹å·", 9, 4 )
+				AddNumText( sceneId, x077011_g_ScriptId, "å¤§ç†", 9, 5 )
 			EndEvent( sceneId )
 			DispatchEventList( sceneId, selfId, targetId )
 			
@@ -94,45 +94,45 @@ function x077011_OnEventRequest( sceneId, selfId, targetId, eventId )
 		return 0
 	end
 	
-	--ÕâÀïÊÇÄÄ¶ù£¿
+	--è¿™é‡Œæ˜¯å“ªå„¿ï¼Ÿ
 	if key == x077011_g_Key["dlg"]	then
 			x077011_MsgBox( sceneId, selfId, targetId, "#{function_help_087}" )
 			return 0
 
-	--ÎÒÒª³öÈ¥
+	--æˆ‘è¦å‡ºå»
 	elseif key == x077011_g_Key["out"] then
 		if val > x077011_g_PKMinVal then
-			x077011_MsgBox( sceneId, selfId, targetId, "  ÄúÏÖÔÚµÄÉ±ÆøÎª"..val.."£¬Ö»ÓĞĞ¡ÓÚµÈÓÚ"..x077011_g_PKMinVal.."µãµÄÊ±ºò²ÅÄÜ³öÈ¥¡£" )
+			x077011_MsgBox( sceneId, selfId, targetId, "  æ‚¨ç°åœ¨çš„æ€æ°”ä¸º"..val.."ï¼Œåªæœ‰å°äºç­‰äº"..x077011_g_PKMinVal.."ç‚¹çš„æ—¶å€™æ‰èƒ½å‡ºå»ã€‚" )
 			return 0
 		end
 
 		BeginEvent( sceneId )
-			AddText( sceneId, "  ¹§Ï²Äã£¬ÄãÖÕÓÚ¿ÉÒÔ³öÈ¥ÁË£¬¼ÇµÃ³öÈ¥Ö®ºóÇĞÄªÔÙÂÒÉ±ÎŞ¹¼£¬·ñÔòÎÒÊÇ²»»áÈÄÄãµÄ£¬ÄãÏëÈ¥ÄÄ¸ö³ÇÊĞ£¿" )
-			AddNumText( sceneId, x077011_g_ScriptId, "ÂåÑô", 9, x077011_g_Key["sn0"] )
-			AddNumText( sceneId, x077011_g_ScriptId, "ËÕÖİ", 9, x077011_g_Key["sn1"] )
-			AddNumText( sceneId, x077011_g_ScriptId, "´óÀí", 9, x077011_g_Key["sn2"] )
+			AddText( sceneId, "  æ­å–œä½ ï¼Œä½ ç»ˆäºå¯ä»¥å‡ºå»äº†ï¼Œè®°å¾—å‡ºå»ä¹‹ååˆ‡è«å†ä¹±æ€æ— è¾œï¼Œå¦åˆ™æˆ‘æ˜¯ä¸ä¼šé¥¶ä½ çš„ï¼Œä½ æƒ³å»å“ªä¸ªåŸå¸‚ï¼Ÿ" )
+			AddNumText( sceneId, x077011_g_ScriptId, "æ´›é˜³", 9, x077011_g_Key["sn0"] )
+			AddNumText( sceneId, x077011_g_ScriptId, "è‹å·", 9, x077011_g_Key["sn1"] )
+			AddNumText( sceneId, x077011_g_ScriptId, "å¤§ç†", 9, x077011_g_Key["sn2"] )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 
-	--È¥ÂåÑô
+	--å»æ´›é˜³
 	elseif key == x077011_g_Key["sn0"] then
-		--»ñÊÍ
+		--è·é‡Š
 		PrisonGoOut( sceneId, selfId )
-		--»Ø³Ç
+		--å›åŸ
 		NewWorld( sceneId, selfId, 0, 132, 183 )
 
-	--È¥ËÕÖİ
+	--å»è‹å·
 	elseif key == x077011_g_Key["sn1"] then
-		--»ñÊÍ
+		--è·é‡Š
 		PrisonGoOut( sceneId, selfId )
-		--»Ø³Ç
+		--å›åŸ
 		NewWorld( sceneId, selfId, 1, 114,162 )
 
-	--È¥´óÀí
+	--å»å¤§ç†
 	elseif key == x077011_g_Key["sn2"] then
-		--»ñÊÍ
+		--è·é‡Š
 		PrisonGoOut( sceneId, selfId )
-		--»Ø³Ç
+		--å›åŸ
 		NewWorld( sceneId, selfId, 2, 241, 138 )
 	
 	elseif key == 3 then
@@ -141,14 +141,14 @@ function x077011_OnEventRequest( sceneId, selfId, targetId, eventId )
 		if LuaFnLockCheck( sceneId, selfId, bagpos1, 0 ) < 0 then
 			local nItemNum = LuaFnGetAvailableItemCount( sceneId, selfId, 30008019 );		
 			if nItemNum <= 0 then
-				x077011_MsgBox( sceneId, selfId, targetId, "´ËÎïÆ·ÒÑ±»Ëø¶¨£¡" )
+				x077011_MsgBox( sceneId, selfId, targetId, "æ­¤ç‰©å“å·²è¢«é”å®šï¼" )
 				return 0;
 			end
 		end
 	
-		--»ñÊÍ
+		--è·é‡Š
 		PrisonGoOut( sceneId, selfId )
-		--»Ø³Ç
+		--å›åŸ
 		NewWorld( sceneId, selfId, 0, 132, 183 )
 		
 		LuaFnDelAvailableItem(sceneId, selfId, 30008019, 1);
@@ -159,14 +159,14 @@ function x077011_OnEventRequest( sceneId, selfId, targetId, eventId )
 		if LuaFnLockCheck( sceneId, selfId, bagpos2, 0 ) < 0 then
 			local nItemNum = LuaFnGetAvailableItemCount( sceneId, selfId, 30008019 );		
 			if nItemNum <= 0 then
-				x077011_MsgBox( sceneId, selfId, targetId, "´ËÎïÆ·ÒÑ±»Ëø¶¨£¡" )
+				x077011_MsgBox( sceneId, selfId, targetId, "æ­¤ç‰©å“å·²è¢«é”å®šï¼" )
 				return 0;
 			end
 		end
 	
-		--»ñÊÍ
+		--è·é‡Š
 		PrisonGoOut( sceneId, selfId )
-		--»Ø³Ç
+		--å›åŸ
 		NewWorld( sceneId, selfId, 1, 114,162 )
 		
 		LuaFnDelAvailableItem(sceneId, selfId, 30008019, 1);
@@ -177,22 +177,22 @@ function x077011_OnEventRequest( sceneId, selfId, targetId, eventId )
 		if LuaFnLockCheck( sceneId, selfId, bagpos3, 0 ) < 0 then
 			local nItemNum = LuaFnGetAvailableItemCount( sceneId, selfId, 30008019 );		
 			if nItemNum <= 0 then
-				x077011_MsgBox( sceneId, selfId, targetId, "´ËÎïÆ·ÒÑ±»Ëø¶¨£¡" )
+				x077011_MsgBox( sceneId, selfId, targetId, "æ­¤ç‰©å“å·²è¢«é”å®šï¼" )
 				return 0;
 			end
 		end
 	
-		--»ñÊÍ
+		--è·é‡Š
 		PrisonGoOut( sceneId, selfId )
-		--»Ø³Ç
+		--å›åŸ
 		NewWorld( sceneId, selfId, 2, 241, 138 )
 		
 		LuaFnDelAvailableItem(sceneId, selfId, 30008019, 1);
 
 	end
 	
-	if val > x077011_g_PKMinVal then --[tx43640]Ô­Îª>= 5£¬Ó¦¸ÄÎª>x077011_g_PKMinVal,ÆäÊµÓ¦¸ÃÊÇ[8,10]ÖĞµÄÒ»¸öÖµ 
-		LuaFnSetHumanPKValue(sceneId, selfId, x077011_g_PKMinVal)--[tx43640]Ô­Îª4£¬Ó¦¸ÄÎªx077011_g_PKMinVal
+	if val > x077011_g_PKMinVal then --[tx43640]åŸä¸º>= 5ï¼Œåº”æ”¹ä¸º>x077011_g_PKMinVal,å…¶å®åº”è¯¥æ˜¯[8,10]ä¸­çš„ä¸€ä¸ªå€¼ 
+		LuaFnSetHumanPKValue(sceneId, selfId, x077011_g_PKMinVal)--[tx43640]åŸä¸º4ï¼Œåº”æ”¹ä¸ºx077011_g_PKMinVal
 		
 		-- [ QUFEI 2007-11-09 15:36 UPDATE BugID 27611 ]		
 		local LogInfo	= format( "[ChangePKValue]:Prison sceneId=%d, GUID=%0X, PKValueBgn=%d, PKValueEnd=%d",
@@ -209,7 +209,7 @@ function x077011_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x077011_MsgBox( sceneId, selfId, targetId, msg )
 
@@ -222,23 +222,23 @@ end
 
 
 --**********************************
---ÉìÔ©
+--ä¼¸å†¤
 --**********************************
 function x077011_ShenYuan( sceneId, selfId, targetId )
 
-	--ÅĞ¶ÏÉ±Æø....
+	--åˆ¤æ–­æ€æ°”....
 	if LuaFnGetHumanPKValue( sceneId, selfId ) > x077011_g_PKMinVal then
 		x077011_MsgBox( sceneId, selfId, targetId, "#{PRISON_SHENYUAN_01}" )
 		return
 	end
 	
-	--ÅĞ¶Ïµ±Ç°ÊÇ·ñ½ûÖ¹ÉìÔ©....
+	--åˆ¤æ–­å½“å‰æ˜¯å¦ç¦æ­¢ä¼¸å†¤....
 	if GetMissionFlag( sceneId, selfId, MF_CannotPrisonShenyuan ) == 1 then
 		x077011_MsgBox( sceneId, selfId, targetId, "#{PRISON_SHENYUAN_02}" )
 		return
 	end
 	
-	--ÅĞ¶Ï½ñÌìÊÇ·ñÒÑ¾­ÓÃ¹ıÉìÔ©ÁË....
+	--åˆ¤æ–­ä»Šå¤©æ˜¯å¦å·²ç»ç”¨è¿‡ä¼¸å†¤äº†....
 	local lastDayTime = GetMissionData( sceneId, selfId, MD_PRISON_SHENYUAN_DAYTIME )
 	local CurDayTime = GetDayTime()
 	if CurDayTime <= lastDayTime then
@@ -246,10 +246,10 @@ function x077011_ShenYuan( sceneId, selfId, targetId )
 		return
 	end
 	
-	--ÉèÖÃ½ñÌìÒÑ¾­ÓÃ¹ıÉìÔ©ÁË....
+	--è®¾ç½®ä»Šå¤©å·²ç»ç”¨è¿‡ä¼¸å†¤äº†....
 	SetMissionData( sceneId, selfId, MD_PRISON_SHENYUAN_DAYTIME, CurDayTime )
 	
-	--µ¯³öÍ¼ĞÎÑéÖ¤ÈÃÍæ¼Ò»Ø´ğÎÊÌâ....
+	--å¼¹å‡ºå›¾å½¢éªŒè¯è®©ç©å®¶å›ç­”é—®é¢˜....
 	BeginUICommand(sceneId)
 	EndUICommand(sceneId)
 	DispatchUICommand(sceneId,selfId, 1000)

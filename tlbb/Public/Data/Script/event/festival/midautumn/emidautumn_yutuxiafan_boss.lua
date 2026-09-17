@@ -1,23 +1,23 @@
---ÓñÍÃÏÂ·²Æô¶¯ºÍÖÖboss½Å±¾½Å±¾
+--ç‰å…”ä¸‹å‡¡å¯åŠ¨å’Œç§bossè„šæœ¬è„šæœ¬
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x050058_g_ScriptId	= 050058
 
---ĞèÒªË¢³öµÄÓñÍÃbossÊı¾İ
+--éœ€è¦åˆ·å‡ºçš„ç‰å…”bossæ•°æ®
 x050058_g_BossData = {
-	-- ID						BOSSµÄ monster id
-	-- AIType				BOSSµÄAIType....
-	-- AIScriptID	BOSSµÄAIScriptID....
-	ID = 890, AIType = 0, AIScriptID = 210, scriptID = 050058, name = "ÌÔÆøÓñÍÃ"
+	-- ID						BOSSçš„ monster id
+	-- AIType				BOSSçš„AIType....
+	-- AIScriptID	BOSSçš„AIScriptID....
+	ID = 890, AIType = 0, AIScriptID = 210, scriptID = 050058, name = "æ·˜æ°”ç‰å…”"
 }
 
-x050058_g_begintime = 20080914      --»î¶¯¿ªÊ¼Ê±¼ä
-x050058_g_endtime = 20080928        --»î¶¯½áÊøÊ±¼ä
+x050058_g_begintime = 20080914      --æ´»åŠ¨å¼€å§‹æ—¶é—´
+x050058_g_endtime = 20080928        --æ´»åŠ¨ç»“æŸæ—¶é—´
 
---Ë¢³öÓñÍÃµÄËæ»ú×ø±ê
+--åˆ·å‡ºç‰å…”çš„éšæœºåæ ‡
 x050058_g_BossPosData = {   
-  --posX Ëæ»úµãµÄX×ø±ê 
-  --posY Ëæ»úµãµÄY×ø±ê 
+  --posX éšæœºç‚¹çš„Xåæ ‡ 
+  --posY éšæœºç‚¹çš„Yåæ ‡ 
   	{posX = 238, posZ = 63},
   	{posX = 193, posZ = 74},
  	{posX = 150, posZ = 74},
@@ -26,34 +26,34 @@ x050058_g_BossPosData = {
   	{posX = 177, posZ = 100},
 }
 
-x050058_gBossPosNum = 6          --ÓëÉÏÃæ¶ÔÓ¦£¬Ëæ»ú×ø±êµÄ¸öÊı
-x050058_g_activity_id = 183        --±¾»î¶¯id£¬ÓëActivityNotice.txtÖĞidºÅ¶ÔÓ¦£¬²»¿ÉÂÒ¸Ä
+x050058_gBossPosNum = 6          --ä¸ä¸Šé¢å¯¹åº”ï¼Œéšæœºåæ ‡çš„ä¸ªæ•°
+x050058_g_activity_id = 183        --æœ¬æ´»åŠ¨idï¼Œä¸ActivityNotice.txtä¸­idå·å¯¹åº”ï¼Œä¸å¯ä¹±æ”¹
 
---ÉèÖÃ²ÎÊı£¬±ê¼Çboss×´¿ö:0±íÊ¾boss»î×ÅÄØ£¬²»ÓÃ¹ÜËû£»0---31Ö®¼ä£¬±íÊ¾ÒÑ¾­ËÀÁËboss£¬ÕıÔÚ¼ÆÊı£¬µ½30·ÖÖÓÊ±ÔÙÖÖÒ»¸ö£»32±íÊ¾Ê±¼äµ½ÁË£¬ÖÖ¹Ö£¬ÖÖ¹Öºó¸´0Î»
+--è®¾ç½®å‚æ•°ï¼Œæ ‡è®°bossçŠ¶å†µ:0è¡¨ç¤ºbossæ´»ç€å‘¢ï¼Œä¸ç”¨ç®¡ä»–ï¼›0---31ä¹‹é—´ï¼Œè¡¨ç¤ºå·²ç»æ­»äº†bossï¼Œæ­£åœ¨è®¡æ•°ï¼Œåˆ°30åˆ†é’Ÿæ—¶å†ç§ä¸€ä¸ªï¼›32è¡¨ç¤ºæ—¶é—´åˆ°äº†ï¼Œç§æ€ªï¼Œç§æ€ªåå¤0ä½
 x050058_g_activityParam_bossstate = 0
 
 --**********************************
---½Å±¾Èë¿Úº¯Êı
+--è„šæœ¬å…¥å£å‡½æ•°
 --**********************************
 function x050058_OnDefaultEvent( sceneId, actId, iNoticeType, param2, param3, param4, param5 )
 
 	if x050058_IsActivityOpen(sceneId) ~= 1 then
 		return
 	end
-	--²ÎÊıËµÃ÷£º³¡¾°ID£¬»î¶¯ID£¬Ê±¼ä¼ä¸ô£¬¹«¸æÀàĞÍ£¨¿ÉÒÔ²»´«£¬Ä¬ÈÏÆÕÍ¨¹«¸æÀàĞÍ£©,¿ªÆô»î¶¯£¬Ò»·ÖÖÓ½øĞĞÒ»´ÎĞÄÌø
+	--å‚æ•°è¯´æ˜ï¼šåœºæ™¯IDï¼Œæ´»åŠ¨IDï¼Œæ—¶é—´é—´éš”ï¼Œå…¬å‘Šç±»å‹ï¼ˆå¯ä»¥ä¸ä¼ ï¼Œé»˜è®¤æ™®é€šå…¬å‘Šç±»å‹ï¼‰,å¼€å¯æ´»åŠ¨ï¼Œä¸€åˆ†é’Ÿè¿›è¡Œä¸€æ¬¡å¿ƒè·³
 	StartOneActivity( sceneId, actId, floor(60*1000), iNoticeType )
-	--ÖÖÒ»¸ö¹Ö
+	--ç§ä¸€ä¸ªæ€ª
 	SetActivityParam(sceneId, x050058_g_activity_id, x050058_g_activityParam_bossstate, 0)
 	x050058_SetBossInRandomPos(sceneId)
 	
 end
 
 --**********************************
---ĞÄÌøº¯Êı
+--å¿ƒè·³å‡½æ•°
 --**********************************
 function x050058_OnTimer( sceneId, actId, uTime )
 
-	--¼ì²â»î¶¯ÊÇ·ñ¹ıÆÚ
+	--æ£€æµ‹æ´»åŠ¨æ˜¯å¦è¿‡æœŸ
 	if CheckActiviyValidity( sceneId, actId ) == 0 then
 		StopOneActivity( sceneId, actId )
 	end
@@ -75,26 +75,26 @@ end
 
 
 --**********************************
---³¡¾°ÖĞÉ±ÁË¹Ö
+--åœºæ™¯ä¸­æ€äº†æ€ª
 --**********************************
-function x050058_OnDie(sceneId, selfId, killerId)						-- ³¡¾°ID, ±»É±µÄObjId, É±ÊÖObjId
+function x050058_OnDie(sceneId, selfId, killerId)						-- åœºæ™¯ID, è¢«æ€çš„ObjId, æ€æ‰‹ObjId
 	local szName = GetName(sceneId, selfId)
 	if szName == x050058_g_BossData.name then
-		SetActivityParam(sceneId, x050058_g_activity_id, x050058_g_activityParam_bossstate, 1)        --ÓĞÒ»¸öbossËÀÁË
+		SetActivityParam(sceneId, x050058_g_activity_id, x050058_g_activityParam_bossstate, 1)        --æœ‰ä¸€ä¸ªbossæ­»äº†
 	end
 end
 
---ÔÚ¸ø¶¨Ëæ»úµãÖÖÒ»¸öÍÃ×Óboss
+--åœ¨ç»™å®šéšæœºç‚¹ç§ä¸€ä¸ªå…”å­boss
 function x050058_SetBossInRandomPos(sceneId)
 	local objId
 	local nPosRand = random( x050058_gBossPosNum )
 	objId = LuaFnCreateMonster( sceneId, x050058_g_BossData.ID, x050058_g_BossPosData[nPosRand].posX, x050058_g_BossPosData[nPosRand].posZ, x050058_g_BossData.AIType, x050058_g_BossData.AIScriptID , x050058_g_BossData.scriptID )
 end
 
---ÅĞ¶ÏÊÇ·ñ»î¶¯Ê±¼ä 2008-08-14--------2008-08-28
---·µ»ØÖµ£º
---0£º²»ÊÇ»î¶¯Ê±¼ä
---1£ºÊÇ»î¶¯Ê±¼ä
+--åˆ¤æ–­æ˜¯å¦æ´»åŠ¨æ—¶é—´ 2008-08-14--------2008-08-28
+--è¿”å›å€¼ï¼š
+--0ï¼šä¸æ˜¯æ´»åŠ¨æ—¶é—´
+--1ï¼šæ˜¯æ´»åŠ¨æ—¶é—´
 function x050058_IsActivityOpen(sceneId)
 	local nDay = GetTime2Day(sceneId)
 	local bRet = 0

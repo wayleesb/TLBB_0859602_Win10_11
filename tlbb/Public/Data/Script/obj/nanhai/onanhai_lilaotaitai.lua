@@ -1,15 +1,15 @@
---ÄÏº£NPC
---ÀîÀÏÌ«Ì«
---ÆÕÍ¨
+--å—æµ·NPC
+--æè€å¤ªå¤ª
+--æ™®é€š
 
 x034006_g_eventList = {212112}
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x034006_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
-		AddText(sceneId,"  ÎÒ¶ù×ÓËäÈ»ÒÑ¾­²»ÔÚÁË£¬µ«Ëû»¹»î×ÅÄØ£¡ËûÓÀÔ¶»îÔÚÁÉÎ÷ÄØ£¡")
+		AddText(sceneId,"  æˆ‘å„¿å­è™½ç„¶å·²ç»ä¸åœ¨äº†ï¼Œä½†ä»–è¿˜æ´»ç€å‘¢ï¼ä»–æ°¸è¿œæ´»åœ¨è¾½è¥¿å‘¢ï¼")
 		for i, eventId in x034006_g_eventList do
 			CallScriptFunction( eventId, "OnEnumerate",sceneId, selfId, targetId )
 		end
@@ -19,7 +19,7 @@ function x034006_OnDefaultEvent( sceneId, selfId,targetId )
 end
 
 --**********************************
---Ë¢ĞÂÊÂ¼ş
+--åˆ·æ–°äº‹ä»¶
 --**********************************
 function x034006_OnEventRequest( sceneId, selfId, targetId, eventId )
 	for i, findId in x034006_g_eventList do
@@ -30,7 +30,7 @@ function x034006_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---¼ÌĞø£¨ÒÑ¾­½ÓÁËÈÎÎñ£©
+--ç»§ç»­ï¼ˆå·²ç»æ¥äº†ä»»åŠ¡ï¼‰
 --**********************************
 function x034006_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x034006_g_eventList do
@@ -42,7 +42,7 @@ function x034006_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---Ìá½»ÒÑ×öÍêµÄÈÎÎñ
+--æäº¤å·²åšå®Œçš„ä»»åŠ¡
 --**********************************
 function x034006_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, selectRadioId )
 	for i, findId in x034006_g_eventList do

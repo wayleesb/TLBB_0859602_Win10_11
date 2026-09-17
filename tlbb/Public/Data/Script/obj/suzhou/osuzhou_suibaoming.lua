@@ -1,16 +1,16 @@
---ËÕÖİNPC
---Ëå±ªÃù
---Ò»°ã
---´óÌÓÉ±±¨ÃûÈË
+--è‹å·NPC
+--éš‹è±¹é¸£
+--ä¸€èˆ¬
+--å¤§é€ƒæ€æŠ¥åäºº
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x001063_g_ScriptId	= 1063
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x001063_g_EventList	= { 808002 }
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x001063_OnDefaultEvent( sceneId, selfId, targetId )
 
@@ -19,7 +19,7 @@ function x001063_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x001063_UpdateEventList( sceneId, selfId, targetId )
 
@@ -27,7 +27,7 @@ function x001063_UpdateEventList( sceneId, selfId, targetId )
 	BeginEvent( sceneId )
 		AddText( sceneId, "#{function_help_083}" );
 		
-		AddNumText( sceneId, x001063_g_ScriptId, "±ÈÎä´ó»á½éÉÜ", 11, 10 )
+		AddNumText( sceneId, x001063_g_ScriptId, "æ¯”æ­¦å¤§ä¼šä»‹ç»", 11, 10 )
 		
 		for i, eventId in x001063_g_EventList do
 				CallScriptFunction( eventId, "OnEnumerate", sceneId, selfId, targetId )
@@ -38,7 +38,7 @@ function x001063_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x001063_OnEventRequest( sceneId, selfId, targetId, eventId )
 
@@ -57,7 +57,7 @@ function x001063_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---ËÀÍöÊÂ¼ş
+--æ­»äº¡äº‹ä»¶
 --**********************************
 function x001063_OnDie( sceneId, selfId, killerId )
 end

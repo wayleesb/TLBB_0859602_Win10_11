@@ -1,33 +1,33 @@
---Éú³¤µã
---¶ÔÓ¦Éú»î¼¼ÄÜ£º-1
---µØ¹¬±¦ÎïµôÂäÆ÷
---½Å±¾ºÅ******(712533)
+--ç”Ÿé•¿ç‚¹
+--å¯¹åº”ç”Ÿæ´»æŠ€èƒ½ï¼š-1
+--åœ°å®«å®ç‰©æ‰è½å™¨
+--è„šæœ¬å·******(712533)
 
---Ò»¸ö±¦ÏäÀïº¬ÓĞ¼¸¸öÎïÆ·
+--ä¸€ä¸ªå®ç®±é‡Œå«æœ‰å‡ ä¸ªç‰©å“
 x712533_g_DropNumTable  = {
-	{num = 1, odd = 1.0},	--1¸öµÄ¼¸ÂÊ
+	{num = 1, odd = 1.0},	--1ä¸ªçš„å‡ ç‡
 }
 
-x712533_g_TickCreate_Msg = "ÇØ»ÊµØ¹¬»áÂäÏÂÎïÆ·ËÍ¸ø´ó¼Ò£¡"
+x712533_g_TickCreate_Msg = "ç§¦çš‡åœ°å®«ä¼šè½ä¸‹ç‰©å“é€ç»™å¤§å®¶ï¼"
 
---Ã¿ÖÖÎïÆ·ÊÇÄÄÀàÎïÆ·£¬ÇÒ´ËÀàÎïÆ·¶ÑµşÊıÁ¿ÊÇ¼¸¸ö
+--æ¯ç§ç‰©å“æ˜¯å“ªç±»ç‰©å“ï¼Œä¸”æ­¤ç±»ç‰©å“å †å æ•°é‡æ˜¯å‡ ä¸ª
 x712533_g_DropTable = {
-	--±¦Ê¯Àà
+	--å®çŸ³ç±»
 	{
-		itemType = 7, 	--±¦Ê¯ÀàµÄÀàĞÍ±êÊ¶
-	 	odd = 1.0, 		--³öÏÖ¼¸ÂÊ
+		itemType = 7, 	--å®çŸ³ç±»çš„ç±»å‹æ ‡è¯†
+	 	odd = 1.0, 		--å‡ºç°å‡ ç‡
 	 	numOdd = {
-							{num = 1, odd = 1.0},				--1¸öµÄ¼¸ÂÊ
+							{num = 1, odd = 1.0},				--1ä¸ªçš„å‡ ç‡
 						 },
-		idx = {	--ÎïÆ·ĞòÁĞºÅ±í
-						20310004, --zchw ÇØ»ÊÖé
+		idx = {	--ç‰©å“åºåˆ—å·è¡¨
+						20310004, --zchw ç§¦çš‡ç 
 					},
 	},
 }
 
---±¦Îï»ØÊÕÊ±¼ä2006-8-21 17:33 ĞŞ¸ÄÎªÓÉ¹ÜÀíÆ÷´«µİ½øÀ´
+--å®ç‰©å›æ”¶æ—¶é—´2006-8-21 17:33 ä¿®æ”¹ä¸ºç”±ç®¡ç†å™¨ä¼ é€’è¿›æ¥
 
---¸ù¾İ±¾´ÎËæ»úÊıÀ´ÕÒµ½±íÖĞ¶ÔÓ¦µÄË÷Òı
+--æ ¹æ®æœ¬æ¬¡éšæœºæ•°æ¥æ‰¾åˆ°è¡¨ä¸­å¯¹åº”çš„ç´¢å¼•
 function x712533_GetTableIndexByOdd(tb)
 	local oddNow = random();
 	
@@ -42,33 +42,33 @@ function x712533_GetTableIndexByOdd(tb)
 	return nil;
 end
 
---Éú³Éº¯Êı¿ªÊ¼************************************************************************
---Ã¿¸öItemBoxÖĞ×î¶à10¸öÎïÆ·£¬·µ»ØÖµ -1 Ö±½Ó»ØÊÕÉú³¤µã£¬²»Õ¼ÓÃ
+--ç”Ÿæˆå‡½æ•°å¼€å§‹************************************************************************
+--æ¯ä¸ªItemBoxä¸­æœ€å¤š10ä¸ªç‰©å“ï¼Œè¿”å›å€¼ -1 ç›´æ¥å›æ”¶ç”Ÿé•¿ç‚¹ï¼Œä¸å ç”¨
 function x712533_OnCreate( sceneId, growPointType, x, y, dur)
 	local ItemBoxId = nil
-	local delDur = dur - 60000;	--±¦ÏäµÄÏûÊ§Ê±¼ä
+	local delDur = dur - 60000;	--å®ç®±çš„æ¶ˆå¤±æ—¶é—´
 	
-	-- ±¦ÏäÀïÓĞ¼¸¸öÎïÆ·
+	-- å®ç®±é‡Œæœ‰å‡ ä¸ªç‰©å“
 	local numIdx = x712533_GetTableIndexByOdd(x712533_g_DropNumTable)
 	if(numIdx) then
 		for i = 1, x712533_g_DropNumTable[numIdx].num do
-			--Õâ¸öÎïÆ·ÊÇÊ²Ã´ÀàĞÍµÄÎïÆ·
+			--è¿™ä¸ªç‰©å“æ˜¯ä»€ä¹ˆç±»å‹çš„ç‰©å“
 			local showIdx = x712533_GetTableIndexByOdd(x712533_g_DropTable)
 			local dropNumIdx = nil
 			local itemId = nil
 			if(showIdx) then
-				--Õâ¸öÀàĞÍµÄÎïÆ·ÊıÁ¿ÊÇ¼¸¸ö
+				--è¿™ä¸ªç±»å‹çš„ç‰©å“æ•°é‡æ˜¯å‡ ä¸ª
 				dropNumIdx = x712533_GetTableIndexByOdd(x712533_g_DropTable[showIdx].numOdd)
 				if(dropNumIdx and 9 ~= x712533_g_DropTable[showIdx].itemType) then
 					local itemNum = getn(x712533_g_DropTable[showIdx].idx)
 					if(itemNum and 1<=itemNum) then
 						local itemIdx = floor(random(1, itemNum))
 						itemId = x712533_g_DropTable[showIdx].idx[itemIdx]
-						--Ìí¼ÓµôÂäÏäºÍÎïÆ·µ½³¡¾°
+						--æ·»åŠ æ‰è½ç®±å’Œç‰©å“åˆ°åœºæ™¯
 						for k = 1, x712533_g_DropTable[showIdx].numOdd[dropNumIdx].num do
 							if(nil == ItemBoxId) then
 								ItemBoxId = ItemBoxEnterScene( x, y, growPointType, sceneId, QUALITY_MUST_BE_CHANGE,1, itemId )
-								print( sceneId .. " ºÅ³¡¾° (" .. x .. ", " .. y .. ") ´¦³¤³öÒ»¸öÎïÆ·Ïä¡£"..
+								print( sceneId .. " å·åœºæ™¯ (" .. x .. ", " .. y .. ") å¤„é•¿å‡ºä¸€ä¸ªç‰©å“ç®±ã€‚"..
 											 "("..x712533_g_DropNumTable[numIdx].num..")" )
 							else
 								AddItemToBox( sceneId, ItemBoxId, QUALITY_MUST_BE_CHANGE,1, itemId )
@@ -78,72 +78,72 @@ function x712533_OnCreate( sceneId, growPointType, x, y, dur)
 				elseif(dropNumIdx and 9 == x712533_g_DropTable[showIdx].itemType) then
 					local petIdx = floor(random(1, getn(x712533_g_DropTable[showIdx].idx)))
 					local petId = x712533_g_DropTable[showIdx].idx[petIdx]
-					--Ìí¼ÓÕäÊŞµ½³¡¾°
+					--æ·»åŠ çå…½åˆ°åœºæ™¯
 					for k = 1, x712533_g_DropTable[showIdx].numOdd[dropNumIdx].num do
 						local PetObjId = nil
 						PetObjId = CreatePetOnScene( sceneId, petId, x, y )
 						SetCharacterDieTime( sceneId, PetObjId, delDur )
-						print( sceneId .. " ºÅ³¡¾° (" .. x .. ", " .. y .. ") ´¦³¤³öÒ»Ö»ÕäÊŞ "..
-									 GetName( sceneId, PetObjId ) .. "¡£" )
+						print( sceneId .. " å·åœºæ™¯ (" .. x .. ", " .. y .. ") å¤„é•¿å‡ºä¸€åªçå…½ "..
+									 GetName( sceneId, PetObjId ) .. "ã€‚" )
 					end 
 				end
 			end --end of if(showIdx) then
 			
-			--¼ÇÂ¼ÎïÆ·µôÂä°üËù°üº¬µÄÄÚÈİ
+			--è®°å½•ç‰©å“æ‰è½åŒ…æ‰€åŒ…å«çš„å†…å®¹
 			if(showIdx and dropNumIdx and itemId ~= nil) then
 				if(9 ~= x712533_g_DropTable[showIdx].itemType) then
 					local itemName;
 					_,itemName,_ = GetItemInfoByItemId(itemId)
-					print("ÎïÆ·ÏäÀïÓĞ(ÀàĞÍ"..x712533_g_DropTable[showIdx].itemType..")"..
+					print("ç‰©å“ç®±é‡Œæœ‰(ç±»å‹"..x712533_g_DropTable[showIdx].itemType..")"..
 								x712533_g_DropTable[showIdx].numOdd[dropNumIdx].num..
-								"¸ö["..itemName.."]¡£")
+								"ä¸ª["..itemName.."]ã€‚")
 					itemNum = x712533_g_DropTable[showIdx].numOdd[dropNumIdx].num;
-					LuaFnAuditItemCreate(sceneId, -1, itemNum, itemId, itemName, "ÓÉ±¦ÏäÉú³É");
+					LuaFnAuditItemCreate(sceneId, -1, itemNum, itemId, itemName, "ç”±å®ç®±ç”Ÿæˆ");
 				end
 			end
 			
 		end -- end of for i = 1, x712533_g_DropNumTable[numIdx].num do
 		
-		--Éè¶¨»ØÊÕÊ±¼ä
+		--è®¾å®šå›æ”¶æ—¶é—´
 		if(ItemBoxId) then
 			SetItemBoxMaxGrowTime( sceneId, ItemBoxId, delDur )
-			return 0	--Õâ¸ö×ø±ê±»±¦ÏäÕ¼ÓÃÁË
+			return 0	--è¿™ä¸ªåæ ‡è¢«å®ç®±å ç”¨äº†
 		end
 	end
 	
-	return -1	--Õâ¸ö×ø±êÃ»ÓĞ±»Õ¼ÓÃ
+	return -1	--è¿™ä¸ªåæ ‡æ²¡æœ‰è¢«å ç”¨
 end
---Éú³Éº¯Êı½áÊø**********************************************************************
+--ç”Ÿæˆå‡½æ•°ç»“æŸ**********************************************************************
 
---Ò»´Î´´½¨¶à¸ö±¦ÏäµÄÍê³Éº¯Êı¿ªÊ¼****************************************************
+--ä¸€æ¬¡åˆ›å»ºå¤šä¸ªå®ç®±çš„å®Œæˆå‡½æ•°å¼€å§‹****************************************************
 function x712533_OnTickCreateFinish( sceneId, growPointType, tickCount )
 	if(strlen(x712533_g_TickCreate_Msg) > 0) then
-		--2006-8-22 14:37 µÈ´ıÏş½¡µÄserver¶Ô»°Æ½Ì¨
-		print( sceneId .. " ºÅ³¡¾° "..x712533_g_TickCreate_Msg)
+		--2006-8-22 14:37 ç­‰å¾…æ™“å¥çš„serverå¯¹è¯å¹³å°
+		print( sceneId .. " å·åœºæ™¯ "..x712533_g_TickCreate_Msg)
 	end
 end
---Ò»´Î´´½¨¶à¸ö±¦ÏäµÄÍê³Éº¯Êı½áÊø****************************************************
+--ä¸€æ¬¡åˆ›å»ºå¤šä¸ªå®ç®±çš„å®Œæˆå‡½æ•°ç»“æŸ****************************************************
 
---´ò¿ªÇ°º¯Êı¿ªÊ¼
+--æ‰“å¼€å‰å‡½æ•°å¼€å§‹
 function x712533_OnOpen( sceneId, selfId, targetId )
---·µ»ØÀàĞÍ
--- 0 ±íÊ¾´ò¿ª³É¹¦
+--è¿”å›ç±»å‹
+-- 0 è¡¨ç¤ºæ‰“å¼€æˆåŠŸ
 end
---´ò¿ªÇ°º¯Êı½áÊø
+--æ‰“å¼€å‰å‡½æ•°ç»“æŸ
 
 
---»ØÊÕº¯Êı¿ªÊ¼
+--å›æ”¶å‡½æ•°å¼€å§‹
 function x712533_OnRecycle( sceneId, selfId, targetId )
---·µ»Ø1£¬Éú³¤µã»ØÊÕ
+--è¿”å›1ï¼Œç”Ÿé•¿ç‚¹å›æ”¶
 	return 1
 end
---»ØÊÕº¯Êı½áÊø
+--å›æ”¶å‡½æ•°ç»“æŸ
 
---´ò¿ªºóº¯Êı¿ªÊ¼
+--æ‰“å¼€åå‡½æ•°å¼€å§‹
 function x712533_OnProcOver( sceneId, selfId, targetId )
 end
 
---´ò¿ªºóº¯Êı½áÊø
+--æ‰“å¼€åå‡½æ•°ç»“æŸ
 function x712533_OpenCheck( sceneId, selfId, AbilityId, AblityLevel )
 	return OR_OK
 end

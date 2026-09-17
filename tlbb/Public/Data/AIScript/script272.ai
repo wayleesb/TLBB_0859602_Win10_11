@@ -1,11 +1,11 @@
-;ÄêÊŞ£ºËæ»úËµ»°
+;å¹´å…½ï¼šéšæœºè¯´è¯
 [common]
 [commonend]
 
 [skill]
-0:if(AIS_IsCanSkill(1094)=1&AIS_Rand()<33){AIS_ToSkill(1094);AIS_ToSpeak(357,1);AIS_SetTimes(-1);AIS_SetPRI(33);};33£¥»úÂÊËµ»°
-1:if(AIS_IsCanSkill(1094)=1&AIS_Rand()<33){AIS_ToSkill(1094);AIS_ToSpeak(358,1);AIS_SetTimes(-1);AIS_SetPRI(33);};33£¥»úÂÊËµ»°
-2:if(AIS_IsCanSkill(1094)=1&AIS_Rand()<33){AIS_ToSkill(1094);AIS_ToSpeak(359,1);AIS_SetTimes(-1);AIS_SetPRI(33);};33£¥»úÂÊËµ»°
+0:if(AIS_IsCanSkill(1094)=1&AIS_Rand()<33){AIS_ToSkill(1094);AIS_ToSpeak(357,1);AIS_SetTimes(-1);AIS_SetPRI(33);};33ï¼…æœºç‡è¯´è¯
+1:if(AIS_IsCanSkill(1094)=1&AIS_Rand()<33){AIS_ToSkill(1094);AIS_ToSpeak(358,1);AIS_SetTimes(-1);AIS_SetPRI(33);};33ï¼…æœºç‡è¯´è¯
+2:if(AIS_IsCanSkill(1094)=1&AIS_Rand()<33){AIS_ToSkill(1094);AIS_ToSpeak(359,1);AIS_SetTimes(-1);AIS_SetPRI(33);};33ï¼…æœºç‡è¯´è¯
 [skillend]
 
 [beskill]

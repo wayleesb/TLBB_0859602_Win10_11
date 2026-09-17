@@ -1,11 +1,11 @@
---³ÇÊĞNPC
---·À¾ß
+--åŸå¸‚NPC
+--é˜²å…·
 
 x805011_g_scriptId=805011
 x805011_g_BuildingID5 = 4
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x805011_OnDefaultEvent( sceneId, selfId,targetId )
 
@@ -15,7 +15,7 @@ function x805011_OnDefaultEvent( sceneId, selfId,targetId )
 	
 	if(guildid ~= cityguildid) then
 		BeginEvent(sceneId)
-			strText = "    ·ÇÎÒ°ïÖÚ£¬Ò»ÇĞ¾«Á¼×°±¸Ë¡²»ÍâÂô¡£"
+			strText = "    éæˆ‘å¸®ä¼—ï¼Œä¸€åˆ‡ç²¾è‰¯è£…å¤‡æ•ä¸å¤–å–ã€‚"
 			AddText(sceneId,strText)
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
@@ -23,18 +23,18 @@ function x805011_OnDefaultEvent( sceneId, selfId,targetId )
 	end
 
 	BeginEvent(sceneId)
-		strText = "    ÎÒÊÇ·À¾ßµêµÄ´óÕÆ¹ñ£¬ÓĞºÎÖ¸½Ì£¿ÓĞ·À¾ßÓĞ¹ØµÄÊÂ£¬ÕÒÎÒÖÜÎŞ¼É¿Ï¶¨Ã»´í¡£"
+		strText = "    æˆ‘æ˜¯é˜²å…·åº—çš„å¤§æŒæŸœï¼Œæœ‰ä½•æŒ‡æ•™ï¼Ÿæœ‰é˜²å…·æœ‰å…³çš„äº‹ï¼Œæ‰¾æˆ‘å‘¨æ— å¿Œè‚¯å®šæ²¡é”™ã€‚"
 		AddText(sceneId,strText);
-		AddNumText(sceneId,x805011_g_scriptId,"ÉñÃØÉÌµê",7,7)
-		AddNumText(sceneId,x805011_g_scriptId,"Î¯ÍĞ´òÔì",6,8)
-		AddNumText(sceneId,x805011_g_scriptId,"°ï»á×°",6,9)
-		AddNumText(sceneId,x805011_g_scriptId,"·À¾ß·»½éÉÜ",11,6)
+		AddNumText(sceneId,x805011_g_scriptId,"ç¥ç§˜å•†åº—",7,7)
+		AddNumText(sceneId,x805011_g_scriptId,"å§”æ‰˜æ‰“é€ ",6,8)
+		AddNumText(sceneId,x805011_g_scriptId,"å¸®ä¼šè£…",6,9)
+		AddNumText(sceneId,x805011_g_scriptId,"é˜²å…·åŠä»‹ç»",11,6)
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x805011_OnEventRequest( sceneId, selfId, targetId, eventId )
 	
@@ -55,17 +55,17 @@ function x805011_OnEventRequest( sceneId, selfId, targetId, eventId )
 		DispatchEventList( sceneId, selfId, targetId )
 	elseif GetNumText() == 7 then
 		BeginEvent(sceneId)
-		AddText( sceneId, "Õâ¸ö¹¦ÄÜ¼´½«¿ª·Å" )		
+		AddText( sceneId, "è¿™ä¸ªåŠŸèƒ½å³å°†å¼€æ”¾" )		
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 	elseif GetNumText() == 8 then
 		BeginEvent(sceneId)
-		AddText( sceneId, "Õâ¸ö¹¦ÄÜ¼´½«¿ª·Å" )		
+		AddText( sceneId, "è¿™ä¸ªåŠŸèƒ½å³å°†å¼€æ”¾" )		
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 	elseif GetNumText() == 9 then
 		BeginEvent(sceneId)
-		AddText( sceneId, "Õâ¸ö¹¦ÄÜ¼´½«¿ª·Å" )		
+		AddText( sceneId, "è¿™ä¸ªåŠŸèƒ½å³å°†å¼€æ”¾" )		
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 	end

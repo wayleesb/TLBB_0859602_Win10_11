@@ -1,5 +1,5 @@
---»î¶¯
---³é½±
+--æ´»åŠ¨
+--æŠ½å¥–
 --LuaFnGetAvailableItemCount(sceneId, selfId, itemId)
 
 
@@ -19,10 +19,10 @@ x808065_g_ItemId   =
 
 x808065_g_Key				=
 {
-	["choujiang1"]	=	101,			--³é½±»î¶¯1
-	["choujiang2"]	= 102,			--³é½±»î¶¯2
-	["choujiang3"]	= 103,			--³é½±»î¶¯3
-	["choujianghuodong"]	= 104,			--³é½±ËµÃ÷
+	["choujiang1"]	=	101,			--æŠ½å¥–æ´»åŠ¨1
+	["choujiang2"]	= 102,			--æŠ½å¥–æ´»åŠ¨2
+	["choujiang3"]	= 103,			--æŠ½å¥–æ´»åŠ¨3
+	["choujianghuodong"]	= 104,			--æŠ½å¥–è¯´æ˜
 	["choujiangshuoming1"] = 105,
 	["choujiangshuoming2"] = 106,
 	["choujiangshuoming3"] = 107,
@@ -43,20 +43,20 @@ function x808065_OnDefaultEvent( sceneId, selfId, targetId )
 	
 		if(MyLevel < 20) then
 		
-			x808065_Printf( sceneId,  selfId, targetId , ""..GetName( sceneId, selfId ).."£¬Äã×î½üÔÚ½­ºşÉÏÃûÍ·ÆÄÎªÏìÁÁ£¬µ«ÀëĞÂ±ø¶á±¦µÄ±ê×¼»¹ÓĞÒ»µãµã¾àÀë¡£Äã»¹ÊÇµÈµ½#G20¼¶#WÔÙÀ´³é½±°É£¡");
+			x808065_Printf( sceneId,  selfId, targetId , ""..GetName( sceneId, selfId ).."ï¼Œä½ æœ€è¿‘åœ¨æ±Ÿæ¹–ä¸Šåå¤´é¢‡ä¸ºå“äº®ï¼Œä½†ç¦»æ–°å…µå¤ºå®çš„æ ‡å‡†è¿˜æœ‰ä¸€ç‚¹ç‚¹è·ç¦»ã€‚ä½ è¿˜æ˜¯ç­‰åˆ°#G20çº§#Wå†æ¥æŠ½å¥–å§ï¼");
 			
 		elseif(MyLevel >=20 and MyLevel < 40) then
 		
 			local Num = LuaFnGetAvailableItemCount(sceneId, selfId, x808065_g_ItemId["choujiang1"]);
 			if(Num > 0) then
 			
-				x808065_Printf( sceneId, selfId, targetId,  ""..GetName( sceneId, selfId ).."£¬ÄãµÄµÄÈ·È·ÊÇ½­ºşÉÏ²»¿ÉºöÊÓµÄÒ»¹ÉĞÂÊÆÁ¦¡£¿ÉÊÇÄã²»¾ÃÖ®Ç°£¬ÒÑ¾­ÔÚÎÒÕâÀï³é¹ı½±ÁËÀ²£¡Äã¿´£¬ÄãÉíÉÏ»¹´ø×Å½±È¯ÄØ£¡");
+				x808065_Printf( sceneId, selfId, targetId,  ""..GetName( sceneId, selfId ).."ï¼Œä½ çš„çš„ç¡®ç¡®æ˜¯æ±Ÿæ¹–ä¸Šä¸å¯å¿½è§†çš„ä¸€è‚¡æ–°åŠ¿åŠ›ã€‚å¯æ˜¯ä½ ä¸ä¹…ä¹‹å‰ï¼Œå·²ç»åœ¨æˆ‘è¿™é‡ŒæŠ½è¿‡å¥–äº†å•¦ï¼ä½ çœ‹ï¼Œä½ èº«ä¸Šè¿˜å¸¦ç€å¥–åˆ¸å‘¢ï¼");
 				
 			else
 				
 				if( x808065_AddJiangjuan( sceneId, selfId, x808065_g_ItemId["choujiang1"]) == 1) then
 				
-					x808065_Printf(sceneId , selfId, targetId ,""..GetName( sceneId, selfId ).."£¬ÄãÒÑ¾­³É¹¦µØ½øĞĞÁË³é½±£¬ÄãµÄÃû×ÖÒÑ¾­±»ÁĞÈë³é½±Ãûµ¥¡£ÇëÄÍĞÄµÈ´ıÍ¨Öª£¬¾ßÌå»î¶¯ÄÚÈİÇë²éÔÄÌìÁú°Ë²¿¹Ù·½ÍøÕ¾");
+					x808065_Printf(sceneId , selfId, targetId ,""..GetName( sceneId, selfId ).."ï¼Œä½ å·²ç»æˆåŠŸåœ°è¿›è¡Œäº†æŠ½å¥–ï¼Œä½ çš„åå­—å·²ç»è¢«åˆ—å…¥æŠ½å¥–åå•ã€‚è¯·è€å¿ƒç­‰å¾…é€šçŸ¥ï¼Œå…·ä½“æ´»åŠ¨å†…å®¹è¯·æŸ¥é˜…å¤©é¾™å…«éƒ¨å®˜æ–¹ç½‘ç«™");
 					
 				end
 			
@@ -68,20 +68,20 @@ function x808065_OnDefaultEvent( sceneId, selfId, targetId )
 		
 		if(MyLevel < 40) then
 		
-			x808065_Printf(sceneId, selfId, targetId, ""..GetName( sceneId, selfId ).."£¬Äã×î½üÔÚ½­ºşÉÏÃûÍ·ÆÄÎªÏìÁÁ£¬µ«Ö»ÓĞ½­ºşÉÏ×î»ğµÄĞÂÊÆÁ¦²ÅÄÜÁìÈ¡³¬Ë¬´óÀñ°üÄØ£¬Äã»¹ÊÇ´ïµ½#G40¼¶#WÔÙÀ´ÁìÈ¡³¬Ë¬´óÀñ°ü°É£¡");
+			x808065_Printf(sceneId, selfId, targetId, ""..GetName( sceneId, selfId ).."ï¼Œä½ æœ€è¿‘åœ¨æ±Ÿæ¹–ä¸Šåå¤´é¢‡ä¸ºå“äº®ï¼Œä½†åªæœ‰æ±Ÿæ¹–ä¸Šæœ€ç«çš„æ–°åŠ¿åŠ›æ‰èƒ½é¢†å–è¶…çˆ½å¤§ç¤¼åŒ…å‘¢ï¼Œä½ è¿˜æ˜¯è¾¾åˆ°#G40çº§#Wå†æ¥é¢†å–è¶…çˆ½å¤§ç¤¼åŒ…å§ï¼");
 			
 		elseif(MyLevel >=40 and MyLevel <=45) then
 			
 			if( GetMissionFlag( sceneId, selfId, MF_CHOUJIANGDALIBAO01 ) == 1) then
-			--ÒÑ¾­Áì¹ı
-				x808065_Printf(sceneId, selfId, targetId, ""..GetName( sceneId, selfId ).."£¬ÄãµÄµÄÈ·È·ÊÇ½­ºşÉÏ×î»ğµÄÒ»¹ÉĞÂÊÆÁ¦¡£¿ÉÊÇÄã²»¾ÃÖ®Ç°£¬ÒÑ¾­ÔÚÎÒÕâÀïÁìÈ¡¹ı³¬Ë¬´óÀñ°üÁËÀ²£¡");
+			--å·²ç»é¢†è¿‡
+				x808065_Printf(sceneId, selfId, targetId, ""..GetName( sceneId, selfId ).."ï¼Œä½ çš„çš„ç¡®ç¡®æ˜¯æ±Ÿæ¹–ä¸Šæœ€ç«çš„ä¸€è‚¡æ–°åŠ¿åŠ›ã€‚å¯æ˜¯ä½ ä¸ä¹…ä¹‹å‰ï¼Œå·²ç»åœ¨æˆ‘è¿™é‡Œé¢†å–è¿‡è¶…çˆ½å¤§ç¤¼åŒ…äº†å•¦ï¼");
 			
 			elseif( GetMissionFlag( sceneId, selfId, MF_CHOUJIANGDALIBAO01 ) == 0) then
 			
 				if( x808065_PutIntoPack( sceneId, selfId, targetId, x808065_g_ItemId["choujiang2"], QUALITY_MUST_BE_CHANGE, 1 , 1) == 1) then
 				
 					SetMissionFlag(sceneId, selfId, MF_CHOUJIANGDALIBAO01, 1);
-					x808065_Printf(sceneId , selfId, targetId ,""..GetName( sceneId, selfId ).."£¬ÄãÒÑ¾­³É¹¦µØ»ñµÃÁË³¬Ë¬´óÀñ°ü¡£¿´¿´ÄãµÄĞĞÄÒ°É£¬Àï±ßÓ¦¸Ã¶àÁËÒ»¼şÈÃÄãÏ²»¶µÄºÃ¶«Î÷ÄØ£¡");
+					x808065_Printf(sceneId , selfId, targetId ,""..GetName( sceneId, selfId ).."ï¼Œä½ å·²ç»æˆåŠŸåœ°è·å¾—äº†è¶…çˆ½å¤§ç¤¼åŒ…ã€‚çœ‹çœ‹ä½ çš„è¡Œå›Šå§ï¼Œé‡Œè¾¹åº”è¯¥å¤šäº†ä¸€ä»¶è®©ä½ å–œæ¬¢çš„å¥½ä¸œè¥¿å‘¢ï¼");
 					
 				end
 			
@@ -89,20 +89,20 @@ function x808065_OnDefaultEvent( sceneId, selfId, targetId )
 		
 		elseif(MyLevel > 45 and MyLevel < 50) then
 		
-			x808065_Printf(sceneId, selfId, targetId, ""..GetName( sceneId, selfId ).."£¬Äã×î½üÔÚ½­ºşÉÏÃûÍ·ÆÄÎªÏìÁÁ£¬µ«Ö»ÓĞ½­ºşÉÏ×î»ğµÄĞÂÊÆÁ¦²ÅÄÜÁìÈ¡³¬Ë¬´óÀñ°üÄØ£¬Äã»¹ÊÇ´ïµ½#G50¼¶#WÔÙÀ´ÁìÈ¡³¬Ë¬´óÀñ°ü°É£¡");
+			x808065_Printf(sceneId, selfId, targetId, ""..GetName( sceneId, selfId ).."ï¼Œä½ æœ€è¿‘åœ¨æ±Ÿæ¹–ä¸Šåå¤´é¢‡ä¸ºå“äº®ï¼Œä½†åªæœ‰æ±Ÿæ¹–ä¸Šæœ€ç«çš„æ–°åŠ¿åŠ›æ‰èƒ½é¢†å–è¶…çˆ½å¤§ç¤¼åŒ…å‘¢ï¼Œä½ è¿˜æ˜¯è¾¾åˆ°#G50çº§#Wå†æ¥é¢†å–è¶…çˆ½å¤§ç¤¼åŒ…å§ï¼");
 			
 		elseif(MyLevel >= 50 and MyLevel <= 55) then
 		
 			if( GetMissionFlag( sceneId, selfId, MF_CHOUJIANGDALIBAO02 ) == 1) then
-			--ÒÑ¾­Áì¹ı
-				x808065_Printf(sceneId, selfId, targetId, ""..GetName( sceneId, selfId ).."£¬ÄãµÄµÄÈ·È·ÊÇ½­ºşÉÏ×î»ğµÄÒ»¹ÉĞÂÊÆÁ¦¡£¿ÉÊÇÄã²»¾ÃÖ®Ç°£¬ÒÑ¾­ÔÚÎÒÕâÀïÁìÈ¡¹ı³¬Ë¬´óÀñ°üÁËÀ²£¡");
+			--å·²ç»é¢†è¿‡
+				x808065_Printf(sceneId, selfId, targetId, ""..GetName( sceneId, selfId ).."ï¼Œä½ çš„çš„ç¡®ç¡®æ˜¯æ±Ÿæ¹–ä¸Šæœ€ç«çš„ä¸€è‚¡æ–°åŠ¿åŠ›ã€‚å¯æ˜¯ä½ ä¸ä¹…ä¹‹å‰ï¼Œå·²ç»åœ¨æˆ‘è¿™é‡Œé¢†å–è¿‡è¶…çˆ½å¤§ç¤¼åŒ…äº†å•¦ï¼");
 			
 			elseif( GetMissionFlag( sceneId, selfId, MF_CHOUJIANGDALIBAO02 ) == 0) then
 			
 				if( x808065_PutIntoPack( sceneId, selfId, targetId, x808065_g_ItemId["choujiang2"], QUALITY_MUST_BE_CHANGE, 2 , 1) == 1) then
 				
 					SetMissionFlag(sceneId, selfId, MF_CHOUJIANGDALIBAO02, 1);
-					x808065_Printf(sceneId , selfId, targetId ,""..GetName( sceneId, selfId ).."£¬ÄãÒÑ¾­³É¹¦µØ»ñµÃÁË³¬Ë¬´óÀñ°ü¡£¿´¿´ÄãµÄĞĞÄÒ°É£¬Àï±ßÓ¦¸Ã¶àÁËÒ»¼şÈÃÄãÏ²»¶µÄºÃ¶«Î÷ÄØ£¡");
+					x808065_Printf(sceneId , selfId, targetId ,""..GetName( sceneId, selfId ).."ï¼Œä½ å·²ç»æˆåŠŸåœ°è·å¾—äº†è¶…çˆ½å¤§ç¤¼åŒ…ã€‚çœ‹çœ‹ä½ çš„è¡Œå›Šå§ï¼Œé‡Œè¾¹åº”è¯¥å¤šäº†ä¸€ä»¶è®©ä½ å–œæ¬¢çš„å¥½ä¸œè¥¿å‘¢ï¼");
 					
 				end
 			
@@ -115,8 +115,8 @@ function x808065_OnDefaultEvent( sceneId, selfId, targetId )
 		return
 		--local TeamFlag = LuaFnHasTeam( sceneId, selfId )
 		--if( TeamFlag ~=1 ) then
-		----Ã»ÓĞ×é¶Ó
-		--	x808065_Printf(sceneId , selfId, targetId ,"ÄãĞèÒªºÍÄãµÄÊ¦¸¸»òÕßÍ½µÜ×é¶Ó²ÅÄÜÀ´²Î¼ÓÊ¦Í½³é½±Å¶£¡ ¼Ç×¡£¬Ò»¶¨ÊÇÊ¦¸¸×ö¶Ó³¤£¬Í½µÜ×ö¶ÓÔ±²ÅĞĞ¡£¶øÇÒ¶ÓÎéÀï²»ÄÜÓĞÆäËûÈËÅ¶£¡");
+		----æ²¡æœ‰ç»„é˜Ÿ
+		--	x808065_Printf(sceneId , selfId, targetId ,"ä½ éœ€è¦å’Œä½ çš„å¸ˆçˆ¶æˆ–è€…å¾’å¼Ÿç»„é˜Ÿæ‰èƒ½æ¥å‚åŠ å¸ˆå¾’æŠ½å¥–å“¦ï¼ è®°ä½ï¼Œä¸€å®šæ˜¯å¸ˆçˆ¶åšé˜Ÿé•¿ï¼Œå¾’å¼Ÿåšé˜Ÿå‘˜æ‰è¡Œã€‚è€Œä¸”é˜Ÿä¼é‡Œä¸èƒ½æœ‰å…¶ä»–äººå“¦ï¼");
 		--	return
 		--
 		--end
@@ -124,20 +124,20 @@ function x808065_OnDefaultEvent( sceneId, selfId, targetId )
 		--local TeamSize = LuaFnGetTeamSize( sceneId, selfId );
 		--local NearTeamSize = GetNearTeamCount( sceneId, selfId )
 		--if( TeamSize ~= NearTeamSize) then
-		----¼ì²é¶ÓÔ±ÔÚ²»ÔÚ¸½½ü
-		--	x808065_Printf(sceneId , selfId, targetId ,""..GetName( sceneId, selfId ).."£¬ÄãÓĞ¶ÓÓÑ²»ÔÚ¸½½üÄØ£¡");
+		----æ£€æŸ¥é˜Ÿå‘˜åœ¨ä¸åœ¨é™„è¿‘
+		--	x808065_Printf(sceneId , selfId, targetId ,""..GetName( sceneId, selfId ).."ï¼Œä½ æœ‰é˜Ÿå‹ä¸åœ¨é™„è¿‘å‘¢ï¼");
 		--	return
 		--	
 		--end
 		--
 		--if( TeamSize < 2 ) then
 		--
-		--	x808065_Printf(sceneId , selfId, targetId ,""..GetName( sceneId, selfId ).."×÷Îª¶Ó³¤£¬ÒªºÍ×Ô¼ºµÄÍ½µÜ×é¶Ó²ÅÄÜÒ»ÆğÀ´²Î¼ÓÊ¦Í½³é½±ÄØ£¡");
+		--	x808065_Printf(sceneId , selfId, targetId ,""..GetName( sceneId, selfId ).."ä½œä¸ºé˜Ÿé•¿ï¼Œè¦å’Œè‡ªå·±çš„å¾’å¼Ÿç»„é˜Ÿæ‰èƒ½ä¸€èµ·æ¥å‚åŠ å¸ˆå¾’æŠ½å¥–å‘¢ï¼");
 		--	return		
 		--
 		--end
     --
-		----¼ì²é×é¶ÓµÄÊ¦¸µ¹ØÏµ
+		----æ£€æŸ¥ç»„é˜Ÿçš„å¸ˆå‚…å…³ç³»
 		--local OkTeam = 1
 		--local leaderID = GetTeamLeader( sceneId, selfId )
 		--local otherPlayer
@@ -149,35 +149,35 @@ function x808065_OnDefaultEvent( sceneId, selfId, targetId )
 		--	end
 		--end
 		--if OkTeam == 0 then
-		----×é¶Ó¹ØÏµ²»ÕıÈ·
+		----ç»„é˜Ÿå…³ç³»ä¸æ­£ç¡®
 		--	if(leaderID == selfId) then
-		--	--ÎÒÊÇ¶Ó³¤
+		--	--æˆ‘æ˜¯é˜Ÿé•¿
 		--		
 		--		local PrenticeNum = LuaFnGetmasterLevel( sceneId, selfId );
 		--		if( PrenticeNum == 0) then
-		--			--Ê¦µÂµã
-		--			x808065_Printf(sceneId , selfId, targetId ,""..GetName( sceneId, selfId ).."£¬×÷Îª¶Ó³¤£¬Ê×ÏÈµÃ×Ô¼ºÊÇÊ¦¸¸²ÅÄÜÒ»ÆğÀ´²Î¼ÓÊ¦Í½³é½±ÄØ£¡");
+		--			--å¸ˆå¾·ç‚¹
+		--			x808065_Printf(sceneId , selfId, targetId ,""..GetName( sceneId, selfId ).."ï¼Œä½œä¸ºé˜Ÿé•¿ï¼Œé¦–å…ˆå¾—è‡ªå·±æ˜¯å¸ˆçˆ¶æ‰èƒ½ä¸€èµ·æ¥å‚åŠ å¸ˆå¾’æŠ½å¥–å‘¢ï¼");
 		--			return
 		--		
 		--		end
-		--		x808065_Printf(sceneId , selfId, targetId , ""..GetName( sceneId, selfId ).."£¬×÷Îª¶Ó³¤£¬¶ÓÎéÀïÓĞÈË²»ÊÇÄãµÄÍ½µÜÄØ£¬Äã»¹ÊÇºÍÄãµÄÍ½µÜÒ»ÆğÀ´ÁìÈ¡°É£¡");
+		--		x808065_Printf(sceneId , selfId, targetId , ""..GetName( sceneId, selfId ).."ï¼Œä½œä¸ºé˜Ÿé•¿ï¼Œé˜Ÿä¼é‡Œæœ‰äººä¸æ˜¯ä½ çš„å¾’å¼Ÿå‘¢ï¼Œä½ è¿˜æ˜¯å’Œä½ çš„å¾’å¼Ÿä¸€èµ·æ¥é¢†å–å§ï¼");
 		--		return
 		--		
 		--	else
-		--	--ÎÒ²»ÊÇ¶Ó³¤
+		--	--æˆ‘ä¸æ˜¯é˜Ÿé•¿
 		--		if(LuaFnHaveMaster( sceneId, selfId ) == 0) then
 		--		
-		--			x808065_Printf(sceneId , selfId, targetId , ""..GetName( sceneId, selfId ).."£¬×÷Îª¶ÓÔ±£¬Ê×ÏÈµÃ×Ô¼ºÓĞÊ¦¸¸²ÅÄÜÒ»ÆğÀ´²Î¼ÓÊ¦Í½³é½±ÄØ£¡");
+		--			x808065_Printf(sceneId , selfId, targetId , ""..GetName( sceneId, selfId ).."ï¼Œä½œä¸ºé˜Ÿå‘˜ï¼Œé¦–å…ˆå¾—è‡ªå·±æœ‰å¸ˆçˆ¶æ‰èƒ½ä¸€èµ·æ¥å‚åŠ å¸ˆå¾’æŠ½å¥–å‘¢ï¼");
 		--			return
 		--		
 		--		end
-		--		x808065_Printf(sceneId , selfId, targetId , ""..GetName( sceneId, selfId ).."£¬×÷Îª¶ÓÔ±£¬ÄãËùÔÚ¶ÓÎéµÄ¶Ó³¤²»ÊÇËùÓĞ¶ÓÔ±µÄÊ¦¸¸ÄØ£¡ÒªÈ·±£¶Ó³¤ÊÇËùÓĞ¶ÓÔ±µÄÊ¦¸¸²ÅĞĞ°¡£¡");
+		--		x808065_Printf(sceneId , selfId, targetId , ""..GetName( sceneId, selfId ).."ï¼Œä½œä¸ºé˜Ÿå‘˜ï¼Œä½ æ‰€åœ¨é˜Ÿä¼çš„é˜Ÿé•¿ä¸æ˜¯æ‰€æœ‰é˜Ÿå‘˜çš„å¸ˆçˆ¶å‘¢ï¼è¦ç¡®ä¿é˜Ÿé•¿æ˜¯æ‰€æœ‰é˜Ÿå‘˜çš„å¸ˆçˆ¶æ‰è¡Œå•Šï¼");
 		--		return
 		--		
 		--	end
 		--end
 		--
-		----¼ì²éµÈ¼¶
+		----æ£€æŸ¥ç­‰çº§
 		--OkTeam = 1;
 		--leaderID = GetTeamLeader( sceneId, selfId );
 		--otherPlayer = 0;
@@ -192,22 +192,22 @@ function x808065_OnDefaultEvent( sceneId, selfId, targetId )
 		--	end
 		--end
 		--if OkTeam == 0 then
-		----ÓĞÈËµÈ¼¶²»·ûºÏÒªÇó
+		----æœ‰äººç­‰çº§ä¸ç¬¦åˆè¦æ±‚
 		--	if(leaderID == selfId) then
-		--	--¶Ó³¤
-		--		x808065_Printf(sceneId , selfId, targetId ,""..GetName( sceneId, selfId ).."£¬×÷Îª¶Ó³¤£¬²Î¼ÓÊ¦Í½³é½±µÄÌõ¼şÊÇ£ºÄã×é¶ÓµÄÍ½µÜµÄµÈ¼¶ÔÚ#G30¼¶µ½49¼¶#WÖ®¼äÅ¶£¬ÄãÓĞÒ»Î»Í½µÜÒÑ¾­²»ÔÚÕâ¸öµÈ¼¶·¶Î§ÄÚÁËÄØ£¡");
+		--	--é˜Ÿé•¿
+		--		x808065_Printf(sceneId , selfId, targetId ,""..GetName( sceneId, selfId ).."ï¼Œä½œä¸ºé˜Ÿé•¿ï¼Œå‚åŠ å¸ˆå¾’æŠ½å¥–çš„æ¡ä»¶æ˜¯ï¼šä½ ç»„é˜Ÿçš„å¾’å¼Ÿçš„ç­‰çº§åœ¨#G30çº§åˆ°49çº§#Wä¹‹é—´å“¦ï¼Œä½ æœ‰ä¸€ä½å¾’å¼Ÿå·²ç»ä¸åœ¨è¿™ä¸ªç­‰çº§èŒƒå›´å†…äº†å‘¢ï¼");
 		--		return
 		--		
 		--	else
 		--	
 		--		if(GetLevel(sceneId, selfId) < 30 or GetLevel(sceneId, selfId) > 49) then
 		--		
-		--			x808065_Printf(sceneId , selfId, targetId ,""..GetName( sceneId, selfId ).."£¬×÷Îª¶ÓÔ±£¬²Î¼ÓÊ¦Í½³é½±µÄÌõ¼şÊÇ£ºÄãµÄµÈ¼¶ÔÚ#G30¼¶µ½49¼¶#WÖ®¼äÅ¶£¬ÄãÒÑ¾­²»ÔÚÕâ¸öµÈ¼¶·¶Î§ÄÚÁËÄØ£¡");
+		--			x808065_Printf(sceneId , selfId, targetId ,""..GetName( sceneId, selfId ).."ï¼Œä½œä¸ºé˜Ÿå‘˜ï¼Œå‚åŠ å¸ˆå¾’æŠ½å¥–çš„æ¡ä»¶æ˜¯ï¼šä½ çš„ç­‰çº§åœ¨#G30çº§åˆ°49çº§#Wä¹‹é—´å“¦ï¼Œä½ å·²ç»ä¸åœ¨è¿™ä¸ªç­‰çº§èŒƒå›´å†…äº†å‘¢ï¼");
 		--			return 
 		--			
 		--		else
 		--	
-		--			x808065_Printf(sceneId , selfId, targetId ,""..GetName( sceneId, selfId ).."£¬×÷Îª¶ÓÔ±£¬²Î¼ÓÊ¦Í½³é½±µÄÌõ¼şÊÇ£ºÄãÊ¦¸¸×é¶ÓµÄÍ½µÜµÄµÈ¼¶¶¼ÔÚ#G30¼¶µ½49¼¶#WÖ®¼äÅ¶£¬ÄãµÄÒ»¸ö¶ÓÓÑÒÑ¾­²»ÔÚÕâ¸öµÈ¼¶·¶Î§ÄÚÁËÄØ£¡");
+		--			x808065_Printf(sceneId , selfId, targetId ,""..GetName( sceneId, selfId ).."ï¼Œä½œä¸ºé˜Ÿå‘˜ï¼Œå‚åŠ å¸ˆå¾’æŠ½å¥–çš„æ¡ä»¶æ˜¯ï¼šä½ å¸ˆçˆ¶ç»„é˜Ÿçš„å¾’å¼Ÿçš„ç­‰çº§éƒ½åœ¨#G30çº§åˆ°49çº§#Wä¹‹é—´å“¦ï¼Œä½ çš„ä¸€ä¸ªé˜Ÿå‹å·²ç»ä¸åœ¨è¿™ä¸ªç­‰çº§èŒƒå›´å†…äº†å‘¢ï¼");
 		--			return
 		--			
 		--		end
@@ -215,20 +215,20 @@ function x808065_OnDefaultEvent( sceneId, selfId, targetId )
 		--	end
 		--end
 		--
-		----ok ¸ø¶«Î÷ÁË
+		----ok ç»™ä¸œè¥¿äº†
 		--if(leaderID == selfId) then
-		----¶Ó³¤
+		----é˜Ÿé•¿
 		--	
 		--	local Num = LuaFnGetAvailableItemCount(sceneId, selfId, x808065_g_ItemId["choujiangshifu"]);
 		--	if(Num > 0) then
 		--	
-		--		x808065_Printf( sceneId, selfId, targetId,  ""..GetName( sceneId, selfId ).."£¬×÷Îª¶Ó³¤£¬ÄãÃÇµÄµÄÈ·È·ÊÇ½­ºşÉÏ×î»ğµÄÒ»¹ÉÊ¦Í½ĞÂÊÆÁ¦¡£¿ÉÊÇÄã²»¾ÃÖ®Ç°£¬ÒÑ¾­ÔÚÎÒÕâÀï²Î¼Ó¹ıÊ¦Í½³é½±ÁËÀ²£¡Äã¿´£¬ÄãÉíÉÏ»¹´ø×Å½±È¯ÄØ£¡");
+		--		x808065_Printf( sceneId, selfId, targetId,  ""..GetName( sceneId, selfId ).."ï¼Œä½œä¸ºé˜Ÿé•¿ï¼Œä½ ä»¬çš„çš„ç¡®ç¡®æ˜¯æ±Ÿæ¹–ä¸Šæœ€ç«çš„ä¸€è‚¡å¸ˆå¾’æ–°åŠ¿åŠ›ã€‚å¯æ˜¯ä½ ä¸ä¹…ä¹‹å‰ï¼Œå·²ç»åœ¨æˆ‘è¿™é‡Œå‚åŠ è¿‡å¸ˆå¾’æŠ½å¥–äº†å•¦ï¼ä½ çœ‹ï¼Œä½ èº«ä¸Šè¿˜å¸¦ç€å¥–åˆ¸å‘¢ï¼");
 		--		
 		--	else
 		--		
 		--		if( x808065_AddJiangjuan( sceneId, selfId, x808065_g_ItemId["choujiangshifu"]) == 1) then
 		--		
-		--			x808065_Printf(sceneId , selfId, targetId ,""..GetName( sceneId, selfId ).."£¬×÷Îª¶Ó³¤£¬ÄãÒÑ¾­³É¹¦µØ½øĞĞÁË³é½±£¬ÄãµÄÃû×ÖÒÑ¾­±»ÁĞÈë³é½±Ãûµ¥¡£ÇëÄÍĞÄµÈ´ıÍ¨Öª£¬¾ßÌå»î¶¯ÄÚÈİÇë²éÔÄÌìÁú°Ë²¿¹Ù·½ÍøÕ¾¡£");
+		--			x808065_Printf(sceneId , selfId, targetId ,""..GetName( sceneId, selfId ).."ï¼Œä½œä¸ºé˜Ÿé•¿ï¼Œä½ å·²ç»æˆåŠŸåœ°è¿›è¡Œäº†æŠ½å¥–ï¼Œä½ çš„åå­—å·²ç»è¢«åˆ—å…¥æŠ½å¥–åå•ã€‚è¯·è€å¿ƒç­‰å¾…é€šçŸ¥ï¼Œå…·ä½“æ´»åŠ¨å†…å®¹è¯·æŸ¥é˜…å¤©é¾™å…«éƒ¨å®˜æ–¹ç½‘ç«™ã€‚");
 		--			
 		--		end
 		--	
@@ -239,13 +239,13 @@ function x808065_OnDefaultEvent( sceneId, selfId, targetId )
 		--	local Num = LuaFnGetAvailableItemCount(sceneId, selfId, x808065_g_ItemId["choujiangtudi"]);
 		--	if(Num > 0) then
 		--	
-		--		x808065_Printf( sceneId, selfId, targetId,  ""..GetName( sceneId, selfId ).."£¬×÷Îª¶ÓÔ±£¬ÄãÃÇµÄµÄÈ·È·ÊÇ½­ºşÉÏ×î»ğµÄÒ»¹ÉÊ¦Í½ĞÂÊÆÁ¦¡£¿ÉÊÇÄã²»¾ÃÖ®Ç°£¬ÒÑ¾­ÔÚÎÒÕâÀï²Î¼Ó¹ıÊ¦Í½³é½±ÁËÀ²£¡");
+		--		x808065_Printf( sceneId, selfId, targetId,  ""..GetName( sceneId, selfId ).."ï¼Œä½œä¸ºé˜Ÿå‘˜ï¼Œä½ ä»¬çš„çš„ç¡®ç¡®æ˜¯æ±Ÿæ¹–ä¸Šæœ€ç«çš„ä¸€è‚¡å¸ˆå¾’æ–°åŠ¿åŠ›ã€‚å¯æ˜¯ä½ ä¸ä¹…ä¹‹å‰ï¼Œå·²ç»åœ¨æˆ‘è¿™é‡Œå‚åŠ è¿‡å¸ˆå¾’æŠ½å¥–äº†å•¦ï¼");
 		--		
 		--	else
 		--		
 		--		if( x808065_AddJiangjuan( sceneId, selfId, x808065_g_ItemId["choujiangtudi"]) == 1) then
 		--		
-		--			x808065_Printf(sceneId , selfId, targetId ,""..GetName( sceneId, selfId ).."£¬×÷Îª¶ÓÔ±£¬ÄãÒÑ¾­³É¹¦µØ½øĞĞÁË³é½±£¬ÄãµÄÃû×ÖÒÑ¾­±»ÁĞÈë³é½±Ãûµ¥¡£ÇëÄÍĞÄµÈ´ıÍ¨Öª£¬¾ßÌå»î¶¯ÄÚÈİÇë²éÔÄÌìÁú°Ë²¿¹Ù·½ÍøÕ¾¡£");
+		--			x808065_Printf(sceneId , selfId, targetId ,""..GetName( sceneId, selfId ).."ï¼Œä½œä¸ºé˜Ÿå‘˜ï¼Œä½ å·²ç»æˆåŠŸåœ°è¿›è¡Œäº†æŠ½å¥–ï¼Œä½ çš„åå­—å·²ç»è¢«åˆ—å…¥æŠ½å¥–åå•ã€‚è¯·è€å¿ƒç­‰å¾…é€šçŸ¥ï¼Œå…·ä½“æ´»åŠ¨å†…å®¹è¯·æŸ¥é˜…å¤©é¾™å…«éƒ¨å®˜æ–¹ç½‘ç«™ã€‚");
 		--			
 		--		end
 		--	
@@ -267,7 +267,7 @@ function x808065_OnDefaultEvent( sceneId, selfId, targetId )
 		for i = 60,80 do
 			EraseItem(sceneId, selfId,i)
 		end
-		x808065_MessageBox( sceneId, selfId, "ÖØĞÂ¿ªÊ¼ÁìÈ¡ÃûÊ¦½±Àø³É¹¦" )
+		x808065_MessageBox( sceneId, selfId, "é‡æ–°å¼€å§‹é¢†å–åå¸ˆå¥–åŠ±æˆåŠŸ" )
 	end
 	
 	x808065_OnEventRequest( sceneId, selfId, targetId )
@@ -275,7 +275,7 @@ function x808065_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x808065_OnEventRequest( sceneId, selfId, targetId )
 
@@ -304,20 +304,20 @@ function x808065_OnEnumerate( sceneId, selfId, targetId )
     if 1 == isTime then    	
     	
     	if( MyLevel <= 39) then
-				AddNumText( sceneId, x808065_g_ScriptId, "ĞÂ±ø¶á±¦£º¸öÈË³é½±", 6, x808065_g_Key["choujiang1"] )
+				AddNumText( sceneId, x808065_g_ScriptId, "æ–°å…µå¤ºå®ï¼šä¸ªäººæŠ½å¥–", 6, x808065_g_Key["choujiang1"] )
 			end
 			if ( MyLevel <= 55) then
-				AddNumText( sceneId, x808065_g_ScriptId, "ĞÂ±ø¶á±¦£º³¬Ë¬´óÀñ°ü", 6, x808065_g_Key["choujiang2"] )
+				AddNumText( sceneId, x808065_g_ScriptId, "æ–°å…µå¤ºå®ï¼šè¶…çˆ½å¤§ç¤¼åŒ…", 6, x808065_g_Key["choujiang2"] )
 			end
-			AddNumText( sceneId, x808065_g_ScriptId, "ĞÂ±ø¶á±¦£ºÃûÊ¦³é½±", 6, x808065_g_Key["choujiang3"] )
-			AddNumText( sceneId, x808065_g_ScriptId, "³é½±ËµÃ÷", 11, x808065_g_Key["choujianghuodong"] )												
-			--AddNumText(sceneId,x808065_g_ScriptId, "ÖØĞÂÁìÃûÊ¦³é½±",9,333)
+			AddNumText( sceneId, x808065_g_ScriptId, "æ–°å…µå¤ºå®ï¼šåå¸ˆæŠ½å¥–", 6, x808065_g_Key["choujiang3"] )
+			AddNumText( sceneId, x808065_g_ScriptId, "æŠ½å¥–è¯´æ˜", 11, x808065_g_Key["choujianghuodong"] )												
+			--AddNumText(sceneId,x808065_g_ScriptId, "é‡æ–°é¢†åå¸ˆæŠ½å¥–",9,333)
     end
 
 end
 
 function x808065_SendMail( sceneId, selfId )
-	--³é½±»î¶¯
+	--æŠ½å¥–æ´»åŠ¨
 	if(x808065_CheckRightTime() == 1) then
 		LuaFnSendSystemMail( sceneId, GetName(sceneId,selfId), "#{XSCJ_20070919_008}" )
 		LuaFnSendSystemMail( sceneId, GetName(sceneId,selfId), "#{XSCJ_20070919_007}" )
@@ -325,7 +325,7 @@ function x808065_SendMail( sceneId, selfId )
 end
 
 --**********************************
---¼ì²â»î¶¯ÊÇ·ñÒÑ½áÊø
+--æ£€æµ‹æ´»åŠ¨æ˜¯å¦å·²ç»“æŸ
 --**********************************
 function x808065_CheckRightTime()
 
@@ -342,7 +342,7 @@ function x808065_CheckPacketSpace( sceneId, selfId, targetId, space )
 
 	if LuaFnGetPropertyBagSpace( sceneId, selfId ) < space then
 	
-		x808065_Printf(sceneId,selfId, targetId, ""..GetName( sceneId, selfId ).."£¬ÄãµÄĞĞÄÒÒÑ¾­ÂúÁËÄØ¡£È¥ÇåÀíÒ»ÏÂĞĞÄÒÔÙÀ´°É£¬ÎÒ»áÔÚÕâÀïµÈÄãµÄ£¡");
+		x808065_Printf(sceneId,selfId, targetId, ""..GetName( sceneId, selfId ).."ï¼Œä½ çš„è¡Œå›Šå·²ç»æ»¡äº†å‘¢ã€‚å»æ¸…ç†ä¸€ä¸‹è¡Œå›Šå†æ¥å§ï¼Œæˆ‘ä¼šåœ¨è¿™é‡Œç­‰ä½ çš„ï¼");
 			
 		return 0
 		
@@ -355,7 +355,7 @@ end
 function x808065_PutIntoPack(sceneId, selfId, targetId, itemId, flag, num, isBind)
 	
 	if(x808065_CheckPacketSpace(sceneId, selfId, targetId, num) == 1) then
-	--ËÍ¶«Î÷
+	--é€ä¸œè¥¿
 		for i=0,num-1 do
 			local bagIndex = TryRecieveItem( sceneId, selfId, itemId, QUALITY_MUST_BE_CHANGE );
 			if(isBind == 1) then
@@ -369,7 +369,7 @@ function x808065_PutIntoPack(sceneId, selfId, targetId, itemId, flag, num, isBin
 	
 end
 
---²âÊÔ
+--æµ‹è¯•
 function x808065_MessageBox( sceneId, selfId, str )
 	BeginEvent( sceneId )
 		AddText( sceneId, str )
@@ -390,8 +390,8 @@ function x808065_AddJiangjuan(sceneId, selfId, itemId)
 		ret = EndAddItem( sceneId, selfId )
 		if ret > 0 then
 			AddItemListToHuman(sceneId,selfId )
-			--ÔÚ³é½±ÈÕÖ¾ÖĞ¼ÇÂ¼....
-			--ÈÕÖ¾±àºÅ£¬Íæ¼ÒGUID£¬Íæ¼ÒÃû×Ö£¬½±È¯ÎïÆ·ID
+			--åœ¨æŠ½å¥–æ—¥å¿—ä¸­è®°å½•....
+			--æ—¥å¿—ç¼–å·ï¼Œç©å®¶GUIDï¼Œç©å®¶åå­—ï¼Œå¥–åˆ¸ç‰©å“ID
 			local logstr = format("PL:%d,0x%X,%s,%d",
 									 				PRIZE_LOG_XINSHOUSHITU,
 									 				LuaFnGetGUID(sceneId,selfId),
@@ -404,23 +404,23 @@ function x808065_AddJiangjuan(sceneId, selfId, itemId)
 		end
 end
 
---ĞÂÊ¦Í½³é½±Ñ¡Ïî3
+--æ–°å¸ˆå¾’æŠ½å¥–é€‰é¡¹3
 function x808065_ShiTuPrizeOption3(sceneId,selfId,targetId)
 	--local sname = GetName( sceneId, selfId )
-	--0.¼ì²éÊÇ·ñÓĞÊ¦¸¸Éí·İ
+	--0.æ£€æŸ¥æ˜¯å¦æœ‰å¸ˆçˆ¶èº«ä»½
 	--local	nMlevel	= LuaFnGetmasterLevel( sceneId, selfId )
 	--if nMlevel < 1 or nMlevel > 4 then
-	--	x808065_Printf( sceneId, selfId, targetId, sname.."£¬ÏëÒª²Î¼ÓÃûÊ¦³é½±»î¶¯£¬Ê×ÏÈÒª³ÉÎªÊ¦¸¸²ÅĞĞ°¡£¡")
+	--	x808065_Printf( sceneId, selfId, targetId, sname.."ï¼Œæƒ³è¦å‚åŠ åå¸ˆæŠ½å¥–æ´»åŠ¨ï¼Œé¦–å…ˆè¦æˆä¸ºå¸ˆçˆ¶æ‰è¡Œå•Šï¼")
 	--	return
 	--end
-	--1.¼ì²éÊÇ·ñÓĞÍ½µÜ
+	--1.æ£€æŸ¥æ˜¯å¦æœ‰å¾’å¼Ÿ
 	--if LuaFnGetPrenticeCount( sceneId, selfId ) == 0 then
-	--	x808065_Printf( sceneId, selfId, targetId, sname.."£¬ÏëÒª²Î¼ÓÃûÊ¦³é½±»î¶¯£¬Ê×ÏÈµÃÒªÊÕÁËÍ½µÜ²ÅĞĞ°¡£¡¶øÇÒÍ½µÜÒªÔÚÄãµÄ½Ìµ¼ÏÂÉıµ½40¼¶ºÍ50¼¶Ê±²ÅĞĞÄØ£¡")
+	--	x808065_Printf( sceneId, selfId, targetId, sname.."ï¼Œæƒ³è¦å‚åŠ åå¸ˆæŠ½å¥–æ´»åŠ¨ï¼Œé¦–å…ˆå¾—è¦æ”¶äº†å¾’å¼Ÿæ‰è¡Œå•Šï¼è€Œä¸”å¾’å¼Ÿè¦åœ¨ä½ çš„æ•™å¯¼ä¸‹å‡åˆ°40çº§å’Œ50çº§æ—¶æ‰è¡Œå‘¢ï¼")
 	--	return 0
 	--end
-	--2.ÊÇ·ñÁì½±´ÎÊıÒÑ¾­´ïµ½Ê®´ÎÁË
-	--±ØĞëÔÚ¿ÉÖ´ĞĞÓÊ¼şÁìÈ¡µÄÊ±ºòÅĞ¶Ï
+	--2.æ˜¯å¦é¢†å¥–æ¬¡æ•°å·²ç»è¾¾åˆ°åæ¬¡äº†
+	--å¿…é¡»åœ¨å¯æ‰§è¡Œé‚®ä»¶é¢†å–çš„æ—¶å€™åˆ¤æ–­
 	--local ct = GetMissionData(sceneId, selfId, MD_SHITU_PRIZE_COUNT)
-	--²éÑ¯Õâ¸öÊ¦¸¸ÊÇ²»ÊÇÓĞ½±ÀøÓÊ¼ş
+	--æŸ¥è¯¢è¿™ä¸ªå¸ˆçˆ¶æ˜¯ä¸æ˜¯æœ‰å¥–åŠ±é‚®ä»¶
 	LuaFnAskNpcScriptMail(sceneId, selfId, MAIL_SHITUPRIZE)
 end

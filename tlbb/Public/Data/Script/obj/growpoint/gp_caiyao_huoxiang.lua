@@ -1,35 +1,35 @@
---Éú³¤µã
---¶ÔÓ¦Éú»î¼¼ÄÜ£º²ÉÒ©	²É¿ó¼¼ÄÜµÄ±àºÅ8
---Þ½Ïã
---½Å±¾ºÅ710519
---Þ½Ïã1	0.6		2	0.3		3	0.1		Òø»·Éß³öÏÖµÄ¸ÅÂÊÊÇ0.2		ÊýÁ¿1	0.6		2	0.3		3	0.1
---µÈ¼¶1
+--ç”Ÿé•¿ç‚¹
+--å¯¹åº”ç”Ÿæ´»æŠ€èƒ½ï¼šé‡‡è¯	é‡‡çŸ¿æŠ€èƒ½çš„ç¼–å·8
+--è—¿é¦™
+--è„šæœ¬å·710519
+--è—¿é¦™1	0.6		2	0.3		3	0.1		é“¶çŽ¯è›‡å‡ºçŽ°çš„æ¦‚çŽ‡æ˜¯0.2		æ•°é‡1	0.6		2	0.3		3	0.1
+--ç­‰çº§1
 
---Ã¿´Î´ò¿ª±Ø¶¨»ñµÃµÄ²úÆ·
+--æ¯æ¬¡æ‰“å¼€å¿…å®šèŽ·å¾—çš„äº§å“
 x710519_g_MainItemId = 20101020
---¿ÉÄÜµÃµ½µÄ²úÆ·
+--å¯èƒ½å¾—åˆ°çš„äº§å“
 x710519_g_SubItemId = 20304011
---ÐèÒª¼¼ÄÜId
+--éœ€è¦æŠ€èƒ½Id
 x710519_g_AbilityId = 8
---ÐèÒª¼¼ÄÜµÈ¼¶
+--éœ€è¦æŠ€èƒ½ç­‰çº§
 x710519_g_AbilityLevel = 7
 
 
---Éú³Éº¯Êý¿ªÊ¼************************************************************************
---Ã¿¸öItemBoxÖÐ×î¶à10¸öÎïÆ·
+--ç”Ÿæˆå‡½æ•°å¼€å§‹************************************************************************
+--æ¯ä¸ªItemBoxä¸­æœ€å¤š10ä¸ªç‰©å“
 function 		x710519_OnCreate(sceneId,growPointType,x,y)
-	--·ÅÈëItemBoxÍ¬Ê±·ÅÈëÒ»¸öÎïÆ·
-	targetId  = ItemBoxEnterScene(x,y,growPointType,sceneId,QUALITY_MUST_BE_CHANGE,1,x710519_g_MainItemId)	--Ã¿¸öÉú³¤µã×îÉÙÄÜµÃµ½Ò»¸öÎïÆ·,ÕâÀïÖ±½Ó·ÅÈëitemboxÖÐÒ»¸ö
-	--»ñµÃ1~100µÄËæ»úÊý,ÓÃÀ´·ÅÈëÖ÷²úÆ·ºÍ¸±²úÆ·
-	--Ö÷²úÆ·1~60²»·Å£¬61~90·Å1¸ö£¬91~100·Å2¸ö
-	--¸±²úÆ·1~12·Å1¸ö£¬13~18·Å2¸ö£¬19~20·Å3¸ö
+	--æ”¾å…¥ItemBoxåŒæ—¶æ”¾å…¥ä¸€ä¸ªç‰©å“
+	targetId  = ItemBoxEnterScene(x,y,growPointType,sceneId,QUALITY_MUST_BE_CHANGE,1,x710519_g_MainItemId)	--æ¯ä¸ªç”Ÿé•¿ç‚¹æœ€å°‘èƒ½å¾—åˆ°ä¸€ä¸ªç‰©å“,è¿™é‡Œç›´æŽ¥æ”¾å…¥itemboxä¸­ä¸€ä¸ª
+	--èŽ·å¾—1~100çš„éšæœºæ•°,ç”¨æ¥æ”¾å…¥ä¸»äº§å“å’Œå‰¯äº§å“
+	--ä¸»äº§å“1~60ä¸æ”¾ï¼Œ61~90æ”¾1ä¸ªï¼Œ91~100æ”¾2ä¸ª
+	--å‰¯äº§å“1~12æ”¾1ä¸ªï¼Œ13~18æ”¾2ä¸ªï¼Œ19~20æ”¾3ä¸ª
 	local ItemCount = random(1,100)
 	if ItemCount >= 61 and ItemCount <= 90 then
 		AddItemToBox(sceneId,targetId,QUALITY_MUST_BE_CHANGE,1,x710519_g_MainItemId)
 	elseif ItemCount >= 91 and ItemCount <= 100 then
 		AddItemToBox(sceneId,targetId,QUALITY_MUST_BE_CHANGE,2,x710519_g_MainItemId,x710519_g_MainItemId)
 	end
-	--·ÅÈë´ÎÒª²úÆ·
+	--æ”¾å…¥æ¬¡è¦äº§å“
 	if ItemCount >= 1 and ItemCount <= 12 then
 		AddItemToBox(sceneId,targetId,QUALITY_MUST_BE_CHANGE,1,x710519_g_SubItemId)
 	elseif ItemCount >= 13 and ItemCount <= 18 then
@@ -38,46 +38,46 @@ function 		x710519_OnCreate(sceneId,growPointType,x,y)
 		AddItemToBox(sceneId,targetId,QUALITY_MUST_BE_CHANGE,3,x710519_g_SubItemId,x710519_g_SubItemId,x710519_g_SubItemId)
 	end
 end
---Éú³Éº¯Êý½áÊø**********************************************************************
+--ç”Ÿæˆå‡½æ•°ç»“æŸ**********************************************************************
 
 
---´ò¿ªÇ°º¯Êý¿ªÊ¼&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+--æ‰“å¼€å‰å‡½æ•°å¼€å§‹&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 function	 x710519_OnOpen(sceneId,selfId,targetId)
---·µ»ØÀàÐÍ
--- 0 ±íÊ¾´ò¿ª³É¹¦
+--è¿”å›žç±»åž‹
+-- 0 è¡¨ç¤ºæ‰“å¼€æˆåŠŸ
 	ABilityID		=	GetItemBoxRequireAbilityID(sceneId,targetId)
 	AbilityLevel = QueryHumanAbilityLevel(sceneId,selfId,ABilityID)
 	res = x710519_OpenCheck(sceneId,selfId,ABilityID,AbilityLevel)
 	return res
 	end
---´ò¿ªÇ°º¯Êý½áÊø&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+--æ‰“å¼€å‰å‡½æ•°ç»“æŸ&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
 
---»ØÊÕº¯Êý¿ªÊ¼########################################################################
+--å›žæ”¶å‡½æ•°å¼€å§‹########################################################################
 function	 x710519_OnRecycle(sceneId,selfId,targetId)
-	-- Ôö¼ÓÊìÁ·¶È
+	-- å¢žåŠ ç†Ÿç»ƒåº¦
 		ABilityID	=	GetItemBoxRequireAbilityID(sceneId,targetId)
 	CallScriptFunction(ABILITYLOGIC_ID, "GainExperience", sceneId, selfId, ABilityID, x710519_g_AbilityLevel)
-		--·µ»Ø1£¬Éú³¤µã»ØÊÕ
+		--è¿”å›ž1ï¼Œç”Ÿé•¿ç‚¹å›žæ”¶
 		return 1
 end
---»ØÊÕº¯Êý½áÊø########################################################################
+--å›žæ”¶å‡½æ•°ç»“æŸ########################################################################
 
 
 
---´ò¿ªºóº¯Êý¿ªÊ¼@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+--æ‰“å¼€åŽå‡½æ•°å¼€å§‹@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 function	x710519_OnProcOver( sceneId, selfId, targetId )
 	local ABilityID = GetItemBoxRequireAbilityID( sceneId, targetId )
 	CallScriptFunction( ABILITYLOGIC_ID, "EnergyCostCaiJi", sceneId, selfId, ABilityID, x710519_g_AbilityLevel )
 	return 0
 end
---´ò¿ªºóº¯Êý½áÊø@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+--æ‰“å¼€åŽå‡½æ•°ç»“æŸ@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 function	x710519_OpenCheck(sceneId,selfId,AbilityId,AbilityLevel)
-	--¼ì²éÉú»î¼¼ÄÜµÈ¼¶
+	--æ£€æŸ¥ç”Ÿæ´»æŠ€èƒ½ç­‰çº§
 	if AbilityLevel<x710519_g_AbilityLevel then
 		return OR_NO_LEVEL
 	end
-	--¼ì²é¾«Á¦
+	--æ£€æŸ¥ç²¾åŠ›
 	if GetHumanEnergy(sceneId,selfId)< (floor(x710519_g_AbilityLevel * 1.5 +2) * 2) then
 		return OR_NOT_ENOUGH_ENERGY
 	end

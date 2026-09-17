@@ -1,7 +1,7 @@
 -- 300057
--- Ç¬À¤±­ Ê¹ÓÃ
+-- ä¹¾å¤æ¯ ä½¿ç”¨
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x300057_g_scriptId = 300057
 
 x300057_g_ItemId = 30008033
@@ -10,15 +10,15 @@ x300057_g_BuffId = 8500
 x300057_g_BuffId_1 = 57
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x300057_OnDefaultEvent( sceneId, selfId, nItemIndex )
 
-	-- Èç¹ûÉíÉÏÓĞ 8500 »òÕß 57 ºÅBUFF ¾Í²»ÄÜÔÙ³ÔÕâ¸öÒ©
+	-- å¦‚æœèº«ä¸Šæœ‰ 8500 æˆ–è€… 57 å·BUFF å°±ä¸èƒ½å†åƒè¿™ä¸ªè¯
 	if LuaFnHaveImpactOfSpecificDataIndex(sceneId, selfId, x300057_g_BuffId) == 1 or
 		 LuaFnHaveImpactOfSpecificDataIndex(sceneId, selfId, x300057_g_BuffId_1) == 1  then
 		BeginEvent(sceneId)
-			AddText(sceneId,"Ö»ÓĞµÈ×Ô¶¯¼ñÈ¡ÎïÆ·Ğ§¹ûÏûÊ§Ö®ºó²ÅÄÜÊ¹ÓÃ¡£")
+			AddText(sceneId,"åªæœ‰ç­‰è‡ªåŠ¨æ¡å–ç‰©å“æ•ˆæœæ¶ˆå¤±ä¹‹åæ‰èƒ½ä½¿ç”¨ã€‚")
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
@@ -36,29 +36,29 @@ end
 --**********************************
 function x300057_UseItem( sceneId, selfId, nItemIndex)
 	
-	-- ÏÈ¼ì²âÕâ¸ö nItemIndex µÄÎïÆ·ÊÇ²»ÊÇºÍµ±Ç°µÄ¶ÔÓ¦£¬
+	-- å…ˆæ£€æµ‹è¿™ä¸ª nItemIndex çš„ç‰©å“æ˜¯ä¸æ˜¯å’Œå½“å‰çš„å¯¹åº”ï¼Œ
 	local nItemId = GetItemTableIndexByIndex(sceneId, selfId, nItemIndex)
 	if nItemId ~= x300057_g_ItemId   then
 		BeginEvent(sceneId)
-			AddText(sceneId,"  ±³°üÄÚ²¿´íÎó")
+			AddText(sceneId,"  èƒŒåŒ…å†…éƒ¨é”™è¯¯")
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
 	end
 	
-	-- ¿ÛÒ»¸öÒ©
+	-- æ‰£ä¸€ä¸ªè¯
 	local ret = EraseItem(sceneId, selfId, nItemIndex)
 
 	if ret == 1   then
 		LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, x300057_g_BuffId, 100 )
 		--BeginEvent(sceneId)
-		--	AddText(sceneId,"ÄúÔö¼ÓÁËÒ»¸öĞ¡Ê±µÄ³èÎïË«±¶¾­ÑéÊ±¼ä¡£")
+		--	AddText(sceneId,"æ‚¨å¢åŠ äº†ä¸€ä¸ªå°æ—¶çš„å® ç‰©åŒå€ç»éªŒæ—¶é—´ã€‚")
 		--EndEvent(sceneId)
 		--DispatchMissionTips(sceneId,selfId)
 		
 	else
 		BeginEvent(sceneId)
-			AddText(sceneId,"ÎïÆ·²»ÄÜÊ¹ÓÃ")
+			AddText(sceneId,"ç‰©å“ä¸èƒ½ä½¿ç”¨")
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		

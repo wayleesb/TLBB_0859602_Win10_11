@@ -1,56 +1,56 @@
---¹ºÂòÇëÌû
+--è´­ä¹°è¯·å¸–
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x806017_g_ScriptId = 806017;
 
-x806017_g_invitationDataId_level1  = 30303100;		-- ÆÕÍ¨ÇëÌûID
-x806017_g_invitationDataId_level2  = 30303101;		-- ¸ß¼¶ÇëÌûID
-x806017_g_invitationDataId_level3  = 30303102;		-- ºÀ»ªÇëÌûID
+x806017_g_invitationDataId_level1  = 30303100;		-- æ™®é€šè¯·å¸–ID
+x806017_g_invitationDataId_level2  = 30303101;		-- é«˜çº§è¯·å¸–ID
+x806017_g_invitationDataId_level3  = 30303102;		-- è±ªåè¯·å¸–ID
 
 
---EventId½âÊÍ
+--EventIdè§£é‡Š
 --1234
---||++--¹ºÂò¸öÊı(1,5,10)
---|+----¹ºÂòµÈ¼¶(0,1,2)
---+-----²Ëµ¥ID(0=Ë¢ĞÂÁĞ±í£¬1=Ñ¡ÔñµÈ¼¶£¬2=Ñ¡Ôñ¸öÊı£¬3=ÊÇ·ñÈ·¶¨)
+--||++--è´­ä¹°ä¸ªæ•°(1,5,10)
+--|+----è´­ä¹°ç­‰çº§(0,1,2)
+--+-----èœå•ID(0=åˆ·æ–°åˆ—è¡¨ï¼Œ1=é€‰æ‹©ç­‰çº§ï¼Œ2=é€‰æ‹©ä¸ªæ•°ï¼Œ3=æ˜¯å¦ç¡®å®š)
 
-x806017_g_eventId_update = 0;			--Ë¢ĞÂÁĞ±í
-x806017_g_eventId_cancel = 1;			--¹Ø±Õ
-x806017_g_eventId_select_level = 1000;	--Ñ¡ÔñµÈ¼¶
-x806017_g_eventId_select_count = 2000;	--Ñ¡Ôñ¸öÊı
-x806017_g_eventId_select_buy = 3000;	--ÊÇ·ñÈ·¶¨
+x806017_g_eventId_update = 0;			--åˆ·æ–°åˆ—è¡¨
+x806017_g_eventId_cancel = 1;			--å…³é—­
+x806017_g_eventId_select_level = 1000;	--é€‰æ‹©ç­‰çº§
+x806017_g_eventId_select_count = 2000;	--é€‰æ‹©ä¸ªæ•°
+x806017_g_eventId_select_buy = 3000;	--æ˜¯å¦ç¡®å®š
 
---x806017_g_eventId_update = 0;				-- ¹ºÂòÇëÌû
---x806017_g_eventId_level_0 = 1000;			-- ÆÕÍ¨ÇëÌû
---x806017_g_eventId_level_1 = 1100;			-- ¸ß¼¶ÇëÌû
---x806017_g_eventId_level_2 = 1200;			-- ºÀ»ªÇëÌû
+--x806017_g_eventId_update = 0;				-- è´­ä¹°è¯·å¸–
+--x806017_g_eventId_level_0 = 1000;			-- æ™®é€šè¯·å¸–
+--x806017_g_eventId_level_1 = 1100;			-- é«˜çº§è¯·å¸–
+--x806017_g_eventId_level_2 = 1200;			-- è±ªåè¯·å¸–
 
---x806017_g_eventId_count_0_1 = 2001;		-- ¹ºÂòÒ»ÕÅÆÕÍ¨ÇëÌû
---x806017_g_eventId_count_0_5 = 2005;		-- ¹ºÂòÎåÕÅÆÕÍ¨ÇëÌû
---x806017_g_eventId_count_0_10 = 2010;		-- ¹ºÂòÊ®ÕÅÆÕÍ¨ÇëÌû
+--x806017_g_eventId_count_0_1 = 2001;		-- è´­ä¹°ä¸€å¼ æ™®é€šè¯·å¸–
+--x806017_g_eventId_count_0_5 = 2005;		-- è´­ä¹°äº”å¼ æ™®é€šè¯·å¸–
+--x806017_g_eventId_count_0_10 = 2010;		-- è´­ä¹°åå¼ æ™®é€šè¯·å¸–
 					   
---x806017_g_eventId_count_1_1 = 2101;		-- ¹ºÂòÒ»ÕÅ¸ß¼¶ÇëÌû
---x806017_g_eventId_count_1_5 = 2105;		-- ¹ºÂòÎåÕÅ¸ß¼¶ÇëÌû
---x806017_g_eventId_count_1_10 = 2110;		-- ¹ºÂòÊ®ÕÅ¸ß¼¶ÇëÌû
+--x806017_g_eventId_count_1_1 = 2101;		-- è´­ä¹°ä¸€å¼ é«˜çº§è¯·å¸–
+--x806017_g_eventId_count_1_5 = 2105;		-- è´­ä¹°äº”å¼ é«˜çº§è¯·å¸–
+--x806017_g_eventId_count_1_10 = 2110;		-- è´­ä¹°åå¼ é«˜çº§è¯·å¸–
 					   
---x806017_g_eventId_count_2_1 = 2201;		-- ¹ºÂòÒ»ÕÅºÀ»ªÇëÌû
---x806017_g_eventId_count_2_5 = 2205;		-- ¹ºÂòÎåÕÅºÀ»ªÇëÌû
---x806017_g_eventId_count_2_10 = 2210;		-- ¹ºÂòÊ®ÕÅºÀ»ªÇëÌû
+--x806017_g_eventId_count_2_1 = 2201;		-- è´­ä¹°ä¸€å¼ è±ªåè¯·å¸–
+--x806017_g_eventId_count_2_5 = 2205;		-- è´­ä¹°äº”å¼ è±ªåè¯·å¸–
+--x806017_g_eventId_count_2_10 = 2210;		-- è´­ä¹°åå¼ è±ªåè¯·å¸–
 
---x806017_g_eventId_buy_0_1 = 3001;			-- ¹ºÂòÒ»ÕÅÆÕÍ¨ÇëÌû
---x806017_g_eventId_buy_0_5 = 3005;			-- ¹ºÂòÎåÕÅÆÕÍ¨ÇëÌû
---x806017_g_eventId_buy_0_10 = 3010;		-- ¹ºÂòÊ®ÕÅÆÕÍ¨ÇëÌû
+--x806017_g_eventId_buy_0_1 = 3001;			-- è´­ä¹°ä¸€å¼ æ™®é€šè¯·å¸–
+--x806017_g_eventId_buy_0_5 = 3005;			-- è´­ä¹°äº”å¼ æ™®é€šè¯·å¸–
+--x806017_g_eventId_buy_0_10 = 3010;		-- è´­ä¹°åå¼ æ™®é€šè¯·å¸–
 					  
---x806017_g_eventId_buy_1_1 = 3101;			-- ¹ºÂòÒ»ÕÅ¸ß¼¶ÇëÌû
---x806017_g_eventId_buy_1_5 = 3105;			-- ¹ºÂòÎåÕÅ¸ß¼¶ÇëÌû
---x806017_g_eventId_buy_1_10 = 3110;		-- ¹ºÂòÊ®ÕÅ¸ß¼¶ÇëÌû
+--x806017_g_eventId_buy_1_1 = 3101;			-- è´­ä¹°ä¸€å¼ é«˜çº§è¯·å¸–
+--x806017_g_eventId_buy_1_5 = 3105;			-- è´­ä¹°äº”å¼ é«˜çº§è¯·å¸–
+--x806017_g_eventId_buy_1_10 = 3110;		-- è´­ä¹°åå¼ é«˜çº§è¯·å¸–
 					  
---x806017_g_eventId_buy_2_1 = 3201;			-- ¹ºÂòÒ»ÕÅºÀ»ªÇëÌû
---x806017_g_eventId_buy_2_5 = 3205;			-- ¹ºÂòÎåÕÅºÀ»ªÇëÌû
---x806017_g_eventId_buy_2_10 = 3210;		-- ¹ºÂòÊ®ÕÅºÀ»ªÇëÌû
+--x806017_g_eventId_buy_2_1 = 3201;			-- è´­ä¹°ä¸€å¼ è±ªåè¯·å¸–
+--x806017_g_eventId_buy_2_5 = 3205;			-- è´­ä¹°äº”å¼ è±ªåè¯·å¸–
+--x806017_g_eventId_buy_2_10 = 3210;		-- è´­ä¹°åå¼ è±ªåè¯·å¸–
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x806017_OnDefaultEvent(sceneId, selfId, targetId)
 	local selectEventId = GetNumText();
@@ -81,85 +81,85 @@ function x806017_OnDefaultEvent(sceneId, selfId, targetId)
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x806017_OnEnumerate(sceneId, selfId, targetId)
 	--local isMarried = LuaFnIsMarried(sceneId, selfId);
 	--if isMarried and isMarried == 0 then
-		AddNumText(sceneId, x806017_g_ScriptId, "¹ºÂòÇëÌû", 7, x806017_g_eventId_update);
+		AddNumText(sceneId, x806017_g_ScriptId, "è´­ä¹°è¯·å¸–", 7, x806017_g_eventId_update);
 	--end
 end
 
 --**********************************
---Ë¢ĞÂ¹ºÂòÇëÌûµÄµÈ¼¶ÁĞ±íµÄÊÂ¼ş
+--åˆ·æ–°è´­ä¹°è¯·å¸–çš„ç­‰çº§åˆ—è¡¨çš„äº‹ä»¶
 --**********************************
 function x806017_OnUpdate(sceneId, selfId, targetId)
 	BeginEvent(sceneId);
-		AddText(sceneId, "ÇëÌûÊÇÓĞÓĞĞ§ÆÚµÄ£¬ÓĞĞ§ÆÚÒ»¸öÔÂ£¬ËùÒÔÃ»×¼±¸ºÃ½á»éµÄÊ±ºò²»ÒªÌáÔç¹ºÂò°¡¡£ÄãÖ»Òª½«ÇëÌû½»Ò×¸øÄãµÄÅóÓÑ£¬ÄãµÄÅóÓÑ¾Í¿ÉÒÔÊ¹ÓÃ´ËÎïÆ·²Î¼ÓÄúµÄ»éÀñÁË¡£");
-		AddNumText(sceneId, x806017_g_ScriptId, "¹ºÂò"..x806017_GetItemLevelNameByLevel(sceneId, selfId, 0).."ÇëÌû", 7, 0 * 100 + x806017_g_eventId_select_level);
-		AddNumText(sceneId, x806017_g_ScriptId, "¹ºÂò"..x806017_GetItemLevelNameByLevel(sceneId, selfId, 1).."ÇëÌû", 7, 1 * 100 + x806017_g_eventId_select_level);
-		AddNumText(sceneId, x806017_g_ScriptId, "¹ºÂò"..x806017_GetItemLevelNameByLevel(sceneId, selfId, 2).."ÇëÌû", 7, 2 * 100 + x806017_g_eventId_select_level);
-		AddNumText(sceneId, x806017_g_ScriptId, "Àë¿ª¡­¡­", 8, x806017_g_eventId_cancel);
+		AddText(sceneId, "è¯·å¸–æ˜¯æœ‰æœ‰æ•ˆæœŸçš„ï¼Œæœ‰æ•ˆæœŸä¸€ä¸ªæœˆï¼Œæ‰€ä»¥æ²¡å‡†å¤‡å¥½ç»“å©šçš„æ—¶å€™ä¸è¦ææ—©è´­ä¹°å•Šã€‚ä½ åªè¦å°†è¯·å¸–äº¤æ˜“ç»™ä½ çš„æœ‹å‹ï¼Œä½ çš„æœ‹å‹å°±å¯ä»¥ä½¿ç”¨æ­¤ç‰©å“å‚åŠ æ‚¨çš„å©šç¤¼äº†ã€‚");
+		AddNumText(sceneId, x806017_g_ScriptId, "è´­ä¹°"..x806017_GetItemLevelNameByLevel(sceneId, selfId, 0).."è¯·å¸–", 7, 0 * 100 + x806017_g_eventId_select_level);
+		AddNumText(sceneId, x806017_g_ScriptId, "è´­ä¹°"..x806017_GetItemLevelNameByLevel(sceneId, selfId, 1).."è¯·å¸–", 7, 1 * 100 + x806017_g_eventId_select_level);
+		AddNumText(sceneId, x806017_g_ScriptId, "è´­ä¹°"..x806017_GetItemLevelNameByLevel(sceneId, selfId, 2).."è¯·å¸–", 7, 2 * 100 + x806017_g_eventId_select_level);
+		AddNumText(sceneId, x806017_g_ScriptId, "ç¦»å¼€â€¦â€¦", 8, x806017_g_eventId_cancel);
 	EndEvent(sceneId);
 	DispatchEventList(sceneId, selfId, targetId);
 end
 
 --**********************************
---Ñ¡ÔñÇëÌûµÄµÈ¼¶µÄÊÂ¼ş
+--é€‰æ‹©è¯·å¸–çš„ç­‰çº§çš„äº‹ä»¶
 --**********************************
 function x806017_OnSelectLevel(sceneId, selfId, targetId, itemLevel)
 	BeginEvent(sceneId);
-		AddText(sceneId, "ÇëÑ¡ÔñÄãÒª¹ºÂòµÄÊıÁ¿£º");
-		AddNumText(sceneId, x806017_g_ScriptId, "Ò»ÕÅ", 6, itemLevel * 100 + x806017_g_eventId_select_count + 1);
-		AddNumText(sceneId, x806017_g_ScriptId, "ÎåÕÅ", 6, itemLevel * 100 + x806017_g_eventId_select_count + 5);
-		AddNumText(sceneId, x806017_g_ScriptId, "Ê®ÕÅ", 6, itemLevel * 100 + x806017_g_eventId_select_count + 10);
-		AddNumText(sceneId, x806017_g_ScriptId, "·µ»Ø", 8, 0);
+		AddText(sceneId, "è¯·é€‰æ‹©ä½ è¦è´­ä¹°çš„æ•°é‡ï¼š");
+		AddNumText(sceneId, x806017_g_ScriptId, "ä¸€å¼ ", 6, itemLevel * 100 + x806017_g_eventId_select_count + 1);
+		AddNumText(sceneId, x806017_g_ScriptId, "äº”å¼ ", 6, itemLevel * 100 + x806017_g_eventId_select_count + 5);
+		AddNumText(sceneId, x806017_g_ScriptId, "åå¼ ", 6, itemLevel * 100 + x806017_g_eventId_select_count + 10);
+		AddNumText(sceneId, x806017_g_ScriptId, "è¿”å›", 8, 0);
 	EndEvent(sceneId);
 	DispatchEventList(sceneId, selfId, targetId);
 end
 
 --**********************************
---Ñ¡ÔñÇëÌûµÄÊıÁ¿µÄÊÂ¼ş
+--é€‰æ‹©è¯·å¸–çš„æ•°é‡çš„äº‹ä»¶
 --**********************************
 function x806017_OnSelectCount(sceneId, selfId, targetId, itemLevel, itemCount)
 	if itemLevel and itemCount then
 		BeginEvent(sceneId);
-			local szText = format("¹ºÂò%dÕÅ%sÇëÌû£¬¹²Ğè»¨·Ñ#{_EXCHG%d}£¬ÊÇ·ñÈ·ÈÏ¹ºÂò£¿", itemCount, x806017_GetItemLevelNameByLevel(sceneId, selfId, itemLevel), itemCount * x806017_GetItemPriceByLevel(sceneId, selfId, itemLevel) );
+			local szText = format("è´­ä¹°%då¼ %sè¯·å¸–ï¼Œå…±éœ€èŠ±è´¹#{_EXCHG%d}ï¼Œæ˜¯å¦ç¡®è®¤è´­ä¹°ï¼Ÿ", itemCount, x806017_GetItemLevelNameByLevel(sceneId, selfId, itemLevel), itemCount * x806017_GetItemPriceByLevel(sceneId, selfId, itemLevel) );
 			AddText(sceneId, szText);
-			AddNumText(sceneId, x806017_g_ScriptId, "È·¶¨", 6, itemLevel * 100 + x806017_g_eventId_select_buy + itemCount);
-			AddNumText(sceneId, x806017_g_ScriptId, "È¡Ïû", 8, itemLevel * 100 + x806017_g_eventId_select_level);
+			AddNumText(sceneId, x806017_g_ScriptId, "ç¡®å®š", 6, itemLevel * 100 + x806017_g_eventId_select_buy + itemCount);
+			AddNumText(sceneId, x806017_g_ScriptId, "å–æ¶ˆ", 8, itemLevel * 100 + x806017_g_eventId_select_level);
 		EndEvent(sceneId);
 		DispatchEventList(sceneId, selfId, targetId);
 	end
 end
 
 --**********************************
---Ñ¡ÔñÇëÌûµÄµÈ¼¶
+--é€‰æ‹©è¯·å¸–çš„ç­‰çº§
 --**********************************
 function x806017_OnBuy(sceneId, selfId, targetId, itemLevel, itemCount)
 	if itemLevel and itemCount and itemCount > 0 then
-		--¼ì²âÓĞÃ»ÓĞÄÇÃ´¶àÇ®
+		--æ£€æµ‹æœ‰æ²¡æœ‰é‚£ä¹ˆå¤šé’±
 		local itemPrice = x806017_GetItemPriceByLevel(sceneId, selfId, itemLevel);
 		local money = LuaFnGetMoney(sceneId, selfId);
 		local moneyJZ = GetMoneyJZ(sceneId, selfId);
 		local needMoney = itemPrice * itemCount;
 		if money and needMoney and moneyJZ and (money + moneyJZ) < needMoney then
-		  x806017_MessageBox(sceneId, selfId, targetId, "ºÜ±§Ç¸£¬ÄãÃ»ÓĞ×ã¹»µÄ½ğÇ®£¡", 1);
+		  x806017_MessageBox(sceneId, selfId, targetId, "å¾ˆæŠ±æ­‰ï¼Œä½ æ²¡æœ‰è¶³å¤Ÿçš„é‡‘é’±ï¼", 1);
 			return 0;
 		end
 		
-		--¼ì²âÓĞÃ»ÓĞ±³°ü¿Õ¼ä
+		--æ£€æµ‹æœ‰æ²¡æœ‰èƒŒåŒ…ç©ºé—´
 		local selfProSpace = LuaFnGetPropertyBagSpace(sceneId, selfId);
 		if selfProSpace and selfProSpace > itemCount - 1 then
 		else
-			x806017_MessageBox(sceneId, selfId, targetId, "ºÜ±§Ç¸£¬ÄãµÄ±³°üÃ»ÓĞ×ã¹»µÄ¿Õ¼ä£¡", 1);
+			x806017_MessageBox(sceneId, selfId, targetId, "å¾ˆæŠ±æ­‰ï¼Œä½ çš„èƒŒåŒ…æ²¡æœ‰è¶³å¤Ÿçš„ç©ºé—´ï¼", 1);
 			return 0;
 		end
 		
-		--¿ÛÇ®
+		--æ‰£é’±
 		LuaFnCostMoneyWithPriority(sceneId, selfId, needMoney);
 		
-		--¼ÓÎïÆ·
+		--åŠ ç‰©å“
 		local selfName = LuaFnGetName(sceneId, selfId);
 		local selfGUID = LuaFnGetGUID(sceneId, selfId);
 		local itemId = x806017_GetItemDataByLevel(sceneId, selfId, itemLevel);
@@ -176,34 +176,34 @@ function x806017_OnBuy(sceneId, selfId, targetId, itemLevel, itemCount)
 end
 
 --**********************************
---¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+--å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x806017_MessageBox(sceneId, selfId, targetId, msg, showReturn)
 	BeginEvent(sceneId);
 		AddText(sceneId, msg);
 		if showReturn and showReturn == 1 then
-			AddNumText(sceneId, x806017_g_ScriptId, "·µ»Ø", 8, x806017_g_eventId_update);
+			AddNumText(sceneId, x806017_g_ScriptId, "è¿”å›", 8, x806017_g_eventId_update);
 		end
 	EndEvent(sceneId);
 	DispatchEventList(sceneId, selfId, targetId);
 end
 
 --**********************************
---È¡ÎïÆ·µÄÃû³Æ
+--å–ç‰©å“çš„åç§°
 --**********************************
 function x806017_GetItemLevelNameByLevel(sceneId, selfId, level)
 	if level == 2 then
-		return "ºÀ»ª";
+		return "è±ªå";
 	elseif level == 1 then
-		return "¸ß¼¶";
+		return "é«˜çº§";
 	else
-		return "ÆÕÍ¨";
+		return "æ™®é€š";
 	end
 	return "";
 end
 
 --**********************************
---È¡ÎïÆ·µÄID
+--å–ç‰©å“çš„ID
 --**********************************
 function x806017_GetItemDataByLevel(sceneId, selfId, level)
 	local itemId = -1;
@@ -218,7 +218,7 @@ function x806017_GetItemDataByLevel(sceneId, selfId, level)
 end
 
 --**********************************
---È¡ÎïÆ·µÄ¼Û¸ñ
+--å–ç‰©å“çš„ä»·æ ¼
 --**********************************
 function x806017_GetItemPriceByLevel(sceneId, selfId, level)
 	local itemId = x806017_GetItemDataByLevel(sceneId, selfId, level);

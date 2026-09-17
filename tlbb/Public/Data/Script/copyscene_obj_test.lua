@@ -1,18 +1,18 @@
---¸±±¾²âÊÔNPC, make by Jack
+--å‰¯æœ¬æµ‹è¯•NPC, make by Jack
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x805000_g_scriptId = 805000
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x805000_g_eventList={805001,805002,805003,805004,805005}
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x805000_UpdateEventList( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
 	local  PlayerName=GetName(sceneId,selfId)
-	AddText(sceneId,"ÎÒÊÇ¸±±¾Èë¿ÚNPC£¬ÄãÓĞºÎÊÂ£¿");
+	AddText(sceneId,"æˆ‘æ˜¯å‰¯æœ¬å…¥å£NPCï¼Œä½ æœ‰ä½•äº‹ï¼Ÿ");
 	for i, eventId in x805000_g_eventList do
 		CallScriptFunction( eventId, "OnEnumerate",sceneId, selfId, targetId )
 	end
@@ -21,14 +21,14 @@ function x805000_UpdateEventList( sceneId, selfId,targetId )
 end
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x805000_OnDefaultEvent( sceneId, selfId,targetId )
 	x805000_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x805000_OnEventRequest( sceneId, selfId, targetId, eventId )
 	for i, findId in x805000_g_eventList do
@@ -40,7 +40,7 @@ function x805000_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x805000_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x805000_g_eventList do
@@ -55,10 +55,10 @@ function x805000_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x805000_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
-	--¾Ü¾øÖ®ºó£¬Òª·µ»ØNPCµÄÊÂ¼şÁĞ±í
+	--æ‹’ç»ä¹‹åï¼Œè¦è¿”å›NPCçš„äº‹ä»¶åˆ—è¡¨
 	for i, findId in x805000_g_eventList do
 		if missionScriptId == findId then
 			x805000_UpdateEventList( sceneId, selfId, targetId )
@@ -68,7 +68,7 @@ function x805000_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¼ÌĞø£¨ÒÑ¾­½ÓÁËÈÎÎñ£©
+--ç»§ç»­ï¼ˆå·²ç»æ¥äº†ä»»åŠ¡ï¼‰
 --**********************************
 function x805000_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x805000_g_eventList do
@@ -80,7 +80,7 @@ function x805000_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---Ìá½»ÒÑ×öÍêµÄÈÎÎñ
+--æäº¤å·²åšå®Œçš„ä»»åŠ¡
 --**********************************
 function x805000_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, selectRadioId )
 	for i, findId in x805000_g_eventList do
@@ -92,7 +92,7 @@ function x805000_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 end
 
 --**********************************
---ËÀÍöÊÂ¼ş
+--æ­»äº¡äº‹ä»¶
 --**********************************
 function x805000_OnDie( sceneId, selfId, killerId )
 end

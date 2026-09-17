@@ -3,10 +3,10 @@ x210246_g_ScriptId = 210246
 x210246_g_Position_X=172.7304
 x210246_g_Position_Z=146.4640
 x210246_g_SceneID=2
-x210246_g_Name	="Ëï°ËÒ¯"
+x210246_g_Name	="å­™å…«çˆ·"
 x210246_g_LevelLimit = 10
-x210246_g_MissionName="ÌìÌìÏòÉÏ"
-x210246_g_MissionNameTip="¹ØÓÚÌìÌìÏòÉÏ"
+x210246_g_MissionName="å¤©å¤©å‘ä¸Š"
+x210246_g_MissionNameTip="å…³äºå¤©å¤©å‘ä¸Š"
 x210246_g_starttime = 20080917
 x210246_g_endtime = 20080928
 x210246_g_ItemData = {nItemId = 10124122, nItemNum = 1}
@@ -17,21 +17,21 @@ local strOutMsg = ""
 local CurLevel = LuaFnGetLevel( sceneId, selfId )
 local nBagNum = LuaFnGetPropertyBagSpace(sceneId, selfId)
 local bHave = 0
-if CurLevel < 10 then       --µÈ¼¶²»¹»10¼¶
+if CurLevel < 10 then       --ç­‰çº§ä¸å¤Ÿ10çº§
 x210246_Msg(sceneId, selfId, targetId, "#{TTXS_80821_01}")
 return
 end
 local bHave = GetMissionFlag(sceneId, selfId, MF_Xueshengzhuang_flag)
-if bHave == 1 then      --ÒÑ¾­²Î¼Ó¹ıÁË
+if bHave == 1 then      --å·²ç»å‚åŠ è¿‡äº†
 x210246_Msg(sceneId, selfId, targetId, "#{TTXS_80821_02}")
 return
 end
-if nBagNum < 1 then         --µÀ¾ßÀ¸²»×ãÒ»¸ö
+if nBagNum < 1 then         --é“å…·æ ä¸è¶³ä¸€ä¸ª
 x210246_Msg(sceneId, selfId, targetId, "#{TTXS_80821_03}")
 x210246_Tip(sceneId, selfId, "#{TTXS_80821_04}")
 return
 end
-BeginAddItem(sceneId)                --¸øÎïÆ·
+BeginAddItem(sceneId)                --ç»™ç‰©å“
 AddItem(sceneId, x210246_g_ItemData.nItemId, x210246_g_ItemData.nItemNum)
 local canAdd = EndAddItem(sceneId,selfId)						
 if canAdd > 0 then

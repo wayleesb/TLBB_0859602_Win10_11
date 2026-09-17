@@ -1,18 +1,18 @@
---Ñ¾÷ß
+--ä¸«é¬Ÿ
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x020004_g_scriptId = 020004
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x020004_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
 		local  PlayerSex=GetSex(sceneId,selfId)
 		if PlayerSex == 0 then
-			PlayerSex = "¹ÃÄï"
+			PlayerSex = "å§‘å¨˜"
 		else
-			PlayerSex = "ÉÙÏÀ"
+			PlayerSex = "å°‘ä¾ "
 		end
 		AddText(sceneId,"  "..PlayerSex.."#{OBJ_caoyuan_0005}")
 	EndEvent(sceneId)
@@ -20,7 +20,7 @@ function x020004_OnDefaultEvent( sceneId, selfId,targetId )
 end
 
 --**********************************
---ËÀÍöÊÂ¼ş
+--æ­»äº¡äº‹ä»¶
 --**********************************
 function x020004_OnDie( sceneId, selfId, killerId )
 end

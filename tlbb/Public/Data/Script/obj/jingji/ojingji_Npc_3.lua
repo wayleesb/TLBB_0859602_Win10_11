@@ -1,21 +1,21 @@
 -- 125013
--- ´«ËÍÈË
+-- ä¼ é€äºº
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x125013_g_scriptId = 125013
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x125013_g_eventList={}
 
 x125013_g_Goto = {
-			{name="ÇüÆ½Ô­",scene=2,x=177,z=135,scname="´óÀí"},
-			{name="ÌÕË®Ç±",scene=0,x=157,z=107,scname="ÂåÑô"},
-			{name="¼ÖË¼Òê",scene=1,x=187,z=132,scname="ËÕÖİ"},
-			{name="ËÎÖªÓñ",scene=420,x=155,z=130,scname="ÊøºÓ¹ÅÕò"},
+			{name="å±ˆå¹³åŸ",scene=2,x=177,z=135,scname="å¤§ç†"},
+			{name="é™¶æ°´æ½œ",scene=0,x=157,z=107,scname="æ´›é˜³"},
+			{name="è´¾æ€è°Š",scene=1,x=187,z=132,scname="è‹å·"},
+			{name="å®‹çŸ¥ç‰",scene=420,x=155,z=130,scname="æŸæ²³å¤é•‡"},
 }
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x125013_UpdateEventList( sceneId, selfId, targetId )
 	BeginEvent(sceneId)
@@ -24,18 +24,18 @@ function x125013_UpdateEventList( sceneId, selfId, targetId )
 		
 		local level = GetLevel( sceneId, targetId)
 		
-		if szName == "ËÎÖªÓñ" and level < 20 then
-			--str = "  Ê®·Ö±§Ç¸£¬ÊøºÓ¹ÅÕòÄ¿Ç°ÉĞÎ´¿ª·Å¡£µÈÊøºÓ¹ÅÕòÕıÊ½¿ª·ÅÖ®ºóÎÒ²ÅÄÜËÍÄã¹ıÈ¥ÄØ£¡"
-			str = "  Ê®·Ö±§Ç¸£¬ÄãµÄµÈ¼¶Î´Âú20¼¶²»ÄÜÈ¥ÊøºÓ¹ÅÕò£¡"
+		if szName == "å®‹çŸ¥ç‰" and level < 20 then
+			--str = "  ååˆ†æŠ±æ­‰ï¼ŒæŸæ²³å¤é•‡ç›®å‰å°šæœªå¼€æ”¾ã€‚ç­‰æŸæ²³å¤é•‡æ­£å¼å¼€æ”¾ä¹‹åæˆ‘æ‰èƒ½é€ä½ è¿‡å»å‘¢ï¼"
+			str = "  ååˆ†æŠ±æ­‰ï¼Œä½ çš„ç­‰çº§æœªæ»¡20çº§ä¸èƒ½å»æŸæ²³å¤é•‡ï¼"
 			AddText(sceneId, str);
 		else
 		
 			for i, scene in x125013_g_Goto  do
 				if scene.name == GetName(sceneId, targetId)  then
 					local str = ""
-					str = "  ÄãÒªÀë¿ªáÔÉ½·âìøÌ¨£¬Ç°Íù" .. scene.scname .. "Âğ£¿"
+					str = "  ä½ è¦ç¦»å¼€åµ©å±±å°ç¦…å°ï¼Œå‰å¾€" .. scene.scname .. "å—ï¼Ÿ"
 					AddText(sceneId, str);
-					AddNumText( sceneId, x125013_g_scriptId, "ËÍÎÒÈ¥" .. scene.scname ,9 ,1  )
+					AddNumText( sceneId, x125013_g_scriptId, "é€æˆ‘å»" .. scene.scname ,9 ,1  )
 				end
 			end
 		end
@@ -48,14 +48,14 @@ function x125013_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x125013_OnDefaultEvent( sceneId, selfId,targetId )
 	x125013_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x125013_OnEventRequest( sceneId, selfId, targetId, eventId )
 	
@@ -63,12 +63,12 @@ function x125013_OnEventRequest( sceneId, selfId, targetId, eventId )
 		for i, Scene in x125013_g_Goto  do
 			if Scene.name == GetName(sceneId, targetId)  then
 				--add by Vega 2008-09-28
-				if Scene.scname == "ÊøºÓ¹ÅÕò" then
+				if Scene.scname == "æŸæ²³å¤é•‡" then
 					BeginUICommand(sceneId)
 						UICommand_AddInt(sceneId, x125013_g_scriptId);
 						UICommand_AddInt(sceneId, targetId);
 						UICommand_AddString(sceneId, "GotoShuHeGuZhen");
-						UICommand_AddString(sceneId, "ÊøºÓ¹ÅÕòÎª²»¼ÓÉ±Æø³¡¾°£¬Çë×¢Òâ°²È«¡£ÄãÈ·ÈÏÒª½øÈëÂğ£¿");
+						UICommand_AddString(sceneId, "æŸæ²³å¤é•‡ä¸ºä¸åŠ æ€æ°”åœºæ™¯ï¼Œè¯·æ³¨æ„å®‰å…¨ã€‚ä½ ç¡®è®¤è¦è¿›å…¥å—ï¼Ÿ");
 					EndUICommand(sceneId)
 					DispatchUICommand(sceneId,selfId, 24)
 					return				
@@ -91,7 +91,7 @@ function x125013_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x125013_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x125013_g_eventList do
@@ -106,10 +106,10 @@ function x125013_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x125013_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
-	--¾Ü¾øÖ®ºó£¬Òª·µ»ØNPCµÄÊÂ¼şÁĞ±í
+	--æ‹’ç»ä¹‹åï¼Œè¦è¿”å›NPCçš„äº‹ä»¶åˆ—è¡¨
 	for i, findId in x125013_g_eventList do
 		if missionScriptId == findId then
 			x125013_UpdateEventList( sceneId, selfId, targetId )
@@ -119,7 +119,7 @@ function x125013_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¼ÌĞø£¨ÒÑ¾­½ÓÁËÈÎÎñ£©
+--ç»§ç»­ï¼ˆå·²ç»æ¥äº†ä»»åŠ¡ï¼‰
 --**********************************
 function x125013_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x125013_g_eventList do
@@ -131,7 +131,7 @@ function x125013_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---Ìá½»ÒÑ×öÍêµÄÈÎÎñ
+--æäº¤å·²åšå®Œçš„ä»»åŠ¡
 --**********************************
 function x125013_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, selectRadioId )
 	for i, findId in x125013_g_eventList do
@@ -143,7 +143,7 @@ function x125013_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 end
 
 --**********************************
---ËÀÍöÊÂ¼ş
+--æ­»äº¡äº‹ä»¶
 --**********************************
 function x125013_OnDie( sceneId, selfId, killerId )
 end

@@ -14,7 +14,7 @@ function CreateConfraternity_OnEvent(event)
 		objCared = tonumber(arg0);
 		this:CareObject(objCared, 1, "GuildCreate");
 		CreateConfraternity_InputConfraternityName:SetText("");
-		CreateConfraternity_InputTenet:SetText("Ò»¸öÐÂÐËµÄ°ï»áÊÆÁ¦¡£");
+		CreateConfraternity_InputTenet:SetText("ä¸€ä¸ªæ–°å…´çš„å¸®ä¼šåŠ¿åŠ›ã€‚");
 		CreateConfraternity_InputTenet:SetProperty("CaratIndex", 1024);
 		CreateConfraternity_InputConfraternityName:SetProperty("DefaultEditBox", "True");
 		if( -1 == Player:GetData("GUILD")) then
@@ -25,7 +25,7 @@ function CreateConfraternity_OnEvent(event)
 		if(tonumber(arg0) ~= objCared) then
 			return;
 		end
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ý£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æžœå’ŒNPCçš„è·ç¦»å¤§äºŽä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if(arg1 == "distance" and tonumber(arg2)>MAX_OBJ_DISTANCE or arg1=="destroy") then
 			Guild_Create_Close();
 		end

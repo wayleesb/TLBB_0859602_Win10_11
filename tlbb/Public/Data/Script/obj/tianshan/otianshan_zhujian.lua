@@ -1,60 +1,60 @@
---ÌìÉ½NPC
---Öñ½£
---ÆÕÍ¨
+--å¤©å±±NPC
+--ç«¹å‰‘
+--æ™®é€š
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x017003_g_ScriptId = 017003
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x017003_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
-		AddText(sceneId,"  ÎÒ¿ÉÒÔ´«ÊÚ¸øÄã±¾ÅÉµÄ¶ÀÃÅÇá¹¦£¬²»¹ıĞèÒª»¨·Ñ1#-15¡£")
-		AddNumText(sceneId, x017003_g_ScriptId, "Ñ§Ï°ÌìÉ½Çá¹¦",12,0)
+		AddText(sceneId,"  æˆ‘å¯ä»¥ä¼ æˆç»™ä½ æœ¬æ´¾çš„ç‹¬é—¨è½»åŠŸï¼Œä¸è¿‡éœ€è¦èŠ±è´¹1#-15ã€‚")
+		AddNumText(sceneId, x017003_g_ScriptId, "å­¦ä¹ å¤©å±±è½»åŠŸ",12,0)
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x017003_OnEventRequest( sceneId, selfId, targetId, eventId )
 	if GetNumText()==0	then
 		
 		if GetMenPai(sceneId, selfId) == 7 then
 			if	HaveSkill( sceneId, selfId, 30)<0	then
-				-- ¼ì²éÇ®
+				-- æ£€æŸ¥é’±
 				if GetMoney(sceneId, selfId)+GetMoneyJZ(sceneId, selfId) < STUDY_MENPAI_QINGGONG_SPEND  then
 					BeginEvent(sceneId)
-						AddText(sceneId,"  ÄúÉíÉÏµÄÏÖ½ğ²»×ã1#-15£¬Òò´ËÎŞ·¨Ñ§Ï°±¾ÃÅÇá¹¦¡£")
+						AddText(sceneId,"  æ‚¨èº«ä¸Šçš„ç°é‡‘ä¸è¶³1#-15ï¼Œå› æ­¤æ— æ³•å­¦ä¹ æœ¬é—¨è½»åŠŸã€‚")
 					EndEvent(sceneId)
 					DispatchEventList(sceneId,selfId,targetId)
 					return
 				end
-				-- ¿ÛÇ®
+				-- æ‰£é’±
 				LuaFnCostMoneyWithPriority(sceneId,selfId,STUDY_MENPAI_QINGGONG_SPEND)
 
 				AddSkill( sceneId, selfId, 30 )
 				DelSkill( sceneId, selfId, 34 )
 				BeginEvent(sceneId)
-					AddText(sceneId,"  ¹§Ï²ÄãÑ§»á±¾ÃÅµÄÇá¹¦£¬Ï£ÍûÎª±¾ÃÅµÄ·¢Ñï¹â´ó¼ÌĞøÅ¬Á¦¡£")
+					AddText(sceneId,"  æ­å–œä½ å­¦ä¼šæœ¬é—¨çš„è½»åŠŸï¼Œå¸Œæœ›ä¸ºæœ¬é—¨çš„å‘æ‰¬å…‰å¤§ç»§ç»­åŠªåŠ›ã€‚")
 				EndEvent(sceneId)
 				DispatchEventList(sceneId,selfId,targetId)
 			else
 				BeginEvent(sceneId)
-					AddText(sceneId,"Äã²»ÊÇÒÑ¾­Ñ§»áÁËÂğ£¿")
+					AddText(sceneId,"ä½ ä¸æ˜¯å·²ç»å­¦ä¼šäº†å—ï¼Ÿ")
 				EndEvent(sceneId)
 				DispatchEventList(sceneId,selfId,targetId)
 			end
 		elseif GetMenPai(sceneId, selfId) == 9 then
 			BeginEvent(sceneId)
-				AddText(sceneId,"Ñ§Ï°ÌìÉ½Çá¹¦ĞèÒªÏÈ¼ÓÈëÌìÉ½ÃÅÅÉ£¡")
+				AddText(sceneId,"å­¦ä¹ å¤©å±±è½»åŠŸéœ€è¦å…ˆåŠ å…¥å¤©å±±é—¨æ´¾ï¼")
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,targetId)
 		else
 			BeginEvent(sceneId)
-				AddText(sceneId,"Äã²»ÊÇ±¾ÃÅÅÉµÄµÜ×Ó£¬ÎÒÊÇ²»ÄÜ½ÌÄãÌìÉ½µÄÇá¹¦µÄ")
+				AddText(sceneId,"ä½ ä¸æ˜¯æœ¬é—¨æ´¾çš„å¼Ÿå­ï¼Œæˆ‘æ˜¯ä¸èƒ½æ•™ä½ å¤©å±±çš„è½»åŠŸçš„")
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,targetId)
 		end
@@ -62,32 +62,32 @@ function x017003_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x017003_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x017003_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
-	--¾Ü¾øÖ®ºó£¬Òª·µ»ØNPCµÄÊÂ¼şÁĞ±í
+	--æ‹’ç»ä¹‹åï¼Œè¦è¿”å›NPCçš„äº‹ä»¶åˆ—è¡¨
 end
 
 --**********************************
---¼ÌĞø£¨ÒÑ¾­½ÓÁËÈÎÎñ£©
+--ç»§ç»­ï¼ˆå·²ç»æ¥äº†ä»»åŠ¡ï¼‰
 --**********************************
 function x017003_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---Ìá½»ÒÑ×öÍêµÄÈÎÎñ
+--æäº¤å·²åšå®Œçš„ä»»åŠ¡
 --**********************************
 function x017003_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, selectRadioId )
 end
 
 --**********************************
---ËÀÍöÊÂ¼ş
+--æ­»äº¡äº‹ä»¶
 --**********************************
 function x017003_OnDie( sceneId, selfId, killerId )
 end

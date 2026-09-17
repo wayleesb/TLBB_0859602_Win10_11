@@ -23,12 +23,12 @@ function PetProcreate_OnEvent(event)
 	
 	if ( event == "UI_COMMAND" and tonumber(arg0) == 26) then
 		AxTrace(0,1,"tonumber(arg0)="..tonumber(arg0));
-		--µÚ0¸öÊÇ½ğÇ®
+		--ç¬¬0ä¸ªæ˜¯é‡‘é’±
 		local xx = Get_XParam_INT(1);
 		objCared = DataPool : GetNPCIDByServerID(xx);
 		AxTrace(0,1,"xx="..xx .. " objCared="..objCared)
 		if objCared == -1 then
-				PushDebugMessage("server´«¹ıÀ´µÄÊı¾İÓĞÎÊÌâ¡£");
+				PushDebugMessage("serverä¼ è¿‡æ¥çš„æ•°æ®æœ‰é—®é¢˜ã€‚");
 				return;
 		end
 		BeginCareObject_PetProcreate(objCared)
@@ -74,10 +74,10 @@ function PetProcreate_OnEvent(event)
 	
 	elseif  ( event == "PETPROCREATE_OTHER_OK" ) then
 		if tonumber(arg0) == 1 then
-			PushDebugMessage("¶Ô·½È·ÈÏÁË·±Ö³¡£")
+			PushDebugMessage("å¯¹æ–¹ç¡®è®¤äº†ç¹æ®–ã€‚")
 			PetProcreate_Refresh_Confirm_Ok()
 		else
-			PushDebugMessage("¶Ô·½È¡ÏûÁË·±Ö³¡£")
+			PushDebugMessage("å¯¹æ–¹å–æ¶ˆäº†ç¹æ®–ã€‚")
 			PetProcreate_Close2(1)
 		end
 	elseif ( event == "PETPROCREATE_KEY_STATE")then
@@ -91,9 +91,9 @@ function PetProcreate_OnEvent(event)
 			return;
 		end
 
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ı£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æœå’ŒNPCçš„è·ç¦»å¤§äºä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if(arg1 == "distance" and tonumber(arg2)>MAX_OBJ_DISTANCE or arg1=="destroy") then
-			--È¡Ïû¹ØĞÄ
+			--å–æ¶ˆå…³å¿ƒ
 			PetProcreate_OK_Clicked(0)
 		end
 	end
@@ -166,7 +166,7 @@ function PetProcreate_Close()
 end
 
 --===============================================
--- ÓÒ¼üµã»÷(²é¿´¶Ô·½µÄÕäÊŞ×ÊÁÏ)
+-- å³é”®ç‚¹å‡»(æŸ¥çœ‹å¯¹æ–¹çš„çå…½èµ„æ–™)
 --===============================================
 function PetProcreate_Other_PetList_RClick()
 	if PetProcreate_Other_Pet:GetText() ~= "" then
@@ -175,7 +175,7 @@ function PetProcreate_Other_PetList_RClick()
 end
 
 --===============================================
--- ÓÒ¼üµã»÷(²é¿´×Ô¼ºµÄÕäÊŞ×ÊÁÏ)
+-- å³é”®ç‚¹å‡»(æŸ¥çœ‹è‡ªå·±çš„çå…½èµ„æ–™)
 --===============================================
 function PetProcreate_Self_PetList_RClick()
 	if PetProcreate_Self_Pet:GetText() ~= "" then
@@ -185,13 +185,13 @@ end
 
 ----------------------------------------------------------------------------------
 --
--- Ğı×ªÕäÊŞÄ£ĞÍ£¨Ïò×ó)
+-- æ—‹è½¬çå…½æ¨¡å‹ï¼ˆå‘å·¦)
 --
 function PetProcreate_Self_TurnLeft(start)
-	--Ïò×óĞı×ª¿ªÊ¼
+	--å‘å·¦æ—‹è½¬å¼€å§‹
 	if(start == 1) then
 		PetProcreate_Self_PetModel:RotateBegin(-0.3);
-	--Ïò×óĞı×ª½áÊø
+	--å‘å·¦æ—‹è½¬ç»“æŸ
 	else
 		PetProcreate_Self_PetModel:RotateEnd();
 	end
@@ -199,13 +199,13 @@ end
 
 ----------------------------------------------------------------------------------
 --
---Ğı×ªÕäÊŞÄ£ĞÍ£¨ÏòÓÒ)
+--æ—‹è½¬çå…½æ¨¡å‹ï¼ˆå‘å³)
 --
 function PetProcreate_Self_TurnRight(start)
-	--ÏòÓÒĞı×ª¿ªÊ¼
+	--å‘å³æ—‹è½¬å¼€å§‹
 	if(start == 1) then
 		PetProcreate_Self_PetModel:RotateBegin(0.3);
-	--ÏòÓÒĞı×ª½áÊø
+	--å‘å³æ—‹è½¬ç»“æŸ
 	else
 		PetProcreate_Self_PetModel:RotateEnd();
 	end
@@ -214,13 +214,13 @@ end
 
 ----------------------------------------------------------------------------------
 --
--- Ğı×ªÕäÊŞÄ£ĞÍ£¨Ïò×ó)
+-- æ—‹è½¬çå…½æ¨¡å‹ï¼ˆå‘å·¦)
 --
 function PetProcreate_Other_TurnLeft(start)
-	--Ïò×óĞı×ª¿ªÊ¼
+	--å‘å·¦æ—‹è½¬å¼€å§‹
 	if(start == 1) then
 		PetProcreate_Other_PetModel:RotateBegin(-0.3);
-	--Ïò×óĞı×ª½áÊø
+	--å‘å·¦æ—‹è½¬ç»“æŸ
 	else
 		PetProcreate_Other_PetModel:RotateEnd();
 	end
@@ -228,13 +228,13 @@ end
 
 ----------------------------------------------------------------------------------
 --
---Ğı×ªÕäÊŞÄ£ĞÍ£¨ÏòÓÒ)
+--æ—‹è½¬çå…½æ¨¡å‹ï¼ˆå‘å³)
 --
 function PetProcreate_Other_TurnRight(start)
-	--ÏòÓÒĞı×ª¿ªÊ¼
+	--å‘å³æ—‹è½¬å¼€å§‹
 	if(start == 1) then
 		PetProcreate_Other_PetModel:RotateBegin(0.3);
-	--ÏòÓÒĞı×ª½áÊø
+	--å‘å³æ—‹è½¬ç»“æŸ
 	else
 		PetProcreate_Other_PetModel:RotateEnd();
 	end
@@ -268,9 +268,9 @@ function PetProcreate_Refresh_Confirm_Ok()
 end
 
 --=========================================================
---¿ªÊ¼¹ØĞÄNPC£¬
---ÔÚ¿ªÊ¼¹ØĞÄÖ®Ç°ĞèÒªÏÈÈ·¶¨Õâ¸ö½çÃæÊÇ²»ÊÇÒÑ¾­ÓĞ¡°¹ØĞÄ¡±µÄNPC£¬
---Èç¹ûÓĞµÄ»°£¬ÏÈÈ¡ÏûÒÑ¾­ÓĞµÄ¡°¹ØĞÄ¡±
+--å¼€å§‹å…³å¿ƒNPCï¼Œ
+--åœ¨å¼€å§‹å…³å¿ƒä¹‹å‰éœ€è¦å…ˆç¡®å®šè¿™ä¸ªç•Œé¢æ˜¯ä¸æ˜¯å·²ç»æœ‰â€œå…³å¿ƒâ€çš„NPCï¼Œ
+--å¦‚æœæœ‰çš„è¯ï¼Œå…ˆå–æ¶ˆå·²ç»æœ‰çš„â€œå…³å¿ƒâ€
 --=========================================================
 function BeginCareObject_PetProcreate(objCaredId)
 
@@ -281,7 +281,7 @@ function BeginCareObject_PetProcreate(objCaredId)
 end
 
 --=========================================================
---Í£Ö¹¶ÔÄ³NPCµÄ¹ØĞÄ
+--åœæ­¢å¯¹æŸNPCçš„å…³å¿ƒ
 --=========================================================
 function StopCareObject_PetProcreate(objCaredId)
 	this:CareObject(objCaredId, 0, "PetProcreate");
@@ -291,14 +291,14 @@ end
 
 
 function PetProcreate_Frame_OnHide()
-	--¹ØµôÏà¹Ø½çÃæ
+	--å…³æ‰ç›¸å…³ç•Œé¢
 	PetProcreate_Close();
-	--·¢È¡ÏûÏûÏ¢
+	--å‘å–æ¶ˆæ¶ˆæ¯
 	Pet:ConfirmPetProcreate(0);
 end
 
 function PetProcreate_Close2(var)
-	--ÉèÖÃ±äÁ¿
+	--è®¾ç½®å˜é‡
 	Pet:SetCanFanzhiPet(tonumber(var))
 	this:Hide();
 end

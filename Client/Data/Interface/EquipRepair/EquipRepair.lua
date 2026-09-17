@@ -13,7 +13,7 @@ local EQUIP_NPC_ID = -1
 local EQUIP_PARA_PRICE = -1
 local EQUIP_SHENQI_BEGIN = 10300000
 local EQUIP_SHENQI_END = 10399999
---local SHENQI_NPC_NAME = "Å·Ò±×Ó"
+--local SHENQI_NPC_NAME = "æ¬§å†¶å­"
 
 
 local g_Object = -1;
@@ -27,7 +27,7 @@ local g_NeedItemBonus={{sqid01=10300000, sqid02=10302000, sqid03=10304000, sqid0
 											 {sqid01=10300003, sqid02=10302003, sqid03=10304003, sqid04=10305003, sfid=30505803},
 											 {sqid01=10300004, sqid02=10302004, sqid03=10304004, sqid04=10305004, sfid=30505804},
 											 {sqid01=10300005, sqid02=10302005, sqid03=10304005, sqid04=10305005, sfid=30505805},
-											 {sqid01=10300100, sqid02=10300100, sqid03=10300100, sqid04=10300100, sfid=30505806},		-- ñÒÉÙÎ¢
+											 {sqid01=10300100, sqid02=10300100, sqid03=10300100, sqid04=10300100, sfid=30505806},		-- è¤šå°‘å¾®
 											 {sqid01=10300101, sqid02=10300101, sqid03=10300101, sqid04=10300101, sfid=30505806},
 											 {sqid01=10300102, sqid02=10300102, sqid03=10300102, sqid04=10300102, sfid=30505806},
 											 {sqid01=10301100, sqid02=10301100, sqid03=10301100, sqid04=10301100, sfid=30505806},
@@ -90,13 +90,13 @@ function EquipRepair_OnEvent(event)
 			objCared = DataPool : GetNPCIDByServerID(EQUIP_NPC_ID);
 			AxTrace(0,1,"EQUIP_NPC_ID="..EQUIP_NPC_ID .. " objCared="..objCared)
 			if objCared == -1 then
-					PushDebugMessage("server´«¹ıÀ´µÄÊı¾İÓĞÎÊÌâ¡£");
+					PushDebugMessage("serverä¼ è¿‡æ¥çš„æ•°æ®æœ‰é—®é¢˜ã€‚");
 					return;
 			end	
 			BeginCareObject_EquipRepair(objCared)					
 		else
 			if this:IsVisible() then
-				--ÏÔÊ¾¼ÛÇ®
+				--æ˜¾ç¤ºä»·é’±
 				EquipRepair_DemandMoney:SetProperty("MoneyNumber", EQUIP_PARA_PRICE)
 				EQUIP_PARA_PRICE = -1
 			end
@@ -119,13 +119,13 @@ function EquipRepair_OnEvent(event)
 			objCared = DataPool : GetNPCIDByServerID(EQUIP_NPC_ID);
 			AxTrace(0,1,"EQUIP_NPC_ID="..EQUIP_NPC_ID .. " objCared="..objCared)
 			if objCared == -1 then
-					PushDebugMessage("server´«¹ıÀ´µÄÊı¾İÓĞÎÊÌâ¡£");
+					PushDebugMessage("serverä¼ è¿‡æ¥çš„æ•°æ®æœ‰é—®é¢˜ã€‚");
 					return;
 			end	
 			BeginCareObject_EquipRepair(objCared)					
 		else
 			if this:IsVisible() then
-				--ÏÔÊ¾¼ÛÇ®
+				--æ˜¾ç¤ºä»·é’±
 				EquipRepair_DemandMoney:SetProperty("MoneyNumber", EQUIP_PARA_PRICE)
 				EQUIP_PARA_PRICE = -1
 			end
@@ -136,10 +136,10 @@ function EquipRepair_OnEvent(event)
 			return;
 		end
 		
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ı£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æœå’ŒNPCçš„è·ç¦»å¤§äºä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if(arg1 == "distance" and tonumber(arg2)>MAX_OBJ_DISTANCE or arg1=="destroy") then
 			
-			--È¡Ïû¹ØĞÄ
+			--å–æ¶ˆå…³å¿ƒ
 			EquipRepair_Cancel_Clicked()
 		end
 
@@ -185,7 +185,7 @@ function EquipRepair_Clear()
 			end
 		else
 			EQUIP_BUTTONS : SetActionItem(-1);
-			EquipRepair_Explain1:SetText("Çë·ÅÈëÒªĞŞÀíµÄ×°±¸£º")
+			EquipRepair_Explain1:SetText("è¯·æ”¾å…¥è¦ä¿®ç†çš„è£…å¤‡ï¼š")
 			if EQUIP_QUALITY ~= -1 then
 				LifeAbility : Lock_Packet_Item(EQUIP_QUALITY,0);
 				EquipRepair_DemandMoney : SetProperty("MoneyNumber", 0);
@@ -204,7 +204,7 @@ function EquipRepair_Update(pos0)
 		local EquipPoint = LifeAbility:Get_Equip_Point(pos_packet)	
 		if EquipPoint == -1 or EquipPoint == 8 or EquipPoint == 9 or EquipPoint == 10 then
 			if EquipPoint ~= -1 then
-				PushDebugMessage("´ËÎïÆ·²»ĞèÒªĞŞÀí¡£")
+				PushDebugMessage("æ­¤ç‰©å“ä¸éœ€è¦ä¿®ç†ã€‚")
 			end
 			return
 		end
@@ -230,7 +230,7 @@ function EquipRepair_Update(pos0)
 			if EQUIP_QUALITY ~= -1 then
 				LifeAbility : Lock_Packet_Item(EQUIP_QUALITY,0);
 			end
-			--ÈÃÖ®Ç°µÄ¶«Î÷±äÁÁ
+			--è®©ä¹‹å‰çš„ä¸œè¥¿å˜äº®
 			EQUIP_QUALITY = pos_packet;
 			LifeAbility : Lock_Packet_Item(EQUIP_QUALITY,1);			
 		else		
@@ -238,7 +238,7 @@ function EquipRepair_Update(pos0)
 			if EQUIP_QUALITY ~= -1 then
 				LifeAbility : Lock_Packet_Item(EQUIP_QUALITY,0);
 			end
-			--ÈÃÖ®Ç°µÄ¶«Î÷±äÁÁ
+			--è®©ä¹‹å‰çš„ä¸œè¥¿å˜äº®
 			EQUIP_QUALITY = pos_packet;
 			LifeAbility : Lock_Packet_Item(EQUIP_QUALITY,1);
 			if ItemID < EQUIP_SHENQI_BEGIN or ItemID > EQUIP_SHENQI_END then				
@@ -263,7 +263,7 @@ function EquipRepair_Update(pos0)
 			return;
 		else
 			EQUIP_BUTTONS:SetActionItem(-1);
-			EquipRepair_Explain1:SetText("Çë·ÅÈëÒªĞŞÀíµÄ×°±¸£º")
+			EquipRepair_Explain1:SetText("è¯·æ”¾å…¥è¦ä¿®ç†çš„è£…å¤‡ï¼š")
 			LifeAbility : Lock_Packet_Item(EQUIP_QUALITY,0);
 			EQUIP_QUALITY = -1;
 			return;
@@ -280,7 +280,7 @@ function EquipRepair_Buttons_Clicked()
 		local nEquipID = PlayerPackage : GetItemTableIndex(EQUIP_QUALITY)		
 		if g_CommonRepair == 0 then
 			if nEquipID < EQUIP_SHENQI_BEGIN or nEquipID > EQUIP_SHENQI_END then				
-				SetNotifyTip("ÕâÀïÖ»ÄÜĞŞÀíÉñÆ÷")			
+				SetNotifyTip("è¿™é‡Œåªèƒ½ä¿®ç†ç¥å™¨")			
 				EquipRepair_Clear();
 				return 0
 			end			
@@ -294,7 +294,7 @@ function EquipRepair_Buttons_Clicked()
 			EquipRepair_Clear();
 		else
 			if nEquipID >= EQUIP_SHENQI_BEGIN and nEquipID <= EQUIP_SHENQI_END then				
-				SetNotifyTip("ÕâÀïÎŞ·¨ĞŞÀíÉñÆ÷")			
+				SetNotifyTip("è¿™é‡Œæ— æ³•ä¿®ç†ç¥å™¨")			
 				EquipRepair_Clear();
 				return 0
 			end			
@@ -308,14 +308,14 @@ function EquipRepair_Buttons_Clicked()
 			EquipRepair_Clear();
 		end
 	else
-		PushDebugMessage("Çë°ÑÒªĞŞÀíµÄ×°±¸ÍÏ¶¯µ½ÎïÆ·¿òÖĞ¡£")
+		PushDebugMessage("è¯·æŠŠè¦ä¿®ç†çš„è£…å¤‡æ‹–åŠ¨åˆ°ç‰©å“æ¡†ä¸­ã€‚")
 	end
 	
 end
 
 function EquipRepair_Close()
 	
-	--²¢ÉèÖÃ£¬ÈÃ±³°üÀïµÄÎ»ÖÃ±äÁÁ
+	--å¹¶è®¾ç½®ï¼Œè®©èƒŒåŒ…é‡Œçš„ä½ç½®å˜äº®
 	if( this:IsVisible() ) then
 		if(EQUIP_QUALITY ~= -1) then
 			LifeAbility : Lock_Packet_Item(EQUIP_QUALITY,0);
@@ -333,9 +333,9 @@ function EquipRepair_Cancel_Clicked()
 end
 
 --=========================================================
---¿ªÊ¼¹ØĞÄNPC£¬
---ÔÚ¿ªÊ¼¹ØĞÄÖ®Ç°ĞèÒªÏÈÈ·¶¨Õâ¸ö½çÃæÊÇ²»ÊÇÒÑ¾­ÓĞ¡°¹ØĞÄ¡±µÄNPC£¬
---Èç¹ûÓĞµÄ»°£¬ÏÈÈ¡ÏûÒÑ¾­ÓĞµÄ¡°¹ØĞÄ¡±
+--å¼€å§‹å…³å¿ƒNPCï¼Œ
+--åœ¨å¼€å§‹å…³å¿ƒä¹‹å‰éœ€è¦å…ˆç¡®å®šè¿™ä¸ªç•Œé¢æ˜¯ä¸æ˜¯å·²ç»æœ‰â€œå…³å¿ƒâ€çš„NPCï¼Œ
+--å¦‚æœæœ‰çš„è¯ï¼Œå…ˆå–æ¶ˆå·²ç»æœ‰çš„â€œå…³å¿ƒâ€
 --=========================================================
 function BeginCareObject_EquipRepair(objCaredId)
 	
@@ -345,7 +345,7 @@ function BeginCareObject_EquipRepair(objCaredId)
 end
 
 --=========================================================
---Í£Ö¹¶ÔÄ³NPCµÄ¹ØĞÄ
+--åœæ­¢å¯¹æŸNPCçš„å…³å¿ƒ
 --=========================================================
 function StopCareObject_EquipRepair(objCaredId)
 	
@@ -365,7 +365,7 @@ function Resume_Equip()
 			if g_CommonRepair == 0 then				
 				EquipRepair_ShenQiInfo:SetText("#{INTERFACE_XML_1002}")				
 			else
-				EquipRepair_Explain1:SetText("Çë·ÅÈëÒªĞŞÀíµÄ×°±¸£º")
+				EquipRepair_Explain1:SetText("è¯·æ”¾å…¥è¦ä¿®ç†çš„è£…å¤‡ï¼š")
 			end
 			EQUIP_QUALITY	= -1;
 		end	

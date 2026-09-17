@@ -1,14 +1,14 @@
 -- challenge.lua
--- ÌôÕ½Ïà¹Ø½Å±¾
+-- æŒ‘æˆ˜ç›¸å…³è„šæœ¬
 
 x806010_g_ScriptId = 806010
 
--- ÅĞ¶Ï¸ÃÍæ¼ÒÊÇ·ñ´¦ÔÚÌôÕ½ÇøÓò
+-- åˆ¤æ–­è¯¥ç©å®¶æ˜¯å¦å¤„åœ¨æŒ‘æˆ˜åŒºåŸŸ
 function x806010_HaveChallengeFlag( sceneId, selfId )
 	return (GetMissionData( sceneId, selfId, MD_TIAOZHAN_SCRIPT ) > 0)
 end
 
--- ÈÃ selfId (¼°¶ÓÓÑ) ÌôÕ½ targetId (¼°¶ÓÓÑ)
+-- è®© selfId (åŠé˜Ÿå‹) æŒ‘æˆ˜ targetId (åŠé˜Ÿå‹)
 function x806010_ProcChallenge( sceneId, selfId, targetId )
 	local ChallengeScript = GetMissionData( sceneId, selfId, MD_TIAOZHAN_SCRIPT )
 
@@ -16,6 +16,6 @@ function x806010_ProcChallenge( sceneId, selfId, targetId )
 		return
 	end
 
-	-- µ÷ÓÃ¾ßÌåµÄÌôÕ½½Å±¾£¬Ã¿¸öÀŞÌ¨Ó¦¸Ã°ó¶¨Ò»¸ö½Å±¾
+	-- è°ƒç”¨å…·ä½“çš„æŒ‘æˆ˜è„šæœ¬ï¼Œæ¯ä¸ªæ“‚å°åº”è¯¥ç»‘å®šä¸€ä¸ªè„šæœ¬
 	CallScriptFunction(ChallengeScript, "DoChallenge", sceneId, selfId, targetId )
 end

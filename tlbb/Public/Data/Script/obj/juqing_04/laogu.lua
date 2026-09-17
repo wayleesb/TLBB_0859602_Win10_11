@@ -1,32 +1,32 @@
---Íò½Ù¹ÈÄ¾ÈËÊØÎÀ
+--ä¸‡åŠ«è°·æœ¨äººå®ˆå«
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x037005_g_scriptId = 037005
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x037005_g_eventList={}
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x037005_UpdateEventList( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
 	AddText(sceneId,"#{JQ_YZW_B_004}")
-		AddNumText(sceneId, x037005_g_scriptId,"ËÍÎÒÈ¥ËÕÖİ",9,1);
+		AddNumText(sceneId, x037005_g_scriptId,"é€æˆ‘å»è‹å·",9,1);
 
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 end
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x037005_OnDefaultEvent( sceneId, selfId,targetId )
 	x037005_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x037005_OnEventRequest( sceneId, selfId, targetId, eventId )
 	if GetNumText()==1	then
@@ -35,7 +35,7 @@ function x037005_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x037005_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x037005_g_eventList do
@@ -50,10 +50,10 @@ function x037005_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x037005_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
-	--¾Ü¾øÖ®ºó£¬Òª·µ»ØNPCµÄÊÂ¼şÁĞ±í
+	--æ‹’ç»ä¹‹åï¼Œè¦è¿”å›NPCçš„äº‹ä»¶åˆ—è¡¨
 	for i, findId in x037005_g_eventList do
 		if missionScriptId == findId then
 			x037005_UpdateEventList( sceneId, selfId, targetId )
@@ -63,7 +63,7 @@ function x037005_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¼ÌĞø£¨ÒÑ¾­½ÓÁËÈÎÎñ£©
+--ç»§ç»­ï¼ˆå·²ç»æ¥äº†ä»»åŠ¡ï¼‰
 --**********************************
 function x037005_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x037005_g_eventList do
@@ -75,7 +75,7 @@ function x037005_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---Ìá½»ÒÑ×öÍêµÄÈÎÎñ
+--æäº¤å·²åšå®Œçš„ä»»åŠ¡
 --**********************************
 function x037005_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, selectRadioId )
 	for i, findId in x037005_g_eventList do
@@ -87,7 +87,7 @@ function x037005_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 end
 
 --**********************************
---ËÀÍöÊÂ¼ş
+--æ­»äº¡äº‹ä»¶
 --**********************************
 function x037005_OnDie( sceneId, selfId, killerId )
 end

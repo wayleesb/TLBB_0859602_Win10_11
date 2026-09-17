@@ -1,15 +1,15 @@
---ÕäÊŞ»¹Í¯µ¤[±ä»¯µ½Ä¿±êÕäÊŞÀàĞÍ]
+--çå…½è¿˜ç«¥ä¸¹[å˜åŒ–åˆ°ç›®æ ‡çå…½ç±»å‹]
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x300100_g_scriptId = 300100
 
 --rulerId
---0	= ÆÕÍ¨¹æÔò
---1 = ÆÕÍ¨RMB¹æÔò
---2 = ìÅÒ«RMB¹æÔò
+--0	= æ™®é€šè§„åˆ™
+--1 = æ™®é€šRMBè§„åˆ™
+--2 = ç‚«è€€RMBè§„åˆ™
 x300100_g_itemList = {}
 
----------ÁúÃ¨
+---------é¾™çŒ«
 x300100_g_itemList[30309150] = { rulerId = 2, minPetLevel = 1, maxPetLevel = 45, petIds = {} }
 x300100_g_itemList[30309150].petIds[5] = 7649;
 x300100_g_itemList[30309150].petIds[45] = 7659;
@@ -23,7 +23,7 @@ x300100_g_itemList[30309163].petIds[75] = 7689;
 x300100_g_itemList[30309163].petIds[85] = 7699;
 --x300100_g_itemList[30309163].petIds[95] = 7709;
 
----------ĞÜÃ¨
+---------ç†ŠçŒ«
 x300100_g_itemList[30309151] = { rulerId = 2, minPetLevel = 1, maxPetLevel = 45, petIds = {} }
 x300100_g_itemList[30309151].petIds[5] = 7789;
 x300100_g_itemList[30309151].petIds[45] = 7799;
@@ -37,7 +37,7 @@ x300100_g_itemList[30309164].petIds[75] = 7829;
 x300100_g_itemList[30309164].petIds[85] = 7839;
 --x300100_g_itemList[30309164].petIds[95] = 7849;
 
----------ºûµû
+---------è´è¶
 x300100_g_itemList[30309152] = { rulerId = 2, minPetLevel = 1, maxPetLevel = 45, petIds = {} }
 x300100_g_itemList[30309152].petIds[5] = 7929;
 x300100_g_itemList[30309152].petIds[45] = 7939;
@@ -51,7 +51,7 @@ x300100_g_itemList[30309165].petIds[75] = 7969;
 x300100_g_itemList[30309165].petIds[85] = 7979;
 --x300100_g_itemList[30309165].petIds[95] = 7989;
 
----------ÎÏÅ£
+---------èœ—ç‰›
 x300100_g_itemList[30309153] = { rulerId = 2, minPetLevel = 1, maxPetLevel = 45, petIds = {} }
 x300100_g_itemList[30309153].petIds[5] = 7999;
 x300100_g_itemList[30309153].petIds[45] = 8009;
@@ -65,7 +65,7 @@ x300100_g_itemList[30309166].petIds[75] = 8039;
 x300100_g_itemList[30309166].petIds[85] = 8049;
 --x300100_g_itemList[30309166].petIds[95] = 8059;
 
----------Ğ«×Ó
+---------èå­
 x300100_g_itemList[30309154] = { rulerId = 2, minPetLevel = 1, maxPetLevel = 45, petIds = {} }
 x300100_g_itemList[30309154].petIds[5] = 8069;
 x300100_g_itemList[30309154].petIds[45] = 8079;
@@ -79,7 +79,7 @@ x300100_g_itemList[30309167].petIds[75] = 8109;
 x300100_g_itemList[30309167].petIds[85] = 8119;
 --x300100_g_itemList[30309167].petIds[95] = 8129;
 
----------ó¦Ğ·
+---------èƒèŸ¹
 x300100_g_itemList[30309155] = { rulerId = 2, minPetLevel = 1, maxPetLevel = 45, petIds = {} }
 x300100_g_itemList[30309155].petIds[5] = 7859;
 x300100_g_itemList[30309155].petIds[45] = 7869;
@@ -93,7 +93,7 @@ x300100_g_itemList[30309168].petIds[75] = 7899;
 x300100_g_itemList[30309168].petIds[85] = 7909;
 --x300100_g_itemList[30309168].petIds[95] = 7919;
 
----------Ï¬Äñ
+---------çŠ€é¸Ÿ
 x300100_g_itemList[30309156] = { rulerId = 2, minPetLevel = 1, maxPetLevel = 45, petIds = {} }
 x300100_g_itemList[30309156].petIds[5] = 7719;
 x300100_g_itemList[30309156].petIds[45] = 7729;
@@ -107,7 +107,7 @@ x300100_g_itemList[30309169].petIds[75] = 7759;
 x300100_g_itemList[30309169].petIds[85] = 7769;
 --x300100_g_itemList[30309169].petIds[95] = 7779;
 
----------Ñ¼×ìÊŞ
+---------é¸­å˜´å…½
 x300100_g_itemList[30309157] = { rulerId = 2, minPetLevel = 1, maxPetLevel = 45, petIds = {} }
 x300100_g_itemList[30309157].petIds[5] = 7509;
 x300100_g_itemList[30309157].petIds[45] = 7519;
@@ -121,7 +121,7 @@ x300100_g_itemList[30309170].petIds[75] = 7549;
 x300100_g_itemList[30309170].petIds[85] = 7559;
 --x300100_g_itemList[30309170].petIds[95] = 7569;
 
----------Ñ©ºü
+---------é›ªç‹
 x300100_g_itemList[30309158] = { rulerId = 2, minPetLevel = 1, maxPetLevel = 45, petIds = {} }
 x300100_g_itemList[30309158].petIds[5] = 7579;
 x300100_g_itemList[30309158].petIds[45] = 7589;
@@ -135,7 +135,7 @@ x300100_g_itemList[30309171].petIds[75] = 7619;
 x300100_g_itemList[30309171].petIds[85] = 7629;
 --x300100_g_itemList[30309171].petIds[95] = 7639;
 
----------Ğ¡õø
+---------å°è²˜
 x300100_g_itemList[30309159] = { rulerId = 2, minPetLevel = 1, maxPetLevel = 45, petIds = {} }
 x300100_g_itemList[30309159].petIds[5] = 8139;
 x300100_g_itemList[30309159].petIds[45] = 8149;
@@ -149,7 +149,7 @@ x300100_g_itemList[30309172].petIds[75] = 8179;
 x300100_g_itemList[30309172].petIds[85] = 8189;
 --x300100_g_itemList[30309172].petIds[95] = 8199;
 
----------¼×³æ
+---------ç”²è™«
 x300100_g_itemList[30309160] = { rulerId = 2, minPetLevel = 1, maxPetLevel = 45, petIds = {} }
 x300100_g_itemList[30309160].petIds[5] = 8209;
 x300100_g_itemList[30309160].petIds[45] = 8219;
@@ -163,7 +163,7 @@ x300100_g_itemList[30309173].petIds[75] = 8249;
 x300100_g_itemList[30309173].petIds[85] = 8259;
 --x300100_g_itemList[30309173].petIds[95] = 8269;
 
----------µ±ìè
+---------å½“æ‰ˆ
 x300100_g_itemList[30309161] = { rulerId = 2, minPetLevel = 1, maxPetLevel = 45, petIds = {} }
 x300100_g_itemList[30309161].petIds[5] = 8279;
 x300100_g_itemList[30309161].petIds[45] = 8289;
@@ -177,7 +177,7 @@ x300100_g_itemList[30309174].petIds[75] = 8319;
 x300100_g_itemList[30309174].petIds[85] = 8329;
 --x300100_g_itemList[30309174].petIds[95] = 8339;
 
----------º£µÁÊó
+---------æµ·ç›—é¼ 
 x300100_g_itemList[30309162] = { rulerId = 2, minPetLevel = 1, maxPetLevel = 45, petIds = {} }
 x300100_g_itemList[30309162].petIds[5] = 8349;
 x300100_g_itemList[30309162].petIds[45] = 8359;
@@ -191,7 +191,7 @@ x300100_g_itemList[30309175].petIds[75] = 8389;
 x300100_g_itemList[30309175].petIds[85] = 8399;
 --x300100_g_itemList[30309175].petIds[95] = 8409;
 
----------±¦ÏäÍ¯×Ó
+---------å®ç®±ç«¥å­
 x300100_g_itemList[30309176] = { rulerId = 2, minPetLevel = 1, maxPetLevel = 45, petIds = {} }
 x300100_g_itemList[30309176].petIds[5] = 8419;
 x300100_g_itemList[30309176].petIds[45] = 8429;
@@ -205,7 +205,7 @@ x300100_g_itemList[30309177].petIds[75] = 8459;
 x300100_g_itemList[30309177].petIds[85] = 8469;
 --x300100_g_itemList[30309177].petIds[95] = 8479;
 
----------Ê÷´üĞÜ
+---------æ ‘è¢‹ç†Š
 x300100_g_itemList[30309178] = { rulerId = 2, minPetLevel = 1, maxPetLevel = 45, petIds = {} }
 x300100_g_itemList[30309178].petIds[5] = 8489;
 x300100_g_itemList[30309178].petIds[45] = 8499;
@@ -219,7 +219,7 @@ x300100_g_itemList[30309179].petIds[75] = 8529;
 x300100_g_itemList[30309179].petIds[85] = 8539;
 --x300100_g_itemList[30309179].petIds[95] = 8549;
 
----------»¶ÀÖÖí
+---------æ¬¢ä¹çŒª
 x300100_g_itemList[30309180] = { rulerId = 2, minPetLevel = 1, maxPetLevel = 45, petIds = {} }
 x300100_g_itemList[30309180].petIds[5] = 8569;
 x300100_g_itemList[30309180].petIds[45] = 8579;
@@ -233,7 +233,7 @@ x300100_g_itemList[30309181].petIds[75] = 8609;
 x300100_g_itemList[30309181].petIds[85] = 8619;
 --x300100_g_itemList[30309181].petIds[95] = 8629;
 
----------ÌÆ×°Êó
+---------å”è£…é¼ 
 x300100_g_itemList[30309182] = { rulerId = 2, minPetLevel = 1, maxPetLevel = 45, petIds = {} }
 x300100_g_itemList[30309182].petIds[5] = 8749;
 x300100_g_itemList[30309182].petIds[45] = 8759;
@@ -247,7 +247,7 @@ x300100_g_itemList[30309183].petIds[75] = 8789;
 x300100_g_itemList[30309183].petIds[85] = 8799;
 --x300100_g_itemList[30309183].petIds[95] = 8809;
 
----------ÄêÊŞ
+---------å¹´å…½
 x300100_g_itemList[30309184] = { rulerId = 2, minPetLevel = 1, maxPetLevel = 45, petIds = {} }
 x300100_g_itemList[30309184].petIds[5] = 8819;
 x300100_g_itemList[30309184].petIds[45] = 8829;
@@ -261,7 +261,7 @@ x300100_g_itemList[30309185].petIds[75] = 8859;
 x300100_g_itemList[30309185].petIds[85] = 8869;
 --x300100_g_itemList[30309185].petIds[95] = 8879;
 
----------Ô§Ñì
+---------é¸³é¸¯
 x300100_g_itemList[30309186] = { rulerId = 2, minPetLevel = 1, maxPetLevel = 45, petIds = {} }
 x300100_g_itemList[30309186].petIds[5] = 8889;
 x300100_g_itemList[30309186].petIds[45] = 8899;
@@ -275,7 +275,7 @@ x300100_g_itemList[30309187].petIds[75] = 8929;
 x300100_g_itemList[30309187].petIds[85] = 8939;
 --x300100_g_itemList[30309187].petIds[95] = 8949;
 
----------±ÈÒíÄñ
+---------æ¯”ç¿¼é¸Ÿ
 x300100_g_itemList[30309188] = { rulerId = 2, minPetLevel = 1, maxPetLevel = 45, petIds = {} }
 x300100_g_itemList[30309188].petIds[5] = 22219;
 x300100_g_itemList[30309188].petIds[45] = 22229;
@@ -289,7 +289,7 @@ x300100_g_itemList[30309189].petIds[75] = 22259;
 x300100_g_itemList[30309189].petIds[85] = 22269;
 --x300100_g_itemList[30309189].petIds[95] = 22279;
 
----------´ô´ôÅ£
+---------å‘†å‘†ç‰›
 x300100_g_itemList[30309190] = { rulerId = 2, minPetLevel = 1, maxPetLevel = 45, petIds = {} }
 x300100_g_itemList[30309190].petIds[5] = 22289;
 x300100_g_itemList[30309190].petIds[45] = 22299;
@@ -301,7 +301,7 @@ x300100_g_itemList[30309191].petIds[55] = 22309;
 x300100_g_itemList[30309191].petIds[65] = 22319;
 x300100_g_itemList[30309191].petIds[75] = 22329;
 x300100_g_itemList[30309191].petIds[85] = 22339;
-----------Go×Ğ
+----------Goä»”
 x300100_g_itemList[30309192] = { rulerId = 2, minPetLevel = 1, maxPetLevel = 45, petIds = {} }
 x300100_g_itemList[30309192].petIds[5] = 22499;
 x300100_g_itemList[30309192].petIds[45] = 22509;
@@ -317,24 +317,24 @@ x300100_g_itemList[30309193].petIds[85] = 22549;
 --x300100_g_itemList[30309191].petIds[95] = 22349;
 x300100_g_ItemName = 0
 --**********************************
--- ·µ»Ø1£º¼¼ÄÜÀàËÆµÄÎïÆ·£¬¿ÉÒÔ¼ÌĞøÀàËÆ¼¼ÄÜµÄÖ´ĞĞ£»·µ»Ø0£ºÖ´ĞĞ OnDefaultEvent¡£
+-- è¿”å›1ï¼šæŠ€èƒ½ç±»ä¼¼çš„ç‰©å“ï¼Œå¯ä»¥ç»§ç»­ç±»ä¼¼æŠ€èƒ½çš„æ‰§è¡Œï¼›è¿”å›0ï¼šæ‰§è¡Œ OnDefaultEventã€‚
 --**********************************
 function x300100_IsSkillLikeScript( sceneId, selfId )
 	return 1
 end
 
 --**********************************
--- ·µ»Ø1£ºÒÑ¾­È¡Ïû¶ÔÓ¦Ğ§¹û£¬²»ÔÙÖ´ĞĞºóĞø²Ù×÷£»·µ»Ø0£ºÃ»ÓĞ¼ì²âµ½Ïà¹ØĞ§¹û£¬¼ÌĞøÖ´ĞĞ¡£
+-- è¿”å›1ï¼šå·²ç»å–æ¶ˆå¯¹åº”æ•ˆæœï¼Œä¸å†æ‰§è¡Œåç»­æ“ä½œï¼›è¿”å›0ï¼šæ²¡æœ‰æ£€æµ‹åˆ°ç›¸å…³æ•ˆæœï¼Œç»§ç»­æ‰§è¡Œã€‚
 --**********************************
 function x300100_CancelImpacts( sceneId, selfId )
 	return 0
 end
 
 --**********************************
--- Ìõ¼ş¼ì²âÈë¿Ú£º·µ»Ø1£ºÌõ¼ş¼ì²âÍ¨¹ı£¬¿ÉÒÔ¼ÌĞøÖ´ĞĞ£»·µ»Ø0£ºÌõ¼ş¼ì²âÊ§°Ü£¬ÖĞ¶ÏºóĞøÖ´ĞĞ¡£
+-- æ¡ä»¶æ£€æµ‹å…¥å£ï¼šè¿”å›1ï¼šæ¡ä»¶æ£€æµ‹é€šè¿‡ï¼Œå¯ä»¥ç»§ç»­æ‰§è¡Œï¼›è¿”å›0ï¼šæ¡ä»¶æ£€æµ‹å¤±è´¥ï¼Œä¸­æ–­åç»­æ‰§è¡Œã€‚
 --**********************************
 function x300100_OnConditionCheck( sceneId, selfId )
-	-- Ğ£ÑéÊ¹ÓÃµÄÎïÆ·
+	-- æ ¡éªŒä½¿ç”¨çš„ç‰©å“
 	if LuaFnVerifyUsedItem( sceneId, selfId ) ~= 1 then
 		return 0
 	end
@@ -347,8 +347,8 @@ function x300100_OnConditionCheck( sceneId, selfId )
 end
 
 --**********************************
---ÏûºÄ¼ì²â¼°´¦ÀíÈë¿Ú£¬¸ºÔğÏûºÄµÄ¼ì²âºÍÖ´ĞĞ£º
---·µ»Ø1£ºÏûºÄ´¦ÀíÍ¨¹ı£¬¿ÉÒÔ¼ÌĞøÖ´ĞĞ£»·µ»Ø0£ºÏûºÄ¼ì²âÊ§°Ü£¬ÖĞ¶ÏºóĞøÖ´ĞĞ¡£
+--æ¶ˆè€—æ£€æµ‹åŠå¤„ç†å…¥å£ï¼Œè´Ÿè´£æ¶ˆè€—çš„æ£€æµ‹å’Œæ‰§è¡Œï¼š
+--è¿”å›1ï¼šæ¶ˆè€—å¤„ç†é€šè¿‡ï¼Œå¯ä»¥ç»§ç»­æ‰§è¡Œï¼›è¿”å›0ï¼šæ¶ˆè€—æ£€æµ‹å¤±è´¥ï¼Œä¸­æ–­åç»­æ‰§è¡Œã€‚
 --**********************************
 function x300100_OnDeplete( sceneId, selfId )
 	
@@ -362,24 +362,24 @@ function x300100_OnDeplete( sceneId, selfId )
 end
 
 --**********************************
---Ö»»áÖ´ĞĞÒ»´ÎÈë¿Ú£º
---¾ÛÆøºÍË²·¢¼¼ÄÜ»áÔÚÏûºÄÍê³Éºóµ÷ÓÃÕâ¸ö½Ó¿Ú£¨¾ÛÆø½áÊø²¢ÇÒ¸÷ÖÖÌõ¼ş¶¼Âú×ãµÄÊ±ºò£©£¬¶øÒıµ¼
---¼¼ÄÜÒ²»áÔÚÏûºÄÍê³Éºóµ÷ÓÃÕâ¸ö½Ó¿Ú£¨¼¼ÄÜµÄÒ»¿ªÊ¼£¬ÏûºÄ³É¹¦Ö´ĞĞÖ®ºó£©¡£
---·µ»Ø1£º´¦Àí³É¹¦£»·µ»Ø0£º´¦ÀíÊ§°Ü¡£
---×¢£ºÕâÀïÊÇ¼¼ÄÜÉúĞ§Ò»´ÎµÄÈë¿Ú
+--åªä¼šæ‰§è¡Œä¸€æ¬¡å…¥å£ï¼š
+--èšæ°”å’Œç¬å‘æŠ€èƒ½ä¼šåœ¨æ¶ˆè€—å®Œæˆåè°ƒç”¨è¿™ä¸ªæ¥å£ï¼ˆèšæ°”ç»“æŸå¹¶ä¸”å„ç§æ¡ä»¶éƒ½æ»¡è¶³çš„æ—¶å€™ï¼‰ï¼Œè€Œå¼•å¯¼
+--æŠ€èƒ½ä¹Ÿä¼šåœ¨æ¶ˆè€—å®Œæˆåè°ƒç”¨è¿™ä¸ªæ¥å£ï¼ˆæŠ€èƒ½çš„ä¸€å¼€å§‹ï¼Œæ¶ˆè€—æˆåŠŸæ‰§è¡Œä¹‹åï¼‰ã€‚
+--è¿”å›1ï¼šå¤„ç†æˆåŠŸï¼›è¿”å›0ï¼šå¤„ç†å¤±è´¥ã€‚
+--æ³¨ï¼šè¿™é‡Œæ˜¯æŠ€èƒ½ç”Ÿæ•ˆä¸€æ¬¡çš„å…¥å£
 --**********************************
 function x300100_OnActivateOnce( sceneId, selfId )
 	local itemTblIndex = LuaFnGetItemIndexOfUsedItem( sceneId, selfId );
 	local petItem = x300100_g_itemList[itemTblIndex];
 	if not petItem then
-		x300100_NotifyFailTips(sceneId, selfId, "Î´¿ª·ÅµÀ¾ß£¬ÎŞ·¨Ê¹ÓÃ¡£");
+		x300100_NotifyFailTips(sceneId, selfId, "æœªå¼€æ”¾é“å…·ï¼Œæ— æ³•ä½¿ç”¨ã€‚");
 		return 0;
 	end
 
 	local petGUID_H = LuaFnGetHighSectionOfTargetPetGuid( sceneId, selfId );
 	local petGUID_L = LuaFnGetLowSectionOfTargetPetGuid( sceneId, selfId );
 	if not petGUID_H or not petGUID_L then
-		x300100_NotifyFailTips(sceneId, selfId, "Î´µ½ÕÒÖ¸¶¨ÕäÊŞ¡£");
+		x300100_NotifyFailTips(sceneId, selfId, "æœªåˆ°æ‰¾æŒ‡å®šçå…½ã€‚");
 		return 0;
 	end
 	
@@ -394,29 +394,29 @@ function x300100_OnActivateOnce( sceneId, selfId )
 	needMoney = needMoney / 100;
 	local costMoneyRet = LuaFnCostMoneyWithPriority(sceneId, selfId, needMoney);
 	if not costMoneyRet or costMoneyRet < 0 then
-		x300100_NotifyFailTips(sceneId, selfId, "¿Û³ı½ğÇ®Ê§°Ü¡£");
+		x300100_NotifyFailTips(sceneId, selfId, "æ‰£é™¤é‡‘é’±å¤±è´¥ã€‚");
 		return 0;
 	end
 	
 	local delRet = LuaFnDeletePetByGUID(sceneId, selfId, petGUID_H, petGUID_L);
 	if not delRet or delRet ~= 1 then
-		x300100_NotifyFailTips(sceneId, selfId, "¿Û³ıÔ­Ê¼ÕäÊŞÊ§°Ü¡£");
+		x300100_NotifyFailTips(sceneId, selfId, "æ‰£é™¤åŸå§‹çå…½å¤±è´¥ã€‚");
 		return 0;
 	end
 	
 	local createRet, PetID_H, PetID_L = LuaFnCreatePetToHuman(sceneId, selfId, petItem.petIds[curPetTakeLevel], 1, petItem.rulerId);
 	if not createRet or createRet ~= 1 then
-		x300100_NotifyFailTips(sceneId, selfId, "Ôö¼ÓĞÂÕäÊŞÊ§°Ü¡£");
+		x300100_NotifyFailTips(sceneId, selfId, "å¢åŠ æ–°çå…½å¤±è´¥ã€‚");
 		return 0;
 	end
 	
 	-- [ QUFEI 2007-11-21 19:22 UPDATE BugID 28170 ]
 	local PlayerName = GetName(sceneId, selfId)				
 	local PetName = LuaFnGetPetTransferByGUID( sceneId, selfId, PetID_H, PetID_L )
-	-- ·¢ËÍÏµÍ³¹«¸æ
+	-- å‘é€ç³»ç»Ÿå…¬å‘Š
 	local strText = ""
 	-- zchw
-	if (itemTblIndex == 30309186) or (itemTblIndex == 30309187) then --Èç¹ûÊÇ»¹Í¯µ¤£ºÔ§Ñì
+	if (itemTblIndex == 30309186) or (itemTblIndex == 30309187) then --å¦‚æœæ˜¯è¿˜ç«¥ä¸¹ï¼šé¸³é¸¯
 		strText = format("#{HT10}#{_INFOUSR%s}#{HT11}#{_INFOMSG%s}#{HT12}#{_INFOMSG%s}#{HT13}", PlayerName, x300100_g_ItemName, PetName);	
 	else
 		local inforand = random(3)		
@@ -437,17 +437,17 @@ function x300100_OnActivateOnce( sceneId, selfId )
 end
 
 --**********************************
---Òıµ¼ĞÄÌø´¦ÀíÈë¿Ú£º
---Òıµ¼¼¼ÄÜ»áÔÚÃ¿´ÎĞÄÌø½áÊøÊ±µ÷ÓÃÕâ¸ö½Ó¿Ú¡£
---·µ»Ø£º1¼ÌĞøÏÂ´ÎĞÄÌø£»0£ºÖĞ¶ÏÒıµ¼¡£
---×¢£ºÕâÀïÊÇ¼¼ÄÜĞÄÌøÊ±ÉúĞ§µÄÈë¿Ú
+--å¼•å¯¼å¿ƒè·³å¤„ç†å…¥å£ï¼š
+--å¼•å¯¼æŠ€èƒ½ä¼šåœ¨æ¯æ¬¡å¿ƒè·³ç»“æŸæ—¶è°ƒç”¨è¿™ä¸ªæ¥å£ã€‚
+--è¿”å›ï¼š1ç»§ç»­ä¸‹æ¬¡å¿ƒè·³ï¼›0ï¼šä¸­æ–­å¼•å¯¼ã€‚
+--æ³¨ï¼šè¿™é‡Œæ˜¯æŠ€èƒ½å¿ƒè·³æ—¶ç”Ÿæ•ˆçš„å…¥å£
 --**********************************
 function x300100_OnActivateEachTick( sceneId, selfId )
 	return 1
 end
 
 --**********************************
--- ĞÑÄ¿Ê§°ÜÌáÊ¾
+-- é†’ç›®å¤±è´¥æç¤º
 --**********************************
 function x300100_NotifyFailTips( sceneId, selfId, Tip )
 	BeginEvent( sceneId )
@@ -457,64 +457,64 @@ function x300100_NotifyFailTips( sceneId, selfId, Tip )
 end
 
 --**********************************
--- ¼ì²éÄÜ·ñ¶ÔÕäÊŞ½øĞĞ»¹Í¯
+-- æ£€æŸ¥èƒ½å¦å¯¹çå…½è¿›è¡Œè¿˜ç«¥
 --**********************************
 function x300100_CanOperate(sceneId, selfId)
 
 	local itemTblIndex = LuaFnGetItemIndexOfUsedItem( sceneId, selfId );
 	local petItem = x300100_g_itemList[itemTblIndex];
 	if not petItem then
-		x300100_NotifyFailTips(sceneId, selfId, "Î´¿ª·ÅµÀ¾ß£¬ÎŞ·¨Ê¹ÓÃ¡£");
+		x300100_NotifyFailTips(sceneId, selfId, "æœªå¼€æ”¾é“å…·ï¼Œæ— æ³•ä½¿ç”¨ã€‚");
 		return 0;
 	end
 
 	local petGUID_H = LuaFnGetHighSectionOfTargetPetGuid( sceneId, selfId );
 	local petGUID_L = LuaFnGetLowSectionOfTargetPetGuid( sceneId, selfId );
 	if not petGUID_H or not petGUID_L then
-		x300100_NotifyFailTips(sceneId, selfId, "Î´µ½ÕÒÖ¸¶¨ÕäÊŞ¡£");
+		x300100_NotifyFailTips(sceneId, selfId, "æœªåˆ°æ‰¾æŒ‡å®šçå…½ã€‚");
 		return 0;
 	end
 	
 	local curPetTemplateId = LuaFnGetPetDataIDByGUID(sceneId, selfId, petGUID_H, petGUID_L);
 	if not curPetTemplateId or curPetTemplateId < 0 then
-		x300100_NotifyFailTips(sceneId, selfId, "Ö¸¶¨ÕäÊŞ²»¿ÉÓÃ¡£");
+		x300100_NotifyFailTips(sceneId, selfId, "æŒ‡å®šçå…½ä¸å¯ç”¨ã€‚");
 		return 0;
 	end
 	
 	local checkPetRet = LuaFnIsPetAvailableByGUID(sceneId, selfId, petGUID_H, petGUID_L);
 	if not checkPetRet or checkPetRet ~= 1 then
-		x300100_NotifyFailTips(sceneId, selfId, "Ëø¶¨µÄÕäÊŞ²»ÄÜ½øĞĞÕâÏî²Ù×÷¡£");
+		x300100_NotifyFailTips(sceneId, selfId, "é”å®šçš„çå…½ä¸èƒ½è¿›è¡Œè¿™é¡¹æ“ä½œã€‚");
 		return 0;
 	end
 	
 	local spouseGUID_H, spouseGUID_L = LuaFnGetPetSpouseGUIDByGUID(sceneId, selfId, petGUID_H, petGUID_L);
 	if not spouseGUID_H or not spouseGUID_L or spouseGUID_H ~= 0 or spouseGUID_L ~= 0 then
-		x300100_NotifyFailTips(sceneId, selfId, "ÒÑ¾­ÓĞÅäÅ¼µÄÕäÊŞ²»ÄÜ½øĞĞÕâÏî²Ù×÷¡£");
+		x300100_NotifyFailTips(sceneId, selfId, "å·²ç»æœ‰é…å¶çš„çå…½ä¸èƒ½è¿›è¡Œè¿™é¡¹æ“ä½œã€‚");
 		return 0;
 	end
 	
 	local petType = LuaFnGetPetTypeByGUID(sceneId, selfId, petGUID_H, petGUID_L);
 	if not petType or petType == 1 then
-		x300100_NotifyFailTips(sceneId, selfId, "±äÒìºÍ¶ş´úÕäÊŞ²»ÄÜ½øĞĞÕâÏî²Ù×÷¡£");
+		x300100_NotifyFailTips(sceneId, selfId, "å˜å¼‚å’ŒäºŒä»£çå…½ä¸èƒ½è¿›è¡Œè¿™é¡¹æ“ä½œã€‚");
 		return 0;
 	end
 
 	local curPetTakeLevel = GetPetTakeLevel(curPetTemplateId);
 	if not curPetTakeLevel or petItem.minPetLevel > curPetTakeLevel or curPetTakeLevel > petItem.maxPetLevel then
-		x300100_NotifyFailTips(sceneId, selfId, "Ö»ÄÜ¶ÔĞ¯´øµÈ¼¶"..petItem.minPetLevel.."µ½"..petItem.maxPetLevel.."µÄÕäÊŞ½øĞĞÕâÏî²Ù×÷¡£");
+		x300100_NotifyFailTips(sceneId, selfId, "åªèƒ½å¯¹æºå¸¦ç­‰çº§"..petItem.minPetLevel.."åˆ°"..petItem.maxPetLevel.."çš„çå…½è¿›è¡Œè¿™é¡¹æ“ä½œã€‚");
 		return 0;
 	end
 	
 	if not petItem.petIds[curPetTakeLevel] then
-		x300100_NotifyFailTips(sceneId, selfId, "ÎŞ·¨¶ÔĞ¯´øµÈ¼¶Îª"..curPetTakeLevel.."µÄÕäÊŞ½øĞĞÕâÏî²Ù×÷¡£");
+		x300100_NotifyFailTips(sceneId, selfId, "æ— æ³•å¯¹æºå¸¦ç­‰çº§ä¸º"..curPetTakeLevel.."çš„çå…½è¿›è¡Œè¿™é¡¹æ“ä½œã€‚");
 		return 0;
 	end
 	
-	local humanMoney = LuaFnGetMoney(sceneId, selfId) +  GetMoneyJZ(sceneId, selfId);   --½»×ÓÆÕ¼° Vega
+	local humanMoney = LuaFnGetMoney(sceneId, selfId) +  GetMoneyJZ(sceneId, selfId);   --äº¤å­æ™®åŠ Vega
 	local needMoney = LuaFnGetPetHuanTongCost(sceneId, curPetTakeLevel);
 	needMoney = needMoney / 100;
 	if not humanMoney or not needMoney or needMoney < 0 or humanMoney < 0 or humanMoney < needMoney then
-		x300100_NotifyFailTips(sceneId, selfId, "½ğÇ®²»×ã¡£");
+		x300100_NotifyFailTips(sceneId, selfId, "é‡‘é’±ä¸è¶³ã€‚");
 		return 0;
 	end
 	

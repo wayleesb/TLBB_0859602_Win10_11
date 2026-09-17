@@ -1,33 +1,33 @@
---Îäµ±NPC
---ÓáÔ¶É½
---ÆÕÍ¨
+--æ­¦å½“NPC
+--ä¿è¿œå±±
+--æ™®é€š
 
 x012010_g_scriptId = 012010
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x012010_OnDefaultEvent( sceneId, selfId,targetId )
 	x012010_g_MenPai = GetMenPai(sceneId, selfId)
 	if x012010_g_MenPai == 3 then
 		BeginEvent(sceneId)
 			AddText(sceneId,"#{TYJZ_081103_02}")
-			AddNumText(sceneId, x012010_g_scriptId, "Ñ§Ï°¼¼ÄÜ",12,0)
-			AddNumText(sceneId, x012010_g_scriptId, "¹ØÓÚĞÄ·¨µÄ½éÉÜ",11,10)
+			AddNumText(sceneId, x012010_g_scriptId, "å­¦ä¹ æŠ€èƒ½",12,0)
+			AddNumText(sceneId, x012010_g_scriptId, "å…³äºå¿ƒæ³•çš„ä»‹ç»",11,10)
 			--AddNumText(sceneId, x012010_g_scriptId, "#{JZBZ_081031_02}",11,11)
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 	else
 			BeginEvent(sceneId)
-			AddText(sceneId,"ÄãÕÒÎÒÓĞÊ²Ã´ÊÂ£¿")
-			AddNumText(sceneId, x012010_g_scriptId, "¹ØÓÚĞÄ·¨µÄ½éÉÜ",11,10)
+			AddText(sceneId,"ä½ æ‰¾æˆ‘æœ‰ä»€ä¹ˆäº‹ï¼Ÿ")
+			AddNumText(sceneId, x012010_g_scriptId, "å…³äºå¿ƒæ³•çš„ä»‹ç»",11,10)
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 	end
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x012010_OnEventRequest( sceneId, selfId, targetId, eventId )
 	if GetNumText() == 10 then

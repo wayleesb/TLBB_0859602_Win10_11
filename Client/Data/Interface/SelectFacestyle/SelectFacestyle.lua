@@ -47,7 +47,7 @@ function SelectFacestyle_OnEvent(event)
 		local xx = Get_XParam_INT(0);
 		objCared = DataPool : GetNPCIDByServerID(xx);
 		if objCared == -1 then
-				PushDebugMessage("server´«¹ıÀ´µÄÊı¾İÓĞÎÊÌâ¡£");
+				PushDebugMessage("serverä¼ è¿‡æ¥çš„æ•°æ®æœ‰é—®é¢˜ã€‚");
 				return;
 		end
 
@@ -73,10 +73,10 @@ function SelectFacestyle_OnEvent(event)
 			Close_Facestyle()
 			return;
 		end
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ı£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æœå’ŒNPCçš„è·ç¦»å¤§äºä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if(arg1 == "distance" and tonumber(arg2)>MAX_OBJ_DISTANCE or arg1=="destroy") then
 			
-			--È¡Ïû¹ØĞÄ
+			--å–æ¶ˆå…³å¿ƒ
 			Close_Facestyle()
 		end
 	end
@@ -134,7 +134,7 @@ function SelectFacestyle_Update()
 	g_Style_Count = m-1
 	
 	if(g_Style_Count <= 0) then
-		SelectFacestyle_Require:SetText("Ã»ÓĞ¿É¸ü¸ÄµÄÁ³ĞÍ¡£");
+		SelectFacestyle_Require:SetText("æ²¡æœ‰å¯æ›´æ”¹çš„è„¸å‹ã€‚");
 		SelectFacestyle_CurrentlyPage:SetText("1/1");
 		SelectFacestyle_Model : SetFakeObject( "" );
 		SelectFacestyle_Model : SetFakeObject( "Player_Head" );
@@ -147,7 +147,7 @@ function SelectFacestyle_Update()
 	SelectFacestyle_Model : SetFakeObject( "Player_Head" )
 
 	g_nCurSelect = 0;
-	SelectFacestyle_WarningText : SetText("ÇëÔÚ»­ÃæÓÒÉÏ·½Ñ¡ÔñÁ³ĞÍ£¬È»ºóµã»÷¡°È·¶¨¡±");
+	SelectFacestyle_WarningText : SetText("è¯·åœ¨ç”»é¢å³ä¸Šæ–¹é€‰æ‹©è„¸å‹ï¼Œç„¶åç‚¹å‡»â€œç¡®å®šâ€");
 end
 
 --==================================
@@ -189,7 +189,7 @@ function Close_Facestyle()
 end
 
 --==================================
---¿ªÊ¼¹ØĞÄNPC£¬
+--å¼€å§‹å…³å¿ƒNPCï¼Œ
 --==================================
 function BeginCareObject_SelectFacestyle(objCaredId)
 	g_Object = objCaredId;
@@ -197,7 +197,7 @@ function BeginCareObject_SelectFacestyle(objCaredId)
 end
 
 --==================================
---Í£Ö¹¶ÔÄ³NPCµÄ¹ØĞÄ
+--åœæ­¢å¯¹æŸNPCçš„å…³å¿ƒ
 --==================================
 function StopCareObject_SelectFacestyle(objCaredId)
 	this:CareObject(objCaredId, 0, "SelectFacestyle");
@@ -206,7 +206,7 @@ function StopCareObject_SelectFacestyle(objCaredId)
 end
 
 --==================================
---¹Ø±Õ
+--å…³é—­
 --==================================
 function SelectFacestyle_Cancel_Clicked()
 	DataPool : Change_MyFaceStyle(g_Original_Style);
@@ -214,12 +214,12 @@ function SelectFacestyle_Cancel_Clicked()
 end
 
 --==================================
---È·ÈÏ
+--ç¡®è®¤
 --==================================
 function SelectFacestyle_OK_Clicked()
-	-- Ã»ÓĞÑ¡ÔñÁ³ĞÍ
+	-- æ²¡æœ‰é€‰æ‹©è„¸å‹
 	if(g_nCurSelect == 0 )then
-		PushDebugMessage("ÇëÑ¡¶¨Ò»¿îÁ³ĞÍ¡£");
+		PushDebugMessage("è¯·é€‰å®šä¸€æ¬¾è„¸å‹ã€‚");
 		return;
 	end
 
@@ -229,29 +229,29 @@ function SelectFacestyle_OK_Clicked()
 	local IconFile
 	local CostMoney
 	
-	-- µÃµ½Ñ¡ÔñµÄÁ³ĞÍĞÅÏ¢
+	-- å¾—åˆ°é€‰æ‹©çš„è„¸å‹ä¿¡æ¯
 	ItemID,ItemCount,SelectType,IconFile,CostMoney = DataPool : Change_MyFaceStyle_Item(g_Style_Index[g_nCurSelect]);
 
-	-- ¼ì²éµÀ¾ß
+	-- æ£€æŸ¥é“å…·
 	if(ItemID ~= -1 and SelectType >= 2) then
 		if( DataPool:GetPlayerMission_ItemCountNow(ItemID) < ItemCount) then
-			PushDebugMessage("È±ÉÙËùĞèµÄ¶¨ÑÕÖé");
+			PushDebugMessage("ç¼ºå°‘æ‰€éœ€çš„å®šé¢œç ");
 			return;
 		end
 	end
 	
-	-- µÃµ½Íæ¼ÒµÄ½ğ±ÒºÍ½»×ÓÊıÄ¿
+	-- å¾—åˆ°ç©å®¶çš„é‡‘å¸å’Œäº¤å­æ•°ç›®
 	local nMoney = Player:GetData("MONEY")
 	local nMoneyJZ = Player:GetData("MONEY_JZ")
 	
 	if (nMoney + nMoneyJZ) < CostMoney then
-		PushDebugMessage("½ğÇ®²»×ã");
+		PushDebugMessage("é‡‘é’±ä¸è¶³");
 		return
 	end
 	
-	-- µ÷ÊÔĞÅÏ¢£¬µ±Ç°Ñ¡ÔñµÄÁ³ĞÍID
+	-- è°ƒè¯•ä¿¡æ¯ï¼Œå½“å‰é€‰æ‹©çš„è„¸å‹ID
 	--PushDebugMessage ("StyleId = "..g_Style_Index[g_nCurSelect])
-	-- Èç¹ûÑ¡ÔñµÄÁ³ĞÍºÍµ±Ç°Á³ĞÍ²»Í¬
+	-- å¦‚æœé€‰æ‹©çš„è„¸å‹å’Œå½“å‰è„¸å‹ä¸åŒ
 	if g_Style_Index[g_nCurSelect] ~= g_Original_Style then
 
 		Clear_XSCRIPT();
@@ -264,14 +264,14 @@ function SelectFacestyle_OK_Clicked()
 		
 	else
 
-		PushDebugMessage("ÇëÑ¡ÔñÒ»ÖÖºÍÄãµ±Ç°²»Í¬µÄÁ³ĞÍ¡£");
+		PushDebugMessage("è¯·é€‰æ‹©ä¸€ç§å’Œä½ å½“å‰ä¸åŒçš„è„¸å‹ã€‚");
 
 	end
 	
 end
 
 --==================================
---Ñ¡ÖĞÒ»¸öÍ¼±ê
+--é€‰ä¸­ä¸€ä¸ªå›¾æ ‡
 --==================================
 function SelectFacestyle_Clicked(nIndex)
 	
@@ -287,7 +287,7 @@ function SelectFacestyle_Clicked(nIndex)
 	local ItemID,ItemCount,SelectType,IconFile,CostMoney = DataPool : Change_MyFaceStyle_Item(g_Style_Index[nIndex]);
 	local name,icon = LifeAbility : GetPrescr_Material(ItemID);
 
-	SelectFacestyle_WarningText : SetText("ĞèÒªµÀ¾ß£º#G"..name.."#r#WĞèÒª½ğÇ®£º#Y#{_EXCHG"..CostMoney.."}#W#rÇëÔÚ»­ÃæÓÒÉÏ·½Ñ¡ÔñÁ³ĞÍ£¬È»ºóµã»÷¡°È·¶¨¡±¡£");
+	SelectFacestyle_WarningText : SetText("éœ€è¦é“å…·ï¼š#G"..name.."#r#Wéœ€è¦é‡‘é’±ï¼š#Y#{_EXCHG"..CostMoney.."}#W#rè¯·åœ¨ç”»é¢å³ä¸Šæ–¹é€‰æ‹©è„¸å‹ï¼Œç„¶åç‚¹å‡»â€œç¡®å®šâ€ã€‚");
 	DataPool : Change_MyFaceStyle(g_Style_Index[nIndex])
 	g_HaveChange = 1
 

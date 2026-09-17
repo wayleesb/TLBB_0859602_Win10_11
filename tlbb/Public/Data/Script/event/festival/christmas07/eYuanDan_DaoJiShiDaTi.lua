@@ -1,10 +1,10 @@
--- Ôªµ©µ¹¼ÆÊ±´ğÌâ»î¶¯
--- ´´½¨ÈË[ QUFEI 2007-12-06 10:13 UPDATE BugID 27816 ]
+-- å…ƒæ—¦å€’è®¡æ—¶ç­”é¢˜æ´»åŠ¨
+-- åˆ›å»ºäºº[ QUFEI 2007-12-06 10:13 UPDATE BugID 27816 ]
 
 x050028_g_ScriptId = 050028
 x050028_g_ExampleScriptId = 050029
 
--- ½±ÀøµÄ¾­Ñé
+-- å¥–åŠ±çš„ç»éªŒ
 x050028_g_BonusExp = { 0,0,0,0,0,0,0,0,0,17,
 											 21,25,30,35,40,45,51,58,64,71,
 											 79,86,94,103,111,121,130,140,150,161,
@@ -18,20 +18,20 @@ x050028_g_BonusExp = { 0,0,0,0,0,0,0,0,0,17,
 											 1827,1863,1900,1937,1975,2012,2051,2089,2128,2167,
 											 2207,2247,2287,2328,2369,2410,2452,2494,2537,2579 }
                        
--- ½±ÀøµÄÎïÆ·          
+-- å¥–åŠ±çš„ç‰©å“          
 x050028_g_BonusItem = 30501106
-x050028_g_Name      = "Ç®Áú"
+x050028_g_Name      = "é’±é¾™"
 x050028_g_LowLevel  = 10
                        
-x050028_g_StartDayTime = 2008082010		-- »î¶¯¿ªÊ¼Ê±¼ä
-x050028_g_EndDayTime	 = 2008082709		-- »î¶¯½áÊøÊ±¼ä
+x050028_g_StartDayTime = 2008082010		-- æ´»åŠ¨å¼€å§‹æ—¶é—´
+x050028_g_EndDayTime	 = 2008082709		-- æ´»åŠ¨ç»“æŸæ—¶é—´
                        
 --**********************************
---ÁĞ¾ÙÊÂ¼ş             
+--åˆ—ä¸¾äº‹ä»¶             
 --**********************************
 function x050028_OnEnumerate( sceneId, selfId, targetId )	
                        
-	--ÅĞ¶Ï¸ÃnpcÊÇ·ñÊÇ¶ÔÓ¦ÈÎÎñµÄnpc
+	--åˆ¤æ–­è¯¥npcæ˜¯å¦æ˜¯å¯¹åº”ä»»åŠ¡çš„npc
 	if LuaFnGetName( sceneId, targetId ) ~= x050028_g_Name then
 		return 0           
 	end                  
@@ -59,7 +59,7 @@ function x050028_OnDefaultEvent( sceneId, selfId, targetId )
 		local nMonth = LuaFnGetThisMonth()
   	local nDay   = LuaFnGetDayOfThisMonth()
   	local curDayTime = nYear*10000+(nMonth+1)*100+nDay
-		local DayTime = GetMissionData( sceneId, selfId, MD_DAOJISHIDATI_YUANDAN_DAYTIME )				-- »ñµÃÉÏ´Î²Î¼Ó»î¶¯µÄÊ±¼ä
+		local DayTime = GetMissionData( sceneId, selfId, MD_DAOJISHIDATI_YUANDAN_DAYTIME )				-- è·å¾—ä¸Šæ¬¡å‚åŠ æ´»åŠ¨çš„æ—¶é—´
 		                   
 		if curDayTime == DayTime then
 			x050028_TalkMsg( sceneId, selfId, targetId, "#{YUANDAN_DATIINFO_004}" )	
@@ -73,7 +73,7 @@ function x050028_OnDefaultEvent( sceneId, selfId, targetId )
 		end                
 		
 		SetMissionData( sceneId, selfId, MD_DAOJISHIDATI_EXP, 0 )		               
-		--´ò¿ª´ğÌâ½çÃæ....	 	
+		--æ‰“å¼€ç­”é¢˜ç•Œé¢....	 	
 		CallScriptFunction( x050028_g_ExampleScriptId, "ShowQuizUI",sceneId, selfId, targetId )
 	elseif key == 146 then
 		x050028_TalkMsg( sceneId, selfId, targetId, "#{YUANDAN_DATIINFO_005}" )
@@ -85,7 +85,7 @@ function x050028_OnDefaultEvent( sceneId, selfId, targetId )
 end                    
                        
 --**********************************
---ÏûÏ¢ÌáÊ¾             
+--æ¶ˆæ¯æç¤º             
 --**********************************
 function x050028_MsgBox( sceneId, selfId, str )	
 	BeginEvent( sceneId )
@@ -95,7 +95,7 @@ function x050028_MsgBox( sceneId, selfId, str )
 end                    
                        
 --**********************************
---¶Ô»°ÌáÊ¾             
+--å¯¹è¯æç¤º             
 --**********************************
 function x050028_TalkMsg( sceneId, selfId, targetId, str )	
 	BeginEvent(sceneId)  
@@ -105,7 +105,7 @@ function x050028_TalkMsg( sceneId, selfId, targetId, str )
 end                    
                        
 --**********************************
---¼ì²â»î¶¯Ê±¼ä         
+--æ£€æµ‹æ´»åŠ¨æ—¶é—´         
 --**********************************
 function x050028_CheckHuoDongTime()
                        
@@ -137,7 +137,7 @@ function x050028_OnPlayerQuizFinish( sceneId, selfId )
 	
 	LuaFnAddExp( sceneId, selfId, 2*playerexp )
 	
-	-- ¼ÇÂ¼½ñÌìÒÑ¾­×ö¹ı´ğÌâÈÎÎñÁË....	
+	-- è®°å½•ä»Šå¤©å·²ç»åšè¿‡ç­”é¢˜ä»»åŠ¡äº†....	
 	local nYear	 = LuaFnGetThisYear()
 	local nMonth = LuaFnGetThisMonth()
 	local nDay   = LuaFnGetDayOfThisMonth()

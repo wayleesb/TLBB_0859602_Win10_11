@@ -1,4 +1,4 @@
---Ïà¹ØµÄC£«£«´úÂëÔÚ¡°GMGameInterface_Script_Package¡±ÖĞ
+--ç›¸å…³çš„Cï¼‹ï¼‹ä»£ç åœ¨â€œGMGameInterface_Script_Packageâ€ä¸­
 
 local g_nItemSum = 0;
 
@@ -32,7 +32,7 @@ function SplitItem_OnEvent(event)
 		
 		this:Show();
 		
-		--ÉèÖÃÈ±Ê¡µÄ¹â±ê
+		--è®¾ç½®ç¼ºçœçš„å…‰æ ‡
 		SplitItem_Num:SetProperty("DefaultEditBox", "True");
 		
 		SplitItem_Update();
@@ -53,7 +53,7 @@ function SplitItem_Update()
 end
 
 --===============================================
--- µã»÷È·¶¨
+-- ç‚¹å‡»ç¡®å®š
 --===============================================
 function SplitItemAccept_Clicked()
 
@@ -71,7 +71,7 @@ end
 
 
 --===============================================
--- È¡Ïû
+-- å–æ¶ˆ
 --===============================================
 function SplitItemRefuse_Clicked()
 
@@ -82,14 +82,14 @@ end
 
 
 --===============================================
--- ÊäÈë¸Ä±ä
+-- è¾“å…¥æ”¹å˜
 --===============================================
 function SplitItem_ChangeNum()
 
 end
 
 --===============================================
--- ¸öÊı¼Ó1
+-- ä¸ªæ•°åŠ 1
 --===============================================
 function SplitItemAdd_Clicked()
 	
@@ -105,7 +105,7 @@ function SplitItemAdd_Clicked()
 end
 
 --===============================================
--- ¸öÊı¼õ1
+-- ä¸ªæ•°å‡1
 --===============================================
 function SplitItemDecrease_Clicked()
 	

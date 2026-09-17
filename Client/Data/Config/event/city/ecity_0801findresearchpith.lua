@@ -1,31 +1,31 @@
 --MisDescBegin
 x600041_g_ScriptId	= 600041
 x600041_g_MissionId	= 1113
-x600041_g_Name			= "Ö£ÎŞÃû"
+x600041_g_Name			= "éƒ‘æ— å"
 x600041_g_MissionLevel					= 10000
 x600041_g_MissionKind						= 50
 x600041_g_IfMissionElite				= 0
-x600041_g_IsMissionOkFail				= 0	--0 ÈÎÎñÍê³É±ê¼Ç
-x600041_g_MissionParam_SubId		= 1	--1 ×ÓÈÎÎñ½Å±¾ºÅ´æ·ÅÎ»ÖÃ
-x600041_g_MissionParam_Phase		= 2	--2 ½×¶ÎºÅ ´ËºÅÓÃÓÚÇø·Öµ±Ç°ÈÎÎñUIµÄÃèÊöĞÅÏ¢
-x600041_g_MissionParam_NpcId		= 3	--3 ÈÎÎñ NPC µÄ NPCId ºÅ
-x600041_g_MissionParam_ItemId		= 4	--4 ÈÎÎñÎïÆ·µÄ±àºÅ
-x600041_g_MissionParam_MonsterId= 5	--5 ÈÎÎñ Monster µÄ NPCId ºÅ
-x600041_g_MissionParam_IsCarrier= 6	--6 ÊÇ·ñÓĞËÍĞÅÈÎÎñ
+x600041_g_IsMissionOkFail				= 0	--0 ä»»åŠ¡å®Œæˆæ ‡è®°
+x600041_g_MissionParam_SubId		= 1	--1 å­ä»»åŠ¡è„šæœ¬å·å­˜æ”¾ä½ç½®
+x600041_g_MissionParam_Phase		= 2	--2 é˜¶æ®µå· æ­¤å·ç”¨äºåŒºåˆ†å½“å‰ä»»åŠ¡UIçš„æè¿°ä¿¡æ¯
+x600041_g_MissionParam_NpcId		= 3	--3 ä»»åŠ¡ NPC çš„ NPCId å·
+x600041_g_MissionParam_ItemId		= 4	--4 ä»»åŠ¡ç‰©å“çš„ç¼–å·
+x600041_g_MissionParam_MonsterId= 5	--5 ä»»åŠ¡ Monster çš„ NPCId å·
+x600041_g_MissionParam_IsCarrier= 6	--6 æ˜¯å¦æœ‰é€ä¿¡ä»»åŠ¡
 x600041_g_MissionRound					= 61
-x600041_g_MissionName			= "ÑĞ¾¿ÈÎÎñ"
-x600041_g_MissionInfo			= "³ÇÊĞÄÚÕş£­ÑĞ¾¿ÈÎÎñ"									--ÈÎÎñÃèÊö
-x600041_g_MissionTarget		= "%f"																	--ÈÎÎñÄ¿±ê
-x600041_g_ContinueInfo		= "    ÄãµÄÈÎÎñ»¹Ã»ÓĞÍê³ÉÃ´£¿"					--Î´Íê³ÉÈÎÎñµÄnpc¶Ô»°
-x600041_g_SubmitInfo			= "    ÊÂÇé½øÕ¹µÃÈçºÎ£¿"								--Íê³ÉÎ´Ìá½»Ê±µÄnpc¶Ô»°
-x600041_g_MissionComplete	= "    ÉõºÃÉõºÃ£¬ÑĞ¾¿½ø¶ÈÓÖ¼Ó¿ìÁË²»ÉÙ¡£"--Íê³ÉÈÎÎñnpcËµ»°µÄ»°
+x600041_g_MissionName			= "ç ”ç©¶ä»»åŠ¡"
+x600041_g_MissionInfo			= "åŸå¸‚å†…æ”¿ï¼ç ”ç©¶ä»»åŠ¡"									--ä»»åŠ¡æè¿°
+x600041_g_MissionTarget		= "%f"																	--ä»»åŠ¡ç›®æ ‡
+x600041_g_ContinueInfo		= "    ä½ çš„ä»»åŠ¡è¿˜æ²¡æœ‰å®Œæˆä¹ˆï¼Ÿ"					--æœªå®Œæˆä»»åŠ¡çš„npcå¯¹è¯
+x600041_g_SubmitInfo			= "    äº‹æƒ…è¿›å±•å¾—å¦‚ä½•ï¼Ÿ"								--å®Œæˆæœªæäº¤æ—¶çš„npcå¯¹è¯
+x600041_g_MissionComplete	= "    ç”šå¥½ç”šå¥½ï¼Œç ”ç©¶è¿›åº¦åˆåŠ å¿«äº†ä¸å°‘ã€‚"--å®Œæˆä»»åŠ¡npcè¯´è¯çš„è¯
 x600041_g_Parameter_Item_IDRandom = { { id = 4, num = 1 } }
 x600041_g_StrForePart			= 2
 x600041_g_FormatList			= {
 "",
-"    ÃÜĞÅÔ»£º³ÊÎáÓÑ¹ó°ïÊ×Áì£¬ËùËÍÀ´µÄ%2iÒÑÊÕµ½£¬¹ºÈëÖ®ÒøÁ½Ëæºó·îÉÏ¡£Îáµ±¾²ºò´ó¼İÀ´È¡¡£ÓÑ£º%1n¶ÙÊ×¡£",	--1 ÊÕÌõÊéĞÅ
-"    ÕÒµ½%3n¶á»Ø%2i¡£",					--2 Ñ°ÕÒÑĞ¾¿ÒªÊõ
-"    ½«%2i½»»¹¸ø°ï»á´ó×Ü¹Ü¡£"		--3 ËÍ»¹
+"    å¯†ä¿¡æ›°ï¼šå‘ˆå¾å‹è´µå¸®é¦–é¢†ï¼Œæ‰€é€æ¥çš„%2iå·²æ”¶åˆ°ï¼Œè´­å…¥ä¹‹é“¶ä¸¤éšåå¥‰ä¸Šã€‚å¾å½“é™å€™å¤§é©¾æ¥å–ã€‚å‹ï¼š%1né¡¿é¦–ã€‚",	--1 æ”¶æ¡ä¹¦ä¿¡
+"    æ‰¾åˆ°%3nå¤ºå›%2iã€‚",					--2 å¯»æ‰¾ç ”ç©¶è¦æœ¯
+"    å°†%2iäº¤è¿˜ç»™å¸®ä¼šå¤§æ€»ç®¡ã€‚"		--3 é€è¿˜
 }
 x600041_g_CityMissionScript	= 600001
 x600041_g_ConstructionScript= 600040

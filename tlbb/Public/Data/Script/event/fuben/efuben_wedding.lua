@@ -1,27 +1,27 @@
---»éÇì¸±±¾
+--å©šåº†å‰¯æœ¬
 
-x401030_g_ScriptId = 401030;				-- ½Å±¾ºÅ
+x401030_g_ScriptId = 401030;				-- è„šæœ¬å·
 
-x401030_g_CopySceneName = "»éÇìµäÀñ";		-- ¸±±¾Ãû³Æ
-x401030_g_CopySceneType = FUBEN_WEDDING;	-- ¸±±¾ÀàĞÍ£¬¶¨ÒåÔÚScriptGlobal.luaÀïÃæ
-x401030_g_TickElapse = 5;					-- »Øµ÷½Å±¾µÄÊ±ÖÓÊ±¼ä£¨µ¥Î»£ºÃë/´Î£©
-x401030_g_LimitTickCount = 500;				-- ¸±±¾ĞÄÌø´ÎÊıÏŞÖÆ£¨µ¥Î»£º´ÎÊı£©
-x401030_g_CloseTick = 6;					-- ¸±±¾¹Ø±ÕÇ°µ¹¼ÆÊ±ĞÄÌø´ÎÊı£¨µ¥Î»£º´ÎÊı£©
-x401030_g_NoUserTime = 300;					-- ¸±±¾ÖĞÃ»ÓĞÈËºó¿ÉÒÔ¼ÌĞø±£´æµÄÊ±¼ä£¨µ¥Î»£ºÃë£©
-x401030_g_Fuben_X = 40;						-- ½ø¸±±¾µÄÎ»ÖÃX
-x401030_g_Fuben_Z = 45;						-- ½ø¸±±¾µÄÎ»ÖÃZ
-x401030_g_Back_X = 175;						-- ³ö¸±±¾µÄÎ»ÖÃX
-x401030_g_Back_Z = 95;						-- ³ö¸±±¾µÄÎ»ÖÃZ
+x401030_g_CopySceneName = "å©šåº†å…¸ç¤¼";		-- å‰¯æœ¬åç§°
+x401030_g_CopySceneType = FUBEN_WEDDING;	-- å‰¯æœ¬ç±»å‹ï¼Œå®šä¹‰åœ¨ScriptGlobal.luaé‡Œé¢
+x401030_g_TickElapse = 5;					-- å›è°ƒè„šæœ¬çš„æ—¶é’Ÿæ—¶é—´ï¼ˆå•ä½ï¼šç§’/æ¬¡ï¼‰
+x401030_g_LimitTickCount = 500;				-- å‰¯æœ¬å¿ƒè·³æ¬¡æ•°é™åˆ¶ï¼ˆå•ä½ï¼šæ¬¡æ•°ï¼‰
+x401030_g_CloseTick = 6;					-- å‰¯æœ¬å…³é—­å‰å€’è®¡æ—¶å¿ƒè·³æ¬¡æ•°ï¼ˆå•ä½ï¼šæ¬¡æ•°ï¼‰
+x401030_g_NoUserTime = 300;					-- å‰¯æœ¬ä¸­æ²¡æœ‰äººåå¯ä»¥ç»§ç»­ä¿å­˜çš„æ—¶é—´ï¼ˆå•ä½ï¼šç§’ï¼‰
+x401030_g_Fuben_X = 40;						-- è¿›å‰¯æœ¬çš„ä½ç½®X
+x401030_g_Fuben_Z = 45;						-- è¿›å‰¯æœ¬çš„ä½ç½®Z
+x401030_g_Back_X = 175;						-- å‡ºå‰¯æœ¬çš„ä½ç½®X
+x401030_g_Back_Z = 95;						-- å‡ºå‰¯æœ¬çš„ä½ç½®Z
 
-x401030_g_closeEventNotifyText_minute = "³¡¾°½«ÔÚ%d·ÖÖÓºó¹Ø±Õ!";
-x401030_g_closeEventNotifyText_second = "Äã½«ÔÚ%dÃëºóÀë¿ª³¡¾°!";
+x401030_g_closeEventNotifyText_minute = "åœºæ™¯å°†åœ¨%dåˆ†é’Ÿåå…³é—­!";
+x401030_g_closeEventNotifyText_second = "ä½ å°†åœ¨%dç§’åç¦»å¼€åœºæ™¯!";
 
-x401030_g_invitationDataId_level1  = 30303100;		-- ÆÕÍ¨ÇëÌûID
-x401030_g_invitationDataId_level2  = 30303101;		-- ¸ß¼¶ÇëÌûID
-x401030_g_invitationDataId_level3  = 30303102;		-- ºÀ»ªÇëÌûID
+x401030_g_invitationDataId_level1  = 30303100;		-- æ™®é€šè¯·å¸–ID
+x401030_g_invitationDataId_level2  = 30303101;		-- é«˜çº§è¯·å¸–ID
+x401030_g_invitationDataId_level3  = 30303102;		-- è±ªåè¯·å¸–ID
 
 --**********************************
---´´½¨º¯Êı
+--åˆ›å»ºå‡½æ•°
 --**********************************
 function x401030_Create(sceneId, selfId, marryTargetId, weddingLevel)
 
@@ -55,27 +55,27 @@ function x401030_Create(sceneId, selfId, marryTargetId, weddingLevel)
 	LuaFnSetCopySceneData_TeamLeader(sceneId, selfGUID);
 	LuaFnSetCopySceneData_NoUserCloseTime(sceneId, x401030_g_NoUserTime * 1000);
 	LuaFnSetCopySceneData_Timer(sceneId, x401030_g_TickElapse * 1000);
-	LuaFnSetCopySceneData_Param(sceneId, 0, x401030_g_CopySceneType);				--ÉèÖÃ¸±±¾Êı¾İ£¬ÕâÀï½«0ºÅË÷ÒıµÄÊı¾İÉèÖÃÎª999£¬ÓÃÓÚ±íÊ¾¸±±¾ºÅ999(Êı×Ö×Ô¶¨Òå)
-	LuaFnSetCopySceneData_Param(sceneId, 1, x401030_g_ScriptId);					--½«1ºÅÊı¾İÉèÖÃÎª¸±±¾³¡¾°ÊÂ¼ş½Å±¾ºÅ
-	LuaFnSetCopySceneData_Param(sceneId, 2, 0);										--ÉèÖÃ¶¨Ê±Æ÷µ÷ÓÃ´ÎÊı
-	LuaFnSetCopySceneData_Param(sceneId, 3, -1);									--ÉèÖÃ¸±±¾Èë¿Ú³¡¾°ºÅ, ³õÊ¼»¯
-	LuaFnSetCopySceneData_Param(sceneId, 4, 0);										--ÉèÖÃ¸±±¾¹Ø±Õ±êÖ¾, 0¿ª·Å£¬1¹Ø±Õ
-	LuaFnSetCopySceneData_Param(sceneId, 5, 0);										--ÉèÖÃÀë¿ªµ¹¼ÆÊ±´ÎÊı
-	LuaFnSetCopySceneData_Param(sceneId, 6, selfGUID);								--ÉèÖÃÄĞÖ÷ÈËµÄGUID
-	LuaFnSetCopySceneData_Param(sceneId, 7, marryTargetGUID);							--ÉèÖÃÅ®Ö÷ÈËµÄGUID
-	LuaFnSetCopySceneData_Param(sceneId, 8, weddingLevel);							--»éÇìµäÀñ¼¶±ğ
-	LuaFnSetCopySceneData_Param(sceneId, CopyScene_LevelGap, 0);					--¼¶±ğ²î£¬CopyScene_LevelGap ÔÚ scene.lua ÖĞ¸³Öµ
+	LuaFnSetCopySceneData_Param(sceneId, 0, x401030_g_CopySceneType);				--è®¾ç½®å‰¯æœ¬æ•°æ®ï¼Œè¿™é‡Œå°†0å·ç´¢å¼•çš„æ•°æ®è®¾ç½®ä¸º999ï¼Œç”¨äºè¡¨ç¤ºå‰¯æœ¬å·999(æ•°å­—è‡ªå®šä¹‰)
+	LuaFnSetCopySceneData_Param(sceneId, 1, x401030_g_ScriptId);					--å°†1å·æ•°æ®è®¾ç½®ä¸ºå‰¯æœ¬åœºæ™¯äº‹ä»¶è„šæœ¬å·
+	LuaFnSetCopySceneData_Param(sceneId, 2, 0);										--è®¾ç½®å®šæ—¶å™¨è°ƒç”¨æ¬¡æ•°
+	LuaFnSetCopySceneData_Param(sceneId, 3, -1);									--è®¾ç½®å‰¯æœ¬å…¥å£åœºæ™¯å·, åˆå§‹åŒ–
+	LuaFnSetCopySceneData_Param(sceneId, 4, 0);										--è®¾ç½®å‰¯æœ¬å…³é—­æ ‡å¿—, 0å¼€æ”¾ï¼Œ1å…³é—­
+	LuaFnSetCopySceneData_Param(sceneId, 5, 0);										--è®¾ç½®ç¦»å¼€å€’è®¡æ—¶æ¬¡æ•°
+	LuaFnSetCopySceneData_Param(sceneId, 6, selfGUID);								--è®¾ç½®ç”·ä¸»äººçš„GUID
+	LuaFnSetCopySceneData_Param(sceneId, 7, marryTargetGUID);							--è®¾ç½®å¥³ä¸»äººçš„GUID
+	LuaFnSetCopySceneData_Param(sceneId, 8, weddingLevel);							--å©šåº†å…¸ç¤¼çº§åˆ«
+	LuaFnSetCopySceneData_Param(sceneId, CopyScene_LevelGap, 0);					--çº§åˆ«å·®ï¼ŒCopyScene_LevelGap åœ¨ scene.lua ä¸­èµ‹å€¼
 
-	local bRetSceneID = LuaFnCreateCopyScene(sceneId);								--³õÊ¼»¯Íê³Éºóµ÷ÓÃ´´½¨¸±±¾º¯Êı
+	local bRetSceneID = LuaFnCreateCopyScene(sceneId);								--åˆå§‹åŒ–å®Œæˆåè°ƒç”¨åˆ›å»ºå‰¯æœ¬å‡½æ•°
 	if bRetSceneID > 0 then
-		x401030_NotifyTips(sceneId, selfId, "¸±±¾´´½¨³É¹¦£¡");
+		x401030_NotifyTips(sceneId, selfId, "å‰¯æœ¬åˆ›å»ºæˆåŠŸï¼");
 	else
-		x401030_NotifyTips(sceneId, selfId, "¸±±¾ÊıÁ¿ÒÑ´ïÉÏÏŞ£¬ÇëÉÔºòÔÙÊÔ£¡");
+		x401030_NotifyTips(sceneId, selfId, "å‰¯æœ¬æ•°é‡å·²è¾¾ä¸Šé™ï¼Œè¯·ç¨å€™å†è¯•ï¼");
 	end
 end
 
 --**********************************
---´´½¨º¯Êı
+--åˆ›å»ºå‡½æ•°
 --**********************************
 function x401030_Close(sceneId, selfId)
 	local selfGUID = LuaFnGetGUID(sceneId, selfId);
@@ -99,15 +99,15 @@ function x401030_Close(sceneId, selfId)
 		local tempParam = LuaFnGetCopySceneData_Param(sceneId, 4);
 		if tempParam == 0 then
 			LuaFnSetCopySceneData_Param(sceneId, 4, 1);
-			BroadMsgByChatPipe(sceneId, selfId, "»éÀñÒÑ¾­¾ÙĞĞÍê±Ï£¬³¡¾°¼´½«¹Ø±Õ£¬Çë´ó¼ÒËÙ¶ÈÀë¿ª£¬Ğ»Ğ»´ó¼ÒµÄ²ÎÓë£¡", 2);
+			BroadMsgByChatPipe(sceneId, selfId, "å©šç¤¼å·²ç»ä¸¾è¡Œå®Œæ¯•ï¼Œåœºæ™¯å³å°†å…³é—­ï¼Œè¯·å¤§å®¶é€Ÿåº¦ç¦»å¼€ï¼Œè°¢è°¢å¤§å®¶çš„å‚ä¸ï¼", 2);
 		end
 	end
 end
 
 --**********************************************************
---Íæ¼Ò½øÈë¸±±¾
---selfId		:	Òª½øÈë¸±±¾µÄÍæ¼ÒID
---targetGUID	:	½øÈëË­µÄ¸±±¾£¨ÄĞ»òÅ®Ö÷½ÇµÄGUID£©
+--ç©å®¶è¿›å…¥å‰¯æœ¬
+--selfId		:	è¦è¿›å…¥å‰¯æœ¬çš„ç©å®¶ID
+--targetGUID	:	è¿›å…¥è°çš„å‰¯æœ¬ï¼ˆç”·æˆ–å¥³ä¸»è§’çš„GUIDï¼‰
 --**********************************************************
 function x401030_PlayerEnter(sceneId, selfId, targetId, targetGUID)
 	if targetGUID and selfId then
@@ -155,29 +155,29 @@ function x401030_PlayerEnter(sceneId, selfId, targetId, targetGUID)
 			if destSceneId and destSceneId >= 0 then
 				local leaveFlag = LuaFnGetCopySceneData_Param(destSceneId, 4);
 				if leaveFlag == 1 then
-					x401030_MessageBox(sceneId, selfId, targetId, "¶Ô²»Æğ£¬ÄúËùÇëÇó½øÈëµÄÀñÌÃÕıÔÚ¹Ø±ÕÖ®ÖĞ¡£");
+					x401030_MessageBox(sceneId, selfId, targetId, "å¯¹ä¸èµ·ï¼Œæ‚¨æ‰€è¯·æ±‚è¿›å…¥çš„ç¤¼å ‚æ­£åœ¨å…³é—­ä¹‹ä¸­ã€‚");
 				else
 					NewWorld(sceneId, selfId, destSceneId, x401030_g_Fuben_X, x401030_g_Fuben_Z);
 					return 1;
 				end
 			else
-				x401030_MessageBox(sceneId, selfId, targetId, "¶Ô²»Æğ£¬ÏÖÔÚÃ»ÓĞ¸øÄú·¢ÌùµÄÈËµÄ»éÀñ¡£");
+				x401030_MessageBox(sceneId, selfId, targetId, "å¯¹ä¸èµ·ï¼Œç°åœ¨æ²¡æœ‰ç»™æ‚¨å‘è´´çš„äººçš„å©šç¤¼ã€‚");
 			end
 		else
-			x401030_MessageBox(sceneId, selfId, targetId, "¶Ô²»Æğ£¬ÏÖÔÚÃ»ÓĞ¸øÄú·¢ÌùµÄÈËµÄ»éÀñ¡£");
+			x401030_MessageBox(sceneId, selfId, targetId, "å¯¹ä¸èµ·ï¼Œç°åœ¨æ²¡æœ‰ç»™æ‚¨å‘è´´çš„äººçš„å©šç¤¼ã€‚");
 		end
 	end
 	return 0;
 end
 
 --**********************************
---Íæ¼ÒÍË³ö¸±±¾
+--ç©å®¶é€€å‡ºå‰¯æœ¬
 --**********************************
 function x401030_PlayerExit(sceneId, selfId)
 	if selfId then
-		local oldsceneId = LuaFnGetCopySceneData_Param(sceneId, 3);		--È¡µÃ¸±±¾Èë¿Ú³¡¾°ºÅ
+		local oldsceneId = LuaFnGetCopySceneData_Param(sceneId, 3);		--å–å¾—å‰¯æœ¬å…¥å£åœºæ™¯å·
 		
-		--½«µ±Ç°¸±±¾³¡¾°ÀïµÄËùÓĞÈË´«ËÍ»ØÔ­À´½øÈëÊ±ºòµÄ³¡¾°
+		--å°†å½“å‰å‰¯æœ¬åœºæ™¯é‡Œçš„æ‰€æœ‰äººä¼ é€å›åŸæ¥è¿›å…¥æ—¶å€™çš„åœºæ™¯
 		local membercount = LuaFnGetCopyScene_HumanCount(sceneId);
 		local memId;
 		for	i = 0, membercount - 1 do
@@ -191,11 +191,11 @@ function x401030_PlayerExit(sceneId, selfId)
 end
 
 --**********************************
---¸±±¾ÊÂ¼ş
+--å‰¯æœ¬äº‹ä»¶
 --**********************************
 function x401030_OnCopySceneReady(sceneId, destSceneId)
 
-	LuaFnSetCopySceneData_Param(destSceneId, 3, sceneId);			--ÉèÖÃ¸±±¾Èë¿Ú³¡¾°ºÅ
+	LuaFnSetCopySceneData_Param(destSceneId, 3, sceneId);			--è®¾ç½®å‰¯æœ¬å…¥å£åœºæ™¯å·
 	
 	local selfGUID  = LuaFnGetCopySceneData_Param(destSceneId, 6);
 	local marryTargetGUID  = LuaFnGetCopySceneData_Param(destSceneId, 7);
@@ -238,42 +238,42 @@ function x401030_OnCopySceneReady(sceneId, destSceneId)
 end
 
 --**********************************
---ÓĞÍæ¼Ò½øÈë¸±±¾ÊÂ¼ş
+--æœ‰ç©å®¶è¿›å…¥å‰¯æœ¬äº‹ä»¶
 --**********************************
 function x401030_OnPlayerEnter(sceneId, selfId)
 end
 
 --**********************************
---ÓĞÍæ¼ÒÔÚ¸±±¾ÖĞËÀÍöÊÂ¼ş
+--æœ‰ç©å®¶åœ¨å‰¯æœ¬ä¸­æ­»äº¡äº‹ä»¶
 --**********************************
 function x401030_OnHumanDie(sceneId, selfId, killerId)
 end
 
 --**********************************
---¸±±¾³¡¾°¶¨Ê±Æ÷ÊÂ¼ş
+--å‰¯æœ¬åœºæ™¯å®šæ—¶å™¨äº‹ä»¶
 --**********************************
 function x401030_OnCopySceneTimer(sceneId, nowTime)
 	
-	--¸±±¾Ê±ÖÓ¶ÁÈ¡¼°ÉèÖÃ
-	local tickCount = LuaFnGetCopySceneData_Param(sceneId, 2);	--È¡µÃÒÑ¾­Ö´ĞĞµÄ¶¨Ê±´ÎÊı
+	--å‰¯æœ¬æ—¶é’Ÿè¯»å–åŠè®¾ç½®
+	local tickCount = LuaFnGetCopySceneData_Param(sceneId, 2);	--å–å¾—å·²ç»æ‰§è¡Œçš„å®šæ—¶æ¬¡æ•°
 	tickCount = tickCount + 1;
-	LuaFnSetCopySceneData_Param(sceneId, 2, tickCount);		--ÉèÖÃĞÂµÄ¶¨Ê±Æ÷µ÷ÓÃ´ÎÊı
+	LuaFnSetCopySceneData_Param(sceneId, 2, tickCount);		--è®¾ç½®æ–°çš„å®šæ—¶å™¨è°ƒç”¨æ¬¡æ•°
 		
-	--¸±±¾¹Ø±Õ±êÖ¾
+	--å‰¯æœ¬å…³é—­æ ‡å¿—
 	local leaveFlag = LuaFnGetCopySceneData_Param(sceneId, 4);
 	
-	if leaveFlag == 1 then --ĞèÒªÀë¿ª
+	if leaveFlag == 1 then --éœ€è¦ç¦»å¼€
 
-		--Àë¿ªµ¹¼ÆÊ±¼äµÄ¶ÁÈ¡ºÍÉèÖÃ
+		--ç¦»å¼€å€’è®¡æ—¶é—´çš„è¯»å–å’Œè®¾ç½®
 		local leaveTickCount = LuaFnGetCopySceneData_Param(sceneId, 5);
 		leaveTickCount = leaveTickCount + 1;
 		LuaFnSetCopySceneData_Param(sceneId, 5, leaveTickCount);
 		
-		if leaveTickCount > x401030_g_CloseTick or leaveTickCount == x401030_g_CloseTick then --µ¹¼ÆÊ±¼äµ½£¬´ó¼Ò¶¼³öÈ¥°É
+		if leaveTickCount > x401030_g_CloseTick or leaveTickCount == x401030_g_CloseTick then --å€’è®¡æ—¶é—´åˆ°ï¼Œå¤§å®¶éƒ½å‡ºå»å§
 		
-			oldsceneId = LuaFnGetCopySceneData_Param(sceneId, 3);--È¡µÃ¸±±¾Èë¿Ú³¡¾°ºÅ
+			oldsceneId = LuaFnGetCopySceneData_Param(sceneId, 3);--å–å¾—å‰¯æœ¬å…¥å£åœºæ™¯å·
 			
-			--½«µ±Ç°¸±±¾³¡¾°ÀïµÄËùÓĞÈË´«ËÍ»ØÔ­À´½øÈëÊ±ºòµÄ³¡¾°
+			--å°†å½“å‰å‰¯æœ¬åœºæ™¯é‡Œçš„æ‰€æœ‰äººä¼ é€å›åŸæ¥è¿›å…¥æ—¶å€™çš„åœºæ™¯
 			local membercount = LuaFnGetCopyScene_HumanCount(sceneId);
 			local mems = {};
 			for	i=0,membercount-1 do
@@ -283,9 +283,9 @@ function x401030_OnCopySceneTimer(sceneId, nowTime)
 			
 		elseif leaveTickCount < x401030_g_CloseTick then
 		
-			oldsceneId = LuaFnGetCopySceneData_Param(sceneId, 3);--È¡µÃ¸±±¾Èë¿Ú³¡¾°ºÅ
+			oldsceneId = LuaFnGetCopySceneData_Param(sceneId, 3);--å–å¾—å‰¯æœ¬å…¥å£åœºæ™¯å·
 
-			--Í¨Öªµ±Ç°¸±±¾³¡¾°ÀïµÄËùÓĞÈË£¬³¡¾°¹Ø±Õµ¹¼ÆÊ±¼ä
+			--é€šçŸ¥å½“å‰å‰¯æœ¬åœºæ™¯é‡Œçš„æ‰€æœ‰äººï¼Œåœºæ™¯å…³é—­å€’è®¡æ—¶é—´
 			local membercount = LuaFnGetCopyScene_HumanCount(sceneId);
 			local mems = {};
 	  		local strText = format(x401030_g_closeEventNotifyText_second, (x401030_g_CloseTick-leaveTickCount)*x401030_g_TickElapse);
@@ -333,7 +333,7 @@ function x401030_NotifyTips(sceneId, selfId, tipText)
 end
 
 --**********************************
---¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+--å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x401030_MessageBox(sceneId, selfId, targetId, msg)
 	BeginEvent(sceneId);

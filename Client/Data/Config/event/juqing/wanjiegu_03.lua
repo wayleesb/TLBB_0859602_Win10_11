@@ -2,16 +2,16 @@
 x200003_g_ScriptId = 200003
 x200003_g_MissionId = 3
 x200003_g_PreMissionId = 2
-x200003_g_Name	="ÖÓÁé"
-x200003_g_Name1 ="Íò½Ù¹ÈÊ¯¸Òµ±"
+x200003_g_Name	="é’Ÿçµ"
+x200003_g_Name1 ="ä¸‡åŠ«è°·çŸ³æ•¢å½“"
 x200003_g_MissionKind = 51
 x200003_g_MissionLevel = 20
 x200003_g_IfMissionElite = 0
-x200003_g_MissionName="Î¢Ğ¦Ö®ÂÃ"
+x200003_g_MissionName="å¾®ç¬‘ä¹‹æ—…"
 x200003_g_MissionInfo="#{Mis_juqing_0003}"
 x200003_g_MissionTarget="#{Mis_juqing_Tar_0003}"		
-x200003_g_MissionComplete="  <ÄãÔÚÕâ×ùÃÜ²»Í¸·çµÄÊ¯ÎİµÄÇ°±ßÕÒµ½Ò»¸öÊ¯¸Òµ±£¬´ÓÊ¯¸Òµ±ÅÔ±ßµÄ·ìÏ¶Àï¿ÉÒÔÌıµ½¶ÎÓşµÄÉùÒô¡£>"		
+x200003_g_MissionComplete="  <ä½ åœ¨è¿™åº§å¯†ä¸é€é£çš„çŸ³å±‹çš„å‰è¾¹æ‰¾åˆ°ä¸€ä¸ªçŸ³æ•¢å½“ï¼Œä»çŸ³æ•¢å½“æ—è¾¹çš„ç¼éš™é‡Œå¯ä»¥å¬åˆ°æ®µèª‰çš„å£°éŸ³ã€‚>"		
 x200003_g_MoneyBonus=100
 x200003_g_exp=5600
-x200003_g_Custom	= { {id="ÒÑ»¤ËÍÖÓÁé",num=1} }
+x200003_g_Custom	= { {id="å·²æŠ¤é€é’Ÿçµ",num=1} }
 --MisDescEnd

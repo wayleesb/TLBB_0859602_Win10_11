@@ -1,32 +1,32 @@
---Æó¶ìÍõBOSSË¢ĞÂ¹«¸æ
+--ä¼é¹…ç‹BOSSåˆ·æ–°å…¬å‘Š
 
---½Å±¾±àºÅ
+--è„šæœ¬ç¼–å·
 x502003_g_ScriptId	= 502003
 
 --**********************************
 --Monster Timer
 --**********************************
 function x502003_OnCharacterTimer( sceneId, objId, dataId, uTime )
-	--È«Çò¹«¸æ
+	--å…¨çƒå…¬å‘Š
 	local	nam_mob	= GetName( sceneId, objId )
 	if nam_mob ~= nil then
-		str	= format( "#GÒø°¨Ñ©Ô­#PÕæÕıµÄÖ÷ÈË£¬Î°´óµÄ#{_BOSS42}#P£¬ÒÑ¾­»ÓÎè×ÅÈ¨ÕÈ³öÏÖÔÚËüµÄÁìÍÁÉÏÁË£¡", nam_mob )
+		str	= format( "#Gé“¶çš‘é›ªåŸ#PçœŸæ­£çš„ä¸»äººï¼Œä¼Ÿå¤§çš„#{_BOSS42}#Pï¼Œå·²ç»æŒ¥èˆç€æƒæ–å‡ºç°åœ¨å®ƒçš„é¢†åœŸä¸Šäº†ï¼", nam_mob )
 		AddGlobalCountNews( sceneId, str )
 	end
 
-	--È¡ÏûÊ±ÖÓ
+	--å–æ¶ˆæ—¶é’Ÿ
 	SetCharacterTimer( sceneId, objId, 0 )
 end
 
 --**********************************
---ËÀÍöÊÂ¼ş
+--æ­»äº¡äº‹ä»¶
 --**********************************
 function x502003_OnDie( sceneId, objId, killerId )
-	--È«Çò¹«¸æ
+	--å…¨çƒå…¬å‘Š
 	--local	nam_mob	= GetName( sceneId, objId )
 	--local	nam_ply	= GetName( sceneId, killerId )
 	--if nam_mob ~= nil and nam_ply ~= nil then
-		--str	= format( "#P¾­¹ı#W#{_INFOUSR%s}#PºÍÆä¶ÓÎéµÄÒ»·¬¿àÕ½£¬#G%s#PÖÕÓÚ±»´ò°ÜÁË¡£", nam_ply, nam_mob )
+		--str	= format( "#Pç»è¿‡#W#{_INFOUSR%s}#På’Œå…¶é˜Ÿä¼çš„ä¸€ç•ªè‹¦æˆ˜ï¼Œ#G%s#Pç»ˆäºè¢«æ‰“è´¥äº†ã€‚", nam_ply, nam_mob )
 		--AddGlobalCountNews( sceneId, str )
 	--end
 end

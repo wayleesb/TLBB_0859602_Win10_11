@@ -6,11 +6,11 @@
 
 -------------------------------------------------------------------------------------------------------
 --
--- ×¢²áÊÂ¼ş
+-- æ³¨å†Œäº‹ä»¶
 --
 function ChangeMinorPassword_PreLoad()
 	
-	-- ´ò¿ª½çÃæ
+	-- æ‰“å¼€ç•Œé¢
 	this:RegisterEvent("MINORPASSWORD_OPEN_CHANGE_PASSWORD_DLG");
 	this:RegisterEvent("MINORPASSWORD_CLEAR_PASSWORD_DLG");
 end
@@ -45,22 +45,22 @@ end
 
 -------------------------------------------------------------------------------------------------------
 --
--- µã»÷È·ÈÏÉèÖÃ¶ş¼¶±£»¤ÃÜÂë°´Å¥¡£
+-- ç‚¹å‡»ç¡®è®¤è®¾ç½®äºŒçº§ä¿æŠ¤å¯†ç æŒ‰é’®ã€‚
 --
 function ChangeMinorPassword_SetPassword()
 	
-	-- ¾ÉµÄÃÜÂë
+	-- æ—§çš„å¯†ç 
 	local strPasswordOld = ChangeMinorPassword_EditBox1:GetText();
 	
-	-- ĞÂµÄÃÜÂë¡£
+	-- æ–°çš„å¯†ç ã€‚
 	local strPassword1 = ChangeMinorPassword_EditBox2:GetText(); 
 	local strPassword2 = ChangeMinorPassword_EditBox3:GetText();
 
 	
-	-- Èç¹ûÃÜÂë²»Ò»ÖÂ
+	-- å¦‚æœå¯†ç ä¸ä¸€è‡´
 	if(strPassword1 ~= strPassword2) then
 	
-		ShowSystemTipInfo("ÃÜÂëÊäÈë²»Ò»ÖÂ£¡")
+		ShowSystemTipInfo("å¯†ç è¾“å…¥ä¸ä¸€è‡´ï¼")
 		
 		ChangeMinorPassword_EditBox1:SetText("");
 		ChangeMinorPassword_EditBox2:SetText(""); 
@@ -73,17 +73,17 @@ function ChangeMinorPassword_SetPassword()
 	local iLenNew = string.len(strPassword1);
 	if(iLenOld < 4) then
 	
-		ShowSystemTipInfo("¾ÉÃÜÂë²»ÄÜÉÙÓÚ4¸ö×Ö·û£¡");
+		ShowSystemTipInfo("æ—§å¯†ç ä¸èƒ½å°‘äº4ä¸ªå­—ç¬¦ï¼");
 		return;
 	end;
 	
 	if(iLenNew < 4) then
 	
-		ShowSystemTipInfo("ĞÂÃÜÂë²»ÄÜÉÙÓÚ4¸ö×Ö·û£¡");
+		ShowSystemTipInfo("æ–°å¯†ç ä¸èƒ½å°‘äº4ä¸ªå­—ç¬¦ï¼");
 		return;
 	end;
 
-	-- Èç¹ûÃÜÂëÒ»ÖÂ¡£·¢ËÍ¸Ä±äÃÜÂëÏûÏ¢¡£
+	-- å¦‚æœå¯†ç ä¸€è‡´ã€‚å‘é€æ”¹å˜å¯†ç æ¶ˆæ¯ã€‚
 	ModifyMinorPassword(strPasswordOld, strPassword1);
 	
 	this:Hide();
@@ -93,19 +93,19 @@ end
 
 -------------------------------------------------------------------------------------------------------
 --
--- µã»÷È¡ÏûÉèÖÃ¶ş¼¶±£»¤ÃÜÂë°´Å¥¡£
+-- ç‚¹å‡»å–æ¶ˆè®¾ç½®äºŒçº§ä¿æŠ¤å¯†ç æŒ‰é’®ã€‚
 --
 function ChangeMinorPassword_Cancel()
 	CloseWindow( "SoftKeyBoard" );
  	this:Hide();
  	
- 	-- ´ò¿ª½âËø¶Ô»°¿ò¡£ ²âÊÔ¡£
+ 	-- æ‰“å¼€è§£é”å¯¹è¯æ¡†ã€‚ æµ‹è¯•ã€‚
  	--OpenUnLockeMinorPasswordDlg();
 end;
 
 -------------------------------------------------------------------------------------------------------
 --
--- µã»÷°ïÖú°´Å¥
+-- ç‚¹å‡»å¸®åŠ©æŒ‰é’®
 --
 function ChangeMinorPassword_Help()
 
@@ -114,14 +114,14 @@ end;
 
 -------------------------------------------------------------------------------------------------------
 --
--- Çå¿ÕÃÜÂë
+-- æ¸…ç©ºå¯†ç 
 --
 function ClearPassword_Box()
 
-	-- ¾ÉµÄÃÜÂë
+	-- æ—§çš„å¯†ç 
 	ChangeMinorPassword_EditBox1:SetText("");
 	
-	-- ĞÂµÄÃÜÂë¡£
+	-- æ–°çš„å¯†ç ã€‚
 	ChangeMinorPassword_EditBox2:SetText(""); 
 	ChangeMinorPassword_EditBox3:SetText("");
 	

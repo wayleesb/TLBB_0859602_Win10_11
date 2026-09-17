@@ -1,8 +1,8 @@
 
-local cooldownTime = 15*1000;		--½áÊ¶µÄÀäÈ´Ê±¼ä
-local pageCoolDownTime = 5*1000;	--·­Ò³ÀäÈ´Ê±¼ä£¬·­Ò³ÏûºÄ½Ï´ó
+local cooldownTime = 15*1000;		--ç»“è¯†çš„å†·å´æ—¶é—´
+local pageCoolDownTime = 5*1000;	--ç¿»é¡µå†·å´æ—¶é—´ï¼Œç¿»é¡µæ¶ˆè€—è¾ƒå¤§
 local PET_AITYPE = {};
-local FlashTextHeader = "#ecc33cc#cffcccc";		--µ÷½ÚÕâ¸öÀ´¿ØÖÆÎÄ×ÖÑÕÉ«ºÍÉÁË¸
+local FlashTextHeader = "#ecc33cc#cffcccc";		--è°ƒèŠ‚è¿™ä¸ªæ¥æ§åˆ¶æ–‡å­—é¢œè‰²å’Œé—ªçƒ
 local showWindowFlag = false;
 local listflag = 0;
 local showPrevPage = true;
@@ -15,11 +15,11 @@ end
 
 
 function PetZhengYou_OnLoad()
-	PET_AITYPE[0] = "#gFF0FA0µ¨Ğ¡";
-	PET_AITYPE[1] = "#gFF0FA0½÷É÷";
-	PET_AITYPE[2] = "#gFF0FA0ÖÒ³Ï";
-	PET_AITYPE[3] = "#gFF0FA0¾«Ã÷";
-	PET_AITYPE[4] = "#gFF0FA0ÓÂÃÍ";
+	PET_AITYPE[0] = "#gFF0FA0èƒ†å°";
+	PET_AITYPE[1] = "#gFF0FA0è°¨æ…";
+	PET_AITYPE[2] = "#gFF0FA0å¿ è¯š";
+	PET_AITYPE[3] = "#gFF0FA0ç²¾æ˜";
+	PET_AITYPE[4] = "#gFF0FA0å‹‡çŒ›";
 end
 
 function PetZhengYou_Hide()
@@ -35,16 +35,16 @@ function PetZhengYou_OnEvent(event)
 		elseif("noprevpage" == arg0) then
 			showPrevPage = false;
 			PetZhengYou_PageUp:Disable();
-			PushDebugMessage("ÒÑ¾­ÊÇµÚÒ»Ò³ÁË");
+			PushDebugMessage("å·²ç»æ˜¯ç¬¬ä¸€é¡µäº†");
 		elseif("notifypetlistnone" == arg0) then
 			if listflag == -1 then
 				showPrevPage = false;
 				PetZhengYou_PageUp:Disable();
-				PushDebugMessage("ÒÑ¾­ÊÇµÚÒ»Ò³ÁË");
+				PushDebugMessage("å·²ç»æ˜¯ç¬¬ä¸€é¡µäº†");
 			elseif listflag == 1 then
 				showNextPage = false;
 				PetZhengYou_PageDown:Disable();
-				PushDebugMessage("ÒÑ¾­ÊÇ×îºóÒ»Ò³ÁË");
+				PushDebugMessage("å·²ç»æ˜¯æœ€åä¸€é¡µäº†");
 			else
 				PetZhengYou_ShowWindow(-2);
 			end
@@ -61,7 +61,7 @@ function PetZhengYou_OnEvent(event)
 		end
 	end
 end
---ÊÕµ½WorldµÄÊı¾İºóµ÷ÓÃÏÔÊ¾½çÃæ
+--æ”¶åˆ°Worldçš„æ•°æ®åè°ƒç”¨æ˜¾ç¤ºç•Œé¢
 local needEnable = false;
 function PetZhengYou_ShowWindow(who)
 	local num = PetInviteFriend:GetInviteNum("friends")
@@ -77,10 +77,10 @@ function PetZhengYou_ShowWindow(who)
 	end
 	if( num <= 0) then
 		if who == -1 then
-			PushDebugMessage("·şÎñÆ÷ÉÏÃ»ÓĞÕäÊŞÕ÷ÓÑµÄÊı¾İ");
+			PushDebugMessage("æœåŠ¡å™¨ä¸Šæ²¡æœ‰çå…½å¾å‹çš„æ•°æ®");
 			showPrevPage = false;
 		elseif who == 1 then
-			PushDebugMessage("·şÎñÆ÷ÉÏÃ»ÓĞÕäÊŞÕ÷ÓÑµÄÊı¾İ");
+			PushDebugMessage("æœåŠ¡å™¨ä¸Šæ²¡æœ‰çå…½å¾å‹çš„æ•°æ®");
 			showNextPage = false;
 		else
 			PetZhengYou_DisableAllWindow();
@@ -121,46 +121,46 @@ function PetZhengYou_Update( idx )
 	end
 	idx = idx + 2;
 
-	--»ñÈ¡ÕäÊŞÖ÷ÈËĞÅÏ¢
+	--è·å–çå…½ä¸»äººä¿¡æ¯
 	local humanName = PetInviteFriend:GetHumanINFO(idx, "NAME");
 	local humanMenPai = PetInviteFriend:GetHumanINFO(idx, "MENPAI");	
 	local humanLevel = PetInviteFriend:GetHumanINFO(idx, "LEVEL");
 	local humanSex  = PetInviteFriend:GetHumanINFO(idx, "SEX");
 	humanMenPai = PetZhengYou_ConvertNumToMenPai(humanMenPai);
 	if( humanSex == 0 ) then
-		humanSex = "Å®";
+		humanSex = "å¥³";
 	else
-		humanSex = "ÄĞ";
+		humanSex = "ç”·";
 	end
 		
-	--»ñÈ¡ÕäÊŞĞÅÏ¢
+	--è·å–çå…½ä¿¡æ¯
 	local petName = PetInviteFriend:GetPetINFO(idx, "NAME");
 	local petGrow = PetInviteFriend:GetPetINFO(idx, "GROW");	
 	local petLevel = PetInviteFriend:GetPetINFO(idx, "LEVEL");
 	local petSex  = PetInviteFriend:GetPetINFO(idx, "SEX");
 	local petAI   = PetInviteFriend:GetPetINFO(idx, "AITYPE");
 	local petTypeName = PetInviteFriend:GetPetINFO(idx, "TYPENAME");
-	petTypeName = FlashTextHeader .. petTypeName .. "±¦±¦";
+	petTypeName = FlashTextHeader .. petTypeName .. "å®å®";
 	if( petSex == 0 ) then
-		petSex = "´Æ";
+		petSex = "é›Œ";
 	else
-		petSex = "ĞÛ";
+		petSex = "é›„";
 	end
-	local strTbl = {"ÆÕÍ¨","ÓÅĞã","½Ü³ö","×¿Ô½","ÍêÃÀ"};
+	local strTbl = {"æ™®é€š","ä¼˜ç§€","æ°å‡º","å“è¶Š","å®Œç¾"};
 	
 	if(petGrow >= 0) then
-		petGrow = petGrow + 1;	--cÀïÊÇ´Ó0¿ªÊ¼µÄÃ¶¾Ù
+		petGrow = petGrow + 1;	--cé‡Œæ˜¯ä»0å¼€å§‹çš„æšä¸¾
 		if(strTbl[petGrow]) then
 			petGrow = strTbl[petGrow];
 		else
-			petGrow = "Î´Öª";
+			petGrow = "æœªçŸ¥";
 		end
 	else
-		petGrow = "Î´Öª";
+		petGrow = "æœªçŸ¥";
 	end
 	
 	if(petAI>4 or petAI <0) then
-		petAI = "´íÎóµÄ";
+		petAI = "é”™è¯¯çš„";
 	else
 		petAI =	PET_AITYPE[petAI];
 	end
@@ -168,7 +168,7 @@ function PetZhengYou_Update( idx )
 	--PushDebugMessage(humanName);
 	
 	if( idx == 3 ) then
-	  --ÉèÖÃÕäÊŞĞÅÏ¢
+	  --è®¾ç½®çå…½ä¿¡æ¯
 		PetZhengYou_Master1Pet_NameInfo:SetText(petName);
 		PetZhengYou_Master1Pet_GenderInfo:SetText(petSex);
 		PetZhengYou_Master1Pet_ChenZhangInfo:SetText(petGrow);
@@ -176,13 +176,13 @@ function PetZhengYou_Update( idx )
 		PetZhengYou_Type1:SetText(petAI);
 		PetZhengYou_Flash_Name1:SetText(petTypeName);
 		
-		--ÉèÖÃÖ÷ÈËĞÅÏ¢
+		--è®¾ç½®ä¸»äººä¿¡æ¯
 		PetZhengYou_Master1_NameInfo:SetText(humanName);
 		PetZhengYou_Master1_LevelInfo:SetText(humanLevel);
 		PetZhengYou_Master1_ManPaiInfo:SetText(humanMenPai);
 		PetZhengYou_Master1_GenderInfo:SetText(humanSex);
 			
-		--ÉèÖÃÄ£ĞÍĞÅÏ¢
+		--è®¾ç½®æ¨¡å‹ä¿¡æ¯
 		PetInviteFriend:SetPetModel(idx);
 		PetZhengYou_PetModel1:SetFakeObject("My_PetFriend01");
 			
@@ -193,7 +193,7 @@ function PetZhengYou_Update( idx )
 
 	
 	elseif( idx == 4 ) then
-	  --ÉèÖÃÕäÊŞĞÅÏ¢
+	  --è®¾ç½®çå…½ä¿¡æ¯
 		PetZhengYou_Master2Pet_NameInfo:SetText(petName);
 		PetZhengYou_Master2Pet_GenderInfo:SetText(petSex);
 		PetZhengYou_Master2Pet_ChenZhangInfo:SetText(petGrow);
@@ -201,24 +201,24 @@ function PetZhengYou_Update( idx )
 		PetZhengYou_Type2:SetText(petAI);
 		PetZhengYou_Flash_Name2:SetText(petTypeName);
 		
-		--ÉèÖÃÖ÷ÈËĞÅÏ¢
+		--è®¾ç½®ä¸»äººä¿¡æ¯
 		PetZhengYou_Master2_NameInfo:SetText(humanName);
 		PetZhengYou_Master2_LevelInfo:SetText(humanLevel);
 		PetZhengYou_Master2_ManPaiInfo:SetText(humanMenPai);
 		PetZhengYou_Master2_GenderInfo:SetText(humanSex);
 			
-		--ÉèÖÃÄ£ĞÍĞÅÏ¢
+		--è®¾ç½®æ¨¡å‹ä¿¡æ¯
 		PetInviteFriend:SetPetModel(idx);
 		PetZhengYou_PetModel2:SetFakeObject("My_PetFriend02");
 		
-		--¼¤»î°´Å¥
+		--æ¿€æ´»æŒ‰é’®
 		PetZhengYou_Pet2_Investigate:Enable();
 		PetZhengYou_Pet2_Acquaintance:Enable();
 		PetZhengYou_PetModel2_TurnRight:Enable();
 		PetZhengYou_PetModel2_TurnLeft:Enable();
 		
 			
-		--ÏÔÊ¾ÎÄ±¾
+		--æ˜¾ç¤ºæ–‡æœ¬
 		PetZhengYou_Master2Pet_Name:Show();
 		PetZhengYou_Master2Pet_Gender:Show();
 		PetZhengYou_Master2Pet_ChenZhang:Show();
@@ -242,7 +242,7 @@ function PetZhengYou_Update( idx )
 
 end
 
---Òş²ØÒ»Ğ© ´°¿Ú
+--éšè—ä¸€äº› çª—å£
 function PetZhengYou_HideWindow(idx)
 	if( idx == 0 ) then
 		PetZhengYou_Master1Pet_Name:Hide();
@@ -276,7 +276,7 @@ function PetZhengYou_HideWindow(idx)
 	end
 end
 
---½ûÓÃÒ»Ğ©°´Å¥
+--ç¦ç”¨ä¸€äº›æŒ‰é’®
 function PetZhengYou_DisableButton(idx)
 	if( idx == 0 ) then
 		PetZhengYou_Pet1_Investigate:Disable();
@@ -320,51 +320,51 @@ end
 
 function PetZhengYou_ConvertNumToMenPai( MenPaiId )
 	local strMenPai = "???";
-	-- µÃµ½ÃÅÅÉÃû³Æ.
+	-- å¾—åˆ°é—¨æ´¾åç§°.
 	if(0 == MenPaiId) then
-		strMenPai = "ÉÙÁÖ";
+		strMenPai = "å°‘æ—";
 
 	elseif(1 == MenPaiId) then
-		strMenPai = "Ã÷½Ì";
+		strMenPai = "æ˜æ•™";
 
 	elseif(2 == MenPaiId) then
-		strMenPai = "Ø¤°ï";
+		strMenPai = "ä¸å¸®";
 
 	elseif(3 == MenPaiId) then
-		strMenPai = "Îäµ±";
+		strMenPai = "æ­¦å½“";
 
 	elseif(4 == MenPaiId) then
-		strMenPai = "¶ëáÒ";
+		strMenPai = "å³¨åµ‹";
 
 	elseif(5 == MenPaiId) then
-		strMenPai = "ĞÇËŞ";
+		strMenPai = "æ˜Ÿå®¿";
 
 	elseif(6 == MenPaiId) then
-		strMenPai = "ÌìÁú";
+		strMenPai = "å¤©é¾™";
 
 	elseif(7 == MenPaiId) then
-		strMenPai = "ÌìÉ½";
+		strMenPai = "å¤©å±±";
 
 	elseif(8 == MenPaiId) then
-		strMenPai = "åĞÒ£";
+		strMenPai = "é€é¥";
 
 	elseif(9 == MenPaiId) then
-		strMenPai = "ÎŞÃÅÅÉ";
+		strMenPai = "æ— é—¨æ´¾";
 	end
 	
 	return strMenPai;
 end
 ----------------------------------------------------------------------------------
 --
--- Ğı×ªÕäÊŞÄ£ĞÍ£¨Ïò×ó)
+-- æ—‹è½¬çå…½æ¨¡å‹ï¼ˆå‘å·¦)
 --
 function PetZhengYou_Modle_TurnLeft(modelIdx,start)
 
 		if( modelIdx == 3 ) then
-		--Ïò×óĞı×ª¿ªÊ¼
+		--å‘å·¦æ—‹è½¬å¼€å§‹
 			if(start == 1) then
 				PetZhengYou_PetModel1:RotateBegin(-0.3);
-			--Ïò×óĞı×ª½áÊø
+			--å‘å·¦æ—‹è½¬ç»“æŸ
 			else
 				PetZhengYou_PetModel1 :RotateEnd();
 			end
@@ -372,7 +372,7 @@ function PetZhengYou_Modle_TurnLeft(modelIdx,start)
 		if( modelIdx == 4 ) then
 			if(start == 1) then
 				PetZhengYou_PetModel2:RotateBegin(-0.3);
-			--Ïò×óĞı×ª½áÊø
+			--å‘å·¦æ—‹è½¬ç»“æŸ
 			else
 				PetZhengYou_PetModel2 :RotateEnd();
 			end
@@ -381,28 +381,28 @@ end
 
 ----------------------------------------------------------------------------------
 --
---Ğı×ªÕäÊŞÄ£ĞÍ£¨ÏòÓÒ)
+--æ—‹è½¬çå…½æ¨¡å‹ï¼ˆå‘å³)
 --
 function PetZhengYou_Modle_TurnRight(modelIdx, start)
 	if( modelIdx == 3 ) then
-		--Ïò×óĞı×ª¿ªÊ¼
+		--å‘å·¦æ—‹è½¬å¼€å§‹
 			if(start == 1) then
 				PetZhengYou_PetModel1:RotateBegin(0.3);
-			--Ïò×óĞı×ª½áÊø
+			--å‘å·¦æ—‹è½¬ç»“æŸ
 			else
 				PetZhengYou_PetModel1 :RotateEnd();
 			end
 	elseif( modelIdx == 4 ) then
 			if(start == 1) then
 				PetZhengYou_PetModel2:RotateBegin(0.3);
-			--Ïò×óĞı×ª½áÊø
+			--å‘å·¦æ—‹è½¬ç»“æŸ
 			else
 				PetZhengYou_PetModel2 :RotateEnd();
 			end
 	end
 end
 
---²éÑ¯ÉÏÒ»ÆªµÄÕäÊŞÕ÷ÓÑĞÅÏ¢
+--æŸ¥è¯¢ä¸Šä¸€ç¯‡çš„çå…½å¾å‹ä¿¡æ¯
 function PetZhengYou_PrevPage()
 	listflag = -1;
 	PetInviteFriend:ShowPetFriends(-1);
@@ -422,7 +422,7 @@ function PetZhengYou_CoolPageUp()
 end
 
 
---²éÑ¯ÏÂÒ»ÆªµÄÕäÊŞÕ÷ÓÑĞÅÏ¢
+--æŸ¥è¯¢ä¸‹ä¸€ç¯‡çš„çå…½å¾å‹ä¿¡æ¯
 function PetZhengYou_NextPage()
 	listflag = 1;
 	PetInviteFriend:ShowPetFriends(1);
@@ -442,17 +442,17 @@ function PetZhengYou_CoolPageDown()
 end
 
 
---¸øÕäÊŞÖ÷ÈË·¢ÓÊ¼ş£¬ËµÃ÷ÏëÕ÷ÓÑ
+--ç»™çå…½ä¸»äººå‘é‚®ä»¶ï¼Œè¯´æ˜æƒ³å¾å‹
 function PetZhengYou_SendMail( idx )
 	if( idx == 3 or idx == 4 ) then
 		local owner = PetInviteFriend:GetHumanINFO(idx, "NAME");
 		local player = Player:GetName();
 		if(owner == player) then
-			PushDebugMessage("²»ÄÜºÍ×Ô¼ºµÄÕäÊŞ½áÊ¶");
+			PushDebugMessage("ä¸èƒ½å’Œè‡ªå·±çš„çå…½ç»“è¯†");
 			return;
 		end
-			--¸ø¸ÃÕäÊŞÖ÷ÈË·¢ËÍÓÊ¼ş¸æËßËûËıÄãµÄÕäÊŞÏëºÍËûËıµÄÕäÊŞ½áÊ¶
-		DataPool:OpenMail( owner,"ÎÒÏë½áÊ¶ÄãµÄ±¦±¦" );
+			--ç»™è¯¥çå…½ä¸»äººå‘é€é‚®ä»¶å‘Šè¯‰ä»–å¥¹ä½ çš„çå…½æƒ³å’Œä»–å¥¹çš„çå…½ç»“è¯†
+		DataPool:OpenMail( owner,"æˆ‘æƒ³ç»“è¯†ä½ çš„å®å®" );
 	end
 	
 	if( idx == 3 ) then
@@ -473,13 +473,13 @@ function PetZhengYou_CoolDown4()
 		KillTimer("PetZhengYou_CoolDown4();");
 end
 
---ËÑË÷ºÏÊÊÕäÊŞ
+--æœç´¢åˆé€‚çå…½
 function PetZhengYou_OnSearch()
 	Pet:ShowPetList(1);
 	--this:Hide();
 end
 
---Õâ¸öº¯ÊıĞ´µÄºÜÎŞÄÎÑ½£¡£¬´°¿ÚÃ»ÓĞÉè¼ÆºÃ£¬Èç¹ûÓĞ¸ö¸¸´°¿Ú£¬¾ÍºÃÁË
+--è¿™ä¸ªå‡½æ•°å†™çš„å¾ˆæ— å¥ˆå‘€ï¼ï¼Œçª—å£æ²¡æœ‰è®¾è®¡å¥½ï¼Œå¦‚æœæœ‰ä¸ªçˆ¶çª—å£ï¼Œå°±å¥½äº†
 function PetZhengYou_DisableAllWindow()
 		PetZhengYou_Master1Pet_Name:Hide();
 		PetZhengYou_Master1Pet_Gender:Hide();
@@ -536,7 +536,7 @@ function PetZhengYou_DisableAllWindow()
 		PetZhengYou_PetModel2:SetFakeObject("");
 end
 
---Õâ¸öº¯ÊıĞ´µÄºÜÎŞÄÎÑ½£¡£¬´°¿ÚÃ»ÓĞÉè¼ÆºÃ£¬Èç¹ûÓĞ¸ö¸¸´°¿Ú£¬¾ÍºÃÁË
+--è¿™ä¸ªå‡½æ•°å†™çš„å¾ˆæ— å¥ˆå‘€ï¼ï¼Œçª—å£æ²¡æœ‰è®¾è®¡å¥½ï¼Œå¦‚æœæœ‰ä¸ªçˆ¶çª—å£ï¼Œå°±å¥½äº†
 function PetZhengYou_EnableAllWindow()
 		PetZhengYou_Master1Pet_Name:Show();
 		PetZhengYou_Master1Pet_Gender:Show();

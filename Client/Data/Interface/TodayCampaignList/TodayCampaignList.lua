@@ -1,12 +1,12 @@
-local	campaign_today = 0	--µ±ÌìËùÓĞ»î¶¯
-local	campaign_curDaily = 1	--Ä¿Ç°ÈÕ³£»î¶¯
-local	campaign_other	=2	--µ±ÌìËùÓĞÆäËû»î¶¯
-local	campaign_daily	=3	--µ±ÌìËùÓĞÈÕ³£»î¶¯
+local	campaign_today = 0	--å½“å¤©æ‰€æœ‰æ´»åŠ¨
+local	campaign_curDaily = 1	--ç›®å‰æ—¥å¸¸æ´»åŠ¨
+local	campaign_other	=2	--å½“å¤©æ‰€æœ‰å…¶ä»–æ´»åŠ¨
+local	campaign_daily	=3	--å½“å¤©æ‰€æœ‰æ—¥å¸¸æ´»åŠ¨
 
-local g_TodalCampaignCount = 0;		--½ñÌìµÄ»î¶¯ÊıÄ¿
+local g_TodalCampaignCount = 0;		--ä»Šå¤©çš„æ´»åŠ¨æ•°ç›®
 
--- ½çÃæ¿Ø¼ş
-local g_AllCampaignDetailDescs = {};	-- ËùÓĞ»î¶¯µÄÏêÏ¸ÃèÊöĞÅÏ¢ÁĞ±í
+-- ç•Œé¢æ§ä»¶
+local g_AllCampaignDetailDescs = {};	-- æ‰€æœ‰æ´»åŠ¨çš„è¯¦ç»†æè¿°ä¿¡æ¯åˆ—è¡¨
 
 function TodayCampaignList_PreLoad()
 	this:RegisterEvent("SHOW_TODAY_CAMPAIGN_LIST")
@@ -25,14 +25,14 @@ function TodayCampaignList_OnEvent(event)
 end
 
 function TodayCampaignList_Init()
-	-- Çå³ı¸Õ²Å´ò¿ªÊ±µÄĞÅÏ¢
+	-- æ¸…é™¤åˆšæ‰æ‰“å¼€æ—¶çš„ä¿¡æ¯
 	TodayCampaignList_DetailDesc:ClearAllElement();
 	TodayCampaignList_ListCtl:RemoveAllItem();
 
 	local g_TodalCampaignCount = GetCampaignCount(tonumber(campaign_today));
 
 	for i=0 , g_TodalCampaignCount-1 do
-		-- »î¶¯Ê±¼ä
+		-- æ´»åŠ¨æ—¶é—´
 		local strTime = "";
 		local strEnd = EnumCampaign(tonumber(campaign_today),i,"endtime");
 		if(strEnd ~= -1) then
@@ -41,21 +41,21 @@ function TodayCampaignList_Init()
 			strTime = EnumCampaign(tonumber(campaign_today),i,"starttime");
 		end
 
-		-- »î¶¯Ãû
+		-- æ´»åŠ¨å
 		local strHuodong = EnumCampaign(tonumber(campaign_today),i,"name");
 		
-		-- »î¶¯ÃèÊö
+		-- æ´»åŠ¨æè¿°
 		local strDesc = EnumCampaign(tonumber(campaign_today),i,"desc");
 		local ends = EnumCampaign(tonumber(campaign_today),i,"addtiondesc");
 		if(ends and ends~="")then
-			strDesc = strDesc.."¡¢"..ends;
+			strDesc = strDesc.."ã€"..ends;
 		end
 		AxTrace( 5,3, strDesc );
 
-		-- ÏêÏ¸»î¶¯ÃèÊö
+		-- è¯¦ç»†æ´»åŠ¨æè¿°
 		local strDetailDesc = EnumCampaign(tonumber(campaign_today),i,"detailDesc");
 		
-		-- »î¶¯ÀàĞÍ
+		-- æ´»åŠ¨ç±»å‹
 		local isCur  =  EnumCampaign(tonumber(campaign_today),i,"iscurcampaign");
 		if(tonumber(isCur) == 1)then
 			strTime = "#G" .. strTime;
@@ -78,49 +78,49 @@ function TodayCampaignList_Init()
 		TodayCampaignList_ListCtl:AddNewItem(strHuodong, 1, i);
 		TodayCampaignList_ListCtl:AddNewItem(strDesc, 2, i);
 
-		g_AllCampaignDetailDescs[i+1] = strDetailDesc;		-- ¼ÇÂ¼µ±Ç°»î¶¯µÄÏêÏ¸ÃèÊöĞÅÏ¢
+		g_AllCampaignDetailDescs[i+1] = strDetailDesc;		-- è®°å½•å½“å‰æ´»åŠ¨çš„è¯¦ç»†æè¿°ä¿¡æ¯
 	end
 	
-	-- ´ò¿ª´°¿ÚÊ±£¬Ã»ÓĞÑ¡ÖĞÈÎºÎÈÎÎñÊ±µÄÏÔÊ¾ÄÚÈİ
+	-- æ‰“å¼€çª—å£æ—¶ï¼Œæ²¡æœ‰é€‰ä¸­ä»»ä½•ä»»åŠ¡æ—¶çš„æ˜¾ç¤ºå†…å®¹
 	TodayCampaignList_DetailDesc:AddTextElement("#{MRHD_090413_1}");
 	TodayCampaignList_DetailDesc:Show();
 
 end
 
--- Êó±êµã»÷¾ßÌå»î¶¯ºóµÄÏàÓ¦º¯Êı
+-- é¼ æ ‡ç‚¹å‡»å…·ä½“æ´»åŠ¨åçš„ç›¸åº”å‡½æ•°
 function TodayCampaignList_List_OnSelectionChanged()
 
-	-- Çå³ı¸Õ²ÅÑ¡ÔñµÄ»î¶¯ĞÅÏ¢
-	TodayCampaignList_DetailDesc:ClearAllElement();		-- Çå³ı»î¶¯ÃèÊöĞÅÏ¢
+	-- æ¸…é™¤åˆšæ‰é€‰æ‹©çš„æ´»åŠ¨ä¿¡æ¯
+	TodayCampaignList_DetailDesc:ClearAllElement();		-- æ¸…é™¤æ´»åŠ¨æè¿°ä¿¡æ¯
 	
-	local nSel = TodayCampaignList_ListCtl:GetSelectItem();	-- µ±Ç°Ñ¡ÔñµÄĞĞºÅ (0 ~ g_TodalCampaignCount-1)
+	local nSel = TodayCampaignList_ListCtl:GetSelectItem();	-- å½“å‰é€‰æ‹©çš„è¡Œå· (0 ~ g_TodalCampaignCount-1)
 	
-	-- ÏÔÊ¾µ±Ç°Ñ¡ÖĞµÄ»î¶¯ĞÅÏ¢	
+	-- æ˜¾ç¤ºå½“å‰é€‰ä¸­çš„æ´»åŠ¨ä¿¡æ¯	
 	TodayCampaignList_DetailDesc:AddTextElement(tostring(g_AllCampaignDetailDescs[nSel+1]));
 	TodayCampaignList_DetailDesc:Show();	
 end
 
--- ¹Ø±Õ
+-- å…³é—­
 function TodayCampaignList_OnClosed()
 	this:Hide();
 	
-	-- Çå¿Õµ±Ç°»î¶¯Êı¾İ
-	TodayCampaignList_DetailDesc:ClearAllElement();		-- Çå³ı»î¶¯ÃèÊöĞÅÏ¢
+	-- æ¸…ç©ºå½“å‰æ´»åŠ¨æ•°æ®
+	TodayCampaignList_DetailDesc:ClearAllElement();		-- æ¸…é™¤æ´»åŠ¨æè¿°ä¿¡æ¯
 
-	-- Çå¿ÕËùÓĞÒÑ¾­¶ÁÈ¡µÄ½ñÈÕ»î¶¯ÁĞ±íÊı¾İ
+	-- æ¸…ç©ºæ‰€æœ‰å·²ç»è¯»å–çš„ä»Šæ—¥æ´»åŠ¨åˆ—è¡¨æ•°æ®
 	for i=1 , g_TodalCampaignCount do		
 		g_AllCampaignDetailDescs[i] = "";
 	end	
 end
 
--- È¡Ïû
+-- å–æ¶ˆ
 function TodayCampaignList_OnCancel()
 	this:Hide();
 	
-	-- Çå¿Õµ±Ç°»î¶¯Êı¾İ
-	TodayCampaignList_DetailDesc:ClearAllElement();		-- Çå³ı»î¶¯ÃèÊöĞÅÏ¢
+	-- æ¸…ç©ºå½“å‰æ´»åŠ¨æ•°æ®
+	TodayCampaignList_DetailDesc:ClearAllElement();		-- æ¸…é™¤æ´»åŠ¨æè¿°ä¿¡æ¯
 
-	-- Çå¿ÕËùÓĞÒÑ¾­¶ÁÈ¡µÄ½ñÈÕ»î¶¯ÁĞ±íÊı¾İ
+	-- æ¸…ç©ºæ‰€æœ‰å·²ç»è¯»å–çš„ä»Šæ—¥æ´»åŠ¨åˆ—è¡¨æ•°æ®
 	for i=1 , g_TodalCampaignCount do		
 		g_AllCampaignDetailDescs[i] = "";
 	end	

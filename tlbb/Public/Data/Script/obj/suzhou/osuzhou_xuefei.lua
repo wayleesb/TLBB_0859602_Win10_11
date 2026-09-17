@@ -1,23 +1,23 @@
---ËÕÖİNPC		¸ß¼¶×°±¸ĞŞÀí
---Ñ¦·Æ
---½Å±¾ºÅ
+--è‹å·NPC		é«˜çº§è£…å¤‡ä¿®ç†
+--è–›è²
+--è„šæœ¬å·
 
 x001056_g_ScriptId = 001056
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x001056_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
 		AddText(sceneId,"#{SQXL_20071011}")
-		AddNumText(sceneId,x001056_g_ScriptId,"ÎÒÒªĞŞÀí×°±¸",6,1)
-		AddNumText(sceneId, x001056_g_ScriptId,"×°±¸ĞŞÀí½éÉÜ",11,12);
+		AddNumText(sceneId,x001056_g_ScriptId,"æˆ‘è¦ä¿®ç†è£…å¤‡",6,1)
+		AddNumText(sceneId, x001056_g_ScriptId,"è£…å¤‡ä¿®ç†ä»‹ç»",11,12);
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x001056_OnEventRequest( sceneId, selfId, targetId, eventId )
 	if GetNumText() == 1 then

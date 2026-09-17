@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" ?>
+<?xml version="1.0" ?>
 <GUILayout>
 	<Window Type="TLBB_MainFrame1" Name="ConfraternityZT_Frame">
 		<Property Name="UnifiedSize" Value="{{0,256},{0.0,203}}" />

@@ -1,7 +1,7 @@
 x311011_g_scriptId=311011
 
 --**********************************
---死亡事件
+--姝讳骸浜嬩欢
 --**********************************
 function x311011_OnDie( sceneId, selfId, killerId )
 --	if random(1000) < 25 then
@@ -29,7 +29,7 @@ function x311011_OnDie( sceneId, selfId, killerId )
 end
 
 --**********************************
---时钟事件
+--鏃堕挓浜嬩欢
 --**********************************
 function x311011_OnCharacterTimer( sceneId, selfId, dataId, nowtime )
 end

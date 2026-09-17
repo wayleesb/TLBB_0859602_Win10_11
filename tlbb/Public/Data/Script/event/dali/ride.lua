@@ -1,37 +1,37 @@
---9´óÃÅÅÉÆï³Ë½Å±¾
+--9å¤§é—¨æ´¾éª‘ä¹˜è„šæœ¬
 
 x210299_g_ScriptId = 210299;
 
---Ñ§Ï°µÈ¼¶ÏŞÖÆ
+--å­¦ä¹ ç­‰çº§é™åˆ¶
 x210299_g_SpecialEffectID = 18;
 
 x210299_g_rideskillList = {};
 x210299_g_rideskillList[1] ={limitLevel = 40, costMoney =350000, skillList = {
-	{id=447,name="ÆïÊõ£º»¢"},
-	{id=561,name="ÆïÊõ£ºÊ¨×Ó"},
-	{id=455,name="ÆïÊõ£º»ÒÀÇ"},
-	{id=450,name="ÆïÊõ£ºº×"},
-	{id=451,name="ÆïÊõ£ºÇà·ï"},
-	{id=452,name="ÆïÊõ£ºêóÅ£"},
-	{id=448,name="ÆïÊõ£º»ÆæôÂí"},
-	{id=454,name="ÆïÊõ£ºµñ"},
-	{id=453,name="ÆïÊõ£ºÂ¹"}}
+	{id=447,name="éª‘æœ¯ï¼šè™"},
+	{id=561,name="éª‘æœ¯ï¼šç‹®å­"},
+	{id=455,name="éª‘æœ¯ï¼šç°ç‹¼"},
+	{id=450,name="éª‘æœ¯ï¼šé¹¤"},
+	{id=451,name="éª‘æœ¯ï¼šé’å‡¤"},
+	{id=452,name="éª‘æœ¯ï¼šç‰¦ç‰›"},
+	{id=448,name="éª‘æœ¯ï¼šé»„éª é©¬"},
+	{id=454,name="éª‘æœ¯ï¼šé›•"},
+	{id=453,name="éª‘æœ¯ï¼šé¹¿"}}
 	};
 
 x210299_g_rideskillList[2] ={limitLevel = 60, costMoney =2900000, skillList = {
-	{id=456,name="ÆïÊõ£º°×»¢"},
-	{id=562,name="ÆïÊõ£º°×Ê¨"},
-	{id=464,name="ÆïÊõ£º°×ÀÇ"},
-	{id=459,name="ÆïÊõ£º½ğÒíº×"},
-	{id=460,name="ÆïÊõ£ººì°×·ï"},
-	{id=461,name="ÆïÊõ£º°×êóÅ£"},
-	{id=457,name="ÆïÊõ£ºÇà°×æõÂí"},
-	{id=463,name="ÆïÊõ£º°×µñ"},
-	{id=462,name="ÆïÊõ£º°×Â¹"}}
+	{id=456,name="éª‘æœ¯ï¼šç™½è™"},
+	{id=562,name="éª‘æœ¯ï¼šç™½ç‹®"},
+	{id=464,name="éª‘æœ¯ï¼šç™½ç‹¼"},
+	{id=459,name="éª‘æœ¯ï¼šé‡‘ç¿¼é¹¤"},
+	{id=460,name="éª‘æœ¯ï¼šçº¢ç™½å‡¤"},
+	{id=461,name="éª‘æœ¯ï¼šç™½ç‰¦ç‰›"},
+	{id=457,name="éª‘æœ¯ï¼šé’ç™½éª¢é©¬"},
+	{id=463,name="éª‘æœ¯ï¼šç™½é›•"},
+	{id=462,name="éª‘æœ¯ï¼šç™½é¹¿"}}
 	};
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x210299_OnDefaultEvent(sceneId, selfId, targetId, level, skillLevel)
 	local selectSkill;
@@ -51,7 +51,7 @@ function x210299_OnDefaultEvent(sceneId, selfId, targetId, level, skillLevel)
 	local selfLevel = LuaFnGetLevel(sceneId, selfId);
 	if selectSkill and limitLevel and selfLevel then
 		if selfLevel < limitLevel then
-			x210299_ShowTipWindow(sceneId, selfId, "ĞèÒª´ïµ½"..limitLevel.."¼¶²ÅÄÜÑ§Ï°´Ë¼¼ÄÜ¡£");
+			x210299_ShowTipWindow(sceneId, selfId, "éœ€è¦è¾¾åˆ°"..limitLevel.."çº§æ‰èƒ½å­¦ä¹ æ­¤æŠ€èƒ½ã€‚");
 			return
 		end
 		
@@ -67,16 +67,16 @@ function x210299_OnDefaultEvent(sceneId, selfId, targetId, level, skillLevel)
 			local ret = LuaFnLearnSpecificEquitation(sceneId, selfId, selectSkill.id, 1);
 			if ret and ret == 1 then
 				LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, x210299_g_SpecialEffectID, 0);
-				x210299_ShowTipWindow(sceneId, selfId, "Ñ§»á"..selectSkill.name.."¡£");
+				x210299_ShowTipWindow(sceneId, selfId, "å­¦ä¼š"..selectSkill.name.."ã€‚");
 			end
 		else
-			x210299_ShowTipWindow(sceneId, selfId, "ÄãÒÑ¾­Ñ§»á"..selectSkill.name.."¡£");
+			x210299_ShowTipWindow(sceneId, selfId, "ä½ å·²ç»å­¦ä¼š"..selectSkill.name.."ã€‚");
 		end
 	end
 end
 
 --**********************************
---ÌáÊ¾
+--æç¤º
 --**********************************
 function x210299_ShowTipWindow(sceneId, selfId, message)
 	BeginEvent(sceneId);

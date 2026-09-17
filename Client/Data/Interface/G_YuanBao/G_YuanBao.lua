@@ -13,11 +13,11 @@ end
 function G_YuanBao_OnEvent(event)
 	if ( event == "UI_COMMAND" ) then
 		if(tonumber(arg0) == 19850424 and 4 == Get_XParam_INT(1)) then
-		--¼ÄÊÛ½ğ±Ò
+		--å¯„å”®é‡‘å¸
 			local money = Player:GetData("MONEY");
 			money = tonumber(money);
 			if(g_limit + g_Shouxu > money) then
-				PushDebugMessage("ÄúÉíÉÏµÄ½ğ±ÒĞ¡ÓÚ#{_MONEY102000}£¬Ö»ÓĞÓµÓĞ½ğÇ®µÄÊıÁ¿´óÓÚµÈÓÚ#{_MONEY102000}µÄÊ±ºò·½¿É¼ÄÊÛ¡£")
+				PushDebugMessage("æ‚¨èº«ä¸Šçš„é‡‘å¸å°äº#{_MONEY102000}ï¼Œåªæœ‰æ‹¥æœ‰é‡‘é’±çš„æ•°é‡å¤§äºç­‰äº#{_MONEY102000}çš„æ—¶å€™æ–¹å¯å¯„å”®ã€‚")
 				this:Hide();
 				return;
 			end
@@ -36,11 +36,11 @@ function G_YuanBao_OnEvent(event)
 			return;
 		end
 
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ı£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æœå’ŒNPCçš„è·ç¦»å¤§äºä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if(arg1 == "distance" and tonumber(arg2)>MAX_OBJ_DISTANCE or arg1=="destroy") then
 			this:Hide();
 
-			--È¡Ïû¹ØĞÄ
+			--å–æ¶ˆå…³å¿ƒ
 			StopCareObject_Carriage(objCared);
 		end
 	elseif(event == "OPEN_EXCHANGE_FRAME") then
@@ -74,19 +74,19 @@ function G_YuanBao_OK_Click()
 	local nCount = G_YuanBao_InputYuanBao:GetText();
 	local nMoney = Player:GetData("MONEY");	
 	if(nCoin==0) then
-		PushDebugMessage("ÇëÑ¡ÔñÒª¼ÄÊÛµÄ½ğÆ±£¡")
+		PushDebugMessage("è¯·é€‰æ‹©è¦å¯„å”®çš„é‡‘ç¥¨ï¼")
 		return;
 	end
 	if(nCount == nil or tonumber(nCount)== nil or tonumber(nCount)<= 0)then
-		PushDebugMessage("Ôª±¦ÊıÁ¿ÎŞĞ§£¡")
+		PushDebugMessage("å…ƒå®æ•°é‡æ— æ•ˆï¼")
 		return
 	end
 	if( nMoney < nCoin + nCoin*2/100) then
 		local tmpnum = nCoin + nCoin*2/100
-		PushDebugMessage("ÄúÉíÉÏµÄÇ®²»×ã#{_MONEY"..tmpnum.."},ÇëÖØĞÂÑ¡Ôñ£¡")
+		PushDebugMessage("æ‚¨èº«ä¸Šçš„é’±ä¸è¶³#{_MONEY"..tmpnum.."},è¯·é‡æ–°é€‰æ‹©ï¼")
 		return
 	end
-	--ÅĞ¶Ïok £¬µ÷º¯ÊıÈ¥Ò²
+	--åˆ¤æ–­ok ï¼Œè°ƒå‡½æ•°å»ä¹Ÿ
 	Clear_XSCRIPT();
 		Set_XSCRIPT_Function_Name("Sell");
 		Set_XSCRIPT_ScriptID(800116);

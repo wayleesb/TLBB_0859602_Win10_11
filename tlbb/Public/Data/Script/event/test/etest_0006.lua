@@ -1,28 +1,28 @@
---ÍÚ³öËÄÆ·Ò¶ÈË²Î
---Ñã±±
+--æŒ–å‡ºå››å“å¶äººå‚
+--é›åŒ—
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x804006_g_scriptId = 804006
---ÈÎÎñºÅ
+--ä»»åŠ¡å·
 x804006_g_MissionId = 4006
 
 local  PlayerName=""
---ÈÎÎñÃû
-x804006_g_missionName="ÍÚ³öËÄÆ·Ò¶ÈË²Î"
-x804006_g_missionText_0="ÖªµÀÈË²ÎµÄÆæÃî¹¦Ğ§?"
-x804006_g_missionText_1="Àë´ËµØ²»Ô¶µÄÖÕÄÏÉ½,¾İËµ¿ÉÒÔÍÚµ½Ç§ÄêÈË²Î"
+--ä»»åŠ¡å
+x804006_g_missionName="æŒ–å‡ºå››å“å¶äººå‚"
+x804006_g_missionText_0="çŸ¥é“äººå‚çš„å¥‡å¦™åŠŸæ•ˆ?"
+x804006_g_missionText_1="ç¦»æ­¤åœ°ä¸è¿œçš„ç»ˆå—å±±,æ®è¯´å¯ä»¥æŒ–åˆ°åƒå¹´äººå‚"
 
-x804006_g_missionText_2="ÄãÊÇË­£¿µ½ÎÒ¹ÈÀï¸ÉÊ²Ã´£¿"
+x804006_g_missionText_2="ä½ æ˜¯è°ï¼Ÿåˆ°æˆ‘è°·é‡Œå¹²ä»€ä¹ˆï¼Ÿ"
 
 x804006_g_MoneyBonus=166
 x804006_g_ItemBonus={{id=10105001,num=1}}
 x804006_g_name	= ""
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x804006_OnDefaultEvent( sceneId, selfId, targetId )
-    --Èç¹ûÍæ¼ÒÍê³É¹ıÕâ¸öÈÎÎñ
+    --å¦‚æœç©å®¶å®Œæˆè¿‡è¿™ä¸ªä»»åŠ¡
   --if (IsMissionHaveDone(sceneId,selfId,x804006_g_MissionId) > 0 ) then
 	-- 	return
 	--else
@@ -34,10 +34,10 @@ function x804006_OnDefaultEvent( sceneId, selfId, targetId )
 			EndEvent()
 			DispatchMissionDemandInfo(sceneId,selfId,targetId,x804006_g_scriptId,x804006_g_MissionId,1)
 		else
-			--·¢ËÍÈÎÎñ½ÓÊÜÊ±ÏÔÊ¾µÄĞÅÏ¢
+			--å‘é€ä»»åŠ¡æ¥å—æ—¶æ˜¾ç¤ºçš„ä¿¡æ¯
 			BeginEvent(sceneId)
 			AddText(sceneId,x804006_g_missionName)
-			AddText(sceneId,"Äã²¢Ã»ÓĞÈÎÎñµÀ¾ß20001001")
+			AddText(sceneId,"ä½ å¹¶æ²¡æœ‰ä»»åŠ¡é“å…·20001001")
 			AddMoneyBonus( sceneId, x804006_g_MoneyBonus )
 			for i, item in x804006_g_ItemBonus do
 					AddItemBonus( sceneId, item.id, item.num )
@@ -47,7 +47,7 @@ function x804006_OnDefaultEvent( sceneId, selfId, targetId )
 	  end
 			
   elseif x804006_CheckAccept(sceneId,selfId) > 0 then
-		--·¢ËÍÈÎÎñ½ÓÊÜÊ±ÏÔÊ¾µÄĞÅÏ¢
+		--å‘é€ä»»åŠ¡æ¥å—æ—¶æ˜¾ç¤ºçš„ä¿¡æ¯
 		BeginEvent(sceneId)
 		AddText(sceneId,x804006_g_missionName)
 		AddText(sceneId,x804006_g_missionText_0)
@@ -63,53 +63,53 @@ function x804006_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x804006_OnEnumerate( sceneId, selfId, targetId )
-    --Èç¹ûÍæ¼ÒÍê³É¹ıÕâ¸öÈÎÎñ
+    --å¦‚æœç©å®¶å®Œæˆè¿‡è¿™ä¸ªä»»åŠ¡
     --if IsMissionHaveDone(sceneId,selfId,x804006_g_MissionId) > 0 then
     	--return 
-    --Èç¹ûÒÑ½Ó´ËÈÎÎñ
+    --å¦‚æœå·²æ¥æ­¤ä»»åŠ¡
     --else
     if IsHaveMission(sceneId,selfId,x804006_g_MissionId) > 0 then
 			if GetName(sceneId,targetId) == x804006_g_name then
 				AddNumText(sceneId, x804006_g_scriptId,x804006_g_missionName);
 			end
-    --Âú×ãÈÎÎñ½ÓÊÕÌõ¼ş
+    --æ»¡è¶³ä»»åŠ¡æ¥æ”¶æ¡ä»¶
     elseif x804006_CheckAccept(sceneId,selfId) > 0 then
 			AddNumText(sceneId,x804006_g_scriptId,x804006_g_missionName);
     end
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x804006_CheckAccept( sceneId, selfId )
-	--ĞèÒª1¼¶²ÅÄÜ½Ó
+	--éœ€è¦1çº§æ‰èƒ½æ¥
 	return 1
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x804006_OnAccept( sceneId, selfId )
-	--¼ÓÈëÈÎÎñµ½Íæ¼ÒÁĞ±í
+	--åŠ å…¥ä»»åŠ¡åˆ°ç©å®¶åˆ—è¡¨
 	AddMission( sceneId,selfId, x804006_g_MissionId, x804006_g_scriptId, 0, 0, 0 )
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x804006_OnAbandon( sceneId, selfId )
-	--É¾³ıÍæ¼ÒÈÎÎñÁĞ±íÖĞ¶ÔÓ¦µÄÈÎÎñ
+	--åˆ é™¤ç©å®¶ä»»åŠ¡åˆ—è¡¨ä¸­å¯¹åº”çš„ä»»åŠ¡
     DelMission( sceneId, selfId, x804006_g_MissionId )
 end
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x804006_OnContinue( sceneId, selfId, targetId )
-	--Ìá½»ÈÎÎñÊ±µÄËµÃ÷ĞÅÏ¢
+	--æäº¤ä»»åŠ¡æ—¶çš„è¯´æ˜ä¿¡æ¯
     BeginEvent(sceneId)
     AddText(sceneId,x804006_g_missionName)
     AddText(sceneId,x804006_g_missionText_2)
@@ -122,7 +122,7 @@ function x804006_OnContinue( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x804006_CheckSubmit( sceneId, selfId )
 	local bRet = CallScriptFunction( SCENE_SCRIPT_ID, "CheckSubmit", sceneId, selfId, x804006_g_MissionId )
@@ -137,7 +137,7 @@ function x804006_CheckSubmit( sceneId, selfId )
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x804006_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 
@@ -147,38 +147,38 @@ function x804006_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 			AddItem( sceneId,item.id, item.num )
 		end
 		ret = EndAddItem(sceneId,selfId)
-		--Ìí¼ÓÈÎÎñ½±Àø
+		--æ·»åŠ ä»»åŠ¡å¥–åŠ±
 		if ret > 0 then
 			DelItem(sceneId,selfId,20001001,1)
 			AddItemListToHuman(sceneId,selfId)
 			AddMoney(sceneId,selfId,x804006_g_MoneyBonus );
-			--ÉèÖÃÈÎÎñÒÑ¾­±»Íê³É¹ı
+			--è®¾ç½®ä»»åŠ¡å·²ç»è¢«å®Œæˆè¿‡
 			MissionCom( sceneId,selfId,x804006_g_MissionId )
 			DelMission( sceneId,selfId,x804006_g_MissionId )
 			
 			--CallScriptFunction( 201001, "OnDefaultEvent",sceneId, selfId, targetId)
 		else
-		--ÈÎÎñ½±ÀøÃ»ÓĞ¼Ó³É¹¦
-			PrintStr("±³°ü¿Õ¼ä²»¹»")
+		--ä»»åŠ¡å¥–åŠ±æ²¡æœ‰åŠ æˆåŠŸ
+			PrintStr("èƒŒåŒ…ç©ºé—´ä¸å¤Ÿ")
 		end
 	        
 	end
 end
 
 --**********************************
---É±ËÀ¹ÖÎï»òÍæ¼Ò
+--æ€æ­»æ€ªç‰©æˆ–ç©å®¶
 --**********************************
 function x804006_OnKillObject( sceneId, selfId, objdataId )
 end
 
 --**********************************
---½øÈëÇøÓòÊÂ¼ş
+--è¿›å…¥åŒºåŸŸäº‹ä»¶
 --**********************************
 function x804006_OnEnterZone( sceneId, selfId, zoneId )
 end
 
 --**********************************
---µÀ¾ß¸Ä±ä
+--é“å…·æ”¹å˜
 --**********************************
 function x804006_OnItemChanged( sceneId, selfId, itemdataId )
 end

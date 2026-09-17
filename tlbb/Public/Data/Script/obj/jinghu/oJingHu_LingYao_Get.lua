@@ -1,12 +1,12 @@
---Ì«ºşNPC
---Ôì·´¶ñÔô
---ÆÕÍ¨
+--å¤ªæ¹–NPC
+--é€ åæ¶è´¼
+--æ™®é€š
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x005112_g_ScriptId	= 005112
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x005112_OnDefaultEvent( sceneId, selfId,targetId )
 	
@@ -17,7 +17,7 @@ end
 
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x005112_UpdateEventList( sceneId, selfId, targetId )
 	
@@ -26,7 +26,7 @@ function x005112_UpdateEventList( sceneId, selfId, targetId )
 	if nYaoDingCount <= 0 then
 		BeginEvent(sceneId)
 
-			AddText(sceneId,"ÁéÒ©ÒÑ¾­Á¶ÖÆ³É¹¦£¬Ö»ÓĞÁ¶Ò©µÄÈË²ÅÄÜÈ¡µÃÁéÒ©¡ª¡ª´ó»¹µ¤¡£")
+			AddText(sceneId,"çµè¯å·²ç»ç‚¼åˆ¶æˆåŠŸï¼Œåªæœ‰ç‚¼è¯çš„äººæ‰èƒ½å–å¾—çµè¯â€”â€”å¤§è¿˜ä¸¹ã€‚")
 		
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
@@ -49,8 +49,8 @@ function x005112_UpdateEventList( sceneId, selfId, targetId )
 		
 		BeginEvent(sceneId)
 
-			AddText(sceneId,"ÁéÒ©¡ª¡ª´ó»¹µ¤ÒÑ¾­Á¶ÖÆ³É¹¦£¬ÇëÎÊÄúÊÇ·ñÏÖÔÚÒªÁìÈ¡£¿")
-			AddNumText(sceneId, x005112_g_ScriptId, "ÁìÈ¡´ó»¹µ¤", 2, 0)
+			AddText(sceneId,"çµè¯â€”â€”å¤§è¿˜ä¸¹å·²ç»ç‚¼åˆ¶æˆåŠŸï¼Œè¯·é—®æ‚¨æ˜¯å¦ç°åœ¨è¦é¢†å–ï¼Ÿ")
+			AddNumText(sceneId, x005112_g_ScriptId, "é¢†å–å¤§è¿˜ä¸¹", 2, 0)
 
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
@@ -61,35 +61,35 @@ end
 
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x005112_OnEventRequest( sceneId, selfId, targetId, eventId )
 
 	if	GetNumText()==0 then
 	
 		if LuaFnGetPropertyBagSpace( sceneId, selfId ) < 1 then
-			x808004_MsgBox( sceneId, selfId, targetId, "  ÄãµÄ±³°ü¿Õ¼ä²»¹»ÁË£¬ÕûÀíºóÔÙÀ´ÕÒÎÒ¡£" )
+			x808004_MsgBox( sceneId, selfId, targetId, "  ä½ çš„èƒŒåŒ…ç©ºé—´ä¸å¤Ÿäº†ï¼Œæ•´ç†åå†æ¥æ‰¾æˆ‘ã€‚" )
 			return 0;
 		end
 		
 		
 		if TryRecieveItem( sceneId, selfId, 30505076, 1 ) >= 0 then
-			str		= "#YÄã»ñµÃÁË"..GetItemName( sceneId, 30505076 ).."¡£"
+			str		= "#Yä½ è·å¾—äº†"..GetItemName( sceneId, 30505076 ).."ã€‚"
 			Msg2Player( sceneId, selfId, str, MSG2PLAYER_PARA )
 			x005112_NotifyTip( sceneId, selfId, str )
 			
 			DelItem(sceneId, selfId, 40004415, 1)
 			
 			BeginEvent(sceneId)
-				AddText(sceneId,"Äã»ñµÃÁË´ó»¹µ¤!")
+				AddText(sceneId,"ä½ è·å¾—äº†å¤§è¿˜ä¸¹!")
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,targetId)
 			
 			LuaFnDeleteMonster(sceneId, targetId)
 			
-			--Í³¼ÆĞÅÏ¢
+			--ç»Ÿè®¡ä¿¡æ¯
 			local guidSelf = 
-			LuaFnAuditHDXianCaoZhengDuo(sceneId, selfId, "´ó»¹µ¤³É");
+			LuaFnAuditHDXianCaoZhengDuo(sceneId, selfId, "å¤§è¿˜ä¸¹æˆ");
 
 		end		
 		
@@ -99,7 +99,7 @@ function x005112_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---ĞÑÄ¿ÌáÊ¾
+--é†’ç›®æç¤º
 --**********************************
 function x005112_NotifyTip( sceneId, selfId, msg )
 	BeginEvent( sceneId )

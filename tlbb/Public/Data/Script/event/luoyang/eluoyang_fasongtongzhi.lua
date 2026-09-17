@@ -1,45 +1,45 @@
 					
---ÕÒÈËÈÎÎñ
---·¢ËÍÍ¨Öª
+--æ‰¾äººä»»åŠ¡
+--å‘é€é€šçŸ¥
 --MisDescBegin
---½Å±¾ºÅ
+--è„šæœ¬å·
 x250551_g_ScriptId = 250551
 
---ÈÎÎñºÅ
+--ä»»åŠ¡å·
 x250551_g_MissionId = 721
 
---ÉÏÒ»¸öÈÎÎñµÄID
+--ä¸Šä¸€ä¸ªä»»åŠ¡çš„ID
 --g_MissionIdPre = 
 
---Ä¿±êNPC
-x250551_g_Name	="ÇñĞĞÂå"
+--ç›®æ ‡NPC
+x250551_g_Name	="é‚±è¡Œæ´›"
 
---ÈÎÎñ¹éÀà 
+--ä»»åŠ¡å½’ç±» 
 x250551_g_MissionKind = 11
 
---ÈÎÎñµÈ¼¶
+--ä»»åŠ¡ç­‰çº§
 x250551_g_MissionLevel = 10000
 
---ÊÇ·ñÊÇ¾«Ó¢ÈÎÎñ
+--æ˜¯å¦æ˜¯ç²¾è‹±ä»»åŠ¡
 x250551_g_IfMissionElite = 0
 
---ÈÎÎñĞèÒªµÃµ½µÄÎïÆ·
+--ä»»åŠ¡éœ€è¦å¾—åˆ°çš„ç‰©å“
 --g_DemandItem={{id=30701021,num=1}}
 
 
---ÈÎÎñÃû
-x250551_g_MissionName="ÉÓ¿ÚĞÅ"
-x250551_g_MissionInfo="°ïÎÒ¸æËß%s%s[%d,%d]£¬õí¾Ï´ó»á¾ÍÒª¿ªÊ¼ÁË¡£"
+--ä»»åŠ¡å
+x250551_g_MissionName="æå£ä¿¡"
+x250551_g_MissionInfo="å¸®æˆ‘å‘Šè¯‰%s%s[%d,%d]ï¼Œè¹´é å¤§ä¼šå°±è¦å¼€å§‹äº†ã€‚"
 x250551_g_MissionTarget="%f"
-x250551_g_ContinueInfo="¸ÉµÃ²»´í"		--Î´Íê³ÉÈÎÎñµÄnpc¶Ô»°
-x250551_g_MissionComplete="ÎÒÖªµÀÁË£¬ÕâÊÇ¸øÄãµÄ½±Àø"
+x250551_g_ContinueInfo="å¹²å¾—ä¸é”™"		--æœªå®Œæˆä»»åŠ¡çš„npcå¯¹è¯
+x250551_g_MissionComplete="æˆ‘çŸ¥é“äº†ï¼Œè¿™æ˜¯ç»™ä½ çš„å¥–åŠ±"
 
---ÓÃÀ´±£´æ×Ö·û´®¸ñÊ½»¯µÄÊı¾İ
+--ç”¨æ¥ä¿å­˜å­—ç¬¦ä¸²æ ¼å¼åŒ–çš„æ•°æ®
 x250551_g_FormatList = {
-								"ÕÒµ½%n",
+								"æ‰¾åˆ°%n",
 								}
 								
---¸ñÊ½×Ö·û´®ÖĞ¶ÔÓ¦ÓÚg_StringListÖĞ×Ö·û´®µÄË÷Òı, ±íÊ¾´Ó4¿ªÊ¼,ºó¶àÉÙÎ»ÊÓSetMissionByIndexEx(...)µÄ¶àÉÙ¶ø¶¨
+--æ ¼å¼å­—ç¬¦ä¸²ä¸­å¯¹åº”äºg_StringListä¸­å­—ç¬¦ä¸²çš„ç´¢å¼•, è¡¨ç¤ºä»4å¼€å§‹,åå¤šå°‘ä½è§†SetMissionByIndexEx(...)çš„å¤šå°‘è€Œå®š
 x250551_g_StrForePart=4
 
 --MisDescEnd
@@ -47,16 +47,16 @@ x250551_g_StrForePart=4
 x250551_g_fasongtongzhiNpcIndex = 5
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x250551_OnDefaultEvent( sceneId, selfId, targetId )
-  --Èç¹ûÍæ¼ÒÍê³É¹ıÕâ¸öÈÎÎñ
+  --å¦‚æœç©å®¶å®Œæˆè¿‡è¿™ä¸ªä»»åŠ¡
   if( IsHaveMission(sceneId,selfId,x250551_g_MissionId) > 0)  then
   	if GetName(sceneId, targetId) == x250551_g_Name then
   		local misIndex = GetMissionIndexByID(sceneId,selfId,x250551_g_MissionId)
   		local npcId = GetMissionParam(sceneId, selfId, misIndex, x250551_g_StrForePart+1)
   		local _, npcName, npcScene, x, z = GetNpcInfoByNpcId(sceneId,npcId)
-  		local strText = format("ÎÒµÄ¿ÚĞÅÉÓµ½ÁËÃ´£¿%s%s¾ÍÔÚ(%d£¬%d)¡£Äã¿ÉÒÔµã»÷Alt+Q²é¿´ÈÎÎñÄ¿±ê¡£", npcScene, npcName, x, z)
+  		local strText = format("æˆ‘çš„å£ä¿¡æåˆ°äº†ä¹ˆï¼Ÿ%s%så°±åœ¨(%dï¼Œ%d)ã€‚ä½ å¯ä»¥ç‚¹å‡»Alt+QæŸ¥çœ‹ä»»åŠ¡ç›®æ ‡ã€‚", npcScene, npcName, x, z)
 			BeginEvent(sceneId)
 				AddText(sceneId, strText)
 			EndEvent()
@@ -67,7 +67,7 @@ function x250551_OnDefaultEvent( sceneId, selfId, targetId )
 					AddText(sceneId,x250551_g_MissionName)
 					local BonusMoney = 500	--90 + (GetLevel(sceneId, selfId) - 10) * 5
 					local BonusExp = 200
-					AddText(sceneId, "½±ÀøÄã" .. tostring(BonusExp) .. "µã¾­ÑéºÍ" .. "#{_MONEY" .. tostring(BonusMoney) .. "}£¬¿ì»ØÈ¥¸æËßÇñĞĞÂå£¬¿ÚĞÅÊÕµ½À²£¬Ğ»Ğ»Äã¡£")
+					AddText(sceneId, "å¥–åŠ±ä½ " .. format("%.0f", BonusExp) .. "ç‚¹ç»éªŒå’Œ" .. "#{_MONEY" .. tostring(BonusMoney) .. "}ï¼Œå¿«å›å»å‘Šè¯‰é‚±è¡Œæ´›ï¼Œå£ä¿¡æ”¶åˆ°å•¦ï¼Œè°¢è°¢ä½ ã€‚")
 					SetMissionCacheData(sceneId, selfId, 0, BonusMoney)
 					SetMissionCacheData(sceneId, selfId, 1, BonusExp)
 				EndEvent( )
@@ -75,14 +75,14 @@ function x250551_OnDefaultEvent( sceneId, selfId, targetId )
 			end	
 		end
 		--DispatchMissionDemandInfo(sceneId,selfId,targetId,x250551_g_ScriptId,x250551_g_MissionId,bDone,x250551_g_ScriptId)
-    --Âú×ãÈÎÎñ½ÓÊÕÌõ¼ş
+    --æ»¡è¶³ä»»åŠ¡æ¥æ”¶æ¡ä»¶
   elseif x250551_CheckAccept(sceneId,selfId) > 0 then
 		if GetName(sceneId,targetId) == x250551_g_Name then
 			--///////////////////////////////////////////////////
 			--local playerLevel = GetLevel(sceneId, selfId)
 			--if playerLevel >= 21 then
 			--	BeginEvent(sceneId)
-			--		AddText(sceneId, "ÄãµÄµÈ¼¶ÒÑ¾­³¬¹ı20¼¶ÁË£¬È¥×öÒ»Ğ©¸üÓĞÇ°Í¾µÄÈÎÎñ°É¡£")
+			--		AddText(sceneId, "ä½ çš„ç­‰çº§å·²ç»è¶…è¿‡20çº§äº†ï¼Œå»åšä¸€äº›æ›´æœ‰å‰é€”çš„ä»»åŠ¡å§ã€‚")
 			--	EndEvent( )
 			--	DispatchEventList(sceneId, selfId, -1)
 			--	return 
@@ -92,16 +92,16 @@ function x250551_OnDefaultEvent( sceneId, selfId, targetId )
 			local iDayCount = GetMissionData(sceneId,selfId,MD_FASONGTONGZHI_DAYCOUNT)
 			--local iTime = mod(iDayCount,100000)
 			local iTime = GetMissionData(sceneId,selfId,MD_FASONGTONGZHI_DAYTIME)
-			local iDayTime = floor(iTime/100)					--ÉÏÒ»´Î·ÅÆúÈÎÎñµÄÊ±¼ä(ÌìÊı)
-			local iQuarterTime = mod(iTime,100)				--ÉÏÒ»´Î·ÅÆúÈÎÎñµÄÊ±¼ä(Ò»¿ÌÖÖ)
-			--local iDayHuan = floor(iDayCount/100000) 	--µ±ÌìÄÚÍê³ÉµÄÈÎÎñ´ÎÊı
-			local iDayHuan = iDayCount 	--µ±ÌìÄÚÍê³ÉµÄÈÎÎñ´ÎÊı
+			local iDayTime = floor(iTime/100)					--ä¸Šä¸€æ¬¡æ”¾å¼ƒä»»åŠ¡çš„æ—¶é—´(å¤©æ•°)
+			local iQuarterTime = mod(iTime,100)				--ä¸Šä¸€æ¬¡æ”¾å¼ƒä»»åŠ¡çš„æ—¶é—´(ä¸€åˆ»ç§)
+			--local iDayHuan = floor(iDayCount/100000) 	--å½“å¤©å†…å®Œæˆçš„ä»»åŠ¡æ¬¡æ•°
+			local iDayHuan = iDayCount 	--å½“å¤©å†…å®Œæˆçš„ä»»åŠ¡æ¬¡æ•°
 			--print("iDayHuan ... is ... " .. iDayHuan)
 			
-			--local CurTime = GetHourTime()							--µ±Ç°Ê±¼ä
-			local CurTime = GetQuarterTime()							--µ±Ç°Ê±¼ä
-			local CurDaytime = floor(CurTime/100)			--µ±Ç°Ê±¼ä(Ìì)
-			local CurQuarterTime = mod(CurTime,100) 	--µ±Ç°Ê±¼ä(Ò»¿ÌÖÓ)
+			--local CurTime = GetHourTime()							--å½“å‰æ—¶é—´
+			local CurTime = GetQuarterTime()							--å½“å‰æ—¶é—´
+			local CurDaytime = floor(CurTime/100)			--å½“å‰æ—¶é—´(å¤©)
+			local CurQuarterTime = mod(CurTime,100) 	--å½“å‰æ—¶é—´(ä¸€åˆ»é’Ÿ)
 			--end modified by zhangguoxin 090207
 			
 			if iDayTime ~= CurDaytime  then
@@ -111,7 +111,7 @@ function x250551_OnDefaultEvent( sceneId, selfId, targetId )
 
 			if iDayHuan >= 10 then
 				BeginEvent(sceneId)
-					AddText(sceneId, "½ñÌìÄãÒÑ¾­°ïÎÒËÍÁË10´Î¿ÚĞÅÀ²£¬Ã÷ÌìÔÙÀ´°É£¬±ğÀÛ»µÁË¡£")
+					AddText(sceneId, "ä»Šå¤©ä½ å·²ç»å¸®æˆ‘é€äº†10æ¬¡å£ä¿¡å•¦ï¼Œæ˜å¤©å†æ¥å§ï¼Œåˆ«ç´¯åäº†ã€‚")
 				EndEvent( )
 				DispatchEventList(sceneId, selfId, -1)
 				return
@@ -122,7 +122,7 @@ function x250551_OnDefaultEvent( sceneId, selfId, targetId )
 				if CurQuarterTime == iQuarterTime then
 					BeginEvent(sceneId)
 						AddText(sceneId, x250551_g_MissionName)
-						AddText(sceneId, "  ÓÉÓÚÄã·ÅÆú¹ıÈÎÎñ£¬ÔÚ15·ÖÖÓÄÚÄã²»ÄÜ½ÓÊÕĞÂµÄÈÎÎñ!")
+						AddText(sceneId, "  ç”±äºä½ æ”¾å¼ƒè¿‡ä»»åŠ¡ï¼Œåœ¨15åˆ†é’Ÿå†…ä½ ä¸èƒ½æ¥æ”¶æ–°çš„ä»»åŠ¡!")
 					EndEvent( )
 					DispatchEventList(sceneId, selfId, -1)
 					return
@@ -130,35 +130,35 @@ function x250551_OnDefaultEvent( sceneId, selfId, targetId )
 			end
 			--/////////////////////////////////////////////////// end
 			
-			--·¢ËÍÈÎÎñ½ÓÊÜÊ±ÏÔÊ¾µÄĞÅÏ¢
+			--å‘é€ä»»åŠ¡æ¥å—æ—¶æ˜¾ç¤ºçš„ä¿¡æ¯
 			BeginEvent(sceneId)
-				--¼ÓÈëÈÎÎñµ½Íæ¼ÒÁĞ±í
+				--åŠ å…¥ä»»åŠ¡åˆ°ç©å®¶åˆ—è¡¨
 				local bAdd = AddMission( sceneId,selfId, x250551_g_MissionId, x250551_g_ScriptId, 0, 0, 0 )
 				if bAdd < 1 then
 					return
 				end	
-				--Ñ°Îï, ËÍĞÅÔòÉèÖÃËø¶¨Ä¿±êNPCµÄÊÂ¼şFlag
+				--å¯»ç‰©, é€ä¿¡åˆ™è®¾ç½®é”å®šç›®æ ‡NPCçš„äº‹ä»¶Flag
 				SetMissionEvent(sceneId, selfId, x250551_g_MissionId, 4)
 				
 				local nNpcId, strNpcName, strNpcScene, nSceneId, nPosX, nPosZ, strNPCDesc = GetOneMissionNpc(x250551_g_fasongtongzhiNpcIndex)
 				print(nNpcId, strNpcName, strNpcScene, nSceneId, nPosX, nPosZ)
 				--print(nNpcId, strNpcName, strNpcScene, nSceneId, nPosX, nPosZ, strNPCDesc)
-				Msg2Player(  sceneId, selfId,"#Y½ÓÊÜÈÎÎñ£ºÉÓ¿ÚĞÅ", MSG2PLAYER_PARA )
+				Msg2Player(  sceneId, selfId,"#Yæ¥å—ä»»åŠ¡ï¼šæå£ä¿¡", MSG2PLAYER_PARA )
 				CallScriptFunction( SCENE_SCRIPT_ID, "AskTheWay", sceneId, selfId, nSceneId, nPosX, nPosZ, strNpcName)
 
-				--µÃµ½ÈÎÎñÔÚ20¸öÈÎÎñÖĞµÄĞòÁĞºÅ
+				--å¾—åˆ°ä»»åŠ¡åœ¨20ä¸ªä»»åŠ¡ä¸­çš„åºåˆ—å·
 				local misIndex = GetMissionIndexByID(sceneId,selfId,x250551_g_MissionId)
 				
-				SetMissionByIndex(sceneId, selfId, misIndex, 0, 0) --ÉèÖÃÈÎÎñÊÇ·ñÍê³É£¨Î´Íê³É£©
+				SetMissionByIndex(sceneId, selfId, misIndex, 0, 0) --è®¾ç½®ä»»åŠ¡æ˜¯å¦å®Œæˆï¼ˆæœªå®Œæˆï¼‰
 				
 				SetMissionByIndex(sceneId, selfId, misIndex, x250551_g_StrForePart, 0)
 				SetMissionByIndex(sceneId, selfId, misIndex, x250551_g_StrForePart+1, nNpcId)
 				--////////////////////////////////////////////////////////////
 				AddText(sceneId,x250551_g_MissionName)
-				local str = format("°ïÎÒ¸æËß%s%s[%d,%d]£¬õí¾Ï´ó»á¾ÍÒª¿ªÊ¼ÁË¡£", strNpcScene, strNpcName, nPosX, nPosZ)
+				local str = format("å¸®æˆ‘å‘Šè¯‰%s%s[%d,%d]ï¼Œè¹´é å¤§ä¼šå°±è¦å¼€å§‹äº†ã€‚", strNpcScene, strNpcName, nPosX, nPosZ)
 				AddText(sceneId, str)
 				AddText(sceneId,"#{M_MUBIAO}")
-				local strMissionTarget = format("ÕÒµ½%s%s[%d,%d]", strNpcScene, strNpcName, nPosX, nPosZ)
+				local strMissionTarget = format("æ‰¾åˆ°%s%s[%d,%d]", strNpcScene, strNpcName, nPosX, nPosZ)
 				AddText(sceneId, strMissionTarget)
 				
 			EndEvent( )
@@ -169,13 +169,13 @@ function x250551_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x250551_OnEnumerate( sceneId, selfId, targetId )
-    --Èç¹ûÒÑ½Ó´ËÈÎÎñ
+    --å¦‚æœå·²æ¥æ­¤ä»»åŠ¡
     if IsHaveMission(sceneId,selfId,x250551_g_MissionId) > 0 then
     	AddNumText(sceneId,x250551_g_ScriptId,x250551_g_MissionName,3,-1);
-	  --Âú×ãÈÎÎñ½ÓÊÕÌõ¼ş
+	  --æ»¡è¶³ä»»åŠ¡æ¥æ”¶æ¡ä»¶
     elseif x250551_CheckAccept(sceneId,selfId) > 0 then
 			if GetName(sceneId,targetId) == x250551_g_Name then
 				AddNumText(sceneId,x250551_g_ScriptId,x250551_g_MissionName,4,-1);
@@ -184,24 +184,24 @@ function x250551_OnEnumerate( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x250551_CheckAccept( sceneId, selfId )
 		return 1
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x250551_OnAccept( sceneId, selfId )
 
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x250551_OnAbandon( sceneId, selfId )
-	--É¾³ıÍæ¼ÒÈÎÎñÁĞ±íÖĞ¶ÔÓ¦µÄÈÎÎñ
+	--åˆ é™¤ç©å®¶ä»»åŠ¡åˆ—è¡¨ä¸­å¯¹åº”çš„ä»»åŠ¡
 	local misIndex = GetMissionIndexByID(sceneId,selfId,x250551_g_MissionId)
 	local npcId = GetMissionParam(sceneId, selfId, misIndex, x250551_g_StrForePart+1)
 	local  _, strNpcName, strNpcScene, x, z, desc, scene = GetNpcInfoByNpcId(sceneId,npcId)
@@ -209,27 +209,27 @@ function x250551_OnAbandon( sceneId, selfId )
   DelMission( sceneId, selfId, x250551_g_MissionId )
 	CallScriptFunction( SCENE_SCRIPT_ID, "DelSignpost", sceneId, selfId, scene, strNpcName, x250551_g_MissionId)
 	
-	-- ÔÚÕâÀï»¹ÊÇÒª¼ì²âÕâ¸öÈÎÎñÀïÍ·´æµÄÊ±¼äÊÇ²»ÊÇ¹ıÈ¥Ò»ÌìÁË£¬Èç¹û¹ıÈ¥ÁË£¬¾ÍÏÈ¸üĞÂ
+	-- åœ¨è¿™é‡Œè¿˜æ˜¯è¦æ£€æµ‹è¿™ä¸ªä»»åŠ¡é‡Œå¤´å­˜çš„æ—¶é—´æ˜¯ä¸æ˜¯è¿‡å»ä¸€å¤©äº†ï¼Œå¦‚æœè¿‡å»äº†ï¼Œå°±å…ˆæ›´æ–°
 	--begin modified by zhangguoxin 090207
 	local iDayCount=GetMissionData(sceneId,selfId,MD_FASONGTONGZHI_DAYCOUNT)
 	--local iTime = mod(iDayCount,100000)
 	local iTime = GetMissionData(sceneId,selfId,MD_FASONGTONGZHI_DAYTIME)
-	local iDayTime = floor(iTime/100)		--ÉÏÒ»´Î·ÅÆúÈÎÎñµÄÊ±¼ä(ÌìÊı)
-	local iQuarterTime = mod(iTime,100)	--ÉÏÒ»´Î·ÅÆúÈÎÎñµÄÊ±¼ä(¿Ì)
-	--local iDayHuan = floor(iDayCount/100000) --µ±ÌìÄÚÍê³ÉµÄÈÎÎñ´ÎÊı
-	local iDayHuan = iDayCount --µ±ÌìÄÚÍê³ÉµÄÈÎÎñ´ÎÊı
+	local iDayTime = floor(iTime/100)		--ä¸Šä¸€æ¬¡æ”¾å¼ƒä»»åŠ¡çš„æ—¶é—´(å¤©æ•°)
+	local iQuarterTime = mod(iTime,100)	--ä¸Šä¸€æ¬¡æ”¾å¼ƒä»»åŠ¡çš„æ—¶é—´(åˆ»)
+	--local iDayHuan = floor(iDayCount/100000) --å½“å¤©å†…å®Œæˆçš„ä»»åŠ¡æ¬¡æ•°
+	local iDayHuan = iDayCount --å½“å¤©å†…å®Œæˆçš„ä»»åŠ¡æ¬¡æ•°
 
-	--local CurTime = GetHourTime()		--µ±Ç°Ê±¼ä
-	local CurTime = GetQuarterTime()		--µ±Ç°Ê±¼ä
-	local CurDaytime = floor(CurTime/100)	--µ±Ç°Ê±¼ä(Ìì)
+	--local CurTime = GetHourTime()		--å½“å‰æ—¶é—´
+	local CurTime = GetQuarterTime()		--å½“å‰æ—¶é—´
+	local CurDaytime = floor(CurTime/100)	--å½“å‰æ—¶é—´(å¤©)
 	
-	if CurDaytime~=iDayTime then 	--ÉÏ´ÎÍê³ÉÈÎÎñÊÇÍ¬Ò»ÌìÄÚ
+	if CurDaytime~=iDayTime then 	--ä¸Šæ¬¡å®Œæˆä»»åŠ¡æ˜¯åŒä¸€å¤©å†…
 		iDayHuan = 0
 	end
 	
 	--iDayCount = iDayHuan*100000 + CurTime 
 
-	--ÉèÖÃÑ­»·ÈÎÎñµÄÊ±¼ä
+	--è®¾ç½®å¾ªç¯ä»»åŠ¡çš„æ—¶é—´
 	--SetMissionData(sceneId,selfId,MD_FASONGTONGZHI_DAYCOUNT,iDayCount)
 	SetMissionData(sceneId,selfId,MD_FASONGTONGZHI_DAYCOUNT,iDayHuan)
 	SetMissionData(sceneId,selfId,MD_FASONGTONGZHI_DAYTIME,CurTime)
@@ -237,7 +237,7 @@ function x250551_OnAbandon( sceneId, selfId )
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x250551_CheckSubmit( sceneId, selfId )
 	if IsHaveMission(sceneId,selfId,x250551_g_MissionId) > 0 then
@@ -251,7 +251,7 @@ function x250551_CheckSubmit( sceneId, selfId )
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x250551_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 	
@@ -260,30 +260,30 @@ function x250551_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 		local iDayCount=GetMissionData(sceneId,selfId,MD_FASONGTONGZHI_DAYCOUNT)
 		--local iTime = mod(iDayCount,100000)
 		local iTime = GetMissionData(sceneId,selfId,MD_FASONGTONGZHI_DAYTIME)
-		local iDayTime = floor(iTime/100)		--ÉÏÒ»´Î·ÅÆúÈÎÎñµÄÊ±¼ä(ÌìÊı)
-		local iQuarterTime = mod(iTime,100)	--ÉÏÒ»´Î·ÅÆúÈÎÎñµÄÊ±¼ä(¿Ì)
-		--local iDayHuan = floor(iDayCount/100000)	--µ±ÌìÄÚÍê³ÉµÄÈÎÎñ´ÎÊı
-		local iDayHuan = iDayCount 									--µ±ÌìÄÚÍê³ÉµÄÈÎÎñ´ÎÊı
+		local iDayTime = floor(iTime/100)		--ä¸Šä¸€æ¬¡æ”¾å¼ƒä»»åŠ¡çš„æ—¶é—´(å¤©æ•°)
+		local iQuarterTime = mod(iTime,100)	--ä¸Šä¸€æ¬¡æ”¾å¼ƒä»»åŠ¡çš„æ—¶é—´(åˆ»)
+		--local iDayHuan = floor(iDayCount/100000)	--å½“å¤©å†…å®Œæˆçš„ä»»åŠ¡æ¬¡æ•°
+		local iDayHuan = iDayCount 									--å½“å¤©å†…å®Œæˆçš„ä»»åŠ¡æ¬¡æ•°
 	
-		--local CurTime = GetHourTime()		--µ±Ç°Ê±¼ä
-		local CurTime = GetQuarterTime()		--µ±Ç°Ê±¼ä
-		local CurDaytime = floor(CurTime/100)	--µ±Ç°Ê±¼ä(Ìì)
-		local CurQuarterTime = mod(CurTime,100)	--µ±Ç°Ê±¼ä(¿Ì)
+		--local CurTime = GetHourTime()		--å½“å‰æ—¶é—´
+		local CurTime = GetQuarterTime()		--å½“å‰æ—¶é—´
+		local CurDaytime = floor(CurTime/100)	--å½“å‰æ—¶é—´(å¤©)
+		local CurQuarterTime = mod(CurTime,100)	--å½“å‰æ—¶é—´(åˆ»)
 		
-		if CurDaytime==iDayTime then 	--ÉÏ´ÎÍê³ÉÈÎÎñÊÇÍ¬Ò»ÌìÄÚ
+		if CurDaytime==iDayTime then 	--ä¸Šæ¬¡å®Œæˆä»»åŠ¡æ˜¯åŒä¸€å¤©å†…
 			iDayHuan = iDayHuan+1
-		else							--ÉÏ´ÎÍê³ÉÈÎÎñ²»ÔÚÍ¬Ò»Ìì£¬ÖØÖÃ
+		else							--ä¸Šæ¬¡å®Œæˆä»»åŠ¡ä¸åœ¨åŒä¸€å¤©ï¼Œé‡ç½®
 			iDayTime = CurDaytime
 			iDayHuan = 1
 		end
 		
-		-- Ö»ÒªÍæ¼Ò½»ÁËÈÎÎñ£¬¾ÍÈÃ·ÅÆúÈÎÎñµÄÊı¾İÎŞĞ§
+		-- åªè¦ç©å®¶äº¤äº†ä»»åŠ¡ï¼Œå°±è®©æ”¾å¼ƒä»»åŠ¡çš„æ•°æ®æ— æ•ˆ
 		iQuarterTime = 99
 		
 		--iDayCount = iDayHuan*100000+iDayTime*100+iQuarterTime 
 		iDayCount = iDayHuan;
 		local newTime = CurDaytime * 100 + iQuarterTime;
-		--ÉèÖÃÑ­»·ÈÎÎñµÄDAYCOUNT
+		--è®¾ç½®å¾ªç¯ä»»åŠ¡çš„DAYCOUNT
 		SetMissionData(sceneId,selfId,MD_FASONGTONGZHI_DAYCOUNT,iDayCount)
 		SetMissionData(sceneId,selfId,MD_FASONGTONGZHI_DAYTIME,newTime)
 		--end modified by zhangguoxin 090207
@@ -294,14 +294,14 @@ function x250551_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 		AddExp(sceneId,selfId,BonusExp )
 		
 		----------------------------------------changed by xindefeng-------------------------------------------------
-		--AddMoney()&AddExp()±¾Éí»áÔÚÏµÍ³ÆµµÀÌáÊ¾,ËùÒÔ½«ÒÔÏÂÁ½¾äÌáÊ¾×¢ÊÍµô
-		----Msg2Player(  sceneId, selfId, "Äã»ñµÃÁË" .. tostring(BonusExp) .. "µã¾­Ñé", MSG2PLAYER_PARA )
-		----Msg2Player(  sceneId, selfId, "Äã»ñµÃÁË#{_MONEY" .. tostring(BonusMoney) .. "}", MSG2PLAYER_PARA )
+		--AddMoney()&AddExp()æœ¬èº«ä¼šåœ¨ç³»ç»Ÿé¢‘é“æç¤º,æ‰€ä»¥å°†ä»¥ä¸‹ä¸¤å¥æç¤ºæ³¨é‡Šæ‰
+		----Msg2Player(  sceneId, selfId, "ä½ è·å¾—äº†" .. format("%.0f", BonusExp) .. "ç‚¹ç»éªŒ", MSG2PLAYER_PARA )
+		----Msg2Player(  sceneId, selfId, "ä½ è·å¾—äº†#{_MONEY" .. tostring(BonusMoney) .. "}", MSG2PLAYER_PARA )
 		----------------------------------------changed by xindefeng-------------------------------------------------
 		
 		DelMission( sceneId,selfId, x250551_g_MissionId )
-		Msg2Player(  sceneId, selfId,"#YÍê³ÉÈÎÎñ£ºÉÓ¿ÚĞÅ",MSG2PLAYER_PARA )
-		-- µ±Ã¿ÌìÍê³ÉµÚ10´ÎºÍµÚ20´ÎµÄÊ±ºò£¬Æô¶¯·ÀÍâ¹ÒÌáÎÊ
+		Msg2Player(  sceneId, selfId,"#Yå®Œæˆä»»åŠ¡ï¼šæå£ä¿¡",MSG2PLAYER_PARA )
+		-- å½“æ¯å¤©å®Œæˆç¬¬10æ¬¡å’Œç¬¬20æ¬¡çš„æ—¶å€™ï¼Œå¯åŠ¨é˜²å¤–æŒ‚æé—®
 		if iDayHuan == 5 or iDayHuan == 10   then
 			LuaFnSendGuajiQuestion(sceneId,selfId)
 		end
@@ -309,9 +309,9 @@ function x250551_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 end
 
 function x250551_OnLockedTarget(sceneId, selfId, objId )
-	-- ÅĞ¶ÏÊÇ²»ÊÇËø¶¨µÄNpc
+	-- åˆ¤æ–­æ˜¯ä¸æ˜¯é”å®šçš„Npc
 	if IsHaveMission(sceneId, selfId, x250551_g_MissionId) > 0 then
-		local misIndex = GetMissionIndexByID(sceneId,selfId,x250551_g_MissionId)		--µÃµ½ÈÎÎñÔÚ20¸öÈÎÎñÖĞµÄĞòÁĞºÅ
+		local misIndex = GetMissionIndexByID(sceneId,selfId,x250551_g_MissionId)		--å¾—åˆ°ä»»åŠ¡åœ¨20ä¸ªä»»åŠ¡ä¸­çš„åºåˆ—å·
 		local missionType = GetMissionParam(sceneId, selfId, misIndex, 1)
 		
 		local nNpcId = GetMissionParam(sceneId, selfId, misIndex, x250551_g_StrForePart+1)

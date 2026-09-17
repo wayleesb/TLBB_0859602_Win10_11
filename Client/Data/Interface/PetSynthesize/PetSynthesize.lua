@@ -37,28 +37,28 @@ end
 
 function PetSynthesize_SetCtl()
 	g_MembersCtl[0] =	{
-											--¿Ø¼ş
+											--æ§ä»¶
 											name 	= PetSynthesize_Other_Pet,
 											model	=	PetSynthesize_Other_PetModel,
 											left	= PetSynthesize_OtherModel_TurnLeft,
 											right	=	PetSynthesize_OtherModel_TurnRight,
 											cancel = PetSynthesize_ViewDesc_Other,
-											--¶ÔÓ¦listÖĞµÄË÷Òı
+											--å¯¹åº”listä¸­çš„ç´¢å¼•
 											idx = g_SynPet[0],
-											--FakeÏµÍ³ÖĞµÄÃû×Ö
+											--Fakeç³»ç»Ÿä¸­çš„åå­—
 											strFake = "My_PetSynLeft",
 										};
 
 	g_MembersCtl[1] =	{
-											--¿Ø¼ş
+											--æ§ä»¶
 											name 	= PetSynthesize_Self_Pet,
 											model	=	PetSynthesize_Self_PetModel,
 											left	= PetSynthesize_SelfModel_TurnLeft,
 											right	=	PetSynthesize_SelfModel_TurnRight,
 											cancel = PetSynthesize_ViewDesc_Self,
-											--¶ÔÓ¦listÖĞµÄË÷Òı
+											--å¯¹åº”listä¸­çš„ç´¢å¼•
 											idx = g_SynPet[1];
-											--FakeÏµÍ³ÖĞµÄÃû×Ö
+											--Fakeç³»ç»Ÿä¸­çš„åå­—
 											strFake = "My_PetSynRight",
 										};
 
@@ -101,10 +101,10 @@ end
 function PetSynthesize_UpdatePet()
 	for pos = 0, 1 do
 		if(g_MembersCtl[pos].idx) then
-			--Çå³ı¾ÉµÄĞÅÏ¢
+			--æ¸…é™¤æ—§çš„ä¿¡æ¯
 			g_MembersCtl[pos].name:SetText("");
 			g_MembersCtl[pos].model:SetFakeObject("");
-			--¸üĞÂĞÂµÄĞÅÏ¢
+			--æ›´æ–°æ–°çš„ä¿¡æ¯
 			g_MembersCtl[pos].name:SetText(Pet:GetName(g_MembersCtl[pos].idx));
 			Pet:SetSynModel(g_MembersCtl[pos].idx, pos);
 			g_MembersCtl[pos].model:SetFakeObject(g_MembersCtl[pos].strFake);
@@ -113,25 +113,25 @@ function PetSynthesize_UpdatePet()
 end
 
 function PetSynthesize_SetPet(idx)
-	local nIdx = tonumber(idx);  --×Ô¼ºµÄµÚ¼¸Ö»³èÎï
+	local nIdx = tonumber(idx);  --è‡ªå·±çš„ç¬¬å‡ åªå® ç‰©
 	if( -1 == nIdx or nil == nIdx) then
 		return;
 	end
-	--¼ì²éÊÇ·ñÖØ¸´
+	--æ£€æŸ¥æ˜¯å¦é‡å¤
 	for i = 0, 1 do
 		--AxTrace(0,0,"PetSynthesize_SetPet nIdx:"..tostring(nIdx).." g_MembersCtl["..tostring(i).."].idx:"..
 		--						tostring(g_MembersCtl[i].idx));
 		if(g_MembersCtl[i].idx and g_MembersCtl[i].idx == nIdx) then return; end
 	end
-	--²éÕÒ¿Õ¼ä
-	local nEmptyIdx = 0;	--Èç¹ûÕ¼ÂúÁË´ÓµÚÒ»¸ö»»
+	--æŸ¥æ‰¾ç©ºé—´
+	local nEmptyIdx = 0;	--å¦‚æœå æ»¡äº†ä»ç¬¬ä¸€ä¸ªæ¢
 	for i = 0, 1 do
 		if(nil == g_MembersCtl[i].idx) then 
 			nEmptyIdx = i;
 			break;
 		end
 	end
-	--ÉèÖÃ¶ÔÓ¦Î»ÖÃµÄ¶ÔÓ¦³èÎï
+	--è®¾ç½®å¯¹åº”ä½ç½®çš„å¯¹åº”å® ç‰©
 	--AxTrace(0,0,"PetSynthesize_SetPos nEmptyIdx:"..tostring(nEmptyIdx).." nIdx:"..tostring(nIdx));
 	PetSynthesize_SetPos(nEmptyIdx, nIdx);
 end
@@ -144,9 +144,9 @@ function PetSynthesize_SetPos(id, petIdx)
 	end
 
 	if(pos == 0 or pos == 1) then
-		--Çå³ı¾ÉÊı¾İ
+		--æ¸…é™¤æ—§æ•°æ®
 		PetSynthesize_ClearPos(pos);
-		--ÉèÖÃĞÂÊı¾İ
+		--è®¾ç½®æ–°æ•°æ®
 		g_MembersCtl[pos].name:SetText(Pet:GetName(nPetIdx));
 		Pet:SetSynModel(nPetIdx, pos);
 		g_MembersCtl[pos].model:SetFakeObject(g_MembersCtl[pos].strFake);
@@ -156,7 +156,7 @@ function PetSynthesize_SetPos(id, petIdx)
 		g_MembersCtl[pos].idx = nPetIdx;
 		g_SynPet[pos] = nPetIdx;
 		--AxTrace(0,0,"PetSynthesize_SetPos g_MembersCtl["..tostring(pos).."].idx:"..tostring(g_MembersCtl[pos].idx).." nPetIdx:"..tostring(nPetIdx));
-		--ÉèÖÃÈ·ÈÏ°´Å¥×´Ì¬
+		--è®¾ç½®ç¡®è®¤æŒ‰é’®çŠ¶æ€
 		PetSynthesize_SetConfirm();
 	end
 end
@@ -190,7 +190,7 @@ function PetSynthesize_CareEventHandle(careId, op, distance)
 		if(tonumber(careId) ~= g_clientNpcId) then
 			return;
 		end
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ı£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æœå’ŒNPCçš„è·ç¦»å¤§äºä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if(op == "distance" and tonumber(distance)>MAX_OBJ_DISTANCE or op=="destroy") then
 			PetSynthesize_Hide();
 		end
@@ -204,10 +204,10 @@ end
 function PetSynthesize_Modle_TurnLeft(id,start)
 	local pos = tonumber(id);
 	if(pos == 0 or pos == 1) then
-		--Ïò×óĞı×ª¿ªÊ¼
+		--å‘å·¦æ—‹è½¬å¼€å§‹
 		if(start == 1) then
 			g_MembersCtl[pos].model:RotateBegin(-0.3);
-		--Ïò×óĞı×ª½áÊø
+		--å‘å·¦æ—‹è½¬ç»“æŸ
 		else
 			g_MembersCtl[pos].model:RotateEnd();
 		end
@@ -217,10 +217,10 @@ end
 function PetSynthesize_Modle_TurnRight(id,start)
 	local pos = tonumber(id);
 	if(pos == 0 or pos == 1) then
-		--ÏòÓÒĞı×ª¿ªÊ¼
+		--å‘å³æ—‹è½¬å¼€å§‹
 		if(start == 1) then
 			g_MembersCtl[pos].model:RotateBegin(0.3);
-		--ÏòÓÒĞı×ª½áÊø
+		--å‘å³æ—‹è½¬ç»“æŸ
 		else
 			g_MembersCtl[pos].model:RotateEnd();
 		end

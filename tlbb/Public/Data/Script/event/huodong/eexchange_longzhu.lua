@@ -1,6 +1,6 @@
---»î¶¯¡ª¡ª¶Ò»»ĞÄ·¨¡¢ÃØ¼®
+--æ´»åŠ¨â€”â€”å…‘æ¢å¿ƒæ³•ã€ç§˜ç±
 --MisDescBegin
---½Å±¾ºÅ
+--è„šæœ¬å·
 x808058_g_ScriptId = 808058
 x808058_g_ExchangeLongzhu_Active = 1
 x808058_g_LongpaiId = 30505092
@@ -15,7 +15,7 @@ x808058_g_LongzhuList = { 30505136, 30505137, 30505138, 30505139, 30505140, 3050
 
 
 function x808058_CheckPercentOK( numerator, denominator )
-    --²ÎÊıÎª·Ö×Ó,·ÖÄ¸. ÀıÈç ( 100, 10000 ) ±íÊ¾¼¸ÂÊÎª 100 / 10000
+    --å‚æ•°ä¸ºåˆ†å­,åˆ†æ¯. ä¾‹å¦‚ ( 100, 10000 ) è¡¨ç¤ºå‡ ç‡ä¸º 100 / 10000
     local roll = random( denominator )
     
     if roll <= numerator then
@@ -37,7 +37,7 @@ function x808058_DropLongzhuList( sceneId, LongzhuIndex )
     --30505142   0.000002
     x808058_CheckRightTime()
     
-    if 1 ~= x808058_g_ExchangeLongzhu_Active then    --Ã»»î¶¯µÄÊ±ºò¾Í²»Ö´ĞĞ(Èİ´í´¦Àí,ÕıÈ·Á÷³Ì²»Ó¦µ÷ÓÃµ½ÕâÀï)
+    if 1 ~= x808058_g_ExchangeLongzhu_Active then    --æ²¡æ´»åŠ¨çš„æ—¶å€™å°±ä¸æ‰§è¡Œ(å®¹é”™å¤„ç†,æ­£ç¡®æµç¨‹ä¸åº”è°ƒç”¨åˆ°è¿™é‡Œ)
         return -1
     end
     
@@ -116,7 +116,7 @@ function x808058_DelNeedItem( sceneId, selfId, targetId )
     for i=1, ListSize do
 		ret = LuaFnDelAvailableItem(sceneId, selfId, x808058_g_LongzhuList[ i ], 1)
 		if ret ~= 1 then
-			return -1   --¼ÙÈçÉ¾³ı²Ù×÷ÓĞÈÎºÎÒ»¸öÎïÆ·Ê§°Ü,ÔòÖĞ¶Ï²Ù×÷,ÈÏÎªÉ¾³ıÊ§°Ü
+			return -1   --å‡å¦‚åˆ é™¤æ“ä½œæœ‰ä»»ä½•ä¸€ä¸ªç‰©å“å¤±è´¥,åˆ™ä¸­æ–­æ“ä½œ,è®¤ä¸ºåˆ é™¤å¤±è´¥
 		end
 	end
 	
@@ -127,8 +127,8 @@ end
 function x808058_AwardItem( sceneId, selfId, targetId, type )
 
     local bEnough = x808058_CheckEnoughItem( sceneId, selfId, targetId )
-    if 0 == bEnough then        --Ã»ÓĞ×ã¹»ÎïÆ·
-		--"¶Ò»»Áú±¦±¦ĞèÒª³à¡¢³È¡¢»Æ¡¢ÂÌ¡¢Çà¡¢À¶¡¢×ÏÉ«ÁúÖé¸÷Ò»¸ö£¬ÄúÉíÉÏµÄÁúÖé²»È«£¬Òò´ËÎŞ·¨¶Ò»»¡£"
+    if 0 == bEnough then        --æ²¡æœ‰è¶³å¤Ÿç‰©å“
+		--"å…‘æ¢é¾™å®å®éœ€è¦èµ¤ã€æ©™ã€é»„ã€ç»¿ã€é’ã€è“ã€ç´«è‰²é¾™ç å„ä¸€ä¸ªï¼Œæ‚¨èº«ä¸Šçš„é¾™ç ä¸å…¨ï¼Œå› æ­¤æ— æ³•å…‘æ¢ã€‚"
 		local strNotEnough = "#{EXCHANGE_LONGPAI_TEX01}"
 		BeginEvent(sceneId)
 			AddText( sceneId, strNotEnough )
@@ -149,10 +149,10 @@ function x808058_AwardItem( sceneId, selfId, targetId, type )
 	if Ret > 0 then
 	    local bDel = x808058_DelNeedItem( sceneId, selfId, targetId )
 	    if 1 == bDel then
-	        --¸øÓèÍæ¼ÒÎïÆ·
+	        --ç»™äºˆç©å®¶ç‰©å“
 	        AddItemListToHuman(sceneId,selfId)
 	        
-	        --·¢²¼ÏµÍ³¹«¸æ
+	        --å‘å¸ƒç³»ç»Ÿå…¬å‘Š
 	        local szItemTransfer = GetItemTransfer(sceneId,selfId,0)
 			local PlayerName = GetName( sceneId, selfId )
 			local PlayerInfoName = "#{_INFOUSR"..PlayerName .."}"
@@ -160,11 +160,11 @@ function x808058_AwardItem( sceneId, selfId, targetId, type )
 			
 			local strNotice = "#{EXCHANGE_LONGPAI_TEX02}"
 			
-			--"#P¾­¹ıÒ»·¬Å¬Á¦£¬ÖÕÓÚÊÕ¼¯È«ÁË¾Û¼¯ÁËÌìµØ¾«»ªµÄÆß¿ÅÁúÖé¡ª¡ª³àÉ«¡¢³ÈÉ«¡¢»ÆÉ«¡¢ÂÌÉ«¡¢ÇàÉ«¡¢À¶É«¡¢×ÏÉ«ÁúÖé¡£×÷Îª¸ĞĞ»£¬´óÀíµÄ¹¨²ÊÔÆÌØÔùËÍ¸øÆäÒ»¿é"
-			local SysStr = PlayerInfoName..strNotice..ItemInfo.."#R¡£"
+			--"#Pç»è¿‡ä¸€ç•ªåŠªåŠ›ï¼Œç»ˆäºæ”¶é›†å…¨äº†èšé›†äº†å¤©åœ°ç²¾åçš„ä¸ƒé¢—é¾™ç â€”â€”èµ¤è‰²ã€æ©™è‰²ã€é»„è‰²ã€ç»¿è‰²ã€é’è‰²ã€è“è‰²ã€ç´«è‰²é¾™ç ã€‚ä½œä¸ºæ„Ÿè°¢ï¼Œå¤§ç†çš„é¾šå½©äº‘ç‰¹èµ é€ç»™å…¶ä¸€å—"
+			local SysStr = PlayerInfoName..strNotice..ItemInfo.."#Rã€‚"
 			BroadMsgByChatPipe( sceneId, selfId, SysStr, 4 )
 		
-	    --¹Ø±Õ½çÃæ
+	    --å…³é—­ç•Œé¢
 	    BeginUICommand( sceneId )
 			UICommand_AddInt( sceneId, targetId )
 			EndUICommand( sceneId )
@@ -172,7 +172,7 @@ function x808058_AwardItem( sceneId, selfId, targetId, type )
 	    end
 
 	else
-		--local strBagFull = "¶Ô²»Æğ£¬ÄúµÄÎïÆ·À¸ÒÑ¾­Ã»ÓĞ¿Õ¼ä£¬Òò´ËÎŞ·¨¶Ò»»¡£"
+		--local strBagFull = "å¯¹ä¸èµ·ï¼Œæ‚¨çš„ç‰©å“æ å·²ç»æ²¡æœ‰ç©ºé—´ï¼Œå› æ­¤æ— æ³•å…‘æ¢ã€‚"
 		local strBagFull = "#{EXCHANGE_LONGPAI_TEX03}"
 		BeginEvent(sceneId)
 			AddText( sceneId, strBagFull )
@@ -183,26 +183,26 @@ function x808058_AwardItem( sceneId, selfId, targetId, type )
 end
 
 --**********************************
---Íæ¼Ò¼ñµ½ÁúÖéµÄ¹«¸æ
+--ç©å®¶æ¡åˆ°é¾™ç çš„å…¬å‘Š
 --**********************************
 function x808058_PlayerPickUpLongZhu( sceneId, selfId, bagidx )
 
 	local szItemTransfer = GetBagItemTransfer(sceneId,selfId,bagidx)
 	local PlayerName = GetName( sceneId, selfId )
 			
-	local strNotice = format( "#{_INFOUSR%s}#PÔÚÒ°ÍâÏĞ¹äÊ±ÒâÍâÔÚ²İ´ÔÖĞ·¢ÏÖÁËÒ»¿ÅÉÁ×Å¹âÃ¢µÄÔ²ĞÎÖé×Ó£¬²ÁÊÃÖ®ºó²Å·¢ÏÖ¾¹ÊÇ#{_INFOMSG%s}¡£", PlayerName, szItemTransfer )
+	local strNotice = format( "#{_INFOUSR%s}#Påœ¨é‡å¤–é—²é€›æ—¶æ„å¤–åœ¨è‰ä¸›ä¸­å‘ç°äº†ä¸€é¢—é—ªç€å…‰èŠ’çš„åœ†å½¢ç å­ï¼Œæ“¦æ‹­ä¹‹åæ‰å‘ç°ç«Ÿæ˜¯#{_INFOMSG%s}ã€‚", PlayerName, szItemTransfer )
 	BroadMsgByChatPipe( sceneId, selfId, strNotice, 4 )
     
 end
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x808058_OnDefaultEvent( sceneId, selfId, targetId )
     
     x808058_CheckRightTime()
     
-    if 1 ~= x808058_g_ExchangeLongzhu_Active then    --Ã»»î¶¯µÄÊ±ºò¾Í²»Ö´ĞĞ(Èİ´í´¦Àí,ÕıÈ·Á÷³Ì²»Ó¦µ÷ÓÃµ½ÕâÀï)
+    if 1 ~= x808058_g_ExchangeLongzhu_Active then    --æ²¡æ´»åŠ¨çš„æ—¶å€™å°±ä¸æ‰§è¡Œ(å®¹é”™å¤„ç†,æ­£ç¡®æµç¨‹ä¸åº”è°ƒç”¨åˆ°è¿™é‡Œ)
         return
     end
     
@@ -234,7 +234,7 @@ function x808058_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²âÊÇ·ñÕıÈ·µÄ»î¶¯Ê±¼ä
+--æ£€æµ‹æ˜¯å¦æ­£ç¡®çš„æ´»åŠ¨æ—¶é—´
 --**********************************
 function x808058_CheckRightTime()
 
@@ -242,12 +242,12 @@ function x808058_CheckRightTime()
     
     --if DayTime < x808058_g_ActiveStartTime then
     --   x808058_g_ExchangeLongzhu_Active = 0
-    --   return 0    --´ËÇ°·Ç»î¶¯Ê±¼ä
+    --   return 0    --æ­¤å‰éæ´»åŠ¨æ—¶é—´
     --end
     
     --if DayTime > x808058_g_ActiveEndTime then
     --   x808058_g_ExchangeLongzhu_Active = 0
-    --   return 0    --´Ëºó»î¶¯ÒÑ¾­½áÊø
+    --   return 0    --æ­¤åæ´»åŠ¨å·²ç»ç»“æŸ
     --end
     
     x808058_g_ExchangeLongzhu_Active = 1
@@ -256,7 +256,7 @@ function x808058_CheckRightTime()
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x808058_OnEnumerate( sceneId, selfId, targetId )
     
@@ -266,8 +266,8 @@ function x808058_OnEnumerate( sceneId, selfId, targetId )
         return
     end
 
-    --local strLongpai = "ÎÒÒª¶Ò»»ÁúÅÆ"
-    --local strDesc = "¹ØÓÚ¶Ò»»ÁúÅÆ"
+    --local strLongpai = "æˆ‘è¦å…‘æ¢é¾™ç‰Œ"
+    --local strDesc = "å…³äºå…‘æ¢é¾™ç‰Œ"
     
     local strLongpai = "#{EXCHANGE_LONGPAI_TEX04}"
     local strDesc = "#{EXCHANGE_LONGPAI_TEX05}"
@@ -277,58 +277,58 @@ function x808058_OnEnumerate( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x808058_CheckAccept( sceneId, selfId )
 
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x808058_OnAccept( sceneId, selfId )
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x808058_OnAbandon( sceneId, selfId )
 end
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x808058_OnContinue( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x808058_CheckSubmit( sceneId, selfId )
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x808058_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 	
 end
 
 --**********************************
---É±ËÀ¹ÖÎï»òÍæ¼Ò
+--æ€æ­»æ€ªç‰©æˆ–ç©å®¶
 --**********************************
 function x808058_OnKillObject( sceneId, selfId, objdataId ,objId )
 
 end
 
 --**********************************
---½øÈëÇøÓòÊÂ¼ş
+--è¿›å…¥åŒºåŸŸäº‹ä»¶
 --**********************************
 function x808058_OnEnterArea( sceneId, selfId, zoneId )
 end
 
 --**********************************
---µÀ¾ß¸Ä±ä
+--é“å…·æ”¹å˜
 --**********************************
 function x808058_OnItemChanged( sceneId, selfId, itemdataId )
 end

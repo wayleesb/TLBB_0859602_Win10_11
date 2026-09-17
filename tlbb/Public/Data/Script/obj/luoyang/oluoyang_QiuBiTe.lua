@@ -1,7 +1,7 @@
---ÇéÈË½Ú»î¶¯
---¶Ò»»ÇéÈË½ÚÀñÎï
+--æƒ…äººèŠ‚æ´»åŠ¨
+--å…‘æ¢æƒ…äººèŠ‚ç¤¼ç‰©
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x000152_g_ScriptId = 000152
 
 x000152_StartTime   = 9040
@@ -9,7 +9,7 @@ x000152_EndTime     = 9047
 
 x000152_g_Gift = 	30501166
 
---buffer¶ÔÓ¦µÄID
+--bufferå¯¹åº”çš„ID
 x000152_BufferID = 74
 
 x000152_g_GiftTbl = {
@@ -19,17 +19,17 @@ x000152_g_GiftTbl = {
 }
 
 --**********************************
---ÊÂ¼þ½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x000152_OnDefaultEvent( sceneId, selfId,targetId  )
 	BeginEvent(sceneId)
 		AddText(sceneId,"#{QRJ_81009_02}")
 		local curDayTime = GetDayTime()
 		if (curDayTime>=x000152_StartTime and curDayTime<x000152_EndTime) then
-			AddNumText(sceneId,x000152_g_ScriptId,"ÁìÈ¡°®ÉñÖ®¼ý",6,0)
-			AddNumText(sceneId,x000152_g_ScriptId,"°®ÉñÖ®ÎÇ¶Ò»»½±Àø",6,1)
+			AddNumText(sceneId,x000152_g_ScriptId,"é¢†å–çˆ±ç¥žä¹‹ç®­",6,0)
+			AddNumText(sceneId,x000152_g_ScriptId,"çˆ±ç¥žä¹‹å»å…‘æ¢å¥–åŠ±",6,1)
 		end 
-		AddNumText(sceneId,x000152_g_ScriptId,"¹ØÓÚ°®ÉñÖ®ÎÇ»î¶¯",11,2)
+		AddNumText(sceneId,x000152_g_ScriptId,"å…³äºŽçˆ±ç¥žä¹‹å»æ´»åŠ¨",11,2)
 		--AddNumText(sceneId, x000152_g_ScriptId, "#{YHJZ_081007_2}", 11, 3);
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
@@ -37,7 +37,7 @@ function x000152_OnDefaultEvent( sceneId, selfId,targetId  )
 end
 
 --**********************************
---ÊÂ¼þÁÐ±íÑ¡ÖÐÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x000152_OnEventRequest( sceneId, selfId, targetId, eventId )
 		
@@ -54,7 +54,7 @@ function x000152_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
--- ¶Ô»°´°¿ÚÐÅÏ¢ÌáÊ¾
+-- å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x000152_NotifyFailBox( sceneId, selfId, targetId, msg )
 	BeginEvent( sceneId )
@@ -64,13 +64,13 @@ function x000152_NotifyFailBox( sceneId, selfId, targetId, msg )
 end
 
 function x000152_GiveArrow(sceneId, selfId, targetId, eventId)
-		--20¼¶µÄÏÞÖÆ
+		--20çº§çš„é™åˆ¶
 		if GetLevel( sceneId, selfId ) < 20 then
 			x000152_NotifyFailBox( sceneId, selfId, targetId, "#{QRJ_81009_03}" )
 			return
 		end
 		
-		--ÅÐ¶Ï½ñÌìÊÇ·ñÁì¹ý
+		--åˆ¤æ–­ä»Šå¤©æ˜¯å¦é¢†è¿‡
 		local td = GetDayTime()
 		local LastGetGiftTime = GetMissionData(sceneId,selfId,MD_QINGRENJIE_ARROWDAY)
 		if td <= LastGetGiftTime then
@@ -80,7 +80,7 @@ function x000152_GiveArrow(sceneId, selfId, targetId, eventId)
 		    SetMissionData( sceneId, selfId, MD_QINGRENJIE_ARROWDAY, td )			
 		end 
 		
-		-- ¼ì²é±³°ü¿Õ¼ä
+		-- æ£€æŸ¥èƒŒåŒ…ç©ºé—´
 		if LuaFnGetPropertyBagSpace( sceneId, selfId ) < 1 then
 				BeginEvent(sceneId)
 				AddText( sceneId, "#{QRJ_81009_14}" )
@@ -88,7 +88,7 @@ function x000152_GiveArrow(sceneId, selfId, targetId, eventId)
 				DispatchMissionTips(sceneId,selfId)
 		else
 			
-				--¸øÍæ¼Ò¶«Î÷£¬Íê³É
+				--ç»™çŽ©å®¶ä¸œè¥¿ï¼Œå®Œæˆ
 			BeginAddItem( sceneId )
 				local nIndex = AddItem( sceneId, x000152_g_Gift, 1 )
 			local ret = EndAddItem( sceneId, selfId )
@@ -96,10 +96,10 @@ function x000152_GiveArrow(sceneId, selfId, targetId, eventId)
 				return
 			end
 			AddItemListToHuman(sceneId,selfId)
-			--·µ»ØNPCµÄ¶Ô»° 
+			--è¿”å›žNPCçš„å¯¹è¯ 
 			x000152_NotifyFailBox( sceneId, selfId, targetId, "#{QRJ_81009_24}" )
 			
-			--ÐÑÄ¿ÌáÊ¾
+			--é†’ç›®æç¤º
 			BeginEvent(sceneId) 
 				AddText( sceneId, "#{QRJ_81009_25}" )
 			EndEvent(sceneId)
@@ -110,7 +110,7 @@ function x000152_GiveArrow(sceneId, selfId, targetId, eventId)
 		
 end 
 --**********************************
--- ¶Ô»°´°¿ÚÐÅÏ¢ÌáÊ¾
+-- å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x000152_GiveGift(sceneId, selfId, targetId, eventId)
 
@@ -128,7 +128,7 @@ function x000152_GiveGift(sceneId, selfId, targetId, eventId)
 	  return
 	end
 	
-		-- È¡µÃÍæ¼Ò¸½½üµÄ¶ÓÓÑÊýÁ¿£¨°üÀ¨×Ô¼º£©
+		-- å–å¾—çŽ©å®¶é™„è¿‘çš„é˜Ÿå‹æ•°é‡ï¼ˆåŒ…æ‹¬è‡ªå·±ï¼‰
 	local nearteammembercount = GetNearTeamCount( sceneId, selfId )
 	
 	if nearteammembercount ~= LuaFnGetTeamSize( sceneId, selfId ) then
@@ -136,33 +136,33 @@ function x000152_GiveGift(sceneId, selfId, targetId, eventId)
 		return
 	end
 	
-	--Á½¶ÓÔ±µÄGUID,ÔÙ×ª»¯ÎªOBjID
+	--ä¸¤é˜Ÿå‘˜çš„GUID,å†è½¬åŒ–ä¸ºOBjID
 	local ID1 = GetNearTeamMember( sceneId, selfId, 0 )
 	local ID2 = GetNearTeamMember( sceneId, selfId, 1 )
 	
-	--ÅÐ¶ÏÁ½ÈËµÄÐÔ±ð
+	--åˆ¤æ–­ä¸¤äººçš„æ€§åˆ«
 	if (LuaFnGetSex(sceneId,ID1) == LuaFnGetSex(sceneId,ID2)) then
 		x000152_NotifyFailBox( sceneId, selfId, targetId, "#{QRJ_81009_10}" )
 		return
 	end
 	
-	--ÅÐ¶Ï½ñÌìÊÇ·ñÁì¹ý
+	--åˆ¤æ–­ä»Šå¤©æ˜¯å¦é¢†è¿‡
 	local td = GetDayTime()
 	local LastSelfGiftTime  = GetMissionData(sceneId,ID1,MD_QINGRENJIE_KISSDAY)
 	
-	--¼ÇÂ¼ÒÑ¾­Áì½±µÄÈËÊý
+	--è®°å½•å·²ç»é¢†å¥–çš„äººæ•°
 	local iCount = 0
-	--¼ÇÂ¼ÒÑ¾­Áì½±µÄÈËÃû
+	--è®°å½•å·²ç»é¢†å¥–çš„äººå
 	local strName =""
 	
-	--¶Ó³¤ÊÇ·ñÁì¹ý
+	--é˜Ÿé•¿æ˜¯å¦é¢†è¿‡
 	if (td <= LastSelfGiftTime) then
 		iCount =iCount+1
 		strName = LuaFnGetName(sceneId,ID1)
 		--x000152_NotifyFailBox( sceneId, selfId, targetId, "#{QRJ_81009_12}"..LuaFnGetName(sceneId,ID1).."#{QRJ_81009_13}" )
 	end 
 	
-	--¶ÓÔ±ÊÇ·ñÁì¹ý
+	--é˜Ÿå‘˜æ˜¯å¦é¢†è¿‡
 	LastSelfGiftTime  = GetMissionData(sceneId,ID2,MD_QINGRENJIE_KISSDAY)
 	
 	if (td <= LastSelfGiftTime) then
@@ -180,7 +180,7 @@ function x000152_GiveGift(sceneId, selfId, targetId, eventId)
 		return 
 	end
 	
-	--Á½¸öÈËÍ¬Ê±ÓÐÁË°®ÉñÖ®ÎÇ
+	--ä¸¤ä¸ªäººåŒæ—¶æœ‰äº†çˆ±ç¥žä¹‹å»
 	if (0==LuaFnHaveImpactOfSpecificDataIndex(sceneId, ID1,x000152_BufferID) or 0==LuaFnHaveImpactOfSpecificDataIndex(sceneId, ID2,x000152_BufferID)) then
 		x000152_NotifyFailBox( sceneId, selfId, targetId, "#{QRJ_81009_11}" )
 		return
@@ -188,14 +188,14 @@ function x000152_GiveGift(sceneId, selfId, targetId, eventId)
 	
 	
 	
-	-- ¶Ó³¤¼ì²é±³°ü¿Õ¼ä
+	-- é˜Ÿé•¿æ£€æŸ¥èƒŒåŒ…ç©ºé—´
 	if LuaFnGetPropertyBagSpace( sceneId, ID1 ) < 1 then
-			--±¾ÈËÌáÊ¾ÄúµÄ±³°ü¿Õ¼ä²»¹»
+			--æœ¬äººæç¤ºæ‚¨çš„èƒŒåŒ…ç©ºé—´ä¸å¤Ÿ
 			BeginEvent(sceneId)
 			AddText( sceneId, "#{QRJ_81009_14}" )
 			EndEvent(sceneId)
 			DispatchMissionTips(sceneId,ID1)
-			--ÁíÒ»ÈËÌáÊ¾AAA±³°ü¿Õ¼ä²»¹»
+			--å¦ä¸€äººæç¤ºAAAèƒŒåŒ…ç©ºé—´ä¸å¤Ÿ
 			BeginEvent(sceneId)
 			AddText( sceneId, LuaFnGetName(sceneId,ID1).."#{QRJ_81009_15}" )
 			EndEvent(sceneId)
@@ -203,14 +203,14 @@ function x000152_GiveGift(sceneId, selfId, targetId, eventId)
 			return
 	end 
 		
-	--¶ÓÔ±¼ì²é±³°ü¿Õ¼ä
+	--é˜Ÿå‘˜æ£€æŸ¥èƒŒåŒ…ç©ºé—´
 	if LuaFnGetPropertyBagSpace( sceneId, ID2 ) < 1 then
-			--±¾ÈËÌáÊ¾ÄúµÄ±³°ü¿Õ¼ä²»¹»
+			--æœ¬äººæç¤ºæ‚¨çš„èƒŒåŒ…ç©ºé—´ä¸å¤Ÿ
 			BeginEvent(sceneId)
 			AddText( sceneId, "#{QRJ_81009_14}" )
 			EndEvent(sceneId)
 			DispatchMissionTips(sceneId,ID2)
-			--ÁíÒ»ÈËÌáÊ¾AAA±³°ü¿Õ¼ä²»¹»
+			--å¦ä¸€äººæç¤ºAAAèƒŒåŒ…ç©ºé—´ä¸å¤Ÿ
 			BeginEvent(sceneId)
 			AddText( sceneId, LuaFnGetName(sceneId,ID2).."#{QRJ_81009_15}" )
 			EndEvent(sceneId)
@@ -218,11 +218,11 @@ function x000152_GiveGift(sceneId, selfId, targetId, eventId)
 			return
 	end 
 		
-	--É¾³ýÁ½ÈËÉíÉÏµÄbuffer
+	--åˆ é™¤ä¸¤äººèº«ä¸Šçš„buffer
 	LuaFnCancelSpecificImpact(sceneId, ID1,x000152_BufferID)
 	LuaFnCancelSpecificImpact(sceneId, ID2,x000152_BufferID)
 		
-	--ËÍÁ½ÈË°®ÉñÖ®ÎÇ½±Àø
+	--é€ä¸¤äººçˆ±ç¥žä¹‹å»å¥–åŠ±
 	local nGiftIndex = x000152_RandomGift()
 
 	BeginAddItem( sceneId )
@@ -234,7 +234,7 @@ function x000152_GiveGift(sceneId, selfId, targetId, eventId)
 	AddItemListToHuman(sceneId,ID1)
 	SetMissionData(sceneId, ID1, MD_QINGRENJIE_KISSDAY,td)
 	local str ="#{QRJ_81009_26}#{_ITEM"..x000152_g_GiftTbl[nGiftIndex].."}"
-	--ÀñÎïµÄÐÑÄ¿ÌáÊ¾
+	--ç¤¼ç‰©çš„é†’ç›®æç¤º
 		BeginEvent(sceneId)
 			AddText( sceneId, str)
 		EndEvent(sceneId)
@@ -248,7 +248,7 @@ function x000152_GiveGift(sceneId, selfId, targetId, eventId)
 		AuditQingRenJieShiZhuang(sceneId,ID1)
 	end 
 	
-	--ËÍµÚ¶þ¸öÈË°®ÉñÖ®ÎÇ½±Àø
+	--é€ç¬¬äºŒä¸ªäººçˆ±ç¥žä¹‹å»å¥–åŠ±
 	nGiftIndex = x000152_RandomGift()
 	
 	BeginAddItem( sceneId )
@@ -260,7 +260,7 @@ function x000152_GiveGift(sceneId, selfId, targetId, eventId)
 	
 	AddItemListToHuman(sceneId,ID2)
 	str ="#{QRJ_81009_26}#{_ITEM"..x000152_g_GiftTbl[nGiftIndex].."}"
-	--ÀñÎïµÄÐÑÄ¿ÌáÊ¾
+	--ç¤¼ç‰©çš„é†’ç›®æç¤º
 	BeginEvent(sceneId)
 		AddText( sceneId, str)
 	EndEvent(sceneId)
@@ -281,7 +281,7 @@ function x000152_GiveGift(sceneId, selfId, targetId, eventId)
 end
 
 --**********************************
--- Ëæ»úÎïÆ·µÄIDºÅ
+-- éšæœºç‰©å“çš„IDå·
 --**********************************
 function x000152_RandomGift()
 	local nMsgIndex = random( 1, 100 )

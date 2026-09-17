@@ -1,62 +1,62 @@
--- ¾çÇéÑ­»·ÈÎÎñµÄ½±Àø
+-- å‰§æƒ…å¾ªç¯ä»»åŠ¡çš„å¥–åŠ±
 -- 200099
 
 x200099_g_ScriptId = 200099
 x200099_TIME_2000_01_03_ = 946828868
 
-x200099_NpcInfo={{id=1,name="Ä¾ÍñÇå",		mis=8,  p1=92, m1=MD_JU_XUNHUAN_MUWANQING,	m2=MD_JU_XUNHUAN_MUWANQING_1, 	b1=7917, b2=7918, b3=7919, b4=7920},
-								 {id=2,name="ÖÓÁé",			mis=8,  p1=93, m1=MD_JU_XUNHUAN_ZHONGLING,	m2=MD_JU_XUNHUAN_ZHONGLING_1, 	b1=7921, b2=7922, b3=7923, b4=7924},
-								 {id=3,name="¶ÎÑÓÇì",		mis=8,  p1=94, m1=MD_JU_XUNHUAN_DUANYANQING,m2=MD_JU_XUNHUAN_DUANYANQING_1, b1=-1, b2=7926, b3=7927, b4=7928},
-								 {id=4,name="¶ÎÕı´¾",		mis=8,  p1=95, m1=MD_JU_XUNHUAN_DUANYU,			m2=MD_JU_XUNHUAN_DUANYU_1, 			b1=-1, b2=7930, b3=7931, b4=7932},
-								 {id=5,name="ÈîĞÇÖñ",		mis=15, p1=96, m1=MD_JU_XUNHUAN_AZHU,				m2=MD_JU_XUNHUAN_AZHU_1,				b1=-1, b2=7934, b3=7935, b4=7936},
-								 {id=6,name="°¢±Ì",			mis=15, p1=97, m1=MD_JU_XUNHUAN_ABI,				m2=MD_JU_XUNHUAN_ABI_1, 				b1=7937, b2=7938, b3=7939, b4=7940},
-								 {id=7,name="Íõ·òÈË",		mis=15, p1=98, m1=MD_JU_XUNHUAN_WANGYUYAN,	m2=MD_JU_XUNHUAN_WANGYUYAN_1, 	b1=-1, b2=-1, b3=7943, b4=7944},
-								 {id=8,name="Ò®ÂÉ´óÊ¯",	mis=23, p1=99, m1=MD_JU_XUNHUAN_XIAOFENG,		m2=MD_JU_XUNHUAN_XIAOFENG_1, 		b1=-1, b2=-1, b3=7947, b4=7948},
-								 {id=9,name="°¢×Ï",			mis=32, p1=100, m1=MD_JU_XUNHUAN_AZI,				m2=MD_JU_XUNHUAN_AZI_1, 				b1=-1, b2=7950, b3=7951, b3=7952},
-								 {id=10,name="Ä½Èİ¸´",	mis=37, p1=101, m1=MD_JU_XUNHUAN_MURONGFU,	m2=MD_JU_XUNHUAN_MURONGFU_1, 		b1=-1, b2=-1, b3=7955, b4=7956},
-								 {id=11,name="Ò¶¶şÄï",	mis=37, p1=102, m1=MD_JU_XUNHUAN_XUZHU,			m2=MD_JU_XUNHUAN_XUZHU_1, 			b1=-1, b2=-1, b3=-1, b4=7960},
-								 {id=12,name="ğ¯Ä¦ÖÇ",	mis=37, p1=103, m1=MD_JU_XUNHUAN_JIUMOZHI,	m2=MD_JU_XUNHUAN_JIUMOZHI_1, 		b1=-1, b2=7962, b3=7963, b4=7964},
-								 {id=13,name="ºÕÁ¬ÌúÊ÷",mis=45, p1=104, m1=MD_JU_XUNHUAN_YINCHUAN,	m2=MD_JU_XUNHUAN_YINCHUAN_1, 		b1=-1, b2=7966, b3=7967, b4=7968}
+x200099_NpcInfo={{id=1,name="æœ¨å©‰æ¸…",		mis=8,  p1=92, m1=MD_JU_XUNHUAN_MUWANQING,	m2=MD_JU_XUNHUAN_MUWANQING_1, 	b1=7917, b2=7918, b3=7919, b4=7920},
+								 {id=2,name="é’Ÿçµ",			mis=8,  p1=93, m1=MD_JU_XUNHUAN_ZHONGLING,	m2=MD_JU_XUNHUAN_ZHONGLING_1, 	b1=7921, b2=7922, b3=7923, b4=7924},
+								 {id=3,name="æ®µå»¶åº†",		mis=8,  p1=94, m1=MD_JU_XUNHUAN_DUANYANQING,m2=MD_JU_XUNHUAN_DUANYANQING_1, b1=-1, b2=7926, b3=7927, b4=7928},
+								 {id=4,name="æ®µæ­£æ·³",		mis=8,  p1=95, m1=MD_JU_XUNHUAN_DUANYU,			m2=MD_JU_XUNHUAN_DUANYU_1, 			b1=-1, b2=7930, b3=7931, b4=7932},
+								 {id=5,name="é˜®æ˜Ÿç«¹",		mis=15, p1=96, m1=MD_JU_XUNHUAN_AZHU,				m2=MD_JU_XUNHUAN_AZHU_1,				b1=-1, b2=7934, b3=7935, b4=7936},
+								 {id=6,name="é˜¿ç¢§",			mis=15, p1=97, m1=MD_JU_XUNHUAN_ABI,				m2=MD_JU_XUNHUAN_ABI_1, 				b1=7937, b2=7938, b3=7939, b4=7940},
+								 {id=7,name="ç‹å¤«äºº",		mis=15, p1=98, m1=MD_JU_XUNHUAN_WANGYUYAN,	m2=MD_JU_XUNHUAN_WANGYUYAN_1, 	b1=-1, b2=-1, b3=7943, b4=7944},
+								 {id=8,name="è€¶å¾‹å¤§çŸ³",	mis=23, p1=99, m1=MD_JU_XUNHUAN_XIAOFENG,		m2=MD_JU_XUNHUAN_XIAOFENG_1, 		b1=-1, b2=-1, b3=7947, b4=7948},
+								 {id=9,name="é˜¿ç´«",			mis=32, p1=100, m1=MD_JU_XUNHUAN_AZI,				m2=MD_JU_XUNHUAN_AZI_1, 				b1=-1, b2=7950, b3=7951, b3=7952},
+								 {id=10,name="æ…•å®¹å¤",	mis=37, p1=101, m1=MD_JU_XUNHUAN_MURONGFU,	m2=MD_JU_XUNHUAN_MURONGFU_1, 		b1=-1, b2=-1, b3=7955, b4=7956},
+								 {id=11,name="å¶äºŒå¨˜",	mis=37, p1=102, m1=MD_JU_XUNHUAN_XUZHU,			m2=MD_JU_XUNHUAN_XUZHU_1, 			b1=-1, b2=-1, b3=-1, b4=7960},
+								 {id=12,name="é¸ æ‘©æ™º",	mis=37, p1=103, m1=MD_JU_XUNHUAN_JIUMOZHI,	m2=MD_JU_XUNHUAN_JIUMOZHI_1, 		b1=-1, b2=7962, b3=7963, b4=7964},
+								 {id=13,name="èµ«è¿é“æ ‘",mis=45, p1=104, m1=MD_JU_XUNHUAN_YINCHUAN,	m2=MD_JU_XUNHUAN_YINCHUAN_1, 		b1=-1, b2=7966, b3=7967, b4=7968}
 								}
 			                            
 										                            
-x200099_ItemInfo={{id=1,name="Ä¾ÍñÇå",	itn1=1, itn2=2, itn3=3, itn4=4, ItIx={30001001,30001002,30001003,30002001,30002002,
+x200099_ItemInfo={{id=1,name="æœ¨å©‰æ¸…",	itn1=1, itn2=2, itn3=3, itn4=4, ItIx={30001001,30001002,30001003,30002001,30002002,
 																																							30002003,30003001,30003002,30003003,30003011,
 																																							30003012,30003013,30005021,30005022,30005023,
 																																							30005024,30005025,30005026,30005027,30005028}},
-								 {id=2,name="ÖÓÁé",			itn1=1, itn2=2, itn3=3, itn4=4, ItIx={30101001,30101002,30101003,30101013,30101014,30101015,30101031,30101032,30101033,
+								 {id=2,name="é’Ÿçµ",			itn1=1, itn2=2, itn3=3, itn4=4, ItIx={30101001,30101002,30101003,30101013,30101014,30101015,30101031,30101032,30101033,
 																																							30101041,30101042,30101043,30101051,30101052,30101053,30101061,30101062,30101063,
 																																							30101071,30101072,30101073,30101081,30101082,30101083,30102001,30102002,30102003,
 																																							30102004,30102005,30102006,30102007,30102008,30102009,30102010,30103002,30103003,
 																																							30103004,30103005,30103006,30103007,30103008,30103009}},
-								 {id=3,name="¶ÎÑÓÇì",		itn1=0, itn2=1, itn3=2, itn4=3, ItIx={30005021,30005022,30005023,30005024,30005025,30005026,30005027,30005028}},
+								 {id=3,name="æ®µå»¶åº†",		itn1=0, itn2=1, itn3=2, itn4=3, ItIx={30005021,30005022,30005023,30005024,30005025,30005026,30005027,30005028}},
 								 
-								 {id=4,name="¶ÎÕı´¾",		itn1=0, itn2=1, itn3=2, itn4=3, ItIx={30102001,30102002,30102003,30102004,30102005,30102006,30102007,30102008,30102009,30102010}},
+								 {id=4,name="æ®µæ­£æ·³",		itn1=0, itn2=1, itn3=2, itn4=3, ItIx={30102001,30102002,30102003,30102004,30102005,30102006,30102007,30102008,30102009,30102010}},
 								 
-								 {id=5,name="ÈîĞÇÖñ",		itn1=1, itn2=2, itn3=3, itn4=4, ItIx={30101004,30101005,30101006,30101016,30101017,30101018,30101034,30101035,30101036,
+								 {id=5,name="é˜®æ˜Ÿç«¹",		itn1=1, itn2=2, itn3=3, itn4=4, ItIx={30101004,30101005,30101006,30101016,30101017,30101018,30101034,30101035,30101036,
 																																							30101044,30101045,30101046,30101054,30101055,30101056,30101064,30101065,30101066,
 																																							30101074,30101075,30101076,30101084,30101085,30101086,30102011,30102012,30102013,
 																																							30102014,30102015,30102016,30102017,30102018,30102019,30102020,30103001,30103010,
 																																							30103011,30103012,30103013,30103014,30103015,30103016,30103017}},
-								 {id=6,name="°¢±Ì",			itn1=1, itn2=2, itn3=3, itn4=4, ItIx={30001004,30001005,30001006,30001011,30001012,30002004,30002005,30002006,30002011,
+								 {id=6,name="é˜¿ç¢§",			itn1=1, itn2=2, itn3=3, itn4=4, ItIx={30001004,30001005,30001006,30001011,30001012,30002004,30002005,30002006,30002011,
 																																							30002012,30003004,30003005,30003006,30003014,30003015,30003016,30005029,30005030,
 																																							30005031,30005032,30005033,30005034,30005035,30005036}},
-								 {id=7,name="Íõ·òÈË",		itn1=0, itn2=1, itn3=2, itn4=3, ItIx={30102011,30102012,30102013,30102014,30102015,30102016,30102017,30102018,30102019,30102020,
+								 {id=7,name="ç‹å¤«äºº",		itn1=0, itn2=1, itn3=2, itn4=3, ItIx={30102011,30102012,30102013,30102014,30102015,30102016,30102017,30102018,30102019,30102020,
 																																							30103001,30103010,30103011,30103012,30103013,30103014,30103015,30103016,30103017}},
-								 {id=8,name="Ò®ÂÉ´óÊ¯",	itn1=0, itn2=1, itn3=2, itn4=3, ItIx={30005029,30005030,30005031,30005032,30005033,30005034,30005035,30005036}},
+								 {id=8,name="è€¶å¾‹å¤§çŸ³",	itn1=0, itn2=1, itn3=2, itn4=3, ItIx={30005029,30005030,30005031,30005032,30005033,30005034,30005035,30005036}},
 								 
-								 {id=9,name="°¢×Ï",			itn1=1, itn2=2, itn3=3, itn4=4, ItIx={30001007,30001008,30001009,30001010,30001013,30001014,30001015,30002007,30002008,30002009,
+								 {id=9,name="é˜¿ç´«",			itn1=1, itn2=2, itn3=3, itn4=4, ItIx={30001007,30001008,30001009,30001010,30001013,30001014,30001015,30002007,30002008,30002009,
 																																							30002010,30002013,30002014,30002015,30003007,30003008,30003009,30003010,30003017,30003018,
 																																							30003019,30003020,30005037,30005038,30005039,30005040,30005041,30005042,30005043,30005044}},
-								 {id=10,name="Ä½Èİ¸´",	itn1=1, itn2=2, itn3=3, itn4=4, ItIx={30101007,30101008,30101009,30101010,30101011,30101012,30101019,30101020,30101021,
+								 {id=10,name="æ…•å®¹å¤",	itn1=1, itn2=2, itn3=3, itn4=4, ItIx={30101007,30101008,30101009,30101010,30101011,30101012,30101019,30101020,30101021,
 																																							30101022,30101023,30101024,30101037,30101038,30101039,30101040,30101047,30101048,
 																																							30101049,30101050,30101057,30101058,30101059,30101060,30101067,30101068,30101069,
 																																							30101070,30101077,30101078,30101079,30101080,30101087,30101088,30101089,30101090,
 																																							30102021,30102022,30102023,30102024,30102025,30102026,30102027,30102028,30102029,
 																																							30102030,30103018,30103019,30103020,30103021,30103022,30103023,30103024,30103025}},
-								 {id=11,name="Ò¶¶şÄï",	itn1=0, itn2=1, itn3=2, itn4=3, ItIx={30005037,30005038,30005039,30005040,30005041,30005042,30005043,30005044}},
+								 {id=11,name="å¶äºŒå¨˜",	itn1=0, itn2=1, itn3=2, itn4=3, ItIx={30005037,30005038,30005039,30005040,30005041,30005042,30005043,30005044}},
 								 
-								 {id=12,name="ğ¯Ä¦ÖÇ",	itn1=1, itn2=2, itn3=3, itn4=4, ItIx={30001001,30001002,30001003,30001004,30001005,30001006,30001007,30001008,30001009,
+								 {id=12,name="é¸ æ‘©æ™º",	itn1=1, itn2=2, itn3=3, itn4=4, ItIx={30001001,30001002,30001003,30001004,30001005,30001006,30001007,30001008,30001009,
 																																							30001010,30001011,30001012,30001013,30001014,30001015,30002001,30002002,30002003,
 																																							30002004,30002005,30002006,30002007,30002008,30002009,30002010,30002011,30002012,
 																																							30002013,30002014,30002015,30003001,30003002,30003003,30003004,30003005,30003006,
@@ -80,7 +80,7 @@ x200099_ItemInfo={{id=1,name="Ä¾ÍñÇå",	itn1=1, itn2=2, itn3=3, itn4=4, ItIx={300
 																																							30103002,30103003,30103004,30103005,30103006,30103007,30103008,30103009,30103010,
 																																							30103011,30103012,30103013,30103014,30103015,30103016,30103017,30103018,30103019,
 																																							30103020,30103021,30103022,30103023,30103024,30103025}},
-								 {id=13,name="ºÕÁ¬ÌúÊ÷",itn1=0, itn2=1, itn3=2, itn4=3, ItIx={30102021,30102022,30102023,30102024,30102025,30102026,30102027,30102028,30102029,
+								 {id=13,name="èµ«è¿é“æ ‘",itn1=0, itn2=1, itn3=2, itn4=3, ItIx={30102021,30102022,30102023,30102024,30102025,30102026,30102027,30102028,30102029,
 																																							30102030,30103018,30103019,30103020,30103021,30103022,30103023,30103024,30103025}}
 								}
 
@@ -152,7 +152,7 @@ x200099_MenpaiRelationPoint = {
 }
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x200099_OnDefaultEvent( sceneId, selfId, targetId )
 
@@ -161,7 +161,7 @@ function x200099_OnDefaultEvent( sceneId, selfId, targetId )
 		return
 	end
 	
-	-- »ñµÃNpcµÄIndex
+	-- è·å¾—Npcçš„Index
 	local nNpcIndex = 0
 	for i=1, getn(x200099_NpcInfo)  do
 		if nNpcId == x200099_NpcInfo[i].id  then
@@ -172,18 +172,18 @@ function x200099_OnDefaultEvent( sceneId, selfId, targetId )
 
 	if GetNumText() == 1  then
 		BeginEvent( sceneId )
-			AddText( sceneId, "  ÎÒÃÇÀ´ÁÄµãÊ²Ã´£¿#G£¨Äã¿ÉÒÔÑ¡ÔñÒ»¸ö»°Ìâ½øĞĞ½»Ì¸£¬Ã¿¸ö»°ÌâÃ¿ÌìÖ»ÄÜ½»Ì¸Ò»´Î¡££©#W" )
-			AddNumText( sceneId, x200099_g_ScriptId, "ÌìÏÂÎä¹¦", 0, 2 )
-			AddNumText( sceneId, x200099_g_ScriptId, "ÑøÉúÖ®µÀ", 0, 3 )
-			AddNumText( sceneId, x200099_g_ScriptId, "½­ºş´«ÑÔ", 0, 4 )
+			AddText( sceneId, "  æˆ‘ä»¬æ¥èŠç‚¹ä»€ä¹ˆï¼Ÿ#Gï¼ˆä½ å¯ä»¥é€‰æ‹©ä¸€ä¸ªè¯é¢˜è¿›è¡Œäº¤è°ˆï¼Œæ¯ä¸ªè¯é¢˜æ¯å¤©åªèƒ½äº¤è°ˆä¸€æ¬¡ã€‚ï¼‰#W" )
+			AddNumText( sceneId, x200099_g_ScriptId, "å¤©ä¸‹æ­¦åŠŸ", 0, 2 )
+			AddNumText( sceneId, x200099_g_ScriptId, "å…»ç”Ÿä¹‹é“", 0, 3 )
+			AddNumText( sceneId, x200099_g_ScriptId, "æ±Ÿæ¹–ä¼ è¨€", 0, 4 )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 	end
 	
 	if GetNumText() == 2  then
-		-- ÌìÏÂÎä¹¦
-		-- »ñµÃµ±Ç°ÈÎÎñÊı¾İ±äÁ¿
-		-- ¿´Õâ¸öÊ±¼äºÍÏÖÔÚÊÇ²»ÊÇ¾­¹ıÁË1Ìì£¬Èç¹û¾­¹ıÁË1Ìì£¬¾ÍË¢ĞÂÊı¾İ
+		-- å¤©ä¸‹æ­¦åŠŸ
+		-- è·å¾—å½“å‰ä»»åŠ¡æ•°æ®å˜é‡
+		-- çœ‹è¿™ä¸ªæ—¶é—´å’Œç°åœ¨æ˜¯ä¸æ˜¯ç»è¿‡äº†1å¤©ï¼Œå¦‚æœç»è¿‡äº†1å¤©ï¼Œå°±åˆ·æ–°æ•°æ®
 		local nTime = GetMissionData(sceneId, selfId, x200099_NpcInfo[nNpcIndex].m2)
 		local nNowTime = LuaFnGetCurrentTime()
 
@@ -194,7 +194,7 @@ function x200099_OnDefaultEvent( sceneId, selfId, targetId )
 		
 		local nData = GetMissionData(sceneId, selfId, x200099_NpcInfo[nNpcIndex].m1)
 		
-		-- ¼ÇÂ¼Ê±¼ä
+		-- è®°å½•æ—¶é—´
 		local f1
 		local f2
 		local f3
@@ -202,7 +202,7 @@ function x200099_OnDefaultEvent( sceneId, selfId, targetId )
 		f1,f2,f3 = x200099_1To3(nData)
 		if f1 == 1  then
 			BeginEvent( sceneId )
-				AddText( sceneId, "  ÎÒÃÇ½ñÌìÁÄµÃÕæÊÇ³©¿ì°¡¡£²»¹ıÕâ¸ö»°ÌâÒÑ¾­ÁÄµÃÓĞĞ©ÄåÁË£¬ÎÒÃÇÁÄµã±ğµÄ°É¡£#G£¨¶Ô²»Æğ£¬½ñÌìÒÑ¾­Ì¸¹ıÕâ¸ö»°Ìâ¡£Ã÷Ìì²ÅÄÜÔÙÌ¸Õâ¸ö»°Ìâ¡££©#W" )
+				AddText( sceneId, "  æˆ‘ä»¬ä»Šå¤©èŠå¾—çœŸæ˜¯ç•…å¿«å•Šã€‚ä¸è¿‡è¿™ä¸ªè¯é¢˜å·²ç»èŠå¾—æœ‰äº›è…»äº†ï¼Œæˆ‘ä»¬èŠç‚¹åˆ«çš„å§ã€‚#Gï¼ˆå¯¹ä¸èµ·ï¼Œä»Šå¤©å·²ç»è°ˆè¿‡è¿™ä¸ªè¯é¢˜ã€‚æ˜å¤©æ‰èƒ½å†è°ˆè¿™ä¸ªè¯é¢˜ã€‚ï¼‰#W" )
 			EndEvent( sceneId )
 			DispatchEventList( sceneId, selfId, targetId )
 			return
@@ -210,7 +210,7 @@ function x200099_OnDefaultEvent( sceneId, selfId, targetId )
 		
 		if nNowTime-nTime < 1800   then
 			BeginEvent( sceneId )
-				AddText( sceneId, "  ÎÒÃÇ½ñÌìÁÄµÃÕæÊÇ³©¿ì°¡¡£²»¹ıÎÒÏÖÔÚÁÄµÃÓĞĞ©¿Ú¸ÉÉàÔïÁË£¬¹ıÒ»»á¶ùÔÙÁÄ°É¡£#G£¨¶Ô²»Æğ£¬ÈıÊ®·ÖÖÓÖ®ÄÚÌ¸¹ı±ğµÄ»°Ìâ¡£¾àÉÏ´Î½»Ì¸ÈıÊ®·ÖÖÓºó²ÅÄÜÔÙÌ¸ĞÂµÄ»°Ìâ¡££©#W" )
+				AddText( sceneId, "  æˆ‘ä»¬ä»Šå¤©èŠå¾—çœŸæ˜¯ç•…å¿«å•Šã€‚ä¸è¿‡æˆ‘ç°åœ¨èŠå¾—æœ‰äº›å£å¹²èˆŒç‡¥äº†ï¼Œè¿‡ä¸€ä¼šå„¿å†èŠå§ã€‚#Gï¼ˆå¯¹ä¸èµ·ï¼Œä¸‰ååˆ†é’Ÿä¹‹å†…è°ˆè¿‡åˆ«çš„è¯é¢˜ã€‚è·ä¸Šæ¬¡äº¤è°ˆä¸‰ååˆ†é’Ÿåæ‰èƒ½å†è°ˆæ–°çš„è¯é¢˜ã€‚ï¼‰#W" )
 			EndEvent( sceneId )
 			DispatchEventList( sceneId, selfId, targetId )
 			return
@@ -225,9 +225,9 @@ function x200099_OnDefaultEvent( sceneId, selfId, targetId )
 		x200099_DokongFuTianxia( sceneId, selfId, nNpcId ,targetId )
 		
 	elseif GetNumText() == 3  then
-		-- ÑøÉúÖ®µÀ
-		-- »ñµÃµ±Ç°ÈÎÎñÊı¾İ±äÁ¿
-		-- ¿´Õâ¸öÊ±¼äºÍÏÖÔÚÊÇ²»ÊÇ¾­¹ıÁË1Ìì£¬Èç¹û¾­¹ıÁË1Ìì£¬¾ÍË¢ĞÂÊı¾İ
+		-- å…»ç”Ÿä¹‹é“
+		-- è·å¾—å½“å‰ä»»åŠ¡æ•°æ®å˜é‡
+		-- çœ‹è¿™ä¸ªæ—¶é—´å’Œç°åœ¨æ˜¯ä¸æ˜¯ç»è¿‡äº†1å¤©ï¼Œå¦‚æœç»è¿‡äº†1å¤©ï¼Œå°±åˆ·æ–°æ•°æ®
 		local nTime = GetMissionData(sceneId, selfId, x200099_NpcInfo[nNpcIndex].m2)
 		local nNowTime = LuaFnGetCurrentTime()
 		
@@ -238,7 +238,7 @@ function x200099_OnDefaultEvent( sceneId, selfId, targetId )
 		
 		local nData = GetMissionData(sceneId, selfId, x200099_NpcInfo[nNpcIndex].m1)
 		
-		-- ¼ÇÂ¼Ê±¼ä
+		-- è®°å½•æ—¶é—´
 		local f1
 		local f2
 		local f3
@@ -246,7 +246,7 @@ function x200099_OnDefaultEvent( sceneId, selfId, targetId )
 		f1,f2,f3 = x200099_1To3(nData)
 		if f2 == 1  then
 			BeginEvent( sceneId )
-				AddText( sceneId, "  ÎÒÃÇ½ñÌìÁÄµÃÕæÊÇ³©¿ì°¡¡£²»¹ıÕâ¸ö»°ÌâÒÑ¾­ÁÄµÃÓĞĞ©ÄåÁË£¬ÎÒÃÇÁÄµã±ğµÄ°É¡£" )
+				AddText( sceneId, "  æˆ‘ä»¬ä»Šå¤©èŠå¾—çœŸæ˜¯ç•…å¿«å•Šã€‚ä¸è¿‡è¿™ä¸ªè¯é¢˜å·²ç»èŠå¾—æœ‰äº›è…»äº†ï¼Œæˆ‘ä»¬èŠç‚¹åˆ«çš„å§ã€‚" )
 			EndEvent( sceneId )
 			DispatchEventList( sceneId, selfId, targetId )
 			return
@@ -254,7 +254,7 @@ function x200099_OnDefaultEvent( sceneId, selfId, targetId )
 		
 		if nNowTime-nTime < 1800   then
 			BeginEvent( sceneId )
-				AddText( sceneId, "  ÎÒÃÇ½ñÌìÁÄµÃÕæÊÇ³©¿ì°¡¡£²»¹ıÎÒÏÖÔÚÁÄµÃÓĞĞ©¿Ú¸ÉÉàÔïÁË£¬¹ıÒ»»á¶ùÔÙÁÄ°É¡£" )
+				AddText( sceneId, "  æˆ‘ä»¬ä»Šå¤©èŠå¾—çœŸæ˜¯ç•…å¿«å•Šã€‚ä¸è¿‡æˆ‘ç°åœ¨èŠå¾—æœ‰äº›å£å¹²èˆŒç‡¥äº†ï¼Œè¿‡ä¸€ä¼šå„¿å†èŠå§ã€‚" )
 			EndEvent( sceneId )
 			DispatchEventList( sceneId, selfId, targetId )
 			return
@@ -269,9 +269,9 @@ function x200099_OnDefaultEvent( sceneId, selfId, targetId )
 		x200099_DoHealthOfLoad( sceneId, selfId, nNpcId ,targetId )
 
 	elseif GetNumText() == 4  then
-		-- ½­ºş´«ÑÔ
-		-- »ñµÃµ±Ç°ÈÎÎñÊı¾İ±äÁ¿
-		-- ¿´Õâ¸öÊ±¼äºÍÏÖÔÚÊÇ²»ÊÇ¾­¹ıÁË1Ìì£¬Èç¹û¾­¹ıÁË1Ìì£¬¾ÍË¢ĞÂÊı¾İ
+		-- æ±Ÿæ¹–ä¼ è¨€
+		-- è·å¾—å½“å‰ä»»åŠ¡æ•°æ®å˜é‡
+		-- çœ‹è¿™ä¸ªæ—¶é—´å’Œç°åœ¨æ˜¯ä¸æ˜¯ç»è¿‡äº†1å¤©ï¼Œå¦‚æœç»è¿‡äº†1å¤©ï¼Œå°±åˆ·æ–°æ•°æ®
 		local nTime = GetMissionData(sceneId, selfId, x200099_NpcInfo[nNpcIndex].m2)
 		local nNowTime = LuaFnGetCurrentTime()
 		
@@ -282,7 +282,7 @@ function x200099_OnDefaultEvent( sceneId, selfId, targetId )
 		
 		local nData = GetMissionData(sceneId, selfId, x200099_NpcInfo[nNpcIndex].m1)
 		
-		-- ¼ÇÂ¼Ê±¼ä
+		-- è®°å½•æ—¶é—´
 		local f1
 		local f2
 		local f3
@@ -290,7 +290,7 @@ function x200099_OnDefaultEvent( sceneId, selfId, targetId )
 		f1,f2,f3 = x200099_1To3(nData)
 		if f3 == 1  then
 			BeginEvent( sceneId )
-				AddText( sceneId, "  ÎÒÃÇ½ñÌìÁÄµÃÕæÊÇ³©¿ì°¡¡£²»¹ıÕâ¸ö»°ÌâÒÑ¾­ÁÄµÃÓĞĞ©ÄåÁË£¬ÎÒÃÇÁÄµã±ğµÄ°É¡£" )
+				AddText( sceneId, "  æˆ‘ä»¬ä»Šå¤©èŠå¾—çœŸæ˜¯ç•…å¿«å•Šã€‚ä¸è¿‡è¿™ä¸ªè¯é¢˜å·²ç»èŠå¾—æœ‰äº›è…»äº†ï¼Œæˆ‘ä»¬èŠç‚¹åˆ«çš„å§ã€‚" )
 			EndEvent( sceneId )
 			DispatchEventList( sceneId, selfId, targetId )
 			return
@@ -298,7 +298,7 @@ function x200099_OnDefaultEvent( sceneId, selfId, targetId )
 		
 		if nNowTime-nTime < 1800   then
 			BeginEvent( sceneId )
-				AddText( sceneId, "  ÎÒÃÇ½ñÌìÁÄµÃÕæÊÇ³©¿ì°¡¡£²»¹ıÎÒÏÖÔÚÁÄµÃÓĞĞ©¿Ú¸ÉÉàÔïÁË£¬¹ıÒ»»á¶ùÔÙÁÄ°É¡£" )
+				AddText( sceneId, "  æˆ‘ä»¬ä»Šå¤©èŠå¾—çœŸæ˜¯ç•…å¿«å•Šã€‚ä¸è¿‡æˆ‘ç°åœ¨èŠå¾—æœ‰äº›å£å¹²èˆŒç‡¥äº†ï¼Œè¿‡ä¸€ä¼šå„¿å†èŠå§ã€‚" )
 			EndEvent( sceneId )
 			DispatchEventList( sceneId, selfId, targetId )
 			return
@@ -317,11 +317,11 @@ function x200099_OnDefaultEvent( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x200099_OnEnumerate( sceneId, selfId, targetId )
 
-	-- Íæ¼ÒÍê³ÉÏà¹Ø¾çÇéÈÎÎñºó£¬²ÅÄÜ¿´¼ûÕâ¸öÑ¡Ïî
+	-- ç©å®¶å®Œæˆç›¸å…³å‰§æƒ…ä»»åŠ¡åï¼Œæ‰èƒ½çœ‹è§è¿™ä¸ªé€‰é¡¹
 	local szNpcName = GetName(sceneId, targetId)
 	local nIndex = 0
 	for i=1,13   do
@@ -331,7 +331,7 @@ function x200099_OnEnumerate( sceneId, selfId, targetId )
 	end
 	
 	if (IsMissionHaveDone(sceneId,selfId,x200099_NpcInfo[nIndex].mis) > 0 ) then
-		AddNumText( sceneId, x200099_g_ScriptId, "½»Ì¸", 0, 1 )
+		AddNumText( sceneId, x200099_g_ScriptId, "äº¤è°ˆ", 0, 1 )
 	end
 	
 end
@@ -352,7 +352,7 @@ function x200099_GetNpcId( sceneId, selfId, targetId )
 end
 
 --**********************************
---1Î»±ä3Î»
+--1ä½å˜3ä½
 --**********************************
 function x200099_1To3( nData )
 	local nTemp1 = 0
@@ -367,7 +367,7 @@ function x200099_1To3( nData )
 end
 
 --**********************************
---3Î»±ä1Î»
+--3ä½å˜1ä½
 --**********************************
 function x200099_3To1( nData1, nData2, nData3 )
 	local nTemp = 0
@@ -380,7 +380,7 @@ function x200099_3To1( nData1, nData2, nData3 )
 end
 
 --**********************************
--- ÌìÏÂÎä¹¦
+-- å¤©ä¸‹æ­¦åŠŸ
 --**********************************
 function x200099_DokongFuTianxia( sceneId, selfId, NpcId ,targetId )
 
@@ -395,7 +395,7 @@ function x200099_DokongFuTianxia( sceneId, selfId, NpcId ,targetId )
 		return
 	end
 	
-	-- »ñµÃ×Ô¼ººÍNPCµÄ¹ØÏµµÈ¼¶
+	-- è·å¾—è‡ªå·±å’ŒNPCçš„å…³ç³»ç­‰çº§
 	local nRelationLevel = x200099_GetNpcRelationLevel( sceneId, selfId, NpcId )
 	local nBuffId = -1
 	
@@ -411,15 +411,15 @@ function x200099_DokongFuTianxia( sceneId, selfId, NpcId ,targetId )
 
 	if nBuffId == -1  then
 		BeginEvent( sceneId )
-			AddText( sceneId, "  Äã¶ÔÌìÏÂÎä¹¦µÄ¼û½â£¬ÕæÊÇÁîÎÒ´ó¿ªÑÛ½ç¡£#r  ÎÒ¾õµÃÈç¹ûÎÒÃÇµÄ#G¹ØÏµ#WÄÜ¹»¸ü½øÒ»²½µÄ»°£¬ÎÒÃÇµÄÁÄÌì²Å¸üÓĞÒâÒå¡£" )
+			AddText( sceneId, "  ä½ å¯¹å¤©ä¸‹æ­¦åŠŸçš„è§è§£ï¼ŒçœŸæ˜¯ä»¤æˆ‘å¤§å¼€çœ¼ç•Œã€‚#r  æˆ‘è§‰å¾—å¦‚æœæˆ‘ä»¬çš„#Gå…³ç³»#Wèƒ½å¤Ÿæ›´è¿›ä¸€æ­¥çš„è¯ï¼Œæˆ‘ä»¬çš„èŠå¤©æ‰æ›´æœ‰æ„ä¹‰ã€‚" )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 		return
 	end
 	
-	-- ¸øÍæ¼ÒÌí¼ÓÒ»¸öBUFF£¬Í¬Ê±¸øÍæ¼Ò¼ÇÂ¼Ïà¹ØµÄ¶«Î÷
+	-- ç»™ç©å®¶æ·»åŠ ä¸€ä¸ªBUFFï¼ŒåŒæ—¶ç»™ç©å®¶è®°å½•ç›¸å…³çš„ä¸œè¥¿
 	BeginEvent( sceneId )
-		AddText( sceneId, "  Äã¶ÔÌìÏÂÎä¹¦µÄ¸ßÉî¼û½â£¬ÕæÊÇÁîÎÒ»ñÒæ·ËÇ³¡£ÎÒ×î½üÒ²ÓĞÒ»Ğ©ĞÂµÄÎäÑ§ĞÄµÃ£¬ÇëÄãÀ´ÆÀµãÒ»ÏÂ£¡" )
+		AddText( sceneId, "  ä½ å¯¹å¤©ä¸‹æ­¦åŠŸçš„é«˜æ·±è§è§£ï¼ŒçœŸæ˜¯ä»¤æˆ‘è·ç›ŠåŒªæµ…ã€‚æˆ‘æœ€è¿‘ä¹Ÿæœ‰ä¸€äº›æ–°çš„æ­¦å­¦å¿ƒå¾—ï¼Œè¯·ä½ æ¥è¯„ç‚¹ä¸€ä¸‹ï¼" )
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, selfId, targetId )
 	
@@ -428,7 +428,7 @@ function x200099_DokongFuTianxia( sceneId, selfId, NpcId ,targetId )
 end
 
 --**********************************
--- ÑøÉúÖ®µÀ
+-- å…»ç”Ÿä¹‹é“
 --**********************************
 function x200099_DoHealthOfLoad( sceneId, selfId, NpcId ,targetId )
 	local nNpcIndex = 0
@@ -442,7 +442,7 @@ function x200099_DoHealthOfLoad( sceneId, selfId, NpcId ,targetId )
 		return
 	end
 	
-	-- »ñµÃ×Ô¼ººÍNPCµÄ¹ØÏµµÈ¼¶
+	-- è·å¾—è‡ªå·±å’ŒNPCçš„å…³ç³»ç­‰çº§
 	local nRelationLevel = x200099_GetNpcRelationLevel( sceneId, selfId, NpcId )
 	local nItemNum = 0
 	
@@ -458,13 +458,13 @@ function x200099_DoHealthOfLoad( sceneId, selfId, NpcId ,targetId )
 	
 	if nItemNum == 0  then
 		BeginEvent( sceneId )
-			AddText( sceneId, "  ÄãµÄÑøÉúÖ®µÀ£¬ÕæÊÇÁîÎÒ´ó¿ªÑÛ½ç¡£#r  ÎÒ¾õµÃÈç¹ûÎÒÃÇµÄ#G¹ØÏµ#WÄÜ¹»¸ü½øÒ»²½µÄ»°£¬ÎÒÃÇµÄÁÄÌì²Å¸üÓĞÒâÒå¡£" )
+			AddText( sceneId, "  ä½ çš„å…»ç”Ÿä¹‹é“ï¼ŒçœŸæ˜¯ä»¤æˆ‘å¤§å¼€çœ¼ç•Œã€‚#r  æˆ‘è§‰å¾—å¦‚æœæˆ‘ä»¬çš„#Gå…³ç³»#Wèƒ½å¤Ÿæ›´è¿›ä¸€æ­¥çš„è¯ï¼Œæˆ‘ä»¬çš„èŠå¤©æ‰æ›´æœ‰æ„ä¹‰ã€‚" )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 		return
 	end	
 	
-	-- ¸øÍæ¼ÒµãĞ¡¶«Î÷½±Àø
+	-- ç»™ç©å®¶ç‚¹å°ä¸œè¥¿å¥–åŠ±
 	local nItemId = 0
 	local szItemName = ""
 	local nItemRandIdx = random(getn(x200099_ItemInfo[nNpcIndex].ItIx))
@@ -474,14 +474,14 @@ function x200099_DoHealthOfLoad( sceneId, selfId, NpcId ,targetId )
 	
 	BeginEvent( sceneId )
 		local szItem = "#R#{_ITEM" .. tostring(nItemId) .. "}#W"
-		AddText( sceneId, "  ÄãµÄÑøÉúÖ®µÀ£¬ÕæÊÇÁîÎÒ»ñÒæ·ËÇ³¡£ÎÒ×î½ü³£³£·şÓÃ" .. szItem .."ÑøÉú£¬¿´À´²¢²»Ç¡µ±°¡£¬ÄÇÕâ" .. tostring(nItemNum) .. "¸ö" .. szItem .."¾ÍËÍ¸øÄã°É£¡" )
-	-- ¸øÍæ¼Ò+Õâ¸öÎïÆ·
+		AddText( sceneId, "  ä½ çš„å…»ç”Ÿä¹‹é“ï¼ŒçœŸæ˜¯ä»¤æˆ‘è·ç›ŠåŒªæµ…ã€‚æˆ‘æœ€è¿‘å¸¸å¸¸æœç”¨" .. szItem .."å…»ç”Ÿï¼Œçœ‹æ¥å¹¶ä¸æ°å½“å•Šï¼Œé‚£è¿™" .. tostring(nItemNum) .. "ä¸ª" .. szItem .."å°±é€ç»™ä½ å§ï¼" )
+	-- ç»™ç©å®¶+è¿™ä¸ªç‰©å“
   BeginAddItem(sceneId)
 		AddItem( sceneId, nItemId, nItemNum )
 	local ret = EndAddItem(sceneId,selfId)
 
 	if ret < 1  then
-		AddText( sceneId, "  ¿ÉÏ§ÄãÉíÉÏµÄ°ü¹üÒÑ¾­ÂúÁË£¬´ËÊÂ¾ÍÔİÇÒ×÷°Õ°É¡£" )
+		AddText( sceneId, "  å¯æƒœä½ èº«ä¸Šçš„åŒ…è£¹å·²ç»æ»¡äº†ï¼Œæ­¤äº‹å°±æš‚ä¸”ä½œç½¢å§ã€‚" )
 	else
 		AddItemListToHuman(sceneId,selfId)
 	end
@@ -491,10 +491,10 @@ function x200099_DoHealthOfLoad( sceneId, selfId, NpcId ,targetId )
 end
 
 --**********************************
--- ½­ºş´«ÑÔ
+-- æ±Ÿæ¹–ä¼ è¨€
 --**********************************
 function x200099_DoHearsay( sceneId, selfId, NpcId ,targetId )
-	-- »ñµÃ×Ô¼ººÍNPCµÄ¹ØÏµµÈ¼¶
+	-- è·å¾—è‡ªå·±å’ŒNPCçš„å…³ç³»ç­‰çº§
 	local nRelationLevel = x200099_GetNpcRelationLevel( sceneId, selfId, NpcId )
 
 	local nBonusType = 0
@@ -575,43 +575,43 @@ function x200099_DoHearsay( sceneId, selfId, NpcId ,targetId )
 	end	
 	
 	if nBonusType == 0  then
-		-- ´íÎó£¬Ö±½Ó¹Ø±Õ
+		-- é”™è¯¯ï¼Œç›´æ¥å…³é—­
 		return
 		
 	elseif nBonusType == 1   then
-		-- Ò»¾ä°ïÖú
+		-- ä¸€å¥å¸®åŠ©
 		local nRandIndex = random(getn(x200099_BonusHelp))
 		BeginEvent( sceneId )
-			--AddText( sceneId, "Ò»¾ä°ïÖú" )
+			--AddText( sceneId, "ä¸€å¥å¸®åŠ©" )
 			AddText( sceneId, x200099_BonusHelp[nRandIndex] )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 		return
 		
 	elseif nBonusType == 2   then
-		-- »Ø¸´ÂúÑªÂúÀ¶
+		-- å›å¤æ»¡è¡€æ»¡è“
 		BeginEvent( sceneId )
-			--AddText( sceneId, "»Ø¸´ÂúÑªÂúÀ¶" )
-			AddText( sceneId, "  ½­ºşĞ×ÏÕ£¬Æ½Ê±±£³Ö½¡¿µ×´Ì¬ºÜÖØÒª°¡¡£" )
+			--AddText( sceneId, "å›å¤æ»¡è¡€æ»¡è“" )
+			AddText( sceneId, "  æ±Ÿæ¹–å‡¶é™©ï¼Œå¹³æ—¶ä¿æŒå¥åº·çŠ¶æ€å¾ˆé‡è¦å•Šã€‚" )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
-		-- ¸øÍæ¼Ò»ØÑª»áÀ¶
+		-- ç»™ç©å®¶å›è¡€ä¼šè“
 		SetHp(sceneId, selfId, GetMaxHp(sceneId, selfId))
 		SetMp(sceneId, selfId, GetMaxMp(sceneId, selfId))
 		
 	elseif nBonusType == 3   then
-		-- ÂúÑªÂúÀ¶µÄÒ©Æ·£¨Î¨Ò»£©
+		-- æ»¡è¡€æ»¡è“çš„è¯å“ï¼ˆå”¯ä¸€ï¼‰
 		BeginEvent( sceneId )
-			--AddText( sceneId, "ÂúÑªÂúÀ¶µÄÒ©Æ·" )
-			AddText( sceneId, "  ×î½üÎÒÒâÍâµÄµÃµ½ÁËÒ»¸ö¡°Ç§´¸°ÙÁ¶É¢¡±£¬¾ÍËÍ¸øÄã°É¡£" )
+			--AddText( sceneId, "æ»¡è¡€æ»¡è“çš„è¯å“" )
+			AddText( sceneId, "  æœ€è¿‘æˆ‘æ„å¤–çš„å¾—åˆ°äº†ä¸€ä¸ªâ€œåƒé”¤ç™¾ç‚¼æ•£â€ï¼Œå°±é€ç»™ä½ å§ã€‚" )
 		
-			-- ¸øÍæ¼Ò+Õâ¸öÎïÆ·
+			-- ç»™ç©å®¶+è¿™ä¸ªç‰©å“
 		  BeginAddItem(sceneId)
 				AddItem( sceneId, 30001015, 1 )
 			local ret = EndAddItem(sceneId,selfId)
 		
 			if ret < 1  then
-				AddText( sceneId, "  ¿ÉÏ§ÄãÉíÉÏµÄ°ü¹üÒÑ¾­ÂúÁË£¬´ËÊÂ¾ÍÔİÇÒ×÷°Õ°É¡£" )
+				AddText( sceneId, "  å¯æƒœä½ èº«ä¸Šçš„åŒ…è£¹å·²ç»æ»¡äº†ï¼Œæ­¤äº‹å°±æš‚ä¸”ä½œç½¢å§ã€‚" )
 			else
 				AddItemListToHuman(sceneId,selfId)
 			end
@@ -619,10 +619,10 @@ function x200099_DoHearsay( sceneId, selfId, NpcId ,targetId )
 		DispatchEventList( sceneId, selfId, targetId )
 		
 	elseif nBonusType == 4   then
-		-- ±äÉí
+		-- å˜èº«
 		BeginEvent( sceneId )
-			--AddText( sceneId, "±äÉí" )
-			AddText( sceneId, "  À´£¬³¢³¢Õâ¸ö¡­¡­°¡Ñ½£¬$N£¬ÄãÔõÃ´±ä³ÉÁËÕâ¸öÑù×Ó£¿" )
+			--AddText( sceneId, "å˜èº«" )
+			AddText( sceneId, "  æ¥ï¼Œå°å°è¿™ä¸ªâ€¦â€¦å•Šå‘€ï¼Œ$Nï¼Œä½ æ€ä¹ˆå˜æˆäº†è¿™ä¸ªæ ·å­ï¼Ÿ" )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
  		
@@ -633,10 +633,10 @@ function x200099_DoHearsay( sceneId, selfId, NpcId ,targetId )
 
 
 	elseif nBonusType == 5   then
-		-- »ñµÃÃÅÅÉÕÙ¼¯Áî   30501001/30501002
+		-- è·å¾—é—¨æ´¾å¬é›†ä»¤   30501001/30501002
 		BeginEvent( sceneId )
-			--AddText( sceneId, "»ñµÃÃÅÅÉÕÙ¼¯Áî" )
-			AddText( sceneId, "  Èç¹ûÊ¦ÃÅÓĞ¼±ÊÂµÄ»°£¬ÓÃÃÅÅÉÕÙ¼¯ÁîÊÇÒ»¸ö²»´íµÄÑ¡Ôñ¡£" )
+			--AddText( sceneId, "è·å¾—é—¨æ´¾å¬é›†ä»¤" )
+			AddText( sceneId, "  å¦‚æœå¸ˆé—¨æœ‰æ€¥äº‹çš„è¯ï¼Œç”¨é—¨æ´¾å¬é›†ä»¤æ˜¯ä¸€ä¸ªä¸é”™çš„é€‰æ‹©ã€‚" )
 			
 			local nLingPaiIndex = random(getn(x200099_BonusZhaoJiLing))
 			local nLingPaiId = x200099_BonusZhaoJiLing[nLingPaiIndex]
@@ -649,14 +649,14 @@ function x200099_DoHearsay( sceneId, selfId, NpcId ,targetId )
 				nItemNum = 10
 			end
 			
-			-- ¸øÍæ¼Ò+Õâ¸öÎïÆ·
+			-- ç»™ç©å®¶+è¿™ä¸ªç‰©å“
 			if nItemNum > 0  then
 			  BeginAddItem(sceneId)
 					AddItem( sceneId, nLingPaiId, nItemNum )
 				local ret = EndAddItem(sceneId,selfId)
 			
 				if ret < 1  then
-					AddText( sceneId, "  ¿ÉÏ§ÄãÉíÉÏµÄ°ü¹üÒÑ¾­ÂúÁË£¬´ËÊÂ¾ÍÔİÇÒ×÷°Õ°É¡£" )
+					AddText( sceneId, "  å¯æƒœä½ èº«ä¸Šçš„åŒ…è£¹å·²ç»æ»¡äº†ï¼Œæ­¤äº‹å°±æš‚ä¸”ä½œç½¢å§ã€‚" )
 				else
 					AddItemListToHuman(sceneId,selfId)
 				end
@@ -665,7 +665,7 @@ function x200099_DoHearsay( sceneId, selfId, NpcId ,targetId )
 		DispatchEventList( sceneId, selfId, targetId )
 		
 	elseif nBonusType == 6   then
-		-- ²İÒ©
+		-- è‰è¯
 		local playerlevel = GetLevel( sceneId, selfId )
 		playerlevel = floor( playerlevel / 10 )
 		if playerlevel == 0 then
@@ -685,17 +685,17 @@ function x200099_DoHearsay( sceneId, selfId, NpcId ,targetId )
 		end
 	
 		BeginEvent( sceneId )
-			--AddText( sceneId, "²İÒ©" )
-			AddText( sceneId, "  ×òÈÕÎŞÊÂ£¬ÎÒÈ¥ÅÀÉ½É¢É¢ĞÄ£¬Ë³±ã²ÉÁËĞ©²İÒ©£¬¾ÍËÍ¸øÄã°É¡£" )
+			--AddText( sceneId, "è‰è¯" )
+			AddText( sceneId, "  æ˜¨æ—¥æ— äº‹ï¼Œæˆ‘å»çˆ¬å±±æ•£æ•£å¿ƒï¼Œé¡ºä¾¿é‡‡äº†äº›è‰è¯ï¼Œå°±é€ç»™ä½ å§ã€‚" )
 		
-			-- ¸øÍæ¼Ò+Õâ¸öÎïÆ·
+			-- ç»™ç©å®¶+è¿™ä¸ªç‰©å“
 			if nCaoyaoNum > 0 then
 			  BeginAddItem(sceneId)
 					AddItem( sceneId, nCaoyaoId, nCaoyaoNum )
 				local ret = EndAddItem(sceneId,selfId)
 			
 				if ret < 1  then
-					AddText( sceneId, "  ¿ÉÏ§ÄãÉíÉÏµÄ°ü¹üÒÑ¾­ÂúÁË£¬´ËÊÂ¾ÍÔİÇÒ×÷°Õ°É¡£" )
+					AddText( sceneId, "  å¯æƒœä½ èº«ä¸Šçš„åŒ…è£¹å·²ç»æ»¡äº†ï¼Œæ­¤äº‹å°±æš‚ä¸”ä½œç½¢å§ã€‚" )
 				else
 					AddItemListToHuman(sceneId,selfId)
 				end
@@ -704,7 +704,7 @@ function x200099_DoHearsay( sceneId, selfId, NpcId ,targetId )
 		DispatchEventList( sceneId, selfId, targetId )
 		
 	elseif nBonusType == 7   then
-		-- Ê³²Ä
+		-- é£Ÿæ
 		local playerlevel = GetLevel( sceneId, selfId )
 		playerlevel = floor( playerlevel / 10 )
 		if playerlevel == 0 then
@@ -724,17 +724,17 @@ function x200099_DoHearsay( sceneId, selfId, NpcId ,targetId )
 		end
 	
 		BeginEvent( sceneId )
-			--AddText( sceneId, "Ê³²Ä" )
-			AddText( sceneId, "  ×òÈÕÎŞÊÂ£¬ÎÒÈ¥ÏÂ³øÉ¢É¢ĞÄ£¬Ë³±ã×öÁËĞ©Ê³²Ä£¬¾ÍËÍ¸øÄã°É¡£" )
+			--AddText( sceneId, "é£Ÿæ" )
+			AddText( sceneId, "  æ˜¨æ—¥æ— äº‹ï¼Œæˆ‘å»ä¸‹å¨æ•£æ•£å¿ƒï¼Œé¡ºä¾¿åšäº†äº›é£Ÿæï¼Œå°±é€ç»™ä½ å§ã€‚" )
 		
-			-- ¸øÍæ¼Ò+Õâ¸öÎïÆ·
+			-- ç»™ç©å®¶+è¿™ä¸ªç‰©å“
 			if nFoodNum > 0 then
 			  BeginAddItem(sceneId)
 					AddItem( sceneId, nFoodId, nFoodNum )
 				local ret = EndAddItem(sceneId,selfId)
 			
 				if ret < 1  then
-					AddText( sceneId, "  ¿ÉÏ§ÄãÉíÉÏµÄ°ü¹üÒÑ¾­ÂúÁË£¬´ËÊÂ¾ÍÔİÇÒ×÷°Õ°É¡£" )
+					AddText( sceneId, "  å¯æƒœä½ èº«ä¸Šçš„åŒ…è£¹å·²ç»æ»¡äº†ï¼Œæ­¤äº‹å°±æš‚ä¸”ä½œç½¢å§ã€‚" )
 				else
 					AddItemListToHuman(sceneId,selfId)
 				end
@@ -743,7 +743,7 @@ function x200099_DoHearsay( sceneId, selfId, NpcId ,targetId )
 		DispatchEventList( sceneId, selfId, targetId )
 		
 	elseif nBonusType == 8   then
-		-- ¿óÊ¯
+		-- çŸ¿çŸ³
 		local playerlevel = GetLevel( sceneId, selfId )
 		playerlevel = floor( playerlevel / 10 )
 		if playerlevel == 0 then
@@ -760,17 +760,17 @@ function x200099_DoHearsay( sceneId, selfId, NpcId ,targetId )
 		end
 	
 		BeginEvent( sceneId )
-			--AddText( sceneId, "»ñµÃÃÅÅÉÕÙ¼¯Áî" )
-			AddText( sceneId, "  ×òÈÕÎŞÊÂ£¬ÎÒÈ¥ÅÀÉ½É¢É¢ĞÄ£¬Ë³±ã²ÉÁËĞ©¿óÊ¯£¬¾ÍËÍ¸øÄã°É¡£" )
+			--AddText( sceneId, "è·å¾—é—¨æ´¾å¬é›†ä»¤" )
+			AddText( sceneId, "  æ˜¨æ—¥æ— äº‹ï¼Œæˆ‘å»çˆ¬å±±æ•£æ•£å¿ƒï¼Œé¡ºä¾¿é‡‡äº†äº›çŸ¿çŸ³ï¼Œå°±é€ç»™ä½ å§ã€‚" )
 		
-			-- ¸øÍæ¼Ò+Õâ¸öÎïÆ·
+			-- ç»™ç©å®¶+è¿™ä¸ªç‰©å“
 			if nKuangNum > 0 then
 			  BeginAddItem(sceneId)
 					AddItem( sceneId, nKuangId, nKuangNum )
 				local ret = EndAddItem(sceneId,selfId)
 			
 				if ret < 1  then
-					AddText( sceneId, "  ¿ÉÏ§ÄãÉíÉÏµÄ°ü¹üÒÑ¾­ÂúÁË£¬´ËÊÂ¾ÍÔİÇÒ×÷°Õ°É¡£" )
+					AddText( sceneId, "  å¯æƒœä½ èº«ä¸Šçš„åŒ…è£¹å·²ç»æ»¡äº†ï¼Œæ­¤äº‹å°±æš‚ä¸”ä½œç½¢å§ã€‚" )
 				else
 					AddItemListToHuman(sceneId,selfId)
 				end
@@ -779,7 +779,7 @@ function x200099_DoHearsay( sceneId, selfId, NpcId ,targetId )
 		DispatchEventList( sceneId, selfId, targetId )
 		
 	elseif nBonusType == 9   then
-		-- ÖÖÖ²ÊÕ»ñÎï
+		-- ç§æ¤æ”¶è·ç‰©
 		local playerlevel = GetLevel( sceneId, selfId )
 		playerlevel = floor( playerlevel / 10 )
 		if playerlevel == 0 then
@@ -798,16 +798,16 @@ function x200099_DoHearsay( sceneId, selfId, NpcId ,targetId )
 			nGrowNum = 40
 		end
 		BeginEvent( sceneId )
-			--AddText( sceneId, "»ñµÃÃÅÅÉÕÙ¼¯Áî" )
-			AddText( sceneId, "  ×òÈÕÎŞÊÂ£¬ÎÒÈ¥Ìï¼äÉ¢É¢ĞÄ£¬Ë³±ãÖÖÁËĞ©Å©×÷Îï£¬¾ÍËÍ¸øÄã°É¡£" )
-			-- ¸øÍæ¼Ò+Õâ¸öÎïÆ·
+			--AddText( sceneId, "è·å¾—é—¨æ´¾å¬é›†ä»¤" )
+			AddText( sceneId, "  æ˜¨æ—¥æ— äº‹ï¼Œæˆ‘å»ç”°é—´æ•£æ•£å¿ƒï¼Œé¡ºä¾¿ç§äº†äº›å†œä½œç‰©ï¼Œå°±é€ç»™ä½ å§ã€‚" )
+			-- ç»™ç©å®¶+è¿™ä¸ªç‰©å“
 			if nGrowNum > 0 then
 			  BeginAddItem(sceneId)
 					AddItem( sceneId, nGrowId, nGrowNum )
 				local ret = EndAddItem(sceneId,selfId)
 			
 				if ret < 1  then
-					AddText( sceneId, "  ¿ÉÏ§ÄãÉíÉÏµÄ°ü¹üÒÑ¾­ÂúÁË£¬´ËÊÂ¾ÍÔİÇÒ×÷°Õ°É¡£" )
+					AddText( sceneId, "  å¯æƒœä½ èº«ä¸Šçš„åŒ…è£¹å·²ç»æ»¡äº†ï¼Œæ­¤äº‹å°±æš‚ä¸”ä½œç½¢å§ã€‚" )
 				else
 					AddItemListToHuman(sceneId,selfId)
 				end
@@ -819,7 +819,7 @@ function x200099_DoHearsay( sceneId, selfId, NpcId ,targetId )
 end
 
 --**********************************
--- »ñµÃ¹ØÏµ¼¶±ğ
+-- è·å¾—å…³ç³»çº§åˆ«
 --**********************************
 function x200099_GetNpcRelationLevel( sceneId, selfId, NpcId )
 
@@ -857,7 +857,7 @@ function x200099_GetNpcRelationLevel( sceneId, selfId, NpcId )
 end
 
 --**********************************
--- »ñµÃ¹ØÏµ¼¶±ğ
+-- è·å¾—å…³ç³»çº§åˆ«
 --**********************************
 function x200099_InitRelation( sceneId, selfId )
 	if GetMenPai(sceneId, selfId) == 9 then

@@ -1,31 +1,31 @@
---ÉÌÈËµÄNpc
---ÆÕÍ¨
+--å•†äººçš„Npc
+--æ™®é€š
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x125003_g_scriptId = 125003
 
---ÉÌµê±àºÅ
+--å•†åº—ç¼–å·
 x125003_g_ShopTabId_1	= 143
 x125003_g_ShopTabId_2	= 27
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x125003_g_eventList={}
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 
 function x125003_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
-		AddText(sceneId,"  ÄãĞèÒªµãÊ²Ã´°¡£¿ÎÒÕâÀïºÜ¶à³ÔºÈµÄ¡£¼Û¸ñ»¹ºÍÂåÑô³ÇÍ¬²½Å¶¡£")
-		AddNumText(sceneId,x125003_g_scriptId,"¹ºÂòÒ©ÓëÊ³Îï",7,0)
-		AddNumText(sceneId,x125003_g_scriptId,"¹ºÂòÕäÊŞ¿ÚÁ¸",7,1)
+		AddText(sceneId,"  ä½ éœ€è¦ç‚¹ä»€ä¹ˆå•Šï¼Ÿæˆ‘è¿™é‡Œå¾ˆå¤šåƒå–çš„ã€‚ä»·æ ¼è¿˜å’Œæ´›é˜³åŸåŒæ­¥å“¦ã€‚")
+		AddNumText(sceneId,x125003_g_scriptId,"è´­ä¹°è¯ä¸é£Ÿç‰©",7,0)
+		AddNumText(sceneId,x125003_g_scriptId,"è´­ä¹°çå…½å£ç²®",7,1)
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x125003_OnEventRequest( sceneId, selfId, targetId, eventId )
 	local	key	= GetNumText()

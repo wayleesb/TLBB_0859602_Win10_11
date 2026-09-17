@@ -1,11 +1,11 @@
---火焰山NPC
---麦雅
---任务
+--鐏劙灞盢PC
+--楹﹂泤
+--浠诲姟
 
 x042504_g_ScriptId	= 042504
 
 --**********************************
---事件交互入口
+--浜嬩欢浜や簰鍏ュ彛
 --**********************************
 function x042504_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent( sceneId )

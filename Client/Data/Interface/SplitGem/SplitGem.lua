@@ -6,7 +6,7 @@ local EQUIP_QUALITY = -1
 local EQUIP_BUTTON
 local CHARM_QUALITY = -1
 local CHARM_BUTTON
-local EB_BINDED = 1;				-- ÒÑ¾­°ó¶¨
+local EB_BINDED = 1;				-- å·²ç»ç»‘å®š
 local GEM_BUTTONS = {};
 
 local g_LastEquipID = -1;
@@ -48,7 +48,7 @@ function SplitGem_OnEvent(event)
 
 	if ( event == "UI_COMMAND" and tonumber(arg0) == 27) then
 			this:Show();
-			-- Çé¿öÎïÆ·²Û zchw
+			-- æƒ…å†µç‰©å“æ§½ zchw
 			SplitGem_Clear();
 			if(CHARM_BUTTON : GetActionItem() == -1) then
 			  SplitGem_Explain3:Hide();
@@ -57,7 +57,7 @@ function SplitGem_OnEvent(event)
 			objCared = DataPool : GetNPCIDByServerID(xx);
 			AxTrace(0,1,"xx="..xx .. " objCared="..objCared)
 			if objCared == -1 then
-					PushDebugMessage("server´«¹ıÀ´µÄÊı¾İÓĞÎÊÌâ¡£");
+					PushDebugMessage("serverä¼ è¿‡æ¥çš„æ•°æ®æœ‰é—®é¢˜ã€‚");
 					return;
 			end
 			BeginCareObject_SplitGem(objCared)
@@ -66,10 +66,10 @@ function SplitGem_OnEvent(event)
 			return;
 		end
 		
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ı£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æœå’ŒNPCçš„è·ç¦»å¤§äºä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if(arg1 == "distance" and tonumber(arg2)>MAX_OBJ_DISTANCE or arg1=="destroy") then
 			
-			--È¡Ïû¹ØĞÄ
+			--å–æ¶ˆå…³å¿ƒ
 			SplitGem_Cancel_Clicked()
 		end
 
@@ -143,24 +143,24 @@ function SplitGem_Update(UI_index,Item_index)
 			
 			if EquipPoint == -1 or EquipPoint == 8 or EquipPoint == 9 or EquipPoint == 10 then
 				if EquipPoint ~= -1 then
-					PushDebugMessage("²»ÄÜ·ÅÈëÕâÖÖ×°±¸¡£")
+					PushDebugMessage("ä¸èƒ½æ”¾å…¥è¿™ç§è£…å¤‡ã€‚")
 				end
 				return
 			end
 			
-			--modi:lby20080522 34479 µ±µÚËÄ¸ö¿ÕÓĞ±¦Ê¯²»ÄÜÕª³ı
+			--modi:lby20080522 34479 å½“ç¬¬å››ä¸ªç©ºæœ‰å®çŸ³ä¸èƒ½æ‘˜é™¤
 			local gemNum = LifeAbility : GetEquip_GemCount(i_index)
 			
 			
 			if gemNum > 3 then
 				--PushDebugMessage(tostring(gemNum))
-				PushDebugMessage("¶Ô²»Æğ£¬±¾×°±¸±ØĞëÏÈÔÚÂ¥À¼³ÌÒ§Ìú´¦½øĞĞ¼«ÏŞÕª³ı")
+				PushDebugMessage("å¯¹ä¸èµ·ï¼Œæœ¬è£…å¤‡å¿…é¡»å…ˆåœ¨æ¥¼å…°ç¨‹å’¬é“å¤„è¿›è¡Œæé™æ‘˜é™¤")
 				return
 			end
 				
 			
 			if EQUIP_QUALITY ~= -1 then
-				--ÈÃÖ®Ç°µÄ¶«Î÷±äÁÁ	
+				--è®©ä¹‹å‰çš„ä¸œè¥¿å˜äº®	
 				LifeAbility : Lock_Packet_Item(EQUIP_QUALITY,0);
 			end
 			
@@ -207,11 +207,11 @@ function SplitGem_Update(UI_index,Item_index)
 	    end
 	    
 	    if result == 0 then
-	       PushDebugMessage("ÕâÀï±ØĞë·ÅÈë±¦Ê¯Õª³ı·û¡£")
+	       PushDebugMessage("è¿™é‡Œå¿…é¡»æ”¾å…¥å®çŸ³æ‘˜é™¤ç¬¦ã€‚")
 	       return
 	    end			
 			
-			--ÅĞ¶ÏÊÇÄÄÖÖ±¦Ê¯Õª³ı·û
+			--åˆ¤æ–­æ˜¯å“ªç§å®çŸ³æ‘˜é™¤ç¬¦
 			if PlayerPackage : GetItemTableIndex( i_index ) == 30900012 then
 				SplitGem_Explain3:SetText("#{INTERFACE_XML_138}");
 			elseif (PlayerPackage : GetItemTableIndex( i_index ) >= 30900036 and PlayerPackage : GetItemTableIndex( i_index ) <= 30900044) then
@@ -220,7 +220,7 @@ function SplitGem_Update(UI_index,Item_index)
 			SplitGem_Explain3:Show();
 			
 			if CHARM_QUALITY ~= -1 then
-				--ÈÃÖ®Ç°µÄ¶«Î÷±äÁÁ	
+				--è®©ä¹‹å‰çš„ä¸œè¥¿å˜äº®	
 				LifeAbility : Lock_Packet_Item(CHARM_QUALITY,0);
 			end
 			
@@ -240,17 +240,17 @@ end
 function SplitGem_Buttons_Clicked()
 	
 	if GEM_SELECTED == -1 then
-		PushDebugMessage("ÇëÑ¡ÔñÒªÕª³ıµÄ±¦Ê¯¡£")
+		PushDebugMessage("è¯·é€‰æ‹©è¦æ‘˜é™¤çš„å®çŸ³ã€‚")
 		return
 	end
 	
 	if CHARM_QUALITY == -1 then
-		PushDebugMessage("Ã»ÓĞ±¦Ê¯Õª³ı·û½«ÎŞ·¨Õª³ı±¦Ê¯¡£")
+		PushDebugMessage("æ²¡æœ‰å®çŸ³æ‘˜é™¤ç¬¦å°†æ— æ³•æ‘˜é™¤å®çŸ³ã€‚")
 		return
 	end
 	
 	if EQUIP_QUALITY == -1 then
-		PushDebugMessage("Çë·ÅÖÃÒªÕª³ı±¦Ê¯µÄ×°±¸¡£")
+		PushDebugMessage("è¯·æ”¾ç½®è¦æ‘˜é™¤å®çŸ³çš„è£…å¤‡ã€‚")
 		return
 	end
 	
@@ -260,37 +260,37 @@ function SplitGem_Buttons_Clicked()
   
   local result = 1
   
-  if CharmId == 30900044 then             --9¼¶¸ß¼¶Õª³ı·û¿ÉÒÔÕª³ıÒ»ÇĞ
+  if CharmId == 30900044 then             --9çº§é«˜çº§æ‘˜é™¤ç¬¦å¯ä»¥æ‘˜é™¤ä¸€åˆ‡
      result = 1
-  elseif CharmId == 30900043 then         --8¼¶¸ß¼¶Õª³ı·ûÖ»ÄÜÕª³ı8¼¶ºÍ8¼¶ÒÔÏÂ
+  elseif CharmId == 30900043 then         --8çº§é«˜çº§æ‘˜é™¤ç¬¦åªèƒ½æ‘˜é™¤8çº§å’Œ8çº§ä»¥ä¸‹
      if (Gem_Level > 8) then
        result = 0
      end
-  elseif CharmId == 30900042 then         --7¼¶¸ß¼¶Õª³ı·ûÖ»ÄÜÕª³ı7¼¶ºÍ7¼¶ÒÔÏÂ
+  elseif CharmId == 30900042 then         --7çº§é«˜çº§æ‘˜é™¤ç¬¦åªèƒ½æ‘˜é™¤7çº§å’Œ7çº§ä»¥ä¸‹
      if (Gem_Level > 7) then
        result = 0
      end
-  elseif CharmId == 30900041 then         --6¼¶¸ß¼¶Õª³ı·ûÖ»ÄÜÕª³ı6¼¶ºÍ6¼¶ÒÔÏÂ
+  elseif CharmId == 30900041 then         --6çº§é«˜çº§æ‘˜é™¤ç¬¦åªèƒ½æ‘˜é™¤6çº§å’Œ6çº§ä»¥ä¸‹
      if (Gem_Level > 6) then
        result = 0
      end
-  elseif CharmId == 30900040 then         --5¼¶¸ß¼¶Õª³ı·ûÖ»ÄÜÕª³ı5¼¶ºÍ5¼¶ÒÔÏÂ
+  elseif CharmId == 30900040 then         --5çº§é«˜çº§æ‘˜é™¤ç¬¦åªèƒ½æ‘˜é™¤5çº§å’Œ5çº§ä»¥ä¸‹
      if (Gem_Level > 5) then
        result = 0
      end
-  elseif CharmId == 30900039 then         --4¼¶¸ß¼¶Õª³ı·ûÖ»ÄÜÕª³ı4¼¶ºÍ4¼¶ÒÔÏÂ
+  elseif CharmId == 30900039 then         --4çº§é«˜çº§æ‘˜é™¤ç¬¦åªèƒ½æ‘˜é™¤4çº§å’Œ4çº§ä»¥ä¸‹
      if (Gem_Level > 4) then
        result = 0
      end
-  elseif CharmId == 30900038 then         --3¼¶¸ß¼¶Õª³ı·ûÖ»ÄÜÕª³ı3¼¶ºÍ3¼¶ÒÔÏÂ
+  elseif CharmId == 30900038 then         --3çº§é«˜çº§æ‘˜é™¤ç¬¦åªèƒ½æ‘˜é™¤3çº§å’Œ3çº§ä»¥ä¸‹
      if (Gem_Level > 3) then
        result = 0
      end
-  elseif CharmId == 30900037 then         --72¼¶¸ß¼¶Õª³ı·ûÖ»ÄÜÕª³ı2¼¶ºÍ2¼¶ÒÔÏÂ
+  elseif CharmId == 30900037 then         --72çº§é«˜çº§æ‘˜é™¤ç¬¦åªèƒ½æ‘˜é™¤2çº§å’Œ2çº§ä»¥ä¸‹
      if (Gem_Level > 2) then
        result = 0
      end
-  elseif CharmId == 30900036 then         --1¼¶¸ß¼¶Õª³ı·ûÖ»ÄÜÕª³ı1¼¶ºÍ1¼¶ÒÔÏÂ
+  elseif CharmId == 30900036 then         --1çº§é«˜çº§æ‘˜é™¤ç¬¦åªèƒ½æ‘˜é™¤1çº§å’Œ1çº§ä»¥ä¸‹
      if (Gem_Level > 1) then
        result = 0
      end
@@ -299,15 +299,15 @@ function SplitGem_Buttons_Clicked()
   end
   
   if result == 0 then
-     PushDebugMessage("¸ß¼¶±¦Ê¯Õª³ı·û¶ÔÓ¦µÈ¼¶²»·ûºÏ")
+     PushDebugMessage("é«˜çº§å®çŸ³æ‘˜é™¤ç¬¦å¯¹åº”ç­‰çº§ä¸ç¬¦åˆ")
      return
   end
   
 	if(g_LastEquipID ~= EquipId or g_LastNeedItemID ~= CharmId) then
 	  g_LastEquipID = EquipId;
 	  g_LastNeedItemID = CharmId;
-	--Èç¹ûÊÇµÍ¼¶Õª³ı·û£¬ĞèÒªÅĞ¶ÏµÍ¼¶Õª³ı·ûÊÇ·ñÊÇ°ó¶¨µÄ£¬ºÃ¾ö¶¨Õª³ıºóµÄ±¦Ê¯ÊÇ·ñ°ó¶¨
-	--ºöÂÔ×°±¸ÊÇ·ñ°ó¶¨£¬ºöÂÔ¸ß¼¶Õª³ı·û
+	--å¦‚æœæ˜¯ä½çº§æ‘˜é™¤ç¬¦ï¼Œéœ€è¦åˆ¤æ–­ä½çº§æ‘˜é™¤ç¬¦æ˜¯å¦æ˜¯ç»‘å®šçš„ï¼Œå¥½å†³å®šæ‘˜é™¤åçš„å®çŸ³æ˜¯å¦ç»‘å®š
+	--å¿½ç•¥è£…å¤‡æ˜¯å¦ç»‘å®šï¼Œå¿½ç•¥é«˜çº§æ‘˜é™¤ç¬¦
 	  if CharmId == 30900012 then
 	    if (GetItemBindStatus(CHARM_QUALITY) == EB_BINDED) then
 	      ShowSystemInfo("BSZC_20071121");
@@ -336,9 +336,9 @@ function SplitGem_OnHiden()
 	return
 end
 --=========================================================
---¿ªÊ¼¹ØĞÄNPC£¬
---ÔÚ¿ªÊ¼¹ØĞÄÖ®Ç°ĞèÒªÏÈÈ·¶¨Õâ¸ö½çÃæÊÇ²»ÊÇÒÑ¾­ÓĞ¡°¹ØĞÄ¡±µÄNPC£¬
---Èç¹ûÓĞµÄ»°£¬ÏÈÈ¡ÏûÒÑ¾­ÓĞµÄ¡°¹ØĞÄ¡±
+--å¼€å§‹å…³å¿ƒNPCï¼Œ
+--åœ¨å¼€å§‹å…³å¿ƒä¹‹å‰éœ€è¦å…ˆç¡®å®šè¿™ä¸ªç•Œé¢æ˜¯ä¸æ˜¯å·²ç»æœ‰â€œå…³å¿ƒâ€çš„NPCï¼Œ
+--å¦‚æœæœ‰çš„è¯ï¼Œå…ˆå–æ¶ˆå·²ç»æœ‰çš„â€œå…³å¿ƒâ€
 --=========================================================
 function BeginCareObject_SplitGem(objCaredId)
 
@@ -349,7 +349,7 @@ function BeginCareObject_SplitGem(objCaredId)
 end
 
 --=========================================================
---Í£Ö¹¶ÔÄ³NPCµÄ¹ØĞÄ
+--åœæ­¢å¯¹æŸNPCçš„å…³å¿ƒ
 --=========================================================
 function StopCareObject_SplitGem(objCaredId)
 	this:CareObject(objCaredId, 0, "SplitGem");

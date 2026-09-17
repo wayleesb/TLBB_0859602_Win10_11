@@ -43,14 +43,14 @@ end
 
 function LogonList_PreLoad()
 	
-	-- ´ò¿ª½çÃæ
+	-- æ‰“å¼€ç•Œé¢
 	this:RegisterEvent("OPEN_ENTERING_SCENE_DLG");
 
 	this:RegisterEvent("GAMELOGIN_OPEN_COUNT_INPUT");
 	
 end
 
--- ×¢²áonLoadÊÂ¼ş
+-- æ³¨å†ŒonLoadäº‹ä»¶
 function LogonList_OnLoad()
 	
 	
@@ -62,11 +62,11 @@ function LogonList_OnEvent(event)
 
 	--this:Show();
 	--
-	-- ´ò¿ª½çÃæÊÂ¼ş.
+	-- æ‰“å¼€ç•Œé¢äº‹ä»¶.
 	--
 	if ( event == "OPEN_ENTERING_SCENE_DLG" ) then
 
-		AxTrace( 0,0, "´ò¿ª³¡¾°Ñ¡ÔñÁĞ±í");
+		AxTrace( 0,0, "æ‰“å¼€åœºæ™¯é€‰æ‹©åˆ—è¡¨");
 		AddEnterSceneInfo(tonumber(arg0));
 		this:Show();
 		return;
@@ -84,14 +84,14 @@ end
 
 function AddEnterSceneInfo(iRoleIndex)
 
-	-- ¼ÇÂ¼µ±Ç°Ñ¡ÔñµÄ½ÇÉ«¡£
+	-- è®°å½•å½“å‰é€‰æ‹©çš„è§’è‰²ã€‚
 	g_iRoleSel = iRoleIndex;
 	
 	LogOnlist_ClearData();
 	local iSceneCount  = GameProduceLogin:GetSceneInfoCount(iRoleIndex);
 	local strSceneName = "";
 	
-	-- µÃµ½Ñ¡ÔñµÄ½ÇÉ«¿ÉÒÔ½øÈëµÄ³¡¾°ĞÅÏ¢
+	-- å¾—åˆ°é€‰æ‹©çš„è§’è‰²å¯ä»¥è¿›å…¥çš„åœºæ™¯ä¿¡æ¯
 	for index =0 , iSceneCount-1 do
 	 	g_ScenIDTable[ index ] = index	
 	 	--strSceneName = GameProduceLogin:GetSceneInfo(iRoleIndex, index);
@@ -112,7 +112,7 @@ end;
 
 function LogOnlist_Choose_Click()
 
-	-- ½øÈëĞÂÊÖ´å¡£
+	-- è¿›å…¥æ–°æ‰‹æ‘ã€‚
 	local iSceneIndex = LogOnlist_List:GetFirstSelectItem();
 	iSceneIndex = g_ScenIDTable[ iSceneIndex ]
 	

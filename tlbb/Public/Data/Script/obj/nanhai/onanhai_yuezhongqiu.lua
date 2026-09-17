@@ -1,24 +1,24 @@
---ÄÏº£NPC
---ÔÀÖÙÇï
---ÆÕÍ¨
+--å—æµ·NPC
+--å²³ä»²ç§‹
+--æ™®é€š
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x034003_g_ScriptId = 34003
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x034003_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
-		AddText(sceneId,"  ÒÔÇ°µÄÊ±ºò£¬öùÓã°ïÒ²Í¦ºÃµÄ£¬Ö»ÊÇĞĞÎª¹ÔÕÅÒ»Ğ©°ÕÁË£¬Ã»×ö¹ıÊ²Ã´´óµÄ»µÊÂ¡£¿ÉÊÇ£¬½¥½¥µÄ£¬²»ÖªµÀÔõÃ´»ØÊÂ£¬ÄÇĞ©º¢×Ó¿ªÊ¼×ÜÊÇÈÇ»ö£¬×ö´íÁËÊÂÇé»¹²»ÈÏ´í£¬°¦¡­¡­ÕæÊÇÔìÄõ°¡¡­¡­")
+		AddText(sceneId,"  ä»¥å‰çš„æ—¶å€™ï¼Œé³„é±¼å¸®ä¹ŸæŒºå¥½çš„ï¼Œåªæ˜¯è¡Œä¸ºä¹–å¼ ä¸€äº›ç½¢äº†ï¼Œæ²¡åšè¿‡ä»€ä¹ˆå¤§çš„åäº‹ã€‚å¯æ˜¯ï¼Œæ¸æ¸çš„ï¼Œä¸çŸ¥é“æ€ä¹ˆå›äº‹ï¼Œé‚£äº›å­©å­å¼€å§‹æ€»æ˜¯æƒ¹ç¥¸ï¼Œåšé”™äº†äº‹æƒ…è¿˜ä¸è®¤é”™ï¼Œå”‰â€¦â€¦çœŸæ˜¯é€ å­½å•Šâ€¦â€¦")
 		
-		-- Èç¹ûÍæ¼ÒÉíÉÏÓĞ¡°³¤°×¡ª¡ª¡ª¡ªÌìÑÄº£½Ç¡±£¬Õâ¸öÈÎÎñ£¬¿ÉÒÔÔÚÕâÀï»ñµÃµÀ¾ß
+		-- å¦‚æœç©å®¶èº«ä¸Šæœ‰â€œé•¿ç™½â€”â€”â€”â€”å¤©æ¶¯æµ·è§’â€ï¼Œè¿™ä¸ªä»»åŠ¡ï¼Œå¯ä»¥åœ¨è¿™é‡Œè·å¾—é“å…·
 		if IsHaveMission(sceneId,selfId,568) > 0 then
-			-- ÅĞ¶¨Íæ¼ÒÉíÉÏÊÇ²»ÊÇÓĞÎïÆ·ÁË 
+			-- åˆ¤å®šç©å®¶èº«ä¸Šæ˜¯ä¸æ˜¯æœ‰ç‰©å“äº† 
 			local itemCount
 			itemCount = GetItemCount( sceneId, selfId, 40001039 )
 			if itemCount < 1   then
-				AddNumText(sceneId,x034003_g_ScriptId,"µÃµ½Ò»¿éÒìÖÖÊ÷Æ¤",7,666);
+				AddNumText(sceneId,x034003_g_ScriptId,"å¾—åˆ°ä¸€å—å¼‚ç§æ ‘çš®",7,666);
 			end
 		end
 	EndEvent(sceneId)
@@ -26,7 +26,7 @@ function x034003_OnDefaultEvent( sceneId, selfId,targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x034003_OnEventRequest( sceneId, selfId, targetId, eventId )
 	
@@ -38,8 +38,8 @@ function x034003_OnEventRequest( sceneId, selfId, targetId, eventId )
 				AddItem( sceneId, 40001039, 1 )
 			local ret = EndAddItem( sceneId, selfId )
 			if ret <= 0 then 
-				--ÌáÊ¾²»ÄÜ½ÓÈÎÎñÁË
-				Msg2Player(  sceneId, selfId,"#YÄãµÄÈÎÎñ±³°üÒÑ¾­ÂúÁË¡£", MSG2PLAYER_PARA )
+				--æç¤ºä¸èƒ½æ¥ä»»åŠ¡äº†
+				Msg2Player(  sceneId, selfId,"#Yä½ çš„ä»»åŠ¡èƒŒåŒ…å·²ç»æ»¡äº†ã€‚", MSG2PLAYER_PARA )
 			else
 				AddItemListToHuman(sceneId,selfId)
 			end

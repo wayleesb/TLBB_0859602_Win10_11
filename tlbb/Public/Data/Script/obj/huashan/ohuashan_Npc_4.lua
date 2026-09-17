@@ -1,21 +1,21 @@
---»ªÉ½Ò½ÁÆNPC
---ÉñÒ½
---ÆÕÍ¨
+--åå±±åŒ»ç–—NPC
+--ç¥åŒ»
+--æ™®é€š
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x125004_g_scriptId = 125004
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
-x125004_g_eventList={701603}			-- ¡°ÕäÊŞÖÎÁÆ¡±½Å±¾
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
+x125004_g_eventList={701603}			-- â€œçå…½æ²»ç–—â€è„šæœ¬
 
---ÓÎÒ½½Å±¾±àºÅ
+--æ¸¸åŒ»è„šæœ¬ç¼–å·
 x125004_g_healScriptId = 000064
 
---ÖÎÁÆÉè¶¨
---µ±Íæ¼ÒµÄµÈ¼¶ÔÚ10¼¶ÒÔÏÂµÄÊ±ºò£¬ÖÎÁÆ²»ÊÕ·Ñ£»
---´óÓÚµÈÓÚ10¼¶ÒÔÉÏÊÕÈ¡µÄ·ÑÓÃÎª£º
---ÖÎÁÆ·ÑÓÃ£½£¨Íæ¼Ò×î´óÉúÃüÖµ£­µ±Ç°ÉúÃüÖµ£©¡Áa+£¨Íæ¼Ò×î´óÀ¶Öµ£­µ±Ç°À¶Öµ£©¡Áb
---a¡¢bÔÚ²»Í¬µÈ¼¶ÏÂµÄÏµÊı¹æ¶¨ÈçÏÂ£ºµÈ¼¶¡¢aÏµÊı¡¢bÏµÊı
+--æ²»ç–—è®¾å®š
+--å½“ç©å®¶çš„ç­‰çº§åœ¨10çº§ä»¥ä¸‹çš„æ—¶å€™ï¼Œæ²»ç–—ä¸æ”¶è´¹ï¼›
+--å¤§äºç­‰äº10çº§ä»¥ä¸Šæ”¶å–çš„è´¹ç”¨ä¸ºï¼š
+--æ²»ç–—è´¹ç”¨ï¼ï¼ˆç©å®¶æœ€å¤§ç”Ÿå‘½å€¼ï¼å½“å‰ç”Ÿå‘½å€¼ï¼‰Ã—a+ï¼ˆç©å®¶æœ€å¤§è“å€¼ï¼å½“å‰è“å€¼ï¼‰Ã—b
+--aã€båœ¨ä¸åŒç­‰çº§ä¸‹çš„ç³»æ•°è§„å®šå¦‚ä¸‹ï¼šç­‰çº§ã€aç³»æ•°ã€bç³»æ•°
 --x125004_g_rat	=	{
 --	{"0~9",0,0},	{"10~19",0.0079375,0.02480469},
 --	{"20~29",0.018375,0.05742188},	{"30~39",0.0313125,0.09785157},
@@ -26,19 +26,19 @@ x125004_g_healScriptId = 000064
 --	{"120~129",0.2736,0.816},	      {"130~139",0.3146,0.936}, 
 --	{"140~149",0.3584,1.064}	 
 --	}
---¸Ä³ÉÓëĞ£³¡¼Û¸ñÒ»Ñù TT:45070
+--æ”¹æˆä¸æ ¡åœºä»·æ ¼ä¸€æ · TT:45070
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x125004_UpdateEventList( sceneId, selfId, targetId )
 	BeginEvent(sceneId)
 		AddText(sceneId,"#{OBJ_luoyang_0019}")
-		-- AddNumText( sceneId, x125004_g_scriptId, "Ãâ·ÑÎŞµĞ", 6, 10 )
-		AddNumText(sceneId,x125004_g_scriptId,"ÖÎÁÆ",6,0)
+		-- AddNumText( sceneId, x125004_g_scriptId, "å…è´¹æ— æ•Œ", 6, 10 )
+		AddNumText(sceneId,x125004_g_scriptId,"æ²»ç–—",6,0)
 	EndEvent(sceneId)
 	for i, eventId in x125004_g_eventList do
-		-- µ÷ÓÃ¡°ÕäÊŞÖÎÁÆ¡±½Å±¾
+		-- è°ƒç”¨â€œçå…½æ²»ç–—â€è„šæœ¬
 		CallScriptFunction( eventId, "OnEnumerate",sceneId, selfId, targetId )
 	end
 	EndEvent(sceneId)
@@ -46,14 +46,14 @@ function x125004_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x125004_OnDefaultEvent( sceneId, selfId,targetId )
 	x125004_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x125004_OnEventRequest( sceneId, selfId, targetId, eventId )
 
@@ -63,12 +63,12 @@ function x125004_OnEventRequest( sceneId, selfId, targetId, eventId )
 			return
 	end
 
-	--¼ÆËã»Ö¸´ÑªºÍÆø·ÑÓÃ
+	--è®¡ç®—æ¢å¤è¡€å’Œæ°”è´¹ç”¨
 	--local	gld	= x125004_CalcMoney_hpmp( sceneId, selfId )
 	local	gld = CallScriptFunction( x125004_g_healScriptId, "CalcMoney_hpmp",sceneId, selfId, targetId )* 0.1
 local	key	= GetNumText()
 
-	if key == 1000 then	--²»Ô¸ÔÙÖÎÁÆ
+	if key == 1000 then	--ä¸æ„¿å†æ²»ç–—
 		BeginUICommand( sceneId )
 			UICommand_AddInt( sceneId, targetId )
 		EndUICommand( sceneId )
@@ -76,42 +76,42 @@ local	key	= GetNumText()
 		return
 	end
 
-	if key == 1001 then	--È·ÈÏÒªÖÎÁÆ
-		--¼ÆËã»Ö¸´ÑªºÍÆø·ÑÓÃ
+	if key == 1001 then	--ç¡®è®¤è¦æ²»ç–—
+		--è®¡ç®—æ¢å¤è¡€å’Œæ°”è´¹ç”¨
 		--gld	= x125004_CalcMoney_hpmp( sceneId, selfId )
 		gld = CallScriptFunction( x125004_g_healScriptId, "CalcMoney_hpmp",sceneId, selfId, targetId )* 0.1
 
-		-- µÃµ½½»×ÓºÍ½ğÇ®ÊıÄ¿
+		-- å¾—åˆ°äº¤å­å’Œé‡‘é’±æ•°ç›®
 		local nMoneyJZ = GetMoneyJZ ( sceneId, selfId )
 		local nMoney = GetMoney ( sceneId, selfId )
 		
-		--¼ì²éÍæ¼ÒÊÇ·ñÓĞ×ã¹»µÄÏÖ½ğ
+		--æ£€æŸ¥ç©å®¶æ˜¯å¦æœ‰è¶³å¤Ÿçš„ç°é‡‘
 		if (nMoneyJZ + nMoney >= gld) then
-			--¿ÛÇ®
+			--æ‰£é’±
 			LuaFnCostMoneyWithPriority (sceneId, selfId, gld)
-			--»Ö¸´ÑªºÍÆø		
+			--æ¢å¤è¡€å’Œæ°”		
 			x125004_Restore_hpmp ( sceneId, selfId, targetId )			
 			return
 		
-		--Ç®²»¹»	
+		--é’±ä¸å¤Ÿ	
 		else		
 			BeginEvent( sceneId )
-				AddText( sceneId, "  ÄãµÄ½ğÇ®²»×ã£¡" )
+				AddText( sceneId, "  ä½ çš„é‡‘é’±ä¸è¶³ï¼" )
 				EndEvent( sceneId )
 			DispatchMissionTips( sceneId, selfId )
 		end
 	end
 	
-	--¼ÓÑª
+	--åŠ è¡€
 	if key == 0 then
 		if GetHp( sceneId, selfId ) == GetMaxHp( sceneId, selfId ) and
 			 GetMp( sceneId, selfId ) == GetMaxMp( sceneId, selfId ) then
 			BeginEvent( sceneId )
-			AddText( sceneId, "  ÄãÏÖÔÚºÜ½¡¿µ£¬²»ĞèÒªÖÎÁÆ£¡" )
+			AddText( sceneId, "  ä½ ç°åœ¨å¾ˆå¥åº·ï¼Œä¸éœ€è¦æ²»ç–—ï¼" )
 			EndEvent( sceneId )
 			DispatchEventList( sceneId, selfId, targetId )
 			
-			--È¡ÏûÖ¸¶¨Íæ¼ÒÉíÉÏµÄËùÓĞµĞ¶Ô¿ÉÇıÉ¢×¤ÁôĞ§¹û
+			--å–æ¶ˆæŒ‡å®šç©å®¶èº«ä¸Šçš„æ‰€æœ‰æ•Œå¯¹å¯é©±æ•£é©»ç•™æ•ˆæœ
 			LuaFnDispelAllHostileImpacts( sceneId, selfId )
 			return
 		end
@@ -120,17 +120,17 @@ local	key	= GetNumText()
 			x125004_Restore_hpmp( sceneId, selfId, targetId )
 		else
 			BeginEvent( sceneId )
-				AddText( sceneId, "  ÄãĞèÒª»¨·Ñ#G#{_EXCHG"..gld.."}#WÀ´»Ö¸´ÑªºÍÆø£¬È·¶¨ÒªÖÎÁÆÂğ£¿" )
-				AddNumText( sceneId, x125004_g_scriptId, "ÊÇ", -1, 1001 )
-				AddNumText( sceneId, x125004_g_scriptId, "·ñ", -1, 1000 )
+				AddText( sceneId, "  ä½ éœ€è¦èŠ±è´¹#G#{_EXCHG"..gld.."}#Wæ¥æ¢å¤è¡€å’Œæ°”ï¼Œç¡®å®šè¦æ²»ç–—å—ï¼Ÿ" )
+				AddNumText( sceneId, x125004_g_scriptId, "æ˜¯", -1, 1001 )
+				AddNumText( sceneId, x125004_g_scriptId, "å¦", -1, 1000 )
 			EndEvent( sceneId )
 			DispatchEventList( sceneId, selfId, targetId )
 		end
 	else
 		for i, findId in x125004_g_eventList do
 			if eventId == findId then
-				-- µ÷ÓÃ¡°ÕäÊŞÖÎÁÆ¡±½Å±¾
-				CallScriptFunction( eventId, "OnDefaultEvent",sceneId, selfId, targetId, GetNumText() )	--GetNumText()ÊÇaddnumtextÖĞ×îºóµÄ±äÁ¿
+				-- è°ƒç”¨â€œçå…½æ²»ç–—â€è„šæœ¬
+				CallScriptFunction( eventId, "OnDefaultEvent",sceneId, selfId, targetId, GetNumText() )	--GetNumText()æ˜¯addnumtextä¸­æœ€åçš„å˜é‡
 				return
 			end
 		end
@@ -138,14 +138,14 @@ local	key	= GetNumText()
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x125004_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x125004_g_eventList do
 		if missionScriptId == findId then
 			ret = CallScriptFunction( missionScriptId, "CheckAccept", sceneId, selfId )
 			if ret > 0 then
-				-- µ÷ÓÃ¡°ÕäÊŞÖÎÁÆ¡±½Å±¾
+				-- è°ƒç”¨â€œçå…½æ²»ç–—â€è„šæœ¬
 				CallScriptFunction( missionScriptId, "OnAccept", sceneId, selfId )
 			end
 			return
@@ -154,10 +154,10 @@ function x125004_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x125004_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
-	--¾Ü¾øÖ®ºó£¬Òª·µ»ØNPCµÄÊÂ¼şÁĞ±í
+	--æ‹’ç»ä¹‹åï¼Œè¦è¿”å›NPCçš„äº‹ä»¶åˆ—è¡¨
 	for i, findId in x125004_g_eventList do
 		if missionScriptId == findId then
 			x125004_UpdateEventList( sceneId, selfId, targetId )
@@ -167,12 +167,12 @@ function x125004_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¼ÌĞø£¨ÒÑ¾­½ÓÁËÈÎÎñ£©
+--ç»§ç»­ï¼ˆå·²ç»æ¥äº†ä»»åŠ¡ï¼‰
 --**********************************
 function x125004_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x125004_g_eventList do
 		if missionScriptId == findId then
-			-- µ÷ÓÃ¡°ÕäÊŞÖÎÁÆ¡±½Å±¾
+			-- è°ƒç”¨â€œçå…½æ²»ç–—â€è„šæœ¬
 			CallScriptFunction( missionScriptId, "OnContinue", sceneId, selfId, targetId )
 			return
 		end
@@ -180,12 +180,12 @@ function x125004_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---Ìá½»ÒÑ×öÍêµÄÈÎÎñ
+--æäº¤å·²åšå®Œçš„ä»»åŠ¡
 --**********************************
 function x125004_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, selectRadioId )
 	for i, findId in x125004_g_eventList do
 		if missionScriptId == findId then
-			-- µ÷ÓÃ¡°ÕäÊŞÖÎÁÆ¡±½Å±¾
+			-- è°ƒç”¨â€œçå…½æ²»ç–—â€è„šæœ¬
 			CallScriptFunction( missionScriptId, "OnSubmit", sceneId, selfId, targetId, selectRadioId )
 			return
 		end
@@ -193,22 +193,22 @@ function x125004_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 end
 
 --**********************************
---ËÀÍöÊÂ¼ş
+--æ­»äº¡äº‹ä»¶
 --**********************************
 function x125004_OnDie( sceneId, selfId, killerId )
 end
 
 --**********************************
---»Ö¸´ÑªºÍÆø
+--æ¢å¤è¡€å’Œæ°”
 --**********************************
 function x125004_Restore_hpmp( sceneId, selfId, targetId )
 	RestoreHp( sceneId, selfId )
 	RestoreMp( sceneId, selfId )
-	--È¡ÏûÖ¸¶¨Íæ¼ÒÉíÉÏµÄËùÓĞµĞ¶Ô¿ÉÇıÉ¢×¤ÁôĞ§¹û
+	--å–æ¶ˆæŒ‡å®šç©å®¶èº«ä¸Šçš„æ‰€æœ‰æ•Œå¯¹å¯é©±æ•£é©»ç•™æ•ˆæœ
 	LuaFnDispelAllHostileImpacts( sceneId, selfId )
 	
 	BeginEvent( sceneId )
-		AddText( sceneId, "ÄãµÄÑªºÍÆøÒÑ¾­»Ö¸´" );
+		AddText( sceneId, "ä½ çš„è¡€å’Œæ°”å·²ç»æ¢å¤" );
 	EndEvent( sceneId )
 	DispatchMissionTips( sceneId, selfId )
 	
@@ -219,16 +219,16 @@ function x125004_Restore_hpmp( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ÆËã»Ö¸´ÑªºÍÆø·ÑÓÃ
+--è®¡ç®—æ¢å¤è¡€å’Œæ°”è´¹ç”¨
 --**********************************
---µ±Íæ¼ÒµÄµÈ¼¶ÔÚ10¼¶ÒÔÏÂµÄÊ±ºò£¬ÖÎÁÆ²»ÊÕ·Ñ£»
---´óÓÚµÈÓÚ10¼¶ÒÔÉÏÊÕÈ¡µÄ·ÑÓÃÎª£º
---ÖÎÁÆ·ÑÓÃ£½£¨Íæ¼Ò×î´óÉúÃüÖµ£­µ±Ç°ÉúÃüÖµ£©¡Áa+£¨Íæ¼Ò×î´óÀ¶Öµ£­µ±Ç°À¶Öµ£©¡Áb
+--å½“ç©å®¶çš„ç­‰çº§åœ¨10çº§ä»¥ä¸‹çš„æ—¶å€™ï¼Œæ²»ç–—ä¸æ”¶è´¹ï¼›
+--å¤§äºç­‰äº10çº§ä»¥ä¸Šæ”¶å–çš„è´¹ç”¨ä¸ºï¼š
+--æ²»ç–—è´¹ç”¨ï¼ï¼ˆç©å®¶æœ€å¤§ç”Ÿå‘½å€¼ï¼å½“å‰ç”Ÿå‘½å€¼ï¼‰Ã—a+ï¼ˆç©å®¶æœ€å¤§è“å€¼ï¼å½“å‰è“å€¼ï¼‰Ã—b
 --function x125004_CalcMoney_hpmp( sceneId, selfId )
 --	
 --	local PlayerMaxLevel = GetHumanMaxLevelLimit()
 --	local	level	= GetLevel( sceneId, selfId )
---	if level < 10 then	--Èç¹ûÍæ¼ÒµÈ¼¶<10£¬Ôò²»ĞèÒªÇ®
+--	if level < 10 then	--å¦‚æœç©å®¶ç­‰çº§<10ï¼Œåˆ™ä¸éœ€è¦é’±
 --		return 0
 --	elseif level > PlayerMaxLevel then
 --		level	= PlayerMaxLevel

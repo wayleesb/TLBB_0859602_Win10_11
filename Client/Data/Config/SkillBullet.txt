@@ -1,6 +1,6 @@
 INT	INT	INT	STRING	STRING	FLOAT	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING
-ID	ÀàĞÍ	³õÊ¼Î»ÖÃÀàĞÍ	×Óµ¯·ÉĞĞÌØĞ§ID	·ÉĞĞÒôĞ§ID	ËÙ¶È(m/s)	×Óµ¯±¬Õ¨ÌØĞ§ID	±¬Õ¨ÒôĞ§ID	»÷ÖĞÌØĞ§µÄ°ó¶¨µã	Ô¤Áô1	Ô¤Áô2	Ô¤Áô3	Ô¤Áô4	Ô¤Áô5	ÃèÊö$1$
-1	0	0	g01_zd_yueluoxishan		1000	g01_zdo_yueluoxishan_01		ÉíÌåÊÜ»÷µã						ÔÂÂäÎ÷É½
-2	0	0	g01_zd_huanpeiguihun_01		1000	g01_zdo_huanpeiguihun_01		ÉíÌåÊÜ»÷µã						»·Åå¹é»ê
-3	0	2	g01_tiesuohengjiang_01		10	g01_zdo_tiesuohengjiang_03		ÉíÌåÊÜ»÷µã						ÌúË÷ºá½­
-4	0	0	g01_zd_jiuyinbaiguzhao_01		1000	g01_zdo_jiuyinbaiguzhao_01		ÉíÌåÊÜ»÷µã						¾ÅÒõ°×¹Ç×¦
+ID	ç±»å‹	åˆå§‹ä½ç½®ç±»å‹	å­å¼¹é£è¡Œç‰¹æ•ˆID	é£è¡ŒéŸ³æ•ˆID	é€Ÿåº¦(m/s)	å­å¼¹çˆ†ç‚¸ç‰¹æ•ˆID	çˆ†ç‚¸éŸ³æ•ˆID	å‡»ä¸­ç‰¹æ•ˆçš„ç»‘å®šç‚¹	é¢„ç•™1	é¢„ç•™2	é¢„ç•™3	é¢„ç•™4	é¢„ç•™5	æè¿°$1$
+1	0	0	g01_zd_yueluoxishan		1000	g01_zdo_yueluoxishan_01		èº«ä½“å—å‡»ç‚¹						æœˆè½è¥¿å±±
+2	0	0	g01_zd_huanpeiguihun_01		1000	g01_zdo_huanpeiguihun_01		èº«ä½“å—å‡»ç‚¹						ç¯ä½©å½’é­‚
+3	0	2	g01_tiesuohengjiang_01		10	g01_zdo_tiesuohengjiang_03		èº«ä½“å—å‡»ç‚¹						é“ç´¢æ¨ªæ±Ÿ
+4	0	0	g01_zd_jiuyinbaiguzhao_01		1000	g01_zdo_jiuyinbaiguzhao_01		èº«ä½“å—å‡»ç‚¹						ä¹é˜´ç™½éª¨çˆª

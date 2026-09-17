@@ -3,7 +3,7 @@ local g_ItemIdx = -1;
 
 local ARR_PRICE = {};
 
-local CU_ZENGDIAN			= 6	-- Ôùµã
+local CU_ZENGDIAN			= 6	-- èµ ç‚¹
 
 function ZdShop_BulkBuying_PreLoad()
 	this:RegisterEvent("OPEN_BULKBUY_BOOTH_ZD");
@@ -29,32 +29,33 @@ function ZdShop_BulkBuying_OnEvent(event)
 end
 
 function ZdShop_BulkBuying_Open( idx )
-	--ÉÌµêÊÇÏûºÄ½ğÇ®µÄ
+	--å•†åº—æ˜¯æ¶ˆè€—é‡‘é’±çš„
 	local i = 0;
 	if(NpcShop:GetShopType("unit") == CU_ZENGDIAN) then
-		--Õâ¸öÎ»ÖÃµÄÎïÆ·µÄµş¼ÓÊıÁ¿ÊÇ´óÓÚ1µÄ
-		g_ItemMax = NpcShop:EnumItemMaxOverlay(idx);
+		--è¿™ä¸ªä½ç½®çš„ç‰©å“çš„å åŠ æ•°é‡æ˜¯å¤§äº1çš„
+		g_ItemMax = NpcShop:GetBulkBuyLimit(idx);
 		--if(g_ItemMax > 1) then
-			--·ûºÏÌõ¼ş£¬ÏÔÊ¾½çÃæ
+			--ç¬¦åˆæ¡ä»¶ï¼Œæ˜¾ç¤ºç•Œé¢
 		
 			ZdShop_BulkBuying_IME:SetProperty("DefaultEditBox", "True");
 			g_ItemIdx = idx;
 			local price = NpcShop:EnumItemPrice(g_ItemIdx);
 			--local playerZengDian = Player:GetData("IPREGION");
 			local playerZengDian = Player:GetData("ZENGDIAN");
-			--ĞèÒª»¨·Ñ
+			--éœ€è¦èŠ±è´¹
 			--Shop_BulkBuying_Money2:SetProperty("MoneyMaxNumber", playerMoney);
-			ZdShop_BulkBuying_Money2:SetText(price*20);
-			--ÎïÆ·µ¥¼Û
+			ZdShop_BulkBuying_Money2:SetText(0);
+			--ç‰©å“å•ä»·
 			ZdShop_BulkBuying_Money1:SetText(price);
-			--ÉíÌåĞ¯´ø
+			--èº«ä½“æºå¸¦
 			ZdShop_BulkBuying_Money3:SetText(playerZengDian);
-			--ÊıÁ¿
+			--æ•°é‡
 			ZdShop_BulkBuying_IME:SetProperty("DefaultEditBox", "True");
-			ZdShop_BulkBuying_IME:SetText("20");
+			ZdShop_BulkBuying_IME:SetText(tostring(math.min(20, g_ItemMax)));
 			ZdShop_BulkBuying_IME:SetSelected( 0, -1 );
-			--Ãû³Æ
+			--åç§°
 			ZdShop_BulkBuying_PageHeader:SetText("#gFF0FA0"..NpcShop:EnumItemName(g_ItemIdx));
+			ZdShop_BulkBuying_TextChanged();
 			this:Show();
 		--end
 	end
@@ -63,34 +64,30 @@ function ZdShop_BulkBuying_Open( idx )
 end
 
 function ZdShop_BulkBuying_Accept_Clicked()
-	--¹ºÂò¶à¸ö
-	local num = tonumber(ZdShop_BulkBuying_IME:GetText());
-	if(nil ~= num) then
-		if( tonumber( num ) == 0  ) then
-		else
-			NpcShop:BulkBuyItem(g_ItemIdx, num);
-		end
+	if not ZdShop_BulkBuying_TextChanged() then
+		PushDebugMessage(GetDictionaryString("STACK999_INVALID_QUANTITY"));
+		return;
 	end
+	NpcShop:BulkBuyItem(g_ItemIdx, tonumber(ZdShop_BulkBuying_IME:GetText()));
 	this:Hide();
 end
 
 function ZdShop_BulkBuying_TextChanged()
 	local num = tonumber(ZdShop_BulkBuying_IME:GetText());
-	if(nil == num or(num and num < 0)) then 
-		ZdShop_BulkBuying_Money2:SetText(0);
-		return; 
+	local limit = NpcShop:GetBulkBuyLimit(g_ItemIdx);
+	ZdShop_BulkBuying_Accept:SetProperty("Disabled", "True");
+	ZdShop_BulkBuying_Money2:SetText(0);
+	if not num or num ~= math.floor(num) or num < 1 or num > limit then
+		ZdShop_BulkBuying_Money2:SetText(GetDictionaryString("STACK999_INVALID_QUANTITY"));
+		return false;
 	end
-	
-	if(num > 20) then
-		num = 20;
+	local unitPrice = NpcShop:EnumItemPrice(g_ItemIdx);
+	local price = unitPrice * num;
+	if unitPrice < 0 or price > 2147483647 then
+		ZdShop_BulkBuying_Money2:SetText(GetDictionaryString("STACK999_PRICE_OUT_OF_RANGE"));
+		return false;
 	end
-	if(num == 0) then
-		ZdShop_BulkBuying_Money2:SetText(0);
-	end
-	--if(tostring(num) ~= Shop_BulkBuying_IME:GetText())then --ÈÃ½ğÇ®ËæÊ±¸üĞÂ,by hukai#38377
-		local price = NpcShop:EnumItemPrice(g_ItemIdx)*num;
-		ZdShop_BulkBuying_Money2:SetText(price);
-		ZdShop_BulkBuying_IME:SetTextOriginal(num); --ĞŞ¸ÄÔ­À´µÄbug£¬µİ¹éµ÷ÓÃµ¼ÖÂ¿Í»§¶Ë½Å±¾ÏµÍ³ËÀµô
-	--end
-	
+	ZdShop_BulkBuying_Money2:SetText(price);
+	ZdShop_BulkBuying_Accept:SetProperty("Disabled", "False");
+	return true;
 end

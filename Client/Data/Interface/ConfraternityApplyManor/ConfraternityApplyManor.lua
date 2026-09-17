@@ -1,5 +1,5 @@
-local MAX_CHARACTER_INPUTNAME = 12; --×î³¤Íæ¼ÒÃû×Ö
-local MAX_COUNTRY_INPUTNAME   = 12; --×î³¤°ï»áÃû×Ö
+local MAX_CHARACTER_INPUTNAME = 12; --æœ€é•¿çŽ©å®¶åå­—
+local MAX_COUNTRY_INPUTNAME   = 12; --æœ€é•¿å¸®ä¼šåå­—
 local g_PortId = -1;
 local g_clientNpcId = -1;
 local MAX_OBJ_DISTANCE = 3.0;
@@ -28,7 +28,7 @@ function ConfraternityApplyManor_OnEvent(event)
 		local xx = Get_XParam_INT(0);
 		objCared = DataPool : GetNPCIDByServerID(xx);
 		if objCared == -1 then
-			PushDebugMessage("server´«¹ýÀ´µÄÊý¾ÝÓÐÎÊÌâ¡£");
+			PushDebugMessage("serverä¼ è¿‡æ¥çš„æ•°æ®æœ‰é—®é¢˜ã€‚");
 			return;
 		end
 		if(tonumber(arg0) == 5423)then
@@ -48,24 +48,24 @@ function ConfraternityApplyManor_Update(type,clientNpcId)
 		g_clientNpcId = clientNpcId;
 		this:CareObject(g_clientNpcId, 1, "CityInputName");
 		if(type == 0)then
-			--ÐÂ½¨³ÇÊÐ
+			--æ–°å»ºåŸŽå¸‚
 			ConfraternityApplyManor_FeudalName : SetProperty("MaxTextLength","12");
-			ConfraternityApplyManor_Text:SetText("#{INTERFACE_XML_56}");	--#gFF0FA0ÉêÇë³ÇÊÐÁìµØ
-			ConfraternityApplyManor_Text1:SetText("#{INTERFACE_XML_627}"); --ÉêÇëÒ»¿éÁìµØÐèÒª½»ÄÉ1000Á½»Æ½ð»òÊ¹ÓÃ½¨³ÇÁîÅÆ
+			ConfraternityApplyManor_Text:SetText("#{INTERFACE_XML_56}");	--#gFF0FA0ç”³è¯·åŸŽå¸‚é¢†åœ°
+			ConfraternityApplyManor_Text1:SetText("#{INTERFACE_XML_627}"); --ç”³è¯·ä¸€å—é¢†åœ°éœ€è¦äº¤çº³1000ä¸¤é»„é‡‘æˆ–ä½¿ç”¨å»ºåŸŽä»¤ç‰Œ
 			ConfraternityApplyManor_Text1:Show();
-			ConfraternityApplyManor_Text2:SetText("#{INTERFACE_XML_525}"); --ÇëÊäÈëÁìµØÃû
+			ConfraternityApplyManor_Text2:SetText("#{INTERFACE_XML_525}"); --è¯·è¾“å…¥é¢†åœ°å
 		elseif(type == 1)then
-			--ÈËÎï¸ÄÃû
+			--äººç‰©æ”¹å
 			ConfraternityApplyManor_FeudalName : SetProperty("MaxTextLength",""..MAX_CHARACTER_INPUTNAME);
-			ConfraternityApplyManor_Text:SetText("#{INTERFACE_XML_GAIMING_0}");	--#gFF0FA0½ÇÉ«¸ÄÃû
+			ConfraternityApplyManor_Text:SetText("#{INTERFACE_XML_GAIMING_0}");	--#gFF0FA0è§’è‰²æ”¹å
 			ConfraternityApplyManor_Text1:Hide();
-			ConfraternityApplyManor_Text2:SetText("#{INTERFACE_XML_GAIMING_1}"); --ÇëÊäÈëÐÂµÄ½ÇÉ«Ãû³Æ£º
+			ConfraternityApplyManor_Text2:SetText("#{INTERFACE_XML_GAIMING_1}"); --è¯·è¾“å…¥æ–°çš„è§’è‰²åç§°ï¼š
 		elseif(type == 2)then
-			--°ïÅÉ¸ÄÃû
+			--å¸®æ´¾æ”¹å
 			ConfraternityApplyManor_FeudalName : SetProperty("MaxTextLength",""..MAX_COUNTRY_INPUTNAME);
-			ConfraternityApplyManor_Text:SetText("#{INTERFACE_XML_GAIMING_2}");	--#gFF0FA0°ïÅÉ¸ÄÃû
+			ConfraternityApplyManor_Text:SetText("#{INTERFACE_XML_GAIMING_2}");	--#gFF0FA0å¸®æ´¾æ”¹å
 			ConfraternityApplyManor_Text1:Hide();
-			ConfraternityApplyManor_Text2:SetText("#{INTERFACE_XML_GAIMING_3}"); --ÇëÊäÈëÐÂµÄ°ïÅÉÃû³Æ£º
+			ConfraternityApplyManor_Text2:SetText("#{INTERFACE_XML_GAIMING_3}"); --è¯·è¾“å…¥æ–°çš„å¸®æ´¾åç§°ï¼š
 		end
 end
 
@@ -89,7 +89,7 @@ function City_InputName_CareEventHandle(careId, op, distance)
 		if(tonumber(careId) ~= g_clientNpcId) then
 			return;
 		end
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ý£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æžœå’ŒNPCçš„è·ç¦»å¤§äºŽä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if(op == "distance" and tonumber(distance)>MAX_OBJ_DISTANCE or op=="destroy") then
 			this:Hide();
 		end

@@ -1,29 +1,29 @@
 -- 300053 
--- Ğ¡Ï´Ëèµ¤
--- Ê¹ÓÃÖ®ºó¿ÉÒÔ½«Ñ¡ÔñÊôĞÔµÄ·ÖÅäµãÊıÖĞµÄ5µã±äÎªÇ±ÄÜ¡£
+-- å°æ´—é«“ä¸¹
+-- ä½¿ç”¨ä¹‹åå¯ä»¥å°†é€‰æ‹©å±æ€§çš„åˆ†é…ç‚¹æ•°ä¸­çš„5ç‚¹å˜ä¸ºæ½œèƒ½ã€‚
 
 
--- ½Å±¾ºÅ
+-- è„šæœ¬å·
 x300053_g_scriptId = 300053
-x300053_g_ItemId = 30008005  -- Ò©Ë®ID
+x300053_g_ItemId = 30008005  -- è¯æ°´ID
 
 --**********************************
--- ÊÂ¼ş½»»¥Èë¿Ú
+-- äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x300053_OnDefaultEvent( sceneId, selfId )
 
-	-- ³ÔÒ©Ï´µã
+	-- åƒè¯æ´—ç‚¹
 	if GetNumText() == 1  then
 		
 		if LuaFnIsCanWashPiont(sceneId, selfId, 0) ~= 1  then
 			BeginEvent(sceneId)
-				AddText(sceneId, "#YĞ¡Ï´Ëèµ¤")
-				AddText(sceneId, "  Á¦Á¿ÊôĞÔÒÑ¾­ÎŞ¶àÓà·ÖÅäµãÊı£¬ÎŞ·¨½øĞĞÏ´µã¡£")
+				AddText(sceneId, "#Yå°æ´—é«“ä¸¹")
+				AddText(sceneId, "  åŠ›é‡å±æ€§å·²ç»æ— å¤šä½™åˆ†é…ç‚¹æ•°ï¼Œæ— æ³•è¿›è¡Œæ´—ç‚¹ã€‚")
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,-1)
 		
 		else
-			x300053_WashPoint(sceneId, selfId, 0, 5, "Á¦Á¿")
+			x300053_WashPoint(sceneId, selfId, 0, 5, "åŠ›é‡")
 		
 		end
 		return
@@ -32,13 +32,13 @@ function x300053_OnDefaultEvent( sceneId, selfId )
 		
 		if LuaFnIsCanWashPiont(sceneId, selfId, 1) ~= 1  then
 			BeginEvent(sceneId)
-				AddText(sceneId, "#YĞ¡Ï´Ëèµ¤")
-				AddText(sceneId, "  ÁéÆøÊôĞÔÒÑ¾­ÎŞ¶àÓà·ÖÅäµãÊı£¬ÎŞ·¨½øĞĞÏ´µã¡£")
+				AddText(sceneId, "#Yå°æ´—é«“ä¸¹")
+				AddText(sceneId, "  çµæ°”å±æ€§å·²ç»æ— å¤šä½™åˆ†é…ç‚¹æ•°ï¼Œæ— æ³•è¿›è¡Œæ´—ç‚¹ã€‚")
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,-1)
 		
 		else
-			x300053_WashPoint(sceneId, selfId, 1, 5, "ÁéÆø")
+			x300053_WashPoint(sceneId, selfId, 1, 5, "çµæ°”")
 			
 		end
 		return
@@ -47,13 +47,13 @@ function x300053_OnDefaultEvent( sceneId, selfId )
 		
 		if LuaFnIsCanWashPiont(sceneId, selfId, 2) ~= 1  then 
 			BeginEvent(sceneId)
-				AddText(sceneId, "#YĞ¡Ï´Ëèµ¤")
-				AddText(sceneId, "  ÌåÁ¦ÊôĞÔÒÑ¾­ÎŞ¶àÓà·ÖÅäµãÊı£¬ÎŞ·¨½øĞĞÏ´µã¡£")
+				AddText(sceneId, "#Yå°æ´—é«“ä¸¹")
+				AddText(sceneId, "  ä½“åŠ›å±æ€§å·²ç»æ— å¤šä½™åˆ†é…ç‚¹æ•°ï¼Œæ— æ³•è¿›è¡Œæ´—ç‚¹ã€‚")
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,-1)
 		
 		else
-			x300053_WashPoint(sceneId, selfId, 2, 5, "ÌåÁ¦")
+			x300053_WashPoint(sceneId, selfId, 2, 5, "ä½“åŠ›")
 			
 		end
 		return
@@ -62,13 +62,13 @@ function x300053_OnDefaultEvent( sceneId, selfId )
 		
 		if LuaFnIsCanWashPiont(sceneId, selfId, 3) ~= 1  then
 			BeginEvent(sceneId)
-				AddText(sceneId, "#YĞ¡Ï´Ëèµ¤")
-				AddText(sceneId, "  ¶¨Á¦ÊôĞÔÒÑ¾­ÎŞ¶àÓà·ÖÅäµãÊı£¬ÎŞ·¨½øĞĞÏ´µã¡£")
+				AddText(sceneId, "#Yå°æ´—é«“ä¸¹")
+				AddText(sceneId, "  å®šåŠ›å±æ€§å·²ç»æ— å¤šä½™åˆ†é…ç‚¹æ•°ï¼Œæ— æ³•è¿›è¡Œæ´—ç‚¹ã€‚")
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,-1)
 		
 		else
-			x300053_WashPoint(sceneId, selfId, 3, 5, "¶¨Á¦")
+			x300053_WashPoint(sceneId, selfId, 3, 5, "å®šåŠ›")
 			
 		end
 		return
@@ -77,13 +77,13 @@ function x300053_OnDefaultEvent( sceneId, selfId )
 		
 		if LuaFnIsCanWashPiont(sceneId, selfId, 4) ~= 1  then
 			BeginEvent(sceneId)
-				AddText(sceneId, "#YĞ¡Ï´Ëèµ¤")
-				AddText(sceneId, "  Éí·¨ÊôĞÔÒÑ¾­ÎŞ¶àÓà·ÖÅäµãÊı£¬ÎŞ·¨½øĞĞÏ´µã¡£")
+				AddText(sceneId, "#Yå°æ´—é«“ä¸¹")
+				AddText(sceneId, "  èº«æ³•å±æ€§å·²ç»æ— å¤šä½™åˆ†é…ç‚¹æ•°ï¼Œæ— æ³•è¿›è¡Œæ´—ç‚¹ã€‚")
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,-1)
 		
 		else
-			x300053_WashPoint(sceneId, selfId, 4, 5, "Éí·¨")
+			x300053_WashPoint(sceneId, selfId, 4, 5, "èº«æ³•")
 			
 		end
 		return 
@@ -91,7 +91,7 @@ function x300053_OnDefaultEvent( sceneId, selfId )
 	elseif GetNumText() == 6  then
 		
 		
-		-- ¹Ø±Õ½çÃæ
+		-- å…³é—­ç•Œé¢
 		BeginUICommand(sceneId)
 		EndUICommand(sceneId)
 		DispatchUICommand(sceneId,selfId, 1000)
@@ -109,14 +109,14 @@ function x300053_IsSkillLikeScript( sceneId, selfId)
 end
 
 function x300053_WashPoint(sceneId, selfId, nType, nPoint, szStr)
-	-- ¿Û³ıÏà¹ØµÄÎïÆ·
+	-- æ‰£é™¤ç›¸å…³çš„ç‰©å“
 	local ret = DelItem(sceneId, selfId, x300053_g_ItemId, 1)
 	if ret == 1  then
 		local nNumber = LuaFnWashSomePoints(sceneId, selfId, nType, nPoint)
 		
 		BeginEvent(sceneId)
-			AddText(sceneId, "#YĞ¡Ï´Ëèµ¤")
-			AddText(sceneId, "  Äú³É¹¦½«#Y" .. tonumber(nNumber) .. "µã#WÒÑ·ÖÅäµÄ#Y" .. szStr.. "#WÊôĞÔ±äÎªÇ±ÄÜ¡£")
+			AddText(sceneId, "#Yå°æ´—é«“ä¸¹")
+			AddText(sceneId, "  æ‚¨æˆåŠŸå°†#Y" .. tonumber(nNumber) .. "ç‚¹#Wå·²åˆ†é…çš„#Y" .. szStr.. "#Wå±æ€§å˜ä¸ºæ½œèƒ½ã€‚")
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,-1)
 	end		

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" ?>
+<?xml version="1.0" ?>
 <GUILayout>
     <Window Type="TLBB_MainFrame0" Name="CoupleQuestion_Frame">
         <Property Name="UnifiedPosition" Value="{{0.3662109,0},{0.12,0}}" />

@@ -1,13 +1,13 @@
---³ÇÊĞNPC
---Îä´óÍş
+--åŸå¸‚NPC
+--æ­¦å¤§å¨
 
 x805028_g_scriptId=805028
 x805028_g_BuildingID16 = 11
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x805028_g_eventList = {600030} --zchw
 
--- ÈÎÎñ¼¯ÊÂ¼ş ID ÁĞ±í£¬ÕâÀàÊÂ¼ş°üº¬×ÓÊÂ¼ş
+-- ä»»åŠ¡é›†äº‹ä»¶ ID åˆ—è¡¨ï¼Œè¿™ç±»äº‹ä»¶åŒ…å«å­äº‹ä»¶
 x805028_g_eventSetList = {600030}
 
 x805028_TIME_2000_01_03_ = 946828868
@@ -19,21 +19,21 @@ x805028_g_BangGongLimit    = 20 --[tx43764]
 x805028_g_Item = 40004426
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x805028_UpdateEventList( sceneId, selfId, targetId )
 	local i = 1
 	local eventId = 0
 	local PlayerName = GetName( sceneId, selfId )
 
-	--ÊÇ·ñÊÇ±¾°ï³ÉÔ±
+	--æ˜¯å¦æ˜¯æœ¬å¸®æˆå‘˜
 	local guildid 		= GetHumanGuildID(sceneId,selfId)
 	local cityguildid = GetCityGuildID(sceneId, selfId, sceneId)
 	local strText
 
 	if(guildid ~= cityguildid) then
 		BeginEvent(sceneId)
-			strText = "Ê²Ã´ÈË£¡¸ÒÉÃ´³ÎÒ°ï£¡"
+			strText = "ä»€ä¹ˆäººï¼æ•¢æ“…é—¯æˆ‘å¸®ï¼"
 			AddText(sceneId,strText)
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
@@ -41,23 +41,23 @@ function x805028_UpdateEventList( sceneId, selfId, targetId )
 	end
 
 	BeginEvent( sceneId )
-		strText = "ÀÏÎäÄË±¾³ÇÎäÊÂ¹ÙÔ±£¬ËäÎäÄ³Ò»½éÎä·ò£¬ÓĞ»ú»á¿ÉÒÔÓëÎÒ±È»®±È»®£¬¶ÔÁË£¬»¹ÓĞºÎ¼û½Ì£¿"
+		strText = "è€æ­¦ä¹ƒæœ¬åŸæ­¦äº‹å®˜å‘˜ï¼Œè™½æ­¦æŸä¸€ä»‹æ­¦å¤«ï¼Œæœ‰æœºä¼šå¯ä»¥ä¸æˆ‘æ¯”åˆ’æ¯”åˆ’ï¼Œå¯¹äº†ï¼Œè¿˜æœ‰ä½•è§æ•™ï¼Ÿ"
 		AddText(sceneId,strText);
-		AddText(sceneId, "    " .. PlayerName .. "£¡ À´×öµã¹ú·ÀÈÎÎñ¿©£¡")
+		AddText(sceneId, "    " .. PlayerName .. "ï¼ æ¥åšç‚¹å›½é˜²ä»»åŠ¡å’¯ï¼")
 		if CityGetSelfCityID( sceneId, selfId ) == sceneId then
 			for i, eventId in x805028_g_eventList do
 				--PrintStr("eventId" .. eventId)
 				CallScriptFunction( eventId, "OnEnumerate", sceneId, selfId, targetId )
 			end
 		end
-		AddNumText( sceneId, x805028_g_scriptId, "¹ú·ÀÈÎÎñ½éÉÜ", 11, 1 )
-		AddNumText( sceneId, x805028_g_scriptId, "ĞŞ½¨¼ıÂ¥", 6, 3 )
-		AddNumText( sceneId, x805028_g_scriptId, "ĞŞÁ¶¹¥»÷", 6, 4 )
-		AddNumText( sceneId, x805028_g_scriptId, "Åä·½ÉÌµê", 7, 5 )
-		AddNumText( sceneId, x805028_g_scriptId, "Îä·»½éÉÜ", 11, 2 )
+		AddNumText( sceneId, x805028_g_scriptId, "å›½é˜²ä»»åŠ¡ä»‹ç»", 11, 1 )
+		AddNumText( sceneId, x805028_g_scriptId, "ä¿®å»ºç®­æ¥¼", 6, 3 )
+		AddNumText( sceneId, x805028_g_scriptId, "ä¿®ç‚¼æ”»å‡»", 6, 4 )
+		AddNumText( sceneId, x805028_g_scriptId, "é…æ–¹å•†åº—", 7, 5 )
+		AddNumText( sceneId, x805028_g_scriptId, "æ­¦åŠä»‹ç»", 11, 2 )
 
-		-- ³ÇÊĞÁìË«
-		AddNumText( sceneId, x805028_g_scriptId, "ÁìÈ¡Ë«±¶¾­Ñé", 6, 6 )
+		-- åŸå¸‚é¢†åŒ
+		AddNumText( sceneId, x805028_g_scriptId, "é¢†å–åŒå€ç»éªŒ", 6, 6 )
 		
 		AddNumText( sceneId, x805028_g_scriptId, "#{YPLJ_090116_01}", 6, 7 )--[tx43764]
 
@@ -66,14 +66,14 @@ function x805028_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x805028_OnDefaultEvent( sceneId, selfId,targetId )
 	x805028_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
--- ÅĞ¶ÏÄ³¸öÊÂ¼şÊÇ·ñ¿ÉÒÔÍ¨¹ı´Ë NPC Ö´ĞĞ
+-- åˆ¤æ–­æŸä¸ªäº‹ä»¶æ˜¯å¦å¯ä»¥é€šè¿‡æ­¤ NPC æ‰§è¡Œ
 --**********************************
 function x805028_IsValidEvent( sceneId, selfId, eventId )
 	local i = 1
@@ -100,7 +100,7 @@ function x805028_IsValidEvent( sceneId, selfId, eventId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x805028_OnEventRequest( sceneId, selfId, targetId, eventId )
 	if x805028_IsValidEvent( sceneId, selfId, eventId ) == 1 then
@@ -119,38 +119,38 @@ function x805028_OnEventRequest( sceneId, selfId, targetId, eventId )
 		DispatchEventList( sceneId, selfId, targetId )
 	 elseif GetNumText() == 3 then
 		BeginEvent(sceneId)
-		AddText( sceneId, "Õâ¸ö¹¦ÄÜ¼´½«¿ª·Å" )
+		AddText( sceneId, "è¿™ä¸ªåŠŸèƒ½å³å°†å¼€æ”¾" )
 		EndEvent(sceneId)
 		DispatchEventList( sceneId, selfId, targetId )
 	elseif GetNumText() == 4 then
 		BeginEvent(sceneId)
-		AddText( sceneId, "Õâ¸ö¹¦ÄÜ¼´½«¿ª·Å" )
+		AddText( sceneId, "è¿™ä¸ªåŠŸèƒ½å³å°†å¼€æ”¾" )
 		EndEvent(sceneId)
 		DispatchEventList( sceneId, selfId, targetId )
 	elseif GetNumText() == 5 then
 		BeginUICommand( sceneId )
-			UICommand_AddInt( sceneId, targetId )								--µ÷ÓÃ³ÇÊĞÉÌµê½çÃæ
+			UICommand_AddInt( sceneId, targetId )								--è°ƒç”¨åŸå¸‚å•†åº—ç•Œé¢
 			UICommand_AddInt( sceneId, x805028_g_BuildingID16 )
 		EndUICommand( sceneId )
 		DispatchUICommand( sceneId, selfId, 104 )
 
 	elseif GetNumText() == 6 then
-		-- ¼ì²â°ï»áÊÇ²»ÊÇ´¦ÓÚµÍÎ¬»¤×´Ì¬£¬
-		-- 1£¬¿´Íæ¼Ò³ÇÊĞÊÇ²»ÊÇ´¦ÓÚµÍÎ¬»¤×´Ì¬ÖĞ
+		-- æ£€æµ‹å¸®ä¼šæ˜¯ä¸æ˜¯å¤„äºä½ç»´æŠ¤çŠ¶æ€ï¼Œ
+		-- 1ï¼Œçœ‹ç©å®¶åŸå¸‚æ˜¯ä¸æ˜¯å¤„äºä½ç»´æŠ¤çŠ¶æ€ä¸­
 		if CityGetMaintainStatus(sceneId, selfId, sceneId) == 1  then
 			BeginEvent(sceneId)
-				AddText( sceneId, "  µ±Ç°±¾°ï´¦ÔÚµÍÎ¬»¤×´Ì¬£¬ËùÓĞ¸£Àû¶¼ÎŞ·¨Ìá¹©¸øÖîÎ»£¬»¹ÊÇÍ¬ÖÛ¹²¼Ã¾¡¿ÉÄÜÎª±¾³Ç×¬È¡¸ü¶àµÄ×Ê½ğÎªºÃ¡£" )
+				AddText( sceneId, "  å½“å‰æœ¬å¸®å¤„åœ¨ä½ç»´æŠ¤çŠ¶æ€ï¼Œæ‰€æœ‰ç¦åˆ©éƒ½æ— æ³•æä¾›ç»™è¯¸ä½ï¼Œè¿˜æ˜¯åŒèˆŸå…±æµå°½å¯èƒ½ä¸ºæœ¬åŸèµšå–æ›´å¤šçš„èµ„é‡‘ä¸ºå¥½ã€‚" )
 			EndEvent(sceneId)
 			DispatchEventList( sceneId, selfId, targetId )
 			return
 		end
 
 		BeginEvent(sceneId)
-			AddText( sceneId, " ÔÚ½­ºşÉÏ´³µ´£¬½²¾¿µÄÊÇĞ§ÂÊ£¬ÊÇ·ñÒªÁìĞ©Ë«±¶¾­ÑéÊ±¼äÄØ£¿" )
-			AddNumText( sceneId, x805028_g_scriptId, "ÎÒÒªÁìÈ¡Ò»Ğ¡Ê±Ë«±¶¾­Ñé", 6, 111 )
-			AddNumText( sceneId, x805028_g_scriptId, "ÎÒÒªÁìÈ¡¶şĞ¡Ê±Ë«±¶¾­Ñé", 6, 222 )
-			AddNumText( sceneId, x805028_g_scriptId, "ÎÒÒªÁìÈ¡ËÄĞ¡Ê±Ë«±¶¾­Ñé", 6, 333 )
-			AddNumText( sceneId, x805028_g_scriptId, "ÎÒÏë²éÑ¯ÎÒ±¾ÖÜË«±¶¾­ÑéÊ±¼ä", 6, 444 )
+			AddText( sceneId, " åœ¨æ±Ÿæ¹–ä¸Šé—¯è¡ï¼Œè®²ç©¶çš„æ˜¯æ•ˆç‡ï¼Œæ˜¯å¦è¦é¢†äº›åŒå€ç»éªŒæ—¶é—´å‘¢ï¼Ÿ" )
+			AddNumText( sceneId, x805028_g_scriptId, "æˆ‘è¦é¢†å–ä¸€å°æ—¶åŒå€ç»éªŒ", 6, 111 )
+			AddNumText( sceneId, x805028_g_scriptId, "æˆ‘è¦é¢†å–äºŒå°æ—¶åŒå€ç»éªŒ", 6, 222 )
+			AddNumText( sceneId, x805028_g_scriptId, "æˆ‘è¦é¢†å–å››å°æ—¶åŒå€ç»éªŒ", 6, 333 )
+			AddNumText( sceneId, x805028_g_scriptId, "æˆ‘æƒ³æŸ¥è¯¢æˆ‘æœ¬å‘¨åŒå€ç»éªŒæ—¶é—´", 6, 444 )
 		EndEvent(sceneId)
 		DispatchEventList( sceneId, selfId, targetId )
 		
@@ -190,7 +190,7 @@ function x805028_OnEventRequest( sceneId, selfId, targetId, eventId )
 			return
 		end
 		
-		-- Ìí¼ÓÎïÆ·
+		-- æ·»åŠ ç‰©å“
 		BeginAddItem(sceneId)
 			AddItem( sceneId, x805028_g_Item, 1 )
 		local ret = EndAddItem(sceneId,selfId)
@@ -236,17 +236,17 @@ function x805028_OnEventRequest( sceneId, selfId, targetId, eventId )
 		x805028_DoubleExpTime(sceneId, selfId, targetId, 4)
 
 	elseif GetNumText() == 444 then
-		-- ²éÑ¯±¾ÖÜµÄË«±¶¾­ÑéÊ±¼ä
+		-- æŸ¥è¯¢æœ¬å‘¨çš„åŒå€ç»éªŒæ—¶é—´
 		local _,nCount = DEGetCount(sceneId, selfId)
 		if nCount==0  then
 			BeginEvent(sceneId)
-				AddText(sceneId,"  ÕæÊÇÒÅº¶£¬ÎÒÄÜÌá¹©Äã±¾ÖÜµÄË«±¶¾­ÑéÊ±¼äÎª#R 0Ğ¡Ê±#WÁË¡£")
+				AddText(sceneId,"  çœŸæ˜¯é—æ†¾ï¼Œæˆ‘èƒ½æä¾›ä½ æœ¬å‘¨çš„åŒå€ç»éªŒæ—¶é—´ä¸º#R 0å°æ—¶#Wäº†ã€‚")
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,targetId)
 
 		else
 			BeginEvent(sceneId)
-				AddText(sceneId,"  ÎÒÄÜÌá¹©Äã±¾ÖÜµÄË«±¶¾­ÑéÊ±¼äÎª#R" .. nCount .. "Ğ¡Ê±#W£¬¿ìºÃºÃÀûÓÃ°É¡£")
+				AddText(sceneId,"  æˆ‘èƒ½æä¾›ä½ æœ¬å‘¨çš„åŒå€ç»éªŒæ—¶é—´ä¸º#R" .. nCount .. "å°æ—¶#Wï¼Œå¿«å¥½å¥½åˆ©ç”¨å§ã€‚")
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,targetId)
 
@@ -272,8 +272,8 @@ end
 
 function x805028_DealDoubleExpTime(sceneId, selfId, targetId, nPoint)
 
-	-- »ñµÃÍæ¼ÒÔÚ°ï»áÖĞµÄµÈ¼¶
-	-- °ïÖ÷¿ÉÒÔ²»ÓÃÏûºÄ°ï¹±£¬¸±°ïÖ÷°ë¼Û
+	-- è·å¾—ç©å®¶åœ¨å¸®ä¼šä¸­çš„ç­‰çº§
+	-- å¸®ä¸»å¯ä»¥ä¸ç”¨æ¶ˆè€—å¸®è´¡ï¼Œå‰¯å¸®ä¸»åŠä»·
 	local nGuildPos = GetGuildPos(sceneId, selfId)
 	
 	local BasePoint = 25
@@ -287,7 +287,7 @@ function x805028_DealDoubleExpTime(sceneId, selfId, targetId, nPoint)
 	
 	local bTimeOk = 1
 	
-	-- °ïÖ÷ÊÇ²»ÊÇµ±¹»Ê±¼äµÄ¼ì²â
+	-- å¸®ä¸»æ˜¯ä¸æ˜¯å½“å¤Ÿæ—¶é—´çš„æ£€æµ‹
 	if nGuildPos==8 or nGuildPos==9  then
 		local isPosLongEnough = IsGuildPosLongEnough(sceneId, selfId)
 		if isPosLongEnough < 1 then
@@ -298,11 +298,11 @@ function x805028_DealDoubleExpTime(sceneId, selfId, targetId, nPoint)
 		bTimeOk = -1
 	end
 
-	-- ¼ì²âÍæ¼ÒÊÇ²»ÊÇÓĞ×ã¹»µÄ°ï»á¹±Ï×Öµ
+	-- æ£€æµ‹ç©å®¶æ˜¯ä¸æ˜¯æœ‰è¶³å¤Ÿçš„å¸®ä¼šè´¡çŒ®å€¼
 	local nCity = CityGetAttr(sceneId, selfId, 6)
 	if nCity < floor(BasePoint*nPoint)   then
 		BeginEvent(sceneId)
-			AddText(sceneId,"  ÄãÃ»ÓĞ×ã¹»µÄ°ï»á¹±Ï×¶È¿ÉÒÔÏûºÄ¡£")
+			AddText(sceneId,"  ä½ æ²¡æœ‰è¶³å¤Ÿçš„å¸®ä¼šè´¡çŒ®åº¦å¯ä»¥æ¶ˆè€—ã€‚")
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 		return
@@ -311,7 +311,7 @@ function x805028_DealDoubleExpTime(sceneId, selfId, targetId, nPoint)
 	if BasePoint ~= 0  then
 		if CityChangeAttr( sceneId, selfId, 6, -(floor(BasePoint*nPoint)) ) ~= 1  then
 			BeginEvent(sceneId)
-				AddText( sceneId, " ¿Û³ı°ï»á¹±Ï×¶ÈÊ§°Ü£¬ÇëÉÔºó³¢ÊÔ¡£" )
+				AddText( sceneId, " æ‰£é™¤å¸®ä¼šè´¡çŒ®åº¦å¤±è´¥ï¼Œè¯·ç¨åå°è¯•ã€‚" )
 			EndEvent(sceneId)
 			DispatchEventList( sceneId, selfId, targetId )
 			return
@@ -328,65 +328,65 @@ function x805028_DealDoubleExpTime(sceneId, selfId, targetId, nPoint)
 
 	local nFreeTime = DEGetFreeTime(sceneId, selfId)
 
-	-- ÏÈ¼ÆËãÏÂµ±Ç°Íæ¼ÒÉíÉÏÊ£ÏÂµÄÊ±¼ä
+	-- å…ˆè®¡ç®—ä¸‹å½“å‰ç©å®¶èº«ä¸Šå‰©ä¸‹çš„æ—¶é—´
 	local nTrueTime = nCurHave;
 
 	if nTrueTime < 0 then
 		nTrueTime = 0
 	end
 
-	-- »»¸öĞÂµÄ½Ó¿Ú
+	-- æ¢ä¸ªæ–°çš„æ¥å£
 	WithDrawFreeDoubleExpTime(sceneId, selfId, 0, nPoint, 0 )
 
 	local nCurTime = LuaFnGetCurrentTime()
 
 	BeginEvent(sceneId)
-		AddText(sceneId,"  ÄãÒÑ³É¹¦ÁìÈ¡ÁË#R".. nPoint .."Ğ¡Ê±#WµÄË«±¶¾­ÑéÊ±¼ä¡£ÏÖÔÚÄãÒ»¹²ÓµÓĞ#Y".. tostring(floor((nTrueTime + nPoint*3600)/60)) .. "·ÖÖÓ#WµÄË«±¶¾­ÑéÊ±¼ä")
+		AddText(sceneId,"  ä½ å·²æˆåŠŸé¢†å–äº†#R".. nPoint .."å°æ—¶#Wçš„åŒå€ç»éªŒæ—¶é—´ã€‚ç°åœ¨ä½ ä¸€å…±æ‹¥æœ‰#Y".. tostring(floor((nTrueTime + nPoint*3600)/60)) .. "åˆ†é’Ÿ#Wçš„åŒå€ç»éªŒæ—¶é—´")
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 
 	BeginEvent(sceneId)
-		AddText(sceneId,"  ÄãÒÑ³É¹¦ÁìÈ¡ÁË#R".. nPoint .."Ğ¡Ê±#WµÄË«±¶¾­ÑéÊ±¼ä¡£ÏÖÔÚÄãÒ»¹²ÓµÓĞ#Y".. tostring(floor((nTrueTime + nPoint*3600)/60)) .. "·ÖÖÓ#WµÄË«±¶¾­ÑéÊ±¼ä")
+		AddText(sceneId,"  ä½ å·²æˆåŠŸé¢†å–äº†#R".. nPoint .."å°æ—¶#Wçš„åŒå€ç»éªŒæ—¶é—´ã€‚ç°åœ¨ä½ ä¸€å…±æ‹¥æœ‰#Y".. tostring(floor((nTrueTime + nPoint*3600)/60)) .. "åˆ†é’Ÿ#Wçš„åŒå€ç»éªŒæ—¶é—´")
 	EndEvent(sceneId)
 	DispatchMissionTips(sceneId,selfId)
 
 	if bTimeOk == 1  then
-		if nGuildPos == 8  then -- ¸±°ïÖ÷
+		if nGuildPos == 8  then -- å‰¯å¸®ä¸»
 			BeginEvent(sceneId)
-				AddText(sceneId,"  ÓÉÓÚÄãµ£ÈÎ¸±°ïÖ÷³¬¹ıÒ»ÖÜ£¬±¾´ÎÁìË«ÏûºÄ°ï¹±¼õ°ë¡£")
+				AddText(sceneId,"  ç”±äºä½ æ‹…ä»»å‰¯å¸®ä¸»è¶…è¿‡ä¸€å‘¨ï¼Œæœ¬æ¬¡é¢†åŒæ¶ˆè€—å¸®è´¡å‡åŠã€‚")
 			EndEvent(sceneId)
 			DispatchMissionTips(sceneId,selfId)
-		elseif nGuildPos == 9  then  --°ïÖ÷
+		elseif nGuildPos == 9  then  --å¸®ä¸»
 			BeginEvent(sceneId)
-				AddText(sceneId,"  ÓÉÓÚÄãµ£ÈÎ°ïÖ÷³¬¹ıÒ»ÖÜ£¬±¾´ÎÁìË«²»ÏûºÄ°ï¹±¡£")
+				AddText(sceneId,"  ç”±äºä½ æ‹…ä»»å¸®ä¸»è¶…è¿‡ä¸€å‘¨ï¼Œæœ¬æ¬¡é¢†åŒä¸æ¶ˆè€—å¸®è´¡ã€‚")
 			EndEvent(sceneId)
 			DispatchMissionTips(sceneId,selfId)
 		end
 	end
 
-	-- Í¬²½Êı¾İµ½¿Í»§¶Ë
+	-- åŒæ­¥æ•°æ®åˆ°å®¢æˆ·ç«¯
 	SendDoubleExpToClient(sceneId,selfId)
 
 end
 
 --**********************************
---´¦ÀíÁìË«µÄº¯Êı
+--å¤„ç†é¢†åŒçš„å‡½æ•°
 --**********************************
 function x805028_DoubleExpTime(sceneId, selfId, targetId, nTime)
 
-	-- 1£¬¿´Íæ¼Ò³ÇÊĞÊÇ²»ÊÇ´¦ÓÚµÍÎ¬»¤×´Ì¬ÖĞ
+	-- 1ï¼Œçœ‹ç©å®¶åŸå¸‚æ˜¯ä¸æ˜¯å¤„äºä½ç»´æŠ¤çŠ¶æ€ä¸­
 	if CityGetMaintainStatus(sceneId, selfId, sceneId) == 1  then
 		BeginEvent(sceneId)
-			AddText( sceneId, "  µ±Ç°±¾°ï´¦ÔÚµÍÎ¬»¤×´Ì¬£¬ËùÓĞ¸£Àû¶¼ÎŞ·¨Ìá¹©¸øÖîÎ»£¬»¹ÊÇÍ¬ÖÛ¹²¼Ã¾¡¿ÉÄÜÎª±¾³Ç×¬È¡¸ü¶àµÄ×Ê½ğÎªºÃ¡£" )
+			AddText( sceneId, "  å½“å‰æœ¬å¸®å¤„åœ¨ä½ç»´æŠ¤çŠ¶æ€ï¼Œæ‰€æœ‰ç¦åˆ©éƒ½æ— æ³•æä¾›ç»™è¯¸ä½ï¼Œè¿˜æ˜¯åŒèˆŸå…±æµå°½å¯èƒ½ä¸ºæœ¬åŸèµšå–æ›´å¤šçš„èµ„é‡‘ä¸ºå¥½ã€‚" )
 		EndEvent(sceneId)
 		DispatchEventList( sceneId, selfId, targetId )
 		return
 	end
 
-	-- ¼ì²âÊÇ²»ÊÇĞèÒª´ÓĞÂË¢ĞÂÊı¾İ
-	-- ÏÖÔÚÊ±¼ä
+	-- æ£€æµ‹æ˜¯ä¸æ˜¯éœ€è¦ä»æ–°åˆ·æ–°æ•°æ®
+	-- ç°åœ¨æ—¶é—´
 	local nCurTime = LuaFnGetCurrentTime()
-	-- ÉÏ´ÎË¢ĞÂÊı¾İµÄÊ±¼ä
+	-- ä¸Šæ¬¡åˆ·æ–°æ•°æ®çš„æ—¶é—´
 	local nPreTime = DEGetPreTime(sceneId, selfId)
 
 	if (nCurTime - nPreTime  >= 3600*24*7)  or
@@ -408,7 +408,7 @@ end
 function x805028_AddDETime(sceneId, selfId, targetId, nPoint, nCurTime, nPreTime)
 		local nCurHave = DEGetFreeTime(sceneId, selfId)
 		nCurHave = nCurHave + DEGetMoneyTime(sceneId, selfId)
-		-- ÏÈ¼ÆËãÏÂµ±Ç°Íæ¼ÒÉíÉÏÊ£ÏÂµÄÊ±¼ä
+		-- å…ˆè®¡ç®—ä¸‹å½“å‰ç©å®¶èº«ä¸Šå‰©ä¸‹çš„æ—¶é—´
 		local nTrueTime = nCurHave;
 
 		local nFreeTime = DEGetFreeTime(sceneId, selfId)
@@ -417,11 +417,11 @@ function x805028_AddDETime(sceneId, selfId, targetId, nPoint, nCurTime, nPreTime
 			nTrueTime = 0
 		end
 
-		-- ¿´»¹ÓĞÃ»ÓĞÊ±¼ä¿ÉÒÔÁìÈ¡
+		-- çœ‹è¿˜æœ‰æ²¡æœ‰æ—¶é—´å¯ä»¥é¢†å–
 		local _,nCount = DEGetCount(sceneId, selfId)
 		if(nCount <= 0)   then
 			BeginEvent(sceneId)
-				AddText(sceneId,"  Äã±¾ÖÜµÄË«±¶¾­ÑéÊ±¼äËÆºõÒÑ¾­ÓÃÍêÁË¡£")
+				AddText(sceneId,"  ä½ æœ¬å‘¨çš„åŒå€ç»éªŒæ—¶é—´ä¼¼ä¹å·²ç»ç”¨å®Œäº†ã€‚")
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,targetId)
 			return
@@ -429,34 +429,34 @@ function x805028_AddDETime(sceneId, selfId, targetId, nPoint, nCurTime, nPreTime
 
 		if nCount < nPoint   then
 			BeginEvent(sceneId)
-				AddText(sceneId,"  ÄãÃ»ÓĞÕâÃ´¶àµÄÊ±¼ä¿ÉÒÔÁìÈ¡ÁË")
+				AddText(sceneId,"  ä½ æ²¡æœ‰è¿™ä¹ˆå¤šçš„æ—¶é—´å¯ä»¥é¢†å–äº†")
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,targetId)
 			return
 		end
 
-		-- ¿´ÉíÉÏÊÇ²»ÊÇÒÑ¾­ÓĞ±È½Ï¶àµÄÊ±¼äÁË£¬2Ğ¡Ê±
+		-- çœ‹èº«ä¸Šæ˜¯ä¸æ˜¯å·²ç»æœ‰æ¯”è¾ƒå¤šçš„æ—¶é—´äº†ï¼Œ2å°æ—¶
 		if nFreeTime >= 120*60   then
 			BeginEvent(sceneId)
-				AddText(sceneId,"  ÄãÔÚÈı´ó³ÇÊĞºÍ×Ô½¨³ÇÊĞÖĞ»ñµÃµÄË«±¶¾­ÑéÊ±¼äÒÑ¾­´ïµ½¿ÉÁìÈ¡µÄÉÏÏŞ")
+				AddText(sceneId,"  ä½ åœ¨ä¸‰å¤§åŸå¸‚å’Œè‡ªå»ºåŸå¸‚ä¸­è·å¾—çš„åŒå€ç»éªŒæ—¶é—´å·²ç»è¾¾åˆ°å¯é¢†å–çš„ä¸Šé™")
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,targetId)
 			return
 		end
 
-		-- ¼ì²âÍæ¼Ò²»ÄÜÓµÓĞ³¬¹ı4¸öĞ¡Ê±µÄÊ±¼ä
+		-- æ£€æµ‹ç©å®¶ä¸èƒ½æ‹¥æœ‰è¶…è¿‡4ä¸ªå°æ—¶çš„æ—¶é—´
 		if nFreeTime + nPoint*3600 > 3600*4   then
 			BeginEvent(sceneId)
-				AddText(sceneId,"  ÄãÔÚÈı´ó³ÇÊĞºÍ×Ô½¨³ÇÊĞÖĞ»ñµÃµÄË«±¶¾­ÑéÊ±¼äÒÑ¾­´ïµ½¿ÉÁìÈ¡µÄÉÏÏŞ")
+				AddText(sceneId,"  ä½ åœ¨ä¸‰å¤§åŸå¸‚å’Œè‡ªå»ºåŸå¸‚ä¸­è·å¾—çš„åŒå€ç»éªŒæ—¶é—´å·²ç»è¾¾åˆ°å¯é¢†å–çš„ä¸Šé™")
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,targetId)
 			return
 		end
 
-		-- ¿´ÉíÉÏÊÇ²»ÊÇÓĞ¶³½áÁËµÄÊ±¼ä
+		-- çœ‹èº«ä¸Šæ˜¯ä¸æ˜¯æœ‰å†»ç»“äº†çš„æ—¶é—´
 		if DEIsLock(sceneId,selfId)  > 0    then
 			BeginEvent(sceneId)
-				AddText(sceneId,"  Äã»¹ÓĞ¶³½áµÄË«±¶¾­ÑéÊ±¼ä£¬»¹ÊÇÏÈ½â¶³ÔÙÁìÈ¡ĞÂµÄË«±¶¾­ÑéÊ±¼ä°É¡£")
+				AddText(sceneId,"  ä½ è¿˜æœ‰å†»ç»“çš„åŒå€ç»éªŒæ—¶é—´ï¼Œè¿˜æ˜¯å…ˆè§£å†»å†é¢†å–æ–°çš„åŒå€ç»éªŒæ—¶é—´å§ã€‚")
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,targetId)
 			return
@@ -464,18 +464,18 @@ function x805028_AddDETime(sceneId, selfId, targetId, nPoint, nCurTime, nPreTime
 
 		BeginEvent(sceneId)
 			if (nTrueTime/60) > 0 then
-				AddText(sceneId,"  Äã±¾ÖÜË«±¶¾­ÑéÊ±¼äÊ£Óà#R" .. tostring(floor(nCount)) .. "Ğ¡Ê±#W£¬µ±Ç°ÒÑÓĞË«±¶¾­ÑéÊ±¼ä#Y" .. tostring(floor(nTrueTime/60)) .. "·ÖÖÓ#W£¬ÄãÈ·ÈÏÒªÁìÈ¡#Y" .. tostring(floor(nPoint*60)) .. "·ÖÖÓ#WË«±¶¾­ÑéÊ±¼ä²¢Í¬Ê±ÏûºÄ°ïÅÉ¹±Ï×¶È" .. tostring(floor(nPoint*25)) .. "Âğ£¿#r  Èç¹ûÄãµ£ÈÎÁËÒ»ÖÜÒÔÉÏµÄ°ïÖ÷£¬¿ÉÒÔ²»ÓÃÏûºÄ°ï¹±£¬¸±°ïÖ÷¿ÉÒÔ¼õ°ë¡£");
+				AddText(sceneId,"  ä½ æœ¬å‘¨åŒå€ç»éªŒæ—¶é—´å‰©ä½™#R" .. tostring(floor(nCount)) .. "å°æ—¶#Wï¼Œå½“å‰å·²æœ‰åŒå€ç»éªŒæ—¶é—´#Y" .. tostring(floor(nTrueTime/60)) .. "åˆ†é’Ÿ#Wï¼Œä½ ç¡®è®¤è¦é¢†å–#Y" .. tostring(floor(nPoint*60)) .. "åˆ†é’Ÿ#WåŒå€ç»éªŒæ—¶é—´å¹¶åŒæ—¶æ¶ˆè€—å¸®æ´¾è´¡çŒ®åº¦" .. tostring(floor(nPoint*25)) .. "å—ï¼Ÿ#r  å¦‚æœä½ æ‹…ä»»äº†ä¸€å‘¨ä»¥ä¸Šçš„å¸®ä¸»ï¼Œå¯ä»¥ä¸ç”¨æ¶ˆè€—å¸®è´¡ï¼Œå‰¯å¸®ä¸»å¯ä»¥å‡åŠã€‚");
 			else
-				AddText(sceneId,"  Äã±¾ÖÜË«±¶¾­ÑéÊ±¼äÊ£Óà#R" .. tostring(floor(nCount)) .. "Ğ¡Ê±#W£¬ÄãÈ·ÈÏÒªÁìÈ¡#Y" .. tostring(floor(nPoint*60)) .. "·ÖÖÓ#WË«±¶¾­ÑéÊ±¼ä²¢Í¬Ê±ÏûºÄ°ïÅÉ¹±Ï×¶È" .. tostring(floor(nPoint*25)) .. "Âğ£¿#r  Èç¹ûÄãµ£ÈÎÁËÒ»ÖÜÒÔÉÏµÄ°ïÖ÷£¬¿ÉÒÔ²»ÓÃÏûºÄ°ï¹±£¬¸±°ïÖ÷¿ÉÒÔ¼õ°ë¡£");
+				AddText(sceneId,"  ä½ æœ¬å‘¨åŒå€ç»éªŒæ—¶é—´å‰©ä½™#R" .. tostring(floor(nCount)) .. "å°æ—¶#Wï¼Œä½ ç¡®è®¤è¦é¢†å–#Y" .. tostring(floor(nPoint*60)) .. "åˆ†é’Ÿ#WåŒå€ç»éªŒæ—¶é—´å¹¶åŒæ—¶æ¶ˆè€—å¸®æ´¾è´¡çŒ®åº¦" .. tostring(floor(nPoint*25)) .. "å—ï¼Ÿ#r  å¦‚æœä½ æ‹…ä»»äº†ä¸€å‘¨ä»¥ä¸Šçš„å¸®ä¸»ï¼Œå¯ä»¥ä¸ç”¨æ¶ˆè€—å¸®è´¡ï¼Œå‰¯å¸®ä¸»å¯ä»¥å‡åŠã€‚");
 			end
-			-- Èç¹ûÕâ¸öÊ±ºòÍæ¼ÒÉíÉÏÓĞË«±¶¾­ÑéÒ©Ë®Ğ§¹û£¬ĞèÒª¸øÍæ¼ÒÌáÊ¾
+			-- å¦‚æœè¿™ä¸ªæ—¶å€™ç©å®¶èº«ä¸Šæœ‰åŒå€ç»éªŒè¯æ°´æ•ˆæœï¼Œéœ€è¦ç»™ç©å®¶æç¤º
 			if LuaFnHaveImpactOfSpecificDataIndex(sceneId, selfId, x805028_g_BuffPalyer_25) == 1   
 					or  LuaFnHaveImpactOfSpecificDataIndex(sceneId, selfId, x805028_g_BuffAll_15) == 1
 					then
-				AddText(sceneId,"  #r  #RÇë×¢Òâ:ÄúÉíÉÏÒÑ¾­´æÔÚÁË¶à±¶¾­ÑéÊ±¼ä£¬ÊÇ·ñÈ·ÈÏÁìÈ¡£¿");
+				AddText(sceneId,"  #r  #Rè¯·æ³¨æ„:æ‚¨èº«ä¸Šå·²ç»å­˜åœ¨äº†å¤šå€ç»éªŒæ—¶é—´ï¼Œæ˜¯å¦ç¡®è®¤é¢†å–ï¼Ÿ");
 			end
-			AddNumText(sceneId, x805028_g_scriptId, "ÊÇµÄ£¬ÎÒÒªÁìÈ¡¡£", -1,200+nPoint )
-			AddNumText(sceneId, x805028_g_scriptId, "²»ÁË£¬ÎÒµã´íÁË¡£", -1,300 )
+			AddNumText(sceneId, x805028_g_scriptId, "æ˜¯çš„ï¼Œæˆ‘è¦é¢†å–ã€‚", -1,200+nPoint )
+			AddNumText(sceneId, x805028_g_scriptId, "ä¸äº†ï¼Œæˆ‘ç‚¹é”™äº†ã€‚", -1,300 )
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 
@@ -483,7 +483,7 @@ end
 
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x805028_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 	if x805028_IsValidEvent( sceneId, selfId, missionScriptId ) == 1 then
@@ -491,9 +491,9 @@ function x805028_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 		if ret > 0 then
 			CallScriptFunction( missionScriptId, "OnAccept", sceneId, selfId, targetId )
 		elseif ret == -1 then
-			x805028_NotifyFailTips( sceneId, selfId, "ÄãÏÖÔÚ²»ÄÜÁìÈ¡Õâ¸öÈÎÎñ" )
+			x805028_NotifyFailTips( sceneId, selfId, "ä½ ç°åœ¨ä¸èƒ½é¢†å–è¿™ä¸ªä»»åŠ¡" )
 		elseif ret == -2 then
-			x805028_NotifyFailTips( sceneId, selfId, "ÎŞ·¨½ÓÊÜ¸ü¶àÈÎÎñ" )
+			x805028_NotifyFailTips( sceneId, selfId, "æ— æ³•æ¥å—æ›´å¤šä»»åŠ¡" )
 		end
 
 		return
@@ -501,7 +501,7 @@ function x805028_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x805028_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 	if x805028_IsValidEvent( sceneId, selfId, missionScriptId ) == 1 then
@@ -511,7 +511,7 @@ function x805028_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¼ÌĞø£¨ÒÑ¾­½ÓÁËÈÎÎñ£©
+--ç»§ç»­ï¼ˆå·²ç»æ¥äº†ä»»åŠ¡ï¼‰
 --**********************************
 function x805028_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 	if x805028_IsValidEvent( sceneId, selfId, missionScriptId ) == 1 then
@@ -521,7 +521,7 @@ function x805028_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---Ìá½»ÒÑ×öÍêµÄÈÎÎñ
+--æäº¤å·²åšå®Œçš„ä»»åŠ¡
 --**********************************
 function x805028_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, selectRadioId )
 	if x805028_IsValidEvent( sceneId, selfId, missionScriptId ) == 1 then
@@ -531,7 +531,7 @@ function x805028_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 end
 
 --**********************************
---ËÀÍöÊÂ¼ş
+--æ­»äº¡äº‹ä»¶
 --**********************************
 function x805028_OnDie( sceneId, selfId, killerId )
 end

@@ -1,36 +1,36 @@
--- »ğÕÛ×Ó£¬ĞèÒªÊ¹ÓÃµÄÈÎÎñµÀ¾ß
--- ÁÉÎ÷£­²®ÑÕ£¨165£¬197£© Çı¸ÏºÚ·ä
+-- ç«æŠ˜å­ï¼Œéœ€è¦ä½¿ç”¨çš„ä»»åŠ¡é“å…·
+-- è¾½è¥¿ï¼ä¼¯é¢œï¼ˆ165ï¼Œ197ï¼‰ é©±èµ¶é»‘èœ‚
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x300025_g_scriptId = 300025
 
 x300025_g_MissionId = 552
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x300025_g_eventList={212107}
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x300025_OnDefaultEvent( sceneId, selfId, BagIndex )
 	BeginEvent(sceneId)
-		AddText(sceneId, "Çı¸ÏºÚ·ä")
-		-- ¼ì²âÍæ¼ÒÊÇ²»ÊÇµÃµ½ÁËĞèÒªµÄÁ½¸öµÀ¾ß£¬
+		AddText(sceneId, "é©±èµ¶é»‘èœ‚")
+		-- æ£€æµ‹ç©å®¶æ˜¯ä¸æ˜¯å¾—åˆ°äº†éœ€è¦çš„ä¸¤ä¸ªé“å…·ï¼Œ
 		if GetItemCount( sceneId, selfId, 40002070 ) >= 1   then
 			if GetItemCount( sceneId, selfId, 40002069 ) >= 1   then
-				AddText(sceneId, "ÄãÇı¸ÏÁËºÚ·ä£¬³É¹¦ÁË")
+				AddText(sceneId, "ä½ é©±èµ¶äº†é»‘èœ‚ï¼ŒæˆåŠŸäº†")
 				local misIndex = GetMissionIndexByID(sceneId,selfId,x300025_g_MissionId)
 				SetMissionByIndex(sceneId,selfId,misIndex,0,1)
 				SetMissionByIndex(sceneId,selfId,misIndex,1,1)
-				-- É¾³ıÈÎÎñµÀ¾ß
+				-- åˆ é™¤ä»»åŠ¡é“å…·
 				DelItem( sceneId, selfId, 40002070, 1 )
 				DelItem( sceneId, selfId, 40002069, 1 )
 				
-				-- ²¥·ÅÒ»¸öĞ§¹û
+				-- æ’­æ”¾ä¸€ä¸ªæ•ˆæœ
 				LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, 139, 0)
 				
 			else
-				AddText(sceneId, "ÄãĞèÒª¸ÉÀÇ·à")
+				AddText(sceneId, "ä½ éœ€è¦å¹²ç‹¼ç²ª")
 			end
 		end
 	EndEvent(sceneId)
@@ -38,24 +38,24 @@ function x300025_OnDefaultEvent( sceneId, selfId, BagIndex )
 end
 
 --**********************************
---Ë¢ĞÂÊÂ¼ş
+--åˆ·æ–°äº‹ä»¶
 --**********************************
 function x300025_OnEventRequest( sceneId, selfId, targetId, eventId )
 	--PrintStr("x300025_OnEventRequest")
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x300025_OnMissionAccept( sceneId, selfId, targetId )
 
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x300025_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
-	--¾Ü¾øÖ®ºó£¬Òª·µ»ØNPCµÄÊÂ¼şÁĞ±í
+	--æ‹’ç»ä¹‹åï¼Œè¦è¿”å›NPCçš„äº‹ä»¶åˆ—è¡¨
 	--for i, findId in x300025_g_eventList do
 	--	if missionScriptId == findId then
 	--		UpdateEventList( sceneId, selfId, targetId )

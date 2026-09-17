@@ -1,15 +1,15 @@
 --MisDescBegin
 x401020_g_ScriptId = 401020
-x401020_g_CopySceneName="Ë®ÀÎ"
+x401020_g_CopySceneName="æ°´ç‰¢"
 x401020_g_MissionId = 1055
-x401020_g_Name = "Ë®ÀÎ"
+x401020_g_Name = "æ°´ç‰¢"
 x401020_g_IfMissionElite = 1
 x401020_g_MissionKind = 1
 x401020_g_MissionRound = 7
-x401020_g_MissionName="Ë®ÀÎ"
-x401020_g_MissionInfo="É±ËÀÈ«²¿¹ÖÎï£¬Ò»¸ö²»Áô£¡"  --ÈÎÎñÃèÊö
-x401020_g_MissionTarget="É±ËÀÈ«²¿¹ÖÎï"	--ÈÎÎñÄ¿±ê
-x401020_g_ContinueInfo="ÄãÒª¼ÌÐøÅ¬Á¦°¡£¡"	--Î´Íê³ÉÈÎÎñµÄnpc¶Ô»°
-x401020_g_MissionComplete="Ð»Ð»°¡£¬°³ÃÇÖÕÓÚ¸Ò³öÃÅÁË"	--Íê³ÉÈÎÎñnpcËµ»°µÄ»°
+x401020_g_MissionName="æ°´ç‰¢"
+x401020_g_MissionInfo="æ€æ­»å…¨éƒ¨æ€ªç‰©ï¼Œä¸€ä¸ªä¸ç•™ï¼"  --ä»»åŠ¡æè¿°
+x401020_g_MissionTarget="æ€æ­»å…¨éƒ¨æ€ªç‰©"	--ä»»åŠ¡ç›®æ ‡
+x401020_g_ContinueInfo="ä½ è¦ç»§ç»­åŠªåŠ›å•Šï¼"	--æœªå®Œæˆä»»åŠ¡çš„npcå¯¹è¯
+x401020_g_MissionComplete="è°¢è°¢å•Šï¼Œä¿ºä»¬ç»ˆäºŽæ•¢å‡ºé—¨äº†"	--å®Œæˆä»»åŠ¡npcè¯´è¯çš„è¯
 x401020_g_MoneyBonus=9999
 --MisDescEnd

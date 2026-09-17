@@ -11,20 +11,20 @@ local nPageNum = 1;
 local maxPage = 1;
 local objCared = -1;
 
-local CU_MONEY			= 1	-- Ç®
-local CU_GOODBAD		= 2	-- ÉÆ¶ñÖµ
-local CU_MORALPOINT	= 3	-- Ê¦µÂµã
-local CU_TICKET			= 4 -- ¹ÙÆ±Ç®
-local CU_YUANBAO		= 5	-- Ôª±¦
-local CU_ZENGDIAN		= 6 -- Ôùµã
-local CU_MENPAI_POINT		= 7 -- ÃÅÅÉ¹±Ï×¶È
-local CU_MONEYJZ		= 8 -- ½»×Ó
+local CU_MONEY			= 1	-- é’±
+local CU_GOODBAD		= 2	-- å–„æ¶å€¼
+local CU_MORALPOINT	= 3	-- å¸ˆå¾·ç‚¹
+local CU_TICKET			= 4 -- å®˜ç¥¨é’±
+local CU_YUANBAO		= 5	-- å…ƒå®
+local CU_ZENGDIAN		= 6 -- èµ ç‚¹
+local CU_MENPAI_POINT		= 7 -- é—¨æ´¾è´¡çŒ®åº¦
+local CU_MONEYJZ		= 8 -- äº¤å­
 
 local MAX_OBJ_DISTANCE = 3.0;
 
---´æ´¢Ëæ»úÅÅĞòµÄË÷ÒıÖµ
+--å­˜å‚¨éšæœºæ’åºçš„ç´¢å¼•å€¼
 local	g_tOrderPool	= {};
---µ±Ç°ÉÌµêµÄÉÌÆ·ÊıÁ¿
+--å½“å‰å•†åº—çš„å•†å“æ•°é‡
 local	g_nTotalNum		= 0;
 
 --===============================================
@@ -116,10 +116,10 @@ end
 function Shop_OnEvent(event)
 	if ( event == "PLAYER_ENTERING_WORLD" ) then
 		Booth_Close();
-		-- ÏÔÊ¾¾­Ñé
+		-- æ˜¾ç¤ºç»éªŒ
 	end
 
-	local nMult = NpcShop:GetShopType("buymult");		--modi:lby20071107 Ôö¼ÓÊÇ·ñÄÜÅúÁ¿¹ºÂò
+	local nMult = NpcShop:GetShopType("buymult");		--modi:lby20071107 å¢åŠ æ˜¯å¦èƒ½æ‰¹é‡è´­ä¹°
 	
 	if nMult <= 0 then
 		Shop_Wholesale:Disable();
@@ -128,9 +128,9 @@ function Shop_OnEvent(event)
 	end 
 	
 	if ( event == "OPEN_BOOTH" ) then
-		--Ê¹ÓÃÊ²Ã´×÷Îª»õ±Ò
+		--ä½¿ç”¨ä»€ä¹ˆä½œä¸ºè´§å¸
 		local nUnit = NpcShop:GetShopType("unit");
-		if(CU_YUANBAO == nUnit) then	--Ôª±¦
+		if(CU_YUANBAO == nUnit) then	--å…ƒå®
 			Shop_querengoumai_Text:Show();
 			Shop_querengoumai:Show();
 			local check  = tonumber(NpcShop:GetBuyDirectly());
@@ -151,7 +151,7 @@ function Shop_OnEvent(event)
 		this:Show();
 		Shop_Text:SetText("#gFF0FA0"..Target:GetShopNpcName());
 
-		--¹ØĞÄÉÌÈËObj
+		--å…³å¿ƒå•†äººObj
 		objCared = NpcShop:GetNpcId();
 		if( 0 > objCared ) then
 			Shop_Text:SetText("");
@@ -175,9 +175,9 @@ function Shop_OnEvent(event)
 			return;
 		end
 		
-		--Èç¹ûºÍÉÌÈËµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ı£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æœå’Œå•†äººçš„è·ç¦»å¤§äºä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if(arg1 == "distance" and tonumber(arg2)>MAX_OBJ_DISTANCE or arg1=="destroy") then
-			--È¡Ïû¹ØĞÄ
+			--å–æ¶ˆå…³å¿ƒ
 			SetDefaultMouse();
 			--RestoreShopFitting();
 			--CloseShopFitting();
@@ -187,7 +187,7 @@ function Shop_OnEvent(event)
 		end
 		
 	elseif (event == "CLOSE_BOOTH") then
-		--È¡Ïû¹ØĞÄ
+		--å–æ¶ˆå…³å¿ƒ
 		RestoreShopFitting();
 		this:CareObject(objCared, 0, "Shop");
 		NpcShop:CloseConfirm();
@@ -206,7 +206,7 @@ end
 function Shop_OnBtnClicked_OpenFitting()
 	
 	if IsIdleLogic() ~= 1 then
-		SetNotifyTip("²»ÄÜ½øĞĞ´Ë²Ù×÷¡£");
+		SetNotifyTip("ä¸èƒ½è¿›è¡Œæ­¤æ“ä½œã€‚");
 		return 0;
 	end
 	
@@ -218,7 +218,7 @@ function Shop_OnBtnClicked_OpenFitting()
 	--CloseShopFitting();
 	this:Show();	
 	MouseCmd_ShopFittingSet();
-	SetNotifyTip("Çëµã»÷ÄúÒªÊÔ´©µÄÊ±×°»òÊÔÆïµÄ×øÆï¡£");
+	SetNotifyTip("è¯·ç‚¹å‡»æ‚¨è¦è¯•ç©¿çš„æ—¶è£…æˆ–è¯•éª‘çš„åéª‘ã€‚");
 end
 
 --===============================================
@@ -229,7 +229,7 @@ function Shop_UpdatePage(thePage)
 	
 	Shop_Repair:Show();
 
-	--ÊÕ¹º
+	--æ”¶è´­
 	local nBuyType = NpcShop:GetShopType("buy");
 	if( nBuyType <= 0 )  then 
 		Shop_Callback1:Hide(); 
@@ -239,7 +239,7 @@ function Shop_UpdatePage(thePage)
 		Shop_Callback1_Frame:Show();
 	end
 
-	--ĞŞÀí
+	--ä¿®ç†
 	local nRepairType = NpcShop:GetShopType("repair");
 	if( nRepairType <= 0 )  then 
 		Shop_AllRepair:Hide();
@@ -249,7 +249,7 @@ function Shop_UpdatePage(thePage)
 		Shop_Repair:Show();
 	end
 	
-	--»Ø¹º
+	--å›è´­
 	local nCallbackType = NpcShop:GetShopType("callback");
 	if( nCallbackType <= 0 ) then
 		for i=1, 5 do
@@ -260,7 +260,7 @@ function Shop_UpdatePage(thePage)
 			CALLBACK_BUTTON_FRAME[i]:Show();
 		end
 		
-		-- ÏÔÊ¾»Ø¹ºÎïÆ·
+		-- æ˜¾ç¤ºå›è´­ç‰©å“
 		nActIndex = 0;
 		local nCallNum = NpcShop:GetCallBackNum();
 		i=1;
@@ -278,34 +278,34 @@ function Shop_UpdatePage(thePage)
 		end
 	end
 	
-	--Ê¹ÓÃÊ²Ã´×÷Îª»õ±Ò
+	--ä½¿ç”¨ä»€ä¹ˆä½œä¸ºè´§å¸
 	local nUnit = NpcShop:GetShopType("unit");
-	if(CU_MONEY	== nUnit or CU_TICKET == nUnit or CU_MONEYJZ == nUnit)       then      --Ç®£¬¹ÙÆ±Ç®, ½»×Ó
+	if(CU_MONEY	== nUnit or CU_TICKET == nUnit or CU_MONEYJZ == nUnit)       then      --é’±ï¼Œå®˜ç¥¨é’±, äº¤å­
 		for i=1, GOODS_BUTTONS_NUM  do
 			GOOD_BAD[i]:Hide()
 			GOODS_PRICE[i]:Show();
 		end
-	elseif(CU_GOODBAD == nUnit) then			--ÉÆ¶ñÖµ
+	elseif(CU_GOODBAD == nUnit) then			--å–„æ¶å€¼
 		for i=1, GOODS_BUTTONS_NUM  do
 			GOOD_BAD[i]:Show()
 			GOODS_PRICE[i]:Hide();
 		end
-	elseif(CU_MORALPOINT == nUnit)  then	--Ê¦µÂµã
+	elseif(CU_MORALPOINT == nUnit)  then	--å¸ˆå¾·ç‚¹
 		for i=1, GOODS_BUTTONS_NUM  do
 			GOOD_BAD[i]:Show()
 			GOODS_PRICE[i]:Hide();
 		end
-	elseif(CU_YUANBAO == nUnit) then	--Ôª±¦
+	elseif(CU_YUANBAO == nUnit) then	--å…ƒå®
 		for i=1, GOODS_BUTTONS_NUM  do
 			GOOD_BAD[i]:Show()
 			GOODS_PRICE[i]:Hide();
 		end
-	elseif(CU_ZENGDIAN == nUnit) then	--Ôùµã
+	elseif(CU_ZENGDIAN == nUnit) then	--èµ ç‚¹
 		for i=1, GOODS_BUTTONS_NUM  do
 			GOOD_BAD[i]:Show()
 			GOODS_PRICE[i]:Hide();
 		end
-	elseif(CU_MENPAI_POINT == nUnit) then	--ÃÅÅÉ¹±Ï×¶È
+	elseif(CU_MENPAI_POINT == nUnit) then	--é—¨æ´¾è´¡çŒ®åº¦
 		for i=1, GOODS_BUTTONS_NUM  do
 			GOOD_BAD[i]:Show()
 			GOODS_PRICE[i]:Hide();
@@ -318,7 +318,7 @@ function Shop_UpdatePage(thePage)
 		Booth_Order();
 	end
 		
-	-- ¼ÆËã×ÜÒ³Êı
+	-- è®¡ç®—æ€»é¡µæ•°
 	local	nTotalPage;
 	if( g_nTotalNum < 1 ) then
 		nTotalPage	= 1;
@@ -331,8 +331,8 @@ function Shop_UpdatePage(thePage)
 	if(thePage < 1 or thePage > nTotalPage) then 
 		return;	
 	end
-	--HEQUIP_DRESS		=16,	//Ê±×°                   
-	--HEQUIP_RIDER		=8,		//Æï³Ë	                          »¤·û
+	--HEQUIP_DRESS		=16,	//æ—¶è£…                   
+	--HEQUIP_RIDER		=8,		//éª‘ä¹˜	                          æŠ¤ç¬¦
 	local bHaveRide=0;
 	
 	nPageNum = thePage;
@@ -366,21 +366,21 @@ function Shop_UpdatePage(thePage)
 			end
 			local	nPrice	= NpcShop:EnumItemPrice( idx )
 			if( nUnit == CU_GOODBAD ) then
-				GOOD_BAD[i]:SetText("ÉÆ¶ñÖµ:" .. tostring(nPrice) .. " µã")
+				GOOD_BAD[i]:SetText("å–„æ¶å€¼:" .. tostring(nPrice) .. " ç‚¹")
 			elseif( nUnit == CU_MORALPOINT ) then
-				GOOD_BAD[i]:SetText("Ê¦µÂµã:" .. tostring(nPrice) .. " µã")
+				GOOD_BAD[i]:SetText("å¸ˆå¾·ç‚¹:" .. tostring(nPrice) .. " ç‚¹")
 			elseif( nUnit == CU_YUANBAO ) then
-				GOOD_BAD[i]:SetText("Ôª±¦:" .. tostring(nPrice))
+				GOOD_BAD[i]:SetText("å…ƒå®:" .. tostring(nPrice))
 			elseif( nUnit == CU_ZENGDIAN ) then
-				GOOD_BAD[i]:SetText("Ôùµã:" .. tostring(nPrice))
+				GOOD_BAD[i]:SetText("èµ ç‚¹:" .. tostring(nPrice))
 			elseif( nUnit == CU_MENPAI_POINT ) then
-				GOOD_BAD[i]:SetText("ÃÅÅÉ¹±Ï×¶È:" .. tostring(nPrice))
+				GOOD_BAD[i]:SetText("é—¨æ´¾è´¡çŒ®åº¦:" .. tostring(nPrice))
 			elseif( nUnit == CU_MONEYJZ ) then
 				GOODS_PRICE[i]:SetProperty("GoldIcon", "set:Button6 image:Lace_JiaoziJin")
 				GOODS_PRICE[i]:SetProperty("SilverIcon", "set:Button6 image:Lace_JiaoziYin")
 				GOODS_PRICE[i]:SetProperty("CopperIcon", "set:Button6 image:Lace_JiaoziTong")
 			  GOODS_PRICE[i]:SetProperty("MoneyNumber", tostring(nPrice))
-			else	--Ç®£¬¹ÙÆ±Ç®
+			else	--é’±ï¼Œå®˜ç¥¨é’±
 				GOODS_PRICE[i]:SetProperty("GoldIcon", "set:Button2 image:Icon_GoldCoin")
 				GOODS_PRICE[i]:SetProperty("SilverIcon", "set:Button2 image:Icon_SilverCoin")
 				GOODS_PRICE[i]:SetProperty("CopperIcon", "set:Button2 image:Icon_CopperCoin")
@@ -392,7 +392,7 @@ function Shop_UpdatePage(thePage)
 			GOODS_DESCS[i]:SetText("");
 			GOODS_PRICE[i]:SetText("");
 
-			if(CU_MONEY	== nUnit or CU_TICKET == nUnit or CU_MONEYJZ == nUnit) then	--Ç®£¬¹ÙÆ±Ç®, ½»×Ó
+			if(CU_MONEY	== nUnit or CU_TICKET == nUnit or CU_MONEYJZ == nUnit) then	--é’±ï¼Œå®˜ç¥¨é’±, äº¤å­
 				GOODS_PRICE[i]:Hide();
 			else
 				GOOD_BAD[i]:SetText("");
@@ -485,7 +485,7 @@ function Booth_Close()
 	SetDefaultMouse();
 	
 	CloseBooth();	
-	--È¡Ïû¹ØĞÄ
+	--å–æ¶ˆå…³å¿ƒ
 	this:CareObject(objCared, 0, "Shop");
 	NpcShop:CloseConfirm();
 --	RestoreShopFitting();
@@ -542,7 +542,7 @@ function Booth_RepairAll_MouseEnter()
 	
 	szMoney = szMoney .. tostring(nCopper) .. "#-16" --zchw
 	
-	Shop_AllRepair:SetToolTip("È«²¿ĞŞÀí#r·ÑÓÃ£º" .. szMoney);
+	Shop_AllRepair:SetToolTip("å…¨éƒ¨ä¿®ç†#rè´¹ç”¨ï¼š" .. szMoney);
 
 end
 
@@ -562,7 +562,7 @@ function Booth_BuyMult()
 	PrepearBuyMult();
 end
 
---Ëæ»úÅÅĞò
+--éšæœºæ’åº
 function Booth_Order()
 	local	max		= g_nTotalNum;
 	local oldt	= {};

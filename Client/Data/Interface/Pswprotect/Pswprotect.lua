@@ -35,10 +35,10 @@ function MiBao_Update()
 	local key3 = GameProduceLogin:GetMiBaoKey(2);
 	OpenWindow( "SoftKeyBoard" );
 	--AxTrace( 0,0, "MiBao_Update"..key1..key2..key3);
-	--µÚ3ÐÐ£¬µÚ4ÁÐµÄÊý×ÖÊÇ
-	Pswprotect_Text1:SetText("µÚ"..string.upper(string.sub(key1,1,1)).."ÐÐ£¬µÚ"..string.sub(key1,-1).."ÁÐµÄÊý×ÖÊÇ");
-	Pswprotect_Text2:SetText("µÚ"..string.upper(string.sub(key2,1,1)).."ÐÐ£¬µÚ"..string.sub(key2,-1).."ÁÐµÄÊý×ÖÊÇ");
-	Pswprotect_Text3:SetText("µÚ"..string.upper(string.sub(key3,1,1)).."ÐÐ£¬µÚ"..string.sub(key3,-1).."ÁÐµÄÊý×ÖÊÇ");
+	--ç¬¬3è¡Œï¼Œç¬¬4åˆ—çš„æ•°å­—æ˜¯
+	Pswprotect_Text1:SetText("ç¬¬"..string.upper(string.sub(key1,1,1)).."è¡Œï¼Œç¬¬"..string.sub(key1,-1).."åˆ—çš„æ•°å­—æ˜¯");
+	Pswprotect_Text2:SetText("ç¬¬"..string.upper(string.sub(key2,1,1)).."è¡Œï¼Œç¬¬"..string.sub(key2,-1).."åˆ—çš„æ•°å­—æ˜¯");
+	Pswprotect_Text3:SetText("ç¬¬"..string.upper(string.sub(key3,1,1)).."è¡Œï¼Œç¬¬"..string.sub(key3,-1).."åˆ—çš„æ•°å­—æ˜¯");
 	
 	Pswprotect_Input1:SetProperty("DefaultEditBox", "True");
 end

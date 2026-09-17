@@ -1,11 +1,11 @@
---高昌NPC
---张赛
---任务
+--楂樻槍NPC
+--寮犺禌
+--浠诲姟
 
 x043504_g_ScriptId	= 043504
 
 --**********************************
---事件交互入口
+--浜嬩欢浜や簰鍏ュ彛
 --**********************************
 function x043504_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent( sceneId )

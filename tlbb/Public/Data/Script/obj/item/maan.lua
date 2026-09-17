@@ -1,22 +1,22 @@
 --300044
--- V:\²ß»®ÎÄµµ²ß»®ÎÄµµÄ¿Â¼½á¹¹\2 Éè¼ÆÎÄµµ\2.1 ÓÎÏ·µ¥Î»Éè¼ÆÌØ±ğÎïÆ·ÈËÃñ±ÒÎïÆ·¡ª¡ªÂí°°.docx
+-- V:\ç­–åˆ’æ–‡æ¡£ç­–åˆ’æ–‡æ¡£ç›®å½•ç»“æ„\2 è®¾è®¡æ–‡æ¡£\2.1 æ¸¸æˆå•ä½è®¾è®¡ç‰¹åˆ«ç‰©å“äººæ°‘å¸ç‰©å“â€”â€”é©¬é.docx
 -- 
 -- 
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x300044_g_scriptId = 300044
 x300044_g_ItemId = 30008006
 x300044_g_ItemId01 = 30505215
 x300044_g_BuffId = 56
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x300044_OnDefaultEvent( sceneId, selfId, nBagIndex )
-	--1£¬¼ì²âÍæ¼ÒÉíÉÏÊÇ²»ÊÇÓĞBUFF
+	--1ï¼Œæ£€æµ‹ç©å®¶èº«ä¸Šæ˜¯ä¸æ˜¯æœ‰BUFF
 	if LuaFnHaveImpactOfSpecificDataIndex(sceneId, selfId, x300044_g_BuffId) == 1   then
 		BeginEvent(sceneId)
-			AddText(sceneId,"Ö»ÓĞµÈ¼ÓËÙĞ§¹ûÏûÊ§Ö®ºó²ÅÄÜÊ¹ÓÃ¡£")
+			AddText(sceneId,"åªæœ‰ç­‰åŠ é€Ÿæ•ˆæœæ¶ˆå¤±ä¹‹åæ‰èƒ½ä½¿ç”¨ã€‚")
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return 
@@ -25,11 +25,11 @@ function x300044_OnDefaultEvent( sceneId, selfId, nBagIndex )
 	
 	local nCurCount = GetBagItemParam(sceneId, selfId, nBagIndex, 4, 2)
 	SetBagItemParam(sceneId, selfId, nBagIndex, 8, 2, 5)
-	-- °²È«¼ì²â
+	-- å®‰å…¨æ£€æµ‹
 	if LuaFnGetItemTableIndexByIndex(sceneId, selfId, nBagIndex) ~= x300044_g_ItemId
 		 and LuaFnGetItemTableIndexByIndex(sceneId, selfId, nBagIndex) ~= x300044_g_ItemId01 then
 		BeginEvent(sceneId)
-			AddText(sceneId,"ÎïÆ·²»ÄÜÊ¹ÓÃ")
+			AddText(sceneId,"ç‰©å“ä¸èƒ½ä½¿ç”¨")
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		return
@@ -37,7 +37,7 @@ function x300044_OnDefaultEvent( sceneId, selfId, nBagIndex )
 	
 	local ret = 1
 	if nCurCount >= 4  then
-		-- ÅĞ¶ÏÏÂÕâ¸öÎïÆ·µÄIDÊÇ²»ÊÇÕıÈ·ÏÈ
+		-- åˆ¤æ–­ä¸‹è¿™ä¸ªç‰©å“çš„IDæ˜¯ä¸æ˜¯æ­£ç¡®å…ˆ
 		ret = EraseItem(sceneId, selfId, nBagIndex)
 	else
 		SetBagItemParam(sceneId, selfId, nBagIndex, 4, 2, nCurCount+1)
@@ -46,13 +46,13 @@ function x300044_OnDefaultEvent( sceneId, selfId, nBagIndex )
 	if ret == 1   then
 		LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, x300044_g_BuffId, 100 )
 		BeginEvent(sceneId)
-			AddText(sceneId,"Äã»ñµÃÁËÂí°°µÄ¼ÓËÙĞ§¹û¡£")
+			AddText(sceneId,"ä½ è·å¾—äº†é©¬éçš„åŠ é€Ÿæ•ˆæœã€‚")
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		
 	else
 		BeginEvent(sceneId)
-			AddText(sceneId,"ÎïÆ·²»ÄÜÊ¹ÓÃ¡£")
+			AddText(sceneId,"ç‰©å“ä¸èƒ½ä½¿ç”¨ã€‚")
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		

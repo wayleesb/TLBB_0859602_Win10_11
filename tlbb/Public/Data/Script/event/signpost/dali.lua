@@ -1,36 +1,36 @@
--- ´óÀíÎÊÂ·½Å±¾
+-- å¤§ç†é—®è·¯è„šæœ¬
 x500040_g_scriptId = 500040
 
--- ÎÊÂ·ÀàĞÍ type: 1 Îª¶ş¼¶²Ëµ¥, 2 ÎªÖ±½ÓÎÊÂ·
+-- é—®è·¯ç±»å‹ type: 1 ä¸ºäºŒçº§èœå•, 2 ä¸ºç›´æ¥é—®è·¯
 x500040_g_Signpost = {
-		{ type=1, name="ÈçºÎ¼ÓÈëÃÅÅÉ", eventId=500049, x=0, y=0, tip=" ", desc=" " },		--×¢Òâ£¬ÕâÒ»Ìõ²»ÊÇµ÷ÓÃÁíÒ»¸ö½Å±¾µÄ·½Ê½£¬¶øÊÇÔÚ±¾ÎÄ¼şÄÚÖ±½ÓÅĞ¶Ï¡£²»½¨ÒéÊ¹ÓÃ´ËÖÖ·½Ê½
-		{ type=1, name="¾Å´óÃÅÅÉ´«ËÍÈË", eventId=500041, x=0, y=0, tip=" ", desc=" " },
-		{ type=1, name="¹ºÂò¸÷ÖÖÎïÆ·", eventId=500042, x=0, y=0, tip=" ", desc=" " },
-		{ type=1, name="æäÕ¾", eventId=500043, x=0, y=0, tip=" ", desc=" " },
-		{ type=1, name="Ç®×¯¡¢µ±ÆÌ", eventId=500044, x=0, y=0, tip=" ", desc=" " },
-		{ type=1, name="ÎÒÏë³ö³ÇÃÅÈ¥Á·Ï°±¾Áì", eventId=500045, x=0, y=0, tip=" ", desc=" " },
-		{ type=1, name="Ñ§Ï°Ò»Ğ©Éú»î¼¼ÄÜ", eventId=500046, x=0, y=0, tip=" ", desc=" " },
-		{ type=1, name="ÈÎÎñÓë¸±±¾", eventId=500047, x=0, y=0, tip=" ", desc=" " },
-		{ type=1, name="ÀŞÌ¨", eventId=500048, x=0, y=0, tip=" ", desc=" " },
-		{ type=1, name="°İÊ¦", eventId=500049, x=0, y=0, tip=" ", desc=" " },
+		{ type=1, name="å¦‚ä½•åŠ å…¥é—¨æ´¾", eventId=500049, x=0, y=0, tip=" ", desc=" " },		--æ³¨æ„ï¼Œè¿™ä¸€æ¡ä¸æ˜¯è°ƒç”¨å¦ä¸€ä¸ªè„šæœ¬çš„æ–¹å¼ï¼Œè€Œæ˜¯åœ¨æœ¬æ–‡ä»¶å†…ç›´æ¥åˆ¤æ–­ã€‚ä¸å»ºè®®ä½¿ç”¨æ­¤ç§æ–¹å¼
+		{ type=1, name="ä¹å¤§é—¨æ´¾ä¼ é€äºº", eventId=500041, x=0, y=0, tip=" ", desc=" " },
+		{ type=1, name="è´­ä¹°å„ç§ç‰©å“", eventId=500042, x=0, y=0, tip=" ", desc=" " },
+		{ type=1, name="é©¿ç«™", eventId=500043, x=0, y=0, tip=" ", desc=" " },
+		{ type=1, name="é’±åº„ã€å½“é“º", eventId=500044, x=0, y=0, tip=" ", desc=" " },
+		{ type=1, name="æˆ‘æƒ³å‡ºåŸé—¨å»ç»ƒä¹ æœ¬é¢†", eventId=500045, x=0, y=0, tip=" ", desc=" " },
+		{ type=1, name="å­¦ä¹ ä¸€äº›ç”Ÿæ´»æŠ€èƒ½", eventId=500046, x=0, y=0, tip=" ", desc=" " },
+		{ type=1, name="ä»»åŠ¡ä¸å‰¯æœ¬", eventId=500047, x=0, y=0, tip=" ", desc=" " },
+		{ type=1, name="æ“‚å°", eventId=500048, x=0, y=0, tip=" ", desc=" " },
+		{ type=1, name="æ‹œå¸ˆ", eventId=500049, x=0, y=0, tip=" ", desc=" " },
 }
 
---{ type=2, name="¶«Éı¿ÍÕ»", x=100.7, y=124.2, tip="´óÀí¶«Éı¿ÍÕ»", desc="´óÀí×î´óµÄ¿ÍÕ»Ö®Ò»£¬Èı½Ì¾ÅÁ÷¾Û¼¯Ö®µØ¡£" },
---{ type=2, name="±ÏÉı", x=180.0, y=120.0, tip="±ÏÉı¡£È¢ÆŞ°İÊ¦ĞİÆŞÅÑÊ¦µÄºÃÈ¥´¦£¡", desc="±ÏÉı¡«£¬ÊµÏÖÄã±ÏÉúµÄÃÎÏë¡«¡«¡«" },
+--{ type=2, name="ä¸œå‡å®¢æ ˆ", x=100.7, y=124.2, tip="å¤§ç†ä¸œå‡å®¢æ ˆ", desc="å¤§ç†æœ€å¤§çš„å®¢æ ˆä¹‹ä¸€ï¼Œä¸‰æ•™ä¹æµèšé›†ä¹‹åœ°ã€‚" },
+--{ type=2, name="æ¯•å‡", x=180.0, y=120.0, tip="æ¯•å‡ã€‚å¨¶å¦»æ‹œå¸ˆä¼‘å¦»å›å¸ˆçš„å¥½å»å¤„ï¼", desc="æ¯•å‡ï½ï¼Œå®ç°ä½ æ¯•ç”Ÿçš„æ¢¦æƒ³ï½ï½ï½" },
 
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x500040_OnEnumerate( sceneId, selfId, targetId )
---	AddNumText(sceneId, x500040_g_scriptId, "ÕËºÅ°²È«", -1, 1009)   --ÕÊºÅ  to  ÕËºÅ
+--	AddNumText(sceneId, x500040_g_scriptId, "è´¦å·å®‰å…¨", -1, 1009)   --å¸å·  to  è´¦å·
 	for i, signpost in x500040_g_Signpost do
 		AddNumText(sceneId, x500040_g_scriptId, signpost.name, -1, i)
 	end
 end
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x500040_OnDefaultEvent( sceneId, selfId, targetId )
 
@@ -42,17 +42,17 @@ function x500040_OnDefaultEvent( sceneId, selfId, targetId )
 	
 	if GetNumText()==1 then
 		BeginEvent(sceneId)
-			AddText(sceneId, signpost.name .. "£º")
-			AddText(sceneId, "Çëµ½¸÷³ÇÊĞµÄæäÕ¾´¦£¨°´Tab¿ÉÒÔ´ò¿ªµØÍ¼²é¿´#Gæä#W×ÖÑù£©´«ËÍµ½ÄúÏë°İÊ¦µÄÃÅÅÉ¡£µ½ÁËÃÅÅÉÖ®ºóµã»÷#GÃÅÅÉÖ¸Â·ÈË#W¾Í¿ÉÒÔÑ¯ÎÊ°İÊ¦µÄÎ»ÖÃÁË¡£»òÕß°´tab¼ü´ò¿ªµØÍ¼ÕÒ#GÊ¦#W×ÖÑù¡£")
+			AddText(sceneId, signpost.name .. "ï¼š")
+			AddText(sceneId, "è¯·åˆ°å„åŸå¸‚çš„é©¿ç«™å¤„ï¼ˆæŒ‰Tabå¯ä»¥æ‰“å¼€åœ°å›¾æŸ¥çœ‹#Gé©¿#Wå­—æ ·ï¼‰ä¼ é€åˆ°æ‚¨æƒ³æ‹œå¸ˆçš„é—¨æ´¾ã€‚åˆ°äº†é—¨æ´¾ä¹‹åç‚¹å‡»#Gé—¨æ´¾æŒ‡è·¯äºº#Wå°±å¯ä»¥è¯¢é—®æ‹œå¸ˆçš„ä½ç½®äº†ã€‚æˆ–è€…æŒ‰tabé”®æ‰“å¼€åœ°å›¾æ‰¾#Gå¸ˆ#Wå­—æ ·ã€‚")
 		EndEvent(sceneId)
 		DispatchEventList(sceneId, selfId, targetId)
-		CallScriptFunction( SCENE_SCRIPT_ID, "AskTheWay", sceneId, selfId, sceneId, 241, 136, "´Ş·ê¾Å" )
+		CallScriptFunction( SCENE_SCRIPT_ID, "AskTheWay", sceneId, selfId, sceneId, 241, 136, "å´”é€¢ä¹" )
 		return
 	end
 	
 	if signpost.type == 1 then
 		BeginEvent(sceneId)
-			AddText(sceneId, signpost.name .. "£º")
+			AddText(sceneId, signpost.name .. "ï¼š")
 			CallScriptFunction( signpost.eventId, "OnEnumerate", sceneId, selfId, targetId )
 		EndEvent(sceneId)
 		DispatchEventList(sceneId, selfId, targetId)

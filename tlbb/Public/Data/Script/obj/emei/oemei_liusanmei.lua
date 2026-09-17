@@ -1,28 +1,28 @@
---¶ëáÒNPC
---ÁøÈıÃÃ
---ÆÕÍ¨
+--å³¨åµ‹NPC
+--æŸ³ä¸‰å¦¹
+--æ™®é€š
 
 x015035_g_scriptId = 015035
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x015035_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
-		AddText(sceneId,"¶ëáÒÉ½×Ô¹Å¶¼ÒÔÔ³â®ÎªÃû£¬×î½üÕâĞ©¶ñÔ³ÄÖµÃÔ½À´Ô½²»³É»°£¬¾¹È»À´±¾ÅÉºúÄÖ£¬ÄãÔ¸ÒâÊÔÊÔÈ¥»÷ÍËËüÃÇÂğ£¿")
-		AddNumText(sceneId,x015035_g_scriptId,"È¥»÷ÍËÔ³â®",10,0)
+		AddText(sceneId,"å³¨åµ‹å±±è‡ªå¤éƒ½ä»¥çŒ¿çŒ±ä¸ºåï¼Œæœ€è¿‘è¿™äº›æ¶çŒ¿é—¹å¾—è¶Šæ¥è¶Šä¸æˆè¯ï¼Œç«Ÿç„¶æ¥æœ¬æ´¾èƒ¡é—¹ï¼Œä½ æ„¿æ„è¯•è¯•å»å‡»é€€å®ƒä»¬å—ï¼Ÿ")
+		AddNumText(sceneId,x015035_g_scriptId,"å»å‡»é€€çŒ¿çŒ±",10,0)
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x015035_OnEventRequest( sceneId, selfId, targetId, eventId )
 	if	GetNumText()==0	then
 		if	GetLevel( sceneId, selfId)<21  then	
 			BeginEvent( sceneId )
-			local strText = "¿É²»ÒªĞ¡¿´ÕâĞ©¶ñÔ³£¬ÎÒ¿´Äã»¹ÊÇµÈ¼¶³¬¹ı21¼¶ÔÙÀ´ÕÒÎÒ°É¡£"
+			local strText = "å¯ä¸è¦å°çœ‹è¿™äº›æ¶çŒ¿ï¼Œæˆ‘çœ‹ä½ è¿˜æ˜¯ç­‰çº§è¶…è¿‡21çº§å†æ¥æ‰¾æˆ‘å§ã€‚"
 			AddText( sceneId, strText )
 			EndEvent( sceneId )
 			DispatchEventList(sceneId,selfId,targetId)

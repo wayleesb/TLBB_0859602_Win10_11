@@ -1,13 +1,13 @@
---»î¶¯¡ª¡ª½ğÓ¹Ç©ÃûÊé
+--æ´»åŠ¨â€”â€”é‡‘åº¸ç­¾åä¹¦
 --MisDescBegin
---½Å±¾ºÅ
+--è„šæœ¬å·
 x808035_g_ScriptId = 808035
 x808035_g_ExchangeJinyongBook_Active = 1
 
 --MisDescEnd
 
 --**********************************
---¼ì²âÊÇ·ñÓĞ×ã¹»µÄÎïÆ·ÓÃÀ´½»»»
+--æ£€æµ‹æ˜¯å¦æœ‰è¶³å¤Ÿçš„ç‰©å“ç”¨æ¥äº¤æ¢
 --**********************************
 function x808035_CheckEnoughItem( sceneId, selfId )
     local BookID_Zui   = 30505063
@@ -32,7 +32,7 @@ function x808035_CheckEnoughItem( sceneId, selfId )
 	end
     
     local ItemCount_de = LuaFnGetAvailableItemCount( sceneId, selfId, BookID_De )
-    if ItemCount_de < 2 then    --"µÄ"±ØĞëÓĞ2±¾ÒÔÉÏ
+    if ItemCount_de < 2 then    --"çš„"å¿…é¡»æœ‰2æœ¬ä»¥ä¸Š
         return 0
     end
     
@@ -40,7 +40,7 @@ function x808035_CheckEnoughItem( sceneId, selfId )
 end
 
 --**********************************
---¶Ò»»ÌìÁú°Ë²¿
+--å…‘æ¢å¤©é¾™å…«éƒ¨
 --**********************************
 function x808035_ExchangeTLBB( sceneId, selfId, targetId )
     local BookID_Zui   = 30505063
@@ -89,15 +89,15 @@ function x808035_ExchangeTLBB( sceneId, selfId, targetId )
 		return
 	end
 
-	--¿Û³ıÎïÆ·,¼ÙÈç¿Û³ıÊ§°Ü,½«²»»á¸øÓèÎïÆ·<ÌìÁú°Ë²¿>
+	--æ‰£é™¤ç‰©å“,å‡å¦‚æ‰£é™¤å¤±è´¥,å°†ä¸ä¼šç»™äºˆç‰©å“<å¤©é¾™å…«éƒ¨>
     for i=1, 12 do
 		ret = LuaFnDelAvailableItem(sceneId, selfId, ItemList[ i ], 1)
 		if ret ~= 1 then
-			return   --¼ÙÈçÉ¾³ı²Ù×÷ÓĞÈÎºÎÒ»¸öÎïÆ·Ê§°Ü,ÔòÖĞ¶Ï²Ù×÷,²»»á¸øÓèÍæ¼ÒÈÎºÎÎïÆ·
+			return   --å‡å¦‚åˆ é™¤æ“ä½œæœ‰ä»»ä½•ä¸€ä¸ªç‰©å“å¤±è´¥,åˆ™ä¸­æ–­æ“ä½œ,ä¸ä¼šç»™äºˆç©å®¶ä»»ä½•ç‰©å“
 		end
 	end
 	
-	BeginAddItem(sceneId)        --¸øÓèÍæ¼Ò<ÌìÁú°Ë²¿>
+	BeginAddItem(sceneId)        --ç»™äºˆç©å®¶<å¤©é¾™å…«éƒ¨>
 		AddItem( sceneId, JinyongBook, 1 )
 	local Ret = EndAddItem(sceneId,selfId)
 	
@@ -114,7 +114,7 @@ function x808035_ExchangeTLBB( sceneId, selfId, targetId )
 		local SysStr = strTex03..PlayerInfoName..strTex04..ItemInfo..strTex05
 		BroadMsgByChatPipe( sceneId, selfId, SysStr, 4 )
 	end
-	--¹Ø±Õ½çÃæ
+	--å…³é—­ç•Œé¢
 	BeginUICommand( sceneId )
 	UICommand_AddInt( sceneId, targetId )
 	EndUICommand( sceneId )
@@ -123,7 +123,7 @@ function x808035_ExchangeTLBB( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x808035_OnDefaultEvent( sceneId, selfId, targetId )
 
@@ -133,7 +133,7 @@ function x808035_OnDefaultEvent( sceneId, selfId, targetId )
 	--		BeginEvent(sceneId)
 	--		    local strTex00 ="#{EXCHANGETLBB_TEX00}"
 	--		    AddText( sceneId, strTex00 )
-	--			--AddText( sceneId,"  ¶Ô²»Æğ£¬ÏÖÔÚÃ»ÓĞÕıÔÚ¾ÙĞĞµÄ»î¶¯¡£")
+	--			--AddText( sceneId,"  å¯¹ä¸èµ·ï¼Œç°åœ¨æ²¡æœ‰æ­£åœ¨ä¸¾è¡Œçš„æ´»åŠ¨ã€‚")
 	--		EndEvent()
 	--		DispatchEventList( sceneId, selfId, targetId )
     --  else
@@ -173,19 +173,19 @@ end
 
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x808035_CheckRightTime()
     local DayTime = GetDayTime()
     
-    if DayTime < 7107 then      --07Äê107Ìì(4ÔÂ18ºÅ)
-       return 0    --´ËÇ°·Ç»î¶¯Ê±¼ä
+    if DayTime < 7107 then      --07å¹´107å¤©(4æœˆ18å·)
+       return 0    --æ­¤å‰éæ´»åŠ¨æ—¶é—´
     end
     
-    --if DayTime > 7114 then      --07Äê114Ìì(4ÔÂ25ºÅ)
-    --if DayTime >= 7128 then      --07Äê114Ìì(5ÔÂ9ºÅ)
-    if DayTime >= 7136 then      --07Äê136Ìì(5ÔÂ16ºÅÍíÉÏ24µã)
-       return 0    --´Ëºó»î¶¯ÒÑ¾­½áÊø
+    --if DayTime > 7114 then      --07å¹´114å¤©(4æœˆ25å·)
+    --if DayTime >= 7128 then      --07å¹´114å¤©(5æœˆ9å·)
+    if DayTime >= 7136 then      --07å¹´136å¤©(5æœˆ16å·æ™šä¸Š24ç‚¹)
+       return 0    --æ­¤åæ´»åŠ¨å·²ç»ç»“æŸ
     end
     
     return 1
@@ -193,7 +193,7 @@ function x808035_CheckRightTime()
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x808035_OnEnumerate( sceneId, selfId, targetId )
     --local strTitle = "#{EXCHANGETLBB_TEX06}"
@@ -205,69 +205,69 @@ function x808035_OnEnumerate( sceneId, selfId, targetId )
 		if 1 == x808035_g_ExchangeJinyongBook_Active then
 			local strTitle = "#{EXCHANGETLBB_TEX07}"
 			AddNumText(sceneId, x808035_g_ScriptId, strTitle, 1, 2 )
-			AddNumText(sceneId, x808035_g_ScriptId, "¹ØÓÚ¶Ò»»¡¶ÌìÁú°Ë²¿¡·", 11, 3 )
+			AddNumText(sceneId, x808035_g_ScriptId, "å…³äºå…‘æ¢ã€Šå¤©é¾™å…«éƒ¨ã€‹", 11, 3 )
 			
 		end
     
     end
     
-    --AddNumText(sceneId, x808035_g_ScriptId, "¹ØÓÚ¶Ò»»ÃØ¼®£¬Òª¾÷", 11, 1 )
+    --AddNumText(sceneId, x808035_g_ScriptId, "å…³äºå…‘æ¢ç§˜ç±ï¼Œè¦è¯€", 11, 1 )
     
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x808035_CheckAccept( sceneId, selfId )
 
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x808035_OnAccept( sceneId, selfId )
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x808035_OnAbandon( sceneId, selfId )
 end
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x808035_OnContinue( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x808035_CheckSubmit( sceneId, selfId )
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x808035_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 	
 end
 
 --**********************************
---É±ËÀ¹ÖÎï»òÍæ¼Ò
+--æ€æ­»æ€ªç‰©æˆ–ç©å®¶
 --**********************************
 function x808035_OnKillObject( sceneId, selfId, objdataId ,objId )
 
 end
 
 --**********************************
---½øÈëÇøÓòÊÂ¼ş
+--è¿›å…¥åŒºåŸŸäº‹ä»¶
 --**********************************
 function x808035_OnEnterArea( sceneId, selfId, zoneId )
 end
 
 --**********************************
---µÀ¾ß¸Ä±ä
+--é“å…·æ”¹å˜
 --**********************************
 function x808035_OnItemChanged( sceneId, selfId, itemdataId )
 end

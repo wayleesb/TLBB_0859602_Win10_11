@@ -26,7 +26,7 @@ function EquipStrengthen_OnEvent(event)
 			local xx = Get_XParam_INT(0);
 			objCared = DataPool : GetNPCIDByServerID(xx);
 			if tonumber(objCared)==nil or  tonumber(objCared)== -1 then
-				PushDebugMessage("server´«¹ıÀ´µÄÊı¾İÓĞÎÊÌâ¡£");
+				PushDebugMessage("serverä¼ è¿‡æ¥çš„æ•°æ®æœ‰é—®é¢˜ã€‚");
 				return;
 			end
 			this:Show();
@@ -46,7 +46,7 @@ function EquipStrengthen_OnEvent(event)
 	elseif	( event == "PACKAGE_ITEM_CHANGED" and this:IsVisible()) then
 		if(tonumber(arg0) and PlayerPackage:GetItemTableIndex(tonumber(arg0)) == Enchange_Item2) then
 				if(PlayerPackage:IsLock(tonumber(arg0)) == 1) then
-					--pushÊÂ¼ş¸Éµômsgbox
+					--pushäº‹ä»¶å¹²æ‰msgbox
 					LifeAbility:CloseStrengthMsgBox();
 					return;
 				end
@@ -94,23 +94,23 @@ function EquipStrengthen_Update(Item_index)
 			local EquipPoint = LifeAbility : Get_Equip_Point(i_index)
 			if EquipPoint == -1 or EquipPoint == 8 or EquipPoint == 9 or EquipPoint == 10 then
 				if EquipPoint ~= -1 then
-					PushDebugMessage("²»ÄÜ·ÅÈëÕâÖÖ×°±¸¡£")
+					PushDebugMessage("ä¸èƒ½æ”¾å…¥è¿™ç§è£…å¤‡ã€‚")
 				end
 				return
 			end
 			NeedMoney,Property = LifeAbility : Get_Equip_StrengthLevel(i_index);
 			
 			--BUG30523,alan,2007-12-29
-			--½«×°±¸ÍÏµ½Ç¿»¯´°¿ÚÓëÃ¿´ÎÇ¿»¯½áÊø¶¼»áµ÷ÓÃ´Ëº¯Êı£¬9¼¶×°±¸ÊÇ²»ÔÊĞí·Åµ½Ç¿»¯´°¿ÚµÄ£¬µ«ÊÇÇ¿»¯µ½9¼¶Ê±
-			--ĞèÒªÏÔÊ¾9¼¶×°±¸Ç¿»¯µÄ½á¹û£¬ÕâÀïÓÃÇ¿»¯´°¿ÚµÄÎïÆ·¸ñÊÇ·ñÓĞÎïÆ·À´Ê¶±ğÕâÁ½ÀàÇéĞÎ¡£
-			--ºóÒ»ÇéĞÎÏÂ½ûÓÃOK°´Å¥
+			--å°†è£…å¤‡æ‹–åˆ°å¼ºåŒ–çª—å£ä¸æ¯æ¬¡å¼ºåŒ–ç»“æŸéƒ½ä¼šè°ƒç”¨æ­¤å‡½æ•°ï¼Œ9çº§è£…å¤‡æ˜¯ä¸å…è®¸æ”¾åˆ°å¼ºåŒ–çª—å£çš„ï¼Œä½†æ˜¯å¼ºåŒ–åˆ°9çº§æ—¶
+			--éœ€è¦æ˜¾ç¤º9çº§è£…å¤‡å¼ºåŒ–çš„ç»“æœï¼Œè¿™é‡Œç”¨å¼ºåŒ–çª—å£çš„ç‰©å“æ ¼æ˜¯å¦æœ‰ç‰©å“æ¥è¯†åˆ«è¿™ä¸¤ç±»æƒ…å½¢ã€‚
+			--åä¸€æƒ…å½¢ä¸‹ç¦ç”¨OKæŒ‰é’®
 			
 			if(NeedMoney<=0 or tonumber(Property)==nil or tonumber(Property)<0) then
 				if Enchange_Item1 ~= -1 then
 					NeedMoney = 0
 					EquipStrengthen_OK:Disable()
 				else
-					PushDebugMessage("´Ë×°±¸ÎŞ·¨Ç¿»¯¡£")
+					PushDebugMessage("æ­¤è£…å¤‡æ— æ³•å¼ºåŒ–ã€‚")
 					return
 				end
 			else				
@@ -120,7 +120,7 @@ function EquipStrengthen_Update(Item_index)
 			if Enchange_Item1 ~= -1 then
 				LifeAbility : Lock_Packet_Item(Enchange_Item1,0);
 			end
-			--pushÊÂ¼ş¸Éµômsgbox
+			--pushäº‹ä»¶å¹²æ‰msgbox
 			LifeAbility:CloseStrengthMsgBox();
 			EquipStrengthen_Info5:Show();
 			EquipStrengthen_Info5:SetText(""..tonumber(Property).."%");
@@ -138,7 +138,7 @@ function EquipStrengthen_Update(Item_index)
 				EquipStrengthen_Info2:Show();
 				EquipStrengthen_Info6:Show();
 				if(tonumber(StrongLevel) == 0)then
-					EquipStrengthen_Info6:SetText("ÎŞ");
+					EquipStrengthen_Info6:SetText("æ— ");
 				else
 					EquipStrengthen_Info6:SetText(""..tonumber(StrongLevel));
 				end
@@ -154,7 +154,7 @@ function EquipStrengthen_Update(Item_index)
 				EquipStrengthen_Info7 : SetText("#G#{_ITEM30900005}")
 			else
 				Enchange_Item2 = 30900006;
-				EquipStrengthen_Info7 : SetText("#G#{_ITEM30900006}#W»ò#G#{_ITEM30900045}")
+				EquipStrengthen_Info7 : SetText("#G#{_ITEM30900006}#Wæˆ–#G#{_ITEM30900045}")
 			end
 			
 			EquipStrengthen_Info9:Show();
@@ -164,25 +164,25 @@ function EquipStrengthen_Update(Item_index)
 	end	
 end
 
-local EB_FREE_BIND = 0;				-- ÎŞ°ó¶¨ÏŞÖÆ
-local EB_BINDED = 1;				-- ÒÑ¾­°ó¶¨
-local	EB_GETUP_BIND =2			-- Ê°È¡°ó¶¨
-local	EB_EQUIP_BIND =3			-- ×°±¸°ó¶¨
+local EB_FREE_BIND = 0;				-- æ— ç»‘å®šé™åˆ¶
+local EB_BINDED = 1;				-- å·²ç»ç»‘å®š
+local	EB_GETUP_BIND =2			-- æ‹¾å–ç»‘å®š
+local	EB_EQUIP_BIND =3			-- è£…å¤‡ç»‘å®š
 function EquipStrengthen_Buttons_Clicked()
 	if Enchange_Item1 == -1 then
-		PushDebugMessage("Çë·ÅÈëÒ»¸ö×°±¸¡£")
+		PushDebugMessage("è¯·æ”¾å…¥ä¸€ä¸ªè£…å¤‡ã€‚")
 		return
 	end
 	local index,BindState = PlayerPackage:FindFirstBindedItemIdxByIDTable(tonumber(Enchange_Item2));
 
-	--PushDebugMessage("Çë·ÅÈëÒ»¸ö×°±¸1¡£")
- --ÏÈÕÒÇ¿»¯¾«»ª
+	--PushDebugMessage("è¯·æ”¾å…¥ä¸€ä¸ªè£…å¤‡1ã€‚")
+ --å…ˆæ‰¾å¼ºåŒ–ç²¾å
 	if index == -1 and Enchange_Item2 == 30900006 then
 		local index1,BindState1 = PlayerPackage:FindFirstBindedItemIdxByIDTable(tonumber(QianghualuId));
-		--PushDebugMessage("Çë·ÅÈëÒ»¸ö×°±¸21¡£")
+		--PushDebugMessage("è¯·æ”¾å…¥ä¸€ä¸ªè£…å¤‡21ã€‚")
 		if(index1 == -1)then
-			local str = "ĞèÒª#{_ITEM"..Enchange_Item2.."}»ò#{_ITEM"..QianghualuId.."}";
-		--PushDebugMessage("Çë·ÅÈëÒ»¸ö×°±¸321¡£")
+			local str = "éœ€è¦#{_ITEM"..Enchange_Item2.."}æˆ–#{_ITEM"..QianghualuId.."}";
+		--PushDebugMessage("è¯·æ”¾å…¥ä¸€ä¸ªè£…å¤‡321ã€‚")
 			PushDebugMessage(str);
 			return
 		end
@@ -193,13 +193,13 @@ function EquipStrengthen_Buttons_Clicked()
 	end
 	
 	if(index == -1)then
-		local str =  "È±ÉÙ#{_ITEM"..Enchange_Item2.."}£¬»òÕß#{_ITEM"..Enchange_Item2.."}ÒÑ¼ÓËø¡£";
+		local str =  "ç¼ºå°‘#{_ITEM"..Enchange_Item2.."}ï¼Œæˆ–è€…#{_ITEM"..Enchange_Item2.."}å·²åŠ é”ã€‚";
 		PushDebugMessage(str);
 		return
 	end
 	
 	if(BindState == EB_BINDED)then
-		--Èç¹ûÒÑ°ó¶¨
+		--å¦‚æœå·²ç»‘å®š
 		local tmp = PlayerPackage:GetItemBindStatusByIndex(Enchange_Item1);
 		if(tmp == EB_BINDED)then
 			Clear_XSCRIPT();
@@ -229,7 +229,7 @@ function EquipStrengthen_Clear()
 		EquipStrengthen_Object1:SetActionItem(-1);
 		LifeAbility : Lock_Packet_Item(Enchange_Item1,0);
 		Enchange_Item1 = -1
-		--pushÊÂ¼ş¸Éµômsgbox
+		--pushäº‹ä»¶å¹²æ‰msgbox
 		LifeAbility:CloseStrengthMsgBox();
 	end
 	Enchange_Item2 = -1

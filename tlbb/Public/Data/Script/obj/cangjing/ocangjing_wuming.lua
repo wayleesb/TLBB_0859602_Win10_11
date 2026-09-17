@@ -1,31 +1,31 @@
---²Ø¾­¸óNPC
---ÎŞÃûÀÏÉ®
---ÆÕÍ¨
+--è—ç»é˜NPC
+--æ— åè€åƒ§
+--æ™®é€š
 
 x122001_g_ScriptId	= 122001
 
 
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x122001_OnDefaultEvent( sceneId, selfId,targetId )
 
 	BeginEvent( sceneId )
-		AddText( sceneId, "  °¢ÃÖÍÓ·ğ£¬ÉÆÔÕÉÆÔÕ¡£#r  Ò»ÇĞÓĞÎª·¨£¬ÎªÃÎ»ÃÅİÓ°¡£#r  ÈçÂ¶ÒàÈçµç£¬µ±×÷ÈçÊÇ¹Û¡£#r  $NÔøÈ¥Ö®´¦£¬±¾ÊÇĞé»Ã£¬²»ÈôÀÏÉ®Ö¸µãÓëÄã¡£" )
-		AddNumText( sceneId, x122001_g_ScriptId, "³ÇÊĞ - ËÕÖİ", 9, 1001 )
-		AddNumText( sceneId, x122001_g_ScriptId, "³ÇÊĞ - ´óÀí", 9, 1002 )
-		AddNumText( sceneId, x122001_g_ScriptId, "³ÇÊĞ - ÂåÑô", 9, 1003 )
+		AddText( sceneId, "  é˜¿å¼¥é™€ä½›ï¼Œå–„å“‰å–„å“‰ã€‚#r  ä¸€åˆ‡æœ‰ä¸ºæ³•ï¼Œä¸ºæ¢¦å¹»æ³¡å½±ã€‚#r  å¦‚éœ²äº¦å¦‚ç”µï¼Œå½“ä½œå¦‚æ˜¯è§‚ã€‚#r  $Næ›¾å»ä¹‹å¤„ï¼Œæœ¬æ˜¯è™šå¹»ï¼Œä¸è‹¥è€åƒ§æŒ‡ç‚¹ä¸ä½ ã€‚" )
+		AddNumText( sceneId, x122001_g_ScriptId, "åŸå¸‚ - è‹å·", 9, 1001 )
+		AddNumText( sceneId, x122001_g_ScriptId, "åŸå¸‚ - å¤§ç†", 9, 1002 )
+		AddNumText( sceneId, x122001_g_ScriptId, "åŸå¸‚ - æ´›é˜³", 9, 1003 )
 
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x122001_OnEventRequest( sceneId, selfId, targetId, eventId )
-	--¶ÓÎéÏà¹Ø
+	--é˜Ÿä¼ç›¸å…³
 	if GetTeamId(sceneId,selfId)>=0 and 
 		IsTeamFollow(sceneId, selfId)==1 and
 		LuaFnIsTeamLeader(sceneId,selfId)==1 then
@@ -37,30 +37,30 @@ function x122001_OnEventRequest( sceneId, selfId, targetId, eventId )
 				return
 			end
 			if IsHaveMission(sceneId,mems[i],4021) > 0 then
-				x122001_MsgBox( sceneId, selfId, targetId, "  Äã¶ÓÎé³ÉÔ±ÖĞÓĞÈËÓĞäîÔË»õ²ÕÔÚÉí£¬ÎÒÃÇæäÕ¾²»ÄÜÎªÄãÌá¹©´«ËÍ·şÎñ¡£" )
+				x122001_MsgBox( sceneId, selfId, targetId, "  ä½ é˜Ÿä¼æˆå‘˜ä¸­æœ‰äººæœ‰æ¼•è¿è´§èˆ±åœ¨èº«ï¼Œæˆ‘ä»¬é©¿ç«™ä¸èƒ½ä¸ºä½ æä¾›ä¼ é€æœåŠ¡ã€‚" )
 				return
 			end
 		end
 	end
 
-	--äîÔËÏà¹Ø
+	--æ¼•è¿ç›¸å…³
 	if IsHaveMission(sceneId,selfId,4021) > 0 then
-		x122001_MsgBox( sceneId, selfId, targetId, "  ÄãÓĞäîÔË»õ²ÕÔÚÉí£¬ÎÒÃÇæäÕ¾²»ÄÜÎªÄãÌá¹©´«ËÍ·şÎñ¡£" )
+		x122001_MsgBox( sceneId, selfId, targetId, "  ä½ æœ‰æ¼•è¿è´§èˆ±åœ¨èº«ï¼Œæˆ‘ä»¬é©¿ç«™ä¸èƒ½ä¸ºä½ æä¾›ä¼ é€æœåŠ¡ã€‚" )
 		return
 	end
 
-	--Ë³Àû´«ËÍ
+	--é¡ºåˆ©ä¼ é€
 	local	arg	= GetNumText()
 
-	if arg == 1001 then		--ËÕÖİ
+	if arg == 1001 then		--è‹å·
 		CallScriptFunction( (400900), "TransferFunc", sceneId, selfId, 1, 114,162 )
 		return
 	end
-	if arg == 1002 then		--´óÀí
+	if arg == 1002 then		--å¤§ç†
 		CallScriptFunction( (400900), "TransferFunc", sceneId, selfId, 2, 241, 141 )
 		return
 	end
-	if arg == 1003 then		--ÂåÑô
+	if arg == 1003 then		--æ´›é˜³
 		CallScriptFunction( (400900), "TransferFunc", sceneId, selfId, 0, 132, 183 )
 		return
 	end
@@ -68,7 +68,7 @@ function x122001_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+--å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x122001_MsgBox( sceneId, selfId, targetId, msg )
 	BeginEvent( sceneId )

@@ -1,22 +1,22 @@
---µÀ¾ß£º°ï¹±ÅÆ30900050
---½Å±¾ºÅ 300070
+--é“å…·ï¼šå¸®è´¡ç‰Œ30900050
+--è„šæœ¬å· 300070
 
 x300070_g_scriptId = 300070
 
-x300070_g_TakeTimes = 1											-- Ã¿Ìì×î¶àÊ¹ÓÃ´ÎÊı
+x300070_g_TakeTimes = 1											-- æ¯å¤©æœ€å¤šä½¿ç”¨æ¬¡æ•°
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x300070_OnDefaultEvent( sceneId, selfId, bagIndex )
 
-	local BangPaiID = GetBagItemParam(sceneId, selfId, bagIndex, 4, 2) --°ïÅÉID
-	local value = GetBagItemParam(sceneId, selfId, bagIndex, 8, 2) --°ï¹±ÊıÖµ
+	local BangPaiID = GetBagItemParam(sceneId, selfId, bagIndex, 4, 2) --å¸®æ´¾ID
+	local value = GetBagItemParam(sceneId, selfId, bagIndex, 8, 2) --å¸®è´¡æ•°å€¼
 	local roleBangPaiID = GetHumanGuildID(sceneId, selfId)
 	
 	--PrintStr("BangPaiID "..BangPaiID.." value "..value.." roleBangPaiID "..roleBangPaiID)
 	
-	--°ïÅÉIDÊÇ·ñÏàÍ¬
+	--å¸®æ´¾IDæ˜¯å¦ç›¸åŒ
 	if roleBangPaiID ~= BangPaiID then
 		BeginEvent(sceneId)
 			AddText(sceneId,"#{BGCH_8829_06}")
@@ -26,7 +26,7 @@ function x300070_OnDefaultEvent( sceneId, selfId, bagIndex )
 		return
 	end
 	
-	--Ò»ÌìÖ»ÄÜÊ¹ÓÃ x300070_g_TakeTimes ´Î
+	--ä¸€å¤©åªèƒ½ä½¿ç”¨ x300070_g_TakeTimes æ¬¡
 	local DayTimes, oldDate, nowDate, takenTimes
 
 	DayTimes = GetMissionData( sceneId, selfId, MD_BANGGONGPAI_DAYTIME )
@@ -57,7 +57,7 @@ function x300070_OnDefaultEvent( sceneId, selfId, bagIndex )
 		EndEvent(sceneId)
 		DispatchMissionTips(sceneId,selfId)
 		
-		--Ò»ÌìÖ»ÄÜÊ¹ÓÃ x300070_g_TakeTimes ´Î
+		--ä¸€å¤©åªèƒ½ä½¿ç”¨ x300070_g_TakeTimes æ¬¡
 		DayTimes = GetMissionData( sceneId, selfId, MD_BANGGONGPAI_DAYTIME )
 		takenTimes = floor( DayTimes/100000 )
 		DayTimes = (takenTimes+1)*100000 + GetDayTime()
@@ -67,10 +67,10 @@ function x300070_OnDefaultEvent( sceneId, selfId, bagIndex )
 end
 
 --**********************************
---Õâ¸öÎïÆ·µÄÊ¹ÓÃ¹ı³ÌÊÇ·ñÀàËÆÓÚ¼¼ÄÜ£º
---ÏµÍ³»áÔÚÖ´ĞĞ¿ªÊ¼Ê±¼ì²âÕâ¸öº¯ÊıµÄ·µ»ØÖµ£¬Èç¹û·µ»ØÊ§°ÜÔòºöÂÔºóÃæµÄÀàËÆ¼¼ÄÜµÄÖ´ĞĞ¡£
---·µ»Ø1£º¼¼ÄÜÀàËÆµÄÎïÆ·£¬¿ÉÒÔ¼ÌĞøÀàËÆ¼¼ÄÜµÄÖ´ĞĞ£»·µ»Ø0£ººöÂÔºóÃæµÄ²Ù×÷¡£
+--è¿™ä¸ªç‰©å“çš„ä½¿ç”¨è¿‡ç¨‹æ˜¯å¦ç±»ä¼¼äºæŠ€èƒ½ï¼š
+--ç³»ç»Ÿä¼šåœ¨æ‰§è¡Œå¼€å§‹æ—¶æ£€æµ‹è¿™ä¸ªå‡½æ•°çš„è¿”å›å€¼ï¼Œå¦‚æœè¿”å›å¤±è´¥åˆ™å¿½ç•¥åé¢çš„ç±»ä¼¼æŠ€èƒ½çš„æ‰§è¡Œã€‚
+--è¿”å›1ï¼šæŠ€èƒ½ç±»ä¼¼çš„ç‰©å“ï¼Œå¯ä»¥ç»§ç»­ç±»ä¼¼æŠ€èƒ½çš„æ‰§è¡Œï¼›è¿”å›0ï¼šå¿½ç•¥åé¢çš„æ“ä½œã€‚
 --**********************************
 function x300070_IsSkillLikeScript( sceneId, selfId)
-	return 0; --Õâ¸ö½Å±¾ĞèÒª¶¯×÷Ö§³Ö
+	return 0; --è¿™ä¸ªè„šæœ¬éœ€è¦åŠ¨ä½œæ”¯æŒ
 end

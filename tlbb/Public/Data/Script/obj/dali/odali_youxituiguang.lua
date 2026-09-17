@@ -1,4 +1,4 @@
--- Áì½±NPC
+-- é¢†å¥–NPC
 
 x002084_g_scriptId = 002084
 
@@ -20,8 +20,8 @@ x002084_g_NewCard8 = 14
 x002084_g_NewCardIntro = 9
 x002084_g_VirtualNew = 30505080
 
-x002084_g_VirtualNew666 = 30504027 --ÔİÊ±Ã»ÓĞĞé¿¨
-x002084_g_ActiveNewCard666 = 51--¼¤»î666²Æ¸»¿¨Ñ¡Ïî
+x002084_g_VirtualNew666 = 30504027 --æš‚æ—¶æ²¡æœ‰è™šå¡
+x002084_g_ActiveNewCard666 = 51--æ¿€æ´»666è´¢å¯Œå¡é€‰é¡¹
 
 x002084_g_NewCard1_666 = 43
 x002084_g_NewCard2_666 = 44
@@ -32,10 +32,10 @@ x002084_g_NewCard6_666 = 48
 x002084_g_NewCard7_666 = 49
 x002084_g_NewCard8_666 = 50
 
---µç»°ÃÜ±£ÔùÆ··¢·Å"Èó»êµ¤"
-x002084_g_eventList={210244} --{210244}	LB JIA Ìí¼Ó210245ÓÚ2008-7-29 10:23:36
+--ç”µè¯å¯†ä¿èµ å“å‘æ”¾"æ¶¦é­‚ä¸¹"
+x002084_g_eventList={210244} --{210244}	LB JIA æ·»åŠ 210245äº2008-7-29 10:23:36
 
---ÔİÊ±¹Ø±Õµç»°ÃÜ±£ÔùÆ·£¬Áõ¶Ü
+--æš‚æ—¶å…³é—­ç”µè¯å¯†ä¿èµ å“ï¼Œåˆ˜ç›¾
 --x002084_g_eventList={210244}
 
 
@@ -49,8 +49,8 @@ x002084_g_AwardList[x002084_g_PrimaryAward] = {
 	MatBagSpaceNeed = 0,
 	TaskBagSpaceNeed = 0,
 	flagBit = MF_GetAward0Flag,
-	redundantMsg = "    ÄãÒÑ¾­Áì¹ı³õ¼¶½±ÀøÁË£¬µ½30¼¶ÔÙÀ´ÕÒÎÒ°É¡£",
-	recvMsg = "    ÕâÀï¼¸¼şÊÎÆ·£¬ĞĞ×ß½­ºş¶à¶àÉÙÉÙÓÃµÃÉÏ£¬ÁíÍâÕâĞ©Ç®Ò»²¢ËÍÄã£¬×£ÄãÔÚÌìÁú°Ë²¿ÓÎÏ·Óä¿ì¡£",
+	redundantMsg = "    ä½ å·²ç»é¢†è¿‡åˆçº§å¥–åŠ±äº†ï¼Œåˆ°30çº§å†æ¥æ‰¾æˆ‘å§ã€‚",
+	recvMsg = "    è¿™é‡Œå‡ ä»¶é¥°å“ï¼Œè¡Œèµ°æ±Ÿæ¹–å¤šå¤šå°‘å°‘ç”¨å¾—ä¸Šï¼Œå¦å¤–è¿™äº›é’±ä¸€å¹¶é€ä½ ï¼Œç¥ä½ åœ¨å¤©é¾™å…«éƒ¨æ¸¸æˆæ„‰å¿«ã€‚",
 }
 x002084_g_AwardList[x002084_g_Award2] = {
 	needLevel = 30,
@@ -60,8 +60,8 @@ x002084_g_AwardList[x002084_g_Award2] = {
 	MatBagSpaceNeed = 1,
 	TaskBagSpaceNeed = 0,
 	flagBit = MF_GetAward1Flag,
-	redundantMsg = "    ÄãÒÑ¾­Áì¹ı30¼¶½±ÀøÁË£¬µ½60¼¶ÔÙÀ´ÕÒÎÒ°É¡£",
-	recvMsg = "    Õâ¸ö±¦Ê¯ÊÇÒ»µãĞÄÒâ£¬¼ÇµÃºÃ±¦Ê¯ÒªÔÚºÃµÄ×°±¸ÉÏÏâÇ¶£¬×£ÄãºÃÔË¡£",
+	redundantMsg = "    ä½ å·²ç»é¢†è¿‡30çº§å¥–åŠ±äº†ï¼Œåˆ°60çº§å†æ¥æ‰¾æˆ‘å§ã€‚",
+	recvMsg = "    è¿™ä¸ªå®çŸ³æ˜¯ä¸€ç‚¹å¿ƒæ„ï¼Œè®°å¾—å¥½å®çŸ³è¦åœ¨å¥½çš„è£…å¤‡ä¸Šé•¶åµŒï¼Œç¥ä½ å¥½è¿ã€‚",
 }
 x002084_g_AwardList[x002084_g_Award3] = {
 	needLevel = 60,
@@ -71,10 +71,10 @@ x002084_g_AwardList[x002084_g_Award3] = {
 	MatBagSpaceNeed = 0,
 	TaskBagSpaceNeed = 0,
 	flagBit = MF_GetAward2Flag,
-	redundantMsg = "    ÄãÒÑ¾­Áì¹ı60¼¶½±ÀøÁË¡£",
-	recvMsg = "    Õâ¸öÒª¾÷ÊÇÒ»µãĞÄÒâ£¬¼ÇµÃºÃÒª¾÷Òª¸øºÃµÄÕäÊŞÑ§Ï°£¬×£ÄãºÃÔË¡£",
+	redundantMsg = "    ä½ å·²ç»é¢†è¿‡60çº§å¥–åŠ±äº†ã€‚",
+	recvMsg = "    è¿™ä¸ªè¦è¯€æ˜¯ä¸€ç‚¹å¿ƒæ„ï¼Œè®°å¾—å¥½è¦è¯€è¦ç»™å¥½çš„çå…½å­¦ä¹ ï¼Œç¥ä½ å¥½è¿ã€‚",
 }
---²Æ¸»¿¨
+--è´¢å¯Œå¡
 x002084_g_NewCardList = {}
 x002084_g_NewCardList[x002084_g_NewCard1] = {
 	needLevel = -1,
@@ -84,7 +84,7 @@ x002084_g_NewCardList[x002084_g_NewCard1] = {
 	MatBagSpaceNeed = 0,
 	TaskBagSpaceNeed = 0,
 	flagBit = MF_GetNewUserCard0,
-	redundantMsg = "    ÄãÒÑ¾­Áì¹ı1¼¶µÄ½±ÀøÁË£¬µ½15¼¶ÔÙÀ´ÕÒÎÒ°É¡£",
+	redundantMsg = "    ä½ å·²ç»é¢†è¿‡1çº§çš„å¥–åŠ±äº†ï¼Œåˆ°15çº§å†æ¥æ‰¾æˆ‘å§ã€‚",
 	recvMsg = "#{Mis_NewUserCard_16}",
 }
 x002084_g_NewCardList[x002084_g_NewCard2] = {
@@ -95,7 +95,7 @@ x002084_g_NewCardList[x002084_g_NewCard2] = {
 	MatBagSpaceNeed = 0,
 	TaskBagSpaceNeed = 0,
 	flagBit = MF_GetNewUserCard1,
-	redundantMsg = "    ÄãÒÑ¾­Áì¹ı15¼¶½±ÀøÁË£¬µ½30¼¶ÔÙÀ´ÕÒÎÒ°É¡£",
+	redundantMsg = "    ä½ å·²ç»é¢†è¿‡15çº§å¥–åŠ±äº†ï¼Œåˆ°30çº§å†æ¥æ‰¾æˆ‘å§ã€‚",
 	recvMsg = "#{Mis_NewUserCard_17}",
 }
 x002084_g_NewCardList[x002084_g_NewCard3] = {
@@ -106,7 +106,7 @@ x002084_g_NewCardList[x002084_g_NewCard3] = {
 	MatBagSpaceNeed = 0,
 	TaskBagSpaceNeed = 0,
 	flagBit = MF_GetNewUserCard2,
-	redundantMsg = "    ÄãÒÑ¾­Áì¹ı30¼¶½±ÀøÁË¡£",
+	redundantMsg = "    ä½ å·²ç»é¢†è¿‡30çº§å¥–åŠ±äº†ã€‚",
 	recvMsg = "#{Mis_NewUserCard_18}",
 }
 x002084_g_NewCardList[x002084_g_NewCard4] = {
@@ -117,7 +117,7 @@ x002084_g_NewCardList[x002084_g_NewCard4] = {
 	MatBagSpaceNeed = 0,
 	TaskBagSpaceNeed = 0,
 	flagBit = MF_GetNewUserCard3,
-	redundantMsg = "    ÄãÒÑ¾­Áì¹ı40¼¶½±ÀøÁË¡£",
+	redundantMsg = "    ä½ å·²ç»é¢†è¿‡40çº§å¥–åŠ±äº†ã€‚",
 	recvMsg = "#{Mis_NewUserCard_19}",
 }
 x002084_g_NewCardList[x002084_g_NewCard5] = {
@@ -128,7 +128,7 @@ x002084_g_NewCardList[x002084_g_NewCard5] = {
 	MatBagSpaceNeed = 0,
 	TaskBagSpaceNeed = 0,
 	flagBit = MF_GetNewUserCard4,
-	redundantMsg = "    ÄãÒÑ¾­Áì¹ı50¼¶½±ÀøÁË¡£",
+	redundantMsg = "    ä½ å·²ç»é¢†è¿‡50çº§å¥–åŠ±äº†ã€‚",
 	recvMsg = "#{Mis_NewUserCard_20}",
 }
 x002084_g_NewCardList[x002084_g_NewCard6] = {
@@ -139,7 +139,7 @@ x002084_g_NewCardList[x002084_g_NewCard6] = {
 	MatBagSpaceNeed = 0,
 	TaskBagSpaceNeed = 0,
 	flagBit = MF_GetNewUserCard5,
-	redundantMsg = "    ÄãÒÑ¾­Áì¹ı60¼¶½±ÀøÁË¡£",
+	redundantMsg = "    ä½ å·²ç»é¢†è¿‡60çº§å¥–åŠ±äº†ã€‚",
 	recvMsg = "#{Mis_NewUserCard_21}",
 }
 x002084_g_NewCardList[x002084_g_NewCard7] = {
@@ -150,7 +150,7 @@ x002084_g_NewCardList[x002084_g_NewCard7] = {
 	MatBagSpaceNeed = 0,
 	TaskBagSpaceNeed = 0,
 	flagBit = MF_GetNewUserCard6,
-	redundantMsg = "    ÄãÒÑ¾­Áì¹ı70¼¶½±ÀøÁË¡£",
+	redundantMsg = "    ä½ å·²ç»é¢†è¿‡70çº§å¥–åŠ±äº†ã€‚",
 	recvMsg = "#{Mis_NewUserCard_22}",
 }
 x002084_g_NewCardList[x002084_g_NewCard8] = {
@@ -161,10 +161,10 @@ x002084_g_NewCardList[x002084_g_NewCard8] = {
 	MatBagSpaceNeed = 0,
 	TaskBagSpaceNeed = 0,
 	flagBit = MF_GetNewUserCard7,
-	redundantMsg = "    ÄãÒÑ¾­Áì¹ı80¼¶½±ÀøÁË¡£",
+	redundantMsg = "    ä½ å·²ç»é¢†è¿‡80çº§å¥–åŠ±äº†ã€‚",
 	recvMsg = "#{Mis_NewUserCard_23}",
 }
-	--²Æ¸»¿¨666
+	--è´¢å¯Œå¡666
 x002084_g_NewCardListEx = {}
 x002084_g_NewCardListEx[x002084_g_NewCard1_666] = {
 	needLevel = -1,
@@ -174,7 +174,7 @@ x002084_g_NewCardListEx[x002084_g_NewCard1_666] = {
 	MatBagSpaceNeed = 0,
 	TaskBagSpaceNeed = 0,
 	flagBit = MF_GetNewUserCard0_666,
-	redundantMsg = "    ÄãÒÑ¾­Áì¹ı1¼¶µÄ½±ÀøÁË£¬µ½15¼¶ÔÙÀ´ÕÒÎÒ°É¡£",
+	redundantMsg = "    ä½ å·²ç»é¢†è¿‡1çº§çš„å¥–åŠ±äº†ï¼Œåˆ°15çº§å†æ¥æ‰¾æˆ‘å§ã€‚",
 	recvMsg = "#{CHAOJIDALIKA_081224_1}",
 }
 x002084_g_NewCardListEx[x002084_g_NewCard2_666] = {
@@ -185,7 +185,7 @@ x002084_g_NewCardListEx[x002084_g_NewCard2_666] = {
 	MatBagSpaceNeed = 0,
 	TaskBagSpaceNeed = 0,
 	flagBit = MF_GetNewUserCard1_666,
-	redundantMsg = "    ÄãÒÑ¾­Áì¹ı15¼¶½±ÀøÁË£¬µ½30¼¶ÔÙÀ´ÕÒÎÒ°É¡£",
+	redundantMsg = "    ä½ å·²ç»é¢†è¿‡15çº§å¥–åŠ±äº†ï¼Œåˆ°30çº§å†æ¥æ‰¾æˆ‘å§ã€‚",
 	recvMsg = "#{CHAOJIDALIKA_081224_2}",
 }
 x002084_g_NewCardListEx[x002084_g_NewCard3_666] = {
@@ -197,7 +197,7 @@ x002084_g_NewCardListEx[x002084_g_NewCard3_666] = {
 	MatBagSpaceNeed = 0,
 	TaskBagSpaceNeed = 0,
 	flagBit = MF_GetNewUserCard2_666,
-	redundantMsg = "    ÄãÒÑ¾­Áì¹ı30¼¶½±ÀøÁË¡£",
+	redundantMsg = "    ä½ å·²ç»é¢†è¿‡30çº§å¥–åŠ±äº†ã€‚",
 	recvMsg = "#{CHAOJIDALIKA_081224_3}",
 }
 x002084_g_NewCardListEx[x002084_g_NewCard4_666] = {
@@ -208,7 +208,7 @@ x002084_g_NewCardListEx[x002084_g_NewCard4_666] = {
 	MatBagSpaceNeed = 0,
 	TaskBagSpaceNeed = 0,
 	flagBit = MF_GetNewUserCard3_666,
-	redundantMsg = "    ÄãÒÑ¾­Áì¹ı40¼¶½±ÀøÁË¡£",
+	redundantMsg = "    ä½ å·²ç»é¢†è¿‡40çº§å¥–åŠ±äº†ã€‚",
 	recvMsg = "#{CHAOJIDALIKA_081224_4}",
 }
 x002084_g_NewCardListEx[x002084_g_NewCard5_666] = {
@@ -219,7 +219,7 @@ x002084_g_NewCardListEx[x002084_g_NewCard5_666] = {
 	MatBagSpaceNeed = 0,
 	TaskBagSpaceNeed = 0,
 	flagBit = MF_GetNewUserCard4_666,
-	redundantMsg = "    ÄãÒÑ¾­Áì¹ı50¼¶½±ÀøÁË¡£",
+	redundantMsg = "    ä½ å·²ç»é¢†è¿‡50çº§å¥–åŠ±äº†ã€‚",
 	recvMsg = "#{CHAOJIDALIKA_081224_5}",
 }
 x002084_g_NewCardListEx[x002084_g_NewCard6_666] = {
@@ -230,7 +230,7 @@ x002084_g_NewCardListEx[x002084_g_NewCard6_666] = {
 	MatBagSpaceNeed = 0,
 	TaskBagSpaceNeed = 0,
 	flagBit = MF_GetNewUserCard5_666,
-	redundantMsg = "    ÄãÒÑ¾­Áì¹ı60¼¶½±ÀøÁË¡£",
+	redundantMsg = "    ä½ å·²ç»é¢†è¿‡60çº§å¥–åŠ±äº†ã€‚",
 	recvMsg = "#{CHAOJIDALIKA_081224_6}",
 }
 x002084_g_NewCardListEx[x002084_g_NewCard7_666] = {
@@ -241,7 +241,7 @@ x002084_g_NewCardListEx[x002084_g_NewCard7_666] = {
 	MatBagSpaceNeed = 3,
 	TaskBagSpaceNeed = 0,
 	flagBit = MF_GetNewUserCard6_666,
-	redundantMsg = "    ÄãÒÑ¾­Áì¹ı70¼¶½±ÀøÁË¡£",
+	redundantMsg = "    ä½ å·²ç»é¢†è¿‡70çº§å¥–åŠ±äº†ã€‚",
 	recvMsg = "#{CAIFUKA_081224_7}",
 }
 x002084_g_NewCardListEx[x002084_g_NewCard8_666] = {
@@ -252,32 +252,32 @@ x002084_g_NewCardListEx[x002084_g_NewCard8_666] = {
 	MatBagSpaceNeed = 0,
 	TaskBagSpaceNeed = 0,
 	flagBit = MF_GetNewUserCard7_666,
-	redundantMsg = "    ÄãÒÑ¾­Áì¹ı80¼¶½±ÀøÁË¡£",
+	redundantMsg = "    ä½ å·²ç»é¢†è¿‡80çº§å¥–åŠ±äº†ã€‚",
 	recvMsg = "#{CAIFUKA_081224_8}",
 }
 
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x002084_OnDefaultEvent( sceneId, selfId, targetId )
 	BeginEvent( sceneId )
-		strText = "    »¶Ó­À´µ½ÌìÁú°Ë²¿ÓÎÏ·ÊÀ½ç£¬ÓĞÊ²Ã´ÎÒÄÜ°ïÖúÄãµÄÂğ£¿Èç¹ûÄãÒÑ¾­ÔÚÍøÕ¾ÉÏÊ¹ÓÃ¹ıCD-KEYÁË£¬Äã»¹ĞèÒªÏÈ¼¤»îÁìÈ¡Ìõ¼ş²ÅÄÜÁìÈ¡½±Àø¡£"
+		strText = "    æ¬¢è¿æ¥åˆ°å¤©é¾™å…«éƒ¨æ¸¸æˆä¸–ç•Œï¼Œæœ‰ä»€ä¹ˆæˆ‘èƒ½å¸®åŠ©ä½ çš„å—ï¼Ÿå¦‚æœä½ å·²ç»åœ¨ç½‘ç«™ä¸Šä½¿ç”¨è¿‡CD-KEYäº†ï¼Œä½ è¿˜éœ€è¦å…ˆæ¿€æ´»é¢†å–æ¡ä»¶æ‰èƒ½é¢†å–å¥–åŠ±ã€‚"
 		AddText( sceneId, strText )
 
 		for i, eventId in x002084_g_eventList do
 			CallScriptFunction( eventId, "OnEnumerate",sceneId, selfId, targetId )
 		end
 
-		AddNumText( sceneId, x002084_g_scriptId, "ÎÒÊÇ²Æ¸»¿¨ÓÃ»§", 2, 101 )
-		--AddNumText( sceneId, x002084_g_scriptId, "ÎÒÊÇÍÆ¹ãÔ±cdkeyÓÃ»§", 2, 201 )
+		AddNumText( sceneId, x002084_g_scriptId, "æˆ‘æ˜¯è´¢å¯Œå¡ç”¨æˆ·", 2, 101 )
+		--AddNumText( sceneId, x002084_g_scriptId, "æˆ‘æ˜¯æ¨å¹¿å‘˜cdkeyç”¨æˆ·", 2, 201 )
 		
-		AddNumText( sceneId, x002084_g_scriptId, "ÎÒÊÇ³¬¼¶´óÁ¦¿¨ÓÃ»§", 2, 102 )
-		--AddNumText( sceneId, x002084_g_scriptId, "ÎÒÊÇÍÆ¹ãÔ±cdkeyÓÃ»§", 2, 201 )
+		AddNumText( sceneId, x002084_g_scriptId, "æˆ‘æ˜¯è¶…çº§å¤§åŠ›å¡ç”¨æˆ·", 2, 102 )
+		--AddNumText( sceneId, x002084_g_scriptId, "æˆ‘æ˜¯æ¨å¹¿å‘˜cdkeyç”¨æˆ·", 2, 201 )
 		
-		--AddNumText( sceneId, x002084_g_scriptId, "¹ØÓÚÍÆ¹ãÔ±ÏµÍ³½éÉÜ", 11, x002084_g_Intro )
-		AddNumText( sceneId, x002084_g_scriptId, "¹ØÓÚ²Æ¸»¿¨ÏµÍ³½éÉÜ", 11, x002084_g_NewCardIntro )
-		AddNumText( sceneId, x002084_g_scriptId, "¹ØÓÚ³¬¼¶´óÁ¦¿¨ÏµÍ³½éÉÜ", 11, 520 )
+		--AddNumText( sceneId, x002084_g_scriptId, "å…³äºæ¨å¹¿å‘˜ç³»ç»Ÿä»‹ç»", 11, x002084_g_Intro )
+		AddNumText( sceneId, x002084_g_scriptId, "å…³äºè´¢å¯Œå¡ç³»ç»Ÿä»‹ç»", 11, x002084_g_NewCardIntro )
+		AddNumText( sceneId, x002084_g_scriptId, "å…³äºè¶…çº§å¤§åŠ›å¡ç³»ç»Ÿä»‹ç»", 11, 520 )
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, selfId, targetId )
 end
@@ -287,78 +287,78 @@ function x002084_AddCDKeyNumText(sceneId, selfId, targetId)
 	local eventNum = 0
 	BeginEvent( sceneId )
 		if GetMissionFlag( sceneId, selfId, MF_GetAwardFlag ) == 0 then
-			 AddNumText( sceneId, x002084_g_scriptId, "¼¤»îcdkey", 2, 0 )
+			 AddNumText( sceneId, x002084_g_scriptId, "æ¿€æ´»cdkey", 2, 0 )
 			 eventNum = eventNum + 1
 		end
 
 		if GetMissionFlag( sceneId, selfId, x002084_g_AwardList[x002084_g_PrimaryAward].flagBit ) == 0 then
-			 AddNumText( sceneId, x002084_g_scriptId, "ÁìÈ¡cdkey½±Àø", 2, x002084_g_PrimaryAward )
+			 AddNumText( sceneId, x002084_g_scriptId, "é¢†å–cdkeyå¥–åŠ±", 2, x002084_g_PrimaryAward )
 			 eventNum = eventNum + 1
 		end
 
 		--if GetMissionFlag( sceneId, selfId, x002084_g_AwardList[x002084_g_Award2].flagBit ) == 0 then
-			-- AddNumText( sceneId, x002084_g_scriptId, "ÁìÈ¡" .. x002084_g_AwardList[x002084_g_Award2].needLevel .. "¼¶µÄ½±Àø", 2, x002084_g_Award2 )
+			-- AddNumText( sceneId, x002084_g_scriptId, "é¢†å–" .. x002084_g_AwardList[x002084_g_Award2].needLevel .. "çº§çš„å¥–åŠ±", 2, x002084_g_Award2 )
 			-- eventNum = eventNum + 1
 		--end
 
 		--if GetMissionFlag( sceneId, selfId, x002084_g_AwardList[x002084_g_Award3].flagBit ) == 0 then
-			-- AddNumText( sceneId, x002084_g_scriptId, "ÁìÈ¡" .. x002084_g_AwardList[x002084_g_Award3].needLevel .. "¼¶µÄ½±Àø", 2, x002084_g_Award3 )
+			-- AddNumText( sceneId, x002084_g_scriptId, "é¢†å–" .. x002084_g_AwardList[x002084_g_Award3].needLevel .. "çº§çš„å¥–åŠ±", 2, x002084_g_Award3 )
 			-- eventNum = eventNum + 1
 		--end
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, selfId, targetId )
 	
 	if eventNum == 0 then
-		x002084_NotifyFailBox( sceneId, selfId, targetId, "    ÄãÒÑÁìÈ¡ËùÓĞµÄCDKEY½±Àø¡£" )
+		x002084_NotifyFailBox( sceneId, selfId, targetId, "    ä½ å·²é¢†å–æ‰€æœ‰çš„CDKEYå¥–åŠ±ã€‚" )
 	end
 end
 
---²Æ¸»¿¨
+--è´¢å¯Œå¡
 function x002084_AddNewUserCardNumText(sceneId, selfId, targetId)
 	local eventNum = 0
 	BeginEvent( sceneId )
 		if GetMissionFlag( sceneId, selfId, MF_ActiveNewUserCard ) == 0 then
-			 AddNumText( sceneId, x002084_g_scriptId, "¼¤»î²Æ¸»¿¨", 2, 8 )
+			 AddNumText( sceneId, x002084_g_scriptId, "æ¿€æ´»è´¢å¯Œå¡", 2, 8 )
 			 eventNum = eventNum + 1
 		end
 
 		if GetMissionFlag( sceneId, selfId, x002084_g_NewCardList[x002084_g_NewCard1].flagBit ) == 0 then
-			 AddNumText( sceneId, x002084_g_scriptId, "ÁìÈ¡1¼¶µÄ½±Àø", 2, x002084_g_NewCard1 )
+			 AddNumText( sceneId, x002084_g_scriptId, "é¢†å–1çº§çš„å¥–åŠ±", 2, x002084_g_NewCard1 )
 			 eventNum = eventNum + 1
 		end
 
 		if GetMissionFlag( sceneId, selfId, x002084_g_NewCardList[x002084_g_NewCard2].flagBit ) == 0 then
-			 AddNumText( sceneId, x002084_g_scriptId, "ÁìÈ¡" .. x002084_g_NewCardList[x002084_g_NewCard2].needLevel .. "¼¶µÄ½±Àø", 2, x002084_g_NewCard2 )
+			 AddNumText( sceneId, x002084_g_scriptId, "é¢†å–" .. x002084_g_NewCardList[x002084_g_NewCard2].needLevel .. "çº§çš„å¥–åŠ±", 2, x002084_g_NewCard2 )
 			 eventNum = eventNum + 1
 		end
 
 		if GetMissionFlag( sceneId, selfId, x002084_g_NewCardList[x002084_g_NewCard3].flagBit ) == 0 then
-			 AddNumText( sceneId, x002084_g_scriptId, "ÁìÈ¡" .. x002084_g_NewCardList[x002084_g_NewCard3].needLevel .. "¼¶µÄ½±Àø", 2, x002084_g_NewCard3 )
+			 AddNumText( sceneId, x002084_g_scriptId, "é¢†å–" .. x002084_g_NewCardList[x002084_g_NewCard3].needLevel .. "çº§çš„å¥–åŠ±", 2, x002084_g_NewCard3 )
 			 eventNum = eventNum + 1
 		end
 		
 		if GetMissionFlag( sceneId, selfId, x002084_g_NewCardList[x002084_g_NewCard4].flagBit ) == 0 then
-			 AddNumText( sceneId, x002084_g_scriptId, "ÁìÈ¡" .. x002084_g_NewCardList[x002084_g_NewCard4].needLevel .. "¼¶µÄ½±Àø", 2, x002084_g_NewCard4 )
+			 AddNumText( sceneId, x002084_g_scriptId, "é¢†å–" .. x002084_g_NewCardList[x002084_g_NewCard4].needLevel .. "çº§çš„å¥–åŠ±", 2, x002084_g_NewCard4 )
 			 eventNum = eventNum + 1
 		end
 
 		if GetMissionFlag( sceneId, selfId, x002084_g_NewCardList[x002084_g_NewCard5].flagBit ) == 0 then
-			 AddNumText( sceneId, x002084_g_scriptId, "ÁìÈ¡" .. x002084_g_NewCardList[x002084_g_NewCard5].needLevel .. "¼¶µÄ½±Àø", 2, x002084_g_NewCard5 )
+			 AddNumText( sceneId, x002084_g_scriptId, "é¢†å–" .. x002084_g_NewCardList[x002084_g_NewCard5].needLevel .. "çº§çš„å¥–åŠ±", 2, x002084_g_NewCard5 )
 			 eventNum = eventNum + 1
 		end
 
 		if GetMissionFlag( sceneId, selfId, x002084_g_NewCardList[x002084_g_NewCard6].flagBit ) == 0 then
-			 AddNumText( sceneId, x002084_g_scriptId, "ÁìÈ¡" .. x002084_g_NewCardList[x002084_g_NewCard6].needLevel .. "¼¶µÄ½±Àø", 2, x002084_g_NewCard6 )
+			 AddNumText( sceneId, x002084_g_scriptId, "é¢†å–" .. x002084_g_NewCardList[x002084_g_NewCard6].needLevel .. "çº§çš„å¥–åŠ±", 2, x002084_g_NewCard6 )
 			 eventNum = eventNum + 1
 		end
 
 		if GetMissionFlag( sceneId, selfId, x002084_g_NewCardList[x002084_g_NewCard7].flagBit ) == 0 then
-			 AddNumText( sceneId, x002084_g_scriptId, "ÁìÈ¡" .. x002084_g_NewCardList[x002084_g_NewCard7].needLevel .. "¼¶µÄ½±Àø", 2, x002084_g_NewCard7 )
+			 AddNumText( sceneId, x002084_g_scriptId, "é¢†å–" .. x002084_g_NewCardList[x002084_g_NewCard7].needLevel .. "çº§çš„å¥–åŠ±", 2, x002084_g_NewCard7 )
 			 eventNum = eventNum + 1
 		end
 
 		if GetMissionFlag( sceneId, selfId, x002084_g_NewCardList[x002084_g_NewCard8].flagBit ) == 0 then
-			 AddNumText( sceneId, x002084_g_scriptId, "ÁìÈ¡" .. x002084_g_NewCardList[x002084_g_NewCard8].needLevel .. "¼¶µÄ½±Àø", 2, x002084_g_NewCard8 )
+			 AddNumText( sceneId, x002084_g_scriptId, "é¢†å–" .. x002084_g_NewCardList[x002084_g_NewCard8].needLevel .. "çº§çš„å¥–åŠ±", 2, x002084_g_NewCard8 )
 			 eventNum = eventNum + 1
 		end
 
@@ -366,57 +366,57 @@ function x002084_AddNewUserCardNumText(sceneId, selfId, targetId)
 	DispatchEventList( sceneId, selfId, targetId )
 	
 	if eventNum == 0 then
-		x002084_NotifyFailBox( sceneId, selfId, targetId, "    ÄãÒÑÁìÈ¡ËùÓĞµÄ²Æ¸»¿¨½±Àø¡£" )
+		x002084_NotifyFailBox( sceneId, selfId, targetId, "    ä½ å·²é¢†å–æ‰€æœ‰çš„è´¢å¯Œå¡å¥–åŠ±ã€‚" )
 	end
 end
 
---²Æ¸»¿¨666
+--è´¢å¯Œå¡666
 function x002084_AddNewUserCardNumText666(sceneId, selfId, targetId)
 	local eventNum = 0
 	BeginEvent( sceneId )
 	
 		if GetMissionFlag( sceneId, selfId, MF_ActiveNewUserCard666 ) == 0 then
-			 AddNumText( sceneId, x002084_g_scriptId, "Æô¶¯³¬¼¶´óÁ¦¿¨", 2, x002084_g_ActiveNewCard666 )
+			 AddNumText( sceneId, x002084_g_scriptId, "å¯åŠ¨è¶…çº§å¤§åŠ›å¡", 2, x002084_g_ActiveNewCard666 )
 			 eventNum = eventNum + 1
 		end
 
 		if GetMissionFlag( sceneId, selfId, x002084_g_NewCardListEx[x002084_g_NewCard1_666].flagBit ) == 0 then
-			 AddNumText( sceneId, x002084_g_scriptId, "ÁìÈ¡1¼¶µÄ½±Àø", 2, x002084_g_NewCard1_666 )
+			 AddNumText( sceneId, x002084_g_scriptId, "é¢†å–1çº§çš„å¥–åŠ±", 2, x002084_g_NewCard1_666 )
 			 eventNum = eventNum + 1
 		end
 
 		if GetMissionFlag( sceneId, selfId, x002084_g_NewCardListEx[x002084_g_NewCard2_666].flagBit ) == 0 then
-			 AddNumText( sceneId, x002084_g_scriptId, "ÁìÈ¡" .. x002084_g_NewCardListEx[x002084_g_NewCard2_666].needLevel .. "¼¶µÄ½±Àø", 2, x002084_g_NewCard2_666 )
+			 AddNumText( sceneId, x002084_g_scriptId, "é¢†å–" .. x002084_g_NewCardListEx[x002084_g_NewCard2_666].needLevel .. "çº§çš„å¥–åŠ±", 2, x002084_g_NewCard2_666 )
 			 eventNum = eventNum + 1
 		end
 
 		if GetMissionFlag( sceneId, selfId, x002084_g_NewCardListEx[x002084_g_NewCard3_666].flagBit ) == 0 then
-			 AddNumText( sceneId, x002084_g_scriptId, "ÁìÈ¡" .. x002084_g_NewCardListEx[x002084_g_NewCard3_666].needLevel .. "¼¶µÄ½±Àø", 2, x002084_g_NewCard3_666 )
+			 AddNumText( sceneId, x002084_g_scriptId, "é¢†å–" .. x002084_g_NewCardListEx[x002084_g_NewCard3_666].needLevel .. "çº§çš„å¥–åŠ±", 2, x002084_g_NewCard3_666 )
 			 eventNum = eventNum + 1
 		end
 		
 		if GetMissionFlag( sceneId, selfId, x002084_g_NewCardListEx[x002084_g_NewCard4_666].flagBit ) == 0 then
-			 AddNumText( sceneId, x002084_g_scriptId, "ÁìÈ¡" .. x002084_g_NewCardListEx[x002084_g_NewCard4_666].needLevel .. "¼¶µÄ½±Àø", 2, x002084_g_NewCard4_666 )
+			 AddNumText( sceneId, x002084_g_scriptId, "é¢†å–" .. x002084_g_NewCardListEx[x002084_g_NewCard4_666].needLevel .. "çº§çš„å¥–åŠ±", 2, x002084_g_NewCard4_666 )
 			 eventNum = eventNum + 1
 		end
 
 		if GetMissionFlag( sceneId, selfId, x002084_g_NewCardListEx[x002084_g_NewCard5_666].flagBit ) == 0 then
-			 AddNumText( sceneId, x002084_g_scriptId, "ÁìÈ¡" .. x002084_g_NewCardListEx[x002084_g_NewCard5_666].needLevel .. "¼¶µÄ½±Àø", 2, x002084_g_NewCard5_666 )
+			 AddNumText( sceneId, x002084_g_scriptId, "é¢†å–" .. x002084_g_NewCardListEx[x002084_g_NewCard5_666].needLevel .. "çº§çš„å¥–åŠ±", 2, x002084_g_NewCard5_666 )
 			 eventNum = eventNum + 1
 		end
 
 		if GetMissionFlag( sceneId, selfId, x002084_g_NewCardListEx[x002084_g_NewCard6_666].flagBit ) == 0 then
-			 AddNumText( sceneId, x002084_g_scriptId, "ÁìÈ¡" .. x002084_g_NewCardListEx[x002084_g_NewCard6_666].needLevel .. "¼¶µÄ½±Àø", 2, x002084_g_NewCard6_666 )
+			 AddNumText( sceneId, x002084_g_scriptId, "é¢†å–" .. x002084_g_NewCardListEx[x002084_g_NewCard6_666].needLevel .. "çº§çš„å¥–åŠ±", 2, x002084_g_NewCard6_666 )
 			 eventNum = eventNum + 1
 		end
 
 		if GetMissionFlag( sceneId, selfId, x002084_g_NewCardListEx[x002084_g_NewCard7_666].flagBit ) == 0 then
-			 AddNumText( sceneId, x002084_g_scriptId, "ÁìÈ¡" .. x002084_g_NewCardListEx[x002084_g_NewCard7_666].needLevel .. "¼¶µÄ½±Àø", 2, x002084_g_NewCard7_666 )
+			 AddNumText( sceneId, x002084_g_scriptId, "é¢†å–" .. x002084_g_NewCardListEx[x002084_g_NewCard7_666].needLevel .. "çº§çš„å¥–åŠ±", 2, x002084_g_NewCard7_666 )
 			 eventNum = eventNum + 1
 		end
 
 		if GetMissionFlag( sceneId, selfId, x002084_g_NewCardListEx[x002084_g_NewCard8_666].flagBit ) == 0 then
-			 AddNumText( sceneId, x002084_g_scriptId, "ÁìÈ¡" .. x002084_g_NewCardListEx[x002084_g_NewCard8_666].needLevel .. "¼¶µÄ½±Àø", 2, x002084_g_NewCard8_666 )
+			 AddNumText( sceneId, x002084_g_scriptId, "é¢†å–" .. x002084_g_NewCardListEx[x002084_g_NewCard8_666].needLevel .. "çº§çš„å¥–åŠ±", 2, x002084_g_NewCard8_666 )
 			 eventNum = eventNum + 1
 		end
 
@@ -424,12 +424,12 @@ function x002084_AddNewUserCardNumText666(sceneId, selfId, targetId)
 	DispatchEventList( sceneId, selfId, targetId )
 	
 	if eventNum == 0 then
-		x002084_NotifyFailBox( sceneId, selfId, targetId, "    ÄãÒÑÁìÈ¡ËùÓĞµÄ³¬¼¶´óÁ¦¿¨½±Àø¡£" )
+		x002084_NotifyFailBox( sceneId, selfId, targetId, "    ä½ å·²é¢†å–æ‰€æœ‰çš„è¶…çº§å¤§åŠ›å¡å¥–åŠ±ã€‚" )
 	end
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x002084_OnEventRequest( sceneId, selfId, targetId, eventId )
 
@@ -471,13 +471,13 @@ if x002084_g_NewCardIntro == GetNumText() then
 		
 	for i, eventId in x002084_g_eventList do		
 		CallScriptFunction( eventId, "OnDefaultEvent", sceneId, selfId, targetId )
-		--return --¾¯¸æ£ºÔÚÃ»ÓĞÌõ¼ş´¦ÀíµÄÇé¿öÏÂ£¬Ñ­»·ÖĞÉ÷ÓÃreturn
+		--return --è­¦å‘Šï¼šåœ¨æ²¡æœ‰æ¡ä»¶å¤„ç†çš„æƒ…å†µä¸‹ï¼Œå¾ªç¯ä¸­æ…ç”¨return
 	end	
 	
 end
 
 --**********************************
--- ¼ì²é CDKey
+-- æ£€æŸ¥ CDKey
 --**********************************
 function x002084_CheckCDKey( sceneId, selfId, targetId )
 	if GetMissionFlag( sceneId, selfId, MF_GetAwardFlag ) == 1 then
@@ -485,48 +485,48 @@ function x002084_CheckCDKey( sceneId, selfId, targetId )
 	end
 
 	--if GetMissionFlag( sceneId, selfId, MF_ActiveNewUserCard ) == 1 then
-		--x002084_NotifyFailBox( sceneId, selfId, targetId, "    ÄãÒÑ¾­¼¤»î¹ı²Æ¸»¿¨£¬ÎŞ·¨ÔÙ¼¤»îcdkey¡£" )
+		--x002084_NotifyFailBox( sceneId, selfId, targetId, "    ä½ å·²ç»æ¿€æ´»è¿‡è´¢å¯Œå¡ï¼Œæ— æ³•å†æ¿€æ´»cdkeyã€‚" )
 		--return
 	--end
 
 	--if GetLevel( sceneId, selfId ) >= 10 then
-		--x002084_NotifyFailBox( sceneId, selfId, targetId, "    ¶Ô²»Æğ£¬ÄãÒÑ¾­³¬¹ı10¼¶£¬ÎŞ·¨¼¤»îÁì½±Ìõ¼ş¡£" )
+		--x002084_NotifyFailBox( sceneId, selfId, targetId, "    å¯¹ä¸èµ·ï¼Œä½ å·²ç»è¶…è¿‡10çº§ï¼Œæ— æ³•æ¿€æ´»é¢†å¥–æ¡ä»¶ã€‚" )
 		--return
 	--end
 
 	CallScriptFunction( PRIZE_SCRIPT_ID, "AskCDKey", sceneId, selfId )
 
-	-- ÒÔÏÂÎª²âÊÔÊ¹ÓÃ
+	-- ä»¥ä¸‹ä¸ºæµ‹è¯•ä½¿ç”¨
 	-- SetMissionFlag( sceneId, selfId, MF_GetAwardFlag, 1 )
 end
 
 --**********************************
--- ¼ì²é ²Æ¸»¿¨
+-- æ£€æŸ¥ è´¢å¯Œå¡
 --**********************************
 function x002084_CheckNewUserCard( sceneId, selfId, targetId )
 	--if GetMissionFlag( sceneId, selfId, MF_GetAwardFlag ) == 1 then
-		--x002084_NotifyFailBox( sceneId, selfId, targetId, "    ÄãÒÑ¾­¼¤»î¹ıcdkey£¬ÎŞ·¨ÔÙ¼¤»î²Æ¸»¿¨¡£" )
+		--x002084_NotifyFailBox( sceneId, selfId, targetId, "    ä½ å·²ç»æ¿€æ´»è¿‡cdkeyï¼Œæ— æ³•å†æ¿€æ´»è´¢å¯Œå¡ã€‚" )
 		--return
 	--end
 	
 	if GetMissionFlag( sceneId, selfId, MF_ActiveNewUserCard ) == 1 then
-		x002084_NotifyFailBox( sceneId, selfId, targetId, "    ÄãÒÑ¾­¼¤»î¹ı²Æ¸»¿¨£¬ÎŞĞëÔÙ´Î¼¤»î¡£" )
+		x002084_NotifyFailBox( sceneId, selfId, targetId, "    ä½ å·²ç»æ¿€æ´»è¿‡è´¢å¯Œå¡ï¼Œæ— é¡»å†æ¬¡æ¿€æ´»ã€‚" )
 		return
 	end
 
 	--if GetLevel( sceneId, selfId ) >= 10 then
-		--x002084_NotifyFailBox( sceneId, selfId, targetId, "    ÄãµÄµÈ¼¶ÒÑ¾­´óÓÚ10¼¶£¬ÎŞ·¨ÔÙ¼¤»î²Æ¸»¿¨¡£" )
+		--x002084_NotifyFailBox( sceneId, selfId, targetId, "    ä½ çš„ç­‰çº§å·²ç»å¤§äº10çº§ï¼Œæ— æ³•å†æ¿€æ´»è´¢å¯Œå¡ã€‚" )
 		--return
 	--end
 	
-	-- ÅĞ¶ÏÊÇ·ñÖ±½Ó¼¤»î²Æ¸»¿¨
+	-- åˆ¤æ–­æ˜¯å¦ç›´æ¥æ¿€æ´»è´¢å¯Œå¡
 	-- [ QUFEI 2008-02-29 22:26 UPDATE BugID 32610 ]
 	local nIsActive = 0
 	nIsActive = IsActiveRichesCard()
 	if nIsActive == 1 then
-		--²Æ¸»¿¨¿ª¿¨
+		--è´¢å¯Œå¡å¼€å¡
 		SetMissionFlag( sceneId, selfId, MF_ActiveNewUserCard, 1 )
-		x002084_NotifyFailBox( sceneId, selfId, targetId, "    ¹§Ï²£¡ÄãÒÑ¾­¼¤»î²Æ¸»¿¨³É¹¦£¬µ½´ïÒ»¶¨µÈ¼¶Ö®ºó¿ÉÒÔÔÙÀ´ÎÒÕâÀïÁìÈ¡½±Àø¡£" )
+		x002084_NotifyFailBox( sceneId, selfId, targetId, "    æ­å–œï¼ä½ å·²ç»æ¿€æ´»è´¢å¯Œå¡æˆåŠŸï¼Œåˆ°è¾¾ä¸€å®šç­‰çº§ä¹‹åå¯ä»¥å†æ¥æˆ‘è¿™é‡Œé¢†å–å¥–åŠ±ã€‚" )
 		
 		return 0
 	end
@@ -537,45 +537,45 @@ function x002084_CheckNewUserCard( sceneId, selfId, targetId )
 		if ret < 1 then
 			return
 		end
-		--²Æ¸»¿¨µÄĞéÄâ¿¨¿ª¿¨
+		--è´¢å¯Œå¡çš„è™šæ‹Ÿå¡å¼€å¡
 		SetMissionFlag( sceneId, selfId, MF_ActiveNewUserCard, 1 )
-		x002084_NotifyFailBox( sceneId, selfId, targetId, "    ¹§Ï²£¡ÄãÒÑ¾­¼¤»î²Æ¸»¿¨³É¹¦£¬µ½´ïÒ»¶¨µÈ¼¶Ö®ºó¿ÉÒÔÔÙÀ´ÎÒÕâÀïÁìÈ¡½±Àø¡£" )
+		x002084_NotifyFailBox( sceneId, selfId, targetId, "    æ­å–œï¼ä½ å·²ç»æ¿€æ´»è´¢å¯Œå¡æˆåŠŸï¼Œåˆ°è¾¾ä¸€å®šç­‰çº§ä¹‹åå¯ä»¥å†æ¥æˆ‘è¿™é‡Œé¢†å–å¥–åŠ±ã€‚" )
 	else
 	
 		if GetLevel( sceneId, selfId ) > 30 then
-		x002084_NotifyFailBox( sceneId, selfId, targetId, "  ÄúµÄµÈ¼¶¹ı¸ß£¬ÎŞ·¨Æô¶¯´óÁ¦¿¨" )
+		x002084_NotifyFailBox( sceneId, selfId, targetId, "  æ‚¨çš„ç­‰çº§è¿‡é«˜ï¼Œæ— æ³•å¯åŠ¨å¤§åŠ›å¡" )
 		return
 		end
 	
-		--´ò¿ªÊäÈë²Æ¸»¿¨¿¨ºÅ½çÃæ
+		--æ‰“å¼€è¾“å…¥è´¢å¯Œå¡å¡å·ç•Œé¢
 		BeginUICommand( sceneId )
 			UICommand_AddInt( sceneId, targetId )
 		EndUICommand( sceneId )
 		DispatchUICommand( sceneId, selfId, 2004 )
 	end
 
-	-- ÒÔÏÂÎª²âÊÔÊ¹ÓÃ
+	-- ä»¥ä¸‹ä¸ºæµ‹è¯•ä½¿ç”¨
 	--SetMissionFlag( sceneId, selfId, MF_ActiveNewUserCard, 1 )
 end
 
 --**********************************
--- ¼ì²é ²Æ¸»¿¨666
+-- æ£€æŸ¥ è´¢å¯Œå¡666
 --**********************************
 function x002084_CheckNewUserCard666( sceneId, selfId, targetId )
 	
 	if GetMissionFlag( sceneId, selfId, MF_ActiveNewUserCard666 ) == 1 then
-		x002084_NotifyFailBox( sceneId, selfId, targetId, "    ÄãÒÑ¾­Æô¶¯¹ı³¬¼¶´óÁ¦¿¨£¬ÎŞĞëÔÙ´ÎÆô¶¯¡£" )
+		x002084_NotifyFailBox( sceneId, selfId, targetId, "    ä½ å·²ç»å¯åŠ¨è¿‡è¶…çº§å¤§åŠ›å¡ï¼Œæ— é¡»å†æ¬¡å¯åŠ¨ã€‚" )
 		return
 	end
 
-	-- ÅĞ¶ÏÊÇ·ñÖ±½Ó¼¤»î²Æ¸»¿¨
+	-- åˆ¤æ–­æ˜¯å¦ç›´æ¥æ¿€æ´»è´¢å¯Œå¡
 	-- [ QUFEI 2008-02-29 22:26 UPDATE BugID 32610 ]
 	local nIsActive = 0
 	nIsActive = IsActiveRichesCard666()
 	if nIsActive == 1 then
-		--²Æ¸»¿¨¿ª¿¨
+		--è´¢å¯Œå¡å¼€å¡
 		SetMissionFlag( sceneId, selfId, MF_ActiveNewUserCard666, 1 )
-		x002084_NotifyFailBox( sceneId, selfId, targetId, "    ¹§Ï²£¡ÄãÒÑ¾­Æô¶¯³¬¼¶´óÁ¦¿¨³É¹¦£¬µ½´ïÒ»¶¨µÈ¼¶Ö®ºó¿ÉÒÔÔÙÀ´ÎÒÕâÀïÁìÈ¡½±Àø¡£" )
+		x002084_NotifyFailBox( sceneId, selfId, targetId, "    æ­å–œï¼ä½ å·²ç»å¯åŠ¨è¶…çº§å¤§åŠ›å¡æˆåŠŸï¼Œåˆ°è¾¾ä¸€å®šç­‰çº§ä¹‹åå¯ä»¥å†æ¥æˆ‘è¿™é‡Œé¢†å–å¥–åŠ±ã€‚" )
 		
 		return 0
 	end
@@ -586,36 +586,36 @@ function x002084_CheckNewUserCard666( sceneId, selfId, targetId )
 		if ret < 1 then
 			return
 		end
-		--²Æ¸»¿¨µÄĞéÄâ¿¨¿ª¿¨
+		--è´¢å¯Œå¡çš„è™šæ‹Ÿå¡å¼€å¡
 		SetMissionFlag( sceneId, selfId, MF_ActiveNewUserCard666, 1 )
-		x002084_NotifyFailBox( sceneId, selfId, targetId, "   ¹§Ï²£¡ÄãÒÑ¾­Æô¶¯³¬¼¶´óÁ¦¿¨³É¹¦£¬µ½´ïÒ»¶¨µÈ¼¶Ö®ºó¿ÉÒÔÔÙÀ´ÎÒÕâÀïÁìÈ¡½±Àø¡£" )
+		x002084_NotifyFailBox( sceneId, selfId, targetId, "   æ­å–œï¼ä½ å·²ç»å¯åŠ¨è¶…çº§å¤§åŠ›å¡æˆåŠŸï¼Œåˆ°è¾¾ä¸€å®šç­‰çº§ä¹‹åå¯ä»¥å†æ¥æˆ‘è¿™é‡Œé¢†å–å¥–åŠ±ã€‚" )
 	else
 	
 		if GetLevel( sceneId, selfId ) > 30 then
-		x002084_NotifyFailBox( sceneId, selfId, targetId, "  ÄúµÄµÈ¼¶¹ı¸ß£¬ÎŞ·¨Æô¶¯³¬¼¶´óÁ¦¿¨" )
+		x002084_NotifyFailBox( sceneId, selfId, targetId, "  æ‚¨çš„ç­‰çº§è¿‡é«˜ï¼Œæ— æ³•å¯åŠ¨è¶…çº§å¤§åŠ›å¡" )
 		return
 		end
 	
-		--´ò¿ªÊäÈë²Æ¸»¿¨¿¨ºÅ½çÃæ
+		--æ‰“å¼€è¾“å…¥è´¢å¯Œå¡å¡å·ç•Œé¢
 		BeginUICommand( sceneId )
 			UICommand_AddInt( sceneId, targetId )
 		EndUICommand( sceneId )
 		DispatchUICommand( sceneId, selfId, 20080819 )
 	end
 
-	-- ÒÔÏÂÎª²âÊÔÊ¹ÓÃ
+	-- ä»¥ä¸‹ä¸ºæµ‹è¯•ä½¿ç”¨
 	--SetMissionFlag( sceneId, selfId, MF_ActiveNewUserCard666, 1 )
 end
 
 --**********************************
--- ÍÆ¹ãÔ±ÏµÍ³½éÉÜ
+-- æ¨å¹¿å‘˜ç³»ç»Ÿä»‹ç»
 --**********************************
 function x002084_Introduce( sceneId, selfId, targetId )
-	x002084_NotifyFailBox( sceneId, selfId, targetId, "    CdkeyÊÇÎÒÃÇÍÆ¹ãÔ±·¢²¼¸øÓÃ»§µÄĞòÁĞºÅ£¬Ê¹ÓÃ´ËĞòÁĞºÅÔÚÒ³Ãæ¼¤»îÖ®ºó£¬¿ÉÒÔµ½ÓÎÏ·ÖĞÁìÈ¡ÉÙĞíµÄ½±Àø£¬²¢ÇÒÖ»ÄÜÁìÈ¡Ò»´Î¡£" )
+	x002084_NotifyFailBox( sceneId, selfId, targetId, "    Cdkeyæ˜¯æˆ‘ä»¬æ¨å¹¿å‘˜å‘å¸ƒç»™ç”¨æˆ·çš„åºåˆ—å·ï¼Œä½¿ç”¨æ­¤åºåˆ—å·åœ¨é¡µé¢æ¿€æ´»ä¹‹åï¼Œå¯ä»¥åˆ°æ¸¸æˆä¸­é¢†å–å°‘è®¸çš„å¥–åŠ±ï¼Œå¹¶ä¸”åªèƒ½é¢†å–ä¸€æ¬¡ã€‚" )
 end
 
 --**********************************
--- ÁìCD-KEY½±Æ·
+-- é¢†CD-KEYå¥–å“
 --**********************************
 function x002084_GetAward( sceneId, selfId, targetId, grade )
 	local awardInfo = x002084_g_AwardList[grade]
@@ -625,31 +625,31 @@ function x002084_GetAward( sceneId, selfId, targetId, grade )
 
 	if GetMissionFlag( sceneId, selfId, awardInfo.flagBit ) == 1 then
 		x002084_NotifyFailBox( sceneId, selfId, targetId, awardInfo.redundantMsg )
-		return													-- Áì¹ıÁË
+		return													-- é¢†è¿‡äº†
 	end
 
 	if GetMissionFlag( sceneId, selfId, MF_GetAwardFlag ) ~= 1 then
-		x002084_NotifyFailBox( sceneId, selfId, targetId, "    ÄãÔİÊ±ÎŞ·¨ÁìÈ¡µ½½±Àø¡£" )
+		x002084_NotifyFailBox( sceneId, selfId, targetId, "    ä½ æš‚æ—¶æ— æ³•é¢†å–åˆ°å¥–åŠ±ã€‚" )
 		return
 	end
 
 	if GetLevel( sceneId, selfId ) < awardInfo.needLevel then
-		x002084_NotifyFailBox( sceneId, selfId, targetId, "    àÅ£¬ÄãµÄµÈ¼¶²»¹»£¬´ıµÈ¼¶´ïµ½" .. awardInfo.needLevel .. "¼¶ÔÙÀ´ÕÒÎÒ°É¡£" )
+		x002084_NotifyFailBox( sceneId, selfId, targetId, "    å—¯ï¼Œä½ çš„ç­‰çº§ä¸å¤Ÿï¼Œå¾…ç­‰çº§è¾¾åˆ°" .. awardInfo.needLevel .. "çº§å†æ¥æ‰¾æˆ‘å§ã€‚" )
 		return
 	end
 
 	if LuaFnGetPropertyBagSpace( sceneId, selfId ) < awardInfo.PropBagSpaceNeed then
-		x002084_NotifyFailBox( sceneId, selfId, targetId, "    ÄãµÄ±³°üµÀ¾ßÀ¸ÖÁÉÙĞèÒªÁô³ö" .. awardInfo.PropBagSpaceNeed .. "¸ñ¡£" )
+		x002084_NotifyFailBox( sceneId, selfId, targetId, "    ä½ çš„èƒŒåŒ…é“å…·æ è‡³å°‘éœ€è¦ç•™å‡º" .. awardInfo.PropBagSpaceNeed .. "æ ¼ã€‚" )
 		return
 	end
 
 	if LuaFnGetMaterialBagSpace( sceneId, selfId ) < awardInfo.MatBagSpaceNeed then
-		x002084_NotifyFailBox( sceneId, selfId, targetId, "    ÄãµÄ±³°ü²ÄÁÏÀ¸ÖÁÉÙĞèÒªÁô³ö" .. awardInfo.MatBagSpaceNeed .. "¸ñ¡£" )
+		x002084_NotifyFailBox( sceneId, selfId, targetId, "    ä½ çš„èƒŒåŒ…ææ–™æ è‡³å°‘éœ€è¦ç•™å‡º" .. awardInfo.MatBagSpaceNeed .. "æ ¼ã€‚" )
 		return
 	end
 
 	if LuaFnGetTaskItemBagSpace( sceneId, selfId ) < awardInfo.TaskBagSpaceNeed then
-		x002084_NotifyFailBox( sceneId, selfId, targetId, "    ÄãµÄ±³°üÈÎÎñÀ¸ÖÁÉÙĞèÒªÁô³ö" .. awardInfo.TaskBagSpaceNeed .. "¸ñ¡£" )
+		x002084_NotifyFailBox( sceneId, selfId, targetId, "    ä½ çš„èƒŒåŒ…ä»»åŠ¡æ è‡³å°‘éœ€è¦ç•™å‡º" .. awardInfo.TaskBagSpaceNeed .. "æ ¼ã€‚" )
 		return
 	end
 
@@ -657,7 +657,7 @@ function x002084_GetAward( sceneId, selfId, targetId, grade )
 	for i, row in awardInfo.itemAward.hashTable do
 		local itemSN, itemName, itemDesc, bBroadCast = GetOneMissionBonusItem( row )
 		if itemSN > -1 then
-			TryRecieveItem( sceneId, selfId, itemSN, 9 )								-- ·Å²»ÏÂ¾ÍÃ»ÓĞÁË
+			TryRecieveItem( sceneId, selfId, itemSN, 9 )								-- æ”¾ä¸ä¸‹å°±æ²¡æœ‰äº†
 		end
 	end
 
@@ -674,7 +674,7 @@ function x002084_GetAward( sceneId, selfId, targetId, grade )
 end
 
 --**********************************
--- Áì²Æ¸»¿¨½±Æ·
+-- é¢†è´¢å¯Œå¡å¥–å“
 --**********************************
 function x002084_GetNewCardPrize( sceneId, selfId, targetId, grade )
 	local awardInfo = x002084_g_NewCardList[grade]
@@ -684,37 +684,37 @@ function x002084_GetNewCardPrize( sceneId, selfId, targetId, grade )
 
 	if GetMissionFlag( sceneId, selfId, awardInfo.flagBit ) == 1 then
 		x002084_NotifyFailBox( sceneId, selfId, targetId, awardInfo.redundantMsg )
-		return													-- Áì¹ıÁË
+		return													-- é¢†è¿‡äº†
 	end
 
 	if GetMissionFlag( sceneId, selfId, MF_ActiveNewUserCard ) ~= 1 then
-		x002084_NotifyFailBox( sceneId, selfId, targetId, "    ÄãÔİÊ±ÎŞ·¨ÁìÈ¡µ½½±Àø¡£" )
+		x002084_NotifyFailBox( sceneId, selfId, targetId, "    ä½ æš‚æ—¶æ— æ³•é¢†å–åˆ°å¥–åŠ±ã€‚" )
 		return
 	end
 
 	if GetLevel( sceneId, selfId ) < awardInfo.needLevel then
-		x002084_NotifyFailBox( sceneId, selfId, targetId, "    àÅ£¬ÄãµÄµÈ¼¶²»¹»£¬´ıµÈ¼¶´ïµ½" .. awardInfo.needLevel .. "¼¶ÔÙÀ´ÕÒÎÒ°É¡£" )
+		x002084_NotifyFailBox( sceneId, selfId, targetId, "    å—¯ï¼Œä½ çš„ç­‰çº§ä¸å¤Ÿï¼Œå¾…ç­‰çº§è¾¾åˆ°" .. awardInfo.needLevel .. "çº§å†æ¥æ‰¾æˆ‘å§ã€‚" )
 		return
 	end
 
 	if LuaFnGetPropertyBagSpace( sceneId, selfId ) < awardInfo.PropBagSpaceNeed then
-		x002084_NotifyFailBox( sceneId, selfId, targetId, "    ÄãµÄ±³°üµÀ¾ßÀ¸ÖÁÉÙĞèÒªÁô³ö" .. awardInfo.PropBagSpaceNeed .. "¸ñ¡£" )
+		x002084_NotifyFailBox( sceneId, selfId, targetId, "    ä½ çš„èƒŒåŒ…é“å…·æ è‡³å°‘éœ€è¦ç•™å‡º" .. awardInfo.PropBagSpaceNeed .. "æ ¼ã€‚" )
 		return
 	end
 
 	if LuaFnGetMaterialBagSpace( sceneId, selfId ) < awardInfo.MatBagSpaceNeed then
-		x002084_NotifyFailBox( sceneId, selfId, targetId, "    ÄãµÄ±³°ü²ÄÁÏÀ¸ÖÁÉÙĞèÒªÁô³ö" .. awardInfo.MatBagSpaceNeed .. "¸ñ¡£" )
+		x002084_NotifyFailBox( sceneId, selfId, targetId, "    ä½ çš„èƒŒåŒ…ææ–™æ è‡³å°‘éœ€è¦ç•™å‡º" .. awardInfo.MatBagSpaceNeed .. "æ ¼ã€‚" )
 		return
 	end
 
 	if LuaFnGetTaskItemBagSpace( sceneId, selfId ) < awardInfo.TaskBagSpaceNeed then
-		x002084_NotifyFailBox( sceneId, selfId, targetId, "    ÄãµÄ±³°üÈÎÎñÀ¸ÖÁÉÙĞèÒªÁô³ö" .. awardInfo.TaskBagSpaceNeed .. "¸ñ¡£" )
+		x002084_NotifyFailBox( sceneId, selfId, targetId, "    ä½ çš„èƒŒåŒ…ä»»åŠ¡æ è‡³å°‘éœ€è¦ç•™å‡º" .. awardInfo.TaskBagSpaceNeed .. "æ ¼ã€‚" )
 		return
 	end
 	
 	if grade == x002084_g_NewCard3 then
 		if TryCreatePet(sceneId,selfId,1) <= 0 then
-			x002084_NotifyFailBox( sceneId, selfId, targetId, "    ÄúĞ¯´øµÄÕäÊŞÒÑÂú£¬Äú¿ÉÒÔ·ÅÉúÒ»¸öÕäÊŞÁô³ö¿ÕÎ»¡£" )
+			x002084_NotifyFailBox( sceneId, selfId, targetId, "    æ‚¨æºå¸¦çš„çå…½å·²æ»¡ï¼Œæ‚¨å¯ä»¥æ”¾ç”Ÿä¸€ä¸ªçå…½ç•™å‡ºç©ºä½ã€‚" )
 			return
 		end
 	end
@@ -723,14 +723,14 @@ function x002084_GetNewCardPrize( sceneId, selfId, targetId, grade )
 	for i, row in awardInfo.itemAward.hashTable do
 		local itemSN, itemName, itemDesc, bBroadCast = GetOneMissionBonusItem( row )
 		if itemSN > -1 then
-			TryRecieveItem( sceneId, selfId, itemSN, 9 )								-- ·Å²»ÏÂ¾ÍÃ»ÓĞÁË
+			TryRecieveItem( sceneId, selfId, itemSN, 9 )								-- æ”¾ä¸ä¸‹å°±æ²¡æœ‰äº†
 		end
 	end
 
 	for i, itemSN in awardInfo.itemAward.itemList do
 		local ibagidx
 		ibagidx =TryRecieveItem( sceneId, selfId, itemSN, 9 )
-		if(itemSN == 30900015 and ibagidx ~= -1) then			--µÍ¼¶±¦Ê¯ºÏ³É·û°ó¶¨ by Vega 20081008
+		if(itemSN == 30900015 and ibagidx ~= -1) then			--ä½çº§å®çŸ³åˆæˆç¬¦ç»‘å®š by Vega 20081008
 			LuaFnItemBind(sceneId, selfId,ibagidx)								
 		end
 	end
@@ -764,7 +764,7 @@ end
 
 
 --**********************************
--- Áì²Æ¸»¿¨½±Æ·666
+-- é¢†è´¢å¯Œå¡å¥–å“666
 --**********************************
 function x002084_GetNewCardPrize666( sceneId, selfId, targetId, grade )
 	local awardInfo = x002084_g_NewCardListEx[grade]
@@ -774,37 +774,37 @@ function x002084_GetNewCardPrize666( sceneId, selfId, targetId, grade )
 
 	if GetMissionFlag( sceneId, selfId, awardInfo.flagBit ) == 1 then
 		x002084_NotifyFailBox( sceneId, selfId, targetId, awardInfo.redundantMsg )
-		return													-- Áì¹ıÁË
+		return													-- é¢†è¿‡äº†
 	end
 
 	if GetMissionFlag( sceneId, selfId, MF_ActiveNewUserCard666 ) ~= 1 then
-		x002084_NotifyFailBox( sceneId, selfId, targetId, "    ÄãÔİÊ±ÎŞ·¨ÁìÈ¡µ½½±Àø¡£" )
+		x002084_NotifyFailBox( sceneId, selfId, targetId, "    ä½ æš‚æ—¶æ— æ³•é¢†å–åˆ°å¥–åŠ±ã€‚" )
 		return
 	end
 
 	if GetLevel( sceneId, selfId ) < awardInfo.needLevel then
-		x002084_NotifyFailBox( sceneId, selfId, targetId, "    àÅ£¬ÄãµÄµÈ¼¶²»¹»£¬´ıµÈ¼¶´ïµ½" .. awardInfo.needLevel .. "¼¶ÔÙÀ´ÕÒÎÒ°É¡£" )
+		x002084_NotifyFailBox( sceneId, selfId, targetId, "    å—¯ï¼Œä½ çš„ç­‰çº§ä¸å¤Ÿï¼Œå¾…ç­‰çº§è¾¾åˆ°" .. awardInfo.needLevel .. "çº§å†æ¥æ‰¾æˆ‘å§ã€‚" )
 		return
 	end
 
 	if LuaFnGetPropertyBagSpace( sceneId, selfId ) < awardInfo.PropBagSpaceNeed then
-		x002084_NotifyFailBox( sceneId, selfId, targetId, "    ÄãµÄ±³°üµÀ¾ßÀ¸ÖÁÉÙĞèÒªÁô³ö" .. awardInfo.PropBagSpaceNeed .. "¸ñ¡£" )
+		x002084_NotifyFailBox( sceneId, selfId, targetId, "    ä½ çš„èƒŒåŒ…é“å…·æ è‡³å°‘éœ€è¦ç•™å‡º" .. awardInfo.PropBagSpaceNeed .. "æ ¼ã€‚" )
 		return
 	end
 
 	if LuaFnGetMaterialBagSpace( sceneId, selfId ) < awardInfo.MatBagSpaceNeed then
-		x002084_NotifyFailBox( sceneId, selfId, targetId, "    ÄãµÄ±³°ü²ÄÁÏÀ¸ÖÁÉÙĞèÒªÁô³ö" .. awardInfo.MatBagSpaceNeed .. "¸ñ¡£" )
+		x002084_NotifyFailBox( sceneId, selfId, targetId, "    ä½ çš„èƒŒåŒ…ææ–™æ è‡³å°‘éœ€è¦ç•™å‡º" .. awardInfo.MatBagSpaceNeed .. "æ ¼ã€‚" )
 		return
 	end
 
 	if LuaFnGetTaskItemBagSpace( sceneId, selfId ) < awardInfo.TaskBagSpaceNeed then
-		x002084_NotifyFailBox( sceneId, selfId, targetId, "    ÄãµÄ±³°üÈÎÎñÀ¸ÖÁÉÙĞèÒªÁô³ö" .. awardInfo.TaskBagSpaceNeed .. "¸ñ¡£" )
+		x002084_NotifyFailBox( sceneId, selfId, targetId, "    ä½ çš„èƒŒåŒ…ä»»åŠ¡æ è‡³å°‘éœ€è¦ç•™å‡º" .. awardInfo.TaskBagSpaceNeed .. "æ ¼ã€‚" )
 		return
 	end
 	
 	--if grade == x002084_g_NewCard3_666 then
 		--if TryCreatePet(sceneId,selfId,1) <= 0 then
-			--x002084_NotifyFailBox( sceneId, selfId, targetId, "    ÄúĞ¯´øµÄÕäÊŞÒÑÂú£¬Äú¿ÉÒÔ·ÅÉúÒ»¸öÕäÊŞÁô³ö¿ÕÎ»¡£" )
+			--x002084_NotifyFailBox( sceneId, selfId, targetId, "    æ‚¨æºå¸¦çš„çå…½å·²æ»¡ï¼Œæ‚¨å¯ä»¥æ”¾ç”Ÿä¸€ä¸ªçå…½ç•™å‡ºç©ºä½ã€‚" )
 			--return
 		--end
 	--end
@@ -813,7 +813,7 @@ function x002084_GetNewCardPrize666( sceneId, selfId, targetId, grade )
 	for i, row in awardInfo.itemAward.hashTable do
 		local itemSN, itemName, itemDesc, bBroadCast = GetOneMissionBonusItem( row )
 		if itemSN > -1 then
-			local bagpos01 = TryRecieveItem( sceneId, selfId, itemSN, 9 )								-- ·Å²»ÏÂ¾ÍÃ»ÓĞÁË
+			local bagpos01 = TryRecieveItem( sceneId, selfId, itemSN, 9 )								-- æ”¾ä¸ä¸‹å°±æ²¡æœ‰äº†
 			LuaFnItemBind( sceneId, selfId, bagpos01 )
 		end
 	end
@@ -845,7 +845,7 @@ function x002084_GetNewCardPrize666( sceneId, selfId, targetId, grade )
 end
 
 --**********************************
--- ¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+-- å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x002084_NotifyFailBox( sceneId, selfId, targetId, msg )
 	BeginEvent( sceneId )
@@ -854,7 +854,7 @@ function x002084_NotifyFailBox( sceneId, selfId, targetId, msg )
 	DispatchEventList( sceneId, selfId, targetId )
 end
 
--- ÃÅÅÉÌ××°
+-- é—¨æ´¾å¥—è£…
 function x002084_GetMenpaiTaoEquip(mid)
 	if(mid == MP_SHAOLIN) then
 		return 10500002
@@ -880,7 +880,7 @@ function x002084_GetMenpaiTaoEquip(mid)
 	return 0
 end
 
--- ÃÅÅÉÒª¾÷
+-- é—¨æ´¾è¦è¯€
 function x002084_GetMenpaiYaoJue(mid)
 	if(mid == MP_SHAOLIN) then
 		return 30308011

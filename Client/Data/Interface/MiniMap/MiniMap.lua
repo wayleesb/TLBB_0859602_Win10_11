@@ -62,7 +62,7 @@ function MiniMap_OnLoad()
 	MiniMap_AccountSafeBack:Hide();
 	
 	Minimap_Max();
-	MiniMap_Yuanbao:SetToolTip("Ôª±¦ÉÌµê");
+	MiniMap_Yuanbao:SetToolTip("å…ƒå®å•†åº—");
 	MiniMap_AutoSearch:SetToolTip("#{INTERFACE_XML_983}");
 	MiniMap_NetStatus_Flash:Play( false );
 
@@ -72,7 +72,7 @@ end
 function MiniMap_UpdateSceneName()
 	local scenename;
 	scenename = GetCurrentSceneName();
-	local len = string.len(scenename);
+	local len = UTF8Length(scenename);
 	if( len < 10 ) then	
 		MiniMap_Placename:SetProperty( "Font", "YouYuan9.75" );
 	else
@@ -108,33 +108,33 @@ function MiniMap_OnEvent(event)
 	  local strOnlineTime = ""
 		if tonumber(arg0) < 250 then
 			MiniMap_MiniMap_NetStatus : SetProperty("SetCurrentImage","NetState1")
-			strNetState = "µã»÷¿É²é¿´½ñÈÕ»î¶¯ÁĞ±í#rÍøÂç×´¿ö:¿ÕÏĞ".."("..tostring(arg0).."ms)"
+			strNetState = "ç‚¹å‡»å¯æŸ¥çœ‹ä»Šæ—¥æ´»åŠ¨åˆ—è¡¨#rç½‘ç»œçŠ¶å†µ:ç©ºé—²".."("..tostring(arg0).."ms)"
 		elseif tonumber(arg0) < 500 then
 			MiniMap_MiniMap_NetStatus : SetProperty("SetCurrentImage","NetState2")
-			--MiniMap_MiniMap_NetStatus : SetToolTip("ÍøÂç×´¿ö:Õı³£".."("..tostring(arg0).."ms)")
-			strNetState = "µã»÷¿É²é¿´½ñÈÕ»î¶¯ÁĞ±í#rÍøÂç×´¿ö:Õı³£".."("..tostring(arg0).."ms)"
+			--MiniMap_MiniMap_NetStatus : SetToolTip("ç½‘ç»œçŠ¶å†µ:æ­£å¸¸".."("..tostring(arg0).."ms)")
+			strNetState = "ç‚¹å‡»å¯æŸ¥çœ‹ä»Šæ—¥æ´»åŠ¨åˆ—è¡¨#rç½‘ç»œçŠ¶å†µ:æ­£å¸¸".."("..tostring(arg0).."ms)"
 		elseif tonumber(arg0) < 1000 then
 			MiniMap_MiniMap_NetStatus : SetProperty("SetCurrentImage","NetState3")
-			--MiniMap_MiniMap_NetStatus : SetToolTip("ÍøÂç×´¿ö:Óµ¼·".."("..tostring(arg0).."ms)")
-			strNetState = "µã»÷¿É²é¿´½ñÈÕ»î¶¯ÁĞ±í#rÍøÂç×´¿ö:Óµ¼·".."("..tostring(arg0).."ms)"
+			--MiniMap_MiniMap_NetStatus : SetToolTip("ç½‘ç»œçŠ¶å†µ:æ‹¥æŒ¤".."("..tostring(arg0).."ms)")
+			strNetState = "ç‚¹å‡»å¯æŸ¥çœ‹ä»Šæ—¥æ´»åŠ¨åˆ—è¡¨#rç½‘ç»œçŠ¶å†µ:æ‹¥æŒ¤".."("..tostring(arg0).."ms)"
 		else
 			MiniMap_MiniMap_NetStatus : SetProperty("SetCurrentImage","NetState4")
-			--MiniMap_MiniMap_NetStatus : SetToolTip("ÍøÂç×´¿ö£º¶ÂÈû".."("..tostring(arg0).."ms)")
-			strNetState = "µã»÷¿É²é¿´½ñÈÕ»î¶¯ÁĞ±í#rÍøÂç×´¿ö:¶ÂÈû".."("..tostring(arg0).."ms)"
+			--MiniMap_MiniMap_NetStatus : SetToolTip("ç½‘ç»œçŠ¶å†µï¼šå µå¡".."("..tostring(arg0).."ms)")
+			strNetState = "ç‚¹å‡»å¯æŸ¥çœ‹ä»Šæ—¥æ´»åŠ¨åˆ—è¡¨#rç½‘ç»œçŠ¶å†µ:å µå¡".."("..tostring(arg0).."ms)"
 		end
 		
 		local nFatigueState = tonumber( arg1 )
 		local IsNeedFatigue = tonumber( arg2 );
 		local OnlineTime = tonumber( arg3 ) 
-		local strOnlineState = "(½¡¿µ)"
+		local strOnlineState = "(å¥åº·)"
 		
-		if( IsNeedFatigue == 1 ) then --Èç¹ûĞèÒª¼ÆËã·À³ÁÃÔ
+		if( IsNeedFatigue == 1 ) then --å¦‚æœéœ€è¦è®¡ç®—é˜²æ²‰è¿·
 			if( nFatigueState == 1 ) then
-				strOnlineState = "(Æ£ÀÍ)"
+				strOnlineState = "(ç–²åŠ³)"
 			elseif( nFatigueState == 2 ) then
-				strOnlineState = "(²»½¡¿µ)"
+				strOnlineState = "(ä¸å¥åº·)"
 			end
-			strOnlineTime = "#rÀÛ¼ÆÔÚÏßÊ±¼ä:"..tostring( OnlineTime ).."Ğ¡Ê±"..strOnlineState
+			strOnlineTime = "#rç´¯è®¡åœ¨çº¿æ—¶é—´:"..tostring( OnlineTime ).."å°æ—¶"..strOnlineState
 		else
 			strOnlineState = "";
 		end
@@ -160,7 +160,7 @@ function MiniMap_OnEvent(event)
 		else
 			MiniMap_SafeTime_Frame:Hide();
 			MiniMap_SafeTimeAnimate:Hide();
-			CloseFangDaohao();--¹Ø±ÕÒÉËÆ±»µÁÌáÊ¾´°¿Ú
+			CloseFangDaohao();--å…³é—­ç–‘ä¼¼è¢«ç›—æç¤ºçª—å£
 		end
 	elseif( event == "OPEN_MINIMAPEXP" ) then
 		MiniMap_UpdateLockFlag();
@@ -172,8 +172,8 @@ function MiniMap_OnEvent(event)
 		MiniMap_AccountSafeBack:Show();
 		MiniMap_AccountSafe:SetProperty( "SetCurrentImage","red" );
 		MiniMap_AccountSafeState:SetProperty( "SetCurrentImage","SafeIcon" );
-		SetTimer("MiniMap","MiniMap_TimerProc()",60000);		--ÉèÖÃ¶¨Ê±Æ÷Ò»·ÖÖÓºó¹Ø±Õ´°¿Ú
-		MiniMap_AccountSafeFlash : Show();		--È·±£»áÉÁË¸
+		SetTimer("MiniMap","MiniMap_TimerProc()",60000);		--è®¾ç½®å®šæ—¶å™¨ä¸€åˆ†é’Ÿåå…³é—­çª—å£
+		MiniMap_AccountSafeFlash : Show();		--ç¡®ä¿ä¼šé—ªçƒ
 		
 	end
 
@@ -183,14 +183,14 @@ function MiniMap_OnEvent(event)
 		end
 
 		if(tonumber(arg0) == 1)then
-		  if(Variable:GetVariable("System_CodePage") ~= "1258") then
+		  if(Variable:GetVariable("System_Region") ~= "1258") then
 				MiniMap_Fangchengmi_Flash : Show();
 			end
 			MiniMap_Fangchengmi_Flash1 : Hide()
 			MiniMap_Fangchengmi_Flash1 :SetProperty( "AlwaysOnTop","False" );
 			MiniMap_Fangchengmi_Flash : SetProperty( "AlwaysOnTop","True" );
 		elseif(tonumber(arg0) == 2)then
-		  if(Variable:GetVariable("System_CodePage") ~= "1258") then
+		  if(Variable:GetVariable("System_Region") ~= "1258") then
 				MiniMap_Fangchengmi_Flash1 : Show();
 			end
 			MiniMap_Fangchengmi_Flash : Hide();
@@ -206,7 +206,7 @@ function MiniMap_OnEvent(event)
 			return;
 		end
 		if(tonumber(arg0) == 1)then
-		  if(Variable:GetVariable("System_CodePage") ~= "1258") then
+		  if(Variable:GetVariable("System_Region") ~= "1258") then
 				MiniMap_Fangchengmi_Btn : Show();
 			end
 		else
@@ -227,7 +227,7 @@ function MiniMap_OnEvent(event)
 end
 
 function MiniMap_TimerProc()
-	KillTimer("MiniMap_TimerProc()");		--¹Ø±Õ¶¨Ê±Æ÷
+	KillTimer("MiniMap_TimerProc()");		--å…³é—­å®šæ—¶å™¨
 	--MiniMap_AccountSafeBack:Hide();
 	MiniMap_AccountSafeFlash :Hide();
 
@@ -244,7 +244,7 @@ end
 
 function MiniMap_UpdateLockFlag()
 	local level = Player:GetData( "LEVEL" );
-	if( Player:IsHavePassword() == 0 ) then --Èç¹ûÓĞÃ»ÓĞÃÜÂëÄØ£¬¾ÍÉÁË¸
+	if( Player:IsHavePassword() == 0 ) then --å¦‚æœæœ‰æ²¡æœ‰å¯†ç å‘¢ï¼Œå°±é—ªçƒ
 		MiniMap_SafeLock:SetProperty( "SetCurrentImage","red" );
 		MiniMap_SafeLockState:SetProperty( "SetCurrentImage","Unlock" );
 		MiniMap_SafeLockFlash:Show();
@@ -252,14 +252,14 @@ function MiniMap_UpdateLockFlag()
 		MiniMap_SafeLock:SetProperty( "SetCurrentImage","green" );
 		MiniMap_SafeLockFlash:Hide();
 	
-		--Ã»ÓĞËø¶¨¾ÍÏÔÊ¾¿ª¿ªµÄËøµÄÍ¼Æ¬
+		--æ²¡æœ‰é”å®šå°±æ˜¾ç¤ºå¼€å¼€çš„é”çš„å›¾ç‰‡
 		if ( Player:IsLocked() == 0 ) then 
 			MiniMap_SafeLockState:SetProperty( "SetCurrentImage","Lock" );
 		else 
 			MiniMap_SafeLockState:SetProperty( "SetCurrentImage","Unlock" );
 		end
 	end
-	--ÃÉ×Ó¿ØÖÆ
+	--è’™å­æ§åˆ¶
 	if( tonumber( level ) <= 15 ) then
 		MiniMap_SafeLock:SetProperty( "SetCurrentImage","gray" );
 		MiniMap_SafeLockState:SetProperty( "SetCurrentImage","Unlock" );
@@ -283,23 +283,23 @@ function Minimap_UpdatePKMode()
 	
 	local strPKMode = ""
 	if( tonumber( nPKMode ) == 0 ) then
-		--MiniMap_PK_Mode:SetToolTip( "ºÍÆ½" );
-		strPKMode = "ºÍÆ½\n´ËÄ£Ê½ÏÂÖ»ÄÜ·´»÷¹¥»÷×Ô¼ºµÄÍæ¼Ò£¬²»ÄÜÖ÷¶¯¹¥»÷ÆäËûÍæ¼Ò¡£"
+		--MiniMap_PK_Mode:SetToolTip( "å’Œå¹³" );
+		strPKMode = "å’Œå¹³\næ­¤æ¨¡å¼ä¸‹åªèƒ½åå‡»æ”»å‡»è‡ªå·±çš„ç©å®¶ï¼Œä¸èƒ½ä¸»åŠ¨æ”»å‡»å…¶ä»–ç©å®¶ã€‚"
 	elseif( tonumber( nPKMode ) == 1 ) then
 		--MiniMap_PK_Mode:SetToolTip( "PK_FREE_FOR_ALL" );
-		strPKMode = "¸öÈË»ìÕ½"
+		strPKMode = "ä¸ªäººæ··æˆ˜"
 		
 	elseif( tonumber( nPKMode ) == 2 ) then
 		--MiniMap_PK_Mode:SetToolTip( "PK_FREE_FOR_MORAL" );
-		strPKMode = "ÉÆ¶ñÄ£Ê½\n´ËÄ£Ê½ÏÂ¿ÉÒÔ¹¥»÷É±Æø´óÓÚ0µÄÍæ¼Ò¡£"
+		strPKMode = "å–„æ¶æ¨¡å¼\næ­¤æ¨¡å¼ä¸‹å¯ä»¥æ”»å‡»æ€æ°”å¤§äº0çš„ç©å®¶ã€‚"
 		
 	elseif( tonumber( nPKMode ) == 3 ) then
 		--MiniMap_PK_Mode:SetToolTip( "PK_FREE_FOR_TEAM" );
-		strPKMode = "×é¶Ó»ìÕ½"
+		strPKMode = "ç»„é˜Ÿæ··æˆ˜"
 		
 	elseif( tonumber( nPKMode ) == 4 ) then
 		--MiniMap_PK_Mode:SetToolTip( "PK_FREE_FOR_GUILD" );
-		strPKMode = "°ïÅÉÍ¬ÃË»ìÕ½"
+		strPKMode = "å¸®æ´¾åŒç›Ÿæ··æˆ˜"
 	end
 	
 	local strTime = ""
@@ -310,11 +310,11 @@ function Minimap_UpdatePKMode()
 	    local iSec = math.mod( iTime, 60 )
 	    local iMin = math.floor( iTime / 60 )
 	    
-	    --strTime = "#r("..( tonumber(iTime) ).."ÃëºóÇĞ»»µ½ºÍÆ½»òÉÆ¶ñÄ£Ê½)"
+	    --strTime = "#r("..( tonumber(iTime) ).."ç§’ååˆ‡æ¢åˆ°å’Œå¹³æˆ–å–„æ¶æ¨¡å¼)"
 	    if( iMin > 0 ) then
-	        strTime = "#r"..(iMin).."·Ö"..( tonumber(iSec) ).."ÃëºóÇĞ»»µ½ºÍÆ½»òÉÆ¶ñÄ£Ê½"
+	        strTime = "#r"..(iMin).."åˆ†"..( tonumber(iSec) ).."ç§’ååˆ‡æ¢åˆ°å’Œå¹³æˆ–å–„æ¶æ¨¡å¼"
 	    else
-	        strTime = "#r"..( tonumber(iSec) ).."ÃëºóÇĞ»»µ½ºÍÆ½»òÉÆ¶ñÄ£Ê½"
+	        strTime = "#r"..( tonumber(iSec) ).."ç§’ååˆ‡æ¢åˆ°å’Œå¹³æˆ–å–„æ¶æ¨¡å¼"
 	    end
 	    
 	end
@@ -323,16 +323,16 @@ function Minimap_UpdatePKMode()
 
 	
 end
-			--IMAGE_TYPE_Animy	= 0, // µĞÈË
-			--IMAGE_TYPE_ExpNpc	= 1, // ÌØÊânpc
-			--IMAGE_TYPE_Team		= 2, // ¶ÓÓÑ
-			--IMAGE_TYPE_Player	= 3, // ±ğµÄÍæ¼Ò
-			--IMAGE_TYPE_ExpObj	= 4, // Éú³¤µã
-			--IMAGE_TYPE_Active	= 5, // ¼¤»î·½Ïòµã
-			--IMAGE_TYPE_ScenePos = 6, // ³¡¾°Ìø×ªµã
-			--IMAGE_TYPE_Flash	= 7, // ÉÁ¹âµã
-			--IMAGE_TYPE_Pet		= 8, // ³èÎï
-			--IMAGE_TYPE_Direction = 9,// ·½Ïò¼ıÍ·	
+			--IMAGE_TYPE_Animy	= 0, // æ•Œäºº
+			--IMAGE_TYPE_ExpNpc	= 1, // ç‰¹æ®Šnpc
+			--IMAGE_TYPE_Team		= 2, // é˜Ÿå‹
+			--IMAGE_TYPE_Player	= 3, // åˆ«çš„ç©å®¶
+			--IMAGE_TYPE_ExpObj	= 4, // ç”Ÿé•¿ç‚¹
+			--IMAGE_TYPE_Active	= 5, // æ¿€æ´»æ–¹å‘ç‚¹
+			--IMAGE_TYPE_ScenePos = 6, // åœºæ™¯è·³è½¬ç‚¹
+			--IMAGE_TYPE_Flash	= 7, // é—ªå…‰ç‚¹
+			--IMAGE_TYPE_Pet		= 8, // å® ç‰©
+			--IMAGE_TYPE_Direction = 9,// æ–¹å‘ç®­å¤´	
 function UpdateMinimapState()
 		
 		this:Show();
@@ -386,7 +386,7 @@ function Minimap_CoordinateUpdate()
 	end
 	local hour = GetCurrentTime() + 1;
 	MiniMap_ChineseTime:SetProperty("SetCurrentImage", "Time"..tostring( hour ) );
-	--AxTrace( 8,0,"µ±Ç°Ê±¼ä"..tostring( hour ) );
+	--AxTrace( 8,0,"å½“å‰æ—¶é—´"..tostring( hour ) );
 	TimeDot[ hour ]:Show();
 	
 end
@@ -457,36 +457,36 @@ function MiniMap_PlayerAsk_Bn_Clicked()
 	local menpai = Player:GetData("MEMPAI");
 	local strName = "";
 	
-	-- µÃµ½ÃÅÅÉÃû³Æ.
+	-- å¾—åˆ°é—¨æ´¾åç§°.
 	if(0 == menpai) then
-		strName = "ÉÙÁÖ";
+		strName = "å°‘æ—";
 		
 	elseif(1 == menpai) then
-		strName = "Ã÷½Ì";
+		strName = "æ˜æ•™";
 		
 	elseif(2 == menpai) then
-		strName = "Ø¤°ï";
+		strName = "ä¸å¸®";
 		
 	elseif(3 == menpai) then
-		strName = "Îäµ±";
+		strName = "æ­¦å½“";
 	
 	elseif(4 == menpai) then
-		strName = "¶ëáÒ";
+		strName = "å³¨åµ‹";
 	
 	elseif(5 == menpai) then
-		strName = "ĞÇËŞ";
+		strName = "æ˜Ÿå®¿";
 	
 	elseif(6 == menpai) then
-		strName = "ÌìÁú";
+		strName = "å¤©é¾™";
 	
 	elseif(7 == menpai) then
-		strName = "ÌìÉ½";
+		strName = "å¤©å±±";
 	
 	elseif(8 == menpai) then
-		strName = "åĞÒ£";
+		strName = "é€é¥";
 	
 	elseif(9 == menpai) then
-		strName = "ÎŞÃÅÅÉ";
+		strName = "æ— é—¨æ´¾";
 	end
 	
 	local urlStr = "cn="..Player:GetData("ACCOUNTNAME")

@@ -1,21 +1,21 @@
--- ����
---������Ʒ
---��·�ű�
+-- 洛阳
+--购买物品
+--问路脚本
 x500001_g_scriptId = 500001
 
--- ��·���� type: 1 Ϊ�����˵�, 2 Ϊֱ����·
+-- 问路类型 type: 1 为二级菜单, 2 为直接问路
 x500001_g_Signpost = {
-	{ type=2, name="������", x=210, y=154, tip="���¹�", desc="�������ϰ����¹�210��154���ڶ��еı������С�����TAB������ͼ�ϻ�����˸�ı�ʶ�ġ�", eventId=-1 },
-	{ type=2, name="�ӻ�����", x=254, y=145, tip="�Ǹ���", desc="�ӻ������Ǹ��飨254��146���ڶ����ڡ�����TAB������ͼ�ϻ�����˸�ı�ʶ�ġ�", eventId=-1 },
-	{ type=2, name="���ε�", x=182, y=183, tip="��Ψ˼", desc="���ε��ƹ���Ψ˼��182��183�����ϴ�ֵķ��εꡣ����TAB������ͼ�ϻ�����˸�ı�ʶ�ġ�", eventId=-1 },
-	{ type=2, name="��Ʒ��", x=178, y=177, tip="������", desc="��Ʒ���ƹ�����䣨178��177�����ϴ�ֵķ��εꡣ����TAB������ͼ�ϻ�����˸�ı�ʶ�ġ�", eventId=-1 },
-	{ type=2, name="ҩ��", x=135, y=164, tip="������", desc="ҩ���ƹ��������135��164�����ϴ�ֵ�ҩ�ꡣ����TAB������ͼ�ϻ�����˸�ı�ʶ�ġ�", eventId=-1 },
-	{ type=2, name="�Ƶ�", x=138, y=140, tip="��ͳ", desc="�Ƶ��ƹ�ͳ��138��140���������·�ϡ�����TAB������ͼ�ϻ�����˸�ı�ʶ�ġ�", eventId=-1 },
-	{ type=2, name="�鱦����", x=63, y=147, tip="�ɷ���", desc="�鱦�����ɷ��ˣ�63��147���������ڡ�����TAB������ͼ�ϻ�����˸�ı�ʶ�ġ�", eventId=-1 },
+	{ type=2, name="兵器店", x=210, y=154, tip="王德贵", desc="兵器店老板王德贵（210，154）在东市的兵器铺中。按下TAB键，地图上会有闪烁的标识的。", eventId=-1 },
+	{ type=2, name="杂货商人", x=254, y=145, tip="芮福祥", desc="杂货商人芮福祥（254，146）在东门内。按下TAB键，地图上会有闪烁的标识的。", eventId=-1 },
+	{ type=2, name="服饰店", x=182, y=183, tip="甄唯思", desc="服饰店掌柜甄唯思（182，183）在南大街的服饰店。按下TAB键，地图上会有闪烁的标识的。", eventId=-1 },
+	{ type=2, name="饰品店", x=178, y=177, tip="贾作珍", desc="饰品店掌柜贾作珍（178，177）在南大街的服饰店。按下TAB键，地图上会有闪烁的标识的。", eventId=-1 },
+	{ type=2, name="药店", x=135, y=164, tip="白萌生", desc="药店掌柜白萌生（135，164）在南大街的药店。按下TAB键，地图上会有闪烁的标识的。", eventId=-1 },
+	{ type=2, name="酒店", x=138, y=140, tip="范统", desc="酒店掌柜范统（138，140）在西大街路南。按下TAB键，地图上会有闪烁的标识的。", eventId=-1 },
+	{ type=2, name="珠宝商人", x=63, y=147, tip="郎夫人", desc="珠宝商人郎夫人（63，147）在西门内。按下TAB键，地图上会有闪烁的标识的。", eventId=-1 },
 }
 
 --**********************************
---�о��¼�
+--列举事件
 --**********************************
 function x500001_OnEnumerate( sceneId, selfId, targetId )
 	for i, signpost in x500001_g_Signpost do
@@ -24,14 +24,14 @@ function x500001_OnEnumerate( sceneId, selfId, targetId )
 end
 
 --**********************************
---������ں���
+--任务入口函数
 --**********************************
 function x500001_OnDefaultEvent( sceneId, selfId, targetId )
 	signpost = x500001_g_Signpost[GetNumText()]
 
 	if signpost.type == 1 then
 		BeginEvent(sceneId)
-			AddText(sceneId, signpost.name .. "��")
+			AddText(sceneId, signpost.name .. "：")
 			CallScriptFunction( signpost.eventId, "OnEnumerate", sceneId, selfId, targetId )
 		EndEvent(sceneId)
 		DispatchEventList(sceneId, selfId, targetId)

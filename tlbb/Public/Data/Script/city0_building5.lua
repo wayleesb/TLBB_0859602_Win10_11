@@ -1,74 +1,74 @@
---³ÇÊĞNPC
---½ğ¿â
+--åŸå¸‚NPC
+--é‡‘åº“
 
 x805012_g_scriptId=805012
 x805012_g_BuildingID6 = 3
 
---ÒøÆ±ÀàĞÍID
+--é“¶ç¥¨ç±»å‹ID
 x805012_g_TicketItemIdx	=	40002000
 x805012_g_OutDateTicketItemIdx	=	40000000
 x805012_g_MerchandiseRate = 1.5
--- ½»¹ÙÆ±µÄ½±Àø±ÈÀı
-x805012_g_GuildRate = 1.00		-- °ïÅÉ»ñµÃµÄ×Ê½ğ»Ø±¨100%
-x805012_g_PlayerRate = 0.20		-- ¸öÈË»ñµÃµÄ×Ê½ğ»Ø±¨20%
+-- äº¤å®˜ç¥¨çš„å¥–åŠ±æ¯”ä¾‹
+x805012_g_GuildRate = 1.00		-- å¸®æ´¾è·å¾—çš„èµ„é‡‘å›æŠ¥100%
+x805012_g_PlayerRate = 0.20		-- ä¸ªäººè·å¾—çš„èµ„é‡‘å›æŠ¥20%
 
--- Ã¿¸öÍæ¼ÒÒ»Ìì¿ÉÒÔÁìÈ¡ÒøÆ±µÄ´ÎÊı
+-- æ¯ä¸ªç©å®¶ä¸€å¤©å¯ä»¥é¢†å–é“¶ç¥¨çš„æ¬¡æ•°
 x805012_g_TicketTakeTimes = 8
 
--- Ã¿¸ö°ïÅÉÒ»Ìì¿ÉÒÔÁìÈ¡ÒøÆ±µÄ´ÎÊı»ùÊı
+-- æ¯ä¸ªå¸®æ´¾ä¸€å¤©å¯ä»¥é¢†å–é“¶ç¥¨çš„æ¬¡æ•°åŸºæ•°
 x805012_g_BaseTotalTicketTakeTimes = 200
 
--- °ïÅÉÃ¿ÉıÒ»¼¶¿ÉÒÔÔö¼ÓµÄÒøÆ±ÁìÈ¡´ÎÊı
+-- å¸®æ´¾æ¯å‡ä¸€çº§å¯ä»¥å¢åŠ çš„é“¶ç¥¨é¢†å–æ¬¡æ•°
 x805012_g_TicketTakeTimesBonusPerLvl = 25
 x805012_g_TicketDecValue = 136
 x805012_g_TicketIncValue = 680
 x805012_g_TicketDecRate = 1.0
 x805012_g_TicketIncRate = 1.0
 x805012_g_GuildBoomIndex = 18
---¾èÖúµÄ×îĞ¡½ğ¶î
+--æåŠ©çš„æœ€å°é‡‘é¢
 x805012_g_GuildMoneyLimit	=	10000
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x805012_OnDefaultEvent( sceneId, selfId,targetId )
 
-	--ÊÇ·ñÊÇ±¾°ï³ÉÔ±
+	--æ˜¯å¦æ˜¯æœ¬å¸®æˆå‘˜
 	local guildid 		= GetHumanGuildID(sceneId,selfId)
 	local cityguildid = GetCityGuildID(sceneId, selfId, sceneId)
 	local strText
 
 	if(guildid ~= cityguildid) then
 		BeginEvent(sceneId)
-			strText = "    ±¾°ï²ÆÎñÖØµØ£¬ÇëÎğ¶ºÁô£¬ÇÒÔÚÏÂÖØÖ°ÔÚÉí£¬Òà²»±ã½Ó´ı¡£"
+			strText = "    æœ¬å¸®è´¢åŠ¡é‡åœ°ï¼Œè¯·å‹¿é€—ç•™ï¼Œä¸”åœ¨ä¸‹é‡èŒåœ¨èº«ï¼Œäº¦ä¸ä¾¿æ¥å¾…ã€‚"
 			AddText(sceneId,strText)
-			AddNumText( sceneId, x805012_g_scriptId, "ÉÌÈËµêÆÌ",7,5)
+			AddNumText( sceneId, x805012_g_scriptId, "å•†äººåº—é“º",7,5)
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 		return
 	end
 
 	BeginEvent(sceneId)
-		strText = "    ÔÚÏÂ¸ºÔğ±¾°ïÇ®²ÆÊÂÎñ£¬Ç®ÄËÖîÊÂÖ®ÃüÂö£¬¶àÔÚÎÒÕâÀïÕÒĞ©ÊÂ×ö£¬ÓÚ°ïÓÚÄã½ÔÓĞºÃ´¦¡£"
+		strText = "    åœ¨ä¸‹è´Ÿè´£æœ¬å¸®é’±è´¢äº‹åŠ¡ï¼Œé’±ä¹ƒè¯¸äº‹ä¹‹å‘½è„‰ï¼Œå¤šåœ¨æˆ‘è¿™é‡Œæ‰¾äº›äº‹åšï¼Œäºå¸®äºä½ çš†æœ‰å¥½å¤„ã€‚"
 		AddText(sceneId,strText);
-		AddNumText( sceneId, x805012_g_scriptId, "ÁìÈ¡ÒøÆ±", 6, 2 )
-		AddNumText( sceneId, x805012_g_scriptId, "½»»¹ÒøÆ±", 6, 3 )
-		--AddNumText( sceneId, x805012_g_scriptId, "ÉÌÈËµêÆÌ",7,1)
-		AddNumText( sceneId, x805012_g_scriptId, "Ç®×¯½éÉÜ", 11, 4 )
-		AddNumText( sceneId, x805012_g_scriptId, "ÉÌÈËµêÆÌ",7,5)
-		AddNumText( sceneId, x805012_g_scriptId, "ÉÌÒµÂ·Ïß", 12, 6 )
-		AddNumText( sceneId, x805012_g_scriptId, "µİ½»¹ıÆÚÒøÆ±", 6, 7 )
-		AddNumText( sceneId, x805012_g_scriptId, "ÁìÈ¡¹¤×Ê", 7, 8 )
-		--life Ìí¼ÓÕâ¸ö½¨ÖşÎïµÄÏàÓ¦Éú»î¼¼ÄÜÑ¡Ïî
+		AddNumText( sceneId, x805012_g_scriptId, "é¢†å–é“¶ç¥¨", 6, 2 )
+		AddNumText( sceneId, x805012_g_scriptId, "äº¤è¿˜é“¶ç¥¨", 6, 3 )
+		--AddNumText( sceneId, x805012_g_scriptId, "å•†äººåº—é“º",7,1)
+		AddNumText( sceneId, x805012_g_scriptId, "é’±åº„ä»‹ç»", 11, 4 )
+		AddNumText( sceneId, x805012_g_scriptId, "å•†äººåº—é“º",7,5)
+		AddNumText( sceneId, x805012_g_scriptId, "å•†ä¸šè·¯çº¿", 12, 6 )
+		AddNumText( sceneId, x805012_g_scriptId, "é€’äº¤è¿‡æœŸé“¶ç¥¨", 6, 7 )
+		AddNumText( sceneId, x805012_g_scriptId, "é¢†å–å·¥èµ„", 7, 8 )
+		--life æ·»åŠ è¿™ä¸ªå»ºç­‘ç‰©çš„ç›¸åº”ç”Ÿæ´»æŠ€èƒ½é€‰é¡¹
 		CallScriptFunction( CITY_BUILDING_ABILITY_SCRIPT, "AddCityLifeAbilityOpt",sceneId, selfId, x805012_g_scriptId,x805012_g_BuildingID6,888)
-		AddNumText( sceneId, x805012_g_scriptId, "#{BPZJ_0801014_001}", 6, 11 )--°ï»á×Ê½ğ¾èÖú
-		AddNumText( sceneId, x805012_g_scriptId, "#{BPZJ_0801014_002}", 11, 12 )--¹ØÓÚ°ï»á×Ê½ğ¾èÖú
+		AddNumText( sceneId, x805012_g_scriptId, "#{BPZJ_0801014_001}", 6, 11 )--å¸®ä¼šèµ„é‡‘æåŠ©
+		AddNumText( sceneId, x805012_g_scriptId, "#{BPZJ_0801014_002}", 11, 12 )--å…³äºå¸®ä¼šèµ„é‡‘æåŠ©
 		
 		local Guildpos = GetGuildPos(sceneId, selfId)
 		if x805012_IsManager(Guildpos)==1 then
-			--¹ÜÀíÕß¸£Àû
-			AddNumText( sceneId, x805012_g_scriptId, "ÁìÈ¡°ïÅÉ¹ÜÀíÕß¸£Àû", 7,  9)
-			AddNumText( sceneId, x805012_g_scriptId, "¹ØÓÚ°ïÅÉ¹ÜÀíÕß¸£Àû", 11, 10 )
+			--ç®¡ç†è€…ç¦åˆ©
+			AddNumText( sceneId, x805012_g_scriptId, "é¢†å–å¸®æ´¾ç®¡ç†è€…ç¦åˆ©", 7,  9)
+			AddNumText( sceneId, x805012_g_scriptId, "å…³äºå¸®æ´¾ç®¡ç†è€…ç¦åˆ©", 11, 10 )
 		end
 		
 	EndEvent(sceneId)
@@ -77,28 +77,28 @@ end
 
 function x805012_DrawPay( sceneId, selfId  )
 
-	--µÈ¼¶³¬¹ı40¼¶¡£
+	--ç­‰çº§è¶…è¿‡40çº§ã€‚
 	local msg;
 	if GetLevel( sceneId, selfId ) < 40 then
-		msg = format("ÄúµÄµÈ¼¶²»×ã40¼¶£¬Òò´ËÎŞ·¨ÁìÈ¡¹¤×Ê¡£");
+		msg = format("æ‚¨çš„ç­‰çº§ä¸è¶³40çº§ï¼Œå› æ­¤æ— æ³•é¢†å–å·¥èµ„ã€‚");
 		x805012_NotifyTips(sceneId, selfId, msg);
 		return 0;
 	end
 	
-	--±ØĞëÈë°ïÊ±¼ä´óÓÚµÈÓÚ1ÖÜ¡£
+	--å¿…é¡»å…¥å¸®æ—¶é—´å¤§äºç­‰äº1å‘¨ã€‚
 	local nFactionJoinTime = GetFactionJoinTime( sceneId, selfId );
 	
 	local nTimeCur = LuaFnGetCurrentTime()
 	local nTimeDelta = nTimeCur - nFactionJoinTime;
 	if nTimeDelta < 7*24*60*60 then
-		msg = format("ÄúÈë°ïµÄÊ±¼ä²»×ã1ÖÜ£¬ÎŞ·¨ÁìÈ¡¹¤×Ê¡£");
+		msg = format("æ‚¨å…¥å¸®çš„æ—¶é—´ä¸è¶³1å‘¨ï¼Œæ— æ³•é¢†å–å·¥èµ„ã€‚");
 		x805012_NotifyTips(sceneId, selfId, msg);
 		return 0;
 	end
 	
-	local nWeekCur = GetWeekTime();		--µ±Ç°Ê±¼ä			
+	local nWeekCur = GetWeekTime();		--å½“å‰æ—¶é—´			
 
-	--±ØĞëÃ¿ÖÜÅÜ2´ÎÉÌÒÔÉÏ¡£
+	--å¿…é¡»æ¯å‘¨è·‘2æ¬¡å•†ä»¥ä¸Šã€‚
 	local nCaoYunTime = GetMissionData( sceneId, selfId, MD_CAOYUN_COMPLETE_TIME );
 	local nCaoYunNum = mod(nCaoYunTime,1000);
 	local nWeek = floor(nCaoYunTime/1000)
@@ -106,14 +106,14 @@ function x805012_DrawPay( sceneId, selfId  )
 
 	if ((Guildpos ~= GUILD_POSITION_CHIEFTAIN) and (Guildpos ~= GUILD_POSITION_ASS_CHIEFTAIN)) then
 		if nCaoYunNum < 2 or nWeek~= nWeekCur then
-			msg = format("Äú±¾ÖÜµÄÅÜÉÌ´ÎÊı²»×ã2´Î¡£");
+			msg = format("æ‚¨æœ¬å‘¨çš„è·‘å•†æ¬¡æ•°ä¸è¶³2æ¬¡ã€‚");
 			x805012_NotifyTips(sceneId, selfId, msg);
 			return 0;
 		end	
 	end
 
 
-	--°ïÅÉÁìÈ¡´ÎÊı´ïµ½ÉÏÏß
+	--å¸®æ´¾é¢†å–æ¬¡æ•°è¾¾åˆ°ä¸Šçº¿
 	local nFactionAllTimeNum = CityGetAttr(sceneId, selfId, 14);
 	
 	local nFactionAllNum = mod(nFactionAllTimeNum,1000)
@@ -129,19 +129,19 @@ function x805012_DrawPay( sceneId, selfId  )
 	end
 	
 	if nFactionAllNum >= 200 then
-		msg = format("¶Ô²»Æğ£¬±¾ÖÜ±¾°ïÁìÈ¡¹¤×Ê´ïµ½ÉÏÏß¡£");
+		msg = format("å¯¹ä¸èµ·ï¼Œæœ¬å‘¨æœ¬å¸®é¢†å–å·¥èµ„è¾¾åˆ°ä¸Šçº¿ã€‚");
 		x805012_NotifyTips(sceneId, selfId, msg);
 		return 0;
 	end
 	
 	if CityGetMaintainStatus(sceneId, selfId, sceneId) == 1  then
-		msg = format("µ±Ç°±¾°ï´¦ÔÚµÍÎ¬»¤×´Ì¬£¬ÎŞ·¨ÁìÈ¡¹¤×Ê£¡");
+		msg = format("å½“å‰æœ¬å¸®å¤„åœ¨ä½ç»´æŠ¤çŠ¶æ€ï¼Œæ— æ³•é¢†å–å·¥èµ„ï¼");
 		x805012_NotifyTips(sceneId, selfId, msg);
 		return 0;
 	end
 	
 	
-	--Ã¿ÖÜÖ»ÄÜÁìÈ¡1´Î¹¤×Ê¡£	
+	--æ¯å‘¨åªèƒ½é¢†å–1æ¬¡å·¥èµ„ã€‚	
 	local nDrawPayTimeLast = GetMissionData( sceneId, selfId, MD_DRAWPAY_TIME );	
 	
 	local nNum = mod(nDrawPayTimeLast,1000)
@@ -160,17 +160,17 @@ function x805012_DrawPay( sceneId, selfId  )
 	
 	if nWeekCur ~= nWeek then
 	
-		--Ã¿´ÎÁìÈ¡ĞèÒªºÄ·Ñ30µã°ï¹±¡£
+		--æ¯æ¬¡é¢†å–éœ€è¦è€—è´¹30ç‚¹å¸®è´¡ã€‚
 		local nContribPoint = CityGetAttr(sceneId, selfId, GUILD_CONTRIB_POINT);
 		nContribPoint = nContribPoint - minusContri;		
 		if nContribPoint < 0 then
-			msg = format("ÄúµÄ°ï¹±²»×ã£¬Òò´ËÎŞ·¨ÁìÈ¡¹¤×Ê¡£");
+			msg = format("æ‚¨çš„å¸®è´¡ä¸è¶³ï¼Œå› æ­¤æ— æ³•é¢†å–å·¥èµ„ã€‚");
 			x805012_NotifyTips(sceneId, selfId, msg);
 			nContribPoint = 0;
 			return 0;
 		end
 		
-		--»ñÈ¡½ğÇ®
+		--è·å–é‡‘é’±
 		local guildLevel = GetGuildLevel( sceneId, selfId )
 		local goldGet = 0;
 		if guildLevel == 1 then
@@ -188,7 +188,7 @@ function x805012_DrawPay( sceneId, selfId  )
 		local GuildMoney = CityGetAttr(sceneId, selfId, GUILD_MONEY);
 		
 		if GuildMoney < goldGet then
-			x805012_NotifyTips(sceneId, selfId, "°ïÅÉµÄ×Ê½ğ²»×ã£¬²»ÄÜÁì³ö¡£");
+			x805012_NotifyTips(sceneId, selfId, "å¸®æ´¾çš„èµ„é‡‘ä¸è¶³ï¼Œä¸èƒ½é¢†å‡ºã€‚");
 			return 0;
 		end
 		
@@ -203,9 +203,9 @@ function x805012_DrawPay( sceneId, selfId  )
 
 		if (isPosLongEnough == 1) then
 			if(Guildpos == GUILD_POSITION_CHIEFTAIN) then
-				x805012_NotifyTips(sceneId, selfId, "Äúµ£ÈÎ°ïÖ÷Ò»Ö°³¬¹ıÒ»ÖÜÊ±¼ä£¬±¾´ÎÁìÈ¡¹¤×Ê²»ÏûºÄ°ï¹±¡£");
+				x805012_NotifyTips(sceneId, selfId, "æ‚¨æ‹…ä»»å¸®ä¸»ä¸€èŒè¶…è¿‡ä¸€å‘¨æ—¶é—´ï¼Œæœ¬æ¬¡é¢†å–å·¥èµ„ä¸æ¶ˆè€—å¸®è´¡ã€‚");
 			elseif(Guildpos == GUILD_POSITION_ASS_CHIEFTAIN) then
-				x805012_NotifyTips(sceneId, selfId, "Äúµ£ÈÎ¸±°ïÖ÷Ò»Ö°³¬¹ıÒ»ÖÜÊ±¼ä£¬±¾´ÎÁìÈ¡¹¤×ÊÏûºÄµÄ°ï¹±¼õ°ë¡£");
+				x805012_NotifyTips(sceneId, selfId, "æ‚¨æ‹…ä»»å‰¯å¸®ä¸»ä¸€èŒè¶…è¿‡ä¸€å‘¨æ—¶é—´ï¼Œæœ¬æ¬¡é¢†å–å·¥èµ„æ¶ˆè€—çš„å¸®è´¡å‡åŠã€‚");
 			end
 		end
 
@@ -221,27 +221,27 @@ function x805012_DrawPay( sceneId, selfId  )
 		
 		AddMoney( sceneId, selfId, goldGet );
 		local  PlayerName=GetName(sceneId,selfId);
-		local sMessage = format("@*;SrvMsg;GLD:#Y#{_INFOUSR%s}#cffff00ÔÚ°ïÅÉµÄ½ğ¿â×Ü¹ÜÇ®ÎªÒ»´¦ÁìÈ¡ÁË±¾ÖÜµÄ¹¤×Ê£¬¹²¼Æ#{_MONEY%d}¡£", PlayerName, goldGet );	
+		local sMessage = format("@*;SrvMsg;GLD:#Y#{_INFOUSR%s}#cffff00åœ¨å¸®æ´¾çš„é‡‘åº“æ€»ç®¡é’±ä¸ºä¸€å¤„é¢†å–äº†æœ¬å‘¨çš„å·¥èµ„ï¼Œå…±è®¡#{_MONEY%d}ã€‚", PlayerName, goldGet );	
 	    BroadMsgByChatPipe(sceneId, selfId, sMessage, 6);
 		
 		
 	else
 		if nNum >= 1 then
-			msg = format("Äú±¾ÖÜÒÑ¾­Áì¹ı¹¤×Ê£¬ÏÂÖÜÔÙÀ´°É¡£");
+			msg = format("æ‚¨æœ¬å‘¨å·²ç»é¢†è¿‡å·¥èµ„ï¼Œä¸‹å‘¨å†æ¥å§ã€‚");
 			x805012_NotifyTips(sceneId, selfId, msg);
 			return 0;
 		end
-		--Ã¿´ÎÁìÈ¡ĞèÒªºÄ·Ñ30µã°ï¹±¡£
+		--æ¯æ¬¡é¢†å–éœ€è¦è€—è´¹30ç‚¹å¸®è´¡ã€‚
 		local nContribPoint = CityGetAttr(sceneId, selfId, GUILD_CONTRIB_POINT);
 		nContribPoint = nContribPoint - minusContri;		
 		if nContribPoint < 0 then
-			msg = format("ÄúµÄ°ï¹±²»×ã£¬Òò´ËÎŞ·¨ÁìÈ¡¹¤×Ê¡£");
+			msg = format("æ‚¨çš„å¸®è´¡ä¸è¶³ï¼Œå› æ­¤æ— æ³•é¢†å–å·¥èµ„ã€‚");
 			x805012_NotifyTips(sceneId, selfId, msg);
 			nContribPoint = 0;
 			return 0;
 		end
 		
-		--»ñÈ¡½ğÇ®
+		--è·å–é‡‘é’±
 		local guildLevel = GetGuildLevel( sceneId, selfId )
 		local goldGet = 0;
 		if guildLevel == 1 then
@@ -259,7 +259,7 @@ function x805012_DrawPay( sceneId, selfId  )
 		local GuildMoney = CityGetAttr(sceneId, selfId, GUILD_MONEY);
 		
 		if GuildMoney < goldGet then
-			x805012_NotifyTips(sceneId, selfId, "°ïÅÉµÄ×Ê½ğ²»×ã£¬²»ÄÜÁì³ö¡£");
+			x805012_NotifyTips(sceneId, selfId, "å¸®æ´¾çš„èµ„é‡‘ä¸è¶³ï¼Œä¸èƒ½é¢†å‡ºã€‚");
 			return 0;
 		end
 		
@@ -276,9 +276,9 @@ function x805012_DrawPay( sceneId, selfId  )
 		
 		if (isPosLongEnough == 1) then
 			if(Guildpos == GUILD_POSITION_CHIEFTAIN) then
-				x805012_NotifyTips(sceneId, selfId, "Äúµ£ÈÎ°ïÖ÷Ò»Ö°³¬¹ıÒ»ÖÜÊ±¼ä£¬±¾´ÎÁìÈ¡¹¤×Ê²»ÏûºÄ°ï¹±¡£");
+				x805012_NotifyTips(sceneId, selfId, "æ‚¨æ‹…ä»»å¸®ä¸»ä¸€èŒè¶…è¿‡ä¸€å‘¨æ—¶é—´ï¼Œæœ¬æ¬¡é¢†å–å·¥èµ„ä¸æ¶ˆè€—å¸®è´¡ã€‚");
 			elseif(Guildpos == GUILD_POSITION_ASS_CHIEFTAIN) then
-				x805012_NotifyTips(sceneId, selfId, "Äúµ£ÈÎ¸±°ïÖ÷Ò»Ö°³¬¹ıÒ»ÖÜÊ±¼ä£¬±¾´ÎÁìÈ¡¹¤×ÊÏûºÄµÄ°ï¹±¼õ°ë¡£");
+				x805012_NotifyTips(sceneId, selfId, "æ‚¨æ‹…ä»»å‰¯å¸®ä¸»ä¸€èŒè¶…è¿‡ä¸€å‘¨æ—¶é—´ï¼Œæœ¬æ¬¡é¢†å–å·¥èµ„æ¶ˆè€—çš„å¸®è´¡å‡åŠã€‚");
 			end
 		end
 		
@@ -293,7 +293,7 @@ function x805012_DrawPay( sceneId, selfId  )
 		AddMoney( sceneId, selfId, goldGet );
 
 		local  PlayerName=GetName(sceneId,selfId);
-		local sMessage = format("@*;SrvMsg;GLD:#Y#{_INFOUSR%s}#cffff00ÔÚ°ïÅÉµÄ½ğ¿â×Ü¹ÜÇ®ÎªÒ»´¦ÁìÈ¡ÁË±¾ÖÜµÄ¹¤×Ê£¬¹²¼Æ#{_MONEY%d}¡£", PlayerName, goldGet );	
+		local sMessage = format("@*;SrvMsg;GLD:#Y#{_INFOUSR%s}#cffff00åœ¨å¸®æ´¾çš„é‡‘åº“æ€»ç®¡é’±ä¸ºä¸€å¤„é¢†å–äº†æœ¬å‘¨çš„å·¥èµ„ï¼Œå…±è®¡#{_MONEY%d}ã€‚", PlayerName, goldGet );	
 	    BroadMsgByChatPipe(sceneId, selfId, sMessage, 6);
 	end
 	
@@ -301,7 +301,7 @@ function x805012_DrawPay( sceneId, selfId  )
 end
 
 
---ÅĞ¶ÏÊÇ·ñÊÇ¹ÜÀí²ã
+--åˆ¤æ–­æ˜¯å¦æ˜¯ç®¡ç†å±‚
 function x805012_IsManager( Guildpos  )
     if (   (Guildpos == GUILD_POSITION_CHIEFTAIN) 
 	    or (Guildpos == GUILD_POSITION_ASS_CHIEFTAIN)
@@ -316,14 +316,14 @@ function x805012_IsManager( Guildpos  )
 end
 
 
---ÁìÈ¡°ïÅÉ¹ÜÀíÕß¸£Àû
+--é¢†å–å¸®æ´¾ç®¡ç†è€…ç¦åˆ©
 function x805012_DrawManagerBonus( sceneId, selfId  )
 
 	local msg;
 	
-	--±ØĞëµ£ÈÎ¹ÙÖ°´óÓÚµÈÓÚ5Ìì¡£
+	--å¿…é¡»æ‹…ä»»å®˜èŒå¤§äºç­‰äº5å¤©ã€‚
 	if( LuaFnGetGuildAppointTime( sceneId, selfId ) < MIN_APPOINT_TIME_FOR_BONUS ) then
-	    msg = format("Äã¿´¿´Äã£¬ĞÂ¹ÙÉÏÈÎ£¬Òª¶àÎªµÜĞÖÃÇ×öµãÊÂÇé£¬¶ø²»ÊÇ¼±³å³åµÄÀ´Áì¸£Àû¡£¹ı¼¸ÌìÔÙÀ´°É£¡");
+	    msg = format("ä½ çœ‹çœ‹ä½ ï¼Œæ–°å®˜ä¸Šä»»ï¼Œè¦å¤šä¸ºå¼Ÿå…„ä»¬åšç‚¹äº‹æƒ…ï¼Œè€Œä¸æ˜¯æ€¥å†²å†²çš„æ¥é¢†ç¦åˆ©ã€‚è¿‡å‡ å¤©å†æ¥å§ï¼");
 		x805012_NotifyTips(sceneId, selfId, msg);
 		return 0;
 	end
@@ -331,39 +331,39 @@ function x805012_DrawManagerBonus( sceneId, selfId  )
 
 	local Guildpos = GetGuildPos(sceneId, selfId)
 	if ( x805012_IsManager(Guildpos)~=1 ) then
-        msg = format("Äã²»ÊÇ¹ÜÀí²ã£¬²»ÄÜÁìÈ¡°ïÅÉ¹ÙÔ±¸£Àû£¡");
+        msg = format("ä½ ä¸æ˜¯ç®¡ç†å±‚ï¼Œä¸èƒ½é¢†å–å¸®æ´¾å®˜å‘˜ç¦åˆ©ï¼");
 		x805012_NotifyTips(sceneId, selfId, msg);
 		return 0;
 	end
 
 
 	if CityGetMaintainStatus(sceneId, selfId, sceneId) == 1  then
-		msg = format("°ï»áÏÖÔÚ×Ê½ğ¶ÌÈ±£¬Ã¿Ò»·ÖÇ®¶¼ÒªÓÃÔÚµ¶ÈĞÉÏ¡£¹ÜÀíÕß¸£ÀûÖ»ÄÜÔİÍ£·¢·ÅÀ²¡£");
+		msg = format("å¸®ä¼šç°åœ¨èµ„é‡‘çŸ­ç¼ºï¼Œæ¯ä¸€åˆ†é’±éƒ½è¦ç”¨åœ¨åˆ€åˆƒä¸Šã€‚ç®¡ç†è€…ç¦åˆ©åªèƒ½æš‚åœå‘æ”¾å•¦ã€‚");
 		x805012_NotifyTips(sceneId, selfId, msg);
 		return 0;
 	end
 	
 	if GetTodayWeek() ~= 0 then
-	    msg = format("»¹Ã»µ½·¢·Å¹ÜÀíÕß¸£ÀûµÄÊ±ºòÄØ£¬²»ÒªÌ«×Å¼±°¡£¡");
+	    msg = format("è¿˜æ²¡åˆ°å‘æ”¾ç®¡ç†è€…ç¦åˆ©çš„æ—¶å€™å‘¢ï¼Œä¸è¦å¤ªç€æ€¥å•Šï¼");
 		x805012_NotifyTips(sceneId, selfId, msg);
 		return 0;
 	end
 	
 	
 	if GetFullExp(sceneId, selfId) == GetExp(sceneId, selfId) then
-	    msg = format("ÄãµÄ¾­ÑéÒÑ¾­´ïµ½ÉÏÏŞ£¬ÏÖÔÚÁìÈ¡¸£ÀûÌ«²»ÖµÁË°É¡£È¥ÓÃµôÒ»Ğ©ÔÙÀ´°É£¡");
+	    msg = format("ä½ çš„ç»éªŒå·²ç»è¾¾åˆ°ä¸Šé™ï¼Œç°åœ¨é¢†å–ç¦åˆ©å¤ªä¸å€¼äº†å§ã€‚å»ç”¨æ‰ä¸€äº›å†æ¥å§ï¼");
 		x805012_NotifyTips(sceneId, selfId, msg);
 		return 0;
 	end
 	
-	--Ã¿ÖÜÖ»ÄÜÁìÈ¡1´Î°ï»á¸£Àû¡£	
-	local nWeekCur = GetWeekTime();		--µ±Ç°Ê±¼ä		
+	--æ¯å‘¨åªèƒ½é¢†å–1æ¬¡å¸®ä¼šç¦åˆ©ã€‚	
+	local nWeekCur = GetWeekTime();		--å½“å‰æ—¶é—´		
 	
 	local nDrawPayTimeLast = GetMissionData( sceneId, selfId, MD_GUILD_MANAGER_DRAW_BONUS );	
 		
 	if nWeekCur ~= nDrawPayTimeLast then
 
-		--»ñÈ¡½ğÇ®
+		--è·å–é‡‘é’±
 		local guildLevel = GetGuildLevel( sceneId, selfId )
 		local goldGet = 0;	
 		
@@ -375,13 +375,13 @@ function x805012_DrawManagerBonus( sceneId, selfId  )
 		goldGet = (( nCount1 < nCount2 ) and nCount1) or nCount2
 		
 		if GuildMoney < goldGet then
-			x805012_NotifyTips(sceneId, selfId, "°ïÅÉµÄ×Ê½ğ²»×ã£¬²»ÄÜÁì³ö¡£");
+			x805012_NotifyTips(sceneId, selfId, "å¸®æ´¾çš„èµ„é‡‘ä¸è¶³ï¼Œä¸èƒ½é¢†å‡ºã€‚");
 			return 0;
 		end
 		CityChangeAttr(sceneId, selfId, GUILD_MONEY, (-1)*goldGet)
 		AddMoney( sceneId, selfId, goldGet );
 		
-		--»ñµÃ¾­Ñé
+		--è·å¾—ç»éªŒ
 		local level = GetLevel(sceneId, selfId)
 		local expGet = guildLevel * level * GUILD_MANAGER_BONUS_EXP_TABLE[Guildpos];
 		AddExp( sceneId, selfId, expGet );
@@ -391,14 +391,14 @@ function x805012_DrawManagerBonus( sceneId, selfId  )
 		SetMissionData(sceneId, selfId, MD_GUILD_MANAGER_DRAW_BONUS, nWeekCur );	
 		
 		local  PlayerName=GetName(sceneId,selfId);
-		local sMessage = format("@*;SrvMsg;GLD:#Y±¾°ï[%s][#{_INFOUSR%s}]#cffff00ÁìÈ¡°ïÅÉ¹ÙÔ±ÙºÂ»#{_MONEY%d}ºÍ%dµã¾­Ñé¡£", GUILD_POSITION_NAME_TABLE[Guildpos],PlayerName, goldGet, expGet );	
+		local sMessage = format("@*;SrvMsg;GLD:#Yæœ¬å¸®[%s][#{_INFOUSR%s}]#cffff00é¢†å–å¸®æ´¾å®˜å‘˜ä¿¸ç¦„#{_MONEY%d}å’Œ%.0fç‚¹ç»éªŒã€‚", GUILD_POSITION_NAME_TABLE[Guildpos],PlayerName, goldGet, expGet );	
         BroadMsgByChatPipe(sceneId, selfId, sMessage, 6);
 	  
-        msg = format("ÄãµÄÖ°ÎñÊÇ£º%s",GUILD_POSITION_NAME_TABLE[Guildpos]);
+        msg = format("ä½ çš„èŒåŠ¡æ˜¯ï¼š%s",GUILD_POSITION_NAME_TABLE[Guildpos]);
         x805012_NotifyTips(sceneId, selfId, msg);
 				
 	else
-		msg = format("ºÃÄã¸öµ±¹ÙµÄ£¬±¾ÖÜÒÑ¾­Áì¹ıÒ»´Î¹ÜÀíÕß¸£ÀûÁË£¬»¹ÒªÁìÒ»´Î²»³É£¿");
+		msg = format("å¥½ä½ ä¸ªå½“å®˜çš„ï¼Œæœ¬å‘¨å·²ç»é¢†è¿‡ä¸€æ¬¡ç®¡ç†è€…ç¦åˆ©äº†ï¼Œè¿˜è¦é¢†ä¸€æ¬¡ä¸æˆï¼Ÿ");
 		x805012_NotifyTips(sceneId, selfId, msg);
 		return 0;
 	end
@@ -409,16 +409,16 @@ end
 
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x805012_OnEventRequest( sceneId, selfId, targetId, eventId )
-	--´¦ÀíÕâ¸ö½¨ÖşÎïµÄÏàÓ¦Éú»î¼¼ÄÜÑ¡Ïî
+	--å¤„ç†è¿™ä¸ªå»ºç­‘ç‰©çš„ç›¸åº”ç”Ÿæ´»æŠ€èƒ½é€‰é¡¹
 	if eventId ~= x805012_g_scriptId then
 		CallScriptFunction( CITY_BUILDING_ABILITY_SCRIPT, "OnDefaultEvent",sceneId, selfId, targetId, eventId, x805012_g_scriptId, x805012_g_BuildingID6 )
 		return
 	end
 
-	--ÌØ²úÉÌµê
+	--ç‰¹äº§å•†åº—
 	if GetNumText() == 1 then
 		if(sceneId == 205) then DispatchShopItem( sceneId, selfId,targetId, 120 )
 			elseif(sceneId == 206) then DispatchShopItem( sceneId, selfId,targetId, 121 )
@@ -441,48 +441,48 @@ function x805012_OnEventRequest( sceneId, selfId, targetId, eventId )
 		end
 	elseif GetNumText() == 888 then
 		BeginEvent(sceneId)
-		--life Ìí¼ÓÕâ¸ö½¨ÖşÎïµÄÏàÓ¦Éú»î¼¼ÄÜÑ¡Ïî
+		--life æ·»åŠ è¿™ä¸ªå»ºç­‘ç‰©çš„ç›¸åº”ç”Ÿæ´»æŠ€èƒ½é€‰é¡¹
 		CallScriptFunction( CITY_BUILDING_ABILITY_SCRIPT, "OnEnumerate",sceneId, selfId, targetId, x805012_g_BuildingID6 )
 		EndEvent(sceneId)
 		DispatchEventList( sceneId, selfId, targetId )
-	--»ñµÃÅÜÉÌÒøÆ±
+	--è·å¾—è·‘å•†é“¶ç¥¨
 	elseif GetNumText() == 2 then
-		--ÊÇ·ñÊÇ±¾°ï³ÉÔ±
+		--æ˜¯å¦æ˜¯æœ¬å¸®æˆå‘˜
 		local guildid 		= GetHumanGuildID(sceneId,selfId)
 		local cityguildid = GetCityGuildID(sceneId, selfId, sceneId)
 
 		if(guildid ~= cityguildid) then
 				BeginEvent(sceneId)
-					strText = "¸óÏÂ²»ÊÇ±¾°ï³ÉÔ±£¬±¾°ïÈÎÎñ²»±ãÏà¸æ¡£"
+					strText = "é˜ä¸‹ä¸æ˜¯æœ¬å¸®æˆå‘˜ï¼Œæœ¬å¸®ä»»åŠ¡ä¸ä¾¿ç›¸å‘Šã€‚"
 					AddText(sceneId,strText);
 				EndEvent(sceneId)
 				DispatchMissionTips(sceneId,selfId)
 				return
 		end
 
-		--ÊÇ·ñÊÇÉÌÈË»ò°ïÖ÷
+		--æ˜¯å¦æ˜¯å•†äººæˆ–å¸®ä¸»
 		local	guildpos = GetGuildPos(sceneId, selfId)
 		if ((guildpos ~= GUILD_POSITION_COM) and (guildpos ~= GUILD_POSITION_CHIEFTAIN) and (guildpos ~= GUILD_POSITION_ASS_CHIEFTAIN) and (guildpos ~= GUILD_POSITION_AGRI) and (guildpos ~= GUILD_POSITION_INDUSTRY) and (guildpos ~= GUILD_POSITION_HR)) then
 				BeginEvent(sceneId)
-					strText = "¶Ô²»Æğ,Ö»ÓĞ°ïÖ÷¡¢¸±°ïÖ÷¡¢ÄÚÎñÊ¹¡¢ºë»¯Ê¹¡¢¹¤ÎñÊ¹ÒÔ¼°ÉÌÈË²ÅÄÜ¹»»ñµÃÒøÆ±."
+					strText = "å¯¹ä¸èµ·,åªæœ‰å¸®ä¸»ã€å‰¯å¸®ä¸»ã€å†…åŠ¡ä½¿ã€å¼˜åŒ–ä½¿ã€å·¥åŠ¡ä½¿ä»¥åŠå•†äººæ‰èƒ½å¤Ÿè·å¾—é“¶ç¥¨."
 					AddText(sceneId,strText);
 				EndEvent(sceneId)
 				DispatchMissionTips(sceneId,selfId)
 				return
 		end
 
-		--¼¶±ğÊÇ·ñ¹»
+		--çº§åˆ«æ˜¯å¦å¤Ÿ
 		local level = GetLevel(sceneId, selfId)
 		if(level<40) then
 				BeginEvent(sceneId)
-					strText = "ÕâÎ»Ğ¡ĞÖµÜÏÖÔÚ¾ÍÀ´¾­ÉÌ£¬Î´ÃâÔçÁËÒ»Ğ©£¬²»Èçµ½40¼¶ÔÙÀ´ÕÒÎÒ£¬·½ÊÇµÀÀí¡£"
+					strText = "è¿™ä½å°å…„å¼Ÿç°åœ¨å°±æ¥ç»å•†ï¼Œæœªå…æ—©äº†ä¸€äº›ï¼Œä¸å¦‚åˆ°40çº§å†æ¥æ‰¾æˆ‘ï¼Œæ–¹æ˜¯é“ç†ã€‚"
 					AddText(sceneId,strText);
 				EndEvent(sceneId)
 				DispatchMissionTips(sceneId,selfId)
 				return
 		end
 
-		--²»Í¬¼¶±ğ¶ÔÓ¦²»Í¬µÄ½ğ¶î
+		--ä¸åŒçº§åˆ«å¯¹åº”ä¸åŒçš„é‡‘é¢
 		local curMoney = 0
 		local maxMoney = 0
 		local maxmaxMoney = 0
@@ -523,22 +523,22 @@ function x805012_OnEventRequest( sceneId, selfId, targetId, eventId )
 			maxmaxMoney = 750000
 		end
 
-		--ÊÇ·ñÔÚäîÔË
+		--æ˜¯å¦åœ¨æ¼•è¿
 		local haveImpact = LuaFnHaveImpactOfSpecificDataIndex(sceneId, selfId, 113)
 		if haveImpact == 1 then
 				BeginEvent(sceneId)
-					strText = "¶Ô²»Æğ,ÄúÏÖÔÚ´¦ÓÚÔËÊä×´Ì¬²»¿É½ÓÆ±"
+					strText = "å¯¹ä¸èµ·,æ‚¨ç°åœ¨å¤„äºè¿è¾“çŠ¶æ€ä¸å¯æ¥ç¥¨"
 					AddText(sceneId,strText);
 				EndEvent(sceneId)
 				DispatchMissionTips(sceneId,selfId)
 				return
 		end
-		--ÊÇ·ñÓĞÒøÆ±
+		--æ˜¯å¦æœ‰é“¶ç¥¨
 		local	bagpos = GetBagPosByItemSn(sceneId, selfId, x805012_g_TicketItemIdx)
 
 		if bagpos ~= -1	then
 				BeginEvent(sceneId)
-					strText = "¶Ô²»Æğ,ÄúÖ»ÄÜÁìÈ¡Ò»ÕÅÒøÆ±"
+					strText = "å¯¹ä¸èµ·,æ‚¨åªèƒ½é¢†å–ä¸€å¼ é“¶ç¥¨"
 					AddText(sceneId,strText);
 				EndEvent(sceneId)
 				DispatchMissionTips(sceneId,selfId)
@@ -546,18 +546,18 @@ function x805012_OnEventRequest( sceneId, selfId, targetId, eventId )
 
 		elseif bagpos == -1 then
 
-				--°ïÅÉ×Ê½ğÊÇ·ñ¹»¿ª³öÒ»ÕÅÒøÆ±µÄ
+				--å¸®æ´¾èµ„é‡‘æ˜¯å¦å¤Ÿå¼€å‡ºä¸€å¼ é“¶ç¥¨çš„
 				local GuildMoney = CityGetAttr(sceneId, selfId, GUILD_MONEY)
 				if GuildMoney <= curMoney then
 						BeginEvent(sceneId)
-							strText = "°ïÅÉ×Ê½ğ²»¹»ÎªÄã¿ª³öÒøÆ±"
+							strText = "å¸®æ´¾èµ„é‡‘ä¸å¤Ÿä¸ºä½ å¼€å‡ºé“¶ç¥¨"
 							AddText(sceneId,strText);
 						EndEvent(sceneId)
 						DispatchMissionTips(sceneId,selfId)
 						return
 				end
 
-				-- Ò»ÌìÖ»ÄÜÁì 8 ´Î
+				-- ä¸€å¤©åªèƒ½é¢† 8 æ¬¡
 				local DayTimes, oldDate, nowDate, takenTimes, totalTakenTimes
 
 				DayTimes = GetMissionData( sceneId, selfId, MD_GUILDTICKET_TAKENTIMES )
@@ -573,13 +573,13 @@ function x805012_OnEventRequest( sceneId, selfId, targetId, eventId )
 
 				if takenTimes > x805012_g_TicketTakeTimes then
 					BeginEvent( sceneId )
-						AddText( sceneId, "¶Ô²»Æğ£¬Äú½ñÌìÁìÈ¡ÉÌÈËÈÎÎñÒÑ¾­´ïµ½8´Î£¬ÇëÃ÷ÌìÔÙÀ´¡£" )
+						AddText( sceneId, "å¯¹ä¸èµ·ï¼Œæ‚¨ä»Šå¤©é¢†å–å•†äººä»»åŠ¡å·²ç»è¾¾åˆ°8æ¬¡ï¼Œè¯·æ˜å¤©å†æ¥ã€‚" )
 					EndEvent( sceneId )
 					DispatchMissionTips( sceneId, selfId )
 					return
 				end
 
-				-- °ïÅÉÒ»Ìì½ÓÈ¡´ÎÊıÓĞÉÏÏŞ
+				-- å¸®æ´¾ä¸€å¤©æ¥å–æ¬¡æ•°æœ‰ä¸Šé™
 				DayTimes = GetTicketTakenTimes( sceneId, selfId )
 				oldDate = mod( DayTimes, 100000 )
 				totalTakenTimes = floor( DayTimes/100000 )
@@ -607,14 +607,14 @@ function x805012_OnEventRequest( sceneId, selfId, targetId, eventId )
 
 				if totalTakenTimes > maxTimes then
 					BeginEvent( sceneId )
-						AddText( sceneId, "ÎÒÕâÀï½ñÌìÖ»ÓĞ" .. maxTimes .. "ÕÅÒøÆ±£¬ÉõÊÇ¿ÉÏ§£¬ÏÖÔÚÒÑ¾­ÁìÍêÁË£¬»¹ÊÇÃ÷ÈÕÔçÀ´ÎªºÃ¡£" )
+						AddText( sceneId, "æˆ‘è¿™é‡Œä»Šå¤©åªæœ‰" .. maxTimes .. "å¼ é“¶ç¥¨ï¼Œç”šæ˜¯å¯æƒœï¼Œç°åœ¨å·²ç»é¢†å®Œäº†ï¼Œè¿˜æ˜¯æ˜æ—¥æ—©æ¥ä¸ºå¥½ã€‚" )
 					EndEvent( sceneId )
 					DispatchMissionTips( sceneId, selfId )
 					return
 				end
 
 
-				-- É¾³ıÉíÉÏµÄÅÜÉÌÉÌÆ·
+				-- åˆ é™¤èº«ä¸Šçš„è·‘å•†å•†å“
 				local itemIdx = 0
 				for i = 0, 99 do
 					itemIdx = LuaFnGetItemTableIndexByIndex( sceneId, selfId, i )
@@ -629,7 +629,7 @@ function x805012_OnEventRequest( sceneId, selfId, targetId, eventId )
 				if ret > 0 then
 					AddItemListToHuman(sceneId,selfId )
 					bagpos = GetBagPosByItemSn(sceneId, selfId, x805012_g_TicketItemIdx)
-					--¸ù¾İËùÔÚ³¡¾°,ÎïÆ·ÀàĞÍ»ñµÃÓ¦¸ÃµÄÎïÆ·¼ÛÖµ
+					--æ ¹æ®æ‰€åœ¨åœºæ™¯,ç‰©å“ç±»å‹è·å¾—åº”è¯¥çš„ç‰©å“ä»·å€¼
 					SetBagItemParam(sceneId, selfId, bagpos, TICKET_ITEM_PARAM_CUR_MONEY_START, TICKET_ITEM_PARAM_CUR_MONEY_TYPE, curMoney)
 					SetBagItemParam(sceneId, selfId, bagpos, TICKET_ITEM_PARAM_MAX_MONEY_START, TICKET_ITEM_PARAM_MAX_MONEY_TYPE, maxMoney)
 					SetBagItemParam(sceneId, selfId, bagpos, TICKET_ITEM_PARAM_MAX_MAX_MONEY_START, TICKET_ITEM_PARAM_MAX_MAX_MONEY_TYPE, maxmaxMoney)
@@ -642,27 +642,27 @@ function x805012_OnEventRequest( sceneId, selfId, targetId, eventId )
 					SetMissionData( sceneId, selfId, MD_GUILDTICKET_TAKENTIMES, DayTimes )
 					
 					LuaFnRefreshItemInfo(sceneId, selfId, bagpos)
-					--ÅÜÉÌbuff
+					--è·‘å•†buff
 					LuaFnSendSpecificImpactToUnit(sceneId,selfId,selfId,selfId,113,0)
 					BeginEvent(sceneId)
-						strText = "ÎÒÕâÀï»¹ÓĞ" .. ( maxTimes + 1 - totalTakenTimes ) .. "ÕÅÒøÆ±£¬ÉõºÃÉõºÃ£¬ÕâÕÅÒøÆ±ÄãÇÒÄÃÈ¥£¬¶àÎª±¾°ï×¬»ØĞ©×Ê½ğ£¬¹¦ÀÍ²»Ğ¡°¡¡£"
+						strText = "æˆ‘è¿™é‡Œè¿˜æœ‰" .. ( maxTimes + 1 - totalTakenTimes ) .. "å¼ é“¶ç¥¨ï¼Œç”šå¥½ç”šå¥½ï¼Œè¿™å¼ é“¶ç¥¨ä½ ä¸”æ‹¿å»ï¼Œå¤šä¸ºæœ¬å¸®èµšå›äº›èµ„é‡‘ï¼ŒåŠŸåŠ³ä¸å°å•Šã€‚"
 						AddText(sceneId,strText);
 					EndEvent(sceneId)
 					DispatchMissionTips(sceneId,selfId)
 				else
 					BeginEvent(sceneId)
-						strText = "ÁìÈ¡ÒøÆ±Ê§°Ü"
+						strText = "é¢†å–é“¶ç¥¨å¤±è´¥"
 						AddText(sceneId,strText);
 					EndEvent(sceneId)
 					DispatchMissionTips(sceneId,selfId)
 				end
 		end
-	--½»»ØÒøÆ±
+	--äº¤å›é“¶ç¥¨
 	elseif GetNumText() == 3 then
-		--ÊÇ·ñÊÇ±¾°ï³ÉÔ±
+		--æ˜¯å¦æ˜¯æœ¬å¸®æˆå‘˜
 		local guildid 		= GetHumanGuildID(sceneId, selfId)
 		local cityguildid = GetCityGuildID(sceneId, selfId, sceneId)
-		--ÊÇ·ñÊÇÉÌÈËÈÕ
+		--æ˜¯å¦æ˜¯å•†äººæ—¥
 		local merchandiseDayRate	=	1.0;
 		
 		if (GetTodayWeek() == 6 )then
@@ -671,29 +671,29 @@ function x805012_OnEventRequest( sceneId, selfId, targetId, eventId )
 		
 		if(guildid ~= cityguildid) then
 				BeginEvent(sceneId)
-					strText = "¸óÏÂ²»ÊÇ±¾°ï³ÉÔ±..."
+					strText = "é˜ä¸‹ä¸æ˜¯æœ¬å¸®æˆå‘˜..."
 					AddText(sceneId,strText);
 				EndEvent(sceneId)
 				DispatchMissionTips(sceneId,selfId)
 				return
 		end
 
-		--ÊÇ·ñÊÇÉÌÈË»ò°ïÖ÷
+		--æ˜¯å¦æ˜¯å•†äººæˆ–å¸®ä¸»
 		local	guildpos = GetGuildPos(sceneId, selfId)
 		if ( (guildpos ~= GUILD_POSITION_COM) and (guildpos ~= GUILD_POSITION_CHIEFTAIN) and (guildpos ~= GUILD_POSITION_ASS_CHIEFTAIN) and (guildpos ~= GUILD_POSITION_AGRI) and (guildpos ~= GUILD_POSITION_INDUSTRY) and (guildpos ~= GUILD_POSITION_HR)) then
 				BeginEvent(sceneId)
-					strText = "¶Ô²»Æğ,Ö»ÓĞ°ïÖ÷¡¢¸±°ïÖ÷¡¢ÄÚÎñÊ¹¡¢ºë»¯Ê¹¡¢¹¤ÎñÊ¹ÒÔ¼°ÉÌÈË²ÅÄÜ¹»½»»¹ÒøÆ±."
+					strText = "å¯¹ä¸èµ·,åªæœ‰å¸®ä¸»ã€å‰¯å¸®ä¸»ã€å†…åŠ¡ä½¿ã€å¼˜åŒ–ä½¿ã€å·¥åŠ¡ä½¿ä»¥åŠå•†äººæ‰èƒ½å¤Ÿäº¤è¿˜é“¶ç¥¨."
 					AddText(sceneId,strText);
 				EndEvent(sceneId)
 				DispatchMissionTips(sceneId,selfId)
 				return
 		end
 
-		--¼¶±ğÊÇ·ñ¹»
+		--çº§åˆ«æ˜¯å¦å¤Ÿ
 		local level = GetLevel(sceneId, selfId)
 		if(level<40) then
 				BeginEvent(sceneId)
-					strText = "ÕâÎ»Ğ¡ĞÖµÜÏÖÔÚ¾ÍÀ´¾­ÉÌ£¬Î´ÃâÔçÁËÒ»Ğ©..."
+					strText = "è¿™ä½å°å…„å¼Ÿç°åœ¨å°±æ¥ç»å•†ï¼Œæœªå…æ—©äº†ä¸€äº›..."
 					AddText(sceneId,strText);
 				EndEvent(sceneId)
 				DispatchMissionTips(sceneId,selfId)
@@ -708,7 +708,7 @@ function x805012_OnEventRequest( sceneId, selfId, targetId, eventId )
 
 				if TicketMoney < MaxTicketMoney	then
 						BeginEvent(sceneId)
-							strText = "ÄãµÄÒøÆ±Ã»ÓĞ×¬µ½Ó¦×¬µÄ¼ÛÖµ£¬ÔÙÈ¥×¬×¬°É¡£"
+							strText = "ä½ çš„é“¶ç¥¨æ²¡æœ‰èµšåˆ°åº”èµšçš„ä»·å€¼ï¼Œå†å»èµšèµšå§ã€‚"
 							AddText(sceneId,strText);
 						EndEvent(sceneId)
 						DispatchMissionTips(sceneId,selfId)
@@ -719,14 +719,14 @@ function x805012_OnEventRequest( sceneId, selfId, targetId, eventId )
 				LuaFnCancelSpecificImpact(sceneId,selfId,113)
 				if ReturnType == 0 then
 					BeginEvent(sceneId)
-						strText = "ÎŞ·¨É¾³ıÒøÆ±"
+						strText = "æ— æ³•åˆ é™¤é“¶ç¥¨"
 						AddText(sceneId,strText);
 					EndEvent(sceneId)
 					DispatchMissionTips(sceneId,selfId)
 					return
 				else
 					BeginEvent(sceneId)
-						strText = "³É¹¦É¾³ıÒøÆ±"
+						strText = "æˆåŠŸåˆ é™¤é“¶ç¥¨"
 						AddText(sceneId,strText);
 					EndEvent(sceneId)
 					DispatchMissionTips(sceneId,selfId)
@@ -745,8 +745,8 @@ function x805012_OnEventRequest( sceneId, selfId, targetId, eventId )
 					FatigueRate = 0.5
 				end
 
-				CityChangeAttr(sceneId, selfId, GUILD_MONEY, TicketMoney * x805012_g_GuildRate*merchandiseDayRate*FatigueRate)	-- °ïÅÉ»ñµÃµÄ×Ê½ğ»Ø±¨
-				AddMoney(sceneId, selfId, TicketMoney * x805012_g_PlayerRate*merchandiseDayRate)	-- ¸öÈË»ñµÃµÄ×Ê½ğ»Ø±¨
+				CityChangeAttr(sceneId, selfId, GUILD_MONEY, TicketMoney * x805012_g_GuildRate*merchandiseDayRate*FatigueRate)	-- å¸®æ´¾è·å¾—çš„èµ„é‡‘å›æŠ¥
+				AddMoney(sceneId, selfId, TicketMoney * x805012_g_PlayerRate*merchandiseDayRate)	-- ä¸ªäººè·å¾—çš„èµ„é‡‘å›æŠ¥
 
 				local contripoint = 0
 				local exppoint		= 0
@@ -777,7 +777,7 @@ function x805012_OnEventRequest( sceneId, selfId, targetId, eventId )
 				CityChangeAttr(sceneId, selfId, GUILD_CONTRIB_POINT, contripoint)
 				AddExp(sceneId, selfId, exppoint*merchandiseDayRate)
 
-				--¼ÇÂ¼ Íê³É ĞÅÏ¢
+				--è®°å½• å®Œæˆ ä¿¡æ¯
 				local nCaoYunTime = GetMissionData( sceneId, selfId, MD_CAOYUN_COMPLETE_TIME );
 				
 				local nCaoYunNum = mod(nCaoYunTime,1000)
@@ -786,8 +786,8 @@ function x805012_OnEventRequest( sceneId, selfId, targetId, eventId )
 				local nWeek = floor(nCaoYunTime/1000)
 				
 
-				local nWeekCur = GetWeekTime()		--µ±Ç°Ê±¼ä
-				--³¬¹ıÒ»ÖÜ£¬ ÖØĞÂÉèÖÃ Íê³É´ÎÊı
+				local nWeekCur = GetWeekTime()		--å½“å‰æ—¶é—´
+				--è¶…è¿‡ä¸€å‘¨ï¼Œ é‡æ–°è®¾ç½® å®Œæˆæ¬¡æ•°
 				if nWeekCur ~= nWeek then
 					nCaoYunNum = 1;
 					nCaoYunTime = nWeekCur*1000 + nCaoYunNum;
@@ -799,20 +799,20 @@ function x805012_OnEventRequest( sceneId, selfId, targetId, eventId )
 				end
 			
 			
-				--°ïÅÉÆµµÀÍ¨Öª
+				--å¸®æ´¾é¢‘é“é€šçŸ¥
 				local name = GetName( sceneId, selfId )
-				BroadMsgByChatPipe( sceneId, selfId, "@*;SrvMsg;GLD:#Y#{_INFOUSR" .. name .. "}#RÍê³ÉÁËÉÌÈËÈÎÎñ£¬³É¹¦µÄÎª±¾°ïÔö¼ÓÁË°ï»á×Ê½ğ#{_MONEY"..TicketMoney*x805012_g_GuildRate*merchandiseDayRate*FatigueRate .. "}", 6 )
+				BroadMsgByChatPipe( sceneId, selfId, "@*;SrvMsg;GLD:#Y#{_INFOUSR" .. name .. "}#Rå®Œæˆäº†å•†äººä»»åŠ¡ï¼ŒæˆåŠŸçš„ä¸ºæœ¬å¸®å¢åŠ äº†å¸®ä¼šèµ„é‡‘#{_MONEY"..TicketMoney*x805012_g_GuildRate*merchandiseDayRate*FatigueRate .. "}", 6 )
 				--BroadMsgByChatPipe( sceneId, selfId, "22", 6 )
 				
 				if (merchandiseDayRate ~= 1.0  )then
-					Msg2Player(sceneId, selfId, "#RÓÉÓÚ½ñÌìÊÇÉÌÈËÈÕ£¬ËùÒÔÄã»ñµÃÁË±ÈÆ½Ê±¸ü¶àµÄÊÕÒæ¡£",MSG2PLAYER_PARA);
+					Msg2Player(sceneId, selfId, "#Rç”±äºä»Šå¤©æ˜¯å•†äººæ—¥ï¼Œæ‰€ä»¥ä½ è·å¾—äº†æ¯”å¹³æ—¶æ›´å¤šçš„æ”¶ç›Šã€‚",MSG2PLAYER_PARA);
 				end
 				
 				LuaFnComMissComplete( sceneId, selfId )
 	
 			else
 				BeginEvent(sceneId)
-					strText = "¶Ô²»Æğ,ÄúµÄÒøÆ±ÀïÃ»Ç®"
+					strText = "å¯¹ä¸èµ·,æ‚¨çš„é“¶ç¥¨é‡Œæ²¡é’±"
 					AddText(sceneId,strText);
 				EndEvent(sceneId)
 				DispatchMissionTips(sceneId,selfId)
@@ -820,7 +820,7 @@ function x805012_OnEventRequest( sceneId, selfId, targetId, eventId )
 			end
 		else
 			BeginEvent(sceneId)
-				strText = "¶Ô²»Æğ,ÄúÃ»ÓĞÒøÆ±"
+				strText = "å¯¹ä¸èµ·,æ‚¨æ²¡æœ‰é“¶ç¥¨"
 				AddText(sceneId,strText);
 			EndEvent(sceneId)
 			DispatchMissionTips(sceneId,selfId)
@@ -833,18 +833,18 @@ function x805012_OnEventRequest( sceneId, selfId, targetId, eventId )
 		DispatchEventList( sceneId, selfId, targetId )
 	elseif GetNumText() == 5 then
 		BeginUICommand(sceneId)
-			UICommand_AddInt(sceneId,targetId) --µ÷ÓÃ³ÇÊĞÉÌµê½çÃæ
+			UICommand_AddInt(sceneId,targetId) --è°ƒç”¨åŸå¸‚å•†åº—ç•Œé¢
 			UICommand_AddInt(sceneId,x805012_g_BuildingID6)
 		EndUICommand(sceneId)
 		DispatchUICommand(sceneId,selfId, 104)
 	elseif GetNumText() == 6 then
 		BeginUICommand(sceneId)
-			UICommand_AddInt(sceneId,targetId) --µ÷ÓÃ³ÇÊĞÉÌÒµÂ·Ïß½çÃæ
+			UICommand_AddInt(sceneId,targetId) --è°ƒç”¨åŸå¸‚å•†ä¸šè·¯çº¿ç•Œé¢
 		EndUICommand(sceneId)
 		DispatchUICommand(sceneId,selfId, 105)
 	elseif GetNumText() == 7 then
 			BeginEvent( sceneId )
-				AddText( sceneId, "Çë°Ñ¹ıÆÚÒøÆ±ÍÏÈëµ½µÚÒ»¸öÎïÆ·¸ñÖĞ£¡" )
+				AddText( sceneId, "è¯·æŠŠè¿‡æœŸé“¶ç¥¨æ‹–å…¥åˆ°ç¬¬ä¸€ä¸ªç‰©å“æ ¼ä¸­ï¼" )
 			EndEvent( sceneId )
 		DispatchMissionDemandInfo( sceneId, selfId, targetId, x805012_g_scriptId, -1, 2 )
 	elseif GetNumText() == 8 then
@@ -853,7 +853,7 @@ function x805012_OnEventRequest( sceneId, selfId, targetId, eventId )
 			UICommand_AddInt(sceneId, x805012_g_scriptId)
 			UICommand_AddInt(sceneId, targetId)
 			UICommand_AddString(sceneId, "DrawPay");
-			UICommand_AddString(sceneId, "ÄúÈ·¶¨ÒªÏûºÄÒ»¶¨ÊıÁ¿µÄ°ï¹±£¬ÁìÈ¡±¾ÖÜµÄ°ïÅÉ¹¤×ÊÂğ£¿");
+			UICommand_AddString(sceneId, "æ‚¨ç¡®å®šè¦æ¶ˆè€—ä¸€å®šæ•°é‡çš„å¸®è´¡ï¼Œé¢†å–æœ¬å‘¨çš„å¸®æ´¾å·¥èµ„å—ï¼Ÿ");
 		EndUICommand(sceneId)
 		DispatchUICommand(sceneId,selfId, 24)
 	elseif GetNumText() == 9 then
@@ -869,10 +869,10 @@ function x805012_OnEventRequest( sceneId, selfId, targetId, eventId )
 		
 		if guildmoney < guildmaxmoney then
 			BeginUICommand(sceneId)
-				UICommand_AddInt(sceneId,targetId) --µ÷ÓÃ°ïÅÉ×Ê½ğ¾èÖú½çÃæ
+				UICommand_AddInt(sceneId,targetId) --è°ƒç”¨å¸®æ´¾èµ„é‡‘æåŠ©ç•Œé¢
 			EndUICommand(sceneId)
 			DispatchUICommand(sceneId,selfId, 19822)
-		else  --°ï»á×Ê½ğÒÑ¾­µ½´ïÉÏÏŞ£¬²»ĞèÒªÔÙ¾èÖúÁË¡£
+		else  --å¸®ä¼šèµ„é‡‘å·²ç»åˆ°è¾¾ä¸Šé™ï¼Œä¸éœ€è¦å†æåŠ©äº†ã€‚
 			BeginEvent(sceneId)
 				AddText(sceneId,"#{BPZJ_0801014_003}")
 			EndEvent(sceneId)
@@ -880,7 +880,7 @@ function x805012_OnEventRequest( sceneId, selfId, targetId, eventId )
 		end
 	elseif GetNumText() == 12 then
 		BeginEvent(sceneId)
-			AddText(sceneId,"#{BPZJ_0801014_019}")--°ï»á×Ê½ğ¾èÖú½éÉÜ
+			AddText(sceneId,"#{BPZJ_0801014_019}")--å¸®ä¼šèµ„é‡‘æåŠ©ä»‹ç»
 		EndEvent(sceneId)
 		DispatchEventList(sceneId,selfId,targetId)
 	end
@@ -888,11 +888,11 @@ function x805012_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---Íæ¼ÒÌá½»ÕäÊŞºóµÄ»Øµ÷º¯Êı
+--ç©å®¶æäº¤çå…½åçš„å›è°ƒå‡½æ•°
 --**********************************
 function x805012_OnMissionCheck( sceneId, selfId, npcid, scriptId, index1, index2, index3, indexpet )
 	if index1 < 0 or index1 >= 255 then
-		x805012_MyNotifyTip( sceneId, selfId, "Äú»¹Ã»ÓĞ·ÅÖÃÏëÒªÉÏ½»µÄ¹ıÆÚÒøÆ±¡£" )
+		x805012_MyNotifyTip( sceneId, selfId, "æ‚¨è¿˜æ²¡æœ‰æ”¾ç½®æƒ³è¦ä¸Šäº¤çš„è¿‡æœŸé“¶ç¥¨ã€‚" )
 		return
 	else
 		if LuaFnIsItemAvailable( sceneId, selfId, index1) == 1 then
@@ -900,40 +900,40 @@ function x805012_OnMissionCheck( sceneId, selfId, npcid, scriptId, index1, index
 			if(itm_id == x805012_g_OutDateTicketItemIdx) then
 				local	TicketMoney = GetBagItemParam(sceneId, selfId, index1, 0, 2)
 				EraseItem( sceneId, selfId, index1) 
-				CityChangeAttr(sceneId, selfId, GUILD_MONEY, TicketMoney)	-- °ïÅÉ»ñµÃµÄ×Ê½ğ»Ø±¨
-				AddMoney(sceneId, selfId, TicketMoney * 0.2)	-- ¸öÈË»ñµÃµÄ×Ê½ğ»Ø±¨
+				CityChangeAttr(sceneId, selfId, GUILD_MONEY, TicketMoney)	-- å¸®æ´¾è·å¾—çš„èµ„é‡‘å›æŠ¥
+				AddMoney(sceneId, selfId, TicketMoney * 0.2)	-- ä¸ªäººè·å¾—çš„èµ„é‡‘å›æŠ¥
 				local name = GetName( sceneId, selfId )
-				BroadMsgByChatPipe( sceneId, selfId, "@*;SrvMsg;GLD:#{_INFOUSR"..name.."}²»Öª´ÓÄÄÀïµÃÀ´Ò»ÕÅ¹ıÆÚÒøÆ±£¬#{_MONEY"..TicketMoney.."}ÒÑ³äÈëÎª±¾°ïµÄ°ï»á×Ê½ğ¡£", 6 )
-				x805012_MyNotifyTip( sceneId, selfId, "¹ıÆÚÒøÆ±³äÈë°ï»á×Ê½ğ³É¹¦¡£" )
+				BroadMsgByChatPipe( sceneId, selfId, "@*;SrvMsg;GLD:#{_INFOUSR"..name.."}ä¸çŸ¥ä»å“ªé‡Œå¾—æ¥ä¸€å¼ è¿‡æœŸé“¶ç¥¨ï¼Œ#{_MONEY"..TicketMoney.."}å·²å……å…¥ä¸ºæœ¬å¸®çš„å¸®ä¼šèµ„é‡‘ã€‚", 6 )
+				x805012_MyNotifyTip( sceneId, selfId, "è¿‡æœŸé“¶ç¥¨å……å…¥å¸®ä¼šèµ„é‡‘æˆåŠŸã€‚" )
 				return
 			else
-				x805012_MyNotifyTip( sceneId, selfId, "ÄúÒªÉÏ½»µÄÎïÆ·ËÆºõ²»ÊÇ¹ıÆÚÒøÆ±°¡¡£" )
+				x805012_MyNotifyTip( sceneId, selfId, "æ‚¨è¦ä¸Šäº¤çš„ç‰©å“ä¼¼ä¹ä¸æ˜¯è¿‡æœŸé“¶ç¥¨å•Šã€‚" )
 				return
 			end
 		end
 	end
-	x805012_MyNotifyTip( sceneId, selfId, "Ìá½»Ê§°Ü" )
+	x805012_MyNotifyTip( sceneId, selfId, "æäº¤å¤±è´¥" )
 end
 
 --**********************************
---Íæ¼ÒÌá½»°ï»á×Ê½ğ¾èÖúºóµÄ»Øµ÷º¯Êı
+--ç©å®¶æäº¤å¸®ä¼šèµ„é‡‘æåŠ©åçš„å›è°ƒå‡½æ•°
 --**********************************
 function x805012_PutGuildMoney( sceneId, selfId, money )
-	--ÊÇ·ñÊÇ±¾°ï³ÉÔ±£¬°´µÀÀíÊÇ²»»á×ßÕâÀï£¬²»ÊÇ±¾°ïµÄ³ÉÔ±²»¿ÉÄÜ´ò¿ª¾èÖú½çÃæ£¬µ«ÎªÁË±£ÏÕ»¹ÊÇ¼ÓÉÏ
+	--æ˜¯å¦æ˜¯æœ¬å¸®æˆå‘˜ï¼ŒæŒ‰é“ç†æ˜¯ä¸ä¼šèµ°è¿™é‡Œï¼Œä¸æ˜¯æœ¬å¸®çš„æˆå‘˜ä¸å¯èƒ½æ‰“å¼€æåŠ©ç•Œé¢ï¼Œä½†ä¸ºäº†ä¿é™©è¿˜æ˜¯åŠ ä¸Š
 	local guildid 		= GetHumanGuildID(sceneId,selfId)
 	local cityguildid = GetCityGuildID(sceneId, selfId, sceneId)
 
 	if guildid ~= cityguildid then
-		x805012_NotifyTips(sceneId, selfId, "¸óÏÂ²»ÊÇ±¾°ï³ÉÔ±£¡")
+		x805012_NotifyTips(sceneId, selfId, "é˜ä¸‹ä¸æ˜¯æœ¬å¸®æˆå‘˜ï¼")
 		return
 	end
 	
-	if money < x805012_g_GuildMoneyLimit then --²»Ó¦¸Ã×ßµ½ÕâÀï£¬³ı·Ç¿Í»§¶Ë·Ç·¨Êı¾İ
-		x805012_NotifyTips(sceneId, selfId, "ÊäÈëµÄ½ğ¶îĞ¡ÓÚ#{_EXCHG"..x805012_g_GuildMoneyLimit.."}")
+	if money < x805012_g_GuildMoneyLimit then --ä¸åº”è¯¥èµ°åˆ°è¿™é‡Œï¼Œé™¤éå®¢æˆ·ç«¯éæ³•æ•°æ®
+		x805012_NotifyTips(sceneId, selfId, "è¾“å…¥çš„é‡‘é¢å°äº#{_EXCHG"..x805012_g_GuildMoneyLimit.."}")
 		return
 	end
 	
-	--¶Ô²»Æğ£¬ÄúÊäÈëµÄ½ğ¶î´óÓÚÄúËùĞ¯´øµÄ½ğ¶î¡£
+	--å¯¹ä¸èµ·ï¼Œæ‚¨è¾“å…¥çš„é‡‘é¢å¤§äºæ‚¨æ‰€æºå¸¦çš„é‡‘é¢ã€‚
 	local nMoneyJZ = GetMoneyJZ(sceneId,selfId)
 	local nMoneyJB = GetMoney(sceneId,selfId)
 	local nMoneySelf = nMoneyJZ + nMoneyJB
@@ -942,7 +942,7 @@ function x805012_PutGuildMoney( sceneId, selfId, money )
 		return
 	end
 	
-	--ÊÇ·ñ°²È«Ê±¼ä£¬Õâ¸öÅĞ¶Ïº¯ÊıÀïÃæ×Ô¼ºÓĞÌáÊ¾ĞÅÏ¢£¬²»ĞèÒªÕâÀïĞ´ÌáÊ¾ĞÅÏ¢
+	--æ˜¯å¦å®‰å…¨æ—¶é—´ï¼Œè¿™ä¸ªåˆ¤æ–­å‡½æ•°é‡Œé¢è‡ªå·±æœ‰æç¤ºä¿¡æ¯ï¼Œä¸éœ€è¦è¿™é‡Œå†™æç¤ºä¿¡æ¯
 	if IsPilferLockFlag(sceneId, selfId) <= 0 then
 		return
 	end
@@ -962,40 +962,40 @@ function x805012_PutGuildMoney( sceneId, selfId, money )
 	--local ret = CostMoney(sceneId, selfId, money)
 	local jzCost, jbCost = LuaFnCostMoneyWithPriority( sceneId, selfId, money );	
 	if jzCost == -1 then
-		x805012_NotifyTips(sceneId, selfId, "¿Û³ı½ğÇ®Ê§°Ü£¡")
+		x805012_NotifyTips(sceneId, selfId, "æ‰£é™¤é‡‘é’±å¤±è´¥ï¼")
 		return
 	end
-	--Èç¹ûÖ»¿Û³ı½ğ±Ò
+	--å¦‚æœåªæ‰£é™¤é‡‘å¸
 	if jzCost == 0 then
 		CityChangeAttr(sceneId, selfId, GUILD_MONEY, addmoney)
-		x805012_NotifyTips(sceneId, selfId, "#{BPZJ_0801014_015}#{_MONEY"..jbCost.."}£¡")
-		x805012_NotifyTips(sceneId, selfId, "¿ÛË°Ö®ºó£¬°ï»á×Ê½ğÊµ¼ÊÔö³¤ÁË#{_MONEY"..addmoney.."}£¡")
+		x805012_NotifyTips(sceneId, selfId, "#{BPZJ_0801014_015}#{_MONEY"..jbCost.."}ï¼")
+		x805012_NotifyTips(sceneId, selfId, "æ‰£ç¨ä¹‹åï¼Œå¸®ä¼šèµ„é‡‘å®é™…å¢é•¿äº†#{_MONEY"..addmoney.."}ï¼")
 		local name = GetName( sceneId, selfId )
 		BroadMsgByChatPipe( sceneId, selfId, "@*;SrvMsg;GLD:#{_INFOUSR"..name.."}#{BPZJ_0801014_017}#{_MONEY"..jbCost.."}#{BPZJ_0801014_018}", 6 )
 	end
-	--Èç¹ûÖ»¿Û³ı½»×Ó
+	--å¦‚æœåªæ‰£é™¤äº¤å­
 	if jbCost == 0 then
 		CityChangeAttr(sceneId, selfId, GUILD_MONEY, addmoney)
-		x805012_NotifyTips(sceneId, selfId, "#{BPZJ_0801014_015}#{_EXCHG"..jzCost.."}£¡")
-		x805012_NotifyTips(sceneId, selfId, "¿ÛË°Ö®ºó£¬°ï»á×Ê½ğÊµ¼ÊÔö³¤ÁË#{_MONEY"..addmoney.."}£¡")
+		x805012_NotifyTips(sceneId, selfId, "#{BPZJ_0801014_015}#{_EXCHG"..jzCost.."}ï¼")
+		x805012_NotifyTips(sceneId, selfId, "æ‰£ç¨ä¹‹åï¼Œå¸®ä¼šèµ„é‡‘å®é™…å¢é•¿äº†#{_MONEY"..addmoney.."}ï¼")
 		local name = GetName( sceneId, selfId )
 		BroadMsgByChatPipe( sceneId, selfId, "@*;SrvMsg;GLD:#{_INFOUSR"..name.."}#{BPZJ_0801014_017}#{_EXCHG"..jzCost.."}#{BPZJ_0801014_018}", 6 )
 	end
-	--Èç¹û¼ÈÓĞ½»×ÓÓÖÓĞ½ğ±Ò
+	--å¦‚æœæ—¢æœ‰äº¤å­åˆæœ‰é‡‘å¸
 	if jzCost ~= 0 and jbCost ~= 0 then
 		CityChangeAttr(sceneId, selfId, GUILD_MONEY, addmoney)
-		x805012_NotifyTips(sceneId, selfId, "#{BPZJ_0801014_015}#{_EXCHG"..jzCost.."}£¡")
-		x805012_NotifyTips(sceneId, selfId, "#{BPZJ_0801014_015}#{_MONEY"..jbCost.."}£¡")
-		x805012_NotifyTips(sceneId, selfId, "¿ÛË°Ö®ºó£¬°ï»á×Ê½ğÊµ¼ÊÔö³¤ÁË#{_MONEY"..addmoney.."}£¡")
+		x805012_NotifyTips(sceneId, selfId, "#{BPZJ_0801014_015}#{_EXCHG"..jzCost.."}ï¼")
+		x805012_NotifyTips(sceneId, selfId, "#{BPZJ_0801014_015}#{_MONEY"..jbCost.."}ï¼")
+		x805012_NotifyTips(sceneId, selfId, "æ‰£ç¨ä¹‹åï¼Œå¸®ä¼šèµ„é‡‘å®é™…å¢é•¿äº†#{_MONEY"..addmoney.."}ï¼")
 		local name = GetName( sceneId, selfId )
-		BroadMsgByChatPipe( sceneId, selfId, "@*;SrvMsg;GLD:#{_INFOUSR"..name.."}#{BPZJ_0801014_017}#{_EXCHG"..jzCost.."}ºÍ#{_MONEY"..jbCost.."}#{BPZJ_0801014_018}", 6 )
+		BroadMsgByChatPipe( sceneId, selfId, "@*;SrvMsg;GLD:#{_INFOUSR"..name.."}#{BPZJ_0801014_017}#{_EXCHG"..jzCost.."}å’Œ#{_MONEY"..jbCost.."}#{BPZJ_0801014_018}", 6 )
 		--BroadMsgByChatPipe( sceneId, selfId, "@*;SrvMsg;GLD:#{_INFOUSR"..name.."}#{BPZJ_0801014_017}#{_MONEY"..jbCost.."}#{BPZJ_0801014_018}", 6 )
 
 	end
 end
 
 --**********************************
---ĞÑÄ¿ÌáÊ¾
+--é†’ç›®æç¤º
 --**********************************
 function x805012_NotifyTips( sceneId, selfId, Tip )
 
@@ -1006,7 +1006,7 @@ function x805012_NotifyTips( sceneId, selfId, Tip )
 
 end
 --**********************************
---ĞÑÄ¿ÌáÊ¾
+--é†’ç›®æç¤º
 --**********************************
 function x805012_MyNotifyTip( sceneId, selfId, str )
 

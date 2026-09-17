@@ -1,16 +1,16 @@
--- ×Ô¼ºid,±³°üindex,³¡¾°±àºÅ
+-- è‡ªå·±id,èƒŒåŒ…index,åœºæ™¯ç¼–å·
 function		x713552_OnUse(sceneId,selfId,targetId)	
-		--»ñµÃ²Ø±¦Í¼Î»ÖÃºÍ³¡¾°±àºÅ
+		--è·å¾—è—å®å›¾ä½ç½®å’Œåœºæ™¯ç¼–å·
 		StoreMapX = GetStoreMapX(sceneId,selfId,targetId)
 		StoreMapZ = GetStoreMapZ(sceneId,selfId,targetId)		
 		
 		StoreMapSceneID = GetStoreMapSceneID(sceneId,selfId,targetId)
-		--Èç¹ûÓë½ÇÉ«ËùÔÚ³¡¾°²»·ûºÏ¾Í·µ»ØÊ§°Ü
+		--å¦‚æœä¸è§’è‰²æ‰€åœ¨åœºæ™¯ä¸ç¬¦åˆå°±è¿”å›å¤±è´¥
 		if StoreMapSceneID~=sceneId then
 			return USEITEM_SKILL_FAIL
 		end
 		
-		--ÅĞ¶Ï½ÇÉ«Î»ÖÃºÍ²Ø±¦Í¼Î»ÖÃÊÇ·ñÔÚÒ»¸ö·¶Î§ÄÚ
+		--åˆ¤æ–­è§’è‰²ä½ç½®å’Œè—å®å›¾ä½ç½®æ˜¯å¦åœ¨ä¸€ä¸ªèŒƒå›´å†…
 		HumanX	=	GetHumanWorldX(sceneId,selfId)
 		HumanX = StoreMapX - HumanX
 		
@@ -25,17 +25,17 @@ function		x713552_OnUse(sceneId,selfId,targetId)
 		if abs(HumanZ)>2.0 then
 			return USEITEM_SKILL_FAIL
 		end
-		--ÔÚ³¡¾°ÀïÕÒÒ»¸öÓë²Ø±¦Í¼·ûºÏµÄ²Ø±¦µã
+		--åœ¨åœºæ™¯é‡Œæ‰¾ä¸€ä¸ªä¸è—å®å›¾ç¬¦åˆçš„è—å®ç‚¹
 		StoreMapIndex = FindStorePointOnScene(sceneId,0,StoreMapX,StoreMapZ)
 		
 		if StoreMapIndex	== -1 then	
 			return USEITEM_CANNT_USE			
 		end
-		--»ñµÃ²Ø±¦Í¼ÀàĞÍ
+		--è·å¾—è—å®å›¾ç±»å‹
 		StoreMapType = GetStorePointType(sceneId,StoreMapIndex)
-		--É¾³ı²Ø±¦µã
+		--åˆ é™¤è—å®ç‚¹
 		DelStorePointOnScene(sceneId,StoreMapType,StoreMapIndex)
-		--½±Àø
+		--å¥–åŠ±
 		TryRecieveItem(sceneId,selfId,10222001,QUALITY_MUST_BE_CHANGE)
 		
 		

@@ -1,23 +1,23 @@
---´óÀíNPC
---³õ»÷Æ½
---¼ø¶¨·ûÉÌÈË
+--å¤§ç†NPC
+--åˆå‡»å¹³
+--é‰´å®šç¬¦å•†äºº
 
 x002077_g_scriptId = 002077
 x002077_g_shoptableindex = 10
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x002077_OnDefaultEvent( sceneId, selfId, targetId )
 	BeginEvent( sceneId )
-		AddText( sceneId, "    ±¾ÈË³öÊÛ¶À¼ÒÃØÖÆ¼ø¶¨·û£¬¿ÉÒÔ¼ø¶¨ËùÓĞÀàĞÍµÄ×°±¸£¬»¶Ó­Ñ¡¹º£¡" )
-		AddNumText( sceneId, x002077_g_scriptId, "¿´¿´ÄãÂôµÄ¶«Î÷", 7, 0 )
+		AddText( sceneId, "    æœ¬äººå‡ºå”®ç‹¬å®¶ç§˜åˆ¶é‰´å®šç¬¦ï¼Œå¯ä»¥é‰´å®šæ‰€æœ‰ç±»å‹çš„è£…å¤‡ï¼Œæ¬¢è¿é€‰è´­ï¼" )
+		AddNumText( sceneId, x002077_g_scriptId, "çœ‹çœ‹ä½ å–çš„ä¸œè¥¿", 7, 0 )
 	EndEvent( sceneId )
 	DispatchEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x002077_OnEventRequest( sceneId, selfId, targetId, eventId )
 	if GetNumText() == 0 then

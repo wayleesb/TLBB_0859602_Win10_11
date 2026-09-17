@@ -1,26 +1,26 @@
---Ñà×ÓÎë ËÎ±ø Ã»ÓĞÊ²Ã´Êµ¼Ê¹¦ÄÜ
+--ç‡•å­å å®‹å…µ æ²¡æœ‰ä»€ä¹ˆå®é™…åŠŸèƒ½
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x402262_g_scriptId = 402262
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x402262_g_eventList={}	
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x402262_UpdateEventList( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
 		local nRand = random(4)
 		local str = ""
 		if nRand == 1  then
-			str = "  ÌıËµÕâ´Î·´ÔôÇëÀ´ÁËËÄ´ó¶ñÈËÇ°È¥´ÌÉ±ºôÑÓ±ª½«¾ü£¡"
+			str = "  å¬è¯´è¿™æ¬¡åè´¼è¯·æ¥äº†å››å¤§æ¶äººå‰å»åˆºæ€å‘¼å»¶è±¹å°†å†›ï¼"
 		elseif nRand == 2 then
-			str = "  ºôÑÓ±ª½«¾üÓĞÎ£ÏÕ£¬ÇëÄãÃÇ¸Ï¿ìµ½Æì½¢ÉÏÈ¥±£»¤Ëû£¡"
+			str = "  å‘¼å»¶è±¹å°†å†›æœ‰å±é™©ï¼Œè¯·ä½ ä»¬èµ¶å¿«åˆ°æ——èˆ°ä¸Šå»ä¿æŠ¤ä»–ï¼"
 		elseif nRand == 3 then
-			str = "  ºôÑÓ±ª½«¾üÊÇÎÒÃÇ´óËÎ²»¿É¶àµÃµÄ»¢½«£¬ÓÈÆäÉÃ³¤Ë®Õ½£¬ÓĞËûÔÚ£¬´óËÎË®¾ü±ØÊ¤£¡"
+			str = "  å‘¼å»¶è±¹å°†å†›æ˜¯æˆ‘ä»¬å¤§å®‹ä¸å¯å¤šå¾—çš„è™å°†ï¼Œå°¤å…¶æ“…é•¿æ°´æˆ˜ï¼Œæœ‰ä»–åœ¨ï¼Œå¤§å®‹æ°´å†›å¿…èƒœï¼"
 		else
-			str = "  Èç¹ûÎÒÒ²»áÇá¹¦£¬Ò»¶¨»á²È×ÅºÉÒ¶·Éµ½Æì½¢ÉÏÈ¥±£»¤ºôÑÓ±ª½«¾ü£¡"
+			str = "  å¦‚æœæˆ‘ä¹Ÿä¼šè½»åŠŸï¼Œä¸€å®šä¼šè¸©ç€è·å¶é£åˆ°æ——èˆ°ä¸Šå»ä¿æŠ¤å‘¼å»¶è±¹å°†å†›ï¼"
 		end
 		
 		AddText(sceneId, str)		    				
@@ -32,14 +32,14 @@ function x402262_UpdateEventList( sceneId, selfId,targetId )
 end
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x402262_OnDefaultEvent( sceneId, selfId,targetId )
 	x402262_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x402262_OnEventRequest( sceneId, selfId, targetId, eventId )
 	for i, findId in x402262_g_eventList do
@@ -51,7 +51,7 @@ function x402262_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x402262_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x402262_g_eventList do
@@ -66,10 +66,10 @@ function x402262_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x402262_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
-	--¾Ü¾øÖ®ºó£¬Òª·µ»ØNPCµÄÊÂ¼şÁĞ±í
+	--æ‹’ç»ä¹‹åï¼Œè¦è¿”å›NPCçš„äº‹ä»¶åˆ—è¡¨
 	for i, findId in x402262_g_eventList do
 		if missionScriptId == findId then
 			x402262_UpdateEventList( sceneId, selfId, targetId )
@@ -79,7 +79,7 @@ function x402262_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¼ÌĞø£¨ÒÑ¾­½ÓÁËÈÎÎñ£©
+--ç»§ç»­ï¼ˆå·²ç»æ¥äº†ä»»åŠ¡ï¼‰
 --**********************************
 function x402262_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x402262_g_eventList do
@@ -91,7 +91,7 @@ function x402262_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---Ìá½»ÒÑ×öÍêµÄÈÎÎñ
+--æäº¤å·²åšå®Œçš„ä»»åŠ¡
 --**********************************
 function x402262_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, selectRadioId )
 	for i, findId in x402262_g_eventList do
@@ -103,7 +103,7 @@ function x402262_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 end
 
 --**********************************
---ËÀÍöÊÂ¼ş
+--æ­»äº¡äº‹ä»¶
 --**********************************
 function x402262_OnDie( sceneId, selfId, killerId )
 

@@ -1,15 +1,15 @@
---ÖØÎÂ»éÀñ
+--é‡æ¸©å©šç¤¼
 --Created by zchw
 
 x808122_g_ScriptId = 808122;
 
---ĞÄÌø»ØÒäÂ¼ÎïÆ·ID
+--å¿ƒè·³å›å¿†å½•ç‰©å“ID
 x808122_g_HighWeddingTicket_id = 30504026
 
---ÖØÎÂ»éÀñ½ğÇ®ºÄ·ÑÏµÊı£¬Òª³ËÒÔĞèÇóÎïÆ·¸öÊıµÃµ½×îºó½ğÇ®£¬µ¥Î»Í­
+--é‡æ¸©å©šç¤¼é‡‘é’±è€—è´¹ç³»æ•°ï¼Œè¦ä¹˜ä»¥éœ€æ±‚ç‰©å“ä¸ªæ•°å¾—åˆ°æœ€åé‡‘é’±ï¼Œå•ä½é“œ
 x808122_g_moneyCostNumber = 100000;
 
---ÉÏ´Î»¨³µÑ²ÓÎÆô¶¯Ê±¼ä
+--ä¸Šæ¬¡èŠ±è½¦å·¡æ¸¸å¯åŠ¨æ—¶é—´
 x808122_g_LastPatrolTime = 0;
 
 x808122_g_busDataIds = {	3,		--0
@@ -21,32 +21,32 @@ x808122_g_busDataIds = {	3,		--0
 													5,		--6
 													5,		--7
 													5			--8
-												}			--»¨³µµÄDataID£¬¸ß¼¶Ñ²ÓÎ
+												}			--èŠ±è½¦çš„DataIDï¼Œé«˜çº§å·¡æ¸¸
 
 x808122_g_levelMsg =	{	{busId = 3,	msg = "#{CWHL_090104_1}"},
 							{busId = 4,	msg = "#{CWHL_090104_2}"},
 							{busId = 5,	msg = "#{CWHL_090104_3}"},
 						}
-x808122_g_busDefaultDataId = 5		--Ä¬ÈÏ»¨³µID
-x808122_g_busPatrolPathId = 3;		--»¨³µÂ·¾¶ID
+x808122_g_busDefaultDataId = 5		--é»˜è®¤èŠ±è½¦ID
+x808122_g_busPatrolPathId = 3;		--èŠ±è½¦è·¯å¾„ID
 
---Ã¿Ìì×î¶àÖØÎÂ´ÎÊı
+--æ¯å¤©æœ€å¤šé‡æ¸©æ¬¡æ•°
 x808122_g_StartMaxExpTimePerDay = 9
 
---»î¶¯¿ªÆôÈÕÆÚ 2009-2-10
+--æ´»åŠ¨å¼€å¯æ—¥æœŸ 2009-2-10
 x808122_g_StartTime = 10080210
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
-function x808122_OnDefaultEvent( sceneId, selfId, targetId )	--µã»÷¸ÃÈÎÎñºóÖ´ĞĞ´Ë½Å±¾
+function x808122_OnDefaultEvent( sceneId, selfId, targetId )	--ç‚¹å‡»è¯¥ä»»åŠ¡åæ‰§è¡Œæ­¤è„šæœ¬
 	local opt = GetNumText();
 	if opt == 1 then
 		BeginEvent(sceneId)
 			local todayCount = x808122_GetTodayCount( sceneId, selfId );	
 			local itemCount, money = x808122_NeedItemCountAndMoney( todayCount );
 			
-			--»ñµÃ»¨³µID£¬²¢Í¨¹ı»¨³µIDÀ´»ñµÃÖØÎÂ»éÀñ¼¶±ğµÄ×Ö·û´®
+			--è·å¾—èŠ±è½¦IDï¼Œå¹¶é€šè¿‡èŠ±è½¦IDæ¥è·å¾—é‡æ¸©å©šç¤¼çº§åˆ«çš„å­—ç¬¦ä¸²
 			local busId = x808122_g_busDefaultDataId;
 			if todayCount < getn(x808122_g_busDataIds) and todayCount >= 0 then
 				busId = x808122_g_busDataIds[todayCount + 1];
@@ -61,8 +61,8 @@ function x808122_OnDefaultEvent( sceneId, selfId, targetId )	--µã»÷¸ÃÈÎÎñºóÖ´ĞĞ´
 			local msg = "#{CWHL_081007_01_1}"..(todayCount + 1).."#{CWHL_081007_01_2}"..itemCount.."#{CWHL_081007_01_3}"..( money / 10000 ).."#{CWHL_081007_01_4}"..reexpLevel
 			
 			AddText(sceneId, msg);
-			AddNumText(sceneId, x808122_g_ScriptId, "#{CWHL_081007_02}", 6, 11);													--ÎÒÈ·¶¨ÒªÖØÎÂ»éÀñ
-			AddNumText(sceneId, x808122_g_ScriptId, "#{CWHL_081007_03}", 6, 12);													--»¹ÊÇËãÁË°É
+			AddNumText(sceneId, x808122_g_ScriptId, "#{CWHL_081007_02}", 6, 11);													--æˆ‘ç¡®å®šè¦é‡æ¸©å©šç¤¼
+			AddNumText(sceneId, x808122_g_ScriptId, "#{CWHL_081007_03}", 6, 12);													--è¿˜æ˜¯ç®—äº†å§
 		EndEvent()
 		DispatchEventList(sceneId, selfId, targetId)
 	elseif opt == 2 then
@@ -73,7 +73,7 @@ function x808122_OnDefaultEvent( sceneId, selfId, targetId )	--µã»÷¸ÃÈÎÎñºóÖ´ĞĞ´
 			x808122_ReturnDlg(sceneId, selfId, targetId, msg);
 			return
 		end	
-		--ÖØÎÂ»éÀñ
+		--é‡æ¸©å©šç¤¼
 		x808122_ReExperienceWedding(sceneId, selfId, targetId);
 	elseif opt == 12 then
 		x808122_CloseDlg(sceneId, selfId, targetId)
@@ -81,7 +81,7 @@ function x808122_OnDefaultEvent( sceneId, selfId, targetId )	--µã»÷¸ÃÈÎÎñºóÖ´ĞĞ´
 end
 
 --**********************************
---¹Ø±Õ¶Ô»°¿ò
+--å…³é—­å¯¹è¯æ¡†
 --**********************************
 function x808122_CloseDlg(sceneId, selfId, targetId)
 	BeginUICommand( sceneId )
@@ -91,7 +91,7 @@ function x808122_CloseDlg(sceneId, selfId, targetId)
 end
 
 --**********************************
---ÖØÎÂ»éÀñ
+--é‡æ¸©å©šç¤¼
 --**********************************
 function x808122_ReExperienceWedding(sceneId, selfId, targetId)
 
@@ -109,7 +109,7 @@ function x808122_ReExperienceWedding(sceneId, selfId, targetId)
 		end
 	end
 	
-	--ÅĞ¶Ï»¨³µÀàĞÍ012´ÎÎª3¼¶ 45´ÎÎª4¼¶ 5678´ÎÎª5¼¶
+	--åˆ¤æ–­èŠ±è½¦ç±»å‹012æ¬¡ä¸º3çº§ 45æ¬¡ä¸º4çº§ 5678æ¬¡ä¸º5çº§
 	local busId = x808122_g_busDefaultDataId;
 	local todayCount = x808122_GetTodayCount( sceneId, selfId );
 	if todayCount < getn(x808122_g_busDataIds) and todayCount >= 0 then
@@ -125,7 +125,7 @@ function x808122_ReExperienceWedding(sceneId, selfId, targetId)
 		--local addPassergerRet = OR_OK;
 		------------
 		if addPassergerRet and addPassergerRet == OR_OK then
-			--Ïû·Ñ			
+			--æ¶ˆè´¹			
 			local itemCount, money = x808122_NeedItemCountAndMoney( todayCount );
 			
 			local ret1 = CostMoney(sceneId, selfId, money);
@@ -139,24 +139,24 @@ function x808122_ReExperienceWedding(sceneId, selfId, targetId)
 			
 			local busStartRet = LuaFnBusStart(sceneId, busObjID);
 			if busStartRet and busStartRet == 1 then
-				x808122_g_LastPatrolTime = LuaFnGetCurrentTime(); 												--ÉèÖÃÊ±¼ä
+				x808122_g_LastPatrolTime = LuaFnGetCurrentTime(); 												--è®¾ç½®æ—¶é—´
 								
-				--×Ü´ÎÊı¼Ó1
+				--æ€»æ¬¡æ•°åŠ 1
 				local totalCount = GetMissionData( sceneId, selfId, MD_TW_REEXPERIENCE_WEDDING_TOTAL_COUNT )
 				SetMissionData( sceneId, selfId, MD_TW_REEXPERIENCE_WEDDING_TOTAL_COUNT, totalCount + 1 )
 				
-				--µ±Ìì´ÎÊı¼Ó1
+				--å½“å¤©æ¬¡æ•°åŠ 1
 				SetMissionData( sceneId, selfId, MD_TW_REEXPERIENCE_WEDDING_TODAY_COUNT, todayCount + 1)
 				
-				--ÉèÖÃ½ñÌìÖØÎÂ¹ı±ê¼Ç
+				--è®¾ç½®ä»Šå¤©é‡æ¸©è¿‡æ ‡è®°
 				local a = GetTime2Day();
 				SetMissionData(sceneId, selfId, MD_REEXPERIENCE_WEDDING, GetTime2Day());	
 				x808122_CloseDlg(sceneId, selfId, targetId)
 				
-				--¹«¸æ
+				--å…¬å‘Š
 				x808122_NotifyAll(sceneId, selfId);
 				
-				--ÈÕÖ¾
+				--æ—¥å¿—
 				local spouseGuid = LuaFnGetSpouseGUID(sceneId, selfId);
 				local spouseObjId = LuaFnGuid2ObjId(sceneId, spouseGuid);
 				local level1 = GetLevel(sceneId, selfId);
@@ -167,7 +167,7 @@ function x808122_ReExperienceWedding(sceneId, selfId, targetId)
 				x808122_Tips(sceneId, selfId, "#{CWHL_081007_13}");
 				x808122_Tips(sceneId, spouseObjId, "#{CWHL_081007_13}");
 			else
-				strText = "ÄÚ²¿´íÎó(start failed)£¬»¨³µÑ²ÓÎÆô¶¯Ê§°Ü£¬ÇëÓëGMÁªÏµ¡£"
+				strText = "å†…éƒ¨é”™è¯¯(start failed)ï¼ŒèŠ±è½¦å·¡æ¸¸å¯åŠ¨å¤±è´¥ï¼Œè¯·ä¸GMè”ç³»ã€‚"
 			end
 		end
 		------------
@@ -183,7 +183,7 @@ function x808122_ReExperienceWedding(sceneId, selfId, targetId)
 end
 
 --**********************************
---»é³µÑ²ÓÎ
+--å©šè½¦å·¡æ¸¸
 --**********************************
 function x808122_NotifyAll(sceneId, selfId)
 	local captainName = GetName(sceneId, selfId);
@@ -195,24 +195,24 @@ function x808122_NotifyAll(sceneId, selfId)
 end
 
 --**********************************
---·òÆŞ×é¶ÓÅĞ¶Ï
+--å¤«å¦»ç»„é˜Ÿåˆ¤æ–­
 --**********************************
 function x808122_IsCoupleMakeTeam(sceneId,selfId)
-	--1.ÊÇ·ñ×é¶Ó
+	--1.æ˜¯å¦ç»„é˜Ÿ
 	local teamId = GetTeamId(sceneId,selfId)
 	if teamId<0 then
 		return 0, "#{CWHL_081007_05}";
 	end	
 	
-	--2.ÊÇ·ñÁ©ÈË
+	--2.æ˜¯å¦ä¿©äºº
 	if GetTeamSize(sceneId,selfId)~=2 then
 		return 0, "#{CWHL_081007_05}";
 	end	
-	--3.ÊÇ·ñÔÚ¸½½ü
+	--3.æ˜¯å¦åœ¨é™„è¿‘
 	if GetNearTeamCount(sceneId,selfId) ~= 2 then
 		return 0, "#{CWHL_081007_04}";
 	end	
-	--4.ÊÇ·ñÊÇ·òÆŞ
+	--4.æ˜¯å¦æ˜¯å¤«å¦»
 	local tid1 = GetNearTeamMember(sceneId,selfId,0)
 	local tid2 = GetNearTeamMember(sceneId,selfId,1)
 	if LuaFnIsMarried(sceneId,tid1)<=0 or LuaFnIsMarried(sceneId,tid2)<=0 then
@@ -227,31 +227,31 @@ function x808122_IsCoupleMakeTeam(sceneId,selfId)
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x808122_OnEnumerate( sceneId, selfId, targetId )
 	if GetTime2Day() >= x808122_g_StartTime then
-		AddNumText(sceneId, x808122_g_ScriptId, "ÖØÎÂ»éÀñ", 6, 1);
-		AddNumText(sceneId, x808122_g_ScriptId, "¹ØÓÚÖØÎÂ»éÀñ", 11, 2);
+		AddNumText(sceneId, x808122_g_ScriptId, "é‡æ¸©å©šç¤¼", 6, 1);
+		AddNumText(sceneId, x808122_g_ScriptId, "å…³äºé‡æ¸©å©šç¤¼", 11, 2);
 	end
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x808122_CheckAccept( sceneId, selfId )
-	--·òÆŞ×é¶Ó£¿
+	--å¤«å¦»ç»„é˜Ÿï¼Ÿ
 	local ret, msg = x808122_IsCoupleMakeTeam(sceneId, selfId);
 	if ret == 0 then
 		return 0, msg;
 	end
 	
-	--¶Ó³¤£¿
+	--é˜Ÿé•¿ï¼Ÿ
 	if IsCaptain(sceneId, selfId) == 0 then
 		return 0, "#{CWHL_081007_06}";
 	end
 	
-	--½ñÌìÖØÎÂ¹ı9´ÎÁË£¿
+	--ä»Šå¤©é‡æ¸©è¿‡9æ¬¡äº†ï¼Ÿ
 	local todayCount = x808122_GetTodayCount( sceneId, selfId );
 	if( todayCount >= x808122_g_StartMaxExpTimePerDay ) then
 		return 0, "#{CWHL_081007_07}"
@@ -259,22 +259,22 @@ function x808122_CheckAccept( sceneId, selfId )
 	
 	
 	local itemCount, money = x808122_NeedItemCountAndMoney( todayCount );	
-	--ÓĞĞÄÌø»ØÒä£¿
+	--æœ‰å¿ƒè·³å›å¿†ï¼Ÿ
 	if LuaFnGetAvailableItemCount(sceneId, selfId, x808122_g_HighWeddingTicket_id) < itemCount then
 		return 0, "#{CWHL_081007_08}";
 	end
 	
-	--¹»Ç®£¿
+	--å¤Ÿé’±ï¼Ÿ
 	if GetMoney(sceneId, selfId) < money then
 		return 0, "#{CWHL_081007_09}";
 	end
 	
-	--ÅĞ¶Ï¾àÀë·şÎñÆ÷ÉÏÒ»´Î»¨³µÑ²ÓÎµÄÊ±¼äÊÇ·ñ³¬¹ı3·ÖÖÓ
+	--åˆ¤æ–­è·ç¦»æœåŠ¡å™¨ä¸Šä¸€æ¬¡èŠ±è½¦å·¡æ¸¸çš„æ—¶é—´æ˜¯å¦è¶…è¿‡3åˆ†é’Ÿ
 	if LuaFnGetCurrentTime() - x808122_g_LastPatrolTime < 3*60 then
 		return 0, "#{CWHL_081007_10}";
 	end
 	
-	--Æï³Ë£¿
+	--éª‘ä¹˜ï¼Ÿ
 	local spouseGuid = LuaFnGetSpouseGUID(sceneId, selfId);
 	local spouseObjid = LuaFnGuid2ObjId(sceneId, spouseGuid);
 	if LuaFnGetDRideFlag(sceneId, selfId) == 1 
@@ -284,17 +284,17 @@ function x808122_CheckAccept( sceneId, selfId )
 		return 0, "#{CWHL_081007_11}";
 	end
 	
-	--ÕäÊŞ³öÕ÷£¿
+	--çå…½å‡ºå¾ï¼Ÿ
 	if LuaFnGetCurrentPetGUID(sceneId, selfId) ~= nil then
 		return 0, "#{CWHL_081007_12}";
 	end
 	
-	--×é¶Ó¸úËæ£¿
+	--ç»„é˜Ÿè·Ÿéšï¼Ÿ
 	if IsTeamFollow(sceneId, selfId) == 1 then
 		return 0, "#{CWHL_81120_1}";
 	end
 	
-	--°ÚÌ¯£¿
+	--æ‘†æ‘Šï¼Ÿ
 	if LuaFnIsStalling(sceneId, selfId) == 1 or LuaFnIsStalling(sceneId, spouseObjid) == 1 then
 		return 0, "#{CWHL_081208_1}";
 	end
@@ -303,7 +303,7 @@ function x808122_CheckAccept( sceneId, selfId )
 	return 1, "ok";
 end
 
---»ñµÃ±¾ÈÕÒÑ¾­ÖØÎÂ´ÎÊı£¬²»°üÀ¨Õâ´Î£¬Ã»ÓĞÖØÎÂ¾ÍÊÇ0
+--è·å¾—æœ¬æ—¥å·²ç»é‡æ¸©æ¬¡æ•°ï¼Œä¸åŒ…æ‹¬è¿™æ¬¡ï¼Œæ²¡æœ‰é‡æ¸©å°±æ˜¯0
 function x808122_GetTodayCount( sceneId, selfId )
 	local todayCount = 0;
 	
@@ -331,7 +331,7 @@ function x808122_NeedItemCountAndMoney( times )
 end
 
 --**********************************
---·µ»Ø¶Ô»°
+--è¿”å›å¯¹è¯
 --**********************************
 function x808122_ReturnDlg(sceneId, selfId, targetId, msg)
 	BeginEvent(sceneId)
@@ -351,7 +351,7 @@ function x808122_Tips(sceneId, selfId, msg)
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x808122_OnAccept( sceneId, selfId )
 
@@ -359,47 +359,47 @@ function x808122_OnAccept( sceneId, selfId )
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x808122_OnAbandon( sceneId, selfId )
 
 end
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x808122_OnContinue( sceneId, selfId, targetId )
 
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x808122_CheckSubmit( sceneId, selfId )
 
 end
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x808122_OnSubmit( sceneId, selfId, targetId,selectRadioId )
 
 end
 
 --**********************************
---É±ËÀ¹ÖÎï»òÍæ¼Ò
+--æ€æ­»æ€ªç‰©æˆ–ç©å®¶
 --**********************************
 function x808122_OnKillObject( sceneId, selfId, objdataId )
 end
 
 --**********************************
---½øÈëÇøÓòÊÂ¼ş
+--è¿›å…¥åŒºåŸŸäº‹ä»¶
 --**********************************
 function x808122_OnEnterArea( sceneId, selfId, zoneId )
 end
 
 --**********************************
---µÀ¾ß¸Ä±ä
+--é“å…·æ”¹å˜
 --**********************************
 function x808122_OnItemChanged( sceneId, selfId, itemdataId )
 end

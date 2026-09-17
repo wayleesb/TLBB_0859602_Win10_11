@@ -35,10 +35,10 @@ function PetAgname_OnEvent(event)
 end
 
 function PetAgname_UpdateFrame()
-	--Çå¿Õ
+	--æ¸…ç©º
 	PetAgname_Listbox:ClearListBox();
 
-	--¼ÓÈëËùÓĞ³ÆºÅÃû
+	--åŠ å…¥æ‰€æœ‰ç§°å·å
 	local nAgnameNum = Pet:GetTitleNum(g_petNum);
 	
 	local i;
@@ -47,7 +47,7 @@ function PetAgname_UpdateFrame()
 		PetAgname_Listbox:AddItem(szAgnameName, i);	
 	end
 	
-	--µ±Ç°ÏÔÊ¾³ÆºÅ
+	--å½“å‰æ˜¾ç¤ºç§°å·
 	PetAgname_Currently:SetText( "" .. Pet:GetCurrentTitle(g_petNum,"name") );
 	PetAgname_Explain:SetText( "".. Pet:GetCurrentTitle(g_petNum,"desc"));
 end
@@ -61,7 +61,7 @@ function PetAgnameListBox_Selected()
 		return;
 	end
 	
-	--ÉèÖÃµ±Ç°³ÆºÅµÄ½âÊÍ
+	--è®¾ç½®å½“å‰ç§°å·çš„è§£é‡Š
 	PetAgname_Explain:SetText( Pet:EnumTitleByIdx(g_petNum,nSelIndex-1,"desc"));
 
 end

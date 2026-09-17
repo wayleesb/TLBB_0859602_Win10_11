@@ -1,32 +1,32 @@
---³ÇÊĞNPC
---±ø²¿
+--åŸå¸‚NPC
+--å…µéƒ¨
 
 x805010_g_scriptId=805008
 x805010_g_BuildingID4 = 11
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x805010_OnDefaultEvent( sceneId, selfId,targetId )
 	BeginEvent(sceneId)
-		--AddNumText(sceneId,x805010_g_scriptId,"ÉèÖÃ½¨Öşµ½Ò»¼¶",-1,1)
-		--AddNumText(sceneId,x805010_g_scriptId,"ÉèÖÃ½¨Öşµ½¶ş¼¶",-1,2)
-		--AddNumText(sceneId,x805010_g_scriptId,"ÉèÖÃ½¨Öşµ½Èı¼¶",-1,3)
-		--AddNumText(sceneId,x805010_g_scriptId,"ÉèÖÃ½¨Öşµ½ËÄ¼¶",-1,4)
-		--AddNumText(sceneId,x805010_g_scriptId,"ÉèÖÃ½¨Öşµ½Îå¼¶",-1,5)
-		AddNumText(sceneId,x805010_g_scriptId,"Åä·½ÉÌµê",7,6)
+		--AddNumText(sceneId,x805010_g_scriptId,"è®¾ç½®å»ºç­‘åˆ°ä¸€çº§",-1,1)
+		--AddNumText(sceneId,x805010_g_scriptId,"è®¾ç½®å»ºç­‘åˆ°äºŒçº§",-1,2)
+		--AddNumText(sceneId,x805010_g_scriptId,"è®¾ç½®å»ºç­‘åˆ°ä¸‰çº§",-1,3)
+		--AddNumText(sceneId,x805010_g_scriptId,"è®¾ç½®å»ºç­‘åˆ°å››çº§",-1,4)
+		--AddNumText(sceneId,x805010_g_scriptId,"è®¾ç½®å»ºç­‘åˆ°äº”çº§",-1,5)
+		AddNumText(sceneId,x805010_g_scriptId,"é…æ–¹å•†åº—",7,6)
 		
-		--life Ìí¼ÓÕâ¸ö½¨ÖşÎïµÄÏàÓ¦Éú»î¼¼ÄÜÑ¡Ïî
+		--life æ·»åŠ è¿™ä¸ªå»ºç­‘ç‰©çš„ç›¸åº”ç”Ÿæ´»æŠ€èƒ½é€‰é¡¹
 		CallScriptFunction( CITY_BUILDING_ABILITY_SCRIPT, "AddCityLifeAbilityOpt",sceneId, selfId, x805010_g_scriptId,x805010_g_BuildingID4,7)
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x805010_OnEventRequest( sceneId, selfId, targetId, eventId )
-	--´¦ÀíÕâ¸ö½¨ÖşÎïµÄÏàÓ¦Éú»î¼¼ÄÜÑ¡Ïî
+	--å¤„ç†è¿™ä¸ªå»ºç­‘ç‰©çš„ç›¸åº”ç”Ÿæ´»æŠ€èƒ½é€‰é¡¹
 	if eventId ~= x805010_g_scriptId then
 		CallScriptFunction( CITY_BUILDING_ABILITY_SCRIPT, "OnDefaultEvent",sceneId, selfId, targetId, eventId, x805010_g_scriptId, x805010_g_BuildingID4 )
 		return
@@ -44,13 +44,13 @@ function x805010_OnEventRequest( sceneId, selfId, targetId, eventId )
 		--CityBuildingChange(sceneId, selfId, x805010_g_BuildingID4, 4)
 	elseif GetNumText() == 6 then
 		BeginUICommand(sceneId)
-			UICommand_AddInt(sceneId,targetId) --µ÷ÓÃ³ÇÊĞÉÌµê½çÃæ
+			UICommand_AddInt(sceneId,targetId) --è°ƒç”¨åŸå¸‚å•†åº—ç•Œé¢
 			UICommand_AddInt(sceneId,x805010_g_BuildingID4)
 		EndUICommand(sceneId)
 		DispatchUICommand(sceneId,selfId, 104)
 	elseif GetNumText() == 7 then
 		BeginEvent(sceneId)
-		--life Ìí¼ÓÕâ¸ö½¨ÖşÎïµÄÏàÓ¦Éú»î¼¼ÄÜÑ¡Ïî
+		--life æ·»åŠ è¿™ä¸ªå»ºç­‘ç‰©çš„ç›¸åº”ç”Ÿæ´»æŠ€èƒ½é€‰é¡¹
 		CallScriptFunction( CITY_BUILDING_ABILITY_SCRIPT, "OnEnumerate",sceneId, selfId, targetId, x805010_g_BuildingID4 )
 		EndEvent(sceneId)
 		DispatchEventList( sceneId, selfId, targetId )

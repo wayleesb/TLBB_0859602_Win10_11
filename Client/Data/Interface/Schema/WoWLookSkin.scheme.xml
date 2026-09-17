@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" ?>
+<?xml version="1.0" ?>
 <GUIScheme Name="WoWLookSkin">
 	<WindowSet Filename="CEGUIFalagard" />
 	<LookNFeel Filename="Schema/TLBBLook_Frame.looknfeel.xml"/>
@@ -883,5 +883,7 @@
    <Imageset Name="taiwanzhuanyong6" Filename="Icons/taiwanzhuanyong6.imageset.xml" />
    <Imageset Name="haiwai1" Filename="Icons/haiwai1.imageset.xml" />
    <Imageset Name="GemSP" Filename="Icons/GemSP.imageset.xml" />
+  <Imageset Name="SlotUI02" Filename="Common/SlotUI02.imageset.xml"/>
+  <Imageset Name="DressBox" Filename="Common/DressBox.imageset.xml"/>
 </GUIScheme>
 

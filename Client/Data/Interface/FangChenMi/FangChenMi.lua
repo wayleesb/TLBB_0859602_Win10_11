@@ -1,16 +1,16 @@
 FangChenMi_Status = {}
-FangChenMi_Status[1]  = {tip = "#{FCM1_90408_1}", enable = 0} --I½×¶ÎÌíÊµÃû
-FangChenMi_Status[2]  = {tip = "#{FCM1_90408_2}", enable = 1} --I½×¶ÎÎ´ÌíÊµÃû
-FangChenMi_Status[3]  = {tip = "#{FCM2_90408_1}", enable = 0} --II½×¶ÎĞ¡ÓÚ18
-FangChenMi_Status[4]  = {tip = "#{FCM2_90408_3}", enable = 1} --II½×¶ÎÎ´ÌíÊµÃû
-FangChenMi_Status[5]  = {tip = "#{FCM2_90408_2}", enable = 0} --II½×¶Î³õ²½ÈÏ¶¨´óÓÚ18
-FangChenMi_Status[6]  = {tip = "#{FCM2_90408_2}", enable = 0} --IIÌîĞ´ÁËÊµÃû
-FangChenMi_Status[7]  = {tip = "#{FCM3_90408_4}", enable = 0} --III½×¶ÎĞ¡ÓÚ18
-FangChenMi_Status[8]  = {tip = "#{FCM3_90408_5}", enable = 1} --III½×¶ÎÎ´ÌíÊµÃû
-FangChenMi_Status[9]  = {tip = "#{FCM3_90408_2}", enable = 0} --III½×¶Î³õ²½ÈÏ¶¨´óÓÚ18
-FangChenMi_Status[10]  = {tip = "#{FCM3_90408_3}", enable = 0} --III½×¶ÎÉóºËÈÏ¶¨´óÓÚ18
-FangChenMi_Status[11] = {tip = "#{FCM3_90408_1}", enable = 0} --III½×¶ÎÉóºËÈÏ¶¨ÎŞĞ§ÊµÃû
-FangChenMi_Status[12]  = {tip = "#{FCM3_90408_1}", enable = 0} --III½×¶ÎÌîĞ´ÁËÊµÃû
+FangChenMi_Status[1]  = {tip = "#{FCM1_90408_1}", enable = 0} --Ié˜¶æ®µæ·»å®å
+FangChenMi_Status[2]  = {tip = "#{FCM1_90408_2}", enable = 1} --Ié˜¶æ®µæœªæ·»å®å
+FangChenMi_Status[3]  = {tip = "#{FCM2_90408_1}", enable = 0} --IIé˜¶æ®µå°äº18
+FangChenMi_Status[4]  = {tip = "#{FCM2_90408_3}", enable = 1} --IIé˜¶æ®µæœªæ·»å®å
+FangChenMi_Status[5]  = {tip = "#{FCM2_90408_2}", enable = 0} --IIé˜¶æ®µåˆæ­¥è®¤å®šå¤§äº18
+FangChenMi_Status[6]  = {tip = "#{FCM2_90408_2}", enable = 0} --IIå¡«å†™äº†å®å
+FangChenMi_Status[7]  = {tip = "#{FCM3_90408_4}", enable = 0} --IIIé˜¶æ®µå°äº18
+FangChenMi_Status[8]  = {tip = "#{FCM3_90408_5}", enable = 1} --IIIé˜¶æ®µæœªæ·»å®å
+FangChenMi_Status[9]  = {tip = "#{FCM3_90408_2}", enable = 0} --IIIé˜¶æ®µåˆæ­¥è®¤å®šå¤§äº18
+FangChenMi_Status[10]  = {tip = "#{FCM3_90408_3}", enable = 0} --IIIé˜¶æ®µå®¡æ ¸è®¤å®šå¤§äº18
+FangChenMi_Status[11] = {tip = "#{FCM3_90408_1}", enable = 0} --IIIé˜¶æ®µå®¡æ ¸è®¤å®šæ— æ•ˆå®å
+FangChenMi_Status[12]  = {tip = "#{FCM3_90408_1}", enable = 0} --IIIé˜¶æ®µå¡«å†™äº†å®å
 
 function FangChenMi_PreLoad()
 	this:RegisterEvent("OPEN_FANGCHENGMI_DLG");
@@ -27,34 +27,34 @@ function FangChenMi_OnEvent(event)
 		local haveMibao = tonumber(arg0);
 		local haveShiming = tonumber(arg1);
 		if(haveMibao == 1)then
-			--ÄúÒÑÊ¹ÓÃÁËÃÜ±£¿¨°ó¶¨·şÎñ¡£ÇëÍ×ÉÆ±£¹ÜºÃÄãµÄÃÜ±£¿¨£¬×£ÄãÓÎÏ·Óä¿ì¡£
+			--æ‚¨å·²ä½¿ç”¨äº†å¯†ä¿å¡ç»‘å®šæœåŠ¡ã€‚è¯·å¦¥å–„ä¿ç®¡å¥½ä½ çš„å¯†ä¿å¡ï¼Œç¥ä½ æ¸¸æˆæ„‰å¿«ã€‚
 			FangChenMi_MiBaoKa_Text : SetText("#{DHMB_0711_08}");
 			FangChenMi_MiBaoKa : Disable()
    
-   --²»ÔÙÅĞ¶ÏÊÇ·ñ¿ªÍ¨µç»°ÃÜ±£
+   --ä¸å†åˆ¤æ–­æ˜¯å¦å¼€é€šç”µè¯å¯†ä¿
 --		elseif(haveMibao == 2) then
---			--Ç×°®µÄÍæ¼Ò£¬ÄúÒÑ¿ªÍ¨µç»°ÃÜ±£°ó¶¨¹¦ÄÜ£¬µÇÂ½ÓÎÏ·Ç°ÇëÏÈ²¦´òÃâ·Ñµç»°¡°010-6212-2299¡±½øĞĞÑéÖ¤
+--			--äº²çˆ±çš„ç©å®¶ï¼Œæ‚¨å·²å¼€é€šç”µè¯å¯†ä¿ç»‘å®šåŠŸèƒ½ï¼Œç™»é™†æ¸¸æˆå‰è¯·å…ˆæ‹¨æ‰“å…è´¹ç”µè¯â€œ010-6212-2299â€è¿›è¡ŒéªŒè¯
 --			--FangChenMi_MiBaoKa_Text : SetText("#{DHMB_0711_07}");
 --			FangChenMi_SetMibaokaText(); -- add by cuiyj 
 --			FangChenMi_MiBaoKa	: Disable()
 			
 		else
-			--ÄúµÄÕËºÅÉĞÎ´¿ªÍ¨Ãâ·ÑµÄÃÜ±£¿¨°ó¶¨¹¦ÄÜ¡£Îª±ÜÃâÄúµÄÕËºÅ±»µÁ»òÓÎÏ·²Æ²ú±»¶ñÒâÇÖÕ¼µÈÒâÍâÇé¿öµÄ·¢Éú£¬Ç¿ÁÒ½¨ÒéÄúµÇÂ½sde.sohu.game.com¿ªÍ¨µç»°ÃÜ±£°ó¶¨·şÎñ¡£µç»°ÃÜ±£°ó¶¨ÓëÃÜ±£¿¨°ó¶¨²»ÄÜÍ¬Ê±Ê¹ÓÃ£¬½¨ÒéÄúÊ¹ÓÃµç»°ÃÜ±£µÄÍ¬Ê±Ê¹ÓÃµçÄÔ°ó¶¨£¬Ìá¸ßÕËºÅ°²È«ÏµÊı¡£
+			--æ‚¨çš„è´¦å·å°šæœªå¼€é€šå…è´¹çš„å¯†ä¿å¡ç»‘å®šåŠŸèƒ½ã€‚ä¸ºé¿å…æ‚¨çš„è´¦å·è¢«ç›—æˆ–æ¸¸æˆè´¢äº§è¢«æ¶æ„ä¾µå ç­‰æ„å¤–æƒ…å†µçš„å‘ç”Ÿï¼Œå¼ºçƒˆå»ºè®®æ‚¨ç™»é™†sde.sohu.game.comå¼€é€šç”µè¯å¯†ä¿ç»‘å®šæœåŠ¡ã€‚ç”µè¯å¯†ä¿ç»‘å®šä¸å¯†ä¿å¡ç»‘å®šä¸èƒ½åŒæ—¶ä½¿ç”¨ï¼Œå»ºè®®æ‚¨ä½¿ç”¨ç”µè¯å¯†ä¿çš„åŒæ—¶ä½¿ç”¨ç”µè„‘ç»‘å®šï¼Œæé«˜è´¦å·å®‰å…¨ç³»æ•°ã€‚
 			FangChenMi_MiBaoKa_Text : SetText("#{Interface_FangChenMi_txt5}");
 			FangChenMi_MiBaoKa	: Enable()
 		end
 
 --		if(haveShiming == 1)then
---			--ÄúµÄÕÊºÅÒÑÌîĞ´ÓÃ»§ÕæÊµĞÕÃûÓëÉí·İÖ¤ºÅÂëĞÅÏ¢£¬×£ÄúÓÎÏ·Óä¿ì¡£
+--			--æ‚¨çš„å¸å·å·²å¡«å†™ç”¨æˆ·çœŸå®å§“åä¸èº«ä»½è¯å·ç ä¿¡æ¯ï¼Œç¥æ‚¨æ¸¸æˆæ„‰å¿«ã€‚
 --			FangChenMi_Info_Text : SetText("#{Interface_FangChenMi_txt8}");
 --			FangChenMi_Info	: Disable()
 --		else
---			--×¢Òâ£¡ÄúµÄÕÊºÅÉĞÎ´ÌîĞ´ÓÃ»§ÕæÊµĞÕÃûÓëÉí·İÖ¤ºÅÂëĞÅÏ¢£¬ÓĞ¿ÉÄÜ»á±»ÄÉÈë#cff0000·À³ÁÃÔÏµÍ³#Y¶ø#cff0000ÎŞ·¨Õı³£»ñµÃÓÎÏ·ÊÕÒæ#Y¡£ÎªÁËÈ·±£ÄúÄÜÕı³£½øĞĞÓÎÏ·£¬ÎÒÃÇÇ¿ÁÒ½¨ÒéÄúµÇÂ¼ÌìÁú°Ë²¿¹Ù·½ÍøÕ¾ÌîĞ´ÄúµÄÓÃ»§ÕæÊµĞÕÃûÓëÉí·İÖ¤ºÅÂëĞÅÏ¢¡£
+--			--æ³¨æ„ï¼æ‚¨çš„å¸å·å°šæœªå¡«å†™ç”¨æˆ·çœŸå®å§“åä¸èº«ä»½è¯å·ç ä¿¡æ¯ï¼Œæœ‰å¯èƒ½ä¼šè¢«çº³å…¥#cff0000é˜²æ²‰è¿·ç³»ç»Ÿ#Yè€Œ#cff0000æ— æ³•æ­£å¸¸è·å¾—æ¸¸æˆæ”¶ç›Š#Yã€‚ä¸ºäº†ç¡®ä¿æ‚¨èƒ½æ­£å¸¸è¿›è¡Œæ¸¸æˆï¼Œæˆ‘ä»¬å¼ºçƒˆå»ºè®®æ‚¨ç™»å½•å¤©é¾™å…«éƒ¨å®˜æ–¹ç½‘ç«™å¡«å†™æ‚¨çš„ç”¨æˆ·çœŸå®å§“åä¸èº«ä»½è¯å·ç ä¿¡æ¯ã€‚
 --			FangChenMi_Info_Text : SetText("#{Interface_FangChenMi_txt7}");
 --			FangChenMi_Info	: Enable()
 --		end
 --		
---		-- ½ô¼±ĞŞ¸Ä£¬ÓÉÓÚÍâÍø»¹Ã»ÓĞ¿ªÍ¨´ËÏî·şÎñ£¬ÏÈ¹Ø±Õ Áõ¶Ü 2008.7.30
+--		-- ç´§æ€¥ä¿®æ”¹ï¼Œç”±äºå¤–ç½‘è¿˜æ²¡æœ‰å¼€é€šæ­¤é¡¹æœåŠ¡ï¼Œå…ˆå…³é—­ åˆ˜ç›¾ 2008.7.30
 --		--FangChenMi_MiBaoKa : Disable()
 		FangChenMi_Info_Text : SetText(FangChenMi_Status[haveShiming].tip);
 		if (FangChenMi_Status[haveShiming].enable == 1) then
@@ -63,7 +63,7 @@ function FangChenMi_OnEvent(event)
 		  FangChenMi_Info	: Disable();
 		end
 		
-		-- ½ô¼±ĞŞ¸Ä£¬ÓÉÓÚÍâÍø»¹Ã»ÓĞ¿ªÍ¨´ËÏî·şÎñ£¬ÏÈ¹Ø±Õ Áõ¶Ü 2008.7.30
+		-- ç´§æ€¥ä¿®æ”¹ï¼Œç”±äºå¤–ç½‘è¿˜æ²¡æœ‰å¼€é€šæ­¤é¡¹æœåŠ¡ï¼Œå…ˆå…³é—­ åˆ˜ç›¾ 2008.7.30
 		--FangChenMi_MiBaoKa : Disable()
 		
 		this : Show();
@@ -76,24 +76,24 @@ function FangChenMi_OnEvent(event)
 	end
 end
 
---Í¬Òâ
+--åŒæ„
 function FangChenMi_Accept_Clicked()
 	SendSafeSignMsg();
 	this : Hide();
 end
 
---È¥ÃÜ±¨¿¨ÍøÕ¾
+--å»å¯†æŠ¥å¡ç½‘ç«™
 function FangChenMi_MiBaoKa_Clicked()
-	if(Variable:GetVariable("System_CodePage") == "1258") then
+	if(Variable:GetVariable("System_Region") == "1258") then
 		--do nothing
 	else
 		GameProduceLogin:OpenURL( "http://sde.game.sohu.com/piccard/tlmibao.jsp" )
 	end
 end
 
---È¥ÊµÃûÈÏÖ¤ÍøÕ¾
+--å»å®åè®¤è¯ç½‘ç«™
 function FangChenMi_Info_Clicked()
-	if(Variable:GetVariable("System_CodePage") == "1258") then
+	if(Variable:GetVariable("System_Region") == "1258") then
 		--do nothing
 	else
 		GameProduceLogin:OpenURL( "http://sde.game.sohu.com/fangchenmi/submitlogin.jsp" )
@@ -113,7 +113,7 @@ function FangChenMi_SetMibaokaText()
 	local strMid = ""
 	local i = 0
 	
-	-- ´ÓÅäÖÃÎÄ¼şÀïËæ»úÈ¡3¸öµç»°
+	-- ä»é…ç½®æ–‡ä»¶é‡Œéšæœºå–3ä¸ªç”µè¯
 	--math.randomseed(os.time() + 2);
 	math.random(0,100);math.random(0,100)
 	local arrIdx = {-1,-1,-1};
@@ -122,7 +122,7 @@ function FangChenMi_SetMibaokaText()
 	local iGetCount = 0
 	MiBaoDhCount = GameProduceLogin:GetPasswdTelCount();
 	if( MiBaoDhCount <= 0 or MiBaoDhCount > 5000 ) then
-		return; --ÃÜ±£µç»°ÊıÁ¿ÓĞÎÊÌâÖ±½ÓÓÃÔ­À´µÄµç»°
+		return; --å¯†ä¿ç”µè¯æ•°é‡æœ‰é—®é¢˜ç›´æ¥ç”¨åŸæ¥çš„ç”µè¯
 	end
 	while (iGetCount < MiBaoDhCount and iGetCount < MAX_TEL_SHOWCOUNT) do
 		local iTmpIdx = math.random(0,MiBaoDhCount-1);
@@ -139,7 +139,7 @@ function FangChenMi_SetMibaokaText()
 		end;
 	end;
 	
-	if (MiBaoDhCount > MAX_TEL_SHOWCOUNT) then --¿¼ÂÇµ½ÌáÊ¾¿ò´óĞ¡£¬ ÃÜ±£µç»°ÊıÁ¿ÏŞ¶¨Îª3¸ö
+	if (MiBaoDhCount > MAX_TEL_SHOWCOUNT) then --è€ƒè™‘åˆ°æç¤ºæ¡†å¤§å°ï¼Œ å¯†ä¿ç”µè¯æ•°é‡é™å®šä¸º3ä¸ª
 		MiBaoDhCount = MAX_TEL_SHOWCOUNT
 	end
 	

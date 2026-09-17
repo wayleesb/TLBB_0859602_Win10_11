@@ -1,23 +1,23 @@
 --!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
---¸Ã½Å±¾ÎÄ¼şÖ»¹©Ê¦ÃÅÈÎÎñ¶ø×ö, ÆäËûÈÎÎñÈçÒªÒıÓÃ, ºó¹û×Ô¸º!
+--è¯¥è„šæœ¬æ–‡ä»¶åªä¾›å¸ˆé—¨ä»»åŠ¡è€Œåš, å…¶ä»–ä»»åŠ¡å¦‚è¦å¼•ç”¨, åæœè‡ªè´Ÿ!
 --!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-x500501_g_StartDayTime = 8030   --»î¶¯½áÊøÊ±¼ä 2008-1-31
-x500501_g_EndDayTime = 8044   --»î¶¯½áÊøÊ±¼ä 2008-2-14
+x500501_g_StartDayTime = 8030   --æ´»åŠ¨ç»“æŸæ—¶é—´ 2008-1-31
+x500501_g_EndDayTime = 8044   --æ´»åŠ¨ç»“æŸæ—¶é—´ 2008-2-14
 
 x500501_g_strDieNotice0 = "#{SMRW_20080118_01}"
 x500501_g_strDieNotice1 = "#{SMRW_20080118_02}"
 
 x500501_g_ItemId = {30501101, 30501102}
 
-x500501_g_LingShouDanId = {30503034, 30503043, 30503052, 30503061} --ÁéÊŞµ¤ID
+x500501_g_LingShouDanId = {30503034, 30503043, 30503052, 30503061} --çµå…½ä¸¹ID
 
-x500501_g_strHelpFinishedText = "  Í¬ÃÅÓĞÄÑ£¬Àíµ±ÏàÖú£¬ÄãµÄÈÎÎñÎÒÒÑ¾­°²ÅÅÆäËûÍ¬ÃÅÈ¥Íê³ÉÁË¡£#r#GÈÎÎñÍê³É£¡#W"
+x500501_g_strHelpFinishedText = "  åŒé—¨æœ‰éš¾ï¼Œç†å½“ç›¸åŠ©ï¼Œä½ çš„ä»»åŠ¡æˆ‘å·²ç»å®‰æ’å…¶ä»–åŒé—¨å»å®Œæˆäº†ã€‚#r#Gä»»åŠ¡å®Œæˆï¼#W"
 
-function x500501_ACT_Duanwu( sceneId, selfId, iDayHuan ) --¶ËÎç»î¶¯
+function x500501_ACT_Duanwu( sceneId, selfId, iDayHuan ) --ç«¯åˆæ´»åŠ¨
 	
 	local DayTime = GetDayTime()
 	local Duanwu_Cyc = 20
-	local Duanwu_Zongzi = 30501100            --ôÕ×Ó
+	local Duanwu_Zongzi = 30501100            --ç²½å­
 	local Duanwu_GemDataGlobalIndex = 40
 	local Duanwu_MaxGemCount = 2000
 	
@@ -34,48 +34,48 @@ function x500501_ACT_Duanwu( sceneId, selfId, iDayHuan ) --¶ËÎç»î¶¯
 		return
 	end
 	if DayTime < 7168 or DayTime > 7175 then
-		return --²»ÔÚ»î¶¯Ê±¼äÄÚ
+		return --ä¸åœ¨æ´»åŠ¨æ—¶é—´å†…
 	end
 	
 	local ModHuan = mod( iDayHuan, Duanwu_Cyc )
 	if 0 ~= ModHuan then
-		return  --²»ÊÇ¸ø½±ÀøµÄ»·Êı
+		return  --ä¸æ˜¯ç»™å¥–åŠ±çš„ç¯æ•°
 	end
 		
 	BeginAddItem(sceneId)
-		AddItem( sceneId, Duanwu_Zongzi, 1 )    --¸øÓèÍæ¼ÒôÕ×Ó
+		AddItem( sceneId, Duanwu_Zongzi, 1 )    --ç»™äºˆç©å®¶ç²½å­
 	local AddRet = EndAddItem(sceneId,selfId)
 	if AddRet > 0 then
-		AddItemListToHuman(sceneId,selfId)  --¸øÓèôÕ×ÓÍê±Ï
+		AddItemListToHuman(sceneId,selfId)  --ç»™äºˆç²½å­å®Œæ¯•
 		
-		local Gemable = random(100)  -- 1/5»ñµÃ±¦Ê¯
+		local Gemable = random(100)  -- 1/5è·å¾—å®çŸ³
 		if Gemable > 20 then
 			return
 		end
 		
 		if DayTime ~= Duanwu_Daytime then
 			Duanwu_Daytime = DayTime
-			Duanwu_GemCount = 0   --±¦Ê¯¼ÆÊıÇåÁã
+			Duanwu_GemCount = 0   --å®çŸ³è®¡æ•°æ¸…é›¶
 		end
 		
 		if Duanwu_GemCount >= Duanwu_MaxGemCount then
-			return     --±¦Ê¯ÊıÁ¿³¬¹ıÁËÃ¿ÌìËÍ³öµÄ×î´óÊıÁ¿
+			return     --å®çŸ³æ•°é‡è¶…è¿‡äº†æ¯å¤©é€å‡ºçš„æœ€å¤§æ•°é‡
 		end
 
 		local GemListSize = getn(DuanwuGemList)
 		local RandomGem = DuanwuGemList[ random( GemListSize ) ]
 		BeginAddItem(sceneId)
-			AddItem( sceneId, RandomGem, 1 )    --¸øÓèÍæ¼Ò±¦Ê¯
+			AddItem( sceneId, RandomGem, 1 )    --ç»™äºˆç©å®¶å®çŸ³
 		local GemRet = EndAddItem(sceneId,selfId)
 		if GemRet > 0 then
 			AddItemListToHuman(sceneId,selfId)
 			local GemInfo = GetItemTransfer(sceneId,selfId,0)
-			local strformat	= "#{_INFOUSR%s}#ÔÚ¶ËÎç½ÚµÄ»î¶¯µ±ÖĞ£¬ÒòÎªÍê³ÉÁËµÚ20»·µÄÊ¦ÃÅÈÎÎñ£¬ÉîµÃÊ¦¸µÔŞÉÍ£¬²»µ«»ñµÃÁËôÕ×ÓÒ»Á££¬¶øÇÒ»¹ÒâÍâµÄ»ñµÃÁËÒ»¿Å#Y#{_INFOMSG%s}¡£"
+			local strformat	= "#{_INFOUSR%s}#åœ¨ç«¯åˆèŠ‚çš„æ´»åŠ¨å½“ä¸­ï¼Œå› ä¸ºå®Œæˆäº†ç¬¬20ç¯çš„å¸ˆé—¨ä»»åŠ¡ï¼Œæ·±å¾—å¸ˆå‚…èµèµï¼Œä¸ä½†è·å¾—äº†ç²½å­ä¸€ç²’ï¼Œè€Œä¸”è¿˜æ„å¤–çš„è·å¾—äº†ä¸€é¢—#Y#{_INFOMSG%s}ã€‚"
 			local strText = format(strformat, GetName(sceneId,selfId),GemInfo)
-			--¹«¸æ¾«¼ò£¬È¥³ı´Ë¹«¸æ
+			--å…¬å‘Šç²¾ç®€ï¼Œå»é™¤æ­¤å…¬å‘Š
 			--BroadMsgByChatPipe(sceneId, selfId, strText, 4)
 			
-			--´æÈëÈ«¾ÖÊı¾İ
+			--å­˜å…¥å…¨å±€æ•°æ®
 			Duanwu_GemData = DayTime * 10000 + Duanwu_GemCount + 1
 			LuaFnSetWorldGlobalData( Duanwu_GemDataGlobalIndex, Duanwu_GemData )
 
@@ -88,7 +88,7 @@ end
 
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x500501_OnSubmit_Necessary( sceneId, selfId, targetId, isHelpFinish )
 	local Level =GetLevel(sceneId, selfId)
@@ -96,19 +96,19 @@ function x500501_OnSubmit_Necessary( sceneId, selfId, targetId, isHelpFinish )
 	local iDayCount=GetMissionData(sceneId,selfId,MD_SHIMEN_DAYCOUNT)
 	--local iTime = mod(iDayCount,100000)
 	local iTime = GetMissionData(sceneId,selfId,MD_SHIMEN_DAYTIME)
-	local iDayTime = floor(iTime/100)	--ÉÏÒ»´Î·ÅÆúÈÎÎñµÄÊ±¼ä(ÌìÊı)
-	local iQuarterTime = mod(iTime,100)	--ÉÏÒ»´Î·ÅÆúÈÎÎñµÄÊ±¼ä(¿Ì)
-	--local iDayHuan = floor(iDayCount/100000) --µ±ÌìÄÚÍê³ÉµÄÈÎÎñ´ÎÊı
-	local iDayHuan = iDayCount --µ±ÌìÄÚÍê³ÉµÄÈÎÎñ´ÎÊı
+	local iDayTime = floor(iTime/100)	--ä¸Šä¸€æ¬¡æ”¾å¼ƒä»»åŠ¡çš„æ—¶é—´(å¤©æ•°)
+	local iQuarterTime = mod(iTime,100)	--ä¸Šä¸€æ¬¡æ”¾å¼ƒä»»åŠ¡çš„æ—¶é—´(åˆ»)
+	--local iDayHuan = floor(iDayCount/100000) --å½“å¤©å†…å®Œæˆçš„ä»»åŠ¡æ¬¡æ•°
+	local iDayHuan = iDayCount --å½“å¤©å†…å®Œæˆçš„ä»»åŠ¡æ¬¡æ•°
 
-	--local CurTime = GetHourTime()		--µ±Ç°Ê±¼ä
-	local CurTime = GetQuarterTime()		--µ±Ç°Ê±¼ä
-	local CurDaytime = floor(CurTime/100)	--µ±Ç°Ê±¼ä(Ìì)
-	local CurQuarterTime = mod(CurTime,100)	--µ±Ç°Ê±¼ä(¿Ì)
+	--local CurTime = GetHourTime()		--å½“å‰æ—¶é—´
+	local CurTime = GetQuarterTime()		--å½“å‰æ—¶é—´
+	local CurDaytime = floor(CurTime/100)	--å½“å‰æ—¶é—´(å¤©)
+	local CurQuarterTime = mod(CurTime,100)	--å½“å‰æ—¶é—´(åˆ»)
 
-	if CurDaytime==iDayTime then 	--ÉÏ´ÎÍê³ÉÈÎÎñÊÇÍ¬Ò»ÌìÄÚ
+	if CurDaytime==iDayTime then 	--ä¸Šæ¬¡å®Œæˆä»»åŠ¡æ˜¯åŒä¸€å¤©å†…
 		iDayHuan = iDayHuan+1
-	else							--ÉÏ´ÎÍê³ÉÈÎÎñ²»ÔÚÍ¬Ò»Ìì£¬ÖØÖÃ
+	else							--ä¸Šæ¬¡å®Œæˆä»»åŠ¡ä¸åœ¨åŒä¸€å¤©ï¼Œé‡ç½®
 		iDayTime = CurDaytime
 		iQuarterTime = 99
 		iDayHuan = 1
@@ -116,9 +116,9 @@ function x500501_OnSubmit_Necessary( sceneId, selfId, targetId, isHelpFinish )
 	--end modified by zhangguoxin 090208
 	
 	-- ========================================================
-	-- ±ùÌìÑ©µØ»î¶¯
+	-- å†°å¤©é›ªåœ°æ´»åŠ¨
 	
-	-- »ñµÃ50¹Ò±ŞÅÚ
+	-- è·å¾—50æŒ‚é­ç‚®
 	if iDayHuan==20 or iDayHuan==40 or iDayHuan==60  then
 		local curDayTime = GetDayTime()
 		if curDayTime >= x500501_g_StartDayTime and curDayTime <= x500501_g_EndDayTime then
@@ -128,7 +128,7 @@ function x500501_OnSubmit_Necessary( sceneId, selfId, targetId, isHelpFinish )
 			
 			if canAdd1 == 0  then
 				BeginEvent( sceneId )
-					AddText( sceneId, "ÄúµÄÎïÆ·À¸Ã»ÓĞ×ã¹»¿Õ¼ä£¬ÇëÏÂ´Î½»ÈÎÎñÊ±Áô³ö×ã¹»ÎïÆ·À¸¿Õ¼ä¡£" )
+					AddText( sceneId, "æ‚¨çš„ç‰©å“æ æ²¡æœ‰è¶³å¤Ÿç©ºé—´ï¼Œè¯·ä¸‹æ¬¡äº¤ä»»åŠ¡æ—¶ç•™å‡ºè¶³å¤Ÿç‰©å“æ ç©ºé—´ã€‚" )
 				EndEvent( sceneId )
 				DispatchMissionTips( sceneId, selfId )
 			else
@@ -142,8 +142,8 @@ function x500501_OnSubmit_Necessary( sceneId, selfId, targetId, isHelpFinish )
 			end
 		end	
 
---¸Ä³É²»¿ÉÄÜÂú×ãµÄÌõ¼şÀ´È¡ÏûÁéÊŞµ¤µÄ½±Àø£¬by zhangqiang 2009.6.18
---		if GetLevel(sceneId, selfId) >= 50 and iDayHuan == 20 then --50¼¶ÒÔÉÏ²Å»ñµÃ£¬Ö»ÓĞµÚÒ»¸ö20»·²Å¸ø£¬¶ø²»ÊÇÃ¿20»·¶¼¸ø
+--æ”¹æˆä¸å¯èƒ½æ»¡è¶³çš„æ¡ä»¶æ¥å–æ¶ˆçµå…½ä¸¹çš„å¥–åŠ±ï¼Œby zhangqiang 2009.6.18
+--		if GetLevel(sceneId, selfId) >= 50 and iDayHuan == 20 then --50çº§ä»¥ä¸Šæ‰è·å¾—ï¼Œåªæœ‰ç¬¬ä¸€ä¸ª20ç¯æ‰ç»™ï¼Œè€Œä¸æ˜¯æ¯20ç¯éƒ½ç»™
 		if 0 > 1 then
 			local randomIndex = random(getn(x500501_g_LingShouDanId))
 			BeginAddItem(sceneId)
@@ -158,18 +158,18 @@ function x500501_OnSubmit_Necessary( sceneId, selfId, targetId, isHelpFinish )
 			else
 				AddItemListToHuman(sceneId,selfId)
 				
-				--¸ø×Ô¼º·¢ËÍµÃµ½ÎïÆ·µÄÏûÏ¢....
-				local strMsg = format("ÄãµÃµ½ÁË#H#{_ITEM%d}#W¡£", x500501_g_LingShouDanId[randomIndex])
+				--ç»™è‡ªå·±å‘é€å¾—åˆ°ç‰©å“çš„æ¶ˆæ¯....
+				local strMsg = format("ä½ å¾—åˆ°äº†#H#{_ITEM%d}#Wã€‚", x500501_g_LingShouDanId[randomIndex])
 				Msg2Player(sceneId, selfId, strMsg, MSG2PLAYER_PARA)
 			--[tx42684]	
-			  local myStrMsg = format("#{BSJH_81106_10}#H#{_ITEM%d}#W¡£", x500501_g_LingShouDanId[randomIndex])
+			  local myStrMsg = format("#{BSJH_81106_10}#H#{_ITEM%d}#Wã€‚", x500501_g_LingShouDanId[randomIndex])
 			  BeginEvent(sceneId)
 				  AddText(sceneId, myStrMsg);
 			  EndEvent(sceneId)
 			  DispatchMissionTips(sceneId,selfId)
 			--[/tx42684]			
 					
-				--5%¼¸ÂÊ»ñµÃ2¸ö
+				--5%å‡ ç‡è·å¾—2ä¸ª
 				if random(100) <= 5  then
 					BeginAddItem(sceneId)
 						AddItem( sceneId, x500501_g_LingShouDanId[randomIndex], 1 )
@@ -187,8 +187,8 @@ function x500501_OnSubmit_Necessary( sceneId, selfId, targetId, isHelpFinish )
 						local str = format("#{_INFOUSR%s}#{JNHC_081128_03}#{_INFOMSG%s}#{JNHC_081128_04}",GetName(sceneId,selfId), transfer)
 						BroadMsgByChatPipe(sceneId, selfId, str, 4)
 	
-						--¸ø×Ô¼º·¢ËÍµÃµ½ÎïÆ·µÄÏûÏ¢....
-						strMsg = format("ÄãµÃµ½ÁË#H#{_ITEM%d}#W¡£", x500501_g_LingShouDanId[randomIndex])
+						--ç»™è‡ªå·±å‘é€å¾—åˆ°ç‰©å“çš„æ¶ˆæ¯....
+						strMsg = format("ä½ å¾—åˆ°äº†#H#{_ITEM%d}#Wã€‚", x500501_g_LingShouDanId[randomIndex])
 						Msg2Player(sceneId, selfId, strMsg, MSG2PLAYER_PARA)
 						
 					end
@@ -198,7 +198,7 @@ function x500501_OnSubmit_Necessary( sceneId, selfId, targetId, isHelpFinish )
 		
 	end
 	
-	--¸øÒ×Èİµ¤
+	--ç»™æ˜“å®¹ä¸¹
 	if iDayHuan==10 or iDayHuan==30 or iDayHuan==50 then
 		if random(100) <= 30  then
 			local randomIndex = random(2)
@@ -208,30 +208,30 @@ function x500501_OnSubmit_Necessary( sceneId, selfId, targetId, isHelpFinish )
 			
 			if canAdd == 0  then
 				BeginEvent( sceneId )
-					AddText( sceneId, "ÄúµÄÎïÆ·À¸Ã»ÓĞ×ã¹»¿Õ¼ä£¬ÇëÏÂ´Î½»ÈÎÎñÊ±Áô³ö×ã¹»ÎïÆ·À¸¿Õ¼ä¡£" )
+					AddText( sceneId, "æ‚¨çš„ç‰©å“æ æ²¡æœ‰è¶³å¤Ÿç©ºé—´ï¼Œè¯·ä¸‹æ¬¡äº¤ä»»åŠ¡æ—¶ç•™å‡ºè¶³å¤Ÿç‰©å“æ ç©ºé—´ã€‚" )
 				EndEvent( sceneId )
 				DispatchMissionTips( sceneId, selfId )
 			
 			else
 				AddItemListToHuman(sceneId,selfId)
 --				if randomIndex == 1  then
---					-- ·¢ÊÀ½ç¹«¸æ
+--					-- å‘ä¸–ç•Œå…¬å‘Š
 --					local transfer = GetItemTransfer(sceneId,selfId,0)
---					local str = format("#W#{_INFOUSR%s}#I½ñÈÕÎªÊ¦ÃÅ×öÈÎÎñÓÂÍùÖ±Ç°£¬·Ü²»¹ËÉí£¬Íê³ÉµÚ20´ÎÈÎÎñÊ±ÒÑ¾­ÀÛµÃÂúÉí´óº¹£¬Õı×øÔÚÊ÷Òñµ×ÏÂĞªÏ¢Ê±£¬Ê÷ÉÏµôÏÂÒ»¿ÅÉÁ×Å°×¹âµÄ#W#{_INFOMSG%s}¡£",GetName(sceneId,selfId), transfer)
---					--¹«¸æ¾«¼ò£¬È¥³ı´Ë¹«¸æ
+--					local str = format("#W#{_INFOUSR%s}#Iä»Šæ—¥ä¸ºå¸ˆé—¨åšä»»åŠ¡å‹‡å¾€ç›´å‰ï¼Œå¥‹ä¸é¡¾èº«ï¼Œå®Œæˆç¬¬20æ¬¡ä»»åŠ¡æ—¶å·²ç»ç´¯å¾—æ»¡èº«å¤§æ±—ï¼Œæ­£ååœ¨æ ‘è«åº•ä¸‹æ­‡æ¯æ—¶ï¼Œæ ‘ä¸Šæ‰ä¸‹ä¸€é¢—é—ªç€ç™½å…‰çš„#W#{_INFOMSG%s}ã€‚",GetName(sceneId,selfId), transfer)
+--					--å…¬å‘Šç²¾ç®€ï¼Œå»é™¤æ­¤å…¬å‘Š
 --					--BroadMsgByChatPipe(sceneId, selfId, str, 4)
 --					
 --				elseif randomIndex == 2  then
---					-- ·¢ÊÀ½ç¹«¸æ
+--					-- å‘ä¸–ç•Œå…¬å‘Š
 --					local transfer = GetItemTransfer(sceneId,selfId,0)
---					local str = format("#W#{_INFOUSR%s}#I½ñÈÕÎªÊ¦ÃÅ×öÈÎÎñÓÂÍùÖ±Ç°£¬·Ü²»¹ËÉí£¬ºÃ²»ÈİÒ××öÍêµÚ20´ÎÈÎÎñÊ±£¬ÍÈÒ»Èí×øÔÚÁËµØÉÏ£¬¿Ú´üÀï¹ö³öÒ»¿Å¾§Ó¨Í¸ÁÁµÄ#W#{_INFOMSG%s}¡£",GetName(sceneId,selfId), transfer)
---					----¹«¸æ¾«¼ò£¬È¥³ı´Ë¹«¸æ
+--					local str = format("#W#{_INFOUSR%s}#Iä»Šæ—¥ä¸ºå¸ˆé—¨åšä»»åŠ¡å‹‡å¾€ç›´å‰ï¼Œå¥‹ä¸é¡¾èº«ï¼Œå¥½ä¸å®¹æ˜“åšå®Œç¬¬20æ¬¡ä»»åŠ¡æ—¶ï¼Œè…¿ä¸€è½¯ååœ¨äº†åœ°ä¸Šï¼Œå£è¢‹é‡Œæ»šå‡ºä¸€é¢—æ™¶è¹é€äº®çš„#W#{_INFOMSG%s}ã€‚",GetName(sceneId,selfId), transfer)
+--					----å…¬å‘Šç²¾ç®€ï¼Œå»é™¤æ­¤å…¬å‘Š
 --					--BroadMsgByChatPipe(sceneId, selfId, str, 4)
 --					
 --				end
 				
-				--¸ø×Ô¼º·¢ËÍµÃµ½ÎïÆ·µÄÏûÏ¢....
-				local strMsg = format("ÄãµÃµ½ÁË#H#{_ITEM%d}#W¡£", x500501_g_ItemId[randomIndex])
+				--ç»™è‡ªå·±å‘é€å¾—åˆ°ç‰©å“çš„æ¶ˆæ¯....
+				local strMsg = format("ä½ å¾—åˆ°äº†#H#{_ITEM%d}#Wã€‚", x500501_g_ItemId[randomIndex])
 				Msg2Player(sceneId, selfId, strMsg, MSG2PLAYER_PARA)
 
 			end
@@ -240,7 +240,7 @@ function x500501_OnSubmit_Necessary( sceneId, selfId, targetId, isHelpFinish )
 	-- ========================================================
 
   -- ========================================================
-	-- Ê¥µ®»î¶¯ Íê³ÉÊ¦ÃÅÈÎÎñ»ñµÃ·û½Ú
+	-- åœ£è¯æ´»åŠ¨ å®Œæˆå¸ˆé—¨ä»»åŠ¡è·å¾—ç¬¦èŠ‚
 	x500501_ACT_Christmas( sceneId, selfId,iDayHuan )	
 	
 	-- ========================================================
@@ -251,16 +251,16 @@ function x500501_OnSubmit_Necessary( sceneId, selfId, targetId, isHelpFinish )
 --if mod(iDayHuan, 10) >= 1 and mod(iDayHuan, 10) < 5 then
 --elseif mod(iDayHuan, 10) >= 5 and mod(iDayHuan, 10) < 8 then
 --	SetHumanMenpaiPoint(sceneId, selfId, GetHumanMenpaiPoint(sceneId, selfId)+1	)
---	Msg2Player(  sceneId, selfId,"ÄãµÃµ½ÁË#Y1#WµãÃÅÅÉ¹±Ï×¶È¡£" ,MSG2PLAYER_PARA )
+--	Msg2Player(  sceneId, selfId,"ä½ å¾—åˆ°äº†#Y1#Wç‚¹é—¨æ´¾è´¡çŒ®åº¦ã€‚" ,MSG2PLAYER_PARA )
 --elseif mod(iDayHuan, 10) >= 8 and mod(iDayHuan, 10) < 10 then
 --	SetHumanMenpaiPoint(sceneId, selfId, GetHumanMenpaiPoint(sceneId, selfId)+2	)
---	Msg2Player(  sceneId, selfId,"ÄãµÃµ½ÁË#Y2#WµãÃÅÅÉ¹±Ï×¶È¡£" ,MSG2PLAYER_PARA )
+--	Msg2Player(  sceneId, selfId,"ä½ å¾—åˆ°äº†#Y2#Wç‚¹é—¨æ´¾è´¡çŒ®åº¦ã€‚" ,MSG2PLAYER_PARA )
 --else --mod(iDayHuan, 10) must return 0
 --	SetHumanMenpaiPoint(sceneId, selfId, GetHumanMenpaiPoint(sceneId, selfId)+3	)
---	Msg2Player(  sceneId, selfId,"ÄãµÃµ½ÁË#Y3#WµãÃÅÅÉ¹±Ï×¶È¡£" ,MSG2PLAYER_PARA )
+--	Msg2Player(  sceneId, selfId,"ä½ å¾—åˆ°äº†#Y3#Wç‚¹é—¨æ´¾è´¡çŒ®åº¦ã€‚" ,MSG2PLAYER_PARA )
 --end
 
-	--Êµ¼Ê½±Àø¹±Ï×¶È=£¨Íæ¼ÒµÈ¼¶-»ù´¡µÈ¼¶£©* µÈ¼¶Ó°Ïì²ÎÊı + »ù´¡¹±Ï×¶È
+	--å®é™…å¥–åŠ±è´¡çŒ®åº¦=ï¼ˆç©å®¶ç­‰çº§-åŸºç¡€ç­‰çº§ï¼‰* ç­‰çº§å½±å“å‚æ•° + åŸºç¡€è´¡çŒ®åº¦
 	--menpaipoint = (playerlvl - 10)*0.05 + X
 	local baseMenpaiPoint = 0
 	if iDayHuan < 10 then
@@ -276,9 +276,9 @@ function x500501_OnSubmit_Necessary( sceneId, selfId, targetId, isHelpFinish )
 	end
 	local menpaiPoint = floor((GetLevel(sceneId, selfId) - 10)*0.05) + baseMenpaiPoint
 	SetHumanMenpaiPoint(sceneId, selfId, GetHumanMenpaiPoint(sceneId, selfId) + menpaiPoint)
-	Msg2Player(  sceneId, selfId,"ÄãµÃµ½ÁË#Y" .. menpaiPoint .. "#WµãÃÅÅÉ¹±Ï×¶È¡£" ,MSG2PLAYER_PARA )
+	Msg2Player(  sceneId, selfId,"ä½ å¾—åˆ°äº†#Y" .. menpaiPoint .. "#Wç‚¹é—¨æ´¾è´¡çŒ®åº¦ã€‚" ,MSG2PLAYER_PARA )
 
-	--iDayCount = iDayHuan*100000+iDayTime*100+iQuarterTime --×¢ÊÍ by zhangguoxin 090208
+	--iDayCount = iDayHuan*100000+iDayTime*100+iQuarterTime --æ³¨é‡Š by zhangguoxin 090208
 	local Reward_Append = 1
 
 	local playerLevel = GetLevel(sceneId, selfId)
@@ -301,13 +301,13 @@ function x500501_OnSubmit_Necessary( sceneId, selfId, targetId, isHelpFinish )
 	end
 
 	--//////////////////////////////////////////////////
-	--ÓĞ10%µÄ¼¸ÂÊ»ñµÃÒ»¸öµÍ¼¶±¦Ê¯ºÏ³É·û
-	--AAA½ñÈÕÎªÊ¦ÃÅ×öÈÎÎñÓÂÍùÖ±Ç°£¬·Ü²»¹ËÉí£¬ÔÚÍê³ÉµÚ20´Î
-	--¶à±¶Ê±£¬ÖÕÒòÌ«ÀÛÒ»õÓË¤µ¹ÔÚÂ·±ß£¬ÅÀÆğÀ´µÄÊ±ºò£¬Á³ÉÏ
-	--¾ÓÈ»Õ³×ÅÒ»ÕÅÖå°Í°ÍµÄ[µÍ¼¶±¦Ê¯ºÏ³É·û]¡£
-	--ID£º30900015
-	--?	Íæ¼ÒµÈ¼¶±ØĞë >=40¼¶
-	--?	µ±ÌìµÚ20´ÎÊ¦ÃÅ½±ÀøÎª¶à±¶½±Àø
+	--æœ‰10%çš„å‡ ç‡è·å¾—ä¸€ä¸ªä½çº§å®çŸ³åˆæˆç¬¦
+	--AAAä»Šæ—¥ä¸ºå¸ˆé—¨åšä»»åŠ¡å‹‡å¾€ç›´å‰ï¼Œå¥‹ä¸é¡¾èº«ï¼Œåœ¨å®Œæˆç¬¬20æ¬¡
+	--å¤šå€æ—¶ï¼Œç»ˆå› å¤ªç´¯ä¸€è·¤æ‘”å€’åœ¨è·¯è¾¹ï¼Œçˆ¬èµ·æ¥çš„æ—¶å€™ï¼Œè„¸ä¸Š
+	--å±…ç„¶ç²˜ç€ä¸€å¼ çš±å·´å·´çš„[ä½çº§å®çŸ³åˆæˆç¬¦]ã€‚
+	--IDï¼š30900015
+	--?	ç©å®¶ç­‰çº§å¿…é¡» >=40çº§
+	--?	å½“å¤©ç¬¬20æ¬¡å¸ˆé—¨å¥–åŠ±ä¸ºå¤šå€å¥–åŠ±
 	if playerLevel >= 40 and iDayHuan == 20 then
 		local ret = random(100)
 		--PrintNum(ret)
@@ -319,7 +319,7 @@ function x500501_OnSubmit_Necessary( sceneId, selfId, targetId, isHelpFinish )
 			if canAdd > 0 then
 				AddItemListToHuman(sceneId,selfId)
 				szItemTransfer = GetItemTransfer(sceneId,selfId,0)
-				local strformat	= "#W#{_INFOUSR%s}#I½ñÈÕÎªÊ¦ÃÅ×öÈÎÎñÓÂÍùÖ±Ç°£¬·Ü²»¹ËÉí£¬ÔÚÍê³ÉµÚ20´ÎÊ±£¬ÖÕÒòÌ«ÀÛÒ»õÓË¤µ¹ÔÚÂ·±ß£¬ÅÀÆğÀ´µÄÊ±ºò£¬Á³ÉÏ¾ÓÈ»Õ³×ÅÒ»ÕÅÖå°Í°ÍµÄ#W#{_INFOMSG%s}¡£"
+				local strformat	= "#W#{_INFOUSR%s}#Iä»Šæ—¥ä¸ºå¸ˆé—¨åšä»»åŠ¡å‹‡å¾€ç›´å‰ï¼Œå¥‹ä¸é¡¾èº«ï¼Œåœ¨å®Œæˆç¬¬20æ¬¡æ—¶ï¼Œç»ˆå› å¤ªç´¯ä¸€è·¤æ‘”å€’åœ¨è·¯è¾¹ï¼Œçˆ¬èµ·æ¥çš„æ—¶å€™ï¼Œè„¸ä¸Šå±…ç„¶ç²˜ç€ä¸€å¼ çš±å·´å·´çš„#W#{_INFOMSG%s}ã€‚"
 				local strText = format(strformat, GetName(sceneId,selfId),szItemTransfer)
 				
 				BroadMsgByChatPipe(sceneId, selfId, strText, 4)
@@ -329,15 +329,15 @@ function x500501_OnSubmit_Necessary( sceneId, selfId, targetId, isHelpFinish )
 	--//////////////////////////////////////////////////
 
 	local MijiActive = 1
-	local AwardID = 30505078    --ÌìÊé²Ğ¾íµÄID
-	local AwardCyc = 20         --½±Àø»·Êı( ×ö¶àÉÙ´ÎÈÎÎñ»á¸øÒ»´Î½±Àø )
+	local AwardID = 30505078    --å¤©ä¹¦æ®‹å·çš„ID
+	local AwardCyc = 20         --å¥–åŠ±ç¯æ•°( åšå¤šå°‘æ¬¡ä»»åŠ¡ä¼šç»™ä¸€æ¬¡å¥–åŠ± )
 
 	local DayTime = GetDayTime()
-	if DayTime < 7104 then      --07Äê107Ìì(4ÔÂ15ºÅ)
+	if DayTime < 7104 then      --07å¹´107å¤©(4æœˆ15å·)
        MijiActive = 0
     end
 
-    if DayTime >= 7115 then      --07Äê115Ìì(4ÔÂ26ºÅ)
+    if DayTime >= 7115 then      --07å¹´115å¤©(4æœˆ26å·)
        MijiActive = 0
     end
 
@@ -347,7 +347,7 @@ function x500501_OnSubmit_Necessary( sceneId, selfId, targetId, isHelpFinish )
 			local ModHuan = mod( iDayHuan, AwardCyc )
 			if 0 == ModHuan then
 				if 1 == MijiActive then
-					BeginAddItem(sceneId)        --¸øÓèÍæ¼Ò¶«Î÷
+					BeginAddItem(sceneId)        --ç»™äºˆç©å®¶ä¸œè¥¿
 						AddItem( sceneId, AwardID, 1 )
 					local AddRet = EndAddItem(sceneId,selfId)
 					if AddRet > 0 then
@@ -366,13 +366,13 @@ function x500501_OnSubmit_Necessary( sceneId, selfId, targetId, isHelpFinish )
 	if DayTime >= 7128 and DayTime <= 7150 then		-- 07.5.9 ~ 07.5.31
 		if ( iDayHuan / cycle ) == floor( iDayHuan / cycle ) then
 			local skyrocket = skyrockets[random( getn(skyrockets) )]
-			BeginAddItem( sceneId )					--¸øÓèÍæ¼Ò¶«Î÷
+			BeginAddItem( sceneId )					--ç»™äºˆç©å®¶ä¸œè¥¿
 				AddItem( sceneId, skyrocket, 2 )
 			local AddRet = EndAddItem( sceneId, selfId )
 			if AddRet > 0 then
 				AddItemListToHuman( sceneId, selfId )
 			else
-				local strText = "ÒòÎªÄúµÄ±³°ü¿Õ¼ä²»×ã£¬ÄúÊ§È¥ÁËÒ»´Î»ñµÃ#{_ITEM" .. skyrocket .. "}µÄ»ú»á¡£"
+				local strText = "å› ä¸ºæ‚¨çš„èƒŒåŒ…ç©ºé—´ä¸è¶³ï¼Œæ‚¨å¤±å»äº†ä¸€æ¬¡è·å¾—#{_ITEM" .. skyrocket .. "}çš„æœºä¼šã€‚"
 
 				BeginEvent( sceneId )
 					AddText( sceneId, strText )
@@ -387,7 +387,7 @@ function x500501_OnSubmit_Necessary( sceneId, selfId, targetId, isHelpFinish )
 
 	x500501_ACT_Duanwu( sceneId, selfId, iDayHuan )
 	
-	--ÉèÖÃÑ­»·ÈÎÎñµÄ»·Êı
+	--è®¾ç½®å¾ªç¯ä»»åŠ¡çš„ç¯æ•°
 	--begin modified by zhangguoxin 090208
 	iDayCount = iDayHuan
 	local newTime = iDayTime*100+iQuarterTime
@@ -397,19 +397,19 @@ function x500501_OnSubmit_Necessary( sceneId, selfId, targetId, isHelpFinish )
 	--end modified by zhangguoxin 090208
 	x500501_g_MissionRound = GetMissionData(sceneId,selfId,MD_SHIMEN_HUAN)
 
-	--Ë¥¼õÏµÊı
+	--è¡°å‡ç³»æ•°
 	--l_Exp = 0.75 * 0.75
 	--l_Money = 0.75 * ( 49 + Level ) / ( 160 + 40 * Level )
-	--¼ÆËã½±Àø¾­ÑéµÄÊıÁ¿
+	--è®¡ç®—å¥–åŠ±ç»éªŒçš„æ•°é‡
 	--if mod(x500501_g_MissionRound,10) == 0 then
-	--	x500501_g_Exp = 2400*(Level+4) * 10 * l_Exp / 120						--µÈ¼¶+»·Êıº¯Êı£¬ÊÜ¾­Ñéµ÷½Ú³£ÊıµÄÓ°Ïì
-		--x500501_g_Money = 2400*(Level+4) * 10 * l_Money /120						--µÈ¼¶+»·Êıº¯Êı£¬ÊÜ¾­Ñéµ÷½Ú³£ÊıµÄÓ°Ïì
+	--	x500501_g_Exp = 2400*(Level+4) * 10 * l_Exp / 120						--ç­‰çº§+ç¯æ•°å‡½æ•°ï¼Œå—ç»éªŒè°ƒèŠ‚å¸¸æ•°çš„å½±å“
+		--x500501_g_Money = 2400*(Level+4) * 10 * l_Money /120						--ç­‰çº§+ç¯æ•°å‡½æ•°ï¼Œå—ç»éªŒè°ƒèŠ‚å¸¸æ•°çš„å½±å“
 	--else
-	--	x500501_g_Exp = 2400*(Level+4) * mod(x500501_g_MissionRound,10) * l_Exp / 120						--µÈ¼¶+»·Êıº¯Êı£¬ÊÜ¾­Ñéµ÷½Ú³£ÊıµÄÓ°Ïì
-		--x500501_g_Money = 2400*(Level+4) * mod(x500501_g_MissionRound,10) * l_Money /120						--µÈ¼¶+»·Êıº¯Êı£¬ÊÜ¾­Ñéµ÷½Ú³£ÊıµÄÓ°Ïì
+	--	x500501_g_Exp = 2400*(Level+4) * mod(x500501_g_MissionRound,10) * l_Exp / 120						--ç­‰çº§+ç¯æ•°å‡½æ•°ï¼Œå—ç»éªŒè°ƒèŠ‚å¸¸æ•°çš„å½±å“
+		--x500501_g_Money = 2400*(Level+4) * mod(x500501_g_MissionRound,10) * l_Money /120						--ç­‰çº§+ç¯æ•°å‡½æ•°ï¼Œå—ç»éªŒè°ƒèŠ‚å¸¸æ•°çš„å½±å“
 	--end
 
-	-- 1+µÈ¼¶Ó°Ïì*µ±Ç°µÈ¼¶/10 {µÈ¼¶Ó°Ïì=0.035£¬Ó°ÏìÖ¸Êı=1}
+	-- 1+ç­‰çº§å½±å“*å½“å‰ç­‰çº§/10 {ç­‰çº§å½±å“=0.035ï¼Œå½±å“æŒ‡æ•°=1}
 	local levelfactor = 0.035
 	local refix = 1 + levelfactor*playerLevel/10
 
@@ -422,8 +422,8 @@ function x500501_OnSubmit_Necessary( sceneId, selfId, targetId, isHelpFinish )
 			local addExp = floor(GetExpMultipleByRound(x500501_g_MissionRound) * floor(GetExpBonusByLevel(Level))*refix)
 			x500501_g_Money = addMoney * 3
 			x500501_g_Exp = addExp * 3
-			strHuashan = "#PÒòÎª±¾ÃÅÅÉÊÇ´Ë½ì»ªÉ½ÂÛ½£µÄµÚÒ»£¬ËùÒÔ¿ÉÒÔ¶îÍâ»ñµÃÊ¦ÃÅ#Y¾­Ñé½±" .. addExp .. "#P£¬½ğÇ®#{_MONEY" .. addMoney .. "}#P¡£"
-			strHuashan2 = "#P¶îÍâ»ñµÃÊ¦ÃÅ£¨»ªÉ½ÂÛ½£µÚÒ»£©#Y¾­Ñé½±Àø" .. addExp .. "£¬½ğÇ®#Y#{_MONEY" .. addMoney .. "}#P¡£"
+			strHuashan = "#På› ä¸ºæœ¬é—¨æ´¾æ˜¯æ­¤å±Šåå±±è®ºå‰‘çš„ç¬¬ä¸€ï¼Œæ‰€ä»¥å¯ä»¥é¢å¤–è·å¾—å¸ˆé—¨#Yç»éªŒå¥–" .. addExp .. "#Pï¼Œé‡‘é’±#{_MONEY" .. addMoney .. "}#Pã€‚"
+			strHuashan2 = "#Pé¢å¤–è·å¾—å¸ˆé—¨ï¼ˆåå±±è®ºå‰‘ç¬¬ä¸€ï¼‰#Yç»éªŒå¥–åŠ±" .. addExp .. "ï¼Œé‡‘é’±#Y#{_MONEY" .. addMoney .. "}#Pã€‚"
 		else
 			x500501_g_Money = floor( (GetMoneyMultipleByRound(x500501_g_MissionRound) * GetMoneyBonusByLevel(Level)) )
 			--local x500501_g_Exp = floor( (GetExpMultipleByRound(x500501_g_MissionRound) * GetExpBonusByLevel(Level))*refix)
@@ -435,7 +435,7 @@ function x500501_OnSubmit_Necessary( sceneId, selfId, targetId, isHelpFinish )
 	end
 
 	--if	floor((x500501_g_MissionRound - 1) / 10) >=1  then
-	--	x500501_g_Exp = 2400*(Level+4) * l_Exp / 120 + x500501_g_Exp						--11~20»·ÈÎÎñ£¬Ã¿»·¶îÍâÔö¼ÓÒ»¶¨¾­ÑéÔöÁ¿£¬½ğÇ®Ã»ÓĞÔöÁ¿
+	--	x500501_g_Exp = 2400*(Level+4) * l_Exp / 120 + x500501_g_Exp						--11~20ç¯ä»»åŠ¡ï¼Œæ¯ç¯é¢å¤–å¢åŠ ä¸€å®šç»éªŒå¢é‡ï¼Œé‡‘é’±æ²¡æœ‰å¢é‡
 	--end
 
 
@@ -444,26 +444,26 @@ function x500501_OnSubmit_Necessary( sceneId, selfId, targetId, isHelpFinish )
 	x500501_g_Exp = floor(x500501_g_Exp)
 	x500501_g_Money = floor(x500501_g_Money)
 
-	--Ôö¼Ó¾­ÑéÖµºÍÇ®
-	--Ìí¼ÓÈÎÎñ½±Àø
+	--å¢åŠ ç»éªŒå€¼å’Œé’±
+	--æ·»åŠ ä»»åŠ¡å¥–åŠ±
 	AddExp( sceneId,selfId,x500501_g_Exp)
 	AddMoney(sceneId,selfId,x500501_g_Money)
-	--ÏÔÊ¾¶Ô»°¿ò
+	--æ˜¾ç¤ºå¯¹è¯æ¡†
 	BeginEvent(sceneId)
-		--Èç¹ûÊÇÍ¬ÃÅÏàÖúÍê³ÉµÄ....Ôò¼ÓÈëÏà¹Ø¶Ô»°....
+		--å¦‚æœæ˜¯åŒé—¨ç›¸åŠ©å®Œæˆçš„....åˆ™åŠ å…¥ç›¸å…³å¯¹è¯....
 		if isHelpFinish and isHelpFinish == 1 then
 			AddText(sceneId, x500501_g_strHelpFinishedText)
 		end
-		AddText(sceneId,"  ×öµÃ²»´í£¬ÕâÀïÓĞ"..x500501_g_Exp.."µã¾­ÑéÖµºÍ#{_MONEY"..x500501_g_Money.."}£¬ËãÊÇ¸øÄãµÄ½±Àø¡£")
+		AddText(sceneId,"  åšå¾—ä¸é”™ï¼Œè¿™é‡Œæœ‰"..x500501_g_Exp.."ç‚¹ç»éªŒå€¼å’Œ#{_MONEY"..x500501_g_Money.."}ï¼Œç®—æ˜¯ç»™ä½ çš„å¥–åŠ±ã€‚")
 		AddText(sceneId, strHuashan)
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 
 	Msg2Player(  sceneId, selfId, strHuashan2,MSG2PLAYER_PARA )
-	--Msg2Player(  sceneId, selfId,"ÄãµÃµ½ÁË#{_MONEY" .. tostring(x500501_g_Money) .. "}" ,MSG2PLAYER_PARA )
-	--Msg2Player(  sceneId, selfId,"ÄãµÃµ½ÁË" .. tostring(x500501_g_Exp) .. "µã¾­ÑéÖµ" ,MSG2PLAYER_PARA )
+	--Msg2Player(  sceneId, selfId,"ä½ å¾—åˆ°äº†#{_MONEY" .. tostring(x500501_g_Money) .. "}" ,MSG2PLAYER_PARA )
+	--Msg2Player(  sceneId, selfId,"ä½ å¾—åˆ°äº†" .. tostring(x500501_g_Exp) .. "ç‚¹ç»éªŒå€¼" ,MSG2PLAYER_PARA )
 
-	--ÔÚÒ»¶¨Ìõ¼şÏÂ¿ÉÒÔµÃµ½¶îÍâµÄ½±Àø
+	--åœ¨ä¸€å®šæ¡ä»¶ä¸‹å¯ä»¥å¾—åˆ°é¢å¤–çš„å¥–åŠ±
 	if Reward_Append == 2 and mod(iDayHuan, 5) == 0 and random(1000) <= 5 then
 
 		local ItemSn, ItemName, _, bBroadCast = GetOneMissionBonusItem(27)
@@ -475,23 +475,23 @@ function x500501_OnSubmit_Necessary( sceneId, selfId, targetId, isHelpFinish )
 		if canAdd > 0 then
 			AddItemListToHuman(sceneId,selfId)
 			szItemTransfer = GetItemTransfer(sceneId,selfId,0)
-			local strText = format("Äã»ñµÃÁË%s", ItemName)
+			local strText = format("ä½ è·å¾—äº†%s", ItemName)
 			BeginEvent(sceneId)
 				AddText(sceneId, strText);
 			EndEvent(sceneId)
 			DispatchMissionTips(sceneId,selfId)
 
 			local strformatList	= {
-						"#W#{_INFOUSR%s}#IÔÚ×öÊ¦ÃÅÈÎÎñÊ±£¬ÒòÎªÀÍ¿à¹¦¸ß£¬±»Ê¦¸µ½±ÀøÒ»¸ö#W#{_INFOMSG%s}¡£",
-						"#W#{_INFOUSR%s}#I¸Õ½»ÍêÈÎÎñ³öÁËÃÅ£¬±»ÃÅ¼÷°íÁËÒ»ÏÂ£¬·¢ÏÖÁËÒ»¸ö#W#{_INFOMSG%s}¡£",
-						"#IÒòÎª#W#{_INFOUSR%s}#IÔÚ½»Ê¦ÃÅÈÎÎñµÄÊ±ºò£¬Ê¦¸¸ÕıÔÚ·¢Æ¢Æø£¬±»Ê¦¸¸ËæÊÖÄÃÆğµÄÒ»¸ö#W#{_INFOMSG%s}#I¸øÔÒÖĞÁË¡£",
-						"#W#{_INFOUSR%s}#I½»Ê¦ÃÅÈÎÎñµÄÍ¾ÖĞ£¬Í»È»±»ÌìÉÏµôÏÂµÄÒ»¸ö#W#{_INFOMSG%s}#I¸øÔÒÖĞÁË¡£",
+						"#W#{_INFOUSR%s}#Iåœ¨åšå¸ˆé—¨ä»»åŠ¡æ—¶ï¼Œå› ä¸ºåŠ³è‹¦åŠŸé«˜ï¼Œè¢«å¸ˆå‚…å¥–åŠ±ä¸€ä¸ª#W#{_INFOMSG%s}ã€‚",
+						"#W#{_INFOUSR%s}#Iåˆšäº¤å®Œä»»åŠ¡å‡ºäº†é—¨ï¼Œè¢«é—¨æ§›ç»Šäº†ä¸€ä¸‹ï¼Œå‘ç°äº†ä¸€ä¸ª#W#{_INFOMSG%s}ã€‚",
+						"#Iå› ä¸º#W#{_INFOUSR%s}#Iåœ¨äº¤å¸ˆé—¨ä»»åŠ¡çš„æ—¶å€™ï¼Œå¸ˆçˆ¶æ­£åœ¨å‘è„¾æ°”ï¼Œè¢«å¸ˆçˆ¶éšæ‰‹æ‹¿èµ·çš„ä¸€ä¸ª#W#{_INFOMSG%s}#Iç»™ç ¸ä¸­äº†ã€‚",
+						"#W#{_INFOUSR%s}#Iäº¤å¸ˆé—¨ä»»åŠ¡çš„é€”ä¸­ï¼Œçªç„¶è¢«å¤©ä¸Šæ‰ä¸‹çš„ä¸€ä¸ª#W#{_INFOMSG%s}#Iç»™ç ¸ä¸­äº†ã€‚",
 						}
 			local index = random(4)
 			local PlayName = GetName(sceneId,selfId)
 			strText = format(strformatList[index], PlayName, szItemTransfer)
 			
-			--¹«¸æ¾«¼ò£¬È¥³ı
+			--å…¬å‘Šç²¾ç®€ï¼Œå»é™¤
 			--BroadMsgByChatPipe(sceneId, selfId, strText, bBroadCast)
 			
 		end
@@ -499,19 +499,19 @@ function x500501_OnSubmit_Necessary( sceneId, selfId, targetId, isHelpFinish )
 	end
 
 	BeginEvent(sceneId)
-		AddText(sceneId, "#GÄú½ñÌìÒÑ¾­Íê³ÉÁË#R" .. iDayHuan .. "#G»·Ê¦ÃÅÈÎÎñ¡£");
+		AddText(sceneId, "#Gæ‚¨ä»Šå¤©å·²ç»å®Œæˆäº†#R" .. iDayHuan .. "#Gç¯å¸ˆé—¨ä»»åŠ¡ã€‚");
 	EndEvent(sceneId)
 	DispatchMissionTips(sceneId,selfId)
 
-	--Ê¦ÃÅÈÎÎñÍ³¼Æ
+	--å¸ˆé—¨ä»»åŠ¡ç»Ÿè®¡
 	LuaFnAuditShiMenRenWu(sceneId, selfId, x500501_g_MissionRound, GetLevel(sceneId, selfId))
-	LuaFnAuditShiMenRenWu_Day(sceneId, selfId, iDayHuan, GetLevel(sceneId, selfId))           --µ±ÌìÊ¦ÃÅÈÎÎñÍ³¼Æ
+	LuaFnAuditShiMenRenWu_Day(sceneId, selfId, iDayHuan, GetLevel(sceneId, selfId))           --å½“å¤©å¸ˆé—¨ä»»åŠ¡ç»Ÿè®¡
 	return Reward_Append, x500501_g_MissionRound
 
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x500501_CheckAccept_Necessary( sceneId, selfId )
 
@@ -519,20 +519,20 @@ function x500501_CheckAccept_Necessary( sceneId, selfId )
 	local iDayCount=GetMissionData(sceneId,selfId,MD_SHIMEN_DAYCOUNT)
 	--local iTime = mod(iDayCount,100000)
 	local iTime = GetMissionData(sceneId,selfId,MD_SHIMEN_DAYTIME)
-	local iDayTime = floor(iTime/100)	--ÉÏÒ»´Î·ÅÆúÈÎÎñµÄÊ±¼ä(ÌìÊı)
-	local iQuarterTime = mod(iTime,100)	--ÉÏÒ»´Î·ÅÆúÈÎÎñµÄÊ±¼ä(Ò»¿ÌÖÖ)
-	--local iDayHuan = floor(iDayCount/100000) --µ±ÌìÄÚÍê³ÉµÄÈÎÎñ´ÎÊı
-	local iDayHuan = iDayCount --µ±ÌìÄÚÍê³ÉµÄÈÎÎñ´ÎÊı
+	local iDayTime = floor(iTime/100)	--ä¸Šä¸€æ¬¡æ”¾å¼ƒä»»åŠ¡çš„æ—¶é—´(å¤©æ•°)
+	local iQuarterTime = mod(iTime,100)	--ä¸Šä¸€æ¬¡æ”¾å¼ƒä»»åŠ¡çš„æ—¶é—´(ä¸€åˆ»ç§)
+	--local iDayHuan = floor(iDayCount/100000) --å½“å¤©å†…å®Œæˆçš„ä»»åŠ¡æ¬¡æ•°
+	local iDayHuan = iDayCount --å½“å¤©å†…å®Œæˆçš„ä»»åŠ¡æ¬¡æ•°
 
-	--local CurTime = GetHourTime()		--µ±Ç°Ê±¼ä
-	local CurTime = GetQuarterTime()		--µ±Ç°Ê±¼ä
-	local CurDaytime = floor(CurTime/100)	--µ±Ç°Ê±¼ä(Ìì)
-	local CurQuarterTime = mod(CurTime,100) 	--µ±Ç°Ê±¼ä(Ò»¿ÌÖÓ)
+	--local CurTime = GetHourTime()		--å½“å‰æ—¶é—´
+	local CurTime = GetQuarterTime()		--å½“å‰æ—¶é—´
+	local CurDaytime = floor(CurTime/100)	--å½“å‰æ—¶é—´(å¤©)
+	local CurQuarterTime = mod(CurTime,100) 	--å½“å‰æ—¶é—´(ä¸€åˆ»é’Ÿ)
 	--print(iDayCount,iTime,iDayTime,iQuarterTime,iDayHuan)
 	--print(CurQuarterTime,iQuarterTime)
 	--print(iDayCount,CurTime)
 	if iDayTime == CurDaytime then
-		--Èç¹ûµ±Ìì×ö¸ÃÈÎÎñ´ÎÊı´ïµ½60Ôò²»ÔÊĞíÔÙ½Ó
+		--å¦‚æœå½“å¤©åšè¯¥ä»»åŠ¡æ¬¡æ•°è¾¾åˆ°60åˆ™ä¸å…è®¸å†æ¥
 		if iDayHuan >= 60 then
 			return -2;
 		end
@@ -580,7 +580,7 @@ function x500501_CheckAccept_Necessary( sceneId, selfId )
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x500501_Abandon_Necessary( sceneId, selfId )
 
@@ -588,19 +588,19 @@ function x500501_Abandon_Necessary( sceneId, selfId )
 	--local iDayCount=GetMissionData(sceneId,selfId,MD_SHIMEN_DAYCOUNT)
 	--local iTime = mod(iDayCount,100000)
 	local iTime = GetMissionData(sceneId,selfId,MD_SHIMEN_DAYTIME)
-	local iDayTime = floor(iTime/100)	--ÉÏÒ»´Î·ÅÆúÈÎÎñµÄÊ±¼ä(ÌìÊı)
-	--local iDayHuan = floor(iDayCount/100000) --µ±ÌìÄÚÍê³ÉµÄÈÎÎñ´ÎÊı
+	local iDayTime = floor(iTime/100)	--ä¸Šä¸€æ¬¡æ”¾å¼ƒä»»åŠ¡çš„æ—¶é—´(å¤©æ•°)
+	--local iDayHuan = floor(iDayCount/100000) --å½“å¤©å†…å®Œæˆçš„ä»»åŠ¡æ¬¡æ•°
 
-	--local CurTime = GetHourTime()		--µ±Ç°Ê±¼ä
-	local CurTime = GetQuarterTime()		--µ±Ç°Ê±¼ä
-	local CurDaytime = floor(CurTime/100)	--µ±Ç°Ê±¼ä(Ìì)
+	--local CurTime = GetHourTime()		--å½“å‰æ—¶é—´
+	local CurTime = GetQuarterTime()		--å½“å‰æ—¶é—´
+	local CurDaytime = floor(CurTime/100)	--å½“å‰æ—¶é—´(å¤©)
 
 	if iDayTime ~= CurDaytime then
 		--iDayHuan = 0
 		SetMissionData(sceneId,selfId,MD_SHIMEN_DAYCOUNT,0)
 	end
 
-	--ÉèÖÃÑ­»·ÈÎÎñµÄÊ±¼ä
+	--è®¾ç½®å¾ªç¯ä»»åŠ¡çš„æ—¶é—´
 	--iDayCount = iDayHuan*100000+CurTime
 	--SetMissionData(sceneId,selfId,MD_SHIMEN_DAYCOUNT,iDayCount)
 	SetMissionData(sceneId,selfId,MD_SHIMEN_DAYTIME,CurTime)
@@ -609,15 +609,15 @@ function x500501_Abandon_Necessary( sceneId, selfId )
 	local menpaiPoint = GetHumanMenpaiPoint(sceneId, selfId)
 	if menpaiPoint == 1 then
 		SetHumanMenpaiPoint(sceneId, selfId, menpaiPoint-1 )
-		Msg2Player(  sceneId, selfId,"ÄãÏûºÄÁË#Y1#WµãÃÅÅÉ¹±Ï×¶È¡£" ,MSG2PLAYER_PARA )
+		Msg2Player(  sceneId, selfId,"ä½ æ¶ˆè€—äº†#Y1#Wç‚¹é—¨æ´¾è´¡çŒ®åº¦ã€‚" ,MSG2PLAYER_PARA )
 	elseif menpaiPoint >= 2 then
 		SetHumanMenpaiPoint(sceneId, selfId, menpaiPoint-2 )
-		Msg2Player(  sceneId, selfId,"ÄãÏûºÄÁË#Y2#WµãÃÅÅÉ¹±Ï×¶È¡£" ,MSG2PLAYER_PARA )
+		Msg2Player(  sceneId, selfId,"ä½ æ¶ˆè€—äº†#Y2#Wç‚¹é—¨æ´¾è´¡çŒ®åº¦ã€‚" ,MSG2PLAYER_PARA )
 	end
 end
 
 --**********************************
---Íæ¼ÒÌá½»µÄÆÕÍ¨ÎïÆ·
+--ç©å®¶æäº¤çš„æ™®é€šç‰©å“
 --**********************************
 function x500501_OnMissionCheck_Necessary( sceneId, selfId, index1, index2, index3, Needindex )
 
@@ -650,7 +650,7 @@ function x500501_OnMissionCheck_Necessary( sceneId, selfId, index1, index2, inde
 	end
 
 	BeginEvent(sceneId)
-		AddText(sceneId,"ÄãµÄÈÎÎñ²»ÄÜÍê³É£¬ÄãÌá½»µÄÎïÆ·²»ÕıÈ·¡£")
+		AddText(sceneId,"ä½ çš„ä»»åŠ¡ä¸èƒ½å®Œæˆï¼Œä½ æäº¤çš„ç‰©å“ä¸æ­£ç¡®ã€‚")
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,-1)
 	return -1;
@@ -658,7 +658,7 @@ function x500501_OnMissionCheck_Necessary( sceneId, selfId, index1, index2, inde
 end
 
 --**********************************
---Íæ¼ÒÌá½»µÄ×°±¸ÀàÎïÆ·
+--ç©å®¶æäº¤çš„è£…å¤‡ç±»ç‰©å“
 --**********************************
 function x500501_OnMissionCheckName_Necessary( sceneId, selfId, index1, index2, index3, Needindex )
 
@@ -693,14 +693,14 @@ function x500501_OnMissionCheckName_Necessary( sceneId, selfId, index1, index2, 
 		end
 	end
 	BeginEvent(sceneId)
-		AddText(sceneId,"ÄãµÄÈÎÎñ²»ÄÜÍê³É£¬ÄãÌá½»µÄÎïÆ·²»ÕıÈ·¡£")
+		AddText(sceneId,"ä½ çš„ä»»åŠ¡ä¸èƒ½å®Œæˆï¼Œä½ æäº¤çš„ç‰©å“ä¸æ­£ç¡®ã€‚")
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,-1)
 	return -1;
 end
 
 --**********************************
---Íæ¼ÒÌá½»µÄÎïÆ·
+--ç©å®¶æäº¤çš„ç‰©å“
 --**********************************
 function x500501_OnMissionCheck_NecessaryEx( sceneId, selfId, index1, index2, index3, Needindex )
 	if Needindex == nil or Needindex <= 0 then
@@ -709,7 +709,7 @@ function x500501_OnMissionCheck_NecessaryEx( sceneId, selfId, index1, index2, in
 
 	local indices = { index1, index2, index3 }
 	for i = 1, getn( indices ) do
-		if indices[i] and indices[i] >=0 and indices[i] < 80 then	-- ºÏ·¨µÄ±³°ü¸ñ×Ó
+		if indices[i] and indices[i] >=0 and indices[i] < 80 then	-- åˆæ³•çš„èƒŒåŒ…æ ¼å­
 			if LuaFnGetItemTableIndexByIndex( sceneId, selfId, indices[i] ) == Needindex then
 				return indices[i]
 			end
@@ -719,21 +719,21 @@ function x500501_OnMissionCheck_NecessaryEx( sceneId, selfId, index1, index2, in
 	return -1
 end
 
--- Ê¥µ®»î¶¯ Íê³ÉÊ¦ÃÅÈÎÎñ»ñµÃ·û½Ú
+-- åœ£è¯æ´»åŠ¨ å®Œæˆå¸ˆé—¨ä»»åŠ¡è·å¾—ç¬¦èŠ‚
 function x500501_ACT_Christmas( sceneId, selfId, DayHuan )
   
   if DayHuan ~=20 and DayHuan ~=40 and DayHuan ~=60  then
      return
   end
-	--¼ì²âÊ±¼ä	
+	--æ£€æµ‹æ—¶é—´	
 	if CallScriptFunction( 050025, "CheckRightTime", sceneId) == 1 then
 			
-			--Èç¹ûÍæ¼ÒµÈ¼¶Ğ¡ÓÚ25²»¸øÓèºØ¿¨
+			--å¦‚æœç©å®¶ç­‰çº§å°äº25ä¸ç»™äºˆè´ºå¡
 	  if	GetLevel( sceneId, selfId) < 25 then
 		  return
 	  end
 	  
-	  --¼ì²â²ÄÁÏ°üÊÇ·ñÓĞµØ·½....
+	  --æ£€æµ‹ææ–™åŒ…æ˜¯å¦æœ‰åœ°æ–¹....
 	  if LuaFnGetMaterialBagSpace( sceneId, selfId ) < 1 then
 		  return
 	  end
@@ -748,37 +748,37 @@ function x500501_ACT_Christmas( sceneId, selfId, DayHuan )
 	                 20310015,
 	                 20310016,
 	                 20310013,	
-           }			                                   --ºØ¿¨ID
+           }			                                   --è´ºå¡ID
     local menpaiId = LuaFnGetMenPai( sceneId, selfId )
     local hekaid = 0
     local strtext = ""
-	  --¸øÃÅÅÉºØÌû
+	  --ç»™é—¨æ´¾è´ºå¸–
 	  if menpaiId == MP_SHAOLIN then
-	     strtext = "Äú»ñµÃÉÙÁÖ½ÚÈÕºØÌûÒ»ÕÅ¡£"
+	     strtext = "æ‚¨è·å¾—å°‘æ—èŠ‚æ—¥è´ºå¸–ä¸€å¼ ã€‚"
 	     hekaid = x500501_HeKaId[1]
 	  elseif menpaiId == MP_MINGJIAO then
-	     strtext = "Äú»ñµÃÃ÷½Ì½ÚÈÕºØÌûÒ»ÕÅ¡£"
+	     strtext = "æ‚¨è·å¾—æ˜æ•™èŠ‚æ—¥è´ºå¸–ä¸€å¼ ã€‚"
 	     hekaid = x500501_HeKaId[2]
 	  elseif menpaiId == MP_GAIBANG then
-	     strtext = "Äú»ñµÃØ¤°ï½ÚÈÕºØÌûÒ»ÕÅ¡£"
+	     strtext = "æ‚¨è·å¾—ä¸å¸®èŠ‚æ—¥è´ºå¸–ä¸€å¼ ã€‚"
 	     hekaid = x500501_HeKaId[3]
 	  elseif menpaiId == MP_WUDANG then
-	     strtext = "Äú»ñµÃÎäµ±½ÚÈÕºØÌûÒ»ÕÅ¡£"
+	     strtext = "æ‚¨è·å¾—æ­¦å½“èŠ‚æ—¥è´ºå¸–ä¸€å¼ ã€‚"
 	     hekaid = x500501_HeKaId[4]
 	  elseif menpaiId == MP_EMEI then
-	     strtext = "Äú»ñµÃ¶ëÃ¼½ÚÈÕºØÌûÒ»ÕÅ¡£"
+	     strtext = "æ‚¨è·å¾—å³¨çœ‰èŠ‚æ—¥è´ºå¸–ä¸€å¼ ã€‚"
 	     hekaid = x500501_HeKaId[5]
 	  elseif menpaiId == MP_XINGSU then
-	     strtext = "Äú»ñµÃĞÇËŞ½ÚÈÕºØÌûÒ»ÕÅ¡£"
+	     strtext = "æ‚¨è·å¾—æ˜Ÿå®¿èŠ‚æ—¥è´ºå¸–ä¸€å¼ ã€‚"
 	     hekaid = x500501_HeKaId[6]
 	  elseif menpaiId == MP_DALI then
-	     strtext = "Äú»ñµÃÌìÁú½ÚÈÕºØÌûÒ»ÕÅ¡£"
+	     strtext = "æ‚¨è·å¾—å¤©é¾™èŠ‚æ—¥è´ºå¸–ä¸€å¼ ã€‚"
 	     hekaid = x500501_HeKaId[7]
 	  elseif menpaiId == MP_TIANSHAN then
-	     strtext = "Äú»ñµÃÌìÉ½½ÚÈÕºØÌûÒ»ÕÅ¡£"
+	     strtext = "æ‚¨è·å¾—å¤©å±±èŠ‚æ—¥è´ºå¸–ä¸€å¼ ã€‚"
 	     hekaid = x500501_HeKaId[8]
 	  elseif menpaiId == MP_XIAOYAO then
-	     strtext = "Äú»ñµÃåĞÒ£½ÚÈÕºØÌûÒ»ÕÅ¡£"
+	     strtext = "æ‚¨è·å¾—é€é¥èŠ‚æ—¥è´ºå¸–ä¸€å¼ ã€‚"
 	     hekaid = x500501_HeKaId[9]
 	  end
 

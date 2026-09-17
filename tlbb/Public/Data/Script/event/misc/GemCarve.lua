@@ -1,8 +1,8 @@
---±¦Ê¯µñ×Á
+--å®çŸ³é›•ç¢
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x800117_g_ScriptId	= 800117
-x800117_g_BINDED = 1              -- ÒÑ¾­°ó¶¨
+x800117_g_BINDED = 1              -- å·²ç»ç»‘å®š
 			
 
 function x800117_OnGemCarve( sceneId, selfId, GemItemPos, NeedItemPos,TargetID )
@@ -20,64 +20,64 @@ function x800117_OnGemCarve( sceneId, selfId, GemItemPos, NeedItemPos,TargetID )
 	local GemItemID = LuaFnGetItemTableIndexByIndex( sceneId, selfId, GemItemPos )
 	local NeedItemID = LuaFnGetItemTableIndexByIndex( sceneId, selfId, NeedItemPos )
 
-	--»ñµÃ±¦Ê¯µñ×ÁµÄĞÅÏ¢....
+	--è·å¾—å®çŸ³é›•ç¢çš„ä¿¡æ¯....
 	local ProductID, NeedID, NeedMoney = LuaFnGetGemCarveInfo( GemItemID )
 	if  -1 == ProductID then
 		return
 	end
 
-	--¼ì²âÊÇ·ñÓĞËùĞèÎïÆ·....
+	--æ£€æµ‹æ˜¯å¦æœ‰æ‰€éœ€ç‰©å“....
 	if NeedID ~= NeedItemID then
 		return
 	end
 	
-	--¼ì²â½ğÇ®ÊÇ·ñ×ã¹»....
-	local PlayerMoney = GetMoney( sceneId, selfId ) +  GetMoneyJZ(sceneId, selfId)  --½»×ÓÆÕ¼° Vega
+	--æ£€æµ‹é‡‘é’±æ˜¯å¦è¶³å¤Ÿ....
+	local PlayerMoney = GetMoney( sceneId, selfId ) +  GetMoneyJZ(sceneId, selfId)  --äº¤å­æ™®åŠ Vega
 	if PlayerMoney < NeedMoney then
 		return
 	end
 
-	local ProductNeedBind = 0    -- ²úÉúµÄĞÂ±¦Ê¯ÊÇ·ñĞèÒª°ó¶¨ 0ÊÇ²»ĞèÒª°ó¶¨×´Ì¬£¬1ÊÇĞèÒª°ó¶¨
-	--¸ù¾İ±¦Ê¯ÊÇ·ñ°ó¶¨ºÍ±¦Ê¯µñ×Á·ûÊÇ·ñ°ó¶¨£¬¾ö¶¨Õª³ıºóµÄ±¦Ê¯ÊÇ·ñ°ó¶¨
+	local ProductNeedBind = 0    -- äº§ç”Ÿçš„æ–°å®çŸ³æ˜¯å¦éœ€è¦ç»‘å®š 0æ˜¯ä¸éœ€è¦ç»‘å®šçŠ¶æ€ï¼Œ1æ˜¯éœ€è¦ç»‘å®š
+	--æ ¹æ®å®çŸ³æ˜¯å¦ç»‘å®šå’Œå®çŸ³é›•ç¢ç¬¦æ˜¯å¦ç»‘å®šï¼Œå†³å®šæ‘˜é™¤åçš„å®çŸ³æ˜¯å¦ç»‘å®š
 	if (LuaFnGetItemBindStatus(sceneId,selfId,GemItemPos) == x800117_g_BINDED or LuaFnGetItemBindStatus(sceneId,selfId,NeedItemPos) == x800117_g_BINDED) then
 	  ProductNeedBind = 1
 	end	
 
 	local NeedItemInfo = GetBagItemTransfer( sceneId, selfId, NeedItemPos )
 
-	--¿Û³ı±¦Ê¯ºÍËùĞèÎïÆ·....
+	--æ‰£é™¤å®çŸ³å’Œæ‰€éœ€ç‰©å“....
 	ret = LuaFnIsItemAvailable( sceneId, selfId, GemItemPos )
 	if ret ~= 1 then
-		x800117_NotifyTip( sceneId, selfId, "±¦Ê¯ÎŞ·¨Ê¹ÓÃ£¬±¦Ê¯µñ×ÁÊ§°Ü¡£" )
+		x800117_NotifyTip( sceneId, selfId, "å®çŸ³æ— æ³•ä½¿ç”¨ï¼Œå®çŸ³é›•ç¢å¤±è´¥ã€‚" )
 		return
 	end
 	ret = LuaFnIsItemAvailable( sceneId, selfId, NeedItemPos )
 	if ret ~= 1 then
-		x800117_NotifyTip( sceneId, selfId, "ËùĞèÎïÆ·ÎŞ·¨Ê¹ÓÃ£¬±¦Ê¯µñ×ÁÊ§°Ü¡£" )
+		x800117_NotifyTip( sceneId, selfId, "æ‰€éœ€ç‰©å“æ— æ³•ä½¿ç”¨ï¼Œå®çŸ³é›•ç¢å¤±è´¥ã€‚" )
 		return
 	end
 
 	LuaFnEraseItem( sceneId, selfId, GemItemPos )
 	LuaFnEraseItem( sceneId, selfId, NeedItemPos )
 
-	--¿ÛÇ®....
-	ret = LuaFnCostMoneyWithPriority( sceneId, selfId, NeedMoney )    --½»×ÓÆÕ¼° Vega
+	--æ‰£é’±....
+	ret = LuaFnCostMoneyWithPriority( sceneId, selfId, NeedMoney )    --äº¤å­æ™®åŠ Vega
 	if ret < 0 then
-		x800117_NotifyTip( sceneId, selfId, "½ğÇ®²»×ã£¬±¦Ê¯µñ×ÁÊ§°Ü¡£" )
+		x800117_NotifyTip( sceneId, selfId, "é‡‘é’±ä¸è¶³ï¼Œå®çŸ³é›•ç¢å¤±è´¥ã€‚" )
 		return
 	end
 
-	--¸øÍæ¼Òµñ×ÁºóµÄ±¦Ê¯....²»ÓÃ¼ì²â±³°üÊÇ·ñÓĞµØ·½....Ã»µØ·½Ç°±ßÒ²del³öµØ·½ÁË....
+	--ç»™ç©å®¶é›•ç¢åçš„å®çŸ³....ä¸ç”¨æ£€æµ‹èƒŒåŒ…æ˜¯å¦æœ‰åœ°æ–¹....æ²¡åœ°æ–¹å‰è¾¹ä¹Ÿdelå‡ºåœ°æ–¹äº†....
 	local BagIndex = TryRecieveItem( sceneId, selfId, ProductID, QUALITY_MUST_BE_CHANGE )
 	if BagIndex == -1 then
-		x800117_NotifyTip( sceneId, selfId, "±³°üÒÑÂú£¬±¦Ê¯µñ×ÁÊ§°Ü¡£" )
+		x800117_NotifyTip( sceneId, selfId, "èƒŒåŒ…å·²æ»¡ï¼Œå®çŸ³é›•ç¢å¤±è´¥ã€‚" )
 	end
 	
-	--¸ù¾İ±¦Ê¯ÊÇ·ñ°ó¶¨ºÍ±¦Ê¯µñ×Á·ûÊÇ·ñ°ó¶¨£¬¾ö¶¨Õª³ıºóµÄ±¦Ê¯ÊÇ·ñ°ó¶¨
+	--æ ¹æ®å®çŸ³æ˜¯å¦ç»‘å®šå’Œå®çŸ³é›•ç¢ç¬¦æ˜¯å¦ç»‘å®šï¼Œå†³å®šæ‘˜é™¤åçš„å®çŸ³æ˜¯å¦ç»‘å®š
 	if (ProductNeedBind == 1) then
 	  local	bindidx	=	LuaFnItemBind(sceneId, selfId,BagIndex)
 	  if bindidx ~= 1 then
-		  local bindmsg = "°ó¶¨Ê§°Ü"													
+		  local bindmsg = "ç»‘å®šå¤±è´¥"													
 		  BeginEvent( sceneId )
 		    AddText( sceneId, bindmsg )
 		  EndEvent( sceneId )
@@ -85,33 +85,33 @@ function x800117_OnGemCarve( sceneId, selfId, GemItemPos, NeedItemPos,TargetID )
 	  end
 	end	
 
-	--Í³¼Æ....
+	--ç»Ÿè®¡....
 	LuaFnAuditGemCarve( sceneId, selfId, GemItemID)
 
-	--ĞÑÄ¿ÌáÊ¾Íæ¼Òµñ×Á³É¹¦....
-	x800117_NotifyTip( sceneId, selfId, "#{_ITEM"..GemItemID.."}³É¹¦µÄ±»µñ×ÁÎª#{_ITEM"..ProductID.."}" )
+	--é†’ç›®æç¤ºç©å®¶é›•ç¢æˆåŠŸ....
+	x800117_NotifyTip( sceneId, selfId, "#{_ITEM"..GemItemID.."}æˆåŠŸçš„è¢«é›•ç¢ä¸º#{_ITEM"..ProductID.."}" )
 
-	--¹«¸æ....
+	--å…¬å‘Š....
 	local Name = GetName(sceneId, selfId)
 	local SceneName = GetSceneName(sceneId)
 	local NPCName   = GetName(sceneId,TargetID)
 	local GemItemInfo = GetBagItemTransfer( sceneId, selfId, BagIndex )
 	local gemQual = GetItemQuality( ProductID )
-	--local strText = format("#{_INFOUSR%s}#IÔÚ%s#RÅí»³Óñ#I´¦Ê¹ÓÃ#{_INFOMSG%s}#Iµñ×Á³öÒ»¿Å#{_INFOMSG%s}#I£¬ÂåÑô³ÇÒ»Ê±±¦¹â³åÌì¡£", Name, SceneName,NeedItemInfo, GemItemInfo )
-	local strText = format("#{_INFOUSR%s}#IÔÚ#G%s#R%s#I´¦Ê¹ÓÃ#{_INFOMSG%s}#Iµñ×Á³öÒ»¿Å#{_INFOMSG%s}#I£¬%sÒ»Ê±±¦¹â³åÌì¡£", Name, SceneName,NPCName,NeedItemInfo, GemItemInfo, SceneName)
+	--local strText = format("#{_INFOUSR%s}#Iåœ¨%s#Rå½­æ€€ç‰#Iå¤„ä½¿ç”¨#{_INFOMSG%s}#Ié›•ç¢å‡ºä¸€é¢—#{_INFOMSG%s}#Iï¼Œæ´›é˜³åŸä¸€æ—¶å®å…‰å†²å¤©ã€‚", Name, SceneName,NeedItemInfo, GemItemInfo )
+	local strText = format("#{_INFOUSR%s}#Iåœ¨#G%s#R%s#Iå¤„ä½¿ç”¨#{_INFOMSG%s}#Ié›•ç¢å‡ºä¸€é¢—#{_INFOMSG%s}#Iï¼Œ%sä¸€æ—¶å®å…‰å†²å¤©ã€‚", Name, SceneName,NPCName,NeedItemInfo, GemItemInfo, SceneName)
 	
-	--¹«¸æ¾«¼ò£¬Ö»±£Áô3¼¶ÒÔÉÏµÄ±¦Ê¯µñ×Á¹«¸æ
+	--å…¬å‘Šç²¾ç®€ï¼Œåªä¿ç•™3çº§ä»¥ä¸Šçš„å®çŸ³é›•ç¢å…¬å‘Š
 	if (gemQual > 3) then
 		BroadMsgByChatPipe(sceneId,selfId, strText, 4)
 	end
 
-	-- µñ×Á³É¹¦ÌØĞ§....
+	-- é›•ç¢æˆåŠŸç‰¹æ•ˆ....
 	LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, 49, 0);
 
 end
 
 --**********************************
---ĞÑÄ¿ÌáÊ¾
+--é†’ç›®æç¤º
 --**********************************
 function x800117_NotifyTip( sceneId, selfId, Msg )
 

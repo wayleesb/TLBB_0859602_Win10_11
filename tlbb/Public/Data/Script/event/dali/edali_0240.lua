@@ -1,12 +1,12 @@
 
---ÁìÈ¡½­ºşÖ¸ÄÏ
+--é¢†å–æ±Ÿæ¹–æŒ‡å—
 --MisDescBegin
---½Å±¾ºÅ
+--è„šæœ¬å·
 x210240_g_ScriptId = 210240
 --MisDescEnd
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
 function x210240_OnDefaultEvent( sceneId, selfId, targetId )
    local WorldReferenceID = 30308021
@@ -19,7 +19,7 @@ function x210240_OnDefaultEvent( sceneId, selfId, targetId )
    if( 1 == bHave ) then
        --PrintStr( "Have" )
        BeginEvent( sceneId )
-			    AddText( sceneId, "  Äã²»ÊÇÒÑ¾­ÓĞÒ»±¾½­ºşÖ¸ÄÏÁËÂğ£¿" )
+			    AddText( sceneId, "  ä½ ä¸æ˜¯å·²ç»æœ‰ä¸€æœ¬æ±Ÿæ¹–æŒ‡å—äº†å—ï¼Ÿ" )
 		   EndEvent( sceneId )
 		   DispatchEventList( sceneId, selfId, targetId )
        
@@ -28,28 +28,28 @@ function x210240_OnDefaultEvent( sceneId, selfId, targetId )
       
    local FreeSpace = LuaFnGetPropertyBagSpace( sceneId, selfId )
    if( FreeSpace > 0 ) then
-       --ÓĞÊ£Óà¿Õ¼ä,ÔòËÍ¸øÍæ¼ÒÒ»±¾½­ºşÖ¸ÄÏ
+       --æœ‰å‰©ä½™ç©ºé—´,åˆ™é€ç»™ç©å®¶ä¸€æœ¬æ±Ÿæ¹–æŒ‡å—
        	BeginAddItem(sceneId)
 	          AddItem( sceneId, WorldReferenceID, 1 )
 	      EndAddItem(sceneId,selfId)
 	      AddItemListToHuman(sceneId,selfId)
 	      
-	      --¹Ø±Õ½çÃæ
+	      --å…³é—­ç•Œé¢
 				BeginUICommand( sceneId )
 				UICommand_AddInt( sceneId, targetId )
 				EndUICommand( sceneId )
 				DispatchUICommand( sceneId, selfId, 1000 )
 				
-				--ÏÔÊ¾ĞÑÄ¿ÌáÊ¾
+				--æ˜¾ç¤ºé†’ç›®æç¤º
 			  BeginEvent(sceneId)
-			      strText = "Äú»ñµÃÁËÒ»±¾½­ºşÖ¸ÄÏ"
+			      strText = "æ‚¨è·å¾—äº†ä¸€æœ¬æ±Ÿæ¹–æŒ‡å—"
 			  AddText(sceneId,strText)
  		    EndEvent(sceneId)
  		    DispatchMissionTips(sceneId,selfId)
  		  
    else
        BeginEvent( sceneId )
-			    AddText( sceneId, "  ÄúµÄ±³°üÒÑÂú,ÇëÁô³ö¿ÕÎ»ÔÙÀ´ÕÒÎÒ°É" )			
+			    AddText( sceneId, "  æ‚¨çš„èƒŒåŒ…å·²æ»¡,è¯·ç•™å‡ºç©ºä½å†æ¥æ‰¾æˆ‘å§" )			
 		   EndEvent( sceneId )
 		   DispatchEventList( sceneId, selfId, targetId )
    end
@@ -58,38 +58,38 @@ end
 
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x210240_OnEnumerate( sceneId, selfId, targetId )
-    AddNumText( sceneId, x210240_g_ScriptId, "ÁìÈ¡½­ºşÖ¸ÄÏ", 11, 100 )
+    AddNumText( sceneId, x210240_g_ScriptId, "é¢†å–æ±Ÿæ¹–æŒ‡å—", 11, 100 )
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x210240_CheckAccept( sceneId, selfId )
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x210240_OnAccept( sceneId, selfId )
 end
 
 --**********************************
---·ÅÆú
+--æ”¾å¼ƒ
 --**********************************
 function x210240_OnAbandon( sceneId, selfId )
 end
 
 --**********************************
---¼ÌĞø
+--ç»§ç»­
 --**********************************
 function x210240_OnContinue( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²âÊÇ·ñ¿ÉÒÔÌá½»
+--æ£€æµ‹æ˜¯å¦å¯ä»¥æäº¤
 --**********************************
 function x210240_CheckSubmit( sceneId, selfId )
 
@@ -97,25 +97,25 @@ end
 
 
 --**********************************
---Ìá½»
+--æäº¤
 --**********************************
 function x210240_OnSubmit( sceneId, selfId, targetId, selectRadioId )
 end
 
 --**********************************
---É±ËÀ¹ÖÎï»òÍæ¼Ò
+--æ€æ­»æ€ªç‰©æˆ–ç©å®¶
 --**********************************
 function x210240_OnKillObject( sceneId, selfId, objdataId ,objId )
 end
 
 --**********************************
---½øÈëÇøÓòÊÂ¼ş
+--è¿›å…¥åŒºåŸŸäº‹ä»¶
 --**********************************
 function x210240_OnEnterArea( sceneId, selfId, zoneId )
 end
 
 --**********************************
---µÀ¾ß¸Ä±ä
+--é“å…·æ”¹å˜
 --**********************************
 function x210240_OnItemChanged( sceneId, selfId, itemdataId )
 end

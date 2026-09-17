@@ -1,62 +1,62 @@
--- ÖĞÇïÈÎÎñ
+-- ä¸­ç§‹ä»»åŠ¡
 
 --************************************************************************
 --MisDescBegin
 
--- ½Å±¾ºÅ
+-- è„šæœ¬å·
 x050009_g_ScriptId = 050009
 
--- ÈÎÎñºÅ
+-- ä»»åŠ¡å·
 x050009_g_MissionId = 395					-- 395 - 399
 
---ÉÏÒ»¸öÈÎÎñµÄID
+--ä¸Šä¸€ä¸ªä»»åŠ¡çš„ID
 x050009_g_MissionIdNext = 396
 
--- ÈÎÎñÄ¿±ênpc
-x050009_g_Name = "ÔÀ³£Ô²"
+-- ä»»åŠ¡ç›®æ ‡npc
+x050009_g_Name = "å²³å¸¸åœ†"
 
---ÈÎÎñ¹éÀà
+--ä»»åŠ¡å½’ç±»
 x050009_g_MissionKind = 3
 
---ÈÎÎñµÈ¼¶
+--ä»»åŠ¡ç­‰çº§
 x050009_g_MissionLevel = 10000
 
--- ÈÎÎñÎÄ±¾ÃèÊö
-x050009_g_MissionName = "ÖĞÇïÈÎÎñ"
-x050009_g_MissionInfo = "    µ«ÌıÎÅ½­ºş´«ÑÔ£¬½üÈÕÒ»ÅúÒ»Æ·ÌÃµÄ¸ßÊÖÓû³ËÖĞÇï¼Ñ½Ú" ..
-				"Ö®¼Ê£¬´ó¾Ù½ø¹¥ÎÒ´óËÎ£¬´Ë¿ÌÒÑ±»ÑîÎÄ¹ã½«¾üµÄ´ó¾ü·âËøÔÚ" ..
-				"¶Ø»Í£¬Äã¿ÉÔ¸ÒâÎª¹ú¶øÕ½£¿"								-- ÈÎÎñÃèÊö
+-- ä»»åŠ¡æ–‡æœ¬æè¿°
+x050009_g_MissionName = "ä¸­ç§‹ä»»åŠ¡"
+x050009_g_MissionInfo = "    ä½†å¬é—»æ±Ÿæ¹–ä¼ è¨€ï¼Œè¿‘æ—¥ä¸€æ‰¹ä¸€å“å ‚çš„é«˜æ‰‹æ¬²ä¹˜ä¸­ç§‹ä½³èŠ‚" ..
+				"ä¹‹é™…ï¼Œå¤§ä¸¾è¿›æ”»æˆ‘å¤§å®‹ï¼Œæ­¤åˆ»å·²è¢«æ¨æ–‡å¹¿å°†å†›çš„å¤§å†›å°é”åœ¨" ..
+				"æ•¦ç…Œï¼Œä½ å¯æ„¿æ„ä¸ºå›½è€Œæˆ˜ï¼Ÿ"								-- ä»»åŠ¡æè¿°
 
-x050009_g_MissionTarget = "    ÏÖÔÚËÙÈ¥¶Ø»Í£¨252£¬144£©ÑîÎÄ¹ã½«¾üÄÇÀïĞ­ÖúËûµÖµ²Ò»Æ·ÌÃ¸ßÊÖµÄ½ø¹¥¡£"	-- ÈÎÎñÄ¿±ê
+x050009_g_MissionTarget = "    ç°åœ¨é€Ÿå»æ•¦ç…Œï¼ˆ252ï¼Œ144ï¼‰æ¨æ–‡å¹¿å°†å†›é‚£é‡ŒååŠ©ä»–æŠµæŒ¡ä¸€å“å ‚é«˜æ‰‹çš„è¿›æ”»ã€‚"	-- ä»»åŠ¡ç›®æ ‡
 
-x050009_g_ContinueInfo = "    "				-- Î´Íê³ÉÈÎÎñµÄnpc¶Ô»°
-x050009_g_MissionComplete = ""				-- Íê³ÉÈÎÎñnpcËµµÄ»°
+x050009_g_ContinueInfo = "    "				-- æœªå®Œæˆä»»åŠ¡çš„npcå¯¹è¯
+x050009_g_MissionComplete = ""				-- å®Œæˆä»»åŠ¡npcè¯´çš„è¯
 
--- ÈÎÎñ½±Àø
+-- ä»»åŠ¡å¥–åŠ±
 
 --MisDescEnd
 --************************************************************************
 
-x050009_g_NumText_Mission = 1				-- ÖĞÇïÈÎÎñ
-x050009_g_NumText_Intro = 2					-- ÈÎÎñ½éÉÜ
-x050009_g_NumText_ViewMoon = 3				-- È¥ÍùÎ÷ºşÉÍÔÂ
+x050009_g_NumText_Mission = 1				-- ä¸­ç§‹ä»»åŠ¡
+x050009_g_NumText_Intro = 2					-- ä»»åŠ¡ä»‹ç»
+x050009_g_NumText_ViewMoon = 3				-- å»å¾€è¥¿æ¹–èµæœˆ
 
 --**********************************
---ÅĞ¶ÏÊÇ·ñÖĞÇïÊ±¼ä
+--åˆ¤æ–­æ˜¯å¦ä¸­ç§‹æ—¶é—´
 --**********************************
 function x050009_IsMidAutumnPeriod( sceneId, selfId )
 	--begin modified by zhangguoxin 090207
-	--local CurTime = GetHourTime()						--µ±Ç°Ê±¼ä
-	--CurTime = CurTime-36500 --Õâ¸öÊı¾İÃ¿Äê¶¼ÒªÎ¬»¤
+	--local CurTime = GetHourTime()						--å½“å‰æ—¶é—´
+	--CurTime = CurTime-36500 --è¿™ä¸ªæ•°æ®æ¯å¹´éƒ½è¦ç»´æŠ¤
 	local CurTime = GetQuarterTime();
 	
-	--local today = floor( CurTime/100 )						--µ±Ç°Ê±¼ä(Ìì)
-	local today = mod(floor( CurTime/100 ), 1000)		--µ±Ç°Ê±¼ä(Ìì)
-	local CurQuarterTime = mod( CurTime, 100 )			--µ±Ç°Ê±¼ä(¿Ì)
+	--local today = floor( CurTime/100 )						--å½“å‰æ—¶é—´(å¤©)
+	local today = mod(floor( CurTime/100 ), 1000)		--å½“å‰æ—¶é—´(å¤©)
+	local CurQuarterTime = mod( CurTime, 100 )			--å½“å‰æ—¶é—´(åˆ»)
 	--end modified by zhangguoxin 090207
 
-	local firstDay = 257								-- 2008Äê9 ÔÂ 14 ÈÕ,°üº¬µ±ÈÕ
-	local lastDay = 283									-- 2008Äê10 ÔÂ 9 ÈÕ,°üº¬µ±ÈÕ
+	local firstDay = 257								-- 2008å¹´9 æœˆ 14 æ—¥,åŒ…å«å½“æ—¥
+	local lastDay = 283									-- 2008å¹´10 æœˆ 9 æ—¥,åŒ…å«å½“æ—¥
 
 	if today == firstDay and CurQuarterTime < 48 then
 		return 0
@@ -74,13 +74,13 @@ function x050009_IsMidAutumnPeriod( sceneId, selfId )
 end
 
 --**********************************
---ÅĞ¶ÏÖĞÇïÎïÆ·ÊÇ·ñÓĞĞ§
+--åˆ¤æ–­ä¸­ç§‹ç‰©å“æ˜¯å¦æœ‰æ•ˆ
 --**********************************
-function x050009_IsItemValid( sceneId, itemSN )--ÓÉÎïÆ·µÄ½Å±¾ÔæÄàÏÚÔÂ±ı¡¢±¡ºÉÏÚÔÂ±ı¡¢¶¹É³ÏÚÔÂ±ıµÈµÈµ÷ÓÃµ½ÕâÀï£¬ÒÑ¾­Ã»ÓĞÊ¹ÓÃ
-	local today = GetDayTime()							--µ±Ç°Ê±¼ä(Ìì)
-	local lastDay = 6303								-- 10 ÔÂ 31 ÈÕ
+function x050009_IsItemValid( sceneId, itemSN )--ç”±ç‰©å“çš„è„šæœ¬æ£æ³¥é¦…æœˆé¥¼ã€è–„è·é¦…æœˆé¥¼ã€è±†æ²™é¦…æœˆé¥¼ç­‰ç­‰è°ƒç”¨åˆ°è¿™é‡Œï¼Œå·²ç»æ²¡æœ‰ä½¿ç”¨
+	local today = GetDayTime()							--å½“å‰æ—¶é—´(å¤©)
+	local lastDay = 6303								-- 10 æœˆ 31 æ—¥
 
-	-- 10 ÔÂ 31 ÈÕÒÔºóÊ§Ğ§
+	-- 10 æœˆ 31 æ—¥ä»¥åå¤±æ•ˆ
 	if today > lastDay then
 		return 0
 	end
@@ -89,10 +89,10 @@ function x050009_IsItemValid( sceneId, itemSN )--ÓÉÎïÆ·µÄ½Å±¾ÔæÄàÏÚÔÂ±ı¡¢±¡ºÉÏÚÔ
 end
 
 --**********************************
---ÁĞ¾ÙÊÂ¼ş
+--åˆ—ä¸¾äº‹ä»¶
 --**********************************
 function x050009_OnEnumerate( sceneId, selfId, targetId )
-	if GetName( sceneId, targetId ) ~= x050009_g_Name then		--ÅĞ¶Ï¸ÃnpcÊÇ·ñÊÇ¶ÔÓ¦ÈÎÎñµÄnpc
+	if GetName( sceneId, targetId ) ~= x050009_g_Name then		--åˆ¤æ–­è¯¥npcæ˜¯å¦æ˜¯å¯¹åº”ä»»åŠ¡çš„npc
 		return
 	end
 
@@ -101,18 +101,18 @@ function x050009_OnEnumerate( sceneId, selfId, targetId )
 	end
 
 	if IsHaveMission( sceneId, selfId, x050009_g_MissionId ) <= 0 then
-		AddNumText( sceneId, x050009_g_ScriptId, "ÖĞÇïÈÎÎñ", -1, x050009_g_NumText_Mission )
+		AddNumText( sceneId, x050009_g_ScriptId, "ä¸­ç§‹ä»»åŠ¡", -1, x050009_g_NumText_Mission )
 	else
-		AddNumText( sceneId, x050009_g_ScriptId, "È¥ÍùÎ÷ºşÉÍÔÂ", -1, x050009_g_NumText_ViewMoon )
+		AddNumText( sceneId, x050009_g_ScriptId, "å»å¾€è¥¿æ¹–èµæœˆ", -1, x050009_g_NumText_ViewMoon )
 	end
 
-	AddNumText( sceneId, x050009_g_ScriptId, "ÈÎÎñ½éÉÜ", -1, x050009_g_NumText_Intro )
+	AddNumText( sceneId, x050009_g_ScriptId, "ä»»åŠ¡ä»‹ç»", -1, x050009_g_NumText_Intro )
 end
 
 --**********************************
---ÈÎÎñÈë¿Úº¯Êı
+--ä»»åŠ¡å…¥å£å‡½æ•°
 --**********************************
-function x050009_OnDefaultEvent( sceneId, selfId, targetId )	--µã»÷¸ÃÈÎÎñºóÖ´ĞĞ´Ë½Å±¾
+function x050009_OnDefaultEvent( sceneId, selfId, targetId )	--ç‚¹å‡»è¯¥ä»»åŠ¡åæ‰§è¡Œæ­¤è„šæœ¬
 	if GetNumText() == x050009_g_NumText_Mission then
 		x050009_AssignMission( sceneId, selfId, targetId )
 	elseif GetNumText() == x050009_g_NumText_Intro then
@@ -125,7 +125,7 @@ function x050009_OnDefaultEvent( sceneId, selfId, targetId )	--µã»÷¸ÃÈÎÎñºóÖ´ĞĞ´
 end
 
 --**********************************
---·¢²¼ÈÎÎñ
+--å‘å¸ƒä»»åŠ¡
 --**********************************
 function x050009_AssignMission( sceneId, selfId, targetId )
 	BeginEvent( sceneId )
@@ -136,28 +136,28 @@ function x050009_AssignMission( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÈÎÎñ½éÉÜ
+--ä»»åŠ¡ä»‹ç»
 --**********************************
 function x050009_MissionIntro( sceneId, selfId, targetId )
 	BeginEvent( sceneId )
-		AddText( sceneId, "    ÔÚËÕÖİ£¨193£¬148£©ÔÀ³£Ô²¼¤»îÈÎÎñ¡ª¡ªÕÒµ½" ..
-						"¶Ø»Í£¨252£¬144£©ÑîÎÄ¹ã½«¾ü½øÈë¸±±¾Õ½¶·¡ª¡ªÏûÃğ" ..
-						"BOSS»ñµÃÖĞÇï»ı·Ö£¨Èç¹û»ñµÃÒ»Æ·ÌÃÁîÅÆ£¬¿É½»¸øÑî" ..
-						"ÎÄ¹ãÓĞ¼¸ÂÊ»ñµÃÕäÏ¡ÎïÆ·£©¡ª¡ªÈ¥Èı´ó³ÇÊĞÈı¸ö¾Æµê" ..
-						"ÀÏ°åÄÇÀïÓÃ»ı·Ö»»È¡Ê³²Ä£¨¾«ÖÊÃæ·Û¡¢ÓÅÖÊÏãÁÏ¡¢ÉÏºÃÕáÌÇ£©£¬" )
-		AddText( sceneId, "µ½ÈÎÎñ·¢²¼ÈË¿É´«ËÍµ½Î÷ºşÉÍÔÂ£¬ÕÒµ½Ò¹Î÷ºş£¨280" ..
-						"£¬184£©µÄËÕéøÓÃÈı¼şÊ³²Ä»»È¡Ò»Ã¶ÔÂ±ı£¨Ëæ»ú²»Í¬µÄ" ..
-						"¿ÚÎ¶£ºÔæÄàÏÚÔÂ±ı¡¢±¡ºÉÏÚÔÂ±ı¡¢¶¹É³ÏÚÔÂ±ı¡¢¹ğÔ²" ..
-						"ÏÚÔÂ±ı¡­¡­ÔÂ±ıÑªÆø¿ÉÍ¬Ê±²¹Âú£¬Í¬Ê±Ôö¼Ó²»Í¬µÄBUFF£¬" ..
-						"ÔÂ±ıÓĞ±£ÏÊÆÚÎª½ØÖ¹µ½10ÔÂ31ÈÕ£©£¬Í¬Ê±Ã¿»»Ò»Ã¶ÔÂ±ı»á" )
-		AddText( sceneId, "µÃµ½ÏàÓ¦µÄ¾­Ñé½±Àø¡£ÔÚÒ¹Î÷ºş¿ÉÒÔ¹ºÂòµ½ÖĞÇïÀñ" ..
-						"»¨£¬ÖĞÇïÀñ»¨ÓĞĞ§ÆÚÎª½ØÖ¹µ½10ÔÂ31ÈÕ¡£" )
+		AddText( sceneId, "    åœ¨è‹å·ï¼ˆ193ï¼Œ148ï¼‰å²³å¸¸åœ†æ¿€æ´»ä»»åŠ¡â€”â€”æ‰¾åˆ°" ..
+						"æ•¦ç…Œï¼ˆ252ï¼Œ144ï¼‰æ¨æ–‡å¹¿å°†å†›è¿›å…¥å‰¯æœ¬æˆ˜æ–—â€”â€”æ¶ˆç­" ..
+						"BOSSè·å¾—ä¸­ç§‹ç§¯åˆ†ï¼ˆå¦‚æœè·å¾—ä¸€å“å ‚ä»¤ç‰Œï¼Œå¯äº¤ç»™æ¨" ..
+						"æ–‡å¹¿æœ‰å‡ ç‡è·å¾—çç¨€ç‰©å“ï¼‰â€”â€”å»ä¸‰å¤§åŸå¸‚ä¸‰ä¸ªé…’åº—" ..
+						"è€æ¿é‚£é‡Œç”¨ç§¯åˆ†æ¢å–é£Ÿæï¼ˆç²¾è´¨é¢ç²‰ã€ä¼˜è´¨é¦™æ–™ã€ä¸Šå¥½è”—ç³–ï¼‰ï¼Œ" )
+		AddText( sceneId, "åˆ°ä»»åŠ¡å‘å¸ƒäººå¯ä¼ é€åˆ°è¥¿æ¹–èµæœˆï¼Œæ‰¾åˆ°å¤œè¥¿æ¹–ï¼ˆ280" ..
+						"ï¼Œ184ï¼‰çš„è‹è½¼ç”¨ä¸‰ä»¶é£Ÿææ¢å–ä¸€æšæœˆé¥¼ï¼ˆéšæœºä¸åŒçš„" ..
+						"å£å‘³ï¼šæ£æ³¥é¦…æœˆé¥¼ã€è–„è·é¦…æœˆé¥¼ã€è±†æ²™é¦…æœˆé¥¼ã€æ¡‚åœ†" ..
+						"é¦…æœˆé¥¼â€¦â€¦æœˆé¥¼è¡€æ°”å¯åŒæ—¶è¡¥æ»¡ï¼ŒåŒæ—¶å¢åŠ ä¸åŒçš„BUFFï¼Œ" ..
+						"æœˆé¥¼æœ‰ä¿é²œæœŸä¸ºæˆªæ­¢åˆ°10æœˆ31æ—¥ï¼‰ï¼ŒåŒæ—¶æ¯æ¢ä¸€æšæœˆé¥¼ä¼š" )
+		AddText( sceneId, "å¾—åˆ°ç›¸åº”çš„ç»éªŒå¥–åŠ±ã€‚åœ¨å¤œè¥¿æ¹–å¯ä»¥è´­ä¹°åˆ°ä¸­ç§‹ç¤¼" ..
+						"èŠ±ï¼Œä¸­ç§‹ç¤¼èŠ±æœ‰æ•ˆæœŸä¸ºæˆªæ­¢åˆ°10æœˆ31æ—¥ã€‚" )
 	EndEvent( )
 	DispatchEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---È¥ÍùÎ÷ºşÉÍÔÂ
+--å»å¾€è¥¿æ¹–èµæœˆ
 --**********************************
 function x050009_ViewMoon( sceneId, selfId, targetId )
 	local scene, x, z = 121, 272, 181
@@ -165,7 +165,7 @@ function x050009_ViewMoon( sceneId, selfId, targetId )
 end
 
 --**********************************
---¼ì²â½ÓÊÜÌõ¼ş
+--æ£€æµ‹æ¥å—æ¡ä»¶
 --**********************************
 function x050009_CheckAccept( sceneId, selfId )
 	if x050009_IsMidAutumnPeriod( sceneId, selfId ) > 0 then
@@ -176,17 +176,17 @@ function x050009_CheckAccept( sceneId, selfId )
 end
 
 --**********************************
---½ÓÊÜ
+--æ¥å—
 --**********************************
 function x050009_OnAccept( sceneId, selfId, targetId )
-	--¼ì²âÊÇ·ñÈÎÎñÒÑ¾­´ïµ½20¸ö,Èç¹ûµ½ÁË,Ôò²»ÄÜ½Ó
+	--æ£€æµ‹æ˜¯å¦ä»»åŠ¡å·²ç»è¾¾åˆ°20ä¸ª,å¦‚æœåˆ°äº†,åˆ™ä¸èƒ½æ¥
 	if GetMissionCount( sceneId, selfId ) == 20 then
-		x050009_NotifyFailTips( sceneId, selfId, "ÎŞ·¨½ÓÊÜ¸ü¶àÈÎÎñ" )
+		x050009_NotifyFailTips( sceneId, selfId, "æ— æ³•æ¥å—æ›´å¤šä»»åŠ¡" )
 		return
 	end
 
 	if IsHaveMission( sceneId, selfId, x050009_g_MissionId ) <= 0 then
-		AddMission( sceneId, selfId, x050009_g_MissionId, x050009_g_ScriptId, 0, 0, 0 )		-- kill¡¢area¡¢item
+		AddMission( sceneId, selfId, x050009_g_MissionId, x050009_g_ScriptId, 0, 0, 0 )		-- killã€areaã€item
 		if IsHaveMission( sceneId, selfId, x050009_g_MissionId ) <= 0 then
 			return
 		end
@@ -196,7 +196,7 @@ function x050009_OnAccept( sceneId, selfId, targetId )
 end
 
 --**********************************
---·ÅÆúÈÎÎñ
+--æ”¾å¼ƒä»»åŠ¡
 --**********************************
 function x050009_OnAbandon( sceneId, selfId )
 	if IsHaveMission( sceneId, selfId, x050009_g_MissionId ) == 0 then
@@ -204,7 +204,7 @@ function x050009_OnAbandon( sceneId, selfId )
 	end
 
 	if IsHaveMission( sceneId, selfId, x050009_g_MissionIdNext ) > 0 then
-		x050009_NotifyFailTips( sceneId, selfId, "ÇëÏÈ·ÅÆú»÷É±Ò»Æ·ÌÃÈÎÎñ£¡" )
+		x050009_NotifyFailTips( sceneId, selfId, "è¯·å…ˆæ”¾å¼ƒå‡»æ€ä¸€å“å ‚ä»»åŠ¡ï¼" )
 		return
 	end
 
@@ -212,7 +212,7 @@ function x050009_OnAbandon( sceneId, selfId )
 end
 
 --**********************************
---¶Ô»°´°¿ÚĞÅÏ¢ÌáÊ¾
+--å¯¹è¯çª—å£ä¿¡æ¯æç¤º
 --**********************************
 function x050009_NotifyFailBox( sceneId, selfId, targetId, msg )
 	BeginEvent( sceneId )
@@ -222,7 +222,7 @@ function x050009_NotifyFailBox( sceneId, selfId, targetId, msg )
 end
 
 --**********************************
---ĞÑÄ¿ĞÅÏ¢ÌáÊ¾
+--é†’ç›®ä¿¡æ¯æç¤º
 --**********************************
 function x050009_NotifyFailTips( sceneId, selfId, Tip )
 	BeginEvent( sceneId )

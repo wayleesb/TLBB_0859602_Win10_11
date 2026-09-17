@@ -5,17 +5,17 @@ x200089_g_PreMissionId = 18
 x200089_g_Position_X=38
 x200089_g_Position_Z=99
 x200089_g_SceneID=9
-x200089_g_AccomplishNPC_Name="Ğş´È"
-x200089_g_Name	="Ğş´È"
+x200089_g_AccomplishNPC_Name="ç„æ…ˆ"
+x200089_g_Name	="ç„æ…ˆ"
 x200089_g_MissionKind = 47
 x200089_g_MissionLevel = 40
 x200089_g_IfMissionElite = 0
-x200089_g_MissionName="ÌìÏÂÎä¹¦³öÉÙÁÖ"
+x200089_g_MissionName="å¤©ä¸‹æ­¦åŠŸå‡ºå°‘æ—"
 x200089_g_MissionInfo="#{Mis_juqing_0019}"
 x200089_g_MissionTarget="#{Mis_juqing_Tar_0019}"
-x200089_g_MissionComplete="  °¢ÃÖÍÓ·ğ£¬Ê©Ö÷À´ÎÒÉÙÁÖµÄÄ¿µÄÀÏñÄÒÑ¾­²Âµ½ÁË¡£¿ÉÏ§ÀÏñÄÉíÔÚºì³¾Íâ£¬²»ÎÊºì³¾ÊÂÁË£¬°¢ÃÖÍÓ·ğ¡­¡­"
+x200089_g_MissionComplete="  é˜¿å¼¥é™€ä½›ï¼Œæ–½ä¸»æ¥æˆ‘å°‘æ—çš„ç›®çš„è€è¡²å·²ç»çŒœåˆ°äº†ã€‚å¯æƒœè€è¡²èº«åœ¨çº¢å°˜å¤–ï¼Œä¸é—®çº¢å°˜äº‹äº†ï¼Œé˜¿å¼¥é™€ä½›â€¦â€¦"
 x200089_g_MoneyBonus=5400
 x200089_g_exp=5400
-x200089_g_Custom	= { {id="ÒÑÕÒµ½Ğş´È",num=1} }
+x200089_g_Custom	= { {id="å·²æ‰¾åˆ°ç„æ…ˆ",num=1} }
 x200089_g_IsMissionOkFail = 0
 --MisDescEnd

@@ -1,17 +1,17 @@
---Ì«ºşNPC
---Ôì·´¶ñÔô
---ÆÕÍ¨
+--å¤ªæ¹–NPC
+--é€ åæ¶è´¼
+--æ™®é€š
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x050012_g_ScriptId	= 050012
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
 x050012_g_EventList	= { 050013 }
---½ÓÈ¡ÈÎÎñµÄ×îµÍµÈ¼¶
+--æ¥å–ä»»åŠ¡çš„æœ€ä½ç­‰çº§
 x050012_g_minLevel			= 20
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x050012_UpdateEventList( sceneId, selfId, targetId )
 
@@ -20,14 +20,14 @@ function x050012_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x050012_OnDefaultEvent( sceneId, selfId, targetId )
 	x050012_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x050012_OnEventRequest( sceneId, selfId, targetId, eventId )
 
@@ -41,7 +41,7 @@ function x050012_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x050012_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 
@@ -55,11 +55,11 @@ function x050012_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x050012_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 
-	--¾Ü¾øÖ®ºó£¬Òª·µ»ØNPCµÄÊÂ¼şÁĞ±í
+	--æ‹’ç»ä¹‹åï¼Œè¦è¿”å›NPCçš„äº‹ä»¶åˆ—è¡¨
 	for i, findId in x050012_g_EventList do
 		if missionScriptId == findId then
 			x050012_UpdateEventList( sceneId, selfId, targetId )
@@ -70,7 +70,7 @@ function x050012_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¼ÌĞø£¨ÒÑ¾­½ÓÁËÈÎÎñ£©
+--ç»§ç»­ï¼ˆå·²ç»æ¥äº†ä»»åŠ¡ï¼‰
 --**********************************
 function x050012_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 
@@ -84,7 +84,7 @@ function x050012_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---Ìá½»ÒÑ×öÍêµÄÈÎÎñ
+--æäº¤å·²åšå®Œçš„ä»»åŠ¡
 --**********************************
 function x050012_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, selectRadioId )
 
@@ -98,7 +98,7 @@ function x050012_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 end
 
 --**********************************
---ËÀÍöÊÂ¼ş
+--æ­»äº¡äº‹ä»¶
 --**********************************
 function x050012_OnDie( sceneId, selfId, killerId )
 end

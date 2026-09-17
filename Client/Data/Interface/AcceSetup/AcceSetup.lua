@@ -2,14 +2,14 @@ local TBL_TextFrame = {}
 local TBL_NotChat_Button = {}
 local TBL_Chat_Button = {}
 
-local AcceArryEx = 10   --×Ô¶¨Òå¿ì½İ¼üÊı×éÖĞÇ°11¸öÔªËØ²»ÔÊĞíÍæ¼Ò×Ô¶¨Òå
+local AcceArryEx = 10   --è‡ªå®šä¹‰å¿«æ·é”®æ•°ç»„ä¸­å‰11ä¸ªå…ƒç´ ä¸å…è®¸ç©å®¶è‡ªå®šä¹‰
 
 local ControlMaxNum = 49
 
 local PageStart = 0
 local PageEnd = 0
 
-local AcceSeting = 0   --¿ì½İ¼üÉèÖÃÖĞ
+local AcceSeting = 0   --å¿«æ·é”®è®¾ç½®ä¸­
 --===============================================
 -- OnLoad()
 --===============================================
@@ -29,7 +29,7 @@ function AcceSetup_OnLoad()
 --	GameSetup_ChatBkg_Slider:SetProperty( "PageSize","0.1" );
 --	GameSetup_ChatBkg_Slider:SetProperty( "StepSize","0.1" );
 
---³õÊ¼»¯Í¼Æ¬±í
+--åˆå§‹åŒ–å›¾ç‰‡è¡¨
 TBL_TextFrame[1] = ZiDingYi_List_Name1;
 TBL_TextFrame[2] = ZiDingYi_List_Name2;
 TBL_TextFrame[3] = ZiDingYi_List_Name3;
@@ -80,7 +80,7 @@ TBL_TextFrame[47] = ZiDingYi_List_Name47;
 TBL_TextFrame[48] = ZiDingYi_List_Name48;
 TBL_TextFrame[49] = ZiDingYi_List_Name49;
 
---³õÊ¼NotChat_Button±í
+--åˆå§‹NotChat_Buttonè¡¨
 TBL_NotChat_Button[1] = ZiDingYi_NotChat_Button1;
 TBL_NotChat_Button[2] = ZiDingYi_NotChat_Button2;
 TBL_NotChat_Button[3] = ZiDingYi_NotChat_Button3;
@@ -131,7 +131,7 @@ TBL_NotChat_Button[47] = ZiDingYi_NotChat_Button47;
 TBL_NotChat_Button[48] = ZiDingYi_NotChat_Button48;
 TBL_NotChat_Button[49] = ZiDingYi_NotChat_Button49;
 
---³õÊ¼TBL_Chat_Button±í
+--åˆå§‹TBL_Chat_Buttonè¡¨
 TBL_Chat_Button[1] = ZiDingYi_Chat_Button1;
 TBL_Chat_Button[2] = ZiDingYi_Chat_Button2;
 TBL_Chat_Button[3] = ZiDingYi_Chat_Button3;
@@ -183,7 +183,7 @@ TBL_Chat_Button[48] = ZiDingYi_Chat_Button48;
 TBL_Chat_Button[49] = ZiDingYi_Chat_Button49;
 
 
---Òş²Ø²»ĞèÒªµÄ²¿·Ö
+--éšè—ä¸éœ€è¦çš„éƒ¨åˆ†
 for i = 11,ControlMaxNum do
   if(TBL_TextFrame[i] ~= nil and TBL_NotChat_Button[i] ~= nil and TBL_Chat_Button[i] ~= nil) then
     TBL_TextFrame[i]:Hide()
@@ -202,22 +202,22 @@ end
 function AcceSetup_OnEvent(event)
 
 	if ( event == "TOGLE_INPUTSETUP" ) then
-    if(arg0 == "show") then -- ´ò¿ªÏûÏ¢
-	    --PushDebugMessage("´ò¿ªÏûÏ¢");
+    if(arg0 == "show") then -- æ‰“å¼€æ¶ˆæ¯
+	    --PushDebugMessage("æ‰“å¼€æ¶ˆæ¯");
 		  this:Show();		
 		  AcceSetup_UpdateFrame();
-		else -- ×Ö·ûÏûÏ¢
-			if(tonumber(arg2) > 49) then--ÁÙÊ±ÆÁ±Î
+		else -- å­—ç¬¦æ¶ˆæ¯
+			if(tonumber(arg2) > 49) then--ä¸´æ—¶å±è”½
 				return
 			end 
 			if (tostring( arg0 ) == "") then
-				TBL_NotChat_Button[tonumber(arg2)]:SetProperty("Text", "ÎŞ");
+				TBL_NotChat_Button[tonumber(arg2)]:SetProperty("Text", "æ— ");
 			else
 				TBL_NotChat_Button[tonumber(arg2)]:SetProperty("Text", tostring( arg0 ));
 			end
 	    
 			if (tostring( arg1 ) == "") then
-				TBL_Chat_Button[tonumber(arg2)]:SetProperty("Text", "ÎŞ");
+				TBL_Chat_Button[tonumber(arg2)]:SetProperty("Text", "æ— ");
 			else
 				TBL_Chat_Button[tonumber(arg2)]:SetProperty("Text", tostring( arg1 ));
 			end
@@ -248,13 +248,13 @@ function AcceSetup_UpdateFrame()
      if(TBL_TextFrame[i] ~= nil and TBL_NotChat_Button[i] ~= nil and TBL_Chat_Button[i] ~= nil) then
         key1,key2 = SystemSetup:GetInputSetup(i + AcceArryEx);
         if(key1 == "") then
-          TBL_NotChat_Button[i]:SetProperty("Text", "ÎŞ");
+          TBL_NotChat_Button[i]:SetProperty("Text", "æ— ");
         else
           TBL_NotChat_Button[i]:SetProperty("Text", key1);
         end
       
         if(key2 == "") then
-          TBL_Chat_Button[i]:SetProperty("Text", "ÎŞ");
+          TBL_Chat_Button[i]:SetProperty("Text", "æ— ");
         else
           TBL_Chat_Button[i]:SetProperty("Text", key2);   
         end
@@ -267,10 +267,10 @@ end
 --===============================================
 function AcceSetup_Accept_Clicked()
   if(AcceSeting == 1) then
-     PushDebugMessage("²Ù×÷Ê§°Ü£¬ÇëÏÈÍê³Éµ±Ç°¼¤»î¿ì½İ¼üµÄ¶¨ÒåºóÔÙ½øĞĞÆäËû²Ù×÷");
+     PushDebugMessage("æ“ä½œå¤±è´¥ï¼Œè¯·å…ˆå®Œæˆå½“å‰æ¿€æ´»å¿«æ·é”®çš„å®šä¹‰åå†è¿›è¡Œå…¶ä»–æ“ä½œ");
      return;
   end
-  --Ó¦ÓÃĞÂµÄ¿ì½İ¼üÉèÖÃ
+  --åº”ç”¨æ–°çš„å¿«æ·é”®è®¾ç½®
 	SystemSetup:UseAcceCustomKey();
 	this:Hide();
 end
@@ -289,7 +289,7 @@ end
 
 function ZiDingYi_shangyiye_Clicked()
     if(AcceSeting == 1) then
-     PushDebugMessage("²Ù×÷Ê§°Ü£¬ÇëÏÈÍê³Éµ±Ç°¼¤»î¿ì½İ¼üµÄ¶¨ÒåºóÔÙ½øĞĞÆäËû²Ù×÷");
+     PushDebugMessage("æ“ä½œå¤±è´¥ï¼Œè¯·å…ˆå®Œæˆå½“å‰æ¿€æ´»å¿«æ·é”®çš„å®šä¹‰åå†è¿›è¡Œå…¶ä»–æ“ä½œ");
      return;
     end
     
@@ -298,7 +298,7 @@ end
 
 function ZiDingYi_xiayiye_Clicked()
     if(AcceSeting == 1) then
-     PushDebugMessage("²Ù×÷Ê§°Ü£¬ÇëÏÈÍê³Éµ±Ç°¼¤»î¿ì½İ¼üµÄ¶¨ÒåºóÔÙ½øĞĞÆäËû²Ù×÷");
+     PushDebugMessage("æ“ä½œå¤±è´¥ï¼Œè¯·å…ˆå®Œæˆå½“å‰æ¿€æ´»å¿«æ·é”®çš„å®šä¹‰åå†è¿›è¡Œå…¶ä»–æ“ä½œ");
      return;
     end
     
@@ -307,30 +307,30 @@ end
 
 function PageChange(type)
 
-    if(type == 0) then  --ÉÏÒ»Ò³ 
-      if((PageStart - 10) < 1) then--¼ìÑéÊÇ·ñÔ½½ç
+    if(type == 0) then  --ä¸Šä¸€é¡µ 
+      if((PageStart - 10) < 1) then--æ£€éªŒæ˜¯å¦è¶Šç•Œ
          return
       elseif((PageStart - 10) < 11) then
          ZiDingYi_shangyiye:SetProperty("Disabled", "True");
       end
       PageStart = PageStart - 10;  
-      --»Ö¸´ÏÂÒ»Ò³°´Å¥µÄ¿ÉÓÃĞÔ 
+      --æ¢å¤ä¸‹ä¸€é¡µæŒ‰é’®çš„å¯ç”¨æ€§ 
       ZiDingYi_xiayiye:SetProperty("Disabled", "False");
-    elseif(type == 1) then  --ÏÂÒ»Ò³
-      if((PageStart + 10) > 41) then--¼ìÑéÊÇ·ñÔ½½ç
+    elseif(type == 1) then  --ä¸‹ä¸€é¡µ
+      if((PageStart + 10) > 41) then--æ£€éªŒæ˜¯å¦è¶Šç•Œ
          return
       elseif((PageStart + 10) > 31) then
          ZiDingYi_xiayiye:SetProperty("Disabled", "True");
       end
       PageStart = PageStart + 10; 
-      --»Ö¸´ÉÏÒ»Ò³°´Å¥µÄ¿ÉÓÃĞÔ 
+      --æ¢å¤ä¸Šä¸€é¡µæŒ‰é’®çš„å¯ç”¨æ€§ 
       ZiDingYi_shangyiye:SetProperty("Disabled", "False");     
     end
     
     PageEnd = PageStart + 10
 
     for i = 1,ControlMaxNum do
-      if(i >= PageStart and i < PageEnd) then   --ÔÚ¸ÃÒ³·¶Î§ÄÚµÄ¿Ø¼şÏÔÊ¾·ñÔòÒş²Ø
+      if(i >= PageStart and i < PageEnd) then   --åœ¨è¯¥é¡µèŒƒå›´å†…çš„æ§ä»¶æ˜¾ç¤ºå¦åˆ™éšè—
          if(TBL_TextFrame[i] ~= nil and TBL_NotChat_Button[i] ~= nil and TBL_Chat_Button[i] ~= nil) then
           TBL_TextFrame[i]:Show()
           TBL_NotChat_Button[i]:Show()
@@ -348,12 +348,12 @@ end
 
 function Chat_Button_Clicked(ButtonId)
     if(AcceSeting == 1) then
-     PushDebugMessage("²Ù×÷Ê§°Ü£¬ÇëÏÈÍê³Éµ±Ç°¼¤»î¿ì½İ¼üµÄ¶¨ÒåºóÔÙ½øĞĞÆäËû²Ù×÷");
+     PushDebugMessage("æ“ä½œå¤±è´¥ï¼Œè¯·å…ˆå®Œæˆå½“å‰æ¿€æ´»å¿«æ·é”®çš„å®šä¹‰åå†è¿›è¡Œå…¶ä»–æ“ä½œ");
      return;
     end
-    --½øÈëÉèÖÃ¿ì½İ¼ü×´Ì¬
+    --è¿›å…¥è®¾ç½®å¿«æ·é”®çŠ¶æ€
     SystemSetup:InputSetup_OnOff(true,true,ButtonId);
-    TBL_Chat_Button[ButtonId]:SetText("#GÇëÊäÈë");
+    TBL_Chat_Button[ButtonId]:SetText("#Gè¯·è¾“å…¥");
    	
     AcceSeting = 1;
 end
@@ -361,27 +361,27 @@ end
 function NoChat_Button_Clicked(ButtonId)
 
    if(AcceSeting == 1) then
-     PushDebugMessage("²Ù×÷Ê§°Ü£¬ÇëÏÈÍê³Éµ±Ç°¼¤»î¿ì½İ¼üµÄ¶¨ÒåºóÔÙ½øĞĞÆäËû²Ù×÷");
+     PushDebugMessage("æ“ä½œå¤±è´¥ï¼Œè¯·å…ˆå®Œæˆå½“å‰æ¿€æ´»å¿«æ·é”®çš„å®šä¹‰åå†è¿›è¡Œå…¶ä»–æ“ä½œ");
      return;
    end
-   --½øÈëÉèÖÃ¿ì½İ¼ü×´Ì¬
+   --è¿›å…¥è®¾ç½®å¿«æ·é”®çŠ¶æ€
    SystemSetup:InputSetup_OnOff(true,false,ButtonId);
-   TBL_NotChat_Button[ButtonId]:SetText("#GÇëÊäÈë");
+   TBL_NotChat_Button[ButtonId]:SetText("#Gè¯·è¾“å…¥");
    	
    AcceSeting = 1;
 end
 
---»Ö¸´¿ì½İ¼üÄ¬ÈÏÉèÖÃ
+--æ¢å¤å¿«æ·é”®é»˜è®¤è®¾ç½®
 function ComeBackAcce_Clicked()
 
    if(AcceSeting == 1) then
-     PushDebugMessage("²Ù×÷Ê§°Ü£¬ÇëÏÈÍê³Éµ±Ç°¼¤»î¿ì½İ¼üµÄ¶¨ÒåºóÔÙ½øĞĞÆäËû²Ù×÷");
+     PushDebugMessage("æ“ä½œå¤±è´¥ï¼Œè¯·å…ˆå®Œæˆå½“å‰æ¿€æ´»å¿«æ·é”®çš„å®šä¹‰åå†è¿›è¡Œå…¶ä»–æ“ä½œ");
      return;
    end
-   --½øÈëÉèÖÃ¿ì½İ¼ü×´Ì¬
+   --è¿›å…¥è®¾ç½®å¿«æ·é”®çŠ¶æ€
    SystemSetup:ComeBackAcce();
    AcceSetup_UpdateFrame();
    
-   PushDebugMessage("»Ö¸´³É¹¦£¡ÄúµÄ¼üÎ»ÒÑ¾­»Ö¸´ÎªÄ¬ÈÏÉèÖÃ¡£");
+   PushDebugMessage("æ¢å¤æˆåŠŸï¼æ‚¨çš„é”®ä½å·²ç»æ¢å¤ä¸ºé»˜è®¤è®¾ç½®ã€‚");
    	
 end

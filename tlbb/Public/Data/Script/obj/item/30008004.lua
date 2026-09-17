@@ -1,20 +1,20 @@
 -- 300052 
--- ´óÏ´Ëèµ¤
--- Ê¹ÓÃÖ®ºó¿ÉÒÔ½«ËùÓĞµÄÒÑ·ÖÅäµãÊı±äÎªÇ±ÄÜ¡£
+-- å¤§æ´—é«“ä¸¹
+-- ä½¿ç”¨ä¹‹åå¯ä»¥å°†æ‰€æœ‰çš„å·²åˆ†é…ç‚¹æ•°å˜ä¸ºæ½œèƒ½ã€‚
 
 
--- ½Å±¾ºÅ
+-- è„šæœ¬å·
 x300052_g_scriptId = 300052
-x300052_g_ItemId = 30008004  -- Ò©Ë®ID
+x300052_g_ItemId = 30008004  -- è¯æ°´ID
 
 --**********************************
--- ÊÂ¼ş½»»¥Èë¿Ú
+-- äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x300052_OnDefaultEvent( sceneId, selfId )
 
-	-- ³ÔÒ©Ï´µã
+	-- åƒè¯æ´—ç‚¹
 	if GetNumText() == 1  then
-		-- ¼ì²âÕâ¸öÈËÊÇ²»ÊÇÓĞµã¿ÉÒÔÏ´¡£
+		-- æ£€æµ‹è¿™ä¸ªäººæ˜¯ä¸æ˜¯æœ‰ç‚¹å¯ä»¥æ´—ã€‚
 		local bCan = LuaFnIsCanWashPiont(sceneId, selfId, 5)
 		
 		if bCan == 1  then
@@ -22,16 +22,16 @@ function x300052_OnDefaultEvent( sceneId, selfId )
 			if ret == 1  then
 				LuaFnWashPoints(sceneId, selfId)
 				BeginEvent(sceneId)
-					AddText(sceneId, "#Y´óÏ´Ëèµ¤")
-					AddText(sceneId, "  Äú³É¹¦½«#YËùÓĞÒÑ·ÖÅä#WµÄÊôĞÔ±äÎªÇ±ÄÜ¡£")
+					AddText(sceneId, "#Yå¤§æ´—é«“ä¸¹")
+					AddText(sceneId, "  æ‚¨æˆåŠŸå°†#Yæ‰€æœ‰å·²åˆ†é…#Wçš„å±æ€§å˜ä¸ºæ½œèƒ½ã€‚")
 				EndEvent(sceneId)
 				DispatchEventList(sceneId,selfId,-1)
 			end
 
 		else
 			BeginEvent(sceneId)
-				AddText(sceneId, "#Y´óÏ´Ëèµ¤")
-				AddText(sceneId, "  ËùÓĞÊôĞÔ¶¼ÒÑ¾­ÎŞ¶àÓà·ÖÅäµãÊı£¬ÎŞ·¨½øĞĞÏ´µã¡£")
+				AddText(sceneId, "#Yå¤§æ´—é«“ä¸¹")
+				AddText(sceneId, "  æ‰€æœ‰å±æ€§éƒ½å·²ç»æ— å¤šä½™åˆ†é…ç‚¹æ•°ï¼Œæ— æ³•è¿›è¡Œæ´—ç‚¹ã€‚")
 			EndEvent(sceneId)
 			DispatchEventList(sceneId,selfId,-1)
 
@@ -39,9 +39,9 @@ function x300052_OnDefaultEvent( sceneId, selfId )
 		return
 	end
 	
-	-- ·ÅÆúÁË³ÔÒ©
+	-- æ”¾å¼ƒäº†åƒè¯
 	if GetNumText() == 2  then
-		-- ¹Ø±Õ½çÃæ
+		-- å…³é—­ç•Œé¢
 		BeginUICommand(sceneId)
 		EndUICommand(sceneId)
 		DispatchUICommand(sceneId,selfId, 1000)

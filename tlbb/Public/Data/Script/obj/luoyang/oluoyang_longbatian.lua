@@ -1,25 +1,25 @@
---ÂåÑôNPC
---ÉñÒ½
---ÆÕÍ¨
+--æ´›é˜³NPC
+--ç¥åŒ»
+--æ™®é€š
 
---½Å±¾ºÅ
+--è„šæœ¬å·
 x000129_g_scriptId = 000129
 
---ËùÓµÓĞµÄÊÂ¼şIDÁĞ±í
-x000129_g_eventList={701603}				-- ¡°ÕäÊŞÖÎÁÆ¡±½Å±¾
+--æ‰€æ‹¥æœ‰çš„äº‹ä»¶IDåˆ—è¡¨
+x000129_g_eventList={701603}				-- â€œçå…½æ²»ç–—â€è„šæœ¬
 
---ÓÎÒ½½Å±¾±àºÅ
+--æ¸¸åŒ»è„šæœ¬ç¼–å·
 x000129_g_healScriptId = 000064
 
---ÖÎÁÆÉè¶¨ ²Î¼û½Å±¾000064
+--æ²»ç–—è®¾å®š å‚è§è„šæœ¬000064
 
 --**********************************
---ÊÂ¼şÁĞ±í
+--äº‹ä»¶åˆ—è¡¨
 --**********************************
 function x000129_UpdateEventList( sceneId, selfId, targetId )
 	BeginEvent(sceneId)
 		AddText(sceneId,"#{OBJ_luoyang_BaTian}")
-		AddNumText(sceneId,x000129_g_scriptId,"ÂúÅ­ÖÎÁÆ",6,0)
+		AddNumText(sceneId,x000129_g_scriptId,"æ»¡æ€’æ²»ç–—",6,0)
 	EndEvent(sceneId)
 	for i, eventId in x000129_g_eventList do
 		CallScriptFunction( eventId, "OnEnumerate",sceneId, selfId, targetId )
@@ -29,86 +29,86 @@ function x000129_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼ş½»»¥Èë¿Ú
+--äº‹ä»¶äº¤äº’å…¥å£
 --**********************************
 function x000129_OnDefaultEvent( sceneId, selfId,targetId )
 	x000129_UpdateEventList( sceneId, selfId, targetId )
 end
 
 --**********************************
---ÊÂ¼şÁĞ±íÑ¡ÖĞÒ»Ïî
+--äº‹ä»¶åˆ—è¡¨é€‰ä¸­ä¸€é¡¹
 --**********************************
 function x000129_OnEventRequest( sceneId, selfId, targetId, eventId )
-	-- µ÷ÓÃ¡°½­ºşÓÎÒ½¡±½Å±¾ÖĞ¼ÆËã½ğÇ®µÄº¯Êı
+	-- è°ƒç”¨â€œæ±Ÿæ¹–æ¸¸åŒ»â€è„šæœ¬ä¸­è®¡ç®—é‡‘é’±çš„å‡½æ•°
 	local	gld = CallScriptFunction( x000129_g_healScriptId, "CalcMoney_hpmp",sceneId, selfId, targetId )* 0.1
 
 	local	key	= GetNumText()
 
-	if key == 1000 then	--²»Ô¸ÔÙÖÎÁÆ
+	if key == 1000 then	--ä¸æ„¿å†æ²»ç–—
 		BeginUICommand( sceneId )
 			UICommand_AddInt( sceneId, targetId )
 		EndUICommand( sceneId )
 		DispatchUICommand( sceneId, selfId, 1000 )
 		return
 	end
-	if key == 1001 then	--È·ÈÏÒªÖÎÁÆ
-		-- µ÷ÓÃ¡°½­ºşÓÎÒ½¡±½Å±¾ÖĞ¼ÆËã½ğÇ®µÄº¯Êı
+	if key == 1001 then	--ç¡®è®¤è¦æ²»ç–—
+		-- è°ƒç”¨â€œæ±Ÿæ¹–æ¸¸åŒ»â€è„šæœ¬ä¸­è®¡ç®—é‡‘é’±çš„å‡½æ•°
 		gld = CallScriptFunction( x000129_g_healScriptId, "CalcMoney_hpmp",sceneId, selfId, targetId )* 0.1
 
-		-- µÃµ½½»×ÓºÍ½ğÇ®ÊıÄ¿
+		-- å¾—åˆ°äº¤å­å’Œé‡‘é’±æ•°ç›®
 		local nMoneyJZ = GetMoneyJZ ( sceneId, selfId )
 		local nMoney = GetMoney ( sceneId, selfId )
 		
-		--¼ì²éÍæ¼ÒÊÇ·ñÓĞ×ã¹»µÄÏÖ½ğ
+		--æ£€æŸ¥ç©å®¶æ˜¯å¦æœ‰è¶³å¤Ÿçš„ç°é‡‘
 		if (nMoneyJZ + nMoney >= gld) then
-			--¿ÛÇ®
+			--æ‰£é’±
 			LuaFnCostMoneyWithPriority (sceneId, selfId, gld)
-			-- µ÷ÓÃ¡°½­ºşÓÎÒ½¡±½Å±¾
+			-- è°ƒç”¨â€œæ±Ÿæ¹–æ¸¸åŒ»â€è„šæœ¬
 			CallScriptFunction( x000129_g_healScriptId, "Restore_hpmp",sceneId, selfId, targetId )
 			RestoreStrikePoint( sceneId, selfId )			
 			return
 		
 		else
 			BeginEvent( sceneId )
-				AddText( sceneId, "  ÄãµÄ½ğÇ®²»×ã£¡" )
+				AddText( sceneId, "  ä½ çš„é‡‘é’±ä¸è¶³ï¼" )
 			EndEvent( sceneId )
 			DispatchMissionTips( sceneId, selfId )
 		end
 	end
 	
-	--¼ÓÑª
+	--åŠ è¡€
 	if key == 0 then
 		if GetHp( sceneId, selfId ) == GetMaxHp( sceneId, selfId ) and
 			 GetRage( sceneId, selfId ) == GetMaxRage( sceneId, selfId ) and
 			 GetMp( sceneId, selfId ) == GetMaxMp( sceneId, selfId ) and
 			 IsStrikePointFull( sceneId, selfId ) == 1 then
 			BeginEvent( sceneId )
-				AddText( sceneId, "  ÄãÏÖÔÚºÜ½¡¿µ£¬²»ĞèÒªÖÎÁÆ£¡" )
+				AddText( sceneId, "  ä½ ç°åœ¨å¾ˆå¥åº·ï¼Œä¸éœ€è¦æ²»ç–—ï¼" )
 			EndEvent( sceneId )
 			DispatchEventList( sceneId, selfId, targetId )
 			
-			--È¡ÏûÖ¸¶¨Íæ¼ÒÉíÉÏµÄËùÓĞµĞ¶Ô¿ÉÇıÉ¢×¤ÁôĞ§¹û
+			--å–æ¶ˆæŒ‡å®šç©å®¶èº«ä¸Šçš„æ‰€æœ‰æ•Œå¯¹å¯é©±æ•£é©»ç•™æ•ˆæœ
 			LuaFnDispelAllHostileImpacts( sceneId, selfId )
 			return
 		end
 	
 		if gld <= 0 then
-			-- µ÷ÓÃ¡°½­ºşÓÎÒ½¡±½Å±¾
+			-- è°ƒç”¨â€œæ±Ÿæ¹–æ¸¸åŒ»â€è„šæœ¬
 			CallScriptFunction( x000129_g_healScriptId, "Restore_hpmp",sceneId, selfId, targetId )
 			RestoreStrikePoint( sceneId, selfId )
 			--x000129_Restore_hpmp( sceneId, selfId, targetId )
 		else
 			BeginEvent( sceneId )
-				AddText( sceneId, "  Äã¿ÉÒÔ»¨·Ñ#G#{_EXCHG"..gld.."}#W£¬À´»Ö¸´ÆøÑªºÍÅ­Æø£¬È·¶¨ÒªÖÎÁÆÂğ£¿" )
-				AddNumText( sceneId, x000129_g_scriptId, "ÊÇ", -1, 1001 )
-				AddNumText( sceneId, x000129_g_scriptId, "·ñ", -1, 1000 )
+				AddText( sceneId, "  ä½ å¯ä»¥èŠ±è´¹#G#{_EXCHG"..gld.."}#Wï¼Œæ¥æ¢å¤æ°”è¡€å’Œæ€’æ°”ï¼Œç¡®å®šè¦æ²»ç–—å—ï¼Ÿ" )
+				AddNumText( sceneId, x000129_g_scriptId, "æ˜¯", -1, 1001 )
+				AddNumText( sceneId, x000129_g_scriptId, "å¦", -1, 1000 )
 			EndEvent( sceneId )
 			DispatchEventList( sceneId, selfId, targetId )
 		end
 	else
 		for i, findId in x000129_g_eventList do
 			if eventId == findId then
-				CallScriptFunction( eventId, "OnDefaultEvent",sceneId, selfId, targetId, GetNumText() )	--GetNumText()ÊÇaddnumtextÖĞ×îºóµÄ±äÁ¿
+				CallScriptFunction( eventId, "OnDefaultEvent",sceneId, selfId, targetId, GetNumText() )	--GetNumText()æ˜¯addnumtextä¸­æœ€åçš„å˜é‡
 				return
 			end
 		end
@@ -116,7 +116,7 @@ function x000129_OnEventRequest( sceneId, selfId, targetId, eventId )
 end
 
 --**********************************
---½ÓÊÜ´ËNPCµÄÈÎÎñ
+--æ¥å—æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x000129_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x000129_g_eventList do
@@ -131,10 +131,10 @@ function x000129_OnMissionAccept( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¾Ü¾ø´ËNPCµÄÈÎÎñ
+--æ‹’ç»æ­¤NPCçš„ä»»åŠ¡
 --**********************************
 function x000129_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
-	--¾Ü¾øÖ®ºó£¬Òª·µ»ØNPCµÄÊÂ¼şÁĞ±í
+	--æ‹’ç»ä¹‹åï¼Œè¦è¿”å›NPCçš„äº‹ä»¶åˆ—è¡¨
 	for i, findId in x000129_g_eventList do
 		if missionScriptId == findId then
 			x000129_UpdateEventList( sceneId, selfId, targetId )
@@ -144,7 +144,7 @@ function x000129_OnMissionRefuse( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---¼ÌĞø£¨ÒÑ¾­½ÓÁËÈÎÎñ£©
+--ç»§ç»­ï¼ˆå·²ç»æ¥äº†ä»»åŠ¡ï¼‰
 --**********************************
 function x000129_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 	for i, findId in x000129_g_eventList do
@@ -156,7 +156,7 @@ function x000129_OnMissionContinue( sceneId, selfId, targetId, missionScriptId )
 end
 
 --**********************************
---Ìá½»ÒÑ×öÍêµÄÈÎÎñ
+--æäº¤å·²åšå®Œçš„ä»»åŠ¡
 --**********************************
 function x000129_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, selectRadioId )
 	for i, findId in x000129_g_eventList do
@@ -168,7 +168,7 @@ function x000129_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 end
 
 --**********************************
---ËÀÍöÊÂ¼ş
+--æ­»äº¡äº‹ä»¶
 --**********************************
 function x000129_OnDie( sceneId, selfId, killerId )
 end

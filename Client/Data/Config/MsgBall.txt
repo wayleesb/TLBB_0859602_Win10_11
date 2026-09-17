@@ -1,11 +1,11 @@
 INT	STRING	STRING	STRING	INT	INT	INT	INT
 INT	STRING	STRING	STRING	INT	INT	INT	INT
-0	ÏûÏ¢ÇòÒôĞ§1	²âÊÔÓÃµÄÏûÏ¢Çò1	MessageBallRed	6	5000	-1	-1
-1	ÇëÇó¼ÓÎªºÃÓÑ	ºÃÓÑÉêÇë	MessageBallRed	2	15000	-1	-1
-2	ÇëÇó¼ÓÎªºÃÓÑ	ºÃÓÑÉêÇë	MessageBallRed	2	15000	-1	-1
-3	ÇëÇó¼ÓÎªºÃÓÑ	ºÃÓÑÉêÇë	MessageBallYellow	2	15000	-1	-1
-4	²âÊÔ5	²âÊÔÓÃµÄÏûÏ¢Çò5	MessageBallYellow	5	40000	-1	-1
-5	²âÊÔ6	²âÊÔÓÃµÄÏûÏ¢Çò6	MessageBallYellow	6	50000	-1	-1
-6	²âÊÔ7	²âÊÔÓÃµÄÏûÏ¢Çò7	MessageBallRed	7	60000	-1	-1
-7	²âÊÔ8	²âÊÔÓÃµÄÏûÏ¢Çò8	MessageBallRed	8	70000	-1	-1
-8	²âÊÔ9	²âÊÔÓÃµÄÏûÏ¢Çò9	MessageBallRed	9	80000	-1	-1
+0	æ¶ˆæ¯çƒéŸ³æ•ˆ1	æµ‹è¯•ç”¨çš„æ¶ˆæ¯çƒ1	MessageBallRed	6	5000	-1	-1
+1	è¯·æ±‚åŠ ä¸ºå¥½å‹	å¥½å‹ç”³è¯·	MessageBallRed	2	15000	-1	-1
+2	è¯·æ±‚åŠ ä¸ºå¥½å‹	å¥½å‹ç”³è¯·	MessageBallRed	2	15000	-1	-1
+3	è¯·æ±‚åŠ ä¸ºå¥½å‹	å¥½å‹ç”³è¯·	MessageBallYellow	2	15000	-1	-1
+4	æµ‹è¯•5	æµ‹è¯•ç”¨çš„æ¶ˆæ¯çƒ5	MessageBallYellow	5	40000	-1	-1
+5	æµ‹è¯•6	æµ‹è¯•ç”¨çš„æ¶ˆæ¯çƒ6	MessageBallYellow	6	50000	-1	-1
+6	æµ‹è¯•7	æµ‹è¯•ç”¨çš„æ¶ˆæ¯çƒ7	MessageBallRed	7	60000	-1	-1
+7	æµ‹è¯•8	æµ‹è¯•ç”¨çš„æ¶ˆæ¯çƒ8	MessageBallRed	8	70000	-1	-1
+8	æµ‹è¯•9	æµ‹è¯•ç”¨çš„æ¶ˆæ¯çƒ9	MessageBallRed	9	80000	-1	-1

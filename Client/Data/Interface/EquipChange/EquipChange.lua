@@ -19,17 +19,17 @@ end
 
 function EquipChange_OnLoad()
 
-	List_String[1]  = "¿É±äÍâĞÎÒ»"
-	List_String[2]  = "¿É±äÍâĞÎ¶ş"
-	List_String[3]  = "¿É±äÍâĞÎÈı"
-	List_String[4]  = "¿É±äÍâĞÎËÄ"
-	List_String[5]  = "¿É±äÍâĞÎÎå"
+	List_String[1]  = "å¯å˜å¤–å½¢ä¸€"
+	List_String[2]  = "å¯å˜å¤–å½¢äºŒ"
+	List_String[3]  = "å¯å˜å¤–å½¢ä¸‰"
+	List_String[4]  = "å¯å˜å¤–å½¢å››"
+	List_String[5]  = "å¯å˜å¤–å½¢äº”"
 
-	List_String[6]  = "¿É±äÍâĞÎÁù"
-	List_String[7]  = "¿É±äÍâĞÎÆß"
-	List_String[8]  = "¿É±äÍâĞÎ°Ë"
-	List_String[9]  = "¿É±äÍâĞÎ¾Å"
-	List_String[10] = "¿É±äÍâĞÎÊ®"
+	List_String[6]  = "å¯å˜å¤–å½¢å…­"
+	List_String[7]  = "å¯å˜å¤–å½¢ä¸ƒ"
+	List_String[8]  = "å¯å˜å¤–å½¢å…«"
+	List_String[9]  = "å¯å˜å¤–å½¢ä¹"
+	List_String[10] = "å¯å˜å¤–å½¢å"
 	
 end
 
@@ -49,7 +49,7 @@ function EquipChange_OnEvent(event)
 				objCared = DataPool : GetNPCIDByServerID(xx);
 				AxTrace(0,1,"xx="..xx .. " objCared="..objCared)
 				if objCared == -1 then
-						PushDebugMessage("server´«¹ıÀ´µÄÊı¾İÓĞÎÊÌâ¡£");
+						PushDebugMessage("serverä¼ è¿‡æ¥çš„æ•°æ®æœ‰é—®é¢˜ã€‚");
 						return;
 				end
 				BeginCareObject_EquipChange(objCared)
@@ -68,10 +68,10 @@ function EquipChange_OnEvent(event)
 			return;
 		end
 		
-		--Èç¹ûºÍNPCµÄ¾àÀë´óÓÚÒ»¶¨¾àÀë»òÕß±»É¾³ı£¬×Ô¶¯¹Ø±Õ
+		--å¦‚æœå’ŒNPCçš„è·ç¦»å¤§äºä¸€å®šè·ç¦»æˆ–è€…è¢«åˆ é™¤ï¼Œè‡ªåŠ¨å…³é—­
 		if(arg1 == "distance" and tonumber(arg2)>MAX_OBJ_DISTANCE or arg1=="destroy") then
 			
-			--È¡Ïû¹ØĞÄ
+			--å–æ¶ˆå…³å¿ƒ
 			EquipChange_Close()
 		end
 	elseif ( event == "PACKAGE_ITEM_CHANGED" and this:IsVisible() ) then
@@ -129,14 +129,14 @@ function EquipChange_Update(UI_index,Item_index)
 				local EquipPoint = LifeAbility : Get_Equip_Point(i_index)
 				if EquipPoint == -1 or EquipPoint == 8 or EquipPoint == 9 or EquipPoint == 10 then
 					if EquipPoint ~= -1 then
-						PushDebugMessage("²»ÄÜ·ÅÈëÕâÖÖ×°±¸¡£")
+						PushDebugMessage("ä¸èƒ½æ”¾å…¥è¿™ç§è£…å¤‡ã€‚")
 					end
 					return
 				end
 				Original_Visual_ID = LifeAbility : Get_Equip_VisualID(i_index);
 
 				if Original_Visual_ID < 10000 then
-					PushDebugMessage("Õâ¼ş×°±¸²»ÄÜ¸Ä±äÍâĞÎ¡£")
+					PushDebugMessage("è¿™ä»¶è£…å¤‡ä¸èƒ½æ”¹å˜å¤–å½¢ã€‚")
 					EquipChange_Resume_Gem(23)
 					return
 
@@ -167,7 +167,7 @@ function EquipChange_Update(UI_index,Item_index)
 		if theAction:GetID() ~= 0 then
 		
 				if PlayerPackage : GetItemTableIndex( i_index ) ~= 30900004 then
-					PushDebugMessage("Ö»ÄÜ·ÅÈë±äĞÎ·û¡£")
+					PushDebugMessage("åªèƒ½æ”¾å…¥å˜å½¢ç¬¦ã€‚")
 					return
 				end
 
@@ -196,7 +196,7 @@ function EquipChange_ListBox_Selected()
 	
 	EquipChange_FakeObject:SetFakeObject("");	
 	EquipChange_FakeObject:SetFakeObject("EquipChange_Player");	
-	--ÈÃÈË´©ÉÏ
+	--è®©äººç©¿ä¸Š
 	local Visual_ID = LifeAbility : Get_Equip_Exterior(Change_Item1,nSelIndex);
 	LifeAbility : Wear_Equip_VisualID(Change_Item1,Visual_ID)
 end
@@ -205,17 +205,17 @@ function EquipChange_Buttons_Clicked()
 	local nSelIndex = EquipChange_EquiptShapeList:GetFirstSelectItem();
 	
 	if Change_Item1 == -1 then
-		PushDebugMessage("Çë·ÅÈëÒª¸Ä±äÍâĞÎµÄ×°±¸¡£")
+		PushDebugMessage("è¯·æ”¾å…¥è¦æ”¹å˜å¤–å½¢çš„è£…å¤‡ã€‚")
 		return
 	end
 	
 	if Change_Item2 == -1 then
-		PushDebugMessage("Çë·ÅÈë±äĞÎ·û¡£")
+		PushDebugMessage("è¯·æ”¾å…¥å˜å½¢ç¬¦ã€‚")
 		return
 	end
 	
 	if nSelIndex== -1 then
-		PushDebugMessage("ÇëÑ¡ÔñÒ»ÖÖÍâĞÎ¡£")
+		PushDebugMessage("è¯·é€‰æ‹©ä¸€ç§å¤–å½¢ã€‚")
 		return
 	end
 	
@@ -257,9 +257,9 @@ function EquipChange_OnHidden()
 	return
 end
 --=========================================================
---¿ªÊ¼¹ØĞÄNPC£¬
---ÔÚ¿ªÊ¼¹ØĞÄÖ®Ç°ĞèÒªÏÈÈ·¶¨Õâ¸ö½çÃæÊÇ²»ÊÇÒÑ¾­ÓĞ¡°¹ØĞÄ¡±µÄNPC£¬
---Èç¹ûÓĞµÄ»°£¬ÏÈÈ¡ÏûÒÑ¾­ÓĞµÄ¡°¹ØĞÄ¡±
+--å¼€å§‹å…³å¿ƒNPCï¼Œ
+--åœ¨å¼€å§‹å…³å¿ƒä¹‹å‰éœ€è¦å…ˆç¡®å®šè¿™ä¸ªç•Œé¢æ˜¯ä¸æ˜¯å·²ç»æœ‰â€œå…³å¿ƒâ€çš„NPCï¼Œ
+--å¦‚æœæœ‰çš„è¯ï¼Œå…ˆå–æ¶ˆå·²ç»æœ‰çš„â€œå…³å¿ƒâ€
 --=========================================================
 function BeginCareObject_EquipChange(objCaredId)
 
@@ -270,7 +270,7 @@ function BeginCareObject_EquipChange(objCaredId)
 end
 
 --=========================================================
---Í£Ö¹¶ÔÄ³NPCµÄ¹ØĞÄ
+--åœæ­¢å¯¹æŸNPCçš„å…³å¿ƒ
 --=========================================================
 function StopCareObject_EquipChange(objCaredId)
 	this:CareObject(objCaredId, 0, "EquipChange");

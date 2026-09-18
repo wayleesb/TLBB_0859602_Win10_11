@@ -12,7 +12,7 @@ ALTER DATABASE CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
--- TLBB 64-bit Unix time schema. Existing databases must be dropped and rebuilt.
+-- TLBB schema 8. Known schema 6/7 upgrades are supported by TlbbEnvironmentManager.
 DROP TABLE IF EXISTS `t_schema_version`;
 CREATE TABLE `t_schema_version` (
   `version` int(10) unsigned NOT NULL,
@@ -20,7 +20,7 @@ CREATE TABLE `t_schema_version` (
   PRIMARY KEY (`version`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 INSERT INTO `t_schema_version` (`version`, `description`)
-VALUES (6, '64-bit combat attributes; dark equipment stored in creator');
+VALUES (8, 'MD/MF EX and player BUFF online 128 / saved 128; 112-byte BUFF entries');
 
 --
 -- Table structure for table `t_ability`
@@ -95,6 +95,7 @@ CREATE TABLE `t_char` (
   `exp` bigint NOT NULL,
   `pres` text NOT NULL,
   `mdata` text,
+  `mexdata` text,
   `mflag` text,
   `relflag` text,
   `settings` text,
@@ -1546,12 +1547,12 @@ start transaction;
     hp,mp,strikepoint,str,con,dex,spr,ipr,points,logouttime,logintime,createtime,dbversion,haircolor,
     hairmodel,facecolor,facemodel,vmoney,settings,isvalid,exp,pres,
     shopinfo,carrypet,guldid,teamid,headid,erecover,vigor,maxvigor,vrecover,energymax,pwdeltime,
-    pinfo,bkscene,bkxpos,bkzpos,titleinfo,dietime,bankmoney,bankend,cooldown,defeq)
+    pinfo,bkscene,bkxpos,bkzpos,titleinfo,dietime,bankmoney,bankend,cooldown,defeq,mdata,mexdata,mflag)
    values(paccname,rguid,pcharname,'','',psex,1,0,0,0,100,100,9,
     5000,5000,0,5,5,5,5,5,0,0,0,pcreatetime,0,phaircolor,
     phairmodel,pfacecolor,pfacemodel,0,'',1,0,'',
 		'','',-1,-1,pheadid,0,0,0,0,0,0,
-		'',0,0,0,'',0,0,20,'',pdefeq);
+		'',0,0,0,'',0,0,20,'',pdefeq,REPEAT('0',7936),REPEAT('0',8192),REPEAT('0',1024));
    select row_count() into result;
   else
    set result = -3; 

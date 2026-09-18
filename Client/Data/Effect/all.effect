@@ -106847,6 +106847,180 @@ effect 天龙_2
 }
 
 
+effect 天龙烟花发射
+{
+	element Particle
+	{
+		StartTime	0.1
+		LifeTime	0
+		Position	0 0 0
+		Orientation	1 0 0 0
+		ParticleSystem	天龙生日烟花12
+	}
+
+	element Particle
+	{
+		StartTime	0.1
+		LifeTime	0
+		Position	0 0 0
+		Orientation	1 0 0 0
+		ParticleSystem	天龙生日烟花13
+	}
+
+	element Particle
+	{
+		StartTime	0.1
+		LifeTime	0
+		Position	0 0 0
+		Orientation	1 0 0 0
+		ParticleSystem	天龙生日烟花09
+	}
+
+	element Particle
+	{
+		StartTime	0
+		LifeTime	0
+		Position	0 0 0
+		Orientation	1 0 0 0
+		ParticleSystem	天龙生日烟花爆烟01
+	}
+
+	element Particle
+	{
+		StartTime	0
+		LifeTime	0
+		Position	0 0 0
+		Orientation	1 0 0 0
+		ParticleSystem	天龙生日烟花爆烟02
+	}
+
+	element Particle
+	{
+		StartTime	0
+		LifeTime	0
+		Position	0 0 0
+		Orientation	1 0 0 0
+		ParticleSystem	天龙生日烟花爆烟04
+	}
+
+	element Particle
+	{
+		StartTime	0
+		LifeTime	0
+		Position	0 0 0
+		Orientation	1 0 0 0
+		ParticleSystem	天龙生日烟花爆烟03
+	}
+
+	element Particle
+	{
+		StartTime	0.1
+		LifeTime	0
+		Position	0 0 0
+		Orientation	1 0 0 0
+		ParticleSystem	天龙生日烟花07
+	}
+
+	element Particle
+	{
+		StartTime	0.2
+		LifeTime	0
+		Position	0 0 0
+		Orientation	1 0 0 0
+		ParticleSystem	天龙生日烟花06
+	}
+
+	element Particle
+	{
+		StartTime	0.2
+		LifeTime	0
+		Position	0 0 0
+		Orientation	1 0 0 0
+		ParticleSystem	天龙生日烟花14
+	}
+
+	element Particle
+	{
+		StartTime	0.35
+		LifeTime	0
+		Position	0 0 0
+		Orientation	1 0 0 0
+		ParticleSystem	天龙生日烟花08
+	}
+
+	LifeTime	0
+}
+
+
+effect 天龙生日烟花
+{
+	element Particle
+	{
+		StartTime	0.1
+		LifeTime	0
+		Position	0 0 0
+		Orientation	1 0 0 0
+		ParticleSystem	天龙生日烟花01
+	}
+
+	element Particle
+	{
+		StartTime	0.1
+		LifeTime	0
+		Position	0 0 0
+		Orientation	1 0 0 0
+		ParticleSystem	天龙生日烟花02
+	}
+
+	element Particle
+	{
+		StartTime	0.1
+		LifeTime	0
+		Position	0 0 0
+		Orientation	1 0 0 0
+		ParticleSystem	天龙生日烟花04
+	}
+
+	element Particle
+	{
+		StartTime	0.1
+		LifeTime	0
+		Position	0 0 0
+		Orientation	1 0 0 0
+		ParticleSystem	天龙生日烟花05
+	}
+
+	element Particle
+	{
+		StartTime	0.45
+		LifeTime	0
+		Position	0 0 0
+		Orientation	1 0 0 0
+		ParticleSystem	天龙生日01
+	}
+
+	element Particle
+	{
+		StartTime	0.4
+		LifeTime	0
+		Position	0 0 0
+		Orientation	1 0 0 0
+		ParticleSystem	天龙庆生烟花
+	}
+
+	element Particle
+	{
+		StartTime	0
+		LifeTime	0
+		Position	0 0 0
+		Orientation	1 0 0 0
+		ParticleSystem	天龙生日烟花03
+	}
+
+	LifeTime	0
+}
+
+
 effect 女娲战车攻击
 {
 	element Particle

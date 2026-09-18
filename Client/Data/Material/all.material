@@ -52724,6 +52724,413 @@ material 天龙_2
 	}
 }
 
+
+material 天龙庆生烟花
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend add
+			depth_write off
+			fog_override true none
+
+			texture_unit
+			{
+				texture png_effect01_0015_4.dds -1
+			}
+		}
+
+	}
+
+}
+
+
+material 天龙生日01
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend add
+			depth_write off
+			fog_override true none
+
+			texture_unit
+			{
+				texture jpg_208.dds -1
+				colour_op_ex modulate_x4 src_texture src_current
+				colour_op_multipass_fallback dest_colour zero
+			}
+		}
+
+	}
+
+}
+
+
+material 天龙生日烟花01
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend add
+			depth_write off
+			cull_hardware none
+			fog_override true none
+
+			texture_unit
+			{
+				texture png_flare.dds -1
+			}
+		}
+
+	}
+
+}
+
+
+material 天龙生日烟花02
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend add
+			depth_write off
+			fog_override true none
+
+			texture_unit
+			{
+				texture jpg_baozha.dds -1
+				colour_op_ex modulate_x2 src_texture src_current
+				colour_op_multipass_fallback dest_colour zero
+			}
+		}
+
+	}
+
+}
+
+
+material 天龙生日烟花03
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend add
+			depth_write off
+			fog_override true none
+
+			texture_unit
+			{
+				texture png_effect01_0015_4.dds -1
+			}
+		}
+
+	}
+
+}
+
+
+material 天龙生日烟花04
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend add
+			depth_write off
+			fog_override true none
+
+			texture_unit
+			{
+				texture png_flare.dds -1
+			}
+		}
+
+	}
+
+}
+
+
+material 天龙生日烟花05
+{
+	technique
+	{
+		pass
+		{
+			ambient 0 0 0 1
+			diffuse 0 0 0 1
+			depth_write off
+			fog_override true none
+
+			texture_unit
+			{
+				texture jpg_特效雪球.dds -1
+			}
+		}
+
+	}
+
+}
+
+
+material 天龙生日烟花06
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend add
+			depth_write off
+			fog_override true none
+
+			texture_unit
+			{
+				texture jpg_天龍慶生.dds -1
+			}
+		}
+
+	}
+
+}
+
+
+material 天龙生日烟花07
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend add
+			depth_write off
+			fog_override true none
+
+			texture_unit
+			{
+				texture jpg_xingxing01.dds -1
+				colour_op_ex modulate_x4 src_texture src_current
+				colour_op_multipass_fallback dest_colour zero
+			}
+		}
+
+	}
+
+}
+
+
+material 天龙生日烟花08
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend add
+			depth_write off
+			cull_hardware none
+			fog_override true none
+
+			texture_unit
+			{
+				texture png_flare.dds -1
+			}
+		}
+
+	}
+
+}
+
+
+material 天龙生日烟花09
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend add
+			depth_write off
+			cull_hardware none
+			fog_override true none
+
+			texture_unit
+			{
+				texture png_flaretrail.dds -1
+			}
+		}
+
+	}
+
+}
+
+
+material 天龙生日烟花12
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend add
+			depth_write off
+			fog_override true none
+
+			texture_unit
+			{
+				texture jpg_aaay.dds -1
+			}
+		}
+
+	}
+
+}
+
+
+material 天龙生日烟花13
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend add
+			depth_write off
+			fog_override true none
+
+			texture_unit
+			{
+				texture jpg_dibiao02.dds -1
+			}
+		}
+
+	}
+
+}
+
+
+material 天龙生日烟花14
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend add
+			depth_write off
+			fog_override true none
+
+			texture_unit
+			{
+				texture jpg_baozha.dds -1
+				colour_op_ex modulate_x2 src_texture src_current
+				colour_op_multipass_fallback dest_colour zero
+			}
+		}
+
+	}
+
+}
+
+
+material 天龙生日烟花爆烟01
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend zero one_minus_src_colour
+			depth_write off
+			fog_override true none
+
+			texture_unit
+			{
+				texture jpg_a002.dds -1
+			}
+		}
+
+	}
+
+}
+
+
+material 天龙生日烟花爆烟02
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend add
+			depth_write off
+			fog_override true none
+
+			texture_unit
+			{
+				texture jpg_niuqu.dds -1
+			}
+		}
+
+	}
+
+}
+
+
+material 天龙生日烟花爆烟03
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend add
+			depth_write off
+			fog_override true none
+
+			texture_unit
+			{
+				texture jpg_a002.dds -1
+			}
+		}
+
+	}
+
+}
+
+
+material 天龙生日烟花爆烟04
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend add
+			depth_write off
+			fog_override true none
+
+			texture_unit
+			{
+				texture jpg_208.dds -1
+			}
+		}
+
+	}
+
+}
+
 material 女主体
 {
 	technique

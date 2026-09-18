@@ -1033,7 +1033,7 @@ INT	STRING	STRING
 2182	CGWGCDuelHandler_2	你接受了 %s 的决斗请求
 2183	CGWGCDuelHandler_3	 %s 拒绝了你的决斗请求
 2184	CGWGCDuelHandler_4	你拒绝了 %s 的决斗请求
-2185	GMItem_Gem_1	#cFFFF99镶嵌：#{%s} +%d%s#r
+2185	GMItem_Gem_1	#cFFFF99镶嵌：#{%s} +%lld%s#r
 2186	GMItem_1	此物品唯一
 2187	GMItem_2	错误的物品规则
 2188	GMItem_3	仅限

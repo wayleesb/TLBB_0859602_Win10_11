@@ -988,9 +988,15 @@ PENGREN_CHANPIN_ZAWUGAOJI = 39
 --*******************************************************************************
 ABILITYLOGIC_ID = 701601
 
+-- MD/MF 扩展容量：数量不是最后一个有效编号。
+MD_MAX_COUNT = 992
+MF_MAX_COUNT = 1280
+MDEX_MAX_COUNT = 1024
+MFEX_MAX_COUNT = 320
+
 
 --*******************************************************************************
---MissionData中各个数据的定义
+--MissionData：0..991，32 位整数，同步客户端；MF 保留槽禁止用作普通计数。
 --*******************************************************************************
 MD_PINPAN_DAYCOUNT			= 0		--100000的倍数是当前完成的环数，小于100000的数是时间
 MD_PINPAN_HUAN				= 1		--平叛
@@ -1296,8 +1302,42 @@ MD_TW_BRAVERYCHALLENGE_RESET = 285 --勇者过山车重置周标记 --zz
 MD_TW_BRAVERYCHALLENGE_GIFT  = 286 --勇者过山车领奖 --zz 
 MD_DAY_TO_HAVE_DWJKL  = 297	--获得端午节快乐的时间[tx]五一活动
 MD_HK_TW_DAY_H1N1_COUNT	=	306	--台湾香港H1N1活动每天的计数
+
+-- MF 保留槽：0..319 使用 MD18..27，其余依次使用以下槽。
+MD_GAME_FLAG10 = 502
+MD_GAME_FLAG11 = 503
+MD_GAME_FLAG12 = 504
+MD_GAME_FLAG13 = 505
+MD_GAME_FLAG14 = 506
+MD_GAME_FLAG15 = 507
+MD_GAME_FLAG16 = 508
+MD_GAME_FLAG17 = 509
+MD_GAME_FLAG18 = 510
+MD_GAME_FLAG19 = 511
+
+MD_GAME_FLAG20 = 720
+MD_GAME_FLAG21 = 721
+MD_GAME_FLAG22 = 722
+MD_GAME_FLAG23 = 723
+MD_GAME_FLAG24 = 724
+MD_GAME_FLAG25 = 725
+MD_GAME_FLAG26 = 726
+MD_GAME_FLAG27 = 727
+MD_GAME_FLAG28 = 728
+MD_GAME_FLAG29 = 729
+
+MD_GAME_FLAG30 = 904
+MD_GAME_FLAG31 = 905
+MD_GAME_FLAG32 = 906
+MD_GAME_FLAG33 = 907
+MD_GAME_FLAG34 = 908
+MD_GAME_FLAG35 = 909
+MD_GAME_FLAG36 = 910
+MD_GAME_FLAG37 = 911
+MD_GAME_FLAG38 = 912
+MD_GAME_FLAG39 = 913
 --*******************************************************************************
---游戏标记位，目前最大能到 319
+--游戏标记位 MF：0..1279，每 32 位一槽，统一参考端映射。
 --*******************************************************************************
 MF_Dialog_01				= 0		-- 赵天师对话标记
 MF_GetAwardFlag				= 1		-- 是否激活 CD-KEY 领取奖励条件
@@ -1371,6 +1411,25 @@ MF_TW_BRAVERYCHALLENGE3   =68       --台湾50勇者过车山任务三标志--zz
 MF_TW_BRAVERYCHALLENGE22   =69       --台湾50勇者过车山任务二标志--zz
 
 MF_GetQianKunDai  =70       --是否领取过江湖乾坤袋(上线领及补领)
+
+
+
+-- MDEX/MFEX 仅服务端使用，会存盘、随角色切场景，不发给客户端。
+-- GetMissionDataEx(sceneId,selfId,index) / SetMissionDataEx(sceneId,selfId,index,value)
+-- GetMissionFlagEx(sceneId,selfId,index) / SetMissionFlagEx(sceneId,selfId,index,value)
+-- MDEX0..9 为 MFEX 保留槽，普通自定义数据使用 MDEX10..1023。
+MDEX_GAME_FLAG0 = 0
+MDEX_GAME_FLAG1 = 1
+MDEX_GAME_FLAG2 = 2
+MDEX_GAME_FLAG3 = 3
+MDEX_GAME_FLAG4 = 4
+MDEX_GAME_FLAG5 = 5
+MDEX_GAME_FLAG6 = 6
+MDEX_GAME_FLAG7 = 7
+MDEX_GAME_FLAG8 = 8
+MDEX_GAME_FLAG9 = 9
+
+
 --*******************************************************************************
 --场景号
 --*******************************************************************************
@@ -1863,3 +1922,6 @@ function ScriptGlobal_IsUniqueNumberTable( numTable )
 	return isUnique;
 	
 end
+
+
+

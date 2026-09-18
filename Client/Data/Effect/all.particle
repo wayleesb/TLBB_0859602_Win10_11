@@ -476830,3 +476830,1913 @@ zuhui_06
 }
 
 
+
+
+天龙生日烟花12
+{
+	quota 20
+	material 天龙生日烟花12
+	particle_width 50
+	particle_height 50
+	cull_each false
+	renderer billboard
+	sorted false
+	local_space false
+	iteration_interval 0
+	nonvisible_update_timeout 0
+
+	billboard_type oriented_common
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 1 0 0
+	point_rendering false
+	accurate_facing false
+	speed_relatived_size_factor 0.01
+
+	emitter Box
+	{
+		angle 0
+		colour 1 1 1 1
+		colour_range_start 1 1 1 1
+		colour_range_end 1 1 1 1
+		direction 0 1 0
+		emission_rate 100
+		position 0 -100 0
+		velocity 1500
+		velocity_min 1500
+		velocity_max 1500
+		time_to_live 0.7
+		time_to_live_min 0.7
+		time_to_live_max 0.7
+		duration 0.7
+		duration_min 0.7
+		duration_max 0.7
+		repeat_delay 0
+		repeat_delay_min 0
+		repeat_delay_max 0
+		width 100
+		height 100
+		depth 10
+	}
+	affector ScaleInterpolator
+	{
+		uniform_size false
+		width_range_start 100
+		width_range_end 100
+		height_range_start 300
+		height_range_end 300
+		use_constant_scale false
+		constant_scale 1 1 1
+		use_interpolated_scale true
+		scale0 1 1 1
+		time0 0
+		scale1 1 30 10
+		time1 0.2
+		scale2 1 40 10
+		time2 0.5
+		scale3 1 30 10
+		time3 1
+		scale4 1 1 1
+		time4 1
+		scale5 1 1 1
+		time5 1
+		repeat_times 1
+	}
+	affector Movement
+	{
+		use_start_velocity true
+		start_velocity_min 0 0 0
+		start_velocity_max 0 -10 0
+		acceleration 0 1000 0
+		velocity_loss_min 0 0 0
+		velocity_loss_max 0 0 0
+		randomness_min 0 0 0
+		randomness_max 0 0 0
+	}
+	affector ColourFading
+	{
+		colour0 0 0 0 1
+		time0 0
+		colour1 1 0.701961 0.141176 1
+		time1 0.2
+		colour2 0.501961 0.65098 0.184314 1
+		time2 0.5
+		colour3 0 0 0 1
+		time3 0.8
+		colour4 0 0 0 1
+		time4 1
+		colour5 0.5 0.5 0.5 0
+		time5 1
+		repeat_times 1
+		opacity 0.5
+		fade_in_time 0
+		fade_out_time 1
+	}
+
+}
+
+
+
+天龙生日烟花13
+{
+	quota 15
+	material 天龙生日烟花13
+	particle_width 10
+	particle_height 10
+	cull_each false
+	renderer billboard
+	sorted false
+	local_space false
+	iteration_interval 0
+	nonvisible_update_timeout 0
+
+	billboard_type point
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 1 0
+	point_rendering false
+	accurate_facing false
+	speed_relatived_size_factor 0.01
+
+	emitter Ring
+	{
+		angle 30
+		colour 1 1 1 1
+		colour_range_start 1 1 1 1
+		colour_range_end 1 1 1 1
+		direction 0 1 0
+		emission_rate 30
+		position 0 0 0
+		velocity 200
+		velocity_min 200
+		velocity_max 1000
+		time_to_live 0.6
+		time_to_live_min 0.6
+		time_to_live_max 0.6
+		duration 15
+		duration_min 15
+		duration_max 15
+		repeat_delay 0
+		repeat_delay_min 0
+		repeat_delay_max 0
+		width 200
+		height 200
+		depth 1
+		inner_width 0.6
+		inner_height 0.6
+	}
+	affector ScaleInterpolator
+	{
+		uniform_size true
+		width_range_start 10
+		width_range_end 30
+		height_range_start 10
+		height_range_end 50
+		use_constant_scale false
+		constant_scale 1 1 1
+		use_interpolated_scale false
+		scale0 1 1 1
+		time0 1
+		scale1 1 1 1
+		time1 1
+		scale2 1 1 1
+		time2 1
+		scale3 1 1 1
+		time3 1
+		scale4 1 1 1
+		time4 1
+		scale5 1 1 1
+		time5 1
+		repeat_times 1
+	}
+	affector ColourFading
+	{
+		colour0 0 0 0 1
+		time0 0
+		colour1 0.65098 0.94902 0.14902 1
+		time1 0.3
+		colour2 1 0.470588 0.117647 1
+		time2 0.5
+		colour3 0 0 0 1
+		time3 0.7
+		colour4 0 0 0 1
+		time4 1
+		colour5 0.5 0.5 0.5 0
+		time5 1
+		repeat_times 2
+		opacity 1.5
+		fade_in_time 0
+		fade_out_time 1
+	}
+	affector Movement
+	{
+		use_start_velocity false
+		start_velocity_min 0 0 0
+		start_velocity_max 0 0 0
+		acceleration 0 500 0
+		velocity_loss_min 0 0 0
+		velocity_loss_max 0 0 0
+		randomness_min 0 0 0
+		randomness_max 0 0 0
+	}
+
+}
+
+
+
+天龙生日烟花09
+{
+	quota 20
+	material 天龙生日烟花09
+	particle_width 150
+	particle_height 100
+	cull_each false
+	renderer billboard
+	sorted false
+	local_space false
+	iteration_interval 0
+	nonvisible_update_timeout 0
+
+	billboard_type oriented_common
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 1 0 0
+	point_rendering false
+	accurate_facing false
+	speed_relatived_size_factor 0.01
+
+	emitter Ring
+	{
+		angle 360
+		colour 1 1 1 1
+		colour_range_start 1 1 1 1
+		colour_range_end 1 1 1 1
+		direction 0 1 0
+		emission_rate 100
+		position 0 400 0
+		velocity 1
+		velocity_min 1
+		velocity_max 100
+		time_to_live 0.7
+		time_to_live_min 0.7
+		time_to_live_max 0.7
+		duration 0.7
+		duration_min 0.7
+		duration_max 0.7
+		repeat_delay 0
+		repeat_delay_min 0
+		repeat_delay_max 0
+		width 100
+		height 100
+		depth 100
+		inner_width 0.1
+		inner_height 0.9
+	}
+	affector ColourFading
+	{
+		colour0 0 0 0 1
+		time0 0
+		colour1 0.682353 0.090196 1 1
+		time1 0.1
+		colour2 0.086275 0.086275 0.921569 1
+		time2 0.2
+		colour3 0.52549 0.956863 0.043137 1
+		time3 0.3
+		colour4 0.984314 0.72549 0.05098 1
+		time4 0.4
+		colour5 0 0 0 1
+		time5 1
+		repeat_times 1
+		opacity 0.6
+		fade_in_time 0
+		fade_out_time 1
+	}
+	affector ScaleInterpolator
+	{
+		uniform_size true
+		width_range_start 100
+		width_range_end 100
+		height_range_start 100
+		height_range_end 100
+		use_constant_scale false
+		constant_scale 1 1 1
+		use_interpolated_scale true
+		scale0 1 1 1
+		time0 0
+		scale1 1 30 1
+		time1 1
+		scale2 1 1 1
+		time2 1
+		scale3 1 1 1
+		time3 1
+		scale4 1 1 1
+		time4 1
+		scale5 1 1 1
+		time5 1
+		repeat_times 1
+	}
+
+}
+
+
+
+天龙生日烟花爆烟01
+{
+	quota 10
+	material 天龙生日烟花爆烟01
+	particle_width 40
+	particle_height 40
+	cull_each false
+	renderer billboard
+	sorted false
+	local_space false
+	iteration_interval 0
+	nonvisible_update_timeout 0
+
+	billboard_type perpendicular_common
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 1 0 0
+	point_rendering false
+	accurate_facing false
+	speed_relatived_size_factor 0.01
+
+	emitter Box
+	{
+		angle 0
+		colour 1 1 1 1
+		colour_range_start 1 1 1 1
+		colour_range_end 1 1 1 1
+		direction 0 0 0
+		emission_rate 20
+		position 0 1 0
+		velocity 200
+		velocity_min 200
+		velocity_max 200
+		time_to_live 0.2
+		time_to_live_min 0.2
+		time_to_live_max 0.2
+		duration 0.5
+		duration_min 0.5
+		duration_max 0.5
+		repeat_delay 0
+		repeat_delay_min 0
+		repeat_delay_max 0
+		width 300
+		height 300
+		depth 250
+	}
+	affector ScaleInterpolator
+	{
+		uniform_size false
+		width_range_start 300
+		width_range_end 200
+		height_range_start 200
+		height_range_end 200
+		use_constant_scale false
+		constant_scale 0 0 0
+		use_interpolated_scale true
+		scale0 8 8 8
+		time0 0
+		scale1 20 20 20
+		time1 1
+		scale2 1 1 1
+		time2 1
+		scale3 1 1 1
+		time3 1
+		scale4 1 1 1
+		time4 1
+		scale5 1 1 1
+		time5 1
+		repeat_times 1
+	}
+	affector ColourFading
+	{
+		colour0 0 0 0 1
+		time0 0
+		colour1 1 0.937255 0.384314 1
+		time1 0.1
+		colour2 0.27451 0.909804 0.909804 1
+		time2 0.8
+		colour3 0 0 0 1
+		time3 1
+		colour4 0.5 0.5 0.5 0
+		time4 1
+		colour5 0.5 0.5 0.5 0
+		time5 1
+		repeat_times 1
+		opacity 1
+		fade_in_time 0
+		fade_out_time 1
+	}
+	affector Rotator
+	{
+		rotation_speed_range_start 0
+		rotation_speed_range_end 0
+		rotation_range_start 0
+		rotation_range_end 180
+	}
+
+}
+
+
+
+天龙生日烟花爆烟02
+{
+	quota 20
+	material 天龙生日烟花爆烟02
+	particle_width 1
+	particle_height 1
+	cull_each false
+	renderer billboard
+	sorted false
+	local_space false
+	iteration_interval 0
+	nonvisible_update_timeout 0
+
+	billboard_type perpendicular_common
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 1 0 0
+	point_rendering false
+	accurate_facing false
+	speed_relatived_size_factor 0.01
+
+	emitter Point
+	{
+		angle 0
+		colour 1 1 1 1
+		colour_range_start 1 1 1 1
+		colour_range_end 1 1 1 1
+		direction 0 1 0
+		emission_rate 30
+		position 0 10 0
+		velocity 20
+		velocity_min 20
+		velocity_max 20
+		time_to_live 0.2
+		time_to_live_min 0.2
+		time_to_live_max 0.2
+		duration 0.2
+		duration_min 0.2
+		duration_max 0.2
+		repeat_delay 0
+		repeat_delay_min 0
+		repeat_delay_max 0
+	}
+	affector ScaleInterpolator
+	{
+		uniform_size false
+		width_range_start 0
+		width_range_end 0
+		height_range_start 0
+		height_range_end 0
+		use_constant_scale false
+		constant_scale 1 1 1
+		use_interpolated_scale true
+		scale0 1 1 1
+		time0 0
+		scale1 1500 1500 1500
+		time1 1
+		scale2 0 0 0
+		time2 1
+		scale3 1 1 1
+		time3 1
+		scale4 1 1 1
+		time4 1
+		scale5 1 1 1
+		time5 1
+		repeat_times 1
+	}
+	affector ColourFading
+	{
+		colour0 0 0 0 1
+		time0 0.1
+		colour1 0.972549 0.905882 0.062745 1
+		time1 0.3
+		colour2 0.843137 0.435294 0.066667 1
+		time2 0.5
+		colour3 0 0 0 1
+		time3 0.7
+		colour4 0 0 0 1
+		time4 1
+		colour5 0.5 0.5 0.5 0
+		time5 1
+		repeat_times 1
+		opacity 0.6
+		fade_in_time 0
+		fade_out_time 1
+	}
+	affector Rotator
+	{
+		rotation_speed_range_start 180
+		rotation_speed_range_end 0
+		rotation_range_start 0
+		rotation_range_end 720
+	}
+
+}
+
+
+
+天龙生日烟花爆烟04
+{
+	quota 60
+	material 天龙生日烟花爆烟04
+	particle_width 60
+	particle_height 30
+	cull_each false
+	renderer billboard
+	sorted false
+	local_space false
+	iteration_interval 0
+	nonvisible_update_timeout 0
+
+	billboard_type oriented_self
+	billboard_origin center
+	billboard_rotation_type texcoord
+	common_direction 0 1 0
+	common_up_vector 0 1 0
+	point_rendering false
+	accurate_facing false
+	speed_relatived_size_factor 0.01
+
+	emitter Box
+	{
+		angle 180
+		colour 1 1 1 1
+		colour_range_start 1 1 1 1
+		colour_range_end 1 1 1 1
+		direction 0 1 0
+		emission_rate 400
+		position 0 0 0
+		velocity 1000
+		velocity_min 1000
+		velocity_max 1000
+		time_to_live 0.4
+		time_to_live_min 0.4
+		time_to_live_max 0.4
+		duration 0.3
+		duration_min 0.3
+		duration_max 0.3
+		repeat_delay 0
+		repeat_delay_min 0
+		repeat_delay_max 0
+		width 10
+		height 10
+		depth 100
+	}
+	affector ColourFading
+	{
+		colour0 0 0 0 1
+		time0 0
+		colour1 0.984314 0.666667 0.34902 1
+		time1 0.3
+		colour2 0.603922 0.14902 0.8 1
+		time2 0.25
+		colour3 0 0 0 1
+		time3 0.8
+		colour4 0 0 0 1
+		time4 1
+		colour5 0.5 0.5 0.5 0
+		time5 1
+		repeat_times 1
+		opacity 1
+		fade_in_time 0
+		fade_out_time 1
+	}
+	affector Movement
+	{
+		use_start_velocity false
+		start_velocity_min 0 0 0
+		start_velocity_max 0 0 0
+		acceleration 0 -1500 0
+		velocity_loss_min 0 0 0
+		velocity_loss_max 0 0 0
+		randomness_min 0 0 0
+		randomness_max 0 0 0
+	}
+
+}
+
+
+
+天龙生日烟花爆烟03
+{
+	quota 40
+	material 天龙生日烟花爆烟03
+	particle_width 150
+	particle_height 150
+	cull_each false
+	renderer billboard
+	sorted false
+	local_space true
+	iteration_interval 0
+	nonvisible_update_timeout 0
+
+	billboard_type point
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 0 1
+	common_up_vector 0 1 0
+	point_rendering false
+	accurate_facing false
+	speed_relatived_size_factor 0.01
+
+	emitter Ring
+	{
+		angle 0
+		colour 1 1 1 1
+		colour_range_start 1 1 1 1
+		colour_range_end 1 1 1 1
+		direction 0 1 0
+		emission_rate 400
+		position 0 0 0
+		velocity 1
+		velocity_min 1
+		velocity_max 1
+		time_to_live 1.8
+		time_to_live_min 1.8
+		time_to_live_max 1.8
+		duration 1.8
+		duration_min 1.8
+		duration_max 1.8
+		repeat_delay 0
+		repeat_delay_min 0
+		repeat_delay_max 0
+		width 100
+		height 100
+		depth 1
+		inner_width 0.6
+		inner_height 0.6
+	}
+	affector Rotator
+	{
+		rotation_speed_range_start 90
+		rotation_speed_range_end 90
+		rotation_range_start 0
+		rotation_range_end 360
+	}
+	affector ColourFading
+	{
+		colour0 0 0 0 1
+		time0 0
+		colour1 1 0.788235 0.14902 1
+		time1 0.1
+		colour2 0.541177 0.086275 0.952941 1
+		time2 0.25
+		colour3 1 0.517647 0.035294 1
+		time3 0.3
+		colour4 0 0 0 1
+		time4 0.9
+		colour5 0 0 0 1
+		time5 1
+		repeat_times 1
+		opacity 0.2
+		fade_in_time 0
+		fade_out_time 1
+	}
+	affector ScaleInterpolator
+	{
+		uniform_size true
+		width_range_start 30
+		width_range_end 60
+		height_range_start 30
+		height_range_end 60
+		use_constant_scale false
+		constant_scale 1 1 1
+		use_interpolated_scale true
+		scale0 1 1 1
+		time0 0
+		scale1 2 2 2
+		time1 1
+		scale2 1 1 1
+		time2 0.3
+		scale3 1 1 1
+		time3 1
+		scale4 1 1 1
+		time4 1
+		scale5 1 1 1
+		time5 1
+		repeat_times 1
+	}
+	affector Revolution
+	{
+		rotation_speed 0
+		rotation_axis 0 1 0
+		radius_increment 300
+		center_offset_min 0 0 0
+		center_offset_max 0 0 0
+		radius_increment_scale0 800
+		time0 0.2
+		radius_increment_scale1 400
+		time1 0.3
+		radius_increment_scale2 0
+		time2 1
+		radius_increment_scale3 0
+		time3 1
+		radius_increment_scale4 0
+		time4 1
+		radius_increment_scale5 0
+		time5 1
+		use_radius_increment_scale true
+		repeat_times 1
+	}
+
+}
+
+
+
+天龙生日烟花07
+{
+	quota 40
+	material 天龙生日烟花07
+	particle_width 50
+	particle_height 50
+	cull_each false
+	renderer billboard
+	sorted false
+	local_space true
+	iteration_interval 0
+	nonvisible_update_timeout 0
+
+	billboard_type point
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 1 0 0
+	point_rendering false
+	accurate_facing false
+	speed_relatived_size_factor 0.005
+
+	emitter PolarEmitter
+	{
+		angle 180
+		colour 1 1 1 1
+		colour_range_start 1 1 1 1
+		colour_range_end 1 1 1 1
+		direction 0 1 0
+		emission_rate 40
+		position 0 0 0
+		velocity 400
+		velocity_min 400
+		velocity_max 600
+		time_to_live 1
+		time_to_live_min 1
+		time_to_live_max 1
+		duration 15
+		duration_min 15
+		duration_max 15
+		repeat_delay 0
+		repeat_delay_min 0
+		repeat_delay_max 0
+		radius_start 45
+		radius_step 0
+		radius_end 45
+		theta_start 0
+		theta_step 124
+		theta_end 0
+		phi_start 0
+		phi_step 0
+		phi_end 0
+		use_polar_step true
+		flip_yz_axis false
+		reset_radius_count 0
+		reset_radius false
+	}
+	affector ColourFading
+	{
+		colour0 0 0 0 1
+		time0 0
+		colour1 0.47451 0.603922 0.078431 1
+		time1 0.3
+		colour2 0.447059 0 0.741176 1
+		time2 0.5
+		colour3 1 0.490196 0.07451 1
+		time3 0.7
+		colour4 0 0 0 1
+		time4 1
+		colour5 0 0 0 1
+		time5 1
+		repeat_times 1
+		opacity 1
+		fade_in_time 0
+		fade_out_time 1
+	}
+	affector Rotator
+	{
+		rotation_speed_range_start 0
+		rotation_speed_range_end 0
+		rotation_range_start 0
+		rotation_range_end 360
+	}
+	affector Movement
+	{
+		use_start_velocity true
+		start_velocity_min 150 600 150
+		start_velocity_max -150 900 -150
+		acceleration 0 -800 0
+		velocity_loss_min 0 0 0
+		velocity_loss_max 0 0 0
+		randomness_min 0 0 0
+		randomness_max 0 0 0
+	}
+	affector ScaleInterpolator
+	{
+		uniform_size true
+		width_range_start 10
+		width_range_end 20
+		height_range_start 50
+		height_range_end 50
+		use_constant_scale false
+		constant_scale 1 1 1
+		use_interpolated_scale false
+		scale0 1 1 1
+		time0 1
+		scale1 1 1 1
+		time1 1
+		scale2 1 1 1
+		time2 1
+		scale3 1 1 1
+		time3 1
+		scale4 1 1 1
+		time4 1
+		scale5 1 1 1
+		time5 1
+		repeat_times 1
+	}
+
+}
+
+
+
+天龙生日烟花06
+{
+	quota 3
+	material 天龙生日烟花06
+	particle_width 200
+	particle_height 100
+	cull_each false
+	renderer billboard
+	sorted false
+	local_space true
+	iteration_interval 0
+	nonvisible_update_timeout 0
+
+	billboard_type point
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 1 0 0
+	point_rendering false
+	accurate_facing false
+	speed_relatived_size_factor 0.1
+
+	emitter Box
+	{
+		angle 0
+		colour 1 1 1 1
+		colour_range_start 1 1 1 1
+		colour_range_end 1 1 1 1
+		direction 0 1 0
+		emission_rate 10
+		position 0 350 0
+		velocity 0
+		velocity_min 0
+		velocity_max 0
+		time_to_live 1
+		time_to_live_min 1
+		time_to_live_max 1
+		duration 15
+		duration_min 15
+		duration_max 15
+		repeat_delay 0
+		repeat_delay_min 0
+		repeat_delay_max 0
+		width 1
+		height 1
+		depth 1
+	}
+	affector ScaleInterpolator
+	{
+		uniform_size true
+		width_range_start 200
+		width_range_end 200
+		height_range_start 200
+		height_range_end 200
+		use_constant_scale false
+		constant_scale 1 1 1
+		use_interpolated_scale true
+		scale0 0 0 0
+		time0 0
+		scale1 1.85 1.85 1.85
+		time1 0.01
+		scale2 2 2 2
+		time2 1
+		scale3 1 1 1
+		time3 1
+		scale4 1 1 1
+		time4 1
+		scale5 1 1 1
+		time5 1
+		repeat_times 1
+	}
+	affector ColourFading
+	{
+		colour0 0 0 0 1
+		time0 0
+		colour1 0.85098 0.258824 1 1
+		time1 0.1
+		colour2 0.027451 0.560784 0.952941 1
+		time2 0.4
+		colour3 1 0.490196 0.07451 1
+		time3 0.6
+		colour4 0 0 0 1
+		time4 1
+		colour5 0 0 0 1
+		time5 1
+		repeat_times 1
+		opacity 1
+		fade_in_time 0
+		fade_out_time 1
+	}
+
+}
+
+
+
+天龙生日烟花14
+{
+	quota 48
+	material 天龙生日烟花14
+	particle_width 30
+	particle_height 30
+	cull_each false
+	renderer texcoord_billboard
+	sorted false
+	local_space true
+	iteration_interval 0
+	nonvisible_update_timeout 0
+
+	billboard_type point
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 0 1
+	common_up_vector 0 1 0
+	point_rendering false
+	accurate_facing false
+	speed_relatived_size_factor 0.1
+	stacks 2
+	slices 2
+	repeat_times 1
+
+	emitter Ring
+	{
+		angle 0
+		colour 1 1 1 1
+		colour_range_start 1 1 1 1
+		colour_range_end 1 1 1 1
+		direction 0 1 0
+		emission_rate 48
+		position 0 300 0
+		velocity 0
+		velocity_min 0
+		velocity_max 0
+		time_to_live 0.5
+		time_to_live_min 0.5
+		time_to_live_max 0.5
+		duration 15
+		duration_min 15
+		duration_max 15
+		repeat_delay 0
+		repeat_delay_min 0
+		repeat_delay_max 0
+		width 250
+		height 250
+		depth 120
+		inner_width 1
+		inner_height 1
+	}
+	affector ColourFading
+	{
+		colour0 0 0 0 1
+		time0 0
+		colour1 0.678431 0.443137 1 1
+		time1 0.2
+		colour2 0.984314 0.247059 0 1
+		time2 0.4
+		colour3 0 0.082353 0.85098 1
+		time3 0.8
+		colour4 0 0 0 1
+		time4 1
+		colour5 0 0 0 1
+		time5 1
+		repeat_times 1
+		opacity 0.5
+		fade_in_time 0
+		fade_out_time 1
+	}
+	affector ScaleInterpolator
+	{
+		uniform_size true
+		width_range_start 30
+		width_range_end 50
+		height_range_start 50
+		height_range_end 50
+		use_constant_scale false
+		constant_scale 1 1 1
+		use_interpolated_scale true
+		scale0 0 0 0
+		time0 0
+		scale1 3 3 3
+		time1 0.2
+		scale2 5 5 5
+		time2 1
+		scale3 0 0 0
+		time3 1
+		scale4 1 1 1
+		time4 1
+		scale5 1 1 1
+		time5 1
+		repeat_times 1
+	}
+	affector Rotator
+	{
+		rotation_speed_range_start 0
+		rotation_speed_range_end 0
+		rotation_range_start 0
+		rotation_range_end 360
+	}
+	affector Movement
+	{
+		use_start_velocity false
+		start_velocity_min 0 0 0
+		start_velocity_max 0 0 0
+		acceleration 0 -1500 0
+		velocity_loss_min 0 0 0
+		velocity_loss_max 0 0 0
+		randomness_min 0 0 0
+		randomness_max 0 0 0
+	}
+
+}
+
+
+
+天龙生日烟花08
+{
+	quota 30
+	material 天龙生日烟花08
+	particle_width 30
+	particle_height 30
+	cull_each false
+	renderer billboard
+	sorted false
+	local_space true
+	iteration_interval 0
+	nonvisible_update_timeout 0
+
+	billboard_type point
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 1 0 0
+	point_rendering false
+	accurate_facing false
+	speed_relatived_size_factor 0.1
+
+	emitter Ring
+	{
+		angle 0
+		colour 1 1 1 1
+		colour_range_start 1 1 1 1
+		colour_range_end 1 1 1 1
+		direction 0 1 0
+		emission_rate 40
+		position 0 380 0
+		velocity 100
+		velocity_min 100
+		velocity_max 100
+		time_to_live 0.2
+		time_to_live_min 0.2
+		time_to_live_max 0.2
+		duration 15
+		duration_min 15
+		duration_max 15
+		repeat_delay 0
+		repeat_delay_min 0
+		repeat_delay_max 0
+		width 200
+		height 100
+		depth 150
+		inner_width 1
+		inner_height 1
+	}
+	affector ColourFading
+	{
+		colour0 0 0 0 1
+		time0 0
+		colour1 0.239216 0.639216 1 1
+		time1 0.3
+		colour2 0.8 1 0.2 1
+		time2 0.6
+		colour3 1 0.447059 0.07451 1
+		time3 0.8
+		colour4 0 0 0 1
+		time4 1
+		colour5 0 0 0 1
+		time5 1
+		repeat_times 1
+		opacity 0.7
+		fade_in_time 0
+		fade_out_time 1
+	}
+	affector Rotator
+	{
+		rotation_speed_range_start 100
+		rotation_speed_range_end 300
+		rotation_range_start 0
+		rotation_range_end 360
+	}
+	affector Movement
+	{
+		use_start_velocity true
+		start_velocity_min 100 300 100
+		start_velocity_max -100 -200 -100
+		acceleration 0 -100 0
+		velocity_loss_min 0 0 0
+		velocity_loss_max 0 0 0
+		randomness_min 0 0 0
+		randomness_max 0 0 0
+	}
+	affector ScaleInterpolator
+	{
+		uniform_size true
+		width_range_start 10
+		width_range_end 60
+		height_range_start 100
+		height_range_end 100
+		use_constant_scale false
+		constant_scale 1 1 1
+		use_interpolated_scale true
+		scale0 0 0 0
+		time0 0
+		scale1 0 0 0
+		time1 0.1
+		scale2 10 10 10
+		time2 1
+		scale3 1 1 1
+		time3 1
+		scale4 1 1 1
+		time4 1
+		scale5 1 1 1
+		time5 1
+		repeat_times 1
+	}
+
+}
+
+
+
+天龙生日烟花01
+{
+	quota 22
+	material 天龙生日烟花01
+	particle_width 10
+	particle_height 45
+	cull_each false
+	renderer ribbon
+	sorted false
+	local_space false
+	iteration_interval 0
+	nonvisible_update_timeout 0
+
+	head_alpha 1
+	tail_alpha 0.2
+	head_width_scale 0.3
+	tail_width_scale 0.5
+	element_count 33
+
+	emitter PolarEmitter
+	{
+		angle 360
+		colour 1 1 1 1
+		colour_range_start 1 1 1 1
+		colour_range_end 1 1 1 1
+		direction 0 1 0
+		emission_rate 25
+		position 0 40 0
+		velocity 1
+		velocity_min 1
+		velocity_max 1
+		time_to_live 0.7
+		time_to_live_min 0.7
+		time_to_live_max 0.7
+		duration 15
+		duration_min 15
+		duration_max 15
+		repeat_delay 0
+		repeat_delay_min 0
+		repeat_delay_max 0
+		radius_start 20
+		radius_step 0
+		radius_end 20
+		theta_start 0
+		theta_step 60
+		theta_end 0
+		phi_start 0
+		phi_step 0
+		phi_end 0
+		use_polar_step true
+		flip_yz_axis false
+		reset_radius_count 0
+		reset_radius false
+	}
+	affector ColourFading
+	{
+		colour0 0 0 0 1
+		time0 0
+		colour1 0.035294 0.517647 1 1
+		time1 0.2
+		colour2 0.545098 0.894118 0.121569 1
+		time2 0.4
+		colour3 0.972549 0.67451 0.062745 1
+		time3 0.7
+		colour4 0 0 0 1
+		time4 0.8
+		colour5 0 0 0 1
+		time5 1
+		repeat_times 1
+		opacity 2
+		fade_in_time 0
+		fade_out_time 1
+	}
+	affector ScaleInterpolator
+	{
+		uniform_size true
+		width_range_start 90
+		width_range_end 20
+		height_range_start 40
+		height_range_end 20
+		use_constant_scale false
+		constant_scale 0 0 0
+		use_interpolated_scale false
+		scale0 0 0 0
+		time0 0
+		scale1 0.3 0.3 0.3
+		time1 0.2
+		scale2 0.3 0.3 0.3
+		time2 0.4
+		scale3 0 0 0
+		time3 1
+		scale4 1 1 1
+		time4 1
+		scale5 1 1 1
+		time5 1
+		repeat_times 1
+	}
+	affector Movement
+	{
+		use_start_velocity true
+		start_velocity_min -500 -100 -500
+		start_velocity_max 500 100 500
+		acceleration 0 9000 0
+		velocity_loss_min 0 0 0
+		velocity_loss_max 0 0 0
+		randomness_min 0 0 0
+		randomness_max 0 0 0
+	}
+
+}
+
+
+
+天龙生日烟花02
+{
+	quota 48
+	material 天龙生日烟花02
+	particle_width 50
+	particle_height 50
+	cull_each false
+	renderer texcoord_billboard
+	sorted false
+	local_space true
+	iteration_interval 0
+	nonvisible_update_timeout 0
+
+	billboard_type point
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 0 1
+	common_up_vector 0 1 0
+	point_rendering false
+	accurate_facing false
+	speed_relatived_size_factor 0.1
+	stacks 2
+	slices 2
+	repeat_times 1
+
+	emitter PolarEmitter
+	{
+		angle 360
+		colour 1 1 1 1
+		colour_range_start 1 1 1 1
+		colour_range_end 1 1 1 1
+		direction 0 1 0
+		emission_rate 96
+		position 0 30 0
+		velocity 0
+		velocity_min 0
+		velocity_max 0
+		time_to_live 0.5
+		time_to_live_min 0.5
+		time_to_live_max 0.5
+		duration 15
+		duration_min 15
+		duration_max 15
+		repeat_delay 0
+		repeat_delay_min 0
+		repeat_delay_max 0
+		radius_start 30
+		radius_step 0
+		radius_end 30
+		theta_start 0
+		theta_step 60
+		theta_end 0
+		phi_start 0
+		phi_step 0
+		phi_end 0
+		use_polar_step true
+		flip_yz_axis false
+		reset_radius_count 0
+		reset_radius false
+	}
+	affector ColourFading
+	{
+		colour0 0 0 0 1
+		time0 0
+		colour1 0.741177 0.458824 1 1
+		time1 0.2
+		colour2 0.12549 0.105882 0.894118 1
+		time2 0.4
+		colour3 0.737255 0.85098 0.101961 1
+		time3 0.5
+		colour4 0 0 0 1
+		time4 0.7
+		colour5 0 0 0 1
+		time5 1
+		repeat_times 1
+		opacity 0.5
+		fade_in_time 0
+		fade_out_time 1
+	}
+	affector ScaleInterpolator
+	{
+		uniform_size true
+		width_range_start 100
+		width_range_end 50
+		height_range_start 50
+		height_range_end 50
+		use_constant_scale false
+		constant_scale 0 0 0
+		use_interpolated_scale true
+		scale0 0 0 0
+		time0 0
+		scale1 1 1 1
+		time1 0.2
+		scale2 3 3 3
+		time2 0.5
+		scale3 5 5 5
+		time3 1
+		scale4 1 1 1
+		time4 1
+		scale5 1 1 1
+		time5 1
+		repeat_times 1
+	}
+	affector Movement
+	{
+		use_start_velocity true
+		start_velocity_min 400 200 400
+		start_velocity_max -400 500 -400
+		acceleration 0 3000 0
+		velocity_loss_min 0 0 0
+		velocity_loss_max 0 0 0
+		randomness_min 0 0 0
+		randomness_max 0 0 0
+	}
+
+}
+
+
+
+天龙生日烟花04
+{
+	quota 20
+	material 天龙生日烟花04
+	particle_width 150
+	particle_height 150
+	cull_each false
+	renderer billboard
+	sorted false
+	local_space false
+	iteration_interval 0
+	nonvisible_update_timeout 0
+
+	billboard_type point
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 0 1
+	common_up_vector 0 1 0
+	point_rendering false
+	accurate_facing false
+	speed_relatived_size_factor 0.01
+
+	emitter Box
+	{
+		angle 360
+		colour 1 1 1 1
+		colour_range_start 1 1 1 1
+		colour_range_end 1 1 1 1
+		direction 0 1 0
+		emission_rate 20
+		position 0 10 0
+		velocity 2
+		velocity_min 2
+		velocity_max 2
+		time_to_live 1
+		time_to_live_min 1
+		time_to_live_max 1
+		duration 15
+		duration_min 15
+		duration_max 15
+		repeat_delay 0
+		repeat_delay_min 0
+		repeat_delay_max 0
+		width 22
+		height 22
+		depth 22
+	}
+	affector ColourFading
+	{
+		colour0 0 0 0 1
+		time0 0
+		colour1 1 0.901961 0.513726 1
+		time1 0.3
+		colour2 1 0.505882 0.058824 1
+		time2 0.6
+		colour3 0 0 0 1
+		time3 1
+		colour4 0.5 0.5 0.5 0
+		time4 1
+		colour5 0.5 0.5 0.5 0
+		time5 1
+		repeat_times 1
+		opacity 1
+		fade_in_time 0
+		fade_out_time 1
+	}
+	affector Movement
+	{
+		use_start_velocity true
+		start_velocity_min -200 200 -200
+		start_velocity_max 200 600 200
+		acceleration 0 800 0
+		velocity_loss_min 0 0 0
+		velocity_loss_max 0 0 0
+		randomness_min -1000 0 -1000
+		randomness_max 1000 0 1000
+	}
+	affector Rotator
+	{
+		rotation_speed_range_start 0
+		rotation_speed_range_end 0
+		rotation_range_start 0
+		rotation_range_end 360
+	}
+
+}
+
+
+
+天龙生日烟花05
+{
+	quota 1
+	material 天龙生日烟花05
+	particle_width 0.1
+	particle_height 0.1
+	cull_each false
+	renderer mesh
+	sorted false
+	local_space true
+	iteration_interval 0
+	nonvisible_update_timeout 0
+
+	mesh_name 烟花筒1.mesh
+	orientation_type oriented_origin
+
+	emitter PolarEmitter
+	{
+		angle 10
+		colour 0.882353 0.176471 0 1
+		colour_range_start 0.882353 0.176471 0 1
+		colour_range_end 0.882353 0.176471 0 1
+		direction 0 1 0
+		emission_rate 1e+008
+		position 0 0 0
+		velocity 0
+		velocity_min 0
+		velocity_max 0
+		time_to_live 15
+		time_to_live_min 15
+		time_to_live_max 15
+		duration 15
+		duration_min 15
+		duration_max 15
+		repeat_delay 0
+		repeat_delay_min 0
+		repeat_delay_max 0
+		radius_start 1
+		radius_step 0
+		radius_end 1
+		theta_start 0
+		theta_step 0
+		theta_end 0
+		phi_start 0
+		phi_step 0
+		phi_end 0
+		use_polar_step true
+		flip_yz_axis false
+		reset_radius_count 0
+		reset_radius false
+	}
+
+}
+
+
+
+天龙生日01
+{
+	quota 30
+	material 天龙生日01
+	particle_width 15
+	particle_height 15
+	cull_each false
+	renderer billboard
+	sorted false
+	local_space true
+	iteration_interval 0
+	nonvisible_update_timeout 0
+
+	billboard_type point
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 1 0 0
+	point_rendering false
+	accurate_facing false
+	speed_relatived_size_factor 0.1
+
+	emitter Ring
+	{
+		angle 360
+		colour 1 1 1 1
+		colour_range_start 1 1 1 1
+		colour_range_end 1 1 1 1
+		direction 0 1 0
+		emission_rate 40
+		position 0 800 0
+		velocity 100
+		velocity_min 100
+		velocity_max 100
+		time_to_live 0.3
+		time_to_live_min 0.3
+		time_to_live_max 0.3
+		duration 15
+		duration_min 15
+		duration_max 15
+		repeat_delay 0
+		repeat_delay_min 0
+		repeat_delay_max 0
+		width 400
+		height 400
+		depth 800
+		inner_width 0.5
+		inner_height 0.5
+	}
+	affector ColourFading
+	{
+		colour0 0 0 0 1
+		time0 0
+		colour1 0.411765 1 0.058824 1
+		time1 0.3
+		colour2 0.247059 0.058824 1 1
+		time2 0.6
+		colour3 1 0.556863 0.117647 1
+		time3 0.8
+		colour4 0 0 0 1
+		time4 1
+		colour5 0 0 0 1
+		time5 1
+		repeat_times 1
+		opacity 0.5
+		fade_in_time 0
+		fade_out_time 1
+	}
+	affector Rotator
+	{
+		rotation_speed_range_start 180
+		rotation_speed_range_end 360
+		rotation_range_start 0
+		rotation_range_end 360
+	}
+	affector Movement
+	{
+		use_start_velocity true
+		start_velocity_min 500 500 500
+		start_velocity_max -500 -200 -500
+		acceleration 0 3000 0
+		velocity_loss_min 0 0 0
+		velocity_loss_max 0 0 0
+		randomness_min 0 0 0
+		randomness_max 0 0 0
+	}
+	affector ScaleInterpolator
+	{
+		uniform_size true
+		width_range_start 20
+		width_range_end 150
+		height_range_start 600
+		height_range_end 600
+		use_constant_scale false
+		constant_scale 1 1 1
+		use_interpolated_scale true
+		scale0 0 0 0
+		time0 0
+		scale1 0 0 0
+		time1 0.1
+		scale2 35 35 35
+		time2 1
+		scale3 1 1 1
+		time3 1
+		scale4 1 1 1
+		time4 1
+		scale5 1 1 1
+		time5 1
+		repeat_times 1
+	}
+
+}
+
+
+
+天龙庆生烟花
+{
+	quota 40
+	material 天龙庆生烟花
+	particle_width 10
+	particle_height 10
+	cull_each false
+	renderer billboard
+	sorted false
+	local_space false
+	iteration_interval 0
+	nonvisible_update_timeout 0
+
+	billboard_type point
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 0 1
+	common_up_vector 0 1 0
+	point_rendering false
+	accurate_facing false
+	speed_relatived_size_factor 0.01
+
+	emitter Box
+	{
+		angle 180
+		colour 1 1 1 1
+		colour_range_start 1 1 1 1
+		colour_range_end 1 1 1 1
+		direction 0 1 0
+		emission_rate 60
+		position 0 30 0
+		velocity 100
+		velocity_min 100
+		velocity_max 100
+		time_to_live 0.7
+		time_to_live_min 0.7
+		time_to_live_max 0.7
+		duration 15
+		duration_min 15
+		duration_max 15
+		repeat_delay 0
+		repeat_delay_min 0
+		repeat_delay_max 0
+		width 200
+		height 200
+		depth 200
+	}
+	affector ColourFading
+	{
+		colour0 0.815686 1 0.082353 1
+		time0 0
+		colour1 0.25098 0.662745 1 1
+		time1 0.3
+		colour2 1 0.341176 0.058824 1
+		time2 0.6
+		colour3 0.988235 0.815686 0.129412 1
+		time3 0.8
+		colour4 0 0 0 1
+		time4 1
+		colour5 0 0 0 1
+		time5 1
+		repeat_times 1
+		opacity 1.5
+		fade_in_time 0
+		fade_out_time 1
+	}
+	affector Rotator
+	{
+		rotation_speed_range_start 180
+		rotation_speed_range_end 0
+		rotation_range_start 0
+		rotation_range_end 360
+	}
+	affector ScaleInterpolator
+	{
+		uniform_size true
+		width_range_start 40
+		width_range_end 60
+		height_range_start 50
+		height_range_end 100
+		use_constant_scale false
+		constant_scale 1 1 1
+		use_interpolated_scale true
+		scale0 2 2 2
+		time0 0.1
+		scale1 15 15 15
+		time1 0.2
+		scale2 5 5 5
+		time2 0.3
+		scale3 12 12 12
+		time3 1
+		scale4 1 1 1
+		time4 1
+		scale5 1 1 1
+		time5 1
+		repeat_times 1
+	}
+	affector Revolution
+	{
+		rotation_speed 60
+		rotation_axis 0 1 0
+		radius_increment 1300
+		center_offset_min 0 -2000 0
+		center_offset_max 0 0 0
+		radius_increment_scale0 0
+		time0 1
+		radius_increment_scale1 0
+		time1 1
+		radius_increment_scale2 0
+		time2 1
+		radius_increment_scale3 0
+		time3 1
+		radius_increment_scale4 0
+		time4 1
+		radius_increment_scale5 0
+		time5 1
+		use_radius_increment_scale false
+		repeat_times 1
+	}
+
+}
+
+
+
+天龙生日烟花03
+{
+	quota 70
+	material 天龙生日烟花03
+	particle_width 50
+	particle_height 50
+	cull_each false
+	renderer billboard
+	sorted false
+	local_space true
+	iteration_interval 0
+	nonvisible_update_timeout 0
+
+	billboard_type point
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 1 0 0
+	point_rendering false
+	accurate_facing false
+	speed_relatived_size_factor 0.01
+
+	emitter PolarEmitter
+	{
+		angle 0
+		colour 1 1 1 1
+		colour_range_start 1 1 1 1
+		colour_range_end 1 1 1 1
+		direction 0 1 0
+		emission_rate 90
+		position 0 0 0
+		velocity 500
+		velocity_min 500
+		velocity_max 500
+		time_to_live 1
+		time_to_live_min 1
+		time_to_live_max 1
+		duration 15
+		duration_min 15
+		duration_max 15
+		repeat_delay 0
+		repeat_delay_min 0
+		repeat_delay_max 0
+		radius_start 20
+		radius_step 0
+		radius_end 20
+		theta_start 0
+		theta_step 124
+		theta_end 0
+		phi_start 0
+		phi_step 0
+		phi_end 0
+		use_polar_step true
+		flip_yz_axis false
+		reset_radius_count 0
+		reset_radius false
+	}
+	affector ColourFading
+	{
+		colour0 0 0 0 1
+		time0 0
+		colour1 0.74902 0.882353 0 1
+		time1 0.3
+		colour2 0.447059 0 0.737255 1
+		time2 0.5
+		colour3 1 0.490196 0.07451 1
+		time3 0.7
+		colour4 0 0 0 1
+		time4 1
+		colour5 0 0 0 1
+		time5 1
+		repeat_times 1
+		opacity 1.5
+		fade_in_time 0
+		fade_out_time 1
+	}
+	affector Rotator
+	{
+		rotation_speed_range_start 180
+		rotation_speed_range_end 0
+		rotation_range_start 0
+		rotation_range_end 360
+	}
+	affector Movement
+	{
+		use_start_velocity true
+		start_velocity_min 400 500 400
+		start_velocity_max -400 1000 -400
+		acceleration 0 -800 0
+		velocity_loss_min 0 0 0
+		velocity_loss_max 0 0 0
+		randomness_min 0 0 0
+		randomness_max 0 0 0
+	}
+	affector ScaleInterpolator
+	{
+		uniform_size true
+		width_range_start 10
+		width_range_end 80
+		height_range_start 50
+		height_range_end 50
+		use_constant_scale false
+		constant_scale 1 1 1
+		use_interpolated_scale true
+		scale0 1 1 1
+		time0 0.1
+		scale1 2 2 2
+		time1 0.3
+		scale2 1 1 1
+		time2 1
+		scale3 1 1 1
+		time3 1
+		scale4 1 1 1
+		time4 1
+		scale5 1 1 1
+		time5 1
+		repeat_times 1
+	}
+
+}
+

@@ -190,3 +190,5 @@ INT	INT	STRING
 187	400963	GotoShengShouShan
 188	800120	AuditGameProgess
 189	311200	OnStiletto_Four
+190	260001	AnqiConfirm
+191	260001	Anqi2Shenzhen

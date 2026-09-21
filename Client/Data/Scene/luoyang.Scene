@@ -2,6 +2,7 @@
 <Scene formatVersion="0.1.1" name="luoyang">
 
   <Terrain filename="luoyang.Terrain"/>
+  <SkySphere enabled="true" filename="luoyang.skysphere" objectname="#FairySkySphere"/>
 
   <Object name="#FairyEnviroment" type="Enviroment">
     <Property name="ambient" value="0.407843 0.443137 0.368627"/>
@@ -26,8 +27,8 @@
     <Property name="direction" value="4 -2 -5"/>
   </Object>
 
-  <Object name="#FairySkyDome" type="SkyDome">
-    <Property name="material" value="CloudySky"/>
+  <Object name="#FairySkySphere" type="SkySphere">
+    <Property name="enabled" value="true"/>
   </Object>
 
   <Object type="StaticEntity">

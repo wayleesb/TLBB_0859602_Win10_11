@@ -309,6 +309,18 @@ function LoginSelectServerQuest_OnEvent(event)
 	end
 	
 	
+	-- 暗器锻造说明沿用源端 260001 指令，不在说明框按钮中重复发送锻造请求。
+	if event == "UI_COMMAND" and tonumber(arg0) == 260001 then
+		g_iYesNoType = -1;
+		SelectServerQuest_InfoWindow:SetText("#{AQSJ_090709_10}");
+		LoginSelectUpdateRect();
+		SelectServerQuest_Button1:SetText("确定");
+		SelectServerQuest_Button1:Show();
+		SelectServerQuest_Button1:Enable();
+		SelectServerQuest_Button2:Hide();
+		this:Show();
+	end
+
 end
 
 

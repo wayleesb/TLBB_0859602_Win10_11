@@ -7,7 +7,17 @@
 !/tlbb/Server/Log/.gitkeep
 
 # Local client account and character caches.
-/Client/Accounts/*/
+/Client/Accounts/
+
+# Local client logs and launcher runtime data.
+/Client/Bin/CEGUI.log
+/Client/Bin/Fairy.log
+/Client/Bin/Game.log
+/Client/Bin64/CEGUI.log
+/Client/Bin64/Fairy.log
+/Client/Bin64/Game.log
+/Client/Launch.log
+/Client/Launch.bin
 
 # Local IDA databases and working files.
 *.i64

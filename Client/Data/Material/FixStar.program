@@ -1,0 +1,29 @@
+//---------------------------------------------------
+// This file includes a GPU programs for FixStar
+//---------------------------------------------------
+
+vertex_program StarVP hlsl
+{
+	source FixStar.hlsl
+	entry_point StarsVS
+	target vs_3_0
+
+	default_params
+	{
+		param_named_auto worldViewProj worldviewproj_matrix
+		
+    param_named_auto StarSize custom 100
+	}
+}
+
+fragment_program StarFP hlsl
+{
+	source FixStar.hlsl
+	entry_point StarsPS
+	target ps_3_0
+
+	default_params
+	{		
+    param_named_auto StarParams custom 101
+	}
+}

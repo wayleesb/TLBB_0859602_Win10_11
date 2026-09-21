@@ -1,0 +1,20 @@
+material SkySphere/FixedStar
+{
+	technique
+	{
+		pass
+		{
+			scene_blend src_alpha one
+			fog_override true none
+			depth_write off
+			point_sprites on						
+			vertex_program_ref StarVP
+			{
+			}
+			fragment_program_ref StarFP
+			{
+			}
+		
+		}
+	}
+}

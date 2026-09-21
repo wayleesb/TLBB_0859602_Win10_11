@@ -1,0 +1,65 @@
+vertex_program SkySphereLayerBlend_OneTexture_VS_1_1_hlsl hlsl
+{
+    source SkySphereLayer.hlsl
+    entry_point blend_vp
+    target vs_1_1
+    
+    preprocessor_defines BLEND_TEXTURE_NUM=1
+    default_params
+    {
+        param_named_auto WVPMatrix worldviewproj_matrix
+    }
+}
+
+vertex_program SkySphereLayerBlend_TwoTexture_VS_1_1_hlsl hlsl
+{
+    source SkySphereLayer.hlsl
+    entry_point blend_vp
+    target vs_1_1
+    
+    preprocessor_defines BLEND_TEXTURE_NUM=2
+    default_params
+    {
+        param_named_auto WVPMatrix worldviewproj_matrix
+    }
+}
+
+vertex_program SkySphereLayerBlend_ThreeTexture_VS_1_1_hlsl hlsl
+{
+    source SkySphereLayer.hlsl
+    entry_point blend_vp
+    target vs_1_1
+    
+    preprocessor_defines BLEND_TEXTURE_NUM=3
+    default_params
+    {
+        param_named_auto WVPMatrix worldviewproj_matrix
+    }
+}
+
+fragment_program SkySphereLayerBlend_OneTexture_PS_2_0_hlsl hlsl
+{
+    source SkySphereLayer.hlsl
+    entry_point blend_fp
+    target ps_2_0
+    
+    preprocessor_defines BLEND_TEXTURE_NUM=1
+}
+
+fragment_program SkySphereLayerBlend_TwoTexture_PS_2_0_hlsl hlsl
+{
+    source SkySphereLayer.hlsl
+    entry_point blend_fp
+    target ps_2_0
+    
+    preprocessor_defines BLEND_TEXTURE_NUM=2
+}
+
+fragment_program SkySphereLayerBlend_ThreeTexture_PS_2_0_hlsl hlsl
+{
+    source SkySphereLayer.hlsl
+    entry_point blend_fp
+    target ps_2_0
+    
+    preprocessor_defines BLEND_TEXTURE_NUM=3
+}

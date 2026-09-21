@@ -8,7 +8,15 @@
 
 适用于 Windows 10/11 的 TLBB 0859602 客户端及配套工具。
 
-### V0.9 更新
+### V1.1 更新
+
+- 更新启动工具，整合自 V1.0 以来的客户端、服务端、界面、脚本和场景资源更新。
+- 仓库排除 `Client/Accounts/` 全部内容、`Client/Bin/` 和 `Client/Bin64/` 下的 `CEGUI.log`、`Fairy.log`、`Game.log`，以及 `Client/Launch.log`、`Client/Launch.bin`；本地文件保留。
+- V1.1 完整发行包排除 Git 元数据、账号缓存和日志，保留运行所需的 `Launch.bin`，并已通过 7-Zip 完整性测试。
+
+版本记录：[V1.1](https://github.com/wayleesb/TLBB_0859602_Win10_11/releases/tag/1.1) · [V1.0](https://github.com/wayleesb/TLBB_0859602_Win10_11/releases/tag/1.0)。
+
+### V0.9 历史更新
 
 - 批量将客户端和服务端文本资源转换为 UTF-8，并更新模型、界面及配置资源。
 - 新增八箱仓库界面及配套贴图资源。
@@ -27,6 +35,8 @@
 
 ### 下载
 
+推荐下载 [V1.1 完整包：TLBB_0859602_Win10_11_VER_1.1.7z](https://github.com/wayleesb/TLBB_0859602_Win10_11/releases/download/1.1/TLBB_0859602_Win10_11_VER_1.1.7z)（约 845 MiB），使用 7-Zip 解压。
+
 克隆仓库：
 
 ```powershell
@@ -36,7 +46,8 @@ cd TLBB_0859602_Win10_11
 
 也可以通过 GitHub 的 **Code > Download ZIP** 下载当前版本。
 仓库已包含 `雪舞天龙启动工具.exe`、完整的 MariaDB 解压目录
-`TLBB_Env/mariadb-10.11.18-winx64/` 和 ODBC 安装包，无需 Git LFS 或另外下载 Release 附件。
+`TLBB_Env/mariadb-10.11.18-winx64/` 和 ODBC 安装包，无需 Git LFS。
+仓库和 **Code > Download ZIP** 不含 `Client/Launch.bin`；需要完整运行文件时，请下载上述 Release 完整包。
 启动工具优先校验并使用 MariaDB 目录，也兼容仅带原 ZIP 的旧整合包。
 EXE 使用 .NET 内置单文件压缩，无需手动解压或预装 .NET。
 仓库不跟踪运行日志、本地备份及 IDA 分析文件。
@@ -56,7 +67,15 @@ EXE 使用 .NET 内置单文件压缩，无需手动解压或预装 .NET。
 
 TLBB 0859602 client and bundled tools for Windows 10/11.
 
-### V0.9 Update
+### V1.1 Update
+
+- Updates the launcher and includes client, server, interface, script, and scene resource changes since V1.0.
+- Excludes all contents of `Client/Accounts/`, `CEGUI.log`, `Fairy.log`, and `Game.log` in `Client/Bin/` and `Client/Bin64/`, plus `Client/Launch.log` and `Client/Launch.bin` from Git tracking; local files are preserved.
+- The full V1.1 release package excludes Git metadata, account caches, and logs, retains `Launch.bin` for runtime use, and has passed a 7-Zip integrity test.
+
+Release history: [V1.1](https://github.com/wayleesb/TLBB_0859602_Win10_11/releases/tag/1.1) · [V1.0](https://github.com/wayleesb/TLBB_0859602_Win10_11/releases/tag/1.0).
+
+### V0.9 Previous Updates
 
 - Converts client and server text resources to UTF-8 and updates model, interface, and configuration resources.
 - Adds interface and texture resources for the bank with eight storage boxes.
@@ -75,6 +94,8 @@ Previous version: [complete V0.8 changelog (31 entries, in Chinese)](https://git
 
 ### Download
 
+Recommended: download the [full V1.1 package: TLBB_0859602_Win10_11_VER_1.1.7z](https://github.com/wayleesb/TLBB_0859602_Win10_11/releases/download/1.1/TLBB_0859602_Win10_11_VER_1.1.7z) (approximately 845 MiB) and extract it with 7-Zip.
+
 Clone the repository:
 
 ```powershell
@@ -84,8 +105,9 @@ cd TLBB_0859602_Win10_11
 
 You can also download the current version using **Code > Download ZIP** on GitHub.
 The repository includes `雪舞天龙启动工具.exe`, the complete expanded MariaDB directory
-`TLBB_Env/mariadb-10.11.18-winx64/`, and the ODBC installer. No Git LFS or separate
-release assets are required. The launcher verifies and uses the MariaDB directory
+`TLBB_Env/mariadb-10.11.18-winx64/`, and the ODBC installer. Git LFS is not required.
+The repository and **Code > Download ZIP** do not include `Client/Launch.bin`; download the full Release package above for the complete runtime files.
+The launcher verifies and uses the MariaDB directory
 first, while remaining compatible with older packages containing only the original ZIP.
 The EXE uses .NET single-file compression; no manual extraction or .NET installation
 is needed. Runtime logs, local backups, and IDA analysis files are not tracked in the repository.
@@ -107,7 +129,15 @@ packaging exclusion list and does not delete local files.
 
 Client TLBB 0859602 và các công cụ đi kèm dành cho Windows 10/11.
 
-### Cập nhật V0.9
+### Cập nhật V1.1
+
+- Cập nhật trình khởi chạy và bao gồm các thay đổi của client, máy chủ, giao diện, tập lệnh và tài nguyên cảnh kể từ V1.0.
+- Git không theo dõi toàn bộ nội dung `Client/Accounts/`, các tệp `CEGUI.log`, `Fairy.log`, `Game.log` trong `Client/Bin/` và `Client/Bin64/`, cùng với `Client/Launch.log` và `Client/Launch.bin`; các tệp cục bộ vẫn được giữ lại.
+- Gói phát hành V1.1 đầy đủ loại trừ siêu dữ liệu Git, bộ nhớ đệm tài khoản và nhật ký, giữ lại `Launch.bin` để chạy trò chơi và đã vượt qua kiểm tra toàn vẹn bằng 7-Zip.
+
+Lịch sử phát hành: [V1.1](https://github.com/wayleesb/TLBB_0859602_Win10_11/releases/tag/1.1) · [V1.0](https://github.com/wayleesb/TLBB_0859602_Win10_11/releases/tag/1.0).
+
+### Các cập nhật trước đây của V0.9
 
 - Chuyển hàng loạt tài nguyên văn bản của client và máy chủ sang UTF-8, đồng thời cập nhật tài nguyên mô hình, giao diện và cấu hình.
 - Thêm tài nguyên giao diện và hình ảnh cho kho gồm tám rương.
@@ -126,6 +156,8 @@ Phiên bản trước: [nhật ký thay đổi V0.8 đầy đủ (31 mục, bằ
 
 ### Tải xuống
 
+Khuyến nghị tải [gói V1.1 đầy đủ: TLBB_0859602_Win10_11_VER_1.1.7z](https://github.com/wayleesb/TLBB_0859602_Win10_11/releases/download/1.1/TLBB_0859602_Win10_11_VER_1.1.7z) (khoảng 845 MiB) và giải nén bằng 7-Zip.
+
 Sao chép kho mã về máy:
 
 ```powershell
@@ -135,8 +167,9 @@ cd TLBB_0859602_Win10_11
 
 Bạn cũng có thể tải phiên bản hiện tại bằng **Code > Download ZIP** trên GitHub.
 Kho mã đã bao gồm `雪舞天龙启动工具.exe`, toàn bộ thư mục MariaDB đã giải nén
-`TLBB_Env/mariadb-10.11.18-winx64/` và bộ cài ODBC. Không cần Git LFS hay tải riêng
-tệp đính kèm bản phát hành. Trình khởi chạy ưu tiên kiểm tra và sử dụng thư mục MariaDB,
+`TLBB_Env/mariadb-10.11.18-winx64/` và bộ cài ODBC. Không cần Git LFS.
+Kho mã và **Code > Download ZIP** không bao gồm `Client/Launch.bin`; hãy tải gói Release đầy đủ ở trên để có đủ các tệp cần thiết khi chạy.
+Trình khởi chạy ưu tiên kiểm tra và sử dụng thư mục MariaDB,
 đồng thời vẫn tương thích với các gói cũ chỉ có tệp ZIP gốc.
 Tệp EXE sử dụng tính năng nén tệp đơn của .NET; không cần giải nén thủ công hoặc cài đặt .NET.
 Nhật ký hoạt động, bản sao lưu cục bộ và các tệp phân tích IDA không được theo dõi trong kho mã.

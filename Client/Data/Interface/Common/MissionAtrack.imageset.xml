@@ -1,0 +1,105 @@
+<?xml version="1.0" ?>
+	<Imageset Name="MissionAtrack" Imagefile="Common/tga_MissionAtrack.dds" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="false">
+		<Image Name="MK_Mission" XPos="0" YPos="0" Width="100" Height="18" />
+    <Image Name="MK_Huodong" XPos="111" YPos="0" Width="100" Height="18" />
+
+    <Image Name="MKClose_Disable" XPos="217" YPos="0" Width="16" Height="18" />
+    <Image Name="MKClose_Pushed" XPos="237" YPos="0" Width="16" Height="18" />
+    <Image Name="MKClose_Normal" XPos="217" YPos="21" Width="16" Height="18" />
+    <Image Name="MKClose_Hover" XPos="237" YPos="21" Width="16" Height="18" />
+
+    <Image Name="MKAcceptMission_Disable" XPos="0" YPos="21" Width="40" Height="18" />
+    <Image Name="MKAcceptMission_Pushed" XPos="44" YPos="21" Width="40" Height="18" />
+    <Image Name="MKAcceptMission_Normal" XPos="88" YPos="21" Width="40" Height="18" />
+    <Image Name="MKAcceptMission_Hover" XPos="132" YPos="21" Width="40" Height="18" />
+    
+    <Image Name="MKCurrentMission_Disable" XPos="0" YPos="42" Width="40" Height="18" />
+    <Image Name="MKCurrentMission_Pushed" XPos="44" YPos="42" Width="40" Height="18" />
+    <Image Name="MKCurrentMission_Normal" XPos="88" YPos="42" Width="40" Height="18" />
+    <Image Name="MKCurrentMission_Hover" XPos="132" YPos="42" Width="40" Height="18" />
+
+    <Image Name="MKUp_Normal" XPos="0" YPos="83" Width="16" Height="18" />
+    <Image Name="MKUp_Pushed" XPos="0" YPos="64" Width="16" Height="18" />
+    <Image Name="MKUp_Hover" XPos="0" YPos="102" Width="16" Height="18" />
+    <Image Name="MKUp_Disable" XPos="0" YPos="121" Width="16" Height="18" />
+
+    <Image Name="MKDown_Normal" XPos="24" YPos="102" Width="16" Height="18" />
+    <Image Name="MKDown_Pushed" XPos="24" YPos="121" Width="16" Height="18" />
+    <Image Name="MKDown_Hover" XPos="24" YPos="83" Width="16" Height="18" />
+    <Image Name="MKDown_Disable" XPos="24" YPos="64" Width="16" Height="18" />
+
+    <Image Name="MKScrollBar_Bar" XPos="178" YPos="21" Width="16" Height="33" />
+
+    <Image Name="MKScrollBar_Thumb_Normal" XPos="199" YPos="21" Width="14" Height="14" />
+    <Image Name="MKScrollBar_Thumb_Pushed" XPos="199" YPos="21" Width="14" Height="14" />
+    <Image Name="MKScrollBar_Thumb_Hover" XPos="199" YPos="21" Width="14" Height="14" />
+    <Image Name="MKScrollBar_Thumb_Disabled" XPos="199" YPos="21" Width="14" Height="14" />
+
+    <Image Name="MK_Background_Frame_LT" XPos="44" YPos="65" Width="7" Height="7" />
+    <Image Name="MK_Background_Frame_RT" XPos="69" YPos="65" Width="7" Height="7" />
+    <Image Name="MK_Background_Frame_LB" XPos="44" YPos="90" Width="7" Height="7" />
+    <Image Name="MK_Background_Frame_RB" XPos="69" YPos="90" Width="7" Height="7" />
+    <Image Name="MK_Background_Frame_L" XPos="44" YPos="72" Width="2" Height="18" />
+    <Image Name="MK_Background_Frame_R" XPos="74" YPos="72" Width="2" Height="18" />
+    <Image Name="MK_Background_Frame_T" XPos="51" YPos="65" Width="18" Height="2" />
+    <Image Name="MK_Background_Frame_B" XPos="51" YPos="94" Width="18" Height="2" />
+    <Image Name="MK_Background_Frame_BK" XPos="47" YPos="72" Width="26" Height="18" />
+    
+    <Image Name="MKUnlock_Normal" XPos="118" YPos="64" Width="16" Height="18" />
+    <Image Name="MKUnlock_Pushed" XPos="99" YPos="64" Width="16" Height="18" />
+    <Image Name="MKUnlock_Hover" XPos="137" YPos="64" Width="16" Height="18" />
+    <Image Name="MKUnlock_Disable" XPos="80" YPos="64" Width="16" Height="18" />
+
+    <Image Name="MKlock_Normal" XPos="118" YPos="127" Width="16" Height="18" />
+    <Image Name="MKlock_Pushed" XPos="99" YPos="127" Width="16" Height="18" />
+    <Image Name="MKlock_Hover" XPos="137" YPos="127" Width="16" Height="18" />
+    <Image Name="MKlock_Disable" XPos="80" YPos="127" Width="16" Height="18" />
+    
+    <Image Name="MKreset_Normal" XPos="194" YPos="64" Width="16" Height="18" />
+    <Image Name="MKreset_Pushed" XPos="175" YPos="64" Width="16" Height="18" />
+    <Image Name="MKreset_Hover" XPos="213" YPos="64" Width="16" Height="18" />
+    <Image Name="MKreset_Disable" XPos="156" YPos="64" Width="16" Height="18" />
+
+    <Image Name="MKupadd_Normal" XPos="118" YPos="85" Width="16" Height="18" />
+    <Image Name="MKupadd_Pushed" XPos="99" YPos="85" Width="16" Height="18" />
+    <Image Name="MKupadd_Hover" XPos="137" YPos="85" Width="16" Height="18" />
+    <Image Name="MKupadd_Disable" XPos="80" YPos="85" Width="16" Height="18" />
+
+    <Image Name="MKupsub_Normal" XPos="194" YPos="85" Width="16" Height="18" />
+    <Image Name="MKupsub_Pushed" XPos="175" YPos="85" Width="16" Height="18" />
+    <Image Name="MKupsub_Hover" XPos="213" YPos="85" Width="16" Height="18" />
+    <Image Name="MKupsub_Disable" XPos="156" YPos="85" Width="16" Height="18" />
+
+    <Image Name="MKleftadd_Normal" XPos="118" YPos="106" Width="16" Height="18" />
+    <Image Name="MKleftadd_Pushed" XPos="99" YPos="106" Width="16" Height="18" />
+    <Image Name="MKleftadd_Hover" XPos="137" YPos="106" Width="16" Height="18" />
+    <Image Name="MKleftadd_Disable" XPos="80" YPos="106" Width="16" Height="18" />
+
+    <Image Name="MKleftsub_Normal" XPos="194" YPos="106" Width="16" Height="18" />
+    <Image Name="MKleftsub_Pushed" XPos="175" YPos="106" Width="16" Height="18" />
+    <Image Name="MKleftsub_Hover" XPos="213" YPos="106" Width="16" Height="18" />
+    <Image Name="MKleftsub_Disable" XPos="156" YPos="106" Width="16" Height="18" />
+
+    <Image Name="MKMiniClose_Normal" XPos="195" YPos="127" Width="14" Height="13" />
+    <Image Name="MKMiniClose_Pushed" XPos="176" YPos="127" Width="14" Height="13" />
+    <Image Name="MKMiniClose_Hover" XPos="214" YPos="127" Width="14" Height="13" />
+    <Image Name="MKMiniClose_Disable" XPos="158" YPos="127" Width="14" Height="13" />
+
+    <Image Name="MKEye_Normal" XPos="0" YPos="175" Width="16" Height="10" />
+    <Image Name="MKEye_Pushed" XPos="0" YPos="161" Width="16" Height="10" />
+    <Image Name="MKEye_Hover" XPos="0" YPos="189" Width="16" Height="10" />
+    <Image Name="MKEye_Disable" XPos="0" YPos="147" Width="16" Height="10" />
+
+    <Image Name="MK_OK_Normal" XPos="45" YPos="100" Width="6" Height="9" />
+
+    <Image Name="MK_Hide_Normal" XPos="110" YPos="148" Width="12" Height="18" />
+    <Image Name="MK_Hide_Pushed" XPos="95" YPos="148" Width="12" Height="18" />
+    <Image Name="MK_Hide_Hover" XPos="125" YPos="148" Width="12" Height="18" />
+    <Image Name="MK_Hide_Disable" XPos="80" YPos="148" Width="12" Height="18" />
+
+    <Image Name="MK_Show_Normal" XPos="170" YPos="148" Width="12" Height="18" />
+    <Image Name="MK_Show_Pushed" XPos="155" YPos="148" Width="12" Height="18" />
+    <Image Name="MK_Show_Hover" XPos="185" YPos="148" Width="12" Height="18" />
+    <Image Name="MK_Show_Disable" XPos="140" YPos="148" Width="12" Height="18" />
+                
+	</Imageset>

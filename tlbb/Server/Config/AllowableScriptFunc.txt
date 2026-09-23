@@ -192,3 +192,5 @@ INT	INT	STRING
 189	311200	OnStiletto_Four
 190	260001	AnqiConfirm
 191	260001	Anqi2Shenzhen
+192	889888	ClientQueryTrans
+193	800119	DoMoneyToJiaozi

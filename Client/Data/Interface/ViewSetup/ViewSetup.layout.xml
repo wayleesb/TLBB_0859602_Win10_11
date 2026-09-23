@@ -2,7 +2,7 @@
 <GUILayout>
     <Window Type="TLBB_MainFrame1" Name="ViewSetup_Frame">
         <Property Name="UnifiedPosition" Value="{{0.5,-192},{0.5,-178}}" />
-        <Property Name="AbsoluteSize" Value="w:340 h:330" />
+        <Property Name="AbsoluteSize" Value="w:340 h:375" />
         <Window Type="TLBB_DragTitle" Name="ViewSetup_DragTitle">
             <Property Name="AbsolutePosition" Value="x:25.000000 y:11.000000" />
             <Property Name="UnifiedSize" Value="{{1.000000,-50.000000},{0.000000,20.000000}" />
@@ -41,7 +41,7 @@
                 <Property Name="TextColor" Value="FFFFF263" />
             </Window>
             <Window Type="TLBB_SimpleMulitiTextFrame" Name="ViewSetup_ViewOperation2">
-                <Property Name="Position" Value="x:0.0 y:0.52" />
+                <Property Name="AbsolutePosition" Value="x:0.000000 y:153.000000" />
                 <Property Name="UnifiedSize" Value="{{0.5,0.000000},{0.000000,18.000000}" />
                 <Property Name="Text" Value="#{INTERFACE_XML_715}" />
                 <Property Name="HorzFormatting" Value="LeftAligned" />
@@ -49,7 +49,7 @@
                 <Property Name="TextColor" Value="FFFFF263" />
             </Window>
             <Window Type="TLBB_SimpleMulitiTextFrame" Name="ViewSetup_ViewOperation3">
-                <Property Name="Position" Value="x:0.5 y:0.52" />
+                <Property Name="AbsolutePosition" Value="x:164.000000 y:153.000000" />
                 <Property Name="UnifiedSize" Value="{{0.5,0.000000},{0.000000,18.000000}" />
                 <Property Name="Text" Value="#{INTERFACE_XML_495}" />
                 <Property Name="HorzFormatting" Value="LeftAligned" />
@@ -58,7 +58,7 @@
             </Window>
             <Window Type="TLBB_Frame_Lace3" Name="ViewSetup_ViewOperation1_Bk">
                 <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,18.000000}" />
-                <Property Name="UnifiedSize" Value="{{1.0,0.000000},{0.53,-20.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.0,0.000000},{0.0,136.000000}" />
                 <Window Type="DefaultWindow" Name="ViewSetup_Item1">
                     <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,10.000000}" />
                     <Property Name="UnifiedSize" Value="{{0.5,-5.000000},{0.000000,30.000000}" />
@@ -340,7 +340,53 @@
                         <Property Name="TextColor" Value="FFFFF263" />
                     </Window>
                 </Window>
-                <!--	Visible = False			-->
+              <Window Type="DefaultWindow" Name="ViewSetup_Item11">
+                <Property Name="UnifiedPosition" Value="{{0.5,5.000000},{0.0,80.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.5,-5.000000},{0.000000,30.000000}" />
+                <Window Type="TLBB_SimpleText" Name="ViewSetup_Item11_Text1">
+                  <Property Name="Position" Value="x:0.0 y:0.0" />
+                  <Property Name="UnifiedSize" Value="{{0.0,70.000000},{0.000000,18.000000}" />
+                  <Property Name="Text" Value="#{XSYH_xml_XX(01)}" />
+                  <Property Name="HorzFormatting" Value="LeftAligned" />
+                  <Property Name="VertFormatting" Value="VertCentred" />
+                  <Property Name="Tooltip" Value="#{XSYH_090908_01}" />
+                  <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_Slider" Name="ViewSetup_Item11_Control">
+                  <Property Name="UnifiedPosition" Value="{{0.000000,70.000000},{0.000000,0.000000}" />
+                  <Property Name="UnifiedSize" Value="{{0.0,80.000000},{0.000000,14.000000}" />
+                  <Event Name="ScrollPosChanged" Function="ViewSetup_SliderChanged(12);" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="ViewSetup_Item11_Text3">
+                  <Property Name="UnifiedPosition" Value="{{0.000000,70.000000},{0.000000,14.000000}" />
+                  <Property Name="UnifiedSize" Value="{{0.0,18.000000},{0.000000,18.000000}" />
+                  <Property Name="Text" Value="#{INTERFACE_XML_232}" />
+                  <Property Name="RiseOnClick" Value="False" />
+                  <Property Name="HorzFormatting" Value="LeftAligned" />
+                  <Property Name="VertFormatting" Value="VertCentred" />
+                  <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="ViewSetup_Item11_Text4">
+                  <Property Name="UnifiedPosition" Value="{{0.000000,103.000000},{0.000000,14.000000}" />
+                  <Property Name="UnifiedSize" Value="{{0.0,18.000000},{0.000000,18.000000}" />
+                  <Property Name="Text" Value="#{INTERFACE_XML_872}" />
+                  <Property Name="RiseOnClick" Value="False" />
+                  <Property Name="HorzFormatting" Value="LeftAligned" />
+                  <Property Name="VertFormatting" Value="VertCentred" />
+                  <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="ViewSetup_Item11_Text5">
+                  <Property Name="UnifiedPosition" Value="{{0.000000,135.000000},{0.000000,14.000000}" />
+                  <Property Name="UnifiedSize" Value="{{0.0,18.000000},{0.000000,18.000000}" />
+                  <Property Name="Text" Value="#{INTERFACE_XML_276}" />
+                  <Property Name="RiseOnClick" Value="False" />
+                  <Property Name="HorzFormatting" Value="LeftAligned" />
+                  <Property Name="VertFormatting" Value="VertCentred" />
+                  <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+              </Window>
+
+              <!--	Visible = False			-->
                 <Window Type="TLBB_SimpleText" Name="ViewSetup_Item8_Text">
                     <Property Name="Visible" Value="False" />
                     <Property Name="Position" Value="x:0.744117647 y:0.313745" />
@@ -374,11 +420,11 @@
                     <Property Name="UnifiedSize" Value="{{0.0,12.000000},{0.000000,12.000000}" />
                 </Window>
                 <Window Type="TLBB_ButtonCheck" Name="ViewSetup_Item_Check4">
-                    <Property Name="UnifiedPosition" Value="{{0.5,5.000000},{0.0,83.000000}" />
+                    <Property Name="UnifiedPosition" Value="{{0.0,4.000000},{0.0,117.000000}" />
                     <Property Name="UnifiedSize" Value="{{0.0,12.000000},{0.000000,12.000000}" />
                 </Window>
                 <Window Type="TLBB_SimpleText" Name="ViewSetup_Item11_Text">
-                    <Property Name="UnifiedPosition" Value="{{0.5,20.000000},{0.0,80.000000}" />
+                    <Property Name="UnifiedPosition" Value="{{0.0,19.000000},{0.0,114.000000}" />
                     <Property Name="UnifiedSize" Value="{{0.0,60.000000},{0.000000,18.000000}" />
                     <Property Name="Text" Value="#{INTERFACE_XML_553}" />
                     <Property Name="HorzFormatting" Value="LeftAligned" />
@@ -388,11 +434,11 @@
                     <Property Name="TextColor" Value="FFFFF263" />
                 </Window>
                 <Window Type="TLBB_ButtonCheck" Name="ViewSetup_Item_Check10">
-                    <Property Name="UnifiedPosition" Value="{{0.5,85.000000},{0.0,83.000000}" />
+                    <Property Name="UnifiedPosition" Value="{{0.0,84.000000},{0.0,117.000000}" />
                     <Property Name="UnifiedSize" Value="{{0.0,12.000000},{0.000000,12.000000}" />
                 </Window>
                 <Window Type="TLBB_SimpleText" Name="ViewSetup_Item10_Text">
-                    <Property Name="UnifiedPosition" Value="{{0.5,100.000000},{0.0,80.000000}" />
+                    <Property Name="UnifiedPosition" Value="{{0.0,99.000000},{0.0,114.000000}" />
                     <Property Name="UnifiedSize" Value="{{0.0,60.000000},{0.000000,18.000000}" />
                     <Property Name="Text" Value="#{INTERFACE_XML_575}" />
                     <Property Name="HorzFormatting" Value="LeftAligned" />
@@ -402,12 +448,12 @@
                     <Property Name="TextColor" Value="FFFFF263" />
                 </Window>
                 <Window Type="TLBB_ButtonCheck" Name="ViewSetup_Item_Miwu">
-                    <Property Name="UnifiedPosition" Value="{{0.5,5.000000},{0.0,105.000000}" />
+                    <Property Name="UnifiedPosition" Value="{{0.5,5.000000},{0.0,117.000000}" />
                     <Property Name="UnifiedSize" Value="{{0.0,12.000000},{0.000000,12.000000}" />
                     <Event Name="Clicked" Function="ViewSetup_FullScreen_Clicked();" />
                 </Window>
                 <Window Type="TLBB_SimpleText" Name="ViewSetup_Item_Miwu_Text">
-                    <Property Name="UnifiedPosition" Value="{{0.5,20.000000},{0.0,102.000000}" />
+                    <Property Name="UnifiedPosition" Value="{{0.5,20.000000},{0.0,114.000000}" />
                     <Property Name="UnifiedSize" Value="{{0.0,60.000000},{0.000000,18.000000}" />
                     <Property Name="Text" Value="#{INTERFACE_XML_1250}" />
                     <Property Name="HorzFormatting" Value="LeftAligned" />
@@ -416,10 +462,24 @@
                     <Property Name="Tooltip" Value="#{INTERFACE_XML_1251}" />
                     <Property Name="TextColor" Value="FFFFF263" />
                 </Window>
+                <Window Type="TLBB_ButtonCheck" Name="ViewSetup_Item_Bantou" >
+										<Property Name="UnifiedPosition" Value="{{0.500000,85.000000},{0.000000,117.000000}" />
+										<Property Name="UnifiedSize" Value="{{0.000000,12.000000},{0.000000,12.000000}" />
+								</Window>
+                <Window Type="TLBB_SimpleText" Name="ViewSetup_Item_Bantou_Text">
+                    <Property Name="UnifiedPosition" Value="{{0.5,100.000000},{0.0,114.000000}" />
+                    <Property Name="UnifiedSize" Value="{{0.0,60.000000},{0.000000,18.000000}" />
+                    <Property Name="Text" Value="#{SXJBT_XML_1}" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                    <Property Name="RiseOnClick" Value="False" />
+                    <Property Name="Tooltip" Value="#{SXJBT_XML_2}" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                </Window>    
             </Window>
             <Window Type="TLBB_Frame_Lace3" Name="ViewSetup_ViewOperation2_Bk">
-                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.52,18.000000}" />
-                <Property Name="UnifiedSize" Value="{{0.5,0.000000},{0.485,-42.000000}" />
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.0,171.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,164.000000},{0.0,126.000000}" />
                 <Window Type="DefaultWindow" Name="ViewSetup_Item5">
                     <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.0,10.000000}" />
                     <Property Name="UnifiedSize" Value="{{1.0,-5.000000},{0.000000,30.000000}" />
@@ -548,10 +608,55 @@
                         <Property Name="TextColor" Value="FFFFF263" />
                     </Window>
                 </Window>
+              <Window Type="DefaultWindow" Name="ViewSetup_Item14">
+                <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.0,90.000000}" />
+                <Property Name="UnifiedSize" Value="{{1.0,-5.000000},{0.000000,30.000000}" />
+                <Window Type="TLBB_SimpleText" Name="ViewSetup_Item14_Text1">
+                  <Property Name="Position" Value="x:0.0 y:0.0" />
+                  <Property Name="UnifiedSize" Value="{{0.0,70.000000},{0.000000,18.000000}" />
+                  <Property Name="Text" Value="#{XSYH_xml_XX(02)}" />
+                  <Property Name="HorzFormatting" Value="LeftAligned" />
+                  <Property Name="VertFormatting" Value="VertCentred" />
+                  <Property Name="Tooltip" Value="#{XSYH_090908_02}" />
+                  <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_Slider" Name="ViewSetup_Item14_Control">
+                  <Property Name="UnifiedPosition" Value="{{0.000000,70.000000},{0.000000,0.000000}" />
+                  <Property Name="UnifiedSize" Value="{{0.0,80.000000},{0.000000,14.000000}" />
+                  <Event Name="ScrollPosChanged" Function="ViewSetup_SliderChanged(11);" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="ViewSetup_Item14_Text2">
+                  <Property Name="UnifiedPosition" Value="{{0.000000,70.000000},{0.000000,14.000000}" />
+                  <Property Name="UnifiedSize" Value="{{0.0,18.000000},{0.000000,18.000000}" />
+                  <Property Name="Text" Value="#{INTERFACE_XML_232}" />
+                  <Property Name="RiseOnClick" Value="False" />
+                  <Property Name="HorzFormatting" Value="LeftAligned" />
+                  <Property Name="VertFormatting" Value="VertCentred" />
+                  <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="ViewSetup_Item14_Text3">
+                  <Property Name="UnifiedPosition" Value="{{0.000000,103.000000},{0.000000,14.000000}" />
+                  <Property Name="UnifiedSize" Value="{{0.0,18.000000},{0.000000,18.000000}" />
+                  <Property Name="Text" Value="#{INTERFACE_XML_872}" />
+                  <Property Name="RiseOnClick" Value="False" />
+                  <Property Name="HorzFormatting" Value="LeftAligned" />
+                  <Property Name="VertFormatting" Value="VertCentred" />
+                  <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="ViewSetup_Item14_Text4">
+                  <Property Name="UnifiedPosition" Value="{{0.000000,135.000000},{0.000000,14.000000}" />
+                  <Property Name="UnifiedSize" Value="{{0.0,18.000000},{0.000000,18.000000}" />
+                  <Property Name="Text" Value="#{INTERFACE_XML_276}" />
+                  <Property Name="RiseOnClick" Value="False" />
+                  <Property Name="HorzFormatting" Value="LeftAligned" />
+                  <Property Name="VertFormatting" Value="VertCentred" />
+                  <Property Name="TextColor" Value="FFFFF263" />
+                </Window>
+              </Window>
             </Window>
             <Window Type="TLBB_Frame_Lace3" Name="ViewSetup_ViewOperation3_Bk">
-                <Property Name="UnifiedPosition" Value="{{0.5,0.000000},{0.52,18.000000}" />
-                <Property Name="UnifiedSize" Value="{{0.5,0.000000},{0.485,-42.000000}" />
+                <Property Name="UnifiedPosition" Value="{{0.0,164.000000},{0.0,171.000000}" />
+                <Property Name="UnifiedSize" Value="{{0.0,164.000000},{0.0,126.000000}" />
                 <Window Type="TLBB_SimpleText" Name="ViewSetup_Item15_Text">
                     <Property Name="UnifiedPosition" Value="{{0.0,5.000000},{0.0,10.000000}" />
                     <Property Name="UnifiedSize" Value="{{0.0,60.000000},{0.000000,18.000000}" />

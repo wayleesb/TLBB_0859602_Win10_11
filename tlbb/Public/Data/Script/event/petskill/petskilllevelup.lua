@@ -11,7 +11,6 @@ function x311112_OnDefaultEvent(sceneId, selfId, targetId)
 	local numText = GetNumText()
 	
 	if numText == x311112_g_NumText_Main then
-		--x311112_NotifyFailTips(sceneId, selfId, "good...")
 		BeginUICommand( sceneId )
 			UICommand_AddInt( sceneId, targetId )
 		EndUICommand( sceneId )

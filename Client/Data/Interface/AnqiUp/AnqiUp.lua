@@ -113,8 +113,6 @@ function AnqiUp_OnShown()
 end
 
 function AnqiUp_Clear()
-	g_Accept_Clicked_Num = 0;
-	AnqiUp_OK:Disable();
 	if Bind_Item1 ~= -1 then
 		AnqiUp_Object1:SetActionItem(-1);
 		LifeAbility : Lock_Packet_Item(Bind_Item1,0);
@@ -256,8 +254,6 @@ function StopCareObject_AnqiUp(objCaredId)
 end
 
 function AnqiUp_Resume_Gem(nIndex)
-	g_Accept_Clicked_Num = 0;
-	AnqiUp_OK:Disable();
 	if nIndex < 81 or nIndex > 82 then
 		return
 	end

@@ -11,6 +11,8 @@ local MissionOutlineDeploy = {}
 local CurList      -- 1为任务列表,2为任务索引
 
 local Current_Clicked = -1;
+--TT53675对所有不符合规范，没有将missionparam第0位做为任务完成标志的任务脚本做特殊处理,需要特殊处理的任务脚本号列表：
+local SpecialMissionList = {200006,200031}
 
 function QuestLog_PreLoad()
 	this:RegisterEvent("TOGLE_MISSION");
@@ -22,7 +24,9 @@ function QuestLog_PreLoad()
 	this:RegisterEvent("DELETE_MISSION");
 	this:RegisterEvent("TOGLE_MISSION_OUTLINE");
 	this:RegisterEvent("UI_COMMAND")
-	
+	this:RegisterEvent("OPEN_FROM_MISSIONTRACK");
+	this:RegisterEvent("UPDATE_QUESTLOG_BY_TRACK");
+	this:RegisterEvent("UPDATE_TRACK_STATE_BUTTON");
 end
 
 function QuestLog_OnLoad()
@@ -46,19 +50,18 @@ function QuestLog_OnEvent(event)
 --		return;
 --	end
 
-	
 	if(event == "UI_COMMAND" and tonumber(arg0) == 831020) then
 			QuestLog_UpdateListbox();
 			QuestLog_UpdateMissionOutline();
-			this:TogleShow();
+			QuestLog_ShowWindow();
   end
 	
 	if(event == "TOGLE_MISSION" ) then
 			QuestLog_UpdateListbox();
-			this:TogleShow();
+			QuestLog_ShowWindow();
 	elseif(event == "TOGLE_MISSION_OUTLINE" ) then
 			QuestLog_UpdateMissionOutline();
-			this:TogleShow();
+			QuestLog_ShowWindow();
 	elseif(event == "UPDATE_MISSION" ) then
 			if not this:IsVisible() then
 				return;
@@ -100,8 +103,47 @@ function QuestLog_OnEvent(event)
 			DataPool:GetPlayerMission_DelActivePos(Current_Select);
 			return;
 		end
-	end
+	elseif (event == "OPEN_FROM_MISSIONTRACK") then
 		
+		Current_Select = tonumber(arg0)
+		if not this:IsVisible() then
+			First_Open = 0;
+			
+			--全部展开
+			for i=1,200 do
+				MissionPucker[i] = 1;
+			end;
+			
+			QuestLog_UpdateListbox();
+			QuestLog_ShowWindow();
+		else
+			--QuestLog_UpdateListbox();
+			this:Hide();
+		end
+	elseif (event == "UPDATE_QUESTLOG_BY_TRACK") then
+		if this:IsVisible() then
+			QuestLog_UpdateListbox();
+		end
+	elseif (event == "UPDATE_TRACK_STATE_BUTTON") then
+		local nType = tonumber(arg0);
+		if not this:IsVisible() then
+			return;
+		end
+		
+		if (nType == 0) then  -- MissionTrack State Changed
+			if (DataPool:IsTrackFuncShow(1) > 0) then
+				QuestLog_Mode1:SetCheck(1);
+			else
+				QuestLog_Mode1:SetCheck(0);
+			end
+		elseif (nType == 1) then  -- CampaignTrack StateChanged
+			if (DataPool:IsTrackFuncShow(2) > 0) then
+				QuestLog_Mode2:SetCheck(1);
+			else
+				QuestLog_Mode2:SetCheck(0);
+			end
+		end
+	end
 end
 
 function QuestLog_OnShown()
@@ -176,7 +218,7 @@ function QuestLog_UpdateMissionOutline()
 	
     --QuestLog_Listbox : EnsureItemIsVisable( Current_Clicked );
     QuestLog_Listbox : SetCurrentFirstItem( FirstItem );
-
+	QuestLog_TrackButtonState();
     --AxTrace( 0, 0, Current_Clicked )
 	
 end
@@ -281,21 +323,34 @@ function QuestLog_UpdateListbox()
 --------------------------------------------------
 						local strOKFail = "";
 					--显示任务是否已完成或已失败
-						if( DataPool:GetPlayerMission_Display(i-1,1) > 0 ) then
-							local Mission_Variable = DataPool:GetPlayerMission_Variable(i-1,0);
-
---							local Mission_WhetherComplete = DataPool:GetMission_WhetherComplete(i-1);
---							if( Mission_WhetherComplete > 0 ) then
---								strOKFail = "完成";
---							end
-							if(Mission_Variable >0) then
-								if(Mission_Variable == 1) then
-									strOKFail = "完成";
-								elseif(Mission_Variable == 2) then
-									strOKFail = "失败";
-								end
+						local Mission_Variable = DataPool:GetPlayerMission_Variable(i-1,0);
+--						local Mission_WhetherComplete = DataPool:GetMission_WhetherComplete(i-1);
+--						if( Mission_WhetherComplete > 0 ) then
+--							strOKFail = "完成";
+--						end
+--TT53675对于所有没有用missionparam第0位表示任务是否完成的任务，使用IsMissionSuccess判断任务是否完成
+                      local IsSpecial = 0
+	                  local nScriptId = DataPool:GetPlayerMission_Display(i-1,7)
+	                  for i, findId in SpecialMissionList do
+		                   if nScriptId == findId then
+			                     IsSpecial = 1
+			                     break
+		                    end
+	                  end
+	                  if nScriptId >= 1020000 and nScriptId <= 1029999 then --所有的探索配表任务都需要特殊处理
+	   	                  IsSpecial = 1
+	                  end
+	                   if IsSpecial == 1 then
+		                    Mission_Variable = IsMissionSuccess(i-1)
+		               end
+						if(Mission_Variable >0) then
+							if(Mission_Variable == 1) then
+								strOKFail = "完成";
+							elseif(Mission_Variable == 2) then
+								strOKFail = "失败";
 							end
-						end	
+						end
+
 
 ----------------------------------------------------
 						if(nMissionLevel - nMyLevel < -11) then
@@ -318,7 +373,13 @@ function QuestLog_UpdateListbox()
 --						AxTrace(0,0,"First Current_Select =".. Current_Select);
 		--fix				QuestLog_Listbox:AddItem("    " .. nMissionLevel .." " .. strInfo .. " " .. strOKFail, i-1 , color);
 
-						Constitutes = {"    " .. nMissionLevel .." " .. strInfo .. " " .. strOKFail,i-1,color,nMissionLevel}
+						local nMissionTrackType = DataPool:GetPlayerMissionTrackType(i-1);
+						local nIsMissionTrackOpen = DataPool:IsMissionTrackOpen(i-1);
+						if (nIsMissionTrackOpen > 0 and nMissionTrackType > 0) then
+							Constitutes = {"   √" .. nMissionLevel .." " .. strInfo .. " " .. strOKFail,i-1,color,nMissionLevel}
+						else
+							Constitutes = {"     " .. nMissionLevel .." " .. strInfo .. " " .. strOKFail,i-1,color,nMissionLevel}
+						end
 						table.insert(Sequence_OnefoldGenre,Constitutes)
 --						local xx;
 --						for i,xx in ipairs(Constitutes) do 
@@ -380,6 +441,7 @@ function QuestLog_UpdateListbox()
 		QuestLog_Listbox : SetCurrentFirstItem(Current_Clicked);
 		Current_Clicked = -1
 	end
+	QuestLog_TrackButtonState();
 --
 end
 
@@ -405,7 +467,7 @@ if( 2 == CurList ) then
     QuestLog_MissionOutlineClicked()
     return
 end
-
+		
 		local MissionParam_Index = 0;
 		local nSelIndex = QuestLog_Listbox:GetFirstSelectItem();
 		local Mission_Variable;
@@ -495,10 +557,23 @@ end
 		end
 		
 --		AxTrace(0, 0, "strInfo= " .. strInfo );
---前面是否有一位显示任务是否已完成
-		if( DataPool:GetPlayerMission_Display(nSelIndex,1) > 0 ) then
-			MissionParam_Index = MissionParam_Index + 1;
-		end	
+	--前面是否有一位显示任务是否已完成,第一位为完成信息
+		--TT53675对所有不符合规范，没有将missionparam第0位做为任务完成标志的任务脚本做特殊处理  
+		local IsSpecial = 0
+	    local nScriptId1 = DataPool:GetPlayerMission_Display(nSelIndex,7)
+	    for i, findId in SpecialMissionList do
+		    if nScriptId1 == findId then
+			     IsSpecial = 1
+			     break
+		    end
+	   end
+	   if nScriptId1>=1020000 and nScriptId1<=1029999 then --所有的探索配表任务都需要特殊处理
+	   	    IsSpecial = 1
+	   end
+	   if IsSpecial==0 then
+		    MissionParam_Index = MissionParam_Index + 1;
+		end
+
 --		for i =0,7 do
 --			AxTrace(0,0, "variable [" .. i .."] = " .. DataPool:GetPlayerMission_Variable(nSelIndex,i) );
 --		end
@@ -548,17 +623,30 @@ end
 			end
 		end	
 
---显示任务当前环数
+		--显示任务当前环数，misInfo的第三号参数为环数，通过mission data显示
+		--yanghui，设置标志，通过mission data显示环数还是mission param显示环数
+		local bShowByMD = 0;
 		local nRound = DataPool:GetPlayerMission_Display(nSelIndex,3);
 		if( nRound >= 0 ) then
 			Mission_Variable = DataPool:GetPlayerMission_DataRound(nRound);
 			
 			if(Mission_Variable >= 0) then
---				QuestLog_Desc:AddTextElement(" ");
 				QuestLog_Desc:AddTextElement("#r#Y任务当前环数：#W"..Mission_Variable);
---				AxTrace(0,0, "环数 [" .. nSelIndex .."]=  "..MissionParam_Index);
+				bShowByMD = 1;
 			end
-		end	
+		end
+		
+		--yanghui，千寻任务使用mission param增加环数显示
+		if (bShowByMD == 0) then
+			Mission_Variable = DataPool:GetPlayerMission_Variable(nSelIndex, 2);
+			if (Mission_Variable == 229024) then
+				Mission_Variable = DataPool:GetPlayerMission_Variable(nSelIndex, 5);
+				if(Mission_Variable >= 0) then
+					QuestLog_Desc:AddTextElement("#r#Y任务当前环数：#W"..Mission_Variable);
+				end
+			end
+		end
+
 
 --显示任务银票数量
 		if( DataPool:GetPlayerMission_Display(nSelIndex,4) > 0 ) then
@@ -625,11 +713,9 @@ end
 			
 			
 --			QuestLog_Desc:AddItemElement(nItemID, nNum, 0);
-			if( DataPool:GetPlayerMission_Display(nSelIndex,1) > 0 ) then
-				local Mission_Variable2 = DataPool:GetPlayerMission_Variable(nSelIndex,0);
-				if Mission_Variable2 > 0 then
-					Mission_Variable = nNum
-				end
+			local Mission_Variable2 = DataPool:GetPlayerMission_Variable(nSelIndex,0);
+			if Mission_Variable2 > 0 then
+				Mission_Variable = nNum
 			end
 			QuestLog_Desc:AddTextElement(szName .. " ： " .. Mission_Variable .. " / " .. nNum);
 		end
@@ -761,6 +847,7 @@ end
 --				QuestLog_Desc:AddItemElement(nItemID, nNum, 1 ,1);
 			end
 		end
+		QuestLog_TrackButtonState();
 end
 
 function Abnegate_Quest()
@@ -778,4 +865,154 @@ function CompareTable(table_a,table_b)
 	else
 		return false
 	end
+end
+
+function QuestLog_MissionTrack_Clicked()
+	local nCheck = QuestLog_Mode1:GetCheck();  --为点击后的状态
+	if (nCheck > 0) then
+		OpenWindow("MissionTrack");
+		DataPool:SetTrackFuncShow(1, 1);
+	else
+		CloseWindow("MissionTrack");
+		DataPool:SetTrackFuncShow(1, 0);
+	end
+end
+
+function QuestLog_CampaignTrack_Clicked()
+	local nCheck = QuestLog_Mode2:GetCheck();  --为点击后的状态
+	if (nCheck > 0) then
+		OpenWindow("CampaignTrack");
+		DataPool:SetTrackFuncShow(2, 1);
+	else
+		CloseWindow("CampaignTrack");
+		DataPool:SetTrackFuncShow(2, 0);
+	end
+end
+
+function QuestLog_ShowWindow()
+	this:TogleShow();
+	local nMissionTrackShow = DataPool:IsTrackFuncShow(1);
+	local nCampaignTrackShow = DataPool:IsTrackFuncShow(2);
+	if (nMissionTrackShow > 0) then
+		QuestLog_Mode1:SetCheck(1);
+	else
+		QuestLog_Mode1:SetCheck(0);
+	end
+	if (nCampaignTrackShow > 0) then
+		QuestLog_Mode2:SetCheck(1);
+	else
+		QuestLog_Mode2:SetCheck(0);
+	end
+end
+
+function QuestLog_TrackButtonState()
+	if( 1 ~= CurList ) then
+		QuestLog_Refuse:SetText("#{INTERFACE_XML_301}");
+		QuestLog_Refuse:Enable();
+    	return
+	end
+	
+	local nSelIndex = QuestLog_Listbox:GetFirstSelectItem();
+	local nCanTrack = DataPool:GetPlayerMissionTrackType(nSelIndex);
+	local MissionKind = DataPool:GetPlayerMission_Kind(nSelIndex);
+	--关系任务不可追踪
+	if (nCanTrack > 0 and MissionKind ~= 10) then
+		local nTrackOpen = DataPool:IsMissionTrackOpen(nSelIndex);
+		if (nTrackOpen > 0) then	
+			QuestLog_Refuse:SetText("取消追踪");
+		else
+			QuestLog_Refuse:SetText("开始追踪");
+		end
+		QuestLog_Refuse:Enable();
+	else
+		QuestLog_Refuse:SetText("不可追踪");
+		QuestLog_Refuse:Disable();
+	end
+end
+
+function QuestLog_TrackCancelOrOpen()
+	if( 1 ~= CurList ) then
+			--可接任务关闭
+			this:Hide();
+    	return
+	end
+	
+	local nSelIndex = QuestLog_Listbox:GetFirstSelectItem();
+	local nCanTrack = DataPool:GetPlayerMissionTrackType(nSelIndex);
+	if (nCanTrack > 0) then
+		local nTrackOpen = DataPool:IsMissionTrackOpen(nSelIndex);
+		if (nTrackOpen > 0) then	
+			DataPool:SetMissionTrackOpen(nSelIndex, 0);
+		else
+			if (DataPool:IsTrackFuncShow(1) == 0) then
+				OpenWindow("MissionTrack");
+				DataPool:SetTrackFuncShow(1, 1);
+			end
+			DataPool:SetMissionTrackOpen(nSelIndex, 1);
+		end
+		QuestLog_UpdateListbox();
+		DataPool:UpdateMissionTrack();
+	end
+end
+--TT53675对所有不符合规范，没有将missionparam第0位做为任务完成标志的任务脚本做特殊处理，判断任务是否完成
+function IsMissionSuccess(nSelIndex)
+       local MissionParam_Index = 0
+       local Mission_Variable = 0
+--任务需要杀的npc		
+		local nDemandKillNum,Kill_Random_Type = DataPool:GetPlayerMissionDemandKill_Num(nSelIndex);
+		if( nDemandKillNum > 0 ) then
+			for i=1, nDemandKillNum do
+				--    需要的NPC，需要NPC ID，需要多少个
+				local nNPCName, nNum = DataPool:GetPlayerMissionDemand_NPC(i-1,Kill_Random_Type,nSelIndex);
+				Mission_Variable = DataPool:GetPlayerMission_Variable(nSelIndex,MissionParam_Index,Kill_Random_Type,i-1);
+				MissionParam_Index = MissionParam_Index + 1;
+				if Mission_Variable < nNum then
+					return 0
+				end
+			end
+		end
+
+--任务需要的物品
+		local nDemandNum,Item_Random_Type= DataPool:GetPlayerMissionDemand_Num(nSelIndex);
+		if( nDemandNum > 0 ) then
+			for i=1, nDemandNum do
+				--    需要的类型，需要物品ID，需要多少个
+				local szName,nItemID, nNum = DataPool:GetPlayerMissionDemand_Item(i-1,Item_Random_Type,nSelIndex);
+				Mission_Variable = DataPool : GetPlayerMission_ItemCountNow(nItemID)
+				 if Mission_Variable < nNum then
+					return 0
+				 end
+			 end
+		 end
+
+-----------------------------------------------------------------------------------
+--任务自定义的物品
+		local nCustomNum = DataPool:GetPlayerMissionCustom_Num(nSelIndex);
+		if( nCustomNum > 0 ) then
+			for i=1, nCustomNum do
+				--    需要的NPC，需要NPC ID，需要多少个
+				local strCustom, nNum = DataPool:GetPlayerMissionCustom(i-1);
+				Mission_Variable = DataPool:GetPlayerMission_Variable(nSelIndex,MissionParam_Index);
+				MissionParam_Index = MissionParam_Index + 1;
+				if Mission_Variable < nNum then
+				    return 0
+				end
+			end
+		end
+
+-----------------------------------------------------------------------------------	
+
+--任务自定义的随机物品 zz添加
+
+	local nRandomCustomNum = DataPool:GetPlayerMissionRandomCustom_Num(nSelIndex);
+	if( nRandomCustomNum > 0 ) then
+		for i=1,nRandomCustomNum do
+			local strCustom, nNeedNum,nCompleteNum = DataPool:GetPlayerMissionRandomCustom(i-1,nSelIndex);
+			if nCompleteNum < nNeedNum then
+				return 0
+			end
+		end	
+	end
+	
+	return 1
 end

@@ -885,5 +885,10 @@
    <Imageset Name="GemSP" Filename="Icons/GemSP.imageset.xml" />
   <Imageset Name="SlotUI02" Filename="Common/SlotUI02.imageset.xml"/>
   <Imageset Name="DressBox" Filename="Common/DressBox.imageset.xml"/>
+  <FalagardMapping WindowType="TLBB_ListBoxTransparent" TargetType="Falagard/ListBoxEx" LookNFeel="TLBB_Look_ListBoxTransparent" />
+  <FalagardMapping WindowType="TLBB_SingleTrackOpen" TargetType="Falagard/Button" LookNFeel="TLBB_Look_SingleTrackOpen" />
+  <FalagardMapping WindowType="TLBB_SingleTrackClose" TargetType="Falagard/Button" LookNFeel="TLBB_Look_SingleTrackClose" />
+  <FalagardMapping WindowType="TLBB_Scrollbar_Track" TargetType="Falagard/Scrollbar" LookNFeel="TLBB_Look_Scrollbar_Track" />
+  <Imageset Name="MissionAtrack" Filename="Common/MissionAtrack.imageset.xml" />
 </GUIScheme>
 

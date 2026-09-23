@@ -7,7 +7,7 @@ x000101_g_scriptId = 000101
 x000101_g_shoptableindex=17
 
 --所拥有的事件ID列表
-x000101_g_eventList={800107}  --del 311112  珍兽技能升级
+x000101_g_eventList={800107,311112}  --珍兽技能升级
 
 x000101_g_miscEventId = 311111;
 

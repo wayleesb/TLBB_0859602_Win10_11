@@ -5,7 +5,10 @@ local g_currentIndex = 0;
 local Recycle_Type = -1;
 local Recycle_CurSelectItem = -1
 local g_FrameInfo = -1;
+local g_AutoMoveRequest = 0;
 local FrameInfoList = {
+	AUTOMOVE_CONFIRM_NOPKVALUE = 300,
+	AUTOMOVE_CONFIRM_UPPKVALUE = 301,
 	STALL_RENT_FRAME			= 1,
 	DISCARD_ITEM_FRAME			= 2,
 	CANNT_DISCARD_ITEM			= 3,
@@ -143,6 +146,8 @@ end
 -- OnLoad()
 --===============================================
 function MessageBox_Self_PreLoad()
+	this:RegisterEvent("AUTOMOVE_CONFIRM_NOPKVALUE");
+	this:RegisterEvent("AUTOMOVE_CONFIRM_UPPKVALUE");
 	--this:RegisterEvent("MSGBOX_ACCEPTDUEL");
 	this:RegisterEvent("MSGBOX_MAKESUREPVPCHALLENGE");
     this:RegisterEvent("MENU_SHOWACCEPTCHANGEPVP");
@@ -459,6 +464,18 @@ end
 -- OnEvent()
 --===============================================
 function MessageBox_Self_OnEvent(event)
+	if event == "AUTOMOVE_CONFIRM_NOPKVALUE" or event == "AUTOMOVE_CONFIRM_UPPKVALUE" then
+		local frame = FrameInfoList.AUTOMOVE_CONFIRM_NOPKVALUE
+		if event == "AUTOMOVE_CONFIRM_UPPKVALUE" then frame = FrameInfoList.AUTOMOVE_CONFIRM_UPPKVALUE end
+		CancelLastOp(frame)
+		g_FrameInfo = frame
+		g_AutoMoveRequest = tonumber(arg1)
+		MessageBox_Self_Text:SetText(tostring(arg0))
+		MessageBox_Self_DragTitle:SetText("#gFF0FA0自动寻路")
+		MessageBox_Self_UpdateRect()
+		this:Show()
+		return
+	end
 	if event == "GEM_COMBINED_CONFIRM" then
 		
 		GemCombinedData[1] = tonumber( arg0 )
@@ -1848,6 +1865,11 @@ end
 -- 点击确定（IDOK）
 --===============================================
 function MessageBox_Self_OK_Clicked()
+	if g_FrameInfo == FrameInfoList.AUTOMOVE_CONFIRM_NOPKVALUE or g_FrameInfo == FrameInfoList.AUTOMOVE_CONFIRM_UPPKVALUE then
+		StartAutoMove(g_AutoMoveRequest)
+		this:Hide()
+		return
+	end
 	
 	if g_FrameInfo == FrameInfoList.SAFEBOX_LOCK_CONFIRM then
 		SafeBox("reallock");

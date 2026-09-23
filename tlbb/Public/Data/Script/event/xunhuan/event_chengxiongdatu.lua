@@ -1244,7 +1244,7 @@ function x229020_OnUseItem( sceneId, selfId, bagIndex )
 	--计算玩家与目标点的距离
 	local Distance = floor(sqrt((treasureX-PlayerX)*(treasureX-PlayerX)+(treasureZ-PlayerZ)*(treasureZ-PlayerZ)))
 	
-	local str = format("你只有到%s的[%d,%d]才能使用此惩恶令", x229020_GetSceneNameById(scene), treasureX, treasureZ)
+	local str = ScriptGlobal_Format("#{CXGB_240621_40}", x229020_GetSceneNameById(scene), tostring(treasureX), tostring(treasureZ), tostring(scene), "惩恶令")
 	if sceneId ~= scene then
 		BeginEvent(sceneId)
 			AddText(sceneId, str)

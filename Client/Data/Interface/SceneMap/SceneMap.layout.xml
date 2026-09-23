@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
 <GUILayout>
     <Window Type="TLBB_MainFrame0" Name="SceneMap_Frame">
-        <Property Name="UnifiedPosition" Value="{{0.0,75},{0.0,40}}" />
-        <Property Name="UnifiedSize" Value="{{1.000000,-150.000000},{1.000000,-80.000000}" />
+        <Property Name="UnifiedPosition" Value="{{0.0000,10.000},{0.0000,40.000}}" />
+        <Property Name="UnifiedSize" Value="{{1.000000,-165.000000},{1.000000,-88.000000}" />
         <Property Name="AlwaysOnTop" Value="true" />
         <Window Type="TLBB_ButtonHelp" Name="ScemeMap_Help">
             <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,14.000000}" />
@@ -34,10 +34,13 @@
 						<Property Name="IconImage" Value="type:Icon2 set:UIIcons image:Map_Teammate" />
 						<Property Name="IconImage" Value="type:Icon15 set:UIIcons image:Map_Gurid" />
 						<Property Name="IconImage" Value="type:Icon8 set:UIIcons image:Map_NPC" />
+						<Property Name="IconImage" Value="type:Icon16 set:UIIcons image:Map_Trip" />
             <Property Name="AnimateImage" Value="type:Animate8 animate:Minimap_Direction2" />
+            <Property Name="AnimateImage" Value="type:Animate16 animate:Minimap_Direction2" />
             <Property Name="AnimateImage" Value="type:Animate9 animate:Minimap_Direction" />
             <Property Name="AnimateImage" Value="type:Animate10 animate:Minimap_arrow" />
             <Property Name="FlashAnimateImage" Value="type:FlashAnimateImage8 animate:ActiveFlash" />
+            <Property Name="FlashAnimateImage" Value="type:FlashAnimateImage16 animate:ActiveFlash" />
             <Property Name="MouseHollow" Value="false" />
             <Event Name="MouseMove" Function="SceneMap_UpdateInfo();" />
             <Event Name="MouseEnter" Function="SceneMap_UpdateInfo();" />

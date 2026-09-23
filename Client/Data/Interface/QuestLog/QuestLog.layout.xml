@@ -2,10 +2,10 @@
 <GUILayout>
     <Window Type="TLBB_MainFrameNULL" Name="QuestLog_Frame">
         <Property Name="UnifiedPosition" Value="{{0.000000,200.000000},{0.070000,10.899997}}" />
-        <Property Name="AbsoluteSize" Value="w:368 h:490" />
+        <Property Name="AbsoluteSize" Value="w:368 h:520" />
         <Window Type="TLBB_DragTitle" Name="QuestLog_Text">
             <Property Name="AbsolutePosition" Value="x:120.000000 y:25.000000" />
-            <Property Name="UnifiedSize" Value="{{1.000000,-145.000000},{0.000000,20.000000}" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-145.000000},{0.000000,20.000000}}" />
             <Property Name="Text" Value="#{INTERFACE_XML_52}" />
             <Property Name="Font" Value="YouYuan11.25" />
             <Property Name="HorzFormatting" Value="HorzCentred" />
@@ -15,7 +15,7 @@
         </Window>
         <Window Type="TLBB_MainFrame1" Name="QuestLog_MainFrame">
             <Property Name="AbsolutePosition" Value="x:48.000000 y:14.000000" />
-            <Property Name="AbsoluteSize" Value="w:320 h:475" />
+            <Property Name="AbsoluteSize" Value="w:320 h:505" />
             <Event Name="Shown" Function="QuestLog_OnShown();" />
             <Property Name="RiseOnClick" Value="False" />
             <Window Type="TLBB_StaticImageNULL" Name="QuestLog_Help_Bk">
@@ -25,83 +25,113 @@
                 <Property Name="MouseHollow" Value="true" />
             </Window>
             <Window Type="TLBB_ButtonHelp" Name="QuestLog_Help">
-                <Property Name="UnifiedPosition" Value="{{0.000000,52.000000},{0.000000,14.000000}" />
+                <Property Name="UnifiedPosition" Value="{{0.000000,52.000000},{0.000000,14.000000}}" />
                 <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
                 <Property Name="Text" Value="TLBB_ButtonHelp" />
                 <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*QuestLog&quot;);' />
             </Window>
             <Window Type="TLBB_ButtonClose" Name="QuestLog_Close">
-                <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}" />
+                <Property Name="UnifiedPosition" Value="{{1.000000,-19.000000},{0.000000,14.000000}}" />
                 <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
                 <Property Name="Text" Value="TLBB_ButtonClose" />
                 <Event Name="Clicked" Function="this:Hide();" />
             </Window>
             <Window Type="DefaultWindow" Name="QuestLog_Frame_Client">
                 <Property Name="AbsolutePosition" Value="x:7.000000 y:36.000000" />
-                <Property Name="UnifiedSize" Value="{{1.000000,-13.000000},{1.000000,-55.000000}" />
+                <Property Name="AbsoluteSize" Value="w:307.000000 h:465.000000" />
                 <Window Type="TLBB_SimpleMulitiTextFrame" Name="QuestLog_Amount">
-                    <Property Name="UnifiedPosition" Value="{{1.000000,-61.000000},{0.000000,6.000000}" />
-                    <Property Name="UnifiedSize" Value="{{0.000000,60.000000},{0.000000,24.000000}" />
+                    <Property Name="AbsolutePosition" Value="x:246.000000 y:21.000000" />
+                    <Property Name="AbsoluteSize" Value="w:60.000000 h:24.000000" />
                     <Property Name="Text" Value="#{INTERFACE_XML_571}" />
                     <Property Name="TextColor" Value="FFFFF263" />
                     <Property Name="HorzFormatting" Value="HorzCentred" />
                     <Property Name="VertFormatting" Value="VertCentred" />
                 </Window>
+                <Window Type="TLBB_ButtonCheck" Name="QuestLog_Mode1" >
+                    <Property Name="AbsolutePosition" Value="x:49.000000 y:5.000000" />
+                    <Property Name="AbsoluteSize" Value="w:12.000000 h:12.000000" />
+                    <Property Name="CheckMode" Value="0" />
+                    <Property Name="Tooltip" Value="#{RWZZ_090601_08}" />
+                    <Event Name="Clicked" Function="QuestLog_MissionTrack_Clicked();" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="QuestLog_Text1" >
+                    <Property Name="AbsolutePosition" Value="x:65.000000 y:1.000000" />
+                    <Property Name="AbsoluteSize" Value="w:60.000000 h:20.000000" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                    <Property Name="Text" Value="#{RWZZ_090601_06}" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                </Window>
+                <Window Type="TLBB_ButtonCheck" Name="QuestLog_Mode2" >
+                    <Property Name="AbsolutePosition" Value="x:149.000000 y:5.000000" />
+                    <Property Name="AbsoluteSize" Value="w:12.000000 h:12.000000" />
+                    <Property Name="CheckMode" Value="0" />
+                    <Property Name="Tooltip" Value="#{RWZZ_090601_09}" />
+                    <Event Name="Clicked" Function="QuestLog_CampaignTrack_Clicked();" />
+                </Window>
+                <Window Type="TLBB_SimpleText" Name="QuestLog_Text2" >
+                    <Property Name="AbsolutePosition" Value="x:165.000000 y:1.000000" />
+                    <Property Name="AbsoluteSize" Value="w:60.000000 h:20.000000" />
+                    <Property Name="HorzFormatting" Value="LeftAligned" />
+                    <Property Name="Text" Value="#{RWZZ_090601_07}" />
+                    <Property Name="TextColor" Value="FFFFF263" />
+                    <Property Name="VertFormatting" Value="VertCentred" />
+                </Window>
                 <Window Type="TLBB_ButtonCommon" Name="QuestLog_huodongricheng">
-                    <Property Name="UnifiedPosition" Value="{{0.000000,171.000000},{0.000000,6.000000}" />
-                    <Property Name="UnifiedSize" Value="{{0.000000,65.000000},{0.000000,24.000000}" />
+                    <Property Name="AbsolutePosition" Value="x:171.000000 y:21.000000" />
+                    <Property Name="AbsoluteSize" Value="w:65.000000 h:24.000000" />
                     <Property Name="Text" Value="#{INTERFACE_XML_1161}"/>
                     <Event Name="Clicked" Function="QuestLog_HitRiCheng();" />
                 </Window>                 
                 <Window Type="DefaultWindow" Name="QuestLog_CheckFrame">
-                    <Property Name="UnifiedPosition" Value="{{0.000000,41.000000},{0.000000,6.000000}" />
-                    <Property Name="UnifiedSize" Value="{{0.000000,131.000000},{0.000000,24.000000}" />
+                    <Property Name="AbsolutePosition" Value="x:41.000000 y:21.000000" />
+                    <Property Name="AbsoluteSize" Value="w:131.000000 h:24.000000" />
                     <Window Type="TLBB_ButtonCheckForRMBShop" Name="QuestLog_CurrentMission">
-                        <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,0.000000}" />
-                        <Property Name="UnifiedSize" Value="{{0.000000,65.000000},{0.000000,24.000000}" />
+                        <Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+                        <Property Name="AbsoluteSize" Value="w:65.000000 h:24.000000" />
                         <Property Name="Text" Value="#{INTERFACE_XML_220}" />
                         <Property Name="CheckMode" Value="1" />
                         <Event Name="MouseLButtonDown" Function="QuestLog_UpdateListbox();" />
                     </Window>
                     <Window Type="TLBB_ButtonCheckForRMBShop" Name="QuestLog_AcceptMission">
-                        <Property Name="UnifiedPosition" Value="{{0.000000,65.000000},{0.000000,0.000000}" />
-                        <Property Name="UnifiedSize" Value="{{0.000000,65.000000},{0.000000,24.000000}" />
+                        <Property Name="AbsolutePosition" Value="x:65.000000 y:0.000000" />
+                        <Property Name="AbsoluteSize" Value="w:65.000000 h:24.000000" />
                         <Property Name="Text" Value="#{INTERFACE_XML_407}" />
                         <Property Name="CheckMode" Value="1" />
                         <Event Name="MouseLButtonDown" Function="QuestLog_UpdateMissionOutline();" />
                     </Window>                   
                 </Window>
                 <Window Type="TLBB_ListBoxCommon" Name="QuestLog_Listbox">
-                    <Property Name="UnifiedPosition" Value="{{0.0200000,0.000000},{0.000000,30.000000}" />
-                    <Property Name="UnifiedSize" Value="{{0.96000000,0.000000},{0.35,20.000000}" />
+                    <Property Name="AbsolutePosition" Value="x:6.000000 y:45.000000" />
+                    <Property Name="AbsoluteSize" Value="w:295.000000 h:172.000000" />
                     <Property Name="ForceHorzScrollbar" Value="False" />
                     <Event Name="ItemSelectionChanged" Function="QuestLog_ListBox_SelectChanged();" />
                 </Window>
                 <Window Type="TLBB_Frame_Lace4" Name="QuestLog_Bk">
-                    <Property Name="UnifiedPosition" Value="{{0.0200000,0.000000},{0.35,50.000000}" />
-                    <Property Name="UnifiedSize" Value="{{0.96000000,0.000000},{0.65,-75.000000}" />
+                    <Property Name="AbsolutePosition" Value="x:6.000000 y:217.000000" />
+                    <Property Name="AbsoluteSize" Value="w:295.000000 h:208.000000" />
                     <Window Type="TLBB_SimpleText" Name="QuestLog_TargetMission">
-                        <Property Name="UnifiedPosition" Value="{{0.05,0.000000},{0.000000,8.000000}" />
-                        <Property Name="UnifiedSize" Value="{{0.9,0.000000},{0.000000,16.000000}" />
+                        <Property Name="AbsolutePosition" Value="x:15.000000 y:8.000000" />
+                        <Property Name="AbsoluteSize" Value="w:266.000000 h:16.000000" />
                         <Property Name="HorzFormatting" Value="HorzCentred" />
                         <Property Name="VertFormatting" Value="VertCentred" />
                         <Property Name="Text" Value="#{INTERFACE_XML_574}" />
                     </Window>
                     <Window Type="TLBB_ComplexWindow" Name="QuestLog_Desc">
-                        <Property Name="UnifiedPosition" Value="{{0.000000,10.000000},{0.000000,24.000000}" />
-                        <Property Name="UnifiedSize" Value="{{1.000000,-20.000000},{1.000000,-32.000000}" />
+                        <Property Name="AbsolutePosition" Value="x:10.000000 y:24.000000" />
+                        <Property Name="AbsoluteSize" Value="w:275.000000 h:176.000000" />
                     </Window>
                 </Window>
                 <Window Type="TLBB_SimpleText" Name="QuestLog_Time">
-                    <Property Name="UnifiedPosition" Value="{{0.0400000,0.000000},{1.0,-20.000000}" />
-                    <Property Name="UnifiedSize" Value="{{0.000000,148.000000},{0.000000,20.000000}" />
+                    <Property Name="AbsolutePosition" Value="x:12.000000 y:430.000000" />
+                    <Property Name="AbsoluteSize" Value="w:148.000000 h:20.000000" />
                     <Property Name="Text" Value="#{INTERFACE_XML_383}" />
                     <Property Name="HorzFormatting" Value="LeftAligned" />
                     <Property Name="VertFormatting" Value="VertCentred" />
                     <Property Name="TextColor" Value="FFFFF263" />
                     <Window Type="TLBB_StopWatch" Name="QuestLog_Watch">
-                        <Property Name="UnifiedPosition" Value="{{1.000000,-55.000000},{0.000000,0.000000}" />
-                        <Property Name="UnifiedSize" Value="{{0.000000,50.000000},{0.000000,20.000000}" />
+                        <Property Name="AbsolutePosition" Value="x:93.000000 y:0.000000" />
+                        <Property Name="AbsoluteSize" Value="w:50.000000 h:20.000000" />
                         <Property Name="HorzFormatting" Value="LeftAligned" />
                         <Property Name="VertFormatting" Value="VertCentred" />
                         <Property Name="MouseHollow" Value="True" />
@@ -109,26 +139,26 @@
                     </Window>
                 </Window>
                 <Window Type="TLBB_Frame_Lace5" Name="QuestLog_Blank">
-                    <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-20.000000}" />
-                    <Property Name="UnifiedSize" Value="{{1.000000,-140.000000},{0.000000,20.000000}" />
+                    <Property Name="AbsolutePosition" Value="x:0.000000 y:430.000000" />
+                    <Property Name="AbsoluteSize" Value="w:182.000000 h:20.000000" />
                 </Window>
                 <Window Type="TLBB_ButtonCommon" Name="QuestLog_AcceptMission_Button">
-                    <Property Name="UnifiedPosition" Value="{{1.000000,-140.000000},{1.000000,-20.000000}" />
-                    <Property Name="AbsoluteSize" Value="w:80.000000 h:20.000000" />
+                    <Property Name="AbsolutePosition" Value="x:182.000000 y:430.000000" />
+                    <Property Name="AbsoluteSize" Value="w:65.000000 h:20.000000" />
                     <Property Name="Text" Value="#{INTERFACE_XML_372}" />
                     <Event Name="Clicked" Function="Abnegate_Quest();" />
                 </Window>
                 <Window Type="TLBB_ButtonCommon" Name="QuestLog_Stop">
-                    <Property Name="UnifiedPosition" Value="{{1.000000,-140.000000},{1.000000,-20.000000}" />
-                    <Property Name="AbsoluteSize" Value="w:80.000000 h:20.000000" />
+                    <Property Name="AbsolutePosition" Value="x:182.000000 y:430.000000" />
+                    <Property Name="AbsoluteSize" Value="w:65.000000 h:20.000000" />
                     <Property Name="Text" Value="#{INTERFACE_XML_269}" />
                     <Event Name="Clicked" Function="Abnegate_Quest();" />
                 </Window>
                 <Window Type="TLBB_ButtonCommon" Name="QuestLog_Refuse">
-                    <Property Name="UnifiedPosition" Value="{{1.000000,-60.000000},{1.000000,-20.000000}" />
+                    <Property Name="AbsolutePosition" Value="x:247.000000 y:430.000000" />
                     <Property Name="AbsoluteSize" Value="w:60.000000 h:20.000000" />
                     <Property Name="Text" Value="#{INTERFACE_XML_301}" />
-                    <Event Name="Clicked" Function="this:Hide();" />
+                    <Event Name="Clicked" Function="QuestLog_TrackCancelOrOpen();" />
                 </Window>
             </Window>
         </Window>

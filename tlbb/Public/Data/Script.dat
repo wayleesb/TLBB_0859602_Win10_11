@@ -4952,3 +4952,5 @@ MGR_TXT
 ;H1N1活动,zhangqiang
 889061=\event\huodong\eH1N1.lua
 260001=\event\loulangucheng\eloulan_darkup.lua
+889888=\event\chuansong\echuansong_AutoMove.lua
+800119=\event\misc\MoneyToJiaoZi.lua

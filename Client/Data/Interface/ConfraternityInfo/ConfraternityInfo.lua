@@ -16,7 +16,7 @@
 -- ConfraternityInfo_Info8	科技度
 -- ConfraternityInfo_Info9	扩张度
 -- ConfraternityInfo_Info3	国家资金
--- ConfraternityInfo_Shangpiao 本日最大商票数
+-- ConfraternityInfo_Shangpiao 全帮商票剩余次数/每日上限
 
 
 function ConfraternityInfo_PreLoad()
@@ -156,13 +156,17 @@ function Guild_Info_Update()
 	
 	
 		  
-  local guildlevel = Guild:GetMyGuildDetailInfo("guildlevel");
-  if guildlevel == 0  then
-		 szMsg = 0
-	else 
-	szMsg = 200 + (guildlevel - 1) * 25
-  end   	
-	ConfraternityInfo_Shangpiao:SetText(szMsg)
+	local taken = Guild:GetMyGuildDetailInfo("TicketTaken");
+	local limit = Guild:GetMyGuildDetailInfo("TicketLimit");
+	if taken >= 0 and limit >= 0 then
+		local remaining = limit - taken;
+		if remaining < 0 then
+			remaining = 0;
+		end
+		ConfraternityInfo_Shangpiao:SetText(remaining.."/"..limit);
+	else
+		ConfraternityInfo_Shangpiao:SetText("暂不可用");
+	end
 end
 
 function Guild_Info_CheckMembers()

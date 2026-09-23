@@ -8,6 +8,14 @@
 
 适用于 Windows 10/11 的 TLBB 0859602 客户端及配套工具。
 
+### V1.2 更新
+
+- 新增全图跨场景自动寻路、手动坐标输入、任务与活动追踪、自动接受组队跟随及珍兽灵兽丹升级。
+- 新增遮挡半透、特效等级、动画更新质量设置，增强 Debug 模式下 `Alt+G` 的 UI 调试信息。
+- 修复启动器、客户端交互、暗器与宝石、活动奖励、帮会跑商、装备显示及爆率修改器相关问题。
+- 补充金币换交子脚本、`ScriptGlobal_Format` 及任务与活动追踪接口。
+- [完整更新说明与接口列表](CHANGELOG.md) · [V1.2 发行页面](https://github.com/wayleesb/TLBB_0859602_Win10_11/releases/tag/1.2)。
+
 ### V1.1 更新
 
 - 更新启动工具，整合自 V1.0 以来的客户端、服务端、界面、脚本和场景资源更新。
@@ -35,7 +43,7 @@
 
 ### 下载
 
-推荐下载 [V1.1 完整包：TLBB_0859602_Win10_11_VER_1.1.7z](https://github.com/wayleesb/TLBB_0859602_Win10_11/releases/download/1.1/TLBB_0859602_Win10_11_VER_1.1.7z)（约 845 MiB），使用 7-Zip 解压。
+推荐下载 [V1.2 完整包：TLBB_0859602_Win10_11_VER_1.2.7z](https://github.com/wayleesb/TLBB_0859602_Win10_11/releases/download/1.2/TLBB_0859602_Win10_11_VER_1.2.7z)，使用 7-Zip 解压。
 
 克隆仓库：
 
@@ -67,6 +75,14 @@ EXE 使用 .NET 内置单文件压缩，无需手动解压或预装 .NET。
 
 TLBB 0859602 client and bundled tools for Windows 10/11.
 
+### V1.2 Update
+
+- Adds cross-scene automatic navigation, manual coordinate input, mission and event tracking, automatic acceptance of team-follow requests, and pet leveling with Lingshou Dan.
+- Adds occlusion transparency, effect-level and animation-quality settings, and more detailed UI information through `Alt+G` in Debug mode.
+- Fixes launcher and client interactions, hidden weapons and gems, event rewards, guild trading, equipment displays, and the drop-rate editor.
+- Completes gold-to-Jiaozi scripts and adds `ScriptGlobal_Format` and mission/event tracking interfaces.
+- [Full changelog and interface list (Chinese)](CHANGELOG.md) · [V1.2 release](https://github.com/wayleesb/TLBB_0859602_Win10_11/releases/tag/1.2).
+
 ### V1.1 Update
 
 - Updates the launcher and includes client, server, interface, script, and scene resource changes since V1.0.
@@ -94,7 +110,7 @@ Previous version: [complete V0.8 changelog (31 entries, in Chinese)](https://git
 
 ### Download
 
-Recommended: download the [full V1.1 package: TLBB_0859602_Win10_11_VER_1.1.7z](https://github.com/wayleesb/TLBB_0859602_Win10_11/releases/download/1.1/TLBB_0859602_Win10_11_VER_1.1.7z) (approximately 845 MiB) and extract it with 7-Zip.
+Recommended: download the [full V1.2 package: TLBB_0859602_Win10_11_VER_1.2.7z](https://github.com/wayleesb/TLBB_0859602_Win10_11/releases/download/1.2/TLBB_0859602_Win10_11_VER_1.2.7z) and extract it with 7-Zip.
 
 Clone the repository:
 
@@ -129,6 +145,14 @@ packaging exclusion list and does not delete local files.
 
 Client TLBB 0859602 và các công cụ đi kèm dành cho Windows 10/11.
 
+### Cập nhật V1.2
+
+- Thêm tự động tìm đường xuyên bản đồ, nhập tọa độ thủ công, theo dõi nhiệm vụ và sự kiện, tự động chấp nhận theo sau tổ đội và nâng cấp trân thú bằng Linh Thú Đan.
+- Thêm cài đặt bán trong suốt khi bị che khuất, mức hiệu ứng, chất lượng hoạt ảnh và thông tin UI chi tiết qua `Alt+G` trong chế độ Debug.
+- Sửa lỗi trình khởi chạy, thao tác client, ám khí và bảo thạch, phần thưởng sự kiện, bang hội và thương phiếu, hiển thị trang bị và công cụ chỉnh tỷ lệ rơi.
+- Bổ sung tập lệnh đổi vàng sang giao tử, `ScriptGlobal_Format` và các giao diện theo dõi nhiệm vụ/sự kiện.
+- [Nhật ký đầy đủ và danh sách giao diện (tiếng Trung)](CHANGELOG.md) · [Bản phát hành V1.2](https://github.com/wayleesb/TLBB_0859602_Win10_11/releases/tag/1.2).
+
 ### Cập nhật V1.1
 
 - Cập nhật trình khởi chạy và bao gồm các thay đổi của client, máy chủ, giao diện, tập lệnh và tài nguyên cảnh kể từ V1.0.
@@ -156,7 +180,7 @@ Phiên bản trước: [nhật ký thay đổi V0.8 đầy đủ (31 mục, bằ
 
 ### Tải xuống
 
-Khuyến nghị tải [gói V1.1 đầy đủ: TLBB_0859602_Win10_11_VER_1.1.7z](https://github.com/wayleesb/TLBB_0859602_Win10_11/releases/download/1.1/TLBB_0859602_Win10_11_VER_1.1.7z) (khoảng 845 MiB) và giải nén bằng 7-Zip.
+Khuyến nghị tải [gói V1.2 đầy đủ: TLBB_0859602_Win10_11_VER_1.2.7z](https://github.com/wayleesb/TLBB_0859602_Win10_11/releases/download/1.2/TLBB_0859602_Win10_11_VER_1.2.7z) và giải nén bằng 7-Zip.
 
 Sao chép kho mã về máy:
 

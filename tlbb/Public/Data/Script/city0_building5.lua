@@ -31,6 +31,33 @@ x805012_g_GuildMoneyLimit	=	10000
 --**********************************
 --事件交互入口
 --**********************************
+-- 发票和帮会详情共用计算，查询不修改领票次数。
+function x805012_GetTicketTakenToday(dayTimes, nowDate)
+	if mod(dayTimes, 100000) == nowDate then
+		return floor(dayTimes / 100000)
+	end
+	return 0
+end
+
+function x805012_GetTicketLimit(guildLevel, curGuildBoom)
+	if not guildLevel or guildLevel < 1 or guildLevel > 5 then
+		guildLevel = 1
+	end
+	local maxTimes = x805012_g_BaseTotalTicketTakeTimes +
+		x805012_g_TicketTakeTimesBonusPerLvl * (guildLevel - 1)
+	if curGuildBoom < x805012_g_TicketDecValue then
+		maxTimes = floor(maxTimes * x805012_g_TicketDecRate)
+	elseif curGuildBoom >= x805012_g_TicketIncValue then
+		maxTimes = floor(maxTimes * x805012_g_TicketIncRate)
+	end
+	return maxTimes
+end
+
+function x805012_GetGuildTicketInfo(dayTimes, nowDate, guildLevel, curGuildBoom)
+	return x805012_GetTicketTakenToday(dayTimes, nowDate),
+		x805012_GetTicketLimit(guildLevel, curGuildBoom)
+end
+
 function x805012_OnDefaultEvent( sceneId, selfId,targetId )
 
 	--是否是本帮成员
@@ -581,29 +608,11 @@ function x805012_OnEventRequest( sceneId, selfId, targetId, eventId )
 
 				-- 帮派一天接取次数有上限
 				DayTimes = GetTicketTakenTimes( sceneId, selfId )
-				oldDate = mod( DayTimes, 100000 )
-				totalTakenTimes = floor( DayTimes/100000 )
-
-				if nowDate == oldDate then
-					totalTakenTimes = totalTakenTimes + 1
-				else
-					totalTakenTimes = 1
-				end
+				totalTakenTimes = x805012_GetTicketTakenToday(DayTimes, nowDate) + 1
 
 				local guildLevel = GetGuildLevel( sceneId, selfId )
-				if not guildLevel or guildLevel < 1 or guildLevel > 5 then
-					guildLevel = 1
-				end
-
-				local maxTimes = x805012_g_BaseTotalTicketTakeTimes +
-					x805012_g_TicketTakeTimesBonusPerLvl * ( guildLevel - 1 );
-					
 				local curGuildBoom = CityGetAttr(sceneId, selfId,x805012_g_GuildBoomIndex);
-				if(curGuildBoom < x805012_g_TicketDecValue) then
-					maxTimes = floor(maxTimes * x805012_g_TicketDecRate);
-				elseif(curGuildBoom >= x805012_g_TicketIncValue) then
-					maxTimes = floor(maxTimes * x805012_g_TicketIncRate);
-				end
+				local maxTimes = x805012_GetTicketLimit(guildLevel, curGuildBoom)
 
 				if totalTakenTimes > maxTimes then
 					BeginEvent( sceneId )

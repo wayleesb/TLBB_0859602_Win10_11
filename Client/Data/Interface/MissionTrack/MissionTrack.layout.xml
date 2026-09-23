@@ -1,0 +1,165 @@
+<?xml version="1.0" ?>
+<GUILayout>
+  <Window Type="TLBB_MainFrameNULL" Name="MissionTrack_Frame">
+    <Property Name="UnifiedSize" Value="{{0,230},{0.0,158}}" />
+    <Property Name="UnifiedXPosition" Value="{1.0,-266}" />
+    <Property Name="UnifiedYPosition" Value="{0.0,228}" />
+    <Window Type="TLBB_DragTitle" Name="MissionTrack_DragTitle">
+      <Property Name="AbsolutePosition" Value="x:80.000000 y:0.000000" />
+      <Property Name="AbsoluteSize" Value="w:100.000000 h:20.000000" />
+      <Property Name="DragTarget" Value="MissionTrack_Frame" />
+      <Window Type="TLBB_StaticImageNULL" Name="MissionTrack_Name">
+		      <Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+		      <Property Name="AbsoluteSize" Value="w:100.000000 h:18.000000" />
+		      <Property Name="Image" Value="set:MissionAtrack image:MK_Mission" />
+		      <Property Name="MouseHollow" Value="true" />
+	    </Window>
+    </Window>
+    <Window Type="TLBB_ButtonNULL" Name="MissionTrack_Close">
+      <Property Name="AbsolutePosition" Value="x:196.000000 y:0.000000" />
+      <Property Name="AbsoluteSize" Value="w:16.000000 h:18.000000" />
+      <Property Name="NormalImage" Value="set:MissionAtrack image:MKClose_Normal" />
+      <Property Name="HoverImage" Value="set:MissionAtrack image:MKClose_Hover" />
+      <Property Name="PushedImage" Value="set:MissionAtrack image:MKClose_Pushed" />
+      <Property Name="DisabledImage" Value="set:MissionAtrack image:MKClose_Disable" />
+      <Event Name="Clicked" Function="MissionTrack_CloseFunc();" />
+    </Window>
+      <Window Type="TLBB_ButtonNULL" Name="MissionTrack_UnLock">
+        <Property Name="AbsolutePosition" Value="x:180.000000 y:0.000000" />
+        <Property Name="AbsoluteSize" Value="w:16.000000 h:18.000000" />
+        <Property Name="NormalImage" Value="set:MissionAtrack image:MKUnlock_Normal" />
+        <Property Name="HoverImage" Value="set:MissionAtrack image:MKUnlock_Hover" />
+        <Property Name="PushedImage" Value="set:MissionAtrack image:MKUnlock_Pushed" />
+        <Property Name="DisabledImage" Value="set:MissionAtrack image:MKUnlock_Disable" />
+        <Event Name="Clicked" Function="MissionTrack_On_Lock();" />
+        <Property Name="Tooltip" Value="#{RWZZ_090601_05}" />
+      </Window>
+      <Window Type="TLBB_ButtonNULL" Name="MissionTrack_Lock">
+        <Property Name="AbsolutePosition" Value="x:180.000000 y:0.000000" />
+        <Property Name="AbsoluteSize" Value="w:16.000000 h:18.000000" />
+        <Property Name="NormalImage" Value="set:MissionAtrack image:MKlock_Normal" />
+        <Property Name="HoverImage" Value="set:MissionAtrack image:MKlock_Hover" />
+        <Property Name="PushedImage" Value="set:MissionAtrack image:MKlock_Pushed" />
+        <Property Name="DisabledImage" Value="set:MissionAtrack image:MKlock_Disable" />
+        <Event Name="Clicked" Function="MissionTrack_On_Lock();" />
+        <Property Name="Tooltip" Value="#{RWZZ_090601_04}" />
+      </Window>
+    <Window Type="DefaultWindow" Name="MissionTrack_CheckBox_Frame">
+      <Property Name="AbsolutePosition" Value="x:0.0 y:0.0" />
+      <Property Name="AbsoluteSize" Value="w:80.0 h:21.0" />
+      <Property Name="MouseLButtonHollow" Value="True" />
+      <Property Name="MouseRButtonHollow" Value="True" />
+      <Window Type="TLBB_ButtonCheckForChatPage" Name="MissionTrack_HaveGet">
+        <Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+        <Property Name="AbsoluteSize" Value="w:40.000000 h:18.000000" />
+        <Property Name="NormalImage" Value="set:MissionAtrack image:MKCurrentMission_Normal" />
+        <Property Name="HoverImage" Value="set:MissionAtrack image:MKCurrentMission_Pushed" />
+        <Property Name="PushedImage" Value="set:MissionAtrack image:MKCurrentMission_Hover" />
+        <Property Name="DisabledImage" Value="set:MissionAtrack image:MKCurrentMission_Disable" />
+		<Property Name="CheckMode" Value="1"/>
+        <Property Name="Tooltip" Value="#{RWZZ_090601_01}" />
+        <Event Name="MouseLButtonDown" Function="MissionTrack_HaveGetFunc();" />
+      </Window>
+      <Window Type="TLBB_ButtonCheckForChatPage" Name="MissionTrack_WillGet">
+        <Property Name="AbsolutePosition" Value="x:40.000000 y:0.000000" />
+        <Property Name="AbsoluteSize" Value="w:40.000000 h:18.000000" />
+        <Property Name="NormalImage" Value="set:MissionAtrack image:MKAcceptMission_Normal" />
+        <Property Name="HoverImage" Value="set:MissionAtrack image:MKAcceptMission_Pushed" />
+        <Property Name="PushedImage" Value="set:MissionAtrack image:MKAcceptMission_Hover" />
+        <Property Name="DisabledImage" Value="set:MissionAtrack image:MKAcceptMission_Disable" />
+		<Property Name="CheckMode" Value="1"/>
+        <Property Name="Tooltip" Value="#{RWZZ_090601_02}" />
+        <Event Name="MouseLButtonDown" Function="MissionTrack_WillGetFunc();" />
+      </Window>
+    </Window>
+    <Window Type="DefaultWindow" Name="MissionTrack__Frame">
+      <Property Name="AbsolutePosition" Value="x:0.000000 y:17.000000" />
+      <Property Name="AbsoluteSize" Value="w:212.000000 h:139.000000" />
+      <Property Name="MouseHollow" Value="False" />
+      <Window Type="DefaultWindow" Name="MissionTrack__CheckBox_Frame">
+      </Window>
+      <Window Type="TLBB_Frame2" Name="MissionTrack_Frame_Context">
+        <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,0.000000}}" />
+		<Property Name="UnifiedSize" Value="{{1.000000,0.000000},{1.000000,0.0000000}}" />
+       	<Property Name="RiseOnClick" Value="False" />
+		<Property Name="InheritsAlpha" Value="false" />
+       	<Window Type="TLBB_ListBoxTransparent" Name="MissionTrack_ListBoxTransparent">
+        	<Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,0.000000}}" />
+			<Property Name="UnifiedSize" Value="{{1.000000,0.000000},{1.000000,0.0000000}}" />
+        	<Property Name="ForceHorzScrollbar" Value="False" />
+            <Property Name="MouseLButtonHollow" Value="True" />
+            <Property Name="MouseRButtonHollow" Value="True" />
+			<Property Name="InheritsAlpha" Value="false" />
+            <Event Name="ButtonClickedForEye" Function="MissionTrack_ItemContextClickedForEye();" />
+            <Event Name="ButtonClickedForClose" Function="MissionTrack_ItemContextClickedForClose();" />
+       	</Window>
+      </Window>
+     </Window>
+    <Window Type="DefaultWindow" Name="MissionTrack_Function_Frame">
+      <Property Name="AbsolutePosition" Value="x:211.0 y:17.0" />
+      <Property Name="AbsoluteSize" Value="w:16.000000 h:127.000000" />
+      <Event Name="MouseEnter" Function="MissionTrack_Func_MouseEnter();" />
+      <Event Name="MouseLeave" Function="MissionTrack_Func_MouseLeave();" />
+      <Window Type="TLBB_ButtonNULL" Name="MissionTrack_Height_Add">
+        <Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+        <Property Name="AbsoluteSize" Value="w:16.000000 h:18.000000" />
+        <Property Name="NormalImage" Value="set:MissionAtrack image:MKupadd_Normal" />
+        <Property Name="HoverImage" Value="set:MissionAtrack image:MKupadd_Hover" />
+        <Property Name="PushedImage" Value="set:MissionAtrack image:MKupadd_Pushed" />
+        <Property Name="DisabledImage" Value="set:MissionAtrack image:MKupadd_Disable" />
+        <Event Name="Clicked" Function="MissionTrack_On_Height_Add();" />
+        <Event Name="MouseEnter" Function="MissionTrack_Func_MouseEnter();" />
+      	<Event Name="MouseLeave" Function="MissionTrack_Func_MouseLeave();" />
+        <Property Name="Tooltip" Value="#{RWZZ_090601_10}" />
+      </Window>
+      <Window Type="TLBB_ButtonNULL" Name="MissionTrack_Height_Reduce">
+        <Property Name="AbsolutePosition" Value="x:0.000000 y:18.000000" />
+        <Property Name="AbsoluteSize" Value="w:16.000000 h:18.000000" />
+        <Property Name="NormalImage" Value="set:MissionAtrack image:MKupsub_Normal" />
+        <Property Name="HoverImage" Value="set:MissionAtrack image:MKupsub_Hover" />
+        <Property Name="PushedImage" Value="set:MissionAtrack image:MKupsub_Pushed" />
+        <Property Name="DisabledImage" Value="set:MissionAtrack image:MKupsub_Disable" />        
+        <Event Name="Clicked" Function="MissionTrack_On_Height_Reduce();" />
+        <Event Name="MouseEnter" Function="MissionTrack_Func_MouseEnter();" />
+      	<Event Name="MouseLeave" Function="MissionTrack_Func_MouseLeave();" />
+        <Property Name="Tooltip" Value="#{RWZZ_090601_11}" />
+      </Window>
+      <Window Type="TLBB_ButtonNULL" Name="MissionTrack_Width_Add">
+        <Property Name="AbsolutePosition" Value="x:0.000000 y:36.000000" />
+        <Property Name="AbsoluteSize" Value="w:16.000000 h:18.000000" />
+        <Property Name="NormalImage" Value="set:MissionAtrack image:MKleftadd_Normal" />
+        <Property Name="HoverImage" Value="set:MissionAtrack image:MKleftadd_Hover" />
+        <Property Name="PushedImage" Value="set:MissionAtrack image:MKleftadd_Pushed" />
+        <Property Name="DisabledImage" Value="set:MissionAtrack image:MKleftadd_Disable" />
+        <Event Name="Clicked" Function="MissionTrack_On_Width_Add();" />
+        <Event Name="MouseEnter" Function="MissionTrack_Func_MouseEnter();" />
+      	<Event Name="MouseLeave" Function="MissionTrack_Func_MouseLeave();" />
+        <Property Name="Tooltip" Value="#{RWZZ_090601_12}" />
+      </Window>
+      <Window Type="TLBB_ButtonNULL" Name="MissionTrack_Width_Reduce">
+        <Property Name="AbsolutePosition" Value="x:0.000000 y:54.000000" />
+        <Property Name="AbsoluteSize" Value="w:16.000000 h:18.000000" />
+        <Property Name="NormalImage" Value="set:MissionAtrack image:MKleftsub_Normal" />
+        <Property Name="HoverImage" Value="set:MissionAtrack image:MKleftsub_Hover" />
+        <Property Name="PushedImage" Value="set:MissionAtrack image:MKleftsub_Pushed" />
+        <Property Name="DisabledImage" Value="set:MissionAtrack image:MKleftsub_Disable" />
+        <Event Name="Clicked" Function="MissionTrack_On_Width_Reduce();" />
+        <Event Name="MouseEnter" Function="MissionTrack_Func_MouseEnter();" />
+      	<Event Name="MouseLeave" Function="MissionTrack_Func_MouseLeave();" />
+        <Property Name="Tooltip" Value="#{RWZZ_090601_13}" />
+      </Window>
+      <Window Type="TLBB_ButtonNULL" Name="MissionTrack_Reset">
+        <Property Name="AbsolutePosition" Value="x:0.000000 y:72.000000" />
+        <Property Name="AbsoluteSize" Value="w:16.000000 h:18.000000" />
+        <Property Name="NormalImage" Value="set:MissionAtrack image:MKreset_Normal" />
+        <Property Name="HoverImage" Value="set:MissionAtrack image:MKreset_Hover" />
+        <Property Name="PushedImage" Value="set:MissionAtrack image:MKreset_Pushed" />
+        <Property Name="DisabledImage" Value="set:MissionAtrack image:MKreset_Disable" />
+        <Event Name="Clicked" Function="MissionTrack_On_Reset();" />
+        <Event Name="MouseEnter" Function="MissionTrack_Func_MouseEnter();" />
+      	<Event Name="MouseLeave" Function="MissionTrack_Func_MouseLeave();" />
+        <Property Name="Tooltip" Value="#{RWZZ_090601_03}" />
+      </Window>
+    </Window>
+  </Window>
+</GUILayout>

@@ -235,3 +235,5 @@ INT	STRING	STRING	STRING	INT	STRING	INT	INT	STRING
 232	ZdShop_BulkBuying	ZdShop_BulkBuying\ZdShop_BulkBuying.layout.xml	ZdShop_BulkBuying\ZdShop_BulkBuying.lua	0		0	0	未填实名拒绝登陆界面
 233	BigBank	BigBank/BigBank.layout.xml	BigBank/BigBank.lua	2	52	19	20	全部仓库界面
 245	AnqiUp	AnqiUp/AnqiUp.layout.xml	AnqiUp/AnqiUp.lua	3		0	0	暗器升级
+240	CampaignTrack	CampaignTrack\CampaignTrack.layout.xml	CampaignTrack\CampaignTrack.lua	0	20	19	20	活动追踪
+241	MissionTrack	MissionTrack\MissionTrack.layout.xml	MissionTrack\MissionTrack.lua	0	20	19	20	任务追踪

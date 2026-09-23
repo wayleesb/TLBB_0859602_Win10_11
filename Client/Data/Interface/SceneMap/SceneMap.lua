@@ -29,14 +29,18 @@ function SceneMap_OnEvent(event)
 		if( arg1 == "2" ) then
 				if( this:IsVisible() ) then
 					SceneMap_Close();
+					ToggleAutoSearch(0) --likun
 				else
 					AxTrace( 0,0,"current scene file name = "..arg0 );
 					SceneMap_Show( arg0 );
+					ToggleAutoSearch(1) --likun
 				end
 		elseif ( arg1 == "1" ) then
 			SceneMap_Show( arg0 );
+			ToggleAutoSearch(1) --likun
 		else
 			SceneMap_Close();
+			ToggleAutoSearch(0) --likun
 		end
 	elseif ( event == "UPDATE_MAP" ) then
 		SceneMap_Update();
@@ -48,6 +52,7 @@ end
 function SceneMap_Close()
 	SceneMap_Board:CloseSceneMap();
 	this:Hide()
+	ToggleAutoSearch(0) --likun
 end
 
 function SceneMap_Show( filename )

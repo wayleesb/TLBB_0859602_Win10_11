@@ -314,12 +314,14 @@ function x300022_OnDefaultEvent( sceneId, selfId, BagPos)
 	-- 先取出物品中数据，如果是默认值0则说明是第一次使用，立即生成数据
 	-- 如果已经有数据则什么都不做
 	local targetSceneId, targetX, targetZ, r = x300022_GetItemParam(sceneId, selfId, BagPos)
+	local generatedItemParam = 0
 	if targetSceneId==nil or targetSceneId<=0
 		or targetX==nil or targetX<=0
 		or targetZ==nil or targetZ<=0
 		or r==nil or r<=0 then
 		--PrintStr("the first time .... nil nil nil")
 		--立即生成数据
+		generatedItemParam = 1
 		CallScriptFunction(x300022_g_ChengxiongdatuScriptId, "ProduceItemParamData", sceneId, selfId, BagPos)
 		--重新获取物品数据
 		targetSceneId, targetX, targetZ, r = x300022_GetItemParam(sceneId, selfId, BagPos)
@@ -331,9 +333,16 @@ function x300022_OnDefaultEvent( sceneId, selfId, BagPos)
 		or r==nil or r<=0 then
 		--PrintStr("the second time .... nil nil nil")
 		--立即生成数据
+		generatedItemParam = 1
 		CallScriptFunction(x300022_g_ChengxiongdatuScriptId, "ProduceItemParamData", sceneId, selfId, BagPos)
 		--重新获取物品数据
 		targetSceneId, targetX, targetZ, r = x300022_GetItemParam(sceneId, selfId, BagPos)
+	end
+	-- 两次生成尝试结束后，只同步一次最终有效参数，刷新已缓存的悬浮信息。
+	if generatedItemParam==1 and targetSceneId~=nil and targetSceneId>0
+		and targetX~=nil and targetX>0 and targetZ~=nil and targetZ>0
+		and r~=nil and r>0 then
+		LuaFnRefreshItemInfo(sceneId, selfId, BagPos)
 	end
 	--如果不在指定的场景, 指定的坐标就弹出对话框提示玩家去哪儿哪儿哪儿
 	local sceneName = CallScriptFunction(x300022_g_ChengxiongdatuScriptId, "GetSceneName", sceneId, selfId, targetSceneId)
@@ -341,7 +350,7 @@ function x300022_OnDefaultEvent( sceneId, selfId, BagPos)
 	
 	--local sceneName = GetSceneName(targetSceneId)
 	--PrintStr(sceneName)
-	local strText = format("你到%s的[%d,%d]才能使用", sceneName, targetX, targetZ)
+	local strText = format("您到#G%s#W的#{_INFOAIM%d,%d,%d,-1}#W才能使用。", sceneName, targetX, targetZ, targetSceneId)
 	
 	--取得玩家当前坐标
 	local PlayerX = GetHumanWorldX(sceneId, selfId)

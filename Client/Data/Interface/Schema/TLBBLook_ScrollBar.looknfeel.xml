@@ -525,4 +525,130 @@
     </StateImagery>
   </WidgetLook>
   
+  <WidgetLook name="TLBB_Look_Scrollbar_Track">
+    <Property name="VerticalScrollbar" value="True" />
+    <NamedArea name="ThumbTrackArea">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="0" />
+        </Dim>
+        <Dim type="TopEdge">
+          <ImageDim imageset="MissionAtrack" image="MKUp_Normal" dimension="Height" />
+        </Dim>
+        <Dim type="RightEdge">
+          <UnifiedDim scale="1" type="TopEdge" />
+          </Dim>
+        <Dim type="BottomEdge">
+          <UnifiedDim scale="1" type="BottomEdge">
+            <DimOperator op="Subtract">
+              <ImageDim imageset="MissionAtrack" image="MKDown_Normal" dimension="Width" />
+            </DimOperator>
+           </UnifiedDim>
+        </Dim>
+      </Area>
+    </NamedArea>
+    <Child type="TLBB_ButtonNULL" nameSuffix="__auto_incbtn__">
+      <Property name="MouseButtonDownAutoRepeat" value="True" />
+      <Property name="ClickSound" value="19" />
+	  <Property name="BtnAnimation" value="ScrollBar_Flash" />
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="0" />
+        </Dim>
+        <Dim type="TopEdge">
+          <UnifiedDim scale="1" type="TopEdge">
+            <DimOperator op="Subtract">
+              <ImageDim imageset="MissionAtrack" image="MKDown_Normal" dimension="Height" />
+            </DimOperator>
+          </UnifiedDim>
+       </Dim>
+        <Dim type="Width">
+          <ImageDim imageset="MissionAtrack" image="MKDown_Normal" dimension="Width" />
+        </Dim>
+        <Dim type="Height">
+          <ImageDim imageset="MissionAtrack" image="MKDown_Normal" dimension="Height" />
+        </Dim>
+      </Area>
+      <Property name="UseStandardImagery" value="False" />
+      <Property name="NormalImage" value="set:MissionAtrack image:MKDown_Normal" />
+      <Property name="HoverImage" value="set:MissionAtrack image:MKDown_Hover" />
+      <Property name="PushedImage" value="set:MissionAtrack image:MKDown_Pushed" />
+    </Child>
+    <Child type="TLBB_ButtonNULL" nameSuffix="__auto_decbtn__">
+      <Property name="MouseButtonDownAutoRepeat" value="True" />
+      <Property name="ClickSound" value="20" />
+	  <Property name="BtnAnimation" value="ScrollBar_Flash" />
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="0" />
+        </Dim>
+        <Dim type="TopEdge">
+          <AbsoluteDim value="0" />
+        </Dim>
+        <Dim type="Width">
+          <ImageDim imageset="MissionAtrack" image="MKUp_Normal" dimension="Width" />
+        </Dim>
+        <Dim type="Height">
+          <ImageDim imageset="MissionAtrack" image="MKUp_Normal" dimension="Height" />
+        </Dim>
+      </Area>
+      <Property name="UseStandardImagery" value="False" />
+      <Property name="NormalImage" value="set:MissionAtrack image:MKUp_Normal" />
+      <Property name="HoverImage" value="set:MissionAtrack image:MKUp_Hover" />
+      <Property name="PushedImage" value="set:MissionAtrack image:MKUp_Pushed" />
+    </Child>
+    <Child type="TLBB_ScrollbarThumb_Common" nameSuffix="__auto_thumb__">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="1" />
+        </Dim>
+        <Dim type="TopEdge">
+          <AbsoluteDim value="0" />
+        </Dim>
+        <Dim type="Width">
+          <ImageDim imageset="MissionAtrack" image="MKScrollBar_Thumb_Normal" dimension="Width" />
+        </Dim>
+        <Dim type="Height">
+          <ImageDim imageset="MissionAtrack" image="MKScrollBar_Thumb_Normal" dimension="Height" />
+        </Dim>
+      </Area>
+    </Child>
+    <ImagerySection name="main">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0" />
+          </Dim>
+          <Dim type="TopEdge">
+             <ImageDim imageset="MissionAtrack" image="MKUp_Normal" dimension="Height" />
+          </Dim>
+          <Dim type="RightEdge">
+            <ImageDim imageset="MissionAtrack" image="MKScrollBar_Bar" dimension="Width" />
+          </Dim>
+          <Dim type="BottomEdge">
+            <UnifiedDim scale="1" type="BottomEdge">
+              <DimOperator op="Subtract">
+                <ImageDim imageset="MissionAtrack" image="MKDown_Normal" dimension="Height" />
+              </DimOperator>
+            </UnifiedDim>
+          </Dim>
+        </Area>
+        <Image imageset="MissionAtrack" image="MKScrollBar_Bar" />
+        <VertFormat type="Tiled" />
+        <HorzFormat type="CentreAligned" />
+      </ImageryComponent>
+    </ImagerySection>
+    <StateImagery name="Enabled">
+      <Layer>
+        <Section section="main" />
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="main">
+          <Colours topLeft="FF7F7F7F" topRight="FF7F7F7F" bottomLeft="FF7F7F7F" bottomRight="FF7F7F7F" />
+        </Section>
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
 </Falagard>

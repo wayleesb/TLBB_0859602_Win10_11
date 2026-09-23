@@ -94,6 +94,10 @@ end
 function SplitItemAdd_Clicked()
 	
 	local szNum = SplitItem_Num:GetText();
+	if szNum == "" then 
+		szNum = "0"
+	end
+	
 	local nNum = szNum + 0;
 	
 	if( nNum+1 >= g_nItemSum )then
@@ -110,6 +114,10 @@ end
 function SplitItemDecrease_Clicked()
 	
 	local szNum = SplitItem_Num:GetText();
+	if szNum == "" then 
+		szNum = "0"
+	end
+	
 	local nNum = szNum + 0;
 
 	if( nNum-1 < 1 )then

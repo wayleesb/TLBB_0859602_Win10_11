@@ -5,22 +5,22 @@
 --  1 门派   --全部，功能
 --  2 玄武岛 --全部，人物，家兽，猛兽
 --  3 其它   --全部，怪物，人物
-g_CurSceneType = -1
+local g_CurSceneType = -1
 
 --城市场景的ID列表....
-g_CitySceneIDList = { 0, 1, 2, 242, 246, 260 }
+local g_CitySceneIDList = { 0, 1, 2, 242, 246, 260 }
 --门派场景的ID列表....
-g_MenpaiSceneIDList = { 9, 10, 11, 12, 13, 14, 15, 16, 17 }
+local g_MenpaiSceneIDList = { 9, 10, 11, 12, 13, 14, 15, 16, 17 }
 --宠物场景的ID列表....
-g_PetSceneIDList = { 112, 201 }
+local g_PetSceneIDList = { 112, 201 }
 
 --当前选择的Tab页....
-g_CurSelectTabIndex = 1;
+local g_CurSelectTabIndex = 1;
 
 --不同场景类型下各个Tab按钮所对应的分类类型....
 --界面上一共有5个Tab....
 --分类类型 无效=-1，全=0，怪=1，人=2，兽=3，猛=4，功=5，店=6，任=7，无分类标签=99
-g_TableTabIndex2TabType = {
+local g_TableTabIndex2TabType = {
 	{	0,	5,	6,	7,	-1,	},
 	{	0,	5,	-1,	-1,	-1,	},
 	{	0,	2,	3,	4,	-1,	},
@@ -28,10 +28,10 @@ g_TableTabIndex2TabType = {
 }
 
 --上次更新本窗口时玩家所在场景ID....
-g_LastUpdateSceneID = -1;
+local g_LastUpdateSceneID = -1;
 
 --各个Tab页的自动寻路数据....换场景的时候才重新计算....
-g_TabListData = {};
+local g_TabListData = {};
 g_TabListData[1] = {};
 g_TabListData[2] = {};
 g_TabListData[3] = {};
@@ -43,6 +43,7 @@ function AutoSearch_PreLoad()
 	this:RegisterEvent("OPEN_AUTOSEARCH");
 	this:RegisterEvent("SCENE_TRANSED");
 	this:RegisterEvent("UI_COMMAND");
+	this:RegisterEvent("TOGLE_AUTOSEARCH")
 end
 
 
@@ -72,7 +73,7 @@ end
 function AutoSearch_OnEvent(event)
 
 	if ( event == "OPEN_AUTOSEARCH" ) then
-	
+
 		if( this:IsVisible() ) then
 			this:Hide();
 		else
@@ -80,22 +81,30 @@ function AutoSearch_OnEvent(event)
 		end
 
 	elseif ( event == "SCENE_TRANSED" ) then
-	
-		--切换场景时关闭本窗口	
+
+		--切换场景时关闭本窗口
 		this:Hide();
 		local curSceneID = GetSceneID();
 		if (curSceneID == 112) then
 			AutoSearch_Open();
 		end
-  elseif(event == "UI_COMMAND" and tonumber(arg0)==831021) then
-    if( this:IsVisible() ) then
+	elseif(event == "UI_COMMAND" and tonumber(arg0)==831021) then
+		if( this:IsVisible() ) then
 			return;
 		else
 			AutoSearch_Open();
 		end
+	elseif ( event == "TOGLE_AUTOSEARCH" ) then
+		if ( arg0 == "1" ) then
+			AutoSearch_Frame:SetProperty("UnifiedXPosition", "{1.0,-149.0}")
+			AutoSearch_Frame:SetProperty("UnifiedYPosition", "{0.0,226.0}")
+			AutoSearch_Open()
+		else
+			this:Hide();
+		end
 	end
-	
-	
+
+
 
 end
 
@@ -104,15 +113,19 @@ end
 --打开自动寻路窗口....
 --**********************************
 function AutoSearch_Open()
-
+	--清空坐标输入框
+	InputPosition_x:SetText("");
+	InputPosition_y:SetText("");
 	--打开窗口时默认是Tab1....
 	if ( true == AutoSearch_UpdateFrame(1) ) then
 		--设置Tab1按钮为选中状态....
 		AutoSearch_Tab1:SetCheck(1);
 		this:Show();
 	else
+		--增加坐标输入方式之后，当前场景没有可寻路目标，也要弹出，所以注释下面这句
 		--如果没有任何可寻路的位置，则显示"当前的场景没有可寻路的目标。"
-		PushDebugMessage("当前的场景没有可寻路的目标。");
+		--PushDebugMessage("当前的场景没有可寻路的目标。");
+		this:Show();
 	end
 
 end
@@ -179,7 +192,7 @@ function UpdateTabButton()
 
 	--城市
 	if g_CurSceneType == 0 then
-	
+
 		AutoSearch_Tab1:Show();
 		AutoSearch_Tab2:Show();
 		AutoSearch_Tab3:Show();
@@ -189,10 +202,10 @@ function UpdateTabButton()
 		AutoSearch_Tab2:SetText("功");
 		AutoSearch_Tab3:SetText("店");
 		AutoSearch_Tab4:SetText("任");
-	
+
 	--门派
 	elseif g_CurSceneType == 1 then
-	
+
 		AutoSearch_Tab1:Show();
 		AutoSearch_Tab2:Show();
 		AutoSearch_Tab3:Hide();
@@ -200,7 +213,7 @@ function UpdateTabButton()
 		AutoSearch_Tab5:Hide();
 		AutoSearch_Tab1:SetText("全");
 		AutoSearch_Tab2:SetText("功");
-	
+
 	--宠物
 	elseif g_CurSceneType == 2 then
 
@@ -296,7 +309,7 @@ function UpdateList( tabIndex )
 
 		--按排序后的ID顺序将自动寻路的数据加到本Tab页的自动寻路数据表中....
 		local curTabType = TabIndex2TabType(tabIndex);
-		local x, y, name, tooltips, info, tabtype; 
+		local x, y, name, tooltips, info, tabtype;
 		k = 1;
 		for i=1, nCount do
 			x, y, name, tooltips, info, tabtype = DataPool:GetAutoSearch( tblPriority[nCount-i+1].id );
@@ -345,10 +358,59 @@ end
 --自动寻路到指定坐标....
 --**********************************
 function AutoMoveTo()
+	local nPosX = tonumber(InputPosition_x:GetText());
+	local nPosY = tonumber(InputPosition_y:GetText());
+	if not nPosX or nPosX <= 0 or not nPosY or nPosY <= 0 then
+		return;
+	end
 
 	--获取当前Tab页的自动寻路数据....
-	g_TabListDataTablePtr = g_TabListData[g_CurSelectTabIndex];
-	if not g_TabListDataTablePtr then
+	local str = GetDictionaryString("ZDXL_90520_2")
+	AutoSearchTargetFlashPos(nPosX, nPosY, str)
+	local TabListDataTablePtr = g_TabListData[g_CurSelectTabIndex];
+	if TabListDataTablePtr then
+		--选中了第几项....
+		local nSelIndex = AutoSearch_List:GetSelectItem();
+		if nSelIndex >= 0 then
+			nSelIndex = nSelIndex + 1;
+			if TabListDataTablePtr[nSelIndex].nPosX == nPosX and TabListDataTablePtr[nSelIndex].nPosY == nPosY then
+				--设置目标NPC的名字，到达该NPC处后会自动与其对话
+				SetAutoRunTargetNPCName( TabListDataTablePtr[nSelIndex].strName );
+				AutoSearchTargetFlashPos(nPosX, nPosY, TabListDataTablePtr[nSelIndex].strName)
+			end
+		end
+	end
+
+	--自动移动到指定位置
+	local ret = AutoRunToTarget( nPosX, nPosY );
+	if ret == 0 then
+		PushDebugMessage("#{ZDXL_90520_3}")
+	end
+end
+
+--**********************************
+--双击....
+--**********************************
+function OnDoubleClick()
+	local TabListDataTablePtr = g_TabListData[g_CurSelectTabIndex];
+	if TabListDataTablePtr then
+		--选中了第几项....
+		local nSelIndex = AutoSearch_List:GetSelectItem();
+		if nSelIndex >= 0 then
+		--只有当有选中项时，才响应双击信息，防止出现双击空列表栏也移动的情况
+			AutoMoveTo()
+		end
+	end
+end
+
+--****************************************
+--拷贝自动寻路列表中的NPC坐标到坐标输入框
+--****************************************
+function CopyPosition()
+
+	--获取当前Tab页的自动寻路数据....
+	local TabListDataTablePtr = g_TabListData[g_CurSelectTabIndex];
+	if not TabListDataTablePtr then
 		return;
 	end
 
@@ -359,11 +421,8 @@ function AutoMoveTo()
 	end
 
 	nSelIndex = nSelIndex + 1;
-
-	--自动移动到指定位置
-	AutoRunToTarget( g_TabListDataTablePtr[nSelIndex].nPosX, g_TabListDataTablePtr[nSelIndex].nPosY );
-
-	--设置目标NPC的名字，到达该NPC处后会自动与其对话
-	SetAutoRunTargetNPCName( g_TabListDataTablePtr[nSelIndex].strName );
-
+	local strPosX = tostring(TabListDataTablePtr[nSelIndex].nPosX);
+	local strPosY = tostring(TabListDataTablePtr[nSelIndex].nPosY);
+	InputPosition_x:SetText(strPosX);
+	InputPosition_y:SetText(strPosY);
 end

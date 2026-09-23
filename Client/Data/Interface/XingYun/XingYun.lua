@@ -155,13 +155,14 @@ function XingYun_OnEvent(event)
 --	    end
       
       local pt = Get_XParam_INT(1)
-      TBL_Head[pos_ani]:SetProperty("Image", PrizeImageInfo[pt]);
-      Sound:PlaySound( SoundInfo[pt], false ) --对应奖励的音效
-	    WaitRecv = 0;
-	    
-	    --根据获得的奖励调整乱序数组以满足1 9 10 规则
-	    local temp = g_PrizeArray[pos_ani]
-	    g_PrizeArray[pos_ani] = pt
+        TBL_Head[pos_ani]:SetProperty("Image", PrizeImageInfo[pt]);
+	      Sound:PlaySound( SoundInfo[pt], false ) --对应奖励的音效
+		    WaitRecv = 0;
+		    
+		    --根据获得的奖励调整乱序数组以满足1 9 10 规则
+		    local temp = g_PrizeArray[pos_ani]
+		    g_PrizeArray[pos_ani] = pt
+		  
 	    for i = 1,20 do
 	      if(g_PrizeArray[i] == pt and i ~= ResultPos[1]
 	      and i ~= ResultPos[2] and i ~= ResultPos[3]) then
@@ -312,7 +313,9 @@ end
 
 function XingYun_TimeReach1()
 
-	   TBL_Ani[pos_ani]:Hide()
+	   if pos_ani > 0 then
+	     TBL_Ani[pos_ani]:Hide()
+	   end
      XingYunTimer_StopWatch1:SetProperty("Timer", "-1");
      AniPlaying = 0;
      

@@ -2,20 +2,21 @@ local LOW_POSITION 		= 0;
 local MIDDLE_POSITION = 1;
 local HIGH_POSITION 	= 2;
 
+-- 滑动条控件
 local SLIDER_CTRL = {};
-local SLIDER_CTRL_NUM = 10;
 local SLIDER_String = {};
+local SLIDER_CTRL_NUM = 12;
 
+-- 点选框控件
 local CHECK_CTRL  = {};
-local CHECK_CTRL_NUM  = 7;
 local CHECK_String = {};
+local CHECK_CTRL_NUM  = 8;
 
 local LAST_RES;
 local LAST_FULL;
 
-
-
 local ErrViewmode = 10;
+
 --===============================================
 -- OnLoad()
 --===============================================
@@ -40,14 +41,17 @@ function ViewSetup_OnLoad()
 		SLIDER_CTRL[8] = ViewSetup_Item8_Control;
 		SLIDER_CTRL[9] = ViewSetup_Item9_Control;
 		SLIDER_CTRL[10] = ViewSetup_Item10_Control;
-		
+		SLIDER_CTRL[11] = ViewSetup_Item14_Control;
+		SLIDER_CTRL[12] = ViewSetup_Item11_Control;
+
 		CHECK_CTRL[1]  = ViewSetup_Item_Check1;
 		CHECK_CTRL[2]  = ViewSetup_Item_Check2;
 		CHECK_CTRL[3]  = ViewSetup_Item_Check4;
 		CHECK_CTRL[4]  = ViewSetup_Item_Check5;
 		CHECK_CTRL[5]  = ViewSetup_Item_Check6;
 		CHECK_CTRL[6]  = ViewSetup_Item_Check7;
-		CHECK_CTRL[7]  = ViewSetup_Item_Miwu;
+		CHECK_CTRL[7]  = ViewSetup_Item_Miwu;			-- 显示迷雾
+		CHECK_CTRL[8]  = ViewSetup_Item_Bantou;		-- 遮挡半透
 
 		SLIDER_String[1]   = "dxyy" --地形阴影
 		SLIDER_String[2]   = "fhj"	--反混角
@@ -58,16 +62,18 @@ function ViewSetup_OnLoad()
 		SLIDER_String[7]   = "cy"		--采样
 		SLIDER_String[8]   = "dbxs"	--多边形数
 		SLIDER_String[9]   = "rwyy"	--人物阴影
-		SLIDER_String[10]   = "ksfw"	--模型显示质量
-		
-		CHECK_String[1]   = "dxgg"	--地形高光
-		CHECK_String[2]   = "rwgg"	--人物高光
-		CHECK_String[3]   = "qpfg"	--全屏泛光
-		CHECK_String[4]   = "cztb"	--垂直同步
-		CHECK_String[5]   = "sdh"	--水动画
-		CHECK_String[6]   = "qpms"	--全屏模式
-		CHECK_String[7]   = "miwu"	--全屏模式
+		SLIDER_String[10]  = "ksfw"	--模型显示质量
+		SLIDER_String[11]  = "txdjsz"	--特效等级设置
+		SLIDER_String[12]  = "dhgxzl"	--动画更新质量
 
+		CHECK_String[1]   = "dxgg"	-- 地形高光
+		CHECK_String[2]   = "rwgg"	-- 人物高光
+		CHECK_String[3]   = "qpfg"	-- 全屏泛光
+		CHECK_String[4]   = "cztb"	-- 垂直同步
+		CHECK_String[5]   = "sdh"		-- 水动画
+		CHECK_String[6]   = "qpms"	-- 全屏模式
+		CHECK_String[7]   = "miwu"	-- 全屏模式
+		CHECK_String[8]   = "zdbt"	-- 遮挡半透
 		
 	ViewSetup_Item2_Text1:SetToolTip("更高的抗锯齿可以使角色以及背景物体的边缘表现得更平滑，但也需要较高的显存#r#R需要重新启动");
 	ViewSetup_Item12_Text:SetToolTip("将你的游戏帧数与显示器刷新率同步。可以解决游戏中图像无法显示的问题#r#R需要重新启动");
@@ -134,7 +140,6 @@ function ViewSetup_UpdateFrame()
 	end
 	
 	local curVar = Variable:GetVariable("View_Resoution");
-	AxTrace(0, 1, "Res=" .. curVar);
 	
 	ViewSetup_Item15:SetCurrentSelect(0);
 	
@@ -147,6 +152,7 @@ function ViewSetup_UpdateFrame()
 	else
 		ViewSetup_Item_Check10:SetCheck( 0 );
 	end
+	
 	ViewSetup_FullScreen_Clicked()
 end
 
@@ -165,22 +171,19 @@ function ViewSetup_Accept_Clicked()
 
 	for i=1, SLIDER_CTRL_NUM   do
 		local temp = SLIDER_CTRL[i]:GetPosition();
-			SystemSetup:View_SetData( SLIDER_String[i],temp*2 );
---		AxTrace(0,1,"update slider=".. i.." temp * 2  =".. temp*2);
+		SystemSetup:View_SetData( SLIDER_String[i],temp*2 );
 	end
 	
 	for i=1, CHECK_CTRL_NUM    do
 		local temp = CHECK_CTRL[i]:GetCheck();
---		AxTrace(0,1,"update check=".. i.." temp = ".. temp);
 		SystemSetup:View_SetData( CHECK_String[i],temp );
 	end
 
 	local bFullScreen = ViewSetup_Item_Check7:GetCheck();
 
 	--当前非全屏
-	if(bFullScreen ~= 1) then
+	if (bFullScreen ~= 1) then
 		local thisRes, thisResIndex = ViewSetup_Item15:GetCurrentSelect();
---		AxTrace(0,1, "[" .. thisRes .. "]");
 
 		if(thisRes == "800X600") then
 			Variable:SetVariable("View_Resoution", "", 0);
@@ -190,12 +193,12 @@ function ViewSetup_Accept_Clicked()
 			Variable:SetVariable("View_Resoution", "1024,768", 0);
 		elseif(thisRes == "1280X1024") then
 			Variable:SetVariable("View_Resoution", "", 0);
-			Variable:SetVariable("View_Resoution", "1280,1024", 0);
-		else
---			AxTrace(0,1, "err= [" .. thisRes .. "]");
+			Variable:SetVariable("View_Resoution", "1280,1024", 0);		
 		end
 	end
+
 	ViewSetup_PiFeng();
+	
 	this:Hide();
 
 end
@@ -204,13 +207,10 @@ end
 -- SliderChanged
 --===============================================
 function ViewSetup_SliderChanged(nIndex)
-	local szCurValue =	SLIDER_CTRL[nIndex]:GetPosition();
+	local szCurValue = SLIDER_CTRL[nIndex]:GetPosition();	
+	local fCurValue = szCurValue;
 	
-	local fCurValue = szCurValue +0;
-	
-	AxTrace(0,1,"slider=".. nIndex.." fcurvalue =".. fCurValue);
-	if (nIndex == 6)  then
-	
+	if (nIndex == 6) then	
 		if  fCurValue < 0.5  then 
 			fCurValue = LOW_POSITION;
 		else
@@ -225,11 +225,41 @@ function ViewSetup_SliderChanged(nIndex)
 			fCurValue = HIGH_POSITION;
 		end
 	end
-	AxTrace(0,1,"2 slider=".. nIndex.." fcurvalue =".. fCurValue);
 
 	SLIDER_CTRL[nIndex]:SetPosition(fCurValue/2);
 
 --	ViewSetup_UpdateToGame(SLIDER_String[nIndex], fCurValue);
+end
+
+--===============================================
+-- Default Setting
+--===============================================
+function ViewSetup_Default_Clicked()
+
+	SystemSetup:View_SetData( SLIDER_String[1], 2 );	--地形阴影
+	SystemSetup:View_SetData( SLIDER_String[2], 0 );	--反混角
+	SystemSetup:View_SetData( SLIDER_String[3], 2 );	--物体动画
+	SystemSetup:View_SetData( SLIDER_String[4], 1 );	--gamma
+	SystemSetup:View_SetData( SLIDER_String[5], 2 );	--颜色质量
+	SystemSetup:View_SetData( SLIDER_String[6], 1 );	--纹理大小
+	SystemSetup:View_SetData( SLIDER_String[7], 0 );	--采样
+	SystemSetup:View_SetData( SLIDER_String[9], 0 );	--人物阴影
+	SystemSetup:View_SetData( SLIDER_String[10], 2 );	--人物阴影
+	SystemSetup:View_SetData( SLIDER_String[11], 2 );	--特效等级设置
+	SystemSetup:View_SetData( SLIDER_String[12], 2 );	--动画更新质量
+
+	SystemSetup:View_SetData( CHECK_String[1],1 );	--地形高光
+	SystemSetup:View_SetData( CHECK_String[2],1 );	--人物高光
+	SystemSetup:View_SetData( CHECK_String[3],0 );	--全屏泛光
+	SystemSetup:View_SetData( CHECK_String[4],0 );	--垂直同步
+	SystemSetup:View_SetData( CHECK_String[5],1 );	--水动画
+	SystemSetup:View_SetData( CHECK_String[6],0 );	--全屏模式
+	SystemSetup:View_SetData( CHECK_String[7],1 );	--迷雾开关
+	SystemSetup:View_SetData( CHECK_String[8],0 );	--遮挡半透
+	ViewSetup_Item15:Disable();
+	
+	ViewSetup_UpdateFrame();
+
 end
 
 function ViewSetup_FullScreen_Clicked()
@@ -244,32 +274,6 @@ end
 
 function ViewSetup_Res_Changed()
 	ViewSetup_Item_Check7:SetCheck(0);
-end
-
-function ViewSetup_Default_Clicked()
-
-
-	SystemSetup:View_SetData( SLIDER_String[1], 2 );	--地形阴影
-	SystemSetup:View_SetData( SLIDER_String[2], 0 );	--反混角
-	SystemSetup:View_SetData( SLIDER_String[3], 2 );	--物体动画
-	SystemSetup:View_SetData( SLIDER_String[4], 1 );	--gamma
-	SystemSetup:View_SetData( SLIDER_String[5], 2 );	--颜色质量
-	SystemSetup:View_SetData( SLIDER_String[6], 1 );	--纹理大小
-	SystemSetup:View_SetData( SLIDER_String[7], 0 );	--采样
-	SystemSetup:View_SetData( SLIDER_String[9], 0 );	--人物阴影
-	SystemSetup:View_SetData( SLIDER_String[10], 2 );	--人物阴影
-	
-	SystemSetup:View_SetData( CHECK_String[1],1 );	--地形高光
-	SystemSetup:View_SetData( CHECK_String[2],1 );	--人物高光
-	SystemSetup:View_SetData( CHECK_String[3],0 );	--全屏泛光
-	SystemSetup:View_SetData( CHECK_String[4],0 );	--垂直同步
-	SystemSetup:View_SetData( CHECK_String[5],1 );	--水动画
-	SystemSetup:View_SetData( CHECK_String[6],0 );	--全屏模式
-	SystemSetup:View_SetData( CHECK_String[7],1 );	--迷雾开关
-	ViewSetup_Item15:Disable();
-	
-	ViewSetup_UpdateFrame();
-	AxTrace(0,1,"xxx");
 end
 
 function ViewSetup_PiFeng()

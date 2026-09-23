@@ -39,6 +39,9 @@ function x000076_OnDefaultEvent( sceneId, selfId,targetId )
 		AddNumText(sceneId, 101, "打开保险箱",5,-1)
 		AddNumText(sceneId, 102, "关于保险箱",11,3)
 		AddNumText( sceneId, x000076_g_scriptId, "#{JZBZ_081031_02}", 11, 4)
+		-- 金币兑换交子及说明，沿用参考钱庄选项编号。
+		AddNumText( sceneId, x000076_g_scriptId, "#{JBJZ_090407_1}", 5, 6)
+		AddNumText( sceneId, x000076_g_scriptId, "#{JBJZ_090407_2}", 11, 7)
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 
@@ -102,6 +105,18 @@ function x000076_OnEventRequest( sceneId, selfId, targetId, eventId )
 		EndEvent( sceneId )
 		DispatchEventList( sceneId, selfId, targetId )
 
+	elseif GetNumText() == 6 then
+		BeginUICommand( sceneId )
+			UICommand_AddInt( sceneId, targetId )
+		EndUICommand( sceneId )
+		DispatchUICommand( sceneId, selfId, 800119 )
+		return
+	elseif GetNumText() == 7 then
+		BeginEvent( sceneId )
+			AddText( sceneId, "#{JBJZ_090407_3}" )
+		EndEvent( sceneId )
+		DispatchEventList( sceneId, selfId, targetId )
+		return
 	else
 		--得到当前银行的存储格数
 		local CurrentRentIndex = GetBankRentIndex(sceneId, selfId)

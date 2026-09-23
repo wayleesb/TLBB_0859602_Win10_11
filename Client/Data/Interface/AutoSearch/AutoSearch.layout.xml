@@ -73,23 +73,36 @@
         <Property Name="ForceVertScrollbar" Value="True" />
         <Property Name="SortSettingEnabled" Value="False" />
         <Property Name="SelectionMode" Value="RowSingle" />
-        <Event Name="MouseDoubleClick" Function="AutoMoveTo();" />
+        <Event Name="MouseDoubleClick" Function="OnDoubleClick();" />
+        <Event Name="MouseClick" Function="CopyPosition();" />
       </Window>
-      <Window Type="TLBB_Frame_Lace5" Name="AutoSearch_Blank">
-        <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-20.000000}" />
-        <Property Name="UnifiedSize" Value="{{0.5,-20.000000},{0.000000,20.000000}" />
-        <Property Name="RiseOnClick" Value="False" />
+      <Window Type="TLBB_SimpleText" Name="InputPosition_Name">
+        <Property Name="UnifiedPosition" Value="{{0.0,5.000000},{1.000000,-20.000000}" />
+        <Property Name="UnifiedSize" Value="{{0.200000,0.000000},{0.000000,20.000000}" />
+        <Property Name="Text" Value="#{ZDXL_90520_1}" />
+        <Property Name="TextColor" Value="FFFFF263" />
+        <Property Name="HorzFormatting" Value="LeftAligned" />
+        <Property Name="VertFormatting" Value="VertCentred" />
+      </Window>
+      <Window Type="TLBB_EditBoxNormal" Name="InputPosition_x">
+          <Property Name="UnifiedPosition" Value="{{0.0,32.000000},{1.000000,-20.000000}" />
+          <Property Name="AbsoluteSize" Value="w:30.000000 h:20.000000" />
+          <Property Name="MaxTextLength" Value="3" />
+          <Property Name="ValidationString" Value="[0-9]*" />
+          <Property Name="Text" Value="" />
+      </Window>
+      <Window Type="TLBB_EditBoxNormal" Name="InputPosition_y">
+          <Property Name="UnifiedPosition" Value="{{0.0,64.000000},{1.000000,-20.000000}" />
+          <Property Name="AbsoluteSize" Value="w:30.000000 h:20.000000" />
+          <Property Name="MaxTextLength" Value="3" />
+          <Property Name="ValidationString" Value="[0-9]*" />
+          <Property Name="Text" Value="" />
       </Window>
       <Window Type="TLBB_ButtonCommon" Name="AutoSearch_Move">
-        <Property Name="UnifiedPosition" Value="{{0.5,-20.000000},{1.000000,-20.000000}" />
+        <Property Name="UnifiedPosition" Value="{{0.0,96.000000},{1.000000,-20.000000}" />
         <Property Name="UnifiedSize" Value="{{0.0,40.000000},{0.000000,20.000000}" />
         <Property Name="Text" Value="#{INTERFACE_XML_822}" />
         <Event Name="Clicked" Function="AutoMoveTo();" />
-      </Window>
-      <Window Type="TLBB_Frame_Lace5" Name="AutoSearch_Blank2">
-        <Property Name="UnifiedPosition" Value="{{0.5,20.000000},{1.000000,-20.000000}" />
-        <Property Name="UnifiedSize" Value="{{0.5,-20.000000},{0.000000,20.000000}" />
-        <Property Name="RiseOnClick" Value="False" />
       </Window>
     </Window>
   </Window>

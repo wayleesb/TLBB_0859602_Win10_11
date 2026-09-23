@@ -10,10 +10,10 @@ TLBB/DebugOverlay
 		metrics_mode pixels
 		vert_align top
 		horz_align right
-		left -225 
+		left -445 
 		top 5
-		width 220
-		height 120
+		width 440
+		height 200
 		material TLBB/StatsBlockCenter
         	border_size 1 1 1 1
         	border_material TLBB/StatsBlockBorder
@@ -33,9 +33,9 @@ TLBB/DebugOverlay
 		metrics_mode pixels
 		vert_align top
 		horz_align right
-		left -225 
-		top 130
-		width 220
+		left -445 
+		top 210
+		width 440
 		height 260
 		material TLBB/StatsBlockCenter
         	border_size 1 1 1 1
@@ -54,7 +54,7 @@ TLBB/DebugOverlay
 			metrics_mode pixels
 			left 5
 			top 5
-			width 210
+			width 230
 			height 260
 			font_name TrebuchetMSBold
 			char_height 12

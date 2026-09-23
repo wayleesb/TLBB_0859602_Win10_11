@@ -55,21 +55,32 @@ function VotedPlayer_UpdateVoteInfo()
 end
 
 function VotedPlayer_InitAndShowWindow()
-   this:Show();
-   VotedPlayer_List:ClearListBox();
-   g_curr_Page = 1;
-   local nTotalVoteNum = FindFriendDataPool:GetVoteInfoNum();
-   g_total_Page = math.floor(nTotalVoteNum / MAX_INFO_PETPAGE) + 1;
-   VotedPlayer_Amount:SetText(g_curr_Page.."/"..g_total_Page);
+  this:Show();
+  VotedPlayer_List:ClearListBox();
+  g_curr_Page = 1;
+  local nTotalVoteNum = FindFriendDataPool:GetVoteInfoNum();
+  -- 当前列表总页数的计算
+	if (math.mod(nTotalVoteNum, MAX_INFO_PETPAGE) ~= 0 ) then
+		g_total_Page = math.floor(nTotalVoteNum / MAX_INFO_PETPAGE) + 1;
+	else		
+   	g_total_Page = math.floor(nTotalVoteNum / MAX_INFO_PETPAGE);
+  end
+  VotedPlayer_Amount:SetText(g_curr_Page.."/"..g_total_Page);
 end
 
 function VotedPlayer_UpdateWindowState()
 	local nTotalVoteNum = FindFriendDataPool:GetVoteInfoNum();
-   	g_total_Page = math.floor(nTotalVoteNum / MAX_INFO_PETPAGE) + 1;
-   	VotedPlayer_Amount:SetText(g_curr_Page.."/"..g_total_Page);
-   	
-   	AxTrace(0, 0, "g_curr_Page:"..tostring(g_curr_Page)..",g_total_Page:"..tostring(g_total_Page));
-   	if(g_curr_Page <= 1) then
+	
+	-- 当前列表总页数的计算
+	if (math.mod(nTotalVoteNum, MAX_INFO_PETPAGE) ~= 0 ) then
+		g_total_Page = math.floor(nTotalVoteNum / MAX_INFO_PETPAGE) + 1;
+	else		
+  	g_total_Page = math.floor(nTotalVoteNum / MAX_INFO_PETPAGE);
+  end   	
+  VotedPlayer_Amount:SetText(g_curr_Page.."/"..g_total_Page);
+
+  AxTrace(0, 0, "g_curr_Page:"..tostring(g_curr_Page)..",g_total_Page:"..tostring(g_total_Page));
+  if(g_curr_Page <= 1) then
 		VotedPlayer_PageUp:Disable();
 	else
 		VotedPlayer_PageUp:Enable();
@@ -97,10 +108,12 @@ function VotedPlayer_PageDown_Func()
 end
 
 function VotedPlayer_PlayerSelect(arg0)
+	local nIndex = VotedPlayer_List:GetFirstSelectItem();
+
 	if(arg0 == 0) then
 		AxTrace(0,0,"Click VotePlayer");
-	elseif(arg0 == 1) then
-		local nIndex = VotedPlayer_List:GetFirstSelectItem();
+	elseif ((arg0 == 1) and (nIndex~= -1)) then
+		nIndex = nIndex + (g_curr_Page-1) * MAX_INFO_PETPAGE;
 		local szName, nOnlineFlag = FindFriendDataPool:GetVoteInfoByPos(nIndex);
 		local player = Player:GetName();   
 		if(szName == player) then
@@ -116,17 +129,21 @@ end
 function VotedPlayer_OpenMenu()
 	local nIndex = VotedPlayer_List:GetFirstSelectItem();
 	AxTrace(0,0,"Index is:"..tostring(nIndex));
-	local szName, nOnlineFlag = FindFriendDataPool:GetVoteInfoByPos(nIndex);
-	if (nOnlineFlag ~= 1) then
-		--PushDebugMessage("对不起，玩家 "..szName.." 目前不在线！");
-		return;
+	
+	if (nIndex ~= -1) then
+		nIndex = nIndex + (g_curr_Page-1) * MAX_INFO_PETPAGE;
+		local szName, nOnlineFlag = FindFriendDataPool:GetVoteInfoByPos(nIndex);
+		if (nOnlineFlag ~= 1) then
+			--PushDebugMessage("对不起，玩家 "..szName.." 目前不在线！");
+			return;
+		end
+		local player = Player:GetName();   
+		if(szName == player) then
+			--PushDebugMessage("对不起，这是您自己投的票。");
+			return;
+		end	
+		FindFriendDataPool:ContexMenuForVoteInfo(nIndex);
 	end
-	local player = Player:GetName();   
-	if(szName == player) then
-		--PushDebugMessage("对不起，这是您自己投的票。");
-		return;
-	end
-	FindFriendDataPool:ContexMenuForVoteInfo(nIndex);
 end
 
 function VotedPlayer_Hide()

@@ -582,4 +582,69 @@
       </Layer>
     </StateImagery>
   </WidgetLook>
+  <WidgetLook name="TLBB_Look_ListBoxTransparent">
+    <Property name="SelectColour" value="tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" />
+    <Property name="SelectBrush" value="set:CommonFrame image:CommonEditBoxBK" />
+     <NamedArea name="ItemRenderingArea">
+       <Area>
+         <Dim type="LeftEdge">
+          <AbsoluteDim value="6" />
+        </Dim>
+         <Dim type="TopEdge">
+          <AbsoluteDim value="3" />
+        </Dim>
+         <Dim type="RightEdge">
+          <UnifiedDim scale="1" offset="-3" type="RightEdge" />
+        </Dim>
+         <Dim type="BottomEdge">
+          <UnifiedDim scale="1" offset="-3" type="BottomEdge" />
+        </Dim>
+      </Area>
+    </NamedArea>
+     <NamedArea name="ItemRenderingAreaVScroll">
+       <Area>
+         <Dim type="LeftEdge">
+           <AbsoluteDim value="6" />
+         </Dim>
+         <Dim type="TopEdge">
+           <AbsoluteDim value="3" />
+         </Dim>
+         <Dim type="RightEdge">
+           <UnifiedDim scale="1" offset="-3" type="RightEdge">
+             <DimOperator op="Subtract">
+               <WidgetDim widget="__auto_vscrollbar__" dimension="Width" />
+             </DimOperator>
+           </UnifiedDim>
+         </Dim>
+         <Dim type="BottomEdge">
+           <UnifiedDim scale="1" offset="-3" type="BottomEdge" />
+         </Dim>
+       </Area>
+     </NamedArea>
+     <Child type="TLBB_Scrollbar_Track" nameSuffix="__auto_vscrollbar__">
+    <Area>
+      <Dim type="LeftEdge">
+        <AbsoluteDim value="0" />
+      </Dim>
+      <Dim type="TopEdge">
+        <AbsoluteDim value="1" />
+      </Dim>
+      <Dim type="Width">
+        <AbsoluteDim value="16" />
+      </Dim>
+      <Dim type="Height">
+        <UnifiedDim scale="1" offset="-2" type="BottomEdge" />
+      </Dim>
+    </Area>
+    <HorzAlignment type="RightAligned" />
+  </Child>
+      <StateImagery name="Enabled">
+         <Layer>
+        </Layer>
+      </StateImagery>
+     <StateImagery name="Disabled">
+       <Layer>
+       </Layer>
+     </StateImagery>
+  </WidgetLook>
 </Falagard>

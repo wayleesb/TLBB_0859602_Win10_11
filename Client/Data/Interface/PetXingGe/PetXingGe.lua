@@ -36,7 +36,7 @@ function PetXingGe_OnEvent(event)
 			PetXingGe_OnUICommand( CommandType, tonumber( npcObjId ) )
 		end		
 	
-	elseif event == "REPLY_MISSION_PET" then
+	elseif ( event == "REPLY_MISSION_PET" and this:IsVisible() ) then
 		--AxTrace( 3, 3, "REPLY_MISSION_PET" )
 		PetXingGe_OnSelectPet( tonumber( arg0 ) )
 

@@ -2,6 +2,7 @@
 <Scene formatVersion="0.1.1" name="cuju">
 
   <Terrain filename="cuju.Terrain"/>
+  <SkySphere enabled="true" filename="cuju.skysphere" objectname="#FairySkySphere"/>
 
   <Object name="#FairyEnviroment" type="Enviroment">
     <Property name="ambient" value="0.321569 0.415686 0.803922"/>
@@ -25,8 +26,8 @@
     <Property name="static light" value="true"/>
   </Object>
 
-  <Object name="#FairySkyDome" type="SkyDome">
-    <Property name="material" value="CloudySky"/>
+  <Object name="#FairySkySphere" type="SkySphere">
+    <Property name="enabled" value="true"/>
   </Object>
 
   <Object type="Model">

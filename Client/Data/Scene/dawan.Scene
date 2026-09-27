@@ -2,6 +2,7 @@
 <Scene formatVersion="0.1.1" name="dawan">
 
   <Terrain filename="dawan.Terrain"/>
+  <SkySphere enabled="true" filename="dawan.skysphere" objectname="#FairySkySphere"/>
 
   <Object name="#FairyEnviroment" type="Enviroment">
     <Property name="ambient" value="0.286275 0.337255 0.560784"/>
@@ -26,8 +27,8 @@
     <Property name="direction" value="0.362126 -0.428707 0.308585"/>
   </Object>
 
-  <Object name="#FairySkyDome" type="SkyDome">
-    <Property name="material" value="CloudySky"/>
+  <Object name="#FairySkySphere" type="SkySphere">
+    <Property name="enabled" value="true"/>
   </Object>
 
   <Object type="ParticleSystem">

@@ -2,6 +2,7 @@
 <Scene formatVersion="0.1.1" name="zeiying">
 
   <Terrain filename="zeiying.Terrain"/>
+  <SkySphere enabled="true" filename="zeiying.skysphere" objectname="#FairySkySphere"/>
 
   <Object name="#FairyEnviroment" type="Enviroment">
     <Property name="ambient" value="0.360784 0.235294 0.556863"/>
@@ -25,8 +26,8 @@
     <Property name="direction" value="-0.769976 0 -0.906634"/>
   </Object>
 
-  <Object name="#FairySkyDome" type="SkyDome">
-    <Property name="material" value="CloudySky"/>
+  <Object name="#FairySkySphere" type="SkySphere">
+    <Property name="enabled" value="true"/>
   </Object>
 
   <Object type="TerrainLiquid">

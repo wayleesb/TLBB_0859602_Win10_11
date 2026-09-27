@@ -2,6 +2,7 @@
 <Scene formatVersion="0.1.1" name="loulanxunbao">
 
   <Terrain filename="loulanxunbao.Terrain"/>
+  <SkySphere enabled="true" filename="loulanxunbao.skysphere" objectname="#FairySkySphere"/>
 
   <Object name="#FairyEnviroment" type="Enviroment">
     <Property name="ambient" value="0.227451 0.082353 0.027451"/>
@@ -25,8 +26,8 @@
     <Property name="direction" value="-0.0660112 -0.203758 -0.789238"/>
   </Object>
 
-  <Object name="#FairySkyDome" type="SkyDome">
-    <Property name="material" value="CloudySky"/>
+  <Object name="#FairySkySphere" type="SkySphere">
+    <Property name="enabled" value="true"/>
   </Object>
 
   <Object type="TerrainLiquid">

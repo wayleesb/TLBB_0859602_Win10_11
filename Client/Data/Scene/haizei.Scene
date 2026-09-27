@@ -2,6 +2,7 @@
 <Scene formatVersion="0.1.1" name="haizei">
 
   <Terrain filename="haizei.Terrain"/>
+  <SkySphere enabled="true" filename="haizei.skysphere" objectname="#FairySkySphere"/>
 
   <Object name="#FairyEnviroment" type="Enviroment">
     <Property name="ambient" value="0 0.086275 0.129412"/>
@@ -25,8 +26,8 @@
     <Property name="direction" value="1 -1.6 -1"/>
   </Object>
 
-  <Object name="#FairySkyDome" type="SkyDome">
-    <Property name="material" value="CloudySky"/>
+  <Object name="#FairySkySphere" type="SkySphere">
+    <Property name="enabled" value="true"/>
   </Object>
 
   <Object type="Model">

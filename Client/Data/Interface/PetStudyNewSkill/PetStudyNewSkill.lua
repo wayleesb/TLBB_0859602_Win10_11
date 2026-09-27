@@ -111,7 +111,13 @@ function PetStudyNewSkill_Selected(selidx)
 		end
 	end
 	
+	--切换珍兽的时候，释放上一个珍兽
+	if(g_selidx ~= -1) then
+		Pet:SetPetLocation(g_selidx,-1);
+	end
+
 	g_selidx = selidx;	--已经选好了珍兽
+	Pet:SetPetLocation(g_selidx,8);
 
 	Pet:ClosePetSkillStudyMsgBox()
 end
@@ -162,6 +168,7 @@ function PetStudyNewSkill_Hide()
 	PetStudyNewSkill_Unlock();
 	this:Hide();
 	Pet:ShowPetList(-1);
+	Pet:SetPetLocation(g_selidx,-1);
 	g_selidx = -1;
 	g_stduySkill = false;
 	g_selfrm = ""
@@ -258,7 +265,11 @@ function PetStudyNewSkill_Show()
 		for i=1, PETSKILL_BUTTONS_NUM do
 			PETSKILL_BUTTONS[i]:SetActionItem(-1);
 		end
-
+		-- 清空选择前释放占用，避免丢失索引后无法解除。
+		if g_selidx ~= -1 then
+			Pet:SetPetLocation(g_selidx,-1);
+		end
+		g_selidx = -1;
 	else
 		if -1 ~= g_selidx then
 			local i=1;
@@ -283,6 +294,8 @@ function PetStudyNewSkill_Show()
 			for i=1, PETSKILL_BUTTONS_NUM do
 				PETSKILL_BUTTONS[i]:SetActionItem(-1);
 			end
+			-- 珍兽状态变化导致移出界面时，同步释放占用。
+			Pet:SetPetLocation(g_selidx,-1);
 			g_selidx = -1
 		end
 	end
@@ -294,6 +307,8 @@ function PetStudyNewSkill_Show()
 	PetStudyNewSkill_Unlock()
 	g_selfrm = ""
 	g_pidx = -1
+	-- 本次学习结果已刷新，后续珍兽状态更新恢复正常清空流程。
+	g_stduySkill = false
 
 	Pet:ClosePetSkillStudyMsgBox()
 	this:Show();

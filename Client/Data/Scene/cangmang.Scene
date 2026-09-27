@@ -2,6 +2,7 @@
 <Scene formatVersion="0.1.1" name="cangmang">
 
   <Terrain filename="cangmang.Terrain"/>
+  <SkySphere enabled="true" filename="cangmang.skysphere" objectname="#FairySkySphere"/>
 
   <Object name="#FairyEnviroment" type="Enviroment">
     <Property name="ambient" value="0.227451 0.152941 0.352941"/>
@@ -25,8 +26,8 @@
     <Property name="direction" value="-0.769976 0 -0.906634"/>
   </Object>
 
-  <Object name="#FairySkyDome" type="SkyDome">
-    <Property name="material" value="CloudySky"/>
+  <Object name="#FairySkySphere" type="SkySphere">
+    <Property name="enabled" value="true"/>
   </Object>
 
   <Object type="TerrainLiquid">

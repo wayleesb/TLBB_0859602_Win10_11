@@ -2,6 +2,7 @@
 <Scene formatVersion="0.1.1" name="huoyanshan">
 
   <Terrain filename="huoyanshan.Terrain"/>
+  <SkySphere enabled="true" filename="huoyanshan.skysphere" objectname="#FairySkySphere"/>
 
   <Object name="#FairyEnviroment" type="Enviroment">
     <Property name="ambient" value="0.396078 0.105882 0.094118"/>
@@ -25,8 +26,8 @@
     <Property name="direction" value="-0.611429 -0.182358 -0.440835"/>
   </Object>
 
-  <Object name="#FairySkyDome" type="SkyDome">
-    <Property name="material" value="CloudySky"/>
+  <Object name="#FairySkySphere" type="SkySphere">
+    <Property name="enabled" value="true"/>
   </Object>
 
   <Object type="ParticleSystem">

@@ -2,6 +2,7 @@
 <Scene formatVersion="0.1.1" name="dataosha">
 
   <Terrain filename="dataosha.Terrain"/>
+  <SkySphere enabled="true" filename="dataosha.skysphere" objectname="#FairySkySphere"/>
 
   <Object name="#FairyEnviroment" type="Enviroment">
     <Property name="ambient" value="0.082353 0.129412 0.223529"/>
@@ -25,8 +26,8 @@
     <Property name="direction" value="-0.363144 -0.285126 -0.563934"/>
   </Object>
 
-  <Object name="#FairySkyDome" type="SkyDome">
-    <Property name="material" value="CloudySky"/>
+  <Object name="#FairySkySphere" type="SkySphere">
+    <Property name="enabled" value="true"/>
   </Object>
 
   <Object type="StaticEntity">

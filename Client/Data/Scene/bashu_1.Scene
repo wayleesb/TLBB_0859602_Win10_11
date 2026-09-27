@@ -2,6 +2,7 @@
 <Scene formatVersion="0.1.1" name="bashu_1">
 
   <Terrain filename="bashu_1.Terrain"/>
+  <SkySphere enabled="true" filename="bashu_1.skysphere" objectname="#FairySkySphere"/>
 
   <Object name="#FairyEnviroment" type="Enviroment">
     <Property name="ambient" value="0.203922 0.368627 0.203922"/>
@@ -24,8 +25,8 @@
     <Property name="direction" value="-1 1 5"/>
   </Object>
 
-  <Object name="#FairySkyDome" type="SkyDome">
-    <Property name="material" value="CloudySky"/>
+  <Object name="#FairySkySphere" type="SkySphere">
+    <Property name="enabled" value="true"/>
   </Object>
 
   <Object type="StaticEntity">

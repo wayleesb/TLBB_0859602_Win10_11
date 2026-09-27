@@ -81,9 +81,8 @@ function ZdShop_BulkBuying_TextChanged()
 		ZdShop_BulkBuying_Money2:SetText(GetDictionaryString("STACK999_INVALID_QUANTITY"));
 		return false;
 	end
-	local unitPrice = NpcShop:EnumItemPrice(g_ItemIdx);
-	local price = unitPrice * num;
-	if unitPrice < 0 or price > 2147483647 then
+	local price = NpcShop:GetBuyTotalPrice(g_ItemIdx, num);
+	if price < 0 then
 		ZdShop_BulkBuying_Money2:SetText(GetDictionaryString("STACK999_PRICE_OUT_OF_RANGE"));
 		return false;
 	end

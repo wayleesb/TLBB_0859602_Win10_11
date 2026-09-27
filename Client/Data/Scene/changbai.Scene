@@ -2,6 +2,7 @@
 <Scene formatVersion="0.1.1" name="changbai">
 
   <Terrain filename="changbai.Terrain"/>
+  <SkySphere enabled="true" filename="changbai.skysphere" objectname="#FairySkySphere"/>
 
   <Object name="#FairyMainLightOne" type="Light">
     <Property name="type" value="directional"/>
@@ -17,8 +18,8 @@
     <Property name="direction" value="-2 -1 3"/>
   </Object>
 
-  <Object name="#FairySkyDome" type="SkyDome">
-    <Property name="material" value="CloudySky"/>
+  <Object name="#FairySkySphere" type="SkySphere">
+    <Property name="enabled" value="true"/>
   </Object>
 
   <Object type="StaticEntity">

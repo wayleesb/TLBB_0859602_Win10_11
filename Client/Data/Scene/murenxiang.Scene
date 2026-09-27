@@ -2,6 +2,7 @@
 <Scene formatVersion="0.1.1" name="murenxiang">
 
   <Terrain filename="murenxiang.Terrain"/>
+  <SkySphere enabled="true" filename="murenxiang.skysphere" objectname="#FairySkySphere"/>
 
   <Object name="#FairyEnviroment" type="Enviroment">
     <Property name="ambient" value="0.12549 0.12549 0.058824"/>
@@ -26,8 +27,8 @@
     <Property name="cast shadows" value="true"/>
   </Object>
 
-  <Object name="#FairySkyDome" type="SkyDome">
-    <Property name="material" value="CloudySky"/>
+  <Object name="#FairySkySphere" type="SkySphere">
+    <Property name="enabled" value="true"/>
   </Object>
 
   <Object type="StaticEntity">

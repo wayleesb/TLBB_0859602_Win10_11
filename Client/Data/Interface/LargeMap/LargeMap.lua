@@ -46,4 +46,5 @@ end
 
 function LargeMap_Qiehuan_Clicked()
 	ToggleSceneMap( 1 )
+	ToggleAutoSearch(1) --likun
 end

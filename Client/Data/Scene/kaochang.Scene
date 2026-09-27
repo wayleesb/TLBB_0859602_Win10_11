@@ -2,6 +2,7 @@
 <Scene formatVersion="0.1.1" name="kaochang">
 
   <Terrain filename="kaochang.Terrain"/>
+  <SkySphere enabled="true" filename="kaochang.skysphere" objectname="#FairySkySphere"/>
 
   <Object name="#FairyEnviroment" type="Enviroment">
     <Property name="ambient" value="0.082353 0.101961 0.133333"/>
@@ -26,8 +27,8 @@
     <Property name="cast shadows" value="true"/>
   </Object>
 
-  <Object name="#FairySkyDome" type="SkyDome">
-    <Property name="material" value="CloudySky"/>
+  <Object name="#FairySkySphere" type="SkySphere">
+    <Property name="enabled" value="true"/>
   </Object>
 
   <Object type="StaticEntity">

@@ -2,6 +2,7 @@
 <Scene formatVersion="0.1.1" name="bingkang">
 
   <Terrain filename="bingkang.Terrain"/>
+  <SkySphere enabled="true" filename="bingkang.skysphere" objectname="#FairySkySphere"/>
 
   <Object name="#FairyEnviroment" type="Enviroment">
     <Property name="ambient" value="0.219608 0.207843 0.47451"/>
@@ -26,8 +27,8 @@
     <Property name="direction" value="1.5 0 1"/>
   </Object>
 
-  <Object name="#FairySkyDome" type="SkyDome">
-    <Property name="material" value="CloudySky"/>
+  <Object name="#FairySkySphere" type="SkySphere">
+    <Property name="enabled" value="true"/>
   </Object>
 
   <Object type="StaticEntity">

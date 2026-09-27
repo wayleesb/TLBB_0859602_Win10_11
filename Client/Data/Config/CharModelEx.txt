@@ -1524,6 +1524,7 @@ INT	STRING	FLOAT	FLOAT	FLOAT	FLOAT	INT	INT	INT	STRING	STRING	STRING	STRING	STRIN
 2292	蝙蝠小boss.obj	1	2	1.6	0.15	182	183	184	白鹅.txt																																
 2293	骑乘白豹.obj	1	2	1	0.15	182	183	184	骑乘白豹.txt																																
 2294	骑乘黑豹.obj	1	2	1	0.15	182	183	184	骑乘黑豹.txt																																
+2841	骑乘金翅100728.obj	1	2	1	0.15	404	404	404	骑乘金翅.txt																																
 5013	珍兽go仔1.obj	1	2	1	0.15	182	183	184	珍兽go仔.txt																																
 5014	珍兽go仔2.obj	1	2	1	0.15	182	183	184	珍兽go仔.txt																																
 5015	珍兽go仔3.obj	1	2	1	0.15	182	183	184	珍兽go仔.txt																																

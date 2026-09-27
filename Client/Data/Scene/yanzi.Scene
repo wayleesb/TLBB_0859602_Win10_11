@@ -2,6 +2,7 @@
 <Scene formatVersion="0.1.1" name="yanzi">
 
   <Terrain filename="yanzi.Terrain"/>
+  <SkySphere enabled="true" filename="yanzi.skysphere" objectname="#FairySkySphere"/>
 
   <Object name="#FairyEnviroment" type="Enviroment">
     <Property name="ambient" value="0.439216 0.529412 0.886275"/>
@@ -25,8 +26,8 @@
     <Property name="direction" value="0.901566 -0.00543588 0.0933661"/>
   </Object>
 
-  <Object name="#FairySkyDome" type="SkyDome">
-    <Property name="material" value="CloudySky"/>
+  <Object name="#FairySkySphere" type="SkySphere">
+    <Property name="enabled" value="true"/>
   </Object>
 
   <Object type="TerrainLiquid">

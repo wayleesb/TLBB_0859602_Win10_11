@@ -2,6 +2,7 @@
 <Scene formatVersion="0.1.1" name="zhulin">
 
   <Terrain filename="zhulin.Terrain"/>
+  <SkySphere enabled="true" filename="zhulin.skysphere" objectname="#FairySkySphere"/>
 
   <Object name="#FairyEnviroment" type="Enviroment">
     <Property name="ambient" value="0.129412 0.160784 0.262745"/>
@@ -24,8 +25,8 @@
     <Property name="direction" value="1 -2 -2"/>
   </Object>
 
-  <Object name="#FairySkyDome" type="SkyDome">
-    <Property name="material" value="CloudySky"/>
+  <Object name="#FairySkySphere" type="SkySphere">
+    <Property name="enabled" value="true"/>
   </Object>
 
   <Object type="Model">

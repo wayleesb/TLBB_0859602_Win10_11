@@ -2,6 +2,7 @@
 <Scene formatVersion="0.1.1" name="liaoxi">
 
   <Terrain filename="liaoxi.Terrain"/>
+  <SkySphere enabled="true" filename="liaoxi.skysphere" objectname="#FairySkySphere"/>
 
   <Object name="#FairyEnviroment" type="Enviroment">
     <Property name="ambient" value="0.129412 0.411765 0.694118"/>
@@ -25,8 +26,8 @@
     <Property name="direction" value="-0.3 -0.2 0.2"/>
   </Object>
 
-  <Object name="#FairySkyDome" type="SkyDome">
-    <Property name="material" value="CloudySky"/>
+  <Object name="#FairySkySphere" type="SkySphere">
+    <Property name="enabled" value="true"/>
   </Object>
 
   <Object type="StaticEntity">

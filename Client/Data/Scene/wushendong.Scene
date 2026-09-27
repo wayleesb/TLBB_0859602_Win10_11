@@ -2,6 +2,7 @@
 <Scene formatVersion="0.1.1" name="wushendong">
 
   <Terrain filename="wushendong.Terrain"/>
+  <SkySphere enabled="true" filename="wushendong.skysphere" objectname="#FairySkySphere"/>
 
   <Object name="#FairyEnviroment" type="Enviroment">
     <Property name="ambient" value="0.05098 0.121569 0.192157"/>
@@ -26,8 +27,8 @@
     <Property name="direction" value="5 9 -1"/>
   </Object>
 
-  <Object name="#FairySkyDome" type="SkyDome">
-    <Property name="material" value="CloudySky"/>
+  <Object name="#FairySkySphere" type="SkySphere">
+    <Property name="enabled" value="true"/>
   </Object>
 
   <Object type="StaticEntity">

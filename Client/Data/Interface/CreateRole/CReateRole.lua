@@ -6,6 +6,8 @@
 -- 每一页中头像的个数.
 local g_iFaceCountInPage = 9;
 
+local g_iFaceIndexInPage = -1;         --by chengy TT52805
+
 -- 当前选择的性别
 local iCurSelSex = 0;			-- 0 : 女
 													-- 1 : 男
@@ -148,6 +150,26 @@ end
 --
 function CreateRole_BnClickCreateRole()
 
+	if g_iFaceIndexInPage < 0 then          --by chengy TT52805
+		GameProduceLogin:GameLoginShowSystemInfo("请选择头像!");
+		return;
+	end
+	g_iCurSelFaceIndex = g_FacePageCount * g_iFaceCountInPage + g_iFaceIndexInPage;
+
+	if(g_iCurSelFaceIndex >= g_iCurFaceCount) then
+
+		g_iCurSelFaceIndex = -1;
+		--return;
+	end;
+	GameProduceLogin:SetFaceId(iCurSelSex, g_iCurSelFaceIndex);
+
+	local strImageName = "";
+	strImageName = GameProduceLogin:GetFaceName(iCurSelSex, g_iCurSelFaceIndex);
+	if strImageName == "" then
+		GameProduceLogin:GameLoginShowSystemInfo("#{DLXZ_090711_1}");
+		return;
+	end
+
 	local szName = CreateRole_Name:GetText();
 	GameProduceLogin:CreateRole(szName, iCurSelSex);
 end
@@ -184,7 +206,7 @@ function CreateRole_SelectGirl()
 	CreateRole_ShowRoleFace(iCurSelSex);
 	
 	-- 选择第一个脸形
-	CreateRole_BnSelFace1();
+	--CreateRole_BnSelFace1();   --by chengy TT52805
 	
 	-- 设置头像按钮状态
 	CreateRole_SetFacePageStatus();
@@ -242,7 +264,7 @@ function CreateRole_SelectBoy()
 	CreateRole_ShowRoleFace(iCurSelSex);
 	
 	-- 选择第一个脸形
-	CreateRole_BnSelFace1();
+	--CreateRole_BnSelFace1();   --by chengy TT52805
 	
 	-- 设置头像按钮状态
 	CreateRole_SetFacePageStatus();
@@ -419,15 +441,7 @@ end
 --
 function CreateRole_BnSelFace1()
 
-	g_iCurSelFaceIndex = g_FacePageCount * g_iFaceCountInPage;
-	if(g_iCurSelFaceIndex >= g_iCurFaceCount) then
-	
-		g_iCurSelFaceIndex = -1;
-		return;
-	end;
-	
-	-- 通过性别和索引设置头像id
-	GameProduceLogin:SetFaceId(iCurSelSex, g_iCurSelFaceIndex);
+	g_iFaceIndexInPage = 0;
 end
 
 ---------------------------------------------------------------------------------------------------------
@@ -436,15 +450,7 @@ end
 --
 function CreateRole_BnSelFace2()
 
-	g_iCurSelFaceIndex = g_FacePageCount * g_iFaceCountInPage + 1;
-	if(g_iCurSelFaceIndex >= g_iCurFaceCount) then
-	
-		g_iCurSelFaceIndex = -1;
-		return;
-	end;
-	
-	-- 通过性别和索引设置头像id
-	GameProduceLogin:SetFaceId(iCurSelSex, g_iCurSelFaceIndex);
+	g_iFaceIndexInPage = 1;
 end
 
 
@@ -454,15 +460,7 @@ end
 --
 function CreateRole_BnSelFace3()
 
-	g_iCurSelFaceIndex = g_FacePageCount * g_iFaceCountInPage + 2;
-	if(g_iCurSelFaceIndex >= g_iCurFaceCount) then
-	
-		g_iCurSelFaceIndex = -1;
-		return;
-	end;
-	
-	-- 通过性别和索引设置头像id
-	GameProduceLogin:SetFaceId(iCurSelSex, g_iCurSelFaceIndex);
+	g_iFaceIndexInPage = 2;
 end
 
 ---------------------------------------------------------------------------------------------------------
@@ -471,15 +469,7 @@ end
 --
 function CreateRole_BnSelFace4()
 
-	g_iCurSelFaceIndex = g_FacePageCount * g_iFaceCountInPage + 3;
-	if(g_iCurSelFaceIndex >= g_iCurFaceCount) then
-	
-		g_iCurSelFaceIndex = -1;
-		return;
-	end;
-	
-	-- 通过性别和索引设置头像id
-	GameProduceLogin:SetFaceId(iCurSelSex, g_iCurSelFaceIndex);
+	g_iFaceIndexInPage = 3;
 end
 
 ---------------------------------------------------------------------------------------------------------
@@ -488,15 +478,7 @@ end
 --
 function CreateRole_BnSelFace5()
 
-	g_iCurSelFaceIndex = g_FacePageCount * g_iFaceCountInPage + 4;
-	if(g_iCurSelFaceIndex >= g_iCurFaceCount) then
-	
-		g_iCurSelFaceIndex = -1;
-		return;
-	end;
-	
-	-- 通过性别和索引设置头像id
-	GameProduceLogin:SetFaceId(iCurSelSex, g_iCurSelFaceIndex);
+	g_iFaceIndexInPage = 4;
 end
 
 ---------------------------------------------------------------------------------------------------------
@@ -505,15 +487,7 @@ end
 --
 function CreateRole_BnSelFace6()
 
-	g_iCurSelFaceIndex = g_FacePageCount * g_iFaceCountInPage + 5;
-	if(g_iCurSelFaceIndex >= g_iCurFaceCount) then
-	
-		g_iCurSelFaceIndex = -1;
-		return;
-	end;
-	
-	-- 通过性别和索引设置头像id
-	GameProduceLogin:SetFaceId(iCurSelSex, g_iCurSelFaceIndex);
+	g_iFaceIndexInPage = 5;
 end
 
 ---------------------------------------------------------------------------------------------------------
@@ -521,16 +495,8 @@ end
 -- 选择头像7
 --
 function CreateRole_BnSelFace7()
-	
-	g_iCurSelFaceIndex = g_FacePageCount * g_iFaceCountInPage + 6;
-	if(g_iCurSelFaceIndex >= g_iCurFaceCount) then
-	
-		g_iCurSelFaceIndex = -1;
-		return;
-	end;
-	
-	-- 通过性别和索引设置头像id
-	GameProduceLogin:SetFaceId(iCurSelSex, g_iCurSelFaceIndex);
+
+	g_iFaceIndexInPage = 6;
 end
 
 ---------------------------------------------------------------------------------------------------------
@@ -539,15 +505,7 @@ end
 --
 function CreateRole_BnSelFace8()
 
-	g_iCurSelFaceIndex = g_FacePageCount * g_iFaceCountInPage + 7;
-	if(g_iCurSelFaceIndex >= g_iCurFaceCount) then
-	
-		g_iCurSelFaceIndex = -1;
-		return;
-	end;
-	
-	-- 通过性别和索引设置头像id
-	GameProduceLogin:SetFaceId(iCurSelSex, g_iCurSelFaceIndex);
+	g_iFaceIndexInPage = 7;
 end
 
 ---------------------------------------------------------------------------------------------------------
@@ -556,15 +514,9 @@ end
 --
 function CreateRole_BnSelFace9()
 
-	g_iCurSelFaceIndex = g_FacePageCount * g_iFaceCountInPage + 8;
-	if(g_iCurSelFaceIndex >= g_iCurFaceCount) then
-	
-		g_iCurSelFaceIndex = -1;
-		return;
-	end;
-	
-	-- 通过性别和索引设置头像id
-	GameProduceLogin:SetFaceId(iCurSelSex, g_iCurSelFaceIndex);
+	g_iFaceIndexInPage = 8;
+
+
 end
 
 

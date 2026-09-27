@@ -1,0 +1,438 @@
+<SkySphere>
+    <SkyHeight enable_fixed_height="false" fixed_height="0" />
+    <SkySunshine distance="1000" texture_sunrise="sunshine.tga" texture_sunset="sunset.tga" rotate_axis="0 -0.707107 0.707107" rotate_angle="180" start_time="0.33" duration="0.61" />
+    <SkyMoon distance="13000" direction="-0.896798 0.08452 -0.421495">
+        <DateConfig date="0" texture="moon_01.png">
+            <AlphaKeyList>
+                <KeyAlpha time="0.125" alpha="1" />
+                <KeyAlpha time="0.14583" alpha="0.5" />
+                <KeyAlpha time="0.1875" alpha="0.5" />
+                <KeyAlpha time="0.2083" alpha="0" />
+                <KeyAlpha time="0.89583" alpha="0" />
+                <KeyAlpha time="0.9167" alpha="0" />
+                <KeyAlpha time="0.9583" alpha="0" />
+                <KeyAlpha time="0.97917" alpha="1" />
+            </AlphaKeyList>
+        </DateConfig>
+        <DateConfig date="1" texture="moon_01.png">
+            <AlphaKeyList>
+                <KeyAlpha time="0.125" alpha="1" />
+                <KeyAlpha time="0.14583" alpha="0.5" />
+                <KeyAlpha time="0.1875" alpha="0.5" />
+                <KeyAlpha time="0.2083" alpha="0" />
+                <KeyAlpha time="0.89583" alpha="0" />
+                <KeyAlpha time="0.9167" alpha="0" />
+                <KeyAlpha time="0.9583" alpha="0" />
+                <KeyAlpha time="0.97917" alpha="1" />
+            </AlphaKeyList>
+        </DateConfig>
+        <DateConfig date="2" texture="moon_01.png">
+            <AlphaKeyList>
+                <KeyAlpha time="0.125" alpha="1" />
+                <KeyAlpha time="0.14583" alpha="0.5" />
+                <KeyAlpha time="0.1875" alpha="0.5" />
+                <KeyAlpha time="0.2083" alpha="0" />
+                <KeyAlpha time="0.89583" alpha="0" />
+                <KeyAlpha time="0.9167" alpha="0" />
+                <KeyAlpha time="0.9583" alpha="0" />
+                <KeyAlpha time="0.97917" alpha="1" />
+            </AlphaKeyList>
+        </DateConfig>
+        <DateConfig date="3" texture="moon_01.png">
+            <AlphaKeyList>
+                <KeyAlpha time="0.125" alpha="1" />
+                <KeyAlpha time="0.14583" alpha="0.5" />
+                <KeyAlpha time="0.1875" alpha="0.5" />
+                <KeyAlpha time="0.2083" alpha="0" />
+                <KeyAlpha time="0.89583" alpha="0" />
+                <KeyAlpha time="0.9167" alpha="0" />
+                <KeyAlpha time="0.9583" alpha="0" />
+                <KeyAlpha time="0.97917" alpha="1" />
+            </AlphaKeyList>
+        </DateConfig>
+        <DateConfig date="4" texture="moon_01.png">
+            <AlphaKeyList>
+                <KeyAlpha time="0.125" alpha="1" />
+                <KeyAlpha time="0.14583" alpha="0.5" />
+                <KeyAlpha time="0.1875" alpha="0.5" />
+                <KeyAlpha time="0.2083" alpha="0" />
+                <KeyAlpha time="0.89583" alpha="0" />
+                <KeyAlpha time="0.9167" alpha="0" />
+                <KeyAlpha time="0.9583" alpha="0" />
+                <KeyAlpha time="0.97917" alpha="1" />
+            </AlphaKeyList>
+        </DateConfig>
+        <DateConfig date="5" texture="moon_01.png">
+            <AlphaKeyList>
+                <KeyAlpha time="0.125" alpha="1" />
+                <KeyAlpha time="0.14583" alpha="0.5" />
+                <KeyAlpha time="0.1875" alpha="0.5" />
+                <KeyAlpha time="0.2083" alpha="0" />
+                <KeyAlpha time="0.89583" alpha="0" />
+                <KeyAlpha time="0.9167" alpha="0" />
+                <KeyAlpha time="0.9583" alpha="0" />
+                <KeyAlpha time="0.97917" alpha="1" />
+            </AlphaKeyList>
+        </DateConfig>
+        <DateConfig date="6" texture="moon_02.png">
+            <AlphaKeyList>
+                <KeyAlpha time="0.125" alpha="1" />
+                <KeyAlpha time="0.14583" alpha="0.5" />
+                <KeyAlpha time="0.1875" alpha="0.5" />
+                <KeyAlpha time="0.2083" alpha="0" />
+                <KeyAlpha time="0.89583" alpha="0" />
+                <KeyAlpha time="0.9167" alpha="0" />
+                <KeyAlpha time="0.9583" alpha="0" />
+                <KeyAlpha time="0.97917" alpha="1" />
+            </AlphaKeyList>
+        </DateConfig>
+        <DateConfig date="7" texture="moon_02.png">
+            <AlphaKeyList>
+                <KeyAlpha time="0.125" alpha="1" />
+                <KeyAlpha time="0.14583" alpha="0.5" />
+                <KeyAlpha time="0.1875" alpha="0.5" />
+                <KeyAlpha time="0.2083" alpha="0" />
+                <KeyAlpha time="0.89583" alpha="0" />
+                <KeyAlpha time="0.9167" alpha="0" />
+                <KeyAlpha time="0.9583" alpha="0" />
+                <KeyAlpha time="0.97917" alpha="1" />
+            </AlphaKeyList>
+        </DateConfig>
+        <DateConfig date="8" texture="moon_02.png">
+            <AlphaKeyList>
+                <KeyAlpha time="0.125" alpha="1" />
+                <KeyAlpha time="0.14583" alpha="0.5" />
+                <KeyAlpha time="0.1875" alpha="0.5" />
+                <KeyAlpha time="0.2083" alpha="0" />
+                <KeyAlpha time="0.89583" alpha="0" />
+                <KeyAlpha time="0.9167" alpha="0" />
+                <KeyAlpha time="0.9583" alpha="0" />
+                <KeyAlpha time="0.97917" alpha="1" />
+            </AlphaKeyList>
+        </DateConfig>
+        <DateConfig date="9" texture="moon_03.png">
+            <AlphaKeyList>
+                <KeyAlpha time="0.125" alpha="1" />
+                <KeyAlpha time="0.14583" alpha="0.5" />
+                <KeyAlpha time="0.1875" alpha="0.5" />
+                <KeyAlpha time="0.2083" alpha="0" />
+                <KeyAlpha time="0.89583" alpha="0" />
+                <KeyAlpha time="0.9167" alpha="0" />
+                <KeyAlpha time="0.9583" alpha="0" />
+                <KeyAlpha time="0.97917" alpha="1" />
+            </AlphaKeyList>
+        </DateConfig>
+        <DateConfig date="10" texture="moon_03.png">
+            <AlphaKeyList>
+                <KeyAlpha time="0.125" alpha="1" />
+                <KeyAlpha time="0.14583" alpha="0.5" />
+                <KeyAlpha time="0.1875" alpha="0.5" />
+                <KeyAlpha time="0.2083" alpha="0" />
+                <KeyAlpha time="0.89583" alpha="0" />
+                <KeyAlpha time="0.9167" alpha="0" />
+                <KeyAlpha time="0.9583" alpha="0" />
+                <KeyAlpha time="0.97917" alpha="1" />
+            </AlphaKeyList>
+        </DateConfig>
+        <DateConfig date="11" texture="moon_03.png">
+            <AlphaKeyList>
+                <KeyAlpha time="0.125" alpha="1" />
+                <KeyAlpha time="0.14583" alpha="0.5" />
+                <KeyAlpha time="0.1875" alpha="0.5" />
+                <KeyAlpha time="0.2083" alpha="0" />
+                <KeyAlpha time="0.89583" alpha="0" />
+                <KeyAlpha time="0.9167" alpha="0" />
+                <KeyAlpha time="0.9583" alpha="0" />
+                <KeyAlpha time="0.97917" alpha="1" />
+            </AlphaKeyList>
+        </DateConfig>
+        <DateConfig date="12" texture="moon_04.png">
+            <AlphaKeyList>
+                <KeyAlpha time="0.125" alpha="1" />
+                <KeyAlpha time="0.14583" alpha="0.5" />
+                <KeyAlpha time="0.1875" alpha="0.5" />
+                <KeyAlpha time="0.2083" alpha="0" />
+                <KeyAlpha time="0.89583" alpha="0" />
+                <KeyAlpha time="0.9167" alpha="0" />
+                <KeyAlpha time="0.9583" alpha="0" />
+                <KeyAlpha time="0.97917" alpha="1" />
+            </AlphaKeyList>
+        </DateConfig>
+        <DateConfig date="13" texture="moon_04.png">
+            <AlphaKeyList>
+                <KeyAlpha time="0.125" alpha="1" />
+                <KeyAlpha time="0.14583" alpha="0.5" />
+                <KeyAlpha time="0.1875" alpha="0.5" />
+                <KeyAlpha time="0.2083" alpha="0" />
+                <KeyAlpha time="0.89583" alpha="0" />
+                <KeyAlpha time="0.9167" alpha="0" />
+                <KeyAlpha time="0.9583" alpha="0" />
+                <KeyAlpha time="0.97917" alpha="1" />
+            </AlphaKeyList>
+        </DateConfig>
+        <DateConfig date="14" texture="moon_04.png">
+            <AlphaKeyList>
+                <KeyAlpha time="0.125" alpha="1" />
+                <KeyAlpha time="0.14583" alpha="0.5" />
+                <KeyAlpha time="0.1875" alpha="0.5" />
+                <KeyAlpha time="0.2083" alpha="0" />
+                <KeyAlpha time="0.89583" alpha="0" />
+                <KeyAlpha time="0.9167" alpha="0" />
+                <KeyAlpha time="0.9583" alpha="0" />
+                <KeyAlpha time="0.97917" alpha="1" />
+            </AlphaKeyList>
+        </DateConfig>
+        <DateConfig date="15" texture="moon_05.png">
+            <AlphaKeyList>
+                <KeyAlpha time="0.125" alpha="1" />
+                <KeyAlpha time="0.14583" alpha="0.5" />
+                <KeyAlpha time="0.1875" alpha="0.5" />
+                <KeyAlpha time="0.2083" alpha="0" />
+                <KeyAlpha time="0.89583" alpha="0" />
+                <KeyAlpha time="0.9167" alpha="0" />
+                <KeyAlpha time="0.9583" alpha="0" />
+                <KeyAlpha time="0.97917" alpha="1" />
+            </AlphaKeyList>
+        </DateConfig>
+        <DateConfig date="16" texture="moon_05.png">
+            <AlphaKeyList>
+                <KeyAlpha time="0.125" alpha="1" />
+                <KeyAlpha time="0.14583" alpha="0.5" />
+                <KeyAlpha time="0.1875" alpha="0.5" />
+                <KeyAlpha time="0.2083" alpha="0" />
+                <KeyAlpha time="0.89583" alpha="0" />
+                <KeyAlpha time="0.9167" alpha="0" />
+                <KeyAlpha time="0.9583" alpha="0" />
+                <KeyAlpha time="0.97917" alpha="1" />
+            </AlphaKeyList>
+        </DateConfig>
+        <DateConfig date="17" texture="moon_05.png">
+            <AlphaKeyList>
+                <KeyAlpha time="0.125" alpha="1" />
+                <KeyAlpha time="0.14583" alpha="0.5" />
+                <KeyAlpha time="0.1875" alpha="0.5" />
+                <KeyAlpha time="0.2083" alpha="0" />
+                <KeyAlpha time="0.89583" alpha="0" />
+                <KeyAlpha time="0.9167" alpha="0" />
+                <KeyAlpha time="0.9583" alpha="0" />
+                <KeyAlpha time="0.97917" alpha="1" />
+            </AlphaKeyList>
+        </DateConfig>
+        <DateConfig date="18" texture="moon_05.png">
+            <AlphaKeyList>
+                <KeyAlpha time="0.125" alpha="1" />
+                <KeyAlpha time="0.14583" alpha="0.5" />
+                <KeyAlpha time="0.1875" alpha="0.5" />
+                <KeyAlpha time="0.2083" alpha="0" />
+                <KeyAlpha time="0.89583" alpha="0" />
+                <KeyAlpha time="0.9167" alpha="0" />
+                <KeyAlpha time="0.9583" alpha="0" />
+                <KeyAlpha time="0.97917" alpha="1" />
+            </AlphaKeyList>
+        </DateConfig>
+        <DateConfig date="19" texture="moon_05.png">
+            <AlphaKeyList>
+                <KeyAlpha time="0.125" alpha="1" />
+                <KeyAlpha time="0.14583" alpha="0.5" />
+                <KeyAlpha time="0.1875" alpha="0.5" />
+                <KeyAlpha time="0.2083" alpha="0" />
+                <KeyAlpha time="0.89583" alpha="0" />
+                <KeyAlpha time="0.9167" alpha="0" />
+                <KeyAlpha time="0.9583" alpha="0" />
+                <KeyAlpha time="0.97917" alpha="1" />
+            </AlphaKeyList>
+        </DateConfig>
+        <DateConfig date="20" texture="moon_05.png">
+            <AlphaKeyList>
+                <KeyAlpha time="0.125" alpha="1" />
+                <KeyAlpha time="0.14583" alpha="0.5" />
+                <KeyAlpha time="0.1875" alpha="0.5" />
+                <KeyAlpha time="0.2083" alpha="0" />
+                <KeyAlpha time="0.89583" alpha="0" />
+                <KeyAlpha time="0.9167" alpha="0" />
+                <KeyAlpha time="0.9583" alpha="0" />
+                <KeyAlpha time="0.97917" alpha="1" />
+            </AlphaKeyList>
+        </DateConfig>
+        <DateConfig date="21" texture="moon_04.png">
+            <AlphaKeyList>
+                <KeyAlpha time="0.125" alpha="1" />
+                <KeyAlpha time="0.14583" alpha="0.5" />
+                <KeyAlpha time="0.1875" alpha="0.5" />
+                <KeyAlpha time="0.2083" alpha="0" />
+                <KeyAlpha time="0.89583" alpha="0" />
+                <KeyAlpha time="0.9167" alpha="0" />
+                <KeyAlpha time="0.9583" alpha="0" />
+                <KeyAlpha time="0.97917" alpha="1" />
+            </AlphaKeyList>
+        </DateConfig>
+        <DateConfig date="22" texture="moon_04.png">
+            <AlphaKeyList>
+                <KeyAlpha time="0.125" alpha="1" />
+                <KeyAlpha time="0.14583" alpha="0.5" />
+                <KeyAlpha time="0.1875" alpha="0.5" />
+                <KeyAlpha time="0.2083" alpha="0" />
+                <KeyAlpha time="0.89583" alpha="0" />
+                <KeyAlpha time="0.9167" alpha="0" />
+                <KeyAlpha time="0.9583" alpha="0" />
+                <KeyAlpha time="0.97917" alpha="1" />
+            </AlphaKeyList>
+        </DateConfig>
+        <DateConfig date="23" texture="moon_04.png">
+            <AlphaKeyList>
+                <KeyAlpha time="0.125" alpha="1" />
+                <KeyAlpha time="0.14583" alpha="0.5" />
+                <KeyAlpha time="0.1875" alpha="0.5" />
+                <KeyAlpha time="0.2083" alpha="0" />
+                <KeyAlpha time="0.89583" alpha="0" />
+                <KeyAlpha time="0.9167" alpha="0" />
+                <KeyAlpha time="0.9583" alpha="0" />
+                <KeyAlpha time="0.97917" alpha="1" />
+            </AlphaKeyList>
+        </DateConfig>
+        <DateConfig date="24" texture="moon_03.png">
+            <AlphaKeyList>
+                <KeyAlpha time="0.125" alpha="1" />
+                <KeyAlpha time="0.14583" alpha="0.5" />
+                <KeyAlpha time="0.1875" alpha="0.5" />
+                <KeyAlpha time="0.2083" alpha="0" />
+                <KeyAlpha time="0.89583" alpha="0" />
+                <KeyAlpha time="0.9167" alpha="0" />
+                <KeyAlpha time="0.9583" alpha="0" />
+                <KeyAlpha time="0.97917" alpha="1" />
+            </AlphaKeyList>
+        </DateConfig>
+        <DateConfig date="25" texture="moon_03.png">
+            <AlphaKeyList>
+                <KeyAlpha time="0.125" alpha="1" />
+                <KeyAlpha time="0.14583" alpha="0.5" />
+                <KeyAlpha time="0.1875" alpha="0.5" />
+                <KeyAlpha time="0.2083" alpha="0" />
+                <KeyAlpha time="0.89583" alpha="0" />
+                <KeyAlpha time="0.9167" alpha="0" />
+                <KeyAlpha time="0.9583" alpha="0" />
+                <KeyAlpha time="0.97917" alpha="1" />
+            </AlphaKeyList>
+        </DateConfig>
+        <DateConfig date="26" texture="moon_03.png">
+            <AlphaKeyList>
+                <KeyAlpha time="0.125" alpha="1" />
+                <KeyAlpha time="0.14583" alpha="0.5" />
+                <KeyAlpha time="0.1875" alpha="0.5" />
+                <KeyAlpha time="0.2083" alpha="0" />
+                <KeyAlpha time="0.89583" alpha="0" />
+                <KeyAlpha time="0.9167" alpha="0" />
+                <KeyAlpha time="0.9583" alpha="0" />
+                <KeyAlpha time="0.97917" alpha="1" />
+            </AlphaKeyList>
+        </DateConfig>
+        <DateConfig date="27" texture="moon_03.png">
+            <AlphaKeyList>
+                <KeyAlpha time="0.125" alpha="1" />
+                <KeyAlpha time="0.14583" alpha="0.5" />
+                <KeyAlpha time="0.1875" alpha="0.5" />
+                <KeyAlpha time="0.2083" alpha="0" />
+                <KeyAlpha time="0.89583" alpha="0" />
+                <KeyAlpha time="0.9167" alpha="0" />
+                <KeyAlpha time="0.9583" alpha="0" />
+                <KeyAlpha time="0.97917" alpha="1" />
+            </AlphaKeyList>
+        </DateConfig>
+        <DateConfig date="28" texture="moon_02.png">
+            <AlphaKeyList>
+                <KeyAlpha time="0.125" alpha="1" />
+                <KeyAlpha time="0.14583" alpha="0.5" />
+                <KeyAlpha time="0.1875" alpha="0.5" />
+                <KeyAlpha time="0.2083" alpha="0" />
+                <KeyAlpha time="0.89583" alpha="0" />
+                <KeyAlpha time="0.9167" alpha="0" />
+                <KeyAlpha time="0.9583" alpha="0" />
+                <KeyAlpha time="0.97917" alpha="1" />
+            </AlphaKeyList>
+        </DateConfig>
+        <DateConfig date="29" texture="moon_02.png">
+            <AlphaKeyList>
+                <KeyAlpha time="0.125" alpha="1" />
+                <KeyAlpha time="0.14583" alpha="0.5" />
+                <KeyAlpha time="0.1875" alpha="0.5" />
+                <KeyAlpha time="0.2083" alpha="0" />
+                <KeyAlpha time="0.89583" alpha="0" />
+                <KeyAlpha time="0.9167" alpha="0" />
+                <KeyAlpha time="0.9583" alpha="0" />
+                <KeyAlpha time="0.97917" alpha="1" />
+            </AlphaKeyList>
+        </DateConfig>
+        <DateConfig date="30" texture="moon_02.png">
+            <AlphaKeyList>
+                <KeyAlpha time="0.125" alpha="1" />
+                <KeyAlpha time="0.14583" alpha="0.5" />
+                <KeyAlpha time="0.1875" alpha="0.5" />
+                <KeyAlpha time="0.2083" alpha="0" />
+                <KeyAlpha time="0.89583" alpha="0" />
+                <KeyAlpha time="0.9167" alpha="0" />
+                <KeyAlpha time="0.9583" alpha="0" />
+                <KeyAlpha time="0.97917" alpha="1" />
+            </AlphaKeyList>
+        </DateConfig>
+    </SkyMoon>
+    <SkyStar star_count="2000" radius="10000" intensity="1" star_size="8" flicker_speed="0.2" start_colour="0.1 0.1 0.1 0.1" end_colour="1 1 1 1" />
+    <SkyWeathers current_weather="default">
+        <Weather name="default">
+            <SkyEnviromentList>
+                <EnvKey time="0.125" ambient="0.258824 0.176471 0.266667" fog="0.0941177 0.219608 0.403922" fog_near_distance="2000" fog_far_distance="4500" sky_fog="0.0784314 0.239216 0.411765" light_one="0.101961 0.67451 0.686275" light_one_specular="0 0 0" light_two="0.164706 0.356863 0.713726" light_two_specular="0 0 0" />
+                <EnvKey time="0.14583" ambient="0.0666667 0.129412 0.27451" fog="0.337255 0.537255 0.74902" fog_near_distance="2500" fog_far_distance="6000" sky_fog="0.67451 0.784314 0.929412" light_one="0.537255 0.384314 0.882353" light_one_specular="0 0 0" light_two="0.239216 0.211765 0.466667" light_two_specular="0 0 0" />
+                <EnvKey time="0.1875" ambient="0.0666667 0.129412 0.27451" fog="0.356863 0.537255 0.729412" fog_near_distance="3000" fog_far_distance="7500" sky_fog="0.67451 0.784314 0.929412" light_one="0.627451 0.509804 0.909804" light_one_specular="0 0 0" light_two="0.211765 0.192157 0.427451" light_two_specular="0 0 0" />
+                <EnvKey time="0.2083" ambient="0.211765 0.258824 0.631373" fog="0.482353 0.647059 0.901961" fog_near_distance="3000" fog_far_distance="8500" sky_fog="0.556863 0.701961 0.913726" light_one="0.937255 0.537255 0.14902" light_one_specular="0 0 0" light_two="0.156863 0.411765 0.67451" light_two_specular="0 0 0" />
+                <EnvKey time="0.89583" ambient="0.211765 0.258824 0.631373" fog="0.482353 0.647059 0.901961" fog_near_distance="4000" fog_far_distance="8000" sky_fog="0.556863 0.701961 0.913726" light_one="0.937255 0.537255 0.14902" light_one_specular="0 0 0" light_two="0.156863 0.411765 0.67451" light_two_specular="0 0 0" />
+                <EnvKey time="0.9167" ambient="0.0784314 0.121569 0.454902" fog="0.513726 0.411765 0.847059" fog_near_distance="4000" fog_far_distance="7500" sky_fog="0.564706 0.494118 0.901961" light_one="0.976471 0.529412 0.258824" light_one_specular="0 0 0" light_two="0.129412 0.203922 0.439216" light_two_specular="0 0 0" />
+                <EnvKey time="0.9583" ambient="0.0784314 0.121569 0.454902" fog="0.364706 0.403922 0.886275" fog_near_distance="3500" fog_far_distance="7000" sky_fog="0.494118 0.513726 0.901961" light_one="0.972549 0.384314 0.027451" light_one_specular="0 0 0" light_two="0.109804 0.176471 0.376471" light_two_specular="0 0 0" />
+                <EnvKey time="0.97917" ambient="0.258824 0.176471 0.266667" fog="0.0901961 0.211765 0.403922" fog_near_distance="2500" fog_far_distance="5500" sky_fog="0.101961 0.192157 0.392157" light_one="0.203922 0.827451 0.87451" light_one_specular="0 0 0" light_two="0.164706 0.356863 0.713726" light_two_specular="0 0 0" />
+            </SkyEnviromentList>
+            <SkySphereTextureGroups>
+                <TextureGroup background_texture="dl_qyw_bj_xingkong.jpg" background_wrap="4" far_cloud_texture="dl_qyw_yuanyun.png" far_cloud_wrap="3" mountain_texture="" mountain_wrap="3" near_cloud_texture="dl_qyw_jinyun.png" near_cloud_wrap="3" fog_texture="FogJianbian.tga" fog_wrap="1">
+                    <AlphaKeyList>
+                        <KeyAlpha time="0.125" alpha="1" />
+                        <KeyAlpha time="0.145833" alpha="0.5" />
+                        <KeyAlpha time="0.1875" alpha="0.5" />
+                        <KeyAlpha time="0.208333" alpha="0" />
+                        <KeyAlpha time="0.89583" alpha="0" />
+                        <KeyAlpha time="0.91667" alpha="0" />
+                        <KeyAlpha time="0.958333" alpha="0" />
+                        <KeyAlpha time="0.979167" alpha="1" />
+                    </AlphaKeyList>
+                </TextureGroup>
+                <TextureGroup background_texture="dl_qxy_bj.jpg" background_wrap="4" far_cloud_texture="dl_qxy_yuanyun.png" far_cloud_wrap="3" mountain_texture="" mountain_wrap="3" near_cloud_texture="dl_qxy_jinyun.png" near_cloud_wrap="3" fog_texture="FogJianbian.tga" fog_wrap="1">
+                    <AlphaKeyList>
+                        <KeyAlpha time="0.125" alpha="0" />
+                        <KeyAlpha time="0.145833" alpha="0" />
+                        <KeyAlpha time="0.1875" alpha="0" />
+                        <KeyAlpha time="0.208333" alpha="0" />
+                        <KeyAlpha time="0.89583" alpha="0" />
+                        <KeyAlpha time="0.91667" alpha="1" />
+                        <KeyAlpha time="0.958333" alpha="1" />
+                        <KeyAlpha time="0.979167" alpha="0" />
+                    </AlphaKeyList>
+                </TextureGroup>
+                <TextureGroup background_texture="dl_qbt_bj.jpg" background_wrap="4" far_cloud_texture="dl_qbt_yuanyun.png" far_cloud_wrap="3" mountain_texture="" mountain_wrap="3" near_cloud_texture="dl_qbt_jinyun.png" near_cloud_wrap="3" fog_texture="FogJianbian.tga" fog_wrap="1">
+                    <AlphaKeyList>
+                        <KeyAlpha time="0.125" alpha="0" />
+                        <KeyAlpha time="0.145833" alpha="0.5" />
+                        <KeyAlpha time="0.1875" alpha="0.5" />
+                        <KeyAlpha time="0.208333" alpha="1" />
+                        <KeyAlpha time="0.89583" alpha="1" />
+                        <KeyAlpha time="0.91667" alpha="0" />
+                        <KeyAlpha time="0.958333" alpha="0" />
+                        <KeyAlpha time="0.979167" alpha="0" />
+                    </AlphaKeyList>
+                </TextureGroup>
+            </SkySphereTextureGroups>
+        </Weather>
+    </SkyWeathers>
+    <SkySphereLayers>
+        <SkyLayer name="background" pitch_start="0" pitch_end="1.5708" distance="3000" rotate_speed="0" texture_count="3" />
+        <SkyLayer name="far_cloud" pitch_start="1.15296" pitch_end="1.5708" distance="5000" rotate_speed="0.005" texture_count="3" />
+        <SkyLayer name="fog" pitch_start="1.3069" pitch_end="1.83155" distance="2400" rotate_speed="0" texture_count="3" />
+        <SkyLayer name="mountain" pitch_start="1.29119" pitch_end="1.5708" distance="5000" rotate_speed="0" texture_count="0" />
+        <SkyLayer name="near_cloud" pitch_start="1.15296" pitch_end="1.5708" distance="5000" rotate_speed="0.01" texture_count="3" />
+    </SkySphereLayers>
+</SkySphere>

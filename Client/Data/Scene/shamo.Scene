@@ -2,6 +2,7 @@
 <Scene formatVersion="0.1.1" name="shamo">
 
   <Terrain filename="shamo.Terrain"/>
+  <SkySphere enabled="true" filename="shamo.skysphere" objectname="#FairySkySphere"/>
 
   <Object name="#FairyEnviroment" type="Enviroment">
     <Property name="ambient" value="0.215686 0.141176 0.090196"/>
@@ -27,8 +28,8 @@
     <Property name="cast shadows" value="true"/>
   </Object>
 
-  <Object name="#FairySkyDome" type="SkyDome">
-    <Property name="material" value="CloudySky"/>
+  <Object name="#FairySkySphere" type="SkySphere">
+    <Property name="enabled" value="true"/>
   </Object>
 
   <Object type="StaticEntity">

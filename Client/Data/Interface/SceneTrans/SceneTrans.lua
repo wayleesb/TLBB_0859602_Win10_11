@@ -16,6 +16,11 @@ function SceneTrans_OnEvent(event)
 		SceneTrans_TargetScene:SetText("前往" .. g_strTargetSceneName);
 		this:Show();
 	elseif( event == "ON_SCENE_TRANSING") then
+		-- 切图被拒绝时关闭遮罩，角色仍留在源场景。
+		if(tonumber(arg0) == 1) then
+			this:Hide();
+			return;
+		end
 		if(this:IsVisible()) then
 			SceneTrans_TargetScene:SetText("前往" .. g_strTargetSceneName .. "[" .. tostring(arg0) .. "]");
 		end

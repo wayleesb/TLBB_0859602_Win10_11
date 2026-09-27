@@ -2,6 +2,7 @@
 <Scene formatVersion="0.1.1" name="huoyangu">
 
   <Terrain filename="huoyangu.Terrain"/>
+  <SkySphere enabled="true" filename="huoyangu.skysphere" objectname="#FairySkySphere"/>
 
   <Object name="#FairyEnviroment" type="Enviroment">
     <Property name="ambient" value="0.368627 0.094118 0.082353"/>
@@ -342,8 +343,8 @@
     <Property name="scale" value="0.8 1.5 1"/>
   </Object>
 
-  <Object name="#FairySkyDome" type="SkyDome">
-    <Property name="material" value="CloudySky"/>
+  <Object name="#FairySkySphere" type="SkySphere">
+    <Property name="enabled" value="true"/>
   </Object>
 
   <Object type="StaticEntity">

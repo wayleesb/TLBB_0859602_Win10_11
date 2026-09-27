@@ -478740,3 +478740,197 @@ zuhui_06
 
 }
 
+
+骑乘金翅_01
+{
+	quota 30
+	material 骑乘金翅_01
+	particle_width 20
+	particle_height 60
+	cull_each false
+	renderer billboard
+	sorted false
+	local_space false
+	iteration_interval 0
+	nonvisible_update_timeout 0
+
+	billboard_type oriented_self
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 0 0
+	common_up_vector 0 0 0
+	point_rendering false
+	accurate_facing false
+	speed_relatived_size_factor 0.01
+
+	emitter Ring
+	{
+		angle 0.5
+		colour 1 1 1 1
+		colour_range_start 1 1 1 1
+		colour_range_end 1 1 1 1
+		direction -0.485071 0.485071 0.727607
+		emission_rate 30
+		position 0 0 0
+		velocity 75
+		velocity_min 75
+		velocity_max 75
+		time_to_live 1
+		time_to_live_min 1
+		time_to_live_max 1
+		duration 0
+		duration_min 0
+		duration_max 0
+		repeat_delay 0
+		repeat_delay_min 0
+		repeat_delay_max 0
+		width 1
+		height 1
+		depth 1
+		inner_width 0
+		inner_height 0
+	}
+
+	affector ScaleInterpolator
+	{
+		uniform_size false
+		width_range_start 8
+		width_range_end 20
+		height_range_start 5
+		height_range_end 15
+		use_constant_scale false
+		constant_scale 1 1 1
+		use_interpolated_scale true
+		scale0 0.5 0.5 0.5
+		time0 0
+		scale1 0.4 0.4 0.4
+		time1 0.2
+		scale2 0 0 0
+		time2 1
+		scale3 1 1 1
+		time3 1
+		scale4 1 1 1
+		time4 1
+		scale5 1 1 1
+		time5 1
+		repeat_times 1
+	}
+
+	affector ColourFading
+	{
+		colour0 0 0 0 1
+		time0 0
+		colour1 0.07451 0.756863 0.521569 1
+		time1 0.05
+		colour2 0.086275 0.564706 1 1
+		time2 0.07
+		colour3 0 0.227451 0.909804 1
+		time3 0.3
+		colour4 0 0 0 1
+		time4 1
+		colour5 0 0 0 1
+		time5 1
+		repeat_times 1
+		opacity 1
+		fade_in_time 0
+		fade_out_time 1
+	}
+
+}
+
+骑乘金翅_03
+{
+	quota 30
+	material 骑乘金翅_01
+	particle_width 20
+	particle_height 60
+	cull_each false
+	renderer billboard
+	sorted false
+	local_space false
+	iteration_interval 0
+	nonvisible_update_timeout 0
+
+	billboard_type oriented_self
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 0 0
+	common_up_vector 0 0 0
+	point_rendering false
+	accurate_facing false
+	speed_relatived_size_factor 0.01
+
+	emitter Ring
+	{
+		angle 0.5
+		colour 1 1 1 1
+		colour_range_start 1 1 1 1
+		colour_range_end 1 1 1 1
+		direction -0.485071 0.485071 -0.727607
+		emission_rate 30
+		position 0 0 0
+		velocity 75
+		velocity_min 75
+		velocity_max 75
+		time_to_live 1
+		time_to_live_min 1
+		time_to_live_max 1
+		duration 0
+		duration_min 0
+		duration_max 0
+		repeat_delay 0
+		repeat_delay_min 0
+		repeat_delay_max 0
+		width 1
+		height 1
+		depth 1
+		inner_width 0
+		inner_height 0
+	}
+
+	affector ScaleInterpolator
+	{
+		uniform_size false
+		width_range_start 8
+		width_range_end 20
+		height_range_start 5
+		height_range_end 15
+		use_constant_scale false
+		constant_scale 1 1 1
+		use_interpolated_scale true
+		scale0 0.5 0.5 0.5
+		time0 0
+		scale1 0.4 0.4 0.4
+		time1 0.2
+		scale2 0 0 0
+		time2 1
+		scale3 1 1 1
+		time3 1
+		scale4 1 1 1
+		time4 1
+		scale5 1 1 1
+		time5 1
+		repeat_times 1
+	}
+
+	affector ColourFading
+	{
+		colour0 0 0 0 1
+		time0 0
+		colour1 0 0.984314 0.517647 1
+		time1 0.05
+		colour2 0.086275 0.564706 1 1
+		time2 0.07
+		colour3 0 0.227451 0.909804 1
+		time3 0.3
+		colour4 0 0 0 1
+		time4 1
+		colour5 0 0 0 1
+		time5 1
+		repeat_times 1
+		opacity 1
+		fade_in_time 0
+		fade_out_time 1
+	}
+
+}

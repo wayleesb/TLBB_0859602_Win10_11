@@ -185,6 +185,7 @@ function MiniMap_OnEvent(event)
 		if(tonumber(arg0) == 1)then
 		  if(Variable:GetVariable("System_Region") ~= "1258") then
 				MiniMap_Fangchengmi_Flash : Show();
+				MiniMap_Fangchengmi_Btn :SetToolTip("#{FCMX_90609_2}");
 			end
 			MiniMap_Fangchengmi_Flash1 : Hide()
 			MiniMap_Fangchengmi_Flash1 :SetProperty( "AlwaysOnTop","False" );
@@ -192,11 +193,13 @@ function MiniMap_OnEvent(event)
 		elseif(tonumber(arg0) == 2)then
 		  if(Variable:GetVariable("System_Region") ~= "1258") then
 				MiniMap_Fangchengmi_Flash1 : Show();
+				MiniMap_Fangchengmi_Btn :SetToolTip("#{FCMX_90609_3}");
 			end
 			MiniMap_Fangchengmi_Flash : Hide();
 			MiniMap_Fangchengmi_Flash :SetProperty( "AlwaysOnTop","False" );
 			MiniMap_Fangchengmi_Flash1 : SetProperty( "AlwaysOnTop","True" );
 		else
+			MiniMap_Fangchengmi_Btn :SetToolTip("#{FCMX_90609_1}");
 			MiniMap_Fangchengmi_Flash1 : Hide();
 			MiniMap_Fangchengmi_Flash : Hide();	
 		end

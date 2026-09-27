@@ -2,6 +2,7 @@
 <Scene formatVersion="0.1.1" name="miaoren">
 
   <Terrain filename="miaoren.Terrain"/>
+  <SkySphere enabled="true" filename="miaoren.skysphere" objectname="#FairySkySphere"/>
 
   <Object name="#FairyEnviroment" type="Enviroment">
     <Property name="ambient" value="0.027451 0.078431 0.270588"/>
@@ -26,8 +27,8 @@
     <Property name="direction" value="0.570605 0.339582 -0.121311"/>
   </Object>
 
-  <Object name="#FairySkyDome" type="SkyDome">
-    <Property name="material" value="CloudySky"/>
+  <Object name="#FairySkySphere" type="SkySphere">
+    <Property name="enabled" value="true"/>
   </Object>
 
   <Object type="TerrainLiquid">

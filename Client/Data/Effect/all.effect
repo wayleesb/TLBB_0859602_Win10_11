@@ -111819,3 +111819,26 @@ effect 黑色秘笈
 	LifeTime	0
 }
 
+
+effect 骑乘金翅_01
+{
+	element Particle
+	{
+		StartTime	0
+		LifeTime	0
+		Position	15 -13 10
+		Orientation	1 0 0 0
+		ParticleSystem	骑乘金翅_01
+	}
+
+	element Particle
+	{
+		StartTime	0
+		LifeTime	0
+		Position	15 -13 -10
+		Orientation	1 0 0 0
+		ParticleSystem	骑乘金翅_03
+	}
+
+	LifeTime	0
+}

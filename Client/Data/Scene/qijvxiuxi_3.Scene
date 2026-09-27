@@ -2,6 +2,7 @@
 <Scene formatVersion="0.1.1" name="qijvxiuxi_3">
 
   <Terrain filename="qijvxiuxi_3.Terrain"/>
+  <SkySphere enabled="true" filename="qijvxiuxi_3.skysphere" objectname="#FairySkySphere"/>
 
   <Object name="#FairyEnviroment" type="Enviroment">
     <Property name="ambient" value="0.2 0.156863 0.07451"/>
@@ -26,8 +27,8 @@
     <Property name="cast shadows" value="true"/>
   </Object>
 
-  <Object name="#FairySkyDome" type="SkyDome">
-    <Property name="material" value="CloudySky"/>
+  <Object name="#FairySkySphere" type="SkySphere">
+    <Property name="enabled" value="true"/>
   </Object>
 
   <Object type="StaticEntity">

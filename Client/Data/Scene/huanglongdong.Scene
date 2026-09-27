@@ -2,6 +2,7 @@
 <Scene formatVersion="0.1.1" name="huanglongdong">
 
   <Terrain filename="huanglongdong.Terrain"/>
+  <SkySphere enabled="true" filename="huanglongdong.skysphere" objectname="#FairySkySphere"/>
 
   <Object name="#FairyEnviroment" type="Enviroment">
     <Property name="ambient" value="0.156863 0.117647 0.968627"/>
@@ -26,8 +27,8 @@
     <Property name="direction" value="0.633987 -0.181739 0.514754"/>
   </Object>
 
-  <Object name="#FairySkyDome" type="SkyDome">
-    <Property name="material" value="CloudySky"/>
+  <Object name="#FairySkySphere" type="SkySphere">
+    <Property name="enabled" value="true"/>
   </Object>
 
   <Object type="Light">

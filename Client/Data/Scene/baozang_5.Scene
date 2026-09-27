@@ -2,6 +2,7 @@
 <Scene formatVersion="0.1.1" name="baozang_5">
 
   <Terrain filename="baozang_5.Terrain"/>
+  <SkySphere enabled="true" filename="baozang_5.skysphere" objectname="#FairySkySphere"/>
 
   <Object name="#FairyEnviroment" type="Enviroment">
     <Property name="ambient" value="0.427451 0.101961 0.003922"/>
@@ -25,8 +26,8 @@
     <Property name="direction" value="-0.863281 0.3 -0.916462"/>
   </Object>
 
-  <Object name="#FairySkyDome" type="SkyDome">
-    <Property name="material" value="CloudySky"/>
+  <Object name="#FairySkySphere" type="SkySphere">
+    <Property name="enabled" value="true"/>
   </Object>
 
   <Object type="StaticEntity">

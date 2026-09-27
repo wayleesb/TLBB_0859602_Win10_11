@@ -52,6 +52,7 @@ ID	名称	准乘人数	ModelID	AddHeight	RideRecipe	主坐动作组索引	主绑
 49	骑乘情人节花车1	2	2254	0.6	1078	26	attach1	26	attach2	-1	-1
 50	骑乘白豹	1	2293	0.7	1080	23	attach1	23	attach1	-1	1
 51	骑乘黑豹	1	2294	0.7	1081	23	attach1	23	attach1	-1	1
+94	金翼龙兽	1	2841	0.7	1153	23	attach1	23	attach1	-1	1
 101	潘神骑乘	2	5007	0.7	426	23	attach1	23	attach2	-1	1
 102	初级年兽坐骑	1	5004	0.7	1077	23	attach1	23	attach1	-1	1
 103	中级年兽坐骑	1	5005	0.7	1077	23	attach1	23	attach1	-1	1

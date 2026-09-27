@@ -2,6 +2,7 @@
 <Scene formatVersion="0.1.1" name="yanhu">
 
   <Terrain filename="yanhu.Terrain"/>
+  <SkySphere enabled="true" filename="yanhu.skysphere" objectname="#FairySkySphere"/>
 
   <Object name="#FairyEnviroment" type="Enviroment">
     <Property name="ambient" value="0.345098 0.345098 0.054902"/>
@@ -25,8 +26,8 @@
     <Property name="direction" value="0.941532 0 0.761021"/>
   </Object>
 
-  <Object name="#FairySkyDome" type="SkyDome">
-    <Property name="material" value="CloudySky"/>
+  <Object name="#FairySkySphere" type="SkySphere">
+    <Property name="enabled" value="true"/>
   </Object>
 
   <Object type="TerrainLiquid">

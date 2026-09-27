@@ -122,6 +122,10 @@ function PetLevelup_CancelSkill()
 end
 
 function PetLevelup_Clear()
+
+	if( g_selectindex ~= -1 )then
+		Pet:SetPetLocation(g_selectindex,-1);
+	end
 	
 	g_selectindex = -1
 
@@ -162,7 +166,7 @@ function PetLevelup_Selected(selectindex)
 	
 	PetLevelup_PetModel:SetFakeObject("");
 	Pet:SetSkillLevelupModel(selectindex);
-	--Pet:SetPetLocation(selectindex,2);
+	Pet:SetPetLocation(selectindex,1);
 	PetLevelup_PetModel:SetFakeObject( "My_PetLevelup" );
 	
 	local i=1;
@@ -176,7 +180,11 @@ function PetLevelup_Selected(selectindex)
 			k = k+1;
 		end
 	end
-	
+
+	if( g_selectindex ~= -1 )then
+		Pet:SetPetLocation(g_selectindex,-1);
+	end
+
 	g_selectindex = selectindex
 end
 

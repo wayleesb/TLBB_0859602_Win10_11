@@ -46,7 +46,6 @@ function MissionReply_OnEvent(event)
 		end
 		
 		-- “血浴神兵”任务时，得到调用该界面的 scriptId
-		-- add by WTT	20090112
 		if (arg1~=nil) then
 			scriptId = tonumber(arg1);			
 		end
@@ -65,7 +64,13 @@ function MissionReply_OnEvent(event)
 	
 	-- 珍兽刷新
 	elseif ( event == "REPLY_MISSION_PET" and this:IsVisible() ) then
+		-- 取消当前珍兽的锁定状态
+		if Pet_Index >= 0 then
+			Pet : SetPetLocation( Pet_Index, -1 )
+		end
 		Pet_Index = tonumber(arg0);
+		-- 给珍兽上锁，设置珍兽已经提交到7号界面容器
+		Pet : SetPetLocation( Pet_Index, 7 )
 		MissionReply_NeedPet_Info : SetText(Pet:GetName(Pet_Index));	
 
 	-- 某逻辑对象的某些发生改变
@@ -165,6 +170,9 @@ function MissionReply_Accept_Clicked()
 		else 	 
 			MissionReply:OnContinue(Pet_Index);
 			StopCareObject_MissionReply(objCared)
+			if Pet_Index >= 0 then
+				Pet : SetPetLocation( Pet_Index, -1 )
+			end
 			Pet_Index = -1;
 			Accept_Clicked_Num = 0; 													-- 第2次点击“确定”后，恢复 Accept_Clicked_Num 为未按过“确定”按钮。
 			this:Hide();
@@ -173,6 +181,9 @@ function MissionReply_Accept_Clicked()
 	else
 		MissionReply:OnContinue(Pet_Index);
 		StopCareObject_MissionReply(objCared)
+		if Pet_Index >= 0 then
+			Pet : SetPetLocation( Pet_Index, -1 )
+		end
 		Pet_Index = -1;
 		this:Hide();	
 	end
@@ -190,6 +201,9 @@ function MissionReply_Cancel_Clicked()
 	end
 	
 	StopCareObject_MissionReply(objCared)
+	if Pet_Index >= 0 then
+		Pet : SetPetLocation( Pet_Index, -1 )
+	end
 	Pet_Index = -1;
 	this:Hide();
 end
@@ -223,7 +237,10 @@ function MissionReply_OnClose()
 	DataPool:CloseMissionFrame();
 	Pet : ShowPetList(0);
 	MissionReply_Cancel_Clicked();
-
+	if Pet_Index >= 0 then
+		Pet : SetPetLocation( Pet_Index, -1 )
+	end
+	Pet_Index = -1
 end
 
 function MissionReply_ToggleShowPetList()

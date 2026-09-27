@@ -2,6 +2,7 @@
 <Scene formatVersion="0.1.1" name="gaochang">
 
   <Terrain filename="gaochang.Terrain"/>
+  <SkySphere enabled="true" filename="gaochang.skysphere" objectname="#FairySkySphere"/>
 
   <Object name="#FairyEnviroment" type="Enviroment">
     <Property name="ambient" value="0.203922 0.14902 0.054902"/>
@@ -25,8 +26,8 @@
     <Property name="direction" value="-0.849174 0 0.396752"/>
   </Object>
 
-  <Object name="#FairySkyDome" type="SkyDome">
-    <Property name="material" value="CloudySky"/>
+  <Object name="#FairySkySphere" type="SkySphere">
+    <Property name="enabled" value="true"/>
   </Object>
 
   <Object type="Effect">

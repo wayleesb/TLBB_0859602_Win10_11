@@ -2,6 +2,7 @@
 <Scene formatVersion="0.1.1" name="xingxiu">
 
   <Terrain filename="xingxiu.Terrain"/>
+  <SkySphere enabled="true" filename="xingxiu.skysphere" objectname="#FairySkySphere"/>
 
   <Object name="#FairyEnviroment" type="Enviroment">
     <Property name="ambient" value="0.101961 0.486275 0.156863"/>
@@ -26,8 +27,8 @@
     <Property name="direction" value="1 -1 -1"/>
   </Object>
 
-  <Object name="#FairySkyDome" type="SkyDome">
-    <Property name="material" value="CloudySky"/>
+  <Object name="#FairySkySphere" type="SkySphere">
+    <Property name="enabled" value="true"/>
   </Object>
 
   <Object type="ParticleSystem">

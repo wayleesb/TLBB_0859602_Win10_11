@@ -2,6 +2,7 @@
 <Scene formatVersion="0.1.1" name="wuliang">
 
   <Terrain filename="wuliang.Terrain"/>
+  <SkySphere enabled="true" filename="wuliang.skysphere" objectname="#FairySkySphere"/>
 
   <Object name="#FairyEnviroment" type="Enviroment">
     <Property name="ambient" value="0.501961 0.501961 0.501961"/>
@@ -25,8 +26,8 @@
     <Property name="direction" value="0.7 -0.3 0.1"/>
   </Object>
 
-  <Object name="#FairySkyDome" type="SkyDome">
-    <Property name="material" value="CloudySky"/>
+  <Object name="#FairySkySphere" type="SkySphere">
+    <Property name="enabled" value="true"/>
   </Object>
 
   <Object type="StaticEntity">

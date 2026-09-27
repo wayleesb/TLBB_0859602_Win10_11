@@ -2,6 +2,7 @@
 <Scene formatVersion="0.1.1" name="yankeng">
 
   <Terrain filename="yankeng.Terrain"/>
+  <SkySphere enabled="true" filename="yankeng.skysphere" objectname="#FairySkySphere"/>
 
   <Object name="#FairyEnviroment" type="Enviroment">
     <Property name="ambient" value="0.145098 0.156863 0.254902"/>
@@ -25,8 +26,8 @@
     <Property name="direction" value="0.941532 0 0.761021"/>
   </Object>
 
-  <Object name="#FairySkyDome" type="SkyDome">
-    <Property name="material" value="CloudySky"/>
+  <Object name="#FairySkySphere" type="SkySphere">
+    <Property name="enabled" value="true"/>
   </Object>
 
   <Object type="StaticEntity">

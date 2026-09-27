@@ -14,6 +14,7 @@ function Operation_PreLoad()
 end
 function Operation_Ret2SelServer_Clicked()
 	EnterQuitWait(1);
+	Operation_Close();
 	--AskRet2SelServer();
 end;
 function Operation_OnLoad()
@@ -115,6 +116,7 @@ end
 --===============================================
 function Operation_QuitGame_Clicked()
 	QuitApplication("quest");
+	Operation_Close();
 end
 
 --===============================================

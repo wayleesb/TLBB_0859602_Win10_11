@@ -2,6 +2,7 @@
 <Scene formatVersion="0.1.1" name="caoyuan">
 
   <Terrain filename="caoyuan.Terrain"/>
+  <SkySphere enabled="true" filename="caoyuan.skysphere" objectname="#FairySkySphere"/>
 
   <Object name="#FairyEnviroment" type="Enviroment">
     <Property name="ambient" value="0.462745 0.537255 0.737255"/>
@@ -24,8 +25,8 @@
     <Property name="direction" value="0.3 -0.2 -0.3"/>
   </Object>
 
-  <Object name="#FairySkyDome" type="SkyDome">
-    <Property name="material" value="CloudySky"/>
+  <Object name="#FairySkySphere" type="SkySphere">
+    <Property name="enabled" value="true"/>
   </Object>
 
   <Object type="StaticEntity">

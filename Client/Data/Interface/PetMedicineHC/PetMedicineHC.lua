@@ -2,7 +2,6 @@
 
 local g_clientNpcId = -1;
 
-local g_MedicineHCID = -1;	--合成的灵兽丹ID
 local g_ConsumeMoney = -1;	--需要的金钱
 local g_NotifyBind = 1;
 local PetMedicineHC_BTN = {};
@@ -87,9 +86,15 @@ function PetMedicineHC_UpdateGoods(nUIPos, nGoodsIndex)
 	
 	local goodsID = PlayerPackage : GetItemTableIndex( nGoodsIndex )
 	
-	if g_MedicineHCID ~= -1 and g_MedicineHCID ~= goodsID then --前面已经选了一个物品
-		PushDebugMessage("#{JNHC_81015_15}")
-		return
+	--每个位置都判断一次，保险
+	for i = 1, 5 do
+		if PetMedicineHC_BTN[i][2] ~= -1 then
+			local PosGoodsID = PlayerPackage : GetItemTableIndex( PetMedicineHC_BTN[i][2] )
+			if PosGoodsID ~= -1 and goodsID ~= PosGoodsID then
+				PushDebugMessage("#{JNHC_81015_15}")
+				return
+			end
+		end
 	end
 	
 	if nUIPos == 0 then --自动寻找一个空的位置
@@ -124,11 +129,9 @@ function PetMedicineHC_UpdateGoods(nUIPos, nGoodsIndex)
 	
 	--先取消前面放入的物品的效果
 	PetMedicineHC_CancelGoods(nUIPos)
-	--放入新物品
-	g_MedicineHCID = goodsID
 	g_ConsumeMoney = Money
 	
-	--PushDebugMessage("g_MedicineHCID "..g_MedicineHCID.." g_ConsumeMoney "..g_ConsumeMoney)
+	--PushDebugMessage("g_ConsumeMoney "..g_ConsumeMoney)
 	
 	local theAction = EnumAction(nGoodsIndex, "packageitem");
 	if theAction:GetID() ~= 0 then
@@ -174,7 +177,6 @@ function PetMedicineHC_CancelGoods(nGoodsIndex)
 		end
 		
 		if isfindempty == 1 then
-			g_MedicineHCID = -1;
 			g_ConsumeMoney = -1
 			PetMedicineHC_OK:Disable()
 			PetMedicineHC_SuccessValue:SetText("无法合成")
@@ -184,7 +186,6 @@ function PetMedicineHC_CancelGoods(nGoodsIndex)
 end
 
 function PetMedicineHC_Clear()
-	g_MedicineHCID = -1;
 	g_ConsumeMoney = -1;
 	g_NotifyBind = 1;
 	

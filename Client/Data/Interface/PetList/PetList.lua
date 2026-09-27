@@ -114,15 +114,18 @@ function PetList_Choose_Click()
 		return;
 	end
 
-	if g_PreSelect ~= -1 then
-		if g_PreSelect ~= PetList_List:GetFirstSelectItem() then
-			Pet:SetPetLocation(g_PreSelect,-1);
+	-- 任务、技能升级、新技能学习和舍利子窗口自行管理珍兽占用，其他窗口保留原有列表处理。
+	if not IsWindowShow("MissionReply") and not IsWindowShow("PetLevelup") and not IsWindowShow("PetStudyNewSkill") and not IsWindowShow("PetShelizi") then
+		if g_PreSelect ~= -1 then
+			if g_PreSelect ~= PetList_List:GetFirstSelectItem() then
+				Pet:SetPetLocation(g_PreSelect,-1);
+			end
 		end
+
+		g_PreSelect = g_nSelect_Index;
+
+		Pet:SetPetLocation(g_nSelect_Index,1)
 	end
-	
-	g_PreSelect = g_nSelect_Index;
-	
-	Pet:SetPetLocation(g_nSelect_Index,1)
 
 	local NeedCheckLock = 1
 	if IsWindowShow("PetSkillStudy") or IsWindowShow("PetSavvy") or IsWindowShow("PetSavvyGGD") or IsWindowShow("PetXingGe") or IsWindowShow("PetProcreate") or IsWindowShow("PetZhengYou") or IsWindowShow("PetFriendSearch") or IsWindowShow("PetLevelup") or IsWindowShow("PetStudyNewSkill") then
@@ -141,7 +144,8 @@ end
 -- 放弃
 --===============================================
 function PetList_Refuse_Click()
-	if g_nSelect_Index ~= -1 then
+	-- 关闭列表不释放仍由任务、技能升级、新技能学习或舍利子窗口选用的珍兽，由对应窗口结束时释放。
+	if g_nSelect_Index ~= -1 and not IsWindowShow("MissionReply") and not IsWindowShow("PetLevelup") and not IsWindowShow("PetStudyNewSkill") and not IsWindowShow("PetShelizi") then
 		Pet:SetPetLocation(g_nSelect_Index,-1);
 	end
 	this:Hide();

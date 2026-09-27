@@ -683,7 +683,7 @@ function PetSkillStudy_Do()
 			PushDebugMessage("请选择珍兽。");
 			return;
 		end
-		if(-1 == saidx) then
+		if(-1 == PETSKILLSTUDY_ACCBTN[saidx][3]) then
 			PushDebugMessage("需要炼兽丹。");
 			return;
 		end
@@ -724,7 +724,7 @@ function PetSkillStudy_Do()
 			PushDebugMessage("请选择珍兽。");
 			return;
 		end
-		if(-1 == saidx) then
+		if(-1 == PETSKILLSTUDY_ACCBTN[saidx][3]) then
 			PushDebugMessage("需要还童卷轴。");
 			return;
 		end

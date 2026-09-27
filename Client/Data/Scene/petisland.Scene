@@ -2,6 +2,7 @@
 <Scene formatVersion="0.1.1" name="petisland">
 
   <Terrain filename="petisland.Terrain"/>
+  <SkySphere enabled="true" filename="petisland.skysphere" objectname="#FairySkySphere"/>
 
   <Object name="#FairyEnviroment" type="Enviroment">
     <Property name="ambient" value="0.180392 0.388235 0.321569"/>
@@ -25,8 +26,8 @@
     <Property name="direction" value="0.729017 -0.223907 0.24026"/>
   </Object>
 
-  <Object name="#FairySkyDome" type="SkyDome">
-    <Property name="material" value="CloudySky"/>
+  <Object name="#FairySkySphere" type="SkySphere">
+    <Property name="enabled" value="true"/>
   </Object>
 
   <Object type="TerrainLiquid">

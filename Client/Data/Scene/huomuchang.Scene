@@ -2,6 +2,7 @@
 <Scene formatVersion="0.1.1" name="huomuchang">
 
   <Terrain filename="huomuchang.Terrain"/>
+  <SkySphere enabled="true" filename="huomuchang.skysphere" objectname="#FairySkySphere"/>
 
   <Object name="#FairyEnviroment" type="Enviroment">
     <Property name="ambient" value="0.235294 0.082353 0.333333"/>
@@ -25,8 +26,8 @@
     <Property name="direction" value="0.872483 0 1"/>
   </Object>
 
-  <Object name="#FairySkyDome" type="SkyDome">
-    <Property name="material" value="CloudySky"/>
+  <Object name="#FairySkySphere" type="SkySphere">
+    <Property name="enabled" value="true"/>
   </Object>
 
   <Object type="ParticleSystem">

@@ -2,6 +2,7 @@
 <Scene formatVersion="0.1.1" name="hanyuchuang">
 
   <Terrain filename="hanyuchuang.Terrain"/>
+  <SkySphere enabled="true" filename="hanyuchuang.skysphere" objectname="#FairySkySphere"/>
 
   <Object name="#FairyEnviroment" type="Enviroment">
     <Property name="ambient" value="0.156863 0.227451 0.415686"/>
@@ -26,8 +27,8 @@
     <Property name="direction" value="0.334043 -0.459676 0.399072"/>
   </Object>
 
-  <Object name="#FairySkyDome" type="SkyDome">
-    <Property name="material" value="CloudySky"/>
+  <Object name="#FairySkySphere" type="SkySphere">
+    <Property name="enabled" value="true"/>
   </Object>
 
   <Object type="ParticleSystem">

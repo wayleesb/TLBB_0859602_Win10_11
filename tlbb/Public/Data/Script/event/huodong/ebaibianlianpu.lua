@@ -82,11 +82,12 @@ end
 --**********************************
 function x808125_JoinCampaign( sceneId, selfId, targetId )
 
-  --安全时间内不能操作
---  if IsPilferLockFlag( sceneId, selfId ) <= 0 then
---		 return
---	end
-  --如果玩家等级小于10不能参加活动
+	--安全时间内不能操作
+	--  if IsPilferLockFlag( sceneId, selfId ) <= 0 then
+	--		 return
+	--	end
+	
+	--如果玩家等级小于10不能参加活动
 	if GetLevel( sceneId, selfId ) < 10 then
 		 x808125_NotifyTip(sceneId,selfId,x808125_g_Tip["lev"])
 		 return

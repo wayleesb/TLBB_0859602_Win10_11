@@ -2,6 +2,7 @@
 <Scene formatVersion="0.1.1" name="gongdi">
 
   <Terrain filename="gongdi.Terrain"/>
+  <SkySphere enabled="true" filename="gongdi.skysphere" objectname="#FairySkySphere"/>
 
   <Object name="#FairyEnviroment" type="Enviroment">
     <Property name="ambient" value="0.211765 0.341176 0.380392"/>
@@ -25,8 +26,8 @@
     <Property name="direction" value="1 -1 -1"/>
   </Object>
 
-  <Object name="#FairySkyDome" type="SkyDome">
-    <Property name="material" value="CloudySky"/>
+  <Object name="#FairySkySphere" type="SkySphere">
+    <Property name="enabled" value="true"/>
   </Object>
 
   <Object type="StaticEntity">

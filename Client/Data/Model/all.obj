@@ -40499,4 +40499,53 @@
     </EntityList>
 </Object>
 
+<Object name="骑乘金翅100728.obj">
+    <EntityList>
+        <Entity name="骑乘金翅100728" file="骑乘金翅100728.mesh" material="" />
+    </EntityList>
+    <Locators count="9">
+        <Locator name="attach1" bonename="Bone_座位" x="26.001078" y="0.000001" z="-0.000046" qx="-0.565093" qy="-0.601115" qz="0.565093" qw="-2.059114" translateFirst="true">
+            <Slot name="attach1" object="" attribs="" />
+        </Locator>
+        <Locator name="BackPoint" bonename="" x="0.000000" y="0.000000" z="-217.277328" qx="1.000000" qy="0.000000" qz="0.000000" qw="0.000000" translateFirst="true">
+            <Slot name="BackPoint" object="" attribs="" />
+        </Locator>
+        <Locator name="FrontPoint" bonename="" x="0.000000" y="0.000000" z="255.366943" qx="1.000000" qy="0.000000" qz="0.000000" qw="0.000000" translateFirst="true">
+            <Slot name="FrontPoint" object="" attribs="" />
+        </Locator>
+        <Locator name="翅膀特效点右" bonename="Bip01_R_Forearm" x="67.233040" y="28.752493" z="2.840264" qx="0.415010" qy="-0.581442" qz="0.699780" qw="-2.755099" translateFirst="true">
+            <Slot name="翅膀特效点右" object="" attribs="" />
+        </Locator>
+        <Locator name="翅膀特效点左" bonename="Bip01_L_Forearm" x="67.232643" y="28.752058" z="-2.840034" qx="-0.836267" qy="-0.233856" qz="-0.495953" qw="-1.927073" translateFirst="true">
+            <Slot name="翅膀特效点左" object="" attribs="" />
+        </Locator>
+        <Locator name="身体中心点" bonename="" x="0.000000" y="0.000000" z="0.000000" qx="1.000000" qy="0.000000" qz="0.000000" qw="0.000000" translateFirst="true">
+            <Slot name="身体中心点" object="" attribs="" />
+        </Locator>
+        <Locator name="头顶特效点" bonename="Bip01_Head" x="26.664768" y="-10.480449" z="-0.000293" qx="0.012586" qy="0.008727" qz="-0.999883" qw="-1.209211" translateFirst="true">
+            <Slot name="头顶特效点" object="" attribs="" />
+        </Locator>
+        <Locator name="头顶状态点" bonename="Bip01_Head" x="6.052978" y="-62.843353" z="-0.000458" qx="0.701083" qy="-0.130256" qz="0.701082" qw="-3.400649" translateFirst="true">
+            <Slot name="头顶状态点" object="" attribs="" />
+        </Locator>
+        <Locator name="尾巴特效点" bonename="Bone02" x="32.976238" y="-6.094010" z="0.000138" qx="0.700383" qy="0.137587" qz="-0.700381" qw="-3.415052" translateFirst="true">
+            <Slot name="尾巴特效点" object="" attribs="" />
+        </Locator>
+    </Locators>
+    <Effects>
+        <Effect name="1" effect="骑乘金翅_01" locator="头顶特效点" translateAll="true" />
+    </Effects>
+    <Attributes>
+        <Attribute name="BackPoint" value="" hints="SlotCreate" />
+        <Attribute name="FrontPoint" value="" hints="SlotCreate" />
+        <Attribute name="attach1" value="" hints="SlotCreate" />
+        <Attribute name="翅膀特效点右" value="" hints="SlotCreate" />
+        <Attribute name="翅膀特效点左" value="" hints="SlotCreate" />
+        <Attribute name="身体中心点" value="" hints="SlotCreate" />
+        <Attribute name="头顶特效点" value="" hints="SlotCreate" />
+        <Attribute name="头顶状态点" value="" hints="SlotCreate" />
+        <Attribute name="尾巴特效点" value="" hints="SlotCreate" />
+        <Attribute name="Camera_Main" value="207" hints="" />
+    </Attributes>
+</Object>
 </AllObjects>

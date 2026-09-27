@@ -2,6 +2,7 @@
 <Scene formatVersion="0.1.1" name="city0">
 
   <Terrain filename="city0.Terrain"/>
+  <SkySphere enabled="true" filename="city0.skysphere" objectname="#FairySkySphere"/>
 
   <Object name="#FairyEnviroment" type="Enviroment">
     <Property name="ambient" value="1 1 1"/>
@@ -21,8 +22,8 @@
     <Property name="direction" value="1 -1 -1"/>
   </Object>
 
-  <Object name="#FairySkyDome" type="SkyDome">
-    <Property name="material" value="CloudySky"/>
+  <Object name="#FairySkySphere" type="SkySphere">
+    <Property name="enabled" value="true"/>
   </Object>
 
   <Object type="StaticEntity">

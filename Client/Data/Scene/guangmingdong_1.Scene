@@ -2,6 +2,7 @@
 <Scene formatVersion="0.1.1" name="guangmingdong_1">
 
   <Terrain filename="guangmingdong_1.Terrain"/>
+  <SkySphere enabled="true" filename="guangmingdong_1.skysphere" objectname="#FairySkySphere"/>
 
   <Object name="#FairyEnviroment" type="Enviroment">
     <Property name="ambient" value="0.262745 0.086275 0.054902"/>
@@ -27,8 +28,8 @@
     <Property name="direction" value="5 9 1"/>
   </Object>
 
-  <Object name="#FairySkyDome" type="SkyDome">
-    <Property name="material" value="CloudySky"/>
+  <Object name="#FairySkySphere" type="SkySphere">
+    <Property name="enabled" value="true"/>
   </Object>
 
   <Object type="ParticleSystem">

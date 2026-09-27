@@ -824,6 +824,7 @@
   <Imageset Name="PetEquipCloth1" Filename="Icons/PetEquipCloth1.imageset.xml" />
   <Imageset Name="PetEquipHat1" Filename="Icons/PetEquipHat1.imageset.xml" />
   <Imageset Name="RideHeader3" Filename="Icons/RideHeader3.imageset.xml" />
+  <Imageset Name="RideHeader5" Filename="Icons/RideHeader5.imageset.xml" />
   <Imageset Name="FightSkillXinShou" Filename="Icons/FightSkillXinShou.imageset.xml" />
   <Imageset Name="TaskTools11" Filename="Icons/TaskTools11.imageset.xml" />
   <Imageset Name="Huodong_3" Filename="Icons/Huodong_3.imageset.xml" />

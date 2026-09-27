@@ -2,6 +2,7 @@
 <Scene formatVersion="0.1.1" name="shilin">
 
   <Terrain filename="shilin.Terrain"/>
+  <SkySphere enabled="true" filename="shilin.skysphere" objectname="#FairySkySphere"/>
 
   <Object name="#FairyEnviroment" type="Enviroment">
     <Property name="ambient" value="0.411765 0.392157 0.152941"/>
@@ -25,8 +26,8 @@
     <Property name="direction" value="-5 -0.8 1"/>
   </Object>
 
-  <Object name="#FairySkyDome" type="SkyDome">
-    <Property name="material" value="CloudySky"/>
+  <Object name="#FairySkySphere" type="SkySphere">
+    <Property name="enabled" value="true"/>
   </Object>
 
   <Object type="StaticEntity">

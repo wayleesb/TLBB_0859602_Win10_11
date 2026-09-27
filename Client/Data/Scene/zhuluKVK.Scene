@@ -2,6 +2,7 @@
 <Scene formatVersion="0.1.1" name="zhuluKVK">
 
   <Terrain filename="zhuluKVK.Terrain"/>
+  <SkySphere enabled="true" filename="zhuluKVK.skysphere" objectname="#FairySkySphere"/>
 
   <Object name="#FairyEnviroment" type="Enviroment">
     <Property name="ambient" value="0.372549 0.227451 0.219608"/>
@@ -1598,8 +1599,8 @@
     <Property name="depth texture layer.height scale" value="0.009"/>
   </Object>
 
-  <Object name="#FairySkyDome" type="SkyDome">
-    <Property name="material" value="CloudySky"/>
+  <Object name="#FairySkySphere" type="SkySphere">
+    <Property name="enabled" value="true"/>
   </Object>
 
   <Object type="StaticEntity">

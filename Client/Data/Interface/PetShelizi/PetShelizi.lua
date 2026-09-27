@@ -49,7 +49,6 @@ function PetShelizi_OnEvent(event)
 			Guid_Pet_H, Guid_Pet_L = Pet : GetGUID( Index_Pet )
 			PetShelizi_Pet1_Text : SetText(tostring(Pet_DBName))
 			
-			Pet : SetPetLocation( Index_Pet, 3 )
 			PetShelizi_OK:Enable()
 		end
 	elseif (event == "UNIT_MONEY") then
@@ -73,6 +72,7 @@ function PetShelizi_OnEvent(event)
 			
 
 			PetShelizi_Cancel_Clicked()
+			PetShelizi_OnHidden()
 		end
 				
 	end
@@ -99,13 +99,24 @@ function PetShelizi_SelectPet_Clicked()
 end
 
 function PetShelizi_OnSelectPet( PetIndex )
+	-- 服务端拒绝舍利子校验时，以负索引通知界面释放原有占用。
 	if PetIndex < 0 then
+		if Index_Pet ~= -1 then
+			Pet : SetPetLocation( Index_Pet, -1 )
+			Index_Pet = -1
+		end
 		return
 	end
-	
-	PetShelizi_FormReset()
+
+	if Index_Pet ~= -1 then
+		Pet : SetPetLocation( Index_Pet, -1 )
+	end
 
 	Index_Pet = PetIndex
+	-- 舍利子窗口负责占用所选珍兽，请求等待期间也保持保护。
+	Pet : SetPetLocation( Index_Pet, 4 )
+	PetShelizi_FormReset()
+
 	local petGen , petDBName = Pet:GetPetTypeName(Index_Pet)
 	local strName , strName2 = Pet:GetName(Index_Pet)
 	
@@ -126,10 +137,10 @@ function PetShelizi_OnSelectPet( PetIndex )
 end
 
 function PetShelizi_OnHidden()
-	if Index_Pet > 0 then
+	if Index_Pet ~= -1 then
 		Pet : SetPetLocation( Index_Pet, -1 )
 	end
-	
+	Index_Pet = -1
 	Pet : ShowPetList( 0 )
 	Pet : ClearSheliziPet();
 end
@@ -137,7 +148,7 @@ end
 function PetShelizi_FormReset()
 	Guid_Pet_H = -1
 	Guid_Pet_L = -1
-	Index_Pet  = -1
+	-- 保留索引，由换宠、校验失败或隐藏流程释放占用后清空。
 	Pet_DBName = ""
 	slzExp = 0
 	needmoney =0

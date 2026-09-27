@@ -2,6 +2,7 @@
 <Scene formatVersion="0.1.1" name="leigu">
 
   <Terrain filename="leigu.Terrain"/>
+  <SkySphere enabled="true" filename="leigu.skysphere" objectname="#FairySkySphere"/>
 
   <Object name="#FairyEnviroment" type="Enviroment">
     <Property name="ambient" value="0.090196 0.27451 0.47451"/>
@@ -25,8 +26,8 @@
     <Property name="direction" value="0.338422 -0.409861 0.46683"/>
   </Object>
 
-  <Object name="#FairySkyDome" type="SkyDome">
-    <Property name="material" value="CloudySky"/>
+  <Object name="#FairySkySphere" type="SkySphere">
+    <Property name="enabled" value="true"/>
   </Object>
 
   <Object type="Model">

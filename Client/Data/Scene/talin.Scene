@@ -2,6 +2,7 @@
 <Scene formatVersion="0.1.1" name="talin">
 
   <Terrain filename="talin.Terrain"/>
+  <SkySphere enabled="true" filename="talin.skysphere" objectname="#FairySkySphere"/>
 
   <Object name="#FairyEnviroment" type="Enviroment">
     <Property name="ambient" value="0.121569 0.109804 0.286275"/>
@@ -26,8 +27,8 @@
     <Property name="cast shadows" value="true"/>
   </Object>
 
-  <Object name="#FairySkyDome" type="SkyDome">
-    <Property name="material" value="CloudySky"/>
+  <Object name="#FairySkySphere" type="SkySphere">
+    <Property name="enabled" value="true"/>
   </Object>
 
   <Object type="StaticEntity">

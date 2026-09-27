@@ -297,6 +297,12 @@ function PetSavvy_SelectPet( petIdx )
 	-- 判断 petIdex 代表的是被提升的宠还是辅助宠
 	-- 如果是被提升的宠
 	if currentChoose == 1 then
+		-- 选择重复珍兽时保留原来的主宠。
+		if assisPet.idx ~= -1 and assisPet.idx == petIdx then
+			ShowSystemTipInfo( "请放入两只不同的珍兽。" )
+			return
+		end
+
 		-- 如果原来已经选择了一个被提升的宠
 		-- 则清空原来的数据
 		PetSavvy_RemoveMainPet()
@@ -319,6 +325,12 @@ function PetSavvy_SelectPet( petIdx )
 			PushDebugMessage("珍兽已加锁")
 			return
 		end
+		-- 选择重复珍兽时保留原来的辅助宠。
+		if mainPet.idx ~= -1 and mainPet.idx == petIdx then
+			ShowSystemTipInfo( "请放入两只不同的珍兽。" )
+			return
+		end
+
 		-- XX 如果没有被提升的宠存在
 		-- XX 则提示需要先放入被提升的宠并返回
 		-- XX 判断辅助宠是否符合条件

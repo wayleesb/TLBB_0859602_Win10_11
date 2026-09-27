@@ -2,6 +2,7 @@
 <Scene formatVersion="0.1.1" name="juxian">
 
   <Terrain filename="juxian.Terrain"/>
+  <SkySphere enabled="true" filename="juxian.skysphere" objectname="#FairySkySphere"/>
 
   <Object name="#FairyEnviroment" type="Enviroment">
     <Property name="ambient" value="0.247059 0.203922 0.486275"/>
@@ -25,8 +26,8 @@
     <Property name="direction" value="-0.548649 -0.102076 0.646192"/>
   </Object>
 
-  <Object name="#FairySkyDome" type="SkyDome">
-    <Property name="material" value="CloudySky"/>
+  <Object name="#FairySkySphere" type="SkySphere">
+    <Property name="enabled" value="true"/>
   </Object>
 
   <Object type="StaticEntity">

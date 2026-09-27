@@ -2,6 +2,7 @@
 <Scene formatVersion="0.1.1" name="emei">
 
   <Terrain filename="emei.Terrain"/>
+  <SkySphere enabled="true" filename="emei.skysphere" objectname="#FairySkySphere"/>
 
   <Object name="#FairyEnviroment" type="Enviroment">
     <Property name="ambient" value="0.301961 0.337255 0.6"/>
@@ -25,8 +26,8 @@
     <Property name="direction" value="2 -1 -1"/>
   </Object>
 
-  <Object name="#FairySkyDome" type="SkyDome">
-    <Property name="material" value="CloudySky"/>
+  <Object name="#FairySkySphere" type="SkySphere">
+    <Property name="enabled" value="true"/>
   </Object>
 
   <Object type="Model">

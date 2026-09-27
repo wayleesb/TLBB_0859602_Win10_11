@@ -2,6 +2,7 @@
 <Scene formatVersion="0.1.1" name="wedding_2">
 
   <Terrain filename="wedding_2.Terrain"/>
+  <SkySphere enabled="true" filename="wedding_2.skysphere" objectname="#FairySkySphere"/>
 
   <Object name="#FairyEnviroment" type="Enviroment">
     <Property name="ambient" value="0.980392 0.603922 0.494118"/>
@@ -24,8 +25,8 @@
     <Property name="direction" value="-0.89759 0 -0.642623"/>
   </Object>
 
-  <Object name="#FairySkyDome" type="SkyDome">
-    <Property name="material" value="CloudySky"/>
+  <Object name="#FairySkySphere" type="SkySphere">
+    <Property name="enabled" value="true"/>
   </Object>
 
   <Object type="StaticEntity">

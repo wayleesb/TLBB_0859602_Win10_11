@@ -2,6 +2,7 @@
 <Scene formatVersion="0.1.1" name="talimu">
 
   <Terrain filename="talimu.Terrain"/>
+  <SkySphere enabled="true" filename="talimu.skysphere" objectname="#FairySkySphere"/>
 
   <Object name="#FairyEnviroment" type="Enviroment">
     <Property name="ambient" value="0.533333 0.376471 0.133333"/>
@@ -26,8 +27,8 @@
     <Property name="direction" value="-0.5 -0.5 1"/>
   </Object>
 
-  <Object name="#FairySkyDome" type="SkyDome">
-    <Property name="material" value="CloudySky"/>
+  <Object name="#FairySkySphere" type="SkySphere">
+    <Property name="enabled" value="true"/>
   </Object>
 
   <Object type="StaticEntity">

@@ -4954,3 +4954,4 @@ MGR_TXT
 260001=\event\loulangucheng\eloulan_darkup.lua
 889888=\event\chuansong\echuansong_AutoMove.lua
 800119=\event\misc\MoneyToJiaoZi.lua
+334785=\obj\commonitem\4785.lua

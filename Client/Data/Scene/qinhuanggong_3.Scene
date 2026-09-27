@@ -2,6 +2,7 @@
 <Scene formatVersion="0.1.1" name="qinhuanggong_3">
 
   <Terrain filename="qinhuanggong_3.Terrain"/>
+  <SkySphere enabled="true" filename="qinhuanggong_3.skysphere" objectname="#FairySkySphere"/>
 
   <Object name="#FairyMainLightOne" type="Light">
     <Property name="type" value="directional"/>
@@ -5277,8 +5278,8 @@
     <Property name="position" value="-9200 2200 -2700"/>
   </Object>
 
-  <Object name="#FairySkyDome" type="SkyDome">
-    <Property name="material" value="CloudySky"/>
+  <Object name="#FairySkySphere" type="SkySphere">
+    <Property name="enabled" value="true"/>
   </Object>
 
   <Object type="ParticleSystem">

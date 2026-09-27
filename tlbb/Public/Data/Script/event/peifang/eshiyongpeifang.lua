@@ -7,6 +7,7 @@
 x713501_g_scriptId = 713501
 
 x713501_g_RecipeItems = {}
+x713501_g_RecipeItems[30308156] = { abilityId = ABILITY_QISHU, recipeId = 1153, needLevel = 1, specialEffectID = 18 }
 
 -- ItemTable 号为索引
 

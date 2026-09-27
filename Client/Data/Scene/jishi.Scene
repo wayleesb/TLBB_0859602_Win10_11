@@ -2,6 +2,7 @@
 <Scene formatVersion="0.1.1" name="jishi">
 
   <Terrain filename="jishi.Terrain"/>
+  <SkySphere enabled="true" filename="jishi.skysphere" objectname="#FairySkySphere"/>
 
   <Object name="#FairyEnviroment" type="Enviroment">
     <Property name="ambient" value="0.086275 0.145098 0.211765"/>
@@ -25,8 +26,8 @@
     <Property name="direction" value="-0.456359 1 -0.469287"/>
   </Object>
 
-  <Object name="#FairySkyDome" type="SkyDome">
-    <Property name="material" value="CloudySky"/>
+  <Object name="#FairySkySphere" type="SkySphere">
+    <Property name="enabled" value="true"/>
   </Object>
 
   <Object type="StaticEntity">

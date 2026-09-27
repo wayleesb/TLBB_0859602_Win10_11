@@ -2,6 +2,7 @@
 <Scene formatVersion="0.1.1" name="paiqiuchang">
 
   <Terrain filename="paiqiuchang.Terrain"/>
+  <SkySphere enabled="true" filename="paiqiuchang.skysphere" objectname="#FairySkySphere"/>
 
   <Object name="#FairyEnviroment" type="Enviroment">
     <Property name="ambient" value="0.188235 0.266667 0.639216"/>
@@ -25,8 +26,8 @@
     <Property name="direction" value="0.612554 -0.0581932 0.675174"/>
   </Object>
 
-  <Object name="#FairySkyDome" type="SkyDome">
-    <Property name="material" value="CloudySky"/>
+  <Object name="#FairySkySphere" type="SkySphere">
+    <Property name="enabled" value="true"/>
   </Object>
 
   <Object type="Model">

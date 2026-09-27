@@ -2,6 +2,7 @@
 <Scene formatVersion="0.1.1" name="luoyangsnow">
 
   <Terrain filename="luoyangsnow.Terrain"/>
+  <SkySphere enabled="true" filename="luoyangsnow.skysphere" objectname="#FairySkySphere"/>
 
   <ModelMaterialScheme scheme="SNOW"/>
 
@@ -29,8 +30,8 @@
     <Property name="direction" value="0.492632 -0.195293 0.561576"/>
   </Object>
 
-  <Object name="#FairySkyDome" type="SkyDome">
-    <Property name="material" value="CloudySky"/>
+  <Object name="#FairySkySphere" type="SkySphere">
+    <Property name="enabled" value="true"/>
   </Object>
 
   <Object type="StaticEntity">

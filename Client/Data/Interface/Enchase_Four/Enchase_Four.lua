@@ -16,7 +16,7 @@ local g_Object = -1;
 local Enchase_Four_Cost = {}
 local EquipGemTable = {}
 
-x701614_GemEmbed_four_ID = {
+local GemEmbed_four_ID = {
 														50113004,50213004,50313004,50413004,50513004,50613004,50713004,50813004,50913004,50113006,
 														50213006,50313006,50413006,50513006,50613006,50713006,50813006,50913006
 													}
@@ -344,7 +344,7 @@ function Enchase_Four_Update(UI_index,Item_index)
 			 local fourgemid = PlayerPackage : GetItemTableIndex( i_index )
 			 local IsRedGem = 0	
 			 
-			 for i, v in x701614_GemEmbed_four_ID do
+			 for i, v in GemEmbed_four_ID do
 		     if fourgemid == v then
 			     IsRedGem = 1;
 			     break

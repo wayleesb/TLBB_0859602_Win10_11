@@ -2,6 +2,7 @@
 <Scene formatVersion="0.1.1" name="meiling">
 
   <Terrain filename="meiling.Terrain"/>
+  <SkySphere enabled="true" filename="meiling.skysphere" objectname="#FairySkySphere"/>
 
   <Object name="#FairyEnviroment" type="Enviroment">
     <Property name="ambient" value="0.14902 0.203922 0.32549"/>
@@ -27,8 +28,8 @@
     <Property name="direction" value="5 -5 6"/>
   </Object>
 
-  <Object name="#FairySkyDome" type="SkyDome">
-    <Property name="material" value="CloudySky"/>
+  <Object name="#FairySkySphere" type="SkySphere">
+    <Property name="enabled" value="true"/>
   </Object>
 
   <Object type="StaticEntity">

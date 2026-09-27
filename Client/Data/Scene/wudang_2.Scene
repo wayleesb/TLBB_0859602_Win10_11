@@ -2,6 +2,7 @@
 <Scene formatVersion="0.1.1" name="wudang_2">
 
   <Terrain filename="wudang_2.Terrain"/>
+  <SkySphere enabled="true" filename="wudang_2.skysphere" objectname="#FairySkySphere"/>
 
   <Object name="#FairyEnviroment" type="Enviroment">
     <Property name="ambient" value="0.156863 0.176471 0.266667"/>
@@ -27,8 +28,8 @@
     <Property name="direction" value="4 -2.5 5"/>
   </Object>
 
-  <Object name="#FairySkyDome" type="SkyDome">
-    <Property name="material" value="CloudySky"/>
+  <Object name="#FairySkySphere" type="SkySphere">
+    <Property name="enabled" value="true"/>
   </Object>
 
   <Object type="StaticEntity">

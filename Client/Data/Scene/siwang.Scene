@@ -2,6 +2,7 @@
 <Scene formatVersion="0.1.1" name="siwang">
 
   <Terrain filename="siwang.Terrain"/>
+  <SkySphere enabled="true" filename="siwang.skysphere" objectname="#FairySkySphere"/>
 
   <Object name="#FairyEnviroment" type="Enviroment">
     <Property name="ambient" value="0.011765 0.137255 0.184314"/>
@@ -28,8 +29,8 @@
     <Property name="direction" value="-1.2 -1 -0.5"/>
   </Object>
 
-  <Object name="#FairySkyDome" type="SkyDome">
-    <Property name="material" value="CloudySky"/>
+  <Object name="#FairySkySphere" type="SkySphere">
+    <Property name="enabled" value="true"/>
   </Object>
 
   <Object type="StaticEntity">

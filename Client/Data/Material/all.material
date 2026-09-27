@@ -113855,3 +113855,29 @@ material 黄龙洞钟乳石
 
 }
 
+
+material 骑乘金翅100728 : NPCnMonsterAlphaTemplate
+{
+	set_texture_alias <baseTexture> tga_骑乘金翅100728.dds
+}
+
+material 骑乘金翅_01
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend add
+			depth_write off
+			fog_override true none
+
+			texture_unit
+			{
+				texture png_flare.dds -1
+			}
+		}
+
+	}
+
+}
